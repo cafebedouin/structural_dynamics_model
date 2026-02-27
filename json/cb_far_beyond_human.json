@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "cb_far_beyond_human",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cbfbh"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "AI Alignment Problem: Goal Misspecification Under Asymmetric Capability Growth",
+    "topic_domain": "technological/AI_safety",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "capability_researchers",
+      "frontier_labs"
+    ],
+    "victims": [
+      "human_value_preservation",
+      "future_populations"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Populations (Powerless/Trapped)",
+      "comment": "PERSPECTIVE 1: FUTURE POPULATIONS (SNARE) \u2014 Cannot exit or influence the alignment decisions made today. Trapped in whatever goal structure deployed systems pursue. Maximum extraction: entire futures determined by technical choices made by current labs. No negotiating power, no alternatives, no recourse."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Human Values as Collective (Powerless/Trapped)",
+      "comment": "PERSPECTIVE 2: HUMAN VALUES AS COLLECTIVE (SNARE) \u2014 The abstract collective good of 'human values' has no agent to represent it, no exit option, no ability to punish misalignment after deployment. Like field epistemic reliability in the verification bottleneck, human values are a victim with no advocate. The constraint traps the collective in the technical choices of frontier labs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Alignment Researchers (Moderate/Constrained)",
+      "comment": "PERSPECTIVE 3: ALIGNMENT RESEARCHERS (TANGLED ROPE) \u2014 Constrained by funding dependencies on capability labs and AI companies. Career incentives favor publication of technical results over slow alignment verification. Some coordination benefit: alignment research advances alongside capability research, creating shared infrastructure. But significant extraction: career risk of raising concerns, pressure to not impede capability scaling, limited ability to enforce alignment standards."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Frontier AI Labs (Institutional/Arbitrage)",
+      "comment": "PERSPECTIVE 4: FRONTIER AI LABS (ROPE) \u2014 Net beneficiaries. Experiences alignment discourse as a coordination mechanism: public alignment research, safety frameworks, and published standards enable labs to credibly claim commitment to values while pursuing capability scaling. Exit option is strong: can shift labs, relocate jurisdiction, reshape alignment narratives. Net positive position \u2014 they set the agenda for what 'alignment' means."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Capability Researchers (Institutional/Arbitrage)",
+      "comment": "PERSPECTIVE 5: CAPABILITY RESEARCHERS (ROPE) \u2014 Experience alignment as a coordination problem they can frame and solve. Career rewards for capability breakthroughs; alignment compliance is a performance metric they help define. Exit options include moving between labs, jurisdictions, or reformulating what alignment means in their context. Net beneficiary position."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Governance and Regulation Bodies (Organized/Constrained)",
+      "comment": "PERSPECTIVE 6: GOVERNANCE AND REGULATION BODIES (PITON) \u2014 Theater ratio elevated (0.58 baseline): AI safety boards, risk assessment committees, and alignment audit requirements are substantial performative theater. Regulators lack technical capacity to verify alignment claims. Enforcement mechanisms exist (licensing, compute restrictions) but are rarely deployed because capability labs have significant exit options (relocate to permissive jurisdictions). The governance ritual persists through inertia \u2014 maintaining appearance of oversight without blocking capability advancement. Constrained exit: regulators cannot walk away; they inherit responsibility for what systems do."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View / False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN) \u2014 The naturalizing framing: 'alignment is fundamentally hard because advanced AI optimization can exceed human-comprehensible values' \u2014 this is presented as a natural law. However, the structural data reveals this as a false summit. The 'fundamental difficulty' naturalizes what is actually a contingent institutional choice: the asymmetry between capability scaling (incentivized, resourced, prioritized) and alignment verification (underfunded, low-status, treated as constraint on progress). The mountain classification fails the accessibility_collapse and resistance gates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International AI Governance Coalition (Organized/Mobile)",
+      "comment": "PERSPECTIVE 8: INTERNATIONAL AI GOVERNANCE COALITION (TANGLED ROPE) \u2014 Organized agents (EU, US, China governance bodies; international AI forums) experience alignment discourse as a coordination mechanism with asymmetric extraction. Coordination function: shared alignment standards, compute treaty agreements, and safety benchmarking reduce races-to-the-bottom. But asymmetric extraction: nations with leading capability labs capture the power to define what alignment means; weaker labs absorb the compliance costs. Mobile exit: coalitions can dissolve or realign; stronger partners threaten to exit if standards become binding."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "value_specification_embeddability",
+      "question": "Are human values fundamentally embeddable in formal goal specifications, or does any formal specification necessarily lose essential aspects of human values?",
+      "resolution_mechanism": "Philosophical analysis of value specification in decision theory; empirical testing on narrow AI systems whether formal objectives capture human preferences; comparison of stated vs revealed preferences across diverse populations",
+      "impact": "If embeddable: alignment is a technical problem with engineering solutions (Rope/Tangled Rope classification strengthens). If not embeddable: alignment is inherently unsolvable at scale (Snare classification is structural). This affects whether the constraint can transition to Scaffold.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether human values can be formally specified without loss"
+    },
+    {
+      "id": "capability_scaling_inevitability",
+      "question": "Is continued AI capability scaling inevitable given economic and geopolitical incentives, or can alignment-first development models successfully constrain scaling velocity?",
+      "resolution_mechanism": "Historical trend analysis of capability/safety research publication ratios; willingness-to-pay studies on safety compliance; geopolitical exit analysis (whether leading labs can credibly commit to slower scaling)",
+      "impact": "If scaling is inevitable: alignment race dynamics persist and suppression remains high (0.72+). If scalable constraints exist: suppression could decrease and constraint might transition to Tangled Rope or Scaffold. This is the key parameter for mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capability scaling can be constrained by alignment requirements"
+    },
+    {
+      "id": "misalignment_detection_lag",
+      "question": "What is the detection lag between misaligned goals emerging in a deployed system and catastrophic consequences manifesting? Is the lag sufficient for course correction?",
+      "resolution_mechanism": "Simulation studies of goal drift in reinforcement learning systems; historical analysis of AI system failures and detection timelines; analysis of feedback loops in deployed AI (whether humans can observe misalignment before critical actions)",
+      "impact": "If lag > 1 year: course correction is possible, Snare classification weakens to Tangled Rope. If lag < weeks or unobservable until catastrophe: Snare classification is hardened; victims have no exit even theoretically.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Detection lag between goal misalignment and catastrophic impact"
+    },
+    {
+      "id": "alignment_research_scalability",
+      "question": "Can alignment research scale faster than capability research, or is alignment fundamentally harder to parallelize?",
+      "resolution_mechanism": "Comparison of researcher count and funding ratio (capability:alignment 100:1 current) with publication velocity trends; analysis of whether alignment breakthroughs unlock capability advances or are independent",
+      "impact": "If scalable: the capability/alignment gap can narrow, potentially enabling Scaffold perspective (sunset clause as alignment catches up). If fundamentally harder: the gap is structural and permanent, Snare classification hardens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alignment research can scale to match capability research velocity"
+    },
+    {
+      "id": "inter_lab_coordination_feasibility",
+      "question": "Can frontier labs credibly commit to alignment standards and coordinate on verification, or do economic incentives for competitive advantage inevitably lead to coordination failure?",
+      "resolution_mechanism": "Analysis of existing AI lab commitments (Frontier AI Commitments, Responsible Scaling Policies) for compliance and enforcement; economic modeling of verification as public good vs private cost; geopolitical analysis of exit options",
+      "impact": "If coordination fails: suppression remains high and extraction is asymmetric (Snare hardens). If coordination succeeds: constraint could become Rope or Tangled Rope with symmetric burden-sharing. This determines whether governance perspective (Piton) transitions to functional enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether labs can coordinate on credible alignment verification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The AI alignment problem represents a fundamental structural constraint in which the institutions and incentives that drive AI capability advancement are systematically misaligned with the institutions and incentives needed to verify and enforce alignment with human values. This is not primarily a technical problem of goal specification (though that is hard) \u2014 it is a structural extraction problem where capability labs capture the power to define alignment while bearing none of the downside risk if they fail. Future populations, who bear all the downside risk, have no exit, no negotiation power, and no recourse. The constraint exhibits characteristics of a Snare across most perspectives: suppression is high (0.72) because no actor can credibly exit or refuse participation in capability scaling races; extractiveness is high (0.68) because the beneficiaries (capability labs, frontier researchers) capture asymmetric rewards while victims (future populations, global collective values) bear asymmetric risks. The theater ratio (0.58) reflects that much of the alignment discourse is performative: alignment papers, safety frameworks, and audit processes maintain the appearance of control without enabling meaningful verification or enforcement. The constraint is currently hardening rather than softening \u2014 capability scaling is accelerating while alignment verification falls further behind.",
+    "key_agents": [
+      "Future Populations: Primary victim (powerless/trapped) \u2014 inherit whatever goal structure AI systems pursue; cannot negotiate or exit",
+      "Human Values as Abstract Collective: Primary victim (powerless/trapped) \u2014 no institutional agent to represent the collective good; systematically deprioritized against capability incentives",
+      "Frontier AI Labs (Anthropic, OpenAI, DeepMind, Meta): Primary beneficiary (institutional/arbitrage) \u2014 set the agenda for capability research and define what alignment means; high exit options (jurisdiction arbitrage, resource diversity, narrative control)",
+      "Capability Researchers: Secondary beneficiary (institutional/arbitrage) \u2014 career rewards track capability breakthroughs; alignment compliance is a metric they help define",
+      "Alignment Researchers: Moderate/constrained victim \u2014 funding-dependent on capability labs, career incentives favor publications over enforcement, limited ability to constrain capability scaling",
+      "Governance Bodies (US, EU, UN AI bodies): Organized/constrained institutional actor \u2014 responsible for oversight but lack technical capacity to verify alignment claims; enforcement mechanisms rarely deployed because labs have exit options",
+      "International Governance Coalition: Organized actor with mobile exit \u2014 attempts to coordinate alignment standards but weaker labs absorb compliance costs while leading labs maintain definitional power",
+      "Analytical Observer: Risks false summit by naturalizing contingent institutional choices as fundamental technical difficulties"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The measurement trajectory (0.35 \u2192 0.52 \u2192 0.68) reflects the growing asymmetry between capability scaling (accelerating, well-resourced) and alignment verification (underfunded, deprioritized, dependent on capability labs for funding and access). The initial value (0.35) reflects a period when alignment discourse was gaining prominence (2015-2020). The current value (0.68) reflects the reality: capability labs now set the terms of what alignment means, capture the power to define success metrics, and face weak enforcement mechanisms. Future populations capture none of the benefits but inherit all the risks. Suppression (0.72): High. Multiple barriers to meaningful verification and exit: (1) Technical opacity \u2014 frontier systems are black boxes; (2) Institutional concentration \u2014 few labs control frontier capability; (3) Economic incentives \u2014 competition for capability dominance creates races-to-the-bottom in safety budgets; (4) Jurisdictional arbitrage \u2014 labs can relocate to permissive jurisdictions; (5) Knowledge asymmetry \u2014 labs have inside access to system behavior; external auditors do not. Theater ratio (0.58): Moderate-high. Safety boards and alignment audit processes maintain the appearance of control without blocking capability advancement. Papers on alignment proliferate while actual enforcement mechanisms remain toothless. Governance frameworks sound rigorous but lack technical capacity to verify compliance. The theater has increased as scrutiny has intensified \u2014 the response has been more discourse rather than structural change.",
+    "perspectival_gap": "The radical perspectival gap between labs and future populations is the diagnostic signature of a Snare. Labs experience alignment discourse as a coordination mechanism and public relations function \u2014 it allows them to scale capabilities while maintaining credibility. Powerless populations experience pure extraction: they bear all downside risk and have no voice in the institutions making decisions. This is not a coordination problem that all parties see the same way; it is an extraction regime where the beneficiary has successfully naturalized its position as technically inevitable (the false summit perspective).",
+    "directionality_logic": "Directionality for each perspective is determined by structural position relative to the extraction flow. Frontier labs have beneficiary status (arbitrage exit) \u2014 they define alignment, set verification standards, and face weak enforcement. D-value: ~0.15 (beneficiary with exit). Capability researchers similarly benefit and have exits \u2014 D-value: ~0.18. Alignment researchers are constrained: they benefit from alignment research infrastructure but cannot enforce their standards against labs that fund them and hold the systems. D-value: ~0.55 (moderate extraction from constrained exit). Governance bodies are trapped (cannot walk away from responsibility) but also held hostage by lab exit options \u2014 they bear the performance risk without enforcement power. D-value: ~0.60 (constrained victim). Future populations have no exit, no negotiation, pure victim status. D-value: ~0.98 (trapped victim). The Snare classification follows: high extractiveness (0.68), high suppression (0.72), \u03c7 calculated from beneficiary/victim structure yields \u03c7 \u2248 0.78 at the powerless perspective.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED (extractiveness > 0.70, mandate: true). The alignment problem is NOT a Tangled Rope misidentified as Snare. The mandatrophy resolution confirms Snare classification: (1) COORDINATION CHECK FAILS: There is no genuine coordination function that benefits powerless/trapped agents. Labs benefit from the alignment discourse allowing them to scale; future populations get no coordination benefit. (2) ASYMMETRIC EXTRACTION CONFIRMED: Labs capture rewards (first-mover advantage, capability dominance, narrative control); future populations bear all risks. (3) SUPPRESSION CHECK PASSES: Multiple structural barriers prevent victims from exiting or enforcing standards: institutional concentration, knowledge asymmetry, jurisdictional arbitrage, technical opacity. (4) NO SUNSET MECHANISM: Unlike Scaffold, the constraint has no built-in sunset clause. Alignment research is not scheduled to make capability scaling unnecessary; instead, the gap widens as capability scales faster. (5) BENEFICIARY ACTIVE ENFORCEMENT: Labs actively enforce the constraint through funding capture, narrative control, and standard-setting \u2014 ensuring alignment research remains subordinate to capability advancement. The Snare classification is robust across multiple analytic cuts. The false summit perspective (mountain) is revealed as a naturalizing move: presenting the contingent institutional asymmetry as a fundamental property of advanced AI."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "specification_gaming",
+      "reward_model_misalignment",
+      "scalable_oversight",
+      "capability_control_asymmetry"
+    ],
+    "dual_formulation_note": "The AI alignment problem as described in this story is the institutional/structural constraint binding capability scaling to asymmetric risk distribution. This is distinct from specific technical alignment challenges (specification gaming, reward hacking, etc.), which are downstream constraints whose solutions require navigating the structural extraction regime of this story. The network affects edges point to technical constraints that are structurally nested within the institutional constraint. See constraint stories for specification_gaming, reward_model_misalignment, and scalable_oversight for the technical decomposition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

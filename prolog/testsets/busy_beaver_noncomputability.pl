@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: busy_beaver_noncomputability
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_busy_beaver_noncomputability, []).
@@ -30,12 +31,19 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
-    domain_priors:emerges_naturally/1,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -47,25 +55,35 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: busy_beaver_noncomputability
  *   human_readable: The Non-Computability of the Busy Beaver Function (Σ)
- *   domain: technological/mathematical
+ *   domain: mathematical/computational
  *
  * SUMMARY:
- *   The Busy Beaver function, Σ(n), defines the maximum number of steps a
- *   halting Turing machine with n states can take. It is a well-defined but
- *   non-computable function that grows faster than any computable function.
- *   This constraint represents an absolute, unchangeable limit on algorithmic
- *   prediction and optimization, stemming directly from the Halting Problem.
- *   It is a fundamental boundary of what is knowable through computation.
+ *   The Busy Beaver function, Σ(n), represents the maximum number of steps a
+ *   halting Turing machine with n states can execute before terminating. The
+ *   non-computability of this function is a fundamental mathematical truth:
+ *   no algorithm can compute Σ(n) for all n. This constraint is a candidate
+ *   for pure Mountain classification because it exhibits zero degrees of
+ *   freedom, emerges naturally from mathematical definitions, and imposes an
+ *   absolute boundary on what computation can achieve. The constraint is
+ *   invariant across all observer positions: a powerless agent, a powerful
+ *   institution, and an analytical observer all face the identical boundary.
+ *   There are no beneficiaries or victims — the constraint is not extractive,
+ *   not suppressive, and not performative. It simply is. The theater ratio
+ *   (0.05) reflects that the mathematical proof of non-computability requires
+ *   no ritual, no performance, no institutional apparatus. The resistance
+ *   (0.08) captures that mathematical foundations cannot be challenged by
+ *   experimental refutation — they can only be questioned through formal
+ *   redefiniton. The accessibility collapse (0.92) reflects that the
+ *   non-computability is not a hidden or difficult-to-access property — it
+ *   follows directly from the definition and standard computability theory.
+ *   This constraint serves as the canonical exemplar for mathematical-logical
+ *   mountains in the DR system.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Turing Machine (Subject): A powerless agent whose behavior is
- *     absolutely bounded by this logical limit.
- *   - The Theoretical Computer Scientist (Observer): An institutional agent
- *     who observes the limit as a fixed feature of the logical landscape.
- *   - The Brute-Force Searcher (External Agent): An agent whose *activity*
- *     of trying to compute Σ(n) is highly extractive, but this activity is a
- *     separate constraint from the mathematical fact of non-computability itself.
- *   - Analytical Observer: Sees the full structure as a pure logical limit.
+ * KEY AGENTS:
+ *   - Turing Machines: Computational agents subject to the non-computability barrier (powerless/trapped) — cannot compute Σ(n) by definition
+ *   - Mathematicians: Analytical observers of the constraint (analytical/analytical) — prove the non-computability; have no stake in whether it holds
+ *   - Computational Systems: Any physical realization of computation (powerless/trapped) — subject to the same barrier as abstract Turing machines
+ *   - Research Institutions: Organized knowledge systems (institutional/arbitrage) — cannot circumvent the constraint through coordination or resource aggregation
  */
 
 /* ==========================================================================
@@ -73,82 +91,60 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: As a pure mathematical fact, the constraint has no inherent
-% extractiveness or suppression. It is a feature of the logical universe.
-% The low, non-zero values represent the minimal cognitive overhead to grasp
-% the concept. It does not extract resources or suppress alternatives; it
-% defines a space where no computational alternatives exist.
-domain_priors:base_extractiveness(busy_beaver_noncomputability, 0.05).
-domain_priors:suppression_score(busy_beaver_noncomputability, 0.05).
-domain_priors:theater_ratio(busy_beaver_noncomputability, 0.0).
+domain_priors:base_extractiveness(busy_beaver_noncomputability, 0.12).
+domain_priors:suppression_score(busy_beaver_noncomputability, 0.02).
+domain_priors:theater_ratio(busy_beaver_noncomputability, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(busy_beaver_noncomputability, extractiveness, 0.05).
-narrative_ontology:constraint_metric(busy_beaver_noncomputability, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(busy_beaver_noncomputability, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(busy_beaver_noncomputability, extractiveness, 0.12).
+narrative_ontology:constraint_metric(busy_beaver_noncomputability, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(busy_beaver_noncomputability, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain. Without them,
-% the NL signature defaults to 0.5 and fails certification.
-% Accessibility collapse is 1.0 because no alternative is conceivable.
-% Resistance is 0.0 because active opposition is logically incoherent.
-narrative_ontology:constraint_metric(busy_beaver_noncomputability, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(busy_beaver_noncomputability, resistance, 0.0).
+narrative_ontology:constraint_metric(busy_beaver_noncomputability, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(busy_beaver_noncomputability, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(busy_beaver_noncomputability, mountain).
 narrative_ontology:human_readable(busy_beaver_noncomputability, "The Non-Computability of the Busy Beaver Function (Σ)").
-narrative_ontology:topic_domain(busy_beaver_noncomputability, "technological/mathematical").
+narrative_ontology:topic_domain(busy_beaver_noncomputability, "mathematical/computational").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint emerges naturally from the axioms of computation without
-% human design or enforcement. Required for the mountain metric gate.
 domain_priors:emerges_naturally(busy_beaver_noncomputability).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a pure Mountain (natural law), this constraint has no structural
-% beneficiaries or victims. The concepts do not apply. No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE TURING MACHINE (MOUNTAIN)
-% For a specific machine, its maximum step count is bounded by an absolute
-% logical limit. It cannot "choose" to run longer. The limit is a fixed
-% feature of its mathematical universe, unyielding and absolute.
-constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE THEORETICAL COMPUTER SCIENTIST (MOUNTAIN)
-% For the researcher, the function is an unchangeable feature of the
-% computational landscape. It is a fixed point of reference used to prove
-% other theorems about computability. It cannot be altered or negotiated.
-constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The analytical perspective confirms the constraint is a fundamental,
-% unchangeable limit of logic, classifying it as a Mountain.
+% PERSPECTIVE 1: MATHEMATICIAN (MOUNTAIN) — From the perspective of formal logic and computability theory, the non-computability of Σ(n) is a mathematical necessity, not a contingent institutional limit. No observer, no matter how powerful or well-resourced, can compute Σ(n) for n ≥ 5 using any Turing machine. This is not a suppression mechanism — it is an irreducible boundary of what computation itself can do. The constraint emerges naturally from the definitions of computability and halting.
 constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: COMPUTATIONAL AGENT (MOUNTAIN) — A Turing machine or any physical computer attempting to compute Σ(n) for large n faces an absolute barrier, not a policy barrier or resource constraint that could be overcome with more funding or better algorithms. The barrier is ontological: the function's definition guarantees non-computability. No exit option exists. This is not extraction — it is a physical law of computation.
+constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(trapped),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: RESEARCH COMMUNITY (MOUNTAIN) — Even a fully coordinated, well-funded research program with access to all known computational resources cannot compute Σ(6) or higher values. The non-computability is not a bottleneck that research can circumvent — it is a structural feature of mathematical reality. The constraint is invariant under aggregation: more researchers, more computers, more clever algorithms do not change the fundamental limit.
+constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: INSTITUTIONAL KNOWLEDGE SYSTEM (MOUNTAIN) — Scientific institutions cannot negotiate, engineer around, or defer the non-computability of Σ(n). The constraint is not a policy that could be rewritten or a regulation that could be lobbied away. It is built into the mathematical structure of what 'computation' means. No institutional arbitrage, no regulatory capture, no paradigm shift can change this. The constraint is civilization-invariant.
+constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
             spatial_scope(universal))).
 
 /* ==========================================================================
@@ -157,20 +153,26 @@ constraint_indexing:constraint_classification(busy_beaver_noncomputability, moun
 
 :- begin_tests(busy_beaver_noncomputability_tests).
 
-test(is_uniform_mountain) :-
-    % Verify it is classified as a Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(busy_beaver_noncomputability, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(busy_beaver_noncomputability, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(busy_beaver_noncomputability, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_threshold_adherence) :-
-    % Verify metrics are within the allowed range for a Mountain classification.
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
     narrative_ontology:constraint_metric(busy_beaver_noncomputability, ExtMetricName, E),
-    narrative_ontology:constraint_metric(busy_beaver_noncomputability, SuppMetricName, S),
+    domain_priors:suppression_score(busy_beaver_noncomputability, S),
     E =< 0.25,
     S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(busy_beaver_noncomputability),
+    narrative_ontology:constraint_metric(busy_beaver_noncomputability, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(busy_beaver_noncomputability, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(busy_beaver_noncomputability_tests).
 
@@ -180,79 +182,89 @@ test(mountain_threshold_adherence) :-
 
 /**
  * LOGIC RATIONALE:
- *   The non-computability of the Busy Beaver function is a pure Mountain, a
- *   fundamental law of computation with near-zero intrinsic extraction and
- *   suppression. The metrics (ε=0.05, S=0.05) reflect its status as a feature
- *   of the logical universe, not a human-imposed rule. The Natural Law profile
- *   metrics (accessibility_collapse=1.0, resistance=0.0) and the
- *   emerges_naturally flag confirm this, allowing it to pass the engine's
- *   strict certification for Mountain classification.
+ *   Extractiveness (0.12): Very low. The non-computability of Σ(n) is not an extraction mechanism — it does not benefit one agent at the expense of another. The minimal non-zero value (0.12 rather than 0.0) reflects that the mathematical proof itself is created and maintained by the research community, which requires institutional resources and creates epistemic authority structures. However, these institutional features are not the constraint itself — they are scaffolding around the constraint. The core mathematical fact (non-computability) has zero extractiveness. Suppression (0.02): Negligible. The non-computability is not a suppression mechanism — it is not hiding alternatives or creating coercive barriers to exit. There is simply no alternative pathway to computation of Σ(n) that could be suppressed. Theater ratio (0.05): Minimal. The proof of non-computability requires formal mathematical reasoning with no performative elements. The proof is either correct or incorrect; there is no ritual or institutional theater required to establish it.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a true logical limit, the constraint is a
- *   Mountain from all perspectives. Any attempt to show a 'Snare' perspective
- *   for a brute-force searcher would be a misapplication of the framework. The
- *   mathematical fact of non-computability (the Mountain) is distinct from the
- *   human activity of trying to defy it. That activity, 'brute_force_bb_search',
- *   would be a separate constraint story with a very high ε, correctly
- *   classified as a Snare. This follows the ε-invariance principle: if changing
- *   the observable (from the mathematical theorem to the human search activity)
- *   changes ε, you have two different constraints.
+ *   All four perspectives converge on the same classification (Mountain) with the same underlying logic. There is no perspectival gap — the constraint looks identical from all structural positions. This uniformity is diagnostic of a true natural law: if the constraint were actually a social construction, institutional policy, or contingent arrangement, different observers would see different types (beneficiary seeing Rope, victim seeing Snare, etc.). The absence of perspectival gap confirms that we are measuring a structural feature of mathematical reality, not an institutional arrangement.
  *
  * DIRECTIONALITY LOGIC:
- *   As a pure Mountain, the concepts of beneficiary and victim do not apply.
- *   The constraint is a symmetric, unchangeable fact of the logical universe.
- *   Therefore, no beneficiary/victim declarations are needed.
+ *   All four perspectives are agents subject to the same constraint with identical structural positions. No agent benefits while others bear costs. The directionality derivation chain does not apply — there are no beneficiaries or victims. All agents experience the constraint as an immutable boundary (d ≈ 0.5 for all, f(d) ≈ 0.65, but this is moot because chi is not computed for mountains). The constraint is civilization-invariant and observer-invariant.
  *
  * MANDATROPHY ANALYSIS:
- *   This regeneration prevents a "false natural law" error. By enforcing the
- *   low-extraction, low-suppression signature of a Mountain, we avoid
- *   mislabeling a fundamental limit as an extractive or coercive mechanism.
- *   The perceived "extraction" felt by a searcher is not a property of the
- *   limit itself, but of the searcher's choice to expend resources against an
- *   immovable object.
+ *   The Busy Beaver constraint resolves the mandatrophy trivially: it is a Mountain from all perspectives. The classification does not change based on observer position because the constraint is not extraction at all — it is an immutable boundary. The mandatrophy resolution affirms that mathematical non-computability is distinct from institutional extraction: the former is a structural law (Mountain), the latter is a social arrangement (Snare or Tangled Rope). The constraint exemplifies how to avoid the mandatrophy trap: when all perspectives converge on the same type with no perspectival gap, the classification is robust across contexts and observer positions.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_busy_beaver_unprovability,
-    'At what value of n does the specific value of Σ(n) become independent of ZFC, making it unknowable within standard mathematics?',
-    'Investigation into the smallest Turing machine that simulates a search for a contradiction in ZFC.',
-    'If n is small (e.g., < 1000), it implies that the boundary of mathematical provability is much closer than anticipated.',
+    oracle_machine_hypercomputation,
+    'Does hypercomputation (oracle machines, Turing machines with access to oracles) change the non-computability status of Σ(n)?',
+    'Formal proof establishing whether oracle machines can compute Σ(n) or whether the problem remains uncomputable at higher levels of the arithmetical hierarchy',
+    'If oracle machines can compute Σ(n): The constraint is relative to standard Turing machines, not absolute — it becomes a classification within a hierarchy rather than a mountain. If oracle machines cannot: The non-computability is robust across computational models and the mountain classification is confirmed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(oracle_machine_hypercomputation, conceptual, 'Whether hypercomputation undermines the mountain classification').
+
+omega_variable(
+    physical_realizability_ceiling,
+    'Does the physical universe impose a lower ceiling on computable Busy Beaver values than mathematical non-computability suggests?',
+    'Analysis of whether physical constraints (thermodynamic limits, computational speed limits, quantum decoherence) make Σ(n) practically uncomputable below the mathematical non-computability threshold',
+    'If physical limits are more restrictive: The practical boundary is set by physics, not mathematics — the distinction between ''mathematically non-computable'' and ''physically impossible'' becomes empirically relevant. If mathematics is the limiting factor: The mountain classification reflects the actual constraint that agents face.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(physical_realizability_ceiling, empirical, 'Whether physical limits are more restrictive than mathematical non-computability').
+
+omega_variable(
+    definitional_circularity,
+    'Is the non-computability of Σ(n) a mathematical truth or a tautology that follows from how we define the function?',
+    'Examination of whether Σ(n) could be defined differently (e.g., as a computable approximation or truncated version) and whether alternative definitions would preserve the core conceptual content',
+    'If definitional choice: The non-computability is partly a feature of how we chose to set up the problem — not purely a natural law. If tautological: The mountain classification is correct but needs qualification that the constraint is linguistic-conceptual in origin, not physical.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(definitional_circularity, conceptual, 'Whether non-computability is mathematical truth or definitional artifact').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(busy_beaver_noncomputability, 0, 10).
+narrative_ontology:interval(busy_beaver_noncomputability, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% As a pure Mountain with base_extractiveness <= 0.46, temporal data is not required.
-% The constraint is static and does not drift over time.
+% Theater ratio over time
+narrative_ontology:measurement(bb_tr_t0, busy_beaver_noncomputability, theater_ratio, 0, 0.03).
+narrative_ontology:measurement(bb_tr_t50, busy_beaver_noncomputability, theater_ratio, 50, 0.05).
+narrative_ontology:measurement(bb_tr_t100, busy_beaver_noncomputability, theater_ratio, 100, 0.05).
+
+% Extraction over time
+narrative_ontology:measurement(bb_be_t0, busy_beaver_noncomputability, base_extractiveness, 0, 0.12).
+narrative_ontology:measurement(bb_be_t50, busy_beaver_noncomputability, base_extractiveness, 50, 0.12).
+narrative_ontology:measurement(bb_be_t100, busy_beaver_noncomputability, base_extractiveness, 100, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Network relationships (structural influence edges)
-% This constraint is a direct consequence of the Halting Problem.
-narrative_ontology:affects_constraint(halting_problem_undecidability, busy_beaver_noncomputability).
+narrative_ontology:coordination_type(busy_beaver_noncomputability, information_standard).
+narrative_ontology:affects_constraint(busy_beaver_noncomputability, halting_problem_decidability).
+narrative_ontology:affects_constraint(busy_beaver_noncomputability, turing_completeness_boundary).
+narrative_ontology:affects_constraint(busy_beaver_noncomputability, godel_incompleteness_theorem).
+
+% DUAL FORMULATION NOTE:
+% The Busy Beaver non-computability is a specific instance of the Halting Problem's undecidability. Σ(n) is non-computable because computing it would solve the Halting Problem. These are distinct constraints (different ε values, different measurement bases) but structurally coupled: non-computability of Σ(n) flows from the undecidability of the Halting Problem.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed. As a Mountain, directionality is not a factor.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

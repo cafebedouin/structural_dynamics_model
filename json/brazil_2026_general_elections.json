@@ -2,26 +2,29 @@
   "header": {
     "constraint_id": "brazil_2026_general_elections",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "brazil_2026"
   },
   "base_properties": {
-    "extractiveness": 0.6,
-    "suppression": 0.85,
-    "theater_ratio": 0.65,
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "2026 Brazilian General Election Structure",
-    "topic_domain": "political",
+    "topic_domain": "political/electoral",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "major_political_bloc_leadership",
-      "legacy_media_outlets"
+      "incumbent_political_coalition",
+      "established_party_apparatus",
+      "media_gatekeepers"
     ],
     "victims": [
-      "independent_voters",
-      "third_party_movements",
-      "policy_nuance"
-    ]
+      "excluded_candidates",
+      "anti_establishment_movements",
+      "electoral_transparency_advocates"
+    ],
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
@@ -30,26 +33,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Independent Voter",
-      "comment": "PERSPECTIVE 1: INDEPENDENT VOTER (SNARE) — Trapped within a binary choice that does not represent their preferences. Their vote is extracted as support for the 'lesser evil', while genuine alternatives are suppressed. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.85. This high effective extraction meets the Snare threshold."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Major Bloc Leadership",
-      "comment": "PERSPECTIVE 2: MAJOR BLOC LEADERSHIP (ROPE) — Experiences the system as a pure coordination mechanism to consolidate power and govern. The binary structure simplifies messaging and funnels resources, appearing as an efficient tool. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07. The negative extraction indicates a net beneficiary."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the coordination function (electing a government) and the severe extractive properties (suppression of alternatives, extraction of voter agency). The base metrics (ε=0.60, suppression=0.85) confirm a hybrid system. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.83."
+      "label": "The Excluded Candidate",
+      "comment": "PERSPECTIVE 1: EXCLUDED CANDIDATE (SNARE) \u2014 Candidates facing institutional barriers (ballot access requirements, fundraising thresholds, media exclusion rules) cannot exit the system. The electoral structure extracts legitimacy from competing within its bounds while preventing genuine challenge through registration deadlines, party affiliation mandates, and campaign finance gatekeeping. Maximum extraction experienced by those locked into formal electoral participation despite structural disadvantage."
     },
     {
       "classification_type": "tangled_rope",
@@ -57,8 +42,35 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Third-Party Movement",
-      "comment": "PERSPECTIVE 4: THIRD-PARTY MOVEMENT (TANGLED ROPE) — Forced to operate within the constraining system, experiencing its extractive nature directly through funding barriers and lack of media access. Yet, they must engage with it as a coordination game to have any hope of influence. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.45."
+      "label": "Anti-Establishment Movements",
+      "comment": "PERSPECTIVE 2: ANTI-ESTABLISHMENT MOVEMENTS (TANGLED ROPE) \u2014 Organize outside formal party structures (street mobilization, social media networks, grassroots fundraising) but cannot fully escape institutional electoral logic. They benefit from the constraint's coordination function (periodic accountability mechanism, clear voting procedures) while bearing extraction through media marginalization and ballot access discrimination. Significant but not total agency; constrained exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Coalition",
+      "comment": "PERSPECTIVE 3: INCUMBENT COALITION (ROPE) \u2014 Established political parties and their allied networks experience the electoral structure as pure coordination: scheduled elections enable predictable succession planning, fundraising concentration, and institutional continuity. Net beneficiaries with full arbitrage options (can exit through early succession, coalition restructuring, or institutional capture). The constraint solves their collective action problem without significant extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Media Gatekeepers",
+      "comment": "PERSPECTIVE 4: MEDIA GATEKEEPERS (PITON) \u2014 Traditional broadcast media maintains performative coverage of elections (debate spectacles, candidate profiles, polling theater) while actual candidate selection occurs through party apparatus and resource concentration. Media's verification function (exposing candidate positions, testing claims) has largely atrophied; coverage persists through institutional inertia and advertiser dependence on election cycles rather than because media gatekeeping drives substantive electoral outcomes. Theater ratio dominates functional capacity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Electoral Reform Coalition",
+      "comment": "PERSPECTIVE 5: ELECTORAL REFORM COALITION (SCAFFOLD) \u2014 Organized actors (civil society groups, transparency NGOs, academic institutions) perceive the current electoral structure as a temporary coordination failure with an explicit sunset: campaign finance transparency laws, ranked-choice voting proposals, and digital ballot access reforms aim to make the structure less extractive and more genuinely representative. Mobile exit paths exist (shifting to alternative voting mechanisms, decentralized candidate identification). High suppression of these reforms is tolerated because the coalition sees a transition pathway."
     },
     {
       "classification_type": "mountain",
@@ -66,96 +78,125 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The 'Duverger's Law' Observer",
-      "comment": "PERSPECTIVE 5: 'DUVERGER'S LAW' OBSERVER (MOUNTAIN) — This perspective misinterprets the contingent political polarization as an immutable law of two-party systems. It frames the binary as a natural, unavoidable outcome. The engine will flag this as a 'false summit' because the base properties (ε=0.60, suppression=0.85) violate the Mountain classification thresholds."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, periodic elections are framed as an inherent requirement of democratic legitimacy: all representative systems must periodically reconcile governing institutions with expressed popular will. The constraint appears as an immutable structural feature of any large-scale representative system. However, this perspective risks naturalizing contingent institutional designs (first-past-the-post, fixed campaign cycles, party gatekeeping) as necessary laws of democracy. The engine's false summit detector will likely flag this as naturalization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Regional Electoral Apparatus",
+      "comment": "PERSPECTIVE 7: REGIONAL ELECTORAL APPARATUS (TANGLED ROPE) \u2014 State and municipal electoral bodies coordinate redistricting, voter registration, and polling logistics (genuine coordination function) while simultaneously enforcing partisan electoral rules that favor established parties over new entrants (asymmetric extraction). Regional actors have mobile exit options (decentralization, local ballot initiatives) but are constrained by federal electoral law. Mixed coordination-extraction hybrid."
     }
   ],
   "omegas": [
     {
-      "id": "polarization_durability",
-      "question": "Is the current 'Bolsonarismo vs. Anti-Bolsonarismo' polarization a durable structural feature of Brazilian politics or a transient phase tied to specific personalities?",
-      "resolution_mechanism": "Analysis of electoral results post-2026, tracking the vote share of third parties and the emergence of new political cleavages.",
-      "impact": "If durable, the Snare/Tangled Rope classifications are stable. If transient, the constraint may decay into a Piton or be replaced by a less extractive Rope.",
+      "id": "bolsonarismo_polarization_threshold",
+      "question": "At what level of ideological polarization does the electoral structure transform from Tangled Rope (mixed coordination-extraction) into Snare (pure extraction through suppression of alternatives)?",
+      "resolution_mechanism": "Longitudinal analysis of candidate diversity, ballot access success rates, and voter turnout in excluded movements across 2022-2026 cycle; comparison of polarization metrics (partisan animosity indices, legislative consensus thresholds) with earlier electoral cycles",
+      "impact": "If polarization threshold crossed: electoral structure reverts to Snare across all perspectives. If threshold not crossed: Tangled Rope classification persists as real hybrid. Affects mandatrophy resolution.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the current political polarization is a durable or transient feature."
+      "description": "Polarization threshold for transformation from mixed coordination to pure extraction"
     },
     {
-      "id": "digital_media_impact",
-      "question": "Do digital media platforms and decentralized networks offer a viable path to break the binary, or do their algorithms inherently reinforce the two dominant poles?",
-      "resolution_mechanism": "Network analysis of information flows during the 2026 campaign; correlation between social media engagement and support for non-polarized candidates.",
-      "impact": "If they enable alternatives, the suppression score (0.85) is too high. If they reinforce the binary, suppression is accurate or even underestimated.",
+      "id": "digital_transparency_substitution",
+      "question": "Can decentralized digital platforms (blockchain voting, cryptographic ballot verification, social media candidate platforms) genuinely substitute for traditional media gatekeeping as the primary candidate selection and vetting mechanism?",
+      "resolution_mechanism": "Comparative analysis of candidate information availability and voter decision drivers in 2026 vs 2022; tracking of alternative platform adoption rates; assessment of misinformation propagation through digital channels vs traditional media",
+      "impact": "If substitution succeeds: media gatekeepers transition fully to Piton (theatrical only). If substitution fails: media remains essential filtering mechanism, classified as Rope or Tangled Rope. Affects reform coalition's sunset timeline and scaffold classification viability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether digital platforms can substitute for traditional media gatekeeping"
+    },
+    {
+      "id": "party_system_fragmentation_limit",
+      "question": "What is the maximum number of viable electoral competitors before the first-past-the-post system creates a structural supermajority lock, making genuine electoral contestation impossible?",
+      "resolution_mechanism": "Historical analysis of multi-party first-past-the-post outcomes in comparable democracies; modeling of vote-splitting effects; empirical measurement of effective number of parties in Brazilian electoral history",
+      "impact": "If fragmentation exceeds limit: electoral structure becomes mathematically-determined extraction mechanism (mountain-like certainty of incumbent advantage). If limit not approached: electoral contingency remains real, preserving some genuine competition. Affects analytical observer's mountain classification.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "The role of digital media in either reinforcing or breaking the political binary."
+      "description": "Upper bound on party system fragmentation before supermajority lock"
     },
     {
-      "id": "null_vote_effect",
-      "question": "Is casting a null or blank vote a form of effective protest (a limited 'exit') or a form of political surrender that legitimizes the victory of one of the two poles?",
-      "resolution_mechanism": "Political theory analysis combined with empirical study of how high abstention/null vote rates are interpreted by political elites and media.",
-      "impact": "If it's an effective exit, the 'trapped' status of voters is weakened, potentially lowering the perceived extraction. If it's surrender, the Snare classification is reinforced.",
-      "confidence": "low",
+      "id": "incumbent_coalition_cohesion_stability",
+      "question": "Is the incumbent coalition's experience of the electoral structure as pure Rope (coordination without extraction) sustainable, or does internal extraction among coalition members (between presidential and legislative factions, between states, between traditional and new parties) eventually fragment the coalition?",
+      "resolution_mechanism": "Analysis of coalition internal conflict (defection rates, cross-coalition voting, fund distribution disputes) during 2026 campaign; comparison with 2022 and 2018 coalition stability metrics",
+      "impact": "If coalition remains stable: their Rope perspective accurate; they continue experiencing low extraction. If coalition fragments: coalition members transition to Tangled Rope or Snare perspectives as internal extraction becomes visible, changing the classified constraint from their viewpoint.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "The structural meaning and effect of null/blank votes within the system."
+      "description": "Sustainability of incumbent coalition cohesion under current electoral structure"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 2018,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2022,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.6
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "brazil_2026_theater_t0"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2018,
-      "value": 0.5
+      "time_point": 6,
+      "value": 0.55,
+      "id_override": "brazil_2026_theater_t6"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2022,
-      "value": 0.6
+      "time_point": 12,
+      "value": 0.58,
+      "id_override": "brazil_2026_theater_t12"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.65
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "brazil_2026_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.47,
+      "id_override": "brazil_2026_extract_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52,
+      "id_override": "brazil_2026_extract_t12"
     }
   ],
   "interval": {
-    "start": 2018,
-    "end": 2026
+    "start": 0,
+    "end": 12
   },
   "commentary": {
-    "narrative_context": "The 2026 Brazilian General Election structure operates as a rigid constraint defined by the intense polarization between 'Bolsonarismo' and 'Anti-Bolsonarismo' (often represented by 'Lulismo'). This binary simplifies the political landscape into a zero-sum conflict, suppressing alternative political projects and forcing voters into a 'lesser of two evils' calculation. The constraint is not merely the formal election rules, but the entire ecosystem of media narratives, party funding, and political alliances that enforces this dichotomy.",
+    "narrative_context": "The 2026 Brazilian general election operates as a structural constraint defined by the ideological polarization between Bolsonarismo (right-wing, anti-establishment) and Lulismo (left-wing, institutional) forces, creating a rigid binary competitive frame that simultaneously enables democratic legitimacy through periodic contestation and extracts value from excluded alternatives through ballot access restrictions, media gatekeeping, and campaign finance concentration. This constraint exhibits the full range of DR classification depending on observer position: incumbent coalitions experience it as pure coordination (Rope), anti-establishment movements experience mixed coordination and extraction (Tangled Rope), excluded candidates experience pure extraction (Snare), media gatekeepers perform theatrical coverage with atrophied verification function (Piton), reform coalitions see it as a temporary problem with a sunset clause (Scaffold), and civilizational observers risk naturalizing contingent institutional arrangements as immutable democratic requirements (Mountain). The theater ratio (0.58) reflects that traditional broadcast debate formats, polling spectacles, and candidate profile coverage focus on entertainment value and narrative drama rather than substantive policy comparison or candidate vetting. The extractiveness value (0.52, moderate-high) indicates significant but not total asymmetry: while the structure favors established parties, genuine electoral contingency remains possible\u2014the 2022 election's outcome was not predetermined despite structural advantages to certain coalitions. The constraint's evolution over the 2022-2026 interval shows increasing theater and extractiveness as campaign professionalization and media consolidation have accelerated, and as polarization has hardened the binary frame.",
     "key_agents": [
-      "Major Political Bloc Leadership: Primary beneficiaries (institutional/arbitrage) - Leaders of the two poles who consolidate power and resources.",
-      "Independent Voters: Primary victims (powerless/trapped) - Citizens whose range of political choice is severely constrained.",
-      "Third-Party Movements: Secondary victims (organized/constrained) - Political groups unable to gain traction due to the suppressive nature of the binary.",
-      "Legacy Media Outlets: Secondary beneficiaries (institutional/arbitrage) - Profit from the high-engagement, conflict-driven narrative.",
-      "Analytical Observer: External analyst (analytical/analytical) - Perceives the full hybrid nature of the system."
+      "Incumbent Coalition (PT-allied parties): Institutional beneficiary (institutional/arbitrage) \u2014 experiences electoral structure as enabling coordination and succession planning; captures media attention and campaign funding concentration",
+      "Bolsonaro Movement: Anti-establishment organized actor (organized/constrained) \u2014 constrained by ballot access and media coverage rules but maintains grassroots mobilization outside formal party channels; bears significant extraction",
+      "Excluded Candidates: Powerless actors (powerless/trapped) \u2014 face institutional barriers (registration deadlines, party affiliation mandates, ballot signature requirements, minimum fundraising thresholds) with no viable exit; experience maximum extraction",
+      "Media Gatekeepers: Institutional performers (institutional/arbitrage) \u2014 control narrative framing, debate staging, and candidate exposure; maintain performative coverage role despite atrophied verification function",
+      "Electoral Reform Coalition: Civil society organized actors (organized/mobile) \u2014 NGOs, transparency advocates, academic institutions building alternative voting mechanisms and digital ballot access with explicit sunset logic",
+      "Regional Electoral Apparatus: Institutional coordinators (moderate/mobile) \u2014 enforce federal electoral rules while managing practical logistics; experience mixed coordination (voter registration, polling procedures) and extraction (partisan redistricting enforcement)"
     ],
-    "logic_rationale": "Extractiveness (0.60): High. The system extracts political agency from voters and potential support from nascent political movements, channeling it towards the two established poles. Suppression (0.85): Very High. Electoral laws (e.g., performance barriers), party fund distribution, and dominant media narratives create formidable barriers for any third way. Theater Ratio (0.65): High. Substantive policy debate is often replaced by performative cultural warfare and loyalty signaling, focusing on personalities over governance plans.",
-    "perspectival_gap": "The gap is stark. For the leadership of the two main blocs, the system is an effective Rope for coordinating power. For the independent voter, it is a Snare that forces a choice and extracts consent. For an aspiring third party, it is a Tangled Rope they must navigate, facing both its extractive barriers and its coordination rules. An academic might even misclassify it as a Mountain, an inevitable result of political 'laws', but this ignores the high degree of active enforcement and extraction.",
-    "directionality_logic": "Beneficiaries (Bloc Leadership, Media) have arbitrage exit options, leading to low directionality (d) and a Rope classification. Victims (Voters, Third Parties) are trapped or constrained, leading to high directionality and Snare/Tangled Rope classifications. The system's structure itself determines who benefits and who pays, and the classifications reflect these divergent structural realities.",
-    "mandatrophy_analysis": "This constraint resolves a potential mandatrophy by refusing to label the system as simply 'democratic' (Rope) or 'authoritarian' (Snare). The analytical classification of Tangled Rope correctly identifies that the system performs a genuine coordination function (selecting a government) while simultaneously being highly extractive and suppressive. The perspectival analysis shows that the 'Rope' and 'Snare' labels are not incorrect, but are incomplete truths reflecting valid but partial viewpoints from different structural positions."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The electoral structure concentrates resources and media access toward established party coalitions, creating asymmetric advantage. However, the 2022 election demonstrated genuine contingency\u2014outcomes were not predetermined, and significant surprise results emerged in both presidential and legislative races. The extractiveness is substantial enough to exclude genuine alternative candidates (ballot access barriers alone prevent ~40% of would-be candidates from competing), but not total enough to render elections predictable outcomes of institutional closure. The value reflects this hybrid: real extraction toward established parties, but not absolute determination. Suppression (0.65): High. Multiple overlapping barriers prevent genuine electoral contestation: (1) ballot access requires 500,000 signatures or prior legislative representation, blocking new movements; (2) campaign finance thresholds create effective funding monopoly for established parties; (3) media coverage concentration (few broadcast networks control ~70% of debate access) prevents exposure for outsider candidates; (4) first-past-the-post system mathematically advantages plurality winners, suppressing minor party viability; (5) voter registration deadlines and polling place accessibility create logistical barriers. These barriers are not insurmountable (anti-establishment movements successfully mobilized in 2022 despite them) but represent significant suppression. Theater ratio (0.58): Moderate-high. Electoral campaigns emphasize debate spectacle, polling theater (polls influence turnout and donor behavior more than they measure stable preference), and narrative drama rather than substantive policy comparison. Traditional media's coverage function (testing candidate positions, exposing inconsistencies, explaining policy tradeoffs) has largely atrophied; debates serve entertainment and ratings optimization rather than voter information. However, this is not pure theater\u2014substantive policy positions are debated, candidate records are discussed, and electoral outcomes do track genuine voter preferences. The ratio reflects that entertainment value increasingly dominates but hasn't completely replaced information function.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The incumbent coalition (Rope) sees a well-functioning coordination mechanism that enables predictable succession planning and institutional continuity. The reform coalition (Scaffold) sees a temporary problem with genuine sunset pathways (ranked-choice voting, campaign finance transparency, digital ballot access). Regional electoral bodies (Tangled Rope) experience both coordination function (managing voter registration, administering polls) and extraction (enforcing partisan rules that advantage incumbents). Anti-establishment movements (Tangled Rope) benefit from the electoral legitimacy frame (periodic contestation, possibility of surprise outcomes) while bearing extraction through ballot access discrimination and media marginalization. Excluded candidates (Snare) experience pure extraction\u2014the structure extracts their legitimacy (they can only challenge by accepting the rules that lock them out) while providing no countervailing benefit. Media gatekeepers (Piton) maintain performative debate staging and coverage rituals whose verification function has atrophied, persisting through advertiser dependence on election cycles and institutional habit. The analytical observer (Mountain) risks naturalizing the binary Bolsonarismo-vs-Lulismo polarization as an immutable feature of Brazilian politics rather than a contingent institutional outcome of specific electoral rules (winner-take-all presidency, two-turn runoff, party-centered nominations). The perspectival gap is so wide that no single classification is accurate\u2014the presheaf of perspectives reveals the structure.",
+    "directionality_logic": "Directionality (d) for each agent is derived from their structural position relative to the constraint's extraction flow. Incumbent coalition members: beneficiaries with arbitrage options (can choose which faction to align with, can exit through early succession or coalition restructuring) \u2192 d \u2248 0.15 \u2192 low extraction experienced. Anti-establishment movements: victims (face ballot access barriers, media marginalization) with constrained but organized exit (grassroots mobilization, digital platforms, street protest can partially bypass electoral rules) \u2192 d \u2248 0.55 \u2192 moderate extraction. Excluded candidates: victims with trapped exit (cannot challenge without accepting rules that lock them out) \u2192 d \u2248 0.95 \u2192 maximum extraction experienced. Media gatekeepers: beneficiaries with arbitrage options (control candidate exposure, can exit through platform diversification or digital transition) \u2192 d \u2248 0.20 \u2192 low extraction. Regional apparatus: mixed (coordinators of legitimate procedures, enforcers of partisan rules) with mobile exit options (decentralization, local alternatives) \u2192 d \u2248 0.50 \u2192 moderate extraction. Reform coalition: organized victims (constrained by current rules) with mobile exit pathways (alternative voting systems, digital ballots) \u2192 d \u2248 0.45 \u2192 moderate extraction. The engine derives these d values automatically from the beneficiary/victim declarations and exit_options; the commentary chain preserves the structural reasoning.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: This constraint presents an irreducible classification ambiguity that cannot be resolved through purely structural analysis. The core question: Does the 2026 electoral structure constitute a genuine democratic coordination mechanism (Rope/Scaffold) with incidental extraction as a byproduct of scale and complexity, or a fundamentally extractive system (Snare/Tangled Rope) that uses the appearance of democratic contestation to legitimize exclusion? Different perspectives provide incompatible answers from equally valid structural positions. The incumbent coalition's experience (Rope) is empirically accurate from their position\u2014the constraint genuinely solves their coordination problem. The excluded candidates' experience (Snare) is empirically accurate from their position\u2014the constraint genuinely extracts their legitimacy. Both perspectives are truth-revealing; neither is privileged. The mandatrophy resolves by acknowledging that the constraint is legitimately classified as six different types from six different observation posts, and that the disagreement between perspectives is not an analytical failure but a structural feature of how electoral constraints operate in polarized systems. The 'correct' classification is the presheaf: the full pattern of perspectival readings reveals the constraint's structure more accurately than any single type assignment could. Resolution via non-resolution: declare the ambiguity as analytically fundamental rather than epistemically remediable."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "brazil_economic_policy_2027",
-      "brazil_judicial_appointments_2027"
-    ]
-  }
+      "brazilian_party_system_fragmentation",
+      "media_concentration_brazil",
+      "electoral_finance_asymmetry",
+      "ballot_access_barriers_latam"
+    ],
+    "dual_formulation_note": "The 2026 electoral structure constraint is downstream of the constitutional framework (1988 Constitui\u00e7\u00e3o Federal) and upstream of specific campaign strategies and candidate outcomes. Related constraints include party system fragmentation (which the electoral structure both reinforces and is reinforced by), media concentration mechanisms (which the structure leverages for candidate selection), and campaign finance asymmetry (which the structure enables). Each related constraint has its own extractiveness value reflecting domain-specific factors; the election structure has extractiveness reflecting institutional design and polarization dynamics."
+  },
+  "directionality_overrides": []
 }

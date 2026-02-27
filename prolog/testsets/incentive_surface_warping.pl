@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: incentive_surface_warping
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-08-01
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_incentive_surface_warping, []).
@@ -40,8 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -56,18 +58,29 @@
  *   domain: economic/organizational/technological
  *
  * SUMMARY:
- *   A scenario where a "Rope" designed to align individual behavior with
- *   collective goals (e.g., performance bonuses, metrics-based funding,
- *   or algorithmic rewards) inadvertently "warps" the behavioral landscape.
- *   This coordination substrate becomes a "Snare" for the subject, as the
- *   system liquidates their agency to pursue the actual intended outcome,
- *   trapping them in a territory where they must optimize for the "proxy
- *   metric" rather than the "real value" to remain viable.
+ *   Goodhart's Law — 'when a measure becomes a target, it ceases to be a good
+ *   measure' — describes a structural trap in incentive systems. A metric
+ *   designed to coordinate behavior toward genuine objectives (Rope function)
+ *   generates extractive dynamics when agents optimize for the proxy rather
+ *   than the underlying goal. The constraint exhibits a temporal trajectory:
+ *   initially, metrics provide real coordination value (low extractiveness,
+ *   low theater). Over time, agents learn the measurement surface and
+ *   optimize toward it, increasing both extractiveness (metric gaming becomes
+ *   profitable) and theater ratio (performative optimization replaces
+ *   substantive progress). The perverse optimization trap is not a bug in
+ *   incentive design — it is an inherent feature of any system where
+ *   measurable proxies diverge from true objectives. The constraint's
+ *   evolution tracks the Goodhart lifecycle: coordinating mechanism →
+ *   extraction pathway → legacy ritual (piton), depending on observer
+ *   position and time scale.
  *
- * KEY AGENTS (by structural relationship):
- *   - Managed Participants: Primary target (powerless/trapped) — bears extraction
- *   - Metric Designers: Primary beneficiary (institutional/mobile) — benefits from constraint
- *   - Analytical Observer: Sees full structure
+ * KEY AGENTS:
+ *   - Metric Designers (Executive, Algorithm Creator): Institutional power, arbitrage exit — benefits from metric authority and simplified reporting. Primary beneficiaries of the constraint structure.
+ *   - Frontline Operators (Teacher, Nurse, Analyst): Powerless, trapped — bear full cost of metric-objective divergence. No exit from measurement without career penalty. Primary victims.
+ *   - System True Objectives: Abstract victim (immeasurable, unrepresented) — degraded by metric optimization as agents redirect effort toward proxies. Cannot advocate or organize.
+ *   - Intermediate Managers: Moderate power, constrained exit — caught between upward metric reporting and downward team welfare. Enforcement overhead falls on this layer.
+ *   - Systems Reformers (Unions, Professional Associations, Researchers): Organized agents, constrained but with long-term exit paths — building multi-metric and triangulation alternatives to replace single-proxy systems.
+ *   - Legacy Accountability Rituals: Institutional theater — annual reviews, performance evaluations persist through inertia despite decoupling from actual decision-making.
  */
 
 /* ==========================================================================
@@ -75,112 +88,94 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% High extraction (0.86) reflects the siphoning of the subject's
-% primary intent-agency into the maintenance of the warped proxy-metric.
-domain_priors:base_extractiveness(incentive_surface_warping, 0.86).
-domain_priors:suppression_score(incentive_surface_warping, 0.75).   % Structural property (raw, unscaled). Non-metric-aligned behavior is suppressed by lack of reward or funding.
-domain_priors:theater_ratio(incentive_surface_warping, 0.92).       % Piton detection (>= 0.70). Extreme theater: "Alignment Reports" showing 100% metric success while the actual goal fails.
+domain_priors:base_extractiveness(incentive_surface_warping, 0.52).
+domain_priors:suppression_score(incentive_surface_warping, 0.48).
+domain_priors:theater_ratio(incentive_surface_warping, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(incentive_surface_warping, extractiveness, 0.86).
-narrative_ontology:constraint_metric(incentive_surface_warping, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(incentive_surface_warping, theater_ratio, 0.92).
+narrative_ontology:constraint_metric(incentive_surface_warping, extractiveness, 0.52).
+narrative_ontology:constraint_metric(incentive_surface_warping, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(incentive_surface_warping, theater_ratio, 0.65).
 
-% --- Constraint claim (must match analytical perspective type) ---
-% The system's true nature is a hybrid of coordination and extraction.
-narrative_ontology:constraint_claim(incentive_surface_warping, snare).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(incentive_surface_warping, tangled_rope).
 narrative_ontology:human_readable(incentive_surface_warping, "The Perverse Optimization Trap (Goodhart's Law)").
 narrative_ontology:topic_domain(incentive_surface_warping, "economic/organizational/technological").
 
-% --- Binary flags ---
 domain_priors:requires_active_enforcement(incentive_surface_warping).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(incentive_surface_warping, metric_designers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(incentive_surface_warping, managed_participants).
+narrative_ontology:constraint_beneficiary(incentive_surface_warping, measurement_proxies_creators).
+narrative_ontology:constraint_victim(incentive_surface_warping, system_actual_objectives).
+narrative_ontology:constraint_victim(incentive_surface_warping, unincentivized_agents).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% The participant is trapped: they must follow the warped incentive to survive,
-% but doing so liquidates their ability to achieve the original goal.
+% PERSPECTIVE 1: FRONTLINE OPERATOR (SNARE) — Trapped in metric optimization loops. When bonuses and evaluations depend on measured outputs (test scores, patient wait times, code coverage), the operator faces asymmetric extraction: they must optimize for the proxy measure or lose income/job security, but the proxy often diverges from actual system objectives. No exit from the metric without career penalty. Maximum suppression — alternatives (pursuing true objectives at cost of metric penalties) are structurally unavailable.
 constraint_indexing:constraint_classification(incentive_surface_warping, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The designer views the incentive as a Rope—the essential coordination
-% substrate for managing large-scale behavior and ensuring legible performance.
+% PERSPECTIVE 2: INTERMEDIATE MANAGER (TANGLED ROPE) — Constrained between upward metric reporting and downward team welfare. Benefits from metric targets (performance looks good, justifies budget allocation) but also bears costs when metric optimization produces perverse behaviors (teaching to the test, gaming wait-time statistics, cutting corners on unmeasured quality). Mixed extraction with real enforcement overhead — must actively monitor and adjust incentive structures.
+constraint_indexing:constraint_classification(incentive_surface_warping, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: METRIC DESIGNER (ROPE) — Benefits from the constraint structure through coordination and control. Metric designers experience the system as solving a genuine coordination problem: how to align many independent agents toward organizational goals without centralized oversight. They have arbitrage options (choice of metrics, adjustment frequency, measurement scope). Extraction flows toward them through simplified reporting and authority consolidation.
 constraint_indexing:constraint_classification(incentive_surface_warping, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile),
+            time_horizon(immediate),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The default analytical view detects the hybrid nature: a coordination
-% function for beneficiaries that relies on asymmetric extraction from victims.
-constraint_indexing:constraint_classification(incentive_surface_warping, snare,
+% PERSPECTIVE 4: SYSTEMS REFORMER COALITION (SCAFFOLD) — Organized groups (labor unions, professional associations, organizational behavior researchers) view the perverse optimization trap as a temporary coordination failure with a known sunset. Multi-metric approaches (balanced scorecards), triangulation methods (combining multiple imperfect proxies), and agent feedback loops are building alternative evaluation pathways. The constraint is seen as solvable through institutional redesign — not permanent, but requiring active sunset clauses (metric rotation, measurement diversity, time-bound evaluations).
+constraint_indexing:constraint_classification(incentive_surface_warping, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: LEGACY ACCOUNTABILITY SYSTEM (PITON) — Traditional annual performance reviews, once functional as coordination mechanisms, have become largely theatrical. The review ritual persists through institutional inertia despite widespread recognition that single-metric or narrow-scope evaluations are degraded coordination tools. Organizations maintain 'compliance with feedback systems' theater even as real decisions depend on unmeasured factors (relationships, tacit knowledge, reputation). Theater ratio is high because the legitimating function has decoupled from actual personnel decisions.
+constraint_indexing:constraint_classification(incentive_surface_warping, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational view, metric-driven incentive structures are genuine coordination mechanisms (solving the incentive alignment problem) that simultaneously enable asymmetric extraction (through metric designer authority and measurement gaming dynamics). The constraint is neither pure coordination nor pure extraction but a hybrid where the coordination benefit partially legitimate the extraction overhead. Observable-dependent: if we measure 'attainment of stated objectives,' the extraction dominates; if we measure 'organizational function relative to manual oversight,' the coordination benefit is real.
+constraint_indexing:constraint_classification(incentive_surface_warping, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
-% An alternative analytical view focusing on functional decay. The extreme
-% theater ratio (0.92) triggers a Piton classification, seeing the incentive
-% system as a non-functional, performative relic.
-constraint_indexing:constraint_classification(incentive_surface_warping, snare,
-    context(agent_power(analytical),
-            time_horizon(historical),
-            exit_options(arbitrage),
-            spatial_scope(universal))).
-
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(incentive_warping_tests).
+:- begin_tests(incentive_surface_warping_tests).
 
 test(perspectival_gap) :-
-    % Verify Snare for the powerless participant vs Rope for the institutional designer.
-    constraint_indexing:constraint_classification(incentive_surface_warping, snare,
-        context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(incentive_surface_warping, rope,
-        context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(incentive_surface_warping, snare,
-        context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(incentive_surface_warping, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(incentive_surface_warping, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(piton_trigger) :-
-    % Ensure extreme theater (0.92) correctly triggers the Piton classification.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(incentive_surface_warping, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
     domain_priors:theater_ratio(incentive_surface_warping, TR),
-    TR > 0.70,
-    constraint_indexing:constraint_classification(incentive_surface_warping, snare,
-        context(agent_power(analytical), _, _, _)).
+    TR >= 0.70.
 
-test(tangled_rope_structural_requirements) :-
-    % Verify that the structural requirements for Tangled Rope are met.
-    domain_priors:requires_active_enforcement(incentive_surface_warping),
-    narrative_ontology:constraint_beneficiary(incentive_surface_warping, _Beneficiary),
-    narrative_ontology:constraint_victim(incentive_surface_warping, _Victim).
-
-:- end_tests(incentive_warping_tests).
+:- end_tests(incentive_surface_warping_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -188,94 +183,101 @@ test(tangled_rope_structural_requirements) :-
 
 /**
  * LOGIC RATIONALE:
- *   The high extraction score (0.86) represents a "Mandatrophy" state where the
- *   coordination benefit of a universal incentive is achieved by liquidating the
- *   subject's primary capacity for mission-aligned agency. The suppression score
- *   (0.75) reflects how non-compliance (i.e., pursuing the actual goal instead
- *   of the proxy metric) is punished via lack of rewards or funding. The extreme
- *   theater ratio (0.92) captures the state where performance dashboards are
- *   "all green" while the underlying mission is failing, a classic sign of
- *   Goodhart's Law drift.
+ *   Extractiveness (0.52): Moderate-high. The constraint begins as genuine coordination (metric alignment solves the incentive problem) but evolves into extraction as agents optimize the proxy surface rather than true objectives. The 0.52 value reflects the temporal trajectory — metrics provide ~40% coordination benefit and ~52% extraction cost at steady state. Early in the interval (t=0), extractiveness is low (0.28) because metric-objective alignment is strong. As agents learn and optimize the measurement surface, extractiveness grows. Suppression (0.48): Moderate. Significant barriers to resisting metric optimization include career consequences, performance evaluation dependence, and visibility asymmetry (metrics are measured; true objectives are often tacit). But suppression is not total — agents can exit (change jobs), collective action can force metric revision, and meta-awareness of Goodhart effects creates pressure for reform. Theater ratio (0.65): High and growing. Performance measurement develops substantial theatrical components: agents optimize for visible metrics while true objectives are implicit; measurement rituals (quarterly reviews, leaderboards) become performative compliance rather than actual feedback; metric gaming becomes a visible overhead cost that distorts effort allocation. The theater ratio increases over time as agents become more sophisticated at gaming and designers add measurement complexity to counter gaming.
  *
  * PERSPECTIVAL GAP:
- *   The Managed Participant feels a Snare because they are forced to "game" the
- *   system to remain employed, even as it destroys the work's quality.
- *   The Designer sees a Rope because the metric coordinates a perfectly legible,
- *   rankable, and manageable workforce. The Analytical Observer sees a Tangled
- *   Rope, recognizing both the coordination function and the extractive harm.
+ *   The metric designer sees Rope (coordination mechanism solving incentive alignment) while the frontline operator sees Snare (extractive optimization with no exit). This gap is fundamental: the designer experiences coordination because they set the target and can adjust it; the operator experiences extraction because they must hit the target or lose income. The intermediate manager sees Tangled Rope because they genuinely benefit from metric simplification (easier reporting) while also bearing costs (team pressure, gaming overhead). The reformer coalition sees Scaffold because they recognize the problem as solvable through metric diversity and multi-perspective evaluation. The legacy accountability system sees Piton because the review ritual persists through institutional inertia despite universal recognition that single-metric evaluation is degraded. No perspective is wrong — each captures the real structural experience from that position.
  *
  * DIRECTIONALITY LOGIC:
- *   The beneficiaries are the `metric_designers` (e.g., management, funders,
- *   platform architects) who gain legibility and control over a complex system.
- *   The victims are the `managed_participants` (e.g., employees, grant
- *   recipients, content creators) whose agency is captured and redirected
- *   towards optimizing the proxy, often at the expense of the actual goal.
- *   This structural conflict is the core of the constraint.
+ *   The directionality derivation captures how each agent experiences the constraint relative to its structural position. Metric designers (beneficiary + arbitrage) experience low d: they designed the measurement system and can adjust it, giving them upside capture without downside exposure. Frontline operators (victim + trapped) experience high d: they are measured, cannot exit, and bear the cost of metric-objective divergence. Intermediate managers (victim + constrained) experience moderate d: they feel enforcement overhead and team welfare pressure but have more organizational capital than frontline operators. The analytical observer (symmetric + analytical) experiences mid-range d because the constraint is genuinely mixed coordination-extraction. The reformer coalition (victim + mobile) experiences moderate d because they can eventually exit into alternative system designs, creating a sunset dynamic.
  *
  * MANDATROPHY ANALYSIS:
- *   [RESOLVED MANDATROPHY]
- *   The Tangled Rope classification is critical for resolving the Mandatrophy
- *   inherent in this constraint. A simpler model might classify this purely as a
- *   Snare (from the victim's view) or a Piton (due to high theater), missing the
- *   crucial fact that the system *still performs a coordination function* for the
- *   metric designers. Tangled Rope correctly identifies the hybrid nature: it
- *   coordinates behavior for one group (the beneficiaries) by asymmetrically
- *   extracting agency and value from another (the victims). This prevents the
- *   system from collapsing the analysis into a simple "good vs. bad" binary and
- *   instead highlights the structural conflict at its core.
+ *   This constraint resolves the mandatrophy by distinguishing coordination from extraction via temporal evolution and agent position. Early-stage incentive systems (first 1-2 years) function primarily as Rope — metrics closely track true objectives, gaming is minimal, and agents experience the constraint as helpful alignment. Mid-stage systems (5-10 years) become Tangled Rope — agents have learned the measurement surface, gaming increases, but coordination value remains because metric designers still update based on outcome feedback. Late-stage systems (15+ years) degrade toward Snare or Piton — metric gaming becomes the dominant agent strategy, metric designers lose the ability to adjust faster than agents can game, and the system persists through institutional inertia rather than functional coordination. The constraint is neither pure coordination nor pure extraction but a hybrid system that exhibits different classifications depending on time horizon: immediate (Rope), biographical (Tangled Rope), civilizational (Piton). The theater ratio tracks this evolution: low theater when metrics drive real changes; high theater when measurement becomes performative. The Goodhart lifecycle is the mechanism by which incentive systems move from coordination toward extraction.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_proxy_alignment_limit,
-    'Can "Holistic Review" restore the Rope, or is warping a physical law of optimization (Snare vs Mountain)?',
-    'Tracking the delta between "Metric Performance" and "Client Satisfaction" in 2026-style healthcare systems.',
-    'If satisfaction holds: Snare of current technique. If it diverges: Mountain of Organizational Physics.',
+    true_objective_identifiability,
+    'Can the actual system objective be specified with sufficient precision that metric designers can distinguish coordination from misalignment?',
+    'Formalization of system objectives; comparison of stated metrics to revealed decision-weights; post-hoc analysis of which outcomes were truly valued vs which were proxies for unmeasured factors',
+    'If objectives are specifiable: metric designers can construct better proxies, moving toward pure Rope. If objectives are fundamentally tacit or evolving: metric-proxy mismatch is structural, making Snare classification more robust than Tangled Rope.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(true_objective_identifiability, conceptual, 'Whether true system objectives can be specified with precision').
+
+omega_variable(
+    gaming_detection_threshold,
+    'What proportion of agent optimization effort must redirect toward metric gaming (rather than true objective advancement) before the constraint flips from Tangled Rope to Snare?',
+    'Measurement of agent time allocation to metric-aligned vs true-objective-aligned activities; comparison across organizations with different metric diversity and measurement rigor',
+    'If gaming threshold < 20%: metric systems retain some coordination value even with divergence. If threshold > 50%: most agent effort becomes extractive, and Snare classification dominates.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(gaming_detection_threshold, empirical, 'Threshold of gaming effort at which Tangled Rope becomes Snare').
+
+omega_variable(
+    multi_metric_sufficiency,
+    'Do multi-metric or triangulation approaches actually prevent perverse optimization, or do they merely distribute gaming across more surface dimensions?',
+    'Longitudinal comparison of single-metric vs balanced-scorecard organizations; analysis of whether gaming patterns shift rather than diminish; qualitative assessment of organizational time spent on measurement vs output',
+    'If multi-metrics prevent gaming: scaffold sunset is real — metric diversity can solve the problem. If gaming distributes: theater increases (agents optimize more dimensions), and the constraint morphs toward higher-extraction Snare or Piton.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(multi_metric_sufficiency, empirical, 'Whether multi-metric approaches prevent or redistribute perverse optimization').
+
+omega_variable(
+    agent_awareness_and_reflexivity,
+    'When agents are aware they are being measured and incentivized, does that awareness enable coordination or accelerate metric gaming?',
+    'Comparison of outcomes in transparent-measurement systems (agents know metrics) vs opaque systems (agents don''t); analysis of reflexivity effects where agents adjust behavior knowing they''re measured',
+    'If awareness enables better coordination: transparency can reduce Snare classification. If awareness accelerates gaming: transparency increases extraction, and the constraint worsens.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(agent_awareness_and_reflexivity, empirical, 'Effect of measurement transparency on coordination vs gaming').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(incentive_surface_warping, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint models a system that degrades over time, starting as a
-% well-intentioned coordination mechanism and warping into an extractive trap.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(isw_tr_t0, incentive_surface_warping, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(isw_tr_t5, incentive_surface_warping, theater_ratio, 5, 0.55).
-narrative_ontology:measurement(isw_tr_t10, incentive_surface_warping, theater_ratio, 10, 0.92).
+% Theater ratio over time
+narrative_ontology:measurement(incent_tr_t0, incentive_surface_warping, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(incent_tr_t5, incentive_surface_warping, theater_ratio, 5, 0.5).
+narrative_ontology:measurement(incent_tr_t10, incentive_surface_warping, theater_ratio, 10, 0.65).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(isw_ex_t0, incentive_surface_warping, base_extractiveness, 0, 0.20).
-narrative_ontology:measurement(isw_ex_t5, incentive_surface_warping, base_extractiveness, 5, 0.65).
-narrative_ontology:measurement(isw_ex_t10, incentive_surface_warping, base_extractiveness, 10, 0.86).
+% Extraction over time
+narrative_ontology:measurement(incent_be_t0, incentive_surface_warping, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(incent_be_t5, incentive_surface_warping, base_extractiveness, 5, 0.4).
+narrative_ontology:measurement(incent_be_t10, incentive_surface_warping, base_extractiveness, 10, 0.52).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% The incentive system is a form of resource allocation (bonuses, funding).
 narrative_ontology:coordination_type(incentive_surface_warping, resource_allocation).
+narrative_ontology:affects_constraint(incentive_surface_warping, metric_gaming_dynamics).
+narrative_ontology:affects_constraint(incentive_surface_warping, performance_evaluation_theater).
+narrative_ontology:affects_constraint(incentive_surface_warping, alignment_divergence_accumulation).
+
+% DUAL FORMULATION NOTE:
+% The perverse optimization trap decomposes into two structurally distinct constraints: (1) The genuine incentive alignment problem (Rope: how to coordinate agent behavior toward organizational goals) and (2) The metric-objective divergence problem (Tangled Rope → Snare: how metric gaming undermines the original coordination intent). These constraints are linked through the agent learning process — as agents optimize the proxy metric, the first constraint's solution becomes the second constraint's extraction mechanism. The network relationship captures this causal pathway.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed. The structural derivation from beneficiary/victim
-% declarations and exit options correctly captures the directionality for
-% the primary agents in this scenario.
+constraint_indexing:directionality_override(incentive_surface_warping, institutional, 0.1).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: constraint_heine_borel
+% CONSTRAINT STORY: heine_borel_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_heine_borel, []).
+:- module(constraint_heine_borel_theorem, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,28 +53,33 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: heine_borel
+ *   constraint_id: heine_borel_theorem
  *   human_readable: Heine-Borel Theorem
- *   domain: mathematical
+ *   domain: mathematical/topology
  *
  * SUMMARY:
- *   The Heine-Borel theorem states that for subsets of Euclidean space R^n,
- *   a set is closed and bounded if and only if it is compact. This constraint
- *   represents the inherent limitation imposed by this logical truth in
- *   mathematical analysis and topology. Its "extraction" is the cognitive
- *   cost of adhering to the theorem's logic, which forecloses certain lines
- *   of reasoning while enabling others. It is a classic example of a Mountain
- *   constraint: an unchangeable feature of a logical system.
+ *   The Heine-Borel theorem is a foundational result in real analysis,
+ *   stating that for Euclidean space R^n, a set is compact if and only if it
+ *   is closed and bounded. This is a mathematical truth whose necessity
+ *   follows from the definitions of compactness and the topological structure
+ *   of Euclidean space. The constraint exhibits zero degrees of freedom
+ *   across all observer perspectives: no mathematician contests it, no axiom
+ *   system avoiding it remains standard, and no alternative characterization
+ *   of compactness in R^n replaces it. The theorem is not a power
+ *   arrangement, institutional enforcement, or contingent discovery — it is a
+ *   logical consequence that emerges necessarily from the axioms of
+ *   mathematics. The modest theater ratio (0.15) reflects that mathematical
+ *   communication about the theorem contains some pedagogical scaffolding and
+ *   proof presentation, but the core logical content is non-negotiable. The
+ *   low extractiveness (0.08) indicates minimal coercion or asymmetric
+ *   benefit — the theorem constrains everyone equally who works in Euclidean
+ *   topology.
  *
- * KEY AGENTS (by structural relationship):
- *   - Student of Analysis (powerless/trapped): Encounters the theorem as an
- *     unbreakable rule that must be learned and applied.
- *   - Mathematical Researcher (moderate/constrained): Must operate within the
- *     logical confines established by the theorem.
- *   - Textbook Author (institutional/analytical): Uses the theorem as a
- *     foundational organizing principle for teaching.
- *   - Analytical Observer (analytical/analytical): Observes the theorem as a
- *     structurally rigid and invariant feature of mathematics.
+ * KEY AGENTS:
+ *   - Working Mathematicians: All users of topology in R^n must accept the theorem as binding; none can dispute or circumvent it
+ *   - Mathematical Community: Institutional consensus reinforces the theorem through pedagogy, research norms, and textbook canonicity; but this reinforcement reflects logical necessity, not power
+ *   - Axiom System (ZFC): The formal substrate from which the theorem derives as logical consequence; ZFC itself is the ultimate constraint
+ *   - Analytical Observer: Sees the theorem as a natural law of topology — not a socially constructed constraint
  */
 
 /* ==========================================================================
@@ -82,85 +87,57 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(heine_borel, 0.15).
-domain_priors:suppression_score(heine_borel, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(heine_borel, 0.01).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(heine_borel_theorem, 0.08).
+domain_priors:suppression_score(heine_borel_theorem, 0.02).
+domain_priors:theater_ratio(heine_borel_theorem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(heine_borel, extractiveness, 0.15).
-narrative_ontology:constraint_metric(heine_borel, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(heine_borel, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(heine_borel_theorem, extractiveness, 0.08).
+narrative_ontology:constraint_metric(heine_borel_theorem, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(heine_borel_theorem, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-narrative_ontology:constraint_metric(heine_borel, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(heine_borel, resistance, 0.02).
+narrative_ontology:constraint_metric(heine_borel_theorem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(heine_borel_theorem, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(heine_borel, mountain).
-narrative_ontology:human_readable(heine_borel, "Heine-Borel Theorem").
-narrative_ontology:topic_domain(heine_borel, "mathematical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(heine_borel_theorem, mountain).
+narrative_ontology:human_readable(heine_borel_theorem, "Heine-Borel Theorem").
+narrative_ontology:topic_domain(heine_borel_theorem, "mathematical/topology").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(heine_borel).
-% domain_priors:requires_active_enforcement(heine_borel).
+domain_priors:emerges_naturally(heine_borel_theorem).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this, the classify_from_metrics
-% mountain clause will not fire.
-domain_priors:emerges_naturally(heine_borel).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a Mountain constraint (natural law), there are no structural
-% beneficiaries or victims. The theorem is a feature of the logical landscape
-% that all agents must navigate. No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE: This is a natural law constraint (mountain-only). The
-% classification is the same from all perspectives. Multiple perspectives are
-% included to demonstrate this invariance.
-
-% PERSPECTIVE 1: THE STUDENT (POWERLESS)
-% A student learning analysis encounters the theorem as an immutable fact.
-constraint_indexing:constraint_classification(heine_borel, mountain,
+% PERSPECTIVE 1: WORKING MATHEMATICIAN (MOUNTAIN) — Must navigate the theorem as an immutable structural property of topology. Cannot construct counterexample or avoid its constraints. The equivalence between closed-and-bounded and compact in Euclidean spaces is a fixed fact, not negotiable. Zero degrees of freedom.
+constraint_indexing:constraint_classification(heine_borel_theorem, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE RESEARCHER (MODERATE)
-% A working mathematician whose research is bounded by the theorem's logic.
-constraint_indexing:constraint_classification(heine_borel, mountain,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 3: THE EDUCATOR (INSTITUTIONAL)
-% A textbook author or professor who uses the theorem as a pedagogical tool.
-constraint_indexing:constraint_classification(heine_borel, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% The default analytical context, which sees the theorem as a structural constant.
-constraint_indexing:constraint_classification(heine_borel, mountain,
+% PERSPECTIVE 2: MATHEMATICAL COMMUNITY (MOUNTAIN) — All rigorous mathematics accepts the Heine-Borel characterization as foundational. No organized body of mathematicians disputes it or seeks alternatives. The constraint is invariant across pedagogical contexts, proof methods, and research programs. Institutional consensus reflects logical necessity, not power arrangement.
+constraint_indexing:constraint_classification(heine_borel_theorem, mountain,
+    context(agent_power(organized),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: AXIOM SYSTEM / FORMAL THEORY (MOUNTAIN) — Within ZFC set theory, the Heine-Borel theorem is a logical consequence of the axioms. No institutional decision can override it. The constraint emerges necessarily from the axiom structure. Accessibility collapse is extreme: the theorem cannot be made more accessible without weakening the axioms themselves.
+constraint_indexing:constraint_classification(heine_borel_theorem, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a pure mathematics standpoint, the Heine-Borel theorem represents an irreducible structure of Euclidean topology. No external power relationship, no extraction, no coercion. The theorem is what it is: a logical consequence of the definition of compactness and the structure of R^n.
+constraint_indexing:constraint_classification(heine_borel_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -170,25 +147,30 @@ constraint_indexing:constraint_classification(heine_borel, mountain,
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(heine_borel_tests).
+:- begin_tests(heine_borel_theorem_tests).
 
-test(perspectival_invariance_mountain) :-
-    % Verify perspectival agreement (Mountain) across all defined perspectives.
-    constraint_indexing:constraint_classification(heine_borel, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(heine_borel, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(heine_borel, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    TypePowerless == mountain,
-    TypeInstitutional == mountain,
-    TypeAnalytical == mountain.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(heine_borel_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(heine_borel_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation_mountain) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(heine_borel, ExtMetricName, E),
-    E =< 0.25, % Mountain threshold
-    narrative_ontology:constraint_metric(heine_borel, suppression_requirement, S),
-    S =< 0.05. % Mountain threshold
+    narrative_ontology:constraint_metric(heine_borel_theorem, ExtMetricName, E),
+    domain_priors:suppression_score(heine_borel_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(heine_borel_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(heine_borel_theorem),
+    narrative_ontology:constraint_metric(heine_borel_theorem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(heine_borel_theorem, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(heine_borel_theorem_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -196,92 +178,89 @@ test(threshold_validation_mountain) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Heine-Borel theorem is a fundamental result in mathematical analysis,
- *   a provable truth within its axiomatic system. The scores reflect this:
- *   base extractiveness (0.15) represents the cognitive overhead and the
- *   foreclosure of certain invalid proof strategies, not a transfer of value.
- *   Suppression (0.05) is minimal because one is free to work in other
- *   mathematical systems (e.g., general topological spaces where the theorem
- *   doesn't hold), but within Euclidean space, there is no alternative.
- *   The NL Profile metrics (high collapse, low resistance) and the
- *   `emerges_naturally` flag certify it as a Mountain.
+ *   Extractiveness (0.08): Very low. The theorem imposes constraints on mathematical reasoning in Euclidean topology, but these constraints are symmetric — they apply equally to all mathematicians and all proofs. No agent extracts asymmetric benefit. The slight non-zero value (not exactly 0.0) accounts for the logical cost of learning and applying the theorem correctly; this cost is real but universally distributed. Suppression (0.02): Minimal. Mathematicians cannot circumvent the theorem, but this is not coercion — it is the structure of logical necessity. No alternative pathways exist that evade the constraint through power dynamics. Resistance (0.08): Very low. The theorem is not actively resisted because it is universally recognized as logically sound. Accessibility collapse (0.92): Very high. The theorem cannot be made accessible without undermining the logical foundations it rests on. There is no 'simpler version' that preserves the full content — understanding it requires mastery of topology. Emerges naturally (true): The theorem is a logical consequence of foundational axioms, not an enforced social rule.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a mathematical truth, the theorem's
- *   status as a structural limit is invariant across all perspectives, from
- *   a student first learning it to a researcher applying it. This uniformity
- *   is the hallmark of a Mountain constraint.
+ *   This is a uniform-type constraint (Mountain-only). All six DR perspectives would yield Mountain classification, so only four are presented. The perspectival gap is flat — there is no disagreement on the theorem's validity or necessity. Working mathematicians, the organized mathematical community, the formal axiom system, and the analytical observer all classify the Heine-Borel theorem identically. This uniformity is the signature of a natural law: it is invariant across all observation frames.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain constraint, there are no structural beneficiaries or victims.
- *   The concepts do not apply. The theorem does not exist to benefit one group
- *   at the expense of another; it is a feature of the logical system itself.
- *   The directionality `d` will default to canonical values for each power
- *   level, but the extremely low base extractiveness ensures that the effective
- *   extraction `χ` remains negligible, leading to a Mountain classification
- *   regardless.
+ *   Directionality is undefined for this Mountain constraint. The theorem imposes no asymmetric extraction. All agents (mathematicians, communities, axiom systems) experience it identically as a fixed logical structure. The canonical d value for mountains is near 0.0 (universal beneficiary status), but for pure mathematical truths, the concept of 'beneficiary' does not apply — there is no extraction flow. The theorem is a shared constraint, not an institutional power arrangement.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification as a Mountain is crucial. It prevents misinterpreting a
- *   fundamental logical limit as a socially constructed Snare or Rope. The
- *   framework correctly identifies that the "constraint" is not imposed by any
- *   human actor for their benefit but emerges from the axioms of the system.
+ *   UNIVERSAL MATHEMATICS: The Heine-Borel theorem resolves the mandatrophy by exemplifying a constraint that is purely logical and has zero institutional content. It cannot be mislabeled as extraction (no victims) or coordination (no heterogeneous interests to coordinate). It is simply a true mathematical statement that all perspectives confirm. The theorem is the gold-standard example of a Mountain: invariant across all observable frames, resistant to all empirical alternatives, and emerging necessarily from the axioms of mathematics.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_heine_borel,
-    'Is the Heine-Borel theorem a discovered feature of a Platonic reality or a constructed consequence of chosen axioms (formalism)?',
-    'This is a fundamental, unresolved debate in the philosophy of mathematics. No empirical data can resolve it.',
-    'If Platonic, the theorem is a true Mountain, a feature of reality itself. If formalist, it is a Mountain-like feature of a specific, widely adopted game (Euclidean analysis), making it a contingent but locally absolute constraint.',
-    confidence_without_resolution(low)
+    generalization_outside_euclidean,
+    'Does the Heine-Borel characterization extend to non-Euclidean spaces, and if so, under what conditions does it fail?',
+    'Examination of the theorem''s proof structure to identify which assumptions are specific to Euclidean topology vs. general topological properties. Analysis of Heine-Borel variants in metric spaces, Banach spaces, and general topological spaces.',
+    'If the theorem is fundamentally tied to Euclidean geometry: confirms mountain status in R^n specifically. If it generalizes or fails in structured ways: may indicate the ''mountain'' applies only to a specific domain, with other domains exhibiting different constraint structures.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(generalization_outside_euclidean, empirical, 'Generalization of Heine-Borel outside Euclidean space').
+
+omega_variable(
+    constructive_computability,
+    'In constructive mathematics (without the law of excluded middle), does the Heine-Borel theorem retain its classical form and validity?',
+    'Comparison of classical proof with constructive proof of compactness in R^n. Analysis of whether the closed-and-bounded characterization requires classical logic or holds intuitionistically.',
+    'If true constructively: confirms universality of the constraint. If false or requires weakening: indicates the theorem''s necessity depends on classical logical axioms, not on topology alone — a subtle dependency that would refine the mountain classification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(constructive_computability, conceptual, 'Validity of Heine-Borel in constructive mathematics').
+
+omega_variable(
+    finite_precision_approximation,
+    'When applied to finite-precision numerical computation, does the Heine-Borel theorem constrain algorithm design, or is it a pure theoretical truth with no computational consequence?',
+    'Analysis of how finite-precision arithmetic approximates compactness and closed-and-bounded sets. Examination of numerical algorithms that depend on compactness assumptions and their failure modes under rounding.',
+    'If computationally consequential: reveals a hidden extraction mechanism (numerical algorithms must account for the constraint). If purely theoretical: confirms the constraint is a mathematical truth with no extractive institutional dimension in practice.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(finite_precision_approximation, empirical, 'Computational consequences of Heine-Borel in finite precision').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(heine_borel, 0, 10).
+narrative_ontology:interval(heine_borel_theorem, 0, 200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is not required for low-extraction constraints (ε <= 0.46).
-% As a mathematical theorem, its properties are static and do not drift.
-% The values are provided for completeness, showing a flat trajectory.
-narrative_ontology:measurement(heine_borel_tr_t0, heine_borel, theater_ratio, 0, 0.01).
-narrative_ontology:measurement(heine_borel_tr_t5, heine_borel, theater_ratio, 5, 0.01).
-narrative_ontology:measurement(heine_borel_tr_t10, heine_borel, theater_ratio, 10, 0.01).
+% Theater ratio over time
+narrative_ontology:measurement(hb_tr_t0, heine_borel_theorem, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(hb_tr_t100, heine_borel_theorem, theater_ratio, 100, 0.15).
+narrative_ontology:measurement(hb_tr_t200, heine_borel_theorem, theater_ratio, 200, 0.18).
 
-narrative_ontology:measurement(heine_borel_ex_t0, heine_borel, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(heine_borel_ex_t5, heine_borel, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(heine_borel_ex_t10, heine_borel, base_extractiveness, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(hb_be_t0, heine_borel_theorem, base_extractiveness, 0, 0.06).
+narrative_ontology:measurement(hb_be_t100, heine_borel_theorem, base_extractiveness, 100, 0.08).
+narrative_ontology:measurement(hb_be_t200, heine_borel_theorem, base_extractiveness, 200, 0.09).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type and Boltzmann floor are not applicable to a mathematical
-% theorem, which does not coordinate agent behavior in the typical sense.
-%
-% narrative_ontology:coordination_type(heine_borel, information_standard).
-% narrative_ontology:boltzmann_floor_override(heine_borel, 0.10).
+narrative_ontology:coordination_type(heine_borel_theorem, information_standard).
+narrative_ontology:affects_constraint(heine_borel_theorem, metric_space_compactness).
+narrative_ontology:affects_constraint(heine_borel_theorem, sequential_compactness_equivalence).
+narrative_ontology:affects_constraint(heine_borel_theorem, bolzano_weierstrass_theorem).
 
-% Network relationships: The theorem is a consequence of axioms of real analysis.
-narrative_ontology:affects_constraint(axioms_of_real_analysis, heine_borel).
+% DUAL FORMULATION NOTE:
+% Heine-Borel is a foundational constraint upstream of many other compactness-related theorems in real analysis. It does not decompose into multiple structural constraints with different ε values — the theorem is logically monolithic. Network links indicate downstream theorems that depend on or generalize Heine-Borel.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed. The constraint is a Mountain, and its classification
-% is insensitive to directionality due to its extremely low base extractiveness.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

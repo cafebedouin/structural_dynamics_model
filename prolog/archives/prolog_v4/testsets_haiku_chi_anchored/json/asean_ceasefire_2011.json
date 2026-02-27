@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "asean_ceasefire_2011",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "2011 ASEAN-mediated Thai-Cambodian Ceasefire Agreement",
+    "topic_domain": "geopolitical",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "asean_diplomatic_corps",
+      "incumbent_political_elites"
+    ],
+    "victims": [
+      "displaced_border_civilians",
+      "frontline_soldiers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Displaced Border Civilian",
+      "comment": "PERSPECTIVE 1: DISPLACED CIVILIAN (SNARE) — For those living in the conflict zone, the ceasefire is a failed promise that does not provide lasting security. They are trapped by geography and bear the full cost of the agreement's collapse (death, injury, displacement) with no recourse. The agreement functions as a pure extraction of their safety and stability. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.70."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The ASEAN Mediator",
+      "comment": "PERSPECTIVE 2: ASEAN MEDIATOR (ROPE) — From the perspective of the ASEAN diplomatic corps (led by Indonesia), the agreement is a pure coordination success. It halted a hot war between member states, affirmed ASEAN's role as a regional peacemaker, and enhanced its international prestige. The costs are externalized. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.06."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The State Actor (Thailand/Cambodia)",
+      "comment": "PERSPECTIVE 3: STATE ACTOR (TANGLED ROPE) — For the governments of Thailand and Cambodia, the agreement is a hybrid. It provides a genuine coordination benefit (de-escalation, avoiding further military/political costs) but also imposes significant extraction (accepting foreign observers, ceding some sovereignty, managing domestic nationalist backlash). They are constrained by international pressure and the lack of better alternatives. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.61."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Optimistic Diplomat",
+      "comment": "PERSPECTIVE 4: OPTIMISTIC DIPLOMAT (SCAFFOLD) — This perspective sees the ceasefire not as an end but as a temporary support structure. Its purpose is to create stability for a permanent resolution (e.g., via the ICJ). The implicit sunset clause is the final border demarcation, which would render the ceasefire obsolete. From this view, it's a necessary, temporary coordination tool. d≈0.15, f(d)≈-0.01, σ=0.9 → χ≈-0.005."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes both the coordination function and the severe extractive costs. The high theater ratio (0.75) indicates its performative nature, while the high base extractiveness (0.55) and suppression (0.65) confirm its coercive and costly structure for those trapped within it. This matches the system's claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mediator_intent_vs_outcome",
+      "question": "Was the agreement's primary function genuine conflict resolution or a performative act to enhance ASEAN's institutional prestige?",
+      "resolution_mechanism": "Analysis of internal ASEAN communications and diplomatic memoirs from the period to distinguish stated goals from revealed preferences.",
+      "impact": "If intent was prestige, it confirms the high theater and extractive nature (Tangled Rope/Snare). If intent was genuine resolution, it was a well-intentioned but failed Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between genuine resolution intent and institutional prestige-seeking in ASEAN's mediation."
+    },
+    {
+      "id": "domestic_nationalist_capture",
+      "question": "To what extent were the Thai and Cambodian governments constrained by domestic nationalist factions, making a permanent resolution politically impossible?",
+      "resolution_mechanism": "Comparative political analysis of the influence of nationalist groups on government policy in both nations during 2011-2013.",
+      "impact": "High nationalist capture implies the conflict was a Mountain of domestic politics, making the ceasefire merely theater. Low capture suggests the failure was in the diplomatic instrument itself.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Assessing the degree of state capture by domestic nationalist factions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 2011,
+    "end": 2013
+  },
+  "commentary": {
+    "narrative_context": "Following deadly border clashes near the Preah Vihear temple in early 2011, ASEAN, under Indonesia's chairmanship, mediated a ceasefire agreement between Thailand and Cambodia. The agreement called for a cessation of hostilities and the deployment of unarmed Indonesian observers. However, the ceasefire was fragile and ultimately failed to hold, as it did not address the root cause of the conflict: the undemarcated border. The agreement functioned primarily as a performative de-escalation to satisfy the international community, while the underlying structural conflict remained unresolved until a 2013 ICJ ruling.",
+    "key_agents": [
+      "Displaced Border Civilians: Primary victims (powerless/trapped) — bear the direct costs of the failed ceasefire.",
+      "ASEAN Diplomatic Corps: Primary beneficiary (institutional/arbitrage) — gains prestige from its role as a regional mediator.",
+      "Thai & Cambodian Governments: State actors (powerful/constrained) — experience the agreement as a mixed tool for de-escalation and a source of political cost.",
+      "Frontline Soldiers: Secondary victims (powerless/trapped) — face death and injury when the ceasefire breaks down."
+    ],
+    "logic_rationale": "Extractiveness (0.55): High. This reflects the severe cost of the agreement's failure, which is borne by civilians and soldiers in the form of death, injury, and displacement. The failure to secure peace is a form of extraction. Suppression (0.65): High. At the peak of the crisis, there were few viable alternatives to ASEAN mediation, forcing both parties into an agreement they were not fully committed to. Theater Ratio (0.75): Very High. The agreement was largely for an international audience, a way to demonstrate that action was being taken. Its rapid collapse reveals its low functional value compared to its high performative value. The `has_sunset_clause` is considered true because the ceasefire was implicitly temporary, designed to hold only until a permanent diplomatic or legal resolution was found.",
+    "perspectival_gap": "The gap is stark. For ASEAN diplomats, the agreement is a successful coordination mechanism (Rope) that burnishes their institutional credentials. For a civilian in the line of fire, it is a cruel trap (Snare) that offers the illusion of safety before collapsing. For the state actors themselves, it is a complex, costly, and necessary tool of statecraft (Tangled Rope). The classification depends entirely on whether the observer benefits from the performance, is constrained by the structure, or is a victim of its failure.",
+    "directionality_logic": "The directionality derivations drive the perspectival classifications. The `displaced_border_civilians` are victims with trapped exit options, maximizing their directionality (d≈0.95) and thus the effective extraction (χ), leading to a Snare classification. The `asean_diplomatic_corps` are beneficiaries with arbitrage exit options, minimizing their directionality (d≈0.05) and making the effective extraction negative, hence a Rope. The state actors are in a mixed position, modeled as victims with constrained exit, resulting in a high-but-not-maximal directionality (d≈0.75) that classifies as a Tangled Rope.",
+    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that a single diplomatic instrument is not monolithically a 'coordination' or 'extraction' mechanism. Its classification is indexical. Labeling the ceasefire as a pure Rope (the ASEAN view) would ignore the immense costs borne by local populations. Labeling it as a pure Snare (the civilian view) would ignore the genuine, if temporary, de-escalation it provided at the state level. The Deferential Realism framework correctly identifies it as a multi-faceted object whose character changes with the observer's structural relationship to it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "south_china_sea_code_of_conduct"
+    ]
+  }
+}

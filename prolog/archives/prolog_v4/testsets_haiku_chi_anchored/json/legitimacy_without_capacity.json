@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "legitimacy_without_capacity",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "legit"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Sovereign Ghost: Legitimacy Without Capacity",
+    "topic_domain": "political/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "formal_state_apparatus",
+      "international_recognition_holders"
+    ],
+    "victims": [
+      "civilian_populations",
+      "functional_governance_capacity",
+      "alternative_authority_seekers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Civilian Population",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) \u2014 Cannot exit sovereign territory without refugee/asylum status. Faces extraction through taxation and conscription but receives no functional services. No legitimate alternative authority exists that would accept them. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Alternative Authority (Warlord/NGO/Rebel Coalition)",
+      "comment": "PERSPECTIVE 2: ALTERNATIVE AUTHORITY (TANGLED ROPE) \u2014 Can provide local security, education, healthcare where the state cannot, creating a coordination function. But the legitimate state's monopoly on taxation and conscription constrains this alternative authority's growth and legitimizes suppression of its expansion. d\u22480.68, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International State System",
+      "comment": "PERSPECTIVE 3: INTERNATIONAL STATE SYSTEM (ROPE) \u2014 Recognizes the legitimate state as sovereign seat and maintains its UN seat, diplomatic standing, and treaty status regardless of capacity. This recognition sustains the state's claim to extract, even when provision is absent. The coordinate function: all states benefit from the principle that legitimacy is not contingent on immediate capacity (sovereignty lock-in). d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The State Bureaucracy",
+      "comment": "PERSPECTIVE 4: STATE BUREAUCRACY (PITON) \u2014 Performs ritual administration: collects revenue, maintains official records, holds ceremonies of sovereignty. Knows it cannot deliver security or core services. Persists through institutional inertia \u2014 its legitimacy claim is its only asset, so it circulates and reinforces the performance of legitimacy. theater_ratio=0.81 (high performative content). d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.26."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The International Intervention Coalition (UN/NGO/Neighbouring State)",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL INTERVENTION COALITION (SCAFFOLD) \u2014 Can provide temporary security, capacity-building, and legitimacy transfer. The coalition's structural position has a built-in sunset: capacity-building either succeeds (constraint resolves) or fails (coalition exits). The constraint is tolerated only if the coalition can see a path to restoration of state capacity. d\u22480.42, f(d)\u22480.42, \u03c3=1.1 \u2192 \u03c7\u22480.25."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Organized Extractive Elite (Corrupt Officials/Warlord-Aligned Class)",
+      "comment": "PERSPECTIVE 6: EXTRACTIVE ELITE (TANGLED ROPE) \u2014 Benefits from the gap between legitimacy and capacity: they can extract resources using the state's legitimate monopoly on coercion while providing nothing. Also provides a coordination function for international actors: the legitimate state exists as a legal counterparty for arms sales, trade agreements, and resource extraction contracts, even if that state cannot govern. d\u22480.15, f(d)\u22480.01, \u03c3=1.1 \u2192 \u03c7\u22480.01."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 Risk of misclassifying as immutable: 'State formation always precedes functional capacity\u2014legitimacy must be established before the expensive work of providing services.' But the structural data (\u03b5=0.58, suppression=0.68, theater=0.81) contradicts the mountain gate. This is a false summit: the gap between legitimacy and capacity is a contingent institutional arrangement (international recognition system + domestic extraction monopoly), not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_source_fragility",
+      "question": "Does the Sovereign Ghost's legitimacy rest primarily on international recognition (treaty system, UN seat, diplomatic standing) or on residual domestic memory and institutional continuity, and how vulnerable is each source?",
+      "resolution_mechanism": "Comparative analysis of state collapse scenarios: track which states lose international recognition first vs domestic legitimacy; analyze whether international isolation or domestic rejection comes first in documented cases of state capacity loss",
+      "impact": "If international recognition is primary source: legitimacy can be withdrawn by external actors, converting Tangled Rope to Snare. If domestic memory is primary: legitimacy erodes slowly, extending the Piton phase.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Primary source of legitimacy in capacity-deficit regime"
+    },
+    {
+      "id": "extraction_ceiling_threshold",
+      "question": "What extraction level (proportion of available GDP taxed, conscription rate, security fee demanded by warlords) causes mass exit via emigration or defection to alternative authority, and does the state capacity gap impose a hard ceiling?",
+      "resolution_mechanism": "Historical data on emigration rates, defection rates to rebel movements, and taxation levels in failed-state scenarios; regression analysis of extraction intensity vs population flight",
+      "impact": "If ceiling is low (< 15% effective taxation): Snare classification across more perspectives. If ceiling is high (> 40%): Tangled Rope or even Rope classifications more stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Maximum extraction rate before mass defection or exit"
+    },
+    {
+      "id": "capacity_restoration_feasibility",
+      "question": "Is the legitimacy-without-capacity gap structurally permanent (path-dependent on war/colonialism) or temporarily resolvable through capacity-building intervention?",
+      "resolution_mechanism": "Longitudinal study of post-intervention states: measure whether international intervention durably restores state capacity to match legitimacy; identify variables that predict success vs relapse",
+      "impact": "If restoration is feasible: Scaffold perspective is structural and real. If permanent: Scaffold is aspirational theater masking an insoluble Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capacity can be restored through institutional intervention"
+    },
+    {
+      "id": "alternative_authority_legitimacy_accumulation",
+      "question": "Can de facto authorities (warlords, NGO networks, rebel movements, local tribal councils) accumulate sufficient functional legitimacy through reliable service provision to eventually convert their de facto control to de jure recognition?",
+      "resolution_mechanism": "Historical case studies of authority transitions: track how many de facto authorities achieved international recognition; identify which achieved it through capacity first vs legitimacy first; model the legitimacy accumulation curve",
+      "impact": "If functional legitimacy converts to formal recognition: the constraint eventually resolves into two competing legitimate authorities (international bifurcation). If formal legitimacy prevents conversion: alternative authorities are permanently suppressed despite capacity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether functional legitimacy can convert to formal recognition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Sovereign Ghost occurs when an institution retains the international and formal legal right to rule (sovereignty, UN seat, treaty standing, diplomatic recognition) but has lost the actual capacity to provide security, justice, taxation compliance, or basic services. This is not state collapse\u2014the formal apparatus persists, rituals of legitimacy continue, and international law still recognizes the state as the sole legitimate authority. But that legitimacy is increasingly disconnected from functional governance. The constraint exhibits a hybrid character: the state extraction mechanism (taxation, conscription) is sustained by legitimacy alone, while alternative authorities (warlords, NGO networks, community councils) increasingly provide the services legitimacy once justified. The theater ratio (0.81) reflects how much of the state's activity is performative rather than functional: flag ceremonies, official pronouncements, negotiations with international bodies, and tax collection rituals persist even as schools, hospitals, and police stations remain closed or collapsed. The constraint is dynamic: if capacity can be restored, the Scaffold perspective becomes structural. If capacity collapse is permanent, the Snare dominates. If international recognition is withdrawn, legitimacy evaporates entirely and the constraint converts to raw conflict.",
+    "key_agents": [
+      "Civilian Population: Primary victim (powerless/trapped) \u2014 bears extraction through taxation and conscription despite receiving no services; cannot exit without refugee status",
+      "State Bureaucracy: Institutional actor (institutional/constrained) \u2014 maintains performative legitimacy; knows it cannot deliver but circulates the claim that it can",
+      "Extractive Elite (Corrupt Officials, Warlord-Aligned Class): Dual role beneficiary (organized/constrained) \u2014 extract resources using state monopoly; also benefit from international recognition that validates extraction",
+      "Alternative Authority (Warlord, Rebel Coalition, NGO Network): Moderate power actor (moderate/constrained) \u2014 provides functional services but lacks legitimacy; suppressed by the state's monopoly on recognition",
+      "International State System: Institutional beneficiary (institutional/arbitrage) \u2014 gains from the principle that legitimacy supersedes capacity; maintains Sovereign Ghost to avoid precedent that recognition is conditional on performance",
+      "International Intervention Coalition (UN, NGO, Neighbouring State): Organized actor (organized/mobile) \u2014 can build capacity but sees exit if restoration fails; provides temporary coordination function",
+      "Analytical Observer: Perspectives on natural law (analytical/analytical) \u2014 risks naturalizing a contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The state extracts taxation and military conscription based on legitimacy claim, but the extraction is constrained by competing authorities that provide services at lower cost. If the state attempted to extract at monopoly rates, mass defection would accelerate. The value reflects that extraction is substantial but capped by exit options to alternative authorities. Suppression (0.68): High. Significant barriers to exit include: international law (refugee status is difficult to obtain), geographic barriers (landlocked states, hostile neighbors), social penalties (loss of citizenship, property), and the state's monopoly on legal coercion. But suppression is not total\u2014some populations do migrate, defect, or withdraw cooperation. Theater ratio (0.81): Very high. State activity is predominantly performative: official ceremonies, bureaucratic procedures, international negotiations, tax collection attempts. The connection between these activities and actual security provision, justice, or public goods is minimal. The theater has increased as capacity has declined\u2014the state's remaining asset is the performance of legitimacy.",
+    "perspectival_gap": "The Sovereign Ghost exhibits a striking perspectival gap between beneficiaries and victims. The state bureaucracy sees the constraint as an administrative problem it can solve through better organization (Piton\u2014degraded but recoverable). The international state system sees it as a fundamental principle that preserves the sovereignty system (Rope\u2014pure coordination). The extractive elite sees opportunity (Tangled Rope\u2014mixed benefit). But the civilian population sees pure extraction with no exit (Snare), and the alternative authorities see a blocking constraint that suppresses their legitimacy despite superior capacity (Tangled Rope\u2014mixed victim experience). The analytical observer risks naturalizing this gap as inevitable ('legitimacy always precedes capacity') when it is actually a contingent feature of the international recognition system.",
+    "directionality_logic": "Civilian population: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Cannot leave; bears full cost of illegitimate extraction. State bureaucracy: Neither full beneficiary nor victim, but constrained insider \u2192 d\u22480.35, f(d)\u22480.32. Piton classification from theater gate. Extractive elite: Weak beneficiary (benefits from extraction monopoly) but constrained (depends on state legitimacy) \u2192 d\u22480.15, f(d)\u22480.01. Low effective extraction because their benefit is contingent. Alternative authority: Victim of suppression + constrained \u2192 d\u22480.68, f(d)\u22481.08. Cannot expand despite functional legitimacy; extraction by state monopoly on coercion. International state system: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary from sovereignty principle; experiences constraint as coordination mechanism. International intervention coalition: Organized with mobile exit \u2192 d\u22480.42, f(d)\u22480.42. Low effective extraction; coalition can see exit path through capacity restoration.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint is: 'Is the legitimacy-without-capacity gap a pure extraction mechanism (Snare) or a hybrid coordination-extraction arrangement (Tangled Rope)?' The tension arises because the international state system's recognition of the Sovereign Ghost DOES provide a coordination benefit\u2014all states gain from the principle that formal recognition is stable and not contingent on moment-to-moment capacity. This principle enables long-term treaty making, capital accumulation, and institutional planning. But this coordination benefit accrues exclusively to states, not to civilian populations or alternative authorities. The Tangled Rope classification reflects: (a) genuine coordination function (international recognition principle benefits the global state system), (b) asymmetric extraction (civilians and alternative authorities bear costs while the state and international system benefit), and (c) active enforcement (international law, diplomatic isolation of alternative authorities, military intervention against warlords). However, the civilian population perspective is unambiguously Snare\u2014they experience pure extraction with no coordination benefit. The mandatrophy is NOT resolved by claiming all perspectives are equally valid; rather, it is partially resolved by showing that the constraint is a Tangled Rope at the inter-institutional level (state system vs international system), and a Snare at the individual level (civilian population). The perspectives reveal that legitimacy-without-capacity is not a single constraint but a family of constraints operating at different social scales."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_capacity_collapse",
+      "monopoly_on_legitimate_coercion",
+      "international_recognition_conditionality"
+    ],
+    "dual_formulation_note": "The Sovereign Ghost can be decomposed into two structurally distinct claims: (1) State legitimacy without capacity is a stable equilibrium (\u03b5\u22480.35, primarily Piton/Rope), and (2) State extraction of resources from populations without service provision is an extractive mechanism (\u03b5\u22480.68, primarily Snare/Tangled Rope). These represent different observables: institutional persistence vs individual welfare. The constraint story presented here treats them as a unified phenomenon, but domain-specific analysis may require separation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "debt_trap_microfinance",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mf_debt"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Microfinance Debt Trap",
+    "topic_domain": "economic/financial_inclusion",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "microfinance_institutions",
+      "loan_investors"
+    ],
+    "victims": [
+      "vulnerable_borrowers",
+      "low_income_households"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Vulnerable Borrower",
+      "comment": "PERSPECTIVE 1: VULNERABLE BORROWER (SNARE) \u2014 Trapped by lack of alternative credit sources, restricted exit options (repay or default with social consequences), and compounding interest. Coerced by social collateral enforcement and village peer pressure. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.80. High effective extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Microfinance Institution",
+      "comment": "PERSPECTIVE 2: MICROFINANCE INSTITUTION (ROPE) \u2014 Institutional beneficiary with arbitrage options (exit through IPO, acquisition, or portfolio sale). Frames the constraint as pure coordination: matching borrowers with capital, solving market failure in underserved regions. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.07. Net beneficiary; negative effective extraction from their viewpoint."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Low-Income Household Economy",
+      "comment": "PERSPECTIVE 3: LOW-INCOME HOUSEHOLD ECONOMY (SNARE) \u2014 Constrained by limited income volatility absorption, seasonal cash flow stress, and household emergency costs. Debt service crowds out investment in children's education or business expansion. d\u22480.85, f(d)\u22481.20, \u03c3=0.9 \u2192 \u03c7\u22480.64. High extraction with moderate exit cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Microfinance Regulator",
+      "comment": "PERSPECTIVE 4: MICROFINANCE REGULATOR (TANGLED ROPE) \u2014 Constrained by political pressure to support financial inclusion and lender profitability, but also responsible for borrower protection. Coordination function: rate-setting, disclosure rules, consumer protections. Active enforcement required. Asymmetric extraction: lenders benefit more than borrowers from regulatory design. d\u22480.52, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.42. Mixed coordination-extraction with institutional capture signals."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Village Lending Network",
+      "comment": "PERSPECTIVE 5: VILLAGE LENDING NETWORK (PITON) \u2014 Traditional rotating savings and credit associations (RoSCAs) have been displaced by formal MFIs but persist performatively. Theater_ratio\u22480.65: RoSCA lending is now theatrical social practice wrapped around the reality of MFI debt service. The coordination mechanism has atrophied; the social ritual remains. d\u22480.45, f(d)\u22480.52, \u03c3=0.9 \u2192 \u03c7\u22480.24. Degraded constraint maintained by social inertia."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a global/civilizational view, the debt trap exhibits structural snare properties: high base extraction (0.62), severe suppression (0.68 \u2014 limited exit options, social enforcement), and high effective extraction despite moderate theater ratio. The constraint persists despite international criticism because extraction mechanisms (interest rates, social collateral, poverty-driven demand) are robust. No natural law frame can explain this \u2014 it is a designed institutional arrangement. d\u22480.70, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.86."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intent_vs_outcome_gap",
+      "question": "Is the debt trap an unintended consequence of well-designed lending, or a structurally engineered outcome that benefits lenders despite pro-poor intent?",
+      "resolution_mechanism": "Comparative analysis of MFI portfolio composition (stress-tested vs actual), borrower outcome tracking (income change vs debt service), and lender cost-benefit structures; disclosure of internal pricing models and default-rate projections",
+      "impact": "If unintended: constraint is Tangled Rope (lenders genuinely trying to solve market failure but misunderstanding borrower capacity). If engineered: constraint is pure Snare (lenders profit-optimize knowing default will occur).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether debt trap is unintended outcome or profit-engineered feature"
+    },
+    {
+      "id": "social_collateral_binding_force",
+      "question": "How much of the debt trap's suppression comes from formal legal enforcement vs informal village peer enforcement (social collateral)?",
+      "resolution_mechanism": "Comparative default analysis in regions with weak vs strong village social institutions; borrower exit surveys (what actually prevents exit); litigation data and informal dispute resolution records",
+      "impact": "If primarily legal enforcement: regulator can intervene (Tangled Rope perspective strengthens). If primarily social enforcement: regulator action is limited; suppression is structural to community ties (Snare perspective deepens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative strength of legal vs social enforcement of debt obligation"
+    },
+    {
+      "id": "alternative_lender_competitiveness",
+      "question": "Would entry of competitive formal lenders with lower rates and better borrower protections eliminate the debt trap, or do structural barriers (geographic reach, credit-testing speed) prevent meaningful competition?",
+      "resolution_mechanism": "Natural experiments in regions where new lenders entered; borrower switching rates and rate/term improvements; detailed analysis of why poor borrowers cannot easily switch lenders despite higher-cost incumbents",
+      "impact": "If competition eliminates trap: constraint is Rope (market failure being solved). If competition doesn't materialize or borrowers can't switch: constraint is Snare (competitive isolation enforced).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competition from alternative lenders can break the debt trap"
+    },
+    {
+      "id": "income_volatility_mitigation_feasibility",
+      "question": "Are income-smoothing products (savings accounts, insurance, seasonal borrowing adjustments) technically feasible and would they prevent debt traps if deployed?",
+      "resolution_mechanism": "Pilot data on MFI savings products, insurance penetration, and income stability outcomes; cost analysis of weatherproofing borrower income vs cost of debt service",
+      "impact": "If feasible and scalable: constraint could shift from Snare toward Rope/Tangled Rope if lenders deploy these. If not feasible or unprofitable to deploy: extractive structure is irreducible (Snare perspective confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether income-smoothing products can prevent debt traps"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Microfinance emerged as a pro-poor innovation with genuine coordination properties: connecting borrowers excluded from traditional banking with lenders seeking to diversify and serve unmet demand. However, the constraint has evolved into a structural debt trap extracting from the most vulnerable populations. The mechanism combines high interest rates (partial compensation for lending risk), social collateral enforcement (leveraging village peer pressure and reputation), limited exit options (borrowers cannot easily access alternative lenders), and income volatility (borrowers lack income-smoothing mechanisms to weather repayment). The constraint exhibits snare characteristics: effective extraction \u03c7 \u2248 0.80 from the borrower perspective, driven by suppression (limited alternatives, social enforcement) and base extractiveness (interest rates and compounding). Paradoxically, microfinance institutions frame the constraint as pure coordination (Rope perspective) \u2014 they genuinely believe they are solving market failures. Regulators occupy a Tangled Rope position, balancing financial inclusion policy with borrower protection mandates, but institutional capture by the MFI sector has skewed regulations to favor lender profitability. The constraint's theater ratio (0.55) reflects that microfinance marketing emphasizes poverty alleviation (theater) while profit extraction and portfolio growth dominate operational strategy (function). The trajectory shows increasing extractiveness (0.35 \u2192 0.62) over two decades as MFI competition has pushed rates and volume upward, and theater ratio rising (0.30 \u2192 0.55) as the gap between poverty-alleviation narrative and debt-trap reality widens.",
+    "key_agents": [
+      "Vulnerable Borrowers: Primary victims (powerless/trapped) \u2014 lack alternative credit sources; captured by social collateral and limited exit options",
+      "Microfinance Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture spreads between cost of capital and interest rates; exit through securitization or acquisition",
+      "Low-Income Households: Secondary victims (moderate/constrained) \u2014 debt service crowds out investment in education and business; household economic fragility increases",
+      "Village Lending Networks: Tertiary actors (moderate/mobile) \u2014 traditional RoSCAs displaced by formal MFIs; persist as social theater while economic function atrophies",
+      "Microfinance Regulator: Institutional mediator (organized/constrained) \u2014 responsible for both financial inclusion and borrower protection; increasingly captured by lender influence",
+      "Loan Investors / International Donors: Secondary beneficiaries (institutional/arbitrage) \u2014 capital providers profiting from MFI portfolio returns; maintain pro-poor narrative despite extractive outcomes",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees structural snare: extractive mechanism disguised as pro-poor innovation"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High. Microfinance interest rates typically range 25-40% annually, significantly above cost of capital (~5-10% for institutional lenders). Base extraction reflects the interest spread plus compounding effects. The trajectory (0.35 \u2192 0.62 over 20 years) shows increasing extraction as competition for borrower volume has driven interest rates upward and as securitization of portfolios has created profit pressure. Suppression (0.68): High. Borrowers face severe barriers to exit: (1) Limited alternatives \u2014 in many regions, MFIs are the only formal credit source; informal moneylenders charge even higher rates. (2) Social collateral enforcement \u2014 village peer pressure and reputation loss make default costly beyond financial penalties. (3) Information asymmetries \u2014 borrowers often don't understand compounding or refinancing costs until trapped. (4) Lock-in through repeat borrowing \u2014 initial small loans create dependency patterns. Theater ratio (0.55): Moderate. Microfinance marketing emphasizes poverty alleviation and women's empowerment (theater). Actual operations focus on portfolio growth, risk-adjusted returns, and borrower volume (function). The theater has increased over time as international criticism has mounted, requiring lenders to produce social impact reports despite unchanged extraction mechanics.",
+    "perspectival_gap": "The primary perspectival gap is between the beneficiary (MFI institutional view) and the victim (borrower powerless view). The MFI sees Rope: they are solving a genuine market failure (credit rationing of the poor) with an innovative financial instrument. The borrower sees Snare: they are trapped by lack of alternatives, compounding debt, and social coercion. The regulator sees Tangled Rope: they must coordinate financial inclusion while extracting from the poorest households, caught between lender profitability pressure and borrower welfare mandates. The analytical observer sees pure Snare: from a global/civilizational view, the constraint exhibits all hallmarks of pure extraction \u2014 high base extractiveness, severe suppression, and robust enforcement mechanisms \u2014 regardless of intent. The village lending network perspective (Piton) reveals institutional displacement: traditional RoSCAs provided similar coordination with lower theater and extraction; formal MFIs have replaced them while maintaining social ritual but degrading the actual coordination function.",
+    "directionality_logic": "Vulnerable borrowers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction; no exit options. MFI institutions: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; can exit through securitization or portfolio sale. Low-income households: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.20. High extraction but can relocate geographically or seek informal alternatives (both costly). Microfinance regulator: Victim (of political pressure) + constrained \u2192 d\u22480.52, f(d)\u22480.68. Regulatory capture creates a mixed position: regulator benefits from financial inclusion metrics but victims to lender lobbying. Village lending networks: Moderate + mobile \u2192 d\u22480.45, f(d)\u22480.52. Piton classification comes from high theater (0.65), not from extraction mechanics. Analytical observer: d\u22480.70, f(d)\u22481.15. Observer-relative, capturing full structural snare from global/civilizational perspective.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint resolves as pure Snare at \u03b5=0.62 (\u03c7\u22480.80 from borrower perspective) because all three snare gates are met: (1) High base extractiveness (0.62 > 0.46). (2) High suppression (0.68 > 0.60). (3) High effective extraction (\u03c7\u22480.80 > 0.66 from primary victim perspective). The ambiguity that mandatrophy must resolve is: 'Is this a failed Rope (market failure becoming extractive) or a designed Snare (extractive mechanism disguised as pro-poor)?' The analytical evidence points to DESIGNED SNARE because (a) extraction increases over time despite competition, suggesting structural rather than temporary advantage; (b) suppression mechanisms are actively enforced (social collateral, portfolio lock-in, regulatory capture); (c) lenders profit-optimize despite poverty outcomes; (d) MFI entry has not solved credit rationing for the poorest (the constraint persists). The Rope perspective from the MFI is their genuine cognitive frame, but it does not reflect the structural mechanism. Mandatrophy is resolved by accepting both perspectives as empirically true from their structural positions while classifying the constraint according to its actual extractive mechanism from the primary victim's structural position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "credit_access_exclusion",
+      "poverty_intergenerational_transmission"
+    ],
+    "dual_formulation_note": "The microfinance debt trap decomposes into two structurally distinct constraints: (1) Microfinance as market coordination (addressing credit access gaps) \u2014 \u03b5\u22480.08, Rope from beneficiary perspective, but overlaid with (2) Extractive debt service burden on vulnerable households \u2014 \u03b5\u22480.62, Snare from victim perspective. These are not two views of the same constraint; they are two distinct structural mechanisms in causal sequence. Market coordination creates the institutional space within which extractive mechanisms operate. The story focuses on the second mechanism (\u03b5=0.62); the first is a separate constraint story that should link to this one as an upstream cause."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

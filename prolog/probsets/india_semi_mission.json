@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "india_semi_mission",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "India Semiconductor Mission 2.0",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_chip_manufacturers",
+      "equipment_suppliers",
+      "skilled_labor_force"
+    ],
+    "victims": [
+      "indian_taxpayers",
+      "importing_sectors"
+    ],
+    "has_sunset_clause": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Indian Taxpayers",
+      "comment": "Indian Taxpayers are trapped and bear the cost of subsidies and potential inefficiencies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Importing Sectors",
+      "comment": "Importing sectors are constrained by potential increases in domestic chip prices but benefit from greater supply chain security and potential economic growth."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Domestic Chip Manufacturers",
+      "comment": "Domestic Chip Manufacturers benefit from financial incentives and infrastructure development and have arbitrage options to adjust production and investment."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Skilled Labor Force",
+      "comment": "The skilled labor force benefits from increased job opportunities but has a sunset clause because they may migrate elsewhere."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the India Semiconductor Mission 2.0 as a tangled rope, involving both coordination and extraction at a global scale."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "market_competitiveness",
+      "question": "Will the domestic chip industry become genuinely competitive on the global market, or will it remain dependent on government subsidies?",
+      "resolution_mechanism": "Longitudinal analysis of export volumes, market share, and profitability of domestic chip manufacturers.",
+      "impact": "If genuinely competitive, the program will be a successful example of industrial policy. If subsidy-dependent, it will represent a long-term drain on resources.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The long-term competitiveness of the domestic chip industry."
+    },
+    {
+      "id": "supply_chain_security",
+      "question": "How much does domestic chip production improve supply chain security and reduce reliance on foreign suppliers?",
+      "resolution_mechanism": "Analysis of import dependence before and after the program, as well as assessments of geopolitical risk factors.",
+      "impact": "If significantly improved, the program will contribute to national security. If minimally improved, the economic costs may outweigh the benefits.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which domestic chip production improves supply chain security."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The India Semiconductor Mission 2.0 aims to boost the domestic chip industry through financial incentives, infrastructure development, and skill training. It represents an attempt to create a national champion in a strategically important sector. However, it also entails significant costs to taxpayers and carries the risk of creating inefficiencies or distorting the market.",
+    "key_agents": [
+      "Domestic Chip Manufacturers: Primary beneficiaries (institutional/arbitrage)",
+      "Indian Taxpayers: Primary victims (powerless/trapped)",
+      "Importing Sectors: Secondary victims (moderate/constrained)",
+      "Skilled Labor Force: Mobile workers (moderate/mobile)",
+      "Equipment Suppliers: Beneficiaries (institutional/mobile)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-High. The mission extracts resources from taxpayers to subsidize the domestic chip industry. The extraction is asymmetric, as the benefits are concentrated among a few firms. Suppression (0.40): Moderate. The program may suppress competition from foreign chip manufacturers and distort market signals. However, it also aims to address market failures such as underinvestment in R&D and infrastructure. Theater ratio (0.30): Low. The mission is primarily focused on achieving concrete outcomes such as increased domestic chip production and exports, rather than on symbolic gestures.",
+    "perspectival_gap": "The Indian Taxpayers perspective is a Snare because they have little power to influence the program or exit it. The Domestic Chip Manufacturers perspective is a Rope because they benefit from the incentives and see it as a coordination mechanism. Importing sectors see a tangled rope because while local supply chains would benefit, the costs of imports would rise.",
+    "directionality_logic": "Directionality is determined by the relationship to the mission. Domestic Chip Manufacturers benefit from subsidies and have arbitrage options. Indian Taxpayers bear the costs and have no exit. Importing Sectors bear costs in the form of increased costs but also benefit from more local supply."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_chip_supply",
+      "indian_economic_growth"
+    ]
+  },
+  "directionality_overrides": []
+}

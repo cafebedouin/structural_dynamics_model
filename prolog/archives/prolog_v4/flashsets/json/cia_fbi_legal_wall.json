@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "cia_fbi_legal_wall",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The CIA/FBI Intelligence-Criminal \"Wall\" (pre-PATRIOT Act)",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "civil_liberties",
+      "cia_operational_autonomy"
+    ],
+    "victims": [
+      "domestic_criminal_investigations",
+      "national_security"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "National Security",
+      "comment": "Perspective 1: National Security (Snare) - The inability to connect intelligence and criminal investigations directly harmed national security. Trapped because unable to unilaterally dismantle the wall pre-PATRIOT Act."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Civil Liberties Advocates",
+      "comment": "Perspective 2: Civil Liberties Advocates (Rope) - The wall provided a coordination mechanism protecting citizens from intelligence overreach. Beneficiary with arbitrage exit via legal challenges."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "FBI Agents",
+      "comment": "Perspective 3: FBI Agents (Tangled Rope) - Constrained by the wall, but also benefited from the clarity it provided regarding legal boundaries. Extraction exists, but there's also a coordination benefit in knowing the rules."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "CIA Operational Autonomy",
+      "comment": "Perspective 4: CIA (Tangled Rope) - Benefitted in some ways from the separation of intelligence and criminal investigations. The agency was free to operate abroad with minimal oversight."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 5: Analytical Observer (Tangled Rope) - The wall represents a tangled effort to balance civil liberties and national security, creating both coordination and extraction for different parties."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effectiveness_vs_intrusion",
+      "question": "What is the optimal balance between intelligence effectiveness and intrusion on civil liberties?",
+      "resolution_mechanism": "Analysis of intelligence failures before and after the PATRIOT Act, balanced against data on civil liberties violations.",
+      "impact": "Determines whether the wall was a necessary safeguard or an impediment to national security.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The fundamental tradeoff between intelligence effectiveness and privacy."
+    },
+    {
+      "id": "scope_of_foreign_intelligence",
+      "question": "What constitutes legitimate 'foreign intelligence' and how easily can it be used to circumvent domestic laws?",
+      "resolution_mechanism": "Legal analysis of court cases and statutes related to foreign intelligence gathering.",
+      "impact": "Defines the boundary between legitimate intelligence gathering and potential abuse.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The conceptual boundary defining foreign intelligence activities."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The CIA/FBI \"Wall\" was a set of legal and procedural barriers erected to separate foreign intelligence from domestic criminal investigations, primarily to protect civil liberties. This separation aimed to prevent intelligence gathered for foreign purposes from being used in domestic criminal cases, thereby avoiding potential abuses of power. However, it also created a bottleneck in information sharing that critics argued hindered national security, especially in the context of counter-terrorism efforts prior to the passage of the PATRIOT Act.",
+    "key_agents": [
+      "Civil Liberties: Primary beneficiary (institutional/arbitrage) - Protected by the separation of intelligence and law enforcement.",
+      "Domestic Criminal Investigations: Primary victim (powerless/trapped) - Hindered by the inability to access potentially relevant intelligence.",
+      "National Security: Secondary victim (powerless/trapped) - Compromised by the difficulty in connecting intelligence leads to prevent attacks.",
+      "FBI: Powerful, constrained - Limited by the Wall in conducting investigations, but also provided clarity.",
+      "CIA: Powerful, constrained - Operates autonomously but may benefit from inter-agency cooperation."
+    ],
+    "logic_rationale": "The extractiveness (0.55) reflects the degree to which the separation of intelligence and criminal investigations hindered law enforcement's ability to pursue leads and prevent attacks. Suppression (0.60) accounts for the restrictions placed on information sharing. Theater ratio (0.40) indicates a moderate level of performative activity, where the wall was sometimes used to demonstrate compliance without necessarily achieving its intended purpose.",
+    "perspectival_gap": "National security agencies see the wall as an obstacle to effective intelligence gathering and response. Civil liberties advocates see it as a necessary protection against government overreach. FBI agents experience the constraint as limiting but also clarifying, providing guidelines for investigations. The analytical observer sees the wall as a tangled effort to balance competing interests, resulting in both benefits and costs.",
+    "directionality_logic": "Beneficiaries (civil liberties, CIA operational autonomy) experience lower effective extraction, as the wall serves to protect their interests. Victims (domestic criminal investigations, national security) experience higher effective extraction, as their ability to function is hindered. The FBI and CIA have a more complex relationship to the wall, experiencing both benefits and constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "patriot_act_information_sharing",
+      "fisa_court_oversight"
+    ]
+  },
+  "directionality_overrides": []
+}

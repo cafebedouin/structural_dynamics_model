@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "pe_rental_market_lockin",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pe_rental"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Private Equity Lock-in of Single-Family Rental Market",
+    "topic_domain": "economic/housing_markets",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "institutional_pe_firms"
+    ],
+    "victims": [
+      "first_time_homebuyers",
+      "renters_in_acquisition_corridors",
+      "local_housing_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Displaced Homebuyer",
+      "comment": "PERSPECTIVE 1: FIRST-TIME HOMEBUYERS IN ACQUISITION CORRIDORS (SNARE) \u2014 Priced out of ownership market as PE firms consolidate inventory. Trapped: cannot afford purchase, cannot exit region without employment disruption, cannot organize collective counter-action. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Existing Renter",
+      "comment": "PERSPECTIVE 2: RENTERS IN PE-CONSOLIDATED MARKETS (SNARE) \u2014 Systematic rent escalation, reduced maintenance responsiveness (economies of scale prioritize asset extraction over service quality), eviction velocity increases. Constrained exit: relocation costs, limited alternatives in same region, employment ties. d\u22480.85, f(d)\u22481.18, \u03c3=0.9 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Private Equity Firm",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL PE FIRM (ROPE) \u2014 Experiences constraint as coordination mechanism: portfolio consolidation, bulk mortgage access, regulatory arbitrage (single-family rentals exempt from many multi-family protections). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary; effective extraction is negative because arbitrage access is subvention."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Housing Market (Systemic View)",
+      "comment": "PERSPECTIVE 4: HOUSING MARKET SYSTEMICALLY (TANGLED ROPE) \u2014 PE consolidation provides coordination benefit (liquidity injection, stabilization of distressed portfolios post-2008) but creates asymmetric extraction through rent escalation dynamics and owner-to-renter conversion. Both functions present: coordination during recovery phase + extraction during maturity. d\u22480.52, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Local Housing Affordability",
+      "comment": "PERSPECTIVE 5: LOCAL HOUSING AFFORDABILITY COMMONS (SNARE) \u2014 Abstract collective good with no organized voice. Systematic extraction via rent escalation, reduced supply of ownership-track housing, and intergenerational exclusion from wealth accumulation through homeownership. Trapped: cannot exit, organize, or negotiate. d\u22480.94, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Housing Advocacy & Tenant Coalitions",
+      "comment": "PERSPECTIVE 6: HOUSING ADVOCACY & TENANT COALITIONS (TANGLED ROPE) \u2014 Organized opposition has achieved state-level rent control and anti-eviction laws in some regions (California, Oregon, New York), creating partial coordination function (collective bargaining, standard-setting). But fundamental asymmetry remains: PE firms have exit (can move capital to higher-yield regions), advocates face coordination costs. d\u22480.58, f(d)\u22480.77, \u03c3=0.9 \u2192 \u03c7\u22480.40."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "post_crisis_recovery_necessity",
+      "question": "Was PE rental consolidation a necessary coordination mechanism for stabilizing the distressed housing market post-2008, or a disguised extraction enabled by crisis conditions?",
+      "resolution_mechanism": "Comparative analysis: markets with high PE penetration vs low PE penetration; correlation between PE entry timing and employment recovery vs rent escalation; counterfactual recovery models",
+      "impact": "If necessary: constraint classifies as Scaffold with sunset (crisis phase now ended). If disguised extraction: constraint is pure Snare with false coordination narrative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether PE consolidation was crisis-necessary coordination or opportunistic extraction"
+    },
+    {
+      "id": "single_family_rental_inherent_efficiency",
+      "question": "Do single-family rental portfolios under PE management achieve meaningful efficiency gains (maintenance coordination, bulk purchasing, risk pooling) that justify rent premiums, or are rent increases purely extraction with no functional offset?",
+      "resolution_mechanism": "Comparative service metrics: maintenance response times, rent-to-cost ratios, resident satisfaction scores between PE and small-landlord portfolios; accounting for market-level concentration effects",
+      "impact": "If efficiency gains real: extraction justified as Tangled Rope (coordination + asymmetry). If purely extraction: classification confirms Snare with false efficiency narrative.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether PE portfolio management creates actual efficiency gains"
+    },
+    {
+      "id": "regulatory_capacity_structural",
+      "question": "Can state and local regulatory action (rent control, anti-eviction, licensing requirements) actually constrain PE extraction, or do PE firms structurally outpace regulatory capacity due to capital mobility and legal resources?",
+      "resolution_mechanism": "Historical analysis of regulatory effectiveness: states with strong rent control vs weak; PE firm response patterns; regulatory capture indicators (campaign financing, revolving door); interstate capital migration tracking",
+      "impact": "If regulation effective: constraint transitions to manageable Tangled Rope. If PE structurally outpaces: constraint is structural Snare and advocacy is performative (Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory action can constrain PE extraction dynamics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Following the 2008 financial crisis, large private equity firms (Invitation Homes, American Homes 4 Rent, Starwood Waypoint, Blackstone/Invitation Homes merger) began acquiring single-family homes at scale, converting them from owner-occupied to rental inventory. By 2023, PE and institutional investors owned approximately 28-32% of single-family rental stock in major acquisition corridors (Atlanta, Phoenix, Tucson, Las Vegas, Miami). This constraint exhibits sharp perspectival divergence: PE firms experience the mechanism as rational portfolio coordination and arbitrage access; first-time homebuyers experience it as market foreclosure; renters experience it as systematic extraction through rent escalation; local housing affordability experiences it as structural victimization with no voice. The extractiveness has risen from moderate coordination (0.22 during post-crisis recovery, 2008-2012) to high extraction (0.58 at present maturity, 2023+), indicating that the crisis-recovery narrative no longer justifies the asymmetry. Theater ratio remains low (0.45), indicating that PE firms justify rent increases through explicit efficiency claims and market logic rather than performative narrative \u2014 the extraction is blunt, not theatrical.",
+    "key_agents": [
+      "Institutional PE Firms: Primary beneficiary (institutional/arbitrage) \u2014 capture capital gains, operational leverage, regulatory arbitrage via single-family exemptions",
+      "First-Time Homebuyers: Primary victim (powerless/trapped) \u2014 priced out of ownership opportunity, cannot organize, cannot exit region without employment loss",
+      "Existing Renters: Secondary victim (moderate/constrained) \u2014 systematic rent escalation, reduced maintenance, eviction velocity; can move but at high cost",
+      "Local Housing Affordability Commons: Tertiary victim (powerless/trapped) \u2014 abstract collective good; bears intergenerational wealth exclusion costs",
+      "Housing Advocacy & Tenant Coalitions: Organized opposition (organized/constrained) \u2014 achieved rent control in some states but face structural capital-mobility disadvantage",
+      "Distressed Mortgage Holders (2008-2012): Former primary beneficiary (now marginalized) \u2014 PE entry created liquidity relief but no long-term benefit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High, reflecting systematic rent escalation in PE-consolidated markets (15-25% above single-landlord comparables) and supply reduction (conversion of owner-track inventory to permanent rental). The trajectory from 0.22 (recovery phase) to 0.58 (maturity) reveals that the crisis-recovery justification has expired \u2014 extraction intensified as markets stabilized. Suppression (0.68): High. Barriers include (1) capital requirements for competing with PE bulk-purchase capacity, (2) regulatory fragmentation (state/local patchwork protection), (3) collective action costs for renters, (4) employment-region coupling that prevents exit, (5) information asymmetries (rent justification opacity). Theater ratio (0.45): Moderate-low. PE firms do not rely on performative narrative \u2014 they justify rent increases through explicit efficiency claims (scale economies, professional management, maintenance coordination) and market logic (supply-demand, asset appreciation). The theater is lower than traditional institutional constraints because extraction is defended in market-rational rather than philanthropic-seeming terms.",
+    "perspectival_gap": "PE firm sees Rope (coordination benefit: portfolio consolidation, capital mobilization, post-crisis stabilization). First-time homebuyer sees Snare (foreclosure from ownership path, permanent renter status, trapped by employment). Existing renter sees Snare (rent escalation, reduced exit options, eviction velocity). Local housing affordability sees Snare (intergenerational wealth exclusion, no mechanism for voice or exit). Housing advocates see Tangled Rope (achieved some regulatory gains but remain structurally disadvantaged by capital mobility). Systemic market view sees Tangled Rope (coordination during recovery + extraction during maturity). The widest gap is between PE firm (rope/arbitrage) and powerless agents (snare/trapped) \u2014 institutional d\u22480.08 vs powerless d\u22480.92, spanning 0.84 units of directionality space.",
+    "directionality_logic": "PE firms: Beneficiary + arbitrage exit \u2192 d\u22480.08, f(d)\u2248-0.10. Negative effective extraction reflects that capital mobility is a form of subsidy \u2014 can withdraw if returns decline. First-time homebuyers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction: cannot compete with PE scale, cannot relocate without employment loss, cannot organize due to geographic dispersion. Renters: Victim + constrained exit \u2192 d\u22480.85, f(d)\u22481.18. High extraction: can relocate but at significant cost (moving expenses, lease breaks, local disruption). Local housing affordability: Victim + trapped \u2192 d\u22480.94, f(d)\u22481.42. Maximum extraction: abstract collective with no organized exit or negotiation capacity. Housing advocates: Organized + constrained \u2192 d\u22480.58, f(d)\u22480.77. Moderate extraction: achieved legal wins but face structural disadvantage \u2014 PE can exit to high-yield regions; advocates face coordination costs.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint is correctly classified as Snare, NOT as pure Rope or false coordination. The initial post-crisis narrative framed PE entry as benign market coordination (stabilizing distressed inventory, providing liquidity). The extraction is real and asymmetric: (1) PE firms benefit from capital appreciation + operational leverage + regulatory arbitrage; (2) first-time homebuyers lose ownership opportunity; (3) renters bear systematic extraction through rent escalation; (4) local housing stability loses an entire wealth-building cohort. The coordination narrative becomes untenable once markets stabilize (extractiveness trajectory: 0.22\u21920.58 reveals shifting justification). The Snare classification captures that the constraint persists not because it solves a coordination problem (that was solved by 2014) but because it benefits PE firms enough to maintain suppression barriers (regulatory fragmentation, scale advantages, capital mobility). Regulatory efforts (rent control in CA/OR/NY, anti-eviction, licensing) represent attempts to convert Snare to Tangled Rope or Scaffold, but the structural data shows they have not yet succeeded \u2014 extraction remains high, suggesting PE firms retain superior exit capacity. The false coordinate would be classifying this as Rope (pure coordination without asymmetry) or Scaffold (temporary problem with sunset). Neither fits: the extraction is persistent, systematic, and structural."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "housing_affordability_crisis",
+      "intergenerational_wealth_inequality",
+      "regulatory_fragmentation_housing"
+    ],
+    "dual_formulation_note": "PE rental consolidation can be decomposed into two structurally distinct phases: (1) Post-crisis recovery (2008-2014): \u03b5\u22480.22, crisis-necessary coordination (Rope/Scaffold). (2) Market maturity (2015-present): \u03b5\u22480.58, pure extraction enabled by structural advantages (Snare). These are linked: the recovery phase legitimized institutional presence that enabled the extraction phase. The network upstream includes the housing affordability crisis (primary victim) and intergenerational wealth inequality (systemic effect). Downstream includes regulatory fragmentation efforts (attempted Snare-to-Tangled Rope conversion)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

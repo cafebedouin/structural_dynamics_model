@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "asce_7_22_seismic_design",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ASCE 7-22 Seismic Design Requirements",
+    "topic_domain": "technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "structural_engineers",
+      "construction_material_suppliers",
+      "insurance_companies"
+    ],
+    "victims": [
+      "developers",
+      "building_owners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Small Building Owner",
+      "comment": "PERSPECTIVE 1: Small building owner faces increased construction costs with no exit option. They must comply to legally operate their building."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Developers",
+      "comment": "PERSPECTIVE 2: Developers face increased costs but can pass some of them on to buyers or renters. They are constrained by market conditions but can choose to build in areas with less stringent requirements."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Structural Engineers",
+      "comment": "PERSPECTIVE 3: Structural engineers benefit from increased demand for their services due to code requirements. They can arbitrage their expertise across different projects and locations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Construction Material Suppliers",
+      "comment": "PERSPECTIVE 4: Construction material suppliers (e.g., steel, concrete) benefit from increased demand for their products, particularly specialized materials required for seismic resistance. They can arbitrage this demand by shifting supply to regions with stricter enforcement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Insurance Companies",
+      "comment": "PERSPECTIVE 5: Insurance companies benefit from reduced risk of payouts due to structural failures in seismic events, leading to potentially lower premiums and increased profitability. They can arbitrage this risk reduction across their portfolio."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: Analytical observer sees a tangled rope - necessary coordination to reduce seismic risk, but with asymmetric extraction impacting developers and building owners."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "seismic_risk_assessment_accuracy",
+      "question": "How accurate are the seismic risk assessments used to determine design requirements?",
+      "resolution_mechanism": "Compare predicted vs. actual damage from seismic events in areas with different code enforcement levels.",
+      "impact": "If risk is overestimated, requirements are unnecessarily costly. If risk is underestimated, the code fails to provide adequate protection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of seismic risk assessments"
+    },
+    {
+      "id": "enforcement_consistency",
+      "question": "How consistently are the ASCE 7-22 seismic design requirements enforced across different jurisdictions?",
+      "resolution_mechanism": "Audit building permit approval processes and conduct random inspections of construction sites.",
+      "impact": "Inconsistent enforcement creates arbitrage opportunities for developers and undermines the code's effectiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Consistency of code enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "ASCE 7-22 provides minimum seismic design requirements for buildings in the US. While aimed at protecting life and property, it introduces costs and complexities that affect various stakeholders differently, acting as a tangled rope with coordination and extraction aspects. Building codes, in general, tend towards ratchet effects, where requirements are rarely relaxed. The complexity of the model creates a barrier to non-expert evaluation of true costs and benefits.",
+    "key_agents": [
+      "Developers: Primary targets (moderate/constrained) - bear increased costs.",
+      "Building Owners: Primary targets (powerless/trapped) - face higher construction/renovation expenses.",
+      "Structural Engineers: Primary beneficiaries (institutional/arbitrage) - professional expertise in demand.",
+      "Construction Material Suppliers: Secondary beneficiaries (institutional/arbitrage) - increased sales of specialized materials.",
+      "Insurance Companies: Secondary beneficiaries (institutional/arbitrage) - reduced risk, lower payouts."
+    ],
+    "logic_rationale": "The extractiveness is moderate (0.50) as there is a significant cost imposed by the code. Suppression (0.60) is moderate-high because building owners generally must comply to legally operate their buildings. The theater ratio (0.20) is low, as while there's bureaucratic overhead in complying, the code ultimately provides an actual function.",
+    "perspectival_gap": "Small building owners experience the code as a snare due to the disproportionate impact of cost increases. Developers see it as a tangled rope, balancing increased costs with market opportunities. Structural engineers, material suppliers, and insurance companies view the code as a coordination mechanism (rope) that benefits them. The analytical observer recognizes that the code serves to reduce seismic risk but also creates economic burdens, making it a tangled rope overall.",
+    "directionality_logic": "Building owners are victims with no exit, experiencing pure extraction. Developers are constrained, experiencing a mix of extraction and benefit. Engineers and material suppliers benefit and can arbitrage their positions, experiencing the constraint as coordination. Insurers also benefit via reduced risk. This structural relationship drives the directionality score."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

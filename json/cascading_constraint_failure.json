@@ -2,63 +2,54 @@
   "header": {
     "constraint_id": "cascading_constraint_failure",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cascading"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
     "human_readable": "The Dominos of Systemic Collapse",
     "topic_domain": "technological/infrastructural/economic",
-    "requires_active_enforcement": true,
-    "beneficiaries": [
-      "system_designers",
-      "efficiency_investors"
-    ],
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
     "victims": [
-      "end_users",
-      "general_public",
-      "downstream_systems"
-    ]
+      "dependent_systems",
+      "redundancy_margins",
+      "recovery_capacity",
+      "system_users"
+    ],
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "trapped",
-      "spatial_scope": "national",
-      "label": "The End User",
-      "comment": "PERSPECTIVE 1: END USER (SNARE) — Trapped within critical infrastructure (power, finance, supply chains) with no viable alternatives. They bear the full, catastrophic cost of a systemic failure they cannot prevent or exit. The latent risk itself is the extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
       "time_horizon": "immediate",
-      "exit_options": "arbitrage",
+      "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The System Architect / Efficiency Investor",
-      "comment": "PERSPECTIVE 2: SYSTEM ARCHITECT (ROPE) — Experiences the system as a pure coordination mechanism that creates immense efficiency. Benefits from the tight coupling and can hedge or exit before a collapse. The risk is externalized. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08. Negative effective extraction indicates a net subsidy."
+      "label": "The Dependent Infrastructure Node",
+      "comment": "PERSPECTIVE 1: DEPENDENT INFRASTRUCTURE NODE (SNARE) \u2014 Individual subsystems cannot decouple from the cascade. Once one constraint fails, downstream systems face extraction of their redundancy reserves and operational margin. No exit option exists except catastrophic shutdown. The node bears maximum cost of systemic brittleness."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "snare",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The System Operator",
-      "comment": "PERSPECTIVE 3: SYSTEM OPERATOR (TANGLED ROPE) — Experiences both the coordination benefits (the system functions) and the extractive costs (managing extreme fragility, high stress, blame for failures). They are constrained within the system's design. d≈0.75, f(d)≈1.10, σ=0.9 → χ≈0.54."
+      "spatial_scope": "national",
+      "label": "The Regional Coordination Authority",
+      "comment": "PERSPECTIVE 2: REGIONAL COORDINATION AUTHORITY (SNARE) \u2014 Tasked with maintaining system resilience but constrained by budget limits, legacy infrastructure, and political pressure to optimize for cost rather than redundancy. Faces extraction of authority when cascades occur; blamed for failures caused by systemic coupling. Limited ability to enforce decoupling."
     },
     {
-      "classification_type": "piton",
+      "classification_type": "tangled_rope",
       "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Regulatory Body",
-      "comment": "PERSPECTIVE 4: REGULATORY BODY (PITON) — The regulatory framework designed to prevent such collapses is largely performative. Stress tests and compliance checks are theatrical rituals that cannot model or prevent true systemic cascades. The institution persists through inertia despite its functional degradation. theater_ratio=0.75 satisfies the piton gate (≥0.70)."
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Infrastructure Operator",
+      "comment": "PERSPECTIVE 3: INFRASTRUCTURE OPERATOR (TANGLED ROPE) \u2014 Benefits from operational efficiency gains from tight coupling (lower capital costs, faster response times, unified control). Also extracts rent from dependency: competing operators cannot easily enter when substitution requires breaking couplings. Maintains the tight-coupling regime despite knowing the cascade risk. Active enforcement of coupling through standardization and interconnection mandates."
     },
     {
       "classification_type": "scaffold",
@@ -66,8 +57,17 @@
       "time_horizon": "generational",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Resilience Advocate / Decentralization Proponent",
-      "comment": "PERSPECTIVE 5: RESILIENCE ADVOCATE (SCAFFOLD) — Views the tightly-coupled centralized system as a temporary, fragile scaffold. They are actively building alternative, decentralized, and resilient systems (e.g., microgrids, local supply chains, crypto-finance) with the expectation that the old system will eventually fail and be replaced. The sunset clause is the inevitable collapse itself."
+      "label": "The Resilience Coalition",
+      "comment": "PERSPECTIVE 4: RESILIENCE COALITION (SCAFFOLD) \u2014 Organized agents (grid modernization initiatives, decentralized energy projects, mesh networking advocates) are building redundancy and decoupling mechanisms with explicit sunset logic: as redundancy matures and decentralized alternatives become cost-competitive, the tight-coupling regime loses its economic justification. Sunset estimated at 15-30 years depending on sector."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Regulatory Framework",
+      "comment": "PERSPECTIVE 5: LEGACY REGULATORY FRAMEWORK (PITON) \u2014 Regulations mandating interconnection and standardization were designed for a different risk environment and cost structure. They now persist through institutional inertia despite creating the cascade vulnerability they originally aimed to prevent. The regulatory theater (compliance audits, interconnection agreements) substitutes for actual decoupling investment. Theater ratio high; functional risk-reduction low."
     },
     {
       "classification_type": "mountain",
@@ -75,97 +75,114 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Complex Systems Theorist",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a sufficiently abstract perspective, the tendency of optimized, complex adaptive systems to become 'robust yet fragile' and exist at a critical state is an emergent, law-like property. This view naturalizes the risk of collapse as an unavoidable feature of complexity itself. The engine will flag this as a false summit, as the high ε and suppression values are products of design choices, not natural law."
+      "label": "The Analytical Observer (System Dynamics View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SYSTEM DYNAMICS VIEW (MOUNTAIN) \u2014 From first principles, tightly coupled systems with delayed feedback exhibit oscillatory instability and cascade failure as mathematical necessities. The constraint appears as an immutable property of complex systems \u2014 tight coupling + long propagation delays + incomplete information = cascade risk. However, this perspective risks naturalizing what is actually a choice of system architecture. The engine's false summit detector flags this as naturalization."
     }
   ],
   "omegas": [
     {
-      "id": "efficiency_fragility_tradeoff",
-      "question": "Is the trade-off between system efficiency and fragility a fundamental, unavoidable law (Mountain) or a contingent policy choice that prioritizes short-term gains (Tangled Rope)?",
-      "resolution_mechanism": "Comparative analysis of systems with different design philosophies (e.g., centralized vs. decentralized power grids) and their performance under stress.",
-      "impact": "If fundamental, the risk is irreducible. If a choice, alternative designs could mitigate it, making the current system a Snare by suppressing safer alternatives.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether the efficiency-fragility trade-off is a natural law or a policy choice."
-    },
-    {
-      "id": "black_swan_predictability",
-      "question": "Are systemic collapses truly unpredictable 'black swan' events, or are they predictable 'gray rhino' failures of a known fragile design?",
-      "resolution_mechanism": "Forensic analysis of past collapses (e.g., 2008 financial crisis, Texas power grid failure) to identify pre-existing warnings and ignored risk assessments.",
-      "impact": "If predictable, the failure to act constitutes a higher degree of extraction (Snare). If truly unpredictable, the system is closer to a tragic Rope.",
+      "id": "coupling_threshold_identification",
+      "question": "What degree of coupling density triggers cascade risk from acceptable to unacceptable?",
+      "resolution_mechanism": "Empirical analysis of historical cascade events; network graph analysis of failure propagation; simulation of coupling reduction scenarios",
+      "impact": "If threshold < 0.4 (coupling density): most current infrastructure exceeds safety margin; immediate decoupling investment required. If threshold > 0.8: current tight coupling is defensible; cascade risk is tail-event problem, not structural.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing unpredictable 'black swans' from predictable failures."
+      "description": "Threshold coupling density at which cascade risk becomes unacceptable"
     },
     {
-      "id": "decoupling_cost",
-      "question": "What is the true economic and social cost of building more resilient, less-coupled systems, and who would bear that cost?",
-      "resolution_mechanism": "Techno-economic modeling of decentralized vs. centralized infrastructure, including transition costs and changes in efficiency.",
-      "impact": "If costs are prohibitively high, the current system may be a tragic Tangled Rope. If costs are manageable but opposed by incumbents, it is a Snare.",
-      "confidence": "low",
+      "id": "decoupling_cost_feasibility",
+      "question": "Is decoupling to safe coupling densities economically feasible, or does it require subsidy/mandate to overcome capital barriers?",
+      "resolution_mechanism": "Cost-benefit analysis of decoupling options; comparison of capital requirements vs. amortized cost of cascade events; market test of decoupled alternatives in competitive sectors",
+      "impact": "If feasible: market competition should drive decoupling naturally; current tight coupling is rent-seeking choice (Snare confirmed). If infeasible: tight coupling is coordination lock-in (reduces to Rope from institutional perspective); decoupling requires subsidy and mandate.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "The cost-benefit analysis of building resilient, decoupled alternatives."
+      "description": "Economic feasibility of decoupling to safe architecture"
+    },
+    {
+      "id": "cascade_propagation_speed",
+      "question": "How quickly do cascade failures propagate relative to human decision-making and system mitigation timescales?",
+      "resolution_mechanism": "Real-time monitoring of cascade events; measurement of failure propagation time vs. human response latency vs. automated mitigation latency",
+      "impact": "If propagation << human response (seconds to minutes): decoupling or full automation required; no human-in-loop option. If propagation >> human response (hours): coordination and human intervention can limit cascade; systemic extraction is avoidable with good policy.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Speed of cascade propagation relative to mitigation response"
+    },
+    {
+      "id": "information_asymmetry_distribution",
+      "question": "Do all nodes in the tightly coupled system have access to the state information needed to make decoupling or failsafe decisions independently?",
+      "resolution_mechanism": "Audit of information distribution protocols; analysis of decision bottlenecks and information gatekeeping; simulation of node-level resilience if information were fully distributed",
+      "impact": "If information is centralized: system cannot fail safely \u2014 all nodes trapped in collective-action problem (high extraction, Snare confirmed). If information is distributed: nodes can decouple unilaterally and the extraction is institutional choice, not structural necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of information needed for decoupling decisions"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.2
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.4
+      "time_point": 10,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2030,
-      "value": 0.55
+      "time_point": 20,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.3
+      "time_point": 0,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.55
+      "time_point": 10,
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.75
+      "time_point": 20,
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 1980,
-    "end": 2030
+    "start": 0,
+    "end": 20
   },
   "commentary": {
-    "narrative_context": "This constraint describes the failure mode of modern, tightly-coupled technological, infrastructural, and economic systems. In pursuit of efficiency, these systems (e.g., just-in-time supply chains, centralized power grids, high-frequency trading) eliminate buffers and redundancies. This tight coupling is a Rope in normal operation, enabling high performance. However, it also creates fragility, where a single failure can propagate uncontrollably, leading to a systemic collapse. The constraint is not a single rule but the emergent property of the system's architecture.",
+    "narrative_context": "The dominos of systemic collapse represent a structural constraint that emerges when a system is composed of tightly coupled, interdependent sub-constraints. Rather than independent failures, each constraint failure in the network triggers cascading failures in dependent systems, extracting redundancy reserves and operational margins from downstream nodes. This constraint operates across technological (power grids, telecommunications, internet backbones), infrastructural (transportation, water, supply chains), and economic (banking, trade finance, market microstructure) domains. The extraction mechanism is not intentional monopoly but rather the structural consequence of optimization for efficiency at the cost of resilience. The tight coupling that enables fast response times and capital efficiency also eliminates buffers that would otherwise allow individual failures to remain contained. As coupling tightens over decades, extractiveness increases because the system's margin for error shrinks \u2014 any failure now ripples through the entire network. The constraint exhibits high suppression because actors cannot easily exit the tightly coupled regime without coordinating massive infrastructure investment.",
     "key_agents": [
-      "End Users / General Public: Primary victim (powerless/trapped) — Depend on the system and bear the full cost of its failure.",
-      "System Architects / Efficiency Investors: Primary beneficiary (institutional/arbitrage) — Profit from the system's hyper-efficiency and can externalize the tail risk.",
-      "System Operators: Secondary victim (moderate/constrained) — Manage the system's day-to-day function and its inherent fragility.",
-      "Regulatory Bodies: Institutional actor (institutional/constrained) — Tasked with preventing collapse, but their tools are often performative and inadequate (Piton).",
-      "Resilience Advocates: Organized agents (organized/mobile) — Develop alternative, decentralized systems, viewing the mainstream system as a temporary scaffold."
+      "Dependent Infrastructure Nodes: Primary victims (powerless/trapped) \u2014 individual subsystems bear extraction of redundancy when cascade occurs",
+      "System Users: Collective victims (moderate/constrained) \u2014 experience cascade effects without causal visibility into infrastructure dependencies",
+      "Infrastructure Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture efficiency gains and rent from dependency through tight coupling",
+      "Regional Coordination Authorities: Secondary victims (moderate/constrained) \u2014 tasked with resilience but constrained by legacy architecture and budget limits",
+      "Resilience Coalition: Organized agents (organized/mobile) \u2014 building decoupling and redundancy with sunset trajectory toward safer architecture",
+      "Legacy Regulatory Framework: Institutional sustainer (institutional/arbitrage) \u2014 maintains coupling mandates through inertia despite changed risk environment",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing architectural choice as immutable system dynamics law"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55): Represents the latent risk of catastrophic failure that is transferred from system designers to end users. It's not a continuous drain but a potential, massive loss imposed on the powerless. Suppression (0.75): High. For critical infrastructure like the power grid or financial system, there are no meaningful alternatives for the average person. Opting out is not possible. Theater Ratio (0.75): High. Regulatory oversight, such as bank stress tests or infrastructure audits, often becomes a performative ritual that creates a false sense of security while failing to address the underlying structural fragility.",
-    "perspectival_gap": "This is a diagnostic exemplar for indexical classification. The same system is a high-efficiency Rope to its architect, a latent Snare to its user, a degraded Piton to its regulator, a temporary Scaffold to its replacement's designer, a tragic Tangled Rope to its operator, and a law-like Mountain to the abstract theorist. The 'truth' of the constraint is the full presheaf of these perspectives; no single classification is complete.",
-    "directionality_logic": "Beneficiaries (System Designers) have arbitrage exit and benefit from the efficiency, leading to a low/negative 'd' value and a Rope classification. Victims (End Users) are trapped and bear all risk, leading to a high 'd' value and a Snare classification. Other agents fall in between based on their mix of costs, benefits, and exit options, producing the full range of types from the same base metrics.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that a single structural reality can, and should, generate multiple, seemingly contradictory classifications. The error is to seek a single 'correct' type. The system's function is to show how the beneficiary's Rope is simultaneously the victim's Snare. The high base extractiveness and suppression correctly identify the potential for severe harm, while the perspectival analysis maps out how that harm is distributed and perceived across the network of agents."
+    "logic_rationale": "Extractiveness (0.68): High and rising. The baseline coupling creates an extraction mechanism where upstream nodes extract reliability margins from downstream nodes by propagating failures. As systems tighten coupling over time (interval shows progression from 0.35 to 0.68), the extraction increases because redundancy buffers disappear. Each optimization for efficiency is an extraction of future safety margin. Suppression (0.72): High. Exiting the tightly coupled regime requires coordinated infrastructure investment that no single actor can undertake unilaterally. Switching costs are prohibitively high; path dependency locks in the tight-coupling regime. Alternative decoupled architectures exist but require breaking standardization agreements and interconnection mandates. Theater ratio (0.58, rising): Moderate and increasing. Compliance theater (resilience audits, redundancy certifications, disaster recovery drills) substitutes for actual decoupling investment. The theater increases over time because the gap between certified resilience and actual cascade risk grows \u2014 the performative audits cannot address the structural coupling problem.",
+    "perspectival_gap": "The infrastructure operator sees tight coupling as coordination (Tangled Rope from their institutional perspective) \u2014 they benefit from efficiency and maintain the regime through standardization mandates. Dependent nodes see pure extraction (Snare) \u2014 they have no exit and bear cascade costs. The resilience coalition sees a solvable problem with a sunset (Scaffold) \u2014 decentralized alternatives and redundancy are becoming cost-competitive. The regulatory framework sees its own degradation (Piton) \u2014 interconnection mandates that once prevented monopoly now create cascade vulnerabilities. The analytical observer risks seeing this as an immutable law of complex systems (Mountain) \u2014 but the structural data reveals it as a choice of system architecture, not a law of nature. The mandatrophy is resolved: this is extraction (Snare) disguised as coordination (tight coupling), not coordination disguised as extraction.",
+    "directionality_logic": "The infrastructure operator holds institutional power and arbitrage options \u2014 they can decouple if margins compress, but benefit from tight coupling now. They are the primary beneficiary; d \u2248 0.15 (beneficiary + arbitrage exit). Dependent nodes are powerless with no exit \u2014 they cannot uncouple without breaking the system they depend on. They are victims; d \u2248 0.95 (powerless + trapped). Coordination authorities are constrained by legacy infrastructure and budget politics; they are secondary victims but not fully trapped. d \u2248 0.70 (moderate + constrained). The resilience coalition has organized power and mobile exit options \u2014 they can build alternatives. But they are currently suppressed by standardization and interconnection mandates. d \u2248 0.45 (organized + mobile + constrained by legacy regime). The cascade's effective extractiveness \u03c7 is scaled upward by global scope (\u03c3(S) = 1.2) \u2014 failures propagate internationally, amplifying the impact. Suppression is unscaled (raw structural property) \u2014 the inability to exit is intrinsic to the coupling regime."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
-      "global_financial_system",
-      "national_power_grid",
-      "just_in_time_supply_chains"
-    ]
-  }
+      "supply_chain_concentration",
+      "financial_system_interconnection",
+      "critical_infrastructure_interdependence"
+    ],
+    "dual_formulation_note": "The cascading constraint failure should be decomposed into substrate-specific constraints: power grid cascade (electrical coupling), telecom cascade (protocol coupling), supply chain cascade (logistics coupling). Each has different \u03b5 values reflecting empirical coupling density. This story represents the unified pattern across all three. Upstream constraints (supply_chain_concentration, financial_system_interconnection) influence the cascade risk; downstream impact is measured through critical_infrastructure_interdependence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
 }

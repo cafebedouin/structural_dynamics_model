@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "norm_erosion_threshold",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Social Fabric Breach",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "opportunistic_actors"
+    ],
+    "victims": [
+      "rule_followers",
+      "social_cohesion"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Rule Follower",
+      "comment": "The individual who consistently adheres to social norms feels increasingly exploited as others defect. They have limited exit options from their social environment and experience direct negative consequences."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Average Citizen",
+      "comment": "Most citizens find themselves in a position where they benefit from social cooperation but are also tempted to break norms when it's personally advantageous. They are somewhat constrained due to societal expectations but still have the option to be opportunistic. The erosion of norms affects the citizen moderately."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Opportunistic Actors",
+      "comment": "Those willing to defy social norms for personal gain benefit from the exploitation of trust. Immediate benefits exist within the local scope, where they can leverage these breaches."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analyzes social contract and its fragility. Norm erosion is a process with extractiveness and some coordination. It can be seen as a mechanism of social selection."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tipping_point_determination",
+      "question": "What specific percentage of norm violations constitutes the 'tipping point' for widespread social breakdown?",
+      "resolution_mechanism": "Historical analysis of societies experiencing collapse, correlation between norm violations and social trust levels",
+      "impact": "Inaccurate thresholds may lead to premature or delayed interventions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determination of the critical threshold for norm erosion"
+    },
+    {
+      "id": "norm_definition_vagueness",
+      "question": "How much does ambiguity in social norm definition contribute to perceived violation rates?",
+      "resolution_mechanism": "Survey research assessing varying interpretations of common social norms; legal analysis of ambiguous laws",
+      "impact": "Vague norms may lead to overestimation of violations, accelerating breakdown.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Impact of norm definition ambiguity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the non-linear breakdown of social cooperation when the perceived rate of \"rule-breaking\" or \"defection\" crosses a critical threshold. The erosion of adherence to shared norms can destabilize society.",
+    "key_agents": [
+      "Rule Followers: Primary victim (powerless/trapped) \u2014 experience the cost of others breaking norms.",
+      "Opportunistic Actors: Primary beneficiary (powerful/arbitrage) \u2014 benefit from defying norms.",
+      "Average Citizen: Moderate position between following rules and taking advantage (moderate/constrained).",
+      "Social Cohesion: Abstract entity that suffers from norm erosion (victim).",
+      "Analytical Observer: Civilizational perspective on the process."
+    ],
+    "logic_rationale": "Extractiveness is moderate, as the system benefits from cooperation but is easily undermined by defection. Suppression is likewise moderate, since actors are not forced to participate and have options to defect. The theater ratio is moderate, reflecting the performative aspects of norm enforcement (e.g., public shaming, virtue signaling) that don't necessarily translate into effective deterrence.",
+    "perspectival_gap": "The rule follower perceives a snare as their trust is exploited by others who are willing to defect for personal benefit. The opportunistic actor perceives a rope, since they are benefiting from the norm erosion. The analytical observer recognizes a tangled rope, as social cooperation provides a coordination benefit, but that is extracted from by opportunistic actors.",
+    "directionality_logic": "Directionality determined by the capacity for actors to benefit from defection, or be hurt by it. The rule follower is powerless and trapped, so they bear full cost. Opportunistic actors are powerful and arbitrage the social contract for their benefit."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "political_polarization",
+      "economic_inequality"
+    ]
+  },
+  "directionality_overrides": []
+}

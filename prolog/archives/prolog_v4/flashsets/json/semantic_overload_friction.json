@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "semantic_overload_friction",
+    "version": "1.0",
+    "generated_date": "2024-08-22",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Semantic Saturation Threshold",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domain_experts",
+      "incumbent_institutions"
+    ],
+    "victims": [
+      "new_entrants",
+      "uninitiated_public"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninitiated",
+      "comment": "Perspective of new entrants and the uninitiated public, who are trapped by the high barrier to entry created by the jargon."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Domain Practitioner",
+      "comment": "Perspective of domain practitioners who are both beneficiaries and victims of the jargon. They benefit from the exclusivity it creates, but are also constrained by the need to constantly learn and use it."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Institutions",
+      "comment": "Perspective of incumbent institutions who benefit from the jargon as it reinforces their position and creates barriers to entry for competitors. They can arbitrage this position globally."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analytical perspective sees a tangled rope: jargon facilitates specialized communication but also creates a barrier to entry and understanding."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exoteric_vs_esoteric",
+      "question": "What is the ratio of exoteric to esoteric language in the target domain?",
+      "resolution_mechanism": "Quantitative analysis of text and speech in the domain to determine the frequency of specialized terms vs. common vocabulary.",
+      "impact": "If the ratio is low, the constraint will be more of a snare; if high, it will be more of a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifies the balance between accessible and specialized language."
+    },
+    {
+      "id": "cognitive_load",
+      "question": "How much cognitive load does mastering the jargon impose on new entrants?",
+      "resolution_mechanism": "Psychological studies to measure the time and effort required to learn and use the jargon effectively.",
+      "impact": "High cognitive load strengthens the snare aspect; lower load may indicate effective scaffolding.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measures the effort required to internalize specialized language."
+    },
+    {
+      "id": "alternative_communication",
+      "question": "How effective are alternative communication methods (e.g., plain language summaries) in conveying the same information without jargon?",
+      "resolution_mechanism": "Comparative studies to assess the accuracy and completeness of information transfer using different communication methods.",
+      "impact": "More effective alternatives weaken the snare; ineffective alternatives reinforce the extraction by incumbent institutions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the viability of jargon-free communication methods."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The \"Friction of Jargon\" arises as specialized domains (e.g., law, tech, or academia) mature, leading to increasingly dense language. This creates barriers to entry for new entrants and the uninitiated public, while benefiting domain experts and incumbent institutions who leverage the exclusive language for signaling and power. The constraint embodies the trade-off between efficient communication within the domain and accessibility to those outside it.",
+    "key_agents": [
+      "domain_experts: primary beneficiaries (moderate/constrained)",
+      "incumbent_institutions: primary beneficiaries (institutional/arbitrage)",
+      "new_entrants: primary victims (powerless/trapped)",
+      "uninitiated_public: secondary victims (powerless/trapped)",
+      "analytical_observer: sees mixed effects (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. Jargon extracts from new entrants in the form of time/effort to learn the language and lost opportunities from misunderstanding. Suppression (0.65): High. Alternatives are suppressed because precision is valued within the domain and accessibility is undervalued. Theater ratio (0.30): Low. The primary function is to communicate efficiently with experts; performance takes a backseat.",
+    "perspectival_gap": "The new entrant sees a snare: they are trapped by the jargon and cannot participate. The domain expert sees a tangled rope: they benefit from the exclusivity it creates but are also constrained by the need to constantly learn and use it. Incumbent institutions see a rope: it reinforces their position and creates barriers to entry. The analytical observer sees a tangled rope: it facilitates specialized communication but also creates a barrier to entry and understanding.",
+    "directionality_logic": "Beneficiaries (domain experts and incumbents) benefit by leveraging exclusive jargon, leading to lower derived d values and extractiveness. Victims (new entrants and uninitiated public) are trapped by the jargon, resulting in higher d values and greater perceived extraction. Analytical observers sees a mixed effect based on exit options.",
+    "mandatrophy_analysis": "The constraint's classification as a Tangled Rope prevents mislabeling the jargon as either pure coordination or pure extraction. The jargon, while enabling communication, also creates a barrier to entry. Recognizing this dual nature resolves the mandatrophy."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

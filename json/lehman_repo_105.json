@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "lehman_repo_105",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "repo105"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.88,
+    "claimed_type": "snare",
+    "human_readable": "Lehman Brothers Repo 105 Accounting Maneuver",
+    "topic_domain": "economic/financial_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "lehman_counterparties",
+      "lehman_shareholders",
+      "lehman_creditors",
+      "financial_system_stability"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Counterparties and Creditors",
+      "comment": "PERSPECTIVE 1: COUNTERPARTIES AND CREDITORS (SNARE) \u2014 Trapped counterparties had no exit option. They transacted with Lehman believing published leverage ratios were accurate. The Repo 105 mechanism extracted information rent by concealing true leverage. Creditors discovered only at collapse that Lehman's solvency was false. Maximum experienced extraction \u2014 no prior knowledge, no recourse, no exit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Lehman Shareholders",
+      "comment": "PERSPECTIVE 2: LEHMAN SHAREHOLDERS (SNARE) \u2014 Trapped in illiquidity. The constraint extracted equity value by concealing leverage deterioration. Shareholders received false confidence through manipulated leverage metrics, preventing rational exit during the window when some value could have been salvaged. Experienced extraction as loss of firm value and destroyed capital."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Financial System",
+      "comment": "PERSPECTIVE 3: FINANCIAL SYSTEM STABILITY (SNARE) \u2014 Trapped systemically. The constraint extracted stability by concentrating counterparty risk exposure to Lehman without market awareness. Repo 105 suppressed price discovery and hidden leverage propagation. The system bore maximum extraction cost at collapse: cascading counterparty defaults, frozen credit markets, contagion across global institutions. No exit option for the aggregate system."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Lehman Management",
+      "comment": "PERSPECTIVE 4: LEHMAN MANAGEMENT (PITON) \u2014 Benefited from temporary balance-sheet concealment via Repo 105 mechanism. Experienced as a coordination tool for 'managing market perception,' not extraction. The constraint's theater_ratio of 0.88 reflects that Repo 105 was almost entirely performative: the economic substance was unchanged (Lehman's liabilities and leverage were identical before and after the repo); only the accounting presentation shifted. Management saw this as a legitimate financial management technique, maintained through regulatory arbitrage (exploiting differences between US GAAP and IFRS on repo accounting). As regulatory scrutiny increased, the mechanism became inert \u2014 no longer functional as concealment \u2014 but management continued using it through institutional inertia. Piton classification derives from the degradation of function combined with high theater."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authorities",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITIES (SNARE) \u2014 Organized but constrained by structural lag. Rating agencies, SEC, and banking regulators had incomplete data on Repo 105 mechanics. The constraint extracted regulatory capacity by concentrating information asymmetry \u2014 the agencies could not exit regulatory responsibility but were systematically deceived about leverage. Post-collapse, regulatory response (enhanced disclosure, repo accounting harmonization) reveals the prior victimhood: they were trapped in a role requiring monitoring of opaque mechanisms."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 Civilizational view on financial extraction. Repo 105 reveals a structural feature of modern finance: the asymmetric distribution of information about leverage and counterparty risk. The constraint extracted systemic stability by concentrating hidden liabilities in nominally solvent institutions. From the analytical perspective, this is not an immutable natural law but a snare \u2014 a pure extraction mechanism with zero coordination function, high suppression of alternatives (regulatory arbitrage), and maximum coercive overhead (the threat of counterparty contagion). The analytical observer sees Repo 105 as exemplary of how modern financial snares operate: regulatory arbitrage creates pockets where extraction can persist until collapse."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "accounting_vs_economic_substance",
+      "question": "Was Repo 105 a fraudulent concealment of Lehman's true leverage, or a legitimate accounting technique reflecting differences in how liabilities are classified under GAAP vs IFRS?",
+      "resolution_mechanism": "Forensic analysis of intent: internal emails and management communications discussing Repo 105's purpose. Analysis of whether Lehman disclosed the off-balance-sheet treatment to investors and rating agencies. Regulatory guidance on repo accounting at the time of use.",
+      "impact": "If intentional fraud: classification as snare is confirmed \u2014 deliberate concealment. If regulatory arbitrage: classification softens toward piton \u2014 a degraded but technically legal technique. Intent determines whether Repo 105 was extraction or institutional decay.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Repo 105 was fraudulent concealment or permissible accounting arbitrage"
+    },
+    {
+      "id": "market_participant_awareness",
+      "question": "Did market participants (counterparties, rating agencies, investors) have actual or constructive knowledge of Repo 105 during its use, and did they price leverage accordingly?",
+      "resolution_mechanism": "Analysis of public disclosures and footnote detail in Lehman financial statements. Interviews with rating agency analysts and major counterparties. Market-price behavior around Lehman debt spreads relative to actual leverage metrics post-revelation.",
+      "impact": "If participants knew: extraction level was lower \u2014 information asymmetry was partial. If participants were systematically uninformed: extraction was maximal \u2014 the constraint extracted by concentrating knowledge.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Market participant awareness of Repo 105 during the period of use"
+    },
+    {
+      "id": "regulatory_gap_inevitability",
+      "question": "Given the GAAP/IFRS divergence on repo accounting treatment, was the Repo 105 gap an unavoidable feature of fragmented global financial regulation, or a deliberately exploited loophole?",
+      "resolution_mechanism": "Historical analysis of when the GAAP/IFRS divergence emerged. Analysis of whether other large banks used similar techniques and at what scale. Regulatory deliberation records on repo accounting harmonization timing.",
+      "impact": "If unavoidable: the constraint represents a structural gap in coordination (Rope or Scaffold). If deliberately exploited: the constraint is pure extraction (Snare). Resolving this determines whether post-Lehman regulatory harmonization closed a structural flaw or closed an intentional exploitation vector.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the GAAP/IFRS regulatory gap was unavoidable or deliberately exploited"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.82
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.88
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "Repo 105 was a structured finance technique employed by Lehman Brothers from 2001 through its collapse in September 2008. The maneuver involved temporary sales of securities with a commitment to repurchase them at a slightly higher price \u2014 a classic repo structure \u2014 but with a critical difference: Lehman would execute the repo in the final weeks of each quarter, reducing balance-sheet liabilities for the published financial statements, then reverse the transaction after quarter-end when the financial reports had been released. The effect was to lower reported leverage ratios while keeping Lehman's actual economic exposure unchanged. Between $38 billion and $50 billion in liabilities were cyclically moved off the balance sheet using Repo 105. The constraint operated by exploiting a regulatory gap: under US GAAP accounting rules, repos meeting certain criteria qualified as sales and thus reduced reported liabilities; under IFRS rules used internationally, the same transactions were treated as secured borrowings and liabilities remained on balance sheet. Lehman exploited this gap through use of specific counterparties (primarily Citigroup and Bank of New York Mellon) that accommodated the timing. Rating agencies and investors relied on reported leverage ratios to assess solvency; concealment of true leverage delayed downgrade cascades and counterparty flight, extracting confidence from the market during a period when Lehman's fundamentals were deteriorating. The constraint exemplifies how modern financial snares operate: they use regulatory fragmentation and information asymmetry to concentrate counterparty risk exposure while suppressing market price discovery.",
+    "key_agents": [
+      "Lehman Brothers Management: Primary beneficiary (institutional/arbitrage) \u2014 captured temporary market confidence and access to funding by reporting lower leverage",
+      "Lehman Counterparties: Primary victims (powerless/trapped) \u2014 transacted with Lehman believing published leverage metrics; experienced extraction as uncompensated counterparty risk exposure",
+      "Lehman Shareholders: Primary victims (powerless/trapped) \u2014 received false confidence through manipulated metrics; extraction occurred as equity destruction when collapse revealed true leverage",
+      "Financial System: Systemic victim (powerless/trapped) \u2014 concentrated counterparty risk exposure to Lehman without market awareness; extraction occurred as cascading defaults and credit freeze",
+      "Rating Agencies and Regulators: Organized victims (organized/constrained) \u2014 trapped in monitoring role but systematically deceived; extraction of regulatory capacity",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 reveals Repo 105 as exemplary of financial snare dynamics"
+    ],
+    "logic_rationale": "Base extractiveness (0.78): High. Lehman extracted confidence and market access by concealing leverage. The extraction was nearly total because counterparties had no basis for pricing counterparty risk accurately. The metric reflects that Lehman captured the full information rent from the leverage concealment. Suppression (0.82): Very high. Multiple mechanisms suppressed alternatives and exit: regulatory fragmentation (GAAP/IFRS gap) enabled the technique; quarterly disclosure timing allowed temporary concealment; rating agency reliance on reported metrics prevented downgrade; counterparty access to detailed leverage data was structurally limited. Theater ratio (0.88): Very high. Repo 105 is nearly pure theater: the economic substance of Lehman's liabilities and leverage was completely unchanged by the transaction. The only thing that changed was the accounting presentation. No real coordination or efficiency gain occurred \u2014 the entire function was performative leverage ratio management. The increasing theater_ratio over the interval reflects the mechanism becoming more purely theatrical as underlying leverage deteriorated and the gap between reported and actual metrics widened.",
+    "perspectival_gap": "All non-analytical perspectives classify Repo 105 as Snare, reflecting that the constraint exhibited no coordination function and pure extraction. Lehman management (piton perspective) experienced it as a legitimate financial management technique \u2014 they genuinely believed quarterly leverage ratio management was normal practice. The piton classification reflects their institutional degradation: management continued using Repo 105 even as it became inert (regulatory scrutiny increased, market participants began to understand the technique), maintaining it through institutional momentum rather than function. The analytical observer confirms the snare classification across all structural victims, but the piton divergence reveals a critical feature: the beneficiary's experience of extraction as legitimate coordination is precisely what allows snares to persist. Lehman management did not experience moral culpability; they experienced routine financial management. The perspectival gap is between the beneficiary's sense of legitimacy and all victims' experience of pure extraction.",
+    "directionality_logic": "Directionality d values are determined by structural position relative to the constraint. Counterparties and shareholders (trapped, powerless) experience maximum d \u2192 maximum f(d) \u2192 maximum chi. Rating agencies and regulators (organized, constrained) experience high d but with some agency \u2192 moderately high f(d). Lehman management (institutional, arbitrage) experiences low d \u2192 negative f(d) \u2014 the constraint benefits them. The beneficiary/victim asymmetry is stark: no genuine beneficiaries emerge (Lehman benefits but at cost of systemic extraction), and all other actors are victims. The suppression value (0.82) reflects that alternatives were substantially closed: market participants could not easily price counterparty risk; regulators could not easily detect the technique; shareholders could not exit before collapse.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing Repo 105 as a pure snare \u2014 a constraint with zero coordination function that persisted entirely through extraction and suppression. The constraint did not solve any genuine collective action problem (pure rope) or create hybrid coordination-extraction (tangled rope). Lehman's quarterly leverage ratio management provided no external benefit. The beneficiary's experience of the constraint as legitimate financial practice is the mechanism through which the snare persisted: management genuinely believed they were engaging in normal balance-sheet management. Rating agencies and investors, trapped by reliance on reported metrics, could not exit. Counterparties, trapped by limited information, could not price risk accurately. The financial system, trapped in interconnected counterparty exposure, bore the full extraction cost at collapse. The classification as snare is unambiguous: high extractiveness (0.78), high suppression (0.82), high theater (0.88), zero coordination function, structural reliance on information asymmetry for persistence. Repo 105 exemplifies how modern financial snares operate: they exploit regulatory fragmentation and information asymmetry to concentrate risk exposure while suppressing market discovery. Post-Lehman regulatory harmonization (FAS 166-167, IFRS 9 repo accounting) reduced the regulatory gap that enabled the technique, but the underlying snare mechanism \u2014 exploiting temporary leverage reporting gaps to extract market confidence \u2014 remains available through other channels (balance-sheet engineering, window dressing before disclosure periods)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "rating_agency_procyclicality",
+      "counterparty_risk_opacity",
+      "regulatory_arbitrage_leverage"
+    ]
+  },
+  "directionality_overrides": []
+}

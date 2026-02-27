@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "crop_defense_dependency",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dependency on External Pesticides due to Crop Biological Limitations",
+    "topic_domain": "technological",
+    "beneficiaries": [
+      "pesticide_manufacturers"
+    ],
+    "victims": [
+      "farmers",
+      "environment"
+    ],
+    "requires_active_enforcement": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Farmers",
+      "comment": "Farmers are trapped in a cycle of dependency, needing pesticides to protect vulnerable crops. Exit is difficult due to limited options for alternative farming methods or crop varieties."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Environment",
+      "comment": "The environment is a victim of pesticide use, suffering from pollution and loss of biodiversity. It has no power or exit options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pesticide Manufacturers",
+      "comment": "Pesticide manufacturers benefit from the continued demand for their products. They can arbitrage by developing new pesticides as pests develop resistance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Agricultural Research Institutions",
+      "comment": "Agricultural research institutions face a mixed situation. They are constrained by funding priorities that often favor yield over resilience, but they also benefit from research grants related to pesticide development and resistance management. There is a coordination aspect, as they work to improve crop yields, but also an extraction aspect, as current research may perpetuate the pesticide dependency cycle"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees a tangled rope: a system of dependencies that benefits some while harming others. The observer recognizes the need to develop more resilient crops and sustainable farming methods, and that coordination between various actors could solve some but not all of the problems associated with pesticide dependence."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "crop_resilience_threshold",
+      "question": "What level of inherent pest resistance is achievable without sacrificing yield?",
+      "resolution_mechanism": "Extensive breeding programs and genetic engineering research.",
+      "impact": "If high resilience is achievable: the dependency weakens and becomes a tangled rope. If low: the dependency remains a strong snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Defines the limit to which natural crop defense mechanisms can be improved."
+    },
+    {
+      "id": "sustainable_farming_adoption_rate",
+      "question": "How quickly can sustainable farming practices be adopted at scale?",
+      "resolution_mechanism": "Policy incentives, education programs, and demonstration projects.",
+      "impact": "If adoption is rapid: the dependency weakens, and farmers gain mobility. If slow: farmers remain trapped.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Defines the speed at which farmers switch to sustainable farming methods."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Most staple food crops (e.g., corn, wheat, rice) have been bred for yield at the expense of their natural defense mechanisms, leading to a dependency on external pesticides. This creates a structural constraint where farmers and the environment are harmed, while pesticide manufacturers benefit. This dependency can be viewed from multiple perspectives.  Research institutions are caught in the middle.",
+    "key_agents": [
+      "Farmers: Primary target (powerless/trapped) - dependent on pesticides due to crop vulnerability.",
+      "Environment: Secondary target (powerless/trapped) - suffers from pesticide pollution and biodiversity loss.",
+      "Pesticide Manufacturers: Primary beneficiary (institutional/arbitrage) - profit from pesticide sales.",
+      "Agricultural Research Institutions: Secondary actor (organized/constrained) - constrained by funding but also benefit from related research.",
+      "Analytical Observer: Sees the system as a whole (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. Farmers are required to purchase pesticides to maintain crop yields, and the environment suffers from pesticide pollution. Suppression (0.70): High. Limited alternatives and regulatory capture suppress alternatives to pesticide usage. Theater Ratio (0.30): Low. While there is some discussion about integrated pest management and alternative practices, the system is primarily focused on direct pesticide application.",
+    "perspectival_gap": "Farmers and the environment experience the system as a snare due to the need for pesticides and resulting environmental damage. Pesticide manufacturers benefit from the system and see it as a rope. Agricultural research institutions see the entangled rope, as they are part of both the problem and potential solutions. The analytical observer sees that there are significant negative externalities to pesticide use which the various stakeholders can only manage through coordination.",
+    "directionality_logic": "Farmers are victims because they are forced to purchase and apply pesticides. The environment is a victim because it is harmed by pesticide pollution. Pesticide manufacturers are beneficiaries because they profit from the sale of pesticides. Agricultural research institutions face a mixed incentive structure, as they contribute to both the problem and the solution.",
+    "mandatrophy_analysis": "The system is classified as a snare because the extraction and suppression are high, and the victims are largely trapped. While there are potential benefits from pesticide use, such as increased crop yields, these benefits are overshadowed by the negative externalities. The perspective of farmers, which is one of limited options, reflects the overall negative impact of pesticide dependence."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_water_dependency",
+      "seed_monopoly"
+    ]
+  },
+  "directionality_overrides": []
+}

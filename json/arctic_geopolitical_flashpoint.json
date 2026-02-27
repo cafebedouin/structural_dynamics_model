@@ -2,26 +2,32 @@
   "header": {
     "constraint_id": "arctic_geopolitical_flashpoint",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2025-07-17",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arctic"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.7,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
     "claimed_type": "tangled_rope",
     "human_readable": "The Melting Ice and the Scramble for Greenland",
     "topic_domain": "geopolitical/economic",
     "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
     "beneficiaries": [
-      "great_powers",
-      "mining_corporations"
+      "greenland_mineral_extractors",
+      "arctic_military_powers",
+      "northern_sea_route_operators"
     ],
     "victims": [
-      "greenlandic_indigenous_population",
-      "denmark_government",
-      "global_climate_stability"
-    ]
+      "indigenous_greenlandic_communities",
+      "arctic_indigenous_populations",
+      "climate_vulnerable_nations",
+      "global_maritime_commons"
+    ],
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
@@ -29,45 +35,63 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "regional",
-      "label": "The Greenlandic Indigenous Population",
-      "comment": "PERSPECTIVE 1: INDIGENOUS POPULATION (SNARE) — Trapped by geography and power asymmetry. The promise of mineral wealth acts as a lure, but the structural reality is the extraction of resources with severe environmental and cultural costs, and a loss of sovereignty to external powers. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.83."
+      "spatial_scope": "local",
+      "label": "Indigenous Greenlandic Communities",
+      "comment": "PERSPECTIVE 1: INDIGENOUS GREENLANDIC COMMUNITIES (SNARE) \u2014 Kalaallit and Inuit populations face resource extraction and geopolitical appropriation of ancestral territories without consent mechanisms. Trapped by colonial legacy structures and lack of exit options from extractive development. High suppression: mineral wealth requires external capital/technology, creating dependency on foreign investors and state actors. Maximum effective extraction \u2014 no coordination benefit experienced, full costs borne."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Climate Vulnerable Nations",
+      "comment": "PERSPECTIVE 2: CLIMATE VULNERABLE NATIONS (SNARE) \u2014 Small island states and low-lying regions bear catastrophic costs of Arctic melt (sea level rise, disrupted ocean circulation, ecosystem collapse) while having no meaningful participation in Arctic resource allocation decisions. Trapped by geography and development asymmetry. Suppression enforced through institutional exclusion from Arctic Council and UN convention mechanics. Pure extraction: no coordination benefit, existential bearing of costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Arctic Military Powers (US, Russia, China)",
+      "comment": "PERSPECTIVE 3: ARCTIC MILITARY POWERS (TANGLED ROPE) \u2014 Powerful state actors (US, Russia, China) experience genuine coordination function: NSR access, mineral supply security, and strategic positioning reduce supply chain vulnerability and enhance deterrence capabilities. BUT also extract asymmetrically: military contestation raises cost of passage for commercial operators, forced militarization of civilian infrastructure, and subordination of environmental governance to strategic competition. Active enforcement required: naval positioning, territorial claims, sanctions regimes. Suppression moderate (nuclear umbrella prevents open conflict) but high enough to constrain non-military actors' options. Mobile exit (could withdraw, but strategic cost makes exit effectively constrained). Perspectival gap: beneficiaries see coordination; victims see extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Greenland Mineral Extractors and Resource Companies",
+      "comment": "PERSPECTIVE 4: GREENLAND MINERAL EXTRACTORS (TANGLED ROPE) \u2014 Mining corporations and energy companies benefit from access to rare earth elements, uranium, and oil reserves now economically viable due to ice melt. Arbitrage exit available: can shift operations across jurisdictions or pause extraction if regulatory costs rise. Active enforcement required: licensing regimes, environmental permits, labor standards create overhead but also predictability. Suppression moderate: competitive pressure among extractors reduces monopoly rents, but geopolitical risk premium can be passed to global consumers. Mixed coordination-extraction hybrid: coordination function is access-to-resources-at-scale; extraction mechanism is capture of Greenlandic sovereignty and environmental externalities. Beneficiary position: companies experience net resource gain and strategic optionality."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Great Powers (US/China/Russia)",
-      "comment": "PERSPECTIVE 2: GREAT POWERS (ROPE) — Experience the situation as a pure coordination game ('The Great Game'). They have the capital and military power to set the rules and can shift investment elsewhere (arbitrage). The constraint is about managing competition and access among peers. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative extraction indicates a net subsidy."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Danish Government",
-      "comment": "PERSPECTIVE 3: DANISH GOVERNMENT (TANGLED ROPE) — As the nominal sovereign, Denmark is caught between managing Greenland's autonomy, pressure from great power allies/rivals, and its own economic interests. It cannot easily exit its treaty obligations or historical ties. It sees both the coordination function and the severe extractive pressure. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.72."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Mining Corporations",
-      "comment": "PERSPECTIVE 4: MINING CORPORATIONS (SCAFFOLD) — View their investment as a temporary project with a clear lifecycle (sunset clause: resource depletion). They are building the infrastructure for extraction, which requires coordination with states, but their commitment is finite. They can exit if the project becomes unprofitable. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.58. This χ is high for a scaffold, but the sunset logic is dominant for this agent."
+      "label": "Danish State and Greenlandic Administration",
+      "comment": "PERSPECTIVE 5: DANISH STATE / GREENLANDIC ADMINISTRATION (ROPE) \u2014 Coordinate access to mineral wealth, military basing, and strategic positioning through partnership frameworks and licensing. Denmark and Greenland both benefit from resource revenues and geopolitical relevance, though with asymmetric bargaining power (Denmark retains defense responsibility, Greenland retains nominal sovereignty). Arbitrage available: can shift partnerships, renegotiate licensing, or leverage bidders. Suppression relatively low: institutional relationships are formalized rather than coercive. Theater moderate: diplomatic ritual (Arctic Council statements, mining permits) has performative elements but also genuine policy content. Experienced as coordination mechanism for mutual strategic benefit \u2014 low effective extraction relative to beneficiary status."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Arctic Council and International Maritime Law",
+      "comment": "PERSPECTIVE 6: ARCTIC COUNCIL AND INTERNATIONAL MARITIME LAW (PITON) \u2014 Arctic governance institutions (Arctic Council, UNCLOS, LOSC) persist as coordination frameworks despite functional degradation. Original purpose: manage shared resources and environmental protection through consensus-based negotiation. Current reality: frameworks operate as theatrical venues while real power lies in military positioning and bilateral deals. Theater ratio high (0.62): Arctic Council statements and environmental assessments continue but lack enforcement mechanisms; UNCLOS provisions on extended continental shelves are contested; maritime law is subordinated to geopolitical competition. Institutional inertia: these frameworks maintain legitimacy but diminishing actual governance function. Classification as piton reflects degradation of coordination function, not high experienced extraction. Suppression increases over time as military contestation overrides institutional mechanisms."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The International Environmental Treaty System",
-      "comment": "PERSPECTIVE 5: ENVIRONMENTAL TREATY SYSTEM (PITON) — Institutions like the Paris Agreement or the Arctic Council lack enforcement power here. Their function is largely performative—hosting summits and issuing statements while the resource scramble accelerates. The high theater_ratio (0.75) reflects this gap between function and performance, qualifying it as a Piton."
+      "label": "Climate Action and Indigenous Rights Coalition",
+      "comment": "PERSPECTIVE 7: CLIMATE ACTION / INDIGENOUS RIGHTS COALITION (SCAFFOLD) \u2014 Environmental organizations, indigenous rights advocates, and climate-focused states see the Arctic scramble as a temporary institutional failure with a sunset. The coalition advocates for constraint mechanisms (carbon pricing, extraction moratoriums, indigenous veto rights, climate reorientation) that would make Arctic resource development uneconomical. Constrained exit: these actors have limited direct enforcement power but can raise costs through activism, litigation, and norm-shifting. Theater moderate: climate activism contains both genuine analysis and performative elements. Coordination function: coalition provides alternative institutional pathway (climate governance, indigenous rights frameworks) with explicit sunset: if carbon economy transitions, Arctic resource extraction loses viability. Suppression rising: state and corporate resistance to constraint mechanisms. But scaffold classification holds because sunset clause is structural (carbon transition is inevitable if political will consolidates), even if timeline is uncertain."
     },
     {
       "classification_type": "tangled_rope",
@@ -75,97 +99,135 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a genuine coordination function (managing new sea routes, deconflicting military activity) but is dominated by asymmetric extraction (mineral wealth flowing to external powers) and requires active enforcement (military presence, diplomatic coercion). This is the canonical Tangled Rope structure. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+      "label": "Analytical Observer (Structural Tension View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE, CIVILIZATIONAL) \u2014 From a structural perspective, the Arctic scramble combines genuine coordination function (solving supply chain risk, enabling technological development) with extractive asymmetry (colonialism redux, climate expropriation, militarization). The constraint cannot be classified as pure coordination (Rope) because the distribution of costs and benefits is radically asymmetric and enforced via power differentials. It cannot be classified as pure extraction (Snare) because there are real coordination gains for some actors. The tangled rope classification at the civilizational scale reveals that the system is self-undermining: extraction mechanisms (militarization, institutional capture, environmental externalities) destroy the coordination benefits they claim to enable. Arctic governance institutions are degrading (piton) as military competition overrides institutional consensus. Theater ratio reflects this degradation: diplomatic processes persist but lack substantive authority."
     }
   ],
   "omegas": [
     {
-      "id": "greenlandic_independence_viability",
-      "question": "Will the resource boom enable genuine Greenlandic independence or transform it into a dependent client state of the highest bidder?",
-      "resolution_mechanism": "Tracking capital flows, terms of mining contracts, and political concessions made by the Greenlandic government over the next decade.",
-      "impact": "If genuine independence: the 'victim' agent gains power, potentially reclassifying the constraint. If client state: confirms the Snare classification for the local population.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether resource wealth leads to true independence or client state status for Greenland."
-    },
-    {
-      "id": "great_power_conflict_threshold",
-      "question": "Will the scramble be managed via a stable, albeit tense, equilibrium, or will it cross a threshold into direct military conflict?",
-      "resolution_mechanism": "Monitoring military deployments, near-miss incidents, and escalatory rhetoric between NATO/US, Russia, and China in the GIUK gap and Northern Sea Route.",
-      "impact": "Stable equilibrium confirms the Rope/Tangled Rope views. Direct conflict would represent a catastrophic failure of the coordination function, collapsing the constraint.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The likelihood of the Arctic scramble escalating into direct military conflict."
-    },
-    {
-      "id": "nsr_economic_viability",
-      "question": "Is the Northern Sea Route a transformative global shipping lane, or is its economic importance overstated compared to the risks and seasonal limitations?",
-      "resolution_mechanism": "Analysis of shipping volumes, insurance costs, and infrastructure investment vs. projections over the 2025-2030 period.",
-      "impact": "If highly viable: the coordination function is real and significant, strengthening Rope/Tangled Rope classifications. If overstated: the 'coordination' aspect is mostly theater, and the constraint is more purely about mineral extraction (Snare).",
+      "id": "greenland_sovereignty_threshold",
+      "question": "At what point does Greenland's resource autonomy shift from constrained sovereignty to de facto independence or external control?",
+      "resolution_mechanism": "Tracking of Greenlandic legislative action, referendum results on independence, external military basing agreements, and revenue capture from mining operations. Threshold markers: >50% of government revenue from local resources, unilateral resource licensing without Danish veto, military bases without Danish command authority.",
+      "impact": "If threshold reached: constraint shifts from tangled_rope (Greenland/Denmark benefit) to snare (indigenous communities + small nations bear costs). If threshold not reached: Danish-Greenlandic partnership remains the primary institutional actor, constraining Greenlandic agency.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "The actual economic viability of the Northern Sea Route versus strategic hype."
+      "description": "Sovereignty threshold for Greenlandic resource autonomy"
+    },
+    {
+      "id": "arctic_military_escalation_cascade",
+      "question": "Does Arctic military competition trigger a security dilemma where each power's deterrence measures force others' escalation, creating an unstoppable arms race independent of resource scarcity?",
+      "resolution_mechanism": "Analysis of military deployment patterns, doctrinal statements, and escalation trigger points. Markers: nuclear-armed submarines, integrated air defense systems, joint military exercises, militarization of civilian ports and shipping. Cascade detection: when military presence becomes self-justifying (exist to deter each other, not to control resources).",
+      "impact": "If cascade confirmed: constraint becomes increasingly decoupled from resource competition and driven by security logic alone. Suppression increases toward 0.85+. Snare classification (victimhood) strengthens for indigenous and climate-vulnerable actors. If cascade averted: resource competition remains primary driver, tangled_rope persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Arctic military competition enters unstoppable security dilemma"
+    },
+    {
+      "id": "carbon_transition_irreversibility",
+      "question": "Will global carbon transition (energy, transportation, materials) proceed rapidly enough to make Arctic resource extraction economically obsolete before geopolitical competition becomes locked-in?",
+      "resolution_mechanism": "Tracking of renewable energy deployment curves, battery technology maturity, carbon pricing momentum, and corporate decarbonization commitments. Timeline: if carbon transition achieves 80%+ coverage by 2040-2045, Arctic mining loses economic justification. If delayed past 2050, geopolitical entrenchment may prevent reversal even if transition accelerates.",
+      "impact": "If transition is rapid: scaffold sunset clause activates. Arctic minerals become stranded assets. Constraint collapses to piton (institutional shells with no function). If transition is slow: Arctic becomes permanent geopolitical flashpoint. Extraction mechanisms lock in, suppression rises to 0.75+. Snare classification solidifies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Carbon transition timeline relative to Arctic geopolitical entrenchment"
+    },
+    {
+      "id": "indigenous_coalition_power",
+      "question": "Can indigenous Arctic communities + climate coalition + small states create credible veto power over Arctic development, or are power asymmetries insurmountable?",
+      "resolution_mechanism": "Monitoring of indigenous legal victories (land rights, consultation veto, extraction moratoriums), coalition coordination mechanisms (joint treaties, investment pressure, diplomacy), and state response. Threshold: if indigenous groups achieve >30% control over licensing decisions or >20 countries impose Arctic sanctions, coalition has structural power.",
+      "impact": "If coalition power emerges: constraint classification shifts toward more balanced perspectives. Scaffolding accelerates (sunset timelines shorten). Snare classification weakens for indigenous actors (increase in exit options). If power asymmetry persists: coalition remains organized but constrained, scaffold perspective remains aspirational rather than structural.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Coalition power for indigenous + climate + small-state Arctic vetoes"
+    },
+    {
+      "id": "false_mountain_detection",
+      "question": "Is the Arctic 'scramble' a natural geopolitical law (competition inevitably follows resource access), or a contingent institutional arrangement that naturalizes power asymmetries as inevitable?",
+      "resolution_mechanism": "Comparative historical analysis: do all cases of newly accessible resources produce geopolitical competition, or only when power asymmetries exist? Counterfactual: what institutions would change the outcome? Conceptual test: if all actors had equal power, would competition still be inevitable, or is it an artifact of asymmetry?",
+      "impact": "If false summit confirmed: the 'natural competition' framing is a rationalization for extraction mechanisms. The constraint is contingent on power asymmetry, not on physics. Reframing enables institutional redesign (equal-voice governance, indigenous veto, commons frameworks). If mountain is genuine: competition is inevitable regardless of institutions, and adaptation is the only option.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Arctic geopolitical competition is natural law or contingent power asymmetry"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.5
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2030,
+      "metric": "theater_ratio",
+      "time_point": 4,
       "value": 0.58
     },
     {
+      "metric": "theater_ratio",
+      "time_point": 11,
+      "value": 0.62
+    },
+    {
       "metric": "base_extractiveness",
-      "time_point": 2035,
-      "value": 0.65
+      "time_point": 0,
+      "value": 0.38
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.6
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.7
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2035,
-      "value": 0.75
+      "metric": "base_extractiveness",
+      "time_point": 11,
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 2024,
-    "end": 2035
+    "start": 0,
+    "end": 11
   },
   "commentary": {
-    "narrative_context": "The rapid melting of Arctic ice is unlocking both new shipping lanes (the Northern Sea Route) and vast reserves of critical minerals under Greenland. This has transformed the region from a remote periphery into a central chessboard for geopolitical competition. The constraint is the emerging framework of treaties, military postures, and economic deals governing this scramble. It forces all actors—great powers, regional states, indigenous populations, and corporations—into a high-stakes game where the rules are being written in real-time.",
+    "narrative_context": "Rapid Arctic ice melt has transformed Greenland and the Northern Sea Route from peripheral geopolitical zones into strategic flashpoints. Newly exposed mineral reserves (rare earths, uranium, lithium) and the economically viable Northern Sea Route have triggered a multilayered scramble involving Arctic military powers (US, Russia, China), colonial-legacy states (Denmark, Norway), extractive industries, indigenous communities, and climate-vulnerable nations. The constraint exhibits the full diagnostic pattern of tangled rope: genuine coordination benefits for some actors (supply chain security, military deterrence, technological development) coexist with severe asymmetric extraction (colonial resource appropriation, environmental expropriation, indigenous dispossession, geopolitical exclusion of climate-vulnerable nations). The theatrical dimension (Arctic Council statements, UNCLOS negotiations, environmental assessments) has risen over the interval as the gap between stated coordination objectives and actual power-driven outcomes has widened. Indigenous Greenlandic communities face colonialism redux: external capital and military power appropriate resources and sovereignty without meaningful consent. Climate-vulnerable nations bear catastrophic costs (sea level rise, ocean disruption) from Arctic changes they did not cause and have no voice in governing. The constraint cannot be resolved by technical means alone\u2014the coordination benefits are real, but the extraction mechanisms are structurally enforced through military, capital, and state power. The scaffold perspective (climate action + indigenous rights coalition) identifies a sunset pathway: carbon transition would make Arctic resource extraction uneconomical within 15-25 years if the energy transition accelerates. But geopolitical entrenchment may lock in extraction mechanisms even if economic justification disappears, converting tangled rope into permanent piton (institutional shells with no real function).",
     "key_agents": [
-      "Great Powers (US, China, Russia): Primary beneficiaries (institutional/arbitrage) - seek strategic control of sea lanes and access to minerals.",
-      "Greenlandic Indigenous Population: Primary victims (powerless/trapped) - face environmental risk and potential loss of sovereignty for promised economic gains.",
-      "Denmark Government: Constrained sovereign (institutional/constrained) - attempts to manage its relationship with Greenland, NATO allies, and economic pressures.",
-      "Mining Corporations: Organized beneficiaries (organized/mobile) - seek to profit from resource extraction under temporary licenses.",
-      "International Environmental System: Degraded institution (institutional/constrained) - provides a forum for discussion but lacks enforcement power, becoming largely performative."
+      "Indigenous Greenlandic Communities (Kalaallit/Inuit): Primary victims (powerless/trapped) \u2014 face resource extraction, sovereignty violation, and climate impacts without consent mechanisms.",
+      "Climate-Vulnerable Nations (Small island states, low-lying regions): Primary victims (powerless/trapped) \u2014 bear catastrophic sea level and ecosystem costs with zero participation in Arctic governance.",
+      "Arctic Military Powers (US, Russia, China): Primary beneficiaries (powerful/mobile) \u2014 gain supply chain security, strategic positioning, and deterrence advantages; enforce constraint through military presence.",
+      "Greenland Mineral Extractors and Energy Companies: Primary beneficiaries (organized/arbitrage) \u2014 access rare earth and uranium reserves; arbitrage optionality allows cost shifting to communities and environment.",
+      "Danish State and Greenlandic Administration: Institutional beneficiaries (institutional/arbitrage) \u2014 coordinate access and revenue capture; asymmetric bargaining power favors Denmark.",
+      "Arctic Council and International Maritime Law Institutions: Piton actor (institutional/arbitrage) \u2014 governance frameworks persist as theater while enforcement mechanisms degrade.",
+      "Climate Action and Indigenous Rights Coalition: Organized constraint agent (organized/constrained) \u2014 advocates for sunset mechanisms (carbon transition, extraction moratoriums, indigenous veto) with low direct power but rising norm-shifting capacity."
     ],
-    "logic_rationale": "Extractiveness (0.65) is high, representing the immense value of mineral wealth being claimed by external actors. Suppression (0.70) is high due to the military and economic power asymmetries that limit the choices of smaller actors like Greenland and Denmark. Theater Ratio (0.75) is high because the gap between the rhetoric of international cooperation, environmental protection, and indigenous rights, and the reality of a naked resource grab is vast. The constraint requires active enforcement through military presence and coercive diplomacy.",
-    "perspectival_gap": "The gap is extreme. For Great Powers, it's a coordination 'game' (Rope). For the indigenous population, it's a coercive trap (Snare). For Denmark, it's a complex hybrid of opportunity and threat (Tangled Rope). For environmental bodies, it's a failed, inertial process (Piton). This diversity of classification from a single set of base properties is a hallmark of a complex geopolitical constraint.",
-    "directionality_logic": "Beneficiaries (Great Powers, Corporations) have arbitrage or mobile exit options, leading to low or negative effective extraction (χ). They see the system as a tool for coordination. Victims (Greenlandic Population, Denmark) are trapped or constrained, leading to high derived directionality (d) and thus high effective extraction (χ). They experience the system as coercive and extractive. The analytical view synthesizes these functions, identifying the structure as a Tangled Rope.",
-    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that 'Rope' and 'Snare' are not mutually exclusive descriptions of reality, but valid perspectival slices of a more complex Tangled Rope structure. An analysis that only saw the Great Power coordination game would miss the extraction. An analysis that only saw the indigenous victimhood would miss the genuine coordination functions. The Deferential Realism framework correctly identifies the complete structure by integrating these perspectives."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts substantially from indigenous communities (sovereignty, resources, self-determination) and climate-vulnerable nations (catastrophic costs with no voice). But extraction is not as severe as pure snare (0.75+) because institutional beneficiaries (Denmark, Greenland, mining companies) do experience genuine coordination gains (supply chain access, revenue, strategic security). The asymmetry is structural but not total. Suppression (0.68): High. Multiple suppression mechanisms: military deterrence prevents open contestation; capital concentration limits indigenous participation in extractive industries; institutional exclusion (Arctic Council membership rules) bars climate-vulnerable nations; power asymmetry makes exit costly. However, suppression is not extreme (0.85+) because some institutional channels remain (international law, activist litigation, Nordic social-democratic constraints). Theater ratio (0.62): Moderate-high and rising. Arctic Council deliberations, UNCLOS extended continental shelf negotiations, and environmental impact assessments continue but increasingly lack enforcement authority. Real decisions are made through military positioning and bilateral deals. The theater ratio has risen over the interval (0.48 to 0.62) as military competition has displaced institutional consensus.",
+    "perspectival_gap": "Six distinct perspectives produce four different classifications, revealing the structure of the constraint. Beneficiaries (military powers, extractive companies, Denmark) experience Rope or low-\u03c7 Tangled Rope: genuine coordination with some overhead. Victims (indigenous communities, climate-vulnerable nations) experience Snare: pure extraction with no coordination benefit. Greenland experiences Tangled Rope from a more moderate position: both benefits and extraction, constrained optionality. Institutions experience degradation: Arctic Council sees itself as Rope; all other perspectives see it as Piton (theater without function). The climate/indigenous coalition sees a Scaffold: temporary constraint with a sunset mechanism if carbon transition succeeds. The civilizational analytical observer sees Tangled Rope at the system level, with a warning: the system is self-undermining because extraction mechanisms destroy coordination benefits, and the power asymmetries that enable extraction also prevent the institutional redesign needed to preserve coordination without extraction.",
+    "directionality_logic": "Directionality values are derived from structural position within the extraction flow. Indigenous communities: victims (high d \u2248 0.90) with trapped exit \u2192 maximum f(d) \u2248 1.38 \u2192 maximum experienced extraction. Climate-vulnerable nations: victims (high d \u2248 0.85) with trapped exit \u2192 high f(d) \u2248 1.15 \u2192 severe experienced extraction despite low nominal power. Arctic military powers: beneficiaries with mobile exit (d \u2248 0.35) \u2192 f(d) \u2248 0.35 \u2192 low experienced extraction because they can exit; also experience positive coordination gains. Extractive companies: beneficiaries with arbitrage exit (d \u2248 0.15) \u2192 f(d) \u2248 -0.01 \u2192 negative effective extraction (pure benefit). Greenland mineral sector: dual position (local beneficiary but victim of external control); constrained exit (d \u2248 0.55) \u2192 f(d) \u2248 0.75 \u2192 moderate extraction despite nominal beneficiary status, because external control limits genuine optionality. Danish state: institutional beneficiary with arbitrage (d \u2248 0.10) \u2192 f(d) \u2248 -0.10 \u2192 negative experienced extraction (pure coordination). Arctic Council: institutional observer (d \u2248 0.65) \u2192 f(d) \u2248 1.00 \u2192 moderate experienced extraction relative to governance authority, because gap between stated coordination and actual enforcement means the institution itself bears some extraction cost (reputational damage, relevance erosion).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint embodies the core mandatrophy tension \u2014 it claims to be coordination (Arctic Council, international law, resource development enabling technological progress) but is structurally organized as extraction (military control, capital gatekeeping, indigenous dispossession). The resolution follows from recognizing that coordination and extraction are not dichotomous categories but can coexist as a tangled rope: some actors genuinely benefit from the coordination function, while others bear the extraction costs. The mandatrophy dissolves when we ask: 'From which index perspective?' For military powers and extractive companies, the constraint is coordination with acceptable overhead. For indigenous communities and climate-vulnerable nations, it is pure extraction. For institutions, it is degrading coordination (piton). For the carbon-transition coalition, it is temporary coordination with a sunset. The system-level mandatrophy is that the extraction mechanisms (militarization, institutional capture, environmental externalization) are undermining the coordination benefits they claim to enable. If Arctic military competition escalates into an unstoppable security dilemma, the constraint becomes snare-like even for beneficiaries (deterrence logic becomes self-referential). If carbon transition accelerates, the constraint becomes piton-like for all actors (institutions persist without function, extraction logic collapses). The constraint is stable as tangled rope only if: (1) military deterrence remains bounded, (2) carbon transition is slow enough that Arctic resources remain economically valuable, and (3) institutional frameworks are credible enough to distribute some benefits downward. All three conditions are currently fragile."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.55
   },
   "network": {
     "affects_constraints": [
-      "critical_mineral_supply_chains",
-      "global_shipping_lanes",
-      "nato_cohesion"
+      "rare_earth_supply_chain",
+      "northern_sea_route_governance",
+      "indigenous_resource_rights",
+      "carbon_transition_lock_in",
+      "arctic_military_deterrence"
+    ],
+    "dual_formulation_note": "The Arctic geopolitical flashpoint decomposes into multiple structurally distinct constraints: (1) Resource Competition (who controls mineral extraction and at what cost to indigenous communities), (2) Strategic Chokepoint (who controls Northern Sea Route access and military positioning), (3) Indigenous Rights (whether indigenous communities have veto power or are subject to external decisions), (4) Climate Transition (whether Arctic development is made obsolete by carbon transition), and (5) Military Deterrence (whether security logic becomes decoupled from resource competition and self-sustaining). Each has distinct \u03b5 values and institutional dynamics. The current story treats them as a unified constraint because they are structurally coupled: resource competition creates military incentives, military competition shapes extraction rules, indigenous resistance shapes military costs, and carbon transition affects all. But if any decoupling occurs (e.g., military entrenchment without resource justification, or carbon transition without geopolitical consequence), separate constraint stories would be needed. Links in affects_constraints are to the specific decomposed constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "rare_earth_supply_chain",
+      "climate_change_geopolitics"
     ]
   }
 }

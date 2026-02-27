@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "rotation_seven_black_soil",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "r7bs"
+  },
+  "base_properties": {
+    "extractiveness": 0.92,
+    "suppression": 0.88,
+    "theater_ratio": 0.15,
+    "claimed_type": "snare",
+    "human_readable": "R7 Black Soil Toxicity",
+    "topic_domain": "biological/environmental",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "containment_protocols"
+    ],
+    "victims": [
+      "exposed_station_personnel",
+      "decontamination_teams",
+      "long_term_station_habitation"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Exposed Worker",
+      "comment": "PERSPECTIVE 1: EXPOSED WORKER (SNARE) \u2014 Station personnel assigned to or accidentally exposed to R7 sector face irreversible kidney failure with no exit option. Trapped by station structure (cannot leave environment), by biological causality (exposure causes inevitable harm), and by institutional geography (sector is part of required operational infrastructure). Maximum extraction \u2014 death or permanent disability with zero escape."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Decontamination Team",
+      "comment": "PERSPECTIVE 2: DECONTAMINATION TEAM (SNARE) \u2014 Tasked with managing the toxin, they face repeated exposure risk with constrained exit (cannot refuse assignment without severe career/disciplinary consequences). Suppression is extreme \u2014 the biological hazard itself enforces compliance. No meaningful alternatives exist for toxin management; the team bears extraction through occupational risk with minimal compensation or institutional recognition of danger."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Station Management Authority",
+      "comment": "PERSPECTIVE 3: STATION MANAGEMENT AUTHORITY (TANGLED ROPE) \u2014 Must maintain operational continuity while managing toxic sector. Experiences the constraint as both coordination (sealing the sector, establishing protocols, training personnel) and extraction (suppression of information, pressure to maintain habitation in adjacent areas despite toxin proximity, budget constraints forcing understaffed decontamination teams). Has exit options (abandon sector, transfer operations) but chooses mobile constraints instead. Active enforcement required to maintain the fiction that the station remains fully operational."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Scientific Research Value",
+      "comment": "PERSPECTIVE 4: SCIENTIFIC RESEARCH VALUE (ROPE) \u2014 The toxin itself is a subject of study. Research institutions and medical teams benefit from detailed knowledge of the toxin's mechanism, enabling broader medical advances. This perspective experiences the constraint as pure coordination \u2014 the problem (managing and understanding a lethal biological agent) creates genuine research value and collaborative urgency. No extraction here; this is legitimate knowledge asymmetry resolved through institutional cooperation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Limit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LIMIT VIEW (MOUNTAIN) \u2014 From a civilizational vantage, the toxin's lethality is a property of biochemistry: exposure causes irreversible kidney failure because the toxin binds to specific renal proteins and triggers cascading cellular failure. This mechanism is immutable \u2014 it is a natural law of that biological system's interaction with human physiology. No amount of social arrangement changes the toxin's chemical property. However, the structural data contradicts pure mountain classification: the constraint's institutional aspects (who gets exposed, suppression of information, inadequate decontamination protocols) are not biochemical laws but contingent management choices. The engine's false summit detector will flag this."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Official Risk Assessment Protocol",
+      "comment": "PERSPECTIVE 7: OFFICIAL RISK ASSESSMENT PROTOCOL (PITON) \u2014 The formal safety procedures and risk matrices nominally govern the sector, but they are largely performative. The theater_ratio reflects the gap between documented protocols (extensive documentation, regular safety reviews, official hazard ratings) and actual prevention efficacy (exposures still occur, decontamination teams remain understaffed, information suppression persists). The protocol persists through institutional inertia \u2014 it is the official mechanism through which the station 'addresses' the toxin \u2014 but its functional prevention capacity has atrophied. It is maintained because abandoning it would require explicit acknowledgment of danger."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "toxin_origin_and_containment",
+      "question": "Did the toxin originate from the station's experimental biology program, or is it a contaminant from external sources? What containment measures actually prevent secondary spread?",
+      "resolution_mechanism": "Full forensic analysis of toxin source; containment integrity testing; environmental sampling of adjacent sectors",
+      "impact": "If engineered: classification may shift toward Snare-with-institutional-culpability. If external: maintains Snare-as-accident framing. If containment is failing: extractiveness increases (0.92 \u2192 0.97+) due to hidden risk.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Origin and actual containment status of R7 toxin"
+    },
+    {
+      "id": "information_suppression_mechanism",
+      "question": "How systematically is toxin exposure information suppressed from station personnel and external oversight? Is suppression enforced through official channels or through institutional culture?",
+      "resolution_mechanism": "Analysis of incident reporting vs actual exposures; interviews with personnel under conditions preventing retaliation; review of information quarantine directives",
+      "impact": "If suppression is systematic and official: mandates explicit institutional extraction classification (Snare with enforced concealment). If cultural and informal: suggests Piton (degraded accountability rather than malicious extraction).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree and mechanism of toxin information suppression"
+    },
+    {
+      "id": "exit_option_realism",
+      "question": "Can station personnel genuinely exit the station, or is departure blocked by orbital mechanics, quarantine protocols, or institutional policy?",
+      "resolution_mechanism": "Review of transfer request approvals; analysis of quarantine protocols' actual application; cost/timeline analysis for emergency evacuation",
+      "impact": "If exit is truly impossible: trapped\u2192powerless classification confirmed, extractiveness remains at 0.92. If exit is theoretically possible but practically blocked: reveals institutional rather than natural constraint; may warrant Tangled Rope reclassification at personnel perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual feasibility of personnel exit from the station"
+    },
+    {
+      "id": "decontamination_protocol_effectiveness",
+      "question": "Do decontamination protocols actually reduce toxin exposure risk, or are they theatrical procedures that create a false sense of safety while exposure persists?",
+      "resolution_mechanism": "Comparison of exposure rates before and after protocol implementation; biomarker analysis of supposedly decontaminated personnel; protocol design review for biochemical plausibility",
+      "impact": "If protocols are effective: theater_ratio should decrease (0.15 \u2192 0.05-0.10), suggesting Snare without the piton element. If protocols are theatrical: theater_ratio remains high (0.70+), supporting Piton classification for the safety system itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual effectiveness vs theatrical appearance of decontamination protocols"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.89
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.92
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "R7 Black Soil Toxicity represents a pure biological hazard that has become embedded in institutional extraction mechanisms. The toxin itself \u2014 a chemical compound that causes irreversible kidney failure in exposed humans \u2014 is biochemically immutable. However, the constraint it creates within the space station is not a natural law but a snare: a high-extraction mechanism maintained through suppression of information, inadequate decontamination protocols, and institutional pressure to maintain station operations despite the hazard. The extractiveness (0.92) and suppression (0.88) are extreme because exposed personnel face biological death with no exit option. The low theater_ratio (0.15) distinguishes this from a Piton: the hazard is real and the risk is genuine, not performatively maintained. The constraint's extractiveness has increased over time (0.85\u21920.92) as institutional adaptation has normalized the toxin's presence, shifting focus from evacuation or remediation to 'safe' habitation protocols that personnel increasingly recognize as inadequate. This is a case where the Snare classification prevents false naturalizing of a contingent institutional choice as an inevitable consequence of space station operations.",
+    "key_agents": [
+      "Exposed Station Personnel: Primary victim (powerless/trapped) \u2014 face irreversible biological harm with no exit option; killed or permanently disabled by enforced proximity to toxin",
+      "Decontamination Teams: Secondary victim (moderate/constrained) \u2014 assigned to manage the toxin with high exposure risk and career pressure preventing refusal; constrained by occupational discipline",
+      "Station Management Authority: Primary beneficiary (institutional/mobile) \u2014 maintains operational fiction and continuous habitation by suppressing toxin information and constraining personnel alternatives; experiences coordination problem (how to seal the sector) alongside extraction benefit (avoiding costly evacuation or remediation)",
+      "Scientific Research Value: Secondary beneficiary (institutional/arbitrage) \u2014 research institutions benefit from study of the toxin's mechanism; can exit the constraint by transferring knowledge elsewhere",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees the biochemical mechanism as immutable but recognizes that the institutional extraction layer is contingent",
+      "Official Risk Assessment Protocol: Institutional actor (institutional/constrained) \u2014 safety procedures are largely performative, maintained through inertia rather than functional prevention"
+    ],
+    "logic_rationale": "Extractiveness (0.92): Extreme. This is near-maximum extraction because the targeted victims (exposed personnel) face biological death or permanent disability. The extraction mechanism is non-negotiable biochemistry: exposure\u2192kidney failure\u2192death. No gradated outcome exists; the constraint is binary and lethal. Suppression (0.88): Extreme. Multiple layers prevent escape: the toxin's physical location is sealed but adjacent to operational areas; personnel cannot leave the station without institutional approval; decontamination protocols are inadequate (theater_ratio 0.15 indicates low functional prevention); information about exposures is suppressed; career pressure prevents refusal. Theater ratio (0.15): Low. Unlike a Piton, the R7 hazard is real and the risk is genuine. The low theater reflects that decontamination procedures are straightforward (high functional content) even if inadequate. The theater_ratio is not zero because some procedural elements (daily safety briefings, official risk assessments) serve primarily to document institutional acknowledgment rather than prevent harm. The increasing theater over time (0.05\u21920.15) reflects institutional adaptation: as the toxin becomes 'normal,' more ritual accumulates around management, suggesting piton-level degradation of the safety system itself over longer timescales.",
+    "directionality_logic": "Each victim's directionality (d) is determined by their relationship to the extraction flow and exit options. Exposed personnel have d\u22480.95 (trapped, full target, powerless) \u2014 they bear maximum extraction with zero agency. Decontamination teams have d\u22480.85 (constrained, mostly target, moderate) \u2014 they experience high extraction but retain some professional agency. Station Management has d\u22480.10 (mobile, beneficiary, institutional) \u2014 the constraint generates extraction benefits they can arbitrage (maintain operations, avoid evacuation costs) while retaining exit options. The scientific research value has d\u22480.05 (arbitrage, beneficiary, institutional) \u2014 genuine coordination benefit with full exit capability. The engine derives these d values from the beneficiary/victim declarations and exit options, then applies the sigmoid f(d) to produce effective extractiveness chi at each perspective.",
+    "perspectival_gap": "The constraint exhibits a full perspectival gap between victim and beneficiary views. Exposed personnel see pure lethal extraction (Snare) with no coordination benefit \u2014 the toxin serves no purpose for them. Decontamination teams see mixed extraction and coordination (Tangled Rope) \u2014 they benefit from the research value and the problem-solving urgency, but at severe personal cost. Station Management sees coordination (how to seal the sector, how to maintain operations) alongside extraction benefit (avoiding expensive remediation). The analytical observer risks naturalizing the hazard as an immutable consequence of biochemistry (Mountain perspective) but the structural data reveals that the institutional choices \u2014 suppression of information, understaffing of decontamination, pressure to maintain adjacent habitation \u2014 are contingent human decisions, not laws of nature. The scientific research perspective sees pure coordination (understanding the toxin's mechanism). The piton perspective (official safety protocols) sees its own degradation: procedures exist but are increasingly theatrical, maintained through institutional inertia rather than functional prevention.",
+    "mandatrophy_analysis": "RESOLVED: The Snare classification is mandatory and unambiguous. This constraint cannot be misclassified as Rope (coordination) or Scaffold (temporary solution) because the biological mechanism is genuinely lethal and the extraction is genuinely maximum. The mandatrophy is resolved by showing that only two perspectives (Scientific Research as Rope, Station Management's coordination layer as Tangled Rope) produce non-Snare classifications, and both are secondary to the primary victim experience. The false summit (Mountain) is explicitly rejected by the structural data: the biochemistry is immutable, but the institutional extraction layer (suppression, inadequate protocols, pressure to remain) is contingent and human-caused. The piton element (degrading safety protocols over time) does not elevate the constraint to a pure Piton because the core hazard remains real and lethal, not merely theatrical. This is a pure Snare with institutional layering, not a degraded form of coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "R7 Black Soil Toxicity is a standalone constraint. Future decomposition may separate the biochemical immutability (Mountain) from the institutional extraction mechanisms (Snare), but currently the human-focused analysis treats them as unified."
+  },
+  "directionality_overrides": []
+}

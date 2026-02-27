@@ -1,0 +1,129 @@
+{
+  "header": {
+    "constraint_id": "monopoly_fp_house_rule",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Monopoly 'Free Parking' House Rule",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lucky_player"
+    ],
+    "victims": [
+      "unlucky_players"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Unlucky Player",
+      "comment": "The unlucky player who lands on a tax or chance/community chest that requires payment is forced to contribute to the free parking pot, with no chance of getting the money back unless they are very lucky. The cost is immediate."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Lucky Player",
+      "comment": "The lucky player who happens to land on free parking gets the whole pot. Their benefit is immediate and relies on others' misfortune."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Game Designers",
+      "comment": "The game designers intended for the bank to receive all the fees but find that players want to get those fees. It adds another element of the game to be excited about."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical observer",
+      "comment": "From an analytical perspective, this house rule acts as a snare, concentrating wealth (fines) and distributing it randomly to a single player.  The 'lottery' of free parking creates a distortion in the game's intended economic flows."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Rule Makers",
+      "comment": "From the perspective of the rule makers, the rule adds an element of excitement to the game."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_fairness",
+      "question": "Does the free parking house rule make the game more or less economically fair?",
+      "resolution_mechanism": "Analyze the long-term distribution of wealth with and without the house rule.  Simulate many games.",
+      "impact": "If it makes it less fair, it reinforces inequality. If it makes it more fair, it provides a slight redistribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of the rule on the economic fairness of the game."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint is the common house rule in the game Monopoly where all fines and taxes are placed in the center of the board and collected by the player who lands on the \"Free Parking\" space. It is a departure from the original rules of the game.",
+    "key_agents": [
+      "unlucky_players: primary victims (powerless/trapped) - those who pay the taxes.",
+      "lucky_player: primary beneficiary (powerful/arbitrage) - the one who lands on free parking and collects the funds.",
+      "game_designers: moderate perspective (moderate/constrained) - those who designed the game"
+    ],
+    "logic_rationale": "The extractiveness is moderate because the rule concentrates the penalties in the Free Parking space. This money is supposed to go to the bank. The suppression is high because people want to get the money when they land on it. The designers intended to have this money go to the bank, so this suppression goes against the intention of the design. The theater ratio is low since there is not much performance associated with the rule.",
+    "perspectival_gap": "The unlucky player sees a snare since they are penalized, and the lucky player sees a rope since they gain. The designer sees the impact on the game and is constrained by the will of the player.",
+    "directionality_logic": "The unlucky players are victims with no exit options and thus experience high extraction. The lucky player is a beneficiary with a clear arbitrage opportunity (collecting the pot). The game designers are moderate, with some influence over the game's rules but ultimately constrained by player preferences."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,166 @@
+{
+  "header": {
+    "constraint_id": "sadhu_integrity_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sadhu"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "The Integrity Requirement (Sadhu's Sugar)",
+    "topic_domain": "social/ethical",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "advisory_authority_figures"
+    ],
+    "victims": [
+      "advice_seekers",
+      "advisor_authenticity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Advice Seeker",
+      "comment": "PERSPECTIVE 1: ADVICE SEEKER (SNARE) \u2014 Cannot exit the requirement without losing access to guidance. Bears the cost of enforcing advisor hypocrisy: must accept counsel while knowing the advisor does not embody it. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Authority Figure / Advisor",
+      "comment": "PERSPECTIVE 2: AUTHORITY FIGURE (ROPE) \u2014 Experiences the constraint as coordination: maintaining the authority-seeker boundary through the integrity protocol enables the advisory relationship to function. The protocol signals competence and trustworthiness. d\u22480.08, f(d)\u2248-0.10, \u03c3=0.8 \u2192 \u03c7\u2248-0.04. Net beneficiary from the coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Tradition Holder",
+      "comment": "PERSPECTIVE 3: TRADITION HOLDER (PITON) \u2014 Maintains the protocol through inertia and theatrical appeal. The requirement has lost much of its original verification function (seekers cannot actually assess advisor hypocrisy). Instead, it persists as a performance of virtue and authority. theater_ratio=0.48 is borderline; cultural maintenance keeps the norm alive despite degraded function. d\u22480.50, f(d)\u22480.65, \u03c3=0.9 \u2192 \u03c7\u22480.29."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Skeptical Student",
+      "comment": "PERSPECTIVE 4: SKEPTICAL STUDENT (TANGLED ROPE) \u2014 Sees both coordination (the protocol does signal authenticity intent) and extraction (the advisor is not actually required to embody their counsel, only to claim it). The student benefits from access to wisdom while bearing the cost of verification asymmetry. d\u22480.68, f(d)\u22481.02, \u03c3=0.8 \u2192 \u03c7\u22480.48."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a universal ethical perspective, integrity as a prerequisite for authority might appear immutable: moral authority requires embodiment. However, the structural data (\u03b5=0.58, suppression=0.62, theater=0.48) contradicts this. The engine will compute a false summit, revealing that the protocol naturalizes a contingent institutional arrangement rather than expressing a law of ethics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hypocrisy_detectability",
+      "question": "Can advice seekers actually detect whether an advisor embodies their own counsel, or is the protocol a performance that seekers cannot verify?",
+      "resolution_mechanism": "Empirical comparison of advisor behavior claims vs actual practice; interviews with seekers about their verification methods",
+      "impact": "If detectability is high: snare classification holds. If low: the constraint becomes pure theater (escalates to piton). If zero: the protocol is entirely performative and extraction is complete.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether seekers can detect advisor hypocrisy"
+    },
+    {
+      "id": "authority_necessity",
+      "question": "Does good advice require the advisor to embody it, or can valuable counsel come from advisors who have not yet achieved their own teachings?",
+      "resolution_mechanism": "Comparative effectiveness: advice from embodied vs non-embodied sources; historical cases of transformative counsel from advisors in personal struggle",
+      "impact": "If embodiment is necessary: the constraint is protective (coordination function is real). If not: the protocol is arbitrary suppression masquerading as virtue.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether advice effectiveness depends on advisor embodiment"
+    },
+    {
+      "id": "institutional_capture_risk",
+      "question": "Does the integrity requirement, by making authority self-verifying, create incentives for advisors to claim embodiment they do not possess?",
+      "resolution_mechanism": "Case studies of institutional corruption; analysis of claims-verification gap in advisory contexts; historical evolution of the protocol",
+      "impact": "If capture risk is high: the protocol becomes a mechanism for extractive authority (snare intensifies). If low: coordination function is genuinely protected.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the integrity requirement enables false authority claims"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The integrity requirement mandates that an advisor embody their own counsel before delivering it to others. This constraint appears across spiritual traditions, mentorship frameworks, and ethical systems as a foundational principle: the sadhu (renunciate teacher) must have tasted the fruit they offer. However, the constraint creates a structural asymmetry: seekers cannot verify whether an advisor actually embodies their counsel, yet must accept guidance as if they did. The protocol functions as both coordination (it signals authenticity intent and creates accountability pressure) and extraction (it shields advisors from verification while concentrating their authority). The theater ratio has increased over time as the constraint's verification function degraded \u2014 modern seekers increasingly accept advice from advisors who explicitly disclaim embodiment (life coaches, therapists, strategists), yet the ideal of embodied authority persists as a cultural norm. The constraint exemplifies how ethical requirements can become instruments of institutional control when the cost of embodiment is asymmetrically distributed.",
+    "key_agents": [
+      "Advice Seeker: Primary victim (powerless/trapped) \u2014 cannot exit without losing access to guidance; bears the cost of verification asymmetry",
+      "Authority Figure/Advisor: Primary beneficiary (institutional/arbitrage) \u2014 benefits from the requirement's signaling function while remaining unverifiable",
+      "Tradition Holder: Institutional actor (powerful/constrained) \u2014 maintains the protocol through cultural inertia despite degraded verification function",
+      "Skeptical Student: Secondary victim (moderate/constrained) \u2014 sees the mixed coordination-extraction but remains constrained by status asymmetry",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing a contingent institutional arrangement as ethical law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The protocol creates significant asymmetry: advisors must claim embodiment but cannot be held accountable for hypocrisy (verification is structurally impossible for seekers), while seekers must accept guidance on the claim alone. The extraction is not maximal because advice quality itself provides some countervailing benefit. Suppression (0.62): Moderate-high. Seekers have limited alternatives: rejecting an advisor costs access to their wisdom; publicly questioning the requirement costs social standing. The suppression is not total because seekers can privately doubt while publicly accepting, and some communities allow advisors to disclaim embodiment. Theater ratio (0.48): Moderate. The protocol retains genuine coordination function (it does signal authenticity intent) but increasingly performative (the signal cannot be verified). The value reflects the constraint's middle position: not yet fully degraded to pure theater (piton) but no longer purely functional.",
+    "perspectival_gap": "The advice seeker sees a snare: they are trapped by the requirement and cannot verify its justification. The advisor sees a rope: the requirement coordinates their authority by giving seekers a ground for trust. The tradition holder sees a piton: the protocol is performative cultural maintenance. The skeptical student sees tangled rope: genuine coordination (the requirement does signal intent) mixed with extraction (the signal is unverifiable). The analytical observer risks seeing a mountain: integrity appears as an immutable ethical law. The perspectival gap reveals how the same requirement appears as constraint, coordination, and cultural inertia depending on one's structural position.",
+    "directionality_logic": "Advice seeker: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximum extraction. Advisor: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary through signaling advantage. Tradition holder: Powerful + constrained \u2192 d\u22480.50, f(d)\u22480.65. Moderate extraction through cultural authority. Skeptical student: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.02. Significant extraction through information asymmetry. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification risks false summit (naturalizing contingent institutional requirement as ethical law)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "authority_verification_gap",
+      "mentor_accountability_asymmetry"
+    ],
+    "dual_formulation_note": "The integrity requirement can be understood as two distinct constraints: (1) the ethical principle that authentic authority requires embodiment (mountain-like, from civilizational perspective) and (2) the institutional mechanism that uses unverifiable embodiment claims to concentrate advisory authority (snare, from seeker perspective). These are decomposed into separate stories to distinguish the philosophical claim from the structural extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

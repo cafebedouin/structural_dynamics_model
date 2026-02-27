@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "college_admissions_market",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cam"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The US Elite College Admissions Market",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elite_institutions",
+      "test_prep_industry",
+      "high_socioeconomic_applicants"
+    ],
+    "victims": [
+      "low_income_applicants",
+      "first_generation_students",
+      "epistemic_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Applicant",
+      "comment": "PERSPECTIVE 1: LOW-INCOME APPLICANT (SNARE) \u2014 Trapped by information asymmetry, SAT prep costs ($3K-$15K), application fees (70+ schools \u00d7 $90), and lack of institutional guidance. Cannot exit without foreclosing elite pathway. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The First-Generation Student",
+      "comment": "PERSPECTIVE 2: FIRST-GENERATION STUDENT (SNARE) \u2014 Bears costs of navigating opaque institutional norms (essay writing, demonstrated interest, extracurricular signal) without family models or social capital. No meaningful exit option except tier-down. d\u22480.90, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The High-Socioeconomic Applicant",
+      "comment": "PERSPECTIVE 3: HIGH-SOCIOECONOMIC APPLICANT (TANGLED ROPE) \u2014 Benefits from test prep access, legacy preference, athletic recruitment, and social capital signaling (unpaid internships, travel). Also constrained by intense competition and psychological pressure. Coordination function: selective admissions curate peer cohorts. d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.29."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Elite Institution",
+      "comment": "PERSPECTIVE 4: ELITE INSTITUTION (ROPE) \u2014 Experiences admissions as coordination: generates peer effects, alumni networks, and institutional prestige through selective curation. Extraction (\u03b5=0.58) benefits the institution through prestige capital and alumni giving. d\u22480.10, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Test Prep Industry",
+      "comment": "PERSPECTIVE 5: TEST PREP INDUSTRY (ROPE) \u2014 Organized market actor (Kaplan, Princeton Review, boutique tutors). Experiences admissions market as coordination problem needing profitable solution. Extraction (\u03b5=0.58) becomes revenue stream. d\u22480.08, f(d)\u2248-0.04, \u03c3=1.0 \u2192 \u03c7\u2248-0.02. Net beneficiary through service provision."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public K-12 System",
+      "comment": "PERSPECTIVE 6: PUBLIC K-12 SYSTEM (TANGLED ROPE) \u2014 Organized actor with mixed incentives. Benefits from college placement rates (reputation, funding) but bears costs of teaching to test, resource concentration in test-prep-rich schools, and inequality amplification. d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational/global perspective, elite college admissions exhibits genuine coordination function (peer effects, network formation) AND extractive mechanism (rent-seeking via signaling, status competition, inequality reproduction). Both functions are structural. d\u22480.68, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.70. The constraint's true classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "signal_vs_skill_decomposition",
+      "question": "How much of the admissions market's extractiveness comes from genuine peer-effect coordination (colleges matching students for intellectual complementarity) versus pure signaling extraction (credentials as zero-sum status games)?",
+      "resolution_mechanism": "Long-term outcome analysis: correlation between admitted cohort composition and graduate earnings/productivity; comparison of peer effects from 'random' groupings vs actual admissions selections; causal inference from natural experiments (policy changes, merit aid eligibility thresholds)",
+      "impact": "If peer effects are real: \u03b5 should be 0.30-0.40 (mostly coordination). If signaling dominates: \u03b5 should be 0.65-0.75 (mostly extraction). Current value (0.58) assumes 50-50 split.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of coordination function from extraction mechanism"
+    },
+    {
+      "id": "test_prep_capacity_effect",
+      "question": "Does the 30-year expansion of test prep availability and quality reduce or amplify suppression for low-income applicants?",
+      "resolution_mechanism": "Time-series analysis of SAT score gaps between high-income and low-income students; regression discontinuity at test prep price thresholds; comparison of gap reduction vs gap stability across cohorts with increasing test prep market penetration",
+      "impact": "If test prep accessibility improves outcomes: suppression should decline (toward 0.50). If test prep creates an arms race: suppression should remain high or increase (0.70+). Current assumption (0.68) reflects partial accessibility but persistent inequality.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effect of test prep market expansion on income-based suppression"
+    },
+    {
+      "id": "legacy_preference_counterfactual",
+      "question": "If legacy preferences and athletic recruitment were eliminated, how much would the admission process shift toward merit signaling vs coordination?",
+      "resolution_mechanism": "Analysis of institutions that eliminated legacy preferences (Amherst, Stanford, etc.); comparison of peer composition changes; measurement of whether admissions criteria shifted toward standardized metrics (pure signaling) or toward institutional mission signals (coordination)",
+      "impact": "If shift toward merit metrics: extractiveness increases (more pure signaling). If mission diversity maintained: extractiveness stable or decreases (signaling is moderated by coordination goals). Current value (0.58) assumes partial persistence of coordination despite preferences.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Counterfactual impact of eliminating legacy and athletic preferences"
+    },
+    {
+      "id": "international_student_arbitrage_scope",
+      "question": "Does the expansion of international admissions represent genuine peer-effect coordination (international diversity) or pure revenue extraction (higher tuition from wealthier international families)?",
+      "resolution_mechanism": "Institutional financial data: proportion of international students paying full sticker vs receiving aid; comparison of admitted international cohort quality metrics vs domestic cohort; analysis of whether international diversity is prioritized in admissions rubrics or is a side effect of revenue optimization",
+      "impact": "If coordination dominates: international admissions signal genuine diversification goals. If extraction dominates: \u03b5 increases (0.65+) for international students specifically, revealing segmented market extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether international student enrollment is coordination or extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The US elite college admissions market functions as a high-stakes, many-to-one matching mechanism with dual structural functions: genuine coordination (colleges curating peer effects through selective enrollment) and extractive rent-seeking (students and families competing for positional goods via test scores, credentials, and status signals). Over the past 40 years, the system has shifted toward higher extractiveness and theater as competition intensified, test prep professionalized, and college prestige became increasingly concentrated among a shrinking set of elite institutions. The constraint exhibits both coordination benefits (peer networks, intellectual diversity at selective institutions) and extraction costs (income-based suppression through test prep barriers, information asymmetry, psychological pressure, and systemic inequality reproduction). The market's many-to-one structure creates acute powerlessness for low-income applicants: they compete against vastly better-resourced cohorts with no meaningful exit option except tier-down to less prestigious (and lower-earning) institutions. The theater ratio (0.64) reflects that significant portions of the admissions process involve performative activities (essays demonstrating 'fit,' demonstrated interest through campus visits, extracurricular resume padding) that correlate weakly with academic or intellectual potential but strongly with family social capital and ability to signal status.",
+    "key_agents": [
+      "Low-income applicants: Primary victims (powerless/trapped) \u2014 bear costs of test prep access barriers, information asymmetry, application fees; no exit except tier-down",
+      "First-generation students: Primary victims (powerless/trapped) \u2014 navigate opaque institutional norms without family models; bear costs of cultural capital gaps",
+      "High-socioeconomic applicants: Mixed actor (moderate/constrained) \u2014 benefit from test prep access, legacy preference, social capital signaling; also constrained by intense peer competition and psychological pressure",
+      "Elite institutions: Primary beneficiary (institutional/arbitrage) \u2014 benefit from prestige capital, alumni network effects, and selectivity branding; coordination function is genuine but extraction mechanism is leveraged",
+      "Test prep industry: Organized beneficiary (organized/arbitrage) \u2014 profit from inequality by selling access to test prep resources; extraction revenue stream",
+      "Public K-12 system: Organized secondary actor (organized/constrained) \u2014 benefit from college placement rates (reputation funding); bear costs of test-teaching, resource concentration, inequality amplification",
+      "Analytical observer: Structural analyst (analytical/analytical) \u2014 sees both genuine coordination and genuine extraction; risks either naturalizing market inequality or underestimating peer-effect benefits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The system transfers significant resources and opportunity from low-income to high-income families through test prep costs ($3K-$15K), application fees, and implicit capital requirements. However, extractiveness is not as severe as pure predatory extraction (0.70+) because elite institutions do provide genuine peer-effect coordination benefits: admitted cohorts have measurable positive impacts on peer outcomes (earnings, network access, intellectual development). The 0.58 value reflects a 45-55 split between coordination and extraction. The value has increased from 0.35 (40 years ago) as test-prep professionalization, application inflation (7+ apps per student), and prestige concentration have amplified the extraction component. Suppression (0.68): High. Significant barriers include: SAT/ACT test prep costs and time requirements, application fee barriers (70+ applications \u00d7 $90), geographic/information asymmetry (rural students, immigrant families), lack of institutional guidance in under-resourced schools, essay-writing requirements that correlate with family writing culture, and publication bias (elite institutions dominate media coverage, signaling that other paths are inferior). These barriers are structural rather than accidental \u2014 they emerge from institutional design choices (test reliance, application fees, subjective essays) and market dynamics (prestige concentration). However, suppression is not total \u2014 some low-income students do access test prep through nonprofits, some institutions offer fee waivers, some states have strong public universities offering alternatives. Theater ratio (0.64): Moderate-high. The admissions process involves significant performative activity: essays assessing 'fit' rather than intellectual capability, demonstrated interest through campus visits (privilege those with geographic proximity), extracurricular activities as proxies for student quality (advantage wealthier families with resource access), legacy preferences (entirely symbolic), and recruitment athletics (combine performance signaling with institutional branding). The theater has increased as competition has intensified \u2014 institutions use admissions rituals to reinforce prestige positioning rather than to optimize peer matching.",
+    "perspectival_gap": "This constraint exhibits acute perspectival divergence driven by structural position. Low-income applicants experience pure extraction (Snare): they bear all costs with minimal coordination benefits. Elite institutions experience net coordination (Rope): they genuinely benefit from peer curation even as they extract rent. The test prep industry experiences profitable coordination (Rope): it solves a real problem (preparation for high-stakes test) while extracting fees. High-socioeconomic applicants experience mixed extraction (Tangled Rope): they benefit from coordination (peer networks) but also bear costs of competition intensity and psychological pressure. The analytical observer sees the true structure (Tangled Rope): both coordination and extraction are real, both are structural. The perspectival gap between low-income applicants (Snare) and elite institutions (Rope) reveals the core extraction mechanism: what appears to institutions as legitimate peer-curation appears to low-income students as a filter designed to exclude them.",
+    "directionality_logic": "Low-income applicants: Victims + trapped \u2192 d\u22480.92. f(d)\u22481.40. Maximum extraction \u2014 no meaningful exit except tier-down. First-generation students: Victims + trapped \u2192 d\u22480.90, f(d)\u22481.38. Near-maximum extraction \u2014 cultural capital asymmetry creates information trap. High-socioeconomic applicants: Beneficiaries + constrained \u2192 d\u22480.45, f(d)\u22480.50. Moderate extraction \u2014 benefit from coordination (peer networks) and from resource access, but constrained by intense peer competition. Elite institutions: Beneficiaries + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Net beneficiary \u2014 experience admissions as coordination problem with prestige solution. Test prep industry: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.04. Net beneficiary \u2014 extract profit from solving access inequality (creating moral hazard). Public K-12 system: Mixed + constrained \u2192 d\u22480.65, f(d)\u22480.95. Significant extraction \u2014 benefits from college placement metrics but bears costs of inequality amplification. Analytical observer: Structural + analytical \u2192 d\u22480.68, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.70. The constraint's true classification emerges from the analytical view.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED via structural decomposition. The constraint's high extractiveness (0.58) combined with genuine coordination function creates a true Tangled Rope classification, not a mislabeled Snare. The mandatrophy is resolved by: (1) Identifying the genuine coordination function: elite institutions do produce peer-effect benefits measured in graduate outcomes and network access. (2) Identifying the genuine extraction mechanism: test-prep costs, application fees, information asymmetry, and systemic inequality all operate as zero-sum competition for positional goods. (3) Recognizing these are NOT substitutes \u2014 both operate simultaneously. Low-income students are extracted from AND denied coordination benefits. High-income students extract via resource advantage AND receive coordination benefits. (4) The indexical classification captures this: Powerless agents see Snare (extraction without coordination), institutional agents see Rope (coordination with arbitrage), analytical observer sees Tangled Rope (both genuine). This is not ambiguity \u2014 it is accurate perspectival variation revealing the constraint's true structure. If the system were pure Snare, we would expect NO institutional agents to perceive coordination value; they do, which falsifies the Snare hypothesis. If the system were pure Rope, we would expect powerless agents to perceive some coordination benefit; they do not, which falsifies the Rope hypothesis. The Tangled Rope classification is mandatrophy-resolving because it explains the perspectival divergence via structural position, not via measurement ambiguity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "student_debt_trap",
+      "educational_inequality",
+      "prestige_concentration"
+    ],
+    "dual_formulation_note": "The college admissions market decomposes into several structurally distinct constraints. The admissions-as-matching mechanism (this story, \u03b5=0.58, Tangled Rope) is downstream of prestige-concentration dynamics (\u03b5>0.70, likely Snare at system level) and upstream of student-debt accumulation (\u03b5=0.65, Snare). These are linked: admissions market incentivizes expensive college choices; expensive choices require debt; debt trap emerges. The \u03b5 values differ because the observables are different: admissions extractiveness measures match asymmetry and suppression; debt-trap extractiveness measures financial predation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.08
+    }
+  ]
+}

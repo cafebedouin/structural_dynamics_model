@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: exoplanetary_habitability_arbitrage
+% CONSTRAINT STORY: exoplanet_habitability_arbitrage
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_exoplanetary_habitability_arbitrage, []).
+:- module(constraint_exoplanet_habitability_arbitrage, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -30,11 +31,16 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -46,29 +52,35 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: exoplanetary_habitability_arbitrage
+ *   constraint_id: exoplanet_habitability_arbitrage
  *   human_readable: Exoplanetary Habitability Arbitrage Strategy
- *   domain: technological/scientific
+ *   domain: astronomical/technological
  *
  * SUMMARY:
- *   This constraint represents the strategic pivot in the search for extraterrestrial
- *   life, moving from seeking "Earth twins" to identifying anomalies based on our
- *   solar system's observed statistical "weirdness". Researchers arbitrage the
- *   gap between the commonality of "super-Earth" systems and the rarity of
- *   systems like our own to prioritize high-cost observation targets. The
- *   constraint is the research strategy itself, not the underlying physical
- *   rarity of our solar system.
+ *   The exoplanetary habitability search has undergone a strategic
+ *   reorientation in the past decade: from seeking 'Earth twins' (planets in
+ *   habitable zones around Sun-like stars with rocky, temperate atmospheres)
+ *   to identifying and prioritizing anomalous systems that violate our solar
+ *   system's observed architecture. This constraint represents the
+ *   institutional mechanism that enforces the pivot, creating asymmetric
+ *   benefits and costs across the research community. On one side, elite
+ *   research groups and instrumentation developers benefit from the novelty
+ *   premium and flexible target allocation that anomaly-seeking enables. On
+ *   the other side, systematic Earth-analog search programs lose funding and
+ *   credibility, and the statistical foundation required to interpret
+ *   biosignatures reliably is undermined. The constraint exhibits a hybrid
+ *   coordination-extraction structure: genuine coordination problems are
+ *   solved (resource allocation toward high-impact targets), but the solution
+ *   mechanism creates extraction by privileging anomaly-focused coalitions
+ *   and suppressing Earth-analog comparison infrastructure.
  *
- * KEY AGENTS (by structural relationship):
- *   - Legacy Planet Hunters: Primary target (powerless/trapped) — Their research paradigm, focused on finding Earth 2.0, is de-funded and suppressed by the new strategy.
- *   - Modern Planetary Theorists: Primary beneficiary (analytical/arbitrage) — Benefit from the "rewrite" of planetary formation stories and the reallocation of resources to anomaly detection.
- *   - Analytical Observer: Sees the full structure of the resource reallocation and paradigm shift.
- *
- * DUAL FORMULATION NOTE:
- * This constraint is one of two stories decomposed from the colloquial concept of "Rare Earth".
- * Decomposed because ε differs across observables (ε-invariance principle).
- *   - solar_system_rarity (ε≈0.05, Mountain): The underlying physical fact of our system's statistical rarity. This is a natural law.
- *   - exoplanetary_habitability_arbitrage (ε=0.45, Rope/Snare): The human-devised research strategy that exploits this rarity. This story models the strategy, which is a coordination mechanism with extractive effects on prior research programs.
+ * KEY AGENTS:
+ *   - Anomaly-Focused Research Groups: Primary beneficiary (organized/constrained) — gain career advancement, publication advantage, and observation-time allocation from the pivot toward exotic targets
+ *   - Instrumentation Developers: Primary beneficiary (institutional/arbitrage) — drive investment in higher-resolution spectroscopy and novel detection modalities, justified by anomaly-seeking targets
+ *   - Earth-Analog Search Programs: Primary victim (moderate/constrained) — face resource reallocation, reduced publication prestige, and institutional devaluation as anomaly-seeking dominates
+ *   - Statistical Epistemic Commons: Secondary victim (powerless/trapped) — the shift undermines foundational baselines needed to interpret biosignatures; unable to exit or organize
+ *   - Open-Data Methodological Communities: Secondary actor (analytical/constrained) — building alternative infrastructure (public exoplanet archives, automated anomaly detection, citizen science) that bypasses elite-group definitions
+ *   - Space Agencies and Major Telescopes: Institutional actor (institutional/arbitrage) — allocate observation time and funding based on anomaly prioritization, benefiting from the coordination problem solved by the constraint
  */
 
 /* ==========================================================================
@@ -76,99 +88,86 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: High-cost missions like the Habitable Worlds Observatory extract
-% resources (funding, telescope time) from general astronomy to fund specialized
-% searches based on the "weirdness" arbitrage.
-domain_priors:base_extractiveness(exoplanetary_habitability_arbitrage, 0.45).
-
-% Rationale: The new paradigm, focusing on our system's rarity, actively
-% suppresses the prior search for "typical" Earth twins by redirecting funding
-% and observation priority.
-domain_priors:suppression_score(exoplanetary_habitability_arbitrage, 0.55).
-
-% Rationale: The strategy is a functional coordination mechanism for research,
-% with very little performative or theatrical action.
-domain_priors:theater_ratio(exoplanetary_habitability_arbitrage, 0.08).
+domain_priors:base_extractiveness(exoplanet_habitability_arbitrage, 0.38).
+domain_priors:suppression_score(exoplanet_habitability_arbitrage, 0.42).
+domain_priors:theater_ratio(exoplanet_habitability_arbitrage, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(exoplanetary_habitability_arbitrage, extractiveness, 0.45).
-narrative_ontology:constraint_metric(exoplanetary_habitability_arbitrage, suppression_requirement, 0.55).
-narrative_ontology:constraint_metric(exoplanetary_habitability_arbitrage, theater_ratio, 0.08).
+narrative_ontology:constraint_metric(exoplanet_habitability_arbitrage, extractiveness, 0.38).
+narrative_ontology:constraint_metric(exoplanet_habitability_arbitrage, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(exoplanet_habitability_arbitrage, theater_ratio, 0.55).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(exoplanetary_habitability_arbitrage, tangled_rope).
-narrative_ontology:human_readable(exoplanetary_habitability_arbitrage, "Exoplanetary Habitability Arbitrage Strategy").
-narrative_ontology:topic_domain(exoplanetary_habitability_arbitrage, "technological/scientific").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(exoplanet_habitability_arbitrage, tangled_rope).
+narrative_ontology:human_readable(exoplanet_habitability_arbitrage, "Exoplanetary Habitability Arbitrage Strategy").
+narrative_ontology:topic_domain(exoplanet_habitability_arbitrage, "astronomical/technological").
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(exoplanetary_habitability_arbitrage, modern_planetary_theorists).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(exoplanetary_habitability_arbitrage, legacy_planet_hunters).
+domain_priors:requires_active_enforcement(exoplanet_habitability_arbitrage).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(exoplanet_habitability_arbitrage, anomaly_focused_research_groups).
+narrative_ontology:constraint_beneficiary(exoplanet_habitability_arbitrage, instrumentation_developers).
+narrative_ontology:constraint_victim(exoplanet_habitability_arbitrage, earth_analog_search_programs).
+narrative_ontology:constraint_victim(exoplanet_habitability_arbitrage, statistical_clarity_of_biosignature_interpretation).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE LEGACY PLANET HUNTER (SNARE)
-% Agent whose research paradigm is being de-funded and suppressed.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, tangled_rope,
+% PERSPECTIVE 1: STATISTICAL CLARITY OF BIOSIGNATURE INTERPRETATION (SNARE) — The shift toward anomaly-seeking undermines the foundational statistical baseline required to interpret biosignatures reliably. Without a clear Earth-analog comparison framework, anomalies become unfalsifiable. The epistemic commons cannot exit this framework and bears the full cost of reduced interpretability.
+constraint_indexing:constraint_classification(exoplanet_habitability_arbitrage, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(biographical),
             exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: EARTH-ANALOG SEARCH PROGRAMS (SNARE) — Funded initiatives focused on identifying true Earth twins (similar orbital period, stellar type, atmospheric indicators) face resource reallocation and credibility erosion as funders and journals pivot toward 'exotic anomaly' narratives. Programs have some institutional momentum but constrained exit — abandoning Earth-analog searches yields no publishable results and risks appearing 'conventional'.
+constraint_indexing:constraint_classification(exoplanet_habitability_arbitrage, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE MODERN PLANETARY THEORIST (ROPE)
-% Agent who benefits from the new paradigm and resource allocation.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, scaffold,
-    context(agent_power(institutional),
+% PERSPECTIVE 3: ANOMALY-FOCUSED RESEARCH GROUPS (TANGLED ROPE) — Organized coalitions benefit from the shift (career advancement, novelty premium, accessible discovery claim) but also depend on maintaining enough Earth-analog infrastructure to define what counts as 'anomalous'. They enforce this framework by controlling which targets get observation time and funding, creating a hybrid coordination-extraction structure.
+constraint_indexing:constraint_classification(exoplanet_habitability_arbitrage, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: INSTRUMENTATION DEVELOPERS AND SPACE AGENCIES (ROPE) — Perceive the pivot as genuine coordination: anomaly-focused targets drive investment in higher-resolution spectroscopy, better coronagraphs, and novel detection modalities. The constraint solves a real resource-allocation problem (which stars to observe) while enabling new technological capability development.
+constraint_indexing:constraint_classification(exoplanet_habitability_arbitrage, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ROPE)
-% Default analytical context. Sees the strategy as a functional coordination
-% mechanism, albeit one with extractive consequences for some parties.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, tangled_rope,
+% PERSPECTIVE 5: OPEN-DATA METHODOLOGICAL COALITION (SCAFFOLD) — Open-access exoplanet databases (NASA Exoplanet Archive, GAIA archival data) and publicly archived observation records create an alternative verification pathway that bypasses the career-incentive arbitrage. Automated anomaly detection tools and citizen-science projects enable independent researchers to challenge elite-group definitions of 'anomaly' and 'habitability'. This is temporary because statistical literacy and computational tools will eventually commoditize anomaly ranking — sunset estimated at 15-25 years as ML-driven habitability scoring becomes standard.
+constraint_indexing:constraint_classification(exoplanet_habitability_arbitrage, scaffold,
+    context(agent_power(analytical),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) — From a civilizational perspective, the constraint appears as an immutable aspect of discovery science: all search processes exploit anomalies relative to some baseline expectation, and that baseline is always contingent on prior observations. The shift from Earth-analog to anomaly-seeking is simply the discovery of our solar system's statistical typicality — a claim about the world, not about human institutions. However, the structural data contradicts this mountain classification: the extraction is institutional (funding reallocation, credibility hierarchies, observation-time gatekeeping), not natural law.
+constraint_indexing:constraint_classification(exoplanet_habitability_arbitrage, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(exoplanetary_habitability_arbitrage_tests).
+:- begin_tests(exoplanet_habitability_arbitrage_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, snare,
-        context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(national))),
-    constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, rope,
-        context(agent_power(institutional), time_horizon(generational), exit_options(arbitrage), spatial_scope(global))),
-    constraint_indexing:constraint_classification(exoplanetary_habitability_arbitrage, rope,
-        context(agent_power(analytical), time_horizon(civilizational), exit_options(analytical), spatial_scope(global))).
+    constraint_indexing:constraint_classification(exoplanet_habitability_arbitrage, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(exoplanet_habitability_arbitrage, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    % The base extractiveness should be in the Rope/Tangled Rope range, not Mountain/Snare extremes.
-    narrative_ontology:constraint_metric(exoplanetary_habitability_arbitrage, extractiveness, E),
-    E > 0.30, E < 0.60.
-
-:- end_tests(exoplanetary_habitability_arbitrage_tests).
+:- end_tests(exoplanet_habitability_arbitrage_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -176,98 +175,99 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The original file conflated the physical reality of solar system rarity (a
- *   Mountain) with the human research strategy built upon it (a Rope/Snare).
- *   This created a metric conflict: the ε=0.45 of the strategy was inconsistent
- *   with the Mountain classification. This version resolves the conflict by
- *   modeling only the strategy. The `emerges_naturally` flag and the Mountain
- *   perspective were removed, as the strategy is a human construct. The base
- *   extractiveness of 0.45 reflects the significant reallocation of funding and
- *   resources toward anomaly detection, away from prior paradigms. The
- *   suppression score of 0.55 reflects how this new paradigm actively makes it
- *   harder to pursue the older "Earth twin" search model.
+ *   Extractiveness (0.38): Moderate. The pivot captures real career and funding benefits for anomaly-focused coalitions during the observation-allocation window, but the extraction is not as severe as a pure snare (0.66+) because genuine scientific questions (target prioritization, optimal spectral allocation) are being solved. The initial value of 0.18 reflects that the pivot was justified by empirical findings about solar system atypicality; the increase to 0.38 reflects the institutional entrenchment of anomaly-seeking despite ambiguous evidence. Suppression (0.42): Moderate. Barriers include publication bias toward anomalous claims, citation networks favoring elite groups, and control of observation-time allocation by major institutions. However, suppression is incomplete because open-data archives and citizen-science tools are reducing gatekeeping power. Theater ratio (0.55): Moderate-high. Significant performative content exists in anomaly ranking — novelty narratives, discovery-framing in abstracts, and media engagement with 'exotic' systems. But the underlying science (high-resolution spectroscopy, multi-wavelength characterization) has genuine function. The theater has increased over the interval as the pivot has become institutionalized and career incentives have concentrated on anomaly narratives.
  *
  * PERSPECTIVAL GAP:
- *   The gap is between the beneficiaries and the victims of a scientific
- *   paradigm shift. For modern theorists, the arbitrage strategy is a Rope—a
- *   powerful coordination tool to efficiently allocate resources. For legacy
- *   planet hunters, whose methods and assumptions are now de-prioritized, the
- *   same strategy is a Snare that traps them in a research cul-de-sac with
- *   dwindling resources.
+ *   This constraint demonstrates substantial perspectival disagreement. Anomaly-focused groups and instrumentalists see coordination (Rope or Tangled Rope with coordination benefits) — the pivot solves a real resource-allocation problem. Earth-analog programs see extraction (Snare) — they are systematically defunded and delegitimized. The statistical commons sees pure extraction (Snare) — baselines for biosignature interpretation are being erased. The open-data coalition sees a temporary problem being solved (Scaffold) — public archives and automated tools will eventually commoditize anomaly rankings and reduce elite-group authority. The civilizational analytical observer risks naturalizing an institutional arrangement as a law of science (Mountain) — but the structural data reveals this as a false summit. The pivot is not justified by overwhelming empirical evidence that solar systems are typically anomalous; rather, the discovery of our own system's statistical typicality is being weaponized to privilege exotic targets and concentrate observation time in elite hands.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `modern_planetary_theorists` who gain funding, prestige, and a new theoretical framework. Their arbitrage exit option gives them a low directionality `d`.
- *   - Victims: `legacy_planet_hunters` who lose funding and whose paradigm is suppressed. Their trapped status gives them a high directionality `d`.
- *   This structural relationship drives the Rope/Snare classification gap.
+ *   Each perspective derives directionality from structural position: beneficiaries with arbitrage options (instrumentalists, space agencies) experience low d → negative or low χ; victims with trapped or constrained exit (Earth-analog programs, statistical commons) experience high d → high χ; anomaly-focused organized groups with constrained exit but extraction benefits experience moderate d reflecting hybrid coordination-extraction. The constraint's directionality pattern shows asymmetric institutional power: elite groups enforce the pivot through observation-time gatekeeping and editorial leverage, while distributed communities (open-data projects, replication networks) have emerging countervailing power via public archives. Directionality overrides are not needed because the structural derivation (beneficiary + arbitrage → low d; victim + trapped → high d; organized + enforcement → moderate d) captures the institutional dynamics accurately.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification correctly identifies the dual nature of the constraint.
- *   It is not pure extraction (a Snare from all views) because it serves a
- *   genuine coordination function: prioritizing astronomical search targets.
- *   It is not pure coordination (a Rope from all views) because this
- *   prioritization has clear, asymmetric extractive effects on a specific group
- *   of researchers. The framework avoids mislabeling this resource conflict as
- *   either pure science or pure politics.
+ *   RESOLUTION: This constraint resolves the mandatrophy by distinguishing the empirical claim (solar system typicality) from the institutional mechanism (anomaly-seeking pivot). The empirical claim may be sound: if our solar system is indeed in the 5th percentile of typicality, then anomaly-seeking is a justified discovery strategy. But the institutional mechanism (observation-time gatekeeping, publication bias, career-incentive concentration) creates extraction that is orthogonal to the scientific validity of the empirical claim. The constraint is Tangled Rope because both claims are true: (1) anomaly-seeking solves a real coordination problem (target prioritization under resource constraints), and (2) the pivot creates asymmetric extraction (benefiting elite groups, harming distributed research programs). The mandatrophy is resolved by showing that coordination and extraction are not mutually exclusive — institutions can solve real problems while creating extraction. The false summit (Mountain perspective) fails because the pivot is contingent on institutional arrangements (funding allocation, journal gatekeeping, observation-time control), not on natural law.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    exoplanetary_habitability_arbitrage_omega_1,
-    "Is the focus on 'weird' systems a functional necessity for finding life or a strategic choice to sustain high-tech funding?",
-    "Audit of discovery rates for habitable worlds in 'weird' vs 'typical' star systems.",
-    "If necessity: Rope (functional coordination). If strategic choice: Tangled Rope (coordination + asymmetric extraction).",
+    solar_system_typicality_threshold,
+    'How statistically typical is our solar system''s architecture (terrestrial planets in inner region, ice giants in outer region, habitable ecosphere on third planet) relative to the exoplanet population?',
+    'Population synthesis models with observational bias correction; comparison of our system against synthetic populations constrained by detection limits; Bayesian inference of true exoplanet distributions',
+    'If highly atypical (1st-5th percentile): anomaly-seeking is justified and prioritizes discovery efficiency. If typical (40th-60th percentile): Earth-analog searches are scientifically defensible, and the pivot is motivated by career incentives rather than empirical findings.',
     confidence_without_resolution(medium)
 ).
 
+narrative_ontology:omega_variable(solar_system_typicality_threshold, empirical, 'Statistical typicality of solar system architecture').
+
 omega_variable(
-    exoplanetary_habitability_arbitrage_omega_2,
-    "Is the solar system's weirdness a 1-in-100 fluke or a 1-in-a-million miracle?",
-    "Completion of large-scale, long-term surveys of G-type stars for Earth-mass planets.",
-    "Affects the underlying Mountain constraint (solar_system_rarity), which in turn affects the urgency and parameters of this strategy.",
+    anomaly_biosignature_coupling,
+    'Are biosignatures more likely to be found on planets with anomalous orbital/atmospheric properties, or is anomaly-seeking orthogonal to habitability probability?',
+    'Theoretical models of biosignature generation under diverse atmospheric chemistries; comparison of biosignature detectability across Earth-analog vs exotic-architecture scenarios; meta-analysis of exoplanet discovery papers for implicit priors',
+    'If coupled: anomaly-seeking is a legitimate search strategy. If orthogonal: the pivot is a status-seeking distraction from evidence-driven target prioritization.',
     confidence_without_resolution(low)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(exoplanetary_habitability_arbitrage_omega_1, conceptual, "Is the research strategy driven by necessity or by funding incentives?").
-narrative_ontology:omega_variable(exoplanetary_habitability_arbitrage_omega_2, empirical, "What is the true statistical frequency of solar systems like ours?").
+narrative_ontology:omega_variable(anomaly_biosignature_coupling, empirical, 'Relationship between orbital anomalies and biosignature detectability').
+
+omega_variable(
+    definition_capture_authority,
+    'Who has institutional authority to define what counts as ''anomalous'' vs ''typical'' for habitability assessment, and does that authority structure create asymmetric extraction?',
+    'Institutional analysis of funding allocation patterns; citation analysis of anomaly definitions in major papers; survey of early-career researcher perception of definition authority; tracking of observation-time allocation by target type',
+    'If authority is distributed and transparent: constraint is pure coordination (Rope). If concentrated in elite groups with opaque criteria: constraint is mixed coordination-extraction (Tangled Rope) or pure extraction (Snare).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(definition_capture_authority, conceptual, 'Institutional authority over anomaly definitions').
+
+omega_variable(
+    statistical_baseline_recovery_feasibility,
+    'Can the Earth-analog baseline be recovered from archived observation data and synthetic population models, or has the pivot to anomaly-seeking destroyed the statistical infrastructure needed for future hypothesis testing?',
+    'Reconstruction of historical Earth-analog search datasets; comparison with original published criteria; simulation of recovery feasibility under current observation strategy; assessment of data loss vs data preservation across archives',
+    'If recoverable: institutional harm is reversible, and the constraint is a temporary misallocation (Scaffold). If destroyed: the constraint has inflicted permanent epistemic damage (Snare).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(statistical_baseline_recovery_feasibility, empirical, 'Feasibility of recovering Earth-analog baseline from archived data').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(exoplanetary_habitability_arbitrage, 0, 10).
+narrative_ontology:interval(exoplanet_habitability_arbitrage, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is < 0.46, so temporal measurements are not required.
+% Theater ratio over time
+narrative_ontology:measurement(exohab_tr_t0, exoplanet_habitability_arbitrage, theater_ratio, 0, 0.3).
+narrative_ontology:measurement(exohab_tr_t5, exoplanet_habitability_arbitrage, theater_ratio, 5, 0.42).
+narrative_ontology:measurement(exohab_tr_t10, exoplanet_habitability_arbitrage, theater_ratio, 10, 0.55).
+
+% Extraction over time
+narrative_ontology:measurement(exohab_be_t0, exoplanet_habitability_arbitrage, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(exohab_be_t5, exoplanet_habitability_arbitrage, base_extractiveness, 5, 0.28).
+narrative_ontology:measurement(exohab_be_t10, exoplanet_habitability_arbitrage, base_extractiveness, 10, 0.38).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The strategy is a mechanism for allocating scarce research resources.
-narrative_ontology:coordination_type(exoplanetary_habitability_arbitrage, resource_allocation).
+narrative_ontology:coordination_type(exoplanet_habitability_arbitrage, resource_allocation).
+narrative_ontology:affects_constraint(exoplanet_habitability_arbitrage, biosignature_interpretation_reliability).
+narrative_ontology:affects_constraint(exoplanet_habitability_arbitrage, exoplanet_sample_selection_bias).
+narrative_ontology:affects_constraint(exoplanet_habitability_arbitrage, earth_similarity_index_governance).
 
-% Network relationships (structural influence edges)
-% The underlying physical reality (a Mountain) enables this strategy.
-narrative_ontology:affects_constraint(solar_system_rarity, exoplanetary_habitability_arbitrage).
+% DUAL FORMULATION NOTE:
+% This constraint is downstream of the empirical claim about solar system typicality (omega variable: solar_system_typicality_threshold) and upstream of biosignature interpretation reliability. The empirical status of solar system atypicality determines whether the pivot is scientifically justified; the institutional entrenchment of the pivot determines whether extraction occurs. These are structurally distinct constraints with different ε values and should be modeled separately if the empirical claim is disputed.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations and exit options accurately models the dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

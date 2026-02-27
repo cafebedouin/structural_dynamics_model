@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "proof_of_work_consensus",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pow"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hash-Based Proof-of-Work Consensus",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mining_operators",
+      "early_adopters",
+      "hardware_manufacturers"
+    ],
+    "victims": [
+      "non_mining_participants",
+      "energy_ecosystem",
+      "network_decentralization_claim"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Non-Mining Network Participant",
+      "comment": "PERSPECTIVE 1: NON-MINING PARTICIPANT (SNARE) \u2014 Users holding cryptocurrency cannot exit the consensus mechanism without forfeiting their holdings. They bear the full cost of network security (via inflation/transaction fees) without agency in rule changes. Mining centralization means a tiny cohort of industrial operators controls transaction validation. No alternatives for consensus participation; maximum suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Individual Miner",
+      "comment": "PERSPECTIVE 2: INDIVIDUAL MINER (TANGLED ROPE) \u2014 Benefits from the system through block rewards and transaction fees, creating genuine coordination incentive (everyone secures the network via mining). But faces extraction through hardware obsolescence, electricity cost escalation, and solo-mining infeasibility driving consolidation. Constrained exit \u2014 can cease mining but forgoes income; cannot escape rising difficulty curves. Both coordination function (securing consensus) and asymmetric extraction (difficulty spiral, consolidation pressure) present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mining Pool Operator",
+      "comment": "PERSPECTIVE 3: MINING POOL OPERATOR (ROPE) \u2014 Coordinates individual miners into collective hash power; solves the variance problem and captures transaction fees. Arbitrage exit: can migrate to more profitable coins or shift to other consensus mechanisms. Experiences the constraint as pure coordination \u2014 the mining pool is a solution to collective action problems created by the base PoW mechanism. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The ASIC Manufacturer",
+      "comment": "PERSPECTIVE 4: ASIC MANUFACTURER (ROPE) \u2014 Designs hardware optimized for proof-of-work. Captures value through equipment sales and obsolescence cycles. Arbitrage exit: design for other coins or consensus algorithms. Experiences PoW as pure coordination \u2014 it creates reliable demand for specialized hardware. Net beneficiary with full flexibility."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Energy Ecosystem",
+      "comment": "PERSPECTIVE 5: ENERGY ECOSYSTEM (SNARE) \u2014 Bears the externalized cost of proof-of-work security: electricity consumption, thermal waste, grid strain, stranded electricity infrastructure. Has constrained exit \u2014 cannot refuse to provide power to mining operations in competitive markets. No seat at the consensus table despite bearing sustainability costs. Suppression is near-total: energy providers cannot opt out of the transaction cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Decentralization Narrative",
+      "comment": "PERSPECTIVE 6: DECENTRALIZATION NARRATIVE (PITON) \u2014 The original claim was that PoW replaces trusted intermediaries with algorithmic consensus, enabling peer-to-peer value transfer without centralized gatekeepers. This narrative persists rhetorically despite growing empirical falsification: hash power concentrates in industrial mining pools (Foundry USA, AntPool, Binance Pool control ~50% of Bitcoin hash rate), geographic distribution follows electricity costs (Iceland, El Salvador, China historically, then Texas), and network governance is captured by a small group of core developers and major mining operations. The 'decentralization' function is largely performative; the mechanism enables that performance but requires ongoing theater (peer-to-peer nodes, distributed ledger narratives) to maintain legitimacy despite observable concentration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational frame, PoW consensus exhibits genuine coordination function (solves Byzantine consensus without trusted third parties) AND asymmetric extraction (energy externalities, mining centralization, consensus capture). The mechanism delivers on its coordination promise (no single gatekeeper needed) but layers extraction mechanisms on top (difficulty spiral favors capital-rich operators, energy costs externalized, network rules captured by developer/miner cartel). Active enforcement required: maintaining the consensus mechanism requires continuous hash power investment and difficulty adjustment. Not a false summit (not a natural law) but a genuine hybrid that both enables decentralized coordination AND enables asymmetric value capture."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mining_centralization_threshold",
+      "question": "At what point does mining pool concentration constitute consensus capture, and does current concentration exceed this threshold?",
+      "resolution_mechanism": "Empirical analysis of hash power distribution (Nakamoto coefficient), correlation between pool operator coordination and rule changes, transaction censorship incidence tracking",
+      "impact": "If threshold < 50% (current level): PoW consensus is captured, reclassifies to pure Snare from analytical perspective. If threshold > 60%: current system may still preserve consensus guarantees, supports Tangled Rope classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mining centralization threshold for consensus capture"
+    },
+    {
+      "id": "energy_externalizable_fraction",
+      "question": "What fraction of PoW energy consumption is genuine security cost vs. externalizable waste (thermodynamic inefficiency, geographic stranding)?",
+      "resolution_mechanism": "Thermodynamic analysis of hash rate per joule; comparison of optimal vs actual mining efficiency; correlation between regional electricity surplus and mining facility location",
+      "impact": "If externalizable fraction > 60%: energy cost is structural extraction mechanism, not coordination cost. Reclassifies extraction from 0.58 to 0.72+. If < 40%: most energy use is security function, validates current Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of PoW energy that is externalizable waste"
+    },
+    {
+      "id": "consensus_dependency_on_pool_honesty",
+      "question": "How dependent is the consensus mechanism on the assumption that mining pools remain rational and honest? Can a malicious pool operator execute a 51% attack or soft-fork without detection?",
+      "resolution_mechanism": "Game-theoretic analysis of mining pool incentives; simulation of attack scenarios; historical analysis of actual pool behavior (transaction censorship, mempool manipulation)",
+      "impact": "If dependency is high: consensus is only as strong as the weakest major pool's governance. If low: distributed validation and node consensus provide sufficient backstop.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Consensus dependency on mining pool honesty"
+    },
+    {
+      "id": "alternative_consensus_availability",
+      "question": "Do practical alternatives to PoW (proof-of-stake, proof-of-authority) achieve comparable Byzantine consensus guarantees with lower extraction or externality costs?",
+      "resolution_mechanism": "Comparative analysis of consensus mechanisms: security guarantees, centralization risk, energy efficiency, complexity, governance capture vectors",
+      "impact": "If alternatives are strictly superior: PoW classification shifts toward Piton (maintained through vendor lock-in and sunk costs, not functional necessity). If alternatives have trade-offs: PoW remains Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether alternatives to PoW are strictly superior"
+    },
+    {
+      "id": "temporal_sustainability_of_extraction_model",
+      "question": "Can the mining extraction model (exponential difficulty growth, hardware obsolescence, energy cost escalation) sustain indefinitely, or does it face fundamental limits?",
+      "resolution_mechanism": "Long-term modeling of mining profitability under increasing difficulty and energy costs; analysis of hardware refresh cycles and ASIC obsolescence rates; thermodynamic limits on heat dissipation",
+      "impact": "If unsustainable: PoW transitions toward Piton (theater persists despite declining function). If sustainable: current Tangled Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term sustainability of the PoW mining extraction model"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Proof-of-work consensus is a distributed protocol that replaces trusted third parties with computational proof, enabling Byzantine-fault-tolerant agreement without a central gatekeeper. The mechanism works by requiring participants (miners) to invest computational work (hash power) to validate transactions, with difficulty adjusted so that new blocks appear at regular intervals regardless of total network hash power. This creates an economic incentive structure where honest block production is profitable and attack attempts are costly. However, the constraint exhibits a structural tension: while the mechanism genuinely solves the coordination problem of decentralized consensus (no single trusted intermediary needed), it also creates asymmetric extraction pathways. Industrial mining operations with economies of scale capture disproportionate rewards; energy costs are partially externalized to the electricity ecosystem; and network governance authority concentrates in major mining pools and core developers despite the peer-to-peer mythology. The extractiveness has grown over time as mining has industrialized, difficulty has increased exponentially, and mining pools have consolidated hash power. Theater ratio has also risen as the 'decentralization' narrative persists despite observable centralization in practice.",
+    "key_agents": [
+      "Mining Pool Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture transaction fees and coordinate smaller miners, with full exit flexibility",
+      "ASIC Manufacturers: Secondary beneficiaries (institutional/arbitrage) \u2014 capture value through hardware sales and obsolescence cycles",
+      "Industrial Mining Operations: Tertiary beneficiaries (organized/arbitrage) \u2014 benefit from economies of scale and electricity arbitrage across geographies",
+      "Individual Miners: Mixed (moderate/constrained) \u2014 benefit from block rewards but face extraction through difficulty spirals and consolidation pressure",
+      "Non-Mining Network Participants: Primary victims (powerless/trapped) \u2014 bear security costs via inflation and transaction fees without consensus agency",
+      "Energy Ecosystem: Secondary victim (moderate/constrained) \u2014 bears externalized electricity demand and thermal waste; has constrained exit in competitive markets",
+      "Decentralization Narrative: Institutional actor (institutional/constrained) \u2014 maintains peer-to-peer mythology despite observable pool centralization; constrained because persistent contradictions erode legitimacy",
+      "Analytical Observer: Civilizational frame (analytical/analytical) \u2014 sees both genuine coordination function and emergent extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The base PoW mechanism solves genuine coordination problems (Byzantine consensus without trusted authority), but mining centralization, energy externalities, and difficulty-driven consolidation create asymmetric value capture. Initial extractiveness (t=0) was lower (0.15) because early mining was distributed and hardware-cheap; it has grown to 0.58 as industrial operations dominate. The mechanism inherently creates winners and losers: capital-rich operators mine profitably while small operators face marginal costs exceeding rewards. Suppression (0.62): Moderate-high. Non-mining participants cannot exit the consensus mechanism without losing their cryptocurrency holdings. Energy providers cannot refuse service to mining operations. Miners face technological suppression (ASIC specificity, difficulty adjustment, pool-centralized variance reduction). Theater ratio (0.48): Moderate. The 'decentralization' function is substantially performative \u2014 the narrative emphasizes peer-to-peer nodes and distributed consensus, but observable reality shows pool concentration, geography following electricity costs, and governance capture by core developers and major mining operations. However, theater ratio is not extreme because the underlying consensus mechanism does genuinely work; the performance gap is between the decentralization claim and centralization reality, not between the claim and complete nonfunctionality.",
+    "perspectival_gap": "The Rope perspectives (mining pool operators, ASIC manufacturers) classify the constraint as pure coordination because they benefit without bearing costs. The Snare perspective (non-mining participants, energy ecosystem) sees pure extraction because they bear costs without benefits and have no exit. The Tangled Rope perspectives (individual miners, analytical observer) see both coordination and extraction because they occupy positions where both flows are observable. The Piton perspective (decentralization narrative) sees a degraded mechanism maintained through rhetoric. This gap is not observational ambiguity but structural reality: different agents genuinely experience different constraint types because the constraint's structure creates asymmetric benefit and cost flows.",
+    "directionality_logic": "Each agent's directionality (d) is derived from their structural relationship: beneficiary vs victim, power level, and exit options. Mining pool operators have low d (0.05\u20130.15) because they are primary beneficiaries with arbitrage exits; they experience the constraint as beneficial coordination. Non-mining participants have high d (0.90\u20130.95) because they are trapped victims with no exit; they experience maximum extraction. Individual miners have moderate d (0.55\u20130.65) because they are both beneficiaries (via block rewards) and victims (via difficulty spirals and hardware costs), and they have constrained but non-zero exits. The energy ecosystem has high d (0.80\u20130.90) because it bears externalized costs with constrained exit; electricity markets are competitive and cannot refuse service to profitable mining operations. The decentralization narrative has moderate d (0.50\u20130.60) because it benefits from the mechanism's existence (it provides legitimate-sounding justification) but is victimized by its observable failure to deliver on the promise (concentration is visible and eroding narrative credibility). The analytical observer has moderate d (0.70\u20130.75) because observation involves seeing both the successful coordination function and the successful extraction mechanisms; neither is hidden from the civilizational perspective.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that Tangled Rope is the structural truth and Rope/Snare are perspectival artifacts of position-dependent experience. If we mistakenly unified the constraint as 'pure Rope' (coordination mechanism), we would naturalize mining centralization and energy externalities as incidental rather than structural. If we unified it as 'pure Snare' (extraction mechanism), we would deny the genuine coordination function that prevents single-point failure in network consensus. Tangled Rope captures that BOTH are real: the mechanism genuinely enables decentralized Byzantine consensus (coordination function, non-negotiable) AND it genuinely concentrates mining hash power and externalizes energy costs (extraction function, emergent from economic incentives). The decentralization narrative is Piton \u2014 it performs the coordination function symbolically to maintain legitimacy despite observable centralization. The mandatrophy resolution reveals that PoW is neither inherently decentralized nor inherently centralizing; rather, it solves one coordination problem (Byzantine consensus) while creating new extraction mechanisms (mining consolidation, energy externality). The classification that captures this complexity is Tangled Rope, not a false consensus on pure Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "cryptocurrency_mining_centralization",
+      "blockchain_energy_externality",
+      "consensus_governance_capture"
+    ],
+    "dual_formulation_note": "PoW consensus decomposes into three structurally distinct constraints: (1) Byzantine consensus problem solved by PoW (\u03b5\u22480.05, Mountain from cryptographic perspective), (2) mining centralization as emergent economic phenomenon (\u03b5\u22480.65, Snare from miner-victim perspective), (3) energy externalization as systemic cost (\u03b5\u22480.70, Snare from energy-ecosystem perspective). These are not observational variants but distinct structural claims linked by causality: the consensus mechanism's design incentives cause mining consolidation, which causes energy cost concentration. This story addresses the unified PoW constraint (\u03b5=0.58); the network edges link to decomposed sub-constraints for deeper analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

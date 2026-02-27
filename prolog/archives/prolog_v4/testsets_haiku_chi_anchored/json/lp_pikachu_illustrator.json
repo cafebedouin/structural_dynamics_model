@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "lp_pikachu_illustrator",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lppi"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "Artificial Value Creation in High-End Collectibles Market",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "grading_services",
+      "celebrity_promoters",
+      "early_card_holders",
+      "auction_houses"
+    ],
+    "victims": [
+      "retail_collectors",
+      "market_price_discovery",
+      "secondary_buyers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Collector",
+      "comment": "PERSPECTIVE 1: RETAIL COLLECTOR (SNARE) \u2014 Small-scale collectors cannot verify grading authenticity or exit the celebrity-driven valuation regime. Trapped by information asymmetry and FOMO-driven marketing. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.96. Experiences pure extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Collector",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL COLLECTOR (TANGLED ROPE) \u2014 Museums, funds, and established collectors benefit from liquidity and price discovery but constrained by need to participate in celebrity-driven auctions to maintain competitive positions. d\u22480.58, f(d)\u22480.72, \u03c3=1.0 \u2192 \u03c7\u22480.42. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Grading Service (PSA/BGS)",
+      "comment": "PERSPECTIVE 3: GRADING SERVICE (ROPE) \u2014 Solves coordination problem of authentication and grade standardization. Benefits from network effects and scale. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary from coordination function. Can arbitrage between markets."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Celebrity Promoter (Logan Paul)",
+      "comment": "PERSPECTIVE 4: CELEBRITY PROMOTER (SNARE) \u2014 Wields outsized influence over market via social media and cultural capital. Creates artificial scarcity narratives and FOMO. Extracts through attention capture and price inflation. d\u22480.02, f(d)\u2248-0.14, \u03c3=1.2 \u2192 \u03c7\u2248-0.08. Negative chi (net beneficiary); classification as snare because they wield extraction mechanism even though they don't experience extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Auction House Ecosystem",
+      "comment": "PERSPECTIVE 5: AUCTION HOUSE ECOSYSTEM (PITON) \u2014 Traditional auction mechanisms (Sotheby's, Heritage Auctions) maintain theater through formal bidding rituals and prestige associations but increasingly hollowed by social media-driven price setting. theater_ratio\u22480.81 satisfies piton gate. Institutional inertia drives continued participation despite celebrity social media as primary price discovery mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 Sees the structural mechanism: grading monopoly + celebrity amplification + information asymmetry = extraction from retail participants into beneficiary groups. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.80. This is the civilizational-scope reality: the constraint is a universal extraction mechanism using the Pikachu card as exemplar."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intrinsic_card_value_threshold",
+      "question": "What fraction of the $5.275M sale price (2021) represents authentic scarcity value vs. artificial celebrity-amplified premium?",
+      "resolution_mechanism": "Hedonic pricing model controlling for card properties (print year, condition pre-grading, rarity within print run) vs. celebrity holder factor. Comparison with identical cards held by non-celebrities.",
+      "impact": "If authentic fraction > 70%: constraint is coordination problem (Rope from all perspectives). If < 30%: constraint is pure extraction (Snare from all perspectives confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Separation of intrinsic scarcity from celebrity amplification premium"
+    },
+    {
+      "id": "grading_service_independence",
+      "question": "Are PSA/BGS grades assigned independently of market signals and holder reputation, or are there systematic biases favoring high-profile cards?",
+      "resolution_mechanism": "Comparative analysis of grade distributions for identical card conditions across holders of different prominence. Longitudinal tracking of re-grading outcomes when cards change hands.",
+      "impact": "If independent: grading is genuine coordination mechanism. If biased: grading service is captured by market forces and becomes enforcement mechanism for artificial value creation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether grading services maintain independence from market reputation effects"
+    },
+    {
+      "id": "secondary_market_liquidity_trap",
+      "question": "Does the Pikachu Illustrator market exhibit genuine two-way liquidity at high price points, or is it a one-way extraction where retail buyers cannot exit at comparable prices?",
+      "resolution_mechanism": "Time-series analysis of bid-ask spreads, volume at different price levels, and holding period distributions. Count of failed sell attempts at declining prices after purchase.",
+      "impact": "If genuine two-way liquidity: constraint has coordination function (market mechanism works). If one-way: buyers are trapped in illiquid positions, confirming snare classification and extraction from retail participants.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether high-value card markets exhibit genuine two-way liquidity or one-way extraction"
+    },
+    {
+      "id": "cultural_capital_substitution",
+      "question": "To what degree does celebrity holder status substitute for authentic card properties in determining price, and is this substitution mechanism stabilizing or destabilizing?",
+      "resolution_mechanism": "Price sensitivity analysis to celebrity promotions vs. card authentication updates. Correlation between celebrity social media activity and market volatility. Recovery analysis following celebrity reputation crises.",
+      "impact": "If highly substitutable and destabilizing: constraint is speculative bubble mechanism (Snare confirmed). If weakly substitutable: celebrity factor is minor market seasoning (Rope with Rope-majority perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of cultural capital substitution and market stability implications"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "lppi_theater_presale"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.68,
+      "id_override": "lppi_theater_postpurchase"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.81,
+      "id_override": "lppi_theater_peak"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "lppi_extract_presale"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "lppi_extract_postpurchase"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "lppi_extract_peak"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Logan Paul Pikachu Illustrator case exemplifies a constraint system where grading monopolies, celebrity amplification, and information asymmetry combine to create artificial value extraction from retail participants. The 1999 Pikachu Illustrator card is genuinely scarce (fewer than 40 known copies exist), but the $5.275M sale price (2021) and subsequent market volatility suggest extraction mechanisms layered onto authentic rarity. The constraint operates at the intersection of collectibles authentication (PSA grading services), cultural amplification (celebrity social media), and market structure (auction houses vs. direct sales). From the retail collector's perspective, the system is a snare: trapped by information asymmetry about grading reliability, unable to verify celebrity-driven valuations, and locked into FOMO-driven purchasing decisions. From the beneficiary groups (grading services, celebrity promoters, early card holders), the system is a coordination mechanism or pure profit opportunity. The theater_ratio (0.81) reflects the heavily performative character of auction house rituals, celebrity announcements, and 'investment narrative' marketing in a market where authentic price discovery has largely migrated to social media and celebrity influence.",
+    "key_agents": [
+      "Retail Collectors: Primary victims (powerless/trapped) \u2014 absorb valuation volatility and cannot verify grading authenticity or exit at comparable prices",
+      "PSA/BGS Grading Services: Primary beneficiary (institutional/arbitrage) \u2014 monopoly gatekeeper for authentication; benefits from network effects and cannot be easily competed away",
+      "Celebrity Promoters (Logan Paul): Secondary beneficiary (powerful/arbitrage) \u2014 leverage cultural capital to amplify prices; extract through influence with no participation in grading or curation",
+      "Early Card Holders: Tertiary beneficiary (institutional/arbitrage) \u2014 benefit from price appreciation before celebrity amplification; can arbitrage between collectors and speculators",
+      "Auction Houses (Sotheby's, Heritage): Institutional actor (institutional/constrained) \u2014 maintain performative role (theater=0.81) but have ceded price discovery to social media; theater increasing over interval",
+      "Secondary Buyers: Secondary victim (moderate/constrained) \u2014 trap effect: bought at peak valuations following celebrity promotion; cannot exit at comparable prices",
+      "Market Price Discovery: Abstract victim (powerless/trapped) \u2014 contaminated by celebrity signals; no mechanism for returning to fundamental scarcity valuation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts value through: (1) grading monopoly: PSA/BGS control quality signal; (2) information asymmetry: retail buyers cannot verify grade reliability or detect overvaluation; (3) celebrity amplification: creates artificial FOMO and herd behavior; (4) illiquidity trap: high-value cards have narrow buyer bases, trapping retail purchasers. The value extraction is not total (some authentic scarcity premium is justified), but the celebrity-driven premium layer (estimated 30-70% of post-promotion prices) is pure extraction. Suppression (0.68): High. Multiple barriers prevent exit and price discovery: retail buyers lack expertise to contest grades, celebrity influence creates social cost of disagreeing with promoted valuations, grading service reputations constrain independent verification, auction house rituals create prestige associations that inhibit price haggling. Theater_ratio (0.81): Very high. The constraint's theatrical elements include: auction house bidding rituals (bids are public performance, not price-setting), celebrity social media announcements (performative content designed to generate buzz), 'investment narrative' marketing (positioning collectibles as asset class rather than cultural artifacts), PSA slab aesthetics (the cardboard case with grade label is more marketable than the card itself). The theater has increased from 0.52 \u2192 0.81 over the interval as celebrity influence has displaced traditional curatorship. The functional core (authentication, scarcity documentation) is real but comprises < 20% of observed market behavior.",
+    "perspectival_gap": "Retail collectors see a snare: trapped in illiquid positions at inflated valuations with no exit mechanism at comparable prices. Institutional collectors see tangled rope: participate willingly in celebrity-amplified auctions (for prestige and price discovery) while being extracted from by volatility. Grading services see rope: providing genuine coordination service (authentication), benefiting from network effects, able to arbitrage between markets. Celebrity promoters see a profit opportunity, not a constraint \u2014 they are the extraction mechanism itself, not subject to extraction. Auction houses see themselves as coordinating mechanism but analysts see them as pitons: maintaining theater through prestige rituals that no longer drive prices. The analytical observer sees snare: the system is structured extraction from information-asymmetric retail buyers into beneficiary groups (graders, celebrities, early holders). The gap between retail and analytical perspectives is the core diagnostic.",
+    "directionality_logic": "Retail Collectors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Cannot exit, cannot verify, cannot compete with celebrity influence. Institutional Collectors: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.72. Moderate extraction but with agency; participate strategically. Grading Services: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Provide genuine coordination function and can arbitrage across markets. Celebrity Promoters: Extractor + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.14. Net beneficiary (negative extraction = they profit). Do not experience the constraint; they ARE the constraint mechanism. Auction Houses: Institutional + constrained \u2192 d\u22480.45, f(d)\u22480.54. Mixed; maintaining performative role but losing functional control. Secondary Buyers: Victim + mobile (post-purchase, trapped) \u2192 d\u22480.85, f(d)\u22481.18. High extraction; trapped after purchase despite mobility before. Market Price Discovery: Victim + trapped \u2192 d\u22481.0, f(d)\u22481.42. Maximum extraction; abstract collective that cannot exit or organize.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint is classified as Snare (extractiveness=0.58, suppression=0.68, mandatrophy_resolved=true) because: (1) It has a clear victim group (retail collectors, secondary buyers) experiencing high directional extraction (d\u22480.92); (2) It has clear beneficiary groups (grading services, celebrity promoters, early holders) experiencing negative extraction (net beneficiaries); (3) The suppression mechanism is structural: information asymmetry about grading reliability, social cost of public disagreement with promoted valuations, and illiquidity trap prevent alternative coordination mechanisms from emerging; (4) The constraint does NOT have a genuine coordination function that justifies the extraction \u2014 the coordination function (authentication via PSA) comprises <20% of observed market behavior and could be satisfied by lower-extraction mechanisms (decentralized grading, transparent methodologies). The mandatrophy is resolved by distinguishing the REAL coordination function (authentication, 0.05 extraction equivalent) from the THEATRICAL addition (celebrity amplification, 0.53 extraction equivalent). The Snare classification covers the full 0.58 because the theatrical layer SUPPRESSES alternative coordination mechanisms from emerging. If PSA grading operated independently of celebrity signals and celebrity amplification were removed as a suppression mechanism, the residual constraint would be Rope (authentication coordination, \u03b5\u22480.05). The current Snare reflects the institutional bundling of genuine coordination with extraction-enabling theater."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "collectibles_authentication_monopoly",
+      "celebrity_amplification_market_distortion",
+      "fomo_driven_asset_bubbles"
+    ],
+    "dual_formulation_note": "This constraint decomposes into three structurally distinct claims: (1) PSA grading as authentication mechanism (Rope, \u03b5\u22480.05, genuine coordination); (2) Celebrity influence as price discovery mechanism (Snare, \u03b5\u22480.50, pure extraction); (3) Auction house role in market structure (Piton, \u03b5\u22480.25, degraded ritual). The integrated story reflects the bundled institutional reality: grading monopoly + celebrity amplification suppress alternative authentication mechanisms. When these are disaggregated (grading as independent service vs. celebrity as separate signal channel), the snare classification transfers entirely to the celebrity amplification layer."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "collectibles_authentication_monopoly"
+    ]
+  }
+}

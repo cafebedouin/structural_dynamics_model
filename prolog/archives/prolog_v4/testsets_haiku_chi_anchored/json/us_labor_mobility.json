@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "us_labor_mobility",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uslm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Geographic and Professional Labor Mobility",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_skill_workers",
+      "tech_hub_employers",
+      "venture_capital_ecosystem"
+    ],
+    "victims": [
+      "place_bound_workers",
+      "declining_regional_economies",
+      "low_skill_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Place-Bound Worker",
+      "comment": "PERSPECTIVE 1: PLACE-BOUND WORKER (SNARE) \u2014 Cannot relocate due to family ties, housing debt, limited savings, or regional credential devaluation. Trapped in declining labor markets. High extraction, high suppression. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mobile But Constrained Worker",
+      "comment": "PERSPECTIVE 2: MOBILE BUT CONSTRAINED WORKER (TANGLED ROPE) \u2014 Nominally can relocate but faces barriers: housing market costs in opportunity zones, credential licensing across states, family constraints, student debt burden. Experiences mixed coordination (labor market efficiency) and extraction (captured by housing/licensing regimes). d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Tech Hub Employer and VC Ecosystem",
+      "comment": "PERSPECTIVE 3: TECH HUB EMPLOYER / VC ECOSYSTEM (ROPE) \u2014 Benefits from geographic concentration and worker mobility. Labor migration solves collective action problem: enables skill clustering, network density, knowledge spillovers. Can arbitrage across regions. d\u22480.10, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.04. Net beneficiary; constraint experiences as coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regional Development Coalition",
+      "comment": "PERSPECTIVE 4: REGIONAL DEVELOPMENT COALITION (SCAFFOLD) \u2014 Organized actors (midwest tech councils, sunbelt workforce programs, remote-work advocates) see labor mobility as a temporary problem being solved by telework infrastructure, distributed engineering talent, and revitalized downtowns. Sunset clause: as remote work matures and regional job markets strengthen, geographic mobility pressure declines. d\u22480.45, f(d)\u22480.55, \u03c3=1.0 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Licensing and Credentialing Systems",
+      "comment": "PERSPECTIVE 5: STATE LICENSING / CREDENTIALING SYSTEMS (PITON) \u2014 Occupational licensing (medical, legal, engineering) blocks interstate mobility for legitimate safety reasons but persists beyond functional necessity. Theater ratio 0.63 reflects performative gatekeeping. Original function (prevent quackery) degraded into protectionism. Maintained by professional guilds through inertia, not safety improvements."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some geographic immobility is inherent: family ties, cultural rootedness, asset lock-in (housing) are irreducible constraints on human relocation. However, base properties (\u03b5=0.58, suppression=0.68) contradict mountain classification \u2014 institutional arrangements (housing policy, licensing, credential portability) are contingent, not immutable. False summit: naturalizes policy choices as laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "housing_market_extraction_vs_coordination",
+      "question": "Is the relationship between housing prices and mobility a coordination problem (efficient price signal) or an extraction mechanism (landlord/developer rent capture)?",
+      "resolution_mechanism": "Cross-national comparison of housing price-to-income ratios in high-mobility vs low-mobility economies; correlation analysis between housing policy (zoning, supply constraints) and wage growth trajectory",
+      "impact": "If coordination: mobility decline reflects efficient rational choice. If extraction: housing policy is a snare disguised as market efficiency, requiring policy intervention.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Housing market role in mobility constraint"
+    },
+    {
+      "id": "occupational_licensing_gatekeeping_scope",
+      "question": "What fraction of interstate mobility loss is due to legitimate occupational safety (physicians, engineers) vs protectionist guild gatekeeping (hair braiding, interior design)?",
+      "resolution_mechanism": "Licensing reciprocity analysis by profession; comparison of consumer outcomes in full-reciprocity states vs restricted states; international comparison of licensing regimes and mobility rates",
+      "impact": "If legitimate: 5-10% of mobility loss justified. If protectionist: 30-50% is pure extraction, enabling targeted reciprocity reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Occupational licensing contribution to mobility barrier"
+    },
+    {
+      "id": "remote_work_structural_permanence",
+      "question": "Is the post-pandemic remote work infrastructure permanent enough to structurally decouple earnings potential from geographic location?",
+      "resolution_mechanism": "Longitudinal tracking of remote work adoption by industry through 2030; analysis of wage convergence between traditional hubs and distributed locations; employer return-to-office commitment tracking",
+      "impact": "If permanent: scaffold sunset is real \u2014 geographic mobility constraint declines by 30-40% within 10 years. If temporary: remote infrastructure fades, mobility constraint persists at current level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Permanence of remote work as mobility constraint reliever"
+    },
+    {
+      "id": "family_rootedness_vs_economic_necessity",
+      "question": "How much of geographic immobility is due to rational family preference for staying put vs economic desperation that makes mobility feel impossible?",
+      "resolution_mechanism": "Willingness-to-pay surveys; analysis of mobility patterns in response to extreme opportunity gaps (>50% wage premium); comparison of voluntary non-movers vs involuntary trapped workers",
+      "impact": "If preference-driven: immobility is legitimate choice, not extraction. If desperation-driven: trapped workers' low exit capacity is structural, snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Family ties vs economic desperation in mobility immobility"
+    },
+    {
+      "id": "skill_credential_portability_enforcement",
+      "question": "Can standardized competency testing (instead of state-by-state licensing) provide equivalent consumer protection with near-zero mobility friction?",
+      "resolution_mechanism": "Pilot programs for multi-state credentials; comparative safety outcomes in occupations with high reciprocity vs restrictive licensing; regulatory impact analysis",
+      "impact": "If viable: licensing barrier to mobility can be nearly eliminated, reducing suppression from 0.68 to ~0.40 and reclassifying constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of standardized credentials to replace state licensing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "US labor mobility \u2014 the ability of workers to relocate for economic opportunity across geographic and professional boundaries \u2014 appears as a fundamentally different constraint depending on who is observing. For high-skill workers in tech hubs, it is primarily a coordination mechanism enabling efficient labor markets and knowledge spillovers (Rope). For place-bound workers in declining regions, it is a snare: they are trapped by housing debt, family ties, and credential devaluation, forced to watch opportunity migrate elsewhere while their local economies deteriorate. The constraint exhibits all six DR types, revealing how the same phenomenon (geographic labor reallocation) can be functional or extractive depending on the observer's structural position. The core tension is between efficient labor reallocation (which requires mobility) and human rootedness (which resists it). Over the past 40 years, extractiveness has increased from 0.38 to 0.58, driven by widening wage gaps between opportunity zones (tech hubs, financial centers) and declining regions, rising housing costs in opportunity zones, fragmented occupational licensing, and family constraints. Theater ratio has increased from 0.35 to 0.52, reflecting the performative nature of mobility-promotion rhetoric that ignores structural barriers. Remote work infrastructure (post-2020) represents a potential sunset mechanism for the constraint \u2014 it could decouple earnings potential from geographic location, allowing workers to stay rooted while accessing high-wage labor markets \u2014 but this sunset is contingent on sustained employer commitment and broadband infrastructure investment.",
+    "key_agents": [
+      "High-skill workers: Primary beneficiary (institutional/arbitrage) \u2014 can relocate to opportunity zones, capture wage premiums, participate in high-productivity clusters",
+      "Tech hub employers and VC ecosystem: Primary beneficiary (institutional/arbitrage) \u2014 benefit from geographic concentration of talent, knowledge networks, and capital",
+      "Place-bound workers: Primary victim (powerless/trapped) \u2014 locked in declining regions by housing debt, family ties, and declining local labor markets; experience extraction",
+      "Declining regional economies: Structural victim (powerless/trapped) \u2014 lose human capital and economic base to geographic concentration; no exit option",
+      "Low-skill workers: Structural victim (moderate/constrained) \u2014 limited mobility due to family constraints and lack of portable credentials; face both place-binding and skill-binding",
+      "State licensing and credentialing systems: Institutional actor (institutional/constrained) \u2014 maintain interstate barriers through occupational licensing; perform gatekeeping function with degraded functional necessity (Piton)",
+      "Regional development coalitions: Organized actors (organized/constrained) \u2014 building alternative pathways (remote work infrastructure, distributed talent networks) with sunset logic",
+      "Housing market owners and developers: Institutional beneficiary (institutional/arbitrage) \u2014 capture rents through geographic concentration; benefit from supply constraints in opportunity zones"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing trend. The constraint extracts from place-bound workers and declining regions through wage gaps (0-40% premium for relocation to hubs over interval), housing market rents (opportunity zone housing costs increased 2-3x faster than median wages), and opportunity concentration. The extraction is active and growing but not total \u2014 some workers successfully relocate, some declining regions diversify. Suppression (0.68): Substantial but not absolute. Multiple barriers: occupational licensing blocks ~10% of professionals from interstate practice; housing costs in opportunity zones create 7-10 year savings barrier for entry-level workers; family constraints (childcare, elderly parent care) reduce exit options for 25-30% of working-age population; credential valuation varies by state (engineer/teacher licensing particularly restrictive). Theater ratio (0.52): Moderate. Considerable performative content in mobility narrative: 'move for opportunity' rhetoric ignores structural barriers; 'skills shortage' claims ignore credential portability barriers; 'geographic arbitrage' narratives omit housing cost feedback loops. But theater is not dominant \u2014 genuine wage premiums and skill clustering effects are real, just asymmetrically distributed.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Tech hub employers see Rope (labor market coordination). High-skill arbitrageurs see Rope or Scaffold (they are solving the problem via relocation or remote work). Place-bound workers see Snare (extraction, no exit). Declining regions see Snare (systematic extraction of human capital). Moderate workers with some mobility see Tangled Rope (mixed coordination and extraction: they benefit from efficient labor matching but suffer extraction through housing markets and credential barriers). State licensing systems see Piton (their gatekeeping function is performative \u2014 safety arguments no longer justify interstate restrictions). Remote-work advocates see Scaffold (distributed infrastructure is building a sunset for geographic mobility requirement). The analytical observer at civilizational scale risks seeing Mountain (human rootedness is an immutable feature of human nature) \u2014 but this is a false summit: the constraint is substantially policy-contingent (zoning, licensing, credential portability, housing finance).",
+    "directionality_logic": "High-skill workers (institutional, arbitrage, beneficiary): d\u22480.10, f(d)\u22480.05. Net beneficiary. They earn premiums and experience mobility as freedom. Tech hub employers (institutional, arbitrage, beneficiary): d\u22480.08, f(d)\u2248-0.08. Net beneficiary. They benefit from geographic concentration and skill clustering. Place-bound workers (powerless, trapped, victim): d\u22480.92, f(d)\u22481.40. Maximal extraction. No exit capacity, trapped by housing debt and family ties, experience wage suppression. Declining regions (powerless, trapped, victim): d\u22480.93, f(d)\u22481.41. Maximal extraction. Systematic human capital extraction with no alternative. Low-skill workers (moderate, constrained, victim): d\u22480.70, f(d)\u22481.08. High extraction. Mobility constrained by family burden and credential portability barriers; also trapped by lack of specialized skills. State licensing systems (institutional, constrained): d\u22480.35, f(d)\u22480.30. Despite benefit to professional guilds (beneficiary logic), the constrained exit options and loss of original function justify piton classification over rope. Regional development coalitions (organized, constrained): d\u22480.45, f(d)\u22480.55. Moderate extractiveness; they have agency and see pathway forward (remote work, distributed talent). Housing market (institutional, arbitrage): implicit beneficiary \u2014 d\u22480.05, f(d)\u2248-0.12. Net beneficiary through rent capture.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that geographic mobility is fundamentally a **coordination problem with extractive capture**. The pure-coordination reading (Rope: everyone benefits from efficient labor reallocation) is true but incomplete \u2014 it describes the beneficiary's experience. The pure-extraction reading (Snare: workers are trapped, regions are drained) is true but incomplete \u2014 it describes the victim's experience. The constraint is tangled because: (1) there is a real coordination function (labor market efficiency, knowledge spillovers, productivity gains) that benefits the overall economy; (2) there is active extraction (housing rents, wage gaps, credential rents) that benefits specific actors and harms others; (3) the extraction is normalized through market rhetoric ('efficient allocation,' 'vote with your feet') that obscures its coercive components (family ties cannot be liquidated, housing debt is a collateral-based trap, state licensing is a barrier backed by state power). The constraint is not 'pure coordination disguised as extraction' (that would be a Snare falsely labeled Rope) nor 'pure extraction disguised as coordination' (that would be Rope falsely labeled Snare). It is genuinely hybrid: the efficiency gains are real, the extraction is real, and they are structurally intertwined. The Tangled Rope classification captures this: active enforcement (licensing, housing finance regulations) is required to maintain the system; multiple perspectives classify differently (confirming asymmetric extraction); beneficiaries and victims are distinct; and both coordination function and extraction mechanism are structurally necessary to the constraint's operation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "occupational_licensing_fragmentation",
+      "us_housing_market_constraint",
+      "regional_economic_divergence",
+      "remote_work_infrastructure"
+    ],
+    "dual_formulation_note": "Labor mobility is downstream of housing market, occupational licensing, and regional divergence constraints. Each has its own epsilon reflecting local structural factors, but labor mobility integrates them into a single experience for workers. The upstream constraints have lower epsilon values (more natural/necessary) while labor mobility exhibits higher extractiveness (more policy-contingent) because it is the site where multiple policy choices converge. Decomposition follows \u03b5-invariance: housing (\u03b5\u22480.35, resource constraint), licensing (\u03b5\u22480.42, gatekeeping), regional divergence (\u03b5\u22480.65, extractive outcome) are distinct constraints linked through labor mobility (\u03b5\u22480.58, coordinated outcome)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

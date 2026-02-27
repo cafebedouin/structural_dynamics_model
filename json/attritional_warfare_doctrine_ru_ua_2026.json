@@ -2,24 +2,26 @@
   "header": {
     "constraint_id": "attritional_warfare_doctrine_ru_ua_2026",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "attrit"
   },
   "base_properties": {
-    "extractiveness": 0.85,
-    "suppression": 0.9,
-    "theater_ratio": 0.15,
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.55,
     "claimed_type": "snare",
     "human_readable": "Russian Attritional Warfare Doctrine in Ukraine (2026)",
-    "topic_domain": "political/military",
+    "topic_domain": "geopolitical/military",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "russian_high_command",
-      "russian_state_leadership"
+      "russian_military_command",
+      "russian_state_apparatus"
     ],
     "victims": [
-      "storm_z_convict_soldiers",
-      "ukrainian_military_personnel"
+      "russian_conscripts_and_convicts",
+      "ukrainian_military_and_civilians",
+      "russian_combat_effectiveness"
     ],
     "mandatrophy_resolved": true
   },
@@ -29,18 +31,18 @@
       "agent_power": "powerless",
       "time_horizon": "immediate",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Storm-Z Convict Soldier",
-      "comment": "PERSPECTIVE 1: THE STORM-Z SOLDIER (SNARE) — Coerced into service with no escape, their life is the resource being extracted. Retreat or refusal is met with execution. From this view, the doctrine is a pure death trap. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.97."
+      "spatial_scope": "regional",
+      "label": "The Storm-Z Conscript",
+      "comment": "PERSPECTIVE 1: STORM-Z CONSCRIPT (SNARE) \u2014 Mobilized or imprisoned soldiers face maximum extraction with zero exit options. Conscription is mandatory; desertion is punishable by execution. These units suffer 40-70% casualty rates in frontal assaults. No choice of participation, no exit mechanism, full bearing of extraction cost. This is the canonical snare perspective \u2014 trapped agent experiencing maximal effective extraction."
     },
     {
-      "classification_type": "rope",
-      "agent_power": "institutional",
+      "classification_type": "snare",
+      "agent_power": "powerless",
       "time_horizon": "biographical",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "The Russian High Command",
-      "comment": "PERSPECTIVE 2: THE RUSSIAN HIGH COMMAND (ROPE) — From the perspective of strategic planners, the doctrine is a coordination mechanism for achieving military objectives. It solves the problem of generating offensive momentum by treating manpower as an expendable resource. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.09. Negative effective extraction signifies a net beneficiary."
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Ukrainian Civilian Population",
+      "comment": "PERSPECTIVE 2: UKRAINIAN CIVILIAN POPULATION (SNARE) \u2014 Trapped within the conflict zone. Attritional doctrine produces sustained artillery and drone strikes targeting infrastructure. Civilians cannot exit Ukraine en masse; internally displaced persons face extreme hardship. No exit option, maximum bearing of collateral extraction costs. Structurally equivalent to conscripts despite different causal mechanism."
     },
     {
       "classification_type": "tangled_rope",
@@ -48,8 +50,26 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Ukrainian Field Commander",
-      "comment": "PERSPECTIVE 3: THE UKRAINIAN FIELD COMMANDER (TANGLED ROPE) — Experiences the doctrine as both a coherent enemy strategy (coordination) and a brutal, extractive assault that forces the expenditure of ammunition and personnel (extraction). They are constrained to respond. d≈0.55, f(d)≈0.75, σ=0.9 → χ≈0.57."
+      "label": "The Ukrainian Military Command",
+      "comment": "PERSPECTIVE 3: UKRAINIAN MILITARY COMMAND (TANGLED ROPE) \u2014 Constrained by resource scarcity and NATO ammunition supply bottlenecks, but gains organizational cohesion and international support through organized resistance. Experiences the constraint as both coordination (shared defense objective) and extraction (enforced participation in degrading combat conditions). Can theoretically exit through negotiated settlement, but political costs are severe. Mixed extraction and genuine coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Russian State Apparatus",
+      "comment": "PERSPECTIVE 4: RUSSIAN STATE APPARATUS (ROPE) \u2014 Benefits from attritional strategy through territorial consolidation and degradation of Ukrainian military capacity without requiring technological parity. Experiences the constraint as a coordination mechanism: directing mass manpower into grinding attrition solves the problem of how to prosecute war without superior equipment. Can exit through negotiated settlement with territorial gains. Net beneficiary of the extraction \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cold War Military Doctrine Inheritance",
+      "comment": "PERSPECTIVE 5: COLD WAR DOCTRINE INHERITANCE (PITON) \u2014 Russian military doctrine emphasizes mass manpower and attritional grinding as a legacy of Soviet-era doctrine. This approach is increasingly performative in a modern warfare context: attritional tactics are maintained despite their evident ineffectiveness against superior Ukrainian tactics and NATO support. The doctrine persists through institutional inertia and the absence of institutional reform, not because it optimizes military outcomes. Theater ratio reflects that the 'meat grinder' is maintained as ritual despite clear degradation of military effectiveness."
     },
     {
       "classification_type": "snare",
@@ -58,53 +78,62 @@
       "exit_options": "analytical",
       "spatial_scope": "global",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SNARE) — The analyst sees the full structure: a state-level strategy whose functional core is the pure, coercive extraction of life from a trapped population. The coordination function is entirely parasitic on this extraction. The high base extraction and suppression, amplified by global scope, classify it as a Snare. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.17. This exceeds the Snare threshold."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The State Propagandist",
-      "comment": "PERSPECTIVE 5: THE STATE PROPAGANDIST (SCAFFOLD) — This perspective frames the brutal tactics as a temporary, heroic, and necessary sacrifice to achieve a permanent national victory. The 'sunset clause' is the end of the war, making the extreme measures a scaffold for a future peace. This is a narrative framing, not a structural reality."
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational/global perspective, attritional warfare is a snare for all participants. The extraction mechanism (human life, material resources, economic disruption) persists because no participant can exit without accepting major strategic losses. The constraint is mutually destructive but structurally self-sustaining \u2014 each side's cost of continued conflict is less than the perceived cost of withdrawal. This is not a natural law but a structural trap created by sunk costs and signaling requirements."
     }
   ],
   "omegas": [
     {
-      "id": "doctrine_strategic_efficacy",
-      "question": "Is the attritional doctrine achieving its strategic goals (e.g., depleting Ukrainian forces faster than Russian forces, gaining key territory) at a sustainable cost?",
-      "resolution_mechanism": "Post-conflict analysis of casualty ratios, ammunition expenditure rates, and territorial control changes, compared against stated Russian strategic objectives.",
-      "impact": "If found to be ineffective and unsustainable, the doctrine is not just a Snare but a failed one, bordering on a Piton of state-level strategic incompetence. If effective, it is a grimly functional Snare.",
+      "id": "russian_mobilization_capacity_ceiling",
+      "question": "What is the sustainable upper limit of Russian mobilization and casualty replacement capacity before economic or social collapse?",
+      "resolution_mechanism": "Longitudinal tracking of mobilization waves, casualty rates, demographic data, and economic capacity indices. Comparison with historical parallels (WWI Russian collapse, Soviet-Afghan war fatigue).",
+      "impact": "If ceiling < 1.5M total mobilized: constraint becomes unsustainable within 18-24 months. If ceiling > 3M: constraint could persist 5+ years. This determines whether the snare is temporary or structural.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the doctrine is achieving its strategic goals effectively."
+      "description": "Maximum sustainable Russian mobilization and casualty replacement"
     },
     {
-      "id": "convict_soldier_agency",
-      "question": "To what degree do convict soldiers act purely from coercion versus internalizing state narratives of patriotism or redemption?",
-      "resolution_mechanism": "Systematic interviews with captured or surviving Storm-Z soldiers; analysis of internal communications and battlefield conduct.",
-      "impact": "If action is almost entirely coerced, the Snare classification is absolute. If a significant degree of ideological buy-in exists, the system has elements of a Tangled Rope even for its victims, as they perceive a (coercively offered) coordination benefit.",
+      "id": "ukrainian_nato_support_persistence",
+      "question": "Will NATO military support to Ukraine persist at sufficient levels to sustain Ukrainian resistance, or will domestic political shifts reduce support?",
+      "resolution_mechanism": "Monitoring NATO member parliamentary votes, arms shipment levels, declared commitment timelines. Assessment of U.S. domestic political constraints on Ukraine aid.",
+      "impact": "If support drops below critical threshold: Ukraine cannot sustain organized defense, snare deepens. If support sustains: constraint remains structured but with Ukrainian agency (tangled_rope rather than pure snare).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Persistence of NATO military support to Ukraine"
+    },
+    {
+      "id": "attritional_doctrine_replacement_viability",
+      "question": "Can Russian military command adopt higher-skill, lower-manpower tactics, or is institutional rigidity preventing doctrine reform?",
+      "resolution_mechanism": "Analysis of Russian military leadership statements, tactical evolution in theater, investment in professional NCO corps and advanced equipment. Institutional assessment of reform barriers.",
+      "impact": "If reform possible: attritional constraint could be replaced with lower-extraction coordination mechanism. If institutional rigidity is binding: attritional snare persists independent of military rationality.",
       "confidence": "low",
-      "type_class": "empirical",
-      "description": "The degree of agency versus pure coercion for convict soldiers."
+      "type_class": "conceptual",
+      "description": "Whether Russian military can adopt higher-skill, lower-manpower tactics"
+    },
+    {
+      "id": "extract_flow_reversibility",
+      "question": "Is the extraction mechanism (conscription, casualty tolerance, economic subordination of civilian economy) reversible without major institutional collapse?",
+      "resolution_mechanism": "Historical analysis of how attritional wars terminate. Assessment of reversibility of conscription apparatus, casualty normalization, and economic war-footing.",
+      "impact": "If reversible: constraint could be terminated through negotiated settlement or military stalemate. If irreversible: structure locks participants into continued grinding despite mutual destruction costs.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Reversibility of attritional extraction mechanism"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.65
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2,
+      "time_point": 6,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
       "value": 0.78
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 4,
-      "value": 0.85
     },
     {
       "metric": "theater_ratio",
@@ -113,39 +142,45 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2,
-      "value": 0.25
+      "time_point": 6,
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
-      "time_point": 4,
-      "value": 0.15
+      "time_point": 12,
+      "value": 0.55
     }
   ],
   "interval": {
-    "start": 2022,
-    "end": 2026
+    "start": 0,
+    "end": 12
   },
   "commentary": {
-    "narrative_context": "This constraint models the Russian military's doctrine of attritional warfare as practiced in Ukraine, particularly through the use of 'Storm-Z' units composed of convicts. These units are used in human-wave style assaults, often with little equipment or support, to probe Ukrainian defenses, force the expenditure of ammunition, and achieve incremental territorial gains. The doctrine's logic is a grim calculus: trading the lives of a disposable, coerced population for strategic advantage against a more limited, professional military force. The system relies on extreme coercion, including the use of barrier troops to prevent retreat.",
+    "narrative_context": "The Russian military's attritional warfare doctrine in Ukraine, exemplified by the deployment of Storm-Z convict units in frontal assaults with casualty rates exceeding 50-70%, represents a structural snare affecting multiple victim classes: conscripted soldiers with zero exit options, Ukrainian combatants and civilians under sustained bombardment, and ultimately Russian military effectiveness itself. The doctrine benefits the Russian state apparatus through territorial consolidation and enemy force degradation without requiring technological parity, but the extraction mechanism is increasingly sustained by institutional inertia rather than military rationality. Theater ratio (0.55) reflects that the attritional approach is partly performative \u2014 it maintains Cold War-era doctrine despite clear evidence of tactical ineffectiveness against Ukrainian defensive tactics and NATO support. The constraint exhibits all six DR types across different perspectives: pure snare for trapped conscripts, tangled rope for organized Ukrainian military (mixed coordination and extraction), rope for the Russian state (experiencing it as coordination), piton for the inherited Cold War doctrine, and snare again for the analytical observer viewing the mutual destructiveness of the structure itself.",
     "key_agents": [
-      "Storm-Z Convict Soldiers: Primary victims (powerless/trapped) — their lives are the primary resource being extracted.",
-      "Russian High Command: Primary beneficiaries (institutional/arbitrage) — they design and implement the doctrine to achieve strategic goals.",
-      "Ukrainian Military Personnel: Secondary victims (organized/constrained) — forced to expend resources and bear casualties to counter the assaults.",
-      "Russian State Leadership: Primary beneficiaries (institutional/arbitrage) — the ultimate architects and beneficiaries of the war strategy."
+      "Russian Military Command: Primary beneficiary (institutional/arbitrage) \u2014 captures territorial gains and force degradation without technological superiority",
+      "Russian State Apparatus: Institutional beneficiary (institutional/arbitrage) \u2014 maintains strategic position in eastern Ukraine despite economic costs",
+      "Storm-Z Conscripts and Convicts: Primary victims (powerless/trapped) \u2014 mobilized soldiers with zero exit options; casualty rates 40-70% in frontal assaults",
+      "Ukrainian Military Command: Secondary beneficiary and victim (organized/constrained) \u2014 coordinated resistance with NATO support but faces enforced participation in degrading combat",
+      "Ukrainian Civilian Population: Victim (powerless/trapped) \u2014 internally displaced or under sustained bombardment with no exit mechanism",
+      "Russian Military Doctrine System: Institutional actor (institutional/arbitrage) \u2014 maintains Cold War-era attritional approach through institutional inertia despite effectiveness degradation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the constraint as a mutual snare where both sides are trapped by sunk costs and signaling requirements"
     ],
-    "logic_rationale": "Extractiveness (0.85) is extremely high, as the doctrine directly converts human lives into tactical progress. Suppression (0.90) is also extremely high, reflecting the use of convicts who have no alternative and the presence of barrier troops to enforce compliance with lethal force. The Theater Ratio (0.15) is low because the doctrine is brutally functional and largely devoid of performative elements; it is a straightforward, grim application of force.",
-    "perspectival_gap": "The gap is stark. For the convict soldier, it is an inescapable death trap (Snare). For the Russian High Command, it is a rational, if brutal, tool for winning a war (Rope). For the opposing Ukrainian commander, it is a complex threat that is both strategic and extractive (Tangled Rope). The analytical observer, weighing the extreme coercion and extraction against the claimed coordination function, concludes that the system is fundamentally a Snare, where the coordination is entirely parasitic on the extraction.",
-    "directionality_logic": "The directionality is driven by the clear division of beneficiaries and victims. The Storm-Z soldiers are victims with trapped exit options, leading to a maximal directionality value (d≈0.95) and a classification as a Snare. The Russian High Command are beneficiaries with arbitrage exit options (they could choose other strategies), leading to a negative directionality value (d≈0.05) and a Rope classification. The Ukrainian forces are victims but are organized and constrained, placing them in the middle, where they perceive the mixed nature of the constraint as a Tangled Rope.",
-    "mandatrophy_analysis": "This constraint demonstrates how the DR framework avoids the mandatrophy of mislabeling state violence. A conventional analysis might simply call this 'strategy' (a Rope) or 'war' (a Mountain). By indexing to the powerless, trapped agent (the convict soldier), the framework correctly identifies the core of the doctrine as a high-coercion, high-extraction Snare. It reveals that the 'coordination' function experienced by the beneficiaries is built upon a foundation of pure extraction from the victims, preventing the sanitization of the doctrine's true nature."
+    "logic_rationale": "Extractiveness (0.78): Very high, reflecting the severity of casualty extraction from conscripted personnel and the forced subordination of civilian economy to military production. The value has increased from 0.62 to 0.78 over the measured interval, indicating accumulation of extraction as mobilization waves intensify and casualty replacement demands grow. This is not sustainable indefinitely. Suppression (0.85): Extremely high. Conscription is mandatory; desertion is punishable by execution or military tribunal. Exit options are nonexistent for conscripted soldiers. Civilian population faces similar nonexistence of exit mechanisms (cannot flee Ukraine en masse). Suppression reflects the coercive infrastructure maintaining the constraint. Theater ratio (0.55): Moderate, indicating that the attritional doctrine contains both real functional extraction (genuine military effects on enemy forces) and performative elements (maintenance of Cold War doctrine despite tactical ineffectiveness). The ratio has increased from 0.40 to 0.55, suggesting that as the doctrine fails to produce major breakthroughs, its performance component has grown \u2014 the 'meat grinder' is increasingly maintained as ritual rather than optimized tactic.",
+    "directionality_logic": "The Russian military command and state apparatus derive d values near 0.0-0.15 (beneficiary + arbitrage exit), producing negative effective extraction chi \u2014 extraction flows toward them. Conscripted soldiers derive d values near 0.95-1.0 (victims + trapped exit), producing maximum f(d) and maximum experienced extraction. Ukrainian military experiences d around 0.65-0.75 (mixed victim and beneficiary + constrained exit), producing moderate-to-high experienced extraction despite some coordination benefits. The constraint's directionality is highly asymmetric: the primary beneficiary has low d, primary victims have extreme d. This asymmetry is the defining feature of the snare classification.",
+    "perspectival_gap": "The perspectival gap between beneficiary and victim is extreme. The Russian state apparatus experiences the constraint as pure coordination (Rope) \u2014 a mechanism for translating mass manpower into military effect. The conscripted soldier experiences it as pure extraction (Snare) \u2014 mandatory participation with zero agency or exit. The Ukrainian military experiences it as mixed (Tangled Rope) \u2014 they are constrained by resource scarcity and NATO supply dependencies but also coordinated through shared defense objectives. The Cold War doctrine inheritance perspective reveals the constraint as degraded ritual (Piton) \u2014 maintained through institutional momentum rather than effectiveness. The analytical observer sees the entire structure as a mutual snare: both sides are trapped by sunk costs, domestic political signaling requirements (neither can withdraw without accepting humiliation), and the absence of credible exit mechanisms. No perspective sees this as beneficial coordination or as an immutable natural law.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint demonstrates the critical distinction between extraction and coercion on one axis and coordination function on the other. The attritional doctrine is NOT a coordination mechanism \u2014 it does not solve a collective action problem that benefits all participants. The Russian state benefits; Ukrainian and Russian conscripts bear costs. The doctrine persists because (a) the Russian state apparatus can enforce conscription and (b) Ukraine cannot exit the conflict without accepting territorial loss. This is pure snare: high extraction (0.78), high suppression (0.85), no coordination function for the majority of participants. The constraint could theoretically be reframed as 'coordination of military strategy' but this is false mandatrophy: the actual structure is extraction of human and material resources from trapped populations for the benefit of state apparatus. The theater ratio (0.55) prevents complete naturalization as immutable military law \u2014 the constraint is partly performative, sustained by institutional momentum rather than pure strategic necessity."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "russian_demographic_stability",
-      "global_ammunition_supply_chains"
-    ]
-  }
+      "ukrainian_conscription_sustainability",
+      "russian_economic_war_footing",
+      "nato_arms_supply_bottleneck"
+    ],
+    "dual_formulation_note": "Attritional warfare doctrine represents a structural constraint on military strategy with immediate effects on conscript populations. Upstream constraints include the doctrine inheritance from Cold War military education systems; downstream constraints include the sustainability of Ukrainian and Russian mobilization capacity and the NATO support structure enabling Ukrainian resistance."
+  },
+  "directionality_overrides": []
 }

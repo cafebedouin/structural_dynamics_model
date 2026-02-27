@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "us_sanctions_icc_israel_case",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ussicc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "US Sanctions Threat Against ICC Officials Investigating Israel",
+    "topic_domain": "political/international_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_state"
+    ],
+    "victims": [
+      "icc_prosecutorial_independence",
+      "international_criminal_justice_system"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "ICC Prosecutors and Investigators",
+      "comment": "PERSPECTIVE 1: ICC PROSECUTORS/INVESTIGATORS (SNARE) \u2014 Face explicit threat of personal sanctions (visa bans, asset freezes) if they continue investigation. No viable exit: resigning abandons institutional mandate; continuing faces legal and financial jeopardy. Maximum suppression through threat of coercive sanctions. Cannot negotiate or coordinate around the threat \u2014 it is unilateral and credible. Structural position: full victim of extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Criminal Justice System",
+      "comment": "PERSPECTIVE 2: ICC AND INTERNATIONAL JUSTICE SYSTEM (SNARE) \u2014 Constrained by dependence on US cooperation for enforcement (asset seizure, extradition support). Cannot investigate cases threatening US ally interests without incurring institutional penalties. Exit options exist but are costly: pursuing investigation despite sanctions harms the institution's legitimacy and funding. The constraint extracts institutional compliance through threat of withdrawal and reputational damage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Israeli State",
+      "comment": "PERSPECTIVE 3: ISRAELI STATE (ROPE) \u2014 Primary beneficiary. Experiences the constraint as effective coordination against threats to state security (exemption from ICC prosecution). High arbitrage capacity \u2014 can leverage alliance relationships and US power asymmetry. Net extraction runs toward this actor. The constraint solves the collective action problem of managing ICC prosecution risk."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The US State and Congress",
+      "comment": "PERSPECTIVE 4: US STATE AND CONGRESS (TANGLED ROPE) \u2014 Benefits from constraint (ability to shield allied state from ICC accountability) AND bears coordination costs (reputational damage, alliance strain, legal inconsistency). High suppression via legislative threat. Extraction is hybrid: uses coercive power (sanctions authority) to extract compliance but also genuinely solves coordination problem (preventing ICC from undermining alliance relationships). Active enforcement required; extraction is not pure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The US-ICC Structural Relationship",
+      "comment": "PERSPECTIVE 5: US-ICC STRUCTURAL RELATIONSHIP (PITON) \u2014 The US has never joined the ICC, maintaining structural independence from the institution. The threat to sanction ICC officials is partly performative \u2014 it reinforces the US posture of unaccountability to international institutions. The historical pattern (US non-participation, periodic threats to constrain ICC reach) is maintained through institutional theater rather than functional necessity. Theater ratio high because the threat operates primarily through reputational posturing and alliance signaling."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural Sovereignty Conflict)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN-FRAMING) \u2014 From a civilizational view, the conflict between national sovereignty and international criminal jurisdiction is a structural feature of the current international system. No state can be forced to join the ICC; the ICC has no independent enforcement capacity; prosecution of nationals of non-member states creates alignment problems between the court and its dependency on state cooperation. This perspective risks naturalizing what is actually a contingent institutional design problem as an immutable law of international relations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "us_enforcement_credibility",
+      "question": "Will the US actually implement sanctions if ICC investigators proceed with the case, or is the threat primarily performative?",
+      "resolution_mechanism": "Observation of US behavior if ICC issues arrest warrants; tracking of actual sanctions implementation and their severity; Congressional follow-through on legislative threats",
+      "impact": "If credible: constraint is highly suppressive (0.72+), snare classification robust. If performative: suppression drops to 0.40-0.50, constraint may degrade to rope or tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether US sanctions threat is credible or performative"
+    },
+    {
+      "id": "icc_prosecutorial_independence_resilience",
+      "question": "Can ICC investigators maintain independence and pursue investigations despite sanctions threats, or does the threat effectively block the investigation?",
+      "resolution_mechanism": "Tracking of ICC investigative activity before and after sanctions threat; analysis of investigator departures, budget impacts, and case decisions; comparison to other cases where ICC faced pressure",
+      "impact": "If ICC maintains independence: snare perspective is one view; constraint has lower functional suppression. If investigators are deterred: snare perspective confirmed \u2014 threat achieves full extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ICC can maintain independence under sanctions threat"
+    },
+    {
+      "id": "alliance_compliance_threshold",
+      "question": "What is the minimum level of enforcement (sanctions implementation, asset seizures) required to keep ICC member states from challenging US exceptions?",
+      "resolution_mechanism": "Analysis of ICC member state responses to US sanctions threat; comparison of responses to cases where ICC faced pressure; modeling of alliance incentives and free-riding behavior",
+      "impact": "If low threshold: US needs minimal enforcement to maintain compliance. If high threshold: credible enforcement is necessary or alternative pressure mechanisms must emerge.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Enforcement level needed to maintain alliance compliance"
+    },
+    {
+      "id": "structural_icc_vulnerability",
+      "question": "Is ICC prosecutorial vulnerability to state pressure (especially US pressure) an inherent feature of the current institutional design, or a contingent policy problem?",
+      "resolution_mechanism": "Comparative analysis of ICC operational independence vs other international courts; historical analysis of ICC's institutional evolution and capacity-building",
+      "impact": "If inherent: mountain perspective has merit \u2014 ICC dependence on state cooperation is a structural law of international relations. If contingent: constraint reflects policy choices about ICC funding, enforcement mechanisms, and member commitment.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether ICC vulnerability to pressure is structural or contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The bipartisan US bill proposing sanctions against ICC officials investigating alleged Israeli war crimes creates a direct structural conflict between national sovereignty and international criminal jurisdiction. The constraint operates through credible threat of coercive penalties (visa bans, asset freezes) against individuals attempting to fulfill their institutional mandate. The constraint exhibits classical snare structure: suppression is high (threat of personal sanctions, potential loss of career), extractiveness is significant (forces ICC to abandon or slow investigation), and the extracted value flows to the Israeli state and US alliance interests. However, the constraint also exhibits tangled rope characteristics from the US perspective (it solves genuine coordination problems around alliance relationships and immunity management) and piton characteristics from the historical view (the US-ICC distance is partly performative posturing). The theater ratio has increased over the interval as the threat has become more explicit and visible, while base extractiveness has increased as the bill moved from proposal to serious legislative consideration.",
+    "key_agents": [
+      "ICC Prosecutors and Investigators: Primary victims (powerless/trapped) \u2014 face personal legal and financial jeopardy; cannot exit without abandoning institutional duty",
+      "Israeli State: Primary beneficiary (institutional/arbitrage) \u2014 shields nationals from ICC prosecution; captures immunity through US power",
+      "US Congress and Executive: Enforcer (institutional/constrained) \u2014 uses sanctions authority to manage ICC reach; benefits from immunity management but incurs reputational costs",
+      "International Criminal Justice System: Secondary victim (moderate/constrained) \u2014 loses institutional independence; constrained by US enforcement threats",
+      "ICC Member States: Tertiary actors (organized/mobile) \u2014 face incentives to abandon ICC support if prosecution becomes politically costly through alliance pressure",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional design vulnerabilities as inherent law of international relations"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts investigative compliance from the ICC system through credible threat of sanctions against individual officials. The extraction is not total (ICC retains formal independence) but is substantial enough to deter investigation of cases affecting allied states. The measure reflects the trajectory from legislative proposal (0.35, theoretical threat) through serious consideration (0.58, credible implementation risk). Suppression (0.72): High. Multiple suppression mechanisms operate: personal financial/career risk to investigators, institutional reputational damage to ICC if it defies US sanctions, alliance pressure on ICC member states to discourage prosecution, and political costs to supporting states. Investigators have no safe exit: complying abandons mandate, continuing risks sanctions. Theater ratio (0.65): Moderate-high. The constraint operates through both performative and functional mechanisms. Performative: alliance posturing, public statements of US exceptionalism, legislative theater around ICC limitations. Functional: actual sanctions would impose real costs. The theater has increased as the threat became more visible and explicit.",
+    "perspectival_gap": "The snare perspective (investigators trapped, ICC system victimized) conflicts sharply with the rope perspective (US solves genuine coordination problem of managing ICC reach). From the Israeli state view, the constraint is beneficial coordination preventing prosecutions. From the ICC view, the constraint is pure coercion blocking legitimate investigation. From the US state view, the constraint is both coordination (managing alliance relationships) and coercion (enforcing immunity through threat). The piton perspective reveals that the US-ICC distance is maintained partly through performative posturing (the US never joined the ICC, maintains structural independence). The analytical observer risks seeing immutable law (structural vulnerability of ICC to state pressure) when the constraint actually reflects contingent choices about institutional design and funding dependence.",
+    "directionality_logic": "ICC investigators and prosecutors derive high d (d \u2248 0.92) from victim status (explicit sanction threats) and trapped exit options (cannot abandon mandate without institutional failure, cannot continue without legal jeopardy). This produces high f(d) \u2248 1.38, amplifying effective extraction. The Israeli state derives low d (d \u2248 0.10) from beneficiary status and arbitrage capacity (can leverage alliance relationships and US power). This produces negative f(d) \u2248 -0.05, making effective extraction negative (constraint subsidizes this actor). The ICC system derives moderate-high d (d \u2248 0.68) from victim status but constrained (not trapped) exit options \u2014 institutional options exist but all are costly. This produces f(d) \u2248 1.05, moderate experienced extraction. The US state derives d \u2248 0.55 from mixed position: beneficiary of immunity management (low d contribution) but also enforcement costs and alliance strain (high d contribution). This produces f(d) \u2248 0.75, blended extraction reflecting the tangled_rope hybrid nature.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the snare and tangled_rope classifications capture different structural realities from different positions. From the ICC and investigator perspective, it is purely extractive (snare) \u2014 the threat offers no coordination benefit, only suppression. From the US state perspective, it is hybrid (tangled_rope) \u2014 it solves genuine coordination problems (managing alliance relationships, preventing politically costly prosecutions) while also imposing reputational costs and legal inconsistency. The mandatrophy is resolved by recognizing that both readings are correct at their respective observation sites. The constraint is a snare TO the ICC system and a tangled rope FROM the US state perspective. The analytical observer's mountain framing (ICC dependence on state cooperation is a law of international relations) is partially valid but risks naturalizing contingent institutional design choices (ICC funding structures, enforcement mechanisms, member commitment) as immutable features. The proper analysis distinguishes structural vulnerability (how ICC is designed) from strategic response (US choice to weaponize sanctions threat)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "icc_structural_legitimacy",
+      "us_international_accountability_exemption"
+    ],
+    "dual_formulation_note": "This constraint is downstream of structural ICC vulnerabilities (dependence on state cooperation for enforcement) but represents a distinct strategic choice to weaponize sanctions threat. The upstream structural constraints define the vulnerability; this constraint operationalizes that vulnerability through explicit threat. Link via affects_constraints captures the functional dependency while preserving the analytical distinction between vulnerability and exploitation."
+  },
+  "directionality_overrides": []
+}

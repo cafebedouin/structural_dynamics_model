@@ -2,35 +2,47 @@
   "header": {
     "constraint_id": "civilizational_maintenance_debt",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "civmaint"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.7,
-    "theater_ratio": 0.75,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
     "human_readable": "The Crumbling Foundation: Civilizational Maintenance Debt",
-    "topic_domain": "technological/economic",
+    "topic_domain": "technological/infrastructure/systemic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "short_term_political_actors",
-      "current_taxpayers"
+      "current_consumption_beneficiaries",
+      "capital_intensive_industries"
     ],
     "victims": [
+      "infrastructure_maintenance_systems",
       "future_generations",
-      "users_of_failing_infrastructure"
-    ]
+      "public_safety_commons"
+    ],
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "Future Generations",
-      "comment": "PERSPECTIVE 1: FUTURE GENERATIONS (SNARE) — Trapped in time, they inherit a degraded system and bear the full, compounded cost of deferred maintenance. They had no voice in the decisions but face the consequences. For them, it is pure, inescapable extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.82."
+      "label": "The Infrastructure Maintenance Worker",
+      "comment": "PERSPECTIVE 1: INFRASTRUCTURE MAINTENANCE WORKER (SNARE) \u2014 Trapped by economic necessity to maintain failing systems with inadequate resources. Bears full cost of deferred maintenance through unsafe working conditions, burnout, and impossible triage decisions. Cannot exit \u2014 maintaining critical systems is both their livelihood and a social requirement. Zero negotiating power over resource allocation. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Municipal Government",
+      "comment": "PERSPECTIVE 2: MUNICIPAL GOVERNMENT (TANGLED ROPE) \u2014 Both coordinates essential services AND extracts through deferred costs. Provides coordination (water systems, electrical grids, road networks) that would not exist through pure market mechanisms. But also benefits from shifting maintenance costs to future budgets and external actors. Constrained by property tax limitations, state regulations, and federal unfunded mandates. Mixed experience: genuine coordination function plus asymmetric cost externalization."
     },
     {
       "classification_type": "rope",
@@ -38,114 +50,170 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "Short-Term Political Actors",
-      "comment": "PERSPECTIVE 2: SHORT-TERM POLITICAL ACTORS (ROPE) — They benefit by diverting funds from low-visibility maintenance to popular new projects or tax cuts, arbitraging short-term political gain against long-term decay they won't be in office to manage. They see infrastructure as a coordination tool to be managed for immediate public approval. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07."
+      "label": "Current Consumption Beneficiaries",
+      "comment": "PERSPECTIVE 3: CURRENT CONSUMPTION BENEFICIARIES (ROPE) \u2014 Institutional actors (developers, capital investors, current taxpayers) benefit from maintained infrastructure while avoiding maintenance costs. Experience the constraint as pure coordination: infrastructure exists and functions through collective action, enabling economic activity. Can arbitrage away from jurisdiction-specific maintenance obligations through relocation or investment diversification. Net beneficiary \u2014 extraction runs toward this actor class."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes the dual nature: the infrastructure provides a genuine coordination function, but the funding model creates an asymmetric extraction from the future to benefit the present. The high suppression reflects the difficulty of creating alternative infrastructure. This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.80."
+      "label": "Future Generations",
+      "comment": "PERSPECTIVE 4: FUTURE GENERATIONS (SNARE) \u2014 Trapped by inheritance of both the infrastructure systems and the accumulated debt. Cannot exit \u2014 must inherit and maintain or face civilizational collapse. Cannot negotiate or influence current allocation decisions. Bears catastrophic costs of deferred maintenance: either massive emergency repairs with economic disruption or system failures affecting essential services. Maximum extraction across temporal dimension."
     },
     {
       "classification_type": "piton",
-      "agent_power": "organized",
+      "agent_power": "institutional",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Maintenance Engineer",
-      "comment": "PERSPECTIVE 4: THE MAINTENANCE ENGINEER (PITON) — This agent sees the maintenance allocation process itself as a degraded institution. The engineering rationale for preventative maintenance is ignored in favor of political theater (ribbon cuttings, emergency patches). The function of rational asset management has atrophied, replaced by performative gestures. The high theater_ratio (0.75) confirms this view."
+      "spatial_scope": "national",
+      "label": "Infrastructure Inspection and Compliance Bureaucracy",
+      "comment": "PERSPECTIVE 5: INFRASTRUCTURE INSPECTION BUREAUCRACY (PITON) \u2014 Performs extensive ritual inspections, reporting, and compliance certification while having no authority to fund repairs or enforce maintenance timelines. Theater_ratio is high: agencies produce detailed condition reports, maintain databases, conduct ceremonies around 'infrastructure summits' and studies, but lack enforcement power. The bureaucracy persists through institutional inertia \u2014 it signals concern without solving the problem. Maintenance function has atrophied; the ritual remains."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Engineering Standards and Lifecycle Models",
+      "comment": "PERSPECTIVE 6: ENGINEERING LIFECYCLE STANDARDS (PITON) \u2014 The formal engineering models of infrastructure lifecycles (30-year bridge lifespan, 50-year water main cycles) are theatrical performance: they prescribe maintenance schedules that are systematically ignored due to budget constraints. These standards persist as institutional theater \u2014 they provide a standard to ostensibly follow and measure against \u2014 but have atrophied in functional force. Actual maintenance follows a different logic (crisis-driven, capital-constrained) entirely divorced from design specifications."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The User of Failing Infrastructure",
-      "comment": "PERSPECTIVE 5: USER OF FAILING INFRASTRUCTURE (TANGLED ROPE) — Experiences both the benefits of the system (when it works) and the direct costs of its failure (boil water advisories, bridge closures). They are constrained, unable to easily switch to an alternative, and bear localized extraction. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.53."
-    }
-  ],
-  "interval": {
-    "start": 1980,
-    "end": 2030
-  },
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.2
+      "spatial_scope": "national",
+      "label": "Infrastructure Advocacy Coalition",
+      "comment": "PERSPECTIVE 7: INFRASTRUCTURE ADVOCACY COALITION (TANGLED ROPE) \u2014 Organized agents (ASCE, civil engineering societies, infrastructure advocacy NGOs) coordinate around shared recognition of the maintenance debt problem. They provide genuine coordination function by aggregating data, setting standards, and enabling collective attention. But they also face extraction constraints: they lack funding authority and enforcement power, and their advocacy is systematically captured by those benefiting from status quo (current consumers, capital investors). Constrained by political economy \u2014 their coordination efforts are partially neutered by structural incentives to defer costs."
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.45
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Alternative Infrastructure Models",
+      "comment": "PERSPECTIVE 8: ALTERNATIVE INFRASTRUCTURE MODELS (SCAFFOLD) \u2014 Emerging agents (green infrastructure advocates, distributed resilience networks, public-private partnerships with performance-based funding) are building temporary coordination mechanisms with explicit sunset logic. These models (stormwater gardens replacing piped systems, microgrids replacing centralized generation, modular repair protocols) are scaffolds: they reduce extraction costs by distributing maintenance burdens and incorporating lifecycle thinking from inception. Sunset logic: as these alternatives mature and prove cost-effective, the traditional maintenance-debt model loses functional force. But adoption is slow \u2014 constrained by infrastructure lock-in and incumbent interests."
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2030,
-      "value": 0.58
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.3
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.6
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.75
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the maintenance debt appears as an immutable law of complex systems: all infrastructure degrades; entropy increases; deferring maintenance is a free energy gradient that nature enforces. This perspective sees the crumbling foundation as an inevitable feature of thermodynamic reality rather than a contingent institutional choice. The 'natural' reading risks obscuring that maintenance deferral is a political economy decision, not a law of physics."
     }
   ],
   "omegas": [
     {
-      "id": "decay_rate_linearity",
-      "question": "Is the rate of infrastructure decay and cost accumulation linear, or does it accelerate non-linearly as systems pass critical failure thresholds?",
-      "resolution_mechanism": "Longitudinal engineering analysis of asset lifecycle data across multiple infrastructure classes (e.g., water, transport, energy).",
-      "impact": "If linear, the problem is a large but manageable debt. If non-linear and accelerating, it points towards a potential cascade failure, making the Snare classification more accurate from more perspectives.",
+      "id": "optimal_maintenance_schedule",
+      "question": "What maintenance schedule and funding level would minimize total system lifecycle cost while maintaining service standards?",
+      "resolution_mechanism": "Long-term infrastructure financial modeling; comparison of full lifecycle costs across maintenance schedules; empirical data on failure cascades vs preventive maintenance ratios",
+      "impact": "If optimal schedule requires continuous 5-7% of system value annually: current 2-3% allocation is clearly extractive. If optimal is 2-3%: the constraint may be coordination failure rather than structural extraction.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether infrastructure decay and cost accumulation is linear or non-linear."
+      "description": "Optimal maintenance funding level for lifecycle cost minimization"
     },
     {
-      "id": "political_will_vs_structural_inability",
-      "question": "Is maintenance deferral a correctable failure of political will, or a structural inability of short-term electoral cycles to manage long-term, low-visibility liabilities?",
-      "resolution_mechanism": "Comparative political science analysis of governance systems (e.g., comparing electoral democracies with states having long-term central planning) and their success in managing infrastructure maintenance.",
-      "impact": "If a failure of will, the constraint is a contingent Tangled Rope. If a structural inability, it approaches a Mountain-like feature of certain governance models, suggesting the need for institutional redesign rather than just different political choices.",
+      "id": "intergenerational_equity_threshold",
+      "question": "What degree of cost shifting from current to future generations constitutes unjust extraction across time?",
+      "resolution_mechanism": "Intergenerational accounting frameworks; comparison to environmental economics literature on discounting; public surveys on intergenerational obligations",
+      "impact": "If future generations bear >50% of lifecycle costs: systemic extraction across time. If <20%: distribution may be fair. Classification shifts based on this threshold.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Threshold for intergenerational equity in infrastructure cost allocation"
+    },
+    {
+      "id": "privatization_externality_capture",
+      "question": "Do privatization models (PPP infrastructure, private toll systems) actually capture externalized maintenance costs or simply relocate extraction to private operators?",
+      "resolution_mechanism": "Comparative analysis of public vs private infrastructure maintenance outcomes; cost-benefit studies of privatization cases; tracking of externalized costs in private models",
+      "impact": "If privatization reduces net extraction: scaffold logic holds, alternative models work. If extraction simply transfers to private operators: the alternative models replicate the snare structure.",
       "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether privatization models reduce or relocate maintenance extraction"
+    },
+    {
+      "id": "political_feasibility_of_maintenance_taxation",
+      "question": "Is the maintenance debt best understood as a failure of political will (extractive beneficiaries blocking taxation) or structural insufficiency of public mechanisms?",
+      "resolution_mechanism": "Historical analysis of maintenance funding campaigns; cross-national comparison of taxation levels and maintenance outcomes; political economy analysis of opposition coalitions",
+      "impact": "If political will: the constraint is snare-shaped and addressable through democratic pressure. If structural: the constraint is mountain-shaped and requires institutional redesign.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Distinguishing between a failure of political will and a structural governance flaw."
+      "description": "Whether maintenance debt is political choice or structural constraint"
     }
   ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
   "commentary": {
-    "narrative_context": "This constraint models the systemic deferral of maintenance on essential public infrastructure (transport, water, energy grids). While this infrastructure provides a crucial coordination function for society, political and economic incentives favor funding new, visible projects over the less glamorous work of upkeep. This creates a growing 'maintenance debt'—a form of extraction where value is pulled from the future to subsidize the present. The system becomes a hybrid: it still coordinates, but it does so by imposing a massive, un-consented cost on future generations.",
+    "narrative_context": "The civilizational maintenance debt represents a fundamental structural tension between current consumption and system sustainability. Infrastructure systems (water, electricity, transportation, communication networks, buildings) provide essential coordination services that enable modern life. But the extraction mechanism \u2014 systematically deferring maintenance costs to future periods and future generations \u2014 is built into the institutional structure of public finance, capital allocation, and political time horizons. Current beneficiaries (developers, investors, consuming citizens) profit from maintained infrastructure while avoiding maintenance costs through political choices (tax limitations, budget prioritization, federal unfunded mandates). This creates a pure snare for infrastructure maintenance workers (trapped by necessity), powerless future generations (trapped by inheritance), and the integrity of the infrastructure commons itself. The constraint exhibits tangled rope characteristics because municipal governments and infrastructure systems do coordinate essential services \u2014 they are not pure extraction mechanisms. But they simultaneously participate in cost externalization across time and populations.",
     "key_agents": [
-      "Future Generations: Primary victim (powerless/trapped) — Inherit the full, compounded cost of decay without having any say in the decisions.",
-      "Short-Term Political Actors: Primary beneficiary (institutional/arbitrage) — Gain political capital by avoiding unpopular taxes and funding popular projects, deferring costs beyond their term in office.",
-      "Current Taxpayers: Secondary beneficiary (moderate/mobile) — Benefit from lower taxes or other public services in the present, at the cost of future liability.",
-      "Users of Failing Infrastructure: Secondary victim (moderate/constrained) — Bear the immediate, localized costs of system failures, such as water main breaks or power outages.",
-      "Maintenance Engineers: Analytical agent (organized/constrained) — Understand the scale of the problem but are constrained by political budget allocation, which they see as a performative, degraded process."
+      "Infrastructure Maintenance Workers: Primary direct victim (powerless/trapped) \u2014 face unsafe conditions, resource inadequacy, impossible triage decisions with no authority to redirect resources",
+      "Municipal Governments: Primary institutional actor (moderate/constrained) \u2014 coordinate essential services but also participate in cost deferral due to budget constraints and regulatory restrictions",
+      "Current Consumption Beneficiaries: Primary beneficiary (institutional/arbitrage) \u2014 capital investors, developers, homeowners who benefit from infrastructure without bearing proportional maintenance costs; can arbitrage away from jurisdiction",
+      "Future Generations: Intergenerational victim (powerless/trapped) \u2014 inherit both the infrastructure systems and the accumulated debt; face catastrophic repair costs or system failures",
+      "Infrastructure Inspection Bureaucracy: Institutional theater (institutional/constrained) \u2014 produces extensive reports and compliance certification without enforcement power or funding authority",
+      "Infrastructure Advocacy Coalition: Organized actors (organized/constrained) \u2014 civil engineering societies, ASCE, advocacy groups; coordinate problem recognition but lack political authority to redirect resources",
+      "Alternative Infrastructure Developers: Emerging scaffold actors (organized/mobile) \u2014 green infrastructure, distributed resilience, performance-based funding models; building exit pathways with sunset logic",
+      "Analytical Observer: Civilizational analytical perspective (analytical/analytical) \u2014 risks naturalizing political economy choice as thermodynamic inevitability"
     ],
-    "logic_rationale": "Extractiveness (ε=0.58): High. Represents the significant value of the deferred maintenance costs, which function as a loan taken from the future. Suppression (0.70): High. Individuals and communities have virtually no ability to create alternatives to large-scale public infrastructure, trapping them within the decaying system. Theater Ratio (0.75): High. Political discourse is dominated by performative announcements of new projects ('Infrastructure Week') while the systemic issue of maintenance is ignored. This high ratio allows for the Piton classification from the engineering perspective, as the process of allocating funds has become decoupled from the functional need.",
-    "perspectival_gap": "The core gap is between the present and the future. Political actors in the present experience the system as a Rope they are skillfully managing for public benefit. Future generations experience it as an inescapable Snare, a debt trap laid by their ancestors. The analytical observer sees the reality: a Tangled Rope, where a vital coordination function has been co-opted for temporal extraction. Meanwhile, the engineer on the ground sees a Piton: a system of rational asset management that has ceased to function, persisting only as a set of rituals.",
-    "directionality_logic": "Beneficiaries (politicians, current taxpayers) have immediate time horizons and arbitrage/mobile exit options, leading to a low 'd' value and a perception of coordination (Rope). Victims (future generations) are trapped with a generational time horizon, leading to a high 'd' value and the perception of pure extraction (Snare). Agents in the middle, like current users or engineers, are constrained and see the mixed nature of the system (Tangled Rope or Piton).",
-    "mandatrophy_analysis": "This case avoids mandatrophy by correctly identifying the constraint as a hybrid. A naive analysis might label it a Snare (focusing only on the victims) or a Rope (focusing only on the beneficiaries and the system's function). The Tangled Rope classification, from the analytical perspective, correctly captures the essential conflict: a system that is simultaneously providing a coordination good and executing a massive, asymmetric extraction. The multiple perspectives show that Snare and Rope are also valid, but incomplete, structural readings."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint systematically extracts value from maintenance functions and future capacity to benefit current consumption. The extraction is substantial but not maximal because some genuine coordination function persists \u2014 infrastructure systems do provide collective benefits that would not exist in pure market allocation. The upward trajectory (0.32 \u2192 0.58 over 20 years) reflects accumulating debt and increasing gap between needed and allocated maintenance. Suppression (0.68): High. Significant barriers prevent exit or resistance: maintenance is essential (no alternative), workers are trapped by economic necessity, future generations cannot negotiate, and political structures systematically underweight future costs. Media and public discourse suppress the severity \u2014 the crisis is discussed through statistics and reports rather than visceral experience until catastrophic failure. Theater ratio (0.65): Moderate-high. Infrastructure inspections, state-of-repair reports, maintenance policy documents, infrastructure summits, and engineering standards are extensive. But actual maintenance follows crisis-driven logic divorced from the standards. The gap between prescribed (30-year bridge lifespan) and actual (maintenance deferred until failure) is substantial. Theater has increased over the interval as formal systems have elaborated while actual maintenance capacity has declined.",
+    "perspectival_gap": "The maximum perspectival gap exists between the institutional beneficiary (Rope, arbitrage options, net beneficiary) and the intergenerational victim (Snare, trapped, maximal extraction). Current municipal actors occupy the tangled middle \u2014 they coordinate services essential for the beneficiaries but are themselves constrained by political structures that prevent them from capturing the extraction value. The infrastructure inspection bureaucracy reveals the theater mechanism: extensive formal systems of assessment and planning that lack enforcement or funding power. The gap reflects the deep structural asymmetry: those making decisions about maintenance (political leaders, capital investors) are not those bearing costs (workers, future populations, infrastructure commons).",
+    "directionality_logic": "Each perspective's experienced extractiveness (chi) is derived from the agent's structural position via the directionality chain. Current beneficiaries with arbitrage options have low d values \u2014 they experience the constraint as enabling rather than extracting. Maintenance workers trapped with no exit have high d values \u2014 they bear maximum extraction. Municipalities constrained but with some agency occupy the middle. Future generations trapped by inheritance have the highest d \u2014 they experience extraction across temporal dimension. The derivation chain follows from beneficiary status (current consumers) vs victim status (maintenance systems, workers, future generations) combined with exit options. No directionality overrides are required because the structural relationships are clear: this is asymmetric extraction from constrained/trapped agents to benefit arbitrage-enabled beneficiaries.",
+    "mandatrophy_analysis": "This constraint faces genuine mandatrophy risk. The tension between calling it a 'coordination problem' (Rope/Tangled Rope) vs calling it 'pure extraction' (Snare) is not perspectival disagreement but analytical choice. The same institutional structure provides genuine coordination (infrastructure could not exist through market mechanisms alone) AND genuine extraction (costs are systematically shifted from beneficiaries to workers and future generations). The resolution requires recognizing that 'coordination' and 'extraction' are not mutually exclusive: the same system can coordinate essential services while extracting value through cost deferral and asymmetric risk allocation. The mandatrophy is resolved by declaring the Tangled Rope classification as primary (coordination function + active enforcement + asymmetric extraction + multiple beneficiary/victim groups all present) while documenting the snare experience of trapped agents within the system. The Piton and Scaffold perspectives show the historical trajectory: formal systems (inspection, standards, procedures) have become increasingly theatrical as actual maintenance capacity declined, while alternative models (green infrastructure, distributed resilience) are building exit pathways. The constraint is not immutable or necessary \u2014 it is a contingent institutional choice with political economy causes."
   },
   "boltzmann": {
     "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
-      "economic_productivity",
-      "public_health_outcomes"
-    ]
-  }
+      "urban_sprawl_density_externality",
+      "capital_flight_and_jurisdictional_arbitrage",
+      "climate_infrastructure_misalignment"
+    ],
+    "dual_formulation_note": "The maintenance debt constraint decomposes into distinct downstream claims: (1) systemic underinvestment in maintenance as institutional choice (political economy), and (2) the thermodynamic reality that all infrastructure degrades (natural law). These should not be conflated. The political economy story has high extractiveness (0.58) and is actionable. The thermodynamic story risks serving as false justification for the political choice."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
 }

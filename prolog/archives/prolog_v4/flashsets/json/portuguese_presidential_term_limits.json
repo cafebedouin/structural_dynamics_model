@@ -1,0 +1,83 @@
+{
+  "header": {
+    "constraint_id": "portuguese_presidential_term_limits",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "Portuguese Constitutional Term Limits (Article 123)",
+    "topic_domain": "political/legal",
+    "beneficiaries": [
+      "portuguese_democracy",
+      "aspiring_presidential_candidates"
+    ],
+    "requires_active_enforcement": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Average Portuguese Citizen",
+      "comment": "The average citizen benefits from the term limits as they prevent the potential for authoritarianism, even though they have no direct influence or exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Portuguese Constitutional Court",
+      "comment": "The court benefits from upholding the constitution, ensuring stability. The court has the analytical power to judge the laws."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "An Aspiring Presidential Candidate",
+      "comment": "Aspiring candidates may be constrained, but they also benefit from the knowledge that no one can occupy the presidency indefinitely."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Political Science Analyst",
+      "comment": "Analytical perspective to study impact in governance."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Under the Portuguese Constitution, Article 123 establishes presidential term limits, preventing any individual from serving more than two consecutive terms. This provision aims to prevent the concentration of power and safeguard democratic principles, ensuring a regular turnover of leadership and fostering a more inclusive political landscape.",
+    "key_agents": [
+      "Portuguese Democracy: Beneficiary (powerless/trapped) \u2014 Benefits from the prevention of long-term concentration of power.",
+      "Portuguese Constitutional Court: Beneficiary (institutional/analytical) \u2014 Benefits from upholding the rule of law and preventing constitutional overreach.",
+      "Aspiring Presidential Candidates: Beneficiary (powerful/mobile) - benefits from the structural openings for leadership",
+      "Incumbent President: Limited Power (moderate/constrained) \u2014 the constraint limits the power"
+    ],
+    "logic_rationale": "The term limits are primarily a coordination mechanism (Rope) because they promote democratic values and prevent power concentration. The extractiveness is low because they don't severely restrict anyone's freedom, they only limit the duration of the presidential term. The suppression is also low, as it doesn't heavily suppress any alternative political arrangement.",
+    "perspectival_gap": "While all perspectives generally agree that the term limits are beneficial, they differ in the degree of impact. The average citizen benefits indirectly, while the court's and aspiring candidates' benefits are more direct and tangible. All see as rope, due to low extraction",
+    "directionality_logic": "The average citizen's directionality is more passive as they don't have direct control or influence over the enforcement of term limits, yet they benefit from the broader democratic safeguards. The Constitutional Court's directionality is highly beneficial because upholding the term limits reinforces their role and authority within the political system. The aspiring candidates benefit as they get opportunities.",
+    "mandatrophy_analysis": "This constraint is designed to avoid mandatrophy by being a clear limitation for a political position without creating an avenue for mandatrophic extraction."
+  },
+  "omegas": [],
+  "measurements": [],
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

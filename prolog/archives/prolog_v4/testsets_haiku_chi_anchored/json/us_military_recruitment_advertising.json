@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "us_military_recruitment_advertising",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "usma"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "US Military Recruitment Advertising",
+    "topic_domain": "political/defense/labor_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "department_of_defense",
+      "military_contractors"
+    ],
+    "victims": [
+      "prospective_recruits",
+      "economically_disadvantaged_youth",
+      "informed_consent_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Prospective Recruit from Economically Disadvantaged Background",
+      "comment": "PERSPECTIVE 1: ECONOMICALLY DISADVANTAGED RECRUIT (SNARE) \u2014 Faces limited employment alternatives; recruitment messaging targets low-income neighborhoods with curated imagery emphasizing stability, tuition assistance, and upward mobility while suppressing information about combat trauma, long-term disability, and mortality. Cannot exit the advertising ecosystem; targeted recruitment creates information asymmetry. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The High School Student Targeted by Recruiter-School Relationship",
+      "comment": "PERSPECTIVE 2: HIGH SCHOOL STUDENT (SNARE) \u2014 Constrained by parental authority, school relationships with recruiters, and limited information about alternatives. School-recruiter relationships create information monopoly. Theater-heavy advertising (sports sponsorships, esports teams, social media influencers) creates artificial social proof. d\u22480.80, f(d)\u22481.20, \u03c3=0.9 \u2192 \u03c7\u22480.56."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Department of Defense Recruitment Command",
+      "comment": "PERSPECTIVE 3: DEPARTMENT OF DEFENSE (ROPE) \u2014 Institutional beneficiary with strategic arbitrage. Advertising solves a genuine coordination problem: communicating military opportunities to eligible youth. DoD sees recruitment messaging as coordination; the institutional frame normalizes information curation as legitimate messaging strategy. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Military Families and Veterans Organizations",
+      "comment": "PERSPECTIVE 4: MILITARY FAMILIES AND VETERANS ORGS (TANGLED ROPE) \u2014 Organized actors with dual interest: families benefit from recruitment (intergenerational participation, community stability) but also bear costs of casualty, disability, and trauma. See recruitment advertising as partly coordination (connecting qualified recruits to opportunity) and partly extraction (targeting vulnerable populations, suppressing casualty information). d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Schools and School Districts Hosting Recruiters",
+      "comment": "PERSPECTIVE 5: SCHOOL DISTRICTS (PITON) \u2014 Institutional actors with degraded function. Schools maintain JROTC programs and recruiter access for stated educational purposes, but theater ratio is high: actual educational function is secondary to recruitment pipeline. Theater includes military aesthetics (uniforms, discipline narratives), JROTC performances, recruiter presence in hallways. theater_ratio\u22480.81 satisfies piton gate. d\u22480.25, f(d)\u22480.05, \u03c3=0.9 \u2192 \u03c7\u22480.04. Low extraction but high theater."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized Labor Recruitment Frame)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE MOUNTAIN (NATURAL LAW VIEW) \u2014 Observer may frame recruitment advertising as an immutable feature of military labor markets: all employment recruitment involves curation and persuasion; military recruitment is continuous with civilian recruiting. However, structural data (\u03b5=0.58, suppression=0.68, theater=0.81) contradicts mountain classification. The engine identifies this as a false summit: military recruitment's information asymmetry, targeting of economically vulnerable populations, and suppression of casualty/disability information are contingent institutional arrangements, not natural laws of employment. accessibility_collapse would be <0.85; resistance >0.15."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "informed_consent_threshold",
+      "question": "What level of casualty/disability information disclosure constitutes adequate informed consent for military recruitment targeting of youth?",
+      "resolution_mechanism": "Comparative analysis of recruitment messaging in volunteer militaries (US, UK) vs conscript systems (Israel, S. Korea); assessment of recruits' actual baseline knowledge vs advertised knowledge; longitudinal tracking of recruit regret and documented unrealistic expectations",
+      "impact": "If threshold requires explicit casualty statistics in all recruitment: current advertising violates informed consent, classification strengthens as snare. If threshold is satisfied by buried fine-print disclaimers: snare classification remains but suppression metric may need adjustment.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Required level of casualty and disability information for informed consent"
+    },
+    {
+      "id": "school_recruiter_coercion_mechanism",
+      "question": "Does recruiter access to schools create coercive pressure on students, or is school-based recruitment merely convenient information provision?",
+      "resolution_mechanism": "Comparison of recruitment rates in schools with vs without JROTC/recruiter presence; analysis of recruiter targeting data (zip codes, school demographics); student interviews on perceived pressure; analysis of school district policies regarding recruiter access",
+      "impact": "If strong coercive mechanism: exit_options for high school student perspective should be 'trapped' not 'constrained'; classification shifts toward pure snare across younger perspectives. If convenient information: exit_options justified as 'constrained,' tangled rope classification becomes more defensible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether school-based recruiting creates systematic coercive pressure"
+    },
+    {
+      "id": "advertising_suppression_vs_curation",
+      "question": "Does military recruitment advertising constitute legitimate message curation or illegitimate suppression of material information?",
+      "resolution_mechanism": "Comparison of casualty/disability prevalence rates vs information presented in advertising; analysis of advertiser guidelines and editorial policies; recruit survey on whether they recalled casualty information before enlisting; longitudinal outcome data on mismatch between advertised vs actual experience",
+      "impact": "If suppression is systematic and deliberate: supports high suppression metric (0.68) and snare classification. If curation is comparable to civilian recruitment: snare classification weakens toward tangled rope; suppression metric should decrease to ~0.40.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether information absence is legitimate curation or illegitimate suppression"
+    },
+    {
+      "id": "theater_decline_trajectory",
+      "question": "Is military recruitment advertising theater ratio increasing (Goodhart drift toward pure persuasion theater) or stable (constant background theater in all recruitment)?",
+      "resolution_mechanism": "Longitudinal analysis of recruitment campaign content (1980\u20132026); measurement of factual claim density vs emotional/aspirational content; analysis of budget allocation (special operations cinematography vs basic information materials); comparison to civilian recruitment advertising theater baseline",
+      "impact": "If theater is increasing above civilian baseline: piton classification becomes stronger; degradation narrative supported. If theater is constant or comparable: piton classification may be premature; constraint may be a stable tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trajectory of theater ratio in recruitment messaging"
+    },
+    {
+      "id": "economic_vulnerability_targeting",
+      "question": "Is military recruitment deliberately targeted at economically disadvantaged youth, or is disparity in recruitment prevalence simply a consequence of geographic and information access differences?",
+      "resolution_mechanism": "Analysis of recruitment spending by zip code and median household income; recruiter training materials and targeting guidelines; comparison of recruiter deployment density in high-poverty vs affluent school districts; analysis of advertising platform selection (YouTube, TikTok in low-income demographics vs LinkedIn, college-affiliated channels in affluent regions)",
+      "impact": "If deliberate targeting: supports 'victims' classification of disadvantaged youth; suppression metric and snare classification reinforced. If passive disparity: snare classification may weaken; suppression becomes more about information asymmetry than active targeting.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether recruitment targeting is deliberately concentrated on economically vulnerable populations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.81
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "US military recruitment advertising presents a structural constraint on informed consent, particularly for economically disadvantaged youth. The constraint exhibits the properties of a snare: the Department of Defense benefits from a reliable supply of recruits, while prospective recruits from low-income backgrounds bear the costs of joining an institution with significant casualty and disability risk. The recruitment advertising apparatus suppresses information about combat trauma, sexual assault prevalence, and long-term disability while emphasizing educational benefits, career stability, and upward mobility. The constraint operates through multiple vectors: school-based recruiter access (JROTC programs, in-school recruitment days), targeted digital advertising (YouTube, TikTok in low-income ZIP codes), sports sponsorships, esports team partnerships, and influencer recruitment. The theater ratio (0.81) reflects that modern military recruitment relies heavily on aspirational and emotional messaging (cinematic video content, athlete testimonials, gaming/esports integration) rather than factual information about actual service conditions. The extractiveness has increased over the 1990\u20132026 interval as recruitment techniques have become more sophisticated, targeting has become more granular, and casualty information has been more effectively suppressed from mainstream recruitment channels.",
+    "key_agents": [
+      "Department of Defense (Institutional/Arbitrage) \u2014 Beneficiary; solves genuine recruitment problem but extracts through information asymmetry and targeting vulnerability",
+      "Economically Disadvantaged Youth (Powerless/Trapped) \u2014 Primary victim; faces limited employment alternatives and targeted recruitment in low-income schools; cannot exit advertising ecosystem",
+      "High School Students (Moderate/Constrained) \u2014 Secondary victims; constrained by school relationships with recruiters and limited information about alternatives",
+      "Military Families and Veterans (Organized/Constrained) \u2014 Dual interest; benefit from intergenerational participation but bear costs of casualty and trauma",
+      "School Districts (Institutional/Arbitrage) \u2014 Piton actors; maintain JROTC and recruiter access for educational framing but actual function is primarily recruitment pipeline; theater-heavy (uniforms, discipline narratives, performances)",
+      "Informed Consent Integrity (Abstract/Trapped) \u2014 Structural victim; collective epistemic good that cannot organize or exit; bearing cost of information suppression",
+      "Analytical Observer (Analytical/Analytical) \u2014 Risks naturalizing contingent institutional arrangements (message curation, targeting strategies) as immutable features of employment recruitment"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The DoD captures recruits from a population with limited alternatives; the extraction is not maximal because recruits do derive real benefits (education, employment, training). However, the 30-year trajectory shows increasing extractiveness as targeting has become more sophisticated. Theater ratio (0.81): High. Modern military recruitment relies heavily on aspirational and emotional content rather than factual service information. This has increased from 0.52 (1990s straightforward recruitment) to 0.81 (contemporary cinematic campaigns, esports sponsorships, influencer partnerships). The theater includes carefully curated imagery (physical fitness, camaraderie, technology), performance of discipline (JROTC uniforms and ceremonies), and narrative construction (stories of upward mobility, service meaning). Suppression (0.68): Moderate-high. Systematic absence of casualty statistics, disability prevalence, sexual assault rates, and mental health outcomes from mainstream recruitment messaging. Information is not unavailable (exists in Department of Veterans Affairs reports, academic studies), but is actively excluded from recruitment materials. The suppression is not absolute \u2014 some recruits find alternative information sources \u2014 but the default recruit pathway involves significant information asymmetry.",
+    "perspectival_gap": "The core perspectival gap separates the DoD's frame (recruitment is coordination solving a labor market information problem) from the economically disadvantaged youth's frame (recruitment is targeted extraction from a population with no exit alternatives). The DoD sees rope: messaging enables matching qualified recruits to legitimate opportunities. Economically disadvantaged youth see snare: limited employment alternatives, targeted recruitment in their schools, information suppression about casualty/disability, and contractual lock-in (8-year commitment). School districts occupy a middle position (piton): they maintain recruiter access for ostensible educational purposes (JROTC leadership training), but the actual function is primarily pipeline recruitment; the theatrical component (uniforms, drill performances) creates social proof rather than educational value. Military families see tangled rope: they participate in recruitment networks and benefit from intergenerational military identity, but they also bear the actual costs (casualty, disability, trauma) that recruitment advertising suppresses. The false mountain perspective (naturalized recruitment as immutable feature of labor markets) obscures the structural contingency: this particular form of recruitment \u2014 targeting economically vulnerable youth with emotionally manipulative content while suppressing casualty information \u2014 is not inherent to military employment but is a deliberate institutional arrangement.",
+    "directionality_logic": "Economically disadvantaged recruits: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximum extraction. Limited employment alternatives trap this population; information suppression prevents exit; career lock-in is contractual (8-year commitment). High school students: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.20. High extraction. School-recruiter relationship creates access monopoly; parental authority and school authority constrain exit; information asymmetry favors recruiter. DoD: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. Institutional actor with strategic flexibility; can adjust recruitment messaging, target populations, and information disclosure. Military families: Victim + constrained (but with some benefits) \u2192 d\u22480.65, f(d)\u22480.95. Mixed extraction and coordination. Families benefit from intergenerational military identity and community, but also bear casualty/disability costs that recruitment advertising suppresses. School districts: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.09. Piton classification comes from theater gate (0.81 \u2265 0.70), not from high directionality; schools benefit from recruiter relationships (financial support for JROTC, ease of student data access) and arbitrage (can withdraw recruiter access if pressured, though rarely do). Informed consent integrity: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Abstract collective with no organizational capacity; cannot exit constraint ecosystem.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy between 'military recruitment is legitimate labor market coordination' (DoD frame, rope classification) and 'military recruitment is extraction from vulnerable populations' (recruit frame, snare classification). The key distinction is not whether military recruitment exists (it does, and some coordination function is necessary), but whether the actual instantiation of this constraint exhibits the structural properties of snare (high extraction, high suppression, high theater, targeting of vulnerable populations, information asymmetry). The structural data (\u03b5=0.58, suppression=0.68, theater=0.81) supports snare classification from the recruit perspective. The DoD's rope classification is correct from its institutional perspective \u2014 it genuinely solves a recruitment problem \u2014 but misses the asymmetric extraction and information suppression that characterize the constraint from the recruit's perspective. The mandatrophy is resolved by recognizing that both are correct perspectives on the same underlying structure: the constraint is snare-from-below (recruit view) and rope-from-above (DoD view), and the presheaf of perspectives reveals the true structure: a snare that maintains its appearance of rope-like coordination through theater, targeting, and suppression of alternative framings."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "socioeconomic_educational_access",
+      "informed_labor_consent",
+      "military_casualty_epistemic_suppression"
+    ],
+    "dual_formulation_note": "Military recruitment advertising is downstream of broader US military force structure constraints and economic inequality constraints. Causally independent are the specific recruitment messaging strategies, information suppression mechanisms, and targeting methodologies that constitute this constraint. The upstream constraint (economic inequality creating limited employment alternatives for low-income youth) enables this constraint but is structurally distinct."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

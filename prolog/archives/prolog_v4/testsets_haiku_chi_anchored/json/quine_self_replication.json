@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "quine_self_replication",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "quine"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Quines (Computational Self-Replication)",
+    "topic_domain": "theoretical_computer_science/mathematics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computational Theorist",
+      "comment": "PERSPECTIVE 1: COMPUTATIONAL THEORIST (MOUNTAIN) \u2014 Quines are a fundamental consequence of Turing completeness and fixed-point theory. Any Turing-complete language admits quines by the Kleene fixed-point theorem and G\u00f6del's diagonalization. The constraint is universal and invariant across all computational substrates. d=0.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Programming Language Designer",
+      "comment": "PERSPECTIVE 2: PROGRAMMING LANGUAGE DESIGNER (MOUNTAIN) \u2014 No language design choice can eliminate quines. Turing completeness entails quines mathematically. Attempting to restrict the language to prevent quines reduces it below Turing completeness. The constraint is an immutable consequence of computational universality. d=0.48, f(d)\u22480.60, \u03c3=1.2 \u2192 \u03c7\u22480.06."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Programmer Encountering Self-Reference",
+      "comment": "PERSPECTIVE 3: PROGRAMMER (MOUNTAIN) \u2014 A developer attempting to write code that cannot produce itself will discover this is impossible in any Turing-complete language. The constraint is mathematically unavoidable. There is no workaround, no escape. d=0.95, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.11."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Computer Science Educational Community",
+      "comment": "PERSPECTIVE 4: EDUCATIONAL COMMUNITY (ROPE) \u2014 Quines serve as a coordination mechanism for teaching fundamental concepts: Turing completeness, fixed-point theory, recursion, and self-reference. Quines enable collective understanding of how computation models itself. The constraint solves a genuine pedagogical problem with no coercive overhead. d=0.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.05."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quantum_computation_generalization",
+      "question": "Do quantum computers, which are Turing-universal via classical simulation, also necessarily admit quantum quines, or is the self-reference constraint different in the quantum domain?",
+      "resolution_mechanism": "Proof of whether quantum Turing machines admit analogous fixed-point constructions; investigation of whether quantum measurement breaks self-reference symmetry",
+      "impact": "If quantum quines exist identically: the constraint is a property of Turing universality alone, not of classical computation. If quantum quines require modification: the constraint is substrate-dependent at the quantum level.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the quine constraint generalizes to quantum computation"
+    },
+    {
+      "id": "incompleteness_vs_quines_relationship",
+      "question": "Is the existence of quines fundamentally the same phenomenon as G\u00f6del's incompleteness, or are they structurally distinct fixed-point applications?",
+      "resolution_mechanism": "Formal analysis of the proof structures; comparison of the diagonalization methods; examination of whether incompleteness implies quines or vice versa",
+      "impact": "If identical: quines are a computational shadow of logical incompleteness, making this a single unified constraint across logic and computation. If distinct: they are separate fixed-point phenomena with different implications.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Relationship between quines and G\u00f6del incompleteness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Quines represent a fundamental constraint on computation: any program in a Turing-complete language can, in principle, produce a copy of its own source code as output. This is not a limitation or design choice \u2014 it is a logical necessity that follows from the expressive power of universal computation. The constraint emerges naturally from G\u00f6del's fixed-point theorem and Kleene's recursion theorem. It has no beneficiaries or victims in the extractive sense; rather, it is a structural feature of computation itself. All observers \u2014 theorists, language designers, programmers \u2014 encounter the same immutable wall: self-reference cannot be escaped. The constraint is invariant across all Turing-complete languages, all computational substrates, and all attempts at restriction. Quines serve as a pedagogical tool for understanding this constraint, but the tool does not create the constraint \u2014 it merely makes visible what Turing completeness entails.",
+    "key_agents": [
+      "Computational Theorists (analytical/arbitrage): Recognize quines as a consequence of fundamental theory",
+      "Programming Language Designers (powerful/arbitrage): Cannot eliminate quines without breaking Turing completeness",
+      "Programmers (powerless/trapped): Encounter the constraint as an inescapable logical fact",
+      "Educational Community (organized/mobile): Use quines as a coordination mechanism for teaching computation"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Extremely low. Quines do not extract value from any agent. The constraint is purely structural, not redistributive. The slight non-zero value (0.08 rather than 0.00) reflects the minimal informational cost of understanding the constraint \u2014 one must learn fixed-point theory. Suppression (0.02): Minimal. There are no coercive mechanisms involved. The constraint is self-enforcing through mathematical necessity. Theater ratio (0.15): Low. Quines are almost entirely functional \u2014 the constraint is what it is, with minimal performative overhead. The small theater reflects only the pedagogical framing required to teach the concept, not any systematic misrepresentation. These metrics satisfy the mountain classification gate: \u03b5 \u2264 0.25, suppression \u2264 0.05, accessibility_collapse \u2265 0.85, resistance \u2264 0.15, emerges_naturally = true.",
+    "perspectival_gap": "Remarkably, there is no perspectival gap. All observers \u2014 whether computationally powerful (language designers), analytically sophisticated (theorists), or constrained (programmers) \u2014 encounter the identical constraint. A programmer writing in Python or C, a theorist analyzing Turing machines, and a designer creating a new language all confront the same immutable fact: Turing completeness entails quines. The constraint is truly invariant. This invariance is the hallmark of a mountain-type constraint: the observer's position, power, and exit options do not change the classification. The only variation is rhetorical \u2014 theorists call it the Kleene fixed-point theorem, designers accept it as a consequence of universality, programmers experience it as an inescapable logical truth \u2014 but the underlying constraint is identical.",
+    "directionality_logic": "No beneficiaries or victims. The constraint is not extractive. All agents face the same immutable wall, and no agent extracts benefit from others bearing the constraint. The constraint is a shared, universal fact of computation, not a redistributive mechanism. Directionality is uniform: d\u22480.72 for all analytical observers (the universal position from which the constraint is viewed). The formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) yields \u03c7 \u2248 0.08-0.09 for all observers, confirming the uniformity of the classification.",
+    "mandatrophy_analysis": "No mandatrophy resolution required. This constraint is not subject to mandatrophy because it contains no extractive asymmetry to mask. Quines are not camouflaged coordination; they are not snares pretending to be ropes. The constraint is transparent: all observers see exactly what it is, a logical necessity of universal computation. The very low theater_ratio (0.15) and extractiveness (0.08) ensure that no reframing, institutional maintenance, or performative activity is required to sustain the constraint. It sustains itself through mathematical inevitability."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "godels_incompleteness_theorem",
+      "halting_problem_undecidability"
+    ],
+    "dual_formulation_note": "Quines are deeply related to G\u00f6del's incompleteness theorem and the Halting problem through fixed-point and diagonalization arguments. However, quines are a distinct constraint: they concern self-representation in computation, while incompleteness concerns the limits of formal proof and the Halting problem concerns algorithmic decidability. Each constraint should be analyzed separately because they involve different fundamental concepts, even though they share common mathematical machinery (fixed-point theory). The network edges indicate that understanding one constraint informs understanding the others."
+  }
+}

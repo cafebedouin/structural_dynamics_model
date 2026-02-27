@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "robustness_vs_efficiency_tradeoff",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "robust"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Lean Systems Fragility: Robustness-Efficiency Tradeoff",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "efficiency_optimizers",
+      "capital_extractors"
+    ],
+    "victims": [
+      "system_resilience",
+      "workers_and_communities",
+      "supply_chain_dependents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Supply Chain Dependent",
+      "comment": "PERSPECTIVE 1: SUPPLY CHAIN DEPENDENT (SNARE) \u2014 A downstream manufacturer, logistics node, or economy dependent on just-in-time supply. Trapped by interconnection; cannot opt out without catastrophic loss. Bears full cost of supply shocks. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.77."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 2: PRECARIOUS WORKER (SNARE) \u2014 Lean labor systems eliminate buffer jobs and overtime protection. Worker trapped by economic necessity; system shocks mean wage loss or layoff with minimal severance. d\u22480.95, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.70."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Supply Manager",
+      "comment": "PERSPECTIVE 3: MID-TIER SUPPLY MANAGER (TANGLED ROPE) \u2014 Constrained by competitive pressure to adopt lean practices; benefits from coordination and cost savings but also bears shock risk. d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.49."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Efficiency Optimizer (Corporate)",
+      "comment": "PERSPECTIVE 4: EFFICIENCY OPTIMIZER / CORPORATE LEAN SYSTEM ARCHITECT (ROPE) \u2014 Experiences constraint as pure coordination mechanism. Lean systems solve the collective action problem of reducing redundancy and cost. Benefits from first-mover advantage and competitive edge. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Financial Capital Extractor",
+      "comment": "PERSPECTIVE 5: FINANCIAL CAPITAL EXTRACTOR / COST-CUTTING INVESTOR (ROPE) \u2014 Arbitrage between the cost savings from lean systems and the externalized shock costs. Organized institutional actor with diversified portfolio; can exit individual supply chain relationships without personal loss. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Net beneficiary through portfolio diversification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Supply Chain Resilience Coalition",
+      "comment": "PERSPECTIVE 6: SUPPLY CHAIN RESILIENCE COALITION (TANGLED ROPE) \u2014 Organized actors (supply chain councils, disaster recovery networks, resilience advocates) recognize both the coordination function of lean systems AND the extractive cost externalization. See the constraint as enforceable but asymmetric. d\u22480.45, f(d)\u22480.42, \u03c3=1.2 \u2192 \u03c7\u22480.26."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Industrial Legacy System",
+      "comment": "PERSPECTIVE 7: INDUSTRIAL LEGACY SYSTEM (PITON) \u2014 Traditional manufacturing with strategic reserves, buffer inventory, and redundancy persists in regulated sectors (defense, healthcare, critical infrastructure) but increasingly seen as inefficient theater. The buffer is maintained through regulatory mandate, not functional necessity. theater_ratio=0.55 approaches piton threshold; this perspective sees buffering as performative compliance rather than effective resilience. d\u22480.12, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, any system must choose a point on the robustness-efficiency continuum. The tradeoff is presented as a law of nature: you cannot have perfect efficiency AND perfect resilience. However, the structural data (\u03b5=0.52, suppression=0.68) contradicts this \u2014 the tradeoff is not immutable but contingent on incentive alignment and externality rules. This is a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "shock_magnitude_threshold",
+      "question": "What magnitude of exogenous shock (supply disruption, demand spike, geopolitical event) is sufficient to trigger system-wide cascade failure in a lean system?",
+      "resolution_mechanism": "Historical analysis of shock propagation: COVID-19 supply chains, semiconductor shortages, energy crises, port closures. Identify correlation between lean-adoption metrics and cascade failure timing/severity.",
+      "impact": "If threshold < 10% demand variance: lean systems are inherently fragile, and efficiency gains are illusory. If threshold > 30%: lean systems can absorb moderate shocks, and the tradeoff is more finely calibrated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Shock magnitude threshold for system cascade failure"
+    },
+    {
+      "id": "externality_internalization_cost",
+      "question": "What is the true cost of internalizing shock externalities (e.g., strategic reserves, backup suppliers, worker severance) relative to the efficiency gains from lean systems?",
+      "resolution_mechanism": "Cost accounting studies comparing fully-internalized resilience systems vs. lean systems + externalized shock costs. Include disruption costs, unemployment insurance, supply-chain recovery time, and reputation damage.",
+      "impact": "If internalization cost < lean savings: the tradeoff is an extractive redistribution, not a physical law. The constraint is a Snare (classification confirmed). If internalization cost > lean savings: the efficiency gains are net negative once true costs are tallied.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost of fully internalizing shock externalities"
+    },
+    {
+      "id": "distributed_resilience_viability",
+      "question": "Can decentralized, locally-redundant supply chains achieve both efficiency AND resilience through network topology changes rather than buffer inventory?",
+      "resolution_mechanism": "Case studies of regional supply-chain reorganization, distributed manufacturing networks, and mesh logistics. Compare cost and shock-recovery times vs. centralized lean systems.",
+      "impact": "If viability confirmed: the robustness-efficiency tradeoff is false, and the constraint is an artifact of centralization incentives (very high extraction potential). If viability fails: the tradeoff is real, but the frame of 'who bears shock cost' is still the classification driver.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether distributed resilience achieves both efficiency and robustness"
+    },
+    {
+      "id": "worker_coalition_capacity",
+      "question": "Can precarious workers organize into a coalition with sufficient power to enforce renegotiation of lean labor system terms, shifting shock costs back to employers?",
+      "resolution_mechanism": "Analysis of labor organizing attempts in lean-system sectors (logistics, food processing, just-in-time manufacturing). Measure success rates of collective bargaining for job security and severance.",
+      "impact": "If coalition capacity is high: the snare perspective is contestable, and the constraint could degrade to tangled_rope. If capacity is low: the snare classification is durable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Worker coalition capacity to renegotiate lean labor terms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The robustness-efficiency tradeoff is a foundational constraint in systems design that has become increasingly acute in globalized supply chains, just-in-time manufacturing, lean labor systems, and financial networks. The constraint presents itself as an immutable law of nature \u2014 you cannot have both maximum throughput and maximum resilience. However, the structural analysis reveals that the 'law' is actually a contingent institutional arrangement that externalizes shock costs onto powerless agents (workers, dependent supply chains, vulnerable communities) while concentrating efficiency gains among capital optimizers. The constraint exhibits classical tangled rope characteristics: genuine coordination benefits (lean systems do reduce waste and improve efficiency), combined with asymmetric extraction (beneficiaries capture gains, victims bear all shock costs). Over the 30-year interval analyzed, base extractiveness has risen from 0.28 to 0.52 as lean practices have spread and market pressure has intensified competition, forcing ever-tighter elimination of buffers. Theater ratio has risen from 0.35 to 0.55 as companies have added performative resilience language (supply chain diversity statements, business continuity plans) while actual redundancy has declined \u2014 the theatrical element increases as actual robustness decreases.",
+    "key_agents": [
+      "Efficiency Optimizers (Corporate): Institutional/arbitrage \u2014 capture cost savings and competitive advantage from lean systems; net beneficiary.",
+      "Financial Capital Extractors: Organized/arbitrage \u2014 diversified portfolios allow them to externalize shock costs; arbitrage between cost savings and externalized risk.",
+      "Supply Chain Dependents: Powerless/trapped \u2014 downstream manufacturers, logistics nodes, economies dependent on just-in-time supply; trapped by interconnection; bear full cost of supply shocks.",
+      "Precarious Workers: Powerless/trapped \u2014 lean labor systems eliminate buffer jobs and severance protection; trapped by economic necessity; face wage loss and layoff with minimal protection.",
+      "Mid-Tier Supply Managers: Moderate/constrained \u2014 forced to adopt lean practices by competitive pressure; benefit from coordination but bear significant shock risk.",
+      "Supply Chain Resilience Coalition: Organized/constrained \u2014 disaster recovery networks, supply chain councils, resilience advocates; see both coordination function and asymmetric extraction.",
+      "Industrial Legacy System: Institutional/arbitrage \u2014 traditional manufacturing with strategic reserves; buffer inventory increasingly seen as performative compliance in non-critical sectors.",
+      "Analytical Observer: Analytical/analytical \u2014 risks naturalizing contingent institutional arrangements as immutable physical laws."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The efficiency gains from lean systems are real and substantial (estimated 20-40% cost reduction), but they accrue predominantly to capital owners and efficient manufacturers. The extraction is not maximal (not 0.75+) because some efficiency gains are genuinely shared through lower consumer prices and improved access to goods. However, the gains are distributed asymmetrically \u2014 beneficiaries capture the full upside while victims bear the full downside. Suppression (0.68): High. The constraint is maintained through multiple suppression mechanisms: (1) Information asymmetry \u2014 shock probabilities are underestimated due to rare-event bias and optimization for mean conditions rather than tails; (2) Market pressure \u2014 any firm that maintains robust buffers faces competitive disadvantage and is disciplined by markets; (3) Narrative naturalization \u2014 the tradeoff is presented as a law of physics rather than a policy choice; (4) Collective action barriers \u2014 precarious workers are too dispersed to organize, and dependent supply chains are too interconnected to coordinate. Theater ratio (0.55): Moderate. The performative element is rising as companies add supply chain diversity statements and business continuity plans while actual redundancy declines. The theater represents a gap between claimed resilience and actual robustness. The theater is not yet dominant (not 0.70+) because many lean systems do deliver on their efficiency promise; the false element is the claim that efficiency-optimized systems are resilient.",
+    "perspectival_gap": "This constraint shows the full spectrum of classification from the same structural base. The efficiency optimizer sees coordination (Rope) \u2014 they are solving the real problem of waste elimination. The worker sees extraction (Snare) \u2014 the constraint redistributes shock risk onto them. The mid-tier manager sees hybrid coordination-extraction (Tangled Rope) \u2014 forced to adopt practices that benefit the industry but expose them to risk. The supply chain resilience coalition sees hybrid with enforcement (Tangled Rope) \u2014 they recognize both the coordination function and the asymmetric cost allocation. The legacy industrial system sees its own degraded ritual (Piton) \u2014 buffers are maintained for regulatory compliance, not functional resilience. The analytical observer sees an immutable tradeoff (Mountain) \u2014 but the structural data reveals this as a false summit. The perspectival gap widens over time as extractiveness increases from 0.28 to 0.52.",
+    "directionality_logic": "Efficiency Optimizer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; experiences constraint as pure coordination. Worker: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 worker cannot exit lean labor system and bears full shock cost. Supply Chain Dependent: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. High extraction \u2014 dependent has no alternative suppliers and bears full cost of supply shock. Mid-Tier Manager: Victim + constrained \u2192 d\u22480.65, f(d)\u22480.95. Significant extraction but not maximal; manager has some exit options (switching industries) but faces competitive discipline. Supply Chain Resilience Coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.42. Low effective extraction relative to base \u03b5 because organized agents have agency and exit paths. Financial Capital Extractor: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary through portfolio diversification. Legacy Industrial System: Institutional + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.05. Piton classification comes from theater gate (0.55), not from high chi.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the robustness-efficiency 'tradeoff' is not a physical law but a contingent institutional arrangement that achieves coordination (lean coordination, waste elimination) through asymmetric extraction (externalizing shock costs to powerless agents). The constraint is a textbook Tangled Rope: it has genuine coordination benefits (\u03b5=0.52 is moderate, not extreme extraction), requires active enforcement (market discipline, competitive pressure), and generates asymmetric extraction (beneficiaries capture gains, victims bear shock costs). The false summit perspective (natural law view) is detected by the structural data: if the tradeoff were truly immutable, suppression would be near zero (no need to suppress alternatives because none exist), but suppression is 0.68, indicating active maintenance of the extractive arrangement. The mandatrophy is resolved by: (1) identifying the genuine coordination function (waste elimination, efficiency improvement), (2) identifying the extractive function (externalizing shock costs), (3) measuring the asymmetry (beneficiaries capture 100% of efficiency gains in many cases; victims bear 100% of shock costs), and (4) concluding that the constraint is Tangled Rope, not Mountain. The resolution also implies that renegotiating the cost-allocation rules could maintain coordination benefits while reducing extraction \u2014 the tradeoff is not immutable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_concentration",
+      "just_in_time_labor_precarity",
+      "financial_leverage_instability",
+      "ecosystem_collapse_vulnerability"
+    ],
+    "dual_formulation_note": "The robustness-efficiency tradeoff is the primary structural constraint. Downstream constraints (supply chain concentration, labor precarity, financial leverage) represent specific domains where the tradeoff is implemented and enforced. The upstream constraint (ecosystem collapse vulnerability) represents the failure mode when robustness is degraded."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ]
+}

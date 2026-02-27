@@ -2,37 +2,45 @@
   "header": {
     "constraint_id": "availability_heuristic",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "avail"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.6,
-    "claimed_type": "snare",
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
     "human_readable": "Availability Heuristic (as exploited by information systems)",
     "topic_domain": "cognitive/social/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "media_platforms",
-      "advertisers",
-      "political_campaigns"
+      "attention_capturing_actors",
+      "sensational_information_producers"
     ],
     "victims": [
-      "general_public",
-      "rational_discourse",
-      "evidence_based_policymakers"
+      "decision_makers_relying_on_availability",
+      "epistemic_accuracy"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The General Public",
-      "comment": "PERSPECTIVE 1: THE GENERAL PUBLIC (SNARE) — Individually trapped within information ecosystems that algorithmically amplify vivid, emotionally charged, and recent events. This extracts attention and shapes beliefs, making exit from the distorted perception of reality nearly impossible. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.16. This extreme effective extraction firmly classifies the constraint as a Snare."
+      "label": "The Individual Decision-Maker",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL DECISION-MAKER (SNARE) \u2014 Cognitive architecture is constitutively vulnerable to availability bias. Cannot exit the heuristic; bears full cost of systematic overweighting vivid/recent/sensational information. No alternative mental mechanism provided; suppression is cognitive \u2014 the bias is built into human attention. High experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Informed Deliberator",
+      "comment": "PERSPECTIVE 2: INFORMED DELIBERATOR (TANGLED ROPE) \u2014 Some exit option through deliberate debiasing (seeking base-rate data, historical context, statistical literacy). But exit costs are high: requires cognitive effort, access to reliable information infrastructure, and time pressure that often prevents bias correction. Mixed experience: benefits from fast heuristic when accuracy matters less; extracted from when high-stakes decisions rely on availability."
     },
     {
       "classification_type": "rope",
@@ -40,26 +48,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Media Platform",
-      "comment": "PERSPECTIVE 2: THE MEDIA PLATFORM (ROPE) — Experiences the system as a pure coordination mechanism for matching users with 'engaging' content. The extraction of attention is framed as a fair value exchange for the service. From this position, the heuristic is a tool for efficient market-making. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. Negative effective extraction signifies a net beneficiary."
+      "label": "The Media/Platform Institution",
+      "comment": "PERSPECTIVE 3: MEDIA/PLATFORM INSTITUTION (ROPE) \u2014 Experiences availability heuristic as a coordination mechanism: capturing attention via vivid content is their core coordination function. Beneficiary; can arbitrage by switching narrative framing, controlling what becomes salient. Net coordination benefit \u2014 the constraint enables their primary function of audience capture."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Cognitive Scientist",
-      "comment": "PERSPECTIVE 3: THE COGNITIVE SCIENTIST (TANGLED ROPE) — The analytical view recognizes both the coordination function (rapidly disseminating salient information) and the severe, asymmetric extraction (systematic distortion of risk perception for profit). The underlying heuristic is a neutral cognitive mechanism, but its industrial-scale exploitation creates a classic Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.94."
-    },
-    {
-      "classification_type": "tangled_rope",
+      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Evidence-Based Policymaker",
-      "comment": "PERSPECTIVE 4: THE POLICYMAKER (TANGLED ROPE) — Constrained by a public whose priorities are shaped by the heuristic, making it difficult to address statistically significant but less 'available' threats. They are victims of the constraint but must also work within it, using communication strategies that acknowledge public perception. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.51."
+      "spatial_scope": "global",
+      "label": "The Data Literacy Movement",
+      "comment": "PERSPECTIVE 4: DATA LITERACY MOVEMENT (SCAFFOLD) \u2014 Organized agents (educators, journalists, platforms implementing friction/disclosure) are building cognitive infrastructure for bias-resistant decision-making. Education, statistical literacy programs, and algorithmic transparency are creating sunset pathways. Suppression declining as alternative cognition structures mature; high theater early (debiasing programs are aspirational) but real functional reduction over generational timescale."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Evolutionary Psychology Frame",
+      "comment": "PERSPECTIVE 5: EVOLUTIONARY PSYCHOLOGY FRAME (PITON) \u2014 'Availability bias is adaptive heuristic for ancestral environments' is largely performative. The frame once explained why the bias exists; now it functions as justification for why nothing can change. Availability bias persists institutionally not because it's optimal, but because information systems profit from it. Theater ratio high; functional explanation degraded."
     },
     {
       "classification_type": "mountain",
@@ -67,87 +75,115 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Evolutionary Psychologist (Natural Law View)",
-      "comment": "PERSPECTIVE 5: THE EVOLUTIONARY PSYCHOLOGIST (MOUNTAIN) — This perspective frames the heuristic as a fixed, immutable feature of human cognition, an evolved adaptation that is unchangeable. This naturalizes the constraint, viewing its effects as an inevitable consequence of our mental hardware. The engine will flag this as a false summit, as the high ε and suppression values are properties of the *exploitative system*, not the cognitive bias in isolation."
+      "label": "The Analytical Observer (Cognitive Architecture View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COGNITIVE ARCHITECTURE VIEW (MOUNTAIN) \u2014 From a civilizational perspective, availability heuristic emerges necessarily from bounded attention and memory: human minds have finite cognitive capacity; attention is inherently selective; recent/vivid information is computationally cheaper to retrieve. This perspective sees the bias as an immutable feature of human cognition. However, the structural data contradicts this \u2014 the extraction and suppression metrics reflect systematic exploitation by information systems, not immutable cognitive law."
     }
   ],
   "omegas": [
     {
-      "id": "intent_vs_emergence",
-      "question": "Is the large-scale exploitation of the availability heuristic a result of deliberate strategic design by platforms or an emergent property of optimizing for engagement metrics?",
-      "resolution_mechanism": "Analysis of internal platform design documents, A/B test results for ranking algorithms, and interviews with system architects.",
-      "impact": "If primarily deliberate, the Snare classification is strengthened. If primarily emergent, the Tangled Rope classification becomes more accurate from the analytical perspective, as the 'coordination' function (engagement) is the driver.",
+      "id": "adaptive_vs_exploited_threshold",
+      "question": "When does availability heuristic transition from adaptive decision-making shortcut to exploited bias?",
+      "resolution_mechanism": "Comparative analysis of decision outcomes in low-information environments vs high-information environments; measurement of heuristic success rates by domain and information density",
+      "impact": "If always exploited: snare from all perspectives. If adaptively useful in some contexts: rope or scaffold from beneficiary perspectives becomes legitimate coordination.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Distinguishing between deliberate exploitation and emergent properties of engagement optimization."
+      "type_class": "conceptual",
+      "description": "Threshold between adaptive heuristic and exploited bias"
     },
     {
-      "id": "cognitive_malleability",
-      "question": "To what extent can individuals be trained to consciously override the availability heuristic, even when immersed in an amplifying information system?",
-      "resolution_mechanism": "Longitudinal studies on the effectiveness of media literacy and cognitive bias training programs.",
-      "impact": "High malleability would suggest a Scaffold-based intervention is possible, reducing the constraint's power. Low malleability reinforces the Snare classification for individuals.",
-      "confidence": "low",
+      "id": "algorithmic_amplification_causality",
+      "question": "Do algorithmic recommendation systems exploit pre-existing availability bias or actively amplify it beyond natural cognitive limits?",
+      "resolution_mechanism": "Controlled experiments comparing information selection in human-only vs algorithm-curated environments; measurement of salience divergence between algorithmic feeds and diverse information sources",
+      "impact": "If exploit only: extractiveness \u2264 0.40 (snare as contingent institutional arrangement). If amplify: extractiveness \u2265 0.65 (snare as co-produced by cognitive and technological coupling).",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Assessing the potential for training to mitigate the heuristic's effects."
+      "description": "Whether algorithms amplify or merely exploit availability bias"
+    },
+    {
+      "id": "debiasing_infrastructure_scalability",
+      "question": "Are data literacy and statistical education interventions scalable to population level or inherently limited to epistemic elites?",
+      "resolution_mechanism": "Longitudinal tracking of cognitive bias prevalence across education levels and access to debiasing resources; measurement of base-rate reasoning improvement in intervention vs control populations",
+      "impact": "If scalable: scaffold sunset is real; suppression declines over generational horizon. If elite-limited: suppression persists; constraint remains snare for majority, rope for educated minority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of debiasing interventions to population level"
+    },
+    {
+      "id": "attention_economy_necessity",
+      "question": "Is the availability-heuristic exploitation a necessary feature of attention-based economic models or contingent institutional choice?",
+      "resolution_mechanism": "Historical analysis of media and platform economics; comparison of business models that profit from vs defend against availability bias; examination of platform design alternatives",
+      "impact": "If necessary: extractiveness is inherent to attention economies (piton/mountain boundary). If contingent: extractiveness reflects extractive platform choice (snare/tangled rope distinction).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether bias exploitation is necessary to attention-economy models"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.45
+      "time_point": 10,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.68
+      "time_point": 20,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.4
+      "time_point": 10,
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.6
+      "time_point": 20,
+      "value": 0.64
     }
   ],
   "interval": {
     "start": 0,
-    "end": 30
+    "end": 20
   },
   "commentary": {
-    "narrative_context": "The availability heuristic is a cognitive shortcut where individuals judge the frequency or likelihood of an event by the ease with which examples come to mind. While a natural part of human cognition, this heuristic is systematically exploited by modern information systems (social media, news algorithms, advertising networks). These systems amplify vivid, recent, and emotionally charged information, creating a significant gap between an individual's perceived reality and statistical reality. This manufactured availability extracts attention for profit and shapes public opinion for political gain.",
+    "narrative_context": "The availability heuristic is a cognitive shortcut where individuals estimate probability or frequency by the ease with which examples come to mind. This heuristic itself is not a constraint \u2014 it is a cognitive mechanism. But when information systems deliberately design to exploit this mechanism by controlling salience, visibility, and narrative recency, a structural extraction emerges. Media outlets, social platforms, and algorithmic recommenders amplify vivid, emotionally-charged, recent information disproportionately to its statistical importance. Decision-makers systematically overweight available examples, leading to misallocation of attention, capital, policy, and risk management across economic, political, and health domains. The constraint exhibits tangled rope structure: it has a genuine coordination component (media/platforms use salience to aggregate audience attention efficiently) but paired with asymmetric extraction (individual decision-makers systematically misallocate resources due to overweighting vivid information). The theater ratio (0.64) reflects that much discourse about availability bias frames it as inevitable cognitive architecture rather than as a deliberately designed feature of information systems. Over the 20-year interval (spanning roughly 2005-2025), the extractiveness has increased from 0.35 to 0.58 as algorithmic curation has become more sophisticated and pervasive, and as media competition has intensified pressure to maximize salience capture.",
     "key_agents": [
-      "General Public: Primary target (powerless/trapped) — Their perception of risk and reality is distorted, leading to poor decision-making and heightened anxiety.",
-      "Media Platforms & Advertisers: Primary beneficiaries (institutional/arbitrage) — Profit by capturing and selling the attention generated by exploiting the heuristic.",
-      "Political Campaigns: Secondary beneficiaries (organized/arbitrage) — Manipulate public opinion and voter behavior by making certain issues or threats feel more salient.",
-      "Evidence-Based Policymakers: Victims (organized/constrained) — Their ability to govern based on statistical reality is undermined by a public reacting to manufactured crises.",
-      "Rational Discourse: Abstract victim (powerless/trapped) — The quality of public debate degrades as it becomes dominated by emotional reaction rather than reasoned analysis."
+      "Individual Decision-Makers: Primary victims (powerless/trapped) \u2014 bear systematic decision errors from overweighting salient information; cannot exit the heuristic",
+      "Media Institutions & Platforms: Primary beneficiaries (institutional/arbitrage) \u2014 profit from salience capture and attention monopolization; extract audience focus",
+      "Informed Deliberators: Secondary victims (moderate/constrained) \u2014 can partially exit through debiasing but face high cognitive and information costs",
+      "Data Literacy Movement: Organized agents (organized/constrained) \u2014 building educational and infrastructural alternatives; represent sunset pathway",
+      "Epistemic Accuracy: Abstract victim (powerless/trapped) \u2014 collective epistemic commons damaged by systematically distorted information distributions",
+      "Algorithmic Recommender Systems: Institutional amplifiers (institutional/arbitrage) \u2014 not original exploiters but dramatically amplify availability bias effects",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing exploitation as immutable cognitive law"
     ],
-    "logic_rationale": "Extractiveness (ε=0.68): High. The value is extracted in the form of attention, which is then monetized or converted into political capital. The asymmetry is severe: platforms gain immense value, while the public's decision-making quality is degraded. Suppression (0.75): High. Algorithmic feeds and filter bubbles actively suppress less sensational, more nuanced, or statistically representative information. It is structurally difficult for a typical user to seek out and weigh a balanced set of information. Theater Ratio (0.60): The presentation of information is optimized for engagement (the 'theater') over accuracy or context (the 'function'). Headlines, thumbnails, and content selection are performative acts designed to trigger a cognitive shortcut.",
-    "perspectival_gap": "The gap is profound. Beneficiaries (platforms) see a benign Rope, a tool for coordinating user attention with relevant content. The primary victims (the public) are caught in a Snare, their cognitive biases turned against them. The analytical observer sees a Tangled Rope, acknowledging the system's dual role in both disseminating information and extractively distorting perception. A different analytical view (evolutionary psychology) might misclassify it as an unchangeable Mountain, a naturalization fallacy the framework is designed to detect by pointing to the high, non-natural ε and suppression scores.",
-    "directionality_logic": "The directionality is derived from the clear beneficiary/victim structure. Media Platforms, as beneficiaries with arbitrage exit, have a very low directionality (d), resulting in negative effective extraction (χ < 0). The General Public, as victims with trapped exit, have a very high directionality (d≈1.0), resulting in an effective extraction (χ) that is significantly amplified from the base ε, confirming the Snare classification from their perspective.",
-    "mandatrophy_analysis": "This constraint story resolves a key mandatrophy: distinguishing a natural cognitive bias from its artificial, industrial-scale exploitation. A naive analysis might label the heuristic itself a Mountain ('it's just how people think'). The DR framework avoids this by focusing on the *system* that exploits it. The high ε and suppression values are not properties of the human mind; they are properties of the technological and economic system built around it. This correctly identifies the structure as a contingent, extractive arrangement (Snare/Tangled Rope) rather than a natural law."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The availability heuristic enables significant extraction because information systems can predictably and systematically manipulate which examples become salient. The extraction is not total (people have some access to corrective information, some deliberative capacity) but substantial \u2014 the 20-year trend shows increasing extractiveness as algorithms have become more sophisticated. Starting value (0.35) reflects when exploitation was primarily through media editorial choice; current value (0.58) reflects algorithmic amplification. Suppression (0.68): High. Significant barriers to resisting availability bias include: (a) cognitive constraints (attention is finite and automatic); (b) information asymmetry (individuals cannot easily access alternative salience landscapes); (c) time pressure (bias-resistant decision-making requires deliberation time often unavailable); (d) social proof feedback (when salient information spreads widely, it appears more reliable). Theater ratio (0.64): Moderate-high. Considerable performative content in how availability bias is discussed. Evolutionary psychology framing ('this bias was adaptive in ancestral environments') functions as justification for accepting the bias as natural rather than as a design feature to resist. Media literacy programs ('be aware of availability bias') are largely aspirational \u2014 awareness alone doesn't eliminate the bias when information systems are still deliberately designed to maximize salience.",
+    "directionality_logic": "Each perspective's experienced extractiveness (chi) is determined by structural position relative to the constraint. Media institutions and algorithmic systems experience low directionality (d \u2248 0.15) because they benefit from availability exploitation \u2014 the constraint subsidizes their attention capture function. Individual decision-makers experience high directionality (d \u2248 0.85) because they are structurally vulnerable and cannot exit: the bias is embedded in their cognitive architecture and information environment simultaneously. Informed deliberators (d \u2248 0.50) experience mixed extraction because they can partially exit through debiasing but at high cost. The analytical observer at the civilizational level (d \u2248 0.72) sees a natural law ('bounded attention implies salience bias') but the structural data reveals this as partial truth weaponized: salience is not just a cognitive constraint but an engineered feature of information systems. The data literacy movement (d \u2248 0.45) experiences moderate extraction because they both suffer from and benefit from the current state \u2014 they have organized agency and are building exit pathways.",
+    "perspectival_gap": "This constraint shows stark perspectival divergence. The media/platform institution sees availability heuristic as a legitimate coordination mechanism (Rope) \u2014 they solve the problem of capturing scattered attention into collective focus. The individual decision-maker sees pure extraction (Snare) \u2014 their decisions are systematically biased toward sensationalism, recency, and vividness without their participation in or benefit from this bias. The data literacy movement sees a solvable temporary problem (Scaffold) \u2014 educational and infrastructural interventions can build bias-resistant decision-making. The evolutionary psychology frame sees an immutable feature (Piton, degraded Mountain) \u2014 the constraint persists because it's 'natural,' not because it serves function. The analytical observer risks seeing cognitive law (Mountain) \u2014 availability bias as inherent to bounded rationality \u2014 when the structural data reveals systematic exploitation as a contingent institutional choice. The informed deliberator occupies the middle (Tangled Rope) \u2014 experiencing both the bias and the capacity to sometimes resist it. This perspectival range is diagnostic: when a single structural phenomenon appears as pure coordination to beneficiaries and pure extraction to victims, with organized agents building escape routes, the true classification is hybrid (Tangled Rope) with degradation (Piton) in the performative framing.",
+    "mandatrophy_analysis": "The availability heuristic resolves the mandatrophy by disambiguating the cognitive mechanism from the institutional exploitation. The cognitive heuristic (bounded attention, automatic salience weighting) is a real feature of human information processing \u2014 not inherently extractive, just efficient given constraints. But when information systems deliberately design to exploit this heuristic through algorithmic curation, sensational framing, and attention monopoly, a structural extraction emerges on top of the neutral cognitive feature. The tangled rope classification captures this hybrid: genuine coordination (audience aggregation, efficient attention direction) paired with asymmetric extraction (decision-maker vulnerability, misallocated resources). The increasing extractiveness over 20 years (0.35\u21920.58) reflects not that the cognitive heuristic became more powerful, but that information systems became more sophisticated at exploiting it. The scaffold perspective is crucial: data literacy, algorithmic transparency, and disclosure friction are building countermeasures that reduce suppression over generational horizon. The evolutionary psychology piton (frame claiming adaptiveness) must be rejected as performative \u2014 the constraint is neither immutable nor evolutionary advantage, but architectural choice by attention-capturing systems. The mountain perspective is a false summit: availability bias is NOT an immutable cognitive law but a contingent feature of how attention is economically organized."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "political_polarization",
-      "financial_market_volatility"
-    ]
-  }
+      "attention_capture_asymmetry",
+      "algorithmic_salience_curation",
+      "media_sensationalism_cycle"
+    ],
+    "dual_formulation_note": "Availability heuristic is a family of constraints: (1) the cognitive mechanism (bounded attention, automatic salience weighting) is a neutral feature of information processing; (2) the institutional exploitation (algorithmic amplification, sensational framing, attention monopoly) creates structural extraction. These are distinct constraints with different epsilon values. Story focuses on the exploitation layer (\u03b5=0.58, Tangled Rope). Upstream cognitive heuristic could be decomposed as Mountain (\u03b5\u22640.25) if analyzed purely as cognitive architecture. Network effects represent downstream consequences of availability exploitation on attention distribution, algorithmic feedback, and media business models."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
 }

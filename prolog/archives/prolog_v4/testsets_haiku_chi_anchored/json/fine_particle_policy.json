@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "fine_particle_policy",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fpp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dutch Fine Particle Policy",
+    "topic_domain": "environmental_policy/agricultural_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "urban_public_health",
+      "environmental_regulators"
+    ],
+    "victims": [
+      "livestock_farmers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Farmer",
+      "comment": "PERSPECTIVE 1: TRAPPED LIVESTOCK FARMER (SNARE) \u2014 Family farms with multi-generational livestock operations face compliance costs (equipment upgrades, stall conversions, feed additives) with minimal exit alternatives. Cannot relocate operations easily, cannot abandon livestock without losing livelihood. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73. Suppression high: regulatory pathway is mandatory, alternatives (leaving agriculture) carry catastrophic personal cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Farming Collective",
+      "comment": "PERSPECTIVE 2: FARMING COLLECTIVE / AGRICULTURAL UNIONS (TANGLED ROPE) \u2014 Organized farmers (LTO Nederland, ZLTO) have genuine coordination role: collective negotiation of transition timelines, subsidized equipment access, research into low-emission livestock practices. Policy also extracts through compliance burdens and market consolidation (small farms exit, large operations benefit from economies of scale in compliance). d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.52. Requires enforcement: mandatory participation in environmental impact reduction schemes."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Environmental Regulators",
+      "comment": "PERSPECTIVE 3: ENVIRONMENTAL REGULATORS / MINISTRY OF INFRASTRUCTURE (ROPE) \u2014 Institutional actor coordinating compliance (NVWA enforcement, measurement standards, subsidy distribution). Experiences policy as coordination problem: information asymmetry (measuring actual farm emissions), collective action (all farms must comply simultaneously for air quality targets). d\u22480.10, f(d)\u2248-0.02, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Net beneficiary through institutional authority and international (EU) compliance credit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Agricultural Technology Vendors",
+      "comment": "PERSPECTIVE 4: AGRICULTURAL TECHNOLOGY VENDORS / EQUIPMENT SUPPLIERS (ROPE) \u2014 Producers of low-emission livestock equipment (air scrubbers, feed additives, breeding technologies) benefit from mandated adoption without bearing compliance costs. Coordinate with farmers on technical implementation. d\u22480.15, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.02. Positive externality: policy creates new revenue streams while framing as environmental benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "EU Agricultural Transition Coalition",
+      "comment": "PERSPECTIVE 5: EU AGRICULTURAL TRANSITION COALITION (SCAFFOLD) \u2014 EU-wide transition framework toward sustainable agriculture has explicit sunset logic: 2030 interim targets, 2050 climate neutrality goal. Dutch policy is subordinate to EU Green Deal. Coordination function: synchronizing national policies across member states. Theater moderate (0.58) because transition pathways are genuinely discussed, though implementation remains contested. d\u22480.40, f(d)\u22480.40, \u03c3=1.1 \u2192 \u03c7\u22480.23. Sunset clauses built into EU timeline framework \u2014 extraction mechanisms decline as alternative food systems mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Traditional Agricultural Subsidy Architecture",
+      "comment": "PERSPECTIVE 6: TRADITIONAL AGRICULTURAL SUBSIDY ARCHITECTURE (PITON) \u2014 European Common Agricultural Policy (CAP) subsidy system predates fine particle regulation by decades. Fine particle policy layers new compliance requirements onto existing subsidy structures without dismantling old incentive mechanisms. Theater ratio 0.58 reflects that subsidy administration is substantially performative: direct income support continues even when environmental outcomes are marginal. This is degraded Rope \u2014 originally designed for pure agricultural coordination, now maintained partly through institutional inertia despite contradicting stated environmental goals. d\u22480.30, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.15. Low effective extraction because the system is no longer functional for its stated purpose."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Food System Transformation)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / CIVILIZATIONAL VIEW (TANGLED ROPE) \u2014 From a global food security and climate perspective, the policy is both coordination (transitioning animal agriculture to lower-emission models) and extraction (concentrating farm consolidation, shifting food production costs to farmers while distributing health benefits across public). \u03b5=0.52 reflects genuine tension between coordination and asymmetric impact. d\u22480.70, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.60. The constraint is neither natural law nor pure coordination \u2014 it is a political choice that can be reshaped by addressing distributional asymmetry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "emission_attribution_boundary",
+      "question": "How much of particulate pollution attributed to livestock farming reflects true causal contribution versus confounding with transport, industrial, and urban heating sources?",
+      "resolution_mechanism": "Atmospheric modeling isolating agricultural contribution; isotopic tracing of PM2.5; comparison of air quality in agricultural-only regions versus mixed-source regions with similar farm density",
+      "impact": "If agricultural contribution < 15%: policy targets wrong constraint (Rope reclassifies to Piton due to low extraction). If > 30%: validates snare classification for farmers bearing disproportionate burden for shared problem.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of fine particles actually attributable to livestock versus other sources"
+    },
+    {
+      "id": "farmer_exit_feasibility",
+      "question": "What proportion of Dutch livestock farmers can viably transition to non-livestock agriculture or non-agricultural livelihoods without subsidy support?",
+      "resolution_mechanism": "Economic viability analysis of crop conversion, land valuation, labor retraining pathways; survey of farmer exit intentions; comparison to historical agricultural exits in other EU countries",
+      "impact": "If feasible for >50%: exit_options upgrades from trapped to constrained for farming collective (snare reclassifies to tangled_rope). If <20%: suppression increases, snare classification intensifies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic feasibility of farmer exit from livestock production"
+    },
+    {
+      "id": "technology_implementation_sufficiency",
+      "question": "Do mandated emission reduction technologies (air scrubbers, feed additives, stall conversions) achieve stated PM2.5 reduction targets across diverse farm sizes and livestock types?",
+      "resolution_mechanism": "Real-world emission monitoring post-implementation; correlation between technology adoption rates and measured air quality; assessment of technology performance variance by farm scale",
+      "impact": "If insufficient: policy reclassifies to Snare (extraction without coordination benefit). If sufficient: validates tangled_rope (coordination function real, but with asymmetric burden).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Efficacy of mandated emission reduction technologies"
+    },
+    {
+      "id": "subsidy_adequacy_empirical",
+      "question": "Do government subsidies for equipment and transition support cover actual compliance costs for small-to-medium farms, or do they systematically underfund relative to large-scale operations?",
+      "resolution_mechanism": "Detailed cost accounting across farm sizes; subsidy allocation analysis; comparison of net compliance burden (costs minus subsidies) by farm scale; farmer survey on perceived adequacy",
+      "impact": "If underfunded for small farms: extraction mechanism hardens (Snare). If adequately funded: coordination function strengthens (Rope). Theater ratio may decline if transparent accounting replaces opaque subsidy allocation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether subsidies adequately cover compliance costs across farm scales"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what extent does agricultural industry influence policy design, enforcement priorities, and subsidy allocation through lobbying and regulatory capture?",
+      "resolution_mechanism": "Transparency analysis of LTO Nederland (farmers union) involvement in policy drafting; funding flows from agribusiness to political parties; regulatory discretion patterns in enforcement (variation in violation detection across regions/farm types)",
+      "impact": "If capture high: policy reclassifies as institutional-beneficiary Rope with asymmetric victim side effects (tangled_rope with stronger extraction). If capture low: validates stated coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of agricultural industry influence over policy design and enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Dutch fine particle policy represents a political effort to reduce particulate matter emissions, with livestock farming identified as a significant contributor. The policy mandates equipment upgrades, feed modifications, and stall conversions at the farm level. This constraint exhibits the core tension of environmental regulation in agricultural societies: coordination (all farms must reduce emissions to meet EU air quality targets) layered over asymmetric extraction (compliance costs borne primarily by farmers, health benefits distributed across urban public). The policy evolved from EU directives (National Emissions Ceiling Directive) adapted to Dutch context, where intensive livestock operations concentrate in specific regions, creating acute air quality problems. The constraint's theater ratio (0.58) reflects a moderate degree of performative compliance architecture: subsidy paperwork, regulatory inspections, and equipment certifications create administrative overhead without always guaranteeing air quality outcomes. Base extractiveness increased from 0.32 to 0.52 over the measurement interval as initial compliance costs proved higher than projected and consolidation accelerated (small farms exiting, large operations absorbing capacity).",
+    "key_agents": [
+      "Livestock Farmers (Small-to-Medium): Primary victims (powerless/trapped) \u2014 face mandatory equipment costs, operational disruptions, exit barriers due to multi-generational land/capital lock-in",
+      "Agricultural Unions (LTO Nederland, ZLTO): Secondary actors (organized/constrained) \u2014 negotiate transition terms, coordinate collective responses, benefit from subsidy distribution mechanisms",
+      "Environmental Regulators (NVWA, Ministry of Infrastructure): Institutional beneficiary (institutional/arbitrage) \u2014 gain regulatory authority and EU compliance leverage; experience policy as coordination success",
+      "Agricultural Technology Vendors: Secondary beneficiary (powerful/arbitrage) \u2014 capture compliance-driven equipment sales without bearing costs",
+      "Urban Public / Public Health: Abstract beneficiary (powerless/arbitrage) \u2014 receive air quality improvements without participating in policy design or cost-bearing",
+      "EU Agricultural/Environmental Framework: Continental constraint source (institutional/constrained) \u2014 sets binding air quality targets; Dutch policy is subordinate implementation",
+      "Traditional CAP Subsidy System: Institutional inertia actor (institutional/constrained) \u2014 continues distributing income support simultaneously with new compliance requirements, creating contradictory incentive architecture"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. The policy extracts measurable benefits from farmers (equipment costs, operational constraints, consolidation pressures) while distributing benefits to diffuse beneficiaries (urban air quality, public health, EU regulatory compliance). The extractiveness is not maximal (0.66+) because: (1) government subsidies recover ~40-60% of equipment costs for participating farms, (2) large operations can achieve economies of scale in compliance, making extraction less uniform, and (3) some farmers view emission reduction as aligned with modern practice. Suppression (0.65): Moderate-high. Farmers face regulatory mandate (no voluntary opt-out), limited alternative exit routes (agricultural career path is narrow), and concentrated compliance costs. However, suppression is not absolute: government subsidy programs, extended compliance timelines, and differentiated requirements by farm size create partial relief valves. Theater ratio (0.58): Moderate. Compliance architecture includes administrative elements (subsidy paperwork, inspection protocols) that are partially performative, but actual equipment purchases and operational changes generate real emission reductions. The theater increased over the interval as subsidy bureaucracy expanded without corresponding air quality improvements (suggesting administrative growth outpaced functional benefit). Claimed type (tangled_rope): Policy provides genuine coordination function (synchronizing farm compliance with EU targets, enabling collective transition) but with asymmetric extraction (farmers bear costs, urban public receives benefits without participating in design).",
+    "perspectival_gap": "The constraint exhibits sharp perspectival divergence. Trapped farmers see pure extraction (Snare): mandatory compliance with no meaningful exit alternative, subsidies that underfund actual costs, consolidation pressures that punish operational diversity. Farming unions see mixed coordination-extraction (Tangled Rope): policy enables collective negotiation of transition terms, coordinates subsidy access, but also accelerates consolidation that eliminates small-farm competition. Regulators see pure coordination (Rope): policy solves collective action problem (individual farms have no incentive to reduce emissions absent mandate), establishes measurable compliance standards, leverages EU funding. Technology vendors see pure gain (Rope, beneficiary side): mandatory equipment purchases without bearing compliance costs. Urban public sees abstract benefit (Rope, beneficiary side): air quality improvement without cost participation. EU framework sees subordinate implementation (Scaffold): Dutch policy is temporary step toward 2050 climate neutrality, with built-in obsolescence as alternative food systems mature. CAP subsidy architecture sees degraded ritual (Piton): subsidy distribution persists despite environmental contradictions, maintained through institutional inertia. The analytical observer sees political choice (Tangled Rope): the constraint is not natural or inevitable but represents a particular solution to an environmental problem that could be restructured to address distributional asymmetry.",
+    "directionality_logic": "Trapped farmers: Victim + trapped exit \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Cannot exit agriculture, cannot avoid regulation, bear full compliance burden. Farming collective: Victim (cost-bearers) + constrained exit \u2192 d\u22480.65, f(d)\u22481.00. Significant extraction but mitigated by collective bargaining power and subsidy access. Environmental regulators: Beneficiary (regulatory authority) + arbitrage (can redefine compliance terms) \u2192 d\u22480.10, f(d)\u2248-0.02. Net beneficiary. Agricultural technology vendors: Beneficiary (equipment sales) + arbitrage (market-driven participation) \u2192 d\u22480.15, f(d)\u22480.05. Net beneficiary with low friction. Urban public: Beneficiary (air quality) + arbitrage (can relocate if dissatisfied) \u2192 d\u22480.20, f(d)\u22480.08. Net beneficiary, though diffuse and unorganized. EU framework: Institutional beneficiary + constrained (must implement directive) \u2192 d\u22480.35, f(d)\u22480.35. Institutional extraction mechanism with sunset logic (2050 transition end-state). CAP subsidy system: Institutional actor + constrained \u2192 d\u22480.30, f(d)\u22480.30. Minimal extraction because system is degraded; primarily maintains inertial institutional structure.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing between legitimate coordination (all farms must reduce emissions to meet collective air quality targets) and asymmetric extraction (costs concentrated on farmers, benefits distributed to urban public). The policy COULD be reframed to address the asymmetry without abandoning the coordination function: (1) full cost subsidy for small farms (preserving farm viability while maintaining emission reductions), (2) progressive compliance timelines allowing gradual transition, (3) public carbon pricing that distributes compliance costs across beneficiaries (meat consumers pay price premium reflecting environmental cost), or (4) agricultural transition support funding alternative farm models (regenerative practices, crop rotation) rather than only emission-reduction equipment. The current design is tangled_rope, not snare, because the coordination function is real and necessary (air quality cannot improve without farm-level emission reductions). However, the distribution of burden-bearing is politically contingent, not structurally inevitable. Mandatrophy is resolved by acknowledging that both readings are correct from different structural positions: farmers experience extraction (snare view); regulators experience coordination (rope view); the full system exhibits hybrid coordination-extraction (tangled_rope). The policy's sustainability depends on addressing the perspectival gap \u2014 if extraction burden becomes unbearable, farmers will exit through farm abandonment or regulatory non-compliance, collapsing the coordination function and realizing the snare prophecy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_air_quality_directive",
+      "cap_subsidy_system",
+      "agricultural_consolidation"
+    ],
+    "dual_formulation_note": "Dutch fine particle policy is downstream of EU National Emissions Ceiling Directive (higher \u03b5, mountain-like constraint from EU perspective) and mediates between EU environmental mandate and agricultural subsidy system (which has contradictory incentives). The policy's extractiveness depends on relative power of regulatory versus agricultural constituencies \u2014 if farming consolidation accelerates, policy reclassifies toward snare; if subsidy adequacy improves, policy reclassifies toward rope."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "header": {
+    "constraint_id": "artificial_snow_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Olympic Artificial Snow Dependency",
+    "topic_domain": "environmental/cultural",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "olympic_organizers",
+      "sponsors"
+    ],
+    "victims": [
+      "local_ecosystems",
+      "future_generations",
+      "local_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Local Ecosystems",
+      "comment": "Local ecosystems are trapped and bear the brunt of the environmental damage caused by artificial snow production. They have no exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Communities",
+      "comment": "Local communities are both impacted by the environmental costs and may benefit economically (tourism). They have limited exit options, constrained by geographic location and economic dependence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Olympic Organizers",
+      "comment": "Olympic organizers benefit from ensuring the Games proceed as planned, maintaining revenue streams and reputation. They have arbitrage options by moving the games to other locations (though costly in reputation)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Sponsors",
+      "comment": "Sponsors benefit from the global exposure and association with the Olympic brand. They have arbitrage options by investing in other events or marketing strategies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Sporting Federations",
+      "comment": "These organizations continue to support the games, but the sustainability narrative has largely become performative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a global perspective, the reliance on artificial snow presents a mixed bag of short-term gains and long-term environmental costs, highlighting the unsustainable nature of the event in a changing climate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "climate_change_severity",
+      "question": "How rapidly will climate change impact snow conditions in traditional winter sports locations?",
+      "resolution_mechanism": "Climate modeling, monitoring of snow cover and temperatures",
+      "impact": "Faster climate change will increase reliance on artificial snow, exacerbating environmental impacts.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Rate of climate change and impact on snow conditions"
+    },
+    {
+      "id": "technological_efficiency",
+      "question": "How much can technological advancements reduce the energy and water consumption of artificial snow production?",
+      "resolution_mechanism": "Research and development of more efficient snowmaking technologies",
+      "impact": "Greater efficiency could mitigate environmental impacts, but may not eliminate them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Potential for efficiency gains in snowmaking technology"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 2026 Winter Olympics dependency on artificial snow creates a trade-off between ensuring the games proceed as planned and the environmental and cultural costs associated with producing and maintaining the snow. This dependency has significant implications for local ecosystems, communities, and future generations.",
+    "key_agents": [
+      "Olympic Organizers: Primary beneficiary (institutional/arbitrage) - benefits from ensuring the games proceed",
+      "Sponsors: Primary beneficiary (institutional/arbitrage) - benefits from global exposure",
+      "Local Ecosystems: Primary victim (powerless/trapped) - bears the environmental damage",
+      "Future Generations: Primary victim (powerless/trapped) - Inherits environmental degradation",
+      "Local Communities: Secondary victim (moderate/constrained) - both benefits economically and suffers environmental impact",
+      "International Sporting Federations: Institutional actor that supports but loses legitimacy."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. Artificial snow production extracts resources (water, energy) and degrades local ecosystems. The degree is significant due to the large volumes required. Suppression (0.45): Moderate. There are limited alternatives to artificial snow for ensuring competition surfaces in a warming climate. Relocation is an option, but limited. Theater ratio (0.75): High. There is increasing awareness of the environmental costs, but the performance of sustainability still dominates.",
+    "perspectival_gap": "Local ecosystems see the artificial snow as purely damaging (Snare). Olympic organizers see it as a necessary tool (Rope). Local communities experience both positive (economic benefits) and negative (environmental damage) impacts (Tangled Rope).",
+    "directionality_logic": "Directionality is derived from the structural relationship to the constraint. Beneficiaries (Olympic organizers, sponsors) have low directionality, experiencing the constraint as coordination. Victims (local ecosystems) have high directionality, experiencing the constraint as extraction.",
+    "mandatrophy_analysis": "The classification as a Tangled Rope reflects the inherent trade-off between the immediate benefits of holding the Olympics and the long-term environmental costs. It prevents mislabeling this situation as purely beneficial or purely extractive."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

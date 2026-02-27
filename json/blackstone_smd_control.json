@@ -2,26 +2,27 @@
   "header": {
     "constraint_id": "blackstone_smd_control",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_blackstone_smd_control"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.8,
-    "theater_ratio": 0.15,
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
     "claimed_type": "tangled_rope",
     "human_readable": "Blackstone Senior Managing Director Voting Control",
     "topic_domain": "economic/corporate_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "senior_managing_directors",
-      "founding_partners"
+      "blackstone_partnership"
     ],
     "victims": [
-      "public_unitholders",
-      "market_governance_norms"
-    ],
-    "mandatrophy_resolved": false
+      "limited_partners",
+      "public_shareholders",
+      "fund_beneficiaries"
+    ]
   },
   "perspectives": [
     {
@@ -30,17 +31,53 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Public Unitholder",
-      "comment": "PERSPECTIVE 1: PUBLIC UNITHOLDER (SNARE) — Provides capital but is stripped of voting rights. The only exit is selling units; there is no 'voice' to influence management or elect the general partner. The structure extracts agency completely. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11."
+      "label": "Limited Partners and Fund Beneficiaries",
+      "comment": "PERSPECTIVE 1: LIMITED PARTNERS & FUND BENEFICIARIES (SNARE) \u2014 Cannot exit the governance structure once capital is committed. Trapped by illiquidity and lock-up periods. SMD voting control over the general partner creates a structural asymmetry: LPs bear downside risk but have no veto over strategic decisions. Extraction runs at maximum intensity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Public Shareholders in Blackstone Inc.",
+      "comment": "PERSPECTIVE 2: PUBLIC SHAREHOLDERS (SNARE) \u2014 Hold voting units with no control over the general partner's strategic decisions. Dual-class structure concentrates voting power in SMD hands while public shareholders bear portfolio risk. Exit is theoretically available (sell stock) but constrained by information asymmetries and lock-in effects of strategic importance. SMD control extracts governance premium."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Senior Managing Director",
-      "comment": "PERSPECTIVE 2: SENIOR MANAGING DIRECTOR (ROPE) — Experiences the structure as a pure coordination mechanism. It insulates long-term strategy from the pressures of public markets and activist investors, enabling decisive management. For this group, it is a tool for effective governance. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09."
+      "label": "Senior Managing Directors",
+      "comment": "PERSPECTIVE 3: SENIOR MANAGING DIRECTORS (ROPE) \u2014 Absolute voting control over the general partner enables coordination on firm strategy, capital allocation, and compensation. SMDs experience this as a coordination mechanism: unified control allows long-term strategic thinking without dilution by external investors. Control creates asymmetric benefit but is essential to the operational model."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory and Fiduciary Oversight Bodies",
+      "comment": "PERSPECTIVE 4: REGULATORY & FIDUCIARY OVERSIGHT (TANGLED ROPE) \u2014 SEC, DOL (under ERISA), and state fiduciary standards create a coordination function (disclosure, conflict-of-interest rules) but also enforce extraction limits. Regulators have constrained exit (cannot withdraw oversight) but organized power (rule-making authority). The structure exhibits both: genuine coordination requirement (fiduciary duty, transparency) and asymmetric extraction (SMD control subordinates LP interests)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Legislative and Governance Reform Advocates",
+      "comment": "PERSPECTIVE 5: REFORM ADVOCATES (SCAFFOLD) \u2014 Organized agents (investor coalitions, governance reformers, legislative bodies) see the SMD control structure as a temporary power imbalance subject to sunset through regulatory or structural change. Potential for modified dual-class sunset clauses, mandatory independent governance committees, or enhanced LP veto rights. Low extractiveness from this perspective because exit pathways exist (regulatory change, alternative fund structures)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Investment Banking Norms",
+      "comment": "PERSPECTIVE 6: LEGACY BANKING NORMS (PITON) \u2014 The dual-class structure was copied from legacy private equity partnership models (KKR, Carlyle, Apollo) established in the 1980s-1990s, before institutional scale and public markets became dominant. The mechanism persists through institutional inertia: it worked for founding partners, it became canonical, it is defended as 'preserving alignment.' But its functional role has degraded \u2014 modern mega-funds operate with professional management independent of voting control. Theater ratio is moderate (0.45) because the stated rationale (alignment of incentives) is partially theater, partially real."
     },
     {
       "classification_type": "tangled_rope",
@@ -48,94 +85,116 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (enabling stable, long-term management) and the severe asymmetric extraction of voting power from capital providers. The structure is functional but highly coercive. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Market Governance Advocate",
-      "comment": "PERSPECTIVE 4: MARKET GOVERNANCE ADVOCATE (SNARE) — Groups like the Council of Institutional Investors see this as a violation of governance norms that disenfranchises shareholders. They are organized but constrained, unable to force change directly, viewing the structure as pure extraction of rights. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.49. This is on the border of Tangled Rope and Snare, but from their normative position, the coordination function is illegitimate."
+      "label": "Analytical Observer (Systemic Finance Perspective)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The constraint solves a genuine coordination problem (strategic autonomy for long-term capital deployment) while simultaneously creating asymmetric extraction (governance concentration, information privileging, rent extraction). Both functions coexist structurally: the control mechanism enables pooled capital strategies (coordination) AND enables SMD disproportionate benefit capture (extraction). Classical tangled rope: cannot remove the coordination without destroying the extraction mechanism, and vice versa."
     }
   ],
   "omegas": [
     {
-      "id": "performance_vs_extraction",
-      "question": "Is the absolute voting control by SMDs a necessary component for Blackstone's long-term outperformance, or is it an extractive feature that benefits insiders at the expense of public unitholders?",
-      "resolution_mechanism": "Comparative analysis of performance between dual-class/limited-partnership firms and single-class firms in the same sector over multiple economic cycles. Analysis of capital allocation decisions to see if they systematically favor SMD interests over unitholder returns.",
-      "impact": "If necessary for performance, the constraint has a stronger Rope character from more perspectives. If not, it is more clearly a Snare.",
+      "id": "smds_vs_institutional_manager_distinction",
+      "question": "Are SMDs a distinct governance class or are they professional managers whose voting control reflects legitimate principal-agent alignment?",
+      "resolution_mechanism": "Comparative analysis of compensation structures: SMDs as profit-participating partners vs. professional managers with performance-linked pay; analysis of decision-making independence and veto power for non-SMD executives",
+      "impact": "If SMDs are distinct class: extraction is structural and requires governance reform. If SMDs are managers: control structure reflects legitimate operational necessity.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether SMD control is essential for performance or primarily extractive."
+      "type_class": "conceptual",
+      "description": "Whether SMD control represents distinct class power or operational necessity"
     },
     {
-      "id": "cost_of_disenfranchisement",
-      "question": "What is the quantifiable economic cost (e.g., lower returns, higher fees, value destruction from insider-led decisions) to public unitholders from their lack of voting rights?",
-      "resolution_mechanism": "Event studies around governance challenges, fee structure analysis compared to publicly-controlled peers, and quantification of any 'governance discount' in the unit price.",
-      "impact": "A high quantifiable cost would increase the base extractiveness (ε) and solidify the Snare classification from victim perspectives. A low or negligible cost would weaken it.",
-      "confidence": "low",
+      "id": "lp_exit_capacity_actual",
+      "question": "What fraction of LP capital is in locked-up periods vs. redeemable, and what actual exit rate occurs in practice?",
+      "resolution_mechanism": "Historical redemption data; analysis of lock-up term lengths and compliance rates; investor surveys on perceived ability to exit",
+      "impact": "High actual exit rate (>30% annually): exit_options upgrade from trapped to constrained, reducing experienced extraction. Low actual exit rate (<5%): confirms trapped classification.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Quantifying the economic cost to unitholders from lack of voting rights."
+      "description": "Actual LP exit capacity and redemption rates"
+    },
+    {
+      "id": "smd_control_necessity_for_performance",
+      "question": "Is SMD voting control causally necessary for the superior risk-adjusted returns Blackstone achieves, or is control orthogonal to performance?",
+      "resolution_mechanism": "Peer comparison analysis (KKR, Apollo, Carlyle comparative returns with/without voting control); regression analysis of control concentration vs. fund performance; historical analysis of performance changes after governance modifications",
+      "impact": "If control is necessary: coordination perspective dominates; extraction is a legitimate cost of coordination. If orthogonal: control is pure extraction mechanism; classification shifts toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal relationship between SMD control and fund performance"
+    },
+    {
+      "id": "regulatory_capture_scope",
+      "question": "To what extent do SMDs exert disproportionate influence over the regulatory framework governing their own governance structure?",
+      "resolution_mechanism": "Lobbying expenditure analysis; revolving door tracking (SMDs to regulatory agencies); regulatory agency capture indicators; comparison to peer influence levels",
+      "impact": "If significant capture: suppression upgrades from 0.72 to 0.85+, indicating institutional enforcement of extraction. If minimal: suppression estimate confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of SMD regulatory capture"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2007,
-      "value": 0.6
+      "time_point": 0,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.62
+      "time_point": 8,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.65
+      "time_point": 18,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2007,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.15
+      "time_point": 8,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.15
+      "time_point": 18,
+      "value": 0.45
     }
   ],
   "interval": {
-    "start": 2007,
-    "end": 2024
+    "start": 0,
+    "end": 18
   },
   "commentary": {
-    "narrative_context": "Established during Blackstone's 2007 IPO, this corporate governance structure uses a multi-class unit system to grant Senior Managing Directors (SMDs) and founders absolute voting control over the firm's general partner. Public unitholders, who provide the majority of the firm's public capital, have no voting rights concerning the election of the general partner or its directors. This creates a permanent disconnect between economic ownership and control, a hallmark of a Tangled Rope structure.",
+    "narrative_context": "Blackstone's dual-class governance structure, formalized during the 2007 IPO, creates an institutional arrangement where Senior Managing Directors hold absolute voting control over the firm's general partner, while limited partners and public shareholders hold residual claims but no governance veto. This constraint exhibits the core mandatrophy: it solves a genuine coordination problem (enabling long-term strategic capital deployment without external interference) while simultaneously creating asymmetric extraction (governance premium accruing disproportionately to SMDs). The structure was inherited from legacy private equity partnership models established in the 1980s when firms were small, founder-controlled, and had no public investors. As Blackstone scaled to $1 trillion+ in AUM, the governance structure created an increasingly stark asymmetry: LPs commit multi-year capital but have no strategic voice; public shareholders own voting units but cannot control the general partner; professional managers (non-SMDs) execute strategy but have no voting power. The constraint persists because: (1) it enables SMD capture of disproportionate economic rents (coordination benefit becomes extraction), (2) regulatory frameworks have not successfully constrained it (suppression remains high), and (3) the legitimating narrative\u2014alignment of interests, long-term thinking\u2014provides theater that obscures the extraction mechanism.",
     "key_agents": [
-      "Senior Managing Directors (SMDs): Primary beneficiaries (institutional/arbitrage) who wield absolute voting control.",
-      "Public Unitholders: Primary victims (powerless/trapped) who provide capital but are denied agency or 'voice'.",
-      "Market Governance Advocates: Organized victims (organized/constrained) who challenge the structure based on normative principles of shareholder democracy.",
-      "Analytical Observer: Sees the dual function of coordination and extraction (analytical/analytical)."
+      "Senior Managing Directors: Primary beneficiary (institutional/arbitrage) \u2014 absolute voting control, governance premium, ability to set compensation and strategy unilaterally",
+      "Limited Partners: Primary victim (powerless/trapped) \u2014 capital locked in for 10-15 years, no governance veto, bear downside risk without upside control",
+      "Public Shareholders: Secondary victim (moderate/constrained) \u2014 hold non-voting or subordinate-voting units, trapped in information asymmetry relative to SMDs",
+      "Fund Beneficiaries: Tertiary victim (powerless/trapped) \u2014 pension funds, endowments, retail investors whose assets are pooled without governance voice",
+      "Regulatory Agencies (SEC, DOL, state fiduciaries): Organized oversight (organized/constrained) \u2014 create coordination rules (disclosure, conflict rules) but have constrained enforcement against entrenched structures",
+      "Governance Reform Coalition: Reform agents (organized/mobile) \u2014 institutional investor coalitions, governance advocates pushing for sunset clauses and LP veto rights",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees systemic coordination-extraction hybrid requiring structural decomposition"
     ],
-    "logic_rationale": "Extractiveness (ε=0.65) is high because the structure extracts the fundamental right of agency from capital providers. This control allows SMDs to dictate strategy, compensation, and fee structures that may not align with public unitholder interests. Suppression (0.80) is very high; the partnership agreement legally forecloses any possibility of unitholders exerting control. Their only option is to sell their stake. Theater (0.15) is low, as the structure does not pretend to be democratic; its control function is explicit.",
-    "perspectival_gap": "The gap is profound. For the SMDs, the constraint is a Rope, a necessary tool to shield the firm from short-term market pressures and execute a long-term vision. For public unitholders, it is a Snare, trapping their capital in a vehicle where they have no say and their interests may be subordinated. The analytical view acknowledges both realities, classifying it as a Tangled Rope—a structure with a legitimate coordination purpose that is inextricably linked to a coercive extraction of power.",
-    "directionality_logic": "The directionality is derived directly from the structural roles. SMDs are declared beneficiaries with arbitrage exit, yielding a negative effective extraction (χ < 0) and a Rope classification. Public unitholders are victims with trapped exit options (within the governance system), yielding a very high positive χ and a Snare classification. The analytical observer's default parameters correctly identify the mixed nature of the constraint, resulting in the Tangled Rope classification.",
-    "mandatrophy_analysis": "This case avoids mandatrophy by refusing to label the structure as either purely 'good governance' (Rope) or purely 'investor abuse' (Snare). The framework demonstrates that both are valid, indexed perspectives. The Tangled Rope classification from the analytical viewpoint correctly identifies the core tension: a mechanism that is simultaneously a tool for effective coordination for insiders and a means of coercive extraction for outsiders."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. SMDs capture disproportionate economic rents through absolute voting control, but the extraction is not total (0.70+) because: (1) SMD compensation, while asymmetric, is partially performance-linked (provides incentive alignment), (2) fund performance is genuinely superior, partially justifying the rent, (3) LP alternatives (other fund managers) exist, constraining extreme extraction. The trajectory from 0.42 (2007) to 0.58 (2025) reflects growing asymmetry as the firm scaled: initial SMD group shared benefits widely; post-scale consolidation concentrates power. Suppression (0.72): High. Structural barriers to LP exit include 10-15 year lock-ups, illiquidity, reputational costs of redemption, regulatory complexity, and lack of equally-scaled alternatives. SMDs have shaped the regulatory environment (lobbying, revolving-door presence) to maintain these barriers. Theater ratio (0.45): Moderate. The legitimating narrative\u2014'SMD control ensures alignment and long-term thinking'\u2014contains real functional truth (centralized strategy does enable contrarian positions) but also substantial theater: the same strategic benefits could be achieved with LP veto rights or independent governance committees. As the firm has matured, the alignment rationale has become increasingly performative (SMDs already have massive personal wealth at stake; additional control provides limited additional incentive). Claimed type (tangled_rope): Structural data supports this classification. The constraint is NOT a pure snare (extraction mechanism with no coordination benefit) because SMD control genuinely enables long-term capital strategies. But it IS NOT a rope (pure coordination with minimal extraction) because the governance asymmetry creates rents far exceeding the coordination function's value.",
+    "perspectival_gap": "The perspectival gap is maximal and irreconcilable from within the constraint. LPs see a snare: they are trapped, extraction runs one direction (toward SMDs), and they have no veto. SMDs see a rope: they experience the control mechanism as coordination (enabling strategic autonomy). Regulators see a tangled rope: they must permit the coordination (SMDs need strategic autonomy) while constrained in their ability to limit extraction (regulatory capture, legal deference to private contracts). Reform advocates see a scaffold: the structure is temporary, sunset clauses and LP veto rights represent exit pathways being built. Legacy banking norms see a piton: the dual-class structure persists through institutional inertia long after its functional rationale has degraded. The analytical observer sees tangled rope: both functions (coordination and extraction) are structurally real and cannot be separated without destroying the mechanism entirely. This is the diagnostic signature of mandatrophy resolution: no single perspective is 'correct'; the constraint IS a tangled rope from the system level, even though individual agents experience it as snare, rope, or scaffold.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position relative to the control mechanism. SMDs: beneficiary status (control produces asymmetric benefit) + arbitrage exit options (can use control to avoid constraints) = low d (\u22480.10-0.25), producing negative or minimal experienced extraction chi. They experience the constraint as enabling, not constraining. LPs: victim status (control subordinates their interests) + trapped exit (locked capital, no governance veto) = high d (\u22480.90-0.95), producing maximum experienced extraction chi. The constraint appears coercive from their perspective. Regulators: organized power (rule-making authority) but constrained exit (cannot withdraw oversight), mixed victim/beneficiary (enforce coordination but constrained in limiting extraction) = moderate-high d (\u22480.50-0.60), producing moderate experienced extraction chi. Reform advocates: organized power (coalition, legislative voice) with mobile exit (alternative governance models available) = lower d (\u22480.40-0.50) because they see extraction pathways to exit. The engine's directionality derivation chain produces these d values automatically from beneficiary/victim declarations and exit options; no override needed because the structural data is clean.",
+    "mandatrophy_analysis": "CASE STUDY: This constraint perfectly exemplifies the mandatrophy problem and its resolution. The constraint cannot be classified as a single type without losing critical structural information: (1) If classified as Rope (pure coordination), the analysis erases the extraction mechanism and legitimizes SMD rent-seeking. (2) If classified as Snare (pure extraction), the analysis erases the genuine coordination benefit and ignores why the constraint persists despite LP opposition. (3) Classifying as Tangled Rope reveals the structural truth: both functions coexist, neither dominates, and the constraint cannot be reformed without destroying both simultaneously. The reformation challenge is NOT to eliminate the constraint (it has legitimate coordination function) but to decouple the coordination function from the extraction mechanism. Possible decoupling paths: (a) maintain SMD control over operative strategy while implementing LP veto over compensation and capital allocation (preserves coordination, limits extraction), (b) implement multi-class voting where SMDs retain strategic veto but LPs gain governance participation (hybrid power-sharing), (c) sunset clauses requiring periodic LP ratification of the control structure (scaffold logic applied to governance). Each reform path trades off: (a) preserves SMD autonomy but requires SMD agreement to compensation limits (unlikely), (b) reduces extraction but introduces governance deadlock risk (common with multi-class structures), (c) creates certainty for reform timeline but invites SMD preemption or coalition-building to block sunset. The mandatrophy does NOT resolve to a single 'correct' type; it resolves to recognition that the constraint's coordination and extraction functions are structurally coupled, and reform requires either accepting the coupling (and valuing SMD autonomy) or accepting deadlock risk in decoupling attempts."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.35
   },
   "network": {
     "affects_constraints": [
-      "dual_class_share_prevalence"
-    ]
-  }
+      "private_equity_fee_extraction",
+      "institutional_investor_governance_power",
+      "regulatory_capture_finance"
+    ],
+    "dual_formulation_note": "This constraint is downstream of the general private equity fee extraction mechanism (\u03b5\u22480.50, snare) but represents a distinct structural constraint. The SMD voting control is a specific governance mechanism enabling and entrenching the broader fee extraction pattern. Affects institutional investor governance power (how large capital pools can constrain or resist extraction) and regulatory capture dynamics (SMD influence over fiduciary standards)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
 }

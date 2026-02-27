@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "planning_fallacy",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pf"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Planning Fallacy",
+    "topic_domain": "economic/social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "optimistic_planners",
+      "project_advocates",
+      "institutional_schedulers"
+    ],
+    "victims": [
+      "resource_allocators",
+      "dependent_teams",
+      "end_users",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dependent Team",
+      "comment": "PERSPECTIVE 1: DEPENDENT TEAM (SNARE) \u2014 Cannot exit commitment structures without career damage. Bears full cost of predecessor delays; no mechanism for recovery. Trapped by hierarchical dependencies and professional reputation. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Resource Allocators and Users",
+      "comment": "PERSPECTIVE 2: RESOURCE ALLOCATORS AND END USERS (SNARE) \u2014 Budget forecasts and infrastructure deployment depend on plan accuracy. No recourse when schedules collapse; absorbed into future delays. Trapped in cascading constraint violations. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Project Managers and Teams",
+      "comment": "PERSPECTIVE 3: PROJECT MANAGERS AND TEAMS (TANGLED ROPE) \u2014 Constrained by organizational structures, but also benefit from planning frameworks, coordination mechanisms, and access to tools. Experience mixed extraction and coordination. d\u22480.68, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.49."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Optimistic Planners and Advocates",
+      "comment": "PERSPECTIVE 4: OPTIMISTIC PLANNERS AND PROJECT ADVOCATES (ROPE) \u2014 Benefit from planning window bias through career advancement, funding priority, and narrative control. Coordinate stakeholders through optimistic forecasts. d\u22480.12, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03. Near-neutral extraction; beneficiary position."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Institutional Scheduling Apparatus",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL SCHEDULING APPARATUS (PITON) \u2014 Gantt charts, earned value management, critical path analysis persist despite known failure to correct bias. Theater ratio=0.58 reflects that methodologies are partly ritualistic (documentation, meetings) rather than functionally corrective. Maintained through inertia; alternatives (probabilistic scheduling, Monte Carlo) available but underadopted. d\u22480.10, f(d)\u2248-0.05, \u03c3=0.9 \u2192 \u03c7\u2248-0.003."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Cognitive Architecture View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COGNITIVE ARCHITECTURE VIEW (MOUNTAIN) \u2014 From a civilizational perspective, planning fallacy appears inherent to human cognition: optimism bias is a robust feature of metacognitive systems, not contingent on institutional arrangements. Emerges from the structure of bounded rationality and information asymmetry inherent to future prediction. However, empirical data (\u03b5=0.52, suppression=0.65) suggests contingent institutional factors (career incentives, feedback loops, methodological theater) amplify base bias significantly."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "base_vs_amplified_bias",
+      "question": "What fraction of observed planning fallacy is intrinsic cognitive bias versus institutional structures that amplify or fail to correct it?",
+      "resolution_mechanism": "Comparison of individual task estimation (Kahneman-Tversky reference data) versus organizational forecasting; analysis of planning accuracy across institutional contexts with varying feedback structures and incentive alignment",
+      "impact": "If institutional amplification dominates (>60%): constraint is primarily Tangled Rope across all perspectives. If intrinsic bias dominates: mountain classification gains credibility from analytical observer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of bias attributable to cognition versus institutional structures"
+    },
+    {
+      "id": "feedback_loop_effectiveness",
+      "question": "Do systematic planning reviews and historical data integration actually reduce planning fallacy severity, or does optimism bias persistently override corrective information?",
+      "resolution_mechanism": "Longitudinal study of organizations implementing post-mortem analysis and probabilistic scheduling; measurement of forecast accuracy improvement over 10+ year horizons; analysis of whether teams update priors after repeated under-estimation",
+      "impact": "If feedback loops work: suppression decreases over time, constraint trends toward Rope. If feedback is ignored: suppression remains high, institutional adoption of 'corrective' methods is theater (piton characteristic).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether feedback integration improves planning accuracy"
+    },
+    {
+      "id": "incentive_structure_manipulation",
+      "question": "To what degree do organizational incentives (promotion, bonuses, project approval) systematically reward optimistic planning and penalize conservative estimation?",
+      "resolution_mechanism": "Analysis of promotion outcomes, funding approvals, and career trajectories relative to planning accuracy; comparison of organizations with performance bonuses tied to schedule adherence versus outcome quality",
+      "impact": "If strong incentive misalignment: extractive institutional enforcement is primary driver (Snare/Tangled Rope from powerless perspectives). If incentives are neutral: base cognitive bias is primary (Mountain more credible).",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Degree to which institutional incentives reward optimistic planning"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The planning fallacy is a structural constraint that operates at the intersection of cognitive bias and institutional incentive structures. At its root is a universal human tendency to underestimate task duration and overestimate completion capability \u2014 documented across domains from home renovations to software development to infrastructure projects. However, the constraint's extractive force in organizational contexts derives not from the bias alone but from systematic institutional amplification: optimistic planners benefit from schedule compression (career advancement, funding approval, narrative control), while dependent teams, resource allocators, and end users bear the costs of cascading delays. The constraint exhibits all six DR types from different structural positions: powerless dependent teams experience a snare; institutional beneficiaries experience near-neutral rope; project managers experience mixed tangled_rope; the scheduling apparatus itself is a piton \u2014 maintaining methodologies (Gantt charts, critical path) that are partly performative and fail to correct the underlying bias; and an analytical observer risks naturalizing the bias as inevitable human cognition. Over a decade-long measurement interval (representing organizational technology evolution and attempted methodological reforms), theater_ratio has risen from 0.35 to 0.58, indicating that planning governance has become increasingly procedural and documentation-focused while failing to systematically reduce underlying forecast errors.",
+    "key_agents": [
+      "Optimistic Planners: Primary beneficiary (institutional/arbitrage) \u2014 capture schedule advantage and approval priority; experience the constraint as minor coordination overhead",
+      "Project Advocates: Primary beneficiary (institutional/arbitrage) \u2014 fund projects on compressed timelines; benefit from compressed narrative",
+      "Dependent Teams: Primary victim (powerless/trapped) \u2014 absorbed into cascading delays; no exit mechanism; suffer reputational damage for predecessor failures",
+      "Resource Allocators: Secondary victim (powerless/trapped) \u2014 budget forecasts and infrastructure deployment depend on plan accuracy; no recourse mechanism",
+      "End Users: Secondary victim (powerless/trapped) \u2014 delayed infrastructure, services, or products; no voice in planning process",
+      "Project Managers: Mixed (moderate/constrained) \u2014 both benefit from coordination mechanisms and suffer from schedule pressure",
+      "Institutional Scheduling Apparatus: Piton maintainer (institutional/arbitrage) \u2014 governance structures, methodologies, and review processes persist despite documented ineffectiveness",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inevitable cognitive limits"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The base extractiveness reflects institutional structures that systematically reward optimistic planning and delay accountability. The value has grown from 0.28 to 0.52 over the decade as organizations have consolidated around compressed scheduling norms and career incentive structures that penalize conservative estimation. This is not inevitable cognitive bias \u2014 it is institutionally amplified. Suppression (0.65): High. Barriers to accurate planning include: (1) Information asymmetry (optimistic planners control forecast distribution), (2) Career risk (conservative estimates reduce approval probability and advancement), (3) Feedback loop failure (post-mortem reviews are often non-binding and organizational memory is short), (4) Methodological theater (Gantt charts create illusion of control without functional correction), (5) Stakeholder cognitive capture (commitment to public forecasts creates defensive bias). Theater ratio (0.58): Moderate-high. Planning methodologies have become increasingly documentation-heavy (earned value management, critical path metrics, Monte Carlo forecasting in principle) while systematic forecast errors persist. The gap between methodological sophistication and actual accuracy improvement indicates increasing theater \u2014 procedures are maintained for governance legitimacy rather than functional correction. Claimed type (Tangled Rope): The constraint combines genuine coordination function (planning frameworks do enable stakeholder alignment) with asymmetric extraction (beneficiaries capture schedule advantage, victims absorb delays). Requires active enforcement through organizational governance structures.",
+    "perspectival_gap": "The constraint manifests radically different types from different structural positions. Optimistic planners experience the constraint as Rope (near-neutral coordination for stakeholder alignment). Project managers experience Tangled Rope (genuine coordination function mixed with schedule pressure). Dependent teams and resource allocators experience Snare (pure extraction with no exit). The institutional scheduling apparatus appears as Piton (methodologies persist through inertia despite documented failure to correct bias). The analytical observer risks seeing Mountain (inevitable cognitive limit inherent to bounded rationality) \u2014 but empirical trends in theater_ratio and extractiveness suggest institutional amplification is primary driver. The perspectival gap is maximal because the constraint's structural function (coordination of schedules) is genuinely valuable, while its extraction mechanism (optimism bias amplified by career incentives) is genuinely harmful, and these two functions are inextricably entangled.",
+    "directionality_logic": "Optimistic planners: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.05. Net beneficiary; experience as coordinating function. Dependent teams: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction exposure. Resource allocators: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction exposure; no control over plan accuracy, no recourse. Project managers: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction but not maximal; benefit from methodology and process coordination. Institutional scheduling apparatus: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Piton classification comes from theater gate (\u22650.70 not satisfied, but theater is substantial); maintained through institutional inertia. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain perspective risks naturalizing contingent institutional factors as cognitive inevitability.",
+    "mandatrophy_analysis": "The planning fallacy resolves mandatrophy by clarifying that the constraint is genuinely a Tangled Rope (mixed coordination and extraction) rather than pure Snare or pure Mountain. Base cognitive bias (the empirical fact that humans underestimate task duration) is real but modest in magnitude \u2014 Kahneman & Tversky baseline optimism bias produces ~20% underestimation. However, institutional amplification (career incentives rewarding compressed schedules, feedback loop failure, governance theater) inflates effective extraction to 0.52 and suppression to 0.65. The constraint cannot be resolved by dismissing it as 'inevitable human nature' (Mountain) because institutional structures are modifiable. Conversely, it cannot be resolved by ignoring the cognitive substrate and treating it as pure institutional extraction (Snare) because the bias is real and partially resistant to informational correction. The Tangled Rope classification captures both: there is genuine coordination function (schedule alignment is valuable), genuine cognitive constraint (optimism bias is universal), AND genuine institutional extraction (career incentives amplify bias and prevent correction). Rising theater_ratio suggests that methodological proliferation (more sophisticated planning tools) is becoming divorced from functional correction (actual forecast accuracy), indicating piton degradation \u2014 the scheduling apparatus is increasingly maintained through inertia and governance legitimacy rather than demonstrable effectiveness."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organizational_commitment_escalation",
+      "sunk_cost_rationalization",
+      "schedule_compression_extraction"
+    ],
+    "dual_formulation_note": "The planning fallacy can be decomposed into two structurally distinct claims: (1) Individual cognitive bias in task estimation (base planning fallacy, \u03b5\u22480.15, Mountain from cognitive science perspective); (2) Institutional amplification and extraction through schedule-based incentive structures (organizational planning extraction, \u03b5\u22480.52, Tangled Rope from organizational perspective). This story represents the institutional variant. The base cognitive constraint is invariant across observables, while the organizational extractive amplification is contingent on specific institutional incentive designs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ]
+}

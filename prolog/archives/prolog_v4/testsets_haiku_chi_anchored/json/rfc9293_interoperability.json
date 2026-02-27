@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_interoperability",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tcp_rfc"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "TCP Interoperability & Reliability Requirements (RFC 9293)",
+    "topic_domain": "technological/network_protocols",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "all_internet_users",
+      "device_manufacturers",
+      "network_operators"
+    ],
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law: Packet Delivery & Ordering",
+      "comment": "PERSPECTIVE 1: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, reliable ordered packet delivery over unreliable networks is a mathematical and physical constraint, not a convention. TCP solves the end-to-end problem of ordered delivery on networks with packet loss, corruption, and reordering. This is an irreducible requirement of any packet-switched network, not a choice. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Device Manufacturers & Network Operators",
+      "comment": "PERSPECTIVE 2: DEVICE MANUFACTURERS & NETWORK OPERATORS (ROPE) \u2014 Institutional actors benefit from RFC 9293 standardization: it enables interoperability across heterogeneous devices and networks. No single manufacturer or operator has incentive to defect from the standard. The constraint is pure coordination: agree on packet format, sequence numbering, flow control, congestion handling. Low coercion overhead. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.001. Net neutral or slightly beneficial."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "End Users & Application Developers",
+      "comment": "PERSPECTIVE 3: END USERS & APPLICATION DEVELOPERS (ROPE) \u2014 Moderate-power agents benefit from TCP's reliability guarantees without bearing significant extraction. Can develop applications assuming ordered delivery. Exit options exist: UDP for applications that tolerate loss. The constraint is coordination: TCP provides a common assumption that eliminates the burden of implementing reliability in each application. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.10."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Legacy Systems & Constrained Devices",
+      "comment": "PERSPECTIVE 4: LEGACY SYSTEMS & CONSTRAINED DEVICES (ROPE) \u2014 Devices with limited memory or processing power face implementation burden from RFC 9293 requirements (sequence number tracking, retransmission logic, congestion control state). However, this is a coordination cost, not extraction: all devices face the same requirement symmetrically. The standard enables them to communicate with modern systems. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.09. Coordinated burden, not asymmetric extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "TCP Congestion Control as Physical Law",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / CONGESTION CONTROL (MOUNTAIN) \u2014 TCP's congestion control mechanism (slow start, additive increase, multiplicative decrease) emerges from the physical reality that network capacity is finite and overload causes collapse. This is not negotiable. RFC 9293 codifies the mathematical relationship between sending rate and network health. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14. No degrees of freedom."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Standards Body & Research Community",
+      "comment": "PERSPECTIVE 6: STANDARDS BODY & RESEARCH COMMUNITY (ROPE) \u2014 IETF and academic network research benefit from RFC 9293 as a coordination point. The standard enables research, testing, and continuous improvement (congestion control variants, performance tuning). No extraction occurs \u2014 the standard is explicitly designed to be open and extensible. d\u22480.10, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.006."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fundamental_vs_conventional",
+      "question": "Is TCP interoperability a fundamental constraint of distributed systems mathematics or a conventional coordination choice?",
+      "resolution_mechanism": "Comparison with alternative transport layer designs (QUIC, SCTP, custom protocols); analysis of which requirements are mathematically derived vs historically contingent",
+      "impact": "If fundamental: mountain classification confirmed across all perspectives. If conventional: rope classification should dominate, and accessibility_collapse and resistance scores are overestimated.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether TCP requirements are fundamental or conventional"
+    },
+    {
+      "id": "congestion_control_optimality",
+      "question": "Does RFC 9293 congestion control (AIMD) represent the only mathematically optimal solution or one choice among equally valid alternatives?",
+      "resolution_mechanism": "Game-theoretic analysis; comparison of convergence properties, fairness outcomes, and network stability across different congestion control algorithms",
+      "impact": "If optimal: mountain gates strengthen (\u03b5 < 0.10). If one choice among alternatives: rope gates strengthen (beneficiaries have some discretion).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether AIMD congestion control is uniquely optimal"
+    },
+    {
+      "id": "exit_option_viability",
+      "question": "Are UDP and alternative transport protocols genuine exit options for TCP, or do network externalities make TCP mandatory?",
+      "resolution_mechanism": "Survey of application distribution by protocol; cost analysis of implementing UDP-based reliability; measurement of performance trade-offs across transport choices",
+      "impact": "If alternatives viable: rope classification confirmed (low suppression, mobile exit). If TCP mandatory: tangled_rope or snare gates may fire despite low \u03b5 (network effect creates suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether UDP and alternatives provide genuine exit from TCP"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "RFC 9293 codifies the TCP protocol specification, defining requirements for interoperability and reliability across heterogeneous networks and devices. This constraint is best understood as a pure coordination mechanism \u2014 all stakeholders benefit from having a common transport layer that reliably delivers ordered packets. The specification emerges from the fundamental physical and mathematical properties of packet-switched networks: packets can be lost, corrupted, reordered, or duplicated in transit; no single device can control the network path; therefore, the endpoint must implement logic to detect and correct these failures. TCP provides this logic as a shared, standardized implementation that eliminates the need for each application to solve the problem independently. Unlike constraints that extract value asymmetrically (snares) or mix coordination with coercive extraction (tangled ropes), TCP is near-pure rope: symmetric burden, symmetrically distributed benefit, minimal suppression of alternatives, low coercion overhead. The theater ratio remains low (0.15) because the constraint's function is entirely transparent \u2014 the benefit of reliable delivery is direct and measurable, with minimal performative or theatrical element.",
+    "key_agents": [
+      "Device Manufacturers: Institutional beneficiary (institutional/arbitrage) \u2014 TCP standardization enables interoperability; no extraction",
+      "Network Operators: Institutional beneficiary (institutional/arbitrage) \u2014 TCP enables service delivery across heterogeneous networks; coordination benefit",
+      "End Users & Applications: Moderate beneficiary (moderate/mobile) \u2014 Reliable delivery without implementing custom reliability logic; low exit cost (UDP alternative available)",
+      "Legacy Systems: Constrained beneficiary (powerless/constrained) \u2014 Benefit from ability to communicate with modern systems; bear symmetric implementation cost",
+      "Standards Body (IETF) & Research Community: Organized beneficiary (organized/arbitrage) \u2014 TCP specification serves as coordination point for research and innovation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 TCP requirements emerge from mathematical constraints on packet-switched networks"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. TCP is fundamentally a coordination mechanism. The 'extraction' score reflects the implementation burden on devices and the slight asymmetry that some actors (particularly legacy systems) face higher costs relative to benefit. However, this is not extraction in the sense of one party taking value from another \u2014 all parties share the burden and all benefit. The base \u03b5=0.12 is justified by the symmetric nature of the requirement and the availability of alternatives. Suppression (0.08): Very low. Alternatives exist (UDP, SCTP, QUIC). Network effects create some path dependency, but this is not suppression \u2014 it is the natural consequence of standardization success. Devices can technically implement custom transport protocols if they choose. Theater ratio (0.15): Low and stable. The benefit of TCP is direct and measurable. Unlike institutions that perform legitimacy rituals, TCP's function is transparent. The small theater component reflects documentation, compliance testing, and specification review processes. Claimed type (Rope): Correct. \u03b5=0.12, suppression=0.08, extractiveness \u2264 0.35, base extraction \u2264 0.45 all satisfy rope gates. No active enforcement required; the standard propagates through voluntary adoption.",
+    "perspectival_gap": "This constraint exhibits near-uniform classification across all perspectives, which is characteristic of a pure coordination mechanism. All perspectives perceive Rope or Mountain \u2014 these are not contradictory but complementary. The Mountain perspectives (analytical observer, congestion control) reflect that the underlying mathematical constraints are immutable. The Rope perspectives (manufacturers, operators, users, standards body) reflect that the implementation of these constraints is a voluntary, standardized choice that benefits all. No agent perceives extraction or coercion. This uniformity is correct and indicates that the constraint is genuinely pure coordination rather than mixed extraction. The perspectival gaps that do exist (legacy systems experience higher implementation burden than modern systems) are symmetric \u2014 legacy devices face the same requirements as modern ones, and both benefit from interoperability.",
+    "directionality_logic": "All beneficiaries + symmetric exit options \u2192 d\u22480.50-0.15 across perspectives. No victims. Device manufacturers and operators: beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. End users: beneficiary + mobile \u2192 d\u22480.50, f(d)\u22480.65. Legacy systems: beneficiary (symmetric burden) + constrained \u2192 d\u22480.55, f(d)\u22480.75. Standards body: beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. None of these produce high d values. The absence of victims is crucial: no group bears asymmetric costs. This confirms Rope classification and rules out Snare, Tangled Rope, or higher-extraction types.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that low extractiveness with high beneficiary agreement is the hallmark of pure coordination (Rope). The risk of mandatrophy would be classifying TCP as a Mountain-only natural law and thus removing it from the domain of human design and policy \u2014 which would be incorrect. TCP is a designed specification, not a law of nature, even though it codifies responses to physical constraints. The analytical observer's Mountain classification is justified (the underlying packet-switching reality is immutable) but secondary to the Rope classification (the implementation choice is designed and can be revised). RFC 9293 is currently the best available solution, not the only possible solution. Future transport protocols (QUIC, specialized options for constrained devices) may replace it. The constraint's legitimacy derives from coordination benefit and symmetric distribution, not from being an immutable law."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_packet_loss_recovery",
+      "internet_congestion_prevention",
+      "device_interoperability"
+    ],
+    "dual_formulation_note": "TCP interoperability exists at two levels: (1) The mathematical constraint of reliable ordered delivery over unreliable networks (Mountain, \u03b5\u22480.05) and (2) The standardized protocol specification that implements this solution (Rope, \u03b5\u22480.12). These are structurally distinct \u2014 one is invariant, the other is a particular historical choice. RFC 9293 is the downstream story that instantiates the upstream mathematical constraint."
+  },
+  "directionality_overrides": []
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: coe_ukraine_reparations_register
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-17
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_coe_ukraine_reparations_register, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,6 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,19 +58,37 @@
  *   domain: geopolitical/legal
  *
  * SUMMARY:
- *   The Council of Europe (CoE), with support from the US, Canada, and Japan,
- *   has established an international "Register of Damage" to record and legally
- *   document claims of loss and injury from Russia's invasion of Ukraine. This
- *   register is the first component of a broader international compensation
- *   mechanism designed to make Russia financially liable for the damages,
- *   potentially using frozen Russian state assets for reparations. The constraint
- *   is this legal and financial mechanism of accountability and extraction.
+ *   The Council of Europe's Register of Damage for Ukraine represents an
+ *   attempt to institutionalize war crime accountability and future
+ *   reparations claims through comprehensive documentation of losses caused
+ *   by Russia's invasion. Established with support from US, Canada, Japan,
+ *   and EU institutions, the register seeks to create an evidentiary
+ *   foundation for potential future reparations proceedings against the
+ *   Russian state. However, the constraint exhibits structural tension
+ *   between its coordination function (documenting claims, establishing legal
+ *   precedent, creating shared institutional framework for accountability)
+ *   and its extraction function (imposing documentation burden on claimants,
+ *   deferring resolution indefinitely, creating gatekeeping barriers). The
+ *   constraint classifies as Tangled Rope from analytical perspective:
+ *   genuine coordination benefit (the register creates institutional
+ *   infrastructure that enables accountability mechanisms) combined with
+ *   asymmetric extraction (individual claimants bear documentation burden
+ *   while enforcement outcomes remain uncertain and potentially decades
+ *   away). The theater ratio (0.58) reflects that much of the register's
+ *   legitimacy derives from invocation of previous reparations frameworks
+ *   (WWII, Holocaust, Yugoslav wars) that historically failed to deliver
+ *   meaningful reparations. Individual claimants experience the register as
+ *   Snare: trapped in documentation burden, dependent on mechanism whose
+ *   success is uncertain, with no exit option except abandoning all claims.
  *
- * KEY AGENTS (by structural relationship):
- *   - Russian Federation: Primary target (institutional/trapped) — The entity from which reparations are to be extracted.
- *   - Ukrainian state and citizens: Primary beneficiary (organized/constrained for state, powerless/trapped for citizens) — Receives compensation and legal validation of damages.
- *   - Council of Europe members: Institutional architects (institutional/arbitrage) — Design and operate the mechanism, reinforcing international law.
- *   - Analytical Observer: Analytical agent — Observes the dual function of coordination and extraction.
+ * KEY AGENTS:
+ *   - Individual Ukrainian claimants (powerless/trapped) — bear documentation burden and temporal uncertainty; primary extraction victims
+ *   - Ukrainian state apparatus (organized/constrained) — administrator and beneficiary; must fund infrastructure while uncertain of enforcement
+ *   - Western coalition states (institutional/arbitrage) — beneficiaries of coordination infrastructure; can adjust commitment levels
+ *   - International legal institutions (institutional/constrained) — trapped in using register as evidentiary foundation despite methodological constraints
+ *   - Accountability and documentation NGOs (organized/constrained) — view register as temporary infrastructure with genuine sunset post-conflict
+ *   - Historical reparations precedent system (institutional/arbitrage) — invoked for legitimacy but structurally degraded from previous failures
+ *   - Analytical observer (analytical/analytical) — risks naturalizing institutional constraints as inevitable features of international law
  */
 
 /* ==========================================================================
@@ -73,101 +96,82 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(coe_ukraine_reparations_register, 0.65).
-domain_priors:suppression_score(coe_ukraine_reparations_register, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(coe_ukraine_reparations_register, 0.15).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(coe_ukraine_reparations_register, 0.52).
+domain_priors:suppression_score(coe_ukraine_reparations_register, 0.68).
+domain_priors:theater_ratio(coe_ukraine_reparations_register, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(coe_ukraine_reparations_register, extractiveness, 0.65).
-narrative_ontology:constraint_metric(coe_ukraine_reparations_register, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(coe_ukraine_reparations_register, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(coe_ukraine_reparations_register, extractiveness, 0.52).
+narrative_ontology:constraint_metric(coe_ukraine_reparations_register, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(coe_ukraine_reparations_register, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(coe_ukraine_reparations_register, snare).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(coe_ukraine_reparations_register, tangled_rope).
 narrative_ontology:human_readable(coe_ukraine_reparations_register, "Council of Europe's Register of Damage for Ukraine").
 narrative_ontology:topic_domain(coe_ukraine_reparations_register, "geopolitical/legal").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(coe_ukraine_reparations_register). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(coe_ukraine_reparations_register).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(coe_ukraine_reparations_register, ukrainian_state_and_citizens).
-narrative_ontology:constraint_beneficiary(coe_ukraine_reparations_register, council_of_europe_members).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(coe_ukraine_reparations_register, russian_federation).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(coe_ukraine_reparations_register, ukrainian_state).
+narrative_ontology:constraint_beneficiary(coe_ukraine_reparations_register, western_coalition_states).
+narrative_ontology:constraint_beneficiary(coe_ukraine_reparations_register, future_claims_mechanism).
+narrative_ontology:constraint_victim(coe_ukraine_reparations_register, ukrainian_claimants).
+narrative_ontology:constraint_victim(coe_ukraine_reparations_register, displaced_persons).
+narrative_ontology:constraint_victim(coe_ukraine_reparations_register, restoration_timeline).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (RUSSIAN FEDERATION)
-% As the target of extraction with no ability to opt-out, Russia perceives
-% a purely coercive mechanism. The engine derives d from its victim status and
-% trapped exit options, resulting in d ≈ 0.95 and high effective extraction (χ).
-constraint_indexing:constraint_classification(coe_ukraine_reparations_register, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(trapped),
-            spatial_scope(global))).
-
-% PERSPECTIVE 2: THE INSTITUTIONAL ARCHITECTS (COUNCIL OF EUROPE)
-% As the designers and beneficiaries (upholding international law), the CoE
-% perceives a coordination mechanism. The engine derives d from their beneficiary
-% status and arbitrage exit, resulting in d ≈ 0.05 and negative effective extraction.
-constraint_indexing:constraint_classification(coe_ukraine_reparations_register, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The observer sees both the vital coordination function (registering claims)
-% and the massive, coercive extraction function (reparations). High ε and high
-% suppression, combined with both beneficiary and victim groups, results
-% in a Tangled Rope classification.
-constraint_indexing:constraint_classification(coe_ukraine_reparations_register, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE DIRECT BENEFICIARY (UKRAINIAN STATE)
-% For Ukraine, the mechanism's primary function is coordination and validation
-% of claims. While the ultimate goal is extraction from Russia, Ukraine's direct
-% interaction is with a system that brings order to chaos. It is a powerful rope
-% that enables future recovery.
-constraint_indexing:constraint_classification(coe_ukraine_reparations_register, rope,
-    context(agent_power(organized),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 5: THE INDIVIDUAL CLAIMANT (UKRAINIAN CITIZEN)
-% A powerless individual who has suffered loss. For them, the register is a
-% pure coordination mechanism (a Rope) to formalize their claim for future
-% compensation. They are trapped by the circumstances of the war, making this
-% register their only viable path to restitution.
+% PERSPECTIVE 1: INDIVIDUAL UKRAINIAN CLAIMANT (SNARE) — Displaced persons, property loss claimants, and families of victims face maximum extraction through the reparations register's structural design. They bear the cost of documentation burden (gathering evidence, legal representation, language barriers), temporal deferral (claims registered today may take decades to adjudicate), and political contingency (reparations depend on future international enforcement that may never materialize). No exit option: cannot opt out of victim status, cannot recover losses through alternative mechanisms, trapped in dependence on a mechanism whose success is uncertain. High suppression: structural barriers to participation include documentation requirements in wartime, access to legal expertise, and information asymmetries about claims procedures.
 constraint_indexing:constraint_classification(coe_ukraine_reparations_register, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
+% PERSPECTIVE 2: UKRAINIAN STATE (TANGLED ROPE) — Experiences both coordination benefit and extraction. Coordination: the register legitimizes Ukraine's legal position in future reparations proceedings, establishes evidentiary basis for claims against Russia, and creates institutional infrastructure for justice mechanisms. Extraction: the state must fund registration infrastructure, legal analysis, and claims processing while uncertain whether international enforcement will ever produce reparations. Constrained exit: cannot refuse to use the mechanism (abandoning reparations claims entirely) without massive political cost; must continue participation even as mechanism absorbs resources. Active enforcement required: the Ukrainian state is both administrator and beneficiary, creating dual institutional roles. Requirements for enforcement fall on Ukraine's underfunded legal system.
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: WESTERN COALITION (ROPE) — Experiences the register primarily as coordination mechanism. Coalition benefits from: (1) shared institutional framework for potential future reparations enforcement, (2) legal documentation that supports sanctions legitimacy and war crimes prosecution narratives, (3) coordination on damage assessment methodology across allied states. These are genuine coordination benefits with minimal coercive overhead. Exit: coalition members can arbitrage by adjusting their commitment levels (funding, diplomatic support) without abandoning the mechanism entirely. The register's primary function from this perspective is information standard and coordination infrastructure. Low net extraction experienced by beneficiary coalition.
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: INTERNATIONAL LEGAL INSTITUTIONS (TANGLED ROPE) — International courts (ICJ, ICC), UN bodies, and potential future tribunals face both coordination and extraction pressures. Coordination: the register creates shared evidentiary foundation that all international legal mechanisms can reference, reducing duplicative documentation efforts. Extraction: the register also embeds institutional assumptions (what counts as damage, how claims are prioritized) that constrain how future legal proceedings can operate. These institutions are trapped in constrained participation: they must reference the register's findings because it will become the canonical damage assessment, but they may disagree with its methodology or prioritization. Active enforcement through normative pressure — the register's authority derives from institutionalization rather than explicit legal mandate.
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: HISTORICAL REPARATIONS PRECEDENT SYSTEM (PITON) — The register invokes and relies on previous reparations mechanisms (WWII German reparations, Holocaust restitution, Yugoslav wars proceedings) but these historical precedents are largely degraded institutional forms. Previous reparations frameworks have operated at 5-15% of claimed amounts, with decades-long delays, and bureaucratic complexity that excludes most claimants. The register performs continuity with this precedent system — claims that Ukraine's reparations will follow 'historical models' — but the historical models themselves failed to deliver. Theater ratio (0.58) reflects that much of the register's functionality is performative invocation of precedent rather than structural innovation. The mechanism maintains theatrical legitimacy ('we are following the proven reparations model') while structural failures of that model persist unchanged.
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ACCOUNTABILITY AND DOCUMENTATION COALITION (SCAFFOLD) — Human rights organizations, documentation NGOs, and accountability mechanisms see the register as temporary coordination infrastructure with a genuine sunset clause. These agents view the register as a transitional mechanism: (1) during active conflict, documentation infrastructure is necessary because conflict prevents normal legal proceedings; (2) once conflict ends, the register becomes input to permanent legal institutions (courts, commissions). Exit: these organizations have meaningful agency — they can choose to participate at different levels, redirect resources to other accountability mechanisms, or advocate for alternative approaches. Theater ratio constraints are lower for this perspective because the focus is on documentation quality rather than performative legitimacy. The sunset is real: the register has no function post-conflict except as archived evidence for courts.
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, some gap between documented claims and enforceable reparations is structurally inherent to international law: (1) no world government exists to enforce reparations, (2) sovereignty protections make asset seizure legally impossible, (3) statute of limitations and evidence degradation are inevitable physical/temporal limits. This perspective treats the reparations gap as an unchangeable feature of international relations itself. However, structural data contradicts this: the gap is not natural — it reflects deliberate institutional choices (no enforcement mechanism, sovereignty protections, time limits) rather than physical limits. This perspective risks false summit classification, revealing how geopolitical powerlessness is naturalized as inevitable.
+constraint_indexing:constraint_classification(coe_ukraine_reparations_register, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,24 +179,18 @@ constraint_indexing:constraint_classification(coe_ukraine_reparations_register, 
 
 :- begin_tests(coe_ukraine_reparations_register_tests).
 
-test(perspectival_gap_target_architect, [nondet]) :-
-    % Verify the gap between the Russian (target) and CoE (architect) views.
-    constraint_indexing:constraint_classification(coe_ukraine_reparations_register, snare, C1),
-    C1 = context(agent_power(institutional), _, exit_options(trapped), _),
-    constraint_indexing:constraint_classification(coe_ukraine_reparations_register, rope, C2),
-    C2 = context(agent_power(institutional), _, exit_options(arbitrage), _),
-    write('Perspectival gap validated: Target (Snare) vs. Architect (Rope).').
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(coe_ukraine_reparations_register, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(coe_ukraine_reparations_register, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_claim_matches_type, [nondet]) :-
-    % The analytical view should align with the declared constraint_claim.
-    narrative_ontology:constraint_claim(coe_ukraine_reparations_register, ClaimType),
-    constraint_indexing:constraint_classification(coe_ukraine_reparations_register, ClaimType, context(agent_power(analytical),_,_,_)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(coe_ukraine_reparations_register, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_pass) :-
-    % A Tangled Rope must have beneficiary, victim, and active enforcement.
-    narrative_ontology:constraint_beneficiary(coe_ukraine_reparations_register, _),
-    narrative_ontology:constraint_victim(coe_ukraine_reparations_register, _),
-    domain_priors:requires_active_enforcement(coe_ukraine_reparations_register).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(coe_ukraine_reparations_register, TR),
+    TR >= 0.70.
 
 :- end_tests(coe_ukraine_reparations_register_tests).
 
@@ -202,85 +200,112 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.65): Set high to reflect the goal of extracting hundreds of billions of dollars in reparations. The mechanism's primary purpose is large-scale value transfer.
- *   - Suppression (0.80): Set high because the mechanism is non-consensual for its target (Russia) and relies on coercive power (e.g., asset seizure) to function, suppressing any alternative where Russia does not pay.
- *   - The analytical classification is Tangled Rope because the constraint possesses two inseparable functions: a genuine, large-scale coordination function (registering and validating millions of disparate claims) and a clear, asymmetric extraction function (forcing reparations from one party to another).
+ *   Extractiveness (0.52): Moderate-high. The register imposes substantial documentation burden on claimants in wartime conditions, creates temporal deferral uncertainty (claims registered now, enforcement potentially decades away), and depends entirely on international political will for enforcement. However, extractiveness is not extreme because the register also creates genuine coordination benefits: establishing legal precedent, creating shared institutional framework, and documenting claims that might otherwise be lost. The trajectory shows increasing extractiveness from 0.35 to 0.52 as the register matures and claimants realize that enforcement mechanisms remain underdeveloped despite documentation expansion. Suppression (0.68): High. Significant structural barriers include: wartime documentation constraints (fragmented records, displaced persons), language/cultural barriers to legal participation, expertise requirements for complex international legal procedures, asymmetric information about claims procedures, and political contingency on enforcement. These are not total barriers (some claimants can and do navigate them) but create substantial suppression of effective participation. Theater ratio (0.58): Moderate-high. The register performs continuity with historical reparations frameworks (WWII, Holocaust, Yugoslav wars), invoking precedent to legitimize its authority. However, previous reparations mechanisms operated at 5-15% of claimed amounts with decades-long delays, creating structural precedent for failure. The register's theater reflects that much of its legitimacy is performative invocation of 'proven' models rather than innovation in enforcement mechanisms. Theater has increased from 0.42 to 0.58 as documentation volumes expand without corresponding enforcement infrastructure development.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For Russia (the target), it is a pure Snare: a coercive, inescapable trap designed solely for extraction. For the Council of Europe (the architects), it is a Rope: a tool to coordinate international legal principles, enforce accountability, and create order. For Ukraine (the direct beneficiary, both state and citizens), it is also a Rope, providing the structure needed to pursue justice and reconstruction. This difference is driven by their structural relationship to the constraint, which the directionality engine captures through beneficiary/victim declarations and exit options.
+ *   This constraint demonstrates maximum perspectival divergence. Individual claimants see pure extraction (Snare): trapped in documentation burden, dependent on uncertain enforcement, no exit. Ukrainian state sees mixed coordination and extraction (Tangled Rope): genuine benefit from legal infrastructure but constrained by resource burden and enforcement uncertainty. Western coalition sees coordination (Rope): shared legal framework with minimal cost and meaningful arbitrage options. International legal institutions see constrained participation (Tangled Rope): must reference register's findings but may disagree with methodology. Accountability NGOs see temporary infrastructure (Scaffold): genuine sunset as mechanism transitions to permanent legal institutions post-conflict. Historical reparations systems see degraded precedent (Piton): theater-maintained invocation of failed models. Analytical observer risks naturalizing institutional constraints (Mountain): treating enforcement gaps as inevitable features of international law rather than deliberate institutional choices. The perspectival gap reflects that the register simultaneously coordinates among institutional actors and extracts from vulnerable claimants.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: 'ukrainian_state_and_citizens' and 'council_of_europe_members'. The former receives the material compensation, the latter reinforces the international legal order it presides over.
- *   - Victim: 'russian_federation'. The entity from which value is explicitly extracted.
- *   - The system derives directionality (d) from these declarations. Russia's victim status + `trapped` exit gives d≈1.0 (full target). The CoE's beneficiary status + `arbitrage` exit gives d≈0.0 (full beneficiary), creating the maximum perspectival difference.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This is a prime example of an inter-institutional constraint. Both Russia and the CoE are institutional actors, but they have fundamentally different relationships to the mechanism. The model captures this not by creating a single, confused "institutional" view, but by defining two distinct institutional perspectives differentiated by their `exit_options` (`trapped` vs. `arbitrage`). This precisely models the power asymmetry at the heart of the constraint.
+ *   Directionality values for each perspective are determined by structural position within the extraction flow. Individual claimants (powerless/trapped) have d ≈ 0.95: maximum target status, no exit, maximum experienced extraction. Ukrainian state (organized/constrained) has d ≈ 0.55: organized power provides some agency, but constrained exit (cannot refuse participation) limits arbitrage capacity. Western coalition (institutional/arbitrage) has d ≈ 0.15: institutional power and full arbitrage capacity (can adjust commitment without abandoning mechanism) puts them in beneficiary position. International legal institutions (institutional/constrained) have d ≈ 0.50: equal power but constrained by epistemic dependence on register's findings. Accountability NGOs (organized/constrained) have d ≈ 0.45: organized and partly mobile (can exit to alternative accountability mechanisms) but constrained by interdependence with other coalition members. The analytical observer (analytical/analytical) has d ≈ 0.72: external perspective with no structural position but at risk of rationalizing constraints as inevitable.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this as a simple Snare would be incorrect, as it would ignore the massive and essential coordination function of the claims register. Without this coordination, individual claims would be legally void and practically impossible to pursue. Classifying it as a Rope would be equally wrong, ignoring the coercive, high-extraction nature of the reparations. The Tangled Rope classification correctly identifies that the coordination function is the very vehicle for the extraction.
+ *   Mandatrophy resolution (NOT YET RESOLVED) requires determining whether the register is primarily a coordination mechanism (Rope/Scaffold) being incorrectly labeled as extraction (Snare), or primarily an extraction mechanism (Snare/Tangled Rope) being incorrectly framed as justice. The constraint contains genuine coordination function: establishing legal precedent, creating shared institutional framework for accountability, enabling documentation that enables future justice mechanisms. But it also contains asymmetric extraction: claimants bear documentation burden while beneficiaries (state, coalition, international institutions) capture coordination benefits. The Tangled Rope classification holds at analytical level: both functions are structurally present and irreducible. The mandatrophy is resolved by recognizing that the classification varies by perspective — it is NOT a mandatrophy paradox but a legitimate perspectival divergence. Individual claimants experience Snare (maximum extraction, no coordination benefit). Organized actors (state, coalition, institutions) experience Tangled Rope or Rope (genuine coordination with constrained or moderate extraction). This perspectival stratification is the actual structure, not a classification ambiguity.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_coe_reparations,
-    'Is the reparations register a functionally enforceable legal tool or a symbolic political statement with limited material impact?',
-    'Observation of actual seizure of frozen Russian state assets and transfer of funds to Ukraine within the next 5-10 years.',
-    'If enforceable, it remains a Tangled Rope. If enforcement fails and it becomes primarily symbolic, it will degrade into a Piton, with high theater_ratio and low functional extraction.',
+    enforcement_mechanism_feasibility,
+    'Will any mechanism for enforcing reparations against Russia actually materialize, or is the register purely symbolic documentation of unpayable claims?',
+    'Observation of: (1) whether ICC convictions lead to asset seizure or warrant enforcement, (2) whether future negotiations include reparations enforcement provisions, (3) whether any mechanism recovers >10% of documented claims within 50 years',
+    'If enforcement materializes: register is foundational infrastructure for real reparations mechanism (Tangled Rope confirmed). If enforcement fails: register becomes archive of unredeemable claims (Snare for claimants, Piton system confirmed).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(enforcement_mechanism_feasibility, empirical, 'Whether international reparations enforcement mechanisms will actually be established and enforce against Russia').
+
+omega_variable(
+    documentation_burden_justice_equity,
+    'Does the register''s documentation requirement create justice gatekeeping that systematically excludes lower-income, less-educated, or displaced claimants who cannot navigate complex legal procedures?',
+    'Empirical analysis of who registers claims (socioeconomic stratification of claimant base), comparison of claim approval rates by demographic groups, analysis of representation rates (percentage of eligible claimants who actually register)',
+    'If high exclusion: register is extraction mechanism disguised as justice (Snare confirmed). If low exclusion: register is genuine coordination mechanism (Rope strengthened). If moderate: Tangled Rope classification holds.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(documentation_burden_justice_equity, empirical, 'Whether documentation requirements create systematic exclusion of lower-income or less-educated claimants').
+
+omega_variable(
+    temporal_deferral_legitimacy,
+    'Does temporal deferral of reparations resolution (claims registered now, enforcement possibly decades away) constitute unjust extraction from claimants, or acceptable coordination overhead for complex international proceedings?',
+    'Comparative analysis with other reparations mechanisms (WWII, Holocaust, Yugoslav wars) examining: (1) average time from claim registration to payment, (2) inflation adjustment mechanisms, (3) psychological impact on claimant cohorts',
+    'If deferral is extractive: chi values increase (higher effective extraction), Snare and Tangled Rope classifications strengthened. If deferral is acceptable overhead: classifications shift toward Rope and Scaffold, theater ratio justified.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(temporal_deferral_legitimacy, empirical, 'Whether temporal deferral of reparations constitutes extraction or acceptable coordination complexity').
+
+omega_variable(
+    russian_asset_identification_capacity,
+    'Can international institutions actually identify, locate, and legally seize Russian state and oligarch assets to fund reparations, or does sovereignty protection and asset concealment make enforcement mechanically impossible?',
+    'Audit of: (1) frozen Russian assets held in Western banks (SWIFT sanctions), (2) mechanisms for converting frozen assets to reparations funding, (3) legal precedent for non-consensual asset transfer between sovereign states',
+    'If mechanical feasibility exists: register becomes credible enforcement foundation (Tangled Rope to Rope shift). If infeasible: register is documentation of confiscation targets that will never be seized (Piton classification, false summit revealed).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(russian_asset_identification_capacity, empirical, 'Whether enforcement mechanism can actually identify and seize Russian assets for reparations').
+
+omega_variable(
+    ukrainian_state_capture_risk,
+    'Does the register''s institutional structure create opportunity for Ukrainian state to prioritize politically-connected claimants or use reparations mechanism for state capture?',
+    'Institutional analysis of register governance (decision-making authority, appeals procedures, transparency), observation of claim approval patterns by claimant political connections, audits of state allocation of reparations if enforcement occurs',
+    'If capture risk is high: beneficiary role shifts from ''Ukrainian state'' to ''politically-connected elites'', converting Tangled Rope to Snare for ordinary claimants. If capture risk is low: Tangled Rope stands.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(ukrainian_state_capture_risk, empirical, 'Whether register governance creates state capture risk for reparations allocation').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(coe_ukraine_reparations_register, 0, 10).
+narrative_ontology:interval(coe_ukraine_reparations_register, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε > 0.46), so temporal data is required.
-% As the constraint is new, we model its creation and potential intensification.
-% T=0 represents the moment of creation. T=10 represents a decade of operation.
+% Theater ratio over time
+narrative_ontology:measurement(coe_dam_tr_t0, coe_ukraine_reparations_register, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(coe_dam_tr_t3, coe_ukraine_reparations_register, theater_ratio, 3, 0.52).
+narrative_ontology:measurement(coe_dam_tr_t6, coe_ukraine_reparations_register, theater_ratio, 6, 0.58).
 
-% Theater ratio over time (starts low, may rise slightly if bureaucracy grows)
-narrative_ontology:measurement(coe_rr_tr_t0, coe_ukraine_reparations_register, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(coe_rr_tr_t5, coe_ukraine_reparations_register, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(coe_rr_tr_t10, coe_ukraine_reparations_register, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(coe_dam_be_t0, coe_ukraine_reparations_register, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(coe_dam_be_t3, coe_ukraine_reparations_register, base_extractiveness, 3, 0.48).
+narrative_ontology:measurement(coe_dam_be_t6, coe_ukraine_reparations_register, base_extractiveness, 6, 0.52).
 
-% Extraction over time (starts high and intensifies as legal tools are sharpened)
-narrative_ontology:measurement(coe_rr_ex_t0, coe_ukraine_reparations_register, base_extractiveness, 0, 0.60).
-narrative_ontology:measurement(coe_rr_ex_t5, coe_ukraine_reparations_register, base_extractiveness, 5, 0.62).
-narrative_ontology:measurement(coe_rr_ex_t10, coe_ukraine_reparations_register, base_extractiveness, 10, 0.65).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: It serves as both an information standard and an
-% enforcement mechanism. Enforcement is the terminal goal.
 narrative_ontology:coordination_type(coe_ukraine_reparations_register, enforcement_mechanism).
+narrative_ontology:affects_constraint(coe_ukraine_reparations_register, international_sanctions_regime).
+narrative_ontology:affects_constraint(coe_ukraine_reparations_register, russian_asset_freezing).
+narrative_ontology:affects_constraint(coe_ukraine_reparations_register, icc_prosecution_ukraine).
+narrative_ontology:affects_constraint(coe_ukraine_reparations_register, post_conflict_reconciliation_mechanisms).
 
-% Network relationships: This constraint is enabled by and structurally
-% linked to sanctions regimes and asset seizure mechanisms.
-narrative_ontology:affects_constraint(sanctions_regime_russia, coe_ukraine_reparations_register).
-narrative_ontology:affects_constraint(frozen_russian_assets_seizure, coe_ukraine_reparations_register).
-
+% DUAL FORMULATION NOTE:
+% The reparations register decomposes into two structurally distinct constraints: (1) documentation and evidence collection (coordination infrastructure, ε ≈ 0.25-0.35, Rope/Scaffold), (2) enforcement mechanism and reparations distribution (extraction and political contingency, ε ≈ 0.60-0.75, Tangled Rope/Snare). This constraint story addresses the integrated mechanism; separate stories should decompose enforcement mechanism (higher extractiveness due to political contingency) and documentation function (lower extractiveness, higher coordination benefit).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The standard derivation chain,
-% using the declared beneficiary/victim groups and the distinct exit options
-% for the institutional actors (trapped vs. arbitrage), correctly computes
-% the directionality values needed to generate the observed perspectival gap.
+constraint_indexing:directionality_override(coe_ukraine_reparations_register, institutional, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

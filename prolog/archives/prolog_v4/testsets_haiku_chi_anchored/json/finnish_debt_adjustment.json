@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "finnish_debt_adjustment",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fin_debt"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Finnish Private Debt Adjustment System",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creditors",
+      "banking_sector",
+      "insolvency_administrators"
+    ],
+    "victims": [
+      "over_indebted_debtors",
+      "unsecured_creditors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Over-Indebted Debtor",
+      "comment": "PERSPECTIVE 1: OVER-INDEBTED DEBTOR (SNARE) \u2014 Trapped in debt restructuring with minimal negotiating power. Must accept court-supervised adjustment or face wage garnishment and asset seizure. No credible exit option. d\u22480.92, f(d)\u22481.39, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Unsecured Creditor",
+      "comment": "PERSPECTIVE 2: UNSECURED CREDITOR (TANGLED ROPE) \u2014 Experiences both coordination (system prevents debtor exit via flight or default) and extraction (debt adjustment may write down claims by 30-80%). Constrained by court decisions; cannot freely pursue collection. d\u22480.62, f(d)\u22480.83, \u03c3=1.0 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Banking Sector",
+      "comment": "PERSPECTIVE 3: BANKING SECTOR (ROPE) \u2014 Primary beneficiary. System coordinates debtor behavior (predictable payment schedule), reduces capital flight risk, enables recovery of secured claims. Can exit through collateral liquidation or wage assignment. d\u22480.12, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.02. Near-zero extraction; pure coordination benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Consumer Debt Advocates and Welfare State",
+      "comment": "PERSPECTIVE 4: CONSUMER DEBT ADVOCATES (SCAFFOLD) \u2014 See the system as temporary backstop before structural reforms (income support, housing affordability, wage floors). System coordinates creditor forbearance while broader social policy matures. Sunset: economic transition to lower-debt equilibrium. d\u22480.48, f(d)\u22480.63, \u03c3=1.0 \u2192 \u03c7\u22480.24."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Insolvency Administration System",
+      "comment": "PERSPECTIVE 5: INSOLVENCY ADMINISTRATION (PITON) \u2014 Originally designed as temporary crisis relief (1995 recession); now performs largely theatrical role. Court supervision creates appearance of debtor protection while actual outcomes depend on private creditor agreement. theater_ratio=0.58; high administrative overhead for modest recovery. Maintained through institutional inertia despite efficiency questions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Global Welfare Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 System coordinates collective debtor-creditor restraint while extracting from weakest debtors through extended repayment obligations (5-20 years) and reputational constraints. Global scope: Finnish model influences Nordic welfare policy; extraction is modest relative to Anglo-American debt markets. d\u22480.58, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.34."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "debt_write_down_threshold",
+      "question": "What proportion of debt should be written down to constitute genuine debtor relief vs. creditor-friendly reduction?",
+      "resolution_mechanism": "Longitudinal comparison: debtors with >60% writedown vs. <20% writedown; tracking of post-adjustment reemployment, reaccumulation, poverty rates",
+      "impact": "If writedown threshold is structural relief: system is more rope than snare. If threshold is creditor-protective floor: system is more snare than rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Debt writedown threshold determining genuine relief vs. creditor protection"
+    },
+    {
+      "id": "debtor_outside_option_availability",
+      "question": "Do debtors have credible alternative exit strategies (emigration, informal economy, default acceptance) that make the formal adjustment process voluntary or merely least-worst option?",
+      "resolution_mechanism": "Survey of debtor preferences for informal vs. formal settlement; analysis of cross-border debt enforcement and emigration patterns; comparison with countries without formal adjustment systems",
+      "impact": "If credible alternatives exist: system is coordination (Rope). If alternatives are costlier than formal system: system is extraction (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of debtor exit options outside formal system"
+    },
+    {
+      "id": "creditor_incentive_alignment",
+      "question": "Do secured creditors (banks) use adjustment system strategically to reduce unsecured creditors' recovery, thereby concentrating losses on non-bank creditors?",
+      "resolution_mechanism": "Analysis of secured vs. unsecured recovery rates; correlation between bank participation and non-bank creditor writedown; comparison of adjustment outcomes in bank-heavy vs. diverse creditor compositions",
+      "impact": "If creditor composition affects outcomes: system enables inter-creditor extraction disguised as debtor relief. Classification shifts toward snare for unsecured creditors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether secured creditors use adjustment system to reduce unsecured losses"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Finnish Private Debt Adjustment system (Yksityishenkil\u00f6n velkaantumisongelmat) represents a hybrid institutional arrangement balancing creditor recovery with debtor rehabilitation. Enacted as emergency crisis response during the 1995 recession, the system has evolved into a structural feature of Finnish welfare economics. Debtors meeting insolvency criteria enter a court-supervised restructuring process lasting 3-5 years (renewable to 20), with supervised partial debt repayment leading to eventual discharge. The system coordinates collective forbearance: creditors agree to structured payment schedules rather than aggressive collection; debtors commit to transparent income disclosure and payment obligations; the court supervises administration. However, the actual extraction mechanics are complex: debtors lose negotiating power, accept long-term income constraints, and bear reputational costs; unsecured creditors absorb 30-80% losses while secured creditors (typically banks) recover through collateral and wage assignment priority; insolvency administrators charge fees and extract administrative rent. The constraint exhibits tangled rope structure: genuine coordination function (stabilizing debtor incomes, preventing chaotic defaults) combined with asymmetric extraction (weaker debtors and unsecured creditors absorb disproportionate costs). The theatrical element (court supervision, formal process) appears elevated relative to functional outcomes, suggesting piton characteristics emerge over time as the system ages from emergency measure to routine administrative machinery.",
+    "key_agents": [
+      "Over-indebted debtors: Primary victim (powerless/trapped) \u2014 subject to court supervision, wage assignment, long-term repayment obligations with minimal negotiating power",
+      "Secured creditors (banking sector): Primary beneficiary (institutional/arbitrage) \u2014 recover claims through priority access to wages and collateral liquidation; extract rents through participation in adjustment process",
+      "Unsecured creditors: Secondary victim (moderate/constrained) \u2014 accept 30-80% writedowns; constrained by court decisions and creditor composition in negotiations",
+      "Insolvency administrators: Institutional beneficiary (institutional/arbitrage) \u2014 extract administrative fees and court-supervised rents from adjustment process",
+      "Consumer welfare advocates: Organized agents (organized/constrained) \u2014 see system as temporary safety net pending structural reforms in income support and housing affordability",
+      "Court system: Institutional actor (institutional/arbitrage) \u2014 maintains formal supervision role; supplies appearance of debtor protection while actual outcomes depend on private creditor negotiation",
+      "Analytical observer: Global perspective (analytical/analytical) \u2014 assesses system as modest extraction embedded in larger Nordic welfare coordination; contrasts with more severe debt regimes in other jurisdictions"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The system extracts rents through extended repayment obligations (often 5+ years longer than voluntary settlements would require), administrative fees, reputational constraints, and reduced future creditworthiness. However, extraction is bounded by the formal structure \u2014 creditors cannot use coercive mechanisms beyond court-supervised wage assignment, and the system prevents catastrophic outcomes (homelessness, debt slavery) more effectively than unregulated debt markets. The value of 0.38 reflects that this is structured extraction, not predatory extraction. Suppression (0.42): Moderate. Debtors have formal legal right to petition for adjustment and court representation; the process is transparent and rule-governed. However, suppression is real: the threshold for qualification (insolvency, good faith efforts at negotiation) excludes many over-indebted but employed debtors; the process requires accepting long-term repayment obligations as the only alternative to wage garnishment; social stigma and credit score destruction suppress voluntary disclosure. Theater ratio (0.58): Moderate-high and increasing. Court supervision creates appearance of neutral, independent debtor protection while the actual outcomes depend heavily on private creditor agreement and relative bargaining power. Insolvency administrators serve formal gatekeeping role but most work is administrative fee collection. As the system has aged from emergency response (1995) to routine procedure, the theater ratio has risen as ritualization increases and functional outcomes become less predictable from the formal process.",
+    "perspectival_gap": "The perspective divergence here reflects power asymmetry and structural position. Over-indebted debtors (powerless/trapped) experience maximum extraction (snare): they face binary choice between adjustment and catastrophic collection tactics, and the adjustment imposes 5-20 year repayment obligations with no negotiating power. Unsecured creditors (moderate/constrained) experience tangled rope: they benefit from the coordination (predictable payment instead of default contagion) but absorb disproportionate losses relative to secured creditors. Banks (institutional/arbitrage) experience rope: the system prevents debtor exit (capital flight, default) while preserving their priority access to secured collateral and wages. Welfare advocates (organized/constrained) see scaffold: the system buys time for structural reforms in housing affordability and income support while the theater temporarily masks creditor interests. The court/administration (institutional/arbitrage) sees piton: their formal supervisory role is largely theatrical, with outcomes determined by private negotiation, yet they maintain the institutional role through fee extraction and formal gatekeeping. The analytical observer (global scope) sees tangled rope: the system is less extractive than unregulated debt markets but more extractive than pure coordination mechanisms; classified as moderate hybrid at civilizational scale.",
+    "directionality_logic": "Over-indebted debtors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Nearly maximal extraction. They are forced into the system, have no credible outside option, and bear the largest adjustment burden relative to their baseline no-system outcome (default + wage garnishment). Banks: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.05. Minimal extraction; net coordination benefit. They can exit through secured collateral liquidation, participate voluntarily in adjustment (they negotiate terms), and benefit from prevented default contagion. Unsecured creditors: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.83. Significant extraction but not maximal. Constrained by court decisions and creditor composition; cannot exit bilateral negotiations once debtor enters formal process. Insolvency administrators: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.07. Low extraction; administrative fees are modest relative to claim size, and they participate voluntarily in the system. Consumer advocates: Organized + constrained \u2192 d\u22480.48, f(d)\u22480.63. Moderate extraction; they have collective voice and institutional access but are constrained by existing debt stock and structural reform timelines. Analytical observer: analytical \u2192 d\u22480.58, f(d)\u22480.75. Moderate extraction from global perspective; the system is less severe than predatory debt regimes but more constrained than pure voluntary coordination.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through structured institutional analysis: the system is NOT pure coordination (rope) because it creates systematic asymmetric outcomes \u2014 weaker debtors and unsecured creditors absorb losses while secured creditors extract rents. It is also NOT pure extraction (snare) at the system level because it prevents worse outcomes (uncontrolled default cascades, debt slavery) and provides genuine debtor rehabilitation pathways. The tangled rope classification captures the hybrid: real coordination function (stabilizing debtor behavior, preventing systemic contagion, enabling partial recovery) combined with real asymmetric extraction (creditor rents, debtor long-term income constraints, reputational costs). The theater ratio indicates institutional aging: the system began as emergency relief (lower theater) but has evolved into routine procedure with increasing ritual and declining functional transparency. The piton perspective (insolvency administration) reveals the administrative layer is substantially performative \u2014 maintaining formal supervision while creditors negotiate outcomes privately. This is not mandatrophy failure but mandatrophy resolution through perspectival precision: each agent experiences a different structural reality, and the system's true nature emerges from the presheaf of classifications, not from forcing a single type."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nordic_credit_market_discipline",
+      "welfare_state_bankruptcy_regime"
+    ],
+    "dual_formulation_note": "The Finnish system is downstream of European insolvency harmonization efforts but upstream of broader Nordic welfare state configuration. The system's extraction mechanism (debtor income constraints, creditor write-downs) is structurally distinct from alternative mechanisms (bankruptcy discharge, creditor priority regimes) with different \u03b5 values reflecting their functional designs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ]
+}

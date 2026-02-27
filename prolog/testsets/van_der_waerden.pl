@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: van_der_waerden_theorem
+% CONSTRAINT STORY: van_der_waerden
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_van_der_waerden_theorem, []).
+:- module(constraint_van_der_waerden, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -39,10 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -53,16 +51,29 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: van_der_waerden_theorem
+ *   constraint_id: van_der_waerden
  *   human_readable: Van der Waerden's Theorem
- *   domain: mathematical
+ *   domain: mathematical/combinatorics/ramsey_theory
  *
  * SUMMARY:
- *   Van der Waerden's theorem is a fundamental result in Ramsey theory. It states that for any given positive integers r and k, there exists some number N such that if the integers {1, 2, ..., N} are colored with r different colors, then there necessarily exists a monochromatic arithmetic progression of length k.  This constraint reflects a fundamental structural limit on the possibility of avoiding monochromatic progressions under certain coloring conditions.
+ *   Van der Waerden's theorem, proved by Bartel Leendert van der Waerden in
+ *   1927, states that for any finite number of colors and any positive
+ *   integer k, there exists a number N such that if the integers from 1 to N
+ *   are colored using those colors, there must exist a monochromatic
+ *   arithmetic progression of length k. This is a foundational result in
+ *   Ramsey theory and has no degree of freedom in its conclusion. The
+ *   constraint is not imposed by any agent or institution — it emerges
+ *   necessarily from the structure of the integers under finite coloring.
+ *   There is no escape, no negotiation, no alternative arrangement that
+ *   avoids the conclusion. The theorem is equally immutable regardless of who
+ *   observes it or what they might wish were true.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mathematicians: Analytical observer (analytical/analytical) — understands theorem implications
- *   - Random Coloring Algorithm: Primary target (powerless/trapped) — subject to the theorem's constraint
+ * KEY AGENTS:
+ *   - The Integers: The underlying structure subject to coloring; cannot negotiate
+ *   - Finite Colors: The constraint parameter; increasing colors cannot escape the theorem's conclusion
+ *   - Monochromatic Progressions: The necessary consequence; emerges with certainty
+ *   - Combinatorialists: Observer-participants; accept the theorem as immutable
+ *   - Logicians and Proof Theorists: Analytical observers; establish the theorem's formal necessity
  */
 
 /* ==========================================================================
@@ -70,127 +81,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(van_der_waerden_theorem, 0.05). % Very low extractiveness, inherent mathematical property
-domain_priors:suppression_score(van_der_waerden_theorem, 0.01).   % Very low suppression - no real alternative exists, its math
-domain_priors:theater_ratio(van_der_waerden_theorem, 0.0).       % No performative aspect
+domain_priors:base_extractiveness(van_der_waerden, 0.08).
+domain_priors:suppression_score(van_der_waerden, 0.02).
+domain_priors:theater_ratio(van_der_waerden, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(van_der_waerden_theorem, extractiveness, 0.05).
-narrative_ontology:constraint_metric(van_der_waerden_theorem, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(van_der_waerden_theorem, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(van_der_waerden, extractiveness, 0.08).
+narrative_ontology:constraint_metric(van_der_waerden, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(van_der_waerden, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
+narrative_ontology:constraint_metric(van_der_waerden, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(van_der_waerden, resistance, 0.03).
 
-narrative_ontology:constraint_metric(van_der_waerden_theorem, accessibility_collapse, 0.95). % No alternative coloring can fully avoid progressions.
-narrative_ontology:constraint_metric(van_der_waerden_theorem, resistance, 0.01). % Minimal resistance, it's a provable theorem.
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(van_der_waerden, mountain).
+narrative_ontology:human_readable(van_der_waerden, "Van der Waerden's Theorem").
+narrative_ontology:topic_domain(van_der_waerden, "mathematical/combinatorics/ramsey_theory").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(van_der_waerden_theorem, mountain).
-narrative_ontology:human_readable(van_der_waerden_theorem, "Van der Waerden's Theorem").
-narrative_ontology:topic_domain(van_der_waerden_theorem, "mathematical").
+domain_priors:emerges_naturally(van_der_waerden).
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(van_der_waerden_theorem).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(van_der_waerden_theorem). % Required for Tangled Rope
-
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-
-domain_priors:emerges_naturally(van_der_waerden_theorem).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-% narrative_ontology:constraint_beneficiary(van_der_waerden_theorem, [beneficiary_group]).
-%
-% Who bears disproportionate cost?
-% narrative_ontology:constraint_victim(van_der_waerden_theorem, [victim_group]).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(van_der_waerden_theorem, mountain,
+% PERSPECTIVE 1: INTEGERS UNDER COLORING (MOUNTAIN) — Any coloring of the positive integers with finitely many colors must contain a monochromatic arithmetic progression of arbitrary length. This is an intrinsic structural property of the integers under coloring; there is no escape, no alternative formulation, no degree of freedom. The integers cannot negotiate their way out of this constraint.
+constraint_indexing:constraint_classification(van_der_waerden, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(van_der_waerden_theorem, mountain,
+% PERSPECTIVE 2: THE COMBINATORIALIST (MOUNTAIN) — A mathematician working in Ramsey theory or additive combinatorics observes Van der Waerden's theorem as an unavoidable structural fact about the integers. The proof is non-constructive; the Ackermann function bounds on monochromatic progression length are astronomically large. But the theorem's truth is not contingent on proof method, computational tractability, or observational strategy. The combinatorialist experiences this as a mountain — an immutable boundary of what is possible.
+constraint_indexing:constraint_classification(van_der_waerden, mountain,
+    context(agent_power(moderate),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: THE LOGICAL ANALYST (MOUNTAIN) — From the perspective of formal logic and proof theory, Van der Waerden's theorem is a statement about the structure of finite colorings and infinite sequences. Its proof (Ackermann 1937) is non-constructive, relying on the pigeonhole principle and the arithmetic structure of the integers. The theorem's truth is independent of any particular model or representation — it holds in ZFC and in any formal system with the axioms needed for basic arithmetic. The constraint is that coloring space + finite colors + infinite domain necessarily implies monochromatic progressions. This is a natural law of combinatorial logic.
+constraint_indexing:constraint_classification(van_der_waerden, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: A COMPUTER IMPLEMENTING A COLORING ALGORITHM
-constraint_indexing:constraint_classification(van_der_waerden_theorem, mountain,
+% PERSPECTIVE 4: THE MATHEMATICAL INSTITUTION (MOUNTAIN) — Mathematics as a social institution accepts Van der Waerden's theorem as a proven fact. No organization can negotiate around it; no funding mechanism can change it; no alternative framework has yet succeeded in dodging its conclusion. The constraint holds across all mathematical schools and traditions that accept standard logic and arithmetic. The institutional perspective sees this as a fixed point in the landscape of mathematical knowledge.
+constraint_indexing:constraint_classification(van_der_waerden, mountain,
     context(agent_power(institutional),
-            time_horizon(biographical),
-            exit_options(constrained),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
             spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(van_der_waerden_theorem_tests).
+:- begin_tests(van_der_waerden_tests).
 
-test(perspectival_consistency) :-
-    % Verify type consistency across perspectives.
-    constraint_indexing:constraint_classification(van_der_waerden_theorem, Type1, context(_, _, _, _)),
-    constraint_indexing:constraint_classification(van_der_waerden_theorem, Type2, context(_, _, _, _)),
-    Type1 == Type2.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(van_der_waerden, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(van_der_waerden, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(van_der_waerden_theorem, ExtMetricName, E),
-    E =< 0.25. % Mountain
+    narrative_ontology:constraint_metric(van_der_waerden, ExtMetricName, E),
+    domain_priors:suppression_score(van_der_waerden, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_law_signature) :-
-    narrative_ontology:constraint_metric(van_der_waerden_theorem, accessibility_collapse, Collapse),
-    Collapse >= 0.85,
-    narrative_ontology:constraint_metric(van_der_waerden_theorem, resistance, Resistance),
-    Resistance =< 0.15,
-    domain_priors:emerges_naturally(van_der_waerden_theorem).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(van_der_waerden),
+    narrative_ontology:constraint_metric(van_der_waerden, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(van_der_waerden, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
-:- end_tests(van_der_waerden_theorem_tests).
+:- end_tests(van_der_waerden_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -198,66 +172,41 @@ test(natural_law_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Mountain due to its nature as a proven mathematical theorem. Its extractiveness and suppression scores are extremely low, reflecting that it's a fundamental property of numbers and colorings rather than an actively enforced rule. The accessibility collapse is high because it's difficult to avoid monochromatic progressions given the theorem's conditions, and resistance is low because it's a mathematically provable result.
+ *   Extractiveness (0.08): Minimal. Van der Waerden's theorem does not extract from any agent in the sense of asymmetric power transfer. The theorem is a fact about integer structure, not a mechanism of coordination or coercion. No group benefits at another's expense. The small non-zero value reflects that the theorem limits what is possible — a very weak form of constraint — but this is not extractive, it is merely restrictive of impossible possibilities. Suppression (0.02): Negligible. There is no coercive mechanism, no silencing of alternatives, no prohibition. The theorem does not suppress any actor or alternative formulation. Alternatives were simply never possible. Theater ratio (0.05): Negligible. The proof is non-constructive (Ackermann 1937), but the statement is purely factual — no performative element, no narrative framing, no institutional ritual. The 'theater' in proving the theorem (pedagogical presentation, publication conventions) is minimal and orthogonal to the theorem's truth. Accessibility collapse (0.92): Very high. The theorem's conclusion is completely resistant to escape or circumvention. You cannot color the integers without creating monochromatic progressions. The accessibility of any alternative outcome collapses to zero. Resistance (0.03): Very low. The theorem is proven; resistance to its validity is confined to a tiny fraction of mathematical dissenters and is not a property of the constraint itself.
  *
  * PERSPECTIVAL GAP:
- *   There is no significant perspectival gap, as the theorem is a fundamental mathematical truth and is experienced as such from all viewpoints, whether mathematical, computational, or abstractly analytical. All perspectives result in a 'mountain' classification.
+ *   There is no perspectival gap. All perspectives classify this constraint as Mountain because the constraint is invariant across all structural positions, power levels, exit options, and time horizons. Whether viewed as a powerless agent (the integers), a moderate observer (the combinatorialist), an analytical observer (the logician), or an institutional actor (mathematics as a discipline), the conclusion is identical and immutable. This uniformity is the hallmark of a mountain constraint — the classification does not change with the observer's position.
  *
  * DIRECTIONALITY LOGIC:
- *   There are no explicit beneficiaries or victims in the traditional sense for a mathematical theorem. We conceptualize coloring algorithms as being 'constrained' by the theorem. However, since its a mountain constraint and doesn't require beneficiaries or victims, this conceptualization is more of a reflection of the theorem's behavior rather than a traditional beneficial/victim relationship.
+ *   No directionality computation is relevant for a mountain constraint. There are no beneficiaries or victims. The constraint does not extract from anyone. The sigmoid directionality function f(d) and effective extractiveness χ are not applicable because the constraint has no asymmetric power structure. Every observer, regardless of power or exit options, experiences the same immutable fact: colorings imply monochromatic progressions. Directionality d is undefined in this context — the constraint is not a power relation.
  *
  * MANDATROPHY ANALYSIS:
- *   This theorem is not mislabeled as coordination or extraction because it's a foundational principle that dictates an inescapable structural constraint. Its function is not about coordinating action but fundamentally limiting what is possible. Therefore, any attempt to classify this as a form of social arrangement would be incorrect. The low extractiveness score prevents this misclassification.
+ *   Van der Waerden's theorem presents no mandatrophy. The theorem is purely a mountain — a natural law of combinatorics. There is no risk of mislabeling it as coordination (rope) or extraction (snare) because all perspectives yield the same classification and there is no asymmetric benefit structure. The constraint is not contingent on measurement basis, observable choice, or institutional arrangement. The only 'omega' would be whether one accepts the axioms of arithmetic and logic, but that is philosophical, not structural to the constraint itself.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_van_der_waerden,
-    'To what extent can variations of the theorem be considered structurally different constraints?',
-    'Further exploration of related theorems in Ramsey theory and their variations.',
-    'If true, more separate constraint stories are needed; if false, a single encompassing story is sufficient.',
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(van_der_waerden_theorem, 0, 10).
+narrative_ontology:interval(van_der_waerden, 1927, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Since the base extractiveness is very low (0.05) temporal measurements are not strictly required but included for consistency.
-
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(van_der_waerden_theorem_tr_t0, van_der_waerden_theorem, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(van_der_waerden_theorem_tr_t5, van_der_waerden_theorem, theater_ratio, 5, 0.0).
-narrative_ontology:measurement(van_der_waerden_theorem_tr_t10, van_der_waerden_theorem, theater_ratio, 10, 0.0).
-
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(van_der_waerden_theorem_ex_t0, van_der_waerden_theorem, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(van_der_waerden_theorem_ex_t5, van_der_waerden_theorem, base_extractiveness, 5, 0.05).
-narrative_ontology:measurement(van_der_waerden_theorem_ex_t10, van_der_waerden_theorem, base_extractiveness, 10, 0.05).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(van_der_waerden_theorem, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(van_der_waerden_theorem, [other_constraint_id]).
+narrative_ontology:affects_constraint(van_der_waerden, ramsey_theorem_foundation).
+narrative_ontology:affects_constraint(van_der_waerden, ackermann_function_bounds).
+narrative_ontology:affects_constraint(van_der_waerden, pigeonhole_principle).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

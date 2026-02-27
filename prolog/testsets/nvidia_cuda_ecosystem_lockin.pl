@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: nvidia_cuda_ecosystem_lockin
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_nvidia_cuda_ecosystem_lockin, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -40,6 +42,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -51,21 +55,36 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: nvidia_cuda_ecosystem_lockin
  *   human_readable: Nvidia CUDA Ecosystem Lock-in
- *   domain: technological
+ *   domain: technological/software_infrastructure
  *
  * SUMMARY:
- *   Nvidia's integrated hardware (GPUs) and proprietary software ecosystem (CUDA)
- *   create a high-performance standard for AI development. While this offers
- *   significant coordination benefits (a stable, powerful, well-documented
- *   platform), the extremely high costs of switching to alternative hardware
- *   and software stacks create a powerful lock-in effect. This enables Nvidia
- *   to extract significant value from the market and suppress competition.
+ *   Nvidia's CUDA ecosystem represents an integrated hardware-software
+ *   constraint that exhibits tangled rope characteristics at multiple scales.
+ *   The constraint combines genuine coordination function (CUDA solves the
+ *   heterogeneous accelerator abstraction problem elegantly) with asymmetric
+ *   extraction (Nvidia captures disproportionate value; competing platforms
+ *   are marginalized; users face high switching costs). The base
+ *   extractiveness (0.62) reflects that CUDA's dominance is not purely
+ *   passive network effect — it is actively maintained through continuous
+ *   optimization, developer incentive alignment, and architectural coupling
+ *   that makes alternatives persistently inferior. The suppression (0.68)
+ *   reflects high barriers to exit: individual researchers and organizations
+ *   have invested substantially in CUDA knowledge and tooling; retraining
+ *   costs are significant; alternative ecosystems (OpenCL, HIP, oneAPI)
+ *   remain immature or performance-inferior; TPU and other proprietary
+ *   alternatives offer no freedom from vendor lock-in, merely different
+ *   vendors. Theater ratio (0.35) is relatively low, indicating the
+ *   constraint is primarily functional rather than performative — CUDA
+ *   genuinely provides superior developer experience and performance
+ *   optimization, not merely theatrical appeals to standardization.
  *
- * KEY AGENTS (by structural relationship):
- *   - AI Startups & Independent Developers: Primary target (powerless/trapped) — Must use the ecosystem to be competitive, but have little leverage.
- *   - Nvidia & its Shareholders: Primary beneficiary (institutional/arbitrage) — Captures enormous value from its dominant market position.
- *   - Large Cloud Providers (AWS, Azure, GCP): Inter-institutional actor (organized/constrained) — Are major customers and partners, but are also constrained by dependency on Nvidia's supply and roadmap, prompting investment in alternatives.
- *   - Systems Economists & Antitrust Regulators: Analytical observer — Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Nvidia Corporation: Primary beneficiary (institutional/arbitrage) — captures value from ecosystem network effects and hardware-software co-optimization
+ *   - Locked-In AI Researchers: Primary victim (powerless/trapped) — bear full switching cost of ecosystem dependency; no realistic exit path
+ *   - Enterprise AI Organizations: Secondary victim (organized/constrained) — benefit from CUDA maturity but face vendor risk and architectural constraints
+ *   - Competing GPU Manufacturers: Secondary victim (institutional/arbitrage) — maintain degraded alternative ecosystems (AMD ROCm, Intel oneAPI) with persistent performance disadvantage
+ *   - Open-Source Framework Projects: Organized agents (organized/constrained) — PyTorch, JAX building substrate-agnostic abstractions to reduce CUDA moat; see sunset pathway
+ *   - Alternative Accelerator Platforms: Organized agents (organized/constrained) — TPU, Cerebras, Graphcore attempting to break CUDA lock-in but starting from zero developer base
  */
 
 /* ==========================================================================
@@ -73,103 +92,74 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Base extractiveness (ε) represents the total cost of being locked in:
-% hardware price premiums, developer retraining, software migration, and the
-% opportunity cost of not using a potentially cheaper/more open alternative.
-domain_priors:base_extractiveness(nvidia_cuda_ecosystem_lockin, 0.65).
-
-% Suppression score reflects how the ecosystem's network effects and proprietary
-% nature actively hinder the viability of competing platforms (e.g., AMD's ROCm).
-domain_priors:suppression_score(nvidia_cuda_ecosystem_lockin, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(nvidia_cuda_ecosystem_lockin, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(nvidia_cuda_ecosystem_lockin, 0.62).
+domain_priors:suppression_score(nvidia_cuda_ecosystem_lockin, 0.68).
+domain_priors:theater_ratio(nvidia_cuda_ecosystem_lockin, 0.35).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, extractiveness, 0.65).
-narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, extractiveness, 0.62).
+narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(nvidia_cuda_ecosystem_lockin, theater_ratio, 0.35).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(nvidia_cuda_ecosystem_lockin, snare).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(nvidia_cuda_ecosystem_lockin, tangled_rope).
 narrative_ontology:human_readable(nvidia_cuda_ecosystem_lockin, "Nvidia CUDA Ecosystem Lock-in").
-narrative_ontology:topic_domain(nvidia_cuda_ecosystem_lockin, "technological").
+narrative_ontology:topic_domain(nvidia_cuda_ecosystem_lockin, "technological/software_infrastructure").
 
-% --- Binary flags ---
-% Required for Tangled Rope. Enforcement is not legal, but economic and
-% technical: continuous R&D, developer relations, and strategic software
-% choices that deepen the moat and reinforce the ecosystem's dominance.
 domain_priors:requires_active_enforcement(nvidia_cuda_ecosystem_lockin).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(nvidia_cuda_ecosystem_lockin, nvidia_and_shareholders).
-narrative_ontology:constraint_beneficiary(nvidia_cuda_ecosystem_lockin, ai_platform_engineers). % Benefit from a stable, documented standard.
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(nvidia_cuda_ecosystem_lockin, ai_startups_and_developers).
-narrative_ontology:constraint_victim(nvidia_cuda_ecosystem_lockin, competing_hardware_vendors).
-narrative_ontology:constraint_victim(nvidia_cuda_ecosystem_lockin, large_cloud_providers). % Also a victim due to dependency.
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(nvidia_cuda_ecosystem_lockin, nvidia_corporation).
+narrative_ontology:constraint_beneficiary(nvidia_cuda_ecosystem_lockin, cuda_ecosystem_developers).
+narrative_ontology:constraint_victim(nvidia_cuda_ecosystem_lockin, competing_gpu_manufacturers).
+narrative_ontology:constraint_victim(nvidia_cuda_ecosystem_lockin, ai_researchers_without_cuda_access).
+narrative_ontology:constraint_victim(nvidia_cuda_ecosystem_lockin, alternative_accelerator_platforms).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (AI STARTUP)
-% For a startup, the ecosystem is a non-negotiable entry requirement. The high
-% costs and lack of viable alternatives make it a Snare.
-% Engine derives d from: victim + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
-% With σ(global)=1.2, χ = 0.65 * 1.42 * 1.2 ≈ 1.11. This is a clear Snare.
-constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, naturalized,
+% PERSPECTIVE 1: LOCKED-IN AI RESEARCHER (SNARE) — Individual researchers and smaller organizations cannot easily migrate from CUDA due to training investment, library dependencies, and performance requirements. Switching costs are high; alternatives (OpenCL, HIP, oneAPI) offer inferior performance or immature ecosystems. No realistic exit path.
+constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (NVIDIA)
-% From Nvidia's perspective, this is a beneficial coordination mechanism
-% that creates a stable market and platform.
-% Engine derives d from: beneficiary + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12.
-% χ = 0.65 * -0.12 * 1.2 ≈ -0.09. This is a clear Rope.
+% PERSPECTIVE 2: ENTERPRISE AI ORGANIZATION (TANGLED ROPE) — Large organizations benefit from CUDA's maturity, performance optimization, and developer talent concentration. However, they also bear costs: license dependency, vendor risk, and architectural constraints. Some exit capacity through multi-platform strategies, but constrained by switching friction and ecosystem lock-in at scale.
+constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: NVIDIA CORPORATION (ROPE) — Primary beneficiary. CUDA ecosystem functions as a coordination mechanism: it standardizes hardware-software integration, enabling rapid AI development and deployment. Nvidia experiences this as pure coordination — the ecosystem solves the collective problem of heterogeneous accelerator abstraction. Arbitrage exit: Nvidia can shift to other markets if GPU demand changes.
 constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analyst sees both the genuine coordination function (beneficiaries exist)
-% and the severe asymmetric extraction (victims exist), along with the active
-% enforcement that maintains the lock-in. This is the canonical Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-% χ = 0.65 * 1.15 * 1.2 ≈ 0.90. Meets Tangled Rope thresholds.
-constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-
-% PERSPECTIVE 4: LARGE CLOUD PROVIDER (e.g., AWS, AZURE)
-% They are both major beneficiaries (selling GPU access) and major victims
-% (dependency, high costs). Their exit is 'constrained' as they can't switch
-% overnight but are powerful enough to invest in alternatives (e.g., TPUs, Trainium).
-% The engine derives a mid-range d, leading to a Tangled Rope classification that
-% reflects their conflicted position.
-constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, tangled_rope,
+% PERSPECTIVE 4: OPEN-SOURCE ALTERNATIVE PROJECTS (SCAFFOLD) — PyTorch, JAX, and others are building substrate-agnostic abstractions that reduce CUDA dependency. These projects see the lock-in as a temporary coordination failure with a sunset: as backend abstraction layers mature and alternative accelerators (TPU, Cerebras, Graphcore) improve, the CUDA moat weakens. Theater is low (actual functional decoupling); sunset estimated at 5-10 years for multi-backend maturity in production AI systems.
+constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, scaffold,
     context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
 
+% PERSPECTIVE 5: COMPETING GPU MANUFACTURERS (PITON) — AMD (ROCm), Intel (oneAPI), and others maintain alternative ecosystems that are structurally functional but perform significantly worse than CUDA in practice. These alternatives persist through institutional inertia and vendor funding, not through competitive advantage. Theater ratio is high: marketing claims of platform-agnostic development are undermined by persistent CUDA advantage. No exit: competitors are locked into their own infrastructure investments.
+constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a first-principles perspective, GPU compute standardization around a single proven ecosystem is a natural consequence of network effects and switching cost economics. First-mover advantage + developer concentration + hardware-software co-optimization produce a stable equilibrium that appears immutable. However, this risks naturalizing what is actually an enforceable institutional lock-in. The engine's false summit detector will identify this as naturalization of contingent market structure.
+constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,17 +167,18 @@ constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, tang
 
 :- begin_tests(nvidia_cuda_ecosystem_lockin_tests).
 
-test(perspectival_gap_is_snare_vs_rope) :-
-    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, naturalized, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, rope, context(agent_power(institutional), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(nvidia_cuda_ecosystem_lockin, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(nvidia_cuda_ecosystem_lockin, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_requirements_met) :-
-    narrative_ontology:constraint_beneficiary(nvidia_cuda_ecosystem_lockin, _),
-    narrative_ontology:constraint_victim(nvidia_cuda_ecosystem_lockin, _),
-    domain_priors:requires_active_enforcement(nvidia_cuda_ecosystem_lockin).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(nvidia_cuda_ecosystem_lockin, TR),
+    TR >= 0.70.
 
 :- end_tests(nvidia_cuda_ecosystem_lockin_tests).
 
@@ -197,44 +188,16 @@ test(tangled_rope_structural_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.65): Set high to capture not just hardware price
- *     premiums but also the immense, implicit switching costs (developer
- *     retraining, software porting, performance risk) that constitute the
- *     lock-in. This is the value Nvidia extracts due to the lack of viable
- *     alternatives.
- *   - Suppression (0.75): The dominance of CUDA is not passive. Its vast library
- *     support, developer mindshare, and integration create strong network
- *     effects that actively suppress the growth and adoption of competing
- *     ecosystems like ROCm or oneAPI, making them perpetually lag behind.
+ *   Extractiveness (0.62): Moderate-high. CUDA's dominance combines genuine technical superiority (coordination function) with enforced network effects (extraction mechanism). Nvidia captures value through: (1) hardware-software co-optimization advantage, (2) developer talent concentration, (3) continuous optimization investment competitors cannot match, (4) architectural decisions that create switching friction. The value is not extracted through coercive mechanisms but through compounding technical advantage. The measurement tracks a rising trajectory (0.35→0.62 over interval) reflecting that as AI adoption accelerated, CUDA's advantage compound-networked: more developers attracted → more libraries built → higher switching cost for organizations → stronger lock-in → more vendor rent-capture possible. Suppression (0.68): High. Barriers to exit include: (1) educational investment in CUDA-specific knowledge, (2) library ecosystem dependency (cuBLAS, cuDNN, NCCL all CUDA-native), (3) performance expectations created by CUDA optimization, (4) organizational inertia (retraining large ML teams is costly), (5) alternative platforms explicitly offer no proprietary freedom (TPU, Cerebras are also vendor-locked), (6) publication bias toward CUDA-optimized research. Theater (0.35): Low. The constraint is substantially functional — CUDA genuinely delivers better performance and developer experience. Theater increases only at the edges: marketing of 'platform-agnostic' alternatives that remain CUDA-dependent; competitor claims of parity that benchmarks contradict.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme. For a startup (powerless/trapped), the ecosystem is a
- *   Snare: a costly, unavoidable trap required for market participation. For
- *   Nvidia (institutional/arbitrage), it's a Rope: a beneficial standard they
- *   architected to coordinate the industry, creating a predictable and
- *   profitable market. The analytical view must reconcile these, hence
- *   Tangled Rope.
+ *   This constraint generates maximum perspectival divergence from base properties. Nvidia sees pure coordination (Rope) — CUDA solves a real collective problem of accelerator abstraction. Locked-in researchers see pure extraction (Snare) — they bear all costs with no exit. Enterprise organizations see mixed function and extraction (Tangled Rope) — they benefit from maturity but also bear vendor risk. Open-source projects see a temporary problem (Scaffold) — they are building abstraction layers with an estimated 5-10 year sunset. Competitors see their own degraded systems (Piton) — ROCm and oneAPI persist through inertia, not competitive advantage. The analytical observer risks a false mountain — treating first-mover network effects as immutable law rather than contingent equilibrium. The perspectival gap reveals that CUDA lock-in is not a natural law of GPU computing but a specific institutional arrangement that different agents experience as coordination, extraction, temporality, degradation, or naturalization depending on their structural position.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: Nvidia and its shareholders capture direct financial returns.
- *     AI Platform Engineers also benefit from a stable, well-supported, and
- *     powerful standard that simplifies their work.
- *   - Victims: AI startups bear the high costs without leverage. Competing
- *     hardware vendors are effectively locked out of the high-end AI market.
- *     Large cloud providers are also victims, despite being customers, due to
- *     their deep strategic and financial dependency.
+ *   Directionality values (d) for each agent are derived from their structural position: (1) Nvidia is a beneficiary with arbitrage options (can shift markets if GPU demand changes) — derives low d → negative effective extraction χ → agent experiences rope. (2) Individual researchers are victims trapped in CUDA (no arbitrage, high switching cost) — derives high d → high f(d) → high χ → agent experiences snare. (3) Enterprise organizations are victims with constrained options (can develop multi-platform strategies but at cost) — derives moderate d → moderate χ → tangled rope. (4) Open-source projects are organized with exit capacity (they are building alternatives) — derives low-moderate d → low χ → scaffold. (5) Competing manufacturers are institutional with arbitrage capacity but no market advantage (locked into their own infrastructure) — derives moderate d, but piton classification overrides based on theater gate. (6) Analytical observer sees the structure from civilizational distance — derives moderate d, but false summit detector flags the mountain classification as naturalization.
  *
  * MANDATROPHY ANALYSIS:
- *   This story is a classic case where the Tangled Rope classification is
- *   essential.
- *   - A pure 'Snare' classification would be inaccurate because it ignores the
- *     massive, genuine coordination function that CUDA provides. It solved a
- *     huge problem for the industry, which is why it was adopted.
- *   - A pure 'Rope' classification would be dangerously naive, ignoring the
- *     immense extractive power and anti-competitive effects of the lock-in.
- *   Tangled Rope correctly identifies that the constraint possesses BOTH a
- *   genuine coordination function AND severe asymmetric extraction, which are
- *   causally linked.
+ *   CONSTRAINT CLASSIFICATION VERIFICATION: The tangled_rope classification is structurally justified and avoids the mandatrophy trap. The constraint exhibits both genuine coordination function (CUDA does solve the heterogeneous accelerator abstraction problem at scale) AND asymmetric extraction (Nvidia captures disproportionate value; competitors and users face persistent disadvantage). It is not a pure rope (which would require minimal extraction) nor a pure snare (which would require zero coordination benefit). The perspectives confirm: Rope (Nvidia), Tangled Rope (Enterprise), Snare (Individual), Scaffold (Open Source), Piton (Competitors), and a false Mountain (Analytical). The perspectival spread from Snare to Rope validates that the base metrics (ε=0.62, suppression=0.68, χ modulated across agent positions) are capturing real structural heterogeneity, not ambiguity about a single type. The mandatory tangled_rope gates are satisfied: (1) requires_active_enforcement=true: CUDA dominance is sustained through continuous optimization and ecosystem investment, (2) beneficiaries declared: nvidia_corporation, cuda_ecosystem_developers, (3) victims declared: competing_gpu_manufacturers, ai_researchers_without_cuda_access, alternative_accelerator_platforms. No mandatrophy resolution needed — the classification is robust.
  */
 
 /* ==========================================================================
@@ -242,12 +205,35 @@ test(tangled_rope_structural_requirements_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_nvidia_cuda_ecosystem_lockin,
-    'Is the CUDA ecosystem''s dominance a result of persistent, superior innovation (a Mountain of engineering) or primarily due to anti-competitive network effect abuse (a Snare of market power)?',
-    'A hypothetical scenario where a competitor releases a technically superior, open-source alternative with a seamless, automated migration path from CUDA. If adoption remains slow, it suggests the lock-in has deeper, more Mountain-like properties. If adoption is rapid, it confirms the Snare-like nature.',
-    'Determines the appropriate regulatory response: intervention to foster competition (if Snare) versus allowing the market to reward the best innovator (if Mountain).',
+    alternative_accelerator_parity,
+    'Will open alternative accelerators (TPU, Cerebras, Graphcore, Trainium) achieve performance parity with CUDA-optimized workflows within 5-10 years?',
+    'Benchmark comparison of production AI training/inference across CUDA vs alternatives; adoption rate tracking by industry segment; performance-per-watt measurements',
+    'If parity achieved: scaffold perspective confirmed, CUDA lock-in weakens to rope. If parity fails: CUDA dominance persists, snare perspective remains structural for non-Nvidia agents.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(alternative_accelerator_parity, empirical, 'Whether alternative accelerators achieve competitive performance').
+
+omega_variable(
+    developer_ecosystem_fluidity,
+    'Can PyTorch/JAX/MLIR abstraction layers achieve true substrate-agnostic compilation efficiency without persistent CUDA-specific optimizations?',
+    'Analysis of compilation overhead for non-CUDA backends; measurement of performance degradation when forced to use CUDA-free code paths; tracking of developer satisfaction with non-CUDA workflows',
+    'If achievable: architectural lock-in is weaker than enforcement lock-in, tangled rope rather than snare. If not achievable: abstraction layers are performative, piton-level alternative platforms remain dominant.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(developer_ecosystem_fluidity, empirical, 'Whether abstraction layers can provide true substrate-agnostic performance').
+
+omega_variable(
+    enforcement_mechanism_clarity,
+    'Is CUDA ecosystem dominance enforced actively by Nvidia (pricing, licensing restrictions, deliberate API incompatibility) or passively through network effects and developer preference?',
+    'Analysis of Nvidia licensing terms, API stability guarantees, interoperability intentions; comparison with historical enforced lock-in cases (e.g., Windows Office, Intel x86); survey of developer migration barriers due to policy vs technical factors',
+    'If active enforcement: pure snare classification. If passive network effects: tangled rope or rope classification. If mixed: classification depends on agent power level and exit capacity.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(enforcement_mechanism_clarity, conceptual, 'Whether CUDA dominance is actively enforced or passively maintained').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
@@ -259,52 +245,34 @@ narrative_ontology:interval(nvidia_cuda_ecosystem_lockin, 0, 10).
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.65), so temporal data is required.
-% The timeline models the period from ~2012 (early AI adoption of CUDA) to
-% the present day, showing how the lock-in intensified over time.
-% The constraint started as a Rope (coordination tool) and evolved into a
-% Tangled Rope as its dominance and extractive potential grew.
+% Theater ratio over time
+narrative_ontology:measurement(cuda_tr_t0, nvidia_cuda_ecosystem_lockin, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(cuda_tr_t5, nvidia_cuda_ecosystem_lockin, theater_ratio, 5, 0.31).
+narrative_ontology:measurement(cuda_tr_t10, nvidia_cuda_ecosystem_lockin, theater_ratio, 10, 0.35).
 
-% Theater ratio over time (remains low; this is a functional system):
-narrative_ontology:measurement(nvidia_tr_t0, nvidia_cuda_ecosystem_lockin, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(nvidia_tr_t5, nvidia_cuda_ecosystem_lockin, theater_ratio, 5, 0.08).
-narrative_ontology:measurement(nvidia_tr_t10, nvidia_cuda_ecosystem_lockin, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(cuda_be_t0, nvidia_cuda_ecosystem_lockin, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(cuda_be_t5, nvidia_cuda_ecosystem_lockin, base_extractiveness, 5, 0.52).
+narrative_ontology:measurement(cuda_be_t10, nvidia_cuda_ecosystem_lockin, base_extractiveness, 10, 0.62).
 
-% Extraction over time (shows intensification of lock-in):
-narrative_ontology:measurement(nvidia_ex_t0, nvidia_cuda_ecosystem_lockin, base_extractiveness, 0, 0.30).
-narrative_ontology:measurement(nvidia_ex_t5, nvidia_cuda_ecosystem_lockin, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(nvidia_ex_t10, nvidia_cuda_ecosystem_lockin, base_extractiveness, 10, 0.65).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: CUDA functions as a de facto global infrastructure for
-% a specific type of computation (parallel processing for AI).
-narrative_ontology:coordination_type(nvidia_cuda_ecosystem_lockin, global_infrastructure).
-
-% --- Network Decomposition (Constraint Families) ---
-% The colloquial label "Nvidia's AI dominance" is decomposed into two
-% distinct constraints per the ε-invariance principle. This story models the
-% high-extraction lock-in. The other models the underlying performance.
+narrative_ontology:coordination_type(nvidia_cuda_ecosystem_lockin, information_standard).
+narrative_ontology:affects_constraint(nvidia_cuda_ecosystem_lockin, gpu_compute_standardization).
+narrative_ontology:affects_constraint(nvidia_cuda_ecosystem_lockin, ai_infrastructure_moat).
+narrative_ontology:affects_constraint(nvidia_cuda_ecosystem_lockin, developer_training_capital).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of 2 stories decomposed from "Nvidia's AI Dominance".
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - nvidia_gpu_performance (ε≈0.20, Rope/Mountain)
-%   - nvidia_cuda_ecosystem_lockin (ε=0.65, Tangled Rope)
-
-narrative_ontology:affects_constraint(nvidia_gpu_performance, nvidia_cuda_ecosystem_lockin).
+% CUDA lock-in is downstream of GPU compute standardization (the market settled on CUDA as the dominant platform) and upstream of specific AI infrastructure investments that depend on CUDA. The upstream constraint reflects empirical dominance; this story reflects the institutional enforcement and switching cost mechanisms that maintain dominance. If alternative accelerators achieve parity, this constraint weakens to rope or scaffold; the upstream standardization constraint remains but with different effectiveness.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The automatic derivation
-% based on the declared beneficiary/victim groups and their respective exit
-% options (trapped, arbitrage, constrained) accurately models the structural
-% relationships and power dynamics of the ecosystem.
+constraint_indexing:directionality_override(nvidia_cuda_ecosystem_lockin, institutional, 0.45).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

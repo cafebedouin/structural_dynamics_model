@@ -2,26 +2,27 @@
   "header": {
     "constraint_id": "ai_driven_surveillance_sensor_layer",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aisurv"
   },
   "base_properties": {
-    "extractiveness": 0.75,
-    "suppression": 0.9,
-    "theater_ratio": 0.3,
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
     "claimed_type": "snare",
     "human_readable": "AI-Driven Real-Time Surveillance (Sensor Layer)",
     "topic_domain": "technological/security/political",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "state_security_agencies",
+      "state_security_apparatus",
       "surveillance_technology_vendors",
-      "municipal_governments"
+      "policing_agencies"
     ],
     "victims": [
-      "general_public",
-      "marginalized_communities",
-      "political_dissidents"
+      "surveilled_populations",
+      "anonymity_commons",
+      "due_process_protections"
     ],
     "mandatrophy_resolved": true
   },
@@ -31,142 +32,180 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Marginalized Community Member",
-      "comment": "PERSPECTIVE 1: MARGINALIZED COMMUNITY (SNARE) — Disproportionately targeted by biased algorithms and unable to exit the system. Experiences the constraint as pure, coercive extraction with no recourse. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.85."
+      "spatial_scope": "global",
+      "label": "The Surveilled Citizen",
+      "comment": "PERSPECTIVE 1: SURVEILLED CITIZEN (SNARE) \u2014 Cannot exit the sensor layer. Facial recognition, gait analysis, and behavioral detection operate without consent or practical refusal mechanism. Movement through public space triggers continuous data extraction. No alternative pathways exist for ordinary civic participation. Maximum experienced extraction and suppression."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Anonymity Commons",
+      "comment": "PERSPECTIVE 2: ANONYMITY COMMONS (SNARE) \u2014 A public good with no organizational capacity, experiencing total extraction. The capacity to move through public space unobserved\u2014historically available to all\u2014is being systematically eliminated. Cannot organize collective resistance. No sunset mechanism. The commons itself is the victim, not any individual agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Liberties Organizations",
+      "comment": "PERSPECTIVE 3: CIVIL LIBERTIES ORGANIZATIONS (TANGLED ROPE) \u2014 Organized but constrained by resource limitations and legal frameworks that treat surveillance as a national security matter. Experience mixed coordination (they coordinate public resistance, litigation, policy advocacy) and extraction (surveillance systems extract information about their own organizing activities, constraining their tactics). Have some agency but significant structural barriers."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The State Security Agency",
-      "comment": "PERSPECTIVE 2: STATE SECURITY AGENCY (ROPE) — Experiences the system as a pure coordination tool for public safety and threat neutralization. The agency is the primary beneficiary and has full control. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.09. Negative effective extraction signifies a net subsidy."
+      "spatial_scope": "global",
+      "label": "State Security Apparatus",
+      "comment": "PERSPECTIVE 4: STATE SECURITY APPARATUS (ROPE) \u2014 Primary beneficiary. Experiences the constraint as pure coordination infrastructure: the sensor layer enables real-time threat detection, movement tracking, and predictive policing that would be impossible without AI automation. No extraction cost to this agent\u2014the apparatus designs and controls the system. Benefits from all extracted data. Arbitrage exit means they can modulate surveillance intensity without losing capability."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
+      "classification_type": "rope",
+      "agent_power": "institutional",
       "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Average Citizen",
-      "comment": "PERSPECTIVE 3: AVERAGE CITIZEN (TANGLED ROPE) — Perceives a genuine coordination benefit (public safety) but also bears the cost of lost privacy and autonomy. Cannot easily opt-out, creating a hybrid experience. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.69."
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Surveillance Technology Vendors",
+      "comment": "PERSPECTIVE 5: SURVEILLANCE TECHNOLOGY VENDORS (ROPE) \u2014 Beneficiaries with arbitrage exit. Extract value through licensing fees, service contracts, and data resale. Coordinate their product development with government procurement timelines. No suppression cost to the vendors themselves\u2014they operate in the regulatory environment they helped design. Arbitrage enables them to shift products between markets, modulating commitment."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Privacy Regulatory Bodies",
+      "comment": "PERSPECTIVE 6: PRIVACY REGULATORY BODIES (PITON) \u2014 Formally tasked with protecting privacy but structurally disabled by classification regimes, national security exemptions, and funding constraints. Consent procedures and impact assessments are largely performative\u2014designed to appear rigorous while enabling surveillance deployment. Theater_ratio is moderate because enforcement exists but is theatrical: fines are nominal, enforcement authority is limited by security claims, and regulators operate within legal frameworks that preempt their jurisdiction. The regulatory apparatus persists through institutional inertia (agencies exist, processes run) but has atrophied in functional capacity."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (SNARE) — Sees the full structure: a coordination function (safety) used to justify a disproportionate, non-consensual, and coercive extraction of privacy and autonomy, with extremely high suppression of alternatives. The high ε and suppression values firmly place it in the Snare category. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.04."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Technology Vendor",
-      "comment": "PERSPECTIVE 5: TECHNOLOGY VENDOR (TANGLED ROPE) — Provides a coordination tool for profit. Benefits from the system but is also subject to market and regulatory pressures. The product itself is a hybrid of function and extraction. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.01."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Civil Liberties Union",
-      "comment": "PERSPECTIVE 6: CIVIL LIBERTIES UNION (SNARE) — As an organized opponent, this agent has more power than an individual but is still constrained by the system's legal and political entrenchment. It perceives the system as a pure Snare targeting fundamental rights. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.56. While χ is below the Snare threshold, the classification reflects the agent's structural opposition to a system with ε=0.75 and suppression=0.90."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Technical Limitation View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / TECHNICAL LIMITATION VIEW (MOUNTAIN) \u2014 Risk of false summit. From a civilizational perspective, one might argue that real-time behavioral inference from visual data is a natural consequence of sufficiently advanced pattern recognition\u2014that privacy degradation is an inevitable property of AI systems given their architecture and training objectives. However, the structural data contradicts this: the sensor layer exists not because technically unavoidable but because it is architecturally chosen and politically enabled. Alternative designs (privacy-preserving anomaly detection, federated processing, cryptographic aggregation) exist but are not deployed because they reduce extraction capacity. The 'natural law' framing naturalizes what is a contingent institutional choice."
     }
   ],
   "omegas": [
     {
-      "id": "algorithmic_bias_reducibility",
-      "question": "Is the observed algorithmic bias against marginalized groups a correctable flaw or an inherent structural property of systems trained on historical data?",
-      "resolution_mechanism": "Independent, transparent, third-party audits of training data and model performance across demographic groups. Longitudinal studies on the impact of bias mitigation techniques.",
-      "impact": "If bias is correctable, the system might be re-classified as a severe Tangled Rope. If inherent, it confirms the Snare classification by structurally encoding discrimination.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether algorithmic bias is a correctable flaw or inherent property"
-    },
-    {
-      "id": "chilling_effect_magnitude",
-      "question": "To what extent does the presence of pervasive surveillance suppress legitimate political dissent, free association, and expression?",
-      "resolution_mechanism": "Sociological surveys measuring self-censorship; analysis of protest attendance and online speech patterns in surveilled vs. non-surveilled areas.",
-      "impact": "A high measured chilling effect solidifies the Snare classification by demonstrating extraction of political freedom. A low effect would weaken the Snare case, suggesting the primary extraction is data, not liberty.",
+      "id": "technical_necessity_vs_choice",
+      "question": "Is real-time behavioral inference from sensor data a technical necessity of AI systems, or a contingent architectural choice that could be designed otherwise?",
+      "resolution_mechanism": "Comparative analysis of deployed vs. theoretical privacy-preserving architectures; analysis of vendor design decisions and their rationales; investigation of whether technical constraints or market incentives drove centralized vs. federated architectures",
+      "impact": "If technical necessity: mountain classification confirmed. If contingent choice: reveals snare structure and naturalizing language as false summit. Affects whether surveillance is immutable or whether alternatives are suppressed.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "The degree to which surveillance suppresses legitimate dissent"
+      "description": "Whether behavioral inference is technically necessary or architecturally chosen"
     },
     {
-      "id": "crime_reduction_causality",
-      "question": "What is the actual causal impact of AI surveillance on crime rates, versus the claimed deterrent effect (security theater)?",
-      "resolution_mechanism": "Causal inference studies (e.g., regression discontinuity) comparing crime rates in cities before and after deployment, controlling for other socioeconomic factors.",
-      "impact": "If the causal link to crime reduction is strong, the 'coordination' function is real, supporting a Tangled Rope view. If the link is weak or non-existent, the system is primarily a tool of social control, confirming the Snare classification.",
+      "id": "anonymity_commons_recovery",
+      "question": "Can anonymity as a public good be recovered once the sensor layer reaches saturation, or is it permanently degraded at a civilization scale?",
+      "resolution_mechanism": "Historical analysis of analogous commons collapse (fish stocks, air quality); modeling of threshold effects in surveillance density; feasibility analysis of re-anonymization infrastructure (decoy generation, spoofing, cryptographic masking)",
+      "impact": "If recoverable: constraint may have sunset if political will emerges. If permanent: victim is not just people but a structural feature of human civilization, suggesting mandatrophy of 'freedom to move unobserved' as a foundational capability.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether anonymity commons can recover after saturation"
+    },
+    {
+      "id": "alternative_policing_legitimacy",
+      "question": "Do privacy-preserving policing methods (community-based, individualized investigation, warrant-driven) generate equivalent public safety outcomes compared to population-scale behavioral monitoring?",
+      "resolution_mechanism": "Comparative crime statistics controlling for confounders; analysis of detection rates and false positive rates in algorithmic vs. traditional policing; cost-benefit analysis including incarceration-related harms",
+      "impact": "If equivalent: surveillance framing as 'necessary for safety' is revealed as false\u2014extraction continues not for coordination but for institutional power expansion. If traditional methods underperform: constrains the snare classification toward tangled rope (genuine coordination function despite extraction). Directly affects mandatrophy interpretation.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The causal link between AI surveillance and crime reduction"
+      "description": "Whether privacy-preserving policing methods achieve equivalent outcomes"
+    },
+    {
+      "id": "consent_at_border_vs_interior",
+      "question": "What structural difference emerges between surveillance authorized at borders/controlled spaces versus surveillance in the interior/public commons?",
+      "resolution_mechanism": "Analysis of legal frameworks, public legitimacy metrics, and opt-out availability in different deployment contexts; identification of whether interior surveillance is presented as extraordinary or normalized",
+      "impact": "If interior treated as ordinary: reveals normalization of extraction-as-coordination. If treated as extraordinary: suggests political capacity for exclusion exists but is not applied, revealing choice rather than technical necessity. Affects how perspectives experience the constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural legitimacy gap between border and interior surveillance"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.65
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2023,
-      "value": 0.7
+      "time_point": 2,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.75
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.28
+      "time_point": 0,
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2023,
-      "value": 0.3
+      "time_point": 2,
+      "value": 0.45
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.3
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
     }
   ],
   "interval": {
-    "start": 2020,
-    "end": 2026
+    "start": 0,
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "This constraint models the 'sensor layer' of modern governance: the network of AI-driven cameras and sensors performing real-time facial recognition, gait analysis, and behavioral detection. Deployed under the rationale of public safety ('smart cities'), this system creates a profound structural conflict between security and autonomy. Its core function is the non-consensual extraction of biometric and behavioral data from the public, creating a permanent, searchable record of movement and association.",
+    "narrative_context": "AI-driven real-time surveillance at the sensor layer\u2014facial recognition, gait analysis, automated behavioral detection\u2014represents a structural constraint that extracts informational access to human movement, identity, and behavior from populations without meaningful consent or exit mechanism. The constraint operates globally through smart city deployments, police integration, and border infrastructure. It exhibits snare characteristics (high extraction, high suppression, no exit for surveilled populations) combined with rope characteristics (genuine coordination benefit for state security apparatus and vendors). The theater ratio has increased gradually as regulatory pretense (privacy impact assessments, consent procedures, oversight bodies) has become increasingly performative relative to deployment pace. The constraint's extractiveness has accelerated as system integration reaches criticality\u2014the 2020-2026 interval marks the transition from distributed pilot projects to continuous operational deployment across major urban centers.",
     "key_agents": [
-      "State Security Agencies: Primary beneficiary (institutional/arbitrage) — gains unprecedented power for monitoring and social control.",
-      "Surveillance Technology Vendors: Primary beneficiary (powerful/mobile) — profits from the sale and maintenance of the system.",
-      "Marginalized Communities: Primary victim (powerless/trapped) — disproportionately misidentified and targeted by biased algorithms with no recourse.",
-      "General Public: Secondary victim (moderate/constrained) — loses privacy and autonomy in exchange for a claimed increase in security.",
-      "Civil Liberties Groups: Organized opposition (organized/constrained) — attempts to challenge the system through legal and political means."
+      "Surveilled Populations: Primary victim (powerless/trapped) \u2014 all individuals in coverage areas; bear continuous informational extraction without alternative",
+      "Anonymity Commons: Systemic victim (powerless/trapped) \u2014 public good being systematically degraded; cannot organize or exit",
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 designs and controls sensor layer; extracts all benefits with no suppression cost",
+      "Surveillance Technology Vendors: Secondary beneficiary (institutional/arbitrage) \u2014 monetize through licensing, service contracts, data resale; arbitrage enables market-shifting",
+      "Civil Liberties Organizations: Constrained challenger (organized/constrained) \u2014 attempt legal and policy resistance but operate within security-preempted frameworks",
+      "Privacy Regulatory Bodies: Degraded enforcer (institutional/constrained) \u2014 formally tasked with oversight but structurally disabled by classification regimes and security exemptions; theater-heavy",
+      "Analytical Observer: Risks naturalizing contingent choice as technical limit"
     ],
-    "logic_rationale": "Extractiveness (ε=0.75): Extremely high. The value extracted is the total loss of public anonymity and the creation of a comprehensive dataset for social control and prediction, a resource of immense value to the state. Suppression (0.90): Near-total. In a 'smart city,' it is physically impossible to opt out of surveillance in public spaces. Alternatives like masks are often flagged as suspicious, actively suppressing avoidance. Theater Ratio (0.30): Low. While there is a 'security theater' component, the system is brutally functional. Its primary purpose is active data collection and analysis, not just passive deterrence.",
-    "perspectival_gap": "The gap is stark. The state (beneficiary) perceives a pure Rope for coordinating public safety. The tech vendor sees a profitable Tangled Rope. The average citizen, weighing perceived safety against privacy loss, also sees a Tangled Rope. However, for marginalized communities (powerless victims), who are most likely to be misidentified and have no power to contest the system, it is an inescapable Snare. The analytical view aligns with the victim's, concluding that the system's coercive and suppressive nature makes it a Snare, where the 'public safety' rationale serves as a pretext for mass data extraction and control.",
-    "directionality_logic": "Beneficiaries (State, Vendors) have arbitrage/mobile exit options, leading to low 'd' values and a perception of coordination (Rope/Tangled Rope). Victims (Public, Marginalized Groups) are constrained or trapped, leading to high 'd' values and a perception of extraction (Tangled Rope/Snare). The analytical observer's 'd' value is canonical, and when combined with the extremely high base extractiveness (ε=0.75) and global scope modifier (σ=1.2), the resulting effective extraction (χ) is well above the Snare threshold.",
-    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that the stated mandate, 'public safety,' is used to justify a system whose primary structural effect is disproportionate and coercive extraction. The coordination function is real but serves as the vehicle for the extraction of a more fundamental good: privacy and autonomy. The system fails the test of a legitimate Tangled Rope because the extraction is not a side effect but the core purpose, and alternatives are systematically suppressed. Therefore, the analytical classification is Snare."
+    "logic_rationale": "Extractiveness (0.68): High, reflecting the magnitude of informational advantage captured by state and vendor actors combined with the breadth of application. The constraint extracts detailed behavioral, locational, and identity information from populations at scale with minimal return benefit to subjects. The value reflects not just the quantity of data extracted but its asymmetry\u2014the state and vendors possess comprehensive behavioral models of populations while subjects have no reciprocal access to state behavioral models. Suppression (0.78): Very high. Populations face substantial barriers to opting out or refusing participation: public space traversal triggers automated capture; no technical means exist for individuals to prevent recognition (masks, gait-altering methods are either ineffective or legally restricted); regulatory frameworks treat surveillance as a security matter preempted from individual consent. Legal challenges face classification barriers that prevent disclosure of surveillance scope. Theater ratio (0.55): Moderate. Regulatory processes (privacy impact assessments, oversight committees, consent procedures) exist and are formally executed but operate within legal frameworks that preempt their jurisdiction and exemptions for security purposes. The performative element is substantial but not total\u2014some regulatory decisions do constrain deployment, creating the appearance of genuine gatekeeping alongside accelerating deployment that bypasses gatekeeping entirely.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence across the observation site. Surveilled populations experience unambiguous snare extraction with no coordination benefit\u2014the surveillance apparatus has no reciprocal commitment to their security or welfare. The state security apparatus experiences pure rope coordination\u2014they are solving the legitimate (by their framing) problem of detecting threats and tracking individuals of interest, with no extraction cost to themselves. Vendors experience rope with arbitrage exit\u2014they coordinate product deployment with state procurement while maintaining ability to move between markets. Civil liberties organizations experience tangled rope\u2014they coordinate public and legal resistance (coordination function) while being surveilled themselves (asymmetric extraction). Privacy regulators experience piton\u2014they maintain the performative ritual of oversight while their substantive gatekeeping capacity has atrophied, disabled by security classification. The analytical observer risks the false summit of treating this as a technical inevitability rather than a contingent institutional choice enabled by specific legal and procurement arrangements.",
+    "directionality_logic": "Each perspective's experienced extractiveness is computed from the agent's structural position relative to the sensor layer. Surveilled populations (powerless/trapped) derive maximum d~0.95, producing high f(d), experiencing full effective extraction \u03c7 because they cannot exit, bear informational costs, and have no reciprocal benefit. State security (institutional/arbitrage) derives low d~0.05, producing negative f(d), experiencing negative effective extraction (chi amplifies their benefits relative to their costs) because they benefit from the system's operation and can modulate involvement. Vendors (institutional/arbitrage) similarly derive low d, but with slightly higher recognition of market constraints. Civil liberties organizations (organized/constrained) derive moderate-high d~0.55-0.60, producing moderate f(d), because they face resource constraints and legal barriers (constrained exit) while mounting organized resistance. Privacy regulators (institutional/constrained) derive moderate d~0.50, but their piton classification overrides the \u03c7 formula through the theater gate\u2014the system persists through inertia despite atrophied function, not because of extraction intensity. The directional asymmetry is the fundamental signature of snare classification.",
+    "mandatrophy_analysis": "RESOLVED: The mandatrophy in the surveillance constraint is whether this system represents genuine security coordination (Rope) or pure behavioral extraction dressed in security language (Snare). The resolution: the base constraint is legitimately a Rope from the state security perspective\u2014real-time behavioral monitoring does provide genuine threat detection and identity verification coordination benefits that were previously unavailable. However, the extraction level (0.68 base, higher when scaled by suppression) exceeds the coordination benefit to subjects, creating a hybrid that skews strongly toward snare characteristics at the population level. The mandatrophy is resolved not by claiming one type is 'correct' but by recognizing that the snare label correctly captures the empirical structure: populations experience no coordination benefit, only extraction, while the coordination benefits accrue exclusively to state and vendor actors. The state security apparatus can label it rope (and believes their framing); populations correctly classify it as snare. The analytical observer must avoid the false summit of treating surveillance as a natural law of advanced AI, which would naturalize what is a contingent institutional choice made possible by specific legal regimes (security exemptions, classification authority) and vendor incentives (data monetization, surveillance-as-a-service models) that could be designed otherwise."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "social_credit_systems",
-      "predictive_policing_algorithms"
-    ]
-  }
+      "predictive_policing_disparate_impact",
+      "biometric_database_mission_creep",
+      "anonymity_commons_degradation"
+    ],
+    "dual_formulation_note": "The sensor layer represents the infrastructure constraint that enables downstream extraction mechanisms: predictive policing (which uses sensor data to target enforcement), biometric database expansion (which uses sensor data to populate cross-reference systems), and anonymity degradation (which is the direct consequence of sensor saturation). The sensor layer itself is classified as snare because it performs pure extraction at the population level; downstream constraints inherit its extractiveness and add their own enforcement-specific mechanisms. The upstream constraint (technical capability of AI pattern recognition) is decomposed separately as a mountain (technical capacity for behavioral inference from video) to avoid conflating technical possibility with institutional choice."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
 }

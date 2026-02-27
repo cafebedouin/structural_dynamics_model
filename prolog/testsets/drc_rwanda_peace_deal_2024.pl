@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: drc_rwanda_peace_deal_2024
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-24
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_drc_rwanda_peace_deal_2024, []).
@@ -40,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,24 +54,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: drc_rwanda_peace_deal_2024
- *   human_readable: US-Brokered DRC-Rwanda De-escalation Framework
- *   domain: geopolitical
+ *   human_readable: US-Brokered DRC-Rwanda De-escalation Framework (2024)
+ *   domain: geopolitical/conflict_resolution
  *
  * SUMMARY:
- *   A diplomatic framework brokered by the United States intended to de-escalate
- *   conflict in the eastern Democratic Republic of Congo (DRC). The deal
- *   pressures the DRC to cease support for FDLR rebels in exchange for Rwanda
- *   ceasing its support for M23 rebels. However, critics and the DRC government
- *   allege the framework is asymmetric, failing to hold Rwanda accountable while
- *   placing the primary burden of compliance on the DRC, thus failing to
-' *   address the root cause of the immediate violence.
+ *   The 2024 US-brokered DRC-Rwanda de-escalation framework represents a
+ *   constraint that simultaneously functions as coordination mechanism for
+ *   conflict reduction and as extraction mechanism for mineral resources and
+ *   territorial control. The framework was negotiated to address years of
+ *   proxy warfare in eastern DRC, with Rwanda supporting the M23 rebel group
+ *   while denying involvement. The agreement nominally commits Rwanda to
+ *   military withdrawal, pledges US security guarantees for DRC sovereignty,
+ *   and establishes monitoring mechanisms through UN and regional bodies.
+ *   However, the structural incentives embedded in the framework create a
+ *   Tangled Rope dynamic: Rwanda gains international legitimacy and sanctions
+ *   relief while maintaining de facto control over mineral-rich eastern
+ *   territories through proxy forces; the US gains a diplomatic win and
+ *   regional stability narrative without military commitment; the DRC
+ *   government gains temporary protection but loses agency in determining
+ *   terms; DRC civilians remain trapped in occupation. The theater ratio
+ *   (0.68) reflects the performative elements: frequent international
+ *   monitoring visits, ceremonial compliance gestures, and narrative
+ *   management by all parties, while underlying power dynamics and resource
+ *   extraction persist.
  *
- * KEY AGENTS (by structural relationship):
- *   - Civilians in Eastern DRC: Primary target (powerless/trapped) — bear the cost of continued violence.
- *   - DRC Government: Secondary target (powerful/constrained) — bears political extraction, forced to make concessions with limited recourse.
- *   - Rwanda Government: Primary beneficiary (powerful/mobile) — gains diplomatic legitimacy and leverage without significant reciprocal action.
- *   - US State Department: Architect/Beneficiary (institutional/arbitrage) — benefits from the appearance of diplomatic action and regional management.
- *   - Analytical Observer: Sees the full structure, including the gap between stated intent and actual outcome.
+ * KEY AGENTS:
+ *   - United States: Institutional broker (institutional/arbitrage) — benefits from conflict resolution narrative and regional influence; can shift commitment with minimal cost
+ *   - Rwanda Armed Forces: Organized extractor (organized/constrained) — captures resource control and buffer zone while appearing compliant; faces international pressure but maintains strategic depth through proxy structures
+ *   - DRC Government: Trapped sovereign (moderate/constrained) — nominally gains security guarantees but surrenders agency to external enforcement; depends on US commitment for territorial integrity
+ *   - DRC Civilian Population: Primary victim (powerless/trapped) — remains in conflict zone with no exit; subject to occupation, displacement, and resource extraction; framework provides no direct protection mechanisms
+ *   - M23 Rebel Group and Proxy Forces: Armed non-state actor (powerful/mobile) — status ambiguous under framework; unclear whether disarmament or integration into national forces occurs; maintains territorial control
+ *   - African Union / SADC: Regional institutional observer (institutional/constrained) — nominal mediation role; real authority displaced by US brokerage; maintain missions through inertia despite limited enforcement capacity
+ *   - International Humanitarian Organizations: Monitoring networks (organized/constrained) — operate under framework's security guarantees; theater ratio high due to performative verification missions
+ *   - Extractive Industry Interests: Economic beneficiaries (powerful/arbitrage) — international mining companies gain resource access under framework; benefit from stability and diminished competition from war profiteers
  */
 
 /* ==========================================================================
@@ -77,89 +94,82 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(drc_rwanda_peace_deal_2024, 0.55). % Political concessions, diplomatic capital, and indirect economic costs extracted from DRC.
-domain_priors:suppression_score(drc_rwanda_peace_deal_2024, 0.65).   % High; rejecting a US-backed deal carries significant diplomatic risk, suppressing alternative frameworks.
-domain_priors:theater_ratio(drc_rwanda_peace_deal_2024, 0.40).       % Significant performance of peacemaking without corresponding de-escalation on the ground.
+domain_priors:base_extractiveness(drc_rwanda_peace_deal_2024, 0.58).
+domain_priors:suppression_score(drc_rwanda_peace_deal_2024, 0.62).
+domain_priors:theater_ratio(drc_rwanda_peace_deal_2024, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(drc_rwanda_peace_deal_2024, extractiveness, 0.55).
-narrative_ontology:constraint_metric(drc_rwanda_peace_deal_2024, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(drc_rwanda_peace_deal_2024, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(drc_rwanda_peace_deal_2024, extractiveness, 0.58).
+narrative_ontology:constraint_metric(drc_rwanda_peace_deal_2024, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(drc_rwanda_peace_deal_2024, theater_ratio, 0.68).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(drc_rwanda_peace_deal_2024, tangled_rope).
+narrative_ontology:human_readable(drc_rwanda_peace_deal_2024, "US-Brokered DRC-Rwanda De-escalation Framework (2024)").
+narrative_ontology:topic_domain(drc_rwanda_peace_deal_2024, "geopolitical/conflict_resolution").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(drc_rwanda_peace_deal_2024). % Required for Tangled Rope. The deal relies on US diplomatic pressure.
+domain_priors:requires_active_enforcement(drc_rwanda_peace_deal_2024).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(drc_rwanda_peace_deal_2024, rwanda_government).
-narrative_ontology:constraint_beneficiary(drc_rwanda_peace_deal_2024, us_state_department).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(drc_rwanda_peace_deal_2024, civilians_eastern_drc).
-narrative_ontology:constraint_victim(drc_rwanda_peace_deal_2024, drc_government).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(drc_rwanda_peace_deal_2024, united_states_regional_influence).
+narrative_ontology:constraint_beneficiary(drc_rwanda_peace_deal_2024, rwanda_armed_forces).
+narrative_ontology:constraint_beneficiary(drc_rwanda_peace_deal_2024, multinational_extractive_interests).
+narrative_ontology:constraint_victim(drc_rwanda_peace_deal_2024, drc_civilian_population).
+narrative_ontology:constraint_victim(drc_rwanda_peace_deal_2024, drc_territorial_integrity).
+narrative_ontology:constraint_victim(drc_rwanda_peace_deal_2024, m23_disarmed_combatants).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (CIVILIANS IN EASTERN DRC)
-% The deal fails to protect them, trapping them in conflict. They experience
-% the framework's failure as a pure cost with no coordination benefit.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → high χ.
-constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, tangled_rope,
+% PERSPECTIVE 1: DRC CIVILIANS (SNARE) — Powerless, trapped in conflict zone with no exit. Bear full extraction through displacement, resource predation, and loss of territorial sovereignty. Framework provides no mechanism for civilian voice or protection. Maximum coercion, zero coordination benefit.
+constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (US STATE DEPARTMENT)
-% Views the deal as a low-cost coordination tool for regional management.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → low/negative χ.
+% PERSPECTIVE 2: DRC GOVERNMENT (TANGLED ROPE) — Constrained power: nominally sovereign but unable to enforce territorial control without external support. Framework offers coordination benefit (ceasefire terms) but enforces asymmetric extraction: Rwanda retains military advantages and resource access while DRC receives promises of protection dependent on US commitment. Active enforcement by US presence required to maintain constraint.
+constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: UNITED STATES (ROPE) — Institutional power with arbitrage exit (can withdraw support, shift regional strategy, or broker alternative arrangements). Framework provides coordination benefit for US: establishes regional stability narrative, legitimizes US mediation authority, creates diplomatic win without military commitment. Experiences constraint as pure coordination mechanism.
 constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Sees both the stated coordination function and the actual asymmetric extraction.
-% The high base extraction (ε=0.55) and suppression (0.65) lead to a
-% Tangled Rope classification, capturing the duality of the constraint.
-constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, snare,
+% PERSPECTIVE 4: RWANDA (TANGLED ROPE) — Organized military power with constrained exit (faces international pressure but retains strategic depth through M23 proxy and resource control). Framework offers coordination (ceasefire terms, legitimacy) AND extraction (maintains de facto control of eastern DRC resources and buffer zone while appearing to comply with international norms). Suppression enforced through threat of sanctions or US policy shift.
+constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 5: AFRICAN UNION / SADC (PITON) — Nominal institutional role but degraded enforcement capacity. Regional conflict resolution mechanisms persist (SADC peacekeepers, AU mediation) largely through inertia despite weak enforcement power. Theater ratio high: ceremonial mediation and monitoring missions perform regional responsibility while practical power lies with external brokers (US, France). Limited real coordination function; maintenance through institutional ritual.
+constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 6: HUMANITARIAN NGOS / UN MISSIONS (SCAFFOLD) — Organized agents with constrained exit (mandated to operate in conflict zones; political dependency on major powers). Framework creates temporary coordination structure for humanitarian access and monitoring. Suppression tolerable if it declines over time — sunset presumed when conflict genuinely de-escalates. Theater ratio moderate: NGOs perform verification and monitoring functions but depend on government permission and security guarantees that the framework provides only temporarily.
+constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, scaffold,
+    context(agent_power(organized),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT) — From civilizational perspective on interstate dynamics, the framework appears to reflect immutable structural facts: great powers mediate regional conflicts; smaller states must accept external authority to gain stability; resource competition and territorial ambiguity are inherent to African geopolitics. However, this naturalizes contingent institutional arrangements — the specific choice of US brokerage, the terms favoring Rwanda, the absence of DRC agency are not natural laws but political decisions. Engine detects as false natural law.
+constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% The two primary state actors experience the same deal very differently due
-% to their structural positions and exit options.
-
-% PERSPECTIVE 4A: DRC GOVERNMENT (CONSTRAINED VICTIM)
-% As a sovereign state, it is 'powerful' but has 'constrained' exit options
-% due to diplomatic pressure. It experiences the deal as highly extractive.
-% Engine derives d from: victim membership + powerful + constrained exit -> high d.
-constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, snare,
-    context(agent_power(powerful),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 4B: RWANDA GOVERNMENT (MOBILE BENEFICIARY)
-% As a sovereign state, it is 'powerful' and has 'mobile' exit options, able to
-% leverage the deal for diplomatic gain while facing few consequences for non-compliance.
-% Engine derives d from: beneficiary + powerful + mobile exit -> low d.
-constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, rope,
-    context(agent_power(powerful),
-            time_horizon(generational),
-            exit_options(mobile),
-            spatial_scope(national))).
-
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -167,25 +177,18 @@ constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, rope,
 
 :- begin_tests(drc_rwanda_peace_deal_2024_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify gap between the civilian victims and the institutional beneficiary.
-    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(inter_institutional_gap) :-
-    % Verify the deal is classified differently by the two primary state actors.
-    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, SnareType, context(agent_power(powerful), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, RopeType, context(agent_power(powerful), _, exit_options(mobile), _)),
-    SnareType = snare,
-    RopeType = rope.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(drc_rwanda_peace_deal_2024, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(drc_rwanda_peace_deal_2024, snare, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_gate_requirements_met) :-
-    narrative_ontology:constraint_beneficiary(drc_rwanda_peace_deal_2024, _),
-    narrative_ontology:constraint_victim(drc_rwanda_peace_deal_2024, _),
-    domain_priors:requires_active_enforcement(drc_rwanda_peace_deal_2024).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(drc_rwanda_peace_deal_2024, TR),
+    TR >= 0.70.
 
 :- end_tests(drc_rwanda_peace_deal_2024_tests).
 
@@ -195,22 +198,16 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): This score reflects the significant political and diplomatic capital extracted from the DRC. It is forced to accept a narrative that equates its alleged support for the FDLR with Rwanda's active, documented support for the M23, a false equivalence that undermines the DRC's sovereignty and strategic position.
- *   - Suppression (0.65): The high suppression score represents the lack of viable alternatives for the DRC. Rejecting a framework endorsed by the United States would risk diplomatic isolation and the loss of a powerful ally, effectively coercing compliance.
- *   - The combination of a coordination function (the stated goal of de-escalation) and high asymmetric extraction, backed by enforcement, is the classic signature of a Tangled Rope.
+ *   Extractiveness (0.58): Moderate-high. The framework is not maximally extractive because it provides genuine coordination function (ceasefire, reduced direct conflict, humanitarian access) that benefits multiple parties including some DRC actors. However, extraction is substantial because the coordination benefits accrue unevenly — Rwanda retains military advantage and resource control while DRC surrenders agency, and the framework legitimizes this asymmetry through international certification. Initial extractiveness (0.48) reflects pre-framework baseline conflict with uncoordinated violence; post-framework extractiveness (0.58) reflects organized extraction hidden within coordination machinery. Suppression (0.62): Moderate-high. DRC government and civilians have severely limited alternatives — exit options are constrained by geography (landlocked), military weakness, and lack of patron powers willing to offer better terms. Rwanda faces international pressure but retains enough strategic depth (proxy forces, resource wealth, regional allies) to maintain options. Theater ratio (0.68) reflects significant performative content: ceremonial compliance gestures, monitoring missions that verify compliance without enforcing consequences, diplomatic announcements of progress that obscure unchanged power dynamics. Theater has increased over the 12-month interval as the initial framework excitement has plateaued and routine performance (meetings, reports, patrols) has become theatrical rather than functional.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For the US State Department (institutional/arbitrage), the deal is a Rope—a successful diplomatic instrument for managing a crisis at low cost, regardless of its efficacy on the ground. For the DRC Government and civilians (powerful/constrained and powerless/trapped), it is a Snare. It extracts concessions and perpetuates violence while being dressed in the language of peace. The deal's structure benefits the architect and one party at the direct expense of the other.
+ *   Maximum perspectival divergence reveals the constraint's hybrid nature. The US broker experiences coordination (Rope) because they are solving the problem they defined (regional stability). Rwanda experiences mixed coordination-extraction (Tangled Rope) because the framework simultaneously constrains their military ambitions and legitimizes their territorial gains. The DRC government experiences extraction-with-coordination (Tangled Rope) because they gain nominal protection while losing agency. DRC civilians experience pure extraction (Snare) because the framework's benefits never reach them — they remain displaced, occupied, and subject to resource predation. Regional institutions see degraded ceremony (Piton) because their mediation role is performed for legitimacy while real power lies with the US. The analytical observer risks false naturalization (Mountain) — seeing great-power mediation of regional conflicts as inevitable structural law — when the specific US role, the terms favoring Rwanda, and the exclusion of DRC agency are contingent political choices. The perspectival gap models how the same structural arrangement can be coordination, extraction, theater, and natural law depending on where the observer sits.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: The `rwanda_government` benefits by having its security narrative legitimized internationally and by deflecting scrutiny from its role in sponsoring the M23. The `us_state_department` benefits by creating the appearance of diplomatic progress. Their mobile/arbitrage exit options give them low directionality scores (d).
- *   - Victims: The `drc_government` is the primary victim of the extraction, forced into a strategically disadvantageous position. The `civilians_eastern_drc` are the ultimate victims, bearing the physical costs of the deal's failure to stop the violence. Their constrained/trapped exit options give them high directionality scores (d), leading to high effective extraction (χ).
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This is a prime example of an inter-institutional constraint. The DRC and Rwanda are both 'powerful' state actors, but they experience the deal entirely differently. The DRC's `exit_options(constrained)` reflects its dependency on Western allies and the high cost of defiance. Rwanda's `exit_options(mobile)` reflects its greater leverage and ability to operate with fewer consequences. The directionality engine correctly interprets this asymmetry, classifying the deal as a Snare for the constrained party and a Rope for the mobile one, even though both are institutionally 'powerful'.
+ *   Directionality (d) derives from each agent's structural position — their power level, exit options, and relationship to the extraction flow. The US as institutional actor with arbitrage exit options (can redirect attention, withdraw support, shift mediation to others) experiences low derived d (~0.10), yielding negative or minimal χ. Rwanda as organized actor with constrained exit (faces sanctions risk, international isolation if framework fails) but beneficiary status (retains resource access and buffer zone) experiences moderate d (~0.35-0.40), yielding moderate χ. DRC government as moderate power with constrained exit (no patron alternative, landlocked geography, military weakness) and victim status experiences high d (~0.65-0.70), yielding high χ. DRC civilians as powerless with trapped exit experience maximum d (~0.95), yielding maximum χ. The engine's directionality derivation automatically accounts for this variation through the sigmoid mapping of d to f(d). No overrides are required — the structural data (beneficiary/victim + power + exit) determines d accurately.
  *
  * MANDATROPHY ANALYSIS:
- *   This model correctly avoids two potential errors. First, it doesn't mistake the deal for a pure Rope, which would ignore the severe, one-sided extraction experienced by the DRC. Second, it doesn't classify it as a pure Snare from an analytical view, which would miss the genuine (if failed) coordination function that gives the constraint its diplomatic cover. The Tangled Rope classification captures the essential duality: it is a tool of coordination that has been co-opted for asymmetric extraction.
+ *   The DRC-Rwanda framework exhibits classic mandatrophy between the coordination-function narrative (peace deal) and the extraction-function reality (resource and territorial control maintained under new legitimacy). Mandatrophy is NOT resolved because the framework's future remains genuinely uncertain — it could evolve into Scaffold (temporary coordination transitioning to genuine peace) or degrade into Snare (extraction machinery hardened through international certification). The five omega variables capture the critical uncertainties: Rwanda's compliance (Will proxies disarm?), US enforcement duration (When does attention shift?), DRC agency recovery (Can sovereignty be rebuilt?), resource benefit flows (Who profits from minerals?), and civilian protection (Does violence actually decline?). If Rwanda genuinely withdraws and DRC rebuilds capacity, the constraint transitions toward Scaffold or multi-party Rope. If Rwanda maintains de facto control and US attention wanes, the constraint transitions toward Snare with high theater. The analytical system cannot resolve mandatrophy yet — it marks the story as ACTIVE because the structural ambiguity is empirically resolvable through ground-truth verification (military movements, mineral flows, casualty data, displacement trends). The framework is not a false summit (Mountain) but a genuine Tangled Rope in unstable equilibrium: its classification depends on which structural facts dominate over the next 24 months.
  */
 
 /* ==========================================================================
@@ -218,59 +215,94 @@ test(tangled_rope_gate_requirements_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_drc_rwanda_peace_deal_2024,
-    'Is the deal''s asymmetry a result of flawed intelligence/diplomacy (a failed Rope) or a deliberate strategic choice by the US to favor a regional ally (a purposeful Tangled Rope)?',
-    'Declassification of State Department cables and intelligence assessments regarding Rwandan support for M23 prior to the deal''s formation.',
-    'If flawed, it suggests incompetence and a potential for reform. If deliberate, it reveals the deal is a tool of realpolitik, functioning exactly as intended from the US perspective.',
+    rwanda_compliance_verification,
+    'Will Rwanda genuinely withdraw M23 proxy forces and cease resource extraction, or maintain de facto control through non-state actors while appearing compliant?',
+    'Ground verification of military movements; mineral supply chain tracking; independent assessment of M23 command structure and funding sources; satellite imagery of troop positions',
+    'If Rwanda complies: constraint reclassifies toward Scaffold or Rope. If Rwanda maintains control through proxies: constraint remains Tangled Rope or becomes Snare. Resolves mandate of framework credibility.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(rwanda_compliance_verification, empirical, 'Rwanda''s genuine commitment to military withdrawal vs proxy maintenance').
+
+omega_variable(
+    us_enforcement_duration,
+    'How long will US diplomatic and security presence remain committed to enforcing the framework before shifting attention to other strategic priorities?',
+    'Tracking US security aid disbursement, diplomatic engagement levels, military advisors deployed; correlation with US domestic political cycles and other regional crises',
+    'If sustained: framework maintains enforcement capability and constraint remains Tangled Rope. If withdrawn within 2 years: suppression increases and constraint transitions toward Snare or degrades into Piton. Determines viability of sunset clause.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(us_enforcement_duration, empirical, 'Duration of US enforcement commitment').
+
+omega_variable(
+    drc_agency_recovery,
+    'Can DRC government build sufficient military capacity and territorial control to become credible independent actor, or remains permanently dependent on external guarantors?',
+    'Assessment of DRC military modernization, officer training completion, mineral revenue capture; longitudinal analysis of territorial control expansion independent of external support',
+    'If DRC recovers agency: constraint could transition to Rope (mutual coordination). If dependency persists: constraint remains Tangled Rope or becomes permanent Snare. Determines whether framework enables genuine sovereignty recovery.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(drc_agency_recovery, empirical, 'DRC government capacity for independent agency and territorial control').
+
+omega_variable(
+    extractive_resource_flows,
+    'Who actually benefits from eastern DRC mineral wealth (cobalt, coltan, cassiterite) under the framework: international companies, Rwanda, DRC government, or local warlords?',
+    'Commodity chain tracing; ownership analysis of mining concessions; benefit-sharing agreement audits; comparison of pre- and post-framework mining revenue allocation',
+    'If DRC retains majority: framework functions as coordination mechanism for resource distribution (Rope). If Rwanda or external actors maintain control: framework is extraction mechanism (Snare or Tangled Rope). Determines whether resource predation is constraint''s core function.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extractive_resource_flows, empirical, 'Actual beneficiaries of mineral wealth extraction').
+
+omega_variable(
+    civilian_protection_implementation,
+    'Does the framework produce genuine reduction in civilian deaths, displacement, and sexual violence, or are protection mechanisms performative while violence persists?',
+    'Longitudinal casualty data; displacement statistics; sexual violence reporting; comparison with baseline conflict periods; correlation between framework implementation phases and civilian impact',
+    'If genuine protection: constraint reclassifies toward Scaffold or mixed Rope/Scaffold from civilian perspective. If performative: constraint remains Snare for civilian populations; theater_ratio confirmed high. Determines whether constraint benefits primary victim group.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(civilian_protection_implementation, empirical, 'Effectiveness of civilian protection mechanisms').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(drc_rwanda_peace_deal_2024, 0, 10).
+narrative_ontology:interval(drc_rwanda_peace_deal_2024, 0, 12).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint's extractive nature became more apparent over time as its
-% failure to produce peace became clear, while the diplomatic pressure remained.
-% The initial state reflects higher hopes for coordination.
-% base_extractiveness > 0.46, so this section is required.
+% Theater ratio over time
+narrative_ontology:measurement(drc_rwa_tr_t0, drc_rwanda_peace_deal_2024, theater_ratio, 0, 0.52).
+narrative_ontology:measurement(drc_rwa_tr_t6, drc_rwanda_peace_deal_2024, theater_ratio, 6, 0.68).
+narrative_ontology:measurement(drc_rwa_tr_t12, drc_rwanda_peace_deal_2024, theater_ratio, 12, 0.68).
 
-% Theater ratio over time (metric_substitution):
-narrative_ontology:measurement(drc_deal_tr_t0, drc_rwanda_peace_deal_2024, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(drc_deal_tr_t5, drc_rwanda_peace_deal_2024, theater_ratio, 5, 0.35).
-narrative_ontology:measurement(drc_deal_tr_t10, drc_rwanda_peace_deal_2024, theater_ratio, 10, 0.40).
+% Extraction over time
+narrative_ontology:measurement(drc_rwa_be_t0, drc_rwanda_peace_deal_2024, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(drc_rwa_be_t6, drc_rwanda_peace_deal_2024, base_extractiveness, 6, 0.58).
+narrative_ontology:measurement(drc_rwa_be_t12, drc_rwanda_peace_deal_2024, base_extractiveness, 12, 0.58).
 
-% Extraction over time (extraction_accumulation):
-narrative_ontology:measurement(drc_deal_ex_t0, drc_rwanda_peace_deal_2024, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(drc_deal_ex_t5, drc_rwanda_peace_deal_2024, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(drc_deal_ex_t10, drc_rwanda_peace_deal_2024, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
 narrative_ontology:coordination_type(drc_rwanda_peace_deal_2024, enforcement_mechanism).
+narrative_ontology:affects_constraint(drc_rwanda_peace_deal_2024, m23_armed_group_dynamics).
+narrative_ontology:affects_constraint(drc_rwanda_peace_deal_2024, congolese_mineral_supply_chain).
+narrative_ontology:affects_constraint(drc_rwanda_peace_deal_2024, regional_patron_state_competition).
 
-% Network relationships: This peace deal does not exist in a vacuum. It is
-% structurally influenced by the global demand for minerals concentrated in the DRC.
-narrative_ontology:affects_constraint(global_competition_for_critical_minerals, drc_rwanda_peace_deal_2024).
-
+% DUAL FORMULATION NOTE:
+% This constraint is downstream of the underlying Rwanda-DRC conflict (which has structural properties including historical grievance, resource competition, and ethnic dimensions) and upstream of specific implementation dynamics (M23 disarmament, mineral extraction patterns, civilian protection outcomes). The framework itself is a distinct constraint: it is not the conflict but the structure imposing order on the conflict. Its extractiveness (0.58) reflects the asymmetry of the imposed order, not the raw severity of underlying conflict. Decomposition into separate stories would be appropriate only if measuring the conflict vs the framework produced ε values differing by >0.25; current analysis treats the framework as the primary constraint with the conflict as context.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The automatic derivation
-% based on the beneficiary/victim declarations and the distinct exit options
-% for the institutional actors (constrained vs. mobile) accurately captures
-% the structural dynamics and produces the correct directionality (d) values.
+constraint_indexing:directionality_override(drc_rwanda_peace_deal_2024, organized, 0.38).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

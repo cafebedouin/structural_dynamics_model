@@ -1,0 +1,71 @@
+{
+  "header": {
+    "constraint_id": "ad_fus_coordination",
+    "version": "0.1",
+    "generated_date": "2024-03-07",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "The Focused Ultrasound Alzheimer's Intervention",
+    "topic_domain": "medical/neurological",
+    "beneficiaries": [
+      "alzheimer_patients",
+      "medical_researchers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Alzheimer's Patients",
+      "comment": "Patients benefit directly from potential cognitive improvement, but are constrained by access to treatment and potential side effects."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Medical Researchers",
+      "comment": "Researchers benefit from increased funding and publication opportunities related to FUS, and can arbitrage their findings into new research directions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer views FUS as a potential coordination mechanism with low extraction, aiming to improve patient outcomes globally."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "High-intensity Focused Ultrasound (FUS) is identified as a potential coordination mechanism to 'shake' neural circuits or protein deposits associated with Alzheimer's disease. This intervention aims to improve cognitive function and slow disease progression. The intervention can also be considered as a coordination mechanism to improve neural circuits and help remove protein deposits.",
+    "key_agents": [
+      "Alzheimer's Patients: Primary beneficiaries (powerless/constrained) - Potentially benefit from cognitive improvement.",
+      "Medical Researchers: Secondary beneficiaries (institutional/arbitrage) - Benefit from research funding and publication opportunities."
+    ],
+    "logic_rationale": "Extractiveness (0.35): Low to moderate. The intervention has some potential for extraction, mainly due to the cost of treatment and potential side effects. Suppression (0.20): Low. There are alternative treatments for Alzheimer's disease, but FUS could be a valuable addition. Theater ratio (0.15): Low. There is a genuine functional benefit to the intervention, with minimal performative activity.",
+    "perspectival_gap": "All agents view this intervention as a rope, indicating a consensus on the potential benefits of FUS for Alzheimer's disease.",
+    "directionality_logic": "The directionality is low due to the beneficiaries receiving most of the benefits and there is very little extraction from any victim.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that all agents view this intervention as a coordination mechanism with low extraction, indicating a clear benefit for all parties involved."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

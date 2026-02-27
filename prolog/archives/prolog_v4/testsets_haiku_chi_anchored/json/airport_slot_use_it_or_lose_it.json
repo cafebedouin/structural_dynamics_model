@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "airport_slot_use_it_or_lose_it",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.75,
+    "theater_ratio": 0.71,
+    "claimed_type": "tangled_rope",
+    "human_readable": "\"Use-it-or-lose-it\" rule for airport landing slots",
+    "topic_domain": "economic/regulatory",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "incumbent_airlines",
+      "airport_coordinators"
+    ],
+    "victims": [
+      "new_entrant_airlines",
+      "passengers",
+      "the_environment"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The New Entrant Airline",
+      "comment": "PERSPECTIVE 1: NEW ENTRANT (SNARE) — Experiences the rule as a coercive barrier to entry. Grandfather rights held by incumbents create an artificial scarcity that suppresses competition, trapping new airlines out of key markets. d≈0.8, f(d)≈1.2, σ=1.0 → χ≈0.66."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Airline",
+      "comment": "PERSPECTIVE 2: INCUMBENT (ROPE) — Experiences the rule as a pure coordination mechanism that provides stability and protects valuable assets (grandfathered slots). They can trade slots, lobby for waivers, and plan networks with certainty. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08. Negative extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Passenger",
+      "comment": "PERSPECTIVE 3: PASSENGER (MOUNTAIN) — The effects of reduced competition (higher fares, fewer choices) are perceived as an unchangeable feature of the market at major airports. The underlying regulatory mechanism is invisible, making the outcome feel like a natural law of supply and demand. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.70."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Environmental Advocate",
+      "comment": "PERSPECTIVE 4: ENVIRONMENTAL ADVOCATE (PITON) — Focuses on 'ghost flights'—empty or near-empty planes flown solely to meet the usage quota. From this view, the rule's original function is degraded, and its primary output is a performative, wasteful ritual. The high theater_ratio (0.71) satisfies the piton gate."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Market Reform Advocate",
+      "comment": "PERSPECTIVE 5: MARKET REFORMER (SCAFFOLD) — Views the rule as a temporary, flawed system to be replaced by more efficient market-based mechanisms like slot auctions. The ongoing debate and potential for reform act as an implicit sunset clause. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.41. The classification gate for scaffold (χ ≤ 0.30) is not met, indicating the reform effort is not yet structurally effective, but the perspective remains."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL (TANGLED ROPE) — Recognizes both the genuine coordination function (managing scarce capacity) and the asymmetric extraction (creating barriers to entry that benefit incumbents). This matches the claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "market_efficiency_vs_stability",
+      "question": "Is the network stability provided by grandfather rights more valuable to the overall system than the potential efficiency and competition gains from a pure market/auction system?",
+      "resolution_mechanism": "Comparative economic modeling of auction-based vs. grandfathered systems, analyzing impacts on network connectivity, fare volatility, and airline solvency.",
+      "impact": "If stability is paramount, the rule is closer to a Rope. If efficiency gains are large, it's closer to a Snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Trade-off between stability from grandfather rights and efficiency from market auctions"
+    },
+    {
+      "id": "ghost_flight_prevalence",
+      "question": "What is the true scale of economically and environmentally wasteful flights operated solely to retain slots, especially outside of major, publicly-acknowledged crises?",
+      "resolution_mechanism": "Analysis of flight load factor data for routes at slot-constrained airports, correlated with slot retention deadlines.",
+      "impact": "Higher prevalence confirms the Piton perspective and increases the theater_ratio. Lower prevalence suggests the rule is more functional than performative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The true scale of 'ghost flights' operated to satisfy the rule"
+    },
+    {
+      "id": "waiver_politicization",
+      "question": "To what extent are regulatory waivers of the rule driven by objective systemic crises versus the lobbying power of incumbent airlines?",
+      "resolution_mechanism": "Political economy analysis correlating lobbying expenditures by airline alliances with the timing and scope of slot rule waivers.",
+      "impact": "High correlation suggests the rule is an actively managed Snare whose enforcement is negotiable for powerful actors. Low correlation suggests it operates more like a rigid, if flawed, Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent to which waivers are driven by crisis vs. incumbent lobbying"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.71
+    }
+  ],
+  "interval": {
+    "start": 2005,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The 'use-it-or-lose-it' rule (typically 80/20) governs the allocation of scarce landing and take-off slots at congested airports. While its stated purpose is to ensure efficient capacity utilization, its primary structural effect is the creation of 'grandfather rights,' allowing incumbent airlines to retain valuable slots indefinitely. This creates a significant barrier to entry for new competitors, extracts economic opportunity, and incentivizes perverse behaviors like 'ghost flights' (flying empty planes to meet usage quotas), especially during demand shocks.",
+    "key_agents": [
+      "Incumbent Airlines: Primary beneficiaries (institutional/arbitrage) - Gain protected assets (slots) and reduced competition.",
+      "New Entrant Airlines: Primary victims (organized/constrained) - Face a significant, artificial barrier to entering key markets.",
+      "Passengers: Secondary victims (powerless/trapped) - Experience higher fares and fewer choices due to suppressed competition.",
+      "Airport Coordinators/Regulators: Institutional enforcers (institutional/constrained) - Use the rule as a clear, albeit flawed, resource allocation mechanism.",
+      "Environmental Groups: Organized observers (organized/constrained) - View the rule through the lens of its wasteful byproduct, ghost flights.",
+      "Market Reform Advocates: Organized agents (organized/mobile) - Push for replacing the rule with market-based auctions, viewing it as a temporary scaffold."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Represents the significant economic opportunity extracted from potential competitors and transferred to incumbents as a durable asset (grandfathered slots). Suppression (0.75): High, as the rule makes it extremely difficult for new entrants to acquire commercially viable slots at key airports, effectively locking them out. Theater Ratio (0.71): High, primarily due to the phenomenon of 'ghost flights,' a purely performative action to satisfy the rule with no economic or transport function. This ratio has increased over time as demand volatility has risen. The `has_sunset_clause` is set to true to reflect the persistent, organized political efforts to replace the system with auctions, which functions as a structural pressure for reform, enabling the Scaffold perspective.",
+    "perspectival_gap": "The constraint is a diagnostic exemplar. Incumbents see a stable coordination mechanism (Rope). New entrants see a coercive barrier to entry (Snare). Passengers see an unchangeable market reality (Mountain). Environmentalists see a wasteful, degraded ritual (Piton). Reformers see a temporary, flawed policy to be replaced (Scaffold). The analytical view synthesizes these, identifying a system with both coordination and extraction functions (Tangled Rope). The type is determined by the observer's structural relationship to the flow of value and opportunity.",
+    "directionality_logic": "Beneficiaries (incumbent airlines) with arbitrage exit options have a very low directionality (d), resulting in negative effective extraction (χ), classifying the constraint as a Rope. Victims (new entrants) with constrained exit options have a high d, resulting in high χ that crosses the Snare threshold. Powerless victims (passengers) with trapped exit options experience the highest d, perceiving the constraint's effects as an inescapable Mountain. The different structural positions mathematically generate the different classifications from the same set of base metrics.",
+    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that a single regulation, officially framed as pure coordination (Rope), is structurally a Tangled Rope. The label 'efficient resource allocation' masks the significant extractive function of creating barriers to entry. Only by adopting multiple perspectives—especially that of the agent from whom opportunity is extracted (the new entrant)—can the full nature of the constraint be understood, preventing the misclassification of a hybrid system as a purely beneficial one."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "airline_ticket_pricing_algorithms"
+    ]
+  }
+}

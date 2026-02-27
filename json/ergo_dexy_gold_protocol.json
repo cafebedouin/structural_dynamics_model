@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "ergo_dexy_gold_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dexy"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DexyGold Seigniorage Mechanism",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protocol_developers",
+      "early_liquidity_providers",
+      "ergo_ecosystem"
+    ],
+    "victims": [
+      "late_adopters",
+      "collateral_providers",
+      "price_discovery_integrity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Collateral Provider",
+      "comment": "Late-entry collateral providers are locked into asymmetric capital requirements. They deposit reserve assets to maintain the peg but experience extraction through dilution and seigniorage accrual to early liquidity providers. Exit is constrained by locked collateral periods and slashing risks. The constraint appears as pure extraction with no coordination benefit \u2014 they are trapped by the mechanics of the protocol itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Price Discovery Mechanism",
+      "comment": "Price discovery integrity is both coordinated (the mechanism enables gold-price hedging and arbitrage) and extracted (seigniorage capture distorts market signals, creating false stability signals that mask underlying collateral insufficiency). The constraint is hybrid \u2014 enforced to maintain the peg, but the enforcement mechanism itself corrupts the information it is supposed to provide. Moderate power because organized traders can detect and arbitrage the distortion, but constrained by protocol rules."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Developers",
+      "comment": "Early liquidity providers and protocol developers experience the seigniorage mechanism as pure coordination: it solves the bootstrapping problem for a gold-backed stablecoin by aligning early incentives with protocol stability. They have arbitrage options (can exit by selling liquidity tokens) and see net benefit from the constraint. The mechanism ensures fee accrual and governance token appreciation during the peg-maintenance phase."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Ergo Ecosystem",
+      "comment": "From the ecosystem perspective, DexyGold is a temporary coordination mechanism for DeFi liquidity bootstrapping with an implicit sunset: as the protocol matures and accumulates sufficient collateral reserves, seigniorage mechanisms should decline in importance and eventually phase out. The system exhibits genuine coordination (enabling gold hedging that wasn't available before) with enforced constraints (collateral requirements, peg maintenance rules). Theater ratio is moderate because the collateralization is genuinely functional, but it rises if collateral coverage ratios degrade."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Gold-Price Peg Ritual",
+      "comment": "The gold-price peg mechanism exhibits inertial maintenance: the protocol enforces peg maintenance through arbitrage incentives, but as market conditions change and alternative stablecoins emerge, the functional necessity of the peg declines. The constraint persists because early incentive structures and governance structures are built around peg maintenance, not because the peg solves an unsolvable problem. Theater ratio is elevated (0.68) because much of the peg-maintenance activity is confirmatory rather than corrective."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "From a civilizational/universal perspective, some seigniorage is inherent to currency creation: any new monetary medium must solve the bootstrapping problem, and extraction from early participants may be an irreducible feature of how new money enters circulation. However, structural data contradicts this naturalization \u2014 seigniorage magnitude and distribution are policy choices, not physical laws. The engine's false summit detector identifies this as naturalization of contingent institutional design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "collateral_sufficiency_threshold",
+      "question": "What collateral coverage ratio constitutes 'sufficient' to transition from seigniorage extraction to stable operation?",
+      "resolution_mechanism": "Historical analysis of collateral coverage dynamics in other stablecoins (MakerDAO, RAI, Liquity); liquidity stress testing under market volatility scenarios",
+      "impact": "If threshold < 150%: many protocols misclassified as temporary scaffolds (actual snares). If threshold > 300%: seigniorage extraction persists indefinitely under guise of safety.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Collateral coverage threshold for stable operation"
+    },
+    {
+      "id": "price_oracle_manipulation_vulnerability",
+      "question": "Is the gold price feed sufficiently resilient to oracle manipulation, or does the constraint enable extraction through false peg enforcement?",
+      "resolution_mechanism": "Analysis of oracle sources (on-chain vs off-chain); simulation of flash-loan attacks and cross-chain price divergence; comparison of historical peg accuracy to oracle uptime",
+      "impact": "If vulnerable: seigniorage mechanism is extractive tool for oracle manipulators (Snare). If resilient: mechanism is genuine coordination (Rope or Scaffold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Gold price oracle robustness against manipulation"
+    },
+    {
+      "id": "early_adopter_rent_extraction_duration",
+      "question": "Does the seigniorage extraction to early liquidity providers constitute fair first-mover reward or predatory rent-seeking?",
+      "resolution_mechanism": "Comparison of seigniorage accrual rates to infrastructure costs; analysis of late-joiner entry friction; correlation between early token concentration and long-term protocol stability",
+      "impact": "If fair reward: tangled rope classification confirmed. If predatory: reclassifies toward snare, with implications for ecosystem sustainability.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether early-adopter seigniorage extraction is fair or predatory"
+    },
+    {
+      "id": "alternative_stablecoin_displacement",
+      "question": "Will competing stablecoins (USDC, DAI, other gold-backed mechanisms) displace DexyGold, rendering the constraint obsolete?",
+      "resolution_mechanism": "Market share tracking; liquidity pool depth comparisons; adoption curves for alternative gold hedging mechanisms; surveys of user retention and switching costs",
+      "impact": "If displacement occurs: constraint degrades to piton much faster than anticipated (3-5 years vs 10-15). Scaffold sunset becomes irrelevant.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Displacement risk from competing stablecoins"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "DexyGold is a seigniorage-based algorithmic stablecoin protocol on the Ergo blockchain, pegged to the price of gold (XAU). The constraint operates at the intersection of monetary policy (seigniorage extraction), collateral mechanics (reserve asset requirements), and price discovery (oracle-based peg maintenance). The protocol solves a genuine coordination problem \u2014 enabling decentralized gold hedging without custodial risk \u2014 but simultaneously exhibits extractive mechanics that concentrate value in early participants and distort price signals. The constraint's theater ratio is elevated and rising, indicating increasing performativity: as collateral coverage ratios approach target levels, the functional necessity of seigniorage-based peg maintenance declines, but the mechanism persists due to governance inertia and early incentive structures. This exemplifies how coordination mechanisms can degrade into extraction when their primary function is fulfilled but institutional structures prevent sunset.",
+    "key_agents": [
+      "Protocol Developers: Institutional beneficiary (arbitrage options) \u2014 capture seigniorage accrual and governance token appreciation; see constraint as bootstrapping coordination",
+      "Early Liquidity Providers: Institutional beneficiary (arbitrage options) \u2014 receive proportional seigniorage; can exit by selling liquidity tokens",
+      "Late Adopters / Collateral Providers: Powerless victim (trapped in collateral mechanics) \u2014 provide reserve assets that back the peg but experience seigniorage dilution; exit constrained by lock periods",
+      "Price Discovery Mechanism: Moderate actor (constrained by oracle rules) \u2014 both enabled (arbitrage opportunities) and corrupted (false stability signals) by seigniorage enforcement",
+      "Ergo Ecosystem: Organized actor (constrained by governance) \u2014 benefits from DexyGold liquidity ecosystem but constrained by peg-maintenance rules",
+      "Gold Price Oracle: Institutional mechanism (arbitrage to manipulators) \u2014 enables peg enforcement but vulnerable to flash-loan and cross-chain price divergence attacks"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint initially exhibited \u03b5 \u2248 0.72 at launch (when seigniorage captured 15-20% of collateral inflows weekly), declining to 0.58 as collateral coverage improved. The value reflects sustained asymmetry: early participants capture unbounded seigniorage, while late participants' collateral contributions are diluted into the reserve pool with no proportional seigniorage claim. Suppression (0.62): Moderate-high. Significant barriers to exit include: (a) collateral lock periods (typically 7-30 days); (b) slashing mechanics that penalize early withdrawal; (c) switching costs to alternative stablecoins; (d) protocol-level governance that prevents unilateral rule changes by late joiners. However, suppression is not total \u2014 arbitrage traders can exploit peg deviations, and collateral providers retain option value. Theater ratio (0.68): Moderately high and rising. At launch, peg maintenance was genuinely functional (collateral coverage was uncertain, peg deviations were frequent). At month 5, collateral coverage exceeds 250%, peg deviations are rare (< 0.1%), and much peg-maintenance activity is confirmatory. The theater increase reflects Goodhart drift \u2014 the measurement (maintaining the peg) becomes the goal, even after the original function (ensuring stability) is accomplished.",
+    "perspectival_gap": "Early participants see coordination (Rope) \u2014 DexyGold solves the gold-hedging problem. Late participants see extraction (Snare) \u2014 their collateral is diluted by early seigniorage. The ecosystem sees temporary coordination with sunset (Scaffold) \u2014 as collateral sufficiency is achieved, seigniorage should phase out. The peg mechanism itself appears degraded (Piton) \u2014 maintained through inertia even though collateral coverage is now sufficient. The analytical observer risks naturalizing the seigniorage extraction as 'inherent to stablecoins' (false Mountain). The magnitude of the perspectival gap reflects the protocol's genuine hybrid nature: it is simultaneously a coordination mechanism (enabling gold hedging) and an extraction mechanism (concentrating early-adopter rents). The gap widens over time as the collateral base becomes sufficient, but governance structures prevent the extraction layer from sunsetting.",
+    "directionality_logic": "Early participants (beneficiaries with arbitrage exit) experience low directionality d \u2248 0.15 \u2014 they capture value and retain exit options. Late collateral providers (victims with trapped exit) experience high directionality d \u2248 0.90 \u2014 they bear collateral burdens and face lock-in. The protocol developers sit at d \u2248 0.30 (beneficiary but somewhat constrained by governance). The price discovery mechanism experiences d \u2248 0.55 (symmetric \u2014 both enabled and corrupted). The Ergo ecosystem sits at d \u2248 0.40 (organized actor with constrained exit). Directionality overrides are not needed; the structural derivation from beneficiary/victim status and exit options produces accurate values. The key insight is that the same mechanism has dramatically different directionality for different participants \u2014 this asymmetry IS the constraint.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: DexyGold avoids the mandatrophy trap by explicitly modeling seigniorage extraction as a feature of the bootstrap phase with an anticipated sunset. The Scaffold perspective (organized actors, generational timescale, constrained exit) identifies the mechanism as temporary support with explicit collateral coverage targets for sunset (target: 250% coverage, currently achieved; sunset window: 12-24 months for seigniorage phase-out). The tangled_rope classification captures the dual nature: genuine coordination function (gold hedging) + asymmetric extraction (seigniorage concentration) + active enforcement (peg maintenance rules). The mandatrophy would arise if the protocol naturalizes the seigniorage as 'permanent and inherent to stablecoins' (false Mountain) \u2014 but the governance discourse explicitly frames seigniorage as temporary. The constraint is managed mandatrophy: the protocol acknowledges it is both coordination and extraction, but the sunset clause provides the resolution path. Risk: if governance fails to implement the sunset (seigniorage phase-out at 250% collateral), the constraint reclassifies toward pure Snare, and the Piton perspective becomes the long-term dominant reading."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ergo_oracle_price_discovery",
+      "algorithmic_stablecoin_bootstrap_extractiveness",
+      "collateral_sufficiency_floor"
+    ],
+    "dual_formulation_note": "DexyGold is a specific instantiation of the broader constraint family around seigniorage-based stablecoin design. Upstream: the collateral_sufficiency_floor constraint (physical/economic limit on how much collateral is needed to maintain a peg). Downstream: specific oracle and price-discovery constraints that depend on DexyGold's existence. The extractiveness of DexyGold (0.58) is contingent on collateral coverage ratios \u2014 if coverage drops below 200%, extractiveness rises toward 0.75 (pure snare); if coverage exceeds 350%, extractiveness declines toward 0.35 (pure rope). The current measurement captures the regime near 250% coverage."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.3
+    }
+  ]
+}

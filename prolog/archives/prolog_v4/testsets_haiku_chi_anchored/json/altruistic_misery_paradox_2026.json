@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "altruistic_misery_paradox_2026",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Paradox of Altruistic Misery",
+    "topic_domain": "social/psychological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "recipients_of_aid",
+      "social_group_cohesion"
+    ],
+    "victims": [
+      "compulsive_altruists"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Compulsive Altruist",
+      "comment": "PERSPECTIVE 1: THE COMPULSIVE ALTRUIST (SNARE) — Trapped by internalized guilt and social expectations, the individual cannot exit the cycle of self-sacrifice without significant social or psychological cost. The constant extraction of their time, energy, and well-being feels like a trap. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. With suppression at 0.65, this is on the threshold of a Snare, reflecting the coercive nature of the social pressure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Recipient of Aid",
+      "comment": "PERSPECTIVE 2: THE RECIPIENT (ROPE) — From the perspective of someone receiving help, the altruist's actions are a pure coordination good. They benefit directly with minimal cost, experiencing the social norm as a reliable support system. As a beneficiary with arbitrage options, their effective extraction is negative. d≈0.15, f(d)≈-0.01, σ=0.8 → χ≈-0.004."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Social Group",
+      "comment": "PERSPECTIVE 3: THE SOCIAL GROUP (ROPE) — The community as a whole perceives the norm of altruism as a highly effective coordination mechanism that fosters cohesion, trust, and mutual support. The costs borne by a few over-taxed individuals are seen as minor compared to the collective benefit. d≈0.50, f(d)≈0.65, σ=0.9 → χ≈0.32. This low effective extraction classifies it as a Rope, a tool for collective well-being."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Burned-Out Altruist",
+      "comment": "PERSPECTIVE 4: THE BURNED-OUT ALTRUIST (PITON) — After years of self-sacrifice, the altruist's actions become performative. They go through the motions to maintain their social role, but the genuine desire or ability to help has been exhausted. The function (providing effective aid) has atrophied, but the theater remains. The high theater_ratio of 0.75 meets the Piton classification gate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The psychologist or sociologist sees the full picture: a system that provides genuine coordination benefits (social cohesion) but achieves this through asymmetric extraction from a specific subgroup (the altruists). It requires active social enforcement to maintain. This dual nature is the hallmark of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "motivation_purity",
+      "question": "Is the altruist's motivation primarily selfless concern for others, or a selfish desire for social approval and the 'warm glow' of giving?",
+      "resolution_mechanism": "Neuro-imaging studies correlating brain reward centers with altruistic acts under varying conditions of social visibility and internal vs. external pressure.",
+      "impact": "If primarily selfish/performative, the constraint is more of a Snare from more perspectives, as it's a system for extracting social status. If primarily selfless, it's a more tragic Tangled Rope where a virtue is exploited.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing selfless motivation from selfish desire for social approval in altruism."
+    },
+    {
+      "id": "pathology_threshold",
+      "question": "At what point does the cost to the altruist's well-being (burnout, resentment, depression) outweigh the benefit to the recipient and the group?",
+      "resolution_mechanism": "Longitudinal studies tracking mental and physical health outcomes of individuals with varying levels of altruistic behavior against the perceived benefits to their communities.",
+      "impact": "Defines the boundary where the constraint flips from a beneficial Rope to a harmful Tangled Rope or Snare. This threshold is likely culturally and individually variable.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Defining the threshold between healthy altruism and pathological self-sacrifice."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the 'Paradox of Altruistic Misery,' a social norm that pressures individuals to prioritize the happiness of others through self-sacrifice. While fostering community cohesion (a coordination function), this pressure can lead to burnout, resentment, and diminished well-being for the altruist (an extraction function). The constraint's structure is a classic example of a Tangled Rope, where a socially valuable behavior is maintained through mechanisms that create a distinct class of victims.",
+    "key_agents": [
+      "Compulsive Altruists: Primary victims (powerless/trapped) — bear the emotional and material costs of the norm.",
+      "Recipients of Aid: Primary beneficiaries (powerful/arbitrage) — receive support and view the norm as a pure good.",
+      "The Social Group: Secondary beneficiary and enforcer (organized/mobile) — benefits from social cohesion and actively maintains the norm through praise and censure.",
+      "The Analytical Observer: Sees the full, mixed nature of the constraint (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55): Represents the significant, non-financial cost (time, emotional energy, opportunity cost) imposed on the altruist. Suppression (0.65): High, reflecting the power of social norms, guilt, and fear of being labeled 'selfish' which prevent individuals from easily opting out. Theater Ratio (0.75): High, as social pressure incentivizes performative acts of giving to gain approval, which can become more prevalent as genuine motivation wanes due to burnout.",
+    "perspectival_gap": "The gap is profound. The altruist, trapped by expectation, experiences a Snare. The recipient, benefiting from aid, sees a pure Rope. The wider community also sees a Rope, valuing the collective benefit of the norm over the individual cost. The burned-out individual experiences a Piton, where the function of helping is gone but the performance remains. Only the analytical observer perceives the complete structure as a Tangled Rope, acknowledging both the genuine coordination and the harmful extraction.",
+    "directionality_logic": "Directionality is derived from the clear roles. 'Compulsive altruists' are victims with trapped exit, leading to a high 'd' value (~0.95) and a Snare classification. 'Recipients of aid' are beneficiaries with arbitrage exit, leading to a very low 'd' (~0.15) and a Rope classification. The 'Social Group' is a beneficiary but also self-constraining, leading to a moderate 'd' (~0.50) that still classifies as Rope due to the immense perceived coordination benefit. The analytical view uses the canonical 'd' for that power atom, revealing the Tangled Rope.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that a social norm is not monolithically 'good' or 'bad'. Labeling it a pure Rope (the community view) ignores the victims. Labeling it a pure Snare (the victim's view) ignores the real coordination benefits it provides. The Tangled Rope classification from the analytical perspective correctly identifies the dual nature of the phenomenon, preventing the mislabeling of coercive social pressure as pure coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  }
+}

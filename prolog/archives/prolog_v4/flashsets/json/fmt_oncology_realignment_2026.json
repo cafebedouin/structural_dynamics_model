@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "fmt_oncology_realignment_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FMT Immunotherapy Realignment",
+    "topic_domain": "health/medical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cancer_patients_fmt_responders",
+      "fmt_research_institutions"
+    ],
+    "victims": [
+      "cancer_patients_non_responders",
+      "traditional_immunotherapy_providers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Cancer Patients (Non-Responders)",
+      "comment": "Cancer patients who do not respond to FMT and experience delays in receiving traditional immunotherapy may feel trapped, especially if access to effective alternatives is limited."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Traditional Immunotherapy Providers",
+      "comment": "Traditional immunotherapy providers may experience a tangled rope situation as they are constrained by the need to adapt to the new FMT-enhanced protocols, while also benefiting from the potential to offer more effective treatments. There is moderate suppression due to established protocols and potential resistance to change."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "FMT Research Institutions",
+      "comment": "FMT research institutions benefit from increased funding and recognition due to the positive trial results, allowing them to arbitrage their position in the field."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Cancer Patients (FMT Responders)",
+      "comment": "Cancer patients who respond positively to FMT experience a tangled rope \u2013 they benefit from the improved treatment outcomes but may face challenges in accessing FMT therapy due to limited availability and regulatory hurdles. They are mobile in that they can seek out the new therapies, but face costs in doing so."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the FMT realignment represents a tangled rope situation. It offers potential benefits in cancer treatment but also involves complexities related to access, regulation, and potential risks for non-responders. Generational, as the transition plays out over a long timeline, with shifts in research and regulatory paradigms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fmt_responder_identification",
+      "question": "How accurately can we predict which patients will respond positively to FMT?",
+      "resolution_mechanism": "Develop more precise biomarkers and diagnostic tools to identify potential responders.",
+      "impact": "Improved responder identification would reduce the snare effect on non-responders and enhance the overall effectiveness of FMT treatment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of identifying FMT responders"
+    },
+    {
+      "id": "fmt_access_equity",
+      "question": "How can we ensure equitable access to FMT therapy for all cancer patients?",
+      "resolution_mechanism": "Implement policies to reduce cost barriers and improve geographic availability of FMT treatment.",
+      "impact": "Greater access equity would mitigate the snare effect and allow more patients to benefit from potentially life-saving therapy.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Equitable access to FMT therapy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The realignment of FMT in oncology, driven by new trial data in 2026, creates a complex landscape of benefits and challenges. While FMT shows promise in enhancing immunotherapy response and reducing toxicity, access barriers, potential risks for non-responders, and the need for adaptation by traditional providers introduce a tangled rope situation. This transition requires careful management to ensure equitable access and maximize patient outcomes.",
+    "key_agents": [
+      "Cancer Patients (FMT Responders): Primary beneficiaries (powerful/mobile) - experience improved treatment outcomes.",
+      "FMT Research Institutions: Secondary beneficiaries (institutional/arbitrage) - gain increased funding and recognition.",
+      "Cancer Patients (Non-Responders): Primary victims (powerless/trapped) - may experience delays in receiving effective treatment.",
+      "Traditional Immunotherapy Providers: Secondary victims (moderate/constrained) - must adapt to new protocols and face potential resistance.",
+      "Analytical Observer: Evaluates overall impact (analytical/analytical) - assesses long-term benefits and challenges of the realignment."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. There is extraction because some patients will not respond to FMT but face costs (time, money, foregone alternative treatment). There is also extraction as the traditional immunotherapy providers must adapt and that adaptation can be difficult. Suppression (0.40): Moderate. There is some suppression of traditional protocols in that adoption of FMT shifts the landscape. There is no complete suppression because existing protocols still exist. Theater ratio (0.20): Low. The process has a low theater ratio as the changes are based on empirical evidence and clinical trials.",
+    "perspectival_gap": "The perspectives reveal a significant perspectival gap. Cancer patients who respond to FMT see it as a potential lifeline, while non-responders may feel trapped if access to traditional immunotherapy is delayed. FMT research institutions view the realignment as an opportunity for growth, while traditional providers face the challenge of adapting to new protocols. The analytical observer sees a tangled rope situation, recognizing both the benefits and complexities of the transition.",
+    "directionality_logic": "Patients who respond to FMT benefit directly (d=0). FMT research institutions also benefit (d=0.1). Patients who do not respond face costs (d=0.8), and traditional providers face disruption (d=0.6). The resulting extraction values reflect the relative impact on each group.",
+    "mandatrophy_analysis": "The tangled rope classification accounts for the dual nature of the FMT realignment, recognizing both its potential benefits and the challenges it presents. This prevents mislabeling the situation as purely beneficial (rope) or purely detrimental (snare). The analytical observer's perspective confirms the appropriateness of the tangled rope classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

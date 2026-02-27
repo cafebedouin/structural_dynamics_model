@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "electrification_scale_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "elec"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Industrial Scale Electrification via Gigafactory Integration",
+    "topic_domain": "technological/economic/environmental",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vertically_integrated_battery_manufacturers",
+      "renewable_energy_developers",
+      "early_adopter_ev_consumers",
+      "electricity_grid_operators"
+    ],
+    "victims": [
+      "legacy_automotive_suppliers",
+      "fossil_fuel_industries",
+      "resource_extraction_communities",
+      "grid_stability_advocates",
+      "rare_earth_mining_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Coal Mining Community",
+      "comment": "PERSPECTIVE 1: COAL MINING COMMUNITY (SNARE) \u2014 Trapped by geographic, skill, and capital constraints. Electrification extracts their livelihoods without viable alternatives in resource-extraction regions. No arbitrage, no mobility. d\u22480.93, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Rare Earth Mining Workers",
+      "comment": "PERSPECTIVE 2: RARE EARTH MINING WORKERS (SNARE) \u2014 Substituted extraction: shift from fossil fuels to minerals, not liberation from extractive labor. Trapped by skill specialization, geographic immobility, and supply-chain consolidation around low-cost producers. d\u22480.92, f(d)\u22481.35, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legacy Automotive Suppliers",
+      "comment": "PERSPECTIVE 3: LEGACY AUTOMOTIVE SUPPLIERS (TANGLED ROPE) \u2014 Coordinating the supply chain transition (rope element: enabling battery assembly, thermal management, integration). But also extracted from: smaller suppliers forced into price-cost squeeze as OEMs demand EV-compatible components at fossil-era margins. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Vertically Integrated Battery Manufacturers",
+      "comment": "PERSPECTIVE 4: VERTICALLY INTEGRATED BATTERY MANUFACTURERS (ROPE) \u2014 Net beneficiaries. Gigafactory model creates genuine coordination: standardized production, predictable supply, economies of scale benefit the entire EV ecosystem AND battery makers themselves. Net positive value capture through arbitrage (licensing, manufacturing, supply contracts). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.03. Negative effective extraction = net coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Electricity Grid Operators",
+      "comment": "PERSPECTIVE 5: ELECTRICITY GRID OPERATORS (TANGLED ROPE) \u2014 Coordinating intermittent renewable integration (rope element). But extraction occurs via enforcement: mandates for rapid grid upgrades, balancing requirements, and peak-demand liability when EVs charge unpredictably. d\u22480.55, f(d)\u22480.75, \u03c3=1.1 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Climate Policy Coalition",
+      "comment": "PERSPECTIVE 6: CLIMATE POLICY COALITION (SCAFFOLD) \u2014 Temporary coordination mechanism with explicit sunset: electrification subsidies, emission regulations, and manufacturing incentives are designed to bridge the cost gap until battery costs reach grid parity (estimated 2025-2028 achieved for most geographies). Low extraction because the coalition has agency and the suppression mechanism (subsidy withdrawal) is conditional on cost milestones. d\u22480.35, f(d)\u22480.30, \u03c3=1.2 \u2192 \u03c7\u22480.16. has_sunset_clause_rationale: Subsidies and emission mandates explicitly phase out as battery cost targets hit and grid parity is achieved. Estimated sunset: 2028-2032 for most developed economies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Energy Infrastructure",
+      "comment": "PERSPECTIVE 7: INCUMBENT ENERGY INFRASTRUCTURE (PITON) \u2014 Persists through institutional inertia (natural gas plants, oil refineries, coal plants). Primary function (energy provision) is atrophying but constraint (capital lock-in, stranded assets, regulatory moats) remains enforced by sunk capital and political support. Theater_ratio=0.45 is borderline; the performative element is regulatory justification of continued operation ('firm capacity' arguments). Technically theater \u2264 0.70, so this classifies as Rope with inertia rather than strict Piton, but the directional analysis (institutional, arbitrage, globe scope) shows extraction pathways persist via regulatory protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Developed Nation Energy Consumers",
+      "comment": "PERSPECTIVE 8: DEVELOPED NATION ENERGY CONSUMERS (TANGLED ROPE) \u2014 Coordinate through price signals and grid decarbonization (rope element). But extraction: upfront costs of EV and home charging infrastructure, volatile electricity prices during transition, grid congestion charges. Powerful + mobile means they can arbitrage (buy EVs in subsidized markets, relocate to lower-cost regions), so extraction is moderate. d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.16."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Developing Nation Energy-Dependent Communities",
+      "comment": "PERSPECTIVE 9: DEVELOPING NATION ENERGY-DEPENDENT COMMUNITIES (SNARE) \u2014 Global electrification logic benefits wealthy nations with subsidy capacity and grid infrastructure; trapped in lower-cost supply chains (mineral extraction, manufacturing) with minimal bargaining power. Electrification as global regime extracts via commodity dependence: rare earths, lithium, cobalt sourced from politically fragile regions. d\u22480.94, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law: Thermodynamic Efficiency Limits",
+      "comment": "PERSPECTIVE 10: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational horizon, some efficiency loss in energy conversion (coal \u2192 electricity \u2192 stored energy \u2192 motion) is irreducible thermodynamic fact. Battery chemistry has hard physical limits on energy density. Grid transmission losses are physics, not policy. However, the structural data (\u03b5=0.38, suppression=0.42, theater=0.35) contradicts a strong mountain classification. The engine will identify this as a false summit: most of the 'immutable' constraints are actually institutional (supply-chain consolidation, subsidy structures, regulatory lock-in), not thermodynamic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "supply_chain_concentration_vs_coordination",
+      "question": "Is gigafactory consolidation primarily a coordination mechanism enabling scale efficiencies, or an extraction mechanism via supply-chain gatekeeping?",
+      "resolution_mechanism": "Historical analysis of battery cost curves with/without vertical integration; comparison of open-source battery designs vs proprietary designs; market structure evolution (number of entrants, price dispersion, switching costs)",
+      "impact": "If primarily coordination: rope classification dominates, extraction is 0.20-0.30. If primarily gatekeeping: tangled_rope or snare classification dominates, extraction rises to 0.50+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gigafactories enable coordination or enforce extraction via gatekeeping"
+    },
+    {
+      "id": "mineral_extraction_substitution",
+      "question": "Does electrification reduce total extractive harm globally, or substitute fossil fuel extraction with mineral extraction at comparable or greater intensity?",
+      "resolution_mechanism": "Lifecycle analysis comparing coal mining externalities (health, land, water) to lithium/cobalt mining externalities; labor condition comparative studies; supply-chain transparency and enforcement effectiveness",
+      "impact": "If net reduction: electrification is genuine constraint relief. If net substitution: the power transfer is from coal communities to mineral-extraction communities, replicating snare structures at different scale.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether electrification reduces or substitutes extractive harm"
+    },
+    {
+      "id": "grid_stability_phase_transition",
+      "question": "At what penetration of renewable and EV load does the grid transition from a coordination problem (balancing diverse loads) to an extraction problem (peak-demand pricing, mandatory demand-response)?",
+      "resolution_mechanism": "Simulation modeling of grid stability under varying solar+wind+EV penetration; empirical study of demand-response costs in high-penetration grids (Denmark, Germany); measurement of grid operator enforcement actions vs voluntary coordination",
+      "impact": "If grid remains coordinative up to 60%+ penetration: tangled_rope persists. If extraction mechanisms activate early (30-40% penetration): snare classification rises for grid consumers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Penetration threshold where grid transitions from coordination to extraction"
+    },
+    {
+      "id": "subsidy_dependency_and_sunset_credibility",
+      "question": "Can electrification subsidies and emission mandates actually be withdrawn once achieved, or do they persist as permanent extraction mechanisms disguised as temporary support?",
+      "resolution_mechanism": "Historical analysis of energy subsidies (ethanol, nuclear, natural gas) that claimed sunset but persisted; modeling of political economy incentives for subsidy lock-in; early-stage observation of subsidy withdrawal attempts (EU, US regional policy 2025-2026)",
+      "impact": "If sunset is credible: scaffold classification holds, extraction is temporary. If sunset is politically impossible: scaffold is aspirational (piton classification), extraction persists indefinitely.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether electrification subsidies can be genuinely withdrawn"
+    },
+    {
+      "id": "early_adopter_cost_incidence",
+      "question": "Are EV early-adopter costs (premium purchase price, charging infrastructure) primarily borne by wealthy consumers (arbitrage), or are they socialized through grid upgrades and cross-subsidization?",
+      "resolution_mechanism": "Cost-benefit analysis of EV vs ICE at purchase; grid upgrade cost allocation mechanisms; electricity rate structure analysis (fixed vs variable, time-of-use pricing, EV surcharges); income distribution of tax credits and subsidies",
+      "impact": "If borne privately by wealthy: efficient market coordination (rope). If socialized: extractive transfer from non-EV users to EV users (tangled_rope or snare depending on distribution).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether EV early-adopter costs are private or socialized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 2010,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "Industrial-scale electrification, catalyzed by Tesla's gigafactory model and subsequent global rollout, represents a fundamental shift in energy infrastructure. The constraint is not the physical transition itself (electricity is a known technology) but the institutional arrangement that accelerates electrification through vertical integration, economies of scale, regulatory mandates, and supply-chain consolidation. This arrangement creates a tangled coordination-extraction hybrid: it genuinely solves the coordination problem of scaling battery production cost-effectively, but simultaneously extracts from legacy industries, resource-extraction communities, and developing nations locked into mineral supply chains. The theater ratio has declined over the interval (from 0.55 in 2010 to 0.35 by 2026) because early electrification claims were more aspirational (Tesla's 'accelerating sustainable energy') and less functionally proven; by 2026, battery cost curves and grid integration are empirically demonstrable, reducing performative content. However, extractiveness has risen (0.28 to 0.38) as the supply-chain gatekeeping effects and mineral-extraction burdens have become clearer, and as electrification has locked developing economies into dependency on lithium and cobalt supplies from politically fragile regions.",
+    "key_agents": [
+      "Vertically Integrated Battery Manufacturers (Tesla, CATL, BYD): Institutional/arbitrage beneficiaries \u2014 capture value through scale economies and supply-chain control; experience constraint as pure coordination benefit",
+      "Coal Mining Communities: Powerless/trapped victims \u2014 no geographic, skill, or capital mobility; extraction is total substitution of livelihood",
+      "Rare Earth Mining Workers: Powerless/trapped victims \u2014 substituted extraction, not liberation; locked into low-wage, high-risk mineral extraction",
+      "Legacy Automotive Suppliers: Moderate/constrained actors \u2014 face mixed coordination (enabling EV supply chains) and extraction (price-cost squeeze)",
+      "Electricity Grid Operators: Organized/constrained actors \u2014 coordinate renewable integration but extract via mandated upgrades and demand-response enforcement",
+      "Climate Policy Coalition: Organized/mobile agents \u2014 driving scaffold mechanism through subsidies and emission regulations with claimed sunset",
+      "Incumbent Energy Infrastructure: Institutional/arbitrage \u2014 maintains extraction through sunk capital and regulatory protection (piton mechanism)",
+      "Developed Nation EV Consumers: Powerful/mobile actors \u2014 face upfront infrastructure costs but have arbitrage capacity through relocation and subsidy access",
+      "Developing Nation Energy Communities: Powerless/trapped \u2014 extracted via commodity dependence and supply-chain consolidation",
+      "Analytical Observer: Civilizational perspective \u2014 risks naturalizing institutional arrangements (subsidy structures, regulatory lock-in) as immutable thermodynamic limits"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate, rising. Base extraction reflects supply-chain gatekeeping effects (vertically integrated manufacturers control battery technology, pricing power). The rise over the interval (0.28 \u2192 0.38) reflects growing awareness of mineral supply-chain concentration and developing-nation commodity dependence. Suppression (0.42): Moderate. Barriers exist (capital requirements for gigafactories, regulatory complexity, incumbent industry lobbying) but are not total \u2014 open-source battery initiatives, competing manufacturers, and policy support reduce suppression. Theater ratio (0.35): Low-moderate, declining. Early electrification (2010s) was heavily performative (sustainability claims, futurism, 'accelerating the inevitable'). By 2026, the functional reality has matured: gigafactory cost curves are empirically proven, grid integration is operationally real, not aspirational. Theater persists (some greenwashing, some subsidy justification rhetoric) but at reduced levels. Claimed type (tangled_rope): The constraint simultaneously enables genuine coordination (scaling battery production, integrating supplies) AND extracts asymmetrically (gatekeeping, mineral dependencies, legacy industry displacement). Both elements are structurally necessary.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence across power and exit dimensions. Vertically integrated manufacturers see rope (pure coordination benefit). Coal communities see snare (total extraction, no exit). Grid operators see tangled_rope (coordination responsibility plus extraction liability). Climate coalition sees scaffold (temporary mechanism approaching sunset). Incumbent energy sees piton (degraded role persisting through inertia). Developed consumers see tangled_rope (mixed benefit and cost). Developing mineral communities see snare (trapped extraction). The perspectival gap reflects genuine structural asymmetry: the same electrification logic that coordinates Tesla's supply chain extracts from coal communities and mineral-dependent nations. This is not a measurement perspective problem \u2014 it is a real structural difference in how the constraint operates across power levels and exit capacities.",
+    "directionality_logic": "Vertically integrated manufacturers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net coordination. Coal mining communities: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.38. Maximum extraction. Rare earth workers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.35. Maximum extraction. Legacy suppliers: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. High extraction, some coordinating benefit. Grid operators: Victim + constrained \u2192 d\u22480.55, f(d)\u22480.75. Mixed. Climate coalition: Beneficiary/organizer + mobile \u2192 d\u22480.35, f(d)\u22480.30. Low extraction, agency present. Incumbent energy: Beneficiary (of lock-in) + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Piton classification from theater gate, not from directionality. Developed consumers: Moderate cost/benefit + mobile \u2192 d\u22480.42, f(d)\u22480.42. Moderate extraction. Developing communities: Victim + trapped \u2192 d\u22480.94, f(d)\u22481.40. Maximum extraction.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint resolves mandatrophy by demonstrating that electrification is genuinely both coordination and extraction. The coordination element (scaling battery production, integrating supplies, solving the cost-curve problem) is real and essential. The extraction element (mineral supply-chain gatekeeping, developing-nation commodity lock-in, legacy industry displacement) is equally real and not incidental. The mandatrophy is resolved by refusing to collapse the hybrid into a single type. The constraint IS a rope from the battery manufacturer perspective AND a snare from the coal community perspective. Both are true. The system-level classification (claimed_type: tangled_rope) reflects that the mechanism simultaneously solves collective-action problems (battery scale) and creates asymmetric burdens (supply-chain power). If the analysis tried to reduce it to pure rope ('electrification is coordination'), it would naturalize the extraction effect as incidental ('job transitions happen'). If it reduced to pure snare ('electrification is gatekeeping'), it would dismiss the genuine technological breakthrough. The tangled_rope framework holds both."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "fossil_fuel_stranded_assets",
+      "mineral_supply_chain_concentration",
+      "grid_peak_demand_pricing",
+      "rare_earth_geopolitics"
+    ],
+    "dual_formulation_note": "Electrification can be decomposed into multiple constraint stories: (1) Battery cost-curve breakthrough (\u03b5\u22480.08, Mountain from technical perspective) \u2014 thermodynamic limits on energy density are immutable. (2) Supply-chain scaling mechanism (\u03b5\u22480.25, Rope from coordination perspective) \u2014 genuine coordination benefit, low extraction. (3) Mineral gatekeeping and developing-nation commodity lock-in (\u03b5\u22480.55, Snare from extraction perspective) \u2014 asymmetric power over supply, high extraction. The present story (\u03b5=0.38, Tangled Rope) integrates all three at the level of industrial organization and policy regime. Upstream decomposition would separate technical breakthrough from institutional implementation; this story treats them as inseparable."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

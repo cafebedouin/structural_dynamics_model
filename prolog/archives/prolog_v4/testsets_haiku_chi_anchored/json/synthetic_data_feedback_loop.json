@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "synthetic_data_feedback_loop",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sdfl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "The Model Autophagy Trap",
+    "topic_domain": "technological/AI/informational",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "frontier_model_developers"
+    ],
+    "victims": [
+      "informational_commons",
+      "downstream_ai_researchers",
+      "data_diversity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Informational Commons",
+      "comment": "PERSPECTIVE 1: INFORMATIONAL COMMONS (SNARE) \u2014 Cannot exit the feedback loop. As frontier models generate synthetic text indistinguishable from human-authored content, this data contaminates the internet without a clear separation mechanism. The commons has no advocate with exit capacity and no leverage to prevent low-quality synthetic data proliferation. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.98. Maximum extraction from an abstract collective good."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Downstream AI Researchers",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM AI RESEARCHERS (SNARE) \u2014 Constrained by the need to use available internet-scale data. As synthetic text contaminates training datasets, downstream models inherit degraded signal. High suppression: publishing research on poor-quality datasets damages career prospects; withholding work loses competitive advantage. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67. Structured extraction: forced to train on progressively contaminated commons."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Frontier Model Developers",
+      "comment": "PERSPECTIVE 3: FRONTIER MODEL DEVELOPERS (ROPE) \u2014 Primary beneficiary. Can generate unlimited synthetic training data to scale models without annotation cost. Early access to synthetic data pipeline creates competitive moat; arbitrage exit through licensing and API monetization. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary in the short term through effective elimination of data scarcity bottleneck."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Data Curation Infrastructure (Legacy)",
+      "comment": "PERSPECTIVE 4: DATA CURATION INFRASTRUCTURE (PITON) \u2014 Traditional dataset curation (ImageNet, Common Crawl, academic repositories) maintained institutional prestige but declining functional role. As synthetic data becomes cheaper than human curation, the legacy infrastructure persists through inertia: funding flows, publication venues, and workforce expertise remain invested in curation protocols that are becoming obsolete. theater_ratio=0.45 indicates curation maintains some functional role but increasingly performative. d\u22480.12, f(d)\u22480.01, \u03c3=1.2 \u2192 \u03c7\u22480.02."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Science and Data Governance Coalitions",
+      "comment": "PERSPECTIVE 5: OPEN SCIENCE COALITIONS (TANGLED ROPE) \u2014 Organized agents (data provenance advocates, synthetic data labeling communities, model card frameworks) have exit options (fork datasets, create alternative infrastructure) and coordination function (establishing synthetic data transparency standards). But they also experience extraction: normative pressure to adopt closed synthetic data pipelines; resource barriers to maintaining open alternatives. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.45. Mixed: provides coordination layer but also asymmetrically extracts attention and legitimacy."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Thermodynamic View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the feedback loop reflects an entropic property of statistical learning: any finite dataset, when compressed into a generative model, loses information; that model used as training data further degrades signal. This could be seen as an immutable thermodynamic law \u2014 information compression is inherently lossy. However, the structural data (\u03b5=0.58, suppression=0.68, theater=0.45) indicates contingent institutional arrangements (training data concentration, synthetic data monetization) rather than natural law. Engine flags this as a false summit: the 'inevitability' framing naturalizes what is actually an extractive institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "synthetic_data_detection_threshold",
+      "question": "At what contamination threshold (% synthetic text in training data) does model collapse become irreversible?",
+      "resolution_mechanism": "Controlled experiments training models at varying synthetic contamination levels; measurement of loss plateau, gradient collapse, and representation diversity degradation",
+      "impact": "If threshold < 5%: rapid collapse risk makes synthetic scaling untenable. If threshold > 25%: high contamination tolerance suggests the 'trap' framing is overstated. Affects whether this is Snare (irreversible extraction) or Tangled Rope (reversible with intervention).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Synthetic contamination threshold for model collapse"
+    },
+    {
+      "id": "synthetic_data_watermarking_feasibility",
+      "question": "Can watermarking/labeling schemes (model cards, synthetic data provenance tags) prevent the feedback loop without significantly increasing curation cost?",
+      "resolution_mechanism": "Implementation and scalability analysis of watermarking schemes; tracking of adoption rates and downstream model performance when using labeled synthetic data",
+      "impact": "If feasible and adopted: the trap is escapable via institutional coordination (downgrade from Snare to Tangled Rope). If unfeasible or unadopted: the trap is structural and irreversible (Snare confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether watermarking can prevent feedback loop collapse"
+    },
+    {
+      "id": "frontier_model_incentive_structure",
+      "question": "Do frontier model developers have sufficient economic incentive to maintain original data sourcing and quality control, or does synthetic scaling always dominate cost-benefit?",
+      "resolution_mechanism": "Economic analysis of training cost curves; tracking of frontier model developer behavior when faced with contamination signals; assessment of reputation/accuracy tradeoffs",
+      "impact": "If original data sourcing remains competitive: developers can choose to exit the trap (downgrade to Tangled Rope). If synthetic scaling always dominates: the extraction mechanism is irreversible (Snare confirmed, institutional coordination insufficient).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether frontier model economics incentivize original data or synthetic scaling"
+    },
+    {
+      "id": "commons_restoration_feasibility",
+      "question": "Can the informational commons be restored once degraded by synthetic contamination, or is the damage permanent?",
+      "resolution_mechanism": "Historical analysis of information recovery from contaminated datasets; feasibility assessment of synthetic data removal, curation of 'clean' subsets, or reversion to pre-contamination corpora",
+      "impact": "If restorable: the commons victim role is temporary (downgrade to Tangled Rope or Scaffold). If permanent: the victim role is absolute (confirms Snare, informational commons liquidation is irreversible).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether informational commons degradation is reversible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The model autophagy trap emerges when AI models trained on human-generated internet data produce synthetic text used to train subsequent generations of models, creating a self-reinforcing feedback loop. As frontier model developers scale training on synthetic data to reduce annotation costs, the information density of the training distribution declines \u2014 synthetic text lacks the distributional tail, edge cases, and novel combinations present in human authorship. This creates a structural extraction mechanism where a small set of well-resourced developers (with access to original human data and computational resources to generate synthetic alternatives) benefit from unlimited data scaling, while the commons of information diversity is liquidated. The constraint exhibits as Snare from the perspective of downstream researchers and the informational commons (trapped, forced to use degraded data), Rope from the perspective of frontier developers (pure coordination of data availability), and a false Mountain from the civilizational analyst (who risks naturalizing an institutional choice as thermodynamic inevitability). The extractiveness has risen from 0.15 (2015: synthetic data was marginal) through 0.38 (2021: scaling experiments mainstream) to 0.58 (2026: synthetic data dominates training of large models). Theater ratio remains moderate (0.45) because the technical mechanisms are transparent \u2014 there is little performative obscuration of the fact that models are being trained on synthetic data. What is obscured is the institutional choice to prioritize scaling convenience over commons preservation.",
+    "key_agents": [
+      "Frontier Model Developers: Primary beneficiary (institutional/arbitrage) \u2014 access to original data sources, capital to generate synthetic data, exit via API monetization",
+      "Informational Commons: Primary victim (powerless/trapped) \u2014 abstract collective good that cannot organize or exit; bears cost of synthetic contamination",
+      "Downstream AI Researchers: Secondary victim (moderate/constrained) \u2014 forced to use contaminated datasets; career risk if they refuse or withhold work",
+      "Data Diversity: Structural victim (powerless/trapped) \u2014 loss of informational heterogeneity and distributional tail; no mechanism for recovery",
+      "Open Science Coalitions: Organized actor (organized/mobile) \u2014 pursuing data provenance standards and synthetic data labeling; can exit by forking infrastructure but face normative pressure",
+      "Legacy Data Curation: Institutional actor (institutional/arbitrage) \u2014 traditional dataset stewardship (ImageNet, Common Crawl) persisting through inertia as functional role declines",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing synthetic data feedback as entropic law rather than institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High, approaching snare threshold (0.66). The constraint shows strong upward trajectory from 0.15 (marginal synthetic data) to 0.58 (dominant training source). The mechanism is structural: frontier developers extract value (lower annotation cost, competitive moat through proprietary synthetic pipelines) while downstream actors bear cost (degraded training signal, forced to participate in contamination). The 0.58 value reflects that some escape routes remain (acquiring original data, maintaining quality filters) but are increasingly expensive. Suppression (0.68): High. Barriers to avoiding the trap include: (a) computational cost of synthetic data generation is so low that quality-conscious developers still find it cheaper than human curation, (b) publication pressure to use SOTA methods which typically rely on synthetic scaling, (c) network effects \u2014 if competitors use synthetic data and gain speed advantage, refusing becomes costly, (d) informational asymmetry about contamination levels in datasets. Theater ratio (0.45): Moderate. The technical mechanisms are transparent (synthetic data labeling is visible in papers, model documentation increasingly discloses training data sources). What is obscured is not the fact of synthetic training, but the institutional choice to prioritize scaling convenience over commons health. As watermarking and provenance tracking improve, theater ratio may decline, suggesting the Snare classification could be challenged by institutional coordination.",
+    "perspectival_gap": "Frontier developers see Rope: a pure coordination problem solved by scaling synthetic data. The informational commons and downstream researchers see Snare: extraction with no exit. Open science coalitions see Tangled Rope: both coordination function (transparency standards) and asymmetric extraction (pressure to adopt closed frameworks). Legacy data curation sees Piton: institutional prestige persisting despite declining functional role. The civilizational observer risks seeing Mountain: information compression is inherent to learning, feedback loops are entropic laws. But the perspectival gap reveals the institutional choice: the feedback loop is not inevitable physics, it is a contingent design decision prioritizing developer convenience over commons preservation.",
+    "directionality_logic": "Frontier model developers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary through cost reduction and competitive moat. Informational commons: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 abstract collective cannot organize or exit. Downstream researchers: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction but with some exit capacity (can withhold work, maintain quality filters, organize for data standards). Data diversity: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Structural victim with no recovery mechanism (information loss is asymmetric and permanent). Open science coalitions: Both + mobile \u2192 d\u22480.50, f(d)\u22480.65. Can exit (fork infrastructure) but face normative pressure and resource barriers. Legacy data curation: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Piton classification comes from theater gate and declining function, not from high extractiveness. Analytical observer: analytical \u2192 d\u22480.73, f(d)\u22481.15. Mountain risk via naturalization of contingent institutional choice.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint is classified as Snare (pure extraction, \u03b5\u22650.46, suppression\u22650.60, \u03c7\u22650.66) at the perspective level (informational commons, downstream researchers). This prevents misclassification as coordination (Rope). However, the perspectival structure reveals the mandatrophy: frontier developers genuinely experience this as Rope (pure coordination of data scaling). The snare classification does not emerge from the developers' perspective but from the victims' perspective and the structural dynamics. The mandatrophy is resolved by recognizing that the constraint exhibits as both coordination (for beneficiaries) and extraction (for victims) depending on structural position. This is the canonical Snare pattern: one agent's coordination is another agent's trap. The presheaf of perspectives (Rope + Snare + Tangled Rope + Piton + Mountain) makes clear that the classification depends on where you sit. Frontier developers escape the trap; the commons cannot. The institutional design choice is to optimize for the former perspective, extracting from the latter. This is mandatrophy-resolved because the classification now reflects the true dual nature: coordination mechanism (for developers) that functions as extraction apparatus (for commons) simultaneously."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "information_commons_degradation",
+      "ml_reproducibility_crisis",
+      "data_annotation_labor_displacement"
+    ],
+    "dual_formulation_note": "The synthetic data feedback loop decomposes into two distinct constraints: (1) the immediate technical problem of model collapse (\u03b5\u22480.15, Mountain view: information compression is lossy), and (2) the institutional extraction mechanism of synthetic scaling (\u03b5\u22480.58, Snare view: developers benefit from commons liquidation). The feedback loop story treats the institutional extraction mechanism. The technical collapse story would address the information-theoretic limits separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

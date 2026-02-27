@@ -2,26 +2,26 @@
   "header": {
     "constraint_id": "attention_as_bottleneck_resource",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "attn"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.8,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Finite Cognitive Aperture",
+    "human_readable": "The Finite Cognitive Aperture: Attention as Bottleneck Resource",
     "topic_domain": "social/technological/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "platform_operators",
-      "advertisers",
-      "engagement_driven_content_creators"
+      "attention_extraction_platforms",
+      "high_signal_status_holders"
     ],
     "victims": [
-      "individual_users",
-      "public_discourse_quality",
-      "deep_work_practitioners"
+      "attention_deficit_populations",
+      "epistemic_commons",
+      "marginal_signal_producers"
     ]
   },
   "perspectives": [
@@ -31,8 +31,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Individual User",
-      "comment": "PERSPECTIVE 1: INDIVIDUAL USER (SNARE) — Trapped within a digital environment designed to maximize engagement. Experiences constant cognitive load, distraction, and manipulation of attention with high social and professional costs to exit. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.16. This extreme effective extraction firmly classifies the system as a Snare."
+      "label": "The Attention-Starved Epistemic Participant",
+      "comment": "PERSPECTIVE 1: ATTENTION-STARVED POPULATIONS (SNARE) \u2014 Individuals and communities with marginal social capital, institutional access, or signal-production capacity cannot acquire attention for legitimate claims, needs, or contributions. No exit option exists: the global attention economy is mandatory for survival in information-dense societies. These agents bear maximum cost while extractors capture their cognitive labor (data, engagement, derived attention). The constraint appears as pure extraction from this vantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Attention-Constrained Professional",
+      "comment": "PERSPECTIVE 2: ATTENTION-CONSTRAINED PROFESSIONALS (TANGLED ROPE) \u2014 Knowledge workers, educators, researchers, and domain experts face asymmetric extraction: they must compete for attention to maintain influence and funding, but the competition is rigged in favor of high-signal novelty and entertainment value over depth or accuracy. They benefit from attention-seeking mechanisms (publishing, speaking, engagement) but also lose massive amounts of productive time to the competition. Mixed coordination (the system does enable legitimate signal distribution) and extraction (the system selects for engagement over truth)."
     },
     {
       "classification_type": "rope",
@@ -40,35 +49,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Platform Operator",
-      "comment": "PERSPECTIVE 2: PLATFORM OPERATOR (ROPE) — Experiences the system as a pure coordination mechanism: connecting users to content, advertisers to audiences. Benefits directly from the system's operation and can arbitrage different models of attention capture. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. Negative effective extraction signifies a net beneficiary."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the dual nature of the system. It provides a genuine coordination function (information access, social connection) while simultaneously enabling massive, asymmetric extraction of attention as a resource. This is the canonical Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.94."
+      "label": "The Attention-Extraction Platform",
+      "comment": "PERSPECTIVE 3: ATTENTION-EXTRACTION PLATFORMS (ROPE) \u2014 Tech platforms (social media, search engines, streaming services, recommendation algorithms) experience the constraint as a pure coordination mechanism. They are solving the legitimate problem of routing finite user attention to content. The constraint enables their business model and benefits them directly through data extraction and engagement capture. They see the bottleneck as an opportunity, not a burden. Arbitrage exit (can always pivot to other business models) and primary beneficiary status."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Digital Wellness Advocate",
-      "comment": "PERSPECTIVE 4: DIGITAL WELLNESS ADVOCATE (SCAFFOLD) — Organized groups (e.g., Center for Humane Technology) see the current extractive model as a temporary phase. They are building alternatives (humane design principles, legislative proposals, educational campaigns) with an implicit sunset clause: to make the extractive attention economy obsolete. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.61. While χ is high, the sunset logic and coordination goal classify it as a Scaffold."
+      "label": "The Attention-Governance Coalition",
+      "comment": "PERSPECTIVE 4: ATTENTION-GOVERNANCE COALITION (SCAFFOLD) \u2014 Regulatory bodies, labor standards advocates, digital-rights organizations, and alternative-platform builders (Bluesky, Mastodon, cooperative social networks) view the attention bottleneck as a temporary coordination failure with a sunset. They are building alternative governance structures (algorithmic transparency, attention-preserving regulations, open-source platforms) to lower the extraction rate and distribute attention-control more equitably. The sunset is conditional on regulatory adoption and alternative platform maturation \u2014 estimated 10-20 years for meaningful norm shifts in dominant platforms."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Legacy Media Institution",
-      "comment": "PERSPECTIVE 5: LEGACY MEDIA (PITON) — Old methods of capturing attention (e.g., scheduled broadcasts, print editions) are now largely inertial. The function has been usurped by digital platforms, but the rituals and institutions persist. The high theater_ratio (0.75) reflects that their activity is more performative than functional in the modern attention economy."
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Attention-Distribution System",
+      "comment": "PERSPECTIVE 5: LEGACY ATTENTION-DISTRIBUTION SYSTEM (PITON) \u2014 Traditional media (newspapers, broadcasting, publishing houses) formerly controlled attention routing. They now persist as a parallel system maintained through institutional inertia (prestige effects, regulatory deference, archive access) despite their functional atrophying. Many legacy institutions capture attention through nostalgia and perceived trustworthiness, not through adaptive coordination. Theater ratio is high: editorial review appears to add value, but algorithmic curation on platforms often has superior tracking of actual user interest."
     },
     {
       "classification_type": "mountain",
@@ -76,98 +76,117 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Biological Reductionist",
-      "comment": "PERSPECTIVE 6: BIOLOGICAL REDUCTIONIST (MOUNTAIN) — This perspective incorrectly conflates the socio-technical system with the underlying biological limit. It frames the finite cognitive aperture as an immutable natural law, thus classifying the entire system as a Mountain. The engine will flag this as a 'false summit' because the system's high ε (0.68) and suppression (0.80) are properties of a contingent social arrangement, not a natural one."
+      "label": "The Analytical Observer (Biological Limit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / BIOLOGICAL LIMIT VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, human attention is a finite biological resource with immutable constraints. No individual can attend to more than ~7\u00b12 items simultaneously, and daily focus capacity is bounded by circadian cycles and cognitive fatigue. This constraint is fundamental to the human organism itself \u2014 no institutional arrangement can alter the underlying limit. However, the engine's false summit detector will identify this as naturalization: the constraint's extractiveness and suppression scores reflect institutional design choices (recommendation algorithms, engagement metrics, attention markets), not biological limits. The biological aperture is real; the institutional amplification of its coercive effect is contingent."
     }
   ],
   "omegas": [
     {
-      "id": "equilibrium_stability",
-      "question": "Is the current high-extraction attention economy a stable, long-term equilibrium or a transitional phase before regulatory or technological shifts?",
-      "resolution_mechanism": "Longitudinal analysis of user engagement trends, regulatory adoption rates (e.g., GDPR-like laws), and the market share of non-extractive platforms.",
-      "impact": "If stable, the Snare perspective is dominant. If transitional, the Scaffold perspective is confirmed.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Stability of the attention economy equilibrium"
-    },
-    {
-      "id": "technological_mitigation",
-      "question": "Can AI-driven filters and personal assistants effectively mitigate cognitive overload, or do they simply create a new layer of extractive dependency?",
-      "resolution_mechanism": "Comparative studies on the cognitive load and autonomy of users with and without advanced AI filtering tools.",
-      "impact": "Effective mitigation would lower the system's base extractiveness (ε). Creating new dependencies would maintain or increase it.",
+      "id": "algorithmic_vs_biological_ceiling",
+      "question": "Is the observed attention bottleneck a consequence of fixed biological limits or of institutional design choices that artificially amplify scarcity?",
+      "resolution_mechanism": "Comparative analysis of attention-distribution outcomes under different institutional arrangements (algorithmic vs human curation, attention-preserving vs engagement-maximizing metrics). Historical data from periods before algorithmic amplification (pre-1990s media attention distribution).",
+      "impact": "If biological dominates: constraint is closer to Mountain (suppression and extractiveness are structural features of cognition). If institutional dominates: constraint is Tangled Rope or Snare (suppression and extractiveness are governance choices, potentially reformable).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Efficacy and side-effects of AI mitigation tools"
+      "description": "Whether bottleneck is biological limit or institutional amplification"
     },
     {
-      "id": "coercion_threshold",
-      "question": "What is the ethical and structural threshold where 'persuasive design' becomes coercive manipulation?",
-      "resolution_mechanism": "Establishing formal models of user autonomy and defining quantifiable metrics for coercive design patterns (e.g., dark patterns).",
-      "impact": "A clear threshold would allow for the reclassification of some Tangled Rope dynamics as pure Snare, sharpening regulatory focus.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Defining the threshold between persuasion and coercion"
+      "id": "attention_fungibility_across_domains",
+      "question": "Can attention devoted to entertainment or social connection meaningfully substitute for attention to civic participation, skill development, or epistemic collaboration?",
+      "resolution_mechanism": "Cognitive psychology studies on attention allocation; behavioral analysis of individuals' attention budgets across domains; whether time spent on entertainment directly reduces time spent on other domains or whether it is independently allocated.",
+      "impact": "If fungible: the constraint is coordination (shared resource, but not necessarily zero-sum extraction). If non-fungible: different attention pools have different extraction dynamics, requiring separate constraint stories for civic vs entertainment vs epistemic domains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether attention is fungible across social domains"
+    },
+    {
+      "id": "collective_vs_individual_aperture",
+      "question": "Does institutional coordination (delegation, expertise, trusted intermediaries) effectively expand the collective cognitive aperture beyond the sum of individual limits?",
+      "resolution_mechanism": "Comparative analysis of collective decision-making quality with vs without institutional mediation (Wikipedia vs random crowd, peer review vs open review, editorial curation vs algorithmic feed). Measurement of information quality per unit of individual cognitive input.",
+      "impact": "If expansion is real: constraint is pure Rope (coordination solves scarcity). If expansion fails: constraint is Tangled Rope or Snare (institutional mediation is itself extractive and fails to solve the underlying problem).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional coordination expands collective cognitive aperture"
+    },
+    {
+      "id": "attention_market_equilibrium",
+      "question": "Does competition for attention in a market system produce equilibrium that distributes signal by quality, or does it systematically favor sensation, status signaling, and entertainment value over truth and utility?",
+      "resolution_mechanism": "Content analysis: comparison of signal-to-noise ratios in different attention-allocation systems (algorithmic feeds, human-curated, democratic voting, expertise-weighted). Measurement of correlation between attention received and actual utility/accuracy of information.",
+      "impact": "If equilibrium is quality-biased: market mechanisms are Rope (coordination). If equilibrium is sensation-biased: market mechanisms are Snare (extraction of attention toward low-utility signals).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether attention markets equilibrate around quality or sensation"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2004,
-      "value": 0.2
+      "time_point": 0,
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2014,
-      "value": 0.55
+      "time_point": 15,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.68
+      "time_point": 30,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2004,
-      "value": 0.3
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2014,
-      "value": 0.6
+      "time_point": 15,
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.75
+      "time_point": 30,
+      "value": 0.61
     }
   ],
   "interval": {
-    "start": 2004,
-    "end": 2024
+    "start": 0,
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "This constraint models the socio-technical system built upon the biological fact of finite human attention. In an information-saturated world, attention becomes the primary scarce resource, leading to an 'attention economy' where platforms, advertisers, and creators compete to capture and monetize it. The system is characterized by technologies (e.g., infinite scroll, notifications, algorithmic feeds) designed to exploit cognitive biases and maximize engagement, creating a structural conflict between the platforms' business models and the users' well-being and autonomy.",
+    "narrative_context": "The finite cognitive aperture of human attention has become the primary bottleneck for social coordination, knowledge production, and economic value capture in information-dense societies. As the quantity of available information, entertainment, and social signals has expanded exponentially (driven by digital technology, globalization, and real-time content production), the biological limit of human attentional capacity has remained constant. This mismatch creates a structural constraint where attention itself becomes a scarce resource, and institutional mechanisms (platforms, algorithms, media systems) compete to control its allocation. The constraint exhibits the full range of DR types depending on observer position: platforms and high-status signal-holders experience it as Rope (pure coordination of a shared resource); attention-starved populations and the epistemic commons experience it as Snare (pure extraction); attention-constrained professionals experience it as Tangled Rope (mixed coordination and extraction); alternative governance coalitions experience it as Scaffold (temporary problem with institutional sunset); legacy media experience it as Piton (degraded coordination mechanism maintained by inertia); and the analytical observer risks naturalizing the institutional amplification as an immutable biological law.",
     "key_agents": [
-      "Individual Users: Primary target (powerless/trapped) — their attention is the resource being extracted.",
-      "Platform Operators: Primary beneficiary (institutional/arbitrage) — design and control the mechanisms of extraction, which they frame as coordination.",
-      "Advertisers: Secondary beneficiary (organized/mobile) — purchase access to the extracted attention.",
-      "Digital Wellness Advocates: Organized opposition (organized/mobile) — seek to reform the system and provide users with tools for exit.",
-      "Legacy Media Institutions: Inertial actors (institutional/constrained) — their former attention-capturing models are now degraded.",
-      "Public Discourse Quality: Abstract victim (powerless/trapped) — suffers from the decline of shared context and the rise of outrage-driven engagement."
+      "Attention-Extraction Platforms: Institutional beneficiary (institutional/arbitrage) \u2014 capture user engagement, behavioral data, and economic value from attention routing; experience constraint as pure coordination enabling their service",
+      "High-Signal Status Holders: Secondary beneficiary (powerful/arbitrage) \u2014 celebrities, influencers, established institutions benefit from attention-allocation mechanisms that privilege existing status and novelty; can command attention through brand/reputation",
+      "Attention-Starved Populations: Primary victim (powerless/trapped) \u2014 individuals and communities with low institutional visibility, limited access to signal-production infrastructure, or marginalized social position cannot acquire attention for legitimate claims or contributions; no exit option from mandatory information economy",
+      "Attention-Constrained Professionals: Secondary victim (moderate/constrained) \u2014 researchers, educators, domain experts must compete for attention despite having valuable but complex signals; lose productive time to engagement optimization; constrained exit (must participate in attention markets to maintain professional influence)",
+      "Marginal Signal Producers: Tertiary victim (powerless/mobile) \u2014 creators of specialized, niche, or unpolished content lose attention competition to entertainment and status-signaling content despite potential value; mobile exit (can retreat from platforms, but social/economic cost is high)",
+      "Epistemic Commons: Structural victim (analytical/trapped) \u2014 abstract collective good of shared knowledge quality and mutual understanding; contaminated by low-signal noise; cannot organize or defend itself; trapped in system it does not control",
+      "Attention-Governance Coalition: Organized agent (organized/constrained) \u2014 regulators, digital-rights advocates, alternative-platform builders, labor standards advocates; constrained exit (cannot fully escape legacy platforms but building parallel systems); see architectural sunset (changes in algorithms, governance, regulation)",
+      "Legacy Attention-Distribution System: Institutional actor (institutional/arbitrage) \u2014 newspapers, broadcasting, publishing houses; maintain attention control through perceived authority and archive access despite functional atrophy; arbitrage exit (can adapt or fold)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the institutional design as immutable biological limit"
     ],
-    "logic_rationale": "Extractiveness (ε=0.68): High. The value extracted from users (data, time, subscription fees driven by engagement) is significant and asymmetrically benefits platform operators. Suppression (0.80): Very High. Network effects, social pressure, and the integration of platforms into professional life create formidable barriers to exit. The environment is actively designed to prevent disengagement. Theater Ratio (0.75): High. While platforms provide real utility, a large portion of their activity (e.g., performative community standards enforcement, mission statements about 'connecting the world') serves to obscure the underlying extractive model. This high ratio enables the Piton perspective for legacy actors.",
-    "perspectival_gap": "The gap is profound. Platform operators experience a benign Rope, coordinating a complex market. Users experience a coercive Snare, their most valuable cognitive resource harvested against their long-term interests. Analysts see the full picture: a Tangled Rope that combines genuine coordination with severe extraction. Advocates see a temporary Scaffold to be dismantled, while legacy media see their own role as a Piton. The most critical gap is with the Biological Reductionist, who misidentifies the contingent, man-made Tangled Rope as an inevitable, natural Mountain, thereby justifying the status quo.",
-    "directionality_logic": "Beneficiaries (platforms, advertisers) have arbitrage and mobile exit options, leading to low derived 'd' values and a perception of the system as coordination (Rope). Victims (users) are trapped, leading to a high 'd' value (≈0.95) and a perception of pure extraction (Snare). Organized advocates have some agency and mobility, placing them in the middle, consistent with a Scaffold. The analytical perspective's canonical 'd' value (≈0.72) is high enough to detect the severe extraction, leading to the correct Tangled Rope classification.",
-    "mandatrophy_analysis": "This case is a primary example of resolving the mandatrophy of naturalization. The system's defenders often frame the attention economy's problems as inevitable consequences of a natural law (the 'Mountain' of finite attention). Deferential Realism rejects this by assigning the high extractiveness and suppression values to the *socio-technical system*, not the biological limit. This correctly identifies the constraint as a contingent Tangled Rope—a set of design and policy choices that can be changed—rather than an immutable Mountain that must be accepted."
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The constraint exhibits significant asymmetric extraction: platforms capture economic value from user attention; high-status holders benefit from existing attention-routing mechanisms; attention-starved populations lose the cognitive labor of signal production without receiving attention or compensation. The extractiveness increased over the interval (0.28\u21920.52) as algorithmic amplification replaced human curation, creating path-dependent lock-in where engagement metrics replaced quality signals. Not at the 0.66 threshold for pure Snare because coordination functions are real \u2014 platforms do solve the problem of routing attention in large information spaces \u2014 and some agents (platforms, established institutions) see net benefits. Suppression (0.68): High. Significant barriers to exit and alternative signal routes include: platform network effects (attention follows users, users follow attention), algorithmic opacity, advertising dependency, data lock-in, career/social cost of platform exit, lack of viable alternative infrastructure for most users. Suppression is lower than pure-Snare levels (\u22650.60) only because some exit options exist (alternative platforms, attention discipline, niche communities) even though they carry high cost. Theater ratio (0.61): Moderate-high. Engagement metrics (likes, shares, comments, watch time) are performative proxies for signal value \u2014 optimizing for engagement selects for entertainment and sensation over truth or utility. Editorial curation has lower theater than algorithmic feeds, but even editorial systems optimize for reader retention. The theater has increased over the interval (0.35\u21920.61) as platforms replaced editorial curation with engagement-maximizing algorithms. Open-governance alternatives (Wikipedia, academic peer review, trusted expert systems) achieve lower theater (~0.30-0.45) by decoupling signal routing from engagement metrics.",
+    "directionality_logic": "Directionality values are computed from beneficiary/victim status and exit options. Platform actors as institutional beneficiaries with arbitrage exits (can pivot business models) derive low d values (~0.05-0.15), experiencing negative or near-zero effective extraction \u2014 the constraint benefits them. Powerless attention-starved populations with trapped exits derive high d values (~0.90-0.95), experiencing maximum effective extraction \u2014 the constraint extracts from them. Moderate professionals with constrained exits (must participate in attention markets to maintain influence) derive moderate d values (~0.55-0.65), experiencing moderate extraction. Organized coalitions with constrained exits but agency in building alternatives derive lower-moderate d values (~0.40-0.50), experiencing moderate extraction but with path toward reduction. The analytical observer with analytical exit derives moderate d (~0.72), experiencing moderate extraction due to difficulty of evaluating the full system from within it.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. Platforms experience pure Rope (solving the coordination problem of routing scarce attention). Attention-starved populations experience pure Snare (trapped extraction). Professionals experience Tangled Rope (mixed coordination benefits and extraction costs). Governance coalitions experience Scaffold (sunset pathway through regulation and alternative platforms). Legacy media experience Piton (performative function maintained by inertia). The analytical observer risks Mountain (naturalizing institutional design as biological law). The gap reveals how the same structural phenomenon \u2014 finite human cognitive capacity \u2014 is experienced as solution, extraction, mixed system, temporary failure, degradation, or immutable law depending on the agent's structural position. No single perspective is 'correct'; the presheaf over observation sites is the diagnosis.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by revealing the distinction between biological limits and institutional amplification. The biological limit (human attention is finite) is real and immutable \u2014 this is a genuine 'mountain' fact about cognition. However, the extractiveness (0.52) and suppression (0.68) scores reflect institutional choices: engagement-maximizing algorithms, platform network effects, attention-market competition, and status-quo bias toward established signal-holders. These are Tangled Rope / Snare properties, not Mountain properties. The false summit detector will flag the analytical observer's Mountain classification as mislabeled \u2014 the institutional amplification is contingent, not lawlike. The true classification is Tangled Rope across most perspectives: real coordination function (routing attention in large information spaces) mixed with real extraction (capture of attention for low-utility signals, asymmetric benefits to platforms and high-status holders). The biological aperture sets the floor; institutional design sets the ceiling and internal allocation. Reforming the institutions (transparency in curation, decoupling from engagement metrics, alternative platforms, algorithmic governance) could reduce extractiveness to 0.25-0.35 (moving toward Rope) while maintaining coordination function. This is not a Mountain because the outcome is sensitive to institutional choice."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure"
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "misinformation_dynamics",
-      "political_polarization",
-      "gig_economy_precarity"
-    ]
-  }
+      "epistemic_commons_contamination",
+      "status_market_fragmentation",
+      "algorithmic_curation_lock_in"
+    ],
+    "dual_formulation_note": "The finite cognitive aperture decomposes into three structurally distinct constraints: (1) the biological limit of individual attention (Mountain-adjacent but not included here), (2) the institutional amplification through engagement-metric optimization (this story: Tangled Rope), and (3) the network effect dynamics that lock users into platform ecosystems (separate story: affects_constraints). Each has different extractiveness and different institutional reform pathways. This story focuses on the core tension between biological scarcity and institutional extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
 }

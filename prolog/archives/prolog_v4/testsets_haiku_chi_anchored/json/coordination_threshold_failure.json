@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "coordination_threshold_failure",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crit_mass"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Critical Mass Chasm",
+    "topic_domain": "social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_adopters",
+      "network_operators"
+    ],
+    "victims": [
+      "late_joiners",
+      "marginal_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Marginal User Below Threshold",
+      "comment": "PERSPECTIVE 1: MARGINAL USER (SNARE) \u2014 Pre-threshold participant trapped in dead network with zero utility. Cannot exit because value proposition is binary (below threshold = useless). Network lock-in mechanisms (switching costs, data portability friction, social graph fragmentation) prevent migration. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Late Joiner",
+      "comment": "PERSPECTIVE 2: LATE JOINER (TANGLED ROPE) \u2014 Faces asymmetric payoff structure: benefits from coordination once threshold crossed, but bears disproportionate cost during accumulation phase (low utility, high switching friction, social pressure to conform). d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Early Adopter / Network Operator",
+      "comment": "PERSPECTIVE 3: EARLY ADOPTER & NETWORK OPERATOR (ROPE) \u2014 Benefits from first-mover advantage and network growth before threshold. Experiences constraint as pure coordination problem: 'how do we bootstrap this network?' Switching costs are negligible for them; they can arbitrage to competing platforms. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Bootstrap Coalition",
+      "comment": "PERSPECTIVE 4: BOOTSTRAP COALITION (SCAFFOLD) \u2014 Coordinated subsidy/incentive programs (user acquisition campaigns, seed funding, corporate sponsorships, regulatory mandates) temporarily lower the effective threshold. This is sunset logic: as organic adoption accelerates, subsidy can be withdrawn. d\u22480.42, f(d)\u22480.41, \u03c3=1.2 \u2192 \u03c7\u22480.20. Low extraction because coalition has agency and sees an explicit exit path (self-sustaining adoption)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Mandate Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY MANDATE APPARATUS (PITON) \u2014 Government/institutional mandates (e.g., 'all merchants must accept digital ID') bypass the coordination problem through enforcement rather than network utility. Theater_ratio\u22480.65: the mandate persists as theater even after critical mass is achieved organically, because enforcement infrastructure becomes institutionally inertial. d\u22480.05, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (NATURAL LAW VIEW) \u2014 From a universal/civilizational perspective, the threshold is a mathematical property: network effects are superlinear; utility scales as n\u00b2 (or similar). Below critical mass, collective action fails. This looks immutable \u2014 the structure of network effects themselves. However, the structural data (\u03b5=0.52, suppression=0.68) contradicts true mountain properties (\u03b5\u22640.25, suppression\u22640.05). The engine will detect false summit: the threshold is a contingent function of platform design, subsidy levels, and switching costs, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "critical_mass_exact_threshold",
+      "question": "What is the true critical mass percentage for a given network topology? Is it fixed or design-dependent?",
+      "resolution_mechanism": "Empirical testing across platforms (messaging, payments, social): measurement of adoption curves; identification of knee points; variation across UI design, subsidy levels, and switching cost regimes",
+      "impact": "If threshold is fixed (e.g., always 15-20%): network effects are quasi-natural. If design-dependent (can be moved via UX, subsidies, mandates): threshold is contingent institutional choice. Classification shifts from mountain toward tangled_rope/snare across more perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether critical mass threshold is a fixed function or design-contingent"
+    },
+    {
+      "id": "subsidy_withdrawal_stability",
+      "question": "When subsidies or regulatory mandates are withdrawn, does the network maintain adoption or collapse back to pre-threshold state?",
+      "resolution_mechanism": "Historical case studies: subsidy withdrawal experiments (e.g., India digital payment rollback scenarios); longitudinal adoption tracking post-policy change; measurement of organic vs induced participation",
+      "impact": "If collapses: threshold is fundamentally dependent on coercion (pure snare). If sustains: threshold was successfully bootstrapped and the constraint self-resolves (true scaffold sunset). Classification shifts the organized perspective from scaffold to piton or snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of adoption after subsidy or mandate withdrawal"
+    },
+    {
+      "id": "switching_cost_exogeneity",
+      "question": "Are switching costs (data portability, social graph replication, learning curve) intrinsic technical requirements or artificially inflated by platform design choices?",
+      "resolution_mechanism": "Comparison of switching friction across platforms with equivalent functionality; audit of interoperability barriers (API access, data export formats); analysis of lock-in mechanisms as design vs necessity",
+      "impact": "If intrinsic: suppression is quasi-immutable. If artificial: platform operators are actively extracting via lock-in design (increases snare classification for late joiners). Changes directionality of network_operators beneficiary status.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether switching costs are technical requirements or design choices"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Critical Mass Chasm is a structural coordination failure where a network or protocol provides zero utility to participants until a specific adoption threshold is crossed. Below the threshold, the constraint manifests as pure extraction: late joiners and marginal users bear all the switching costs and friction of participation while receiving no benefit (dead network utility). Early adopters and network operators benefit from first-mover advantage and subsidy mechanisms that lower the apparent threshold. The suppression mechanisms (data portability friction, social graph lock-in, switching costs, learning curve, app ecosystem gaps) are both technical requirements and artificially inflated by platform design. This creates a hybrid constraint: genuine coordination problem (bootstrapping a network to viability) combined with asymmetric extraction (those who join late pay switching costs those who joined early never faced). The threshold itself is neither immutable nor arbitrary \u2014 it is a design-contingent function that can be moved by UI improvements, subsidies, interoperability standards, or regulatory mandates. The theater ratio captures the performative element: mandates and subsidies often persist as enforcement theater even after organic critical mass has been achieved, because the institutional apparatus becomes inertial.",
+    "key_agents": [
+      "Early Adopters / Network Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture network growth premium and first-mover advantages; can arbitrage to alternatives; face negligible switching costs",
+      "Late Joiners: Primary victims (moderate/constrained) \u2014 face binary payoff structure (below threshold = useless) and asymmetric switching costs relative to early adopters",
+      "Marginal Users (below threshold): Secondary victims (powerless/trapped) \u2014 receive zero utility and cannot exit; trapped in dead network by switching cost lock-in and platform fragmentation",
+      "Bootstrap Coalition: Organized agents (organized/constrained) \u2014 subsidy programs, user acquisition campaigns, corporate sponsorships, seed funding that lower the effective threshold through coercion rather than network value",
+      "Regulatory Mandate Apparatus: Institutional enforcement (institutional/arbitrage) \u2014 government mandates (e.g., digital ID adoption, payment system interoperability) bypass coordination problem through top-down enforcement; persist as inertial theater after organic threshold crossed",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing threshold as immutable network law rather than recognizing it as contingent on design, subsidies, and lock-in mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Below threshold, marginal users receive zero utility while bearing full switching costs. This is extraction, not mere coordination cost. However, it is not maximal (0.66+) because: (1) the extraction is temporally bounded (ends once threshold is crossed organically), (2) the threshold can be lowered by improving network design or reducing switching costs, (3) subsidy mechanisms provide a real (if coercive) alternative to purely organic growth. The extractiveness has increased over the interval as platform lock-in mechanisms have been deployed more aggressively. Suppression (0.68): High. Significant barriers to exit include data portability friction, social graph lock-in (network effects mean staying in marginal platform is individually rational if peers are there), switching costs (learning UI, migrating data, rebuilding contacts), app ecosystem gaps, and incumbent advantage. Suppression is partly technical (inherent to network effects) and partly artificial (platform design choices to inflate lock-in). Theater ratio (0.48): Moderate. Initial theater is low because the chasm is a real structural problem\u2014bootstrapping networks genuinely requires coordination. But theater increases as: (1) subsidies become performative after organic adoption begins, (2) regulatory mandates persist past the point of necessity, (3) enforcement theater substitutes for network utility. The interval shows this progression.",
+    "perspectival_gap": "This constraint demonstrates classification divergence rooted in temporal position and structural role. The early adopter sees a coordination problem (Rope)\u2014bootstrapping a valuable network. The late joiner sees extraction with a coordination function (Tangled Rope)\u2014they are caught in the chasm between uselessness and critical mass. The marginal user sees pure extraction (Snare)\u2014they receive zero utility and cannot exit. The bootstrap coalition sees a temporary problem (Scaffold)\u2014subsidies and campaigns lower the threshold until organic adoption takes over. The regulatory apparatus sees institutional enforcement theater (Piton)\u2014mandates persist through inertia after the problem is solved. The analytical observer risks seeing natural law (Mountain)\u2014network effects and critical mass are immutable properties of network topology\u2014but the structural data reveals this as a false summit: threshold location is design-contingent. The perspectival gap is the fundamental question: Is the chasm a law of networks, or a contingent institutional choice about where to set the threshold and how to fund the gap?",
+    "directionality_logic": "Early Adopter/Network Operator: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. They capture network growth before threshold and have costless exit. Late Joiner: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.02. Significant extraction. They bear switching costs and chasm risk but also benefit once threshold is crossed (hence constrained, not trapped). Marginal User: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Below-threshold participants receive zero utility and cannot exit due to lock-in. Bootstrap Coalition: Organized + constrained \u2192 d\u22480.42, f(d)\u22480.41. Low effective extraction because coalition has agency and sees explicit sunset (self-sustaining adoption makes subsidies unnecessary). Regulatory Apparatus: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.11. Piton classification comes from theater_ratio gate, not from high chi. Analytical Observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Natural law framing; engine detects false summit via \u03b5 and suppression metrics.",
+    "mandatrophy_analysis": "RESOLUTION PATH: This constraint resolves mandatrophy by recognizing that the 'threshold' is not a natural law but a design parameter. The analytical observer's Mountain is a false summit. The true structure is Tangled Rope at the system level: the network provides genuine coordination value (beneficiary: early adopters get a working platform; victims: late joiners bear accumulation costs), asymmetric extraction (switching costs are inflated by design, not necessity), and active enforcement (subsidies and mandates coerce participation). The Scaffold perspective is empirically testable: if subsidies are withdrawn and adoption remains stable, the constraint has self-resolved (true scaffold). If adoption collapses, the constraint was never self-sustaining and remains Snare (pure extraction). The Piton perspective reveals that enforcement theater persists after the problem is solved\u2014indicating institutional capture by the regulatory apparatus. The key mandatrophy insight: asking 'Is the chasm natural or designed?' disambiguates constraint from law. Network effects are immutable; the critical mass percentage is not."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effects_rent_extraction",
+      "platform_ecosystem_lock_in",
+      "user_acquisition_subsidy_decay"
+    ],
+    "dual_formulation_note": "The Critical Mass Chasm decomposes into two structural constraints: (1) the mathematical threshold property of network effects (quasi-mountain, \u03b5\u22480.08, universal), and (2) the institutional extraction of switching costs via lock-in design (tangled_rope, \u03b5\u22480.52, national/global scope). These are linked via design-contingency: moving the threshold via interoperability standards, data portability, or UI improvements reduces extraction in (2) without changing the mathematical property in (1). Separate stories for network_effects_threshold (mountain) and platform_lock_in_extraction (tangled_rope) are recommended for future corpus expansion."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

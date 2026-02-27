@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "logistic_map_dynamics",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "logmap"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The Logistic Map (Bifurcation and Chaos)",
+    "topic_domain": "mathematical/biological",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Universal Mathematical Observer",
+      "comment": "PERSPECTIVE 1: UNIVERSAL MATHEMATICAL OBSERVER (MOUNTAIN) \u2014 From first principles, the logistic map's dynamics are determined entirely by the recurrence relation x_{n+1} = r * x_n * (1 - x_n). The transition from fixed points to periodic orbits to chaos as r increases is a structural inevitability of the nonlinear feedback loop. This is not contingent institutional arrangement \u2014 it is mathematical fact, true in all universes where quadratic polynomials behave as they do."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Applied Modeler",
+      "comment": "PERSPECTIVE 2: APPLIED MODELER (MOUNTAIN) \u2014 Whether modeling population dynamics, economic fluctuations, or neural firing patterns, the constraints imposed by the logistic map's bifurcation structure are immutable within the class of models using this functional form. The modeler cannot escape the onset of chaos by choosing different parameters; the chaotic regime exists as an inexorable feature. Even mobile agents with alternative modeling frameworks encounter equivalent constraints in other nonlinear systems."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Empirical Biologist",
+      "comment": "PERSPECTIVE 3: EMPIRICAL BIOLOGIST (MOUNTAIN) \u2014 A population biologist studying a species whose growth follows logistic dynamics confronts the bifurcation structure as an immutable constraint on population stability. The window of r values that produce stable equilibria or periodic cycles is fixed by the mathematics. There is no institutional workaround, no negotiation with nature. The constraint appears as an irreducible property of how populations behave under density-dependent regulation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Population Instance",
+      "comment": "PERSPECTIVE 4: THE POPULATION INSTANCE (MOUNTAIN) \u2014 From the perspective of an actual biological population subject to logistic growth with bifurcating parameter, the dynamics are inscrutable and inescapable. The population evolves according to the constraint with zero degrees of freedom. Whether the species experiences stable equilibrium or chaotic boom-bust cycles depends entirely on growth-rate parameters determined by ecology, not by the population's choices or preferences."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "universal_applicability_limit",
+      "question": "Is the logistic map a true universal law of nonlinear systems, or a stylized approximation whose predictive validity varies with domain?",
+      "resolution_mechanism": "Empirical: compare bifurcation predictions of logistic map against actual data in biological populations, economic time series, and physical systems. Does the predicted onset of chaos occur at r\u22483.57 in real systems?",
+      "impact": "If universal: mountain classification confirmed \u2014 the constraint is a fundamental feature of nonlinearity. If domain-dependent: the constraint becomes a rope or scaffold \u2014 a useful coordination framework that breaks down outside its domain of applicability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether logistic bifurcation structure appears universally across domains or is model-specific"
+    },
+    {
+      "id": "measurement_discretization_invariance",
+      "question": "Does the bifurcation and chaos structure depend on the discretization (continuous vs discrete time) or is it a fundamental property of the underlying dynamics?",
+      "resolution_mechanism": "Mathematical: compare continuous-time analog (logistic differential equation dx/dt = rx(1-x)) against discrete-time logistic map. Empirical: measure whether real biological populations exhibit discrete or continuous population updates, and whether observed dynamics match the discrete logistic map or require continuous formulation.",
+      "impact": "If invariant to discretization: mountain classification strengthened \u2014 the constraint is robust across formulations. If dependent: the discrete logistic map is a convenient model (rope) but the underlying constraint is the continuous dynamics (mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bifurcation structure is invariant to continuous/discrete formulation choice"
+    },
+    {
+      "id": "chaos_observability_in_finite_systems",
+      "question": "In finite populations (say, N < 1000 individuals), is the chaotic regime of the logistic map empirically observable, or do stochastic effects overwhelm the deterministic chaos?",
+      "resolution_mechanism": "Empirical: measure actual population time series in laboratory-controlled species (Drosophila, yeast, algae) across the bifurcation range. Compare observed trajectory variance against deterministic logistic map predictions. Identify the critical population size below which chaos becomes indistinguishable from noise.",
+      "impact": "If chaos observable in realistic population sizes: mountain classification holds for biological applications. If stochasticity dominates: the logistic map is a mountain in the mathematical limit, but becomes a rope (useful coordination framework) or scaffold (useful model with practical sunset) in biological domains with finite populations.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether chaotic bifurcations are observable in finite biological populations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The logistic map x_{n+1} = r * x_n * (1 - x_n) is a canonical exemplar of a mathematical mountain constraint. It demonstrates how low-dimensional nonlinear dynamics necessarily generate bifurcation cascades leading to chaos as a control parameter (r) increases. The constraint is invariant across domains: whether applied to rabbit populations, bacterial growth, laser dynamics, or economic models, the same bifurcation structure and route to chaos emerges. The constraint imposes zero degrees of freedom on observers \u2014 it cannot be negotiated, modified, or circumvented through institutional arrangement. The extractiveness is minimal (0.12) because there is no asymmetric extraction: all observers, regardless of power or position, confront the identical mathematical truth. The suppression is minimal (0.03) because no alternative exists to suppress \u2014 the bifurcation structure is the only possible behavior of this system. The theater ratio is minimal (0.15) because the constraint is purely functional: all activity dedicated to understanding, predicting, or applying the logistic map contributes directly to epistemic yield with negligible performative overhead.",
+    "key_agents": [
+      "Mathematical System: The logistic map itself \u2014 the constraint, not an agent, but the object constraining all agents",
+      "Analytical Observer: Mathematician or theoretical physicist studying the map's properties in the abstract",
+      "Applied Modeler: Biologist, economist, or engineer using the logistic map to model a real system",
+      "Empirical System: The actual biological population, economic variable, or physical system being modeled",
+      "Universal Reason: Civilizational perspective \u2014 commitment to following logical necessity wherever it leads"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The logistic map imposes no extraction in the sense of asymmetric benefit. All observers gain the same epistemic value from understanding the bifurcation structure \u2014 the mathematical truth is universally accessible. There is no distribution of benefit (beneficiaries) vs cost (victims) because the constraint is purely structural. The 0.12 value reflects minimal overhead in computation, representation, and empirical application. Suppression (0.03): Minimal. There are no suppressed alternatives \u2014 the logistic map's behavior is uniquely determined by the recurrence relation. No agent benefits from ignorance of the bifurcation structure. No coercion is required to enforce the constraint because it operates through logical necessity, not through institutional power. Theater ratio (0.15): Minimal. All activity related to the logistic map (mathematical analysis, numerical simulation, empirical testing) contributes directly to functional understanding. There is negligible performative content \u2014 no ritual, no signaling, no coordination theater. The small nonzero value reflects necessary overhead in representation and communication, not any degradation of function.",
+    "perspectival_gap": "Unlike the verification bottleneck exemplar, this constraint produces MINIMAL perspectival gap. All observers, from the analytical mathematician to the powerless population instance, confront the identical structural constraint. The mathematical modeler and the biologist agree on the bifurcation structure and onset of chaos. The population cannot negotiate or circumvent the dynamics. The mountain classification is invariant across all (P,T,E,S) tuples because the constraint is purely mathematical \u2014 independent of power level, time horizon, exit options, or spatial scope. This invariance is the hallmark of a true mountain: no matter how you observe it, the classification does not change. The minimal perspectival gap confirms the mountain classification and eliminates mandatrophy risk.",
+    "directionality_logic": "The logistic map has no beneficiaries or victims in the structural sense. All agents are neutral observers of a mathematical truth. The directionality parameter d is undefined or canonical (neutral) across all perspectives because there is no extraction flow. The constraint does not favor any agent or group \u2014 it constrains all equally. This absence of differential benefit is diagnostic for mountain classification. If the logistic map were contingent (e.g., a useful but replaceable model, a coordination mechanism that could be negotiated away), we would expect to see beneficiaries (those who benefit from the model's simplicity or predictive power) and victims (those trapped by the model's limitations). But the mathematical structure is inevitable, not negotiable."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "lorenz_attractor_chaos",
+      "period_doubling_universality"
+    ],
+    "dual_formulation_note": "The logistic map is upstream of more complex chaotic systems (Lorenz attractor, H\u00e9non map). The bifurcation structure and route to chaos visible in the logistic map appear universally in nonlinear dynamical systems. The network links this constraint to the period-doubling route to chaos and to universality classes in chaos theory."
+  },
+  "directionality_overrides": []
+}

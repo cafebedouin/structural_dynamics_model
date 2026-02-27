@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "gig_economy_algorithmic_managment",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Algorithmic Management in the Gig Economy",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_companies",
+      "consumers"
+    ],
+    "victims": [
+      "gig_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Gig Worker Perspective",
+      "comment": "Gig workers experience algorithmic management as a Snare. They are often trapped due to limited alternative employment options, and the algorithms extract labor surplus with little transparency or recourse. The local scope reflects that the impact is directly felt in their daily work and earnings."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Company Perspective",
+      "comment": "Platform companies view algorithmic management as a Rope, facilitating efficient task allocation, pricing, and performance evaluation across a vast network of workers and consumers. They have arbitrage options (market expansion, tech innovation) and experience the system as coordination. The global scope reflects their operational scale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulator Perspective",
+      "comment": "Regulators experience algorithmic management as a Tangled Rope. They are constrained by technological complexity and lobbying efforts but also benefit from the platform's contribution to the economy and the efficiencies it creates. They attempt to balance innovation with worker protection and fair labor practices."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer Perspective",
+      "comment": "From an analytical perspective, algorithmic management in the gig economy represents a Tangled Rope. It combines elements of coordination (efficient task allocation) with asymmetric extraction (labor surplus capture, precarity), enforced by opaque algorithmic systems. The global scope reflects the widespread adoption of this model."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_opacity",
+      "question": "To what extent are the algorithms' decision-making processes transparent and accountable?",
+      "resolution_mechanism": "Independent audits of algorithms, explainable AI research, regulatory standards for transparency.",
+      "impact": "Higher transparency may shift the classification towards Tangled Rope, as workers gain agency and understanding. Lower transparency reinforces the Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The level of algorithmic transparency and accountability."
+    },
+    {
+      "id": "worker_bargaining_power",
+      "question": "How much bargaining power do gig workers possess, individually or collectively?",
+      "resolution_mechanism": "Analysis of unionization efforts, policy interventions (e.g., minimum wage laws), and platform responses to worker demands.",
+      "impact": "Increased bargaining power could shift the classification towards Tangled Rope, as workers gain more favorable terms and exit options. Limited bargaining power reinforces the Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree of worker bargaining power in the gig economy."
+    },
+    {
+      "id": "regulatory_effectiveness",
+      "question": "How effective are regulatory interventions in mitigating the negative effects of algorithmic management?",
+      "resolution_mechanism": "Evaluation of policy outcomes (e.g., wage increases, improved working conditions), analysis of enforcement mechanisms, and stakeholder feedback.",
+      "impact": "Effective regulation may shift the classification towards Tangled Rope, as the extraction is curtailed. Ineffective regulation reinforces the Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The effectiveness of regulatory interventions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The \"Gig Economy\" labor market is governed by algorithmic management, where platforms use opaque, data-driven systems to assign tasks, set prices, and evaluate performance. This model creates a power imbalance between platform companies and gig workers, raising concerns about exploitation, precarity, and lack of worker agency. While algorithms enable efficient task allocation and cost reduction, they also create new forms of extraction and control. Regulation and collective action are potential countervailing forces.",
+    "key_agents": [
+      "Platform Companies: Primary beneficiary (institutional/arbitrage) \u2013 benefit from efficient task allocation, reduced labor costs, and scalable operations.",
+      "Gig Workers: Primary victim (powerless/trapped) \u2013 bear the costs of precarious work, income instability, and algorithmic control.",
+      "Consumers: Secondary beneficiary (moderate/mobile) \u2013 benefit from lower prices and increased convenience.",
+      "Regulators: Constrained actor (moderate/constrained) - Seek to balance innovation and worker protection."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Algorithmic management enables platforms to extract a significant portion of the labor surplus from gig workers, often with little transparency or recourse. Suppression (0.70): High. Workers have limited alternative employment options and face significant barriers to collective action or challenging algorithmic decisions. Theater ratio (0.30): Low. The system's functionality outweighs performative aspects, as it's directly tied to task assignment, pricing, and performance evaluation.",
+    "perspectival_gap": "The perspectival gap arises from the power imbalance between platforms and workers. Platforms experience the system as coordination, while workers experience it as extraction. Regulators attempt to bridge this gap, but their effectiveness is limited by technological complexity and political constraints. The analytical observer recognizes the inherent tension between coordination and extraction in this model.",
+    "directionality_logic": "Platform companies benefit from algorithmic management through cost reduction and increased efficiency (low d). Gig workers bear the cost of precarious work and algorithmic control (high d). Regulators aim to mitigate the negative effects of algorithmic management (moderate d). The analytical observer seeks to understand the overall impact of this model (variable d depending on analytical focus).",
+    "mandatrophy_analysis": "The classification as a Snare resolves the mandatrophy by highlighting the extractive aspects of algorithmic management in the gig economy. While algorithms may enable coordination, they also create new forms of exploitation and control. The Snare classification emphasizes the need for regulatory oversight and worker empowerment to mitigate these risks. Alternative classifications, such as Rope or Scaffold, may overlook the power imbalance and extractive dynamics inherent in this model."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "online_labor_market_dynamics",
+      "data_privacy_gig_economy"
+    ]
+  },
+  "directionality_overrides": []
+}

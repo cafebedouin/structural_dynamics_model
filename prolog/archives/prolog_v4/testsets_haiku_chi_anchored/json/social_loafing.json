@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "social_loafing",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "loaf"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Social Loafing (The Ringelmann Effect)",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "free_riders",
+      "effort_minimizers"
+    ],
+    "victims": [
+      "collective_task_efficiency",
+      "conscientious_contributors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Conscientious Contributor",
+      "comment": "PERSPECTIVE 1: CONSCIENTIOUS CONTRIBUTOR (SNARE) \u2014 Individual contributor is trapped in the collective task; bears disproportionate share of work as others reduce effort. Cannot exit without abandoning commitment or facing social friction. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.51."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Conditional Free Rider",
+      "comment": "PERSPECTIVE 2: CONDITIONAL FREE RIDER (TANGLED ROPE) \u2014 Constrained by social norms and peer monitoring; benefits from collective task's coordination function (shared goal achievement) while extracting through reduced effort when diffusion of responsibility increases. d\u22480.70, f(d)\u22481.05, \u03c3=0.8 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Task Designer / Manager",
+      "comment": "PERSPECTIVE 3: TASK DESIGNER / MANAGER (ROPE) \u2014 Institutional actor (organized power, arbitrage exit) who designs collective tasks to solve coordination problems and achieve outcomes. Experiences loafing as a calibration challenge rather than extraction \u2014 can modulate group size, incentive structure, identifiability, and task design. d\u22480.25, f(d)\u22480.10, \u03c3=0.9 \u2192 \u03c7\u22480.00. Net-neutral; coordination function dominates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational distance, social loafing reflects genuine tension between (a) coordination benefit of collective action and (b) individual incentive to minimize effort when contribution cannot be individually tracked. Both functions are structural. The constraint persists because task designers must balance group efficiency against contribution fairness. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.52. Effective extraction arises from the coordination function itself \u2014 effort reduction is the mechanism through which the coordination problem manifests."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Technology-Enabled Measurer",
+      "comment": "PERSPECTIVE 5: TECHNOLOGY-ENABLED MEASURER (SCAFFOLD) \u2014 Digital systems, real-time contribution tracking, gamification, and transparent leaderboards represent a sunset clause for anonymous loafing. As individual contribution becomes measurable and attributable, the free-rider advantage declines. Organizations implementing these systems see social loafing as a temporary coordination problem with an engineering solution path. d\u22480.30, f(d)\u22480.20, \u03c3=1.1 \u2192 \u03c7\u22480.08. Low effective extraction because the scaffold provides exit: measurability reduces loafing by eliminating the diffusion-of-responsibility mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Performative Team Ritual",
+      "comment": "PERSPECTIVE 6: PERFORMATIVE TEAM RITUAL (PITON) \u2014 In many organizational settings, 'team building' and collective work have become primarily theatrical: the stated coordination benefit (collective output) is subordinated to performative benefits (social cohesion markers, managerial visibility, diversity metrics). Actual task efficiency is degraded; the collective persists through inertia and institutional mandate. theater_ratio\u22480.60, suggesting theater has not yet fully displaced function but is rising. This perspective sees the collective itself as degraded."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "diffusion_of_responsibility_threshold",
+      "question": "At what group size does diffusion of responsibility become the dominant mechanism suppressing individual effort?",
+      "resolution_mechanism": "Experimental variation of group size (2-person, 5-person, 15-person, 50-person tasks) with identical task structure; measurement of effort as function of group size and attribution clarity",
+      "impact": "If threshold is small (5-7 people): social loafing is a low-coordination problem, easily mitigated by small teams. If threshold is large (30+ people): loafing is intrinsic to mass coordination, suggesting fundamental constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Group size threshold for diffusion of responsibility dominance"
+    },
+    {
+      "id": "intrinsic_vs_instrumental_motivation",
+      "question": "Is reduced effort in collective tasks primarily a rational free-rider response (instrumental) or a psychologically deeper suppression of intrinsic motivation (non-instrumental)?",
+      "resolution_mechanism": "Manipulation of extrinsic incentives (payment, public feedback) vs intrinsic appeal (task autonomy, meaning, competence); measurement of effort reduction in presence of extrinsic vs intrinsic motivation",
+      "impact": "If instrumental dominates: loafing is a snare (extraction mechanism is explicit incentive misalignment). If psychological dominates: loafing may be a mountain (inherent to collective motivation structures), or a different snare (extraction via demotivation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether effort reduction is rational response or deeper motivation suppression"
+    },
+    {
+      "id": "identifiability_as_structural_exit",
+      "question": "Does perfect identifiability (individual contribution tracking) eliminate social loafing entirely, or does it create new extraction mechanisms (status anxiety, competitive hierarchy)?",
+      "resolution_mechanism": "Comparison of effort in opaque-collective vs transparent-attribution settings; measurement of both loafing reduction AND emergence of new coordination problems (excessive competitive effort, perfectionism, burnout)",
+      "impact": "If identifiability eliminates loafing: scaffold perspective is correct \u2014 the constraint has a technical sunset. If identifiability creates new problems: loafing is not eliminated but redistributed, suggesting a deeper structural constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether individual contribution tracking fully resolves social loafing"
+    },
+    {
+      "id": "cultural_variability_of_loafing",
+      "question": "Does social loafing emerge uniformly across cultures, or does it vary significantly with cultural emphasis on individualism vs collectivism?",
+      "resolution_mechanism": "Cross-cultural experimental replication (Ringelmann-type rope tasks) in individualistic vs collectivistic cultures; measurement of effort reduction magnitude and attribution",
+      "impact": "If culturally universal: loafing is a constraint on human coordination structures. If culturally variable: loafing is a contingent product of individualistic cultural frames, suggesting different constraint decomposition across cultures.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cultural variation in social loafing magnitude and mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Social loafing (Ringelmann effect) emerges when individuals reduce their effort in collective tasks relative to individual effort on the same task. This structural phenomenon combines genuine coordination function (collective tasks solve problems individuals cannot solve alone) with a systematic extraction mechanism (diffusion of responsibility enables effort reduction). The constraint exhibits different classifications across observer positions: free riders experience it as an opportunity (rope or neutral arbitrage), conscientious contributors experience it as a snare (trapped, bearing disproportionate burden), task designers experience it as a calibration challenge (rope, solvable through incentive design), and the analytical observer sees it as a fundamental tension between individual incentives and collective needs (tangled rope). The constraint's extractiveness has been rising over the past 50 years as organizations have scaled up collective work while leaving diffusion-of-responsibility mechanisms intact. Theater ratio has also increased as performative team-building rituals have partially displaced actual task coordination, suggesting the constraint is acquiring piton-like characteristics in some institutional contexts. The emergence of digital attribution technologies (real-time contribution tracking, gamification, leaderboards) represents a potential sunset clause: as individual contribution becomes measurable, the free-rider advantage and diffusion-of-responsibility mechanism both decline, transitioning the constraint toward scaffold classification.",
+    "key_agents": [
+      "Conscientious Contributors: Primary victims (powerless/trapped) \u2014 bear disproportionate share of work as collective effort declines; cannot exit without abandoning task or facing social friction",
+      "Free Riders / Effort Minimizers: Primary beneficiaries (moderate/constrained) \u2014 extract effort reduction through anonymity and diffusion of responsibility; constrained by peer monitoring and norms",
+      "Task Designers / Managers: Institutional actors (organized/arbitrage) \u2014 can modulate loafing through group size, incentive structure, identifiability, and task design; experience constraint as calibration problem",
+      "Conscientious-Conditional Hybrids: Secondary agents (moderate/constrained) \u2014 reduce effort when diffusion of responsibility increases but maintain effort under identifiability; show conditional participation",
+      "Digital Attribution Systems: Emerging institutional actors (institutional/arbitrage) \u2014 enable individual contribution tracking; represent technological scaffold pathway",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees fundamental tension between coordination benefit and individual incentive structures"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Social loafing involves real effort reduction that generates asymmetric outcomes (free riders save effort while conscientious contributors bear burden), but the magnitude is typically 20-30% in experimental settings, not total. The extraction is contingent on group size and anonymity; it disappears under identifiability or small-group contexts. Suppression (0.48): Moderate. Mechanisms suppressing exit include social norms against free-riding, peer monitoring (though imperfect), role expectations, and the coordinating function of the task itself \u2014 one cannot fully exit without abandoning the collective benefit. Theater ratio (0.55): Moderate-rising. In traditional team settings, performative elements (trust-building, morale rituals) are present but secondary to actual task work. However, in organizational contexts with high performativity (diversity initiatives, team-building exercises), theater has increased to 0.60+. The historical trajectory (0.35 \u2192 0.55 over 50 years) reflects increasing professionalization and scaling of group work while relying on persistently opaque attribution.",
+    "perspectival_gap": "Free riders see loafing as a rational extraction mechanism (rope-like from their perspective: participate in the coordination benefit while minimizing effort cost). Conscientious contributors see a snare (trapped in a system where their effort subsidizes others). Task designers see a design problem solvable through incentive restructuring (rope, with coordination function maintained). The analytical observer sees tangled rope (genuine coordination function coupled with genuine extraction mechanism via diffusion of responsibility). Technology designers see a scaffold (measurable attribution will solve the problem). Organizational performers see piton (the team ritual persists through inertia, with actual task efficiency degraded). The perspectival gap arises because the same structural feature \u2014 anonymity and diffusion of responsibility \u2014 is experienced as opportunity by free riders and as victimization by conscientious contributors. Task designers can compress this gap by increasing identifiability, but this creates different extraction mechanisms (status anxiety, competitive hierarchy). No single perspective fully captures the constraint.",
+    "directionality_logic": "Conscientious contributors: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. High directionality; bears costs with no exit. Free riders: Beneficiaries + constrained \u2192 d\u22480.45, f(d)\u22480.45. Moderate directionality; benefit from anonymity but constrained by norms. Task designers: Institutional + arbitrage \u2192 d\u22480.25, f(d)\u22480.10. Low directionality; can exit through redesign. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. Medium-high directionality; sees both sides of the extraction. The derived d values cluster around the moderate range because loafing is not a totalizing extraction (like debt traps or surveillance) but rather a moderate efficiency loss with contingent beneficiaries and semi-trapped victims. Conscientious contributors occupy the trapped end; free riders occupy the constrained end (benefiting but with social limits); designers occupy the arbitrage end (can change the game).",
+    "mandatrophy_analysis": "Social loafing resolves the mandatrophy by showing that the constraint is genuinely hybrid: it performs a coordination function (collective work solves problems individuals cannot solve) AND it extracts effort from conscientious contributors through diffusion of responsibility. Both properties are structural and cannot be eliminated without changing the collective work structure itself. The constraint is not 'really' a snare being mislabeled as rope (coordination is genuinely present), nor is it 'really' rope being mislabeled as snare (extraction via diffusion of responsibility is genuinely present). The mandatrophy resolves when the observer acknowledges that the same structural feature (anonymity in large groups) enables both: collective action becomes possible precisely because individuals are not individually accountable (reduces stigma, enables participation), AND this same anonymity enables free-riding (reduces incentive). The constraint cannot be classified as a pure type without losing precision. Tangled rope classification at the analytical level captures this: the coordination function is non-trivial (organizations clearly benefit from collective work over individual work for most tasks), the extraction is non-trivial (conscientious contributors clearly lose to free riders), and both arise from the same diffusion-of-responsibility mechanism. Technology (digital attribution) offers a potential pathway to scaffold classification by making the coordination function compatible with individual accountability, though this risks creating new extraction mechanisms (status hierarchies). The mandate resolves: social loafing is structurally tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "collective_action_problem",
+      "group_accountability"
+    ],
+    "dual_formulation_note": "Social loafing is upstream of broader collective action failures (public goods problems, tragedy of the commons) in organizational and community contexts. The constraint represents a specific mechanism (diffusion of responsibility) through which collective action problems manifest. Downstream constraints inherit the structural ambiguity between coordination function and extraction mechanism."
+  },
+  "directionality_overrides": []
+}

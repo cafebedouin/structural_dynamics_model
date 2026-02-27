@@ -2,22 +2,26 @@
   "header": {
     "constraint_id": "bushman_money_magic",
     "version": "1.0",
-    "generated_date": "2023-10-27",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bmm"
   },
   "base_properties": {
-    "extractiveness": 0.85,
-    "suppression": 0.75,
-    "theater_ratio": 0.9,
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.85,
     "claimed_type": "snare",
     "human_readable": "The Trickster's Asymmetric Scam",
     "topic_domain": "economic/social",
-    "requires_active_enforcement": true,
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
     "beneficiaries": [
-      "trickster_figure"
+      "jackal_trickster"
     ],
     "victims": [
-      "deceived_ranchers"
+      "cattle_ranchers",
+      "community_trust_commons"
     ],
     "mandatrophy_resolved": true
   },
@@ -25,107 +29,147 @@
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Deceived Rancher",
-      "comment": "PERSPECTIVE 1: THE VICTIM (SNARE) — Psychologically trapped by a narrative of greed and magic, the rancher has no exit. They experience the interaction as pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.97."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "local",
-      "label": "The Trickster Figure",
-      "comment": "PERSPECTIVE 2: THE TRICKSTER (ROPE) — The perpetrator experiences the scam as a well-coordinated plan. They hold all informational power and can exit at any time. The 'coordination' is with their own deception. d≈0.15, f(d)≈-0.01, σ=0.8 → χ≈-0.01. The negative effective extraction signifies a pure beneficiary."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The Skeptical Community Observer",
-      "comment": "PERSPECTIVE 3: THE OBSERVER (PITON) — A community member who is not a target sees the 'magic' for what it is: pure theater. The constraint's function is entirely performative, maintained by the trickster's narrative. The high theater_ratio (0.90) triggers the Piton classification, as the observer sees a ritual with no real function."
+      "label": "The Defrauded Rancher",
+      "comment": "PERSPECTIVE 1: DEFRAUDED RANCHER (SNARE) \u2014 The victim has committed capital and trust to the scam narrative. Exit options are severely constrained: admitting deception requires public shame, loss of reputation, and capital loss simultaneously. Social/emotional attachment to the promised outcome (magical wealth) creates psychological lock-in. Maximum extraction experienced \u2014 the rancher bears full cost of lost capital plus reputational damage, with no organizational capacity to resist or recover."
     },
     {
       "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Community Trust Commons",
+      "comment": "PERSPECTIVE 2: COMMUNITY TRUST COMMONS (SNARE) \u2014 The broader community's epistemic infrastructure is contaminated by the scam. Future legitimate social coordination (collective herding, trade, mutual aid) becomes harder because baseline trust is damaged. This abstract collective has no exit option and cannot organize self-defense. Extraction runs against the generational interest \u2014 the constraint depletes social capital that future members depend on."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Trickster (Jackal)",
+      "comment": "PERSPECTIVE 3: TRICKSTER/JACKAL (ROPE) \u2014 The extractor experiences this as a pure coordination problem solved through narrative control. The scam works because the trickster is skilled at synchronizing the victims' beliefs and suspending their skepticism. From the trickster's perspective, the constraint is a coordination mechanism: 'How do I get these ranchers to all believe in magic money simultaneously?' The trickster has full exit capacity (departs after extraction) and experiences no suppression \u2014 they are the designer of the deception, not its prisoner. Effective extraction (chi) is very high because the trickster faces minimal resistance, but the classification is Rope because the trickster sees the mechanism as pure coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Community Skeptics (Partial Awareness)",
+      "comment": "PERSPECTIVE 4: COMMUNITY SKEPTICS (TANGLED ROPE) \u2014 Some community members suspect the scam but lack sufficient evidence or social position to openly challenge it. They face a mixed constraint: the scam mechanism coordinates collective belief (Rope function) but also extracts from doubters who are suppressed via social pressure ('Don't spoil the magic for those who believe'). These agents experience both coordination and extraction \u2014 constrained exit because rejecting the narrative invites social sanctions, but also some benefit from community participation. Moderate power because skeptics can organize quietly but cannot override the trickster's narrative control."
+    },
+    {
+      "classification_type": "piton",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: THE ANALYST (SNARE) — The analytical view cuts through all narrative and theater to see the raw structure: a high-extraction, high-suppression mechanism with no coordination function. This matches the system's claimed_type."
-    }
-  ],
-  "interval": {
-    "start": 0,
-    "end": 2
-  },
-  "omegas": [
-    {
-      "id": "victim_culpability",
-      "question": "Is the victim's participation driven by pure deception, or by a form of willful ignorance fueled by greed?",
-      "resolution_mechanism": "Psychological profiling of victims; analysis of prior warnings or community skepticism they ignored.",
-      "impact": "If pure deception, the Snare is absolute. If willful ignorance, the victim has more agency than the 'trapped' exit implies, potentially shifting the classification for their perspective toward Tangled Rope (as they are coordinating with their own downfall).",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Degree of victim agency vs. pure deception"
+      "label": "Anthropological Observer (Performative Magic Ritual)",
+      "comment": "PERSPECTIVE 5: ANTHROPOLOGICAL OBSERVER (PITON) \u2014 From a civilizational view, the scam appears to ritualize a degraded form of shamanic authority. Historical shamanism solved genuine coordination problems (ritual, healing uncertainty, group cohesion). The trickster's scam mimics shamanic theater (mystery, authority, narrative control) but has lost the shamanic function \u2014 it is pure theatrical performance with no real benefit to the community. The mechanism persists through inertia: the ranchers' cultural template for 'magical authority figures' remains intact even as the function (actual coordinated action) has atrophied. High theater ratio (0.85) reflects that the scam is almost entirely performative \u2014 the 'magic money' ritual has no material function, only narrative function."
     },
     {
-      "id": "social_enforcement",
-      "question": "To what extent does the surrounding community's silence or tacit encouragement enable the trickster's scam?",
-      "resolution_mechanism": "Ethnographic study of community responses to known trickster figures and scams.",
-      "impact": "If the community is a passive enabler, the suppression metric is accurate. If the community actively ostracizes those who question the trickster, the suppression is even higher and is socially distributed, not just perpetrator-driven.",
-      "confidence": "low",
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Game Theorist (Asymmetric Information as Natural Law)",
+      "comment": "PERSPECTIVE 6: GAME THEORIST / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal game-theoretic perspective, some degree of informational asymmetry and deception potential is inherent to any economic exchange. The trickster merely exploits an intrinsic structural feature: the victim cannot simultaneously invest capital AND verify the claim before the trade completes. This temporal gap (commitment before verification) is unavoidable in real economies. From this view, the scam is not contingent on the trickster's skill but on the immutable structure of trust-requiring transactions. However, this perspective risks false-summing: the structural vulnerability is real, but whether it is exploited depends entirely on agent choices and community enforcement mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "belief_collapse_timeline",
+      "question": "What triggers the ranchers' collective recognition that the scam is false? Is it a single disconfirming event, gradual accumulation of failed promises, or external reputation signal?",
+      "resolution_mechanism": "Historical analysis of scam collapse patterns; interviews with victims about moment of belief abandonment; comparison with anthropological case studies of ritual failure",
+      "impact": "If triggered by external signal: constraint is fragile (Snare with low persistence). If gradual: constraint becomes entrenched (Snare with institutional depth). If single event: constraint is brittle and dependent on rare conditions.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Role of community silence in enabling the scam"
+      "description": "Timeline and mechanism for collapse of collective belief in the scam"
+    },
+    {
+      "id": "trickster_skill_versus_victim_credulity",
+      "question": "Is the scam's success primarily the result of the trickster's exceptional deceptive skill, or primarily the result of the victims' cultural predisposition to believe in magic and authority?",
+      "resolution_mechanism": "Comparative study: does the same trickster succeed equally with different cultural groups? Does the same cultural group fall for different tricksters at similar rates? Historical variation in scam success across communities.",
+      "impact": "If skill-dependent: constraint is contingent on specific agent (Snare with low generality). If culture-dependent: constraint is structural to belief systems (Snare with institutional depth). If both: constraint requires both enabling conditions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contributions of trickster skill and victim cultural predisposition"
+    },
+    {
+      "id": "recovery_and_restitution_feasibility",
+      "question": "Can the community recover the extracted wealth (cattle, capital) or rebuild trust after the scam is exposed? Are there institutional mechanisms for restitution?",
+      "resolution_mechanism": "Post-exposure analysis: did victims recover losses? Did community develop enforcement mechanisms against future tricksters? Did social trust recover within one generation?",
+      "impact": "If recovery impossible: constraint generates permanent damage (Snare with cyclical victims). If recovery feasible: constraint is reversible (Snare with recovery pathway). If community develops detection mechanisms: constraint evolves into Scaffold with sunset clause.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether victims can recover losses and community can rebuild institutional trust"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.9
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1,
-      "value": 0.9
+      "time_point": 3,
+      "value": 0.72
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2,
-      "value": 0.9
+      "time_point": 6,
+      "value": 0.85
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.85
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1,
-      "value": 0.85
+      "time_point": 3,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2,
-      "value": 0.85
+      "time_point": 6,
+      "value": 0.68
     }
   ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
   "commentary": {
-    "narrative_context": "This constraint models a classic asymmetric scam, often found in folklore, where a trickster figure uses a 'money magic' narrative to induce a victim to hand over their wealth (e.g., cattle), promising it will be magically multiplied. The trickster then absconds with the original stake. The core mechanism is the temporary creation of a narrative reality that suppresses the victim's rational assessment of risk and alternatives.",
+    "narrative_context": "The trickster's asymmetric scam is a structural extraction mechanism operating through narrative control and informational asymmetry. The Jackal (or similar trickster figure in oral traditions) exploits cattle ranchers' vulnerability to persuasion by promising 'money magic' \u2014 a ritual that will multiply wealth without labor. The scam succeeds because it operates in a context where (1) informational verification is costly and slow (ranchers cannot immediately test the magic), (2) social authority is difficult to challenge (the trickster presents as an expert/magician), (3) collective belief creates psychological lock-in (admitting the scam requires admitting public shame), and (4) the promise maps onto culturally embedded templates (belief in magical transformation of wealth). The constraint exhibits high extractiveness (0.68) because the mechanism successfully transfers capital from victims to beneficiary with minimal resistance, high suppression (0.72) because victims have no legitimate exit (admission of shame, loss of capital, social stigma) and cannot organize counter-narrative without collective agreement, and high theater ratio (0.85) because the scam is almost entirely performative \u2014 the 'magic money' ritual has zero material function, only psychological manipulation. Over the constraint's lifetime (6 time units), extractiveness accumulates as more victims participate and the trickster's confidence grows, while theater ratio increases as the performance becomes more elaborate to justify delayed results.",
     "key_agents": [
-      "Trickster Figure: Primary beneficiary (powerful/arbitrage) — controls the narrative and extracts all value.",
-      "Deceived Ranchers: Primary victim (powerless/trapped) — loses their wealth by buying into the false narrative.",
-      "Skeptical Community: Observers (moderate/mobile) — witness the performative aspect of the scam without being trapped by it.",
-      "Analytical Observer: Analyst (analytical/analytical) — deconstructs the scam into its structural components."
+      "Jackal/Trickster: Primary beneficiary (organized/arbitrage) \u2014 designs and executes the deception; captures extracted wealth; has full exit capacity and faces no suppression",
+      "Cattle Ranchers: Primary victims (powerless/trapped) \u2014 commit capital and trust; bear full cost of lost wealth plus reputational damage; cannot exit without shame",
+      "Community Trust Commons: Secondary victim (powerless/trapped) \u2014 abstract epistemic infrastructure contaminated by scam; future members inherit damaged baseline trust",
+      "Community Skeptics: Mixed experience (moderate/constrained) \u2014 suspect the scam but constrained by social pressure; experience both coordination pressure and extraction suppression",
+      "Anthropological Observer: Institutional perspective (analytical/analytical) \u2014 sees scam as degraded shamanic ritual; notes atrophied function (Piton classification)",
+      "Game Theorist: Analytical perspective (analytical/analytical) \u2014 risks naturalizing asymmetric information as immutable law; false-summing risk"
     ],
-    "logic_rationale": "Extractiveness (0.85) is very high, as the scam's sole purpose is the complete transfer of the victim's assets. Suppression (0.75) is high because the trickster's narrative is designed to eliminate alternatives and create a sense of magical inevitability, trapping the victim psychologically. Theater Ratio (0.90) is extremely high, as the entire 'magic' process is a performance designed to obscure the simple act of theft. The scam has no real function beyond its theatricality.",
-    "perspectival_gap": "The perspectival gap is extreme and illustrative. The victim experiences a coercive Snare, feeling trapped and losing everything. The trickster, in contrast, experiences a perfect Rope—a plan executed flawlessly with no extraction *from their perspective*. They are the pure beneficiary. An outside observer who isn't fooled sees a Piton: a hollow, performative ritual that accomplishes nothing tangible. The analytical view confirms the victim's experience, classifying the structure as a Snare.",
-    "directionality_logic": "The directionality is unambiguous. The 'trickster_figure' is the sole beneficiary and has arbitrage exit, deriving a very low 'd' value and seeing the constraint as a net subsidy (Rope). The 'deceived_ranchers' are the sole victims and are trapped, deriving a very high 'd' value and experiencing maximal extraction (Snare). This clean separation of roles is characteristic of pure extraction mechanisms.",
-    "mandatrophy_analysis": "This case presents no mandatrophy. The analytical classification is clearly a Snare. The trickster's self-serving 'Rope' perspective is a textbook example of a perspectival illusion that the Deferential Realism system is designed to capture and contextualize. It correctly identifies that the perpetrator does not experience their own scheme as extractive, while simultaneously affirming that the underlying structure is, in fact, purely extractive for the target. The system does not average these views but holds them in tension."
-  }
+    "logic_rationale": "Extractiveness (0.68): High. The trickster successfully transfers material wealth (cattle, goods, capital) from multiple victims with no compensating benefit flow. The mechanism is efficient: one performer extracts from many victims simultaneously through narrative control. The value reflects strong extraction but not maximum (0.85+) because the mechanism eventually collapses when belief fails \u2014 it is not self-sustaining indefinitely. Suppression (0.72): High. Victims face multiple suppression vectors: (1) informational (cannot verify the magic before committing capital), (2) social (admitting deception invites shame), (3) psychological (emotional investment in the promised outcome creates cognitive resistance to disconfirming evidence), (4) economic (admitting loss is admitting resource depletion). Exit options are minimal except through social shame. Theater ratio (0.85): Very high. The entire mechanism is performative. The 'magic money' ritual produces zero material goods; it is pure psychological manipulation. No legitimate function is being coordinated \u2014 unlike shamanic rituals that might coordinate group action or healing, the scam only coordinates false belief. The performance must become increasingly elaborate over time to maintain credibility as initial promised results fail to materialize.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence between extractor and victims. The Jackal (Rope perspective) sees pure coordination: 'How do I synchronize these ranchers' belief in magic money?' From the rancher's view (Snare), the 'coordination' is experienced as coercion \u2014 they are locked into a false belief system with no legitimate exit. The community skeptics occupy a middle position (Tangled Rope) \u2014 they feel both the coordination pressure (everyone is supposed to believe) and the extraction pressure (skepticism is socially punished). The anthropological observer notes that the scam mimics legitimate shamanic authority but has lost its function (Piton) \u2014 the theatrical performance persists even after the coordinating mechanism (actual shared ritual benefit) has atrophied. The game theorist risks false-summing by treating the asymmetric information vulnerability as an immutable natural law rather than a contingent institutional arrangement vulnerable to counter-narrative and verification mechanisms.",
+    "directionality_logic": "The Jackal's directionality (d \u2248 0.15) reflects organized power + arbitrage exit + beneficiary status: low extraction experienced because the trickster is not trapped in the system they designed; they can depart at will. The ranchers' directionality (d \u2248 0.92) reflects powerless agents + trapped exit + victim status: very high extraction experienced because they have committed capital, face reputational barriers to admitting deception, and cannot organize escape. The community trust commons has no exit at all (d \u2248 0.98): it is a pure victim of the constraint, bearing generational cost without agency or recovery options. Skeptics have moderate directionality (d \u2248 0.55): constrained exit + mixed victim/observer status. The anthropological observer has analytical directionality (d \u2248 0.72): external position but full awareness of the constraint's damage to institutional function. The game theorist's directionality (d \u2248 0.50) reflects that they occupy a neutral analytical position from which they risk naturalizing what is actually a contingent institutional vulnerability.",
+    "mandatrophy_analysis": "SCAM AS PURE SNARE: The high extractiveness (0.68) combined with high suppression (0.72) and the absence of genuine coordination function (zero material benefit to victims) resolves this as definitively Snare rather than Tangled Rope. While the constraint appears to 'coordinate' belief, coordination requires that all participants benefit from synchronized action. Here, the ranchers gain nothing from synchronized belief in false magic \u2014 their participation costs them capital and dignity. The coordination is one-directional (trickster coordinates victims' belief) not mutual (trickster and victims coordinating shared benefit). Theater ratio (0.85) confirms Snare classification: the mechanism is almost entirely performative extraction with no functional coordination substrate. The piton classification at the anthropological perspective correctly identifies that the scam degraded shamanic ritual (which did have coordinating function) into pure theatrical extraction. The mountain classification at the game-theorist level is FALSE SUMMIT: informational asymmetry is a real structural feature, but whether it is exploited depends on agent design choices (reputation mechanisms, verification protocols, community enforcement) \u2014 it is not an immutable law. The mandatrophy resolves by confirming Snare as the structural reality across all empirical perspectives; the mountain and piton are perspectival artifacts from higher abstraction levels."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "reputation_cascade_degradation",
+      "credulity_learning_lag"
+    ],
+    "dual_formulation_note": "The trickster scam is a downstream manifestation of informational asymmetry and community trust vulnerability. Upstream constraints (reputation systems, verification infrastructure) determine whether this scam even becomes possible. If those upstream constraints are degraded (reputation_cascade_degradation), the scam extractiveness increases. The constraint family includes the scam mechanism itself, the community trust commons it damages, and the recovery/restitution systems that could rebuild institutional resilience."
+  },
+  "directionality_overrides": []
 }

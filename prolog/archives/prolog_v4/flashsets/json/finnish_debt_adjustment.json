@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "finnish_debt_adjustment",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Finnish Private Debt Adjustment System",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creditors",
+      "debtors_compliant"
+    ],
+    "victims": [
+      "debtors_noncompliant",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Non-compliant Debtor",
+      "comment": "PERSPECTIVE 1: Non-compliant Debtor (SNARE) - Debtors who fail to meet the strict requirements of the program face continued extraction without the possibility of debt relief. They are trapped by the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Compliant Debtor",
+      "comment": "PERSPECTIVE 2: Compliant Debtor (TANGLED ROPE) - Debtors who successfully navigate the debt adjustment process benefit from debt relief but are constrained by the program's requirements and oversight. They experience both coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Creditors",
+      "comment": "PERSPECTIVE 3: Creditors (ROPE) - Creditors benefit from the debt adjustment system by receiving a portion of the debt owed to them, even if it's less than the full amount. The system provides a structured mechanism for recovering some of their losses, reducing uncertainty and potentially avoiding costly legal battles. They can arbitrage the system by factoring potential losses into interest rates."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Taxpayers",
+      "comment": "PERSPECTIVE 4: Taxpayers (SNARE) - Taxpayers bear the costs of administering the debt adjustment program. While the program aims to reduce social costs associated with over-indebtedness, the administrative burden and potential for moral hazard create a situation where resources are extracted from taxpayers. They are constrained, as they cannot easily avoid funding the program."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 5: Analytical Observer (TANGLED ROPE) - From a global, civilizational perspective, the Finnish debt adjustment system can be seen as a complex mechanism balancing the needs of debtors and creditors. It aims to provide a sustainable solution to over-indebtedness, preventing long-term social and economic consequences. However, the system also involves trade-offs, such as potential moral hazard and administrative costs, requiring careful evaluation and adjustment."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "moral_hazard_extent",
+      "question": "To what extent does the debt adjustment program create a moral hazard, encouraging irresponsible borrowing?",
+      "resolution_mechanism": "Empirical studies analyzing borrowing behavior before and after the introduction of the program, controlling for other factors.",
+      "impact": "If significant moral hazard: Program should be modified to reduce incentives for excessive borrowing. If minimal moral hazard: Current program design is appropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the moral hazard created by debt adjustment."
+    },
+    {
+      "id": "program_effectiveness",
+      "question": "How effective is the debt adjustment program in reducing long-term social and economic costs associated with over-indebtedness?",
+      "resolution_mechanism": "Longitudinal studies tracking debtors' economic outcomes (employment, income, consumption) and social outcomes (mental health, family stability) after debt adjustment.",
+      "impact": "If highly effective: Program should be expanded and promoted. If ineffective: Program should be redesigned or replaced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measuring the program's long-term impact on debtors."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Finnish private debt adjustment system is a legal framework designed to provide relief for over-indebted private individuals. It involves a structured process where debtors can negotiate with their creditors to reduce their debts and create a manageable repayment plan. The system aims to balance the interests of debtors and creditors, promoting financial stability and preventing long-term social and economic hardship.",
+    "key_agents": [
+      "Debtors (compliant): Moderate power/constrained exit",
+      "Debtors (non-compliant): Powerless/trapped exit",
+      "Creditors: Institutional power/arbitrage exit",
+      "Taxpayers: Moderate power/constrained exit",
+      "Analytical Observer: Analytical power/analytical exit"
+    ],
+    "logic_rationale": "The extractiveness is moderate (0.55) because the system does extract value from debtors (even compliant ones) through the required repayment plan and oversight. However, it also provides a significant benefit in the form of debt relief. The suppression is also moderate (0.40) because debtors have some agency in choosing whether to enter the program, but once enrolled, they are subject to its rules. The theater ratio is low (0.20) because the system is primarily functional, with limited performative aspects.",
+    "perspectival_gap": "The perspectival gap arises from the different positions of debtors, creditors, and taxpayers within the system. Debtors, especially those who are non-compliant, may perceive the system as a snare, trapping them in a cycle of debt. Creditors, on the other hand, may view the system as a rope, providing a structured mechanism for recovering some of their losses. Taxpayers bear the costs of the program and may see it as a necessary but extractive measure to prevent greater social costs. The analytical observer attempts to reconcile these perspectives and evaluate the overall effectiveness and fairness of the system.",
+    "directionality_logic": "Debtors who are compliant with the program experience both coordination and extraction, as they receive debt relief but must adhere to strict requirements. Non-compliant debtors experience the system as a snare because they do not receive the benefits of debt relief but are still subject to collection efforts. Creditors benefit from the system because it provides a structured mechanism for recovering some of their losses. Taxpayers are the victims because they bear the costs of administering the program.",
+    "mandatrophy_analysis": "The Finnish debt adjustment system is classified as a tangled rope because it contains elements of both coordination (providing debt relief and promoting financial stability) and extraction (imposing requirements on debtors and burdening taxpayers). It's important to distinguish this system from a pure snare, which would involve only extraction without any benefit to debtors. It's also important to avoid mislabeling it as a pure rope, as the system does involve costs and constraints for certain stakeholders."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

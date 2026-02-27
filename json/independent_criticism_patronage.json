@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "independent_criticism_patronage",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "crit_pat"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Patronage Model for Independent Cultural Criticism",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "independent_critics",
+      "patron_networks"
+    ],
+    "victims": [
+      "critical_discourse_commons",
+      "non_patronized_perspectives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Unpatronized Critic",
+      "comment": "PERSPECTIVE 1: UNPATRONIZED CRITIC (SNARE) \u2014 A critic without patron base cannot sustain long-form work; forced into clickbait, freelance commodity writing, or institutional employment. No viable exit from the patronage model except abandonment of independent voice. Bears full extraction cost: captured labor or silence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Emerging Critic",
+      "comment": "PERSPECTIVE 2: EMERGING CRITIC (TANGLED ROPE) \u2014 Benefits from patronage as income stability and audience platform. Constrained by dependence on patron preferences, algorithmic feed placement, and sustained subscriber growth. Mixed coordination (audience discovery) and extraction (audience capture and lock-in)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Patronage Platform",
+      "comment": "PERSPECTIVE 3: PATRONAGE PLATFORM (ROPE) \u2014 Patreon/Substack experience the constraint as pure coordination: connecting independent creators to sustainable audiences solves a market matching problem. Platform captures 5-15% transaction fee and data access; experiences extraction as flowing toward critics, not the platform. True beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Critical Commons Organization",
+      "comment": "PERSPECTIVE 4: CRITICAL COMMONS ORGANIZATION (SCAFFOLD) \u2014 Nonprofit organizations (arts councils, journalism foundations, university presses) attempt to build sustainable infrastructure for diverse critical voices through grants, residencies, and institutional support. See patronage as temporary bridge pending more democratic funding models. Sunset: public funding for arts criticism stabilizes, reducing patronage dependence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Media Criticism Archive",
+      "comment": "PERSPECTIVE 5: LEGACY MEDIA CRITICISM ARCHIVE (PITON) \u2014 Traditional institutional criticism (newspaper reviews, magazines, academic journals) persists as performative ritual: fewer readers, symbolic prestige, declining resources. Theater ratio high because institutional review processes (peer review, editorial gatekeeping) are maintained through inertia despite audience migration to independent creators. Function degraded but legitimacy theater intact."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 At full scope, the patronage system combines coordination function (matching supply/demand for niche criticism) with asymmetric extraction (platform rent, concentration of audience access, algorithmic gatekeeping). Not a natural law; not pure coordination. Hybrid mechanism with extractive overlay."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "patron_preference_alignment",
+      "question": "To what extent does patronage funding bias critical discourse toward patron-pleasing analysis versus independent assessment?",
+      "resolution_mechanism": "Content analysis comparing patronized critic output to pre-patronage work or control group academics; correlation between patron demographics and critic topic selection/tone",
+      "impact": "If high bias: patronage functions as pure extraction mechanism masquerading as liberation (Snare from analytical). If low bias: coordination function dominates (Rope/Scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of patron preference bias in critical output"
+    },
+    {
+      "id": "barrier_to_entry_sustainability",
+      "question": "What minimum patronage threshold permits sustainable independent criticism versus subsistence struggle requiring supplementary income?",
+      "resolution_mechanism": "Survey of patronized critics on hours worked, income stability, ability to reject commissions. Comparison across fields (film, music, visual art, literature). Tracking of critic churn and burnout rates.",
+      "impact": "If threshold high (>$50K/year): patronage remains inaccessible to most potential critics; system is extraction from unpatronized (Snare). If threshold low (<$15K/year): system enables genuine economic diversity (Rope/Scaffold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Minimum patronage for sustainable independent criticism"
+    },
+    {
+      "id": "algorithmic_discoverability_decay",
+      "question": "Does algorithmic ranking of patronized critics on Patreon/Substack reinforce existing popularity hierarchies, creating de facto gatekeeping equivalence to legacy media?",
+      "resolution_mechanism": "Network analysis of creator discovery pathways; measurement of income concentration (Gini coefficient) across patronized critics; A/B testing of algorithmic ranking impact on new creator visibility",
+      "impact": "If gatekeeping equivalent to legacy systems: patronage is false liberation (Piton theater). If discovery genuinely distributed: patronage enables market competition (Rope/Scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic ranking reproduces legacy gatekeeping"
+    },
+    {
+      "id": "commons_fragmentation",
+      "question": "Does patronage model's natural alignment with niche audiences fragment critical discourse into incompatible microcultures, preventing shared evaluation of cultural works?",
+      "resolution_mechanism": "Cross-patronage analysis of critical consensus on major works; identification of systematic disagreement patterns by patron demographic; comparison to pre-patronage institutional consensus rates",
+      "impact": "If fragmentation high: patronage extracts from discourse commons through specialization (Snare victim). If moderate: niche specialization is efficiency gain (Rope/Scaffold).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether patronage fragments critical commons into incommensurable microcultures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The patronage model for independent cultural criticism emerged as an alternative to institutional employment and advertising-supported commodity writing. Platforms like Patreon and Substack enable direct audience-to-creator funding for long-form criticism on niche topics (experimental film, avant-garde music, architectural theory, video game narrative design) that traditional media markets cannot sustain. This constraint exhibits the Tangled Rope structure: it provides genuine coordination function (matching supply and demand for niche criticism) while simultaneously creating extraction mechanisms (platform rents, algorithmic gatekeeping, patron preference bias). The theater ratio has risen from 0.35 to 0.58 as platforms increasingly emphasize parasocial relationship-building and subscriber tier performativity over raw content delivery. The base extractiveness has increased from 0.22 to 0.38 as the system concentrates income among a small number of successful patrons while the barrier to entry for new critics has risen, creating a bifurcation between established independent critics (who capture 70%+ of available patronage) and aspiring critics who cannot reach sustainable income thresholds.",
+    "key_agents": [
+      "Independent Critics: Primary beneficiaries (institutional/arbitrage) \u2014 gain income stability, audience ownership, and control over editorial direction unavailable in traditional media",
+      "Patronage Platforms (Patreon, Substack): Secondary beneficiary (institutional/arbitrage) \u2014 capture transaction fees (5-15%), user data, and network effects; experience constraint as coordination problem solved",
+      "Unpatronized Critics: Primary victims (powerless/trapped) \u2014 cannot sustain independent work without patron base; forced into commodity writing or institutional employment",
+      "Critical Discourse Commons: Secondary victim (powerless/trapped) \u2014 fragmentation into patron-serving niches reduces cross-cultural evaluative consensus",
+      "Legacy Media Institutions: Tertiary actors (institutional/constrained) \u2014 maintain symbolic prestige and editorial legitimacy through performative rituals despite audience migration",
+      "Analytical Observer: Sees full structure (analytical/analytical) \u2014 identifies both coordination function and extraction layers"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The patronage system extracts through multiple mechanisms: (1) platform rent (5-15% of creator revenue), (2) algorithmic gatekeeping concentrating audiences among established critics, (3) patron preference bias rewarding creator compliance, (4) fragmentation of critical commons into incompatible microcultures. However, it also genuinely coordinates supply and demand for niche criticism, enabling work that would be economically invisible in traditional markets. The increase from 0.22 to 0.38 over 15 years reflects growing concentration and algorithmic lock-in. Suppression (0.42): Moderate. Barriers include patron-finding friction (high marketing overhead for new critics), income volatility (subscriber churn), algorithmic opacity, and the psychological pressure of parasocial subscriber relationships constraining critical independence. But suppression is not total \u2014 platforms provide transparent discovery mechanisms and critics retain full publishing control. Theater ratio (0.58): Moderate-high. Rising from 0.35 reflects increasing emphasis on patron engagement theater: behind-the-scenes content, subscriber-exclusive streams, tier-differentiated access, and algorithmic ranking based on engagement metrics rather than critical quality. The performative element is substantial but not dominant \u2014 content quality still drives subscriptions.",
+    "perspectival_gap": "The unpatronized critic sees pure extraction (Snare) \u2014 the patronage barrier is absolute. The emerging critic sees mixed coordination and extraction (Tangled Rope) \u2014 genuinely enabled by the platform but constrained by patron lock-in. The platform sees coordination (Rope) \u2014 they are solving a matching problem. The critical commons organization sees a temporary solution pending better institutional support (Scaffold with sunset). The legacy media institution sees its own degraded ritual (Piton) \u2014 still maintained through editorial prestige theater despite functional decline. The analytical observer sees the full tangled structure \u2014 coordination plus extraction, neither reducible to the other. This perspectival gap is diagnostic: if all agents perceived it as pure coordination (Rope), there would be no victims; if all saw it as pure extraction (Snare), the platform would not experience it as coordination.",
+    "directionality_logic": "Independent critics derive low d (beneficiary + arbitrage exit) \u2192 experienced \u03c7 is dampened despite moderate base extraction. Unpatronized critics derive high d (victim + trapped) \u2192 experienced \u03c7 is amplified. Platform derives very low d (beneficiary + arbitrage) \u2192 experiences constraint as coordinating force with minimal extraction overhead. Legacy media institutions derive moderate d (constrained exit despite institutional power) \u2014 they are victims of audience migration but maintain escape through prestige and institutional affiliation. The piton classification for legacy media derives from theater gates: their review processes persist through ritual (theater \u2265 0.70 in their own system) despite functional decline. The scaffold perspective for critical commons organizations derives from constrained exit + organized power + sunset clause (public arts funding expansion as exit).",
+    "mandatrophy_analysis": "RESOLVES THROUGH PERSPECTIVAL DECOMPOSITION: The mandatrophy question is 'Is this liberation from gatekeeping or just repackaged gatekeeping via algorithmic capture?' The answer is BOTH, depending on the agent's structural position. For unpatronized critics: pure extraction (Snare). For patronized critics: genuine coordination with extraction overlay (Tangled Rope). For platforms: pure coordination (Rope). No single type naturalizes the structure. The key diagnostic: if patronage truly liberated all critics equally, suppression would be near-zero and all perspectives would converge on Rope. The fact that suppression is 0.42 and perspectives diverge (Snare/Tangled Rope/Rope) confirms the hybrid structure. The increasing theater ratio (0.35\u21920.58) suggests gradual Goodhart drift: as patronage success becomes parasocial relationship success, the incentive structure tilts toward theater-maximizing content rather than criticism-maximizing content. This is classic extraction accumulation over the interval."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "legacy_media_institutional_collapse",
+      "algorithmic_cultural_curation",
+      "creator_economic_precarity"
+    ],
+    "dual_formulation_note": "The patronage system is downstream of the decline of advertising-supported institutional media (legacy_media_institutional_collapse) and upstream of algorithmic cultural curation. It is a different constraint because it has its own internal extractive mechanisms (platform rent, algorithmic gatekeeping, patron bias) distinct from the institutional media's theater-driven decline or the curation system's visibility mechanisms. Each story addresses a distinct \u03b5 value reflecting different structural properties."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

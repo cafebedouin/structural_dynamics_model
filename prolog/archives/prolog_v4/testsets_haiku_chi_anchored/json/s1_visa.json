@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "s1_visa",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "visa"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "SEC S-1 Registration Framework for Initial Public Offerings",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "investment_banks_and_underwriters",
+      "securities_counsel_firms",
+      "sec_regulatory_authority"
+    ],
+    "victims": [
+      "emerging_company_founders",
+      "small_cap_equity_markets",
+      "information_asymmetry_victims"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Emerging Company Founder",
+      "comment": "PERSPECTIVE 1: EMERGING COMPANY FOUNDER (SNARE) \u2014 Founder cannot exit public markets without losing growth capital access. Trapped by dependence on institutional funding and path-dependent equity structure. Bears full cost of compliance overhead, legal fees (typically $1-3M for S-1 process), and disclosure burdens. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Retail Investor",
+      "comment": "PERSPECTIVE 2: RETAIL INVESTOR (TANGLED ROPE) \u2014 Benefits from standardized disclosure (coordination function: information symmetry is collective good). Constrained by inability to access pre-IPO shares and limited ability to verify claims independently. Bears information asymmetry costs despite regulatory framework. d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Investment Bank Underwriter",
+      "comment": "PERSPECTIVE 3: INVESTMENT BANK UNDERWRITER (ROPE) \u2014 Primary beneficiary. S-1 framework creates recurring revenue stream (underwriting fees 3-7% of IPO proceeds). Experiences constraint as coordination: standardized process reduces transaction costs and creates predictable workflow. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary through arbitrage on compliance premium."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Securities Counsel Firm",
+      "comment": "PERSPECTIVE 4: SECURITIES COUNSEL FIRM (ROPE) \u2014 Secondary beneficiary. S-1 complexity drives recurring billable hours ($500K-$2M per IPO engagement). Experiences framework as coordination: standardized legal requirements create predictable service delivery. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Negative effective extraction = structural incentive to maintain complexity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The SEC Regulatory Authority",
+      "comment": "PERSPECTIVE 5: SEC REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Primary enforcer. Framework simultaneously provides: (a) coordination function (standardized disclosure prevents fraud and information asymmetry), (b) extraction function (regulatory moat: high compliance cost excludes competitors and entrenches incumbent players). Constrained by Congressional mandate (securities act) and institutional capability limits. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.18. Mixed: coordination mission vs extraction side-effect."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Public Equity Market System",
+      "comment": "PERSPECTIVE 6: PUBLIC EQUITY MARKET SYSTEM (PITON) \u2014 S-1 regime is institutionally entrenched but functionally degraded. Theater_ratio=0.68: much of the disclosure process is performative (boilerplate risk factors, executive compensation tables, audited financial statements that retail investors cannot meaningfully interpret). Persists through institutional inertia and lack of realistic alternatives. Primary function (capital formation) achievable through multiple mechanisms (JOBS Act Reg A+, direct listings), but S-1 dominates through regulatory path-dependency. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Capital Formation Coalition",
+      "comment": "PERSPECTIVE 7: ALTERNATIVE CAPITAL FORMATION COALITION (SCAFFOLD) \u2014 JOBS Act (2012) and subsequent reg-tech innovations (Reg A+, direct listings, SPACs) represent sunset mechanisms to S-1 hegemony. Organized agents (fintech platforms, blockchain infrastructure, exempt offerings market) are building parallel paths. S-1 seen as transitional requirement declining in relative importance. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.12. Low effective extraction because alternatives exist and are scaling."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law Perspective (Analytical Observer)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 Risk of naturalizing S-1 as inherent necessity: 'any securities offering requires disclosure, therefore S-1 is inevitable.' But base properties (\u03b5=0.38, suppression=0.52, theater=0.68) contradict mountain classification. This is a contingent institutional arrangement (1933 legislation), not a law of nature. Disclosure requirements are necessary; this specific framework is not."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optimal_disclosure_standard",
+      "question": "What disclosure threshold minimizes information asymmetry harm without imposing excessive compliance cost on issuer and market?",
+      "resolution_mechanism": "Comparative analysis of SEC filings (S-1 dense disclosure) vs JOBS Act Reg A+ (simplified) vs international regimes (EU prospectus rules); measurement of retail investor comprehension rates; correlation between disclosure granularity and investment error rates",
+      "impact": "If S-1 standard is sub-optimal (theater > 0.70): compliance cost extraction exceeds informational benefit. If S-1 is optimal: framework is Rope, not Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether S-1 disclosure threshold is informationally optimal"
+    },
+    {
+      "id": "underwriter_gatekeeping_necessity",
+      "question": "Does the underwriter role (risk assessment, reputation collateral, distribution network) provide genuine coordination value or function as a pure extraction rent-seeking gate?",
+      "resolution_mechanism": "Historical analysis of underwriter selection effects on post-IPO performance; measurement of underwriter due-diligence quality (correlation between underwriter-assessed risk and realized defaults); comparison of IPO success rates in regimes with vs without underwriter gatekeeping (e.g., direct listings, SPAC mergers)",
+      "impact": "If underwriter adds genuine value: S-1 framework is justified coordination mechanism (Rope dominant). If underwriter is rent-seeking gate: S-1 is primarily extraction mechanism (Snare dominant).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether underwriter gatekeeping provides coordination value or enables extraction"
+    },
+    {
+      "id": "regtech_capital_formation_sufficiency",
+      "question": "Can decentralized disclosure systems (blockchain smart contracts, real-time filing, algorithmic verification) achieve the information-asymmetry reduction goal of S-1 with lower compliance cost and less theater?",
+      "resolution_mechanism": "Pilot programs with blockchain-based offering disclosure; measurement of cost reduction vs S-1; measurement of investor protection outcomes; regulatory acceptance pathway testing",
+      "impact": "If sufficient: scaffold sunset is real and S-1 is genuinely temporary. If insufficient: S-1 is structural necessity and scaffold perspective is aspirational.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether regtech can replace S-1 framework"
+    },
+    {
+      "id": "information_asymmetry_severity",
+      "question": "In pre-offer environments, what fraction of IPO failure is attributable to information asymmetry (disclosure inadequacy) vs principal-agent misalignment or market fundamentals?",
+      "resolution_mechanism": "Econometric decomposition of IPO performance drivers; measurement of IPO flops caused by hidden liabilities vs incorrect valuation vs market conditions; post-hoc analysis of whether S-1 disclosure would have prevented failures",
+      "impact": "If information asymmetry is dominant failure mode: S-1 is Rope (coordination). If minority: S-1 is Snare (suppression of alternatives, minor info gain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of IPO failure attributable to information asymmetry"
+    },
+    {
+      "id": "barrier_to_entry_level",
+      "question": "What is the minimum capital/company scale threshold below which S-1 compliance cost becomes prohibitive (i.e., suppression \u2248 1.0)?",
+      "resolution_mechanism": "Survey of founders on cost perception; measurement of IPO frequency by company size; analysis of Reg A+ adoption as function of cost differential; threshold modeling",
+      "impact": "If threshold is low ($50M revenue): suppression is high for most issuers, supporting Snare classification. If high ($500M+): suppression is moderate, supporting Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Capital threshold below which S-1 compliance becomes prohibitive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The SEC S-1 registration framework represents the primary legal mechanism by which private companies transition to public ownership in the United States. Established under the Securities Act of 1933 as a response to pre-Depression securities fraud, the framework mandates comprehensive disclosure (typically 50-100 pages of financial, operational, and risk information) and underwriter gatekeeping before capital can be raised. This constraint exhibits the tangled-rope signature: it provides genuine coordination value (information symmetry, fraud prevention, standardized pricing mechanisms) while simultaneously creating asymmetric extraction (compliance cost borne by emerging companies; revenue streams captured by underwriters and securities counsel). The constraint's base extractiveness (0.38) reflects moderate cost imposition, suppression (0.52) reflects significant barriers to alternative pathways, and theater ratio (0.68) indicates that much of the disclosure burden is performative rather than informationally material. The framework has degraded over its 90-year lifespan: original goal was fraud prevention and investor protection; contemporary function is partial monopoly enforcement (keeping capital formation trapped in regulated intermediaries) and rent-seeking by gatekeepers. Alternative mechanisms (JOBS Act Reg A+ direct listings, SPACs, exempt offerings, blockchain-based offerings) are emerging as sunset mechanisms, suggesting a scaffold trajectory rather than eternal necessity.",
+    "key_agents": [
+      "Emerging Company Founder: Primary victim (powerless/trapped) \u2014 depends on public capital, cannot exit S-1 pathway; bears full compliance cost ($1-3M legal fees, 6-12 month process, disclosure burdens, dilution from underwriter fees)",
+      "Investment Bank Underwriter: Primary beneficiary (institutional/arbitrage) \u2014 captures 3-7% of IPO proceeds; experiences framework as efficiency mechanism; incentive to maintain complexity and underwriter gatekeeping",
+      "Securities Counsel Firm: Secondary beneficiary (institutional/arbitrage) \u2014 captures $500K-$2M per IPO engagement; billing-hour interests aligned with complexity preservation",
+      "Retail Investor: Secondary victim (moderate/constrained) \u2014 benefits from standardized disclosure but cannot access pre-IPO information; bear costs of information asymmetry despite S-1 mandates",
+      "SEC Regulatory Authority: Mixed (organized/constrained) \u2014 enforcer with dual mandate: investor protection (coordination) and capital formation enablement (but enforcement creates barriers); constrained by Congressional mandate and resource limits",
+      "Public Equity Market System: Institutional actor (institutional/arbitrage) \u2014 S-1 creates path-dependent dominance; alternatives (direct listings, reg-tech) represent functional alternatives, not architectural necessity",
+      "Alternative Capital Formation Coalition: Organized agents (organized/mobile) \u2014 JOBS Act signatories, fintech platforms, blockchain infrastructure; building parallel pathways with different risk/return tradeoffs"
+    ],
+    "logic_rationale": "Base extractiveness (0.38): Moderate, reflecting asymmetric cost imposition and underwriter rent-seeking, tempered by genuine information standardization benefit. The 1933 framework imposed real coordination value (fraud prevention post-Depression); contemporary value is mixed with extraction. Compliance cost ($1-3M legal fees, 6-12 month process drag, underwriter fee grab) is borne entirely by emerging company (founder dilution). Suppression (0.52): Moderate-high. Significant barriers include: (1) regulatory monopoly on S-1 pathway (SEC gatekeeping), (2) underwriter distribution network lock-in, (3) Sarbanes-Oxley section 404 auditing requirements imposing permanent recurring cost post-IPO, (4) liability exposure under securities laws discouraging alternative disclosure formats. But suppression is not total \u2014 JOBS Act opened alternative pathways (Reg A+ up to $75M, direct listings, emerging growth company exemptions). Theater ratio (0.68): Moderately high. S-1 disclosure is substantially performative: (a) boilerplate risk factor sections read identically across industries ('we may face competition,' 'macroeconomic downturns affect us'), (b) executive compensation tables with formatting prescribed to decimal point, (c) MD&A (Management Discussion & Analysis) narrative designed to comply with form rather than inform, (d) audited financial statements inaccessible to retail investor interpretation. The theater has increased from 1933 baseline (when S-1 was genuinely novel information) to contemporary form (when templates dominate).",
+    "perspectival_gap": "This constraint reveals a stark perspectival gap between beneficiaries and victims. The founder (powerless/trapped) experiences maximum extraction: cannot access capital without paying gatekeepers' rents, cannot choose simpler disclosure, must absorb $1-3M cost. The underwriter (institutional/arbitrage) experiences pure coordination: standardized process, predictable fee structure, regulatory moat protecting distribution monopoly. The analyst observer risks seeing a Mountain ('disclosure is inherent to public offerings') when the structural data (\u03b5=0.38, suppression=0.52, theater=0.68) reveals a contingent institutional arrangement. The scaffold perspective (alternative capital formation coalition) introduces the critical variable: if JOBS Act Reg A+, direct listings, and blockchain-based offerings can achieve 80%+ of S-1's informational goal with 40-50% lower cost, then S-1 is not inevitable but rather a degraded piton persisting through institutional inertia. The retail investor's tangled-rope perspective is crucial: they benefit from standardized disclosure (coordination) but remain exposed to information asymmetry because S-1 disclosure is not optimized for their comprehension \u2014 it is optimized for legal liability protection and underwriter gatekeeping.",
+    "directionality_logic": "Founder (emerging company): Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Cannot exit, cannot choose alternative disclosure, must pay rent to gatekeepers. Underwriter: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary. Controls distribution network, extracts 3-7% of proceeds, experiences regulatory monopoly as profit protection. Securities counsel: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary. Billing-hour interests aligned with complexity. Retail investor: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.02. Constrained by information access and analysis capacity despite S-1 framework. SEC regulator: Mixed + constrained \u2192 d\u22480.45, f(d)\u22480.48. Dual mandate (investor protection + capital formation) creates conflicted structural position. Alternative capital formation coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Mobile through regulatory arbitrage (Reg A+, direct listings) and emerging tech infrastructure.",
+    "mandatrophy_analysis": "TANGLED ROPE CLASSIFICATION RATIONALE: S-1 framework exhibits both genuine coordination function AND asymmetric extraction, satisfying the tangled-rope gate. Coordination function: standardized disclosure reduces information asymmetry, prevents fraud, enables price discovery. This is a real collective good (Rope component). Asymmetric extraction: compliance cost ($1-3M) borne entirely by emerging company founder; benefit (underwriter fees 3-7%, counsel fees $500K-$2M) captured by gatekeepers. This is real extraction rent-seeking (Snare component). Active enforcement: SEC enforcement of S-1 compliance (comment letters, deficiency notices, enforcement actions against fraudulent disclosures) is required to maintain the framework. The tangled-rope classification avoids two mandatrophy errors: (1) false Rope: calling this pure coordination ignores the asymmetric cost burden, underwriter rent-seeking, and theater, (2) false Snare: calling this pure extraction ignores the genuine informational benefit and fraud prevention achieved. The scaffold perspective (alternative capital formation coalition) introduces a sunset mechanism: as JOBS Act alternatives scale and blockchain-based offerings mature, the S-1 monopoly decays \u2014 this is the critical test of scaffold validity. If alternatives remain marginal (< 5% of IPO volume) after 10 years, S-1 is structural necessity (tangled rope persists); if alternatives reach 30-40% volume, S-1 transitions to piton (degraded, inertial, maintained by path-dependency rather than necessity)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "underwriter_gatekeeping_monopoly",
+      "sarbanes_oxley_section_404_compliance",
+      "information_asymmetry_in_capital_markets"
+    ],
+    "dual_formulation_note": "S-1 framework decomposes into two structurally distinct constraint stories: (1) disclosure_standardization_coordination (\u03b5\u22480.12, Rope) \u2014 the genuine informational benefit of standardized financial and operational disclosure; (2) visa_ipo_regulatory_compliance (\u03b5=0.38, Tangled Rope) \u2014 the institutional arrangement coupling disclosure with underwriter gatekeeping and compliance cost barriers. The framework conflates these claims. S-1 as pure disclosure mechanism is Rope; S-1 as regulatory monopoly on capital formation is Tangled Rope. The extraction component emerges from the coupling to underwriter gatekeeping and the suppression of alternatives."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

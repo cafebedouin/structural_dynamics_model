@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "political_dissident_containment",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "poldisc"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.88,
+    "theater_ratio": 0.82,
+    "claimed_type": "snare",
+    "human_readable": "The state carceral system for neutralizing political opposition",
+    "topic_domain": "political/authoritarian_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_security_apparatus",
+      "ruling_party_monopoly"
+    ],
+    "victims": [
+      "political_dissidents",
+      "civil_society_autonomy",
+      "judicial_independence"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Political Dissident",
+      "comment": "PERSPECTIVE 1: THE POLITICAL DISSIDENT (SNARE) \u2014 No meaningful exit options. Criminal charges are retroactively applied to opposition activity. Trial procedures lack genuine independence. Incarceration in remote facilities isolates from family, legal counsel, and public scrutiny. Death in custody remains uninvestigated. d\u22480.98, f(d)\u22481.48, \u03c3=1.0 \u2192 \u03c7\u22481.15."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Broader Opposition Movement",
+      "comment": "PERSPECTIVE 2: BROADER OPPOSITION MOVEMENT (SNARE) \u2014 Faces systematic pressure: imprisonment of leaders, asset seizure, harassment of family members, legal liability for association. Exit options severely constrained by regime's extraterritorial enforcement (poisoning attempts, intimidation abroad). Movement cannot dissolve without abandoning political voice. d\u22480.92, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22481.11."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Security Apparatus",
+      "comment": "PERSPECTIVE 3: THE STATE SECURITY APPARATUS (ROPE) \u2014 Experiences the constraint as coordination mechanism for maintaining regime stability. Security apparatus benefits from expanded powers, budgets, and institutional autonomy. Exit options are arbitrage: security officials can leave state service, negotiate transfers, or defect. The carceral system solves the collective action problem of regime preservation. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Formal Judicial System",
+      "comment": "PERSPECTIVE 4: THE FORMAL JUDICIAL SYSTEM (PITON) \u2014 Maintains appearance of rule of law: courts exist, trials occur, convictions follow legal procedure. But the functional independence has atrophied \u2014 judges are appointed by regime, verdicts are predetermined, appeal processes are performative. Theater ratio = 0.82 (courts, lawyers, trials, appeals are performed; substantive judgment is absent). \u03c7\u22480.19, f(d)\u22480.35, \u03c3=1.0. The judicial system is degraded apparatus maintained through institutional inertia."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Human Rights Community",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL HUMAN RIGHTS COMMUNITY (SNARE) \u2014 Organized but trapped. Can document violations but cannot prevent them without political/military intervention. Moral authority exists but enforcement capacity does not. Regime's carceral system extracts from the international order's credibility (every unresponded violation weakens global human rights norms). d\u22480.85, f(d)\u22481.25, \u03c3=1.2 \u2192 \u03c7\u22481.17."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Legal Order",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL LEGAL ORDER (PITON) \u2014 Maintains formal structures (International Criminal Court, Convention Against Torture, UN Human Rights Council) that ritually condemn state repression while remaining functionally unable to enforce. Theater ratio = 0.82 (resolutions, investigations, statements performed; enforcement absent). The international system's degraded capacity to prevent state violence against dissidents persists through institutional inertia \u2014 alternatives (humanitarian intervention, international prosecution) exist but face coordination barriers. d\u22480.70, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.91."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "state_intent_vs_systemic_outcome",
+      "question": "Is the dissident containment system an intentional apparatus for neutralizing opposition, or a systemic outcome of combined authoritarianism, corruption, and institutional dysfunction?",
+      "resolution_mechanism": "Documentary evidence (internal regime communications, security doctrine statements, official pronouncements); comparison with other authoritarian systems' explicit vs implicit repression; analysis of whether contradictions between formal law and application follow predictable patterns or appear random",
+      "impact": "If intentional apparatus: classification remains Snare (\u03b5\u22480.78) with clear extraction logic. If systemic byproduct: \u03b5 drops to 0.55-0.60 and classification shifts toward Tangled Rope (regime derives coordination benefits from order-maintenance that produces dissident extraction as side effect).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dissident containment is intentional extraction or systemic byproduct"
+    },
+    {
+      "id": "extraction_sustainability_threshold",
+      "question": "At what level of dissident mortality or international response does the extraction mechanism cease functioning (regime loses legitimacy or faces military intervention)?",
+      "resolution_mechanism": "Historical comparison: regimes that maintained carceral repression (USSR, East Germany, North Korea) vs those that collapsed from it (South Korea, Philippines, Brazil); analysis of international threshold responses; assessment of domestic elite coordination thresholds",
+      "impact": "If sustainability horizon < 10 years: classification remains Snare but with temporal collapse omega (regime cannot sustain extraction). If > 30 years: Snare classification hardened (multi-generational extraction apparatus). Impacts mandatrophy resolution confidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Duration threshold for carceral extraction apparatus sustainability"
+    },
+    {
+      "id": "alternative_opposition_containment",
+      "question": "Could the regime maintain monopoly power without carceral dissident containment, using instead cooptation, exile tolerance, or electoral theater?",
+      "resolution_mechanism": "Comparative analysis of authoritarian regimes: those using carceral suppression vs those using softer control mechanisms; assessment of regime's internal calculations regarding cost-benefit of imprisonment vs alternatives; counterfactual analysis of whether opposition could be tolerated as electoral minority without threatening regime",
+      "impact": "If alternatives exist and are feasible: suppression and extractiveness values may be overestimated (regime chooses harsh method, not forced to). If carceral containment is genuinely necessary for regime stability: classification remains Snare with high suppression. Determines whether regime is rational extractor or fear-driven system.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether carceral containment is necessary or chosen method of control"
+    },
+    {
+      "id": "dissident_martyrdom_feedback_loop",
+      "question": "Does carceral containment increase dissident movement's moral authority and international support, thereby self-undermining the extraction mechanism?",
+      "resolution_mechanism": "Analysis of opposition movement's fundraising, international support, and recruitment before and after high-profile imprisonment; comparison of movement trajectories in regimes with vs without martyr-producing carceral systems; assessment of whether imprisonment strengthens or weakens regime's long-term stability",
+      "impact": "If martyrdom increases opposition strength faster than carceral system can suppress: effective suppression < formal suppression, \u03b5 should be revised downward to 0.65-0.70. If regime can sustain extraction despite martyrdom effect: high suppression (0.88) is justified. Affects mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether carceral containment strengthens opposition movement via martyrdom"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.82
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The political dissident containment system represents a state apparatus for neutralizing organized opposition through legal instruments and carceral enforcement. The system uses formal legal procedures (criminal charges, trials, appeals) to provide a theatrical veneer of rule of law while functionally serving regime security interests. Dissidents are detained on charges of extremism, treason, or breach of political restrictions that are retroactively applied to opposition activity. Incarceration in remote facilities isolates detainees from family, counsel, and public observation. Deaths in custody remain uninvestigated. The constraint exhibits high extractiveness (\u03b5=0.78) because it serves clear regime interests: neutralizing political opposition, consolidating ruling party monopoly, and concentrating power in the security apparatus. High suppression (0.88) reflects that dissidents lack meaningful exit options \u2014 they cannot publicly advocate, cannot emigrate safely, face legal liability, family harassment, and death risk. Theater ratio is high (0.82) because the system maintains extensive formal legal machinery (courts, trials, appeals, legal codes) that performs rule of law while delivering predetermined outcomes. The case of Alexei Navalny \u2014 imprisoned on contested charges, transferred to remote penal colony, died under unclear circumstances \u2014 exemplifies the system's structure: formal legality masking political extraction.",
+    "key_agents": [
+      "Political Dissidents: Primary victims (powerless/trapped) \u2014 face imprisonment, torture, death with no meaningful legal recourse or exit option",
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 gains expanded powers, budgets, institutional autonomy, and regime-security function through dissident containment",
+      "Ruling Party Monopoly: Secondary beneficiary (institutional/arbitrage) \u2014 consolidates power by eliminating organized opposition, maintains electoral theater without genuine competition",
+      "Formal Judicial System: Degraded institutional actor (institutional/constrained) \u2014 maintains appearance of independent law while functionally serving regime interests (piton perspective)",
+      "Broader Opposition Movement: Victim (moderate/trapped) \u2014 faces systematic pressure on leadership, family members, supporters; cannot exit without abandoning political voice",
+      "International Human Rights Community: Organized witness (organized/constrained) \u2014 can document violations but cannot enforce accountability; moral authority without enforcement capacity (snare perspective)"
+    ],
+    "logic_rationale": "Extractiveness (0.78): The system produces clear extraction. Regime security apparatus gains power and budgets. Ruling party eliminates electoral opposition. Dissidents lose freedom, property, and life. The extraction is not maximal (0.78 not 0.95) because the regime's objectives are partly security-maintenance (coordination function) rather than pure rent extraction \u2014 the regime genuinely views opposition containment as necessary for survival, not merely profitable. However, the system exhibits predatory characteristics (seeking wealth through asset seizure, exploiting legal gray zones) that justify the high extractiveness value. Suppression (0.88): Extreme. Dissidents have no genuine exit options \u2014 they cannot safely protest, emigrate, or appeal through independent courts. Family members face harassment. Regime uses extraterritorial enforcement (poisoning, intimidation abroad) to prevent exit. The suppression has increased over the measurement interval as regime consolidated power and became more willing to use violence. Theater ratio (0.82): High and increasing. The system maintains extensive formal judicial machinery \u2014 criminal codes, trials, appeals procedures, legal representation \u2014 that performs rule of law. Judges exist, trials occur, verdicts are delivered in formal proceedings. But the functional independence has atrophied: judges are appointed by regime, verdicts follow security directions, appeals are performative. The theater has increased as regime became more confident in its control and less concerned with maintaining plausibility.",
+    "perspectival_gap": "The dissident and regime security apparatus have fundamentally opposed perspectives. The dissident sees a Snare (pure extraction with no escape), while the security apparatus sees a Rope (solving the collective action problem of regime preservation). This gap reveals the fundamental asymmetry: what appears to the dissident as malicious extraction appears to the security apparatus as necessary coordination. The international human rights community sees a Snare from a different angle \u2014 they see extraction from the global human rights order's credibility (every unresponded violation weakens international norms), but lack enforcement capacity. The formal judicial system sees its own degradation (Piton) \u2014 the courts know they are performing rule of law rather than delivering it. The opposition movement sees the system as a Snare that selectively targets leadership, creating strategic dilemmas: resist and face imprisonment, capitulate and lose movement identity.",
+    "directionality_logic": "Political Dissident: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.48. Maximum extraction from the dissident's perspective. Cannot exit, bears full cost. State Security Apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary. Can exit state service (defect), gain resources/power from dissident containment. Ruling Party Monopoly: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Benefits from opposition neutralization, can reform or adapt policy without electoral constraint. Broader Opposition Movement: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.42. High extraction. Movement leadership faces imprisonment; supporters face harassment; movement cannot dissolve without abandoning political purpose. Formal Judicial System: Degraded institutional actor, constrained exit \u2192 d\u22480.60, f(d)\u22480.75. Judicial system bears cost of complying with regime directives (institutional reputation damage) but cannot exit without being replaced. International Human Rights Community: Organized but functionally trapped \u2192 d\u22480.85, f(d)\u22481.25. Can advocate but cannot enforce; extracted from by regime's non-compliance.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint is classified as Snare (pure extraction) despite having a coordination function (regime stability maintenance). The mandatrophy is resolved by distinguishing between the regime's internal rationale (coordination problem: regime survival requires opposition neutralization) and the structural function (extraction: dissident freedom, opposition autonomy, and judicial independence are extracted by the state security apparatus). The regime experiences the constraint as Rope (coordination mechanism for regime survival). The dissident experiences it as Snare (pure extraction with no coordination benefit). The mandatrophy asks: which is it? The answer is both \u2014 the constraint is extractive in its effects (dissidents bear cost) but coordination-motivated in its origins (regime sees it as necessary). However, the classification hierarchy prioritizes observable structural effects over internal motivation. Since \u03b5=0.78, suppression=0.88, and the constraint systematically benefits security apparatus at cost to dissidents, the classification is Snare. The regime's internal experience of coordination does not change the structural facts: the system produces asymmetric extraction. The resolution is perspectival: from the regime's viewpoint, Rope; from the dissident's viewpoint, Snare; from the analytical view, Snare (because extraction dominates coordination logic)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "authoritarian_electoral_theater",
+      "state_security_apparatus_autonomy",
+      "civil_society_suppression"
+    ],
+    "dual_formulation_note": "Political dissident containment is downstream of the regime's consolidation of power and upstream of broader civil society suppression. The constraint represents a specific instantiation of how authoritarian regimes maintain monopoly power through selective carceral enforcement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.6
+    }
+  ]
+}

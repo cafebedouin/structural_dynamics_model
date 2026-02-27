@@ -1,0 +1,132 @@
+{
+  "header": {
+    "constraint_id": "p_vs_np",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The P versus NP Problem",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cryptographers",
+      "optimization_researchers"
+    ],
+    "victims": [
+      "problem_solvers",
+      "algorithm_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "Problem Solvers",
+      "comment": "From the perspective of problem solvers, the lack of efficient algorithms for NP-complete problems is a snare, trapping them with intractable problems."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Cryptographers",
+      "comment": "For cryptographers, the difficulty of solving NP problems is a rope, providing the foundation for secure encryption methods."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, P vs NP is a tangled rope, a fundamental question that simultaneously constrains and enables progress in computer science."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "p_np_equivalence",
+      "question": "Are P and NP equivalent?",
+      "resolution_mechanism": "A proof or disproof of P = NP.",
+      "impact": "If P = NP, current cryptographic systems would be insecure. If P != NP, the existing computational complexity landscape would be validated.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether P and NP are the same."
+    },
+    {
+      "id": "approximation_algorithms_efficiency",
+      "question": "Can efficient approximation algorithms be developed for all NP-hard problems?",
+      "resolution_mechanism": "Research into approximation algorithms and their limitations.",
+      "impact": "If efficient approximation algorithms exist, the practical impact of P != NP would be lessened. If not, the intractability of NP-hard problems would be more severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The efficiency of approximation algorithms."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The P vs NP problem is a major unsolved question in computer science, asking whether every problem whose solution can be quickly verified (NP) can also be quickly solved (P).",
+    "key_agents": [
+      "Problem Solvers: Primary target (powerless/trapped) - face computationally intractable problems.",
+      "Cryptographers: Primary beneficiary (institutional/arbitrage) - rely on the difficulty of solving NP problems for secure cryptography.",
+      "Algorithm Developers: Secondary target (moderate/constrained) - constrained by the limitations of current algorithms.",
+      "Optimization Researchers: Secondary beneficiary (powerful/constrained) - benefit from developing algorithms, even if not perfectly efficient."
+    ],
+    "logic_rationale": "Extractiveness: The inability to efficiently solve NP-complete problems extracts computational resources and limits the scope of solvable problems. Suppression: The lack of efficient algorithms suppresses the development of solutions to NP-complete problems. Theater: The theater ratio is relatively low because the focus is on finding genuine solutions, not merely performative ones.",
+    "perspectival_gap": "The perspectival gap arises from the differing positions of problem solvers and cryptographers. For problem solvers, the difficulty of solving NP problems is a barrier. For cryptographers, it is a tool for building secure systems. The analytical observer recognizes the fundamental nature of the problem.",
+    "directionality_logic": "Cryptographers benefit from the difficulty of NP problems, while problem solvers are hindered by it. This difference in benefit and cost leads to different perspectives on the problem's nature."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "computational_complexity",
+      "cryptographic_security"
+    ]
+  },
+  "directionality_overrides": []
+}

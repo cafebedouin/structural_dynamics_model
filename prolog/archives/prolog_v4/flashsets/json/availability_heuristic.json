@@ -1,0 +1,144 @@
+{
+  "header": {
+    "constraint_id": "availability_heuristic",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Availability Heuristic (as exploited by information systems)",
+    "topic_domain": "cognitive/social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "information_system_operators",
+      "advertisers",
+      "narrative_shapers"
+    ],
+    "victims": [
+      "individual_decision_makers",
+      "public_discourse_quality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Misinformed Individual",
+      "comment": "Perspective 1: The Misinformed Individual (Snare) - Lacks the resources or cognitive capacity to systematically analyze information sources, relying on readily available, often biased, information. Trapped by their cognitive limitations and the pervasive nature of manipulated information environments."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Concerned Citizen",
+      "comment": "Perspective 2: The Concerned Citizen (Tangled Rope) - Aware of the availability heuristic but constrained by time, resources, and access to diverse information sources. Benefits from some easily accessible correctives but remains vulnerable to biased narratives. Coordination (availability of fact checking) is mixed with extraction (cognitive burden of analysis)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Information System Operator",
+      "comment": "Perspective 3: Information System Operator (Rope) - Benefits directly from the availability heuristic, using it to drive engagement, advertising revenue, or narrative control. Experiences the availability heuristic as a coordination mechanism to efficiently influence behavior. Operators can arbitrage by promoting favored narratives and suppressing dissenting views."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 4: Analytical Observer (Tangled Rope) - Sees the interplay between cognitive biases, information system incentives, and the erosion of public discourse. Understands the systematic nature of the extraction and the limited agency of individuals trapped within these systems. Analytical perspective recognizes that both coordination (easy access to information) and asymmetric extraction are at play."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "individual_cognitive_capacity",
+      "question": "What is the practical limit to an individual's ability to evaluate information sources critically and resist the availability heuristic?",
+      "resolution_mechanism": "Cognitive psychology studies on information processing, critical thinking skills, and resistance to persuasion. Meta-analysis of interventions designed to improve media literacy.",
+      "impact": "If capacity is severely limited: the individual perspective remains Snare; interventions are largely ineffective. If capacity is expandable: interventions can shift the perspective towards scaffold or rope, increasing individual agency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the limits of individual cognitive capacity in information processing."
+    },
+    {
+      "id": "information_system_incentives",
+      "question": "To what extent are information systems incentivized to exploit the availability heuristic for financial gain or narrative control, versus providing unbiased information access?",
+      "resolution_mechanism": "Economic analysis of information system revenue models, network analysis of information flow, and empirical studies on the impact of algorithmic curation on user beliefs.",
+      "impact": "If incentives favor exploitation: the information system operator perspective remains Rope from their view (extraction is toward them), but the individual perspective is more likely Snare. If incentives are aligned with unbiased access: the individual perspective can shift towards Tangled Rope or even Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Analyzes the incentives within information systems."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The availability heuristic, a cognitive shortcut where people overestimate the importance of information that is readily available, is exploited by information systems to shape beliefs and behaviors. While providing easy access to information can be beneficial (coordination), the heuristic becomes extractive when systems prioritize sensational, biased, or emotionally charged content. This creates a structural asymmetry where individuals are easily manipulated, while information system operators and narrative shapers benefit from increased engagement and influence.",
+    "key_agents": [
+      "Individual Decision Makers: Primary target (powerless/trapped) \u2013 susceptible to biased information due to cognitive limitations and limited access to diverse sources.",
+      "Information System Operators: Primary beneficiary (institutional/arbitrage) \u2013 drive engagement and advertising revenue by exploiting the heuristic.",
+      "Advertisers: Secondary beneficiary (powerful/mobile) \u2013 leverage vivid and readily available examples to influence consumer choices.",
+      "Public Discourse Quality: Secondary target (powerless/trapped) \u2013 abstract collective good degraded by the prevalence of misinformation and polarized narratives.",
+      "Narrative Shapers: Primary beneficiary (organized/mobile) \u2013 Use biased readily available information for personal or political narrative shaping."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The availability heuristic extracts cognitive resources from individual decision-makers, leading to suboptimal choices and distorted perceptions. Information systems and narrative shapers derive value from this extraction. Suppression (0.65): Moderate-High. Algorithmic curation and filter bubbles suppress alternative viewpoints, making it difficult for individuals to access a balanced representation of information. The suppression is actively enforced by the design of these systems. Theater Ratio (0.30): Low. While there is some performative element, the exploitation is primarily driven by structural incentives rather than superficial displays.",
+    "perspectival_gap": "The individual (Snare) experiences the availability heuristic as a trap, with no escape from biased information. Information system operators (Rope) benefit from the heuristic, experiencing it as a tool for effective engagement. Analytical observers (Tangled Rope) understand the systemic nature of the extraction and the limitations of individual agency. The concerned citizen (Tangled Rope) recognizes the problem but faces constraints in addressing it effectively.",
+    "directionality_logic": "The directionality is derived from the relationship between the agents and the flow of information. Beneficiaries (information systems, advertisers, narrative shapers) experience a low d-value, as the heuristic provides them with a tool to influence others. Victims (individual decision-makers, public discourse quality) experience a high d-value, as their cognitive resources and informational environment are manipulated."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "confirmation_bias",
+      "echo_chamber_effects",
+      "filter_bubble"
+    ]
+  },
+  "directionality_overrides": []
+}

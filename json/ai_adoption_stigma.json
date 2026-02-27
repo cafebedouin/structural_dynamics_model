@@ -2,26 +2,27 @@
   "header": {
     "constraint_id": "ai_adoption_stigma",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aias"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
     "claimed_type": "tangled_rope",
     "human_readable": "Workplace Stigma Against Using Generative AI",
-    "topic_domain": "technological/social_norms",
+    "topic_domain": "technological/labor/organizational",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "traditionalist_knowledge_workers",
-      "effort_valuing_managers"
+      "incumbent_knowledge_workers",
+      "management_gatekeepers"
     ],
     "victims": [
-      "ai_adopters",
-      "organizational_productivity"
-    ],
-    "mandatrophy_resolved": false
+      "early_adopters",
+      "productivity_optimization",
+      "organizational_efficiency"
+    ]
   },
   "perspectives": [
     {
@@ -29,133 +30,160 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Early Adopter",
-      "comment": "PERSPECTIVE 1: EARLY ADOPTER (SNARE) — Trapped within a team or company culture that penalizes efficiency. Using the best tool for the job leads to social ostracism or negative career consequences. The constraint extracts their potential productivity and forces them into less efficient workflows. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.63. This just misses the snare threshold, but from the agent's view, the coercion is total."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Traditionalist Worker",
-      "comment": "PERSPECTIVE 2: TRADITIONALIST WORKER (ROPE) — Experiences the stigma as a pure coordination mechanism to protect job security, maintain established quality standards, and preserve the value of their experience. The norm coordinates collective resistance to a perceived threat. As a beneficiary with constrained exit, d is low, leading to low χ."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The C-Suite Executive",
-      "comment": "PERSPECTIVE 3: C-SUITE EXECUTIVE (SCAFFOLD) — Views the stigma as a temporary, internal cultural friction impeding productivity. It's a problem to be managed and dismantled via new policies, training, and performance metrics. The 'sunset clause' is the inevitable corporate mandate for AI integration. The constraint is a temporary support for a legacy workflow that must be removed."
+      "label": "The Early Adopter",
+      "comment": "PERSPECTIVE 1: EARLY ADOPTER (SNARE) \u2014 Powerless individual contributor who uses AI tools faces social ostracism, implicit performance suspicion, and career risk (marked as 'not a real worker', 'taking shortcuts'). Trapped by employment dependency and employment market reputation. Maximum extraction and suppression: cannot exit the workplace stigma without abandoning AI use or leaving the organization entirely. No coordination benefit perceived \u2014 pure extraction through social coercion."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Knowledge Worker Cohort",
+      "comment": "PERSPECTIVE 2: KNOWLEDGE WORKER COHORT (TANGLED ROPE) \u2014 Moderate power; constrained exit (can move to other employers but most face similar stigma). Experience mixed dynamics: some coordination benefit (shared epistemic standards preserve work quality perception) but also extraction (stigma protects against displacement, slowing adoption of more efficient tools). Benefits from coordination (job security during transition) but bears cost of constrained productivity. Partial agency and partial extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's default view. The constraint has a genuine (if defensive) coordination function for incumbents (Rope aspect) but also clearly extracts value from adopters and the organization by suppressing productivity gains (Snare aspect). It requires active social enforcement to persist. This matches the claimed_type."
+      "label": "The Legacy Professional Services Firm",
+      "comment": "PERSPECTIVE 3: LEGACY PROFESSIONAL SERVICES FIRM (ROPE) \u2014 Institutional beneficiary; arbitrage exit (can shift hiring, service delivery, and pricing based on AI policy). Experiences constraint as pure coordination: maintaining stigma against internal AI use allows firm to claim human expertise, justify premium pricing, and maintain human-centric positioning against rivals. No extraction \u2014 the firm gains through cultural differentiation. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The AI-Native Tech Sector",
+      "comment": "PERSPECTIVE 4: AI-NATIVE TECH SECTOR (SCAFFOLD) \u2014 Organized agents (startups, AI-first firms) see workplace AI stigma as a temporary coordination failure with a sunset. They experience low extraction because they have mobile exit: hiring AI-literate talent, rewarding AI integration, and capturing productivity gains. The stigma is external (legacy sector noise), not structural to their operations. The sunset clause is real: as labor markets tighten and productivity gaps widen, legacy firms will either adopt AI norms or lose talent. Estimated sunset: 3-7 years as generational workforce turnover accelerates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Guild-Like Professional Standard",
+      "comment": "PERSPECTIVE 5: PROFESSIONAL STANDARD BODY (PITON) \u2014 Institutional actors (professional associations, certification bodies, industry councils) maintain anti-AI rhetoric and gatekeeping (e.g., CPA firms labeling AI-assisted tax prep as 'inadequate professional judgment', law firms claiming AI cannot understand client context). These standards are substantially performative: the substantive differences between AI-assisted and human-only work are often marginal, but professional bodies maintain the stigma to preserve membership value and licensing scarcity. Theater ratio high (0.61) reflects that much of the professional objection is about signaling rigor rather than demonstrable quality gaps. The institutional machinery (continuing education requirements, certification audits, professional codes) persists through inertia even as the functional justification erodes."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
-      "time_horizon": "generational",
+      "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Technological Determinist",
-      "comment": "PERSPECTIVE 5: THE TECHNOLOGICAL DETERMINIST (MOUNTAIN - FALSE SUMMIT) — This perspective naturalizes the social friction, framing it as an immutable law of human nature ('people always resist new technology'). The engine will flag this as a false summit, as the base properties (high ε and suppression) are inconsistent with a natural law."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some cognitive verification lag between tool output and human understanding is irreducible: AI systems cannot fully audit their own reasoning, and humans must bear epistemic responsibility for using them. The constraint appears as an immutable feature of tool-mediated knowledge work. However, structural data contradicts the mountain classification: the empirical threshold for 'verified AI output' vs 'unverified human intuition' is arbitrary and historically contingent. The engine will compute this as a false summit, revealing naturalization of institutional preference for human gatekeeping as inherent cognitive limit."
     }
   ],
   "omegas": [
     {
-      "id": "productivity_gain_reality",
-      "question": "Is the productivity gain from generative AI for core tasks substantial and reliable enough to outweigh potential quality degradation?",
-      "resolution_mechanism": "Controlled studies comparing AI-assisted vs. traditional workflows on key business metrics (e.g., code quality, report accuracy, customer satisfaction).",
-      "impact": "If gains are marginal or quality suffers, the stigma is a rational coordination mechanism (Rope). If gains are substantial, the stigma is primarily an extractive mechanism (Snare/Tangled Rope).",
+      "id": "epistemic_responsibility_boundary",
+      "question": "Where is the boundary between legitimate epistemic responsibility (humans verify AI output) and extractive gatekeeping (stigma prevents any AI contribution)?",
+      "resolution_mechanism": "Comparative analysis of error rates and accountability outcomes in AI-assisted vs human-only workflows across domains (legal discovery, tax prep, medical coding, technical documentation); measurement of whether verification standards are applied uniformly to human vs AI work",
+      "impact": "If boundary is clear and defensible: partial stigma may be justified coordination mechanism. If boundary is arbitrary: stigma is pure extraction protecting professional scarcity.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Quantifying the actual productivity vs. quality trade-off of AI use."
+      "description": "Legitimate epistemic responsibility vs extractive gatekeeping threshold"
     },
     {
-      "id": "source_of_stigma",
-      "question": "Is the stigma rooted in a defense of legitimate, hard-won human skills or primarily in fear of job displacement?",
-      "resolution_mechanism": "Sociological surveys and interviews with employees to distinguish between craft-based objections and economic anxiety.",
-      "impact": "If craft-based, the constraint has a stronger coordination function. If fear-based, it is more purely extractive.",
+      "id": "productivity_gain_distribution",
+      "question": "Do organizations that normalize AI use capture productivity gains through wage suppression, price reduction, or shared prosperity?",
+      "resolution_mechanism": "Longitudinal wage and compensation analysis in AI-adopting vs AI-resistant sectors; comparison of service pricing and worker compensation in firms with vs without AI integration policies",
+      "impact": "If gains are captured by capital: stigma in legacy firms is extraction that slows wage loss. If gains are shared: stigma is pure extraction that prevents worker benefit.",
       "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Distinguishing between skill-based and fear-based resistance."
+      "type_class": "empirical",
+      "description": "Distribution of AI productivity gains"
     },
     {
-      "id": "management_intervention_timeline",
-      "question": "At what point will corporate leadership intervene to formally sanction or mandate AI use, thereby dissolving the informal stigma?",
-      "resolution_mechanism": "Tracking policy changes in Fortune 500 companies; analysis of competitive pressures forcing adoption.",
-      "impact": "A short timeline confirms the 'Scaffold' perspective. A long or indefinite timeline suggests the 'Tangled Rope' is a stable, persistent state.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Predicting the timeline for top-down policy intervention."
+      "id": "skill_obsolescence_rate",
+      "question": "Does AI adoption accelerate skill obsolescence for human workers, or does it shift skill requirements without net employment loss?",
+      "resolution_mechanism": "Comparative career arc analysis: employment tenure and wage trajectories for workers in AI-adopting vs resistant organizations; industry wage premiums for AI-literacy vs traditional expertise",
+      "impact": "If obsolescence is rapid: worker-side stigma is rational self-defense. If skill shift is manageable: stigma is institutional coordination that could be replaced by training systems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of skill obsolescence from AI adoption"
+    },
+    {
+      "id": "output_quality_parity",
+      "question": "For core professional tasks (legal research, medical coding, financial analysis), is AI-assisted work quality empirically indistinguishable from human-only work at equivalently careful standards?",
+      "resolution_mechanism": "Blind comparison studies: external auditors evaluate work samples from AI-assisted and human-only workflows; statistical analysis of error, omission, and quality metrics without disclosure of production method",
+      "impact": "If parity exists: stigma is pure extraction with no quality justification. If significant quality gaps exist: stigma may reflect real epistemic concerns.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quality parity of AI-assisted vs human work"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.25
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.55
-    },
-    {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2,
-      "value": 0.3
+      "time_point": 3,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 6,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
       "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
     }
   ],
   "interval": {
     "start": 0,
-    "end": 5
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "An emergent social norm in many professional workplaces treats the use of generative AI for core tasks as a form of cheating, incompetence, or a threat to job security. This informal constraint is not codified in policy but is enforced through social pressure, peer judgment, and managerial bias towards observable, traditional effort. It creates a conflict between individual incentives for efficiency and collective anxieties about technological displacement and skill devaluation.",
+    "narrative_context": "Workplace stigma against generative AI use represents an emergent social norm that frames AI-assisted work as cheating, incompetence, or threat to job security. This constraint operates simultaneously as coordination (preserving shared epistemic standards for output quality), extraction (protecting incumbent workers and professional gatekeepers from competition), and temporary adaptation (as the labor market adjusts to AI-augmented workflows). The constraint exhibits high suppression (0.68) through multiple mechanisms: career risk for early adopters (performance suspicion, promotion bias), organizational policies that discourage AI use even where it improves efficiency, and professional standard bodies that frame AI as ethically inferior. The theater ratio (0.61) reflects that much of the professional objection is performative: substantive quality differences between AI-assisted and human-only work are often marginal, but the epistemic authority associated with 'human judgment' commands higher social valuation. The extractiveness (0.52) captures the intermediate position between pure extraction (preventing all adoption to protect jobs) and pure coordination (setting reasonable verification standards). The constraint's lifecycle shows rapid growth: theater and extractiveness both increased significantly over the interval as AI capabilities matured and workplace exposure expanded, suggesting the norm is still crystallizing rather than stable.",
     "key_agents": [
-      "AI Adopters: Primary victims (powerless/trapped) — seek to improve productivity but face social and career penalties.",
-      "Traditionalist Knowledge Workers: Primary beneficiaries (moderate/constrained) — their skills and job security are shielded by the norm.",
-      "Effort-Valuing Managers: Secondary beneficiaries (organized/constrained) — the norm reinforces traditional models of performance evaluation based on visible labor.",
-      "C-Suite Leadership: Institutional actors (institutional/arbitrage) — see the norm as a temporary cultural barrier to achieving higher organizational productivity.",
-      "Analytical Observer: The system view (analytical/analytical) — recognizes the dual nature of the constraint as both coordination and extraction."
+      "Early Adopters: Powerless individual contributors (powerless/trapped) \u2014 bear full stigma cost; cannot exit without abandoning AI or leaving organization",
+      "Knowledge Worker Cohort: Moderate incumbents (moderate/constrained) \u2014 protected by stigma from displacement but constrained by limited mobility across resistant labor markets",
+      "Legacy Professional Services Firms: Institutional actors (institutional/arbitrage) \u2014 benefit from human-expertise positioning; can arbitrage between AI-adopting and AI-resistant market segments",
+      "AI-Native Tech Sector: Organized agents (organized/mobile) \u2014 see stigma as external temporary problem; have exit (talent mobility) and see sunset as inevitable",
+      "Professional Standard Bodies: Institutional gatekeepers (institutional/arbitrage) \u2014 maintain anti-AI rhetoric through certification, continuing education, and code of conduct enforcement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional preference for human gatekeeping as irreducible epistemic limit"
     ],
-    "logic_rationale": "Extractiveness (0.55) is high because the constraint forces efficient workers to adopt inefficient methods, effectively extracting their time and potential output. It also extracts career opportunities from those labeled as 'cheaters'. Suppression (0.65) is high because the alternative (openly using AI) is met with significant social and professional risk, even without a formal rule. Theater (0.40) is moderate; while there is performativity in pretending to work 'the hard way', the social enforcement is a real and functional mechanism.",
-    "perspectival_gap": "The gap is stark. For the AI Adopter, the stigma is a Snare that punishes them for being effective. For the Traditionalist, it's a Rope coordinating a collective defense of their livelihood. For senior leadership, it's a temporary Scaffold of old work habits that must be dismantled to build a more efficient organization. The analytical view sees a Tangled Rope, acknowledging the validity of both the coordination and extraction functions that define the conflict.",
-    "directionality_logic": "Beneficiaries (Traditionalists, certain managers) perceive the constraint as coordination, leading to a low derived directionality (d) and thus low effective extraction (χ), classifying it as a Rope. Victims (AI Adopters) are the direct targets of extraction and are trapped by the culture, leading to a high d and high χ, classifying it as a Snare. The analytical perspective balances these, resulting in the Tangled Rope classification.",
-    "mandatrophy_analysis": "This constraint is a classic case where a pure 'Snare' classification would be a mandatrophy. It would ignore the genuine, albeit defensive, coordination function the stigma serves for workers anxious about displacement. The Tangled Rope classification correctly identifies that the structure has *both* a coordination element for one group and an extractive element for another. The system's purpose is to see both functions simultaneously, not to pick a side."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, intermediate between pure coordination and pure extraction. The constraint does enforce some legitimate epistemic verification (AI output should be checked), but also extracts significant value from incumbents through job protection and from early adopters through stigma cost. The 0.52 value reflects that while there is real coordination content (quality standards), the extraction component is substantial and growing. Suppression (0.68): High. Multiple coercive mechanisms operate: career risk (performance suspicion, promotion bias against AI users), organizational policies (explicit or implicit rules against AI use), professional standard enforcement (certification loss, professional discipline), and social pressure (peer perception of 'cheating'). These are not formal barriers but collectively create high barriers to adoption. Theater ratio (0.61): Moderate-high and rising. Professional standard bodies maintain anti-AI positions through ritualized gatekeeping (certification audits, continuing education requirements) while substantive quality differences are often marginal. The growth trajectory (0.35 \u2192 0.61) reflects increasing performative content as professional bodies formalize anti-AI positions despite insufficient empirical justification.",
+    "directionality_logic": "Directionality differs sharply by agent structural position. Early adopters (powerless/trapped/low d potential) experience maximum extractiveness because they bear full stigma cost with no exit. Knowledge workers (moderate power/constrained exit) experience moderate extraction through job security trade-off: they benefit from stigma-based protection against displacement but pay in constrained career options and reduced productivity. Legacy professional services (institutional/arbitrage) experience negative extraction (pure benefit): they capture pricing premiums and client trust from human-expertise positioning. AI-native sector (organized/mobile) experiences low extraction because they have exit: they hire AI-literate talent, reward integration, and can compete on productivity. Professional standard bodies (institutional/arbitrage) experience negative extraction through gatekeeping: they extract membership value, certification scarcity, and professional prestige from maintaining anti-AI standards. The beneficiary-victim structure is clear: incumbents and gatekeepers benefit; early adopters and efficiency gains bear costs.",
+    "perspectival_gap": "This constraint shows maximum perspectival divergence. The early adopter sees pure extraction (Snare): stigma is coercive with no coordination benefit. The knowledge worker sees hybrid dynamics (Tangled Rope): some coordination benefit (job security) mixed with extraction (constrained options). The legacy firm sees pure coordination (Rope): stigma solves their differentiation problem and captures premium pricing. The AI-native sector sees a temporary problem with exit (Scaffold): they can and do adopt, seeing the stigma as external legacy-sector inertia. The professional standard body sees degraded gatekeeping (Piton): the anti-AI rhetoric persists through institutional machinery even as empirical justification erodes. The analytical observer risks a false summit (Mountain): viewing epistemic verification requirements as immutable rather than historically contingent institutional choice. The presheaf over these perspectives reveals the constraint's structure: it is extraction for some, coordination for others, temporary for some, and degraded ritual for others \u2014 all simultaneously true.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing the tangled rope classification is correct: the constraint has BOTH a genuine coordination function (epistemic verification, quality standards) AND asymmetric extraction (job protection for incumbents, stigma cost for early adopters). The coordination component is real but limited: reasonable verification standards exist, but the constraint goes well beyond verification into gatekeeping. The extraction component is also real and substantial: the constraint protects incumbent wages and professional prestige through artificial scarcity. The mandatrophy resolution is structural: if you remove the extraction component (stigma, career risk), the remaining coordination content (verification standards, quality checks) is modest and easily replaced by technical systems. If you remove the coordination framing entirely, the constraint appears as pure extraction (Snare). The tangled rope classification holds because both components are structurally required for the constraint to persist \u2014 remove either and the constraint destabilizes. The false summit risk from Perspective 6 highlights that framing the constraint as 'natural epistemic requirement' (Mountain) is itself a rhetorical extraction mechanism: it legitimizes the institutional gatekeeping by naturalizing it as inevitable. The analytical observer's danger is that the coordination and gatekeeping are deeply entangled in professional discourse, making the separation look impossible rather than contingent."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "imposter_syndrome",
-      "corporate_surveillance"
-    ]
-  }
+      "knowledge_worker_wage_compression",
+      "professional_licensing_scarcity",
+      "organizational_productivity_ceiling"
+    ],
+    "dual_formulation_note": "The workplace AI stigma is downstream of general AI capability advances but upstream of specific labor market outcomes (wage structure, employment tenure, skill premiums). The constraint operates at the organizational and professional-norm level, distinct from technical capability constraints or individual adoption decisions. Network links track how stigma propagates through labor markets and professional institutions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
 }

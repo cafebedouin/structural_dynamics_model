@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "trump_critical_minerals",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Trump Critical Minerals Stockpile Project",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_mining_companies",
+      "defense_industry"
+    ],
+    "victims": [
+      "taxpayers",
+      "international_trade_partners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Taxpayers",
+      "comment": "Taxpayers bear the cost of the stockpile through increased taxes or reallocation of resources, with little direct benefit and no exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Trade Partners",
+      "comment": "International trade partners face constrained access to the US market for critical minerals, which can disrupt trade relationships and economic stability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Domestic Mining Companies",
+      "comment": "Domestic mining companies benefit from increased demand and government contracts, leading to higher profits and market share. They can arbitrage government support."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Defense Industry",
+      "comment": "The defense industry benefits from a secure supply of critical minerals, reducing reliance on foreign sources. They can arbitrage this security into reliable production."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The stockpile project presents a complex mix of strategic security, economic protectionism, and potential market distortion."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effectiveness_of_stockpile",
+      "question": "Will the stockpile effectively mitigate supply chain vulnerabilities and reduce reliance on foreign suppliers?",
+      "resolution_mechanism": "Analysis of stockpile composition, storage capacity, and potential release mechanisms during supply disruptions.",
+      "impact": "If effective, the project will enhance national security and economic resilience. If ineffective, it will waste resources and create artificial market distortions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The effectiveness of the stockpile in mitigating supply chain vulnerabilities."
+    },
+    {
+      "id": "economic_impact_on_trade_partners",
+      "question": "What is the magnitude of the economic impact on international trade partners, particularly those with established supply relationships?",
+      "resolution_mechanism": "Economic modeling of trade flows, analysis of tariff policies, and evaluation of alternative sourcing strategies.",
+      "impact": "If the impact is significant, it could lead to trade disputes and retaliatory measures. If minimal, the project may be viewed as a reasonable measure to enhance national security.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The economic impact on international trade partners."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Trump administration initiated a project to stockpile critical minerals, aiming to reduce reliance on foreign suppliers, particularly China. This project aimed to enhance national security and support domestic mining industries, but it also raised concerns about economic protectionism and trade relations.",
+    "key_agents": [
+      "Domestic Mining Companies: Beneficiaries of increased demand and government contracts.",
+      "Defense Industry: Beneficiaries of a secure supply of critical minerals.",
+      "Taxpayers: Victims who bear the cost of the stockpile through increased taxes.",
+      "International Trade Partners: Victims who face constrained access to the US market."
+    ],
+    "logic_rationale": "The extractiveness value (0.55) reflects the cost to taxpayers and potential disruption to international trade. The suppression value (0.45) accounts for the limited exit options for affected parties. The theater ratio (0.30) is relatively low, indicating that the project has a genuine strategic purpose.",
+    "perspectival_gap": "The stockpile project is viewed differently by various actors. Domestic industries see it as a positive step towards economic security, while taxpayers and international partners may perceive it as an unfair burden or trade barrier. The analytical observer recognizes the complex trade-offs involved.",
+    "directionality_logic": "The directionality logic is based on the structural relationship between the agents and the constraint. Beneficiaries, such as domestic mining companies, experience low directionality, while victims, such as taxpayers and international trade partners, experience high directionality.",
+    "mandatrophy_analysis": "The tangled rope classification is appropriate because the project combines elements of coordination (securing mineral supply) and extraction (cost to taxpayers and trade partners). It prevents mislabeling as pure extraction by acknowledging the strategic value of the stockpile."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_china_trade_relations",
+      "global_mineral_supply_chains"
+    ]
+  },
+  "directionality_overrides": []
+}

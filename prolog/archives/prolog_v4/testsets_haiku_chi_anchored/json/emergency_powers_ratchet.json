@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "emergency_powers_ratchet",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "emerg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Permanent Crisis Scaffold",
+    "topic_domain": "political/legal/social",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "executive_branch",
+      "security_apparatus",
+      "administrative_bureaucracy"
+    ],
+    "victims": [
+      "civil_liberties_constituency",
+      "legislative_oversight_capacity",
+      "rule_of_law_institutional_framework"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Constitutionally-Protected Citizen",
+      "comment": "PERSPECTIVE 1: CONSTITUTIONALLY-PROTECTED CITIZEN (SNARE) \u2014 Subject to indefinite emergency powers with no mechanism to revoke them; trapped within jurisdiction; cannot arbitrage to alternative legal systems. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. Maximum extraction: civil liberties suppressed without exit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Legislative Branch (as Institutional Constraint)",
+      "comment": "PERSPECTIVE 2: LEGISLATIVE BRANCH OVERSIGHT CAPACITY (SNARE) \u2014 Structurally disabled by emergency powers transferred to executive; normalization of delegation erodes legislature's ability to reclaim authority; trapped by precedent and institutional inertia. d\u22480.88, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.78. Extraction of institutional capacity from legislative to executive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Liberties Organizations",
+      "comment": "PERSPECTIVE 3: CIVIL LIBERTIES ORGANIZATIONS (TANGLED ROPE) \u2014 Constrained by resource limits and legal standing requirements; also benefit from emergency powers framework as it generates litigation, fundraising, and public attention to constitutional issues. d\u22480.70, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.63. Mixed: extraction of liberties + coordination benefit of visibility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Executive Branch (Functional Coordinator)",
+      "comment": "PERSPECTIVE 4: EXECUTIVE BRANCH AS FUNCTIONAL COORDINATOR (ROPE) \u2014 During acute crisis, emergency powers solve genuine coordination problems (rapid resource mobilization, unified command). Executive experiences the constraint as coordination mechanism. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.006. Negative effective extraction: net beneficiary through coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Constitutional Reform Movements",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL REFORM MOVEMENTS (SCAFFOLD) \u2014 Organized agents (constitutional reform advocates, emergency sunset clause proponents) see this as a temporary coordination failure with a clear sunset mechanism: constitutional amendment requiring automatic expiration of emergency powers, supermajority renewal thresholds, or emergency sunset clauses in legislation. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.20. Low effective extraction because organized agents see agency and path forward."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Historical Constitutional Theater",
+      "comment": "PERSPECTIVE 6: HISTORICAL CONSTITUTIONAL THEATER (PITON) \u2014 From civilizational distance, emergency powers frameworks persist through ritual performance of crisis response rather than functional necessity; constitutional interpretations that enabled the original powers persist through doctrinal inertia despite changed circumstances. theater_ratio=0.65. Degraded mechanism: the constitutional justifications (emergency/temporary) have atrophied while the powers remain."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From universal/civilizational perspective, emergency powers ratchet appears as an immutable property of state capacity: any state facing existential crisis must concentrate power in executive; once concentrated, power cannot be disaggregated without loss of institutional memory and capacity; therefore emergency powers persist as natural law of political organization. However, \u03b5=0.58, suppression=0.68, theater=0.65 contradicts mountain classification \u2014 reveals false summit naturalizing what is contingent institutional design (constitutional frameworks can enforce sunsetting)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "crisis_necessity_threshold",
+      "question": "What objective criteria distinguish genuine emergency requiring power concentration from politically-manufactured crisis used to justify normalization?",
+      "resolution_mechanism": "Comparative historical analysis across democracies: measure correlation between crisis severity metrics (mortality, economic disruption, external threat) and duration of emergency powers; identify cases where powers persisted despite demonstrable crisis resolution",
+      "impact": "If genuine emergencies require longer powers than currently exercised: ratchet is functional (Rope/Scaffold). If crisis severity shows no correlation with power duration: ratchet is pure extraction (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinction between genuine emergency necessity and political crisis manufacture"
+    },
+    {
+      "id": "sunsetting_mechanism_feasibility",
+      "question": "Can constitutional automatic expiration, supermajority renewal, or emergency impact assessment requirements actually function to limit power ratcheting, or do these mechanisms themselves get circumvented?",
+      "resolution_mechanism": "Case study of democracies with constitutional sunset clauses (Germany post-1949, Austria, various post-colonial states); measure actual compliance rates and mechanisms used to circumvent/extend sunset clauses",
+      "impact": "If sunset mechanisms work: scaffold perspective confirmed and mandatrophy resolved through institutional design. If consistently circumvented: constraint is truly snare, not scaffold, and mandatrophy unresolvable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of constitutional sunset mechanisms in limiting emergency power duration"
+    },
+    {
+      "id": "institutional_memory_loss_claim",
+      "question": "Does devolution of emergency powers to legislatures actually result in measurable loss of crisis response capacity, or is this narrative justification for executive retention?",
+      "resolution_mechanism": "Comparative analysis: measure response times, resource mobilization efficiency, and coordination effectiveness in crisis scenarios under different power distributions; control for prior preparation and institutional investment",
+      "impact": "If true capacity loss occurs: emergency powers ratchet has genuine functional basis (Rope component). If no measurable loss: ratchet is pure rent-seeking (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether devolution of emergency powers causes measurable loss of crisis response capacity"
+    },
+    {
+      "id": "normalization_psychological_mechanism",
+      "question": "What psychological and institutional mechanisms cause actors to normalize emergency powers as 'business as usual,' treating temporary measures as permanent fixtures?",
+      "resolution_mechanism": "Analysis of legislative debate transcripts, executive orders, and legal briefs over time; measure frequency of 'emergency' framing vs permanent administrative language; interview government officials on perceived temporality of specific powers",
+      "impact": "If strong normalization mechanisms exist: theater component of constraint increases over time (piton perspective strengthens). If normalization resists, crisis language persists: constraint remains Tangled Rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Psychological mechanisms underlying normalization of temporary emergency measures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The emergency powers ratchet is a structural tendency in democracies and autocracies alike for temporary legal authorities, granted during acute crisis (war, pandemic, financial collapse), to persist and become normalized as permanent administrative fixtures. The constraint exhibits multiple perspectives from the same base properties: the executive experiences it as genuine coordination during crisis; the citizens experience it as extraction via suppressed civil liberties; constitutional reformers see it as a scaffold with solvable design (sunset clauses); the historical constitutional framework views itself as degraded ritual (piton); and the powerless legislative branch experiences it as structural disability. Theater ratio rises from 0.20 (acute crisis, genuine emergency framing) to 0.65 (normalized administrative tool, crisis language vestigial). Extractiveness rises from 0.35 (legitimate temporary coordination) to 0.58 (permanent rent-seeking apparatus). The constraint is Tangled Rope, not pure Snare, because it genuinely solves coordination problems during acute crisis while asymmetrically extracting power from legislative and civil liberties constituencies after the crisis resolves. The mandate is resolved: the constraint combines real coordination function (emergency response) with asymmetric extraction (permanent power consolidation), meeting the Tangled Rope gates of requiring active enforcement, multiple beneficiaries, and multiple victims.",
+    "key_agents": [
+      "Executive Branch: Primary beneficiary (institutional/arbitrage) \u2014 captures and retains concentrated power; experiences constraint as coordination mechanism during crisis, extraction mechanism after normalization",
+      "Security Apparatus: Primary beneficiary (institutional/constrained) \u2014 expanded surveillance, detention, and enforcement authorities; interests aligned with executive branch in power persistence",
+      "Administrative Bureaucracy: Primary beneficiary (institutional/arbitrage) \u2014 emergency authorities bypass normal budgetary, oversight, and procedural constraints; gains operational flexibility",
+      "Civil Liberties Constituency: Primary victim (powerless/trapped) \u2014 subject to surveillance, detention, travel restrictions, and censorship with no effective exit or remedy mechanism",
+      "Legislative Oversight Capacity: Primary victim (moderate/trapped) \u2014 structurally disabled by delegation of powers to executive; eroded by precedent and normalization; cannot reclaim authority without destabilizing acknowledged-competent arrangements",
+      "Rule of Law Institutional Framework: Primary victim (institutional/trapped) \u2014 separation of powers, constitutional constraints on executive authority, due process protections all degraded by emergency powers normalization",
+      "Constitutional Reform Movements: Secondary actor (organized/constrained) \u2014 advocates for sunset clauses, supermajority renewal thresholds, emergency impact assessments; sees constraint as solvable through institutional design",
+      "Historical Constitutional Doctrine: Institutional observer (institutional/arbitrage) \u2014 doctrinal justifications for emergency powers persist through inertia despite changed crisis circumstances; maintains performative role (piton)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts power from legislatures and civil liberties from citizens, but the extraction is not total because (a) it provides genuine coordination benefit during acute crisis, and (b) partial oversight mechanisms exist (courts, institutional resistance, public protest) that create friction. The value represents the asymmetric extraction after normalization, not during peak crisis. Suppression (0.68): High. Civil liberties are suppressed through justified emergency measures, with limited appeal mechanisms. Alternative governance structures are suppressed through the claim that emergency powers are necessary. Exit options are severely limited \u2014 citizens cannot arbitrage to alternative legal systems or opt out of emergency jurisdiction. Theater ratio (0.65): Moderate-high. The framework maintains ritual invocation of 'emergency' and 'temporary' language, but these are increasingly performative \u2014 the administrative structures persist and are treated as permanent fixtures. Crisis language becomes theater as the genuine emergency recedes and the powers remain. The theater has increased from 0.20 (genuine crisis, authentic emergency) to 0.65 (normalized fixture, crisis language vestigial) over the measured interval.",
+    "perspectival_gap": "This constraint demonstrates perspectival inversion: the beneficiary (executive) sees coordination and necessity; the victim (citizen) sees extraction and suppression; the reformer (constitutional movement) sees a solvable design problem; the institution (legislative branch) sees its own degradation; the historian (civilizational view) sees normalized ritual. The critical gap is between immediate crisis response (genuine coordination necessity) and post-crisis normalization (pure extraction). The executive's Rope perspective is valid during acute crisis when emergency powers solve genuine problems \u2014 but the constraint persists and extracts value after the crisis resolves, shifting toward Snare. The scaffold perspective is rational (sunset mechanisms can work) but is resisted by the beneficiary due to power loss aversion. The piton perspective reveals the normalization dynamic: crisis language persists performatively while actual function atrophies \u2014 emergency powers become administrative routine justified by outdated crisis narratives. The mountain perspective is a false summit: the analytical observer risks naturalizing a contingent institutional arrangement (emergency power delegations that could be constitutionally constrained) as an immutable property of state capacity.",
+    "directionality_logic": "Executive branch: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary during and after crisis. Security apparatus: Beneficiary + constrained \u2192 d\u22480.12, f(d)\u2248-0.02. Slight beneficiary; powers constrain but primarily expand their authority. Citizens: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction \u2014 no exit, no remedy. Legislative branch: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.35. Severe extraction \u2014 disabled by precedent and normalization. Constitutional reformers: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction; have agency and clear reform pathway. Historical constitutional framework: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification comes from high theater, not from directionality. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival false summit (naturalizes contingent design).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED through Tangled Rope classification: The constraint combines genuine coordination function (emergency crisis response) with asymmetric extraction (permanent power consolidation after crisis ends). The base properties satisfy all Tangled Rope gates: (1) requires_active_enforcement=true (emergency powers must be continually invoked and defended), (2) beneficiaries=[executive_branch, security_apparatus, administrative_bureaucracy] (multiple institutional beneficiaries), (3) victims=[civil_liberties_constituency, legislative_oversight_capacity, rule_of_law_framework] (multiple victims). The mandatrophy arises from the false summit risk: the constraint appears to be immutable property of state capacity (Mountain) from the civilizational/analytical perspective, which would collapse it to pure law and obscure the extractive dimensions. The Tangled Rope classification prevents this collapse by showing that the 'necessity' of emergency powers is contingent on (a) whether the crisis has actually ended, and (b) whether constitutional mechanisms enforce sunsetting. Democracies with effective sunset clauses (Germany, Austria, post-1949 constitutional frameworks) experience lower extractiveness and shorter power duration; this proves the extraction is not natural law but institutional design choice. The constraint is resolved: it is Tangled Rope, not false Mountain, because the contingent institutional arrangements can be reformed (sunset clauses, supermajority renewal, emergency impact assessments) without destroying legitimate crisis response capacity."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "separation_of_powers_degradation",
+      "civil_liberties_suppression_normalization",
+      "executive_accountability_erosion"
+    ],
+    "dual_formulation_note": "Emergency powers ratchet is downstream of legitimate crisis response needs and upstream of systemic separation-of-powers erosion. The constraint family includes: (1) acute crisis coordination (high \u03b5, genuine Rope/Scaffold), (2) power normalization after crisis (moderate \u03b5, Tangled Rope), (3) constitutional framework degradation (high \u03b5, Snare from legislator/citizen perspectives). This story captures the Tangled Rope (moderate-high \u03b5) after normalization has occurred but before total institutional collapse."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

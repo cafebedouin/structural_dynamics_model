@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "hagia_sophia_status",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hagia"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "The enforced religious and political status of the Hagia Sophia",
+    "topic_domain": "religious/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "turkish_state_authority",
+      "sunni_islamic_establishment"
+    ],
+    "victims": [
+      "orthodox_christian_community",
+      "secular_heritage_advocates",
+      "religious_pluralism"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Orthodox Christian Diaspora",
+      "comment": "PERSPECTIVE 1: ORTHODOX CHRISTIAN DIASPORA (SNARE) \u2014 Cannot exit or change the constraint. Access to one of Christianity's holiest sites is blocked by decree. Bears full cost of political-religious exclusion. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Global Heritage Community",
+      "comment": "PERSPECTIVE 2: GLOBAL HERITAGE COMMUNITY (SNARE) \u2014 Cannot enforce UNESCO norms or secular museum status. The Hagia Sophia's status is determined unilaterally by the host state. UNESCO world heritage advocates are structurally powerless to prevent conversion. d\u22480.90, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Secular Turkish Intellectual Elite",
+      "comment": "PERSPECTIVE 3: SECULAR TURKISH INTELLECTUAL ELITE (TANGLED ROPE) \u2014 Constrained by majority religious politics and nationalist sentiment, but also benefits from Turkey's secular governance legacy and international credibility. Exit options exist (emigration, institutional relocation) but carry professional cost. Mixed: the constraint both undermines their universalist values and reflects their electoral marginalization. d\u22480.65, f(d)\u22480.98, \u03c3=1.0 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Turkish State Authority",
+      "comment": "PERSPECTIVE 4: TURKISH STATE AUTHORITY (ROPE) \u2014 Experiences the constraint as a coordination mechanism solving a domestic political problem: converting the museum status to mosque status aligns the state with majority religious sentiment and consolidates electoral support. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.006. Net beneficiary; the constraint is functional coordination from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Sunni Islamic Establishment",
+      "comment": "PERSPECTIVE 5: SUNNI ISLAMIC ESTABLISHMENT (ROPE) \u2014 Gains access to one of Islam's most symbolically potent sites and consolidates religious authority. The constraint is purely coordinating from this view: it resolves decades of contention by establishing ownership and use. d\u22480.10, f(d)\u2248-0.09, \u03c3=0.9 \u2192 \u03c7\u2248-0.005. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Heritage Regime",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL HERITAGE REGIME (PITON) \u2014 UNESCO norms, secular preservation, and pluralist access doctrines remain formally stated but are performatively maintained. The international community protests symbolically but enforces nothing; the constraint persists through institutional theater (statements, resolutions) with no functional mechanism. theater_ratio\u22480.65 (norms articulated but unenforced). d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.50. The regime is degraded \u2014 the norms exist but cannot enforce compliance against sovereign state authority."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Sovereignty View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SOVEREIGNTY VIEW (ATTEMPTED MOUNTAIN) \u2014 From a pure state-sovereignty lens, the host nation's right to determine the use of its internal cultural sites is seen as a natural law: states control their own property. \u03b5\u22480.15 from this pure sovereignty frame. But the structural data (\u03b5=0.58, suppression=0.68) contradicts this \u2014 the constraint is enforced precisely because it suppresses alternatives and extracts political value. The 'natural sovereignty' framing is a false summit that naturalizes political choice as law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "religious_access_equivalence",
+      "question": "Does restricting Orthodox Christian access to the Hagia Sophia constitute extraction, or is it merely assertion of religious ownership equivalent to restricting Muslim-majority site access for non-Muslims?",
+      "resolution_mechanism": "Comparative analysis of access restrictions across Christian-majority countries (e.g., restrictions on Muslim access to sites like Canterbury, Notre-Dame in ordinary operation), Islamic-majority countries (Saudi Arabia's Mecca/Medina restrictions), and Jewish-majority sites; assessment of whether asymmetric restrictions reflect equal reciprocal norms or unequal power",
+      "impact": "If equivalent reciprocal: classification shifts toward Rope (pure coordination resolving competing property claims). If asymmetric power dynamic: classification remains Snare (extraction via suppression of access to majority-preferred site).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether access restrictions are symmetric reciprocal norms or asymmetric power extraction"
+    },
+    {
+      "id": "electoral_legitimacy_threshold",
+      "question": "What electoral mandate or public opinion threshold justifies converting a UNESCO world heritage site from secular preservation to religious use?",
+      "resolution_mechanism": "Survey data on Turkish public opinion regarding Hagia Sophia status (pre-2020 and post-2020); analysis of electoral platforms and campaign messaging; cross-national comparison of heritage site conversion politics in other democracies",
+      "impact": "If majority sentiment is legitimate democratic mandate: constraint is Tangled Rope (mixed coordination of electoral will + suppression of minority position). If majority sentiment is manipulated via nationalist framing: constraint remains Snare (suppression of alternatives via manufactured consent).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Threshold of democratic legitimacy for heritage site religious conversion"
+    },
+    {
+      "id": "international_enforcement_capacity",
+      "question": "Can international heritage regimes (UNESCO, ICOMOS, ICJ) meaningfully enforce preservation or access norms against sovereign state resistance?",
+      "resolution_mechanism": "Historical analysis of enforcement outcomes in comparable cases (e.g., Bamiyan Buddhas, Angkor Wat, Palmyra); assessment of sanctions, diplomatic pressure, and compliance rates; identification of successful vs failed international interventions",
+      "impact": "If enforceable: international regime is not piton but active rope with real coordination function. Constraint shifts to institutional standoff. If unenforceable: piton diagnosis confirmed \u2014 international norms are purely performative theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether international heritage enforcement mechanisms have real compliance mechanisms"
+    },
+    {
+      "id": "pluralist_access_sustainability",
+      "question": "Is there a structurally stable equilibrium in which the Hagia Sophia serves both Muslim worship and Christian/secular heritage functions, or does functional use require exclusive control?",
+      "resolution_mechanism": "Case study analysis of shared-use religious sites (e.g., Church of the Holy Sepulchre, Cordoba Cathedral-Mosque during Al-Andalus period); assessment of operational models, maintenance responsibilities, access scheduling, and conflict resolution mechanisms",
+      "impact": "If shared-use models are stable: constraint is organizational (Rope or Scaffold with sunset to pluralism). If shared use is structurally unstable: conversion to exclusive use is inevitable extraction from non-majority perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether shared-use religious heritage sites maintain stable pluralist access"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
+  "commentary": {
+    "narrative_context": "The Hagia Sophia status constraint represents a contested claim over one of the world's architecturally and religiously significant structures. Built as a Byzantine cathedral in 537 CE, converted to a mosque in 1453 after the Ottoman conquest, secularized as a museum in 1935 by Atat\u00fcrk's reforms, and reconverted to a mosque in 2020 by presidential decree, the Hagia Sophia embodies competing frameworks: religious ownership and access rights, secular heritage preservation, international cultural norms, Turkish national sovereignty, and democratic legitimacy. The constraint exhibits structural extraction (suppression of Christian access, dismissal of international heritage consensus, subordination of secular governance norms) masked by coordination framing (resolving electoral demand, aligning with majority religious sentiment). The extractiveness has increased over the interval as political pressure has mounted and the secular-religious contestation has intensified. The theater ratio reflects that both sides deploy symbolic and performative appeals (international protests that have no enforcement mechanism, state invocation of sovereignty and religious ownership) rather than functional negotiation.",
+    "key_agents": [
+      "Orthodox Christian Community: Primary victim (powerless/trapped) \u2014 no access, no voice in decision, no exit option. Diaspora loses symbolic connection to a foundational religious site.",
+      "Secular Heritage Advocates: Secondary victim (moderate/constrained) \u2014 constrained by nationalist and religious political will; can protest but cannot prevent state action. Advocates for universalist heritage preservation lose institutional standing.",
+      "Turkish State Authority: Primary beneficiary (institutional/arbitrage) \u2014 gains consolidation of electoral support by converting museum to mosque. Experiences the constraint as solving a political problem (secular-religious tension) via state assertion.",
+      "Sunni Islamic Establishment: Primary beneficiary (institutional/arbitrage) \u2014 gains institutional access and religious authority over a site of major symbolic value. Coordinates Muslim worship without external constraint.",
+      "International Heritage Regime (UNESCO, ICOMOS): Tertiary actor (institutional/constrained) \u2014 formally opposed but structurally powerless. Maintains norms through performative statements and symbolic censure, with no enforcement mechanism.",
+      "Turkish Secular Intelligentsia: Tertiary victim (moderate/constrained) \u2014 culturally and politically marginalized by the conversion. Values universalist heritage preservation but lack electoral power to enforce it."
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts from the Orthodox community (complete access denial), from secular preservation advocates (dismissal of their universalist frame), and from international heritage norms (unilateral state override of international consensus). But extractiveness is not maximal (\u22650.70) because: (1) The Turkish state's action is responsive to genuine majority electoral sentiment (not purely coercive); (2) The conversion has a legitimate religious-ownership framing that resolves a centuries-old contestation; (3) Some coordination function exists (the conversion does align institutional will and majority sentiment, even if it suppresses minority positions). The extractiveness reflects that political choice is being enforced (not Rope-level \u22640.45) but that extraction is partially legitimated by electoral mandate (not Snare-level \u22650.70 pure coercion). Suppression (0.68): High. Orthodox Christians are completely suppressed from access to a site they view as sacred. Secular governance norms and international heritage regimes are suppressed via state sovereignty assertion. Alternative organizational models (shared access, pluralist stewardship) are suppressed via the exclusivity of state control. The suppression is structural, not accidental. Theater ratio (0.65): High-moderate. Significant performative activity: international protests that have no mechanism to change the outcome, state invocation of religious and national ownership rhetoric, secular appeals to universal heritage value that go unenforced. The theater increases over the interval as the contestation intensifies \u2014 both sides perform the conflict more explicitly, while the structural outcome (state determination of status) remains unchanged.",
+    "perspectival_gap": "This constraint generates a perspectival divide between state actors and externally positioned observers. The Turkish state authority and Sunni Islamic establishment both classify the constraint as Rope (coordination) \u2014 they are solving a genuine internal political problem (secular-religious tension) by aligning institutional will with majority sentiment. From their view, the conversion is functional and legitimate. The Orthodox Christian community and secular heritage advocates classify it as Snare (extraction) \u2014 they are excluded from access and voice, suppressed via state authority, with no exit option. The international heritage regime classifies it as Piton (degraded) \u2014 norms are formally stated but unenforced; the regime maintains itself through performative activity (statements, resolutions) that has zero impact on the actual outcome. The secular Turkish intelligentsia classify it as Tangled Rope (mixed) \u2014 they are both constrained by electoral political will (which they oppose) and benefit from living in a secular state framework (which is being undermined). The analytical observer risks classifying it as Mountain (sovereign state right) but the structural data reveals this as a false summit: the constraint is contingent on political choice and electoral dynamics, not immutable law.",
+    "directionality_logic": "Turkish State Authority: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. The state consolidates political power and authority by converting the site. Sunni Islamic Establishment: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.09. Net beneficiary. The establishment gains institutional access and authority. Orthodox Christian Community: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction from this group. No access, no voice, no exit. Secular Heritage Advocates: Victim + constrained \u2192 d\u22480.75, f(d)\u22481.10. Significant extraction. Can protest and emigrate but face career and cultural cost. International Heritage Regime: Institutional + constrained \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position. Has norms but no enforcement. Secular Turkish Intelligentsia: Mixed victim + constrained \u2192 d\u22480.65, f(d)\u22480.98. Constrained by electoral will but also live within secular state framework.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves the mandatrophy by exposing how electoral legitimacy (majority preference) and structural extraction (suppression of minority access and international norms) coexist. The key insight: a Snare classification (from the Orthodox/secular minority view) and a Rope classification (from the state/majority view) are not contradictory \u2014 they are perspectival readings of the same structural dynamic. The state IS solving a coordination problem (aligning religious access with majority sentiment). AND the Orthodox Christians ARE being extracted from (denied access to a sacred site they value). Both statements are true from their respective positions. The mandatrophy resolves by recognizing that 'legitimacy' (electoral majority) does not erase 'extraction' (suppression of minority position). The constraint is a Snare with democratic mandate \u2014 an uncomfortable hybrid where the majority votes to suppress the minority's access rights. This is politically stable (the majority enforces it) but ethically contentious (it violates pluralist and universal heritage norms). The extractiveness (0.58) and suppression (0.68) reflect this tension: high but not maximal, because the extraction is partially legitimated by electoral process, even though it remains structural suppression of alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "turkish_secular_governance_erosion",
+      "international_heritage_norm_enforcement"
+    ],
+    "dual_formulation_note": "The Hagia Sophia status constraint is downstream of broader dynamics: Turkish electoral shifts toward religious-nationalist politics (upstream), and international heritage regime capacity to enforce norms against sovereign states (upstream). The constraint represents a specific instantiation of the state-sovereignty-vs-international-norm tension in cultural heritage governance."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

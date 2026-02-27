@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "hammurabi",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ham"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "The Law of Retaliation (Lex Talionis) in Hammurabi's Code",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ruling_elite",
+      "enforcement_apparatus"
+    ],
+    "victims": [
+      "lower_classes",
+      "slaves",
+      "commoners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Slave or Commoner",
+      "comment": "PERSPECTIVE 1: SLAVE OR COMMONER (SNARE) \u2014 Cannot exit Hammurabi's jurisdiction; bears asymmetric penalties (loss of hand for theft vs. fine for noble). Suppression is total: no alternative legal recourse, no mobility. d\u22480.96, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.87. Pure extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Victim Seeking Justice",
+      "comment": "PERSPECTIVE 2: VICTIM SEEKING JUSTICE (SNARE) \u2014 Constrained by class: a commoner victim of a noble receives lesser retaliation than the commoner would if roles reversed. System appears to offer justice but withholds it based on perpetrator's class. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.83. Extraction disguised as fairness."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Ruling Elite and Priesthood",
+      "comment": "PERSPECTIVE 3: RULING ELITE AND PRIESTHOOD (ROPE) \u2014 Benefits from system that protects their persons and property while enabling controlled extraction from lower classes. Experiences lex talionis as a coordination mechanism: predictable, codified law that stabilizes social order and elite privilege. d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.06. Net beneficiary; negative extraction means subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Merchant or Skilled Artisan",
+      "comment": "PERSPECTIVE 4: MERCHANT OR SKILLED ARTISAN (TANGLED ROPE) \u2014 Occupies intermediate position: benefits from legal predictability (can transact with confidence) and from protection of property and reputation, but also vulnerable to extraction through asymmetric penalties. Can migrate between city-states (mobile exit), creating a perspectival gap. d\u22480.52, f(d)\u22480.67, \u03c3=0.9 \u2192 \u03c7\u22480.41. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Historical Observer (Civilization Narrative)",
+      "comment": "PERSPECTIVE 5: HISTORICAL OBSERVER / CIVILIZATION NARRATIVE (PITON) \u2014 From a civilizational perspective, lex talionis appears as a major advance: moving from vendetta cycles to codified law, from arbitrary punishment to predictable consequences. This narrative naturalizes the constraint as a necessary stage in legal evolution (theater_ratio=0.55). The 'progress' framing masks the continued extraction from lower classes \u2014 the system's functional innovation (codification) is performed as civilization advance, but the underlying asymmetry persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk: analytical perspective might naturalize lex talionis as an inevitable law of social justice ('proportional punishment is inherent to justice'). However, the structural data (extractiveness=0.68, suppression=0.75, class stratification) contradicts mountain classification. This represents a false summit: the appearance of immutable justice principle masking contingent extraction. The engine's false natural law detector will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "class_stratification_function",
+      "question": "Does the class-stratified penalty system function primarily as a coordination mechanism (stabilizing social order) or as an extraction mechanism (formalizing elite privilege)?",
+      "resolution_mechanism": "Historical analysis of elite compliance vs. lower-class violation rates; assessment of whether stratification reduces violence (coordination) or merely transfers it to lower classes (extraction); examination of alternative legal systems from contemporary societies",
+      "impact": "If coordination-primary: classification shifts toward Rope from elite perspective. If extraction-primary: remains Snare for commoners and lower classes.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether class stratification serves coordination or extraction"
+    },
+    {
+      "id": "vendetta_cycle_prevention",
+      "question": "Does codified retaliation actually reduce cycles of vendetta and blood feud compared to the pre-codification baseline?",
+      "resolution_mechanism": "Archaeological and textual evidence of vendetta frequency before and after Hammurabi's reign; comparison with societies that lacked written law; assessment of whether codification reduced violence or merely regularized it",
+      "impact": "If reduction is significant: coordination hypothesis strengthened. If vendetta persists unchanged: codification is theater (performance of justice without real violence reduction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether codified retaliation reduces vendetta cycles"
+    },
+    {
+      "id": "exit_availability_slavery",
+      "question": "What fraction of the population under Hammurabi's code could realistically exit the jurisdiction or the social class hierarchy?",
+      "resolution_mechanism": "Textual analysis of manumission, mobility, and rebellion rates; assessment of whether exit options existed or were illusory; comparison of internal mobility with other ancient Near Eastern societies",
+      "impact": "If exit is rare (< 5%): suppression gate (\u22650.60) is fully satisfied; constraint is Snare. If exit is available (> 20%): suppression drops, classification may shift to Tangled Rope or Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of population with realistic exit options"
+    },
+    {
+      "id": "mandate_enforcement_capacity",
+      "question": "What is the actual enforcement capacity of Hammurabi's state apparatus \u2014 can it monitor and punish violations across all classes with equal rigor, or does enforcement itself embed asymmetry?",
+      "resolution_mechanism": "Textual analysis of judge selection and accountability; assessment of enforcement mechanisms for crimes by elites vs. commoners; historical examples of elite non-compliance",
+      "impact": "If enforcement is symmetric: suppression is structural (law itself is the constraint). If enforcement is asymmetric: suppression is behavioral (elites evade punishment), which may lower effective \u03b5 in elite perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforcement capacity and symmetry across classes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Hammurabi's Code (c. 1754 BCE) represents a foundational constraint on Mesopotamian legal order: the formalization of reciprocal justice within a rigidly stratified social hierarchy. The constraint appears to solve a coordination problem \u2014 replacing vendetta cycles and arbitrary punishment with codified, proportional consequences \u2014 but the benefits are captured asymmetrically by the ruling elite and the priesthood, while the costs are borne primarily by slaves, commoners, and the economically vulnerable. The class-stratified penalty structure is the constraint's defining feature: theft by a slave results in amputation, theft by a commoner in a fine, theft by a noble in even lesser penalty. This is not an accident of cultural practice but a deliberate legal architecture that preserves elite privilege while formalizing lower-class subordination. The constraint exhibits high suppression (0.75) because subjects have no legal recourse outside the system and limited exit options; it exhibits significant extractiveness (0.68) because the system transfers wealth and bodily security from lower classes to elites under the appearance of justice. The theater ratio (0.55) reflects that Hammurabi's Code performs civilization and justice \u2014 it is a landmark in legal history, celebrated as a step toward fairness \u2014 while the underlying asymmetry remains structural.",
+    "key_agents": [
+      "Ruling Elite and Priesthood: Primary beneficiary (institutional/arbitrage) \u2014 design the system to protect their persons and property while extracting from lower classes; experience codification as coordination",
+      "Lower Classes and Slaves: Primary victims (powerless/trapped) \u2014 bear asymmetric penalties and have no exit or alternative recourse",
+      "Victims Seeking Justice: Secondary victims (powerless/trapped) \u2014 appear to be protected by the code but receive unequal retaliation depending on perpetrator's class",
+      "Merchants and Skilled Artisans: Secondary actors (powerful/mobile) \u2014 benefit from legal predictability but remain vulnerable to class-stratified extraction",
+      "Enforcement Apparatus (Judges, Guards): Institutional actors (institutional/arbitrage) \u2014 execute the constraint; derive legitimacy and resources from the system",
+      "Historical Narrative Observer: Analytical observer (analytical/analytical) \u2014 risks naturalizing the constraint as inevitable progress in legal evolution"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High but not maximal. The constraint extracts significantly from lower classes through asymmetric penalties and property seizure, but it also provides coordination benefits (reduced unpredictable vendetta cycles) that partially offset pure extraction. The extractiveness increases over the 100-year interval (0.55 \u2192 0.72) as the state apparatus consolidates enforcement capacity and elites learn to exploit the system's loopholes. Suppression (0.75): High. Subjects have no legal recourse outside Hammurabi's code; mobility across jurisdictions is limited; the only path to status change (manumission, military service) is controlled by elites. This is not merely cultural suppression but structural \u2014 the code itself eliminates alternatives. Theater ratio (0.55): Moderate. The code is functional \u2014 it does reduce vendetta cycles and provides genuine legal predictability \u2014 but much of its significance is performative. Hammurabi's stele (where the code is inscribed) serves as a monument to justice and civilization, broadcasting the constraint's legitimacy. Over time (0.40 \u2192 0.55), the theater increases as the code's historical reputation grows, generating a narrative of progress that masks the persistence of underlying asymmetry.",
+    "perspectival_gap": "The constraint exhibits a dramatic perspectival gap between the ruling elite and the lower classes. The elite (institutional/arbitrage) experience lex talionis as a Rope \u2014 a coordination mechanism that stabilizes their privilege and enables confident property transactions. The powerless (powerless/trapped) experience it as a Snare \u2014 rigid, inescapable extraction with no alternative. The merchant (powerful/mobile) experiences it as Tangled Rope \u2014 mixed coordination and extraction, with the option to migrate if the extraction becomes unbearable. The historical observer (analytical/global) risks a false summit by naturalizing it as Mountain \u2014 seeing proportional justice as an immutable principle of civilization. The perspectival gap is not driven by disagreement about facts but by structural position: who controls the code, who bears the penalties, and who can exit.",
+    "directionality_logic": "Lower classes and slaves: Victim + trapped \u2192 d\u22480.96, f(d)\u22481.42. Maximum extraction. No exit, no recourse, bear full asymmetric penalty burden. Victims seeking justice (commoner): Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Asymmetric extraction: lesser retaliation when victimized by nobles. Ruling elite and priesthood: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Design and control the system; can exit or evade through patronage networks. Merchant or skilled artisan: Both beneficiary (legal predictability) and victim (class-stratified penalties) + mobile \u2192 d\u22480.52, f(d)\u22480.67. Mixed but closer to balanced than powerless agents. Enforcement apparatus: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; execute the constraint and derive legitimacy and resources. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Risk of naturalizing constraint; false summit gate applies.",
+    "mandatrophy_analysis": "SNARE WITH COORDINATION THEATER: Hammurabi's Code resolves the mandatrophy by exposing how a constraint can appear as pure coordination (moving from vendetta to codified law) while functioning as pure extraction (formalizing elite privilege). The mandatrophy is: 'Is lex talionis a coordination mechanism or extraction?' The resolution requires acknowledging that it is structurally both \u2014 it solves the problem (reduce vendetta cycles) that benefits primarily the elite, while imposing the solution (rigid stratification) on those with the least power to negotiate. The perspectival gap is the answer: from the elite's view, it is coordination (and it is, for them); from the lower classes' view, it is extraction (and it is, for them). The constraint's historical reputation as a landmark in justice is not false, but it naturalizes the solution in a way that masks who benefits and who pays. The theater ratio of 0.55 reflects this: the code genuinely functions (coordination), but its function is performed as universal justice (theater) when it is actually stratified extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mesopotamian_class_hierarchy",
+      "ancient_slavery_systems"
+    ],
+    "dual_formulation_note": "Hammurabi's Code can be decomposed into two structurally distinct constraints: (1) the vendetta-reduction mechanism (\u03b5\u22480.15, primarily coordination/rope), and (2) the class-stratified penalty system (\u03b5\u22480.68, snare). This story focuses on the integrated code as a single constraint, but future analysis should separate these into distinct stories to account for the empirical tension: the code's coordination function is real, but asymmetrically captured by the elite's stratification mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

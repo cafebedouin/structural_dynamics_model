@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "transient_event_detection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ted"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Automated Transient Event Detection",
+    "topic_domain": "technological/scientific",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "survey_instrument_operators",
+      "astrophysics_research_institutions"
+    ],
+    "victims": [
+      "small_telescope_observers",
+      "independent_discovery_culture",
+      "resource_constrained_observatories"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Independent Transient Discoverers",
+      "comment": "PERSPECTIVE 1: INDEPENDENT TRANSIENT DISCOVERERS (SNARE) \u2014 Amateur astronomers and small-telescope observers who historically contributed transient discoveries now find themselves structurally excluded from the discovery ecosystem. Automated survey systems process events at machine speed; human observers cannot compete. The extraction is severe: discovery priority, publication opportunity, and scientific credit flow exclusively to survey operators. No exit option exists \u2014 the observational commons has been automated away."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Resource-Constrained Observatories",
+      "comment": "PERSPECTIVE 2: RESOURCE-CONSTRAINED OBSERVATORIES (SNARE) \u2014 Regional observatories and developing-world institutions that lack access to real-time automated survey data experience the constraint as pure extraction. They cannot detect transients through classical observation \u2014 the events are already known by machine networks. Their observational capacity becomes worthless for original discovery. Trapped by lack of computing infrastructure and data feed access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Secondary Research Groups",
+      "comment": "PERSPECTIVE 3: SECONDARY RESEARCH GROUPS (TANGLED ROPE) \u2014 Mid-tier institutions that follow up on automated survey alerts experience a hybrid: they benefit from the conveyor belt system (transients are reliably reported) but bear extraction costs (they cannot be first discoverers, only verifiers/analyzers). Resource constraints limit follow-up observation. Real agency and real benefits \u2014 but also systematic asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Survey Instrument Operators",
+      "comment": "PERSPECTIVE 4: SURVEY INSTRUMENT OPERATORS (ROPE) \u2014 Large survey collaborations (ZTF, LSST, Pan-STARRS operators) experience the constraint as coordination: automated systems solve the collective action problem of detecting rare events. The operators benefit from discovery priority, publication leadership, and scientific authority. For them, the system is a coordination mechanism with net benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Major Astrophysics Institutions",
+      "comment": "PERSPECTIVE 5: MAJOR ASTROPHYSICS INSTITUTIONS (ROPE) \u2014 Universities and national laboratories hosting survey instruments experience the constraint as pure coordination: automated detection enables science at scale. They solve the technical problem of identifying fleeting events and gain institutional prestige, publication volume, and research capacity. Their exit options are strong \u2014 they can redirect surveys or modify detection algorithms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Classical Observational Astronomy Norms",
+      "comment": "PERSPECTIVE 6: CLASSICAL OBSERVATIONAL ASTRONOMY NORMS (PITON) \u2014 The tradition of the dedicated observer at the telescope remains culturally central to astronomy (stories of serendipitous discovery, the Eureka narrative) yet is functionally degraded by automation. Professional identity remains anchored in 'being the discoverer,' but the mechanism has shifted to algorithmic filters. Theater ratio is high: astronomical societies still celebrate visual discovery and communicate telescopic observation as the primary scientific activity, even as the actual discovery mechanism is automated software. Institutional inertia maintains the narrative."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Alert Distribution Networks",
+      "comment": "PERSPECTIVE 7: OPEN ALERT DISTRIBUTION NETWORKS (SCAFFOLD) \u2014 Emerging protocols (ATEL, GCN, broker systems like Alerce and Fink) distribute transient alerts openly to all observers with network access. These systems lower barriers to follow-up observation and democratize participation in transient science. The sunset logic is real: as alert systems mature and brokers standardize, the monopoly on discovery priority erodes. Smaller institutions can detect alerts and contribute analysis. The extraction mechanism is temporary \u2014 designed to be replaced by more distributed access."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a long-term analytical perspective, transient events are intrinsically fleeting and detection requires speed exceeding human reaction time. As events become rarer and faster, automated detection is an inescapable technical requirement \u2014 not an institutional choice. The constraint appears as a natural law of observational astronomy. However, the base metrics contradict this mountain classification: the extraction values, suppression levels, and structural data reveal this as a false summit. The temporal constraint is real (events are fast), but the institutional monopoly structure is contingent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alert_latency_floor",
+      "question": "What is the minimum alert latency below which human-in-the-loop follow-up becomes impossible for any telescope, regardless of automation?",
+      "resolution_mechanism": "Empirical measurement of event timescales (orphan afterglows, fast radio burst components) and human response times; determination of physical threshold",
+      "impact": "If floor < 1 minute: detection must be fully automated (natural law). If floor > 10 minutes: distributed human networks could theoretically compete. Current evidence suggests ~30-second floor for optimal follow-up on fastest events.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Physical latency floor for human follow-up on transient events"
+    },
+    {
+      "id": "discovery_credit_attribution",
+      "question": "Should discovery credit flow to the automated system operator, the algorithm designer, the telescope builder, or the first independent confirmer? What determines legitimate claim to priority?",
+      "resolution_mechanism": "Historical analysis of discovery attribution norms; comparison with other scientific fields (genome sequencing, particle detection); community consensus on priority rules",
+      "impact": "If operator gets credit: extraction persists and scalable (snare). If distributed to all contributors: extraction dissolves (rope or open science). If independent confirmer has claim: incentivizes follow-up (scaffold).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Attribution norms for automated discovery"
+    },
+    {
+      "id": "broker_sufficiency",
+      "question": "Do existing transient brokers (Alerce, Fink, MARS) provide sufficient real-time access and filtering that smaller observatories can compete on follow-up science, or do latency/data delays preserve survey operator advantage?",
+      "resolution_mechanism": "Benchmarking broker latency; tracking number of follow-up observations from non-survey institutions; measuring scientific contribution rate vs discovery institution affiliation",
+      "impact": "If brokers sufficiently level the field: scaffold perspective confirmed, extraction is temporary. If brokers remain second-class (delayed alerts, filtered subsets): snare persists despite open-science rhetoric.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alert brokers sufficiently democratize follow-up participation"
+    },
+    {
+      "id": "algorithm_transparency_decoupling",
+      "question": "Can transparent, open-source transient detection algorithms deployed on smaller facilities genuinely compete with proprietary survey pipelines optimized over decades, or is there a complexity threshold beyond which open algorithms cannot match performance?",
+      "resolution_mechanism": "Comparative false-positive and false-negative rates; independent deployment of survey algorithms on smaller telescopes; analysis of optimization ceiling",
+      "impact": "If open algorithms match performance: the extraction is primarily institutional/political (tangled rope with scaffold promise). If proprietary pipelines are fundamentally superior: the extraction is partly technical (mountain-adjacent), harder to decompose.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether open-source detection algorithms can match proprietary survey performance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 550,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 915,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 550,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 915,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 915
+  },
+  "commentary": {
+    "narrative_context": "Astronomy's relationship with transient cosmic events has undergone a structural transformation from the 11th-century detection of the Crab Nebula supernova (observed by chance, recorded by Chinese astronomers) to 21st-century automated survey systems that detect thousands of transients annually through algorithmic filtering. This transition is not merely technological \u2014 it is an institutional constraint that redistributes discovery credit, access to observational resources, and scientific authority. The constraint exhibits tangled_rope characteristics: automated detection provides genuine coordination benefits (events are reliably identified and distributed to the community) but creates asymmetric extraction (discovery priority and scientific leadership concentrate in survey-operating institutions while independent and resource-constrained observers lose competitive access). The constraint's extractiveness has grown from ~0.15 (early 20th century) as automation began, through ~0.28 (late 20th century with CCD surveys), to ~0.38 today as real-time alert systems dominate. Theater ratio has correspondingly risen as the narrative of 'telescopic discovery' persists despite algorithmic reality.",
+    "key_agents": [
+      "Survey Instrument Operators (institutional/arbitrage): Primary beneficiaries \u2014 control alert streams, publish discovery papers, set research priorities for the field",
+      "Major Astrophysics Institutions (institutional/arbitrage): Secondary beneficiaries \u2014 institutional prestige and publication volume from survey leadership",
+      "Independent Transient Discoverers (powerless/trapped): Primary victims \u2014 historically contributed discoveries; now structurally excluded from competition",
+      "Resource-Constrained Observatories (powerless/trapped): Primary victims \u2014 lack real-time data access and computing infrastructure to operate competing systems",
+      "Secondary Research Groups (moderate/constrained): Secondary victims \u2014 can participate in follow-up but not discovery; asymmetric scientific credit",
+      "Open Alert Distribution Networks (organized/mobile): Structural alternative \u2014 brokers and open protocols building democratized access with sunset logic",
+      "Analytical Observer (analytical/analytical): Measures whether constraint is technical necessity or institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The survey system does extract discoverer privilege and publication priority from smaller institutions \u2014 a real asymmetry. But extractiveness is not extreme (0.46+) because: (1) the system provides genuine value (transients are efficiently detected and alerts are distributed), (2) follow-up science remains valuable and accessible to non-discoverers, (3) alert brokers and open-source detection pipelines are developing alternative pathways. The value reflects legitimate technical monopoly (detection at machine speed) plus institutional monopoly (priority norms). Suppression (0.42): Moderate. Barriers exist (computing infrastructure, real-time alert access, algorithmic expertise) but are not insurmountable. Smaller facilities can operate detection systems; brokers provide open alerts; open-source software is available. Suppression is institutional and economic, not absolute. Theater ratio (0.58): Moderate-high. The culture of astronomy retains 'the discoverer at the telescope' as its dominant origin narrative, yet the actual mechanism is algorithmic filtering. Professional identity discourse emphasizes observation and discovery despite structural shift to data analysis and automated triage. Theater has increased over time as the gap between narrative and mechanism widened.",
+    "directionality_logic": "Directionality derives from each agent's structural position relative to the extraction flow. Survey operators are beneficiaries with strong exit options (arbitrage) \u2014 they can modify detection algorithms, redirect surveys, or sell data access. Their d value is low, and f(d) produces near-zero or negative chi, reflecting that they experience the constraint as beneficial coordination. Independent observers are victims with no exit (trapped) \u2014 they cannot access real-time alerts at machine latency or operate competing survey systems at equivalent scale. Their d is high (~0.95), f(d) is maximal (~1.42), and chi is severe, reflecting experienced extraction. Resource-constrained observatories have weak exit options (trapped by infrastructure deficits), so their d is similarly high. Secondary research groups have some exit (constrained) \u2014 they can conduct follow-up science, contribute to surveys, or operate smaller systems. Their d is moderate (~0.70-0.75), and chi is moderate, reflecting mixed experience. Brokers and open-science networks have mobile exit options \u2014 they can deploy alternatives and build parallel infrastructure. Their d is low-to-moderate, and chi is low, reflecting their role in reducing the constraint.",
+    "perspectival_gap": "The perspectival gap is maximal between survey operators (Rope, institutional/arbitrage) and independent observers (Snare, powerless/trapped). The operators experience the constraint as solving the coordination problem of detecting rare events efficiently \u2014 a genuine good. Independent observers experience the same constraint as competitive exclusion \u2014 pure extraction. Secondary research groups occupy an intermediate position (Tangled Rope) \u2014 they benefit from the system (alerts are provided) but bear asymmetric costs (they cannot be discoverers). The open-science networks (Scaffold) project a future state where brokers and transparent algorithms decompose the institutional monopoly into temporary coordination. The classical astronomy norms (Piton) represent the persistence of discovery-narrative culture despite functional displacement by automation. The analytical observer (Mountain) risks naturalizing a contingent institutional structure as a law of physics \u2014 transient latency is real, but the monopoly structure is not.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint is legitimately Tangled Rope, not mislabeled as pure Rope (coordination myth) or pure Snare (extraction myth). The coordination function is real and valuable \u2014 automated detection has enabled discovery of entire new transient classes (tidal disruption events, kilonovae, fast radio bursts) that would be undetectable through classical observation alone. The system genuinely solves a coordination problem. The extraction is also real and structural \u2014 discovery priority and scientific authority concentrate in survey-operating institutions, while smaller institutions are systematically disadvantaged. The constraint is not pure coordination (which would require symmetric benefits) and is not pure extraction (which would require no coordination function). The tangled_rope classification is correct because it captures both: the coordination is essential (the system enables new science), and the extraction is asymmetric (benefits and authority are asymmetrically distributed). The scaffold perspective (open alert brokers, transparent algorithms, distributed follow-up) represents a genuine pathway toward reducing the extraction component while retaining the coordination function \u2014 a sunset clause that is structurally realizable."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "gravitational_wave_source_localization",
+      "fast_radio_burst_catalog_completeness",
+      "supernova_early_warning_hierarchy"
+    ],
+    "dual_formulation_note": "Automated transient detection decomposes into two structurally distinct constraints: (1) the technical requirement for machine-speed event processing (approaching a natural law as event timescales shrink), and (2) the institutional monopoly on discovery priority and alert distribution (clearly contingent institutional structure). This story models the hybrid (technical + institutional); downstream constraints inherit both elements."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ]
+}

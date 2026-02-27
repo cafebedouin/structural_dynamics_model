@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "heglig_oil_field_control",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Control of Heglig Oil Field as a Strategic War Asset",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "rsf"
+    ],
+    "victims": [
+      "sudanese_state",
+      "international_community",
+      "local_populations"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Local Populations",
+      "comment": "Perspective 1: Local Populations (Snare). Trapped within the conflict zone, they experience the control of the oil field as pure extraction, with limited to no benefits and significant disruption to their lives and livelihoods. No exit options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Sudanese State",
+      "comment": "Perspective 2: Sudanese State (Snare). The loss of the oil field represents a major economic blow, depriving the state of crucial revenue. Constrained in its ability to regain control due to ongoing conflict and RSF entrenchment. Significant, ongoing extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Rapid Support Forces (RSF)",
+      "comment": "Perspective 3: Rapid Support Forces (RSF) (Tangled Rope). Beneficiaries of the oil field's revenue, which fuels their war efforts. However, they also face the costs of maintaining control against resistance and international pressure. They must actively enforce their control (requires_active_enforcement = true) but benefit from the resource flow, making it a Tangled Rope. High coordination costs in enforcement."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Community (Peace Efforts)",
+      "comment": "Perspective 4: International Community (Piton). International efforts to mediate and restore stability are largely performative due to lack of enforcement mechanisms and continued conflict, leading to a Piton classification. High theater, low effectiveness in regaining control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 5: Analytical Observer (Tangled Rope). From a global perspective, the control of Heglig represents a complex mix of extraction and coordination. RSF extracts resources to fund conflict, but also establishes a degree of control that coordinates resource allocation (albeit coercively). International actors are affected, but also observe and analyze without direct intervention. Enforcement costs drive categorization toward tangled rope. Requires active enforcement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rsf_control_duration",
+      "question": "How long will the RSF maintain control of the oil field?",
+      "resolution_mechanism": "Monitoring military and political developments in Sudan",
+      "impact": "Longer control increases extraction and suppression; shorter control reduces the long-term impact on the Sudanese economy",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Duration of RSF control over Heglig"
+    },
+    {
+      "id": "international_intervention_threshold",
+      "question": "What level of humanitarian crisis or regional instability would trigger effective international intervention?",
+      "resolution_mechanism": "Analyzing geopolitical dynamics and international security considerations",
+      "impact": "Higher threshold implies more prolonged conflict and extraction; lower threshold could lead to restoration of Sudanese state control",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Threshold for international intervention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.8
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "In the context of the Sudanese civil war, the paramilitary Rapid Support Forces (RSF) have captured Heglig, the country's largest oil field. This control acts as a strategic war asset, providing the RSF with a significant revenue stream while depriving the Sudanese state and local populations of crucial economic resources. The international community's efforts to resolve the conflict and restore stability are facing substantial challenges.",
+    "key_agents": [
+      "RSF: Primary beneficiary (powerful/arbitrage) - Benefits from oil revenue to sustain war efforts.",
+      "Sudanese State: Primary victim (moderate/constrained) - Loses critical revenue, hindering governance and stability.",
+      "Local Populations: Secondary victim (powerless/trapped) - Experience displacement, disruption, and economic hardship.",
+      "International Community: Observer (institutional/constrained) - Attempts mediation and peace efforts with limited success."
+    ],
+    "logic_rationale": "Extractiveness (0.75): High. The RSF's control of the oil field allows them to extract significant economic resources, which are diverted from the Sudanese state and local populations. Suppression (0.80): High. The RSF actively suppresses any resistance to their control of the oil field, limiting the Sudanese state and local populations' ability to regain control or benefit from the resources. Theater Ratio (0.30): Low. Primarily a functional extraction mechanism. International peace efforts exhibit theatrics, but the RSF's actions are very direct in extracting oil revenue.",
+    "perspectival_gap": "The local populations and Sudanese state experience the control of the oil field as a snare, deprived of essential revenue and resources. The RSF views it as a tangled rope, gaining benefits from the revenue but incurring costs through the ongoing conflict and international pressure. The international community's peace efforts are a piton, being largely performative with little functional impact. The analytical observer recognizes the overall situation as a tangled rope, involving active enforcement and a combination of extraction and coordination.",
+    "directionality_logic": "The RSF benefits directly from the oil revenue, while the Sudanese state and local populations bear the costs of the loss of this revenue. The RSF's power and ability to arbitrage give them a low d value, whereas the Sudanese state and local populations have high d values due to their lack of power and limited exit options. The international community's d value is in the middle, reflecting their constrained ability to influence the situation.",
+    "mandatrophy_analysis": "The constraint is classified as a snare due to the high degree of extraction and suppression. It's important to differentiate this from a tangled rope because the benefits to the Sudanese state and local populations are minimal, while the RSF is actively extracting the resources. It is not a pure rope as the RSF is extracting resources for its own means to maintain the war effort. The enforcement activity is related to maintaining the extraction, not contributing to genuine coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

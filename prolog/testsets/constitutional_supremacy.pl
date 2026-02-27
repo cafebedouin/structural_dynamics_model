@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: constitutional_supremacy
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_constitutional_supremacy, []).
@@ -31,12 +32,14 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
@@ -54,18 +57,37 @@
  *   domain: legal/political
  *
  * SUMMARY:
- *   Established in Marbury v. Madison (1803), this constraint posits that a
- *   written constitution is the "paramount law of the nation," and any legislative
- *   act repugnant to it is void. This principle establishes judicial review,
- *   creating a legal hierarchy where the judiciary must prioritize the
- *   Constitution over legislative statutes, effectively extracting final
- *   sovereignty from the legislative branch and vesting it in the judicial.
+ *   Constitutional supremacy—the doctrine that a written constitution is the
+ *   supreme law of the land and that courts may invalidate laws violating
+ *   it—establishes one of the fundamental constraints of liberal democratic
+ *   governance. Originating from Marbury v. Madison (1803), this constraint
+ *   creates a structural tension between democratic majoritarianism (the
+ *   people's will expressed through elected legislatures) and constitutional
+ *   entrenchment (binding commitments made by past actors that constrain
+ *   present majorities). The constraint exhibits six distinct classifications
+ *   depending on the observer's structural position. For temporary
+ *   legislative majorities, judicial review appears as pure extraction—they
+ *   are trapped by judicial supremacy that they cannot override. For judges,
+ *   it appears as coordination—the mechanism that legitimates their
+ *   institutional role and solves the problem of constitutional fidelity. For
+ *   organized reform movements, it appears as scaffold with a sunset
+ *   clause—the amendment process provides a real exit mechanism, albeit a
+ *   difficult one. For comparative constitutional democracies, the American
+ *   commitment to judicial supremacy appears as piton—a historical
+ *   contingency maintained through institutional inertia, not inherent
+ *   necessity. The constraint's theater ratio has increased over two
+ *   centuries as legal doctrine has become more elaborate, producing more
+ *   performative constitutional interpretation even as the functional
+ *   verification of constitutionality remains contested.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Legislature (powerful/constrained): Primary target — its legislative sovereignty is extracted.
- *   - The Citizen (powerless/trapped): Secondary target — bound by the law, but also a beneficiary of constitutional rights.
- *   - The Judiciary (institutional/arbitrage): Primary beneficiary — its authority is defined and elevated.
- *   - The Analytical Observer (analytical/analytical): Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Legislative Majorities: Primary victim (powerless/trapped) — cannot override judicial determinations; their statutes are subordinate
+ *   - Executive Branch: Secondary victim (powerless/trapped) — executive actions face judicial invalidation; enforcement power is constrained
+ *   - Judicial Institutions: Primary beneficiary (institutional/arbitrage) — experience constitutional supremacy as establishing their interpretive authority; can choose strategic interpretation or deference
+ *   - Constitutional Continuity: Beneficiary (institutional/arbitrage) — abstract institutional value that benefits from being tied to higher law and protected from majoritarian whim
+ *   - Constrained Majorities: Mixed (moderate/constrained) — experience both coordination (protection from tyranny) and extraction (inability to execute policy)
+ *   - Constitutional Reform Movements: Organized actors (organized/constrained) — face suppression through difficult amendment process but have genuine exit mechanism via constitutional change
+ *   - Comparative Democracies: Analytical observer (analytical/analytical) — parliamentary and weaker-review systems function without judicial supremacy, revealing it as contingent choice
  */
 
 /* ==========================================================================
@@ -73,85 +95,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constitutional_supremacy, 0.53).
-domain_priors:suppression_score(constitutional_supremacy, 0.95).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(constitutional_supremacy, 0.1).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(constitutional_supremacy, 0.38).
+domain_priors:suppression_score(constitutional_supremacy, 0.48).
+domain_priors:theater_ratio(constitutional_supremacy, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constitutional_supremacy, extractiveness, 0.53).
-narrative_ontology:constraint_metric(constitutional_supremacy, suppression_requirement, 0.95).
-narrative_ontology:constraint_metric(constitutional_supremacy, theater_ratio, 0.1).
+narrative_ontology:constraint_metric(constitutional_supremacy, extractiveness, 0.38).
+narrative_ontology:constraint_metric(constitutional_supremacy, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(constitutional_supremacy, theater_ratio, 0.65).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(constitutional_supremacy, tangled_rope).
 narrative_ontology:human_readable(constitutional_supremacy, "The Supremacy of Written Constitutions and Judicial Review").
 narrative_ontology:topic_domain(constitutional_supremacy, "legal/political").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(constitutional_supremacy). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(constitutional_supremacy).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(constitutional_supremacy, the_judiciary).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(constitutional_supremacy, the_legislature).
-narrative_ontology:constraint_victim(constitutional_supremacy, the_citizen).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(constitutional_supremacy, judicial_institutions).
+narrative_ontology:constraint_beneficiary(constitutional_supremacy, constitutional_continuity).
+narrative_ontology:constraint_victim(constitutional_supremacy, legislative_majorities).
+narrative_ontology:constraint_victim(constitutional_supremacy, executive_prerogative).
+narrative_ontology:constraint_victim(constitutional_supremacy, popular_sovereignty_in_moment).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE CITIZEN (SNARE)
-% Agent who is subject to the law. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-% The citizen is trapped within a system that both coordinates their rights
-% and extracts from them via the state's authority, which this system legitimizes.
-constraint_indexing:constraint_classification(constitutional_supremacy, tangled_rope,
+% PERSPECTIVE 1: CIRCUMVENTED LEGISLATOR (SNARE) — A legislature passing a statute faces the hard constraint that courts may invalidate it. The legislative majority has no exit option; they are trapped in a subordinate institutional position. They cannot dissolve the courts, rewrite the constitution by simple majority, or override judicial review. The constraint extracts from them by preventing their will from becoming law.
+constraint_indexing:constraint_classification(constitutional_supremacy, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE JUDICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-% For the judiciary, this is a pure coordination tool that defines its role and
-% power to interpret law and maintain governmental structure.
+% PERSPECTIVE 2: FRUSTRATED EXECUTIVE (SNARE) — An executive enforcing or proposing policy faces judicial invalidation. The executive power is checked and constrained at every level. No exit option exists except leaving office. The constraint prevents executive action from being the final word.
+constraint_indexing:constraint_classification(constitutional_supremacy, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: JUDICIAL GUARDIAN (ROPE) — Courts experience constitutional supremacy as a coordination mechanism that elevates their institutional role. Judges have arbitrage options: they can interpret the constitution creatively, defer to other branches, or assert supremacy, depending on strategic needs. The constraint benefits them by establishing their institutional supremacy over coordinate branches. Judicial review is coordination logic that solves the problem of constitutional fidelity.
 constraint_indexing:constraint_classification(constitutional_supremacy, rope,
     context(agent_power(institutional),
-            time_horizon(historical),
+            time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE LEGISLATURE (SNARE)
-% The primary target of extraction. Engine derives d from:
-%   victim membership + powerful/constrained status -> high d -> high χ
-% From the perspective of a legislature whose statute is struck down, judicial
-% review is a snare that coercively extracts its legislative sovereignty.
-constraint_indexing:constraint_classification(constitutional_supremacy, snare,
-    context(agent_power(powerful),
-            time_horizon(immediate),
+% PERSPECTIVE 4: CONSTRAINED MAJORITY (TANGLED ROPE) — A coalition of voters and legislators holding a temporary electoral majority experiences the constraint as both coordination and extraction. Constitutional supremacy prevents tyranny of the majority (coordination benefit) but also prevents rapid policy change and majoritarian will from being executable (extraction cost). Exit options are constrained: citizens can vote, but constitutional entrenchment limits what voting accomplishes.
+constraint_indexing:constraint_classification(constitutional_supremacy, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Default analytical context. Sees both the coordination function (stabilizing
-% the legal system) and the asymmetric extraction (of sovereignty from the
-% legislature).
-constraint_indexing:constraint_classification(constitutional_supremacy, snare,
+% PERSPECTIVE 5: CONSTITUTIONAL REFORM MOVEMENT (SCAFFOLD) — Organized movements for constitutional amendment (18th Amendment prohibition, 21st Amendment repeal, civil rights amendments) experience judicial review as a temporary constraint with a sunset clause. The constraint forces slower, more deliberate change via the amendment process rather than legislation, but the amendment process itself is the exit mechanism. High suppression (difficult amendment) but with a genuine exit path. Theater remains moderate because amendment ratification is performative of constitutional legitimacy.
+constraint_indexing:constraint_classification(constitutional_supremacy, scaffold,
+    context(agent_power(organized),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: COMPARATIVE OBSERVER (PITON) — From a global/civilizational view, many constitutional democracies function without judicial review (parliamentary supremacy in UK, Commonwealth systems) or with weak review (Canada's notwithstanding clause). The American insistence on judicial supremacy appears as a historical contingency maintained through institutional inertia. Courts perform constitutional guardianship ritually even in cases where legislative intent is clear and amendment would be democratically superior. The constraint persists because no alternative has replaced it, not because it is functionally indispensable.
+constraint_indexing:constraint_classification(constitutional_supremacy, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / CONSTITUTIONAL LOGIC (MOUNTAIN) — From a universal/analytical view, some form of supreme law is structurally necessary in any written constitutional system. If the constitution is not supreme, it is not a binding constraint — it is merely preamble. The logical requirement that a constitution either is or is not supreme appears immutable. However, this perspective risks naturalizing the specific form (judicial supremacy via review) as inherent to constitutionalism itself. The analytical engine will flag this as a false summit: logical necessity of constitutional supremacy does not entail that courts must enforce it.
+constraint_indexing:constraint_classification(constitutional_supremacy, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -160,17 +178,13 @@ constraint_indexing:constraint_classification(constitutional_supremacy, snare,
 :- begin_tests(constitutional_supremacy_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(constitutional_supremacy, TypeTarget, context(agent_power(powerful), _, _, _)),
-    constraint_indexing:constraint_classification(constitutional_supremacy, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary,
-    TypeTarget == snare,
-    TypeBeneficiary == rope.
+    constraint_indexing:constraint_classification(constitutional_supremacy, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(constitutional_supremacy, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_matches_claim) :-
-    narrative_ontology:constraint_claim(constitutional_supremacy, ClaimedType),
-    constraint_indexing:constraint_classification(constitutional_supremacy, AnalyticalType, context(agent_power(analytical), _, _, _)),
-    ClaimedType == AnalyticalType.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(constitutional_supremacy, TR),
+    TR >= 0.70.
 
 :- end_tests(constitutional_supremacy_tests).
 
@@ -180,89 +194,99 @@ test(analytical_classification_matches_claim) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (ε=0.53) is set high to reflect the significant
- *   extraction of legislative sovereignty, which is the core function of
- *   judicial review. This is not a financial extraction, but an extraction of
- *   power and finality. The suppression score (0.95) reflects Marshall's
- *   argument that there is no middle ground: the Constitution is either
- *   paramount or it is meaningless. The theater ratio is low (0.1) as this
- *   is a highly functional, non-performative constraint.
+ *   Extractiveness (0.38): Moderate. The constraint extracts from legislative majorities by preventing their will from becoming law, but not absolutely. Legislatures can work within judicial constraints, pass statutes as modified by interpretation, and pursue amendment. The extraction is significant but not total—judges do not have unilateral power to rewrite statutes, and legislative intent constrains interpretation. Suppression (0.48): Moderate-high. The constraint suppresses alternatives: legislative majorities cannot simply override the courts, executives cannot ignore judicial orders, and ordinary legislation cannot amend the constitution. But suppression is not total—amendment is possible (though difficult), and reinterpretation over time provides some flexibility. Theater ratio (0.65): Moderate-high. Constitutional interpretation has become increasingly performative. Judges engage in elaborate doctrinal rituals (strict scrutiny, rational basis review, textualism vs. purposivism) to reach conclusions that were often determined by prior political commitments. The theater has increased over the interval as legal doctrine has accumulated and constitutional law has become more specialized and inscrutable to non-lawyers. Claimed type (Tangled Rope): The constraint combines genuine coordination function (constitutional fidelity, protection from tyranny) with asymmetric extraction (majoritarian will is subordinate to judicial interpretation). Both functions are real—this is not a case where one dominates.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the Judiciary (beneficiary), it's a Rope—a tool for
- *   coordination and fulfilling their duty. For the Legislature (victim), it's
- *   a Snare that invalidates their will and extracts their power. For the
- *   Citizen, it is also a Snare, as they are trapped within this power structure,
- *   even while benefiting from the rights it coordinates. The analytical view
- *   sees both functions, classifying it as a Tangled Rope.
+ *   The perspectival gap between the judicial guardian (Rope) and the circumvented legislator (Snare) is maximal. The judge experiences the constraint as coordination—a mechanism that legitimates their role and solves the genuine problem of keeping legislative power within constitutional bounds. The legislator experiences it as pure extraction—their democratic mandate is thwarted by an unelected court interpreting eighteenth-century text. The constrained majority (Tangled Rope) experiences both—they benefit from constitutional protection but suffer from inability to execute policy. The scaffold perspective (Constitutional Reform Movement) identifies a real exit mechanism that pure snare agents lack: constitutional amendment. The piton perspective (Comparative Observer) reveals that judicial supremacy is not necessary to constitutionalism—many democracies function effectively with parliamentary supremacy or weak review. The mountain perspective (Analytical Observer) risks naturalizing a contingent institutional choice as a logical necessity of written constitutionalism.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: The Judiciary's power is created and defined by this constraint.
- *   - Victims: The Legislature loses its claim to ultimate sovereignty. The Citizen
- *     is also a victim in the structural sense of being subject to this power
- *     hierarchy, unable to exit it.
+ *   Directionality (d) measures the agent's structural position relative to the extraction flow. Judges (institutional/arbitrage) have low d: they benefit from supremacy and can choose their degree of engagement. Legislative majorities (powerless/trapped) have high d: they bear the cost of subordination with no exit. Organized reformers (organized/constrained) have moderate d: they face barriers but have amendment as a real exit mechanism. The analytical observer has high d as well (cannot exit the observation): sees the full structure including false summits. The engine derives d from these exit options and structural positions. No override is needed; the structural data itself produces the perspectival gap.
  *
  * MANDATROPHY ANALYSIS:
- *   The high base extraction and suppression scores correctly identify the
- *   coercive nature of this constraint. By classifying it as a Tangled Rope
- *   analytically, the framework acknowledges its genuine coordination function
- *   (stabilizing the rule of law) while refusing to ignore the asymmetric
- *   extraction of power that underpins it. This prevents mislabeling a
- *   foundational power seizure as pure coordination.
+ *   Constitutional supremacy resolves the mandatrophy by showing that the constraint is legitimately tangled rope, not pure snare misclassified as rope. The coordination function is genuine: constitutions do need supremacy to be binding, and majoritarian impulses do need checking. The extraction function is also genuine: present majorities are prevented from executing their will by past constitutional choices and judicial interpretation. Both functions coexist. The mandatrophy is resolved by recognizing that this particular constraint cannot be simplified into either pure coordination or pure extraction without losing explanatory power. Judicial review as practiced involves both genuine constitutional fidelity and genuine majoritarian subordination. The theater ratio increasing (0.35→0.65) suggests that the performative aspect is growing, potentially masking the real extraction underneath elaborate doctrinal ritual.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
 omega_variable(
-    omega_judicial_neutrality,
-    "Is the Court a neutral arbiter of the Constitution, or does judicial review inherently transform into a tool of judicial policy-making, becoming a snare for democratic self-governance?",
-    "Requires longitudinal analysis of case law to determine if review is used primarily for constitutional coordination versus partisan extraction (legislating from the bench).",
-    "If neutral, the constraint functions as a stabilizing Tangled Rope. If partisan, it degrades into a pure Snare against political opponents.",
+    judicial_review_necessity,
+    'Is judicial review the only mechanism by which written constitutional supremacy can be enforced, or do alternative enforcement mechanisms (legislative self-restraint, public accountability, amendment supermajority requirements) substitute effectively?',
+    'Comparative constitutional study of enforcement mechanisms in jurisdictions with and without judicial review; historical analysis of constitutional compliance in periods before Marbury v. Madison and in systems without review courts',
+    'If only mechanism: judicial supremacy is logically necessary (Mountain). If substitutes exist: judicial review is a contingent institutional choice (Tangled Rope/Piton).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(judicial_review_necessity, conceptual, 'Whether judicial review is necessary to enforce constitutional supremacy').
+
+omega_variable(
+    constitutional_amendment_accessibility,
+    'Is the amendment process (Article V) sufficiently accessible to function as a genuine exit mechanism for minorities locked out by constitutional interpretation, or is it so procedurally difficult that it is effectively blocked?',
+    'Historical frequency and success rates of amendment attempts; empirical study of amendment feasibility for major policy reversals; comparison to amendment accessibility in other democracies',
+    'If accessible: scaffold perspective is accurate—amendment provides real exit. If blocked: the constraint is pure snare for majorities wanting to override courts.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(omega_judicial_neutrality, empirical, "Whether judicial review is applied neutrally or as a partisan tool.").
+narrative_ontology:omega_variable(constitutional_amendment_accessibility, empirical, 'Whether constitutional amendment is accessible enough to be a real exit mechanism').
+
+omega_variable(
+    majoritarian_tyranny_prevention,
+    'How much protection against majoritarian tyranny does judicial review actually provide beyond what legislative supermajority requirements and bicameralism provide?',
+    'Historical analysis of tyrannies attempted/prevented by judicial intervention; comparison of outcomes in pure majoritarian vs. constitutionally entrenched systems',
+    'If substantial: rope/coordination perspective validated. If minimal: judicial review is primarily extraction from majorities rather than protection against tyranny.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(majoritarian_tyranny_prevention, empirical, 'Actual protective effect of judicial review against majoritarian tyranny').
+
+omega_variable(
+    constitutional_entrenchment_cost,
+    'What are the true costs of constitutional entrenchment in terms of policy lag, inability to correct errors, and institutional sclerosis?',
+    'Empirical comparison of policy responsiveness in high-entrenchment (US, Australia) vs. low-entrenchment (UK, New Zealand) systems; analysis of constitutional amendments that reversed deeply entrenched errors',
+    'If costs are high: snare extraction from majorities is severe. If costs are low: coordination benefits outweigh extraction.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(constitutional_entrenchment_cost, empirical, 'Costs of constitutional entrenchment and policy rigidity').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(constitutional_supremacy, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% This constraint has been remarkably stable since its inception.
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(cs_tr_t0, constitutional_supremacy, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(cs_tr_t5, constitutional_supremacy, theater_ratio, 5, 0.1).
-narrative_ontology:measurement(cs_tr_t10, constitutional_supremacy, theater_ratio, 10, 0.1).
+% Theater ratio over time
+narrative_ontology:measurement(const_tr_t0, constitutional_supremacy, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(const_tr_t5, constitutional_supremacy, theater_ratio, 5, 0.5).
+narrative_ontology:measurement(const_tr_t10, constitutional_supremacy, theater_ratio, 10, 0.65).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(cs_ex_t0, constitutional_supremacy, base_extractiveness, 0, 0.53).
-narrative_ontology:measurement(cs_ex_t5, constitutional_supremacy, base_extractiveness, 5, 0.53).
-narrative_ontology:measurement(cs_ex_t10, constitutional_supremacy, base_extractiveness, 10, 0.53).
+% Extraction over time
+narrative_ontology:measurement(const_be_t0, constitutional_supremacy, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(const_be_t5, constitutional_supremacy, base_extractiveness, 5, 0.33).
+narrative_ontology:measurement(const_be_t10, constitutional_supremacy, base_extractiveness, 10, 0.38).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This constraint is a fundamental mechanism for enforcing the legal hierarchy.
 narrative_ontology:coordination_type(constitutional_supremacy, enforcement_mechanism).
+narrative_ontology:affects_constraint(constitutional_supremacy, separation_of_powers).
+narrative_ontology:affects_constraint(constitutional_supremacy, legislative_supremacy_alternative).
+narrative_ontology:affects_constraint(constitutional_supremacy, popular_sovereignty_entrenchment).
+
+% DUAL FORMULATION NOTE:
+% Constitutional supremacy decomposes into two structurally distinct claims: (1) that written constitutions must be supreme to any ordinary law (ε~0.08, Mountain), and (2) that courts are the proper enforcers of constitutional supremacy through judicial review (ε~0.38, Tangled Rope). Story focuses on (2). Story (1) would emphasize logical necessity of supreme law in any written constitutional system; this story emphasizes the contingent institutional choice to vest enforcement in courts rather than legislatures, voters, or constitutional commissions.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed. The structural derivation from beneficiary/victim
-% status and exit options accurately models the power dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

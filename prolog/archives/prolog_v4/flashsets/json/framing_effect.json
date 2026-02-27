@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "framing_effect",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Framing Effect (as applied in choice architecture)",
+    "topic_domain": "social/political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "choice_architects",
+      "policy_makers",
+      "marketing_professionals"
+    ],
+    "victims": [
+      "individual_autonomy",
+      "informed_consent",
+      "rational_decision_making"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Misled Individual",
+      "comment": "The individual, often lacking awareness of the framing effect, is trapped into making decisions that may not align with their true preferences. They are the primary target of extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Partially Aware Citizen",
+      "comment": "Citizens who are somewhat aware of framing, but still susceptible due to cognitive limitations and information overload. They experience a mix of coordination (potentially better choices due to nudges) and extraction (manipulation)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Choice Architect",
+      "comment": "Choice architects benefit from the framing effect by achieving desired outcomes (e.g., increased organ donation rates). They experience the constraint as a coordination mechanism to guide behavior."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Libertarian Paternalism Observer",
+      "comment": "An analytical observer focused on the ideals of libertarian paternalism views the framing effect as a potentially useful tool but worries about it being abused. They see its use gradually turning into theater, as the true motivation behind it starts to shift from helping individuals make better choices to influencing them for other purposes."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ethical_threshold_manipulation",
+      "question": "What level of framing constitutes unethical manipulation?",
+      "resolution_mechanism": "Develop ethical guidelines through public discourse and expert consensus on acceptable framing practices.",
+      "impact": "Determines whether the framing effect is a beneficial nudge or a harmful snare.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Defining the ethical boundaries of framing techniques."
+    },
+    {
+      "id": "long_term_effects_autonomy",
+      "question": "Does long-term exposure to framing erode individual autonomy and critical thinking?",
+      "resolution_mechanism": "Conduct longitudinal studies on the cognitive and behavioral impacts of repeated framing exposure.",
+      "impact": "Determines the civilizational-scale impact on individual agency and informed consent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the long-term effects of framing on autonomy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The framing effect, a cognitive bias where choices are influenced by how options are presented (gain vs. loss), is utilized in choice architecture to nudge individuals towards desired behaviors. This constraint explores the ethical implications and structural dynamics of this practice, examining how it can act as both a coordination mechanism and a form of extraction. This JSON defines the framing effect as it relates to choice architecture. Choice architects use this effect to influence decisions by individuals.",
+    "key_agents": [
+      "Choice Architects: Primary beneficiaries (institutional/arbitrage) - design and implement framing strategies.",
+      "Policy Makers: Secondary beneficiaries (institutional/constrained) - use framing to achieve policy goals.",
+      "Marketing Professionals: Secondary beneficiaries (powerful/mobile) - employ framing to increase sales and influence consumer behavior.",
+      "Individual Autonomy: Primary victim (powerless/trapped) - abstract concept representing the individual's right to self-determination.",
+      "Informed Consent: Primary victim (powerless/trapped) - abstract concept representing the requirement for choices to be made with full knowledge of relevant information.",
+      "Rational Decision Making: Primary victim (powerless/trapped) - abstract concept impacted by the framing effect."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The framing effect subtly extracts from individual autonomy and rational decision-making by influencing choices. This extraction is not absolute, as individuals retain some agency, but the framing does skew their preferences. Suppression (0.65): Moderate to high. The effect's subtlety makes it difficult for individuals to detect and counteract, suppressing alternative choices that might align better with their true preferences. Theater Ratio (0.75): High. The analytical observer sees its use potentially turning into theater, as the true motivation behind it starts to shift from helping individuals make better choices to influencing them for other purposes.",
+    "perspectival_gap": "The individual experiences the framing effect as a snare, being subtly manipulated into choices. Choice architects view it as a rope, a coordination mechanism to guide behavior towards desired outcomes. The partially aware citizen experiences the framing effect as a tangled rope, acknowledging it as manipulation, but also recognizing the potential for helpful nudges. An analytical observer sees its use potentially turning into theater, as the true motivation behind it shifts from helping individuals make better choices to influencing them for other purposes.",
+    "directionality_logic": "Beneficiaries (choice architects, policy makers) experience low directionality (d), seeing the effect as a tool to improve outcomes. Victims (individual autonomy, rational decision-making) experience high directionality, as their choices are influenced against their better judgment. A moderate directionality reflects a mixed experience.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by acknowledging the multifaceted nature of the framing effect. It's not simply a snare or a rope, but a tangled rope that can be used for both beneficial and manipulative purposes. The classification depends on the perspective, with the individual experiencing it as a snare, while the choice architect experiences it as a rope. It requires a deeper understanding of the context, goals, and long-term effects to classify it appropriately."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "confirmation_bias",
+      "availability_heuristic"
+    ]
+  },
+  "directionality_overrides": []
+}

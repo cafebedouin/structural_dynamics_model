@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "iran_nin_repression",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nin"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Iran's National Information Network (State-Controlled Intranet)",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "iranian_state_security_apparatus",
+      "state_media_monopoly"
+    ],
+    "victims": [
+      "iranian_internet_users",
+      "independent_journalists",
+      "civil_society_organizations",
+      "diaspora_communication_networks"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Iranian Internet User",
+      "comment": "PERSPECTIVE 1: IRANIAN INTERNET USERS (SNARE) \u2014 Citizens with internet access face mandatory routing through state-controlled infrastructure with no alternative exit. VPN use is illegal and technically blocked; purchasing circumvention tools is prosecuted. Cannot opt out, cannot migrate to alternative networks. d\u22480.96, f(d)\u22481.41, \u03c3=1.0 \u2192 \u03c7\u22480.96. Maximum structural extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Independent Journalists and Activists",
+      "comment": "PERSPECTIVE 2: INDEPENDENT JOURNALISTS AND ACTIVISTS (SNARE) \u2014 Constrained exit (can travel abroad, can use diaspora networks) but at severe cost: imprisonment, travel bans, asset seizure. Domestic work requires operating within NIN surveillance. International reporting is monitored and sources are exposed. d\u22480.88, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.85. Near-maximal extraction with constrained not trapped."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Human Rights and Media Organizations",
+      "comment": "PERSPECTIVE 3: GLOBAL HUMAN RIGHTS ORGANIZATIONS (TANGLED ROPE) \u2014 Mobile exit (can cease operations in Iran, can coordinate internationally) but also benefits from documentation and monitoring of NIN repression \u2014 the constraint generates data and narrative leverage for advocacy. Extraction is asymmetric: Iranian civil society loses; international monitors gain investigative material. d\u22480.58, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.51. Coordination function (documenting surveillance) coexists with asymmetric extraction (Iran's loss is external monitor's gain)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Iranian State Security Apparatus",
+      "comment": "PERSPECTIVE 4: IRANIAN STATE SECURITY APPARATUS (ROPE) \u2014 Benefits from coordination: unified control over information flows, centralized surveillance, unified messaging. Experiences NIN as a solution to their collective action problem (securing regime information dominance). Has full arbitrage exit (can modify rules, can enforce compliance). d\u22480.02, f(d)\u2248-0.18, \u03c3=1.0 \u2192 \u03c7\u2248-0.12. Net beneficiary; constraint is pure coordination from this view."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Media and State-Approved Information Providers",
+      "comment": "PERSPECTIVE 5: STATE MEDIA AND STATE-APPROVED CONTENT PROVIDERS (PITON) \u2014 Initially benefited from monopoly on domestic distribution (Rope perspective, pre-2010). Now theater_ratio=0.58 reflects that the apparatus itself is degraded: constant technical failures, poor integration with global systems, high maintenance cost, limited actual content quality compared to blocked global platforms. Maintained through inertia and regime ideology, not genuine functionality. d\u22480.25, f(d)\u22480.15, \u03c3=1.0 \u2192 \u03c7\u22480.10. Declining benefit; theater rising."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Global Internet Freedom Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (GLOBAL PERSPECTIVE) (SNARE) \u2014 From a civilizational/global view, NIN is pure extraction: it removes Iranian users from global information networks, eliminates their agency in choosing information sources, and creates asymmetric information control benefiting only the regime. No coordination function visible at global scale \u2014 the apparatus does not solve a collective action problem for users; it solves one for the regime alone. d\u22480.94, f(d)\u22481.39, \u03c3=1.2 \u2192 \u03c7\u22480.94. Snare classification is invariant across scopes."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_efficacy_threshold",
+      "question": "At what level of user technical sophistication (VPN usage, mirror sites, proxy relays) does the NIN's extraction collapse from snare to a degraded rope-like mechanism?",
+      "resolution_mechanism": "Longitudinal tracking of VPN/proxy penetration rates; correlation with regime security response escalation; analysis of whether technical countermeasures become economically unsustainable for the state",
+      "impact": "If threshold is crossed: snare becomes unsustainable, reclassifies to piton (extraction degrades as regime accepts workarounds). If threshold is high: snare persists indefinitely, classification is stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical sophistication threshold at which NIN extraction becomes infeasible"
+    },
+    {
+      "id": "regime_normalization_trajectory",
+      "question": "Does normalization of international relations (nuclear deal compliance, sanctions relief) reduce or increase regime commitment to NIN as ideological vs. security-driven infrastructure?",
+      "resolution_mechanism": "Analysis of NIN investment levels, technical refresh cycles, rhetoric emphasis (security vs. cultural preservation) during periods of sanctions vs. normalization",
+      "impact": "If normalization reduces NIN: constraint reclassifies to scaffold (sunset path). If normalization increases NIN (ideological entrenchment): snare persists or intensifies, suggesting deep structural commitment rather than temporary security measure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether international normalization affects NIN viability and ideology"
+    },
+    {
+      "id": "diaspora_information_channel_capacity",
+      "question": "How much of Iranian civil society's actual information consumption flows through diaspora-maintained shadow networks (Telegram, Signal, secure email) vs. domestically accessible (NIN + blocked global sites)?",
+      "resolution_mechanism": "Network analysis of packet flows; user surveys of primary information sources; comparison of diaspora-originated content penetration rates over time",
+      "impact": "If shadow networks dominate: NIN's extraction becomes partial, reclassifying to tangled_rope (coordination of official messaging coexists with parallel extraction-resistant channels). If NIN dominates: snare persists, extraction is near-total.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Penetration of diaspora shadow networks vs. state-controlled content"
+    },
+    {
+      "id": "youth_cohort_digital_citizenship",
+      "question": "For Iranians under 30 who have only known NIN-era internet, does the constraint feel like an immutable natural law (mountain) or a contingent political choice (snare)?",
+      "resolution_mechanism": "Longitudinal surveys of digital literacy, awareness of global internet, perceived alternatives; analysis of generational attitudes toward circumvention vs. acceptance",
+      "impact": "If naturalized as mountain: snare becomes culturally self-reinforcing (generational compliance reduces need for enforcement). If perceived as contingent snare: youth cohort retains exit consciousness, snare requires rising suppression to maintain.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether NIN is perceived as natural law by younger cohorts"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Iran's National Information Network (NIN), branded as the 'halal internet,' represents a structural extraction mechanism disguised as cultural and security infrastructure. Launched incrementally from 2011 onward and accelerating post-2019, the NIN architecture routes all domestic internet traffic through state-controlled nodes, enabling real-time surveillance, content filtering, and information monopoly. The constraint exhibits textbook snare properties: high base extractiveness (0.68), extreme suppression (0.82 \u2014 VPNs are illegal, circumvention tools are prosecuted, exit from the system is impossible for domestic users), and mounting theater (0.58) as the regime invests in appearance of functionality while the actual censorship costs Iranian internet users access to global knowledge, communication with diaspora, and authentic independent information. The constraint asymmetrically benefits the state security apparatus (which solves its collective action problem of information control) while extracting from all Iranian internet users (who lose agency, privacy, and access). The theater ratio rises over the measurement interval as technical maintenance costs accumulate without improving user experience \u2014 the NIN becomes increasingly a degraded system maintained through force rather than genuine function, yet the regime's ideological commitment ensures suppression remains high. This constraint family (NIN + related digital surveillance mechanisms) operates within a broader state surveillance architecture, making decomposition into separate constraint stories appropriate for platform-specific mechanisms (social media filtration, mobile app control, diaspora communication targeting).",
+    "key_agents": [
+      "Iranian Internet Users: Primary victims (powerless/trapped) \u2014 domestic population with no exit option, subject to content filtering and surveillance",
+      "Independent Journalists and Activists: Secondary victims (moderate/constrained) \u2014 face prosecution, imprisonment, asset seizure for circumvention or critical reporting",
+      "Iranian State Security Apparatus (IRGC, Ministry of Intelligence): Primary beneficiary (institutional/arbitrage) \u2014 controls information flows, eliminates opposition messaging, achieves surveillance totality",
+      "State Media Monopoly (IRIB, state news agencies): Secondary beneficiary (institutional/constrained) \u2014 maintains content monopoly but increasingly degraded by technical failures and perception of propaganda",
+      "Global Human Rights Organizations: Tertiary beneficiary (organized/mobile) \u2014 gain documentary material and advocacy leverage from NIN's oppression; mobile exit enables external critique",
+      "Diaspora Networks (Telegram communities, secure messaging): Competing extraction system (moderate/mobile) \u2014 parallel channels that partially bypass NIN, reducing its total extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The NIN extracts user agency (choice of information sources), privacy (ubiquitous surveillance), and diaspora communication (filtered/monitored). The extraction is not maximal because diaspora networks and occasionally-accessible mirror sites provide partial workarounds, and international access during travel offers periodic relief. The 0.68 value reflects that the apparatus succeeds in most cases but not all \u2014 the suppression mechanisms (legal threats, technical blocks) are severe but not hermetically perfect. Base extractiveness has risen from 0.35 (early 2010s, when NIN was conceptual) to 0.68 (2024, when technical maturity and enforcement are complete), reflecting the constraint's graduation from aspirational to actual. Suppression (0.82): Extremely high. VPN use is illegal under Iranian law (Article 19 violations). Circumvention tool possession is prosecuted. International phone and email communication is monitored. The regime has invested heavily in technical blocking (DPI, DNS poisoning, BGP hijacking) and enforcement (arrests of VPN users, prosecution of activists, seizure of equipment). Suppression is not total (0.82 \u2260 1.0) because some technically sophisticated users still maintain access, and the costs of enforcement are rising relative to the threat perceived. Theater ratio (0.58): Moderate-high, rising. The NIN claims to provide 'halal' (culturally appropriate) content and technical sovereignty but actually delivers a technically inferior experience (poor latency, limited functionality, high maintenance costs). Regime propaganda frames the NIN as a positive development protecting Iranian culture; users experience it as a mandatory prison. The theater ratio rises as the gap between promised functionality and actual performance widens: the regime must invest increasingly in maintaining appearance of success while users face actual degradation.",
+    "perspectival_gap": "The perspectival gap is extreme and structurally irreducible. The Iranian state security apparatus perceives the NIN as pure coordination (Rope) \u2014 solving the unified control problem. Iranian internet users perceive it as pure extraction (Snare) \u2014 they have no choice and bear all costs. Independent journalists perceive it as snare with constrained exit (Snare, higher d). Global human rights organizations perceive tangled coordination-extraction (Tangled Rope) \u2014 the constraint enables them to document and mobilize around Iranian repression, asymmetrically benefiting external advocacy while harming internal dissent. State media perceives it as degrading from rope to piton (theater rising, actual function declining). The analytical observer sees snare at every scale \u2014 the regime is the sole genuine beneficiary; everyone else bears costs. This perspectival gap cannot be narrowed by additional data: it reflects irreducible conflict between state interests (control) and user interests (freedom).",
+    "directionality_logic": "Iranian internet users: Victim + trapped \u2192 d\u22480.96, f(d)\u22481.41, \u03c3=1.0 \u2192 \u03c7\u22480.96. Powerless agents with zero exit capacity absorb maximum extraction. Independent journalists: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.85. Can exit at severe cost (imprisonment, exile); most do not exit because work requires presence. State security apparatus: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.18, \u03c3=1.0 \u2192 \u03c7\u2248-0.12. Institutional actors with full arbitrage (can modify rules, can enforce); net beneficiary. Global human rights organizations: Beneficiary (of documentary material) + mobile \u2192 d\u22480.30, f(d)\u22480.25, \u03c3=1.0 \u2192 \u03c7\u22480.17. Can exit fully (cease Iran operations); mobile exit reduces chi below what victim perspective would suggest because they choose to remain and document. State media: Once-beneficiary now constrained \u2192 d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.20. Declining benefit; theater rise suggests reclassification from Rope to Piton over measurement interval.",
+    "mandatrophy_analysis": "The mandatrophy is partially resolvable and partially irreducible. RESOLVABLE COMPONENT: Whether NIN is a snare (extraction-dominant) or rope (coordination-dominant) is answerable empirically. If we measure the distribution of costs and benefits across Iranian society, the snare classification is unambiguous \u2014 users lose, state gains. This is not a matter of perspective; it is objective structural asymmetry. IRREDUCIBLE COMPONENT: Whether the constraint is justified (whether the regime's security concerns justify the extraction, whether 'halal internet' reflects genuine cultural preference or coerced compliance) is a values question, not a structural one. The DR framework does not resolve this \u2014 it documents that the constraint extracts and that suppression is severe. The mandatrophy is resolved by recognizing that SNARE is the correct structural classification (not rope, not mountain, not scaffold), and the question of justification is a separate policy/ethical question. The persistent piton and mountain perspectives in the commentary (regime ideology, youth naturalization) are crucial: they show how extraction can be maintained by cultural normalization rather than force alone. If the constraint persists for another generation without substantial exodus or counter-information, the snare becomes self-reinforcing (younger cohorts perceive it as natural), and the theater ratio may rise past 0.70 (entering full piton degradation). This would represent a transformation from snare (clear structure of extraction maintained by suppression) to piton (degraded system maintained by theater and inertia)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "iranian_diaspora_communication_control",
+      "social_media_platform_filtration_iran",
+      "mobile_app_geofencing_iran"
+    ],
+    "dual_formulation_note": "The NIN is the upstream infrastructure constraint that enables downstream platform-specific controls (Telegram filtering, Instagram geofencing, etc.). Each downstream mechanism has its own \u03b5 and perspective set but structurally depends on NIN's packet routing monopoly. The NIN's snare classification is robust; downstream constraints may vary (some scaffolds if they target specific platforms with finite sunset dates, some tangled ropes if they show coordination benefit alongside extraction)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.88
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "tarski_undefinability_theorem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tarski"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Tarski's Undefinability Theorem",
+    "topic_domain": "mathematical_logic/foundational_mathematics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Logician",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL LOGICIAN (MOUNTAIN) \u2014 From the foundational mathematics perspective, Tarski's theorem is an immutable mathematical fact. No degree of freedom exists: sufficiently expressive formal systems (PA, ZFC) cannot contain their own truth predicate. This is not a contingent institutional arrangement or a policy choice \u2014 it follows necessarily from G\u00f6del completeness and the Liar's paradox structure. The constraint appears as a pure mathematical limit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computability Theorist",
+      "comment": "PERSPECTIVE 2: COMPUTABILITY THEORIST (MOUNTAIN) \u2014 From the recursion-theoretic view, the undefinability result maps to the halting problem and Rice's theorem: no effective procedure can decide truth in the metalanguage from within the object language. This is a structural limit on computation itself, not a limitation of any particular system or approach. The constraint holds across all Turing-complete formalisms."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Categorical Logician",
+      "comment": "PERSPECTIVE 3: CATEGORICAL LOGICIAN (MOUNTAIN) \u2014 From topos theory and category-theoretic foundations, the constraint appears as a categorical invariant: the forgetful functor from a category of models to its syntax has no section that preserves truth in all instances. This is a theorem about the structure of logical categories, not a property of any single formal system. The constraint is intrinsic to the category-theoretic architecture itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Semantic Philosopher",
+      "comment": "PERSPECTIVE 4: SEMANTIC PHILOSOPHER (MOUNTAIN) \u2014 From philosophy of language and model theory, Tarski's theorem reveals a fundamental asymmetry: semantic concepts (truth, reference, satisfaction) belong to the metalanguage by necessity, not by choice. No linguistic community can bootstrap their way out of this constraint by adopting new conventions or redefining terms. The gap between object language and metalanguage is not a failure of current systems but a structural feature of meaning itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "weak_vs_strong_expressiveness",
+      "question": "Does the undefinability constraint apply equally to weakly expressive systems (propositional logic) versus strongly expressive systems (PA, ZFC)?",
+      "resolution_mechanism": "Formal derivation of Tarskian diagonalization for subsystems of varying expressive power; demonstration of where the constraint first becomes operative",
+      "impact": "If the constraint requires high expressiveness: weaker systems might admit self-contained truth predicates (changing the scope of the mountain). If it applies universally: the mountain is broader than typically understood.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Expressiveness threshold for undefinability to become operative"
+    },
+    {
+      "id": "paraconsistent_escape",
+      "question": "Do paraconsistent or multi-valued logics genuinely escape Tarski's undefinability, or do they restate the constraint in different formal vocabulary?",
+      "resolution_mechanism": "Formal analysis of whether paraconsistent truth predicates avoid diagonalization or merely suppress contradiction; proof-theoretic comparison of standard and paraconsistent versions",
+      "impact": "If truly escape: the constraint is logic-relative, not universal (downgrade from mountain). If restate: the constraint is universal across logical frameworks (mountain confirmed).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether paraconsistent logic escapes undefinability or restates it"
+    },
+    {
+      "id": "partial_truth_definition",
+      "question": "Can a formal system define truth for a proper subset of its sentences (e.g., Horn clauses, decidable predicates) without falling into the undefinability trap?",
+      "resolution_mechanism": "Examination of restricted truth predicates in subsystems; determination of whether restriction is compatible with the logical power needed for meaningful discourse",
+      "impact": "If yes: the constraint is about totality, and partial solutions exist (constraint degrades to Tangled Rope or Rope). If no: even partial truth is undefinable (confirms mountain).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether restricted truth predicates escape undefinability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 1931,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1960,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1931,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1960,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 1931,
+    "end": 2000
+  },
+  "commentary": {
+    "narrative_context": "Tarski's undefinability theorem (1933/1936) states that for any sufficiently expressive formal system (such as Peano Arithmetic or Zermelo-Fraenkel set theory), it is impossible to define a predicate that captures truth for sentences in that system using only the resources available within the system itself. The proof uses diagonalization: any attempted definition of 'true(x)' for the system's sentences leads to a self-referential contradiction analogous to the Liar's paradox ('this sentence is false'). This constraint differs fundamentally from G\u00f6del's incompleteness theorems \u2014 it is not about unprovability but about undefinability. The theorem establishes that truth transcends formal expression within expressive systems. From all perspectives examined, this constraint classifies as Mountain: it is an immutable logical limit that holds across all frameworks, all observers, and all times. No agent benefits from undefinability, and no agent experiences extraction \u2014 it is a structural necessity of language and meaning.",
+    "key_agents": [
+      "Mathematical Logician: Analytical observer (analytical/analytical) \u2014 perceives undefinability as a pure mathematical necessity",
+      "Computability Theorist: Analytical observer (analytical/analytical) \u2014 perceives constraint as structural limit on effective procedures",
+      "Categorical Logician: Analytical observer (analytical/analytical) \u2014 perceives constraint as categorical invariant",
+      "Semantic Philosopher: Analytical observer (analytical/analytical) \u2014 perceives constraint as feature of meaning and reference"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. Tarski's theorem creates no extraction \u2014 no agent captures rent or value from other agents through the undefinability constraint. The theorem is a pure structural fact about the limits of formal systems. Suppression (0.02): Negligible. There is no coercive enforcement, no suppression of alternatives, no lack of exit options. The constraint is not enforced but discovered. Theater ratio (0.15): Low. Mathematical proofs of undefinability are direct and functionally complete \u2014 the diagonalization argument is transparent, the structure is clear, and there is minimal performative activity. The slight theater (not zero) reflects only the pedagogical presentation required to communicate a complex abstract result to human minds. The constraint itself has zero theatrical content.",
+    "perspectival_gap": "This is a uniform-type constraint: all perspectives yield Mountain classification. The gap exists not in classification type but in the descriptive frame used to articulate the same mathematical fact. The logician emphasizes incompleteness of self-reference; the computability theorist emphasizes undecidability of halting; the categorical logician emphasizes structural limits of forgetful functors; the semantic philosopher emphasizes the irreducible gap between language and metalanguage. These are four windows into the same invariant mathematical structure, not four different constraints.",
+    "mandatrophy_analysis": "NATURAL LAW CONFIRMED: Tarski's undefinability theorem is a genuine mountain \u2014 a mathematical necessary truth with zero degrees of freedom. No observational basis, no alternative framing, no policy choice can alter the core result: sufficiently expressive systems cannot contain their own truth predicate. The theorem holds in classical logic, intuitionistic logic, linear logic, and (in appropriately restated form) in paraconsistent frameworks. The accessibility_collapse (0.92) reflects that the constraint is fully accessible to any competent mathematical logician; the resistance (0.08) reflects only the cognitive difficulty of proof presentation, not structural resistance to understanding. This constraint serves as a canonical example of a pure mathematical mountain.",
+    "directionality_logic": "Directionality derivation is not applicable to this constraint because all perspectives have agent_power='analytical' and exit_options='analytical'. No agent experiences the constraint as extraction or coordination. The constraint is observer-invariant across all measurement bases and all indexical positions. There are no beneficiaries or victims \u2014 the undefinability is a shared structural fact that all reasoning agents must accept equally."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "godel_incompleteness_first",
+      "halting_problem_undecidability",
+      "godel_incompleteness_second"
+    ],
+    "dual_formulation_note": "Tarski's undefinability is upstream of G\u00f6del's incompleteness theorems (which use similar diagonalization methods) and of the halting problem. The undefinability of truth is a more fundamental constraint than any specific unprovability or undecidability result \u2014 it establishes the existential gap that those theorems exploit. All three form a constraint family linked by shared diagonalization structure."
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "ergo_storage_rent",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ergo Storage Rent (UTXO Demurrage)",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "active_ergo_users",
+      "ergo_miners"
+    ],
+    "victims": [
+      "long_term_inactive_utxo_holders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Inactive UTXO Holder",
+      "comment": "Inactive UTXO holders may be unaware of the storage rent mechanism and lose funds without active participation. They are essentially trapped if they lose their keys or remain inactive for extended periods."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Active Ergo Users",
+      "comment": "Active users benefit from the increased availability of circulating coins and the network security provided by miners who are incentivized by storage rent revenue. They can arbitrage the system by moving their coins to avoid the rent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, storage rent is a complex mechanism that aims to balance the economic incentives of active participation with the potential for loss of funds for inactive users. It can be seen as both a coordination tool and an extractive measure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Ergo Miners",
+      "comment": "Miners benefit from the storage rent as it supplements block rewards, incentivizing them to maintain network security. They can arbitrage by choosing which transactions to include in blocks."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "utxo_activity_threshold",
+      "question": "What is the optimal inactivity period before storage rent applies to balance encouraging activity with preserving long-term holdings?",
+      "resolution_mechanism": "Empirical analysis of UTXO activity patterns and user behavior on the Ergo network.",
+      "impact": "Determines the degree of extraction experienced by inactive users and the effectiveness of the mechanism in promoting coin circulation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal inactivity period for storage rent"
+    },
+    {
+      "id": "alternative_demurrage_mechanisms",
+      "question": "Are there alternative demurrage mechanisms that could achieve similar economic benefits with reduced impact on long-term inactive holders?",
+      "resolution_mechanism": "Comparative analysis of different demurrage models and their potential effects on user behavior and network economics.",
+      "impact": "Determines whether the current storage rent mechanism is the most efficient and equitable solution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative demurrage mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Ergo's storage rent is a mechanism designed to incentivize activity on the network by charging a demurrage fee on UTXOs that remain unspent for four years. This mechanism aims to reduce chain bloat and ensure a more active circulation of coins, but it also creates a risk for long-term inactive holders who may lose their funds. The implementation and effects of storage rent create a complex dynamic with varying perspectives.",
+    "key_agents": [
+      "Long-term Inactive UTXO Holders: Primary target (powerless/trapped) - Risk losing funds due to storage rent.",
+      "Active Ergo Users: Primary beneficiary (institutional/arbitrage) - Benefit from a more active and efficient network.",
+      "Ergo Miners: Secondary beneficiary (powerful/arbitrage) - Receive storage rent fees as compensation for maintaining the network."
+    ],
+    "logic_rationale": "The extractiveness is set to 0.55 because while the rent does extract value from inactive users, the intention is not purely extractive but also to promote network health. Suppression is 0.40, as users have the option to move their UTXOs to avoid the rent, but there is a barrier for those unaware or unable to do so. The theater ratio is low, as the mechanism is directly tied to economic incentives rather than performative aspects.",
+    "perspectival_gap": "Inactive UTXO holders view the storage rent as a snare because they risk losing their funds, especially if they are unaware of the mechanism or have lost access to their wallets. Active users and miners, on the other hand, view it as a rope because it promotes network activity and provides compensation for miners. The analytical observer sees the tangled rope nature of the mechanism, balancing extraction and coordination.",
+    "directionality_logic": "The directionality is based on the beneficiary/victim status and exit options. Inactive holders have limited exit options (trapped), leading to a high directionality value and classification as a snare. Active users and miners have arbitrage options, resulting in lower directionality values and classifications as ropes. The analytical observer takes a more neutral stance, leading to a tangled rope classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "platform_app_store_duopoly",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "appstore"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Mandate for Proprietary App Stores and In-App Payments",
+    "topic_domain": "technological/platform_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "apple_google_platform_operators",
+      "first_party_app_developers"
+    ],
+    "victims": [
+      "third_party_app_developers",
+      "app_distribution_ecosystem",
+      "consumer_payment_alternatives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent App Developer",
+      "comment": "PERSPECTIVE 1: DEPENDENT APP DEVELOPER (SNARE) \u2014 A third-party developer with no meaningful alternative distribution channel. Cannot exit without abandoning market access to billions of users. Pays 15-30% commission on all in-app purchases, subscription revenue, and indirect monetization. Zero bargaining power. Suppression is absolute: App Store Review Guidelines are non-negotiable, terms of service unilateral, enforcement arbitrary. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Developer Coalition",
+      "comment": "PERSPECTIVE 2: DEVELOPER COALITION (TANGLED ROPE) \u2014 Collective of organized developers (Epic Games, Spotify, Basecamp, etc.) who recognize the constraint and attempt collective action. Constrained by the coordination cost of maintaining coalition (antitrust lawsuits, regulatory lobbying) and the platform's ability to retaliate (app demotion, rejection). Benefits from the ecosystem (distribution infrastructure, payment processing, fraud prevention) but also bears extraction through commissions and policy changes. Active enforcement of app removal creates suppression; coordination function (payment infrastructure, fraud protection) creates partial rope component."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operator (First-Party Apps)",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR - FIRST-PARTY APPS (ROPE) \u2014 Apple's and Google's own apps (Apple Music, Google Maps, YouTube, iCloud+, Google Drive, Google Photos) are exempt from the 15-30% commission on in-app purchases or pay themselves zero percent. These actors experience the app store mandate as pure coordination: the store infrastructure solves distribution and payment processing. Zero extraction from this perspective; net beneficiary of the coordination mechanism. Arbitrage exit option reflects ability to change policy unilaterally."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Large Incumbent Developer (Spotify, Netflix, Microsoft)",
+      "comment": "PERSPECTIVE 4: LARGE INCUMBENT DEVELOPER (TANGLED ROPE) \u2014 Billion-dollar companies (Spotify, Netflix, Microsoft, Amazon, Discord) with diversified monetization and alternative distribution channels (web, desktop, direct subscriptions). Mobile/exit options more favorable than dependent developers. Constrained by the need to maintain mobile presence (13+ billion users accessible nowhere else) but can negotiate special rates, build workarounds (external subscription links), or invest in regulatory challenges. Experiences the constraint as extraction (commissions, policy changes) but also benefits from the app store's distribution infrastructure and fraud prevention. Organized power allows coalition-building; neither fully trapped nor fully arbitrage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operator (System Function)",
+      "comment": "PERSPECTIVE 5: PLATFORM OPERATOR - SYSTEM FUNCTION (ROPE) \u2014 From the perspective of the platform operator's own apparatus (Apple Inc., Google LLC), the app store mandate solves genuine coordination problems: code signing, trusted distribution, payment processing, developer onboarding, fraud prevention, consumer refund mediation. The 15-30% commission reflects real system costs plus network effects value. Experienced as pure coordination infrastructure. Zero experienced extraction from this structural position."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Theater (App Curation Pretext)",
+      "comment": "PERSPECTIVE 6: REGULATORY THEATER (PITON) \u2014 The stated justification for exclusive app stores is content curation and consumer protection against malware. This theatrical element persists despite being largely decoupled from actual function: (a) app review is not real-time verification against exploit databases; (b) many app store rejections cite 'guideline violations' unprovable to objective standards; (c) sideloading on Android allows arbitrary installation, proving the curation claim is not about technical necessity; (d) first-party apps bypass review processes. Theater ratio (0.48) reflects that some real quality control exists, but much of the enforcement narrative serves rent-extraction justification. The curation rationale is maintained through institutional inertia and regulatory compliance theater."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective unbounded by any single actor's constraints, the app store system exhibits genuine coordination function (trusted distribution, payment processing, fraud prevention) AND asymmetric extraction (15-30% commissions on dependent developers, policy rent-seeking, restriction of alternative distribution). The mandatrophy is resolved by recognizing this as a real hybrid: the system solves a real problem while generating rents. Not pure Snare (the infrastructure genuinely helps developers), not pure Rope (the extraction is not symmetric or consensual). The analytical classification is Tangled Rope from all structurally neutral viewpoints."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "commission_necessity_threshold",
+      "question": "What portion of the 15-30% commission is necessary payment for genuine platform services (payment processing, fraud prevention, distribution infrastructure) versus economic rent extracted through market power?",
+      "resolution_mechanism": "Cost accounting analysis of Apple/Google app store operations (infrastructure, personnel, fraud prevention); comparison to competitive payment processing rates (2-3% for Stripe, PayPal); benchmarking against alternative app distribution models (F-Droid, Samsung Galaxy Store, Epic Games Launcher)",
+      "impact": "If 5-10% necessary, 5-20% rent: extraction classification strengthened (Snare from more perspectives). If 12-15% necessary, 0-5% rent: coordination classification strengthened (Rope from more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "What portion of commission is necessary versus rent"
+    },
+    {
+      "id": "genuine_curation_necessity",
+      "question": "Is centralized app store curation technically necessary for malware prevention and consumer protection, or is it a social/regulatory choice decoupled from technical necessity?",
+      "resolution_mechanism": "Security analysis comparing curated app stores to sideloading markets (Android, PC); malware prevalence rates; consumer harm statistics; technical feasibility of decentralized security models (reputation systems, code signing verification, crowdsourced review)",
+      "impact": "If technically necessary: coordination function justified (higher Rope classification). If decoupled from necessity: curation is regulatory theater (Piton/Snare classification strengthened).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether app curation is technically necessary or regulatory theater"
+    },
+    {
+      "id": "coalition_critical_mass",
+      "question": "At what developer coalition size does collective action become viable for negotiating alternative payment terms or regulatory change?",
+      "resolution_mechanism": "Game-theoretic analysis of defection incentives; empirical tracking of developer coalition sentiment (DMA regulations, recent lawsuits, antitrust referrals); threshold modeling for legal/regulatory pressure",
+      "impact": "If large coalitions (100+ companies, $100B+ revenue) remain powerless: Snare perspective dominates. If coalition threshold is reachable: developer organizing can shift classification to sustained Tangled Rope negotiation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass for viable developer collective action"
+    },
+    {
+      "id": "alternative_distribution_viability",
+      "question": "Can alternative app distribution channels (web progressive apps, desktop app stores, direct sideloading) become functionally equivalent to mobile app stores for consumer reach and developer revenue?",
+      "resolution_mechanism": "Longitudinal tracking of progressive web app adoption, desktop app store growth (Epic Games Launcher, Microsoft Store, Steam), sideloading prevalence on Android; consumer willingness-to-pay and monetization sustainability on alternative channels",
+      "impact": "If viable alternatives emerge: exit options shift from 'trapped' to 'mobile/constrained' for more developers, reducing Snare severity. If barriers remain insurmountable: Snare classification persists.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative distribution channels can replicate mobile reach"
+    },
+    {
+      "id": "regulatory_mandate_sustainability",
+      "question": "Will DMA/Digital Markets Act regulatory interventions (forced sideloading, third-party payment methods, fair access to app store) survive implementation without platform evasion or legislative rollback?",
+      "resolution_mechanism": "Monitoring of EU DMA compliance mechanisms, US antitrust enforcement, developer regulatory capture risk, platform lobbying effectiveness, sunset/expiration of regulatory mandates",
+      "impact": "If regulations are sustained and enforced: constraint shifts toward Scaffold (temporary enforcement with sunset). If platforms evade or regulations are rolled back: constraint persists as Tangled Rope/Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of regulatory interventions against app store mandates"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The app store mandate in iOS and Android represents a structural constraint where two platform operators (Apple and Google) require all third-party app distribution and in-app payments to flow through proprietary systems charging 15-30% commissions. This constraint exhibits a genuine tangled hybrid: the app stores solve real coordination problems (trusted distribution, payment processing, fraud prevention, developer onboarding) while simultaneously extracting economic rent through market power and suppressing alternative distribution channels. The constraint's classification varies dramatically by observer: dependent developers experience it as a snare with no exit; platform operators experience it as pure coordination infrastructure; large organized developers experience it as a tangled hybrid they can partially negotiate; regulators see it as theater masking extraction behind consumer protection narratives. The increasing extractiveness trajectory (0.35\u21920.58 over the interval) reflects platform operators' increasing confidence to enforce stricter policies (rejection of alternative payment methods, commission increases, unpredictable guideline changes) as regulatory risk was perceived as low. The decreasing theater ratio (0.55\u21920.48) reflects that the curation justification has become less credible as evidence accumulates that app review is inconsistently applied, first-party apps bypass review, and sideloading security data contradicts necessity claims.",
+    "key_agents": [
+      "Apple Inc. and Google LLC: Primary beneficiary operators (institutional/arbitrage) \u2014 capture 15-30% commission on all third-party in-app purchases; can modify terms unilaterally; exempt own apps from commission rules",
+      "Third-Party App Developers (small/medium): Primary victims (powerless/trapped) \u2014 dependent on app store distribution with no alternative; pay full commission; subject to arbitrary guideline enforcement",
+      "Developer Coalition (Epic Games, Spotify, Basecamp): Organized victims (organized/constrained) \u2014 attempting collective action through lawsuits, regulatory lobbying; constrained by coalition maintenance costs and retaliation risk",
+      "Large Incumbent Developers (Netflix, Microsoft, Amazon): Secondary victims (powerful/mobile) \u2014 can negotiate better rates or build workarounds; constrained by need to maintain mobile presence; have alternative channels",
+      "First-Party Apps (Apple Music, Google Maps, YouTube): Primary beneficiary applications (institutional/arbitrage) \u2014 exempt from commission rules; benefit from privileged platform access; experience constraint as pure rope",
+      "App Store Infrastructure: System function (institutional/arbitrage) \u2014 payment processing, fraud prevention, developer onboarding; experiences constraint as coordination solving genuine problems",
+      "Consumers: Secondary victims (moderate/constrained) \u2014 pay higher prices due to commission pass-through; limited access to alternative payment methods; constrained by platform app availability"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The 15-30% commission extracted from dependent developers represents significant economic rent. Base extraction increased from 0.35 to 0.58 over the interval as platforms became more aggressive in enforcing exclusive payment methods and raising commissions. However, the value reflects that not all commission is pure rent \u2014 payment processing infrastructure, fraud prevention, and distribution value constitute genuine coordination cost (approximately 5-12% based on competitive benchmarks like Stripe at 2.3%). The remainder (8-25%) represents extraction through market power. Suppression (0.72): High. Multiple suppression mechanisms: (1) technical control (code signing, app review, certificate authority) makes sideloading difficult on iOS; (2) policy enforcement (App Store Review Guidelines, arbitrary rejections); (3) economic barriers (network effects make 1.5B+ user base inaccessible without platform); (4) legal risk (developers fear retaliation via app removal or demotion); (5) information asymmetry (review criteria opaque, guidelines change without notice). Theater ratio (0.48): Moderate. Consumer protection and malware prevention are genuine but not the primary enforcement mechanism. Theater element: (a) first-party apps bypass review entirely (proving curation is not about security necessity); (b) review criteria are inconsistently applied across different app categories; (c) sideloading on Android allows arbitrary installation with lower harm rates than narrative suggests; (d) review processes are delayed and unpredictable rather than evidence-based; (e) many rejections cite 'guideline violations' without objective verification standards. Theater decreased from 0.55 to 0.48 as regulatory scrutiny (DMA, US antitrust) forced platforms to articulate clearer review standards, increasing functional transparency. Claimed type (Tangled Rope): The constraint is not pure Snare because genuine coordination value exists (payment processing, fraud prevention, developer discovery tools, consumer refund mediation). It is not pure Rope because the extraction is severe and the asymmetry is extreme. The active enforcement requirement (required for Tangled Rope gate) is satisfied: platforms actively enforce exclusive payment methods, reject competing payment solutions, and threaten app removal for policy violations.",
+    "directionality_logic": "Directionality values (d) derive from the structural position of each agent relative to the extraction flow. Beneficiary agents (platform operators, first-party apps) have low d values (0.05-0.20): they are net recipients of the commission flow and have exit options (arbitrage \u2014 ability to change policy unilaterally). Victim agents (dependent developers) have high d values (0.90-0.95): they are net payers of commissions with no functional exit. Organized developers have intermediate d values (0.55-0.65): they have some exit options (regulatory challenges, coalition pressure, building workarounds) and can partially negotiate, but constrained by the network effect lock-in. The sigmoid f(d) transforms these directionality values into experienced extractiveness multipliers. A powerless agent with d=0.95 experiences f(d)\u22481.42, making the nominal 15-30% commission feel like severe extraction. An institutional agent with d=0.05 experiences f(d)\u2248-0.12, making the commission structure appear as neutral coordination. An organized developer with d=0.60 experiences f(d)\u22480.85, experiencing moderate extraction with some negotiation space.",
+    "perspectival_gap": "This constraint demonstrates why classification is observer-relative. The dependent developer's Snare classification (powerless/trapped) reflects their lived experience: no meaningful alternative exists; commissions are non-negotiable; policy changes are unilateral; retaliation risk is real. The platform operator's Rope classification (institutional/arbitrage) reflects their structural position: app store infrastructure solves genuine problems (payment, fraud, discovery); they have full control over implementation; first-party apps are exempt; margins subsidize their operating costs. The developer coalition's Tangled Rope classification (organized/constrained) reflects their intermediate position: they have collective action capacity (lawsuits, regulatory pressure) but at high coordination cost; they benefit from the ecosystem (1.5B users accessible nowhere else) but pay extraction; they can partially negotiate better terms but cannot unilaterally change the system. The analytical observer's classification is also Tangled Rope (civilizational/analytical): neither pure coordination nor pure extraction \u2014 the system solves real problems while generating unwarranted rents. The perspectival gap reveals that the constraint's nature depends on the observer's exit options: those with exits see coordination; those without see extraction.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by the tangled rope classification itself. The constraint does NOT reduce to pure coordination (Rope) because: (1) the 15-30% commission is dramatically higher than competitive payment processing costs (2-3%); (2) first-party apps are exempt, creating asymmetry; (3) the extraction cannot be renegotiated or exited by dependent developers; (4) suppression (policy enforcement, guideline arbitrariness) serves to maintain extraction, not solve coordination. The constraint does NOT reduce to pure extraction (Snare) because: (1) the app store infrastructure provides genuine value (payment processing, fraud prevention, developer discovery, consumer refund mediation); (2) organized developers can partially negotiate better terms and build workarounds; (3) the system facilitates legitimate entrepreneurship \u2014 many successful businesses exist within these constraints; (4) the coordination function is not a pretext but a real technical requirement. The resolution is that this is a legitimate Tangled Rope: a system that solves a genuine coordination problem (how to distribute trusted applications to billions of users, process payments securely, prevent fraud) while simultaneously extracting economic rent through market power. The mandatrophy risk would be claiming this is pure Rope (erasing the extraction and asymmetry) or pure Snare (erasing the coordination value). Tangled Rope classification preserves both structural truths."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_markets_act_compliance",
+      "web_app_friction_tax",
+      "developer_bargaining_power_asymmetry"
+    ],
+    "dual_formulation_note": "The app store mandate can be decomposed into two structurally distinct constraints: (1) Technical distribution infrastructure constraint (\u03b5\u22480.15, Mountain) \u2014 code signing, trusted distribution, fraud prevention are genuine coordination requirements; (2) Rent extraction through payment system monopoly (\u03b5\u22480.55, Snare/Tangled Rope) \u2014 the 15-30% commission and exclusive payment mandate exceed competitive costs. This story models the unified system (\u03b5=0.58, Tangled Rope) where both operate simultaneously. Downstream constraints (DMA compliance, web app friction) are affected by how this constraint is regulated."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

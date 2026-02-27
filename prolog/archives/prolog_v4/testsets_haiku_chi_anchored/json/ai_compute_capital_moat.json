@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "ai_compute_capital_moat",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aiccm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The AI Compute & Capital Moat",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_holders",
+      "incumbent_labs"
+    ],
+    "victims": [
+      "emerging_research_groups",
+      "economically_constrained_developers",
+      "epistemic_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emerging Research Group",
+      "comment": "PERSPECTIVE 1: EMERGING RESEARCH GROUP (SNARE) \u2014 Cannot afford GPUs or compete for elite talent without pre-existing capital. Blocked from frontier research entirely. d\u22480.94, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Well-Funded Startup",
+      "comment": "PERSPECTIVE 2: WELL-FUNDED STARTUP (SNARE) \u2014 Can access capital and some talent, but must accept downstream dependency on incumbents for model access, compute time, or acquisition. Constrained exit: acquisition or subservience. d\u22480.82, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Source AI Coalition",
+      "comment": "PERSPECTIVE 3: OPEN-SOURCE AI COALITION (TANGLED ROPE) \u2014 Organized agent (Meta, academia, collective contributors) sees a coordination function: distributed compute, volunteer labor, open weights models reduce moat barriers. But also constrained by resource asymmetry and competition dynamics. d\u22480.48, f(d)\u22480.60, \u03c3=1.2 \u2192 \u03c7\u22480.42."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent AI Lab",
+      "comment": "PERSPECTIVE 4: INCUMBENT AI LAB (ROPE) \u2014 Primary beneficiary (OpenAI, DeepSeek, Anthropic leadership at funding time). Experiences constraint as coordination of elite talent and capital deployment. Moat enables long R&D runways and attracts top researchers. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Capital Provider",
+      "comment": "PERSPECTIVE 5: CAPITAL PROVIDER (ROPE) \u2014 Venture, strategic, and government capital sees coordination function: capital concentration enables risk-taking on frontier research with long timelines. Moat protects return on investment and justifies continued capital flows. d\u22480.10, f(d)\u2248-0.06, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Elite AI Researcher",
+      "comment": "PERSPECTIVE 6: ELITE AI RESEARCHER (TANGLED ROPE) \u2014 Paradoxical position: moat concentrates resources they need for ambitious work, but also constrains their negotiating power and career mobility. Can move between labs but cannot access frontier compute outside incumbent ecosystem. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Developing Nation Research Sector",
+      "comment": "PERSPECTIVE 7: DEVELOPING NATION RESEARCH SECTOR (SNARE) \u2014 Structurally excluded from frontier AI development by capital and GPU access barriers. Cannot compete for global talent without funding. Constrained to downstream application work or dependent partnerships. d\u22480.88, f(d)\u22481.32, \u03c3=1.2 \u2192 \u03c7\u22480.91."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The 'Scientific Progress Requires Scale' Narrative",
+      "comment": "PERSPECTIVE 8: INSTITUTIONAL NARRATIVE (PITON) \u2014 The dominant framing 'frontier AI requires massive compute' is partly functional (true) and partly performative theater masking extraction. Theater ratio = 0.35 reflects that efficiency gains, algorithmic improvements, and inference-time scaling could reduce training compute requirements, but the narrative naturalizes capital concentration as inevitable. Institutional inertia maintains the moat as 'inherent to the field.'"
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, the moat might appear as a natural consequence of physics and economics: training frontier models genuinely requires massive GPU clusters. Scaling laws appear immutable. However, the structural data (\u03b5=0.58, suppression=0.68, theater=0.35, requires_active_enforcement=true) contradicts the mountain classification. The engine will compute this as a false summit: the 'natural law' framing obscures contingent choices about capital allocation, compute efficiency, and knowledge access."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "compute_scaling_necessity",
+      "question": "How much of the compute requirement for frontier AI is fundamental physics vs. contingent engineering/architectural choice?",
+      "resolution_mechanism": "Comparison of compute budgets across frontier labs; measurement of efficiency gains from algorithmic improvements; analysis of architectural efficiency (inference-time vs training-time scaling); empirical test of whether modest labs can match capabilities with alternative approaches",
+      "impact": "If mostly fundamental: moat is closer to mountain, less extractive. If mostly contingent: moat is engineered extraction, snare classification strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fundamental vs contingent nature of compute requirements"
+    },
+    {
+      "id": "talent_mobility_barrier",
+      "question": "Is the elite AI talent concentration driven by moat-enforced exclusivity or by genuine epistemic advantage of incumbent labs?",
+      "resolution_mechanism": "Career trajectory analysis of researchers who left incumbent labs; productivity metrics of distributed vs concentrated teams; emergence of strong new labs with fresh recruitment; comparison of innovations per capital invested",
+      "impact": "If moat-enforced exclusivity: talent barrier is extracted rent. If epistemic advantage: talent follows capability, not capital. Classification shifts from snare toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether talent concentration is moat-driven or merit-driven"
+    },
+    {
+      "id": "gpu_supply_cartel",
+      "question": "Does NVIDIA/foundry concentration constitute a cartel enforcing moat, or does it reflect genuine manufacturing advantage?",
+      "resolution_mechanism": "Price analysis of GPU margins vs manufacturing cost; timeline of competitive foundries entering market; assessment of whether supply restrictions are technical or commercial; geopolitical pressure on supply chains",
+      "impact": "If cartel: moat has external structural enforcement. If manufacturing advantage: moat is contingent on ongoing technical lead. Affects who is the true beneficiary (GPU supplier vs AI lab).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether GPU concentration is cartel or manufacturing advantage"
+    },
+    {
+      "id": "open_weights_convergence",
+      "question": "At what capability threshold does open-weights models reduce the moat's effectiveness? Can distributed open-source development match frontier labs at inference time?",
+      "resolution_mechanism": "Capability parity tracking (benchmarks: reasoning, coding, multimodal); time lag between closed and open models; performance per compute invested; emergence of specialized open alternatives",
+      "impact": "If convergence timeline < 12 months: moat is temporary (scaffold-like). If > 2 years: moat is durable (snare). If never converges: moat is structural (mountain-like from incumbent perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for open-weights models to achieve capability parity"
+    },
+    {
+      "id": "regulatory_intervention_likelihood",
+      "question": "Will antitrust, export controls, or compute allocation policies erode the moat, or does the moat itself prevent such intervention?",
+      "resolution_mechanism": "Analysis of regulatory precedent in other tech monopolies (search, cloud); political economy of AI regulation lobbying; feasibility of compute-allocation mandates; geopolitical fragmentation of AI development",
+      "impact": "If intervention likely: moat is politicized, vulnerable to policy shock. If unlikely: moat is self-reinforcing. Affects lifecycle predictions.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Likelihood and impact of regulatory intervention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "aiccm_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5,
+      "id_override": "aiccm_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "aiccm_extract_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "id_override": "aiccm_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28,
+      "id_override": "aiccm_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35,
+      "id_override": "aiccm_theater_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The AI Compute & Capital Moat represents a structural asymmetry in frontier artificial intelligence development that functions simultaneously as coordination mechanism (enabling long R&D runways and capital accumulation for ambitious research) and as extraction mechanism (excluding all but a handful of institutions and sovereign entities from frontier AI research). The constraint emerges from two nonreducible bottlenecks: (1) elite AI research talent is concentrated geographically and institutionally, creating a winner-take-most dynamic; (2) training frontier models requires GPU clusters at scales ($100M-$1B+) that only capital-rich institutions can access. This constraint exhibits the full spectrum of DR classifications depending on observer position. The incumbent lab experiences the moat as Rope (pure coordination enabling breakthrough research). The emerging research group experiences it as Snare (complete exclusion from the field). The open-source coalition experiences it as Tangled Rope (mixed coordination and extraction). The well-funded startup experiences it as Snare (constrained to dependency). The analytical observer risks naturalizing the moat as a Mountain (immutable law of AI development), but the structural data reveals this as a false summit: the moat is actively enforced through capital allocation decisions, compute access restrictions, and talent recruitment strategies. The theater ratio (0.35) reflects that while the genuine compute requirements are substantial, significant portions of the moat narrative are performative: claims that 'scale is necessary for safety' or 'frontier models require maximum compute' sometimes conflate architectural necessity with strategic choice.",
+    "key_agents": [
+      "Incumbent AI Lab (OpenAI, DeepSeek, Anthropic, Google): Primary beneficiary (institutional/arbitrage) \u2014 captures long R&D runway, attracts elite talent, controls frontier model access and derivatives",
+      "Capital Providers (VCs, strategic investors, governments): Primary beneficiary (institutional/arbitrage) \u2014 protect return on investment, justify continued capital flows, access frontier model capabilities",
+      "Elite AI Researchers: Mixed position (powerful/mobile) \u2014 concentrated in incumbent labs but paradoxically constrained by them; mobile between labs but cannot access frontier compute outside incumbent ecosystem",
+      "Emerging Research Groups: Primary victim (powerless/trapped) \u2014 completely excluded from frontier AI development by capital and GPU access barriers",
+      "Well-Funded Startups: Secondary victim (moderate/constrained) \u2014 can access capital and some talent but face downstream dependency on incumbents",
+      "Open-Source AI Coalition (Meta, academic institutions, volunteer contributors): Organized agent (organized/constrained) \u2014 developing alternative pathways but constrained by resource asymmetry",
+      "Developing Nation Research Sector: Victim (moderate/constrained) \u2014 structurally excluded from frontier research by capital and GPU access barriers",
+      "GPU Supply Chain (NVIDIA, foundries, geopolitical actors): Structural controller (institutional/arbitrage) \u2014 gate-keeps access to compute through manufacturing concentration and export controls",
+      "Epistemic Diversity in AI: Abstract victim (powerless/trapped) \u2014 moat reduces diversity of research directions, architectural approaches, and safety perspectives"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The moat extracts substantial value from excluded researchers and developers through exclusion, but the extraction is not total (snare-level 0.66+) because: (1) open-source models provide some alternative access; (2) inference-time scaling and fine-tuning reduce the need for frontier training compute; (3) some valuable research happens outside the moat (interpretability, alignment, specialized domains). The value increased from ~0.35 (2020) to 0.58 (2026) as compute requirements scaled and capital concentration accelerated. Suppression (0.68): High. Structural barriers to exit include: capital requirements ($100M-$1B+ for frontier training); GPU scarcity and geopolitical controls; talent concentration in 3-5 institutions; first-mover advantages in model release and derivative access. These are not trivial costs to bear \u2014 they are fundamental barriers to entry. Theater ratio (0.35): Moderate-low. Unlike purely performative constraints, the moat has genuine functional content: frontier models do require substantial compute, and capital concentration does enable long-term R&D. However, 35% theater reflects that some narrative is performative: efficiency-improving claims are sometimes overstated; the necessity of maximum-scale training is sometimes conflated with contingent architectural choices; safety arguments are sometimes used to justify closed models.",
+    "perspectival_gap": "The moat demonstrates extreme perspectival divergence. The incumbent lab (Rope) experiences the moat as enabling their mission \u2014 concentrating capital and talent allows sustained breakthroughs. The emerging researcher (Snare) experiences complete structural exclusion. The well-funded startup (Snare) experiences constrained dependency. The open-source coalition (Tangled Rope) experiences both coordination benefits (open weights enable distributed development) and extraction costs (must compete with far-better-resourced incumbents). The elite researcher (Tangled Rope) is paradoxically privileged (access to frontier compute) and constrained (cannot negotiate mobility without organizational affiliation). The developing nation (Snare) experiences geopolitical exclusion. The GPU supplier benefits from the moat but is partially independent of any single AI lab. The institutional narrative (Piton) sees the moat as 'natural scaling laws' \u2014 partly true, partly theatrical. The analytical observer risks the false summit (Mountain) \u2014 naturalizing contingent capital allocation as an immutable law of physics. This perspectival range (four snare positions, two rope positions, two tangled rope positions, one piton, one false-summit mountain) reveals that the moat is not a single structural phenomenon but a presheaf of constraints indexed by observational position.",
+    "directionality_logic": "Incumbent AI Lab: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary; no cost to participating in the moat. Capital Provider: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.06. Net beneficiary; moat protects returns. Elite Researcher: Mixed position \u2014 beneficiary (access) + victim (constraint). Derived d\u22480.55, f(d)\u22480.75 (constrained exit dominates mobile theoretically possible; research career locked to incumbent institution). Emerging Group: Victim + trapped \u2192 d\u22480.94, f(d)\u22481.40. Maximum extraction. Well-Funded Startup: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.25. High extraction but not maximal (some exit paths via acquisition or partnership). Open-Source Coalition: Organized + constrained \u2192 d\u22480.48, f(d)\u22480.60. Low-moderate extraction; organized agents have agency. Developing Nation: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction (geopolitically constrained). GPU Supplier: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.06. Net beneficiary (dual position as controller). Institutional Narrative: analytical (piton classification from theater gate, not from high chi).",
+    "mandatrophy_analysis": "RESOLUTION STRATEGY: The moat resolves mandatrophy through perspectival decomposition. At the incumbent lab level, the moat appears as pure coordination (Rope) \u2014 concentrating resources for ambitious research. At the researcher level, it appears as mixed (Tangled Rope) \u2014 enabling and constraining simultaneously. At the excluded researcher level, it appears as pure extraction (Snare). The mandatrophy question ('is this coordination or extraction?') has no single answer \u2014 it depends on structural position. The constraint is NOT mislabeled as tangled_rope for the aggregate system; rather, the aggregate system exhibits tangled_rope behavior (mixed coordination and extraction from multiple perspectives) while individual sub-positions see purer types. The claimed_type (tangled_rope) correctly captures the system-level classification: beneficiaries (incumbent labs, capital) experience genuine coordination function; victims (emerging groups, developing nations) experience genuine asymmetric extraction; enforcement is active (capital allocation, GPU access controls, talent recruitment incentives). The false-summit perspective (Mountain from the analytical observer) is explicitly included to show that naturalizing the moat as 'inevitable scaling laws' misses the enforcement machinery. This exemplifies how mandatrophy is resolved by indexical precision, not by re-classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.45
+  },
+  "network": {
+    "affects_constraints": [
+      "gpu_supply_chain_concentration",
+      "elite_ai_talent_scarcity",
+      "open_weights_model_development",
+      "geopolitical_ai_fragmentation"
+    ],
+    "dual_formulation_note": "The AI Compute & Capital Moat decomposes into three structurally distinct constraints: (1) GPU supply scarcity (affects compute access); (2) elite talent concentration (affects research capability); (3) capital concentration (affects funding capacity). Each has its own \u03b5 and network position. This story represents the aggregate moat constraint (tangled_rope, \u03b5=0.58). The downstream constraints (open_weights development, geopolitical fragmentation) are developing alternative pathways that may eventually erode the moat's extractive component."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ]
+}

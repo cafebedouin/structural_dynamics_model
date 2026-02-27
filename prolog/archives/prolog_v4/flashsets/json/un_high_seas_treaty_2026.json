@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "un_high_seas_treaty_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UN High Seas Treaty for Marine Biodiversity (BBNJ)",
+    "topic_domain": "geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "marine_conservation_organizations",
+      "scientific_community"
+    ],
+    "victims": [
+      "unregulated_fishing_fleets",
+      "states_opposed_to_regulation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Marine Ecosystems",
+      "comment": "Perspective 1: Marine Ecosystems - Trapped, suffer from continued exploitation despite the treaty. No exit; high extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Developing Coastal States",
+      "comment": "Perspective 2: Developing Coastal States - Constrained by resources for enforcement but benefit from regulated access and biodiversity protection. Mixed extraction/coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "UN Regulatory Bodies",
+      "comment": "Perspective 3: UN Regulatory Bodies - Benefit from increased mandate and funding. Low extraction; high coordination function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Regulated Fishing Fleets",
+      "comment": "Perspective 4: Regulated Fishing Fleets - Bear the cost of restricted zones but benefit from sustainable practices and reduced competition. Mobile exit (can move to unregulated waters). Mixed extraction/coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 5: Analytical Observer - Sees the mixed coordination and extraction, the inherent tension between conservation and exploitation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "States Opposed to Regulation",
+      "comment": "Perspective 6: States Opposed to Regulation - Powerful states find their access and exploitation limited by the treaty. While they have some influence, their exit is constrained by international norms and pressures."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_capacity",
+      "question": "Will enforcement capacity be sufficient to deter unregulated activity?",
+      "resolution_mechanism": "Monitoring of enforcement efforts and compliance rates.",
+      "impact": "If low: treaty becomes ineffective, remains a Snare for marine ecosystems. If high: treaty achieves its goals, becomes more of a Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sufficiency of enforcement capacity."
+    },
+    {
+      "id": "state_cooperation",
+      "question": "Will major states cooperate effectively in implementation?",
+      "resolution_mechanism": "Analysis of voting patterns and participation in treaty mechanisms.",
+      "impact": "If low: treaty effectiveness is limited, more Snare-like. If high: treaty gains broad legitimacy, more Rope-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Level of state cooperation."
+    },
+    {
+      "id": "definition_of_harm",
+      "question": "How will 'significant harm' to marine biodiversity be defined and assessed?",
+      "resolution_mechanism": "Development of scientific assessment methodologies and legal precedents.",
+      "impact": "If narrowly defined: allows continued exploitation, treaty remains Snare for marine ecosystems. If broadly defined: provides strong protection, treaty becomes more Rope-like.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition of 'significant harm'."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The UN High Seas Treaty, effective in 2026, establishes a legal framework for governing biodiversity in areas beyond national jurisdiction (the \"high seas\"). This treaty aims to balance conservation with sustainable use of marine resources, creating inherent tensions among various stakeholders. The treaty's effectiveness hinges on enforcement capacity, state cooperation, and the definition of 'significant harm' to marine biodiversity.",
+    "key_agents": [
+      "Marine Ecosystems: Primary victim (powerless/trapped) - Suffer from continued exploitation despite the treaty.",
+      "Developing Coastal States: Moderate actors (moderate/constrained) - Constrained by resources, benefit from regulated access.",
+      "UN Regulatory Bodies: Primary beneficiary (institutional/arbitrage) - Benefit from increased mandate and funding.",
+      "Regulated Fishing Fleets: Organized actors (organized/mobile) - Bear the cost of restrictions, benefit from sustainable practices.",
+      "States Opposed to Regulation: Powerful actors (powerful/constrained) - Find their access and exploitation limited.",
+      "Marine Conservation Organizations: Primary beneficiary (organized/mobile) - benefit from protection of marine biodiversity."
+    ],
+    "logic_rationale": "Extractiveness: 0.55 - Reflects the treaty's extraction from unregulated actors and limited restrictions on regulated ones. Suppression: 0.45 - Represents the limited but significant coercion imposed by the treaty through regulations and monitoring. Theater ratio: 0.30 - Relatively low, indicating that the treaty's primary function is regulatory, not performative.",
+    "perspectival_gap": "The treaty is viewed as a Snare by marine ecosystems and some states, a Tangled Rope by developing coastal states and regulated fishing fleets, and a Rope by UN regulatory bodies. This demonstrates the inherent tensions and trade-offs involved in international environmental governance. Marine ecosystems are unable to exit the high seas, and suffer the effects of those exploiting it, thus viewing it as a Snare. The developed world benefit from the high seas, but cannot completely exploit it, since, to do so, it would no longer be able to be exploited.",
+    "directionality_logic": "The beneficiary/victim declarations determine the directionality. Marine ecosystems and some states (victims) experience high d values, leading to higher effective extraction (chi). UN regulatory bodies (beneficiaries) have low d values, resulting in lower or negative chi. Regulated fishing fleets and developing coastal states occupy intermediate positions, experiencing mixed effects.",
+    "mandatrophy_analysis": "The UN High Seas Treaty presents as a Tangled Rope, incorporating both coordination and extraction. The treaty's coordination function aims to sustainably manage marine biodiversity, but this inherently requires extracting from certain actors (unregulated fishing, states opposed to regulation) to benefit others (marine ecosystems, responsible users). Mandatrophy is resolved by recognizing the treaty's duality: it serves as a coordinating framework for global governance while simultaneously imposing restrictions and costs on specific stakeholders. The 'tangled' nature reflects the complex interplay of interests and the imperfect balance between conservation and exploitation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "illegal_fishing_practices",
+      "marine_protected_areas_effectiveness"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "oscar_campaign_spending",
+    "version": "1.0",
+    "generated_date": "2024-03-07",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Oscar Campaign Spending Limits",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "campaign_consultants",
+      "media_outlets"
+    ],
+    "victims": [
+      "films_with_modest_marketing_budgets",
+      "academy_voter_perception"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Films with Modest Marketing Budgets",
+      "comment": "Films with limited resources are trapped in a system where spending heavily influences visibility and perceived quality. They cannot compete with larger campaigns, effectively suppressing their chances regardless of artistic merit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Campaign Consultants",
+      "comment": "Campaign consultants benefit directly from increased spending, as it generates revenue for their services. They see the spending as a coordination mechanism, facilitating the promotion of their client's film."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Academy Voters",
+      "comment": "Academy voters are targeted by campaigns and can be influenced by spending, but they also resent excessive displays of wealth and perceived manipulation. They are constrained by the information available and the pressure from campaigns, but they retain some agency in their voting decisions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a broader perspective, excessive spending creates a tangled rope dynamic. It facilitates film promotion but also introduces inequities and potentially degrades the integrity of the awards process. There are coordination and extraction components."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "impact_of_spending_on_voter_perception",
+      "question": "To what extent does spending directly influence voter perception versus simply increasing awareness?",
+      "resolution_mechanism": "Analyze correlation between spending levels, critic reviews, and voter surveys.",
+      "impact": "High influence: Snare is a more accurate depiction. Low influence: Rope is more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The direct impact of campaign spending on voter perceptions of a film's quality."
+    },
+    {
+      "id": "definition_of_excessive_spending",
+      "question": "What constitutes 'excessive' spending that triggers backlash?",
+      "resolution_mechanism": "Track public sentiment and media coverage in response to campaigns.",
+      "impact": "Clear threshold: Enforcement mechanisms are more effective. Vague threshold: The constraint relies more on social norms.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition of 'excessive' spending and what actions it includes."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The informal limit on Oscar campaign spending reflects a balance between promoting a film and avoiding the perception of excessive influence. This constraint highlights the tension between fair competition and the financial advantages of larger studios. Films with smaller marketing budgets are at a disadvantage, while campaign consultants and media outlets benefit from increased spending. Academy voters are caught in the middle, influenced by campaigns but also wary of manipulation.",
+    "key_agents": [
+      "Films with Modest Marketing Budgets: Primary target (powerless/trapped) - unable to compete with large campaigns.",
+      "Campaign Consultants: Primary beneficiary (institutional/arbitrage) - revenue increases with increased spending.",
+      "Academy Voters: Influenced but also resentful (moderate/constrained) - some agency, some constraints."
+    ],
+    "logic_rationale": "Extractiveness is estimated at 0.55 because significant resources are diverted to campaign spending, potentially at the expense of the creative process. Suppression is 0.40, as excessive spending can drown out films with more modest budgets and less aggressive campaigns. The theater ratio is 0.30, representing the portion of campaign activities that don't directly enhance the film's artistic value.",
+    "perspectival_gap": "Films with smaller budgets experience the constraint as a snare, as they are unable to compete effectively. Campaign consultants view it as a rope, enabling them to promote their clients' films. Academy voters see it as a tangled rope, both influenced by campaigns and wary of excessive displays of influence. The analytical observer captures a broader perspective of imbalance that impacts the awards process and perception.",
+    "directionality_logic": "Campaign consultants benefit, driving directionality towards 0. Films with limited marketing budgets are victims, driving directionality towards 1. Academy voters are in the middle, with moderate directionality. This dynamic creates the tangled rope classification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

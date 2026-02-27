@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "traveling_salesman_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tsp"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Computational Complexity of the Traveling Salesman Problem",
+    "topic_domain": "technological/computational_complexity",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 1: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Any deterministic algorithm seeking the optimal TSP solution must explore a solution space that grows factorially with city count. No workaround, heuristic, or parallel computation can eliminate this fundamental constraint. The designer cannot exit or arbitrage this limit \u2014 it is a structural property of the problem itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computational Theorist",
+      "comment": "PERSPECTIVE 2: COMPUTATIONAL THEORIST (MOUNTAIN) \u2014 From the perspective of formal computation theory, the TSP's NP-completeness is proven. Any reduction of the TSP to polynomial-time solvability would imply P=NP, resolving one of the millennium problems. No observer, computational paradigm, or future hardware can change this logical relationship."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Hardware Engineer",
+      "comment": "PERSPECTIVE 3: HARDWARE ENGINEER (MOUNTAIN) \u2014 Even with arbitrarily fast processors, quantum computers, or exotic architectures, the exponential growth in TSP solution space cannot be outrun by speed alone. Moore's Law and hardware improvements cannot fundamentally alter the combinatorial growth rate. The constraint is independent of computational substrate."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Industrial Operations Research Team",
+      "comment": "PERSPECTIVE 4: INDUSTRIAL OR TEAM (MOUNTAIN) \u2014 Organizations solving large TSP instances (routing, logistics, manufacturing) cannot achieve truly optimal solutions for instances above ~15-20 cities without astronomical computation time. They accept approximate solutions and heuristics not by choice but by necessity. No organizational structure, funding, or methodology can overcome the computational floor."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "p_vs_np_resolution",
+      "question": "If P=NP is proven true, does the TSP's NP-completeness remain a constraint on practical computation?",
+      "resolution_mechanism": "Proof or disproof of P=NP; if proven true, analysis of whether constructive algorithm exists with practical polynomial coefficients for TSP instances",
+      "impact": "If P=NP proven with constructive algorithm of reasonable polynomial degree: TSP reclassifies as rope (solvable but with coordination overhead). If P\u2260NP proven or P=NP proven non-constructive: TSP remains mountain. If unresolved indefinitely: omega persists as deep structural uncertainty.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Resolution of the P vs NP conjecture and its implications for TSP solvability"
+    },
+    {
+      "id": "quantum_advantage_sufficiency",
+      "question": "Can quantum computers (Grover's algorithm, adiabatic quantum computation, or future quantum paradigms) achieve superpolynomial speedup for TSP instances, reducing practical intractability?",
+      "resolution_mechanism": "Empirical demonstration of quantum speedup on TSP instances > 20 cities; theoretical proof of quantum advantage for NP-complete problems; analysis of fault tolerance and decoherence constraints",
+      "impact": "If quantum speedup demonstrated for practical instances: TSP moves from pure mountain to rope-with-quantum-coordination (speedup exists but requires quantum substrate access). If quantum advantage remains theoretical or limited: TSP remains mountain for practical solvers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quantum computing can overcome TSP computational barriers"
+    },
+    {
+      "id": "heuristic_approximation_sufficiency",
+      "question": "For practical routing applications, does the gap between heuristic solutions (2-3x optimal) and true optimality constitute a meaningful constraint, or is it adequately managed by approximation algorithms?",
+      "resolution_mechanism": "Cost-benefit analysis of route suboptimality in real logistics networks; measurement of actual optimality gap vs theoretical bounds; industry adoption rates of heuristic vs exact methods",
+      "impact": "If gap is manageable for 95%+ of applications: TSP reclassifies as piton (theatrical constraint that practical agents routinely bypass). If gap remains consequential (large financial or resource costs): TSP remains mountain for optimization-sensitive applications.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Practical sufficiency of approximation algorithms for TSP applications"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Traveling Salesman Problem (TSP) represents a canonical natural law constraint in computational complexity. Given n cities, the naive solution space contains n! possible routes. No algorithm, heuristic, hardware improvement, or organizational strategy can eliminate this combinatorial explosion for exact solutions. The TSP is NP-complete: it is among the hardest problems in the NP class, and any polynomial-time solution would imply P=NP, one of the Millennium Prize problems. The constraint exhibits zero extractiveness because it involves no coercion, suppression, or asymmetric benefit \u2014 it is a pure structural property of the problem itself. Theater ratio is minimal because the problem statement is transparent: the constraint is what it declares itself to be. All perspectives (algorithm designers, theorists, hardware engineers, operations teams) converge on the same classification: an immutable computational limit. This constraint is a gold-standard mountain under the Deferential Realism framework because its accessibility collapse (agents cannot access optimal solutions for n>20 without exponential cost) and resistance (no workaround exists) are both extreme and well-proven. The TSP exhibits perfect perspectival invariance across all observers and measurement methodologies.",
+    "key_agents": [
+      "Algorithm Designers: Analytical observers (analytical/analytical) \u2014 seek polynomial solutions; cannot exit the problem space",
+      "Computational Theorists: Institutional observers (institutional/analytical) \u2014 formalize the NP-completeness relationship; provide theoretical foundation",
+      "Hardware Engineers: Organized observers (organized/analytical) \u2014 attempt substrate improvements (quantum, specialized chips, parallel computation); cannot overcome combinatorial growth",
+      "Industrial Operations Teams: Organized observers (organized/analytical) \u2014 solve practical instances using approximation heuristics; accept suboptimal routes due to necessity, not choice"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The TSP does not extract resources from any agent \u2014 it is a purely structural property of combinatorics. The 0.12 value accounts for the fact that any computational problem consumes minimal epistemic overhead (understanding the problem). It is not zero because recognizing and formulating the constraint has non-zero cost. Suppression (0.03): Minimal. The TSP imposes no coercion or suppression in the sense of alternative elimination \u2014 agents can compute suboptimal solutions easily; the constraint is that optimal solutions are inaccessible, not that they are forbidden. Theater ratio (0.15): Minimal. The problem statement is transparent: 'find the shortest route visiting each city exactly once.' No performative layer obscures the true function. The small non-zero value reflects that practical implementations involve heuristic approximations that create a gap between declared goal (optimal route) and actual outcome (near-optimal route).",
+    "perspectival_gap": "ABSENT: This constraint exhibits perfect perspectival convergence. All perspectives classify the TSP as Mountain with identical reasoning: computational intractability is a structural property independent of the observer's power, time horizon, or exit options. An algorithm designer, a theorist, a hardware engineer, and an operations team all face the same combinatorial wall. Their experience differs in practical workarounds (approximation algorithms, heuristics, parallel computation) but not in the underlying constraint's classification. The invariance across all perspectives is the hallmark of a true Mountain.",
+    "mandatrophy_analysis": "FULLY RESOLVED: The TSP constraint resolves mandatrophy trivially because it exhibits zero asymmetry between perceived types across observers. No agent perceives coordination, no agent experiences extraction, no agent faces a sunset. All perspectives see the same immutable constraint. The potential mandatrophy \u2014 'Is the TSP an inherent limit (Mountain) or a coordination failure (Rope) that could be solved with better algorithms?' \u2014 is resolved by formal proof: P\u2260NP remains unproven, but the TSP's NP-completeness is proven. Any polynomial-time solution would solve a deep theoretical conjecture; none has been found despite 70+ years of effort. The constraint's persistence across all algorithmic paradigms (greedy, dynamic programming, genetic algorithms, simulated annealing, quantum approaches) confirms the mountain classification. The only residual uncertainty is the omega variables: if P=NP is proven constructively with low-degree polynomial, or if quantum computers achieve exponential speedup, the constraint would degrade. But those are deep structural uncertainties, not mandatrophy flaws."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "np_complete_decision_problems",
+      "vehicle_routing_approximation_gap"
+    ],
+    "dual_formulation_note": "The TSP is the prototypical NP-complete problem. Its computational complexity constraint is upstream of all practical routing optimization constraints. The vehicle_routing_approximation_gap is a downstream constraint that operates within the bounds imposed by TSP NP-completeness."
+  },
+  "directionality_overrides": []
+}

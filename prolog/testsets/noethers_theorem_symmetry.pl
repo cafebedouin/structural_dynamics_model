@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: noethers_theorem_symmetry
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_noethers_theorem_symmetry, []).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -59,22 +58,30 @@
  *   domain: mathematical/physical
  *
  * SUMMARY:
- *   Noether's theorem states that every differentiable symmetry of the action
- *   of a physical system has a corresponding conservation law. For example,
- *   time-translation symmetry implies conservation of energy. This is a
- *   fundamental, unchangeable feature of reality (Mountain). However, its
- *   application creates perspectival gaps: for a theoretical physicist, it is a
- *   coordination tool (Rope), but for a numerical programmer trying to simulate
- *   physics on discrete hardware, its requirements are coercive (Snare).
+ *   Noether's theorem establishes a mathematical relationship between
+ *   differentiable symmetries of an action functional and conserved
+ *   quantities in physical systems. Stated formally: for every continuous
+ *   symmetry of the action S that leaves the equations of motion invariant,
+ *   there exists a corresponding conserved current and conserved charge. This
+ *   constraint is classified as a Mountain because it derives from the
+ *   logical structure of variational calculus and the consistency
+ *   requirements of the action formalism, not from any empirical contingency.
+ *   The theorem has proven invariant across all domains where the action
+ *   principle applies: classical mechanics, field theory, quantum mechanics,
+ *   general relativity, and condensed matter effective theories. No physical
+ *   system with a well-defined Lagrangian or Hamiltonian can escape the
+ *   symmetry-conservation binding. The theater ratio is minimal (0.15)
+ *   because the theorem requires no enforcement, no performative ritual, and
+ *   no institutional support — it is purely a mathematical fact verified once
+ *   and reused universally.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Physical Particle (powerless/trapped): Primary subject bound by the law.
- *   - Game Engine Programmers (powerless/constrained): A primary target of the
- *     theorem's coercive effects in discrete systems, where preserving the
- *     conservation laws requires significant extractive effort.
- *   - Theoretical Physicists (institutional/arbitrage): Primary beneficiaries who
- *     use the theorem as a predictive and coordinating tool.
- *   - Analytical Observer (analytical/analytical): Sees the full mathematical structure.
+ * KEY AGENTS:
+ *   - Physics Students: Encounter the theorem as foundational curriculum — experience it as an irreducible constraint on what theories can do
+ *   - Mathematical Physicists: Practitioners who apply the theorem in formulating theories and deriving conservation laws — see it as an organizing principle
+ *   - Physics Departments: Institutional actors that teach and maintain the theorem as pedagogical anchor — benefit from its universality as a stable foundation
+ *   - Physics Research Community: Researchers across all subfields (particle physics, condensed matter, astrophysics, quantum information) who use Noether's theorem as an organizational tool for discovering new symmetries and predicting conservation laws
+ *   - Quantum Anomaly Theorists: Specialized practitioners studying whether quantum effects modify the classical Noether map — high confidence consensus that anomalies do not break the theorem but require refinement of the formalism
+ *   - Analytical Observer: Civilizational perspective viewing the theorem as a necessary mathematical consequence with no empirical contingency
  */
 
 /* ==========================================================================
@@ -82,89 +89,63 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: As a fundamental law of nature, the theorem itself has near-zero
-% extractiveness and suppression. It simply describes how reality works.
-domain_priors:base_extractiveness(noethers_theorem_symmetry, 0.05).
-domain_priors:suppression_score(noethers_theorem_symmetry, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(noethers_theorem_symmetry, 0.0).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(noethers_theorem_symmetry, 0.08).
+domain_priors:suppression_score(noethers_theorem_symmetry, 0.02).
+domain_priors:theater_ratio(noethers_theorem_symmetry, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(noethers_theorem_symmetry, extractiveness, 0.05).
-narrative_ontology:constraint_metric(noethers_theorem_symmetry, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(noethers_theorem_symmetry, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(noethers_theorem_symmetry, extractiveness, 0.08).
+narrative_ontology:constraint_metric(noethers_theorem_symmetry, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(noethers_theorem_symmetry, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-narrative_ontology:constraint_metric(noethers_theorem_symmetry, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(noethers_theorem_symmetry, resistance, 0.0).
+narrative_ontology:constraint_metric(noethers_theorem_symmetry, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(noethers_theorem_symmetry, resistance, 0.03).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(noethers_theorem_symmetry, mountain).
 narrative_ontology:human_readable(noethers_theorem_symmetry, "Noether's Theorem (Symmetry-Conservation Link)").
 narrative_ontology:topic_domain(noethers_theorem_symmetry, "mathematical/physical").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Emerges naturally from the stationary action principle.
 domain_priors:emerges_naturally(noethers_theorem_symmetry).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% While this is a Mountain, the perspectival gaps for its application are
-% modeled via beneficiary/victim declarations to drive directionality.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(noethers_theorem_symmetry, theoretical_physicists).
-narrative_ontology:constraint_beneficiary(noethers_theorem_symmetry, aerospace_engineers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(noethers_theorem_symmetry, game_engine_programmers).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PHYSICAL PARTICLE (MOUNTAIN)
-% A particle cannot "choose" to violate energy conservation. For it, the law
-% is an absolute, unchangeable feature of its existence.
+% PERSPECTIVE 1: PHYSICS STUDENT (MOUNTAIN) — Encounters Noether's theorem as an irreducible mathematical fact binding symmetry to conservation laws. No escape from the relationship; no alternative framework available that preserves both symmetry principles and conservation laws. The constraint is experienced as a ceiling on what physical theories can do.
 constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(civilizational),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE THEORETICAL PHYSICIST (ROPE)
-% For a researcher, the theorem is a pure coordination tool. It allows them to
-% deduce a conservation law from an observed symmetry, coordinating theory with
-% observation. The negative effective extraction reflects this enabling function.
+% PERSPECTIVE 2: MATHEMATICAL PHYSICIST (MOUNTAIN) — Views Noether's theorem as an immutable structural relationship in the action formalism. The theorem derives from the logical structure of variational principles and differential geometry. No degree of freedom exists to decouple symmetry from conservation while maintaining mathematical consistency. The relationship holds across all empirical domains where action-based mechanics applies.
+constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: PHYSICS DEPARTMENT (MOUNTAIN) — Teaches Noether's theorem as foundational curriculum precisely because its universality makes it a stable anchor for theoretical training. Institutions cannot arbitrage away from the theorem — it remains valid across all theoretical contexts (classical mechanics, field theory, quantum mechanics, general relativity). The theorem's inevitability is the source of its pedagogical power.
 constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(arbitrage),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE GAME ENGINE PROGRAMMER (SNARE)
-% In a discrete simulation, the theorem's continuous symmetries are broken.
-% The programmer experiences the theorem as a coercive Snare that punishes
-% simple numerical methods with unphysical energy drift. It extracts massive
-% engineering effort to implement symplectic integrators that satisfy the law.
+% PERSPECTIVE 4: PHYSICS RESEARCH COMMUNITY (MOUNTAIN) — Noether's theorem serves as an organizing principle for theoretical discovery — every new symmetry principle discovered (gauge symmetries, supersymmetry, scale invariance) immediately prompts the question: what conservation law corresponds to it? The constraint structures research methodology across all fields of theoretical physics. No research program can avoid engaging with it.
 constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
-    context(agent_power(powerless),
-            time_horizon(biographical),
+    context(agent_power(organized),
+            time_horizon(civilizational),
             exit_options(constrained),
-            spatial_scope(local))).
+            spatial_scope(universal))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% From a high-level, civilizational perspective, the theorem is a fundamental
-% and unchangeable feature of mathematical physics.
+% PERSPECTIVE 5: UNIVERSAL ANALYTICAL OBSERVER (MOUNTAIN) — Noether's theorem is a necessary consequence of the structure of variational calculus combined with the logical requirement of consistency. Its universality across classical and quantum mechanics, field theory, and general relativity reflects that it depends on mathematical structure, not empirical contingency. The relationship is not enforced — it is entailed by the axioms of the formalism.
 constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -177,25 +158,26 @@ constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountai
 
 :- begin_tests(noethers_theorem_symmetry_tests).
 
-test(perspectival_gap_rope_snare) :-
-    % Verify the gap between the physicist (beneficiary) and programmer (victim).
-    constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
-        context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(noethers_theorem_symmetry, snare,
-        context(agent_power(powerless), _, exit_options(constrained), _)),
-    true.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(noethers_theorem_symmetry, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(noethers_theorem_symmetry, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_invariance) :-
-    % Verify that from both the particle's and the analytical view, it's a mountain.
-    constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
-        context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local))),
-    constraint_indexing:constraint_classification(noethers_theorem_symmetry, mountain,
-        context(agent_power(analytical), _, _, _)).
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(noethers_theorem_symmetry, ExtMetricName, E),
+    domain_priors:suppression_score(noethers_theorem_symmetry, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_emergence_and_nl_profile) :-
+test(nl_profile_validation) :-
     domain_priors:emerges_naturally(noethers_theorem_symmetry),
-    narrative_ontology:constraint_metric(noethers_theorem_symmetry, accessibility_collapse, V1), V1 >= 0.85,
-    narrative_ontology:constraint_metric(noethers_theorem_symmetry, resistance, V2), V2 =< 0.15.
+    narrative_ontology:constraint_metric(noethers_theorem_symmetry, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(noethers_theorem_symmetry, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(noethers_theorem_symmetry_tests).
 
@@ -205,90 +187,89 @@ test(natural_emergence_and_nl_profile) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base metrics (ε=0.05, suppression=0.05) reflect the core constraint as a
- *   fundamental law of nature, classifying it as a Mountain from the analytical
- *   perspective. The perspectival gaps arise from its application. The low base
- *   extraction means the Snare classification for the programmer is driven
- *   entirely by their structural relationship (victim + constrained exit), which
- *   maximizes the directionality multiplier f(d) in the chi formula.
+ *   Extractiveness (0.08): Minimal. Noether's theorem creates no value extraction — it is a pure relationship between mathematical symmetries and conservation laws. No agent benefits at another's expense; no costs are imposed. The value of the theorem (enabling prediction of conservation laws, structuring theoretical research) is non-rivalrous and universally available. The small nonzero value (0.08) reflects only the minimal 'cost' of learning and applying the theorem in practice — the overhead of mathematical training required to use it. Suppression (0.02): Negligible. The theorem requires no enforcement, no alternative suppression, no limiting of information. It is publicly known, taught universally, and cannot be hidden or restricted. The minimal nonzero value reflects only practical barriers to communication (language, notation, mathematical sophistication) not strategic suppression. Theater ratio (0.15): Low. The theorem requires minimal performative content — there is no ritual, no ceremony, no symbolic validation beyond the mathematical proof itself. Teaching includes derivation from first principles; the ritual content (how theorems are presented in textbooks) is incidental to the logical content. The value is stable over time — the theorem's validity has not changed since Noether's 1918 work, and no institutional maintenance has been required beyond routine publication and citation.
  *
  * PERSPECTIVAL GAP:
- *   The gap between Rope and Snare is profound. For the physicist, the theorem
- *   is an elegant tool that simplifies reality (Rope). For the programmer, it's
- *   a coercive standard that complicates their work by forcing them to combat
- *   the inherent flaws of discrete computation (Snare). The Mountain of physics
- *   becomes a Snare of implementation.
+ *   All five perspectives converge on the Mountain classification. There is no perspectival gap because the theorem's logical structure makes it invariant across all observation positions. A physicist, a mathematician, a student, a department administrator, and a civilizational analyst all encounter the same mathematical relationship with the same logical necessity. The convergence is exceptional among constraint stories — it indicates that the constraint has zero degrees of freedom across all valid indices. This is the hallmark of a true Mountain: the classification is invariant under perspective change because it depends on mathematical necessity, not on empirical fact or institutional choice.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries (physicists, engineers) gain predictive power and design
- *     principles, hence their low directionality (d) and Rope classification.
- *   - Victims (programmers) bear the cost of upholding the law in an artificial
- *     environment. Their high directionality (d) and high effective extraction (χ)
- *     reflect the immense effort required to prevent numerical simulations from
- *     violating fundamental physics.
+ *   Standard mountain directionality applies: all agents experience d → 1.0 (full target of the constraint) because the constraint is binding regardless of structural position. However, the 'targeting' here is not extraction but rather logical necessity — all agents are equally bound by the same mathematical relationship. There are no beneficiaries and no victims because no value flows between agents. The constraint does not allocate resources or impose costs; it merely describes a mathematical relationship. For a mountain constraint, directionality overrides are not applicable because beneficiary/victim declarations are not meaningful — the constraint is not about redistribution but about the structure of valid theories.
  *
  * MANDATROPHY ANALYSIS:
- *   This story demonstrates how a pure Mountain can generate Snare-like effects
- *   in a different domain (computation). The framework correctly attributes the
- *   extraction not to the theorem itself (low ε) but to the specific context of
- *   the programmer (high f(d)). This prevents mislabeling a law of nature as
- *   inherently extractive.
+ *   Noether's theorem presents a unique case where mandatrophy resolution is trivial because there is no mandatrophy to resolve. The theorem is pure mathematical structure with no coordination-versus-extraction ambiguity. It is not a coordination problem (Rope) because multiple agents do not need to be incentivized to align their behavior — they simply cannot avoid the relationship. It is not a Snare because no extraction is occurring. The mountain classification is not a false summit because the theorem is universally necessary, not empirically contingent. The 'constraint' here is a logical constraint, not a social or institutional constraint. The reason all perspectives converge is that the constraint is formalized in mathematical language with complete precision — there is no room for observational ambiguity or perspectival interpretation once the action formalism is adopted.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_noethers_theorem_symmetry,
-    "Does a true 'Mountain' version of the theorem exist for discrete-time systems (e.g., via geometric integrators)?",
-    "Verification of discrete variational principles across all known physical interactions.",
-    "If Yes: The Snare perspective for programmers could transition to a Rope. If No: It remains a permanent Snare of approximation.",
-    confidence_without_resolution(medium)
+    quantum_anomaly_resolution,
+    'Do quantum anomalies represent a genuine exception to Noether''s theorem or a proof that classical Noether map requires modification at the quantum level?',
+    'Analysis of whether quantum anomalies violate the classical Noether map due to regularization artifacts or whether the map itself is redefined to accommodate the anomaly through anomaly cancellation constraints in the quantum theory',
+    'If exception: Noether''s theorem is contingent on classical domain. If modification required: the underlying principle persists, with quantum domain requiring expanded formalism (e.g., Adler-Bell-Jackiw anomaly analysis shows how the Noether map is preserved by redefining the measure). Current consensus strongly favors the latter — anomalies do not break Noether, they constrain the theory.',
+    confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_noethers_theorem_symmetry, empirical, "The existence of a perfect discrete analogue to Noether's theorem.").
+narrative_ontology:omega_variable(quantum_anomaly_resolution, empirical, 'Whether quantum anomalies violate or extend Noether''s theorem').
+
+omega_variable(
+    symmetry_measurement_independence,
+    'Is the symmetry-conservation relationship independent of how one measures or identifies symmetries, or does the correspondence depend on the coordinate system or parameterization chosen?',
+    'Formal proof that the Noether map is invariant under coordinate transformations, gauge transformations, and reparameterization of the action. Differential geometry formalism (Lie groups, Killing vectors, conserved currents) confirms invariance.',
+    'If dependent on parameterization: Noether''s theorem is perspectival, not universal. If independent: the relationship is intrinsic to the physical content, not to mathematical representation. Current formalism supports independence — the conserved current is unique (up to total divergences) regardless of coordinates.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(symmetry_measurement_independence, empirical, 'Whether the symmetry-conservation map is invariant under coordinate transformation').
+
+omega_variable(
+    emergent_symmetry_status,
+    'Do emergent symmetries in condensed matter systems (e.g., approximate rotational symmetry in disordered solids) obey Noether''s theorem with the same rigor as fundamental symmetries?',
+    'Analysis of effective action formalism for emergent systems; proof that Noether''s theorem applies to effective theories with reduced symmetry groups as strictly as to fundamental theories; examination of whether violations of emergent conservation laws are consistent with breaking of approximate symmetries.',
+    'If yes: Noether''s theorem is universal across scales and levels of description. If no: the theorem requires certain regularity conditions (exact symmetries, well-defined action) that may not hold for emergent systems. Current analysis shows Noether applies rigorously to effective actions, supporting universality.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(emergent_symmetry_status, empirical, 'Whether Noether''s theorem applies rigorously to emergent symmetries').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(noethers_theorem_symmetry, 0, 10).
+narrative_ontology:interval(noethers_theorem_symmetry, 0, 150).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% As a timeless mathematical law, its properties do not drift.
-% Measurements are constant across the interval.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(noethers_theorem_symmetry_tr_t0, noethers_theorem_symmetry, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(noethers_theorem_symmetry_tr_t5, noethers_theorem_symmetry, theater_ratio, 5, 0.0).
-narrative_ontology:measurement(noethers_theorem_symmetry_tr_t10, noethers_theorem_symmetry, theater_ratio, 10, 0.0).
+% Theater ratio over time
+narrative_ontology:measurement(noether_tr_t0, noethers_theorem_symmetry, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(noether_tr_t75, noethers_theorem_symmetry, theater_ratio, 75, 0.15).
+narrative_ontology:measurement(noether_tr_t150, noethers_theorem_symmetry, theater_ratio, 150, 0.15).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(noethers_theorem_symmetry_ex_t0, noethers_theorem_symmetry, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(noethers_theorem_symmetry_ex_t5, noethers_theorem_symmetry, base_extractiveness, 5, 0.05).
-narrative_ontology:measurement(noethers_theorem_symmetry_ex_t10, noethers_theorem_symmetry, base_extractiveness, 10, 0.05).
+% Extraction over time
+narrative_ontology:measurement(noether_be_t0, noethers_theorem_symmetry, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(noether_be_t75, noethers_theorem_symmetry, base_extractiveness, 75, 0.08).
+narrative_ontology:measurement(noether_be_t150, noethers_theorem_symmetry, base_extractiveness, 150, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No network relationships declared for this fundamental principle.
+narrative_ontology:coordination_type(noethers_theorem_symmetry, information_standard).
+narrative_ontology:affects_constraint(noethers_theorem_symmetry, conservation_law_hierarchy).
+narrative_ontology:affects_constraint(noethers_theorem_symmetry, gauge_invariance_principle).
+narrative_ontology:affects_constraint(noethers_theorem_symmetry, symmetry_breaking_constraint).
+
+% DUAL FORMULATION NOTE:
+% Noether's theorem serves as a upstream constraint on all more specific conservation laws (energy, momentum, angular momentum, charge) and all gauge theories. The universal application across classical mechanics, field theory, quantum mechanics, and general relativity means that any constraint involving symmetry or conservation is downstream of this theorem. Network edges point to constraints that apply Noether's theorem in specific contexts (e.g., gauge_invariance_principle applies Noether to gauge symmetries; conservation_law_hierarchy applies Noether to derive all conservation laws in a given theory).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations correctly models the perspectival gaps.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

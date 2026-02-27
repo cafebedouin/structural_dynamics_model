@@ -1,0 +1,142 @@
+{
+  "header": {
+    "constraint_id": "manganese_catalysis_2026",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Manganese-Formate Fuel Pathway",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "manganese_catalyst_developers",
+      "fuel_cell_manufacturers"
+    ],
+    "victims": [
+      "incumbent_fuel_pathways",
+      "environmental_remediation_efforts"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Incumbent Fuel Pathways",
+      "comment": "Incumbent fuel pathways, facing displacement, experience this as a snare. They are trapped due to sunk costs and established infrastructure, and the rise of manganese-formate technology suppresses their future viability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Manganese Catalyst Developers",
+      "comment": "Manganese catalyst developers benefit from increased funding and market opportunities, experiencing the pathway as a rope. They can arbitrage their knowledge and technology to different applications, facing minimal constraints."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees a tangled rope: the manganese-formate pathway offers potential benefits for CO2 conversion and energy storage (coordination) but also carries risks of displacing existing technologies and potentially creating new environmental challenges (extraction)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Fuel Cell Manufacturers",
+      "comment": "Fuel cell manufacturers view the pathway as a rope, providing a new avenue for fuel supply and product development. They can arbitrage across different fuel sources and are powerful enough to adapt to new technologies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "manganese_toxicity",
+      "question": "What is the long-term environmental impact of manganese release during formate production and fuel cell operation?",
+      "resolution_mechanism": "Comprehensive environmental impact assessments, including toxicity studies and life cycle analyses.",
+      "impact": "If manganese proves highly toxic, the pathway's environmental benefits are negated, shifting the analytical perspective towards snare. If toxicity is manageable, the pathway remains a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term environmental impact of manganese release."
+    },
+    {
+      "id": "efficiency_scalability",
+      "question": "Can the high catalytic efficiency observed in the lab be maintained at industrial scales?",
+      "resolution_mechanism": "Pilot-scale demonstrations of manganese-formate production and fuel cell integration.",
+      "impact": "If efficiency drops significantly at scale, the economic viability of the pathway is compromised, reducing its coordination benefits. If efficiency remains high, the pathway becomes more attractive than alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficiency and scalability of the manganese-formate pathway."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Researchers are exploring manganese as a catalyst for converting CO2 to formate, a potential fuel cell carrier. This pathway presents both opportunities for sustainable energy and risks of disrupting existing industries. The effectiveness of this technology hinges on scalability and the mitigation of potential environmental impacts from manganese.",
+    "key_agents": [
+      "Manganese Catalyst Developers: Primary beneficiary (institutional/arbitrage) \u2013 benefits from funding and market opportunities.",
+      "Fuel Cell Manufacturers: Secondary beneficiary (powerful/arbitrage) \u2013 benefits from new fuel sources and product development.",
+      "Incumbent Fuel Pathways: Primary victim (powerless/trapped) \u2013 faces displacement and diminished viability.",
+      "Environmental Remediation Efforts: Secondary victim (moderate/constrained) \u2013 faces potential new challenges from manganese contamination.",
+      "Analytical Observer: Assesses overall societal benefit (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness: 0.55, moderate. The pathway extracts value from incumbent technologies and potentially introduces environmental risks. Suppression: 0.40, moderate. Incumbent industries face barriers to adapting to new technologies, and potential environmental concerns may be suppressed if economic benefits are prioritized. Theater ratio: 0.20, low. The pathway's current development stage involves substantial research and development with relatively little performative activity.",
+    "perspectival_gap": "The perspectival gap arises from the differing structural positions of the agents involved. Developers and fuel cell manufacturers see the pathway as a rope, offering new opportunities. Incumbent industries see it as a snare, threatening their existence. The analytical observer sees a tangled rope, balancing potential benefits and risks.",
+    "directionality_logic": "Beneficiaries (manganese catalyst developers, fuel cell manufacturers) experience the pathway as coordination (rope) due to their ability to arbitrage and capitalize on the technology. Victims (incumbent fuel pathways) experience it as extraction (snare) due to their trapped position and inability to adapt quickly. The analytical observer assesses the balance between coordination and extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "co2_sequestration_economics",
+      "hydrogen_fuel_cell_viability"
+    ]
+  },
+  "directionality_overrides": []
+}

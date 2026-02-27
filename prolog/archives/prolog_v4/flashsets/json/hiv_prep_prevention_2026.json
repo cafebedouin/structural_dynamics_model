@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "hiv_prep_prevention_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.35,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "PrEP-Mediated HIV Prevention",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_companies",
+      "public_health_organizations"
+    ],
+    "victims": [
+      "individuals_with_limited_access",
+      "individuals_experiencing_side_effects"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Individuals with Limited Access",
+      "comment": "Perspective 1: Individuals with limited access to healthcare and resources may face significant barriers to accessing PrEP, effectively trapping them in a high-risk situation. This perspective represents a snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Companies",
+      "comment": "Perspective 2: Pharmaceutical companies benefit from the widespread adoption of PrEP through increased sales and revenue, experiencing the constraint as a rope, a coordinated system that brings positive results."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Individuals Experiencing Side Effects",
+      "comment": "Perspective 3: Individuals who experience side effects from PrEP are in a constrained position. They benefit from HIV prevention but suffer potential harm. It's a tangled rope."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Organizations",
+      "comment": "Perspective 4: Public health organizations benefit through the prevention of new HIV infections and decreasing cost of HIV treatment over time. But their resources are limited, making it a tangled rope."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 5: From an analytical standpoint, PrEP represents a complex interplay of benefits and drawbacks. It has successfully prevented HIV transmission, but it has also generated concerns around equity, side effects, and potential risk compensation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "access_equity",
+      "question": "How can equitable access to PrEP be ensured across different socioeconomic and demographic groups?",
+      "resolution_mechanism": "Implementation of targeted outreach programs, subsidies, and policy changes to address disparities.",
+      "impact": "Improved access reduces the snare for marginalized groups; resolves some extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Addresses concerns of equitable PrEP access."
+    },
+    {
+      "id": "risk_compensation",
+      "question": "Does PrEP use lead to risk compensation, diminishing its overall effectiveness in HIV prevention?",
+      "resolution_mechanism": "Monitoring sexual behavior patterns, HIV incidence rates, and STD prevalence among PrEP users.",
+      "impact": "Increased risky behavior undermines the effectiveness of PrEP; reduces coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identifies potential risk compensation behaviors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Pre-exposure prophylaxis (PrEP) is a daily antiviral medication that reduces the risk of HIV transmission. While highly effective when used correctly, access barriers, potential side effects, and behavioral changes create a complex interplay of benefits and drawbacks. The constraint's extractiveness (0.45) is considered moderate since its success comes at a price point and requires consistent effort. The suppresion (0.35) is driven by limited access in some locations and discomfort with side effects in others.",
+    "key_agents": [
+      "Pharmaceutical Companies: Primary beneficiary (institutional/arbitrage) through increased sales.",
+      "Individuals with Limited Access: Primary victim (powerless/trapped) due to disparities.",
+      "Individuals Experiencing Side Effects: Secondary victim (moderate/constrained) balancing benefits and risks.",
+      "Public Health Organizations: (Organized/constrained) Balancing benefits of prevention vs resources and behavioral changes.",
+      "Analytical Observer: (analytical/analytical) Balancing the benefits of prevention with the complications of side effects and behavioral modification"
+    ],
+    "logic_rationale": "PreP involves coordination via drug manufacturers. Active enforcement is required due to patient compliance requirements. Access constraints and the possibility of adverse side effects exist. Increased risky behaviors could result in lower effectiveness of PrEP; reduces coordination.",
+    "perspectival_gap": "The pharmaceutical companies profit substantially, while individuals with limited access remain at high risk. Those with side effects must bear the burden of potential ill effects. The benefits and drawbacks are not evenly distributed. An organized effort, if pursued, might be able to resolve these disparities.",
+    "directionality_logic": "Directionality depends on the interplay between exit options, power atoms, and structural beneficiary/victim relationships. The pharmaceutical firm experiences the relationship as coordination, public health faces resource constraints, and certain communities are trapped. The agent's power and potential action directly impact the extraction calculation.",
+    "mandatrophy_analysis": "The constraint is not easily mislabeled. The presence of both coordination and extraction aspects suggests that it is a tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

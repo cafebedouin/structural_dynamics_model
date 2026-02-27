@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: us_venezuela_plausible_deniability_2025
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2025-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_us_venezuela_plausible_deniability_2025, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,22 +55,40 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: us_venezuela_plausible_deniability_2025
  *   human_readable: Plausible Deniability of US Covert Action in Venezuela
- *   domain: geopolitical
+ *   domain: geopolitical/covert_operations
  *
  * SUMMARY:
- *   Following a news report alleging a CIA-led ground attack inside
- *   Venezuela, the US government maintains a policy of "plausible deniability."
- *   This policy is a constraint on information, accountability, and diplomatic
- *   action. It enables covert strategic goals to be pursued while suppressing
- *   public debate, congressional oversight, and international legal recourse.
- *   The constraint is the official narrative shield, not the military action
- *   itself, though the two are inextricably linked.
+ *   The US policy of plausible deniability regarding covert operations in
+ *   Venezuela is a structural constraint on information, accountability, and
+ *   state action. Following 2025 reporting of alleged CIA-led ground
+ *   operations, the US government maintained official denial despite credible
+ *   media documentation and Venezuelan government testimony. This constraint
+ *   exhibits tangled-rope characteristics: it serves a genuine coordination
+ *   function (operational security, diplomatic flexibility, domestic
+ *   political insulation) while simultaneously extracting from multiple
+ *   victim groups (Venezuelan sovereignty, international accountability
+ *   norms, US domestic transparency). The constraint operates through
+ *   information asymmetry, legal classification authorities, and the weakness
+ *   of international enforcement mechanisms. The theater ratio (0.68)
+ *   reflects that public denials have become substantially decoupled from
+ *   credibility — observers understand deniability as performative rather
+ *   than persuasive, yet the ritual persists because it provides legal and
+ *   political cover regardless of public belief. The constraint demonstrates
+ *   perspectival multiplicity: the Venezuelan state experiences pure
+ *   extraction (Snare), the transparency movement sees a time-limited
+ *   arrangement being eroded by technology (Scaffold), the institutional
+ *   denial ritual appears performative (Piton), while the US executive
+ *   derives genuine benefit from the coordination function (Rope).
  *
- * KEY AGENTS (by structural relationship):
- *   - Venezuelan Government: Primary target (powerless/trapped) — bears the extraction of sovereignty and is unable to force accountability.
- *   - US Intelligence Apparatus (CIA): Primary beneficiary (institutional/arbitrage) — achieves strategic objectives without the political cost of overt warfare.
- *   - US Public & Congress: Secondary victim (moderate/constrained) — their oversight powers are circumvented by the policy of secrecy.
- *   - Analytical Observer: External analyst (analytical/analytical) — sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - US Executive Branch: Primary beneficiary (institutional/arbitrage) — gains operational freedom, diplomatic flexibility, and domestic political insulation
+ *   - CIA Institutional Structure: Secondary beneficiary (institutional/arbitrage) — protected from accountability, maintains autonomy over covert operations
+ *   - Venezuelan State: Primary victim (powerless/trapped) — bears security costs and sovereignty loss without mechanism to compel accountability
+ *   - International Accountability Regime: Secondary victim (powerless/trapped) — norm erosion as precedent for denial reduces enforceability of sovereignty principles
+ *   - US Domestic Civil Society: Tertiary victim (moderate/constrained) — prevented from informed democratic deliberation on foreign policy by classification barriers
+ *   - US Congress: Mixed actor (organized/constrained) — constrained by executive secrecy but also benefits from plausible ignorance
+ *   - Transparency Movements: Organized actors (organized/constrained) — seeing constraint as temporary, eroded by technology and diplomatic pressure
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — assesses constraint as contingent institutional arrangement, not natural law
  */
 
 /* ==========================================================================
@@ -78,95 +96,88 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(us_venezuela_plausible_deniability_2025, 0.72).
-domain_priors:suppression_score(us_venezuela_plausible_deniability_2025, 0.85).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(us_venezuela_plausible_deniability_2025, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(us_venezuela_plausible_deniability_2025, 0.58).
+domain_priors:suppression_score(us_venezuela_plausible_deniability_2025, 0.72).
+domain_priors:theater_ratio(us_venezuela_plausible_deniability_2025, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(us_venezuela_plausible_deniability_2025, extractiveness, 0.72).
-narrative_ontology:constraint_metric(us_venezuela_plausible_deniability_2025, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(us_venezuela_plausible_deniability_2025, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(us_venezuela_plausible_deniability_2025, extractiveness, 0.58).
+narrative_ontology:constraint_metric(us_venezuela_plausible_deniability_2025, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(us_venezuela_plausible_deniability_2025, theater_ratio, 0.68).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(us_venezuela_plausible_deniability_2025, snare).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(us_venezuela_plausible_deniability_2025, tangled_rope).
 narrative_ontology:human_readable(us_venezuela_plausible_deniability_2025, "Plausible Deniability of US Covert Action in Venezuela").
-narrative_ontology:topic_domain(us_venezuela_plausible_deniability_2025, "geopolitical").
+narrative_ontology:topic_domain(us_venezuela_plausible_deniability_2025, "geopolitical/covert_operations").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(us_venezuela_plausible_deniability_2025). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(us_venezuela_plausible_deniability_2025).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(us_venezuela_plausible_deniability_2025, us_intelligence_apparatus).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(us_venezuela_plausible_deniability_2025, venezuelan_sovereignty).
-narrative_ontology:constraint_victim(us_venezuela_plausible_deniability_2025, us_public_oversight).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(us_venezuela_plausible_deniability_2025, us_executive_branch).
+narrative_ontology:constraint_beneficiary(us_venezuela_plausible_deniability_2025, cia_institutional_structure).
+narrative_ontology:constraint_victim(us_venezuela_plausible_deniability_2025, venezuelan_state_sovereignty).
+narrative_ontology:constraint_victim(us_venezuela_plausible_deniability_2025, international_accountability_regime).
+narrative_ontology:constraint_victim(us_venezuela_plausible_deniability_2025, us_domestic_democratic_transparency).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (VENEZUELAN GOVERNMENT)
-% Experiences an unaccountable violation of sovereignty. The "deniability"
-% constraint is the mechanism that prevents any form of recourse, making it
-% a pure instrument of extraction.
-% Engine derives d from victim status + trapped exit → d ≈ 0.95 → high χ.
+% PERSPECTIVE 1: VENEZUELAN STATE (SNARE) — Cannot exit the constraint; faces covert operations without legal or diplomatic recourse. Cannot compel public admission of US action. Extraction is asymmetric: bears security costs, political instability, and loss of sovereignty over territory while US denies involvement. Trapped exit with no mechanism to force accountability.
 constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (US INTELLIGENCE APPARATUS)
-% The policy of plausible deniability is a coordinating mechanism that
-% allows different agencies to act in concert covertly, shielding them from
-% domestic political costs and international legal consequences. It functions
-% as a pure tool, a Rope that enables their objectives.
-% Engine derives d from beneficiary status + arbitrage exit → d ≈ 0.05 → negative χ.
-constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: INTERNATIONAL ACCOUNTABILITY REGIME (SNARE) — Plausible deniability is structurally incompatible with international verification mechanisms. The constraint extracts from the normative commons: it reduces the cost of covert intervention by blocking evidence chains, creating precedent for denial, and degrading the practical enforceability of sovereignty principles. No exit for the regime itself — it must absorb the norm erosion.
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare,
+    context(agent_power(powerless),
             time_horizon(generational),
-            exit_options(arbitrage),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: US CONGRESS (TANGLED ROPE) — Constrained by executive secrecy and classification authorities. Derives both extraction and coordination function: plausible deniability serves congressional interests (members can claim ignorance of covert action, insulating themselves from accountability) while also constraining their oversight capacity. Mixed extraction and benefit — they are complicit through non-investigation and also gain cover from the constraint.
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Sees both the internal coordination function (for the US agencies) and the
-% severe, asymmetric extraction imposed on the target. The combination of a
-% genuine coordination function with high extraction and active enforcement
-% is the definition of a Tangled Rope.
-% Engine derives d ≈ 0.72, and σ(global)=1.2 amplifies χ.
-constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare,
+% PERSPECTIVE 4: US EXECUTIVE BRANCH (ROPE) — Primary beneficiary (institutional/arbitrage). Experiences plausible deniability as pure coordination: enables covert action while preserving diplomatic flexibility and avoiding domestic political costs. Can exit by reducing covert operations or abandoning deniability (switching to declared policy). Net extraction runs toward this agent — they extract operational freedom and reputation preservation.
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: US DOMESTIC CIVIL SOCIETY (TANGLED ROPE) — Constrained by classification barriers and information asymmetry. Derives mixed extraction and benefit: the constraint prevents informed democratic deliberation on foreign policy (extraction), but also creates a coordination mechanism that allows the state to act decisively without domestic obstruction (benefit to those favoring executive action). Exit is constrained by legal barriers to classified information.
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: TRANSPARENCY MOVEMENTS (SCAFFOLD) — See plausible deniability as a temporary institutional arrangement being eroded by: (1) technological transparency (satellite imagery, social media documentation), (2) Freedom of Information Act litigation, (3) diplomatic costs mounting as allies withdraw cooperation. Low effective extraction in this view because the constraint is time-limited — within 5-10 years, digital documentation and generational leadership change will make denial untenable. Sunset clause emerges from technological and political pressure.
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: PITON VIEW (INSTITUTIONAL DENIAL AS RITUAL) — The public denials and diplomatic theater surrounding covert action have become substantially decoupled from material function. Observers (journalists, scholars, foreign governments) routinely treat 'official denial' as performative — the constraint's actual force lies in legal and political insulation, not persuasion. The denial ritual persists through institutional inertia despite low credibility. Theater ratio is high because the public performance no longer serves the actual function of deception.
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 8: ANALYTICAL OBSERVER (CIVILIZATIONAL VIEW) — From a systemic perspective, plausible deniability is a hybrid constraint enabling both coordination (among US agencies on operational security) and extraction (from international norms and Venezuelan sovereignty). The constraint serves real structural functions: it reduces domestic political costs of covert action and preserves diplomatic flexibility. But it is not a natural law or immutable feature of statecraft — it is contingent on information asymmetries and weak international enforcement mechanisms. The classification is tangled rope at this context level because the coordination and extraction functions are genuinely intertwined.
+constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: INTER-INSTITUTIONAL VICTIM (US PUBLIC & CONGRESS)
-% The US public's right to democratic oversight is a secondary victim of this
-% constraint. They are not the military target, but the policy extracts their
-% power to hold their government accountable. Their exit is constrained by
-% classified information. From this view, it is also a highly extractive constraint.
-% Engine derives d from victim status + constrained exit -> high d -> high chi.
-constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare,
-    context(agent_power(moderate),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,17 +185,18 @@ constraint_indexing:constraint_classification(us_venezuela_plausible_deniability
 
 :- begin_tests(us_venezuela_plausible_deniability_2025_tests).
 
-test(perspectival_gap_is_snare_vs_rope) :-
-    constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_venezuela_plausible_deniability_2025, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(us_venezuela_plausible_deniability_2025, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_pass) :-
-    narrative_ontology:constraint_beneficiary(us_venezuela_plausible_deniability_2025, _),
-    narrative_ontology:constraint_victim(us_venezuela_plausible_deniability_2025, _),
-    domain_priors:requires_active_enforcement(us_venezuela_plausible_deniability_2025).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(us_venezuela_plausible_deniability_2025, TR),
+    TR >= 0.70.
 
 :- end_tests(us_venezuela_plausible_deniability_2025_tests).
 
@@ -194,80 +206,111 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.72): High. The constraint directly enables the extraction of national sovereignty and circumvents democratic accountability, a massive transfer of agency.
- *   - Suppression Score (0.85): High. The entire purpose of "plausible deniability" is to suppress the true narrative and foreclose legal/political recourse through active information control.
- *   - Theater Ratio (0.20): Low. While the public statements are theater, they shield a highly functional and consequential covert operation. The constraint's primary role is functional, not performative.
+ *   Extractiveness (0.58): Moderate-high. The constraint extracts significantly from Venezuelan sovereignty and international norms, but the extraction is not total — it is bounded by technological transparency and eventual diplomatic consequences. The US executive derives substantial benefit (operational freedom without accountability), but faces mounting costs as denial becomes less credible. The 0.58 value reflects that the extraction function is real and asymmetric, but not as severe as a pure Snare (0.70+) where the victim has no exit whatsoever. Suppression (0.72): High. Significant barriers to accountability include: (1) legal classification authorities that shield documents from FOIA, (2) executive privilege claims, (3) weak international enforcement (no mechanism to compel US to admit covert action), (4) information asymmetry (US controls documentary evidence), (5) political cost avoidance (admission would trigger domestic and international consequences). Suppression operates structurally — it is baked into the legal system and international power asymmetries, not dependent on individual decisions. Theater ratio (0.68): Moderate-high. Public denials have become substantially performative. Journalists, academics, and foreign governments routinely treat official statements as ritual rather than truth claims. The denial theater persists because it provides legal cover (creates documentary record of denial even as the material fact is known) and political insulation (gives domestic supporters cover to claim ignorance). The ratio has increased over time as the gap between known and admitted widens — the ritual becomes more obviously theatrical as credibility erodes.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme, spanning from Rope to Snare. For the US intelligence apparatus (beneficiary), the constraint is a pure coordination tool (Rope) that enables effective action while minimizing political friction. For the Venezuelan government (target), this same constraint is a pure instrument of unaccountable power (Snare), stripping them of agency and recourse. This demonstrates the core principle of Deferential Realism: the classification of a constraint is a function of one's structural position relative to it.
+ *   The perspectival gap is extreme. The US executive sees a coordination mechanism (Rope); Venezuela sees extraction with no exit (Snare); the accountability regime sees norm erosion (Snare); Congress sees mixed insulation and constraint (Tangled Rope); civil society sees information asymmetry enabling power (Tangled Rope); the transparency movement sees a sunset being enforced by technology (Scaffold); the piton perspective sees a ritual maintained through inertia (Piton); the analytical observer sees genuine hybrid coordination-extraction (Tangled Rope). No two perspectives produce the same classification. This is diagnostic: when observational perspective fundamentally changes what constraint type you see, the framework is correctly identifying that different agents experience structurally different constraints deriving from the same policy.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `us_intelligence_apparatus`. They gain the ability to conduct foreign policy by force without the costs associated with declared warfare (public debate, congressional approval, international treaties).
- *   - Victims: `venezuelan_sovereignty` and `us_public_oversight`. The former is the direct target, losing its fundamental right to self-governance without attack. The latter is a secondary victim, as the policy deliberately circumvents the mechanisms of democratic control over the military and intelligence services.
- *   This structure feeds the directionality engine, producing low `d` for the beneficiary (institutional power, arbitrage exit) and high `d` for the victims (powerless/trapped, moderate/constrained).
+ *   The key directionality insight: plausible deniability's extractiveness is not distributed equally. The US executive derives genuine benefit (low d, negative chi). Venezuela derives maximum cost (high d, high chi). Congress derives mixed benefit and cost (moderate d, moderate chi). The constraint is tangled rope specifically because it intertwines a genuine coordination function (allowing covert operations without domestic obstruction) with asymmetric extraction (shifting costs to Venezuela and international norms). Without the coordination function, it would be pure Snare. Without the extraction, it would be pure Rope. The beneficiary/victim declarations reveal the asymmetry: beneficiaries = us_executive_branch, cia_institutional_structure (those who gain operational freedom); victims = venezuelan_state_sovereignty, international_accountability_regime, us_domestic_democratic_transparency (those who bear costs or lose information access).
  *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- *   This case is a powerful defense against Mandatrophy. A naive analysis might label the constraint a Snare from all perspectives because it facilitates immense harm. However, this misses its crucial *coordination function*. Plausible deniability is the "Rope" that binds the actions of the State Department, CIA, and military into a coherent, deniable covert strategy. Without this coordinating constraint, such an operation would be impossible to execute secretly. The analytical classification of Tangled Rope correctly captures this duality: it is a system that possesses both a genuine coordination function *and* a deeply extractive, asymmetric outcome. It is not merely a lie; it is a functional piece of institutional machinery with a purpose and a victim.
+ * MANDATROPHY ANALYSIS:
+ *   Mandatrophy is NOT resolved (base_properties.mandatrophy_resolved: false) because extractiveness (0.58) is between 0.46 and 0.70. At 0.58, the constraint is clearly not a pure coordination mechanism (would be Rope at ε ≤ 0.45), but the extraction is also not so severe that it qualifies as a closed Snare system. The mandatrophy here is the question: 'Is this extraction inherent to the problem of covert operations, or is it contingent on specific institutional arrangements?' The claimed type is Tangled Rope because: (1) beneficiaries and victims are both identified (coordination function + asymmetric extraction), (2) active enforcement is required (legal classification system, executive secrecy authorities), (3) the ratio of coordination to extraction is not extreme (the US executive does solve a real problem — operational security — while extracting from accountability). If we learned that alternative mechanisms (acknowledged covert operations, international oversight) could achieve the same coordination goals with lower extraction, the classification would shift toward pure Rope. If we learned that no genuine coordination function exists and denial is purely extractive, the classification would shift toward Snare. The measurements show theater_ratio rising from 0.45 to 0.68 and extractiveness rising from 0.42 to 0.58, indicating Goodhart drift — the performative denial ritual is becoming more dominant relative to functional coordination.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_us_venezuela_plausible_deniability_2025,
-    'Is the covert action a limited counter-op or a component of a wider regime change strategy?',
-    'Declassified documents from US archives, whistleblower testimony from involved agents, or subsequent escalations revealing a broader strategic plan.',
-    'If limited op -> Tangled Rope is stable. If regime change -> the coordination function is mere pretext for a pure Snare.',
+    deniability_credibility_threshold,
+    'At what point does the gap between public denial and widely known covert action render plausible deniability functionally void?',
+    'Longitudinal analysis of diplomatic consequences following leaked covert operations; correlation between public credibility of denial and actual policy shifts by other states',
+    'If threshold is low (< 6 months): constraint is already degraded, classification shifts toward Piton. If threshold is high (> 3 years): constraint remains effective for state''s core purposes, classification remains Snare/Tangled Rope.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(deniability_credibility_threshold, empirical, 'Threshold at which public knowledge of covert action makes denial operationally void').
+
+omega_variable(
+    international_enforcement_capacity,
+    'Do international legal mechanisms (ICC, ICJ, UN Security Council) have sufficient enforcement power to convert denied covert action into admitted liability?',
+    'Analysis of enforcement outcomes in comparative cases (Bay of Pigs, Nicaragua, Syria); assessment of P5 veto protection and diplomatic consequences',
+    'If enforcement capacity low: plausible deniability functions as described (Snare/Tangled Rope). If enforcement capacity increases: deniability becomes less valuable, constraint weakens.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(international_enforcement_capacity, empirical, 'Whether international mechanisms can enforce accountability despite denial').
+
+omega_variable(
+    technological_transparency_saturation,
+    'Can satellite imagery, cellphone data, and social media documentation eliminate the possibility of plausible denial within the next 10 years?',
+    'Assessment of current satellite resolution, documentation density in Venezuela, and legal evidentiary standards for covert operations; comparison with past covert actions now fully documented',
+    'If yes: Scaffold perspective is correct — sunset is real and approaching. Classification timeline is 5-10 years. If no: technological barriers will not resolve constraint; other factors (political will, state sovereignty doctrine) dominate.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(technological_transparency_saturation, empirical, 'Whether technological capabilities will make plausible denial structurally impossible').
+
+omega_variable(
+    domestic_political_vulnerability,
+    'What level of domestic political pressure would force the US executive to abandon plausible deniability and admit covert operations?',
+    'Comparative analysis of past disclosures (Pentagon Papers, Iran-Contra, NSA surveillance); assessment of current US domestic political polarization and media fragmentation',
+    'If pressure threshold is low (< 40% public disapproval): constraint is vulnerable to domestic politics, classification shifts toward Scaffold. If threshold is high: executive maintains deniability despite public skepticism.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(domestic_political_vulnerability, preference, 'Political conditions that would force admission of covert action').
+
+omega_variable(
+    collective_action_among_victims,
+    'Can Venezuela, regional allies, and international accountability movements coordinate to raise the cost of plausible deniability beyond the US executive''s tolerance?',
+    'Assessment of coalition-building in OAS, Non-Aligned Movement, and UN General Assembly votes; measurement of diplomatic and economic sanctions imposed for covert action',
+    'If coordination succeeds: constraint is degraded by external pressure, classification shifts. If coordination fails: victims remain isolated, constraint persists as Snare.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(collective_action_among_victims, empirical, 'Whether victim states can organize collective response to covert action').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(us_venezuela_plausible_deniability_2025, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. Since base_extractiveness > 0.46,
-% this is required. We model the policy escalating from political pressure
-% to direct covert action over the interval.
-% Theater ratio remains low as the actions are always functional.
-narrative_ontology:measurement(uvpd25_tr_t0, us_venezuela_plausible_deniability_2025, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(uvpd25_tr_t5, us_venezuela_plausible_deniability_2025, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(uvpd25_tr_t10, us_venezuela_plausible_deniability_2025, theater_ratio, 10, 0.20).
+% Theater ratio over time
+narrative_ontology:measurement(usvenpd_tr_t0, us_venezuela_plausible_deniability_2025, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(usvenpd_tr_t5, us_venezuela_plausible_deniability_2025, theater_ratio, 5, 0.62).
+narrative_ontology:measurement(usvenpd_tr_t10, us_venezuela_plausible_deniability_2025, theater_ratio, 10, 0.68).
 
-% Extraction accumulates as policy shifts from sanctions to covert operations.
-narrative_ontology:measurement(uvpd25_ex_t0, us_venezuela_plausible_deniability_2025, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(uvpd25_ex_t5, us_venezuela_plausible_deniability_2025, base_extractiveness, 5, 0.65).
-narrative_ontology:measurement(uvpd25_ex_t10, us_venezuela_plausible_deniability_2025, base_extractiveness, 10, 0.72).
+% Extraction over time
+narrative_ontology:measurement(usvenpd_be_t0, us_venezuela_plausible_deniability_2025, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(usvenpd_be_t5, us_venezuela_plausible_deniability_2025, base_extractiveness, 5, 0.51).
+narrative_ontology:measurement(usvenpd_be_t10, us_venezuela_plausible_deniability_2025, base_extractiveness, 10, 0.58).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The constraint coordinates state actors to enforce a
-% specific foreign policy and narrative, shielding them from accountability.
 narrative_ontology:coordination_type(us_venezuela_plausible_deniability_2025, enforcement_mechanism).
+narrative_ontology:affects_constraint(us_venezuela_plausible_deniability_2025, venezuela_regime_legitimacy_crisis).
+narrative_ontology:affects_constraint(us_venezuela_plausible_deniability_2025, us_hegemonic_decline_in_americas).
+narrative_ontology:affects_constraint(us_venezuela_plausible_deniability_2025, international_legal_regime_fragmentation).
 
-% Network relationships: This policy is structurally linked to, and reinforces,
-% the broader sanctions regime against the target country.
-narrative_ontology:affects_constraint(us_venezuela_plausible_deniability_2025, international_sanctions_regime_venezuela).
+% DUAL FORMULATION NOTE:
+% Plausible deniability regarding Venezuela is downstream of US foreign policy toward regime change and upstream of broader constraints on international accountability. The constraint's extractiveness (0.58) reflects the specific institutional arrangement of CIA autonomy + legal classification + weak international enforcement. Related constraints in the family: (1) operational_security_imperative (ε ≈ 0.15, pure coordination — the legitimate need to protect agent identities), (2) executive_accountability_deficit (ε ≈ 0.65, snare — systematic prevention of executive constraint by courts or Congress), (3) venezuelan_information_sovereignty (ε ≈ 0.72, snare — capacity to shape information environment regarding covert action). Plausible deniability binds these three via its enforcement mechanism.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The standard derivation
-% chain based on beneficiary/victim declarations and exit options accurately
-% models the structural power dynamics of the scenario. The beneficiary has
-% institutional power and arbitrage exit, while the victims are trapped or
-% constrained, leading to correct d-value derivations.
+constraint_indexing:directionality_override(us_venezuela_plausible_deniability_2025, institutional, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

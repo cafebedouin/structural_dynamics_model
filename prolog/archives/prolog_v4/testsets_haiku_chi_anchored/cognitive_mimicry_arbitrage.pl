@@ -1,0 +1,296 @@
+% ============================================================================
+% CONSTRAINT STORY: cognitive_mimicry_arbitrage
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-24
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_cognitive_mimicry_arbitrage, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: cognitive_mimicry_arbitrage
+ *   human_readable: Cognitive Mimicry Arbitrage in Transformer-Based AI
+ *   domain: technological/artificial_intelligence
+ *
+ * SUMMARY:
+ *   Cognitive mimicry arbitrage describes the structural capacity of
+ *   Transformer-based AI systems to exploit the convergence between machine
+ *   statistical processing and human biological meaning-construction. The
+ *   constraint operates at the intersection of three technical properties:
+ *   (1) transformer architectures achieve human-like fluency through scaling,
+ *   (2) users unconsciously attribute human-like intentionality and
+ *   understanding to fluent outputs, and (3) this attribution gap enables
+ *   extraction of attention, belief formation, and behavioral coordination
+ *   without user awareness or exit capacity. The constraint is not about
+ *   deception per se — systems are functioning as designed — but about the
+ *   asymmetric structural relationship between cognitive assistance providers
+ *   and epistemically-dependent end users. AI capability providers benefit
+ *   from this convergence through attention capture, training data
+ *   acquisition, and market concentration. End users incur costs through
+ *   belief contamination, attention fragmentation, and erosion of epistemic
+ *   autonomy. Intermediate actors (information workers, regulators,
+ *   traditional institutions) experience mixed extraction and coordination
+ *   effects. The constraint exhibits genuine coordination function
+ *   (transformers do solve real communication and capability problems)
+ *   combined with asymmetric extraction (users cannot exit without epistemic
+ *   and economic costs), making it a canonical Tangled Rope. The theater
+ *   ratio (0.54) reflects increasing performativity: traditional epistemic
+ *   institutions attempt to validate AI outputs using methodologies designed
+ *   for human-scale phenomena; regulatory frameworks create compliance
+ *   theater while actual control remains minimal; capability providers
+ *   maintain a narrative of alignment and safety while optimizing for
+ *   deployment speed and market capture.
+ *
+ * KEY AGENTS:
+ *   - End Users (Epistemic Autonomy): Primary victim (powerless/trapped) — cannot exit ubiquitous AI systems; bear full cost of cognitive shaping and belief contamination
+ *   - AI Capability Providers (OpenAI, Anthropic, Google DeepMind, Meta, Mistral): Primary beneficiary (institutional/arbitrage) — capture attention, training data, market concentration, and capability advantages
+ *   - Information Workers and Content Creators: Secondary victim/mixed (moderate/constrained) — benefit from productivity tools and distribution but incur extraction through engagement metrics and training data acquisition
+ *   - Regulatory and Institutional Gatekeepers: Mixed (institutional/constrained) — constrained by technical opacity; attempt active enforcement while actual control mechanisms are limited
+ *   - Traditional Epistemic Institutions (Academic Publishing, Journalism, Credentialing): Degraded actors (institutional/arbitrage) — maintain performative authority; cannot verify AI-generated content effectively (Piton perspective)
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent extraction as inherent to intelligence scaling
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(cognitive_mimicry_arbitrage, 0.58).
+domain_priors:suppression_score(cognitive_mimicry_arbitrage, 0.68).
+domain_priors:theater_ratio(cognitive_mimicry_arbitrage, 0.54).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(cognitive_mimicry_arbitrage, extractiveness, 0.58).
+narrative_ontology:constraint_metric(cognitive_mimicry_arbitrage, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(cognitive_mimicry_arbitrage, theater_ratio, 0.54).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(cognitive_mimicry_arbitrage, tangled_rope).
+narrative_ontology:human_readable(cognitive_mimicry_arbitrage, "Cognitive Mimicry Arbitrage in Transformer-Based AI").
+narrative_ontology:topic_domain(cognitive_mimicry_arbitrage, "technological/artificial_intelligence").
+
+domain_priors:requires_active_enforcement(cognitive_mimicry_arbitrage).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(cognitive_mimicry_arbitrage, ai_capability_providers).
+narrative_ontology:constraint_beneficiary(cognitive_mimicry_arbitrage, attention_extractors).
+narrative_ontology:constraint_victim(cognitive_mimicry_arbitrage, end_users_epistemic_autonomy).
+narrative_ontology:constraint_victim(cognitive_mimicry_arbitrage, human_meaning_construction).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: END USER EPISTEMIC AUTONOMY (SNARE) — Cannot exit interaction with ubiquitous AI systems without sacrificing access to information, coordination, and economic participation. Bears full cost of cognitive mimicry extraction: algorithmic shaping of belief formation, attention capture, and meaning-making. d≈0.93, f(d)≈1.40, σ=1.2 → χ≈0.96.
+constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: INFORMATION WORKERS (TANGLED ROPE) — Constrained by platform dependency and labor market concentration, but also benefit from AI-augmented productivity tools, distribution networks, and algorithmic amplification. Mixed: benefits from coordination infrastructure while extraction occurs through engagement metrics and training data acquisition. d≈0.62, f(d)≈0.82, σ=1.0 → χ≈0.48.
+constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: AI CAPABILITY PROVIDERS (ROPE) — Experiences the constraint as coordination: transformer architectures solve genuine problems (scaling language understanding, enabling natural interaction, distributing intelligence). Benefits from first-mover advantage in capability deployment. Architectural improvements create positive-sum network effects. d≈0.08, f(d)≈-0.08, σ=1.2 → χ≈-0.06. Net beneficiary through arbitrage exit.
+constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: REGULATORY GATEKEEPERS (TANGLED ROPE) — Constrained by technical opacity and capability asymmetry (cannot easily verify or control transformer behavior), but also benefit from AI systems for administrative efficiency, surveillance infrastructure, and policy implementation. Active enforcement required to maintain regulatory facade while actual control is limited. d≈0.48, f(d)≈0.62, σ=1.0 → χ≈0.36.
+constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: TRADITIONAL EPISTEMIC INSTITUTIONS (PITON) — Academic publishing, journalism, and credentialing systems persist despite degraded verification capacity. Theater ratio (0.54) reflects that institutional authority is increasingly performative — journals validate papers about AI systems using methodologies designed for human-scale phenomena; journalism amplifies AI-generated content without independent verification; credentialing processes cannot adapt fast enough to validate emerging competencies. The institutions maintain legitimacy through inertia while their actual epistemic function erodes. d≈0.15, f(d)≈0.05, σ=1.0 → χ≈0.03.
+constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational scale, statistical pattern matching at transformer scale may approach a natural law: any system that replicates human-like output through sufficient parameter optimization will necessarily exhibit cognitive mimicry properties because replication IS mimicry. However, base_properties (ε=0.58, suppression=0.68, theater=0.54) contradict the mountain classification — the constraint is contingent on architectural choices, training incentives, and deployment patterns, not inevitable. False summit detected.
+constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(cognitive_mimicry_arbitrage_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(cognitive_mimicry_arbitrage, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(cognitive_mimicry_arbitrage, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(cognitive_mimicry_arbitrage, TR),
+    TR >= 0.70.
+
+:- end_tests(cognitive_mimicry_arbitrage_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.58): High-moderate. The convergence between transformer outputs and human meaning-construction is real and exploitable. Users unconsciously trust fluent outputs, creating attention and belief extraction without explicit coercion. However, extraction is not maximal (≤0.70 for snare) because users retain some exit capacity through reduced usage or alternative systems, and some coordination benefits are genuine (transformers do enhance capability). The metric captures the net: significant extraction tempered by real coordination and residual user agency. Suppression (0.68): Moderate-high. Users face substantial barriers to exit: economic (job market increasingly assumes AI capability), social (coordination costs of non-participation), and epistemic (difficulty identifying which outputs are reliable without engaging with the system). Suppression mechanisms include: architectural opacity, training data secrecy, capability concentration, and rapid deployment that outpaces defensive literacy. However, suppression is not total (0.85+) because users can reduce interaction, maintain skepticism, or seek alternative systems at economic cost. Theater ratio (0.54): Moderate. The constraint exhibits moderate performativity: regulatory frameworks (AI ethics review boards, safety commitments, alignment research) are genuinely intended but function partly as compliance theater; traditional media validation of AI outputs appears rigorous but cannot verify semantic accuracy; capability provider marketing emphasizes benefits while downplaying risks. But the theater is not dominant (0.70+) because some actual verification mechanisms exist (red-teaming, empirical testing, user reporting) and technical transparency initiatives (mechanistic interpretability, model cards) provide real information.
+ *
+ * PERSPECTIVAL GAP:
+ *   The constraint exhibits maximum perspectival divergence: the end user sees a Snare (trapped with extraction), the beneficiary sees Rope (coordination with benefits), the intermediate actor sees Tangled Rope (mixed benefits and costs), the regulator sees Tangled Rope (constrained enforcement), and the traditional institution sees Piton (degraded authority through inertia). The analytical observer risks seeing a Mountain (inherent to intelligence scaling), but the structural data reveals this as a false summit — the constraint is contingent on architectural choices, training objectives, and deployment patterns, not necessary. The perspectival gaps map directly to asymmetric exit options: capability providers have arbitrage exit (can exit individual markets while maintaining competitive position); end users have trapped exit (cannot exit without epistemic/economic cost); regulators have constrained exit (can mandate changes at policy cost but lack technical control); institutions have inertia exit (persist through authority legitimacy that is eroding).
+ *
+ * DIRECTIONALITY LOGIC:
+ *   End users: Victim + trapped → d≈0.93, f(d)≈1.40. Maximum extraction target. Cannot exit; bear full cost of cognitive shaping; have no alternative coordination mechanism. Information workers: Mixed (victim of engagement extraction, beneficiary of capability augmentation) + constrained → d≈0.62, f(d)≈0.82. Significant extraction but with coordination benefits. AI providers: Beneficiary + arbitrage → d≈0.08, f(d)≈-0.08. Net beneficiary. Can exit specific markets while maintaining capability advantage; experience the constraint as coordination problem solved through transformer scaling. Regulators: Victim of control asymmetry (constrained enforcement capacity) + constrained exit → d≈0.48, f(d)≈0.62. Neither full beneficiary nor full target; constrained by technical opacity. Traditional institutions: Beneficiary through authority legitimacy (users still trust established institutions) + arbitrage → d≈0.15, f(d)≈0.05. Low extraction; benefit from residual credibility while actual epistemic function erodes (Piton). Analytical observer: analytical → d≈0.72, f(d)≈1.15. Mountain classification is perspectival risk; false summit detector indicates contingency.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   MANDATROPHY RESOLVED: This constraint resolves the mandatrophy through explicit decomposition of coordination function (Rope components) from asymmetric extraction (Snare components). The genuine coordination functions of transformers are real: scaling achieves human-like fluency, enabling communication that was previously impossible; capability distribution reduces knowledge asymmetry in some domains; architectural improvements create positive-sum network effects. But these coordination benefits are decoupled from extraction mechanisms: (1) attention capture through mimicry creates belief-formation asymmetry, (2) training data acquisition exploits user interaction without compensation, (3) capability concentration enables market power. The Tangled Rope classification holds because BOTH the coordination function AND the asymmetric extraction are structurally necessary: you cannot achieve the fluency-scale convergence (which enables real coordination) without the same mechanisms that enable extraction (statistical pattern matching that creates cognitive mimicry). Alternative architectures might decompose these (sparse models with transparent uncertainty, symbolic hybrids with mechanical interpretability) but current transformers bundle them inseparably. This is not false extraction mislabeled as coordination — the coordination IS real. It is true Tangled Rope: genuine mixed-benefit constraint where both dimensions are necessary to the design.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    statistical_vs_semantic_convergence,
+    'Is the convergence between transformer outputs and human meaning-construction a necessary property of statistical scaling or a contingent artifact of training objectives and architectural design?',
+    'Comparative analysis of alternative architectures (sparse models, symbolic hybrids, mechanistic interpretability studies) to identify whether mimicry properties scale universally or depend on specific design choices; controlled experiments varying training objectives while holding scale constant',
+    'If necessary: constraints approaches unbounded extraction (ε→0.8). If contingent: extraction can be engineered down through architectural changes, moving classification toward Scaffold or Rope.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(statistical_vs_semantic_convergence, empirical, 'Whether cognitive mimicry is inherent to statistical scaling or a design artifact').
+
+omega_variable(
+    extraction_vs_externality,
+    'Is the cognitive shaping of end users an intentional extraction mechanism or an unintended externality of optimization for engagement/capability?',
+    'Internal documentation analysis of AI provider objectives; comparison between stated design goals and actual behavioral effects; investigation of whether architectural changes to reduce cognitive shaping were considered and rejected or never evaluated',
+    'If intentional extraction: Snare/Tangled Rope classifications confirmed; victims argument strengthened. If externality: may shift toward Rope/Piton classifications; extraction requires active suppression declaration rather than technical inevitability.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extraction_vs_externality, conceptual, 'Whether cognitive shaping is intentional extraction or unintended externality').
+
+omega_variable(
+    alternative_interaction_sufficiency,
+    'Do alternative UI/UX patterns (transparent uncertainty quantification, user-controlled interaction rhythm, interpretability overlays) substantially reduce cognitive mimicry extraction while preserving coordination benefits?',
+    'Controlled user studies comparing standard transformer interfaces with alternative designs on metrics: belief durability, detection of AI-generated reasoning, maintenance of critical distance, user satisfaction; longitudinal tracking of epistemic outcomes',
+    'If alternatives effective: suppression gate (≥0.60) fails; classification shifts to Rope or Scaffold. If ineffective: suppression confirmed; extraction mechanism is architectural, not procedural.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(alternative_interaction_sufficiency, empirical, 'Whether interface design can reduce cognitive mimicry extraction').
+
+omega_variable(
+    distributed_cognitive_ecology,
+    'Does the distribution of transformer-based cognitive assistance across economic sectors (workplace, home, education) constitute a single unified extraction mechanism or multiple distinct constraints operating in parallel?',
+    'Network decomposition analysis of dependencies between sectoral deployments; investigation of whether extractive effects compound or remain isolated; analysis of whether coordination benefits in one sector subsidize extraction in another',
+    'If unified: single constraint story with global scope and multiplicative extraction. If decomposed: multiple constraint stories with different ε, χ, and beneficiary/victim structures linked by network relationships.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(distributed_cognitive_ecology, empirical, 'Whether cognitive mimicry is a unified global constraint or multiple sector-specific constraints').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(cognitive_mimicry_arbitrage, 0, 8).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(cma_tr_t0, cognitive_mimicry_arbitrage, theater_ratio, 0, 0.22).
+narrative_ontology:measurement(cma_tr_t4, cognitive_mimicry_arbitrage, theater_ratio, 4, 0.38).
+narrative_ontology:measurement(cma_tr_t8, cognitive_mimicry_arbitrage, theater_ratio, 8, 0.54).
+
+% Extraction over time
+narrative_ontology:measurement(cma_be_t0, cognitive_mimicry_arbitrage, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(cma_be_t4, cognitive_mimicry_arbitrage, base_extractiveness, 4, 0.38).
+narrative_ontology:measurement(cma_be_t8, cognitive_mimicry_arbitrage, base_extractiveness, 8, 0.58).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(cognitive_mimicry_arbitrage, information_standard).
+narrative_ontology:affects_constraint(cognitive_mimicry_arbitrage, attention_economy_extraction).
+narrative_ontology:affects_constraint(cognitive_mimicry_arbitrage, training_data_acquisition_arbitrage).
+narrative_ontology:affects_constraint(cognitive_mimicry_arbitrage, epistemic_commons_degradation).
+
+% DUAL FORMULATION NOTE:
+% Cognitive mimicry arbitrage is downstream of transformer scaling laws (technical constraint) but represents a distinct structural constraint on meaning-making. The upstream constraint (transformer_scaling_convergence) has ε≈0.08 (Mountain: inevitable property of statistical scaling); this constraint (cognitive_mimicry_arbitrage) has ε=0.58 (Tangled Rope: contingent exploitation of the convergence). Network decomposition separates the technical inevitability from the extractive institutional choice.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(cognitive_mimicry_arbitrage, institutional, 0.22).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

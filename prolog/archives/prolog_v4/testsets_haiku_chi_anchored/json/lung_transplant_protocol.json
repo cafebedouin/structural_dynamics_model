@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "lung_transplant_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lung"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Lung Transplant Allocation Protocol",
+    "topic_domain": "social/healthcare/organ_allocation",
+    "requires_active_enforcement": false,
+    "victims": [
+      "waitlisted_patients_without_medical_exception",
+      "patients_from_under_resourced_regions",
+      "patients_without_institutional_advocacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Waitlisted Patient Without Exception",
+      "comment": "PERSPECTIVE 1: WAITLISTED PATIENT WITHOUT EXCEPTION (SNARE) \u2014 Trapped by disease progression and organ scarcity; no exit option except death or continued deterioration. Protocol prioritizes exception requests that require institutional resources or medical documentation most patients lack. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Under-Resourced Regional Program",
+      "comment": "PERSPECTIVE 2: UNDER-RESOURCED REGIONAL PROGRAM (SNARE) \u2014 Constrained by limited institutional capacity to generate favorable exception documentation or participate in national exception review processes. Systematic disadvantage embedded in protocol that rewards institutional knowledge and resources. d\u22480.85, f(d)\u22481.25, \u03c3=0.9 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The High-Volume Transplant Center",
+      "comment": "PERSPECTIVE 3: HIGH-VOLUME TRANSPLANT CENTER (TANGLED ROPE) \u2014 Benefits from protocol's coordination function (standardized allocation reduces chaos; enables outcome tracking) while also extracting through exception requests, institutional advocacy, and selective patient referrals. Constrained by regulatory requirements but experienced enough to navigate them. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Organ Procurement Network (OPO) Administration",
+      "comment": "PERSPECTIVE 4: OPO ADMINISTRATION (ROPE) \u2014 Primary beneficiary of the coordination function: allocation protocol standardizes process, reduces chaos, enables outcome data collection and quality assurance. Sees itself as solving collective action problem. d\u22480.10, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Exception Review Process",
+      "comment": "PERSPECTIVE 5: EXCEPTION REVIEW PROCESS (PITON) \u2014 Ostensibly provides equity mechanism for medical urgency not captured by standard protocol. In practice, serves as extraction conduit: success depends on institutional resources for documentation, specialist advocacy, and appeals expertise. Theater ratio=0.48 reflects that exception reviews occur but with low functional separation from standard allocation. Many exceptions denied or delayed by bureaucratic bottlenecks despite documented medical need. d\u22480.30, f(d)\u22480.25, \u03c3=1.0 \u2192 \u03c7\u22480.14."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Equity Reform Coalition",
+      "comment": "PERSPECTIVE 6: EQUITY REFORM COALITION (SCAFFOLD) \u2014 Organized advocacy groups, regional networks, and policy researchers see the allocation protocol as a temporary constraint now being addressed through algorithmic revision (LAS 2.0, geographic distribution reforms). Reform pathways visible and actively pursued; sunset clause implicit in documented policy revision cycles. d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.11."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL SCARCITY VIEW (MOUNTAIN) \u2014 Some observers naturalize the constraint as inherent to organ scarcity: insufficient donors will always require allocation mechanisms that necessarily burden someone. This perspective treats the protocol as unavoidable natural law. However, \u03b5=0.58 and suppression=0.72 contradict mountain requirements \u2014 allocation mechanisms could be designed to minimize extraction while maintaining coordination. Engine detects false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exception_documentation_bias",
+      "question": "What proportion of eligible exceptions under the protocol go unrequested due to institutional resource barriers vs documentation knowledge gaps vs patient/physician lack of awareness?",
+      "resolution_mechanism": "Longitudinal audit of exception eligibility vs requests; stratified by transplant center resources and regional access to exception navigators; patient surveys on awareness of exception pathways",
+      "impact": "If barrier is primarily awareness: targeted information campaigns could reduce extraction. If barrier is primarily resources: exception process itself is extractive mechanism. If mixed: tiered extraction model where institutional capacity determines exception success independent of medical criteria.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of eligible exceptions unrequested due to institutional barriers"
+    },
+    {
+      "id": "algorithmic_fairness_degradation",
+      "question": "Do post-revision allocation algorithms (LAS 2.0+) achieve the stated equity gains or do new extraction mechanisms emerge around algorithmic gaming and selective referral patterns?",
+      "resolution_mechanism": "Comparison of allocation equity metrics pre- and post-revision; analysis of waitlist time distributions across institutional types and regional resources; examination of patient outcomes by socioeconomic status over time",
+      "impact": "If genuine equity improvement observed: scaffold perspective validated, sunset is real. If new mechanisms emerge: constraint type remains snare but with obfuscated extraction mechanism. Classification unchanged but mechanism complexity increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic revisions achieve stated equity improvements or spawn new extraction mechanisms"
+    },
+    {
+      "id": "scarcity_elasticity_threshold",
+      "question": "At what organ donation rate would allocation protocol suppression decrease materially, and are there policy interventions that could push toward that threshold?",
+      "resolution_mechanism": "Comparative analysis of countries with different donation rates (opt-in vs opt-out, living donor expansion) and their allocation protocol suppression scores; modeling of extraction reduction as function of supply",
+      "impact": "If threshold achievable through policy: constraint is contingent (Tangled Rope \u2192 Rope over time). If threshold requires biological/cultural shifts unlikely on generational timescale: constraint is quasi-natural (Snare with limited remediation pathways). Affects mandatrophy resolution strategy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Supply elasticity threshold at which allocation protocol suppression materially decreases"
+    },
+    {
+      "id": "hidden_allocation_channels",
+      "question": "Do formal allocation mechanisms account for all significant organ distribution (e.g., living donation, paired exchange, bridge therapies, waitlist management via patient selection), or do untracked channels constitute material portion of real allocation?",
+      "resolution_mechanism": "Comprehensive audit of organ utilization pathways; tracking of living vs deceased donor distribution; analysis of waitlist management practices across centers; network analysis of patient flow between centers",
+      "impact": "If formal protocol captures >85% of allocation: snare classification is accurate. If <70%: measured extractiveness is understated; true snare is more severe and hidden behind formal opacity. Theater increases; suppression harder to measure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of organ allocation occurring through formal protocol vs untracked channels"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The lung transplant allocation protocol creates a structural constraint on access to scarce organs through a system designed to be medically rational and procedurally fair, but which systematically advantages patients with institutional resources, medical advocacy, and documentation capacity. The constraint is not primarily about the shortage of organs \u2014 that is a natural scarcity problem \u2014 but about the allocation mechanism's design, which embeds extraction mechanisms in the exception process, advantage accumulation for high-volume centers, and systematic disadvantage for under-resourced populations. The constraint exhibits snare characteristics: victims are trapped (disease progression cannot wait), suppression is high (institutional barriers to exception requests, geographic disadvantages, documentation requirements), and beneficiaries are institutions with resources to navigate the system. Extractiveness has increased over time as the protocol has matured and as high-volume centers have learned to optimize exception requests and patient referral patterns. Theater ratio remains moderate because the protocol maintains genuine functionality (it does allocate organs according to stated criteria) but with increasing performative elements (exception requests that succeed based on institutional capacity rather than medical urgency). The constraint is not natural law \u2014 other countries allocate organs via different mechanisms with different equity outcomes \u2014 and thus does not qualify as mountain despite occasional naturalization.",
+    "key_agents": [
+      "Waitlisted patients without medical exception: Primary victims (powerless/trapped) \u2014 disease progression cannot wait; no exit except death or continued deterioration",
+      "Under-resourced regional programs: Secondary victims (moderate/constrained) \u2014 systematic disadvantage in exception processes and algorithmic allocation; limited capacity for institutional advocacy",
+      "High-volume transplant centers: Primary extractors and beneficiaries (institutional/constrained) \u2014 capture proportionally more organs through exception requests, selective referrals, and procedural expertise; benefit from protocol's coordination function",
+      "Organ Procurement Network (OPO) administration: Institutional beneficiary (institutional/arbitrage) \u2014 benefits from coordination function; sees protocol as solving collective action problem",
+      "Exception review process: Extraction conduit (institutional/constrained) \u2014 ostensibly provides equity mechanism but functions as institutional advantage mechanism; theater ratio reflects performative element",
+      "Equity reform coalition: Organized agents (organized/mobile) \u2014 advocacy groups pursuing algorithmic revision and geographic distribution reforms; sees sunset pathway",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional constraint as inherent to organ scarcity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The protocol extracts disproportionately from patients without institutional resources. Exception requests, which nominally provide equity mechanism, function as extraction conduit because success depends on resources for documentation, specialist advocacy, and appeals expertise. Geographic distribution algorithms may disadvantage lower-density regions. Extractiveness has increased from 0.42 to 0.58 over the interval as centers have learned to optimize the system and as documentation requirements have increased. Suppression (0.72): High. Multiple barriers prevent trapped patients from obtaining organs: disease progression cannot wait; information asymmetries about exception pathways; institutional resource requirements; geographic disadvantages; complexity of documentation and appeals processes; knowledge that some centers are more successful at exceptions creates incentive to travel (further barrier for under-resourced patients). Theater ratio (0.48): Moderate. The allocation protocol maintains genuine functionality (it does allocate organs according to stated criteria and reduces chaos), but performative elements have emerged: exception reviews often succeed based on institutional capacity for documentation rather than medical urgency; algorithmic allocation may be gamed through patient selection and referral patterns; the exception process itself has become partially theatrical (appears to provide equity but actually rewards institutional resources). Theater has increased from 0.35 to 0.48 as the system has matured.",
+    "perspectival_gap": "The constraint demonstrates stark perspectival divergence. High-volume centers see coordination (Tangled Rope) \u2014 the protocol solves the collective action problem of organ allocation and enables outcome tracking, while also providing extraction opportunities through exception requests. OPO administration sees coordination (Rope) \u2014 the protocol standardizes process and reduces chaos. Under-resourced programs and waitlisted patients without resources see extraction (Snare) \u2014 trapped with no meaningful exit, facing systematic disadvantage embedded in protocol design. The exception process appears to provide equity (Piton perspective: degraded ritual that should work but doesn't) but actually functions as extraction mechanism. Reform advocates see a solvable problem with sunset pathways (Scaffold) through algorithmic revision and geographic distribution reform. The analytical observer risks naturalizing the constraint as inherent to organ scarcity (Mountain), but the structural data reveals this as false: allocation mechanisms are contingent institutional choices, not laws of nature.",
+    "directionality_logic": "Waitlisted patients: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Under-resourced programs: Victims + constrained \u2192 d\u22480.85, f(d)\u22481.25. High extraction, though slightly less than fully trapped because some workarounds exist (traveling to higher-success centers, though this increases cost/burden). High-volume centers: Mixed beneficiary/victim status + constrained \u2192 d\u22480.50, f(d)\u22480.65. They benefit from coordination function and exception process optimization but face regulatory constraints. OPO administration: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Net beneficiary; experiences protocol as solving collective action problem. Exception review: Institutional + constrained \u2192 d\u22480.30, f(d)\u22480.25. Low effective extraction because process is partially performative; most cases follow standard protocol despite exception pathway existing. Reform coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction; organized agents see exit pathway through policy revision. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. False summit classification reveals naturalization.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION IS APPROPRIATE: The protocol satisfies all snare gates (\u03b5=0.58 \u2265 0.46, suppression=0.72 \u2265 0.60, \u03c7\u22480.68 \u2265 0.66), and the structural data supports snare interpretation from the primary victim perspective. The mandatrophy question is: does the protocol serve a coordination function that partially redeems the extraction, pushing it toward Tangled Rope? Analysis: The protocol does provide genuine coordination benefits (it reduces chaos, enables outcome tracking, creates standardized process). However, these benefits accrue to institutional actors (OPO, high-volume centers) rather than to the trapped victims. From the victim perspective, the coordination benefits are instrumental to the extraction system, not alternative purposes. From the institutional beneficiary perspective, the constraint may be Tangled Rope (coordination + asymmetric extraction). From the victim perspective, it is pure Snare (extraction with no coordination benefit for them). The perspectival gap is justified: different agents experience structurally different phenomena. The classification resolves as Snare for victims, Tangled Rope for beneficiaries \u2014 the presheaf over the agent set captures the full structure. No false coordination can hide behind the snare label."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organ_procurement_shortage",
+      "transplant_center_outcome_accountability",
+      "living_donor_solicitation_pressure"
+    ],
+    "dual_formulation_note": "The lung transplant protocol is downstream of fundamental organ scarcity (organ_procurement_shortage, \u03b5\u22480.15 Mountain) but represents a distinct extractive constraint layered onto the scarcity problem. The allocation mechanism itself is contingent institutional design, not natural law. Upstream: whether donation rates can expand (affects whether allocation suppression is essential or contingent). Downstream: how allocation decisions drive transplant center patient selection and outcome reporting."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.48
+    }
+  ]
+}

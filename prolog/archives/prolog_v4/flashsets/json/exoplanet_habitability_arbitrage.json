@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "exoplanet_habitability_arbitrage",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Exoplanetary Habitability Arbitrage Strategy",
+    "topic_domain": "technological/scientific",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "research_groups_flexible_funding",
+      "telescope_time_allocators"
+    ],
+    "victims": [
+      "earth_twin_focused_research",
+      "public_understanding_of_science"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Earth-Twin Focused Research",
+      "comment": "Researchers stuck in the 'Earth-twin' paradigm find their research less valued and funding opportunities dwindling. They are trapped by previous specialization and potentially find it difficult to pivot, making them targets of the paradigm shift."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Individual Researchers",
+      "comment": "Researchers with some flexibility face a mixed situation. They benefit from new areas opening up, but are also constrained by the need to learn new skills and potentially abandon prior work, so extraction is mitigated by a coordination element."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Research Groups with Flexible Funding",
+      "comment": "Research groups that can quickly shift focus towards habitability anomalies stand to gain significant funding and telescope time, experiencing this constraint as pure coordination and an opportunity for arbitrage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Telescope Time Allocators",
+      "comment": "Those deciding telescope time can allocate it based on perceived promise, seeing the arbitrage as a tool towards maximizing discovery; more likely to take bets."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "A long-term view reveals a coordination/extraction mix: Focusing on anomalies may accelerate discovery, but carries the risk of overlooking more subtle, Earth-like environments, or propagating false claims more easily, creating an epistemic cost."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "earth_twin_rarity",
+      "question": "How rare are true 'Earth twins' in the galaxy?",
+      "resolution_mechanism": "Increased exoplanet surveys and atmospheric characterization.",
+      "impact": "If Earth twins are very rare: the arbitrage strategy is justified. If they are common: the arbitrage strategy may be premature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rarity of Earth twins affects viability of arbitrage"
+    },
+    {
+      "id": "anomaly_detectability",
+      "question": "How easily can habitable anomalies be detected and interpreted?",
+      "resolution_mechanism": "Development of better atmospheric models and detection technologies.",
+      "impact": "If anomalies are easily detected and interpreted: the arbitrage strategy is efficient. If they are difficult: the strategy may lead to many false positives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ease of detecting anomalies affects strategy efficiency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the strategic pivot in the search for extraterrestrial life, moving from seeking \"Earth twins\" to identifying anomalies based on our solar system's observed statistical \"weirdness\". It's a tangled rope because it provides funding and opportunity for some, while potentially hindering others and leading to neglect of potentially habitable but less anomalous worlds. The extraction arises from researchers finding past methods of earth-twin hunting less valuable. The arbitrage comes from identifying potentially overlooked, and more easily discovered, signatures of life on non-earth-like planets.",
+    "key_agents": [
+      "Earth-Twin Focused Research: Primary target (powerless/trapped) - research teams whose expertise is now less valued.",
+      "Individual Researchers: Secondary actors (moderate/constrained) - researchers who have some flexibility but also face costs in adapting.",
+      "Research Groups with Flexible Funding: Primary beneficiary (institutional/arbitrage) - groups who can quickly shift focus and gain funding.",
+      "Telescope Time Allocators: Beneficiary (institutional/arbitrage) - can allocate time based on perceived promise.",
+      "Public Understanding of Science: Victim (powerless/trapped) - shift in narrative may lead to public misunderstanding if nuances are lost."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate - substantial resources are diverted away from previous research strategies. Suppression (0.45): Moderate - some researchers find it difficult to shift, limiting their options. Theater ratio (0.30): Relatively low; focuses on genuine discovery rather than performative research.",
+    "perspectival_gap": "The Earth-Twin Focused Research see a snare, being trapped by a funding shift. Meanwhile, Research Groups with Flexible Funding see opportunity (rope). Individual researchers see a mixed benefit and extraction (tangled rope). Telescope time allocators see a more effective resource allocation strategy (rope).",
+    "directionality_logic": "The directionality depends on the actor's flexibility. Those stuck in the 'Earth-twin' paradigm are targeted by the shift, those able to adapt benefit. The power levels and exit options reflect these differences."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

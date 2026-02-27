@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "consumer_debt_slavery",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cds"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "The Interest Trap (Act Your Wage)",
+    "topic_domain": "economic/financial_servitude",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "credit_issuers",
+      "financial_intermediaries"
+    ],
+    "victims": [
+      "low_income_borrowers",
+      "precarious_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Debt-Bound Borrower",
+      "comment": "PERSPECTIVE 1: DEBT-BOUND BORROWER (SNARE) \u2014 Powerless, trapped in biographical servitude. No exit: must service debt through wage labor. Interest compounds faster than income growth for precarious workers. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.96. Pure extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Credit Issuer",
+      "comment": "PERSPECTIVE 2: CREDIT ISSUER (ROPE) \u2014 Institutional beneficiary (arbitrage exit). Experiences constraint as coordination mechanism: allocating capital to borrowers, earning risk premium. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.07. Net beneficiary; extraction hidden under term 'credit intermediation'."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework (Nominal)",
+      "comment": "PERSPECTIVE 3: REGULATORY FRAMEWORK (TANGLED ROPE) \u2014 Powerful institutional actor (organized banking sector + government). Claims coordination function: capital allocation, consumer protection (Truth in Lending Act, fair lending laws). d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.20. Moderate extraction masked as consumer welfare."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Debt Abolition Movement",
+      "comment": "PERSPECTIVE 4: DEBT ABOLITION MOVEMENT (SCAFFOLD) \u2014 Organized agents (nonprofits, faith organizations, mutual aid networks) building alternative credit pathways (credit unions, community lending, debt jubilee proposals). See constraint as temporary, addressable through policy reform. d\u22480.60, f(d)\u22480.85, \u03c3=1.0 \u2192 \u03c7\u22480.58. High suppression but sees sunset path through redistribution and alternative finance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consumer Credit Market Ideology",
+      "comment": "PERSPECTIVE 5: CONSUMER CREDIT MARKET IDEOLOGY (PITON) \u2014 Institutional persistence through theater. Market ideology frames debt as 'consumer choice' and 'financial empowerment' despite empirical servitude. theater_ratio=0.38 slightly below piton gate (0.70), but the performative justification ('democratizing credit') masks extraction. Theater is lower because the constraint's function (extracting surplus) is directly observable, not hidden behind ritual."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global view, consumer debt operates as systematic extraction mechanism with suppressed alternatives: 'Act Your Wage' framing masks that wage earners cannot accumulate capital before consuming. \u03b5=0.68 confirms snare classification at analytical level. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.78. High effective extraction from entire precariat."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interest_rate_baseline_determination",
+      "question": "What interest rate differential constitutes extraction vs legitimate risk compensation?",
+      "resolution_mechanism": "Comparative analysis: credit access costs across income cohorts; correlation between default rates and interest charged; modeling of sustainable vs extractive rate structures",
+      "impact": "If 'legitimate' baseline is high: constraint appears moderate. If baseline is low: reveals excessive extraction margin built into standard rates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The threshold between legitimate risk pricing and extractive rents"
+    },
+    {
+      "id": "alternative_capital_access_feasibility",
+      "question": "Are alternative credit mechanisms (credit unions, peer lending, community finance) structurally viable at scale as substitutes for predatory consumer credit?",
+      "resolution_mechanism": "Longitudinal comparison of default rates, affordability, and portfolio composition between credit unions and commercial lenders; cost analysis of scaling community lending; regulatory barrier assessment",
+      "impact": "If viable at scale: scaffold perspective is real (sunset through alternative finance). If structurally constrained: suppression is absolute, constraint is permanent snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative credit systems can replace commercial predatory lending"
+    },
+    {
+      "id": "wage_stagnation_causality",
+      "question": "Does consumer debt trap cause wage stagnation through debt servicing reducing labor mobility, or is wage stagnation exogenous driver making debt necessary?",
+      "resolution_mechanism": "Causal inference: cross-national comparison of debt levels and wage growth; natural experiments in debt forgiveness or credit expansion; labor mobility analysis by debt level",
+      "impact": "If debt causes stagnation: constraint is self-reinforcing (high d, high f(d)). If exogenous: stagnation is separate constraint; debt is response, not cause.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal direction between consumer debt and wage stagnation"
+    },
+    {
+      "id": "cultural_norming_substitutability",
+      "question": "Can cultural norms ('Save First' ascendancy) structurally replace 'Act Your Wage' consumption norms and shift credit dependency?",
+      "resolution_mechanism": "Historical comparison of credit/savings ratios across cultures and time periods; correlation with intergenerational wealth transmission; impact of financial literacy on debt trajectories",
+      "impact": "If norms are plastic: constraint is partially cultural (lower \u03b5). If norms are sticky: constraint is structural (\u03b5 remains high).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether consumption norms are malleable relative to structural credit conditions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The Interest Trap represents a structural extraction mechanism disguised as consumer choice and financial inclusion. Low-income households utilize credit for depreciating assets (vehicles, appliances) or essential consumption (healthcare, emergency expenses) when wages prove insufficient. Once indebted, borrowers enter a state of long-term financial servitude: interest compounds faster than income growth, reducing ability to accumulate capital and exit the debt cycle. The constraint exhibits snare characteristics (high extraction, high suppression, trapped exits for victims) alongside rope-like performative framing from credit issuers (portrayed as coordinating capital allocation). The 'Act Your Wage' colloquialism captures the core mechanism: workers consume based on gross income, ignoring debt service obligations, leading to persistent undercapitalization. Unlike acute financial crises, the Interest Trap is chronic \u2014 it persists through wage cycles, affecting an estimated 40% of U.S. households carrying credit card debt with active interest charges. The constraint's theater ratio (0.38) remains moderate because the extraction function is transparent: interest is explicitly charged, not hidden. However, the constraint's legitimacy theater \u2014 framing credit access as 'democratized' financial inclusion \u2014 obscures that access without affordability is extraction.",
+    "key_agents": [
+      "Low-income borrowers (precarious workers): Primary victim (powerless/trapped) \u2014 must service debt through wage labor with no capital accumulation pathway",
+      "Credit issuers (banks, fintech, credit card companies): Primary beneficiary (institutional/arbitrage) \u2014 capture surplus through interest margins and fee structures",
+      "Financial regulatory agencies (Federal Reserve, SEC, consumer finance bureaus): Nominal coordinator (powerful/arbitrage) \u2014 claim consumer protection role while permitting high-cost credit for vulnerable populations",
+      "Credit unions and community finance organizations: Alternative pathway agents (organized/constrained) \u2014 build lower-cost credit structures; see constraint as addressable through institutional substitution",
+      "Debt abolition and financial justice movements: Organized challengers (organized/constrained) \u2014 advocate structural solutions (debt jubilee, living wage, universal basic income) to undermine extraction mechanism",
+      "Analytical observer: Civilizational view \u2014 sees constraint as systematic rent extraction from precariat, not market failure"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Base extraction reflects structural surplus transfer: interest margins (8-25% APR for subprime), fees (late fees, over-limit fees), and opportunity cost (capital not accumulating) systematically drain income. The measurement shows accumulation over 30 years (0.48 \u2192 0.68) as debt burdens compound and alternative financing becomes less accessible. Suppression (0.72): High. Exit barriers include: (1) credit-score dependency (default damages future borrowing), (2) wage garnishment legal mechanisms, (3) inadequate income relative to debt stock, (4) absence of alternative credit pathways, (5) bankruptcy stigma and legal barriers. Suppression increased over the interval as debt-collection enforcement strengthened and alternative lending contracted. Theater ratio (0.38): Moderate. The constraint's function (extracting surplus) is transparent, reducing pure theater. However, performative framing ('financial inclusion,' 'access to credit') masks that access without affordability is extraction. The measurement shows slight increase (0.22 \u2192 0.38) as market ideology normalized high-cost credit as consumer empowerment.",
+    "perspectival_gap": "The debt-bound borrower experiences a Snare: trapped in biographical servitude, bearing all extraction cost. The credit issuer experiences a Rope: legitimate capital allocation with risk premium (their genuine experience). The regulatory framework claims Tangled Rope (coordination + mild extraction) but functions closer to Snare for borrowers. The debt abolition movement sees a Scaffold: temporary extraction addressable through policy reform and alternative finance. The consumer credit ideology persists as Piton: theater of 'financial democratization' maintains extraction despite low functional role. The analytical observer sees Snare: systematic extraction from precariat class. The perspectival gap reveals that 'credit access' means opposite things to different agents: to issuers, it is profitable capital allocation; to borrowers, it is necessary consumption financing that locks them into servitude.",
+    "directionality_logic": "Low-income borrowers: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction experience. Credit issuers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net benefit; extraction is their coordination function. Regulatory framework: Beneficiary (permits high-cost credit) + arbitrage (regulatory capture by banking sector) \u2192 d\u22480.35, f(d)\u22480.30. Moderate extraction masked as consumer protection. Debt abolition movement: Victim (systemic) + constrained \u2192 d\u22480.60, f(d)\u22480.85. High extraction but organized agency and viable exit pathways. Analytical observer: Observer + analytical \u2192 d\u22480.72, f(d)\u22481.15. Standard observational positionality; sees high extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.35
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation_structural",
+      "housing_affordability_crisis",
+      "medical_bankruptcy_trap",
+      "intergenerational_wealth_capture"
+    ],
+    "dual_formulation_note": "Consumer debt slavery intersects with multiple constraints: it is downstream of inadequate wages (wage_stagnation_structural) and housing costs (housing_affordability_crisis), and upstream of intergenerational poverty (intergenerational_wealth_capture). Each constraint has its own \u03b5 value reflecting distinct mechanisms; the network linkage indicates structural causality and shared beneficiary class."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
+}

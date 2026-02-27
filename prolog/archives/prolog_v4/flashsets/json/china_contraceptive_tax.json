@@ -1,0 +1,163 @@
+{
+  "header": {
+    "constraint_id": "china_contraceptive_tax",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "China's Differential Tax on Contraceptives",
+    "topic_domain": "economic/political",
+    "beneficiaries": [
+      "state_preferred_contraceptive_manufacturers",
+      "family_planning_bureau"
+    ],
+    "victims": [
+      "consumers_of_condoms",
+      "condom_manufacturers",
+      "reproductive_freedom"
+    ],
+    "requires_active_enforcement": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Consumers of Condoms",
+      "comment": "Consumers, especially those with limited resources, are trapped by the increased cost of condoms due to the tax, limiting their access to this method of contraception."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Condom Manufacturers",
+      "comment": "Condom manufacturers are constrained by the tax, which reduces their competitiveness compared to manufacturers of state-preferred contraceptives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Family Planning Bureau",
+      "comment": "The Family Planning Bureau benefits from the tax as it incentivizes the use of state-preferred methods, aligning with the government's population control policies. The bureau is able to shift resources away from condom distribution towards other methods."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State-Preferred Contraceptive Manufacturers",
+      "comment": "State-preferred contraceptive manufacturers benefit from tax exemptions and subsidies. However, they are also constrained by the state's control over the market and policy direction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Reproductive Freedom",
+      "comment": "Reproductive freedom is suppressed. Individuals lack full agency to select preferred contraceptive methods without state intervention. Choice of contraceptive method is constrained by policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the tax represents a tangled rope. It extracts from condom users and manufacturers, limiting reproductive choices, while also incentivizing state-preferred methods and providing revenue for the Family Planning Bureau."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "policy_effectiveness",
+      "question": "How effective is the tax in achieving the government's population control goals?",
+      "resolution_mechanism": "Statistical analysis of contraceptive usage rates and birth rates before and after the implementation of the tax.",
+      "impact": "If highly effective, the justification for the tax is strengthened. If ineffective, the tax may be deemed unnecessary and harmful.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the effectiveness of the tax on population control."
+    },
+    {
+      "id": "unintended_consequences",
+      "question": "What are the unintended consequences of the tax, such as increased rates of STIs or unwanted pregnancies?",
+      "resolution_mechanism": "Public health surveys and statistical analysis of STI and pregnancy rates.",
+      "impact": "If negative consequences are significant, the tax may be deemed harmful and require revision or repeal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluates the unintended public health impacts."
+    },
+    {
+      "id": "ethical_considerations",
+      "question": "What are the ethical implications of the tax, particularly regarding reproductive freedom and access to healthcare?",
+      "resolution_mechanism": "Ethical analysis and public debate.",
+      "impact": "The tax may be deemed unethical if it infringes on individual rights or exacerbates health inequalities.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Considers the ethical dimensions of the tax."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Chinese government's differential tax on contraceptives, imposing a 17% VAT on condoms while exempting or subsidizing state-preferred methods such as IUDs and sterilization, creates a structural constraint that limits reproductive freedom and consumer choice. This policy favors government-approved contraceptive options, influencing individual decisions through economic incentives.",
+    "key_agents": [
+      "Consumers of Condoms: Primary target (powerless/trapped) \u2013 face increased costs, limiting access.",
+      "Condom Manufacturers: Secondary target (moderate/constrained) \u2013 reduced competitiveness due to the tax.",
+      "State-Preferred Contraceptive Manufacturers: Primary beneficiary (institutional/constrained) \u2013 benefit from tax exemptions and subsidies.",
+      "Family Planning Bureau: Secondary beneficiary (institutional/arbitrage) \u2013 benefits from increased use of state-preferred methods.",
+      "Reproductive Freedom: Victim (powerless/trapped) - choice is restricted by policy intervention."
+    ],
+    "logic_rationale": "Extractiveness (0.65): The tax extracts value from condom users and manufacturers by increasing the cost of condoms and decreasing competitiveness. Suppression (0.70): The policy suppresses access to condoms relative to state-preferred methods by making the former more expensive. Theater Ratio (0.30): The policy does not rely heavily on performative aspects, as the main effect is a direct economic incentive.",
+    "perspectival_gap": "Consumers experience the tax as a snare, limiting their access to condoms. State-preferred contraceptive manufacturers experience the tax as a coordination mechanism, as it benefits them. An analytical observer would see the tax as a tangled rope, as it extracts value from some while benefiting others, all while serving a complex population control objective.",
+    "directionality_logic": "Consumers of condoms are considered powerless because they are trapped by the tax and its effect on cost, limiting access. Manufacturers are constrained by the effect on competitiveness. The family planning bureau benefits from increased use of state-preferred methods, aligning with the state's population goals. The overall policy constrains reproductive freedom."
+  },
+  "boltzmann": {},
+  "network": {},
+  "directionality_overrides": []
+}

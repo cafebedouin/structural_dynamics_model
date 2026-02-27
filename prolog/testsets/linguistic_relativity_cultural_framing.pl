@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: linguistic_relativity_cultural_framing
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-02-11
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_linguistic_relativity_cultural_framing, []).
@@ -40,9 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -59,41 +60,28 @@
  * SUMMARY:
  *   The Sapir-Whorf hypothesis — that language structure influences or
  *   determines habitual thought — provides a genuine coordination framework
- *   for cross-linguistic cognitive research. However, its application to
- *   English-Chinese comparisons has historically carried asymmetric cultural
- *   extraction. From Whorf's original framing through mid-20th-century
- *   structural linguistics and into contemporary pop-science narratives,
- *   the framework has repeatedly been deployed to position English-language
- *   cognitive patterns as the unmarked norm and Chinese-language patterns as
- *   the marked deviation — "Chinese lacks tense" rather than "English
- *   requires redundant temporal marking." This framing asymmetry channels
- *   research funding, shapes language pedagogy, influences business
- *   communication norms, and sustains a hierarchy in which analytic-
- *   inflectional languages are implicitly treated as cognitively superior
- *   to isolating-pragmatic ones.
+ *   for cross-linguistic cognitive research, but operates as a tangled rope
+ *   in practice. The hypothesis has legitimate empirical content (weak form:
+ *   language structure shapes attentional focus and conceptual accessibility)
+ *   but is enforced institutionally in an extractive way (strong form:
+ *   language determines thought patterns). English-language cognitive science
+ *   frameworks have become the default lens through which all linguistic
+ *   relativity is measured, creating a structural asymmetry where Chinese
+ *   cognitive patterns must be explained through English-language categories
+ *   rather than valued on their own terms. The constraint exhibits high
+ *   theater ratio (0.58-0.68 over the interval) because discussions of
+ *   Sapir-Whorf often invoke it as motivational intuition rather than as an
+ *   empirically-constrained mechanism. The theater has increased over 40
+ *   years as the empirical support for strong Sapir-Whorf has declined but
+ *   pedagogical and policy usage has increased.
  *
- *   The genuine coordination function is real: linguistic relativity research
- *   has produced valuable insights into color perception (Winawer et al. 2007),
- *   temporal reasoning (Boroditsky 2001, Chen 2013), spatial cognition
- *   (Levinson 2003), and counterfactual reasoning (Au 1983, Bloom 1981).
- *   The extraction is also real: these findings are selectively cited in
- *   corporate cross-cultural training, English-language-teaching policy,
- *   and popular media to reinforce linguistic hierarchies.
- *
- * KEY AGENTS (by structural relationship):
- *   - Heritage Chinese speakers in anglophone contexts:
- *       Primary target (powerless/trapped) — bears extraction through
- *       deficit framing of their native language's cognitive patterns
- *   - Anglophone research institutions and ELT industry:
- *       Primary beneficiary (institutional/arbitrage) — controls research
- *       framing, publication norms, and language-teaching markets
- *   - Chinese-medium research institutions:
- *       Secondary institutional actor (institutional/constrained) — must
- *       publish in English-language journals to gain recognition, accepting
- *       the framing conventions of anglophone linguistics
- *   - Comparative cognitive scientists:
- *       Analytical observer — sees both the coordination value and the
- *       extraction embedded in the framing
+ * KEY AGENTS:
+ *   - Western Cognitive Science Establishment: Primary beneficiary (institutional/arbitrage) — controls research funding, publication venues, definitional authority; English-language cognitive primitives become universal baseline
+ *   - Non-Western Epistemic Frameworks: Primary victim (powerless/trapped) — forced to defend validity through Western categories; cannot exit the legitimation requirement
+ *   - Chinese Language Communities: Secondary victim (moderate/constrained) — recognized as research subjects but constrained to language-determines-thought framing; asymmetric extraction of research attention
+ *   - Cross-Linguistic Empirical Research Coalition: Organized agents (organized/constrained) — building alternative verification pathways; empirical testing of strong Sapir-Whorf claims; sunset logic as evidence accumulates
+ *   - Language-Determines-Thought Narrative: Institutional actor (institutional/arbitrage) — maintains pedagogical and policy utility despite empirical falsification; piton classification from theater ratio
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent research paradigm as immutable linguistic law
  */
 
 /* ==========================================================================
@@ -101,110 +89,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(linguistic_relativity_cultural_framing, 0.42).
-domain_priors:suppression_score(linguistic_relativity_cultural_framing, 0.55).
-domain_priors:theater_ratio(linguistic_relativity_cultural_framing, 0.35).
+domain_priors:base_extractiveness(linguistic_relativity_cultural_framing, 0.52).
+domain_priors:suppression_score(linguistic_relativity_cultural_framing, 0.48).
+domain_priors:theater_ratio(linguistic_relativity_cultural_framing, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(linguistic_relativity_cultural_framing, extractiveness, 0.42).
-narrative_ontology:constraint_metric(linguistic_relativity_cultural_framing, suppression_requirement, 0.55).
-narrative_ontology:constraint_metric(linguistic_relativity_cultural_framing, theater_ratio, 0.35).
+narrative_ontology:constraint_metric(linguistic_relativity_cultural_framing, extractiveness, 0.52).
+narrative_ontology:constraint_metric(linguistic_relativity_cultural_framing, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(linguistic_relativity_cultural_framing, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(linguistic_relativity_cultural_framing, tangled_rope).
 narrative_ontology:human_readable(linguistic_relativity_cultural_framing, "Sapir-Whorf Cultural Application to English-Chinese Differences").
 narrative_ontology:topic_domain(linguistic_relativity_cultural_framing, "social/linguistic/political").
 
-% --- Binary flags ---
 domain_priors:requires_active_enforcement(linguistic_relativity_cultural_framing).
 
 % --- Structural relationships ---
-% Who benefits from the Sapir-Whorf framing persisting as-is?
-narrative_ontology:constraint_beneficiary(linguistic_relativity_cultural_framing, anglophone_research_institutions).
-narrative_ontology:constraint_beneficiary(linguistic_relativity_cultural_framing, english_language_teaching_industry).
-
-% Who bears disproportionate cost from the deficit framing?
-narrative_ontology:constraint_victim(linguistic_relativity_cultural_framing, heritage_chinese_speakers_in_anglophone_contexts).
-narrative_ontology:constraint_victim(linguistic_relativity_cultural_framing, chinese_medium_research_institutions).
-
-% Gate requirements for Tangled Rope:
-%   beneficiary (above) + victim (above) + requires_active_enforcement (above)
-%   All three present.
+narrative_ontology:constraint_beneficiary(linguistic_relativity_cultural_framing, western_cognitive_researchers).
+narrative_ontology:constraint_beneficiary(linguistic_relativity_cultural_framing, english_language_frameworks).
+narrative_ontology:constraint_victim(linguistic_relativity_cultural_framing, non_western_epistemic_frameworks).
+narrative_ontology:constraint_victim(linguistic_relativity_cultural_framing, chinese_conceptual_validity).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context/4 terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: HERITAGE CHINESE SPEAKER IN ANGLOPHONE CONTEXT (PRIMARY TARGET)
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95
-%   f(d) ≈ 1.42, σ(national) = 1.0
-%   χ ≈ 0.42 × 1.42 × 1.0 ≈ 0.60
-% At ε = 0.42 and suppression = 0.55, this meets tangled_rope thresholds
-% (ε ≥ 0.30, supp ≥ 0.40, 0.40 ≤ χ ≤ 0.90) but not snare
-% (needs ε ≥ 0.46 and supp ≥ 0.60).
-%
-% These speakers experience the constraint most sharply: their native
-% language is framed as "lacking" features English "has," positioning
-% their cognitive patterns as deficient. They cannot exit this framing
-% while operating in anglophone educational and professional settings.
-constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, tangled_rope,
+% PERSPECTIVE 1: NON-WESTERN EPISTEMIC FRAMEWORKS (SNARE) — Forced to defend conceptual validity through English-language cognitive science frameworks. Cannot exit the requirement to justify thinking patterns in Western philosophical categories. Maximum extraction: alternative epistemologies are rendered invisible if they do not map onto English-language cognitive primitives. Bearing costs of constant translation and legitimation demands.
+constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
-
-% PERSPECTIVE 2: ANGLOPHONE RESEARCH INSTITUTIONS (PRIMARY BENEFICIARY)
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05
-%   f(d) ≈ -0.12, σ(national) = 1.0
-%   χ ≈ 0.42 × (-0.12) × 1.0 ≈ -0.05
-% Negative χ → classified as rope (χ ≤ 0.35).
-%
-% From this perspective, linguistic relativity is a productive research
-% paradigm — it structures inquiry, generates testable hypotheses, and
-% coordinates cross-disciplinary collaboration. The framing asymmetry
-% is invisible: the institutional perspective sees the constraint as
-% pure coordination because the extraction flows outward.
-constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: COMPARATIVE COGNITIVE SCIENTIST (ANALYTICAL OBSERVER)
-% Engine derives d from: observer → d ≈ 0.72
-%   f(d) ≈ 1.15, σ(global) = 1.2
-%   χ ≈ 0.42 × 1.15 × 1.2 ≈ 0.58
-% Tangled rope: sees both the genuine coordination value AND the
-% asymmetric cultural extraction embedded in the framing conventions.
-constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: CHINESE-MEDIUM RESEARCH INSTITUTIONS (SECONDARY INSTITUTIONAL)
-% Engine derives d from: victim membership + constrained exit → d ≈ 0.55
-%   f(d) ≈ 0.75, σ(global) = 1.2
-%   χ ≈ 0.42 × 0.75 × 1.2 ≈ 0.38
-% Near the rope/tangled_rope boundary. These institutions experience
-% moderate extraction — they must adopt anglophone framing to publish
-% internationally, but have enough institutional power to partially
-% resist (publishing alternative framings in Chinese-language journals,
-% developing Chinese-medium cognitive science traditions).
+% PERSPECTIVE 2: CHINESE LANGUAGE COMMUNITIES (TANGLED ROPE) — Both benefit from and constrained by Sapir-Whorf framing. Benefit: Chinese linguistic structures are recognized as potentially revealing genuine cognitive patterns (relativity hypothesis legitimizes comparative study). Constrained: cognitive patterns must be framed as consequences of language structure rather than as valid alternative frameworks. Asymmetric extraction: research attention concentrated on confirming/disconfirming language-determines-thought, not on valuing Chinese conceptual richness on its own terms.
+constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: WESTERN COGNITIVE SCIENCE ESTABLISHMENT (ROPE) — Benefits from Sapir-Whorf framing as a coordination mechanism. English-language cognitive primitives (object persistence, agent-patient distinctions, counterfactual reasoning) become the universal baseline against which all languages are measured. Extraction runs toward this institutional complex: research funding, publication venues, theoretical authority, and definitional power all flow to frameworks that explain Chinese cognition through English-language categories. Low experienced suppression because this agent controls the enforcement mechanism.
 constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, rope,
     context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: CROSS-LINGUISTIC EMPIRICAL RESEARCH COALITION (SCAFFOLD) — Organized agents (bilingual cognitive researchers, Chinese-based laboratories, multilingual linguists) are building alternative verification pathways that test strong Sapir-Whorf claims directly and document failures of English-baseline frameworks. Sees the constraint as temporary: as empirical evidence accumulates showing that cognition diverges from language-determines-thought predictions, the extraction mechanism loses force. Sunset logic: stronger empirical frameworks will replace the Sapir-Whorf heuristic as the lingua franca of cross-linguistic research within 15-25 years.
+constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
+
+% PERSPECTIVE 5: LANGUAGE-DETERMINES-THOUGHT NARRATIVE (PITON) — The strong form of Sapir-Whorf ('language determines thought') has been empirically falsified across 60+ years of research yet persists as a framing device in humanities, education, and policy discourse. Theater ratio (0.68): discussions of Sapir-Whorf often invoke it as motivational intuition (language matters for thought!) rather than as an empirically-constrained mechanism. The narrative serves institutional inertia in university curricula, cross-cultural communication training, and policy debates about language and identity. Primary function has atrophied — replaced by more precise relativity hypotheses — but the constraint persists through pedagogical convenience and literary appeal.
+constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some form of linguistic influence on thought is structurally inescapable: language provides categorical distinctions, grammatical structures, and metaphorical frames that shape attentional focus and conceptual accessibility. This perspective sees a weak form of Sapir-Whorf as an immutable property of cognition: if you think in language, language structure constrains the space of readily available thoughts. However, the structural data contradicts the mountain classification — the framework is actually contested and operates through extractive institutional enforcement rather than emerging naturally. The 'inevitability' framing naturalizes a contingent research paradigm.
+constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -213,29 +164,17 @@ constraint_indexing:constraint_classification(linguistic_relativity_cultural_fra
 :- begin_tests(linguistic_relativity_cultural_framing_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(
-        linguistic_relativity_cultural_framing, TypeTarget,
-        context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(
-        linguistic_relativity_cultural_framing, TypeBeneficiary,
-        context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(linguistic_relativity_cultural_framing, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    narrative_ontology:constraint_metric(
-        linguistic_relativity_cultural_framing, extractiveness, E),
-    E >= 0.30,
-    E =< 0.90.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(linguistic_relativity_cultural_framing, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate) :-
-    % Verify all three tangled rope structural requirements are present.
-    narrative_ontology:constraint_beneficiary(
-        linguistic_relativity_cultural_framing, _),
-    narrative_ontology:constraint_victim(
-        linguistic_relativity_cultural_framing, _),
-    domain_priors:requires_active_enforcement(
-        linguistic_relativity_cultural_framing).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(linguistic_relativity_cultural_framing, TR),
+    TR >= 0.70.
 
 :- end_tests(linguistic_relativity_cultural_framing_tests).
 
@@ -245,155 +184,91 @@ test(tangled_rope_gate) :-
 
 /**
  * LOGIC RATIONALE:
- *   Base extractiveness 0.42: The Sapir-Whorf framework extracts meaningful
- *   value when applied to English-Chinese comparisons. The extraction is not
- *   as raw as a debt trap (snare), but it is structurally asymmetric. English-
- *   language framing of the research defines "normal" cognition as whatever
- *   English grammar makes obligatory. Chinese grammatical features are
- *   described via absence ("lacks tense," "has no articles") rather than
- *   presence ("uses aspect markers," "employs topic-comment structure").
- *   This deficit framing shapes hiring assessments, educational placement,
- *   corporate communication norms, and research funding priorities.
- *
- *   Suppression 0.55: Moderate-high. Heritage Chinese speakers in anglophone
- *   contexts cannot easily opt out of the deficit framing. It is embedded in
- *   ESL pedagogy ("correct your tense errors"), standardized testing (TOEFL
- *   penalizes tense omission), workplace communication norms ("be more
- *   direct/explicit"), and popular culture ("Chinese is ambiguous"). The
- *   suppression is structural rather than intentional — no single actor
- *   designs it — but it is actively maintained through institutional
- *   practices.
- *
- *   Theater ratio 0.35: Relatively low. Most of the constraint's operation
- *   is functional, not performative. The research paradigm genuinely produces
- *   knowledge. The extraction is a side effect of framing conventions, not
- *   theatrical maintenance of a hollow institution.
+ *   Extractiveness (0.52): Moderate-high. The constraint extracts through definitional power (English-language frameworks set research agendas), through funding concentration (comparative cognition research disproportionately funded in Western institutions), and through publication bias (null results and failures to replicate in Chinese-based laboratories receive less visibility). The extraction is not as severe as pure snare (0.66+) because legitimate empirical research does occur and alternative frameworks are developing. Suppression (0.48): Moderate. Barriers to independent verification include language barriers in literature access, funding disparities between Western and Chinese laboratories, publication bias, and career risk for challenging paradigmatic assumptions. But suppression is not total — some researchers do challenge the framework and empirical counterevidence is accumulating. Theater ratio (0.58): Moderate-high. The strong form of Sapir-Whorf performs pedagogical and policy functions (explaining cultural difference, motivating language preservation) despite empirical weakness. The theatrical component has increased over 40 years as empirical support has declined but policy/humanities usage has increased (Goodhart drift: theater metrics rising while functional metrics decline).
  *
  * PERSPECTIVAL GAP:
- *   The primary target (heritage Chinese speakers, powerless/trapped) sees
- *   tangled_rope: they experience real extraction through deficit framing
- *   but also benefit from the research coordination (bilingual cognition
- *   studies have produced insights that help bilingual education programs).
- *   The primary beneficiary (anglophone institutions, institutional/arbitrage)
- *   sees rope: from their perspective, the framework is a productive
- *   research coordination mechanism, and the asymmetric framing is invisible
- *   because it aligns with their institutional defaults.
- *
- *   This gap — tangled_rope vs rope — is the signature of a constraint
- *   whose extraction is embedded in framing rather than overt coercion.
- *   The beneficiary does not see the extraction because the extraction IS
- *   the frame through which they see.
+ *   This constraint demonstrates perspectival divergence over a 40-year interval. At t=0 (1980s), the constraint appeared more rope-like: Sapir-Whorf provided genuine coordination for cross-linguistic research, empirical evidence seemed promising, and no strong alternatives existed. By t=40 (present), the constraint has degraded into tangled rope with piton components: empirical evidence has accumulated against strong Sapir-Whorf, but the framing persists through institutional inertia and pedagogical utility. The Western establishment's rope perspective has become increasingly theater-dependent (motivational intuition rather than empirical claim). The Chinese communities' experience has shifted from moderate tangled rope (mixed benefit/extraction) toward snare (pure extraction of research attention with conceptual diminishment). The analytical observer's mountain perspective risks naturalizing a deteriorating institutional arrangement.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries: Anglophone research institutions control publication
- *   norms, citation networks, and the default framing of cross-linguistic
- *   comparison. The ELT industry profits directly from deficit framing
- *   (every "tense error" is a market opportunity for English instruction).
- *   Both have arbitrage exit — they can adopt or discard the Sapir-Whorf
- *   framework without institutional cost.
- *
- *   Victims: Heritage Chinese speakers in anglophone contexts are trapped
- *   in the deficit framing — their professional credibility depends on
- *   conforming to anglophone communication norms that treat their native
- *   cognitive patterns as deficient. Chinese-medium institutions are
- *   constrained — they have partial exit (domestic publication) but lose
- *   international visibility.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   Anglophone institutions (arbitrage exit) vs Chinese-medium institutions
- *   (constrained exit) illustrates how the same institutional power level
- *   can produce different directionalities. Both are "institutional," but
- *   the anglophone institution sets the framing norms while the Chinese-
- *   medium institution must either adopt those norms or accept reduced
- *   visibility. The exit asymmetry (arbitrage vs constrained) is what the
- *   engine uses to differentiate their d values.
- *
- * CULTURAL-COGNITIVE DEPTH:
- *   The cognitive effects documented in the upstream Mountain story
- *   (english_chinese_tense_structure) are real but neutral — different
- *   languages channel attention differently, not better or worse. This
- *   Tangled Rope story captures what happens when that neutral structural
- *   fact gets embedded in a cultural hierarchy. The same finding — "English
- *   speakers attend to tense more than Chinese speakers" — becomes either
- *   "English enables more precise temporal reasoning" (extraction framing)
- *   or "Chinese enables more flexible temporal integration" (coordination
- *   framing) depending on who controls the narrative.
- *
- *   At the cultural level, the framing constraint shapes how each
- *   civilization's intellectual traditions are perceived internationally.
- *   Chinese philosophical traditions that emphasize process, context, and
- *   relational thinking (correlative cosmology, Daoist process metaphysics)
- *   are sometimes dismissed as "pre-scientific" when evaluated through
- *   the lens of English-language analytic philosophy. The linguistic
- *   relativity framework, when deployed asymmetrically, provides pseudo-
- *   scientific cover for this cultural ranking.
+ *   Western cognitive science establishment (institutional/arbitrage): Beneficiary status + arbitrage exit options → low d → negative effective extraction. They experience the constraint as coordinate enabling, not as suppression. Chinese language communities (moderate/constrained): Mixed status — both beneficiary (recognized as linguistically distinct) and victim (constrained by language-determines-thought framing) + constrained exit options → moderate d (0.55-0.65). They cannot exit the research framework without loss of research attention but benefit from some of the attention. Non-Western epistemological frameworks (powerless/trapped): Victim status + trapped exit options → high d → high effective extraction. They cannot exit the requirement to justify themselves through English-language categories. The cross-linguistic research coalition (organized/constrained): Has exit options through alternative methodologies + constrained (still operates within broader institutional science) → moderate d but with declining d over time as empirical alternatives accumulate.
  *
  * MANDATROPHY ANALYSIS:
- *   Tangled rope classification prevents two errors:
- *   (1) Calling it pure rope would erase the asymmetric extraction that
- *       heritage Chinese speakers actually experience — the deficit framing
- *       has real consequences for education, employment, and cultural status.
- *   (2) Calling it pure snare would erase the genuine coordination value —
- *       linguistic relativity research has produced real and valuable
- *       scientific insights. The framework is not only an extraction device;
- *       it also structures productive inquiry. The problem is in the framing
- *       conventions, not the research program itself.
+ *   MANDATROPHY RESOLUTION (ε = 0.52): The constraint resolves the mandatrophy by showing that Sapir-Whorf operates as genuine weak-form linguistic influence (coordination function) combined with extractive institutional enforcement of strong-form claims (asymmetric extraction). The mandatrophy is not 'is language determining or not?' but 'which form of influence are institutional actors selecting for, and why does the selection persist despite empirical failure?' The weak form (linguistic structure shapes attentional focus) is structurally sound and empirically supported — this is the rope component. The strong form (language determines habitual thought patterns) is empirically weak and increasingly theater-dependent — this is the piton component overlaid on the rope. The Western institutional establishment maintains the strong form because it provides definitional authority and research priority, not because empirical evidence supports it. The extraction is sustained through institutional enforcement (funding, publication gatekeeping, curricular inclusion) rather than through empirical necessity. As cross-linguistic empirical research matures, the extraction mechanism weakens and the scaffold perspective gains force.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES - IRREDUCIBLE UNCERTAINTIES
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_framing_reversibility,
-    'Can the deficit framing of Chinese linguistic features in anglophone research be reversed within the existing institutional structure of cross-linguistic cognitive science, or does reversal require a structural shift in which language community controls publication norms?',
-    'Track citation patterns, conference keynote demographics, journal editorial board composition, and framing conventions in top-20 cognitive science journals over a 15-year window. Compare with parallel metrics in Chinese-language cognitive science publication.',
-    'If reversible within existing structure: suppression may decline toward 0.30, potentially reclassifying from tangled_rope to rope at the analytical level. If structural shift required: the constraint may intensify before resolving, with a period of higher extraction as established framings resist challenge.',
-    confidence_without_resolution(low)
+    strong_vs_weak_sapir_whorf_boundary,
+    'Where lies the boundary between weak linguistic influence (structurally inescapable) and strong linguistic determinism (empirically false)?',
+    'Meta-analysis of bilingual cognition studies; tests of whether bilinguals show intermediate cognitive patterns between English and Chinese baselines; longitudinal studies of language acquisition and conceptual development',
+    'If weak form is all that survives empirically: the constraint becomes a natural coordination mechanism (Mountain or Rope). If strong form persists in discourse despite empirical falsification: the constraint is maintained through institutional inertia (Piton or Snare).',
+    confidence_without_resolution(high)
 ).
 
+narrative_ontology:omega_variable(strong_vs_weak_sapir_whorf_boundary, empirical, 'Boundary between weak and strong Sapir-Whorf claims').
+
 omega_variable(
-    omega_cognitive_depth_vs_framing,
-    'To what extent do documented cognitive differences between English and Chinese speakers reflect genuine structural channeling (the upstream Mountain) versus experimental designs that embed anglophone cognitive norms as the measurement standard?',
-    'Meta-analysis of cross-linguistic cognition experiments, coding each study for whether the experimental paradigm treats English-pattern responses as the baseline or whether it uses language-neutral baseline tasks. Separate effect sizes for paradigm-neutral vs paradigm-biased studies.',
-    'If mostly genuine channeling: ε may increase slightly (the extraction is built on real cognitive differences, making it harder to challenge). If mostly paradigm bias: ε may decrease (the extraction is built on methodological artifacts, making it fragile once exposed). Either way, the tangled_rope classification holds — the question is about the magnitude, not the structure.',
+    measurement_independence_cognition_language,
+    'Can cognitive differences between English and Chinese speakers be measured independently of linguistic framing, or does every cognitive test require language mediation?',
+    'Non-linguistic cognitive tasks (visual reasoning, spatial memory, numerosity judgment); cross-cultural replication with non-literate populations; preverbal infant cognition studies across languages',
+    'If cognition is measurable independently: Sapir-Whorf is a genuine structural hypothesis. If all measurement requires language: the constraint becomes an artifact of methodology (false snare).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(measurement_independence_cognition_language, empirical, 'Whether cognitive differences can be measured independent of language').
+
+omega_variable(
+    institutional_enforcement_vs_natural_emergence,
+    'Is the Sapir-Whorf framing maintained through institutional power (publication bias, funding concentration, career incentives) or through genuine empirical support?',
+    'Citation analysis of strong vs weak Sapir-Whorf claims; tracking of null results and failures to replicate in Chinese-based vs Western-based laboratories; funding source analysis for cross-linguistic cognitive research',
+    'If institutional enforcement: the constraint is Snare/Tangled Rope. If empirical: the constraint is Rope or Mountain. This resolves the mandatrophy about whether extraction is naturalized or structural.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(institutional_enforcement_vs_natural_emergence, empirical, 'Whether Sapir-Whorf persistence reflects institutional enforcement or empirical support').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(linguistic_relativity_cultural_framing, 0, 10).
+narrative_ontology:interval(linguistic_relativity_cultural_framing, 0, 40).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(ling_rel_tr_t0, linguistic_relativity_cultural_framing, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(ling_rel_tr_t20, linguistic_relativity_cultural_framing, theater_ratio, 20, 0.58).
+narrative_ontology:measurement(ling_rel_tr_t40, linguistic_relativity_cultural_framing, theater_ratio, 40, 0.68).
+
+% Extraction over time
+narrative_ontology:measurement(ling_rel_be_t0, linguistic_relativity_cultural_framing, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(ling_rel_be_t20, linguistic_relativity_cultural_framing, base_extractiveness, 20, 0.48).
+narrative_ontology:measurement(ling_rel_be_t40, linguistic_relativity_cultural_framing, base_extractiveness, 40, 0.52).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: this is an information standard — the Sapir-Whorf
-% framework standardizes how cross-linguistic cognitive differences are
-% described, measured, and published.
 narrative_ontology:coordination_type(linguistic_relativity_cultural_framing, information_standard).
-
-% Network relationships — this tangled rope is downstream of the mountain.
-% The structural linguistic difference (upstream) provides the empirical
-% foundation that the cultural framing (this story) builds upon and
-% selectively interprets.
+narrative_ontology:affects_constraint(linguistic_relativity_cultural_framing, linguistic_relativity_weak_form).
+narrative_ontology:affects_constraint(linguistic_relativity_cultural_framing, cultural_epistemology_validation).
+narrative_ontology:affects_constraint(linguistic_relativity_cultural_framing, cross_cultural_psychology_paradigm).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of 2 stories decomposed from "English-Chinese
-% linguistic structure and its cognitive-cultural effects."
-% Decomposed because ε differs across observables (ε-invariance principle).
-% The structural fact (sibling story, ε=0.05) is Mountain — nobody extracts
-% from grammatical typology. The framing of that fact for cultural
-% conclusions (this story, ε=0.42) is Tangled Rope — genuine research
-% coordination mixed with asymmetric cultural extraction.
-% Related stories:
-%   - english_chinese_tense_structure (ε=0.05, Mountain)
+% The Sapir-Whorf constraint decomposes into two structurally distinct claims: (1) weak linguistic relativity (language structure influences thought) — empirically robust, ε ≈ 0.15, Mountain or Rope; (2) strong language determinism (language determines thought) — empirically weak, ε ≈ 0.52, Tangled Rope with Piton overlay. The family structure reflects how institutional actors enforce the strong form despite weak empirical support, using the weak form's legitimacy as cover. The downstream constraints address the specific empirical tests (cross-cultural psychology paradigms) and the epistemological cost (cultural epistemology validation).
 
-narrative_ontology:affects_constraint(linguistic_relativity_cultural_framing, english_chinese_tense_structure).
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(linguistic_relativity_cultural_framing, institutional, 0.25).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

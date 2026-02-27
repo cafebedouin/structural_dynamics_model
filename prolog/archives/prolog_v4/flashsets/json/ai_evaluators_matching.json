@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "ai_evaluators_matching",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Talent Evaluators: Efficiency vs. Opacity in Automated Hiring",
+    "topic_domain": "general",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hiring_companies",
+      "ai_evaluator_vendors"
+    ],
+    "victims": [
+      "job_applicants",
+      "underrepresented_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Job Applicant",
+      "comment": "Job applicants, particularly those from underrepresented groups, often lack the power to challenge the decisions made by AI evaluators. They are trapped within the system, subject to its biases and limitations. Their exit options are severely limited as they must navigate the AI-driven hiring landscape to secure employment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "HR Department",
+      "comment": "HR departments benefit from increased efficiency in the short term, but are constrained in their understanding of the evaluator logic, long term, due to lack of transparency. They gain efficiency but lose agency in understanding and auditing the hiring process."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Hiring Company",
+      "comment": "Hiring companies benefit from the perceived efficiency and cost savings offered by AI talent evaluators. They can arbitrage between different AI vendors and methodologies, selecting the most advantageous options for their specific hiring needs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "AI Evaluator Vendor",
+      "comment": "AI evaluator vendors benefit from the demand for their services, but also face constraints related to regulatory compliance and maintaining fairness and transparency in their algorithms. They hold significant power but need to balance extraction with long-term sustainability and legal risks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observers recognize the inherent trade-off between efficiency and opacity in AI talent evaluators. They see both the potential benefits and the risks associated with automated hiring processes, and advocate for transparency and accountability in AI-driven decision-making."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithm_transparency",
+      "question": "How can AI algorithms be made more transparent and auditable to ensure fairness and prevent discrimination?",
+      "resolution_mechanism": "Development of explainable AI (XAI) techniques and independent audits of AI algorithms.",
+      "impact": "Increased transparency could reduce bias and improve applicant trust, but may also reveal proprietary information and create opportunities for gaming the system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Addresses the question of algorithm transparency and its potential impact."
+    },
+    {
+      "id": "human_oversight",
+      "question": "What level of human oversight is necessary to ensure that AI evaluators are used ethically and effectively?",
+      "resolution_mechanism": "Establishing clear guidelines for human review and intervention in AI-driven hiring processes.",
+      "impact": "Increased human oversight could improve fairness and prevent errors, but may also reduce efficiency and increase costs.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Determines the appropriate level of human oversight in AI evaluation."
+    },
+    {
+      "id": "evaluation_metrics",
+      "question": "How can evaluation metrics be designed to capture the full range of skills and abilities relevant to job performance?",
+      "resolution_mechanism": "Developing more holistic and comprehensive evaluation metrics that go beyond traditional measures of skills and experiences.",
+      "impact": "Better metrics could lead to more accurate and fair assessments of job applicants, but may also be more difficult and costly to implement.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Focuses on improving the quality and scope of evaluation metrics."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "AI talent evaluators offer the promise of efficiency and objectivity in hiring, but also pose risks related to bias, opacity, and lack of human oversight. This constraint explores the tension between these competing forces and examines how different actors within the hiring ecosystem experience these AI systems. The rise of AI-driven hiring is intended to reduce costs and find optimal candidates, but can introduce subtle biases and reduce accountability.",
+    "key_agents": [
+      "Job Applicants: Primary victims (powerless/trapped) - subject to the biases and limitations of AI algorithms",
+      "Hiring Companies: Primary beneficiaries (institutional/arbitrage) - gain efficiency and cost savings through automation",
+      "AI Evaluator Vendors: Powerful actor (powerful/arbitrage) - provide the technology and benefit from increased demand",
+      "HR Department: Moderate actor (moderate/constrained) - experience gains in efficiency, but potentially constrained in their understanding of evaluation logic",
+      "Underrepresented Groups: Specific sub-group of victims (powerless/trapped) - disproportionately affected by biased AI algorithms",
+      "Analytical Observer: Global observer (analytical/analytical) - analyzes the long-term societal implications"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. AI talent evaluators extract value from job applicants by filtering and ranking them based on potentially biased algorithms. The extraction is not total, as applicants can still find employment through other channels, but the AI-driven hiring landscape creates a significant barrier for many. Suppression (0.65): High. Job applicants have limited exit options and are subject to the decisions made by AI evaluators. The lack of transparency in these algorithms further suppresses their ability to challenge unfair or discriminatory outcomes. Theater Ratio (0.40): Moderate. While AI talent evaluators are marketed as objective and data-driven, there is a significant element of theater involved, as these systems are often black boxes and their effectiveness is difficult to verify. The theater emerges from the performative aspects of AI explainability and the challenge in truly understanding the rationale of the AI's decisions.",
+    "perspectival_gap": "Job applicants perceive the AI evaluators as a Snare, trapping them within a system that they have little power to influence or escape. Hiring companies see it as a Rope, enabling efficient and cost-effective hiring decisions. HR departments and AI evaluator vendors see it as a Tangled Rope, balancing the benefits of increased efficiency with the risks of bias and lack of transparency. The analytical observer recognizes the inherent trade-offs and advocates for transparency and accountability.",
+    "directionality_logic": "Hiring companies and AI evaluator vendors benefit from the implementation of AI talent evaluators, while job applicants, especially those from underrepresented groups, bear the costs of potential biases and lack of transparency. HR is both a benefactor and target. Directionality reflects the structural positions of each group relative to the extractive process.",
+    "mandatrophy_analysis": "The Mandatrophy is resolved by the indexical classifications. While a naive perspective might view AI talent evaluators as purely beneficial (Rope) or purely detrimental (Snare), the DR framework reveals the complex interplay of coordination and extraction. The different perspectives highlight the need for a balanced approach that maximizes efficiency while minimizing bias and ensuring fairness for all job applicants."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

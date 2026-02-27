@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "us_employer_health_insurance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "esi"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "US Employer-Sponsored Insurance (ESI) System",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "large_employers",
+      "health_insurers",
+      "pharmaceutical_manufacturers"
+    ],
+    "victims": [
+      "workers_tied_to_jobs",
+      "self_employed_individuals",
+      "gig_workers",
+      "unemployed_populations"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dependent Worker",
+      "comment": "PERSPECTIVE 1: THE DEPENDENT WORKER (SNARE) \u2014 Trapped in current employment due to healthcare coverage dependency. Loss of job means loss of health insurance (absent COBRA continuation, which is unaffordable for most). Cannot exit without incurring catastrophic health risk. Experiences maximum extraction: labor bargaining power is suppressed by existential healthcare needs, employer captures wage concessions, worker bears full risk of gaps and pre-existing condition exclusions."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsured/Self-Employed",
+      "comment": "PERSPECTIVE 2: THE UNINSURED AND SELF-EMPLOYED (SNARE) \u2014 Cannot access affordable individual market coverage. The ESI system has crowded out individual market development, leaving non-employed populations to face unaffordable premiums, high deductibles, and exclusions. Trapped by cost and coverage gaps. Maximum extraction and maximum suppression \u2014 no alternative pathways exist at affordable cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Large Employer",
+      "comment": "PERSPECTIVE 3: THE LARGE EMPLOYER (ROPE) \u2014 Experiences ESI as a coordination mechanism and tax arbitrage tool. Employer benefits: tax deduction for ESI premiums (employees see benefit as non-taxable income), recruiting advantage via health coverage, lock-in of workforce (reduced turnover). The coordination function is real \u2014 ESI solves the collective action problem of financing health coverage at scale. Exit options exist: can negotiate better rates, self-insure, or exit the system. Benefits exceed costs for institutional actors with scale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Labor Union",
+      "comment": "PERSPECTIVE 4: ORGANIZED LABOR (TANGLED ROPE) \u2014 Unions negotiate ESI as a key benefit and have achieved coordination gains (better coverage, lower employee contributions). However, ESI negotiations also lock unions into defending a system that suppresses individual choice and ties workers to particular employers, reducing lateral mobility. Coordination function exists (collective bargaining for coverage), but significant extraction occurs: unions must spend bargaining capital on health coverage that could otherwise be reinvested in wages. Suppression is moderate \u2014 organized workers have some exit capacity through negotiation, but not full mobility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Healthcare Insurer",
+      "comment": "PERSPECTIVE 5: THE HEALTHCARE INSURER (PITON) \u2014 The ESI system is largely performative for insurers from a civilizational view. The insurer's core function \u2014 pooling risk and managing claims \u2014 could operate through any mechanism (individual market, public system, direct employer contracting). Instead, ESI maintains an elaborate administrative theater: enrollment periods, benefits specialists, plan tiers, utilization review, network management. Most of this apparatus exists to preserve the employer-insurer intermediary relationship despite its inefficiencies. Theater ratio is high because the insurer's market position depends on institutional inertia (path dependency, tax code incentives) rather than functional superiority. The system persists through policy lock-in, not because it delivers better outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 6: THE PHARMACEUTICAL MANUFACTURER (TANGLED ROPE) \u2014 Benefits from ESI structure: employer-based insurance creates captive market with employers (purchasers) distant from end-users (patients), enabling higher pricing; list prices set without consumer price resistance. Also provides coordination function: employer group purchasing enables scale and standardization. However, recent threats (PBM negotiation, direct contracting, policy pressure on drug pricing) expose the extraction mechanism. Suppression is moderate \u2014 manufacturers face organized buyer pressure but retain market power through patent exclusivity and information asymmetry."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Policy Coalition",
+      "comment": "PERSPECTIVE 7: THE PUBLIC POLICY COALITION (SCAFFOLD) \u2014 Progressive policy advocates, patient organizations, and healthcare reformers see ESI as a temporary coordination failure with a structural sunset. The Affordable Care Act (2010) and subsequent expansions of subsidized individual market coverage are building alternative pathways. As subsidized public options mature and individual market regulations tighten, the ESI lock-in mechanism loses force. The sunset is slow (decades) but structural \u2014 employers can offload workers to public exchanges as individual coverage becomes affordable. Theater is moderate because ESI's sunset is contested (many advocates argue for single-payer rather than ACA-model reform)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW FRAMING (MOUNTAIN) \u2014 The ESI system is often presented as an inevitable outcome of employer-employee relationships and tax incentives ('this is just how employment works'). The analytical observer risks naturalizing path dependency as structural law. However, the structural data contradicts this: ESI is contingent on specific policy choices (tax code treatment, wage freeze regulations, lack of portable individual market), not on immutable constraints. The engine will compute this as a false summit, revealing that naturalizing contingent institutional arrangements as universal laws is a common mechanism for legitimating extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "individual_market_viability",
+      "question": "Can a subsidized individual insurance market with robust regulatory protections (ACA model) eventually crowd out ESI, or does ESI's tax advantage constitute an irreducible structural lock-in?",
+      "resolution_mechanism": "Longitudinal analysis of ESI enrollment trends as individual market subsidies expand; comparative analysis of countries that transitioned away from employment-based systems; modeling of equilibrium employer contribution incentives under various subsidy regimes",
+      "impact": "If individual market can replace ESI: scaffold perspective correct, sunset is real, extractiveness declines over time. If tax advantages create irreducible lock-in: snare perspective dominates, structural change is blocked, extractiveness persists indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether individual market subsidies can replace ESI or if tax lock-in is structural"
+    },
+    {
+      "id": "extraction_vs_coordination_decomposition",
+      "question": "What fraction of ESI's extractiveness (0.58) derives from legitimate coordination gains (pooling, scale economies) versus illegitimate job-lock mechanisms (loss-of-coverage threat, employer bargaining suppression)?",
+      "resolution_mechanism": "Decomposition analysis: compare ESI coordination value to alternative delivery models (Swiss-style individual market with employer auto-enrollment, German multi-payer model, single-payer benchmarks); measure coordination gains against administrative overhead; analyze wage suppression attributable to health benefit dependency",
+      "impact": "If coordination >> extraction: ESI classification shifts toward Rope/Tangled Rope with lower concern. If extraction >> coordination: confirms Snare classification and justifies policy reform prioritizing alternative pathways.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of coordination gains from extraction mechanisms in ESI"
+    },
+    {
+      "id": "path_dependency_lock_mechanism",
+      "question": "Is ESI's persistence primarily due to policy path dependency (sunk costs in tax code, regulatory infrastructure, employer practices) or due to genuine employer/insurer preference for ESI over alternatives?",
+      "resolution_mechanism": "Counterfactual analysis: survey employer preferences in scenarios without tax deduction for ESI; analyze employer behavior when forced to internalize full ESI costs; compare to outcomes in countries without ESI tax incentives; measure switching costs for employers attempting to migrate to individual market contributions",
+      "impact": "If path dependency dominates: policy reform (tax code change, portable benefits mandate) could shift equilibrium rapidly. If genuine preference: reform requires addressing underlying coordination needs, not just removing tax incentives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ESI persistence is driven by path dependency or genuine preference"
+    },
+    {
+      "id": "gig_economy_exit_dynamics",
+      "question": "Does growth of gig work and self-employment represent an exit from ESI-based extraction or a degradation into Snare territory (uninsured/underinsured populations bearing greater health risk)?",
+      "resolution_mechanism": "Longitudinal analysis of insurance coverage rates for gig workers vs traditional employees; measurement of healthcare cost burden (as % of income) for self-employed vs ESI-covered; analysis of whether gig workers experience this as escape or as loss of coverage protection",
+      "impact": "If exit: gig economy represents margin of Rope sustainability degrading. If degradation: gig economy expands Snare victim population without reducing ESI extractiveness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether gig economy growth represents exit from ESI or expansion of uninsured Snare"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 1945,
+    "end": 2015
+  },
+  "commentary": {
+    "narrative_context": "The US employer-sponsored insurance (ESI) system is a path-dependent institutional artifact that emerged from WWII-era wage freezes and was crystallized by tax code incentives in the 1954 Internal Revenue Code. Initially a temporary wartime expediency, ESI became structural through policy lock-in, network effects, and regulatory inertia. The system ties essential healthcare access to specific employment, creating asymmetric bargaining power that suppresses worker mobility and wages. Large employers and health insurers benefit from the tax-advantaged structure and employer lock-in of workforce; workers, especially those in precarious employment or self-employed, bear extraction costs through limited mobility, gap-coverage risk, and wage suppression. The constraint exhibits all six DR types depending on observer perspective: for dependent workers, it is a Snare with maximum extraction; for large employers, a Rope with coordination gains; for organized labor, a Tangled Rope mixing coordination and extraction; for insurers, an increasingly performative Piton maintained by administrative theater; for policymakers, a Scaffold with a slow sunset as individual market alternatives mature; for the analytical observer, a false mountain that naturalizes contingent institutional choices as immutable economic laws.",
+    "key_agents": [
+      "Dependent Workers: Primary victims (powerless/trapped) \u2014 tied to current employment due to healthcare coverage dependency, suppressed bargaining power, face catastrophic risk if employment ends",
+      "Self-Employed and Gig Workers: Secondary victims (powerless/trapped) \u2014 excluded from ESI system, face unaffordable individual market coverage, bear full healthcare cost burden",
+      "Large Employers (especially Fortune 500): Primary beneficiaries (institutional/arbitrage) \u2014 capture tax deduction value, obtain workforce lock-in, negotiate advantageous group rates, reduce voluntary turnover",
+      "Health Insurers (major national carriers): Secondary beneficiaries (institutional/constrained) \u2014 extract administrative rents from employer intermediary role, benefit from employer captive purchasing, maintain market position through path dependency",
+      "Pharmaceutical Manufacturers: Tertiary beneficiaries (powerful/mobile) \u2014 benefit from employer-distance pricing mechanism, insulated from end-user price resistance through intermediary structure",
+      "Organized Labor Unions: Mixed actors (organized/constrained) \u2014 negotiate ESI as major benefit (coordination function) but locked into defending system that suppresses worker mobility and diverts bargaining capital from wages",
+      "Public Policy Coalition: Reform advocates (organized/constrained) \u2014 push for individual market alternatives, subsidized coverage expansion, and structural decoupling of healthcare from employment, view ESI as temporary problem with sunset",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing path-dependent artifact as universal economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The ESI system extracts significant value from dependent workers through suppressed bargaining power, reduced job mobility (lock-in), and shifting health risk to individuals. However, extraction is not total (0.70+) because: (1) legitimate coordination gains exist (pooling, scale economies, employer contributions do reduce individual burden relative to full-cost individual market), (2) some workers benefit from employer subsidies, (3) alternative exit pathways exist for some (switching employers, individual market for young/healthy). The 0.58 value reflects net extraction: benefits to employers/insurers exceed net harm to workers when accounting for coordination gains, but harm to trapped/uninsured populations is substantial. Suppression (0.72): High. Barriers to exit are severe: loss of job means loss of healthcare (absent COBRA), individual market coverage is expensive and excludes pre-existing conditions (pre-ACA era) or charges more (post-ACA), self-employed coverage is unaffordable, gap coverage during job transition is costly. However, not maximum (0.80+) because: (1) employer switching exists (though costly), (2) public programs (Medicaid, Medicare) provide partial alternative, (3) ACA individual market expansion reduces suppression for some demographics. Theater ratio (0.65): Moderate-high. Significant performative elements in ESI: enrollment periods and benefits counseling serve marketing function; plan tiers and network restrictions manage cream-skimming; utilization review provides cost-control theater without substantively improving outcomes; benefits administration overhead (30-40% of premiums in small groups) exceeds value delivery. However, theater is not dominant because coordination function is genuine \u2014 pooling and scale economies do reduce per-capita costs relative to individual full-price market. The theater has increased over time as administrative complexity has grown and actual insurance functions have been outsourced to PBMs and TPAs.",
+    "directionality_logic": "Directionality (d) values are derived from agent power, exit options, and beneficiary/victim status. Dependent workers (powerless/trapped): d \u2248 0.95 (nearly full target of extraction, minimal alternatives). Self-employed (powerless/trapped but different market segment): d \u2248 0.90 (full target, but outside ESI system proper, so separated perspective). Large employers (institutional/arbitrage): d \u2248 0.05 (beneficiary with full exit options \u2014 can negotiate rates, self-insure, or migrate to other benefits structures). Insurers (institutional/constrained): d \u2248 0.25 (benefit from system but somewhat constrained by regulatory environment and employer bargaining power). Pharma manufacturers (powerful/mobile): d \u2248 0.10 (benefit from pricing power, but subject to downstream regulatory pressure). Organized labor (organized/constrained): d \u2248 0.45 (mixed \u2014 they negotiate benefits but are locked into defending system that constrains worker mobility). The analytical observer (analytical/analytical): d \u2248 0.72 (sees full structure, neither purely benefits nor purely bears costs, but risks false naturalization). The sigmoid f(d) transforms these d values into effective power modifiers that scale extractiveness \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S). For dependent workers, f(d) \u2248 1.42 (powerless multiplier), so experienced \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.0 \u2248 0.82 (high extraction). For large employers, f(d) \u2248 -0.12 (institutional beneficiary), so experienced \u03c7 \u2248 0.58 \u00d7 (-0.12) \u00d7 1.0 \u2248 -0.07 (negative \u2014 they benefit).",
+    "perspectival_gap": "The perspectival gap between dependent worker (Snare) and large employer (Rope) is maximal, reflecting fundamental structural asymmetry. The dependent worker experiences ESI as job-lock extraction with minimal alternatives. The large employer experiences ESI as advantageous coordination mechanism that reduces overall compensation costs and improves workforce retention. Both perspectives are structurally accurate from their positions; they disagree because their structural relationships to the constraint are opposite. The gap widens for workers in declining industries (fewer job-switching options) and narrows for workers in high-demand tech (more bargaining power). The piton perspective (insurer) reveals that much of ESI's persistence comes from administrative inertia rather than functional superiority \u2014 the insurance industry maintains the employer-intermediary relationship because it is entrenched, not because it delivers better outcomes than direct contracting or individual market alternatives. The scaffold perspective (policy coalition) correctly identifies that individual market expansion (ACA subsidies, regulatory protections) is eroding ESI's necessity by building alternatives at comparable or lower cost. The false mountain perspective reveals the rationalization mechanism: ESI is naturalized as inevitable ('this is just how employment works') despite being contingent on specific tax code provisions and policy choices. The analytical observer's job is to expose that naturalization and clarify the contingency.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (extractiveness 0.58, > 0.46): This constraint avoids the mandatrophy trap (misidentifying Snare as Rope) through explicit decomposition of coordination function versus extraction mechanism. Coordination genuine: ESI does solve collective action problems of healthcare financing at scale; employers can negotiate better terms than individuals, and pooling reduces per-capita administrative cost. Extraction genuine: worker mobility is suppressed, bargaining power is reduced, and health risk is shifted to individuals in ways that would not occur in alternative market structures (Swiss-style individual market with auto-enrollment, public option, single-payer). The mandatrophy is resolved by recognizing that both are real: ESI = coordination + extraction, not 'merely coordination' (Rope) and not 'merely extraction' (Snare alone). Classification as Snare from the dependent worker perspective and Rope from the employer perspective is correct; both perspectives are structurally accurate. The system persists because coordination gains accrue to large actors (employers, insurers) while extraction falls on smaller/weaker actors (individual workers, self-employed). If all actors experienced both coordination and extraction symmetrically, the system would be pure Rope. The asymmetry makes it Snare from the victim perspective. The analytical perspective must acknowledge both without collapsing into either false summitry (naturalizing as 'just how markets work') or false reductionism (treating as pure extraction with no coordination value)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.35
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_cost_inflation",
+      "job_mobility_suppression",
+      "small_business_coverage_gaps",
+      "occupational_licensing_lock_in"
+    ],
+    "dual_formulation_note": "The ESI system decomposes into multiple structurally distinct constraints in different domains. Healthcare cost inflation (\u03b5 \u2248 0.42) is partly downstream of ESI's insulation from price signals. Job mobility suppression (\u03b5 \u2248 0.65) is a direct consequence of health coverage lock-in. Small business coverage gaps (\u03b5 \u2248 0.72) emerge from ESI's scale economies that disadvantage small employers. Each story has its own extractiveness value reflecting domain-specific dynamics. The network links them through institutional coupling: ESI structure shapes healthcare markets, labor markets, and small business economics simultaneously."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

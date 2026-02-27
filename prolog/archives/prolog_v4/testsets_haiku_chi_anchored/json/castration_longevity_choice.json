@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "castration_longevity_choice",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cast_long"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Castration-Longevity Trade-off",
+    "topic_domain": "biological/social/medical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "longevity_researchers",
+      "biogerontology_field",
+      "medical_interventionists"
+    ],
+    "victims": [
+      "male_reproductive_autonomy",
+      "sexual_function_bearers",
+      "informed_consent_structure"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Male Body as Experimental Subject",
+      "comment": "PERSPECTIVE 1: MALE REPRODUCTIVE AUTONOMY (SNARE) \u2014 Cannot exit the biological fact that sex hormones affect lifespan; bears irreversible consequence of castration. No alternative path to longevity benefit without hormonal sacrifice. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.66."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Eunuch Tradition Practitioners",
+      "comment": "PERSPECTIVE 2: HISTORICAL EUNUCH PRACTITIONERS (TANGLED ROPE) \u2014 Constrained by cultural/religious context and lack of alternative prestige pathways, but some benefited from social status, career access, and (allegedly) longevity. d\u22480.65, f(d)\u22480.95, \u03c3=0.9 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Longevity Research Establishment",
+      "comment": "PERSPECTIVE 3: LONGEVITY RESEARCH ESTABLISHMENT (ROPE) \u2014 Benefits from the castration-longevity hypothesis as a research vector; can arbitrage between multiple intervention modalities (caloric restriction, metformin, senolytic drugs). Experiences constraint as coordination: the hormone-lifespan nexus provides a unified framework for understanding aging. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Medical Ethics & Informed Consent Framework",
+      "comment": "PERSPECTIVE 4: MEDICAL ETHICS FRAMEWORK (SCAFFOLD) \u2014 Organized agents (IRBs, ethics committees, informed consent doctrine) see castration-for-longevity as a temporary constraint resolvable by building non-destructive alternatives: hormone antagonists, selective androgen receptor modulators, gene therapy. d\u22480.42, f(d)\u22480.42, \u03c3=1.2 \u2192 \u03c7\u22480.27. Sunset logic: as pharmacological alternatives mature, irreversible castration becomes unnecessary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Medical Taboo Against Elective Castration",
+      "comment": "PERSPECTIVE 5: MEDICAL TABOO (PITON) \u2014 The institutional prohibition on elective castration persists through inertia and cultural conservatism despite weak functional justification. The taboo was adaptive when alternatives didn't exist; now it constrains research and patient choice theatrically. theater_ratio=0.61. Maintained by professional gatekeeping and narrative control, not by coherent safety rationale."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, the trade-off between reproductive function and longevity is framed as an immutable biological law: evolution optimized for reproduction, not lifespan extension; hormones that enable reproduction reduce post-reproductive lifespan. This perspective naturalizes the constraint as inherent to mammalian biology. However, structural data (\u03b5=0.52, suppression=0.68, theater=0.61) contradicts mountain classification \u2014 the engine will compute this as a false summit, revealing that the 'natural law' framing obscures contingent institutional, technological, and epistemic choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hormone_lifespan_causality",
+      "question": "Do testosterone and other male sex hormones causally reduce lifespan, or do they correlate with behaviors/pathologies that reduce lifespan?",
+      "resolution_mechanism": "Longitudinal studies with hormonal manipulation independent of behavior; animal models with isolated hormone/behavior decoupling; Mendelian randomization on genetic variants affecting hormone levels",
+      "impact": "If causal at hormonal level: castration is a real lever (constraint is genuine biological tradeoff). If behavioral/ecological: castration removes behavioral drivers of mortality without addressing root causes (constraint is partly social construction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether testosterone directly causes lifespan reduction or correlates via behavior"
+    },
+    {
+      "id": "alternative_intervention_sufficiency",
+      "question": "Can selective androgen receptor modulators (SARMs), hormone antagonists, or gene therapy achieve longevity benefits without reproductive sacrifice?",
+      "resolution_mechanism": "Clinical trials comparing castration vs pharmacological antagonism vs gene therapy on longevity outcomes; mechanistic studies of hormone signaling selectivity",
+      "impact": "If alternatives are effective: castration is rendered unnecessary (scaffold sunset is real). If alternatives fail: castration may be the only biological lever (constraint is harder and more extractive).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pharmacological alternatives can replicate castration longevity benefits"
+    },
+    {
+      "id": "informed_consent_authenticity",
+      "question": "Can informed consent for elective castration be authentic given medical institutional suppression, social taboo, and uncertainty about magnitude of longevity benefit?",
+      "resolution_mechanism": "Analysis of how medical institutions frame castration-for-longevity; comparison of informed consent documents across jurisdictions; survey of patient decision-making independence",
+      "impact": "If authentic consent is possible: victim status is reduced, constraint becomes rope. If suppression prevents authenticity: constraint is snare for victims (trapped by epistemic/institutional barriers).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether authentic informed consent for elective castration is possible under current institutional conditions"
+    },
+    {
+      "id": "longevity_quantification_precision",
+      "question": "What is the precise magnitude of lifespan extension from castration in humans (not historical estimates, but clinical estimates if available)?",
+      "resolution_mechanism": "Meta-analysis of historical eunuch records; controlled animal models with translational parameters; biomarker studies of aging acceleration in androgen-rich vs androgen-depleted groups",
+      "impact": "If extension < 5 years: extraction cost (reproductive loss) may outweigh benefit. If extension > 15 years: trade-off becomes more structurally compelling.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Precise quantification of castration-induced lifespan extension in humans"
+    },
+    {
+      "id": "autonomy_weighting_cultural_variance",
+      "question": "How should medical ethics weight reproductive autonomy vs longevity choice across cultures with different valuations of reproductive function?",
+      "resolution_mechanism": "Cross-cultural ethics analysis; empirical study of reproductive autonomy valuations; comparative medical policy analysis",
+      "impact": "If autonomy is paramount globally: constraint is universally extractive (snare from reproductive autonomy perspective). If longevity choice is paramount: constraint is universally coordinating (rope from longevity perspective).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Cross-cultural weighting of reproductive autonomy vs longevity extension"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "The castration-longevity trade-off is a constraint that operates at the intersection of biology, medical autonomy, and gerontological research. The hypothesis that male sex hormones decrease lifespan has deep historical roots (eunuch longevity reports, animal studies of testosterone and mortality) and contemporary support (androgen suppression in aging, evolutionary trade-off theory). Yet the constraint exhibits profound structural ambiguity: Is the trade-off an immutable law of mammalian biology (Mountain), a legitimate biological choice that benefits longevity research (Rope), a mixed coordination-extraction hybrid requiring institutional enforcement to suppress elective castration (Tangled Rope), a temporary barrier being overcome by pharmacological alternatives (Scaffold), a degraded taboo maintained by inertia (Piton), or pure extraction of reproductive autonomy (Snare)? The same biological fact \u2014 testosterone's effect on lifespan \u2014 is classified differently by every observer. The constraint's theater ratio (0.61) reflects the institutional performance of 'medical necessity' and 'patient protection' rhetoric around the castration taboo, obscuring genuine scientific uncertainty and epistemic suppression.",
+    "key_agents": [
+      "Longevity Researchers: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from castration hypothesis as research vector; can pivot to alternative interventions",
+      "Male Reproductive Autonomy: Primary victim (powerless/trapped) \u2014 cannot exit biological sex hormone effects; castration is irreversible",
+      "Historical Eunuch Communities: Secondary victim (moderate/constrained) \u2014 experienced cultural/religious pressure; some benefited from social status",
+      "Medical Ethics Framework: Organized agents (organized/constrained) \u2014 see constraint as temporary, working to build non-destructive alternatives",
+      "Medical Taboo Institution: Institutional actor (institutional/arbitrage) \u2014 maintains prohibition on elective castration; gatekeeps access and suppresses research",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional suppression as biological law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts reproductive autonomy from potential male beneficiaries of longevity-extending interventions. However, the extraction is not maximal because (1) longevity benefit is real and may be legitimately chosen, (2) uncertainty about magnitude reduces confident extraction, and (3) alternative interventions are emerging. The 0.52 value reflects genuine mixed nature \u2014 real trade-off, but not pure predation. Suppression (0.68): High. Multiple suppressors: medical institutional gatekeeping (elective castration is prohibited/stigmatized), epistemic suppression (longevity benefit magnitude is understudied due to taboo), social taboo (reproductive autonomy is heavily weighted culturally), and informed consent barriers (honest discussion of trade-off is rare). Theater ratio (0.61): Moderate-high. The medical prohibition on elective castration is partly theatrical: framed as patient protection, but actually reflects institutional conservatism and cultural reproductive normativity rather than coherent safety rationale. Pharmacological alternatives (SARMs, hormone antagonists) are available but underexplored as longevity interventions, indicating that the taboo suppresses research more than it protects patients.",
+    "perspectival_gap": "This constraint demonstrates complete perspectival disagreement. The male reproductive autonomy agent sees pure extraction (Snare) \u2014 irreversible loss of sexual function for uncertain longevity benefit, suppressed by institutional taboo. The eunuch tradition practitioners saw mixed coordination and extraction (Tangled Rope) \u2014 career and status access but constrained by cultural pressure. The longevity research establishment sees coordination (Rope) \u2014 the castration-longevity nexus as a research framework enabling broader aging interventions. The medical ethics framework sees a temporary problem (Scaffold) \u2014 castration unnecessary once pharmacological alternatives mature. The medical taboo institution sees a degraded ritual (Piton) \u2014 the prohibition persists through inertia, not function. The analytical observer risks seeing natural law (Mountain) \u2014 reproductive-longevity trade-off as evolution's immutable design \u2014 but the structural data reveals this as a false summit naturalizing contingent institutional choices.",
+    "directionality_logic": "Male reproductive autonomy: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 reproductive function is irreversible loss with no exit path. Eunuch tradition practitioners: Victim + constrained \u2192 d\u22480.65, f(d)\u22480.95. High extraction but mitigated by cultural status benefits. Longevity researchers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary \u2014 can pivot to multiple intervention modalities. Medical ethics framework: Organized + constrained \u2192 d\u22480.42, f(d)\u22480.42. Moderate extraction but framework has agency in building alternatives. Medical taboo: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.10. Piton classification from theater gate (0.61 \u2265 0.70 threshold not met, but significant performative component). Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival (observer naturalizes constraint); false summit.",
+    "mandatrophy_analysis": "CRITICAL AMBIGUITY: The mandatrophy cannot be fully resolved without answering the five omegas. Current state (extractiveness=0.52) is borderline \u2014 not clearly snare (would require \u03b5\u22650.66) or rope (would require \u03c7\u22640.35 from all perspectives). The Tangled Rope classification is justified because: (1) genuine coordination function exists (longevity research benefits from hormone-lifespan nexus), (2) asymmetric extraction exists (reproductive autonomy is extracted from some beneficiaries), (3) active enforcement is required (medical institutions enforce taboo). However, if omega_hormone_lifespan_causality resolves as 'behavioral correlation only' (not direct hormonal causation), the constraint's biological foundation collapses and it becomes purely social/institutional (likely Snare or Piton). If omega_alternative_intervention_sufficiency resolves as 'yes, pharmacological alternatives work', the scaffold sunset becomes real and the constraint degrades to Piton. If omega_informed_consent_authenticity resolves as 'no, suppression prevents authentic consent', the constraint shifts toward Snare. The current Tangled Rope is robust only under the hypothesis that castration provides genuine longevity benefit AND authentic consent is epistemically possible AND institutional enforcement is justified. This triply-conditional structure is the mandatrophy itself."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hormone_replacement_therapy_access",
+      "transgender_medical_autonomy",
+      "reproductive_autonomy_framework"
+    ],
+    "dual_formulation_note": "The castration-longevity trade-off decomposes into biological (hormone-lifespan causality), epistemic (magnitude and mechanism), and institutional (medical taboo enforcement) constraints. The network links reflect structural dependencies: HRT access determines whether castration is irreversible or reversible (affecting directionality); transgender medical autonomy shares the same institutional gatekeeping; reproductive autonomy is the primary victim structural role."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "emotional_cycles_of_change",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Kelley-Connor Cycle of Change",
+    "topic_domain": "psychology/behavioral_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "change_advocates",
+      "system_designers"
+    ],
+    "victims": [
+      "individual_adopters",
+      "organizational_staff"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Uninformed Adopter in the Valley",
+      "comment": "PERSPECTIVE 1: UNINFORMED ADOPTER IN VALLEY OF DESPAIR (SNARE) \u2014 Individual or team member forced into new system adoption without adequate preparation. Experiences full emotional cost of the valley phase (stage 3) without exit option. Trapped between old competence (now deprecated) and new incompetence (not yet mastered). d\u22480.92, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.41."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Organizational Middle Manager",
+      "comment": "PERSPECTIVE 2: ORGANIZATIONAL MIDDLE MANAGER (TANGLED ROPE) \u2014 Constrained by both top-down mandate to implement change and bottom-up staff resistance. Experiences genuine coordination benefit (new system enables new capabilities) but also bears suppressive burden of managing emotional distress and productivity dips during valley phase. d\u22480.68, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Change Management Consultant",
+      "comment": "PERSPECTIVE 3: CHANGE MANAGEMENT CONSULTANT (ROPE) \u2014 Institutional actor with arbitrage exit (can move to next client). Experiences the cycle as a coordination problem to solve through framework communication and emotional coaching. The consultant's model (Kelley-Connor itself) is a coordination mechanism: naming the emotional stages gives adopters linguistic tools to normalize despair and persist through it. d\u22480.10, f(d)\u22480.02, \u03c3=1.2 \u2192 \u03c7\u22480.01. Near-zero effective extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Training Program with Sunset",
+      "comment": "PERSPECTIVE 4: TRAINING PROGRAM WITH SUNSET (SCAFFOLD) \u2014 Organized support structures (training cohorts, peer groups, temporary skill-building resources) frame the change as temporary coordination with a clear endpoint. Suppression (mandatory training attendance) is tolerated because the program has a defined completion date and demonstrable competence milestone. Theater is low (0.35 at program level) because outcomes are measured. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.13. Low effective extraction because the coordination has agency and sunset logic."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Legacy System Holdout",
+      "comment": "PERSPECTIVE 5: LEGACY SYSTEM HOLDOUT (PITON) \u2014 Institutional adoption of a new system where the old system persists in parallel due to technical debt or staff inertia. Performs compliance with new system while maintaining old workflows. Theater ratio (0.61) reflects that much adoption activity is performative (generating required reports in new system while real work continues in legacy tools). The constraint persists through institutional inertia despite degraded function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer: Change as Structural Cost",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Civilizational view reveals that the Kelley-Connor cycle describes a genuine coordination function (systems do enable new capabilities) AND an asymmetric extraction (emotional labor is externalized to adopters as an unpaid cost). The cycle is not a natural law of psychology but a structural feature of how change adoption is institutionally managed. d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.46."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "valley_depth_variability",
+      "question": "What determines the depth and duration of the Valley of Despair for different systems and populations?",
+      "resolution_mechanism": "Longitudinal studies of adoption cohorts; comparison of valley metrics across system types (software, manufacturing process, educational reform); analysis of pre-training, coaching intensity, and peer support effects",
+      "impact": "If depth is primarily system-determined: the cycle is largely fixed and unavoidable (mountain-like). If depth is adoption-management-determined: the valley can be engineered down, and the suppression score is contingent on institutional investment choice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determinants of Valley of Despair severity and duration"
+    },
+    {
+      "id": "emotional_externality_quantification",
+      "question": "Is the emotional cost borne by adopters a hidden transfer payment from staff to organization, or is it a genuine shared cost of any complex coordination?",
+      "resolution_mechanism": "Measurement of productivity loss, burnout rates, health impacts during valley phase; comparison with adoption approaches that distribute emotional labor (peer-led vs top-down); policy analysis of whether organizations compensate for valley-phase costs",
+      "impact": "If externalized: snare classification is correct for adopters; organization benefits from unpaid emotional labor. If shared: tangled_rope is correct; all parties bear some cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emotional costs are externalized or shared"
+    },
+    {
+      "id": "linguistic_framing_efficacy",
+      "question": "Does naming the Kelley-Connor cycle (linguistic framing) materially reduce the severity of the valley phase, or is it primarily theatrical reassurance?",
+      "resolution_mechanism": "RCT or quasi-experiment: adoption cohorts with cycle training vs. cohorts without; measurement of psychological distress, persistence rates, productivity recovery timeline; analysis of whether named vs. unnamed emotional stages produce different outcomes",
+      "impact": "If naming is efficacious: the framework is a genuine coordination tool (rope). If theater is substantial: the framework is partly performative (piton component), and institutional suppression persists regardless of framing.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether naming the cycle reduces valley severity or is performative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Kelley-Connor Cycle of Change describes the emotional trajectory of individuals and organizations adopting new systems, practices, or technologies. The model identifies five stages: Uninformed Optimism (enthusiasm before encountering real constraints), Informed Pessimism (realization of difficulty), Valley of Despair (emotional nadir where old competence is lost and new competence not yet gained), Informed Optimism (breakthrough as new skills accumulate), and Success/Completion (integration and mastery). This constraint exhibits a fundamental structural tension: change adoption requires coordination (new systems do enable new capabilities, new processes do improve outcomes) but imposes an asymmetric emotional and productivity cost primarily borne by adopters during the valley phase. The constraint's extractiveness rises from 0.15 to 0.38 over the implementation interval, reflecting increasing realization that the valley phase is neither temporary nor avoidable, but rather an institutionalized cost transfer. The theater ratio (0.48 at endpoint) indicates that a moderate portion of adoption activity is performative\u2014compliance reporting, checkbox training, surface-level system use alongside continued legacy workflows\u2014rather than genuine capability change. This is not cynicism but structural: organizations often treat adoption as a project to complete rather than a capability to build, enabling theater to persist.",
+    "key_agents": [
+      "Individual adopters (staff, employees, learners): Primary victims (powerless/trapped) \u2014 bear full emotional cost of valley phase without exit option; competence loss precedes competence gain",
+      "Organizational change advocates (leadership, change management): Primary beneficiaries (institutional/arbitrage) \u2014 capture efficiency gains and capability uplift after valley; can exit constraint (move to next change initiative) while staff remain trapped",
+      "Middle managers: Secondary actors (moderate/constrained) \u2014 caught between mandate to implement change and staff emotional distress; manage both coordination and suppression",
+      "Training and support programs: Organized actors (organized/constrained) \u2014 provide coordination infrastructure; structured with sunset (training cohort completes) and measurable outcomes",
+      "Legacy system infrastructure: Institutional inertia (institutional/mobile) \u2014 persists in parallel due to technical debt; represents performative compliance with new system while real work continues in old tools",
+      "Change management frameworks (like Kelley-Connor itself): Analytical tool (analytical/analytical) \u2014 linguistic framing that normalizes valley phase and may provide genuine coordination or may be primarily reassuring theater"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The constraint extracts emotional labor from adopters during the valley phase (stage 3). This is not a temporary discomfort but a structured cost transfer: adopters lose old competence (productivity collapse) before gaining new competence (productivity recovery delayed 6-12 months depending on system complexity). Organizations benefit from the new system's capabilities without proportionally bearing the emotional/productivity cost. The extractiveness value reflects that this transfer is somewhat normalized and expected, but it remains a genuine asymmetric cost. Suppression (0.52): Moderate-high. Multiple barriers prevent adopters from exiting the valley: (a) mandatory adoption policies, (b) lack of legitimate alternative workflows (old system often deprecated), (c) career/employment consequences for lagging adoption, (d) organizational narrative framing adoption as non-negotiable change. The suppression rises as the cycle progresses. Theater ratio (0.48 at endpoint, 0.35 initially): Moderate. Some adoption activity is performative: checkbox completion of training, compliance reports showing system use while real work continues in legacy tools, performative enthusiasm during organizational change communication. However, theater is not dominant because the new system does deliver real capability gains eventually, and the valley phase involves genuine psychological distress (not merely theater distress). Theater rises over the interval as organizations move from genuine learning (phase 0-2) to surface-level compliance (phase 3-4).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The powerless adopter sees a snare: mandatory participation in an emotionally destructive process with no exit, no choice, and no compensation. The beneficiary sees a rope: the new system solves genuine coordination problems and enables better outcomes; the emotional cost is framed as a necessary price for progress. The consultant sees a rope: their model (Kelley-Connor) is a linguistic coordination tool\u2014naming the valley normalizes it and helps adopters persist. The middle manager sees tangled rope: they genuinely need the new system's coordination benefits but also bear the burden of managing staff distress. The legacy system sees a piton: the new system is officially adopted but old workflows continue due to inertia and technical debt. The analytical observer sees tangled rope with institutional extraction: the cycle legitimately enables coordination but institutions systematize the emotional cost asymmetry, making what could be a shared coordination burden into an externalized cost transfer. These gaps are not observational ambiguity\u2014they reflect real differences in structural position and exit options.",
+    "directionality_logic": "Individual adopters: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. No exit option, forced participation, bears full emotional cost. Organizational change advocates: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Can exit (move to next initiative) while staff remain trapped in valley. Middle managers: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction. Caught between mandate and staff suffering; cannot refuse implementation but cannot escape responsibility for team emotional management. Training programs: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low-moderate extraction. Constrained by organizational mandate but possess agency and structure (sunset, measurable outcomes). Change management consultant: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Near-zero extraction. Institutional position with easy exit. Legacy system: Institutional + mobile \u2192 d\u22480.15, f(d)\u22480.05. Low extraction; persists through inertia rather than active extraction. Analytical observer: d\u22480.65, f(d)\u22481.00. Moderate extraction; reveals that the cycle is a structural feature of institutional change management, not a natural law of psychology.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by disambiguating between two structurally distinct claims: (1) Change adoption has an inherent emotional cost (psychological law, mountain-like), and (2) organizations systematically externalize this cost to adopters (institutional extraction, snare-like). Claim 1 is partially true and mountain-like: complex learning does involve phases of incompetence and emotional difficulty. Claim 2 is empirically controversial but structurally true: organizations often treat valley-phase costs as non-negotiable rather than minimizable through institutional investment. The tangled_rope classification reflects that the constraint serves genuine coordination (new systems do enable capabilities) AND extracts emotional labor asymmetrically. The false summit would be calling this a mountain\u2014'the valley is just how human psychology works'\u2014because that naturalizes what is a contingent institutional choice (depth of valley, duration, support level, compensation). The constraint becomes a rope (or scaffold) to the extent that organizations intentionally minimize valley depth through robust training, peer support, temporary workload reduction, or compensation for emotional labor. It becomes a snare to the extent that these supports are absent and valley-phase productivity loss is absorbed without mitigation. The Kelley-Connor model itself is instrumentally interesting: it can either increase awareness and empathy (rope outcome) or provide performative reassurance while perpetuating extraction (piton outcome). This depends on whether naming the cycle changes institutional behavior toward support or merely normalizes the cost."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organizational_capability_debt",
+      "staff_burnout_externality"
+    ],
+    "dual_formulation_note": "The Kelley-Connor cycle decomposes into two structurally distinct claims: (1) psychological inevitability of emotional phases during learning (mountain-like, \u03b5\u22480.08), and (2) organizational cost externalization during adoption (institutional extraction, \u03b5\u22480.38). This story addresses claim 2\u2014the institutional structure and suppression dynamics. The upstream natural learning phases (claim 1) would constitute a separate mountain constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

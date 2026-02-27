@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "endowment_effect",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "endow"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Endowment Effect",
+    "topic_domain": "economic/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_asset_holders",
+      "loss_aversion_exploitation"
+    ],
+    "victims": [
+      "price_discovery_mechanism",
+      "market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Rational Trader",
+      "comment": "PERSPECTIVE 1: RATIONAL TRADER (SNARE) \u2014 Individual trapped by own cognitive bias. Cannot exit loss-aversion response or overcome ownership attachment. Systematically overpays to acquire and undersells to divest. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.51. Pure extraction: the endowment effect extracts from the trader's own rationality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Market Participant",
+      "comment": "PERSPECTIVE 2: MARKET PARTICIPANT (TANGLED ROPE) \u2014 Benefits from psychological attachment enabling long-term holding (reduces panic selling during downturns; coordinates portfolio stability). But extraction occurs through bilateral inefficiency \u2014 both buyer and seller experience endowment bias, creating deadweight loss. d\u22480.70, f(d)\u22481.08, \u03c3=0.9 \u2192 \u03c7\u22480.37. Mixed: genuine coordination function (stability) married to extraction mechanism (bilateral inefficiency)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Financial Intermediary",
+      "comment": "PERSPECTIVE 3: FINANCIAL INTERMEDIARY (ROPE) \u2014 Benefits from endowment effect as coordination mechanism. Psychological attachment to assets enables passive indexing strategy (buy-and-hold reduces transaction costs). Lower portfolio turnover = lower fees, lower market impact, more stable long-term returns. The constraint solves a collective action problem: preventing panic selling during volatility. d\u22480.15, f(d)\u22480.05, \u03c3=0.9 \u2192 \u03c7\u22480.02. Net beneficiary; sees coordination value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Behavioral Economics Research Community",
+      "comment": "PERSPECTIVE 4: BEHAVIORAL ECONOMICS RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Organized agents benefit from endowment effect as robust, replicable finding that distinguishes behavioral from classical economics. Drives research funding, publication, careers. But extraction occurs through institutional enforcement: once endowment effect is 'established truth,' alternative hypotheses (rational attachment, information asymmetry) face barriers to publication. Requires active enforcement through citation patterns and reputation mechanisms. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.13. Low-to-moderate extraction; community has agency but faces coordination lock-in."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Classical Economics Establishment",
+      "comment": "PERSPECTIVE 5: CLASSICAL ECONOMICS ESTABLISHMENT (PITON) \u2014 Institutional inertia. Classical models assume rational preferences (WTA=WTP; endowment irrelevant). The endowment effect contradicts canonical theory but has not driven paradigm replacement. Instead, classical economics maintains rationality assumptions while behavioral economics exists as a separate subdiscipline. theater_ratio=0.55 reflects this split: classical models perform their function (general equilibrium, welfare analysis) with reduced functionality (omit behavioral detail). Maintained through departmental separation and mutual non-falsification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some degree of loss aversion and reference dependence may be inherent to valuation cognition: all value is relative to a reference point, and losses loom larger than equivalent gains. If true, endowment effect would be immutable \u2014 an architectural feature of preference formation, not a contingent bias. However, structural data (\u03b5=0.38, suppression=0.42) contradicts a mountain classification. The effect has behavioral correlates (affects pricing, trade volume) that institutions can partially overcome (auctions, liquid markets, reminders of sunk-cost fallacy). The engine will mark this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reference_point_determination",
+      "question": "Is the endowment effect driven by loss aversion relative to current ownership (contingent psychological bias) or by reference-point construction inherent to valuation cognition (irreducible architectural feature)?",
+      "resolution_mechanism": "Neuroscience imaging of valuation circuits; cross-cultural studies of endowment effect magnitude; tests of reference-point plasticity across different ownership framing procedures",
+      "impact": "If contingent bias: endowment effect is Snare/Tangled Rope across most perspectives; institutional design can mitigate it. If architectural: endowment effect approaches Mountain status; market institutions must accommodate rather than eliminate it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether endowment effect is contingent psychological bias or architectural valuation feature"
+    },
+    {
+      "id": "market_efficiency_decomposition",
+      "question": "How much of observed price dispersion (bid-ask spreads, volume asymmetries) is attributable to endowment effect versus information asymmetry, transaction costs, or strategic behavior?",
+      "resolution_mechanism": "Structural estimation of valuation models; comparison of endowment effect magnitude across market types (thick markets vs thin markets, information-rich vs information-poor); instrumentation of ownership duration and acquisition context",
+      "impact": "If endowment effect is primary driver: extraction is substantial (\u03c7 increases). If secondary to transaction costs: extraction is moderate and potentially addressed through market design. If confounded with information asymmetry: extraction may be mislabeled (should be separate constraint).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of price dispersion among endowment effect, information asymmetry, and transaction costs"
+    },
+    {
+      "id": "institutional_overcoming_mechanisms",
+      "question": "What institutional designs (auction mechanisms, liquid markets, repeated trading, algorithmic valuation) most effectively mitigate endowment effect, and at what cost in transaction complexity or information disclosure?",
+      "resolution_mechanism": "Comparative study of endowment effect magnitude across market institutions; correlation between market design sophistication and price efficiency; measurement of compliance costs",
+      "impact": "If effective low-cost mechanisms exist: scaffold perspective is realistic (sunset pathway via market institutional design). If mechanisms are unavailable or costly: tangled rope and snare perspectives dominate; endowment effect persists as structural extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness and costs of institutional mechanisms to overcome endowment effect"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The endowment effect is a robust finding in behavioral economics: individuals ascribe more value to objects merely because they own them, exhibiting higher willingness-to-accept (WTA) prices for owned goods than willingness-to-pay (WTP) prices for acquiring equivalent unowned goods. This constraint exhibits all six DR types from different perspectives, revealing a fundamental tension between loss-aversion cognition (apparently universal and immutable) and market efficiency (institutionally contingent). From the perspective of a rational individual trader, endowment effect is a snare: it extracts from the trader's own capacity for efficient exchange. From the perspective of a market participant or financial intermediary, it is tangled rope: it serves a coordination function (psychological attachment enables long-term holding and reduces panic selling) while simultaneously creating extraction through bilateral inefficiency (both buyer and seller experience bias, preventing mutually beneficial trades). From the perspective of behavioral economists, it is tangled rope with institutional enforcement: the field benefits from the effect as a robust, replicable finding that distinguishes behavioral from classical economics, but this creates enforcement barriers to alternative hypotheses. From the perspective of classical economics, it is a piton: a degraded institutional framework where rationality assumptions persist despite contradictory evidence, maintained through departmental separation and mutual non-falsification rather than research progress. From the analytical civilizational perspective, it risks appearing as a mountain \u2014 an immutable law of cognition \u2014 but the structural data reveals this as a false summit: the effect's magnitude varies dramatically with framing, market design, and ownership duration, indicating institutional rather than architectural determination.",
+    "key_agents": [
+      "Individual Trader: Primary victim (powerless/trapped) \u2014 trapped by own loss aversion and reference dependence; systematically overpays and undersells",
+      "Market Participant: Secondary victim (moderate/constrained) \u2014 experiences both coordination benefits (psychological attachment to holdings) and extraction (bilateral inefficiency prevents mutually beneficial trades)",
+      "Financial Intermediary: Primary beneficiary (institutional/arbitrage) \u2014 benefits from reduced portfolio turnover (lower costs) and long-term holding (stable returns); designs products around endowment effect psychology",
+      "Behavioral Economics Community: Organized beneficiary (organized/constrained) \u2014 benefits from endowment effect as publishable, fundable research; enforces field boundaries through citation patterns",
+      "Classical Economics Establishment: Institutional actor (institutional/arbitrage) \u2014 maintains rationality assumptions as foundational doctrine despite endowment effect evidence; sustains piton through departmental separation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent psychological bias as immutable law of cognition"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The endowment effect creates deadweight loss through bilateral inefficiency \u2014 both buyer and seller experience valuation gaps relative to classical predictions, preventing mutually beneficial trades. However, the extraction is not severe (\u03b5 < 0.46) because the effect is modest in magnitude (~20-30% of price) and institutional mechanisms (auctions, liquid markets) can substantially mitigate it. The value reflects that the bias is real and systematic but not insurmountable. Suppression (0.42): Moderate. Barriers to overcoming endowment effect include cognitive automaticity (loss aversion is pre-reflective), institutional lock-in (markets are structured around expected endowment bias), and equilibrium effects (if most traders exhibit bias, rational traders cannot fully arbitrage it away). But suppression is not total: repeated trading, sophisticated market institutions, and explicit training on sunk-cost fallacy can reduce endowment effects. Theater ratio (0.55): Moderate. Classical economics continues to teach WTA=WTP and preference rationality despite decades of endowment effect evidence. The persistence of classical models in textbooks and policy analysis despite contradictory evidence suggests performative rather than functional status. However, the theater is not extreme (0.55 vs piton minimum 0.70) because classical models do perform some functions: they provide tractable frameworks for general equilibrium and welfare analysis, even if behavioral detail is omitted. The theater has increased over the interval (0.35\u21920.55) as the empirical conflict has become undeniable yet institutionally unresolved.",
+    "perspectival_gap": "This constraint demonstrates the full DR spectrum. The rational trader experiences pure extraction (snare): endowment bias directly undermines their capacity to trade efficiently. The market participant experiences mixed coordination-extraction (tangled rope): psychological attachment serves a genuine function (portfolio stability) but creates inefficiency (prevents beneficial trades). The financial intermediary experiences coordination (rope): they benefit from reduced turnover and can design products that exploit endowment psychology. The behavioral economics community experiences mixed enforcement-benefit (tangled rope): the field benefits from a publishable finding but enforces institutional boundaries that suppress alternative explanations. Classical economics experiences institutional degradation (piton): rationality assumptions persist despite evidence, maintained through separation rather than synthesis. The analytical observer risks a false summit: naturalizing loss aversion as an immutable architectural feature when institutional evidence shows it is modifiable. The perspectival gap reveals that endowment effect is not a natural law but a social-institutional phenomenon: its magnitude, scope, and effects depend critically on market design, framing, and institutional context.",
+    "directionality_logic": "Individual trader: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction: trader cannot exit loss-aversion cognition or correct the bias in real time. Financial intermediary: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Minimal extraction: intermediary can exploit endowment psychology and structure products accordingly. Market participant: Mixed victim/beneficiary + constrained \u2192 d\u22480.70, f(d)\u22481.08. Moderate extraction: participant experiences both benefits (stability) and costs (inefficiency), with constrained exit options. Behavioral economists: Mixed beneficiary/enforcer + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low-to-moderate extraction: field benefits from publishable effect but faces coordination lock-in and enforcement pressure. Classical economists: Beneficiary (through institutional persistence) + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Minimal extracted extraction despite piton classification (piton comes from theater gate, not chi). Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification risk: observer may naturalize contingent bias as universal law.",
+    "mandatrophy_analysis": "RESOLVED: This constraint's mandatrophy is resolved through perspectival decomposition. The claim 'endowment effect is a universal law of cognition' (mountain) and the claim 'endowment effect is an institutional extraction mechanism' (snare/tangled rope) are both partially true but frame different structural levels. At the individual cognitive level, loss aversion and reference dependence are architectural features of valuation cognition \u2014 these support the mountain classification. At the market-institutional level, endowment effect is contingent on market design, framing, and repeated-trading opportunity \u2014 these support snare/tangled rope classification. The resolver: Kahneman & Tversky's discovery that endowment effect magnitude is highly plastic to framing procedures (selling-as-loss vs buying-as-gain framing changes the effect by 50%+), and that liquid markets substantially eliminate endowment effects despite individual-level loss aversion persisting. This shows the effect is not architectural but institutional. The piton perspective resolves the mandatrophy at the meta-level: classical economics maintains rationality doctrine while behavioral economics documents violations; neither integrates the other. The institutional separation sustains the ambiguity (piton = theatrical persistence of conflicting paradigms) rather than forcing resolution toward a single type."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "loss_aversion_bias",
+      "sunk_cost_fallacy",
+      "status_quo_bias"
+    ],
+    "dual_formulation_note": "Endowment effect overlaps with but is structurally distinct from loss aversion bias (\u03b5=0.15, Mountain), sunk-cost fallacy (\u03b5=0.35, Snare), and status quo bias (\u03b5=0.42, Tangled Rope). The endowment effect is downstream of loss aversion (loss aversion is necessary but not sufficient) and upstream of status quo bias (endowment effect explains why people maintain ownership). Each constraint has different \u03b5 reflecting different institutional modifiability: loss aversion is architectural; endowment effect is behavioral-plastic; sunk-cost and status-quo biases are institutional-contingent."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "fed_shutdown_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fedshutdown"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "The 2026 DHS/ICE Funding Standoff",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "hardline_immigration_enforcement_coalition",
+      "executive_agencies_discretion"
+    ],
+    "victims": [
+      "federal_employees",
+      "vulnerable_immigrant_populations",
+      "essential_service_users",
+      "appropriations_process_integrity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Federal Employees (Unpaid)",
+      "comment": "PERSPECTIVE 1: UNPAID FEDERAL EMPLOYEES (SNARE) \u2014 Trapped in shutdown with no income, no negotiating power, no ability to exit the federal system without career loss. Forced to continue essential work unpaid or face job termination. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.82. Pure extraction with maximum coercion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Vulnerable Immigrant Populations",
+      "comment": "PERSPECTIVE 2: VULNERABLE IMMIGRANT POPULATIONS (SNARE) \u2014 Trapped by immigration enforcement policies weaponized during shutdown. ICE operations continue while oversight mechanisms are suspended. No exit from enforcement apparatus; no representation in shutdown negotiations. d\u22480.98, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.82. Maximum extraction through asymmetric vulnerability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congressional Democratic Caucus",
+      "comment": "PERSPECTIVE 3: CONGRESSIONAL DEMOCRATS (TANGLED ROPE) \u2014 Constrained by need to pass appropriations (essential coordination function) but also extracted from by majority-party veto power. Must choose between capitulating to ICE enforcement demands or extending shutdown (political extraction). d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55. Mixed: genuine coordination requirement paired with asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Hardline Immigration Enforcement Coalition",
+      "comment": "PERSPECTIVE 4: HARDLINE ENFORCEMENT COALITION (ROPE) \u2014 Primary beneficiaries with exit option (compromise bill language, phased negotiations). Experience constraint as coordination: forcing oversight suspension into budget language solves their problem of operational constraints. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; sees mechanism as functional coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Congressional Appropriations Process",
+      "comment": "PERSPECTIVE 5: CONGRESSIONAL APPROPRIATIONS PROCESS (PITON) \u2014 The shutdown mechanism is a degraded institutional form: it once enforced fiscal discipline, but now functions primarily as a theater for policy coercion. The performative threat of shutdown has replaced actual budget discipline. theater_ratio\u22480.81 (negotiations theater, policy riders conflated with spending authority). The process persists through inertia despite low functional value as a fiscal mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Rule of Law Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational rule-of-law perspective, the shutdown instrumentalizes the appropriations process to extract policy concessions outside legislative debate. The constraint violates the principle that enforcement policy should be debated in its own committees, not hidden in must-pass budget bills. This is extraction normalized as governance. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oversight_effectiveness_empirical",
+      "question": "Do the suspended ICE oversight mechanisms (OIG audits, detention facility inspections, funding condition checks) actually reduce harms, or are they performative compliance theater?",
+      "resolution_mechanism": "Comparative analysis of ICE detention harm rates during periods with vs. without active oversight; tracking of corrective actions from OIG reports; correlation between oversight findings and operational changes",
+      "impact": "If oversight is effective: suppression value (0.68) understates the extraction \u2014 coercion includes removal of functional safeguards. If oversight is performative: snare classification is justified but political framing of 'safety concerns' is exposed as justification layer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suspended ICE oversight mechanisms reduce actual harms"
+    },
+    {
+      "id": "shutdown_duration_viability_boundary",
+      "question": "What shutdown duration triggers cascading failures in essential services (healthcare, food safety, disaster response) that create political pressure independent of actors' negotiating positions?",
+      "resolution_mechanism": "Historical shutdown data on service degradation timelines; modeling of critical infrastructure failure cascades; analysis of when political pressure forces settlement despite negotiating stances",
+      "impact": "If < 2 weeks: one side can endure shutdown costs longer than other. If > 2 weeks: technical constraints force settlement regardless of politics. Duration affects whether snare classification is stable or breaks into negotiated compromise.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Shutdown duration threshold for cascading service failures"
+    },
+    {
+      "id": "immigration_enforcement_demand_coherence",
+      "question": "Is the hardline coalition's demand for ICE oversight removal coherent with stated public safety rationale, or does the demand structure reveal extraction that incompletely justifies itself?",
+      "resolution_mechanism": "Analysis of policy proposals: do they target specific oversight mechanisms that demonstrably impede safety functions, or do they target accountability mechanisms broadly? Comparison with other law enforcement agencies' oversight.",
+      "impact": "If coherent: the snare classification is partially justified as protection of public safety infrastructure. If incoherent: snare classification is confirmed \u2014 demand is pure extraction disguised as operational necessity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Coherence of justification for ICE oversight removal"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 2026 DHS/ICE funding standoff represents a structural constraint where federal appropriations authority is weaponized to extract policy concessions outside the legislative process. Following deaths in ICE detention facilities under disputed circumstances, Congress and the Executive branch deadlock over whether ICE operations should continue under existing oversight mechanisms. A hardline enforcement coalition (House Republican leadership, anti-immigration advocacy groups, Executive ICE leadership) demands suspension of specific oversight functions \u2014 OIG audits, detention facility inspections, funding condition checks \u2014 as a condition for passing funding bills. This demand is embedded in must-pass appropriations legislation, creating a constraint: federal employees lack wages, vulnerable populations lack protection mechanisms, and service users lack guarantees of government function. The shutdown persists because the demand structure cannot be resolved through normal legislative negotiation \u2014 it is presented as non-negotiable operational necessity, not as a policy choice. The constraint exhibits all characteristics of a snare: high suppression (federal employees and immigrants cannot exit the consequences), high extractiveness (hardline coalition gains policy concessions worth billions in operational freedom), and rising theater ratio (performative debate about 'safety' and 'operational necessity' masks that oversight removal is the primary demand). The analytical frame risks naturalizing the coercive mechanism as inherent to separated powers governance, when it is actually a degraded appropriations process instrumentalized for policy extraction.",
+    "key_agents": [
+      "Hardline Immigration Enforcement Coalition: Primary beneficiary (powerful/arbitrage) \u2014 seeks removal of ICE oversight mechanisms; has veto power through House Republican leadership; gains operational freedom and policy concessions worth billions annually",
+      "Federal Employees (Unpaid): Primary victim (powerless/trapped) \u2014 denied wages during shutdown; pressured to work unpaid or face employment termination; unable to negotiate or exit",
+      "Vulnerable Immigrant Populations: Primary victim (powerless/trapped) \u2014 subject to ICE enforcement with suspended oversight; detention facility conditions deteriorate; no representation in shutdown negotiations",
+      "Congressional Democratic Caucus: Secondary victim (moderate/constrained) \u2014 must choose between capitulating to demands or extending shutdown; both options extract political costs",
+      "Essential Service Users (Healthcare, Food Safety, etc.): Secondary victim (powerless/constrained) \u2014 receive degraded services during shutdown; no control over shutdown resolution",
+      "Congressional Appropriations Process: Institutional actor (institutional/arbitrage) \u2014 nominally neutral coordination mechanism; degraded into policy extraction instrument; persists through inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The hardline coalition extracts policy concessions (ICE oversight suspension) worth billions in operational freedom annually. The extraction is not total because it requires legislative negotiation and cannot be sustained indefinitely (essential services failures force resolution). The rising trajectory (0.38\u21920.58 over interval) reflects escalation of demands and hardening of positions. Suppression (0.68): Federal employees have zero exit options \u2014 they cannot quit without losing careers, and they are pressured to work unpaid. Immigrants have zero exit options \u2014 they cannot escape enforcement apparatus. Congressional Democrats have some exit option (compromise) but it is politically costly. Suppression is high but not maximal because federal employees can eventually refuse to work (though with career consequences) and political actors retain legislative tools. Theater ratio (0.81): Exceptionally high. The public debate centers on claims about 'operational necessity,' 'safety,' and 'fiscal discipline,' but the actual negotiation is purely about whether oversight mechanisms continue. The performative layer (debate about what's 'necessary') is almost as large as the functional layer (actual oversight suspension). Claimed type (Snare): Justified by high suppression and high extractiveness. Federal employees and immigrants cannot exit; the hardline coalition captures the primary benefit.",
+    "perspectival_gap": "The hardline coalition sees this as a Rope (coordination problem: funding bills require resolution, and ICE operational constraints must be addressed). Federal employees and immigrants see a Snare (coercion with no exit). Democrats see a Tangled Rope (genuine appropriations coordination requirement paired with extraction through veto power). The appropriations process itself is a Piton \u2014 it once functioned as a budgetary discipline mechanism but now primarily serves as a vehicle for policy coercion through theater. The analytical observer sees the constraint as a Snare that risks being naturalized as inherent to separated powers (false summit). The gap reveals that beneficiaries experience the constraint as functional (coordination), while victims experience it as extraction, and institutional actors see their own degradation but cannot escape it.",
+    "directionality_logic": "Hardline enforcement coalition: Beneficiary + arbitrage exit (can negotiate compromise, can escalate, has legislative veto power) \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; effectively subsidized by others' suffering. Federal employees: Victim + trapped exit (cannot quit without career loss, pressured to work unpaid) \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Vulnerable immigrants: Victim + trapped exit (cannot escape enforcement apparatus, no political voice) \u2192 d\u22480.98, f(d)\u22481.42. Absolute extraction. Democrats: Victim of extraction + constrained exit (can compromise but at political cost, cannot force resolution without Republican support) \u2192 d\u22480.65, f(d)\u22480.95. Significant extraction. Appropriations process: Institutional actor + arbitrage exit (can theoretically change rules, but inertia prevents it) \u2192 d\u22480.05, f(d)\u2248-0.10. Piton classification comes from theater_ratio \u2265 0.70, not from high \u03c7.",
+    "mandatrophy_analysis": "The constraint does NOT resolve mandatrophy, and this is analytically significant. The snare classification requires that we accept: (1) the hardline coalition genuinely benefits from oversight suspension as an operational necessity, AND (2) federal employees and immigrants genuinely bear costs with no reciprocal benefit. However, the justification layer (debate about 'safety' and 'operational necessity') suggests that the framing itself is contested. If oversight suspension is genuinely necessary for ICE to function safely, the snare classification is justified. If oversight suspension is primarily about operational freedom and the safety claims are post-hoc justification, the snare classification is confirmed \u2014 the extraction includes the cost of maintaining its own legitimating narrative. The unresolved omega variables suggest that mandatrophy persists: we cannot definitively separate genuine coordination needs from pure extraction without empirical data on oversight effectiveness. This is the characteristic feature of snares at the boundary with tangled ropes \u2014 the beneficiary's narrative includes a kernel of operational truth, but the extraction is real."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "appropriations_process_hostage_taking",
+      "ice_detention_facility_oversight",
+      "executive_agency_discretion_boundary"
+    ],
+    "dual_formulation_note": "This constraint is structurally downstream of ICE detention facility oversight debates (which define what oversight removal would entail) and upstream of broader appropriations process hostage-taking (which reveals the generalized pattern of policy-rider extraction through must-pass bills)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "sunk_cost_fallacy",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Sunk Cost Fallacy",
+    "topic_domain": "economic/social/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vendors_of_escalating_projects",
+      "status_quo_maintainers"
+    ],
+    "victims": [
+      "rational_decision_makers",
+      "project_stakeholders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Individual Trapped in Failing Project",
+      "comment": "Perspective 1: Individual (powerless/trapped). An individual who has heavily invested time, effort, or money into a project may feel trapped, unable to abandon it even when it's clearly failing. The sunk cost fallacy acts as a snare, preventing rational decision-making."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Organization Stuck in Inefficient Process",
+      "comment": "Perspective 2: Organization (moderate/constrained). An organization that has invested heavily in a particular process or technology may find it difficult to switch to a more efficient alternative, even when the benefits of doing so are clear. They are constrained by the prior investment but also derive some (diminishing) benefit from continuing the familiar process. They experience the sunk cost fallacy as a tangled rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Vendors of Escalating Projects",
+      "comment": "Perspective 3: Vendors of escalating projects (institutional/arbitrage). These vendors benefit from the sunk cost fallacy. As projects escalate, they continue to receive funding and contracts, regardless of the project's success. They see the continued investment as a rope, ensuring their continued involvement and profit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Status Quo Maintainers",
+      "comment": "Perspective 4: Status quo maintainers (powerful/constrained). Institutions and individuals who benefit from the existing system may resist change, even when it's clear that the system is not working effectively. They are constrained by the existing system, but are powerful enough to resist change due to the inertia created by prior investments. This manifests as a Piton, where the original function is degraded, but the structure remains."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 5: Analytical observer (analytical/analytical). The sunk cost fallacy is a cognitive bias that affects decision-making across various domains. From an analytical perspective, it represents a tangled rope because it involves both a psychological commitment (an investment) and a detrimental effect (suboptimal decisions)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bias_detection_effectiveness",
+      "question": "How effective are interventions designed to mitigate the sunk cost fallacy?",
+      "resolution_mechanism": "Empirical studies measuring the impact of debiasing techniques on decision-making.",
+      "impact": "Determines whether the 'snare' effect can be significantly reduced, potentially shifting classifications toward 'tangled_rope' or even 'rope' if effective interventions are readily available.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of interventions to mitigate the sunk cost fallacy."
+    },
+    {
+      "id": "irreversible_investment_threshold",
+      "question": "What level of investment makes abandoning a project psychologically prohibitive?",
+      "resolution_mechanism": "Behavioral experiments varying the scale and type of prior investment.",
+      "impact": "Defines the boundary between rational persistence and irrational escalation, influencing the perceived extractiveness and the resulting classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Level of investment making abandoning a project psychologically prohibitive."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The sunk cost fallacy describes the tendency to continue investing in a losing endeavor due to past investments. This cognitive bias affects decisions across various domains, from personal relationships to large-scale projects. It is a complex constraint exhibiting characteristics of both coordination and extraction. While the initial investment may have been rational, the continuation often becomes irrational due to the fallacy.",
+    "key_agents": [
+      "Rational Decision Makers: Primary victim (powerless/trapped) - Affected by suboptimal decisions resulting from sunk cost considerations.",
+      "Project Stakeholders: Secondary victim (moderate/constrained) - Impacted by the project's poor performance and resource allocation.",
+      "Vendors of Escalating Projects: Primary beneficiary (institutional/arbitrage) - Benefit from continued funding and involvement.",
+      "Status Quo Maintainers: Secondary beneficiary (powerful/constrained) - benefit from maintaining familiar systems even if inefficient.",
+      "The Analytical Observer: Observers of the phenomenon (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The sunk cost fallacy leads to the inefficient allocation of resources. It prevents rational decision-making by making it difficult to cut losses. The extraction is experienced as wasted resources, effort, and opportunity costs. Suppression (0.65): Moderate-High. The suppression arises from the psychological difficulty of admitting a past mistake and the social pressure to continue endeavors already begun. Theater Ratio (0.70): High. The performative aspects of saving face and justifying past decisions contribute significantly to the continuation of failing projects.",
+    "perspectival_gap": "The perspectives highlight the different experiences of the sunk cost fallacy. Individuals trapped in failing projects experience it as a snare, while vendors benefit from continued investment as a rope. Organizations are constrained by previous investments and experience it as a tangled rope. The analytical observer identifies it as a broad cognitive bias. The status quo maintainers see a piton, a degraded system that they continue to support.",
+    "directionality_logic": "Beneficiaries (vendors and status quo maintainers) have low 'd' value due to deriving benefit, while victims (rational decision makers and project stakeholders) have high 'd' value, reflecting the costs they bear. The specific d values and subsequent classifications are calculated by the engine based on the declared power levels and exit options.",
+    "mandatrophy_analysis": "The sunk cost fallacy can be mislabeled as efficient long-term investment if the cognitive bias is not recognized. The framework clarifies that this bias is present if decisions are made based on past costs rather than future benefits. The perspectives highlight the differential experiences of those affected, resolving the mandatrophy by providing a multi-faceted view of the phenomenon."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cognitive_biases",
+      "escalation_of_commitment"
+    ]
+  },
+  "directionality_overrides": []
+}

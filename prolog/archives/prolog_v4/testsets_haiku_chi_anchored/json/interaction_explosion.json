@@ -1,0 +1,175 @@
+{
+  "header": {
+    "constraint_id": "interaction_explosion",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "intx"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Combinatorial Complexity Trap",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "system_architects",
+      "early_adopters"
+    ],
+    "victims": [
+      "late_entrants",
+      "coordination_commons",
+      "system_maintainers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Late Entrant",
+      "comment": "PERSPECTIVE 1: LATE ENTRANT (SNARE) \u2014 Cannot exit the combinatorial trap once multiple coordination mechanisms are entrenched. Must master exponentially increasing interaction surface to participate. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The System Maintainer",
+      "comment": "PERSPECTIVE 2: SYSTEM MAINTAINER (TANGLED ROPE) \u2014 Benefits from functional decomposition and modular interface documentation (coordination function); constrained by exponential growth in test coverage and interaction specification requirements (extraction). d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The System Architect",
+      "comment": "PERSPECTIVE 3: SYSTEM ARCHITECT (ROPE) \u2014 Benefits from first-mover coordination advantage and network effects. Experiences constraint as pure coordination problem: establishing clear protocols and standards simplifies future development. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Early Adopter",
+      "comment": "PERSPECTIVE 4: EARLY ADOPTER (TANGLED ROPE) \u2014 Benefits from ecosystem growth and complementary innovation (coordination); faces increasing surface area of interdependencies and breaking changes (extraction). Has mobility to switch or fork if necessary. d\u22480.45, f(d)\u22480.62, \u03c3=1.2 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standards Coalition",
+      "comment": "PERSPECTIVE 5: STANDARDS COALITION (PITON) \u2014 Organized effort (ISO, W3C, IEEE working groups) to manage interaction complexity through standardization. Theater ratio=0.64: much effort goes to document maintenance and compliance theater, but actual standard adoption only reduces complexity locally. The coalition perceives diminishing returns: standards proliferation itself becomes a coordination problem. \u03c7\u22480.28; low effective extraction because the coalition has organizational capacity but sees the game degrading."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, combinatorial interaction complexity is partly inherent to systems with many degrees of freedom (coordination challenge: how do you document n\u00b2 interactions?) and partly engineered (extraction: architectures that prioritize early-mover advantage over modularity). The interaction explosion exhibits both universal features and contingent design choices. This perspective identifies the tangled rope structure: real coordination function (managing complexity is necessary) + real extraction (asymmetric advantage for those who set the initial interaction patterns)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inherent_vs_engineered_complexity",
+      "question": "What fraction of combinatorial explosion is inherent to N-way systems versus engineered by architecture choices that privileged early adopters?",
+      "resolution_mechanism": "Comparative analysis of different system architectures (microkernel vs monolithic, strongly-typed vs duck-typed, protocol-based vs object-oriented); measurement of interaction surface growth rate vs theoretical minimum for equivalent functionality",
+      "impact": "If \u226580% engineered: classification shifts toward snare/extraction for all perspectives. If \u226420% engineered: shifts toward rope/coordination. If mixed: confirms tangled_rope as correct type.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ratio of engineered complexity to inherent complexity in interaction surface"
+    },
+    {
+      "id": "modularity_recovery_feasibility",
+      "question": "Can interaction complexity be decomposed by retrofitting stronger modularity boundaries, or does the system require fundamental redesign?",
+      "resolution_mechanism": "Cost-benefit analysis of modularization efforts (microservices migration, API versioning strategies, plugin architectures); measurement of refactoring effort vs complexity reduction achieved",
+      "impact": "If modularization effective: late entrants' exit_options upgrade from trapped \u2192 constrained; snare perspectives shift toward tangled_rope. If not feasible: extractive lock-in is confirmed; perspectives remain snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether modularity retrofit can reduce interaction complexity"
+    },
+    {
+      "id": "documentation_vs_internalization_trade",
+      "question": "Does increased documentation/specification of interaction rules reduce theater_ratio, or does it increase theater by creating maintenance burden without reducing experiential complexity?",
+      "resolution_mechanism": "Survey of practitioner cognitive load before/after documentation; measurement of time spent reading specs vs actually learning by integration testing; correlation between spec thoroughness and adoption friction",
+      "impact": "If docs reduce theater: theater_ratio should decline, piton perspective weakens. If docs increase theater: theater_ratio climbs; standards coalition perspective confirmed as piton (performative). Theater trend directly impacts the measurement trajectory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether documentation reduces actual complexity or just shifts it to documentation maintenance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 7
+  },
+  "commentary": {
+    "narrative_context": "The Combinatorial Complexity Trap occurs when multiple simple coordination mechanisms (each individually a Rope) interact non-linearly, creating emergent constraints that disadvantage newcomers and late adopters. What begins as straightforward system design\u2014a few basic protocols, a few interfaces, a few configuration standards\u2014undergoes explosive growth in interaction complexity as the number of possible interaction paths scales combinatorially. Early adopters and system architects benefit from the first-mover advantage: they understand the system's interaction surface implicitly, can navigate the social/technical conventions, and influence how new standards are set. Late entrants face an exponentially growing surface of interaction rules, undocumented conventions, and architectural assumptions. The constraint manifests across technological systems (software platforms with multiple frameworks, hardware ecosystems, scientific instrument interfaces), organizational structures (matrix organizations with overlapping reporting lines), and social networks (communities with evolved informal norms). The 'trap' lies in the feedback loop: each added mechanism increases complexity, each increase makes it harder for newcomers to participate meaningfully, reduced participation diversity makes architects less responsive to refactoring needs, and unremodularized complexity deepens. Theater ratio increases as standards bodies attempt to document complexity that has become too large to fully specify, creating a performative documentation effort that doesn't reduce actual cognitive burden.",
+    "key_agents": [
+      "System Architects: Primary beneficiary (institutional/arbitrage) \u2014 control initial interaction patterns and reap coordination advantage; can exit by redesigning or creating new ecosystem",
+      "Early Adopters: Secondary beneficiary (powerful/mobile) \u2014 benefit from ecosystem growth and network effects while retaining capacity to fork or switch",
+      "Late Entrants: Primary victim (powerless/trapped) \u2014 face exponentially growing interaction surface with no choice but to master it; cannot easily exit or redesign",
+      "System Maintainers: Mixed victim/participant (moderate/constrained) \u2014 bear the implementation cost of complexity (testing, documentation, refactoring) while trapped in architectural decisions they didn't control",
+      "Coordination Commons: Abstract victim (powerless/trapped) \u2014 the collective epistemic commons loses clarity as complexity increases; system becomes opaque to outside observers, auditors, formal verification",
+      "Standards Coalition: Institutional actor (organized/constrained) \u2014 attempts to manage complexity through documentation and standardization; increasingly performative as standards proliferate"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The trap exhibits measurable extraction: late entrants must invest significantly more effort to achieve equivalent participation compared to early adopters. However, the extraction is not total coercion (\u03b5 < 0.66) because late entrants can technically participate through sustained learning; the system doesn't lock them out entirely, only raises the cost. The measurement trajectory (0.22 \u2192 0.52) reflects the feedback loop: initial complexity is modest, but as mechanisms accumulate, extraction accelerates. Suppression (0.65): Moderate-high. The main suppression mechanism is learning curve + network effects: alternatives exist (fork the system, create a new architecture) but are costly due to ecosystem lock-in. Documentation barriers and social convention opacity increase suppression. Theater ratio (0.58, trending upward): The constraint exhibits rising performativity as standards efforts escalate. Early stages (0.35) show mostly functional coordination: people learning the real interaction patterns. By stage 7 (0.58), significant effort goes to spec-writing, compliance checking, and standards governance that doesn't proportionally reduce experienced complexity. This suggests the system is entering piton-like degradation\u2014the coordination function is weakening relative to the overhead of managing it.",
+    "perspectival_gap": "The system architects experience coordination (Rope) because they control the initial conditions and set the rules. The late entrants experience extraction (Snare) because they face a fixed, high-dimensional interaction surface. Early adopters occupy the middle ground (Tangled Rope)\u2014they benefit from coordination and ecosystem effects but increasingly face the same refactoring burden as maintainers. The analytical observer perceives a tangled rope with legitimate coordination content (managing many degrees of freedom requires some shared protocols) and legitimate extraction content (but the protocols were designed to benefit early participants). The standards coalition perceives itself as managing complexity but increasingly as executing performative documentation\u2014they see Piton features (degraded function, high theater, persistent through inertia). This gap reveals that the constraint is not purely extractive (there is a real coordination challenge) but not purely coordinative either (the architecture choices systematize advantage). The gap widens over time as theater increases\u2014early stakeholders see mostly 'real' complexity management, later stakeholders see mostly 'overhead'.",
+    "directionality_logic": "System architect: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; can exit anytime by designing new system. Late entrant: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; trapped by ecosystem lock-in. System maintainer: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.02. High extraction; constrained by need to maintain backward compatibility and organizational stability. Early adopter: Mixed (beneficiary + victim) + mobile \u2192 d\u22480.45, f(d)\u22480.62. Symmetric position; can benefit from ecosystem but also feels extraction creep. Standards coalition: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.28. Low effective extraction; organized capacity but seeing diminishing returns on standardization efforts. Coordination commons: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. Abstract victim; cannot organize or exit, bears cost of system opacity.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint avoids the mandatrophy (tangled rope vs snare confusion) by explicitly declaring both coordination and extraction in the base properties. The beneficiaries (architects, early adopters) are documented alongside victims (late entrants, maintainers). The constraint is tangled_rope because: (1) It has a genuine coordination function\u2014managing interaction between many components is necessary, and protocols/standards provide value. (2) It has asymmetric extraction\u2014the protocols were designed in ways that benefit early participants over later ones. (3) It requires active enforcement\u2014maintaining backward compatibility, enforcing architectural decisions, and resisting refactoring. The omega variables address whether the extraction is inherent (unavoidable in any N-way system) or engineered (could be different with better upfront design). The measurement trajectory (extractiveness rising from 0.22 to 0.52) shows the feedback loop intensifying, which confirms the tangled_rope classification over time: what begins as mostly coordination (low \u03b5) becomes increasingly extractive (\u03b5 > 0.46) as late entrants encounter the compounded surface. The analytical observer's perspective correctly identifies the tangled rope: not a false summit naturalizing contingent choices, but a real observation that the system has both coordination and extraction content. The standards coalition's piton perspective reveals the degradation mechanism: as theater rises (documentation overhead without proportional complexity reduction), the coordination function weakens relative to the enforcement overhead."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "technical_debt_accumulation",
+      "standards_proliferation",
+      "ecosystem_lock_in"
+    ],
+    "dual_formulation_note": "The interaction explosion is downstream of individual design choices but represents a distinct structural constraint. Individual protocol coordination (e.g., HTTP standards, JSON schema) may be pure Rope; the interaction explosion between multiple such mechanisms is Tangled Rope. The network shows how coordination mechanisms couple and create emergent complexity that is qualitatively different from the sum of parts."
+  },
+  "directionality_overrides": []
+}

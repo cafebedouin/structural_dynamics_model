@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "tragedy_of_the_commons",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "totc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Tragedy of the Commons",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_term_extractors"
+    ],
+    "victims": [
+      "collective_resource_base",
+      "long_term_users",
+      "future_generations"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Subsistence User",
+      "comment": "PERSPECTIVE 1: SUBSISTENCE USER (SNARE) \u2014 Trapped by dependence on the commons for survival. Cannot exit without abandonment of livelihood. Faces maximum extraction: must compete directly against all other users for diminishing resource. No alternative. Experiences pure extraction with high suppression of alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Sustainable User",
+      "comment": "PERSPECTIVE 2: SUSTAINABLE USER (TANGLED ROPE) \u2014 Constrained by community norms and resource interdependence but also benefits from functioning commons. Faces extraction through overuse by others, but also coordinates with other moderate users on conservation practices. Mixed experience: genuine coordination function (voluntary restraint norms) combined with asymmetric extraction (free riders exploit restraint)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Community Manager",
+      "comment": "PERSPECTIVE 3: COMMUNITY MANAGER (ROPE) \u2014 Organized agent (commons governance body, cooperative, collective) can exit through privatization or alternative management schemes. Experiences constraint as coordination problem: orchestrating monitoring, enforcement, and benefit-sharing solves collective action failure. Benefits from functional commons while maintaining exit option through reform."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (SCAFFOLD) \u2014 Can exit through enclosure, privatization, or centralized management. Temporary coordination through quotas, licenses, or seasonal closures. Low effective extraction because the institution has structural exit and sunset: once privatization is complete or resource is enclosed, the tragedy mechanism no longer operates. Theater ratio remains moderate because enforcement is functional rather than performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Enclosure Movement",
+      "comment": "PERSPECTIVE 5: ENCLOSURE MOVEMENT (PITON) \u2014 Historical response to commons collapse that persists as institutional inertia. Private property regimes were imposed as solution, but many enforced enclosures now persist performatively, constraining use even when the original tragedy mechanism no longer exists (resource abundance, technological substitution, or successful community management). Theater ratio increases when enclosure regime is maintained long after functional need."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From universal/civilizational perspective, the tragedy appears as an immutable consequence of rational individual behavior under open access and excludable resources. The logic seems to be a natural law: whenever individual incentives diverge from collective good under these conditions, tragedy must result. However, this naturalizes what is actually a contingent institutional arrangement. The mountain classification is a false summit \u2014 the structural data reveals that commons tragedies are prevented or managed through enforced norms, governance institutions, and property regimes (all social constructs, not natural laws)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "excludability_vs_rivalry",
+      "question": "Does the resource exhibit true excludability and rivalry, or can governance institutions create artificial excludability through property rights assignment?",
+      "resolution_mechanism": "Analysis of whether property rights regimes prevent access or merely allocate extraction rights; comparison of resource depletion under open access vs managed regimes controlling for external demand pressures",
+      "impact": "If artificial: tragedy is institutional failure, not natural law. If true property: some commons cannot escape tragedy regardless of governance. Shifts classification from false mountain toward robust tangled_rope or snare.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether excludability is intrinsic to resource or constructed through property regime"
+    },
+    {
+      "id": "rational_actor_assumption",
+      "question": "Do actual users behave as rational profit-maximizers, or do social preferences, fairness norms, and reputation concerns change the payoff structure?",
+      "resolution_mechanism": "Behavioral economics experiments (ultimatum game, commons dilemmas with reputation signaling); ethnographic study of actual commons-user decision-making; comparison of predicted vs observed extraction rates",
+      "impact": "If norms dominate: tragedy mechanism is weaker than predicted; rope classification becomes more accurate. If rational extraction dominates: snare classification strengthened; community management fails without enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which actual users conform to rational actor model"
+    },
+    {
+      "id": "scalability_of_governance",
+      "question": "Can community-based governance mechanisms (social monitoring, reputation, collective enforcement) scale to large populations and geographically distributed users?",
+      "resolution_mechanism": "Comparative study of commons governance success by scale; analysis of transaction costs of monitoring and enforcement as user population increases; case studies of scale-induced governance collapse",
+      "impact": "If scales poorly: large commons are structurally snares/tangled_ropes (dependent on state enclosure or privatization). If scales well: scaffold perspective is less relevant; community management is genuine long-term solution (rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability limits of community-based commons governance"
+    },
+    {
+      "id": "resource_regeneration_rate",
+      "question": "Does the resource's natural regeneration rate determine whether sustainable yield is possible, or can institutional design overcome biological limits?",
+      "resolution_mechanism": "Bioeconomic modeling of sustainable yield thresholds; historical analysis of whether commons collapsed due to biological limits or institutional failure; comparison of managed commons sustainability at different regeneration rates",
+      "impact": "If biology is binding: some commons are structurally mountains (unavoidable tragedy at certain extraction levels). If institutional design dominates: tragedy is preventable governance failure (snare/tangled_rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether resource regeneration rate determines sustainability possibility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The tragedy of the commons occurs when individual rationality produces collective irrationality: each user gains more by extracting one additional unit than by restraining, so all users extract maximally, depleting the shared resource faster than it regenerates. This constraint exhibits structural properties of both coordination failure (rope: functional commons governance prevents tragedy) and extraction asymmetry (snare: free riders benefit while restrainers bear costs; tangled_rope: mixed coordination and extraction). The tragedy is not a natural law but a contingent institutional arrangement\u2014it emerges when excludability is absent (open access), the resource is rival (one user's consumption reduces availability for others), and governance institutions are weak (no monitoring, enforcement, or norm-setting). The analytical perspective's mountain classification is a false summit: it naturalizes what is actually a solvable institutional problem. Historical commons that persist sustainably (Swiss alpine meadows, Indonesian subak irrigation, Caribbean lobster trap fisheries) demonstrate that the tragedy is preventable through community enforcement, property rights allocation, and resource monitoring\u2014the constraint is tangled_rope or scaffold, not immutable natural law.",
+    "key_agents": [
+      "Subsistence Users: Primary victims (powerless/trapped) \u2014 depend entirely on commons for survival; face extraction through overuse by others; no exit option",
+      "Short-Term Extractors: Primary beneficiaries (moderate/mobile) \u2014 capture immediate gains from overexploitation; can exit once resource is depleted by moving to new resource or economic activity",
+      "Sustainable Users: Secondary actors (moderate/constrained) \u2014 practice voluntary restraint through social norms and collective identity; face free-rider extraction from those who don't restrain",
+      "Community Managers: Organized actors (organized/mobile) \u2014 governance bodies, cooperatives, or collective authorities; can implement monitoring, enforcement, and allocation rules",
+      "Regulatory Authority: Institutional actor (institutional/arbitrage) \u2014 state or regional government; can impose quotas, licenses, or enclosure; maintains exit through policy reform",
+      "Historical Enclosure Movement: Institutional pattern (institutional/arbitrage) \u2014 private property regimes that replaced commons; persist performatively even when original tragedy mechanism is resolved",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks formalizing contingent institutional patterns as immutable natural laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint extracts from the resource base and from restrainers through free-rider exploitation. Subsistence users bear maximum extraction cost (loss of livelihood sustainability). However, extractiveness is not total (\u03c7 \u2264 0.90) because community governance and enclosure regimes do prevent some tragedies\u2014the constraint is preventable, not absolute. The 0.58 value reflects that extractiveness increases over time (0.35 \u2192 0.58) as overuse accelerates and resource depletion sets in. Suppression (0.65): High. Barriers to resource conservation include: (1) individual incentive structure (extra unit always benefits extractor more than restraint benefits community); (2) monitoring costs (difficult to detect who overextracts in large commons); (3) enforcement costs (sanctioning free riders requires collective action); (4) information asymmetries (users may not know regeneration rate). However, suppression is not total\u2014successful commons demonstrate that monitoring and reputation mechanisms can overcome these barriers. Theater ratio (0.38): Moderate-low. The constraint's enforcement is largely functional rather than performative: quota systems, seasonal closures, and monitoring are real mechanisms with measurable effects on extraction. Theater increases over time as enclosure regimes persist beyond functional need, but remains below 0.70 (piton threshold) for active commons management.",
+    "perspectival_gap": "The tragedy manifests identically to different observers\u2014resource depletion\u2014but the structural mechanisms and classification types differ dramatically based on the observer's position. The subsistence user sees a snare: they are trapped and maximally extracted. The sustainable user sees tangled_rope: genuine coordination function (collective norms reduce extraction) combined with asymmetric extraction (free riders exploit restraint). The community manager sees rope: a solvable coordination problem with governance institutions providing the solution. The regulatory authority sees scaffold: a temporary problem fixable through enclosure or centralized allocation with a sunset (once resource is privatized or enclosed, the tragedy mechanism no longer operates). The enclosure movement perspective sees piton: historical solution that persists institutionally long after functional need. The analytical observer risks seeing a mountain (natural law: rational individuals always deplete commons) but the structural data reveals this as a false summit\u2014the extractiveness depends on institutional design, not natural law. The perspectival gap reflects that the tragedy is not a single constraint but a configuration of institutional arrangements that different actors experience differently.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by the agent's structural position relative to the extraction flow. Short-term extractors benefit from the constraint (beneficiaries with mobile exit options) \u2192 low d \u2192 negative \u03c7. Subsistence users depend on the commons and face extraction through overuse (victims with trapped exit) \u2192 high d \u2192 high \u03c7. Sustainable users practice voluntary restraint and face free-rider exploitation (victims with constrained exit, but also benefit from functioning commons) \u2192 moderate-high d. Community managers can coordinate governance solutions (organized actors with mobile exit through reform) \u2192 moderate d. Regulatory authorities can enclose or allocate (institutional actors with arbitrage exit) \u2192 low d. The engine derives d automatically from beneficiary/victim declarations and exit options; the commentary reflects the structural rationale for each perspective's experienced extractiveness."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "overfishing_north_atlantic",
+      "deforestation_commons",
+      "groundwater_depletion",
+      "atmospheric_carbon_accumulation"
+    ],
+    "dual_formulation_note": "The tragedy of the commons is a structural family with domain-specific instantiations (fisheries, forests, water, atmosphere). Each instantiation has its own extractiveness and institutional context. The generic constraint story applies the abstract mechanism; domain stories (overfishing, deforestation) apply it to specific resources. All family members share the tangled_rope/snare hybrid structure and the false mountain risk."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

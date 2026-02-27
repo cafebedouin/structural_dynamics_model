@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "pfas_regulatory_framework",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pfas"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Permissive Regulatory Framework for PFAS Chemicals in Consumer Products",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": false,
+    "victims": [
+      "general_population",
+      "low_income_consumers",
+      "vulnerable_subpopulations",
+      "environmental_commons"
+    ],
+    "beneficiaries": [
+      "chemical_manufacturers",
+      "food_packaging_industry",
+      "industrial_fluoropolymer_users"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exposed Consumer",
+      "comment": "PERSPECTIVE 1: GENERAL POPULATION (SNARE) \u2014 Consumers cannot avoid PFAS in food, water, and household products. No exit option exists; costs are borne involuntarily through bioaccumulation and documented health risks. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.92. Trapped extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Environmental and Future Generations",
+      "comment": "PERSPECTIVE 2: ENVIRONMENTAL COMMONS / FUTURE GENERATIONS (SNARE) \u2014 PFAS persist indefinitely in water systems and soil; bioaccumulate up food chains. Future populations inherit contamination with no ability to reverse it. No coordination function; pure extraction across generations. d\u22480.98, f(d)\u22481.45, \u03c3=1.2 \u2192 \u03c7\u22480.95. Maximum extraction across time."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Chemical Manufacturers",
+      "comment": "PERSPECTIVE 3: CHEMICAL MANUFACTURERS (ROPE) \u2014 Manufacturers benefit from permissive regulatory environment enabling cost-free externalization of health risks. Experience the constraint as a coordination mechanism (shared regulatory leniency across jurisdictions prevents costly compliance races). d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.10. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Food Packaging Industry",
+      "comment": "PERSPECTIVE 4: FOOD PACKAGING MANUFACTURERS (ROPE) \u2014 Regulatory permissiveness enables cost-minimization through PFAS-based coatings (nonstick, grease-resistant) without bearing externalized health costs. Strong arbitrage exit: can move production to less regulated jurisdictions. Benefits from regulatory coordination (fragmented standards prevent unified supply-chain compliance). d\u22480.08, f(d)\u2248-0.11, \u03c3=0.9 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Low-Income and Environmental Justice Communities",
+      "comment": "PERSPECTIVE 5: LOW-INCOME / ENVIRONMENTAL JUSTICE COMMUNITIES (SNARE) \u2014 Disproportionately exposed through contaminated water supplies, proximity to industrial facilities, dietary dependence on cheaper packaged foods with PFAS-laden packaging. Cannot exit; can organize collectively but individual exit is resource-constrained. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.95. High extraction with some latent coordination capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Environmental and Health Regulatory Agencies",
+      "comment": "PERSPECTIVE 6: EPA / HEALTH AGENCIES (TANGLED ROPE) \u2014 Agencies experience dual mandate: protect public health (requires PFAS restrictions) but also enable industrial commerce (resists restrictions). Constrained by political capture and resource limitations. Both coordinate (provide industry legal certainty) and extract (delay standards despite health evidence). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.51. Mixed function; nominally independent but structurally captured."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW (SNARE REVEALED AS SNARE) \u2014 Temptation exists to naturalize this as inevitable: 'chemicals have always posed regulatory delays; risk-benefit tradeoffs are inherent to industrial society.' But structural data (high extractiveness, high suppression, moderate theater, explicit victim/beneficiary split) contradicts the mountain classification. The analytical observer's role is to recognize this as a false summit: regulatory permissiveness is not a natural law but an institutionalized snare maintained by regulatory capture, industry lobbying, and cost-externalization mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "safe_exposure_threshold",
+      "question": "Is there a safe exposure threshold for PFAS, or is the precautionary principle the appropriate epistemic framework?",
+      "resolution_mechanism": "Longitudinal epidemiological studies at varying exposure levels; molecular mechanism research on PFAS bioaccumulation and organ-specific toxicity; retrospective analysis of exposure-outcome associations",
+      "impact": "If safe threshold exists: regulatory delay is justified pending data. If linear/nonlinear toxicity at all levels: delay causes measurable harm. Classification shifts from snare (if threshold exists, rational debate) to snare (if precautionary principle applies, suppression of evidence is extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether a safe exposure threshold for PFAS exists or precautionary principle applies"
+    },
+    {
+      "id": "regulatory_capture_mechanisms",
+      "question": "To what extent is permissive PFAS regulation the result of deliberate industry capture vs. genuine scientific uncertainty?",
+      "resolution_mechanism": "Document analysis of EPA rulemaking dockets; financial tracking of industry lobbying expenditures; interviews with agency scientists about internal pressure; comparison of regulatory stringency across jurisdictions with different capture risk profiles (EU vs US)",
+      "impact": "If capture-driven: snare classification is correct; suppression is willful. If uncertainty-driven: classification might shift toward scaffold (temporary coordination mechanism pending data). If mixed: snare with partial justification for delay.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which permissive regulation results from regulatory capture vs scientific uncertainty"
+    },
+    {
+      "id": "alternative_chemistry_feasibility",
+      "question": "Are viable non-PFAS alternatives available for food packaging applications, and at what cost premium?",
+      "resolution_mechanism": "Life-cycle assessment of alternative coatings; market research on adoption barriers and cost delta; pilot studies of consumer acceptance of alternative-coated packaging",
+      "impact": "If low-cost alternatives available: delay is pure extraction, no coordination function. If alternatives nonexistent or prohibitively expensive: regulation involves genuine industrial adaptation cost, and the snare has a coordination dimension (industries require transition time). Classification might shift to tangled_rope if true transition costs exist.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility and cost of non-PFAS alternatives for food packaging"
+    },
+    {
+      "id": "international_regulatory_asymmetry",
+      "question": "Are multinational companies deliberately maintaining PFAS use in markets with permissive regulation while phasing it out in stricter jurisdictions?",
+      "resolution_mechanism": "Comparative product analysis (same brand, different markets); supply chain audit; corporate disclosure of transition timelines by jurisdiction; patent and R&D investment tracking",
+      "impact": "If asymmetry confirmed: regulatory capture is deliberate and strategic; snare classification is reinforced. Manufacturers knowingly maintain higher-risk products in permissive markets. If no asymmetry: companies treat PFAS globally and permissive regulation is incidental benefit, not targeted capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether companies maintain PFAS in permissive markets while phasing out elsewhere"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The PFAS regulatory framework represents a canonical snare: despite decades of evidence linking per- and polyfluoroalkyl substances ('forever chemicals') to cancer, immune system suppression, thyroid disease, and kidney damage, these chemicals remain legal and prevalent in consumer products, particularly food packaging. The constraint exhibits textbook extraction mechanics: chemical manufacturers and food packaging companies benefit from regulatory permissiveness that externalizes health costs onto populations with no exit option. The suppression function is high (regulatory delay despite available evidence, industry lobbying against restrictions, fragmented international standards preventing unified supply-chain compliance). The theater ratio has risen over time as regulatory agencies perform precaution through slow rulemaking processes while actual exposure continues. The most revealing feature is the asymmetry: in the European Union, PFAS restrictions are advancing (precautionary principle applied); in the United States, the same chemicals remain largely unrestricted despite identical epidemiological evidence. This geographic variance reveals that the delay is not a natural consequence of scientific uncertainty but a contingent institutional choice driven by regulatory capture and cost-externalization mechanisms.",
+    "key_agents": [
+      "General Population: Primary victim (powerless/trapped) \u2014 involuntary exposure through food, water, household products; no exit option; bioaccumulation over lifetime",
+      "Low-Income and Environmental Justice Communities: Primary victims (moderate/constrained) \u2014 disproportionate exposure through contaminated water supplies and dietary dependence on cheaper packaged foods; can organize but individual exit is resource-constrained",
+      "Chemical Manufacturers (3M, DuPont/Chemours, Arkema): Primary beneficiaries (institutional/arbitrage) \u2014 profit from permissive regulatory environment enabling cost-free externalization of health risks",
+      "Food Packaging Industry: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from PFAS-based coatings (nonstick, grease-resistant) without bearing health costs; can arbitrage to less regulated jurisdictions",
+      "EPA and Health Regulatory Agencies: Structurally captured actors (organized/constrained) \u2014 nominally independent but constrained by political pressure, industry lobbying, and resource limitations; experience dual mandate conflict",
+      "Environmental Commons and Future Generations: Powerless victims (powerless/trapped) \u2014 inherit persistent contamination; PFAS do not degrade; bioaccumulation continues across generations"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High but not maximum. Chemical manufacturers capture substantial value through avoided compliance costs and market concentration (few viable PFAS replacements). The extraction is not as severe as the most predatory snares (0.90+) because the harm, while severe, operates through externalization rather than direct coercion. Victims cannot see the extraction mechanism (PFAS is invisible in food); suppression is achieved through regulatory opacity, not explicit threat. Suppression (0.72): High. Multiple suppression mechanisms operate: (1) regulatory capture \u2014 industry lobbying delays rulemaking despite scientific evidence; (2) fragmented international standards \u2014 lack of unified restriction enables arbitrage; (3) scientific uncertainty theater \u2014 agencies cite need for 'more research' despite available epidemiological data; (4) information asymmetry \u2014 consumers cannot assess PFAS content in products. The suppression is not total (some jurisdictions restrict PFAS; some scientists publish freely), but barriers to exit are substantial. Theater ratio (0.65): Moderate-high. EPA performs precaution through slow rulemaking (public comments, peer review delays) while actual exposure continues. Agencies produce risk assessments that conclude PFAS poses risks but recommend continued monitoring rather than restriction. The performative component has increased over time as regulatory agencies have become more sophisticated at appearing cautious while maintaining the status quo. The time series shows extractiveness rising (0.45\u21920.68) as awareness grew but restrictions lagged, and theater ratio rising (0.48\u21920.65) as agencies perfected the appearance of prudence.",
+    "perspectival_gap": "The snare classification is robust across perspectives because the structural asymmetry is stark. The beneficiary (manufacturers) sees coordination and arbitrage. The powerless victims see pure extraction with no self-correction mechanism. The organizational victims (environmental agencies) see a mixed constraint: they are nominally tasked with protecting health but structurally constrained to enable industrial commerce \u2014 they experience the snare as a mandate conflict rather than a direct extraction. The false natural law (mountain) perspective \u2014 'chemical regulation always has delays; risk-benefit tradeoffs are inherent' \u2014 is precisely the frame that the snare uses to disguise extraction as inevitability. The analytical observer must recognize this frame as dangerous: the delay is not inherent to science but to political economy.",
+    "directionality_logic": "General population: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Involuntary exposure with no exit option produces maximum directionality toward extraction. Low-income communities: Victim + constrained \u2192 d\u22480.92, f(d)\u22481.40. Can organize collectively but face resource barriers to individual exit (cannot afford uncontaminated products, face geographic constraints on water sources). Chemical manufacturers: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiaries; can move operations to less regulated jurisdictions if threatened. Food packaging industry: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Benefits from regulatory permissiveness; can invest in PFAS-free alternatives if forced but benefits from delay. EPA agencies: Actors in tangled role (organized/constrained) \u2192 d\u22480.55, f(d)\u22480.75. Caught between public health mandate and industrial enablement; constrained by political pressure and resource limits; both participate in suppression (slow rulemaking) and coordination (provide industry certainty). Future generations: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.45. PFAS persists indefinitely; no ability to reverse or exit; maximum structural extraction across time.",
+    "mandatrophy_analysis": "Mandatrophy resolved through explicit structural analysis. The temptation exists to classify this as tangled_rope (coordination function: industries require regulatory stability for capital planning) or even scaffold (temporary problem being solved by emerging PFAS-free alternatives). These frames are false because: (1) Coordination function is one-directional (benefits manufacturers, not victims). True coordination requires reciprocal benefit. Manufacturers gain certainty; consumers gain nothing except continued exposure. (2) The 'sunset' to PFAS-free alternatives is not happening through regulatory mechanism but only where jurisdictions (EU) override the permissive frame. In permissive jurisdictions, the transition is indefinitely delayed. (3) The theatrical performance of precaution (slow rulemaking, peer review, 'more research needed') is not a legitimate deliberative process but a suppression mechanism that delays restrictions while exposure continues. The snare classification holds because extractiveness (0.68) and suppression (0.72) meet the snare thresholds. The beneficiary/victim asymmetry is absolute: one group benefits from regulatory leniency; another bears all health costs. This is the signature of a snare, not a hybrid form."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "water_contamination_commons",
+      "food_supply_bioaccumulation",
+      "occupational_fluoropolymer_exposure"
+    ],
+    "dual_formulation_note": "PFAS regulatory permissiveness is a single structural constraint with multiple observable manifestations (presence in food packaging, presence in water, presence in household products). All observables yield consistent \u03b5\u22480.68, confirming this is one snare, not multiple constraints. The \u03b5-invariance principle is satisfied: whether measured via food exposure, water contamination, or product labeling, the extraction mechanism (regulatory capture enabling cost externalization) remains constant."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

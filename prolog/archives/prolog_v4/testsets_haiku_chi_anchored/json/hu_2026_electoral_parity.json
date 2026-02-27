@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "hu_2026_electoral_parity",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hu_2026"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 2026 Hungarian Mixed-Member Majoritarian 'Inertia'",
+    "topic_domain": "political/electoral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_governing_coalition",
+      "major_party_apparatus"
+    ],
+    "victims": [
+      "smaller_opposition_parties",
+      "independent_candidates",
+      "proportional_representation_advocates"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Minor Opposition Party",
+      "comment": "PERSPECTIVE 1: MINOR OPPOSITION PARTY (SNARE) \u2014 Trapped within the electoral system. A party with 8-12% national support cannot coordinate into list placement due to constituency fragmentation. The mixed-member model compounds this: their constituency votes are swept back to national lists controlled by major parties. No exit option exists except to merge with larger parties (exit from political autonomy). d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Independent Candidate Pool",
+      "comment": "PERSPECTIVE 2: INDEPENDENT CANDIDATES (TANGLED ROPE) \u2014 The system offers coordination benefit: independent candidates can run in constituencies without party overhead. But extraction is severe: winning an independent constituency seat triggers winner-compensation \u2014 the vote is counted again in national lists, typically benefiting the incumbent majority that shaped the rule. Constrained because independence is difficult to maintain across 199 constituencies; organized independents face coordination problems. d\u22480.78, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Governing Coalition",
+      "comment": "PERSPECTIVE 3: INCUMBENT GOVERNING COALITION (ROPE) \u2014 Experiences the mixed-member system as pure coordination: the winner-compensation rule amplifies their constituency victories into national list presence, converting local wins into parliament seats without additional campaigning. They can arbitrage between district strategy and national messaging. The rule was designed by their legal architects; they experience it as enabling their preferred coordination structure. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Democratic Reform Coalition (Fidesz-Opposition Overlap)",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC REFORM COALITION (TANGLED ROPE) \u2014 Organized actors within both government and opposition recognize the system as a hybrid: it does coordinate parliamentary representation (solve the 'what does a mixed system do?' problem), but the specific implementation (winner-compensation favoring incumbents) extracts from challengers. Reform movements in Hungary and EU-level observers see the rule as enforceable but contested \u2014 it requires active defense (constitutional amendments, parliament supermajorities) to maintain. Some major opposition parties have mobile options (threat to withdraw cooperation, coalitional restructuring), giving them exit capacity that minor parties lack. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Commission & Constitutional Court",
+      "comment": "PERSPECTIVE 5: ELECTORAL COMMISSION & CONSTITUTIONAL COURT (PITON) \u2014 The institutional machinery that administers the rule experiences it as largely performative theater. The mixed-member system's stated purpose (combine local representation with proportionality) is undermined by the winner-compensation rule, which breaks proportionality. The courts defend the rule's constitutionality, but the defense is theater: the rule is sustained by institutional inertia and supermajority control, not by genuine functional necessity. If the governing coalition lost its supermajority, the rule would be vulnerable to legal challenge (asymmetric institutional capture). theater_ratio=0.58 reflects that institutional defense requires constant constitutional narrative maintenance (speeches about 'local representation') despite the proportionality dysfunction. d\u22480.05, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The EU Democratic Standards Coalition",
+      "comment": "PERSPECTIVE 6: EU DEMOCRATIC STANDARDS COALITION (SCAFFOLD) \u2014 European Commission, Parliament, and civil society actors see the Hungarian electoral rule as a temporary constraint subject to external pressure and generational turnover. The rule persists because the governing coalition has supermajority control, but EU directives on electoral transparency, campaign financing, and proportional representation create structural incentives for sunset. The constraint has an implicit sunset: either democratic reversal (opposition wins 2/3 majority and repeals it) or EU structural reform (harmonization pressure). Constrained because EU institutions can apply diplomatic pressure but lack direct enforcement; organized because coalitional action (Denmark, Slovakia, Czech Republic) creates veto threats. d\u22480.42, f(d)\u22480.42, \u03c3=1.1 \u2192 \u03c7\u22480.24."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Formal Inevitability View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT CANDIDATE) \u2014 A civilizational-scope analytical view might argue that all mixed-member systems face the 'compensation vs. proportionality tradeoff' as an inherent mathematical constraint: you cannot perfectly combine single-member districts with proportional outcomes without some tension. From this view, the winner-compensation rule is a natural law of electoral geometry, not a contingent institutional choice. However, the structural data contradicts this: extractiveness=0.52, suppression=0.68 indicate deliberate asymmetry, not mathematical inevitability. Comparative analysis of German mixed-member systems (negative compensation) or New Zealand's system (proportionality-weighted) shows the rule is chosen, not forced. This perspective risks false summit: naturalizing a contestable institutional design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "winner_compensation_necessity",
+      "question": "Is winner-compensation mathematically necessary for mixed-member coherence, or is it a contingent design choice that could be replaced by negative compensation or proportionality weighting?",
+      "resolution_mechanism": "Comparative analysis: examine German (negative compensation), New Zealand (proportionality-weighted), and Japanese (parallel) mixed systems. If alternative designs are mathematically equivalent and empirically stable, then winner-compensation is not necessary \u2014 it is an extraction mechanism disguised as coordination.",
+      "impact": "If necessary: mountain classification gains credibility; the rule is a structural limit. If contingent: snare and tangled-rope classifications are confirmed; the rule is designed extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether winner-compensation is a mathematical necessity or a design choice"
+    },
+    {
+      "id": "supermajority_indefinite_control",
+      "question": "Will the Fidesz-led governing coalition retain supermajority control indefinitely, or is a parliamentary reversal plausible within a 10-20 year horizon?",
+      "resolution_mechanism": "Historical trend analysis: voter preference drift, generational turnover, coalition stability. Comparison to other post-communist democracies that reversed supermajority control (Poland 2015, Czech Republic 2021).",
+      "impact": "If supermajority is indefinite: the constraint persists as a structural feature (snare for minors, tangled-rope for organized opposition). If reversal is plausible: the constraint is temporary (scaffold classification becomes dominant).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Duration of governing supermajority control and reversal probability"
+    },
+    {
+      "id": "eu_structural_incentive_force",
+      "question": "Do EU directives on electoral transparency and proportionality represent genuine structural pressure that will force Hungarian reform, or are they performative diplomatic pressure without enforcement teeth?",
+      "resolution_mechanism": "Track EU sanctions, budget conditionality, and legal proceedings against Hungary. Observe whether other post-communist democracies respond to similar pressure. Identify the cost to Hungary of non-compliance (EU fund access, diplomatic standing) vs. the cost of rule reversal (supermajority loss of advantage).",
+      "impact": "If structural pressure is real: EU-level scaffold perspective becomes dominant; sunset is plausible within 10 years. If performative: EU pressure is theater; the constraint persists indefinitely as snare/tangled-rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness and enforcement credibility of EU democratic standards pressure"
+    },
+    {
+      "id": "minor_party_coalition_capacity",
+      "question": "Can minor parties and independents organize into coordinated coalitions (pre-electoral blocs, vote-pooling agreements) that overcome the winner-compensation disadvantage?",
+      "resolution_mechanism": "Historical analysis: did opposition coalitions in 2022, 2026, 2030 elections successfully mitigate the rule's extraction? Measure whether opposition vote-pooling (e.g., Fidesz vs. United Opposition) changed the rule's effective extractiveness.",
+      "impact": "If coalition capacity is high: minor parties and organized opposition have a constrained exit option; classification shifts from snare/tangled-rope to scaffold or lighter rope. If coalition capacity is low: the rule remains snare for fragmented opposition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minor party coalitional organizing capacity under the electoral rule"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 2014,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The 2026 Hungarian electoral system embodies a structural tension between its stated coordination function (combining local constituency representation with national party mandates via mixed-member design) and its actual extraction mechanism (winner-compensation rule that systematically advantages the governing coalition and disadvantages smaller opposition parties and independents). The 199-seat parliament uses a winner-compensated model where votes from constituency victors are added back to national lists, creating an asymmetry: when incumbent-aligned candidates win districts, their votes are counted twice (constituency victory + national list contribution); when opposition or independent candidates win districts, the same votes flow to national lists controlled by the incumbent coalition, negating the opposition victory. The constraint has been in place since 2011 under Fidesz supermajority control and has intensified through successive constitutional amendments. Extractiveness has risen from 0.38 (2014, initial design phase) to 0.52 (2026, after consolidation through legal weaponization), reflecting accumulated institutional accumulation of extraction. Theater ratio has risen from 0.42 to 0.58, indicating increasing reliance on performative constitutional defense narratives ('local representation protection') to maintain the rule against growing opposition and EU pressure.",
+    "key_agents": [
+      "Incumbent Governing Coalition (Fidesz & allies): Primary beneficiary (institutional/arbitrage) \u2014 controls supermajority, designed the rule, benefits from winner-compensation amplification",
+      "Minor Opposition Parties (Democratic Coalition, Socialist Party, Jobbik splinters): Primary victim (powerless/trapped) \u2014 8-12% national support cannot coordinate into list placement; constituency wins are swept into incumbent lists",
+      "Independent Candidates: Secondary victim (moderate/constrained) \u2014 can run without party overhead but lose constituency victories to compensation rule",
+      "Organized Democratic Reform Coalition (United Opposition, civil society, EU pressure): Organized agent (organized/mobile) \u2014 sees the rule as extractive and contestable; has mobile options (legislative reversal if they win supermajority, EU-level diplomatic pressure)",
+      "Electoral Commission & Constitutional Court: Institutional actor (institutional/arbitrage) \u2014 administers and defends the rule through constitutional narrative maintenance; theater is high because proportionality claims conflict with actual design",
+      "EU Democratic Standards Coalition: Continental observer (organized/constrained) \u2014 applies structural pressure via directives on transparency and proportionality; constrained by enforcement limitations but creating generational sunset incentive"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The winner-compensation rule creates asymmetric amplification: incumbent-aligned wins count twice, opposition wins are redistributed. Extractiveness is not at snare levels (0.66+) because opposition coalitions in 2022 and 2026 elections demonstrated partial mitigation through vote-pooling, and because EU pressure creates a realistic sunset pathway. The value reflects the rule's structural bite: it systematically redistributes representation from opposition to government. Suppression (0.68): High. Multiple barriers enforce the rule: (1) constitutional entrenchment (requires 2/3 supermajority to change, held by beneficiaries), (2) electoral commission interpretation of compensation logic, (3) legal defense through constitutional court, (4) campaign finance advantages that flow from incumbent list control. Opposition suppression is real but not total \u2014 civil society mobilization and EU directives create countervailing pressure. Theater ratio (0.58): Moderate-high. The institutional defense of the rule relies substantially on performative constitutional narratives ('protecting local representation,' 'preventing party oligopoly') that mask the extraction mechanism. But the theater is not maximal (0.70+) because the rule's extraction function is widely understood; legal scholars, opposition parties, and EU analysts openly describe it as a compensation mechanism that advantages the incumbent. Suppression and theater are rising over the interval, indicating institutional capture consolidation.",
+    "perspectival_gap": "The constraint exhibits three distinct structural readings from different agent positions. The incumbent coalition sees a coordination mechanism (Rope) \u2014 they experience the rule as enabling their preferred electoral strategy without additional effort. Minor opposition parties see pure extraction (Snare) \u2014 they cannot organize their 8-12% support into parliamentary representation because the rule systematically redistributes their votes. Organized opposition and EU observers see a temporary hybrid (Tangled Rope / Scaffold) \u2014 they recognize both the coordination function (mixed-member design does solve a real problem: balancing district and national representation) and the extraction mechanism (winner-compensation tilts the balance), and they see realistic pathways to reversal (electoral supermajority loss, EU structural pressure, generational turnover). The analytical observer risks a false summit (Mountain) \u2014 naturalizing the rule as an inherent feature of mixed-member systems \u2014 but comparative analysis of German and New Zealand systems falsifies this: winner-compensation is a design choice, not a mathematical necessity.",
+    "directionality_logic": "Incumbent governing coalition: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; low effective extraction from their perspective. Minor opposition parties: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Highest extraction; cannot exit without merging (surrender autonomy). Independent candidates: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.14. High extraction; constrained exit (can run but victories are redistributed). Organized opposition/Democratic reform: Victim + mobile (due to coalition capacity and EU leverage) \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction; mobile because supermajority reversal and EU pressure represent credible exit pathways. Electoral Commission: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.11. Neutral beneficiary; administers the rule. EU coalition: Organized + constrained \u2192 d\u22480.42, f(d)\u22480.42. Constrained by enforcement limits but mobile through diplomatic pressure; lower effective extraction because they are applying pressure, not experiencing it.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through a family of six structurally distinct readings. The incumbent coalition's Rope is genuine: they are solving a real coordination problem (how to translate district and national support into proportional parliamentary presence) via their preferred mechanism. The minor party's Snare is genuine: the same rule extracts from their representation. The organized opposition's Tangled Rope is genuine: they experience both coordination benefit (the mixed-member framework works) and extraction (the winner-compensation tilt). The Scaffold perspective is genuine: EU pressure and electoral reversibility create a realistic sunset pathway. The Electoral Commission's Piton is genuine: institutional defense has become largely performative because the rule's extraction is widely understood and contested. The analytical observer's false summit is genuine: naturalizing the rule as inevitable when it is actually contingent. The mandatrophy is NOT 'which type is correct?' but rather 'what level of analysis are we at?' The ruling coalition experiences coordination; the opposition experiences extraction; EU observers experience a temporary institutional arrangement subject to external pressure. All six readings are structurally valid from their respective vantage points. The classification system's job is to disambiguate these readings, not to collapse them into a single 'true' type."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "hungarian_constitutional_court_capture",
+      "post_communist_party_system_fragmentation"
+    ],
+    "dual_formulation_note": "The Hungarian electoral rule is downstream of the broader Hungarian constitutional capture mechanism (2011 supermajority) and upstream of party system fragmentation (2022-2026 opposition coalitional responses). It represents a specific implementation of constitutional control within the post-communist institutional context."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

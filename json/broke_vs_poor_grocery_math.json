@@ -2,22 +2,22 @@
   "header": {
     "constraint_id": "broke_vs_poor_grocery_math",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bvpgm"
   },
   "base_properties": {
-    "extractiveness": 0.75,
-    "suppression": 0.8,
-    "theater_ratio": 0.1,
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
     "claimed_type": "snare",
     "human_readable": "The Cognitive Load of Poverty (Grocery Math)",
     "topic_domain": "economic/social",
-    "requires_active_enforcement": true,
-    "beneficiaries": [
-      "capital_holders_and_employers"
-    ],
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
     "victims": [
-      "low_income_individuals"
+      "low_income_households",
+      "cognitive_capacity_poor"
     ],
     "mandatrophy_resolved": true
   },
@@ -25,122 +25,157 @@
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Individual in Poverty",
-      "comment": "PERSPECTIVE 1: THE INDIVIDUAL (SNARE) — Experiences the constraint as a constant, coercive extraction of cognitive resources. There is no option to not perform the calculation; failure results in immediate material lack and social humiliation. Exit is impossible without a fundamental change in economic status. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.85."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Middle-Class Observer",
-      "comment": "PERSPECTIVE 2: THE MIDDLE-CLASS OBSERVER (MOUNTAIN) — Lacking direct experience, this observer naturalizes the constraint as an unfortunate but fixed feature of the economic landscape ('the poor will always be with us'). The coercive mechanism is invisible, appearing as an immutable law rather than a contingent state. The engine will flag this as a false summit."
+      "label": "The Grocery Shopper (Low-Income Household)",
+      "comment": "PERSPECTIVE 1: LOW-INCOME GROCERY SHOPPER (SNARE) \u2014 No exit from mandatory cost calculation; every shopping trip requires real-time mental arithmetic to avoid overdraft, shame, or impossible choices. Suppression is total: no viable alternative to shopping for food, no way to avoid the cognitive tax. Extractiveness is experienced maximally \u2014 the constraint extracts cognitive capacity that could be applied to job training, child development, or financial planning."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Systemic Beneficiary",
-      "comment": "PERSPECTIVE 3: THE SYSTEMIC BENEFICIARY (ROPE) — From the perspective of capital, this cognitive tax is a feature, not a bug. It appears as a coordination mechanism that ensures labor discipline and reduces the capacity for long-term planning or collective action among the workforce. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.11. The negative extraction indicates a net subsidy."
+      "spatial_scope": "regional",
+      "label": "The Retail Grocer (Merchant)",
+      "comment": "PERSPECTIVE 2: RETAIL GROCER (ROPE) \u2014 Benefits from the constraint: item-by-item pricing (vs bulk discounts, vs transparent average-cost shopping) enables price discrimination and captures surplus from budget-constrained customers. Price variance across locations and timing creates arbitrage opportunities the grocer exploits but the poor customer cannot. Yet the grocer also sees the constraint as coordinating their supply chain and pricing system \u2014 they've internalized the constraint as a normal feature of retail operations. This perspective experiences the constraint as coordination (Rope) because the grocer has agency and benefits."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "organized",
+      "agent_power": "powerful",
       "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Social Worker or Activist",
-      "comment": "PERSPECTIVE 4: THE ACTIVIST (TANGLED ROPE) — Sees both the severe extraction (the Snare aspect) and attempts to build coordination solutions (the Rope aspect) like benefits counseling, financial literacy programs, and mutual aid. They are entangled in a system that has both coercive and (potentially) cooperative elements. d≈0.55, f(d)≈0.75, σ=0.9 → χ≈0.51."
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Affluent Household",
+      "comment": "PERSPECTIVE 3: AFFLUENT HOUSEHOLD (TANGLED ROPE) \u2014 Experiences grocery math as optional, not mandatory. Can afford to not calculate (use credit, don't check balances, buy premium convenience items). But still benefits from item-by-item pricing for purchasing optimization. Also bears a hidden cost: the cognitive framing of 'poor shopping' vs 'normal shopping' creates social distance and stigma, which maintains the constraint's psychological force. Moderate extraction because the affluent have exit options (abstention from counting, bulk purchases, online shopping with cart visibility) but also experience some mild benefit (fine-tuning their budget)."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Ideology (Efficient Pricing)",
+      "comment": "PERSPECTIVE 4: MARKET IDEOLOGY / EFFICIENT PRICING (PITON) \u2014 The constraint is justified as 'transparent, individual-choice-respecting retail pricing' \u2014 a good coordination mechanism (Rope). But empirical evidence shows that item-by-item pricing, while efficient for aggregate markets, extracts disproportionately from cognitively constrained actors and creates deadweight loss (bad decisions due to calculation errors, skipped nutrition, rushed purchases). The functional justification (market efficiency) has largely atrophied; the constraint persists through institutional inertia and vendor lock-in. Theater ratio (0.35) is moderate \u2014 some genuine coordination function remains, but much performative justification obscures the extraction mechanism. This is a piton: the original purpose (efficient market discovery) has been superseded by digital pricing tools, yet the constraint persists because alternatives would require institutional redesign."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (SNARE) — The analyst sees the full structure: high base extraction of a non-financial resource (attention), high suppression of alternatives, and an asymmetric distribution of costs and benefits. The lack of a genuine coordination function for the victim confirms the Snare classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.04."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Cognitive Bottleneck View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / COGNITIVE BOTTLENECK (MOUNTAIN) \u2014 From a universal, civilizational perspective, there is an irreducible cognitive load to managing scarce resources: any finite being with limited funds must perform *some* mental accounting to avoid ruin. The constraint appears to be a natural law of scarcity economics. However, the analytical observer recognizes that this is a false summit. The magnitude of the load (and its behavioral consequences) is contingent on the choice of retail structure. Real-time individual item enumeration vs. batch shopping with pre-set budgets vs. cooperative bulk purchasing vs. algorithmic shopping assistants are all technologically feasible. The 'mountain' framing naturalizes what is actually a vendor and institutional design choice."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Social Safety Net (Temporary Support Programs)",
+      "comment": "PERSPECTIVE 6: SOCIAL SAFETY NET / POLICY INTERVENTION (SCAFFOLD) \u2014 Programs like SNAP (food stamps with pre-set benefit limits), community food banks, and subsidized cooperative grocery models introduce temporary support mechanisms that reduce cognitive load: fixed monthly budgets, community pooling, and opt-out pricing. These are explicitly scaffolded as temporary or voluntary. However, the scaffold has not yet displaced the snare \u2014 existing retail infrastructure still imposes the grocery math calculation even for beneficiaries. The sunset logic is present (policy makers envision these programs as transitional until broader economic mobility improves) but the actual functional displacement is partial. Extraction \u03c7 is moderate in this perspective because constrained organizational actors can push back (advocacy, policy change, cooperative formation) but cannot simply exit the market system."
     }
   ],
   "omegas": [
     {
-      "id": "systemic_benefit_vs_emergent_property",
-      "question": "Is the cognitive tax a functional component that benefits capital by suppressing worker agency, or a non-functional, emergent property of economic inequality?",
-      "resolution_mechanism": "Comparative economic analysis of societies with different welfare and wage structures, correlating cognitive load metrics with rates of labor organization and political participation.",
-      "impact": "If functional, it's a highly stable Snare. If emergent, it's a Snare that could potentially be resolved through targeted policy without threatening the core economic structure.",
+      "id": "cognitive_load_quantification",
+      "question": "What is the actual magnitude of cognitive load imposed by grocery math, and how does it vary with budget constraint severity?",
+      "resolution_mechanism": "Empirical measurement: eye-tracking studies during shopping, reaction-time tasks pre/post-shopping, error rates in budget calculations by income group, cortisol levels during shopping under budget pressure",
+      "impact": "If load is mild (< 5% of working memory): constraint is closer to Rope (acceptable coordination cost). If load is severe (> 20% of working memory): constraint is clearly Snare (extraction dominates).",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the cognitive tax is a functional feature or an emergent bug of the economic system."
+      "type_class": "empirical",
+      "description": "Magnitude of cognitive load from budget-constrained grocery shopping"
     },
     {
-      "id": "cognitive_vs_financial_extraction",
-      "question": "Is the primary harm the direct cognitive load itself, or the poor financial decisions made as a result of decision fatigue?",
-      "resolution_mechanism": "Longitudinal studies of low-income cohorts, measuring cognitive load against financial outcomes and decision quality over time.",
-      "impact": "If the harm is direct cognitive load, solutions must focus on reducing complexity (e.g., UBI). If the harm is poor decisions, solutions might focus on decision support tools (which could be another Snare).",
+      "id": "alternative_retail_sufficiency",
+      "question": "Would alternative retail structures (pre-packaged budget bundles, cooperative bulk pricing, algorithmic shopping assistants, transparent average-cost checkout) eliminate the grocery math constraint or merely shift its form?",
+      "resolution_mechanism": "Pilot programs testing alternative retail models with low-income populations; measurement of cognitive load, purchase satisfaction, and budget adherence under each model",
+      "impact": "If alternatives work: constraint is a design choice (snare), not a natural necessity (mountain). If alternatives fail: constraint may reflect deeper scarcity management problems (mountain candidates).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Distinguishing the direct harm of cognitive load from the indirect harm of poor decision-making."
+      "description": "Whether alternative retail structures can reduce cognitive load from budget constraints"
+    },
+    {
+      "id": "spillover_to_decision_making",
+      "question": "Does the cognitive load of grocery math actually impair decision-making quality in other domains (financial planning, job search, health behavior), or is the spillover effect modest?",
+      "resolution_mechanism": "Longitudinal studies measuring cognitive task performance, financial decision quality, and opportunity pursuit rates conditional on grocery math load; randomized interventions removing budget pressure and measuring spillover effects",
+      "impact": "If spillover is large: constraint extracts significant opportunity cost (snare is correct). If spillover is negligible: constraint's harm is localized (closer to Rope or Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether grocery math cognitive load impairs decision-making in other domains"
+    },
+    {
+      "id": "institutional_intent_vs_outcome",
+      "question": "Is the cognitive load a *side effect* of retail pricing (Rope with externality), an *enabling mechanism* for price discrimination (Snare by design), or an *inevitable artifact* of scarcity (Mountain)?",
+      "resolution_mechanism": "Historical analysis of retail technology adoption and pricing design choices; interviews with retail designers and economists about explicit vs. implicit intent; comparison of cognitive load across countries with different pricing regulations",
+      "impact": "If side effect: constraint may be remediable without major institutional change. If enabling mechanism: constraint is actively maintained (clear snare). If inevitable: constraint is harder to escape (mountain candidates).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether cognitive load from grocery math is side effect, design feature, or inevitable artifact"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.6
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.68
+      "time_point": 5,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.75
+      "time_point": 10,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.1
+      "time_point": 5,
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.1
+      "time_point": 10,
+      "value": 0.35
     }
   ],
   "interval": {
-    "start": 1974,
-    "end": 2024
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint models the severe cognitive load imposed by poverty, using 'grocery math' as a key example. Individuals with highly constrained budgets must maintain a running mental tally of their purchases to avoid the high cost of failure (inability to pay) at checkout. This is not a choice but a mandatory, attention-consuming task. The constraint extracts a non-financial resource—cognitive bandwidth—which has cascading effects on long-term planning, education, and civic engagement.",
+    "narrative_context": "The cognitive load of poverty\u2014exemplified by 'grocery math,' the mandatory real-time mental tallying of every item's cost to avoid exceeding available funds\u2014represents a structural constraint that extracts cognitive capacity from low-income households. This constraint operates across six distinct perspectives: a Snare for the shopper (powerless, trapped, no exit), a Rope for the grocer (institutional, arbitrage options, benefits from pricing structure), a Tangled Rope for the affluent (powerful, mobile, can exit but sometimes benefits from optimization), a Piton for market ideology (institutional, rationalizes the constraint as efficient pricing despite evidence of atrophy), a false Mountain for the analytical observer (risks naturalizing a design choice as inevitable scarcity), and a Scaffold for safety net programs (organized, constrained, temporary support without structural displacement). The constraint's extractiveness (0.58) reflects that the cognitive tax on the poor is real and severe, but is not as total as pure exploitation\u2014the shopper is still making choices, just under extreme constraint. The low theater ratio (0.35) indicates that grocery math is functionally real (not purely performative), distinguishing this from fully degraded pitons, but the historical data shows theater increasing as retail complexity grows and justifications become more rationalized. The constraint is mandatrophy-resolved through this multiperspectival analysis: it is not a coordination mechanism disguised as extraction (no hidden Rope underneath), nor is it an immutable law of scarcity (the mountain is false). It is a Snare maintained by institutional design choices in retail structure and validated by ideology that naturalizes those choices.",
     "key_agents": [
-      "Low-Income Individuals: Primary target (powerless/trapped) — bear the full cognitive cost.",
-      "Capital Holders and Employers: Indirect beneficiary (institutional/arbitrage) — benefit from a workforce that is too cognitively taxed for long-term planning or collective action.",
-      "Middle-Class Observer: Unaffected observer (moderate/mobile) — tends to naturalize the constraint as a 'Mountain'.",
-      "Social Worker/Activist: Organized agent (organized/constrained) — attempts to mitigate the extraction while being constrained by the system."
+      "Low-Income Households: Primary victim (powerless/trapped) \u2014 mandatory grocery math extraction; no exit from food purchasing; cognitive load spills over to other decision-making domains",
+      "Retail Grocers: Primary beneficiary (institutional/arbitrage) \u2014 profit from price discrimination enabled by item-by-item pricing; can exit the constraint (use technology, price uniformly) but choose not to",
+      "Affluent Households: Secondary actor (powerful/mobile) \u2014 can exit grocery math through abstention, bulk purchasing, or convenience; experience mild constraint but benefit from optimization options",
+      "Market Ideology / Efficient Pricing Doctrine: Institutional actor (institutional/arbitrage) \u2014 justifies item-by-item pricing as 'transparent, individual-choice respecting' (piton rationalization); functional purpose (market discovery) has atrophied",
+      "Social Safety Net Programs (SNAP, food banks, co-ops): Organized agent (organized/constrained) \u2014 provides temporary support (scaffold) but has not yet displaced the underlying retail constraint",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing a design choice (retail structure) as an immutable law of scarcity"
     ],
-    "logic_rationale": "Extractiveness (ε=0.75) is very high, representing the constant drain on finite cognitive resources, not a direct financial transfer. Suppression (0.80) is also very high because the alternative—not performing the mental calculation—is not viable and leads to immediate, severe consequences. The enforcement mechanism is the hard budget limit at the point of sale. Theater Ratio (0.10) is extremely low; this is a brutally functional and non-performative activity.",
-    "perspectival_gap": "The gap is profound. The individual experiencing the constraint lives inside a Snare. An outside observer with economic security sees a Mountain, naturalizing a social condition as an immutable law. The systemic beneficiary, who profits from a cognitively taxed populace, perceives a Rope—a market 'discipline' that coordinates behavior for their benefit. The analyst, seeing the full structure, confirms the Snare classification.",
-    "directionality_logic": "The directionality is clear. 'Low_income_individuals' are declared victims with 'trapped' exit options, leading to a derived directionality `d` near 1.0 and maximizing effective extraction (χ). 'Capital_holders_and_employers' are declared beneficiaries with 'arbitrage' exit options, leading to a `d` near 0.0 and a negative χ, indicating they receive a net subsidy from the constraint's existence.",
-    "mandatrophy_analysis": "This constraint is a classic example of a Snare that is frequently misidentified as a Mountain ('that's just life for poor people') or a matter of personal virtue/failure. By quantifying the extraction of a non-monetary resource (attention) and the high degree of coercion (suppression), the DR framework correctly identifies it as a Snare. It avoids the mandatrophy of blaming the victim by locating the coercive structure in the economic environment, not the individual's character."
+    "logic_rationale": "Extractiveness (0.58): Elevated, reflecting that grocery math imposes a genuine cognitive tax on budget-constrained actors. The value is not as high as pure predatory extraction (0.70+) because the constraint leaves shopper agency intact\u2014they can still optimize, compare, and make choices. The 0.58 value captures that the extraction is severe enough to impair other decision-making (opportunity cost) and creates barrier to upward mobility, but is not total enslavement. Historical progression from 0.35 to 0.58 reflects that retail complexity has increased (more SKUs, more pricing variations, more complex discount structures) without corresponding increases in shopper cognitive support\u2014extraction has intensified. Suppression (0.72): High. There is no viable exit from food shopping (biological necessity), no way to delegate the mental calculation without trusting someone else (social risk for poor households), and no institutional alternative that fully replaces the retail system (food banks and cooperatives are supplementary, not primary). The suppression captures that poor households face genuine lock-in. Theater ratio (0.35): Moderate, indicating that grocery math has real functional content (prices do vary, comparing is rational, the calculation does affect budget adherence) but also increasingly performative justification. The low theater distinguishes this from fully degraded pitons (like meaningless compliance rituals), but the ratio reflects that market efficiency ideology increasingly exceeds the actual coordination benefit.",
+    "perspectival_gap": "The constraint demonstrates a textbook perspectival gap between powerless and institutional actors. The shopper sees Snare (maximum extraction, no escape). The grocer sees Rope (coordination mechanism, profit opportunity). The gap derives from exit options: the shopper cannot exit; the grocer can exit any time but chooses not to (exit cost < benefit, so exit is voluntary). The affluent household sees a third perspective (Tangled Rope, mixed experience, exit available). The false Mountain from the analytical observer reveals how ideology can naturalize institutional design choices as laws of scarcity. The Scaffold from the policy perspective shows that alternative institutional structures (fixed-budget shopping, cooperative pricing, algorithmic assistance) exist and are partly implemented, but have not displaced the snare.",
+    "directionality_logic": "Directionality for the low-income shopper: d \u2248 0.95 (nearly full target). Powerless agent with trapped exit options and victim status (bears cognitive cost) yields maximum experienced extraction. The sigmoid f(d) converts this to highest effective extractiveness. Directionality for the grocer: d \u2248 0.05 (nearly full beneficiary). Institutional agent with arbitrage options and beneficiary status (profits from price structure) yields minimum or negative experienced extractiveness\u2014the grocer benefits. Directionality for the affluent household: d \u2248 0.50 (symmetric, mobile exit). Powerful agent with mobile exit options can experience the constraint as either beneficial (if they choose to optimize) or absent (if they choose to abstain). Directionality for market ideology: d \u2248 0.35 (moderate beneficiary with some cost). The ideology benefits from naturalizing the constraint but bears the cost of cognitive dissonance when reality contradicts the efficiency narrative\u2014piton classification reflects this inertial maintenance.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint is not mislabeled. It is genuinely a Snare from the perspective of the low-income household\u2014extractive (0.58), suppressive (0.72), with no coordination function that could justify calling it a Rope. The apparent coordination function (retail pricing discovers market equilibrium) is secondary to the extraction mechanism for the poorest actors. The constraint could theoretically be classified as a Tangled Rope if one emphasized the grocer's coordination benefit, but the victim group (low-income households) is so clearly powerless and trapped that snare is the authoritative classification. The mandatrophy resolution demonstrates that the constraint is not ambiguously hybrid\u2014it is a clear snare from the perspective of the agent bearing the actual cognitive cost. The piton perspective (market ideology) and the false mountain (scarcity naturalization) are important for understanding how the constraint is *justified*, not for classifying its actual structure. The constraint maintains its snare classification because the victims have no exit and the extraction is real, regardless of the rationalizations offered by other perspectives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "payday_lending_debt_cycle",
-      "food_deserts_and_nutrition"
-    ]
-  }
+      "poverty_trap_asset_accumulation",
+      "decision_fatigue_opportunity_cost",
+      "financial_literacy_investment_barrier"
+    ],
+    "dual_formulation_note": "The grocery math constraint is downstream of the broader poverty trap but represents a distinct structural constraint. The cognitive load is specifically generated by item-by-item retail pricing structure, not by scarcity alone. Alternative institutional structures (bulk cooperatives, fixed-budget assisted shopping, algorithmic carts) could reduce the constraint's extractiveness without changing the underlying scarcity condition. This decomposition separates the unavoidable cognitive load of resource scarcity (mountain) from the avoidable cognitive load of retail design choices (snare)."
+  },
+  "directionality_overrides": []
 }

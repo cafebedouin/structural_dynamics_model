@@ -2,25 +2,27 @@
   "header": {
     "constraint_id": "arg_ev_tariff",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arg_ev"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.3,
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "Argentine Tariff on Chinese Electric Vehicles",
     "topic_domain": "economic/political",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "argentine_domestic_auto_industry",
-      "argentine_government",
-      "western_ev_manufacturers"
+      "argentine_domestic_automakers",
+      "local_battery_producers",
+      "labor_unions_in_auto_sector"
     ],
     "victims": [
-      "argentine_consumers",
-      "chinese_ev_manufacturers"
+      "argentine_ev_consumers",
+      "regional_trade_integration",
+      "competing_south_american_markets"
     ]
   },
   "perspectives": [
@@ -29,132 +31,170 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "national",
-      "label": "The Argentine Consumer",
-      "comment": "PERSPECTIVE 1: ARGENTINE CONSUMER (SNARE) — Trapped within the national market, the consumer bears the full cost of the tariff through higher prices and reduced choice, with no ability to exit. The policy is pure extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Domestic Auto Industry",
-      "comment": "PERSPECTIVE 2: DOMESTIC AUTO INDUSTRY (ROPE) — For the protected domestic industry and its workers, the tariff is a pure coordination mechanism. It shields them from foreign competition, enabling their survival and growth. d≈0.30, f(d)≈0.20, σ=1.0 → χ≈0.13."
+      "spatial_scope": "local",
+      "label": "The Argentine EV Consumer",
+      "comment": "PERSPECTIVE 1: ARGENTINE EV CONSUMER (SNARE) \u2014 Trapped by tariff barriers. Domestic alternatives are limited and expensive. Cannot exit the constraint through import options without absorbing 35-40% tariff premiums. Bears extraction through reduced choice and elevated prices. No meaningful alternatives within local market."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Chinese EV Manufacturer",
-      "comment": "PERSPECTIVE 3: CHINESE EV MANUFACTURER (TANGLED ROPE) — As a multinational, the manufacturer sees an extractive barrier but is not trapped. It can redirect exports to other markets (mobile exit). The tariff is a coercive rule to be navigated, not an inescapable snare. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.90."
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Competing South American Markets",
+      "comment": "PERSPECTIVE 2: COMPETING SOUTH AMERICAN MARKETS (TANGLED ROPE) \u2014 Countries like Brazil and Chile have different tariff strategies and domestic EV policies. Argentina's tariffs create both coordination pressure (tariff harmonization would reduce arbitrage) and extraction (Chilean/Brazilian firms face barriers to Argentine market access). Constrained exit through MERCOSUR agreements and regional trade rules."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Argentine Government",
-      "comment": "PERSPECTIVE 4: ARGENTINE GOVERNMENT (ROPE) — As the enforcer and a beneficiary (via tariff revenue and political goals), the government experiences the policy as a low-extraction coordination tool for industrial and foreign policy. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08."
+      "label": "Argentine Domestic Automakers",
+      "comment": "PERSPECTIVE 3: ARGENTINE DOMESTIC AUTOMAKERS (ROPE) \u2014 Primary beneficiaries. Tariff protection solves a collective action problem: without tariffs, Chinese EV competition would force simultaneous price cuts across domestic producers. Tariffs coordinate on a higher price equilibrium and protect market share. Institutional actors with arbitrage options (can lobby for tariff rates, exemptions, or duration). Experience the constraint as coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Chinese EV Manufacturers",
+      "comment": "PERSPECTIVE 4: CHINESE EV MANUFACTURERS (ROPE) \u2014 Powerful institutional actor. Tariff is a coordination mechanism for them as well: it segments the Latin American market and prevents undercutting. Chinese firms can arbitrage by investing in Argentine manufacturing (tariff-exempt local production) or selling through joint ventures. This converts the tariff from extraction into coordination with arbitrage options."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "MERCOSUR Integration Framework",
+      "comment": "PERSPECTIVE 5: MERCOSUR INTEGRATION FRAMEWORK (SCAFFOLD) \u2014 Regional trade bloc sees tariff barriers as temporary friction in the path toward continental EV supply chain integration. Current tariffs are expected to sunset as: (a) Argentine domestic EV capacity scales, (b) regional harmonization agreements mature (targeting 2028-2032), (c) cross-border battery supply chains develop. Tariff framed as transitional protection while regional champions emerge. High suppression (tariff walls) but declining over horizon due to sunset expectations."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Global Free Trade Ideology",
+      "comment": "PERSPECTIVE 6: GLOBAL FREE TRADE IDEOLOGY (PITON) \u2014 The WTO framework and neoliberal economic consensus treat tariffs as inefficient distortions. Yet Argentina's tariff is justified through climate/industrial policy rhetoric (EV transition support). The performative element: tariff is framed as temporary climate policy but functions as permanent protectionism. Theater ratio reflects the gap between stated (climate/development) and actual (protection from competition) goals. This perspective sees the tariff as an inertial remnant of pre-globalization trade policy maintained by political will despite ideological opposition."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees both the claimed coordination function (protecting domestic industry) and the clear asymmetric extraction from consumers and foreign producers. This is the canonical view of a protectionist tariff. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
+      "label": "Analytical Observer (Global Value Chain)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (GLOBAL VALUE CHAIN) (TANGLED ROPE) \u2014 From a global supply chain perspective, Argentina's tariff both facilitates and extracts. It facilitates: incentivizes Chinese and other manufacturers to invest in Argentine assembly (creating local jobs, building supply chain links). It extracts: prevents consumers from accessing cheaper global alternatives, locks in price floors that benefit domestic and protected foreign producers, creates tariff rents that flow to government and incumbent firms. Effective extraction is substantial but mixed with genuine coordination functions (supply chain localization). Scope is global; exit is mobile but costly (manufacturing relocation has switching costs)."
     }
   ],
   "omegas": [
     {
-      "id": "domestic_industry_viability",
-      "question": "Will a protected domestic EV industry become genuinely competitive, or will the tariff merely subsidize inefficiency?",
-      "resolution_mechanism": "Longitudinal analysis of domestic EV production costs, quality, and innovation rates compared to global benchmarks over a 5-10 year period.",
-      "impact": "If viable, the 'coordination' function is real, supporting the Tangled Rope classification. If not, the coordination is illusory, and the constraint is functionally a pure Snare on consumers.",
+      "id": "tariff_duration_intent",
+      "question": "Is Argentina's tariff intended as permanent protection or transitional industrial policy?",
+      "resolution_mechanism": "Analysis of policy statements, legislative language, renewal thresholds, and comparative tariff rates over next 5-10 years. Cross-reference with similar tariffs in Brazil (temporary) vs Mexico (persistent).",
+      "impact": "If permanent: classification shifts from Scaffold toward Tangled Rope or Snare (extraction dominates). If transitional: Scaffold classification holds (sunset is real). Determines whether tariff is coordination or pure rent-seeking.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the protected domestic industry achieves long-term competitiveness."
+      "description": "Whether tariff is transitional or permanent protectionism"
     },
     {
-      "id": "consumer_welfare_impact",
-      "question": "What is the net economic effect when accounting for the deadweight loss to consumers versus the gains for domestic producers and government revenue?",
-      "resolution_mechanism": "Computable general equilibrium (CGE) modeling of the Argentine economy with and without the tariff.",
-      "impact": "A large net negative welfare impact would strengthen the Snare classification from most non-beneficiary perspectives. A net positive impact would support the Tangled Rope/Rope views.",
+      "id": "domestic_ev_capacity_buildout",
+      "question": "Will Argentine domestic EV manufacturing capacity actually scale to justify the tariff's stated purpose?",
+      "resolution_mechanism": "Tracking announced investments by domestic automakers (SEVEL, Renault) and new entrants. Measurement: production units, capital expenditure, timeline to capacity. Cross-check against regional demand forecasts.",
+      "impact": "If capacity scales: tariff functions as transitional protection (Scaffold becomes primary). If capacity stalls: tariff functions purely as rent extraction (Snare dominates for consumers). Determines whether beneficiaries' coordination story is structural or theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether domestic EV capacity will scale as claimed"
+    },
+    {
+      "id": "consumer_welfare_incidence",
+      "question": "Does tariff-induced price increase exceed willingness-to-pay for quality/availability improvements in domestic offerings?",
+      "resolution_mechanism": "Demand elasticity analysis; survey of consumer purchase intent at tariff-inclusive prices; market share tracking (domestic EVs vs imported vs substitutes like ICE vehicles).",
+      "impact": "If consumer surplus loss > producer surplus gain: extraction is unambiguous (Snare/Tangled Rope). If balanced: coordination narrative is credible. Determines the sign of directionality for consumers.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Net economic welfare effect of the tariff on the Argentine economy."
+      "description": "Whether tariff price increases exceed consumer willingness to pay"
     },
     {
-      "id": "geopolitical_motivation",
-      "question": "Is the primary driver of the tariff economic protectionism or geopolitical alignment with Western powers against China?",
-      "resolution_mechanism": "Analysis of diplomatic communications, timing of the policy relative to US/EU actions, and statements by policymakers.",
-      "impact": "If primarily geopolitical, the 'theater_ratio' is likely underestimated, and the constraint's function is partly performative signaling, which could shift it towards a Piton if the economic effects are negligible.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "The balance between economic protectionism and geopolitical signaling as the core motivation."
+      "id": "chinese_investment_substitution",
+      "question": "Will Chinese manufacturers invest in Argentine local assembly, transforming tariff from import barrier into FDI incentive?",
+      "resolution_mechanism": "Tracking announced Chinese manufacturing investments in Argentina, joint venture announcements, assembly plant construction timelines. Compare tariff level to estimated FDI breakeven point.",
+      "impact": "If significant Chinese investment: tariff converts from Snare (consumers trapped) to mixed Rope/Tangled Rope (local assembly enables access, tariff rents flow to government/Chinese investors). If no investment: tariff remains pure import barrier (Snare). Affects experienced extraction for consumers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Chinese firms invest in Argentine manufacturing"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.3
-    },
-    {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.6
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.62
+      "time_point": 3,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.65
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "Argentina's potential tariff on Chinese electric vehicles represents a classic case of protectionism, creating a structural conflict between different economic actors. The policy, mirroring moves by the US and EU, aims to foster a domestic EV industry by raising the cost of competitive imports. This directly extracts value from Argentine consumers and Chinese manufacturers, transferring it to the government (as revenue) and nascent domestic producers (as market protection). The constraint's classification varies dramatically depending on the observer's structural position in this value transfer.",
+    "narrative_context": "Argentina's contemplated tariff on Chinese electric vehicles represents a constraint that embodies tension between industrial protection and economic liberalization. Under Javier Milei's administration, which has rhetorically committed to free-market policies, the tariff proposal appears contradictory yet follows a logic common to developing economies seeking to build domestic manufacturing capacity. The constraint exhibits mixed coordination and extraction functions: it coordinates domestic automakers and labor unions around price floors and market protection, but extracts from consumers through reduced choice and elevated prices. The tariff's duration and intent are ambiguous \u2014 framed as transitional industrial policy supporting the EV transition, but potentially permanent rent-seeking disguised as climate policy. Chinese manufacturers face barriers but retain arbitrage options through local investment. Regional MERCOSUR partners experience both coordination pressure (harmonization toward common standards) and extraction (tariff-segmented market access). The theater ratio reflects the gap between stated climate/development justifications and actual protectionist function.",
     "key_agents": [
-      "Argentine Consumers: Primary victim (powerless/trapped) — face higher prices and fewer choices.",
-      "Argentine Domestic Auto Industry: Primary beneficiary (organized/constrained) — shielded from competition.",
-      "Chinese EV Manufacturers: Primary target (powerful/mobile) — face market access barriers but can pivot to other markets.",
-      "Argentine Government: Enforcer and beneficiary (institutional/arbitrage) — gains revenue and a tool for industrial policy.",
-      "Analytical Observer: External analyst (analytical/analytical) — views the full system of coordination and extraction."
+      "Argentine Domestic Automakers (SEVEL, Renault): Primary beneficiaries (institutional/arbitrage) \u2014 capture price protection and market share preservation during tariff period",
+      "Argentine EV Consumers: Primary victims (powerless/trapped) \u2014 bear extraction through tariff-elevated prices and reduced model choice; constrained by limited domestic alternatives",
+      "Chinese EV Manufacturers (BYD, Li Auto, others): Powerful institutional actor (powerful/arbitrage) \u2014 can arbitrage through investment in local assembly; face tariff barriers but retain strategic options",
+      "Argentine Labor Unions (Auto Sector): Secondary beneficiary (organized/constrained) \u2014 job protection through tariff-preserved domestic production; constrained by MERCOSUR obligations",
+      "Competing South American Markets (Brazil, Chile): Regional victim (moderate/constrained) \u2014 face tariff walls to Argentine market; constrained by MERCOSUR rules; can lobby for harmonization",
+      "Argentine Government (Milei Administration): Institutional enforcer (institutional/arbitrage) \u2014 sets tariff rate and duration; arbitrage through revenue collection and political favor allocation",
+      "MERCOSUR Trade Bloc: Institutional coordination (organized/constrained) \u2014 experiences tariff as friction in regional integration; constrained by member sovereignty but able to negotiate harmonization"
     ],
-    "logic_rationale": "Extractiveness (ε=0.65) is high, reflecting the significant price increase and market distortion imposed on consumers and foreign firms. Suppression (0.75) is also high, as the tariff's primary function is to coercively block a more efficient market alternative. Theater Ratio (0.30) is moderate; while there is a political signaling component (aligning with Western trade policy), the tariff's main purpose is its direct economic effect of protection and revenue generation.",
-    "perspectival_gap": "The gap is stark. For consumers, who are trapped and bear all costs, the tariff is a Snare. For the domestic industry it is intended to protect, it is a Rope—a pure coordination good. For the targeted Chinese firms, with global operations and an ability to exit, it is a Tangled Rope—a coercive but navigable rule. The analytical view, which must account for both the protectionist (coordination) intent and the extractive effect, also lands on Tangled Rope, confirming it as the most complete classification.",
-    "directionality_logic": "The directionality `d` is derived from structural roles. The consumer is a trapped victim (d≈0.95), leading to maximum effective extraction (χ) and a Snare classification. The domestic industry is a constrained beneficiary (d≈0.30), leading to low χ and a Rope classification. The government is a beneficiary with arbitrage (d≈0.05), leading to negative χ (net benefit). The mobile victim (Chinese firms, d≈0.85) and the analytical observer (d≈0.73) both experience high but not maximal extraction, placing them in the Tangled Rope category.",
-    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that a single policy is simultaneously a Rope, a Snare, and a Tangled Rope. An analysis that only considered the government's stated intent would misclassify it as a Rope (coordination). An analysis that only considered the consumer's experience would misclassify it as a Snare (pure predation). The Deferential Realism framework, by indexing to different structural positions, correctly identifies it as a Tangled Rope from the comprehensive analytical view, acknowledging both its coordination function and its highly extractive nature."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The tariff imposes direct costs on consumers (35-40% price premiums on imported EVs) while concentrating benefits on a narrow producer coalition. However, extractiveness is not maximal (0.66+) because: (1) domestic alternatives exist at lower quality/price (not zero exit), (2) the tariff has stated sunset expectations (MERCOSUR harmonization pressure), (3) Chinese manufacturers retain FDI arbitrage options that could supply the market locally, (4) the tariff serves a legitimate (if controversial) industrial policy function. Suppression (0.65): Moderate-high. Tariff walls constrain consumer choice significantly. Non-tariff barriers (local content rules, certification delays) add suppression. But suppression is not total because smuggling and gray market options exist, and tariff rates are negotiable (not legally immovable). Theater ratio (0.58): Moderate. The stated function is EV transition support and domestic capacity building (real policy goal), but the actual effect is price protection for incumbent producers and revenue for government (actual function). The gap between rhetoric and reality is real but not maximal \u2014 the domestic capacity story is not entirely theater, but it is partially aspirational.",
+    "directionality_logic": "Beneficiaries (domestic automakers, unions) are institutional actors with arbitrage exit options \u2014 they can lobby for tariff rates, exemptions, duration. Their derived d is low (~0.15-0.25), producing negative effective extraction: the tariff subsidizes them. Victims (consumers) are powerless and trapped \u2014 they have no political influence on tariff policy and cannot exit the market without bearing full tariff cost. Their derived d is high (~0.90-0.95), producing high effective extraction. Chinese manufacturers are powerful with mobile exit options (local investment), deriving moderate d (~0.50-0.60) and moderate effective extraction \u2014 they can arbitrage. MERCOSUR partners are moderate institutional actors with constrained exit (regional rules), deriving d ~0.65-0.70. The presheaf shows clear perspectival differentiation: beneficiaries see coordination (Rope), consumers see extraction (Snare), analytical observers see tangled hybrid function (Tangled Rope).",
+    "perspectival_gap": "The constraint exhibits a sharp perspectival gap between beneficiaries and victims. Domestic automakers (institutional/arbitrage) classify the tariff as pure coordination (Rope) \u2014 it solves their prisoner's dilemma of undercutting and stabilizes prices. Argentine consumers (powerless/trapped) classify it as pure extraction (Snare) \u2014 they have no alternative but to pay higher prices. Chinese manufacturers (powerful/mobile) classify it as mixed (Tangled Rope or even Rope) \u2014 tariff creates pricing power but also incentivizes efficient local manufacturing. The MERCOSUR perspective (organized/constrained) sees temporary friction with sunset logic (Scaffold). The global trade ideology perspective sees inertial protectionism disguised as climate policy (Piton). The analytical/supply-chain perspective sees genuine mixed coordination and extraction (Tangled Rope). No single classification captures all structural relationships; the perspectival gap is the phenomenon itself.",
+    "mandatrophy_analysis": "RESOLVES COORDINATION VS EXTRACTION AMBIGUITY: The tariff appears at first glance to be either pure coordination (stabilizing prices for producers) or pure extraction (raising consumer costs). The mandatrophy is resolved by decomposing the structural relationships: For domestic automakers, it is coordination (they benefit from price floor, solution to collective action problem). For consumers, it is extraction (they bear costs with no exit). For Chinese manufacturers, it is arbitrage-enabled coordination (can invest locally, converting tariff from barrier into FDI incentive). The constraint is Tangled Rope because it exhibits BOTH coordination (producer price stabilization, MERCOSUR harmonization incentives) AND extraction (consumer surplus loss, tariff rents captured by government and incumbents), with active enforcement required (tariff collection, local content verification). The mandatrophy does not collapse into a single type because different agents experience genuinely different structural functions. The beneficiaries' 'this is coordination' and the victims' 'this is extraction' are both structurally correct perspectives on the same constraint."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "arg_lithium_export_policy"
-    ]
-  }
+      "mercosur_tariff_harmonization",
+      "chinese_ev_manufacturing_fdi",
+      "latin_american_supply_chain_segmentation"
+    ],
+    "dual_formulation_note": "The Argentine EV tariff is downstream of the broader US/EU tariff movement on Chinese EVs (2023-2024) and represents regional response. It also feeds upstream into MERCOSUR harmonization negotiations and Chinese FDI decisions. The tariff's extractiveness value (0.52) reflects the local consumer welfare incidence; if measured from a supply-chain perspective, extractiveness would be lower (0.35-0.40) due to FDI arbitrage options. Constraint family includes mercosur_tariff_harmonization (higher coordination intent) and chinese_ev_manufacturing_fdi (tracking the investment substitution omega)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
 }

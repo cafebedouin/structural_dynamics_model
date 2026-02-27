@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "med_diet_consensus_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "meddiet"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mediterranean Diet Scientific Hegemony",
+    "topic_domain": "health/scientific/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mediterranean_agricultural_exporters",
+      "nutrition_research_institutions",
+      "mediterranean_health_tourism"
+    ],
+    "victims": [
+      "alternative_diet_researchers",
+      "non_mediterranean_agricultural_producers",
+      "dietary_diversity_evidence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Alternative Diet Researcher",
+      "comment": "PERSPECTIVE 1: ALTERNATIVE DIET RESEARCHER (SNARE) \u2014 Trapped within funding structures and publication venues dominated by Mediterranean diet paradigm. Career advancement, grant funding, and journal acceptance systematically penalize research on non-Mediterranean dietary patterns (ketogenic, carnivore, plant-based alternatives). Maximum extraction experienced: suppressed from professional legitimacy with no exit option."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Small-Scale Non-Mediterranean Farmers",
+      "comment": "PERSPECTIVE 2: SMALL-SCALE NON-MEDITERRANEAN FARMERS (SNARE) \u2014 Trapped in agricultural markets where Mediterranean produce commands price premiums justified by scientific consensus. Unable to compete on nutritional grounds or to establish equivalent credibility for their own crops. Suppression operates through market channels reinforced by scientific authority."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mediterranean Agricultural Exporters",
+      "comment": "PERSPECTIVE 3: MEDITERRANEAN AGRICULTURAL EXPORTERS (ROPE) \u2014 Institutional beneficiaries with significant arbitrage capacity. Scientific consensus generates demand; trade agreements and export subsidies amplify benefits. Experience constraint as pure coordination: aligning scientific messaging, marketing narratives, and health policy creates market capture without coercive overhead."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Agencies",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH AGENCIES (TANGLED ROPE) \u2014 Constrained by limited budgets and political pressure, but also benefit from simplified dietary guidance. Mediterranean diet consensus provides actionable public messaging and reduces decision-making uncertainty. However, agencies bear extraction costs: commitment to consensus limits policy flexibility, suppresses consideration of alternative dietary approaches, and creates path dependency in nutrition policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Nutrition Research Institutions",
+      "comment": "PERSPECTIVE 5: NUTRITION RESEARCH INSTITUTIONS (TANGLED ROPE) \u2014 Organized actors with significant agency. Benefit from consensus (research funding, publication prestige, institutional standing). Extract from the constraint: institutions with Mediterranean diet research programs gain resources and citations; institutions without such programs must establish them or risk marginal status. Active enforcement required: journal gate-keeping, citation networks, funding review panels coordinate consensus maintenance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Seven Countries Study Legacy",
+      "comment": "PERSPECTIVE 6: THE SEVEN COUNTRIES STUDY LEGACY (PITON) \u2014 Institutional inertia. The foundational 1950s-60s Seven Countries Study data had methodological limitations (participant selection bias, short follow-up windows, covariate adjustment issues), yet the consensus it generated persists through institutional momentum. Modern meta-analyses show Mediterranean diet benefits are modest and context-dependent, but the original research framework maintains credibility through theatrical citation patterns. Theater ratio elevated: reviewing institutions continue to frame the Seven Countries Study as authoritative despite known limitations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Civilizational view reveals mixed coordination and extraction. Genuine coordination function: Mediterranean diet is correlated with longevity and cardiometabolic health in observational settings. Genuine extraction: consensus suppresses alternative hypotheses (genetic ancestry confounding, confounded socioeconomic factors, measurement error in longitudinal studies) and concentrates research resources on confirming rather than falsifying the paradigm. Effective extraction moderate but persistent across generational timescales."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "confounding_by_socioeconomic_proxy",
+      "question": "How much of the Mediterranean diet health benefit reflects Mediterranean geography/culture rather than specific dietary composition?",
+      "resolution_mechanism": "Randomized controlled trials with Mediterranean diet vs other nutrient-matched diets in diverse populations; genetic ancestry analysis in cohort studies; geographic migration studies comparing diet-health association by settlement location",
+      "impact": "If socioeconomic/cultural confounding > 50%: consensus overstates specific dietary mechanism, classification remains Tangled Rope but beneficiary list shifts from diet content to geographic branding. If < 20%: Mediterranean diet mechanism is robust, constraint classification shifts toward Rope (pure coordination).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Mediterranean diet benefits reflect specific composition or socioeconomic/geographic confounding"
+    },
+    {
+      "id": "measurement_error_in_longitudinal_cohorts",
+      "question": "Do dietary measurement errors in observational cohorts systematically favor Mediterranean diet associations?",
+      "resolution_mechanism": "Validation studies comparing food frequency questionnaires to biomarkers; regression calibration analysis of measurement error impact on effect estimates; comparison of diet-health associations in studies using repeated measurements vs single baseline assessment",
+      "impact": "If measurement error favors Mediterranean associations by > 30%: consensus reflects methodological artifact rather than true effect, may warrant downgrade to Piton (degraded institutional memory). If < 10%: associations are robust, constraint remains Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurement error bias in Mediterranean diet association studies"
+    },
+    {
+      "id": "publication_bias_and_file_drawer",
+      "question": "What fraction of completed Mediterranean diet studies remain unpublished due to null or negative findings?",
+      "resolution_mechanism": "Prospective trial registration database analysis comparing pre-registered hypotheses to published results; funnel plot asymmetry tests; communication with researchers about unpublished work; examination of grant databases for completed studies without corresponding publications",
+      "impact": "If > 40% of studies unpublished: consensus is substantially inflated by publication bias, classification warrants Snare designation (extraction via suppression of alternatives). If < 15%: publication bias is minor factor.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Publication bias and file drawer effects in Mediterranean diet research"
+    },
+    {
+      "id": "alternative_dietary_pattern_suppression",
+      "question": "Are alternative dietary approaches (plant-based, low-carbohydrate, traditional non-Mediterranean) systematically receiving less research funding and publication venue access?",
+      "resolution_mechanism": "NIH grant database analysis of funding allocation by dietary approach over time; journal acceptance rate comparison for Mediterranean vs non-Mediterranean diet submissions; citation network analysis of research clusters",
+      "impact": "If alternative approaches receive < 20% of equivalent funding despite equivalent population health relevance: suppression is structural and intentional, classification remains Tangled Rope with high suppression. If funding is proportionate to evidence: constraint is primarily coordination-based Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Funding and publication suppression of non-Mediterranean dietary research"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "meddict_extract_1950s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.48,
+      "id_override": "meddict_extract_1980s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.52,
+      "id_override": "meddict_extract_2020s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "meddict_theater_1950s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.5,
+      "id_override": "meddict_theater_1980s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.61,
+      "id_override": "meddict_theater_2020s"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
+  "commentary": {
+    "narrative_context": "The Mediterranean diet scientific consensus represents a tangled hybrid of genuine health coordination and economic extraction. Originating from the Seven Countries Study (1950s-60s), the consensus has become institutionalized across nutrition research, public health policy, agricultural trade, and health marketing. The constraint exhibits extraction through publication suppression of alternative dietary approaches, career penalties for researchers challenging the paradigm, and market consolidation favoring Mediterranean produce exporters. Simultaneously, the constraint performs genuine coordination: providing clear, actionable dietary guidance simplifies public health messaging and creates research coherence. The theater ratio has risen from 0.35 (when Mediterranean diet claims were empirically contestable) to 0.61 (contemporary state where much consensus maintenance operates through citation networks and institutional inertia rather than new empirical evidence). The extractiveness has accumulated from 0.28 (early coordination-dominant phase) to 0.52 (current mixed extraction-coordination state), driven by publication bias, funding concentration, and suppression of comparative dietary research.",
+    "key_agents": [
+      "Mediterranean Agricultural Exporters: Primary beneficiary (institutional/arbitrage) \u2014 capture market share and premium pricing justified by scientific consensus; arbitrage capacity allows exit from constraint",
+      "Nutrition Research Institutions: Secondary beneficiary and enforcer (organized/mobile) \u2014 gain research funding, citation prestige, and institutional standing through Mediterranean diet research programs; enforce consensus via journal gate-keeping and funding review",
+      "Alternative Diet Researchers: Primary victim (powerless/trapped) \u2014 suppressed from publication venues, penalized in funding competitions, marginalized in professional networks; cannot exit without abandoning research career",
+      "Small-Scale Non-Mediterranean Farmers: Secondary victim (powerless/trapped) \u2014 unable to compete in markets where Mediterranean produce commands premiums; trapped in disadvantaged market position",
+      "Public Health Agencies: Mixed actor (moderate/constrained) \u2014 benefit from simplified guidance but constrained by consensus commitment; limited policy flexibility despite emerging evidence of dietary diversity benefits",
+      "Dietary Diversity Evidence: Tertiary victim (powerless/trapped) \u2014 abstract collective good; evidence for alternative approaches is suppressed or deprioritized; no institutional advocate"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The constraint exhibits meaningful extraction but not total. Mediterranean agricultural exporters capture market benefits; research institutions gain resources and prestige; alternative researchers are suppressed from funding and publication. However, extraction is not monolithic \u2014 some alternative diet research is published, some funding reaches non-Mediterranean investigations, and some researchers establish careers despite consensus opposition. The 0.52 value reflects moderate extraction with partial suppression effectiveness. Suppression (0.48): Significant but incomplete. Publication bias and journal gate-keeping suppress alternatives, but do not eliminate them entirely. Career penalties are real but not absolute \u2014 some researchers build successful careers challenging consensus. Funding disparities are documented but alternative approaches still receive some resources. Theater ratio (0.61): Elevated and rising. Early consensus was empirically grounded in genuine observational associations. Contemporary consensus maintenance relies increasingly on citation networks, institutional authority, and therapeutic marketing rather than new evidence. The Seven Countries Study framework persists despite methodological limitations; meta-analyses showing modest context-dependent effects are reinterpreted as 'Mediterranean diet proven' rather than 'effects smaller than previously claimed.' Piton detection triggered: theater ratio > 0.70 is not met, but the rising trajectory combined with degraded empirical support suggests approaching piton territory in next observational window.",
+    "perspectival_gap": "The beneficiary and victim perspectives diverge sharply. Mediterranean agricultural exporters and nutrition institutions see the constraint as pure coordination (Rope) \u2014 aligning around a scientifically-supported dietary pattern that enables market function and research coherence. Alternative researchers and non-Mediterranean farmers see it as pure extraction (Snare) \u2014 systematic suppression of their work with no exit option. Public health agencies occupy the middle ground (Tangled Rope) \u2014 they benefit from simplified guidance but are constrained by consensus rigidity. The analytical observer's tangled rope classification resolves the gap: both coordination and extraction are structurally real; they are not observable-dependent. The constraint simultaneously enables (genuine health benefits from Mediterranean patterns) and suppresses (alternative approaches that may be equally or context-specifically superior). The perspectival disagreement is not about facts but about the relative weighting of coordination benefits vs extraction costs.",
+    "directionality_logic": "Directionality (d) values are derived from structural position in the extraction flow. Mediterranean agricultural exporters are beneficiaries with arbitrage options (d \u2248 0.15) \u2014 they can exit by shifting crops or markets if consensus dissolves, and the constraint actively benefits them. Alternative researchers are victims with trapped exit (d \u2248 0.95) \u2014 they cannot exit the research domain without abandoning professional identity, and the constraint systematically penalizes them. Public health agencies are constrained beneficiaries (d \u2248 0.50) \u2014 they benefit from simplified guidance but cannot easily exit consensus without political backlash. Nutrition research institutions are organized beneficiaries with mobile exit (d \u2248 0.40) \u2014 they could redirect research to alternative approaches but face institutional inertia and career incentives favoring consensus work. The engine's sigmoid f(d) applies these structural positions: low-d beneficiaries experience negative effective extraction (they gain from the constraint); high-d victims experience amplified extraction (the constraint amplifies their costs); mid-range constrained actors experience moderate extraction. Directionality overrides were not needed \u2014 structural derivation produces accurate d values from beneficiary/victim declarations and exit options.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating genuine coordination function alongside genuine extraction. The Mediterranean diet is not falsely labeled coordination (it has real health benefits and enables coherent public messaging). The constraint is correctly identified as Tangled Rope, not Snare, because the coordination benefits are structural, not illusory. However, the analytical observer perspective reveals that the coordination function is being exploited to justify suppression of alternatives. The extraction mechanism relies on naturalizing the coordination benefit ('Mediterranean diet is scientifically proven best') into a reason for suppressing comparative research ('why fund studies on inferior approaches?'). The mandatrophy resolution: the constraint is legitimately mixed. The perspectival gap is not between truth and falsehood but between the beneficiary's real coordination benefits and the victim's real suppression costs. Both are operative. The rising theater ratio (0.35\u21920.61) suggests gradual drift from empirically-grounded coordination toward institutionally-maintained consensus theater \u2014 a degradation pathway toward Piton if suppression remains constant while empirical justification weakens further."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "nutritional_reductionism",
+      "agricultural_trade_protectionism",
+      "alternative_diet_research_funding"
+    ],
+    "dual_formulation_note": "The Mediterranean diet consensus decomposes into two structurally distinct constraint families: (1) the empirical claim about health benefits (observed associations in epidemiological data \u2014 genuinely mixed coordination and extraction), and (2) the institutional consensus enforcement (publication suppression, funding allocation, research paradigm dominance \u2014 pure extraction dressed as coordination). This story addresses the mixed empirical + institutional phenomenon. Downstream constraints capture specific mechanisms: nutritional reductionism (the conceptual framing that single dietary patterns can be 'optimal'), agricultural trade protectionism (how Mediterranean produce exporters use health consensus to justify trade advantages), and alternative diet research funding gaps (the suppression mechanism itself as a constraint)."
+  },
+  "directionality_overrides": []
+}

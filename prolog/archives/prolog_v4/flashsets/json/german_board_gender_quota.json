@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "german_board_gender_quota",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.25,
+    "claimed_type": "tangled_rope",
+    "human_readable": "German Gender Quota for Corporate Boards (F\u00fcPoG II)",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "women_seeking_board_positions",
+      "gender_equality_advocacy_groups"
+    ],
+    "victims": [
+      "companies_with_limited_qualified_candidates",
+      "existing_male_board_members"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Companies with Limited Qualified Candidates",
+      "comment": "Companies that struggle to find qualified female candidates may see the quota as a Snare, forcing them to comply with potentially unqualified hires to avoid penalties. They are trapped within the German legal system and experience extraction with little benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Gender Equality Advocacy Groups",
+      "comment": "These groups experience the quota as a rope, facilitating their goals of achieving gender equality in corporate leadership. They benefit from the increased representation of women on corporate boards."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Companies Complying with the Quota",
+      "comment": "Companies that can readily comply with the quota may experience it as a tangled rope: they benefit from improved public image and potentially better decision-making, but they also face constraints in their hiring practices and internal promotions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The Analytical Observer sees a Tangled Rope: a law that attempts to coordinate gender equality but also extracts from companies and individuals. The effectiveness and long-term consequences of the quota are subject to debate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "availability_qualified_women",
+      "question": "Is there a sufficient pool of qualified women to fill the board positions mandated by the quota?",
+      "resolution_mechanism": "Track the number of qualified women available for board positions and compare it to the number of positions needing to be filled.",
+      "impact": "If there are not enough qualified women, the quota will be highly extractive. If there are sufficient qualified women, the quota will primarily function as coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of qualified women for board positions"
+    },
+    {
+      "id": "impact_company_performance",
+      "question": "Does the gender quota lead to improved or worsened company performance?",
+      "resolution_mechanism": "Conduct empirical studies comparing the performance of companies that comply with the quota to those that don't.",
+      "impact": "If company performance improves, the quota may be reclassified as a Rope. If company performance worsens, the quota may be reclassified as a Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Impact on company performance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The German Gender Quota for Corporate Boards (F\u00fcPoG II) is a law mandating a minimum percentage of women on the supervisory boards of publicly listed and co-determined companies in Germany. The law aims to promote gender equality in leadership positions but may also impose constraints on companies. The law is a hybrid of coordination and extraction, creating a Tangled Rope.",
+    "key_agents": [
+      "Women Seeking Board Positions: Beneficiaries, gaining access to positions they might not have otherwise obtained.",
+      "Companies with Limited Qualified Candidates: Victims, facing potential penalties and challenges in finding qualified women.",
+      "Gender Equality Advocacy Groups: Beneficiaries, seeing their goals advanced.",
+      "Existing Male Board Members: Victims, potentially losing their positions to make way for women."
+    ],
+    "logic_rationale": "Extractiveness: 0.35 - The quota extracts from companies by limiting their pool of candidates and potentially forcing them to hire less qualified individuals. Suppression: 0.45 - The quota suppresses alternative hiring practices and diversity initiatives that might not involve quotas. Theater Ratio: 0.25 - The law is primarily functional with little theater. The main aim is to increase the number of women on boards, not just create the appearance of doing so.",
+    "perspectival_gap": "The perspectival gap arises from the different experiences of the stakeholders. Companies with limited qualified candidates see a Snare, while gender equality advocacy groups see a Rope. Companies that can readily comply experience a Tangled Rope.",
+    "directionality_logic": "Women seeking board positions and gender equality advocacy groups are beneficiaries, and thus have negative directionality. Companies with limited qualified candidates and existing male board members are victims, and thus have positive directionality."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

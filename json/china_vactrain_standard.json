@@ -2,146 +2,188 @@
   "header": {
     "constraint_id": "china_vactrain_standard",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vactrain"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.7,
-    "theater_ratio": 0.15,
+    "extractiveness": 0.52,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "China's Ultra-High-Speed Vacuum-Tube Maglev Standard",
     "topic_domain": "technological/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "chinese_state_planners",
-      "state_owned_engineering_firms",
-      "high_tech_component_suppliers"
+      "chinese_state_actors",
+      "domestic_maglev_manufacturers",
+      "technology_integration_firms"
     ],
     "victims": [
-      "future_adopting_nations",
-      "competing_transport_sectors",
-      "chinese_taxpayers"
+      "international_rail_competitors",
+      "global_technology_standardization",
+      "infrastructure_capital_markets"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "national",
-      "label": "The Future Adopting Nation",
-      "comment": "PERSPECTIVE 1: FUTURE ADOPTING NATION (SNARE) — Once committed, a nation is trapped by high switching costs, technological dependency, and reliance on the originator for maintenance and upgrades. The standard becomes a mechanism for long-term economic and political extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+      "spatial_scope": "global",
+      "label": "Global Rail Infrastructure Competitors",
+      "comment": "PERSPECTIVE 1: GLOBAL RAIL COMPETITORS (SNARE) \u2014 Trapped in a technology adoption dilemma. If they ignore the vactrain standard, they risk obsolescence. If they adopt it, they depend on Chinese-controlled infrastructure, intellectual property, and manufacturing capacity. No exit option: either lose market share or surrender technological autonomy. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Regional Infrastructure Investors",
+      "comment": "PERSPECTIVE 2: REGIONAL INFRASTRUCTURE INVESTORS (TANGLED ROPE) \u2014 Benefits from access to cutting-edge technology and reduced infrastructure deployment costs. Constrained by the need to adopt Chinese standards, licensing requirements, and long-term operational dependencies. Mixed coordination-extraction: the standard solves a genuine engineering problem (vacuum tube efficiency, safety interoperability) but extraction occurs through IP licensing and operational service contracts."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "continental",
-      "label": "The Chinese State Planner",
-      "comment": "PERSPECTIVE 2: CHINESE STATE PLANNER (ROPE) — From the perspective of the standard-setter, this is a pure coordination good. It integrates the national economy, creates technological prestige, and establishes a valuable export. The state can arbitrage its control over the standard for strategic gain. d≈0.05, f(d)≈-0.12, σ=1.1 → χ≈-0.07. Negative effective extraction signifies a net subsidy/benefit."
+      "spatial_scope": "national",
+      "label": "Chinese State and Domestic Manufacturers",
+      "comment": "PERSPECTIVE 3: CHINESE STATE AND MANUFACTURERS (ROPE) \u2014 Primary beneficiary. Experiences the standard as a coordination mechanism that aligns domestic engineering efforts, reduces fragmentation, and establishes market-captured positions. Arbitrage option: can exit the standard framework via alternative (non-vacuum-tube) maglev designs if domestic priorities shift. Net beneficiary \u2014 extraction flows toward this institutional actor."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "scaffold",
       "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Standards Bodies (ISO/IEC)",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL STANDARDS BODIES (SCAFFOLD) \u2014 Attempt to maintain genuinely open technological governance through ISO/IEC rail standards committees. Organized actors with mobile exit options: can shift to alternative standardization frameworks (proprietary-neutral technical consortia, open-source rail protocols). See the vactrain as a temporary coordination failure with a sunset: as competing vacuum-tube implementations mature and as open-source rail simulation tools improve, the lock-in weakens. Theater is moderate (0.58) because formal international standards committees maintain legitimacy even as de facto standard-setting power migrates to technology leaders."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Domestic Airline Industry",
-      "comment": "PERSPECTIVE 3: DOMESTIC AIRLINE INDUSTRY (TANGLED ROPE) — This established industry is constrained; it cannot exit the transport market but faces a state-backed competitor designed to supplant it. It experiences the standard as both a national infrastructure project (coordination) and a direct, coercive threat to its existence (extraction). d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.41."
+      "label": "Legacy Railroad Operators",
+      "comment": "PERSPECTIVE 5: LEGACY RAILROAD OPERATORS (PITON) \u2014 High theater (0.65): the constraint on them appears as operational compatibility requirements and regulatory compliance mandates, but the actual verification of vactrain-legacy integration is highly speculative and performative. Operators perform 'interoperability planning' without clear technical pathways. The constraint persists through regulatory inertia: legacy infrastructure is grandfathered, but the standard's enforcement creates a symbolic constraint with limited functional content. Institutional power but constrained exit: must adopt positioning even if the technical integration remains unresolved."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees both the genuine coordination function (a new, potentially revolutionary mode of transport) and the high potential for asymmetric extraction (geopolitical lock-in, resource concentration, suppression of alternatives). This matches the claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physical Limits View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL LIMITS (MOUNTAIN) \u2014 From a universal/civilizational perspective, the vacuum-tube maglev exhibits immutable physical constraints: aerodynamic efficiency gains from vacuum are logarithmic beyond a certain vacuum level; maglev levitation requires specific electromagnetic properties independent of governance frameworks; energy consumption curves are set by physics. However, this perspective risks false naturalness: the extraction mechanisms (licensing, operational control, standard-setting power) are institutional, not physical. The engine will classify this as a false summit."
     }
   ],
   "omegas": [
     {
-      "id": "economic_viability",
-      "question": "Will the vactrain system be economically self-sustaining or require permanent, massive state subsidies?",
-      "resolution_mechanism": "Long-term operational cost and revenue data post-deployment, compared against initial capital expenditure and ongoing maintenance.",
-      "impact": "If self-sustaining, it functions more like a Rope/Tangled Rope with a clear coordination benefit. If it requires permanent subsidies, the extraction from taxpayers is higher, pushing it closer to a Snare for that group.",
+      "id": "technical_interoperability_feasibility",
+      "question": "Can a genuinely open vacuum-tube maglev standard be technically viable, or does the engineering complexity inherently require centralized control?",
+      "resolution_mechanism": "Analysis of competing vactrain implementations (Japanese SCMaglev, German TMT, domestic Chinese systems); assessment of standardization surface areas (power delivery, track gauge, vacuum management, emergency procedures) that could be decoupled from Chinese IP",
+      "impact": "If decoupling is feasible: opens space for alternative standard-setters and reduces lock-in (Rope from more perspectives). If centralized control is unavoidable: validates the extraction mechanism (Snare from more perspectives).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the system is economically viable or a permanent subsidy drain"
+      "description": "Whether open vacuum-tube standardization is technically feasible"
     },
     {
-      "id": "geopolitical_adoption_model",
-      "question": "Will the standard be exported via open protocols or through tied financing and proprietary technology, creating dependency?",
-      "resolution_mechanism": "Analysis of the first international deployment agreements, intellectual property licensing terms, and maintenance contracts.",
-      "impact": "Open protocols would lower the suppression and extraction for adopting nations (Rope-like). Tied, proprietary models would confirm the Snare classification from their perspective.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether the standard is exported as an open platform or a dependency-creating tool"
+      "id": "switching_cost_magnitude",
+      "question": "What is the true economic switching cost for a region adopting vactrain vs remaining with conventional high-speed rail or developing alternative maglev?",
+      "resolution_mechanism": "Cost-benefit analysis: infrastructure sunk costs, fleet conversion costs, operational training, spare parts supply chain, technology licensing duration. Comparison with alternative maglev systems (non-vacuum) and advanced rail (7G/8G conventional).",
+      "impact": "If switching cost is moderate (20-30% cost premium): standard is Tangled Rope, extraction is real but bounded. If very high (50%+ premium): approaches Snare. If low: approaches Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Economic switching costs for alternative technologies"
     },
     {
-      "id": "technical_feasibility_at_scale",
-      "question": "Can the immense technical challenges (e.g., maintaining vacuum over hundreds of kilometers, ensuring passenger safety) be solved reliably and cost-effectively?",
-      "resolution_mechanism": "Performance data from full-scale, long-distance operational lines over several years.",
-      "impact": "If major technical failures occur, the project's function collapses, and it risks becoming a massive Piton—a monument to ambition maintained for theatrical reasons despite being non-functional.",
+      "id": "patent_licensing_extraction_scale",
+      "question": "Does Chinese IP licensing on vactrain represent genuine technology rent-extraction or fair compensation for development costs?",
+      "resolution_mechanism": "Comparison of licensing fee structures (per-km-of-track, operational-revenue-sharing, per-vehicle-sold) against development costs; benchmarking against licensing terms for comparable transport technologies (AVE, ICE, Shinkansen patents); analysis of profit margins and reinvestment patterns",
+      "impact": "If fees exceed development cost recovery + 15% margin: extraction mechanism confirmed, victims justified in snare classification. If fees approximate fair compensation: standard moves toward Rope or Scaffold.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the core technology is reliable and safe at continental scale"
+      "description": "Whether IP licensing terms reflect fair compensation or extraction"
+    },
+    {
+      "id": "alternative_standard_emergence_timeline",
+      "question": "What is the probability and timeline for a competing non-Chinese vactrain standard achieving technical maturity and market adoption?",
+      "resolution_mechanism": "Tracking of Japanese SCMaglev Chuo Shinkansen deployment (Tokyo-Osaka completion ~2027-2034); German TMT development status; US hyperloop initiatives; open-source rail standards development. Market adoption thresholds and compatibility requirements.",
+      "impact": "If alternative standard emerges with 10-15 year lag: current Chinese standard is temporary (Scaffold dynamics apply). If emergence takes 25+ years or fails: lock-in becomes persistent (Snare dynamics dominate).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for emergence of competing vactrain standards"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.55
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.15
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 2020,
-    "end": 2040
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "China's development of an ultra-high-speed vacuum-tube maglev standard represents a state-led effort to create a new technological paradigm in transportation. The constraint is the standard itself: a set of rules, protocols, and physical specifications that enables interoperability but also concentrates power. While it offers a genuine coordination function—enabling a new mode of transport—its development is funded by the state, executed by state-owned enterprises, and designed to create a strategic advantage, leading to significant extractive properties.",
+    "narrative_context": "China's development of an ultra-high-speed vacuum-tube maglev standard represents a hybrid coordination-extraction constraint that operates across technological, economic, and geopolitical domains. The standard solves a genuine engineering problem \u2014 vacuum-tube maglev requires highly coupled physical and control systems where interoperability between vendors is non-trivial. However, the standard-setting process also captures market share, controls technology licensing, and creates structural dependencies for adopting regions. This constraint exhibits multiple classification types depending on the observer's structural position: the Chinese state sees coordination (Rope); global competitors see extraction (Snare); regional investors see mixed coordination-extraction (Tangled Rope); international standards bodies see a temporary institutional failure with alternative pathways (Scaffold); legacy operators see performative compliance (Piton); and the civilizational analytical observer risks false naturalness by treating institutional extraction as immutable physical law (false Mountain). The theater_ratio (0.58) reflects that much of the standard-setting activity appears as genuine technical coordination (safety interlocks, power delivery specifications, vacuum management protocols) but functions partly as extraction mechanism (IP control, vendor lock-in, operational service dependencies). The extractiveness trajectory (0.28 \u2192 0.52 over 10 years) shows increasing lock-in as infrastructure deployment creates sunk costs for adopting regions.",
     "key_agents": [
-      "Chinese State Planners: Primary beneficiary (institutional/arbitrage) — sees a national coordination project to boost economy and prestige.",
-      "State-Owned Engineering Firms: Primary beneficiary (organized/mobile) — receives massive, long-term contracts and develops valuable IP.",
-      "Future Adopting Nations: Primary victim (powerless/trapped) — risks technological lock-in and long-term economic dependency.",
-      "Competing Transport Sectors: Secondary victim (organized/constrained) — faces a heavily subsidized competitor designed to make them obsolete.",
-      "Analytical Observer: Analytical agent (analytical/analytical) — recognizes the dual nature of the standard as both coordination and extraction."
+      "Chinese State and Domestic Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 captures standard-setting power, technology licensing revenue, and long-term operational control",
+      "Global Rail Competitors (Japan, Germany, Europe, North America): Primary victims (powerless/trapped) \u2014 face technology obsolescence risk if vactrain standard dominates, but dependency risk if they adopt Chinese-controlled technology",
+      "Regional Infrastructure Investors (Southeast Asia, Middle East, Africa): Secondary victims (moderate/constrained) \u2014 benefit from access to advanced technology but constrained by licensing requirements and operational dependencies",
+      "International Standards Bodies (ISO/IEC rail committees): Organized actors (organized/mobile) \u2014 attempt to maintain open governance framework; can shift to alternative standards-setting mechanisms",
+      "Legacy Railroad Operators: Institutional actors (institutional/constrained) \u2014 face compliance and compatibility mandates with unclear technical pathways; high performative content",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional extraction as immutable physics of vacuum-tube engineering"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55) is high because the value captured by the state and its chosen firms goes far beyond a simple coordination fee. It includes geopolitical leverage, technological dominance, and the channeling of vast national resources. Suppression (0.70) is high due to the immense capital investment required, which, combined with state backing, effectively forecloses the market to alternative standards. Theater Ratio (0.15) is currently low as the project is in a functional R&D and engineering phase, not yet a legacy system maintained for show.",
-    "perspectival_gap": "The gap is stark. For the state planners who control it, the standard is a Rope, a tool for national development. For a future nation that must adopt it to join the network, it becomes a Snare, locking them into a dependency relationship. For competing industries, it's a Tangled Rope—a nationally beneficial project that is simultaneously destroying their business model. This highlights how infrastructure standards are never neutral; they allocate power and create structural winners and losers.",
-    "directionality_logic": "Beneficiaries (Chinese state, SOEs) have arbitrage or mobile exit options, leading to a low derived directionality (d) and a low or negative effective extraction (χ), classifying the constraint as a Rope from their view. Victims (adopting nations) are defined as trapped, leading to a high d and a high χ, resulting in a Snare classification. Other actors with constrained exit options fall in between. The analytical perspective, which accounts for all these relationships, correctly identifies the hybrid nature of the system as a Tangled Rope.",
-    "mandatrophy_analysis": "This case avoids mandatrophy by refusing to label the standard as purely 'good' (Rope) or 'bad' (Snare). The Deferential Realism framework reveals that it is structurally both simultaneously. The classification depends on the observer's position relative to the flow of power and resources defined by the standard. An analysis that produced only one classification would be a form of mandatrophy, either by ignoring the genuine coordination function or by ignoring the coercive, extractive potential."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The standard creates genuine technological benefits (reduced air resistance, safety interoperability, operational efficiency) that benefit all adopters, but the asymmetry in control is substantial. Chinese state actors and domestic manufacturers capture IP licensing revenue, operational service contracts, and technology development leadership. The extraction is not total because genuine coordination benefits exist \u2014 competitors could theoretically develop compatible systems if they reverse-engineered the standard or negotiated licensing. The trajectory from 0.28 to 0.52 reflects increasing lock-in as infrastructure sunk costs accumulate. Suppression (0.62): Moderate-high. Technical complexity creates high barriers to independent vactrain development \u2014 vacuum tube engineering, maglev electromagnetics, and control systems require specialized expertise and capital. Publishing standards openly does not eliminate these barriers; it requires additional investment to implement. Career and funding barriers exist for competing initiatives (hyperloop ventures, alternative maglev research receive less institutional support). But suppression is not total \u2014 alternatives exist (conventional high-speed rail, non-vacuum maglev, hyperloop concepts). Theater ratio (0.58): Moderate. Much of the standard-setting activity is genuine technical coordination (safety interlocks, interoperability testing, emergency procedures), but significant components are performative: international 'consultation' processes where China's role is pre-dominant; legacy operator 'interoperability planning' with unclear implementation pathways; public commitments to 'open standards' alongside proprietary IP licensing structures.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position relative to the constraint. Chinese institutional actors and manufacturers benefit from the standard \u2014 they gain arbitrage options (can exit via alternative maglev designs) and control the standard-setting process (derived d \u2248 0.05-0.15 \u2192 low f(d) \u2192 low or negative experienced extraction). Global competitors are trapped \u2014 they have no equivalent technological alternative and no voice in standard-setting (derived d \u2248 0.90-0.95 \u2192 high f(d) \u2192 high experienced extraction). Regional investors are constrained but mobile \u2014 they depend on Chinese licensing but can negotiate terms or invest in competing technologies (derived d \u2248 0.55-0.65 \u2192 moderate f(d) \u2192 moderate experienced extraction). International standards bodies have mobile exit options \u2014 they can create alternative standards frameworks or shift governance models (derived d \u2248 0.50-0.60 \u2192 moderate f(d) \u2192 moderate experienced extraction). Legacy operators are constrained but not trapped \u2014 they can choose not to adopt vactrain (derived d \u2248 0.45-0.55 \u2192 low-moderate f(d) \u2192 low-moderate experienced extraction, but theater amplifies the performative content).",
+    "perspectival_gap": "The constraint exhibits a large perspectival gap between beneficiaries and victims. The Chinese institutional actor sees Rope \u2014 the standard coordinates domestic engineering efforts and enables market capture. Global competitors see Snare \u2014 they face technology obsolescence or dependency without meaningful exit. Regional investors see Tangled Rope \u2014 mixed coordination (genuine efficiency gains) and extraction (licensing costs, operational control). International standards bodies see Scaffold \u2014 the constraint is a temporary institutional failure with a sunset horizon as alternative standards mature and open-source engineering tools improve. Legacy operators see Piton \u2014 their compliance obligations are largely performative, with unclear technical implementation pathways. The analytical observer's Mountain classification is a false summit \u2014 the 'inherent physics' framing naturalizes what is actually a contingent institutional arrangement (standard-setting power concentration, IP licensing structures, capital barriers to competing initiatives). This perspectival gap is the signature of a Tangled Rope: genuine coordination benefits exist (vacuum-tube efficiency, safety interoperability), but asymmetric extraction runs alongside the coordination.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint resolves mandatrophy by demonstrating that both coordination and extraction are structurally present. The standard provides genuine coordination benefits \u2014 vacuum-tube maglev requires tight technical coupling, and a unified standard reduces fragmentation and enables safety interoperability. This is not theater; it is real coordination work. Simultaneously, the standard enables extraction through IP licensing, operational service dependencies, and market-captured positions for Chinese manufacturers. The mandatrophy (is it coordination or extraction?) is resolved by identifying BOTH: the standard is a Tangled Rope because it combines genuine coordination (reducing engineering fragmentation, enabling interoperability) with asymmetric extraction (licensing revenue, operational control, technology dependency). The analytical observer's risk is false naturalness: treating the institutional extraction as 'inevitable physics of vactrain engineering.' The schema prevents this by requiring explicit beneficiary/victim declarations and by showing that alternative standard-setting models (open-source, decentralized, competing implementations) are structurally possible \u2014 they are not implemented because of institutional choices, not because of immutable physics."
   },
   "boltzmann": {
     "coordination_type": "global_infrastructure"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_geopolitics",
+      "rare_earth_technology_dependency"
+    ],
+    "dual_formulation_note": "The vactrain standard constraint family may decompose into two structurally distinct claims: (1) technical interoperability coordination (lower extractiveness, ~0.30), and (2) IP licensing and operational control extraction (higher extractiveness, ~0.60-0.70). If further analysis reveals these have sufficiently different epsilon values, separate constraint stories should be written and linked via network edges."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
 }

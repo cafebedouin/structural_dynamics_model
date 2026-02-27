@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "vision_of_the_cross",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "visioncross"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "tangled_rope",
+    "human_readable": "In Hoc Signo Vinces Mandate",
+    "topic_domain": "religious/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "constantine_imperial_authority",
+      "christian_clergy_institutional",
+      "roman_military_command"
+    ],
+    "victims": [
+      "pagan_religious_institutions",
+      "syncretist_populations",
+      "doctrinal_losers_in_nicene_disputes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Pagan Subjects Under Constantinian Conversion",
+      "comment": "PERSPECTIVE 1: PAGAN SUBJECTS (SNARE) \u2014 Cannot exit religious conversion mandate without penalty. Bears full extraction cost: loss of ancestral worship, forced reinterpretation of identity, coercion into Christian institutional structures. d\u22480.92, f(d)\u22481.39, \u03c3=0.9 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Syncretist Population and Local Religious Communities",
+      "comment": "PERSPECTIVE 2: SYNCRETIST POPULATIONS (TANGLED ROPE) \u2014 Benefit from some coordination (Christian institutional access to services, unified moral framework), but extraction is severe: suppression of hybrid worship, forced doctrinal conformity. Constrained by social pressure and institutional integration. d\u22480.65, f(d)\u22480.95, \u03c3=1.1 \u2192 \u03c7\u22480.48."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Christian Clergy Institutional Authority",
+      "comment": "PERSPECTIVE 3: CHRISTIAN CLERGY (ROPE) \u2014 Experiences the constraint as pure coordination: unified doctrine, institutional hierarchy, state support. The vision narrative solves a collective action problem (which interpretation of Christ wins?), and Nicene orthodoxy emerges as the coordination solution. Clergy benefit from state enforcement and institutional stability. d\u22480.35, f(d)\u22480.25, \u03c3=1.1 \u2192 \u03c7\u22480.14."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Constantine and Imperial Military Command",
+      "comment": "PERSPECTIVE 4: CONSTANTINE AND IMPERIAL MILITARY (ROPE) \u2014 The vision narrative solves the imperial coordination problem: unifying military loyalty, centralizing religious authority to consolidate power, establishing legitimacy myth. Constantine benefits from the strategic value of Christian institutional organization. d\u22480.15, f(d)\u22480.00, \u03c3=1.1 \u2192 \u03c7\u22480.00. Functionally a beneficiary with full arbitrage exit (could have chosen another religion or system)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Vision Testimony Itself",
+      "comment": "PERSPECTIVE 5: THE VISION TESTIMONY (PITON) \u2014 The core claim (Constantine saw a divine sign) is increasingly theatrical/inert. No historical evidence supports the vision; Eusebius likely invented it as institutional justification for orthodoxy; modern scholarship treats it as a retrospective mythmaking. The legitimacy mechanism has atrophied \u2014 the vision is maintained through centuries of repetition and institutional authority, not because anyone believes it happened. theater_ratio=0.81 satisfies piton gate. The claim persists due to theological inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Competing Christian Doctrinal Factions (Arian vs Nicene)",
+      "comment": "PERSPECTIVE 6: COMPETING DOCTRINAL FACTIONS (TANGLED ROPE) \u2014 Arians and Nicenes both benefit from coordination under imperial patronage but suffer asymmetric extraction: the faction backed by Constantine's legitimacy myth (Nicene orthodoxy) extracts from rival factions (Arians, other heterodox groups). Even winners face constraints on doctrinal freedom. Mobile exit options (some factions can migrate to Sasanian empire or desert monasticism) limit maximum extraction. d\u22480.50, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN? \u2014 FALSE SUMMIT RISK) \u2014 From deep historical analysis, one might argue that religious consolidation is a structural necessity of empire (some unified religious framework enables administrative coherence), making Constantine's conversion appear as a natural law. However: (a) extractiveness=0.52 exceeds mountain ceiling of 0.25; (b) suppression=0.68 exceeds mountain ceiling of 0.05; (c) theater=0.81 suggests performative rather than natural mechanism. The mountain framing naturalizes what is a contingent institutional choice (Constantine could have unified without Christianity, or could have done it differently). Engine marks as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "historical_vision_authenticity",
+      "question": "Did Constantine actually experience a visionary experience, or did Eusebius fabricate the account for institutional legitimacy?",
+      "resolution_mechanism": "Cross-examination of manuscript traditions, analysis of Eusebius's redaction history, comparison with Constantine's coins/edicts that predate the 'vision' narrative",
+      "impact": "If authentic: vision is exogenous shock revealing genuine religious experience. If fabricated: vision is pure institutional theater \u2014 piton classification strengthens. Classification shifts from tangled_rope to snare if theater completely decouples from function.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Constantine's vision was authentic or retrospectively constructed"
+    },
+    {
+      "id": "religious_consolidation_necessity",
+      "question": "Was religious consolidation a structural necessity for maintaining imperial coherence, or a contingent choice among viable alternatives?",
+      "resolution_mechanism": "Comparative historical analysis: did later empires (Sasanian, Islamic Caliphate, Byzantine) achieve administrative coherence only through religious unification? Did they face equivalent costs when attempting pluralism?",
+      "impact": "If necessity: some perspectives shift toward mountain (religious consolidation is a natural law of empires). If contingent: the tangled_rope/snare classifications hold; Constantine's choice reflects institutional preference, not structural inevitability.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether religious consolidation was structurally necessary or contingent"
+    },
+    {
+      "id": "doctrine_winner_determination",
+      "question": "What structural property of Nicene Christianity (vs Arian, Donatist, other heterodox forms) made it the winning doctrine that Constantine's legitimacy could best support?",
+      "resolution_mechanism": "Analysis of theological simplicity, institutional scalability, appeal to educated elites, compatibility with Neoplatonic philosophy, organizational hierarchy vs flat structure",
+      "impact": "If Nicene was objectively superior for coordination: legitimacy of Constantine's choice increases, snare classification for losers becomes harder to defend. If selection was arbitrary: Constantine's backing was pure institutional power play \u2014 snare extraction for doctrinal losers becomes unambiguous.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "What made Nicene Christianity the stabilizing doctrinal choice"
+    },
+    {
+      "id": "conversion_coercion_timeline",
+      "question": "Over what historical arc did Constantine's vision mandate transition from persuasion to coercion, and what triggers marked the shift?",
+      "resolution_mechanism": "Timeline analysis: Constantine's edicts (312-337), comparison with successors' enforcement (Theodosius I, Justinian), measurement of legal penalty severity over decades",
+      "impact": "If coercion increased monotonically: snare classification grows stronger. If it remained voluntary-but-incentivized for centuries: rope classification persists. The transition point marks when the constraint moves from coordination to pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline of transition from voluntary to coercive religious consolidation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 312,
+    "end": 362
+  },
+  "commentary": {
+    "narrative_context": "The vision of the cross as reported by Eusebius of Caesarea represents a foundational legitimacy myth in Western religious and political history. Constantine, confronted with civil war fragmentation and military uncertainty before the Battle of the Milvian Bridge (312 CE), allegedly received a divine vision promising victory through the sign of the cross. Whether authentic experience, strategic narrative, or retrospective fabrication, this constraint functions as a coordination mechanism unifying Christian theological factions and the Roman imperial military under a single religious framework. Simultaneously, it operates as an extraction mechanism suppressing pagan worship, eliminating competing Christian doctrines, and centralizing religious authority under imperial control. The constraint exhibits high theater \u2014 the vision testimony itself has no historical corroboration and relies entirely on institutional repetition (Eusebius's account is our only source). Over the 50-year interval from Constantine through his successors (312-362 CE), the vision mandate shifted from persuasive incentive to coercive enforcement, with suppression and extractiveness increasing monotonically. Theater increased as the original claim's falsehood accumulated and the constraint came to rest on pure institutional authority rather than persuasive power.",
+    "key_agents": [
+      "Constantine I: Primary beneficiary (institutional/arbitrage) \u2014 captures military unification, religious legitimacy, succession of power through Christian institutional backing",
+      "Christian Clergy (Nicene Orthodox faction): Primary beneficiary (organized/constrained) \u2014 secure institutional consolidation, state patronage, doctrinal victory over rivals, organizational hierarchy",
+      "Pagan Religious Institutions: Primary victim (powerless/trapped) \u2014 forced suppression of worship, loss of civic authority, confiscation of temples",
+      "Arian and Heterodox Christian Factions: Secondary victim (powerful/mobile) \u2014 doctrinal suppression despite significant theological sophistication; some factions can migrate (Goths, Sasanian territories)",
+      "Syncretist Populations: Secondary victim (moderate/constrained) \u2014 coerced religious conformity, suppression of hybrid worship practices, forced institutional integration",
+      "Eusebius of Caesarea: Institutional narrator (institutional/arbitrage) \u2014 benefits from positioning as legitimacy-myth author; carries forward the vision testimony as institutional authority"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Constantine extracts significant costs from pagan populations and doctrinal losers (suppression of worship, elimination of rival institutional structures, forced conversion). The extraction is not total because (a) some populations adopt Christianity voluntarily through persuasion/incentives rather than pure coercion, (b) mobile factions can migrate, and (c) Constantine himself frames this as a positive unification, not rapine. Suppression (0.68): High. Multifaceted suppression: legal penalties for pagan worship, institutional defunding of pagan temples and priests, social shame for non-conversion, military integration of Christianity into the loyalty structure, doctrinal violence against Arian competitors. Theater ratio (0.81): High and increasing. The vision claim itself is theater \u2014 Eusebius is the sole source, Constantine's own writings don't mention it, and no contemporary corroboration exists. As extractive enforcement increases, the theatrical maintenance of the legitimacy myth becomes more obvious; by the late 4th century, the vision is sustained by institutional repetition, not persuasive power. The trajectory shows classic degradation: theater_ratio rises from 0.35 to 0.81 as function atrophies.",
+    "perspectival_gap": "Extreme perspectival divergence. Constantine and his military perceive the vision mandate as pure coordination (unifying fragmented factions, creating shared moral identity, solving the problem of which Christian interpretation wins). Christian clergy perceive coordination benefits (institutional patronage, doctrinal resolution) but also benefit from asymmetric extraction (their faction wins, others lose). Arian and heterodox factions perceive tangled extraction \u2014 they gain some institutional resources but face doctrinal suppression despite theological sophistication. Pagan populations and conquered doctrinal losers perceive pure snare \u2014 mandatory conversion with no exit, loss of religious identity, institutional coercion. Eusebius perceives (or performs) the vision as foundational myth, treating theater as function. The analytical observer risks treating religious consolidation as inevitable (mountain), but the high extractiveness, suppression, and theater values reveal this as contingent institutional imposition. The perspectival gap is maximal because the beneficiary (Constantine) experiences rope-level coordination while the victim (pagan subjects) experiences snare-level extraction from identical structural phenomenon.",
+    "directionality_logic": "Constantine and Imperial Military: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.00. Net beneficiary. Full exit options (could have chosen different unification strategy); benefits without extraction cost. Christian Clergy (Nicene): Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.25. Net beneficiary but constrained by doctrinal orthodoxy. Benefits from state patronage; constrained by need to maintain ideological purity to retain legitimacy. Arian/Heterodox Factions: Victim + mobile \u2192 d\u22480.50, f(d)\u22480.65. Some extraction (doctrinal suppression, institutional disadvantage) but mobile exit (Sasanian empire, desert monasticism, migration with barbarian tribes). Pagan Subjects: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction. No exit option; mandatory conversion; loss of ancestral worship. Syncretist Populations: Victim + constrained \u2192 d\u22480.75, f(d)\u22481.10. Significant extraction (forced conformity, suppression of hybrid practices); some constrained exit (geographic migration possible but socially costly). Eusebius: Institutional narrator + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary through positioning as legitimacy-myth author; has exit options (could have written differently or not written).",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that Constantine's vision mandate is a genuine hybrid\u2014both coordination mechanism AND extraction device, simultaneously. The coordination function is real but asymmetric: it unifies Christian factions (solving a genuine doctrinal chaos problem) AND it enables imperial consolidation AND it suppresses non-winning factions and pagans. The extraction is not a secondary effect but a primary structural feature \u2014 the constraint's stability depends on sustained suppression of alternatives (pagan worship, Arian Christianity, syncretism). The tangled_rope classification avoids the false choice between 'this is just coordination' (beneficiary's illusion) and 'this is just extraction' (victim's reality). It is both, with the asymmetry measured by directionality: Constantine experiences \u03c7\u22480.0 (net beneficiary), while pagan subjects experience \u03c7\u22480.52 (net victim). The increasing theater ratio (0.35\u21920.81) shows the hallmark of a degraded constraint: as the original coordination function becomes less persuasive, maintenance relies increasingly on institutional repetition of the vision myth. By 362 CE (50 years in), the vision's factual status is irrelevant \u2014 belief in the claim is enforced by institutional authority, not by evidence or argument. This is piton-level theater, indicating that the mandate's underlying function has atrophied: what was once a persuasive coordination mechanism has become pure institutional inertia maintained by law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nicene_orthodoxy_enforcement",
+      "pagan_temple_suppression",
+      "arian_christology_persecution"
+    ],
+    "dual_formulation_note": "The vision mandate is downstream of Constantine's broader imperial consolidation strategy but represents a distinct constraint operating through religious symbolism. Related constraints (Nicene orthodoxy enforcement, pagan suppression, Arian persecution) are entangled with the vision narrative but have independent structural properties. The vision myth is the legitimacy mechanism enabling all three downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "cow_field_poop",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cowfield"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "The Cow Field Hazard (Pragmatic Avoidance)",
+    "topic_domain": "social/psychological",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "pragmatic_agents",
+      "field_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Pragmatic Field User",
+      "comment": "PERSPECTIVE 1: PRAGMATIC FIELD USER (ROPE) \u2014 Recognizes cow field as an inherent hazard requiring coordination around avoidance behaviors. Exit option is mobile (can choose different route or time). Power is moderate (has options but not unlimited). d\u22480.50, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.17. Pure coordination: learning where the hazard exists and when enables collective navigation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Field Landowner",
+      "comment": "PERSPECTIVE 2: FIELD LANDOWNER (ROPE) \u2014 Manages the field and its hazards. Benefits from establishing clear boundaries and shared understanding about how to coexist with the constraint. Exit is arbitrage (can modify the field itself, fence it, or manage herd). Power is powerful (controls the resource). d\u22480.15, f(d)\u2248-0.01, \u03c3=0.8 \u2192 \u03c7\u2248-0.00. Coordination with minimal extraction: landowner has interest in users understanding the hazard without friction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (ROPE) \u2014 Views the cow field hazard as an archetypal coordination problem: how do communities organize around inevitable, distributed, naturally-occurring negative features? The hazard is not created by malice or extraction \u2014 it simply exists. Rope classification reflects that the constraint solves a real collective action problem (information sharing about hazard location/timing) without requiring hierarchical coercion. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.21."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Institutional Hazard Management System",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL HAZARD MANAGEMENT (PITON) \u2014 Over time, formal hazard management systems (warning signs, designated paths, maintenance protocols) develop. These institutions persist partly through genuine coordination function (people do benefit from shared understanding) but increasingly through theater: bureaucratic sign-posting and routine inspections that maintain institutional legitimacy even after the actual hazard coordination has been absorbed into local practice. theater_ratio\u22480.35 reflects that while some performative elements exist (official warnings), the system retains functional core. d\u22480.40, f(d)\u22480.40, \u03c3=0.9 \u2192 \u03c7\u22480.13."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inevitability_versus_artifact",
+      "question": "Is the cow field hazard an inevitable feature of biological cohabitation (natural law) or a contingent artifact of particular land-use patterns?",
+      "resolution_mechanism": "Cross-cultural and historical comparison of hazard management approaches; analysis of whether absence of cows eliminates the coordination problem or merely transforms it",
+      "impact": "If inevitable: constraint approaches mountain classification (immutable hazard). If contingent: constraint remains rope (contingent coordination challenge that could be engineered away). Current \u03b5=0.32 and empirical evidence suggest rope is correct, but strong cultural narratives treat it as natural law.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether cow field hazard is inevitable or contingent on land use patterns"
+    },
+    {
+      "id": "hazard_distribution_homogeneity",
+      "question": "Is the hazard uniformly distributed (same risk everywhere in the field) or clustered (high-risk zones and safe zones)?",
+      "resolution_mechanism": "Spatial mapping of hazard distribution; statistical analysis of random vs clustered occurrence patterns",
+      "impact": "If uniform: pure coordination problem (everyone faces equal risk, needs shared understanding). If clustered: creates asymmetric exposure and potential for exploitation (some agents can navigate safely while others bear concentrated risk), shifting classification toward tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Spatial distribution of hazard within the field"
+    },
+    {
+      "id": "avoidance_versus_tolerance",
+      "question": "Does pragmatic avoidance require that agents stay out of the field entirely, or can they develop tolerance/immunity through repeated exposure?",
+      "resolution_mechanism": "Behavioral studies of adaptation; analysis of whether hazard becomes less salient over time for experienced users",
+      "impact": "If avoidance only: constraint maintains Rope classification (need for information coordination). If tolerance develops: constraint shifts toward Piton (institutional management becomes theater as practical users develop informal protocols that supersede formal warnings). Current theater_ratio suggests institutional layer is partially theatrical already.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adaptation reduces functional hazard over time"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The cow field hazard exemplifies a pure coordination constraint: agents must navigate an environment containing distributed negative features (waste, disease vectors, physical hazards) that cannot be eliminated but can be managed through shared information and behavioral protocols. Unlike snares (which extract value through coercion) or tangled ropes (which mix coordination with asymmetric extraction), the cow field hazard is fundamentally a coordination problem. No agent benefits from others being harmed; all parties benefit from effective hazard communication. The constraint emerges naturally from biological cohabitation and persists because pragmatic avoidance is genuinely useful to all users. Over time, institutional layers develop (warning signs, maintenance schedules, designated pathways) that increase theater_ratio from ~0.15 to 0.35, reflecting gradual bureaucratization of what began as informal coordination. However, the functional core remains intact \u2014 the constraint continues to solve a real problem.",
+    "key_agents": [
+      "Pragmatic Field Users: Primary beneficiaries (moderate/mobile) \u2014 benefit from shared hazard information enabling efficient navigation",
+      "Field Landowner: Secondary beneficiary (powerful/arbitrage) \u2014 maintains field and benefits from reduced friction with users through clear hazard communication",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes hazard as archetypal coordination problem without malice or extraction",
+      "Institutional Hazard Management: Institutional layer (institutional/constrained) \u2014 develops formal protocols and warning systems; theater increases as bureaucratic maintenance becomes detached from actual user needs"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Low-moderate. The constraint does not extract value from any agent \u2014 no party accumulates wealth or power through the hazard's existence. Extractiveness reflects only the slight burden of avoidance and hazard-awareness behavior. Suppression (0.28): Low-moderate. Agents have genuine options for managing the hazard (different routes, different times, protective equipment, risk acceptance). While not costless, suppression is not severe \u2014 alternatives exist. Theater ratio (0.35): Low. The constraint's functional content (hazard exists, avoidance is necessary) dominates performative layers. Warning signs and maintenance routines add some theater (~15-35% of total institutional activity), but core coordination remains functional. The modest theater increase over the interval reflects institutional drift toward bureaucratic self-perpetuation, not a fundamental degradation of the constraint's purpose.",
+    "perspectival_gap": "All four perspectives classify the constraint as Rope or Piton, with no significant perspectival gap. This is expected: the cow field hazard is a low-extraction, high-coordination problem that all agents recognize as coordination rather than coercion. The pragmatic user and landowner both see their interests as aligned (safe field use). The analytical observer recognizes the coordination function. The institutional perspective sees an early-stage Piton (functional coordination with emerging theater, but not yet severely degraded). The absence of snare or tangled_rope perspectives indicates that the constraint genuinely lacks extraction mechanisms \u2014 no agent is trapped or victimized. The absence of a mountain perspective indicates that while the hazard is 'natural' (emerges from biology), it is not immutable (can be engineered away, mitigated, or tolerated). The uniformity of classification across perspectives is a diagnostic sign that this is a pure coordination problem.",
+    "directionality_logic": "Pragmatic field user: Beneficiary + mobile \u2192 d\u22480.50, f(d)\u22480.65. Symmetric: benefits from hazard information, pays modest cost of avoidance. Landowner: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary: owns the resource, has unilateral exit options (fencing, herd management). Institutional system: Institutional + constrained \u2192 d\u22480.40, f(d)\u22480.40. Moderate extraction index reflects growing theater as institutional layer becomes semi-autonomous from actual user needs. Analytical observer: d\u22480.50, f(d)\u22480.65. Symmetric observation position \u2014 sees equal benefits and costs across all agents."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

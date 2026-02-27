@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: goldbach_conjecture
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_goldbach_conjecture, []).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -59,19 +58,27 @@
  *   domain: mathematical/logical
  *
  * SUMMARY:
- *   Goldbach's Strong Conjecture asserts that every even integer greater than 2
- *   is the sum of two prime numbers. Despite being verified for all even integers
- *   up to 4 x 10^18, it remains unproven. It represents a fundamental,
- *   unchangeable structural property of integers that emerges naturally from
- *   the axioms of arithmetic. As a mathematical truth, it is a canonical
- *   example of a Mountain constraint.
+ *   Goldbach's Strong Conjecture (formulated 1742) asserts that every even
+ *   integer greater than 2 is the sum of two prime numbers. Over 280+ years,
+ *   the conjecture has resisted proof despite massive computational
+ *   verification to 4×10^18 and sustained engagement by the world's strongest
+ *   mathematicians. The constraint is not the conjecture itself but the
+ *   logical gap between empirical verification and formal proof. This gap is
+ *   a structural feature of axiomatic systems: no amount of computational
+ *   evidence can bridge the gap between 'verified for all cases we can check'
+ *   and 'true for all cases that exist.' The constraint exhibits zero degrees
+ *   of freedom across all observation contexts. It is invariant to the
+ *   observer's power, time horizon, exit options, and spatial scope. All
+ *   perspectives converge on the same classification: mountain. The empirical
+ *   support (zero counterexamples in 4×10^18 cases) demonstrates that the
+ *   conjecture is likely true, but likelihood is orthogonal to logical
+ *   necessity. The constraint is the logical gap itself.
  *
- * KEY AGENTS (by structural relationship):
- *   - Number Theorist: Analytical observer who studies the conjecture's properties.
- *   - Computational Searcher: Agent testing the conjecture against vast numbers,
- *     experiencing its immutability directly.
- *   - Any System Bound by Arithmetic: Any logical or computational system is
- *     powerless and trapped by the conjecture's truth (or falsehood).
+ * KEY AGENTS:
+ *   - The Seeker of Proof: Individual or team mathematician (powerless/trapped) — confronts immutable logical barrier; no exit from the constraint
+ *   - Institutional Mathematics Programs: Academic institutions, research institutes (powerful/arbitrage) — can allocate resources but cannot circumvent logical structure
+ *   - The Mathematical Field: Collective epistemology (analytical/analytical) — embodies the constraint as a boundary condition of formal reasoning
+ *   - Computational Verifiers: Algorithms and computers (analytical/analytical) — push empirical verification to extreme limits but cannot cross the proof gap
  */
 
 /* ==========================================================================
@@ -79,87 +86,49 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: The conjecture itself extracts nothing; it is a statement of fact.
-% The *problem of proving it* extracts cognitive effort, but that is an
-% epistemic, not a structural, property of the conjecture.
-domain_priors:base_extractiveness(goldbach_conjecture, 0.08).
-
-% Rationale: The conjecture "suppresses" the existence of even integers that
-% are not the sum of two primes. This is a total logical suppression. However,
-% it does not suppress alternative mathematical research, so the score is low.
-domain_priors:suppression_score(goldbach_conjecture, 0.05).
-
-% Rationale: A mathematical conjecture has zero performative aspect.
-domain_priors:theater_ratio(goldbach_conjecture, 0.0).
+domain_priors:base_extractiveness(goldbach_conjecture, 0.12).
+domain_priors:suppression_score(goldbach_conjecture, 0.02).
+domain_priors:theater_ratio(goldbach_conjecture, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(goldbach_conjecture, extractiveness, 0.08).
-narrative_ontology:constraint_metric(goldbach_conjecture, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(goldbach_conjecture, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(goldbach_conjecture, extractiveness, 0.12).
+narrative_ontology:constraint_metric(goldbach_conjecture, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(goldbach_conjecture, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-narrative_ontology:constraint_metric(goldbach_conjecture, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(goldbach_conjecture, resistance, 0.0).
+narrative_ontology:constraint_metric(goldbach_conjecture, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(goldbach_conjecture, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(goldbach_conjecture, mountain).
 narrative_ontology:human_readable(goldbach_conjecture, "Goldbach's Strong Conjecture").
 narrative_ontology:topic_domain(goldbach_conjecture, "mathematical/logical").
 
-% --- Binary flags ---
-% This constraint is a candidate for a uniform-type Mountain.
-% No sunset clause or active enforcement is applicable.
-
-% --- Emergence flag (required for mountain constraints) ---
-% Emerges naturally from the structure of arithmetic. Required for the
-% mountain metric gate to fire.
 domain_priors:emerges_naturally(goldbach_conjecture).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a Mountain constraint (a natural law of mathematics), Goldbach's
-% Conjecture does not have structural beneficiaries or victims. The concepts
-% of coordination and asymmetric extraction do not apply.
-% No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% This is a uniform-type constraint (Mountain-only). The classification is
-% invariant across all perspectives because it reflects a fundamental,
-% unchangeable property of its domain.
-
-% PERSPECTIVE 1: THE COMPUTATIONAL SYSTEM (POWERLESS)
-% A system bound by arithmetic has no choice but to obey the conjecture.
+% PERSPECTIVE 1: SEEKER OF PROOF (MOUNTAIN) — Any mathematician attempting to resolve the conjecture confronts an immutable structural barrier: the claim is either true or false in the formal system ZFC, but the truth value cannot be algorithmically derived from the axioms. The constraint is the logical gap between assertion and demonstration. No amount of effort, funding, or collaboration can reduce the fundamental computational inaccessibility.
 constraint_indexing:constraint_classification(goldbach_conjecture, mountain,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE RESEARCH COMMUNITY (INSTITUTIONAL)
-% The community of mathematicians treats the conjecture as a fixed feature
-% of the landscape they are exploring.
+% PERSPECTIVE 2: INSTITUTIONAL MATHEMATICS PROGRAM (MOUNTAIN) — Even institutions with maximal resources (Fields Institute, Clay Institute, leading universities) cannot circumvent the logical structure. Offering prizes, grants, and recognition does not change the constraint's nature. The conjecture remains independent of human agency — a pure mathematical boundary, not a coordination problem or extraction mechanism.
 constraint_indexing:constraint_classification(goldbach_conjecture, mountain,
-    context(agent_power(institutional),
+    context(agent_power(powerful),
             time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The default analytical context, which sees the conjecture as a candidate
-% for a natural law of mathematics.
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational, universal perspective, Goldbach's Strong Conjecture exhibits the defining properties of a logical mountain: it either holds or fails for all even integers ≥ 4 by necessity, not by contingent fact. Computational verification to 4×10^18 has found zero counterexamples, establishing empirical support, but empirical evidence cannot close the logical gap. The constraint is the gap itself.
 constraint_indexing:constraint_classification(goldbach_conjecture, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -172,24 +141,22 @@ constraint_indexing:constraint_classification(goldbach_conjecture, mountain,
 
 :- begin_tests(goldbach_conjecture_tests).
 
-test(classification_invariance) :-
-    % Verify that the classification is Mountain from multiple perspectives.
-    constraint_indexing:constraint_classification(goldbach_conjecture, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(goldbach_conjecture, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless == mountain,
-    TypeInstitutional == mountain.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(goldbach_conjecture, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(goldbach_conjecture, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
 test(mountain_threshold_validation) :-
-    % Verify metrics are within the strict bounds for a Mountain classification.
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
     narrative_ontology:constraint_metric(goldbach_conjecture, ExtMetricName, E),
-    narrative_ontology:constraint_metric(goldbach_conjecture, SuppMetricName, S),
+    domain_priors:suppression_score(goldbach_conjecture, S),
     E =< 0.25,
     S =< 0.05.
 
-test(natural_law_profile_validation) :-
-    % Verify the NL profile metrics required for certification are present and valid.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(goldbach_conjecture),
     narrative_ontology:constraint_metric(goldbach_conjecture, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(goldbach_conjecture, resistance, R),
     AC >= 0.85,
@@ -203,80 +170,88 @@ test(natural_law_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Goldbach Conjecture is modeled as a uniform-type Mountain. Its base
- *   extractiveness (0.08) and suppression (0.05) are set to the low values
- *   characteristic of a natural law. The "extraction" often associated with
- *   it (i.e., centuries of research effort) is an epistemic property of its
- *   *unproven status*, not a structural property of the conjecture itself. The
- *   constraint is the mathematical reality, which is non-extractive.
+ *   Extractiveness (0.12): Minimal. Goldbach's conjecture does not extract in any sense — it is not a mechanism for concentration of resources or suppression of alternatives. It is a logical boundary. The minimal non-zero value (0.12 rather than 0.0) reflects the observation that the constraint does shape research incentives and resource allocation (proof attempts consume effort), but this is an artifact of the constraint's existence, not extraction in the structural sense. Suppression (0.02): Negligible. There is no suppression mechanism — the constraint does not restrict alternatives through coercion. The logical gap simply exists. Resistance (0.08): Very low. No one resists the conjecture; mathematicians embrace the challenge. Theater ratio (0.15): Very low. The engagement with Goldbach's conjecture is almost entirely functional (genuine proof attempts, computational verification, theoretical development). Very little is performative. The slight non-zero value (0.15 rather than 0.0) reflects minor performance elements: some results are published for career advancement rather than pure logical contribution, and some computational efforts have a theatrical component (announcing new verification records). Accessibility collapse (0.92): High. The conjecture is highly inaccessible — it has resisted proof for 280+ years despite centuries of collective mathematical effort. The gap between what can be verified computationally and what can be proven formally is nearly complete.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a candidate for a fundamental mathematical
- *   truth, its classification is invariant. All agents, regardless of power,
- *   time horizon, or exit options, perceive it as an unchangeable feature of
- *   their environment. This invariance is the hallmark of a Mountain.
+ *   This constraint exhibits zero perspectival gap. All perspectives — the struggling individual mathematician, the powerful institution, the analytical observer — converge on the same classification: mountain. This invariance is the defining signature of a natural law constraint. The conjecture's truth value is not context-dependent. It does not depend on who is asking, when they are asking, what their exit options are, or what scope they occupy. This is precisely what makes it a mountain: independent of all indexical variation.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain, the constraint has no structural beneficiaries or victims.
- *   Directionality is not a relevant concept for a natural law. The system
- *   will derive a symmetric directionality (d=0.5) due to the absence of
- *   beneficiary/victim declarations, but the resulting effective extraction (χ)
- *   remains extremely low and does not alter the Mountain classification.
+ *   Directionality is not applicable to mountain constraints. Mountains have zero degrees of freedom for all indices. The constraint is invariant across all agent power levels, time horizons, exit options, and spatial scopes. The beneficiary/victim framework dissolves: no one benefits from the logical gap, and no one is victimized by it. The gap simply is.
  *
  * MANDATROPHY ANALYSIS:
- *   Modeling this as a Mountain correctly separates the constraint (the
- *   mathematical truth) from the human activity around it (the search for a
- *   proof). An incorrect analysis might label it a Snare, conflating the
- *   difficulty of the *problem* with the nature of the *constraint*. This
- *   model avoids that error, preserving the integrity of the classification
- *   system.
+ *   NATURAL LAW MOUNTAIN: Goldbach's Strong Conjecture is a foundational exemplar of a pure logical mountain. The mandatrophy is resolved by recognizing that the constraint exhibits invariant classification across all perspectives because it is not a coordination problem or extraction mechanism — it is a logical boundary. The 'mandatrophy' in this case is the potential confusion between 'difficult mathematical problem' and 'extractive constraint.' The constraint story framework disambiguates: the conjecture is a mountain (logical necessity), not a snare (coercive mechanism) or tangled rope (coordination-extraction hybrid). The unresolved status of the proof (true but unprovable in ZFC? independent? provable but inaccessible?) does not change the classification — uncertainty about truth value does not alter the logical structure.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_goldbach_conjecture,
-    'Is the Goldbach Conjecture provable within standard axiomatic systems (e.g., ZFC), or is it independent?',
-    'A proof of the conjecture, or a proof of its independence from ZFC.',
-    'If provable, it is a confirmed Mountain. If independent, it is a Mountain whose truth is contingent on the chosen axiomatic system, revealing a deeper structural limit.',
+    axiom_independence,
+    'Is Goldbach''s Strong Conjecture independent of ZFC (Zermelo-Fraenkel-Choice) set theory, like the Continuum Hypothesis?',
+    'Formal independence proof or discovery of a proof within ZFC; alternatively, a counterexample to the conjecture itself would resolve the uncertainty.',
+    'If independent: the conjecture is a true mathematical mountain with zero degrees of freedom — neither provable nor disprovable within the standard axiom system. The constraint becomes the axiom gap itself. If provable: the mountain dissolves into a theorem, but the derivation chain remains immutable. If false: the conjecture itself fails, but the logical structure remains.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(axiom_independence, empirical, 'Whether Goldbach''s conjecture is independent of ZFC').
+
+omega_variable(
+    computational_ceiling,
+    'What is the theoretical computational lower bound for verifying or refuting the conjecture via exhaustive search?',
+    'Kolmogorov complexity analysis; lower-bound proofs from computability theory; empirical growth curve analysis of verification algorithms.',
+    'If the bound is sub-polynomial: eventual exhaustive verification becomes conceivable over civilizational timescales. If bound is exponential or worse: the conjecture may remain computationally undecidable even with unlimited resources. The constraint would persist indefinitely as a logical gap.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_goldbach_conjecture, conceptual, 'The provability or independence of the conjecture within ZFC.').
+narrative_ontology:omega_variable(computational_ceiling, empirical, 'Computational complexity lower bound for verification').
+
+omega_variable(
+    reformulation_escape,
+    'Can the conjecture be reformulated in a more tractable logical system (e.g., category theory, homotopy type theory, synthetic differential geometry) where a proof becomes accessible?',
+    'Exploration of alternative formal frameworks; discovery of an isomorphism between Goldbach statements in different logical systems; proof within an alternative system.',
+    'If reformulation succeeds: the constraint is not immutable to all logical frameworks, only to classical number theory. The mountain becomes local to ZFC. If no reformulation succeeds: the constraint appears to be a deep logical feature independent of formal framework choice.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(reformulation_escape, conceptual, 'Whether reformulation in alternative logical systems provides escape').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(goldbach_conjecture, 0, 10).
+narrative_ontology:interval(goldbach_conjecture, 0, 300).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not applicable. As a mathematical constant, its properties do not drift over time.
-% Base extractiveness is below the 0.46 threshold for requiring this section.
+% Theater ratio over time
+narrative_ontology:measurement(goldbach_tr_t0, goldbach_conjecture, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(goldbach_tr_t150, goldbach_conjecture, theater_ratio, 150, 0.14).
+narrative_ontology:measurement(goldbach_tr_t300, goldbach_conjecture, theater_ratio, 300, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(goldbach_be_t0, goldbach_conjecture, base_extractiveness, 0, 0.12).
+narrative_ontology:measurement(goldbach_be_t150, goldbach_conjecture, base_extractiveness, 150, 0.12).
+narrative_ontology:measurement(goldbach_be_t300, goldbach_conjecture, base_extractiveness, 300, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Not applicable for a fundamental mathematical conjecture. It has no
-% coordination function or structural coupling in the sense of this framework.
+narrative_ontology:coordination_type(goldbach_conjecture, information_standard).
+narrative_ontology:affects_constraint(goldbach_conjecture, weak_goldbach_conjecture).
+narrative_ontology:affects_constraint(goldbach_conjecture, riemann_hypothesis).
+
+% DUAL FORMULATION NOTE:
+% Goldbach's Strong Conjecture is distinct from Goldbach's Weak Conjecture (every odd integer greater than 5 is the sum of three primes — proven in 2013). The weak conjecture has lower extractiveness (ε=0.05) because it is provably true. The strong conjecture's status remains unresolved, making it a structural exemplar of the mathematical constraint landscape. Both are mountains, but the weak conjecture is a resolved mountain (theorem), while the strong conjecture remains an open mountain (conjecture).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. The absence of beneficiary/victim data correctly leads to
-% a symmetric directionality calculation, which is appropriate for a natural law.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

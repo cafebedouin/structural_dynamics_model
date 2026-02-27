@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "us_wind_project_ban_2025",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wind_ban"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Executive Ban on New Wind Power Projects (2025)",
+    "topic_domain": "political/economic/energy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_fossil_fuel_producers",
+      "executive_administration"
+    ],
+    "victims": [
+      "renewable_energy_developers",
+      "climate_mitigation_coalitions",
+      "grid_modernization_advocates"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Developer (Mid-Scale)",
+      "comment": "PERSPECTIVE 1: RENEWABLE ENERGY DEVELOPER (SNARE) \u2014 Faces total prohibition on project development within US territory. Cannot exit by relocating within jurisdiction; foreign projects face tariff and financing barriers. Trapped by regulatory ban with no legal pathway. d\u22480.96, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.65. Experiences pure extraction through foreclosure of business opportunities."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Climate-Aligned Grid Operators",
+      "comment": "PERSPECTIVE 2: CLIMATE-ALIGNED GRID OPERATORS (SNARE) \u2014 Cannot legally pursue wind integration strategies within US borders. Constrained by regulatory mandate to forgo cost-effective grid modernization. Exit options (distributed solar, geothermal, battery) are secondary and more expensive. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.50. Extraction via forced suboptimal technology choices."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Fossil Fuel Producers",
+      "comment": "PERSPECTIVE 3: INCUMBENT FOSSIL FUEL PRODUCERS (ROPE) \u2014 Coordinate with executive to eliminate competing energy source. Ban secures market dominance and defers costly grid transition investments. Experiences constraint as pure coordination: alignment with government preference = protected market position. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Climate Coalition and Public Interest Groups",
+      "comment": "PERSPECTIVE 4: CLIMATE COALITION AND PUBLIC INTEREST GROUPS (TANGLED ROPE) \u2014 Coordination function: global climate mitigation requires US participation in low-carbon energy transition (coordination gain). Extraction mechanism: ban suppresses this coalition's policy leverage while benefiting fossil fuel incumbents who fund counter-messaging. Coalition is constrained by polarization and limited near-term exit options. d\u22480.78, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.56. Mixed: genuine coordination need but severe extraction from ban."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Executive Administration (Policy Framers)",
+      "comment": "PERSPECTIVE 5: EXECUTIVE ADMINISTRATION (PITON) \u2014 Ban is framed as 'energy independence' and 'manufacturing protection' but functions largely as rent-protection for incumbents. Theater ratio high: rhetoric about domestic energy production and job protection; functional reality is market foreclosure. theater_ratio=0.58 approaches piton threshold; rising toward 0.70. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Administration sees itself as coordinator but progressively as theatrical as functional justifications erode."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (NATURAL LAW / FALSE SUMMIT) \u2014 Risks naturalizing ban as inevitable outcome of sovereign energy policy ('every nation must choose its own energy mix'). From civilizational scale, could appear as an immutable national interest constraint. However, structural data (\u03b5=0.68, suppression=0.75, theater=0.58) contradicts mountain classification. Engine detects false summit: the ban is contingent political choice, not natural law. Real constraint is political (snare with organized resistance), not civilizational."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_substitution_success",
+      "question": "Can US energy grid achieve decarbonization targets (50%+ by 2035) without wind, using only solar and storage, while maintaining grid stability and affordability?",
+      "resolution_mechanism": "Grid modeling with binding renewable percentage targets; comparison of least-cost pathways with and without wind across decarbonization scenarios; empirical monitoring of grid reliability metrics and energy prices under ban conditions",
+      "impact": "If yes: ban may have limited climate impact (other renewables substitute); snare classification weakens. If no: ban creates binding climate constraint; snare classification strengthens and extraction becomes civilizational-scale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative renewables can substitute for wind in decarbonization pathway"
+    },
+    {
+      "id": "ban_reversibility_horizon",
+      "question": "What is the expected duration of the ban? Is it a permanent policy instrument or a temporary restriction subject to future reversal?",
+      "resolution_mechanism": "Legislative tracking; analysis of enabling statute (executive order vs law); monitoring of political coalitions and decarbonization cost trajectories; comparison to similar historical bans and their typical durations",
+      "impact": "If temporary (< 5 years): scaffold perspective gains credibility; constraint may resolve to tangled rope. If permanent: snare classification is durable; extraction mechanism persists.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Duration and reversibility of the executive ban"
+    },
+    {
+      "id": "international_retaliation_scope",
+      "question": "Will trading partners (EU, Canada, Mexico) impose tariffs or trade restrictions on US energy imports and exports in response to climate policy inconsistency?",
+      "resolution_mechanism": "Trade agreement monitoring; tariff schedule reviews; analysis of carbon border adjustment mechanisms; historical precedent from other US energy/climate policy reversals",
+      "impact": "If extensive retaliation: extraction costs rise for fossil fuel beneficiaries; snare structure may collapse under trade pressure. If minimal retaliation: beneficiaries retain gains; snare persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "International trade response to US wind ban"
+    },
+    {
+      "id": "distributed_energy_adaptation",
+      "question": "Do distributed rooftop solar and community-scale geothermal projects proliferate in response to centralized wind ban, creating a decentralized renewable pathway?",
+      "resolution_mechanism": "Empirical monitoring of distributed energy deployment rates, permitting timelines, and financing availability; comparison of pre-ban vs post-ban adoption curves; analysis of regulatory barriers to distributed alternatives",
+      "impact": "If proliferation occurs: victims gain exit option; constraint shifts from snare toward tangled rope. If suppressed: snare classification hardens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distributed energy adaptation circumventing centralized wind ban"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The executive ban on new wind power projects (enacted 2025) creates a structural constraint between the political authority seeking fossil fuel market protection and the renewable energy sector, climate mitigation coalitions, and grid modernization advocates. The ban forecloses a substantial economic and technology pathway while redistributing capture rents to incumbent fossil fuel producers. The constraint exhibits snare characteristics: high suppression (regulatory prohibition with no legitimate exit), high base extractiveness (captures market share from renewables to fossil fuels), rising theater ratio (initial rhetoric of 'energy independence' and 'manufacturing protection' masks underlying rent-protection function as justifications erode). The constraint is sustained by asymmetric institutional power: executive authority can impose bans unilaterally; renewable developers and climate coalitions cannot legally circumvent national regulatory jurisdiction, though they may pursue international projects or distributed energy substitutes. The ban demonstrates the distinction between extraction and coordination: from the fossil fuel incumbent's perspective, it is a coordination mechanism (alignment with government preference); from the developer's perspective, it is pure extraction (foreclosure of business opportunities). The analytical observer risks naturalizing the ban as an inevitable expression of national energy sovereignty, when the structural data reveals it as a contingent political choice sustained by suppression and rising performative rhetoric.",
+    "key_agents": [
+      "Incumbent Fossil Fuel Producers: Primary beneficiary (institutional/arbitrage) \u2014 gain protected market position and deferred grid transition investments; experience ban as coordination mechanism",
+      "Renewable Energy Developers (mid-scale): Primary victim (powerless/trapped) \u2014 face total foreclosure of domestic project pipeline; cannot relocate within US jurisdiction; no legal exit pathway",
+      "Climate Mitigation Coalition: Secondary victim (organized/constrained) \u2014 lose policy leverage for decarbonization pathway; constrained by polarization and regulatory suppression",
+      "Grid Operators (Climate-Aligned): Tertiary victim (powerless/constrained) \u2014 forced to pursue suboptimal and more expensive grid modernization pathways; cannot legally integrate wind",
+      "Executive Administration: Institutional beneficiary-narrator (institutional/arbitrage) \u2014 frames ban using energy independence and manufacturing rhetoric; functions as arena for fossil fuel coordination",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing ban as law of national interest; engine detects false summit given structural data"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The ban transfers market share and capital flows from renewable developers to fossil fuel incumbents over a 5-10 year horizon. The extraction is measurable: prevented wind projects represent ~150-200 GW of forgone capacity, valued at $150-250 billion in lifetime generation and economic activity. The value is extracted rather than destroyed because it flows to incumbent producers (higher fossil fuel demand) and their suppliers. Not maximal (0.95) because alternative renewable pathways (solar, geothermal, distributed) offer partial substitutes and exit options. Suppression (0.75): High. Regulatory ban is near-total prohibition with no legitimate pathway to wind development within national territory. Exit options: developers can pursue foreign projects (capital controls, tariffs, financing barriers); distributed solar (expensive, time-consuming permitting); grid operators can use alternative sources (constrained by cost and availability). Suppression is not 0.90+ because some legal exits exist and enforcement burden is finite. Theater ratio (0.58, rising): Moderate-high. Ban is justified using 'energy independence,' 'manufacturing protection,' 'grid stability' rhetoric. These narratives have reduced empirical grounding as grid studies show wind integration feasibility, supply chains stabilize, and energy independence motive conflicts with continued fossil fuel imports. Theater rises over interval because initial framing (2025) has higher surface plausibility; by 2027 (time_point=12), performance gaps between rhetoric and evidence create rising gap (theater approaches piton-threshold 0.70).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Fossil fuel incumbents see coordination (alignment with government = protected market). Renewable developers see snare (total foreclosure). Climate coalition sees tangled rope (genuine coordination need for decarbonization + severe extraction from ban). Grid operators see snare (forced suboptimality). Executive sees piton (degrading theater as justifications erode). Analytical observer risks mountain (natural law frame). The perspectival gap reveals that the same structural mechanism appears benign (coordination), mixed (tangled rope), severe (snare), and even natural (mountain) depending on the observer's position and beneficiary/victim status. This is the core diagnostic function of the DR framework: to show that classification is not observer-independent but precisely indexed to structural position.",
+    "directionality_logic": "Incumbent fossil fuel producers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Low directionality; net beneficiaries experience ban as coordination, not extraction. Renewable developers: Victim + trapped \u2192 d\u22480.96, f(d)\u22481.40. Maximum directionality; cannot exit US jurisdiction or circumvent regulatory ban. d approaches 1.0. Climate coalition: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. High directionality; some exit options (international advocacy, distributed energy) but major constraints (polarization, regulatory suppression). Grid operators: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High directionality; constrained to suboptimal alternatives. Executive administration: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Aligned with primary beneficiary (fossil fuels); frames ban as national coordination.",
+    "mandatrophy_analysis": "The ban resolves mandatrophy by demonstrating how a single regulatory structure can function as extraction (snare) for some actors and coordination for others. The mandate is NOT to classify the ban as a single type, but to show that snare is the dominant structural reality: the ban forecloses a legitimate alternative energy source to protect incumbent rents. The coordination perspective (fossil fuel incumbent) is subordinate: it exists but it depends on suppressing superior alternatives. If the suppression were removed, the coordinate alignment would collapse \u2014 incumbents would not voluntarily choose higher-cost fossil fuels if renewables were available at lower cost. This reveals the snare: the coordination is artificial, maintained only by regulatory foreclose. The theater rising from 0.48 to 0.58 shows drift toward piton-degradation: the ban's functional purpose (rent protection) is increasingly divorced from its stated purpose (energy independence, manufacturing). By civilizational scale, the ban becomes visible as a contingent extraction mechanism rather than an inevitable natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "grid_decarbonization_target_2035",
+      "fossil_fuel_subsidy_regime",
+      "trade_carbon_border_adjustment"
+    ],
+    "dual_formulation_note": "The US wind ban is downstream of fossil fuel rent-protection incentives and upstream of grid decarbonization constraints. The structural constraint (snare) manifests simultaneously as energy policy, industrial policy, and political coordination between executive and incumbent energy producers. Related constraints: grid decarbonization (faces binding constraint from ban), fossil subsidy regime (ban is complementary enforcement mechanism), trade retaliation (carbon-aware trading partners respond to policy inconsistency)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

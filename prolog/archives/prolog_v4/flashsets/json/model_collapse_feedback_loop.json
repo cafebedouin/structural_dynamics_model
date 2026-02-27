@@ -1,0 +1,162 @@
+{
+  "header": {
+    "constraint_id": "model_collapse_feedback_loop",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Autophagous Intelligence Trap",
+    "topic_domain": "technological/AI/informational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_model_developers",
+      "cloud_compute_providers"
+    ],
+    "victims": [
+      "downstream_ai_users",
+      "data_diversity",
+      "innovation_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Downstream AI Users",
+      "comment": "Downstream users are trapped in an ecosystem where the available models progressively converge to a local optimum, hindering their ability to address specific, novel problems. They have limited ability to influence the training data or model architecture."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Data Diversity",
+      "comment": "Data diversity is both a beneficiary and a victim. It benefits from the initial model training, but as models are recursively trained on their own outputs, the diversity is diminished, leading to homogenization and less useful models overall. The constraint here is that the initial diverse data gets extracted for a short-term benefit and then degraded systematically over time. Constrained because new data sources may exist, but the incentive is to train cheaply on readily available, auto-generated data."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Model Developers",
+      "comment": "Large model developers benefit from the reduced cost of training models on auto-generated data. They experience the constraint as a coordination problem: efficiently leveraging existing model outputs. They can arbitrage the market by quickly training and deploying new, seemingly improved models."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Innovation Ecosystem",
+      "comment": "The broader innovation ecosystem suffers from the model collapse feedback loop. While it initially fostered diverse approaches, it becomes constrained as resources are concentrated on incremental improvements of existing models rather than exploring new architectures or data sources. Over time, the innovation ecosystem's ability to explore diverse paths degrades, and it is constrained by the established paradigm. The ecosystem has become a theatrical performance of innovation, while in fact, the innovation rate decreases."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the constraint as a Tangled Rope: It presents a coordination problem (efficient model training) but also has an asymmetric extraction component that concentrates benefits for model developers at the expense of downstream users and long-term data diversity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "novelty_detection_robustness",
+      "question": "Can we develop novelty detection techniques robust enough to identify and filter out auto-generated or heavily recycled data?",
+      "resolution_mechanism": "Development and benchmarking of anomaly detection algorithms specifically tailored to the characteristics of AI-generated content.",
+      "impact": "If successful, the model collapse feedback loop can be mitigated by preventing models from being trained on their own outputs. If unsuccessful, the homogenization of data will continue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Robustness of novelty detection techniques."
+    },
+    {
+      "id": "incentive_alignment",
+      "question": "Can we realign the incentives of model developers to prioritize data diversity and long-term model quality over short-term performance gains?",
+      "resolution_mechanism": "Policy interventions such as subsidies for curated datasets or regulations against training on recycled data, or alternative evaluation metrics.",
+      "impact": "If incentives are realigned, the pressure to train on auto-generated data will be reduced. If not, the model collapse feedback loop will persist.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Alignment of incentives for model developers."
+    },
+    {
+      "id": "emergence_of_new_architectures",
+      "question": "Will radically new AI architectures emerge that are less susceptible to the model collapse feedback loop?",
+      "resolution_mechanism": "Ongoing research into alternative AI architectures, such as neuromorphic computing or biologically inspired models.",
+      "impact": "If new architectures emerge, they could bypass the limitations of current deep learning models and avoid the model collapse feedback loop. If not, the issue might be a fundamental limitation of all AI approaches.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Emergence of new AI architectures."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Autophagous Intelligence Trap describes a scenario where AI models are recursively trained on the output of their predecessors, leading to a progressive 'flattening' of information and a decline in model quality. This feedback loop results from incentives to reduce training costs by using readily available, auto-generated data, even at the expense of data diversity and long-term model performance. This dynamic can create a significant risk for the AI ecosystem, limiting its ability to solve novel problems and potentially leading to stagnation.",
+    "key_agents": [
+      "Large Model Developers: Beneficiaries (institutional/arbitrage) - Benefit from reduced training costs and first-mover advantage.",
+      "Downstream AI Users: Victims (powerless/trapped) - Suffer from the declining quality and limited applicability of available models.",
+      "Data Diversity: Victim/Beneficiary (moderate/constrained) - Initially benefits from model training but ultimately suffers from homogenization.",
+      "Innovation Ecosystem: Institutional Actor (institutional/constrained) - Suffers as resources shift towards incremental improvements instead of novel approaches."
+    ],
+    "logic_rationale": "Extractiveness: High (0.60) - Model developers extract value from readily available data at the expense of data diversity. Suppression: High (0.70) - Limited access to diverse datasets and the dominance of a few large models suppress alternative approaches. Theater Ratio: High (0.75) - While performative benchmarks might initially show improvements, the underlying model quality declines.",
+    "perspectival_gap": "The perspectival gap arises from the conflict between short-term gains for model developers and long-term costs for downstream users and the innovation ecosystem. Large model developers perceive the constraint as a coordination problem and efficiently leverage existing model outputs. Downstream AI users experience the constraint as a Snare because they are trapped in an ecosystem where the available models progressively converge. The innovation ecosystem sees a Piton because the diversity of approaches decreases. The analytical observer understands it as a tangled rope because it presents a coordination problem with an asymmetric extraction component.",
+    "directionality_logic": "The directionality is determined by the agent's relationship to the extraction flow. Large Model Developers benefit because they reduce training costs. Downstream AI users and data diversity are victims because the model quality and dataset diversity decline.",
+    "mandatrophy_analysis": "The classification prevents mislabeling coordination as pure extraction by recognizing that there are short-term coordination benefits. However, the long-term effect of the autophagous loop is a Snare for downstream users and the broader ecosystem. The Tangled Rope classification from the analytical perspective captures both aspects."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_alignment_problem",
+      "algorithmic_bias"
+    ],
+    "dual_formulation_note": "Model collapse is distinct from algorithmic bias and AI alignment but exacerbates these issues. The upstream constraints represent those issues individually. The model collapse is the feedback loop causing the issues to worsen."
+  },
+  "directionality_overrides": []
+}

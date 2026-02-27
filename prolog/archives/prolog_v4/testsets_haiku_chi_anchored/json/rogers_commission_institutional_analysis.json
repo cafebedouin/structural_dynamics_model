@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_institutional_analysis",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rogers"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Silent Safety Silo (NASA Decision-Making Pre-Challenger)",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": false,
+    "victims": [
+      "shuttle_crew",
+      "mission_safety_epistemic_commons",
+      "public_trust_in_nasa"
+    ],
+    "beneficiaries": [
+      "nasa_schedule_enforcement_authority"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Shuttle Crew",
+      "comment": "PERSPECTIVE 1: SHUTTLE CREW (SNARE) \u2014 Trapped within a system where critical safety data about O-ring erosion was systematically filtered. No exit option; exposure to risk was not a choice but a structural fact of their assigned mission. d\u22480.98, f(d)\u22481.45, \u03c3=1.0 \u2192 \u03c7\u22480.84."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Field Engineers and Safety Advocates",
+      "comment": "PERSPECTIVE 2: FIELD ENGINEERS AND SAFETY ADVOCATES (SNARE) \u2014 Engineers at Morton Thiokol who identified O-ring thermal limits were constrained by organizational hierarchy, contractual dependency, and career risk. Suppression of their technical data was structural, not accidental. d\u22480.88, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Level NASA Management",
+      "comment": "PERSPECTIVE 3: MID-LEVEL NASA MANAGEMENT (PITON) \u2014 Managers at the flight readiness review level performed risk assessment theater while actual technical constraints were known but not propagated upward. The filtering mechanism was structurally inertial \u2014 organizational boundaries that persisted through habit and contractual structure, not through active enforcement. theater_ratio=0.68 satisfies piton gate. d\u22480.55, f(d)\u22480.73, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NASA Senior Leadership",
+      "comment": "PERSPECTIVE 4: NASA SENIOR LEADERSHIP (ROPE) \u2014 Upper management experienced the constraint as coordination: maintaining launch schedule, managing political pressure, and securing budget continuity. The silo structure appeared to be a necessary organizational partition (dividing concerns, maintaining focus, reducing decision noise). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; experienced as coordination mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Mission Safety Epistemic Commons",
+      "comment": "PERSPECTIVE 5: MISSION SAFETY EPISTEMIC COMMONS (SNARE) \u2014 The abstract collective good of transparent safety assessment was systematically suppressed. No agent advocates for it; it bears the full cost of the silo without voice or exit. Theater_ratio=0.68 reflects that the safety review process appeared rigorous but was systemically blind. d\u22480.97, f(d)\u22481.43, \u03c3=1.0 \u2192 \u03c7\u22480.83."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Trust in NASA",
+      "comment": "PERSPECTIVE 6: PUBLIC TRUST IN NASA (SNARE) \u2014 The public's ability to assess mission safety was constrained by information asymmetry. Citizens could not exit the space program but were constrained from making informed consent. The silo created asymmetric risk: public bore reputational and legitimacy cost without being party to actual risk assessment. d\u22480.85, f(d)\u22481.18, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational perspective, this is a pure extraction mechanism dressed in organizational necessity language. The silo is not immutable; it is a structural choice that filters information asymmetrically to protect the beneficiary (schedule authority) at the cost of the victims (crew, safety commons, public trust). The constraint persists through institutional inertia and contractual structure, not through natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "schedule_pressure_causality",
+      "question": "To what degree did launch schedule pressure causally drive the filtering mechanism, versus the silo existing independent of schedule dynamics?",
+      "resolution_mechanism": "Historical reconstruction of internal NASA decision sequences; comparison of filter intensity against schedule pressure curves; counterfactual analysis of whether the silo would have existed absent launch cadence pressure",
+      "impact": "If causally driven by schedule: constraint is Snare with extractive purpose (higher \u03b5, higher suppression). If independent: silo is Piton (institutional inertia). If mixed: classification remains Snare but mandate_force analysis must account for two separate mechanisms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which schedule pressure caused the filtering mechanism"
+    },
+    {
+      "id": "field_engineer_agency_boundaries",
+      "question": "At what decision level could field engineers have effectively escalated O-ring concerns to circumvent the silo, and why was this boundary enforced?",
+      "resolution_mechanism": "Reconstruction of available escalation channels; analysis of incentive structures (career risk, contract dependency) that made escalation prohibitively costly; identification of which decision points had alternative institutional paths",
+      "impact": "If escalation was structurally impossible: suppression \u22650.80 (cage classification). If technically possible but incentivized against: suppression=0.72 (snare). This affects whether victims had any theoretical exit.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether field engineers had escalation channels to bypass silo"
+    },
+    {
+      "id": "information_asymmetry_intentionality",
+      "question": "Was the silo an intentional information control structure, or a consequence of compartmentalization for legitimate organizational reasons that happened to create asymmetric risk?",
+      "resolution_mechanism": "Analysis of decision logs and testimony regarding whether leaders explicitly chose filtering versus whether filtering emerged as an unintended consequence of organizational design; examination of what information would have flowed absent the silo boundaries",
+      "impact": "If intentional: constraint is active Snare with institutional malice (\u03b5\u22650.62, suppression\u22650.75). If unintended but foreseeable: Snare with negligence (\u03b5\u22480.58, suppression\u22480.72). If genuinely unanticipated: classification may degrade to Tangled Rope (mixed coordination failure).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the silo was intentionally designed or emerged unintentionally"
+    },
+    {
+      "id": "post_rogers_structural_change",
+      "question": "Did institutional changes after Rogers Commission actually eliminate the silo mechanism, or did they layer new oversight theater atop the same filtering structure?",
+      "resolution_mechanism": "Analysis of NASA decision processes post-1986; tracking of safety data propagation pathways; comparison of pre- and post-reform technical communication networks; audit of whether critical safety data now reaches decision-makers or remains filtered",
+      "impact": "If eliminated: the constraint is historical (ended). If persisted with new theater: constraint evolved from Snare to Piton (performance persists, function degraded). If unchanged: current constraint is still active Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether post-Rogers reforms actually eliminated the silo or added theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Rogers Commission investigation into the Challenger disaster revealed a structural constraint in NASA decision-making: critical technical data regarding O-ring thermal erosion risks was systematically filtered before reaching senior leadership. This was not a single failure event but an institutional architecture that created asymmetric risk distribution. Engineers at Morton Thiokol identified the thermal vulnerability and raised concerns; their data was suppressed at mid-level management review. Senior leadership did not receive information that would have changed the launch decision. The crew had no knowledge of the extent of known risks. The public was kept uninformed. The silo was maintained through a combination of organizational hierarchy, contractual structure, career incentives, and schedule pressure \u2014 creating a pure extraction mechanism where the beneficiary (NASA schedule authority) captured the benefits of launch timing while the costs (crew risk, epistemic integrity, public trust) were borne by powerless parties. The constraint exhibits Snare classification from multiple perspectives and represents a diagnostic case of how organizational structure can suppress critical information in safety-critical decisions.",
+    "key_agents": [
+      "Shuttle Crew (Challenger 51-L): Primary victim (powerless/trapped) \u2014 no knowledge of known risks, no exit option",
+      "Morton Thiokol Field Engineers: Secondary victim (moderate/constrained) \u2014 identified thermal risk, suppressed by organizational hierarchy and contract dependency",
+      "NASA Mid-Level Management (Flight Readiness Review): Institutional actor (institutional/constrained) \u2014 performed risk assessment theater while filtering critical data upward",
+      "NASA Senior Leadership: Primary beneficiary (institutional/arbitrage) \u2014 benefited from schedule continuity, insulated from safety data that would have complicated decision-making",
+      "Mission Safety Epistemic Commons: Abstract victim (powerless/trapped) \u2014 systematic suppression of transparent safety assessment; no voice, full cost",
+      "American Public: Secondary victim (moderate/constrained) \u2014 unable to assess risk independently; bore reputational cost without being party to decision-making",
+      "Rogers Commission (Post-Disaster): Analytical observer (analytical/analytical) \u2014 revealed the silo structure and its consequences"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts schedule reliability and political continuity for NASA leadership by filtering out information that would complicate decisions. Over the 10-year pre-Challenger interval, this extraction mechanism intensified as launch cadence increased and schedule pressure became the dominant performance metric. The extraction is not trivial (0.35 \u2192 0.58 trajectory) because critical safety information was systematically withheld. Suppression (0.72): High. The silo structure created multiple barriers: organizational hierarchy that discouraged upward escalation of bad news, contractual dependency (Morton Thiokol's business relationship with NASA), career risk for engineers who challenged consensus, and normalization of delay-averse decision-making that made safety data inconvenient. Theater ratio (0.68): Moderate-high, increasing. Flight readiness reviews performed the rituals of safety assessment (formal processes, documented reviews, sign-offs) while systematically missing critical technical data. The theater increased over time as the silo's invisibility made the review process appear comprehensive while actually becoming more selective in what data it allowed upward. The theater is not maximal (0.68 vs piton threshold 0.70) because some legitimate technical review did occur; it was the filtering mechanism, not the absence of review.",
+    "perspectival_gap": "The constraint exhibits complete perspectival fragmentation. NASA senior leadership experienced the silo as coordination (Rope) \u2014 a necessary organizational partition that allowed them to focus on feasibility assessment and schedule management without being overwhelmed by technical noise. Mid-level management experienced it as inertial theater (Piton) \u2014 performing risk assessment review while the organizational structure made it impossible for critical data to reach them or to propagate further. Engineers experienced it as pure extraction (Snare) \u2014 their technical findings were systematically suppressed through hierarchy and career incentives. The crew experienced it as lethal constraint (Snare) \u2014 trapped in a system where known risks were not communicated. The public experienced it as asymmetric risk (Snare) \u2014 constrained from independent risk assessment while bearing reputational and safety consequences. The mission safety epistemic commons experienced it as complete suppression (Snare) \u2014 transparent safety assessment was systematically prevented. From the analytical perspective, this is a pure Snare dressed in organizational language: the silo is not inevitable or natural, but a contingent structural choice that asymmetrically benefits schedule authority at the cost of safety.",
+    "directionality_logic": "Shuttle crew: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.45. Maximum extraction. No knowledge, no choice, full risk. Field engineers: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.25. High extraction. Could theoretically escalate but organizational and financial barriers made escalation prohibitively costly (contract with NASA, career risk, precedent of suppressing bad news). Mid-level management: Constrained but not victimized \u2192 d\u22480.55, f(d)\u22480.73. Mixed position: they were constrained by organizational structure but also participated in the filtering mechanism. NASA senior leadership: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Could access information through alternative channels (direct technical briefings) but organizational structure made such channels exceptional. Public/epistemic commons: Victim + trapped \u2192 d\u22480.85-0.97, f(d)\u22481.18-1.43. High to maximum extraction. No exit, no information, full cost.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that information filtering in safety-critical organizations is not coordination (where both parties benefit from reducing noise) but extraction (where one party benefits from suppressing information). The silo could have been framed as a coordination mechanism \u2014 'managers need focus, engineers need to solve technical problems, hierarchies reduce decision noise' \u2014 but the asymmetric distribution of risk (beneficiary insulated from consequences; victims bear full risk without knowledge) transforms this into pure Snare. The Rogers Commission resolved the mandatrophy by showing that the silo existed specifically to maintain schedule credibility despite known safety risks. Engineers could have escalated; the structure prevented it. Leaders could have requested critical data; the structure kept it invisible. The crew could have been informed; the structure withheld information. Each suppression was individually defensible (reducing noise, maintaining hierarchy, respecting organizational boundaries) but collectively formed an extraction mechanism. The constraint is not ambiguous between Rope and Snare \u2014 it is unambiguously Snare from every perspective except the beneficiary's, and even the beneficiary's Rope experience requires treating the silo as a legitimate coordination partition rather than as an information control device."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nasa_schedule_metrics_supremacy",
+      "organizational_hierarchy_risk_filtering",
+      "contractor_dependency_information_asymmetry"
+    ],
+    "dual_formulation_note": "The Silent Safety Silo is downstream of deeper structural constraints: the institutional priority of schedule metrics over safety metrics, the organizational hierarchy that filters risk information, and the contractor dependency that makes escalation costly. Each upstream constraint has its own \u03b5 value reflecting its structural basis; the silo has \u03b5=0.58 reflecting the intensity of information suppression and the beneficiary's extraction of schedule reliability."
+  },
+  "directionality_overrides": []
+}

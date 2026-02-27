@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "cs_ecmo_bridge",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ecmo"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ECMO Bridge to Transplant",
+    "topic_domain": "medical_technology/organ_transplant",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lung_transplant_recipients",
+      "transplant_centers",
+      "ecmo_device_manufacturers"
+    ],
+    "victims": [
+      "non_bridge_candidates",
+      "waitlist_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Patients Without ECMO Access",
+      "comment": "PERSPECTIVE 1: PATIENTS WITHOUT ECMO ACCESS (SNARE) \u2014 Trapped in end-stage lung disease without institutional resources to access ECMO bridge. Geographic, financial, and institutional barriers prevent exit. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73. High effective extraction from those denied access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Transplant Programs",
+      "comment": "PERSPECTIVE 2: REGIONAL TRANSPLANT PROGRAMS (TANGLED ROPE) \u2014 Constrained by ICU bed capacity, ECMO specialist availability, and procurement logistics. Benefits from ECMO as a coordination mechanism (keeps patients alive pending donor organ), but also faces extraction through resource concentration at high-volume centers. d\u22480.62, f(d)\u22480.82, \u03c3=0.9 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "High-Volume Transplant Centers",
+      "comment": "PERSPECTIVE 3: HIGH-VOLUME TRANSPLANT CENTERS (ROPE) \u2014 Institutional actors (Mayo, UPMC, Stanford) benefit from ECMO access through coordination: extends patient viability window, increases successful transplant outcomes, and concentrates transplant volume. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Negative effective extraction = net beneficiaries."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "ECMO Device Manufacturers",
+      "comment": "PERSPECTIVE 4: ECMO DEVICE MANUFACTURERS (ROPE) \u2014 Organized commercial actors (Abiomed, Maquet, LivaNova) benefit from coordination: ECMO creates a market for equipment, consumables, and training. Suppression is low because manufacturers have market mobility (can exit or shift product lines). d\u22480.15, f(d)\u22480.01, \u03c3=1.2 \u2192 \u03c7\u22480.01. Near-zero extraction; essentially pure coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UNOS Waitlist Allocation System",
+      "comment": "PERSPECTIVE 5: UNOS WAITLIST ALLOCATION SYSTEM (PITON) \u2014 The UNOS allocation protocol now includes ECMO status as a clinical urgency modifier, but the mechanism is largely performative. Center-based variation in ECMO initiation creates implicit allocation bias; sicker patients at ECMO centers get priority even with identical physiologic urgency. theater_ratio\u22480.38 reflects moderate performative content \u2014 allocation appears needs-based but functions as capacity-based. Institutional inertia maintains the system despite recognition of its limitations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Bioethics View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (BIOETHICS VIEW) (TANGLED ROPE) \u2014 From a global health equity perspective, ECMO bridge represents genuine coordination (extends the therapeutic window, increases total lives saved) coupled with asymmetric extraction (access concentrated at wealthy centers, institutional capacity barriers exclude the majority of end-stage lung patients globally). d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.41. The constraint is hybrid: solves a real coordination problem while extracting from those without institutional access."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ecmo_survival_attribution",
+      "question": "Does ECMO bridge increase net lives saved, or does it redistribute a fixed donor pool toward institutional-access patients?",
+      "resolution_mechanism": "Cohort study comparing survival outcomes for ECMO bridge vs non-bridge patients with identical LAS scores; analysis of whether ECMO increases donor utilization or merely reallocates from lower-access populations",
+      "impact": "If net-positive: Rope classification strengthens (pure coordination benefit). If zero-sum reallocation: Snare classification strengthens (extraction from non-bridge candidates).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ECMO bridge increases total lives saved or reallocates fixed donor pool"
+    },
+    {
+      "id": "access_barrier_essentiality",
+      "question": "Are geographic and financial barriers to ECMO access intrinsic to the technology or contingent on infrastructure investment and policy?",
+      "resolution_mechanism": "Comparative analysis of ECMO access models across healthcare systems (US centers of excellence vs European distributed access vs manufacturer-supported programs in lower-income regions); correlation between infrastructure investment and access equity",
+      "impact": "If intrinsic: suppression is natural (mountain-like floor). If contingent: suppression is policy-chosen, raising mandatrophy on whether the system should be restructured.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether access barriers are intrinsic to ECMO technology or policy-contingent"
+    },
+    {
+      "id": "waitlist_priority_mechanism",
+      "question": "Does ECMO status in UNOS urgency scoring reflect objective physiologic deterioration or institutional capacity at transplant centers?",
+      "resolution_mechanism": "Analysis of UNOS allocation data: comparison of LAS score change rates for ECMO vs non-ECMO patients; assessment of whether ECMO initiation predicts worse outcomes absent the therapy (true salvage) or merely concentrates marginal patients",
+      "impact": "If objective physiologic: allocation remains needs-based. If capacity-driven: waitlist system exhibits implicit bias, and theater_ratio should increase.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ECMO urgency modifier reflects physiologic deterioration or center capacity"
+    },
+    {
+      "id": "long_term_graft_outcomes",
+      "question": "Do lungs retrieved after prolonged ECMO support have inferior long-term graft survival compared to standard donor lungs?",
+      "resolution_mechanism": "Survival curve analysis of transplant recipients stratified by ECMO bridge duration and donor lung quality metrics; comparison of chronic rejection rates and graft survival at 3-5 years",
+      "impact": "If inferior: ECMO bridge trades short-term survival for long-term failure (hidden extraction cost). If equivalent: coordination benefit is sustained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ECMO bridge affects long-term graft outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "ECMO bridge to transplant (extracorporeal membrane oxygenation) represents a technological intervention that extends the viability window for patients with end-stage lung disease awaiting transplantation. The constraint exhibits a core tension: ECMO is genuinely life-saving coordination technology (keeps patients alive pending organ availability), yet its implementation creates extraction through differential access and implicit waitlist prioritization. The mechanism is tangled \u2014 high-volume transplant centers with ECMO capacity benefit from extended viability windows and increased transplant success, while patients without geographic or financial access to ECMO-capable centers experience suppressed alternatives and unequal allocation of scarce donor organs. The extractiveness has increased over the measurement interval (0.28 \u2192 0.52) as ECMO has become integrated into allocation protocols, creating implicit priority for patients at centers with ECMO infrastructure. Theater_ratio remains low (0.38) because the therapeutic mechanism is genuine \u2014 ECMO functions to extend viability \u2014 but allocation bias is becoming more visible in the data.",
+    "key_agents": [
+      "Patients Without ECMO Access: Primary victims (powerless/trapped) \u2014 end-stage lung disease patients at non-ECMO centers or in underserved regions; trapped by geography and institutional capacity",
+      "High-Volume Transplant Centers: Primary beneficiaries (institutional/arbitrage) \u2014 Mayo, UPMC, Stanford; capture volume and outcomes concentration through ECMO access",
+      "Regional Transplant Programs: Secondary actors (moderate/constrained) \u2014 face resource barriers and ICU capacity constraints; benefit from ECMO but constrained by infrastructure investment requirements",
+      "ECMO Device Manufacturers: Secondary beneficiaries (organized/mobile) \u2014 Abiomed, Maquet, LivaNova; benefit from market creation but have exit mobility (product portfolio diversification)",
+      "UNOS Allocation System: Institutional actor (institutional/arbitrage) \u2014 manages waitlist allocation; benefits from ECMO as a tool for urgency scoring but maintains performative allocation bias",
+      "Analytical Observer: Bioethics perspective (analytical/analytical) \u2014 sees hybrid coordination-extraction structure; identifies equity concerns in access and allocation"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The base extraction reflects that ECMO access is concentrated at high-volume transplant centers, creating an implicit allocation advantage for patients at these institutions. The trajectory (0.28 \u2192 0.52 over interval) shows increasing extraction as ECMO has become routinized and integrated into clinical urgency scoring. Suppression (0.65): High. Geographic barriers (limited ECMO-capable centers), financial barriers (ECMO support costs $150k-200k per patient), specialized personnel requirements (ECMO specialists in ICU), and implicit institutional bias suppress alternatives for non-bridge candidates. Patients without ECMO access have constrained alternatives; many die awaiting transplant because they cannot access the extended viability window. Theater_ratio (0.38): Moderate-low. The therapeutic mechanism is genuine \u2014 ECMO does extend viability \u2014 so performative content is not dominant. However, allocation bias is increasing: center-based variation in ECMO initiation creates implicit urgency modifier that appears needs-based but functions as capacity-based. The theater reflects growing recognition that allocation appears equitable (UNOS scoring includes ECMO status) while functioning as institutional access bias.",
+    "perspectival_gap": "The constraint exhibits sharp perspectival divergence. High-volume transplant centers see Rope (pure coordination) \u2014 ECMO extends the therapeutic window and increases their success rates. ECMO manufacturers see Rope (market creation with low suppression) \u2014 they have portfolio mobility and can exit individual markets. Patients without ECMO access see Snare (extraction with no alternatives) \u2014 they are trapped by geography and institutional capacity. UNOS system sees Piton (performative allocation) \u2014 the scoring mechanism appears needs-based but functions as capacity-based. Regional programs see Tangled Rope (mixed benefit and constraint) \u2014 they benefit from ECMO as a coordination tool but face extraction through resource concentration at high-volume centers. The analytical observer sees Tangled Rope (genuine coordination with unequal distribution) \u2014 ECMO solves a real problem but the solution is accessible only to the well-resourced. This perspectival gap arises from the fact that ECMO is location-dependent: its benefit is concentrated at centers with infrastructure and expertise, making the same technological intervention appear as pure coordination to those with access and as extraction to those without.",
+    "directionality_logic": "Patients without ECMO access: Victims + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. No institutional affiliation, no geographic access to ECMO-capable centers, no ability to exit end-stage lung disease except through death or (rarely) long-distance relocation for transplant evaluation. High-volume transplant centers: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiaries. They control ECMO infrastructure and capture the allocation advantage. They can exit by shifting focus or redistributing resources, but ECMO amplifies their existing advantage (volume \u2192 outcomes \u2192 referral network \u2192 more volume). Regional programs: Victims and partial beneficiaries + constrained \u2192 d\u22480.62, f(d)\u22480.82. Constrained because they face capital and expertise barriers to ECMO implementation but also benefit from ECMO as a coordination mechanism for selected patients. ECMO manufacturers: Beneficiaries + mobile \u2192 d\u22480.15, f(d)\u22480.01. Low extraction because they have market mobility and can diversify product portfolios. UNOS system: Institutional actor managing constraint \u2192 d\u22480.05 (beneficiary role, arbitrage through allocation authority). Theater_ratio (0.38) indicates performative allocation, not high extraction. Analytical observer: analytical \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position capturing both coordination benefit and extraction mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organ_transplant_scarcity",
+      "waitlist_allocation_urgency",
+      "transplant_center_concentration"
+    ],
+    "dual_formulation_note": "ECMO bridge is downstream of organ scarcity but represents a distinct structural constraint. Organ scarcity (\u03b5\u22480.70, mountain-like) is the upstream immutable constraint; ECMO bridge (\u03b5\u22480.52, tangled_rope) represents a technological response that creates its own extraction mechanism through differential access. The two constraints are linked: ECMO appears as pure coordination IF donor organs were abundant, but under scarcity, it becomes a mechanism for institutional access bias."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

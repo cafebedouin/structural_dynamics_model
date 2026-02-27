@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "monopoly_fp_house_rule",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mfp"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Monopoly 'Free Parking' House Rule",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_lucky_players",
+      "players_avoiding_penalties"
+    ],
+    "victims": [
+      "systematic_penalty_payers",
+      "game_pacing_integrity",
+      "rule_enforcement_clarity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Systematically Unlucky Player",
+      "comment": "PERSPECTIVE 1: SYSTEMATICALLY UNLUCKY PLAYER (SNARE) \u2014 A player who lands on tax/fine spaces repeatedly with no countervailing Free Parking hits bears maximum extraction. Trapped within the game session, cannot exit without social friction. The house rule creates a random redistribution mechanism that systematically extracts from the already-disadvantaged. No alternatives exist within house-rule play."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Average Player",
+      "comment": "PERSPECTIVE 2: AVERAGE PLAYER (TANGLED ROPE) \u2014 Experiences the Free Parking rule as both coordination benefit (the pooled tax/fine fund keeps money in active circulation, accelerating gameplay) and extraction risk (random chance determines who captures the fund). Constrained by social expectations to play by house rules; modest exit cost if refusing to play. Mixed experience \u2014 coordinating faster gameplay but bearing asymmetric penalty exposure based on luck."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Rule-Enforcer Host",
+      "comment": "PERSPECTIVE 3: RULE-ENFORCER HOST (ROPE) \u2014 The player or host who initiates and enforces the house rule benefits from the perception of 'fairness' through redistribution and acceleration of play. Can arbitrage by using house-rule flexibility to adjust rules mid-game (official rules allow no such adjustment). Low effective extraction because the host has agency and perceived legitimacy."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Game Designer Perspective",
+      "comment": "PERSPECTIVE 4: GAME DESIGNER PERSPECTIVE (SCAFFOLD) \u2014 The original Monopoly rules (Parker Brothers, 1930s) explicitly made Free Parking a neutral space generating no income. The house rule represents an unauthorized deviation justified by desires for 'fairness' and speedier play. From the designer's intent, the house rule has a natural sunset: the game ends, players revert to official rules for next session, or adoption of faster official variants (Speed Monopoly, 2-hour tournament rules) replaces the house rule entirely. The scaffolding is temporary workaround to perceived official-rule flaws."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Household Tradition",
+      "comment": "PERSPECTIVE 5: HOUSEHOLD TRADITION (PITON) \u2014 Many households have played 'Free Parking has money' for 50+ years, treating it as the canonical Monopoly experience. Theater ratio high (0.65) \u2014 the rule is justified by nostalgia and family tradition rather than by game-theoretic benefit. The original function (attempting to balance perceived official-rule harshness) has atrophied; the rule persists through institutional inertia. Enforcement becomes ceremonial rather than functional."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Natural-Law View (False Summit)",
+      "comment": "PERSPECTIVE 6: NATURAL LAW VIEW (FALSE SUMMIT) \u2014 An analytical observer might claim that 'house rules are inevitable in long gameplay' or 'players naturally want fairness mechanisms,' treating the Free Parking rule as an immutable law of game sociology. This perspective risks naturalizing what is actually a contingent community norm. The engine will identify this as a false summit \u2014 the rule is a bounded, revisable institutional practice, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fairness_vs_game_integrity",
+      "question": "Does the Free Parking rule actually increase perceived fairness or does it obscure the original design intent (penalty mechanism as strategic consequence)?",
+      "resolution_mechanism": "Comparative analysis of player satisfaction in official-rules vs house-rule sessions; measurement of median game duration and win distribution; post-game surveys of fairness perception",
+      "impact": "If perceived fairness increases: rule serves genuine coordination function (Rope classification). If perceived fairness is illusion: rule is pure extraction theater (Snare classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Free Parking rule increases or obscures fairness perception"
+    },
+    {
+      "id": "cash_flow_dynamics",
+      "question": "Does pooling taxes/fines in the Free Parking fund actually accelerate gameplay or does it extend the endgame by keeping weak players solvent longer?",
+      "resolution_mechanism": "Measurement of average game duration with official rules vs house rule; analysis of bankruptcy timing and win distributions; simulation of cash flow dynamics under both rulesets",
+      "impact": "If acceleration is real: scaffolding is functional (Scaffold classification justified). If cash flow extends endgame: the 'speedier play' justification fails, exposing the rule as pure extraction theater (Piton/Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Free Parking pooling accelerates or extends gameplay"
+    },
+    {
+      "id": "adoption_motivation",
+      "question": "Is the Free Parking rule adopted primarily to address perceived official-rule harshness or is it a pre-game coordination mechanism to avoid penalty-induced early-game demoralization?",
+      "resolution_mechanism": "Historical tracing of house rule adoption patterns; interviews with households explaining their reasoning; analysis of whether official-rules violations cluster in early-game or late-game phases",
+      "impact": "If early-game morale motivation: extraction is directed at new players (snare from their perspective). If late-game cash-flow motivation: extraction is directed at economically weak players (snare from their perspective). Either way, victim identification clarifies the asymmetry.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Primary motivation for adopting Free Parking rule"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The 'Free Parking' house rule in Monopoly represents a widespread deviation from official rules justified by intuitions about fairness and gameplay pacing. The rule creates a pooled redistribution mechanism where all taxes, fines, and penalties paid during the game accumulate on the Free Parking space, awarding the entire fund to whichever player lands there. This constraint exhibits multiple structural classifications depending on perspective: from the systematically unlucky player's view, it is a snare extracting wealth by random chance; from the rule-enforcer host's view, it is coordination mechanism accelerating play; from the game-designer's view, it is a temporary scaffold addressing perceived official-rule flaws; from the household tradition's view, it is a degraded piton maintained by nostalgia. The constraint is a diagnostic case for how indexical classification disambiguates 'fairness' from asymmetric extraction.",
+    "key_agents": [
+      "Systematically Unlucky Players: Primary victims (powerless/trapped) \u2014 bear maximum extraction through penalty-accumulation patterns; cannot exit mid-session",
+      "Early Lucky Players: Primary beneficiaries (moderate/constrained) \u2014 disproportionately land on Free Parking early in the game when the fund is still small; enjoy reduced extraction risk",
+      "Rule-Enforcer Host: Secondary beneficiary (organized/arbitrage) \u2014 controls house-rule interpretation; can adjust enforcement mid-game",
+      "Game-Designer Intent: Analytical reference (analytical/analytical) \u2014 original Parker Brothers rules specify Free Parking as penalty-free space; house rule violates design intent",
+      "Household Tradition: Institutional actor (institutional/constrained) \u2014 maintains rule through generational inertia; now self-perpetuating"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The Free Parking rule creates an unequal redistribution mechanism \u2014 penalties are pooled and randomly distributed based on movement luck rather than cause-and-effect. However, the extraction is not severe (not 0.70+) because the rule is transparently applied, affects all players equally in principle (though unequally in practice), and is temporary (games have defined endpoints). Suppression (0.42): Moderate. Players cannot easily exit the house rule without social friction ('but everyone plays this way'). The rule enforcement is active \u2014 the host must explicitly maintain it. Alternatives exist (official rules) but require breaking household tradition. Theater ratio (0.65): Moderate-high. Justifications for the rule often appeal to 'fairness' and 'speedier play,' but empirical validation is weak. The rule persists more due to tradition than to measurable gameplay improvement. Theater has increased over time as original game-design rationales (teaching economic principles through bankruptcy consequences) were forgotten, replaced by post-hoc justifications.",
+    "perspectival_gap": "The gap between the unlucky player's snare and the host's rope reveals how the same rule mechanism generates opposite structural experiences. For early players or lucky players, the rule enables hope of a windfall and accelerates cash recovery \u2014 coordination benefit. For late-game players who have paid many penalties, the rule has become pure extraction \u2014 the pooled fund is now large and they have little chance of landing there. The organized host's perspective (rope) obscures the distributional asymmetry because they have agency (can adjust rules, can exit the rule-enforcement role). The piton perspective reveals that the rule persists despite uncertain coordination benefit \u2014 households maintain it through tradition alone. The mountain perspective risks naturalizing the rule as 'inevitable' human nature (we always want fairness mechanisms), when it is actually a contingent 20th-century North American household practice.",
+    "directionality_logic": "Beneficiaries (early_lucky_players, players_avoiding_penalties): Low directionality value (d \u2248 0.15-0.25). These agents experience the rule as beneficial \u2014 the pooled fund represents a positive random event. Their exit options are moderate (they could demand official rules, but at low social cost if they're winning). Victims (systematic_penalty_payers, game_pacing_integrity, rule_clarity): High directionality value (d \u2248 0.75-0.95). Systematic penalty payers are trapped by the rule structure \u2014 their penalties subsidize the public fund. Game pacing integrity and rule clarity are abstract victims: the rule obscures the original design intent (economic consequence education) and creates rule-state uncertainty (how much is in the fund?). The host's power atom (organized/arbitrage) places them at low extraction experience (d \u2248 0.25) because they have agency and can revise the rule. Average players (moderate/constrained) experience moderate extraction (d \u2248 0.50), distributed through luck.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the Free Parking rule is NOT an immutable law but a contingent social arrangement masquerading as fairness. The mountain perspective (natural law of human game design) is a false summit because the rule violates the original designer's explicit intent \u2014 Parker Brothers defined Free Parking as tax-free. The snare perspective (systematic extraction from unlucky players) is real but underspecified \u2014 the extraction is random, not systematic in the game-theory sense. The tangled rope classification (coordinate faster play + extract via luck) is the accurate middle ground: the rule does accelerate circulation of capital, but it also creates asymmetric penalty exposure. The piton classification (degraded tradition) captures that the rule's original justifications (teaching economic consequence) have been forgotten, replaced by post-hoc fairness narratives. The mandatrophy resolution is: the rule is a bounded household norm, not a law; households that adopt official rules or tournament variants escape the constraint without loss of gameplay quality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "monopoly_house_rule_accumulation",
+      "informal_game_rule_adoption"
+    ],
+    "dual_formulation_note": "The Free Parking house rule is a specific instance of broader constraint family: informal game rule deviations adopted to correct perceived official-rule flaws. Upstream constraint: the original Monopoly rules' aggressive bankruptcy mechanism. Downstream constraint: generalized tendency to adopt 'fairness' house rules without empirical validation."
+  },
+  "directionality_overrides": []
+}

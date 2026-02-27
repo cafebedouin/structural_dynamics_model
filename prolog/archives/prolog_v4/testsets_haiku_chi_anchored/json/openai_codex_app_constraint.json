@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "openai_codex_app_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "codex"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "OpenAI Codex Algorithmic Dependency",
+    "topic_domain": "technological/ai_infrastructure",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "openai_commercial_interests",
+      "codex_integrated_platforms"
+    ],
+    "victims": [
+      "ai_agent_developers",
+      "downstream_application_ecosystem",
+      "algorithmic_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent AI Developer",
+      "comment": "PERSPECTIVE 1: DEPENDENT AI DEVELOPER (SNARE) \u2014 Trapped by network effects and switching costs. Once integrated into Codex ecosystem, switching to alternatives incurs rewriting, retraining on new APIs, loss of model fine-tuning history. Cannot negotiate pricing, terms of service, or API deprecation. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.87."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Application Ecosystem",
+      "comment": "PERSPECTIVE 2: APPLICATION ECOSYSTEM (SNARE) \u2014 Downstream applications (GitHub Copilot, various IDEs, enterprise coding platforms) depend on Codex availability, pricing, and performance. Forced to pass dependency upstream; cannot negotiate collectively or substitute. High switching costs across user base. d\u22480.78, f(d)\u22481.12, \u03c3=1.2 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "OpenAI Commercial Interests",
+      "comment": "PERSPECTIVE 3: OPENAI COMMERCIAL INTERESTS (ROPE) \u2014 Benefits from lock-in and network effects. Controls pricing, feature roadmap, API availability, and deprecation. Can arbitrage between different customer segments (enterprise vs open-source), selectively offer features, adjust terms unilaterally. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Net beneficiary; constraint appears as coordination (solving code completion) from this position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open-Source AI Community",
+      "comment": "PERSPECTIVE 4: OPEN-SOURCE AI COMMUNITY (TANGLED ROPE) \u2014 Organized through GitHub, academic research, and alternative LLM projects (Hugging Face, Meta LLaMA, open alternatives). Has some mobility (can develop alternative models, contribute to open projects) but also constrained by Codex's dominance in enterprise deployments. Benefits from open-source knowledge commons, but extraction occurs through market share concentration and proprietary fine-tuning data. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Alternative Model Development",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE MODEL DEVELOPMENT (SCAFFOLD) \u2014 Distributed efforts to build open alternatives (LLaMA, Code LLaMA, MPT, StarCoder) represent temporary structural pathways reducing Codex dependency. These have sunset logic: as open models mature and achieve parity on code generation tasks, Codex's extraction mechanism weakens. Current status: most open alternatives lag on specialized domains, but trajectory shows convergence. \u03c7\u22480.28 (low extraction, genuine coordination benefit to open ecosystem)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory and Policy Frameworks",
+      "comment": "PERSPECTIVE 6: REGULATORY AND POLICY FRAMEWORKS (PITON) \u2014 Existing AI governance, data protection (GDPR), and labor regulations are largely performative relative to Codex's actual market power. Regulatory theater (safety reviews, transparency reports) persists without meaningful constraint on pricing or terms of service. theater_ratio=0.35 does not meet piton gate (\u22650.70), but this perspective shows institutional responses that create appearance of oversight without functional control."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer / Natural Law View",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW \u2014 Risk of naturalizing Codex dominance as inevitable: 'network effects are immutable,' 'centralized AI services are inherent to current architecture,' 'switching costs are natural features of software integration.' However, base properties (\u03b5=0.52, suppression=0.68) reveal contingent institutional arrangements, not natural laws. This perspective is a false summit. Historical precedent: email was once centralized around corporate providers; open protocols (SMTP, IMAP) provided exit. Mountain classification is aspirational, not structural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "api_switching_cost_threshold",
+      "question": "At what development cost does switching from Codex to open alternatives become economically rational for mid-market enterprises?",
+      "resolution_mechanism": "Cost-benefit analysis: API migration overhead, model retraining, application refactoring, and quality parity timeline vs cumulative OpenAI pricing over 3-5 year horizon",
+      "impact": "If threshold < 50k USD: widespread switching possible, snare classification weakens to rope. If threshold > 500k USD: lock-in deepens, snare persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economics of switching from Codex to alternatives"
+    },
+    {
+      "id": "open_model_performance_parity",
+      "question": "Do open-source code generation models (Code LLaMA, StarCoder, Codereplit) achieve functional parity with Codex on enterprise-critical domains (domain-specific languages, legacy system maintenance, security-sensitive code)?",
+      "resolution_mechanism": "Benchmark comparison: accuracy on domain-specific tasks, compile/run success rates, security vulnerability detection, code maintainability metrics across diverse codebases",
+      "impact": "If parity achieved: scaffold perspective confirmed, exit becomes mobile, extraction mechanism weakens. If persistent gaps: dependency remains high, snare classification stable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether open models achieve functional parity with Codex"
+    },
+    {
+      "id": "collective_bargaining_feasibility",
+      "question": "Can dependent developers and downstream platforms organize collective negotiation with OpenAI, or do network effects and fragmented incentives prevent coalition formation?",
+      "resolution_mechanism": "Organizational analysis of developer advocacy groups, enterprise consortia, and regulatory responses; tracking of any successful collective negotiation attempts and their outcomes",
+      "impact": "If feasible: powerless/moderate agents upgrade to organized, extract \u03c7 improvements, snare transitions to tangled rope. If infeasible: suppression mechanism strengthens through atomization.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether dependent actors can form collective bargaining power"
+    },
+    {
+      "id": "regulatory_intervention_threshold",
+      "question": "What level of market concentration or terms-of-service abuse would trigger antitrust or AI governance intervention requiring API interoperability or open standards?",
+      "resolution_mechanism": "Policy analysis: regulatory precedent (app store monopolies, telecom interoperability), EU AI Act implementation, antitrust enforcement patterns, and thresholds for 'critical infrastructure' classification",
+      "impact": "If intervention likely within 5-10 years: constraint has implicit sunset, scaffold dynamics emerge. If regulation remains performative: piton theater persists, snare extraction mechanism stable.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Likelihood and timing of regulatory intervention requiring interoperability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "OpenAI's Codex and its descendant models (GPT-4 code capabilities, Copilot integration) have become foundational infrastructure for AI-assisted development, creating a structural dependency constraint. Developers, enterprises, and downstream platforms (IDEs, development tools, SaaS applications) have integrated Codex APIs into core workflows, generating substantial switching costs and network effects. OpenAI controls pricing, API deprecation, feature availability, and terms of service unilaterally. This creates a classic snare structure from the perspective of dependent actors: high suppression (technical lock-in, switching costs, network effects), moderate-to-high extraction (proprietary pricing, forced feature tiers, data leverage), and minimal theater (the constraint operates functionally, not performatively). However, alternative open models are maturing, and regulatory pressure on AI infrastructure is increasing, creating potential sunset dynamics. The constraint exhibits all six DR types across different observational positions, making it a diagnostic case for how technological monopoly structures manifest as indexical constraints.",
+    "key_agents": [
+      "AI Agent Developers: Primary victim (powerless/trapped) \u2014 integrated into Codex ecosystem with high switching costs; cannot negotiate terms or pricing",
+      "Downstream Application Ecosystem: Secondary victim (moderate/constrained) \u2014 GitHub Copilot, IDEs, enterprise platforms depend on Codex availability; forced to pass dependency upstream",
+      "OpenAI Commercial Interests: Primary beneficiary (institutional/arbitrage) \u2014 captures network effects, controls pricing, can deprecate APIs unilaterally, arbitrages between customer segments",
+      "Open-Source AI Community: Secondary actor (organized/mobile) \u2014 developing alternative models; has some exit capacity but constrained by market share concentration",
+      "Alternative Model Development Projects: Organized coalition (organized/constrained) \u2014 Code LLaMA, StarCoder, Codereplit provide structural pathways with sunset logic",
+      "Regulatory and Policy Institutions: Institutional observer (institutional/arbitrage) \u2014 governance frameworks are largely performative; can potentially shift toward interoperability mandates",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent network effects as immutable laws"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. OpenAI extracts through pricing power (charges per token, can increase rates), feature gatekeeping (enterprise tiers), and forced upgrades. The extraction is not maximal (0.8+) because open alternatives exist and switching, while costly, is technically possible. The 0.52 value reflects that extraction operates through economic leverage and network effects, not through violence or legal prohibition. Suppression (0.68): High. Technical lock-in operates through API specificity and fine-tuning data. Switching costs include rewriting integration code, retraining models, rebuilding user workflows, and potential quality loss. Network effects create coordination costs (entire teams standardized on Codex). Market concentration (ChatGPT, Codex, GPT-4 family) limits attractive alternatives. But suppression is not total (1.0) because open models are approaching parity and regulatory pathways exist. Theater ratio (0.35): Low. The constraint operates functionally \u2014 pricing mechanisms work, API access is reliable, switching is genuinely costly. Minimal performative content. This low theater differentiates Codex constraint from regulatory theater or institutional pitons.",
+    "perspectival_gap": "The constraint exhibits the full range of DR classification. From OpenAI's perspective, it is coordination (Rope) \u2014 solving the legitimate problem of accessible code generation. From dependent developers' perspective, it is pure extraction (Snare) \u2014 they are trapped by switching costs and cannot negotiate. From the open-source community's perspective, it is mixed (Tangled Rope) \u2014 they benefit from open knowledge but also lose market share to proprietary alternatives. From alternative model developers' perspective, it is temporary with a sunset (Scaffold) \u2014 as open models mature, Codex's extraction mechanism weakens. From the regulatory perspective, it is performative (Piton) \u2014 existing frameworks create appearance of oversight without functional constraint. From the analytical observer's perspective at civilizational scale, there is a risk of naturalizing this as immutable (false Mountain) \u2014 network effects and switching costs feel inevitable, but they are contingent on specific architectural choices and could be disrupted by interoperability mandates.",
+    "directionality_logic": "OpenAI commercial interests: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary through unilateral control. Dependent developers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. High extraction \u2014 cannot exit without major cost. Application ecosystem: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. Forced to pass dependency upstream; limited negotiating power. Open-source community: Mixed (organized + mobile) \u2192 d\u22480.55, f(d)\u22480.75. Some exit capacity through alternative models but constrained by market concentration. Alternative model projects: Organized + constrained \u2192 d\u22480.40, f(d)\u22480.40. Low effective extraction because they have agency and see exit pathway (scaffold sunset). Regulatory frameworks: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Low directionality because regulatory effectiveness depends on future intervention.",
+    "mandatrophy_analysis": "SNARE WITH SCAFFOLD ESCAPE: This constraint demonstrates how snares can contain hidden scaffolds. The base classification is snare (\u03b5=0.52, suppression=0.68, high extraction from trapped victims). But the scaffold perspective (open models with sunset logic) reveals that the snare may be temporary. The resolution of mandatrophy operates through the gap between perspectives: if open models achieve parity (omega variable: performance_parity), then the constraint transforms from snare to scaffold or rope, the extraction mechanism weakens, and suppression decreases through exit availability. The current snare classification is robust; the scaffold classification is conditional on empirical resolution of model parity. The theater ratio (0.35) is low, indicating the constraint is functionally extractive, not performatively maintained. False summit risk: the analytical observer naturalizing network effects as inherent to software architecture, when they are contingent on API-first design and proprietary training data. Open protocols and interoperability mandates could disrupt the lock-in."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "large_language_model_training_data",
+      "enterprise_ai_model_dependency",
+      "open_source_ai_model_viability"
+    ],
+    "dual_formulation_note": "The Codex constraint is downstream of general LLM training infrastructure and upstream of enterprise AI adoption. It represents a specific instantiation of algorithmic dependency at the code generation level. Upstream constraint (training_data) has different \u03b5 reflecting empirical status of training data claims; downstream constraints (enterprise_adoption, open_model_viability) have different \u03b5 reflecting economic and technical feasibility factors."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    }
+  ]
+}

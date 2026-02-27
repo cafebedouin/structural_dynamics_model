@@ -1,0 +1,159 @@
+{
+  "header": {
+    "constraint_id": "nsl_hk",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.85,
+    "theater_ratio": 0.4,
+    "claimed_type": "snare",
+    "human_readable": "Hong Kong National Security Law (NSL)",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_government_beijing",
+      "pro_beijing_establishment_hk"
+    ],
+    "victims": [
+      "hong_kong_civil_society",
+      "pro_democracy_movement_hk",
+      "independent_media_hk"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Hong Kong Civil Society",
+      "comment": "Hong Kong civil society faces severe restrictions on freedom of expression, assembly, and association under the NSL. Trapped due to the law's broad reach and enforcement mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Hong Kong Business Community",
+      "comment": "The Hong Kong business community benefits from stability but is constrained by the NSL's impact on international reputation and potential restrictions on business activities. Hybrid coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Central Government in Beijing",
+      "comment": "The central government in Beijing views the NSL as a tool for maintaining stability and national security. Experiences it as a coordination mechanism to ensure control."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Hong Kong Legal System",
+      "comment": "The Hong Kong legal system, once independent, is now constrained by the NSL. The system is forced to implement the law, even if it conflicts with previous legal principles. High theater ratio due to performative alignment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Community",
+      "comment": "The international community experiences mixed effects. Some benefit from the economic relationship with Hong Kong but are also negatively impacted by the NSL's implications for human rights and democratic values. Can exert influence through sanctions and diplomatic pressure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the NSL as a complex instrument with both coordination and extraction functions. Aimed at maintaining control but also undermines Hong Kong's autonomy and international standing."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scope_of_national_security",
+      "question": "What activities legitimately constitute a threat to national security?",
+      "resolution_mechanism": "Case law analysis, comparative legal studies, and expert opinions on international human rights standards.",
+      "impact": "A narrow definition would mitigate the NSL's impact on civil liberties. A broad definition would further suppress dissent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Determining the legitimate scope of national security concerns."
+    },
+    {
+      "id": "enforcement_independence",
+      "question": "To what extent are law enforcement agencies and the judiciary independent from political influence in NSL cases?",
+      "resolution_mechanism": "Monitoring court proceedings, analyzing judicial decisions, and assessing the transparency of law enforcement investigations.",
+      "impact": "Greater independence would ensure fairer trials and protect defendants' rights. Political influence would undermine the rule of law.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the independence of law enforcement and the judiciary."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Hong Kong National Security Law (NSL) was imposed on Hong Kong by Beijing in 2020. It has significantly curtailed civil liberties and autonomy, leading to widespread concerns about human rights and the rule of law. The law criminalizes secession, subversion, terrorism, and collusion with foreign forces, with penalties including lengthy prison sentences. It also established new security agencies with broad powers, raising concerns about due process and accountability. The imposition of the NSL represents a major shift in the 'one country, two systems' framework that governed Hong Kong since its handover from British rule in 1997.",
+    "key_agents": [
+      "Central Government in Beijing: Primary beneficiary (institutional/arbitrage) \u2013 Gains increased control over Hong Kong.",
+      "Hong Kong Civil Society: Primary victim (powerless/trapped) \u2013 Suffers from curtailed freedoms and increased surveillance.",
+      "Pro-Democracy Movement in Hong Kong: Secondary victim (moderate/constrained) \u2013 Faces suppression and legal prosecution.",
+      "Hong Kong Business Community: Constrained actor (moderate/constrained) \u2013 Adapts to the new legal environment while navigating business risks.",
+      "International Community: Organized observer (organized/mobile) \u2013 Expresses concerns and imposes sanctions but also maintains economic ties.",
+      "Pro-Beijing Establishment in Hong Kong: Secondary beneficiary (institutional/constrained) \u2013 Reinforces political power."
+    ],
+    "logic_rationale": "Extractiveness (0.75): High extraction due to the significant curtailment of freedoms and autonomy, particularly for pro-democracy voices and civil society. Suppression (0.85): High suppression due to the broad scope of the law and its strict enforcement, limiting avenues for dissent and opposition. Theater Ratio (0.40): Moderate. While there is some performative alignment with legal standards, the law's practical effect is primarily repressive.",
+    "perspectival_gap": "The perspectives diverge significantly. The central government in Beijing views the NSL as a necessary tool for maintaining stability (rope). Hong Kong civil society experiences it as a snare, trapping them under restrictive laws. The international community sees a tangled rope, with both benefits from economic ties and concerns about human rights. The analytical observer views the NSL as a blend of control and undermining Hong Kong's autonomy (tangled rope).",
+    "directionality_logic": "The central government benefits from increased control, resulting in low directionality. Hong Kong civil society bears the brunt of the law's restrictions, resulting in high directionality. The international community's directionality is intermediate due to mixed impacts.",
+    "mandatrophy_analysis": "The NSL clearly leans towards extraction, despite claims of maintaining stability. The high extractiveness and suppression scores, combined with the perspectives of the powerless and the analytical observer, confirm its classification as a snare. The potential for coordination is overshadowed by the law's repressive effects."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

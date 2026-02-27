@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "matching_markets",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Matching Market Congestion Externality",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "market_platforms",
+      "early_adopters"
+    ],
+    "victims": [
+      "late_adopters",
+      "low_priority_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Late Adopters",
+      "comment": "Late adopters experience reduced matching probabilities due to congestion caused by earlier participants. They are often trapped as they need the market to find matches but suffer from its congestion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Market Platforms",
+      "comment": "Market platforms benefit from increased participation, even with congestion, as a larger market attracts more users and generates more revenue. They can arbitrage the situation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the congestion externality as a tangled rope, with coordination (platform benefits) and extraction (late adopter costs) intertwined."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Early Adopters",
+      "comment": "Early adopters often experience better matching probabilities before congestion becomes severe. They can benefit from the network effects without significant congestion costs. Mobile since congestion hasn't driven them off the platform"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "congestion_measurement",
+      "question": "How accurately can congestion be measured and predicted in matching markets?",
+      "resolution_mechanism": "Development of better congestion metrics and predictive models using market data.",
+      "impact": "Improved measurement could lead to better congestion management strategies and fairer market outcomes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of congestion measurement and prediction"
+    },
+    {
+      "id": "platform_intervention",
+      "question": "What interventions can platforms use to mitigate congestion without reducing overall market participation?",
+      "resolution_mechanism": "Experimentation with pricing strategies, matching algorithms, and market segmentation.",
+      "impact": "Effective interventions can improve market efficiency and reduce the negative impact on late adopters.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of platform interventions for congestion mitigation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "In matching markets, increased participation can lead to congestion, reducing the matching probability for individual participants. This congestion externality creates a tension between the benefits of a larger market and the costs of reduced matching efficiency. Market platforms benefit from increased participation, while late adopters and low-priority participants suffer from congestion.",
+    "key_agents": [
+      "Market Platforms: Beneficiary (institutional/arbitrage)",
+      "Late Adopters: Victim (powerless/trapped)",
+      "Early Adopters: Beneficiary (powerful/mobile)",
+      "Low Priority Participants: Victim (powerless/trapped)"
+    ],
+    "logic_rationale": "Extractiveness (0.5): Moderate. Late adopters and low-priority participants experience reduced matching probabilities due to congestion, representing a cost extracted from them. Suppression (0.3): Low. Participants are not entirely suppressed as they can still find matches, but the probability is reduced. Platforms benefit but also need to balance congestion to maintain market quality. Theater Ratio (0.1): Low. There is little theatrical activity associated with this externality.",
+    "perspectival_gap": "Late adopters experience the externality as a snare because they are trapped in a congested market with reduced matching probabilities. Market platforms, however, benefit from increased participation and see the externality as a form of coordination. An analytical observer sees both the coordination and extraction aspects, classifying it as a tangled rope.",
+    "directionality_logic": "The directionality is determined by who benefits and who bears the costs of the congestion externality. Market platforms benefit from increased participation, resulting in a low d value. Late adopters and low-priority participants bear the costs of reduced matching probabilities, resulting in a high d value. This leads to different classifications from different perspectives. Early Adopters are mobile at t=0, making them distinct from late adopters who are trapped.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that different actors experience the same phenomenon differently. What appears as coordination from the platform's perspective is extraction from the late adopter's perspective. The tangled rope classification captures this duality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

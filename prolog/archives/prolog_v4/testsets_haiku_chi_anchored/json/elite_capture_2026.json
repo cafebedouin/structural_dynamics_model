@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "elite_capture_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "elcap"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Staley-Epstein Narrative Neutralization (Elite Capture via Commercial Subversion)",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": false,
+    "victims": [
+      "revolutionary_movements",
+      "collective_resistance",
+      "countercultural_authenticity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Revolutionary Movement (Captured Leaders)",
+      "comment": "PERSPECTIVE 1: REVOLUTIONARY MOVEMENT LEADERSHIP (SNARE) \u2014 Leaders of countercultures face a structural trap: adopt commercial/celebrity partnerships to fund operations (scaling from underground to mainstream), but in doing so, neutralize the anti-establishment narrative that gave them moral authority. Cannot exit without losing funding; cannot proceed without losing authenticity. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96. Pure snare: high extraction, no coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Base/Adherents (Constituency)",
+      "comment": "PERSPECTIVE 2: MOVEMENT CONSTITUENCY / ADHERENTS (SNARE) \u2014 Followers invested in movement authenticity experience the commercialization as betrayal. Cannot credibly exit without losing community identity; constrained by sunk investment in movement belonging. d\u22480.88, f(d)\u22481.32, \u03c3=1.2 \u2192 \u03c7\u22480.87. Extraction via narrative collapse."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Elite Financial/Commercial Actors",
+      "comment": "PERSPECTIVE 3: ELITE FINANCIAL & COMMERCIAL ACTORS (ROPE) \u2014 From the perspective of wealthy investors, celebrity brand managers, and financial facilitators (e.g., Staley's position at Barclays, Epstein's investment network), the 'capture' is a straightforward coordination mechanism: channeling revolutionary energy into commodified cultural products (albums, brands, lifestyle goods) solves their problem of absorption. They experience zero or negative extraction \u2014 they benefit. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Counter-Countercultural Movement",
+      "comment": "PERSPECTIVE 4: COUNTER-COUNTERCULTURAL MOVEMENTS (TANGLED ROPE) \u2014 Organized critics of commercial cooptation (underground purists, indie communities, decommodification advocates) benefit from the very existence of the mainstream-captured version \u2014 it defines their authentic position by contrast. They also bear extraction: their labor of maintaining 'true' alternatives is unpaid, and they exist in permanent opposition. d\u22480.52, f(d)\u22480.68, \u03c3=1.2 \u2192 \u03c7\u22480.48. Hybrid: coordination function (defines boundaries of authenticity) + asymmetric extraction (unpaid maintenance of purity)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Culture Industry (Historical Perspective)",
+      "comment": "PERSPECTIVE 5: THE CULTURE INDUSTRY (HISTORICAL PITON) \u2014 From a long view, the capture mechanism is a degraded or residual form of earlier systems of censorship and suppression. The culture industry no longer needs overt censorship when it can commercialize dissent. The performative nature (theater_ratio=0.68) reflects that commercial cooptation maintains theatrical claims to 'supporting change' while functionally neutralizing it. This perspective sees the snare as an inertial remnant \u2014 it persists because the infrastructure hasn't been dismantled, but its functional power has diminished as surveillance and algorithmic manipulation offer more direct extraction. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.08."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Structural Mechanism)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (STRUCTURAL SNARE) \u2014 From civilizational distance, the narrative neutralization mechanism appears as an intrinsic feature of capitalist absorption: all dissent must eventually be monetized or marginalized. The mechanism is deep structural (capital has infinite arbitrage capacity) yet not immutable (alternative economic systems could break it). Classification: Snare. d\u22480.70, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.75. The analytical view sees extraction without coordination benefit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntary_participation_threshold",
+      "question": "At what point does a movement leader's choice to accept commercial partnership become involuntary (i.e., trapped rather than mobile)?",
+      "resolution_mechanism": "Analysis of actual exit scenarios: leaders who reject partnership funding and remain solvent; longitudinal tracking of movements that funded growth through non-commercial means; counterfactual analysis of alternative funding models",
+      "impact": "If many viable exits exist: constraint is less severe (Tangled Rope from leader perspective). If exits are genuinely scarce: snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commercial partnership is forced or chosen for revolutionary leaders"
+    },
+    {
+      "id": "authenticity_collapse_mechanism",
+      "question": "Is the loss of narrative authenticity caused by commercial partnership a necessary property of commodification, or a contingent failure of critical consciousness in adherents?",
+      "resolution_mechanism": "Historical case studies: movements that maintained ideological coherence despite commercial expansion (e.g., certain punk subcultures, religious movements with explicit dogma); experiments in transparent commercialization where movements declare the partnership openly",
+      "impact": "If necessary/structural: snare extraction is unavoidable (base_extractiveness cannot be reduced). If contingent: base_extractiveness could be reduced through better critical framing (scaffold/piton rather than snare).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether narrative collapse is intrinsic to commercialization or contingent on critical consciousness"
+    },
+    {
+      "id": "alternative_absorption_capacity",
+      "question": "What portion of revolutionary potential can be absorbed into commercial channels before the movement becomes functionally inert?",
+      "resolution_mechanism": "Comparative analysis: absorption rates across historical movements; measurement of continued mobilization capacity post-commercial capture (protest participation, mutual aid activity, ideological reproduction); tipping point identification",
+      "impact": "If absorption threshold is low (< 30% of leaders/resources): the snare is weak and self-limiting (theater_ratio would drop as movement fails). If threshold is high (> 70%): the snare is durable and systemic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Absorption threshold for commercial channels relative to movement's revolutionary capacity"
+    },
+    {
+      "id": "elite_intentionality",
+      "question": "Is the narrative neutralization mechanism an explicit coordinated strategy by financial elites, or an emergent property of market incentives?",
+      "resolution_mechanism": "Documentary evidence (internal communications, strategic planning documents); structural analysis of whether the outcome requires conspiracy or just rational self-interest; comparison with other elite-capture mechanisms (regulatory capture, academic co-option)",
+      "impact": "If intentional/coordinated: snare classification is strengthened (active enforcement implied). If emergent/uncoordinated: may be better described as Rope with perverse coordination outcomes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capture is explicit strategy or emergent market property"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Staley-Epstein correspondence (2014) documents a mechanism of elite neutralization: the absorption of revolutionary or countercultural movements through commercial partnership and celebrity sponsorship. The mechanism works by offering leaders and adherents access to wealth, platform, and legitimacy contingent on surrendering the anti-establishment narrative that originally motivated the movement. The label 'bought off by Jay Z' encodes this structural trap: accepting resources (music production, brand partnerships, investment) necessarily involves alignment with the commercial system those resources come from. The constraint is not the provision of resources (which could be purely beneficial coordination) but the suppression of alternatives \u2014 the systematic removal of non-commercial scaling pathways for movements. Revolutionary energy becomes extracted value: movements provide 'authenticity' and 'edginess' to commercial brands, while movements lose the authentic oppositional position that gave them meaning. The theater ratio (0.68) reflects the performative nature of the commercial partnership: brands claim to 'support change' while functionally neutralizing organized opposition. The extractiveness (0.58) reflects that this is not total suppression (movements do get resources, visibility, adherents) but a severe degradation of their stated goals.",
+    "key_agents": [
+      "Revolutionary Movement Leaders: Primary victims (moderate/constrained) \u2014 trapped between funding needs and authenticity loss",
+      "Movement Adherents/Base: Primary victims (moderate/constrained) \u2014 experience narrative betrayal, cannot exit without losing community",
+      "Financial Elites / Investment Networks: Primary beneficiaries (institutional/arbitrage) \u2014 access revolutionary authenticity, convert it to cultural capital and commodity value",
+      "Celebrity/Brand Partnerships: Secondary beneficiaries (institutional/arbitrage) \u2014 gain countercultural credibility while maintaining elite alignment",
+      "Counter-Countercultural Underground: Secondary victims/beneficiaries (organized/mobile) \u2014 benefit from contrast definition; bear unpaid maintenance cost",
+      "Culture Industry / Media: Institutional maintainer (institutional/arbitrage) \u2014 benefits from continuous supply of commercialized 'rebellion'",
+      "Analytical Observer: Structural analyst (analytical/analytical) \u2014 views mechanism as emergent property of capital's absorption capacity"
+    ],
+    "logic_rationale": "Base extractiveness (0.58): Moderate-high. The constraint extracts revolutionary potential and converts it to commercial value, but does not eliminate the resource transfers to movements. Movements gain funding, platform, and visibility they would not have achieved through purely oppositional channels. The extraction is real (loss of narrative authenticity, integration into elite systems, neutralization of oppositional force) but not total (movements are not destroyed, just redirected). The trajectory (0.35 \u2192 0.58 over 10 years) reflects increasing sophistication of the capture mechanism and declining alternative funding pathways as commercial platforms (streaming, social media) became the primary distribution channels. Suppression (0.72): High. Alternative pathways for movement scaling are systematically suppressed: pure grassroots funding is limited and slow; non-commercial distribution channels (vinyl, underground networks) offer limited reach; movements that reject commercialization face resource starvation. The suppression is not violent but structural \u2014 it operates through incentive alignment and opportunity scarcity. Theater ratio (0.68): Moderate-high. The performative element is substantial: brands and partnerships perform 'support for change' through sponsorship while the actual effect is integration and neutralization. Movements perform 'revolutionary authenticity' for commercial audiences. The theater has increased over the interval as the gap widened between claimed opposition and actual function. However, it is not as high as pure performative constraints (piton would be 0.70+) because real resources do flow, real visibility is achieved, and real adherents are gained \u2014 the benefit is genuine, just subordinated to extraction.",
+    "perspectival_gap": "The constraint exhibits severe perspectival divergence. The financial elites see pure coordination (Rope) \u2014 they are solving the problem of absorbing revolutionary energy. The movement leaders see a snare \u2014 they are trapped between funding needs and identity collapse. The adherents also see snare \u2014 they experience narrative betrayal. The underground counter-countercultural movements see tangled rope \u2014 they benefit from contrast but lose potential allies to the mainstream capture. The culture industry sees piton \u2014 the capture mechanism is a degraded, inertial form of earlier censorship, now replaced by more efficient forms of control. The analytical observer sees structural snare \u2014 the mechanism is deep but not immutable. The perspectival gaps are not minor interpretive differences; they reflect genuine structural asymmetries in who controls resources, who bears costs, and who benefits. The gap between the elites (Rope) and the victims (Snare) is the defining feature of this constraint.",
+    "directionality_logic": "Movement leaders: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.18. High extraction. Trapped between funding needs and identity loss; constrained exit (can reject partnership but lose scaling capacity). Adherents: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. Very high extraction. Sunk investment in movement belonging makes exit costly; experience narrative collapse. Financial elites: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.10. Net beneficiary. Can arbitrage between non-commercial revolutionary authenticity and commercial value. Underground counter-cultures: Mixed + mobile \u2192 d\u22480.50, f(d)\u22480.65. Moderate extraction with coordination function. Benefit from contrast definition but bear unpaid maintenance. Culture industry: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton perspective; benefits but sees mechanism as degraded. Analytical observer: Structural analyst \u2192 d\u22480.70, f(d)\u22481.08. Views extraction without coordination benefit.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by showing that the snare classification is dominant across victim perspectives but the constraint genuinely includes a coordination component (elites solving absorption problem, movements solving funding problem). The tangled rope perspective (counter-countercultural) shows that the constraint has both extraction and coordination functions, but asymmetrically distributed: elites gain coordination benefit, victims bear extraction cost. The classification as pure snare (rather than tangled rope) is justified because: (1) the primary vector of extraction (narrative neutralization) does not provide a coordination solution for the victims \u2014 movements lose the very thing that makes them movements; (2) the coordination function (elite absorption of revolutionary energy) is not a joint solution but an asymmetric extraction from the victims' perspective; (3) the supervision/enforcement is not active (no police force) but structural (absence of alternatives). The Staley-Epstein correspondence itself provides evidence: the language is explicitly transactional ('bought off') and unambiguous about the extraction mechanism. The mandatrophy analysis confirms snare because the suppression of alternatives (no non-commercial funding, no non-commercial distribution) is higher than would be expected for a tangled rope with genuine coordination benefit for both sides."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_finance",
+      "academic_cooption_mechanism",
+      "authenticity_commodification"
+    ],
+    "dual_formulation_note": "The Staley-Epstein narrative neutralization is downstream of broader elite capture and absorption mechanisms (regulatory capture, academic cooption). Each shares the structural property that coordination pathways are systematically replaced by extraction pathways. The upstream constraints have lower \u03b5 values reflecting specific institutional domains; this constraint has \u03b5=0.58 reflecting the particular mechanism of narrative/cultural extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.5
+    }
+  ]
+}

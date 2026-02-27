@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "dsa_transparency_requirements",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dsa_trans"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Digital Services Act (DSA) Transparency Requirements",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eu_regulators",
+      "civil_society_organizations",
+      "academic_researchers"
+    ],
+    "victims": [
+      "very_large_online_platforms",
+      "platform_innovation_capacity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The EU Regulatory State (Constrained by Non-Compliance)",
+      "comment": "PERSPECTIVE 1: EU REGULATORS TRAPPED (SNARE) \u2014 Despite legal authority to impose DSA, regulators face platform non-compliance strategies (jurisdictional arbitrage, API limitations, data anonymization obfuscation) with limited enforcement capacity. Trapped in the gap between mandate and execution. d\u22480.92, f(d)\u22481.38, \u03c3=1.1 \u2192 \u03c7\u22480.84."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Civil Society & Researchers (Information Asymmetry Trap)",
+      "comment": "PERSPECTIVE 2: CIVIL SOCIETY / RESEARCHERS TRAPPED (SNARE) \u2014 Despite DSA transparency rights, platforms retain effective information control through technical barriers, rate-limiting, and data export costs. Trapped by asymmetric access to algorithmic decision-making. d\u22480.88, f(d)\u22481.32, \u03c3=1.1 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Very Large Online Platforms (VLOPs) (Coordination & Extraction)",
+      "comment": "PERSPECTIVE 3: VLOPS (TANGLED ROPE) \u2014 Constrained by compliance burden but also benefit from standardized transparency as competitive moat (smaller competitors cannot match scale of compliance). Mixed: enforcement cost (extraction) + standardization benefit (coordination). d\u22480.65, f(d)\u22480.95, \u03c3=1.2 \u2192 \u03c7\u22480.59."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Tech Governance Coalition (Arbitrage)",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL TECH GOVERNANCE (ROPE) \u2014 EU, UK, Australia, and others coordinating on transparency standards. Arbitrage access to jurisdictional flexibility and regulatory learning. Sees transparency requirements as coordination mechanism enabling regulatory coherence. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Platform Innovation Ecosystem (Sunset)",
+      "comment": "PERSPECTIVE 5: PLATFORM INNOVATION (SCAFFOLD) \u2014 DSA transparency imposes near-term costs on algorithmic innovation and A/B testing. But organized tech communities see sunset: as transparency standardizes and integrates into platform operations, marginal compliance costs decline. Open-source monitoring tools and third-party compliance firms emerging to reduce friction. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Platform Self-Regulation Theater (Inertial Compliance)",
+      "comment": "PERSPECTIVE 6: PLATFORM SELF-REGULATION THEATER (PITON) \u2014 Platforms publish transparency reports that are largely performative: aggregate statistics that obscure algorithmic decision-making, selective disclosure of only data favorable to platform narrative, compliance reporting that mimics regulation without structural change. Theater ratio 0.58 reflects that much DSA compliance is ritual attestation rather than functional transparency. Maintained by institutional inertia: platforms know regulators lack verification capacity. d\u22480.32, f(d)\u22480.32, \u03c3=1.1 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural Hybrid)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, DSA creates a hybrid: genuine coordination mechanism (international regulatory standards, open-source compliance tools) layered onto asymmetric extraction (platforms retain algorithmic opacity despite formal transparency obligations). The constraint combines real coordination benefits (regulatory coherence, vendor lock-in prevention) with real extraction (information asymmetry, compliance cost barrier to smaller competitors). d\u22480.62, f(d)\u22480.88, \u03c3=1.2 \u2192 \u03c7\u22480.52."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transparency_algorithmic_opacity_gap",
+      "question": "Is transparency reporting sufficient to overcome algorithmic opacity, or does the complexity of modern recommendation systems inherently resist meaningful disclosure?",
+      "resolution_mechanism": "Empirical evaluation: can third parties meaningfully audit/reproduce platform algorithmic behavior from DSA transparency data? Comparison of audit findings vs actual platform behavior on key decisions (content moderation, recommendation ranking).",
+      "impact": "If gap bridgeable: DSA is primarily Rope (coordination mechanism). If inherent: DSA is primarily Snare (false transparency masking extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether DSA transparency data enables meaningful algorithmic audit"
+    },
+    {
+      "id": "compliance_cost_barrier_threshold",
+      "question": "At what compliance cost threshold does DSA become a barrier to market entry for smaller platforms, converting coordination benefit into extraction?",
+      "resolution_mechanism": "Analysis of compliance cost as function of platform size; identification of breakeven point where smaller platforms exit vs consolidate into larger platforms.",
+      "impact": "If threshold low (<\u20ac1M annually): DSA primarily reduces competition (extraction). If threshold high (>\u20ac10M): DSA cost is negligible for meaningful market participants.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Compliance cost threshold relative to platform market entry viability"
+    },
+    {
+      "id": "regulatory_enforcement_capacity",
+      "question": "Do EU regulators (DMA/DSA enforcement bodies) have sufficient technical and personnel capacity to verify platform compliance claims, or is enforcement primarily dependent on platform self-reporting?",
+      "resolution_mechanism": "Audit of regulatory infrastructure; comparison of platforms claiming compliance vs independent verification studies; tracking of enforcement actions and remediation timelines.",
+      "impact": "If high capacity: regulators extract meaningful compliance (snare from platform view turns into enforcement grip). If low capacity: platforms retain effective information control despite transparency mandates (piton degradation confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regulatory capacity to verify DSA transparency compliance"
+    },
+    {
+      "id": "data_access_sufficiency",
+      "question": "Do DSA transparency mechanisms provide researchers and civil society sufficient access to algorithmic data to conduct meaningful audits, or do platforms use rate-limiting, API restrictions, and data anonymization to preserve opacity?",
+      "resolution_mechanism": "Comparative analysis: academic audits conducted pre-DSA vs post-DSA implementation; tracking of API limitations and researcher complaints about access barriers.",
+      "impact": "If sufficient: civil society/researchers achieve snare escape (mobile exit options). If insufficient: information asymmetry persists despite legal transparency rights (snare confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether DSA data access enables meaningful researcher/civil society audits"
+    },
+    {
+      "id": "international_regulatory_coordination",
+      "question": "Is DSA transparency creating genuine international regulatory convergence (rope/coordination), or are jurisdictions adopting incompatible standards that create arbitrage opportunities (tangled_rope/extraction)?",
+      "resolution_mechanism": "Tracking of UK, US, Australia, and other jurisdiction regulatory trajectories; analysis of whether platforms adopt unified transparency approach or jurisdiction-specific compliance strategies.",
+      "impact": "If convergence: regulatory arbitrage declines, coordination benefit grows (rope from international perspective). If fragmentation: platforms route requests based on jurisdiction, exploiting regulatory differences (extraction increases).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether DSA drives international regulatory convergence or fragmentation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "commentary": {
+    "narrative_context": "The European Union's Digital Services Act (DSA) imposes strict transparency obligations on Very Large Online Platforms (VLOPs), requiring disclosure of algorithmic decision-making, content moderation criteria, and recommendation system parameters to regulators, researchers, and civil society. The constraint exhibits a fundamental structural tension: DSA is simultaneously a genuine coordination mechanism for international regulatory harmonization AND an asymmetric extraction mechanism that preserves platform informational control while imposing compliance costs on competitors and constraining innovation. The constraint's extractiveness (0.52) and suppression (0.65) reflect that while DSA creates a formal transparency mandate, platforms retain multiple mechanisms to preserve algorithmic opacity (data anonymization, rate-limiting, selective disclosure, API restrictions), and the compliance burden creates competitive barriers for smaller platforms. The theater ratio (0.58) reflects that much DSA compliance is performative: aggregate transparency reports that provide regulators and researchers with aggregated data while preserving the opacity of individual algorithmic decisions.",
+    "key_agents": [
+      "EU Regulators (DMA/DSA enforcement bodies): Primary beneficiary (institutional/constrained) \u2014 gain legal authority to mandate transparency, but face non-compliance strategies and verification capacity limits",
+      "Very Large Online Platforms (VLOPs): Primary victim (institutional/constrained) \u2014 face compliance costs and information disclosure obligations, but benefit from standardized transparency as competitive moat against smaller competitors",
+      "Civil Society Organizations & Researchers: Secondary victim (moderate/trapped) \u2014 have legal transparency rights but face technical barriers (rate-limiting, API restrictions) that preserve information asymmetry",
+      "International Tech Governance Coalition: Beneficiary (institutional/arbitrage) \u2014 coordinating on transparency standards across jurisdictions, achieving regulatory coherence",
+      "Platform Innovation Ecosystem: Secondary victim with sunset logic (organized/mobile) \u2014 faces near-term compliance friction, but organized communities building compliance tools (scaffold dynamic)",
+      "Platform Self-Regulation Systems: Inertial actor (institutional/constrained) \u2014 maintaining performative transparency reporting through institutional momentum despite functional opacity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. DSA creates extraction through multiple channels: (1) compliance cost barrier reduces competition (smaller platforms exit or consolidate), (2) platforms retain informational control despite transparency mandates (selective disclosure, data anonymization), (3) regulatory enforcement capacity is limited, enabling non-compliance. However, extractiveness is not extreme because genuine compliance costs are incurred by platforms, and some meaningful transparency does occur. The value increased from 0.28 (DSA adoption phase) to 0.52 (post-implementation phase) as platforms realized opacity-preserving strategies and smaller competitors faced cost barriers. Suppression (0.65): Moderate-high. Significant barriers to meaningful transparency include: algorithmic complexity exceeding regulator/researcher capacity, API restrictions and rate-limiting, data anonymization requirements that preserve opacity, career risk for platforms publishing detailed algorithmic details, and regulatory enforcement capacity limits. Platforms can suppress meaningful disclosure while maintaining compliance appearance. Theater ratio (0.58): Moderate. DSA compliance includes both functional and performative elements. Functional: some genuine data disclosure, regulatory access to audit trails. Performative: aggregate statistics that obscure algorithmic decision-making, selective disclosure favorable to platform narrative, compliance reporting that mimics regulation without structural change. Theater increased from 0.38 (optimistic early implementation) to 0.58 (as platforms shifted compliance to performative compliance theater).",
+    "perspectival_gap": "The constraint demonstrates substantial perspectival divergence. EU regulators perceive a snare: they have legal authority to mandate transparency but face platform non-compliance and verification capacity limits, leaving them structurally trapped. Civil society and researchers perceive a snare: they have transparency rights on paper but face technical barriers (API restrictions, rate-limiting, data anonymization) that preserve information asymmetry. VLOPs perceive a tangled rope: compliance costs are real (information disclosure, audit burdens) but also provide competitive advantage (smaller competitors cannot match compliance scale, creating regulatory moat). International regulators perceive a rope: DSA is coordination mechanism enabling regulatory convergence and preventing jurisdictional arbitrage. Platform innovation perceives a scaffold: compliance costs are front-loaded but declining as compliance tools mature. The platform self-regulation system perceives a piton: maintaining performative transparency through institutional inertia despite functional opacity. The analytical observer perceives a tangled rope: genuine coordination benefits (international regulatory standards) layered onto asymmetric extraction (information control preservation, competitive barriers).",
+    "directionality_logic": "EU Regulators: Beneficiary (legal authority) + constrained exit (limited enforcement capacity) \u2192 d\u22480.92, f(d)\u22481.38. High extraction against regulators' intentions; trapped by enforcement gap. Civil Society/Researchers: Victim (information barriers) + trapped exit (no alternatives to access algorithmic data) \u2192 d\u22480.88, f(d)\u22481.32. High extraction; dependent on platform forbearance. VLOPs: Mixed beneficiary/victim (compliance cost + competitive moat) + constrained exit (regulatory jurisdiction) \u2192 d\u22480.65, f(d)\u22480.95. Moderate extraction; significant strategic escape capacity through opacity-preserving compliance. International Regulators: Beneficiary (coordination mechanism) + arbitrage exit (jurisdictional flexibility) \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary; positive coordination. Platform Innovation: Mixed victim/beneficiary (compliance costs + innovation opportunities) + mobile exit (open-source tools, standardization) \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction declining over time. Platform Self-Regulation: Institutional actor (maintains compliance theater) + constrained exit (regulatory obligation) \u2192 d\u22480.32, f(d)\u22480.32. Low effective extraction because performance suffices for compliance.",
+    "mandatrophy_analysis": "MANDATROPHY STATUS: UNRESOLVED (extractiveness 0.52 < 0.70 threshold, but mandatrophy dynamics are evident). The DSA constraint demonstrates mandatrophy through the tension between formal transparency mandate and actual information control preservation. The regulation was designed as pure coordination (rope): international regulatory harmonization enabling cross-border enforcement. But platforms executed it as hybrid coordination+extraction (tangled rope): compliance is real but structured to preserve algorithmic opacity, and the compliance cost creates competitive barriers. The regulatory intent (coordination) diverged from structural outcome (asymmetric extraction) because regulators underestimated: (1) platform technical capacity to anonymize/rate-limit transparency data, (2) regulator verification capacity limits, and (3) competitive dynamics where compliance cost becomes moat. Resolution mechanisms: (a) increase regulatory enforcement capacity (auditing infrastructure, technical expertise), (b) mandate API-level transparency (not just aggregated reports), (c) fund independent audit capacity (reducing regulator dependence on platform self-reporting), (d) international regulatory coordination (reducing jurisdiction-specific compliance arbitrage). Without these, DSA remains a tangled rope where formal transparency masks informational extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithmic_accountability",
+      "regulatory_capture_tech_sector",
+      "international_tech_governance"
+    ],
+    "dual_formulation_note": "DSA transparency requirements decompose into two structural constraints: (1) algorithmic_accountability_mandate (\u03b5\u22480.25, rope) \u2014 the formal transparency requirement as coordination mechanism, (2) dsa_transparency_implementation (\u03b5\u22480.52, tangled rope) \u2014 the actual compliance practice incorporating opacity-preserving strategies. The story focuses on implementation (transparency_requirements) rather than mandate. The family relationship shows how coordination intent (mandate) becomes extraction practice (implementation) through platform opacity strategies."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

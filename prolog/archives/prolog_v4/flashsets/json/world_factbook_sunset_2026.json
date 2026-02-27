@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "world_factbook_sunset_2026",
+    "version": "1.1",
+    "generated_date": "2024-03-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.5,
+    "theater_ratio": 0.3,
+    "claimed_type": "scaffold",
+    "human_readable": "CIA World Factbook Termination",
+    "topic_domain": "geopolitical/information",
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "competing_intelligence_agencies",
+      "open_source_intelligence_community"
+    ],
+    "victims": [
+      "policy_analysts",
+      "journalists",
+      "research_institutions"
+    ],
+    "requires_active_enforcement": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Policy Analysts and Journalists",
+      "comment": "The policy analysts and journalists are trapped without a readily available, neutral source of basic information. They are the primary victims, and view this as a loss. There are alternative sources, but none with the same perceived neutrality and comprehensiveness."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "CIA Management",
+      "comment": "CIA Management sees this as a return to core missions, and a sunsetting of a non-core function that can be fulfilled by other entities. They benefit from resource reallocation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Competing Intelligence Agencies",
+      "comment": "Competing intelligence agencies benefit from the loss of a public resource from a rival. They can more easily control the narrative and manipulate information if there is no neutral source. They experience this as a coordination advantage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Source Intelligence (OSINT) Community",
+      "comment": "The OSINT community benefits from the increased demand for their services. They are organized and mobile, and can quickly fill the information gap."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical observer's perspective, this is a tangled rope. There is a loss of a public resource, but also a redistribution of information control and opportunities for other entities."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_source_neutrality",
+      "question": "Will alternative sources of information maintain the perceived neutrality of the World Factbook?",
+      "resolution_mechanism": "Comparative analysis of bias in alternative sources.",
+      "impact": "If alternative sources are biased, the classification shifts towards snare for the general public. If neutral, then the classification remains a scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The neutrality of alternative information sources."
+    },
+    {
+      "id": "open_source_filling_the_gap",
+      "question": "Will the open source intelligence community adequately fill the information gap left by the World Factbook?",
+      "resolution_mechanism": "Analysis of the comprehensiveness and accuracy of OSINT data.",
+      "impact": "If the OSINT community can fill the gap, the sunset is less harmful. If not, the classification shifts towards snare for the general public.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the open source intelligence community adequately fills the information gap."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The CIA World Factbook termination represents a shift in information control and a redistribution of resources. While the CIA views this as a return to core missions, the termination creates a void for neutral, comprehensive information that negatively impacts policy analysts, journalists, and research institutions. At the same time, it benefits competing intelligence agencies and provides new opportunities for the open source intelligence community.",
+    "key_agents": [
+      "CIA Management: Institutional actor (institutional/arbitrage) \u2014 benefits from resource reallocation.",
+      "Policy Analysts, Journalists, and Research Institutions: Primary victims (powerless/trapped) \u2014 lose a valuable resource.",
+      "Competing Intelligence Agencies: Powerful actors (powerful/arbitrage) \u2014 benefit from the loss of a neutral source.",
+      "Open Source Intelligence (OSINT) Community: Organized agents (organized/mobile) \u2014 benefits from increased demand."
+    ],
+    "logic_rationale": "Extractiveness: The termination extracts a reliable, neutral information source from policy analysts, journalists and research institutions. The value is moderate (0.45) since alternative sources do exist, albeit with potential bias. Suppression: The termination suppresses access to a specific, high-quality source. The level of suppression is 0.50, reflecting that there are alternative (though potentially less reliable) sources. Theater Ratio: The theater ratio is low (0.30) because the CIA's motivation is primarily functional (resource reallocation), not performative.",
+    "perspectival_gap": "The CIA sees this as a return to core functions, a scaffold that is no longer needed. However, the policy analysts and journalists experience this as a loss, a snare that reduces access to reliable information. Competing intelligence agencies experience it as a coordination mechanism that gives them an advantage, while the OSINT community sees it as a coordination opportunity. The analytical observer sees a tangled rope, a mixture of coordination and extraction.",
+    "directionality_logic": "The CIA management benefits from reallocating resources, thus experiencing low extraction. The policy analysts and journalists are the primary victims, as they lose access to a reliable information source, thus experiencing high extraction. Competing intelligence agencies benefit from the reduced availability of neutral information, while the OSINT community benefits from increased demand for their services."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

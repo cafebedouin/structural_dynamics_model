@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp11",
+    "version": "0.1",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Auditory Lure (Ormond Hotel)",
+    "topic_domain": "social/artistic/biological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "skilled_narrators",
+      "charismatic_performers"
+    ],
+    "victims": [
+      "passive_listeners",
+      "truthful_communication"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Passive Listener",
+      "comment": "Perspective of a listener completely captivated by the performance, unable to critically assess or disengage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Skilled Narrator",
+      "comment": "Perspective of a skilled narrator who benefits from the captivating atmosphere of the bar to enhance their performance and influence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analytical perspective recognizing both the coordination and extraction aspects of the auditory lure in the Ormond Hotel."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Casual Bar Patron",
+      "comment": "Perspective of a casual bar patron who is both drawn in by the performance and slightly manipulated by it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "narrative_authenticity",
+      "question": "To what extent does the auditory lure distort or obscure truthful communication?",
+      "resolution_mechanism": "Analysis of narrative content and speaker motivations in the Ormond Hotel setting.",
+      "impact": "Higher distortion leads to a stronger snare classification, while more authentic expression shifts it towards a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The level of distortion or obfuscation within the auditory lure."
+    },
+    {
+      "id": "listener_agency",
+      "question": "How much agency do listeners retain to critically evaluate and resist the auditory lure?",
+      "resolution_mechanism": "Observation of listener behavior and responses in the bar setting.",
+      "impact": "Greater listener agency weakens the snare, potentially shifting the overall classification towards a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which listeners can resist the auditory lure."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Chapter 11 of Ulysses, often referred to as the 'Sirens' chapter, portrays the Ormond Hotel bar as a complex auditory environment where sounds and words create a mesmerizing, yet potentially manipulative, experience. The music, conversations, and performative storytelling in the bar form an 'auditory lure' that captivates patrons, influencing their thoughts and actions. This constraint focuses on the tension between the artistic coordination of sounds and stories and the potential for extraction from listeners. Skilled narrators and charismatic performers benefit from the captivated audience, while passive listeners may be subject to manipulation or distorted communication.",
+    "key_agents": [
+      "Skilled Narrators: Primary beneficiaries (institutional/arbitrage) \u2013 capitalize on the captivated audience.",
+      "Charismatic Performers: Secondary beneficiaries (powerful/mobile) \u2013 enhance their reputation and influence.",
+      "Passive Listeners: Primary victims (powerless/trapped) \u2013 subject to manipulation.",
+      "Truthful Communication: Secondary victim (moderate/constrained) \u2013 distortion and embellishment may hinder accurate exchange.",
+      "Casual Bar Patron: Moderate with mobility, both drawn in and potentially manipulated."
+    ],
+    "logic_rationale": "Extractiveness (0.6): High. The auditory lure extracts attention, critical thinking, and potentially emotional investment from listeners. Suppression (0.4): Moderate. Listeners are subtly encouraged to suspend disbelief and embrace the performance, limiting critical assessment but not completely eliminating free thought. The elevated extraction arises from the performer's skill at creating an immersive environment and from the inherent desire of listeners to be entertained. Theater ratio (0.3): Low. The theatrical aspect is present but not overwhelming. Performers prioritize creating an engaging atmosphere, and listeners are generally willing participants in the exchange.",
+    "perspectival_gap": "The skilled narrator and charismatic performer both experience the situation as a coordination opportunity, where their skills are amplified by the setting and receptive audience. Casual patrons experience a mixed situation, where they gain entertainment value but also surrender some measure of their critical faculties and objectivity. However, the truly passive listener, lacking critical faculties or social agency, find themselves fully entrapped by the allure of the situation. The analytical observer recognizes all perspectives as a tangled rope.",
+    "directionality_logic": "Directionality values are determined by the power and exit options of agents within the auditory environment. Narrators and performers, with institutional power and the capacity to manipulate the setting, see the situation as positive coordination. At the other extreme, individuals with no agency or options for escape find themselves entrapped. The casual patron, with mobility but limited power, exists in a mixed state."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "bureaucratic_self_preservation",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.8,
+    "claimed_type": "piton",
+    "human_readable": "The Inertial Office",
+    "topic_domain": "political",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "office_employees"
+    ],
+    "victims": [
+      "taxpayers",
+      "intended_beneficiaries"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Taxpayer",
+      "comment": "The taxpayer is trapped, lacking effective means to exit the system or significantly influence the allocation of resources. Their perspective is of a snare, where extraction is high and alternatives are suppressed."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Office Employees",
+      "comment": "From the perspective of the office employees, the office serves as a piton. While initially created for a specific purpose, the office's primary function has atrophied, but the constraint remains due to institutional inertia and theatrical maintenance. The employees benefit from the continued operation of the office, even if its original mission is no longer effectively pursued. Their exit options are constrained, as their livelihoods depend on the office's existence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Intended Beneficiaries",
+      "comment": "The intended beneficiaries, those the office was originally designed to serve, often find themselves in a snare. While they may receive some services, the office's focus on self-preservation means that their needs are not fully met, and they are subject to the office's bureaucratic processes with limited exit options."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From an analytical perspective, the office represents a piton. Over time, the original function has degraded, and the primary purpose becomes self-preservation. The office continues to exist due to inertia and theatrical performances, despite diminishing returns."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mission_drift_detectability",
+      "question": "How easily can mission drift be detected and quantified?",
+      "resolution_mechanism": "Regular audits, performance reviews, and beneficiary feedback mechanisms.",
+      "impact": "If mission drift is easily detectable, corrective action can be taken, and the piton classification can be avoided. If not, self-preservation continues unchecked.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which mission drift is detectable."
+    },
+    {
+      "id": "alternative_service_delivery",
+      "question": "Are there alternative, more efficient ways to deliver the intended services?",
+      "resolution_mechanism": "Comparative cost-benefit analyses of different service delivery models.",
+      "impact": "If alternatives exist, the office's self-preservation is less justifiable. If not, the office may be necessary, even if inefficient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The existence of alternative, more efficient service delivery models."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The bureaucratic_self_preservation constraint describes a phenomenon where a government office prioritizes its own survival and budget growth over its original mission. Over time, the office's activities become more focused on maintaining its existence than on effectively serving its intended beneficiaries. This leads to inefficiency, waste, and a loss of public trust.  The office engages in theatrical activities to justify its continued funding.",
+    "key_agents": [
+      "Office Employees: Primary beneficiaries (institutional/constrained) \u2013 benefit from the office's continued operation, even if it is inefficient.",
+      "Taxpayers: Primary victims (powerless/trapped) \u2013 bear the cost of the office's inefficiency and waste.",
+      "Intended Beneficiaries: Secondary victims (moderate/constrained) \u2013 receive some services, but their needs are not fully met due to the office's self-preservation focus.",
+      "Analytical Observer: (analytical/analytical) - observes long term decline."
+    ],
+    "logic_rationale": "Extractiveness (0.65): The office extracts resources from taxpayers to maintain its operations. Suppression (0.70): Alternatives are suppressed through the office's control over resources and its ability to influence policy decisions. Theater Ratio (0.80): The office engages in a high degree of theatrical activity to justify its existence and secure funding. Mandatrophy: The office has become more focused on self-preservation than on serving its intended beneficiaries. Its original mission has atrophied, and its activities are now largely performative.",
+    "perspectival_gap": "The taxpayer views the office as a snare, extracting resources without providing adequate services. The office employees see it as a means of survival and a source of livelihood, with limited exit options. The intended beneficiaries experience the office as a weak service provider with diminishing returns.",
+    "directionality_logic": "The taxpayer, with limited exit options and little power, experiences high extraction. The office employees, benefiting from the office's existence, experience minimal extraction. The intended beneficiaries, somewhat served by the office but also constrained by its bureaucratic processes, experience moderate extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "government_inefficiency"
+    ]
+  },
+  "directionality_overrides": []
+}

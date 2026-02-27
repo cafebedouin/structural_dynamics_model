@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "skills_based_hiring",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Skills-Based Hiring (De-credentialing)",
+    "topic_domain": "economic/technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers_with_skills_gaps",
+      "skilled_workers_without_degrees"
+    ],
+    "victims": [
+      "traditional_universities",
+      "workers_with_irrelevant_degrees"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Workers with Irrelevant Degrees",
+      "comment": "Workers who invested heavily in degrees that don't translate to marketable skills find their credentials devalued, leaving them trapped with debt and limited options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Traditional Universities",
+      "comment": "Universities face constrained exit options. They must adapt their curricula and demonstrate graduate skills, restructure delivery, or find other funding avenues if they continue to certify workers lacking market demanded skills."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Employers with Skills Gaps",
+      "comment": "Employers benefit from a wider pool of talent and potentially lower labor costs, enabling them to fill critical skills gaps more efficiently. They can arbitrage the market by finding qualified candidates outside the traditional degree system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Skilled Workers without Degrees",
+      "comment": "Skilled workers without degrees benefit from increased access to employment opportunities, allowing them to demonstrate their abilities directly without being filtered out by degree requirements. They have mobile exit options if the skills-based system delivers on its promise of fair evaluation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a broad analytical perspective, skills-based hiring represents a complex shift with both coordination and extraction elements. While it aims to improve labor market efficiency and access, it also creates new forms of credentialing and potential for exploitation. The analytical observer recognizes that skills based hiring benefits some at the expense of others."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skills_verification_reliability",
+      "question": "How reliably can skills be verified and assessed outside of traditional degree programs?",
+      "resolution_mechanism": "Development and validation of standardized skills assessments, tracking job performance data for skills-based hires.",
+      "impact": "If unreliable: skills-based hiring becomes a chaotic and discriminatory process. If reliable: it leads to more efficient and equitable labor markets.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reliability of skills verification outside traditional degrees"
+    },
+    {
+      "id": "new_credentialing_systems",
+      "question": "Will skills-based hiring lead to the creation of new, potentially extractive, credentialing systems?",
+      "resolution_mechanism": "Monitoring the emergence and influence of new skills certifications and training programs, assessing their accessibility and cost.",
+      "impact": "If new systems are extractive: skills-based hiring replicates the problems of traditional credentialing. If they are accessible and affordable: it offers a genuine alternative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Potential for new extractive credentialing systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Skills-based hiring is a matching market shift where employers prioritize specific, verifiable competencies over traditional degree credentials. This trend is driven by technological advancements, the rising cost of higher education, and the increasing need for specialized skills in the modern workforce. While it promises to create a more equitable and efficient labor market, it also introduces new challenges and potential risks.",
+    "key_agents": [
+      "Employers with Skills Gaps: Primary beneficiary (institutional/arbitrage) \u2013 can fill positions more effectively and potentially at lower costs.",
+      "Skilled Workers without Degrees: Secondary beneficiary (organized/mobile) \u2013 gain access to opportunities previously blocked by degree requirements.",
+      "Traditional Universities: Primary target (moderate/constrained) \u2013 face pressure to adapt curricula and demonstrate graduate skills.",
+      "Workers with Irrelevant Degrees: Secondary target (powerless/trapped) \u2013 find their credentials devalued and their job prospects diminished.",
+      "Analytical Observer:  (analytical/analytical) \u2013 sees a complex system with potential benefits and risks."
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate.  While skills-based hiring aims to improve matching, extraction can still occur if verification systems are unreliable or if new, costly credentialing systems emerge. The moderate value reflects this mixed potential. Suppression (0.45): Moderate.  The shift suppresses the value of some traditional degrees and creates barriers for workers who lack verified skills. However, it also opens up new pathways, reducing overall suppression compared to a purely degree-based system. Theater Ratio (0.20): Low. The focus is on demonstrable skills and performance, rather than performative credentials.  This results in a lower theater ratio.",
+    "perspectival_gap": "The perspectival gap highlights the contrasting experiences of different stakeholders. Employers see increased efficiency and access to talent (Rope). Skilled workers without degrees see new opportunities (Rope). Universities face pressure to adapt (Tangled Rope). Workers with devalued degrees find themselves trapped (Snare). The analytical observer sees a system with both coordinating and extracting forces (Tangled Rope).",
+    "directionality_logic": "Directionality is determined by each agent's power, exit options, and relationship to the extraction flow. Employers benefit, skilled workers gain mobility, universities are constrained, and workers with devalued degrees are trapped. The derived d-values reflect these relationships, leading to different classifications for each perspective.",
+    "mandatrophy_analysis": "This system resolves the mandatrophy by acknowledging the mixed nature of skills-based hiring. It is not purely beneficial or purely extractive. Instead, it's a tangled web of both, with varying impacts on different groups. Recognizing these complexities helps avoid simplistic and potentially harmful policy decisions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

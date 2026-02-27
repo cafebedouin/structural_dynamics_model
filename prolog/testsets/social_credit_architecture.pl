@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: social_credit_architecture
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-08-16
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_social_credit_architecture, []).
@@ -40,8 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -56,15 +58,38 @@
  *   domain: social/political/technological
  *
  * SUMMARY:
- *   A national-scale system that operationalizes "trustworthiness" by decoding
- *   behavioral data into a unified score. It creates real-world consequences
- *   (e.g., access to travel, loans, employment) based on compliance with
- *   state-sanctioned norms, blending surveillance with social engineering.
+ *   Social credit architecture operationalizes 'trustworthiness' by encoding
+ *   behavioral data into unified scores that determine access to credit,
+ *   employment, travel, education, and social services. The constraint
+ *   exhibits multiple classification perspectives depending on structural
+ *   position. For trapped citizens, it is pure extraction (Snare) — total
+ *   behavioral colonization with zero exit options. For the state apparatus,
+ *   it is coordination infrastructure (Rope) — solving the epistemic problem
+ *   of monitoring large populations. For tech vendors, it is mixed
+ *   coordination and extraction (Tangled Rope) — genuine governance tools
+ *   plus regulatory capture. For advocacy coalitions, it is degraded
+ *   resistance theater (Piton) — organized opposition that makes the system
+ *   appear contestable while extraction mechanisms persist unchanged. The
+ *   false summit (Mountain) perspective reveals how technological
+ *   inevitability frames can naturalize what is actually a constructed
+ *   institutional arrangement with substantial policy contingency. The
+ *   constraint's extractiveness has increased over the interval (0.42 → 0.68)
+ *   as the system expanded from credit assessment to employment, travel, and
+ *   civic participation domains. Theater ratio increased (0.35 → 0.58) as
+ *   implementation shifted from pure scoring to elaborate appeal procedures
+ *   and publicity around 'credit redemption' narratives, which are largely
+ *   performative — they give the appearance of contestability while
+ *   substantively changing few scores.
  *
- * KEY AGENTS (by structural relationship):
- *   - Low-Score Citizens: Primary target (powerless/trapped) — bears extraction
- *   - State Planners & High-Score Elites: Primary beneficiary (institutional/arbitrage) — benefits from constraint
- *   - External Policy Analysts: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Unscored Citizens: Primary victim (powerless/trapped) — entire population subject to behavioral encoding with no opt-out, cascading restrictions based on algorithmic scores
+ *   - Marginalized Groups: Secondary victim (moderate/constrained) — disproportionately disadvantaged by algorithmic bias, historical disparities in training data, limited appeal mechanisms
+ *   - Privacy Commons: Abstract victim — collective epistemic good of behavioral privacy degraded by normalized surveillance infrastructure
+ *   - State Apparatus: Primary beneficiary (institutional/arbitrage) — achieves behavioral transparency and standardized enforcement across large population
+ *   - Compliant Enterprise: Secondary beneficiary (institutional/arbitrage) — preferential access to credit, customers, contracts in exchange for compliance with behavioral reporting
+ *   - Tech Implementation Sector: Hybrid actor (powerful/mobile) — benefit from sustained contracts and lock-in; bear extraction through regulatory capture and feature demands
+ *   - Advocacy Coalition: Organized but constrained (organized/constrained) — perform resistance through campaigns and legal challenges; constrained by system momentum and state control
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangements as inevitable features of scaled governance
  */
 
 /* ==========================================================================
@@ -72,71 +97,82 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(social_credit_architecture, 0.80). % Snare extraction >= 0.46
-domain_priors:suppression_score(social_credit_architecture, 0.70).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(social_credit_architecture, 0.15).       % Not a Piton.
+domain_priors:base_extractiveness(social_credit_architecture, 0.68).
+domain_priors:suppression_score(social_credit_architecture, 0.75).
+domain_priors:theater_ratio(social_credit_architecture, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(social_credit_architecture, extractiveness, 0.80).
-narrative_ontology:constraint_metric(social_credit_architecture, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(social_credit_architecture, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(social_credit_architecture, extractiveness, 0.68).
+narrative_ontology:constraint_metric(social_credit_architecture, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(social_credit_architecture, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
-% The system is analytically a Tangled Rope, possessing both a genuine
-% coordination function and severe asymmetric extraction.
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(social_credit_architecture, snare).
 narrative_ontology:human_readable(social_credit_architecture, "Social Credit Architecture").
 narrative_ontology:topic_domain(social_credit_architecture, "social/political/technological").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(social_credit_architecture). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(social_credit_architecture).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-narrative_ontology:constraint_beneficiary(social_credit_architecture, state_planners).
-narrative_ontology:constraint_victim(social_credit_architecture, low_score_citizens).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(social_credit_architecture, state_apparatus).
+narrative_ontology:constraint_beneficiary(social_credit_architecture, system_administrators).
+narrative_ontology:constraint_beneficiary(social_credit_architecture, compliant_enterprises).
+narrative_ontology:constraint_victim(social_credit_architecture, unscored_population).
+narrative_ontology:constraint_victim(social_credit_architecture, marginalized_groups).
+narrative_ontology:constraint_victim(social_credit_architecture, privacy_commons).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% For a citizen with a low score, the system is a trap that curtails economic
-% and social mobility. Engine derives d from victim status + trapped exit
-% (d ≈ 0.95), leading to high effective extraction (χ).
+% PERSPECTIVE 1: UNSCORED CITIZEN (SNARE) — Trapped within the system's behavioral encoding. Cannot opt out of data collection or score calculation. Subject to cascading restrictions (credit denial, employment barriers, travel prohibition, education access) based on algorithmic determinations. Zero exit options. Maximum experienced extraction as the constraint colonizes all dimensions of economic and social participation.
 constraint_indexing:constraint_classification(social_credit_architecture, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% For the state and high-scoring elites, it's a coordination mechanism that
-% reduces social friction. Engine derives d from beneficiary status + arbitrage
-% exit (d ≈ 0.05), leading to negative effective extraction (χ, felt as a subsidy).
+% PERSPECTIVE 2: MARGINALIZED GROUP (SNARE) — Systematically disadvantaged by scoring algorithms (historical bias in training data, algorithmic amplification of existing inequalities). Cannot appeal or meaningfully contest scores. Constrained exit options — some mobility through migration or informal economy, but at severe cost. Extraction compounds existing vulnerabilities.
+constraint_indexing:constraint_classification(social_credit_architecture, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: STATE APPARATUS (ROPE) — Primary beneficiary. The system enables coordination of governance through behavioral transparency and standardized enforcement. Experiences the constraint as a coordination mechanism: aggregating behavioral data solves the state's epistemic problem of monitoring large populations. Net extraction flow toward this agent. High arbitrage (can exit through policy revision).
 constraint_indexing:constraint_classification(social_credit_architecture, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% An analyst sees both the coordination function and the severe, asymmetric
-% extraction. It is a hybrid system, not a pure snare or pure rope.
-% The analytical perspective has a canonical d ≈ 0.72.
-constraint_indexing:constraint_classification(social_credit_architecture, snare,
+% PERSPECTIVE 4: COMPLIANT ENTERPRISE (ROPE) — Benefits from preferential access to credit, customers, and state contracts in exchange for compliance with behavioral reporting and enforcement. Sees the constraint as coordination infrastructure. Extraction flows toward this agent through regulatory advantage. High arbitrage (can exit through non-compliance, though costly).
+constraint_indexing:constraint_classification(social_credit_architecture, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: TECH IMPLEMENTATION SECTOR (TANGLED ROPE) — Firms that build and maintain scoring systems. Benefit from sustained contracts and technical lock-in (difficult to switch vendors). Also bear extraction through regulatory capture: state increasingly demands features and algorithmic transparency, constraining design freedom. Mixed experience: genuine coordination (providing governance tools) plus asymmetric extraction (forced feature development). Mobile enough to exit but facing reputational and regulatory barriers.
+constraint_indexing:constraint_classification(social_credit_architecture, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: ADVOCACY COALITION (PITON) — Civil society organizations, privacy advocates, and international NGOs. Organized but constrained by the system's momentum and state control of data access. Perform resistance through public campaigns, legal challenges, and norm-setting, but these efforts are largely theatrical — the system persists regardless because state incentives are strong and exit costs for non-compliance are prohibitive. Theater ratio high because advocacy makes the system appear contestable while extraction mechanisms remain fundamentally unchanged.
+constraint_indexing:constraint_classification(social_credit_architecture, piton,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN — FALSE SUMMIT) — From civilizational distance, one might frame social credit as an immutable feature of scaled governance: large populations require coordination mechanisms, and behavioral data is the only available signal for trustworthiness assessment. This perspective naturalizes the system as an inevitable law of social order. However, the structural data contradicts the mountain classification — active enforcement, beneficiary capture, suppression mechanisms, and policy contingency all indicate this is not a natural law but a constructed institutional arrangement. The false summit reveals how technological determinism masks extractive architectural choices.
+constraint_indexing:constraint_classification(social_credit_architecture, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -145,23 +181,17 @@ constraint_indexing:constraint_classification(social_credit_architecture, snare,
 :- begin_tests(social_credit_architecture_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between the powerless (Snare) and institutional (Rope) views.
     constraint_indexing:constraint_classification(social_credit_architecture, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(social_credit_architecture, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless == snare,
-    TypeInstitutional == rope,
-    TypePowerless \= TypeInstitutional.
+    constraint_indexing:constraint_classification(social_credit_architecture, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    % The analytical observer must see the hybrid nature of the constraint.
-    constraint_indexing:constraint_classification(social_credit_architecture, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    TypeAnalytical == tangled_rope.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(social_credit_architecture, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_requirements_met) :-
-    % Verify all three structural properties for Tangled Rope are present.
-    narrative_ontology:constraint_beneficiary(social_credit_architecture, _), % -> has_coordination_function
-    narrative_ontology:constraint_victim(social_credit_architecture, _),     % -> has_asymmetric_extraction
-    domain_priors:requires_active_enforcement(social_credit_architecture).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(social_credit_architecture, TR),
+    TR >= 0.70.
 
 :- end_tests(social_credit_architecture_tests).
 
@@ -171,35 +201,16 @@ test(tangled_rope_structural_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness is set to 0.80 to reflect the profound impact on life
- *   chances for those who fall afoul of the system. It extracts social and
- *   political compliance. The suppression score of 0.70 reflects the difficulty
- *   of opting out in a highly digitized society where the system is pervasive.
+ *   Extractiveness (0.68): High. The state captures behavioral data and converts it into unilateral control over citizen access to credit, employment, travel, and services. Citizens have no reciprocal scoring right over the state. The system extracts behavioral compliance value (citizens modify behavior to improve scores) and economic value (restricted access creates rents captured by compliant enterprises). Extractiveness increased from 0.42 to 0.68 as the system expanded from initial credit-only scope to employment and travel domains. Suppression (0.75): High. Citizens cannot meaningfully opt out (participation is mandatory for economic participation), cannot access the algorithms (technical opacity prevents contestation), and face severe penalties for non-compliance (credit denial, employment barriers, travel prohibition). Appeal mechanisms exist but are procedurally elaborate and have low success rates — they function as theater rather than meaningful exit. Suppression increased with system maturation and expansion of enforcement domains. Theater ratio (0.58): Moderate-high. Implementation includes high-visibility 'credit redemption' narratives (publicity around individuals who improved scores, civic participation programs that claim to raise creditworthiness) that frame the system as fair and contestable. Appeal procedures are elaborate and publicized. However, underlying extraction mechanisms (algorithmic opacity, low appeal success rates, behavioral compliance pressure) remain unchanged. Theater has increased as the system has matured and faces growing public criticism.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For a low-score citizen (powerless/trapped), the system is
- *   a Snare—a coercive trap with no escape. For state planners (institutional/arbitrage),
- *   it is a Rope—a valuable tool for maintaining social order and predictability.
- *   This difference is driven by their structural relationship to the constraint,
- *   which the engine captures via directionality (d).
+ *   The constraint exhibits maximal perspectival divergence. Trapped citizens see pure extraction (Snare) — the constraint is a mechanism for state control of their economic participation. The state apparatus sees coordination infrastructure (Rope) — the constraint solves the legitimate problem of assessing trustworthiness at scale. Tech vendors see mixed coordination and extraction (Tangled Rope) — they provide genuine governance tools but face regulatory capture that constrains their design freedom. Marginalized groups see concentrated extraction (Snare at higher intensity than general population) due to algorithmic bias feedback loops. Advocacy coalitions see degraded resistance (Piton) — their public campaigns and legal challenges make the system appear contestable but substantively preserve extraction mechanisms. The analytical observer risks naturalizing the system as a law of social order (Mountain — false summit) rather than recognizing it as a constructed institutional arrangement with substantial policy contingency. This perspectival divergence is extreme because the beneficiaries (state, compliant enterprises) and victims (citizens, marginalized groups) occupy completely different structural positions with nearly opposite exit options.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: 'state_planners' and high-score elites benefit from reduced
- *     social friction and increased predictability. Their arbitrage exit options
- *     and beneficiary status result in a low directionality score (d), making
- *     effective extraction (χ) negative (a subsidy).
- *   - Victims: 'low_score_citizens' bear the costs through restricted access
- *     to services and mobility. Their trapped status and victim designation
- *     result in a high directionality score (d), maximizing effective extraction.
+ *   Each perspective's directionality derives from the agent's structural relationship to extraction flows. Trapped citizens (powerless/trapped) experience maximum extraction — they bear full costs of scoring with zero exit options, deriving d ≈ 0.95. Marginalized groups (moderate/constrained) experience high extraction with some theoretical exit (migration, informal economy) but at prohibitive cost, deriving d ≈ 0.70. State apparatus (institutional/arbitrage) benefits from behavioral transparency and standardized enforcement, deriving d ≈ 0.10 (beneficiary with exit). Compliant enterprises (institutional/arbitrage) benefit from preferential access and regulatory advantage, deriving d ≈ 0.15. Tech sector (powerful/mobile) experiences mixed extraction (regulatory capture) and benefits (contracts), deriving d ≈ 0.55 (moderate position between beneficiary and victim). Advocacy coalition (organized/constrained) performs resistance but lacks structural power to change system, deriving d ≈ 0.45 (moderate victim without full exit). The analytical observer uses the canonical d ≈ 0.73 for analytical power.
  *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- *   The system's public claim to be a pure coordination tool ('rope') for building
- *   societal trust is a form of mandatrophy. The analytical classification as
- *   'tangled_rope' resolves this by acknowledging the genuine coordination
- *   function (for beneficiaries) while simultaneously accounting for the severe,
- *   asymmetric extraction imposed on victims. This prevents the system from being
- *   misclassified as a pure Snare (ignoring its coordination role) or a pure Rope
- *   (ignoring its coercive nature). The omega_variable also addresses this.
+ * MANDATROPHY ANALYSIS:
+ *   MANDATROPHY RESOLUTION: The constraint exemplifies mandatrophy because it is simultaneously a coordination mechanism (providing the state with tools to assess trustworthiness at scale) and pure extraction (colonizing citizen behavior and restricting economic participation). The mandate is that social credit 'improves governance efficiency' (coordination framing) and 'incentivizes prosocial behavior' (behavioral improvement framing). Mandatrophy resolves by recognizing that the coordination function is real but drastically insufficient to justify the extraction cost. The state could achieve similar governance efficiency through alternative coordination mechanisms (transparent rules-based credit assessment, participatory algorithm design, federated scoring with citizen appeal rights) that do not require behavioral colonization. The mandate for coordination does not entail the mandate for this specific extractive architecture. Therefore, classification as Snare is justified despite the genuine coordination function — the extraction mechanism is not a necessary feature of coordination but a contingent choice that serves state and enterprise interests. Mandatrophy resolved at high confidence: the system's extractiveness (0.68) and suppression (0.75) substantially exceed what would be required for the coordination function alone, indicating that extraction is a primary structural feature, not a necessary side-effect of coordination.
  */
 
 /* ==========================================================================
@@ -207,44 +218,84 @@ test(tangled_rope_structural_requirements_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_social_credit_architecture,
-    'Is the system primarily for economic enforcement (e.g., debt) or for political repression?',
-    'Analysis of the ratio of financial defaulters vs. political dissenters on blacklists over a 5-year period.',
-    'If primarily economic, it functions closer to a harsh credit system (Tangled Rope). If primarily political, it is a pure instrument of state control (Snare).',
+    algorithmic_bias_feedback,
+    'Does the scoring algorithm amplify existing inequalities through feedback loops, or does it merely reflect pre-existing social stratification?',
+    'Longitudinal statistical analysis comparing score changes within demographic cohorts before/after algorithm updates; causality testing for algorithmic features vs historical background variables; synthetic fairness audits comparing counterfactual scores under alternative algorithms',
+    'If algorithmic amplification is primary: constraint is constructed exploitation (Snare with high policy contingency). If algorithm merely reflects stratification: constraint naturalizes injustice but did not create it (shifts from Snare toward Mountain, though structural data prevents true mountain classification).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(algorithmic_bias_feedback, empirical, 'Whether scoring algorithm amplifies inequalities or reflects pre-existing stratification').
+
+omega_variable(
+    appeal_mechanism_effectiveness,
+    'Can citizens meaningfully contest and overturn adverse credit scores through administrative or legal appeal, or are appeals largely procedural theater?',
+    'Analysis of appeal success rates, reversal rates for successfully appealed scores, time-to-resolution for appeals, comparison with baseline false-positive rates in training data, interview data from appeal process participants',
+    'If appeals are genuinely effective: suppression index drops (citizens have meaningful exit option), chi calculation changes, some perspectives might reclassify from Snare to Tangled Rope. If appeals are theater: confirms suppression ≥ 0.75 and validates Snare classification.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(appeal_mechanism_effectiveness, empirical, 'Effectiveness of appeal mechanisms for contesting credit scores').
+
+omega_variable(
+    data_accuracy_degradation,
+    'Are behavioral data inputs to the scoring system sufficiently accurate and timely for fair assessment, or do they systematically encode stale, incomplete, or erroneous information?',
+    'Audit of data entry errors, missing data rates, update latencies, and reconciliation failures across score components; comparison of recorded behavior vs individual attestations; analysis of how data quality varies by geography and socioeconomic status',
+    'If data quality is high: suppression justified by accuracy. If quality is low: suppression is amplified by noise (citizens cannot effectively contest scores because scoring logic is opaque), increasing actual harm despite lower structural suppression. Shifts mandatrophy framing from ''system is unfair'' to ''system is broken''.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(data_accuracy_degradation, empirical, 'Data quality and accuracy in behavioral scoring inputs').
+
+omega_variable(
+    state_capacity_constraint,
+    'Is the social credit system technically feasible for the state apparatus to administer fairly and scalably, or does it exceed state capacity, degrading into arbitrary or corrupted enforcement?',
+    'Administrative capacity audits, analysis of implementation delays and technical failures, case studies of corruption or arbitrary enforcement by local administrators, comparison of scoring consistency across regions',
+    'If technically feasible: system remains a coherent Snare (extraction mechanism is stable). If capacity-constrained: enforcement becomes arbitrary and inconsistent, which paradoxically might reduce *average* extraction (because unpredictability raises exit costs unevenly) but increases *experienced* suppression for those who do bear enforcement.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(state_capacity_constraint, empirical, 'State administrative capacity to implement social credit fairly and scalably').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(social_credit_architecture, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data for this high-extraction constraint (0.80 > 0.46) shows its
-% gradual intensification from a pilot program to a full-scale architecture.
-%
-% Theater ratio over time (subtle increase in performative compliance):
-narrative_ontology:measurement(sca_tr_t0, social_credit_architecture, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(sca_tr_t5, social_credit_architecture, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(sca_tr_t10, social_credit_architecture, theater_ratio, 10, 0.15).
+% Theater ratio over time
+narrative_ontology:measurement(socred_tr_t0, social_credit_architecture, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(socred_tr_t5, social_credit_architecture, theater_ratio, 5, 0.48).
+narrative_ontology:measurement(socred_tr_t10, social_credit_architecture, theater_ratio, 10, 0.58).
 
-% Extraction over time (scope creep and intensification):
-narrative_ontology:measurement(sca_ex_t0, social_credit_architecture, base_extractiveness, 0, 0.60).
-narrative_ontology:measurement(sca_ex_t5, social_credit_architecture, base_extractiveness, 5, 0.70).
-narrative_ontology:measurement(sca_ex_t10, social_credit_architecture, base_extractiveness, 10, 0.80).
+% Extraction over time
+narrative_ontology:measurement(socred_be_t0, social_credit_architecture, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(socred_be_t5, social_credit_architecture, base_extractiveness, 5, 0.58).
+narrative_ontology:measurement(socred_be_t10, social_credit_architecture, base_extractiveness, 10, 0.68).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The system's primary function is enforcing behavioral norms.
 narrative_ontology:coordination_type(social_credit_architecture, enforcement_mechanism).
+narrative_ontology:affects_constraint(social_credit_architecture, algorithmic_transparency_bottleneck).
+narrative_ontology:affects_constraint(social_credit_architecture, behavioral_surveillance_infrastructure).
+narrative_ontology:affects_constraint(social_credit_architecture, credit_access_inequality).
+
+% DUAL FORMULATION NOTE:
+% Social credit architecture decomposes into three related constraints: (1) the system itself as an enforcement mechanism (this story), (2) the algorithmic opacity that prevents meaningful appeal (algorithmic_transparency_bottleneck, higher ε), and (3) the surveillance infrastructure that enables behavioral data collection (behavioral_surveillance_infrastructure, moderate ε). The system story represents the coordination-extraction hybrid; the transparency bottleneck represents the structural barrier to contestation; the surveillance infrastructure represents the technological precondition. All three are necessary for the extraction to function at current intensity. Removing any one would degrade extractiveness.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(social_credit_architecture, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

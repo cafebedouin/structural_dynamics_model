@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "statecraft_virtu",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "statecraft"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Machiavellian Virt\u00f9 and State Maintenance",
+    "topic_domain": "political/statecraft",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "prince_institutional_power",
+      "state_apparatus"
+    ],
+    "victims": [
+      "subject_population",
+      "rival_factions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subject Population",
+      "comment": "PERSPECTIVE 1: SUBJECT POPULATION (SNARE) \u2014 Citizens lack exit options and bear the costs of princely virtue: conscription, taxation, surveillance, and the moral hazard of living under a ruler who views their loyalty as contingent rather than reciprocal. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Rival Faction Leaders",
+      "comment": "PERSPECTIVE 2: RIVAL FACTION LEADERS (SNARE) \u2014 Competitors for power face high suppression (assassination, exile, imprisonment) with constrained exit (can relocate but lose base of power; can ally but lose independence). d\u22480.88, f(d)\u22481.32, \u03c3=1.1 \u2192 \u03c7\u22480.85."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Military-Administrative Class",
+      "comment": "PERSPECTIVE 3: MILITARY-ADMINISTRATIVE CLASS (TANGLED ROPE) \u2014 Officers and administrators both enable the prince's power and are constrained by it. They benefit from institutional hierarchy, salary, and social mobility within the system, but cannot exit without losing status. The system requires their active participation and delivers genuine coordination (chain of command, order in chaos). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Prince (Statecraft Institution)",
+      "comment": "PERSPECTIVE 4: THE PRINCE / STATECRAFT INSTITUTION (ROPE) \u2014 The ruler views virt\u00f9 as pure coordination: discipline prevents civil war, fear prevents rebellion, calculated clemency prevents conspiracy. The prince experiences the constraint as a functional problem-solving mechanism. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.1 \u2192 \u03c7\u2248-0.05. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Court Legitimacy Theater",
+      "comment": "PERSPECTIVE 5: COURT LEGITIMACY THEATER (PITON) \u2014 Machiavelli himself documents that virtue is performed, not internalized. The prince's clemency, severity, and piety are calculus, not conviction. The theater of legitimate rule persists (ceremonial, legal fiction, divine right) long after its structural function (preventing challengers from claiming moral superiority) has degraded. theater_ratio=0.68 (high performative content relative to functional effect). The court system maintains itself through institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / STRUCTURAL VIEW (TANGLED ROPE) \u2014 From a civilizational scale, Machiavellian virt\u00f9 solves a real coordination problem (preventing state collapse into factional warfare) while extracting heavily from subject populations (conscription, taxation, loss of bodily autonomy). The constraint is neither pure extraction (it prevents worse \u2014 anarchy) nor pure coordination (it distributes costs asymmetrically). d\u22480.70, f(d)\u22481.12, \u03c3=1.2 \u2192 \u03c7\u22480.73."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "virtue_necessity_threshold",
+      "question": "Is Machiavellian virt\u00f9 a structural necessity for maintaining a state against rival factions, or is it a contingent extraction mechanism that could be replaced by republican institutions or democratic consent?",
+      "resolution_mechanism": "Historical-comparative analysis: states that transitioned from principalities to republics/democracies without collapse; examination of whether these transitions reduced extraction while maintaining order",
+      "impact": "If necessary: Mountain (inherent to state maintenance). If contingent: Tangled Rope or Scaffold (institutional arrangement, potentially with sunset).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether virt\u00f9 is inherent to statecraft or a contingent institutional form"
+    },
+    {
+      "id": "fortune_vs_virtue_causation",
+      "question": "How much of state collapse results from lack of virt\u00f9 (inadequate suppression, poor strategic judgment) versus from Fortune (external invasion, plague, economic crisis) beyond the prince's control?",
+      "resolution_mechanism": "Counterfactual analysis of historical principalities; identification of states that failed despite high virt\u00f9 and states that survived despite low virt\u00f9; estimation of the variance explained by virt\u00f9 vs. exogenous shocks",
+      "impact": "If virt\u00f9 is primary: Snare/Tangled Rope classification confirmed (extraction has functional payoff). If Fortune is primary: virt\u00f9 is largely performative (Piton classification confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal weight of virt\u00f9 versus Fortune in state stability"
+    },
+    {
+      "id": "subject_coordination_capacity",
+      "question": "Could subject populations maintain order through horizontal coordination (guilds, communes, self-governance) without princely enforcement, reducing the extraction while preserving coordination benefits?",
+      "resolution_mechanism": "Historical analysis of medieval communes, city-states, and guild-based governance; comparative institutional analysis with contemporary horizontally-governed systems; identification of failure modes unique to non-princely systems",
+      "impact": "If coordination capacity is high: virt\u00f9 is extractive rather than necessary (Snare). If capacity is low: virt\u00f9 provides essential order (Scaffold or Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subjects could self-organize without princely authority"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Machiavelli's doctrine of virt\u00f9 describes a structural constraint imposed by a ruler to maintain state power amidst the chaos of Fortune (unpredictable external events). Virt\u00f9 is not moral virtue but strategic excellence: the prince's calculated use of fear, clemency, deception, and force to prevent rivals from challenging his authority and to extract resources (soldiers, taxes, obedience) necessary for state survival. This constraint exhibits the classical tangled-rope structure: it solves a genuine coordination problem (preventing civil war and state collapse) while imposing heavy asymmetric extraction on subject populations who have no exit option. The constraint's theater_ratio (0.68) reflects that Machiavelli himself observes the prince's virtue is performed, not authentic \u2014 clemency is calculated, severity is strategic, piety is instrumental. The ruler must appear virtuous to prevent subjects and rivals from organizing against him, yet the appearance of virtue is itself part of the extraction mechanism. Over the interval modeled (20 years of a principality's stability), extractiveness has risen from 0.35 (early consolidation requiring some legitimacy) to 0.58 (mature extraction as institutional power solidifies). Theater has risen correspondingly, indicating degradation: the prince no longer needs to win loyalty through genuine performance of virtue; institutional inertia carries the regime forward.",
+    "key_agents": [
+      "Prince/Ruler: Primary beneficiary (institutional/arbitrage) \u2014 captures absolute power, legitimacy, and first claim on state resources; views virt\u00f9 as coordination mechanism",
+      "Subject Population: Primary victim (powerless/trapped) \u2014 bears costs of conscription, taxation, surveillance, summary justice; cannot exit",
+      "Rival Faction Leaders: Secondary victim (powerful/mobile) \u2014 face suppression (assassination, exile risk); constrained exit (can relocate but lose power base)",
+      "Military-Administrative Class: Mixed (organized/constrained) \u2014 benefits from hierarchy and status but required to execute suppression; constrained exit",
+      "Court Legitimacy Theater: Institutional inertia (institutional/arbitrage) \u2014 maintains performative virtue as power consolidates; increasingly decoupled from function",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination function and substantial extraction; classification as tangled rope reflects this hybrid"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The prince extracts heavily (soldiers, tax, obedience) from subject populations, but the extraction funds state maintenance that produces genuine coordination benefits (security, order, prevention of worse alternatives like factional warfare). The value reflects that the extraction is not purely parasitic \u2014 it produces public goods, though distributed very asymmetrically. This distinguishes it from a pure snare. Suppression (0.72): High. The prince maintains power through surveillance, imprisonment, execution of rivals, and the constant threat of force. But suppression is not absolute \u2014 alternatives exist (subjects can flee; rivals can build coalitions) but are costly. Theater ratio (0.68): Moderately high. The prince's virtue is substantially performative (calculated clemency, strategic piety, instrumental justice), but not entirely theatrical \u2014 the prince must genuinely maintain order and military discipline, which require some real enforcement. The rise over the interval reflects degradation: as power solidifies, the prince can rely more on inertia and fear; genuine performance of virtue becomes less necessary.",
+    "perspectival_gap": "This constraint generates stark perspectival disagreement. The prince sees rope (pure coordination: preventing civil war, organizing the state). The subject population sees snare (pure extraction: forced conscription, taxation without consent). The military-administrative class sees tangled rope (mixed coordination and extraction: institutional hierarchy enables their advancement, but they cannot exit). Rival faction leaders see snare with constrained exit (high suppression despite their power). The court legitimacy theater is increasingly performative (piton). The analytical observer sees tangled rope overall \u2014 genuine coordination function mixed with substantial extraction. The perspectival gap reveals that this constraint solves a coordination problem through extraction rather than through consent or reciprocal benefit.",
+    "directionality_logic": "Subject population: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximal extraction (trapped has no exit). Rival factions: Victim + mobile \u2192 d\u22480.88, f(d)\u22481.32. High extraction despite mobility (costs of exit are severe). Military-administrative class: Mixed (beneficiary of hierarchy + victim of enforcement) + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction (they benefit from the institutional ladder but cannot exit without losing status). Prince: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary (experiences the constraint as coordination mechanism). Court theater: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Maintains itself through inertia. Analytical observer: Civilian analytical position \u2192 d\u22480.70, f(d)\u22481.12. Sees both coordination and extraction; neither pure type fits perfectly.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through explicit acknowledgment of its tangled structure. Machiavelli himself documents the hybrid: virt\u00f9 solves the genuine problem of state collapse (prevents anarchy, coordinates military defense, maintains borders) while extracting heavily through coercion. The constraint is NOT pure extraction (which would imply a snare) because the subject populations do receive order, security from invasion, and predictable law (however harsh). It is NOT pure coordination (which would imply a rope) because the benefits are distributed radically asymmetrically \u2014 the prince captures disproportionate gains while subjects bear conscription and taxation. The tangled rope classification reflects this: the constraint requires active enforcement (virt\u00f9 is strategic, not internalized), possesses both a genuine coordination function and asymmetric extraction, and involves at least one beneficiary (prince/state) and victims (subjects). The increasing theater ratio over time indicates degradation of the tangled rope toward piton: as power consolidates, the prince can rely more on inertia (fear of the known) than on performance of virtue (clemency, calculated mercy). This is consistent with the constraint's natural lifecycle: tangled ropes age into pitons as the extraction mechanism becomes self-sustaining through habit and institutional inertia."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "factional_warfare_prevention",
+      "legitimacy_performance",
+      "resource_extraction_infrastructure"
+    ],
+    "dual_formulation_note": "Machiavellian virt\u00f9 is downstream of the fundamental problem of maintaining state power against rivals (factional_warfare_prevention). The constraint represents one solution to that problem \u2014 extraction through strategic performance. Alternative solutions (republicanism, institutional legitimacy, democratic consent) would constitute different constraints with different \u03b5 values. This story models the extractive enforcement pathway; constraint_id legitimacy_performance models the performance/theater aspect separately."
+  },
+  "directionality_overrides": []
+}

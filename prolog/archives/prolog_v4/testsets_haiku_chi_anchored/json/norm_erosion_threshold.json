@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "norm_erosion_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "norm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Social Fabric Breach",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "defector_subgroup",
+      "institutional_enforcement_apparatus"
+    ],
+    "victims": [
+      "norm_compliant_majority",
+      "collective_cooperation_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Norm-Compliant Majority",
+      "comment": "PERSPECTIVE 1: NORM-COMPLIANT MAJORITY (SNARE) \u2014 Trapped in deteriorating social environment. Cannot exit local community without catastrophic cost. Experiences high suppression as defectors face minimal enforcement while compliers bear reputation costs and social friction. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Enforcement Authority",
+      "comment": "PERSPECTIVE 2: ENFORCEMENT AUTHORITY (ROPE) \u2014 Institutional position with arbitrage exit (jurisdiction shopping, legitimacy trade-offs). Sees norm enforcement as coordination problem: maintaining shared expectations reduces enforcement burden. However, selective enforcement creates extraction opportunity. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary through institutional legitimacy preservation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Strategic Defector",
+      "comment": "PERSPECTIVE 3: STRATEGIC DEFECTOR (TANGLED ROPE) \u2014 Constrained by social visibility and retaliation risk, but also benefits from cooperation infrastructure. Extraction derives from reputation asymmetry: can defect on low-visibility norms while maintaining compliance on high-surveillance norms. d\u22480.65, f(d)\u22480.95, \u03c3=0.8 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Social Renewal Movement",
+      "comment": "PERSPECTIVE 4: SOCIAL RENEWAL MOVEMENT (SCAFFOLD) \u2014 Organized agents (community leaders, civic organizations) see the norm erosion as a temporary coordination failure with a recovery pathway. Low effective extraction because they have agency and see a sunset: relationship repair, norm re-establishment, and trust-rebuilding programs. d\u22480.35, f(d)\u22480.30, \u03c3=0.9 \u2192 \u03c7\u22480.16. Theater ratio low (0.45) because renewal is functional, not performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Ceremonial Community",
+      "comment": "PERSPECTIVE 5: CEREMONIAL COMMUNITY (PITON) \u2014 Formal institutions (civic ceremonies, rituals, governance theatrics) that claim to reestablish community bonds but have degraded into performative expressions. Town halls, community meetings, and unity events persist through inertia despite low genuine norm-repair function. Theater_ratio in this subsystem approaches 0.70 as theatrical compliance replaces actual norm restoration."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Critical Threshold Hypothesis)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CRITICAL THRESHOLD (MOUNTAIN ATTEMPT) \u2014 From a civilizational view, this perspective risks framing the norm erosion as an inevitable phase transition in social systems \u2014 a natural law of collective dynamics. 'Once defection crosses X%, cooperation collapses' appears as a system invariant. However, structural data (\u03b5=0.58, suppression=0.68, theater=0.45) contradicts mountain requirements (\u03b5\u22640.25, suppression\u22640.05). This is a false summit: the threshold is institutional and contingent, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "critical_defection_threshold",
+      "question": "What is the precise defection rate at which cooperation cascades to collapse versus stable mixed equilibrium?",
+      "resolution_mechanism": "Longitudinal measurement of defection prevalence and cooperation indicators (trust surveys, public goods contributions, enforcement incidence); identification of inflection point in cooperation trajectory",
+      "impact": "If threshold \u226410%: small defector subgroup triggers collapse (Mountain-adjacent: systemic fragility is inherent). If threshold \u226530%: substantial defection absorbed without cascade (Snare escalation mechanism is institutional choice, not structural inevitability).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The critical defection rate at which cooperation cascades"
+    },
+    {
+      "id": "enforcement_selectivity",
+      "question": "Is selective enforcement of defectors a necessary feature of the institutional structure, or a contingent choice by enforcement authorities?",
+      "resolution_mechanism": "Comparative analysis of communities with uniform enforcement vs selective enforcement; measurement of defection rates and norm stability under each regime",
+      "impact": "If necessary: norm erosion is inherent cost of stratified enforcement (Snare becomes Rope if enforcement becomes uniform). If contingent: selective enforcement is extraction mechanism driving breach (classification stays Tangled Rope but with higher chi).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether enforcement selectivity is structural or contingent"
+    },
+    {
+      "id": "visibility_feedback_loop",
+      "question": "Does perceived defection rate drive actual defection rate (positive feedback), or do they remain decoupled?",
+      "resolution_mechanism": "Experimental manipulation of visibility signals (publicizing defection rates vs hiding them); measurement of actual defection response",
+      "impact": "If coupled: the threshold is a self-fulfilling prophecy (coordination failure, addressable by Scaffold-type interventions). If decoupled: the threshold is an attractor in social dynamics (closer to Mountain, immutable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether perceived defection rate drives actual defection through feedback"
+    },
+    {
+      "id": "institutional_capture_of_enforcement",
+      "question": "To what extent does the enforcement apparatus extract value from the norm erosion crisis rather than resolve it?",
+      "resolution_mechanism": "Measurement of enforcement apparatus growth/budget during crisis periods; analysis of enforcement outcomes (actual norm repair vs symbolic enforcement); comparison with communities where enforcement is decentralized or informal",
+      "impact": "If high capture: the constraint is primarily Snare (enforcement profits from crisis). If low capture: the constraint is primarily Tangled Rope (coordination with unavoidable asymmetry).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of institutional capture of enforcement apparatus"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The social fabric breach models the non-linear collapse of cooperation when perceived defection crosses a critical threshold. This constraint exhibits the full spectrum of DR types across observer positions. At the individual compliance level, the erosion functions as a Snare: norm-compliant agents are trapped in deteriorating social environments with mounting enforcement costs and reputational damage. At the institutional enforcement level, the same phenomenon functions as a hybrid Rope-Snare dynamic (Tangled Rope): enforcement authorities benefit from selective enforcement and crisis management authority, while coordinating on maintaining shared expectations. Strategic defectors experience a Tangled Rope: they benefit from the cooperation infrastructure they selectively defect from, but face suppression through reputational and social mechanisms. Organized renewal movements see a Scaffold: the breach is a temporary coordination failure with recovery pathways through relationship repair and norm re-establishment. Ceremonial institutions see a Piton: formal rituals claiming to restore community bonds have degraded into performative theater. The analytical observer risks a false Mountain: framing the threshold as an immutable phase transition in social dynamics, when the breach is actually driven by contingent choices in enforcement selectivity, norm visibility, and institutional incentive structures.",
+    "key_agents": [
+      "Norm-Compliant Majority: Primary victim (powerless/trapped) \u2014 bears escalating social friction, enforcement costs, and reputation damage as norms erode",
+      "Enforcement Authority: Primary beneficiary (institutional/arbitrage) \u2014 gains crisis authority, budget expansion, and legitimacy renewal from managing breach",
+      "Strategic Defector Subgroup: Secondary beneficiary (moderate/constrained) \u2014 extracts value from selective enforcement and reputation asymmetry while maintaining plausible deniability",
+      "Social Renewal Movement: Organized secondary actor (organized/constrained) \u2014 civic organizations and community leaders with agency to address root causes and restore cooperation",
+      "Ceremonial Community: Institutional secondary actor (institutional/arbitrage) \u2014 formal institutions whose norm-repair function has degraded into theater; maintain legitimacy through ritual",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional choices as inevitable system dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, showing escalation over interval (0.22 \u2192 0.58). The constraint exhibits classic extraction signatures: selective enforcement targeting low-visibility defectors, enforcement apparatus growing faster than genuine norm repair, and institutional incentives favoring crisis management over resolution. The escalation reflects institutional capture \u2014 as the breach widens, enforcement authorities gain authority and resources, creating perverse incentives to maintain the crisis. Suppression (0.68): High. Multiple barriers prevent norm restoration: visibility of defection creates conformity pressure (not informational but coercive), retaliation risk silences coordination discussion, institutional inflexibility prevents norm adaptation, and enforcement selectivity prevents transparent resolution. The suppression is structural, not emerging from the defection directly. Theater ratio (0.45): Moderate-low. The system still has functional elements (some genuine enforcement, some authentic relationship repair), but performance increasingly substitutes for function as ceremonial institutions expand (town halls, unity events, consensus-building) without addressing underlying incentive misalignment. The trajectory shows escalation (0.25 \u2192 0.45), indicating growing performative content as functional solutions fail.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The norm-compliant majority sees pure extraction (Snare) \u2014 they cannot exit and cannot coordinate effective response. The enforcement authority sees coordination (Rope) and benefit (arbitrage exit) \u2014 they are 'solving' the breach by managing it. The strategic defector sees mixed benefit (Tangled Rope) \u2014 the breach creates opportunity (lower enforcement of low-visibility norms) while depending on remaining cooperation infrastructure. The renewal movement sees a solvable temporary problem (Scaffold) \u2014 they perceive agency and pathways to restoration. The ceremonial community sees their own degraded function (Piton) \u2014 they recognize that rituals have lost substance. The analytical observer risks seeing inevitability (false Mountain) \u2014 framing the breach as an immutable threshold effect when it is actually driven by institutional choices. These gaps indicate the constraint is authentically Tangled Rope: it has genuine coordination function (maintaining some shared norms) and genuine extraction mechanism (selective enforcement, crisis management authority). The mandatrophy is resolved by showing that all perspectives are structurally valid \u2014 the perspectival gap is the data.",
+    "directionality_logic": "Norm-compliant majority: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Cannot exit local social context without catastrophic cost. Enforcement authority: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary through institutional legitimacy and crisis authority. Strategic defector: Victim + constrained \u2192 d\u22480.65, f(d)\u22480.95 (constrained by visibility and retaliation but able to defect on low-surveillance norms). Moderate extraction. Social renewal movement: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.30. Low effective extraction because they have agency and can initiate relationship repair. Ceremonial community: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Appears as net beneficiary but is actually victim of its own degradation (Piton classification comes from theater gate at 0.70 threshold, not from high chi). Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. The high d comes from observer position viewing the system from outside; the mountain classification is perspectival and reveals a false summit when checked against base metrics.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint resolves the mandatrophy by showing that the same structural phenomenon (norm erosion) genuinely exhibits both coordination function AND asymmetric extraction. Coordination function: maintaining shared norms is a public good that reduces enforcement burden and enables collective cooperation. Extraction mechanism: selective enforcement of defectors and institutional expansion during crisis create benefits for authorities and strategic defectors that depend on continued breach. Both are real. The perspectival gap is not an observational artifact \u2014 it is the actual structure. Norm-compliant majority experiences pure extraction (Snare) because they have no exit and no enforcement discretion. Enforcement authority experiences coordination (Rope) because they have arbirtrage-level exit and enforcement authority. Neither is 'correct' \u2014 both are true from their positions. The constraint is Tangled Rope because it cannot be classified as either pure coordination or pure extraction without losing structural accuracy. The mandatrophy is resolved by the 6-perspective presheaf: showing that all types are legitimate readings prevents conflation of perspectives while maintaining classification precision."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_capture",
+      "trust_collapse_cascade",
+      "selective_enforcement_incentive"
+    ],
+    "dual_formulation_note": "The norm erosion threshold decomposes into two structurally distinct constraints: (1) the empirical tipping point in cooperation dynamics (\u03b5\u22480.15, closer to Mountain if threshold is truly phase-transitive) and (2) the institutional extraction mechanism that converts the empirical tipping point into asymmetric enforcement authority (\u03b5\u22480.58, Tangled Rope). This story focuses on the second. The first is downstream in the network."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

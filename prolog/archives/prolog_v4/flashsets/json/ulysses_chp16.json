@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp16",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.3,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Exhausted Coordination (Cabman's Shelter)",
+    "topic_domain": "social/economic/linguistic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cabmen_shelter_society",
+      "cabmen"
+    ],
+    "victims": [
+      "bloom",
+      "dedalus"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Leopold Bloom",
+      "comment": "Bloom experiences the shelter as a snare because his attempts to connect with others in the shelter are awkward and isolating."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Stephen Dedalus",
+      "comment": "Dedalus experiences the shelter as a snare because he is exhausted and feels alienated from the working-class men inside."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Cabmen's Shelter Society",
+      "comment": "The Cabmen's Shelter Society views the shelter as a rope, providing a necessary service and a safe haven for cabmen."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Cabmen",
+      "comment": "The cabmen experience the shelter as a mix of coordination and extraction; they gain from the shelter but also must adhere to its rules and norms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer classifies the cabman's shelter as a tangled rope, serving both a coordination and extraction function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "shelter_accessibility",
+      "question": "To what extent does the cabman's shelter serve its intended purpose of providing accessible refuge for cabmen?",
+      "resolution_mechanism": "Historical records, testimonies from cabmen, and assessments of the shelter's usage and operational capacity.",
+      "impact": "If highly accessible, the constraint leans more towards a rope; if accessibility is limited, it becomes a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of actual accessibility of shelter to cabmen."
+    },
+    {
+      "id": "social_exclusivity",
+      "question": "To what degree does the shelter become a site of social exclusion, hindering outsiders from effectively accessing its services?",
+      "resolution_mechanism": "Sociological studies, ethnographic observations, and analysis of social dynamics within the shelter.",
+      "impact": "High social exclusivity shifts the constraint towards a snare for those outside the established cabmen's network.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree of social exclusivity within the shelter."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "In chapter 16 of Ulysses, Bloom and Dedalus seek refuge in a cabman's shelter, aiming to escape the Dublin night and engage in some form of shared sustenance. However, the shelter, meant to be a place of refuge and coordination, becomes a space of social awkwardness, economic exchange, and linguistic barriers, presenting a complex interaction between coordination and extraction.",
+    "key_agents": [
+      "Cabmen's Shelter Society: Primary beneficiary (institutional/arbitrage)",
+      "Cabmen: Secondary beneficiary (powerful/mobile)",
+      "Leopold Bloom: Primary victim (powerless/trapped)",
+      "Stephen Dedalus: Secondary victim (powerless/trapped)"
+    ],
+    "logic_rationale": "Extractiveness (0.6): The cabman's shelter extracts from those using it through economic exchange (paying for food and drink) and adherence to social norms. Bloom and Dedalus experience this extractiveness more acutely because they are outsiders. Suppression (0.3): Suppression is relatively low. While there are social expectations within the shelter, individuals are not forcibly coerced to conform. Theater Ratio (0.4): The theater ratio is moderate, the shelter serves a genuine function, while the environment may contribute to creating a social environment that has different performative implications depending on structural position. .",
+    "perspectival_gap": "Bloom and Dedalus experience the shelter primarily as a snare due to their social isolation and the awkwardness of their interactions. The Cabmen's Shelter Society, on the other hand, sees it as a rope, a valuable service for its members. The cabmen experience a mix of coordination and extraction, benefiting from the shelter's services but also adhering to its norms.",
+    "directionality_logic": "The Cabmen's Shelter Society, as the organizers and maintainers of the shelters, benefit from the infrastructure and social control it provides. The Cabmen gain from a social support and place to rest. Bloom and Dedalus become victims through their social isolation and the financial exchange required to gain limited benefit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

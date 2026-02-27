@@ -2,24 +2,25 @@
   "header": {
     "constraint_id": "algorithmic_bias",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algbias"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.72,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Algorithmic Bias",
+    "human_readable": "Algorithmic Bias in Machine Learning Systems",
     "topic_domain": "technological/social",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "system_deployers",
-      "historically_privileged_demographics"
+      "technology_companies",
+      "algorithm_designers"
     ],
     "victims": [
-      "historically_marginalized_demographics",
-      "societal_fairness"
+      "marginalized_populations",
+      "algorithmic_accountability"
     ]
   },
   "perspectives": [
@@ -28,9 +29,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Marginalized Population",
+      "comment": "PERSPECTIVE 1: MARGINALIZED POPULATION (SNARE) \u2014 Trapped within algorithmic systems with no exit: credit denial, hiring discrimination, surveillance targeting, criminal sentencing recommendations. No transparency into decision logic. Cannot audit, appeal, or escape the system. Maximum extraction with no exit route. Suppression is high \u2014 technical opacity, resource barriers to legal challenge, computational scale that prevents individual contestation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Marginalized Applicant",
-      "comment": "PERSPECTIVE 1: THE MARGINALIZED APPLICANT (SNARE) — Cannot opt-out of biased automated systems for loans, housing, or employment. Experiences the system as an opaque, inescapable mechanism of pure extraction that denies opportunity based on group identity. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.97."
+      "label": "Civil Rights Advocates and Auditors",
+      "comment": "PERSPECTIVE 2: CIVIL RIGHTS ADVOCATES (TANGLED ROPE) \u2014 Constrained by data access limitations and computational resources, but benefit from algorithmic transparency standards and emerging bias audit frameworks. Possess some agency through regulatory pressure, but face coordination barriers (proprietary algorithms limit auditing). Mixed extraction and coordination \u2014 the constraint both enables regulatory innovation and constrains audit effectiveness."
     },
     {
       "classification_type": "rope",
@@ -38,17 +48,8 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The System Deployer",
-      "comment": "PERSPECTIVE 2: THE SYSTEM DEPLOYER (ROPE) — Experiences the algorithm as a pure coordination tool for efficiency, risk management, and profit maximization. The costs (bias) are externalized, while the benefits (cost savings, speed) are internalized. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. Negative effective extraction signifies a net beneficiary."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Data Scientist",
-      "comment": "PERSPECTIVE 3: THE DATA SCIENTIST (TANGLED ROPE) — Directly engages with both the coordination function (building a predictive model) and the extractive reality (witnessing bias in the training data and outcomes). They are caught between professional incentives for 'accuracy' and ethical concerns about fairness. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.78."
+      "label": "Technology Companies",
+      "comment": "PERSPECTIVE 3: TECHNOLOGY COMPANIES (ROPE) \u2014 Perceive algorithmic bias as a coordination problem: efficient training on available historical data enables scalable decision-making. Bias is experienced as an incidental byproduct, not primary extraction mechanism. Net beneficiary through scale advantages. Can exit through retraining or debiasing when pressure mounts, but choose not to until reputation risk exceeds mitigation cost."
     },
     {
       "classification_type": "scaffold",
@@ -56,17 +57,17 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The AI Ethics Regulator",
-      "comment": "PERSPECTIVE 4: THE AI ETHICS REGULATOR (SCAFFOLD) — Views algorithmic bias as a temporary market failure to be corrected by new standards, auditing requirements, and legislation (e.g., EU AI Act). These interventions act as a scaffold, intended to support the transition to a fairer technological ecosystem, with an implicit sunset clause as norms and technologies mature."
+      "label": "Regulatory and Standards Bodies",
+      "comment": "PERSPECTIVE 4: REGULATORY BODIES (SCAFFOLD) \u2014 EU AI Act, algorithmic transparency mandates, and fairness certification standards represent temporary enforcement structures with sunset clauses. High enforcement overhead but with explicit timelines (e.g., EU compliance deadlines). Sees the constraint as solvable through technical and legal innovation. Structured with declining suppression as transparency requirements mature and debiasing techniques advance."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "immediate",
+      "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Corporate PR Department",
-      "comment": "PERSPECTIVE 5: THE CORPORATE PR DEPARTMENT (PITON) — Engages in 'ethics-washing' by publishing vague AI principles and commissioning favorable audits. The function is almost entirely performative, designed to maintain public trust and preempt regulation, while the underlying extractive systems remain unchanged. The high theater_ratio (0.72) satisfies the piton gate (≥0.70)."
+      "label": "Fairness Research Community",
+      "comment": "PERSPECTIVE 5: FAIRNESS RESEARCH COMMUNITY (PITON) \u2014 Academic research on algorithmic fairness is largely performative: papers propose debiasing methods that work in controlled settings but rarely deploy at scale. Theater ratio is high (0.60+) \u2014 theoretical contribution > practical impact. The field maintains itself through institutional inertia (publication incentives, conference circuits) despite limited real-world effectiveness. Debiasing techniques exist but organizational adoption remains low."
     },
     {
       "classification_type": "mountain",
@@ -74,98 +75,115 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Techno-Determinist",
-      "comment": "PERSPECTIVE 6: THE TECHNO-DETERMINIST (MOUNTAIN) — Frames bias as an unfortunate but unavoidable reflection of 'ground truth' in the data. From this viewpoint, the algorithm is merely a mirror to society's existing inequalities, making the resulting bias a natural, immutable law of data-driven systems. The engine will flag this as a false summit, as the high ε and suppression are products of contingent design choices, not natural law."
+      "label": "Analytical Observer (Structural Necessity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / STRUCTURAL NECESSITY VIEW (MOUNTAIN) \u2014 From a civilizational view, some algorithmic bias is mathematically inherent: any classification system trained on historical data embeds the statistical regularities of that history. The 'impossibility of perfect fairness' (multiple fairness definitions are mathematically incompatible) suggests bias is an irreducible feature of automated decision-making. However, the structural data contradicts this \u2014 the high suppression (0.68) and active enforcement requirements indicate this is a contingent social-technical system, not a natural law."
     }
   ],
   "omegas": [
     {
-      "id": "technical_remediability",
-      "question": "Can algorithmic bias be technically 'de-biased' through fairness-aware ML techniques, or is it an inherent feature of statistical optimization on historical data?",
-      "resolution_mechanism": "Longitudinal studies of deployed 'fair' models to measure if bias re-emerges or if fairness metrics successfully prevent harm over time.",
-      "impact": "If technically remediable, the constraint is closer to a Scaffold (a temporary problem). If inherent, it is a more permanent Snare/Tangled Rope structure.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether bias is technically correctable or inherent to the paradigm"
-    },
-    {
-      "id": "fairness_definition_conflict",
-      "question": "Which definition of fairness (e.g., demographic parity, equal opportunity, equalized odds) is appropriate, given that they are often mutually exclusive?",
-      "resolution_mechanism": "Legal and philosophical consensus-building, likely codified in sector-specific regulation.",
-      "impact": "The choice of fairness metric fundamentally alters the beneficiary/victim structure, protecting one group often at the expense of another's statistical outcomes.",
+      "id": "fairness_definition_incompatibility",
+      "question": "Are multiple fairness definitions mathematically incompatible, making perfect fairness structurally impossible, or does this reflect incomplete technical understanding?",
+      "resolution_mechanism": "Proof that no single algorithm can simultaneously satisfy calibration, balanced accuracy, and equal opportunity across all groups; or discovery of fairness framework that resolves these tensions.",
+      "impact": "If incompatible: algorithmic bias is mountain-like (inherent limit). If resolvable: it is snare/tangled_rope (organizational choice). This determines whether bias is reframed as natural law or as extraction.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Conflict between mutually exclusive mathematical definitions of fairness"
+      "description": "Mathematical incompatibility of fairness definitions"
     },
     {
-      "id": "opacity_vs_accountability",
-      "question": "Is the 'black box' nature of complex models a necessary trade-off for accuracy, or is it a deliberate mechanism to evade accountability?",
-      "resolution_mechanism": "Breakthroughs in explainable AI (XAI) or regulatory mandates for model transparency and auditability.",
-      "impact": "If opacity is a necessary evil, suppression remains high. If it is a choice, suppression could be lowered via regulation, shifting the classification away from Snare.",
+      "id": "training_data_representativeness",
+      "question": "Can algorithmic bias be eliminated by sourcing training data that eliminates historical inequities, or do structural feedback loops prevent truly representative training sets?",
+      "resolution_mechanism": "Longitudinal analysis of debiased models deployed in production: measurement of bias reemergence over time; analysis of whether representative training data remains achievable as systems operate.",
+      "impact": "If achievable: bias is reducible technical problem (scaffold/rope dynamics). If impossible: bias is structural feature of data-driven automation (snare-like).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether model opacity is a necessary feature or a choice to evade accountability"
+      "description": "Achievability of representative training data sources"
+    },
+    {
+      "id": "corporate_debiasing_incentives",
+      "question": "Are corporate organizations adopting debiasing methods at scale, or does bias persistence reflect deliberate organizational choice rather than technical impossibility?",
+      "resolution_mechanism": "Audit of production systems: measurement of debiasing feature adoption, correlation with legal/reputation risk vs intrinsic fairness commitment, cost-benefit analysis of bias reduction.",
+      "impact": "If deliberate choice: snare classification confirmed \u2014 suppression and extraction are organizational, not technical. If technical barrier: tangled_rope confirmed \u2014 mixed coordination and extraction challenges.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Corporate organizational adoption of debiasing at scale"
+    },
+    {
+      "id": "transparency_effectiveness",
+      "question": "Do transparency mandates (explainable AI, algorithmic auditing) actually enable affected populations to contest biased decisions, or do technical complexity and resource asymmetry make transparency ineffective?",
+      "resolution_mechanism": "Analysis of appeals/contests post-transparency mandate: success rates, time-to-resolution, resource requirements for affected parties, correlation with regulatory enforcement intensity.",
+      "impact": "If effective: regulatory scaffold works as designed; suppression declines over time. If ineffective: transparency becomes theater, and suppression remains structurally high.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of transparency in enabling affected populations to contest decisions"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2017,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.68
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.1
+      "time_point": 8,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2017,
+      "time_point": 16,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
       "value": 0.5
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.72
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.52
     }
   ],
   "interval": {
-    "start": 2010,
-    "end": 2024
+    "start": 0,
+    "end": 16
   },
   "commentary": {
-    "narrative_context": "Algorithmic bias occurs when automated systems create systematically prejudiced outcomes, typically by encoding and scaling historical inequities found in training data. This constraint is a diagnostic exemplar, demonstrating how a single technological phenomenon can be classified as all six DR types depending on the observer's structural position. The core conflict is between the system deployers, who see an efficient coordination tool, and the marginalized populations, who experience an opaque mechanism of extraction that denies them opportunities in critical areas like employment, finance, and justice.",
+    "narrative_context": "Algorithmic bias represents a structural constraint where machine learning systems automate and amplify historical inequities embedded in training data. The constraint operates across multiple institutional layers: technology companies benefit from scalable decision-making systems that reduce operational costs; marginalized populations bear concentrated harms through discriminatory decisions in lending, hiring, criminal justice, and social services; civil rights advocates face resource and access barriers to auditing; regulators attempt to impose transparency and fairness standards; and the academic fairness research community produces papers with limited real-world deployment impact. The constraint exhibits the full spectrum of DR types depending on observer position. Theater ratio (0.58) reflects that much algorithmic fairness work is performative: research papers propose debiasing methods that function in controlled settings but rarely reach production scale; regulatory compliance produces explainability artifacts that are technically sound but practically useless to affected populations; companies issue fairness commitments with minimal operational change. Extractiveness (0.52) indicates moderate-high structural extraction: technology companies derive substantial value from efficient automated decision-making while avoiding accountability costs; marginalized populations experience concentrated harms with minimal recourse. Suppression (0.68) is high due to technical opacity, computational scale that prevents individual contestation, resource asymmetries in legal challenge, and organizational control over audit access.",
     "key_agents": [
-      "Historically Marginalized Demographics: Primary victims (powerless/trapped) — Systematically disadvantaged by biased outputs.",
-      "System Deployers (Corporations/Institutions): Primary beneficiaries (institutional/arbitrage) — Gain efficiency and cost savings by automating decisions.",
-      "Data Scientists: Implementers (moderate/mobile) — Caught between technical goals and ethical implications.",
-      "AI Ethics Regulators: Reformers (organized/constrained) — Attempt to build a scaffold of rules and standards to mitigate harm.",
-      "Corporate PR Departments: Performers (institutional/arbitrage) — Manage public perception through 'ethics-washing'.",
-      "Techno-Determinists: Observers (analytical/analytical) — Naturalize the bias as an unavoidable reflection of reality."
+      "Technology Companies: Primary beneficiary (institutional/arbitrage) \u2014 extract efficiency and cost reduction; can exit through debiasing when reputation risk exceeds mitigation cost",
+      "Marginalized Populations: Primary victim (powerless/trapped) \u2014 face discriminatory algorithmic decisions with no transparency, audit access, or appeal mechanism; cannot exit systems they depend on",
+      "Civil Rights Advocates: Secondary victim (moderate/constrained) \u2014 constrained by data access limits and computational resources; also benefit from emerging transparency standards and audit frameworks",
+      "Algorithm Designers: Secondary beneficiary (powerful/mobile) \u2014 produce technically sophisticated systems; face limited accountability for bias consequences; can migrate to other projects",
+      "Regulatory Bodies: Organized enforcer (organized/constrained) \u2014 impose transparency mandates and fairness standards; operate with sunset clauses as technology evolves; constrained by implementation complexity",
+      "Fairness Research Community: Institutional observer (institutional/arbitrage) \u2014 produce academic publications on debiasing; maintain field through publication incentives despite limited deployment impact; peripheral to actual harm dynamics"
     ],
-    "logic_rationale": "Extractiveness (ε=0.68) is high because the constraint systematically diverts life-altering opportunities (jobs, loans, parole) away from certain groups. Suppression (0.75) is high due to the opacity of 'black box' models and the lack of alternatives when systems are deployed at scale. Theater Ratio (0.72) is high, reflecting the widespread corporate practice of 'ethics-washing'—publishing vague principles and performing superficial audits that serve a PR function without altering the underlying extractive dynamics. Both extractiveness and theater have increased significantly since 2010 as systems became more powerful and public scrutiny grew.",
-    "perspectival_gap": "The gap is maximal. For a marginalized applicant (powerless/trapped), the system is a Snare. For the corporation deploying it (institutional/arbitrage), it's a Rope. For the regulator trying to fix it (organized/constrained), it's a Scaffold. For the PR team spinning it (institutional/arbitrage), it's a Piton. For the data scientist building it (moderate/mobile), it's a Tangled Rope. For the determinist who naturalizes it (analytical/analytical), it's a Mountain. This diversity reveals that 'algorithmic bias' is not a monolithic object but a structural relationship, and its classification is an indexical fact.",
-    "directionality_logic": "Beneficiaries (system deployers, privileged demographics) have low directionality (d), resulting in low or negative effective extraction (χ), hence they perceive a Rope. Victims (marginalized demographics) are trapped, giving them maximum directionality (d≈0.95) and thus maximum effective extraction (χ), making the system a Snare from their perspective. Other agents fall in between, their derived `d` value shaping their view of the constraint as a Tangled Rope, Scaffold, etc.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that no single classification is sufficient. To label algorithmic bias as only a 'Snare' would be to ignore the genuine (if problematic) coordination function it serves for its deployers. To label it only a 'Rope' would be to erase the severe extraction experienced by its victims. The Deferential Realism framework shows that all perspectives are structurally valid readings from different positions. The complete description is the full set of indexed classifications, not a single 'correct' one."
+    "logic_rationale": "Extractiveness (0.52): The constraint extracts value through automation efficiency at the cost of fairness and accountability. Technology companies capture cost reduction benefits while marginalized populations bear concentrated harms. The value is not absolute extraction (which would require total suppression) because some debiasing is possible, some regulatory pressure exists, and organizational choice is involved rather than pure constraint. Suppression (0.68): High but not maximal. Technical opacity prevents marginalized populations from understanding or contesting decisions. Computational scale means individual contestation is prohibitively costly. Organizational control over algorithmic audit access creates information barriers. However, suppression is not 0.85+ because regulatory access requirements exist, reverse-engineering is possible (though difficult), and transparency mandates are increasing. Theater ratio (0.58): Moderate-high. Academic fairness research generates sophisticated papers and methods with limited deployment. Regulatory compliance produces transparency artifacts that appear informative but provide limited practical recourse for affected populations. Internal company bias audits are often conducted by the same organizations creating the biased systems. The theater has grown as regulatory pressure and public awareness increased \u2014 companies issue fairness statements, hire ethics officers, and publish research, but these performative activities often precede or substitute for substantive system redesign.",
+    "directionality_logic": "Technology companies (beneficiaries with arbitrage options) experience low effective extraction \u2014 they benefit from the constraint and can exit through retraining when reputation risk rises. Marginalized populations (victims with no exit) experience maximum extraction through the sigmoid f(d) \u2014 they are trapped, powerless, and bear concentrated harms. Civil rights advocates (moderate power, constrained exit) experience mid-range extraction \u2014 they have some agency through regulatory pressure but face real barriers to auditing and enforcement. Regulatory bodies (organized, constrained exit) experience moderate extraction within their enforcement role \u2014 they can mandate standards but face organizational constraints in implementation. The piton classification derives from theater_ratio (0.58) indicating performative elements exceed functional verification in fairness work. The mountain classification at the analytical level risks naturalizing what is contingent: the claim that perfect fairness is mathematically impossible is true for some fairness definitions, but it reflects current technical understanding, not immutable law.",
+    "perspectival_gap": "This constraint demonstrates how different structural positions produce fundamentally different classifications from identical base properties. The technology company (institutional/arbitrage) perceives coordination \u2014 they frame efficiency gains as solving legitimate scalability problems. Marginalized populations (powerless/trapped) perceive pure extraction \u2014 algorithmic decisions affect their access to credit, employment, and freedom with no recourse. Regulatory bodies (organized/constrained) perceive a solvable problem with sunset logic \u2014 transparency and fairness standards are expected to reduce bias over 5-10 years as technical capabilities advance. The fairness research community (institutional/arbitrage) perceives an academic domain \u2014 bias is an intellectual puzzle to solve through more sophisticated methods, decoupled from real-world deployment urgency. Civil rights advocates (moderate/constrained) perceive mixed coordination-extraction \u2014 the regulatory framework enables some audit capability while suppressing others through proprietary claims. The civilizational analytical observer risks perceiving immutable law \u2014 the mathematical impossibility of satisfying all fairness definitions simultaneously \u2014 but this naturalizes a contingent state of current understanding.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint avoids mandatrophy through clear identification of genuine coordination (technology companies need efficient decision-making; society benefits from automation) embedded within asymmetric extraction (marginalized populations bear concentrated harms without proportional benefit). The tangled_rope classification correctly identifies that the constraint possesses BOTH a real coordination function (scalable decision-making) AND asymmetric extraction (harm concentration among powerless groups). The false mountain reading (perfect fairness is mathematically impossible) is exposed by structural data: suppression (0.68) indicates organizational choice and information barriers, not mathematical necessity; extractiveness (0.52) indicates value flows to beneficiaries, not equal distribution. The scaffold perspective (regulatory sunset) is structurally real but faces real challenges \u2014 debiasing at scale remains difficult, transparency rarely enables effective contestation, and deployment timelines extend beyond regulatory expectations. The piton observation (high theater) is accurate and important: fairness research and corporate ethics commitments are substantially performative, which does NOT invalidate them but clarifies their function. The constraint maintains itself through a combination of technical complexity (legitimate barrier to rapid debiasing), organizational incentives (lower regulatory compliance cost than true system redesign), and institutional inertia (existing systems have switching costs). Resolving the mandatrophy requires acknowledging all these elements simultaneously rather than reducing to any single type."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "credit_scoring_systems",
       "predictive_policing",
-      "automated_hiring_filters"
-    ]
-  }
+      "hiring_discrimination_automation",
+      "credit_risk_assessment_bias",
+      "content_moderation_asymmetry"
+    ],
+    "dual_formulation_note": "Algorithmic bias is a meta-constraint that appears across multiple application domains (criminal justice, hiring, lending, content moderation). Each domain has domain-specific extractiveness and suppression values reflecting the particular stakeholder structure and regulatory environment. This story documents the generic constraint structure; domain-specific stories should be created for high-stakes applications (e.g., criminal justice bias has higher suppression, more trapped victims) with network links back to this constraint as the upstream structural mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
 }

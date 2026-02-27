@@ -1,0 +1,126 @@
+{
+  "header": {
+    "constraint_id": "open_culture_newsletter",
+    "version": "0.1",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 'Free Newsletter for Email' Exchange",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "open_culture_platform"
+    ],
+    "victims": [
+      "user_attention",
+      "user_privacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Average User",
+      "comment": "Perspective 1: The Average User (Snare) - Feels trapped due to the overwhelming number of newsletters and marketing emails they receive, leading to diminished attention and privacy. Exiting one newsletter often leads to being targeted by others."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Open Culture Platform",
+      "comment": "Perspective 2: The Open Culture Platform (Rope) - Benefits from access to users' email addresses for marketing and engagement. They can leverage this information to build a community and improve their offerings."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 3: The Analytical Observer (Tangled Rope) - Recognizes the exchange as a mixed bag. Users gain access to valuable content, but their attention and privacy are extracted to some extent. The platform gains access to user data, but must also invest in providing a worthwhile newsletter."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "user_valuation_accuracy",
+      "question": "How accurately do users assess the long-term cost to their attention and privacy when subscribing?",
+      "resolution_mechanism": "Longitudinal studies tracking user engagement and privacy preferences.",
+      "impact": "If valuation is accurate, the exchange approaches a rope. If inaccurate (users underestimate costs), it's closer to a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "User valuation of their attention and privacy in exchange for newsletter content."
+    },
+    {
+      "id": "platform_content_quality",
+      "question": "How valuable is the content provided by the platform?",
+      "resolution_mechanism": "User satisfaction surveys and content engagement metrics.",
+      "impact": "Higher quality content strengthens the coordination aspect, lower quality strengthens the extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The quality and relevance of the content provided by the Open Culture newsletter."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the common online value exchange where a user provides their email address to a platform (Open Culture) in return for access to a curated newsletter. Users gain access to valuable content but sacrifice attention and potentially privacy. Platforms gain user data for marketing and engagement but are responsible for creating and delivering content.",
+    "key_agents": [
+      "Open Culture Platform: Primary beneficiary (institutional/arbitrage) - Gains access to user data.",
+      "User Attention: Primary victim (powerless/trapped) - Subject to increased email volume and marketing messages.",
+      "User Privacy: Secondary victim (powerless/trapped) - Email may be shared and used for tracking."
+    ],
+    "logic_rationale": "Extractiveness (0.45): Moderate extraction as user provides email data. Suppression (0.30): Moderate, as user is able to unsubscribe, however, this does little to alleviate email-related marketing from similar outlets. Theater ratio (0.20): Low, as the newsletter provides genuine educational value, not a high percentage of performance to actual function.",
+    "perspectival_gap": "The average user perceives a snare because their attention and privacy are extracted in exchange for something they may not value as much as initially thought. The platform perceives a rope because the email addresses they collect are instrumental in building relationships with subscribers. Analytical observer sees tangled rope because both a user and the platform extract from the other, while providing a legitimate function.",
+    "directionality_logic": "Platform benefits from user data (low d). User's attention and privacy are targeted (high d). Analytical observer sees mixed effects (medium d).",
+    "mandatrophy_analysis": "This is a classic instance of the kind of exchange which can be seen as an example of coordination but is vulnerable to exploitation. There exists the potential of seeing the exchange as an example of a mutually beneficial exchange, although the average user is subject to the extractive properties of it as well."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

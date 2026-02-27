@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: msgs_asset_bundling
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-07-28
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_msgs_asset_bundling, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,7 +41,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:omega_variable/3.
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -48,23 +53,42 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: msgs_asset_bundling
- *   human_readable: "Bundled Ownership of Knicks and Rangers under MSG Sports"
- *   domain: economic
+ *   human_readable: Bundled Ownership of Knicks and Rangers under MSG Sports
+ *   domain: economic/sports/corporate_structure
  *
  * SUMMARY:
- *   The corporate structure of Madison Square Garden Sports (MSGS) combines two
- *   distinct, high-value assets—the New York Knicks (NBA) and New York Rangers
- *   (NHL)—into a single publicly traded stock. This structure forces investors
- *   who wish to invest in one team to also invest in the other, creating a
- *   "conglomerate discount" where the combined market capitalization is less
- *   than the sum of the teams' individual valuations. The potential split of
- *   the company reveals the nature of this bundling as a constraint.
+ *   Madison Square Garden Sports (MSGS) bundles the New York Knicks (NBA) and
+ *   New York Rangers (NHL) into a single publicly traded corporate entity.
+ *   This bundling constraint creates extraction through forced combined
+ *   ownership while simultaneously enabling coordination economies from
+ *   integrated operations. The structural tension reveals itself across
+ *   multiple agent perspectives: controlling shareholders experience pure
+ *   coordination (Rope), minority shareholders face pure extraction (Snare),
+ *   fan-consumers face bundled pricing extraction (Snare), alternative
+ *   investors see mixed coordination-extraction (Tangled Rope), regulators
+ *   see a potential unwinding target (Scaffold), sports league authorities
+ *   exercise degraded oversight (Piton), and analytical observers debate
+ *   whether bundling is fundamentally a coordination mechanism or an
+ *   extraction device. The constraint exhibits high suppression (0.65) due to
+ *   illiquid secondary markets, limited franchise availability, geographic
+ *   concentration, and league approval mechanisms that resist structural
+ *   change. Theater ratio (0.58) reflects that some operational integration
+ *   genuinely occurs (coordination), but significant performative elements
+ *   persist in financial communication and regulatory compliance that obscure
+ *   the distributional consequences. Base extractiveness (0.52) indicates
+ *   moderate-to-high extraction: the controlling stakeholder captures
+ *   significant financial advantage through bundled control premium, while
+ *   minority shareholders and fans bear costs of forced combined exposure and
+ *   bundled pricing without clear benefit realization.
  *
- * KEY AGENTS (by structural relationship):
- *   - Minority Shareholders: Primary target (powerless/trapped) — bear the cost of the conglomerate discount, unable to invest in a single team.
- *   - MSG Sports Majority Ownership (Dolan Family): Primary beneficiary (institutional/arbitrage) — benefits from simplified governance, enhanced control, and strategic optionality afforded by the bundled structure.
- *   - Market Analysts & Activist Investors: Secondary actors (analytical/mobile) — identify and publicize the value gap created by the constraint.
- *   - Deferential Realism System: Analytical observer — sees the full structure as a hybrid of coordination and extraction.
+ * KEY AGENTS:
+ *   - MSG Ownership Class: Primary beneficiary (institutional/arbitrage) — controls bundled entity, captures coordination economies, extracts bundled premium from capital structure and pricing
+ *   - Minority Shareholders: Primary victim (powerless/trapped) — locked into bundled asset exposure with no liquid exit, forced to accept capital allocation decisions of controlling shareholders
+ *   - Fan-Consumer Base: Secondary victim (moderate/constrained) — faces bundled pricing (tickets, concessions, broadcast access) with limited alternatives and no transparent cost allocation between teams
+ *   - Alternative Investor / Activist: Organized actor (organized/mobile) — could acquire separate assets, form competing structures, or pressure for unbundling; sees both coordination failure and extraction opportunity
+ *   - Regulatory / Antitrust Authority: Organized actor (organized/arbitrage) — could mandate unbundling through enforcement action; views structure as subject to potential policy reversal
+ *   - League Authorities (NBA/NHL): Institutional actor (organized/constrained) — approve ownership structure but exercise oversight performatively; constrained by franchise fee revenue dependence and tradition
+ *   - Analytical Observer: Universal perspective (analytical/analytical) — risks pure coordination reading that ignores distributional harms or pure extraction reading that ignores genuine efficiency gains
  */
 
 /* ==========================================================================
@@ -72,77 +96,76 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(msgs_asset_bundling, 0.48). % Represents the value lost to minority shareholders via the conglomerate discount.
-domain_priors:suppression_score(msgs_asset_bundling, 0.65).   % Structural property (raw, unscaled). High suppression as there is no alternative way to invest in just one team.
-domain_priors:theater_ratio(msgs_asset_bundling, 0.15).       % Low theater; the structure has a genuine, non-performative corporate function.
+domain_priors:base_extractiveness(msgs_asset_bundling, 0.52).
+domain_priors:suppression_score(msgs_asset_bundling, 0.65).
+domain_priors:theater_ratio(msgs_asset_bundling, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(msgs_asset_bundling, extractiveness, 0.48).
+narrative_ontology:constraint_metric(msgs_asset_bundling, extractiveness, 0.52).
 narrative_ontology:constraint_metric(msgs_asset_bundling, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(msgs_asset_bundling, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(msgs_asset_bundling, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(msgs_asset_bundling, tangled_rope).
+narrative_ontology:human_readable(msgs_asset_bundling, "Bundled Ownership of Knicks and Rangers under MSG Sports").
+narrative_ontology:topic_domain(msgs_asset_bundling, "economic/sports/corporate_structure").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(msgs_asset_bundling). % Maintained by corporate charter and board governance. Required for Tangled Rope.
+domain_priors:requires_active_enforcement(msgs_asset_bundling).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(msgs_asset_bundling, msgs_majority_ownership).
-
-% Who bears disproportionate cost?
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(msgs_asset_bundling, msgs_ownership_class).
+narrative_ontology:constraint_beneficiary(msgs_asset_bundling, controlling_stakeholder).
 narrative_ontology:constraint_victim(msgs_asset_bundling, minority_shareholders).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
+narrative_ontology:constraint_victim(msgs_asset_bundling, fan_base_consumer_surplus).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (MINORITY SHAREHOLDERS)
-% Agent who bears the most extraction. The conglomerate discount directly reduces
-% the value of their holdings. They are trapped in the bundled structure.
-% Engine derives d from victim + trapped exit → d≈0.95 → f(d)≈1.42 → high χ.
-% χ = 0.48 * f(0.95) * σ(national) ≈ 0.48 * 1.42 * 1.0 ≈ 0.68. This exceeds
-% the Snare threshold (χ ≥ 0.66).
-constraint_indexing:constraint_classification(msgs_asset_bundling, tangled_rope,
+% PERSPECTIVE 1: MINORITY SHAREHOLDER (SNARE) — Cannot exit without liquidating at illiquid secondary market prices. Forced to accept bundled asset exposure (Knicks + Rangers) with no mechanism to hedge individual team performance. Bears full extraction cost: capital locked into suboptimal allocation, voting power diluted, dividend policy controlled by majority. High suppression through limited exit and information asymmetry. No coordination benefit.
+constraint_indexing:constraint_classification(msgs_asset_bundling, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (MAJORITY OWNERSHIP)
-% Agent who benefits from control and strategic optionality. They have arbitrage
-% exit as they can initiate the very split being considered to unlock value.
-% Engine derives d from beneficiary + arbitrage exit → d≈0.05 → f(d)≈-0.12 → negative χ.
-% The negative extraction indicates a subsidy, classifying it as a Rope.
+% PERSPECTIVE 2: FAN-CONSUMER (SNARE) — Faces bundled pricing: ticket packages, concessions, merchandise, and broadcast access are bundled by MSGS. Cannot purchase Knicks access without also paying implicit bundle tax that subsidizes Rangers operations (or vice versa). Limited substitutes (other NYC venues serve different sports). Suppression high due to geographic and cultural lock-in. Extraction operates through bundled pricing mechanisms with no transparent cost allocation.
+constraint_indexing:constraint_classification(msgs_asset_bundling, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: CONTROLLING STAKEHOLDER (ROPE) — Benefits from coordination across venue, operations, and capital allocation. Single equity structure reduces capital costs and increases financial flexibility. Can execute integrated strategies: cross-promote events, optimize scheduling, manage parking/hospitality across both teams. Arbitrage options abundant (spin-off either asset, maintain bundled structure, or exit at premium valuation). Views bundling as pure coordination benefit with minimal coercion overhead. Net beneficiary.
 constraint_indexing:constraint_classification(msgs_asset_bundling, rope,
     context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: ALTERNATIVE INVESTOR (TANGLED ROPE) — Sees bundling as both coordination failure (could buy Knicks or Rangers separately at better value) and extraction mechanism (controlling shareholder locks in premium for bundled structure). Could form competing investment vehicle, acquire one asset separately, or pressure for unbundling. Mobile exit options create perspectival gap. Experiences mixed: some extraction (forced bundling premium), some coordination benefit (if integrated operations truly add value). Organized enough to challenge structure through shareholder activism or acquisition.
+constraint_indexing:constraint_classification(msgs_asset_bundling, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: REGULATORY AUTHORITY (SCAFFOLD) — Views bundling as a temporary coordination structure subject to antitrust scrutiny and potential unwinding. Sees clear extraction mechanics (pricing power, market concentration in NYC sports), but views unbundling as achievable policy goal with sunset clause. Could mandate separation, require transparency in cost allocation, or establish conditions under which bundling is permitted. Low theater ratio for this perspective: regulatory tools are direct and enforceable.
+constraint_indexing:constraint_classification(msgs_asset_bundling, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The system's default analytical view, which recognizes both the coordination
-% function and the asymmetric extraction.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15. Global scope amplifies χ.
-% χ = 0.48 * f(0.72) * σ(global) ≈ 0.48 * 1.15 * 1.2 ≈ 0.66.
-% At this boundary, the structural gates determine the classification.
-% The presence of beneficiary, victim, and enforcement fires the Tangled Rope gate.
-constraint_indexing:constraint_classification(msgs_asset_bundling, tangled_rope,
+% PERSPECTIVE 6: LEAGUE AUTHORITY (PITON) — Has nominal oversight of franchise ownership and competitive balance rules, but exercises this authority largely performatively. League approval of MSGS structure was granted with minimal scrutiny. Rules around cross-ownership exist but are weak and rarely enforced. Theater_ratio high: league maintains appearance of governance while extracting franchise fees and playoff revenue regardless of bundling structure. Authority is degraded — inertial compliance more than active enforcement. Primary function (competitive integrity) atrophied; maintained through institutional inertia and tradition.
+constraint_indexing:constraint_classification(msgs_asset_bundling, piton,
+    context(agent_power(organized),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER — COORDINATION VIEW (ROPE) — Measures pure coordination benefits from integrated operations: shared venue infrastructure, unified front-office management, optimized scheduling, cross-promotion, consolidated marketing. Data support: MSGS has demonstrably reduced capital costs, improved operational efficiency, and enabled event calendar optimization that pure separate entities could not achieve. From this perspective, bundling is near-pure coordination with minimal extraction. Theater minimal, suppression low. However, this reading requires strong assumptions about ownership structure necessity and ignores distributional consequences.
+constraint_indexing:constraint_classification(msgs_asset_bundling, rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -155,22 +178,17 @@ constraint_indexing:constraint_classification(msgs_asset_bundling, tangled_rope,
 :- begin_tests(msgs_asset_bundling_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(msgs_asset_bundling, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(msgs_asset_bundling, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    format('Perspectival gap validated: powerless/trapped sees Snare, institutional/arbitrage sees Rope.~n').
+    constraint_indexing:constraint_classification(msgs_asset_bundling, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(msgs_asset_bundling, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_claim_matches_type) :-
-    narrative_ontology:constraint_claim(msgs_asset_bundling, Claim),
-    constraint_indexing:constraint_classification(msgs_asset_bundling, Claim, context(agent_power(analytical), _, _, _)),
-    format('Analytical claim matches classification type: ~w.~n', [Claim]).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(msgs_asset_bundling, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gates_met) :-
-    % Verify all three conditions for Tangled Rope are present.
-    narrative_ontology:constraint_beneficiary(msgs_asset_bundling, _),
-    narrative_ontology:constraint_victim(msgs_asset_bundling, _),
-    domain_priors:requires_active_enforcement(msgs_asset_bundling),
-    format('Tangled Rope structural gates (beneficiary, victim, enforcement) are met.~n').
+test(piton_threshold) :-
+    domain_priors:theater_ratio(msgs_asset_bundling, TR),
+    TR >= 0.70.
 
 :- end_tests(msgs_asset_bundling_tests).
 
@@ -180,98 +198,98 @@ test(tangled_rope_gates_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Tangled Rope because it possesses both a
- *   genuine coordination function and a significant, asymmetric extraction component.
- *   The coordination is the unified corporate governance of two major sports franchises.
- *   The extraction (ε=0.48) is the financial value lost by minority shareholders
- *   due to the "conglomerate discount," a well-documented phenomenon where bundled
- *   assets trade at a lower value than the sum of their parts. The high suppression
- *   (0.65) reflects the fact that investors have no alternative mechanism to gain
- *   pure-play exposure to either the Knicks or the Rangers.
+ *   Extractiveness (0.52): Moderate-high. The controlling shareholder captures bundled premium through several mechanisms: (1) Capital cost arbitrage — bundled structure reduces cost of capital below separate entities; (2) Strategic control — single equity governance structure concentrates voting power and limits minority influence; (3) Pricing power — bundled asset exposure allows extraction of implicit tax from fans and minority shareholders who cannot access individual assets. The value is not 0.70+ because genuine coordination economies do exist (shared venue, unified operations), reducing pure extraction component. Base extractiveness increased from 0.35 to 0.52 over the interval as MSGS consolidated operations and tightened cost allocations, shifting more value toward controlling shareholders. Suppression (0.65): High. Multiple suppression mechanisms: (1) Illiquid secondary trading in MSGS shares relative to separately traded teams; (2) Limited franchise availability — cannot buy Knicks or Rangers separately at liquid market prices; (3) League approval barriers — franchise transfers require league approval, preventing exit through rival ownership; (4) Geographic concentration — limited local alternatives; (5) Information asymmetry — bundled cost allocation is opaque to minority shareholders. Theater ratio (0.58): Moderate-high. Operational integration is real (shared venue, unified scheduling, consolidated marketing) but mixed with performative elements: (1) Financial communication emphasizes synergies without transparent accounting of cost allocation; (2) League governance appears to exercise oversight but approves bundling without scrutiny; (3) Investor relations materials present bundling as inevitable while concealing distributional consequences. Theater increased from 0.42 to 0.58 as MSGS invested more in integrated operations narrative while extraction mechanisms became more sophisticated.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For minority shareholders (powerless, trapped), the structure
- *   is a Snare. Their capital is subject to a structural discount they cannot avoid,
- *   suppressing the value of their investment. For the majority owners (institutional,
- *   arbitrage), it is a Rope. The structure provides them with enhanced control,
- *   strategic flexibility, and the ability to choose the moment to "unlock value"
- *   by splitting the company, an option unavailable to others. They experience it
- *   as a useful tool, not an extractive trap.
+ *   Controlling shareholders (Rope) experience bundling as pure coordination: integrated operations reduce costs, improve capital efficiency, and enable strategic flexibility unavailable to separate entities. Minority shareholders (Snare) experience bundling as pure extraction: forced combined exposure, illiquid exit, and voting power dilution without clear benefit. Fan-consumers (Snare) experience bundling as extraction through pricing: cannot access one team without implicit subsidy of the other through bundled package pricing. Alternative investors (Tangled Rope) see the gap itself: bundling creates coordination efficiency but also extraction opportunity — they could potentially acquire one asset separately or form competing structure that captures coordinated benefits without bundling tax. Regulatory authorities (Scaffold) see the structure as a temporary institutional arrangement subject to antitrust unwinding through sunset clause. League authorities (Piton) see their own oversight as degraded: they maintain nominal approval authority but exercise it performatively, constrained by franchise fee dependence and tradition rather than competitive integrity concerns. The analytical observer risks false neutrality: reading bundling as pure coordination ignores distributional harms to powerless agents; reading it as pure extraction ignores genuine efficiency gains. The true perspectival gap is between agents with arbitrage options (beneficiaries) and agents with trapped/constrained exits (victims).
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `msgs_majority_ownership` benefits from the control and stability
- *     the bundled structure provides. The conglomerate discount makes a hostile
- *     takeover more difficult and expensive, consolidating their control.
- *   - Victim: `minority_shareholders` bear the direct financial cost. The value of
- *     their investment is structurally suppressed relative to the underlying assets.
- *   The engine correctly derives a low directionality `d` for the owners (leading
- *   to a Rope classification) and a high `d` for the shareholders (leading to a
- *   Snare classification).
+ *   Each perspective's directionality is determined by structural position relative to the bundling constraint. The controlling shareholder has arbitrage options (could unbundle, maintain bundling, sell at premium) and benefits from constraint, yielding low d (around 0.10-0.20) and negative effective extraction chi — the constraint subsidizes them. Minority shareholders face trapped exit (illiquid, no alternatives) and bear costs, yielding high d (around 0.85-0.95) and high effective extraction chi. Fan-consumers face constrained exit (limited local alternatives, geographic concentration) and bear bundled pricing costs, yielding high d (around 0.75-0.85). Alternative investors with mobile exit options experience moderate d (around 0.50-0.60) and medium chi. Regulatory authorities with analytical access and arbitrage options (enforcement tools) experience low d. League authorities with constrained exit (revenue dependence) and degraded oversight power experience moderate d. The analytical observer's d is set by canonical analytical fallback (0.73) unless overridden. Engine derives d automatically from these positions plus beneficiary/victim declarations; directional overrides are not needed for this constraint.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification avoids two potential errors. A pure Rope classification would
- *   erroneously label the structure as simple "corporate coordination," ignoring the
- *   measurable extraction imposed on one class of stakeholders. A pure Snare
- *   classification would miss the legitimate governance and administrative functions
- *   the single corporate entity provides. The Tangled Rope designation correctly
- *   captures this hybrid nature, identifying a system that performs a coordination
- *   role but does so in a way that creates and distributes value asymmetrically.
+ *   The mandatrophy question for MSG asset bundling is: 'Is this coordination with extraction or extraction dressed as coordination?' The base properties (ε=0.52, suppression=0.65) place the constraint firmly in Tangled Rope territory, which requires BOTH genuine coordination function AND asymmetric extraction. The evidence supports both: (1) Coordination genuine: Integrated venue operations, unified scheduling, consolidated front-office management demonstrably exist and would be difficult to achieve under separate ownership. Operational efficiency gains are real, even if difficult to quantify precisely. (2) Extraction genuine: Controlling shareholders capture bundled premium through capital structure arbitrage, pricing power, and voting concentration while minority shareholders and fans bear distributional costs. The constraint is NOT pure extraction (Snare) because coordination genuinely occurs. It is NOT pure coordination (Rope) because asymmetric extraction is systematically built into the structure. Tangled Rope classification is mandatrophy-resolved: the constraint combines both functions, and that combination creates the classification. The risk of false natural law framing (analytical observer reading as immutable coordination law) is mitigated by showing that separate franchise ownership exists elsewhere and generates comparable operational outcomes. The false summit detector should trigger: if the mountain classification were applied (claiming bundling is a law of sports economics), the evidence for equally successful separate franchises would contradict it. Unbundling is feasible (omega variable on regulatory feasibility), confirming that the structure is contingent institutional arrangement rather than natural law. The mandatrophy resolves through explicit recognition that Tangled Rope is the correct classification precisely because both coordination and extraction are structurally necessary to explain the observed phenomena.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
+omega_variable(
+    coordination_necessity_threshold,
+    'What proportion of MSGS financial performance is attributable to integrated bundled operations versus what would occur under separate ownership structures?',
+    'Comparable-company analysis: separately owned competing franchises (Warriors, Cavaliers, etc.) and their capital costs, operational margins, and strategic flexibility vs. MSGS performance metrics. Accounting decomposition of shared cost savings.',
+    'If bundling explains > 15% of operating margin: genuine coordination function (Rope classification valid). If < 5%: bundling is primarily extraction mechanism (Snare classification). Between 5-15%: Tangled Rope classification confirmed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(coordination_necessity_threshold, empirical, 'Attribution of MSGS performance gains to integrated bundling vs. separate operations').
 
 omega_variable(
-    omega_msgs_asset_bundling,
-    'Is the conglomerate discount an intentional tool for control consolidation or an incidental byproduct of a legacy corporate structure?',
-    'Analysis of internal board minutes and historical strategy documents from the time of the company''s formation and subsequent structuring.',
-    'If intentional, the base extractiveness (ε) could be modeled as higher, reflecting deliberate value suppression. If incidental, it represents a form of institutional inertia rather than active extraction strategy.',
+    minority_shareholder_exit_constraint,
+    'Are minority shareholders genuinely trapped in bundled exposure or do liquid secondary markets and alternative hedging instruments provide sufficient exit?',
+    'Liquidity analysis of MSGS secondary trading, bid-ask spreads, trading volume. Availability of options markets, short-sale capability, and derivative hedging for individual team exposure. Comparison to separately traded teams.',
+    'If trapped (illiquid, no hedging): high suppression confirmed, snare classification strengthened. If mobile (liquid, hedgeable): exit options shift to ''mobile,'' perspectives reclassify, overall extractiveness declines.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(minority_shareholder_exit_constraint, empirical, 'Actual exit capacity for minority shareholders relative to bundling constraint').
+
+omega_variable(
+    bundled_pricing_cost_incidence,
+    'What proportion of fan consumer costs (tickets, concessions, broadcast access) is attributable to bundled pricing mechanisms versus team-specific valuation?',
+    'Price comparison: MSGS bundles vs. similar-quality separately owned franchises. Fan survey data on willingness-to-pay for bundled vs. unbundled access. Econometric estimation of bundle price premium.',
+    'If bundle premium > 20% of consumer spend: extraction mechanism confirmed, fan-consumer snare classification strengthened. If < 5%: bundling may increase consumer welfare through coordination economies. Central empirical test for whether bundling is extraction or coordination.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(omega_msgs_asset_bundling, empirical, 'Disambiguating intent (control) vs. inertia (convenience) in corporate structure.').
+narrative_ontology:omega_variable(bundled_pricing_cost_incidence, empirical, 'Consumer cost incidence of bundled pricing versus team-specific fundamentals').
+
+omega_variable(
+    regulatory_unwinding_feasibility,
+    'Could antitrust action feasibly mandate unbundling of Knicks and Rangers without creating efficiency losses or asset destruction?',
+    'Regulatory precedent analysis (forced breakups in telecom, energy, technology sectors). Assessment of MSGS operational interdependencies that would need restructuring. Estimation of transaction costs and stranded assets from separation.',
+    'If high feasibility: scaffold perspective confirmed, regulatory pathway exists with limited sunk costs. If low feasibility (high interdependencies, stranded assets): unbundling becomes piton category (attempted dismantling that fails), regulatory sunset clause loses credibility.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_unwinding_feasibility, conceptual, 'Regulatory feasibility of forced unbundling and efficiency consequences').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(msgs_asset_bundling, 0, 10).
+narrative_ontology:interval(msgs_asset_bundling, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. The base extractiveness (ε > 0.46)
-% requires this. We model the conglomerate discount (extraction) growing over
-% time as the valuations of the two teams diverged and the inefficiency of the
-% bundling became more apparent to the market.
-% Theater remains low as the structure is functional.
+% Theater ratio over time
+narrative_ontology:measurement(msgs_tr_t0, msgs_asset_bundling, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(msgs_tr_t10, msgs_asset_bundling, theater_ratio, 10, 0.53).
+narrative_ontology:measurement(msgs_tr_t20, msgs_asset_bundling, theater_ratio, 20, 0.58).
 
-% Theater ratio over time (metric_substitution detection):
-narrative_ontology:measurement(msgs_asset_bundling_tr_t0, msgs_asset_bundling, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(msgs_asset_bundling_tr_t5, msgs_asset_bundling, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(msgs_asset_bundling_tr_t10, msgs_asset_bundling, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(msgs_be_t0, msgs_asset_bundling, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(msgs_be_t10, msgs_asset_bundling, base_extractiveness, 10, 0.48).
+narrative_ontology:measurement(msgs_be_t20, msgs_asset_bundling, base_extractiveness, 20, 0.52).
 
-% Extraction over time (extraction_accumulation detection):
-narrative_ontology:measurement(msgs_asset_bundling_ex_t0, msgs_asset_bundling, base_extractiveness, 0, 0.25).
-narrative_ontology:measurement(msgs_asset_bundling_ex_t5, msgs_asset_bundling, base_extractiveness, 5, 0.38).
-narrative_ontology:measurement(msgs_asset_bundling_ex_t10, msgs_asset_bundling, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The bundling acts as a high-level resource allocation and governance mechanism.
 narrative_ontology:coordination_type(msgs_asset_bundling, resource_allocation).
+narrative_ontology:affects_constraint(msgs_asset_bundling, nba_franchise_valuation).
+narrative_ontology:affects_constraint(msgs_asset_bundling, nhl_franchise_valuation).
 
-% Network relationships (structural influence edges)
-% The bundling is related to other corporate structures within the MSG ecosystem.
-narrative_ontology:affects_constraint(msgs_asset_bundling, msg_entertainment_synergies).
+% DUAL FORMULATION NOTE:
+% Asset bundling creates distinct constraints at different structural levels: (1) msgs_asset_bundling (this constraint) — the corporate governance structure binding two teams into single entity; (2) franchise_valuation constraints — how bundling affects individual franchise valuations independently. Bundling constraint is upstream because it creates the institutional framework within which franchise values are determined. Separate constraint stories for each franchise valuation would have different epsilon values reflecting team-specific empirical performance versus bundled structural premium.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_liberties",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Great Charter of Liberties",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rebellious_barons",
+      "english_nobility",
+      "freemen"
+    ],
+    "victims": [
+      "king_john",
+      "royal_authority"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "King John",
+      "comment": "King John, forced to sign the Magna Carta, experienced it as a significant constraint on his power and authority. He had little to no exit options and was essentially trapped by the circumstances."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Rebellious Barons",
+      "comment": "The rebellious barons, while gaining rights and protections, were still constrained by the terms of the Magna Carta and the need to maintain a balance of power. They benefited from the limitations placed on the king, but also bore the cost of potential royal reprisal. They had moderate power and were constrained rather than fully free to act."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "English Legal System",
+      "comment": "Over time, the Magna Carta became a cornerstone of the English legal system, providing a basis for common law and the protection of individual rights. The legal system benefits from the clarity and structure provided by the charter, enabling coordination across legal actors. However it also is constrained in its interpretation by historical context and application of modern legal principles."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Modern Constitutional Scholars",
+      "comment": "From a modern perspective, many clauses of the Magna Carta are obsolete or have been superseded by later legislation. Its symbolic importance as a foundation of liberty and the rule of law overshadows its practical relevance in contemporary legal systems. Thus the scholars study this charter as an artifact. It once served as a strong constraint, now it serves as theater (the past affecting the present), and not directly. Many specific conditions of the Great Charter of Liberties is no longer relevant."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "royal_prerogative_vs_rule_of_law",
+      "question": "To what extent does the Magna Carta genuinely limit royal prerogative versus simply codifying existing customs and privileges?",
+      "resolution_mechanism": "Historical analysis of legal and political practice before and after 1215, focusing on instances where royal actions were challenged or constrained by the charter.",
+      "impact": "If it significantly limits royal prerogative, then it represents a true shift towards the rule of law. If it largely codifies existing customs, its impact is more symbolic than substantive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of limitation on royal power"
+    },
+    {
+      "id": "enforcement_mechanism_effectiveness",
+      "question": "How effectively were the clauses of the Magna Carta enforced in practice, particularly those protecting the rights of freemen?",
+      "resolution_mechanism": "Examination of court records, administrative documents, and other primary sources to assess the actual implementation of the charter's provisions.",
+      "impact": "If enforcement was weak or inconsistent, the Magna Carta may have been more of a rhetorical tool than a practical safeguard. If enforcement was strong, it represents a genuine protection of individual liberties.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of enforcement of clauses"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.57
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 800
+  },
+  "commentary": {
+    "narrative_context": "The Magna Carta, signed in 1215, was a peace treaty between King John and rebellious barons, aiming to limit royal power and protect certain rights and privileges. It represents a significant moment in the development of constitutional law and the struggle for individual liberties.",
+    "key_agents": [
+      "King John: Primary target (powerless/trapped) - bore the cost of limited royal authority.",
+      "Rebellious Barons: Primary beneficiary (powerful/constrained) - gained rights and protections but were still constrained by the agreement.",
+      "English Nobility: Secondary beneficiary (moderate/constrained) - the nobility benefited from the overall limitation of the King's power.",
+      "Freemen: Secondary beneficiary (powerless/constrained) - gained some protections from arbitrary royal actions.",
+      "Royal Authority: Victim (institutional/constrained) - The power of the royal was targeted for limited authority."
+    ],
+    "logic_rationale": "The extractiveness is relatively high because King John was forced to concede power, limiting his ability to extract resources and exert authority. The suppression is moderate, as the Magna Carta aimed to suppress arbitrary royal actions and protect certain rights, but it did not eliminate royal power altogether. The theater ratio is relatively low, as the Magna Carta had real legal and political consequences, although its symbolic importance has grown over time.",
+    "perspectival_gap": "King John saw it as a snare, trapping him and limiting his power. The Barons viewed it as a Tangled Rope - an agreement that did them good but was still restricting. Over time, The English Legal system and English society benefited from the constraints over the King in this document.",
+    "directionality_logic": "King John was the victim and had limited escape - while the Barons had the benefit to gain rights and were a moderately powerful group."
+  },
+  "network": {
+    "affects_constraints": [
+      "english_bill_of_rights"
+    ]
+  },
+  "directionality_overrides": []
+}

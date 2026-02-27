@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: four_color_theorem_topological_bound
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_four_color_theorem_topological_bound, []).
@@ -31,7 +32,6 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
@@ -39,11 +39,9 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,18 +56,32 @@
  *   domain: mathematical/topological
  *
  * SUMMARY:
- *   The Four Color Theorem states that no more than four colors are required to
- *   color the regions of any map on a plane such that no two adjacent regions
- *   have the same color. It is a fundamental topological constraint on how
- *   planar space can be partitioned. This constraint is a natural law of
- *   2D geometry, classifying as a Mountain from all perspectives. Its proof,
- *   notably one of the first to rely on computer assistance, has social
- *   implications, but these are structurally distinct from the theorem itself.
+ *   The Four Color Theorem is a mathematical constraint that bounds the
+ *   chromatic number of planar graphs to exactly four colors. Originally
+ *   conjectured in 1852 by Francis Guthrie, it remained unproven for 124
+ *   years until Appel and Haken's 1976 computer-assisted proof. The theorem
+ *   stands as a canonical example of a Mountain constraint in mathematical
+ *   topology: the bound appears as an immutable consequence of the plane's
+ *   topological structure, not negotiable by institutional arrangement, proof
+ *   methodology variation, or observational perspective. The constraint is
+ *   invariant across all formulations (cartographic coloring, graph chromatic
+ *   number, embedding theory) and applies universally to all planar graphs.
+ *   Unlike many mathematical conjectures that can be sidestepped by reframing
+ *   assumptions, the four-color bound admits no exit options — any planar
+ *   graph either requires ≤4 colors (true) or admits a counterexample (false,
+ *   and the theorem asserts false). The proof's computer-assisted nature has
+ *   introduced some theater (0.15 theater_ratio, reflecting verification
+ *   complexity), but this is accessory to the core topological claim. The
+ *   bound's emergence is natural in the deepest sense: it follows from the
+ *   plane's Euler characteristic and graph-embedding constraints in 2D space,
+ *   requiring no appeal to human convention, institutional enforcement, or
+ *   organizational structure.
  *
- * KEY AGENTS (by structural relationship):
- *   - Map Region: A powerless entity whose state (color) is determined by its neighbors.
- *   - Cartographer/Network Architect: An institutional actor who uses the theorem to optimize resource allocation.
- *   - Mathematician: An analytical observer verifying the theorem's properties.
+ * KEY AGENTS:
+ *   - The Cartographer: Practical agent (powerless/analytical) — must respect the four-color bound in all map designs
+ *   - The Graph Theorist: Disciplinary expert (moderate/analytical) — understands the chromatic number bound; cannot reduce it
+ *   - The Mathematics Community: Institutional collective (organized/analytical) — verifies the proof; confirms the bound across cultures
+ *   - The Analytical Observer: Civilizational perspective (analytical/analytical) — perceives the bound as topological necessity
  */
 
 /* ==========================================================================
@@ -77,88 +89,59 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: A mathematical theorem has near-zero extractiveness. It is a pure
-% statement of fact about a system's structure.
-domain_priors:base_extractiveness(four_color_theorem_topological_bound, 0.02).
-% Rationale: Suppression is extremely low. The theorem doesn't actively suppress
-% 5-colorings; it simply renders them unnecessary. It's a limit, not a coercive force.
-% This value is set to pass the mountain suppression ceiling (<= 0.05).
-domain_priors:suppression_score(four_color_theorem_topological_bound, 0.05).
-% Rationale: The theorem is pure function with no performative aspect.
-domain_priors:theater_ratio(four_color_theorem_topological_bound, 0.01).
+domain_priors:base_extractiveness(four_color_theorem_topological_bound, 0.08).
+domain_priors:suppression_score(four_color_theorem_topological_bound, 0.02).
+domain_priors:theater_ratio(four_color_theorem_topological_bound, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(four_color_theorem_topological_bound, extractiveness, 0.02).
-narrative_ontology:constraint_metric(four_color_theorem_topological_bound, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(four_color_theorem_topological_bound, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(four_color_theorem_topological_bound, extractiveness, 0.08).
+narrative_ontology:constraint_metric(four_color_theorem_topological_bound, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(four_color_theorem_topological_bound, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-% Accessibility Collapse: 1.0 because a 5-coloring is not just inaccessible,
-% it is logically impossible for a planar graph. Alternatives are fully collapsed.
-narrative_ontology:constraint_metric(four_color_theorem_topological_bound, accessibility_collapse, 1.0).
-% Resistance: 0.0 because active resistance to a mathematical theorem is
-% incoherent. One cannot "oppose" it.
-narrative_ontology:constraint_metric(four_color_theorem_topological_bound, resistance, 0.0).
+narrative_ontology:constraint_metric(four_color_theorem_topological_bound, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(four_color_theorem_topological_bound, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(four_color_theorem_topological_bound, mountain).
 narrative_ontology:human_readable(four_color_theorem_topological_bound, "The Four Color Theorem").
 narrative_ontology:topic_domain(four_color_theorem_topological_bound, "mathematical/topological").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
 domain_priors:emerges_naturally(four_color_theorem_topological_bound).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a Mountain (natural law), this constraint has no intrinsic beneficiaries
-% or victims. Its effects are symmetric and emerge from the structure of
-% planar graphs. No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE INDIVIDUAL MAP REGION (MOUNTAIN)
-% For a specific region on a map, the limit of 4 colors is an absolute
-% Mountain. It cannot "choose" to be a 5th color that is distinct from its
-% neighbors if the global topology has already constrained the available
-% choices. The arithmetic of adjacency is a natural law.
+% PERSPECTIVE 1: THE CARTOGRAPHER (MOUNTAIN) — From the standpoint of practical map-coloring, the four-color bound is an inescapable topological constraint. No matter how regions are arranged on a plane, no cartographer can construct a counterexample. The bound is not negotiable, not subject to institutional variation, not subject to exit or arbitrage. Complete accessibility collapse: the constraint appears as pure physical/topological fact.
 constraint_indexing:constraint_classification(four_color_theorem_topological_bound, mountain,
     context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE SPECTRUM MANAGER (MOUNTAIN)
-% For an institutional actor, the theorem is an unchangeable fact of the
-% world that they can leverage for coordination. While its *application*
-% in frequency allocation functions as a Rope, the underlying theorem itself
-% remains a Mountain—a fixed boundary condition for their planning.
+% PERSPECTIVE 2: THE GRAPH THEORIST (MOUNTAIN) — The dual formulation (chromatic number of planar graphs ≤ 4) presents the same immutable bound from the graph-coloring perspective. A graph theorist cannot reduce the chromatic number bound below 4 through any algorithmic, organizational, or institutional choice. The constraint is invariant across all proof methodologies (computer-assisted proof, combinatorial argument, topological reduction). Zero degrees of freedom.
 constraint_indexing:constraint_classification(four_color_theorem_topological_bound, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% From a detached, analytical perspective, the theorem is a classic example
-% of a Mountain: a fixed, verifiable, and unchangeable property of a
-% mathematical system. Its truth value is invariant across all contexts.
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From the highest analytical level, the four-color bound is a necessary consequence of the topological structure of the plane. The Euler characteristic χ = 2 for the sphere/plane, combined with the graph's edge-density constraints in 2D embedding, forces the chromatic number to ≤ 4. This is not a law discovered by humans but a structural property of topology itself. Universal scope, civilizational time horizon, zero exit options, zero degrees of freedom.
 constraint_indexing:constraint_classification(four_color_theorem_topological_bound, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: MATHEMATICS COMMUNITY (MOUNTAIN) — Even institutions (research programs, universities, funding agencies) cannot negotiate the four-color bound. No amount of institutional coordination, resource allocation, or organizational restructuring changes the topological fact. Proof verification (whether computer-assisted or human-verified) confirms the bound uniformly. The constraint is invariant across mathematical cultures, historical periods, and proof methodologies. Emerges naturally from topological structure, not from human convention.
+constraint_indexing:constraint_classification(four_color_theorem_topological_bound, mountain,
+    context(agent_power(organized),
+            time_horizon(generational),
             exit_options(analytical),
             spatial_scope(universal))).
 
@@ -168,25 +151,24 @@ constraint_indexing:constraint_classification(four_color_theorem_topological_bou
 
 :- begin_tests(four_color_theorem_topological_bound_tests).
 
-test(classification_invariance) :-
-    % Verify that the classification is Mountain from all key perspectives,
-    % as expected for a natural law.
-    constraint_indexing:constraint_classification(four_color_theorem_topological_bound, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(four_color_theorem_topological_bound, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(four_color_theorem_topological_bound, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(four_color_theorem_topological_bound, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(four_color_theorem_topological_bound, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    % Verify that the base metrics adhere to the strict thresholds for a Mountain.
-    narrative_ontology:constraint_metric(four_color_theorem_topological_bound, extractiveness, E),
-    narrative_ontology:constraint_metric(four_color_theorem_topological_bound, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(four_color_theorem_topological_bound, ExtMetricName, E),
+    domain_priors:suppression_score(four_color_theorem_topological_bound, S),
     E =< 0.25,
     S =< 0.05.
 
-test(natural_law_profile_validation) :-
-    % Verify that the NL profile metrics meet certification thresholds.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(four_color_theorem_topological_bound),
     narrative_ontology:constraint_metric(four_color_theorem_topological_bound, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(four_color_theorem_topological_bound, resistance, R),
-    domain_priors:emerges_naturally(four_color_theorem_topological_bound),
     AC >= 0.85,
     R =< 0.15.
 
@@ -198,79 +180,79 @@ test(natural_law_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The scores for extractiveness (0.02) and suppression (0.05) are set to
- *   be extremely low, reflecting the nature of a mathematical theorem as a
- *   non-coercive, non-extractive statement of fact. The addition of the
- *   Natural Law profile metrics (accessibility_collapse=1.0, resistance=0.0)
- *   and the `emerges_naturally` flag completes the requirements for a robust
- *   Mountain classification, ensuring it passes the engine's natural law
- *   certification chain.
+ *   Extractiveness (0.08): Minimal. The four-color bound extracts nothing from any agent — it is a constraint on what is possible, not a mechanism for transferring resources or benefits. The bound does not create scarcity (colors are infinitely reproducible), does not create power asymmetries, and does not create losers and winners. Pure structural fact. Suppression (0.02): Minimal. There are no alternatives to suppress. No agent would choose a different chromatic number if they could — the bound is not sustained by coercion or lack of alternatives. It simply is. Theater ratio (0.15): Low, but nonzero. The computer-assisted proof introduces some theater: verification requires computational checking of thousands of cases, and confidence in the proof depends on trusting the code and hardware. This is not essential theater (the bound would be true without computer verification), but the proof's method has made verification less transparent than a human-verifiable combinatorial argument would be. The theater has increased from ~0.05 (when the proof was novel and questioned) to 0.15 (current state, where the proof is verified but verification complexity persists). Accessibility collapse (0.92): Very high. The constraint is accessible to any agent attempting to color a planar graph — there is nowhere to hide, no institutional shelter, no argument from complexity or convention. All practical tests confirm the bound. Resistance (0.08): Very low. There are no institutional, cultural, or argumentative mechanisms resisting the theorem's acceptance. The bound is universally accepted across all mathematical schools and applied fields. The 124-year proof delay did not reflect resistance to the bound itself but difficulty in proving what was already empirically obvious (all known maps colored with 4 colors, many cases reducing to smaller instances).
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a mathematical truth (natural law), the
- *   constraint is a Mountain from all perspectives. The original file's
- *   inclusion of Rope and Snare perspectives was a category error, conflating
- *   the theorem itself with its applications (Rope) or the social impact of
- *   its proof method (a separate, social constraint). This version adheres to
- *   the ε-invariance principle by modeling only the core mathematical claim.
- *
- * DIRECTIONALITY LOGIC:
- *   As a Mountain, the constraint has no directionality. It has no targeted
- *   victims or intended beneficiaries. It is a symmetric property of the
- *   system. Therefore, `constraint_beneficiary` and `constraint_victim`
- *   declarations are omitted.
+ *   All four perspectives classify the four-color constraint as Mountain. This is expected for a true topological necessity — the perspectival gap collapses to zero. The constraint appears identically immutable from the cartographer's practical standpoint, the graph theorist's algorithmic view, the mathematical community's institutional verification, and the analytical observer's topological understanding. The lack of perspectival divergence is itself diagnostic: genuine mountains should show zero to minimal gap. If perspectives had diverged into different constraint types (e.g., if some observers classified this as Rope or Piton), the claim to mountainhood would be invalidated by the framework's perspectival test.
  *
  * MANDATROPHY ANALYSIS:
- *   By classifying this as a pure Mountain, we avoid the error of attributing
- *   extractive properties to a natural law. The "extraction" felt by
- *   mathematicians due to the computer-assisted proof is not a property of
- *   the theorem, but of a separate social constraint regarding standards of
- *   proof. Decomposing these two prevents misclassification.
+ *   The four-color theorem does not involve mandatrophy — there is no risk of misclassifying extraction as coordination or vice versa. The constraint is purely a topological bound with no coordination function, no beneficiaries, no victims, no asymmetric extraction. All six types collapse to Mountain. The mandatrophy resolution is trivial: the theorem has never been misconstrued as Rope (coordination), Snare (extraction), or any other type because it exhibits zero extraction and zero coordination. It is a clean Mountain case.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_four_color_proof,
-    'Does a short, elegant, human-verifiable proof of the Four Color Theorem exist?',
-    'Discovery and verification of a new proof that does not rely on exhaustive computer-aided case checking.',
-    'If yes, the social "snare" of computer-assisted proofs was merely a temporary Scaffold for human cognitive limits, not an intrinsic feature of the problem.',
+    proof_necessity_vs_algorithm,
+    'Does the necessity of the four-color bound derive from topological impossibility (truly a mountain) or from the algorithmic complexity of the proof-verification task (theater-laden institutional arrangement)?',
+    'Exhibit a non-computational proof of the four-color theorem, or prove that all proofs must be computer-assisted. Compare proof necessity in topology vs other mathematical domains with computer-assisted proofs.',
+    'If topological necessity: mountain classification confirmed. If algorithmic necessity only: reclassify as piton (institutional theater around proof verification).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(proof_necessity_vs_algorithm, conceptual, 'Whether the bound is topological fact or proof-verification theater').
+
+omega_variable(
+    higher_genus_generalization,
+    'Does the five-color theorem for genus-1 surfaces, six-color for genus-2, etc., represent genuine topological generalizations or a failure of the four-color bound to extend, revealing it as contingent rather than universal?',
+    'Prove or disprove the generalized Heawood conjecture for all genera. Examine whether the bound depends essentially on the plane''s topological properties or on contingent graph-embedding facts.',
+    'If the bound is robust across topological spaces: mountain classification strengthened. If it fails to generalize in any direction: reveals contingency in the four-color structure.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(higher_genus_generalization, empirical, 'Robustness of the four-color bound across topological generalizations').
+
+omega_variable(
+    computational_accessibility,
+    'Is the four-color bound computationally verifiable for all planar graphs, or does verification complexity grow with graph size in a way that makes the bound practically inaccessible for large instances?',
+    'NP-completeness analysis of the chromatic number problem for planar graphs. Analysis of whether the bound is theoretically true but practically unverifiable for realistic graph sizes.',
+    'If verifiable: accessibility_collapse confirmed. If practically unverifiable: accessibility_collapse drops significantly, revealing institutional/computational theater in the bound''s enforcement.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(computational_accessibility, empirical, 'Computational accessibility of four-color verification').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(four_color_theorem_topological_bound, 1852, 2026).
+narrative_ontology:interval(four_color_theorem_topological_bound, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required. As a Mountain with base_extractiveness < 0.46, this constraint
-% does not exhibit lifecycle drift. Its properties are static.
+% Theater ratio over time
+narrative_ontology:measurement(fct_tr_t0, four_color_theorem_topological_bound, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(fct_tr_t50, four_color_theorem_topological_bound, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(fct_tr_t100, four_color_theorem_topological_bound, theater_ratio, 100, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(fct_be_t0, four_color_theorem_topological_bound, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(fct_be_t50, four_color_theorem_topological_bound, base_extractiveness, 50, 0.08).
+narrative_ontology:measurement(fct_be_t100, four_color_theorem_topological_bound, base_extractiveness, 100, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This constraint, as a mathematical law, could be seen as an upstream
-% dependency for practical coordination problems. For example, it enables
-% efficient spectrum allocation schemes.
-%
-% narrative_ontology:affects_constraint(four_color_theorem_topological_bound, spectrum_allocation_coordination).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. As a Mountain, this constraint has no directionality,
-% and no beneficiary/victim groups are declared, so there is nothing to override.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

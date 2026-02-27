@@ -1,0 +1,104 @@
+{
+  "header": {
+    "constraint_id": "minimax_theorem",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "minimax"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Minimax Theorem Enforcement in Strategic Games",
+    "topic_domain": "economic/game_theory/mathematical_economics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Proof",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL PROOF (MOUNTAIN) \u2014 The minimax theorem is a formal consequence of linear algebra and convex analysis. Von Neumann's proof (1928) establishes that for any finite zero-sum game, a mixed-strategy Nash equilibrium exists. This is true regardless of the number of players, strategy space size, or payoff magnitudes. Mathematical necessity, not contingent institutional arrangement. d=0.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09. The theorem is invariant across all observables."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Game Designer",
+      "comment": "PERSPECTIVE 2: GAME DESIGNER (MOUNTAIN) \u2014 A player designing a zero-sum game encounters the minimax theorem as an absolute constraint on what equilibrium outcomes are possible. No matter how skillfully they design payoffs, the theorem guarantees that an equilibrium exists at the intersection of each player's maxmin strategy. They cannot escape it through clever design; they can only work within its structure. d=0.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Strategic Player",
+      "comment": "PERSPECTIVE 3: STRATEGIC PLAYER (MOUNTAIN) \u2014 An agent competing in a zero-sum game (chess, poker, military conflict modeled as game theory) discovers the minimax principle empirically: their opponent has a guaranteed strategy that prevents them from doing better than the equilibrium payoff. No amount of cleverness, deception, or resource advantage can overcome this lower bound. The constraint is invisible but absolute. d=0.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Economics Profession",
+      "comment": "PERSPECTIVE 4: ECONOMICS PROFESSION (MOUNTAIN) \u2014 The minimax theorem is foundational to game theory as a discipline. All subsequent work in strategic analysis (cooperative games, auction design, mechanism design, behavioral game theory) builds on the assumption that zero-sum equilibria exist and can be computed. The theorem is not enforced by any authority; it is discovered as a mathematical fact. Professional practice embeds it because deviation is logically impossible. d=0.10, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.004. Negligible effective extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Losing Player",
+      "comment": "PERSPECTIVE 5: LOSING PLAYER (MOUNTAIN) \u2014 A player in a zero-sum game who loses discovers the minimax theorem as fate: their opponent found the equilibrium strategy, and no escape exists. The constraint operates through pure mathematical necessity. Even if they had perfect information and unlimited resources, the theorem guarantees they cannot exceed their minimax payoff. d=0.95, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.11. High directionality but low base extractiveness makes \u03c7 still low."
+    }
+  ],
+  "omegas": [],
+  "measurements": [],
+  "interval": {
+    "start": 0,
+    "end": 1
+  },
+  "commentary": {
+    "narrative_context": "The minimax theorem is a mathematical law: for every finite zero-sum game, there exists a mixed strategy profile where each player's payoff equals their maxmin value (the best they can guarantee against any opponent strategy). Von Neumann's theorem (1928) establishes this as a consequence of linear algebra and convex analysis. The theorem is not enforced by any regulatory body, discovered through experiment, or subject to measurement error \u2014 it is a logical necessity that follows from the structure of finite games. Every perspective \u2014 from the mathematician proving it, to the game designer building games, to the strategic player executing strategies, to the losing player suffering its consequences \u2014 encounters the minimax theorem as an immutable constraint. No player can do better than their maxmin; no designer can create a game that violates it; no alternative framing circumvents it. This is the canonical example of a constraint with zero degrees of freedom.",
+    "key_agents": [
+      "Von Neumann and Mathematical Tradition: Discoverers (institutional/arbitrage) \u2014 established the theorem through rigorous proof; experience it as mathematical necessity",
+      "Game Designers and Mechanism Designers: Institutional actors (institutional/arbitrage) \u2014 work within the constraint; cannot violate it but can exploit its properties",
+      "Strategic Players (Competitors): Moderate agents (moderate/constrained) \u2014 encounter the minimax principle empirically as a lower bound on their payoffs",
+      "Losing Players: Victims in any specific game (powerless/trapped) \u2014 experience the constraint as fate; cannot escape their maxmin payoff",
+      "Economics Profession: Analytical consensus (analytical/analytical) \u2014 treats the minimax theorem as foundational; all game theory builds on it"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The minimax theorem does not extract value from one agent to another \u2014 it is a constraint on all agents equally. Each player receives exactly their maxmin payoff; the game is zero-sum by definition. The nonzero value (0.08 rather than 0.0) reflects measurement precision: the theorem's proof involves floating-point approximations in computational applications, and some game implementations use discrete approximations. But the theoretical constraint has \u03b5 \u2192 0. Suppression (0.02): Minimal. There is no suppression mechanism. Players are not prevented from discovering the minimax principle; they are prevented by mathematical necessity from exceeding it. The small value reflects that explicit knowledge of the theorem may be asymmetric (one player knows game theory, the other does not), but this is information advantage, not suppression in the constraint sense. Theater ratio (0.15): Very low. Zero theater. The minimax theorem has no performative content. When applied, it is purely functional: compute equilibrium strategies, execute them, receive payoff. No ritual, no symbolic compliance, no display.",
+    "perspectival_gap": "All perspectives converge on the same classification (mountain) because the constraint is mathematically invariant. However, the directionality and time horizons differ. The mathematician sees a civilizational truth (d=0.72, analytical). The designer sees a structural boundary they must respect (d=0.50, powerful). The strategic player sees an empirical discovered-at-play constraint (d=0.85, moderate). The losing player sees it as fate (d=0.95, powerless). The profession sees it as foundational (d=0.10, institutional). All perspectives produce mountain, confirming that the minimax theorem is a uniform-type constraint: it classifies identically from every index. This is the definitive feature of a natural law.",
+    "directionality_logic": "The minimax theorem has no beneficiaries and no victims in the structural sense because it applies equally to all players. In any specific game instance, one player wins and one loses relative to the equilibrium, but the minimax theorem guarantees that outcome \u2014 it is not an extraction mechanism, but a fair division rule embedded in game structure. The losing player's directionality is high (d=0.95) not because they are exploited, but because they have no exit: the minimax constraint applies regardless of their wishes. The beneficiary's directionality is low (d=0.10) not because they extract unfair advantage, but because they have arbitrage options: they can leave the game, change its structure, or reframe the payoffs. But neither directionality difference creates extraction (\u03c7 remains \u22480.08 across all perspectives) because the base extractiveness is mathematically zero."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "nash_equilibrium_existence",
+      "zero_sum_payoff_structure"
+    ],
+    "dual_formulation_note": "The minimax theorem is upstream of all equilibrium-based game theory. Nash's 1950 generalization (existence of Nash equilibrium in all finite games, not just zero-sum) is a distinct constraint with higher extractiveness (\u03b5\u22480.15) because it allows non-zero-sum games where bargaining and coalition formation introduce structural extraction. The minimax theorem is the special case where extraction is mathematically eliminated by the zero-sum payoff structure."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "mountain",
+    "downstream_of": [
+      "nash_equilibrium_existence"
+    ]
+  }
+}

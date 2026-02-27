@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "us_two_party_duopoly",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The U.S. Two-Party Political Duopoly",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "democratic_party",
+      "republican_party"
+    ],
+    "victims": [
+      "third_parties",
+      "independent_voters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Third Parties",
+      "comment": "Third parties are trapped in a system designed to exclude them, facing significant barriers to entry and limited opportunities for success."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Independent Voters",
+      "comment": "Independent voters feel trapped with limited choices, often forced to choose the lesser of two evils, their preferences not adequately represented."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Democratic Party",
+      "comment": "The Democratic Party benefits from the duopoly, maintaining its power and influence through established structures and resources. It has the ability to adapt and adjust its platform to maintain relevance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Republican Party",
+      "comment": "The Republican Party benefits from the duopoly, maintaining its power and influence through established structures and resources. It has the ability to adapt and adjust its platform to maintain relevance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Political Scientist",
+      "comment": "Political scientists understand the complex dynamics of the duopoly, recognizing both its coordinating function and its extractive elements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reform_viability",
+      "question": "How viable are electoral reforms (e.g., ranked-choice voting, open primaries) in dismantling the duopoly?",
+      "resolution_mechanism": "Analysis of reform efforts' success in different states; modeling the impact of reforms on electoral outcomes",
+      "impact": "If viable: Duopoly weakens, system shifts towards greater representation. If not viable: Duopoly persists, limiting voter choice and political innovation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of electoral reforms in dismantling the duopoly"
+    },
+    {
+      "id": "partisan_polarization_driver",
+      "question": "To what extent does partisan polarization drive and reinforce the duopoly, and vice versa?",
+      "resolution_mechanism": "Statistical analysis of polarization trends and party alignment; comparative studies of political systems with different party structures.",
+      "impact": "If polarization is a primary driver: Overcoming the duopoly requires addressing underlying social divisions. If the duopoly drives polarization: Breaking up the duopoly may reduce political animosity.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Role of partisan polarization in driving the duopoly"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The U.S. two-party system, dominated by the Democratic and Republican parties, creates a political landscape where third parties and independent voters face significant challenges. While the duopoly provides stability and a framework for governance, it also limits voter choice and suppresses alternative viewpoints. This system exhibits a tangled_rope dynamic, with both coordinating and extractive elements.",
+    "key_agents": [
+      "Democratic Party: Institutional beneficiary (institutional/arbitrage) - Benefits from established structures and resources.",
+      "Republican Party: Institutional beneficiary (institutional/arbitrage) - Benefits from established structures and resources.",
+      "Third Parties: Primary victim (powerless/trapped) - Faces significant barriers to entry and limited opportunities for success.",
+      "Independent Voters: Primary victim (powerless/trapped) - Feels limited choices and preferences not adequately represented."
+    ],
+    "logic_rationale": "The duopoly extracts from the third parties and independent voters by suppressing their influence, while the Democratic and Republican parties benefit from maintaining their dominance. The theater_ratio reflects that while the parties engage in performative politics, they also perform real governance functions.",
+    "perspectival_gap": "Third parties and independent voters experience the duopoly as a snare, limiting their ability to participate effectively in the political process. The Democratic and Republican parties see it as a rope, providing a stable framework for governance and enabling them to maintain their power. Political scientists recognize both the coordination and extraction functions of the system, classifying it as a tangled rope.",
+    "directionality_logic": "The Democratic and Republican parties benefit by maintaining their power and influence, while the third parties and independent voters are suppressed and limited in their choices."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "campaign_finance_regulation",
+      "media_bias"
+    ]
+  },
+  "directionality_overrides": []
+}

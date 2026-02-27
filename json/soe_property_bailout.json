@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "soe_property_bailout",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "soepb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Directed Purchase of Distressed Real Estate Assets",
+    "topic_domain": "economic/real_estate_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_owned_enterprises",
+      "financial_system_stability",
+      "developer_investor_class"
+    ],
+    "victims": [
+      "soe_shareholders",
+      "private_workers_displaced",
+      "future_taxpayers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Displaced Private Worker",
+      "comment": "PERSPECTIVE 1: DISPLACED PRIVATE WORKER (SNARE) \u2014 Unable to exit the labor market or housing market; bears full cost of SOE-driven distress purchasing. Worker productivity is extracted to service debt on properties purchased at inflated prices by SOEs following state directive. No alternative employment or housing options in planned purchase zones. Maximum experienced extraction \u2014 trapped within geographic and sectoral constraints."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Private Developer",
+      "comment": "PERSPECTIVE 2: PRIVATE DEVELOPER (TANGLED ROPE) \u2014 Constrained but not trapped. State purchases distressed assets, preventing complete firm failure (coordination benefit: liquidity injection, continuation of operations). Simultaneously extracts: SOE purchase prices are often below market, state has monopoly on remaining buyer pool, future development rights are restricted. Developer experiences both rescue and subordination \u2014 genuine coordination function paired with asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State-Owned Enterprise",
+      "comment": "PERSPECTIVE 3: STATE-OWNED ENTERPRISE (ROPE) \u2014 Primary beneficiary with full arbitrage exit. Directed to purchase distressed properties at below-market rates, reducing systemically risky defaults, stabilizing credit cascades. SOE views constraint as coordination: preventing financial system collapse generates institutional survival benefit for all SOE peers. Purchase directives solve collective action problem (no individual SOE would voluntarily absorb distressed assets) through state mandate. Net beneficiary \u2014 extraction flows toward SOE, not away."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Macroeconomic Stabilization Coalition",
+      "comment": "PERSPECTIVE 4: MACROECONOMIC STABILIZATION COALITION (SCAFFOLD) \u2014 Organized agents (central government, banking regulators, urban planners) see property bailout as temporary intervention with an exit path: SOE absorption of distressed assets buys time for market normalization, debt restructuring, and private sector recovery. Policy is explicitly temporary \u2014 contingent on developer recovery or asset liquidation. Theater is low relative to snare perspective: the goal is system stability, not performative rhetoric. Sunset clause implicit in macroeconomic assumptions: as property markets stabilize and credit conditions ease, state directive pressure should reduce."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The SOE Asset Management Bureau",
+      "comment": "PERSPECTIVE 5: SOE ASSET MANAGEMENT BUREAU (PITON) \u2014 The formal institutional mechanism for state property purchase has largely become performative. Original function (market-stabilizing intervention) is degraded \u2014 SOEs now hold massive portfolios of distressed properties with minimal resale prospects. Holdings accumulate faster than markets can absorb; asset values decline toward zero. Institutional ritual persists (quarterly purchase directives, portfolio reporting, restructuring announcements) but primary function has atrophied. Theater ratio high because the system sustains itself through formal procedures and bureaucratic theater rather than actual asset recovery or market clearing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Foreign Investor/Capital Markets Observer",
+      "comment": "PERSPECTIVE 6: FOREIGN INVESTOR / CAPITAL MARKETS OBSERVER (TANGLED ROPE) \u2014 Sees both coordination function and extraction asymmetry from outside. State intervention prevents cascading defaults (coordination benefit prevents systemic risk that would spread to global markets). Simultaneously, foreign capital faces extraction: asset seizure risk, restrictions on foreign property ownership, reduced transparency in SOE portfolio decisions. Foreign investors have exit option (arbitrage out of China markets) but face extraction if they remain. Experienced extraction is high but mobile \u2014 can divest and leave, unlike trapped domestic workers."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of naturalization: from civilizational view, property market cycles are inherent to capitalism; state absorption of distressed assets is an immutable feature of post-crisis stabilization. This perspective risks treating contingent policy choice as structural law. The engine should flag this as a false summit: the policy decision to use SOEs as property absorbers is not a law of nature, but a specific institutional arrangement that could be replaced by alternative mechanisms (market clearing prices, bankruptcy law, foreign investment, etc.)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "soe_portfolio_recovery_threshold",
+      "question": "What timeline and price rebound threshold would constitute successful SOE portfolio recovery vs. permanent value destruction?",
+      "resolution_mechanism": "Longitudinal tracking of SOE property holdings: market price appreciation vs. historical purchase prices; time-to-sale metrics; value-at-risk modeling under various property market scenarios",
+      "impact": "If recovery timeline < 5 years and price rebound > 20%: policy successfully temporary (scaffold logic holds). If timeline > 15 years and rebound < 5%: policy has become permanent extraction structure (piton confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline and price threshold for SOE portfolio recovery"
+    },
+    {
+      "id": "private_developer_counterfactual",
+      "question": "How many private developers would have restructured successfully WITHOUT state directive purchases? (Counterfactual: what was the true insolvency rate vs. temporary illiquidity rate?)",
+      "resolution_mechanism": "Historical analysis of similar financial crises in other jurisdictions with different intervention mechanisms; bankruptcy law analysis comparing outcomes under liquidation vs. state rescue; developer firm survival curves conditional on SOE intervention timing",
+      "impact": "If most developers would have survived through private workouts: extraction is high, policy unnecessarily constrains private solutions. If developers face actual insolvency: coordination benefit is genuine, extraction is moderate due to value-preserving effect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True insolvency rate of developers absent state intervention"
+    },
+    {
+      "id": "soe_shareholder_loss_magnitude",
+      "question": "What is the magnitude of shareholder loss from SOE property holdings relative to total SOE equity and alternative investment returns?",
+      "resolution_mechanism": "Financial analysis of SOE balance sheets; comparative return-on-assets for property vs. alternative state-directed investments; shareholder valuation impact studies",
+      "impact": "If losses < 2% of equity: victims are diffuse (abstract shareholders, future taxpayers), constraint is primarily political/directional. If losses > 10% of equity: shareholder class becomes concrete victim, constraint transitions to clear snare from SOE shareholder perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "SOE shareholder loss magnitude from property bailout"
+    },
+    {
+      "id": "foreign_capital_exit_velocity",
+      "question": "Are foreign investors actually exiting Chinese property markets in response to state intervention, or do they perceive the intervention as stabilizing?",
+      "resolution_mechanism": "Capital flow analysis: foreign FDI in Chinese real estate pre-intervention vs. post-intervention; sovereign wealth fund allocation decisions; international investor confidence indices",
+      "impact": "If exit velocity high: foreign investors see extraction risk (snare/tangled_rope confirmed). If flows stable or increasing: foreign investors see stabilization benefit (rope logic holds).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Foreign capital exit velocity in response to state intervention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "China's state-directed purchase of distressed real estate assets represents a policy intervention where SOEs are mandated to acquire foreclosed or failing properties from private developers to stabilize the financial system and prevent cascading defaults. This constraint exhibits the full spectrum of DR classifications depending on the observer's structural position. From the perspective of SOE management and system stabilizers, the policy is a coordination mechanism (Rope) that prevents financial collapse. From the perspective of private workers displaced by developer failures, it is pure extraction (Snare). From the perspective of foreign investors assessing risk, it exhibits both coordination benefits and extraction asymmetries (Tangled Rope). The constraint's theater ratio (0.65) reflects that formal purchase directives and restructuring announcements maintain institutional appearance while underlying asset recovery becomes increasingly degraded. The extractiveness (0.58) indicates moderate-to-high extraction: SOEs absorb distressed properties at below-market rates under state compulsion, accumulating liabilities that generate long-term shareholder losses and constrain private development alternatives.",
+    "key_agents": [
+      "State-Owned Enterprises: Primary beneficiary (institutional/arbitrage) \u2014 receive directive protection, reduced market competition, state-guaranteed purchase authority",
+      "Private Developers: Secondary beneficiary/victim (moderate/constrained) \u2014 receive liquidity rescue but face subordinated position, limited development rights, below-market asset sale prices",
+      "Displaced Private Workers: Primary victim (powerless/trapped) \u2014 bear labor market contraction, geographic immobility, housing market subordination to SOE purchases",
+      "Future Taxpayers: Structural victim (powerless/trapped) \u2014 will bear cost of SOE portfolio losses through future fiscal consolidation or inflation",
+      "Financial System Stability Apparatus: Organized beneficiary (organized/constrained) \u2014 central bank, banking regulators, macro-prudential authorities stabilize systemic risk through SOE absorption",
+      "Foreign Investors: Secondary victim (powerful/mobile) \u2014 face extraction risk through asset seizure, ownership restrictions, but retain exit option through capital flight",
+      "SOE Asset Management Bureau: Institutional maintainer (institutional/arbitrage) \u2014 sustains performative bureaucratic structure (piton perspective)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The state directive extracts value from SOE shareholders (forced absorption of distressed assets at below-market prices), from future taxpayers (portfolio losses will require fiscal consolidation or inflation), and from displaced workers (labor market contraction). The extraction is not maximal (not 0.75+) because the policy generates genuine coordination benefits: preventing financial system collapse has positive spillovers that partially offset the forced asset absorption. Theater ratio (0.65) reflects institutional drift: the original function (temporary market stabilization) is increasingly displaced by bureaucratic ritual. SOE asset portfolios accumulate faster than markets can absorb; quarterly purchase directives and restructuring announcements become performative as actual asset recovery slows. Suppression (0.68) captures the coercion mechanisms: SOE directives are mandatory (not voluntary coordination), workers lack labor market alternatives in distressed zones, private developers face monopoly buyer (state), foreign investors face ownership restrictions. Suppression is high but not total (not 0.80+) because some actors retain partial exit options (developers can restructure, foreign investors can divest).",
+    "perspectival_gap": "The 7-perspective structure reveals how a single policy generates contradictory classifications. The rope perspective (SOE beneficiary) experiences coordination (preventing defaults is genuine collective benefit). The snare perspective (trapped worker) experiences pure extraction (policy costs absorbed without consent or exit). The scaffold perspective (stabilization apparatus) experiences temporary intervention (sunset path through market normalization). The piton perspective (asset management bureau) experiences degraded ritual (performative bureaucracy displacing actual recovery). The analytical risk is mountainization: treating the policy as an immutable law of capitalism rather than a contingent institutional choice. This perspectival diversity is not ambiguity \u2014 it is structural reality. Different agents genuinely experience different constraint types because they occupy different positions in the extraction and coordination flows.",
+    "directionality_logic": "Directionality (d) values are derived from each agent's position in the extraction flow. SOE management with arbitrage exit options and beneficiary status derives low d (approximately 0.15-0.25) \u2014 full beneficiary receiving policy protection. Private developers with constrained exit and mixed beneficiary/victim status derive moderate d (approximately 0.50-0.60) \u2014 receiving liquidity rescue but losing development autonomy. Displaced workers with trapped status and victim status derive high d (approximately 0.90-0.95) \u2014 bearing full extraction with zero exit options. Foreign investors with mobile exit and victim status derive moderate-high d (approximately 0.55-0.70) \u2014 facing extraction but able to divest. The automatic derivation from beneficiary/victim declarations and exit options produces these directionality values without explicit override. The engine then applies the sigmoid f(d) function to compute experienced extractiveness chi, which varies substantially across perspectives despite identical base properties.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy (extraction vs. coordination ambiguity) is resolved by decomposing the observed constraint into its structural components. The tangled_rope classification is correct because the policy exhibits BOTH genuine coordination (prevents financial system collapse) AND asymmetric extraction (SOE shareholders and workers absorb costs). The coordination function is real: without SOE absorption, cascading defaults would spread systemically. The extraction is also real: SOEs purchase below market prices under coercion, and workers bear labor market contraction. The mandatrophy resolves when we recognize that tangled_rope is not a compromise between rope and snare \u2014 it is a distinct type where coordination and extraction are simultaneously present and structurally necessary. The private developer receives liquidity rescue (coordination benefit) while losing development autonomy (extraction cost). The financial system receives stability (coordination) while workers absorb adjustment (extraction). The base classification of tangled_rope with extractiveness 0.58 captures this dual nature correctly. The false mountain (analytical observer risk) is caught by the engine's false summit detector: there is nothing immutable or natural about this policy choice \u2014 alternative mechanisms (bankruptcy law, foreign investment liberalization, private debt restructuring) exist."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.42
+  },
+  "network": {
+    "affects_constraints": [
+      "chinese_shadow_banking_exposure",
+      "developer_debt_cascade",
+      "local_government_fiscal_dependency"
+    ],
+    "dual_formulation_note": "SOE property bailout is downstream of specific developer insolvencies but represents a distinct structural constraint on resource allocation. The upstream constraints (developer leverage, shadow banking exposure) have their own extractiveness values reflecting financial fragility; the bailout constraint has its own extractiveness reflecting the state's monopoly on property absorption and the resulting imposition of costs on SOE shareholders and workers. The two constraints are linked: developer insolvency triggers bailout activation, but bailout structure is independently consequential for financial stability and labor market outcomes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.62
+    }
+  ]
+}

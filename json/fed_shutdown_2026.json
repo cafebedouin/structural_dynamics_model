@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "fed_shutdown_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fedshut"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "The 2026 DHS/ICE Funding Standoff",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_immigration_enforcement_capacity"
+    ],
+    "victims": [
+      "federal_workers_without_payment",
+      "citizens_dependent_on_federal_services",
+      "immigrants_in_detention_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Federal Workers and Service Dependents",
+      "comment": "PERSPECTIVE 1: FEDERAL WORKERS & SERVICE DEPENDENTS (SNARE) \u2014 Frontline federal workers and citizens dependent on federal services (Medicare processing, VA care, food safety inspections, immigration adjudication) experience the shutdown as pure extraction without coordination benefit. No exit available; cannot opt out of dependency on federal systems. Maximum experienced extraction through loss of wages and services."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Detained Immigrants",
+      "comment": "PERSPECTIVE 2: DETAINED IMMIGRANTS (SNARE) \u2014 Individuals in ICE detention during shutdown experience the standoff as pure constraint with no exit. Detention operations continue but with reduced services, medical care delays, and administrative processing halts. Structurally trapped; no coordination benefit; maximum suppression through absence of alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congressional Oversight Coalition",
+      "comment": "PERSPECTIVE 3: CONGRESSIONAL OVERSIGHT COALITION (TANGLED ROPE) \u2014 Democratic and moderate Republican legislators advocating for ICE oversight reforms experience both coordination and extraction. The constraint performs a coordination function: it forces reckoning with deaths in custody and demands for transparency. But it also extracts through uncertainty costs, reputational risk, and the threat of shutdown extension. Constrained exit because backing down looks like abandonment of oversight; pressing forward risks shutdown extension. Mixed benefit and cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "ICE Enforcement Leadership",
+      "comment": "PERSPECTIVE 4: ICE ENFORCEMENT LEADERSHIP (ROPE) \u2014 ICE administration experiences the standoff as pure coordination: the shutdown funding constraint forces clarification of its operational mandate and forces visibility of custody practices. Leadership benefits from either outcome \u2014 if they capitulate, they retain operational authority; if they resist and force concessions on oversight, they preserve enforcement capacity while appearing responsive. Arbitrage exit: they can walk away through minimal concessions that leave enforcement largely intact. Net beneficiary of the constraint as a coordination mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Partisan Budget Theater",
+      "comment": "PERSPECTIVE 5: PARTISAN BUDGET THEATER (PITON) \u2014 The shutdown standoff as pure political theater: both parties benefit electorally from performative stances (Republicans defending enforcement; Democrats demanding oversight) while the actual operational consequences are minimal \u2014 ICE continues detention operations, essential services continue, and the primary impact is wage delays for 200K+ federal workers. The theater ratio (0.81) reflects that political positioning dominates actual policy outcomes. This constraint persists through partisan inertia, not because it solves a real coordination problem. Degraded function: the shutdown mechanism was designed to force budget compromise; it now primarily generates electoral positioning for the next cycle."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer \u2014 System Dysfunction View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SYSTEM DYSFUNCTION (SNARE) \u2014 From a systems perspective, the shutdown constraint reveals that the federal budgeting process has collapsed as a coordination mechanism. The shutdown hostage-taking (using payment to 200K+ federal workers and access to critical services as leverage) represents the system's failure to resolve disputes over immigration enforcement and oversight through normal legislative process. The constraint persists because neither party can afford to back down without appearing weak to their base. This perspective identifies the constraint as structural dysfunction, not a feature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oversight_demand_legitimacy",
+      "question": "Are the deaths in ICE custody that triggered the standoff attributable to systemic failures requiring institutional reform, or to individual incidents that do not warrant broader operational constraints?",
+      "resolution_mechanism": "Forensic review of custody protocols; comparison of ICE death rates to comparable detention systems; analysis of whether deaths were preventable through existing operational changes",
+      "impact": "If systemic: oversight demands are structural and the shutdown constraint will persist until resolved. If individual: oversight demands lack empirical grounding and the constraint becomes pure political theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ICE custody deaths reflect systemic failures or individual incidents"
+    },
+    {
+      "id": "enforcement_capacity_vulnerability",
+      "question": "Does ICE operations actually depend on immediate DHS appropriations, or can the agency continue enforcement-critical functions indefinitely through continuing resolutions and carryover authority?",
+      "resolution_mechanism": "Analysis of ICE budget structure; assessment of which functions are immediately halted vs. deferred during shutdowns; historical data on detention operations continuity across prior shutdowns",
+      "impact": "If dependent: shutdown pressure is real and agencies must negotiate. If autonomous: the shutdown mechanism has zero coercive power and both parties are engaged in pure theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ICE enforcement capacity depends on immediate appropriations"
+    },
+    {
+      "id": "congressional_negotiating_resolve",
+      "question": "Will congressional oversight advocates maintain their funding demands through an extended shutdown (2+ weeks), or will they capitulate under pressure from federal workers' unions and service disruption complaints?",
+      "resolution_mechanism": "Tracking of congressional voting positions; union pressure campaigns; polling of constituent impact sentiment; historical comparison to prior shutdown endurance patterns",
+      "impact": "If maintain: constraint will force policy concessions on ICE oversight. If capitulate: constraint collapses into pure theater and ICE retains operational autonomy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Congressional resolve to maintain ICE oversight demands through extended shutdown"
+    },
+    {
+      "id": "alternative_oversight_mechanisms",
+      "question": "Could ICE oversight be achieved through executive order, inspector general investigation, or legislative rider without leveraging the shutdown mechanism?",
+      "resolution_mechanism": "Legal analysis of executive authority over ICE operations; IG investigative scope; procedural analysis of legislative riders; comparison to prior oversight victories not requiring shutdowns",
+      "impact": "If alternative mechanisms exist: the shutdown constraint is chosen, not imposed \u2014 meaning both parties prefer the theater to actual reform. If alternatives are exhausted: the shutdown is a genuine last-resort mechanism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether ICE oversight could be achieved through non-shutdown mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.71
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 7
+  },
+  "commentary": {
+    "narrative_context": "The 2026 DHS/ICE funding standoff represents a structural clash between executive enforcement autonomy and legislative oversight authority, triggered by deaths of detainees in ICE custody. The standoff creates a classic federal shutdown dynamic in which two groups \u2014 federal workers without payment and citizens dependent on federal services \u2014 bear the costs of a dispute to which they are not parties. The constraint exhibits high theater ratio (0.81) because both parties gain electoral positioning regardless of policy outcome: Republicans demonstrate enforcement resolve, Democrats demonstrate oversight commitment, and neither party faces direct costs. Federal workers and service dependents face the extraction with no exit option (trapped). ICE leadership faces the constraint as a coordination mechanism that forces institutional visibility and may yield minor oversight concessions while preserving enforcement autonomy (rope). The analytical observer sees the shutdown as evidence of system dysfunction \u2014 the budgeting process has collapsed as a mechanism for resolving disputes over constitutional authority allocation.",
+    "key_agents": [
+      "Federal Workers: Primary victims (powerless/trapped) \u2014 lose wages and benefits; cannot opt out of employment dependency",
+      "Service Dependents: Primary victims (powerless/trapped) \u2014 lose access to Medicare processing, VA care, food safety oversight; cannot bypass federal services",
+      "Detained Immigrants: Secondary victims (powerless/trapped) \u2014 face delayed processing and reduced services; no exit from detention",
+      "Congressional Oversight Coalition: Organized advocates (organized/constrained) \u2014 benefit from constraint as visibility mechanism but face shutdown extension costs",
+      "ICE Enforcement Leadership: Primary beneficiary (institutional/arbitrage) \u2014 controls outcome through operational continuity; can concede minor oversight while retaining autonomy",
+      "Partisan Political Ecosystem: Theater beneficiary (powerful/mobile) \u2014 both parties gain electoral positioning from standoff; can exit through negotiated settlement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from federal workers and service dependents through wage loss and service disruption, but the extraction is not maximal because: (1) ICE operations continue largely unchanged, (2) essential federal services (Social Security, Medicare) continue, and (3) the shutdown duration is typically 1-3 weeks, not months. The extractiveness reflects the real costs to the powerless without overstating system-wide paralysis. Suppression (0.68): High. Federal workers and service dependents face near-total suppression of alternatives \u2014 they cannot opt out of federal employment or federal services, they cannot negotiate individual exemptions, and the shutdown mechanism itself is coercive (threat of continuing payment loss). Congressional advocates face constrained alternatives (can negotiate concessions or back down; cannot force resolution). Suppression is not maximal (0.99) because congressional actors retain some negotiating power. Theater ratio (0.81): High and rising. The shutdown constraint generates pure political theater in the partisan positioning dimension (both parties benefit electorally from their stances) while the actual policy outcomes are minimal. Initial theater ratio (0.62) reflects the genuine underlying dispute about ICE oversight. Rising theater ratio (0.81 by day 7) reflects that partisan positioning increasingly dominates the public narrative while actual policy negotiations stall. The increase from 0.62 to 0.81 over the interval models Goodhart drift: the constraint's original function (force budget agreement on ICE oversight) is being replaced by its performative function (generate electoral narrative).",
+    "directionality_logic": "Each agent's directionality is derived from their structural position relative to the extraction flow. Federal workers and service dependents are powerless agents with trapped exit options \u2014 they experience maximum directionality (d \u2248 0.95) because they bear costs they did not create and cannot escape. ICE leadership is an institutional beneficiary with arbitrage exit options \u2014 they experience low directionality (d \u2248 0.15) because they control the outcome and face minimal personal cost. Congressional oversight advocates are organized agents with constrained exit options \u2014 they experience moderate-high directionality (d \u2248 0.55) because they created the constraint (through oversight demands) but cannot easily escape the shutdown dynamics they triggered. The partisan political ecosystem experiences low directionality (d \u2248 0.20) because both parties can exit through settlement at any point; they choose to persist through the shutdown for electoral benefit. The piton classification derives from the theater gate: the constraint's primary function (forcing ICE budget agreement) is degraded, replaced by performative positioning, yet the constraint persists through institutional inertia (the shutdown mechanism is structurally embedded in the budgeting process).",
+    "perspectival_gap": "The perspectival gap between the federal worker (snare) and ICE leadership (rope) is maximal. The worker experiences pure extraction with no exit and no coordination benefit \u2014 the shutdown constraint extracts their wages and livelihood to force a dispute they do not participate in. ICE leadership experiences the constraint as coordination that forces institutional transparency and may yield minor concessions while they retain operational autonomy. Both are looking at the same structural reality: the shutdown mechanism ties ICE funding to budget negotiations. The worker's structural position makes it a snare; the leadership's structural position makes it a rope. The piton perspective identifies the constraint as degraded theater \u2014 the shutdown mechanism's original function (force timely budget agreement) has atrophied, replaced by its performative function (generate partisan electoral narrative). Federal workers bear the costs of this degradation; partisan actors benefit from it.",
+    "mandatrophy_analysis": "SNARE vs. PITON RESOLUTION: The constraint is primarily a Snare (federal workers and service dependents experience maximum extraction without exit). The piton classification captures an important secondary insight: the shutdown mechanism itself has degraded from a coordination tool (force timely budget agreement) to a performative tool (generate partisan positioning). The mandatrophy is resolved by recognizing that both classifications are correct from different temporal perspectives. Short-term (immediate perspective): Snare. Federal workers face wage loss and service dependents face service disruption as immediate extraction. Long-term (civilizational perspective): Piton. The shutdown mechanism's function has decayed because neither party faces sufficient cost to force capitulation \u2014 the constraint persists through institutional inertia (it is embedded in the budget process) not because it works (it generates electoral benefit regardless of outcome). The rising theater ratio (0.62 to 0.81) models this decay: the functional component (actual policy negotiation on ICE oversight) is being replaced by the performative component (partisan positioning). Federal workers pay the cost of this institutional degradation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "executive_enforcement_congressional_oversight",
+      "federal_budgeting_mechanism_failure"
+    ],
+    "dual_formulation_note": "The 2026 standoff is downstream of the underlying constitutional tension between executive immigration enforcement authority and congressional appropriation power. That structural constraint (executive_enforcement_congressional_oversight) has \u03b5 \u2248 0.35 (tangled rope at civilizational scale). The funding standoff (fed_shutdown_2026) has higher \u03b5 (0.58) because it operates at immediate timescale and adds coercive extraction through wage loss. The budgeting mechanism failure (federal_budgeting_mechanism_failure) is a separate constraint with its own \u03b5 \u2248 0.52 reflecting the general collapse of the budget process as a coordination tool. The standoff leverages mechanism failure to apply coercion in the underlying institutional dispute."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

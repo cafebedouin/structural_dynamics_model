@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "uk_graduate_visa_salary_threshold",
+    "version": "1.0",
+    "generated_date": "2024-11-02",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "UK Graduate Visa Minimum Salary Threshold",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_domestic_labor_market",
+      "uk_universities_prestige"
+    ],
+    "victims": [
+      "international_graduates",
+      "uk_economy_innovation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "International Graduates",
+      "comment": "International graduates face significant barriers to meeting the increased salary threshold. They are often trapped due to visa sponsorship requirements and limited job options, making them vulnerable to exploitation and limiting their career prospects in the UK. d=0.95, chi=0.89"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Economy Innovation",
+      "comment": "The UK economy, while benefiting from some protections to the domestic labor market, is constrained by reduced access to international talent. The increased threshold may hinder innovation and economic growth. It benefits from reduced competition but suffers from brain drain. d=0.55, chi=0.52"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Domestic Labor Market",
+      "comment": "The domestic labor market benefits from reduced competition from international graduates, potentially leading to increased wages and job opportunities for UK residents. d=0.05, chi=-0.07"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Universities (Prestige)",
+      "comment": "While universities may suffer from lower enrollment due to reduced attractiveness for international students, they may also see increased prestige from perceived higher standards and exclusivity. Also, they can arbitrage by focusing on higher-paying programs. d=0.05, chi = -0.07"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the salary threshold represents a tangled rope. It aims to protect the domestic labor market (coordination) but also extracts from international graduates and potentially harms the UK's innovation ecosystem (asymmetric extraction). d=0.73, chi=0.57"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_economic_impact",
+      "question": "What is the long-term impact of the salary threshold on the UK's economy and innovation?",
+      "resolution_mechanism": "Longitudinal studies analyzing economic growth, innovation metrics, and talent retention rates.",
+      "impact": "If negative: the policy may need to be revised or replaced. If positive: the policy may be expanded or maintained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term impact of the salary threshold on the UK's economy and innovation"
+    },
+    {
+      "id": "attractiveness_to_international_talent",
+      "question": "How will the salary threshold affect the UK's attractiveness to international talent?",
+      "resolution_mechanism": "Surveys and data analysis of international student applications and enrollment rates.",
+      "impact": "If reduced: the UK may need to offer alternative pathways for attracting talent. If unchanged: the policy may be maintained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact on the UK's attractiveness to international talent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The UK government's decision to increase the minimum salary threshold for the Graduate Visa route presents a complex interplay of economic and political considerations. While intended to protect the domestic labor market, it also creates significant challenges for international graduates and could potentially harm the UK's innovation ecosystem. The threshold acts as a snare for those graduates, limiting their opportunities. This analysis considers multiple perspectives to understand the full scope of the issue.",
+    "key_agents": [
+      "International Graduates: Primary target (powerless/trapped)",
+      "UK Economy Innovation: Secondary target (moderate/constrained)",
+      "UK Domestic Labor Market: Primary beneficiary (institutional/arbitrage)",
+      "UK Universities (Prestige): Secondary beneficiary (institutional/arbitrage)",
+      "Analytical Observer: Considers all perspectives (analytical/analytical)"
+    ],
+    "logic_rationale": "The extractiveness (0.65) is high because the salary threshold directly limits the opportunities for international graduates and makes it difficult for them to remain in the UK. Suppression (0.70) is also high due to limited alternative pathways for graduates to stay in the UK legally. Theater Ratio is relatively low (0.30), indicating the policy is more functional than performative.",
+    "perspectival_gap": "International graduates experience the policy as a snare due to limited exit options and potential exploitation. The UK economy experiences it as a tangled rope, balancing domestic labor market protection with potential harm to innovation. The domestic labor market views it as a rope, benefiting from reduced competition, as do universities interested in prestige.",
+    "directionality_logic": "The directionality is determined by the relationship of each agent to the constraint. International graduates are the primary targets, resulting in a high 'd' value. The domestic labor market and universities benefit, resulting in a low 'd' value. The UK economy experiences a mixed effect.",
+    "mandatrophy_analysis": "The constraint could be misclassified as a pure enforcement mechanism (rope) without considering the negative impact on international graduates and the innovation economy. The analysis reveals it to be more of a snare, as it extracts significant value from a vulnerable group while providing only limited benefits to the domestic labor market."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

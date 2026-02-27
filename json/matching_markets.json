@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "matching_markets",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mmce"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Matching Market Congestion Externality",
+    "topic_domain": "economic/market_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator",
+      "early_participants"
+    ],
+    "victims": [
+      "late_entrants",
+      "market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Late-Arriving Gig Worker",
+      "comment": "PERSPECTIVE 1: LATE-ARRIVING GIG WORKER (SNARE) \u2014 Enters a congested market with deteriorating match quality. Cannot exit without accepting employment elsewhere or withdrawing from the gig economy. Faces suppressed matching probability and reduced wage options. Trapped in a degraded equilibrium created by prior entrants. Maximum extraction from structural position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 2: PLATFORM OPERATOR (ROPE) \u2014 Benefits from network externalities and scaling: more participants generate more transaction volume and data. Experiences congestion as a coordination problem manageable through algorithmic matching improvements. Has arbitrage options (geographic expansion, service line expansion, algorithmic tuning). Net beneficiary from the constraint structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Early-Stage Participant",
+      "comment": "PERSPECTIVE 3: EARLY-STAGE PARTICIPANT (TANGLED ROPE) \u2014 Captured mixed benefits and costs. Early arrival grants matching advantage (coordination benefit), but congestion accumulation eventually degrades their outcomes (extraction cost). Can switch platforms or exit (mobile), but only at switching cost. Experiences the constraint as both enabling and constraining."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (SCAFFOLD) \u2014 Can impose disclosure requirements (match rates, queue times, algorithm transparency) that enable participants to make exit decisions. Temporary intervention architecture: as information transparency improves and alternative platforms compete, the congestion penalty becomes less extractive because participants can actively optimize their participation. Sunset clause embedded in information-driven market correction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Matching Theory",
+      "comment": "PERSPECTIVE 5: ACADEMIC MATCHING THEORY (PITON) \u2014 Stable matching algorithms (Gale-Shapley) are applied as if they solve the matching problem, but in congested markets with incomplete information and dynamic entry, algorithmic stability becomes largely theatrical. The theory persists as the institutional justification for market design despite low functional verification in high-congestion regimes. Theater ratio high because algorithm validation focuses on theoretical stability properties, not empirical matching outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information asymmetry in congested matching markets is inherent to the problem structure: participants cannot observe all alternative matches simultaneously, creating an irreducible friction that generates congestion. However, the structural data contradicts the mountain classification \u2014 the engine will identify this as a false summit, revealing that congestion externality is contingent on platform architecture choices (matching frequency, information disclosure, queue transparency) rather than an immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "congestion_threshold_dynamics",
+      "question": "At what participation density does matching probability collapse from coordination benefit to extraction externality?",
+      "resolution_mechanism": "Empirical measurement of match rates across participation densities in multiple platforms; identification of inflection points where additional participation decreases individual match probability",
+      "impact": "If threshold is low and sharp: congestion externality is severe and early-arriving participants capture disproportionate value (Snare confirmed for latecomers). If threshold is high and gradual: externality is diffuse and many participants benefit from scale (Rope from more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Participation density at which congestion externality becomes dominant"
+    },
+    {
+      "id": "algorithmic_mitigation_effectiveness",
+      "question": "Can matching algorithms (machine learning, preference prediction, dynamic matching frequencies) substantially reduce congestion externality without introducing new extraction mechanisms?",
+      "resolution_mechanism": "Comparative analysis of match rates pre/post algorithmic improvement; identification of whether algorithmic opacity creates new asymmetries or enforcement costs",
+      "impact": "If effective and transparent: congestion becomes a solvable coordination problem (Rope classification strengthens). If effective but opaque: congestion is replaced by algorithmic extraction (Snare from algorithmic opacity perspective). If ineffective: externality is structural (Mountain false summit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic improvements can resolve congestion without new extraction"
+    },
+    {
+      "id": "platform_incentive_alignment",
+      "question": "Do platform operators have economic incentives to reduce congestion externality or to maintain it (congestion increases transaction volume and data collection)?",
+      "resolution_mechanism": "Analysis of platform behavior: pricing policies, queue management, algorithmic prioritization of volume vs match quality; comparison of platforms with different ownership structures (cooperative vs for-profit)",
+      "impact": "If operators benefit from congestion: constraint is actively enforced extraction (Snare/Tangled Rope). If operators bear costs of congestion: constraint is an unintended coordination problem (Rope). If mixed: directionality differs by platform business model.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether platform economic incentives align with reducing congestion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Matching markets (ride-sharing, online dating, job boards, freelance platforms) create a structural externality: increased participation improves the matching pool initially, but beyond an optimal density, congestion reduces individual match probability and quality for all participants, particularly those entering later. This constraint exhibits the full range of DR classifications from different structural positions. The platform operator experiences coordination benefits and arbitrage options. Early participants capture information asymmetry advantage. Late entrants face suppressed matching probability with limited exit options. Regulators can impose transparency requirements that create sunset dynamics. The academic matching theory provides institutional justification through algorithmic stability proofs that become increasingly theatrical in congested regimes. The analytical observer risks naturalizing congestion as an inherent matching problem, when it is actually contingent on platform architecture (matching frequency, information disclosure, queue design). The extractiveness trajectory shows congestion accumulating over time: initially minimal (0.15) in sparse markets, growing to moderate (0.38) as density increases. The theater ratio remains low (0.35) because the matching function retains genuine coordination value even in congested states \u2014 unlike purely performative constraints, algorithmic matching continues to produce real matches.",
+    "key_agents": [
+      "Platform Operator: Institutional beneficiary (institutional/arbitrage) \u2014 captures network externalities, transaction volume, and competitive moat as participation scales",
+      "Early Participants: Primary beneficiary (moderate/mobile) \u2014 enjoy information asymmetry advantage and higher match rates before congestion dominates",
+      "Late Entrants: Primary victim (powerless/trapped) \u2014 face degraded matching probability, suppressed choice quality, reduced outside options; trapped by employment/relationship market constraints",
+      "Market Efficiency: Diffuse victim (analytical/analytical) \u2014 aggregate welfare decreases as congestion externality reduces total matching surplus",
+      "Regulatory Authority: Organized actor (organized/constrained) \u2014 can impose disclosure requirements (transparency, queue data, algorithm auditability) to enable informed exit decisions",
+      "Matching Theory Community: Institutional actor (institutional/arbitrage) \u2014 perpetuates algorithmic stability frameworks that address theoretical stability but not empirical congestion outcomes"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The constraint exhibits genuine extraction \u2014 late entrants' matching probability is suppressed by prior entrants' presence, creating an asymmetric cost distribution. However, extractiveness is not maximal (0.46+) because the constraint generates real coordination value (matching is still occurring) and because participants retain some options (geographic mobility, service switching, market exit). The trajectory from 0.15 to 0.38 reflects accumulating congestion: sparse markets have minimal externality; dense markets exhibit significant externality. Suppression (0.42): Moderate. Late entrants face substantial barriers to exit (employment necessity, relationship market constraints), but suppression is not extreme because alternative platforms exist (albeit at switching cost) and geographic arbitrage is sometimes available. Suppression increases as platform network effects concentrate market share. Theater ratio (0.35): Low. The constraint retains genuine functional value \u2014 algorithmic matching continues to produce real matches even in congestion. Theater increases only when matching metrics become performative (reporting match rates without accounting for acceptance/completion rates, or matching queue times without transparency). The low initial theater reflects that the constraint is primarily a coordination problem; theater would increase if platforms began using algorithmic opacity to hide congestion dynamics.",
+    "directionality_logic": "Directionality varies sharply by structural position. Late entrants (powerless/trapped) have d \u2248 0.95 \u2014 they bear maximum extraction with no exit, yielding high f(d) \u2248 1.42. Early participants (moderate/mobile) have d \u2248 0.45 \u2014 they have benefited from the coordination function but face accumulating extraction, with ability to switch platforms; d \u2248 0.45 yields f(d) \u2248 0.60. Platform operators (institutional/arbitrage) have d \u2248 0.05 \u2014 they are net beneficiaries with full exit optionality (geographic expansion, service innovation); d \u2248 0.05 yields f(d) \u2248 -0.12. The scope modifier \u03c3(S) applies: national scope (\u03c3=1.0) for regional job/dating markets; global scope (\u03c3=1.2) for international ride-sharing and freelance platforms, amplifying effective extraction where platforms operate at global scale. The chi formula produces: late_entrant_chi \u2248 0.38 \u00d7 1.42 \u00d7 1.0 \u2248 0.54 (severe extraction); early_participant_chi \u2248 0.38 \u00d7 0.60 \u00d7 1.0 \u2248 0.23 (moderate); platform_operator_chi \u2248 0.38 \u00d7 (-0.12) \u00d7 1.0 \u2248 -0.05 (net benefit).",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The platform operator sees a coordination mechanism with scaling benefits (Rope) \u2014 more participants improve matching opportunities for all. Early participants see a mixed coordination-extraction system (Tangled Rope) \u2014 they benefited from early entry but increasingly experience congestion costs. Late entrants see pure extraction (Snare) \u2014 suppressed matching probability with no exit. The regulatory observer sees a temporary problem with a transparency-driven sunset (Scaffold) \u2014 disclosure of congestion metrics enables informed entry decisions and supports platform competition. The matching theory community sees an algorithmic solution (Piton) \u2014 stable matching proofs persist despite low explanatory power for congestion outcomes, justified by institutional inertia. The civilizational observer risks naturalizing congestion as inherent to matching (Mountain false summit) \u2014 but the structural data reveals that congestion severity is contingent on platform architecture: matching frequency, information disclosure, queue transparency, and algorithmic transparency all modulate congestion externality.",
+    "mandatrophy_analysis": "This constraint demonstrates mandatrophy resolution through inter-institutional perspectival decomposition. The confusion is between (1) the coordination function of matching (genuine, persistent, creates real value), and (2) the extraction externality of congestion (contingent on architecture, not inherent to matching). Snare classification for late entrants is correct: they experience suppressed matching with trapped exit. Rope classification for platform operator is correct: they experience coordination benefits. Tangled Rope for early participants is correct: they experience both coordination benefits and extraction externality. The mandatrophy is resolved by recognizing that all four classifications are simultaneously true \u2014 they are not contradictory readings of the same structural position, but rather consistent readings of different structural positions within the same market. The false summit (mountain view) is correctly identified by the engine: congestion appears inherent only from the analytical observer who has not situated themselves in any agent's actual constraints. The regulatory scaffold perspective is not aspirational \u2014 it is the actual structural path: as information transparency improves (through regulatory disclosure, third-party auditing, platform competition), participant decision-making becomes more informed, late entrants can better assess entry timing, and platform operators face pressure to optimize for match quality rather than volume, reducing the congestion externality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_search_cost_asymmetry",
+      "information_disclosure_gaming"
+    ],
+    "dual_formulation_note": "The matching market congestion externality decomposes into two structurally distinct claims: (1) the coordination function of matching (low extractiveness, persistent), and (2) the congestion-driven externality on late entrants (moderate-high extractiveness, contingent on platform architecture). This story models the hybrid system. Downstream constraints address search cost asymmetries (how platforms distribute matching costs) and information disclosure gaming (how platforms present congestion metrics to participants)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

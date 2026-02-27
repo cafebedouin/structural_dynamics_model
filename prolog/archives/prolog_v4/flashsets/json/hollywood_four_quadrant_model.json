@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "hollywood_four_quadrant_model",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Four-Quadrant Blockbuster Model",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hollywood_studios"
+    ],
+    "victims": [
+      "independent_filmmakers",
+      "niche_audiences"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Independent Filmmakers",
+      "comment": "Independent filmmakers often find it difficult to secure funding and distribution due to the four-quadrant model's focus on broad appeal. They are trapped in a system that prioritizes mainstream content."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mainstream Actors",
+      "comment": "Actors who desire diverse roles and artistic expression are constrained by the limited opportunities in four-quadrant films, which prioritize certain types of characters and narratives. They benefit from job security and high salaries but at the cost of artistic freedom."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Hollywood Studios",
+      "comment": "Hollywood studios benefit from the model by reducing financial risk and maximizing profits through films with broad appeal. It allows them to operate efficiently and predictably, reducing the chance of a box-office failure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From an analytical perspective, the four-quadrant model is a mixed bag. It provides a stable financial foundation for the industry but also limits creativity and diversity in film production."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "audience_segmentation_accuracy",
+      "question": "How accurately does the four-quadrant model reflect actual audience preferences?",
+      "resolution_mechanism": "Data analysis of audience demographics and film preferences, surveys, and market research.",
+      "impact": "If accurate, the model is a valid strategy. If inaccurate, it leads to misallocation of resources and missed opportunities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of audience segmentation used by the four-quadrant model."
+    },
+    {
+      "id": "cultural_impact_assessment",
+      "question": "What is the long-term cultural impact of prioritizing four-quadrant films over niche and independent productions?",
+      "resolution_mechanism": "Cultural studies, analysis of film themes and narratives, and assessment of audience engagement and representation.",
+      "impact": "Understanding the cultural impact can reveal whether the model contributes to cultural homogeneity or creates opportunities for diverse voices.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Long-term cultural impact of prioritizing four-quadrant films."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The four-quadrant model in Hollywood represents a strategy to create films that appeal to a broad demographic, encompassing males and females both under and over the age of 25. While it can lead to significant financial success for studios, it also impacts the types of films produced and the opportunities available to filmmakers and actors. This constraint prioritizes commercial viability, often at the expense of artistic diversity and innovation.",
+    "key_agents": [
+      "Hollywood Studios: Primary beneficiary (institutional/arbitrage) - benefits from reduced financial risk and maximized profits.",
+      "Independent Filmmakers: Primary victim (powerless/trapped) - struggles to secure funding and distribution for niche and non-four-quadrant films.",
+      "Niche Audiences: Secondary victim (powerless/trapped) - limited access to diverse and specialized content.",
+      "Mainstream Actors: Moderate actor (moderate/constrained) - receives job security and high salaries but potentially sacrifices artistic freedom."
+    ],
+    "logic_rationale": "The extractiveness value of 0.55 signifies the extent to which the four-quadrant model extracts from independent filmmakers and niche audiences, limiting their opportunities and access to diverse content. Suppression is high at 0.70 due to the limited funding and distribution options for films that do not align with the model. The theater ratio of 0.60 indicates the degree to which the model relies on performative aspects, such as star power and marketing campaigns, to ensure success.",
+    "perspectival_gap": "The perspectival gap is evident in the divergent experiences of different agents. Hollywood studios view the four-quadrant model as a beneficial rope that facilitates financial stability and reduces risk. Independent filmmakers, on the other hand, experience it as a snare, as it limits their access to funding and distribution. Mainstream actors occupy a constrained position, balancing the benefits of financial security with potential sacrifices in artistic expression. From analytical point, there are extraction effects, even though the model looks good for financial side.",
+    "directionality_logic": "The directionality is derived from the structural relationships. Hollywood studios are beneficiaries with arbitrage, so they experience a low or negative extraction. Independent filmmakers are victims with trapped exit, leading to a high extraction. Mainstream Actors are somehow victims but mobile, which makes the extraction less severe."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "box_office_success_metrics",
+      "film_genre_classification"
+    ]
+  },
+  "directionality_overrides": []
+}

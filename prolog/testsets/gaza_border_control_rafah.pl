@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: gaza_border_control_rafah
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_gaza_border_control_rafah, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,23 +54,34 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: gaza_border_control_rafah
  *   human_readable: Control regime over the Gaza-Egypt (Rafah) border crossing
- *   domain: geopolitical
+ *   domain: geopolitical/humanitarian_access
  *
  * SUMMARY:
- *   This constraint represents the policy of closure and controlled opening of the
- *   Rafah border crossing, the primary exit point for the 2 million residents
- *   of the Gaza Strip not leading to Israel. The policy is jointly enforced by
- *   Israel and Egypt as part of a broader blockade, citing security concerns.
- *   The closure extracts immense value (economic, humanitarian, freedom of movement)
- *   from the Gazan population while providing a security and political coordination
- *   mechanism for the enforcing states.
+ *   The Rafah border crossing represents the primary exit point for the Gaza
+ *   Strip's 2+ million residents to Egypt. Control of this crossing operates
+ *   as a structural constraint that exhibits pure extraction characteristics
+ *   (snare) from the perspective of trapped civilians, while appearing as
+ *   coordination mechanism with extraction to the Israeli and Egyptian
+ *   governments. The constraint combines absolute suppression (no
+ *   alternatives when closed) with high extractiveness (political leverage,
+ *   fee collection, demographic control). The theater ratio reflects that
+ *   border closure is often justified through security rhetoric but lacks
+ *   proportionate relationship to actual security incidents. Extractiveness
+ *   has increased over the 23-year interval (from 0.42 to 0.68) as the
+ *   constraint has shifted from occasional closure to systematic restriction
+ *   of civilian movement during political crises. The constraint is sustained
+ *   through active enforcement by both Israeli military (territorial control)
+ *   and Egyptian security apparatus (border management), making it neither a
+ *   natural law nor a temporary scaffold, but a persistent institutional
+ *   snare.
  *
- * KEY AGENTS (by structural relationship):
- *   - Gazan Civilians: Primary target (powerless/trapped) — bears full extraction of the closure.
- *   - Israeli Security Establishment: Primary beneficiary (institutional/arbitrage) — uses the constraint as a key tool for security control and political leverage.
- *   - Egyptian State Security: Inter-institutional beneficiary (institutional/constrained) — co-enforces the closure for its own security benefits but faces regional political constraints.
- *   - Gazan Governing Authority (e.g. Hamas): Secondary target (organized/constrained) — is a target of the policy but also has some agency in managing the Gazan side of the crossing.
- *   - Analytical Observer: A UN or NGO analyst — sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Gaza Civilian Population: Primary victim (powerless/trapped) — 2+ million residents with no exit options; bears full cost of closures including medical, educational, and economic harms
+ *   - Humanitarian Organizations: Secondary victim (moderate/constrained) — inability to deliver aid when crossing closes; dependent on political permission for operations
+ *   - Egyptian Government: Primary beneficiary-enforcer (institutional/arbitrage) — controls crossing from Egypt side; extracts political leverage and revenues; can choose opening/closure
+ *   - Israeli Government: Secondary beneficiary-enforcer (organized/constrained) — maintains indirect control through occupation; uses closure for population control and security leverage; cannot exit without strategic consequence
+ *   - International Legal Framework: Degraded institution (institutional/arbitrage) — nominally guarantees freedom of movement but lacks enforcement mechanism; persists performatively
+ *   - Analytical Observer: Sees pure extraction structure (analytical/analytical) — no coordination benefit justifies the asymmetric coercion; structure is unambiguous snare
  */
 
 /* ==========================================================================
@@ -79,105 +89,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(gaza_border_control_rafah, 0.55).
-domain_priors:suppression_score(gaza_border_control_rafah, 0.90).   % Structural property (raw, unscaled). Alternatives (sea/air travel, other borders) are actively suppressed.
-domain_priors:theater_ratio(gaza_border_control_rafah, 0.20).       % The closure has a direct, non-performative function (physical control).
+domain_priors:base_extractiveness(gaza_border_control_rafah, 0.68).
+domain_priors:suppression_score(gaza_border_control_rafah, 0.85).
+domain_priors:theater_ratio(gaza_border_control_rafah, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(gaza_border_control_rafah, extractiveness, 0.55).
-narrative_ontology:constraint_metric(gaza_border_control_rafah, suppression_requirement, 0.90).
-narrative_ontology:constraint_metric(gaza_border_control_rafah, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(gaza_border_control_rafah, extractiveness, 0.68).
+narrative_ontology:constraint_metric(gaza_border_control_rafah, suppression_requirement, 0.85).
+narrative_ontology:constraint_metric(gaza_border_control_rafah, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(gaza_border_control_rafah, tangled_rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(gaza_border_control_rafah, snare).
 narrative_ontology:human_readable(gaza_border_control_rafah, "Control regime over the Gaza-Egypt (Rafah) border crossing").
-narrative_ontology:topic_domain(gaza_border_control_rafah, "geopolitical").
+narrative_ontology:topic_domain(gaza_border_control_rafah, "geopolitical/humanitarian_access").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(gaza_border_control_rafah). % Mandatory for Tangled Rope. The border is physically guarded.
+domain_priors:requires_active_enforcement(gaza_border_control_rafah).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(gaza_border_control_rafah, israeli_security_establishment).
-narrative_ontology:constraint_beneficiary(gaza_border_control_rafah, egyptian_state_security).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(gaza_border_control_rafah, gazan_civilians).
-narrative_ontology:constraint_victim(gaza_border_control_rafah, gazan_governing_authority).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three met)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(gaza_border_control_rafah, egyptian_government).
+narrative_ontology:constraint_beneficiary(gaza_border_control_rafah, israeli_government).
+narrative_ontology:constraint_victim(gaza_border_control_rafah, gaza_civilian_population).
+narrative_ontology:constraint_victim(gaza_border_control_rafah, humanitarian_organizations).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE GAZAN CIVILIAN (SNARE)
-% As a victim with trapped exit, the engine derives d ≈ 0.95, giving f(d) ≈ 1.42.
-% χ = 0.55 * 1.42 * 1.0 (national scope) = 0.781. This high effective extraction
-% (χ ≥ 0.66) combined with high suppression (0.90) classifies the constraint as a Snare.
-constraint_indexing:constraint_classification(gaza_border_control_rafah, tangled_rope,
+% PERSPECTIVE 1: GAZA CIVILIANS (SNARE) — Trapped without exit options. Cannot leave Gaza except through Rafah crossing, which is controlled and frequently closed. Bears full cost of closure: no access to medical treatment abroad, educational opportunities, family reunification, or economic livelihood. Maximum extraction with no alternatives or negotiating power. High suppression: military and security apparatus on both sides of crossing creates barriers to exit.
+constraint_indexing:constraint_classification(gaza_border_control_rafah, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 2: THE ISRAELI SECURITY ESTABLISHMENT (ROPE)
-% As a beneficiary with arbitrage exit, the engine derives d ≈ 0.05, giving f(d) ≈ -0.12.
-% χ = 0.55 * -0.12 * 1.0 = -0.066. The negative effective extraction indicates
-% the constraint is a subsidy, a pure coordination tool for security management.
-constraint_indexing:constraint_classification(gaza_border_control_rafah, rope,
+% PERSPECTIVE 2: HUMANITARIAN ORGANIZATIONS (SNARE) — Constrained by government approvals and operational closures. Cannot sustain aid delivery when crossing closes; staff mobility restricted. Face extraction through: requirement to cooperate with security screening, acceptance of operational constraints, and dependence on political permission for program delivery. Moderate power and constrained (not trapped) exit options reflect that organizations can operate in alternative locations, but doing so requires abandoning Gaza beneficiaries.
+constraint_indexing:constraint_classification(gaza_border_control_rafah, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: EGYPTIAN GOVERNMENT (TANGLED ROPE) — Controls Rafah from Egypt side. Experiences constraint as hybrid coordination-extraction. Coordination function: manages orderly flow, prevents security threats, maintains border integrity. Extraction function: leverages border control for political concessions from Hamas, charges fees for crossing, restricts Palestinian labor/trade movement. Net beneficiary but also benefits from coordination that prevents chaos. Arbitrage exit reflects discretion to close or open crossing based on political calculations.
+constraint_indexing:constraint_classification(gaza_border_control_rafah, tangled_rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The observer sees both the coordination function and the asymmetric extraction.
-% Engine derives analytical d ≈ 0.72, giving f(d) ≈ 1.15.
-% χ = 0.55 * 1.15 * 1.2 (global scope) = 0.759. This value of χ (0.40 ≤ χ ≤ 0.90)
-% combined with high base extraction (ε > 0.30) and high suppression (S > 0.40)
-% and the presence of both coordination and extraction functions meets the Tangled Rope criteria.
+% PERSPECTIVE 4: ISRAELI GOVERNMENT (TANGLED ROPE) — Controls Rafah indirectly through military occupation and coordination with Egypt. Experiences constraint as coordination (security management, population control) layered with extraction (leverage over Gaza, restriction of Palestinian movement). Cannot simply exit (would lose security control); instead maintains presence through intermittent enforcement and periodic escalation. Constrained exit reflects that withdrawal requires negotiated settlement, not unilateral choice.
+constraint_indexing:constraint_classification(gaza_border_control_rafah, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: INTERNATIONAL LEGAL FRAMEWORK (PITON) — UN conventions and international humanitarian law ostensibly guarantee freedom of movement and civilian protection. Border closure violates these norms but persists through institutional inertia and lack of enforcement mechanism. The international framework is performative: it condemns closures in statements while lacking capacity to enforce opening. Theater ratio reflects gap between legal principle and operational reality. The constraint persists not because law requires it but because enforcement is absent.
+constraint_indexing:constraint_classification(gaza_border_control_rafah, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) — From a global/civilizational view, this constraint exhibits pure extraction with maximum suppression. Closure is absolute when in effect (no alternatives); has no coordination benefit that would justify extraction (no genuine security need requires closing a border to civilians seeking medical treatment). The structure is pure coercion: power difference + no exit + no coordination justification = snare. No false summit here — the analytical view agrees with the powerless agent's view.
 constraint_indexing:constraint_classification(gaza_border_control_rafah, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-
-% PERSPECTIVE 4A: EGYPTIAN STATE SECURITY (ROPE)
-% As a beneficiary with constrained exit, Egypt experiences the policy as coordination,
-% but with less freedom of action than Israel. The engine derives a d value higher than
-% arbitrage but still low (e.g., d ≈ 0.30), resulting in low positive χ, classifying as Rope.
-constraint_indexing:constraint_classification(gaza_border_control_rafah, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(regional))).
-
-% PERSPECTIVE 4B: GAZAN GOVERNING AUTHORITY (TANGLED ROPE)
-% As a victim with organized power and constrained exit, this agent experiences
-% high extraction but has more agency than a powerless civilian. The derived d is high
-% but less than 'trapped' (e.g., d ≈ 0.75), yielding a χ ≈ 0.66. This borderline value
-% reflects a coercive system they must navigate, a Tangled Rope.
-constraint_indexing:constraint_classification(gaza_border_control_rafah, tangled_rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(national))).
-
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -185,20 +163,18 @@ constraint_indexing:constraint_classification(gaza_border_control_rafah, tangled
 
 :- begin_tests(gaza_border_control_rafah_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    constraint_indexing:constraint_classification(gaza_border_control_rafah, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(gaza_border_control_rafah, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    writeln('Verified: Snare for powerless/trapped, Rope for institutional/arbitrage.').
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(gaza_border_control_rafah, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(gaza_border_control_rafah, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(gaza_border_control_rafah, snare, context(agent_power(analytical), _, _, _)),
-    writeln('Verified: Analytical perspective correctly identifies Tangled Rope.').
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(gaza_border_control_rafah, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_pass) :-
-    narrative_ontology:constraint_beneficiary(gaza_border_control_rafah, _),
-    narrative_ontology:constraint_victim(gaza_border_control_rafah, _),
-    domain_priors:requires_active_enforcement(gaza_border_control_rafah),
-    writeln('Verified: All three structural requirements for Tangled Rope are declared.').
+test(piton_threshold) :-
+    domain_priors:theater_ratio(gaza_border_control_rafah, TR),
+    TR >= 0.70.
 
 :- end_tests(gaza_border_control_rafah_tests).
 
@@ -208,50 +184,16 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): Set high to reflect the immense loss of economic
- *     opportunity, freedom, and humanitarian access imposed on the Gazan population.
- *     It is not higher because the enforcing states derive a genuine security
- *     benefit, not just pure rent.
- *   - Suppression (S=0.90): Extremely high, as alternative exit routes are nonexistent
- *     and actively blockaded by air, land, and sea. This lack of alternatives is
- *     central to the constraint's power.
+ *   Extractiveness (0.68): High. The crossing closure extracts multiple forms of value from trapped population: political leverage over Hamas, demonstration of control, prevention of Palestinian economic integration with Egypt, and management of demographic pressure. The value is asymmetric — Gaza population bears costs (medical access, livelihood, family reunion) while Israeli/Egyptian actors gain control and leverage. The metric reflects historical increase: early 2000s closures were intermittent (0.42); by 2010s, restrictions were systematic (0.58); by 2023, closure had become extended/indefinite (0.68). Suppression (0.85): Extreme. When the crossing is closed, there are no alternatives: Kerem Shalom (Israeli-controlled) is not available for most civilians; sea routes are blocked; tunnels are unreliable and dangerous. This is not constrained movement — it is trapped movement. Suppression remains near maximum even when crossing is nominally open because opening is contingent and can be revoked. Theater ratio (0.58): Moderate. Security justifications for closure exist but are not proportionate. Closures often coincide with political events, not security incidents. International statements condemn closure while lacking enforcement capacity. The performative gap has grown over time as the rhetoric has become more systematic but less connected to operational security needs.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For a Gazan civilian (powerless, trapped), the border
- *   closure is a pure Snare — a coercive trap with no upside. For the Israeli
- *   security establishment (institutional, arbitrage), it's a Rope — a flexible
- *   tool for security coordination that subsidizes their strategic goals. The
- *   analytical observer sees both sides, classifying it as a Tangled Rope: a
- *   system with a real coordination function (for the enforcers) built upon
- *   severe, asymmetric extraction.
+ *   This constraint exhibits a major perspectival gap between the trapped beneficiaries of closure (Israeli/Egyptian governments) and its victims (Gaza population and humanitarian organizations). Israeli and Egyptian governments experience the constraint as coordinated management with extractive benefit — they maintain order and gain political leverage. Gaza civilians experience it as pure snare — absolute suppression with no benefit. The analytical observer's view aligns with the victim's view: there is no coordination benefit that justifies the asymmetry, making this unambiguous snare rather than tangled_rope. The piton perspective (international legal framework) is subordinate — it declares principles that are ignored in practice. The perspectival gap reveals that this constraint is not a mixed coordination-extraction (which would show some victims perceiving benefit or some beneficiaries perceiving obligation); it is asymmetric extraction presented through coordination rhetoric.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: The Israeli and Egyptian states benefit from enhanced security
- *     control and political leverage over Gaza. Their membership in the beneficiary
- *     group, combined with their powerful exit options, drives their directionality
- *     (d) low, resulting in a low or negative effective extraction (χ).
- *   - Victims: The Gazan population and its governing authority bear the costs.
- *     Their victim status and trapped/constrained exit options drive their
- *     directionality (d) high, resulting in a very high χ. This correctly models
- *     the constraint's asymmetric impact.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   Israel and Egypt are both institutional beneficiaries, but their experiences
- *   differ. Israel has 'arbitrage' exit, able to modify the policy unilaterally or
- *   use other leverage points. Egypt has 'constrained' exit, as its policy is
- *   bound by its treaty with Israel, regional pressures, and internal stability
- *   concerns. The framework captures this nuance, classifying the constraint as a
- *   Rope for both, but the underlying derived directionality (and thus χ) would be
- *   different, making the gap between them measurable.
+ *   Gaza civilians derive d ≈ 0.95 (trapped victims with no exit) producing maximum experienced extraction. Humanitarian organizations derive d ≈ 0.70 (constrained victims who can operate elsewhere but would abandon beneficiaries) producing high but not maximal extraction. Egyptian government derives d ≈ 0.10 (beneficiary with arbitrage exit options) producing negative or minimal experienced extraction — they benefit from the constraint's existence. Israeli government derives d ≈ 0.35 (beneficiary constrained by strategic considerations; cannot fully arbitrage away from this constraint without security consequence) producing moderate extraction in their direction. The directionality overrides are not needed — the structural data (beneficiary/victim status + exit options) derives the correct d values directly.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two common errors. It avoids labeling the
- *   blockade as pure coordination (a Rope), which would ignore the massive extraction
- *   from Gazans. It also avoids labeling it as a pure Snare from an analytical view,
- *   which would ignore the genuine (from the enforcers' perspective) security
- *   coordination function it serves for Israel and Egypt. The Tangled Rope
- *   classification acknowledges that a constraint can simultaneously be a tool of
- *   coordination for one group and a tool of extraction for another.
+ *   MANDATROPHY FULLY RESOLVED: This constraint is unambiguous snare across the relevant perspectives. There is no coordination function that would justify the extraction — no genuine security benefit that requires closing a border to civilians seeking medical treatment, family reunion, or livelihood. The security rhetoric is performative cover for extractive control. The constraint does not risk being mislabeled as coordination (Rope) because there is no real coordination benefit. It does not risk being mislabeled as temporary (Scaffold) because there is no credible sunset mechanism — the regime is sustained precisely because it extracts value for the enforcers. The piton perspective (international law) is degraded precisely because the constraint violates stated norms. The mountain perspective is a false summit — closure is not inherent to border management or geopolitics; it is contingent policy choice by enforcers. Mandatrophy resolution confirms: this is pure extraction (snare) enabled by power asymmetry + trapped population + no coordination benefit.
  */
 
 /* ==========================================================================
@@ -259,60 +201,82 @@ test(tangled_rope_structural_gates_pass) :-
    ========================================================================== */
 
 omega_variable(
-    omega_gaza_border_control_rafah,
-    'Is the primary driver of the closure a proportionate security concern or a disproportionate punitive measure for political leverage?',
-    'Declassified security assessments vs. economic impact studies over the closure period.',
-    'If primarily security-driven, ε might be lower (~0.40). If primarily punitive, ε could be higher (~0.70), potentially making it a Snare even from the analytical view.',
+    security_necessity_threshold,
+    'What level of security threat justifies border closure for civilian populations, and does the claimed threat meet that threshold?',
+    'Comparative analysis of closure frequency vs security incidents; examination of whether closures correlate with actual threats or political events; assessment of whether same-magnitude threats at other borders trigger similar restrictions',
+    'If security justification is genuine: constraint may reclassify as scaffold (temporary security measure with exit path). If security claims are pretextual: confirms snare classification and reveals pure extraction.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(security_necessity_threshold, empirical, 'Whether security justifications for closure are proportionate to actual threats').
+
+omega_variable(
+    extraction_beneficiary_identification,
+    'Who materially benefits from Rafah closure, and what is the magnitude of their benefit relative to civilian cost?',
+    'Financial analysis of fees/levies collected; political analysis of leverage gains from closure; comparison of Israeli/Egyptian institutional benefit against humanitarian harm metrics',
+    'If closure benefits are minimal and distributed: might reclassify as tangled_rope with more symmetric extraction. If benefits concentrate in Israeli/Egyptian actors: confirms snare structure with asymmetric extraction.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(extraction_beneficiary_identification, empirical, 'Quantification of who benefits from border restrictions and by how much').
+
+omega_variable(
+    alternative_exit_sufficiency,
+    'Do alternative routes (Kerem Shalom crossing, sea routes, underground tunnels) provide meaningful exit options for trapped population?',
+    'Operational data on throughput, access criteria, and reliability of alternatives; assessment of whether alternatives are available to majority of population or only privileged groups',
+    'If alternatives are robust: exit_options upgrade from trapped to constrained, potentially reclassifying some perspectives. If alternatives are restricted/unreliable: confirms trap status and strengthens snare classification.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(alternative_exit_sufficiency, empirical, 'Whether alternative routes provide genuine exit options for civilian population').
+
+omega_variable(
+    enforcement_mechanism_sustainability,
+    'How sustainable is the two-state enforcement regime (Israel + Egypt coordination) given divergent political interests?',
+    'Historical analysis of coordination breakdowns; examination of incentive misalignment between Israeli security goals and Egyptian domestic politics; assessment of whether regime requires active US/international enforcement support',
+    'If enforcement is fragile: might introduce scaffold perspective with real sunset as regimes realign. If enforcement is stable: confirms persistent snare with high suppression.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(enforcement_mechanism_sustainability, conceptual, 'Structural sustainability of the coordination between Israeli and Egyptian enforcement').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(gaza_border_control_rafah, 0, 10).
+narrative_ontology:interval(gaza_border_control_rafah, 0, 23).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% The blockade has intensified since its imposition around 2007. This data
-% models the accumulation of extractiveness over the period.
-% (T=0 represents ~2007, T=10 represents ~2026).
+% Theater ratio over time
+narrative_ontology:measurement(rafah_theater_2000, gaza_border_control_rafah, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(rafah_theater_2010, gaza_border_control_rafah, theater_ratio, 10, 0.48).
+narrative_ontology:measurement(rafah_theater_2023, gaza_border_control_rafah, theater_ratio, 23, 0.58).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(gbcr_tr_t0, gaza_border_control_rafah, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(gbcr_tr_t5, gaza_border_control_rafah, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(gbcr_tr_t10, gaza_border_control_rafah, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(rafah_extractiveness_2000, gaza_border_control_rafah, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(rafah_extractiveness_2010, gaza_border_control_rafah, base_extractiveness, 10, 0.58).
+narrative_ontology:measurement(rafah_extractiveness_2023, gaza_border_control_rafah, base_extractiveness, 23, 0.68).
 
-% Extraction over time (extraction_accumulation):
-narrative_ontology:measurement(gbcr_ex_t0, gaza_border_control_rafah, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(gbcr_ex_t5, gaza_border_control_rafah, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(gbcr_ex_t10, gaza_border_control_rafah, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The constraint coordinates the actions of two states
-% to achieve a shared security/political goal.
 narrative_ontology:coordination_type(gaza_border_control_rafah, enforcement_mechanism).
+narrative_ontology:affects_constraint(gaza_border_control_rafah, palestinian_labor_market_integration).
+narrative_ontology:affects_constraint(gaza_border_control_rafah, gaza_medical_access_egypt_route).
+narrative_ontology:affects_constraint(gaza_border_control_rafah, humanitarian_aid_delivery_gaza).
 
-% Network relationships: The Rafah crossing policy is inextricably linked
-% to the broader Gaza blockade.
-narrative_ontology:affects_constraint(gaza_border_control_rafah, gaza_maritime_blockade).
-narrative_ontology:affects_constraint(gaza_border_control_rafah, israeli_gaza_perimeter_control).
-
+% DUAL FORMULATION NOTE:
+% This constraint is distinct from but causally upstream of specific harms (medical access, labor integration, aid delivery). Each downstream constraint experiences extraction pressure through the gating mechanism of Rafah closure. The network structure reveals how a single control point (the crossing) propagates extractive effects across multiple institutional domains.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for this constraint. The structural derivation based
-% on beneficiary/victim status and the nuanced exit_options (arbitrage vs.
-% constrained) accurately models the power dynamics and directionality for
-% the key agents.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

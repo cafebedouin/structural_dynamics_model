@@ -2,36 +2,55 @@
   "header": {
     "constraint_id": "alignment_tax_tradeoff",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aln_tax"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Safety-Performance Divergence",
+    "human_readable": "The Safety-Performance Divergence in AI Development",
     "topic_domain": "technological/AI/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "capability_focused_ai_developers",
-      "short_term_investors"
+      "performance_optimized_developers",
+      "capability_race_participants"
     ],
     "victims": [
-      "global_civil_society",
-      "safety_conscious_ai_developers",
-      "future_generations"
+      "safety_constrained_systems",
+      "alignment_research_community",
+      "end_user_safety"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Global Civil Society",
-      "comment": "PERSPECTIVE 1: THE PUBLIC (SNARE) — Trapped within the global system, society bears the externalized risks of unaligned AI without consent or recourse. The competitive race suppresses safer alternatives, creating a coercive environment. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11."
+      "label": "The Safety-Constrained AI Developer",
+      "comment": "PERSPECTIVE 1: SAFETY-CONSTRAINED DEVELOPER (SNARE) \u2014 Faces maximum extraction. Implementing alignment safety measures (value verification layers, interpretability overhead, output filtering, constitutional AI principles) imposes direct computational cost and capability ceiling. In a capability-race dynamic, this developer cannot exit without abandoning market relevance. The safety tax is involuntary; alternatives are foreclosed. Maximum experienced extractiveness."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "End-User Baseline Safety",
+      "comment": "PERSPECTIVE 2: END-USER BASELINE SAFETY (SNARE) \u2014 Cannot exit from exposure to AI systems. Derives value from alignment properties (interpretability, value-alignment, robustness to adversarial inputs) but trapped by market dynamics that incentivize speed and capability over safety. The constraint forces a choice between using unsafe high-capability systems or foregoing capability entirely. No real exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Alignment Research Community",
+      "comment": "PERSPECTIVE 3: ALIGNMENT RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Experiences mixed coordination and extraction. The constraint creates demand for alignment research (coordination benefit \u2014 safety verification, interpretability, value specification become valuable research domains). But constrained exit: alignment researchers lack market power to enforce standards; their findings are subordinate to capability timelines. The community benefits from problem salience but is extracted from by capability-race dynamics that deprioritize their work."
     },
     {
       "classification_type": "rope",
@@ -39,114 +58,161 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Capability-Focused Developer",
-      "comment": "PERSPECTIVE 2: THE LEADING LAB (ROPE) — From this perspective, the tradeoff is a pure coordination challenge: how to efficiently allocate resources to maximize performance. The 'tax' is a cost to be minimized, and the risks are future hypotheticals. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative extraction indicates a net subsidy from the system."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Safety-Conscious Developer",
-      "comment": "PERSPECTIVE 3: THE SAFETY-CONSCIOUS COMPETITOR (TANGLED ROPE) — This actor experiences both the coordination benefits of a shared technological frontier and the extractive penalty of the alignment tax. They are constrained by market realities and cannot afford to fall too far behind on performance. d≈0.65, f(d)≈1.00, σ=1.2 → χ≈0.78."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees the full structure: a genuine coordination problem (advancing AI) coupled with a powerful extractive mechanism (externalizing risk for competitive gain). The high suppression and extraction metrics clearly indicate a hybrid system. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+      "label": "Performance-Optimized Capability Labs",
+      "comment": "PERSPECTIVE 4: PERFORMANCE-OPTIMIZED LABS (ROPE) \u2014 Primary beneficiary with maximum exit optionality. Experiences the constraint as coordination: the safety tax creates a market gap (speed + capability at lower safety level) that they can exploit. Their arbitrage option is direct: deploy fast, collect network effects, establish market dominance before safety requirements can enforce. For these actors, the constraint is a coordination solution to a competitive problem."
     },
     {
       "classification_type": "scaffold",
-      "agent_power": "institutional",
+      "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "continental",
-      "label": "The Regulator",
-      "comment": "PERSPECTIVE 5: THE REGULATOR (SCAFFOLD) — Regulators view their interventions (e.g., AI Acts, executive orders) as temporary scaffolds designed to guide development until better, more permanent solutions are found. They tolerate high initial friction (suppression) because the policies have implicit or explicit sunset clauses (review periods). This perspective sees the problem as manageable and temporary."
+      "spatial_scope": "global",
+      "label": "Regulatory and Standards Bodies",
+      "comment": "PERSPECTIVE 5: REGULATORY/STANDARDS BODIES (SCAFFOLD) \u2014 Organized agents (government AI offices, EU AI Act, ISO safety committees) view the alignment tax as a temporary coordination problem being solved by explicit enforcement: regulatory requirements for transparency, testing, and safety certification are building enforceable verification pathways. High suppression (regulatory authority) but with sunset logic \u2014 as standards mature and testing infrastructure advances, the extraction mechanism (unequal competitive advantage from ignoring safety) loses force. The constraint is enforcement-dependent with a decay trajectory."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Enterprise Safety Requirements",
+      "comment": "PERSPECTIVE 6: ENTERPRISE SAFETY REQUIREMENTS (ROPE) \u2014 Large-scale institutional users (finance, healthcare, critical infrastructure) see safety-constrained AI as pure coordination: their business models depend on explainability, auditability, and liability containment. The alignment tax is a cost they willingly pay (or mandate their suppliers bear). Experienced as coordination rather than extraction because their exit option is explicit: they can enforce safety requirements through procurement standards."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Institutional AI Governance Theater",
+      "comment": "PERSPECTIVE 7: INSTITUTIONAL GOVERNANCE (PITON) \u2014 Legacy AI governance structures (ethics boards, review committees, responsible AI programs) are substantially performative. These structures exist and consume institutional resources, but their functional capacity to enforce alignment properties across the competitive landscape is degraded \u2014 they lack authority over market-dominant actors and face persistent capability-race dynamics that override their recommendations. Governance persists through legitimacy theater, not functional enforcement. Theater ratio > 0.70."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Formal Perspective)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FORMAL VIEW (MOUNTAIN) \u2014 From a universal mathematical perspective, there exists a fundamental tradeoff between expressiveness (capability) and verifiability (safety): as a system's decision space expands, the proof space required for complete alignment verification grows exponentially. Some alignment tax may be intrinsic to the structure of verification itself, not merely a contingent institutional artifact. However, the extent to which this formal limit is ACTIVE (versus merely theoretical) depends on architectural choices and verification methodology \u2014 this perspective risks false summit classification if it naturalizes what is actually a partially contingent engineering choice."
     }
   ],
   "omegas": [
     {
-      "id": "fundamental_tradeoff_existence",
-      "question": "Is the safety-performance tradeoff a fundamental property of intelligence, or a temporary engineering problem solvable with better alignment techniques?",
-      "resolution_mechanism": "Discovery of alignment methods that are provably safe and computationally cheap, or a theoretical proof of the tradeoff's necessity.",
-      "impact": "If solvable, the constraint is a Scaffold that will eventually be dismantled. If fundamental, it has a Mountain-like core, and policy must focus on managing an irreducible risk.",
+      "id": "fundamental_alignment_expressiveness_tradeoff",
+      "question": "Is the alignment safety tax fundamentally intrinsic to verification complexity, or is it primarily an artifact of current architectural choices and insufficient formal verification methods?",
+      "resolution_mechanism": "Longitudinal analysis of alignment overhead (computational, latency, capability loss) across multiple architectural paradigms (language models, symbolic systems, hybrid approaches); comparison of verification methods (exhaustive testing vs formal proof vs empirical evaluation) and their overhead costs; historical analysis of similar tradeoff resolutions in other safety-critical domains (aviation, cryptography)",
+      "impact": "If intrinsic: alignment tax is a mountain-like constraint on all advanced AI systems (non-negotiable cost of safety). If contingent: current alignment tax is substantially an institutional/architectural artifact that better methods could reduce below competitive-disadvantage threshold.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the alignment tax is a permanent feature or a temporary engineering hurdle."
+      "description": "Whether alignment tax is fundamental to verification or contingent to current methods"
     },
     {
-      "id": "externality_magnitude",
-      "question": "What is the true societal cost (in economic, political, and existential terms) of deploying marginally less-aligned but more performant AI systems?",
-      "resolution_mechanism": "Advanced risk modeling, longitudinal studies of AI impacts, and extensive red-teaming of deployed systems.",
-      "impact": "A high cost confirms the Snare classification for the public and justifies strong regulation. A low cost suggests the tradeoff is a more manageable Rope-like coordination problem.",
+      "id": "capability_race_irreversibility",
+      "question": "Once market dominance is established by a performance-optimized (lower-safety) system, can regulatory or technical standards enforcement successfully reset the competitive landscape toward higher-safety baselines?",
+      "resolution_mechanism": "Historical case analysis of technology standards enforcement (emissions controls in automotive, network security standards in finance, privacy frameworks in data); modeling of market concentration dynamics and switching costs for entrenched systems; analysis of technical feasibility of retrofitting safety to deployed systems",
+      "impact": "If irreversible: the safety-performance divergence locks in a low-safety equilibrium because early movers capture network effects and switching costs become prohibitive. Regulatory solutions cannot reset the game. If reversible: standards enforcement and switching mechanisms can force high-safety baselines even after low-safety capture.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "The magnitude of risk externalized onto society by prioritizing performance over safety."
+      "description": "Whether capability race dominance creates irreversible safety lock-in"
+    },
+    {
+      "id": "alignment_cost_trajectory",
+      "question": "Does the computational overhead of alignment safety decrease over time (through algorithmic improvements and hardware efficiency), or does it increase as capability scaling requires deeper verification layers?",
+      "resolution_mechanism": "Measurement of alignment overhead (FLOPS, latency, capability loss) for equivalent safety levels across time periods; correlation with hardware advances, algorithm improvements, and capability scaling; comparison of overhead trends in safety-critical systems with similar scaling dynamics",
+      "impact": "If overhead decreases: the alignment tax becomes progressively cheaper, reducing competitive disadvantage and enabling high-safety market equilibrium. If overhead increases: safety becomes progressively more expensive relative to capability, deepening the extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trajectory of alignment safety computational overhead over time"
+    },
+    {
+      "id": "international_coordination_feasibility",
+      "question": "Can international coordination mechanisms (treaties, mutual enforcement agreements, supply-chain verification) enforce globally consistent safety standards despite competitive incentives to defect?",
+      "resolution_mechanism": "Analysis of precedent cases (nonproliferation treaties, export controls, environmental agreements); modeling of defection incentives and verification costs; assessment of enforcement mechanisms and reciprocal consequences",
+      "impact": "If feasible: regulatory scaffold (Perspective 5) is structurally sound and can converge toward high-safety global baseline. If infeasible: defection incentives are strong enough to undermine coordination, locking in low-safety equilibrium despite intentions.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether international safety coordination can overcome competitive defection incentives"
+    },
+    {
+      "id": "user_preference_heterogeneity",
+      "question": "What proportion of end-user demand actually prefers safety-aligned AI over raw capability, and does this demand segment remain distinct or merge with mass-market capability preferences?",
+      "resolution_mechanism": "Market research on willingness-to-pay for safety properties vs capability; segmentation analysis of institutional vs consumer preferences; longitudinal tracking of demand shifts as AI capabilities become more consequential",
+      "impact": "If robust demand: safety-preferred market segment can sustain high-safety suppliers despite capability-race dynamics, reducing extraction mechanism. If merged demand: safety becomes a luxury good only affordable to institutional buyers, deepening the divergence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Market demand for safety-aligned AI vs raw capability"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 7,
+      "time_point": 3,
       "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.65
+      "time_point": 6,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 7,
-      "value": 0.25
+      "time_point": 3,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.4
+      "time_point": 6,
+      "value": 0.48
     }
   ],
   "interval": {
     "start": 0,
-    "end": 15
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The Safety-Performance Divergence, or 'Alignment Tax', describes the competitive disadvantage incurred by efforts to make AI systems safe and aligned with human values. As AI capabilities accelerate, the computational overhead, performance reduction, or development delays required for robust safety create a powerful incentive for market actors to prioritize raw capability, externalizing the associated risks onto society. This creates a classic race-to-the-bottom dynamic where the safest actors are the least competitive.",
+    "narrative_context": "The alignment-tax tradeoff represents a structural divergence in AI development between systems designed for maximum safety-alignment and those optimized for raw capability and performance. As AI systems become more consequential (financial decision-making, medical diagnosis, autonomous control), the cost of safety measures \u2014 interpretability layers, value verification mechanisms, robustness constraints, constitutional AI safeguards \u2014 imposes direct computational overhead and capability ceilings. In a competitive environment where market share, funding, and institutional prestige correlate with capability benchmarks, the safety-aligned developer faces a competitive disadvantage: their systems are slower, more resource-intensive, or less capable at core tasks. Simultaneously, the performance-optimized developer captures advantages: higher throughput, lower latency, superior capability metrics. This creates a Darwinian pressure toward lower-safety equilibrium. The constraint exhibits the full range of DR classifications depending on the observer's structural position: those forced to pay the alignment tax see extraction; those who benefit from capability races see coordination; regulators see a temporary problem with enforcement solutions; institutions with safety requirements see pure coordination; and analytical observers risk naturalizing what may be a contingent architectural choice as an immutable mathematical law. The extractiveness trajectory (0.32\u21920.58) reflects increasing market dominance by capability-optimized systems, deepening the divergence.",
     "key_agents": [
-      "Capability-Focused AI Developers: Primary beneficiaries (institutional/arbitrage) - Gain market share and first-mover advantage by minimizing the alignment tax.",
-      "Global Civil Society: Primary victim (powerless/trapped) - Bears the externalized costs of misaligned AI, from misinformation to systemic risks, without recourse.",
-      "Safety-Conscious AI Developers: Secondary victim (powerful/constrained) - Must pay the alignment tax, putting them at a competitive disadvantage in the market.",
-      "Short-Term Investors: Secondary beneficiary (institutional/arbitrage) - Profit from rapid deployment and market capture, discounting long-term tail risks.",
-      "Regulators: Institutional actors (institutional/constrained) - Attempt to manage the tradeoff with policy scaffolds, but are often outpaced by technological development."
+      "Performance-Optimized Capability Labs: Primary beneficiary (institutional/arbitrage) \u2014 captures competitive advantage by deploying lower-safety, higher-capability systems; enjoys network effects and market dominance",
+      "Safety-Constrained Developers: Primary victim (powerless/trapped) \u2014 must implement alignment overhead that competitors avoid; face capability-disadvantage lock-in with no exit from competitive pressure",
+      "End-User Baseline Safety: Secondary victim (powerless/trapped) \u2014 exposed to less-aligned systems due to market preferences; lacks agency to enforce safety requirements in consumer markets",
+      "Alignment Research Community: Moderate victim (moderate/constrained) \u2014 benefits from safety-consciousness but lacks market power to enforce their standards; research findings subordinate to capability timelines",
+      "Regulatory and Standards Bodies: Organized enforcement actor (organized/constrained) \u2014 building verification infrastructure and safety standards (scaffold with sunset logic); depends on enforcement capacity and international coordination",
+      "Enterprise Safety Requirements: Institutional beneficiary (institutional/arbitrage) \u2014 can enforce safety requirements through procurement power; experiences constraint as coordination rather than extraction",
+      "Institutional AI Governance: Theater-maintaining actor (institutional/arbitrage) \u2014 ethics boards and review structures persist through legitimacy but lack enforcement capacity; piton classification",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks false summit by naturalizing contingent architectural choices as fundamental verification limits"
     ],
-    "logic_rationale": "Extractiveness (0.65) is high, representing the significant competitive advantage gained by externalizing risk. This is not a direct financial transfer but a structural appropriation of market position and an imposition of unpriced negative externalities. Suppression (0.75) is very high, reflecting the intense market pressure and venture capital incentives that make it difficult for any single actor to prioritize safety at the cost of performance. Theater Ratio (0.40) is moderate, accounting for the phenomenon of 'safety-washing,' where firms engage in performative safety measures to appease public and regulatory concerns without fundamentally altering their capability-first approach.",
-    "perspectival_gap": "The gap is profound. For the capability-focused developer, the tradeoff is a simple optimization problem (Rope). For the public, it is a coercive imposition of risk (Snare). For the safety-conscious developer, it is a frustrating hybrid system that rewards recklessness (Tangled Rope). This divergence highlights that the 'nature' of the constraint is not intrinsic but is determined by an agent's structural relationship to the costs and benefits.",
-    "directionality_logic": "The directionality `d` is derived from structural positions. The capability-focused developer is a beneficiary with arbitrage exit, yielding a low `d` and negative effective extraction (χ < 0). Global society is a victim with trapped exit, yielding a high `d` and extremely high positive extraction (χ > 1.0). The safety-conscious developer is a victim but with constrained exit (not fully trapped), resulting in a moderately high `d` and a χ value characteristic of a Tangled Rope. These derived values, not subjective assessments, drive the different classifications from a single set of base properties.",
-    "mandatrophy_analysis": "This constraint story resolves the mandatrophy of whether AI is a 'tool' (Rope) or a 'threat' (Snare). The framework demonstrates it is both simultaneously, depending on the observer's index. By fixing the base properties (ε, suppression) and allowing the classification to vary with the indexical tuple (P,T,E,S), the system correctly models the reality that the same technology can function as a coordination mechanism for its creators while acting as a coercive, extractive force upon those who bear its externalized risks."
+    "logic_rationale": "Extractiveness (0.58): Moderately high, reflecting genuine competitive advantage for performance-optimized developers and real cost burdens for safety-aligned systems. The tax is not absolute (some safety can be achieved without catastrophic overhead) but is material enough to affect market competition. The trajectory shows increasing divergence as capability scaling deepens verification requirements. Suppression (0.62): Moderately high. The competitive dynamics suppress alternatives to low-safety systems through market concentration, funding concentration toward capabilities research, and publication/prestige bias favoring breakthrough capabilities over incremental safety improvements. However, suppression is not total \u2014 regulatory mandates, institutional procurement standards, and safety-consciousness among researchers create countervailing pressure. Theater ratio (0.48): Moderate, slightly below the piton threshold. Institutional governance structures (ethics boards, safety reviews) exist and have some functional capacity, but their authority over market-dominant actors is degraded. However, unlike the fully-piton institutional governance perspective (where theater >> function), the regulatory scaffolds (EU AI Act, testing infrastructure) represent genuinely functional capacity being built, not pure theater. The theater ratio reflects the current state where governance is partly performative and partly functional, neither fully degraded (piton) nor fully effective (rope).",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (computational overhead of alignment safety) produces radically different classifications depending on the observer's power, exit options, and time horizon. A performance-optimized lab experiences a market opportunity (Rope). A safety-constrained developer experiences an unsustainable cost burden (Snare). An alignment researcher experiences mixed coordination and extraction (Tangled Rope). A large institution with safety requirements experiences a coordination solution (Rope). A regulator experiences a temporary market failure being addressed through standards (Scaffold). Institutional governance sees its own ritualistic degradation (Piton). The analytical observer risks false summit by naturalizing institutional dynamics as mathematical necessity. None of these readings is 'wrong' \u2014 they are all structurally accurate from their respective positions. The perspectival gap reveals that the constraint's type IS NOT a fixed property but depends entirely on structural position and exit options.",
+    "directionality_logic": "The directionality chain operates as follows: (1) Base structural position: who benefits from high-capability systems (labs, end-users of capability-advantaged products) vs who bears the safety cost (safety-aligned developers, users dependent on low-capability systems, alignment researchers). (2) Exit options: performance labs can arbitrage their capability advantage globally (arbitrage exit = low d). Safety-constrained developers face capability-disadvantage lock-in with limited exit to other domains (trapped exit = high d). Alignment researchers can apply their skills elsewhere but face reduced market value for safety-focused work (constrained exit = medium-high d). (3) Power level affects f(d): powerless agents with trapped exits experience maximum f(d) \u2248 1.42, making \u03c7 high. Institutional agents with arbitrage exits experience f(d) \u2248 -0.12, making \u03c7 negative (experienced as coordination). Moderate agents with constrained exits experience f(d) \u2248 0.75-1.00, making \u03c7 moderate. (4) Scope \u03c3(S) at global scale (\u03c3=1.2) amplifies extractiveness because the divergence is geographically distributed \u2014 high-capability systems from any jurisdiction capture network effects globally, making local safety investments less competitive. The directionality overrides are unnecessary here because the structural derivation produces correct values; the key is ensuring that beneficiaries and victims are correctly identified by their relationship to the extraction mechanism (who benefits from capability races, who bears the safety cost).",
+    "mandatrophy_analysis": "MANDATROPHY RISK: The alignment-tax tradeoff has high risk of mandatrophy \u2014 false categorization as pure extraction (Snare) when it contains genuine coordination function (Scaffold + some Rope elements). The risk arises from focusing exclusively on the safety-constrained developer's experience (genuine extraction burden) while neglecting the regulatory scaffold (Perspective 5) and institutional demand (Perspective 6) that create genuine coordination benefit for different actors. A purely snare reading would miss that the constraint is being actively solved by standards bodies, procurement requirements, and regulatory enforcement \u2014 these are not decorative but functionally building alternative verification pathways. However, the snare classification from the safety-developer perspective is not wrong; it is that perspective's genuine structural reality. MANDATROPHY RESOLUTION: The constraint is correctly classified as Tangled Rope at the system level because it exhibits: (A) Genuine coordination function \u2014 alignment research, safety standards, institutional procurement, regulatory frameworks are all solving real coordination problems (how to verify AI safety, how to maintain institutional liability control). (B) Genuine asymmetric extraction \u2014 performance-optimized developers extract competitive advantage precisely because safety-constrained developers cannot exit. (C) Active enforcement requirement \u2014 the constraint persists because market dynamics (capability race, funding concentration, prestige bias) actively suppress safety-aligned alternatives; regulatory scaffolds are REQUIRED to enforce higher-safety baselines. The mandatrophy is resolved by: (1) recognizing that the coordination function (safety verification, standards-setting) is real and creates legitimate value, not merely defensive reaction; (2) acknowledging that the extraction is also real \u2014 the capability race creates genuine lock-in preventing low-safety systems from shifting to high-safety; (3) noting that the constraint type varies by perspective (Snare for locked-in developers, Rope for labs, Scaffold for regulators) and the system-level type captures this variance through the Tangled Rope classification which includes all these perspectival readings."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "labor_market_automation",
-      "information_ecosystem_integrity"
-    ]
-  }
+      "ai_capability_scaling_constraint",
+      "verification_bottleneck",
+      "market_dominance_lock_in"
+    ],
+    "dual_formulation_note": "The alignment-tax tradeoff decomposes into two related but structurally distinct constraints: (1) FUNDAMENTAL: the mathematical relationship between expressiveness and verifiability (potential mountain/rope depending on architectural choices), (2) INSTITUTIONAL: the competitive dynamics that amplify the fundamental cost into market-significant disadvantage (definitely tangled_rope due to asymmetric extraction). This story addresses the institutional divergence (\u03b5=0.58); a separate story on the formal verification complexity (lower \u03b5) would complete the family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
 }

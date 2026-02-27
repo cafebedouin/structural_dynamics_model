@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "fraser_river_salmon_regulation",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fraser River Salmon Regulation",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_fishing_industry",
+      "government_revenue"
+    ],
+    "victims": [
+      "indigenous_communities",
+      "conservation_efforts"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Indigenous Communities",
+      "comment": "Indigenous communities, historically dependent on Fraser River salmon, face restricted access and limited influence on regulation, experiencing it as a snare."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Commercial Fishing Industry",
+      "comment": "The commercial fishing industry benefits from the regulation through quotas and access, but is also constrained by the regulations themselves, viewing the system as a tangled rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Government Regulators",
+      "comment": "Government regulators, benefiting from revenue and perceived conservation efforts, view the regulation as a rope that coordinates resource use."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the regulation increasingly functions as a piton, an outdated system maintained for political reasons, failing to effectively address conservation and equitable resource allocation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "conservation_vs_extraction",
+      "question": "To what extent is the regulation genuinely promoting conservation versus primarily serving as a tool for resource extraction?",
+      "resolution_mechanism": "Independent ecological audits and cost-benefit analyses assessing the impact of regulations on salmon populations and ecosystem health.",
+      "impact": "If primarily conservation, reclassifies towards a rope. If primarily extraction, confirms snare classification for Indigenous communities and reinforces tangled rope for commercial interests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determine if regulations prioritize conservation or extraction."
+    },
+    {
+      "id": "indigenous_influence",
+      "question": "How much influence do Indigenous communities genuinely have on the regulation process?",
+      "resolution_mechanism": "Assess the degree to which Indigenous knowledge is integrated into decision-making and whether Indigenous concerns are adequately addressed in regulatory outcomes.",
+      "impact": "Increased influence could shift their perspective from snare towards tangled rope. Continued exclusion solidifies the snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determine the influence of Indigenous communities on regulations."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The regulation of Fraser River salmon, initially intended for conservation, has evolved into a complex system that extracts value from indigenous communities while benefiting commercial fishing interests and government revenue. This constraint exhibits a range of DR types, reflecting the different perspectives of key stakeholders.",
+    "key_agents": [
+      "Indigenous Communities: Primary target (powerless/trapped)",
+      "Commercial Fishing Industry: Beneficiary (moderate/constrained)",
+      "Government Regulators: Beneficiary (institutional/arbitrage)",
+      "Analytical Observer: Evaluator (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.6): High. The regulation extracts significant value from Indigenous communities through limited access and loss of traditional fishing rights. Commercial fisheries and government revenue are primary beneficiaries. Suppression (0.7): High. Limited options for Indigenous communities to challenge regulation. High barriers to entry for new commercial fishing enterprises. Theater Ratio (0.75): High. Significant pretense of scientific management and conservation efforts, but increasing evidence of political influence.",
+    "perspectival_gap": "Indigenous communities perceive the regulation as a snare, restricting their access to a vital resource. Commercial fishing interests see it as a tangled rope, balancing benefits with constraints. Government regulators view it as a rope, coordinating resource use. The analytical observer sees it as a piton: an outdated system failing to achieve its stated goals.",
+    "directionality_logic": "Directionality is determined by power, exit options, and beneficiary/victim status. Indigenous communities, with limited power and exit options, experience the highest extraction. Commercial fisheries benefit, but are also constrained. Government regulators benefit directly."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pacific_salmon_treaty",
+      "coastal_fisheries_management"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: constraint_lorenz_sensitivity
+% CONSTRAINT STORY: lorenz_attractor
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-01-27
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_lorenz_sensitivity, []).
+:- module(constraint_lorenz_attractor, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,18 +53,36 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: constraint_lorenz_sensitivity
+ *   constraint_id: lorenz_attractor
  *   human_readable: Sensitivity to Initial Conditions (Lorenz Attractor)
- *   domain: technological
+ *   domain: technological/dynamical_systems
  *
  * SUMMARY:
- *   The Lorenz Attractor exemplifies sensitivity to initial conditions in deterministic nonlinear systems.  Tiny differences in initial conditions lead to drastically different outcomes over time, making long-term prediction impossible despite the underlying system being fully deterministic. This constraint limits the precision of forecasting complex systems.
+ *   The Lorenz Attractor exemplifies a mountain-class constraint: a
+ *   fundamental property of deterministic nonlinear dynamical systems that
+ *   cannot be eliminated, negotiated, or circumvented through any practical
+ *   intervention. Edward Lorenz's 1963 discovery of sensitivity to initial
+ *   conditions in a simplified model of atmospheric convection revealed that
+ *   tiny variations in initial state (a change from 0.506127 to 0.506)
+ *   produce wildly divergent trajectories after a brief time horizon. This
+ *   sensitivity is not a function of measurement error, computational
+ *   precision, or modeling fidelity — it is an intrinsic property of the
+ *   equations themselves. The Lorenz system is deterministic (fully specified
+ *   by its three ODEs and initial conditions) yet practically unpredictable
+ *   beyond a finite time horizon. This appears paradoxical only from a
+ *   pre-chaos perspective. The constraint is: any agent attempting long-term
+ *   deterministic prediction of Lorenz dynamics must accept exponential
+ *   amplification of uncertainty in initial conditions. No alternative
+ *   formulation, no additional data, no algorithmic advance can eliminate
+ *   this fundamental limit. The system is governed by the three-dimensional
+ *   strange attractor with a positive Lyapunov exponent — a mathematical
+ *   invariant.
  *
- * KEY AGENTS (by structural relationship):
- *   - Weather Forecasters: Primary target (moderate/constrained) — bears extraction (prediction failures)
- *   - Algorithm Developers: Primary beneficiary (powerful/analytical) — benefits from developing tools to model chaos, even if imperfectly.
- *   - Public: Secondary actor (moderate/mobile) - impacted by forecasting inaccuracies
- *   - Theoretical Physicists: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Weather Prediction System: Primary constrained agent (moderate/constrained) — must predict atmospheric dynamics that obey Lorenz-like sensitivities; cannot overcome the fundamental barrier
+ *   - Atmospheric Scientist: Analytical observer (institutional/analytical) — understands the constraint mathematically; uses ensemble and probabilistic methods to work within it
+ *   - Mathematical Theory: The constraint enforcer (analytical/analytical) — the structure of nonlinear ODEs produces the attractor; no observer-relative modification changes this
+ *   - Computational Infrastructure: Secondary agent (institutional/arbitrage) — benefits from developing methods (ensemble forecasting, chaos theory) that respect rather than fight the constraint
  */
 
 /* ==========================================================================
@@ -72,100 +90,57 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constraint_lorenz_sensitivity, 0.15).
-domain_priors:suppression_score(constraint_lorenz_sensitivity, 0.03).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(constraint_lorenz_sensitivity, 0.01).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(lorenz_attractor, 0.08).
+domain_priors:suppression_score(lorenz_attractor, 0.02).
+domain_priors:theater_ratio(lorenz_attractor, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constraint_lorenz_sensitivity, extractiveness, 0.15).
-narrative_ontology:constraint_metric(constraint_lorenz_sensitivity, suppression_requirement, 0.03).
-narrative_ontology:constraint_metric(constraint_lorenz_sensitivity, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(lorenz_attractor, extractiveness, 0.08).
+narrative_ontology:constraint_metric(lorenz_attractor, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(lorenz_attractor, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
+narrative_ontology:constraint_metric(lorenz_attractor, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(lorenz_attractor, resistance, 0.08).
 
-narrative_ontology:constraint_metric(constraint_lorenz_sensitivity, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(constraint_lorenz_sensitivity, resistance, 0.01).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(lorenz_attractor, mountain).
+narrative_ontology:human_readable(lorenz_attractor, "Sensitivity to Initial Conditions (Lorenz Attractor)").
+narrative_ontology:topic_domain(lorenz_attractor, "technological/dynamical_systems").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(constraint_lorenz_sensitivity, mountain).
-narrative_ontology:human_readable(constraint_lorenz_sensitivity, "Sensitivity to Initial Conditions (Lorenz Attractor)").
-narrative_ontology:topic_domain(constraint_lorenz_sensitivity, "technological").
+domain_priors:emerges_naturally(lorenz_attractor).
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(constraint_lorenz_sensitivity).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(constraint_lorenz_sensitivity). % Required for Tangled Rope
-
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-
-domain_priors:emerges_naturally(constraint_lorenz_sensitivity).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(constraint_lorenz_sensitivity, algorithm_developers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(constraint_lorenz_sensitivity, weather_forecasters).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(constraint_lorenz_sensitivity, mountain,
-    context(agent_power(moderate),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
+% PERSPECTIVE 1: WEATHER PREDICTOR (MOUNTAIN) — No agent can escape sensitivity to initial conditions in Lorenz dynamics. Arbitrarily small errors in atmospheric measurement amplify exponentially, rendering forecasts beyond ~2 weeks impossible regardless of computational power or observation density. This is not a choice or a policy constraint; it is a structural property of the equations themselves. Zero degrees of freedom.
+constraint_indexing:constraint_classification(lorenz_attractor, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(constraint_lorenz_sensitivity, mountain,
-    context(agent_power(powerful),
-            time_horizon(generational),
-            exit_options(analytical),
+% PERSPECTIVE 2: ATMOSPHERIC SCIENTIST (MOUNTAIN) — Despite decades of improved instrumentation, satellite networks, and ensemble forecasting methods, the fundamental sensitivity barrier remains. The scientist can manage the constraint (ensemble methods, probabilistic forecasts) but cannot eliminate it. The constraint is invariant across all measurement technologies and all algorithmic approaches.
+constraint_indexing:constraint_classification(lorenz_attractor, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(constraint_lorenz_sensitivity, mountain,
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From the perspective of dynamical systems theory, sensitivity to initial conditions is a mathematical invariant of the Lorenz equations. The three coupled nonlinear ODEs produce a strange attractor where nearby trajectories diverge exponentially in time. This property holds across all initial conditions within the attractor's basin, across all parameter regimes where chaos emerges, and across all observation contexts. It is a feature of the mathematical structure itself, not a feature of how we measure or model it.
+constraint_indexing:constraint_classification(lorenz_attractor, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: LYAPUNOV EXPONENT (MOUNTAIN) — The positive Lyapunov exponent λ ≈ 0.906 is a mathematical invariant of the standard Lorenz system (σ=10, ρ=28, β=8/3). Small perturbations grow as e^(λt), quantifying the rate of divergence. This is not an empirical measurement subject to context-dependence; it is a computed property of the deterministic system. All observables access the same underlying dynamical structure.
+constraint_indexing:constraint_classification(lorenz_attractor, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -175,26 +150,30 @@ constraint_indexing:constraint_classification(constraint_lorenz_sensitivity, mou
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(constraint_lorenz_sensitivity_tests).
+:- begin_tests(lorenz_attractor_tests).
 
-test(perspectival_alignment) :-
-    % Verify that all perspectives agree on the Mountain classification.
-    constraint_indexing:constraint_classification(constraint_lorenz_sensitivity, Type1, context(_, _, _, _)),
-    constraint_indexing:constraint_classification(constraint_lorenz_sensitivity, Type2, context(_, _, _, _)),
-    constraint_indexing:constraint_classification(constraint_lorenz_sensitivity, Type3, context(_, _, _, _)),
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(lorenz_attractor, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(lorenz_attractor, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-    Type1 = mountain,
-    Type2 = mountain,
-    Type3 = mountain.
-
-
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(constraint_lorenz_sensitivity, ExtMetricName, E),
-    E =< 0.25. % Check for Mountain classification
+    narrative_ontology:constraint_metric(lorenz_attractor, ExtMetricName, E),
+    domain_priors:suppression_score(lorenz_attractor, S),
+    E =< 0.25,
+    S =< 0.05.
 
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(lorenz_attractor),
+    narrative_ontology:constraint_metric(lorenz_attractor, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(lorenz_attractor, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
-:- end_tests(constraint_lorenz_sensitivity_tests).
+:- end_tests(lorenz_attractor_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -202,100 +181,86 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Lorenz Attractor is considered a mountain constraint because sensitivity to initial conditions is a fundamental property of chaotic systems, and places an inherent limit on predictability. This is difficult to overcome through computational means, given the inherent limitations in representation of reality.
+ *   Extractiveness (0.08): Extremely low. The Lorenz constraint does not extract value from any agent or redirect it to a beneficiary. It is a barrier to a goal (long-term deterministic prediction) but creates no redistribution of resources. No agent benefits structurally from the existence of sensitivity to initial conditions. Suppression (0.02): Near-zero. The constraint does not suppress alternatives through coercion or institutional design. It suppresses certain mathematical possibilities (deterministic prediction beyond ~2 weeks) through logical necessity, not through human enforcement. Theater ratio (0.15): Very low. The Lorenz equations are not performative. They compute the same dynamics regardless of whether anyone observes them. Ensemble forecasting methods developed to manage the constraint have some communication overhead (explaining probabilistic forecasts to stakeholders), but the underlying mathematical structure has zero theater.
  *
  * PERSPECTIVAL GAP:
- *   There is minimal perspectival gap, because the fundamental sensitivity to initial conditions affects all parties, though the burden is borne more acutely by those who rely on forecasting.
- *
- * DIRECTIONALITY LOGIC:
- *   Algorithm developers benefit as they have a field of study to explore, and tools and techniques can be developed to mitigate the impact, even if they cannot be entirely eliminated. Weather forecasters are victimized by this constraint, as it limits the potential for perfect weather prediction.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   Not applicable here.
+ *   Minimal perspectival gap. All four perspectives converge on mountain classification because the constraint's essential property — positive Lyapunov exponent and exponential trajectory divergence — is invariant across observational contexts and agent positions. The weather predictor experiences the constraint as an immutable barrier. The scientist understands it as a mathematical invariant. The analytical observer sees the strange attractor structure. The Lyapunov exponent perspective quantifies the rate of divergence. All arrive at the same conclusion: this is a natural law, not a contingent institutional arrangement. The minimal gap (all four perspectives produce Mountain) is the defining feature of mountain-only constraints.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification of this constraint as a mountain, based on metrics reflecting inherent limitations and resistance to change, prevents it from being mislabeled as a snare. A snare would imply that the "extraction" of poor weather predictions is an intentional design or result of exploitative relationships. It also prevents the classification from being mislabeled as pure coordination, because pure coordination lacks extraction. The fundamental limitation of predictability prevents this.
+ *   NO MANDATROPHY RISK. The Lorenz constraint exhibits pure mountain structure with no hybrid or extractive properties. The accessibility_collapse (0.92) and resistance (0.08) confirm that agents cannot feasibly work around the sensitivity barrier through alternative measurement, alternative models, or alternative observation strategies. The suppression (0.02) reflects logical necessity, not coercive institutional design. The theater_ratio (0.15) indicates minimal performative content — ensemble forecasting methods have some communication overhead but the underlying dynamics are not staged. The constraint does not benefit any agent, harm any particular group (it harms the goal of long-term deterministic prediction, not any person or institution), or exist through institutional maintenance. It is pure mathematics with zero degrees of freedom.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_lorenz,
-    'Can computational power or novel algorithms overcome the inherent sensitivity to initial conditions?',
-    'Develop more efficient computing and more complex models.',
-    'True: Weather prediction becomes significantly more accurate. False: Limits to prediction remain.',
+    measurement_apparatus_precision,
+    'Does finite measurement precision constitute an intrinsic constraint on Lorenz systems, or is it a separate practical limitation?',
+    'Theoretical analysis of quantum measurement limits on atmospheric data; distinction between algorithmic chaos (sensitivity in computation) and physical chaos (sensitivity in nature)',
+    'If intrinsic: the Lorenz mountain has a quantum substrate, and sensitivity is deeper than classical mechanics. If separate: classical sensitivity is pure mathematics, independent of measurement capability.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(measurement_apparatus_precision, conceptual, 'Whether measurement precision is intrinsic to Lorenz dynamics or a practical limitation').
+
+omega_variable(
+    parameter_dependence_universality,
+    'Does sensitivity to initial conditions hold universally across all parameter regimes, or only in the chaotic region?',
+    'Bifurcation analysis sweeping (σ, ρ, β) parameter space; identification of periodic and fixed-point regimes where sensitivity disappears',
+    'If universal: sensitivity is truly invariant and mountain-classified. If regime-dependent: constraint is conditional on parameter values, weakening mountain claim.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(parameter_dependence_universality, empirical, 'Whether sensitivity to initial conditions is universal across Lorenz parameter space').
+
+omega_variable(
+    strange_attractor_stability,
+    'Is the existence and structure of the Lorenz strange attractor itself stable under small perturbations to the equations, or does it dissolve under sufficiently small structural changes?',
+    'Structural stability analysis; study of unfoldings of the Lorenz system under parameter perturbation; numerical continuation of attractor structure',
+    'If structurally stable: the Lorenz mountain is robust to model variation. If structurally unstable: the mountain is more fragile than it appears, contingent on precise equation form.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(strange_attractor_stability, empirical, 'Structural stability of the Lorenz strange attractor').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(constraint_lorenz_sensitivity, 0, 10).
+narrative_ontology:interval(lorenz_attractor, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(constraint_lorenz_sensitivity_tr_t0, constraint_lorenz_sensitivity, theater_ratio, 0, 0.01).
-narrative_ontology:measurement(constraint_lorenz_sensitivity_tr_t5, constraint_lorenz_sensitivity, theater_ratio, 5, 0.01).
-narrative_ontology:measurement(constraint_lorenz_sensitivity_tr_t10, constraint_lorenz_sensitivity, theater_ratio, 10, 0.01).
+% Theater ratio over time
+narrative_ontology:measurement(lorenz_tr_t0, lorenz_attractor, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(lorenz_tr_t50, lorenz_attractor, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(lorenz_tr_t100, lorenz_attractor, theater_ratio, 100, 0.15).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(constraint_lorenz_sensitivity_ex_t0, constraint_lorenz_sensitivity, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(constraint_lorenz_sensitivity_ex_t5, constraint_lorenz_sensitivity, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(constraint_lorenz_sensitivity_ex_t10, constraint_lorenz_sensitivity, base_extractiveness, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(lorenz_be_t0, lorenz_attractor, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(lorenz_be_t50, lorenz_attractor, base_extractiveness, 50, 0.08).
+narrative_ontology:measurement(lorenz_be_t100, lorenz_attractor, base_extractiveness, 100, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-% narrative_ontology:coordination_type(constraint_lorenz_sensitivity, information_standard).
+narrative_ontology:coordination_type(lorenz_attractor, information_standard).
+narrative_ontology:affects_constraint(lorenz_attractor, weather_predictability_horizon).
+narrative_ontology:affects_constraint(lorenz_attractor, climate_model_initialization).
+narrative_ontology:affects_constraint(lorenz_attractor, chaos_theory_foundation).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(constraint_lorenz_sensitivity, 0.05).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(constraint_lorenz_sensitivity, [other_constraint_id]).
+% DUAL FORMULATION NOTE:
+% Sensitivity to initial conditions in the Lorenz system is a single, indivisible mountain constraint. No decomposition is needed because epsilon is invariant across all measurement methodologies. The constraint's mathematical definition (positive Lyapunov exponent in the strange attractor) does not change when examined from different contexts. Related constraints (weather predictability horizon, climate initialization) are downstream consequences that inherit the same fundamental barrier.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(constraint_lorenz_sensitivity, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

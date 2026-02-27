@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "blackstone_carried_interest_taxation",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Carried Interest Partnership Taxation",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "private_equity_partners",
+      "hedge_fund_partners"
+    ],
+    "victims": [
+      "general_taxpayers",
+      "government_tax_revenue"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "General Taxpayers",
+      "comment": "General taxpayers bear the burden of the tax loophole, effectively subsidizing the income of high-earning fund managers. They are trapped as they cannot directly influence or change the law."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Private Equity and Hedge Fund Partners",
+      "comment": "Partners in private equity and hedge funds benefit significantly from this tax treatment, paying a lower tax rate on their carried interest income. They actively lobby to maintain this favorable treatment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the carried interest taxation as a tangled rope: it facilitates capital allocation (coordination) but also allows for tax avoidance (extraction), requiring ongoing political effort to maintain the status quo."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Government Tax Revenue",
+      "comment": "While the government theoretically benefits from increased investment activity, the revenue lost due to the lower tax rate could be allocated to other public services. The system continues due to political inertia, but the actual benefits may be less than claimed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_impact_assessment",
+      "question": "What is the true economic impact of carried interest taxation on investment, job creation, and overall economic growth?",
+      "resolution_mechanism": "Comprehensive economic modeling and empirical studies analyzing the effects of changing the tax treatment of carried interest.",
+      "impact": "If the economic benefits are substantial, maintaining the current tax treatment might be justified. If the benefits are minimal or negative, reform is warranted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True economic impact of carried interest taxation."
+    },
+    {
+      "id": "political_feasibility_reform",
+      "question": "What is the political feasibility of reforming the tax treatment of carried interest, considering lobbying efforts and political polarization?",
+      "resolution_mechanism": "Analysis of lobbying expenditures, campaign contributions, and voting records related to carried interest taxation.",
+      "impact": "If reform is politically impossible, alternative approaches may be needed. If reform is feasible, the focus should be on designing effective and equitable legislation.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Political feasibility of reforming the tax treatment of carried interest."
+    },
+    {
+      "id": "alternative_tax_structures",
+      "question": "Are there alternative tax structures that could achieve similar economic benefits while minimizing tax avoidance and promoting fairness?",
+      "resolution_mechanism": "Comparative analysis of different tax structures used in other countries and their potential applicability to the United States.",
+      "impact": "Identifying superior tax structures could pave the way for more effective and equitable tax reform.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Are there alternative tax structures?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The regulatory and tax framework in the United States that treats \"carried interest\" (performance fees) for partners in private equity and hedge funds as long-term capital gains rather than ordinary income. This creates a tax advantage for these individuals, allowing them to pay a lower tax rate than most wage earners. This is an ongoing debate in US economic policy.",
+    "key_agents": [
+      "Private Equity Partners: Primary beneficiary (institutional/arbitrage) \u2013 benefits from lower tax rate.",
+      "Hedge Fund Partners: Primary beneficiary (institutional/arbitrage) \u2013 benefits from lower tax rate.",
+      "General Taxpayers: Primary victim (powerless/trapped) \u2013 bears the cost of the tax loophole.",
+      "Government Tax Revenue: Secondary victim (institutional/constrained) \u2013 loses potential revenue due to lower tax rate."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Significant extraction of tax revenue from the general public to the benefit of a small number of high-income individuals. Suppression (0.70): High. Strong lobbying efforts and political influence from the financial industry maintain this tax treatment despite public criticism. Theater Ratio (0.75): High. While there are justifications for incentivizing investment, the current system primarily benefits fund managers with minimal connection to genuine coordination. The performative aspect is that it is sold as incentivizing investment, but the primary effect is tax reduction for fund managers.",
+    "perspectival_gap": "General taxpayers see the carried interest as an unfair tax loophole (snare), while private equity partners view it as a necessary incentive for investment (rope). An analytical observer recognizes the mix of coordination and extraction (tangled rope).",
+    "directionality_logic": "Private equity and hedge fund partners benefit directly from the lower tax rate (beneficiary, d close to 0). General taxpayers bear the burden of the tax loophole (victim, d close to 1).",
+    "mandatrophy_analysis": "The key issue is distinguishing legitimate capital formation incentives (which would classify as a rope or scaffold) from a pure tax extraction (snare). The significant suppression indicates active rent-seeking rather than a naturally-emerging or temporary coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "capital_gains_taxation",
+      "lobbying_regulations"
+    ]
+  },
+  "directionality_overrides": []
+}

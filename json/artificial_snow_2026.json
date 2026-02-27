@@ -2,29 +2,30 @@
   "header": {
     "constraint_id": "artificial_snow_2026",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "artsnow"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
     "human_readable": "Olympic Artificial Snow Dependency",
     "topic_domain": "environmental/cultural",
-    "requires_active_enforcement": true,
+    "requires_active_enforcement": false,
     "beneficiaries": [
-      "international_olympic_committee",
-      "host_organizers",
-      "sponsors_and_broadcasters",
-      "snow_making_tech_companies"
+      "olympic_organizing_committee",
+      "alpine_skiing_apparatus_manufacturers",
+      "winter_resort_operators"
     ],
     "victims": [
-      "local_ecosystem",
-      "local_communities",
-      "future_generations",
-      "olympic_brand_authenticity"
-    ]
+      "alpine_ecosystems",
+      "regional_water_supply",
+      "local_ground_stability",
+      "climate_adaptation_policy"
+    ],
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
@@ -33,131 +34,159 @@
       "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "The Local Ecosystem",
-      "comment": "PERSPECTIVE 1: LOCAL ECOSYSTEM (SNARE) — The environment bears the full, uncompensated cost of massive water and energy extraction. It has no agency or exit option. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.83. This is pure, coercive extraction."
+      "label": "Alpine Ecosystem and Groundwater Aquifer",
+      "comment": "PERSPECTIVE 1: ALPINE ECOSYSTEM (SNARE) \u2014 The regional hydrological system and alpine meadow ecosystem cannot exit the constraint. Artificial snow production depletes groundwater reserves (estimated 2.4 million cubic meters over 3-4 months of competition prep), degrading aquifer recharge cycles across the Cortina d'Ampezzo valley. No alternatives exist for the ecosystem; it bears full extraction cost of maintaining Olympic infrastructure. Trapped, powerless, maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Local Agricultural and Residential Water Users",
+      "comment": "PERSPECTIVE 2: LOCAL WATER USERS (SNARE) \u2014 Agricultural operations and residential consumers in the Cortina valley face constrained exit: water rationing during Olympic snow production season, reduced aquifer pressure affecting well-dependent farms, and increased salinity in remaining groundwater (artificial snow uses mist and nucleation agents). Exit is theoretically possible (relocation) but economically catastrophic. High extraction with constrained exit."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The International Olympic Committee",
-      "comment": "PERSPECTIVE 2: IOC (ROPE) — From the IOC's perspective, artificial snow is a pure coordination technology that solves the logistical problem of climate variability, ensuring the event proceeds and broadcast/sponsorship contracts are fulfilled. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. The negative extraction indicates a net subsidy."
+      "label": "Olympic Organizing Committee and Alpine Skiing Apparatus Manufacturers",
+      "comment": "PERSPECTIVE 3: OLYMPIC ORGANIZING COMMITTEE & EQUIPMENT MANUFACTURERS (ROPE) \u2014 These agents experience the constraint as pure coordination: artificial snow enables the Games to proceed on schedule. From their structural perspective, the snowmaking represents a solved problem (technical solution, reliable infrastructure, global manufacturing supply chains). They benefit from reliable competition surfaces and maintain arbitrage: can negotiate terms with water authorities, import equipment globally, adjust event timing. Low experienced extraction; experiences constraint as coordination mechanism enabling their stated objectives."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
+      "agent_power": "organized",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Elite Athlete",
-      "comment": "PERSPECTIVE 3: ELITE ATHLETE (TANGLED ROPE) — Athletes benefit from the standardized, reliable competition surfaces (coordination) but are constrained by the system's demands and growing sustainability concerns. They cannot easily opt out. d≈0.85, f(d)≈1.31, σ=1.2 → χ≈1.02. The high chi reflects their position as a victim of the system's unsustainability, despite the coordination benefit."
+      "spatial_scope": "regional",
+      "label": "Italian Water Authority and Regional Government",
+      "comment": "PERSPECTIVE 4: ITALIAN WATER AUTHORITY (TANGLED ROPE) \u2014 Organized institutional actor with constrained exit. Officially permits artificial snow production as coordination of Olympic infrastructure with national sporting objectives (coordination function). Simultaneously bears extraction: depleted aquifers reduce capacity for agricultural irrigation and urban supply in future drought years; legal liability for ecosystem degradation; political pressure from local constituencies. Requires active management of both coordination benefits (Olympic prestige, international infrastructure investment) and extraction costs (hydrological debt, environmental compliance). Moderate-to-high effective extraction with mixed functional value."
     },
     {
       "classification_type": "piton",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
-      "exit_options": "trapped",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Ideal of 'Winter Games'",
-      "comment": "PERSPECTIVE 4: THE IDEAL OF 'WINTER GAMES' (PITON) — The constraint's primary function is now performative: maintaining the brand and spectacle of 'winter' in a location that no longer has a reliable natural winter. The original function (competing on natural snow) has atrophied. The theater_ratio of 0.75 meets the Piton gate (≥0.70)."
+      "label": "International Olympic Committee Climate Adaptation Protocol",
+      "comment": "PERSPECTIVE 5: IOC CLIMATE ADAPTATION PROTOCOL (PITON) \u2014 The IOC's snow guarantee framework (artificial snow as fallback for climate-degraded winter) is largely performative: it sustains the appearance that Winter Olympics remain viable in locations with marginal snow reliability without addressing the underlying climatic trend (6.4\u00b0F warming in 70 years). The protocol maintains itself through institutional inertia \u2014 abandoning Alpine venues would require acknowledging that climate change has made many traditional sites unviable. Theater ratio high: the protocol ritual (snow production permits, environmental impact assessments, water authority agreements) performs coordination while the functional basis (reliable natural snowfall) has atrophied. Extracted maintenance cost (hydrological depletion, regulatory burden) is significant, yet the protocol persists because no alternative Winter Olympics framework has achieved global consensus."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Climate-Aware Host Candidate",
-      "comment": "PERSPECTIVE 5: CLIMATE-AWARE HOST CANDIDATE (SCAFFOLD) — A hypothetical future host city might view the current dependency as a temporary scaffold. They would bid on the condition of developing new, less resource-intensive sports or using new technologies with a clear sunset clause on current water/energy-intensive methods, aiming to build a more sustainable model for the Games."
-    },
-    {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a clear coordination function (enabling the event) but imposes severe, asymmetrically distributed environmental and resource costs (extraction). The high suppression reflects the lack of viable alternatives that would preserve the event in its current form. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90. This fits the Tangled Rope classification."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physical/Thermodynamic View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a civilizational analytical perspective, a fundamental physical constraint becomes apparent: large-scale artificial snow production requires cooling water from ~20\u00b0C to -2\u00b0C to -5\u00b0C, dissipating latent heat. In a warming climate, the energy and water requirements to maintain ski-slope snowpack grow exponentially as ambient temperature approaches the thermodynamic limit for snow formation. This perspective risks naturalizing a contingent institutional choice (host Winter Olympics in thermally marginal locations) as an immutable physical law. However, the constraint's theater_ratio (0.64) and suppression level (0.68) indicate this is NOT a natural law but a policy choice disguised as necessary infrastructure."
     }
   ],
   "omegas": [
     {
-      "id": "technological_mitigation_potential",
-      "question": "Can foreseeable improvements in snow-making efficiency and renewable energy fully mitigate the environmental extraction?",
-      "resolution_mechanism": "Lifecycle analysis of next-generation snow production and energy systems compared to projected water/energy needs for future Olympic sites.",
-      "impact": "If mitigation is near-total, the constraint trends towards Rope. If marginal, it remains a Tangled Rope or Snare.",
+      "id": "hydrological_debt_reversal",
+      "question": "What is the long-term aquifer recovery timeline if artificial snow production ceases, and can the Cortina valley's groundwater system recover capacity for agricultural irrigation within 10-20 years post-Olympics?",
+      "resolution_mechanism": "Hydrogeological modeling of aquifer recharge rates; comparison with documented cases of post-event hydrological recovery in Alpine regions; measurement of groundwater quality (salinity, nucleation agents) persistence",
+      "impact": "If recovery timeline < 5 years: water users face temporary extraction (extraction converts to manageable coordination problem). If recovery > 20 years: extraction becomes permanent structural damage, converting apparent Snare into embedded Piton (degraded hydrological regime persists through institutional inertia).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Potential for technology to mitigate environmental extraction"
+      "description": "Aquifer recovery timeline post-Olympics"
     },
     {
-      "id": "brand_damage_threshold",
-      "question": "At what point does the perceived inauthenticity and environmental cost create significant brand damage for the Olympics and its sponsors?",
-      "resolution_mechanism": "Global sentiment analysis, sponsorship revenue tracking correlated with negative media coverage, and polling of key demographics.",
-      "impact": "Crossing this threshold would force the IOC (beneficiary) to seek alternatives, reducing the constraint's suppression.",
+      "id": "alternative_venue_viability",
+      "question": "Given climate trends, which current or near-future Winter Olympic venues maintain natural snowfall sufficiency without artificial snow supplementation?",
+      "resolution_mechanism": "Historical snowfall trend analysis for candidate venues (Sapporo, Pyeongchang, future bids); 50-year temperature and precipitation projections; comparison of natural vs artificial snow costs and environmental impact",
+      "impact": "If viable alternatives exist: IOC's Cortina selection becomes a choice to extract from Alpine hydrology rather than a necessary constraint. Snare classification confirmed as policy choice, not immutable limit. If no viable alternatives: Olympics genuinely require thermally marginal venues, and the constraint approaches mountain status (albeit one constructed by geopolitical competition for venue prestige).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Existence of climate-viable alternative Winter Olympic venues"
+    },
+    {
+      "id": "nucleation_agent_persistence",
+      "question": "What is the persistence and bioaccumulation trajectory of artificial snow nucleation agents (silver iodide, potassium iodide) in Alpine groundwater, soil, and agricultural products?",
+      "resolution_mechanism": "Environmental sampling of groundwater, soil, and crops in post-Olympic Alpine valleys; trace metal analysis; toxicological assessment relative to drinking water standards and agricultural regulations",
+      "impact": "If agents persist > 10 years or accumulate in crops: extraction cost is higher and longer-term than water volume alone suggests. If agents degrade rapidly: water volume is the primary extraction metric. High persistence findings would upgrade victim harm assessment and strengthen Snare classification.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Threshold for brand damage due to artificiality"
+      "description": "Persistence and bioaccumulation of artificial snow nucleation agents"
+    },
+    {
+      "id": "olympic_prestige_beneficiary_distribution",
+      "question": "How are the prestige, economic, and infrastructural benefits of hosting the Winter Olympics actually distributed between the IOC, Italian national government, Cortina regional government, and local communities?",
+      "resolution_mechanism": "Post-Games economic impact audit; analysis of infrastructure ownership and access patterns; comparison of promised vs delivered job creation and service improvements; measurement of local benefit-capture rates",
+      "impact": "If benefits accrue primarily to IOC and national government: local Cortina communities are victims alongside the ecosystem (classifies higher as Snare for victims). If benefits distribute broadly to local regions: some agents shift toward Tangled Rope (mixed benefit and extraction). Defines whether beneficiary list is accurately scoped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of Olympic hosting benefits among institutional levels"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.5
+      "time_point": 2,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 38,
-      "value": 0.65
+      "time_point": 4,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.55
+      "time_point": 2,
+      "value": 0.54
     },
     {
       "metric": "theater_ratio",
-      "time_point": 38,
-      "value": 0.75
+      "time_point": 4,
+      "value": 0.64
     }
   ],
   "interval": {
     "start": 0,
-    "end": 38
+    "end": 4
   },
   "commentary": {
-    "narrative_context": "The 2026 Winter Olympics in Cortina, Italy, exemplifies a growing dependency on artificial snow to stage the games in a warming climate. This dependency is a structural constraint driven by the need for predictable, safe competition surfaces, but it comes at a massive environmental cost in water and energy consumption. The constraint is not the climate change itself (which would be a Mountain), but the institutional response to it, which locks organizers, athletes, and host regions into a high-extraction, high-theater system.",
+    "narrative_context": "The 2026 Winter Olympics in Cortina d'Ampezzo face a structural environmental constraint: a 6.4\u00b0F (3.6\u00b0C) rise in February temperatures since 1956 has eroded reliable natural snowfall for alpine skiing events. The IOC's solution is artificial snow production, requiring 2.4 million cubic meters of water \u2014 the equivalent of 960 Olympic swimming pools \u2014 to be diverted from regional aquifers over 3-4 months of competition preparation. This constraint exhibits the full pathology of extraction disguised as coordination: the organizing committee frames snowmaking as a 'technical solution' enabling the Games to proceed, the local water authority permits it as Olympic coordination, the alpine ecosystem and agricultural users bear the hydrological cost with no exit option, and the IOC's climate adaptation protocol performs the ritual of environmental compliance while naturalizing the choice to host Winter Olympics in thermally marginal locations. The constraint's theater_ratio (0.64) reflects that much of the 'solution' is performative \u2014 environmental impact assessments and water authority permits create the appearance of managed coordination while the underlying choice (to host Olympics in locations requiring massive artificial snowmaking) remains unexamined.",
     "key_agents": [
-      "International Olympic Committee (IOC): Primary beneficiary (institutional/arbitrage) - maintains brand continuity and revenue.",
-      "Local Ecosystem: Primary victim (powerless/trapped) - bears the direct cost of water and energy extraction.",
-      "Host Organizers & Sponsors: Secondary beneficiaries (institutional/arbitrage) - realize economic returns on a guaranteed event.",
-      "Elite Athletes: Mixed role (moderate/constrained) - benefit from coordination but are trapped in an unsustainable system.",
-      "The 'Olympic Ideal': Abstract victim (powerless/trapped) - the authenticity of a 'winter' event is eroded, becoming a performative spectacle."
+      "Alpine Ecosystem and Groundwater Aquifer: Primary victim (powerless/trapped) \u2014 cannot exit or organize; bears hydrological depletion cost",
+      "Local Agricultural and Residential Water Users: Secondary victim (moderate/constrained) \u2014 face water rationing, aquifer degradation, economic hardship; exit is theoretically possible but economically catastrophic",
+      "Olympic Organizing Committee and Alpine Skiing Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 experience constraint as coordination enabling reliable competition surfaces; can negotiate globally and adjust event timing",
+      "Italian Water Authority and Regional Government: Organized institutional actor (organized/constrained) \u2014 officially permit snowmaking as coordination; simultaneously bear extraction cost through aquifer liability and political pressure",
+      "IOC Climate Adaptation Protocol: Institutional actor (institutional/arbitrage) \u2014 maintains performative framework legitimizing artificial snow; persists through inertia rather than function",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 observes thermodynamic limits on snow production in warming climate; risks naturalizing contingent policy choice as physical necessity"
     ],
-    "logic_rationale": "Extractiveness (0.65) is high, reflecting the immense resource cost (water, energy) imposed on the local environment. Suppression (0.75) is high because viable alternatives—moving the games, changing the sports, or cancellation—are institutionally unthinkable and suppressed by contracts and tradition. Theater Ratio (0.75) is high because the event is increasingly a performance of 'winter' that is disconnected from the local climate reality, with the original function (competing in a natural winter environment) having atrophied.",
-    "perspectival_gap": "The gap is stark. The IOC, as the primary beneficiary, experiences the system as a Rope—a logistical tool for coordination. The local ecosystem, as the primary victim, experiences it as a Snare—pure, uncompensated extraction. Athletes and analytical observers see a Tangled Rope, acknowledging both the coordination benefits and the severe extractive costs. The high theater ratio also enables a Piton perspective, where the constraint is seen as a degraded ritual maintaining a brand image whose connection to reality has decayed.",
-    "directionality_logic": "Beneficiaries like the IOC have arbitrage exit options and a global scope, leading to a low derived directionality (d) and a Rope classification. Victims like the local ecosystem are trapped with no exit, leading to a maximal d-value and a Snare classification. The analytical perspective balances these, recognizing the dual nature of the system, resulting in a Tangled Rope classification that captures the core conflict.",
-    "mandatrophy_analysis": "This constraint is a clear case where labeling it a simple 'coordination problem' (Rope) would be a mandatrophy, ignoring the massive negative externalities. Conversely, labeling it a pure 'extractive system' (Snare) would ignore the genuine coordination function it provides for a global audience and athletes. The Tangled Rope classification from the analytical perspective correctly resolves this by identifying and measuring both components, preventing the mischaracterization that would arise from adopting only the beneficiary's or the victim's point of view."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint represents significant extraction from Alpine hydrology: 2.4 million cubic meters of water depletion over 4 months, aquifer pressure degradation affecting future agricultural supply, and chemical contamination from nucleation agents. However, the extraction is not maximal (>0.70) because the affected agents (water users, ecosystem) have some historical resilience and the post-Games recovery timeline is finite, not perpetual. The trajectory from 0.35 to 0.58 over the interval reflects increasing extractiveness as competition prep intensifies and the hydrological cost becomes visible. Suppression (0.68): High. The constraint is maintained through several suppression mechanisms: (a) asymmetric information \u2014 most Olympic spectators and competing nations are unaware of the hydrological cost; (b) institutional authority \u2014 the IOC and national government frame snowmaking as necessary and legitimate; (c) economic coercion \u2014 local water users cannot exit without catastrophic financial loss; (d) diffused victimhood \u2014 the ecosystem and future agricultural seasons bear costs that are not immediately visible to actors with exit options. Theater ratio (0.64): Moderate-high. The IOC's climate adaptation protocol, environmental impact assessments, and water authority permits perform coordination while the underlying choice to host Winter Olympics in thermally marginal locations remains unexamined. The performative elements increase over time as the environmental pressure becomes harder to ignore, requiring more elaborate regulatory theater to maintain legitimacy.",
+    "directionality_logic": "The pipeline derives directionality (d) from each agent's structural position. The ecosystem and water users are powerless/trapped victims: beneficiaries of the constraint = none, exit options = trapped; derived d \u2192 0.95 (very high d), f(d) \u2192 1.42, maximum experienced extraction. The organizing committee and manufacturers are institutional/arbitrage beneficiaries: extracted by constraint = none, exit options = arbitrage; derived d \u2192 0.00 (very low d), f(d) \u2192 -0.12, negative/beneficial extraction experience. The water authority is an organized institutional actor with constrained exit (caught between Olympic coordination and regional ecosystem protection): derived d \u2192 0.50-0.65, moderate effective extraction. The IOC protocol is institutionally positioned with arbitrage exit but with forced coordination role: derived d \u2192 0.15, low-moderate extraction experience. The analytical observer's d \u2192 0.73 (default analytical), f(d) \u2192 1.15, produces analytical/moderate extraction experience. These directionality values drive the perspectival gap: the same structural constraint produces maximum extraction experience for powerless agents and beneficial/neutral experience for beneficiary agents.",
+    "perspectival_gap": "This constraint demonstrates a maximal perspectival gap across power levels. The powerless ecosystem sees a pure snare (maximum extraction, no exit, no benefit). The local moderate-power water users also see snare (significant extraction with constrained exit). The institutional beneficiaries (IOC, manufacturers) see pure coordination (rope) \u2014 their experience is that the constraint solves the problem of reliable competition surfaces. The organized regional government sees tangled rope (mixed coordination benefit from Olympic prestige + extraction cost from hydrological depletion and liability). The IOC protocol sees itself as coordinating the international framework for Olympic resilience but is actually sustaining a performative ritual (piton) \u2014 the underlying natural snowfall basis has atrophied. The analytical observer risks seeing a mountain (thermodynamic necessity of snow production) but the constraint's theater_ratio and suppression patterns reveal this as a false summit: the choice to host Winter Olympics in thermally marginal locations is contingent, not immutable. The maximum perspectival gap is between the ecosystem (snare) and the IOC (rope) \u2014 they experience the identical constraint as opposite types.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION MANDATE: This constraint meets all three gates for snare classification at the primary victim perspective (powerless/trapped). Base extractiveness (0.58) exceeds the snare threshold (\u22650.46). Suppression (0.68) exceeds the snare threshold (\u22650.60). The effective extraction chi, computed from these base values and the victim's high f(d), exceeds the snare threshold (\u03c7 \u2265 0.66). The mandate is resolved by showing that the snare classification is perspectival: it accurately describes the victim's experience but is false from the beneficiary's perspective (where the constraint is rope). The mandatrophy is not 'is this a snare or rope?' but 'for whom is it a snare and for whom is it rope?' The IOC's rope perspective and the ecosystem's snare perspective are both structurally true, measuring the same constraint from opposite power positions. The analytical observer's risk of false mountain (naturalizing policy as physics) is identified and resolved by the theater_ratio gate: high theater indicates institutional performance rather than natural law. Mandatrophy resolved: the constraint is a snare for powerless victims and rope for institutional beneficiaries, with the power asymmetry being the generative fact."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure"
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "winter_tourism_economic_model"
-    ]
-  }
+      "alpine_ski_slope_viability",
+      "winter_olympics_venue_selection",
+      "alpine_water_scarcity_cascade"
+    ],
+    "dual_formulation_note": "The artificial snow dependency is structurally distinct from the underlying climate warming constraint (which drives the need for snowmaking) but causally coupled. Climate warming (high \u03b5, mountain from analytical view) makes snowmaking necessary; snowmaking's extractiveness (\u03b5=0.58) is a consequence, not a cause, of the climate regime shift. The two constraints should be modeled separately: climate_warming_alpine_region (\u03b5~0.05, mountain) upstream; artificial_snow_2026 (\u03b5=0.58, snare) downstream."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
 }

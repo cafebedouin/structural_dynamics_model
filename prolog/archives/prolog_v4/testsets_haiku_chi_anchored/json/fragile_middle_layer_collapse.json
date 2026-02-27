@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "fragile_middle_layer_collapse",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fmlc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "The Intermediary Decay",
+    "topic_domain": "economic/technological/logistical",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "end_consumers",
+      "platform_operators"
+    ],
+    "victims": [
+      "regional_intermediaries",
+      "local_service_providers",
+      "system_resilience"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Displaced Regional Intermediary",
+      "comment": "PERSPECTIVE 1: DISPLACED REGIONAL INTERMEDIARY (SNARE) \u2014 Structurally trapped by technological obsolescence and capital requirements; cannot pivot to new business models without massive retraining and investment. Bears full extraction cost as market access evaporates. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 2: PLATFORM OPERATOR (ROPE) \u2014 Genuine coordination benefit: direct-to-consumer scaling reduces transaction costs and improves service velocity. Extracts via platform control and data access, but solves the coordination problem of matching supply to demand at scale. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The End Consumer",
+      "comment": "PERSPECTIVE 3: END CONSUMER (TANGLED ROPE) \u2014 Coordination benefit: direct access, lower prices, faster delivery. Extraction cost: reduced local resilience, hidden labor precarity, supply chain fragility, data extraction via behavioral monitoring. Cannot easily exit the platform ecosystem; constrained by network effects. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "System Resilience & Redundancy",
+      "comment": "PERSPECTIVE 4: SYSTEM RESILIENCE (SNARE) \u2014 Abstract collective good. Intermediaries provided geographic redundancy, tacit knowledge retention, local problem-solving capacity, and distributed slack. As they collapse, systemic fragility increases: supply shocks cascade faster, local knowledge is lost, single points of failure multiply. System has no exit and no voice. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 Licensing, labor protections, and local business regulations were designed for the intermediary layer. As the layer collapses, the regulatory framework becomes performative theater: gig economy classification schemes, 'partner' vs 'employee' designations, and local licensing regimes all persist despite fundamental changes to the economic substrate. theater_ratio=0.62. Regulations lack enforcement capacity and real function in the new ecosystem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Network Transition View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 The observer might naturalize middle-layer collapse as an inherent feature of network scaling: 'Intermediaries are always eliminated by direct platforms \u2014 this is a law of information economics.' However, base properties (\u03b5=0.58, suppression=0.68, theater=0.62) do not support a mountain. The collapse is contingent on specific technological/regulatory conditions, not immutable. This perspective risks false summitry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "resilience_threshold_breach",
+      "question": "What degree of intermediary collapse triggers cascading system failures in supply chains, emergency response, or critical infrastructure?",
+      "resolution_mechanism": "Empirical analysis of supply chain shock propagation in sectors with varying intermediary density; comparative study of 2020-2024 logistics disruptions across platform-heavy vs intermediary-rich regions",
+      "impact": "If threshold is near current collapse: system is operating in a fragile regime, and extraction cost to resilience is severe (snare from system perspective confirmed). If threshold is far: some collapse can be tolerated without structural failure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "System resilience threshold for intermediary layer collapse"
+    },
+    {
+      "id": "labor_precarity_wage_suppression",
+      "question": "Does direct-to-consumer platform scaling suppress wages and working conditions for last-mile workers compared to the intermediary-era baseline?",
+      "resolution_mechanism": "Comparative wage analysis (real wages, benefits, scheduling predictability) for delivery, maintenance, and last-mile workers: 2010-2025 data; control for skill/location",
+      "impact": "If wages suppressed: hidden extraction mechanism embedded in 'consumer benefit' (tangled rope confirmed). If wages stable or higher: consumer benefit is more genuine coordination gain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Wage and precarity changes in platform-direct vs intermediary labor"
+    },
+    {
+      "id": "platform_dependency_lock_in",
+      "question": "Can end consumers and suppliers realistically switch away from dominant platforms, or are they locked in by network effects and data dependencies?",
+      "resolution_mechanism": "Historical analysis of platform switching costs; survey of consumer/supplier switching behavior; comparison to earlier intermediary-era switching costs",
+      "impact": "If high lock-in: consumer exit options are 'constrained' not 'mobile', elevating chi and confirming tangled rope / snare dynamics. If low lock-in: consumer perspective is genuinely rope or even beneficiary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Platform dependency and exit costs for consumers and suppliers"
+    },
+    {
+      "id": "knowledge_loss_tacit_skill_erosion",
+      "question": "Are tacit skills, local knowledge, and distributed problem-solving capacity genuinely lost when intermediary layer collapses, or can platforms capture and automate them?",
+      "resolution_mechanism": "Documentation of failure modes in automated systems that previously relied on intermediary judgment; analysis of fault-response time in platform vs intermediary ecosystems; case studies of critical incidents",
+      "impact": "If knowledge is genuinely lost: system resilience snare is confirmed (\u03c7\u22480.76). If platforms can capture all tacit knowledge: resilience collapse is manageable, and the snare perspective is overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tacit knowledge retention and loss in platform-direct systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The intermediary decay describes a systemic transformation where the middle layer of economic and logistical systems \u2014 regional distributors, local maintenance contractors, human moderators, community-embedded service providers \u2014 is hollowed out by automation, platform scaling, and direct-to-end-user business models. This constraint demonstrates how a technologically-driven efficiency gain (direct-to-consumer platforms reduce transaction costs and improve service velocity) simultaneously extracts from multiple victim groups: the intermediaries themselves (career/capital destruction), end consumers (hidden precarity and lock-in), and abstract systemic resilience (loss of geographic redundancy and tacit knowledge). The constraint is not primarily coercive in the conventional sense \u2014 there are no legal barriers, no overt suppression, no threat of violence. Instead, it operates through economic obsolescence and structural substitution: intermediaries cannot compete with platform automation because capital requirements and scale economics favor centralized systems. The extraction is latent in the asymmetric distribution of gains (end consumers see lower prices; platform operators capture data and market control; intermediaries face unemployment). The theater ratio reflects the performative regulatory framework that persists despite the collapse: licensing schemes, labor classifications, and local business regulations designed for the intermediary era continue to exist but have lost functional relevance.",
+    "key_agents": [
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture data access, network effects, and market control; drive the technological substitution",
+      "End Consumers: Secondary beneficiary/victim (moderate/constrained) \u2014 gain lower prices and faster service but face hidden precarity costs and lock-in; cannot easily exit",
+      "Regional Intermediaries: Primary victim (powerless/trapped) \u2014 structurally displaced by technological substitution; lack capital and skills to pivot; face biographical-timescale unemployment",
+      "Last-Mile Workers: Secondary victim (powerless/trapped) \u2014 absorbed into precarious platform labor (gig economy); wages suppressed relative to intermediary-era baselines; lack scheduling predictability and benefits",
+      "System Resilience & Redundancy: Tertiary victim (powerless/trapped) \u2014 abstract collective good; loses geographic redundancy, tacit knowledge distribution, local problem-solving capacity; cannot organize or exit",
+      "Regulatory Framework: Institutional actor (institutional/constrained) \u2014 maintains performative licensing and labor protections despite loss of functional substrate; sees own authority degraded (piton perspective)"
+    ],
+    "logic_rationale": "Extractiveness (0.58, high): The constraint extracts from intermediaries and system resilience. The extraction mechanism is technological substitution (platform automation and scale economies) rather than overt coercion. The initial extractiveness (0.22) reflects the early era of platform emergence when intermediaries and platforms coexisted in complementary roles. As platforms achieved scale dominance (time=7-14), extractiveness rose to 0.58 as intermediaries faced structural obsolescence. Suppression (0.68, high): Significant barriers prevent escape: intermediaries cannot access capital to automate, cannot compete on scale, cannot pivot skills without retraining, lack leverage to demand regulatory protection. Last-mile workers face algorithmic management and rating systems that suppress wage negotiation. End consumers face high switching costs (network effects, data lock-in). The suppression is not state-imposed but structural (capital requirements, information asymmetries, coordination failures). Theater ratio (0.62, moderate-high): Regulatory frameworks for business licensing, labor classification ('partner' vs 'employee'), and local commerce continue to exist and maintain ceremonial authority, but lack enforcement capacity and functional relevance in the platform-direct ecosystem. Licensing regimes for regional distribution still exist in many jurisdictions but have minimal impact on platform operations. Labor classification schemes debate the status of gig workers without changing fundamental precarity.",
+    "perspectival_gap": "The largest perspectival gap separates the platform operator (rope) from the displaced intermediary (snare). The platform operator solves a genuine coordination problem \u2014 matching supply and demand at scale with lower transaction costs \u2014 and experiences the transformation as a solution. The intermediary experiences the same transformation as structural displacement with no path forward (high suppression, trap exit option). The end consumer perspective is more complex (tangled rope): they benefit from lower prices and faster service (coordination function), but this benefit is partially subsidized by hidden extraction elsewhere (precarious labor, system fragility, data access) and reinforced by lock-in effects (constrained exit). The system resilience perspective (snare) reveals that the aggregated platform efficiency may be masking distributed fragility: the loss of geographic redundancy and tacit knowledge creates hidden vulnerability to supply shocks. The regulatory framework perspective (piton) shows that institutions designed for the intermediary era persist through inertia without functional content. The analytical observer risks naturalizing the collapse as an inevitable economic law (mountain) \u2014 a false summit that obscures the contingency of the transformation (it depends on specific technological capabilities, regulatory choices, and labor law regimes).",
+    "directionality_logic": "Platform operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; experience genuine coordination function. Regional intermediaries: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction; no exit option, no leverage. End consumers: Beneficiary (lower prices) + victim (hidden extraction, lock-in) + constrained exit \u2192 d\u22480.55, f(d)\u22480.75. Mixed; constrained exit prevents full beneficiary status. Last-mile workers: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.38. High extraction; wage suppression, algorithmic control, no alternative employment at equivalent scale. System resilience: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction; abstract collective that cannot organize or exit. Regulatory framework: Institutional + constrained \u2192 d\u22480.60, f(d)\u22480.85. Piton classification; performative authority without functional enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_concentration",
+      "gig_economy_precarity",
+      "last_mile_logistics_fragility"
+    ],
+    "dual_formulation_note": "The intermediary decay is downstream of several technological constraints (automation, direct-to-consumer platforms, algorithmic management) and upstream of supply chain concentration and gig economy precarity. The constraint family decomposes into: (1) technological automation (\u03b5\u22480.15, mountain-ish) \u2014 inherent efficiency limit, (2) intermediary decay (\u03b5\u22480.58, snare) \u2014 contingent economic displacement, (3) supply chain concentration (\u03b5\u22480.52, tangled rope) \u2014 contingent structural fragility. Each has different \u03b5 values and responds to different interventions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

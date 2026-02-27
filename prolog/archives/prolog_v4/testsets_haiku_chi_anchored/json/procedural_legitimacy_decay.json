@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "procedural_legitimacy_decay",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "procd"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.78,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Hollow Formality Trap",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "procedural_administrators",
+      "institutional_gatekeepers"
+    ],
+    "victims": [
+      "procedure_subjects",
+      "legitimacy_commons"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Procedure Subject",
+      "comment": "PERSPECTIVE 1: PROCEDURE SUBJECT (SNARE) \u2014 Individual compelled to navigate bureaucratic process that lacks internal legitimacy. Cannot exit without forfeiting access to resource/status. No alternative pathway. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Procedural Administrator",
+      "comment": "PERSPECTIVE 2: PROCEDURAL ADMINISTRATOR (ROPE) \u2014 Institutional actor who coordinates compliance and resource allocation through the procedure. Experiences constraint as legitimate coordination mechanism: the formality creates predictability and uniform treatment. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Compliant Participant",
+      "comment": "PERSPECTIVE 3: COMPLIANT PARTICIPANT (TANGLED ROPE) \u2014 Moderate agent who has internalized procedure as legitimate despite knowing the underlying consensus has eroded. Benefits from perceived fairness and predictability; bears cost of time investment and psychological acceptance of hollow ritual. d\u22480.60, f(d)\u22480.72, \u03c3=0.9 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Historical Procedure Tradition",
+      "comment": "PERSPECTIVE 4: HISTORICAL PROCEDURE TRADITION (PITON) \u2014 Institutional memory view: the procedure was once genuinely legitimate (coordinated around shared values). The form persists through inertia even though the consensus foundation has dissolved. Theater ratio 0.78 reflects that compliance is now primarily performative maintenance of symbolic legitimacy rather than genuine collective action problem solving. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.16."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Organized actors (civil society, reformist bureaucrats, legal scholars) see the procedure as a temporary failure of legitimacy with a sunset clause. Distributed pressure to redesign procedures is creating alternative pathways that bypass hollow formality. d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.22. Low effective extraction because coalition has exit capacity and visibility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational view, hollow procedures serve dual functions: they extract compliance costs from subjects while maintaining a coordination apparatus. The procedure has both genuine coordination value (uniform treatment, procedural predictability) AND extraction value (gatekeeping access, maintaining administrative control). This hybridity is the constraint's defining feature. d\u22480.68, f(d)\u22481.05, \u03c3=1.2 \u2192 \u03c7\u22480.55."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_threshold_collapse",
+      "question": "What percentage of procedure subjects must lose subjective belief in legitimacy before the procedure becomes objectively extractive rather than coordinative?",
+      "resolution_mechanism": "Longitudinal survey data on perceived legitimacy; correlation with compliance rates, resistance behavior, and institutional pressure to maintain procedure",
+      "impact": "If threshold < 30%: most procedures are hollow by this standard (broadens snare classification). If threshold > 70%: requires near-complete consensus loss before extraction becomes structural (narrows snare classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimacy belief threshold for classification shift"
+    },
+    {
+      "id": "reform_pathway_sufficiency",
+      "question": "Can alternative procedural designs capture the genuine coordination value of hollow procedures without the extraction overhead?",
+      "resolution_mechanism": "Pilot programs testing streamlined procedures; measurement of coordination failure rates, fairness perception, and compliance in alternative designs",
+      "impact": "If yes: scaffold sunset is real and the constraint is temporary. If no: procedure is inescapable tangled rope (coordination and extraction are structurally coupled).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reform pathways can maintain coordination without hollowness"
+    },
+    {
+      "id": "symbolic_legitimacy_necessity",
+      "question": "Is subjective belief in procedural legitimacy a causal prerequisite for the procedure's coordination function, or merely correlated with it?",
+      "resolution_mechanism": "Behavioral experiments on compliance with procedures that are known to be hollow; analysis of compliance under transparency vs opacity",
+      "impact": "If causal: legitimacy is the coordination mechanism itself (piton classification is correct \u2014 the form maintains function). If merely correlated: hollowness is parasitic extraction (snare is primary).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether subjective legitimacy belief is necessary for procedure function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The hollow formality trap describes a bureaucratic constraint where procedural form persists despite erosion of the social consensus that originally justified it. Examples include licensing requirements for occupations where guild gatekeeping has replaced quality assurance, residency visa procedures maintained after their original purpose dissolved, professional credentialing that screens status rather than competence, or legislative oversight committees that lack actual enforcement power. The constraint exhibits the defining feature of tangled rope: it simultaneously provides genuine coordination (uniform treatment, predictable outcomes, documented access) AND extraction (time cost, compliance overhead, gatekeeping control). The procedural administrators experience it as coordination; procedure subjects experience it primarily as extraction. The defining pathology is that the theater ratio grows as legitimacy erodes \u2014 once subjective belief in the procedure's justification decays, maintaining compliance requires increasingly elaborate performance and symbolic emphasis on procedural legitimacy itself. The constraint has moved from 35% theater (genuine coordination with some ritual) at t=0 to 78% theater (primarily ritual maintenance with residual coordination function) at t=20. This diagnostic signature distinguishes hollow formality from both genuine rope (low theater throughout) and pure piton (theater remains constant at high level as institutional inertia holds form).",
+    "key_agents": [
+      "Procedure Subjects: Primary victims (powerless/trapped) \u2014 compelled to navigate bureaucratic process that no longer has internal justification; cannot exit without forfeiting resource/status access",
+      "Procedural Administrators: Primary beneficiaries (institutional/arbitrage) \u2014 maintain gatekeeping control and coordinate resource allocation through formality; see procedure as coordination mechanism",
+      "Compliant Participants: Secondary victims (moderate/constrained) \u2014 internalized procedure as legitimate; now trapped between eroded belief and continued compliance",
+      "Historical Procedure Tradition: Institutional memory (institutional/constrained) \u2014 procedure was once genuinely coordinative; form persists through inertia (piton perspective)",
+      "Reform Coalition: Organized agents (organized/mobile) \u2014 civil society, reformist bureaucrats, legal scholars building alternative pathways with sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees structural hybridity: procedure has both genuine coordination value AND extraction value"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The procedure imposes compliance costs (time investment, attention allocation, procedural navigation) on subjects. These costs are no longer justified by genuine coordination gains \u2014 they have become primarily extraction. However, some residual coordination value persists (documented access, uniform treatment principle), preventing classification as pure snare. The 0.52 value reflects that extraction is substantial but not maximal; subjects have not completely lost access to the underlying resource. Suppression (0.65): Moderate-high. Significant barriers to exit include: lack of alternative pathways, institutional requirement for procedure completion before resource access, social stigma for non-compliance, and absence of formal complaint mechanisms. However, some subjects can and do exit through informal channels or by forfeiting the resource. Theater ratio (0.78): High and rising. The procedure's justifying rationale has largely dissolved (its original purpose achieved, context changed, alternatives available), but the form persists. Current compliance is motivated primarily by fear of rejection, social conformity, and internalized legitimacy rather than agreement with underlying purpose. Administrative discourse increasingly emphasizes 'fair process' and 'consistency' (procedural values) rather than the original substantive goals, a diagnostic indicator of theater growth.",
+    "perspectival_gap": "The procedure subject experiences snare (high extraction, trapped exit) because they see the compliance costs without the justifying coordination benefit. The procedural administrator experiences rope (genuine coordination mechanism) because the procedure legitimately solves their coordination problem: how to allocate resources uniformly and predictably. The compliant participant experiences tangled rope because they have internalized the procedure's legitimacy narrative even as external evidence of its justification has eroded. The historical tradition perspective reveals piton (inertial degradation): the procedure was once genuinely coordinative but the foundation has dissolved. The reform coalition sees scaffold (temporary failure with sunset): new procedures without hollow formality can capture the coordination value while reducing extraction. The analytical observer sees the full hybridity: the procedure simultaneously coordinates AND extracts, and the theater ratio's growth reveals the tension between these functions as legitimacy erodes.",
+    "directionality_logic": "Procedure subjects: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Procedural administrators: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiaries, negative effective extraction. Compliant participants: Victims + constrained \u2192 d\u22480.60, f(d)\u22480.72. Moderate extraction; have constrained exit options (can exit but at significant cost). Reform coalition: Organized agents + mobile \u2192 d\u22480.42, f(d)\u22480.42. Low effective extraction; have agency and visible alternatives. The directionality derivation reveals the structural asymmetry: procedure administrators exit the constraint's overhead (arbitrage exit from administrative burden) while subjects remain trapped. This asymmetry is the mechanism of extraction: the procedure imposes costs it insulates administrators from bearing.",
+    "mandatrophy_analysis": "The mandatrophy is partially resolved by recognizing that tangled rope is the primary classification: the procedure has BOTH genuine coordination function (uniform treatment, documented access, predictable outcomes) AND asymmetric extraction (time cost, gatekeeping, administrative control). The mandatrophy would only fully resolve if evidence revealed that the coordination function is separable from extraction (scaffold/reform pathway is sufficient) \u2014 at that point the constraint would be reclassified as a temporary failure rather than a structural feature. Current evidence suggests the coordination and extraction are structurally coupled through the procedure's legitimacy apparatus: removing the formality's symbolic weight (theater reduction) risks undermining the coordination value itself. This coupling is why hollow procedures persist despite widespread recognition of their hollowness."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "occupational_licensing_gatekeeping",
+      "credentialing_status_screening",
+      "visa_procedure_inertia"
+    ],
+    "dual_formulation_note": "The hollow formality trap is a family of related constraints that share the same structural pattern: procedural form maintained despite legitimacy erosion. Specific instances (licensing, credentialing, visa procedures) have their own empirical \u03b5 values but all exhibit the theater-ratio diagnostic signature of legitimacy decay. The family members are linked because reform in one domain (e.g., licensing modernization) propagates pressure to other domains (visa/credentialing modernization)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

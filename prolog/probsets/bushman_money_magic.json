@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "bushman_money_magic",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "The Trickster's Asymmetric Scam",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "jackal_trickster"
+    ],
+    "victims": [
+      "cattle_ranchers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Cattle Ranchers' Perspective",
+      "comment": "The cattle ranchers are the primary victims, trapped in a cycle of extortion and deception with limited ability to exit or resist in the immediate term. High perceived extractiveness and suppression of alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Jackal Trickster's Perspective",
+      "comment": "From the trickster's perspective, this is a highly profitable and easily executed scheme with minimal risk. They benefit greatly, experiencing the arrangement as advantageous coordination for personal gain, and they can exit any time they want."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "label": "The Regional Authority's Perspective",
+      "comment": "The regional authority sees this as a local law enforcement issue, where there is a coordination problem preventing proper capture of the perpetrators, and it is also a matter of some extraction from local ranchers that might create issues for longer-term stability. There is active enforcement of a kind, but the enforcement itself is not always reliable."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The National Law Enforcement Perspective",
+      "comment": "From the national law enforcement perspective, this is a lower-priority matter due to its local impact and relatively low value, and so resources are not applied efficiently, if at all. At this scale, the function has atrophied, leaving behind a theatrical process."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "jackal_capture_success",
+      "question": "What is the probability of successfully capturing the trickster, considering their deception skills and the ranchers' lack of resources?",
+      "resolution_mechanism": "Track the trickster's tactics and the ranchers' attempts to protect their assets.",
+      "impact": "If the trickster is easily captured, it would dissuade similar scams. If capture is nearly impossible, the extraction will continue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determine the success rate of capturing the trickster."
+    },
+    {
+      "id": "regional_intervention",
+      "question": "How effective are the regional authorities in protecting the ranchers, and can they be trusted to address the issue fairly?",
+      "resolution_mechanism": "Analyze the level of enforcement and its impact on the ranchers' vulnerability.",
+      "impact": "If regional authorities are capable and reliable, it would disrupt the scam. If they are corrupt or inept, the extraction would continue.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Understand the role and efficacy of regional authorities."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a \"magic scam\" where a trickster figure (Jackal) utilizes deception and temporary narrative control to extract wealth from victims (cattle ranchers). The success of the scam relies on the trickster's ability to manipulate perceptions and exploit vulnerabilities.",
+    "key_agents": [
+      "Jackal Trickster: Beneficiary, exploits deception for personal gain",
+      "Cattle Ranchers: Victims, trapped in a cycle of extortion",
+      "Regional Authority: Potentially helpful enforcer, but may be limited or corrupt",
+      "National Law Enforcement: Distant and largely ineffective"
+    ],
+    "logic_rationale": "The high extractiveness score (0.75) reflects the significant loss suffered by the cattle ranchers. The high suppression score (0.80) signifies the ranchers' limited ability to resist or escape the scam. The moderate theater ratio (0.75) signifies the performance of regional authority that can be trusted to resolve the situation fairly.",
+    "perspectival_gap": "The cattle ranchers experience a pure snare, while the trickster enjoys the benefits of a seemingly harmless scheme. The regional authority, depending on its efficacy, might perceive it as a tangled rope or even piton, if the enforcement function has atrophied. At the level of national law enforcement, the process seems more like a piton, if the problem is under-resourced.",
+    "directionality_logic": "The directionality is derived from the beneficiary and victim declarations. The trickster is the beneficiary with negative directionality. The ranchers are the victims with positive directionality. The regional and national authorities represent enforcement perspectives with corresponding directionality scores.",
+    "mandatrophy_analysis": "This scam cannot be easily mislabeled. It is neither a necessary component of a legitimately productive scheme or practice, nor is it a natural law. The regional authority's perspective is Tangled Rope because they are actively trying to enforce the law, but are not fully effective due to the trickster's deception skills and the ranchers' lack of resources. The active enforcement is what makes it Tangled Rope rather than Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

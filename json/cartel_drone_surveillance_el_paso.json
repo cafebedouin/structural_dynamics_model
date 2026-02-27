@@ -2,29 +2,27 @@
   "header": {
     "constraint_id": "cartel_drone_surveillance_el_paso",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cdse"
   },
   "base_properties": {
-    "extractiveness": 0.75,
-    "suppression": 0.8,
-    "theater_ratio": 0.1,
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.35,
     "claimed_type": "snare",
     "human_readable": "Cartel Drone Surveillance Monopoly over El Paso Border Area",
     "topic_domain": "geopolitical/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "cartel_leadership",
-      "cartel_operators"
+      "mexican_cartel_organizations"
     ],
     "victims": [
-      "local_civilian_populations",
-      "migrants_and_smugglers",
-      "us_border_patrol",
-      "mexican_authorities",
-      "rival_criminal_organizations"
-    ],
-    "mandatrophy_resolved": true
+      "us_border_enforcement_capacity",
+      "civilian_population_el_paso_region",
+      "legitimate_cross_border_commerce",
+      "border_community_autonomy"
+    ]
   },
   "perspectives": [
     {
@@ -32,133 +30,168 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "El Paso Civilian Population",
+      "comment": "PERSPECTIVE 1: EL PASO CIVILIAN POPULATION (SNARE) \u2014 Residents cannot exit the surveillance zone; carry the cost of cartel intelligence advantage, increased violence spillover risk, and informant vulnerability. No organized resistance capacity. Maximal experienced extraction \u2014 trapped subject of continuous monitoring with no exit option or recourse mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Local Resident or Migrant",
-      "comment": "PERSPECTIVE 1: THE TRAPPED CIVILIAN (SNARE) — Subject to constant surveillance, with no ability to opt out or resist without extreme risk. Freedom of movement and security are extracted. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.96. This is a textbook snare."
+      "label": "US Border Enforcement Agencies",
+      "comment": "PERSPECTIVE 2: US BORDER ENFORCEMENT AGENCIES (TANGLED ROPE) \u2014 CBP, DEA, ICE experience both extraction (intelligence disadvantage, surveillance asymmetry) and coordination benefit (identifying incursion vectors, coordinating countermeasures). Constrained by budget, legal authority limitations, and technological disadvantage. Active enforcement required to maintain counter-surveillance. Mixed extraction and legitimate defensive coordination."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Legitimate Cross-Border Commerce Operators",
+      "comment": "PERSPECTIVE 3: LEGITIMATE CROSS-BORDER COMMERCE OPERATORS (SNARE) \u2014 Cannot exit the region; face targeting risk from cartel surveillance (theft, extortion, route interdiction). Pay implicit extraction tax through security precautions and loss of commerce efficiency. Trapped between cartel demand for tribute and law enforcement scrutiny. High suppression \u2014 limited ability to organize or report without retaliation."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "continental",
-      "label": "The Cartel Leadership",
-      "comment": "PERSPECTIVE 2: THE CARTEL LEADERSHIP (ROPE) — Experiences the drone network as a pure coordination tool for logistics, security, and enforcement. It solves collective action problems for the organization. d≈0.05, f(d)≈-0.12, σ=1.1 → χ≈-0.10. The negative effective extraction signifies a net subsidy."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The US Border Patrol",
-      "comment": "PERSPECTIVE 3: US BORDER PATROL (SNARE) — An organized victim. While possessing significant resources, they are constrained by rules of engagement, technological gaps, and the sheer scale of the surveillance. The network actively extracts their operational effectiveness. d≈0.60, f(d)≈0.85, σ=1.0 → χ≈0.64. Just crosses the snare threshold."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SNARE) — Sees the full structure of coercion, suppression, and asymmetric extraction. The system's function is to enforce a monopoly through technological dominance, classifying it as a snare. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.04."
+      "label": "Mexican Cartel Organizations",
+      "comment": "PERSPECTIVE 4: MEXICAN CARTEL ORGANIZATIONS (ROPE) \u2014 Primary beneficiary. Drone network solves critical coordination problem: timing shipments, avoiding enforcement, identifying opportunities. Experiences constraint as enabling mechanism. Extraction is positive from this perspective \u2014 the system works for them. Institutional power, high arbitrage (can shift operations, scale, or change tactics)."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Commercial Drone Manufacturer",
-      "comment": "PERSPECTIVE 5: DRONE MANUFACTURER (TANGLED ROPE) — An unintentional beneficiary (through sales) and victim (reputational damage, pressure for regulation). The constraint is a hybrid: it coordinates sales but also creates an extractive, negative externality they are forced to manage. They are not trapped but cannot easily exit the market segment. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.59."
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mexican Government Border Authority",
+      "comment": "PERSPECTIVE 5: MEXICAN GOVERNMENT BORDER AUTHORITY (TANGLED ROPE) \u2014 Experiences both extraction (cartel surveillance undermines state capacity, sovereignty violated on their territory) and coordination failure (must cooperate with US to address asymmetric threat). Constrained by cartel violence, corruption penetration, and limited resources. Active enforcement of counter-surveillance is required but produces limited extraction reduction because cartels have institutional-level resources."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Military/Intelligence Apparatus",
+      "comment": "PERSPECTIVE 6: US MILITARY/INTELLIGENCE APPARATUS (PITON) \u2014 Possesses technological capability to neutralize the drone network completely but operates under legal/jurisdictional constraints and diplomatic theater. Maintains theater of 'not intervening in foreign security matters' while cartel surveillance creates direct national security threat. Capacity has degraded relative to threat due to institutional inertia and jurisdictional constraints. Maintains restrictive posture through performative policy framework rather than functional limitation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a systems analysis perspective, drone surveillance asymmetry follows from differential resource access and legal constraint structures. Appears immutable: cartels have financial capacity and willingness to lose assets; enforcement agencies have legal/political constraints. However, this naturalizes a contingent institutional choice (legal constraints are policy-settable, resource concentration is not immutable). Engine will classify as false summit."
     }
   ],
   "omegas": [
     {
-      "id": "technological_asymmetry",
-      "question": "Is the cartel's technological advantage persistent, or can state-level counter-drone technology effectively neutralize it at scale?",
-      "resolution_mechanism": "Deployment and longitudinal effectiveness studies of military-grade counter-UAS systems in the border region.",
-      "impact": "If the advantage is persistent, the Snare classification holds. If it can be neutralized, the constraint's suppression and extractiveness would collapse, potentially degrading it to a Piton (attempted surveillance) or dissolving it.",
+      "id": "cartel_financial_capacity_threshold",
+      "question": "What is the critical financial threshold at which cartel drone network maintenance becomes economically unsustainable versus worth the strategic advantage?",
+      "resolution_mechanism": "Economic analysis of cartel operational budgets, drone fleet replacement costs, operator training requirements, and comparison to estimated smuggling revenue protection and pricing power gains from surveillance advantage",
+      "impact": "If threshold is achievable through enforcement action: snare can be partially degraded to tangled_rope through attrition. If threshold exceeds enforcement capacity: snare classification is robust and only political constraint removal enables mitigation.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Persistence of the technological gap between cartel and state actors."
+      "description": "Economic threshold for cartel drone network maintenance"
     },
     {
-      "id": "state_complicity_vs_incapacity",
-      "question": "To what degree does the surveillance network's persistence depend on Mexican state corruption versus genuine state incapacity?",
-      "resolution_mechanism": "Intelligence analysis of cartel-government interactions, corruption investigations, and comparative analysis with other regions.",
-      "impact": "High complicity would imply the constraint is deeply embedded and supported by institutional actors, making it a more stable Snare. High incapacity suggests it's a more fragile, purely technological constraint that could be overcome with external support.",
+      "id": "enforcement_legal_constraint_removability",
+      "question": "Are the legal/jurisdictional constraints preventing kinetic US response to cartel drone incursions structural policy choices or immutable legal doctrine?",
+      "resolution_mechanism": "Constitutional and international law analysis; comparison to historical precedents of US military action in response to direct cross-border threats; policy analysis of sovereignty doctrine evolution",
+      "impact": "If removable through policy: mountain perspective is false summit; snare can be degraded through institutional will. If immutable: mountain perspective partially correct; snare persists due to legal structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether legal constraints on enforcement response are removable through policy"
+    },
+    {
+      "id": "mexican_state_counter_capacity_trajectory",
+      "question": "Is the degradation of Mexican state counter-drone capacity an intrinsic structural feature or a reversible institutional failure?",
+      "resolution_mechanism": "Longitudinal analysis of Mexican military drone assets, training capacity, and anti-drone technology procurement; assessment of corruption penetration in border security apparatus; correlation with federal law enforcement investment cycles",
+      "impact": "If reversible: binational coordination can transition from US-centric enforcement to shared burden (tangled_rope from Mexican perspective becomes rope). If intrinsic: cartel advantage is structural until cartel financial capacity declines.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Mexican state counter-drone capacity degradation is reversible"
+    },
+    {
+      "id": "civilian_cost_asymmetry_irreversibility",
+      "question": "Do the informant networks and cartel-civilian penetration created by surveillance asymmetry constitute reversible institutional damage or permanent structural change?",
+      "resolution_mechanism": "Intelligence assessment of cartel informant penetration depth and civilian collaboration extent; comparison to historical post-conflict reconciliation in regions with similar surveillance states; analysis of informant safety and reintegration capacity",
+      "impact": "If reversible: suppression metrics can decline post-enforcement. If irreversible: civilian population remains trapped even if drone network is neutralized; snare persists in modified form.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "The role of state corruption vs. incapacity in enabling the network."
-    },
-    {
-      "id": "escalation_threshold",
-      "question": "What is the political threshold for treating cartel drone incursions as a sovereign act of aggression rather than a criminal matter?",
-      "resolution_mechanism": "Policy analysis, monitoring of political rhetoric, and observation of changes in military rules of engagement at the border.",
-      "impact": "Crossing this threshold would fundamentally change the classification by introducing a powerful, institutional actor (the US military) with different exit options and power, potentially dissolving the constraint through overwhelming force.",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "The political line between a law enforcement and military problem."
+      "description": "Reversibility of civilian informant network damage from surveillance regime"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2,
-      "value": 0.65
+      "time_point": 3,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.75
+      "time_point": 6,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.05
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2,
-      "value": 0.08
+      "time_point": 3,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.1
+      "time_point": 6,
+      "value": 0.35
     }
   ],
   "interval": {
-    "start": 2021,
-    "end": 2026
+    "start": 0,
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "A sophisticated and persistent drone surveillance network, operated by Mexican cartels, has established a de facto information monopoly over strategic corridors in the El Paso-Juárez border region. Using commercially available drones, this network conducts reconnaissance on law enforcement, monitors rival gangs, and facilitates smuggling operations. This creates a highly coercive environment, extracting security and freedom of movement from all other actors in the region. The system is not performative; it is a highly functional tool of territorial control and economic extraction, representing a non-state actor successfully deploying technology to suppress state authority.",
+    "narrative_context": "Mexican cartel organizations have established persistent drone surveillance networks over the El Paso, Texas border region, creating a structural monopoly on aerial intelligence asymmetry. This constraint arises from the convergence of three structural conditions: (1) cartels possess superior financial capacity and asset-loss tolerance to field and maintain drone networks; (2) US enforcement agencies operate under legal/jurisdictional constraints that prevent kinetic counter-drone response; (3) Mexican government border authority lacks equivalent drone capacity or institutional will to interdict cartel operations on its own territory. The surveillance network enables cartel optimization of smuggling timing, route selection, pricing power, and targeting of enforcement vulnerabilities. Simultaneously, it extracts from civilian populations through informant recruitment, extortion surveillance, and violence spillover. The constraint exhibits all six DR types from different perspectives, revealing how a technological asymmetry intersects with institutional constraint structures to produce pure extraction for powerless agents and coordination benefit for cartels.",
     "key_agents": [
-      "Cartel Leadership: Primary beneficiary (institutional/arbitrage) - Uses the network for command, control, and operational security.",
-      "Local Civilian Populations: Primary victim (powerless/trapped) - Subjected to surveillance, intimidation, and coercion.",
-      "US Border Patrol: Organized victim (organized/constrained) - The direct target of surveillance, which degrades their operational effectiveness.",
-      "Rival Criminal Organizations: Secondary victim (organized/trapped) - Targeted for elimination, their operations are suppressed by the dominant cartel's information advantage.",
-      "Commercial Drone Manufacturers: Unintentional beneficiary/victim (institutional/mobile) - Profit from sales but suffer reputational harm and regulatory risk."
+      "Mexican Cartel Organizations: Primary beneficiary (institutional/arbitrage) \u2014 captures intelligence advantage, pricing power, route optimization, enforcement evasion capability",
+      "El Paso Civilian Population: Primary victim (powerless/trapped) \u2014 subject of continuous surveillance, informant recruitment pressure, extortion targeting, violence spillover risk",
+      "US Border Enforcement Agencies (CBP, DEA, ICE): Secondary victim (organized/constrained) \u2014 experience intelligence disadvantage, surveillance asymmetry, reduced interdiction capacity",
+      "Legitimate Cross-Border Commerce: Secondary victim (moderate/trapped) \u2014 subject to cartel targeting, extortion, route interdiction, security cost imposition",
+      "Mexican Government Border Authority: Mixed (institutional/constrained) \u2014 experiences extraction from cartel surveillance but also forced cooperation requirement",
+      "US Military/Intelligence Apparatus: Institutional observer (institutional/arbitrage) \u2014 possesses mitigation capacity but operates under performative legal constraint framework"
     ],
-    "logic_rationale": "Extractiveness (0.75) is very high, representing the value extracted from controlling smuggling routes, extorting populations, and neutralizing law enforcement. Suppression (0.80) is also very high; the network's purpose is to eliminate alternatives and enforce the cartel's monopoly through the threat of violence informed by superior intelligence. Alternatives (moving freely, reporting crime, competing illicitly) are actively and violently suppressed. Theater Ratio (0.10) is low because the system is almost entirely functional. Its purpose is direct surveillance and control, not signaling or performance.",
-    "perspectival_gap": "The gap is stark. For the cartel leadership (beneficiary), the network is a pure Rope, an elegant solution to the coordination problems of running a large criminal enterprise. For virtually every other actor, it is a Snare. The local resident is trapped under its gaze, and law enforcement is actively targeted by it. This gap highlights the core of Deferential Realism: the same object is experienced as a tool of coordination by its operator and a tool of coercion by its target.",
-    "directionality_logic": "The directionality is derived directly from the structural roles. Cartel Leadership (beneficiary, arbitrage exit) has a very low 'd' value, resulting in negative effective extraction (a net benefit). Local Populations (victim, trapped exit) have the highest possible 'd' value, experiencing maximum extraction. US Border Patrol (victim, constrained exit) experiences high, but not maximal, extraction, as they have organizational resources to mitigate some effects, unlike a powerless civilian. The logic follows the derivation chain without need for overrides.",
-    "mandatrophy_analysis": "This case is a straightforward resolution of mandatrophy. The claim that the drone network is a 'coordination tool' is only valid from the cartel's perspective. From all other perspectives, and especially the analytical one, its high suppression and extraction metrics make it an unambiguous Snare. The system's very existence relies on coercing others and suppressing their ability to operate. Any attempt to frame this as a neutral or beneficial technology (a Rope) is a perspectival error that ignores the structural violence inherent in its function. The mandatrophy is resolved by acknowledging the beneficiary's perspective while classifying the overall constraint based on its coercive structure as seen by its victims and the analytical observer."
+    "logic_rationale": "Extractiveness (0.68): High. The cartel network extracts significant value from enforcement agencies (intelligence advantage, interdiction cost reduction) and from civilian populations (informant networks, extortion capacity, violence targeting ability). The extractiveness has increased over the measurement interval (0.42 \u2192 0.68) as drone technology matured, cartel operational sophistication increased, and enforcement adaptation lagged. Suppression (0.78): Very high. Suppression mechanisms include: cartel violence deterrent against counter-surveillance attempts, informant networks preventing civilian cooperation with enforcement, legal constraints preventing US kinetic response, corruption penetration in Mexican authorities, and geographic/technological barriers to detection and interdiction. Escape from the surveillance regime requires exit from the region entirely \u2014 there is no constrained-but-functional mode. Theater ratio (0.35): Low. This is a functional, non-performative extraction mechanism. Drones provide direct operational intelligence; the constraint has minimal theater component. The low theater reflects that cartel operations are genuinely optimized by surveillance, not maintained through performance. The declining theater trajectory (0.50 \u2192 0.35) indicates increasing functional integration of surveillance into cartel operations \u2014 early drone deployment had experimental/uncertain function; mature deployment is purely operational.",
+    "perspectival_gap": "The original research group (cartels) sees pure coordination (Rope) \u2014 the drone network solves logistics, timing, and opportunity identification. US enforcement agencies see tangled rope \u2014 they must coordinate counter-surveillance while bearing intelligence extraction costs. Civilian populations see pure snare \u2014 they cannot exit and have no benefit from the system. The Mexican government sees tangled rope \u2014 forced to coordinate against a threat that violates sovereignty while bearing extraction from cartel presence. The military apparatus sees degraded capacity (Piton) \u2014 possesses mitigation capability but operates under legal theater (jurisdictional constraints framed as immutable when they are policy-settable). The analytical observer risks naturalizing the constraint as immutable (Mountain) \u2014 'asymmetric resources are inherent' \u2014 but the structural data reveals that enforcement capacity is constrained by policy choices, not physical law. The perspectival gap between cartel (Rope) and civilian (Snare) is maximum \u2014 they experience the identical structure completely differently because exit options differ fundamentally.",
+    "directionality_logic": "Directionality (d) is derived from agent structural position relative to extraction flow. Mexican cartels are beneficiaries with high arbitrage capacity: they can scale operations, shift tactics, or relocate surveillance networks with minimal constraint. Their d \u2192 0.0 (full beneficiary), producing negative effective extraction (the system works for them). El Paso civilians are trapped victims with no exit option: d \u2192 0.95 (full target), producing maximum f(d) and maximum experienced extraction chi. US enforcement agencies have institutional power but constrained exit (mobile only within legal bounds): d \u2192 0.65 (victim with some agency), producing strong experienced extraction. Cross-border commerce operators are trapped but with some organizational capacity: d \u2192 0.70 (trapped victim), producing strong extraction. Mexican government is constrained institutional actor: d \u2192 0.50-0.60 (symmetric but with power asymmetry favoring extraction), producing moderate extraction. The military apparatus appears as institutional/arbitrage but with artificial constraints: d override may be needed to reflect that legal constraints reduce their effective arbitrage capacity to constrained-equivalent.",
+    "mandatrophy_analysis": "This constraint resolves potential mandatrophy confusion through clear structural decomposition. The cartel sees Rope (pure coordination) because the drone network genuinely solves their logistics problem. The civilian population sees Snare (pure extraction) because they bear costs with no corresponding benefit. Neither perspective is wrong \u2014 they describe different structural relationships to the same physical system. The enforcement agencies see Tangled Rope (mixed) because they must coordinate counter-surveillance while bearing extraction costs. The potential false positive would be to classify this as 'one constraint with multiple readings' when actually the structural relationship differs fundamentally: for cartels, it's a functional coordination tool; for civilians, it's a surveillance-extraction mechanism. The decomposition clarifies that this is a single constraint with genuinely different roles occupied by different agents. The mountain perspective (natural law framing) is a false summit: the constraint persists not because asymmetric resources are inherent, but because institutional policy choices (legal constraints, resource allocation to enforcement) are set to preserve the status quo. The piton perspective correctly identifies that the military apparatus maintains theater (jurisdictional deference framed as immutable legal doctrine) to avoid institutional disruption, not because mitigation is technically impossible."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "us_mexico_border_policy",
-      "regional_economic_stability_juarez"
-    ]
-  }
+      "drug_trafficking_supply_chain_fragmentation",
+      "us_mexico_border_sovereignty_asymmetry"
+    ],
+    "dual_formulation_note": "The cartel drone surveillance monopoly is downstream of technological capability asymmetry and upstream of enforcement coordination failure. Decomposition would separate (1) technological capability gap (which agent can afford/deploy drones) from (2) enforcement legal constraint structure (which agent is permitted to conduct counter-measures). Current story treats them as unified, but epsilon would shift substantially if US military authority constraints were removed."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
 }

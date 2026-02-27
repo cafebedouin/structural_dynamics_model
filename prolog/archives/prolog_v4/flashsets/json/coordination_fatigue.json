@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "coordination_fatigue",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Consensus Exhaustion Loop",
+    "topic_domain": "social/organizational/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "loudest_voices"
+    ],
+    "victims": [
+      "individual_contributors",
+      "quiet_experts"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Individual Contributor",
+      "comment": "Perspective of an individual contributor who feels overwhelmed by the constant need to participate in discussions and consensus-building, leading to burnout and decreased productivity. They lack the power to change the system and feel trapped."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Quiet Expert",
+      "comment": "Perspective of a quiet expert who has valuable insights but is often drowned out by louder voices and feels their expertise is underutilized due to the emphasis on consensus. They are somewhat constrained in their ability to exit because their expertise is valuable but the environment is not conducive to their work."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operator",
+      "comment": "Perspective of the platform operator who benefits from increased engagement and activity, even if it leads to consensus exhaustion for some members. They can arbitrage by focusing on metrics that indicate activity rather than actual creative output, thus benefitting from the loop."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Loudest Voices",
+      "comment": "Perspective of the loudest voices who thrive in environments that prioritize discussion and consensus, as they can exert influence and shape outcomes. They are mobile, as they can move to other platforms if this one becomes less favorable to them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a systemic perspective, consensus exhaustion is a tangled rope. It has the appearance of coordination, but actively extracts from the participants. The high degree of interconnectivity has turned the system to be net negative towards content creation. "
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optimal_consensus_threshold",
+      "question": "What is the optimal level of consensus required for effective decision-making in a networked environment?",
+      "resolution_mechanism": "Empirical studies analyzing the relationship between consensus levels, decision quality, and member satisfaction in various networked environments.",
+      "impact": "Determines whether the current emphasis on consensus is excessive and detrimental to creative output.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal level of consensus for effective decision-making."
+    },
+    {
+      "id": "platform_design_bias",
+      "question": "To what extent do platform design features contribute to consensus exhaustion?",
+      "resolution_mechanism": "Comparative analysis of different platform designs and their impact on member engagement and productivity.",
+      "impact": "Identifies specific design elements that exacerbate consensus exhaustion and informs the development of more sustainable platforms.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of platform design features on consensus exhaustion."
+    },
+    {
+      "id": "alternative_governance_models",
+      "question": "Are there alternative governance models that can mitigate consensus exhaustion while still ensuring effective decision-making?",
+      "resolution_mechanism": "Exploration and evaluation of alternative governance models, such as liquid democracy, delegation-based systems, and direct voting mechanisms.",
+      "impact": "Provides potential solutions for reducing consensus exhaustion and improving overall platform effectiveness.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Viability of alternative governance models."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "In hyper-connected networks, the energy to maintain consensus and synchronization can exceed the creative output. The constant need for participation and discussion leads to exhaustion, burnout, and decreased productivity. This creates a loop where individuals are compelled to engage in consensus-building even when it hinders their ability to focus on actual creative work.",
+    "key_agents": [
+      "Individual Contributors: Primary target (powerless/trapped) - bears the brunt of consensus exhaustion.",
+      "Quiet Experts: Secondary target (moderate/constrained) - valuable insights are underutilized.",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) - benefits from increased engagement, even if it's unproductive.",
+      "Loudest Voices: Secondary beneficiary (powerful/mobile) - thrive in discussion-oriented environments."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The system extracts time and energy from participants, diminishing their ability to focus on creative output. Suppression (0.40): Moderate. Individuals feel pressured to participate in discussions and decision-making, limiting their autonomy and ability to pursue alternative activities. Theater ratio (0.30): Low. The performative aspect of consensus-building is present but not dominant.",
+    "perspectival_gap": "Individual contributors experience it as a snare because of their lack of power or escape. The expert is tangled, because he wants to contribute, but is drowned out. The platform operator sees a rope because the activity helps his numbers. The loud voices also see a tangled rope because they thrive in this environment, but see its potential for misuse. The analyst sees the whole loop as a tangled rope, as the system is actively enforcing this dynamic.",
+    "directionality_logic": "The platform operator benefits from high engagement, so they are beneficiaries. Individual contributors and quiet experts are victims, as they lose focus and energy. Loudest voices benefit by influencing discussions, but can also be negatively affected if things get out of control.",
+    "mandatrophy_analysis": "The constraint prevents labeling coordination as extraction by considering the purpose of consensus-building. If the goal is to facilitate creative output, then the process should be evaluated based on its effectiveness in achieving that goal. If the process is counterproductive, it's likely extraction masquerading as coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

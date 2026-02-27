@@ -1,0 +1,127 @@
+{
+  "header": {
+    "constraint_id": "cloudflare_dual_class_asymmetry",
+    "version": "1.0",
+    "generated_date": "2024-01-03",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Cloudflare Dual-Class Voting Control",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cloudflare_founders_management"
+    ],
+    "victims": [
+      "public_shareholders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Public Shareholders",
+      "comment": "Public shareholders are effectively trapped within the corporate structure, with limited ability to influence company direction due to the voting power asymmetry. They are the primary victims, bearing the cost of decisions made without their effective consent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Cloudflare Founders & Management",
+      "comment": "Cloudflare's founders and management benefit from the dual-class structure, maintaining control over the company's strategic direction and governance even with reduced equity ownership. They can arbitrage this control into long-term value creation, but also potentially self-serving decisions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the dual-class structure as a tangled rope. It facilitates long-term strategic planning and shields the company from short-term market pressures (coordination), but also allows the founders to extract value and maintain control disproportionate to their economic stake (extraction)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_alignment",
+      "question": "To what extent does the founders' vision align with the long-term interests of all stakeholders, including public shareholders?",
+      "resolution_mechanism": "Track the company's strategic decisions and financial performance over time, assessing whether they benefit all stakeholders or primarily the controlling shareholders.",
+      "impact": "If alignment is high, the dual-class structure may be a beneficial rope, facilitating value creation. If alignment is low, it's a snare, enabling extraction at the expense of public shareholders.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessment of alignment between founders' vision and stakeholder interests"
+    },
+    {
+      "id": "corporate_governance_checks",
+      "question": "Are there adequate corporate governance mechanisms in place to prevent abuse of power by the controlling shareholders?",
+      "resolution_mechanism": "Examine the composition and independence of the board of directors, the existence of independent committees, and the company's policies on related-party transactions.",
+      "impact": "Strong governance checks mitigate the risks of extraction and shift the classification towards a more balanced tangled rope. Weak governance increases the risk of a snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Evaluation of corporate governance mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Cloudflare's dual-class stock structure, detailed in its S-1 filing, concentrates voting power in the hands of its founders and management through Class B shares (10 votes per share), while public shareholders receive Class A shares (1 vote per share). This arrangement creates an asymmetry in control, where a small group can dictate company direction despite owning a minority of the equity. This constraint story examines the implications of this structure from various perspectives.",
+    "key_agents": [
+      "Cloudflare Founders & Management: Primary beneficiaries (institutional/arbitrage) - Maintain control disproportionate to their equity stake",
+      "Public Shareholders: Primary victims (powerless/trapped) - Limited influence over company direction",
+      "Analytical Observer: Assesses the overall impact of the structure"
+    ],
+    "logic_rationale": "Extractiveness (0.60): Reflects the potential for controlling shareholders to make decisions that benefit themselves at the expense of public shareholders. Suppression (0.70): Indicates the limited ability of public shareholders to challenge the controlling shareholders' decisions. Theater Ratio (0.30): Suggests that while there is some performative accountability to public shareholders (e.g., board representation), the dual-class structure ultimately limits their real influence.",
+    "perspectival_gap": "The perspectival gap arises from the asymmetry in power and exit options. Founders and management see a rope, enabling them to execute their long-term vision without short-term market pressures. Public shareholders, however, experience a snare, with limited recourse if the controlling shareholders act against their interests. The analytical observer sees the tangled rope, acknowledging both the potential benefits and risks of the dual-class structure.",
+    "directionality_logic": "The directionality is derived from the structural relationships. Cloudflare founders and management benefit from the control the dual-class structure provides, giving them a low 'd' value. Public shareholders bear the costs of this arrangement, resulting in a high 'd' value. The analytical observer is more neutral, assessing the overall impact of the structure.",
+    "mandatrophy_analysis": "This dual-class structure has elements of coordination and extraction. The classification as tangled rope highlights the mixed nature. It avoids mislabeling pure coordination because there are clearly identifiable victims (public shareholders) who lack power. It avoids mislabeling as pure extraction because there's a coordination element in maintaining long-term strategic direction, albeit with concentrated control."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

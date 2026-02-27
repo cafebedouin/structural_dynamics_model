@@ -2,28 +2,29 @@
   "header": {
     "constraint_id": "australia_social_ban_2026",
     "version": "1.0",
-    "generated_date": "2024-07-23",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ausban"
   },
   "base_properties": {
-    "extractiveness": 0.48,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "Australian Under-16 Social Media Ban",
+    "human_readable": "Australian Under-16 Social Media Ban (2025)",
     "topic_domain": "political/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "australian_government",
-      "pro_regulation_advocacy_groups",
-      "age_verification_tech_vendors",
+      "child_safety_advocates",
       "parents_seeking_control"
     ],
     "victims": [
-      "australian_teens_under_16",
       "social_media_platforms",
-      "parents_promoting_digital_literacy"
-    ]
+      "under_16_users",
+      "digital_access_equity"
+    ],
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
@@ -32,8 +33,26 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Banned Teenager",
-      "comment": "PERSPECTIVE 1: THE BANNED TEENAGER (SNARE) — Legally and technically barred from core social platforms, this group experiences the law as pure extraction of digital autonomy and social connection. They are the direct target with no formal recourse or exit. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.68, which meets the Snare threshold (≥0.66)."
+      "label": "The Under-16 User (Trapped)",
+      "comment": "PERSPECTIVE 1: UNDER-16 USER (SNARE) \u2014 Teenagers cannot exit the constraint without defiance or moving jurisdictions. No legitimate legal pathway to participate. Maximum experienced extraction: lost social capital, peer exclusion, inability to coordinate socially via platform networks, reduced access to youth-driven information distribution. Full suppression \u2014 behavioral alternatives (VPN, parent account spoofing, regional migration) carry legal/relational risk."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Marginalized Youth (Information Equity)",
+      "comment": "PERSPECTIVE 2: MARGINALIZED YOUTH / DIGITAL EQUITY (SNARE) \u2014 Indigenous, rural, and low-income under-16s lose access to peer support networks, mental health resources, educational coordination, and labor market signaling that platforms provided. Disproportionate extraction relative to urban/affluent cohorts. No exit option for those who depended on platforms as primary social infrastructure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Social Media Platforms (Compliance Burden)",
+      "comment": "PERSPECTIVE 3: SOCIAL MEDIA PLATFORMS (TANGLED ROPE) \u2014 Benefit from reduced regulatory fragmentation across Australian market (single jurisdiction, clear rules vs. patchwork EU/UK requirements). Also benefit from youth user reduction reducing content moderation labor and liability exposure. BUT face severe extraction: age-verification cost, algorithmic modification for Australian traffic, IP geoblocking infrastructure, legal liability for enforcement failures, profit loss from youth demographic. Constrained exit: cannot simply abandon Australian market (political pressure from tech regulation globally); must invest in compliance. Mixed benefit/burden structure."
     },
     {
       "classification_type": "rope",
@@ -41,123 +60,151 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Government Regulator",
-      "comment": "PERSPECTIVE 2: THE GOVERNMENT REGULATOR (ROPE) — The law's author and enforcer perceives it as a pure coordination mechanism to achieve a stated public good (protecting youth mental health). From this position, the costs are externalities and the function is coordination. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.06. Negative effective extraction signifies a net beneficiary."
+      "label": "Australian Government (Coordination Authority)",
+      "comment": "PERSPECTIVE 4: AUSTRALIAN GOVERNMENT (ROPE) \u2014 Pure coordination benefit: establishes clear rule-of-law for digital child protection, resolves political pressure from parent advocacy, demonstrates technological sovereignty. Extracts no resources from the regulated ecosystem. Low suppression cost relative to alternatives (EU fines model, UK online harms bill). Arbitrage exit: can adjust enforcement rigor, sunset if political winds shift, align with Five Eyes allies. Net coordinator, not extractor."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
+      "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Social Media Platform",
-      "comment": "PERSPECTIVE 3: THE SOCIAL MEDIA PLATFORM (TANGLED ROPE) — Forced to implement costly age verification and de-platform a user segment, the platform is a victim. However, it also benefits from regulatory clarity and a potential moat against new competitors. It is both extracted from and a key part of the enforcement apparatus. d≈0.60, f(d)≈0.85, σ=1.0 → χ≈0.41, placing it in the Tangled Rope category."
+      "label": "Parents (Enforcement Mediators)",
+      "comment": "PERSPECTIVE 5: PARENTS (TANGLED ROPE) \u2014 Benefit from legitimized authority to restrict teen access without being the sole enforcer (state backup reduces parental blame for social exclusion). But also extract enforcement labor: monitoring, boundary-setting, managing peer-pressure arguments. Constrained exit: social/legal expectation to enforce the constraint; cannot simply permit teen use without legal/reputational cost. Mixed experience: coordination (shared rule) plus extraction (unpaid enforcement work)."
     },
     {
       "classification_type": "piton",
-      "agent_power": "moderate",
+      "agent_power": "institutional",
       "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The Cynical Parent",
-      "comment": "PERSPECTIVE 4: THE CYNICAL PARENT (PITON) — This parent believes the ban is easily circumvented by tech-savvy teens (VPNs, lying about age) and thus functionally weak. The law's primary effect is performative—political signaling. The high theater_ratio (0.75) and low perceived function lead to a Piton classification, an inertial rule maintained for appearances."
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Enforcement Institutions (Regulatory Theater)",
+      "comment": "PERSPECTIVE 6: ENFORCEMENT INSTITUTIONS / REGULATORS (PITON) \u2014 Age verification for platforms is largely performative: no single standard, verification accuracy \u226475%, spoofing trivial for determined teenagers, parent account sharing undetectable. Regulators perform enforcement through complaint mechanisms and platform audits, but the actual constraint relies on platform cooperation and parental supplementation. Theater ratio high because the regulatory apparatus must be seen to be enforcing even though the actual gate is weak. Piton classification reflects that enforcement is maintained through institutional inertia and political theater rather than functional verification capacity."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — This perspective sees the dual nature of the constraint: a genuine (if contested) coordination attempt to address a social problem, implemented via a highly coercive and extractive mechanism. It acknowledges both the public-good claim and the asymmetric costs. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.66. This value is on the border of Snare, reflecting the highly coercive nature of the policy."
+      "label": "Analytical Observer (Natural Law Candidate)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / TECHNOLEGAL NATURALISM (MOUNTAIN) \u2014 Risk of treating the ban as an immutable consequence of developmental neuroscience (brain development, social comparison, addiction mechanics) rather than a contingent policy choice. This perspective risks false naturalization: the constraint appears to be written by neurobiology, not by Australian legislators choosing to shift verification burden onto platforms rather than fund alternative youth social infrastructure."
     }
   ],
   "omegas": [
     {
-      "id": "age_verification_effectiveness",
-      "question": "How effective and privacy-invasive will the mandated age verification technologies be?",
-      "resolution_mechanism": "Empirical audit of deployed systems for circumvention rates and data handling practices.",
-      "impact": "If highly effective, the Snare perspective is strengthened. If easily circumvented, the Piton perspective becomes dominant as the law's function collapses into theater.",
+      "id": "age_verification_technical_feasibility",
+      "question": "Can age verification technology achieve >85% accuracy without surveillance-grade identity collection or biometric databases?",
+      "resolution_mechanism": "Deployed age-verification performance metrics; fraud detection rates; privacy impact assessment comparison with actual technology deployed",
+      "impact": "If feasible: platforms bear moderate compliance cost (tangled rope confirmed). If not feasible: enforcement becomes theater (piton), actual constraint relies on parental/peer policing rather than technical gate.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Effectiveness and privacy impact of age verification tech"
+      "description": "Technical feasibility of age verification without invasive identity collection"
     },
     {
-      "id": "mental_health_impact",
-      "question": "Does the ban produce a net positive, negative, or neutral effect on youth mental health?",
-      "resolution_mechanism": "Longitudinal studies comparing mental health metrics in Australian youth cohorts pre- and post-ban against control groups in other countries.",
-      "impact": "A clear positive impact would validate the coordination claim (Rope/Tangled Rope). A negative or neutral impact would suggest the constraint is a pure Snare or performative Piton.",
+      "id": "youth_alternative_coordination",
+      "question": "Do under-16s develop alternative social coordination infrastructure (Discord, WhatsApp, gaming platforms, school-based apps) that functionally replace banned social media networks?",
+      "resolution_mechanism": "Longitudinal survey of teen social network topology; measurement of peer communication lag and coordination failure rates pre/post-ban; ethnographic documentation of alternative platforms' adoption",
+      "impact": "If robust alternatives emerge: victim status of under-16s is 'downgraded' from snare to tangled_rope (some exit via alternatives). If alternatives remain fragmented: snare classification confirmed \u2014 trapped agents cannot coordinate effectively.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Net effect of the social media ban on youth mental health"
+      "description": "Whether under-16s develop functionally equivalent alternative social infrastructure"
     },
     {
-      "id": "circumvention_normalization",
-      "question": "Will circumvention techniques (VPNs, etc.) become normalized among the target demographic?",
-      "resolution_mechanism": "Sociological and network analysis of youth digital practices post-ban.",
-      "impact": "Widespread normalization of circumvention would render the law a Piton, maintained for political theater despite being functionally inert for its target population.",
-      "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Normalization of circumvention techniques among teens"
+      "id": "platform_profit_impact_asymmetry",
+      "question": "Do social media platforms experience greater profit loss from Australian market isolation than from compliance cost, or does youth user reduction free resources that offset revenue loss?",
+      "resolution_mechanism": "Quarterly earnings analysis pre/post-ban; geographic profit breakdown; content moderation cost reduction; advertising rate changes in Australian market segment",
+      "impact": "If profit loss > compliance cost: platforms extract net from the constraint (snare-tier). If compliance cost > profit loss: platforms experience pure extraction (tangled rope confirmed). If profit loss < compliance cost: platforms benefit overall (rope-tier coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net financial impact of the ban on social media platform profitability"
+    },
+    {
+      "id": "parental_enforcement_labor_measurement",
+      "question": "How much unpaid parental labor (monitoring, boundary-setting, conflict management) does the constraint require, and is this labor equally distributed across socioeconomic strata?",
+      "resolution_mechanism": "Time-use survey of parental enforcement activities; correlation with household income and parental employment status; measurement of mental health impacts (parental stress)",
+      "impact": "If labor is evenly distributed: moderate extraction from parents (tangled rope confirmed). If labor concentrates on lower-income families: asymmetric extraction from already-constrained agents (snare-tier for that cohort).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution and magnitude of parental enforcement labor required by the ban"
+    },
+    {
+      "id": "mental_health_displacement_effect",
+      "question": "Does the ban reduce mental health crisis rates in under-16s (positive coordination outcome) or does it displace mental health support-seeking behavior toward less-moderated alternative platforms (negative externality)?",
+      "resolution_mechanism": "Pre/post-ban emergency mental health utilization rates; analysis of crisis support availability on alternative platforms; longitudinal mental health surveys comparing Australian cohorts to control jurisdictions",
+      "impact": "If reduction in crises: victim status downgraded (net safety gain). If displacement to worse platforms: victim status upgraded (net harm from constraint). If no change: constraint is performative for mental health (piton indicator).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Mental health effects of displacement from banned platforms to alternatives"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.8
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.65
+      "time_point": 3,
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2029,
-      "value": 0.75
+      "time_point": 6,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.2
+      "time_point": 0,
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.4
+      "time_point": 3,
+      "value": 0.47
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2029,
-      "value": 0.48
+      "time_point": 6,
+      "value": 0.52
     }
   ],
   "interval": {
-    "start": 2024,
-    "end": 2029
+    "start": 0,
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "A proposed Australian federal law, set to take effect in 2025/2026, would ban social media access for all individuals under the age of 16. The law places the onus of enforcement on technology platforms, requiring them to implement robust age verification systems under threat of significant financial penalties. The stated goal is to protect youth mental health by reducing exposure to algorithmic amplification, social comparison, and online harms. This creates a complex constraint with multiple, conflicting perspectives.",
+    "narrative_context": "The Australian Under-16 Social Media Ban (effective December 2025) represents a global first: legislation that shifts the burden of age verification onto platforms rather than parents or users. The constraint exhibits a fundamental structural tension between its beneficiary frame (child safety, parental authority restoration) and its victim structure (digital equity collapse, youth information access, platform profitability). The same legislative mechanism appears as pure coordination (government establishing clear rules), pure extraction (platforms losing revenue and teens losing social access), a degraded enforcement ritual (age verification theater), and a mixed coordination-extraction hybrid (parents gaining legitimacy while incurring enforcement labor). The theater_ratio trajectory (0.35 \u2192 0.58) reflects that enforcement mechanisms depend increasingly on performative compliance signaling (platforms deploying visible age checks, government publicizing enforcement actions) rather than functional verification. This is a diagnostic case for jurisdictional divergence: while EU, UK, and US regulators debate online harms frameworks, Australia has enacted a bright-line rule, making it the first jurisdiction to test whether legislative suppression of platform access can be technically enforced at scale.",
     "key_agents": [
-      "Australian Teens (Under 16): Primary target/victim (powerless/trapped) — lose access to digital social spaces.",
-      "Australian Government: Primary beneficiary/enforcer (institutional/arbitrage) — gains political capital and enacts a policy agenda.",
-      "Social Media Platforms: Secondary victim and enforcement agent (powerful/constrained) — bear compliance costs but gain regulatory certainty.",
-      "Parents/Guardians: A divided group of beneficiaries (seeking control) and victims (seeking to teach digital literacy).",
-      "Age Verification Tech Vendors: Tertiary beneficiaries (organized/arbitrage) — a new market is created for their products."
+      "Australian Government: Primary beneficiary (institutional/arbitrage) \u2014 establishes technological sovereignty, resolves parent advocacy pressure, demonstrates child protection leadership globally",
+      "Under-16 Users: Primary victim (powerless/trapped) \u2014 lose social coordination infrastructure, peer access, digital market signaling; cannot exit legally",
+      "Marginalized Youth: Secondary victim (powerless/trapped) \u2014 disproportionate loss of equity-providing infrastructure (peer support, mental health resources, labor market entry)",
+      "Social Media Platforms: Complex position (organized/constrained) \u2014 benefit from reduced liability and youth content moderation labor, but face compliance cost and revenue loss; constrained because abandoning Australian market carries geopolitical cost",
+      "Parents: Enforcement mediators (moderate/constrained) \u2014 gain legitimacy to restrict access but incur unpaid monitoring labor; constrained because social/legal expectations now hold them accountable for enforcement",
+      "Regulators: Performative enforcers (institutional/arbitrage) \u2014 maintain visible enforcement apparatus with modest functional verification capacity",
+      "Analytical Observer: Risk of naturalization \u2014 tends to frame the constraint as inevitable consequence of neurobiology rather than contingent policy choice"
     ],
-    "logic_rationale": "Extractiveness (ε=0.48): Represents the significant loss of digital autonomy and social access for teens, combined with the high compliance costs (development, moderation, fines) imposed on platforms. Suppression (0.75): High. The constraint is a legal mandate with severe penalties, aiming to eliminate the option of social media use for the target group. Alternatives like VPNs are implicitly or explicitly targeted by enforcement. Theater Ratio (0.75): High. While there is a functional component (age verification systems), the political signaling of 'being tough on Big Tech' is a primary driver. The high likelihood of technical workarounds means its long-term state is more performative than functional.",
-    "perspectival_gap": "The gap is stark. The government frames the law as a benevolent Rope, coordinating society towards a safer environment for children. For the teens who are de-platformed, it is an inescapable Snare, removing a key part of their social lives without their consent. For platforms, it is a Tangled Rope, a costly mandate they must enforce which also solidifies their market position. For observers who believe it won't work, it's a Piton—a hollow institutional gesture.",
-    "directionality_logic": "Beneficiaries like the government (institutional/arbitrage) have a low derived directionality (d), resulting in a negative effective extraction (χ) and a Rope classification. Victims like the teens (powerless/trapped) have the highest possible d, leading to a high χ and a Snare classification. Agents in the middle, like platforms (powerful/constrained), have a moderate d, leading to a χ value that correctly identifies the constraint as a Tangled Rope from their position.",
-    "mandatrophy_analysis": "This case demonstrates how a single policy instrument resolves into multiple, valid classifications. There is no single 'correct' type. The mandatrophy of mislabeling a coercive Snare as a benevolent Rope is resolved by acknowledging the government's perspective while simultaneously centering the Snare classification experienced by the powerless. The framework's role is not to pick a winner, but to map the full topology of these perspectival disagreements, which are themselves data about the constraint's structure."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts significantly from under-16 users (social access, peer coordination, information flow) and from platforms (compliance cost, revenue loss from youth demographic, IP geoblocking infrastructure). But extraction is not maximal \u2014 platforms can operationalize age verification at incremental cost, and teenagers retain some alternative pathways (VPN, parent account, alternative platforms). The extractiveness trajectory (0.38 \u2192 0.52) reflects increasing burden as compliance mechanisms mature and platforms internalize enforcement costs. Suppression (0.68): High. Multiple layers of suppression constrain alternatives: legal barriers to defiance (fines for parents/platforms), social pressure (peer normalization of ban), technical barriers (IP geoblocking for Australian users), and infrastructure capture (platforms must implement continent-wide age verification, making circumvention costly for users). Teenagers cannot easily exit through legitimate channels; platform defiance is legally risky for operators; parent non-enforcement carries social/legal cost. Theater ratio (0.58): Moderate-high. Age verification mechanisms are partially performative \u2014 platforms deploy visible verification workflows that lack technical rigor (accuracy \u226475%, spoofing trivial, parent account sharing undetectable). Regulators publicize enforcement audits and complaint mechanisms but rely on platform self-reporting and voluntary compliance. The regulatory apparatus must be seen to be working even though functional verification is weak. Theater increases over time (0.35 \u2192 0.58) as enforcement becomes routinized and must sustain political legitimacy through visible action rather than measured outcomes.",
+    "perspectival_gap": "The constraint demonstrates acute divergence between user experience (snare) and government experience (rope). The same mechanism \u2014 age verification and platform compliance \u2014 appears as complete extraction to trapped teenagers but as pure coordination to the government that designed it. Platforms occupy a hybrid position (tangled_rope) \u2014 they benefit from reduced youth-related liability but suffer revenue loss and infrastructure cost. Parents occupy a boundary: they gain legitimized authority (rope-like) but incur unpaid monitoring labor (tangled_rope). The gap is irreducible because it reflects a genuine asymmetry: the government can declare victory through legislative action and performative enforcement; the trapped victim cannot coordinate refusal across the jurisdiction. The piton perspective (regulators) highlights that enforcement is substantially theatrical \u2014 age verification is visible but not functionally robust, which allows government to claim success while actual constraint relies on platforms' profit motive and parents' social investment.",
+    "directionality_logic": "Directionality values are derived from structural position relative to extraction flow. Under-16 users bear full extraction with zero offsetting benefit: d \u2248 1.0 (full target). Platforms are victims of compliance cost but beneficiaries of reduced liability \u2014 net victim position with some coordination benefit: d \u2248 0.65 (victim but not powerless). Government is pure beneficiary with arbitrage exit: d \u2248 0.05 (beneficiary). Parents benefit from legitimacy but bear enforcement labor: d \u2248 0.50 (symmetric). Regulators maintain visible authority with low functional cost: d \u2248 0.25 (beneficiary but constrained). The analytical observer at civilizational scope risks d \u2248 0.0 (full naturalization) unless careful to distinguish physical constraint from policy choice. The engine derives these d values from the beneficiary/victim declarations and exit options; they determine how each agent experiences the effective extractiveness \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S).",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: The constraint's classification as 'tangled rope' (claimed_type) depends on resolving whether the coordination dimension (child safety, parental authority restoration, digital rule-of-law establishment) genuinely outweighs the extraction dimension (youth access loss, platform compliance cost, regulatory capture risk). Current extractiveness (0.52) suggests the classification is defensible (0.40 \u2264 \u03c7 \u2264 0.90 for tangled rope at some perspectives). However, three scenarios would shift the classification: (1) If age verification proves infeasible and enforcement becomes purely theatrical (theater_ratio \u2192 0.85+), platforms experience snare-type extraction rather than tangled rope, and the entire constraint degrades to piton (degraded enforcement ritual). (2) If youth alternative coordination infrastructure (Discord, gaming, school apps) proves functionally robust, the victim status of under-16s downgrades from snare to constrained/mobile, and the constraint approaches pure coordination (rope) rather than tangled rope. (3) If platform compliance cost exceeds revenue loss by >2x, platforms experience pure extraction without offsetting benefit, and the constraint approaches snare-tier severity for this agent. The mandatrophy is unresolved because these empirical conditions determine whether the constraint is genuinely hybrid or misclassified. Setting mandatrophy_resolved to false preserves this uncertainty pending omega variable resolution."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "digital_identity_standards_au",
-      "global_internet_fragmentation"
-    ]
-  }
+      "digital_access_equity_global",
+      "platform_regulatory_capture",
+      "youth_mental_health_surveillance"
+    ],
+    "dual_formulation_note": "The Australian ban decomposes into multiple structural constraints: age verification infrastructure (technological), enforcement theater (regulatory), parental delegation (social), and youth access loss (equity). These are linked through network.affects_constraints because they share institutional coupling \u2014 regulatory failure on one dimension (age verification infeasibility) cascades to others (enforcement becomes theater, parental labor increases, equity loss accelerates). The primary constraint (australia_social_ban_2026) models the legislative mechanism; downstream constraints model specific failure modes and spillover effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
 }

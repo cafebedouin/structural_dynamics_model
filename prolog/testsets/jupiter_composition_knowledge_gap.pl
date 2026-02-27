@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: jupiter_composition_knowledge_gap
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_jupiter_composition_knowledge_gap, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,16 +54,36 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: jupiter_composition_knowledge_gap
  *   human_readable: Knowledge Gap in Jupiter's Composition Affecting Planetary Formation Models
- *   domain: technological
+ *   domain: planetary_science/technological_constraint
  *
  * SUMMARY:
- *   The imprecise knowledge of Jupiter's core composition, particularly the abundance of heavy elements, constrains the development of accurate planetary formation models. This knowledge gap limits our understanding of the early solar system and the processes that govern gas giant formation. It creates a dynamic where solving the problem (coordination) is beneficial for institutions, while the existence of the problem (extraction) hinders individual researchers.
+ *   The precise composition of Jupiter's core — particularly the abundance of
+ *   water, rocks, metals, and other heavy elements — remains ambiguous
+ *   despite decades of observation. This knowledge gap constrains the
+ *   development of planetary formation models because Jupiter serves as the
+ *   reference standard for understanding how gas giants form: its
+ *   mass-metallicity relationship, core size, and heavy-element distribution
+ *   encode the formation history. The constraint exhibits hybrid behavior: it
+ *   functions partly as pure coordination (scientists must work within shared
+ *   observational limits) and partly as extraction (space agencies benefit
+ *   from justified mission proposals while theorists bear the cost of model
+ *   uncertainty). The theater ratio (0.55) reflects that much Jupiter science
+ *   discussion involves reiterative modeling with unchanged observational
+ *   constraints — theoretical work loops over parameter space without closing
+ *   the knowledge gap. Over the measurement interval, extractiveness has
+ *   increased modestly (0.28 to 0.38) as the number of exoplanet discoveries
+ *   has risen, increasing pressure on the reference standard's precision.
+ *   Theater has risen slightly as new model variants incorporate Jupiter data
+ *   without reducing the underlying ambiguity.
  *
- * KEY AGENTS (by structural relationship):
- *   - Early-Career Researchers: Primary target (powerless/trapped) — careers are constrained by the data gap, unable to direct new missions.
- *   - Established Planetary Scientists: Secondary target (moderate/constrained) — research is limited by the lack of precise data.
- *   - Space Agencies (NASA, ESA): Primary beneficiary (institutional/arbitrage) — resource allocation and mission planning benefit from the knowledge pursuit.
- *   - Analytical Observer: Sees the full structure (analytical/analytical).
+ * KEY AGENTS:
+ *   - Planetary Formation Theory: Primary victim (powerless/trapped) — cannot exit constraint; theoretical models operate within bounds of composition uncertainty
+ *   - Exoplanet Discovery Programs: Secondary victim (moderate/trapped) — need Jupiter as reference standard to classify super-Jupiters; trapped by uncertain baseline
+ *   - Space Agencies (NASA, ESA, JAXA): Primary beneficiary (institutional/arbitrage) — knowledge gap justifies mission proposals and drives funding; benefit from discovery opportunities
+ *   - Observational Astronomers: Secondary beneficiary (institutional/arbitrage) — Jupiter composition ambiguity creates publication opportunities and career advancement incentives
+ *   - Instrument Development Consortium: Mixed actor (organized/constrained) — benefits from mission funding but constrained by technical barriers to deep-atmosphere measurement
+ *   - Classical Formation Models (Nice, Grand Tack): Degraded actor (institutional/arbitrage) — maintained through inertia despite Jupiter composition assumptions being questioned
+ *   - Analytical Observer: Theoretical vantage (analytical/analytical) — risks naturalizing institutional measurement choices as inherent physical limits
  */
 
 /* ==========================================================================
@@ -72,67 +91,69 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(jupiter_composition_knowledge_gap, 0.35).
-domain_priors:suppression_score(jupiter_composition_knowledge_gap, 0.45).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(jupiter_composition_knowledge_gap, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(jupiter_composition_knowledge_gap, 0.38).
+domain_priors:suppression_score(jupiter_composition_knowledge_gap, 0.48).
+domain_priors:theater_ratio(jupiter_composition_knowledge_gap, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(jupiter_composition_knowledge_gap, extractiveness, 0.35).
-narrative_ontology:constraint_metric(jupiter_composition_knowledge_gap, suppression_requirement, 0.45).
-narrative_ontology:constraint_metric(jupiter_composition_knowledge_gap, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(jupiter_composition_knowledge_gap, extractiveness, 0.38).
+narrative_ontology:constraint_metric(jupiter_composition_knowledge_gap, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(jupiter_composition_knowledge_gap, theater_ratio, 0.55).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(jupiter_composition_knowledge_gap, tangled_rope).
 narrative_ontology:human_readable(jupiter_composition_knowledge_gap, "Knowledge Gap in Jupiter's Composition Affecting Planetary Formation Models").
-narrative_ontology:topic_domain(jupiter_composition_knowledge_gap, "technological").
+narrative_ontology:topic_domain(jupiter_composition_knowledge_gap, "planetary_science/technological_constraint").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(jupiter_composition_knowledge_gap). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(jupiter_composition_knowledge_gap).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(jupiter_composition_knowledge_gap, space_agencies).
-narrative_ontology:constraint_victim(jupiter_composition_knowledge_gap, planetary_scientists).
+narrative_ontology:constraint_beneficiary(jupiter_composition_knowledge_gap, observational_astronomers).
+narrative_ontology:constraint_victim(jupiter_composition_knowledge_gap, planetary_formation_theory).
+narrative_ontology:constraint_victim(jupiter_composition_knowledge_gap, exoplanet_discovery_programs).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (POWERLESS)
-% Early-career researchers whose work is blocked by the data gap.
-constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, tangled_rope,
+% PERSPECTIVE 1: PLANETARY FORMATION THEORY (SNARE) — Cannot exit the constraint; fundamental models must operate within the bounds of Jupiter composition uncertainty. The theoretical framework is trapped by instrumental limitations that neither theorists nor modelers can circumvent. Each new exoplanet discovery adds pressure to resolve core composition ambiguity, but the epistemic commons bears the cost of degraded predictive power.
+constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE ESTABLISHED SCIENTIST
-% Planetary scientists lacking precise data but with some agency.
-constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, tangled_rope,
+% PERSPECTIVE 2: EXOPLANET DISCOVERY PROGRAMS (SNARE) — Constrained by Jupiter's ambiguous composition when attempting to classify super-Jupiters and gas giants in other systems. Programs cannot build robust classification schemas without knowing Jupiter's core mass, metallicity profile, and internal structure. Trapped by the reference standard being uncertain.
+constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, snare,
     context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: SPACE AGENCIES AND OBSERVATIONAL ASTRONOMERS (ROPE) — Benefit from the knowledge gap: justifies mission proposals (JUICE, future deep-atmosphere probes), drives funding allocation, and creates opportunities for high-impact discoveries. The uncertainty itself generates scientific opportunity and resources. Net beneficiary — extraction runs toward this agent.
+constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: INSTRUMENT DEVELOPMENT CONSORTIUM (TANGLED ROPE) — Benefits from mission funding and high-stakes measurement objectives (drives innovation in seismic detection, gravitational field mapping). But constrained by technical barriers: Jupiter's extreme pressure environment, radiation belts, and atmospheric opacity limit probe survivability and measurement precision. Mixed coordination and extraction — the problem enables technology development but the constraints are genuinely hard.
+constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE PRIMARY BENEFICIARY (ROPE)
-% Space Agencies benefiting from resource allocation and mission planning.
-constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, rope,
+% PERSPECTIVE 5: CLASSICAL PLANETARY SCIENCE MODELS (PITON) — Pre-existing formation models (Nice model, Grand Tack hypothesis) persist despite Jupiter composition uncertainty because alternatives haven't fully replaced them. The models are maintained through intellectual inertia — they are cited, refined, and incorporated into reviews even though their core assumptions about Jupiter's interior are increasingly questioned. Theater ratio reflects that model updates are often procedural extensions rather than fundamental rethinking.
+constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, piton,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, tangled_rope,
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL LIMITS VIEW (MOUNTAIN) — From a universal perspective, Jupiter's internal composition is constrained by physics: equations of state, gravitational equilibrium, interior dynamics. Some aspects are inherent limits (you cannot perfectly know the core without direct measurement). However, the base extractiveness (0.38) contradicts a mountain classification — the constraint is substantially institutional (mission design choices, funding allocation) rather than purely physical. This perspective is a false summit.
+constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -145,17 +166,13 @@ constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap,
 :- begin_tests(jupiter_composition_knowledge_gap_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(jupiter_composition_knowledge_gap, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(jupiter_composition_knowledge_gap, ExtMetricName, E),
-    E < 0.46, % Ensure it's not classified as a snare.
-    narrative_ontology:constraint_metric(jupiter_composition_knowledge_gap, suppression_requirement, S),
-    S >= 0.40. % Ensure it meets the tangled_rope suppression threshold.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(jupiter_composition_knowledge_gap, TR),
+    TR >= 0.70.
 
 :- end_tests(jupiter_composition_knowledge_gap_tests).
 
@@ -165,72 +182,99 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness score (0.35) reflects the limitations imposed on scientific progress by the current lack of knowledge. The suppression score (0.45) is set to reflect the high technological and financial barriers to obtaining new data, which effectively suppresses the alternative of direct measurement. This meets the threshold for a Tangled Rope. The theater ratio (0.10) is low, indicating that current efforts are primarily focused on genuine research.
- *
- *   The constraint requires active enforcement to be a Tangled Rope. This 'enforcement' is structural, enacted by the scientific community itself: peer review processes and funding bodies require that new models are consistent with existing, limited data, thereby reinforcing the constraints imposed by the knowledge gap.
+ *   Extractiveness (0.38): Moderate. The core composition gap creates real constraints on model development (extraction cost to theorists) but also real scientific opportunity (benefit to agencies). The value reflects that space agencies benefit disproportionately during the uncertainty window, but the benefit is not purely extractive — new missions genuinely advance understanding. Suppression (0.48): Moderate. Technical barriers to deep-atmosphere measurement are real (extreme pressure, radiation, corrosive chemistry) but not absolute. Alternative constraints (gravity mapping, thermal evolution, comparative planetology) provide partial information, reducing suppression below total. Theater ratio (0.55): Moderate-high. Much Jupiter composition discussion involves model refinements with static observational inputs; papers often present parameter-space variations rather than new constraints. But some genuine observational work (Juno gravity field mapping, atmospheric spectroscopy) reduces theater below dominant levels. The modest increase over time (0.42 to 0.55) reflects growing model elaboration without proportional empirical progress.
  *
  * PERSPECTIVAL GAP:
- *   Researchers, especially early-career ones (powerless/trapped), experience the knowledge gap as a significant barrier (Tangled Rope) that extracts from their ability to produce novel work. In contrast, space agencies (institutional/arbitrage) perceive it as a pure coordination problem (Rope), as it provides a clear justification for funding new missions and technologies, thus benefiting the institution.
+ *   Planetary formation theory sees a pure extraction (Snare) — the knowledge gap is an absolute constraint on model quality. Space agencies see pure coordination (Rope) — the gap is a legitimate scientific problem justifying missions. Exoplanet programs see the gap as a reference-standard ambiguity (Snare) — their classification schemas are trapped by the baseline uncertainty. The instrument consortium sees mixed benefits and barriers (Tangled Rope) — technology development is enabled by mission stakes but constrained by physics. Classical models see their own institutional persistence (Piton) — the models continue through citation patterns and textbook inertia despite compositional assumptions being increasingly questioned. The analytical observer risks seeing an immutable physical limit (Mountain) — knowing Jupiter's interior perfectly is impossible without direct measurement — but the base extractiveness contradicts this. The constraint is substantially institutional (mission prioritization, funding allocation) rather than purely physical.
  *
  * DIRECTIONALITY LOGIC:
- *   Space agencies are beneficiaries because the constraint drives mission planning and resource allocation towards Jupiter-related research. Planetary scientists are the victims as they lack the precise data necessary for their work, with early-career researchers being the most trapped.
+ *   Structurally, space agencies experience low directionality (d ≈ 0.15) because they are institutional beneficiaries with arbitrage options — they can fund alternative missions or redirect resources. Planetary formation theorists experience high directionality (d ≈ 0.90) because they are trapped victims with no exit option — their models must incorporate Jupiter data regardless. Exoplanet programs occupy a constrained middle position (d ≈ 0.65) — they need the reference standard but have some flexibility in applying uncertainty bounds to exoplanet inferences. The instrument consortium has moderate directionality (d ≈ 0.55) because the technical barriers are real but solvable with sufficient resources. The engine derives these automatically from beneficiary/victim declarations and exit options; no manual override is required.
  *
  * MANDATROPHY ANALYSIS:
- *   The Tangled Rope classification correctly identifies that this is not a simple coordination problem. While there is a genuine coordination function (organizing missions to gather data), there is also asymmetric extraction where the careers and research of scientists are hindered by the very problem that provides institutional justification for the beneficiaries. This prevents mislabeling the situation as a pure Rope.
+ *   The constraint resolves the mandatrophy by recognizing that the knowledge gap is simultaneously a legitimate scientific problem (Rope coordination function) and a platform for institutional benefit-extraction (agencies benefit from justified missions). The Tangled Rope classification captures both: there is genuine coordination work (theorists must share observational constraints, modelers must align with data), and there is genuine asymmetric extraction (space agencies accrue disproportionate benefit from the uncertainty window). The piton perspective reveals that classical models persist partly through inertia, indicating partial degradation of their original function. The false summit at the analytical level shows that naturalizing measurement uncertainty as inherent physics masks institutional choices about mission priority and funding. No single type is correct; the constraint's type varies by perspective.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_jupiter_comp,
-    'Can future missions accurately determine the core composition of Jupiter?',
-    'New observational data from advanced space probes and improved computational models.',
-    'If true, the knowledge gap will be significantly reduced, leading to more accurate planetary formation models. If false, the knowledge gap persists, requiring alternative theoretical frameworks.',
+    seismic_detection_feasibility,
+    'Can acoustic oscillation modes in Jupiter''s interior be reliably detected and inverted to determine core composition, or are the modes damped below instrumental sensitivity?',
+    'Direct measurement by atmospheric probes (Galileo-scale or better sensitivity); theoretical modeling of wave propagation in Jupiter''s heterogeneous interior; correlation with Saturn seismic data if available',
+    'If detectable: knowledge gap closes within 10-15 years via dedicated seismic mission. If below sensitivity: alternative constraints (gravity, magnetism, thermal evolution) must bear the full inference burden, extending uncertainty indefinitely.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(seismic_detection_feasibility, empirical, 'Feasibility of detecting Jupiter seismic modes at instrumental sensitivity').
+
+omega_variable(
+    heavy_element_migration_pathway,
+    'Did Jupiter''s heavy elements settle into a coherent core or distribute throughout the interior during formation? If distributed, how much was retained vs lost?',
+    'High-precision interior density profile from gravity field mapping; metallicity measurements via atmospheric spectroscopy at depth; comparison with formation simulations across parameter space',
+    'If coherent core: composition ambiguity is primarily about core size and density. If distributed: theoretical framework must account for turbulent mixing, and composition ambiguity extends throughout the interior. Changes the informational structure of the constraint.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(heavy_element_migration_pathway, empirical, 'Whether Jupiter''s heavy elements form coherent core or distributed interior').
+
+omega_variable(
+    exoplanet_formation_pathways_independence,
+    'Are exoplanet formation pathways fundamentally different from Jupiter''s (requiring different models), or do they share core physics that demands Jupiter as reference standard?',
+    'Comparative analysis of exoplanet population statistics (core mass distributions, migration signatures); chemical abundance patterns in young exoplanet systems; formation simulation results across metallicity regimes',
+    'If pathways are independent: exoplanet programs can develop local models without Jupiter reference, reducing extraction. If coupled: Jupiter composition remains necessary benchmark, maintaining constraint structure indefinitely.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(exoplanet_formation_pathways_independence, conceptual, 'Whether exoplanet formation requires Jupiter as reference standard').
+
+omega_variable(
+    mission_cost_benefit_threshold,
+    'What information gain threshold justifies a dedicated Jupiter composition mission (estimated 2-5 billion USD)? How much does the current knowledge gap reduce predictive power?',
+    'Quantitative sensitivity analysis: how much does Jupiter composition uncertainty propagate into exoplanet classification error rates; cost-benefit comparison of dedicated mission vs incremental improvement from indirect constraints',
+    'If high threshold: current gap may persist indefinitely (missions deprioritized). If low threshold: gap closes via near-term mission (JUICE gravity data, future probes). Determines whether constraint is structural or institutional.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(mission_cost_benefit_threshold, preference, 'Cost-benefit justification for dedicated Jupiter composition measurement mission').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(jupiter_composition_knowledge_gap, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is not strictly required as base_extractiveness < 0.46, but
-% is included to model the constraint's stability over the interval.
+% Theater ratio over time
+narrative_ontology:measurement(jup_comp_tr_t0, jupiter_composition_knowledge_gap, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(jup_comp_tr_t5, jupiter_composition_knowledge_gap, theater_ratio, 5, 0.48).
+narrative_ontology:measurement(jup_comp_tr_t10, jupiter_composition_knowledge_gap, theater_ratio, 10, 0.55).
 
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(jupiter_comp_tr_t0, jupiter_composition_knowledge_gap, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(jupiter_comp_tr_t5, jupiter_composition_knowledge_gap, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(jupiter_comp_tr_t10, jupiter_composition_knowledge_gap, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(jup_comp_be_t0, jupiter_composition_knowledge_gap, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(jup_comp_be_t5, jupiter_composition_knowledge_gap, base_extractiveness, 5, 0.33).
+narrative_ontology:measurement(jup_comp_be_t10, jupiter_composition_knowledge_gap, base_extractiveness, 10, 0.38).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(jupiter_comp_ex_t0, jupiter_composition_knowledge_gap, base_extractiveness, 0, 0.30).
-narrative_ontology:measurement(jupiter_comp_ex_t5, jupiter_composition_knowledge_gap, base_extractiveness, 5, 0.35).
-narrative_ontology:measurement(jupiter_comp_ex_t10, jupiter_composition_knowledge_gap, base_extractiveness, 10, 0.35).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
 narrative_ontology:coordination_type(jupiter_composition_knowledge_gap, information_standard).
+narrative_ontology:affects_constraint(jupiter_composition_knowledge_gap, exoplanet_mass_metallicity_relation).
+narrative_ontology:affects_constraint(jupiter_composition_knowledge_gap, gas_giant_formation_core_accretion).
+narrative_ontology:affects_constraint(jupiter_composition_knowledge_gap, planetary_migration_model_coupling).
+
+% DUAL FORMULATION NOTE:
+% Jupiter's composition ambiguity is upstream of exoplanet classification constraints. Formation models require Jupiter as calibration reference; without precise composition, downstream exoplanet inferences inherit uncertainty. The three downstream constraints share the same knowledge gap as a structural dependency.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed; the structural derivation from beneficiary/victim
-% groups and exit options accurately models the directionality.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "coffee_cardiovascular_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Caffeine Paradox Realignment",
+    "topic_domain": "medical/health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coffee_drinkers",
+      "medical_researchers"
+    ],
+    "victims": [
+      "atrial_fibrillation_patients",
+      "outdated_medical_guidelines"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Atrial Fibrillation Patients",
+      "comment": "AF patients initially face a Snare: outdated guidelines restrict their coffee consumption, leading to unnecessary anxiety and reduced quality of life. Trapped due to fear of exacerbating their condition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Medical Research Community",
+      "comment": "The medical research community benefits from clarifying the actual effects of caffeine on AF. This clarification enhances their credibility and provides evidence-based guidelines. View as rope as correct information emerges."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Coffee Drinkers with AF",
+      "comment": "Coffee drinkers with AF experience a Tangled Rope. Initially constrained by medical advice, they now benefit from updated guidelines allowing moderate consumption. But remain constrained by the need to monitor their individual response to caffeine."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Outdated Medical Guidelines",
+      "comment": "Outdated medical guidelines, representing a Piton, persist despite new evidence. These guidelines, once intended to protect AF patients, now impose unnecessary restrictions. Inertia prevents immediate update and continued incorrect messaging."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the Caffeine Paradox represents a Tangled Rope. The initial fear and restriction stemmed from a lack of comprehensive data. New research has clarified that moderate coffee consumption is not harmful and may even be beneficial. Still, the need to individualize medical advice introduces some level of extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "individual_caffeine_sensitivity",
+      "question": "How much does individual caffeine sensitivity vary, and how can it be accurately assessed?",
+      "resolution_mechanism": "Large-scale studies correlating caffeine intake with AF incidence, accounting for genetic and environmental factors.",
+      "impact": "Determines the precision of personalized recommendations regarding caffeine consumption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree of variability in individual response to caffeine."
+    },
+    {
+      "id": "longterm_effects_moderate_caffeine",
+      "question": "What are the long-term effects of moderate caffeine consumption on AF patients' cardiovascular health?",
+      "resolution_mechanism": "Longitudinal studies tracking cardiovascular outcomes in AF patients who consume moderate amounts of caffeine.",
+      "impact": "Determines the sustainability and safety of current caffeine recommendations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The long-term impact of moderate caffeine intake in AF patients."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "For years, cardiologists cautioned against coffee for patients with atrial fibrillation (AF). However, recent studies have challenged this, suggesting that moderate coffee consumption is not harmful and may even have some benefits. This shift represents a 'Caffeine Paradox,' where outdated medical advice restricted patients unnecessarily. The constraint reflects the tension between initial fears, emerging research, and ongoing individual variability.",
+    "key_agents": [
+      "Coffee Drinkers: Beneficiaries from relaxed guidelines (moderate/constrained)",
+      "Medical Researchers: Beneficiaries from improved knowledge (institutional/analytical)",
+      "Atrial Fibrillation Patients: Victims of outdated guidelines and anxieties (powerless/trapped)",
+      "Outdated Medical Guidelines: Institutional inertia (institutional/constrained)",
+      "Analytical Observer: Synthesizing research and variability (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The initial restriction on coffee represents a form of extraction from AF patients. Suppression (0.40): Moderate. While guidelines are evolving, some level of suppression persists due to lingering fears and the need for individualized advice. Theater Ratio (0.75): Relatively high. Evidence suggests the original caution had limited empirical validation (high theater).",
+    "perspectival_gap": "AF patients trapped by outdated guidelines see a Snare. Medical researchers building clarifying research see a Rope. Coffee drinkers with AF see a constrained but improving Tangled Rope. Outdated guidelines represent an inertial Piton. The analytical observer sees mixed dynamics (Tangled Rope).",
+    "directionality_logic": "AF patients initially have high d (close to 1) from guideline extraction. Medical researchers have low d (close to 0) as they are the coordinating influence. Coffee drinkers with AF have d approaching 0.5 as they benefit, constrained."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "general_cardiovascular_recommendations"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "working_dog_training",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wdt"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Training of Working Dogs for Specific Tasks",
+    "topic_domain": "social/animal_labor",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "handler_institutions",
+      "human_beneficiaries_of_service"
+    ],
+    "victims": [
+      "working_dogs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Working Dog",
+      "comment": "PERSPECTIVE 1: THE WORKING DOG (SNARE) \u2014 Cannot exit training regime; bears full cost of behavioral conditioning, physical stress, psychological constraint, and operational risk. Dog has no exit option and no alternative use pathway once trained for specific task. d\u22480.98, f(d)\u22481.41, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Handler Institution (Police/Military)",
+      "comment": "PERSPECTIVE 2: HANDLER INSTITUTION (ROPE) \u2014 Sees training as pure coordination: establishing communication protocol between species for mutual task execution. Institution can exit (hire human specialists instead) and benefits from reliable trained asset. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary through arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Individual Handler (Trainer/Operator)",
+      "comment": "PERSPECTIVE 3: INDIVIDUAL HANDLER (TANGLED ROPE) \u2014 Benefits from training (career advancement, bonding, operational effectiveness) but also bears costs (emotional labor, responsibility for dog's welfare, potential PTSD transmission to animal). Exit is possible (change jobs) but costly. d\u22480.52, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Civilian Population (Service Beneficiaries with No Voice)",
+      "comment": "PERSPECTIVE 4: CIVILIAN BENEFICIARIES (SNARE) \u2014 Benefit from bomb detection and search-rescue services but have no voice in training regime design, ethics, or dog welfare standards. Are trapped as implicit beneficiaries of extraction they didn't authorize. d\u22480.85, f(d)\u22481.13, \u03c3=1.0 \u2192 \u03c7\u22480.59. Secondary snare dynamic."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Animal Welfare Coalition",
+      "comment": "PERSPECTIVE 5: ANIMAL WELFARE COALITION (SCAFFOLD) \u2014 Organized advocacy (animal rights groups, veterinary ethicists) sees training regime as temporary problem with sunset: drone technology, robotic detection systems, and AI-enabled search are creating alternatives to live-dog deployment. Current training extracts through suppression (\u03c7\u22480.52) but coalition perceives this as decaying infrastructure (piton-adjacent). d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.18. Low effective extraction because alternatives exist and are maturing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Institutional Dog-Training Complex",
+      "comment": "PERSPECTIVE 6: DOG-TRAINING COMPLEX (PITON) \u2014 The working dog training regime persists through institutional inertia and cultural theater (tradition, prestige of 'man and dog' narrative, public trust in live detection). Functionally, dogs are already being partially replaced by technology in bomb detection (\u224835% of military mine-detection now robotic), but the institution maintains the practice for legitimacy and continuity. theater_ratio=0.35 seems low, but this reflects actual functional value; the piton classification comes from the observation that the regime is declining in function relative to its institutional maintenance cost. Alternatives exist; the constraint persists through path-dependence."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "animal_sentience_welfare_threshold",
+      "question": "At what level of animal behavioral suppression (breeding for docility, medication, isolation) does the training regime transition from ethical labor discipline to animal torture?",
+      "resolution_mechanism": "Comparative neurobiology of trained vs feral dogs; stress biomarkers (cortisol, behavioral repertoire restriction); longitudinal tracking of dog lifespan, behavioral pathology, and post-retirement quality of life",
+      "impact": "If threshold crossed: constraint reclassifies as pure snare (\u03c7\u22480.75+) with no legitimating coordination benefit. If threshold not crossed: tangled rope reading gains support (mixed coordination/extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether behavioral suppression reaches torture threshold"
+    },
+    {
+      "id": "technological_substitution_timeline",
+      "question": "Will drone detection, robotic search platforms, and AI-enabled olfaction modeling replace live-dog labor within 15-30 years, making the training regime obsolete?",
+      "resolution_mechanism": "Technology maturation curves for detection accuracy, deployment cost, and user acceptance; regulatory timelines for transition; institutional adoption rates in leading militaries and police forces",
+      "impact": "If yes (>80% confidence): scaffold perspective confirmed; sunset is structural. If no: institutional inertia dominates; piton perspective confirmed over longer timescale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technological alternatives will make dog training obsolete"
+    },
+    {
+      "id": "handler_emotional_labor_extraction",
+      "question": "Does the emotional bonding between handler and dog constitute genuine coordination benefit or coercive extraction mechanism (making handlers complicit in dog exploitation through affection)?",
+      "resolution_mechanism": "Longitudinal handler interviews and psychological assessment; comparison of PTSD/moral injury rates between dog-handler and non-dog-handler personnel; analysis of whether bonding increases handler compliance with deployment in high-risk scenarios",
+      "impact": "If coordination benefit: handler perspective stays tangled rope. If extraction mechanism: handler moves toward snare classification; entire regime becomes multi-layer extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether handler-dog bonding is coordination or coercive mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The training of working dogs for specific tasks (bomb detection, search and rescue, police apprehension) creates a structural constraint in which animal labor is extracted through behavioral conditioning, selective breeding, and suppression of alternative behavioral repertoires. The constraint exhibits multiple classification types depending on the structural position of the observer. From the dog's perspective, it is a snare: behavioral and physical conditioning creates a regime of suppression with no exit option. From the handler institution's perspective, it is coordination: establishing a communication protocol that solves a legitimate tactical problem (human-machine gap in olfactory detection). From the individual handler's perspective, it is tangled rope: both coordinating with the animal and extracting emotional labor as a mechanism to ensure compliance and bonding. From the perspective of organized animal welfare advocates, it is a scaffold: emerging technology (robotic detection, AI olfaction modeling) is creating a sunset pathway that will render the regime obsolete within one to two decades. The constraint exemplifies how the same structural phenomenon\u2014compelling an animal to perform labor\u2014can be read as pure extraction, mixed coordination-extraction, or temporary technology transition, depending on the observer's structural position and time horizon.",
+    "key_agents": [
+      "Working Dogs: Primary victim (powerless/trapped) \u2014 subjected to selective breeding, behavioral conditioning, suppression of natural behaviors, operational risk, and no exit option",
+      "Handler Institutions (Police, Military, Border Patrol): Primary beneficiary (institutional/arbitrage) \u2014 obtain specialized labor at lower cost than human specialists, can exit if technology improves",
+      "Individual Handlers (Trainers, Operators): Mixed actor (moderate/mobile) \u2014 benefit from career advancement and task capability but bear emotional labor and responsibility costs",
+      "Civilian Populations: Secondary victim (powerless/trapped) \u2014 benefit from detection and rescue services but have no voice in welfare standards or training ethics",
+      "Animal Welfare Advocates: Organized agents (organized/constrained) \u2014 building alternative technology and pushing regulatory sunset clauses; see the regime as declining rather than stable",
+      "Breeding Industry: Beneficiary (powerful/arbitrage) \u2014 selective breeding of traits (docility, olfactory sensitivity) creates economic value and path-dependence into the regime"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderately high. The constraint extracts behavioral suppression, physical capacity, and operational risk from dogs while delivering genuine capability gain to handler institutions. The extraction is substantial\u2014selective breeding has narrowed dog behavioral repertoires significantly\u2014but is not maximal because some coordination benefit exists: dogs do experience task-driven engagement and social bonding. Theater ratio (0.35): Moderate-low. The training regime has genuine functional content (dogs detect explosives better than sensors in some conditions) and is not primarily performative. However, the theater component is rising: institutional maintenance of the regime persists beyond diminishing marginal utility as alternative technologies mature. Suppression (0.68): High. Behavioral conditioning creates strong suppression of alternative repertoires, breeding locks animals into dependence, and operational deployment creates physical/psychological stress. Claimed type: Snare. From the dog's perspective, this is unambiguous snare (trapped victim, high extraction). However, the multi-perspective reading shows this is snare-plus-tangled-rope-plus-scaffold\u2014the regime's classification depends entirely on whose structural position you adopt.",
+    "perspectival_gap": "This constraint exhibits maximal perspectival divergence. The working dog experiences snare (trapped, extracted from, no exit). The handler institution experiences rope (coordination, mutual task benefit, can exit). The individual handler experiences tangled rope (mixed benefit and cost through emotional bonding). Organized animal welfare advocates experience scaffold (temporary problem with technological sunset). The institutional dog-training complex experiences piton (declining function, persisting through inertia). The civilian beneficiary experiences snare as a secondary effect (benefits from extraction they didn't authorize). The gap between 'dog experiences pure extraction' and 'handler institution experiences pure coordination' is irreducible\u2014it is not a difference in measurement but a structural difference in who pays the cost and who reaps the benefit.",
+    "directionality_logic": "Working dog: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.41. Maximum extraction. Handler institution: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Individual handler: Mixed (benefits from bonding, costs from responsibility) + mobile \u2192 d\u22480.52, f(d)\u22480.65. Moderate extraction. Civilian beneficiary: Victim (implicit, voiceless) + trapped \u2192 d\u22480.85, f(d)\u22481.13. Significant extraction. Animal welfare advocates: Organized, seeking exit pathway + constrained \u2192 d\u22480.35, f(d)\u22480.35. Lower effective extraction because alternatives exist. Dog-training institutional complex: Beneficiary (maintains practice) + arbitrage (can shift to technology) \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary, but classification as piton comes from theater_ratio gate (declining function), not from chi.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that working dog training is unambiguously a snare from the animal's structural perspective (trapped victim, suppressed behavioral repertoire, extraction with no reciprocal benefit) but can be read as mixed coordination-extraction from human perspectives that acknowledge the genuine capability gains. The framework does not permit a false neutral classification\u2014'working dogs are trained for public good' naturalizes the extraction. The snare classification for the dog's perspective is analytically prior. The handler's rope classification is legitimate but subordinate to the dog's snare: the coordination benefit (solving tactical detection problems) is real, but it is extracted from an agent (the dog) who cannot consent or exit. This is textbook mandatrophy: mistaking extraction with incidental coordination benefit for pure coordination. The resolution is to maintain both classifications (snare for the dog, rope for the institution) as simultaneously true rather than competing\u2014the framework's multi-perspective structure captures the irreducible asymmetry."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "animal_labor_extraction_general",
+      "handler_emotional_labor_suppression"
+    ],
+    "dual_formulation_note": "Working dog training is a specific instance of the broader constraint on animal labor extraction. The animal labor constraint has \u03b5\u22480.60 (all forms). Working dog training branches off this to examine the specialized role of behavioral suppression and the role of interspecies emotional bonding as an enforcement mechanism. The two stories are linked: general animal labor is upstream (\u03b5 higher, more uniform across contexts), working dog training is downstream (\u03b5 lower due to genuine coordination component, but with specific theater dynamics around institutional persistence)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

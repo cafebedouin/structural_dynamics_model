@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "japanese_energy_scaffold_2025",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jp_energy"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "scaffold",
+    "human_readable": "The Japanese Energy Self-Sufficiency Scaffold",
+    "topic_domain": "economic/technological/political",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "renewable_energy_developers",
+      "domestic_manufacturing_sector"
+    ],
+    "victims": [
+      "electricity_consumers",
+      "manufacturing_competitiveness",
+      "fiscal_budget"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Household Consumer",
+      "comment": "PERSPECTIVE 1: HOUSEHOLD CONSUMER (SNARE) \u2014 Trapped by national energy policy and tariff structures. Faces rising electricity costs from renewable energy surcharges without alternative suppliers or exit options. Cannot opt out of grid or pursue independent energy production at scale. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Manufacturing Sector",
+      "comment": "PERSPECTIVE 2: MANUFACTURING SECTOR (TANGLED ROPE) \u2014 Constrained by energy costs and supply uncertainty, but also benefits from domestic renewable investment in long-term energy security and reduced fossil fuel import dependence. Mixed extraction and coordination: policy increases operating costs (extraction) while reducing geopolitical vulnerability (coordination benefit). d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Developers",
+      "comment": "PERSPECTIVE 3: RENEWABLE ENERGY DEVELOPERS (ROPE) \u2014 Primary beneficiary. Experience the scaffold as pure coordination: feed-in tariff (FIT) mechanisms, grid integration standards, and long-term procurement contracts solve the collective action problem of building distributed renewable infrastructure. Can arbitrage: relocate projects to optimal sites, partner with utilities, or exit if terms change. d\u22480.10, f(d)\u22480.00, \u03c3=1.0 \u2192 \u03c7\u22480.00. Negative-to-zero effective extraction = pure coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Government Energy Transition Coalition",
+      "comment": "PERSPECTIVE 4: GOVERNMENT ENERGY TRANSITION COALITION (SCAFFOLD) \u2014 Ministry of Economy, Trade and Industry (METI), utilities, and local governments see the scaffold as a temporary coordination mechanism with explicit sunset: renewable energy targets (50% by 2050) create a bounded problem set. Organized actors can collectively adjust policy levers \u2014 FIT phase-out (begun 2019), transition to auctions, integration of energy storage. The constraint has diminishing returns: as renewable penetration increases and technology costs fall, the policy apparatus can sunset traditional subsidies. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.13. Low effective extraction because actors have agency and policy runway."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Nuclear Restart Apparatus",
+      "comment": "PERSPECTIVE 5: NUCLEAR RESTART APPARATUS (PITON) \u2014 The post-Fukushima restart regime (new safety standards, local consultation, licensing) persists through institutional inertia despite significant functional degradation. Theater_ratio=0.63: regulatory compliance is substantial but does not proportionally accelerate restarts. Only 12 of 33 operable reactors restarted by 2025 despite 'enabling' policy. The apparatus remains because dismantling would require consensus; the continuation requires only institutional maintenance. d\u22480.45, f(d)\u22480.45, \u03c3=1.0 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Energy Markets and Supply Chain Actors",
+      "comment": "PERSPECTIVE 6: GLOBAL ENERGY MARKETS (TANGLED ROPE) \u2014 LNG exporters (Australia, Qatar, US), renewable equipment manufacturers (China-dominated solar/battery), and international energy traders see Japan's policy as mixed coordination (creates demand for imports, stabilizes LNG markets) and extraction (Japan reduces global fossil fuel demand, prices down globally). Japan's energy policy is nested in global markets; from a global perspective, the constraint has asymmetric effects: subsidizing renewables extracts value from fossil fuel exporters while benefiting renewable manufacturers. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Civilizational Energy Transition)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 From a civilizational view, Japan's energy scaffold is a temporary structural coordination mechanism for managing energy transition under resource constraints and geopolitical vulnerability. The sunset is real: renewable cost trajectories, battery storage maturation, and hydrogen development create an exit path from both fossil fuels AND heavy policy intervention. Theater_ratio=0.58 reflects that some policy mechanisms are genuinely functional (grid integration standards, procurement contracting) while others are performative (symbolic targets, announcement effects). The constraint is structurally temporary because the underlying energy technology is shifting. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.50."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "nuclear_restart_acceleration",
+      "question": "Will nuclear reactor restarts accelerate post-2026, or will local opposition and regulatory inertia maintain the current slow pace?",
+      "resolution_mechanism": "Tracking: number of active restart applications, completed safety reviews, and grid connections per year; survey of local government approvals; regulatory timeline transparency",
+      "impact": "If accelerated: nuclear pathway becomes primary energy transition mechanism; scaffold transitions to longer sunset (30+ years). If stalled: renewable subsidies become primary mechanism; manufacturing competitiveness losses accumulate; extraction on consumers increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether nuclear restarts will become the primary energy transition pathway"
+    },
+    {
+      "id": "renewable_cost_floor_trajectory",
+      "question": "Does solar and battery cost reduction follow current LCOE decline trajectories, or do materials constraints (silicon, lithium) create a new cost floor?",
+      "resolution_mechanism": "Tracking LCOE and CAPEX trends for solar/wind/battery; analysis of rare earth and silicon supply constraints; cost benchmarking vs. fossil fuel comparatives",
+      "impact": "If cost floor is high (~$50/MWh for solar, $100/kWh for batteries by 2035): energy transition requires sustained subsidies; extraction persists; scaffold extends. If cost floor is low (~$20/MWh, $50/kWh): subsidies become unnecessary; extraction ends; scaffold sunsets ahead of schedule.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Long-term cost trajectory for renewable energy technologies"
+    },
+    {
+      "id": "grid_stability_constraints",
+      "question": "Can Japan's grid absorb 50%+ renewable penetration without requiring disproportionate investment in energy storage and grid hardening?",
+      "resolution_mechanism": "Technical analysis: grid operator studies on renewable integration limits, storage requirements, and curtailment rates; comparison with peer systems (Denmark, Australia, California)",
+      "impact": "If storage/hardening costs are proportionate: renewable transition is economically viable; scaffold enables real coordination. If costs spike nonlinearly: energy transition becomes costlier than projected; extraction on consumers and fiscal budget increases; scaffold may not sunset as planned.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical feasibility of high-penetration renewable grid integration"
+    },
+    {
+      "id": "manufacturing_relocation_threshold",
+      "question": "At what electricity cost premium do energy-intensive manufacturers (electronics, chemicals, metals) relocate production to lower-cost jurisdictions?",
+      "resolution_mechanism": "Econometric analysis: energy cost premium vs. FDI outflows; tracking of plant closures, capacity reductions, and foreign subsidiary shifts; comparison with peer manufacturing bases (Germany, South Korea)",
+      "impact": "If relocation threshold is high (>40% premium): manufacturing can absorb costs; constraint remains contained. If threshold is low (<20% premium): significant manufacturing exodus; fiscal extraction on workforce and tax base; constraint degrades from Tangled Rope to Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Manufacturing competitiveness loss threshold under energy cost increases"
+    },
+    {
+      "id": "hydrogen_transition_viability",
+      "question": "Will hydrogen production (green or blue) become cost-competitive and supply-scalable by 2035-2040, creating a genuine exit pathway from both fossil fuels and renewable subsidies?",
+      "resolution_mechanism": "Tracking: green hydrogen CAPEX trends, electrolyzer deployment rates, cost benchmarking vs. fossil hydrogen; blue hydrogen capture deployment; international hydrogen trade development",
+      "impact": "If viable: hydrogen becomes the primary energy carrier; scaffold is truly temporary; sunset date is credible; constraint is Scaffold as claimed. If not viable: renewable subsidies become permanent; extraction persists; constraint degrades to Piton (degraded scaffold maintained by inertia).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Hydrogen-based energy economy viability and timeline"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 2015,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "Japan's energy self-sufficiency rate of approximately 15% (among G7 lows) creates a structural vulnerability to global energy prices and geopolitical supply disruptions, particularly acute post-2022 Ukraine crisis and post-Fukushima nuclear moratorium. The government's response \u2014 renewable energy promotion (FIT system 2012-present, renewable targets to 50% by 2050, auction mechanisms) \u2014 is a deliberate temporary policy scaffold: it coordinates distributed renewable investment and grid integration while explicitly requiring sunset as technology costs decline and grid infrastructure matures. The constraint exhibits all seven observable perspectives reflecting different structural positions: households face rising electricity costs with no exit (Snare); manufacturers experience mixed extraction (higher energy costs) and coordination benefits (energy security) (Tangled Rope); renewable developers benefit from structured procurement and tariffs (Rope); government and utilities see a bounded coordination problem with explicit policy sunset (Scaffold); the nuclear restart apparatus persists through institutional inertia despite policy enablement (Piton); global energy markets experience Japan's renewable investment as mixed coordination and extraction (Tangled Rope); the civilizational analytical observer recognizes genuine temporary scaffolding with real exit conditions tied to technology maturation (Scaffold).",
+    "key_agents": [
+      "Household Consumers: Primary victim (powerless/trapped) \u2014 bears rising electricity costs from renewable surcharges and grid integration costs; no alternative suppliers or production options",
+      "Manufacturing Sector: Secondary victim/beneficiary (moderate/constrained) \u2014 faces short-term energy cost increases but benefits from long-term energy security and reduced geopolitical vulnerability",
+      "Renewable Energy Developers: Primary beneficiary (institutional/arbitrage) \u2014 benefit from feed-in tariffs, long-term contracts, and grid integration standards; can relocate projects or adjust business models",
+      "METI and Government Energy Coalition: Organized actors (organized/constrained) \u2014 perceive the constraint as temporary coordination with explicit sunset tied to renewable targets (50% by 2050, hydrogen development)",
+      "Nuclear Regulatory Authority and Utilities: Institutional actors (institutional/constrained) \u2014 maintain post-Fukushima restart apparatus through inertia; see own process as performative (Piton)",
+      "Global Energy Markets and LNG Exporters: Powerful actors (powerful/mobile) \u2014 experience Japan's renewable policy as mixed coordination (demand stabilization) and extraction (reduced fossil fuel demand, lower global prices)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 recognizes genuine temporary scaffolding with real sunset conditions tied to technology maturation curves"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint imposes real costs on consumers (renewable surcharges) and manufacturers (electricity price premiums), but extraction is not severe because: (1) the policy apparatus explicitly targets sunset (50% renewable by 2050, hydrogen transition by 2040s); (2) underlying technology costs are declining, making subsidies increasingly unnecessary; (3) energy security benefits partially offset extraction for manufacturers. The value reflects that this is temporary extraction with a credible exit path, not permanent rent extraction. Suppression (0.52): Moderate-high. Households cannot exit the electricity grid or choose alternative suppliers (monopoly distribution model persists). Manufacturers face higher energy costs but can partially mitigate via efficiency, relocation, or hedging. Grid operators face technical constraints on renewable integration (grid stability, curtailment, storage requirements). Policy change is possible but faces institutional inertia (utility interests, local opposition to nuclear restarts). Theater ratio (0.58): Moderate-high. The policy scaffolding has genuine functional content (FIT mechanisms solved the distributed renewable investment problem, grid integration standards enable real coordination) but also performative elements (symbolic targets like '50% by 2050' are announcement effects with limited near-term enforcement; nuclear restart process appears lengthy relative to actual authorizations). The increase from 0.42 (2015) to 0.58 (2025) reflects that as renewable targets become harder to achieve, more performative policy layering occurs (hydrogen announcements, battery storage mandates, subsidy expansions).",
+    "perspectival_gap": "This constraint demonstrates the diagnostic value of perspectival indexing. The household consumer sees pure extraction (Snare) \u2014 rising costs with no exit. The manufacturer sees mixed extraction and coordination (Tangled Rope) \u2014 higher costs but reduced geopolitical risk. The renewable developer sees pure coordination (Rope) \u2014 policy mechanisms solve the real problem of financing distributed generation. The government coalition sees temporary coordination with sunset (Scaffold) \u2014 the policy is bounded in time and tied to explicit technology milestones. The nuclear restart apparatus sees degradation (Piton) \u2014 the regulatory process persists through inertia, not functional acceleration. Global energy markets see the constraint as nested in larger energy system transitions (Tangled Rope at global scale). The civilizational observer recognizes real temporary scaffolding (Scaffold) \u2014 the constraint has genuine exit conditions tied to renewable cost curves, battery storage maturation, and hydrogen viability. These are not different interpretations of the same fact; they are genuinely different structural experiences of the same policy apparatus.",
+    "directionality_logic": "Household consumers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction \u2014 no alternatives. Manufacturers: Mixed (victim and partial beneficiary) + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction but tempered by energy security benefits. Renewable developers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.00. Net beneficiary; can relocate or adjust. Government coalition: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Moderate power; constrained by technology curves and political consensus but not powerless. Nuclear apparatus: Institutional + constrained \u2192 d\u22480.45, f(d)\u22480.45. Moderate extraction (maintains costly regulatory regime) but constrained by policy framework. Global markets: Powerful + mobile \u2192 d\u22480.50, f(d)\u22480.65. Symmetric extraction/coordination; can arbitrage via LNG price changes or shift investment. Analytical observer: analytical \u2192 d\u22480.50, f(d)\u22480.65. Civilizational view recognizes genuine temporary scaffolding.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by explicitly declaring its temporality: the scaffold is not mislabeled extraction disguised as coordination, nor coordination that secretly extracts. The policy apparatus has measurable, credible sunset conditions: (1) renewable energy cost curves are approaching parity with fossil fuel + carbon costs (LCOE trajectories support 50% renewable viability by 2050); (2) battery storage costs are declining (enables grid balancing without subsidies); (3) hydrogen economy viability is the conditional exit gate (if hydrogen becomes cost-competitive, both fossils and renewable subsidies become unnecessary). The household consumer (Snare) experiences extraction that is temporary and contingent on technology development. The government coalition (Scaffold) explicitly manages sunset via policy levers (FIT auction transition, grid investment targets, hydrogen development milestones). The theater ratio (0.58) reflects genuine functionality mixed with performative policy layering \u2014 as renewable transition becomes harder, more performance is added, but the underlying coordination problem (distributed renewable investment) is real. The constraint is not mislabeled because the beneficiary/victim structure and sunset conditions make the distinction between Scaffold and Snare operationally meaningful: the same rising costs (Snare extraction) are temporary and contingent (Scaffold sunset), distinguishable through time horizons and policy agency."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "japanese_grid_stability_integration",
+      "battery_supply_chain_lithium_cobalt",
+      "hydrogen_economy_viability_2040",
+      "nuclear_restart_political_feasibility"
+    ],
+    "dual_formulation_note": "The Japanese energy scaffold decomposes into multiple structurally distinct constraints: (1) renewable energy coordination (\u03b5\u22480.15, Rope) \u2014 the distributed generation problem; (2) grid stability integration (\u03b5\u22480.35, Tangled Rope) \u2014 curtailment, storage, and frequency management costs; (3) consumer extraction and fiscal burden (\u03b5\u22480.42, Snare) \u2014 rising tariffs and subsidy costs; (4) energy security and geopolitical embedding (\u03b5\u22480.28, Rope) \u2014 coordination with global markets and diplomatic actors. This story focuses on the policy scaffold as a whole (\u03b5=0.38, Scaffold); the decomposition notes clarify how the overall constraint emerges from nested sub-constraints with different \u03b5 and classification profiles."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.5
+    }
+  ]
+}

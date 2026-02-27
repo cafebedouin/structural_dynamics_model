@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "legitimacy_without_effectiveness",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hollow"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Hollow Mandate",
+    "topic_domain": "political/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_state_apparatus",
+      "institutional_creditors",
+      "international_legitimacy_gatekeepers"
+    ],
+    "victims": [
+      "general_population",
+      "service_dependent_groups",
+      "fiscal_accountability"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Service-Dependent Citizen",
+      "comment": "PERSPECTIVE 1: SERVICE-DEPENDENT CITIZEN (SNARE) \u2014 Cannot exit the governance structure; depends on services (water, electricity, police, healthcare) that the state claims to provide but cannot. Trapped within a polity that collects taxes/rents under the legitimacy claim while failing delivery. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Opposition Movement",
+      "comment": "PERSPECTIVE 2: ORGANIZED OPPOSITION (TANGLED ROPE) \u2014 Constrained by security risks and lack of alternative authority structure, but also benefits from the hollowness: legitimacy void enables political mobilization and coalition-building. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Legitimacy Gatekeeper",
+      "comment": "PERSPECTIVE 3: INTERNATIONAL LEGITIMACY GATEKEEPER (ROPE) \u2014 IMF, World Bank, foreign governments, UN recognition maintain the state's formal status despite dysfunction. Benefits from coordination: state apparatus continues extracting resources (via debt servicing, privatization, FDI terms) even as it hollows out. Recognizes the state as credible partner. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform-Oriented Technocrat Coalition",
+      "comment": "PERSPECTIVE 4: REFORM-ORIENTED TECHNOCRATS (SCAFFOLD) \u2014 Institutional reformers (independent agency heads, NGO administrators, local governance innovators) see the hollowness as a temporary design failure with a sunset: capacity-building, decentralization, and new institutional arrangements can restore effectiveness. d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.24."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Apparatus Itself",
+      "comment": "PERSPECTIVE 5: STATE APPARATUS (PITON) \u2014 Maintains performative functionality (ceremonies, symbolism, bureaucratic theater) despite loss of real capacity. The state as institution persists through inertia and international recognition, not through actual service delivery or security provision. theater_ratio=0.81 exceeds piton threshold (\u22650.70). The apparatus knows it is degraded but is locked into perpetuating the hollow ritual."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Westphalian Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / WESTPHALIAN VIEW (MOUNTAIN) \u2014 From a civilizational view, the sovereignty system requires that legitimacy and effectiveness sometimes decouple: formal statehood is legally defined (treaties, recognition), not functionally defined (capacity to deliver). A state can be legitimate yet ineffective because Westphalian law defines legitimacy through recognition, not through results. However, the structural data (\u03b5=0.58, suppression=0.68, theater=0.81) contradicts the mountain classification \u2014 the engine will detect this as a false summit, revealing that the legal/functional decoupling is a contingent institutional choice, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_collapse_threshold",
+      "question": "At what level of service failure does formal legitimacy cease to function as extraction mechanism?",
+      "resolution_mechanism": "Cross-national comparison of state capacity indices vs. citizen compliance with taxation and legal authority; tracking of delegitimization events (mass protests, exit of compliance) relative to service provision metrics",
+      "impact": "If collapse occurs early (\u226420% capacity): snare classification becomes mountain (trapped citizens realize no coordination benefit exists). If collapse occurs late (\u226560% capacity): tangled_rope classification persists longer (some coordination benefits sustain cooperation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which formal legitimacy loses extractive force"
+    },
+    {
+      "id": "international_recognition_independence",
+      "question": "Does international legitimacy gatekeeping (UN seat, IMF status, foreign aid) constitute genuine coordination benefit or pure extraction enablement?",
+      "resolution_mechanism": "Analysis of international support conditions and enforcement; tracking whether international legitimacy enables external extraction (debt service, conditionality compliance) vs. enables internal recovery (technical assistance, institutional capacity-building)",
+      "impact": "If pure enablement of extraction: international gatekeeper should reclassify to snare. If mixed: rope classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether international legitimacy support enables extraction or recovery"
+    },
+    {
+      "id": "informal_authority_substitution",
+      "question": "Do informal governance structures (tribal authority, criminal syndicates, community organizations) constitute alternative effective authority that reduces the hollow mandate's extractive grip?",
+      "resolution_mechanism": "Ethnographic and structural analysis of service delivery, taxation, and dispute resolution outside the formal state; comparison of effective authority distribution with formal legitimacy distribution",
+      "impact": "If informal alternatives provide significant service delivery: suppression value is lower (exit options improve), and the constraint degrades toward scaffold (temporary hollow state). If informal authority exploits the hollow state: suppression increases (trapped citizens have no alternatives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which informal authority structures provide alternative governance"
+    },
+    {
+      "id": "mandate_hollowing_directionality",
+      "question": "Is the hollowing a deliberate extraction mechanism (state deliberately underfunds public goods to privatize rents), or is it structural degradation (capacity loss due to war, economic collapse, institutional decay)?",
+      "resolution_mechanism": "Historical analysis of state budget allocation, intentionality of public sector erosion, correlation between privatization cycles and service collapse; interview evidence from state apparatus regarding knowledge of hollowness",
+      "impact": "If deliberate extraction: extractiveness should increase (\u03b5\u21920.65+), tangled_rope confirms as hybrid of coordination facade + rent extraction. If structural: extractiveness may be lower if state apparatus is genuinely trying to recover (\u03b5\u21920.45), scaffold becomes more probable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hollowing is deliberate extraction or structural degradation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Hollow Mandate describes a structural constraint that arises when a state retains legal and social recognition as the legitimate authority but has lost the capacity to fulfill its primary functions \u2014 security, infrastructure, economic stability, justice administration. This condition is neither total state collapse (which triggers international intervention) nor functional governance (which sustains legitimacy through real delivery). Instead, the state apparatus persists through a hybrid mechanism: international recognition gatekeeping sustains formal legitimacy; incumbent elites extract resources through the legitimacy claim itself (taxation, debt servicing, privatization terms); the general population remains trapped because exit is costly and no alternative authority structure has emerged. The constraint exhibits all six DR types depending on the observer's structural position. The hollow state is simultaneously a snare for service-dependent citizens, a tangled rope for opposition movements, a rope for international creditors, a scaffold for reform-minded technocrats, a piton for the state apparatus itself (maintained through ritual), and a false mountain for those who naturalize the Westphalian separation of formal legitimacy from functional capacity. The theater ratio has risen from 0.48 (when services were degrading but state apparatus still performed some functions) to 0.81 (when state legitimacy persists almost entirely through ceremonial authority and international recognition). The constraint is not mandatrophy-resolved because the gap between coordination benefit and extraction remains structurally ambiguous: the state does provide some minimal coordination (legal framework, currency, international recognition), but this coordination benefit is dwarfed by the extraction (taxation of destroyed infrastructure, debt service on loans for failed development) and the performativity (state ceremonies and institutions without real function).",
+    "key_agents": [
+      "Service-Dependent Citizens: Primary victims (powerless/trapped) \u2014 bear full cost of state's inability to deliver security, water, electricity, healthcare; cannot exit the polity; required to remit taxes/rents to state that provides no reciprocal services",
+      "Incumbent State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 captures legitimacy-based rents (taxation, debt accumulation, international credit access); can reallocate resources to private gain via corruption and patronage; maintains position through formal authority claim despite functional collapse",
+      "International Legitimacy Gatekeepers: Secondary beneficiary (institutional/arbitrage) \u2014 IMF, World Bank, foreign governments, UN recognition apparatus sustain state's credibility; enable debt servicing, conditionality compliance, investment terms favorable to external capital",
+      "Organized Opposition Movement: Secondary victim (moderate/constrained) \u2014 face security risks from state apparatus despite its weakness; constrained by lack of alternative authority; benefit from mobilization opportunities created by legitimacy void",
+      "Reform-Oriented Technocrats: Tertiary actor (organized/constrained) \u2014 see hollowness as temporary design failure; advocate institutional reform and capacity-building; partially benefit from reform projects; constrained by state apparatus resistance",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the formal/functional decoupling as an inherent feature of sovereignty rather than a contingent institutional failure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The state extracts through taxation (resource collection) despite failing to provide services, and through debt servicing (fiscal resources redirected to international creditors) despite economic collapse. The extraction is significant but not maximal because some minimal state functions persist (legal framework, currency, international representation), providing weak coordination benefit that prevents pure snare classification at the national aggregate level. However, individual service-dependent populations experience near-maximal extraction (snare perspective). Suppression (0.68): High. Citizens have severely limited exit options \u2014 cannot easily migrate (visa barriers, economic barriers), cannot opt out of taxation (legal enforcement), cannot withdraw from currency system without unacceptable cost. Informal alternative authorities exist but are fragmented and often predatory themselves. The suppression is substantial but not total because informal governance structures do provide some escape routes and because international pressure (however weak) creates some accountability mechanisms. Theater ratio (0.81): Very high. The state apparatus persists primarily through performative functions: ceremonies of legitimacy (state holidays, official symbols, bureaucratic theater), international recognition theater (summits, treaty signings, UN representation), and performative institutions (legislatures, courts, agencies) that lack real enforcement capacity. The theater has risen over the measurement interval as actual service delivery has collapsed \u2014 the gap between legitimacy claim and functional reality has widened. Claimed type (Tangled Rope): The constraint exhibits genuine coordination function (legal framework, currency, international representation enable some economic activity) AND asymmetric extraction (incumbent elites capture legitimacy-based rents while citizens bear service failure costs). Both coordination and extraction are required for the hybrid classification.",
+    "perspectival_gap": "This constraint demonstrates the full range of DR classification from a single set of structural metrics, showing how indexical position determines observed type. Service-dependent citizens perceive a snare \u2014 they are trapped in a system that extracts resources while delivering nothing in return. The international legitimacy gatekeeper perceives a rope \u2014 from their position, the hollow state is a functioning coordination mechanism that enables debt servicing and resource flow predictability. The state apparatus itself perceives a piton \u2014 it recognizes its own functions as largely performative but maintains the ritual because exit (losing international recognition) would be catastrophic. The reform-oriented technocrat perceives a scaffold \u2014 they believe the hollowness is a temporary institutional failure that can be remedied through capacity-building and sunset clauses. The organized opposition perceives a tangled rope \u2014 the state's weakness creates both constraints (security risks) and opportunities (mobilization pathways). The civilizational analytical observer risks perceiving a mountain \u2014 naturalizing the legitimacy/capacity decoupling as an inherent feature of Westphalian sovereignty rather than a contingent institutional failure. The perspectival gap reveals that the 'hollowness' is not an objective property of the state, but a relational property: the state is hollow for those depending on services, functional for those extracting rents through legitimacy claims, and degraded for those maintaining its institutions.",
+    "directionality_logic": "Service-dependent citizens: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximal extraction because citizens cannot exit and bear full cost of state collapse. Incumbent state apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary because they can reallocate legitimacy-based resources to private gain and can exit via capital flight or international relocation. International legitimacy gatekeeper: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Benefits from predictable debt servicing and resource flow. Organized opposition: Victim + constrained (but with some mobility through alliance-building) \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction (security constraints, limited authority alternatives) but not maximal (can organize, can mobilize). Reform-oriented technocrats: Mixed + constrained \u2192 d\u22480.42, f(d)\u22480.42. Moderate directionality because they both experience institutional constraints and benefit from reform opportunities. State apparatus as agent: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification comes from theater gate (high performativity), not from high chi (which would indicate a powerful beneficiary). The apparatus is degraded, not powerful.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: This constraint presents a genuine classification ambiguity that cannot be resolved without additional structural data. The core question is whether the state's legitimacy claim constitutes a genuine coordination mechanism (making the constraint a tangled rope or scaffold) or whether it is pure extraction enabled by international institutional gatekeeping (making it a snare with elevated theater). The measurement data shows theater ratio rising from 0.48 to 0.81 and extractiveness rising from 0.35 to 0.58 over 20 years. If the theater ratio continues rising and extractiveness plateaus or declines, the constraint is degrading from tangled rope toward piton (former coordination becoming pure ritual). If extractiveness continues rising while theater stabilizes, the constraint is consolidating as a snare that uses legitimacy theater as its primary suppression mechanism. The omega variables (especially 'mandate_hollowing_directionality' and 'international_recognition_independence') must be resolved empirically before final classification. The tentative tangled_rope classification assumes that the international legitimacy gatekeeping provides some genuine coordination value (enabling debt instruments, investment, currency credibility), but if this gatekeeping is revealed as pure extraction enablement (conditioning on privatization, austerity, resource extraction), the constraint should reclassify to snare. Conversely, if reform-oriented technocrats successfully rebuild state capacity within 10-15 years (resolving the scaffold perspective), the constraint will degrade toward rope. The hollow mandate's classification is therefore perspectival and temporal: which position you occupy (and when you measure) determines the observed type."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "currency_hyperinflation",
+      "informal_authority_substitution",
+      "conditional_lending_sovereignty_loss"
+    ],
+    "dual_formulation_note": "The hollow mandate is distinct from but structurally related to currency hyperinflation (downstream: state's inability to maintain fiscal discipline causes currency collapse) and conditional lending arrangements (upstream: international creditors' legitimacy gatekeeping sustains hollowed state as extractive vehicle). The informal authority substitution is co-produced by the hollowness: as state capacity fails, informal structures expand to fill governance void. These constraints form a causal chain but have distinct \u03b5 values and classification types."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

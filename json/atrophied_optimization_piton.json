@@ -2,107 +2,136 @@
   "header": {
     "constraint_id": "atrophied_optimization_piton",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "atrophy"
   },
   "base_properties": {
-    "extractiveness": 0.48,
-    "suppression": 0.8,
-    "theater_ratio": 0.85,
+    "extractiveness": 0.18,
+    "suppression": 0.52,
+    "theater_ratio": 0.81,
     "claimed_type": "piton",
-    "human_readable": "The Ghost in the Habit",
+    "human_readable": "The Ghost in the Habit: Atrophied Optimization Piton",
     "topic_domain": "technological/social",
-    "requires_active_enforcement": true,
-    "beneficiaries": [
-      "legacy_process_enforcers"
-    ],
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [],
     "victims": [
-      "frontline_employees",
-      "organizational_adaptability"
+      "operational_workers",
+      "organizational_efficiency",
+      "user_experience"
     ]
   },
   "perspectives": [
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "piton",
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Frontline Employee",
-      "comment": "PERSPECTIVE 1: FRONTLINE EMPLOYEE (TANGLED ROPE) — Trapped within a mandatory, nonsensical workflow. The process extracts time and effort for no discernible benefit, feeling like a coercive system. The high suppression and moderate base extraction create a Tangled Rope experience. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.54."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Legacy Process Enforcer",
-      "comment": "PERSPECTIVE 2: LEGACY PROCESS ENFORCER (ROPE) — A middle manager whose role is defined by enforcing the legacy workflow. From this view, the process is a valuable coordination tool that ensures stability and predictability. Their role is constrained by the system they uphold. d≈0.25 (beneficiary+constrained), f(d)≈0.14, σ=0.9 → χ≈0.06."
+      "label": "The Operational Worker",
+      "comment": "PERSPECTIVE 1: OPERATIONAL WORKER (PITON) \u2014 Trapped in mandatory workflows originally designed by an active AI optimizer. The system still enforces KPIs, procedures, and daily nudges that made sense when the optimization loop was running and learning, but now persist through institutional inertia. The worker cannot exit these procedures without risking performance evaluation penalties. The constraint is experienced as pointless ritual \u2014 the ghost remains, the purpose has evaporated. Low extractiveness because there is no beneficiary capturing value from the now-defunct optimization; high suppression because the workflows are still enforced."
     },
     {
       "classification_type": "piton",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Operations Manager",
+      "comment": "PERSPECTIVE 2: OPERATIONS MANAGER (PITON) \u2014 Aware that the AI optimization system was deactivated years ago, but the workflows it configured remain embedded in systems, metrics dashboards, and performance contracts. Changing them requires expensive reengineering and potentially disrupts institutional relationships. The manager experiences the constraint as a degraded but entrenched structure: too costly to remove, too pointless to defend as functionally necessary. Theater ratio rises because the manager must justify maintaining procedures whose original logic (machine learning feedback) no longer exists."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (PITON) — The system's original function has atrophied, but the ritual remains. The defining feature is the massive gap between performative action and functional outcome. The theater_ratio of 0.85 decisively classifies this as a Piton."
+      "label": "The Legacy Systems Owner",
+      "comment": "PERSPECTIVE 3: LEGACY SYSTEMS OWNER (ROPE) \u2014 The organization that maintains the AI system (or its documentation and licensing agreements) benefits from continuing to invoice the client organization for 'optimization platform maintenance' even though the core loop has been deactivated. The beneficiary experiences the constraint as a coordination mechanism: the workflows are justified by reference to 'the platform' and 'data-driven optimization,' enabling continued revenue extraction with minimal active work. Arbitrage exit means the owner can walk away or renegotiate terms anytime; the client is more constrained."
     },
     {
       "classification_type": "scaffold",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Turnaround Consultant",
-      "comment": "PERSPECTIVE 4: TURNAROUND CONSULTANT (SCAFFOLD) — An external agent brought in to fix the inefficiency. They see the legacy process as a temporary obstacle to be dismantled and replaced. Their intervention represents a sunset clause on the constraint's existence. d≈0.48, f(d)≈0.60, σ=1.0 → χ≈0.29."
+      "label": "The Organizational Modernization Initiative",
+      "comment": "PERSPECTIVE 4: MODERNIZATION INITIATIVE (SCAFFOLD) \u2014 A cross-functional team tasked with 'digital transformation' sees the atrophied optimization system as a temporary problem: legacy KPI structures will be replaced with new objectives as part of a platform migration. The initiative has a sunset clause \u2014 the old workflows are expected to be deprecated within 18-24 months as new systems go live. Theater is present (the initiative must justify why the old system persists) but is accepted as transitional. Suppression is moderate because the initiative has resources and organizational backing to define the path forward."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, the persistence of deactivated optimization loops in human workflows might appear as an inevitable law of technological drift: all systems eventually outlive their original purpose, and removing them is always harder than deploying them. The constraint seems inherent to how institutional memory embeds dead systems. However, the structural data contradicts this \u2014 the 'ghost' is maintained by specific institutional choices (inertia, risk aversion, revenue incentives), not by physical or logical necessity. This perspective risks naturalizing institutional decay."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Frontline Support User",
+      "comment": "PERSPECTIVE 6: FRONTLINE SUPPORT USER (SNARE) \u2014 End users of the system (internal or external) experience mandatory workflows that no longer optimize for anything \u2014 they simply consume time and create friction. The user cannot bypass the procedures; they persist because 'the system requires it.' The user has no recourse to request changes because the AI system has been deactivated and the workflows are now 'legacy.' Pure extraction: time spent, friction borne, no compensating optimization benefit. This perspective reveals the snare structure most clearly \u2014 the ghost persists to extract compliance without delivering value."
     }
   ],
   "omegas": [
     {
-      "id": "inertia_vs_hidden_function",
-      "question": "Is the process's persistence purely due to bureaucratic inertia, or does it serve a hidden, unstated function (e.g., satisfying an obscure compliance requirement)?",
-      "resolution_mechanism": "A full process audit and dependency mapping to trace the outputs of the workflow to any downstream consumers or regulatory reports.",
-      "impact": "If a hidden function exists, the theater_ratio would decrease, potentially reclassifying it as a Tangled Rope from the analytical view. If not, the Piton classification is confirmed.",
+      "id": "optimization_loop_resurrection_threshold",
+      "question": "Is the AI optimization system truly inactive, or is it still collecting data and training offline with a deactivated deployment pipeline?",
+      "resolution_mechanism": "Audit of system activity logs; interviews with original system developers; inspection of code repositories and training infrastructure for signs of active learning",
+      "impact": "If truly inactive: clear piton (ghost persists, purpose evaporated). If still learning: constraint may degrade further (snare) or improve (rope) when reactivated; implications for mandatrophy if beneficiaries are waiting for reactivation.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing between pure inertia and a hidden, unstated function."
+      "description": "Whether the optimization loop is truly deactivated or running offline"
     },
     {
-      "id": "quantifying_opportunity_cost",
-      "question": "What is the true economic cost of forcing skilled employees to adhere to this suboptimal, atrophied process?",
-      "resolution_mechanism": "Time-tracking studies comparing the legacy process to a rationalized alternative, combined with analysis of employee turnover and morale data in affected departments.",
-      "impact": "A higher quantified cost would increase the base_extractiveness (ε) score, reinforcing the Tangled Rope classification from the victim's perspective and highlighting the malignancy of the Piton.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Measuring the full opportunity cost of the atrophied workflow."
-    },
-    {
-      "id": "potential_for_reactivation",
-      "question": "Could the atrophied process be revitalized by integrating a modern AI, turning the Piton back into a functional Rope?",
-      "resolution_mechanism": "A pilot project to re-instrument the workflow with a new optimization engine, measuring efficiency gains and adaptability.",
-      "impact": "Successful reactivation would represent a resolution of the constraint, transforming it from a Piton back into a Rope or Scaffold.",
+      "id": "workflow_value_residue",
+      "question": "What fraction of the remaining KPI-driven workflows still generate measurable business value, independent of AI optimization?",
+      "resolution_mechanism": "Comparative analysis: measure organizational outcomes for 30 days with workflows active vs 30 days with workflows disabled; track secondary effects (employee morale, error rates, customer satisfaction, throughput)",
+      "impact": "If > 40% value remains: constraint may be tangled_rope (hybrid coordination + extraction). If < 10% value remains: clear piton with negligible coordination function. Determines whether removal would be costless or require genuine reengineering.",
       "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Assessing the feasibility of re-integrating AI to restore function."
+      "type_class": "empirical",
+      "description": "Residual business value of atrophied workflows independent of AI optimization"
+    },
+    {
+      "id": "institutional_switching_cost",
+      "question": "What is the true cost (engineering, contract renegotiation, training, risk) of deactivating the legacy workflows versus maintaining them indefinitely?",
+      "resolution_mechanism": "Detailed cost-benefit analysis; interviews with IT, legal, and operations leadership; identification of hidden switching costs (regulatory compliance tied to audit trails of the old workflows, vendor contract terms, etc.)",
+      "impact": "If switching cost < 6 months of operational drag: constraint is maintainable and will be removed. If switching cost > 18 months of drag: constraint will persist as piton. Determines whether the scaffold sunset is realistic or aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True cost of removing versus maintaining the atrophied optimization workflows"
+    },
+    {
+      "id": "legacy_system_owner_incentive_structure",
+      "question": "Is the legacy systems owner deliberately maintaining demand for the deactivated optimization loop to extract continued licensing revenue?",
+      "resolution_mechanism": "Contract analysis; pricing history; competitive analysis of alternative vendors and migration costs; testimony from procurement and IT leadership about pressures to renew licensing agreements",
+      "impact": "If deliberate: constraint is extractive snare (coordinated toward rent-seeking). If passive (benign abandonment): constraint is piton (dead inertia). If mixed: constraint becomes tangled_rope (hybrid extraction + unavoidable coordination overhead). Determines whether the beneficiary's 'rope' perspective is accurate or covers genuine predatory behavior.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legacy system owner deliberately maintains deactivated loop for revenue"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.4
+      "time_point": 3,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.85
+      "time_point": 6,
+      "value": 0.81
     },
     {
       "metric": "base_extractiveness",
@@ -111,38 +140,40 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.3
+      "time_point": 3,
+      "value": 0.17
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.48
+      "time_point": 6,
+      "value": 0.18
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "This constraint models a common form of organizational decay in the digital age: an AI or algorithmic optimization system is deactivated or becomes obsolete, but the human processes, KPIs, and behavioral habits it created persist through institutional inertia. Employees are forced to follow a 'ghost protocol' that no longer serves its original purpose. The function has atrophied, but the performance remains mandatory, creating a high-theater environment where compliance is detached from outcome.",
+    "narrative_context": "The atrophied optimization piton represents a class of technological debt where an AI or algorithmic optimization system has been deactivated, yet the human workflows, KPIs, performance metrics, and behavioral nudges it originally created remain mandatory and unevaluated. The 'ghost' persists: workers still follow procedures optimized for a feedback loop that no longer exists; managers still enforce metrics designed by algorithms that are no longer learning; the organization continues to justify workflows by reference to 'data-driven optimization' long after the data pipeline stopped running. This constraint exhibits the piton signature: high theater ratio (0.81) \u2014 the enforcement of procedures whose original functional purpose has evaporated \u2014 combined with low extractiveness (0.18) because there is no active beneficiary capturing value from the ghost, only institutional inertia maintaining it. The constraint creates friction without benefit: workers experience suppressed autonomy (0.52) through mandatory compliance with pointless procedures; operational efficiency declines because workflows that once optimized for machine-learning feedback now serve no coherent objective; the organization remains locked in a degraded structure. The theater ratio has risen over the interval (0.52 \u2192 0.81) as the gap widens between the procedures' original justification and their present lack of function \u2014 the ghost becomes more obviously empty.",
     "key_agents": [
-      "Frontline Employees: Primary victims (powerless/trapped) — forced to execute pointless tasks, bearing the cost of wasted time and cognitive load.",
-      "Legacy Process Enforcers: Primary beneficiaries (organized/constrained) — middle managers or compliance officers whose authority and roles are tied to the enforcement of the obsolete process.",
-      "Organizational Adaptability: Abstract victim (powerless/trapped) — the organization's ability to evolve is crippled by the rigid, nonsensical workflow.",
-      "The Turnaround Consultant: External agent (powerful/arbitrage) — sees the system as a temporary inefficiency to be eliminated, representing a potential sunset clause."
+      "Operational Workers: Primary victims (powerless/trapped) \u2014 bear the friction and time cost of mandatory workflows whose optimization function has been deactivated; cannot exit without performance evaluation penalties",
+      "Operations Manager: Secondary victim (moderate/constrained) \u2014 aware of the degraded state but constrained by switching costs and institutional relationships; maintains procedures through inertia",
+      "Legacy Systems Owner: Secondary beneficiary (institutional/arbitrage) \u2014 continues to extract licensing revenue by maintaining 'optimization platform' agreements; can exit anytime; benefits from client inertia",
+      "Organizational Modernization Initiative: Organized agent (organized/constrained) \u2014 tasked with replacing the atrophied system; experiences the constraint as a temporary problem with a defined sunset",
+      "Frontline Support Users: Tertiary victims (powerless/trapped) \u2014 external or internal users trapped in mandatory procedures that create friction without optimization benefit",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the ghost as an inevitable law of technological drift"
     ],
-    "logic_rationale": "Extractiveness (ε=0.48): This value is higher than typical for a Piton because it captures not just direct extraction but the immense opportunity cost of misallocating skilled human labor to a defunct process. Suppression (0.80): High, as the workflows are mandatory and deviation is penalized, leaving employees with no alternative. Theater Ratio (0.85): Very high. This is the defining metric. The actions are almost entirely performative, satisfying a procedural requirement that has been decoupled from its original optimization goal. This score firmly triggers the Piton classification gate.",
-    "perspectival_gap": "The gap is significant. Frontline employees experience the constraint as a Tangled Rope — a coercive, extractive system they are trapped in. Legacy enforcers, who benefit from the stability and their role in maintaining it, see a functional Rope. The analytical observer, however, identifies the core pathology: the massive disconnect between action and purpose, classifying it as a Piton. This highlights how a Piton, while analytically defined by its theatricality, can be experienced as a highly coercive Snare or Tangled Rope by those subject to its rules.",
-    "directionality_logic": "Beneficiaries (legacy_process_enforcers) have a constrained exit, as their roles depend on the system, leading to a low but positive directionality (d). Victims (frontline_employees) are trapped, leading to a very high directionality (d≈0.95) and thus high effective extraction (χ). This structural difference in power and exit options drives the perspectival gap between seeing the system as a coordinating Rope versus an extractive Tangled Rope.",
-    "mandatrophy_analysis": "This case prevents mandatrophy by showing that a 'Piton' is not necessarily benign. While its analytical classification is based on atrophied function and high theater, its high suppression and moderate extraction can create severe negative consequences for its victims. The framework correctly identifies the analytical type as Piton while simultaneously capturing the victim's experience as a Tangled Rope. It avoids mislabeling a coercive system as merely 'inertial' by allowing both classifications to be true from their respective indices."
+    "logic_rationale": "Extractiveness (0.18): Low. The constraint persists not because an active beneficiary is extracting value, but because institutional inertia and switching costs lock the organization into maintaining dead workflows. The legacy systems owner captures some rent through continued licensing, but this is passive extraction \u2014 the owner is not actively maintaining the optimization loop, merely continuing to invoice for infrastructure that was never deactivated. Without an active beneficiary, extractiveness remains low. Suppression (0.52): Moderate. Workers and managers are constrained in their ability to modify or abandon the workflows \u2014 performance contracts reference the old metrics, system architecture embeds the procedures, risk aversion discourages change. But suppression is not total: the organization could theoretically deactivate the workflows anytime, given sufficient political will and capital. Theater ratio (0.81): High and rising. The key signature of piton decay. Workers enforce procedures whose original function (algorithmic feedback) no longer exists; managers justify them by appeal to 'system requirements' rather than organizational benefit; the organization continues to deploy resources to maintain the ghost. As time passes and awareness grows that the optimization loop is genuinely dead, the theater becomes more visible \u2014 the procedures are increasingly recognized as empty ritual. Claimed type: piton. The high theater ratio is the defining feature.",
+    "perspectival_gap": "The beneficiary (legacy systems owner) experiences the constraint as coordination (rope) \u2014 they justify continued licensing by reference to the 'optimization platform.' The workers experience it as pure degradation (snare or piton, depending on whether they see it as actively extractive or just pointless). The modernization initiative sees it as a temporary problem with a sunset (scaffold) \u2014 the old workflows will be replaced. The analytical observer risks seeing it as an inevitable law of technological drift (mountain), but the structural data reveals it as a chosen institutional arrangement (inertia + switching costs + revenue incentives). The perspectival gap reveals the constraint's true nature: not an immutable property of systems, but a contingent maintenance choice.",
+    "directionality_logic": "The directionality derivation proceeds from structural position. The operational worker is powerless/trapped \u2014 the system constrains them and they cannot exit. They have no beneficiary relationship to the constraint; they are pure victim. The legacy systems owner is institutional/arbitrage \u2014 they can walk away anytime, and the client is more constrained; they capture residual value through licensing. The modernization initiative is organized/constrained \u2014 they have agency and resources, but are constrained by switching costs and organizational politics. The analytical observer is analytical/analytical \u2014 they see the full structure and risk naturalizing it. Each perspective's directionality reflects these structural positions, producing different experienced extractiveness (chi) values even though base extractiveness (epsilon) is constant at 0.18.",
+    "mandatrophy_analysis": "PITON-SPECIFIC ANALYSIS: The atrophied optimization piton does not produce mandatrophy because it does not claim to be a coordination mechanism anymore \u2014 its beneficiary (the legacy systems owner) has dropped the coordination justification and simply continues to invoice. The organization has implicitly accepted that the workflows are overhead, not optimization. However, a hidden mandatrophy lurks in the modernization initiative's perspective: if the scaffold's sunset claim is false \u2014 if the old system will never actually be replaced \u2014 then the organization is simply maintaining an extractive snare under the false banner of 'transition.' The modernization initiative's credibility is the resolution point. If the initiative delivers its promised timeline, the piton is temporary and the scaffold classification is correct. If the initiative delays indefinitely, the constraint degrades from piton (dead ritual) to snare (active extraction via false promises of change). The theater ratio will rise further in that scenario, potentially exceeding 0.90, at which point the constraint enters the mandatrophy zone: is it a legitimate temporary structure with sunset, or has the sunset become a performance to justify indefinite extraction?"
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": [
-      "kpi_driven_management"
-    ]
-  }
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is not part of a decomposed family. It stands alone as a single structural phenomenon: the ghost of a deactivated optimization loop persisting in human workflows through institutional inertia."
+  },
+  "directionality_overrides": []
 }

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "academic_peer_review_gatekeeping",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aprg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Academic Peer Review and Journal Gatekeeping",
+    "topic_domain": "economic/social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_publishers",
+      "journal_editors"
+    ],
+    "victims": [
+      "academic_researchers",
+      "university_libraries",
+      "scientific_progress"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early-Career Researcher",
+      "comment": "PERSPECTIVE 1: EARLY-CAREER RESEARCHER (SNARE) \u2014 Trapped by publication requirements for employment, tenure, and grants. Must submit to commercial venues despite knowing funds flow away from science. Cannot exit without abandoning career prospects. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.95. Maximum extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Research University Library",
+      "comment": "PERSPECTIVE 2: RESEARCH UNIVERSITY LIBRARY (SNARE) \u2014 Faces escalating journal subscription costs (30-40% annual increases) while providing free peer review labor. Cannot abandon subscriptions without losing institutional research capacity. Constrained exit \u2014 switching to open access requires faculty adoption they cannot mandate. d\u22480.88, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Access Movement",
+      "comment": "PERSPECTIVE 3: OPEN ACCESS MOVEMENT (TANGLED ROPE) \u2014 Organized coalition (SPARC, OA advocates, funder mandates) sees genuine coordination function (peer review, curation, distribution) alongside asymmetric extraction (profit capture). Can negotiate but not fully exit. Beneficiaries: broad scientific community through accessible knowledge. Victims: commercial publisher revenue. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.35. Hybrid classification reflects both coordination and extraction in one ecosystem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Commercial Publisher",
+      "comment": "PERSPECTIVE 4: COMMERCIAL PUBLISHER (ROPE) \u2014 Experiences the system as pure coordination: managing peer review, handling manuscript logistics, curating quality through editorial gatekeeping, distributing globally. Publisher sees itself as solving a collective action problem (how to verify and distribute knowledge at scale). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary; negative extraction indicates alignment."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Peer Review Ritual",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL PEER REVIEW RITUAL (PITON) \u2014 The peer review process itself is highly theatrical: anonymous reviews rarely catch errors, most papers are accepted after minor revisions, reviewing is unpaid and unrewarded yet mandatory for career advancement. Theater_ratio=0.65 reflects that verification is performative while the ritual persists through institutional inertia. The process is maintained because alternatives (preprint/comment culture, post-publication review) haven't fully replaced it. d\u22480.05, f(d)\u2248-0.12 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a knowledge-economy perspective, peer review does provide genuine coordination (quality curation, trust certification, distribution infrastructure) but this coordination is bundled with asymmetric extraction (profit concentration, access barriers, career dependency). The system extracts researcher labor and library budgets to fund shareholder returns rather than scientific advancement. d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.70. Tangled rope confirms the base classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "peer_review_verification_efficacy",
+      "question": "How much quality verification is actually provided by anonymous peer review versus how much is theater for legitimacy?",
+      "resolution_mechanism": "Longitudinal study of retracted papers and errata: correlation between peer review feedback and ultimate validity; pre/post-publication error detection rates; comparison with post-publication commentary systems",
+      "impact": "If efficacy is high (>70%): peer review provides genuine coordination value, shifting toward rope classification. If efficacy is low (<30%): pure institutional theater, shifting toward snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of peer review verification versus performative legitimacy"
+    },
+    {
+      "id": "commercial_publisher_necessity",
+      "question": "Is the commercial publisher's infrastructure actually necessary for peer review, curation, and distribution, or could it be replaced by decentralized open-access systems?",
+      "resolution_mechanism": "Comparative analysis of arXiv/bioRxiv distributed commentary systems vs journal peer review; cost analysis of publishing infrastructure; deployment of open-access publishing platforms (eLife, PLoS models)",
+      "impact": "If necessary: publishers are genuine coordinators and extraction is justified service fee. If replaceable: extraction is pure rent-seeking without coordination function.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether commercial publishers are structurally necessary for knowledge curation"
+    },
+    {
+      "id": "researcher_exit_capacity",
+      "question": "Do researchers and institutions actually have capacity to exit the commercial publishing system, or is the trapped/constrained status enforced by career incentive structures beyond the constraint's scope?",
+      "resolution_mechanism": "Longitudinal analysis of researchers using only preprints and open-access venues; career outcome comparison; adoption rates of open-access publishing models; funding agency mandate effectiveness",
+      "impact": "If exit is possible (>50% adoption feasible): snare classification is too harsh; constraint is tangled rope or scaffold with sunset clause. If exit is structurally impossible: snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether researcher exit from commercial publishing is structurally feasible"
+    },
+    {
+      "id": "publisher_profit_sustainability",
+      "question": "Can commercial publishers sustain profit margins (currently 35-40%) given competition from open-access models and researcher-led alternatives?",
+      "resolution_mechanism": "Financial analysis of publisher revenues during adoption of open-access mandates; cost projections for transitional open-access models; elasticity of institutional subscription demand",
+      "impact": "If margins collapse: extraction is unsustainable and constraint will degrade. If margins persist: extraction mechanism is robust and snare aspects are durable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of commercial publisher profit margins under open-access competition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 1970,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1970,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 1970,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Academic peer review and journal gatekeeping represents a structural extraction mechanism where researchers and institutions collectively provide essential labor (manuscript evaluation, editorial curation, quality filtering) to for-profit publishers, who then control access to that research through subscription paywalls sold back to the same institutions at escalating markups. The system persists despite widespread recognition of its dysfunction because exit is costly: researchers cannot avoid journals without sacrificing career advancement (hiring, tenure, funding all depend on publications in 'prestigious' venues), and libraries cannot cancel subscriptions without losing institutional research capacity. The constraint exhibits tangled rope characteristics (genuine coordination function bundled with asymmetric extraction) from most perspectives, but appears as pure snare (Trapped) to early-career researchers and research libraries bearing the full cost. The theater ratio (0.65) reflects that peer review's verification function has been substantially displaced by its role as career-advancement gatekeeper and legitimacy ritual. Over the 1970-2024 interval, both extractiveness and theater have risen as journal concentration increased (mergers), subscription costs escalated, and academic labor became increasingly precarious.",
+    "key_agents": [
+      "Early-Career Researchers: Primary victims (powerless/trapped) \u2014 face publication pressure for employment and funding; cannot abandon commercial venues without career suicide",
+      "Research Universities and Libraries: Secondary victims (moderate/constrained) \u2014 absorb escalating subscription costs (30-40% annual increases); provide institutional infrastructure for peer review and editorial work",
+      "Commercial Publishers (Elsevier, Springer, Wiley, SAGE): Primary beneficiaries (institutional/arbitrage) \u2014 capture value from researcher labor; control global knowledge distribution; enjoy supernormal profit margins (35-40%)",
+      "Journal Editors: Institutional actors (institutional/constrained) \u2014 provide free labor managing peer review; maintain gatekeeping authority; vary in awareness of extraction dynamics",
+      "Open Access Movement (SPARC, funders, OA advocates): Organized challengers (organized/constrained) \u2014 recognize both coordination function and extraction; build alternative pathways (preprints, institutional repositories, open-access publishing)",
+      "Scientific Progress (Collective Good): Abstract victim (powerless/trapped) \u2014 knowledge access barriers slow innovation; inefficiencies in review process waste researcher time; premature privatization of publicly funded research"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts researcher time (peer review is unpaid but required), researcher opportunity cost (time writing for commercial venues rather than research), library budgets (journals consume 30-50% of research library spend), and public research value (taxpayer-funded research locked behind paywalls). The value is 0.58 rather than 0.75+ because some extraction is offset by genuine coordination services: journals do provide peer review, curation, and distribution. But the markup (publisher margins of 35-40% vs cost of service delivery ~20%) indicates significant rent-seeking. Suppression (0.68): High. Multiple barriers lock actors into the system: (a) Career dependency \u2014 publication records determine hiring, promotion, and funding; (b) Network effects \u2014 prestige is concentrated in commercial journals (Nature, Science, Cell hierarchy); (c) Infrastructure switching costs \u2014 institutional adoption of alternatives requires coordinated faculty behavior; (d) Information asymmetry \u2014 author-side costs are visible, publisher-side costs are opaque. Theater ratio (0.65): Moderate-high. Peer review has evolved from primarily a quality filter (1970s, theater_ratio ~0.35) to a mixed legitimacy ritual and career gatekeeper. Anonymous review rarely catches errors, but manuscript desk rejections do provide real filtering. The increasing theater reflects that the process is now maintained partly for its ceremonial role (certifying researcher status) rather than purely for verification. Open-access preprints have lower theater because commenting is public and continuous rather than anonymous and post-publication.",
+    "perspectival_gap": "The constraint exhibits a dramatic perspectival gap between early-career researchers (who experience pure snare \u2014 they cannot exit) and commercial publishers (who experience pure rope \u2014 solving a coordination problem). This gap is diagnostic of tangled rope classification: the same system that provides coordination (quality curation, trust certification, distribution) simultaneously extracts from researchers and libraries. The open access movement's perspective (tangled rope) acknowledges both functions. The piton perspective reveals that peer review's power has degraded \u2014 it was once a strong quality filter but is now mostly theater maintained by institutional inertia (careers depend on it, so researchers participate; journals depend on it, so they maintain it). The analytical observer's tangled rope classification confirms that the system is not pure coordination (publishers claim rope classification) nor pure extraction (some genuine services), but rather a hybrid where extraction is bundled with coordination in a way that advantages capital (publishers) and disadvantages labor (researchers).",
+    "directionality_logic": "Early-career researchers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Cannot exit publication system without ending career; must provide free peer review as condition of participation; must pay to access research they created. Research libraries: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.35. High extraction. Can lobby publishers or negotiate consortially, but cannot fully exit without harming institutional mission; must bear escalating costs. Open access movement: Victim (field interests) + organized + constrained \u2192 d\u22480.45, f(d)\u22480.50. Moderate extraction. Coalition has agency and can build alternatives (arXiv, institutional repositories, OA mandates), but constrained by need to maintain dual publication strategies during transition. Commercial publishers: Beneficiary + institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Publishers see themselves as solving coordination problem; have exit (ability to raise prices, consolidate, maintain margins). Analytical observer: Observes structural extraction bundled with coordination \u2192 d\u22480.65, f(d)\u22481.00. Moderate-high extraction effective because the coordination function cannot be unbundled without rebuilding infrastructure.",
+    "mandatrophy_analysis": "CRITICAL: This constraint resolves the mandatrophy between 'peer review is essential coordination' and 'journals are extraction mechanisms' by decomposing them into analytically distinct claims. The coordination claim (peer review provides genuine quality filtering and trust certification) is true but has been substantially degraded: theater_ratio(0.65) indicates verification is ~35% functional, ~65% theatrical. The extraction claim (commercial publishers capture research value and leverage career dependency) is also true: suppression (0.68) indicates strong barriers to exit, extractiveness (0.58) indicates significant rent-seeking. Tangled rope is the correct type because BOTH claims are simultaneously true. The mandatrophy resolution: Publishers cannot be fully beneficiaries (rope type) because the system DOES extract from researchers and libraries beyond the cost of coordination services. Researchers cannot be free (snare would require trapped status, which is true for early-career but not for tenured faculty or publishers). The system is hybrid: institutional actors (publishers) benefit, precarious actors (early-career researchers, libraries) bear costs, and organized challengers (OA movement) are building exit routes. The theater ratio (0.65) indicates that peer review's role in maintaining the extraction mechanism is significant \u2014 it legitimates the gatekeeping through ceremonial legitimacy rather than functional verification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_publishing_concentration",
+      "researcher_precarity",
+      "open_access_infrastructure"
+    ],
+    "dual_formulation_note": "Academic peer review and journal gatekeeping decomposes into multiple structurally distinct constraints: (1) Peer review as quality mechanism (lower \u03b5) vs peer review as career gatekeeper (higher \u03b5); (2) Commercial publishing as distribution infrastructure (rope) vs commercial publishing as extraction mechanism (snare/tangled rope). This story addresses the integrated system with \u03b5=0.58 (tangled rope). Upstream constraints (researcher_precarity, academic_publishing_concentration) establish the conditions enabling high suppression; downstream constraints (open_access_infrastructure) represent alternative coordination mechanisms competing for adoption."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

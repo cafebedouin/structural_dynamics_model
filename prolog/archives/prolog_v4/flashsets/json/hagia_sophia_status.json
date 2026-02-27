@@ -1,0 +1,165 @@
+{
+  "header": {
+    "constraint_id": "hagia_sophia_status",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.8,
+    "claimed_type": "snare",
+    "human_readable": "The enforced religious and political status of the Hagia Sophia",
+    "topic_domain": "religious/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "turkish_government",
+      "sunni_muslim_community"
+    ],
+    "victims": [
+      "orthodox_christians",
+      "secularists",
+      "historical_preservation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Orthodox Christians",
+      "comment": "Perspective 1: Orthodox Christians view the conversion of Hagia Sophia into a mosque as a loss of a significant historical and religious site, limiting their access and influence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Turkish Secularists",
+      "comment": "Perspective 2: Turkish secularists, while constrained in their ability to directly influence the decision, see the shift in status as a degradation of secular principles, with little practical alternative."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Turkish Government",
+      "comment": "Perspective 3: The Turkish government benefits politically from the conversion, reinforcing its nationalistic agenda and consolidating support among its base."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Sunni Muslim Community",
+      "comment": "Perspective 4: Sunni Muslim Community benefits in the sense of religious victory but is also constrained by the expectation to respect the site and maintain it appropriately, thus a tangled rope."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Historical Preservationists",
+      "comment": "Perspective 5: Those focused on historical preservation are greatly affected, with little to no power or option to alter the decision."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical Perspective: An analytical observer sees the overall situation as a Tangled Rope, balancing the extraction from some communities with the coordination for others, and noting an increase in theater."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extent_of_religious_freedom",
+      "question": "To what extent is religious freedom genuinely protected for all groups in Turkey?",
+      "resolution_mechanism": "Monitoring legal and social practices affecting religious minorities.",
+      "impact": "Determines whether the enforcement is coordination or pure extraction. High religious freedom implies the constraint is coordination (lower suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the breadth and depth of religious freedom in Turkey."
+    },
+    {
+      "id": "political_stability",
+      "question": "How stable is the current political regime in Turkey?",
+      "resolution_mechanism": "Observing election outcomes, policy changes, and public opinion.",
+      "impact": "Instability can lead to greater extraction/suppression and a regime that is less tolerant of dissent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measures the stability of the political environment."
+    },
+    {
+      "id": "international_relations",
+      "question": "What is the current state of Turkey's relationship with other nations, especially Greece and other EU members?",
+      "resolution_mechanism": "Analyzing diplomatic interactions and public statements.",
+      "impact": "Strained relations can lead to higher suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses Turkey's standing in global politics."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The enforced religious and political status of the Hagia Sophia is a contested issue reflecting Turkey's internal political dynamics and its relations with the broader world. Its changing roles from cathedral to mosque to museum and back to a mosque represent the shifting power dynamics and ideological orientations of the Turkish state. The constraint has a strong theatrical component as the act is used to generate support domestically and signal intentions internationally.",
+    "key_agents": [
+      "Turkish Government: Primary beneficiary (institutional/arbitrage) - Gaining political capital.",
+      "Sunni Muslim Community: Beneficiary (organized/constrained) - Gaining symbolic validation.",
+      "Orthodox Christians: Primary victim (powerless/trapped) - Losing a significant religious site.",
+      "Turkish Secularists: Victim (moderate/constrained) - Seeing secular principles eroded.",
+      "Historical Preservation: Victim (powerless/trapped) - The site's historical significance is downgraded and some artifacts covered or removed."
+    ],
+    "logic_rationale": "Extractiveness (0.65) is relatively high, as many groups are negatively impacted. Suppression (0.7) is also high, since the government has restricted alternatives. The theater ratio (0.8) is high since the government uses the status as a symbol to increase political support.",
+    "perspectival_gap": "The perspectives vary significantly based on each group's values, power, and exit options. While the Turkish government sees political benefits and consolidation of power, the Orthodox Christians see the loss of a sacred site, and secularists lament the erosion of secular principles. The analytical observer sees the overall situation as a Tangled Rope, balancing the extraction from some communities with the coordination for others.",
+    "directionality_logic": "The directionality logic is derived from the beneficiaries and victims declared above and their exit options. Those who benefit from the new status and have arbitrage options (the Turkish government) have a low d-value. Those who lose due to the decision and are trapped have a high d-value (Orthodox Christians, preservationists). Secularists, who are constrained but not entirely trapped, have a moderate d-value. The Sunni community is moderately benefitted due to religious victory."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

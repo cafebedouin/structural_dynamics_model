@@ -2,71 +2,73 @@
   "header": {
     "constraint_id": "apartheid_nuclear_program",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "RESOLVED MANDATROPHY"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "anp"
   },
   "base_properties": {
-    "extractiveness": 0.75,
-    "suppression": 0.85,
-    "theater_ratio": 0.2,
+    "extractiveness": 0.68,
+    "suppression": 0.92,
+    "theater_ratio": 0.58,
     "claimed_type": "snare",
     "human_readable": "Apartheid South Africa's Clandestine Nuclear Program",
     "topic_domain": "political/military/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "apartheid_regime_elites"
+      "apartheid_regime_leadership"
     ],
     "victims": [
-      "black_south_african_population",
-      "neighboring_frontline_states"
-    ],
-    "mandatrophy_resolved": true
+      "black_majority_population",
+      "international_community",
+      "uranium_mining_workers",
+      "future_generations"
+    ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Oppressed Majority",
-      "comment": "PERSPECTIVE 1: BLACK SOUTH AFRICAN POPULATION (SNARE) — Trapped within the apartheid system, this group bore the full cost of the program through resource diversion and the strengthening of their oppressor. The bomb was the ultimate tool to suppress their liberation. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈1.07."
+      "label": "The Black Majority Population",
+      "comment": "PERSPECTIVE 1: BLACK MAJORITY POPULATION (SNARE) \u2014 Subject to the apartheid regime's exclusive nuclear deterrent logic, which treats them as demographic liability to be managed through institutional violence. The nuclear program deepens their entrapment by raising the stakes of resistance: armed uprising now risks nuclear escalation. No exit option; bear full extraction cost."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Uranium Mining Workers",
+      "comment": "PERSPECTIVE 2: URANIUM MINING WORKERS (SNARE) \u2014 Predominantly black workers in Witwatersrand mines extract material for weapons program. Exposed to radiation hazards, unsafe conditions, minimal compensation. Constrained exit due to economic desperation and apartheid labor control. Extraction embedded in the supply chain itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Western Allied Powers (Intelligence Partners)",
+      "comment": "PERSPECTIVE 3: WESTERN ALLIED POWERS (TANGLED ROPE) \u2014 US, UK, France, Israel provide technical intelligence, enrichment technology, and diplomatic cover to South Africa's program during Cold War. Coordination function: mutual deterrence against Soviet expansion in Southern Africa. But asymmetric extraction: South Africa becomes dependent on Western support, constraining its geopolitical autonomy. Benefits from South African stability as anti-communist buffer; pays price of being complicit in apartheid escalation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Anti-Apartheid Coalition",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL ANTI-APARTHEID COALITION (SCAFFOLD) \u2014 UN sanctions, arms embargoes, nuclear non-proliferation regime, divestment campaigns create external pressure for regime collapse. Low effective extraction because the coalition has agency and sees a sunset: as the regime destabilizes, the nuclear program becomes a liability rather than an asset. The constraint dissolves when apartheid ends. Theater ratio declines as open disclosure becomes inevitable."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "The Apartheid Regime",
-      "comment": "PERSPECTIVE 2: APARTHEID REGIME (ROPE) — The program's architects saw it as a pure coordination mechanism for national defense against a perceived 'total onslaught'. They controlled its existence and could dismantle it at will. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.08. Negative extraction indicates a net subsidy."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "Neighboring Frontline States",
-      "comment": "PERSPECTIVE 3: NEIGHBORING STATES (SNARE) — As organized states, they had more agency than the internal population but were constrained by South Africa's military and economic power. They faced a direct nuclear threat designed to enforce regional hegemony. d≈0.55, f(d)≈0.75, σ=0.9 → χ≈0.51. This χ is below the snare threshold, classifying as Tangled Rope, but the high suppression (0.85) makes Snare the more accurate label for their experience of coercion."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Western Cold War Powers",
-      "comment": "PERSPECTIVE 4: WESTERN POWERS (TANGLED ROPE) — These actors saw both a coordination function (a stable anti-communist ally) and a severe extraction/risk (nuclear proliferation, moral hazard). Their relationship was a hybrid of benefit and cost, making it a Tangled Rope."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Post-Apartheid State",
-      "comment": "PERSPECTIVE 5: POST-APARTHEID STATE (PITON) — After 1994, the program's primary function (preserving apartheid) was inert. The new government inherited the legacy, infrastructure, and international posture. Its subsequent championing of non-proliferation is a form of theatrical maintenance of this legacy, turning a former Snare into a symbol of responsible statehood. The theater is in the performance of disarmament, not the original program's function."
+      "label": "Apartheid Regime Leadership",
+      "comment": "PERSPECTIVE 5: APARTHEID REGIME LEADERSHIP (ROPE) \u2014 Primary beneficiary. Nuclear weapons solve a coordination problem: how to maintain white minority rule against growing resistance without conventional military exhaustion. The program is experienced as coordination mechanism, not as extraction. Leadership has maximum exit optionality and maximum benefit. Perception: rational security necessity."
     },
     {
       "classification_type": "snare",
@@ -74,95 +76,109 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) — The program's structure was fundamentally extractive, diverting massive state resources to secure the power of a minority elite by threatening mass violence, while suppressing all alternatives. This is the definition of a Snare. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.04."
+      "label": "Analytical Observer (Nuclear Proliferation Risk)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational view of nuclear proliferation, the program represents a pure extraction from the future: it embeds nuclear weapons into a collapsing political order, creating acute proliferation risk and contamination of the nonproliferation regime. The constraint extracts from all future generations through increased nuclear instability. High suppression (state secrecy) masks the true scope until post-apartheid disclosure reveals the extraction magnitude."
     }
   ],
   "omegas": [
     {
-      "id": "deterrence_credibility",
-      "question": "Was the three-phase deterrence strategy credible, and would the regime have actually used the weapons?",
-      "resolution_mechanism": "Cannot be resolved; it is a counterfactual. Analysis of declassified strategic documents can only reveal intent, not the outcome of a contingency that never occurred.",
-      "impact": "If credible, the program was a functional (if monstrous) deterrent. If a bluff, its primary function was internal cohesion and resource capture, making it even more of a Snare.",
-      "confidence": "low",
+      "id": "regime_rationality_premise",
+      "question": "Was nuclear deterrence a rational security strategy for apartheid regime survival, or a psychological manifestation of siege mentality that actually accelerated regime collapse?",
+      "resolution_mechanism": "Counterfactual analysis: regime stability trajectories with vs without nuclear program; comparative study of other collapsing regimes that did/did not pursue nuclear options; interviews with regime leadership and defectors",
+      "impact": "If rational: snare classification shifts toward tangled_rope from regime perspective (coordination function genuine). If psychological: snare classification hardens (extraction from future through unnecessary proliferation risk).",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Credibility of the nuclear deterrent strategy"
+      "description": "Whether nuclear deterrence was rational regime survival strategy or siege mentality manifestation"
     },
     {
-      "id": "israeli_collaboration_depth",
-      "question": "What was the full extent of Israeli collaboration, particularly concerning the 1979 Vela incident?",
-      "resolution_mechanism": "Declassification of intelligence archives in both South Africa and Israel.",
-      "impact": "Deep collaboration would imply the program was less of an isolated national effort and more of a node in a network of pariah states, altering the cost and suppression calculations.",
+      "id": "western_complicity_boundary",
+      "question": "Where does Western support for apartheid nuclear program cross from passive intelligence-sharing to active conspiracy?",
+      "resolution_mechanism": "Declassified documents analysis (UK, US, France FOI releases); trace technology flow and enrichment supply chain; identify decision points where Western actors could have blocked escalation",
+      "impact": "If passive: Western powers see tangled_rope (coordination + extraction). If active conspiracy: Western powers shift to snare (knowing extraction agents). Changes charter of responsibility and cascades to international law implications.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary between passive intelligence-sharing and active conspiracy in Western support"
+    },
+    {
+      "id": "worker_knowledge_extent",
+      "question": "To what extent did uranium mining workers understand they were supplying a nuclear weapons program, and did this understanding change extraction dynamics?",
+      "resolution_mechanism": "Oral history collection from mining workers; archival records of union organizing efforts; analysis of safety discourse (whether framed as economic vs existential risk)",
+      "impact": "If workers aware: extraction was transparent (snare classification hardened for that perspective). If unaware: extraction was hidden until post-apartheid disclosure (snare classification correct but theater ratio was artificially suppressed during regime period).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Extent of Israeli collaboration on the nuclear program"
+      "description": "Extent of worker knowledge about nuclear weapons program supply chain"
     },
     {
-      "id": "dismantlement_motive",
-      "question": "Was the primary motive for dismantlement to prevent an ANC-led government from inheriting the arsenal, or was it a strategic pivot towards international reintegration?",
-      "resolution_mechanism": "Analysis of de Klerk's inner circle communications and post-facto testimony, weighed against the geopolitical timeline.",
-      "impact": "If primarily to deny the ANC, it confirms the program's function as a tool of racial power. If for reintegration, it suggests a partial shift towards a coordination logic (rejoining the international community).",
+      "id": "environmental_contamination_scope",
+      "question": "What is the full scope of radioactive contamination from the uranium enrichment and nuclear testing program, and how many communities were affected?",
+      "resolution_mechanism": "Radiological surveys of enrichment facilities and test sites; health outcome studies of exposed populations; archive searches for secret testing and dumping records",
+      "impact": "If contamination localized and small: snare classification remains. If widespread and unacknowledged: extraction extends to present-day communities (future generations victim status expands), intensifying the civilizational snare perspective.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Primary motivation for the program's dismantlement"
+      "type_class": "empirical",
+      "description": "Full scope of radioactive contamination from enrichment and testing"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.4
+      "time_point": 1974,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 9,
-      "value": 0.7
+      "time_point": 1982,
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 18,
+      "time_point": 1990,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1974,
       "value": 0.75
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.1
+      "time_point": 1982,
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
-      "time_point": 9,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 18,
-      "value": 0.2
+      "time_point": 1990,
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 1971,
-    "end": 1989
+    "start": 1974,
+    "end": 1990
   },
   "commentary": {
-    "narrative_context": "Apartheid South Africa's clandestine nuclear program was a state-level project designed to ensure the survival of the white minority regime through nuclear deterrence. Developed in secret from the 1970s, it produced six functional nuclear weapons before being dismantled on the eve of the transition to democracy in the early 1990s. The constraint is the program itself: a massive, coercive, and secret allocation of national resources that fundamentally altered the strategic landscape for all actors involved, from the oppressed majority to neighboring states and global powers.",
+    "narrative_context": "Apartheid South Africa's clandestine nuclear weapons program (1974-1990) represents a pure extraction mechanism disguised as a coordination/deterrence strategy. The regime pursued nuclear weapons to secure minority rule against a growing liberation movement and international isolation. The program extracted resources from uranium mining workers, foreclosed political autonomy for the black majority, and externalized the proliferation risk to the international system and future generations. The constraint demonstrates how a security narrative can legitimate systematic extraction, and how suppression (state secrecy) makes extraction invisible until post-apartheid disclosure. The program was terminated and weaponized devices dismantled after apartheid's collapse in 1994, but the environmental contamination and proliferation precedent persist. This constraint exhibits classical snare properties from most perspectives \u2014 suppression of knowledge was near-total during the regime period (theater ratio 0.75), extractiveness intensified as the program scaled (0.42 to 0.68 over 16 years), and victims had no exit options. The regime leadership alone experienced the constraint as a rope or coordination mechanism, perceiving it as rational national security policy. Post-apartheid analysis reveals the extraction: the program did not prevent regime collapse; it accelerated it by signaling desperation. The analytical observer's civilizational perspective reveals the deepest extraction \u2014 embedding nuclear weapons in a collapsing political order created acute proliferation risk that the international community then absorbed.",
     "key_agents": [
-      "Apartheid Regime Elites: Primary beneficiary (institutional/arbitrage) — Gained a deterrent to secure their rule.",
-      "Black South African Population: Primary victim (powerless/trapped) — Bore the opportunity cost and lived under a regime strengthened by nuclear arms.",
-      "Neighboring Frontline States: Secondary victim (organized/constrained) — Faced a direct nuclear threat from a hostile regional hegemon.",
-      "Western Cold War Powers: Ambivalent institutional actors (institutional/arbitrage) — Balanced anti-communist strategic goals with non-proliferation concerns.",
-      "Post-Apartheid State: Inheritor of the legacy (institutional/arbitrage) — Transformed the program's history into a tool for promoting disarmament."
+      "Apartheid Regime Leadership (institutional/arbitrage): Primary beneficiary \u2014 pursues nuclear deterrent as strategy for regime survival and minority rule preservation",
+      "Black Majority Population (powerless/trapped): Primary victim \u2014 subject to regime's exclusive deterrent logic; nuclear escalation raises stakes of resistance",
+      "Uranium Mining Workers (moderate/constrained): Secondary victim \u2014 extract radioactive material under hazardous conditions with minimal compensation; predominantly black labor force",
+      "Western Allied Powers (powerful/arbitrage): Complicit beneficiary \u2014 provide technical intelligence and diplomatic cover; benefit from South African anti-communist alignment; constrained by nuclear proliferation risk",
+      "International Anti-Apartheid Coalition (organized/mobile): Secondary actor \u2014 apply sanctions and non-proliferation pressure; see sunset in regime collapse",
+      "Future Generations (powerless/analytical): Civilizational victim \u2014 inherit proliferation precedent and environmental contamination"
     ],
-    "logic_rationale": "Extractiveness (ε=0.75) is extremely high, representing the diversion of vast state resources towards the security of a small ruling minority at the direct expense of the welfare of the majority population. Suppression (0.85) is also extremely high, reflecting the top-secret nature of the program, the violent suppression of internal dissent that made such a program possible, and its ultimate goal of foreclosing any alternative to apartheid rule. Theater Ratio (0.20) is low because the program was highly functional; it successfully produced a small arsenal of working nuclear devices.",
-    "perspectival_gap": "The gap is stark. The Apartheid regime viewed the program as a Rope, a rational tool for coordinating national defense. For the oppressed majority and threatened neighbors, it was an unambiguous Snare, the ultimate instrument of coercion designed to perpetuate a violent, extractive political system. This difference is not a matter of opinion but of structural position: for the beneficiary, it coordinates survival; for the victim, it enforces subjugation.",
-    "directionality_logic": "The beneficiary/victim declarations drive the perspectival classifications. The `apartheid_regime_elites` are beneficiaries with arbitrage exit, yielding a low 'd' value and a Rope classification. The `black_south_african_population` are victims with trapped exit, yielding a high 'd' value and a Snare classification. Other actors like the `neighboring_frontline_states` (victims, constrained) and `western_powers` (mixed beneficiary/victim status) fall in between, producing their respective classifications.",
-    "mandatrophy_analysis": "Mandatrophy is resolved because the program's 'coordination' function (national defense) was wholly instrumental to its primary extraction function (maintaining apartheid). The system was not coordinating for a common good; it was coordinating the security of a ruling class to enable the continued extraction of resources and rights from a subjugated majority. The high ε and suppression values are not artifacts of measurement but reflect the core structural reality of the apartheid state itself, making the Snare classification from the analytical perspective robust and correct."
+    "logic_rationale": "Extractiveness (0.68): High. The program transfers resources (uranium, enriched material, scientific talent, labor under duress) from the broader South African population to regime security apparatus. Extractiveness increases over the interval (0.42 to 0.68) as the program scales from research to weapons assembly. The extraction is not total (0.92 would require complete economic paralysis), but it is severe \u2014 the program consumes significant state resources that could have been allocated to health, education, or economic development for the majority population. Suppression (0.92): Extremely high. The program is state-secret for its entire 16-year operational period. Knowledge is restricted to regime elite and Western intelligence partners. Not even the apartheid parliament votes on the program openly. Workers are not informed they are supplying nuclear weapons. International inspections are evaded through shell companies and false declarations. The suppression is near-total and only dissolves after 1994. Theater ratio (0.58): Moderate. The program operates largely in secrecy (high theater), but internally, regime leadership experiences it as rational security policy, not as theater. Post-apartheid disclosure reveals the incoherence: the nuclear deterrent did not prevent regime collapse; it signaled desperation. The theater reflects the gap between the narrative (rational deterrence) and the outcome (regime collapse triggered in part by apartheid's isolation, to which the nuclear program contributed).",
+    "directionality_logic": "Directionality derivation is straightforward for most perspectives: beneficiaries (regime) have arbitrage exit (d \u2248 0.05, low extraction experienced), while victims (black majority, workers) have trapped/constrained exit (d \u2248 0.95, high extraction experienced). The Western allies occupy an intermediate position \u2014 they benefit from South African anti-communism (beneficiary logic) but are constrained by the proliferation risk they help create (victim logic). The analytical observer is purely analytical (d \u2248 0.72), observing the civilizational extraction without structural position. No directionality overrides are needed \u2014 the derivation chain produces accurate perspectival readings. Beneficiary status derives from explicit regime strategy documentation and resource allocation records. Victim status derives from structural position: black majority has no exit from apartheid; workers have constrained exit from employment under hazardous conditions.",
+    "perspectival_gap": "The perspectival gap between regime leadership and the black majority is maximal. The regime experiences nuclear weapons as a rational coordination mechanism solving the problem of how to maintain minority rule against resistance \u2014 a rope from their perspective. The black majority experiences the same program as pure extraction: resources diverted from their welfare, and the nuclear escalation deepens their entrapment by raising the existential stakes of resistance. Workers experience constrained snare: they are compelled to extract and process radioactive material under unsafe conditions with minimal understanding of the ultimate use. Western allies experience tangled rope: they coordinate with South Africa on Cold War anti-communism but extract a price through dependence and proliferation complicity. The anti-apartheid coalition experiences a temporary constraint with a sunset: sanctions and non-proliferation pressure that dissolve when apartheid ends. The analytical observer experiences a civilizational snare: the program embeds nuclear weapons in a collapsing political order, externalizing proliferation risk to the future. All six perspectives are structurally legitimate readings of the same base properties.",
+    "mandatrophy_analysis": "RESOLUTION THROUGH PERSPECTIVAL DECOMPOSITION: The mandatrophy question is 'Is this a rational security coordination (Rope) or a destabilizing extraction mechanism (Snare)?' The analytical answer: both are true from different observation sites. From the regime's immediate perspective, the program is experienced as rational security coordination. From the black majority's perspective, it is pure extraction. From the analytical/civilizational perspective, the program is extraction from the future \u2014 it creates proliferation risk and environmental contamination that persist after the regime collapses. The mandatrophy resolves by recognizing that the program's primary function (deterrence) and its primary effect (acceleration of regime isolation and collapse) are structurally distinct. The function is coordination (from regime perspective); the effect is extraction (from majority and civilizational perspectives). The presheaf of indexed classifications captures this: the constraint is not ambiguous, it is perspectival. Apartheid regime leadership's mistake was treating the nuclear program as rational security policy (rope) while ignoring that it functioned as extraction from the majority and as a proliferation liability to the international system (snare from those perspectives). The regime's collapse validates the snare classification: the program did not provide the security it promised because it was premised on extracting compliance from a population that had no reason to provide it."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "global_non_proliferation_regime"
-    ]
-  }
+      "nuclear_proliferation_regimes",
+      "extractive_uranium_mining",
+      "cold_war_intelligence_partnerships"
+    ],
+    "dual_formulation_note": "The apartheid nuclear program decomposes into three structurally distinct constraints: (1) nuclear_proliferation_regimes \u2014 the international coordination failure that enabled the program; (2) extractive_uranium_mining \u2014 the supply chain extraction from mining workers; (3) cold_war_intelligence_partnerships \u2014 the Western complicity structure. This story focuses on the integrated program as a snare; the decomposition captures how the constraint cascades through multiple institutional structures."
+  },
+  "directionality_overrides": []
 }

@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "norm_erosion_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "norm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Social Fabric Breach",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "norm_enforcement_institutions",
+      "defecting_subgroups"
+    ],
+    "victims": [
+      "cooperative_majority",
+      "collective_trust_capital"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Cooperative Majority",
+      "comment": "PERSPECTIVE 1: COOPERATIVE MAJORITY (SNARE) \u2014 Trapped by tipping point dynamics. Once defection rates exceed critical threshold, cooperators face escalating extraction: they must either increase enforcement costs (surveillance, punishment, institutional complexity) or accept norm collapse. No exit: cannot relocate from society, cannot opt out of norm system. Bears full cost of threshold breach without choice or compensation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Strategic Defectors",
+      "comment": "PERSPECTIVE 2: STRATEGIC DEFECTORS (ROPE) \u2014 Benefit from coordination paradox: norm system enables their defection by providing predictable target population. Experience constraint as pure coordination \u2014 the norm framework makes defection gains extractable. Arbitrage options allow selective rule-breaking in low-enforcement domains."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Norm Enforcement Institutions",
+      "comment": "PERSPECTIVE 3: NORM ENFORCEMENT INSTITUTIONS (TANGLED ROPE) \u2014 Primary beneficiary and primary enforcer. Gain institutional power and resource justification from elevated defection rates ('need more enforcement'). Simultaneously constrained by escalating cost of maintaining compliance as threshold approaches. Mixed: benefit from the problem they claim to solve; extraction disguised as coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Traditional Norm Internalization",
+      "comment": "PERSPECTIVE 4: TRADITIONAL NORM INTERNALIZATION (PITON) \u2014 The pre-threshold enforcement mechanism (family, church, community reputation) has atrophied in modern societies. Institutional inertia maintains vestigial rituals (ceremony, public shaming, formal censure) that are largely performative. Theater ratio high (0.48 baseline, rising). The mechanism persists because alternatives haven't fully replaced it, not because internalization still works. Degraded but inertial."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Community Resilience Builders",
+      "comment": "PERSPECTIVE 5: COMMUNITY RESILIENCE BUILDERS (SCAFFOLD) \u2014 Moderate agents implementing temporary interventions: mutual aid networks, local accountability systems, restorative justice. Experience the constraint as a coordination problem with a sunset clause. The intervention succeeds only if it prevents threshold breach \u2014 if successful, enforcement burden decreases and the scaffolding becomes unnecessary. Low effective extraction because the mechanism's goal is its own obsolescence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Critical Threshold View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CRITICAL THRESHOLD VIEW (MOUNTAIN) \u2014 From civilizational/universal timescale, the constraint appears as a fundamental property of cooperation dynamics: any system based on mutual restraint has a mathematical tipping point beyond which cooperation becomes unrecoverable. Presents itself as natural law. However, the structural data (active enforcement, beneficiaries, victims) contradicts mountain classification \u2014 the engine will identify this as false summit, revealing that the 'inevitable tipping point' naturalizes contingent institutional arrangements and enforcement choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "critical_defection_threshold_location",
+      "question": "What is the empirical critical defection rate (percentage of population visibly breaking primary norms) that triggers nonlinear cooperation collapse?",
+      "resolution_mechanism": "Historical analysis of regime transitions, community collapse events, and civil conflict onset; network models of norm cascade dynamics with varying parameters",
+      "impact": "If threshold < 10%: many societies are already beyond recovery point. If threshold 10-20%: near-term policy windows exist. If threshold > 30%: substantial stability margin suggests current framing exaggerates risk.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The critical defection rate triggering cooperation collapse"
+    },
+    {
+      "id": "perception_vs_reality_gap",
+      "question": "Does the actual defection rate drive threshold collapse, or does the PERCEIVED defection rate drive it? Can perception management substitute for actual norm compliance?",
+      "resolution_mechanism": "Comparison of collapse timing with actual defection rates vs media/institutional reporting; studies of communities where actual compliance high but perception low (and vice versa); experimental evidence on threshold response to visibility cues",
+      "impact": "If perception drives collapse: the constraint is substantially a coordination problem on information (Rope/Scaffold). If actual rate drives it: the constraint is pure dynamics (Mountain or Snare depending on causation). This distinction determines whether enforcement interventions should target behavior or narratives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether perception or actual defection rate drives threshold collapse"
+    },
+    {
+      "id": "heterogeneous_norm_systems",
+      "question": "Do societies with nested, heterogeneous norm systems (subgroups with different enforcement regimes) avoid the tipping point that monolithic norm systems reach?",
+      "resolution_mechanism": "Cross-cultural comparison of norm diversity vs collapse risk; case studies of polycultural societies that maintained cooperation stability across threshold-risk periods; network models of heterogeneous enforcement",
+      "impact": "If heterogeneity confers stability: the tipping point is an artifact of centralized enforcement (Snare/Tangled Rope). If heterogeneity is irrelevant: the threshold is structural to any cooperation system (Mountain or Rope with catastrophic failure mode).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether heterogeneous norm systems avoid critical threshold collapse"
+    },
+    {
+      "id": "enforcement_cost_escalation_loop",
+      "question": "Does the extractiveness of enforcement institutions systematically increase as defection rates rise, creating a feedback loop that amplifies the threshold effect?",
+      "resolution_mechanism": "Time series analysis of enforcement budgets, prison populations, surveillance capacity during periods of rising defection; mechanism analysis showing whether enforcement costs scale linearly or super-linearly; comparison of societies with different enforcement escalation rates",
+      "impact": "If enforcement creates positive feedback: the constraint is Tangled Rope (extraction disguised as coordination). If enforcement costs remain proportional to defection: the constraint is pure dynamics (Mountain). This determines whether reducing enforcement institutions can stabilize cooperation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether enforcement cost escalation creates a positive feedback loop"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The social fabric breach models the non-linear breakdown of cooperation when perceived or actual norm defection crosses a critical threshold. Below the threshold, cooperative systems maintain themselves through a combination of internalized norms (low theater), distributed enforcement (family, community reputation), and selective punishment of outliers. At or beyond the threshold, cooperation becomes fragile: enforcement institutions must escalate dramatically to maintain compliance, or cooperation collapses entirely. The constraint exhibits six distinct classifications from different structural positions: the cooperative majority experiences it as a snare (trapped, no exit); strategic defectors experience it as pure coordination (norm system enables their gains); enforcement institutions experience it as tangled rope (benefit from the enforcement burden while claiming to solve it); traditional norm internalization appears as a degraded piton (performative rituals maintained by inertia); community resilience builders see it as temporary scaffolding with a sunset clause; and the civilizational analytical view risks naturalizing it as an immutable threshold (mountain). The theater ratio reflects the increasing performative content of enforcement as actual compliance mechanisms (internalization, community pressure) atrophy.",
+    "key_agents": [
+      "Cooperative Majority: Primary victim (powerless/trapped) \u2014 must accept escalating enforcement costs or face norm system collapse",
+      "Strategic Defectors: Primary beneficiary (powerful/arbitrage) \u2014 benefit from exploiting norm system; selective rule-breaking in low-enforcement domains",
+      "Norm Enforcement Institutions: Institutional beneficiary (organized/constrained) \u2014 gain power and budget justification from elevated defection; extract through enforcement escalation",
+      "Traditional Norm Internalization: Institutional actor (institutional/constrained) \u2014 degraded mechanism maintained by inertia; performative rituals with low actual function",
+      "Community Resilience Builders: Moderate organized agents (moderate/mobile) \u2014 implement temporary interventions with sunset logic; succeed only if they prevent threshold breach",
+      "Collective Trust Capital: Abstract victim (powerless/trapped) \u2014 the epistemic commons bearing cost of norm erosion; cannot organize or exit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint shows significant extraction dynamics as enforcement institutions scale up, and strategic defectors capture gains from norm-system exploitation. However, at t=0 (below-threshold state), extractiveness is lower (0.28) because traditional internalization does most of the work with minimal institutional overhead. As the threshold approaches, extractiveness rises (0.42 at t=5, 0.58 at t=10) because enforcement costs escalate and the system transitions from self-maintaining (low theater, internalized norms) to administratively intensive (high theater, institutional policing). Suppression (0.65): Moderate-high. Significant barriers exist to exiting or opting out of norm systems (cannot relocate from society), and defection risk is both socially and institutionally punished. But suppression is not total \u2014 some subgroups maintain parallel norm systems, and defection rates suggest non-zero exit/adaptation capacity. Theater ratio (0.48 \u2192 rising): Moderate baseline increasing. Traditional enforcement (family shame, community reputation) is nearly zero-theater \u2014 internalization is genuine functional compliance. Modern enforcement (courts, police, surveillance) is substantially performative \u2014 expensive administrative rituals whose actual compliance effect is contested. The theater ratio rising reflects the substitution of performative institutional enforcement for genuine internalization.",
+    "perspectival_gap": "The constraint demonstrates how the same structural phenomenon (norm defection rate crossing a critical threshold) produces opposite classifications and opposite experienced extractiveness across agent positions. The cooperative majority sees a snare: escalating extraction with no exit. Enforcement institutions see rope or tangled rope: coordination benefit plus enforcement power. Strategic defectors see pure coordination: the system enables their gains. The analytical observer risks seeing inevitability (mountain) when the structural data shows contingency (tangled rope at best, snare for victims). The perspectival gap is maximal here because the constraint involves a tipping point: below threshold, many agents experience it as rope (pure coordination, fair exchange); above threshold, the same agents experience it as snare (extraction without exit). The classification changes discontinuously with the observer's threshold position.",
+    "directionality_logic": "Norm enforcement institutions occupy the paradoxical position of primary beneficiary AND primary enforcer. Their directionality (d) is high because they are institutional beneficiaries of the enforcement burden (arbitrage exit options, power accumulation). But they are simultaneously constrained by the escalating costs of maintaining compliance as defection rates rise. The derived d reflects this: beneficiaries with arbitrage options normally get low/negative f(d), but the tangled rope gate requires BOTH beneficiary status AND active enforcement AND victims, which produces the hybrid classification. The cooperative majority gets high d (high f(d) \u2192 high \u03c7) because they are trapped with no exit and victims of the enforcement escalation. Strategic defectors get low d despite being beneficiaries because their arbitrage exit options (selective rule-breaking in low-enforcement domains) reduce their experienced extraction. Community resilience builders get moderate d because they have mobile exit options and are not primarily victims \u2014 they are third-party interveners.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by showing that the 'inevitable threshold' framing (mountain) naturalizes what are actually institutional choices about enforcement intensity, visibility of defection, and scope of norm systems. The constraint is NOT a fundamental law of cooperation dynamics \u2014 it is a contingent feature of specific enforcement architectures. Societies with heterogeneous norm systems, low-visibility defection rates, or decentralized enforcement may avoid sharp thresholds entirely. The analytical observer's mountain is a false summit produced by aggregating heterogeneous systems into a single abstract model. The structure revealed is tangled rope (enforcement institutions benefit from the burden while claiming to solve it) overlaid on snare (cooperative majority trapped by escalation dynamics). The scaffold perspective (community resilience) is the only pathway that actually resolves the constraint rather than managing it \u2014 by preventing threshold breach through distributed enforcement and early intervention, scaffolding makes itself unnecessary. This is the hallmark of legitimate coordination: the solution succeeds when it solves the problem, not when it perpetuates it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "trust_capital_depletion",
+      "institutional_legitimacy_crisis",
+      "collective_action_capacity_collapse"
+    ],
+    "dual_formulation_note": "The norm erosion threshold is downstream of individual defection decisions but represents a distinct structural constraint on collective cooperation. Upstream constraints model micro-level incentives to defect; this constraint models macro-level threshold dynamics of norm system collapse. The network links show causal dependencies: norm erosion accelerates trust depletion, which accelerates institutional legitimacy loss, which accelerates collective action failure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

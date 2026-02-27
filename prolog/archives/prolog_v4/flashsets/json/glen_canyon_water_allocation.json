@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "glen_canyon_water_allocation",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Colorado River Water Allocation under the Colorado River Compact",
+    "topic_domain": "political, economic, environmental",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "upper_basin_states_agriculture",
+      "lower_basin_states_urban"
+    ],
+    "victims": [
+      "downstream_ecosystems",
+      "native_american_tribes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Downstream Ecosystems",
+      "comment": "Downstream ecosystems are trapped and bear the full ecological cost of reduced flows. They cannot exit the system and have no power to change the allocation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Native American Tribes",
+      "comment": "Native American tribes are constrained by legal limitations but have some agency through negotiation and litigation, gaining some benefits and suffering losses."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Upper Basin States Agriculture",
+      "comment": "Upper basin states benefit from reliable water allocation for agriculture, but are constrained by compact terms. Coordination role is emphasized."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Lower Basin States Urban",
+      "comment": "Lower basin states benefit from reliable water allocation for urban use, but are constrained by compact terms. Coordination role is emphasized."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the compact as a tangled rope due to the mixed coordination and extraction dynamics. The long-term sustainability and ecological impacts reveal the extraction aspect."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "climate_change_impact",
+      "question": "How will climate change affect the Colorado River's water supply and the enforceability of the compact?",
+      "resolution_mechanism": "Climate modeling and hydrological studies",
+      "impact": "Reduced water availability may force renegotiation of the compact or lead to increased conflict among states.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The impact of climate change on water supply"
+    },
+    {
+      "id": "tribal_water_rights",
+      "question": "How will the full recognition and implementation of tribal water rights impact water allocation under the compact?",
+      "resolution_mechanism": "Legal rulings and negotiated settlements",
+      "impact": "Increased tribal water rights may reduce the amount of water available for other users.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The impact of tribal water rights"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Colorado River Compact, along with subsequent agreements and legal precedents, defines the allocation of water resources from the Colorado River among the Upper and Lower Basin states. This allocation system creates a complex interplay of coordination and extraction, where states benefit from reliable water access but also face constraints due to the compact's terms. Downstream ecosystems and Native American tribes bear a disproportionate burden due to reduced water flows and historical inequities.",
+    "key_agents": [
+      "Upper Basin States Agriculture: Benefits from reliable water allocation for agriculture (institutional/constrained)",
+      "Lower Basin States Urban: Benefits from reliable water allocation for urban use (institutional/constrained)",
+      "Downstream Ecosystems: Bear the ecological cost of reduced flows (powerless/trapped)",
+      "Native American Tribes: Constrained by legal limitations but have some agency through negotiation (moderate/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.6): The compact extracts value from downstream ecosystems and Native American tribes by prioritizing water allocation to upper and lower basin states. Suppression (0.7): The legal framework of the compact and subsequent agreements suppresses alternative allocation schemes that might prioritize ecosystem health or tribal water rights. Theater Ratio (0.4): The theater ratio is moderate, as there is some genuine function in coordinating water allocation, but also performative aspects related to political negotiations and legal maneuvering.",
+    "perspectival_gap": "The perspectival gap arises from the different positions within the water allocation system. The upper and lower basin states perceive the compact as a coordination mechanism that ensures water availability. However, downstream ecosystems and Native American tribes experience the compact as a constraint that deprives them of essential resources.",
+    "directionality_logic": "The directionality logic follows the flow of benefits and costs within the system. The upper and lower basin states are beneficiaries, experiencing the compact as a positive force. Downstream ecosystems and Native American tribes are victims, bearing the negative consequences of reduced water flows.",
+    "mandatrophy_analysis": "The constraint is classified as a tangled rope because it blends coordination and extraction. The allocation system provides a framework for managing water resources among states, but it also leads to ecological damage and historical inequities. Mislabeling it as pure coordination would ignore the negative impacts on downstream ecosystems and tribal communities. Mislabeling as pure extraction would ignore coordination among upper and lower basin states."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "colorado_river_endangered_species",
+      "colorado_river_delta_restoration"
+    ]
+  },
+  "directionality_overrides": []
+}

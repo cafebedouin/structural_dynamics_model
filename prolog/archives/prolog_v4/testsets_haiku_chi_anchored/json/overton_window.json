@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "overton_window",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ow"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Overton Window of Political Discourse",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_political_actors",
+      "media_gatekeepers",
+      "status_quo_coalitions"
+    ],
+    "victims": [
+      "marginalized_policy_proposers",
+      "structural_discourse_innovation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Radical Policy Proposer",
+      "comment": "PERSPECTIVE 1: RADICAL POLICY PROPOSER (SNARE) \u2014 Proposals deemed outside the window face systematic dismissal, ridicule, and career consequences. No legitimate pathway to main-stage discourse. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80. Pure extraction: forced silence or social cost for speech."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Grass-Roots Movement",
+      "comment": "PERSPECTIVE 2: GRASS-ROOTS MOVEMENT (TANGLED ROPE) \u2014 Organized constituencies benefit from the window's stability (predictability aids coalition-building) but are constrained by what can be publicly advocated. d\u22480.70, f(d)\u22481.08, \u03c3=0.9 \u2192 \u03c7\u22480.57. Mixed: coordination through shared discourse norms, but extraction via suppression of their central claims."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Mainstream Political Party",
+      "comment": "PERSPECTIVE 3: MAINSTREAM POLITICAL PARTY (ROPE) \u2014 Benefits from the window's existence through predictable electoral strategy and coalition stability. The window is a coordination mechanism that enables party strategy without explicit coercion. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; sees the window as natural coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Media Institution",
+      "comment": "PERSPECTIVE 4: MEDIA INSTITUTION (TANGLED ROPE) \u2014 Media outlets coordinate around the window (reduces controversy, maintains advertising relationships) but also enforce it through gatekeeping. Faces organizational constraints from ownership, advertiser pressure, and audience polarization. d\u22480.35, f(d)\u22480.38, \u03c3=1.0 \u2192 \u03c7\u22480.22. Low-moderate extraction because media has agency in choosing which ideas to amplify."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Digital Native Communities",
+      "comment": "PERSPECTIVE 5: DIGITAL NATIVE COMMUNITIES (SCAFFOLD) \u2014 Social media, decentralized forums, and digital networks create parallel discourse spaces with different windows. These communities experience the traditional window as a temporary constraint with a sunset: as digital natives mature, direct-to-audience communication bypasses traditional gatekeeping. d\u22480.45, f(d)\u22480.45, \u03c3=1.2 \u2192 \u03c7\u22480.25. Moderate suppression (platform moderation, shadowbanning) but mobile exit (alternative platforms) makes it temporary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Discourse Establishment",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL DISCOURSE ESTABLISHMENT (PITON) \u2014 Universities, think tanks, and academic publishing maintain the window through citation networks, hiring decisions, and 'respectability' gatekeeping. The process is largely performative: they claim to be apolitical arbiters of what is 'scholarly' or 'rigorous,' but the categories reproduce the window. theater_ratio=0.68 indicates substantial performative content \u2014 the ritual of peer review and scholarly decorum maintains the window more than evidence-based evaluation. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW (MOUNTAIN CLAIM) \u2014 From a civilizational perspective, one might argue that discourse boundaries are inherent to human cognition and social coordination \u2014 some ideas will always seem radical because society has limited attention bandwidth and cultural assimilation capacity. \u03b5=0.58 and suppression=0.65 violate mountain thresholds. This perspective is a false summit: the structural data shows the window is contingent (varies by time, geography, institutional context), not inherent to human nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "window_organic_vs_manufactured",
+      "question": "Is the Overton Window an organic emergent property of human discourse limitations or a manufactured constraint imposed by institutional actors?",
+      "resolution_mechanism": "Historical comparison of discourse windows across decentralized vs centralized information environments; analysis of pre-mass-media discourse boundaries vs post-digital shift; examination of which proposals move the window and why",
+      "impact": "If organic: constraint is closer to Mountain (natural law of social cognition). If manufactured: constraint is Snare or Tangled Rope with different beneficiary structure (institutional gatekeepers vs distributed elites).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the window is emergent or institutionally manufactured"
+    },
+    {
+      "id": "digital_shift_permanence",
+      "question": "Will digital platforms and decentralized communication permanently fracture the unified Overton Window or create multiple windows that eventually coalesce back into a single mainstream?",
+      "resolution_mechanism": "Long-term trajectory of discourse polarization; comparative analysis of idea diffusion in fragmented vs unified media environments; observation of whether marginalized ideas gain mainstream traction faster or slower post-social-media",
+      "impact": "If fragmentation persists: window constraint weakens to Scaffold type with permanent sunset. If coalesces: new window emerges but with different institutional structure. If multiple stable windows: we need separate stories for each window with different \u03b5 values.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether digital fragmentation is permanent or temporary"
+    },
+    {
+      "id": "suppression_mechanism_visibility",
+      "question": "How much of the window's suppression is explicit gatekeeping vs implicit self-censorship driven by fear of social/career consequences?",
+      "resolution_mechanism": "Survey data on actual suppression (rejection, firing, deplatforming) vs perceived suppression (agents avoiding speech due to fear); analysis of cases where individuals violated window and actual vs imagined consequences",
+      "impact": "If mostly implicit: suppression metric should be lower (0.45-0.55 range), classification shifts toward Rope. If mostly explicit: suppression confirmed at 0.65+, confirms Tangled Rope/Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ratio of explicit gatekeeping to implicit self-censorship"
+    },
+    {
+      "id": "extractive_beneficiary_identification",
+      "question": "Who actually benefits from the window's stability? Is it institutional political parties, media corporations, status quo economic interests, or a coalition of all three with different temporal horizons?",
+      "resolution_mechanism": "Analysis of which actors move the window and in which directions; historical tracking of window shifts correlated with electoral outcomes, media ownership changes, economic policy shifts; comparison of which proposals gain support after institutional backing",
+      "impact": "If primarily electoral benefit: window serves coordination function (Rope). If primarily economic extraction: window serves wealth concentration (Snare). If mixed: confirms Tangled Rope analysis with composite beneficiary structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity and motivation of primary beneficiaries"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Overton Window defines the set of policies and ideas considered acceptable to the mainstream population at a given time. This constraint operates at the intersection of discourse norms, institutional power, and information architecture. It functions simultaneously as a coordination mechanism (parties, media, and audiences benefit from shared discourse boundaries), an extraction mechanism (those deemed 'outside' the window face dismissal and career consequences), and an increasingly contested temporal phenomenon (digital platforms are fragmenting unified windows into multiple competing spaces). The constraint exhibits substantial theater_ratio (0.68) because much of the enforcement happens through performative legitimacy-signaling (academic rigor standards, journalistic balance, political 'seriousness') rather than explicit censorship. However, explicit suppression is real: marginalized policy proposers face concrete barriers (media exclusion, employment risk, social sanction). The window has shifted measurably over the 20-year interval (extractiveness rose from 0.45 to 0.58, theater from 0.52 to 0.68), indicating that the institutional enforcement has both intensified and become more performative, possibly in response to digital disruption.",
+    "key_agents": [
+      "Institutional Political Actors: Primary beneficiary (institutional/arbitrage) \u2014 political parties use the window to structure electoral competition within predictable bounds",
+      "Media Gatekeepers: Secondary beneficiary (organized/constrained) \u2014 news organizations coordinate around the window; face pressure from ownership, advertisers, and platform algorithms that pull toward polarization",
+      "Status Quo Coalitions: Tertiary beneficiary (institutional/arbitrage) \u2014 incumbent economic, military, and social interests benefit from window stability that marginalizes transformative proposals",
+      "Marginalized Policy Proposers: Primary victim (powerless/trapped) \u2014 excluded from mainstream discourse by window boundaries; face career and social consequences for violation",
+      "Grass-Roots Movements: Secondary victim (moderate/constrained) \u2014 organized constituencies constrained by what can be publicly advocated without becoming unelectable or socially isolated",
+      "Digital Native Communities: Organized disruptors (organized/mobile) \u2014 social media, forums, and decentralized networks create alternative discourse spaces; represent the scaffold perspective with a sunset",
+      "Academic/Think Tank Establishment: Piton actor (institutional/arbitrage) \u2014 maintains legitimacy gatekeeping through performative rigor standards that reproduce the window"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The window creates asymmetric gains for those within it (elevated platform access, coalition credibility) and real costs for those outside (exclusion, ridicule, employment risk). However, the extraction is not as extreme as pure rent-seeking (0.75+) because the window does perform a genuine coordination function \u2014 political parties legitimately benefit from being able to credibly commit to 'moderate' positions. The rise from 0.45 to 0.58 over the interval reflects intensification of institutional enforcement, probably in response to digital disruption. Suppression (0.65): High. Multiple suppression mechanisms: media gatekeeping (exclusion from platforms), career consequences (academic/media employment barriers), social sanction (mockery, deplatforming), and algorithmic amplification that favors ideas already within the window. However, suppression is not total (0.95) because individuals can and do violate the window through blogs, podcasts, underground media, and digital organizing. Theater ratio (0.68): High and rising. The window is increasingly maintained through performance of legitimacy rather than explicit force. Gatekeepers claim to apply 'objectivity,' 'rigor,' 'balance,' or 'seriousness' standards that happen to reproduce the window \u2014 the standards feel neutral but are window-reinforcing. Academic peer review, journalistic editorial decisions, and policy expert gatekeeping all operate through performative legitimacy signals. The rise from 0.52 to 0.68 suggests that as explicit suppression becomes less viable (digital platforms erode monopoly control), institutional actors rely more on performative legitimacy.",
+    "perspectival_gap": "The Overton Window demonstrates the full perspectival gap between institutional beneficiaries and marginalized victims. The mainstream political party sees the window as natural coordination (Rope) \u2014 a legitimate framework for electoral strategy. The media institution sees it as mixed (Tangled Rope) \u2014 it enables coordination but also constrains editorial choices when institutional pressures conflict with truth-seeking. The grass-roots movement sees significant extraction (Tangled Rope) \u2014 they benefit from coordination norms but are constrained by what their constituents can advocate. The radical proposer sees pure extraction (Snare) \u2014 exclusion from discourse with no pathway inward. The digital native communities see a temporary problem (Scaffold) \u2014 social media and decentralized platforms bypass the window, and this creates a sunset where traditional gatekeeping loses power. The institutional establishment sees its own process as inevitable and apolitical (Piton) \u2014 peer review and editorial standards feel neutral, but their performative content has risen as explicit enforcement becomes less viable. The civilizational observer risks seeing the window as a natural law of human cognition (false Mountain) \u2014 but the structural data shows it is a contingent institutional arrangement that varies dramatically across time, geography, and information architecture.",
+    "directionality_logic": "Institutional political actors: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiaries with low extraction experience. Marginalized proposers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum directionality \u2014 no exit option. Grass-roots movements: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.08. Significant extraction but with some organizational capacity. Media institutions: Beneficiary + constrained (not arbitrage, because ownership and advertiser pressure create real constraints) \u2192 d\u22480.35, f(d)\u22480.38. Low-moderate extraction; media has less pure arbitrage power than traditional political parties. Digital natives: Organized + mobile \u2192 d\u22480.45, f(d)\u22480.45. Mobile exit (alternative platforms) keeps effective extraction moderate despite platform moderation. Academic establishment: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary; rigor standards maintain the window while feeling apolitical.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The Overton Window constraint resolves the mandatrophy by explicitly identifying beneficiaries (institutional political actors, media, status quo coalitions) and victims (marginalized proposers, grass-roots movements). The constraint is Tangled Rope because it exhibits BOTH a genuine coordination function (parties benefit from predictable electoral boundaries; audiences benefit from stable meaning-making frameworks) AND asymmetric extraction (those outside the window bear disproportionate costs). The extraction is not pure rent-seeking because the coordination benefit is real \u2014 the window does reduce transaction costs for political communication. However, the window also serves to exclude transformative alternatives and protect incumbent interests, confirming the asymmetric extraction component. The theater metric (0.68, rising) confirms that much of the enforcement is performative rather than explicit coercion, which is characteristic of Tangled Rope when institutional power is high and explicit suppression is constrained. The scaffold perspective (digital natives) indicates that the constraint's extractive function may be time-limited, which is consistent with the observation that the window weakens in information environments where gatekeeping is technically infeasible. The false summit perspective (natural law claim) is exposed as such because the window's \u03b5 and suppression values vary dramatically across contexts \u2014 the constraint is institutional, not inherent."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "discourse_polarization",
+      "institutional_legitimacy_gatekeeping",
+      "policy_innovation_suppression"
+    ],
+    "dual_formulation_note": "The Overton Window is upstream of multiple institutional constraints (polarization, legitimacy gatekeeping, policy innovation suppression). Each affected constraint has its own \u03b5 value reflecting whether it is predominantly extractive or coordinative. The window itself at \u03b5=0.58 (Tangled Rope) coordinates mainstream discourse but extracts costs from innovators and marginalized movements."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "halting_problem_undecidability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "halt"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The Undecidability of the Halting Problem",
+    "topic_domain": "mathematical/theoretical_computer_science",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Logician",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL LOGICIAN (MOUNTAIN) \u2014 The undecidability of the halting problem is a theorem proven via diagonalization. It is not contingent on implementation, hardware, or social arrangement. No computational framework can escape this constraint. The proof is constructive: assume a halt-decider exists, then construct a program that exploits it to contradict itself. This is an irreducible logical limit. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Systems Engineer",
+      "comment": "PERSPECTIVE 2: SYSTEMS ENGINEER (MOUNTAIN) \u2014 Despite possessing significant power and resources, the systems engineer cannot build a halt-decider for the general case. They can build halt-detectors for specific program classes (tail-call optimization, simple loops), but these always have exceptions. The undecidability is not a social limit or a resource constraint\u2014it is a structural property of computation itself. More computational power does not help; faster hardware does not help; better algorithms do not help for the general case."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Corporate AI Research Team",
+      "comment": "PERSPECTIVE 3: CORPORATE AI RESEARCH (MOUNTAIN) \u2014 Institutional resources, coordination, and organizational power cannot overcome the undecidability theorem. The team can build approximations, heuristics, and domain-specific halt detectors. But the mathematical claim stands: there is no algorithm that decides halting for all inputs. The constraint persists regardless of market incentives, R&D funding, or institutional authority. This is why program verification remains computationally hard\u2014not because we haven't tried hard enough, but because the problem is undecidable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Logical Necessity)",
+      "comment": "PERSPECTIVE 4: LOGICAL NECESSITY (MOUNTAIN) \u2014 From the perspective of logical and mathematical necessity, the halting problem is undecidable. This is not a discovery about the world\u2014it is a logical truth about the formal structure of computation itself. Turing's proof shows that IF a general halt-decider existed, it would create a logical contradiction. Therefore, no such decider can exist. The constraint is universally invariant across all possible computational substrates, all future technologies, and all organizational forms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "halting_oracle_physical_feasibility",
+      "question": "Could a hypercomputational oracle (non-Turing-complete physical device) theoretically decide halting by breaking the Church-Turing thesis?",
+      "resolution_mechanism": "Experimental discovery of a physical system that computes non-Turing-computable functions; falsification of Church-Turing thesis through physical demonstration",
+      "impact": "If yes: the undecidability constraint applies only to Turing machines, not to all possible physical computers. Halting becomes decidable by oracle. If no: undecidability is fundamental to all computation, not just digital.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether hypercomputation could break Church-Turing thesis"
+    },
+    {
+      "id": "quantum_computation_halting_decidability",
+      "question": "Does quantum computation (superposition, entanglement, measurement) change the decidability status of halting relative to the Turing model?",
+      "resolution_mechanism": "Formal proof of quantum halt-decider or proof that quantum computation is Turing-equivalent for undecidability purposes; empirical quantum computing experiments with halt-critical problems",
+      "impact": "If quantum breaks equivalence: quantum computers might solve halting-like problems. If quantum is Turing-equivalent: undecidability persists in quantum regime.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Halting decidability status under quantum computation"
+    },
+    {
+      "id": "semantic_undecidability_vs_syntactic",
+      "question": "Is the undecidability of halting a property of syntactic computation or of semantic program behavior? Do they coincide?",
+      "resolution_mechanism": "Formal analysis of semantic vs syntactic definitions; proof that semantic halting is or is not decidable independent of syntax; exploration of program-meaning representations",
+      "impact": "If they differ: halting might be decidable under alternative semantic frameworks. If they coincide: undecidability is invariant across all representations.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Semantic vs syntactic undecidability equivalence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The undecidability of the halting problem is a mathematical proof established by Alan Turing in 1936. It demonstrates that no general algorithm can exist that decides, for all possible program-input pairs, whether the program will terminate or run forever. The proof uses a diagonalization argument: assume a halting decider H exists, then construct a program Q that takes itself as input and calls H on itself. If H says Q halts, Q runs forever; if H says Q runs forever, Q halts. This contradiction shows that H cannot exist for the general case. The constraint is mathematically invariant\u2014it applies universally to all Turing-complete computational systems, all implementable algorithms, and all possible physical substrates. It is not a limit on current technology or current knowledge; it is a logical necessity. The theater ratio remains low because there is no performative layer\u2014the constraint is purely functional mathematics with no institutional or social mediation.",
+    "key_agents": [
+      "Mathematical logicians: Understanders (analytical/analytical) \u2014 comprehend the proof's logical necessity",
+      "Systems engineers and programmers: Would-be solvers (powerful/mobile) \u2014 encounter the constraint as a barrier to complete program verification",
+      "Corporate AI research teams: Resource aggregators (organized/constrained) \u2014 cannot overcome the limit despite institutional power",
+      "Computational theorists: Analytical framework maintainers (analytical/analytical) \u2014 sustain formal understanding of the undecidability result",
+      "The undecidable property itself: The constraint (non-agent) \u2014 exists as a logical truth independent of any observer"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The halting problem does not extract value from any agent. It is a pure logical constraint that all computational agents encounter equally. No one is privileged by the undecidability; no one benefits from it. Suppression (0.02): Minimal. The constraint does not suppress alternatives or create artificial scarcity. It establishes a fundamental limit, not a coercive mechanism. Theater ratio (0.15): Very low. The constraint requires minimal performative maintenance. The proof is stated once, formally verified, and applies universally. There is no ongoing ritual, no institutional ceremony, no social reinforcement needed. The theater arises only from pedagogy\u2014teaching the proof to new generations of computer scientists\u2014but this is epistemic communication, not performative theater.",
+    "perspectival_gap": "ZERO perspectival gap. All perspectives yield the same classification: Mountain. This is the defining signature of a true logical constraint. No agent's position, power, or temporal horizon changes the undecidability result.",
+    "directionality_logic": "The halting problem has no beneficiaries and no victims. It does not extract from anyone; it does not benefit anyone. The constraint operates at the level of logical necessity, not at the level of institutional power distribution. The derived d value for all agents should be 0.5 (symmetric)\u2014actually lower, since there is no extraction at all. The sigmoid f(d) applied to d \u2248 0.5 yields a moderate value, but this is not meaningful for a mountain constraint because the foundation is mathematical undecidability, not a distribution of power or costs.",
+    "mandatrophy_analysis": "NO MANDATROPHY RISK. The halting problem cannot be misclassified as pure extraction (Snare) or coordination (Rope). The extractiveness is zero; there is no asymmetry in costs or benefits. The constraint is immune to mandatrophy because it operates purely at the level of logical necessity, not at the level of institutional design. The proof is universally invariant\u2014it applies to all Turing-complete systems, all agents, and all observational contexts. Therefore, no perspective can mistake the constraint's type. The mountain classification is certain."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "rice_theorem_undecidability",
+      "program_verification_hardness"
+    ],
+    "dual_formulation_note": "The halting problem is the foundational undecidability result in theoretical computer science. Rice's theorem (undecidability of non-trivial semantic properties of programs) is a direct consequence. Program verification hardness is downstream\u2014the practical obstacle to building secure systems stems from the theoretical undecidability of halting."
+  },
+  "directionality_overrides": []
+}

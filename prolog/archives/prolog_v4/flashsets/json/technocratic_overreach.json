@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "technocratic_overreach",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Technocratic Overreach",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "technical_elite",
+      "governing_body"
+    ],
+    "victims": [
+      "impacted_community",
+      "eroded_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Impacted Citizen",
+      "comment": "The individual citizen experiences the rule of the expert as a snare. They are often trapped, with limited ability to exit the system or challenge the expert's decisions. The expert knowledge is used to suppress dissenting opinions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Governing Body",
+      "comment": "The governing body (e.g., elected officials) may experience this as a tangled rope. While they benefit from the expertise in making policy decisions, they are also constrained by the experts' recommendations and the potential for public backlash if they deviate."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Technical Elite",
+      "comment": "The technical experts experience this as a rope. They benefit from increased power and influence, and face less scrutiny on their decisions. They might have arbitrage options by moving to different positions with similar power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Advocacy Groups",
+      "comment": "Advocacy groups may be constrained, but not trapped. They benefit from the focus the issue brings to their cause, and are able to mobilize people for political action, but are forced to dedicate time, effort and other resources to the issue."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a long-term, global perspective, this can be seen as a tangled rope, where expertise is useful but may lead to unintended consequences and erosion of democratic processes."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scope_of_expertise",
+      "question": "Is the expertise truly relevant to the decision being made, or is it being used as a smokescreen?",
+      "resolution_mechanism": "Independent review of the expert's qualifications and the evidence they are presenting.",
+      "impact": "If the expertise is relevant, the situation may be a legitimate coordination problem. If not, it is a pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relevance of expertise"
+    },
+    {
+      "id": "transparency_of_process",
+      "question": "Is the decision-making process transparent and open to public input?",
+      "resolution_mechanism": "Review of public records and interviews with stakeholders.",
+      "impact": "If the process is transparent, there is a greater chance of accountability and less potential for overreach. If not, it is more likely a snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Transparency of decision-making"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The rule of the expert is a scenario where administrative or technical experts impose restrictive constraints under the guise of 'optimization' or 'safety,' effectively removing the subject's ability to participate in decision-making. This can lead to a situation where the experts' preferences are prioritized over the needs and desires of the general public.",
+    "key_agents": [
+      "Eroded Autonomy: Primary target (powerless/trapped) - bears the cost of restricted choices and lack of participation.",
+      "Technical Elite: Primary beneficiary (institutional/arbitrage) - benefits from increased power and influence.",
+      "Governing Body: Secondary beneficiary (institutional/constrained) - benefits from expertise in making decisions, but constrained by expert's recommendations.",
+      "Impacted Community: Targeted Subgroup (powerless/trapped) - A subgroup of the general public, particularly affected by the experts' decisions.",
+      "Advocacy Groups: Organized Actor (organized/mobile) - Attempts to represent impacted community, but constrained by unequal access to power/influence."
+    ],
+    "logic_rationale": "Extractiveness (0.6): The experts extract decision-making power from the general public, leading to a situation where their preferences are prioritized. Suppression (0.7): The experts suppress dissenting opinions by framing them as 'unscientific' or 'irrational.' Theater ratio (0.3): The experts may engage in performative actions to create a sense of legitimacy, but the actual impact of their decisions is often minimal.",
+    "perspectival_gap": "The impacted citizens experience this as a snare, as they are trapped and their choices are restricted. The experts, on the other hand, experience this as a rope, as they benefit from increased power and influence. The governing body experiences this as a tangled rope, as they are both constrained and benefited by the experts' recommendations.",
+    "directionality_logic": "The directionality values are determined by the structural position of each agent. The impacted citizens are powerless and trapped, so their directionality is high. The experts are institutional and have arbitrage options, so their directionality is low. The governing body is institutional but constrained, so their directionality is somewhere in the middle.",
+    "mandatrophy_analysis": "The classification prevents mislabeling coordination as pure extraction by considering the intent and impact of the experts' decisions. If the experts are genuinely trying to optimize for the benefit of the general public, then the situation may be a legitimate coordination problem. However, if the experts are simply trying to increase their own power and influence, then it is a pure extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "information_asymmetry"
+    ]
+  },
+  "directionality_overrides": []
+}

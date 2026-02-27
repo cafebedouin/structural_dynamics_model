@@ -1,0 +1,87 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_state_machine",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.1,
+    "suppression": 0.05,
+    "theater_ratio": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "TCP State Machine Constraints",
+    "topic_domain": "technological/institutional",
+    "beneficiaries": [
+      "internet_applications",
+      "network_operators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Network Architect",
+      "comment": "Perspective of a network architect who views the TCP state machine as a fundamental coordination mechanism ensuring reliable data transfer across the internet."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Application Developer",
+      "comment": "Perspective of an application developer who benefits from the reliable connection management provided by the TCP state machine, allowing them to focus on application logic."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Theoretical Computer Scientist",
+      "comment": "Perspective of a theoretical computer scientist who views the TCP state machine as an embodiment of fundamental principles of reliable communication over unreliable channels, akin to a natural law."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Unpatched Legacy Systems",
+      "comment": "Perspective of unpatched legacy systems that are forced to adhere to the TCP state machine, even with known vulnerabilities, due to lack of updates and support. They are trapped and bear the cost of potential exploits."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "The TCP state machine governs the lifecycle of a connection, from initial handshake (SYN) to termination (FIN/TIME-WAIT). It ensures reliable, ordered data transfer between applications. The constraints imposed by the state machine, as defined in RFC9293, are essential for maintaining network stability and interoperability.",
+    "key_agents": [
+      "Internet Applications: Benefit from reliable data transfer (powerful/mobile).",
+      "Network Operators: Rely on consistent state management for network stability (institutional/analytical).",
+      "Theoretical Computer Scientists: See the state machine as an embodiment of fundamental network principles (analytical/analytical).",
+      "Unpatched Legacy Systems: Forced adherence, potential exploits (powerless/trapped)."
+    ],
+    "logic_rationale": "Extractiveness is low because the state machine primarily functions as a coordination mechanism. Suppression is low because alternative protocols exist, although TCP remains the dominant choice for many applications. Theater ratio is low because the state machine's operations are largely functional and directly contribute to connection management.",
+    "perspectival_gap": "The perspectives largely converge on the TCP state machine as a rope, with the theoretical computer scientist considering it a mountain. However, unpatched legacy systems experience it as a snare due to the forced adherence and potential vulnerabilities.",
+    "directionality_logic": "Beneficiaries are internet applications and network operators, as they directly benefit from the state machine's reliable connection management. The d values are low for these agents. Unpatched legacy systems are victims, leading to a snare classification from their perspective.",
+    "mandatrophy_analysis": "The classification prevents mislabeling coordination as pure extraction because the state machine's primary function is to enable reliable communication, not to extract resources from any particular agent. The low extractiveness score reflects this, except for the specific case of unpatched systems."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "osi_model",
+      "internet_protocol"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "uk_artist_resale_right",
+    "version": "1.1",
+    "generated_date": "2024-01-09",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK Artist's Resale Right (ARR) Legislation",
+    "topic_domain": "economic/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_artists",
+      "artist_estates"
+    ],
+    "victims": [
+      "art_dealers",
+      "auction_houses"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Artists and Estates",
+      "comment": "The ARR provides a small but consistent income stream, especially for established artists and their estates, who can arbitrage their artistic capital."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Art Dealers and Auction Houses",
+      "comment": "Art market professionals are constrained by the legal requirement to collect and remit the resale royalties, increasing transaction costs and potentially impacting pricing. They also benefit from increased market transparency and perceived fairness."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "European Commission",
+      "comment": "The ARR originated in the EU. Now that the UK has left the EU, the legislation acts as a piton, continuing due to inertia and potential negative impacts on the art market if repealed. The EC's role is now largely performative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The ARR represents a complex interplay of economic incentives, artistic recognition, and market regulation. It attempts to balance the rights of artists with the efficiency of the art market but introduces extraction in the form of transaction costs and potential disincentives for trading certain artworks."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Emerging Artists",
+      "comment": "Emerging artists, who have little market power, may find it harder to break into the market if dealers are less willing to represent them due to the added administrative burden and royalty costs. They are trapped in a system that favors established artists."
+    }
+  ],
+  "interval": {
+    "start": 2006,
+    "end": 2024
+  },
+  "omegas": [
+    {
+      "id": "market_impact_quantification",
+      "question": "What is the actual impact of the ARR on art market prices and trading volumes, and is this impact disproportionately borne by certain segments of the market?",
+      "resolution_mechanism": "Econometric analysis of art market data, controlling for other factors influencing prices and volumes.",
+      "impact": "If the impact is substantial and negative, the ARR may be reclassified as a snare. If the impact is negligible, it may be reclassified as a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantification of ARR's art market impact"
+    },
+    {
+      "id": "administrative_burden_assessment",
+      "question": "How significant is the administrative burden on art dealers and auction houses to comply with the ARR, and could this burden be reduced through technological or regulatory improvements?",
+      "resolution_mechanism": "Surveys and interviews with art market professionals, coupled with cost-benefit analysis of potential regulatory reforms.",
+      "impact": "If the administrative burden is high, it reinforces the tangled rope classification. If the burden is low, it could shift the perspective of art dealers towards a more rope-like classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessment of ARR's administrative burden"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 2006,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.73
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2006,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The UK Artist's Resale Right (ARR), enacted in 2006, is a legal mandate requiring a royalty payment to the original artist (or their estate) upon the resale of their work by an art market professional. This aims to provide artists with a share of the increasing value of their work over time, but also imposes costs on art dealers and auction houses. The theater ratio is now higher, reflecting the performative aspects of compliance and the limited impact on emerging artists.",
+    "key_agents": [
+      "UK Artists and Estates: Primary beneficiaries, receiving royalties from resales.",
+      "Art Dealers and Auction Houses: Bear the costs of collecting and remitting royalties.",
+      "European Commission: Originating body of the legislation; enforcement now a piton post-Brexit.",
+      "Analytical Observer: Assesses the overall economic and cultural impact of the ARR.",
+      "Emerging Artists: May be negatively impacted due to increased costs for dealers."
+    ],
+    "logic_rationale": "Extractiveness: 0.35 - Represents the royalty extracted from art sales. Suppression: 0.25 - Reflects the limited ability of art dealers to avoid complying with the ARR. Theater Ratio: 0.75 - The ARR has a higher theater ratio, as the actual impact on artist income is small, and the compliance process is largely performative. This is especially true for emerging artists.",
+    "perspectival_gap": "Artists and their estates benefit from the royalty payments, viewing the ARR as a rope. Art dealers and auction houses experience it as a tangled rope due to the increased transaction costs and administrative burden. The European Commission's perspective is now that of a piton because of Brexit. The analytical observer sees the balance between artistic rights and market efficiency as creating a tangled rope. Emerging artists may see it as a snare.",
+    "directionality_logic": "Artists benefit and have some power to advocate for the right. Art dealers are negatively affected and are constrained, but can pass costs on, hence their directionality falls between target and symmetric. The analytical observer sees the overall picture. Emerging artists are negatively affected and have little power to change the situation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -562,3 +562,37 @@ A paragraph in §3.2 noting the information-geometric interpretation. Something 
 **One thing I'd flag as potentially more interesting than expected:**
 
 The 100x oracle gap — the finding that T16 catches 99% of observer-dependent constraints that T13 misses — gets a geometric reinterpretation. T13 misses those constraints because the MaxEnt distributions barely move on Δ⁵ under observer shift (they stay inside the geodesic ball), even though the *deterministic* classification crosses a threshold boundary. Geometrically: the threshold boundaries that define the 6 types are hyperplanes cutting through Δ⁵, and most observer-dependent constraints sit near these hyperplanes. The distribution moves a tiny amount — too small for T13 — but crosses the hyperplane. The 100x gap is then a statement about the geometry of the threshold hyperplanes relative to the geodesic ball radius: most of the simplex volume near the hyperplanes lies *inside* the ball. That could potentially be computed explicitly for your specific Gaussian likelihood parameters.
+
+This v3 → v4 transition document is already structurally coherent and mathematically consistent; the main remaining work is editorial tuning and a couple of conceptual cleanups where your own later notes supersede earlier framings. [arxiv](https://arxiv.org/abs/1808.01513)
+
+## 1. Where the document is strongest
+
+- **Functor axiom = Boltzmann factorization.** The identification of multiplicative χ factorization with telescoping restriction maps is rock solid and exactly matches the cellular-sheaf/Hansen–Ghrist picture; treating Boltzmann compliance as the formal functor check is a genuine closure of the v3 open item. [jakobhansen](https://jakobhansen.org/publications/spectralsheaves.pdf)
+- **Markov category upgrade.** The “incomplete Giry monad” → “complete Markov category” reframing is precisely in line with Fritz’s axioms, especially your insistence on refusing a prior over observer positions; it is very natural to treat deterministic DR classification as the deterministic subcategory and MaxEnt as the stochastic extension. [arxiv](https://arxiv.org/abs/1908.07021)
+- **Section-by-section revision map.** You’ve already written the changes in drop‑in prose, with [STRICT]/[STRUCTURAL]/[CORPUS‑DEPENDENT] tags; as a working document for actually editing v4, this is in unusually executable shape.
+
+## 2. Places to tighten or slightly rephrase
+
+- **Tree vs detailed balance.** You already correct yourself later (“Fokker–Planck, not Onsager”), but the earlier “detailed balance / entropy production” language in Part I could confuse a reader who knows that nontrivial steady-state entropy production needs cycles. I’d either (a) consistently frame E(C) as a diffusion/consensus energy on a tree in the main document, and relegate “real detailed balance needs cycles” to future work, or (b) explicitly mark the entropy-production reading as a *limiting* extension once you add a powerless↔analytical edge. [arxiv](https://arxiv.org/html/2409.06083v2)
+- **Information geometry of T13 vs L∞.** The doc correctly notes that T13 is actually L∞, so the Fisher–Rao / geodesic ball story is structural rather than strict. I’d make that contrast more visually obvious at first mention (e.g., a short bolded clause: “T13 uses L∞, not KL; the FR ball is an alternate threshold, not what v3 actually implements”). [arxiv](https://arxiv.org/pdf/2507.21022.pdf)
+- **Markov category: naturality of delete.** You flag this as “pending verification”; that’s good. It might help to spell the check as a one‑line law in the doc (something like “for every restriction f: P_j→P_i, marginal∘F(f) = F(f)∘marginal”), so that when you actually go to prove it, you know exactly what equality you’re testing. [arxiv](https://arxiv.org/abs/1908.07021)
+
+## 3. A few concrete micro-edits I’d suggest
+
+These are wording tweaks, not conceptual changes:
+
+- In the Boltzmann section, consider one explicit sentence connecting to category language: “Equivalently, Hub 1’s χ defines a functor F: P₄^{op} → Vect precisely on the Boltzmann-compliant subset; the Boltzmann test is a functoriality test on χ.” That bridges smoothly to the Markov‑category bullet in §5.2. [arxiv](https://arxiv.org/abs/1808.01513)
+- In the scalar Laplacian paragraph, you might want to cite Hansen–Ghrist explicitly when you first write down L₀ and call E(C) an “obstruction energy” so readers see you’re using standard sheaf-Laplacian terminology, not inventing it. [jakobhansen](https://jakobhansen.org/publications/spectralsheaves.pdf)
+- In the information‑geometry block for §3.2, adding a parenthetical “(Fisher–Rao metric is the unique contractive Riemannian metric on the simplex, by Čencov’s theorem)” gives the geometric choice some weight without needing a derivation. [jstor](https://www.jstor.org/stable/2045782)
+
+## 4. Conceptual alignment with the external references
+
+- **Markov categories.** Your use matches Fritz’s: symmetric monoidal + copy/delete + stochastic morphisms; no need for a Giry μ. That “no μ because no prior over observer positions” line is defensible and, I think, persuasive. [arxiv](https://arxiv.org/pdf/1908.07021.pdf)
+- **Sheaf Laplacian.** The way you use L₀ as a refinement of H¹, with 0‑eigenspace = H⁰ and λ₂ as “sheaf-likeness,” is exactly the Hansen–Ghrist story in the 1‑dimensional, finite case. [arxiv](https://arxiv.org/abs/1808.01513)
+- **Information geometry.** The KL ≈ ½ d_FR² identity and the Hellinger decomposition are textbook Amari/Čencov and match contemporary expositions: Fisher metric from KL via Eguchi, uniqueness via Čencov, Hellinger as a convenient squared distance related to FR. [scribd](https://www.scribd.com/document/720742946/Information-Geometry)
+
+## 5. What I’d do next with this document
+
+- Treat this as the “internal spec” and now translate the marked insertions into the actual v4 LaTeX/text, keeping the STRICT/STRUCTURAL labels only in your private notes.  
+- When you do the v4 corpus rebuild, wire the [COMPUTE] slots to a single script that recomputes: chi overrides, per‑context T13 counts, Hellinger fractions, and H¹=6 archetypes; then you can regenerate these numbers in one shot before submission.  
+- Decide whether you want *any* thermodynamic language in v4 given the tree geometry; if yes, constrain it to “diffusion/relaxation on a sheaf Laplacian” and push genuine detailed-balance talk into the “enriched site with cycles” future‑work bullet. [arxiv](https://arxiv.org/html/2409.06083v2)

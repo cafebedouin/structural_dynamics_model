@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "project_vault_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vault"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Project Vault Strategic Mineral Reserve",
+    "topic_domain": "economic/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_manufacturing_sector",
+      "defense_industrial_base",
+      "domestic_mining_companies"
+    ],
+    "victims": [
+      "global_supply_chain_actors",
+      "allied_nations_mineral_access",
+      "competitive_industries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Dependent Mineral-Importing Nations",
+      "comment": "Non-U.S. nations dependent on mineral supply face extraction through strategic scarcity. Trapped by geography and capital constraints; cannot exit the constraint. Bear full cost of price volatility and access restriction. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Downstream Manufacturing (Non-U.S.)",
+      "comment": "Electronics, battery, aerospace manufacturers outside U.S. face cost increases and supply uncertainty. Constrained by reliance on U.S.-managed supply; some exit options (diversification) are expensive and slow. Bear extraction through higher input costs and access delays."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Allied Nations (Coordination + Extraction)",
+      "comment": "Allied nations experience dual structure: coordination benefit (supply security for defense partnerships) and extraction (preferential access means higher costs/delays for non-U.S. allies). Strategic partnership solves cold-war minerals-access problem but creates asymmetric dependency. Constrained exit (cannot credibly diversify to rivals) and active enforcement (geopolitical retaliation risk for circumventing reserve)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "U.S. Defense Industrial Base",
+      "comment": "Primary beneficiary. Experiences constraint as coordination mechanism: solves decades-long vulnerability to mineral supply disruption. Net benefit (supply security, cost stability) outweighs enforcement costs. Arbitrage exit available (can source from reserve at preferred pricing). Extraction runs toward this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Domestic Mining Industry",
+      "comment": "Secondary beneficiary. Benefits from U.S. government commitment to domestic source development and preferential purchasing agreements. Experiences constraint as coordination: reduces overseas supply dependence and creates market stability. Arbitrage exit via government contracts. Net benefit through capture of some extraction surplus."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Supply Chain Resilience Coalition",
+      "comment": "International partners (EU, Japan, South Korea, Australia) see Vault as temporary measure triggering global coordination. Mobile exit: can build parallel recycling infrastructure, diversify sourcing, and reduce mineral intensity. Organized response (critical minerals partnerships, trade agreements) creates sunset logic \u2014 as alternatives mature, Vault's monopoly extraction mechanism weakens. Theater ratio low: the coalition has structural alternatives that bypass the reserve."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Post-Cold War Geopolitical Risk Model",
+      "comment": "Vault is maintained through 1990s-2020s institutional inertia: strategic minerals planning paradigm assumed continued scarcity and supply concentration. But underlying structural drivers have changed \u2014 recycling capability grows, battery technology reduces cobalt intensity, lab-grown diamonds reduce synthetic gemstone dependence. Reserve exists because the threat model (Soviet-era mineral blockade) is institutionalized, not because current supply dynamics demand it. Theater ratio high: much of Vault's operational activity is performative security posturing rather than response to genuine supply crisis. Piton classification reveals that the 'strategic' justification is increasingly theatrical."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Thermodynamic/Geological Constraint",
+      "comment": "From pure analytical view: mineral ore distribution is geographically fixed by geology. Concentration of rare earth deposits, copper, lithium in few regions is a natural law, not a policy choice. Supply constraints are inherent to Earth's crust composition. However, this perspective ignores that technology (processing, recycling, substitution), economics (price signals), and policy (trade agreements, domestic investment) all mediate the natural constraint. The mountain classification risks naturalizing what is actually a contingent institutional arrangement layered atop geology. False summit alert."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "domestic_mining_feasibility",
+      "question": "Can U.S. domestic mining capacity scale to serve defense needs without the capital and environmental costs becoming prohibitive?",
+      "resolution_mechanism": "Cost curves from pilot domestic rare earth mining (Texas rare earth facility, lithium projects); comparison to imported supply costs over 10-year horizon; permitting timeline data",
+      "impact": "If feasible: Vault extraction mechanism persists (countries need U.S. minerals). If infeasible: Vault becomes performative (cannot actually supply alternatives to imports) and transitions to Piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of scaling U.S. domestic mining"
+    },
+    {
+      "id": "recycling_substitution_velocity",
+      "question": "How fast will advanced recycling and mineral-reducing technology reduce dependence on primary reserves?",
+      "resolution_mechanism": "Tracking of recycling cost curves, battery technology roadmaps (cobalt intensity reduction), structural substitution adoption rates; comparison to Vault drawdown timeline",
+      "impact": "If substitution is rapid (5-10 years): Vault sunset is real and near-term. If slow (30+ years): Vault maintains extraction mechanism longer. If technology plateaus: Vault becomes permanent Snare for dependent nations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Velocity of recycling and substitution technology maturation"
+    },
+    {
+      "id": "geopolitical_fragmentation",
+      "question": "Will global supply chain fragmentation accelerate or decelerate regional mineral independence efforts?",
+      "resolution_mechanism": "Analysis of regional sourcing initiatives (EU Critical Raw Materials Act implementation, Indian rare earth processing, African mineral processing investment); trade agreement structure; reshoring vs offshoring data",
+      "impact": "If fragmentation accelerates: allied nations exit Vault dependency through parallel infrastructure, reducing extraction mechanism. If decelerates: global interdependence increases and Vault maintains power as monopoly reserve.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Direction of geopolitical fragmentation and regional mineral independence"
+    },
+    {
+      "id": "reserve_depletion_actual",
+      "question": "What is the actual depletion rate of Vault reserves under wartime/high-demand scenarios vs stockpile stability in peacetime?",
+      "resolution_mechanism": "Simulated drawdown analysis; comparison of reserve coverage ratios to historical supply disruption durations; classified DoD assessments if available",
+      "impact": "If reserves deplete rapidly (months in crisis): Vault is psychological/coordination tool more than supply solution. If stable (years+): Vault has real supply function and extraction mechanism is structural.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Actual depletion dynamics of strategic reserves under stress"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Project Vault is a $12 billion U.S. strategic mineral reserve announced February 2, 2026, designed to insulate the defense industrial base and critical manufacturing from mineral supply disruption. The constraint exhibits a core tension between coordination (solving a genuine cold-war-era vulnerability) and extraction (leveraging mineral concentration to shape global economic and geopolitical outcomes). From the U.S. defense and domestic mining perspective, Vault solves a decades-old problem: dependency on hostile or unstable mineral suppliers. From allied nations and non-U.S. manufacturers, Vault appears as strategic monopoly pricing and access denial. From the global supply chain perspective, Vault is a temporary measure triggering accelerated recycling and diversification. From the institutional Cold War planning apparatus, Vault is increasingly theatrical \u2014 maintained by inertia against a threat model that is aging. From pure geology, mineral concentration is a natural law; but from political economy, the constraint is contingent institutional design.",
+    "key_agents": [
+      "U.S. Defense Industrial Base: Primary beneficiary (institutional/arbitrage) \u2014 solves supply security problem; experiences net benefit; preferred access to reserves",
+      "Domestic Mining Companies: Secondary beneficiary (institutional/arbitrage) \u2014 government purchasing commitments and domestic source development; benefits from reduced overseas competition",
+      "Allied Nations (NATO, Japan, South Korea, Australia): Mixed (organized/constrained) \u2014 benefit from defense partnership coordination but suffer extraction through higher costs and preferential U.S. access",
+      "Non-Allied Mineral-Dependent Nations: Victim (powerless/trapped) \u2014 cannot exit mineral dependency; face price increases and access restriction; no alternatives",
+      "Global Electronics/Battery Manufacturing (Non-U.S.): Victim (moderate/constrained) \u2014 input cost increases; supply uncertainty; some exit options (geographic relocation) available but expensive",
+      "Global Supply Chain Resilience Coalition: Organized responders (organized/mobile) \u2014 building parallel infrastructure (recycling, diversification) to reduce Vault dependency",
+      "Cold War Strategic Planning Apparatus: Institutional theater maintainer (institutional/arbitrage) \u2014 sustains reserve through threat model inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Vault's extraction mechanism is asymmetric: U.S. manufacturers and allied defense partners have guaranteed access at favorable pricing; all other actors face supply restriction and cost increase. The extraction is not maximal (0.66+) because (a) recycling and substitution technologies are reducing mineral intensity, (b) alternative sourcing (China processing, allied partnerships) provides partial escapes, (c) the reserve capacity is finite and covers only a portion of global demand. Over time, extractiveness has increased (0.35 \u2192 0.52) as the reserve becomes operational and global actors realize the supply monopoly effect. Suppression (0.68): Moderate-high. Significant barriers to circumventing Vault include: geopolitical retaliation risk for unauthorized mineral source development, capital barriers to building parallel processing infrastructure, WTO disputes over discriminatory access, and the fact that some minerals have high geological concentration (rare earths, cobalt). Suppression is not total because: recycling and substitution reduce pressure on primary supply, and allied nations have diplomatic channels to negotiate terms. Theater ratio (0.58): Moderate. A substantial portion of Vault's operational activity is performative: security theater (classified reserve locations, periodic 'readiness' assessments), geopolitical signaling (announcements of reserve capacity to intimidate rivals), and threat inflation (Cold War supply disruption scenarios that are less likely in 2026 than in 1976). However, the reserve has real supply function \u2014 it does contain minerals and could release them in genuine crisis. Theater has increased over the interval (0.42 \u2192 0.58) as initial operational period reveals that much activity is routine security posturing rather than response to active supply crisis.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. U.S. defense sees Rope (coordination mechanism solving genuine vulnerability). Domestic mining sees Rope (stable market, government contracts). Allies see Tangled Rope (membership benefit + extraction via preferential access and supply restriction). Dependent nations see Snare (trapped by geography, no exit, full extraction cost). Non-U.S. manufacturers see Snare (input cost increases, constrained supply). Global supply chain coalition sees Scaffold (temporary problem triggering technological exit via recycling). Cold War planning sees Piton (institutional inertia maintaining outdated threat model). Analytical geology sees Mountain (mineral concentration is natural law) \u2014 but this is a false summit revealing naturalization of contingent policy. The perspectival range (Rope to Snare to Mountain) indicates that all six types are legitimate readings of the same structural data from different observer positions.",
+    "directionality_logic": "Directionality values are derived from structural position within the extraction flow. U.S. defense and domestic mining are beneficiaries with arbitrage exit options (can source from reserve at preferred terms) \u2192 d \u2248 0.05-0.15 \u2192 negative/minimal \u03c7. Allied nations are mixed: beneficiaries of coordination but victims of preferential access asymmetry, with constrained exit (cannot credibly diversify to rivals without geopolitical cost) \u2192 d \u2248 0.45-0.55 \u2192 moderate \u03c7. Dependent nations are pure victims with trapped exit (no alternatives) \u2192 d \u2248 0.90-0.95 \u2192 maximum \u03c7. Global supply chain coalition has mobile exit (can build parallel infrastructure) \u2192 d \u2248 0.40-0.50 \u2192 moderate \u03c7 even as victims of extraction, because their exit options reduce experienced extractiveness. Cold War planners are institutional beneficiaries with arbitrage (can maintain reserve indefinitely without challenge) \u2192 d \u2248 0.05 \u2192 negative \u03c7 (they perceive no extraction). The directionality derivation captures that exit options materially affect experienced extractiveness: trapped agents bear maximum extraction; mobile agents bear less even facing the same baseline \u03b5.",
+    "mandatrophy_analysis": "TANGLED ROPE GATE SATISFIED: Vault meets all three criteria: (1) beneficiaries declared (U.S. defense, domestic mining), (2) victims declared (dependent nations, non-U.S. manufacturers, allied nations), (3) requires_active_enforcement = true (geopolitical retaliation for circumventing reserve, trade agreement enforcement, security protocols for reserve access). The mandatrophy is resolved by recognizing that Vault is genuinely hybrid: it solves a coordination problem (supply security for defense partnerships) AND extracts surplus (preferential access, cost increases for non-participants). Neither pure Rope nor pure Snare captures the structure. The false summit (Mountain/natural law) is exposed by noting that mineral concentration is geological fact, but Vault's CONSTRAINT \u2014 the policy mechanism that leverages concentration into economic/geopolitical extraction \u2014 is entirely contingent. The boundary between natural constraint and policy choice is at whether recycling, substitution, and alternative sourcing can escape mineral concentration. If they cannot (geology binding), Vault approaches Mountain. If they can (policy binding), Vault is Tangled Rope. The omegas specify what data would resolve this."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "rare_earth_supply_monopoly",
+      "cobalt_congo_dependency",
+      "lithium_concentration_chile_argentina",
+      "semiconductor_supply_chain_resilience",
+      "allied_critical_materials_partnership"
+    ],
+    "dual_formulation_note": "Project Vault is downstream of geological constraints (mineral ore distribution) but represents a distinct policy mechanism. Upstream constraints (rare earth monopoly, cobalt concentration) describe structural scarcity; Vault describes institutional response that amplifies extraction. The upstream constraints have lower extractiveness (structural facts); Vault has higher extractiveness (institutional choice). Both stories should be present: one describing the natural scarcity, one describing the policy amplification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

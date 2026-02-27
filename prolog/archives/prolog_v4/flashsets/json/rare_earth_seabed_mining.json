@@ -1,0 +1,144 @@
+{
+  "header": {
+    "constraint_id": "rare_earth_seabed_mining",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Deep-Sea Rare Earth Mining",
+    "topic_domain": "economic/technological/environmental",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mining_companies",
+      "rare_earth_consumers"
+    ],
+    "victims": [
+      "deep_sea_ecosystems",
+      "future_generations",
+      "coastal_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Deep Sea Ecosystems",
+      "comment": "Deep sea ecosystems are highly vulnerable and have no capacity to exit or resist the destructive impacts of seabed mining. The extraction is largely irreversible and harms a complex, poorly understood ecosystem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mining Companies",
+      "comment": "Mining companies benefit from access to rare earth resources, which are vital for many technologies. They arbitrage regulatory loopholes and international waters to minimize extraction costs and maximize profits. Their extraction benefits consumer and investors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Coastal Communities",
+      "comment": "Coastal communities may experience both benefits and costs. They may receive short-term economic gains through employment and infrastructure development, but face longer-term risks of environmental degradation, displacement, and resource depletion that constrained their future options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Deep-sea rare earth mining presents a tangled rope. It provides access to important resources, but extracts heavily from the environment and future generations. The long-term ecological impacts and fairness of intergenerational resource allocation require careful analysis. It is an actively enforced constraint due to the incentives of mining companies and the demand for resources."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_ecological_impact",
+      "question": "What are the long-term ecological consequences of deep-sea mining?",
+      "resolution_mechanism": "Conduct extensive long-term monitoring studies of deep-sea ecosystems before, during, and after mining operations. Implement adaptive management strategies.",
+      "impact": "If impacts are severe and irreversible, the activity should be classified as a pure snare. If impacts are manageable, the activity can be a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the long-term ecological effects."
+    },
+    {
+      "id": "resource_sustainability",
+      "question": "Are deep-sea rare earth resources used sustainably, or are they depleted rapidly without consideration for future generations?",
+      "resolution_mechanism": "Implement strong resource management policies and promote the development of circular economy approaches to reduce demand for virgin materials.",
+      "impact": "If resources are depleted rapidly, the activity is a snare. If resource use is sustainable, the activity is a tangled rope.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Assesses the sustainability of resource use."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Deep-sea rare earth mining presents a complex interplay between economic benefits and environmental costs. Japan's deep-sea test near Minamitorishima Island underscores the growing interest in exploiting seabed resources. This activity is driven by the need for rare earth elements, essential for various technologies, but carries significant risks to poorly understood deep-sea ecosystems. The constraint is actively enforced through the pursuit of profit by mining companies and incentivized by the demand for resources.",
+    "key_agents": [
+      "Mining Companies: Primary beneficiary (institutional/arbitrage) - They gain access to resources and profit from extraction.",
+      "Deep Sea Ecosystems: Primary victim (powerless/trapped) - They are vulnerable to irreversible destruction with no exit.",
+      "Coastal Communities: Secondary actor (moderate/constrained) - They face potential for both economic benefits and ecological risks.",
+      "Rare Earth Consumers: Secondary beneficiary (moderate/mobile) - They benefit from the increased availability of resources.",
+      "Future Generations: Secondary victim (powerless/trapped) - Depleted resources and degraded environments limit their options."
+    ],
+    "logic_rationale": "Extractiveness (0.6): Moderate-high. Mining extracts significant resources from the deep sea and can cause damage. Suppression (0.7): High. Strong enforcement through economic incentives. The barriers to exit are high due to limited alternative resources. Theater Ratio (0.3): Low. Current theater is low because much of activity is exploratory, but could increase as awareness and regulation grow.",
+    "perspectival_gap": "Mining companies view this as a rope, accessing needed resources through arbitrage. Deep sea ecosystems view this as a snare with no exit. Coastal communities see a tangled rope because there are both positive and negative impacts. The Analytical Observer recognizes the mixed nature of the impacts over the time horizon.",
+    "directionality_logic": "The directionality is determined by the beneficiary and victim relationship. Mining companies are able to arbitrage and are beneficiaries with a low directionality. The deep sea ecosystems are victims who cannot escape the consequences so have a high directionality. Coastal communities are both beneficiaries and victims and are more moderate. An analytical observer takes into account both aspects of the problem and assigns extractiveness based on this analysis.",
+    "mandatrophy_analysis": "This is a tangled rope because mining provides benefits and harms, and requires active enforcement to occur. It is not simply extraction because there is utility to the output, and it is not pure coordination because there is a lot of extraction. The long-term sustainability of these practices is currently uncertain, as the benefits and harms have not been fully quantified."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "rare_earth_supply_chains",
+      "deep_sea_conservation"
+    ]
+  },
+  "directionality_overrides": []
+}

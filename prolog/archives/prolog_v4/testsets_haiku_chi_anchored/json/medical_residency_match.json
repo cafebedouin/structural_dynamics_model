@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "medical_residency_match",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nrmp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The NRMP Medical Residency Match",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "program_directors",
+      "nrmp_organization"
+    ],
+    "victims": [
+      "medical_students",
+      "underrepresented_minority_students",
+      "international_medical_graduates"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Medical Student",
+      "comment": "PERSPECTIVE 1: MEDICAL STUDENT (SNARE) \u2014 Structurally trapped. Participation is mandatory (withdrawal from Match ends residency pathway). No information symmetry: program preferences opaque, ranking algorithm black-boxed, students cannot observe other students' preferences or outcomes. Career hinges on single algorithm run. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73. High extraction with suppression of exit and alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Underrepresented Minority Student",
+      "comment": "PERSPECTIVE 2: UNDERREPRESENTED MINORITY STUDENT (SNARE) \u2014 More constrained than majority-background students. Implicit bias in interviews and ranking, geographic clustering disadvantages, limited mentorship networks, implicit bias in program selection processes. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74. Maximum extraction with visibility suppression."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The International Medical Graduate",
+      "comment": "PERSPECTIVE 3: INTERNATIONAL MEDICAL GRADUATE (SNARE) \u2014 Explicit structural discrimination: most programs screen out IMG applicants; credential evaluation non-standardized; visa sponsorship as selection mechanism; lower match rates despite equivalent qualifications. d\u22480.96, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74. Maximum extraction with explicit legal/administrative suppression of alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Program Director Coalition",
+      "comment": "PERSPECTIVE 4: PROGRAM DIRECTOR COALITION (TANGLED ROPE) \u2014 Organized agents with collective action coordination function (stable matching solves the problem of bilateral negotiation and strategic ranking). But programs extract significant labor-supply control: can set specialty distribution, geographic concentration, geographic location as sorting mechanism for candidate selection. Can use Match to suppress salary competition. d\u22480.35, f(d)\u22480.28, \u03c3=1.0 \u2192 \u03c7\u22480.15. Low effective extraction because organized agents have agency within the constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The NRMP Organization",
+      "comment": "PERSPECTIVE 5: NRMP ORGANIZATION (ROPE) \u2014 Benefits from monopoly on clearing mechanism; maintains data lock (non-transparency around algorithm, ranking outcomes, program preferences). But functions primarily as coordination mechanism: solves the massive bilateral matching problem that would otherwise require individual negotiation. Extractiveness comes from informational asymmetry and enforced participation, not from active extraction of value. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary through institutional arbitrage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy Coordination Ritual",
+      "comment": "PERSPECTIVE 6: LEGACY COORDINATION RITUAL (PITON) \u2014 The Match persists through institutional inertia despite technical alternatives existing (blockchain-based matching, direct negotiation platforms, decentralized preference-collection). Theater_ratio=0.58 reflects that the 'secrecy' and 'algorithm' create performative legitimacy\u2014the algorithm is stable matching (transparent, well-understood), but presented as complex/neutral/fair. Regulatory capture of NRMP by program directors maintains status quo despite known inefficiencies. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.38. Intermediate\u2014the constraint persists but is increasingly theatrical."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT RISK) \u2014 From a civilizational perspective, some matching problem is inherent to labor markets with bilateral constraints. The Roth-Peranson algorithm is mathematically elegant and solves the stability/rationality problem. Risk: naturalizing NRMP's current monopoly and information asymmetries as inevitable features of matching problems. Engine false summit detector: \u03b5=0.52 and suppression=0.68 contradict mountain classification. The constraint is contingent, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bias_measurement_basis",
+      "question": "How much of the specialty/geographic mismatch for URM and IMG students is due to Match algorithm constraints vs. upstream application/interview discrimination?",
+      "resolution_mechanism": "Decompose outcomes: (1) Program director ranking patterns controlling for student qualifications; (2) student list-building patterns by demographic; (3) interview invitation rates by program type; (4) Match algorithm sensitivity analysis removing confidentiality constraints",
+      "impact": "If upstream discrimination > 70%: Match is partially innocent, structural discrimination is earlier in pipeline. If Match mechanism > 50%: algorithm design or information asymmetry is primary lever. Classification may shift to pure snare (upstream) vs tangled rope (match-specific).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of student outcome disparities to Match algorithm vs upstream discrimination"
+    },
+    {
+      "id": "algorithm_transparency_counterfactual",
+      "question": "If Match algorithm, preference data, and ranking formulas were fully transparent, would observed market outcomes (specialty distribution, geographic clustering, IMG exclusion) persist or reverse?",
+      "resolution_mechanism": "Controlled experiments with algorithm transparency in limited context; comparison with decentralized matching platforms (kidney exchange, school choice); student behavior modeling with full information",
+      "impact": "If outcomes persist despite transparency: extraction is structural (program monopsony power), constraint is irreversible Snare. If outcomes reverse: extraction was primarily informational suppression, constraint is contingent Tangled Rope with sunset potential.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether transparency would alter Match outcomes"
+    },
+    {
+      "id": "alternative_clearing_mechanism_viability",
+      "question": "Could decentralized platforms (direct program-student negotiation, blockchain matching, auction-based allocation) achieve equivalent stability and efficiency without NRMP's information suppression?",
+      "resolution_mechanism": "Technical feasibility study of alternative mechanisms; pilot programs in non-binding early matching; comparison with international residency matching systems (Canada, Australia, UK)",
+      "impact": "If viable alternatives exist: NRMP constraint is extractive monopoly (Snare from students, benefits NRMP/programs). If alternatives fail: NRMP monopoly provides genuine coordination service (Rope). Current sunset estimate (open-source algorithm, mandatory transparency) depends on this resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical viability of alternative matching mechanisms"
+    },
+    {
+      "id": "program_preference_strategic_suppression",
+      "question": "To what extent do program directors suppress their true preferences in Match lists to extract negotiating power (via post-Match incentives, side deals, honorarium offers)?",
+      "resolution_mechanism": "Survey program directors on preference discrepancy; analyze post-Match outcomes (unmatched positions, post-Match hiring, salary/incentive variation by match outcome); algorithmic audit of revealed vs stated preferences",
+      "impact": "If strategic suppression > 30%: programs use Match as a theater mechanism while conducting actual allocation outside it (Piton classification strengthens). If <10%: programs use Match transparently (Rope classification strengthens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of strategic preference suppression by program directors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 1995,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The NRMP Medical Residency Match is a centralized clearinghouse that pairs 42,000+ medical students annually with residency positions using a stable matching algorithm (Roth-Peranson). While presented as a neutral coordination mechanism that solved the chaos of pre-1990s bilateral negotiation, the Match has become an extraction mechanism that suppresses student information, enforces participation, and allows program directors to coordinate specialty distribution and geographic concentration. The constraint is a textbook hybrid: it solves the collective action problem of pairing thousands of students and programs (coordination function), but simultaneously extracts career control from students, suppresses information symmetries, and discriminates against underrepresented minorities and international medical graduates. The rising theater ratio (0.42\u21920.58 over 30 years) reflects increasing reliance on performative legitimacy ('algorithm is fair and neutral') as underlying extraction mechanisms become more visible. The constraint exhibits all six DR types from different perspectives: a Snare for students (trapped, no exit, no information), a Tangled Rope for programs (coordinated while extracting), a Rope for NRMP (pure coordination from its perspective), a Piton for the legacy ritual (maintained through inertia despite alternatives), and a risky false Mountain from the analytical observer who naturalizes matching difficulty.",
+    "key_agents": [
+      "Medical Students: Primary victims (powerless/trapped) \u2014 mandatory participation, career depends on single algorithm run, no information symmetry, no exit option except abandoning residency pathway",
+      "Underrepresented Minority Students: Heightened victims (powerless/trapped) \u2014 systematic bias in interviews and program rankings, geographic clustering disadvantage, tacit mentorship gaps, implicit bias in preference signals",
+      "International Medical Graduates: Heightened victims (powerless/trapped) \u2014 explicit discrimination, non-standardized credential evaluation, visa sponsorship as selection mechanism, lower match rates despite equivalent qualifications",
+      "Program Directors: Organized beneficiaries (organized/constrained) \u2014 collective action coordinated through Match, extract labor-supply control, can suppress salary competition, can sort by geography",
+      "NRMP Organization: Institutional beneficiary (institutional/arbitrage) \u2014 monopoly on clearing mechanism, data lock and informational asymmetry, benefits from mandatory participation, maintains algorithm opacity",
+      "Academic Medicine Leadership: Meta-institutional actor (institutional/constrained) \u2014 regulatory capture by program directors, constrained to defend Match publicly while knowing limitations, incentivized to minimize equity scandals",
+      "Analytical Observer: Civilization perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement (matching difficulty) as immutable feature of labor markets"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The Match extracts significant value from students through information asymmetry, participation coercion, and outcome control. But the extraction is bounded: stable matching genuinely solves a coordination problem, so students do receive legitimate value (predictable outcomes, reduced bilateral negotiation costs). The 0.52 reflects the hybrid nature\u2014not pure extraction (which would be ~0.70+), but more than pure coordination (0.05-0.20). Suppression (0.68): High. Multiple layers: (1) Algorithm opacity\u2014the Roth-Peranson algorithm's computational details are intentionally withheld; (2) Preference confidentiality\u2014students cannot observe program rankings, programs cannot observe student rankings, even retrospectively; (3) Outcome suppression\u2014detailed matching data is restricted; (4) Structural discrimination\u2014IMG exclusion is embedded in program screening, URM bias is embedded in interview and ranking processes, both difficult to audit; (5) Exit suppression\u2014no alternative clearing mechanism exists, withdrawal from Match ends residency pathway. Theater ratio (0.58): Moderate-high. The 'algorithm' is presented as complex, neutral, and fair, creating performative legitimacy. The algorithm is actually transparent mathematics (stable matching theory), but the NRMP's presentation obscures this. Rising theater (0.42\u21920.58) reflects increasing performative effort as equity concerns have surfaced. The 'fairness' claim becomes more theatrical as evidence of systematic bias accumulates.",
+    "perspectival_gap": "The largest perspectival gap is between students and programs. For students, the Match is a Snare: they are trapped, have no information, and bear the full asymmetry. For programs, it is a Tangled Rope: they coordinate (solving the bilateral negotiation problem) while extracting (setting specialty distribution, sorting by geography, implicitly discriminating). For NRMP, it is a Rope: pure coordination problem solved, no meaningful victim group at NRMP's own level. The piton perspective reveals the constraint's inertial character\u2014the Match persists not because it is optimal (alternatives exist), but because institutional stakeholders (program directors, medical school deans) benefit from the status quo and have captured regulatory mechanisms. The false mountain perspective warns against naturalizing the matching problem\u2014bilateral allocation problems are real, but NRMP's specific implementation (opacity, suppression, discrimination) is contingent policy, not law of nature.",
+    "directionality_logic": "Medical students: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction trajectory. URM/IMG students: Victims + trapped + discrimination \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction with visibility amplification. Program directors: Beneficiaries + constrained (within Match while coordinated) \u2192 d\u22480.35, f(d)\u22480.28. Organized agents experience lower effective extraction because they have agency within the constraint's rules and coordinate collectively. NRMP: Institutional beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary\u2014the constraint subsidizes NRMP's institutional position. Academic medicine leadership: Institutional + constrained (must defend Match publicly) \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position\u2014benefits from program coordination, constrained to not publicly critique system that produces their faculty.",
+    "mandatrophy_analysis": "RESOLUTION PATH: The mandatrophy is resolved by recognizing that Tangled Rope is the correct classification at the ensemble level. The constraint exhibits both coordination function (bilateral matching problem is real and solved) and asymmetric extraction (student suppression, discrimination, information opacity). The mandatrophy question 'Is this coordination or extraction?' has the answer: it is both simultaneously, and that duality is the structural definition of Tangled Rope. The false mountain perspective is correctly flagged as a false summit: the analytical observer's claim that 'matching problems are inherent to labor markets' is true, but NRMP's current implementation (opacity, suppression, discrimination, regulatory capture) is not inherent\u2014it is contingent policy that could be reformed (transparency, portability, anti-discrimination mechanisms). The constraint does not degrade to pure Snare because programs do benefit from coordination, and students do benefit from stability relative to bilateral chaos. But the constraint is not a pure Rope because student suppression is real, discrimination is real, and NRMP extracts monopoly rents. Tangled Rope is the only classification that captures this duality without false naturalizing or false reduction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_education_debt_accumulation",
+      "specialty_distribution_imbalance",
+      "primary_care_workforce_shortage"
+    ],
+    "dual_formulation_note": "The NRMP Match is downstream of medical school admissions (which pre-sorts students by SES, undergraduate prestige, and demographic) and upstream of post-residency specialization decisions (which further extract from constrained graduates). The specialty distribution imbalance (too many proceduralists, too few generalists) is partially caused by Match-enabled program concentration. Primary care shortage is partially caused by Match-enabled specialty preference coordination by programs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

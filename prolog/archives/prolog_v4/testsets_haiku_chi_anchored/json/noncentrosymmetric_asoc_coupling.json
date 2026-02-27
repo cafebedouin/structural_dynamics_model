@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "noncentrosymmetric_asoc_coupling",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nasoc"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Noncentrosymmetric Antisymmetric Spin-Orbit Coupling",
+    "topic_domain": "condensed_matter_physics/superconductivity/quantum_materials",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Crystallographic Observer",
+      "comment": "PERSPECTIVE 1: CRYSTALLOGRAPHIC OBSERVER (MOUNTAIN) \u2014 The absence of inversion symmetry is a structural property of the crystal lattice itself. No observer, actor, or agent can negotiate this symmetry absence into existence or suppress it. \u03b5=0.12, accessibility_collapse=0.92. This is a geometric fact of the material structure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Physicist",
+      "comment": "PERSPECTIVE 2: THEORETICAL PHYSICIST (MOUNTAIN) \u2014 From the Hamiltonian level, antisymmetric spin-orbit coupling is a consequence of relativistic quantum mechanics applied to a non-centrosymmetric lattice. The constraint derives from first principles: relativistic corrections to the Dirac equation in a symmetry-broken potential. No experiment can refute the mathematical relationship; only confirm or refute whether specific materials realize the predicted coupling strength. \u03b5=0.12, resistance=0.08. The constraint is logically irreducible."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Experimental Materials Scientist",
+      "comment": "PERSPECTIVE 3: EXPERIMENTAL MATERIALS SCIENTIST (MOUNTAIN) \u2014 Even when designing materials, one cannot escape this constraint. Choosing a non-centrosymmetric crystal structure automatically invokes antisymmetric spin-orbit coupling. One can choose different materials or symmetries, but the coupling is intrinsic to the choice made. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.08. The scientist has exit at the material design level, but at each chosen material, the constraint is absolute."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Research Program Director",
+      "comment": "PERSPECTIVE 4: RESEARCH PROGRAM DIRECTOR (MOUNTAIN) \u2014 From an institutional view, the constraint enables research directions (noncentrosymmetric superconductivity as a field) but the fundamental constraint itself is not negotiable. One can fund research on topological superconductors, unconventional pairing mechanisms, or synthetic materials that exploit ASOC, but the underlying relationship between symmetry breaking and spin-orbit coupling persists. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. Institutional actors benefit from research programs enabled by the constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "asoc_strength_measurement",
+      "question": "Is the measured magnitude of antisymmetric spin-orbit coupling consistent with relativistic predictions from first principles, or do material-specific effects systematically enhance or suppress it?",
+      "resolution_mechanism": "Comparative analysis across material families (CePt3Si, Li2Pt3B, Li2Pd3B, etc.); ab initio calculations vs experimental spin splitting measurements (from ARPES, magneto-transport, muon spin rotation); systematic comparison of predicted vs observed \u03bb_ASOC",
+      "impact": "If consistent with relativistic theory: confirms mountain classification at all perspectives. If systematic deviations: may reveal a constraint family (ASOC as relativistic limit + material-specific modulation as separate constraint with higher \u03b5)",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Consistency of measured ASOC magnitude with relativistic predictions"
+    },
+    {
+      "id": "centrosymmetry_breaking_mechanism",
+      "question": "Is the loss of inversion symmetry a fundamental structural property or a low-energy effective description of a more complex structure?",
+      "resolution_mechanism": "High-resolution X-ray crystallography, transmission electron microscopy at atomic resolution, comparison of nominal and refined crystal structures; test for hidden symmetries or weak ordering that preserves inversion at higher temperatures",
+      "impact": "If fundamental: strengthens mountain classification; symmetry is irreducible. If effective: suggests a constraint family where true centrosymmetry + symmetry-breaking phase transition constitute separate constraints with different \u03b5 values and timescales",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether loss of inversion symmetry is fundamental or emergent"
+    },
+    {
+      "id": "asoc_observability_boundary",
+      "question": "What is the minimum coupling strength \u03bb_ASOC below which experimental signatures become indistinguishable from noise and finite-size effects?",
+      "resolution_mechanism": "Systematic study of materials with predicted ASOC values spanning 2-3 orders of magnitude; measurement sensitivity limits across ARPES, magneto-transport, and susceptibility probes; statistical power analysis of existing datasets",
+      "impact": "If boundary is above the weak-coupling regime: ASOC effects are always observable in principle. If boundary overlaps with calculated values for some materials: creates a domain where ASOC is theoretically present but experimentally inaccessible \u2014 potential false-summit scenario for mountain classification",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Observability threshold for antisymmetric spin-orbit coupling effects"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Noncentrosymmetric antisymmetric spin-orbit coupling (ASOC) is a structural constraint arising from the absence of spatial inversion symmetry in the crystal lattice combined with relativistic effects in the electronic Hamiltonian. This is a pure Mountain constraint \u2014 a natural law in the domain of condensed matter physics. The constraint is irreducible: if a crystal structure lacks inversion symmetry, relativistic quantum mechanics guarantees the presence of antisymmetric spin-orbit coupling in the low-energy electronic structure. The constraint does not extract value from any agent, does not suppress alternatives (scientists can choose different materials with different symmetries), and does not require enforcement. It simply is a consequence of the fundamental laws of physics applied to a specific structural configuration. All perspectives \u2014 crystallographic, theoretical, experimental, and institutional \u2014 converge on the same classification because the constraint's status as a natural law is invariant across all observation contexts.",
+    "key_agents": [
+      "The Crystal Lattice: Not an agent but the physical substrate. The inversion symmetry (or lack thereof) is an objective property of the material structure.",
+      "The Relativistic Electron: The quantum degree of freedom experiencing the spin-orbit coupling. Not an agent in the DR sense; the coupling acts on the electron's spinor structure.",
+      "Theoretical Physicists: Agents who understand the constraint through first-principles calculations. They derive coupling strength from crystal structure and relativistic corrections. d\u22480.50 (mobile within the constraint\u2014choose materials, don't choose coupling).",
+      "Experimental Materials Scientists: Agents who measure and characterize ASOC through ARPES, magneto-transport, and other probes. d\u22480.50 (constrained by the materials they choose, but free to choose different materials).",
+      "Research Program Directors: Institutional agents funding materials discovery and characterization. d\u22480.05 (beneficiary\u2014the constraint enables noncentrosymmetric superconductivity as a research field).",
+      "The Analytical Observer: Universal/civilizational perspective. d\u22480.72, but the mountain classification is not perspective-dependent in this case\u2014it holds across all perspectives."
+    ],
+    "logic_rationale": "Base extractiveness (\u03b5 = 0.12): Very low. The constraint does not extract resources, wealth, or opportunity from any agent. No one is worse off because ASOC exists. Scientists can choose materials with or without the coupling. The low \u03b5 reflects that this is a physical relationship, not a rent-extraction mechanism. Suppression (0.03): Negligible. There are no alternatives being suppressed. Inversion-symmetric materials exist as alternatives; noncentrosymmetric materials have different properties and different applications, but neither is 'suppressed' by the constraint. Theater ratio (0.15): Low. While there is some performative language in how ASOC effects are discussed (e.g., framing all interesting superconductivity as arising from ASOC when it may be secondary), the core constraint is mathematically rigorous and experimentally testable. The theater is minimal \u2014 mostly the inevitable scientific framing and presentation. Accessibility collapse (0.92): Very high. The constraint is accessible to any observer with knowledge of crystal structures and quantum mechanics. There are no hidden dimensions or exceptional cases. The relationship between inversion symmetry and ASOC is fully transparent. Resistance (0.08): Very low. The constraint faces no resistance from any agent or mechanism. It cannot be negotiated with, evaded, or mitigated.",
+    "perspectival_gap": "All perspectives converge on the same classification: Mountain. This is not a perspectival gap but a perspectival convergence \u2014 a signature of a true natural law. The crystallographer sees it as a structural fact. The theorist sees it as a mathematical consequence. The experimentalist sees it as an inescapable empirical property of chosen materials. The director sees it as enabling a research field. The analytical observer sees it as a universally invariant constraint. There is no disagreement because there is no extractive mechanism, no suppression of alternatives, and no asymmetry in who bears costs. This is the ideal case for mountain classification: the same base properties and logical structure yield the same type across all (P, T, E, S) tuples.",
+    "directionality_logic": "Mountain constraints do not require directionality analysis because they do not extract value or suppress alternatives. All agents have the same structural relationship to the constraint: they encounter it as an irreducible physical fact. The experimental scientist could choose a centrosymmetric material and avoid ASOC entirely, making their exit option 'constrained' only at the level of 'if you choose this material, this property follows.' At the level of material selection, exit is mobile. But within the set of noncentrosymmetric materials, the coupling is universal and inescapable. This creates a special case: the scientist's power is moderate (they choose the material class) and their exit is constrained (within the chosen class, ASOC is unavoidable), yet no extraction occurs because the constraint is purely a structural consequence of the choice, not a mechanism that benefits someone at the scientist's expense."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "inverse_spin_valve_signature",
+      "verification_bottleneck"
+    ],
+    "dual_formulation_note": "ASOC in noncentrosymmetric superconductors forms a constraint family with upper and lower bounds. (1) The fundamental constraint (this story) is the mathematical and relativistic relationship between inversion symmetry breaking and the presence of antisymmetric spin-orbit coupling in the Hamiltonian\u2014a pure mountain. (2) The observability of ASOC effects in specific materials may depend on coupling strength and measurement sensitivity; if observability becomes the constraint, a separate story would capture the experimental verification challenge (higher \u03b5, potentially Tangled Rope). (3) The interpretation of ASOC as the mechanism for exotic superconducting properties (nodal gaps, topological features) invokes a third constraint story with its own \u03b5 (currently categorized under topological_superconductivity_claims). This story addresses only the fundamental constraint."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  }
+}

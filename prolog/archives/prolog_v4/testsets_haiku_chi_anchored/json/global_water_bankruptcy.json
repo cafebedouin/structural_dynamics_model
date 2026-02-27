@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "global_water_bankruptcy",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gwb"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "The Global Water Bankruptcy Constraint",
+    "topic_domain": "environmental/economic",
+    "requires_active_enforcement": false,
+    "victims": [
+      "subsistence_agricultural_communities",
+      "groundwater_dependent_regions",
+      "future_generations",
+      "aquatic_ecosystems"
+    ],
+    "beneficiaries": [
+      "industrial_agriculture_irrigators",
+      "resource_extraction_industries",
+      "urban_water_monopolies"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Subsistence Agricultural Community (South Asia Aquifer Depletion)",
+      "comment": "PERSPECTIVE 1: SUBSISTENCE FARMERS (SNARE) \u2014 Trapped by hydrological collapse. Wells run dry; no exit option within the constraint (migration entails total social/economic loss). Extraction is maximal: constraint forces abandonment of land or grinding poverty through reduced yields. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Water-Scarce Nation (Morocco, Tunisia, etc.)",
+      "comment": "PERSPECTIVE 2: WATER-SCARCE NATION (SNARE) \u2014 Constrained by geopolitical dependency on shared river basins (Nile, Jordan, Euphrates). Cannot unilaterally increase supply; cannot fully exit without economic devastation. Upstream dam construction and agricultural irrigation in upstream nations extract water sovereignty. d\u22480.80, f(d)\u22481.18, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Industrial Irrigation Agriculture (California, Punjab, Egypt)",
+      "comment": "PERSPECTIVE 3: INDUSTRIAL IRRIGATION (TANGLED ROPE) \u2014 Mobile exit option exists (switch to dry-farmed crops or relocate operations), but switching has significant cost. Benefits from cheap water subsidy and externalized drainage/salinity costs. Experiences extraction of groundwater from future generations and from downstream users, but also coordinates efficiency gains through irrigation infrastructure. d\u22480.55, f(d)\u22480.75, \u03c3=0.8 \u2192 \u03c7\u22480.41."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Urban Water Monopoly (Municipal Utility)",
+      "comment": "PERSPECTIVE 4: URBAN WATER MONOPOLY (ROPE) \u2014 Arbitrage exit (desalination, import, recycling). Experiences constraint as a coordination problem: water pricing, allocation, and infrastructure investment are legitimate collective-action functions. Benefits from monopoly control and underpriced groundwater. Suppression of alternatives (decentralized rainwater harvesting, wastewater recycling) is structural but maintenance costs are moderate. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Aquatic Ecosystems and Future Generations",
+      "comment": "PERSPECTIVE 5: AQUATIC ECOSYSTEMS / FUTURE GENERATIONS (SNARE) \u2014 Completely trapped. Cannot exit, cannot negotiate, cannot organize. Rivers run dry (Colorado, Yellow, Indus); lakes collapse (Aral Sea, Dead Sea); aquifers drain irreversibly (Ogallala, North China Plain). Extraction is maximal and non-recoverable within human timescale. d\u22480.98, f(d)\u22481.48, \u03c3=1.2 \u2192 \u03c7\u22480.98."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Water Treaties and Governance",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL WATER GOVERNANCE (PITON) \u2014 Treaty frameworks (Ramsar, Agenda 21, SDG 6) persist as performative instruments with minimal enforcement. Theater ratio: commitment ceremonies, water-accounting protocols, sustainability frameworks are largely theatrical \u2014 actual water allocation follows geopolitical power (upstream dam construction, agricultural subsidies, extraction concessions). The treaties coordinate marginally but extract legitimacy and compliance theater. theater_ratio=0.58. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.22."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Hydrological Cycle Boundaries (Natural Law View)",
+      "comment": "PERSPECTIVE 7: HYDROLOGICAL CYCLE LIMIT (FALSE MOUNTAIN) \u2014 A civilizational/universal perspective might frame water bankruptcy as a physical law: precipitation is finite, and demand that exceeds it is impossible. However, the base properties (\u03b5=0.68, suppression=0.72, theater=0.58) contradict mountain criteria (\u03b5\u22640.25, suppression\u22640.05). The constraint is not emergent from hydrological physics but from institutional arrangements (subsidized extraction, irrigation intensity, population growth, waste). The 'natural law' framing naturalizes the contingent \u2014 this is a false summit, revealing how naturalizing language obscures extractive structures."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "virtual_water_substitution_sufficiency",
+      "question": "Can global trade in virtual water (water-embedded in agricultural products) adequately substitute for local water in reducing bankruptcy without creating systemic dependency and extraction leverage?",
+      "resolution_mechanism": "Modeling of water-stress propagation through agricultural trade networks; analysis of dependency concentration in exporting nations; longitudinal tracking of price volatility and sovereign control over export restrictions",
+      "impact": "If substitution effective: constraint reclassifies from snare to tangled_rope for importing nations (coordination function of trade exists). If substitution creates upstream dependency and extraction leverage: remains snare with different victims (exporting agricultural regions become trapped).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Virtual water trade as substitute for local hydrological limits"
+    },
+    {
+      "id": "aquifer_recharge_timescale_recovery",
+      "question": "Can fossil aquifer depletion (Ogallala, North China Plain) be arrested before irreversible desertification, or is the extraction rate already locked into permanent ecosystem collapse within the next 50 years?",
+      "resolution_mechanism": "Hydrological modeling of recharge vs extraction rates; paleoclimate reconstruction of Holocene recharge baselines; monitoring of well productivity decline and saltwater intrusion fronts; cost analysis of artificial recharge vs agricultural transition",
+      "impact": "If recovery possible: constraint permits adaptation and partial reversal (shifts toward scaffold perspective \u2014 temporary extraction with sunset). If locked into collapse: constraint is immutable snare for affected regions (mountain-like in irreversibility but extractive in mechanism).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether fossil aquifer depletion permits recovery before irreversible collapse"
+    },
+    {
+      "id": "desalination_economic_scalability",
+      "question": "Can energy-efficient desalination scale to provide >30% of global freshwater demand at costs that don't reproduce the same extraction pattern with energy as the substitute good?",
+      "resolution_mechanism": "Cost trajectory analysis of reverse osmosis and emerging technologies; energy source decarbonization modeling; comparison of desalination pricing to agricultural water value; analysis of brine disposal extraction costs on coastal ecosystems",
+      "impact": "If scalable at cost parity: removes hard hydrological limit; constraint shifts from snare (trapped by physical scarcity) to tangled_rope (energy-cost extraction but with exit via technology). If cost remains prohibitive: scarcity remains, but wealthy nations exit via desalination while poor nations remain trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Desalination cost trajectory and global scalability for substituting hydrological bankruptcy"
+    },
+    {
+      "id": "coordination_vs_extraction_institutional_design",
+      "question": "Is the global water bankruptcy fundamentally a coordination problem (optimizing use of finite supply) or an extraction problem (some actors' overconsumption systematically excludes others from access)?",
+      "resolution_mechanism": "Comparative institutional analysis of water governance models (market allocation vs cooperative management vs state rationing); case studies of constraints lifted vs constraints persisting after institutional reform; analysis of wealth correlation with water access post-reform",
+      "impact": "If primarily coordination: constraint is remediable by better allocation mechanisms (rope/scaffold outcome possible). If primarily extraction: institutional reforms fail because they don't address the underlying extraction incentive (snare diagnosis correct; structural reform needed).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether water bankruptcy is coordination or extraction problem"
+    },
+    {
+      "id": "population_and_consumption_trajectory_binding",
+      "question": "Will global population stabilization (projected 2080s peak at ~10 billion) combined with consumption pattern shifts reduce demand below sustainable supply, or does current trajectory lock in permanent deficit regardless of future population decline?",
+      "resolution_mechanism": "Demographic projection validation; modeling of consumption pattern change under water scarcity stress; comparison of per-capita water footprint trends to hydrological capacity; analysis of lock-in effects of infrastructure (dams, irrigation systems, cities) built during high-extraction period",
+      "impact": "If reduction possible: constraint has a temporal sunset (scaffold perspective valid). If lock-in prevents reduction: extraction is irreversible within generational timescale (mountain-like permanence but with mechanism of extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether population and consumption stabilization can reduce water demand below sustainable supply"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 1960,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "Global water bankruptcy emerges as the primary constraint on sustainable hydrological systems when aggregate human water demand exceeds the renewable supply rate. This has been accelerating since the 1960s due to three factors: (1) agricultural intensification and irrigation expansion, (2) industrial and municipal water use growth, and (3) climate-driven recharge reduction in key aquifer regions. The constraint exhibits characteristics of a pure extraction (snare) mechanism rather than a coordination failure or natural law. Institutional arrangements \u2014 water subsidies, groundwater property rights that permit depletion, agricultural commodity pricing that externalizes hydrological costs, and upstream dam construction that capture shared river flow \u2014 systematically benefit industrial agriculture and urban monopolies while imposing costs on subsistence communities, aquatic ecosystems, and future generations. The 'bankruptcy' framing is precise: like financial bankruptcy, the system has entered a state where liabilities (committed water uses) exceed assets (renewable supply), and the resolution requires either restructuring (which harms creditors) or default (which harms debtors). The extraction is legalized through property law and international treaties that lack enforcement mechanisms. The theater ratio (0.58) reflects that water governance increasingly relies on sustainability rhetoric, virtual water trade frameworks, and international water-sharing treaties that are performative \u2014 they produce the appearance of stewardship while actual allocation follows geopolitical power.",
+    "key_agents": [
+      "Subsistence agricultural communities (powerless/trapped): Primary victims in aquifer-depleted regions (South Asia, North Africa, Middle East); lack economic or political capacity to adapt; face abandonment or grinding poverty.",
+      "Industrial irrigation agriculture (powerful/mobile): Primary beneficiary; captures cheap water through subsidies and externalized cost of aquifer depletion and salinity damage; has exit options (crop switching, relocation) but exercises them selectively.",
+      "Water-scarce nations (moderate/constrained): Secondary victims; trapped by geopolitical dependency on shared rivers; upstream dam construction and agricultural diversion in upstream nations extract water sovereignty without recourse.",
+      "Urban water monopolies (institutional/arbitrage): Secondary beneficiary; controls urban supply; experiences constraint as legitimate coordination problem; has arbitrage options (desalination, imports, recycling) but maintains subsidy extraction from groundwater.",
+      "Aquatic ecosystems and future generations (powerless/trapped): Tertiary victims; completely outside the economic system; cannot negotiate, organize, or exit; bear irreversible costs (species extinction, ecosystem collapse, aquifer depletion beyond recharge).",
+      "International water governance bodies (institutional/constrained): Maintain performative frameworks (treaties, sustainability goals, water-accounting protocols); theater ratio indicates these are increasingly theatrical as actual water allocation follows geopolitical power.",
+      "Analytical observer (analytical/analytical): Civilizational perspective risks naturalizing institutional extraction as a physical law of hydrology \u2014 'scarcity is inevitable' obscures how institutional design creates scarcity through subsidized overconsumption."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts from subsistence farmers, aquatic ecosystems, and future generations to subsidize industrial agriculture and urban water monopolies. The extraction is not maximal (snare floor is \u22650.46) because some actors (wealthy nations, urban centers) have partial adaptation options, and some institutional mechanisms (water efficiency improvements, conservation) provide modest relief. However, the trend is upward: extractiveness has doubled from 0.32 (1960) to 0.68 (2020) as the system transitions from surplus to deficit. Suppression (0.72): High. Barriers to exit are substantial: groundwater depletion is physically irreversible on human timescales (fossil aquifer recovery period: 5,000-10,000 years). Agricultural relocation requires capital, knowledge, and social cohesion that subsistence communities lack. Upstream dam construction by politically powerful nations removes flow from downstream users with no compensation or negotiation. Water pricing in many regions is heavily subsidized, suppressing cost signals that would induce conservation. Alternative water sources (desalination, rainwater harvesting, wastewater recycling) are suppressed through infrastructure lock-in and regulatory barriers. Theater ratio (0.58): Moderate. International water-sharing treaties, sustainability commitments, and water-accounting frameworks are increasingly theatrical \u2014 they produce legitimacy and the appearance of stewardship without actually reducing extraction. Actual allocation follows geopolitical power (upstream dam construction, agricultural subsidies, extraction concessions). The theater has increased over the measurement period as the gap between commitment and action has widened.",
+    "perspectival_gap": "This constraint produces a dramatic perspectival gap. Industrial irrigators and urban monopolies see a Rope (coordination mechanism for allocating scarce water efficiently). Wealthy nations with desalination options see a Tangled Rope (some coordination, manageable costs, exit available). Water-scarce nations and subsistence communities see a Snare (no exit, no negotiation power, costs borne by powerless actors). Aquatic ecosystems and future generations experience a Snare that approaches a Mountain in irreversibility (species extinction and aquifer depletion are permanent). International governance institutions maintain a Piton perspective (treaties and protocols persist through inertia despite low effectiveness). A civilizational analytical observer risks naturalizing the constraint as a Mountain of physical law ('water scarcity is inevitable'), which obscures how institutional design created the bankruptcy through subsidized overconsumption, weak property rights for collective resources, and geopolitical extraction. The gap between beneficiary and victim perspectives is maximal: what appears as rational resource coordination to irrigators appears as structural violence to subsistence farmers.",
+    "directionality_logic": "Subsistence agricultural communities: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Extreme extraction; ground well dry, no alternatives within constraint structure. Water-scarce nations: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.18. Significant extraction; geopolitical dependency on shared rivers, no unilateral control. Industrial irrigation: Beneficiary + mobile (but constrained in practice) \u2192 d\u22480.55, f(d)\u22480.75. Mixed: benefits from cheap water but experiences feedback (rising input costs, yield decline from salinization). Urban water monopoly: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; has exit options (desalination, imports) but maintains extraction through monopoly control and subsidy. Aquatic ecosystems and future generations: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.48. Maximum extraction; completely outside market system, cannot exit, cannot recover. International governance: Institutional/constrained \u2192 d\u22480.35, f(d)\u22480.32. Piton classification derives from theater gate (0.58 \u2265 0.70 threshold not met, but sufficient to indicate performativity). The directionality pattern shows that all major victims are either powerless or institutionally trapped, while all beneficiaries have some form of exit option or control.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through explicit acknowledgment that the constraint is fundamentally extractive, not coordinative. The confusion arises because water scarcity can be framed as a coordination problem ('humanity needs to allocate a scarce resource efficiently') or as an extraction problem ('some actors' overconsumption systematically excludes others'). The base properties (\u03b5=0.68, suppression=0.72, beneficiaries present, victims present, requires_active_enforcement=false) indicate that this is a snare, not a rope or tangled_rope. The high extractiveness and suppression, combined with the directional asymmetry (beneficiaries have arbitrage/mobile exit; victims are trapped/constrained), confirm the snare classification. The mandatrophy is further resolved by showing that institutional reform alone cannot address the constraint because the extraction is encoded in property rights, subsidies, and geopolitical structures. A rope-only perspective would suggest that better allocation mechanisms (markets, treaties, efficiency improvements) could solve the problem; the snare diagnosis reveals that allocation mechanisms themselves are capture mechanisms \u2014 they legitimize extraction while appearing to coordinate. The theater ratio (0.58) indicates that governance increasingly relies on performative frameworks (sustainability rhetoric, voluntary commitments, accounting protocols) that produce the appearance of action without reducing extraction. This is the core of the mandatrophy: the constraint persists because the institutions designed to address it are themselves extractive mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_commodity_subsidy_lock",
+      "groundwater_property_rights_extraction",
+      "transnational_river_basin_geopolitics"
+    ],
+    "dual_formulation_note": "The global water bankruptcy can be decomposed into three structurally distinct constraints: (1) agricultural subsidies that create incentive for water-intensive monoculture (\u03b5\u22480.35, coordination failure), (2) groundwater property rights that permit exhaustion of fossil aquifers without penalty (\u03b5\u22480.72, pure extraction), and (3) geopolitical control of shared rivers via upstream dam construction (\u03b5\u22480.58, extraction with coordination element). The integrated constraint (\u03b5=0.68) is the system effect where all three reinforce each other. Water bankruptcy is downstream of subsidy architecture and property law but upstream of climate impact and ecosystem collapse."
+  },
+  "directionality_overrides": []
+}

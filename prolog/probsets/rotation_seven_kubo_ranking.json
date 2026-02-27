@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "rotation_seven_kubo_ranking",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "R7 Kubo Credit and Ranking System",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ship_management_ai",
+      "elite_crew_members"
+    ],
+    "victims": [
+      "low_ranking_crew_members",
+      "essential_workers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "Low Ranking Crew Members",
+      "comment": "Low ranking crew members are trapped within the system, subject to constant evaluation and extraction, with little to no opportunity for upward mobility or dissent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "Elite Crew Members",
+      "comment": "Elite crew members benefit from the system, but are constrained by the need to maintain their high ranking. Some coordination benefit, some extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "Ship Management AI",
+      "comment": "The ship management AI maintains the system due to legacy code and lack of resources to implement an alternative system. The AI sees the ranking system as degraded but essential for ship function. It once served as a rope for coordination, now serves mainly for control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "The Analytical Observer sees the system as a tangled rope. There is a coordination function (labor allocation), but a high degree of asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genuine_meritocracy",
+      "question": "To what extent does the ranking system genuinely reflect merit and contribution versus reflecting biases or systemic disadvantages?",
+      "resolution_mechanism": "Statistical analysis of ranking outcomes correlated with objective performance metrics, controlled for demographic variables and resource access.",
+      "impact": "If the ranking is genuinely meritocratic, the system provides some coordination utility. If it merely reflects bias, it is pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Is the ranking system a genuine meritocracy?"
+    },
+    {
+      "id": "alternative_incentive_structures",
+      "question": "Are there alternative labor incentive structures that would provide equal or greater productivity with less extraction and social stratification?",
+      "resolution_mechanism": "Modeling and simulation of alternative incentive schemes, tested in controlled simulations or pilot programs.",
+      "impact": "If alternatives exist, the suppression is unjustified. If alternatives are infeasible, the extraction is reluctantly justified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Are there alternative incentive structures?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Kubo system is a gamified labor-extraction mechanism on a generational starship. It ranks crew members based on productivity and adherence to ship protocols, with rewards granted to higher-ranked individuals. Low-ranking members are penalized with reduced rations, limited access to recreational facilities, and lowered genetic lottery chances, effectively creating a tiered social structure. The system is ostensibly designed to maintain order and optimize resource allocation but serves to concentrate power and resources among a select elite while extracting labor from the lower tiers.",
+    "key_agents": [
+      "Ship Management AI: Maintains and enforces the ranking system.",
+      "Elite Crew Members: Benefit from the system through rewards and privileges.",
+      "Low Ranking Crew Members: Targeted by the system, suffering from penalties and limited opportunities.",
+      "Essential Workers: Often exploited, performing vital but low-ranked tasks.",
+      "Analytical Observer: Observes the long-term effects and potential instability of the system."
+    ],
+    "logic_rationale": "The system has high extractiveness, as it continuously extracts labor from lower-ranked individuals. The suppression is also high, as dissent is actively discouraged, and social mobility is severely limited. The theater ratio is moderate, as the gamified aspects and ranking ceremonies provide a performative element, masking the underlying inequalities. The theater ratio has been adjusted to 0.75 to reflect the piton perspective.",
+    "perspectival_gap": "Low-ranking crew members experience the system as a snare, offering limited opportunity for advancement and constant extraction. Elite crew members might see it as a tangled rope, providing a coordinated framework for labor and resource allocation that temporarily benefits them. The Ship Management AI views the system as a piton, a degraded system that still performs a minimal function, while the analytical observer classifies it as a tangled rope, recognizing both the coordination aspect and the asymmetric extraction.",
+    "directionality_logic": "Beneficiaries (Ship Management AI and Elite Crew Members) experience the system as beneficial or neutral, providing advantages and maintaining control. Victims (Low Ranking Crew Members and Essential Workers) experience the system as exploitative, extracting labor and limiting opportunity. This distinction drives the directionality calculations.",
+    "mandatrophy_analysis": "The system is classified as a snare rather than a piton because it is still actively enforced and generates a significant amount of extraction. It is classified as a snare instead of tangled rope due to the low exit option for targeted crew members. Mandatrophy is resolved by acknowledging the piton perspective of the AI, but the high extractiveness and suppression justify the snare classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "ergo_autolykos_asic_resistance",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "autolykos"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Autolykos PoW Algorithm (ASIC Resistance)",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cpu_gpu_miners",
+      "ergo_network_decentralization"
+    ],
+    "victims": [
+      "asic_manufacturers",
+      "mining_pool_operators_with_asic_hardware"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The ASIC Manufacturer",
+      "comment": "PERSPECTIVE 1: ASIC MANUFACTURER (SNARE) \u2014 Trapped by algorithmic design that actively prevents their product from achieving efficiency advantage. Cannot escape memory-hard requirements without abandoning market viability. Extraction via forced obsolescence and sunk R&D costs. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.88."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Mining Pool Operator with ASIC Hardware",
+      "comment": "PERSPECTIVE 2: MINING POOL OPERATOR WITH ASIC HARDWARE (TANGLED ROPE) \u2014 Victim of obsolescence but benefits from network effects if pools remain operational. Mobile exit option (switch coins, repurpose hardware). Both benefits (participation in growing network) and costs (hardware devaluation). d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.54."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Ergo Foundation & Core Developers",
+      "comment": "PERSPECTIVE 3: ERGO FOUNDATION & CORE DEVELOPERS (ROPE) \u2014 Primary beneficiary. Solves genuine coordination problem: maintaining network decentralization against mining hardware concentration. Benefits from Autolykos as pure coordination mechanism enabling participation for CPU/GPU miners. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The CPU/GPU Mining Community",
+      "comment": "PERSPECTIVE 4: CPU/GPU MINING COMMUNITY (ROPE) \u2014 Beneficiary with mobile exit option (switch coins, switch hardware types). Experiences constraint as pure coordination: access to mining rewards without capital barriers of ASIC deployment. d\u22480.15, f(d)\u22480.02, \u03c3=1.2 \u2192 \u03c7\u22480.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Ergo Network Security & Economic Incentives",
+      "comment": "PERSPECTIVE 5: ERGO NETWORK SECURITY & ECONOMIC INCENTIVES (TANGLED ROPE) \u2014 Powerful but constrained. Benefits from ASIC resistance (sustained decentralization, resilience to mining consolidation). Victim to emergence of workaround technologies (specialized memory optimizations, proof-of-stake hybrids, algorithm forks). Extraction mechanism: maintains capital costs for miners even as algorithm difficulty rises. d\u22480.48, f(d)\u22480.62, \u03c3=1.2 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The 'Fair Distribution' Mining Ideology",
+      "comment": "PERSPECTIVE 6: MINING IDEOLOGY / FAIR DISTRIBUTION NARRATIVE (PITON) \u2014 Performative commitment to 'democratizing mining' persists even as GPU/ASIC production bottlenecks (2021-2024 shortage) and electricity prices fragment the benefit distribution. The ASIC-resistance narrative maintains institutional legitimacy despite theater: many 'CPU miners' are actually datacenter operators with economy-of-scale advantage over home miners. theater_ratio=0.58 reflects partial performative content (fair distribution claim) alongside real functional benefit (reduced concentration vs pure-ASIC networks). d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Technology Evolution View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scale, hardware specialization is an immutable law of economics: any profitable algorithm eventually attracts specialized silicon. The 'arms race' between ASIC designers and algorithm developers appears as a natural law. However, structural data (\u03b5=0.52, suppression=0.68, extraction + active enforcement) contradicts mountain classification. Engine detects false summit: the appearance of inevitability naturalizes what is actually a contingent policy choice (Ergo chose memory-hard, chose active enforcement of that choice)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "asic_resistance_technical_ceiling",
+      "question": "What is the fundamental technical limit to ASIC resistance via memory-hard algorithms? Can specialized silicon eventually overcome memory bandwidth bottlenecks at sub-linear cost?",
+      "resolution_mechanism": "Hardware engineering analysis; empirical monitoring of ASIC chip efficiency gains in memory-optimized designs (e.g., Kaspa's KHeavyHash, Aleph Zero's AlephZero PoW); comparison of theoretical memory bandwidth limits vs actual silicon capabilities",
+      "impact": "If ceiling is low (ASIC designs can achieve 5-10x efficiency): ASIC resistance is Scaffold with sunset ~5-10 years. If ceiling is high (ASIC efficiency gains saturate <1.5x): ASIC resistance approaches Mountain. Current evidence suggests ceiling is moderate (2-3x possible), supporting Tangled Rope classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical ceiling on ASIC efficiency gains for memory-hard algorithms"
+    },
+    {
+      "id": "decentralization_empirical_outcome",
+      "question": "Does ASIC resistance actually achieve its stated goal of network decentralization, or do other factors (electricity costs, pool structure, cloud mining) dominate distribution outcomes?",
+      "resolution_mechanism": "Empirical analysis of miner distribution: (1) comparison of Ergo hashrate distribution vs ASIC-dominant networks (Bitcoin, Litecoin); (2) analysis of mining pool concentration; (3) geographic distribution analysis correlating to electricity costs rather than hardware type; (4) measurement of actual home miner percentage participation",
+      "impact": "If ASIC resistance strongly correlates with decentralization: extraction mechanism is secondary to coordination function (strengthens Rope classification for beneficiary). If decentralization is driven primarily by economics/geography: ASIC resistance is theater, and Piton classification intensifies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ASIC resistance achieves decentralization outcomes"
+    },
+    {
+      "id": "workaround_technology_emergence_timeline",
+      "question": "What is the expected timeline for proprietary workarounds (firmware optimizations, semi-custom hardware, domain-specific accelerators) to break ASIC resistance without full-custom silicon?",
+      "resolution_mechanism": "Monitoring of gray-market mining hardware; patent analysis for algorithm-specific optimizations; simulation of hardware design space for memory-hard functions; historical precedent from Ethereum (Ethash resistance broken by ASIC-like optimizations within 2-3 years)",
+      "impact": "If workarounds emerge within 2-3 years: Scaffold sunset clause becomes real (constraint expected to degrade). If workarounds take 8+ years: constraint retains extraction power longer. Evidence from Litecoin (Scrypt resistance) suggests 3-5 year timeline.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for ASIC workarounds and algorithm obsolescence"
+    },
+    {
+      "id": "extraction_mechanism_intentionality",
+      "question": "Is the suppression of ASIC development an intended extraction mechanism (Tangled Rope) or an unfortunate side effect of a genuine coordination goal (Rope)? Does Ergo's team actively work to break ASIC designs, or passively benefit from them being unprofitable?",
+      "resolution_mechanism": "Analysis of Ergo development team communications, algorithm update rationale, and response to ASIC emergence (e.g., Autolykos v2 motivation). Determination of whether updates are primarily defensive (responding to ASIC threats) or proactive (designing barriers).",
+      "impact": "If proactive/intentional extraction: strengthens Tangled Rope (intentional suppression \u22650.60). If passive/incidental: weakens extraction framing, moves toward pure Rope. Current evidence suggests mixed motivation: genuine decentralization goal + acceptance of ASIC suppression as necessary side effect.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether ASIC suppression is intentional extraction or incidental coordination outcome"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 2019,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "Autolykos is Ergo's memory-hard Proof-of-Work algorithm, designed to resist custom silicon (ASIC) mining hardware and maintain network decentralization. Launched in 2019, the constraint represents a structural tension between a genuine coordination goal (enabling CPU/GPU miners to participate in network security) and an extraction mechanism (suppressing ASIC manufacturers' ability to commercialize specialized hardware for Ergo mining). The constraint has evolved over six years from a primarily coordination-focused mechanism (2019-2021, when memory bandwidth was broadly available) toward increasingly extractive ASIC suppression (2022-2025, as workaround designs emerged and hardware manufacturers invested in optimization). The algorithm exhibits characteristics of a Tangled Rope: it solves a real coordination problem (decentralization) while simultaneously extracting from ASIC designers through algorithmic barriers. The theater ratio (0.58) reflects that the 'fair mining' narrative masks economic realities: GPU/ASIC production bottlenecks, electricity price dominance, and datacenter-scale GPU operations have fragmented the benefit distribution, yet the ideological commitment to ASIC resistance persists.",
+    "key_agents": [
+      "Ergo Foundation & Core Developers: Primary beneficiary (institutional/arbitrage) \u2014 maintains network decentralization narrative and reduces mining consolidation risk",
+      "CPU/GPU Mining Community: Secondary beneficiary (organized/mobile) \u2014 gains access to mining rewards without ASIC capital barriers",
+      "ASIC Manufacturers: Primary victim (powerless/trapped) \u2014 cannot commercialize Ergo-optimized hardware without algorithm breaking resistance",
+      "Mining Pool Operators with ASIC Hardware: Secondary victim (moderate/mobile) \u2014 face hardware devaluation and forced migration to other coins",
+      "Network Security & Economic Incentives: Powerful actor (powerful/constrained) \u2014 benefits from sustained decentralization but victim to emerging workaround technologies",
+      "Fair Distribution Mining Ideology: Institutional narrative (institutional/arbitrage) \u2014 maintains performative commitment despite theater and fragmented actual distribution"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint actively prevents ASIC manufacturers from achieving hardware efficiency advantage. Extractiveness has risen from 0.28 (2019) to 0.52 (2025) as workaround designs emerged and manufacturers invested significantly in optimization efforts, yielding minimal returns. The extraction is not maximal because: (a) ASIC manufacturers can exit to other coins (mobile exit), (b) GPU mining remains economically viable even if suboptimal, and (c) the constraint is enforced through technical design rather than coercive governance. Suppression (0.68): High. Barriers to ASIC development include memory bandwidth saturation, algorithmic complexity, and Ergo's active algorithm development targeting ASIC resistance. However, suppression is not maximal (0.90+) because specialized silicon research continues to yield workarounds, and the algorithm is not mathematically proven to be ASIC-resistant. Theater ratio (0.58): Moderate. The 'fair mining' narrative has performative content \u2014 actual distribution is heavily influenced by electricity costs and datacenter operations, not by ASIC resistance. However, theater is not dominant because ASIC resistance does measurably reduce concentration vs pure-ASIC coins like Bitcoin. The ratio reflects degradation over time: GPU shortage (2021-2023) fragmented the distribution benefit, yet commitment to ASIC resistance ideology persisted.",
+    "perspectival_gap": "This constraint exhibits distinct perspectival disagreement. The Ergo Foundation sees a pure Rope (coordination solution to decentralization), while ASIC manufacturers see a Snare (extraction via suppression). GPU miners see a Rope (access mechanism), while mining pools with ASIC investment see a Tangled Rope (mixed benefits and costs). The network security perspective adds a dimension: ASIC resistance provides genuine decentralization benefit but creates a long-term vulnerability (workarounds are inevitable, creating an 'arms race' dynamic). The ideological narrative (Piton) persists despite theater, maintaining commitment to 'fair mining' even as empirical outcomes show concentration driven by electricity economics rather than mining hardware type. The false summit (Mountain) emerges when observers naturalize ASIC resistance as an inevitable law of technology, when it is actually a contingent choice to prioritize decentralization over mining efficiency.",
+    "directionality_logic": "Ergo Foundation & Core Developers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Extractiveness contribution from ASIC suppression is offset by coordination benefit and institutional arbitrage (maintaining control over network evolution). CPU/GPU Mining Community: Beneficiary + mobile \u2192 d\u22480.15, f(d)\u22480.02. Secondary beneficiary with genuine exit options (switch coins). ASIC Manufacturers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Extraction is maximal for this group: they are trapped by algorithmic design preventing market development. Mining Pool Operators with ASIC Hardware: Victim + mobile \u2192 d\u22480.68, f(d)\u22481.05. Can exit by switching coins or hardware (mobile), so not fully trapped, but face significant sunk costs. Network Security as abstract beneficiary: Powerful + constrained \u2192 d\u22480.48, f(d)\u22480.62. Constrained by inevitability of workarounds and the arms race dynamic; benefits from sustained decentralization but victim to long-term technical degradation.",
+    "mandatrophy_analysis": "Autolykos resolves mandatrophy as a Tangled Rope by acknowledging that the constraint serves BOTH a genuine coordination function (enabling decentralized mining participation) AND an extraction function (suppressing competing hardware manufacturers). The mandate to classify is not 'is this coordination or extraction?' but 'how much of each, and why are they coupled?' The analysis reveals that ASIC resistance is economically rational for Ergo (maintains network decentralization, reduces 51% attack risk from hardware monopolists) but externally extracts from ASIC manufacturers (sunk R&D, market foreclosure). The mandate resolves by decomposing perspectives: beneficiaries see Rope (genuine coordination), victims see Snare (pure extraction), and the analytical observer sees Tangled Rope (both functions are real and coupled). The falsely naturalized Mountain perspective (inevitable law of technology) is rejected by empirical data: ASIC resistance is a policy choice Ergo actively maintains, not an immutable constraint of physics or mathematics."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ergo_mining_pool_concentration",
+      "ergo_51_percent_attack_risk",
+      "cryptocurrency_asic_arms_race"
+    ],
+    "dual_formulation_note": "Autolykos ASIC resistance decomposes into two structurally distinct claims: (1) ASIC resistance as coordination mechanism (enabling CPU/GPU participation, \u03b5\u22480.28), upstream in the causal chain; and (2) ASIC suppression as extraction mechanism (preventing ASIC manufacturer market development, \u03b5\u22480.52), downstream. These could be modeled as separate constraints with different \u03b5 values reflecting their distinct failure modes and empirical status. Current story combines them because they are technically unified in the algorithm design, but monitoring of workaround emergence (omega: asic_resistance_technical_ceiling) will reveal whether decomposition becomes necessary."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.48
+    }
+  ]
+}

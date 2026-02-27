@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "infrastructure_interoperability_decay",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Protocol Silo Trap",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_platform_providers"
+    ],
+    "victims": [
+      "end_users",
+      "smaller_innovators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "End Users",
+      "comment": "End users, once reliant on a universal standard, find themselves trapped within a platform's ecosystem with limited interoperability, high switching costs, and reduced agency. Experience the constraint as a Snare."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Smaller Innovators",
+      "comment": "Smaller innovators are constrained by the dominant platform's ecosystem and face challenges in achieving interoperability. However, they also benefit from a large user base provided by dominant platform. Experience the constraint as a Tangled Rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Dominant Platform Providers",
+      "comment": "Dominant platform providers benefit from locking in users within their siloed ecosystems. They retain the ability to arbitrage by switching to the most advantageous proprietary sub-layer, but still coordinate through the base layer. Experience the constraint as a Rope."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Standards Bodies",
+      "comment": "Standards bodies may initially promote open standards but find their influence diminishes as platforms prioritize proprietary solutions, rendering the initial standard a piton."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes the initial coordination benefits of the standard, the subsequent fragmentation and extraction, and the long-term consequences of reduced interoperability and innovation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "platform_lock_in_intensity",
+      "question": "How strong are network effects and switching costs that create platform lock-in?",
+      "resolution_mechanism": "Empirical analysis of user behavior, market share dynamics, and switching costs.",
+      "impact": "High lock-in leads to stronger Snare for users and Tangled Rope for smaller innovators; low lock-in allows for greater user mobility and competition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intensity of platform lock-in effects"
+    },
+    {
+      "id": "regulatory_intervention_feasibility",
+      "question": "Can regulatory interventions effectively promote interoperability without stifling innovation?",
+      "resolution_mechanism": "Case studies of regulatory interventions in similar markets.",
+      "impact": "Effective regulation leads to a shift towards Rope or Scaffold; ineffective regulation exacerbates the Snare and Tangled Rope.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Feasibility of regulatory intervention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Protocol Silo Trap describes the scenario where a universal communication or transport standard (Rope) fragments into proprietary, incompatible sub-layers as providers seek to 'lock in' users. This leads to a loss of interoperability, reduced user agency, and potential stifling of innovation.",
+    "key_agents": [
+      "Dominant Platform Providers: Primary beneficiary (institutional/arbitrage) \u2013 gains from lock-in.",
+      "End Users: Primary victim (powerless/trapped) \u2013 lose interoperability and agency.",
+      "Smaller Innovators: Secondary victim (moderate/constrained) \u2013 face challenges in achieving interoperability.",
+      "Standards Bodies: Diminished influence (analytical/analytical) \u2013 promote open standards but proprietary solutions dominate."
+    ],
+    "logic_rationale": "Extractiveness (0.60): The dominant platforms extract value from their locked-in user base, suppressing alternatives and charging rents on the ecosystem. Suppression (0.70): High due to network effects and switching costs. Users are effectively locked in. Theater ratio (0.75): Relatively high performative activity. Platforms engage in performative interoperability efforts to appease regulators and users, while maintaining core lock-in mechanisms. The system benefits dominant firms by network effects.",
+    "perspectival_gap": "End users experience a Snare as they become trapped within a platform's ecosystem. Dominant platform providers see a Rope because they still co-ordinate through the base layer and can arbitrage between proprietary options. Smaller innovators find themselves in Tangled Rope as they are constrained by but also benefit from larger platform's user base. Standards bodies observe the decay of open standards into a Piton.",
+    "directionality_logic": "Dominant platform providers benefit (low d) from the lock-in, thus experiencing it as coordination. End users bear the cost of being trapped (high d). The analytical observer captures the full picture to classify. Small innovators have a mixed experience (moderate d)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "data_portability_constraint"
+    ]
+  },
+  "directionality_overrides": []
+}

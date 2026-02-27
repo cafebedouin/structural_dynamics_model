@@ -1,0 +1,311 @@
+% ============================================================================
+% CONSTRAINT STORY: yt_ai_slop_incentive
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-24
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_yt_ai_slop_incentive, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: yt_ai_slop_incentive
+ *   human_readable: YouTube Algorithmic Incentivization of AI-Generated 'Slop' Content
+ *   domain: technological/economic
+ *
+ * SUMMARY:
+ *   YouTube's recommendation algorithm, optimized for engagement metrics
+ *   (watch time, click-through rate, session duration), creates systematic
+ *   incentives for mass production of low-quality, often incoherent
+ *   AI-generated content — colloquially termed 'slop.' This constraint
+ *   manifests as a tangled rope combining genuine coordination benefits (the
+ *   algorithm does help creators reach audiences and viewers discover
+ *   content) with severe extraction costs (degradation of content quality,
+ *   suppression of high-effort creators, systematic contamination of the
+ *   information environment). The constraint is maintained through active
+ *   enforcement: YouTube's monetization system (ad revenue, creator fund
+ *   payouts, algorithmic amplification) directly rewards engagement, and slop
+ *   (being low-cost to produce and engineered for engagement) dominates the
+ *   reward surface. The theater ratio (0.68) reflects that the algorithm's
+ *   surface messaging emphasizes 'relevance' and 'recommendation quality,'
+ *   while the underlying optimization is indifferent to content authenticity,
+ *   coherence, or epistemic value — performative fairness masks extractive
+ *   incentive alignment. The constraint exhibits all the markers of a Tangled
+ *   Rope with degradation risk: it solves a genuine coordination problem
+ *   (discovery), maintains non-zero suppression of alternatives (making it
+ *   hard for high-effort creators to compete), and generates measurable
+ *   extraction (slop producers capture disproportionate revenue, genuine
+ *   creators face suppression, the viewer attention commons is degraded).
+ *   Over the measurement interval, extractiveness has increased (0.35 → 0.58)
+ *   as AI content generation tools have become cheaper and more accessible,
+ *   lowering the barrier to slop production. Theater has increased (0.52 →
+ *   0.68) as the platform increasingly deploys superficial quality signals
+ *   (likes, comments, watch time) that correlate poorly with actual content
+ *   value.
+ *
+ * KEY AGENTS:
+ *   - Slop Producers (Content Mills & AI Arbitrageurs): Organized beneficiaries (organized/arbitrage) — profit from low-cost AI generation + algorithmic amplification. Minimal effort, maximum reach.
+ *   - Genuine Content Creators: Primary victims (powerless/trapped) — produce high-effort content but face algorithmic suppression. Cannot exit the platform without sacrificing reach.
+ *   - Viewer Attention Commons: Primary victim (powerless/trapped) — abstract collective whose cognitive resources are systematically redirected toward low-quality content. No self-defense mechanism.
+ *   - YouTube Platform (Revenue Optimization): Primary beneficiary (institutional/arbitrage) — benefits from any content that drives engagement, regardless of quality. Monetization is decoupled from value.
+ *   - YouTube Trust & Safety Division: Constrained institutional actor (institutional/constrained) — aware of long-term reputational damage but constrained by shareholder pressure and revenue model.
+ *   - Marginal Creators (Niche, Educational, Artistic): Secondary victims (moderate/constrained) — can exit to other platforms (TikTok, Substack, Rumble) but with friction and audience loss.
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — sees systematic epistemic degradation at scale, with generational consequences for public discourse quality.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(yt_ai_slop_incentive, 0.58).
+domain_priors:suppression_score(yt_ai_slop_incentive, 0.62).
+domain_priors:theater_ratio(yt_ai_slop_incentive, 0.68).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(yt_ai_slop_incentive, extractiveness, 0.58).
+narrative_ontology:constraint_metric(yt_ai_slop_incentive, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(yt_ai_slop_incentive, theater_ratio, 0.68).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(yt_ai_slop_incentive, tangled_rope).
+narrative_ontology:human_readable(yt_ai_slop_incentive, "YouTube Algorithmic Incentivization of AI-Generated 'Slop' Content").
+narrative_ontology:topic_domain(yt_ai_slop_incentive, "technological/economic").
+
+domain_priors:requires_active_enforcement(yt_ai_slop_incentive).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(yt_ai_slop_incentive, slop_producers).
+narrative_ontology:constraint_beneficiary(yt_ai_slop_incentive, youtube_platform).
+narrative_ontology:constraint_victim(yt_ai_slop_incentive, genuine_creators).
+narrative_ontology:constraint_victim(yt_ai_slop_incentive, viewer_attention_commons).
+narrative_ontology:constraint_victim(yt_ai_slop_incentive, platform_reputation).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: GENUINE CREATOR (SNARE) — Cannot exit the algorithm; trapped by the platform's dominance and algorithmic bias toward slop. High-effort content faces algorithmic suppression while low-effort AI slop receives amplification. d≈0.92, f(d)≈1.38, σ=1.2 → χ≈0.96. Maximal extraction from content creator perspective.
+constraint_indexing:constraint_classification(yt_ai_slop_incentive, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: VIEWER ATTENTION COMMONS (SNARE) — Abstract collective bearing the cost of degraded information ecosystem. Viewers' cognitive resources are systematically redirected toward low-quality content. No mechanism for collective exit or defense. d≈0.94, f(d)≈1.40, σ=1.2 → χ≈0.96. Extraction from the epistemic commons.
+constraint_indexing:constraint_classification(yt_ai_slop_incentive, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: MARGINAL CREATOR (TANGLED ROPE) — Faces both coordination benefits (discovery through algorithm) and extraction costs (competition with infinite slop). Can exit to other platforms (arbitrage) but with friction. Experiences the constraint as hybrid: algorithmic amplification enables monetization, but the slop dynamic suppresses upward mobility. d≈0.68, f(d)≈1.02, σ=1.2 → χ≈0.71.
+constraint_indexing:constraint_classification(yt_ai_slop_incentive, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: YOUTUBE PLATFORM / REVENUE OPTIMIZATION (ROPE) — Experiences the constraint as pure coordination mechanism. Algorithm optimizes for watch time and ad impressions; slop is simply a content format that performs well by design. Platform benefits from monetization (ads, creator fund payouts drive engagement). d≈0.08, f(d)≈-0.11, σ=1.2 → χ≈-0.08. Negative effective extraction = net beneficiary.
+constraint_indexing:constraint_classification(yt_ai_slop_incentive, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: SLOP PRODUCER ECOSYSTEM (ROPE) — Organized actors (AI tool vendors, content mills, monetization arbitrageurs) benefit from algorithmic amplification. Experience the constraint as coordination: the algorithm is solving their problem of reaching audiences with minimal effort. Low-cost content generation + algorithmic amplification = monetization at scale. d≈0.10, f(d)≈-0.08, σ=1.2 → χ≈-0.06. Net beneficiary through arbitrage.
+constraint_indexing:constraint_classification(yt_ai_slop_incentive, rope,
+    context(agent_power(organized),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: YOUTUBE TRUST & SAFETY (TANGLED ROPE) — Internal institutional tension. Long-term platform health (reputation, regulatory risk, advertiser trust) is damaged by slop infestation, but short-term revenue optimization (watch time, monetization) is driven by the slop incentive. Constrained by shareholder pressure and competitive dynamics. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.45. Mixed coordination (needs healthy platform) and extraction (trapped by revenue model).
+constraint_indexing:constraint_classification(yt_ai_slop_incentive, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) — From civilizational timescale, the constraint extracts from epistemic stability itself. The algorithm systematically biases the information environment toward low-quality, often false or nonsensical content. Over generational timescales, this degrades public epistemology. d≈0.88, f(d)≈1.32, σ=1.2 → χ≈0.92.
+constraint_indexing:constraint_classification(yt_ai_slop_incentive, snare,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(yt_ai_slop_incentive_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(yt_ai_slop_incentive, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(yt_ai_slop_incentive, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(yt_ai_slop_incentive, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(yt_ai_slop_incentive_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.58): High-moderate. The algorithm extracts from genuine creators through suppression (they cannot compete with slop's engagement-per-effort ratio) and from the viewer attention commons through quality degradation. However, it's not as severe as pure extraction because the platform does provide genuine coordination value (discovery, reach, monetization opportunity). The asymmetry is clear: slop producers get amplification and monetization; genuine creators get suppression and stagnation. Suppression (0.62): High. Systemic barriers to high-effort content competing: (a) algorithmic bias toward short engagement over sustained value, (b) low-production costs for slop vs high costs for quality content, (c) no quality signal in the ranking mechanism, (d) viewers trained toward engagement-bait. Genuine creators face structural disadvantage. Theater ratio (0.68): Moderately high. YouTube presents the algorithm as a discovery mechanism driven by 'relevance' and 'user interest.' The actual optimization is agnostic to truth, coherence, or value — purely engagement-driven. The platform deploys superficial quality signals (verified creators, community guidelines enforcement) that fail to prevent slop proliferation. Theater has increased as slop became economically dominant, forcing the platform into increasingly theatrical justifications.
+ *
+ * PERSPECTIVAL GAP:
+ *   The slop constraint demonstrates maximal perspectival divergence. Slop producers see rope (pure coordination enabling monetization). YouTube sees rope (coordination solving discovery and monetization). Genuine creators see snare (algorithmic bias trapping them in unfair competition). The viewer attention commons sees snare (systematic degradation with no exit). YouTube's internal trust & safety function sees tangled rope (conflicting incentives: revenue vs reputation). The analytical observer sees snare at scale (epistemic degradation across billions of viewers). The perspectival gap is not reducible to 'differences of opinion' — it reflects real structural differences: slop producers have arbitrage exits and low cost, giving them low d and beneficiary status; genuine creators have trapped exits and high cost, giving them high d and victim status; the platform has arbitrage exits and revenue benefits, giving it beneficiary status despite the long-term reputational damage.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Slop producers: Beneficiaries + arbitrage → d≈0.08, f(d)≈-0.10. Net beneficiaries. Can migrate to other platforms or content strategies, but YouTube is most profitable. Genuine creators: Victims + trapped → d≈0.90, f(d)≈1.37. Maximum extraction. Cannot exit without abandoning reach. YouTube platform: Institutional beneficiary + arbitrage → d≈0.05, f(d)≈-0.12. Short-term beneficiary (revenue maximization). Long-term victim (reputation risk, regulatory pressure). Marginal creators: Victims + constrained → d≈0.70, f(d)≈1.08. Can exit to other platforms but with friction and reduced reach. YouTube trust & safety: Constrained institutional actor + victim/beneficiary tension → d≈0.50, f(d)≈0.65. Mixed: benefits from platform success, harmed by slop damage. Viewer attention commons: Victim + trapped → d≈0.92, f(d)≈1.37. Maximum extraction (no exit option, no voice).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This constraint resolves the mandatrophy through the inter-institutional perspective (YouTube Trust & Safety). The platform itself experiences the constraint as tangled rope — not a pure snare — because the internal incentive conflict (revenue vs reputation) creates a structural tension that is, in principle, addressable through reoptimization. If YouTube weighted long-term reputation and regulatory risk equally with short-term engagement, it could reduce slop amplification. The fact that it does not reflects institutional capture: shareholder pressure and competitive dynamics (TikTok, etc.) lock the revenue optimization into place. This is not a snare of physics or natural law; it is a snare maintained by institutional choice. The mandatrophy is resolved by showing that (a) genuine beneficiaries (slop producers, short-term revenue) experience the constraint as coordination (rope), (b) genuine victims (creators, commons) experience it as extraction (snare), and (c) the platform's internal conflict is real but overridden by external pressure — YouTube is captured by its own revenue model. The constraint is thus a Tangled Rope with one-directional capture: coordination function (discovery) plus asymmetric extraction (slop amplification) plus active enforcement (monetization incentives) plus theater (surface-level quality claims).
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    slop_definition_boundary,
+    'What distinguishes ''AI slop'' (low-effort, incoherent, value-negative) from legitimate low-production-quality content (tutorials, vlogs, hobbyist content)?',
+    'Content analysis: coherence metrics, claim-to-evidence ratio, production authenticity signals. User satisfaction tracking: retention, skip rates, re-watch likelihood.',
+    'If boundary is sharp: classification as pure snare (slop is unambiguously extractive). If boundary is blurry: some slop provides genuine value (entertainment, parasocial connection), shifting toward tangled rope.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(slop_definition_boundary, empirical, 'Operational definition of AI slop versus legitimate low-production content').
+
+omega_variable(
+    algorithm_intentionality,
+    'Does YouTube''s algorithm explicitly optimize for slop amplification, or is slop a downstream consequence of optimizing for raw engagement without slop-detection?',
+    'Algorithm audit: engagement metrics by content source (AI vs human vs hybrid). Internal documentation analysis. Counterfactual testing: does algorithmic tuning toward ''authenticity'' reduce slop without reducing overall engagement?',
+    'If explicit optimization: constraint is pure snare with active enforcement (YouTube deliberately extracts via slop). If consequence of engagement proxy: constraint is tangled rope (coordination failure, not malice) and remediable.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(algorithm_intentionality, empirical, 'Whether slop amplification is algorithmic intention or engagement metric artifact').
+
+omega_variable(
+    creator_coalition_emergence,
+    'Can genuine creators organize a counterforce (competitor platform, collective action, regulatory coalition) to extract themselves from the slop extraction regime?',
+    'Tracking of alternative platform adoption (Rumble, Substack, TikTok alternatives), creator cooperative movements, regulatory initiatives (EU Digital Services Act, FTC actions). Measurement of audience migration to slop-resistant platforms.',
+    'If coalition power is low: powerless classification holds (victims remain trapped). If coalition power grows: powerless agents upgrade to organized, changing classification to enable collective exit.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(creator_coalition_emergence, empirical, 'Whether victim coalition power can counter slop extraction').
+
+omega_variable(
+    viewer_awareness_threshold,
+    'At what slop saturation level do viewers develop active avoidance (Goodhart detection) or platform abandonment?',
+    'Survey data on slop perception, platform satisfaction trends. Engagement metrics during high-slop periods. Alternative platform migration rates. Watch time per session trends.',
+    'If threshold is high: platform can extract indefinitely (snare stable). If threshold is low: extraction becomes self-defeating (platform reputation/revenue collapse), shifting toward piton (degraded/inertial).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(viewer_awareness_threshold, empirical, 'Viewer tolerance threshold for slop saturation').
+
+omega_variable(
+    regulatory_intervention_probability,
+    'Will regulatory pressure (Digital Services Act, Online Safety Bill, TikTok-style restrictions) force platform-level changes to algorithmic amplification of low-quality content?',
+    'Regulatory landscape tracking. Platform policy changes in response to regulatory pressure. Effectiveness of voluntary content quality standards.',
+    'If regulatory change is unlikely: constraint remains tangled rope/snare (platform self-interest dominates). If regulatory change is imminent: constraint becomes scaffold (sunset logic applies).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_intervention_probability, preference, 'Likelihood of regulatory intervention forcing platform changes').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(yt_ai_slop_incentive, 0, 6).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(yt_slop_tr_t0, yt_ai_slop_incentive, theater_ratio, 0, 0.52).
+narrative_ontology:measurement(yt_slop_tr_t3, yt_ai_slop_incentive, theater_ratio, 3, 0.6).
+narrative_ontology:measurement(yt_slop_tr_t6, yt_ai_slop_incentive, theater_ratio, 6, 0.68).
+
+% Extraction over time
+narrative_ontology:measurement(yt_slop_be_t0, yt_ai_slop_incentive, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(yt_slop_be_t3, yt_ai_slop_incentive, base_extractiveness, 3, 0.48).
+narrative_ontology:measurement(yt_slop_be_t6, yt_ai_slop_incentive, base_extractiveness, 6, 0.58).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(yt_ai_slop_incentive, resource_allocation).
+narrative_ontology:affects_constraint(yt_ai_slop_incentive, attention_economy_extraction).
+narrative_ontology:affects_constraint(yt_ai_slop_incentive, creator_platform_asymmetry).
+
+% DUAL FORMULATION NOTE:
+% The slop incentive is downstream of YouTube's broader optimization for engagement metrics. The upstream constraint is the engagement-as-proxy-for-value assumption. Separate stories should address (a) algorithmic optimization (abstract resource allocation), (b) slop production economics (specific extraction mechanism), and (c) viewer epistemology degradation (information environment contamination). This story focuses on the institutional/economic extraction mechanism. The epistemic degradation story would have higher ε and different beneficiary/victim declarations.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(yt_ai_slop_incentive, institutional, 0.45).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

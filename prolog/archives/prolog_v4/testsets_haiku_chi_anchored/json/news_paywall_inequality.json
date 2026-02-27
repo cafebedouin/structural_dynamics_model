@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "news_paywall_inequality",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "paywall"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Information Asymmetry due to News Paywalls",
+    "topic_domain": "social/media/economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "premium_publishers",
+      "affluent_readers"
+    ],
+    "victims": [
+      "low_income_readers",
+      "epistemic_public_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Reader",
+      "comment": "PERSPECTIVE 1: LOW-INCOME READER (SNARE) \u2014 Cannot afford premium subscriptions; trapped in low-quality information diet. Faces full extraction: quality journalism is gatekept, forcing reliance on free but unreliable sources, social media algorithms, or no news at all. No meaningful exit option; cost of political disengagement is high. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Premium Publisher",
+      "comment": "PERSPECTIVE 2: PREMIUM PUBLISHER (ROPE) \u2014 Experiences paywall as coordination mechanism: solves the collective action problem of sustainable journalism funding. Subscription revenue enables quality reporting. Coordination benefit (quality journalism) offsets perceived suppression cost. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Affluent Reader",
+      "comment": "PERSPECTIVE 3: AFFLUENT READER (TANGLED ROPE) \u2014 Can afford premium subscriptions but faces paywall friction (multiple subscriptions for different outlets, registration delays). Benefits from paywalled quality journalism but also constrained by paywall enforcement. Hybrid: gains information access (coordination benefit) but pays extraction cost. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Information Equity Movement",
+      "comment": "PERSPECTIVE 4: INFORMATION EQUITY MOVEMENT (TANGLED ROPE) \u2014 Organized actors (news literacy nonprofits, public media advocates, open-access journalists) see paywalls as both solving a coordination problem (funding journalism) and creating asymmetric extraction. Movement benefits from the public's demand for information access (coordination function) but is constrained by publisher market power. Has exit options (build alternative platforms, promote public media) but these are resource-intensive. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Journalism Model",
+      "comment": "PERSPECTIVE 5: TRADITIONAL JOURNALISM MODEL (PITON) \u2014 Paywalls are a degraded sustenance mechanism for print-era journalism economics. Historically, classified ads and subscriber revenue funded journalism; paywalls replicate that model in digital form. But the function has atrophied: most digital paywalls capture < 10% of revenue compared to print subscriptions' 30-40%. Theater ratio = 0.48 reflects that paywall enforcement (cookie walls, metering) is partly performative\u2014sophisticated readers bypass via incognito mode, article links, or aggregators\u2014while the underlying economic problem (digital ad collapse) remains unsolved. The model persists through inertia, not effectiveness."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Public Media Coalition",
+      "comment": "PERSPECTIVE 6: PUBLIC MEDIA COALITION (SCAFFOLD) \u2014 Public broadcasters, nonprofit newsrooms, and open-access platforms see paywalls as a temporary coordination failure with a sunset. Alternative funding models (philanthropic, membership, public funding, collaborative journalism networks) are creating post-paywall pathways. These platforms have low suppression and genuine coordination benefits without extraction. As these mature over generational timescales, traditional paywall extraction loses force. Has sunset clause: open-access norms and funded journalism alternatives are building to replace paywall-dependent models."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, paywalls might appear as an immutable law of information economics: quality journalism requires funding, funding requires payment, payment requires exclusion. But the structural data (\u03b5=0.52, suppression=0.65, theater=0.48) contradicts the mountain classification. The constraint is contingent on specific institutional arrangements (copyright enforcement, subscription technology, digital ad market collapse) rather than fundamental. The engine will compute this as a false summit, revealing that 'paying for information is inevitable' naturalizes what is actually a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sustainable_journalism_funding_path",
+      "question": "What alternative funding model (philanthropy, membership, public funding, syndication, or hybrid) can sustain quality journalism without information-based extraction?",
+      "resolution_mechanism": "Case study analysis of nonprofit newsrooms, public broadcasters, and membership-based outlets; longitudinal tracking of journalism quality and sustainability metrics across funding models; economic modeling of scalability",
+      "impact": "If viable alternatives exist and scale: paywall extraction is a policy choice, not necessity (Scaffold or Rope). If alternatives remain niche: paywalls may be unavoidable (Mountain or Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-paywall models can sustainably fund quality journalism"
+    },
+    {
+      "id": "information_inequality_causal_chain",
+      "question": "Does paywall-induced information asymmetry causally degrade low-income readers' decision-making on issues requiring detailed knowledge (healthcare, finance, education, politics)?",
+      "resolution_mechanism": "Comparative analysis: decision outcomes for paywall-exposed vs paywall-free readers controlling for income; experimental exposure to quality journalism vs free sources; longitudinal tracking of knowledge gaps and decision quality",
+      "impact": "If causal degradation is severe: victims perspective (Snare) is confirmed and extraction severity is high. If information gaps close over time through alternative sources: extraction severity may be overstated (closer to Rope for public).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether paywalls causally degrade low-income readers' decision-making"
+    },
+    {
+      "id": "paywall_enforcement_technological_cost",
+      "question": "What proportion of paywall infrastructure cost goes to actual content exclusion vs authentication theater (cookie walls, metering, registration delays, incognito blocking)?",
+      "resolution_mechanism": "Technical audit of paywall systems; comparison of enforcement costs across publishers; measurement of actual exclusion rates vs attempted exclusion; user behavior analysis on bypass methods",
+      "impact": "If enforcement cost is high relative to exclusion effectiveness: theater_ratio may be understated, suggesting Piton classification is stronger. If enforcement is highly effective: theater_ratio estimate is correct, and Tangled Rope classification is appropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What fraction of paywall cost is theater vs functional exclusion"
+    },
+    {
+      "id": "public_media_alternative_viability",
+      "question": "Can publicly funded or philanthropically funded journalism scale to replace market-based paywall models while maintaining editorial independence and quality?",
+      "resolution_mechanism": "Comparative institutional analysis of NPR, BBC, Guardian (philanthropic), ProPublica, nonprofit state bureaus; measurement of editorial independence metrics, revenue stability, and reach",
+      "impact": "If public/philanthropic models can scale: Scaffold perspective is confirmed and sunset timeline is real (15-30 years). If they remain niche: alternatives are aspirational, and paywalls remain extractive long-term (Snare/Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether public/philanthropic journalism can scale as paywall alternative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "News paywalls create a structural tension between the economic necessity of funding quality journalism and the democratic requirement for universal information access. Paywall-based revenue is framed by publishers as a coordination mechanism \u2014 solving the collective action problem of digital journalism sustainability \u2014 but operates as asymmetric extraction from low-income readers who are priced out of quality information. The constraint exhibits multiple legitimate classifications depending on observer position: publishers see coordination (Rope), low-income readers see pure extraction (Snare), organized equity advocates see mixed coordination-extraction (Tangled Rope), and alternative funding movements see a temporary problem with a sunset (Scaffold). The theater ratio (0.48) reflects that paywall enforcement is partly performative: technical barriers (cookie walls, metering, registration friction) provide more theatrical friction than actual exclusion, as readers bypass paywalls through incognito browsing, link sharing, aggregators, and library access. Extractiveness has risen from 0.30 to 0.52 over the measurement interval as publishers have hardened paywalls in response to digital ad collapse, indicating that the constraint is intensifying rather than resolving through market mechanisms.",
+    "key_agents": [
+      "Low-Income Readers: Primary victim (powerless/trapped) \u2014 excluded from quality journalism by price, forced into low-quality information diet; no meaningful exit option",
+      "Premium Publishers (NYT, WSJ, FT, etc.): Primary beneficiary (institutional/arbitrage) \u2014 capture subscription revenue and reader data; justify paywalls as necessary for journalism funding",
+      "Affluent Readers: Secondary beneficiary/partial victim (moderate/constrained) \u2014 can afford subscriptions but face paywall friction; gain access but bear coordination cost",
+      "Information Equity Movement (nonprofits, literacy advocates, open-access journalists): Organized victim (organized/mobile) \u2014 organize to build alternatives and demand access; benefit from public demand but constrained by publisher market power",
+      "Traditional Journalism Industry: Institutional actor (institutional/arbitrage) \u2014 maintains paywall model as degraded sustenance mechanism for print-era economics; theater reflects partial effectiveness",
+      "Public Media Coalition (NPR, BBC, Guardian philanthropy, ProPublica, nonprofit newsrooms): Organized beneficiary (organized/mobile) \u2014 building post-paywall funding models with genuine coordination benefits; have exit options and sunset vision",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent paywall economics as inherent law of information"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderately high. Publishers capture significant economic rent from subscriber willingness to pay; low-income readers bear the full cost of exclusion. But extractiveness is not maximal (would be 0.70+) because: (1) paywalls do solve a real coordination problem (funding quality journalism), (2) free/low-cost alternatives exist (public media, free outlets, libraries, social media), and (3) extraction is enforced through price/technology, not pure coercion. The upward trend (0.30\u21920.52) reflects publishers hardening paywalls in response to digital ad collapse\u2014the constraint is intensifying. Suppression (0.65): High. Low-income readers face multiple barriers: subscription cost, registration friction, technical exclusion, and reduced alternative quality. But not total suppression\u2014library access, free tier articles, and aggregator links provide some workarounds. Theater ratio (0.48): Moderate. Paywall enforcement mechanisms (cookie walls, metering, incognito blocking, registration delays) are substantially performative\u2014sophisticated readers bypass them with effort. Actual enforcement effectiveness is lower than technical sophistication suggests. Theater has increased over time (0.25\u21920.48) as publishers add theatrical barriers to supplement price-based exclusion.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence: Publishers see coordination (Rope)\u2014paywalls fund journalism and solve advertiser collapse. Low-income readers see extraction (Snare)\u2014they are excluded from quality information with no exit option. Affluent readers see mixed coordination-extraction (Tangled Rope)\u2014they gain access but pay friction costs. Organized equity advocates see constrained opposition to hybrid extraction (Tangled Rope)\u2014the system solves publishers' funding problem but not the public's access problem. Public media builders see a temporary problem with alternatives (Scaffold)\u2014philanthropic and public funding models are maturing to replace paywalls over generational timescales. The traditional journalism industry sees its own degraded model (Piton)\u2014paywall revenue is 10-15% of what print subscriptions achieved, suggesting the model is sustained by inertia. The analytical observer risks naturalizing paywalls as inevitable (Mountain)\u2014the false summit is the claim that 'someone has to pay for journalism, so exclusion is necessary,' which ignores that public funding, philanthropy, and membership models already demonstrate alternatives.",
+    "directionality_logic": "Low-income readers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction; no alternative. Premium publishers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; negative effective extraction. Affluent readers: Beneficiary + constrained \u2192 d\u22480.50, f(d)\u22480.65. Symmetric mixed experience\u2014benefit from access but constrained by friction and cost. Information equity advocates: Victim + mobile \u2192 d\u22480.55, f(d)\u22480.75. Organized actors can build alternatives but are constrained by publisher dominance. Public media coalition: Organized + mobile \u2192 d\u22480.40, f(d)\u22480.40. Low effective extraction; coalition has agency and clear exit pathway through alternative funding. Traditional journalism: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification comes from theater ratio gate (0.48 is moderate but not high enough for piton; however, the degraded function and inertial maintenance are piton signatures). Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival false summit\u2014naturalizes policy choice as law.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing between two competing claims: (1) 'Paywalls are a necessary coordination mechanism for journalism funding' (Rope framing), and (2) 'Paywalls are an extractive gatekeeping mechanism that creates information inequality' (Snare framing). The Tangled Rope classification (\u03b5=0.52, suppression=0.65, requires_active_enforcement=true, both beneficiaries and victims) captures that BOTH claims are structurally true: paywalls do provide coordination value (they fund journalism that wouldn't exist on ads alone), AND they create asymmetric extraction (low-income readers are excluded). The mandatrophy is resolved by refusing to collapse to a single type. The constraint is hybrid: its coordination function is genuine but limited (paywalls fund some journalism quality but not all, as evidenced by theater_ratio showing enforcement is partly performative); its extraction function is real (information access is gatekept by price). The Scaffold perspective (public media/philanthropy building post-paywall models) and Piton perspective (traditional journalism's degraded sustenance mechanism) together suggest the constraint is transitional: paywalls are hybrid today, but alternative funding pathways are maturing. The false summit (Mountain perspective) is the claim that paywalls are inevitable\u2014policy and institutional choice, not law of nature."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_divide_information_access",
+      "journalism_business_model_collapse",
+      "algorithmic_misinformation_amplification"
+    ],
+    "dual_formulation_note": "News paywalls are downstream of journalism business model collapse (digital ad collapse forced publishers to pursue subscription revenue) but represent a distinct structural constraint. The upstream constraint has \u03b5 reflecting empirical uncertainty about ad-supported sustainability; the paywall constraint has \u03b5=0.52 reflecting the policy choice to extract from readers rather than explore alternative funding. Paywalls also interact with algorithmic misinformation amplification: low-income readers excluded from paywalled quality sources have higher exposure to free but unreliable information on social platforms. These are separate constraints linked through information economics and equity."
+  },
+  "directionality_overrides": []
+}

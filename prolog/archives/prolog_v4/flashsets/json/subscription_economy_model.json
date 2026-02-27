@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "subscription_economy_model",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Subscription Economy Model",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "subscription_service_providers",
+      "platform_operators"
+    ],
+    "victims": [
+      "individual_consumers",
+      "small_businesses"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Consumer",
+      "comment": "PERSPECTIVE 1: Individual Consumer (SNARE) - Consumers often find themselves locked into subscriptions they no longer need or use, facing dark patterns that make cancellation difficult, representing a pure extraction scenario. Limited exit options due to convenience lock-in and platform effects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business",
+      "comment": "PERSPECTIVE 2: Small Business (TANGLED ROPE) - Small businesses rely on subscription software and services, creating operational dependencies. They benefit from access to advanced tools, but are also vulnerable to price increases and vendor lock-in, representing a mixed coordination and extraction dynamic."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Subscription Service Providers",
+      "comment": "PERSPECTIVE 3: Subscription Service Providers (ROPE) - Service providers experience the subscription model as a coordination mechanism, enabling predictable revenue streams and long-term customer relationships. They can arbitrage pricing strategies and scale efficiently, making this classification a coordination dynamic."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operators",
+      "comment": "PERSPECTIVE 4: Platform Operators (TANGLED ROPE) - Platforms enable and profit from subscription-based services. They extract a percentage from each subscription, but also coordinate access and customer acquisition, reflecting a mixed coordination and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: Analytical Observer (TANGLED ROPE) - From a broad, long-term perspective, the subscription model is a mixed system with extraction (consumers pay more over time, vendor lock-in) and coordination (access to updated services, predictable revenue). Requires active enforcement through marketing, platform effects and contractual agreements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consumer_lock_in_intensity",
+      "question": "How easily can consumers switch between competing subscription services?",
+      "resolution_mechanism": "Analyze switching costs: contract terms, data portability, and competitive landscape.",
+      "impact": "High switching costs: increased extraction, shifts towards Snare. Low switching costs: more coordination, shifts towards Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intensity of consumer lock-in affects extraction level."
+    },
+    {
+      "id": "service_value_proposition",
+      "question": "Does the subscription provide ongoing value and updates, or is it a static product sold under a recurring fee?",
+      "resolution_mechanism": "Evaluate service updates, new features, and customer satisfaction data.",
+      "impact": "High ongoing value: increased coordination, shifts towards Rope. Static product: increased extraction, shifts towards Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Value delivered by subscription impacts coordination vs. extraction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The subscription economy model represents a widespread shift in business strategy, where companies offer products and services on a recurring subscription basis rather than through one-time purchases. This model creates recurring revenue streams for businesses while granting consumers ongoing access. However, it also introduces potential for extractive practices due to vendor lock-in and dark patterns making cancellation difficult.",
+    "key_agents": [
+      "Subscription Service Providers: Beneficiary (institutional/arbitrage) - companies offering subscriptions.",
+      "Platform Operators: Beneficiary (institutional/arbitrage) - platforms enabling subscription services.",
+      "Individual Consumers: Victim (powerless/trapped) - individuals subscribing to services.",
+      "Small Businesses: Victim (moderate/constrained) - businesses relying on subscription services."
+    ],
+    "logic_rationale": "The subscription economy has aspects of both coordination and extraction. Businesses gain predictable revenue and long-term relationships, but consumers risk overpaying for unused services and face difficulty switching. The extractiveness score (0.55) reflects this balance, while the suppression score (0.45) indicates a moderate level of lock-in and difficulty in switching. The theater ratio is low (0.20), signifying less performative activity and more genuine ongoing value.",
+    "perspectival_gap": "The perspectival gap arises from the differing positions of service providers and consumers. Providers see a beneficial coordination mechanism, while consumers can experience it as extractive. Small businesses sit in the middle, constrained by their dependence on these subscriptions but also benefiting from access to tools. The analytical observer views the system as a tangled rope because it requires active enforcement via marketing and platform lock-in.",
+    "directionality_logic": "Service providers benefit from predictable revenue and increased customer lifetime value (low d). Individual consumers bear the cost of ongoing payments and potential lock-in (high d). The derived d values are influenced by the varying exit options (arbitrage for providers, trapped for some consumers).",
+    "mandatrophy_analysis": "The mandatrophy here is avoiding mischaracterization: The model isn't purely beneficial nor exploitative. Classifying it as Tangled Rope acknowledges the coordination benefit of recurring revenue and ongoing service alongside the extraction of consumer payments, vendor lock-in, and potential for dark patterns. Individual perspectives are then resolved to the extent that they are structural to that index."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

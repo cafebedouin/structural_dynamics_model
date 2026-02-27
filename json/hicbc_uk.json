@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "hicbc_uk",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hicbc"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK High Income Child Benefit Charge (HICBC)",
+    "topic_domain": "economic/fiscal_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lower_income_households",
+      "public_revenue_pool"
+    ],
+    "victims": [
+      "higher_earning_families",
+      "work_incentive_structure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginal Earner at Threshold",
+      "comment": "PERSPECTIVE 1: MARGINAL EARNER AT THRESHOLD (SNARE) \u2014 A family where one partner's income crosses the \u00a360k threshold experiences sudden, total clawback of Child Benefit. No negotiation possible, no exit option. The constraint operates via fiscal mechanism, not institutional choice. The earner is trapped: earning slightly more results in net loss due to marginal tax rate + clawback. Maximal experienced extraction with suppression of alternative earnings paths."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Working Families Organizations and Labor Unions",
+      "comment": "PERSPECTIVE 2: ORGANIZED WORKERS & FAMILY ADVOCATES (TANGLED ROPE) \u2014 These organizations benefit from the HICBC as a focal point for labor advocacy (demonstrating how fiscal policy undermines work incentives) but are trapped by the constraint's persistence despite documented perverse effects. They see both coordination (the HICBC makes visible the need for income support reform) and extraction (policy persists despite their evidence that it discourages work). Exit is constrained by political economy \u2014 the constraint requires legislative repeal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Treasury and Fiscal Authorities",
+      "comment": "PERSPECTIVE 3: TREASURY & FISCAL AUTHORITIES (ROPE) \u2014 For fiscal planners, the HICBC solves a coordination problem: targeting support to lower-income households while managing the fiscal envelope. The mechanism is extractive in effect but coordinative in intent. The Treasury can arbitrage by adjusting thresholds and phase-out rates; it has policy agency. Net beneficiary position: the constraint generates revenue while appearing fiscally neutral (reclaimed benefit = reduced spending)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Universal Basic Income and Welfare Reform Advocates",
+      "comment": "PERSPECTIVE 4: UBI & REFORM ADVOCATES (SCAFFOLD) \u2014 See the HICBC as a temporary, dysfunctional stopgap that will be replaced by consolidated income support (UBI, negative income tax, or expanded universal credits). The constraint has a sunset: as policy reform matures, consolidated systems will obsolete the clawback mechanism entirely. Low experienced extraction because advocates see an exit path (legislative reform) with clear timeline and backing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Historical Means-Testing Apparatus",
+      "comment": "PERSPECTIVE 5: HISTORICAL MEANS-TESTING MACHINERY (PITON) \u2014 The HICBC is a vestigial means-test grafted onto a nominally universal benefit. Means-testing itself is degraded institutional logic \u2014 the performative distinction between 'universal' and 'means-tested' persists despite both being targeting mechanisms. The theater ratio is high: the benefit is marketed as 'universal Child Benefit' while being clawed back at income levels many consider middle-class. The machinery persists through inertia \u2014 replacing it requires legislative overhaul, which political economy has repeatedly deferred."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a structural standpoint, the HICBC exhibits both genuine coordination (targeting by income) and genuine extraction (perverse marginal incentives, administrative overhead). The classification as tangled_rope is stable across observables: the mechanism simultaneously solves a targeting problem and creates a work-disincentive problem. No natural law reading is credible here \u2014 the constraint is a policy artifact with clear design intent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_response_magnitude",
+      "question": "How large is the actual behavioral response to HICBC-induced marginal tax rates? Do families actually reduce work hours, or is the clawback economically small relative to household income?",
+      "resolution_mechanism": "Labor supply elasticity studies; comparison of work-hour changes at HICBC threshold vs control groups; regression discontinuity analysis at \u00a360k income threshold",
+      "impact": "If elasticity > 0.3: extraction classification strengthens (Snare from target perspective). If elasticity < 0.1: coordination classification strengthens (Rope from Treasury perspective) \u2014 the policy achieves targeting with minimal distortion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether HICBC causes significant labor supply reduction or is economically negligible"
+    },
+    {
+      "id": "threshold_selection_intent",
+      "question": "Was the \u00a360k threshold chosen to target genuinely high-income families, or was it set knowing it would capture dual-earner middle-class households and thereby increase effective phase-out?",
+      "resolution_mechanism": "Policy memoranda and Treasury analysis from threshold-setting period (2012-2013); examination of fiscal impact forecasts vs realized distributional effects; interviews with policymakers",
+      "impact": "If threshold was mis-estimated: classification shifts toward Scaffold (temporary error, will be corrected). If threshold was deliberately set to capture middle class: classification shifts toward Snare (intentional regressive extraction disguised as 'high income' targeting).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether HICBC threshold reflects genuine high-income targeting or deliberate middle-class capture"
+    },
+    {
+      "id": "reform_political_economy",
+      "question": "What prevents legislative repeal or consolidation of HICBC into a unified income support system? Is it genuine fiscal constraint, or political economy inertia (budget rules, salience bias, path dependence)?",
+      "resolution_mechanism": "Comparative analysis of welfare reforms in UK vs OECD peers; timeline of reform proposals and blocking coalitions; cost-benefit analysis of consolidation scenarios",
+      "impact": "If genuine fiscal constraint: Scaffold classification is aspirational (reform harder than advocates assume). If inertia: Piton classification confirmed (degraded machinery persists despite viable alternatives).",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether HICBC persists due to fiscal necessity or political economy inertia"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The High Income Child Benefit Charge (HICBC), introduced in January 2013, claws back Child Benefit from families where at least one partner earns above a threshold (now \u00a360,000, with phase-out to full clawback at ~\u00a380,000). The constraint embodies a fundamental tension between two legitimate policy objectives: (1) maintaining fiscal sustainability by not paying full Child Benefit to high-income families, and (2) preserving work incentives by avoiding marginal tax rates so steep that additional earnings produce no net gain. The design exhibits both genuine coordination (targeting by income) and genuine extraction (perverse marginal incentives). The clawback applies not per child but to the entire Child Benefit entitlement, creating a cliff-edge effect that disproportionately affects dual-earner families where one partner crosses the threshold. This makes the constraint analyzable as tangled_rope from multiple perspectives: the Treasury sees legitimate fiscal coordination, the marginal earner sees a snare, labor advocates see mixed coordination-extraction, and universal-credits reformers see it as a temporary scaffold to be dismantled. The rising theater_ratio (0.48 \u2192 0.58) reflects increasing gap between the stated purpose ('high income' families) and actual incidence (captured middle-class dual-earners), indicating Goodhart drift as the mechanism becomes a target.",
+    "key_agents": [
+      "Marginal Earners: Primary victims (powerless/trapped) \u2014 families where one partner's income crosses \u00a360k threshold; experience total clawback with no exit option",
+      "Dual-Earner Households: Secondary victims (moderate/constrained) \u2014 face effective marginal tax rates >60% around threshold; can constrain hours but with career cost",
+      "Lower-Income Households: Beneficiaries (powerless/trapped) \u2014 receive full Child Benefit; benefit from the fiscal targeting, though not from the design's work-disincentive properties",
+      "Treasury & HM Revenue & Customs: Institutional beneficiary (institutional/arbitrage) \u2014 achieves fiscal objective of limiting benefit cost; can adjust threshold and phase-out rates",
+      "Labor Organizations & Family Advocacy Groups: Organized actors (organized/constrained) \u2014 benefit from policy as focal point for reform advocacy but trapped by persistence despite evidence",
+      "Welfare Reform Coalition: Organized actors (organized/mobile) \u2014 see HICBC as temporary dysfunction within broader income-support system; advocate for consolidated replacement (UBI, negative income tax, unified credits)",
+      "Analytical Observer: Structural analyst (analytical/analytical) \u2014 identifies stable tangled_rope classification across all measurement bases"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The HICBC extracts income via the tax system from families above the threshold, but the extraction is partial (phase-out, not cliff-edge in all scenarios) and serves a legitimate coordination objective (income-targeting). The 0.28\u21920.38 trajectory reflects that the initial design was more coordinative (focus on limiting benefit cost) while later iterations added extractive elements (narrower definitions of 'high income' as real earnings rose, failure to index threshold). Suppression (0.52): Moderate-high. Alternatives are suppressed by the mechanism's legality and universality \u2014 families cannot opt out or negotiate. But suppression is not total: organized labor has visible exit paths (legislative reform, welfare consolidation), and individual families have constrained exit (spousal income-shifting, part-time work). Theater ratio (0.58): Moderate-high. The performance gap between 'targeting high-income families' and actual incidence (dual-earner professionals earning \u00a350-70k) creates substantial theater. The marketing as 'Child Benefit' (universal frame) while applying a means-test (targeted frame) adds performative layer. The rising trajectory reflects that as real earnings growth has continued, the nominal 'high income' threshold has captured an increasingly middle-class population, making the theater more visible.",
+    "perspectival_gap": "The constraint produces radically different classifications across structural positions. The marginal earner (powerless/trapped) experiences it as pure extraction (Snare) with no alternatives. The Treasury (institutional/arbitrage) experiences it as coordination (Rope) \u2014 solving the fiscal targeting problem. Welfare reformers (organized/mobile) experience it as temporary dysfunction (Scaffold) with a clear sunset path. The historical means-testing apparatus (institutional/arbitrage with high theater) appears as Piton \u2014 degraded machinery persisting through inertia. Labor advocates (organized/constrained) experience it as mixed coordination-extraction (Tangled Rope) \u2014 it makes visible the problem they're trying to solve, but it also traps them in defending against its effects. The analytical observer sees stable Tangled Rope across all observables because the mechanism genuinely exhibits both coordination (targeting) and extraction (work disincentive) simultaneously. The perspectival gap is not observational variance but structural: different agents have genuinely different exit options and benefit-cost asymmetries.",
+    "directionality_logic": "Directionality (d) reflects each agent's structural relationship to the extraction flow. Lower-income households have d \u2248 0.05-0.15 (beneficiaries with arbitrage options\u2014they can adjust family labor supply without losing benefit) \u2192 negative f(d) \u2192 they experience the constraint as coordination (benefit support). Marginal earners have d \u2248 0.90 (victims with trapped options\u2014their income is the clawback trigger, and they cannot escape it without earning less) \u2192 high f(d) \u2248 1.30 \u2192 maximum experienced extraction. Treasury has d \u2248 0.10 (beneficiary institution with arbitrage\u2014it can adjust threshold, phase-out rate, and administration) \u2192 negative f(d) \u2248 -0.08 \u2192 coordination experience. Organized labor has d \u2248 0.65 (victim-advocate with constrained options\u2014they benefit from the policy as evidence for reform but are trapped advocating against it) \u2192 moderate f(d) \u2248 1.0 \u2192 mixed experience. The derived d values correctly rank the agent's structural extraction burden.",
+    "mandatrophy_analysis": "RESOLVED: The constraint classifies as tangled_rope from the analytical perspective because it exhibits both genuine coordination (income-targeting for fiscal sustainability) and genuine extraction (perverse marginal incentives, regressivity among dual-earner professionals). The mandatrophy question is not 'which type is correct?' but 'which design intent dominates?' The answer is empirical: the behavioral response magnitude (omega_1) determines whether the extraction is incidental (large coordination, small extraction \u2192 Rope) or equal (Tangled Rope) or dominant (small coordination, large extraction \u2192 Snare). Current evidence suggests moderate behavioral response and moderate work-disincentive effects, supporting tangled_rope classification. The Piton perspective (high theater, degraded machinery) reflects that the policy has drifted from its stated intent (targeting wealthy families) to its revealed incidence (capturing dual-earner professionals), a classic Goodhart drift signature. The Scaffold perspective (temporary dysfunction) reflects that genuine welfare reform alternatives exist (consolidated income support) and are politically salient, though inertia has delayed reform. The snare perspective (marginal earner experience) is real and should not be dismissed as 'just a policy choice'\u2014the constraint's operation creates genuine traps in the marginal incentive structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_child_poverty_trap",
+      "dual_earner_work_incentive_structure"
+    ],
+    "dual_formulation_note": "The HICBC is distinct from but structurally related to broader UK means-testing apparatus (Universal Credit taper, child poverty trap). Each constraint has its own extractiveness value reflecting the specific mechanism, but they form a family linked by shared fiscal targeting logic and reform coalitions. The HICBC's moderate extractiveness (0.38) makes it a focal point for demonstrating how coordination objectives can be undermined by extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ]
+}

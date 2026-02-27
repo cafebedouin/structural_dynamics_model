@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: ramsey_numbers
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-16
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_ramsey_numbers, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,25 +55,31 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ramsey_numbers
  *   human_readable: Inevitability of Order (Ramsey's Theorem)
- *   domain: mathematical
+ *   domain: mathematical/combinatorics
  *
  * SUMMARY:
- *   Ramsey's Theorem states that in any sufficiently large system where elements
- *   are partitioned into a finite number of classes, a large, orderly
- *   substructure must exist. This constraint represents the fundamental
- *   mathematical limit on creating truly disordered systems. The difficulty in
- *   computing Ramsey numbers (the threshold for "sufficiently large")
- *   highlights the computational hardness of predicting when this order will emerge.
+ *   Ramsey's Theorem, proved by Frank P. Ramsey in 1930, asserts that for any
+ *   finite coloring of the complete graph on a sufficiently large set of
+ *   vertices, there must exist a monochromatic complete subgraph of specified
+ *   size. More generally, any partitioning of a sufficiently large structure
+ *   into finitely many classes must contain a large, uniform (monochromatic
+ *   or homogeneous) subset. This is a fundamental result in combinatorics
+ *   with no known counterexample, no escape clause, and no observational
+ *   dependency. The constraint exhibits zero degrees of freedom: no agent, no
+ *   measurement basis, no alternative axiomatization avoids the conclusion.
+ *   Ramsey numbers — the thresholds at which order becomes inevitable — grow
+ *   extremely rapidly (double exponential for small cases, TREE-class for
+ *   larger generalizations), making them practically uncomputable for
+ *   non-trivial cases. However, the logical necessity of their existence is
+ *   absolute. The constraint does not extract from any agent, enforce via any
+ *   institutional mechanism, or depend on any agent's power position. It is
+ *   natural law in the strongest sense: a consequence of mathematical logic
+ *   itself.
  *
- * KEY AGENTS (by structural relationship):
- *   - Computational Theorists: (analytical/analytical) — Confront the extreme
- *     difficulty of computing Ramsey numbers, a hard limit on predictive power.
- *   - Students of Mathematics: (powerless/trapped) — Encounter the theorem as
- *     an immutable law of logic that must be accepted.
- *   - Research Institutions: (institutional/arbitrage) — Must allocate vast
- *     computational resources to make even marginal progress on finding bounds.
- *   - Analytical Observer: (analytical/analytical) — Sees the complete structure
- *     as a fundamental law of combinatorics.
+ * KEY AGENTS:
+ *   - The Colorizer: Any entity attempting to partition a large set (mathematical, abstract) — experiences zero exit options and zero extraction, merely logical necessity
+ *   - Mathematical Logic: The foundational framework from which the theorem emerges — neither beneficiary nor extractor, but the source of the constraint itself
+ *   - The Analyst: Observer of the mathematical structure — can verify but not escape; sees pure necessity, not coercion
  */
 
 /* ==========================================================================
@@ -81,75 +87,51 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ramsey_numbers, 0.15).
-domain_priors:suppression_score(ramsey_numbers, 0.01).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(ramsey_numbers, 0.00).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(ramsey_numbers, 0.12).
+domain_priors:suppression_score(ramsey_numbers, 0.02).
+domain_priors:theater_ratio(ramsey_numbers, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ramsey_numbers, extractiveness, 0.15).
-narrative_ontology:constraint_metric(ramsey_numbers, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(ramsey_numbers, theater_ratio, 0.00).
+narrative_ontology:constraint_metric(ramsey_numbers, extractiveness, 0.12).
+narrative_ontology:constraint_metric(ramsey_numbers, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(ramsey_numbers, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-narrative_ontology:constraint_metric(ramsey_numbers, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(ramsey_numbers, resistance, 0.05).
+narrative_ontology:constraint_metric(ramsey_numbers, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(ramsey_numbers, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(ramsey_numbers, mountain).
 narrative_ontology:human_readable(ramsey_numbers, "Inevitability of Order (Ramsey's Theorem)").
-narrative_ontology:topic_domain(ramsey_numbers, "mathematical").
+narrative_ontology:topic_domain(ramsey_numbers, "mathematical/combinatorics").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this, the classify_from_metrics
-% mountain clause will not fire.
 domain_priors:emerges_naturally(ramsey_numbers).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a fundamental mathematical theorem (Mountain), this
-% constraint does not have structural beneficiaries or victims in the sense of
-% asymmetric social or economic arrangements. It is a feature of logic itself.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% This is a uniform-type constraint (Mountain-only), demonstrating that the
-% classification is invariant across all perspectives.
-
-% PERSPECTIVE 1: THE STUDENT (POWERLESS)
-% A student encountering the theorem for the first time is powerless to change
-% it and trapped by its logical necessity. It appears as an unchangeable law.
+% PERSPECTIVE 1: THE CONSTRAINED COLORIZER (MOUNTAIN) — An agent forced to partition a sufficiently large set into finitely many classes has zero degrees of freedom regarding the emergence of monochromatic order. No exit option exists; the ordered substructure MUST appear. This is not coercion by another agent but structural impossibility of avoiding order.
 constraint_indexing:constraint_classification(ramsey_numbers, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE RESEARCH INSTITUTION (INSTITUTIONAL)
-% An institution funding research into Ramsey numbers treats it as a fixed
-% feature of the mathematical landscape, allocating resources to explore its
-% boundaries.
-constraint_indexing:constraint_classification(ramsey_numbers, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The default analytical context sees the theorem as a fundamental,
-% unchangeable property of combinatorics.
+% PERSPECTIVE 2: THE MATHEMATICAL OBSERVER (MOUNTAIN) — From the perspective of pure mathematics, Ramsey's theorem is a logical necessity. Given the axioms of set theory and combinatorics, the existence of Ramsey numbers is a deducible consequence, not a contingent constraint. The observer can only acknowledge the inevitability; no measurement basis or interpretation changes the logical requirement.
 constraint_indexing:constraint_classification(ramsey_numbers, mountain,
     context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: THE FOUNDATIONAL FRAMEWORK (MOUNTAIN) — Ramsey's theorem emerges from the foundations of mathematics itself. No finite extension of computational power or alternative axiomatization eliminates the constraint. It is as immutable as the law of non-contradiction. Institutional verification (peer review, formalization in proof assistants) uniformly confirms the logical necessity.
+constraint_indexing:constraint_classification(ramsey_numbers, mountain,
+    context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
@@ -160,21 +142,22 @@ constraint_indexing:constraint_classification(ramsey_numbers, mountain,
 
 :- begin_tests(ramsey_numbers_tests).
 
-test(invariance_across_indices) :-
-    % Verify that all perspectives classify as the same type (Mountain).
-    constraint_indexing:constraint_classification(ramsey_numbers, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ramsey_numbers, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(ramsey_numbers, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    TypePowerless == mountain,
-    TypeInstitutional == mountain,
-    TypeAnalytical == mountain.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(ramsey_numbers, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ramsey_numbers, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation_for_mountain) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(ramsey_numbers, ExtMetricName, E),
-    E =< 0.25.
+    domain_priors:suppression_score(ramsey_numbers, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(nl_profile_check) :-
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(ramsey_numbers),
     narrative_ontology:constraint_metric(ramsey_numbers, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(ramsey_numbers, resistance, R),
     AC >= 0.85,
@@ -188,82 +171,86 @@ test(nl_profile_check) :-
 
 /**
  * LOGIC RATIONALE:
- *   Ramsey's Theorem is a fundamental truth of mathematics, making it a canonical
- *   example of a Mountain constraint.
- *   - Base Extractiveness (0.15): Low. The "extraction" is the cognitive and
- *     computational effort required to work within the limits it imposes. It
- *     doesn't prevent research but defines a hard boundary of inquiry.
- *   - Suppression (0.01): Near zero. The theorem doesn't suppress alternatives;
- *     it proves they are logically impossible.
- *   - Theater (0.00): Zero. There is no performative aspect.
- *   - NL Profile: Accessibility collapse is high (0.95) because there is no
- *     way to construct a system that violates the theorem. Resistance is low
- *     (0.05) because resisting a mathematical proof is incoherent.
+ *   Extractiveness (0.12): Minimal. Ramsey's theorem imposes no cost on any agent in the classical sense. The constraint is not extraction from one entity toward another. The modest value (not zero) reflects that discovering Ramsey numbers and their bounds requires computational effort and mathematical insight, creating a trivial 'cost' of understanding. This is not extraction but epistemic labor. Suppression (0.02): Negligible. There are no suppressed alternatives, hidden options, or coercive mechanisms. The theorem operates openly and necessarily. The tiny residual value reflects only that some formulations are more accessible than others, but this is pedagogical clarity, not institutional suppression. Theater ratio (0.05): Near-zero. Ramsey's theorem has no performative component. Verification is through formal proof, not ritual, institutional gesture, or surveillance. The minimal value reflects only the pedagogical scaffolding required to explain the result — the core mathematical claim has zero theater. Accessibility collapse (0.92): Very high. The constraint is nearly inaccessible to violation; there is no meaningful way to color a large set and avoid monochromatic structure. This is the defining feature of a natural law. Resistance (0.08): Very low. No counterexample has ever been found, and none is possible. The logical proof is airtight. Resistance to the constraint is essentially zero; the only resistance is epistemic (difficulty of understanding the proof), not structural.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a natural law of mathematics, its
- *   classification is invariant. A student, a research institution, and a
- *   professional mathematician all perceive it as an unchangeable feature of
- *   reality, hence the uniform 'Mountain' classification.
+ *   NONE. This is a uniform-type mountain constraint. All three perspectives arrive at identical classification: mountain. The powerless agent, the analytical observer, and the institutional framework all perceive the same logical necessity. There is no gap because there is no exit option, no extraction, and no power asymmetry. The constraint is invariant across all (P,T,E,S) tuples because it emerges from mathematics itself, not from any social or institutional arrangement.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiary and victim declarations are omitted because they are not
- *   structurally applicable to a mathematical law. The theorem does not create
- *   asymmetric benefits or costs between social groups; it is a universal,
- *   symmetric constraint on logical possibility.
+ *   Directionality does not apply to mountain constraints. Ramsey's theorem has no beneficiary or victim in any meaningful sense. It is not a constraint imposed by one agent on another but a constraint imposed by logic on all agents equally. The d-value would be meaningless here; the constraint is not indexed to any agent's power position. All perspectives yield d = undefined or d = 0.5 (symmetric impact on all agents equally), and the mountain classification holds regardless.
  *
- * MANDATROPHY ANALYSIS:
- *   The Mountain classification correctly identifies this as a non-negotiable
- *   feature of the problem space, not a human-imposed rule. This prevents
- *   mislabeling the inherent difficulty of a problem (a Mountain) as a form of
- *   coercion (a Snare) or a coordination problem (a Rope).
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_ramsey_bounds,
-    'What are the exact values of Ramsey numbers, particularly R(5,5)?',
-    'New mathematical proofs or massive computational searches, though the latter may be intractable.',
-    'Finding the exact values would not change the Mountain classification but would refine our understanding of its specific parameters. The intractability itself reinforces the Mountain nature.',
+    effective_computability_threshold,
+    'At what scale does the computational cost of finding monochromatic substructures exceed the informational content of the order itself?',
+    'Analysis of Ramsey number growth rates (double exponential, TREE-class bounds) relative to physical universe scale; determination of whether the constraint remains ''natural law'' when Ramsey numbers exceed observable universe parameters',
+    'If computability threshold is within physical reach for small cases: mountain classification remains robust. If Ramsey numbers exceed physical computation for all non-trivial cases: the constraint becomes mathematically necessary but practically inaccessible, raising questions about whether it qualifies as a natural law in the strong sense.',
     confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(effective_computability_threshold, empirical, 'Whether Ramsey numbers remain practically findable').
+
+omega_variable(
+    axiom_independence_question,
+    'Does Ramsey''s theorem depend on the Axiom of Choice or other non-constructive axioms, or is it constructively provable from minimal set-theoretic foundations?',
+    'Proof-theoretic analysis of various formulations (finite vs infinite Ramsey, homogeneous vs heterogeneous); comparison of constructive and classical proofs; examination of intuitionistic logic consistency',
+    'If constructively provable: mountain classification is ironclad — the constraint emerges from logic alone. If dependent on non-constructive axioms: there is a lingering conceptual axis (axiom choice) that technically preserves some observational freedom, though this does not diminish the practical inevitability.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(axiom_independence_question, conceptual, 'Whether Ramsey''s theorem requires non-constructive axioms').
+
+omega_variable(
+    alternative_partition_semantics,
+    'If partitioning semantics are generalized beyond classical set membership (e.g., fuzzy partition, probabilistic coloring, partial orderings), does an analog of Ramsey''s theorem still hold?',
+    'Survey of generalizations in fuzzy Ramsey theory, probabilistic combinatorics, and order-theoretic analogs; determination of which structural properties are preserved under weakening',
+    'If analogs exist in all generalizations: the constraint is robust across semantic interpretations, confirming mountain status. If analogs fail or degrade significantly: the constraint may be an artifact of classical set-theoretic framing rather than a true natural law.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_partition_semantics, conceptual, 'Robustness of Ramsey structure under generalized partition semantics').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(ramsey_numbers, 0, 10).
+narrative_ontology:interval(ramsey_numbers, 0, 200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% As a mathematical constant, its properties do not drift over time.
-% Extraction is low, so this section is for completeness.
-narrative_ontology:measurement(ramsey_numbers_tr_t0, ramsey_numbers, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(ramsey_numbers_tr_t5, ramsey_numbers, theater_ratio, 5, 0.0).
-narrative_ontology:measurement(ramsey_numbers_tr_t10, ramsey_numbers, theater_ratio, 10, 0.0).
+% Theater ratio over time
+narrative_ontology:measurement(ramsey_tr_t0, ramsey_numbers, theater_ratio, 0, 0.03).
+narrative_ontology:measurement(ramsey_tr_t100, ramsey_numbers, theater_ratio, 100, 0.05).
+narrative_ontology:measurement(ramsey_tr_t200, ramsey_numbers, theater_ratio, 200, 0.05).
 
-narrative_ontology:measurement(ramsey_numbers_ex_t0, ramsey_numbers, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(ramsey_numbers_ex_t5, ramsey_numbers, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(ramsey_numbers_ex_t10, ramsey_numbers, base_extractiveness, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(ramsey_be_t0, ramsey_numbers, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(ramsey_be_t100, ramsey_numbers, base_extractiveness, 100, 0.12).
+narrative_ontology:measurement(ramsey_be_t200, ramsey_numbers, base_extractiveness, 200, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Not applicable for this type of fundamental constraint.
+narrative_ontology:coordination_type(ramsey_numbers, information_standard).
+narrative_ontology:affects_constraint(ramsey_numbers, pigeonhole_principle).
+narrative_ontology:affects_constraint(ramsey_numbers, godel_incompleteness).
+
+% DUAL FORMULATION NOTE:
+% Ramsey's theorem sits in a family of unavoidability results in combinatorics. It is upstream of applied constraints that depend on combinatorial structure (scheduling problems, network robustness). The pigeonhole principle is a special case; Gödel's incompleteness shares the property of logical inevitability in formal systems.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. The constraint is a Mountain and has no directionality.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

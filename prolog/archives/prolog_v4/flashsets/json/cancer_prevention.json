@@ -1,0 +1,176 @@
+{
+  "header": {
+    "constraint_id": "cancer_prevention",
+    "version": "1.0",
+    "generated_date": "2024-05-03",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Systemic Barriers to Preventable Cancer Risk Reduction",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "processed_food_industry",
+      "tobacco_industry",
+      "pharmaceutical_companies"
+    ],
+    "victims": [
+      "cancer_patients",
+      "healthcare_systems"
+    ],
+    "has_sunset_clause": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Cancer Patients",
+      "comment": "PERSPECTIVE 1: CANCER PATIENTS (SNARE) - Trapped by social norms, marketing, and lack of access to healthy options. Bears the cost of increased cancer risk due to systemic barriers. Limited ability to exit due to pervasive influences and structural factors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Healthcare Systems",
+      "comment": "PERSPECTIVE 2: HEALTHCARE SYSTEMS (TANGLED ROPE) - Constrained by reactive treatment models and funding limitations. Benefits from treating cancer, but also burdened by the high costs and increased demand due to preventable cases. Limited arbitrage, some ability to influence policy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Processed Food/Tobacco/Pharma Industries",
+      "comment": "PERSPECTIVE 3: PROCESSED FOOD/TOBACCO/PHARMA INDUSTRIES (ROPE) - Benefits from consumer demand, policy loopholes, and a focus on treatment over prevention. Arbitrage through lobbying, marketing, and product innovation. Experience the constraint as coordination of supply and demand."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Public Health Organizations",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH ORGANIZATIONS (SCAFFOLD) - Organized actors attempting to reduce cancer risk through education, policy advocacy, and promoting healthy lifestyles. See the barriers as a temporary coordination problem with a sunset clause as policies and awareness improve."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Outdated Regulatory Frameworks",
+      "comment": "PERSPECTIVE 5: OUTDATED REGULATORY FRAMEWORKS (PITON) - Regulatory frameworks designed when less was known about cancer prevention are now largely performative or ineffective due to lobbying and shifting scientific understanding. They persist through institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) - Sees the systemic barriers as a combination of coordination and extraction, with vested interests maintaining the status quo at the expense of public health. Analyzes long term trends and systemic effects."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficacy_of_public_health_campaigns",
+      "question": "How effective are public health campaigns in changing behavior and reducing cancer risk?",
+      "resolution_mechanism": "Longitudinal studies, randomized controlled trials, and meta-analyses of public health interventions.",
+      "impact": "If highly effective: shift towards a Rope or Scaffold classification. If ineffective: Snare classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The efficacy of public health campaigns in reducing cancer risk."
+    },
+    {
+      "id": "corporate_influence_on_policy",
+      "question": "To what extent does corporate lobbying and campaign finance influence policies related to cancer prevention?",
+      "resolution_mechanism": "Analysis of lobbying expenditures, campaign contributions, and policy outcomes.",
+      "impact": "Strong corporate influence reinforces a Snare classification; weaker influence allows for more effective prevention policies (Scaffold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Corporate influence on policies related to cancer prevention."
+    },
+    {
+      "id": "tradeoff_between_economic_growth_and_public_health",
+      "question": "How do societies balance the pursuit of economic growth (e.g., through industrial activity) with the need to protect public health?",
+      "resolution_mechanism": "Comparative studies of different countries' approaches to regulating industries known to increase cancer risk.",
+      "impact": "A strong emphasis on economic growth reinforces a Snare. A strong emphasis on public health strengthens the public health perspective and allows more coordination (Rope or Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Societal tradeoff between economic growth and public health."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "A global report indicates that 40% of cancers are preventable through lifestyle changes and public health initiatives. However, systemic barriers hinder the implementation of these preventative measures. These barriers include corporate influence, societal norms, and inadequate access to healthcare and healthy options, creating a complex web of extraction and coordination. This constraint operates at the intersection of public health, economics, and social policy.",
+    "key_agents": [
+      "Cancer Patients: Primary victim (powerless/trapped)",
+      "Healthcare Systems: Secondary victim (moderate/constrained)",
+      "Processed Food Industry: Primary beneficiary (institutional/arbitrage)",
+      "Tobacco Industry: Primary beneficiary (institutional/arbitrage)",
+      "Pharmaceutical Companies: Primary beneficiary (institutional/arbitrage)",
+      "Public Health Organizations: Organized actor (organized/mobile)",
+      "Outdated Regulatory Frameworks: Inertial actor (institutional/constrained)",
+      "Analytical Observer: Analytical agent (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness: 0.55 - Moderate to high, reflecting the significant societal costs associated with preventable cancers. Suppression: 0.65 - High, due to the influence of vested interests and the difficulty of changing deeply ingrained habits and social norms. Theater Ratio: 0.75 - High, reflecting some genuine efforts in cancer prevention campaigns alongside performative actions.",
+    "perspectival_gap": "The general public experiences a Snare due to limited access to healthy choices and pervasive marketing. Healthcare systems experience a Tangled Rope, managing both the costs of treatment and the potential for prevention. Industries see a Rope, focused on coordinating supply and demand. Public health organizations see a temporary coordination failure (Scaffold), working towards systemic change. Regulatory frameworks are degraded (Piton) due to inertia and corporate influence. The Analytical Observer sees the systemic forces preventing effective cancer prevention (Tangled Rope).",
+    "directionality_logic": "Industries (processed food, tobacco, pharmaceuticals) benefit from existing systems and arbitrage regulatory loopholes. The general public bears the costs of preventable cancers and has limited exit options due to advertising, social norms, and access issues. Healthcare systems are constrained by reactive treatment models. Public health organizations are trying to change the status quo. The existing regulatory frameworks are outdated and ineffective.",
+    "mandatrophy_analysis": "The constraint is a Tangled Rope because there are both coordination and extraction elements. The industries coordinate supply and demand but also extract societal costs through increased cancer rates. Public health efforts aim to coordinate resources for prevention but are often undermined by systemic barriers. The different perspectives help clarify whether the constraint tends towards pure extraction or effective prevention."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "food_deserts",
+      "tobacco_advertising",
+      "access_to_healthcare"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -2,27 +2,27 @@
   "header": {
     "constraint_id": "ancient_grudge_verona",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "grudge"
   },
   "base_properties": {
-    "extractiveness": 0.75,
-    "suppression": 0.8,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
     "human_readable": "The Montague-Capulet Feud",
     "topic_domain": "social/political",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "family_patriarchs",
-      "concept_of_familial_honor"
+      "feudal_patriarchs"
     ],
     "victims": [
-      "younger_generation_members",
-      "citizens_of_verona",
-      "the_princes_authority"
-    ],
-    "mandatrophy_resolved": true
+      "young_members",
+      "servants",
+      "civic_order",
+      "romantic_potential"
+    ]
   },
   "perspectives": [
     {
@@ -31,44 +31,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Star-Crossed Lovers (Romeo & Juliet)",
-      "comment": "PERSPECTIVE 1: THE LOVERS (SNARE) — For Romeo and Juliet, the feud is a pure extraction mechanism. They are trapped by their family identities, and any attempt to build an alternative life is suppressed, leading directly to their deaths. The constraint extracts their future, their love, and their lives. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.85."
+      "label": "The Young Member (Romeo, Juliet)",
+      "comment": "PERSPECTIVE 1: YOUNG MEMBER (SNARE) \u2014 Born into the feud with no choice. Exit options are nil: defecting to the other house means death, refusing to participate means family shame and exclusion. The constraint extracts emotional labor, loyalty, and ultimately life itself. Maximum experienced extraction \u2014 the young member bears the full cost of an inherited conflict they did not create."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Servant",
+      "comment": "PERSPECTIVE 2: SERVANT (SNARE) \u2014 Conscripted into street violence by allegiance to master. No independent exit option; participation is mandatory regardless of personal beliefs. Bears risk of injury or death while extracting no personal benefit. Trapped within the constraint's violence mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Patriarch (Montague, Capulet)",
+      "comment": "PERSPECTIVE 3: PATRIARCH (TANGLED ROPE) \u2014 Benefits from the feud as a coordination mechanism for house loyalty and resource control within feudal structures. Honor, territorial respect, and subordinate allegiance are extracted via the feud's enforcement mechanism. Yet also constrained: the patriarch cannot simply exit without losing face, resources, and control. Mixed extraction \u2014 genuine benefit from coordination + significant cost of sustained enmity."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "local",
-      "label": "The Family Patriarchs (Lords Capulet & Montague)",
-      "comment": "PERSPECTIVE 2: THE PATRIARCHS (ROPE) — From the perspective of the heads of house, the feud functions as a costly but effective coordination mechanism. It enforces in-group loyalty, solidifies family identity against an external other, and provides a framework for maintaining honor. They possess the agency to escalate or de-escalate (arbitrage), externalizing the costs onto the younger generation. d≈0.05, f(d)≈-0.12, σ=0.8 → χ≈-0.07. Negative extraction indicates a net perceived benefit."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Loyal Kinsman (Tybalt)",
-      "comment": "PERSPECTIVE 3: THE LOYAL KINSMAN (TANGLED ROPE) — For an agent like Tybalt, the feud is both a source of identity (coordination) and a mandate for violence (extraction). He is constrained to participate to uphold his honor, but also actively enforces the feud's rules. He experiences both its cohesive and destructive functions simultaneously. d≈0.55, f(d)≈0.75, σ=0.8 → χ≈0.45."
+      "spatial_scope": "regional",
+      "label": "The Prince/Authority",
+      "comment": "PERSPECTIVE 4: PRINCE/CIVIL AUTHORITY (ROPE) \u2014 Uses the feud as a coordination lever for demonstrating power and maintaining order through threat. The feud provides a clear enforcement target (stop the feud or face death penalty). This is pure coordination with minimal extraction \u2014 the Prince benefits from the feud's existence as a way to exercise authority, but does not extract ongoing resources from it."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "regional",
-      "label": "The Prince of Verona",
-      "comment": "PERSPECTIVE 4: THE PRINCE (PITON) — The Prince sees the feud as a degraded institution. Its original purpose is forgotten ('ancient grudge'), and it now functions primarily as performative, pointless violence that undermines his authority and civil peace. The high theater_ratio (0.75) and its persistence despite his decrees mark it as a Piton—a system maintained by institutional inertia within the families, not by any remaining legitimate function. His exit is constrained; he cannot abandon his city."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "immediate",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Scheming Friar (Friar Laurence)",
-      "comment": "PERSPECTIVE 5: THE FRIAR (SCAFFOLD) — Friar Laurence attempts to construct a temporary solution to bypass the feud. His plan—the secret marriage, the sleeping potion—is a scaffold designed to support Romeo and Juliet until the feud can be resolved and the structure dismantled. It has a clear, if tragic, sunset clause. He acts as an organized agent trying to build a temporary bridge over a structural conflict."
+      "label": "Feudal Honor System",
+      "comment": "PERSPECTIVE 5: FEUDAL HONOR SYSTEM (PITON) \u2014 The feud is maintained by theatrical performance of honor codes that have lost primary functional value. The ritual (public insult, street combat, family reputation) persists through institutional inertia despite declining coordination benefit. The system sees itself as performing honor rather than achieving it. Theater ratio high because the actual function (deterrence, resource control) could be achieved through less performative mechanisms, yet the feud persists."
     },
     {
       "classification_type": "mountain",
@@ -76,87 +76,99 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Tragic Theorist",
-      "comment": "PERSPECTIVE 6: THE TRAGIC THEORIST (MOUNTAIN) — A detached, civilizational observer might frame the feud as an immutable law of human tribalism or a tragic flaw inherent to social structures. This perspective naturalizes the conflict, viewing it as an unchangeable feature of the human condition. The engine will flag this as a false summit, as the feud is a contingent social construct, not a physical law, evidenced by its eventual resolution."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 This perspective risks naturalizing the feud as an immutable property of human tribal nature or Renaissance social law. From a civilizational view, inherited conflicts appear universal and necessary. However, the structural data contradicts this \u2014 the feud is maintained by institutional enforcement, suppression of exit options, and performative honor codes. The mountain classification is a false summit, revealing how contingent social arrangements are mistaken for natural laws."
     }
   ],
   "omegas": [
     {
-      "id": "origin_of_grudge",
-      "question": "What was the original cause of the 'ancient grudge'?",
-      "resolution_mechanism": "Historical/textual analysis to determine if the feud began from a material dispute (e.g., land, wealth) versus a symbolic one (e.g., honor, insult).",
-      "impact": "A material origin would suggest a more rational, though prolonged, Tangled Rope. A purely symbolic and forgotten origin reinforces the Piton classification, where the function has completely atrophied into theater.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the feud's origin was material or purely symbolic"
+      "id": "original_cause_recovery",
+      "question": "What was the original cause of the feud, and is it recoverable or functionally forgotten?",
+      "resolution_mechanism": "Historical documentation, family records, elder testimony; comparison between stated cause and actual behavior patterns; assessment of whether the original grievance still drives current conflict or serves purely as justification",
+      "impact": "If original cause is genuinely forgotten: the feud is pure institutional inertia (Piton dominant). If original cause is remembered and still operative: extraction flows from resource/honor competition (Snare/Tangled Rope dominant). If cause is disputed: conflicting narratives sustain suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the original feud cause is recoverable or functionally forgotten"
     },
     {
-      "id": "princes_power_limit",
-      "question": "Was the Prince's inability to stop the feud a failure of political will or a structural lack of enforcement power against noble houses?",
-      "resolution_mechanism": "Analysis of the political structure of Renaissance Verona to determine the actual balance of power between the Prince and the major families.",
-      "impact": "If the Prince had the power but not the will, the feud is a Snare maintained by elite impunity. If he structurally lacked the power, the feud itself acts as a competing sovereign, closer to a Mountain of local politics.",
+      "id": "exit_barrier_structurality",
+      "question": "Are exit barriers (threat of death, exile, family exclusion) structural necessities of feudal society or contingent enforcement choices?",
+      "resolution_mechanism": "Comparative analysis of feudal societies with and without similar feud systems; examination of actual consequences vs threatened consequences; testing whether loosening enforcement would dissolve the feud or maintain it through internalized honor codes",
+      "impact": "If barriers are structural: feud approaches Mountain (inherent to feudal organization). If barriers are contingent: feud is Snare/Tangled Rope (extractive institutional choice). This determines whether the feud is a system property or a failure mode.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether feud exit barriers are structurally necessary or contingently enforced"
+    },
+    {
+      "id": "coordination_function_existence",
+      "question": "Does the feud actually coordinate house membership and loyalty, or is the coordination justification merely post-hoc rationalization?",
+      "resolution_mechanism": "Counterfactual analysis: what coordination functions (resource allocation, dispute resolution, defense against external threats) would actually break if the feud ended? Comparison with non-feuding houses that maintain equal coordination through different mechanisms.",
+      "impact": "If feud is genuinely coordinating: Tangled Rope classification stable. If feud is parasitic on coordination (prevents coordination without enabling it): Snare classification dominant. If feud is vestigial (once coordinated, now doesn't): Piton classification.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The structural limit of the Prince's authority vs noble power"
+      "description": "Whether the feud performs genuine coordination or only justifies itself as such"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.6
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 100,
-      "value": 0.75
-    },
-    {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.6
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.7
+      "time_point": 5,
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 100,
-      "value": 0.75
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 100
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The 'ancient grudge' between the houses of Montague and Capulet is a transgenerational social constraint that mandates conflict and suppresses affiliation in Renaissance Verona. Its origins are forgotten, but its enforcement is immediate and lethal, structuring social life around arbitrary enmity. The feud functions as a powerful, self-perpetuating cycle of violence that ultimately consumes its own children, demonstrating how a social construct can attain the force of a natural law for those trapped within it.",
+    "narrative_context": "The Montague-Capulet feud is an inherited, transgenerational constraint that mandates spontaneous violence between two noble houses in Renaissance Verona. The constraint operates through institutional enforcement of honor codes: members of either house must respond to insult with violence, must refuse peace proposals from authority, and must organize street combat when the other house appears. Participation is mandatory regardless of personal preference. The feud extracts emotional labor, risk of injury/death, and opportunities for cross-house alliance (particularly romantic). For patriarchs, the feud enforces house loyalty and resource control. For the Prince, the feud provides a visible enforcement target. The structural data reveals this as a Snare dominant system (high suppression, high extractiveness) maintained partly through Piton theatrical ritual (honor codes), with a Tangled Rope perspective from institutional actors who benefit from the coordination mechanism, and a false Mountain perspective from civilizational observers who mistake the institutional arrangement for a natural law of human conflict.",
     "key_agents": [
-      "Younger Generation (Romeo, Juliet, Tybalt): Primary victims and enforcers (powerless/moderate, trapped/constrained)",
-      "Family Patriarchs (Lords Montague & Capulet): Primary beneficiaries of the honor system (institutional/arbitrage)",
-      "The Prince of Verona: Institutional authority whose power is undermined by the feud (institutional/constrained)",
-      "Friar Laurence: External organized agent attempting to build a temporary resolution (organized/constrained)",
-      "Citizens of Verona: Collateral victims of the public violence (powerless/trapped)"
+      "Young Members (Romeo, Juliet, Tybalt, Mercutio): Primary victims (powerless/trapped) \u2014 born into feud, no exit option, bear full cost of inherited conflict",
+      "Servants and Retainers: Secondary victims (powerless/trapped) \u2014 conscripted into violence by master loyalty, no independent agency",
+      "Patriarchs (Montague, Capulet): Primary beneficiaries/constrained actors (institutional/constrained) \u2014 benefit from feud as coordination + enforcement mechanism, but also constrained by honor codes that prevent exit",
+      "The Prince: Tertiary actor (institutional/arbitrage) \u2014 uses feud as coordination lever to demonstrate authority; benefits from visible enforcement target",
+      "Feudal Honor System: Institutional mechanism (institutional/arbitrage) \u2014 maintains performative honor codes that justify the feud but diminish in real coordination value",
+      "Civic Order/Verona: Victim (powerless/trapped) \u2014 disrupted by street violence, unable to prevent constraint enforcement"
     ],
-    "logic_rationale": "Extractiveness (0.75) is severe, as the feud directly extracts lives, happiness, and the future of the next generation. Suppression (0.80) is extremely high; the social cost of defying the feud is total ostracization or death, leaving no viable alternatives for members of the houses. Theater Ratio (0.75) is high because the original grievance is lost to time, and the conflict persists as a series of performative honor-defenses and public brawls rather than a dispute over a tangible resource.",
-    "perspectival_gap": "The feud is a diagnostic exemplar. For the lovers, it is a pure Snare, trapping and killing them. For the patriarchs, it is a Rope of social coordination, enforcing loyalty. For Tybalt, it is a Tangled Rope, a source of both identity and fatal obligation. For the Prince, it is a Piton, a decayed and functionless ritual of violence he cannot stop. For Friar Laurence, it is a problem to be solved with a temporary Scaffold. For a distant observer, it can be misread as a Mountain of human nature. The vast gap between these perspectives, all derived from the same base metrics, reveals the indexical nature of the classification system.",
-    "directionality_logic": "The beneficiaries are the abstract concept of 'honor' and the patriarchs who are its stewards; they experience the feud as a tool for maintaining social order and identity, giving them a low directionality (d). The victims are the younger generation and the city's populace, who bear the full, lethal costs of the conflict, giving them a high directionality (d). This asymmetry is the core engine of the tragedy.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that a single, highly extractive phenomenon can legitimately occupy all six classifications depending on the observer's structural position. The 'correct' classification is the full set of perspectives. Labeling the feud as only a 'Snare' would miss its function as a 'Rope' for the patriarchs, and labeling it only a 'Rope' would erase the lethal extraction experienced by the youth. The system correctly models this complex reality without collapsing it to a single, inadequate label."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant costs from young members (risk of death, lost romantic possibilities, emotional labor), from servants (mandated violence), and from civic order (disrupted streets). The trajectory shows increasing extractiveness over the interval (0.42\u21920.58), indicating either escalation in violence frequency or intensification in enforcement. Patriarchs extract institutional benefits (loyalty, resource control, honor), but these are real coordination gains mixed with rent-seeking \u2014 hence the measurement as moderate rather than severe. Suppression (0.72): High. Exit barriers are substantial: attempting to defect to the other house results in death; refusing to participate results in shame and exclusion; seeking peace is portrayed as betrayal. The Prince's death threats add explicit enforcement. Yet suppression is not absolute \u2014 Romeo finds a way to marry Juliet, and the Prince eventually forces peace through execution. Theater ratio (0.68): High and increasing. The feud's performative content is substantial: formal insults, ritualized street combat, elaborate honor language. The actual deterrent or resource-control function could be achieved more efficiently through other mechanisms. The theater increases over time (0.55\u21920.68) as the feud becomes more about maintaining the reputation of the conflict than achieving the underlying coordination goals. This rising theater signals Piton degradation.",
+    "directionality_logic": "Each agent's structural position determines their experienced extractiveness (chi). Young members with no exit options (trapped) face maximum d ~0.95, producing high chi. Servants similarly trapped face maximum d. Patriarchs with constrained exit (cannot exit without losing face/power) face moderate d ~0.55-0.65, producing moderate chi \u2014 they benefit from the coordination but cannot easily escape. The Prince with arbitrage options (can enforce peace when he chooses) faces low d ~0.15, producing negative chi \u2014 the feud actually serves his authority. The feudal system itself operates at institutional/arbitrage level (d ~0.10), maintaining theatrical performance. The young members' powerlessness makes them maximally vulnerable to the constraint's extraction; the patriarchs' institutional power gives them agency but not enough to escape entirely; the Prince's external authority gives him arbitrage.",
+    "perspectival_gap": "The young member sees pure extraction (Snare) \u2014 they are trapped, at risk, with no benefit. The patriarch sees mixed extraction and benefit (Tangled Rope) \u2014 the feud enforces loyalty and maintains honor, but also constrains their agency. The Prince sees pure coordination (Rope) \u2014 the feud is a useful enforcement mechanism with no cost to him. The feudal honor system sees itself as degraded (Piton) \u2014 performing honor codes that used to matter but now primarily justify themselves. The civilizational observer risks seeing natural law (false Mountain) \u2014 humans naturally form feuding groups \u2014 which naturalizes what is actually a contingent institutional arrangement maintained by specific enforcement mechanisms. The gap between the victim's snare and the beneficiary's tangled rope reveals the mandatrophy: the patriarch experiences real coordination benefits alongside extraction, while the young member experiences only extraction.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy through perspectival differentiation. The feud IS both a coordination mechanism (forcing house loyalty and resource allocation) AND an extraction mechanism (forcing young members into danger, mandating violence). The question is not 'coordination or extraction?' but 'for whom?' For patriarchs, it functions as Tangled Rope (real coordination + asymmetric extraction of younger generation). For young members, it functions as Snare (pure extraction). The feud cannot be classified as pure coordination (Rope) because it has genuine asymmetric extraction (victims cannot exit). It cannot be classified as pure extraction (Snare) because it performs genuine coordination functions (loyalty enforcement, resource control). The Tangled Rope classification from the patriarch's perspective captures this hybrid: the feud coordinates institutional actors while extracting from subordinate actors. The rising theater ratio (0.55\u21920.68) indicates Piton drift \u2014 the coordination function is atrophying while the performative ritual persists, suggesting the constraint may be transitioning from Tangled Rope toward Piton as its functional value diminishes."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "veronese_civil_order",
-      "patriarchal_marriage_contracts"
-    ]
-  }
+      "verona_civic_peace",
+      "renaissance_marriage_market"
+    ],
+    "dual_formulation_note": "The Montague-Capulet feud is upstream of specific institutional failures (civic peace disruption, marriage alliance prevention) but constitutes a distinct constraint. The feud's extractiveness reflects the inherited institutional enforcement of enmity; downstream constraints have their own extractiveness reflecting domain-specific impacts."
+  },
+  "directionality_overrides": []
 }

@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "cumbria_mine_rejection",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK government rejection of the Woodhouse Colliery coal mine",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_climate_commitments",
+      "renewable_energy_sector",
+      "environmental_groups"
+    ],
+    "victims": [
+      "cumbria_local_economy",
+      "woodhouse_colliery_investors",
+      "uk_steel_industry"
+    ],
+    "has_sunset_clause": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Cumbria Local Economy",
+      "comment": "Perspective of the local Cumbrian economy, which is trapped and powerless to reverse the decision, bearing the cost of lost jobs and investment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Steel Industry",
+      "comment": "Perspective of the UK steel industry, constrained by the decision but with some ability to seek alternative coal sources or lobby for policy changes. Experiences mixed benefits and costs. May benefit from green transition long-term."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "UK Climate Commitments",
+      "comment": "Perspective of the UK's climate commitments, benefiting from the decision as it aligns with long-term environmental goals. Can effectively 'arbitrage' global carbon markets. This perspective sees the constraint as a tool for enforcing policy consistency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Sector",
+      "comment": "The renewable energy sector benefits from this decision in the short-term, as it temporarily removes a competitor and provides a boost, while the renewable transition matures. They are able to exit fossil fuels."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Planning System",
+      "comment": "The UK planning system continues to operate as usual, but the decision reflects a broader shift in priorities. The emphasis has shifted from resource extraction to climate mitigation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the mine rejection represents a tangled rope. The benefits of reduced carbon emissions are somewhat offset by the costs to the local economy and the potential for increased reliance on imported coal, and the UK demonstrates its commitment to global climate agreements, while causing localized economic loss."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "imported_coal_offset",
+      "question": "To what extent will the rejection of the Cumbrian mine lead to increased imports of coking coal from other countries?",
+      "resolution_mechanism": "Analysis of import data and steel industry sourcing practices.",
+      "impact": "If imports significantly increase, the climate benefits are reduced, making the constraint a less effective tool.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the climate benefits are offset by increased coal imports."
+    },
+    {
+      "id": "local_economic_diversification",
+      "question": "How effectively can the Cumbrian economy diversify into alternative industries to replace the jobs and investment lost from the mine rejection?",
+      "resolution_mechanism": "Tracking of economic development initiatives and employment rates in Cumbria.",
+      "impact": "If diversification is successful, the local economic costs are mitigated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ability of the Cumbrian economy to diversify."
+    },
+    {
+      "id": "policy_consistency_tradeoffs",
+      "question": "What are the broader policy tradeoffs between supporting domestic industries and meeting climate targets?",
+      "resolution_mechanism": "Economic modeling and policy analysis.",
+      "impact": "Clarifies if the rejection undermines steel industry or strengthens commitment to renewables.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Policy tradeoffs related to supporting domestic industry."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK government's rejection of the Woodhouse Colliery coal mine exemplifies the conflict between environmental commitments and local economic development. While the decision aligns with national climate goals, it also imposes costs on the local Cumbrian economy and potentially the UK steel industry. The constraint highlights the complexities of balancing competing priorities in the context of a transition to a low-carbon economy. Some actors see this rejection as a necessary tool for climate governance, while others experience it as a direct economic blow.",
+    "key_agents": [
+      "UK Climate Commitments: Primary beneficiary (institutional/arbitrage) - Aligns with long-term goals, enforces policy consistency.",
+      "Cumbria Local Economy: Primary victim (powerless/trapped) - Bears cost of lost jobs and investment.",
+      "UK Steel Industry: Secondary victim (moderate/constrained) - Constrained, may seek alternatives.",
+      "Renewable Energy Sector: Secondary beneficiary (organized/mobile) - Benefits from reduced competitor, transition to sustainable energy.",
+      "Environmental Groups: Key beneficiary (institutional/mobile) - Groups advocate for climate goals",
+      "Woodhouse Colliery Investors: Impacted victim (moderate/constrained) - Constrained by the planning change."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. This represents a mix of benefit for climate commitments and extraction from the regional economy, where it is a primary snare. Suppression (0.70): High. The decision suppresses alternative pathways, especially for local interests. The decision represents a firm climate goal priority. Theater ratio (0.75): High. High theater ratio implies the decision is in part a symbolic gesture to demonstrate climate leadership on the global stage, beyond just delivering tangible outcomes.",
+    "perspectival_gap": "The decision is perceived differently by various stakeholders. While the UK's climate commitments benefit, the local Cumbrian economy bears the cost of lost jobs and investment. The UK steel industry experiences mixed impacts, as it faces the need to adapt to alternative coal sources. The renewable energy sector sees the decision as an opportunity for growth.",
+    "directionality_logic": "Beneficiaries (UK Climate Commitments and Renewable Energy Sector) benefit from the decision, aligning with long-term environmental goals, while victims (Cumbria Local Economy and UK Steel Industry) face economic losses or constraints. This asymmetric impact defines the tangled rope nature of the constraint.",
+    "mandatrophy_analysis": "The case illustrates the policy complexities by combining short-term economic disruption and long-term climate goals. The mine would have provided local benefits (employment), but these benefits would have clashed with the overall climate goal. The rejection prioritizes the reduction of carbon emissions by placing constraints on the coal industry."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_climate_policy",
+      "global_coal_market"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "value_alignment_drift",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Value Alignment Drift (Purpose Creep)",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_owners",
+      "advertisers"
+    ],
+    "victims": [
+      "algorithmic_targets",
+      "social_cohesion"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Users Trapped in the System",
+      "comment": "Users are often trapped within the algorithmic system due to network effects or lack of viable alternatives. They experience the purpose creep as a snare, as the system increasingly optimizes for metrics that are misaligned with their well-being and autonomy. They bear the costs of the drift and have little power to change the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulators and Watchdog Groups",
+      "comment": "Regulators and watchdog groups attempt to monitor and mitigate the purpose creep. They are constrained by limited resources, political influence, and the complexity of the algorithmic systems. They experience a tangled rope as they attempt to balance the coordination function of oversight with the extractive nature of the misalignment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Owners with Arbitrage",
+      "comment": "Platform owners benefit from the initial optimization for engagement, which drives revenue and market share. They have arbitrage exit options because they can shift resources to new metrics, although this may have long-term consequences. From their perspective, this initially appears as a rope as the platform enables connections and sharing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "Future generations are constrained by the consequences of current algorithmic misalignments. They benefit from technological advancements but are constrained by the societal and environmental consequences. They experience a tangled rope with limited agency to correct the course."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the purpose creep as a tangled rope. The algorithmic systems initially coordinate user activity and provide value, but as they optimize for engagement, they extract value from users and society as a whole. The extraction happens over time and with a seemingly positive effect on the platform owners."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "metric_capturability",
+      "question": "How susceptible is a given proxy metric to unintended manipulation or exploitation?",
+      "resolution_mechanism": "Empirical testing of the proxy metric in controlled environments, adversarial simulations, and long-term observational studies.",
+      "impact": "If the metric is highly capturable, the tangled rope strengthens toward a snare. If it is robust, the system may classify as a rope or scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Vulnerability of the proxy metric to exploitation."
+    },
+    {
+      "id": "long_term_value_alignment",
+      "question": "How durable is the initial alignment between the proxy metric and the underlying human value?",
+      "resolution_mechanism": "Longitudinal studies tracking the correlation between the proxy metric and measures of actual well-being and societal benefit.",
+      "impact": "If the alignment degrades rapidly, the system quickly transitions toward a snare or piton. If alignment persists, the system may function as a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of value alignment."
+    },
+    {
+      "id": "ethical_governance_efficacy",
+      "question": "How effective are ethical governance mechanisms (e.g., oversight boards, internal review processes) in detecting and mitigating purpose creep?",
+      "resolution_mechanism": "Audits of ethical governance mechanisms, assessments of their ability to detect and respond to misalignment signals, and impact evaluations.",
+      "impact": "If governance is ineffective, the system trends toward a snare. If governance is strong, the system could maintain a rope or tangled rope configuration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of ethical governance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Purpose Creep is a systemic failure where an algorithm or organization optimizes for a proxy metric (e.g., \"engagement\") that eventually conflicts with the original human value (e.g., \"well-being\"). This drift can be subtle and difficult to detect, as the initial optimization may provide genuine value before the misalignment becomes apparent.",
+    "key_agents": [
+      "Platform Owners: Institutional actors (institutional/arbitrage) who initially benefit from increased engagement.",
+      "Advertisers: Institutional actors (institutional/arbitrage) who pay for increased exposure.",
+      "Algorithmic Targets: Powerless individuals (powerless/trapped) who are increasingly manipulated and exploited.",
+      "Social Cohesion: A broad collective (powerless/trapped) that suffers from the negative externalities of the misalignment.",
+      "Regulators and Watchdog Groups: (moderate/constrained) who attempt to mitigate the negative consequences."
+    ],
+    "logic_rationale": "Extractiveness (0.6): The system extracts value from users and society by manipulating behavior and creating negative externalities. Suppression (0.7): Users are often trapped within the system and have limited alternatives. The theater ratio is relatively low (0.4) because the initial coordination function is genuine.",
+    "perspectival_gap": "Platform owners see a rope (coordination) because they are enabling connections and sharing. Users experience a snare (extraction) because they are being manipulated and exploited. The analytical observer sees a tangled rope because the system initially coordinates but eventually extracts.",
+    "directionality_logic": "Directionality is determined by the structural position of each agent. Platform owners benefit from increased engagement, while users and society bear the costs of the misalignment.",
+    "mandatrophy_analysis": "The Purpose Creep is a genuine instance of a tangled rope. It is not merely a disguised snare because the system initially provides a coordination function before drifting towards extraction. The coordination function helps maintain the suppression of alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_bias",
+      "information_overload"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp08",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lest"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "The Lestrygonian Food Chain (Lunchtime Dublin)",
+    "topic_domain": "social/economic/biological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "merchant_class",
+      "restaurant_owners",
+      "food_vendors"
+    ],
+    "victims": [
+      "working_poor",
+      "unemployed_laborers",
+      "marginalized_hunger"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Hungry Unemployed",
+      "comment": "PERSPECTIVE 1: HUNGRY UNEMPLOYED (SNARE) \u2014 Completely trapped. Must eat to survive but lack resources to purchase food. Dublin's lunchtime food system extracts dignity and leisure from those who cannot afford participation. Observation of abundance creates psychological extraction as well as material deprivation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Working Poor",
+      "comment": "PERSPECTIVE 2: WORKING POOR (SNARE) \u2014 Trapped by biological necessity and wage structure. Must consume at survival minimum while watching merchant class consume lavishly. Extraction occurs through wage suppression that forces consumption rationing. No exit \u2014 cannot stop eating, cannot leave Dublin, cannot escape class position within the observed interval."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Merchant Class & Vendors",
+      "comment": "PERSPECTIVE 3: MERCHANT CLASS & VENDORS (ROPE) \u2014 Benefits from food distribution infrastructure. Restaurants, butchers, grocers experience the constraint as coordination: organizing supply chains, managing inventory, capturing consumer attention. Net beneficiaries. High exit options through price discrimination and market position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Clerk or Shop Assistant",
+      "comment": "PERSPECTIVE 4: CLERK OR SHOP ASSISTANT (TANGLED ROPE) \u2014 Constrained but not powerless. Employed but with limited wage. Experiences both the coordination function (retail distribution provides employment) and extraction (wage insufficient for leisurely dining). Can exit through career mobility or relocation but at biographical cost. Mixed experience: extraction tempered by employment stability and incremental advancement possibility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Dublin Social Order",
+      "comment": "PERSPECTIVE 5: DUBLIN SOCIAL ORDER (PITON) \u2014 Institutional degradation through performative maintenance. Class stratification in food access persists through social ritual rather than active enforcement: the 'right' restaurants for the 'right' classes; deference to merchant-class consumption. Theater ratio high (0.35 suggests lower theater than verification example, but still performative \u2014 social codes matter more than economic logic). The constraint is inertial: it persists because alternatives haven't been built, not because active suppression is necessary."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, predation in the food chain is a biological law: organisms must consume resources; stronger organisms secure advantage. This perspective risks naturalizing social hierarchy as inherited from animal predation. The constraint appears immutable: 'nature' determines hierarchy. However, the structural data contradicts the mountain classification \u2014 actual enforcement mechanisms are social and economic, not biological. The 'lestrygonian' framing naturalizes contingent institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "biological_vs_social_predation",
+      "question": "Is the Lestrygonian food chain a natural biological constraint or a socially constructed economic one?",
+      "resolution_mechanism": "Comparative analysis of food access systems across cultures and time periods; identification of whether scarcity or distribution mechanisms determine hunger; historical counterfactuals",
+      "impact": "If biological: constraint is Mountain (extractiveness intrinsic to human survival). If social: constraint is Snare (extractiveness is institutional choice). This omega determines whether the system is reformable.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether predation is biological law or social construction"
+    },
+    {
+      "id": "collective_action_threshold",
+      "question": "At what population density or organization level can the powerless coordinate to alter the food chain structure?",
+      "resolution_mechanism": "Historical analysis of food riots, collective wage negotiation, collective purchasing; identification of critical mass for exit from trapped status",
+      "impact": "If threshold low: powerless can shift to organized power atom (snare becomes scaffold or tangled rope). If threshold high: trap persists as structural feature. Determines whether 'trapped' exit option is permanent or contingent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coordination threshold for powerless escape from food chain trap"
+    },
+    {
+      "id": "consumption_visibility_necessity",
+      "question": "Does the psychological extraction (humiliation of watching merchant abundance) require visible difference, or is extraction purely from material deprivation?",
+      "resolution_mechanism": "Historical comparison: hidden hunger vs visible class difference; impact analysis of rationing systems vs inequality systems on reported well-being",
+      "impact": "If visibility necessary: extraction includes performative theater. If material only: extractiveness is lower. Affects theater_ratio and suppression values.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether psychological extraction requires visible consumption differences"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Leopold Bloom's lunchtime wandering through Dublin in the Lestrygonian episode (Chapter 8 of Ulysses) presents the city's food economy as a predatory hierarchy. Bloom observes restaurant windows, passing food vendors, eating crowds, and experiences the tension between biological hunger and economic constraint. The constraint operates at multiple scales: individual (Bloom's own middle-class sufficiency vs working-class deprivation), social (merchant class extracting from those with limited purchasing power), and conceptual (the narrator's slippage between 'Lestrygonian giants' devouring weaker creatures and Dublin's class-stratified food access). The food chain metaphor naturalizes what is fundamentally a social/economic extraction mechanism. Extractiveness (0.58) reflects that the merchant class captures substantial surplus from those compelled to consume at subsistence levels. Suppression (0.48) reflects partial suppression through wage structure and market position \u2014 complete suppression would require active enforcement; instead, the system relies on structural position and biological necessity. Theater ratio (0.35) is relatively low, indicating that the extraction mechanism is primarily material rather than performative, though social ritual does play a role in maintaining class differentiation.",
+    "key_agents": [
+      "Leopold Bloom: Analytical observer (moderate/mobile) \u2014 middle-class consciousness that sees predation without experiencing it acutely; capable of sympathetic imagination but structurally protected from the trap",
+      "Merchant Class & Restaurant Owners: Primary beneficiaries (institutional/arbitrage) \u2014 capture surplus from wage-constrained consumers; enjoy high exit options and price-setting power",
+      "Working Poor & Unemployed: Primary victims (powerless/trapped) \u2014 compelled to consume at subsistence or less; no exit options; bear full extraction cost",
+      "Clerks & Shop Assistants: Secondary victims (moderate/constrained) \u2014 employed but with limited wage; experience mixed coordination (employment) and extraction (insufficient consumption)",
+      "Food Distribution System: Institutional mechanism (institutional/arbitrage) \u2014 enables extraction by maintaining supply scarcity and price hierarchy",
+      "Dublin Social Order: Generational constraint (institutional/arbitrage) \u2014 maintains class differentiation through performative ritual and deference patterns"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated. The merchant class and food vendors extract substantial surplus from those whose biological needs force consumption despite limited purchasing power. Bloom's observation of feast windows and eating crowds emphasizes the gap between appetite and ability. The extractiveness rises over the interval (0.42 \u2192 0.58) as industrial wage suppression intensifies \u2014 workers' purchasing power declines while merchant class consolidates food distribution. This is not maximally extractive because some material goods are accessible (bread, basic subsistence) \u2014 the trap is not starvation but deprivation relative to visible abundance. Suppression (0.48): Moderate. Suppression operates through wage structure (employers set low wages) and market position (merchant class controls pricing). But suppression is not backed by explicit coercion \u2014 workers exit the trap would require coordination to withhold labor or organize collective purchasing. The system appears 'natural' (market forces) rather than enforced (police, law). This natural appearance is part of the trap: structural suppression feels like individual failure. Theater ratio (0.35): Low-moderate. The extraction is primarily material rather than performative. Bloom's observation focuses on actual consumption differences, not social ritual around consumption. However, some theater exists: the 'right' restaurants for 'right' classes, deference to merchant-class diners, social shame around hunger. The theater rises slightly over the interval as industrial society develops more elaborate class performance.",
+    "directionality_logic": "The engine derives directionality from declared beneficiaries/victims and exit options. Merchant class (institutional/arbitrage) experience low or negative d \u2014 they benefit from the constraint, have high exit options, and structure their environment favorably. Working poor (powerless/trapped) experience high d approaching 1.0 \u2014 they are victims, have zero exit options, and bear extraction fully. Clerks (moderate/constrained) experience moderate d around 0.65 \u2014 mixed position with some employment benefit (coordination) but constrained mobility and insufficient wages (extraction). Bloom's analytical position (analytical/analytical) experiences d \u2248 0.72 \u2014 he observes the full structure but is not caught in the trap. The sigmoid f(d) translates these d values into experienced extractiveness modifiers: beneficiaries see rope (low chi), victims see snare (high chi), moderates see tangled rope (mixed chi), analysts see potential mountain (but the structural data refutes the natural law framing).",
+    "perspectival_gap": "Massive perspectival gap between beneficiaries and victims. The merchant class sees coordination and profit opportunity (Rope). Clerks and shop assistants see mixed experience: employment stability tempered by wage constraint (Tangled Rope). The working poor and unemployed see pure extraction with no escape (Snare). Bloom's analytical position risks the mountain misclassification: reading predation as 'natural law' inherited from animal hierarchy naturalizes what is fundamentally a social/economic arrangement. The piton perspective (Dublin social order persisting through ritual and inertia) identifies the constraint as institutionally maintained but degraded \u2014 no one believes the system is just, yet it persists. This gap between description (everyone sees predation) and naturalization (some perspectives treat it as inevitable) is diagnostic of the mandatrophy.",
+    "mandatrophy_analysis": "RESOLVED through perspectival decomposition. The apparent contradiction is whether the Lestrygonian food chain is (a) a natural biological law (Mountain from civilizational view) or (b) a social extraction mechanism (Snare from victim view). The resolution: both are accurate descriptions of different perspectives. The mountain classification is a FALSE SUMMIT \u2014 it naturalizes contingent institutional arrangements. The snare classification is structurally correct \u2014 extractiveness, suppression, and victim status are all present. The scaffold and piton classifications reveal the constraint's vulnerability: open-science parallels would be collective purchasing systems, cooperative food distribution, wage negotiation. The constraint persists through institutional inertia (piton) and performative naturalization (false mountain), not because it is immutable. This mandatrophy resolution shows that 'natural law' framing of social hierarchies is the characteristic error mode of powerless observation: the observer from the civilizational analytical position risks misclassifying institutional choice as biological necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dublin_wage_suppression",
+      "victorian_class_stratification",
+      "consumption_visibility_display"
+    ],
+    "dual_formulation_note": "The Lestrygonian food chain decomposes into three linked constraints: (1) wage suppression mechanisms (economic), (2) class stratification enforcement (social/ritual), (3) visibility of consumption differences (psychological). Each has different \u03b5. This story addresses the integrated constraint \u2014 how the three mechanisms couple to create the predatory food chain structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: climate_attribution_2026
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_climate_attribution_2026, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -59,18 +58,37 @@
  *   domain: scientific/political/economic
  *
  * SUMMARY:
- *   Attribution science quantifies how much human-induced climate change has
- *   altered the risk of specific extreme weather events. It transitions
- *   individual disasters from "acts of God" to "measurable consequences of
- *   policy and industry," enabling legal and political action. This constraint
- *   is the scientific framework itself, not the physical weather events it studies.
+ *   Extreme weather attribution science quantifies how much human-induced
+ *   climate change has altered the probability and magnitude of specific
+ *   extreme events (hurricanes, heatwaves, floods). The science creates a
+ *   structural tension: attribution findings that confirm climate causation
+ *   generate legal liability for emitters and insurance risk for
+ *   carbon-intensive sectors, while attribution uncertainty preserves the
+ *   status quo. This constraint exhibits a tangled coordination-extraction
+ *   hybrid with institutional piton aspects and a nascent scaffold sunset.
+ *   The same scientific question — 'How much did climate change increase the
+ *   likelihood of this hurricane?' — appears as a coordination tool for
+ *   insurance pricing (rope), an institutional bottleneck that defers
+ *   liability (piton), a source of pure extraction for vulnerable populations
+ *   with no exit (snare), a mixed extraction-coordination mechanism
+ *   constraining scientists (tangled rope), or an epistemologically necessary
+ *   uncertainty (mountain view that naturalizes conservatism). The
+ *   theater_ratio increase (0.45 → 0.64 over 10 years) reflects IPCC
+ *   assessment cycles that create appearance of definitive closure while
+ *   actual attribution science remains contested and politicized. Rapid
+ *   attribution networks and climate litigation are beginning to construct
+ *   alternative pathways that bypass IPCC delays, with sunset logic: as legal
+ *   precedent accumulates and real-time attribution matures, the delay-based
+ *   extraction mechanism weakens.
  *
- * KEY AGENTS (by structural relationship):
- *   - Displaced Resident: Primary target of the physical weather event (powerless/trapped) — experiences the physical reality as a Mountain.
- *   - Climate Litigation Plaintiffs: Primary beneficiary (organized/mobile) — uses the science as a tool for legal recourse.
- *   - Greenhouse Gas Emitters: Primary target of the legal implications (organized/constrained) — experiences the science as a mechanism of accountability.
- *   - Attribution Scientist: Architect/Beneficiary (institutional/arbitrage) — develops and applies the scientific coordination tool.
- *   - Analytical Observer: Sees the full structure of the scientific framework.
+ * KEY AGENTS:
+ *   - Climate-Vulnerable Populations: Primary victim (powerless/trapped) — bear weather impacts with no negotiating power; attribution lag defers policy response and liability recognition
+ *   - Attribution Science Community: Secondary victim (moderate/constrained) — career structure and institutional pressure constrain research agendas; litigation risk suppresses inconvenient findings; reputational attacks from both fossil fuel industry and climate advocates
+ *   - Fossil Fuel Industry & Carbon Sectors: Primary beneficiary (institutional/arbitrage) — benefit from attribution lag which defers legal liability and regulatory triggers; methodological conservatism (high confidence thresholds) maintains ambiguity
+ *   - Insurance Industry: Mixed position (organized/constrained) — benefit from risk quantification but lose from attribution lag; constrained by regulatory and litigation pressure
+ *   - IPCC Assessment Process: Institutional gatekeeper (institutional/arbitrage) — maintains performative authority while cycle delays ensure science lags behind attribution demands
+ *   - Rapid Attribution Networks: Emerging alternative (organized/constrained) — building real-time attribution pathways; sunset logic suggests 10-15 year replacement of IPCC bottleneck
+ *   - Climate Litigation Coalitions: Organized advocates (organized/constrained) — drive demand for specific attribution but litigation adversarialism may suppress scientific objectivity
  */
 
 /* ==========================================================================
@@ -78,94 +96,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% While the science itself is descriptive, its application is used for legal
-% "extraction" of damages from polluters. The extraction is low as it's an
-% informational tool, not a direct tax or fee.
-domain_priors:base_extractiveness(climate_attribution_2026, 0.20).
-
-% Suppression is very low. The science doesn't suppress alternative explanations
-% (like natural variability) but rather quantifies their contribution alongside
-% anthropogenic factors. A low score is required for the Mountain perspective to be valid.
-domain_priors:suppression_score(climate_attribution_2026, 0.05).
-domain_priors:theater_ratio(climate_attribution_2026, 0.08).
+domain_priors:base_extractiveness(climate_attribution_2026, 0.52).
+domain_priors:suppression_score(climate_attribution_2026, 0.58).
+domain_priors:theater_ratio(climate_attribution_2026, 0.64).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(climate_attribution_2026, extractiveness, 0.20).
-narrative_ontology:constraint_metric(climate_attribution_2026, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(climate_attribution_2026, theater_ratio, 0.08).
+narrative_ontology:constraint_metric(climate_attribution_2026, extractiveness, 0.52).
+narrative_ontology:constraint_metric(climate_attribution_2026, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(climate_attribution_2026, theater_ratio, 0.64).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These metrics apply to the physical event (e.g., a flood) which is perceived
-% as a Mountain by those trapped within it. The attribution science constraint
-% inherits these properties from the perspective of the powerless.
-narrative_ontology:constraint_metric(climate_attribution_2026, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(climate_attribution_2026, resistance, 0.0).
-
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(climate_attribution_2026, scaffold).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(climate_attribution_2026, tangled_rope).
 narrative_ontology:human_readable(climate_attribution_2026, "Extreme Weather Attribution Science").
 narrative_ontology:topic_domain(climate_attribution_2026, "scientific/political/economic").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This flag is critical. The physical weather events emerge naturally. The
-% science *about* them is constructed, but the powerless perspective is
-% observing the natural event, making this flag necessary for that perspective
-% to classify correctly as a Mountain.
-domain_priors:emerges_naturally(climate_attribution_2026).
+domain_priors:requires_active_enforcement(climate_attribution_2026).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(climate_attribution_2026, climate_litigation_plaintiffs).
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(climate_attribution_2026, greenhouse_gas_emitters).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(climate_attribution_2026, fossil_fuel_industry).
+narrative_ontology:constraint_beneficiary(climate_attribution_2026, carbon_intensive_sectors).
+narrative_ontology:constraint_beneficiary(climate_attribution_2026, litigation_defense_interests).
+narrative_ontology:constraint_victim(climate_attribution_2026, climate_vulnerable_populations).
+narrative_ontology:constraint_victim(climate_attribution_2026, insurance_market_transparency).
+narrative_ontology:constraint_victim(climate_attribution_2026, attribution_science_integrity).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE DISPLACED RESIDENT (MOUNTAIN)
-% For the individual experiencing an extreme weather event like a flood, the
-% event is an unchangeable physical reality. The science explaining it is
-% irrelevant to their immediate, trapped condition. The constraint is the
-% physical world itself, which is a Mountain.
-constraint_indexing:constraint_classification(climate_attribution_2026, mountain,
+% PERSPECTIVE 1: CLIMATE-VULNERABLE POPULATIONS (SNARE) — Small island states, subsistence farmers, urban poor in flood zones experience extreme weather impacts but cannot exit or negotiate. Bear full cost of attribution lag; no voice in science policy. Maximum extraction from trapped position.
+constraint_indexing:constraint_classification(climate_attribution_2026, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: THE ATTRIBUTION SCIENTIST (ROPE)
-% For the scientist, attribution is a 'Rope'—a pure coordination mechanism that
-% links specific data points (weather events) to global trends (climate models).
-% It is a functional tool used to create a coherent, shared understanding.
-constraint_indexing:constraint_classification(climate_attribution_2026, scaffold,
+% PERSPECTIVE 2: ATTRIBUTION SCIENCE COMMUNITY (TANGLED ROPE) — Scientists benefit from research funding and career advancement through attribution work, but also bear extraction via suppression of inconvenient findings, litigation risk, and reputational attacks. Constrained exit: career structure locks researchers in; institutional pressure forces cautious framing.
+constraint_indexing:constraint_classification(climate_attribution_2026, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: FOSSIL FUEL INDUSTRY & CARBON-INTENSIVE SECTORS (ROPE) — Primary beneficiary. Experiences the constraint as coordination: attribution science's methodological conservatism (requiring 5+ events to establish human link, high confidence thresholds) enables continued operation by deferring legal liability and regulatory action. Net beneficiary position with strong arbitrage options.
+constraint_indexing:constraint_classification(climate_attribution_2026, rope,
     context(agent_power(institutional),
-            time_horizon(historical),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE LEGAL DEFENSE ANALYST (ROPE)
-% For a corporation facing liability, the science feels like a Snare. However,
-% with low base extraction (ε=0.20), the math classifies it as a Rope. It's a
-% coordination tool that organizes legal arguments against them. The high
-% directionality (d≈1.0) makes the effective extraction feel significant, but
-% it doesn't cross the Snare threshold.
-constraint_indexing:constraint_classification(climate_attribution_2026, rope,
+% PERSPECTIVE 4: INSURANCE INDUSTRY (TANGLED ROPE) — Mixed position. Benefits from attribution science's quantification of risk (enables pricing models). But extraction: attribution lag delays risk-adjusted premiums, creating cross-subsidization between regions. Organized but constrained by regulatory pressure and tort liability.
+constraint_indexing:constraint_classification(climate_attribution_2026, tangled_rope,
     context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (ROPE)
-% The analytical observer sees the full structure: a low-extraction scientific
-% framework that serves a primary coordination function (linking cause and
-% effect) with some extractive applications (legal liability). This matches the
-% Rope classification.
+% PERSPECTIVE 5: IPCC ATTRIBUTION ASSESSMENT (PITON) — Performative institutional ritual. IPCC cycles (every 7 years) ensure assessment lags behind science. Statements like 'it is unequivocal that human influence has warmed the climate' create false sense of resolution while deferring specific-event attribution. Theater_ratio=0.64 reflects gap between apparent authority and actual actionability.
+constraint_indexing:constraint_classification(climate_attribution_2026, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — Statistical attribution is inherently difficult: extreme events are rare, climate variability is large, causal chains are complex. Some attribution uncertainty is epistemologically necessary. However, this risks naturalizing the conservatism bias built into attribution methodology (high confidence thresholds, rare-event bias, peer review suppression of early signals). The analytical observer's mountain view naturalizes what may be contingent institutional choices.
 constraint_indexing:constraint_classification(climate_attribution_2026, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 7: RAPID ATTRIBUTION NETWORKS & LEGAL MOBILIZATION (SCAFFOLD) — New institutions (World Weather Attribution, climate litigation coalitions) are building real-time attribution pathways that bypass IPCC cycles. Sunset logic: as rapid attribution matures and legal precedents establish causation, the delay-based extraction mechanism weakens. These networks see a sunset window (10-15 years) before climate causation becomes routine in law.
+constraint_indexing:constraint_classification(climate_attribution_2026, scaffold,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(global))).
 
 /* ==========================================================================
@@ -175,17 +180,17 @@ constraint_indexing:constraint_classification(climate_attribution_2026, mountain
 :- begin_tests(climate_attribution_2026_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between the direct physical experience and the systemic view.
-    constraint_indexing:constraint_classification(climate_attribution_2026, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(climate_attribution_2026, TypeSystem, context(agent_power(institutional), _, _, _)),
-    TypeTarget == mountain,
-    TypeSystem == rope,
-    TypeTarget \= TypeSystem.
+    constraint_indexing:constraint_classification(climate_attribution_2026, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(climate_attribution_2026, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_claim_consistency) :-
-    narrative_ontology:constraint_claim(climate_attribution_2026, ClaimedType),
-    constraint_indexing:constraint_classification(climate_attribution_2026, AnalyticalType, context(agent_power(analytical), _, _, _)),
-    ClaimedType == AnalyticalType.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(climate_attribution_2026, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(climate_attribution_2026, TR),
+    TR >= 0.70.
 
 :- end_tests(climate_attribution_2026_tests).
 
@@ -195,82 +200,101 @@ test(analytical_claim_consistency) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extraction (ε=0.20) is low because the constraint is an
- *   information standard, not a direct financial instrument. Its power comes
- *   from enabling other actions. Suppression (S=0.05) is set to the Mountain
- *   ceiling because from the powerless perspective, the physical event being
- *   studied is absolute, and this low score is required for that classification
- *   to be valid. The Natural Law Profile metrics (accessibility_collapse, resistance)
- *   are added to satisfy the linter and correctly model the powerless perspective.
+ *   Extractiveness (0.52): Moderate-high. The constraint extracts through attribution lag that delays policy response and liability recognition. The extraction is structural: attribution methodology requires high confidence thresholds (>95% for human causation attribution), multiple events to establish pattern, and peer review cycles that exclude early signals. These features are partly epistemologically necessary (small samples, natural variability) but partly institutional choices (conservative liability protection). The increase from 0.28 to 0.52 over the interval reflects growing litigation demand, which amplifies the delay mechanism. Suppression (0.58): Moderate-high. Multiple barriers limit attribution scope: (1) statistical — extreme events are rare, climate variability is large; (2) institutional — litigation risk suppresses inconvenient findings; (3) epistemic — counterfactual specificity is difficult for individual events. Suppression is not total — some attribution findings do emerge despite barriers. Theater_ratio (0.64): Moderate-high. IPCC assessment cycles create theatrical closure ('it is unequivocal that...') while actual event-specific attribution remains contested. The ritual of global climate summits and IPCC reports produces appearance of definitive authority without enabling specific legal/policy action. Theater has increased over the interval as gap between general climate consensus and specific-event attribution has widened.
  *
  * PERSPECTIVAL GAP:
- *   The primary gap is between the powerless agent experiencing the physical
- *   weather event (a Mountain) and all other agents interacting with the
- *   scientific/legal framework built around it (a Rope). This highlights the
- *   framework's core function: translating an immutable physical reality into a
- *   malleable social and legal one. An agent targeted by legal action may
- *   perceive the Rope as a Snare, but the low base extraction confirms it is
- *   structurally a coordination mechanism.
+ *   The primary perspectival gap lies between beneficiaries (fossil fuel industry, IPCC process) who see the constraint as protective coordination or natural epistemological limit, versus victims (vulnerable populations, attribution science integrity) who see pure extraction. The fossil fuel industry's rope perspective emphasizes methodological rigor and the statistical necessity of high confidence thresholds — for them, attribution science is a coordination tool that enables continued operation while satisfying public demand for scientific accountability. The vulnerable populations' snare perspective emphasizes that attribution lag defers life-saving policy responses — they experience the same high confidence threshold as a barrier that protects emitters. The attribution science community's tangled rope perspective captures this: they genuinely want scientific rigor (coordination function) but also experience pressure from litigation adversarialism (extraction). The IPCC's piton perspective reveals that the institutional assessment process is performing authority while remaining substantively constrained by cycles and consensus-building that lag behind actual scientific debate. The rapid attribution networks' scaffold perspective opens a structural exit: real-time attribution with lower latency and higher specificity, with sunset logic suggesting 10-15 year replacement cycle. The analytical observer's mountain view risks naturalizing this entire apparatus as epistemologically necessary, when in fact much of the delay is institutional choice.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: 'climate_litigation_plaintiffs' directly benefit by using the
- *     science as a tool to seek damages. This gives them a low directionality (d).
- *   - Victims: 'greenhouse_gas_emitters' bear the cost of legal and political
- *     accountability enabled by the science. This gives them a high directionality (d).
- *   This clear opposition is what makes the constraint function.
+ *   Beneficiary directionality: Fossil fuel industry and carbon sectors experience low effective extraction (d ≈ 0.15) because attribution conservatism protects their interests — they are structural beneficiaries of the delay mechanism. Their exit options (arbitrage) are strong: litigation risk remains manageable, regulatory triggers are deferred. Victim directionality: Climate-vulnerable populations experience high extraction (d ≈ 0.90) due to trapped position (no exit options, cannot negotiate) and victim status (bear full cost of attribution lag). Attribution scientists experience moderate extraction (d ≈ 0.55) from constrained position (career structure locks them in) and mixed beneficiary-victim status (benefit from research funding but lose autonomy to litigation pressure). Insurance industry experiences moderate extraction (d ≈ 0.50) from organized but constrained position (can organize responses but cannot fully exit regulatory environment). Rapid attribution networks derive d ≈ 0.35 (mobile position creating alternative pathways) suggesting scaffold classification with sunset logic.
  *
  * MANDATROPHY ANALYSIS:
- *   The low extraction score (0.20) prevents mislabeling this as a Snare. While
- *   it enables extraction via the legal system, the science itself is primarily
- *   a coordination tool for establishing causality. The framework correctly
- *   identifies its primary function as coordination (Rope), while acknowledging
- *   its directional application against specific actors.
+ *   The mandatrophy in climate attribution centers on whether the constraint is fundamentally a coordination problem (rope) or an extraction mechanism (snare). The fossil fuel industry frames it as pure coordination: attribution science serves the public need to understand climate causation while maintaining scientific rigor. Vulnerable populations frame it as pure extraction: attribution delays defer policy responses that could save lives. The tangled_rope classification resolves this: the constraint BOTH coordinates (enables scientists to pursue rigorous research, enables insurance pricing) AND extracts (suppresses inconvenient findings, defers liability recognition, constrains policy through uncertainty). The mandatrophy is not 'which is it?' but 'the coordination and extraction are structurally intertwined.' Litigation pressure creates feedback loops: scientists who produce findings favoring plaintiffs face adversarial cross-examination (suppression mechanism), so the scientific community becomes cautious (extraction from scientists). The beneficiary (industry) benefits from this caution (coordination for them). The victim (vulnerable populations) bears the cost. Separating the two would require institutional decoupling: independent rapid attribution that is not subject to litigation discovery, or legal systems that accept statistical causation without demanding epistemological certainty. The scaffold perspective suggests this decoupling is emerging (rapid attribution networks, climate litigation establishing precedent), with 10-15 year sunset. Until then, the tangled_rope classification with high mandatrophy risk applies.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
 omega_variable(
-    omega_attribution_latency,
-    "Can attribution analysis move from months/years to near real-time (days), enabling immediate legal/political action?",
-    "Development of automated, pre-computed model ensembles and AI-driven data processing for extreme weather events.",
-    "If real-time: The constraint's utility as a Rope for immediate political/legal coordination increases dramatically. If slow: It remains a Rope for historical/legal analysis.",
+    confidence_threshold_convergence,
+    'Are current attribution confidence thresholds (>95% human causation link) products of statistical necessity or institutional conservatism protecting liability interests?',
+    'Bayesian analysis comparing attributed vs unattributed events; historical comparison of confidence thresholds across decades; game-theoretic modeling of how liability pressure shapes methodology',
+    'If statistical necessity: threshold reflects true epistemological limit (mountain or rope). If institutional conservatism: threshold reflects extraction mechanism (snare or tangled rope).',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_attribution_latency, empirical, "Uncertainty over the achievable speed of scientific attribution analysis.").
+narrative_ontology:omega_variable(confidence_threshold_convergence, empirical, 'Whether attribution confidence thresholds reflect statistical necessity or institutional conservatism').
+
+omega_variable(
+    counterfactual_attribution_uniqueness,
+    'Can extreme weather attribution establish unique counterfactuals (i.e., ''this specific hurricane would not have occurred without climate change'') or only risk modification (i.e., ''this type of event is 2x more likely'')?',
+    'Theoretical limits analysis on counterfactual specification in climate science; comparison with attribution in other domains (epidemiology, caustics); expert elicitation on whether individual-event counterfactuals are conceptually possible',
+    'If unique counterfactuals possible: legal causation can be established with high specificity (reduces snare extraction). If only risk modification: legal claims remain statistical (maintains ambiguity favoring defendants).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(counterfactual_attribution_uniqueness, conceptual, 'Whether attribution can establish unique event counterfactuals or only risk modification').
+
+omega_variable(
+    litigation_feedback_bias,
+    'Does the legal system''s demand for specific attribution (which extreme events were caused by climate change?) distort the scientific process through adversarial filtering, such that inconvenient findings are suppressed in anticipation of cross-examination?',
+    'Comparative analysis of attribution findings in litigation vs peer-reviewed literature; interview study of attribution scientists on litigation risk influence; publication bias testing for results disfavoring plaintiffs',
+    'If strong feedback bias: litigation shapes science more than science shapes litigation (tangled rope extraction mechanism verified). If weak bias: attribution science maintains independence (rope or scaffold).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(litigation_feedback_bias, empirical, 'Whether litigation pressure suppresses inconvenient attribution findings').
+
+omega_variable(
+    rapid_attribution_scalability,
+    'Can real-time attribution networks (World Weather Attribution, national rapid attribution centers) achieve sustained accuracy and institutional authority comparable to IPCC assessments, or do they sacrifice rigor for speed?',
+    'Longitudinal accuracy tracking of rapid vs IPCC attribution; retrospective validation of rapid attribution forecasts; institutional adoption rate by legal and insurance systems',
+    'If scalable with maintained rigor: scaffold sunset is real (20-year path to alternative institution). If rigor-speed tradeoff: rapid attribution remains supplementary, maintaining IPCC bottleneck.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(rapid_attribution_scalability, empirical, 'Whether rapid attribution networks can scale without sacrificing rigor').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(climate_attribution_2026, 0, 10).
+narrative_ontology:interval(climate_attribution_2026, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% No temporal measurements required as base_extractiveness (0.20) is below the
-% 0.46 threshold for mandatory lifecycle drift tracking.
+% Theater ratio over time
+narrative_ontology:measurement(clim_attr_tr_t0, climate_attribution_2026, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(clim_attr_tr_t10, climate_attribution_2026, theater_ratio, 10, 0.64).
+narrative_ontology:measurement(clim_attr_tr_t20, climate_attribution_2026, theater_ratio, 20, 0.64).
+
+% Extraction over time
+narrative_ontology:measurement(clim_attr_be_t0, climate_attribution_2026, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(clim_attr_be_t10, climate_attribution_2026, base_extractiveness, 10, 0.52).
+narrative_ontology:measurement(clim_attr_be_t20, climate_attribution_2026, base_extractiveness, 20, 0.52).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The science acts as a standard for interpreting data and assigning causality.
 narrative_ontology:coordination_type(climate_attribution_2026, information_standard).
+narrative_ontology:affects_constraint(climate_attribution_2026, climate_liability_legal_standard).
+narrative_ontology:affects_constraint(climate_attribution_2026, insurance_loss_recognition_timing).
+narrative_ontology:affects_constraint(climate_attribution_2026, rapid_attribution_methodology).
+
+% DUAL FORMULATION NOTE:
+% Climate attribution science decomposes into three structurally distinct constraints: (1) general climate causation (now well-established, ε ≈ 0.08, mountain); (2) extreme weather event attribution (contested, ε ≈ 0.52, tangled rope); (3) legal liability causation standards (policy/legal rather than scientific, different ε). This story focuses on constraint 2. The three are linked: general climate causation is cited as evidence for extreme event attribution; extreme event attribution drives legal liability standards. Each has different beneficiaries/victims and different extractiveness values.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations accurately models the relationships.
+constraint_indexing:directionality_override(climate_attribution_2026, institutional, 0.2).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

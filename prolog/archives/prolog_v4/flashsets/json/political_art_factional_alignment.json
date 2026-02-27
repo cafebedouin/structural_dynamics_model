@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "political_art_factional_alignment",
+    "version": "0.1",
+    "generated_date": "2024-02-29",
+    "status": "Draft"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Factional Alignment Requirement for Political Art",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "aligned_political_factions",
+      "commercial_art_dealers"
+    ],
+    "victims": [
+      "independent_political_artists",
+      "unaligned_art_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Independent Political Artists",
+      "comment": "Independent artists lacking factional backing are trapped; face suppression and extraction with limited avenues for success."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Commercial Art Dealers",
+      "comment": "Art dealers are constrained, benefitting from factional sales but also limited by factional alignment suppressing broader market access."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Aligned Political Factions",
+      "comment": "Aligned political factions benefit via influence from art sales, with arbitrage opportunities in the media market, thus coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analytical perspective sees Tangled Rope: factions coordinate, artists are extracted from, and unaligned views are suppressed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "faction_size_threshold",
+      "question": "What is the minimum faction size needed to monetize political art?",
+      "resolution_mechanism": "Empirical analysis of art sales and faction sizes",
+      "impact": "Defines extractiveness based on required vs actual audience overlap.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum faction size for art monetization."
+    },
+    {
+      "id": "alternative_revenue_streams",
+      "question": "What alternative revenue streams can independent artists leverage?",
+      "resolution_mechanism": "Identify viable channels for unaligned artists",
+      "impact": "Affects artists' exit_options from trapped to constrained/mobile.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative revenue streams."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "In a politically polarized media market, commercial art dealing with divisive figures or topics must align with a sufficiently large and monetizable audience faction to achieve success. This creates a constraint on independent artists and unaligned art consumers, while benefiting aligned factions and art dealers willing to cater to them.",
+    "key_agents": [
+      "Independent Political Artists: Primary victim (powerless/trapped).",
+      "Commercial Art Dealers: Secondary beneficiary/victim (moderate/constrained).",
+      "Aligned Political Factions: Primary beneficiary (institutional/arbitrage).",
+      "Unaligned Art Consumers: Secondary victim (moderate/mobile)."
+    ],
+    "logic_rationale": "Extractiveness: 0.55. Significant extraction for independent artists with no support. Suppression: 0.65. Requires catering to factional preferences. Theater_ratio: 0.30. Limited performative dimension.",
+    "perspectival_gap": "Independent artists see pure extraction (Snare), while aligned factions see coordination (Rope). Art dealers see Tangled Rope.",
+    "directionality_logic": "Directionality is computed from exit options. Trapped artists have high directionality. Beneficiaries have low directionality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

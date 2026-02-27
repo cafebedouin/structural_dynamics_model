@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "iran_guardian_council_vetting",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iran_gc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Iranian Guardian Council's Candidate Vetting System",
+    "topic_domain": "political/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "supreme_leader_faction",
+      "guardian_council_institutional_power"
+    ],
+    "victims": [
+      "reform_movement_candidates",
+      "popular_sovereignty",
+      "political_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disqualified Reformist Candidate",
+      "comment": "PERSPECTIVE 1: DISQUALIFIED REFORMIST CANDIDATE (SNARE) \u2014 Cannot exit the electoral system; vetting decision is opaque, non-appealable, and carries severe career consequences. Extraction is maximal: removal from ballot despite public support. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Movement Base",
+      "comment": "PERSPECTIVE 2: REFORM MOVEMENT BASE (SNARE) \u2014 Constrained by residence and national identity; cannot migrate to alternative political system. Faces systematic exclusion of preferred candidates. Suppression includes post-vetting detention, harassment of supporters, media blackout. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Urban Middle-Class Voter",
+      "comment": "PERSPECTIVE 3: URBAN MIDDLE-CLASS VOTER (SNARE) \u2014 Constrained to the Iranian political arena; technically can vote but choice set is pre-filtered. Theater ratio reflects performative 'choice' between pre-vetted candidates. d\u22480.80, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Guardian Council Leadership",
+      "comment": "PERSPECTIVE 4: GUARDIAN COUNCIL LEADERSHIP (ROPE) \u2014 Beneficiary of vetting system. Experiences constraint as coordination mechanism: maintaining institutional power through candidate filtration prevents destabilizing factional competition. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.08. Negative effective extraction = pure beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Supreme Leader's Faction",
+      "comment": "PERSPECTIVE 5: SUPREME LEADER'S FACTION (ROPE) \u2014 Primary institutional beneficiary. Vetting system enables control of electoral outcome while maintaining democratic theater. No coercion perceived \u2014 sees system as legitimate gatekeeping of ideological compatibility. d\u22480.00, f(d)\u2248-0.20, \u03c3=1.0 \u2192 \u03c7\u2248-0.14. Net beneficiary; experiences constraint as pure coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Formal Electoral Process",
+      "comment": "PERSPECTIVE 6: FORMAL ELECTORAL PROCESS (PITON) \u2014 The vetting system's institutional logic has degraded: originally intended as ideological filtering for Islamic Republic principles, now functions as factional power consolidation. theater_ratio=0.65 indicates significant performative content (public voting ceremonies, candidate debates, election night broadcasts maintain democratic theater despite pre-determined outcomes). Vetting enforcement is maintained through institutional inertia and because no consensus exists on alternatives. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.42."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Hardline Conservative Faction",
+      "comment": "PERSPECTIVE 7: HARDLINE CONSERVATIVE FACTION (TANGLED ROPE) \u2014 Organized institutional actor that benefits from vetting system (prevents liberal/secular candidates) but is also partially subject to it (high-profile hardliners also face disqualification if perceived as threatening regime stability). Mixed position: both beneficiary and constrained victim. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.33."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Institutional Necessity View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / INSTITUTIONAL NECESSITY VIEW (MOUNTAIN) \u2014 Claims that candidate vetting by guardian bodies is inherent to theocratic systems; vetting reflects a logical necessity of regime survival rather than extractive choice. However, the structural data (\u03b5=0.68, suppression=0.78, theater=0.65) contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that regime survival arguments naturalize what is contingent institutional design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "vetting_transparency_threshold",
+      "question": "Would making vetting criteria explicit and appealable transform this from Snare to Tangled Rope, or is opacity a core feature?",
+      "resolution_mechanism": "Comparative analysis of other guardian systems (Tunisia's Islamic Bloc, Egypt's Islamic Legitimacy Commission); examination of whether transparency + appeals would reduce extraction or merely make it visible",
+      "impact": "If transparency would preserve control: vetting system is defensible hybrid (Tangled Rope). If transparency would require substantive reform: opacity is intentional extraction, confirming Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vetting transparency would change classification"
+    },
+    {
+      "id": "alternative_regime_legitimacy",
+      "question": "Is the vetting system necessary for the Islamic Republic's institutional survival, or is it a contingent rent-extraction mechanism layered onto a coherent political system?",
+      "resolution_mechanism": "Historical counterfactual analysis: what would happen to regime stability under different vetting rules? Comparison with other theocratic systems that use different gatekeeping mechanisms.",
+      "impact": "If necessary for survival: vetting approaches Mountain (immutable constraint of theocratic logic). If contingent: vetting is pure Snare (extractive mechanism with no coordination function).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether vetting is necessary for regime survival"
+    },
+    {
+      "id": "factional_veto_power",
+      "question": "Does the vetting system primarily serve supreme leader control, or do hardline conservative factions exercise genuine veto power over reformist candidates?",
+      "resolution_mechanism": "Analysis of disqualified candidate patterns: are hardliners protected from vetting? Do hardline candidates experience disqualification? Examination of council voting records and factional composition over time.",
+      "impact": "If supreme leader has unilateral control: Snare from all victim perspectives. If hardliners have genuine veto: Tangled Rope for hardline faction (mixed beneficiary-victim), Snare for reformists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vetting distributes power or concentrates it"
+    },
+    {
+      "id": "electoral_coalescence_function",
+      "question": "Does vetting prevent the regime's actual nightmare scenario (fragmentation into uncontrollable factions), or is this rationalization of power concentration?",
+      "resolution_mechanism": "Comparison of electoral volatility in vetted vs non-vetted Iranian elections (pre-1979); analysis of factional coherence under different vetting intensities; counterfactual modeling of unvetted competition.",
+      "impact": "If vetting genuinely prevents regime collapse: defensive Tangled Rope (coordination function is real, even if asymmetric). If power concentration is the primary function: pure Snare with false legitimation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vetting serves essential coordination function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1979,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2009,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1979,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2009,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 1979,
+    "end": 2009
+  },
+  "commentary": {
+    "narrative_context": "Iran's Guardian Council (Shura-ye Negahban-e Qanun-e Asasi-ye Jomhuri-ye Eslami-ye Iran) has authority to vet candidates for the Islamic Consultative Assembly (Majlis), the Presidency, and the Assembly of Experts. The vetting system operates through opaque criteria applied by a 12-member council (6 clerics appointed by the Supreme Leader, 6 jurists elected by parliament). Disqualification is final and non-appealable; official reasons are often withheld or generic. Approximately 50-90% of candidates are disqualified in parliamentary elections; nearly all reformist presidential candidates have been barred since 2005. This constraint combines features of institutional coordination (preventing factional instability, ensuring ideological alignment with Islamic Republic principles) with severe extraction (removing candidates from ballot despite public support, creating a performative electoral process where outcome is predetermined). The constraint's extractiveness has increased over Iran's political history: from 0.35 in 1979 (when multiple political tendencies competed within the revolutionary framework) to 0.68 by 2009 (when vetting was weaponized to eliminate reformist competition after disputed 2009 election). Theater ratio has similarly increased as the formal electoral ritual (campaigns, debates, voting ceremonies) has become increasingly decoupled from meaningful candidate selection. This is a diagnostic case for how extraction accumulates over institutional lifespans through rent-seeking layering onto originally legitimate coordination functions.",
+    "key_agents": [
+      "Supreme Leader: Primary beneficiary (institutional/arbitrage) \u2014 uses vetting to maintain ultimate control; experiences system as pure coordination",
+      "Guardian Council Leadership: Institutional beneficiary (institutional/arbitrage) \u2014 derives power from gatekeeping role; sees vetting as legitimate ideological filtering",
+      "Hardline Conservative Faction: Secondary beneficiary (organized/constrained) \u2014 benefits from exclusion of liberal/secular competitors, but also subject to disqualification if threatening regime stability",
+      "Reform Movement Candidates: Primary victim (powerless/trapped) \u2014 barred from ballot despite electoral support; cannot appeal or contest decision",
+      "Reform Movement Base: Secondary victim (moderate/constrained) \u2014 locked into voting for pre-vetted slate; systematic exclusion of preferred candidates",
+      "Urban Middle-Class Voters: Tertiary victim (moderate/constrained) \u2014 effectively disfranchised through pre-filtering of choice set",
+      "Formal Electoral Process: Institutional system (institutional/constrained) \u2014 maintains democratic theater while serving as mechanism of factional control",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional gatekeeping as necessity of theocratic governance"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The vetting system captures substantial political rent through three mechanisms: (1) removal of competitive threats to entrenched factions, (2) creation of obligation among pre-vetted candidates to the actors who secured their candidacy, (3) preservation of the Guardian Council's institutional power in perpetuity. The extraction is not maximal (0.68 rather than 0.85+) because the system partially functions as coordination \u2014 preventing factional collapse is a real function, even if the primary driver is power concentration. Suppression (0.78): High. Barriers include: (a) opacity of vetting criteria, (b) non-appealability of decisions, (c) post-disqualification harassment and detention of prominent reformists, (d) media blackout on disqualified candidates, (e) state control of broadcasting prevents alternative candidates from reaching voters. Theater ratio (0.65): Moderate-high. Electoral ceremonies (public voting, candidate debates broadcast on state TV, election night celebrations) maintain the appearance of meaningful choice despite predetermined outcomes. The ratio has increased from 0.40 in 1979 because early post-revolutionary elections involved genuine factional competition, while later elections are increasingly performative. The trajectory shows not degradation from mountain to piton, but accumulation of rent-extraction onto an originally functional coordination mechanism \u2014 the Goodhart drift where performance metrics (elections held, voting participation) become decoupled from function (candidates with genuine public support gaining office).",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The disqualified candidate sees pure extraction (Snare) \u2014 removal from ballot despite public support, with no coordination benefit. The reform movement base sees systematic suppression and fake choice (Snare). The urban voter sees performative democracy (Snare trending toward Piton). The Guardian Council leadership sees pure coordination (Rope) \u2014 maintaining institutional integrity through ideological vetting. The Supreme Leader's faction sees necessary regime preservation (Rope). The hardline conservatives see beneficial exclusion of liberal competitors but also recognize they are constrained by the same system (Tangled Rope). The formal electoral process, seen longitudinally, is a Piton \u2014 the original coordination function (preventing destabilizing factional fission) has been overlaid with extraction (guaranteeing particular factional victory), and the system is maintained through theatrical performance rather than genuine function. The analytical observer risks a false summit (Mountain) by claiming vetting is inherent to theocracy, but the structural data contradicts this: theocratic systems exist without Guardian Council equivalents, and the specific vetting architecture is a contingent design choice.",
+    "directionality_logic": "Disqualified candidates: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 candidates have no exit option and bear full cost. Reform movement base: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction; cannot migrate, cannot shift to alternative political system, forced to choose from pre-vetted slate. Urban middle-class voter: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.12. Extraction via pre-filtered choice despite nominal democratic participation. Guardian Council: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary; can exit (interpret criteria differently) but chooses not to; experiences constraint as pure power coordination. Supreme Leader: Beneficiary + arbitrage \u2192 d\u22480.00, f(d)\u2248-0.20. Maximum beneficiary position; vetting system directly serves supreme leader's ultimate authority preservation. Hardline conservatives: Mixed + constrained \u2192 d\u22480.45, f(d)\u22480.48. Beneficiaries in practice (competitors excluded) but also constrained by same system (potential disqualification if viewed as threatening); partial victims of the mechanism they benefit from.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the vetting system is NOT a pure coordination mechanism despite institutional claims that it prevents factional instability. The coordination function (preventing regime-destabilizing fission) is real but secondary to the extraction function (ensuring particular factional outcomes). The system classifies as SNARE from the perspective of any actor excluded or constrained by vetting, which is the vast majority of political participants. The ROPE perspectives (Guardian Council leadership, Supreme Leader) mischaracterize the system as pure coordination because they are maximal beneficiaries and cannot perceive extraction that benefits them. The TANGLED_ROPE perspective (hardline conservatives) is the only institutional actor with genuine mixed exposure \u2014 they benefit from competitor exclusion but face potential disqualification themselves. The PITON perspective (electoral theater) correctly identifies that the original post-revolutionary coordination function (managing competition among revolutionary factions) has been supplanted by extraction (guaranteeing factional dominance) while maintaining institutional theater. The analytical observer's MOUNTAIN perspective (vetting is inherent to theocracy) is false \u2014 it naturalizes what is a contingent institutional design. The proper classification IS SNARE: the system extracts political participation rights from a substantial population (disqualified candidates and their supporters), suppression is high, and the coordination function is secondary to factional power consolidation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "iranian_assembly_of_experts_vetting",
+      "iranian_presidential_candidacy",
+      "factional_factional_elite_competition"
+    ],
+    "dual_formulation_note": "The Guardian Council vetting system is downstream of Iran's theocratic governance structure but represents a distinct constraint with its own evolution. Upstream constraints (constitutional role of Supreme Leader, Islamic Republic founding principles) define the institutional context; the vetting system is a specific mechanism within that context. This story's \u03b5=0.68 reflects the actual extraction measured through candidate disqualification rates and electoral competitiveness, not abstract theocratic requirements."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

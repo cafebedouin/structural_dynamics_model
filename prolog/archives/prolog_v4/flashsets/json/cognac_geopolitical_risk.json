@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "cognac_geopolitical_risk",
+    "version": "1.0",
+    "generated_date": "2024-01-03",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Geopolitical Risk to Cognac Sales",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cognac_competitors",
+      "domestic_spirit_producers"
+    ],
+    "victims": [
+      "cognac_producers",
+      "cognac_grape_growers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Cognac Grape Growers",
+      "comment": "The grape growers are heavily invested in cognac production and lack the flexibility to quickly shift to other crops or markets, making them particularly vulnerable to geopolitical shocks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Cognac Producers",
+      "comment": "Cognac producers face revenue losses due to decreased sales in affected regions but have some ability to diversify markets and negotiate with governments."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Cognac Competitors",
+      "comment": "Producers of other alcoholic beverages benefit from the reduced availability of Cognac in certain markets, gaining market share."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Domestic Spirit Producers (Importing Nations)",
+      "comment": "Domestic spirit producers in importing nations benefit as consumer preferences shift towards locally produced goods due to limited access to Cognac."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective considers the complex interplay of global trade, political risks, and consumer behavior, acknowledging both extraction and coordination aspects."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "geopolitical_risk_assessment",
+      "question": "How accurately can geopolitical risks impacting specific industries be predicted and quantified?",
+      "resolution_mechanism": "Development of sophisticated risk assessment models incorporating political, economic, and social factors.",
+      "impact": "Improved risk prediction could enable producers to better prepare for and mitigate the negative impacts of geopolitical events.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of geopolitical risk prediction"
+    },
+    {
+      "id": "market_diversification_effectiveness",
+      "question": "How effective are market diversification strategies in mitigating the impact of geopolitical risks?",
+      "resolution_mechanism": "Empirical studies on the performance of cognac producers that diversified their markets compared to those that did not.",
+      "impact": "Understanding the effectiveness of diversification can inform strategic decisions and resource allocation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of market diversification strategies"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The global demand for Cognac is susceptible to geopolitical tensions and economic sanctions, impacting producers' revenue. This constraint highlights the vulnerability of specialized agricultural products to international political events.",
+    "key_agents": [
+      "Cognac Producers: Primary victims (moderate/constrained) - face revenue losses.",
+      "Cognac Grape Growers: Primary victims (powerless/trapped) - heavily invested in Cognac production.",
+      "Cognac Competitors: Primary beneficiaries (institutional/arbitrage) - gain market share.",
+      "Domestic Spirit Producers: Secondary beneficiaries (institutional/arbitrage) - advantage from local production."
+    ],
+    "logic_rationale": "Extractiveness: Moderate. Geopolitical events directly affect cognac producers and grape growers revenue. Suppression: High. Producers are constrained by geopolitical forces and have limited options. The high extraction arises from the dependency on specific markets and consumers.",
+    "perspectival_gap": "Cognac grape growers are most affected (snare). Cognac producers bear the risk, but have flexibility (tangled rope). Competitors benefit from supply chain issues or market contraction (rope).",
+    "directionality_logic": "Directionality reflects dependency. Grape growers are 'trapped' targets, cognac producers are 'constrained' targets with some agency, and competitors can 'arbitrage' the market shifts. This establishes clear beneficiary/victim relationships that drive the extraction."
+  }
+}

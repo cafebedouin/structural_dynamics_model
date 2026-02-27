@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "tail_risk_compression",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tailrisk"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "The Volatility Suppression Trap",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "victims": [
+      "retail_investors",
+      "unhedged_counterparties",
+      "future_market_participants",
+      "systemic_financial_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Investor",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) \u2014 Locked into normalized volatility expectations by years of suppressed tail risk. Cannot exit markets without realizing losses or abandoning retirement savings. Believes volatility has structurally declined due to market efficiency. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.95."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Unhedged Counterparty",
+      "comment": "PERSPECTIVE 2: UNHEDGED COUNTERPARTY (SNARE) \u2014 Financial institutions, pension funds, and corporate treasuries that removed hedges due to years of volatility suppression. Cannot suddenly re-hedge without massive costs and reputational damage from admitting prior risk misjudgment. d\u22480.85, f(d)\u22481.18, \u03c3=1.2 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Central Bank / Regulatory Stabilizer",
+      "comment": "PERSPECTIVE 3: CENTRAL BANK / REGULATORY STABILIZER (SNARE WITH INVERSION) \u2014 Primary architect of volatility suppression through repeated interventions (quantitative easing, repo market support, circuit breakers, emergency lending). Experiences the constraint as beneficiary with arbitrage exit (can pause interventions, shift policy), but classification remains Snare because the institution itself becomes trapped by market dependency on continued suppression. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.01 as direct beneficiary, but the deeper structural analysis reveals institutional entrapment: cannot exit intervention without triggering the very instability it suppressed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Systemic Stability Coalition",
+      "comment": "PERSPECTIVE 4: SYSTEMIC STABILITY COALITION (TANGLED ROPE) \u2014 Policymakers, regulators, and financial institutions collectively benefit from the coordination function of volatility suppression (prevents panic cascades, maintains lending, enables long-term planning). But the mechanism has asymmetric extraction costs: retail investors and unhedged players bear tail-end losses while suppressors gain information rent (knowing regime change timing before public). d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Financial Risk Management Establishment",
+      "comment": "PERSPECTIVE 5: FINANCIAL RISK MANAGEMENT ESTABLISHMENT (PITON) \u2014 Value-at-Risk models, stress testing protocols, and Basel framework metrics all encode assumptions about volatility distributions calibrated to suppressed-regime data. These models are performative risk measures: they correctly predict risk within the suppression regime but fail catastrophically when the regime collapses. theater_ratio\u22480.65 reflects that risk management ritual (quarterly stress tests, VaR calculations, risk committees) provides false security. Persists due to regulatory inertia and lack of better alternatives, despite known methodological failures."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a mathematical/physical perspective on stochastic processes, tail events are irreducible features of nonlinear systems. You cannot indefinitely suppress downside tail probability without it accumulating; it is a conservation law for risk in complex systems. Volatility suppression at t=0 to t=T mathematically guarantees larger volatility at t>T. This perspective risks false naturalization: the structural constraint (\u03b5=0.58, suppression=0.72) is a policy choice, not a physical law. The engine will compute this as a false summit, revealing that 'volatility is conserved' conflates a mathematical property of unsuppressed systems with the claim that suppression itself is natural/inevitable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "suppression_efficacy_threshold",
+      "question": "What proportion of tail-end risk can be suppressed before the accumulated hidden risk creates catastrophic feedback loops?",
+      "resolution_mechanism": "Historical analysis of volatility regimes; measurement of actual tail-risk accumulation vs suppression intensity; network stress testing of counterparty exposure",
+      "impact": "If threshold < 40% suppressed: current regime is sustainable. If threshold > 70% suppressed: regime collapse is inevitable within 5-10 years. Classification shifts from Snare (temporary extraction) to Snare (inevitable default).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which accumulated tail risk creates unstoppable feedback"
+    },
+    {
+      "id": "policy_circuit_breaker_credibility",
+      "question": "Can central banks actually execute a graceful volatility regime transition without triggering the panic cascade they are trying to prevent?",
+      "resolution_mechanism": "Game-theoretic analysis of commitment devices; historical precedent for successful monetary policy regime shifts; measurement of market expectations for policy credibility",
+      "impact": "If credible: stabilizers have genuine arbitrage exit. If not credible: stabilizers are also trapped (central institution moves from Snare beneficiary to Snare victim). Transforms the classification from 'stabilizers suppress; victims trapped' to 'everyone trapped.'",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether policy can execute graceful regime transition without panic"
+    },
+    {
+      "id": "information_asymmetry_persistence",
+      "question": "Do insiders (central banks, large institutions, derivatives traders) actually have predictive information about when suppression will fail, or do they face the same uncertainty as retail investors?",
+      "resolution_mechanism": "Analysis of insider trading patterns around volatility spikes; correlation between central bank communication timing and market regime changes; examination of derivatives positioning before crises",
+      "impact": "If insiders have information: suppression is pure extraction (Snare confirmed). If insiders lack information: suppression is coordination failure with symmetric uncertainty (Rope or Tangled Rope). Changes directionality for stabilizers from low d to moderate d.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether insiders have predictive information about regime collapse"
+    },
+    {
+      "id": "nonlinear_tail_accumulation",
+      "question": "Does tail risk accumulate linearly with suppression intensity, or does it exhibit nonlinear (threshold or exponential) growth?",
+      "resolution_mechanism": "Mathematical modeling of volatility processes under suppression regimes; empirical measurement of tail-end VaR vs time-in-suppression; analysis of past regime-change events",
+      "impact": "If linear: trajectory is predictable and gradual (Piton degradation model fits). If nonlinear: critical transition is sudden (Snare classification is correct; Piton is dangerous misclassification). Affects measurement trajectories.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Growth dynamics of compressed tail risk over time"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Volatility Suppression Trap represents a systemic economic constraint where repeated interventions to stabilize markets create a hidden but growing tail-risk burden. Central banks and financial regulators have deployed quantitative easing, repo market backstops, circuit breakers, and emergency lending facilities to prevent market volatility spikes. These tools succeed in their immediate goal: volatility indices remain suppressed, panic cascades are averted, and the financial system appears stable. However, the constraint operates through a structural mechanism: suppressing volatility does not eliminate it; it compresses it into larger, less frequent tail-end events. As time in the suppression regime extends, the accumulated hidden risk grows, while market participants rationally adjust expectations to match observed (suppressed) volatility. This creates a trap: investors remove hedges, institutions reduce reserves, and volatility expectations recalibrate downward. When the regime inevitably transitions\u2014whether through policy choice, unexpected shock, or crowded positioning\u2014the full magnitude of accumulated tail risk reappears suddenly. The victims are those without information about or control over the regime transition (retail investors, unhedged counterparties, future market participants), while the immediate beneficiaries are those who captured the low-volatility era without bearing its tail-end costs. The constraint exhibits all six classification types depending on perspective, making it a critical case study for how indexical classification disambiguates seemingly contradictory narratives about systemic risk.",
+    "key_agents": [
+      "Central Banks / Regulatory Stabilizers: Primary architects (institutional/arbitrage) \u2014 deploy suppression tools, capture information rent about regime transitions, but become structurally dependent on continued intervention",
+      "Retail Investors: Primary victims (powerless/trapped) \u2014 locked into normalized volatility expectations, cannot exit without losses, rebalance portfolios based on suppressed regime",
+      "Unhedged Counterparties: Secondary victims (moderate/constrained) \u2014 removed hedges due to years of low volatility, face massive repricing costs if regime shifts, constrained by reputation and capital requirements",
+      "Financial Institutions / Large Asset Managers: Ambiguous position (institutional/arbitrage to constrained) \u2014 both beneficiaries (can reduce risk capital in low-volatility regime, concentrate on high-probability trades) and trapped victims (depend on continued low rates and vol suppression for profitability)",
+      "Systemic Financial Stability Coalition: Organized network (organized/constrained) \u2014 regulators, central banks, large institutions coordinating volatility management; benefits from stability coordination but extracts information rent",
+      "Future Market Participants: Absent victims (powerless/trapped) \u2014 not yet present in markets, will inherit the regime transition and tail-risk realization without having participated in suppression benefits"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The suppression regime extracts from retail and unhedged players through information asymmetry (insiders know regime fragility), portfolio rebalancing (victims reduce hedges, increase leverage), and regime transition timing (insiders can position for transition, outsiders cannot). Not as extreme as pure fraud (0.75+) because volatility suppression does provide real coordination benefits: prevents panic cascades, enables long-term planning, maintains credit flow. The extraction is structural, not intentional. Suppression (0.72): High. Multiple barriers prevent exit: psychological (normalized volatility expectations), institutional (regulations penalizing frequent hedging changes), economic (hedging costs accumulate in low-volatility regime, making removal rational), and informational (asymmetric knowledge about regime fragility). Retail investors cannot exit without abandoning retirement security. Institutions cannot exit without admitting prior risk misjudgment. Central banks cannot exit without triggering the very instability they suppressed. Theater ratio (0.65): Moderate-high. Risk management practices (VaR modeling, stress testing, risk committees) become performative in suppressed regimes. Models calibrated to suppressed data predict risk correctly within that regime but fail catastrophically outside it. The theater has increased over the 20-year interval as risk managers have grown confident in low-volatility normality, making their models increasingly theatrical rather than predictive.",
+    "perspectival_gap": "The constraint demonstrates fundamental perspectival divergence. Central banks experience volatility suppression as successful coordination and stabilization (Rope or Tangled Rope from their position with arbitrage exits and information advantages). Retail investors experience the same suppression as a trap (Snare). The systemic stability coalition sees coordination benefits (Tangled Rope). The unhedged counterparties see mixed extraction and coordination (Tangled Rope). Risk management establishments see performative safety (Piton). The analytical observer risks naturalizing the trap as an irreducible property of markets (false Mountain). The largest perspectival gap is between stabilizers (who can potentially exit through policy change) and victims (who cannot exit without catastrophic portfolio losses). The suppression that stabilizers experience as a policy tool appears to victims as an immutable constraint.",
+    "directionality_logic": "Retail investors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximal extraction. Cannot exit volatility suppression regime without abandoning long-term wealth accumulation; rebalance portfolios rationally into the trap. Unhedged counterparties: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.18. High extraction. Can theoretically re-hedge, but costs are prohibitive after years of suppressed volatility; reputation and shareholder pressure prevent sudden defensive moves. Stabilizers: Beneficiary + arbitrage nominally \u2192 d\u22480.15, f(d)\u2248-0.01, but deeper analysis reveals institutional entrapment \u2014 cannot exit suppression without destroying the stability they built. Structural d is actually higher (\u22480.35-0.45) when accounting for institutional inertia and policy credibility constraints. Systemic stability coalition: Both beneficiary (stabilization coordination) and partial victim (trapped by dependency) \u2192 d\u22480.50, f(d)\u22480.65. Mixed position. Unhedged counterparties benefit from the coordination aspect but suffer extraction through reduced reserves and hedging. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival; the engine detects as false summit.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (\u03c7=0.58 < 0.70, so mandatrophy_resolved not required, but analysis provided): The volatility suppression trap resolves the mandatrophy by demonstrating that Snare classification is correct despite surface-level coordination benefits. The temptation is to classify as Tangled Rope: 'Suppression provides coordination benefit (prevents panic cascades) AND extracts from victims (redistributes tail risk). Therefore, hybrid Tangled Rope.' This conflates two structural features: (1) the genuine coordination benefit of preventing panic cascades, and (2) the extraction mechanism of compressing tail risk. However, the Snare classification is more accurate because: (a) the coordination function (crisis prevention) is NOT achieved through extraction; it is achieved through temporary suppression. (b) The extraction (accumulated tail risk) is NOT necessary for coordination; it is a side effect of the suppression mechanism itself. (c) The beneficiaries of suppression (stabilizers, short-term investors) do NOT depend on continued extraction of tail risk; they benefit from the low-volatility environment, and would be happier if tail risk could be eliminated rather than compressed. Therefore, the Snare classification applies because the extraction (tail-risk compression) does NOT serve a coordination function \u2014 it is a byproduct of a mechanism that serves coordination but extracts as a side effect. This is distinct from Tangled Rope, where extraction is integral to the coordination mechanism. If volatility could be stabilized without compressing tail risk (e.g., through better information flow, improved circuit breakers that prevent cascades without creating hidden tails), the system would still maintain coordination benefits but lose the extraction component. The fact that removal of the extraction mechanism would preserve the coordination benefit indicates the extraction is parasitic, not symbiotic \u2014 confirming Snare rather than Tangled Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "liquidity_mirage",
+      "zero_rate_floor_trap",
+      "systemic_leverage_accumulation"
+    ],
+    "dual_formulation_note": "The volatility suppression trap is downstream of monetary policy choices (quantitative easing, repo backstops) and upstream of leverage accumulation in asset markets. Separate constraint stories exist for the policy mechanisms (zero_rate_floor_trap, \u03b5\u22480.35) and the market-level leverage consequences (systemic_leverage_accumulation, \u03b5\u22480.52). The suppression trap (\u03b5=0.58) represents the emergent constraint at the system level where all three mechanisms interact."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ]
+}

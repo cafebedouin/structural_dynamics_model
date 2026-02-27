@@ -1,0 +1,158 @@
+{
+  "header": {
+    "constraint_id": "emergency_mode_lock_in",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Perpetual Crisis Mandate",
+    "topic_domain": "political/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_leadership",
+      "crisis_management_industry"
+    ],
+    "victims": [
+      "civil_liberties",
+      "institutional_checks_and_balances",
+      "economic_productivity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Civil Liberties",
+      "comment": "Civil liberties are trapped in the perpetual crisis, with limited ability to exit or challenge the emergency measures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Institutional Checks and Balances",
+      "comment": "The traditional checks and balances are constrained. They still exist in name, but are weakened and largely performative, unable to effectively limit the executive's power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Economic Productivity",
+      "comment": "Economic productivity is constrained by the crisis measures. While some sectors may benefit, overall productivity suffers due to restrictions and resource misallocation, but there is limited exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Leadership",
+      "comment": "The incumbent leadership benefits from the crisis, consolidating power and circumventing normal political processes, using the situation to their advantage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Crisis Management Industry",
+      "comment": "The crisis management industry benefits from increased demand for their services, gaining influence and resources."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the emergency measures as a tangled rope, with some coordination benefits but also significant extraction and suppression of alternatives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threat_level_validation",
+      "question": "Is the declared crisis a genuine existential threat, or is it being exaggerated for political gain?",
+      "resolution_mechanism": "Independent verification of the crisis's severity, comparing official claims with empirical data.",
+      "impact": "If genuine threat: emergency measures are justified (Rope/Scaffold). If exaggerated: measures are purely extractive (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of declared crisis threat level"
+    },
+    {
+      "id": "alternative_policy_options",
+      "question": "Are there less restrictive alternative policies that could address the crisis effectively?",
+      "resolution_mechanism": "Comparative analysis of different policy options, assessing their costs, benefits, and impact on civil liberties.",
+      "impact": "If viable alternatives exist: suppression is unjustified (Snare). If not: emergency measures may be necessary (Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Existence of viable alternative policy options"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A scenario where emergency powers, originally designed for temporary crisis management, become the permanent operating substrate, creating a tangled rope characterized by increased executive power and the erosion of civil liberties. The perpetual state of exception benefits incumbent leadership and crisis management industry while extracting from civil liberties, checks and balances, and overall economic productivity.",
+    "key_agents": [
+      "Incumbent Leadership: Primary beneficiary (institutional/arbitrage) - Consolidates power through emergency measures.",
+      "Crisis Management Industry: Secondary beneficiary (institutional/arbitrage) - Gains influence and resources due to increased demand.",
+      "Civil Liberties: Primary victim (powerless/trapped) - Suffers erosion due to emergency restrictions.",
+      "Institutional Checks and Balances: Secondary victim (moderate/constrained) - Weakened in their ability to limit executive power.",
+      "Economic Productivity: Victim (moderate/constrained) - Impacted by restrictions and resource misallocation.",
+      "Analytical Observer: Analyzes the overall impact and power dynamics (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness: 0.55 - Moderate to high extraction from the population due to restrictions, resource misallocations, and erosion of rights. Suppression: 0.65 - Moderate to high suppression of alternatives and dissent due to the state of exception. Theater ratio: 0.75 - High theater due to constant media and public relations efforts to maintain fear and justify emergency measures.",
+    "perspectival_gap": "The incumbent leadership and crisis management industry see the emergency measures as a rope, enabling swift and effective action. Civil liberties are trapped in a snare. Institutional checks become pitons. The analytical observer sees the tangled rope, where coordination benefits are intertwined with significant extraction and suppression.",
+    "directionality_logic": "The incumbent leadership (institutional/arbitrage) and the crisis management industry (institutional/arbitrage) are beneficiaries. Civil liberties (powerless/trapped) and institutional checks (moderate/constrained) are victims. The directionality values reflect these relationships, leading to different classifications from each perspective.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing how emergency measures, initially intended for coordination (Rope), can morph into a system of extraction and control (Tangled Rope/Snare) due to the incentives of incumbent leadership and the crisis management industry. It highlights the importance of sunset clauses and strong checks and balances to prevent this transition."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

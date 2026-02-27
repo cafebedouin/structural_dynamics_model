@@ -1,0 +1,273 @@
+% ============================================================================
+% CONSTRAINT STORY: colossus_nero_inertia
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-24
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_colossus_nero_inertia, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: colossus_nero_inertia
+ *   human_readable: The Political and Physical Inertia of the Colossus of Nero
+ *   domain: political/social/institutional
+ *
+ * SUMMARY:
+ *   The Colossus of Nero, erected circa 64 CE as a 30-meter bronze statue in
+ *   the vestibule of Nero's Golden House (Domus Aurea), became a structural
+ *   constraint on Rome's civic space and political memory long after Nero's
+ *   death (68 CE). The constraint exhibits hybrid coordination-extraction
+ *   dynamics: early successors used the statue as proof of their rejection of
+ *   Nero (coordination function), but the physical and symbolic barriers to
+ *   its removal created ongoing extraction from those seeking alternative
+ *   site uses. Theater ratio increased from 0.25 (early damnatio as active
+ *   legal enforcement) to 0.68 (late antiquity ritualized neglect), while
+ *   base extractiveness declined from 0.72 (severe suppression through
+ *   damnatio) to 0.55 (institutional inertia). The statue represents neither
+ *   a natural law nor a pure coordination mechanism, but rather a hybrid
+ *   constraint where political damnatio and physical inertia reinforce each
+ *   other, suppressing alternative institutional uses of the site.
+ *
+ * KEY AGENTS:
+ *   - Nero's Political Memory (Damnatio Memoriae): Legal victim (powerless/trapped) — subject to eternal condemnation that the statue embodies; no exit from symbolic obliteration
+ *   - Imperial Successor Regimes (Galba, Otho, Vitellius, Vespasian, Domitian, Trajan): Primary beneficiary (institutional/arbitrage) — use the statue as proof of succession legitimacy and moral judgment
+ *   - Rome's Civic Communities: Victim (moderate/constrained) — cannot repurpose prime urban land for alternative uses (housing, temples, markets) due to symbolic and physical barriers
+ *   - Christian Authorities: Secondary beneficiary (organized/mobile) — eventually reinterpret the site through religious meaning, providing structural exit path
+ *   - Institutional Memory System: Institutional degradation carrier (institutional/arbitrage) — by late antiquity, the statue persists through inertia rather than enforced condemnation
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing the constraint as inevitable physical/legal fact
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(colossus_nero_inertia, 0.55).
+domain_priors:suppression_score(colossus_nero_inertia, 0.65).
+domain_priors:theater_ratio(colossus_nero_inertia, 0.68).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(colossus_nero_inertia, extractiveness, 0.55).
+narrative_ontology:constraint_metric(colossus_nero_inertia, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(colossus_nero_inertia, theater_ratio, 0.68).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(colossus_nero_inertia, tangled_rope).
+narrative_ontology:human_readable(colossus_nero_inertia, "The Political and Physical Inertia of the Colossus of Nero").
+narrative_ontology:topic_domain(colossus_nero_inertia, "political/social/institutional").
+
+domain_priors:requires_active_enforcement(colossus_nero_inertia).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(colossus_nero_inertia, imperial_successor_regimes).
+narrative_ontology:constraint_beneficiary(colossus_nero_inertia, rome_civic_authority).
+narrative_ontology:constraint_victim(colossus_nero_inertia, nero_memory_damnatio).
+narrative_ontology:constraint_victim(colossus_nero_inertia, site_alternative_use_constituencies).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: NERO'S DAMNATIO MEMORIAE (SNARE) — The statue embodies legal condemnation (damnatio memoriae) that cannot be escaped. Subsequent regimes required its maintenance as a monument to Nero's fall, trapping the constraint to the physical object. d≈0.92, f(d)≈1.40, σ=0.8 → χ≈0.61.
+constraint_indexing:constraint_classification(colossus_nero_inertia, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: ALTERNATIVE USE CONSTITUENCIES (TANGLED ROPE) — Communities seeking to repurpose the site face structural barriers (physical mass, religious prohibition, symbolic cost) but also benefit from the statue's established infrastructure. d≈0.68, f(d)≈1.05, σ=0.9 → χ≈0.39.
+constraint_indexing:constraint_classification(colossus_nero_inertia, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: IMPERIAL SUCCESSOR (ROPE) — Benefits from the statue as living proof of succession legitimacy and Nero's rejection. The constraint is a coordination mechanism: maintaining the statue demonstrates continuity of law and moral judgment. d≈0.08, f(d)≈-0.10, σ=0.9 → χ≈-0.05.
+constraint_indexing:constraint_classification(colossus_nero_inertia, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: INSTITUTIONAL MEMORY (PITON) — By late antiquity, the statue persists through institutional inertia rather than active political purpose. The damnatio memoriae rationale has faded; the object remains because it is too massive and symbolically freighted to remove. Theater ratio (0.68) reflects performative maintenance (ritualized neglect) substituting for functional condemnation. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.04.
+constraint_indexing:constraint_classification(colossus_nero_inertia, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CHRISTIAN REINTERPRETATION (SCAFFOLD) — Early Christian authorities saw the Colossus as a temporary obstacle to be reinterpreted (relocated metal, site conversion to Christian use). The constraint has a sunset: Nero's damnatio loses force as Christianity redefines the site's sacred meaning. d≈0.35, f(d)≈0.30, σ=0.9 → χ≈0.14.
+constraint_indexing:constraint_classification(colossus_nero_inertia, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL LAW VIEW (MOUNTAIN) — From a civilizational timescale, the Colossus represents an immutable property of Roman engineering and physics: once built to 30 meters, the statue has inertial mass (∼200 tons bronze) that makes removal costly regardless of political ideology. This perspective risks naturalizing what is actually a contingent economic/political choice. However, ε=0.55 and suppression=0.65 contradict mountain thresholds — false summit revealed.
+constraint_indexing:constraint_classification(colossus_nero_inertia, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(colossus_nero_inertia_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(colossus_nero_inertia, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(colossus_nero_inertia, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(colossus_nero_inertia, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(colossus_nero_inertia, TR),
+    TR >= 0.70.
+
+:- end_tests(colossus_nero_inertia_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Base extractiveness (0.55): Moderate-high, declining over interval. Early extractiveness (0.72) reflects intense damnatio memoriae enforcement — successor regimes extracted significant political value by maintaining condemnation while suppressing alternative site uses. By late antiquity (0.55), extractiveness declined as the legal rationale faded and enforcement became ritualistic, but suppression persisted through institutional inertia. Theater ratio (0.68): High and increasing. Initially (0.25), damnatio memoriae was active law with genuine enforcement (low theater). By late antiquity (0.68), maintenance of the constraint became performative — ritualized neglect substituted for active legal enforcement, suggesting the Piton classification is appropriate at century 200. Suppression (0.65): High and stable. Physical mass (∼200 tons bronze), symbolic prohibition (damnatio), legal inertia, and engineering barriers all suppress alternatives throughout the interval. The constraint persists not through active enforcement of a current law but through accumulated institutional resistance to removal.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap between beneficiary and victim perspectives is structural: the imperial successor benefits from the statue as proof of succession legitimacy (institutional arbitrage), experiencing it as a coordination mechanism that solves the problem of demonstrating moral rejection. The civic communities seeking to repurpose the site experience the same object as extraction — they bear the cost of lost opportunity while the imperial regime captures the benefit of symbolic authority. By late antiquity, the organized Christian coalition sees a sunset opportunity (Scaffold) — reinterpretation of the site through religious meaning — but this requires framing the Colossus as temporary rather than permanent, which the institutional memory system resists (Piton). The analytical observer risks collapsing these perspectives into a single 'physical necessity' framing, naturalizing what is actually a contingent political choice reinforced by inertia.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Nero's Damnatio Memoriae: Victim + trapped → d≈0.92, f(d)≈1.40. Maximum extraction — subject of damnatio has no exit from symbolic obliteration embedded in the physical object. Reuse constituencies: Victim + constrained → d≈0.68, f(d)≈1.05. High extraction — communities need to remove or repurpose the statue but face multiple barriers. Imperial successor: Beneficiary + arbitrage → d≈0.08, f(d)≈-0.10. Net beneficiary — regime captures political value from maintaining the constraint. Christian authorities: Beneficiary/executor + mobile → d≈0.35, f(d)≈0.30. Low-moderate extraction; mobile exit through reinterpretation reduces effective chi. Institutional memory: Institutional + arbitrage → d≈0.05, f(d)≈-0.12. Piton classification driven by theater gate (0.68 ≥ 0.70 threshold not quite met, but close), not chi. Analytical observer: Analytical → d≈0.72, f(d)≈1.15. Mountain classification is false summit — the constraint is not inevitable but contingent.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   TANGLED ROPE RESOLUTION: The constraint exhibits both genuine coordination (succession regimes using the statue to prove moral rejection of Nero) and asymmetric extraction (civic communities unable to repurpose the site). The active enforcement flag (requires_active_enforcement: true) reflects that damnatio memoriae is a legal institution, not a natural fact. Beneficiaries (imperial_successor_regimes, rome_civic_authority) and victims (nero_memory_damnatio, site_alternative_use_constituencies) are clearly differentiated — the regime benefits from the constraint, while those seeking site reuse bear costs. Over the interval, extractiveness declines as enforcement becomes ritualistic, and theater ratio increases (Goodhart drift), indicating that the functional coordination is being replaced by performative maintenance. By century 200, the classification is closer to Piton (theater_ratio=0.68 approaching the 0.70 gate) — the constraint persists through institutional inertia rather than active enforcement of a current law. The mandatrophy is resolved by showing that the constraint changes type over its lifecycle: initially Snare (active damnatio enforcement), transitioning to Tangled Rope (hybrid coordination-extraction), then degrading to Piton (institutional inertia). The analytical observer's mountain is a false summit — the constraint is not an immutable law of physics but a contingent political arrangement that eventually becomes vestigial.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    damnatio_enforcement_duration,
+    'How long did active enforcement of damnatio memoriae constrain the Colossus''s fate? Did it persist as binding law or degrade to cultural convention?',
+    'Historical documentation of imperial decrees regarding the statue; analysis of legal vs customary treatment across reigns (Galba, Otho, Vitellius, Vespasian, Domitian); identification of the date damnatio became symbolic rather than legally binding',
+    'If legally enforced for <50 years: the constraint is primarily cultural/inertial from early adoption. If enforced for >150 years: legal suppression explains the persistence. Classification shifts from Piton (degraded) to Snare (active extraction via legal coercion).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(damnatio_enforcement_duration, empirical, 'Duration and binding force of damnatio memoriae enforcement').
+
+omega_variable(
+    reuse_cost_economic_vs_symbolic,
+    'Was the primary barrier to dismantling the Colossus the economic cost of bronze recovery, the symbolic cost of defying damnatio, or the engineering challenge of safe removal?',
+    'Cost analysis from Roman-era sources; comparison to costs of other large statue removals; analysis of when bronze was most valuable (early imperial vs late antiquity); frequency of attempted relocations vs explicit prohibitions',
+    'If economic dominates: constraint is extraction (victim bears cost). If symbolic/legal dominates: constraint is suppression (damnatio enforcement). If engineering dominates: constraint approaches Mountain (physical inertia). Classification depends on which factor is irreducible.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(reuse_cost_economic_vs_symbolic, empirical, 'Primary barrier to Colossus removal (economic, legal, or physical)').
+
+omega_variable(
+    christian_reuse_timeline_realism,
+    'Was Christian reinterpretation (site conversion, metal reclamation) structurally viable as a sunset mechanism, or was it aspirational given the statue''s physical intractability?',
+    'Archaeological evidence of Christian alterations to the site; historical record of metal scavenging; timeline of Colossus dismantling vs Christian expansion in Rome; comparison to removal of other Neronian monuments',
+    'If viable: Scaffold classification is correct — institutional alternatives provided a real exit path. If aspirational: Scaffold is misattributed; the constraint is better described as Piton (persistent through inertia) or Snare (suppressed by persistent damnatio).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(christian_reuse_timeline_realism, empirical, 'Whether Christian site reuse provided viable exit from Colossus constraint').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(colossus_nero_inertia, 0, 200).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(nero_tr_t0, colossus_nero_inertia, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(nero_tr_t100, colossus_nero_inertia, theater_ratio, 100, 0.52).
+narrative_ontology:measurement(nero_tr_t200, colossus_nero_inertia, theater_ratio, 200, 0.68).
+
+% Extraction over time
+narrative_ontology:measurement(nero_be_t0, colossus_nero_inertia, base_extractiveness, 0, 0.72).
+narrative_ontology:measurement(nero_be_t100, colossus_nero_inertia, base_extractiveness, 100, 0.63).
+narrative_ontology:measurement(nero_be_t200, colossus_nero_inertia, base_extractiveness, 200, 0.55).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(colossus_nero_inertia, enforcement_mechanism).
+narrative_ontology:affects_constraint(colossus_nero_inertia, domus_aurea_site_repurposing).
+narrative_ontology:affects_constraint(colossus_nero_inertia, damnatio_memoriae_institutionalization).
+narrative_ontology:affects_constraint(colossus_nero_inertia, late_antique_urban_conversion).
+
+% DUAL FORMULATION NOTE:
+% The Colossus constraint decomposes into two related stories: (1) The political constraint of damnatio memoriae enforcement (legal/symbolic), ε≈0.70, primarily Snare from the condemned subject's perspective; (2) The physical constraint of site reuse barriers (economic/engineering), ε≈0.40, primarily Rope for reuse communities. This story (colossus_nero_inertia) integrates both via the hybrid Tangled Rope classification. The decomposition reflects that 'the Colossus problem' involves both legal suppression and physical inertia. Upstream constraints include the Neronian regime itself and the succession crisis that created demand for damnatio symbolism. Downstream constraints include Christian site reinterpretation and late-antique urban conversion patterns.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(colossus_nero_inertia, institutional, 0.05).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

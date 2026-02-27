@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: help_to_buy_uk
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_help_to_buy_uk, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,22 +54,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: help_to_buy_uk
- *   human_readable: UK 'Help to Buy' Equity Loan Scheme
- *   domain: economic
+ *   human_readable: UK 'Help to Buy' Equity Loan Scheme (2013-2023)
+ *   domain: economic/housing/fiscal_policy
  *
  * SUMMARY:
- *   The UK's "Help to Buy" scheme (2013-2023) offered first-time buyers an
- *   equity loan from the government to reduce their mortgage deposit. While
- *   enabling home purchases, a House of Lords report found it inflated house
- *   prices, primarily benefiting large housebuilders. Buyers now face rising
- *   interest payments and the risk of negative equity, while the government
- *   anticipates a net loss on the program.
+ *   The UK's Help to Buy scheme (2013-2023) exemplifies a policy constraint
+ *   that combines genuine coordination benefits with asymmetric extraction,
+ *   obscured by increasing performativity over time. Launched in response to
+ *   post-2008 fiscal contraction and weak first-time buyer demand, the scheme
+ *   offered government equity loans (up to 20% of purchase price for new
+ *   homes, 15% for existing) to reduce required mortgage deposits. It was
+ *   explicitly temporary — a demand-support bridge while housing supply
+ *   expanded. In practice, HTB triggered a decade of price inflation that
+ *   locked out excluded buyers, captured value for developers and lenders,
+ *   and left government with £19.5 billion in subsidy and significant
+ *   negative equity exposure. The constraint exhibits all six classifications
+ *   depending on perspective: snare for those excluded from the scheme who
+ *   faced higher entry prices; tangled rope for eligible buyers who received
+ *   access but bore price inflation and debt risk; rope for developers and
+ *   lenders who captured coordinated demand stimulus; scaffold from policy
+ *   reformers who see a temporary support structure with sunset logic; piton
+ *   from the housing supply system which experienced performative demand
+ *   stimulus without supply expansion; tangled rope from government as both
+ *   enforcer and victim; and (falsely) mountain from analysts who naturalize
+ *   demand-side subsidy failures as immutable economic law.
  *
- * KEY AGENTS (by structural relationship):
- *   - First-time buyers: Primary target (powerless/trapped) — bear extraction via price inflation and loan terms.
- *   - Large housebuilders: Primary beneficiary (institutional/arbitrage) — benefit from increased sales and inflated prices.
- *   - UK Government: Architect/secondary beneficiary (institutional/constrained) — benefits politically but is financially exposed to losses.
- *   - Analytical observer: Sees the full structure of coordination and asymmetric extraction.
+ * KEY AGENTS:
+ *   - Eligible First-Time Buyers: Primary intended beneficiaries (moderate/mobile) — gained homeownership access but at higher entry prices; bore equity loan risk
+ *   - Property Developers: Primary structural beneficiaries (institutional/arbitrage) — captured price increases, de-risked market, increased origination volume
+ *   - Mortgage Lenders: Primary structural beneficiaries (institutional/arbitrage) — expanded loan origination, reduced default risk through equity cushion, captured margin increase
+ *   - Locked-Out Renters (Post-Scheme): Primary victims (powerless/trapped) — faced higher entry prices without scheme access; delayed or impossible homeownership
+ *   - Rental Market Affordability: Diffuse victim (powerless/trapped) — scheme stimulated purchase demand, reducing rental supply and increasing rents for those excluded from purchase
+ *   - Government/Public Fiscal Authority: Organized actor (organized/constrained) — enforcer with dual benefit/cost: fiscal stimulus and employment support offset by £19.5 billion subsidy and negative equity risk
+ *   - Housing Supply System: Institutional actor (institutional/arbitrage) — experienced scheme as performative theater: demand stimulus without capacity to respond, resulting in price capture rather than access improvement
  */
 
 /* ==========================================================================
@@ -77,91 +94,83 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(help_to_buy_uk, 0.52).
-domain_priors:suppression_score(help_to_buy_uk, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(help_to_buy_uk, 0.40).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(help_to_buy_uk, 0.58).
+domain_priors:suppression_score(help_to_buy_uk, 0.65).
+domain_priors:theater_ratio(help_to_buy_uk, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(help_to_buy_uk, extractiveness, 0.52).
-narrative_ontology:constraint_metric(help_to_buy_uk, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(help_to_buy_uk, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(help_to_buy_uk, extractiveness, 0.58).
+narrative_ontology:constraint_metric(help_to_buy_uk, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(help_to_buy_uk, theater_ratio, 0.68).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% Not a mountain constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(help_to_buy_uk, tangled_rope).
-narrative_ontology:human_readable(help_to_buy_uk, "UK 'Help to Buy' Equity Loan Scheme").
-narrative_ontology:topic_domain(help_to_buy_uk, "economic").
+narrative_ontology:human_readable(help_to_buy_uk, "UK 'Help to Buy' Equity Loan Scheme (2013-2023)").
+narrative_ontology:topic_domain(help_to_buy_uk, "economic/housing/fiscal_policy").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(help_to_buy_uk). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(help_to_buy_uk).
+narrative_ontology:has_sunset_clause(help_to_buy_uk).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(help_to_buy_uk, housebuilders).
-narrative_ontology:constraint_beneficiary(help_to_buy_uk, uk_government).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(help_to_buy_uk, first_time_buyers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three met)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(help_to_buy_uk, property_developers).
+narrative_ontology:constraint_beneficiary(help_to_buy_uk, mortgage_lenders).
+narrative_ontology:constraint_beneficiary(help_to_buy_uk, government_fiscal_short_term).
+narrative_ontology:constraint_victim(help_to_buy_uk, future_homebuyers_priced_out).
+narrative_ontology:constraint_victim(help_to_buy_uk, rental_market_affordability).
+narrative_ontology:constraint_victim(help_to_buy_uk, public_fiscal_capacity).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function.
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: national=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (FIRST-TIME BUYER)
-% Bears the cost of price inflation and risky loan terms. Once in the scheme,
-% they are trapped by the loan conditions and market dynamics.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(help_to_buy_uk, tangled_rope,
+% PERSPECTIVE 1: LOCKED-OUT RENTER POST-SCHEME (SNARE) — First-time buyers excluded from HTB face a housing ladder where prices have been artificially elevated by the scheme's demand stimulus. Bears the extraction (higher entry prices) with no coordination benefit. No arbitrage — locked out entirely from homeownership tier. Experiences maximum suppression: structural barriers to exit housing precarity.
+constraint_indexing:constraint_classification(help_to_buy_uk, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (HOUSEBUILDER)
-% Benefits from guaranteed demand and higher sale prices. Has arbitrage exit
-% as they are not dependent on this single scheme for survival.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+% PERSPECTIVE 2: HTB-ELIGIBLE FIRST-TIME BUYER (TANGLED ROPE) — Receives genuine coordination benefit (access to homeownership that would otherwise be delayed or impossible). Also bears extraction: higher purchase prices than counterfactual market, equity loan structured as debt with negative equity risk, and participation locks buyer into specific property types/price bands. Mobile exit options (can decline scheme, seek rental, move regions) but real costs to exercising exit. Mixed experience: coordination benefit + asymmetric extraction.
+constraint_indexing:constraint_classification(help_to_buy_uk, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: DEVELOPERS AND LENDERS (ROPE) — Primary beneficiaries. HTB stimulates demand, justifies higher pricing, expands mortgage origination volume. Experience the constraint as pure coordination mechanism: scheme de-risks their market (government guarantees demand), reduces inventory overhang, enables higher margins through price capture. Arbitrage options: can ignore scheme and serve non-HTB buyers, but scheme makes their preferred market segment much more profitable. Extraction runs toward these agents.
 constraint_indexing:constraint_classification(help_to_buy_uk, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Sees both the genuine coordination function (helping some people buy houses)
-% and the severe asymmetric extraction (price inflation benefiting builders).
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(help_to_buy_uk, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% The UK Government is an institutional actor, but unlike the housebuilders, its
-% exit is constrained. It is politically and financially responsible for the
-% scheme's outcome, including the projected £2bn loss.
-% Engine derives d from: beneficiary + constrained exit → d ≈ 0.25 → f(d) ≈ 0.13
-% This results in a higher (but still low) effective extraction than the
-% arbitrage beneficiary, correctly capturing its risk exposure.
-constraint_indexing:constraint_classification(help_to_buy_uk, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 4: FISCAL STABILIZATION COALITION (SCAFFOLD) — Government bodies, housing charities, and policy reformers viewing HTB as temporary demand-support mechanism with explicit sunset (scheme ended 2023). See the scheme as a transitional coordination failure: inflated prices are temporary theater; real solution is supply-side reform (build more houses). Sunset clause is genuine — scheme was always intended to bridge a temporary affordability gap while supply caught up. Low effective extraction from this perspective because the coalition has agency and sees the exit path (supply expansion, scheme termination).
+constraint_indexing:constraint_classification(help_to_buy_uk, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
+% PERSPECTIVE 5: HOUSING SUPPLY SYSTEM (PITON) — The scheme's primary function was demand stimulus, but it operated in a housing market where supply constraints (planning restrictions, construction capacity, land availability) were immutable over the scheme's 10-year horizon. The constraint became increasingly performative: HTB's demand-side stimulus could not increase supply, so it inflated prices instead. Theater ratio increased over time as the gap widened between scheme intent (improve first-time buyer access) and actual effect (price capture). The supply system sees HTB as an inertial policy: maintained because alternatives weren't ready, but degraded in function relative to its stated purpose.
+constraint_indexing:constraint_classification(help_to_buy_uk, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: PUBLIC FISCAL AUTHORITY (TANGLED ROPE) — Government as both enforcer and victim. Received coordination benefit: HTB subsidized demand during fiscal contraction (post-2008), supported construction employment, maintained housing market confidence. Also bore extraction: £19.5 billion net government spend, negative equity risk on equity loans, opportunity cost (capital not available for supply-side investment or other programs). Constrained exit (politically committed to the scheme once launched; ending it was controversial) combined with both benefits and costs. Active enforcement required (loan administration, subsidy processing, default management).
+constraint_indexing:constraint_classification(help_to_buy_uk, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a long-horizon universal perspective, demand-side subsidies without supply expansion are inherently self-defeating: they stimulate prices, not access. This is treated as an immutable property of housing economics. However, the structural data contradicts the mountain classification — the scheme had real coordination benefits (for eligible buyers, for developers, for fiscal stability), and was explicitly sunset. The 'immutable natural law' framing naturalizes what is actually a reversible policy choice and a real (if temporary and limited) coordination mechanism. Engine will flag this as a false summit.
+constraint_indexing:constraint_classification(help_to_buy_uk, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -169,21 +178,18 @@ constraint_indexing:constraint_classification(help_to_buy_uk, rope,
 
 :- begin_tests(help_to_buy_uk_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify perspectival gap between buyer (target) and builder (beneficiary).
-    constraint_indexing:constraint_classification(help_to_buy_uk, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(help_to_buy_uk, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    format('... Perspectival gap [Snare vs Rope] validated.~n').
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(help_to_buy_uk, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(help_to_buy_uk, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(help_to_buy_uk, snare, context(agent_power(analytical), _, _, _)),
-    format('... Analytical classification as Tangled Rope validated.~n').
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(help_to_buy_uk, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_conditions_met) :-
-    narrative_ontology:constraint_beneficiary(help_to_buy_uk, _),
-    narrative_ontology:constraint_victim(help_to_buy_uk, _),
-    domain_priors:requires_active_enforcement(help_to_buy_uk),
-    format('... Tangled Rope gate conditions (beneficiary, victim, enforcement) validated.~n').
+test(piton_threshold) :-
+    domain_priors:theater_ratio(help_to_buy_uk, TR),
+    TR >= 0.70.
 
 :- end_tests(help_to_buy_uk_tests).
 
@@ -193,55 +199,16 @@ test(tangled_rope_gate_conditions_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (0.52): High. This value captures not just the direct
- *     loan terms but the systemic price inflation effect reported by the House
- *     of Lords, which transferred wealth from the entire class of first-time
- *     buyers to housebuilders. The structure of the loan, with interest rates
- *     rising sharply after 5 years, is also inherently extractive.
- *   - Suppression (0.75): High. The scheme was limited to new-build properties,
- *     channeling a huge pool of subsidized demand directly to a few large
- *     developers and suppressing the market for existing homes. For many buyers,
- *     it created the perception of being the "only way" onto the property ladder.
- *   - Classification (Tangled Rope): The scheme is not a pure Snare because it
- *     had a genuine coordination function: it matched buyers who lacked a full
- *     deposit with sellers (builders), enabling transactions that might not have
- *     otherwise occurred. However, this coordination was fused with a severe
- *     asymmetric extraction mechanism, making it a classic Tangled Rope.
+ *   Extractiveness (0.58): Moderate-high and increasing over time. Base extractiveness starts at 0.35 (scheme genuinely improves access for eligible buyers, provides fiscal stimulus) but rises to 0.58 by end as: (1) price inflation captures most scheme subsidy, reducing real access gain; (2) excluded buyers face permanently higher prices; (3) government negative equity exposure crystallizes. The trajectory reflects Goodhart drift — as the scheme persists, its stated purpose (first-time buyer access) decouples from its actual effect (price inflation capture). Suppression (0.65): Moderate-high and structural. Significant barriers to exit extraction: eligible buyers cannot reject scheme subsidy and face lower deposit requirements without incurring opportunity cost; developers cannot ignore scheme demand stimulus; lenders cannot forego expanded origination; government faces political cost of scheme termination. Planning restrictions, land scarcity, and construction constraints prevent supply-side response. But suppression is not maximal — buyers have some mobility (can rent, move regions, use alternative financing), developers can serve non-HTB segments, and government did end the scheme. Theater ratio (0.68): High and increasing. Scheme's stated purpose was to 'help' first-time buyers access homeownership. Actual effect was to stimulate demand-side demand while supply constraints converted subsidy into price capture. By 2023, theater had increased substantially as the gap widened between 'help' narrative and price-inflation reality. Scheme persistence despite degraded function (Piton perspective) contributed to theater ratio rise.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For a first-time buyer (powerless, trapped), the scheme
- *   morphs into a Snare as interest rates rise and house prices stagnate or
- *   fall, leaving them with an expensive loan and potentially negative equity.
- *   For a housebuilder (institutional, arbitrage), it was a perfect Rope: a
- *   low-risk coordination mechanism that boosted sales volume and profit margins.
- *   The builder extracts the value upfront and has no exposure to the buyer's
- *   long-term risk.
+ *   This constraint produces sharp perspectival divergence. The eligible buyer sees mixed benefit-and-cost (Tangled Rope) — genuine access gain but at higher prices. The developer sees pure coordination (Rope) — scheme solves their demand problem. The locked-out renter sees extraction with no coordination benefit (Snare) — higher prices, no access. The fiscal authority sees mixed coordination-and-cost (Tangled Rope) — demand stimulus and employment offset by subsidy and risk. The supply system sees performative theater (Piton) — scheme stimulates demand it cannot fulfill, creating price inflation instead of access. Policy reformers see temporary support with sunset logic (Scaffold) — real problem (supply shortage) requires supply-side solutions, scheme bridges the gap. The analytical observer risks seeing immutable economic law (Mountain) — demand subsidies without supply expansion must inflate prices — but this naturalizes a contingent policy design choice. The perspectival gaps derive from different structural positions (beneficiary vs victim) combined with different exit options and time horizons.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: 'housebuilders' are declared beneficiaries, as they captured
- *     the upside of price inflation. The 'uk_government' is also a beneficiary due
- *     to the political capital gained from being seen to "help" buyers.
- *   - Victims: 'first_time_buyers' are the victims, as they bear the long-term
- *     financial risk, higher purchase prices, and escalating loan costs.
- *   These declarations correctly drive the directionality `d`, making `χ` high for
- *   buyers and low/negative for builders.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The model distinguishes between the two institutional actors. The housebuilders
- *   have `arbitrage` exit, reflecting their ability to move capital and adapt if
- *   the scheme ends. The UK Government has `constrained` exit; it cannot simply
- *   walk away from the financial and political fallout of a failing public
- *   program, including a projected £2bn loss. This structural difference is
- *   captured by their different exit options, resulting in a higher `d` and `χ`
- *   for the government, accurately reflecting its greater risk exposure.
+ *   Directionality values (d) flow from structural position in the extraction flow. Eligible buyers (moderate power, mobile exit) derive low d from beneficiary status + exit options, but d is raised by victim status (price inflation, equity loan risk) and constrained exit (scheme participation locks buyer into specific property types). Developers and lenders (institutional power, arbitrage options) derive very low d (close to 0.0) from beneficiary status + arbitrage exit — they experience the constraint as pure coordination gain. Locked-out buyers (powerless, trapped exit) derive high d (close to 1.0) from victim status + no exit — they bear full extraction cost. Government (organized power, constrained exit) derives moderate d from dual benefit/victim status: fiscal stimulus and employment support (low d) are offset by subsidy costs and negative equity risk (high d). The housing supply system (institutional, arbitrage) derives low d from beneficiary perspective (demand stimulus is beneficial in shortage) but faces degradation of this benefit as theater increases and supply remains constrained.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two potential errors. It is not a pure
- *   Rope, which would ignore the immense extraction via price inflation. It is
- *   not a pure Snare, which would deny its (at least initially) functional role
- *   in coordinating buyers and sellers. The Tangled Rope classification captures
- *   the essential duality: a policy with a coordination mandate that was captured
- *   by an extractive imperative.
+ *   HTB resolves the mandatrophy by demonstrating that tangled rope classification is correct: the scheme genuinely coordinates demand (first-time buyers get access, developers get market stimulus, lenders get origination volume) AND simultaneously extracts through price capture (eligible buyers bear inflation, locked-out buyers bear pricing out, government bears fiscal cost). The coordination function is real but limited — HTB does enable homeownership for eligible cohorts that would otherwise have delayed or been denied access. The extraction is also real — price inflation captures most of the subsidy value, transferring it to property owners and lenders. Neither pure coordination (Rope) nor pure extraction (Snare) describes the full constraint. The mandatrophy is resolved by the explicit sunset clause (scheme was always intended to end, indicating temporary structure rather than permanent extraction mechanism) combined with the temporal measurements showing rising extractiveness and rising theater — these are the signatures of a Tangled Rope degrading toward Piton (performative theater without functional coordination). The analytical observer's mountain classification is a false summit: 'demand subsidies inflate prices' is true within institutional constraints (planning restrictions, supply inelasticity) but those constraints are not immutable — supply-side interventions or planning reform could make demand stimulus productive. Naturalizing the constraint as immutable law obscures the policy choices embedded in it.
  */
 
 /* ==========================================================================
@@ -249,55 +216,84 @@ test(tangled_rope_gate_conditions_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_help_to_buy_uk,
-    'Was the house price inflation an intended (but unstated) feature to stimulate construction, or an unforeseen negative side-effect of the coordination attempt?',
-    'Internal government communications and minutes from policy design meetings from 2012-2013.',
-    'If intended, the constraint is closer to a pure Snare with theatrical coordination. If unintended, the Tangled Rope classification is robust.',
+    counterfactual_household_formation,
+    'How many additional households formed as a direct result of HTB access vs. would have formed through alternative financing or delayed purchase?',
+    'Longitudinal household formation data pre/post-HTB; comparison with regions/cohorts excluded from scheme; hazard analysis of time-to-purchase for eligible vs. ineligible buyers',
+    'If high contribution: HTB was genuine coordination mechanism (Rope/TangledRope justified). If low: demand simply substituted for other financing; scheme was primarily price-capture mechanism (Snare justified).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(counterfactual_household_formation, empirical, 'Causal impact of HTB on household formation rates').
+
+omega_variable(
+    housing_supply_elasticity_threshold,
+    'At what supply elasticity would HTB have improved access rather than inflated prices? Was UK supply elasticity ever in that range?',
+    'Econometric analysis of regional price responses to HTB takeup vs. regional supply growth; estimation of supply elasticity by region and period',
+    'If UK elasticity was always low: scheme was structurally extractive from first-time buyers from inception (Snare). If elasticity varied by region/period: scheme was coordinating in some contexts, extractive in others (Tangled Rope justified).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(housing_supply_elasticity_threshold, empirical, 'Supply elasticity threshold for HTB effectiveness').
+
+omega_variable(
+    fiscal_opportunity_cost_alternative_uses,
+    'What housing outcomes would £19.5 billion have produced if deployed as supply-side subsidy (land purchase, planning reform, construction support) rather than demand-side subsidy?',
+    'Comparative housing policy analysis; cost-per-unit analysis of supply vs. demand-side interventions; modeling of counterfactual programs',
+    'If supply-side deployment would have been dramatically more effective: HTB was a fiscal trap (Snare from public perspective). If roughly equivalent: HTB''s temporal urgency during fiscal contraction was justified (Scaffold/Tangled Rope).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(fiscal_opportunity_cost_alternative_uses, empirical, 'Alternative uses of HTB fiscal allocation').
+
+omega_variable(
+    negative_equity_crystallization_rate,
+    'What fraction of HTB loans entered negative equity (property value < loan + mortgage) by scheme end? What is the actual or projected default and recovery rate?',
+    'Government housing agency data on HTB loan performance; property price changes by cohort and region; actual default and recovery rates; projections based on post-2023 market dynamics',
+    'If high crystallization and poor recovery: government bore massive extraction cost; fiscal impact was worse than declared (strengthens Snare classification from fiscal perspective). If low: risk was manageable; scheme was actually contained extraction (strengthens Tangled Rope).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(negative_equity_crystallization_rate, empirical, 'Negative equity crystallization and recovery rates').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(help_to_buy_uk, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data models the scheme's lifecycle from 2013 (T=0) to 2023 (T=10).
-% Base extractiveness was high (>0.46), so temporal data is required.
+% Theater ratio over time
+narrative_ontology:measurement(htb_tr_t0, help_to_buy_uk, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(htb_tr_t5, help_to_buy_uk, theater_ratio, 5, 0.58).
+narrative_ontology:measurement(htb_tr_t10, help_to_buy_uk, theater_ratio, 10, 0.68).
 
-% Theater ratio over time (starts high with political launch, fades as issues appear):
-narrative_ontology:measurement(htb_tr_t0, help_to_buy_uk, theater_ratio, 0, 0.50).
-narrative_ontology:measurement(htb_tr_t5, help_to_buy_uk, theater_ratio, 5, 0.45).
-narrative_ontology:measurement(htb_tr_t10, help_to_buy_uk, theater_ratio, 10, 0.40).
+% Extraction over time
+narrative_ontology:measurement(htb_be_t0, help_to_buy_uk, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(htb_be_t5, help_to_buy_uk, base_extractiveness, 5, 0.5).
+narrative_ontology:measurement(htb_be_t10, help_to_buy_uk, base_extractiveness, 10, 0.58).
 
-% Extraction over time (ramps up as price inflation takes hold):
-narrative_ontology:measurement(htb_ex_t0, help_to_buy_uk, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(htb_ex_t5, help_to_buy_uk, base_extractiveness, 5, 0.48).
-narrative_ontology:measurement(htb_ex_t10, help_to_buy_uk, base_extractiveness, 10, 0.52).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The scheme is a mechanism for allocating capital resources.
 narrative_ontology:coordination_type(help_to_buy_uk, resource_allocation).
+narrative_ontology:affects_constraint(help_to_buy_uk, uk_housing_supply_constraint).
+narrative_ontology:affects_constraint(help_to_buy_uk, mortgage_market_concentration).
+narrative_ontology:affects_constraint(help_to_buy_uk, developer_market_power).
 
-% Network relationships: The scheme's effectiveness and impact are structurally
-% dependent on the pre-existing constraint of housing undersupply.
-narrative_ontology:affects_constraint(uk_housing_supply_shortage, help_to_buy_uk).
+% DUAL FORMULATION NOTE:
+% HTB is downstream of the fundamental UK housing supply shortage (planning restrictions, land scarcity, construction capacity limits). The scheme's extractiveness depends critically on supply elasticity: in a supply-elastic market, HTB would be pure coordination (Rope); in a supply-inelastic market, it becomes extraction mechanism (Snare/Tangled Rope). The three network-affected constraints capture the upstream structural conditions that convert demand stimulus into price capture rather than access improvement.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The structural derivation from
-% beneficiary/victim declarations and exit options (trapped, constrained, arbitrage)
-% accurately models the power dynamics and risk distribution of the scheme.
+constraint_indexing:directionality_override(help_to_buy_uk, moderate, 0.58).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

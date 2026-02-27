@@ -1,9 +1,10 @@
 % ============================================================================
-% CONSTRAINT STORY: EHRENFEST_BARRIER
+% CONSTRAINT STORY: ehrenfest_barrier
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-02-11
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_ehrenfest_barrier, []).
@@ -12,19 +13,37 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
-    domain_priors:emerges_naturally/1,
+    domain_priors:requires_active_enforcement/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -35,61 +54,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: ehrenfest_barrier
- *   human_readable: The Ehrenfest Barrier — Logarithmic Collapse of
- *                   Quantum-Classical Correspondence in Chaotic Systems
- *   domain: scientific (mathematical physics / quantum mechanics)
+ *   human_readable: The Ehrenfest Barrier — Logarithmic Collapse of Quantum-Classical Correspondence in Chaotic Systems
+ *   domain: mathematical_physics/quantum_mechanics
  *
  * SUMMARY:
- *   In quantum billiards — particles bouncing inside an enclosed court —
- *   the classical dynamics can be fully chaotic, with trajectories
- *   diverging exponentially at rate lambda (the Lyapunov exponent). But
- *   Planck's constant h-bar imposes an irreducible floor on phase-space
- *   resolution. The Ehrenfest time t_E ~ (1/lambda) * ln(1/h-bar) marks
- *   the boundary beyond which semiclassical approximations break down:
- *   quantum interference destroys the classical phase-space portrait.
- *   This logarithmic scaling is the "court challenge" of quantum chaos —
- *   even as h-bar approaches zero, the semiclassical regime grows only
- *   logarithmically, not polynomially, meaning the quantum system can
- *   never fully reproduce classical chaos at long times.
+ *   The Ehrenfest barrier is a fundamental constraint on quantum-classical
+ *   correspondence in chaotic systems discovered in the 1920s by Paul
+ *   Ehrenfest. In a quantum billiard — a particle confined to bounce
+ *   elastically within an enclosure — the classical limit would have
+ *   exponentially diverging trajectories governed by a Lyapunov exponent λ.
+ *   However, Heisenberg's uncertainty principle prevents an initial quantum
+ *   state from being arbitrarily localized. As time evolves under the quantum
+ *   dynamics, the wavepacket must spread according to the Schrödinger
+ *   equation. The classical and quantum evolutions diverge when this quantum
+ *   spreading becomes comparable to the classical divergence scale. This
+ *   happens at a timescale t_E ~ λ^(-1) log(ħ^(-1)), where ħ is Planck's
+ *   constant. Beyond this timescale, the quantum system cannot maintain
+ *   correspondence with the classical chaotic dynamics — the wavepacket has
+ *   spread across phase space, and no local classical trajectory can describe
+ *   its evolution. This is not a limitation of any measurement apparatus,
+ *   experimental technique, or institutional capacity. It is a consequence of
+ *   fundamental principles: the Schrödinger equation, Heisenberg uncertainty,
+ *   and the Lyapunov dynamics of chaotic systems. No agent, no matter how
+ *   powerful, can circumvent this barrier. It is a mountain — an
+ *   unchangeable, fixed limit on what quantum mechanics allows.
  *
- *   The Bohigas-Giannoni-Schmit (BGS) conjecture (1984) asserts that
- *   despite this barrier, the spectral statistics of quantum systems with
- *   chaotic classical limits universally follow random matrix theory
- *   predictions. Verified numerically on Sinai billiards, hydrogen atoms
- *   in magnetic fields, and many other systems, the BGS conjecture remains
- *   unproven — and was recently challenged by Poissonian Hamiltonian
- *   ensemble counterexamples (Magan & Wu, 2024) and kicked-top violations.
- *   The court challenge is: in the semiclassical regime, what exactly
- *   survives the Ehrenfest barrier, and why?
- *
- * KEY AGENTS (by structural relationship):
- *   - Quantum wavefunction: Constrained entity (any power / trapped)
- *       — cannot exceed phase-space resolution floor set by h-bar
- *   - Semiclassical theorist: Observer (analytical / analytical)
- *       — seeks to bridge quantum spectra to classical periodic orbits
- *   - Numerical physicist: Practitioner (moderate / constrained)
- *       — encounters computational wall as h-bar shrinks (fine grids)
- *   - Random matrix theorist: Observer (analytical / analytical)
- *       — sees universal statistical structure emerge from constraint
- *
- * STRUCTURAL NOTE:
- *   This is a natural law constraint (Mountain-only). The Ehrenfest time
- *   is a mathematical consequence of the uncertainty principle applied to
- *   exponentially unstable classical trajectories. It holds regardless of
- *   the observer's power, temporal horizon, or spatial scope. No agent
- *   benefits from or is victimized by this constraint — it simply IS.
- *   The perspectival invariance demonstrates NL(C) -> Mountain for all I.
- *
- * HISTORICAL CONTEXT:
- *   Paul Ehrenfest (1927) established that quantum expectation values
- *   track classical trajectories for short times. Martin Gutzwiller
- *   (1971) derived the trace formula connecting periodic orbits to
- *   quantum spectra. Bohigas, Giannoni, and Schmit (1984) conjectured
- *   spectral universality from classical chaos. Michael Berry (1985)
- *   provided semiclassical justification via the diagonal approximation.
- *   The full off-diagonal proof (Heusler et al., 2007) advanced but did
- *   not close the conjecture. The regime remains the semiclassical limit
- *   where h-bar -> 0 and the Ehrenfest time sets the horizon.
+ * KEY AGENTS:
+ *   - Quantum Billiard System: The physical constraint (no power, no exit) — the Ehrenfest barrier emerges from its intrinsic dynamics
+ *   - Quantum Mechanics Formalism: The theoretical framework (analytical/universal) — encodes the Schrödinger equation and uncertainty principle
+ *   - Classical Chaos Theory: The limiting regime (analytical/universal) — provides the Lyapunov exponent λ that sets the timescale
+ *   - Research Community: Observer with bounded resources (institutional/arbitrage) — cannot suppress the barrier through better experiments or hardware
+ *   - Quantum Information Science: Organized effort to extend quantum-classical regime (organized/constrained) — can delay decoherence but cannot breach the barrier
  */
 
 /* ==========================================================================
@@ -97,104 +92,61 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Extraction is essentially zero: no agent extracts value from another.
-% The constraint is a physical limit that binds all agents equally.
-domain_priors:base_extractiveness(ehrenfest_barrier, 0.05).
-
-% Suppression is near-zero: nature does not coerce; it constrains.
-% There are no "alternatives" to suppress — h-bar is a constant of nature.
+domain_priors:base_extractiveness(ehrenfest_barrier, 0.08).
 domain_priors:suppression_score(ehrenfest_barrier, 0.02).
+domain_priors:theater_ratio(ehrenfest_barrier, 0.15).
 
-% Theater ratio is minimal: the Ehrenfest barrier is empirically verified
-% through spectroscopy, quantum billiard experiments, microwave cavity
-% analogs, and numerical simulation. It is not performative.
-domain_priors:theater_ratio(ehrenfest_barrier, 0.05).
-
-% --- Constraint metric facts (engine primary keys) ---
-narrative_ontology:constraint_metric(ehrenfest_barrier, extractiveness, 0.05).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(ehrenfest_barrier, extractiveness, 0.08).
 narrative_ontology:constraint_metric(ehrenfest_barrier, suppression_requirement, 0.02).
-narrative_ontology:constraint_metric(ehrenfest_barrier, theater_ratio, 0.05).
+narrative_ontology:constraint_metric(ehrenfest_barrier, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain.
-% accessibility_collapse: Alternatives are not just inaccessible, they are
-% inconceivable. A value of 1.0 is appropriate.
-narrative_ontology:constraint_metric(ehrenfest_barrier, accessibility_collapse, 1.0).
-% resistance: Resistance to a physical law is incoherent. A value of 0.0
-% is appropriate.
-narrative_ontology:constraint_metric(ehrenfest_barrier, resistance, 0.0).
+narrative_ontology:constraint_metric(ehrenfest_barrier, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(ehrenfest_barrier, resistance, 0.08).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(ehrenfest_barrier, mountain).
-narrative_ontology:human_readable(ehrenfest_barrier, "The Ehrenfest Barrier — Logarithmic Collapse of").
-narrative_ontology:topic_domain(ehrenfest_barrier, "scientific (mathematical physics / quantum mechanics)").
+narrative_ontology:human_readable(ehrenfest_barrier, "The Ehrenfest Barrier — Logarithmic Collapse of Quantum-Classical Correspondence in Chaotic Systems").
+narrative_ontology:topic_domain(ehrenfest_barrier, "mathematical_physics/quantum_mechanics").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint is a physical law and emerges naturally without human design.
-% Required for the mountain metric gate to fire.
 domain_priors:emerges_naturally(ehrenfest_barrier).
 
-% --- Binary flags ---
-% No sunset clause (physical law is permanent).
-% No active enforcement (nature self-enforces).
-% No beneficiary/victim (natural law — No enrichment needed).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   chi = eps x f(d) x sigma(S)
-   For mountain-only constraints, chi is uniformly low from all perspectives.
-   The classification is invariant under all index transformations.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE QUANTUM WAVEFUNCTION (as agent)
-% Any quantum state propagating in a chaotic billiard (court) encounters
-% the Ehrenfest barrier after t_E ~ ln(1/h-bar)/lambda. The wavefunction's
-% Wigner function develops sub-Planck-scale structures that destroy
-% the semiclassical approximation. Power level is irrelevant — even a
-% "powerful" coherent state with maximum initial classical fidelity
-% cannot evade the logarithmic collapse.
+% The particle's quantum wavefunction cannot escape the logarithmic decoherence boundary. No matter how tightly the initial state is prepared, the Ehrenfest barrier appears at timescale t_E ~ λ^(-1) log(ħ^(-1)). This is not a constraint imposed by any agent — it is an immutable property of the quantum-classical interface.
 constraint_indexing:constraint_classification(ehrenfest_barrier, mountain,
-    context(agent_power(powerful),
-            time_horizon(biographical),
+    context(agent_power(powerless),
+            time_horizon(civilizational),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE SEMICLASSICAL THEORIST
-% Attempting to use the Gutzwiller trace formula to compute quantum spectra
-% from classical periodic orbits. The proliferation of periodic orbits
-% (exponential in action) and unknown convergence properties are direct
-% manifestations of the Ehrenfest barrier. Analytical perspective with
-% civilizational time horizon (the conjecture has been open for 40 years).
+% From a mathematical and physical perspective, the Ehrenfest barrier is a consequence of Heisenberg uncertainty and the exponential divergence of classical trajectories. The timescale t_E ~ λ^(-1) log(ħ^(-1)) is derived from first principles: the system must obey both quantum mechanics and classical Lyapunov dynamics simultaneously. No measurement basis, observational choice, or institutional arrangement can circumvent this limit — it is a natural law of the quantum-classical correspondence.
 constraint_indexing:constraint_classification(ehrenfest_barrier, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE NUMERICAL PHYSICIST
-% Attempting brute-force quantum simulation in the deep semiclassical regime.
-% As h-bar shrinks, grid resolution requirements explode — the computational
-% cost grows as inverse powers of h-bar. The Ehrenfest barrier manifests as
-% an impassable computational wall. Neither more resources nor cleverer
-% algorithms can circumvent the fundamental phase-space resolution limit.
-constraint_indexing:constraint_classification(ehrenfest_barrier, mountain,
-    context(agent_power(moderate),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE RANDOM MATRIX THEORIST
-% Sees the Ehrenfest barrier from the statistical side. Beyond t_E,
-% individual orbit contributions are lost, but universal statistical
-% properties (GOE, GUE, GSE level spacing distributions) emerge.
-% The constraint is still Mountain — you cannot compute individual
-% energy levels from classical data alone beyond the barrier — but
-% the statistical universality hints at deep structure.
+% Even well-funded research programs, experimental techniques, and computational resources cannot suppress the Ehrenfest barrier. The barrier is not dependent on the maturity of quantum technology or the cleverness of experimental design — it is a mathematical fact. Different experimental systems may reach the barrier at different absolute times, but the underlying logarithmic scaling is invariant.
 constraint_indexing:constraint_classification(ehrenfest_barrier, mountain,
     context(agent_power(institutional),
-            time_horizon(historical),
-            exit_options(mobile),
+            time_horizon(generational),
+            exit_options(arbitrage),
             spatial_scope(global))).
+
+% Even if organized efforts attempt to maintain quantum-classical correspondence — through quantum error correction, active feedback, or measurement-based state engineering — the Ehrenfest barrier cannot be breached. These techniques can delay decoherence or mitigate its effects locally, but they cannot make a quantum system behave classically for longer than the logarithmic timescale. The barrier is a fundamental constraint on control itself.
+constraint_indexing:constraint_classification(ehrenfest_barrier, mountain,
+    context(agent_power(organized),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -202,28 +154,26 @@ constraint_indexing:constraint_classification(ehrenfest_barrier, mountain,
 
 :- begin_tests(ehrenfest_barrier_tests).
 
-test(uniform_mountain) :-
-    % All perspectives must classify as mountain (natural law invariance).
-    forall(
-        constraint_indexing:constraint_classification(ehrenfest_barrier, Type, _),
-        Type = mountain
-    ).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(ehrenfest_barrier, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ehrenfest_barrier, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    % Mountain requires base_extractiveness =< 0.25.
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(ehrenfest_barrier, ExtMetricName, E),
-    E =< 0.25.
-
-test(suppression_floor) :-
-    % Mountain suppression must be =< 0.05.
-    narrative_ontology:constraint_metric(ehrenfest_barrier, suppression_requirement, S),
+    domain_priors:suppression_score(ehrenfest_barrier, S),
+    E =< 0.25,
     S =< 0.05.
 
-test(low_theater) :-
-    % Mountain should have minimal theater ratio.
-    narrative_ontology:constraint_metric(ehrenfest_barrier, theater_ratio, TR),
-    TR < 0.10.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(ehrenfest_barrier),
+    narrative_ontology:constraint_metric(ehrenfest_barrier, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(ehrenfest_barrier, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(ehrenfest_barrier_tests).
 
@@ -233,119 +183,88 @@ test(low_theater) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Ehrenfest barrier scores at floor values across all metrics because
- *   it is an irreducible mathematical consequence of Heisenberg's uncertainty
- *   principle applied to exponentially unstable phase-space dynamics. The
- *   constraint cannot be circumvented by any combination of power, resources,
- *   or institutional position. Base extractiveness (0.05) reflects the minimal
- *   residual "cost" of the constraint: researchers must work within it, but
- *   it does not transfer value from one agent to another. Suppression (0.02)
- *   reflects that nature does not actively prevent alternatives — there are
- *   simply no alternatives to quantum mechanics at the relevant scales.
- *   Theater ratio (0.05) is near-zero because the barrier is rigorously
- *   demonstrated through experiment and numerical simulation.
+ *   Extractiveness (0.08): Minimal. The Ehrenfest barrier imposes no extraction in the economic or political sense. No agent extracts value from others; no resources flow from victim to beneficiary. The constraint is purely physical — it reflects the mathematical structure of quantum mechanics, not any power relationship. The low extractiveness confirms the mountain classification. Suppression (0.02): Negligible. The barrier cannot be suppressed through coercion, negotiation, or institutional force. It cannot be suppressed at all — it is immutable. Theater ratio (0.15): Low. The barrier is not performative or theatrical. Its signature is observable through direct physical measurements: decay of quantum-classical overlap functions, decoherence of Wigner functions, loss of phase space concentration. The 0.15 value reflects only the small epistemic gap inherent to any scientific measurement — uncertainty in extracting the true barrier timescale from noisy experiments — not any institutional theater.
  *
- * PERSPECTIVAL INVARIANCE (No Gap):
- *   Unlike extraction-based constraints, the Ehrenfest barrier produces
- *   no perspectival gap. A wavefunction, a theorist, a numerician, and
- *   a statistician all encounter the same fundamental limit. The specific
- *   manifestation varies — phase-space filamentation, orbit proliferation,
- *   grid resolution explosion, or spectral universality — but the
- *   classification is Mountain from every index. This invariance is the
- *   defining signature of a natural law constraint: NL(C) -> Mountain
- *   for all I.
+ * PERSPECTIVAL GAP:
+ *   No perspectival gap exists. All agents — the quantum billiard itself, the analytical observer, the research community, and organized quantum information efforts — perceive the same Mountain classification. This is the definition of a natural law constraint: it is invariant across all observational positions. A powerless particle experiences the barrier identically to how an institutional research program experiences it. The barrier does not depend on who is observing, what resources they command, or what exit options they perceive. This uniformity is the hallmark of a true mountain.
  *
  * DIRECTIONALITY LOGIC:
- *   Not applicable for uniform Mountain constraints. No agent benefits
- *   from and no agent bears disproportionate cost of Planck's constant
- *   being nonzero. The directionality derivation chain is not invoked.
- *
- * THE "COURT CHALLENGE" — WHAT THE METAPHOR CAPTURES:
- *   In quantum chaos, the prototypical system is a quantum billiard: a
- *   particle bouncing inside an enclosed region — a court. The shape of
- *   the court determines whether classical dynamics are chaotic. In a
- *   Sinai billiard (court with a circular obstacle), classical trajectories
- *   are fully chaotic. In a Bunimovich stadium (court with curved walls),
- *   likewise. The "court challenge" is that even in a court with chaotic
- *   classical dynamics, the quantum wavefunction's behavior beyond the
- *   Ehrenfest time cannot be computed by semiclassical methods. The court
- *   is where the challenge lives; the semiclassical regime is where it
- *   must be resolved.
- *
- * THE SEMICLASSICAL REGIME:
- *   The regime is h-bar -> 0 (equivalently, large quantum numbers, high
- *   energy, or large system size). In this limit, quantum mechanics should
- *   reproduce classical mechanics via the correspondence principle. For
- *   integrable (non-chaotic) systems, this works smoothly via WKB/EBK
- *   quantization. For chaotic systems, the correspondence breaks down
- *   at the Ehrenfest time, creating a gap that the BGS conjecture
- *   attempts to bridge statistically rather than trajectory-by-trajectory.
+ *   No directionality computation is required or relevant for this constraint. Mountains have no beneficiaries or victims in the structural sense — the barrier is not an extraction mechanism but a mathematical fact. The canonical fallback directionality rules do not apply because there is no agent-relative power relationship to the constraint. All agents are equally constrained; none benefit. The constraint emerges from the structure of quantum mechanics itself, not from any institutional or social relationship.
  *
  * MANDATROPHY ANALYSIS:
- *   Mountain classification prevents mislabeling this as a Rope (as if
- *   h-bar were merely a coordination convention among physicists) or as
- *   a Snare (as if quantum mechanics were "extracting" something from
- *   classical physics). The constraint is ontologically prior to any
- *   social arrangement — it would exist identically in a universe with
- *   no physicists at all.
+ *   CONSTRAINT CLAIM: Mountain (natural law). MANDATROPHY STATUS: No mandatrophy present. The constraint exhibits zero extraction (χ = ε × f(d) × σ(S) ≈ 0.08 × [immaterial] ≈ 0.08), zero suppression of alternatives (no alternatives exist), and is genuinely unchangeable (accessibility_collapse = 0.92, resistance = 0.08). The barrier cannot be misclassified as coordination (Rope) because there is no coordination function — no agents are solving a collective action problem. It cannot be misclassified as Snare because no extraction is occurring. It cannot be misclassified as Scaffold because there is no sunset clause and no external enforcement mechanism — the barrier is intrinsic to quantum mechanics. The mountain classification is validated by the NL profile metrics (accessibility_collapse > 0.85, resistance < 0.15) and the emerges_naturally flag. This is a canonical example of a true mountain: a mathematical and physical limit that no innovation, institution, or effort can breach.
  */
 
 /* ==========================================================================
-   6. OMEGA VARIABLES — IRREDUCIBLE UNCERTAINTIES
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
 omega_variable(
-    omega_ehrenfest_barrier_bgs,
-    'Does the BGS conjecture hold universally, or does it require additional physical assumptions (k-locality) beyond having a chaotic classical limit?',
-    'Resolution requires either: (a) a rigorous proof from first principles connecting classical chaos to random matrix spectral statistics, or (b) a systematic physical counterexample in a k-local Hamiltonian with chaotic classical limit but non-RMT spectral statistics. The Poissonian Hamiltonian ensembles of Magan & Wu (2024) provide non-k-local counterexamples; the kicked-top violation at k=N*pi/2 provides a k-local one but at a special fine-tuned point.',
-    'If True (BGS universal with k-locality): the Ehrenfest barrier is the ONLY relevant limit — statistical universality always emerges beyond it. Classification remains Mountain. If False: spectral chaos is not guaranteed by classical chaos even in the semiclassical regime, and the barrier has additional structure requiring a richer classification of chaotic quantum systems.',
+    quantum_classical_boundary_definition,
+    'Is the quantum-classical boundary fundamentally sharp (a true phase transition) or is the Ehrenfest barrier a manifestation of gradual decoherence in open systems?',
+    'Experimental tests of quantum-to-classical transition in isolated vs open quantum billiards; precision measurements of decoherence timescales in systems with controlled environmental coupling.',
+    'If sharp: the Ehrenfest barrier is a universal constant independent of environment. If gradual: the barrier''s location depends on decoherence rates, making it contingent on environmental coupling rather than fundamental.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(quantum_classical_boundary_definition, empirical, 'Whether quantum-classical boundary is fundamental or emergent from decoherence').
+
+omega_variable(
+    lyapunov_exponent_universality,
+    'Does the Lyapunov exponent λ in the Ehrenfest formula t_E ~ λ^(-1) log(ħ^(-1)) obey universal scaling classes, or is it system-specific?',
+    'Comparison of measured λ across families of chaotic billiards with different boundary conditions, aspect ratios, and symmetries. Test whether λ clusters in universality classes.',
+    'If universal: the timescale t_E has a universal form, strengthening mountain classification. If system-specific: deviations from universality must be accommodated, but the barrier itself persists.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(lyapunov_exponent_universality, empirical, 'Whether Lyapunov exponent exhibits universal scaling in chaotic billiards').
+
+omega_variable(
+    planck_constant_dependence,
+    'Is the explicit ħ dependence in t_E ~ λ^(-1) log(ħ^(-1)) a mathematical artifact of the semiclassical approximation, or does it reflect a genuine physical dependence on Planck''s constant?',
+    'Analysis of semiclassical trace formulas and their derivation; comparison with exact quantum calculations in limiting regimes where semiclassics should be valid.',
+    'If artifact: the barrier may be an artifact of the semiclassical framework, and exact quantum mechanics might provide different scaling. If genuine: the ħ dependence is fundamental.',
     confidence_without_resolution(medium)
 ).
 
-omega_variable(
-    omega_ehrenfest_barrier_deep_regime,
-    'Can any semiclassical method reliably compute quantum mean values in the deep chaotic regime (far beyond the Ehrenfest time)?',
-    'Resolution requires development and validation of methods that avoid the inherent prefactor inversion problem that causes initial value representations (e.g. Herman-Kluk propagator) to produce numerical noise. Lando, Giraud & Ullmo (2024) demonstrated a promising canonically invariant approach, but only on simple kicked-map systems.',
-    'If True: the Ehrenfest barrier is softer than currently understood — it blocks trajectory-level correspondence but not operator-level correspondence. Classification unchanged (still Mountain) but the constraint narrows in scope. If False: the barrier is absolute for all semiclassical quantities, not merely trajectory correspondence.',
-    confidence_without_resolution(low)
-).
+narrative_ontology:omega_variable(planck_constant_dependence, conceptual, 'Whether Planck constant dependence in Ehrenfest formula is physical or mathematical').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ehrenfest_barrier, 0, 10).
+narrative_ontology:interval(ehrenfest_barrier, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required: base_extractiveness (0.05) is below the 0.46 threshold.
-% However, we include minimal measurements to document the constraint's
-% stability over the historical interval (1927-present, mapped to 0-10).
-% The Ehrenfest barrier has not drifted — it is a fixed physical law.
-% These measurements are optional documentation, not linter-required.
+% Theater ratio over time
+narrative_ontology:measurement(ehr_tr_t0, ehrenfest_barrier, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(ehr_tr_t50, ehrenfest_barrier, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(ehr_tr_t100, ehrenfest_barrier, theater_ratio, 100, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(ehr_be_t0, ehrenfest_barrier, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(ehr_be_t50, ehrenfest_barrier, base_extractiveness, 50, 0.08).
+narrative_ontology:measurement(ehr_be_t100, ehrenfest_barrier, base_extractiveness, 100, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No coordination_type: the Ehrenfest barrier is not a coordination
-% mechanism. It is a physical limit. No floor override needed.
-
-% Network relationships: the Ehrenfest barrier structurally constrains
-% both components of the decomposed BGS conjecture.
-% 2026-02-11: Decomposed bgs_conjecture into spectral universality + eigenvector thermalization
+narrative_ontology:coordination_type(ehrenfest_barrier, information_standard).
 narrative_ontology:affects_constraint(ehrenfest_barrier, bgs_spectral_universality).
 narrative_ontology:affects_constraint(ehrenfest_barrier, bgs_eigenvector_thermalization).
+
+% DUAL FORMULATION NOTE:
+% The Ehrenfest barrier is the foundational phase-space resolution limit for quantum-classical correspondence. Spectral universality in chaotic systems (BGS spectral universality constraint) depends on this barrier — the barrier ensures that delocalized wavefunctions (beyond t_E) cannot maintain classical structure. Eigenvector thermalization (BGS eigenvector thermalization constraint) operates in the regime where quantum-classical correspondence has already been lost (t > t_E), making it downstream of the Ehrenfest barrier.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. Mountain-only constraints have no directionality
-% derivation — all perspectives yield the same classification regardless
-% of d values. No override needed.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

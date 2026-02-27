@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "responsibility_without_power",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Scapegoat Architecture",
+    "topic_domain": "organizational/legal/socio-economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_management",
+      "system_owners"
+    ],
+    "victims": [
+      "middle_management",
+      "compliance_officers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Designated Scapegoat",
+      "comment": "The individual or team assigned responsibility but lacking control experiences this as a pure extraction mechanism. They are trapped because their job depends on accepting this responsibility, even if they know they cannot effectively fulfill it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Middle Management",
+      "comment": "Middle management experiences the constraint as a Tangled Rope. They have some ability to influence outcomes, but their power is limited. They benefit from the framework by having defined duties and a chain of command, but extraction occurs through legal or career repercussions when systems fail despite their best efforts."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Executive Management",
+      "comment": "Executive management views the scapegoat architecture as a 'rope' because they gain from it by assigning responsibility which in turn protects them from liability and increases public trust. They can exit this arrangement if the 'scapegoat' is not performing to the expected standards."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legal System",
+      "comment": "The legal system's approach to assigning liability to entities without power is a piton. Its original function may have been fair, but now it's primarily theatrical - fulfilling a need to assign blame without necessarily improving outcomes. Constrained because it cannot exit assigning responsibility without proper power because it's the backbone of law itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer: Sees this as a tangled rope. On the one hand, a formal assignment of responsibility can drive improvements in security or safety. On the other hand, delegating legal or moral responsibility to those without the power to meet such responsibilities can be a source of perverse incentives and structural brittleness."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "power_to_influence",
+      "question": "What level of power is required to effectively influence system outcomes related to safety/ethics?",
+      "resolution_mechanism": "Quantitative analysis of system performance vs. power level of responsible party.",
+      "impact": "If the necessary power threshold is high, the 'responsibility without power' framework is more extractive. If it's low, it can function as a genuine coordinating mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What power is required to influence outcomes?"
+    },
+    {
+      "id": "moral_hazard",
+      "question": "Does assigning responsibility without power create a moral hazard, where decision-makers are less incentivized to invest in safety or ethical systems?",
+      "resolution_mechanism": "Comparative case studies and surveys to gauge the impact on strategic investment.",
+      "impact": "If moral hazard is significant, the framework is net-negative. Otherwise, it may have some limited benefits.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Does it create a moral hazard?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Scapegoat Architecture describes a scenario where responsibility for maintaining system safety or ethical standards is assigned to a subject who lacks the actual power or tools to control the outcome. This is often observed in automated systems where liability for errors falls on individuals who can't understand or modify the algorithms, in supply chains where compliance officers are accountable for the actions of distant subcontractors, or in middle management where performance targets are assigned without necessary resources.",
+    "key_agents": [
+      "Executive Management: Benefits by assigning responsibility (institutional/arbitrage).",
+      "System Owners: Benefits by offloading liability (institutional/arbitrage).",
+      "Middle Management: Victim of responsibility without power (moderate/constrained).",
+      "Compliance Officers: Victim, responsible without power (moderate/constrained).",
+      "Designated Scapegoat: Bears the cost of system failure (powerless/trapped)."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. This setup extracts from middle management and compliance officers, who are penalized when things go wrong. Suppression (0.70): High. The framework maintains its dominance because alternatives are suppressed by legal tradition and organizational structures that prioritize clear lines of accountability, even if those lines don't correspond to actual control. Theater Ratio (0.75): High. Assigning responsibility to someone, even without power, creates the appearance of accountability, improving public trust and mitigating legal risk.",
+    "perspectival_gap": "Executive management views this system as a rope, providing a solution to complex problems. In contrast, designated scapegoats experience pure extraction. The analytical observer sees that this dynamic is a tangled rope, with some coordinating effects coupled to perverse incentives.",
+    "directionality_logic": "Executive management's directionality is driven by their arbitrage exit, as they are protected by assigning liability to someone lower. The designed scapegoat has a trapped exit, causing a high directionality. An analytical observer views this as a tangled rope since while there is extracted responsibilities, there are some good outcomes of this setup. All of this is a tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

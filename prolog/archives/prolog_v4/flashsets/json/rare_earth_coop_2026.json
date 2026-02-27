@@ -1,0 +1,66 @@
+{
+  "header": {
+    "constraint_id": "rare_earth_coop_2026",
+    "version": "0.1",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.2,
+    "suppression": 0.15,
+    "theater_ratio": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Manufacturer-Owned Rare Earth Cooperative (MOREC)",
+    "topic_domain": "economic/industrial",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "member_manufacturers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Member Manufacturers",
+      "comment": "Member manufacturers experience this as a coordination mechanism to secure rare earth elements outside of the Project Vault framework. They have the power to exit and procure from other sources, although this may be less desirable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a broad analytical perspective, this cooperative represents a coordination mechanism to bypass a specific constraint (Project Vault). It facilitates resource allocation among members, enhancing overall supply chain resilience."
+    }
+  ],
+  "omegas": [],
+  "measurements": [],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A horizontal coordination mechanism where manufacturers pool capital to bypass the profit-seeking mandates of Project Vault, securing rare earth elements for their production needs.",
+    "key_agents": [
+      "Member Manufacturers: Beneficiaries (institutional/mobile) - benefit from secured supply and potentially lower costs.",
+      "Analytical Observer: (analytical/analytical)"
+    ],
+    "logic_rationale": "Low extractiveness and suppression reflect the voluntary nature of the cooperative and the availability of alternative sourcing options.",
+    "perspectival_gap": "Both member manufacturers and analytical observers perceive this as a beneficial coordination mechanism, hence the consistent 'rope' classification.",
+    "directionality_logic": "Member manufacturers are the primary beneficiaries and have the option to exit the cooperative, indicating a low 'd' value and thus a coordination-focused perspective.",
+    "mandatrophy_analysis": "The classification prevents mislabeling coordination as pure extraction because the cooperative is designed to address a specific need rather than extract value from its members. It's a response to a larger constraint, not a source of extraction itself."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "project_vault_dependency"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "job_hunt_volume_system_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jobvol"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "The Algorithmic Volume Filter in Modern Recruitment",
+    "topic_domain": "economic/labor_markets",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hiring_firms",
+      "recruitment_platforms"
+    ],
+    "victims": [
+      "job_seekers",
+      "labor_market_transparency"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Job Seeker",
+      "comment": "PERSPECTIVE 1: JOB SEEKER (SNARE) \u2014 Trapped in a system where application volume far exceeds human review capacity. Must apply repeatedly without visibility into why applications are rejected. No alternative to the applicant tracking system (ATS) filter for most formal employment. Experiences maximum extraction: time spent optimizing resume formatting for algorithmic parsing, uncompensated labor perfecting applications, emotional cost of silent rejections. Cannot exit without abandoning formal job search."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Hiring Firm",
+      "comment": "PERSPECTIVE 2: HIRING FIRM (ROPE) \u2014 Uses ATS as a genuine coordination tool: filters 500+ applications to 20 viable candidates per position, enabling specialization. Benefits from automation reducing screening labor. Experiences the constraint as solving a real coordination problem (managing volume). Can exit by returning to manual screening if algorithms become counterproductive, giving them arbitrage options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Qualified Candidate Outside Keyword Proximity",
+      "comment": "PERSPECTIVE 3: QUALIFIED CANDIDATE OUTSIDE KEYWORD PROXIMITY (SNARE) \u2014 Has real qualifications but does not use the precise terminology encoded in the keyword filter. Constrained by need to apply but suppressed from advancing. Lower power than purely powerless but still trapped \u2014 cannot negotiate with the algorithm, cannot appeal, cannot know the exact criteria they failed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory/Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY/ADVOCACY COALITION (TANGLED ROPE) \u2014 Labor advocates, employment agencies, and equity regulators see both coordination function (managing scale) and extraction mechanism (bias amplification, opacity). Have some agency through legislative proposals (algorithmic transparency laws, ATS audits) but constrained by industry resistance. Benefits from visible labor market function but bears cost of legitimizing opaque systems."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Recruitment Platform Provider",
+      "comment": "PERSPECTIVE 5: RECRUITMENT PLATFORM PROVIDER (PITON) \u2014 Maintains ATS infrastructure as part of larger HRIS ecosystem. Primary revenue from employers, not from improving matching. The algorithm persists largely for institutional inertia (all competitors have similar systems) rather than because it optimizes matching. Theater high: firms claim ATS is 'efficient' and 'fair' while knowing it creates false negatives. Low functional verification \u2014 no transparency mechanism to validate quality of filtering. Theater ratio high because platform providers benefit from opacity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION ASYMMETRY VIEW (MOUNTAIN) \u2014 From a universal analytical context, high-volume labor markets create irreducible information asymmetry: firms cannot individually evaluate thousands of applications without some filtering mechanism. The volume itself is a fixed constraint (mathematical limit on human review capacity). This perspective risks naturalizing what is actually a policy-contingent outcome: the 'high volume' is a product of low job-application friction and broad job boards, not an immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_filter_validity",
+      "question": "Do current ATS keyword filters actually predict job performance, or are they simply convenient volume reducers that approximate demographic biases?",
+      "resolution_mechanism": "Longitudinal matching study: correlate ATS filter outcomes with 2-year job performance ratings for hired candidates; separate effect sizes for candidates who passed vs were filtered out",
+      "impact": "If predictive: filters are coordination mechanism (Rope). If non-predictive: filters are pure extraction masquerading as efficiency (Snare from all perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ATS filters predict job performance or merely reduce volume"
+    },
+    {
+      "id": "qualified_false_negatives_rate",
+      "question": "What fraction of applicants filtered out by ATS would have succeeded in the role?",
+      "resolution_mechanism": "Randomized control: sample 1% of algorithmically filtered applications, conduct human review, hire subset, track 2-year retention and performance. Compare to hired candidate population.",
+      "impact": "If false negative rate > 30%: extraction mechanism is severe (high snare classification). If < 10%: filters are genuinely accurate (rope dominates). Mid-range: tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "False negative rate in ATS filtering"
+    },
+    {
+      "id": "transparency_feasibility",
+      "question": "Can firms provide real-time feedback to rejected applicants on filter criteria without creating new extraction or gaming vectors?",
+      "resolution_mechanism": "Pilot transparency intervention: select firms provide candidates with specific filter feedback (e.g., 'missing keyword X', 'experience level below threshold'). Measure: does feedback enable correction, or does it create resume-gaming arms race?",
+      "impact": "If transparency enables genuine improvement: constraint becomes less extractive (candidates have exit path). If transparency creates gaming: extraction persists (theater ratio increases as candidates perform compliance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transparency reduces or redirects extraction"
+    },
+    {
+      "id": "volume_necessity_threshold",
+      "question": "At what application volume does human screening become genuinely infeasible, and below that threshold, do algorithmic filters extract value beyond coordination?",
+      "resolution_mechanism": "Time-motion analysis: measure reviewer capacity for detailed screening (applications per hour). Calculate breakeven volume for different role types (entry-level, specialized). Compare to actual application volumes.",
+      "impact": "If most roles are below breakeven: ATS is pure extraction (high snare). If most roles exceed breakeven: ATS solves real coordination problem (rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Volume threshold at which algorithmic filtering becomes necessary"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The algorithmic volume filter in recruitment represents a structural constraint at the intersection of labor market scaling and information asymmetry. As digital job boards have lowered application friction, firms face genuinely high application volumes (100-500+ per position at scale). The applicant tracking system (ATS) emerged as a coordination tool to manage this volume. However, the constraint exhibits characteristics of pure extraction (Snare) from the job seeker perspective: opaque filtering criteria, uncompensated labor optimizing for algorithmic parsing, suppressed transparency, and no appeal mechanism. The same system appears as legitimate coordination (Rope) from the hiring firm's perspective, which genuinely needs some filtering mechanism. The theater ratio (0.64) reflects that firms publicly claim ATS provides 'fair and efficient screening' while knowing the system produces false negatives, filters based on keyword proximity rather than capability, and amplifies demographic biases. The extractiveness trajectory (0.35\u21920.58 over 10 years) shows degradation as keyword gaming has intensified and algorithmic criteria have become more opaque, not more refined.",
+    "key_agents": [
+      "Job Seekers: Primary victims (powerless/trapped) \u2014 must apply through ATS but receive no feedback on rejection criteria; uncompensated labor perfecting applications for algorithmic parsing",
+      "Hiring Firms: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from volume reduction and coordination but have option to revert to manual screening if ATS becomes counterproductive",
+      "Qualified Candidates Outside Keyword Proximity: Secondary victims (moderate/constrained) \u2014 have real qualifications but filtered by algorithmic criteria they cannot influence or negotiate",
+      "Recruitment Platform Providers: Institutional beneficiaries (institutional/arbitrage) \u2014 maintain ATS as part of product suite; benefit from opacity and reduced transparency obligations",
+      "Regulatory/Advocacy Coalition: Organized secondary actors (organized/constrained) \u2014 labor advocates, EEOC, employment attorneys see both coordination function and bias amplification; have limited enforcement power",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing volume-driven filtering as inevitable law rather than policy-contingent outcome"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Job seekers experience significant extraction: uncompensated labor spent on keyword optimization, opportunity cost of silent rejections preventing learning, emotional cost of volume-based anonymity. Hiring firms extract value by outsourcing screening labor to candidates. However, the extraction is not maximal (0.70+) because some firms do invest in recruitment specialists who can navigate and supplement ATS, and because the coordination function is genuine \u2014 without any volume management, hiring at scale becomes infeasible. The rise to 0.58 from 0.35 reflects that keyword gaming has become more prevalent and more demanding as candidates have learned that ATS feedback is unavailable. Suppression (0.68): High. Mechanisms include: (1) opacity of filtering criteria \u2014 candidates rarely know which keywords triggered rejection, (2) no appeal mechanism \u2014 filtered applications are final, (3) platform design makes individual company contact difficult, (4) social norm that job seeking is 'private' discourages collective action, (5) fear of being 'difficult' discourages requests for transparency, (6) alternative employment pathways require social capital or network access that many candidates lack. Theater ratio (0.64): High-moderate. Firms publicly market ATS as 'eliminating bias' and 'improving fairness' while using the system to reduce transparency and shift evaluation burden to candidates. Resume screening theater (formatting for ATS parsing) substitutes for actual capability demonstration. The theater has increased over time as candidates have learned ATS requirements and begun performing compliance rather than authenticity.",
+    "perspectival_gap": "Six perspectives, three distinct classifications. Job seekers and qualified candidates see Snare (high suppression, high d, no exit). Hiring firms see Rope (genuine coordination, arbitrage exit, low d). Regulatory coalition sees Tangled Rope (both coordination and extraction present, constrained exit). ATS providers see Piton (high theater, low functional improvement, institutional inertia). Analytical observer risks Mountain (naturalizing policy-contingent volume as law). The perspectival gap reveals that the constraint's type depends entirely on structural position \u2014 what is coordination for the firm is extraction for the job seeker.",
+    "directionality_logic": "Job seekers derive high d (0.85-0.95) from victim status + trapped exit. They bear full cost (optimization labor, emotional burden, lost opportunity) with no compensation or leverage. Hiring firms derive low d (0.15-0.25) from beneficiary status + arbitrage exit. They capture value (labor cost reduction) with option to exit if ATS becomes counterproductive. Qualified candidates outside keyword proximity derive high-moderate d (0.70-0.80) from moderate power + constrained exit. They have some agency (can adjust resume, apply through networks) but are suppressed by the system. Regulatory coalition derives moderate d (0.55-0.65) from organized power + constrained exit. They have leverage (law, audits) but limited enforcement power and must work within competitive market constraints. ATS providers derive low d (0.20-0.30) from institutional power + arbitrage exit. They benefit from opacity and have option to increase transparency if forced by regulation. Analytical observer derives moderate d (0.70-0.75) as analytical context. The derivation chain produces perspectival spread: job seekers experience \u03c7 \u2248 1.0 (high f(d) \u00d7 suppression), hiring firms experience \u03c7 \u2248 0.25 (negative f(d) scales down even high suppression), qualified candidates experience \u03c7 \u2248 0.7 (moderate f(d)).",
+    "mandatrophy_analysis": "MANDATE-TROPHY RISK: The system risks being misclassified as pure coordination (Rope) if measured from hiring firm perspective alone. Firms can claim 'we have to filter volume somehow' (true, coordination function) while suppressing evidence that the specific filtering mechanism (keyword proximity rather than capability) extracts value beyond coordination (false negative rate studies would reveal this). The mitigation requires measuring from multiple perspectives simultaneously: job seeker experience (Snare), hiring firm experience (Rope), and qualified candidate experience (Snare) together establish that the same technical system serves dual functions \u2014 coordination for the firm, extraction for the candidate. Transparency mechanisms (revealing filter criteria, enabling appeal) would reduce extraction by giving candidates exit options (ability to reframe qualifications, challenge decisions). Currently mandatrophy is NOT resolved because no measurement simultaneously validates the dual function across perspectives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "resume_signaling_arms_race",
+      "labor_market_information_asymmetry",
+      "hiring_discrimination_amplification"
+    ],
+    "dual_formulation_note": "The algorithmic volume filter decomposes into three linked constraints: (1) volume management (\u03b5\u22480.25, Rope) \u2014 genuine coordination need, (2) opaque filtering (\u03b5\u22480.58, Snare) \u2014 extraction mechanism, (3) bias amplification (\u03b5\u22480.42, Tangled Rope) \u2014 mixing coordination and discriminatory extraction. This story focuses on the opaque filtering mechanism. The three stories should be linked in network to show how volume management becomes extraction when transparency is withheld."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

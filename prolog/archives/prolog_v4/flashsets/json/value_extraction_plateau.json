@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "value_extraction_plateau",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Law of Diminishing Predation",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_platform"
+    ],
+    "victims": [
+      "dependent_users",
+      "content_creators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Users (Trapped)",
+      "comment": "Users who are heavily invested in the platform and have few viable alternatives experience the constraint as a snare. They are forced to accept increasingly unfavorable terms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Content Creators",
+      "comment": "Content creators who rely on the platform for income or visibility may experience it as a tangled rope. They benefit from the platform's reach but are also subject to its extractive practices."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Platform",
+      "comment": "The dominant platform initially benefits from extracting value, which appears as a rope. However, as the extraction reaches its limit, the benefits plateau, and the focus shifts to maintaining its dominance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "From a civilizational perspective, the extraction may initially drive growth but eventually degrades into a piton where the platform becomes more focused on maintaining its position than providing value. The active coordination function has atrophied."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_metric_validity",
+      "question": "What metric best measures 'extraction' in this context? Is it revenue share, attention capture, or something else?",
+      "resolution_mechanism": "Comparative analysis of different extraction metrics and their correlation with user behavior and content creator satisfaction.",
+      "impact": "Different extraction metrics may lead to different classifications (e.g., Snare vs. Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Defines the best metric for evaluating extractiveness"
+    },
+    {
+      "id": "alternative_platform_viability",
+      "question": "How viable are alternative platforms for users and content creators?",
+      "resolution_mechanism": "Analysis of the growth and features of competing platforms, as well as user and content creator migration patterns.",
+      "impact": "High viability of alternatives reduces the 'trapped' nature of users and can shift the classification from Snare to Tangled Rope or even Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determines the viability of alternative platforms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Law of Diminishing Predation describes a scenario where a dominant platform or institution has reached the biological or economic limit of how much surplus it can siphon from its subjects. Initially, the platform grows by attracting users and content creators and extracting a portion of the value they create. However, as the extraction rate increases, users and content creators become increasingly resistant or seek alternatives, leading to a plateau in the platform's growth and potentially its decline. Active enforcement mechanisms are required to maintain extraction levels.",
+    "key_agents": [
+      "Dominant Platform: The primary beneficiary (institutional/arbitrage) that initially benefits from extracting value from users and content creators.",
+      "Dependent Users: The primary victims (powerless/trapped) who are subject to the platform's extractive practices.",
+      "Content Creators: Secondary victims (moderate/mobile) who rely on the platform but are also subject to its terms."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The platform extracts a significant portion of the value created by users and content creators. Suppression (0.70): High. Users and content creators face significant barriers to exit, such as network effects and lock-in. Theater ratio (0.75): High. The platform increasingly focuses on performative activity to maintain its position as functional extraction plateaus.",
+    "perspectival_gap": "Users, being relatively powerless and often trapped due to network effects, experience this as a snare. They are the target of extraction. Content creators have more options, and their perspective is mixed: a tangled rope. The dominant platform initially perceives a rope (coordination), but over time this turns into a piton as the value creation ecosystem degrades. An analytical observer with a long-term view may recognize the trajectory turning toward a piton.",
+    "directionality_logic": "The dominant platform benefits, thus the directionality is toward it. Users and content creators are targeted, thus the directionality is away from them. The analytical observer sees the long-term atrophication of the formerly useful coordination mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effects_lockin",
+      "platform_governance_capture"
+    ]
+  },
+  "directionality_overrides": []
+}

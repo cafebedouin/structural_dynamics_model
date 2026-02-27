@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "guano_wealth_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "guano"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Guano-based Wealth Extraction in the Chincha Islands",
+    "topic_domain": "economic/colonial_resource_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chincha_nobility",
+      "spanish_colonial_administration"
+    ],
+    "victims": [
+      "guano_harvesting_laborers",
+      "chincha_commoners",
+      "ecological_sustainability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Guano Harvester",
+      "comment": "PERSPECTIVE 1: GUANO HARVESTER (SNARE) \u2014 Trapped in labor-intensive, hazardous guano extraction with no exit option. Experiences intense extraction: 0.68 base \u00d7 1.42 f(d) \u00d7 0.8 \u03c3(local) \u2248 0.77 effective \u03c7. Suppression through coercion, scarcity of alternatives, and institutional mechanisms (Chincha nobility or colonial administration control all trade routes). d\u22480.95, powerless + trapped."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Chincha Commoner",
+      "comment": "PERSPECTIVE 2: CHINCHA COMMONER (TANGLED ROPE) \u2014 Benefits from ecological abundance and regional trade networks enabled by guano wealth, but constrained by labor obligations and wealth concentration. Experiences mixed extraction and coordination: 0.68 \u00d7 1.00 f(d) \u00d7 0.9 \u03c3(regional) \u2248 0.61 \u03c7. Trapped between benefiting from guano-driven prosperity and bearing extraction costs through tribute and labor."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Chincha Nobility",
+      "comment": "PERSPECTIVE 3: CHINCHA NOBILITY (ROPE) \u2014 Primary beneficiary of guano wealth extraction. Experiences constraint as coordination mechanism: organizing trade networks, setting labor tribute, establishing regional hegemony. d\u22480.05, institutional + arbitrage \u2192 f(d)\u2248-0.12 \u2192 \u03c7\u2248-0.06. Net beneficiary. Sees guano as a coordination resource enabling social hierarchy and regional power."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Spanish Colonial Administration",
+      "comment": "PERSPECTIVE 4: SPANISH COLONIAL ADMINISTRATION (SNARE) \u2014 After conquest (1532 onward), colonial powers intensify extraction mechanisms: forced labor systems (encomienda, later guano extraction under contract), monopoly control of guano trade, and external commodity markets. d\u22480.40, organized + constrained \u2192 f(d)\u22480.40 \u2192 \u03c7\u22480.19 (constrained by colonial logistics, disease, resistance). But effective extraction remains high due to global scope: 0.68 \u00d7 0.40 \u00d7 1.2 \u03c3(global) \u2248 0.33. Colonial snare operates at different scale than pre-conquest extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Ecological System",
+      "comment": "PERSPECTIVE 5: ECOLOGICAL SYSTEM (PITON) \u2014 Guano deposits represent extraordinary bird population productivity (cormorants, boobies, pelicans). The 'constraint' from ecology's perspective is that guano abundance is performatively maintained through institutional harvesting practices, but the underlying ecological function (nutrient recycling, bird habitat) degrades. theater_ratio=0.35 suggests functional extraction rather than pure performance, but piton classification emerges from the long-term view: by 1400 AD, intensive harvesting has maintained institutional wealth while ecological carrying capacity silently declines. The system appears to coordinate abundance but is actually exploiting accumulated capital."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Ecological Limits View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ECOLOGICAL LIMITS (MOUNTAIN) \u2014 From a civilizational/universal perspective, guano extraction embodies an immutable constraint: finite nutrient recycling capacity. The birds can only produce so much guano per year; the limit is a natural law. \u03b5=0.05 (measuring the constraint as 'bird productivity'), emerges_naturally=true, accessibility_collapse=0.92 (effort to harvest guano scales nonlinearly with depletion), resistance=0.08 (little human agency over bird population dynamics). However, the base_properties (\u03b5=0.68, suppression=0.72) measure a different constraint: the institutional extraction system, not the ecological limit. This reveals constraint decomposition: the ecological limit is a mountain; the institutional rent-extraction system overlaid on the ecology is a snare."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ecological_depletion_timing",
+      "question": "At what guano extraction rate do ecological carrying capacities collapse, and did the Chincha reach that threshold before Spanish conquest?",
+      "resolution_mechanism": "Stratigraphic analysis of guano deposits; paleornithological evidence of bird population density 800-1400 AD; nutrient flux reconstruction; comparison with known collapse events in other island guano systems (Chincha, Humboldt Current).",
+      "impact": "If collapse imminent before 1532: institutional snare is operating near ecological ceiling; institutional extraction accelerates pre-existing degradation. If collapse would persist beyond 1532: Spanish intensification causes the collapse. Alters mandatrophy classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Chincha extraction approached ecological collapse before conquest"
+    },
+    {
+      "id": "labor_coercion_mechanism",
+      "question": "Was guano harvesting labor extracted through military coercion (snare), voluntary specialization enabled by guano wealth (rope), or mixed tributary obligation (tangled_rope)?",
+      "resolution_mechanism": "Archaeological evidence of labor organization, settlement patterns, skeletal stress markers; ethnohistoric accounts of pre-conquest vs colonial labor systems; comparative analysis with other Andean tribute systems.",
+      "impact": "If military coercion: snare classification from pre-conquest perspective. If voluntary: rope classification shifts toward beneficiary view. If tributary obligation: tangled_rope is primary type. Determines whether suppression (0.72) represents coercive constraint or institutional coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism of labor obligation in guano harvesting"
+    },
+    {
+      "id": "wealth_distribution_span",
+      "question": "What fraction of Chincha population directly benefited from guano wealth, and did that fraction narrow or widen over the 800-1400 AD interval?",
+      "resolution_mechanism": "Archaeological distribution of prestige goods, housing types, burial assemblages; settlement hierarchy; faunal assemblage indicators of dietary access to marine resources.",
+      "impact": "If narrow beneficiary class + widening extraction: snare deepens over time, theater_ratio declines as performance necessity increases. If broad-based benefit: tangled_rope classification strengthens; constraint operates more as coordination mechanism than extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Distribution of guano wealth benefits across Chincha population"
+    },
+    {
+      "id": "alternative_wealth_pathways",
+      "question": "Were there viable alternative pathways to regional power and prosperity that did not depend on guano extraction, and were these pathways suppressed or abandoned?",
+      "resolution_mechanism": "Comparative regional development analysis; archaeological evidence of other subsistence/trade specializations; ethnographic parallels from other Andean groups. Did Chincha pursue alternative economic strategies that guano wealth rendered unnecessary?",
+      "impact": "If alternatives were viable but suppressed: suppression metric (0.72) is accurately measuring institutional coercion. If alternatives were genuinely nonexistent: suppression reflects structural scarcity (higher natural law component). Determines whether constraint is contingent or inherent.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Availability of alternative wealth pathways to guano extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 600,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 600,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 600
+  },
+  "commentary": {
+    "narrative_context": "The Chincha Islands guano deposits represent a rare ecological abundance that enabled a non-imperial culture to accumulate significant regional wealth and power without agricultural expansion or conquest-based resource extraction. From approximately 800 AD to 1400 AD, the Chincha people leveraged massive bird populations (cormorants, boobies, pelicans) that produce nutrient-rich guano suitable for trade and prestige-good manufacture. This constraint story measures how institutional extraction overlaid onto an ecological abundance creates a snare: the guano itself is a coordination resource, but the mechanisms for wealth distribution and labor organization progressively concentrates benefits while expanding coercive labor demands. The transition from early Chincha (perhaps rope-like coordination) to late Chincha (snare-like extraction with piton characteristics) represents institutional entrenchment and ecological degradation. Spanish conquest in 1532 intensified the extraction mechanism, but the underlying structural dynamics \u2014 finite ecological productivity, institutional wealth concentration, labor suppression \u2014 were already operative. This constraint is a diagnostic case for understanding how ecological abundance can be weaponized into institutional extraction.",
+    "key_agents": [
+      "Guano Harvesting Laborers: Primary victims (powerless/trapped) \u2014 bear hazardous labor, coerced extraction, no alternative livelihood. d\u22480.95.",
+      "Chincha Commoners: Secondary victims/beneficiaries (moderate/constrained) \u2014 benefit from guano-driven prosperity but bear tribute and labor obligations. d\u22480.50.",
+      "Chincha Nobility: Primary beneficiary (institutional/arbitrage) \u2014 control guano wealth, organize trade networks, extract tribute. d\u22480.05.",
+      "Spanish Colonial Administration: Secondary beneficiary/extractor (organized/constrained) \u2014 monopolize guano trade after 1532, intensify labor systems. d\u22480.40.",
+      "Ecological System: Passive victim (piton perspective) \u2014 bird populations provide productivity, but institutional extraction approaches carrying capacity limits. No exit option.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional extraction as inherent ecological scarcity."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The Chincha nobility and later colonial powers extract significant wealth from guano labor relative to the material inputs (labor, transportation). Measurement shows progression from 0.35 (early Chincha, mixed coordination-extraction) to 0.68 (late Chincha and colonial, pure extraction). The trajectory reflects institutional entrenchment: early access to guano wealth enables luxuries and prestige goods, incentivizing specialization; specialization concentrates knowledge and control; concentration enables monopoly rents. By 1400 AD, the constraint operates as a pure snare: labor-intensive harvest, wealth concentration in nobility, no exit for commoners. Suppression (0.72): High. Multiple suppression mechanisms: (1) Geographic isolation of Chincha Islands limits alternative income sources. (2) Ecological specialization in guano harvesting makes alternative livelihoods costly. (3) Institutional monopoly on guano trade prevents independent merchants. (4) Labor obligations (tributary or coercive) prevent exit. (5) Knowledge barriers \u2014 guano harvesting requires specialized techniques. Theater ratio (0.35): Moderate-low. The constraint is functionally extractive, not primarily performative. Guano is genuinely valuable; labor is genuinely necessary; wealth concentration is a genuine institutional outcome. The relatively low theater suggests a snare with material extraction, not a piton with theatrical maintenance.",
+    "perspectival_gap": "The Chincha nobility see rope or arbitrage-based rope: organizing guano trade solves a coordination problem (getting guano to markets, establishing prestige hierarchies). The commoners see tangled rope: they benefit from guano-driven abundance but pay labor tributes. The harvesters see snare: dangerous work with no exit. The ecological system (piton perspective) sees degradation masquerading as function \u2014 the system appears productive but carrying capacity silently declines. The analytical observer (mountain perspective) risks naturalizing the institutional snare as an immutable ecological limit \u2014 'guano is scarce, so extraction is necessary' \u2014 when actually the scarcity is constructed by institutional monopoly, not ecology. Decomposition: The ecological limit (mountain: bird productivity is finite) is separate from the institutional extraction system (snare: labor is coercively organized). The perspectival gap reveals this decomposition.",
+    "directionality_logic": "Guano Harvesting Laborers: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. No alternative income, no mobility, coerced labor. \u03c7 = 0.68 \u00d7 1.42 \u00d7 0.8 (local scope) \u2248 0.77. Snare classification confirmed. Chincha Commoners: Victim + constrained, but also benefit from guano-driven abundance. Beneficiary + constrained is ambiguous \u2192 d\u22480.50, f(d)\u22480.65. \u03c7 = 0.68 \u00d7 0.65 \u00d7 0.9 (regional scope) \u2248 0.40. Mixed extraction justifies tangled_rope. Chincha Nobility: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. \u03c7 = 0.68 \u00d7 (-0.12) \u00d7 0.9 \u2248 -0.07. Net beneficiary, rope classification. Spanish Colonial Administration: Organized + constrained (by logistics, disease, indigenous resistance). d\u22480.40, f(d)\u22480.40. \u03c7 = 0.68 \u00d7 0.40 \u00d7 1.2 (global scope) \u2248 0.33. Moderate extraction; maintains snare classification but with organized resistance.",
+    "mandatrophy_analysis": "MANDATROPHY NOT RESOLVED (\u03b5=0.68 < 0.70, no mandate for resolution). However, the constraint exhibits potential mandatrophy: early Chincha (800-1000 AD) may have experienced rope-like coordination with guano wealth enabling broad prosperity. Late Chincha (1200-1400 AD) exhibits snare-like extraction with wealth concentration and labor coercion. The question is whether institutional extraction emerged gradually (degradation from rope to snare) or was always present (snare misidentified as rope early on). The measurement trajectory (theater_ratio=0.28\u21920.35, extractiveness=0.35\u21920.68) suggests degradation: as guano wealth concentrates, institutional mechanisms shift from coordination to extraction. This is not a false identification (snare wrongly labeled rope) but a genuine institutional shift. The theater_ratio remains low (functional extraction) throughout, suggesting the snare is not performative \u2014 the extracted wealth is real. Mandatrophy would arise if the analytical observer tried to naturalize this institutional extraction as a mountain (ecological necessity), claiming finite guano supply forces coercive labor organization. This is false: the Chincha could have organized guano harvesting through cooperative mechanisms or more distributed wealth. The institutional snare is contingent, not inherent."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "andean_tributary_system",
+      "colonial_encomienda_labor",
+      "nutrient_depletion_humboldt_current"
+    ],
+    "dual_formulation_note": "Guano-based wealth extraction decomposes into two structurally distinct constraints: (1) ECOLOGICAL LIMIT (mountain): finite bird productivity per year sets absolute ceiling on guano availability. \u03b5\u22480.05, emerges_naturally=true. (2) INSTITUTIONAL EXTRACTION (snare): labor organization, wealth concentration, and monopoly control over guano trade create coercive rent extraction. \u03b5\u22480.68, requires_active_enforcement=true. The present story addresses the institutional constraint. The ecological limit is upstream but distinct \u2014 it is a mountain that enabled but did not necessitate the snare."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    }
+  ]
+}

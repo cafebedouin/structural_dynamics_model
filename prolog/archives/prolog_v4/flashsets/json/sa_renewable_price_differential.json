@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "sa_renewable_price_differential",
+    "version": "0.1",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "SA Renewable Price Arbitrage Proxy",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "renewable_energy_generators_sa",
+      "energy_storage_operators_sa"
+    ],
+    "victims": [
+      "consumers_nsw",
+      "fossil_fuel_generators_nsw"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Consumers in NSW",
+      "comment": "NSW consumers are trapped due to lack of alternative energy sources and infrastructure limitations. The price differential acts as a snare, extracting wealth from them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Fossil Fuel Generators in NSW",
+      "comment": "Fossil fuel generators in NSW are constrained by the renewable energy penetration in SA. They can't fully exit the market, but they still extract some value from existing infrastructure and contracts. Their power is eroding over time but isn't entirely gone yet."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Generators in SA",
+      "comment": "Renewable energy generators in SA benefit from the high renewable penetration, driving down wholesale prices and potentially creating arbitrage opportunities. They can sell excess energy to other regions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Energy Storage Operators in SA",
+      "comment": "Energy storage operators (batteries, pumped hydro) benefit by buying energy when prices are low and selling back when prices are high. This exploits the price differential and stabilizes the grid but relies on active enforcement of grid regulations and contractual commitments from energy users."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the price differential as a tangled rope, with some coordination benefits (efficient energy allocation) and some extraction (wealth transfer from NSW to SA)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interconnector_capacity",
+      "question": "What is the maximum capacity of the interconnector between SA and NSW?",
+      "resolution_mechanism": "Engineering studies, historical data on interconnector flows",
+      "impact": "Higher capacity reduces price differential, shifting classification towards rope. Lower capacity exacerbates price differential, shifting classification towards snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Maximum capacity of the SA-NSW interconnector"
+    },
+    {
+      "id": "regulatory_intervention",
+      "question": "Will regulators intervene to reduce the price differential?",
+      "resolution_mechanism": "Policy analysis, monitoring regulatory announcements",
+      "impact": "Regulatory intervention reduces price differential, shifting classification towards rope or scaffold. Lack of intervention allows price differential to persist, shifting classification towards snare.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Likelihood of regulatory intervention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The significant price differential between South Australia (SA), with its high renewable energy penetration, and New South Wales (NSW) creates an arbitrage opportunity. SA's low wholesale prices ($37/MWh) contrast sharply with NSW's higher prices ($75/MWh). This differential acts as a proxy for underlying structural issues and creates both opportunities and challenges.",
+    "key_agents": [
+      "Renewable Energy Generators in SA: Primary beneficiary (institutional/arbitrage)",
+      "Energy Storage Operators in SA: Secondary beneficiary (powerful/mobile)",
+      "Consumers in NSW: Primary victim (powerless/trapped)",
+      "Fossil Fuel Generators in NSW: Secondary victim (moderate/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.5): Significant wealth transfer from NSW consumers to SA energy producers. Suppression (0.6): NSW consumers have limited alternatives. Theater ratio (0.3): Limited performative activity; mostly real economic extraction.",
+    "perspectival_gap": "NSW consumers experience the differential as a snare, while SA generators see it as a coordination mechanism. Fossil fuel generators in NSW are losing ground but remain operational extracting value. The analytical observer sees a tangled rope.",
+    "directionality_logic": "Beneficiaries (SA renewables and storage) gain from the differential. Victims (NSW consumers and fossil fuel generators) bear the costs. This creates a structural asymmetry."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

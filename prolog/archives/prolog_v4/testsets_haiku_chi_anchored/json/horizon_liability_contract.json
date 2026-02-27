@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "horizon_liability_contract",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "horizon"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Post Office Horizon Contractual Liability",
+    "topic_domain": "economic/technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "post_office_corporation",
+      "fujitsu_systems"
+    ],
+    "victims": [
+      "sub_postmasters",
+      "postal_service_integrity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Sub-Postmaster",
+      "comment": "PERSPECTIVE 1: SUB-POSTMASTER (SNARE) \u2014 Contractually required to use Horizon system, personally liable for shortfalls even when system fails. No exit: breach of contract triggers license revocation, loss of livelihood, and legal action. Forced to either falsify accounts or pay deficits from personal funds. d\u22480.98, f(d)\u22481.48, \u03c3=1.0 \u2192 \u03c7\u22481.15. Maximum extraction under coercion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Postal Service Institutional Integrity",
+      "comment": "PERSPECTIVE 2: POSTAL SERVICE INTEGRITY (SNARE) \u2014 The constraint undermines the epistemic foundation of postal accounting. False liability claims contaminate the institution's financial records and breach public trust. No exit option: the institution cannot opt out of its accounting obligations or audit liabilities. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22481.11. Extraction from institutional legitimacy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Post Office Corporation",
+      "comment": "PERSPECTIVE 3: POST OFFICE CORPORATION (ROPE) \u2014 Contracts create apparent coordination: system accountability is shifted to sub-postmasters, reducing corporate liability exposure. Exit: Post Office can breach contracts, amend terms, or shift vendor. d\u22480.08, f(d)\u2248-0.18, \u03c3=1.0 \u2192 \u03c7\u2248-0.14. Net beneficiary; experiences constraint as liability mitigation mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Fujitsu Systems",
+      "comment": "PERSPECTIVE 4: FUJITSU SYSTEMS (ROPE) \u2014 Contract terms protect vendor from accountability for system defects. Shortfalls are attributed to user error (sub-postmaster), not software failure. Exit: vendor can refuse to service or maintain system. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.09. Net beneficiary; experiences constraint as liability shield."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Sub-Postmaster Coalition / Parliamentary Inquiry",
+      "comment": "PERSPECTIVE 5: SUB-POSTMASTER COALITION / PARLIAMENTARY INQUIRY (TANGLED ROPE) \u2014 Organized agents have identified the structural extraction and initiated formal remediation (public inquiry, convictions overturned, compensation). The constraint has a genuine coordination function (system standardization) but masked by extractive liability assignment. Constrained exit: reform requires legislative and institutional change, not individual contractor choice. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.37. Moderate effective extraction because organization and transparency have begun reducing suppression."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer / Structural Transparency",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational perspective, this constraint exhibits the canonical Snare pattern: base extraction (0.78) \u00d7 suppression (0.82) creates a high-coercion, low-exit-option mechanism. The theater ratio (0.68) reflects contractual legitimacy theater \u2014 the constraint is framed as normal commercial risk allocation, obscuring its extractive structure. d\u22480.70, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.86. The constraint operates through informational and contractual asymmetry, not through physical force, but the coercive mechanism is structurally identical: trapped exit, liability transfer, suppression of alternatives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "system_defect_attribution",
+      "question": "How should shortfalls be attributed between software defect and user error when the system's audit trail is compromised or manipulated?",
+      "resolution_mechanism": "Forensic analysis of system logs, vendor source code review, comparison with independent audits, post-facto testing of historical transactions",
+      "impact": "If primarily software defect: snare classification is correct; liability transfer is unjustified extraction. If mixed: tangled rope partially defensible as risk allocation. If primarily user error: constraint appears as legitimate coordination mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of shortfalls between software defect and user error"
+    },
+    {
+      "id": "contractual_necessity_justification",
+      "question": "Was the personal liability requirement a necessary component of the coordination mechanism, or could standardized Horizon deployment have been achieved with vendor liability or pooled institutional risk?",
+      "resolution_mechanism": "Counterfactual analysis: comparative study of international postal IT systems (Canada Post, Australia Post, Deutsche Post, Royal Mail), cost-benefit analysis of alternative liability models, vendor negotiation history",
+      "impact": "If necessary: constraint is defensive coordination (Rope/Scaffold). If unnecessary: constraint is pure extraction disguised as coordination (Snare). This determines mandatrophy resolution rationale.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether personal liability was necessary for system coordination"
+    },
+    {
+      "id": "suppression_mechanism_durability",
+      "question": "Why did the suppression mechanism (contractor silence, institutional denial, audit obstruction) persist for 20+ years despite growing discrepancies and whistleblower reports?",
+      "resolution_mechanism": "Institutional analysis: Post Office governance structure, incentive alignment between management and branch operators, review of regulatory oversight failures, media silence period analysis",
+      "impact": "If suppression was structural (auditing failures, contractual liability prevents collective action): snare classification confirmed. If suppression was incidental (management choice): constraint might be reformable as rope without fundamental restructuring.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Why suppression mechanisms persisted despite evidence of system failure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1999,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2010,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1999,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2010,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 1999,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "The Post Office Horizon system scandal represents one of the most severe contractual extraction mechanisms in modern UK institutional history. From 1999 onwards, the Post Office required sub-postmasters \u2014 independent contractors operating ~11,500 local branches \u2014 to use the faulty Horizon IT system and personally indemnify the corporation for any financial shortfalls the system reported. When Horizon's accounting became unreliable (due to software defects, data corruption, and synchronization failures), sub-postmasters were held personally liable: they faced criminal prosecution, civil recovery actions, imprisonment, and loss of livelihood for shortfalls they did not create. The constraint operated through contractual obligation and suppressed alternatives: sub-postmasters could not opt for alternative systems, could not exit the contract without license revocation, and faced institutional denial of system defects from Post Office management and Fujitsu. The suppression mechanism held for over 20 years, with Post Office audits systematically misrepresenting Horizon reliability, whistleblowers ignored, and the institution defending itself against 555+ legal cases brought by victims. The constraint exhibits all hallmarks of a Snare: high extraction (forced personal liability for institutional failures), high suppression (contractual obligation, no alternatives, institutional denial), forced labor of the verification function (sub-postmasters had to debug and compensate for system failures at personal cost), and a clear asymmetry between beneficiary (Post Office Corporation and Fujitsu, protected from accountability) and victim (sub-postmasters, bearing full cost). The theater ratio reflects the contractual legitimacy framing: the constraint was presented as normal commercial risk allocation (contractors assume operational risk), obscuring its true function as systematic liability transfer from sophisticated institutions to atomized individuals.",
+    "key_agents": [
+      "Sub-Postmasters (UK): Primary victims (powerless/trapped) \u2014 555+ prosecuted; forced personal liability for system defects; no exit option without losing license and livelihood",
+      "Post Office Corporation: Primary beneficiary (institutional/arbitrage) \u2014 shifts accountability to contractors; protected from system liability; maintains branch network without capital investment in reliable systems",
+      "Fujitsu Systems: Secondary beneficiary (institutional/arbitrage) \u2014 contracted to build and maintain Horizon; protected from defect liability by user attribution; revenue from contracts continues despite system failures",
+      "Postal Service Institutional Integrity: Primary victim (powerless/trapped) \u2014 false liability claims corrupt financial audit trail; public trust undermined; institution compelled to defend unjust prosecutions",
+      "Sub-Postmaster Coalition (post-2009) / Public Inquiry (2020+): Organized agents (organized/constrained) \u2014 discovered suppression mechanism and extracted confessions; driving legislative reform and compensation; constrained by institutional inertia and legal complexity",
+      "Analytical Observer: Civilizational transparency view (analytical/analytical) \u2014 recognizes the canonical Snare structure: base extraction + suppression + no exit = coercive extraction masked by contractual legitimacy theater"
+    ],
+    "logic_rationale": "Extractiveness (0.78): Very high. The constraint directly transfers institutional liability to atomized contractors. Sub-postmasters faced: criminal prosecution for amounts they did not steal, civil recovery for accounting defects they did not create, license revocation threatening their livelihood, and personal bankruptcy. The extraction escalated over the interval as the system's unreliability accumulated and Post Office doubled down on enforcement (the early 2000s saw aggressive prosecutions despite growing technical evidence of Horizon defects). The 0.78 value reflects the magnitude of personal liability transfers \u2014 some sub-postmasters lost entire life savings and spent years imprisoned. Suppression (0.82): Very high. Multiple suppression mechanisms locked the constraint in place: (1) Contractual obligation \u2014 sub-postmasters could not refuse Horizon without license revocation; (2) Institutional denial \u2014 Post Office management, auditors, and executives systematically misrepresented system reliability; (3) Expertise asymmetry \u2014 sub-postmasters lacked technical expertise to diagnose Horizon defects; (4) Atomization \u2014 individual contractors could not collectively challenge the Post Office; (5) Legal capture \u2014 prosecution infrastructure was turned against victims (sub-postmasters prosecuted for crimes committed by the system). Theater ratio (0.68): Moderate-high. The constraint is legitimized through contractual theater: the arrangement is presented as standard commercial risk allocation (contractor assumes operational risk), which obscures its extractive function. Contracts appear neutral \u2014 both parties 'agreed' \u2014 but the asymmetry (Post Office is institutional monopoly; sub-postmasters are dependent contractors) means the agreement is not freely negotiated. The theater increased over the interval as the Post Office's litigation strategy became more aggressive despite mounting technical evidence of system failure.",
+    "perspectival_gap": "This constraint demonstrates extreme perspectival divergence. The sub-postmaster sees a Snare: trapped in a contract, forced to pay for system defects, facing criminal prosecution and imprisonment. The Post Office sees a Rope: the contract coordinates system standardization and allocates operational risk. Fujitsu sees a Rope: the contract protects vendor liability. The postal institution sees a Snare: its financial audit trail is corrupted by false liability claims, and its legitimacy is damaged by defending unjust prosecutions. The organized coalition sees a Tangled Rope: the constraint has a genuine coordination function (system standardization) but executed through extractive liability assignment that active enforcement has exposed and begun to remedy. The analytical observer sees a canonical Snare: the constraint is a textbook example of how contractual legitimacy theater masks coercive extraction. The gap between beneficiary (who experience coordination) and victim (who experience pure extraction) is absolute.",
+    "directionality_logic": "Sub-postmasters: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.48. Maximum extraction. They cannot exit the contract without losing license; they are forced to pay personal liability for system defects they did not create. The trapped exit combined with victim status produces the highest directionality. Post Office Corporation: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.18. Net beneficiary. The corporation can exit at any time (amend contracts, replace Horizon, settle claims), and it benefits from shifted liability. Fujitsu: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary. Vendor has exit options (refuse contracts, retire product, cease maintenance) and benefits from liability protection. Postal Service Integrity: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Trapped in institutional obligation to audit and defend the constraint; cannot exit without institutional dissolution. Sub-Postmaster Coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Constrained by legal and political complexity of reform, but organized agents have begun reducing suppression through institutional channels (inquiry, legislation, compensation schemes). Analytical Observer: d\u22480.70, f(d)\u22481.10. Neutral analytical stance; sees the constraint from outside the institutional dynamics.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint definitively resolves as a Snare. The mandatrophy question is: 'Does this constraint primarily coordinate an action (Rope/Tangled Rope) or primarily extract value (Snare/Piton)?' The evidence overwhelmingly establishes that the primary function is extraction disguised as coordination. The coordination function (system standardization) could have been achieved without personal liability transfer (vendors bear defect liability, pooled institutional risk, or third-party assurance). The choice of personal liability was an extractive mechanism, not a necessary coordination requirement. Evidence: (1) International comparables: other postal systems (Canada Post, Australia Post) deployed national IT systems without personal contractor liability; (2) Temporal analysis: extractiveness increased over the interval (0.45\u21920.78) despite system failures accumulating, indicating Post Office doubled down on extraction rather than fixing the coordination problem; (3) Suppression durability: the institution spent resources suppressing evidence of system defects (litigation, institutional denial) rather than resolving coordination problems (system repair, vendor accountability); (4) Asymmetry persistence: the beneficiary-victim gap remained absolute for 20+ years, with no renegotiation or burden-sharing despite accumulating evidence; (5) Organized opposition threshold: when victims achieved organizational power (coalition formation, public inquiry), the constraint was immediately exposed as unjust, indicating it had never achieved consensual legitimacy. The constraint is therefore a canonical Snare: base extraction (0.78), high suppression (0.82), effective extraction \u03c7\u22480.86, and sustained through coercion and institutional denial rather than through perceived legitimacy or mutual coordination benefit."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "contractor_liability_transfer_mechanisms",
+      "institutional_audit_capture"
+    ],
+    "dual_formulation_note": "The Horizon scandal decomposes into two structurally distinct constraints: (1) horizon_liability_contract (\u03b5=0.78, Snare) \u2014 the contractual mechanism of personal liability transfer; (2) post_office_institutional_denial (\u03b5=0.65, Tangled Rope) \u2014 the institutional suppression mechanism that sustained the snare by denying system defects. The second constraint is downstream of the first: institutional denial was necessary to sustain extraction once system unreliability became apparent. They are linked as network dependencies."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.9
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "germany_tennet_takeover",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tennet"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "German Government Stake in TenneT Germany",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "german_government",
+      "energy_security_state"
+    ],
+    "victims": [
+      "competing_bidders",
+      "grid_ratepayers",
+      "market_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Grid Ratepayer",
+      "comment": "PERSPECTIVE 1: GRID RATEPAYER (SNARE) \u2014 Trapped in the German electricity market with no exit from paying transmission fees. Government ownership legitimizes cost-shifting to ratepayers under national security rationale. Cannot exit or organize effective resistance. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Competing Bidders (Foreign Investors)",
+      "comment": "PERSPECTIVE 2: COMPETING BIDDERS (SNARE) \u2014 Foreign investment consortia (including CalPERS, Ontario Teachers' Pension Plan) excluded from ownership of critical infrastructure through state pre-emption. Can exit by divesting but face reputational and legal barriers. Strategic extraction via exclusion. d\u22480.85, f(d)\u22481.20, \u03c3=1.1 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Industrial Energy Consumers",
+      "comment": "PERSPECTIVE 3: INDUSTRIAL ENERGY CONSUMERS (TANGLED ROPE) \u2014 Benefit from grid reliability and security of supply (coordination function) but constrained by transmission costs and government industrial policy. Government ownership coordinates grid investment but enables cost allocation asymmetries. d\u22480.62, f(d)\u22480.82, \u03c3=1.0 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "German Government / Federal Network Agency",
+      "comment": "PERSPECTIVE 4: GERMAN GOVERNMENT (ROPE) \u2014 Benefits from grid control, energy security coordination, and prevention of foreign ownership leveraging. Experiences the constraint as a coordination mechanism: owning TenneT enables synchronized renewable integration and decarbonization planning. d\u22480.12, f(d)\u22480.08, \u03c3=1.0 \u2192 \u03c7\u22480.03. Net institutional beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "EU Competition Authorities",
+      "comment": "PERSPECTIVE 5: EU COMPETITION AUTHORITIES (SCAFFOLD) \u2014 Treat government ownership as temporary coordination mechanism justified by energy transition urgency, with sunset logic contingent on completion of green infrastructure. Constrained by member state sovereignty but organized through Brussels rule-making. d\u22480.48, f(d)\u22480.62, \u03c3=1.1 \u2192 \u03c7\u22480.26. Theater ratio in EU compliance: 0.58 (significant but declining as rules clarify)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Liberal Ideology",
+      "comment": "PERSPECTIVE 6: MARKET LIBERAL IDEOLOGY (PITON) \u2014 Neoliberal orthodoxy that grid privatization maximizes efficiency persists as intellectual framework despite contradictory evidence (infrastructure underinvestment, profit-driven cost-cutting). Government ownership is theoretically anathema but practically necessary; the market narrative is maintained performatively while state control expands. theater_ratio=0.62 reflects the contradiction. d\u22480.08, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.01."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Thermodynamic View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational view, some degree of public control over energy infrastructure is immutable given thermodynamic/resource constraints: centralized grids require coordinated dispatch, and the coordination problem has inherent commons properties that market mechanisms cannot resolve without state enforcement. However, the structural data (\u03b5=0.38, suppression=0.48, theater=0.62) contradicts mountain classification \u2014 the engine will identify this as a false summit, revealing that 'infrastructure is natural monopoly' naturalizes what is contingent policy design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "energy_security_threshold",
+      "question": "What constitutes genuine energy security risk versus political justification for state ownership expansion?",
+      "resolution_mechanism": "Comparative analysis of grid vulnerability to foreign ownership vs. vulnerability to political directive capture; historical cases of foreign infrastructure ownership in EU (UK water companies, French energy); stress-test scenarios for coordinated foreign divestment.",
+      "impact": "If genuine security risk: government ownership is primarily coordinative (Rope from government perspective). If political justification: ownership is primarily extractive (Snare from bidder perspective). Classification gap indicates unresolved ambiguity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether energy security risk is genuine or politically inflated"
+    },
+    {
+      "id": "ratepayer_cost_incidence",
+      "question": "Will government ownership result in lower, equivalent, or higher transmission costs for end consumers compared to private ownership?",
+      "resolution_mechanism": "Cost modeling comparison: government investment cost of capital vs. private cost of capital; principal-agent analysis of ratepayer billing under state vs. private operator; international comparison (Denmark, France, Austria public ownership models).",
+      "impact": "If costs lower or equivalent: coordination narrative holds (Rope/Tangled Rope). If costs higher: extraction is confirmed (Snare from ratepayer perspective, Tangled Rope is correct classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether government ownership reduces or increases ratepayer costs"
+    },
+    {
+      "id": "sunset_exit_condition",
+      "question": "Does the government stake include a explicit or implicit sunset clause tied to renewable transition completion, or is it indefinite state control?",
+      "resolution_mechanism": "Examination of government acquisition agreement, legislative language, and public commitments; timeline assessment for 80% renewable grid operation; analysis of political feasibility of privatization after state build-up.",
+      "impact": "If sunset is real and credible: Scaffold classification holds with genuine coordination function. If indefinite: constraint is Tangled Rope with no exit path (victims trapped), bordering on Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether government stake has a real or indefinite sunset clause"
+    },
+    {
+      "id": "competitive_bidder_alternatives",
+      "question": "Could the foreign bidders have operated TenneT as effectively or more effectively than the government, or does state ownership genuinely improve grid coordination?",
+      "resolution_mechanism": "Comparative governance analysis: operational metrics (uptime, cost efficiency, investment speed) for TenneT under previous operator vs. peers; investor proposals vs. government plan; interviews with operators in comparable markets (UK, France, Netherlands).",
+      "impact": "If bidders were competent: exclusion is pure extraction (Snare). If government superior: exclusion serves coordination (Rope/Tangled Rope). Gap between rhetoric and governance indicates mandatrophy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state ownership operationally improves on private alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The German government's acquisition of a controlling stake in TenneT Germany represents a critical case study in the mandatrophy between coordination and extraction in energy infrastructure. TenneT Germany operates approximately 40% of Germany's high-voltage electricity transmission network and is essential to managing the renewable energy transition by coordinating distributed wind and solar generation with grid demand. The government justified the acquisition primarily on energy security grounds \u2014 preventing foreign (particularly Dutch, given TenneT's parent company Kema Holding) or other external actors from controlling critical infrastructure during a period of energy vulnerability. However, the transaction exhibits simultaneous coordination and extraction properties: the government claims to solve the collective action problem of grid reliability during the energy transition (coordination) while simultaneously excluding competing bidders and enabling cost-shifting to ratepayers through political mechanisms rather than market mechanisms (extraction). The constraint's theater ratio (0.62) reflects the gap between the official security narrative and the actual mechanism: much of the 'energy security' argument is performed through rhetoric rather than demonstrated through operational improvements, while ratepayer costs rise under the banner of national security.",
+    "key_agents": [
+      "German Government / Federal Ministry for Economics: Primary beneficiary (institutional/arbitrage) \u2014 gains strategic control over grid, prevents foreign ownership, coordinates renewable integration, extracts via ratepayer cost-shifting",
+      "Grid Ratepayers (household and small business consumers): Primary victim (powerless/trapped) \u2014 bear transmission costs under energy security rationale with no exit option; costs may rise due to government investment financing",
+      "Competing Bidders (foreign pension funds, Canadian, Norwegian, Australian infrastructure investors): Secondary victim (organized/constrained) \u2014 excluded from infrastructure ownership through state pre-emption; face sunk costs and reputational damage; can exit but face barriers",
+      "Industrial Energy Consumers: Mixed actor (moderate/constrained) \u2014 benefit from coordinated grid planning and renewable integration; constrained by transmission costs and government industrial policy prioritization",
+      "EU Competition Authorities: Mediating actor (organized/constrained) \u2014 treat state ownership as temporary measure justified by energy transition; constrained by member state sovereignty but enforce competition rules",
+      "Private Grid Operator Precedent: Historical actor \u2014 previous private operation (though constrained by regulation) provides counterfactual for comparison; performance metrics enable assessment of whether state ownership improves coordination or merely redistributes extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The government acquisition extracts through multiple mechanisms: (1) foreign bidder exclusion via state pre-emption (strategic rent); (2) ratepayer cost-shifting \u2014 government ownership enables political mechanisms to raise transmission fees justified by infrastructure security (0.22 \u2192 0.38 over interval); (3) industrial favoritism through differential grid access policies. However, extractiveness is not high (not >0.46) because the government genuinely coordinates renewable integration, which is a legitimate public good that would require significant state involvement regardless. The extraction is real but layered atop genuine coordination. Suppression (0.48): Moderate. Significant barriers prevent market alternatives: foreign ownership is legislatively prohibited; ratepayers have no exit from the grid; industrial consumers have limited negotiating power. However, suppression is not total \u2014 German regulatory framework remains relatively transparent, EU competition oversight exists, and public discourse is active. Theater ratio (0.62): Moderate-high. The 'energy security' framing performs much of the justification work without demonstrated operational improvement. Previous private operator performance was acceptable; government promises of superior coordination are aspirational rather than proven. However, theater is not very high (not >0.70) because the grid coordination problem is genuinely complex and some performative elements (security certifications, resilience planning) have real substance.",
+    "perspectival_gap": "This constraint exhibits sharp perspectival gaps reflecting the fundamental tension between state control justified as coordination versus state control that enables extraction. The grid ratepayer sees pure extraction (Snare) \u2014 they are trapped in the payment system with no market exit and face costs rising under security pretexts. The competing bidders see strategic extraction (Snare) \u2014 they are deliberately excluded through sovereign power, not market competition. The German government sees pure coordination (Rope) \u2014 managing renewable integration and grid stability are genuine public goods that benefit all parties including ratepayers. Industrial consumers see hybrid (Tangled Rope) \u2014 they benefit from grid coordination but are constrained by cost allocation and prioritization policies. The EU observer sees a temporary scaffold \u2014 state ownership is justified by energy transition urgency with assumed sunset. The market ideology observer sees a degraded piton \u2014 neoliberal orthodoxy persists in rhetoric while state control expands. The civilizational observer risks seeing a natural law (Mountain) \u2014 public control over energy infrastructure is immutable \u2014 but the structural data reveals this as a false summit: the coordination actually required is less total control than political control enables.",
+    "directionality_logic": "German government: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.08. Net institutional beneficiary; has capacity to exit (could sell stake) but chooses strategic control. Low directionality because beneficiary status is clear and exit is available to the institution. Grid ratepayers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction directionality; trapped in payment system with no feasible exit; cannot organize effective resistance to cost increases justified by security. Competing bidders: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.20. High extraction directionality; excluded by sovereign action; can exit by divesting but face transaction costs and reputational barriers. Industrial consumers: Mixed (beneficiary from coordination + victim from cost allocation) + constrained \u2192 d\u22480.62, f(d)\u22480.82. Moderate extraction; benefit from grid coordination but constrained by political cost allocation. EU authorities: Neutral observer with organized power + constrained exit \u2192 d\u22480.48, f(d)\u22480.62. Moderate directionality reflecting their mediating role \u2014 not primary beneficiary or victim, but constrained by sovereignty principles.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The tangled_rope classification resolves the tension by acknowledging that BOTH coordination and extraction are genuine structural features. The government's claim is partially true: renewable grid coordination does require integrated planning and investment that a fragmented market cannot provide. The extraction is also true: ratepayers bear costs through political mechanisms that offer no market exit or feedback, and competing bidders are deliberately excluded through sovereign power. The mandatrophy emerges from treating this as a binary choice (is it coordination or extraction?) when the structure exhibits both simultaneously with different distributions across agents. The grid ratepayer perspective (Snare) shows the extraction most clearly. The government perspective (Rope) shows the coordination most clearly. Neither is false. The tangled_rope classification allows both to be true: there is a genuine coordination function (renewable integration, grid stability) AND there is genuine asymmetric extraction (ratepayer cost-shifting, bidder exclusion). The theater ratio (0.62) reveals where the mandatrophy is performed most heavily: in the 'energy security' rhetoric that justifies extraction as necessity. The omegas \u2014 particularly the ratepayer cost incidence and competitive bidder alternatives \u2014 are the data points that would resolve whether the coordination genuinely requires this level of extraction or whether extraction is concealed within coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_energy_security_policy",
+      "renewable_transition_grid_coordination",
+      "foreign_critical_infrastructure_acquisition"
+    ],
+    "dual_formulation_note": "German TenneT takeover decomposes into three structural constraints: (1) the technical grid coordination problem (renewable integration) \u2014 primarily Rope, low \u03b5; (2) the strategic infrastructure exclusion mechanism (preventing foreign ownership) \u2014 primarily Snare, moderate \u03b5; (3) the ratepayer cost allocation under security justification \u2014 primarily Tangled Rope, moderate \u03b5. This story treats the aggregate as tangled_rope (\u03b5=0.38); sibling stories at higher technical resolution could decompose coordination and extraction components separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

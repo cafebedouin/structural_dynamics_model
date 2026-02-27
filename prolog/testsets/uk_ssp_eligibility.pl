@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: uk_ssp_eligibility
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-23
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_uk_ssp_eligibility, []).
@@ -40,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -56,19 +58,34 @@
  *   domain: economic/political
  *
  * SUMMARY:
- *   The UK's Statutory Sick Pay (SSP) system has eligibility criteria,
- *   primarily a Lower Earnings Limit (LEL), that excludes a significant
- *   portion of the low-wage, part-time, and gig economy workforce. For those
- *   who do qualify, the payment rate is too low to live on, forcing workers
- *   to choose between their health and their income. This constraint shifts
- *   the financial burden of sickness from employers onto the most vulnerable
- *   workers and creates negative public health externalities.
+ *   The UK's Statutory Sick Pay (SSP) system establishes a minimum income
+ *   replacement for employees unable to work due to illness. However,
+ *   eligibility is conditioned on earning above the Lower Earnings Limit
+ *   (LEL), currently £120 per week (2024). This threshold excludes an
+ *   estimated 1.5–2 million low-wage, part-time, and gig economy workers from
+ *   statutory protection. The constraint exhibits structural characteristics
+ *   of a snare: it provides a legitimate coordination function for workers
+ *   above the LEL (reducing moral hazard, stabilizing sickness absence
+ *   patterns) while simultaneously extracting from those below it through
+ *   enforced deprivation. The tension manifests across perspectives: workers
+ *   below the LEL experience pure extraction with no exit; salaried employers
+ *   above the threshold see coordination; the Treasury experiences it as
+ *   fiscal arbitrage; unions see mixed extraction and coordination; and the
+ *   historical framework appears as institutional inertia (piton). The
+ *   analytical observer, comparing UK SSP to equivalent systems in other OECD
+ *   nations with lower thresholds or universal coverage, identifies the LEL
+ *   as a contingent policy choice that naturalizes extraction as
+ *   'affordability' when alternative designs are feasible.
  *
- * KEY AGENTS (by structural relationship):
- *   - Low-income and gig economy workers: Primary target (powerless/trapped) — bears extraction by being denied sick pay.
- *   - Employers of low-wage labor: Primary beneficiary (institutional/arbitrage) — benefits from reduced labor costs and externalizing risk.
- *   - The UK Government: Secondary actor (institutional/constrained) — experiences a mix of costs (public health) and benefits (lower direct payouts).
- *   - Public health analysts: Analytical observer — sees the full structure of cost-shifting and systemic risk.
+ * KEY AGENTS:
+ *   - Low-wage workers (below LEL): Primary victims (powerless/trapped) — earn too little to qualify; bear full cost of illness through lost income
+ *   - Part-time workers: Primary victims (powerless/trapped) — multiple part-time jobs may sum above LEL individually but are counted separately; eligibility fragmented across employers
+ *   - Gig economy workers (self-employed/zero-hours): Primary victims (powerless/trapped) — technically self-employed or contractor status; fall outside employee definition; no SSP even if earning below poverty threshold
+ *   - Salaried employers (above LEL threshold): Primary beneficiary (institutional/arbitrage) — SSP enables workforce stability at lower total cost; coordination mechanism benefits this group
+ *   - Treasury / Department for Work and Pensions: Secondary beneficiary (institutional/arbitrage) — SSP design transfers sickness-related cost from state to low-wage workers; achieves fiscal discipline
+ *   - Trade unions / worker advocacy: Organized actor (organized/constrained) — partially protect members above LEL; constrained from reforming system unilaterally; see mixed extraction and coordination
+ *   - Public health infrastructure: Affected by constraint (institutional/constrained) — excluded workers present risk of presenteeism (working while sick) or informal unpaid absence; contagion cost borne by NHS
+ *   - Analytical observer: Civilizational context (analytical/analytical) — recognizes LEL as contingent policy, not inevitable fiscal necessity
  */
 
 /* ==========================================================================
@@ -76,92 +93,80 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(uk_ssp_eligibility, 0.62).
-domain_priors:suppression_score(uk_ssp_eligibility, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(uk_ssp_eligibility, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(uk_ssp_eligibility, 0.52).
+domain_priors:suppression_score(uk_ssp_eligibility, 0.68).
+domain_priors:theater_ratio(uk_ssp_eligibility, 0.45).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(uk_ssp_eligibility, extractiveness, 0.62).
-narrative_ontology:constraint_metric(uk_ssp_eligibility, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(uk_ssp_eligibility, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(uk_ssp_eligibility, extractiveness, 0.52).
+narrative_ontology:constraint_metric(uk_ssp_eligibility, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(uk_ssp_eligibility, theater_ratio, 0.45).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(uk_ssp_eligibility, snare).
+narrative_ontology:human_readable(uk_ssp_eligibility, "UK Statutory Sick Pay (SSP) Eligibility and Rate").
+narrative_ontology:topic_domain(uk_ssp_eligibility, "economic/political").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(uk_ssp_eligibility). % Required for Tangled Rope
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(uk_ssp_eligibility, employers_of_low_wage_labor).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(uk_ssp_eligibility, low_income_and_gig_economy_workers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
-%   Snare:        victim required; beneficiary optional -> MET
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(uk_ssp_eligibility, employers_salaried_bracket).
+narrative_ontology:constraint_beneficiary(uk_ssp_eligibility, treasury_exchequer).
+narrative_ontology:constraint_victim(uk_ssp_eligibility, low_wage_workers).
+narrative_ontology:constraint_victim(uk_ssp_eligibility, part_time_workers).
+narrative_ontology:constraint_victim(uk_ssp_eligibility, gig_economy_workers).
+narrative_ontology:constraint_victim(uk_ssp_eligibility, zero_hours_contract_workers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%   χ = 0.62 * 1.42 * 1.0 (national scope) = 0.88
+% PERSPECTIVE 1: LOW-WAGE WORKER BELOW LEL (SNARE) — Worker earning below the Lower Earnings Limit (£120/week threshold as of 2024) is structurally excluded from SSP eligibility. Cannot exit through wage negotiation without leaving workforce entirely. Bears full cost of illness: lost income with no statutory replacement. Maximum experienced extraction — no alternatives, no coordination benefit, pure coercion through deprivation.
 constraint_indexing:constraint_classification(uk_ssp_eligibility, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-%   χ = 0.62 * -0.12 * 1.0 (national scope) = -0.07
+% PERSPECTIVE 2: GIG ECONOMY WORKER (SNARE) — Self-employed or zero-hours contractors fall below or barely above LEL; even if technically eligible, the administrative burden of proving continuous engagement exceeds the SSP value. Exit options are zero: switching to salaried employment is impossible for many sectors (e.g., food delivery, rideshare). Experiences pure extraction — the system collects tax revenue from gig work but provides no social insurance coverage in return.
+constraint_indexing:constraint_classification(uk_ssp_eligibility, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: SALARIED EMPLOYER (ROPE) — For employees above the LEL, SSP is a coordination mechanism: it reduces moral hazard in sickness absence and prevents wage collapse during illness, stabilizing workforce productivity. The employer benefits from the constraint's predictability (statutory minimum prevents wage-cutting races). Low suppression from this agent's view — they experience SSP as enabling, not coercive. Net beneficiary through arbitrage (can retain workers at lower total cost).
+constraint_indexing:constraint_classification(uk_ssp_eligibility, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: TRADE UNION / WORKER ADVOCACY (TANGLED ROPE) — Organized labor sees the LEL as both a coordination achievement (SSP exists; it establishes principle of state-backed sick pay) and an extraction mechanism (LEL excludes the most vulnerable members). Unions have constrained exit: they can campaign for LEL removal but cannot unilaterally restructure SSP. Experience mixed extraction and coordination benefit — the system partially protects their membership while abandoning the precariat. Active enforcement and asymmetric extraction both present.
+constraint_indexing:constraint_classification(uk_ssp_eligibility, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: TREASURY / PUBLIC HEALTH (ROPE) — SSP design coordinates public health (workers stay home when sick) with fiscal constraint (low SSP rates, eligibility exclusions reduce immediate cost to exchequer). From a public health lens, the LEL is a coordination failure (contagion risk for excluded workers). From a fiscal lens, it is a successful arbitrage (transfers sick leave cost to low-wage workers). Experience this as primarily coordination with some beneficial extraction.
 constraint_indexing:constraint_classification(uk_ssp_eligibility, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Default analytical context. Sees both coordination and extraction.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-%   χ = 0.62 * 1.15 * 1.2 (global scope) = 0.85
+% PERSPECTIVE 6: HISTORICAL FRAMEWORK (PITON) — The SSP system was designed in 1983 with the LEL threshold set to exclude high-churn, low-wage sectors (predicted cost reduction). Three decades on, the framework persists through institutional inertia despite economic changes: gig economy, zero-hours contracts, and wage stagnation have made the LEL exclusion far more widespread than originally intended. The theater ratio (0.45) reflects that the LEL is now largely performative — it achieves the original cost reduction goal, but the broader labor market has evolved around it. The constraint persists because formal reform is administratively and politically costly, not because it is functionally optimal.
+constraint_indexing:constraint_classification(uk_ssp_eligibility, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) — Comparative analysis across OECD nations reveals SSP design choices that are contingent, not inevitable. Germany, France, and Scandinavia provide higher replacement rates and lower (or no) earnings thresholds. The UK's LEL-based system is a policy choice, not a natural limit. From this analytical vantage, the constraint appears as a snare: structurally designed to transfer sickness-related income loss from employers and the state to low-wage workers. The exclusion is not a natural consequence of 'affording' sick pay; it is a deliberate allocation of fiscal burden downward.
 constraint_indexing:constraint_classification(uk_ssp_eligibility, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: INTER-INSTITUTIONAL - THE STATE (TANGLED ROPE)
-% The government is an institutional actor but is constrained by the system's
-% negative externalities (e.g., public health costs). It is both a beneficiary
-% (low direct payout) and a victim (systemic risk).
-% Its constrained exit options and dual role result in a higher d than the
-% employer beneficiary, leading to a Tangled Rope classification.
-constraint_indexing:constraint_classification(uk_ssp_eligibility, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -169,20 +174,18 @@ constraint_indexing:constraint_classification(uk_ssp_eligibility, rope,
 
 :- begin_tests(uk_ssp_eligibility_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    constraint_indexing:constraint_classification(uk_ssp_eligibility, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(uk_ssp_eligibility, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    format('~NTarget sees Snare, Beneficiary sees Rope. Gap confirmed.~n').
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(uk_ssp_eligibility, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(uk_ssp_eligibility, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(uk_ssp_eligibility, snare, context(agent_power(analytical), _, _, _)),
-    format('~nAnalytical view correctly identifies Tangled Rope structure.~n').
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(uk_ssp_eligibility, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_pass) :-
-    narrative_ontology:constraint_beneficiary(uk_ssp_eligibility, _),
-    narrative_ontology:constraint_victim(uk_ssp_eligibility, _),
-    domain_priors:requires_active_enforcement(uk_ssp_eligibility),
-    format('~nAll three structural requirements for Tangled Rope are present.~n').
+test(piton_threshold) :-
+    domain_priors:theater_ratio(uk_ssp_eligibility, TR),
+    TR >= 0.70.
 
 :- end_tests(uk_ssp_eligibility_tests).
 
@@ -192,46 +195,16 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.62): High. The system extracts value by compelling
- *     the unwell to work or forcing them to absorb the full financial shock of
- *     illness. This value is captured by employers as a direct reduction in
- *     labor costs.
- *   - Suppression (0.75): High. For a low-wage worker, the alternatives to
- *     complying (working while sick) are unemployment or destitution.
- *     There is little individual bargaining power and weak collective action.
- *   - The analytical classification is Tangled Rope because the system possesses
- *     both a genuine (though skewed) coordination function (standardizing sick
- *     pay rules for employers) and a massive asymmetric extraction function.
- *     This dual nature is the hallmark of a Tangled Rope.
+ *   Extractiveness (0.52): Moderate-high. The LEL excludes ~8% of the workforce below the threshold directly, with a secondary effect on part-time workers across multiple employment relationships. The extraction is structural and enforced through the statutory definition of 'employee' — those below the threshold receive zero SSP regardless of hours or contribution history. However, extraction is not at the maximum (0.70+) because some excluded workers have access to occupational sick pay schemes or employer discretion. The value reflects that the LEL is a hard filter producing clear inclusion/exclusion, not a graduated clawback that permits some mitigation. Suppression (0.68): High. Workers below the LEL have no formal exit options and no formal appeal mechanism. They cannot negotiate their way above the threshold without leaving employment or taking on additional risk. The administrative burden of proving continuous engagement (required for some gig workers to claim eligibility) is high relative to the SSP value, effectively suppressing claims even for the formally eligible. Public health infrastructure has constraints but not total suppression — they can (and do) provide care, but the cost is transferred. Theater ratio (0.45): Moderate. SSP framing emphasizes 'affordability' and 'protecting businesses from excessive burden,' but the primary mechanism is straightforward fiscal transfer: the LEL simply excludes those with lowest ability to weather income loss. The performative element is moderate because the eligibility rule is transparent and functional (it successfully excludes) — there is little theatrical pretense that the LEL represents a true test of ability to claim.
  *
  * PERSPECTIVAL GAP:
- *   - For a low-income worker (powerless, trapped), the system is a pure Snare.
- *     It offers no meaningful support and forces a choice between health and
- *     income. The calculated effective extraction (χ) is ~0.88, well into Snare territory.
- *   - For an employer of low-wage labor (institutional, arbitrage), the system
- *     is a Rope. It coordinates labor standards in a way that minimizes their costs
- *     and liabilities, effectively acting as a subsidy. The calculated χ is negative.
- *   - This gap is the core of the political conflict: one group's safety net is
- *     another group's cost-saving mechanism.
+ *   The perspectival gap between beneficiaries and victims is stark. The salaried employer above the LEL sees SSP as coordination — it enables predictable workforce management and prevents wage-cutting races for sick leave. The worker below the LEL sees the same system as pure extraction: they contribute the same payroll taxes but receive zero statutory replacement. The analytical observer identifies this gap as a choice: OECD comparators show that universal or lower-threshold SSP is feasible, meaning the LEL is not an inevitable trade-off between 'affordability' and coverage but a deliberate allocation of risk downward. The trade union perspective bridges these: unions partially defend the principle of statutory sick pay (coordination achievement) while acknowledging that the LEL implementation abandons the precariat (extraction mechanism). The piton perspective (historical framework) suggests the gap has grown over time: the LEL was set in 1983 expecting to exclude a small proportion of high-churn, low-wage workers; three decades of wage stagnation and gig economy growth have made it exclude a much larger cohort than originally intended, but the threshold persists through institutional inertia rather than deliberate design choice.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `employers_of_low_wage_labor`. They directly benefit from the LEL
- *     and low rate, which lowers their operational costs. This declaration drives
- *     the directionality `d` towards 0 for the institutional perspective.
- *   - Victim: `low_income_and_gig_economy_workers`. They are the direct targets of
- *     the extraction, bearing the costs of a system that fails to protect them.
- *     This declaration drives `d` towards 1.0 for the powerless/trapped perspective.
+ *   Each perspective's directionality (d) is determined by the agent's structural position relative to SSP. Workers below the LEL are full targets (d ≈ 0.95): they bear the full cost of the constraint (lost income during sickness) with no offsetting benefit. They are trapped (no exit option except leaving the workforce entirely). Their d value applies the sigmoid f(d) to maximum effect: high f(d) ≈ 1.42, which when scaled by scope (σ=1.0 for national) produces the high effective extraction χ experienced by this group. Salaried employers above the LEL are beneficiaries (d ≈ 0.10): they benefit from workforce stability at lower total cost and have arbitrage options (can move operations, renegotiate contracts). Their low d produces negative f(d) ≈ -0.01, reducing or inverting the extraction they experience. The Treasury is a beneficiary (d ≈ 0.05): it transfers sickness-related cost from public budget to individual workers, achieving fiscal goals. The analytical observer (d ≈ 0.73) is positioned as an external analyst: they see the full structure including the counterfactual (other OECD designs), which increases their perceived extraction relative to what is 'necessary.' The union (d ≈ 0.50) experiences symmetric extraction and coordination: they defend SSP principle but are unable to remove LEL, so they extract partial wins (higher rates for members above threshold, campaigns for reform) while allowing continued extraction of non-members.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two common errors. First, it does not
- *   mislabel the system as a pure Snare from an analytical perspective, because
- *   that would ignore its (beneficial to some) coordination function. Second, it
- *   avoids labeling it a pure (if flawed) Rope, because that would ignore the
- *   massive, asymmetric extraction. The Tangled Rope classification captures this
- *   essential duality: a system that provides coordination for one group by
- *   extracting heavily from another. The potential for coalition formation among
- *   the 'powerless' (e.g., via unions) could shift their power atom to 'organized',
- *   reducing their effective extraction and potentially changing the classification.
+ *   The mandatrophy analysis reveals that SSP is NOT a coordinate-only mechanism masquerading as extraction (or vice versa). The system exhibits genuine dual structure: FOR THOSE ABOVE THE LEL, SSP is authentic coordination (reduces moral hazard, enables workforce stability, produces mutual benefit). FOR THOSE BELOW THE LEL, SSP is pure extraction (enforced deprivation with no offsetting benefit). The snare classification at the victim level (powerless/trapped) is appropriate: workers below the LEL face pure extraction with no coordination function. The rope classification at the beneficiary level (institutional/arbitrage) is also appropriate: employers experience coordination. The tangled rope classification at the union level (organized/constrained) is appropriate: the union defends coordination principle (SSP exists, sets sickness-absence standard) while acknowledging extraction (LEL excludes members). The constraint does not fail mandatrophy because it displays real asymmetry: genuine coordination for in-group, genuine extraction for out-group. The piton classification at the historical level reflects that the original coordination function (prevent wage-cutting races among competing employers) has been partially replaced by fiscal inertia (LEL threshold persists because reform is administratively costly, not because it remains functionally optimal). The analytical observer's identification of the LEL as contingent (not inevitable) confirms that mandatrophy is resolved: the constraint is not a false mountain (natural law) — alternative policy designs exist in other nations, proving the LEL is a choice, not physics.
  */
 
 /* ==========================================================================
@@ -239,61 +212,84 @@ test(tangled_rope_structural_gates_pass) :-
    ========================================================================== */
 
 omega_variable(
-    omega_uk_ssp_eligibility,
-    'Is the SSP system''s failure to cover precarious workers a deliberate policy feature to maintain labor market flexibility, or a bug of legislative inertia?',
-    'Review of historical policy documents and minutes from lobbying meetings between business groups and government officials during periods of labor market reform.',
-    'If deliberate, it confirms the deeply embedded Tangled Rope structure. If inertia, it suggests the system has degraded from a former Rope into a Tangled Rope due to neglect, which might imply an easier path to reform.',
+    counterfactual_kel_removal,
+    'If the LEL were removed and SSP extended to all employees regardless of earnings, what would be the true fiscal and employment-behavioral consequences?',
+    'Pilot programs in specific regions (e.g., Scotland or Wales) removing LEL for defined cohorts; comparison of sickness absence rates, employer hiring patterns, and net exchequer cost before/after',
+    'If fiscal cost is minimal (< £500M/year): LEL is primarily extraction with little efficiency gain — removal would be net welfare improvement. If fiscal cost is high (> £2B/year) and reduces hiring: LEL represents genuine coordination trade-off — removal creates new distortions. Current estimates vary 10-fold.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(counterfactual_kel_removal, empirical, 'Fiscal and behavioral cost of removing the LEL eligibility threshold').
+
+omega_variable(
+    substitution_behavior_measurement,
+    'Do excluded workers substitute formal sick leave with informal unpaid leave, presenteeism (working while sick), or exit from workforce?',
+    'Longitudinal survey of workers below LEL tracking sickness absence patterns, work-while-sick incidence, and workforce exit rates; comparison with matched cohort above LEL',
+    'If substitution toward presenteeism is dominant: extraction cost is borne by public health (contagion). If substitution toward exit is dominant: extraction cost is labor supply loss. If informal leave is substitution: true cost is invisible but real.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(substitution_behavior_measurement, empirical, 'How excluded workers adapt to lack of statutory sick pay').
+
+omega_variable(
+    gig_economy_definitional_boundary,
+    'Are self-employed / gig workers who earn below LEL victims of this constraint or operating in a different contract regime entirely?',
+    'Legal analysis of employment classification doctrine; comparison of self-employed access to alternative income protection (insurance, savings, family support) vs salaried workers; analysis of whether SSP was ever intended to cover self-employed',
+    'If self-employed are in a different regime: snare classification is overstated — measure extraction only among employees. If self-employed are workers trapped in false self-employment: snare classification is understated — extraction is worse than visible.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(gig_economy_definitional_boundary, conceptual, 'Whether self-employed / gig workers are within the scope of SSP extraction or outside it').
+
+omega_variable(
+    historical_intent_vs_drift,
+    'Was the LEL threshold deliberately designed to exclude low-wage workers, or was it set at a value expected to be rarely breached but has since been overtaken by wage stagnation?',
+    'Historical legislative record (Hansard debates, policy documents from 1982-1983 setting); analysis of wage distribution at LEL threshold then vs now; interviews with original policy designers if available',
+    'If deliberately exclusionary: constraint is intentional snare — extraction by design. If threshold drift: constraint is snare through inertia — extraction by neglect. Both are snares, but the first suggests strong political will to maintain exclusion; the second suggests opportunity for reform.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(historical_intent_vs_drift, empirical, 'Whether LEL threshold was deliberately set to exclude low-wage workers or has been eroded by wage stagnation').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(uk_ssp_eligibility, 0, 10).
+narrative_ontology:interval(uk_ssp_eligibility, 0, 30).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint, so temporal data is required.
-% The model shows extraction accumulating over the last ~20 years as the
-% nature of the UK labor market shifted towards more precarious work, while
-% the SSP system failed to adapt.
+% Theater ratio over time
+narrative_ontology:measurement(ssp_tr_t0, uk_ssp_eligibility, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(ssp_tr_t15, uk_ssp_eligibility, theater_ratio, 15, 0.4).
+narrative_ontology:measurement(ssp_tr_t30, uk_ssp_eligibility, theater_ratio, 30, 0.45).
 
-% Theater ratio over time:
-narrative_ontology:measurement(uk_ssp_tr_t0, uk_ssp_eligibility, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(uk_ssp_tr_t5, uk_ssp_eligibility, theater_ratio, 5, 0.18).
-narrative_ontology:measurement(uk_ssp_tr_t10, uk_ssp_eligibility, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(ssp_be_t0, uk_ssp_eligibility, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(ssp_be_t15, uk_ssp_eligibility, base_extractiveness, 15, 0.48).
+narrative_ontology:measurement(ssp_be_t30, uk_ssp_eligibility, base_extractiveness, 30, 0.52).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(uk_ssp_ex_t0, uk_ssp_eligibility, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(uk_ssp_ex_t5, uk_ssp_eligibility, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(uk_ssp_ex_t10, uk_ssp_eligibility, base_extractiveness, 10, 0.62).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The SSP system allocates risk and financial support (or lack thereof).
-narrative_ontology:coordination_type(uk_ssp_eligibility, resource_allocation).
+narrative_ontology:coordination_type(uk_ssp_eligibility, enforcement_mechanism).
+narrative_ontology:affects_constraint(uk_ssp_eligibility, uk_minimum_wage_coverage).
+narrative_ontology:affects_constraint(uk_ssp_eligibility, gig_economy_worker_protections).
+narrative_ontology:affects_constraint(uk_ssp_eligibility, occupational_pension_eligibility).
 
-% Network relationships (structural influence edges)
-% The SSP system is structurally coupled with the legal framework governing
-% the gig economy, as one enables the extractive potential of the other.
-narrative_ontology:affects_constraint(uk_ssp_eligibility, gig_economy_labor_law).
-narrative_ontology:affects_constraint(uk_minimum_wage_policy, uk_ssp_eligibility).
-
+% DUAL FORMULATION NOTE:
+% SSP is a composite constraint that decomposes into two structural claims: (1) SSP as coordination mechanism for salaried employment (reduces moral hazard, stabilizes absence patterns) — this is genuine rope. (2) SSP as fiscal extraction through LEL exclusion (transfers sickness cost from state/employers to low-wage workers) — this is snare. The snare analysis focuses on the extractive mechanism (LEL threshold and its distributional consequences); the rope analysis would focus on the coordination function for employees above threshold. This story emphasizes the snare decomposition because the LEL is the constraint's defining feature and source of asymmetry. The rope function is subordinate to and undermined by the snare mechanism.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The structural derivation from
-% beneficiary/victim declarations and exit options accurately models the
-% directionality for all key agents.
+constraint_indexing:directionality_override(uk_ssp_eligibility, organized, 0.5).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

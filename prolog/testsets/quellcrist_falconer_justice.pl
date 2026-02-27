@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: quellcrist_falconer_justice
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-22
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_quellcrist_falconer_justice, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,8 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,77 +52,107 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: quellcrist_falconer_justice
- * human_readable: The Machinery of Justice (Quellist)
- * domain: political
- * * SUMMARY:
- * This constraint represents the "Machinery of Justice" as described by Quellcrist Falconer in Richard K. Morgan's "Altered Carbon": a cold, institutional apparatus that serves the "players" (creatures of power) while systematically liquidating, displacing, and torturing the "little people". It functions by reframing systemic harm as "just business" or "politics" to suppress personal accountability.
- * * KEY AGENTS:
- * - The Little People: Powerless subjects who suffer "torture and brutal execution".
- * - The Power Player: Institutional actors who slide under Justice with a "wink and a grin".
- * - The Insurrectionary (Falconer): An analytical observer who advocates for "clawing" justice through personal, dangerous action.
+ *   constraint_id: quellcrist_falconer_justice
+ *   human_readable: The Machinery of Justice (Quellist)
+ *   domain: political/criminal_justice
+ *
+ * SUMMARY:
+ *   The machinery of justice, as understood by Quellcrist Falconer's
+ *   analysis, is a constraint that extracts compliance, wealth, time, and
+ *   dignity from the powerless under the rhetorical cover of coordination
+ *   toward social order. The system claims to protect rights and establish
+ *   predictable dispute resolution, but structural features — resource
+ *   asymmetry between prosecution and defense, poverty-driven plea
+ *   bargaining, bail systems targeting the poor, overcriminalization of
+ *   survival activities, and bureaucratic complexity — systematize extraction
+ *   from those least able to resist. The constraint operates across multiple
+ *   institutional levels: police enforcement (selective prosecution),
+ *   prosecutorial discretion (leverage for plea), court procedures
+ *   (complexity as barrier), correctional systems (debt peonage through fines
+ *   and fees), and reentry barriers (permanent legal disabilities).
+ *   Quellcrist's framing emphasizes that the machinery is not a Bug but a
+ *   Feature — it extracts precisely because it is designed to, camouflaged by
+ *   legitimacy rhetoric. The increasing theater ratio (0.65) reflects the
+ *   growing decoupling of procedural ritual from actual justice outcomes.
+ *
+ * KEY AGENTS:
+ *   - Defendants Without Resources: Primary victims (powerless/trapped) — bear maximum extraction; exit blocked by bail systems and procedural complexity
+ *   - Marginalized Communities: Secondary victims (moderate/constrained) — over-policed, under-protected, asymmetrically prosecuted; geographic and economic barriers to exit
+ *   - State Enforcement Bodies: Primary beneficiaries (institutional/arbitrage) — capture plea bargains, fines, civil asset forfeiture, and compliance; exit through case dismissal or non-prosecution
+ *   - Institutional Legal Apparatus: Primary beneficiaries (institutional/arbitrage) — preserve jurisdictional power, resource dependency, and professional monopolies; arbitrage through case selection and discretion
+ *   - Reform Coalitions: Secondary actors (organized/constrained) — observe and resist pure extraction; constrained exit through system capture and incrementalism
+ *   - Legal Profession: Tertiary actors (institutional/arbitrage) — maintain theater through procedural complexity, licensing barriers, and continuing education; profit from defendant desperation
+ *   - Analytical Observer: Universal perspective (analytical/analytical) — sees machinery as designed extraction subordinating justice to bureaucratic extraction
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(quellcrist_falconer_justice, 0.90). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
-domain_priors:suppression_score(quellcrist_falconer_justice, 0.80).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
-domain_priors:theater_ratio(quellcrist_falconer_justice, 0.10).       % Piton detection (>= 0.70)
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(quellcrist_falconer_justice, 0.68).
+domain_priors:suppression_score(quellcrist_falconer_justice, 0.72).
+domain_priors:theater_ratio(quellcrist_falconer_justice, 0.65).
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
-narrative_ontology:constraint_metric(quellcrist_falconer_justice, extractiveness, 0.90).
-narrative_ontology:constraint_metric(quellcrist_falconer_justice, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(quellcrist_falconer_justice, theater_ratio, 0.10).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(quellcrist_falconer_justice, extractiveness, 0.68).
+narrative_ontology:constraint_metric(quellcrist_falconer_justice, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(quellcrist_falconer_justice, theater_ratio, 0.65).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Values: natural_law, coordination, constructed, enforcement
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(quellcrist_falconer_justice, snare).
 narrative_ontology:human_readable(quellcrist_falconer_justice, "The Machinery of Justice (Quellist)").
-narrative_ontology:topic_domain(quellcrist_falconer_justice, "political").
+narrative_ontology:topic_domain(quellcrist_falconer_justice, "political/criminal_justice").
 
-% Binary flags
-domain_priors:requires_active_enforcement(quellcrist_falconer_justice). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(quellcrist_falconer_justice).
 
-% Structural property derivation hooks:
-%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
-%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-% Both are required for Tangled Rope.
-narrative_ontology:constraint_beneficiary(quellcrist_falconer_justice, power_players).
-narrative_ontology:constraint_victim(quellcrist_falconer_justice, little_people).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(quellcrist_falconer_justice, institutional_legal_apparatus).
+narrative_ontology:constraint_beneficiary(quellcrist_falconer_justice, state_enforcement_bodies).
+narrative_ontology:constraint_victim(quellcrist_falconer_justice, defendants_without_resources).
+narrative_ontology:constraint_victim(quellcrist_falconer_justice, marginalized_communities).
+narrative_ontology:constraint_victim(quellcrist_falconer_justice, accused_individuals).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE)
-% For the "little people", the system is a pure extraction machine.
-% χ = 0.90 (ε) * 1.5 (π(powerless)) * 0.8 (σ(local)) = 1.08. This is a definitive Snare.
+% The accused without financial resources faces the full machinery: legal costs are prohibitive, public defenders are overburdened, bail systems extract desperation, and the procedural complexity itself becomes an extraction mechanism. The defendant is trapped within the system — any attempt to exit through flight, non-compliance, or informal settlement increases enforcement. Maximum structural extraction.
 constraint_indexing:constraint_classification(quellcrist_falconer_justice, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(national))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% For the "power players", the system is a coordination tool that benefits them.
-% χ = 0.90 (ε) * -0.2 (π(institutional)) * 1.2 (σ(global)) = -0.216. Negative extraction indicates a net benefit.
+% Communities over-policed and under-protected experience the machinery as both extraction and (theoretically) coordination. The justice system claims to provide order and protection, but enforcement is asymmetric: minor infractions are prosecuted aggressively while harms within the community go unsolved. Exit is constrained by geography, economic dependency, and the threat of arrest.
+constraint_indexing:constraint_classification(quellcrist_falconer_justice, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% Courts and judges experience the machinery as a coordination mechanism: establishing dispute resolution procedures, enforcing property rights, and maintaining legal predictability. The institutional view sees the system as functional coordination despite acknowledged inefficiency. Judges have substantial arbitrage options — case selection, sentencing discretion, case prioritization — that insulate them from the full constraints the system imposes on defendants.
 constraint_indexing:constraint_classification(quellcrist_falconer_justice, rope,
     context(agent_power(institutional),
-            time_horizon(historical),
+            time_horizon(generational),
             exit_options(arbitrage),
-            spatial_scope(global))).
+            spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The analytical view must account for both the coordination function and the asymmetric extraction.
-% The system has beneficiaries, victims, high extraction, and requires active enforcement. This is the definition of a Tangled Rope.
+% Legal aid organizations, prisoner advocates, and reform coalitions observe pure extraction obscured by coordination rhetoric. They see the system as designed to extract compliance, wealth (through fines, court fees, bail bonds), and time from the powerless while preserving institutional legitimacy through appearance of fairness. The machinery subordinates justice to bureaucratic efficiency. Organized groups have constrained exit — they can push for reform but cannot escape the system's fundamental logic.
+constraint_indexing:constraint_classification(quellcrist_falconer_justice, snare,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% Law as a profession increasingly maintains theater rather than justice: bar associations preserve licensing barriers, continuing education requirements, and fee structures that protect legal monopolies rather than improve outcomes. The procedural apparatus (motions, discovery, appeals) has become decoupled from its original function of ensuring fairness. Theater ratio high — much of the machinery is performative ritual divorced from actual justice determination.
+constraint_indexing:constraint_classification(quellcrist_falconer_justice, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% From a universal perspective, the machinery of justice is a snare: it extracts compliance, resources, and dignity from the powerless through the threat of escalating coercion. The system claims to coordinate social order and protect rights, but structural features (poverty-driven plea bargaining, resource asymmetries, bureaucratic rationalization) guarantee systematic extraction from the vulnerable. The machinery operates as designed — the design itself is the constraint.
 constraint_indexing:constraint_classification(quellcrist_falconer_justice, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -123,19 +167,16 @@ constraint_indexing:constraint_classification(quellcrist_falconer_justice, snare
 
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(quellcrist_falconer_justice, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(quellcrist_falconer_justice, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    assertion(TypePowerless == snare),
-    assertion(TypeInstitutional == rope),
-    TypePowerless \= TypeInstitutional.
+    constraint_indexing:constraint_classification(quellcrist_falconer_justice, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(quellcrist_falconer_justice, snare, context(agent_power(analytical), _, _, _)).
-
-test(high_extraction_and_suppression) :-
+test(extraction_signature) :-
     domain_priors:base_extractiveness(quellcrist_falconer_justice, E),
-    domain_priors:suppression_score(quellcrist_falconer_justice, S),
-    assertion(E >= 0.46),
-    assertion(S >= 0.60).
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(quellcrist_falconer_justice, TR),
+    TR >= 0.70.
 
 :- end_tests(quellcrist_falconer_justice_tests).
 
@@ -145,14 +186,16 @@ test(high_extraction_and_suppression) :-
 
 /**
  * LOGIC RATIONALE:
- * The base scores reflect Falconer's description of a system that performs "torture and brutal execution" (extractiveness: 0.9) and reframes this as "just business" to prevent recourse (suppression: 0.8). The system is highly functional, not theatrical, hence the low theater_ratio.
+ *   Extractiveness (0.68): High. The machinery systematically transfers wealth (bail, fines, court fees, restitution), time (incarceration, pretrial detention, legal proceedings), compliance (through threat of escalation), and dignity (through criminal record, surveillance, and permanent legal disabilities) from the powerless to the state and legal profession. The extraction is not incidental — it is structurally necessary to the system's operation. Poverty-driven plea bargaining, bail systems, and court fees are not bugs but mechanisms that extract and subordinate. Suppression (0.72): High. Exit options are severely restricted: plea bargains extract confession under risk asymmetry, bail systems extract wealth or freedom, procedural complexity creates dependency on professionals, and criminal records create permanent barriers. Alternatives (community justice, informal resolution) are suppressed through legal monopolies and criminalization of exit strategies. Theater ratio (0.65): Moderate-high and rising. Procedural rituals (trials, motions, appeals) are increasingly decoupled from justice outcomes — outcomes are determined by resource availability and prosecutorial leverage before trial procedures commence. The machinery maintains legitimacy through spectacle (public trials, judicial robes, legal rhetoric) while actual justice is subordinated to extraction efficiency.
  *
- * The perspectival gap is extreme: for the institutional "players", it is a Rope that provides order and removes obstacles (negative effective extraction). For the powerless "little people", it is a lethal Snare (extremely high effective extraction).
+ * PERSPECTIVAL GAP:
+ *   The gap is stark and reveals the machinery's fundamental asymmetry. The institutional legal apparatus experiences coordination (Rope) — establishing order, processing disputes, maintaining legitimacy. The analytical observer sees pure extraction (Snare) — the same system, described identically, but from the position of those it subordinates. The marginalized community sees hybrid extraction with some coordination (Tangled Rope) — the system offers theoretical protection but asymmetrically enforces it. The impoverished defendant sees maximum extraction (Snare) — no coordination benefit, no exit option. The reform coalition sees degraded ritual (Piton) — the machinery persists through institutional inertia despite its failure to deliver justice. The professional legal system (Piton) sees its own procedures as increasingly theater. This perspectival gap is not a measurement ambiguity — it reflects genuine structural inequality. The machinery operates as designed: it coordinates order for the powerful while extracting from the powerless. The gap between 'justice system' rhetoric and 'extraction mechanism' reality is the constraint itself.
  *
- * The analytical perspective must be Tangled Rope. The original file's classification of 'Mountain' was inconsistent with the high extraction, suppression, and active enforcement metrics. A Mountain is a passive, low-extraction limit. This system is an active, predatory machine. The Tangled Rope classification correctly captures its dual nature as a coordination mechanism for one group funded by the violent extraction from another.
+ * DIRECTIONALITY LOGIC:
+ *   Each perspective's directionality derives from structural position within the extraction flow. The powerless defendant (d ≈ 0.95) bears maximum extraction with zero exit capacity — trapped by bail, plea pressure, and procedural complexity. The institutional apparatus (d ≈ 0.05) benefits from the extraction and maintains arbitrage options (discretion in prosecution, case selection, sentencing). Marginalized communities (d ≈ 0.75) are caught between over-policing and under-protection — partially trapped, partially targeted. The organized reform coalition (d ≈ 0.80) sees the extraction clearly but remains constrained within the system — they can advocate but not escape or fundamentally reshape. The analytical observer (d ≈ 1.0) from a civilizational perspective sees the machinery as designed extraction without redemptive coordination function. Beneficiary declarations (state enforcement, institutional legal apparatus) and victim declarations (powerless defendants, marginalized communities) are unambiguous — the extraction flow is explicitly from bottom to top, from weak to institutional.
  *
- * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * This constraint is a classic example of resolved Mandatrophy. The system's claim to be "Justice" (a coordination mechanism) is a facade for its primary function of extraction. The Tangled Rope classification prevents the system from being misread as either a pure Snare (ignoring its utility to the powerful) or a pure Rope (ignoring its victims). It correctly identifies that the coordination and extraction are inextricably linked.
+ * MANDATROPHY ANALYSIS:
+ *   RESOLVED: The machinery of justice is NOT a hidden coordination mechanism misconstrued as snare, and is NOT a snare misconstrued as coordination. It is structurally a snare — it extracts from the powerless and subordinates justice to bureaucratic efficiency. The mandatrophy resolution requires rejecting the false middle: the system is not a hybrid (tangled rope) or temporary (scaffold) or degraded (piton). It is a pure extraction mechanism operating with institutional legitimacy. The theoretical coordination function (dispute resolution, rights protection, social order) is real but systematically skewed toward institutional power. For the powerless, the coordination is null — they experience only extraction and suppression. The machinery resolves the mandatrophy by being honest: it is a snare for defendants without resources, a rope for those with institutional protection, and a piton (degraded theater) for the legal profession itself. All perspectives converge on extraction, differing only in intensity. The reform movement's constrained option to work within the system is not an exit — it is a contained alternative, itself extracted into legitimacy service. Mandatrophy fully resolved at extractiveness 0.68.
  */
 
 /* ==========================================================================
@@ -160,54 +203,83 @@ test(high_extraction_and_suppression) :-
    ========================================================================== */
 
 omega_variable(
-    omega_quellcrist_falconer_justice_1,
-    "At what threshold of 'dangerous' behavior does a 'little person' effectively transform into a 'player' in the eyes of the machine?",
-    "Audit of deal-making patterns vs. casualty rates in personal/insurrectionary actions.",
-    "If low: Insurrection is a Rope. If high: Insurrection is a suicide-Snare.",
+    plea_bargain_coercion_threshold,
+    'At what conviction probability does the risk-asymmetry in plea bargaining cease to be coordination (defendant accepting modest penalty to avoid trial risk) and become pure extraction (defendant coerced into confessing to crimes they may not have committed)?',
+    'Empirical analysis of plea rates by conviction likelihood; psychological studies of rational choice under threat; innocence project data on exonerations of plea-convicted defendants',
+    'If threshold is low (< 60% conviction probability): plea systems extract confessions from the innocent. If threshold is high (> 85%): plea systems remain rational coordination even for marginal cases.',
     confidence_without_resolution(medium)
 ).
 
+narrative_ontology:omega_variable(plea_bargain_coercion_threshold, empirical, 'Threshold separating rational plea coordination from coercive extraction').
+
 omega_variable(
-    omega_quellcrist_falconer_justice_2,
-    "Is the cold, slow nature of the machine a functional necessity for galactic governance or a predatory choice for efficient liquidation?",
-    "Comparison of 'Hardware/Software' allocation for deal-making vs. execution.",
-    "If necessity: Mountain-like properties. If predatory choice: Pure Snare/Tangled Rope.",
-    confidence_without_resolution(medium)
+    bail_system_function,
+    'Does the bail system function as a coordination mechanism ensuring defendant appearance (rational purpose) or as a wealth extraction mechanism punishing pre-conviction poverty?',
+    'Comparative analysis of bail policy jurisdictions; correlation between bail amounts and defendant flight risk; data on bail nonpayment as proxy for poverty vs predictive risk; jurisdictions with risk-based release showing appearance rates',
+    'If coordination: bail is Rope from multiple perspectives. If extraction: bail is primary extraction mechanism within the snare, and should be isolated as a separate constraint.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(bail_system_function, empirical, 'Whether bail functions as coordination or wealth extraction').
+
+omega_variable(
+    public_defender_adequacy,
+    'Does public defender availability constitute genuine legal representation (satisfying coordination function) or theater masking inadequate defense (satisfying suppression via legitimacy)?',
+    'Case outcome analysis controlling for defense quality; comparison of conviction rates public defender vs private counsel for identical charges; documentation of caseload ratios and time-per-case allocation',
+    'If adequate: defendant protection is real, reducing experienced extraction for powerless agents. If theatrical: public defenders function as legitimacy apparatus, enabling snare operation without visible coercion.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(public_defender_adequacy, empirical, 'Whether public defenders provide adequate representation or theater').
+
+omega_variable(
+    system_alternative_feasibility,
+    'Is the current machinery of justice structurally necessary for social order, or is it a contingent institutional arrangement replaceable by alternative dispute resolution, restorative justice, or community-based systems?',
+    'Analysis of jurisdictions with alternative justice models; comparative outcome data on safety, restitution, recidivism; feasibility studies of scaling alternatives; historical precedent analysis',
+    'If necessary: machinery is partially Mountain (irreducible constraint). If contingent: machinery is pure Snare (designed extraction). Changes fundamental classification.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(system_alternative_feasibility, conceptual, 'Whether machinery of justice is structurally necessary or contingently extractive').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(quellcrist_falconer_justice, 0, 10).
+narrative_ontology:interval(quellcrist_falconer_justice, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. This model shows the "Machinery of Justice"
-% becoming more brutally efficient over time, shedding its performative aspects
-% (theater) and maximizing its extractive function.
-% Required for high-extraction constraints (base_extractiveness > 0.46).
+% Theater ratio over time
+narrative_ontology:measurement(quelj_tr_t0, quellcrist_falconer_justice, theater_ratio, 0, 0.48).
+narrative_ontology:measurement(quelj_tr_t25, quellcrist_falconer_justice, theater_ratio, 25, 0.58).
+narrative_ontology:measurement(quelj_tr_t50, quellcrist_falconer_justice, theater_ratio, 50, 0.65).
 
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(qfj_tr_t0, quellcrist_falconer_justice, theater_ratio, 0, 0.40).
-narrative_ontology:measurement(qfj_tr_t5, quellcrist_falconer_justice, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(qfj_tr_t10, quellcrist_falconer_justice, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(quelj_be_t0, quellcrist_falconer_justice, base_extractiveness, 0, 0.52).
+narrative_ontology:measurement(quelj_be_t25, quellcrist_falconer_justice, base_extractiveness, 25, 0.62).
+narrative_ontology:measurement(quelj_be_t50, quellcrist_falconer_justice, base_extractiveness, 50, 0.68).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(qfj_ex_t0, quellcrist_falconer_justice, base_extractiveness, 0, 0.70).
-narrative_ontology:measurement(qfj_ex_t5, quellcrist_falconer_justice, base_extractiveness, 5, 0.80).
-narrative_ontology:measurement(qfj_ex_t10, quellcrist_falconer_justice, base_extractiveness, 10, 0.90).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The "Machinery of Justice" is, by its own claim, a system for enforcing rules.
 narrative_ontology:coordination_type(quellcrist_falconer_justice, enforcement_mechanism).
+narrative_ontology:affects_constraint(quellcrist_falconer_justice, mass_incarceration_regime).
+narrative_ontology:affects_constraint(quellcrist_falconer_justice, plea_bargain_coercion).
+narrative_ontology:affects_constraint(quellcrist_falconer_justice, bail_system_wealth_extraction).
+narrative_ontology:affects_constraint(quellcrist_falconer_justice, policing_discretion_subordination).
+
+% DUAL FORMULATION NOTE:
+% The machinery of justice decomposes into four related snares: enforcement (police discretion), prosecutorial leverage (plea bargains), extraction mechanisms (bail and fines), and institutional subordination (sentencing disparities). Each has distinct epsilon and beneficiary structures but shares the parent constraint's suppression and theater. This story represents the macro-level constraint; network edges link to micro-level mechanisms that comprise the machinery.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

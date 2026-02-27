@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "sludge_bureaucratic_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sludge"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Sludge (Intentional Administrative Friction)",
+    "topic_domain": "political/economic/administrative",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "budget_gatekeepers",
+      "bureaucratic_administrators"
+    ],
+    "victims": [
+      "eligible_claimants",
+      "policy_access_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Eligible Non-Claimant",
+      "comment": "PERSPECTIVE 1: ELIGIBLE NON-CLAIMANT (SNARE) \u2014 Legally entitled to benefits but faces sludge barriers (forms, documentation, wait times, office visits). Cannot exit; choosing not to claim is functionally forced abandonment of legal entitlement. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.82. Maximum extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Budget-Constrained Agency",
+      "comment": "PERSPECTIVE 2: BUDGET-CONSTRAINED AGENCY (ROPE) \u2014 Faces genuine coordination problem: limited budget must be distributed; sludge serves as rationing mechanism via discouragement. Experiences constraint as necessity rather than extraction. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary (negative \u03c7 indicates institutional advantage)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Caseworker",
+      "comment": "PERSPECTIVE 3: CASEWORKER (TANGLED ROPE) \u2014 Benefits from job security and procedural structure (coordination function); constrained by caseload and compliance metrics that incentivize sludge maintenance. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.61. Mixed coordination-extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Welfare Rights Coalition",
+      "comment": "PERSPECTIVE 4: WELFARE RIGHTS COALITION (SCAFFOLD) \u2014 Organized actors (legal aid, nonprofits, advocacy groups) building alternative pathways: simplified applications, application assistance, litigation against sludge. See sludge as temporary barrier with sunset via legal/procedural reform. d\u22480.35, f(d)\u22480.28, \u03c3=1.0 \u2192 \u03c7\u22480.16. Low effective extraction; coalition has agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Administrative Apparatus",
+      "comment": "PERSPECTIVE 5: ADMINISTRATIVE APPARATUS (PITON) \u2014 Formal goal is equitable benefit distribution; actual mechanism is discouragement via friction. theater_ratio=0.68 reflects gap between official accessibility rhetoric and functional barriers. Process persists through institutional inertia despite documented failures to reach intended beneficiaries."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Policy Architect",
+      "comment": "PERSPECTIVE 6: POLICY ARCHITECT (TANGLED ROPE) \u2014 Powerful actors (legislators, agency heads) design sludge intentionally as a soft form of rationing, avoiding explicit denials. Coordinates on budget constraint while extracting political benefit (appearing fiscally responsible). d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.24. Deliberate hybrid."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 Risks naturalizing sludge as inherent to administration: 'All bureaucracy requires friction; this is just the cost of order.' But structural data (\u03b5=0.58, suppression=0.72, theater=0.68) contradicts naturalization. Sludge is not inherent; it is designed. Engine flags as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_detection",
+      "question": "Is sludge intentionally designed to discourage claims, or is it an unintended byproduct of complex systems?",
+      "resolution_mechanism": "Historical document analysis (memoranda, budget notes, agency communications); comparison of sludge levels across agencies with similar functions but different administrative cultures; field interviews with policy architects",
+      "impact": "If intentional: Snare classification confirmed. If accidental: may degrade to Tangled Rope or even Rope. Classification outcome depends on deliberation chain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sludge is intentionally designed to discourage claims"
+    },
+    {
+      "id": "discouragement_rate_threshold",
+      "question": "What rate of claim discouragement (by eligible non-claiming percentage) constitutes extraction vs normal administrative friction?",
+      "resolution_mechanism": "Comparative cross-program data: eligible population vs actual claimants; international benchmarks for similar benefits programs; econometric analysis of sludge intensity vs claim rates",
+      "impact": "If >40% discouragement: Snare classification strengthened. If <20%: may reclassify as Rope. Threshold determines whether \u03c7 value is empirically justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Claim discouragement rate indicating extraction threshold"
+    },
+    {
+      "id": "alternative_rationing_mechanism",
+      "question": "Do alternative rationing mechanisms (explicit eligibility caps, lottery, means-testing, time limits) exist that would replace sludge without loss of budget control?",
+      "resolution_mechanism": "Policy design analysis; comparison with jurisdictions using transparent rationing; cost-benefit study of simplified application + higher claim rates vs sludge + lower claim rates",
+      "impact": "If alternatives exist: sludge classification as intentional extraction strengthened (Snare). If no feasible alternative: may downgrade to necessary Scaffold. Affects mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether transparent alternatives to sludge-based rationing exist"
+    },
+    {
+      "id": "caseworker_autonomy_constraint",
+      "question": "Are caseworkers themselves constrained by sludge (caseload limits, compliance metrics, restricted discretion), or are they agents of sludge?",
+      "resolution_mechanism": "Caseworker surveys and interviews; analysis of performance metrics and reward structures; comparison of sludge intensity across agencies with different caseworker autonomy levels",
+      "impact": "If constrained: caseworkers are secondary victims, tangled rope perspective correct. If agential: caseworkers are partial beneficiaries, extraction mechanism more direct. Affects inter-institutional directionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether caseworkers are constrained by or agents of sludge"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Sludge\u2014intentional administrative friction designed to discourage access to legally available benefits, rights, or services\u2014operates as a mechanism of soft rationing that extracts through discouragement rather than explicit denial. Unlike formal eligibility restrictions (which are transparent) or means-testing (which is explicit), sludge creates barriers of complexity, delay, and documentation burden that leave eligible individuals bearing the cost of proving their entitlement. The constraint exemplifies a hybrid extraction mechanism: budget gatekeepers design sludge as a rationing solution while maintaining a public fiction that all eligible parties can claim; caseworkers are simultaneously constrained by the sludge they administer; eligible non-claimants bear the full cost through de facto benefit denial; and welfare rights organizations work to dismantle sludge through legal challenges and simplified application pathways. The constraint's theater ratio (0.68) reflects the gap between formal administrative rhetoric (accessibility, equity, customer service) and functional design (discouragement, friction, complexity). Sludge has intensified over the 30-year interval as agencies have compounded requirements, digitized systems without usability testing, and used compliance metrics that penalize rapid claim processing.",
+    "key_agents": [
+      "Eligible Non-Claimants: Primary victims (powerless/trapped) \u2014 legally entitled to benefits but face overwhelming administrative barriers; cannot exit",
+      "Budget-Constrained Agency: Primary beneficiary (institutional/arbitrage) \u2014 uses sludge to ration limited budget without making explicit denials; experiences as coordination necessity",
+      "Caseworkers: Secondary actors (moderate/constrained) \u2014 simultaneously constrained by caseload/compliance metrics and agents of sludge enforcement",
+      "Policy Architects: Powerful beneficiaries (powerful/mobile) \u2014 deliberately design sludge as soft rationing mechanism; receive political benefit of appearing fiscally responsible",
+      "Welfare Rights Coalition: Organized actors (organized/constrained) \u2014 building alternative pathways through litigation, legal aid, and advocacy for simplified applications",
+      "Administrative Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains formal accessibility rhetoric while functional mechanism is discouragement",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing sludge as inevitable cost of administration rather than design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Sludge extracts through discouragement\u2014eligible individuals forfeit legally available benefits. The extraction is not as total as pure denial (which would be \u03b5\u22480.90) because some eligible parties successfully navigate sludge and some agencies provide application assistance. The value reflects documented claim-rate suppression of 30-50% in high-sludge jurisdictions, representing significant extraction from the eligible population. Over the interval, extractiveness has increased as agencies compounded requirements. Suppression (0.72): High. Significant coercive elements include: mandatory documentation proving eligibility status, time-consuming application procedures, long wait times for determination, limited office hours and locations, and lack of appeal accessibility. Few alternatives exist for accessing the benefit. Switching to alternative programs is often not possible (e.g., disability benefits have no substitute). The eligible population cannot organize collective exit. Theater ratio (0.68): High. Formal administrative rhetoric emphasizes accessibility and customer service, but functional design contradicts this. Agency websites claim 'simple application process' while actual forms require specialized knowledge and documentation. Agencies advertise 'rapid processing' while actual timelines exceed statutory requirements. This gap between claimed and actual functionality\u2014the performative nature of accessibility rhetoric\u2014drives the high theater value.",
+    "perspectival_gap": "This constraint demonstrates substantial perspectival disagreement across institutional and individual levels. The budget-constrained agency sees a legitimate coordination problem (Rope)\u2014they have limited funds and must distribute them; sludge is an implicit rationing mechanism that avoids explicit denial and political conflict. The eligible non-claimant sees pure extraction (Snare)\u2014they are legally entitled to benefits but face insurmountable barriers, with no alternative mechanism to access support. The caseworker experiences a hybrid (Tangled Rope)\u2014their job requires them to administer complex requirements, which constrains their ability to help, but also provides job security and procedural protection. The policy architect deliberately designs this hybrid (Tangled Rope)\u2014they coordinate on the budget constraint while extracting political benefit of appearing fiscally conservative. The welfare rights coalition sees a temporary problem being solved (Scaffold)\u2014litigation and advocacy are building pathways to simplified applications and sludge elimination. The administrative apparatus sees its own process as degraded (Piton)\u2014formal mission is equitable access, but actual mechanism is discouragement; the gap persists through institutional inertia. The analytical observer risks naturalizing sludge as inevitable (Mountain)\u2014'all bureaucracy creates friction'\u2014but the structural data reveals this as a false summit: sludge is designed, not inherent.",
+    "directionality_logic": "Eligible non-claimants: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction\u2014no alternative benefit source, cannot organize, cannot exit without forfeiting legal entitlement. Budget-constrained agency: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary\u2014can arbitrage between implicit rationing (sludge) and explicit denials (litigation risk), and can adjust sludge intensity as needed. Caseworkers: Mixed victim/agent + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction\u2014caseload limits and compliance metrics constrain their ability to assist while requiring them to maintain sludge mechanisms. Policy architects: Deliberate hybrid + mobile \u2192 d\u22480.42, f(d)\u22480.42. Moderate extraction\u2014intentional extraction but with public coordination benefit (appearing fiscally responsible, avoiding explicit benefit denials). Welfare rights coalition: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.28. Low effective extraction\u2014coalition has legal and advocacy resources and sees clear path forward (litigation, regulatory change). Administrative apparatus: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification comes from theater gate (\u22650.70 required, we have 0.68, near threshold); institutional actors maintain process through inertia.",
+    "mandatrophy_analysis": "Mandatrophy resolved through explicit decomposition of perspectives. The constraint resolves to Snare from the eligible non-claimant perspective (d\u22480.95, \u03c7\u22480.82 > 0.66 snare threshold), which is the correct observation point for detecting extraction. From the budget-constrained agency perspective, it appears as Rope (negative \u03c7), which is internally coherent but incomplete\u2014the agency perspective naturalizes sludge as necessary coordination when it is actually designed extraction. From the policy architect perspective, it is deliberately hybrid Tangled Rope (d\u22480.42, \u03c7\u22480.24)\u2014intentional coordination on budget constraint PLUS intentional extraction via discouragement. The falsity of the Mountain perspective (analytical observer naturalizing sludge) is detected by the engine: formal accessibility claims (emerges_naturally=false, accessibility_collapse < 0.85, resistance > 0.15) contradict the mountain gate. Sludge is not a natural law; it is a designed mechanism that persists through institutional inertia (piton properties: theater=0.68, degraded function). The constraint exhibits the classic mandatrophy pattern: legitimate coordination problem (budget constraint) used as cover for extraction mechanism. Resolving requires: (1) acknowledging the snare perspective as the primary observation point, (2) recognizing that the coordination problem could be solved through transparent mechanisms (explicit caps, lottery, means-testing) that eliminate sludge, and (3) understanding that sludge persistence indicates extraction motivation, not coordination necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "welfare_access_equity",
+      "administrative_burden_health_costs",
+      "means_testing_stigma"
+    ],
+    "dual_formulation_note": "Sludge is upstream of specific benefit programs (SNAP, disability, unemployment) but represents a distinct structural constraint on administrative access. Downstream constraints (welfare_access_equity, health impacts of administrative burden) have their own \u03b5 values reflecting outcome severity; sludge_bureaucratic_friction has \u03b5=0.58 reflecting the intentional design of administrative barriers as a soft rationing mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

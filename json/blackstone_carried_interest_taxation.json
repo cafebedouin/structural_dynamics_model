@@ -2,90 +2,131 @@
   "header": {
     "constraint_id": "blackstone_carried_interest_taxation",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bsci"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.8,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
     "human_readable": "Carried Interest Partnership Taxation",
     "topic_domain": "economic/political",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "fund_general_partners"
+      "private_equity_partners",
+      "hedge_fund_managers",
+      "asset_management_firms"
     ],
     "victims": [
-      "us_treasury",
-      "general_taxpayers"
-    ]
+      "wage_earners",
+      "ordinary_income_taxpayers",
+      "public_treasury"
+    ],
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The General Taxpayer",
-      "comment": "PERSPECTIVE 1: GENERAL TAXPAYER (SNARE) — Experiences the rule as a pure tax loophole for the wealthy, increasing their own relative tax burden or reducing public services. They are trapped within the tax system and have no agency to change the rule. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
+      "label": "The Ordinary Income Taxpayer",
+      "comment": "PERSPECTIVE 1: ORDINARY INCOME TAXPAYER (SNARE) \u2014 Wage earners and middle-class professionals pay ordinary income tax on employment compensation while capital gains from carried interest are taxed at lower rates. These taxpayers cannot exit the wage-based income system and bear the full extraction asymmetry. Maximum suppression: no alternative tax treatment available, and the regulatory structure actively maintains this disparity through statutory language and IRS guidance."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Fund General Partner",
-      "comment": "PERSPECTIVE 2: FUND GENERAL PARTNER (ROPE) — The direct beneficiary. Experiences the rule as a necessary and fair coordination mechanism to incentivize long-term, high-risk investment, aligning their interests with investors. The tax benefit is framed as a legitimate reward for capital at risk. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08."
+      "label": "The Private Equity Partnership",
+      "comment": "PERSPECTIVE 2: PRIVATE EQUITY PARTNERSHIP (ROPE) \u2014 General partners structure carried interest as a coordination mechanism: the performance fee aligns fund managers with investor returns and incentivizes capital deployment. From the partner perspective, the tax treatment enables this coordination by making the incentive structure competitive with wage-based compensation. Exit option: arbitrage \u2014 the GP can structure deals differently or relocate capital if tax treatment changes. Experiences the constraint as pure coordination with net benefit."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Tax Policy Analyst",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the claimed coordination function (incentive alignment) and the massive, asymmetric extraction from the public treasury. Recognizes the high degree of suppression (lobbying) required to maintain the system. This is the canonical classification. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
-    },
-    {
-      "classification_type": "rope",
       "agent_power": "powerful",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Limited Partner (Investor)",
-      "comment": "PERSPECTIVE 4: LIMITED PARTNER (ROPE) — An institutional investor (e.g., pension fund). While not a direct beneficiary of the tax break, they see it as part of the overall compensation structure that aligns the General Partner's incentives with their own. For them, it's a feature of the coordination contract, not an extraction. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.51. Classifies as Tangled Rope by χ, but Rope by narrative due to symmetric alignment with GP."
+      "spatial_scope": "national",
+      "label": "The Fund Manager (Intermediate Perspective)",
+      "comment": "PERSPECTIVE 3: FUND MANAGER (TANGLED ROPE) \u2014 Individual managers benefit from the capital gains treatment (coordination function) but also experience extraction pressure from limited partners and investors who demand higher performance fees, and from regulatory scrutiny that threatens the favorable treatment. Mobile exit options: managers can switch funds, relocate internationally, or negotiate different compensation structures. Experiences both coordination and asymmetric extraction depending on regulatory stability and investor demands."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Reform-Minded Legislator",
-      "comment": "PERSPECTIVE 5: REFORM-MINDED LEGISLATOR (TANGLED ROPE) — Acknowledges the industry's coordination arguments but primarily views the rule as an extractive loophole to be closed. Their ability to act is constrained by intense industry lobbying and political opposition, highlighting the constraint's high suppression. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.49."
+      "label": "The Public Treasury / Tax Base",
+      "comment": "PERSPECTIVE 4: PUBLIC TREASURY (TANGLED ROPE) \u2014 The tax base experiences extraction: federal revenues are reduced by the preferential treatment of carried interest relative to ordinary income taxation. However, the treasury also has a coordination function \u2014 the capital gains rate structure exists to encourage capital formation and investment. Treasury is organized (Congress, IRS, Treasury Department) but constrained in exit options: cannot simply eliminate the preferential rate without political cost and capital flight. Effective extraction moderated by the coordination rationale but real in magnitude."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Reform Coalition (Sunset Logic)",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Multiple reform efforts (Obama administration 2010-2015, Democratic tax proposals 2017-2024) sought to close or restrict the carried interest loophole. Each reform proposal has sunset language or phased implementation. These organized actors (Congressional Democrats, progressive tax organizations) see the preferential treatment as a temporary tax benefit whose justification has eroded as PE/HF assets have grown. The constraint is temporary: political momentum for reform persists, suggesting the extraction mechanism will eventually be modified. Theater relatively low for reform proposals \u2014 direct legislative language rather than performative review."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Capital Gains Distinction (Degraded Natural Law)",
+      "comment": "PERSPECTIVE 6: CAPITAL GAINS DISTINCTION (PITON) \u2014 The underlying tax principle \u2014 that long-term capital gains deserve preferential treatment to encourage investment \u2014 is increasingly performative. Carried interest is not capital at risk in the traditional sense; managers have cashed-out profits with no principal investment. The tax distinction persists through institutional inertia and lobbying, not because the original rationale (encouraging capital formation by those who own assets) applies to performance fees. Theater high (0.65): significant effort spent defending the distinction through technical legal language rather than defending the underlying economic logic."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Attempted Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / ATTEMPTED NATURAL LAW (MOUNTAIN) \u2014 One might frame the preferential capital gains treatment as a natural law of efficient tax policy \u2014 that capital income must be taxed differently from labor income to avoid double taxation and encourage capital formation. However, the structural data contradicts this: carried interest is neither owned capital nor systematically at risk; the extraction is contingent on statutory language (Section 1231 partnership treatment) and regulatory interpretation, not on immutable economic principles. The engine will detect this as a false summit \u2014 naturalizing a contingent institutional arrangement as invariant."
     }
   ],
   "omegas": [
     {
-      "id": "capital_vs_labor_income",
-      "question": "Is carried interest fundamentally a return on capital investment (justifying capital gains treatment) or compensation for labor/managerial services (which should be taxed as ordinary income)?",
-      "resolution_mechanism": "This is a conceptual and legal debate, not strictly empirical. Resolution would require a definitive legislative or judicial re-classification of the income type.",
-      "impact": "If classified as labor, the constraint is a pure Snare. If classified as capital, the Rope/Tangled Rope perspectives are strengthened.",
+      "id": "carried_interest_principal_at_risk",
+      "question": "Does the general partner's carried interest represent genuinely at-risk capital or is it a disguised performance fee?",
+      "resolution_mechanism": "Analysis of historical profit-sharing provisions: Do GPs lose their carried interest share if the fund underperforms? Do they have personal capital invested? Do deal structures require co-investment at comparable risk levels to LP capital?",
+      "impact": "If genuinely at-risk capital: preferential treatment is justified (constraint reclassifies toward pure Rope). If disguised performance fee: treatment is purely extractive (Snare from treasury perspective becomes dominant interpretation, mandatrophy shifts toward snare classification).",
       "confidence": "high",
-      "type_class": "conceptual",
-      "description": "The fundamental legal and economic classification of carried interest income."
+      "type_class": "empirical",
+      "description": "Whether carried interest represents truly at-risk capital or disguised compensation"
     },
     {
-      "id": "incentive_versus_windfall",
-      "question": "To what extent does the favorable tax treatment genuinely incentivize new, high-risk investment versus simply providing a windfall for investment activity that would have occurred anyway?",
-      "resolution_mechanism": "Econometric studies comparing investment allocation and risk-taking in jurisdictions with and without similar tax incentives.",
-      "impact": "High incentive effect supports a Rope/Tangled Rope classification. Low incentive effect (i.e., it's a pure windfall) supports a Snare classification.",
+      "id": "capital_formation_efficacy",
+      "question": "Does the preferential capital gains treatment actually increase capital formation in PE/HF sectors, or would similar capital flow regardless of tax treatment?",
+      "resolution_mechanism": "Econometric analysis comparing PE/HF asset flows before and after tax changes; cross-country comparison with jurisdictions using different tax treatment; counterfactual analysis using instrumental variables for tax rate changes.",
+      "impact": "If treatment significantly increases capital: coordination rationale holds (constraint leans Rope). If no elasticity or very low elasticity: coordination rationale collapses and extraction becomes primary function (constraint becomes Snare).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the tax break is a true incentive or a pure windfall."
+      "description": "Whether preferential tax treatment materially increases capital formation"
+    },
+    {
+      "id": "legislative_reform_feasibility",
+      "question": "Is carried interest taxation politically sustainable, or will legislative reform inevitably narrow or eliminate preferential treatment?",
+      "resolution_mechanism": "Analysis of congressional voting patterns, constituency pressure, lobbying expenditure trends, and public opinion on tax fairness; comparison with similar provisions that were successfully repealed (e.g., corporate tax shelters post-2008).",
+      "impact": "If reform is inevitable: scaffold perspective (sunset logic) is correct and constraint will degrade to Rope or Snare as treatment is eliminated. If treatment survives indefinitely: piton classification (inertial degradation) becomes primary, constraint remains Tangled Rope or Piton long-term.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political sustainability of preferential carried interest treatment"
+    },
+    {
+      "id": "extraction_magnitude_verification",
+      "question": "What is the total annual revenue loss from preferential carried interest treatment, and how does this compare to other major tax provisions?",
+      "resolution_mechanism": "Treasury Joint Committee on Taxation revenue estimates; longitudinal analysis of carried interest volumes and effective tax rates; comparison with revenue impact of other preferential provisions.",
+      "impact": "If loss is > $50B annually: extraction is economically massive and public salience increases, likelihood of reform rises (scaffold becomes more probable). If loss is < $10B: can be portrayed as minor technical provision (piton classification reinforced).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quantified annual revenue loss from carried interest preferential treatment"
     }
   ],
   "measurements": [
@@ -96,49 +137,65 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 19,
+      "time_point": 10,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 38,
-      "value": 0.65
+      "time_point": 20,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 19,
-      "value": 0.3
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 38,
       "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
     }
   ],
   "interval": {
-    "start": 1986,
-    "end": 2024
+    "start": 0,
+    "end": 20
   },
   "commentary": {
-    "narrative_context": "The 'carried interest' tax loophole allows general partners in private equity, venture capital, and hedge funds to have their performance-based compensation taxed at the lower long-term capital gains rate (approx. 20-24%) instead of the higher ordinary income tax rate (up to 37%). This rule is a point of intense political and economic debate, embodying the core dynamics of a Tangled Rope: it possesses a plausible coordination function (aligning manager and investor interests) while simultaneously enabling a massive, asymmetric extraction of wealth from the public treasury to a small group of high-earners. Its persistence is a testament to its high suppression, maintained by one of the most effective lobbying efforts in the United States.",
+    "narrative_context": "Carried interest taxation in the United States exemplifies a hybrid constraint combining genuine coordination function with asymmetric extraction. The preferential treatment of carried interest \u2014 structuring performance fees for private equity and hedge fund managers as long-term capital gains rather than ordinary income \u2014 creates alignment between fund managers and investors (genuine coordination) while simultaneously extracting substantial tax value from the ordinary income taxpayer base (asymmetric extraction). The constraint's extractiveness has increased over the measurement interval as PE/HF assets under management have grown and regulatory scrutiny has heightened, driving both increased lobbying effort (theater) and accumulating pressure for reform. The constraint exhibits all major perspectival patterns: powerless wage earners see pure extraction (Snare), institutional beneficiaries see coordination (Rope), organized reform coalitions see a temporary arrangement with sunset logic (Scaffold), and the tax distinction itself shows signs of institutional degradation (Piton), with the original rationale (encouraging capital investment by those who own capital) no longer fitting the empirical reality (performance fees by managers with minimal principal at risk).",
     "key_agents": [
-      "Fund General Partners: Primary beneficiaries (institutional/arbitrage) who receive the tax break.",
-      "US Treasury / General Taxpayers: Primary victims (powerless/trapped) who bear the cost of the foregone revenue.",
-      "Limited Partners (Investors): Indirect beneficiaries (powerful/mobile) who see the rule as part of a favorable incentive structure.",
-      "Reform-Minded Legislators: Oppositional agents (organized/constrained) who attempt to close the loophole but are suppressed by lobbying.",
-      "Tax Policy Analysts: Analytical observers who see the dual coordination/extraction nature of the constraint."
+      "Private Equity Partners: Institutional beneficiaries (institutional/arbitrage) \u2014 receive preferential capital gains treatment on carried interest, capturing significant tax value relative to equivalent wage compensation",
+      "Hedge Fund Managers: Institutional beneficiaries (institutional/arbitrage) \u2014 similar preferential treatment, with slightly lower coordination justification than PE given less explicit performance-fee structure",
+      "Ordinary Income Taxpayers: Powerless victims (powerless/trapped) \u2014 bear the relative cost of preferential treatment through higher effective tax burden on wage income; cannot restructure compensation to benefit from capital gains rates",
+      "Federal Treasury / Tax Base: Organized victim (organized/constrained) \u2014 experiences direct revenue loss from preferential treatment; constrained exit (cannot eliminate provision without political cost and capital flight risk)",
+      "Congressional Reform Coalition: Organized challengers (organized/constrained) \u2014 multiple reform efforts (2010-2015, 2017-2024) seek to close loophole; constrained by lobbying pressure and divided political alignment",
+      "Limited Partners / Fund Investors: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from GP incentive alignment; prefer carried interest structure as motivational tool, though indifferent to tax treatment per se",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both the genuine coordination function (incentive alignment) and the contingent extraction mechanism (statutory tax classification)"
     ],
-    "logic_rationale": "Extractiveness (ε=0.65): High. The value represents the significant wealth transfer enabled by the large gap between capital gains and ordinary income tax rates, applied to billions in compensation annually. Suppression (0.80): Very High. Decades of repeated, well-funded, and successful lobbying efforts by the financial industry to defeat legislative attempts to close this loophole demonstrate an extremely effective suppression of alternatives. Theater Ratio (0.40): Moderate. The public justifications rely on complex, often debatable, economic arguments about 'capital formation' and 'risk-taking' that serve to obscure the direct financial transfer, but the rule's primary function is its real economic effect, not performance.",
-    "perspectival_gap": "The gap is profound. For the beneficiaries (GPs and LPs), the constraint is a Rope—a legitimate feature of a contract that aligns incentives for long-term growth. For the victims (the public), it is a Snare—an unfair loophole that extracts public funds for private gain. The analytical perspective resolves this by classifying it as a Tangled Rope, acknowledging that the constraint *simultaneously* has a coordination function and an extractive one. The political battle is essentially a fight over which perspective becomes dominant.",
-    "directionality_logic": "The directionality is derived directly from the structural relationships. 'fund_general_partners' are declared beneficiaries with arbitrage exit, yielding a low 'd' value and perceiving a Rope. 'general_taxpayers' are declared victims with trapped exit, yielding a high 'd' value and perceiving a Snare. This clear opposition in the base properties is what drives the large perspectival gap and makes the Tangled Rope classification from the analytical view robust.",
-    "mandatrophy_analysis": "This constraint is a canonical example of resolving mandatrophy. A naive analysis might label it a 'Snare' (it's a loophole for the rich) or a 'Rope' (it aligns incentives). Both are incomplete. The Tangled Rope classification is essential because it correctly identifies the structure as possessing *both* a genuine coordination function (the 'Rope' part that beneficiaries see) and a severe, asymmetric extraction (the 'Snare' part that victims see). The system's persistence is explained by the beneficiaries' ability to successfully promote the Rope narrative while suppressing challenges to the Snare component."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, growing over interval. The preferential treatment transfers measurable tax value from ordinary taxpayers to fund managers. Treasury revenue loss estimates range from $10-50B annually depending on methodology. The extractiveness has increased as PE/HF sectors have grown \u2014 the same rate structure applied to a much larger asset base generates proportionally larger extraction. Not maximal (0.85+) because the coordination function (incentive alignment) is genuine: absent some performance fee mechanism, fund managers and LPs would face principal-agent misalignment. The constraint achieves real coordination value alongside extraction. Suppression (0.68): Moderate-high. The suppression mechanisms include: (1) technical legal language making the distinction opaque to ordinary taxpayers, (2) regulatory interpretation (IRS Section 1231 partnership rules) rather than explicit statutory carve-out, (3) effective lobbying preventing reform, (4) political fragmentation (some Democrats support carry-friendly policies; some Republicans oppose 'loopholes'). Suppression is not total \u2014 reform movements periodically surface, media attention spikes, and the distinction is publicly debatable. Theater ratio (0.65): Moderate-high and growing. Significant effort spent defending the distinction through technical arguments about capital formation incentives and double taxation, when the primary effect is straightforward tax rate arbitrage. As PE/HF sectors have grown, defensive rhetoric has intensified without corresponding economic rationale strengthening. Theater has increased from 0.40 to 0.65 as the original justification (encouraging capital formation) has become increasingly tenuous relative to actual behavior (massive PE/HF asset accumulation regardless of tax treatment).",
+    "perspectival_gap": "The gap between beneficiary (Rope) and victim (Snare) perspectives is fundamental: the same constraint solves an alignment problem for one agent class while creating arbitrary tax disparities for another. No single agent experiences the full constraint symmetrically. This asymmetry is the signature of Tangled Rope \u2014 genuine coordination function alongside genuine extraction.",
+    "directionality_logic": "The constraint's directionality depends critically on structural position. Beneficiaries (private equity partners, hedge fund managers) have high exit mobility: they can restructure compensation, relocate to low-tax jurisdictions, or negotiate different deal terms. This high-mobility exit (arbitrage) produces low directionality (d \u2248 0.10). Victims (wage earners, treasury) have constrained or trapped exit: wage earners cannot restructure employment into capital income; the treasury cannot simply eliminate the provision without political and economic consequences. This produces high directionality (d \u2248 0.85 for wage earners, d \u2248 0.60 for treasury). The power atoms differ sharply: beneficiaries are institutional; victims are powerless (wage earners) or organized but constrained (treasury). The effective extraction \u03c7 experienced differs by orders of magnitude across perspectives.",
+    "mandatrophy_analysis": "MANDATROPHY STATUS: UNRESOLVED \u2014 The constraint contains genuine ambiguity about whether it is best classified as Tangled Rope (hybrid coordination/extraction) or Snare (pure extraction). The mandatrophy resolution requires determining whether the coordination function (GP-LP incentive alignment) is integral to the constraint or merely a post-hoc justification for an extraction mechanism that would persist regardless. Evidence supporting Tangled Rope: (1) carried interest does align manager and investor interests materially; (2) without some performance fee structure, PE/HF fund management would face principal-agent problems; (3) the coordination function existed before the tax preference and would exist after. Evidence supporting Snare: (1) the tax preference adds substantial value to carried interest beyond what performance fees alone would achieve; (2) reform efforts consistently target the tax treatment, not the carried interest structure itself, suggesting the tax preference is the extraction mechanism; (3) the coordination rationale (encouraging capital formation) does not hold empirically \u2014 PE/HF sectors accumulate capital regardless of tax treatment. RESOLUTION APPROACH: The constraint is legitimately Tangled Rope if the coordination function cannot be disentangled from the extraction mechanism. The critical test (omega_1: principal_at_risk) addresses this: if carried interest truly represents at-risk capital, the coordination is genuine and Tangled Rope holds; if it is disguised compensation with no real risk, the coordination is merely nominal and Snare becomes primary. The current classification (Tangled Rope with mandatrophy_resolved: false) reflects the empirical ambiguity: the constraint exhibits both functions, neither can be clearly isolated as dominant, and resolution requires deeper structural analysis of GP capital commitments and loss-sharing provisions."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "private_equity_fee_structure",
+      "wealth_inequality_accumulation",
+      "executive_compensation_incentives"
+    ],
+    "dual_formulation_note": "Carried interest taxation decomposes into two structurally distinct claims: (1) the genuine coordination mechanism (performance-fee alignment between GPs and LPs), which would exist as Rope under any tax treatment, and (2) the preferential tax treatment (statutory Section 1231 partnership classification), which creates the extraction asymmetry. These could be modeled as separate constraints: carried_interest_as_coordination (\u03b5 \u2248 0.10, Rope) and carried_interest_tax_preference (\u03b5 \u2248 0.72, Snare). The current story captures both as Tangled Rope because they are empirically entangled: the tax preference fundamentally shapes the compensation structure, and the coordination function would be materially weaker without preferential treatment. Decomposition would require counterfactual analysis of PE/HF compensation under ordinary income taxation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
 }

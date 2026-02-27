@@ -2,140 +2,176 @@
   "header": {
     "constraint_id": "advice_as_dangerous_gift",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "advc"
   },
   "base_properties": {
-    "extractiveness": 0.55,
+    "extractiveness": 0.54,
     "suppression": 0.65,
-    "theater_ratio": 0.75,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Hazard of Counsel",
+    "human_readable": "The Hazard of Counsel: Advice as Dangerous Gift",
     "topic_domain": "social/philosophical",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "advice_giver"
     ],
     "victims": [
-      "advice_recipient",
-      "interpersonal_relationship"
-    ],
-    "has_sunset_clause": true
+      "advice_receiver",
+      "epistemic_autonomy"
+    ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Receiver in Epistemic Captivity",
+      "comment": "PERSPECTIVE 1: RECEIVER (SNARE) \u2014 The advice-seeker is trapped by social obligation and power asymmetry. They cannot reject counsel without social cost (ingratitude, damaged relationship, or explicit conflict). They bear the full burden of following bad advice while the giver retains the moral shelter of 'I was just trying to help.' No exit option without social destruction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Desperate Recipient",
-      "comment": "PERSPECTIVE 1: THE RECIPIENT (SNARE) — Trapped by a pressing problem and social pressure, the recipient experiences advice as a coercive force. Rejecting it risks social sanction, while accepting it transfers risk and undermines autonomy. The 'gift' becomes a trap. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.70."
+      "label": "The Receiver with Some Agency",
+      "comment": "PERSPECTIVE 2: RECEIVER WITH AGENCY (TANGLED ROPE) \u2014 Where the receiver has some social standing or alternative counsel sources, they experience partial exit options. The constraint remains (social expectation to seriously consider advice, career/relational costs of visible rejection), but is not total captivity. Benefits from genuine good counsel; costs from absorbing bad advice and the burden of filtering."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "local",
-      "label": "The Well-Intentioned Giver",
-      "comment": "PERSPECTIVE 2: THE GIVER (ROPE) — From the giver's perspective, advice is a pure coordination good, a gift of wisdom to solve a problem. They benefit from feeling helpful and wise, and can give or withhold counsel at will, experiencing no extraction. d≈0.05, f(d)≈-0.12, σ=0.8 → χ≈-0.05."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL (TANGLED ROPE) — The observer sees the dual function: a genuine coordination attempt (sharing knowledge) tangled with asymmetric extraction (risk transfer, ego gratification for the giver, dependency for the receiver). The active enforcement is social pressure. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Regretful Giver",
-      "comment": "PERSPECTIVE 4: THE REGRETFUL GIVER (PITON) — After advice has been given and led to a bad outcome, the act is seen as a degraded ritual. The function (to help) has failed, but the social form persists due to inertia. The high theater_ratio (0.75) reflects the performative aspect of 'giving wisdom' over its actual utility. The constraint is now a piton, an inertial remnant of a failed coordination attempt."
+      "label": "The Advice Giver as Coordinator",
+      "comment": "PERSPECTIVE 3: ADVICE GIVER (ROPE) \u2014 The giver experiences the constraint as coordination: transmitting knowledge, helping others navigate uncertainty. From this perspective, the advice relationship is a pure coordination function with minimal extraction. The giver has high exit options (can choose not to advise, can revise counsel) and experiences the relationship as beneficial to both parties."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Professional Coach/Therapist",
-      "comment": "PERSPECTIVE 5: THE PROFESSIONAL (SCAFFOLD) — In structured contexts like therapy or coaching, advice is framed as a temporary support system designed to build the recipient's own capacity. The relationship has an explicit or implicit sunset clause: the goal is for the recipient to no longer need the advice. This professional framing attempts to manage the 'danger' by making the support temporary."
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Institutional Accountability Movement",
+      "comment": "PERSPECTIVE 4: ACCOUNTABILITY INSTITUTIONS (SCAFFOLD) \u2014 Organizations like mentorship programs, professional ethics bodies, and advice-licensing regimes see the hazard as a temporary structural problem solvable through sunset mechanisms: disclosure requirements, duty-of-care standards, and reversibility norms (advice must remain revisable, not binding). These coordinating institutions experience the constraint as having a clear exit path \u2014 better epistemic hygiene and accountability norms will reduce the hazard. This is architectural, not eternal."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Gratitude Performance",
+      "comment": "PERSPECTIVE 5: GRATITUDE THEATER (PITON) \u2014 The ritual of thanking one's advisor, celebrating the mentor relationship, and performing deference to counsel persists long after its coordination function has atrophied. In modern contexts with access to diverse information sources, the performance of gratitude toward specific advice-givers has become largely theatrical \u2014 maintained through institutional inertia (graduation speeches about mentors, professional acknowledgments) rather than because the original coordination problem requires it. The piton maintains itself through narrative authority, not through structural necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Epistemic Asymmetry View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / EPISTEMIC ASYMMETRY (MOUNTAIN) \u2014 From a civilizational perspective, some hazard in counsel is inherent to the structure of knowledge transmission: the giver has better information than the receiver (or claims to), and the receiver cannot fully verify that information without undoing the asymmetry that made the advice necessary. This could be read as a Mountain (immutable feature of human knowledge and social bonding), but the structural data reveals this as a false summit \u2014 the 'inherent' hazard is partly constructed by social obligation, power asymmetry, and lack of feedback mechanisms. Advice need not be a snare."
     }
   ],
   "omegas": [
     {
-      "id": "intent_vs_outcome",
-      "question": "Is the extractive 'danger' of advice rooted in the giver's (potentially subconscious) intent, or is it an emergent structural property of the act itself, regardless of intent?",
-      "resolution_mechanism": "Psychological studies correlating giver's intent (altruistic vs. ego-driven) with recipient's reported outcomes (autonomy, dependency, success).",
-      "impact": "If intent-driven, the constraint is a Snare from more perspectives. If structural, the Tangled Rope classification holds as the default analytical view.",
+      "id": "harm_causation_threshold",
+      "question": "At what severity threshold does bad advice constitute structural extraction rather than mere risk-taking or legitimate disagreement?",
+      "resolution_mechanism": "Historical analysis of advice outcomes; distinction between outcome variance (advisor was wrong by chance) versus structural bias (advisor benefits from receiver following bad counsel)",
+      "impact": "If threshold is low (any mismatch): most advice becomes snare. If threshold is high (severe harm only): benign extraction goes undetected. Mandatrophy resolution depends on this boundary.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the harm from advice is driven by giver's intent or the structure of the act."
+      "type_class": "empirical",
+      "description": "Threshold for distinguishing bad-luck outcomes from structural extraction"
     },
     {
-      "id": "autonomy_threshold",
-      "question": "At what point does helpful guidance cross the line into creating harmful dependency, thereby increasing the constraint's extractiveness?",
-      "resolution_mechanism": "Longitudinal studies of mentorship and advisory relationships, measuring recipient autonomy over time against frequency and type of advice given.",
-      "impact": "A clear threshold would allow for better calibration of the 'Scaffold' perspective and provide a clear failure condition where it degrades into a Snare.",
-      "confidence": "low",
+      "id": "asymmetry_necessity",
+      "question": "Is the epistemic asymmetry between giver and receiver necessary (some asymmetry must exist for advice to function) or constructed (social obligation exaggerates natural differences in knowledge)?",
+      "resolution_mechanism": "Comparison of advice outcomes in high-transparency contexts (giver and receiver have equal access to information) versus opaque contexts; identification of whether suppressed alternatives explain the asymmetry",
+      "impact": "If necessary: advice hazard is Mountain-adjacent (structural to knowledge). If constructed: the suppression (social obligation, deference norms) is the mechanism \u2014 snare/tangled rope dynamics are contingent institutional choices.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether epistemic asymmetry is inherent or constructed"
+    },
+    {
+      "id": "feedback_repair_effectiveness",
+      "question": "Do feedback mechanisms (advice-receiver can revise, dispute, or ignore without social cost) actually eliminate the hazard, or do they merely redistribute it?",
+      "resolution_mechanism": "Longitudinal study of advice relationships with strong feedback norms (e.g., organizational contexts with psychological safety) versus those without; measurement of actual revision rates and costs of disagreement",
+      "impact": "If feedback repairs hazard: scaffold sunset is achievable \u2014 norms of reversibility solve the snare problem. If feedback only redistributes: hazard persists in subtler form (receiver must appear grateful while privately ignoring, creating new extraction of emotional labor).",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "The threshold where helpful guidance becomes harmful dependency."
+      "description": "Whether feedback mechanisms eliminate or redistribute the hazard"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.75
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.55
+      "value": 0.54
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Drawing from J.R.R. Tolkien's insight that 'advice is a dangerous gift, even from the wise to the wise,' this constraint models the structural tension inherent in giving counsel. While often intended as a coordination good (a Rope), advice carries inherent risks of extraction (a Snare). It can undermine the recipient's autonomy, create dependency, transfer the consequences of failure, and serve the giver's ego more than the recipient's need. The constraint's structure is a classic Tangled Rope, where the helpful function is inseparable from its potential for harm.",
+    "narrative_context": "The hazard of counsel is the structural extraction embedded in the asymmetry between advice-giver and advice-receiver. The giver holds superior information (or claims to), while the receiver is socially obligated to take the counsel seriously. This creates a dynamic where the giver benefits from the receiver's deference and trust, while the receiver bears the cost of following bad advice without easy exit. The constraint is not malicious but structural: the very mechanism that makes advice useful (an asymmetry in knowledge or experience) also enables extraction. Over time, this constraint has accumulated theater \u2014 the performance of gratitude and deference to counsel has become ritualized independent of whether the advice actually helps. Simultaneously, the underlying extractiveness has grown as social obligation to heed counsel has strengthened (through mentorship culture, professional networks, and the ideology of wisdom-seeking) while feedback mechanisms and revisability norms remain weak.",
     "key_agents": [
-      "Advice Giver: Primary beneficiary (institutional/arbitrage) — benefits from ego gratification, status reinforcement, and the feeling of being helpful.",
-      "Advice Recipient: Primary victim (powerless/trapped) — bears the risk of bad outcomes and diminished autonomy; often in a vulnerable position.",
-      "Interpersonal Relationship: Secondary victim (powerless/trapped) — the social bond itself is damaged by bad or unsolicited advice, leading to resentment and distance.",
-      "Professional Advisor: Organized agent (organized/mobile) — attempts to reframe the constraint as a temporary Scaffold with a sunset clause."
+      "Advice Receiver: Primary victim (powerless/trapped) \u2014 bears the cost of following bad counsel and the social cost of visibly disagreeing; lacks exit without relationship damage",
+      "Advice Giver: Primary beneficiary (institutional/arbitrage) \u2014 retains epistemic authority and moral shelter ('I was just helping'); can exit without cost",
+      "Epistemic Autonomy: Secondary victim (powerless/trapped) \u2014 collective good that is eroded by obligation to defer to others' judgment; cannot organize or defend itself",
+      "Accountability Institutions: Organized actors (organized/constrained) \u2014 attempting to introduce reversibility norms, disclosure requirements, and duty-of-care standards to reduce the hazard through sunset mechanisms",
+      "Social Obligation Norms: Institutional structure (institutional/arbitrage) \u2014 the unspoken rule that counsel-seeking implies that you will seriously consider and likely follow the advice; persists through gratitude theater",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the asymmetry as inevitable rather than recognizing it as partly constructed by social deference norms"
     ],
-    "logic_rationale": "Extractiveness (0.55): High. The extraction is not financial but psychological and relational. It represents the transfer of risk to the recipient, the creation of dependency, and the potential for the giver's ego to be served at the recipient's expense. Suppression (0.65): High. Social norms, power dynamics (e.g., parent-child, manager-employee), and the recipient's own vulnerability create significant pressure to accept advice, suppressing the alternative of independent problem-solving. Theater Ratio (0.75): High. The act of giving advice is often highly performative, a ritual of demonstrating wisdom or concern. The functional value of the advice can be secondary to the performance itself, leading to the Piton perspective when the advice fails.",
-    "perspectival_gap": "The gap is profound. The giver genuinely sees a Rope, a pure gift of help. The recipient, feeling cornered and at risk, experiences a Snare. The professional therapist or coach attempts to construct a Scaffold, a temporary support structure. An observer reflecting on failed advice sees a Piton, a hollow ritual. The analytical observer recognizes the inseparable nature of help and harm, classifying it as a Tangled Rope. The 'correct' classification is the full set of perspectives, as the nature of the constraint is defined by one's structural position relative to it.",
-    "directionality_logic": "The Giver (beneficiary + arbitrage) has a low 'd' value, resulting in negative effective extraction (a net benefit), hence the Rope classification. The Recipient (victim + trapped) has a high 'd' value, maximizing effective extraction and triggering the Snare classification. The Analytical observer's canonical 'd' value places the effective extraction squarely in the Tangled Rope range. The different classifications are a direct result of the agents' differing structural relationships to the flow of risk and autonomy.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy of labeling 'advice' as either purely good (coordination) or purely bad (extraction). The DR framework shows it is structurally both simultaneously. A naive analysis might call all advice a Rope, ignoring the harm to the recipient. A cynical analysis might call all advice a Snare, ignoring the genuine coordination function. The Tangled Rope classification, derived from the analytical perspective, correctly identifies the hybrid nature and explains why different agents can have such divergent, yet valid, experiences of the same phenomenon."
-  }
+    "logic_rationale": "Extractiveness (0.54): Moderate-high. The constraint extracts deference, cognitive labor (filtering bad advice), and sometimes material consequences from the receiver. However, the extraction is not maximal because: (1) some advice is genuinely helpful, (2) receivers retain some agency in how they apply counsel, and (3) the hazard depends on the giver's intent and the receiver's critical capacity. The value reflects that bad advice is a real structural harm, not merely an outcome risk. Suppression (0.65): High. Multiple suppression mechanisms: (1) Social obligation makes visible rejection costly, (2) Epistemic asymmetry (giver claims superior knowledge) suppresses the receiver's own judgment, (3) Gratitude norms suppress criticism, (4) Difficulty of assigning causation (is a bad outcome the advice's fault or the receiver's execution?) suppresses accountability. Theater ratio (0.58): Moderate-high. The constraint has shifted from a coordination mechanism (early mentor relationships with high information asymmetry) to a partly ritualized performance (gratitude theater, mentor worship in professional contexts) where the original function (transmitting hard-won knowledge) has been displaced by role-playing deference. The theater has increased because diverse information sources now provide alternatives to advice-seeking, but the social obligation persists through institutional inertia.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The powerless receiver sees a snare (trapped, coerced into deference). The moderate receiver sees a mixed tangled rope (some exit options, some benefits). The beneficiary giver sees pure rope (coordination, mutual benefit). The accountability movement sees a solvable scaffold (sunset mechanisms can reduce the hazard). The gratitude ritual sees its own degradation as a piton (inertial performance). The civilizational observer risks naturalizing the asymmetry as a mountain but the structural data reveals this as a false summit \u2014 the obligation to defer is not inherent to knowledge transmission but constructed by social norms. The gap between powerless and institutional perspectives is maximum: the same relationship that feels like captivity to the receiver feels like helpful coordination to the giver.",
+    "directionality_logic": "Directionality is determined by the agent's structural position in the extraction flow. The advice receiver occupies high d (d \u2248 0.85-0.95): they are a victim with trapped exit options, bearing the full cost of following bad counsel while unable to walk away without social damage. The advice giver occupies low d (d \u2248 0.10-0.25): they are a beneficiary with arbitrage exit options \u2014 they can revise advice, disclaim responsibility, or exit the relationship with minimal cost. The asymmetry is structural: one party can exit freely while the other is socially bound to stay. This differential exit capacity drives the classification differences across perspectives. Epistemic autonomy occupies maximum d (d \u2248 1.0): it is the most powerless agent in the constraint system, completely unable to organize or defend itself against the erosion caused by obligation to defer to others' judgment.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by recognizing that the hazard of counsel is genuinely both coordination AND extraction simultaneously. It is NOT a false coordination masquerading as extraction (which would indicate a snare mislabeled as rope). Instead, the relationship authentically serves a coordination function (knowledge transfer, mentorship, guidance through uncertainty) while also extracting deference, cognitive labor, and sometimes harmful compliance. The mandatrophy is resolved by accepting that asymmetric coordination is possible \u2014 one party can benefit more than the other, and extraction can coexist with genuine coordination. The tangled rope classification holds because: (1) receivers do benefit from legitimate advice, (2) the constraint requires active enforcement (social obligation and gratitude norms must be maintained), (3) there are genuine victims (both the receiver who absorbs bad advice and the epistemic commons eroded by deference culture), and (4) there is a real coordination function (knowledge transmission). The false summit test: is the 'inherent hazard' of counsel actually inherent (Mountain) or constructed (Snare/Tangled Rope)? The structural data shows it is constructed \u2014 the suppression mechanisms (social obligation, deference norms, gratitude theater) are contingent institutional choices, not laws of nature. Therefore the analytical observer's mountain classification fails the false summit gate and is revealed as naturalization."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "trust_asymmetry",
+      "epistemic_deference_culture"
+    ],
+    "dual_formulation_note": "The hazard of counsel is upstream of institutional trust dynamics and epistemic deference culture. The constraint represents the fundamental structural hazard; downstream constraints inherit the asymmetry and suppression mechanisms. Decomposition principle: if measuring advice by 'empirical accuracy of specific counsel' yields different \u03b5 than measuring by 'systemic suppression of receiver autonomy,' these are different constraints \u2014 the first is coordination (low \u03b5), the second is extraction (high \u03b5). This story measures the second."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
 }

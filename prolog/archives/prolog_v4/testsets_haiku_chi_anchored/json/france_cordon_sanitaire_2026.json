@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "france_cordon_sanitaire_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cordon"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.48,
+    "theater_ratio": 0.78,
+    "claimed_type": "piton",
+    "human_readable": "The 'Front R\u00e9publicain' (Republican Front) Cordon Sanitaire",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "centrist_coalition_parties",
+      "political_establishment"
+    ],
+    "victims": [
+      "democratic_legitimacy",
+      "electoral_competition",
+      "policy_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "piton",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginalized Voter",
+      "comment": "PERSPECTIVE 1: MARGINALIZED VOTER (PITON) \u2014 Voters supporting the cordon-blocked party face a performative democratic process. The cordon's theatrical enforcement (media framing, party coordination, elite consensus) persists despite its declining functional capacity to prevent electoral shifts. Theater ratio=0.78. Voters experience ritual exclusion; the mechanism persists through institutional inertia, not functional necessity. d\u22480.88, f(d)\u22481.25."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Centrist Coalition",
+      "comment": "PERSPECTIVE 2: CENTRIST COALITION (ROPE) \u2014 For establishment parties, the cordon was originally coordination: preventing a far-right executive through tactical voting. But by 2026, it functions as pure institutional maintenance. The coalition still derives benefit (vote consolidation, agenda-setting power) with minimal coercion overhead. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.02. Net beneficiary status sustains participation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Political Entrepreneur",
+      "comment": "PERSPECTIVE 3: REGIONAL POLITICAL ENTREPRENEUR (SNARE) \u2014 Locally-rooted politicians who might build independent movements are constrained by the cordon's suppression of alternatives. Career advancement within the establishment coalition requires accepting the cordon framework. Exit to independent candidacy risks electoral isolation (vote-splitting via cordon coordination). d\u22480.70, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.33. Moderate extraction; constrained but not trapped."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Democratic Opposition Movement",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC OPPOSITION MOVEMENT (PITON) \u2014 Civic groups and watchdogs initially mobilized the cordon as a democratic defense mechanism. By 2026, their enforcement role has atrophied \u2014 the cordon persists theatrically (rallies, media campaigns, 'civic duty' framings) despite declining effectiveness at preventing far-right gains. The opposition sees its own institutional structure as degraded: it mobilizes ritual consensus instead of building substantive policy alternatives. theater_ratio=0.78. d\u22480.52, f(d)\u22480.70, \u03c3=1.0 \u2192 \u03c7\u22480.15. Low extraction reflects theater-dependent persistence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Far-Right Party (Constrained Beneficiary)",
+      "comment": "PERSPECTIVE 5: FAR-RIGHT PARTY (TANGLED ROPE) \u2014 The cordon extracts from this party (vote-splitting coordination prevents plurality conversion to executive power) while simultaneously enabling its organizational growth. Mobilization against the cordon increases supporter engagement and media visibility. The party benefits from framing the cordon as anti-democratic (coordination failure = narrative ammunition). Active enforcement of cordon gates at every election paradoxically legitimizes the party's claim that the system is rigged. d\u22480.45, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.09. Low effective extraction despite high suppression because the party has agency and strategic benefits from the arrangement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (False Naturalization)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE NATURALIZATION (MOUNTAIN) \u2014 Risks treating the cordon as an irreducible feature of democratic governance: 'Democracies must prevent extremists from taking power.' But the structural data (\u03b5=0.22, suppression=0.48, theater_ratio=0.78) contradicts the mountain gate (\u03b5\u22640.25, suppression\u22640.05, emerges_naturally=true). The cordon is a contingent institutional arrangement, not a law of political physics. The false summit reveals that naturalizing the cordon obscures its actual composition: party coordination + media narrative + elite consensus-building. These are learned, maintained through effort, and subject to decay."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "functional_threshold_collapse",
+      "question": "At what electoral threshold does the cordon mechanism cease to function as vote-splitting coordination and become pure theatrical enforcement?",
+      "resolution_mechanism": "Historical analysis of cordon effectiveness: measure percentage of voters accepting tactical voting vs. voting sincerely despite cordon framing; correlation between cordon messaging intensity and actual vote concentration; comparison of actual vote outcomes vs. cordon-predicted outcomes across electoral cycles",
+      "impact": "If threshold < 25% party support: cordon collapses into theater earlier than analysis suggests (piton classification confirmed). If threshold > 35%: cordon has functional reserve capacity, sustaining coordination function longer (shifts toward tangled_rope from some perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Electoral threshold at which cordon mechanism ceases coordination and becomes pure theater"
+    },
+    {
+      "id": "international_legitimacy_feedback",
+      "question": "Does EU/NATO legitimacy pressure on anti-democratic movements strengthen or weaken the cordon's suppression function within France?",
+      "resolution_mechanism": "Comparative analysis of European cordon mechanisms (Germany, Italy, Austria); interview data from French party elites on whether external pressure increases or decreases cordon coordination incentives; polling on voter perception of cordon as democratic necessity vs. elite gatekeeping",
+      "impact": "If external pressure strengthens cordon: suppression remains structural (\u03b5 and suppression stable). If external pressure is irrelevant or counterproductive: suppression declines and \u03b5 shifts downward (constraint transitions toward rope or dissolves). If external pressure triggers anti-establishment backlash: suppression increases paradoxically (\u03b5 stable or rises, theater rises), accelerating piton degradation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether international legitimacy pressure strengthens or weakens the cordon's suppression function"
+    },
+    {
+      "id": "alternative_coalition_viability",
+      "question": "Would a political coalition including the far-right party (but excluding one current centrist party) be functionally stable, and what would trigger its formation?",
+      "resolution_mechanism": "Scenario analysis of coalition game theory; identification of policy domains where far-right and current-excluded party have aligned interests; historical precedent analysis from Austrian, Italian, Polish coalitions; simulation of vote distribution shifts that would make such coalition arithmetic viable",
+      "impact": "If viable: cordon's suppression function is an active constraint preventing equilibrium, not theater (\u03b5 rises, piton classification weakened). If not viable: cordon's suppression is redundant \u2014 the equilibrium excludes the far-right party anyway, and cordon persists as pure theater (\u03b5 falls, piton confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether far-right inclusion in alternative coalition would be functionally stable"
+    },
+    {
+      "id": "democratic_legitimacy_cost_accounting",
+      "question": "How much of the reported decline in French civic engagement and trust in democracy since 2017 is attributable to cordon enforcement suppressing political representation?",
+      "resolution_mechanism": "Regression analysis: civic engagement trends vs. cordon messaging intensity; voter survey data on perceived democratic legitimacy, stratified by whether respondent's preferred party is in cordon 'acceptability zone'; comparison with democracies lacking explicit cordons (Swiss multi-party coalition, Nordic consensus models)",
+      "impact": "If cost is substantial (>30% of decline): cordon's suppression function is genuine but costly to democratic health (supports piton classification \u2014 functional trade-off degrading). If cost is negligible: cordon's suppression is redundant theater (piton confirmed). If cost is high but necessary: shifts toward tangled_rope (mixed coordination benefit and extraction cost).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Portion of democratic legitimacy decline attributable to cordon enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 2002,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The 'Front R\u00e9publicain' (Republican Front) cordon sanitaire was established as a coordination mechanism to prevent far-right electoral breakthrough through tactical voting by mainstream parties and civic mobilization. From 2002-2017, it functioned as genuine coordination: parties voluntarily withdrew in runoff ballots to prevent far-right candidates from advancing, and voters accepted tactical voting as a democratic defense. By 2026, the mechanism has transitioned into a Piton state\u2014institutional inertia persists the constraint through performative enforcement (media consensus, party coordination rituals, elite statements) while its actual functional capacity to prevent far-right gains has degraded significantly. The cordon now extracts from political competition (suppressing alternative coalitions and policy diversity) without providing the coordination benefit it once offered. Theater ratio has risen from 0.35 (early 2000s: genuine coordination among authentic alternatives) to 0.78 (2026: performative ritual), while base extractiveness has fallen from 0.38 (when exclusion cost mattered to the far-right party) to 0.22 (when electoral growth is no longer suppressed by cordon mechanisms alone). The constraint exemplifies how coordination mechanisms degrade into theatrical maintenance when the structural conditions that justified their existence transform.",
+    "key_agents": [
+      "Centrist Coalition Parties (PS, Renaissance, Republicans): Primary beneficiary (institutional/arbitrage) \u2014 maintains vote consolidation and agenda-setting power through cordon; benefits from moral framing as democratic defenders",
+      "Political Establishment & Media: Secondary beneficiary (institutional/arbitrage) \u2014 cordon provides narrative coherence and gate-keeping legitimacy",
+      "Marginalized Voters (supporters of cordon-blocked party): Primary victim (powerless/trapped) \u2014 face formal exclusion from coalition arithmetic despite electoral growth; theater ratio high (0.78) ensures exclusion is framed as civic duty rather than suppression",
+      "Regional Political Entrepreneurs: Secondary victim (moderate/constrained) \u2014 constrained by cordon framework preventing independent movement-building; career advancement requires accepting establishment coalition logic",
+      "Far-Right Party: Constrained beneficiary (powerful/mobile) \u2014 experiences extraction (vote-splitting via cordon coordination) but benefits from cordon's contradictory effect (mobilization against cordon increases engagement and frames establishment as anti-democratic)",
+      "Civic Opposition Movements: Organized agent (organized/constrained) \u2014 originally mobilized cordon as democratic defense; by 2026, enforcement role has atrophied and organization persists theatrically",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as irreducible feature of democracy"
+    ],
+    "logic_rationale": "Extractiveness (0.22): Low and declining. Base extractiveness at time T=10 reflects the cordon's reduced functional capacity to suppress far-right electoral gains\u2014the party has grown despite cordon enforcement, indicating suppression is no longer effective at preventing representation. The decline from 0.38 to 0.22 over the interval shows the constraint is becoming less extractive in structural terms; it suppresses electoral competition for the marginalized party, but this suppression no longer blocks the party's organizational growth or electoral advances. Suppression (0.48): Moderate. The cordon maintains suppression through party coordination (mainstream parties' withdrawal coordination in runoffs), media gatekeeping (consensus framing of the party as unsuitable), and elite consensus-building (civic leaders' mobilization for tactical voting). But this suppression is contingent and learned\u2014it requires active institutional maintenance and shows signs of erosion. Theater ratio (0.78): High and rising. The dramatic increase from 0.35 (early 2000s: genuine coordination among authentic alternatives) to 0.78 (2026) signals the shift toward theatrical maintenance. Cordon enforcement has become ritualistic: media campaigns emphasizing civic duty, party leadership speeches about democratic values, and public mobilizations occur predictably each election cycle regardless of actual far-right electoral threat. The performative content has increased relative to functional necessity\u2014the cordon persists through institutional inertia and narrative coherence, not because it prevents the far-right party from gaining seats or influence.",
+    "perspectival_gap": "This constraint generates a stark perspectival divide based on whether agents are inside or outside the cordon's 'acceptability zone.' The centrist coalition sees the cordon as coordination (Rope)\u2014a legitimate mechanism for preventing democratic breakdown. Marginalized voters outside the acceptable zone see it as pure theater (Piton)\u2014a ritual exclusion process that persists despite its declining functional capacity. The analytical observer risks seeing an immutable feature of democracies (Mountain)\u2014'democracies must prevent extremists'\u2014but the structural data reveals this as a false summit: the cordon is a contingent institutional arrangement with declining extractiveness and rising theater, characteristic of institutional decay rather than natural law. The far-right party's perspective (Tangled Rope) reveals a paradox: the cordon both extracts (suppresses coalition inclusion) and enables (mobilizes supporters by framing the system as rigged). Regional political entrepreneurs see a Snare\u2014career advancement within establishment politics requires accepting cordon logic, constraining alternative political entrepreneurship. The civic opposition movement sees its own organization as Piton\u2014the enforcement machinery (mobilizations, messaging, coordination) persists through inertia despite declining effectiveness.",
+    "directionality_logic": "Centrist Coalition: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary. Marginalized Voters: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.25. High extraction; voters have no exit from the exclusion. Regional Entrepreneurs: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. Significant extraction; career paths require accepting cordon constraints but exit to independent candidacy is costly. Far-Right Party: Constrained beneficiary + mobile \u2192 d\u22480.45, f(d)\u22480.42. Low effective extraction despite suppression because the party has agency and paradoxical benefit from cordon framing. Civic Opposition: Organized + constrained \u2192 d\u22480.52, f(d)\u22480.70. Low effective extraction; organization persists through inertia, theater-dependent.",
+    "mandatrophy_analysis": "The cordon sanitaire resolves the mandatrophy by demonstrating how a coordination mechanism can degrade into a suppression mechanism while maintaining institutional legitimacy through performative renewal. The constraint is NOT a false snare (pure extraction falsely labeled as coordination) because the historical evidence shows genuine coordination function in 2002-2010. Instead, it is a REAL PITON: a former coordination mechanism (Rope) that has become increasingly theater-dependent as its functional necessity has declined. The extractiveness decline from 0.38 to 0.22 combined with theater ratio rise from 0.35 to 0.78 precisely tracks the piton transition: the mechanism's original function (vote-splitting coordination) is no longer structurally necessary because far-right electoral growth persists despite cordon enforcement, yet the constraint persists through institutional inertia (party coordination habits, media consensus, civic narratives). The classification as Piton (not degraded Snare or false Rope) is justified because: (1) suppression is moderate (0.48), not high (\u22650.60 required for snare); (2) extractiveness is low (0.22), not high (\u22650.46 for snare); (3) theater_ratio is very high (0.78, \u22650.70 required for piton), indicating performative maintenance. The cordon's persistence is not extraction-driven (high chi) but theater-driven (high performance-to-function ratio). This diagnosis enables policy intervention: replace cordon with substantive policy differentiation (shift from theater-dependent exclusion to genuine coalition competition based on programmatic differences)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "european_populist_movements",
+      "french_civic_engagement_decline",
+      "coalition_formation_constraints"
+    ],
+    "dual_formulation_note": "The cordon sanitaire constraint is downstream of the broader structural shift in European electoral competition (rise of anti-establishment parties) but represents a distinct contingent institutional response. The upstream structural constraint is the fragmentation of post-WWII consensus politics; the cordon is one nation's chosen mechanism for managing this fragmentation. This decomposition allows analysis of how different democracies (Austria, Italy, Germany, Netherlands) implement different responses to the same upstream structural pressure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

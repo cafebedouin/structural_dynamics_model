@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "cognitive_energy_budget",
+    "version": "1.0",
+    "generated_date": "2024-03-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Attention Exhaustion Trap",
+    "topic_domain": "cognitive/technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "attention_economy_platforms",
+      "information_overload_profiteers"
+    ],
+    "victims": [
+      "individual_cognitive_function",
+      "informed_decision_making"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exhausted Individual",
+      "comment": "Perspective 1: The Exhausted Individual (Snare). Faced with relentless demands on their attention, individuals often feel trapped, unable to escape the constant barrage of notifications, information, and stimuli. This leads to cognitive overload, reduced focus, and diminished decision-making capacity. High extractiveness and suppression. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.93"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Attention Economy Platforms",
+      "comment": "Perspective 2: Attention Economy Platforms (Rope). These platforms benefit from the aggregate attention of users, creating a collective coordination effect. The extraction from individuals is low compared to the overall benefit derived from the platform's functionality and user base. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.066"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 3: The Analytical Observer (Tangled Rope). From a high-level perspective, the attention economy exhibits both coordination (connecting people and information) and extraction (overwhelming individuals and eroding cognitive function). d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.76"
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legacy Educational Systems",
+      "comment": "Perspective 4: Legacy Educational Systems (Piton). Traditional education struggles to adapt to the digital age, often perpetuating outdated methods that fail to equip individuals with the skills needed to navigate information overload and maintain cognitive well-being. High theater ratio; constrained exit. d=0.75, f(d)=1.10, \u03c3=1.0 -> \u03c7=0.605. Although not as extractive as snare, the lack of benefit from its intended function leads it to be considered piton."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cognitive_capacity_variability",
+      "question": "How much does individual cognitive capacity vary?",
+      "resolution_mechanism": "Neurobiological studies; cognitive testing across demographics",
+      "impact": "Impact: High individual variability would mean different people experience different levels of extractiveness. Low variability means a more uniform snare across individuals.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of variation in cognitive energy budgets."
+    },
+    {
+      "id": "platform_governance_effectiveness",
+      "question": "How effective are platform governance interventions for reducing extractive behaviors?",
+      "resolution_mechanism": "A/B testing of different platform policies; longitudinal studies of user behavior",
+      "impact": "Impact: If interventions are highly effective, the tangled_rope classification might shift towards rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platforms can effectively govern attention extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The attention exhaustion trap describes the way modern society and the internet have overloaded our limited daily cognitive energy. Increased reliance on technology and constant information streams extract from individual's limited cognitive bandwidth, causing exhaustion and diminished decision-making capabilities. This dynamic benefits certain platforms and entities at the expense of individual well-being and collective cognitive function.",
+    "key_agents": [
+      "Individual Cognitive Function: Primary victim (powerless/trapped) - experiences constant cognitive overload.",
+      "Attention Economy Platforms: Primary beneficiary (institutional/arbitrage) - profits from aggregated user attention.",
+      "Informed Decision Making: Secondary victim (moderate/constrained) - ability to make informed choices diminishes with cognitive fatigue.",
+      "Legacy Educational Systems: Institutional actors perpetuating outdated, ineffective learning paradigms (institutional/constrained)."
+    ],
+    "logic_rationale": "The extractiveness is rated at 0.55 because individuals are significantly drained by modern information overload. Suppression at 0.60 because individuals are not completely trapped, but have difficulty escaping the bombardment of information due to societal and professional pressure.",
+    "perspectival_gap": "The perspective gap comes from the beneficiaries benefiting from users spending more time on the application while the end user suffers from lowered cognitive ability and increased cognitive strain. The analytical observer sees both points and must balance the benefit to the platforms with the harm done to the user.",
+    "directionality_logic": "Individual Cognitive Function: Victim + trapped \u2192 d=0.95, f(d)=1.42. Attention Economy Platforms: Beneficiary + arbitrage \u2192 d=0.05, f(d)=-0.12. Analytical Observer: Analytical \u2192 d=0.72, f(d)=1.15. Legacy Educational Systems: d=0.75 because though not necessarily trapped, these actors face high risks and opportunity costs from altering their long set-in-stone practices."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "social_media_addiction",
+      "misinformation_proliferation"
+    ]
+  },
+  "directionality_overrides": []
+}

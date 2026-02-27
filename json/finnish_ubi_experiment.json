@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "finnish_ubi_experiment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ubi_fin"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Finnish Basic Income Experiment (2017-2018)",
+    "topic_domain": "economic/social/welfare_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "welfare_recipients",
+      "labor_market_participants",
+      "administrative_efficiency_gains"
+    ],
+    "victims": [
+      "fiscal_sustainability_credibility",
+      "means_tested_welfare_advocates",
+      "employment_outcomes_verification"
+    ],
+    "mandatrophy_resolved": false,
+    "has_sunset_clause": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Welfare-Dependent Individual",
+      "comment": "PERSPECTIVE 1: WELFARE-DEPENDENT INDIVIDUAL (SNARE) \u2014 Trapped in the experimental regime with no exit. Receives \u20ac560/month unconditionally but cannot opt out of the experiment. Cannot verify whether the treatment actually improves wellbeing or merely creates dependency. Extractive mechanism: researchers and policymakers extract data and legitimacy from the subject's participation while maintaining full power to terminate the benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Employed Worker in the Experimental Region",
+      "comment": "PERSPECTIVE 2: EMPLOYED WORKER / EXPERIMENTAL REGION (TANGLED ROPE) \u2014 Constrained by regional labor market conditions and tax implications. Benefits from reduced administrative friction (UBI replaces multiple welfare programs). Extraction occurs through implicit subsidy mechanism: receives UBI if eligible while tax-paying employed workers fund expansion. Mixed coordination and extraction: UBI simplifies payment mechanisms (coordination benefit) while extracting revenue from employed cohort."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Finnish Government / KELA Administration",
+      "comment": "PERSPECTIVE 3: FINNISH GOVERNMENT / KELA (ROPE) \u2014 Primary beneficiary. Experiences UBI as a coordination mechanism: consolidates fragmented means-tested programs into a single payment stream, reducing administrative overhead and verification burden. Can exit (and did, terminating the experiment in 2018). Benefits from simplified welfare delivery and data collection for policy design. Low effective extraction \u2014 the constraint solves a genuine coordination problem."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Global Progressive Policy Coalition",
+      "comment": "PERSPECTIVE 4: GLOBAL PROGRESSIVE POLICY COALITION (TANGLED ROPE) \u2014 Organized actors (social democrats, inequality advocates, think tanks) see UBI as a solution to automation and precarity. Constrained by the need for scalable evidence. Extraction occurs through claim-staking: the experiment's legitimacy is extracted to justify much larger policy proposals globally, even if local results are modest or ambiguous. Active enforcement required to maintain the narrative (publishing selective analyses, emphasizing employment retention over wage effects)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Means-Tested Welfare System (Institutional Inertia)",
+      "comment": "PERSPECTIVE 5: MEANS-TESTED WELFARE SYSTEM (PITON) \u2014 The experiment exists alongside and threatens the existing welfare bureaucracy. Theater ratio high (0.65): means-testing appears necessary for targeting but creates complexity, error, and stigma that UBI would eliminate. The existing system persists through institutional inertia despite known inefficiency. UBI is simultaneously a replacement mechanism and a threat to welfare professional identity and budgets. Classification reflects that the constraint (the dual system) is maintained performatively \u2014 administrators defend means-testing through technical arguments while UBI evidence mounts."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Experimental Research Coalition",
+      "comment": "PERSPECTIVE 6: EXPERIMENTAL RESEARCH COALITION (SCAFFOLD) \u2014 University researchers, statisticians, and evaluation experts see the experiment as a temporary coordination mechanism to resolve the 'what would UBI actually do?' question. Sunset built in: the experiment was designed to end in 2018 to make room for full-scale policy decision. Theater ratio declining as longitudinal data replaces narrative: initial implementation (theater-heavy) yields to empirical outcomes. If the sunset is executed as planned and results feed into genuine policy choice, this is genuinely scaffold."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Global Employment-as-Legitimacy Ideology",
+      "comment": "PERSPECTIVE 7: EMPLOYMENT-AS-LEGITIMACY IDEOLOGY (SNARE) \u2014 The constraint embeds a deeper extraction: work is framed as the primary source of social legitimacy and dignity. UBI experiments are evaluated primarily on whether they affect employment rates, reifying the ideology that human worth derives from wage labor. Trapped: any policy innovation must prove it doesn't reduce employment, preventing exploration of alternatives (reduced work hours, care work revaluation, capability expansion). The ideology extracts legitimacy from participants while precluding exit from the employment-centric frame."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "employment_effect_measurement_sensitivity",
+      "question": "Does the measured employment effect depend critically on how employment is counted (hours vs participation vs wage levels) and on which cohort is analyzed?",
+      "resolution_mechanism": "Comprehensive sensitivity analysis across multiple employment definitions and subpopulation stratifications; audit of outcome variable choices by independent evaluators",
+      "impact": "If highly sensitive: employment results are fragile and the experiment validates policy-maker discretion in interpretation. If robust: results provide genuine guidance for full-scale rollout.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sensitivity of employment outcomes to measurement definition"
+    },
+    {
+      "id": "behavioral_response_generalization",
+      "question": "Do behavioral responses (job search, hours worked, consumption patterns) observed in a temporary 2-year experiment generalize to permanent UBI?",
+      "resolution_mechanism": "Comparison with longer-running UBI pilots (Kenya GiveDirectly, Stockton SEED); theoretical modeling of endowment effects and belief updates under temporary vs permanent treatment",
+      "impact": "If generalizable: experiment results provide valid policy guidance. If not: temporary experiment primarily reveals how people behave when they expect the benefit to end, not how they'd behave under permanent UBI.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether temporary experiment effects generalize to permanent policy"
+    },
+    {
+      "id": "fiscal_burden_estimation_extraction",
+      "question": "Who bears the true fiscal burden of scaling the experiment to full population, and are policymakers extracting legitimacy from a small-scale experiment that they know cannot scale?",
+      "resolution_mechanism": "Transparent fiscal modeling: cost to scale to full Finnish population with various replacement rates; comparison of official cost estimates with independent analysis; tracking of policy communications before vs after experiment completion",
+      "impact": "If scaling is genuinely feasible: UBI is a coordinated policy solution. If scaling is prohibitive: the experiment is an extraction mechanism \u2014 generating legitimacy for a proposal that cannot actually be implemented.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fiscal scalability of UBI to full population"
+    },
+    {
+      "id": "narrative_selection_bias",
+      "question": "Are positive narratives (improved wellbeing, reduced stress) being selectively amplified relative to neutral or negative empirical outcomes (minimal employment effect, no wage growth)?",
+      "resolution_mechanism": "Meta-analysis of media coverage, policy briefs, and research publication patterns; comparison of prominence given to different outcome dimensions; tracking of narrative shifts before and after formal results release",
+      "impact": "If selection bias is large: the constraint is primarily extractive (generating legitimacy for a predetermined narrative). If balanced: the constraint is genuinely informative coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Narrative selectivity in experiment communication"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The Finnish Basic Income Experiment (2017\u20132018) distributes \u20ac560/month to 2,000 randomly selected unemployed recipients while maintaining the existing means-tested welfare system in parallel. The experiment exhibits structural tensions characteristic of tangled rope constraints: it simultaneously provides genuine coordination benefits (simplified administration, reduced welfare stigma) and extracts legitimacy from limited experimental data to justify much larger policy claims. The constraint's extractiveness (0.52) reflects that policymakers and progressive advocates derive substantial policy legitimacy from modest experimental results, while the true fiscal burden of scaling remains uncertain. The theater ratio (0.65) indicates that narrative framing and selective outcome reporting constitute a significant portion of the experiment's public function \u2014 initial implementation is narrative-heavy, with empirical clarification occurring slowly. The constraint embeds a deeper layer: work-as-legitimacy ideology means the experiment itself must be justified primarily through employment effects, which may be the least robust measurement.",
+    "key_agents": [
+      "Welfare recipients (2,000 individuals): Primary victims (powerless/trapped) \u2014 receive unconditional income but bear extraction of legitimacy and data while unable to verify actual treatment effects",
+      "Finnish Government / KELA Administration: Primary beneficiary (institutional/arbitrage) \u2014 simplifies welfare delivery, reduces administrative overhead, collects valuable policy data",
+      "Global progressive policy coalition (think tanks, academics, political advocates): Organized beneficiaries (organized/constrained) \u2014 extract legitimacy and narrative support for much larger UBI proposals globally",
+      "Employed workers in experimental regions: Secondary victims (moderate/constrained) \u2014 fund UBI through taxation while constrained by labor market conditions",
+      "Means-tested welfare bureaucracy: Institutional inertia actor (institutional/arbitrage) \u2014 threatens job roles and budgets; maintains inertial defense through technical arguments",
+      "Employment-as-legitimacy ideology: Civilizational-level victim (powerless/trapped) \u2014 the constraint reifies work as sole source of social legitimacy, precluding exploration of alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The experiment extracts substantial legitimacy from modest data: employment effects are minimal (no significant increase in employment or hours), yet the constraint is used to justify proposals for much larger, permanent UBI schemes in other jurisdictions. This legitimacy extraction occurs asymmetrically \u2014 policymakers and advocates benefit from being able to claim 'the Finnish experiment shows UBI works,' while the actual causal evidence is limited. The extraction increased over the interval (0.38 \u2192 0.52) as initial narrative coverage emphasizing wellbeing and stress reduction gave way to results showing employment remained flat. Suppression (0.48): Moderate. Recipients are trapped in the experimental regime (cannot opt out), but suppression is not total because the benefit is unconditional (no behavioral requirements) and the experiment was transparent in design. Suppression derives from the fact that employment-as-legitimacy framing is implicit rather than explicit \u2014 participants and observers are constrained to evaluate success through employment metrics, not through alternative wellbeing measures. Theater ratio (0.65): Moderate-high. Significant performative content: the experiment is framed as a policy test, but the logistics (maintaining two parallel welfare systems, collecting extensive survey data, coordinating with researchers) require substantial bureaucratic theater. Initial implementation (2017) emphasized wellbeing narratives and experimental excitement (higher theater). By end (2018), empirical results dominated discourse (lower theater relative to initial period, but still substantial because the results are selectively framed).",
+    "perspectival_gap": "The analytical observer must navigate a landscape where the empirical results (employment effect approximately zero, modest wellbeing improvements, no significant wage effects) support different narratives depending on political commitments. A genuinely disinterested analytical perspective at global/civilizational scope sees a constraint that reifies employment-as-legitimacy while failing to produce the empirical evidence needed to resolve the fundamental question: would permanent, universal UBI differ meaningfully from temporary, targeted UBI? This gap between the local experiment (which can show effects of temporary payments to unemployed people) and the global claim (permanent UBI solves precarity and automation) is the seat of the constraint's extractiveness.",
+    "directionality_logic": "The directional flows are complex. Recipients nominally benefit from unconditional income (d \u2192 low, beneficiary status) but lose autonomy (d \u2192 high, victim status) \u2014 the net effect derives from whether they perceive the benefit as freely given or extractive. Employed workers fund the program (d \u2192 high, victim status) but benefit from social insurance expansion (d \u2192 low, beneficiary status) \u2014 constrained exit options (regional labor markets) raise their effective extraction experience. Government derives arbitrage benefits (exit capability, administrative simplification) pushing d low. Progressive advocates experience the constraint through constrained exit (unable to walk away from the narrative they've invested in) while benefiting from legitimacy spillovers, creating mixed directionality. The employment-as-legitimacy ideology operates at civilizational scope with near-total suppression of alternatives \u2014 this is the deepest extraction, operating through what remains unthought rather than through visible enforcement.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: The constraint exhibits features of both Rope (genuine coordination gain in welfare simplification) and Snare (extraction of legitimacy from limited evidence). The resolution depends on whether the experiment's results actually drive full-scale policy decisions or whether results are selectively used to justify predetermined conclusions. If Finland implements full UBI based on this evidence: the experiment was genuine coordination and evidence-gathering (Rope/Scaffold). If Finland abandons the experiment and other countries cite it to justify UBI proposals they fund differently: the experiment was primarily extractive (Snare/Tangled Rope). The mandatrophy remains unresolved because the constraining outcome \u2014 the actual policy decision \u2014 has not yet occurred. The theater ratio (0.65) suggests that the constraint's function is shifting from empirical investigation toward narrative justification, which indicates extraction is becoming dominant. Resolution mechanism: track whether Finland's actual welfare policy in years 3-5 post-experiment incorporates UBI elements, and whether other jurisdictions that cite the experiment implement comparable designs or fundamentally different ones."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "welfare_bureaucracy_efficiency",
+      "employment_legitimacy_ideology",
+      "global_ubi_movement_rhetoric"
+    ],
+    "dual_formulation_note": "The Finnish UBI experiment can be decomposed into two structurally distinct constraints: (1) welfare_simplification_coordination (\u03b5 \u2248 0.15, Rope) \u2014 the genuine coordination gain of replacing fragmented means-tested programs with unified UBI administration, and (2) ubi_legitimacy_extraction (\u03b5 \u2248 0.60, Snare) \u2014 the extraction of policy legitimacy from limited experimental evidence to justify much larger claims globally. The present constraint story treats them as unified (\u03b5 = 0.52, Tangled Rope) because they are empirically entangled in the same policy mechanism. Separate stories with independent \u03b5 values would artificially decompose what is genuinely a hybrid constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.72
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "header": {
+    "constraint_id": "mutual_defection_equilibrium",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mudef"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "The Infinite Prisoner's Dilemma Stalemate",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "all_agents",
+      "collective_welfare"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Defector",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL DEFECTOR (SNARE) \u2014 Each agent rationally defects because unilateral cooperation yields the worst payoff (sucker's payoff). Trapped in a structure where defection is individually rational but collectively catastrophic. No exit option exists that improves outcomes for this agent without coordinating with others, which the structure prevents."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Coalition Attempt",
+      "comment": "PERSPECTIVE 2: ORGANIZED COALITION ATTEMPT (SNARE) \u2014 Groups attempting to organize cooperation face asymmetric payoff structure: they benefit only if all members cooperate, but any member has incentive to defect and capture the defection payoff. Organization cannot change the underlying payoff matrix. Extraction operates through the mathematical structure itself."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Rule-Setter Institution",
+      "comment": "PERSPECTIVE 3: RULE-SETTER INSTITUTION (ROPE) \u2014 An external enforcer (contract law, reputation system, repeated-game mechanism) can convert the one-shot dilemma into a coordination problem by changing payoff structure or enabling retaliation. From this institutional view, the stalemate is solvable through rule-making, making the constraint appear as pure coordination (Rope) rather than trap."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Game Theory Lens)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 The mutual defection equilibrium is a fixed point of the payoff structure. In a one-shot game with these payoffs, defection is a dominant strategy regardless of agent preferences or power. The constraint appears as an immutable law of rational choice \u2014 a mathematical necessity rather than a social construction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Defection Beneficiary",
+      "comment": "PERSPECTIVE 5: DEFECTION BENEFICIARY (TANGLED ROPE) \u2014 An agent with superior resources can defect while others attempt cooperation, capturing the highest payoff (temptation payoff) before retaliation. This agent benefits from the stalemate's existence while possessing exit options. The constraint provides both extraction (from others' mutual defection) and coordination (enabling their defection strategy)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "payoff_structure_externality",
+      "question": "Are the payoff matrices exogenously determined or endogenously constructed by the agents themselves?",
+      "resolution_mechanism": "Historical analysis of how payoff structures were established; examination of whether agents can collectively revise payoffs",
+      "impact": "If exogenous: constraint is Mountain-like (immutable). If endogenous: constraint is Snare-like (constructed extraction). If mixed: constraint is Tangled Rope (both features).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether payoff matrices are exogenous or endogenously constructed"
+    },
+    {
+      "id": "iteration_empirical_prevalence",
+      "question": "In real iterated dilemmas (trade relationships, arms races, public goods), do agents actually achieve mutual defection equilibrium or do repeated interactions produce cooperation?",
+      "resolution_mechanism": "Empirical study of historical examples (trade wars, arms control, climate negotiations); laboratory experiments with repeated interactions",
+      "impact": "If mutual defection is rare: the theoretical constraint is weaker than presented. If mutual defection is common: the constraint's real-world severity is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical prevalence of mutual defection in iterated dilemmas"
+    },
+    {
+      "id": "coalition_enforcement_mechanism",
+      "question": "What enforcement mechanisms (reputation, punishment, contract, third-party enforcement) can shift the equilibrium from mutual defection to cooperation?",
+      "resolution_mechanism": "Game-theoretic analysis of modified payoff structures; empirical testing of which enforcement mechanisms work in which domains",
+      "impact": "If enforcement is cheap and reliable: Rope solution dominates, constraint is temporary. If enforcement is expensive or unreliable: Snare persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of enforcement mechanisms to shift equilibrium"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The infinite prisoner's dilemma stalemate represents a fundamental coordination failure where rational individual behavior produces collectively irrational outcomes. Unlike finite games where backward induction can sustain cooperation, or one-shot games where cooperation is irrational, the infinite dilemma creates a stable state where all agents defect despite mutual awareness that cooperation would improve collective welfare. The constraint manifests across economic systems (trade wars, price wars), social systems (arms races, collective action problems), and environmental systems (tragedy of the commons, climate negotiations). The stalemate is self-enforcing: each agent defects because others defect, and rational agents cannot unilaterally improve their position by switching to cooperation. This creates a trap that persists without external intervention to change payoff structures or enable enforcement mechanisms.",
+    "key_agents": [
+      "Individual Agents: Primary victims (powerless/trapped) \u2014 rationally choose defection despite collective irrationality",
+      "Collective Welfare: Primary victim (powerless/trapped) \u2014 bears full cost of mutual defection equilibrium",
+      "Organized Coalition: Secondary agent (moderate/constrained) \u2014 attempts to solve coordination problem but faces free-rider incentives",
+      "Rule-Setter Institution: Potential solution provider (institutional/arbitrage) \u2014 can redesign payoffs or enable enforcement",
+      "Defection Beneficiary: Power asymmetry actor (powerful/mobile) \u2014 captures higher payoff by defecting while others attempt cooperation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 views constraint as mathematical necessity or social contingency"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint does not extract resources to a single beneficiary (unlike typical Snares), but rather prevents mutual gain, making the extraction structural rather than directional. The value reflects how much welfare is lost relative to the cooperation outcome. The trajectory from 0.42 to 0.58 shows increasing severity as agents become more confident in the defection equilibrium. Suppression (0.65): High. The payoff structure itself constitutes suppression \u2014 individual agents cannot escape defection without collective coordination, which the payoff structure prevents. There is no unilateral exit path that improves outcomes. Theater ratio (0.38): Low-moderate. The constraint is functionally severe (not primarily performative), but as agents rationalize their defection over time, they develop narratives and justifications that mask the underlying payoff structure, explaining the modest increase in theater over the interval.",
+    "perspectival_gap": "The critical perspectival gap lies between the individual agent (snare: trapped, no unilateral exit) and the institutional rule-setter (rope: can change payoff structure). From the individual agent's perspective, defection is inevitable given the payoffs. From the institution's perspective, mutual defection is a design choice that can be reversed by altering rewards, enabling punishment, or restructuring the game entirely. The powerful beneficiary experiences the constraint as partially beneficial (tangled rope), gaining from asymmetric payoffs while possessing exit options. The analytical observer risks naturalizing a constructed game as a law of nature (mountain), when the payoff structure itself is a choice point. The Snare classification holds across most perspectives, indicating a severe constraint, but the diversity of classifications reveals that the constraint is not immutable \u2014 it depends on institutional structures and payoff design.",
+    "directionality_logic": "The mutual defection equilibrium exhibits unusual directionality: it extracts from all agents equally rather than flowing from victims to beneficiaries. Each agent's d value depends on whether they perceive the payoff structure as exogenous (immutable, high d toward being victimized) or endogenous (changeable, lower d if they have influence). A powerless agent trapped in an unchangeable payoff structure experiences d \u2248 0.90 (near-complete victimhood). An institutional rule-setter with capacity to redesign payoffs experiences d \u2248 0.15 (near-beneficiary position). A powerful agent able to capture asymmetric gains while defecting experiences d \u2248 0.45 (mixed). The derivation chain produces higher d for agents with fewer exit options, lower d for agents who can escape via institutional redesign or superior resources.",
+    "mandatrophy_analysis": "The mandatrophy resolution: mutual defection is NOT pure extraction (Snare) when viewed from the institutional level where payoff structures are chosen. It IS pure extraction when viewed from individual agents trapped in an exogenous payoff structure. The constraint resolves the mandatrophy by revealing that 'Snare vs Rope' depends on whether the payoff matrix is treated as exogenous (Snare from below) or endogenous (Rope from above). The rule-setter institution can convert the stalemate into a coordination problem (Rope) by restructuring payoffs, enabling reputation systems, or creating enforcement mechanisms. The analytics avoid false naturalization by treating the payoff structure as a contingent choice, not as a law of nature. The mountain perspective is a false summit \u2014 it mistakes the logical necessity of mutual defection given certain payoffs for the necessity of those payoffs themselves."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "collective_action_problem",
+      "tragedy_of_the_commons",
+      "arms_race_escalation"
+    ],
+    "dual_formulation_note": "The infinite prisoner's dilemma stalemate is upstream to multiple applied constraints (tragedy of commons, arms races, trade wars) that manifest the same payoff structure in specific domains. Each downstream constraint has its own \u03b5 reflecting domain-specific extraction severity, but all share the foundational structure of the dilemma."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

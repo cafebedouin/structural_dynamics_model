@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "china_contraceptive_tax",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cctax"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "China's Differential Tax on Contraceptives",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_demographic_goals",
+      "iud_manufacturers",
+      "sterilization_providers"
+    ],
+    "victims": [
+      "condom_users",
+      "reproductive_autonomy",
+      "sexual_health_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Income Condom Users",
+      "comment": "PERSPECTIVE 1: LOW-INCOME CONDOM USERS (SNARE) \u2014 Cannot exit the tax without abandoning condom use entirely or purchasing through informal channels. Bears full cost of 17% VAT with no alternatives subsidized. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72. Trapped at biographical horizon \u2014 reproductive choices made under financial constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle-Income Condom Users",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME CONDOM USERS (TANGLED ROPE) \u2014 Can afford the tax but experience it as coordinated steering toward state-preferred methods. Constrained by both price and social policy signaling. Some coordination benefit (tax reduction available if they switch to IUD), but extraction of choice autonomy is real. d\u22480.70, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "IUD and Sterilization Providers",
+      "comment": "PERSPECTIVE 3: IUD AND STERILIZATION PROVIDERS (ROPE) \u2014 Beneficiaries of tax exemption and subsidies. Experience the constraint as coordination: state preference for permanent/semi-permanent methods aligns with provider capacity and revenue stability. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary; constraint coordinates provider capacity with state demographic policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Condom Manufacturers",
+      "comment": "PERSPECTIVE 4: CONDOM MANUFACTURERS (TANGLED ROPE) \u2014 Face 17% VAT burden that reduces competitiveness vs subsidized methods. Can arbitrage by lobbying for tax reduction or by shifting production/distribution patterns. But also benefit from the tax as a market-shaping mechanism that may reduce condom demand pressures in favor of methods requiring provider relationships. d\u22480.45, f(d)\u22480.45, \u03c3=1.0 \u2192 \u03c7\u22480.24. Mixed: extraction from consumer price sensitivity, coordination benefit from protected market."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Public Health and Reproductive Rights Coalition",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH AND REPRODUCTIVE RIGHTS COALITION (ROPE) \u2014 International and domestic NGOs, WHO, medical societies see the tax differential as pure coordination problem: it aligns incentives with evidence-based sexual health equity. The constraint has low effective extraction because the coalition can articulate alternative framing (condoms as public health good, not luxury consumer good). d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.20. Constrained by state capacity to enforce tax, but significant leverage through international pressure and medical legitimacy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Chinese Ministry of Finance",
+      "comment": "PERSPECTIVE 6: CHINESE MINISTRY OF FINANCE (TANGLED ROPE) \u2014 Operates the constraint as both coordination mechanism (aligning tax code with demographic policy) and extraction mechanism (collecting VAT from lower-income users). Has arbitrage: can adjust tax rates, create exemptions for health insurance coverage, or harmonize with neighboring jurisdictions. d\u22480.32, f(d)\u22480.28, \u03c3=1.0 \u2192 \u03c7\u22480.15. Active enforcement required; institutional flexibility limits effective extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Policy Sunset Potential)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 From civilizational/global view, the contraceptive tax differential is a temporary policy artifact of the era of fertility concerns (post-one-child policy). As demographic transition completes and reproductive autonomy becomes a documented public health priority, the tax structure becomes obsolete. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.38. Has_sunset_clause potential: tax harmonization or exemption for condoms could occur within 10-20 years as fertility targets relax."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demographic_intent_vs_economic_motive",
+      "question": "Is the differential tax primarily a demographic engineering tool or a fiscal revenue mechanism disguised as demographic policy?",
+      "resolution_mechanism": "Analysis of tax design history, legislative justifications, and revenue impact. If designed to maximize revenue, \u03b5 would be higher (extraction primary). If designed to minimize tax while shaping behavior, \u03b5 would be lower (coordination primary).",
+      "impact": "If demographic intent: Tangled Rope classification holds, suppression is moderate (tax as carrot/stick, not force). If revenue motive: classification shifts toward Snare, suppression increases (coercive extraction reframed as population management).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tax is primarily demographic engineering or fiscal revenue"
+    },
+    {
+      "id": "elasticity_of_condom_demand",
+      "question": "What is the actual price elasticity of condom demand in China across income cohorts? Does the 17% tax reduce condom use or merely shift to untaxed channels?",
+      "resolution_mechanism": "Econometric analysis of condom sales pre/post tax implementation, correlation with income levels, and market-share data for alternative contraceptive methods.",
+      "impact": "If elasticity is low (demand sticky): tax is primarily extractive, not coordinative. Suppression is high (users have no real choice). If elasticity is high: tax successfully steers behavior toward state-preferred methods, supporting coordination narrative. If demand shifts to informal channels: extraction fails, suppression paradoxically increases (enforcement required).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Price elasticity of condom demand and substitution patterns"
+    },
+    {
+      "id": "subsidy_transparency_and_accounting",
+      "question": "How transparent is the accounting of subsidies for IUDs and sterilization? Are opportunity costs and externalities (complication rates, regret, reproductive autonomy loss) factored into subsidy justification?",
+      "resolution_mechanism": "Comparative audit of Ministry of Finance subsidy allocations, inclusion of complication costs in health system accounting, and analysis of regret rates among subsidized procedure recipients.",
+      "impact": "If subsidies are opaque or ignore externalities: constraint is pure extraction (state preferences imposed without accountability). If transparent and externality-inclusive: constraint could be legitimate coordination (comparative public health benefit). Classification could shift to Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transparency and completeness of contraceptive subsidy accounting"
+    },
+    {
+      "id": "enforceability_across_urban_rural_divide",
+      "question": "Is the tax enforced uniformly across urban and rural areas? Does enforcement pattern track enforceability infrastructure or demographic targeting?",
+      "resolution_mechanism": "Tax collection data disaggregated by province and urban/rural region. Analysis of enforcement resource allocation and actual tax compliance rates.",
+      "impact": "If enforcement is selective/weak in rural areas where condom use is lower: constraint is primarily targeting urban reproductive autonomy (narrower extraction, higher precision). If enforcement is uniform: broader extraction but also reveals demographic targeting more clearly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Geographic variation in tax enforcement and compliance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "China's differential taxation of contraceptives represents a hybrid constraint combining state demographic objectives with economic extraction. The 17% VAT on condoms, while exemptions or subsidies apply to IUDs and sterilization, creates a two-tier contraceptive market where state preference for permanent or semi-permanent methods is enforced through fiscal mechanism rather than explicit prohibition. The constraint exhibits the signature of Tangled Rope: it solves a genuine coordination problem (aligning individual reproductive choice incentives with state demographic capacity), but does so through asymmetric cost distribution that extracts reproductive autonomy from lower-income users who lack flexibility to switch to subsidized alternatives. The theater ratio reflects the policy's rhetorical framing as public health optimization while its actual mechanism is fiscal steering of reproductive choice. As China's demographic transition advances post-one-child policy reversal, the constraint's coordination function weakens while its extractive function becomes more visible\u2014suggesting potential sunset dynamics if fertility targets relax or reproductive autonomy discourse gains institutional legitimacy.",
+    "key_agents": [
+      "Low-income condom users: Primary victim (powerless/trapped) \u2014 bear full cost of 17% VAT with no subsidized alternatives; reproductive autonomy extracted.",
+      "Middle-income condom users: Secondary victim (moderate/constrained) \u2014 experience tax as both price burden and state steering; constrained choice.",
+      "IUD and sterilization providers: Primary beneficiary (institutional/arbitrage) \u2014 receive state subsidies and capture demand shifted from condoms; benefit from tax-induced scarcity.",
+      "Condom manufacturers: Secondary beneficiary/victim (powerful/arbitrage) \u2014 face reduced demand but benefit from protected market against high-volume low-price competitors.",
+      "Chinese state (demographic policy): Intended beneficiary (organized/constrained) \u2014 pursues fertility targets through fiscal mechanism; constrained by international reproductive rights discourse.",
+      "Public health coalition: Victim of constraint (organized/constrained) \u2014 international and domestic health advocates oppose policy as inequitable and medically unsound.",
+      "Ministry of Finance: Institutional enforcer (institutional/arbitrage) \u2014 operates constraint as revenue mechanism and demographic tool; has arbitrage to adjust rates."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderately high. The constraint extracts reproductive autonomy from lower-income users through price elasticity and lack of subsidized alternatives. However, it is not maximal extraction (0.66+) because: (1) condoms remain legally available; (2) informal/black-market supply exists; (3) switching to subsidized methods is theoretically possible (though with autonomy loss). The 17% VAT translates to real price barrier for low-income users but does not eliminate choice entirely. Rising from 0.35 to 0.52 over the interval reflects increasing state enforcement and declining informal supply. Suppression (0.65): Moderate-high. Real barriers exist to exit: low-income users cannot easily substitute subsidized alternatives due to medical contraindications or autonomy preferences; informal condom channels face enforcement risk; social signaling about state-preferred methods creates reputational cost to condom choice. But suppression is not total (0.80+) because some users accept the cost or find alternatives. Theater ratio (0.58): Moderate. The policy is framed as public health optimization and demographic planning, which comprises ~58% of the stated justification. The actual mechanism is fiscal revenue and behavioral steering, which comprises ~42%. Theater has increased over the interval as international criticism has forced the state to elaborate public health rationales. This is characteristic of Tangled Rope: genuine coordination function (fertility optimization) packaged in partial theater to obscure extraction function.",
+    "perspectival_gap": "This constraint reveals stark perspectival divergence. Low-income users perceive a Snare (pure extraction, no exit). Middle-income users perceive Tangled Rope (mixed coordination and extraction). Providers perceive Rope (pure coordination with state objectives). Manufacturers perceive Tangled Rope from opposite direction (constrained but protected). International health coalition perceives Rope with contested coordination function. Ministry perceives controlled Tangled Rope with clear sunset potential. The analytical observer sees a temporary scaffold whose sunset will occur when demographic urgency declines. This perspectival range from Snare to Rope to Scaffold indicates a constraint undergoing institutional lifecycle: it began as Rope (coordination), became Tangled Rope (coordination + extraction), and is transitioning toward Scaffold (as demographic transition completes) or Piton (if it persists after becoming functionally obsolete).",
+    "directionality_logic": "Low-income condom users: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum or near-maximum extraction; no exit options within constraint. Middle-income users: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. Significant extraction; can technically switch but at autonomy cost. IUD/sterilization providers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Negative effective extraction (net beneficiaries). Condom manufacturers: Mixed (victim of demand reduction + beneficiary of protected market) + arbitrage \u2192 d\u22480.45, f(d)\u22480.45. Moderate extraction; high arbitrage capacity. Ministry of Finance: Institutional beneficiary + arbitrage \u2192 d\u22480.32, f(d)\u22480.28. Low effective extraction; institutional flexibility and international pressure provide arbitrage. Public health coalition: Victim + constrained (can advocate but not override policy) \u2192 d\u22480.35, f(d)\u22480.32. Moderate extraction; significant leverage through legitimacy.",
+    "mandatrophy_analysis": "The China contraceptive tax resolves the mandatrophy through institutional differentiation. The state genuinely perceives Rope (coordination of reproductive choices with fertility targets). Low-income users genuinely perceive Snare (coercive extraction). Both are structurally correct within their observational contexts. The mandatrophy is resolved by recognizing that the constraint's classification DEPENDS on power asymmetry: the state has institutional power to define coordination; low-income users lack power to contest it. The policy is Tangled Rope because it requires active enforcement (institutions must maintain the tax, prosecute evasion), benefits an organized actor (state demographic policy), and extracts from powerless actors (low-income condom users). The theater ratio (0.58) reflects the policy's rhetorical strategy: framing extraction as coordination by using public health language. As China's fertility urgency declines post-demographic-transition, the coordination narrative weakens (sunset dynamics), and the constraint either becomes Piton (theater-maintained without function) or collapses entirely. The perspectival divergence is not a failure of the framework but a success: it reveals that the constraint is genuinely experienced differently by agents with different structural positions, and that the state's 'coordination' narrative is only legitimate if state demographic objectives are accepted as public goods\u2014a contestable normative claim."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "china_fertility_policy_enforcement",
+      "reproductive_health_equity_china"
+    ],
+    "dual_formulation_note": "The contraceptive tax is downstream of broader fertility policy (affected by one-child policy reversal and demographic transition timeline) but represents a distinct fiscal-constraint on individual reproductive choice. Upstream constraints set the demographic context; this constraint operationalizes preference through tax mechanism. Related constraints address enforcement mechanisms and health equity outcomes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

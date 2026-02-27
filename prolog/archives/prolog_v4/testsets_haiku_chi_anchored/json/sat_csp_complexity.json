@@ -1,0 +1,158 @@
+{
+  "header": {
+    "constraint_id": "sat_csp_complexity",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "satcsp"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "SAT/CSP Computational Complexity",
+    "topic_domain": "computational_complexity_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 1: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Any algorithm attempting to solve arbitrary SAT/CSP instances must confront the fundamental hardness: no known polynomial-time solver exists for NP-complete problems. The constraint is immutable across all attempts at optimization. d\u22480.98, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Computational Community",
+      "comment": "PERSPECTIVE 2: COMPUTATIONAL COMMUNITY (MOUNTAIN) \u2014 Despite 70 years of research (Cook-Levin 1971, SAT solver competitions, quantum algorithm proposals), no breakthrough has overcome the worst-case exponential lower bound. The constraint persists as a civilizational-scale research frontier. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.12."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Observer",
+      "comment": "PERSPECTIVE 3: THEORETICAL OBSERVER (MOUNTAIN) \u2014 From a logical/mathematical standpoint, SAT/CSP hardness is a consequence of the structure of Boolean satisfiability itself: the pigeonhole principle, resolution complexity lower bounds (Haken 1985), and the relationship between satisfying assignments and proof length are intrinsic, not contingent. No measurement basis or observable can alter this. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.08."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Applied Systems Engineer",
+      "comment": "PERSPECTIVE 4: APPLIED SYSTEMS ENGINEER (MOUNTAIN) \u2014 Every practical implementation (SAT solvers, constraint propagation, heuristic search) operates within the constraint's bounds. Despite advanced techniques (DPLL, SLS, learned clause management), the worst-case complexity remains exponential. Real-world instances may be easy or hard, but the constraint persists. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Physicist (Quantum/Physical Limits)",
+      "comment": "PERSPECTIVE 5: PHYSICIST / PHYSICAL LIMITS (MOUNTAIN) \u2014 Even quantum computation does not escape the fundamental constraint: Grover's algorithm provides quadratic speedup for unstructured search, but no quantum algorithm is known to solve NP-complete problems in polynomial time. Physical computation is bounded by the same logical limits. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.08."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "p_vs_np_resolution",
+      "question": "Is P = NP, or is P \u2260 NP?",
+      "resolution_mechanism": "Mathematical proof (7 of 7 Millennium Prize Problem criteria) or discovery of polynomial-time algorithm for 3-SAT or any NP-complete problem",
+      "impact": "If P = NP: SAT/CSP hardness reverts to practical constraint only (Rope or Scaffold); mountain classification becomes false. If P \u2260 NP (conjectured): mountain classification is definitively confirmed, and exponential lower bounds are inherent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether P equals NP; resolves fundamental hardness assumption"
+    },
+    {
+      "id": "oracle_separation",
+      "question": "Do oracle separations (Baker-Gill-Solovay 1975) prove that P \u2260 NP in a strong logical sense, or do they reflect limitations of relativization proofs rather than ground truth?",
+      "resolution_mechanism": "Development of new proof techniques beyond relativization (natural proofs, algebraic methods); resolution of whether P/poly barriers are fundamental or proof artifacts",
+      "impact": "If oracle separations reflect ground truth: hardness is truly fundamental. If they reflect proof technique limitations: new approaches might bypass the constraint without solving P vs NP.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Interpretation of oracle separations in hardness proofs"
+    },
+    {
+      "id": "average_case_structure",
+      "question": "Does the hardness of SAT/CSP scale uniformly across input distributions, or are there special classes of instances (e.g., planted solutions, random 3-SAT near threshold) where hardness concentrates?",
+      "resolution_mechanism": "Detailed analysis of instance-specific hardness landscapes; correlation between structural properties (clause-to-variable ratio, solution density, symmetry) and solver runtime",
+      "impact": "If hardness is uniform: worst-case and average-case constraints are equivalent (mountain from all practical perspectives). If hardness concentrates: different classes may have different constraint types (mountain for uniform instances, Rope for structured subclasses).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether hardness is uniform across input distributions or concentrates in specific classes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 1971,
+    "end": 2041
+  },
+  "commentary": {
+    "narrative_context": "The SAT/CSP computational complexity constraint represents a fundamental limit in computer science: the intractability of NP-complete problems in the worst case. This constraint is not a feature of any particular algorithm, implementation, or social arrangement \u2014 it is a logical consequence of the definition of NP-completeness and the conjectured inequality P \u2260 NP. For 70 years (Cook-Levin 1971 to present), despite exponential increases in computing power, advances in solver heuristics (DPLL, SLS, learned clause management), and exploration of alternative computational models (quantum, optical, analog), no breakthrough has overcome the exponential worst-case lower bound. The constraint remains invariant across all measurement bases: worst-case analysis, average-case instance distributions, practical solver performance on structured problems, and theoretical proofs all converge on the same fundamental barrier. This is the defining characteristic of a mountain constraint \u2014 one that emerges naturally from the logical structure of the problem itself, not from contingent institutional or economic arrangements.",
+    "key_agents": [
+      "Algorithm Designers: Powerless (trapped) \u2014 any algorithm must confront the hardness barrier; no exit option",
+      "Computational Researchers: Organized (constrained) \u2014 aware of the constraint but continue research under it; may find special-case solutions but cannot escape worst-case hardness",
+      "Software Engineers: Institutional (analytical) \u2014 use SAT/CSP solvers as tools; design systems that avoid hard instances or use heuristic approximations; work within the constraint",
+      "Theoretical Computer Science: Analytical (analytical) \u2014 studies the constraint itself; seeks to understand its nature and prove it formally",
+      "Quantum Computing Researchers: Institutional (constrained) \u2014 explore whether quantum computation might bypass the constraint; evidence (Grover's algorithm, no known quantum NP solver) suggests not"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The constraint does not extract value from any agent \u2014 it simply bounds what is computationally possible. No one benefits from NP-completeness; it is a collective loss function. The value reflects that the constraint is purely negative (what cannot be done efficiently), not extractive (transfer of resources or asymmetric benefit). Suppression (0.03): Negligible. The constraint is transparent \u2014 researchers understand exactly why SAT/CSP are hard, the proofs are public, and there are no secrets or coercion. The resistance to accepting the constraint is intellectual (the desire for a polynomial-time algorithm) rather than structural. Theater ratio (0.15): Very low. The mathematical proofs (Cook-Levin, Haken's resolution lower bounds, oracle separations) are rigorous and not performative. Research into SAT/CSP hardness is directly functional \u2014 understanding the constraint IS the goal, not disguising function behind ritual.",
+    "perspectival_gap": "This constraint exhibits complete perspectival consensus: all perspectives classify it as Mountain. There is no disagreement about whether SAT/CSP are hard. The disagreement is philosophical (whether P = NP, whether oracle separations are decisive, whether quantum or physical computation might escape the logical constraint) but does not lead to different practical classifications. An algorithm designer, a theoretical observer, an applied engineer, and a quantum researcher all recognize the same hardness barrier. This is the hallmark of a true natural law \u2014 it is invariant across all observers and all measurement bases.",
+    "directionality_logic": "Standard mountain derivation: d is not the relevant axis for natural laws. All agents are symmetrically trapped by the constraint, not asymmetrically extracted from. No beneficiary/victim distinction is meaningful \u2014 the constraint does not benefit anyone. The constraint's directionality is simply 'toward all observers equally,' encoded as uniform high d values (0.5-0.98) that yield consistent moderate f(d) and low \u03c7.",
+    "mandatrophy_analysis": "NO MANDATROPHY RISK. This constraint is categorically free from mandatrophy because: (1) it exhibits zero perspectival disagreement \u2014 all observers classify it the same way; (2) it has no beneficiary group whose interests would be served by mislabeling it as pure coordination; (3) it has no suppression mechanism that could hide extraction beneath a coordination narrative; (4) the theater ratio is negligible, indicating no performative function masking extractive mechanism. The constraint is also free from false natural law risk because the structural data (\u03b5=0.12, suppression=0.03, theater=0.15) fully support the mountain classification \u2014 these metrics are not high enough to indicate a degraded or performative system. The constraint is what it claims to be: a genuine limit on computation."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "np_complete_reduction_hierarchy",
+      "practical_sat_solver_performance",
+      "quantum_algorithm_speedup_limits"
+    ],
+    "dual_formulation_note": "SAT/CSP complexity decomposes into multiple mathematically equivalent constraint families: (1) worst-case exponential lower bounds (\u03b5=0.12, Mountain); (2) average-case hardness on random instances (\u03b5=0.14, Mountain with slight degradation due to measurement structure); (3) practical instance-hardness correlation (\u03b5=0.15, Mountain with theatrical elements in heuristic justification). All three are linked \u2014 proving one proves the others \u2014 so they constitute a single unified constraint with stable \u03b5 across all formulations. No decomposition into separate stories is needed."
+  },
+  "directionality_overrides": []
+}

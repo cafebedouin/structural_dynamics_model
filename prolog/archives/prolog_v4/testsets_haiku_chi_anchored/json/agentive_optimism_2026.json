@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "agentive_optimism_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "agopt"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "The Agentive Optimism Gap",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "policy_elites",
+      "technocratic_class"
+    ],
+    "victims": [
+      "pessimistic_public_segment",
+      "economically_precarious_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Pessimistic Public Segment",
+      "comment": "PERSPECTIVE 1: PESSIMISTIC PUBLIC (SNARE) \u2014 Trapped by structural conditions (job precarity, declining social mobility, climate anxiety) that generate learned helplessness. Cannot exit pessimism without material change; cannot exit the constraint system itself. Policy discourse offers aspirational narratives that feel disconnected from lived reality. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Economically Precarious Workers",
+      "comment": "PERSPECTIVE 2: ECONOMICALLY PRECARIOUS (SNARE) \u2014 Constrained by gig economy, automation risks, and benefit-cliff structures that penalize upward mobility. Experience agency as illusory; policy optimism appears as gaslighting. Labor participation constrained by scheduling, health, and care obligations. d\u22480.82, f(d)\u22481.25, \u03c3=0.9 \u2192 \u03c7\u22480.59."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Policy Elites and Technocrats",
+      "comment": "PERSPECTIVE 3: POLICY ELITES (ROPE) \u2014 High educational attainment, institutional position, and network density enable genuine agency. Optimism is earned: their personal agency works (funding mechanisms, network access, credential portability). They experience the constraint as coordination: shared optimism enables collective action on infrastructure, innovation, policy. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary through arbitrage (can exit failing initiatives, capture upside from successful ones)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Youth Movements and Precariat Organizing",
+      "comment": "PERSPECTIVE 4: YOUTH ORGANIZING (TANGLED ROPE) \u2014 Organized agents (climate strikers, housing justice movements, precariat unions) coordinate around shared grievances (coordination function) while also bearing extraction costs from the gap itself \u2014 their organizing labor is often unpaid, risky to employment, and produces aspirational rather than material change. Optimism becomes a constraint: required to maintain morale despite material constraints. d\u22480.58, f(d)\u22480.73, \u03c3=1.0 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Optimism Narrative Infrastructure",
+      "comment": "PERSPECTIVE 5: OPTIMISM NARRATIVE (PITON) \u2014 The cultural requirement to express optimism persists through institutional inertia despite losing functional power. TED talks, startup culture, policy white papers all demand optimistic framing regardless of structural constraints. This performative optimism masks rather than solves the gap. theater_ratio=0.64: optimism narratives dominate public discourse but generate minimal material change. The constraint is maintained because alternatives (admitting structural limits, redistributing resources to constrain options) have higher political cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Systems View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a systems perspective, the agentive optimism gap has genuine coordination benefits (it maintains collective action, enables long-term planning, prevents exit cascades) while simultaneously extracting from those without actual agency (it blames their pessimism as psychological failure rather than structural response). The constraint enables elite coordination (rope function) while simultaneously trapping non-elites (snare function). d\u22480.65, f(d)\u22480.98, \u03c3=1.2 \u2192 \u03c7\u22480.61."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "agency_threshold_ambiguity",
+      "question": "What material thresholds distinguish genuine agency from illusion? How much control over outcomes is required before optimism becomes rational rather than delusional?",
+      "resolution_mechanism": "Longitudinal tracking of outcome variance by income decile; measurement of subjective control vs actual control by demographic; analysis of feedback loops (do elite actions produce outcomes; do precariat actions produce outcomes?)",
+      "impact": "If threshold is high (elites have >80% outcome control): gap is truly structural, snare classification confirmed across most perspectives. If threshold is low (outcomes equally random for all): optimism gap is purely narrative, piton or theater classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "What degree of actual control justifies optimism vs marks it as delusion"
+    },
+    {
+      "id": "pessimism_causation",
+      "question": "Is public pessimism a rational response to structural conditions or a learned psychological state that could be shifted by different narratives?",
+      "resolution_mechanism": "Experiments on narrative exposure; analysis of cohorts with identical material conditions but different cultural narratives; historical comparison of periods with similar structural precarity but different dominant mood",
+      "impact": "If rational response: pessimism is justified; constraint classification depends on how material conditions actually are. If psychological/narrative: pessimism might be removable without structural change, shifting classification toward piton (theater). If both: constraint is hybrid.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pessimism is rational structural response or malleable psychology"
+    },
+    {
+      "id": "elite_optimism_genuineness",
+      "question": "Is elite optimism grounded in actual superior outcomes or in information asymmetry and selection bias (they only see their successes, are surrounded by others like them)?",
+      "resolution_mechanism": "Outcome tracking for elite vs precariat ventures; measurement of elite exposure to failure vs success; comparison of elite optimism prediction accuracy vs actual outcomes",
+      "impact": "If grounded in superior outcomes: constraint classifies as pure extraction (elite agency works, precariat is genuinely trapped). If grounded in bias: constraint is tangled rope (elites also trapped in false optimism, but with better landing zones).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether elite optimism reflects actual agency advantage or selection bias"
+    },
+    {
+      "id": "narrative_plasticity",
+      "question": "Can the optimism gap be closed by changing shared narratives without material redistribution?",
+      "resolution_mechanism": "Analysis of periods with successful narrative shifts (post-WWII optimism, etc.); measurement of optimism changes independent of material conditions; policy experiments on narrative reframing",
+      "impact": "If yes: constraint is primarily theater (piton), fixable by narrative work. If no: constraint requires material redistribution (it's a snare); narrative work alone is extraction.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether narrative reframing alone can close the agentive optimism gap"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Agentive Optimism Gap represents a fundamental structural divide in how different populations experience agency, probability, and the possibility of change. Policy elites \u2014 defined by credential accumulation, institutional position, and dense networks \u2014 maintain a sense of personal agency and optimism that is empirically justified within their domain: their actions produce outcomes, their plans materialize, their networks provide safety nets. A large segment of the public \u2014 economically precarious, structurally mobile-constrained, exposed to systemic risks beyond individual control \u2014 has developed what psychologists term 'learned helplessness' but what DR analysis reveals as rational pessimism: their actions are mediated by algorithmic scheduling, their upward mobility is constrained by benefit cliffs and credential inflation, their exposure to climate, pandemic, and economic risk is structural rather than individual. This gap is not merely a psychology problem (treatable by motivational speakers) or a communication problem (solvable by better narrative). It is a constraint enforced by suppression mechanisms: precarity itself suppresses agency. The constraint extracts value from the pessimistic segment by requiring them to maintain hope despite evidence that hope is uncoupled from outcomes, while the optimistic elite benefit from narratives that attribute success to their own merit rather than structural advantage. The theater ratio (0.64) reflects that much of the policy discussion around 'closing opportunity gaps' and 'empowering communities' is performative: it addresses narrative-level pessimism while leaving structural precarity intact.",
+    "key_agents": [
+      "Policy Elites & Technocrats: Primary beneficiaries (institutional/arbitrage) \u2014 their optimism is self-reinforcing because their networks and credentials actually do produce outcomes; they capture credit for success while externalizing risk",
+      "Economically Precarious Populations: Primary victims (powerless/trapped) \u2014 precarity suppresses agency; their pessimism is rational response to structural constraints they cannot individually escape",
+      "Youth Movements & Precariat Organizing: Secondary agents (organized/constrained) \u2014 coordinate around shared grievances; optimism requirement constrains their organizing (must maintain hope despite defeats)",
+      "Public Narratives & Media: Institutional structure (institutional/arbitrage) \u2014 demand optimism framing; create gap between narrative promise and structural reality",
+      "Feedback Loop Mechanisms: Structural enforcer \u2014 credential inflation, algorithmic scheduling, benefit cliffs, geographic sorting create the conditions that suppress precariat agency while enabling elite agency"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from precariat populations by requiring emotional labor (maintaining optimism) without providing material change, while concentrating credit for success among elites. The extraction mechanism is asymmetric agency: elites' agency works, precariat's agency is mediated/nullified. Suppression (0.68): High. Multiple reinforcing mechanisms: precarious employment limits exit options, credential inflation creates illusion of meritocracy while locking out those without early educational access, benefit-cliff structures actively penalize precariat agency attempts (taking a better job can mean losing healthcare), geographic sorting prevents observation of alternative success patterns. Theater ratio (0.64): Moderate-high. The optimism narrative dominates public discourse (TED talks, startup culture, policy white papers) with minimal material change in structural precarity. The theater has increased over the interval as gap between narrative optimism and lived precarity has widened. Claimed type is Snare from primary victim perspective, but Tangled Rope from analytical view because the constraint does serve genuine coordination function (shared narrative enables collective action, prevents total exit cascades) while simultaneously extracting.",
+    "perspectival_gap": "The gap between policy elites and precariat populations is not primarily epistemological (disagreement about facts) but structural (different material conditions that generate different rational responses to probability and agency). Policy elites see Rope \u2014 their optimism is functional, their networks enable coordination, their agency works. Precariat populations see Snare \u2014 optimism is demanded despite evidence that their agency is suppressed, their choices are constrained, their outcomes are mediated by systems beyond individual control. Youth organizing sees Tangled Rope \u2014 genuine coordination around shared grievances, but optimism requirement as extraction (emotional labor without material payoff). The analytical observer sees the full structure: the constraint is not about beliefs or narratives, it's about whose agency actually works. The gap persists because narrative-level interventions ('be more optimistic') misdiagnose the problem as psychological rather than structural.",
+    "directionality_logic": "Policy elites: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Negative effective extraction = net beneficiary. Their optimism is validated; their agency works; they capture credit. Precariat populations: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. High extraction. Precarity suppresses agency; optimism is demanded without justification; pessimism is blamed as personal failure rather than rational response. Economically precarious workers: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.25. Moderate-high extraction. Some constrained agency exists (labor participation choices) but is heavily mediated by systemic constraints (scheduling, healthcare benefits, care responsibilities). Youth organizing: Organized + constrained \u2192 d\u22480.58, f(d)\u22480.73. Mixed extraction. Genuine coordination and agency within the movement, but movement labor is often unpaid/risky and produces narrative rather than material change. Optimism narrative infrastructure: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.11. Piton classification comes from theater gate (0.64 \u2265 0.70 threshold approached), not from extraction. Maintains itself through institutional inertia; alternatives have higher immediate political cost.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the Agentive Optimism Gap is a genuine Snare FROM THE PERSPECTIVE OF THOSE TRAPPED IN IT (powerless/trapped demographics) while functioning as Rope FROM THE PERSPECTIVE OF BENEFICIARIES (policy elites) and as Tangled Rope from the analytical perspective that sees both the coordination function (shared optimism enables collective planning) and the extraction function (pessimism is blamed as personal psychological failure rather than rational structural response). The constraint prevents mislabeling by making clear: (1) whose agency is suppressed (trapped populations), (2) whose agency works (elites with dense networks), (3) what the coordination benefit is (shared optimism prevents total exit cascades, enables long-term planning), and (4) what is extracted (emotional labor, cognitive dissonance, self-blame for outcomes mediated by systems beyond individual control). The false natural law in this case would be: 'Optimism is a personality trait; some people are just naturally optimistic.' The constraint reveals this as institutional structure, not psychology: optimism is rational where outcomes are controllable; pessimism is rational where outcomes are mediated by systems beyond control. The gap will persist as long as agency-suppression mechanisms (precarity, credential inflation, algorithmic mediation) are more powerful than individual effort."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "credential_inflation_trap",
+      "algorithmic_scheduling_constraint",
+      "benefit_cliff_structure"
+    ],
+    "dual_formulation_note": "The agentive optimism gap is downstream of multiple material constraints (precarious employment, credential inflation, benefit-cliff structures) that actively suppress agency. Each of these upstream constraints has its own \u03b5 value; the gap itself represents the emergent extraction that results from their cumulative effect on the pessimism-agency relationship."
+  },
+  "directionality_overrides": []
+}

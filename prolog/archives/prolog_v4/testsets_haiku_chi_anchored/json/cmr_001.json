@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "cmr_001",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Critical Minerals Reserve",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_mining_companies",
+      "us_government"
+    ],
+    "victims": [
+      "foreign_mineral_suppliers",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Taxpayers",
+      "comment": "Taxpayers bear the cost of the reserve, with limited direct benefit. The funds are allocated, and they cannot easily exit the tax system. d = 0.95"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Government",
+      "comment": "The US government benefits from the reserve, gaining greater control over critical mineral supplies and reducing reliance on foreign nations. Exit through policy change."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective sees the reserve as a tangled rope, balancing the benefits of reduced foreign reliance with the costs to taxpayers and potential distortions in the mineral market. Long-term benefits are uncertain."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Domestic Mining Companies",
+      "comment": "Domestic mining companies benefit from government contracts and increased demand, but are also constrained by environmental regulations and market volatility."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Foreign Mineral Suppliers",
+      "comment": "Foreign mineral suppliers, particularly those from nations the US seeks to reduce reliance on, are negatively impacted by the reserve, facing reduced demand and market share."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "market_distortion",
+      "question": "To what extent does the reserve distort the global market for critical minerals?",
+      "resolution_mechanism": "Economic analysis of price fluctuations and supply chain shifts.",
+      "impact": "Significant distortion could lead to retaliatory measures and reduced global supply chain efficiency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of the reserve on global mineral markets"
+    },
+    {
+      "id": "strategic_effectiveness",
+      "question": "How effectively does the reserve reduce US vulnerability to supply chain disruptions?",
+      "resolution_mechanism": "Scenario planning and simulations of potential disruptions.",
+      "impact": "Low effectiveness would undermine the primary rationale for the reserve.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The effectiveness of the reserve in mitigating supply chain risks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The US government establishes a $12 billion critical minerals reserve to reduce reliance on China and other nations for strategic resources. This initiative aims to bolster domestic mining capabilities, secure supply chains, and mitigate economic vulnerabilities. The reserve is a strategic tool to enhance national security and economic resilience.",
+    "key_agents": [
+      "US Government: Primary beneficiary (institutional/arbitrage) \u2013 gains control over mineral supplies.",
+      "Domestic Mining Companies: Secondary beneficiary (powerful/mobile) \u2013 benefit from government contracts and demand.",
+      "Taxpayers: Primary victim (powerless/trapped) \u2013 bear the financial burden of the reserve.",
+      "Foreign Mineral Suppliers: Secondary victim (moderate/constrained) \u2013 face reduced demand and market share."
+    ],
+    "logic_rationale": "Extractiveness: 0.50 \u2013 Moderate extraction as taxpayers fund the reserve with potential benefits to domestic mining companies. Suppression: 0.40 \u2013 Moderate suppression due to reduced reliance on foreign suppliers. Theater ratio: 0.20 \u2013 Low theater as the reserve is primarily a functional economic policy.",
+    "perspectival_gap": "The government sees it as a necessary strategic move (rope), while taxpayers may view it as a costly burden (snare). Domestic mining companies see opportunity (tangled_rope), while foreign suppliers perceive reduced market access (snare).",
+    "directionality_logic": "US Government: Beneficiary + arbitrage \u2192 d \u2248 0.05. Domestic Mining Companies: Beneficiary + mobile \u2192 d \u2248 0.15. Taxpayers: Victim + trapped \u2192 d \u2248 0.95. Foreign Mineral Suppliers: Victim + constrained \u2192 d \u2248 0.85.",
+    "mandatrophy_analysis": "The reserve is primarily a strategic economic policy, designed to shift dependence away from foreign nations that the US has identified as having conflicting interests. This goal is achieved through protectionist measures. While the intent is understandable, the long term effects of these actions are more easily described and classified as a tangled rope than as a type of rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "trade_agreements",
+      "geopolitical_stability"
+    ]
+  },
+  "directionality_overrides": []
+}

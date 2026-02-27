@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "uk_hicbc_trap",
+    "version": "1.0",
+    "generated_date": "2025-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hicbc"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK High Income Child Benefit Charge (HICBC)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "treasury_revenue_collection",
+      "dual_income_households_below_threshold"
+    ],
+    "victims": [
+      "single_earner_households_over_threshold",
+      "work_incentive_structure",
+      "secondary_earner_participation"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Secondary Earner (Trapped by Effective Marginal Tax)",
+      "comment": "PERSPECTIVE 1: SECONDARY EARNER (SNARE) \u2014 Faces effective marginal tax rates exceeding 60% as child benefit claws back at \u00a31 per \u00a32 earned above \u00a360k threshold. Cannot exit without withdrawing from labor market entirely. No alternative benefit structure available. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Dual-Income Household (Moderate Income)",
+      "comment": "PERSPECTIVE 2: DUAL-INCOME HOUSEHOLD (TANGLED ROPE) \u2014 Below threshold, receives full benefit coordination value (child support pool incentivizes dual earning). But if either partner crosses threshold, benefits from coordination collapse. Constrained by income distribution: cannot easily restructure to claim both benefit coordination and higher household income. d\u22480.68, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Treasury / HM Revenue & Customs",
+      "comment": "PERSPECTIVE 3: TREASURY & HMRC (ROPE) \u2014 Experiences the rule as a coordination mechanism for revenue collection. Enforcement cost is minimal (HMRC processes via standard tax return; clawback is automatic calculation). Extraction is institutional benefit (tax revenue ~\u00a31.5bn annually). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Policy Reform Coalition",
+      "comment": "PERSPECTIVE 4: POLICY REFORM COALITION (SCAFFOLD) \u2014 Organized groups (IPPR, working parents' advocacy, tax reform bodies) see the HICBC as a temporary policy with a sunset path: universal basic income pilots, reformed child benefit structure, or reformed tax thresholds could dissolve the extraction mechanism. d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.15. Coalition has agency and articulates an exit path within policy cycle."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Means-Testing Logic (Institutional Inertia)",
+      "comment": "PERSPECTIVE 5: MEANS-TESTING LOGIC / INSTITUTIONAL INERTIA (PITON) \u2014 The HICBC is a degraded version of means-tested welfare logic applied to a nominally universal benefit. Theater ratio = 0.58: much energy is spent on income verification, threshold administration, and public debate about 'fairness' rather than on actual poverty relief. The constraint persists through bureaucratic inertia and political ideology ('universal' benefits preserve legitimacy while means testing controls costs), but its primary function (reducing child poverty) has atrophied \u2014 the rule often makes work less rational for secondary earners, worsening rather than improving outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a pure economic perspective, a single-earner household earning above benefit threshold must choose: earn more and lose benefit, or earn less and keep benefit. This appears as an inherent trade-off \u2014 immutable law of finite resources and progressive taxation. However, structural data contradicts mountain classification: \u03b5=0.48, suppression=0.62, theater=0.58 all signal institutional rather than natural constraint. The 'inherent trade-off' is a false summit; the actual constraint is a contingent policy design choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "secondary_earner_withdrawal_elasticity",
+      "question": "What is the true labor supply elasticity of secondary earners responding to the HICBC clawback? Are secondary earners genuinely trapped, or do many perceive exit options (self-employment restructuring, partner income juggling, career switching)?",
+      "resolution_mechanism": "Longitudinal labor force survey data tracking secondary earner participation before/after HICBC implementation (2013); econometric estimation of labor supply response to effective marginal tax rate; behavioral interviews with affected households",
+      "impact": "If elasticity is high (>0.5): secondary earners have mobile exit options, and classification shifts toward Tangled Rope across perspectives. If elasticity is low (<0.2): trap is real, Snare classification strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Labor supply elasticity of secondary earners responding to HICBC"
+    },
+    {
+      "id": "benefit_clawback_awareness_gap",
+      "question": "How many affected households actually understand the HICBC mechanism and its effective marginal tax impact? Is the constraint behavioral (people don't know they're trapped) or structural (people know and are trapped anyway)?",
+      "resolution_mechanism": "Survey data on HICBC awareness among high-income households; comparison of intended vs actual labor supply decisions; analysis of income bunching at \u00a360k threshold (revealed preference for threshold avoidance)",
+      "impact": "If awareness is low: much of the 'trap' is theater rather than extraction \u2014 suppression via confusion rather than structural barrier. If awareness is high and people still withdraw: extraction is real and structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Household awareness and understanding of HICBC mechanism"
+    },
+    {
+      "id": "child_poverty_vs_work_incentive_causality",
+      "question": "Does the HICBC achieve its stated goal (reducing benefit spending on higher-income households) at the cost of worsening work incentives? What is the net welfare effect \u2014 does reduced secondary earner participation offset tax savings?",
+      "resolution_mechanism": "Causal inference analysis: compare child outcomes, household income, and child poverty rates in HICBC vs non-HICBC treated groups; model counterfactual secondary earner participation if HICBC did not exist",
+      "impact": "If net welfare effect is negative (more child poverty from work disincentive than savings from clawback): HICBC reclassifies as pure extraction (Snare). If positive: more clearly Tangled Rope or even Rope (coordination benefit preserved despite cost).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Net welfare effect of HICBC on child poverty and work incentives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 2013,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The UK High Income Child Benefit Charge (HICBC), introduced in January 2013, creates a structural trap for households where a single partner earns above \u00a360,000 annually (rising to \u00a380,000 in 2024, with proposed exemptions for dual-high-earners). The rule is nominally designed to target 'universal' child benefit \u2014 which all households historically received \u2014 to higher-income earners. However, the implementation creates a powerful work disincentive for secondary earners: child benefit claws back at \u00a31 per \u00a32 earned above the threshold, generating effective marginal tax rates exceeding 60% when combined with income tax and National Insurance. This produces a tension between the stated coordination goal (maintaining universal child benefit as a family support) and the extraction mechanism (means-testing reduces benefit value sharply at a specific income point). The constraint exemplifies how a policy designed as fiscal tightening can become extractive when it creates work disincentives that actually reduce overall tax revenue and increase child poverty. The rule persists partly through fiscal necessity (reducing spending) and partly through political ideology (means-testing preserves the concept of 'universality' while controlling costs), making it a hybrid of coordination logic and extraction mechanism \u2014 a Tangled Rope.",
+    "key_agents": [
+      "Secondary Earner (typically mother): Primary victim (powerless/trapped) \u2014 faces effective marginal tax >60%, often chooses to withdraw from labor market entirely",
+      "Single-Earner Household: Primary victim (moderate/trapped) \u2014 loses benefit on \u00a31-per-\u00a32 basis; cannot split income with partner to stay below threshold",
+      "Treasury/HMRC: Primary beneficiary (institutional/arbitrage) \u2014 collects ~\u00a31.5bn annually; enforcement cost is minimal (automatic tax calculation)",
+      "Dual-Income Households Below Threshold: Secondary beneficiary (moderate/mobile) \u2014 receive full child benefit coordination value; benefit from secondary earner participation incentives",
+      "Policy Reform Coalition: Organized advocates (organized/mobile) \u2014 IPPR, working parents groups, tax reform bodies articulate sunset path through UBI, tax reform, or benefit restructure",
+      "Child Poverty Outcomes: Structural victim (powerless/trapped) \u2014 benefit clawback often increases child poverty by reducing secondary earner participation without offsetting tax savings",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 risks naturalizing the 'inherent trade-off' between redistribution and work incentives as immutable economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The rule extracts from secondary earners through the combined effect of benefit clawback, opportunity cost of foregone earnings, and work disincentive. The extraction is not as severe as a pure snare (victims have some exit options: income restructuring, self-employment, partnership dissolution) but is significant enough to measurably reduce secondary earner labor force participation (empirical estimates suggest 1-2% withdrawal rate). The 0.48 value reflects that extraction is real and measurable but not total \u2014 it operates through work incentive suppression rather than direct coercion. Suppression (0.62): Moderate-high. The constraint operates through multiple suppression mechanisms: (1) Economic: high effective marginal tax rate makes work irrational for many secondary earners; (2) Informational: awareness of HICBC is low (~40% of affected households understand the mechanism); (3) Structural: threshold structure creates bunching effect at \u00a360k income point, forcing binary choice (earn below threshold or forfeit benefit entirely). Theater ratio (0.58): Moderate. The HICBC involves substantial theater: administrative burden of income verification and clawback calculation, public debate about 'fairness' to high-income families, political theater around 'protecting' universal benefits while means-testing them. But the theater is not dominant \u2014 the underlying extraction mechanism is real and measurable (\u00a31.5bn collected annually). Theater has increased over time as the rule's unintended consequences (reduced secondary earner participation, increased child poverty in some cases) have become visible, generating more policy debate and administrative complexity.",
+    "perspectival_gap": "This constraint demonstrates how different agents perceive the same policy through radically different structural lenses. The Treasury sees efficient revenue collection (Rope: coordination mechanism, minimal enforcement cost). The secondary earner sees a trap (Snare: faces effective marginal tax >60%, no realistic exit without withdrawing from labor market). The policy reform coalition sees a temporary problem with a sunset (Scaffold: UBI pilots or tax reform could dissolve the mechanism). The institutional means-testing logic sees its own degraded function (Piton: theater ratio 0.58 reflects energy spent on threshold administration rather than poverty reduction). The analytical observer risks naturalizing the 'inherent trade-off' as economic law (Mountain: false summit), when the actual constraint is contingent policy design. The perspectival gap reveals that all six types coexist because the HICBC is not a simple law of nature \u2014 it is a policy choice with measurable structural consequences that different agents experience as coordination, extraction, or degradation depending on their position.",
+    "directionality_logic": "Secondary earner: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Cannot realistically exit without withdrawing from labor market; faces effective marginal tax exceeding 60%. Treasury/HMRC: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Minimal enforcement cost; institutional benefit from revenue collection. Dual-income below threshold: Beneficiary + mobile \u2192 d\u22480.18, f(d)\u22480.05. Slight beneficiary. Receive full benefit coordination value; some exit mobility (can restructure income if needed, though not easily). Policy reform coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Moderate. Have agency and articulate exit path; constrained by political economy of reform cycle. Child poverty outcomes: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.38. Structural victim with no exit option; abstract collective cannot organize or exit. The directionality derivation captures why secondary earners and policy advocates perceive the constraint so differently: secondary earners have trapped exit (high d), while policy advocates have mobile exit (lower d) because they can articulate and potentially implement reform paths.",
+    "mandatrophy_analysis": "The HICBC does NOT resolve the mandatrophy between coordination and extraction \u2014 it exemplifies the failure to resolve it. The stated goal (coordination: maintain universal child benefit as family support while targeting fiscal consolidation) is genuinely a coordination need. But the implementation mechanism (extraction: clawback via effective marginal tax >60%) creates work disincentives that undermine the coordination goal. The policy is Tangled Rope precisely because it possesses BOTH genuine coordination function (provides child support to dual-income households) AND asymmetric extraction (claws back support from higher earners in a way that distorts work incentives). The mandatrophy is NOT resolved; rather, the constraint manifests it. The policy has created a situation where fiscal tightening has become counterproductive: the \u00a31.5bn collected annually in benefit clawback is offset (or more than offset) by reduced secondary earner tax revenue and potential increases in child poverty-related spending. True resolution would require either: (A) eliminating the clawback (returning to universality), (B) restructuring thresholds to remove work disincentive (e.g., per-household threshold for dual earners), or (C) replacing child benefit with a redesigned mechanism that does not create marginal rate distortion. The IPPR and other policy advocates argue for such reforms, explaining the Scaffold perspective: the sunset path is visible but requires political change, not just economic adjustment."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_secondary_earner_labor_supply",
+      "uk_child_poverty_outcomes",
+      "uk_tax_progressivity_distortion"
+    ],
+    "dual_formulation_note": "The HICBC is a distinct constraint from the underlying child benefit system. The child benefit itself is a Rope (coordination mechanism for family support); the HICBC clawback is a tangled_rope that introduces extraction asymmetry. They are linked: HICBC is downstream of child benefit policy but creates its own structural constraints with measurably different \u03b5 values."
+  },
+  "directionality_overrides": []
+}

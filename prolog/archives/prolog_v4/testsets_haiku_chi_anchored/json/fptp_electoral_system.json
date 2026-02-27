@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "fptp_electoral_system",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fptp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "First-Past-the-Post Electoral System",
+    "topic_domain": "political/electoral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "two_major_parties",
+      "incumbent_representatives"
+    ],
+    "victims": [
+      "third_party_candidates",
+      "voter_representation_fidelity",
+      "proportional_voice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginalized Voter",
+      "comment": "PERSPECTIVE 1: MARGINALIZED VOTER (SNARE) \u2014 Voters whose preferences diverge from the binary choice in their district face tactical voting pressure. No exit option. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73. The constraint suppresses honest voting and coerces strategic behavior."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Third-Party Candidates",
+      "comment": "PERSPECTIVE 2: THIRD-PARTY CANDIDATES (SNARE) \u2014 Structurally unable to compete. Spoiler effect creates negative incentive gradient. No exit: participation itself becomes extraction mechanism. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74. Pure extraction via suppression of voice."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Swing Voter",
+      "comment": "PERSPECTIVE 3: SWING VOTER (TANGLED ROPE) \u2014 Experiences genuine coordination function: their vote genuinely affects outcome in competitive districts. But suppression remains high (wasted votes in safe districts, tactical voting burden). Benefits from selection mechanism but constrained by spoiler logic. d\u22480.68, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.56."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Major Party Apparatus",
+      "comment": "PERSPECTIVE 4: MAJOR PARTY APPARATUS (ROPE) \u2014 Pure coordination benefit with arbitrage exit. FPTP enables efficient coalition-building: aggregates diverse preferences into binary choice, reducing decision complexity. Parties see this as solving a collective action problem (how to select representatives from diverse electorate). d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Net beneficiary; system solves their coordination problem efficiently."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Electoral Reform Coalition",
+      "comment": "PERSPECTIVE 5: ELECTORAL REFORM COALITION (SCAFFOLD) \u2014 Institutional actors (proportional representation advocates, ranked-choice voting organizers, electoral commissions) see FPTP as a temporary coordination failure with a sunset. Many democracies have migrated or are piloting alternatives. d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.26. Low effective extraction because institutional actors see clear exit path and have agency to build alternative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Law Itself",
+      "comment": "PERSPECTIVE 6: ELECTORAL LAW INSTITUTION (PITON) \u2014 The formal statute persists through constitutional inertia despite known pathologies. Theater ratio 0.58: substantial performative legitimation ('one person one vote') obscures the actual extraction mechanism (winner-take-all spoiler logic). The law maintains its authority via tradition and path dependency, not because it solves an active coordination problem. theater_ratio \u2265 0.70 gate is near but not satisfied; the piton is marginal \u2014 barely holds by institutional momentum."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 From a civilizational/universal angle, some might claim FPTP is a natural law of simple plurality: 'Someone has to win the election; the candidate with the most votes is the obvious choice.' But the structural data (\u03b5=0.52, suppression=0.68, theater=0.58) contradict the mountain gate. This is a false summit: the 'inevitability' naturalizes a contingent design choice. Most democracies have adopted alternatives, proving the constraint is not a law of nature but a path-dependent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "spoiler_threshold_empirical",
+      "question": "Below what vote share does a third-party candidate trigger measurable spoiler effects (shifting winner identity in >5% of races)?",
+      "resolution_mechanism": "Historical regression analysis: compare outcome probability (winner identity) when third-party vote share crosses 3%, 5%, 8%, 12% thresholds; identify causal threshold via discontinuity design",
+      "impact": "If threshold is low (~3%): FPTP suppression is extreme; almost any alternative voice creates strategic voting collapse. If threshold is high (~15%+): spoiler effect is minor; FPTP is more rope than snare. Current evidence suggests 5-8% in competitive races.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Spoiler effect threshold below which outcome probability shifts"
+    },
+    {
+      "id": "safe_district_representation_fidelity",
+      "question": "In safe districts (>15% margin), do voters in the losing supermajority experience the constraint as suppressive extraction or as legitimate minority status?",
+      "resolution_mechanism": "Survey data: measure voter perception of representation quality; compare safe vs competitive districts; analyze exit-voice-loyalty patterns (do majority-party voters stay engaged despite guaranteed outcome?)",
+      "impact": "If suppressive: FPTP is snare from more perspectives (high d). If legitimate: FPTP is rope or scaffold for safe-district minorities (moderate d). Current evidence suggests younger voters in safe districts experience high suppression (low engagement); older voters accept it as normal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Voter perception of representation fidelity in safe districts"
+    },
+    {
+      "id": "alternative_system_stability_equivalence",
+      "question": "Do proportional representation or ranked-choice voting systems generate equivalent or lower total extraction/suppression when accounting for coalition negotiation costs and minority veto power?",
+      "resolution_mechanism": "Comparative analysis: measure suppression (voice barriers), theater (legitimation performance), and extractiveness (rent-seeking by dominant coalition) across electoral systems in comparable democracies; control for confounds (institutional maturity, political culture, economic inequality)",
+      "impact": "If alternatives are empirically equivalent: FPTP is a path-dependent Schelling point, not uniquely extractive. If alternatives are lower-extraction: FPTP is structurally worse than available alternatives. If alternatives are higher-extraction: FPTP's simplicity is a genuine advantage (rent-seeking just takes different form).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative extraction/suppression across electoral systems"
+    },
+    {
+      "id": "mandate_legitimacy_paradox",
+      "question": "Does FPTP winner legitimacy (claiming a mandate) actually persist longer or stronger than PR-elected coalitions, despite lower vote share? Does it reduce defection pressure or increase elite accountability?",
+      "resolution_mechanism": "Longitudinal legislative voting records: measure bill passage rates, defection rates, and coalition stability for FPTP-elected governments vs PR-elected governments; analyze executive accountability via confidence votes and parliamentary pushback",
+      "impact": "If FPTP strengthens mandate: tangled_rope classification confirmed (coordination benefit is real). If FPTP produces equivalent or weaker legitimacy: extractiveness is not offset by meaningful coordination gain; reclassify toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether FPTP mandates produce stronger governance legitimacy than alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "First-Past-the-Post (FPTP) is a winner-take-all electoral system in which the candidate with the most votes wins a district seat, regardless of achieving a majority. This constraint exhibits a hybrid coordination-extraction structure: it solves a real problem (how to aggregate diverse preferences into a representative selection mechanism) while simultaneously suppressing and extracting from certain voter classes. The system creates asymmetric incentive gradients: two major parties benefit enormously from the spoiler dynamic (third parties are structurally locked out), while voters whose preferences fall outside the binary choice face tactical voting pressure and representation loss. The constraint has intensified over time (\u03b5 increased from 0.35 to 0.52 over the interval) as political polarization has widened the suppression surface and as theater ratio has increased (candidates now claim to represent majority mandates with <40% of votes). This represents the classic lifecycle drift of a hybrid constraint: the coordination function remains constant, but the extraction rent has accumulated as parties optimize for the spoiler advantage.",
+    "key_agents": [
+      "Marginalized Voters: Primary victims (powerless/trapped) \u2014 voters whose policy preferences diverge from the binary choice face suppression, tactical voting burden, and permanent voice loss",
+      "Third-Party Candidates: Secondary victims (powerless/trapped) \u2014 structurally unable to compete due to spoiler effect; participation becomes extraction mechanism",
+      "Swing Voters: Intermediate (moderate/constrained) \u2014 experience genuine coordination function in competitive districts but suppression in safe districts; mixed benefit and cost",
+      "Major Party Apparatus: Primary beneficiary (organized/arbitrage) \u2014 benefits from spoiler lock-in; achieves coalition aggregation and gatekeeper power with minimal competition",
+      "Incumbent Representatives: Secondary beneficiary (organized/constrained) \u2014 safe-seat incumbents benefit from districting + spoiler lock-in but lose mobility between cycles",
+      "Electoral Reform Coalition: Institutional actor (institutional/mobile) \u2014 proportional representation and ranked-choice voting advocates; see FPTP as temporary failure with clear alternative pathways",
+      "Electoral Law Institution: Inertial (institutional/constrained) \u2014 the formal statute persists through constitutional path-dependency; maintains legitimacy via 'one person one vote' rhetoric despite spoiler pathology",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent design choice ('obviously the most votes wins') as inevitable law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and increasing. The system does not extract wealth (it's not a rent-seeking oligarchy), but it extracts voice and representation. Voters whose preferences are outside the binary are forced to either abandon their preference or accept vote 'wastefulness.' The metric measures representation loss relative to vote share: a party with 25% nationally but zero seats has extractiveness approaching 1.0 from that group. The aggregate \u03b5=0.52 reflects that roughly half the voting population experiences meaningful voice suppression in any given election (safe-district voters + third-party sympathizers + tactical voters). Suppression (0.68): High and structural. Barriers to voice include: (1) spoiler effect (third-party participation triggers strategic voting collapse), (2) wasted-vote burden (millions of votes for losing candidates generate zero representation), (3) tactical voting obligation (voters must vote against preference to avoid worse outcome), (4) safe-district lock-in (majority-party voters in safe districts face zero competitive incentive). These are not bugs but design features of FPTP \u2014 they are structural to the mechanism. Theater ratio (0.58): Moderate-high and increasing. Legitimation performance includes the 'one person one vote' rhetoric (obscures winner-take-all spoiler dynamics), mandate claims by sub-majority winners, and narrative of 'representing your constituency' (obscures that safe-district minorities have zero representation). The theater has increased because parties now claim mandates with smaller vote shares as polarization has widened. This is characteristic of Goodhart drift: as the constraint's extraction grows, the legitimation theater must also grow to maintain acceptance.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence despite identical structural data. The major party apparatus sees pure coordination (Rope) \u2014 FPTP solves the problem of aggregating diverse voter preferences into binary choices. They experience the system as enabling coalition formation and efficient representation. Swing voters in competitive districts see tangled rope (mixed coordination and extraction) \u2014 their vote genuinely moves outcomes, but they're suppressed when district margins are safe. Third-party candidates and marginalized voters see pure snare (Snare) \u2014 the system suppresses their voice and offers no viable path forward. The electoral reform coalition sees a temporary problem with a sunset (Scaffold) \u2014 proportional representation and ranked-choice voting are available alternatives that democracies are adopting. The electoral law institution sees itself as a degraded piton (Piton) \u2014 formally legitimate but substantively performative, maintained through inertia. The analytical observer might naturalize the system as a law of plurality (Mountain: 'obviously the candidate with most votes wins'), but the structural data reveals this as a false summit \u2014 other democracies have solved the representation aggregation problem differently.",
+    "directionality_logic": "Marginalized voters: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Near-maximum extraction; no exit route. Third-party candidates: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction; participation itself becomes the spoiler trap. Swing voters: Mixed + constrained \u2192 d\u22480.68, f(d)\u22481.08. Significant extraction but modulated by genuine coordination value in swing districts. Major party apparatus: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary; system solves their coalition problem with minimal cost. Electoral reform coalition: Institutional + mobile \u2192 d\u22480.45, f(d)\u22480.50. Moderate extraction because they're mobile (alternatives available) but constrained by path-dependent status quo. Electoral law institution: Institutional + constrained (piton) \u2192 d\u22480.15, f(d)\u2248-0.01. Low directionality for the formal statute itself, but high theater (\u22650.70 gate is marginal) indicates degradation.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that FPTP is NOT a false natural law but a contingent institutional arrangement with measurable coordination benefits that are offset by extractive costs. The constraint prevents mislabeling it as pure snare (it does aggregate preferences and solve a real coordination problem) and prevents false mountain classification (other systems work). The mandatrophy is managed via the tangled_rope classification: the system has a genuine coordination function (major parties do solve the problem of aggregating diverse preferences), but it extracts from third parties and safe-district minorities to achieve this coordination. The classification holds that both properties are real: the coordination is not theater, and the extraction is not incidental. The remedy is not to eliminate FPTP (that would eliminate the coordination function) but to decompose it \u2014 replace FPTP with a system that provides equivalent coordination at lower extraction cost. Proportional representation and ranked-choice voting are empirically shown to provide similar or superior coordination at lower spoiler-driven suppression. The mandatrophy analysis confirms that FPTP is not a natural law (other systems work), not pure extraction (it does enable representation), but a suboptimal equilibrium where institutional inertia prevents migration to dominating alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "two_party_duopoly",
+      "gerrymandering_district_design",
+      "voter_suppression_access"
+    ],
+    "dual_formulation_note": "FPTP is downstream of the basic representation aggregation problem (how to select representatives from diverse electorate) but represents a distinct constraint. The upstream problem has multiple solutions (FPTP, proportional, ranked-choice, etc.); FPTP is one design choice with its own \u03b5 and suppression profile. The downstream constraints (two-party duopoly, gerrymandering, voter suppression) are enabled by FPTP's structural features and would have different forms under alternative electoral systems."
+  },
+  "directionality_overrides": []
+}

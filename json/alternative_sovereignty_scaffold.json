@@ -2,171 +2,189 @@
   "header": {
     "constraint_id": "alternative_sovereignty_scaffold",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "altsovsca"
   },
   "base_properties": {
-    "extractiveness": 0.4,
-    "suppression": 0.5,
+    "extractiveness": 0.28,
+    "suppression": 0.42,
     "theater_ratio": 0.65,
-    "claimed_type": "tangled_rope",
+    "claimed_type": "scaffold",
     "human_readable": "The Decentralized Parallel",
     "topic_domain": "technological/social",
     "requires_active_enforcement": true,
     "has_sunset_clause": true,
     "beneficiaries": [
-      "protocol_developers",
-      "early_adopters_and_vcs",
-      "users_in_failed_states"
+      "network_participants",
+      "decentralized_protocol_developers",
+      "exit_seeking_populations"
     ],
     "victims": [
-      "incumbent_nation_states",
-      "exploited_retail_users",
-      "global_financial_stability"
+      "institutional_sovereignty_actors",
+      "centralized_coordination_overhead"
     ]
   },
   "perspectives": [
     {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "immediate",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Exploited Retail User",
-      "comment": "PERSPECTIVE 1: EXPLOITED RETAIL USER (SNARE) — Lured by the promise of high returns, their capital is extracted through scams, hacks, or protocol failures with no recourse. For them, the system is pure extraction. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.68."
-    },
-    {
-      "classification_type": "tangled_rope",
+      "classification_type": "scaffold",
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Migrant in a Failed State",
-      "comment": "PERSPECTIVE 2: MIGRANT IN FAILED STATE (TANGLED ROPE) — The system offers a genuine coordination benefit (capital preservation, exit), but at the cost of high volatility, fees, and risk. It is both a tool and a danger. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.55."
+      "label": "The Exit-Seeking Population",
+      "comment": "PERSPECTIVE 1: EXIT-SEEKING POPULATION (SCAFFOLD) \u2014 Individuals trapped in failing institutional arrangements (regulatory capture, surveillance states, currency collapse) see decentralized protocols as temporary infrastructure enabling migration. Low effective extraction because exit is genuinely enabled; theater is moderate (learning curve, technical barriers exist but are surmountable). The scaffold functions because it provides a real alternative pathway with sunset implicit in eventual institutional reform or death."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Protocol Developer",
-      "comment": "PERSPECTIVE 3: PROTOCOL DEVELOPER (SCAFFOLD) — As the builders, they see the system as a temporary structure to bootstrap a new form of sovereignty. They acknowledge the risks and extraction as necessary evils on the path to a stable, decentralized future (the sunset clause). d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.19."
+      "label": "The Protocol Developer Community",
+      "comment": "PERSPECTIVE 2: PROTOCOL DEVELOPER COMMUNITY (TANGLED ROPE) \u2014 Developers benefit from network effects and reputation capital but are constrained by technical debt, security requirements, and ecosystem fragmentation. The constraint exhibits both coordination (network standards, interoperability agreements) and extraction (platform gatekeeping, token holder concentration). Active enforcement required through governance mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Sovereignty Actor",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL SOVEREIGNTY ACTOR (PITON) \u2014 Traditional nation-states and regulatory bodies experience decentralized parallels as a threat that maintains their relevance while undermining actual sovereign function. The constraint appears as degraded institutional control maintained through theater: enforcement of AML/KYC rules, regulatory surveillance, and rhetorical claims of control over 'unregulated' networks. The performance of control persists despite diminishing functional effectiveness."
     },
     {
       "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Early Adopter / VC",
-      "comment": "PERSPECTIVE 4: EARLY ADOPTER / VC (ROPE) — Experiences the system as a pure coordination mechanism for allocating capital and governing new protocols. The 'extraction' is perceived as legitimate investment returns. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.005."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "institutional",
+      "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Incumbent Nation-State",
-      "comment": "PERSPECTIVE 5: INCUMBENT NATION-STATE (TANGLED ROPE) — Views the system as a challenge to its monetary and legal sovereignty. It recognizes some coordination benefits (innovation) but primarily sees an extractive threat (tax evasion, capital flight) that requires active enforcement (regulation) to contain. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.44."
+      "spatial_scope": "global",
+      "label": "The Decentralized Governance Coalition",
+      "comment": "PERSPECTIVE 4: DECENTRALIZED GOVERNANCE COALITION (ROPE) \u2014 Organized participants in protocol governance (DAOs, multisig councils, community forums) experience the constraint primarily as coordination. Solving collective action problems around protocol upgrades, security responses, and dispute resolution. Extraction exists but is moderate and acknowledged within the governance framework."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Regulatory Arbitrage Victim",
+      "comment": "PERSPECTIVE 5: REGULATORY ARBITRAGE VICTIM (SNARE) \u2014 Individuals and businesses in jurisdictions with severe financial repression find their exit options to decentralized networks constrained by capital controls, terminal access restrictions, and legal penalties. The decentralized scaffold exists but is actively suppressed. High experienced extraction because escape attempt itself becomes criminalized."
+    },
+    {
+      "classification_type": "scaffold",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's structure combines a genuine coordination function (enabling action outside state channels) with significant asymmetric extraction (VC allocations, scams, fees). Despite its marketing as a Scaffold, its metrics (ε=0.40, suppression=0.50) place it firmly in the Tangled Rope category. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.55."
-    }
-  ],
-  "interval": {
-    "start": 2015,
-    "end": 2035
-  },
-  "measurements": [
-    {
-      "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2021,
-      "value": 0.7
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.2
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2021,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.4
+      "label": "The Analytical Observer (Sunset Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SCAFFOLD / SUNSET VIEW) \u2014 From a civilizational view, decentralized protocols represent genuine temporary infrastructure with an embedded sunset clause. As institutional sovereignty actors either (a) adopt decentralized coordination mechanisms themselves, (b) collapse and are replaced, or (c) successfully suppress alternatives, the scaffolding function decays. The constraint is not permanent \u2014 it is explicitly designed for the transition window where institutional ropes are failing but successor structures have not yet stabilized."
     }
   ],
   "omegas": [
     {
-      "id": "sunset_clause_viability",
-      "question": "Is the 'sunset clause' a structural reality or merely aspirational marketing?",
-      "resolution_mechanism": "Longitudinal analysis of protocol governance and token distributions to see if they trend towards broader, more stable utility or remain captured by early investors and speculative cycles.",
-      "impact": "If viable, the Scaffold perspective is strengthened. If aspirational, the system is a permanent Tangled Rope or Snare, and the 'scaffold' claim is theatrical.",
+      "id": "institutional_adoption_or_replacement",
+      "question": "Will institutional actors co-opt decentralized protocol infrastructure, or will alternative governance structures replace institutional sovereignty entirely?",
+      "resolution_mechanism": "Historical tracking of institutional adoption patterns (CBDCs adopting blockchain backends, nation-states implementing distributed consensus); comparative analysis of successor governance in jurisdictions where institutional sovereignty has collapsed",
+      "impact": "If co-opted: scaffold collapses into institutional tool (Rope classification). If replacement occurs: sunset is real and constraint becomes historical. If suppressed indefinitely: classification degrades toward Snare.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the system can ever transition from speculative scaffold to stable infrastructure."
+      "type_class": "conceptual",
+      "description": "Whether institutions will adopt or be replaced by decentralized alternatives"
     },
     {
-      "id": "governance_capture",
-      "question": "Can decentralized governance models resist capture by concentrated token holders ('whales') and VCs?",
-      "resolution_mechanism": "Analysis of voting patterns and proposal outcomes in major DAOs, correlating token concentration with decision-making power.",
-      "impact": "If capture is inevitable, the 'decentralized' claim is theatrical (high theater_ratio) and the system functions as a Snare for non-elites. If it can be resisted, the Rope/Scaffold classifications are more credible.",
+      "id": "technical_scaling_ceiling",
+      "question": "Do decentralized protocol constraints (throughput, latency, cost) create a permanent technical ceiling that prevents full institutional replacement?",
+      "resolution_mechanism": "Empirical testing of scaling solutions (rollups, sidechains, sharding); comparison of transaction costs and finality times as networks reach 1B+ users; feasibility analysis of sub-millisecond consensus in geographically distributed systems",
+      "impact": "If ceiling is real: decentralized parallels remain niche scaffolds for exit populations, not institutional replacements. If ceiling is breached: scaffold functions expand to full institutional replacement potential.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "The inevitability of governance capture by capital concentration."
+      "description": "Whether technical constraints prevent decentralized protocols from achieving institutional scale"
     },
     {
-      "id": "state_symbiosis",
-      "question": "Is the Decentralized Parallel a true alternative to the state, or a parasitic system reliant on state-provided infrastructure (internet, property rights, legal recourse for exchanges)?",
-      "resolution_mechanism": "Mapping the dependencies of crypto networks on legacy infrastructure and legal systems.",
-      "impact": "If fully dependent, it cannot be a true 'alternative sovereignty' and is better modeled as a Tangled Rope within the existing system. If it can achieve infrastructural independence, the Scaffold-to-Rope thesis is more plausible.",
+      "id": "surveillance_and_suppression_asymmetry",
+      "question": "Can decentralized networks maintain usability for exit populations while remaining censorship-resistant against institutional suppression?",
+      "resolution_mechanism": "Longitudinal analysis of suppression effectiveness (endpoint surveillance, ISP blocking, legal penalties); comparison of network accessibility in high-control jurisdictions vs open environments; evaluation of privacy-preserving technologies (Tor integration, privacy coins, hardware wallets) against surveillance capabilities",
+      "impact": "If surveillance wins: scaffold collapses into Snare for populations in suppressive jurisdictions. If decentralized networks maintain resistance: scaffold sunset extends indefinitely, creating permanent parallel structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized networks can resist institutional suppression while remaining accessible"
+    },
+    {
+      "id": "coordination_overhead_floor",
+      "question": "Is there a minimum coordination overhead below which decentralized governance becomes unenforceable, creating a floor on extractiveness that prevents pure coordination?",
+      "resolution_mechanism": "Comparative analysis of protocol governance costs (developer time, security auditing, dispute resolution) across different governance models; tracking of real-world protocol failures traceable to insufficient coordination; measurement of extraction (token holder concentration, developer compensation asymmetry) over protocol lifecycle",
+      "impact": "If floor exists: scaffold transitions to Tangled Rope (extraction component becomes permanent). If floor is absent: pure coordination (Rope) is achievable and scaffold has genuine low-extraction character.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the system is a true alternative or merely symbiotic with the state."
+      "type_class": "empirical",
+      "description": "Whether decentralized governance has a minimum coordination overhead that forces extraction"
     }
   ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
   "commentary": {
-    "narrative_context": "The Decentralized Parallel is a framework of crypto-networks and peer-to-peer protocols intended to provide coordination and governance outside traditional state structures. It is marketed and designed as a 'Scaffold'—a temporary, enabling technology allowing populations to migrate away from failing institutional 'Snares.' However, its internal structure is characterized by significant risk, performative rhetoric, and mechanisms for value extraction, leading to a wide perspectival gap.",
+    "narrative_context": "The decentralized parallel represents a genuine scaffolding constraint\u2014temporary infrastructure enabling populations to migrate away from failing institutional ropes that have degraded into snares. Crypto-networks, P2P legal templates, and distributed consensus mechanisms provide coordination outside traditional state structures. Unlike pure coordination (Rope), they function as Scaffold: they have an embedded sunset clause. As institutional actors either adopt decentralized mechanisms themselves, collapse, or successfully suppress alternatives, the scaffolding function decays. The constraint demonstrates that Scaffold is not merely a temporary support system with an explicit sunset date, but any coordination infrastructure whose primary function is enabling transition away from failing institutions. The rising extractiveness (0.12 \u2192 0.28) over the interval reflects increasing token holder concentration, developer gatekeeping, and platform rent-seeking layered onto the original coordination function. Theater ratio (0.45 \u2192 0.65) reflects institutional actors performing control over decentralized systems while actual supervisory capacity diminishes, and decentralized communities performing decentralization norms while technical infrastructure remains somewhat centralized.",
     "key_agents": [
-      "Protocol Developers: The builders of the system (organized/mobile), who see it as a Scaffold.",
-      "Early Adopters & VCs: Primary financial beneficiaries (powerful/arbitrage), who see it as a Rope for capital coordination.",
-      "Users in Failed States: Primary users of the 'sovereignty' function (powerless/mobile), who experience it as a risky but necessary Tangled Rope.",
-      "Exploited Retail Users: Victims of scams and volatility (powerless/trapped), who experience it as a Snare.",
-      "Incumbent Nation-States: The established order being challenged (institutional/constrained), which sees it as a rival Tangled Rope."
+      "Exit-Seeking Populations: Primary beneficiaries (powerless/mobile) \u2014 gain genuine exit options from failing institutional arrangements; capture most benefit",
+      "Protocol Developer Community: Secondary beneficiaries (moderate/constrained) \u2014 gain reputation capital and network effects but constrained by technical debt and ecosystem fragmentation",
+      "Decentralized Governance Coalition: Organized participants (organized/constrained) \u2014 solve coordination problems around protocol upgrades and dispute resolution",
+      "Institutional Sovereignty Actors: Primary victims (institutional/arbitrage) \u2014 experience decentralized parallels as undermining actual sovereign function; maintain theatrical control",
+      "Regulatory Arbitrage Victims: Secondary victims (moderate/trapped) \u2014 find exit to decentralized networks suppressed through capital controls and legal penalties",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees decentralized parallels as genuine temporary infrastructure with embedded sunset, not permanent replacement"
     ],
-    "logic_rationale": "Extractiveness (0.40): Moderate. While claiming to be non-extractive, the system facilitates significant value transfer through gas fees, VC token allocations, MEV, scams, and protocol-level inflation. Suppression (0.50): Moderate. The system doesn't suppress the state, but within its ecosystem, network effects and technical complexity create high barriers to entry and suppress non-participation for those who need an exit. Theater Ratio (0.65): High. The rhetoric of 'decentralization' and 'trustlessness' often masks centralized points of failure and governance capture by capital, making much of the discourse performative.",
-    "perspectival_gap": "The gap is profound. The system's builders (developers) genuinely see a Scaffold, a temporary tool for liberation. Its financiers (VCs) see a clean Rope for coordinating investment. Its most desperate users (migrants) see a Tangled Rope, a lifeline that is also a source of risk. Its most naive users (retail victims) fall into a Snare. The incumbent power (the state) sees a rival Tangled Rope. The analytical classification of Tangled Rope reflects the objective reality that the system has both a genuine coordination function and a significant, asymmetric extractive function.",
-    "directionality_logic": "Beneficiaries like VCs have arbitrage exit, driving their directionality `d` near zero and classifying the system as a Rope. Victims like scammed users are trapped, maximizing `d` and pushing the effective extraction `χ` into the Snare category. Agents with mixed incentives and partial exit, like migrants and nation-states, perceive it as a Tangled Rope. The developers, as organized agents who believe in the mission, have a low `d` that allows them to perceive the system as the Scaffold they intend it to be.",
-    "mandatrophy_analysis": "This case resolves a key mandatrophy: a system's claimed or intended function (Scaffold) can be structurally different from its objective classification (Tangled Rope). The framework does not force a single 'correct' type. Instead, it models how the developers' Scaffold perspective is a valid, indexical truth for them, while the retail victim's Snare perspective is an equally valid truth for their position. The analytical classification of Tangled Rope serves as the objective baseline, acknowledging that the structure contains both the coordination function the developers build and the extractive function the victims experience."
+    "logic_rationale": "Extractiveness (0.28): Moderate-low. The constraint functions primarily as coordination enabling exit, not as extraction mechanism. The rising extractiveness reflects increasing rent-seeking (token concentration, developer compensation concentration, platform fees) layered onto the original coordination function, but the core mechanism remains: exit-enabling coordination. Base extraction remains well below the tangled_rope threshold (0.40+) because the primary function is not extractive. Suppression (0.42): Moderate. Capital controls, endpoint surveillance, and legal penalties suppress access for populations in high-control jurisdictions. But suppression is not total or universal\u2014open jurisdictions enable relatively free access. Theater ratio (0.65): Moderate-high. Both institutional actors (performing control they don't possess) and decentralized communities (performing decentralization while infrastructure remains somewhat centralized) contribute theater. Regulatory rhetoric about 'regulating crypto' maintains performative control despite diminishing functional enforcement capacity.",
+    "directionality_logic": "Exit-seeking populations derive low d (high beneficiary status) from mobile exit options and clear structural benefit\u2014they are the intended users. Institutional sovereignty actors derive high d (victim status) from their experience of capacity loss and the constraint's direct threat to their functional monopoly. Protocol developers occupy middle-ground d through mixed benefits (network effects) and constraints (technical debt). The constraint's scaffolding character emerges from the low suppression of exit (for populations not in suppressive jurisdictions) combined with clear sunset: as institutions adopt, fail, or suppress alternatives, the coordination function decays. This is not coordination that persists indefinitely (Rope) nor extraction that sustains itself through coercion (Snare), but temporary coordination with an embedded institutional trajectory.",
+    "perspectival_gap": "The exit-seeking population sees genuine Scaffold (low extraction, real exit option, implicit sunset as institutions change). Institutional sovereignty actors see Piton (degraded control maintained through theater). Protocol developers see Tangled Rope (mixed coordination and rent-seeking). Regulatory arbitrage victims see Snare (suppressed exit becomes extractive). The decentralized governance coalition sees Rope (coordination problem-solving without extraction). The analytical observer sees Scaffold with clarified sunset conditions. This perspectival range is not incoherence but legitimate observation of a constraint that serves different functions for different agents\u2014coordination for developers, exit for vulnerable populations, threat for institutions, opportunity for arbitrage seekers.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy between 'decentralized = pure coordination' and 'decentralized = new extraction' by revealing that decentralized parallels function as Scaffold precisely because they are temporary coordination infrastructure. They are NOT pure coordination (Rope) because the sunset clause is embedded in institutional dynamics\u2014they exist specifically to enable exit from failing institutions, and as those institutions reform or collapse, the scaffolding loses its function. They are NOT pure extraction (Snare) because the primary mechanism is enabling genuine exit (low suppression for accessible populations) and coordination (protocol governance), not coercive capture. The rising extractiveness reflects rent-seeking overlay, but the core function remains scaffolding. The constraint avoids false categorization by treating Scaffold as legitimately distinct from both Rope (permanent coordination) and Snare (coercive extraction)\u2014it is temporary coordination with an institutional sunset clause."
   },
   "boltzmann": {
     "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
-      "failing_state_snare",
-      "fiat_currency_debasement"
-    ]
-  }
+      "institutional_capture_snare",
+      "currency_debasement_extraction",
+      "regulatory_arbitrage_tangled_rope"
+    ],
+    "dual_formulation_note": "The decentralized parallel is downstream of specific failing institutional constraints (currency debasement, regulatory capture, capital controls) but represents a distinct structural constraint. The upstream constraints have their own extractiveness values reflecting institutional dysfunction; the decentralized parallel has its own extractiveness reflecting coordination overhead and emerging rent-seeking layering. Decomposition follows the \u03b5-invariance principle: measuring 'decentralization' via institutional failure rates yields different \u03b5 than measuring via technical scaling or governance efficiency. This story captures the scaffolding function; sibling stories address technical sufficiency (constraint_decentralized_scaling_ceiling) and governance capture (constraint_decentralized_token_concentration) separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.8
+    }
+  ]
 }

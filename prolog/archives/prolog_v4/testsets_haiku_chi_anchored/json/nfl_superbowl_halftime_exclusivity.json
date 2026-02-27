@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "nfl_superbowl_halftime_exclusivity",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nflhalf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "NFL Super Bowl Halftime Show Exclusivity Agreements",
+    "topic_domain": "economic/sports_entertainment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nfl_league"
+    ],
+    "victims": [
+      "performer_creative_autonomy",
+      "competing_platforms",
+      "performer_compensation_market"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Selected Performer",
+      "comment": "PERSPECTIVE 1: THE SELECTED PERFORMER (SNARE) \u2014 Career-defining exposure creates a trap. Rejecting the halftime slot is career suicide; accepting requires surrendering creative autonomy, licensing rights, and future platform options under exclusivity. Trapped by prestige asymmetry. d\u22480.92, f(d)\u22481.39, \u03c3=1.2 \u2192 \u03c7\u22480.79."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Alternative Platform (Streaming/Concert)",
+      "comment": "PERSPECTIVE 2: ALTERNATIVE PLATFORM (SNARE) \u2014 Competing entertainment platforms (Netflix, concert promoters, music festivals) lose access to selected performer for 1-2 years during peak relevance. Cannot outbid NFL for exclusivity. Constrained by asymmetric bargaining power. d\u22480.78, f(d)\u22481.18, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The NFL League",
+      "comment": "PERSPECTIVE 3: THE NFL LEAGUE (ROPE) \u2014 Experiences the exclusivity agreement as coordination: controlling halftime content protects broadcast quality, avoids competing media narratives, and maximizes viewer attention. Coordinates performer availability. Benefits from exclusive rights to performer's promotion during peak relevance window. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Major Artist (Superstar)",
+      "comment": "PERSPECTIVE 4: THE MAJOR ARTIST / SUPERSTAR (TANGLED ROPE) \u2014 A-list performers with pre-existing global platform (Beyonc\u00e9, The Weeknd, Rihanna tier) have mobility and arbitrage options. Can negotiate carve-outs, demand compensation, or decline. Exclusivity is coordinating mechanism (global reach, cultural moment) combined with minor extraction (limited exclusivity scope for established artists). d\u22480.35, f(d)\u22480.25, \u03c3=1.2 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Music Industry Guild",
+      "comment": "PERSPECTIVE 5: THE MUSIC INDUSTRY GUILD / UNION (PITON) \u2014 Nominally advocates for performer rights but has limited enforcement power against NFL prestige capture. Theater_ratio=0.62: organizations stage negotiations, issue statements, and propose 'fair compensation frameworks,' but the performer trap persists. The mechanism (artist association advocacy) is largely performative because no individual performer can risk defection."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Market Power View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT RISK) \u2014 From a universal/civilizational perspective, one might frame this as an immutable feature of market dominance: the largest platform always captures performers. However, the base properties (\u03b5=0.58, suppression=0.65, theater=0.48) contradict a mountain classification. The constraint is contingent on NFL's current market dominance and exclusivity practices, not on inherent law. Engine will flag false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "superstar_threshold_effect",
+      "question": "At what level of pre-existing fame do performers transition from Snare (powerless) to Tangled Rope (powerful)? Is it categorical or continuous?",
+      "resolution_mechanism": "Comparative analysis of negotiation outcomes: compensation, exclusivity duration, creative control, carve-out clauses as function of performer's prior Spotify streams, ticket sales, or social media reach",
+      "impact": "If threshold is sharp: enables predictive classification of future performers. If continuous: classification depends on trajectory, not fixed properties. If threshold has risen over time: indicates market saturation effect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Performer fame threshold distinguishing powerless from powerful perspectives"
+    },
+    {
+      "id": "exclusivity_enforcement_mechanism",
+      "question": "How does the NFL enforce exclusivity? What are the actual contractual penalties, and have they ever been invoked against non-compliance?",
+      "resolution_mechanism": "Analysis of signed Super Bowl halftime performer contracts (to extent publicly available); research on any public disputes or attempted violations; comparison of stated vs de facto enforcement",
+      "impact": "If enforcement is weak/unenforced: suppression is lower, classification shifts toward Rope. If enforcement is strict: suppression is higher, confirms Snare. If enforcement is selective (enforced against powerless, waived for powerful): confirms directionality asymmetry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual enforcement of exclusivity clauses"
+    },
+    {
+      "id": "alternative_broadcast_legitimacy",
+      "question": "If a performer performed the same content on a competing platform (Netflix special, concert film) during the exclusivity window but before the Super Bowl aired, would the NFL have a legitimate claim of harm, or is the claim purely about broadcast priority?",
+      "resolution_mechanism": "Analysis of contract language: does exclusivity protect pre-Super Bowl broadcast rights, post-Super Bowl performance rights, or both? Historical cases where performers tested boundaries.",
+      "impact": "If exclusivity is purely about Super Bowl broadcast: constraint is weaker (coordination-heavy). If exclusivity extends to future performance rights: constraint is stronger (extraction-heavy). If unclear in contracts: theater ratio increases (performative enforcement).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope and timing of exclusivity enforceability"
+    },
+    {
+      "id": "nfl_market_dominance_dependency",
+      "question": "Would the NFL's exclusivity extraction survive if competing platforms (streaming services, premium concert networks) were to offer equivalent or greater audience guarantees?",
+      "resolution_mechanism": "Counterfactual historical analysis: cases where performers have turned down Super Bowl for competing mega-events. Comparison with other one-time mega-events (World Cup opening ceremony, Olympics opening ceremony) and their exclusivity practices.",
+      "impact": "If extraction survives competition: constraint is structural (true Snare). If extraction collapses: constraint is dependent on NFL's monopoly position (Snare that degrades if market changes).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusivity is sustainable without NFL's market dominance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The NFL Super Bowl Halftime Show represents one of the most valuable entertainment platforms globally\u2014approximately 115 million viewers for a 12-minute performance. The NFL leverages this dominance to negotiate exclusivity agreements with selected performers, restricting their ability to perform similar content on competing platforms during a contractually defined window (typically 1-2 years). This constraint exemplifies extraction wrapped in prestige: the performer receives global exposure but surrenders creative autonomy, licensing rights, and platform optionality. The constraint exhibits perspectival pluralism: the selected performer (powerless/trapped) experiences it as a Snare; the NFL (institutional/arbitrage) experiences it as Rope; competing platforms experience it as Snare; superstar performers with pre-existing power experience it as Tangled Rope with negotiating leverage. The constraint has intensified over 30 years as the Super Bowl's cultural dominance has grown and streaming platforms have emerged as competitors.",
+    "key_agents": [
+      "NFL League: Primary beneficiary (institutional/arbitrage) \u2014 captures exclusive rights to performer during peak relevance; controls narrative around halftime content; monetizes performer's reach",
+      "Selected Performer: Primary victim (powerless/trapped) \u2014 faces binary choice: accept prestige trap or reject career-defining opportunity; surrenders creative autonomy and platform options",
+      "Competing Platforms: Secondary victim (moderate/constrained) \u2014 streaming services, concert promoters, music festivals lose access to performer during exclusivity window; cannot compete on audience guarantee",
+      "Performer Compensation Market: Victim (structural) \u2014 exclusivity agreements suppress market price discovery; performers accept below-market compensation in exchange for prestige rather than negotiating from equal footing",
+      "Major Artists / Superstars: Mobile beneficiary (powerful/mobile) \u2014 A-list performers can negotiate carve-outs, demand equity, or decline; exclusivity is minor constraint relative to prestige value; have exit options",
+      "Music Industry Guild / Unions: Weak advocate (organized/constrained) \u2014 nominally protect performer interests but limited enforcement power; negotiation theater without substantive protection for trapped performers"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High and rising. The NFL extracts significant value from performer exclusivity by controlling global media narrative during peak relevance window, restricting alternative platform access, and suppressing market-based compensation negotiation. The trajectory from 0.35\u21920.48\u21920.58 over 30 years reflects increasing asymmetry as streaming platforms emerged as competitors and the Super Bowl's cultural value concentrated. The extraction is not total (0.70+) because some performers retain negotiating power and the Super Bowl's prestige does provide genuine career benefits alongside the extraction. Suppression (0.65): Moderate-high. The performer trap operates through prestige asymmetry, not physical coercion \u2014 but the alternatives are constrained: rejecting the opportunity has career costs (alternative platforms cannot offer equivalent reach), and accepting requires surrendering autonomy. Theater ratio (0.48): Moderate. The mechanism is relatively transparent \u2014 contracts explicitly state exclusivity terms \u2014 but there is performative layering: negotiation theater staged by guilds, media coverage of 'big payday' that obscures compressed compensation relative to the performer's value, and NFL messaging that frames exclusivity as mutual benefit.",
+    "perspectival_gap": "The gap between the selected performer's perspective (Snare) and the NFL's perspective (Rope) is maximal. For the performer, the constraint is coercive: accept prestige and loss of autonomy or reject and forfeit career opportunity. For the NFL, the constraint is coordinating: it ensures content quality, prevents competing narratives, and maximizes broadcast value. Superstar performers occupy a bridge perspective (Tangled Rope): they have genuine options and can negotiate, but the exclusivity remains partially extractive because their negotiating power does not fully offset the NFL's advantage. Competing platforms see pure Snare \u2014 they have no leverage and cannot participate. The falsehood of the mountain perspective reveals how market dominance can be mistaken for natural law: the NFL's exclusivity does not flow from inherent scarcity (performers exist; platforms exist) but from concentrated bargaining power.",
+    "directionality_logic": "Selected performer (powerless + trapped): d\u22480.92, f(d)\u22481.39. Binary choice with career cost to refusal creates maximum d. Alternative platform (moderate + constrained): d\u22480.78, f(d)\u22481.18. Can exit but with significant cost; no countervailing power. NFL league (institutional + arbitrage): d\u22480.08, f(d)\u2248-0.08. Beneficiary with abundant exit options and market power. Superstar (powerful + mobile): d\u22480.35, f(d)\u22480.25. Mobile enough to negotiate; still partially trapped by prestige asymmetry. Music guild (organized + constrained): d\u22480.58, f(d)\u22480.85. Constrained advocacy; cannot overcome individual performer's incentive to accept.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy because the perspectival plurality is explicable by structural position, not by measurement ambiguity. The same exclusivity mechanism is genuinely coordinating from the NFL's perspective (they achieve orderly broadcast control) and genuinely extractive from the performer's perspective (suppressed compensation, lost optionality). The separation of perspectives by power and exit options explains the gap\u2014no single measurement of 'true' classification. The potential mandatrophy lies in the mountain perspective: one might claim that 'prestige asymmetry is an inherent feature of any one-time mega-event, therefore the constraint is natural law.' This is false. Alternative mega-events (World Cup opening ceremony, Olympics opening ceremony) do not impose comparable exclusivity; the NFL's dominance is institutional choice, not structural necessity. The false summit is caught by noting that the base properties (\u03b5=0.58, suppression=0.65, theater=0.48) do not meet mountain thresholds."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nfl_broadcast_monopoly",
+      "sports_performer_compensation_asymmetry"
+    ],
+    "dual_formulation_note": "The halftime exclusivity agreement is downstream of the NFL's broader broadcast monopoly and upstream of performer compensation asymmetry in sports entertainment. Each story has distinct \u03b5: the broadcast monopoly may be structural (higher \u03b5, mountain risk), while performer compensation asymmetry is sectoral (distinct victims, different measurement basis)."
+  },
+  "directionality_overrides": []
+}

@@ -2,26 +2,28 @@
   "header": {
     "constraint_id": "capital_misallocation_spiral",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "zomb"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "The Zombie Asset Loop",
     "topic_domain": "economic/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "zombie_firm_executives",
-      "incumbent_asset_managers",
-      "central_bank_policymakers"
+      "asset_managers",
+      "zombie_firm_incumbents",
+      "central_banks"
     ],
     "victims": [
-      "savers_and_pensioners",
-      "productive_new_entrants",
-      "future_economic_growth"
+      "productive_capital_allocation",
+      "young_entrepreneurs",
+      "retail_savers",
+      "real_economy_growth"
     ]
   },
   "perspectives": [
@@ -31,132 +33,181 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Saver or Pensioner",
-      "comment": "PERSPECTIVE 1: SAVER (SNARE) — Trapped in a low-yield environment, their capital is forced into unproductive assets, extracting value from their future with no recourse or alternative. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
+      "label": "The Young Entrepreneur",
+      "comment": "PERSPECTIVE 1: YOUNG ENTREPRENEUR (SNARE) \u2014 Cannot access capital at productive rates. Venture lending dries up because institutional capital flows toward zombie assets with guaranteed returns via monetary accommodation. No exit: entrepreneurship requires patient capital, which has been redirected. Experiences maximum extraction \u2014 locked out of viable financing channels."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Real Economy Productivity",
+      "comment": "PERSPECTIVE 2: REAL ECONOMY PRODUCTIVITY (SNARE) \u2014 The structural constraint on capital allocation prevents genuine productive investment. Capital that would flow to R&D, manufacturing, infrastructure improvement gets captured in zombie asset loops. The economy-wide productive capacity is structurally subordinated to financial engineering. No exit mechanism; bears full extraction cost."
     },
     {
       "classification_type": "rope",
-      "agent_power": "powerful",
+      "agent_power": "institutional",
       "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Zombie Firm Executive",
-      "comment": "PERSPECTIVE 2: ZOMBIE FIRM EXECUTIVE (ROPE) — Experiences the low-rate environment as a pure coordination mechanism, providing the cheap capital necessary to continue operations and avoid default. The extractive nature of the loop is invisible from this position. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.01."
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Asset Managers and Fund Operators",
+      "comment": "PERSPECTIVE 3: ASSET MANAGERS (ROPE) \u2014 Experience the constraint as pure coordination: low rates and mandates create predictable yields on zombie assets. They are solving the problem of finding yield in a low-rate environment. Net beneficiary through arbitrage: can move capital between asset classes to capture spreads. The constraint generates fees and stable returns."
     },
     {
-      "classification_type": "scaffold",
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Zombie Firms",
+      "comment": "PERSPECTIVE 4: INCUMBENT ZOMBIE FIRMS (TANGLED ROPE) \u2014 Benefit from continued capital availability at suppressed rates (coordination: they survive). But also subject to enforcement: regulators and central banks maintain the low-rate regime that keeps them alive. Active enforcement of the regime (negative real rates, quantitative easing) is required. Exit is constrained \u2014 if rates rise or stimulus ends, many become insolvent. Mixed: they coordinate to lobby for continued accommodation while being extracted from in terms of productivity pressure."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "institutional",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Central Bank Policymaker",
-      "comment": "PERSPECTIVE 3: CENTRAL BANK (SCAFFOLD) — Views the policy as a temporary support to prevent systemic collapse, believing it has an implicit sunset clause (i.e., it can be unwound once the economy recovers). The long-term extraction is seen as a necessary cost of short-term stability. d≈0.25, f(d)≈0.15, σ=1.0 → χ≈0.10."
+      "spatial_scope": "global",
+      "label": "Central Banks",
+      "comment": "PERSPECTIVE 5: CENTRAL BANKS (TANGLED ROPE) \u2014 Benefit from coordination (their mandates to maintain financial stability are met; zombie firms do not collapse). But subject to extraction: they become trapped maintaining low rates to prevent systemic defaults. Active enforcement (keeping rates suppressed despite inflation) is required. Exit is constrained by institutional mandate \u2014 can they raise rates without triggering cascade of zombie firm failures? Mixed: coordination function (stability) and extraction cost (foregone normal monetary policy)."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Productive New Entrant",
-      "comment": "PERSPECTIVE 4: PRODUCTIVE NEW ENTRANT (TANGLED ROPE) — Sees both the coordination function of capital markets and the severe extractive effect of being crowded out by zombies who absorb available capital. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.72."
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Market Price Discovery Mechanism",
+      "comment": "PERSPECTIVE 6: MARKET PRICE DISCOVERY (PITON) \u2014 Theoretically coordinates capital allocation. In reality, the constraint degrades this function: zombie assets are mispriced (kept alive artificially), true asset values are obscured, and normal price signals fail. The price discovery mechanism persists (markets still trade) but is largely performative \u2014 prices no longer reflect fundamental productivity. Theater ratio high because markets appear to function while fundamental mechanism is broken."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Decentralized Finance Coalition",
+      "comment": "PERSPECTIVE 7: DEFI COALITION (SCAFFOLD) \u2014 Organized agents (crypto platforms, lending protocols, alternative asset venues) are creating parallel capital allocation pathways with different mechanics: no central rate-setting, transparent protocols, algorithmic rather than discretionary pricing. These create a sunset path \u2014 as DeFi mechanisms mature and institutional adoption increases, dependence on traditional zombie asset loop decreases. Temporary coordination problem with a visible exit route."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes the dual nature of the constraint: a distorted resource allocation mechanism (coordination) that systematically transfers wealth from productive sectors and future generations to unproductive incumbents (extraction). This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational analytical perspective, the zombie asset loop appears as an immutable consequence of fiat monetary systems combined with information asymmetry: any system that suppresses rates below market-clearing levels necessarily redirects capital away from efficiency toward politically favored preservation. This perspective risks naturalizing what is actually a policy choice."
     }
   ],
   "omegas": [
     {
-      "id": "policy_intent_vs_effect",
-      "question": "Is the capital misallocation an unfortunate side effect of a necessary stability policy, or an intended (if unstated) feature to protect incumbent institutions?",
-      "resolution_mechanism": "Econometric studies isolating policy effects from confounding factors; analysis of internal policy-making documents.",
-      "impact": "If side effect: strengthens the Scaffold perspective. If intended: strengthens the Snare perspective for the entire system.",
+      "id": "zombie_firm_threshold",
+      "question": "What operational or financial threshold distinguishes a legitimately undervalued firm from a true 'zombie' that survives only through monetary accommodation?",
+      "resolution_mechanism": "Longitudinal analysis of firms with negative equity or sub-cost-of-capital returns; correlation between survival and central bank accommodation cycles; counterfactual: which firms would be insolvent at natural market rates?",
+      "impact": "If threshold is strict (clearly negative-EBITDA): zombie population is small, misallocation is moderate (Rope dominates). If threshold is loose (any firm below cost-of-capital): zombie population is large, misallocation is severe (Snare dominates).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing between policy side effect and unstated intent"
+      "description": "Threshold distinguishing legitimate undervaluation from zombie survival"
     },
     {
-      "id": "schumpeterian_threshold",
-      "question": "At what point does the harm from suppressed creative destruction outweigh the benefit of preventing zombie firm defaults?",
-      "resolution_mechanism": "Longitudinal studies comparing economic growth and innovation in sectors with high vs. low concentrations of zombie firms.",
-      "impact": "A low threshold suggests the system is a highly extractive Snare; a high threshold suggests it functions more like a costly but potentially justifiable Scaffold.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The threshold where preventing defaults causes more harm than good"
-    },
-    {
-      "id": "exit_feasibility",
-      "question": "Can central banks realistically unwind these policies without triggering a catastrophic financial crisis, or are they permanently trapped?",
-      "resolution_mechanism": "Agent-based modeling of market reactions to policy normalization scenarios; historical analysis of past unwinding attempts.",
-      "impact": "If exit is feasible: confirms the Scaffold perspective. If exit is impossible: the system is a permanent Snare, and the 'temporary' justification is pure theater.",
+      "id": "rate_sensitivity_collapse",
+      "question": "If central banks normalize rates to historical averages, what fraction of currently-financed zombie assets become insolvent?",
+      "resolution_mechanism": "Stress testing across asset portfolios; analysis of duration exposure and negative-carry thresholds; survey data on break-even refinancing rates for zombie firms",
+      "impact": "If < 10%: system can normalize smoothly (Scaffold perspective correct). If > 30%: normalization triggers cascade, central banks trapped (Tangled Rope/Snare for systemic actors).",
       "confidence": "high",
+      "type_class": "empirical",
+      "description": "Fraction of zombie assets that become insolvent at normalized rates"
+    },
+    {
+      "id": "alternative_allocation_mechanisms",
+      "question": "Do decentralized finance or non-traditional capital allocation mechanisms (venture capital, peer lending, equity crowdfunding) achieve comparable or better capital efficiency than traditional banking for productive projects?",
+      "resolution_mechanism": "Comparative ROI analysis; failure rates; time-to-productivity for capital deployed through DeFi vs traditional banks; ecosystem maturity analysis",
+      "impact": "If DeFi/alternative mechanisms are more efficient: scaffold sunset is real, path to constraint relaxation exists. If traditional mechanisms remain superior: scaffold is aspirational, zombies persist due to structural, not merely policy, factors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative mechanisms achieve comparable capital efficiency"
+    },
+    {
+      "id": "monetary_accommodation_necessity",
+      "question": "Is continued monetary accommodation necessary to prevent systemic financial collapse, or is it primarily maintaining zombie firms whose collapse would be manageable?",
+      "resolution_mechanism": "Scenario analysis of controlled zombie firm liquidation; analysis of systemic interconnection; study of historical precedents (Sweden 1990s, Japan 1990s-2010s); counterfactual: what happens if we stop?",
+      "impact": "If necessary for systemic stability: Central Banks are genuine victims (Tangled Rope). If maintaining zombies is policy choice: Central Banks are complicit beneficiaries (Rope or Snare depending on frame).",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Feasibility of unwinding the policies without systemic collapse"
+      "description": "Whether monetary accommodation is necessary for systemic stability or maintaining zombies"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2008,
-      "value": 0.3
+      "time_point": 0,
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2018,
-      "value": 0.5
+      "time_point": 5,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2028,
-      "value": 0.65
+      "time_point": 10,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2008,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2018,
-      "value": 0.3
+      "time_point": 5,
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2028,
-      "value": 0.4
+      "time_point": 10,
+      "value": 0.68
     }
   ],
   "interval": {
-    "start": 2008,
-    "end": 2028
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The Zombie Asset Loop describes a feedback cycle where accommodative monetary policy or institutional mandates, initially intended for stabilization, lead to the sustained misallocation of capital. Capital flows to unproductive 'zombie' firms or assets, keeping them alive but generating little to no real growth. The resulting economic stagnation then justifies the continuation of the accommodative policies, reinforcing the loop. This dynamic extracts value from productive sectors of the economy, suppresses returns for savers, and inhibits the process of creative destruction.",
+    "narrative_context": "The zombie asset loop is a structural constraint that emerges from the intersection of monetary policy (sustained low rates or quantitative easing) and institutional capital mandates (pension funds, insurance companies, and asset managers required to find yield). When policy rates fall below market-clearing levels, capital seeking returns must flow into increasingly unproductive assets \u2014 firms that cannot generate sufficient profit to justify their capital costs under normal market conditions but can survive indefinitely under monetary accommodation. The constraint exhibits a perspectival gap spanning all six DR types: asset managers see a coordination solution (rope), young entrepreneurs see entrapment (snare), central banks see a stability mandate that has become a trap (tangled rope), incumbent zombie firms see salvation (rope), real economy productivity sees starvation (snare), market price discovery sees degradation (piton), and alternative finance mechanisms see a temporary problem with a sunset (scaffold). The constraint's theater ratio has risen from 0.42 to 0.68 over the interval, reflecting increasing performative activity: quarterly earnings management, regulatory arbitrage, and financial engineering masking the underlying unproductivity. Base extractiveness has risen from 0.32 to 0.58 as zombie populations have expanded and capital misallocation has widened.",
     "key_agents": [
-      "Savers and Pensioners: Primary victims (powerless/trapped) — forced to accept low returns and risk on their capital.",
-      "Productive New Entrants: Secondary victims (moderate/constrained) — starved of capital that is diverted to zombies.",
-      "Zombie Firm Executives: Primary beneficiaries (powerful/mobile) — receive cheap capital to continue operations, preserving their positions.",
-      "Central Bank Policymakers: Institutional beneficiaries (institutional/constrained) — achieve short-term stability mandates, even at the cost of long-term productivity.",
-      "Analytical Observer: Sees the full structure (analytical/analytical) — recognizes the system as a distorted coordination mechanism with severe extractive consequences."
+      "Young Entrepreneurs: Primary victim (powerless/trapped) \u2014 unable to access productive capital; financing channels redirected to zombie yields",
+      "Real Economy Productivity: Primary victim (powerless/trapped) \u2014 R&D, manufacturing, infrastructure starved; aggregate productivity growth suppressed",
+      "Asset Managers and Fund Operators: Primary beneficiary (institutional/arbitrage) \u2014 stable yields, fee generation, spread capture from zombie asset arbitrage",
+      "Incumbent Zombie Firms: Mixed (organized/constrained) \u2014 benefit from capital availability but dependent on policy continuation",
+      "Central Banks: Mixed (institutional/constrained) \u2014 maintain financial stability but trapped in low-rate regime to prevent zombie defaults",
+      "Retail Savers: Victim (powerless/trapped) \u2014 real returns suppressed; pension and insurance funds decline in real value despite notional growth",
+      "Market Price Discovery: Piton (institutional/arbitrage) \u2014 mechanism persists performatively but function degraded by artificial asset support",
+      "DeFi Coalition: Organized actors (organized/mobile) \u2014 creating alternative allocation pathways with sunset potential"
     ],
-    "logic_rationale": "Extractiveness (ε=0.65): High. The constraint systematically transfers economic potential from savers and innovators to non-viable incumbents. This represents a significant loss of value. Suppression (0.75): High. The policy environment actively closes off alternatives. Savers cannot find safe, reasonable yields, and productive firms cannot compete with zombies for capital on a level playing field. Theater Ratio (0.40): Moderate. While the policies have a real function (preventing defaults), the public justifications often obscure the growing misallocation, becoming more performative over time as the negative consequences mount.",
-    "perspectival_gap": "The gap is profound. For a saver, the system is a pure Snare, trapping their capital for extractive ends. For a zombie firm's CEO, it's a Rope, a lifeline of cheap credit that coordinates their survival. For the central banker who enacted the policy, it's a Scaffold, a temporary and necessary evil to prevent a worse crisis. The analytical observer, seeing all parts, classifies it as a Tangled Rope, acknowledging the (distorted) coordination function while focusing on the massive, asymmetric extraction it enables.",
-    "directionality_logic": "Beneficiaries (zombie executives, policymakers) have low derived directionality (d), resulting in low or negative effective extraction (χ), hence they perceive a Rope or Scaffold. Victims (savers, new entrants) have high derived directionality, resulting in high χ, leading to a Snare or Tangled Rope classification. The powerless and trapped saver experiences the highest possible χ, while the constrained but moderate-power new entrant experiences a slightly lower, but still highly extractive, χ.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating how a policy can be simultaneously a life-saving support (Rope/Scaffold) and a predatory trap (Snare). The classification depends entirely on the agent's structural relationship to the flow of capital. The system avoids mislabeling the central bank's action as pure malice (Snare) or the saver's experience as a mere coordination problem (Rope). It captures the full, contradictory reality by indexing the classification to each observer."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts capital from productive uses and redirects it toward financial engineering and unproductive asset preservation. The extraction is significant but not maximal (0.70+) because some zombie firms retain marginal productivity, some capital still flows to genuine ventures, and the extraction is not absolute \u2014 it is a tilt in allocation, not a complete blockade. Suppression (0.62): Moderate-high. Multiple barriers prevent exit: (a) monetary policy setting creates artificial yield constraints that drive capital toward zombies, (b) institutional mandates (pension funds must find yield) force participation, (c) regulatory capture by incumbent firms resists rate normalization, (d) information asymmetry obscures true asset quality. But suppression is not total \u2014 some capital escapes to venture, international markets, and alternative mechanisms. Theater ratio (0.68): High and rising. Asset valuations are performative; quarterly earnings management and financial engineering mask unproductivity; 'zombie' classification itself is only visible to sophisticated analysts. The constraint maintains itself partly through obscurity \u2014 market participants tell themselves the assets are undervalued, not dying.",
+    "directionality_logic": "Directionality derives from each agent's structural position: (1) Asset managers benefit from the low-rate regime that creates yield scarcity \u2014 their d is low (beneficiary + arbitrage), producing negative chi (they gain from extraction). (2) Young entrepreneurs face capital scarcity \u2014 their d is high (victim + trapped), producing high chi (they experience severe extraction). (3) Central banks maintain policy out of stability mandate, not profit \u2014 their d is mid-high (institutional + constrained), producing moderate chi (trapped in a policy they set but cannot easily unwind). (4) Zombie firms benefit from cheap capital but depend on it \u2014 their d is mid (organized + constrained), producing moderate chi (mixed: benefit from coordination, cost from dependency). (5) Real economy productivity is structural victim \u2014 its d is high (powerless + trapped), producing high chi (suffers complete extraction of capital). The derivation chain produces perspectival gaps: the beneficiary sees rope, the victim sees snare, the stabilizer sees tangled rope, the alternative mechanism sees scaffold.",
+    "perspectival_gap": "This constraint exhibits all six types from distinct observational positions. Asset managers' Rope perspective is genuine \u2014 they are solving a real problem (how to achieve returns in a low-rate environment). Young entrepreneurs' Snare perspective is also genuine \u2014 they are locked out of capital markets. Central banks' Tangled Rope perspective captures their actual dilemma: they maintain stability (coordination) but are trapped in a policy equilibrium they cannot unwind. The zombie firms' experience is Rope (cheap capital) layered with Tangled Rope constraint (dependency on policy continuation). Real economy productivity's Snare perspective reveals the aggregate cost: capital flows away from productive investment. The Piton perspective on price discovery captures the degradation of the market mechanism itself \u2014 prices no longer signal scarcity or productivity because of artificial support. The Scaffold perspective from DeFi reveals that alternative allocation mechanisms are creating a sunset path: as blockchain-based lending and decentralized capital markets mature, dependence on traditional zombie asset loops declines. The analytical observer's Mountain perspective (naturalizing the zombie loop as an inevitable consequence of fiat money) is a false summit \u2014 the constraint is a policy equilibrium, not a law of nature.",
+    "mandatrophy_analysis": "RESOLVED via perspectival decomposition. The mandatrophy question is: 'Is this a coordination mechanism (rope) that solves the yield-scarcity problem, or an extraction mechanism (snare) that starves productive investment?' The resolution: it is genuinely both. From the asset manager's perspective, it is coordination (Rope) \u2014 they are solving a real collective action problem (how to deploy capital when rates are suppressed). From the young entrepreneur's perspective, it is extraction (Snare) \u2014 they are locked out of capital markets. From the central bank's perspective, it is a hybrid trap (Tangled Rope) \u2014 they provide coordination function (maintain stability) but experience extraction cost (trapped in low-rate regime). The constraint does not collapse to a single type because the mandatrophy is real: the same institutional arrangement solves one coordination problem (yield scarcity for asset allocators) while creating an extraction problem (capital misallocation away from productivity). Resolution: classify as Tangled Rope at the system level (coordination + asymmetric extraction) while recognizing that beneficiary and victim perspectives experience it as pure types (Rope and Snare respectively). The false natural law risk: treating the zombie asset loop as inevitable consequence of monetary systems, when it is actually a policy equilibrium maintained by low rates, quantitative easing, and regulatory forbearance."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.35
   },
   "network": {
     "affects_constraints": [
-      "technological_stagnation",
-      "sovereign_debt_crisis"
-    ]
-  }
+      "financial_repression",
+      "regulatory_forbearance_spiral",
+      "venture_capital_scarcity",
+      "real_interest_rate_suppression"
+    ],
+    "dual_formulation_note": "The zombie asset loop decomposes into distinct structural constraints: (1) Real interest rate suppression (\u03b5=0.25, Mountain from policy perspective) \u2014 central banks set rates below market-clearing levels via policy choice, (2) Zombie asset loop (\u03b5=0.58, Tangled Rope at system level) \u2014 the capital misallocation spiral that results from rate suppression combined with institutional mandates, (3) Productive investment starvation (\u03b5=0.62, Snare from entrepreneur perspective) \u2014 the outcome experienced by actors cut off from capital. Each is a distinct constraint with different \u03b5 values and different resolution pathways. The zombie asset loop is downstream of rate suppression but represents a distinct structural failure in capital allocation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
 }

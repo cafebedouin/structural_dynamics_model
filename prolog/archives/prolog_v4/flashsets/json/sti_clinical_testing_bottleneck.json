@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "sti_clinical_testing_bottleneck",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.5,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Requirement for Clinical Lab Testing for Chlamydia/Gonorrhea",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "clinical_labs",
+      "medical_device_manufacturers"
+    ],
+    "victims": [
+      "patients_at_risk",
+      "public_health_agencies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Patients at Risk",
+      "comment": "Patients, especially those in underserved communities, often face significant barriers to accessing clinical testing, including cost, transportation, and stigma."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Public Health Agencies",
+      "comment": "Public health agencies rely on accurate and timely STI data to track outbreaks and implement effective prevention strategies, but the traditional testing system can be slow and cumbersome."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Clinical Labs",
+      "comment": "Clinical labs benefit from the demand for STI testing, as they receive payment for each test performed."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Medical Device Manufacturers",
+      "comment": "Manufacturers of clinical lab testing equipment and reagents benefit from the widespread use of traditional testing methods."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes the mixed coordination and extraction aspects of the clinical testing requirement. It facilitates diagnosis and treatment but also introduces delays, costs, and access barriers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "point_of_care_accuracy",
+      "question": "Can point-of-care testing achieve comparable accuracy and reliability to clinical lab testing?",
+      "resolution_mechanism": "Comparative studies of point-of-care and clinical lab testing accuracy, analysis of false positive/negative rates",
+      "impact": "If point-of-care testing is sufficiently accurate, it could reduce the need for clinical lab testing and improve access to care. If not, it could compromise the quality of care.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy and reliability of point-of-care STI testing"
+    },
+    {
+      "id": "regulatory_approval_pathways",
+      "question": "Will regulatory approval pathways adapt to facilitate the adoption of new testing technologies?",
+      "resolution_mechanism": "Analysis of FDA and other regulatory agency policies, stakeholder engagement, and advocacy efforts",
+      "impact": "If regulatory pathways are streamlined, it could accelerate the adoption of innovative testing solutions. If not, it could stifle innovation and maintain the status quo.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Adaptability of regulatory approval pathways for new testing technologies"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The requirement for clinical lab testing for common STIs like chlamydia and gonorrhea creates a bottleneck that limits access to care and hinders public health efforts. While clinical labs and medical device manufacturers benefit from this system, patients and public health agencies bear the costs.",
+    "key_agents": [
+      "Patients at Risk: Primary victim (powerless/trapped) - face barriers to accessing testing and treatment.",
+      "Public Health Agencies: Secondary victim (moderate/constrained) - rely on timely data but are hindered by the slow testing system.",
+      "Clinical Labs: Primary beneficiary (institutional/arbitrage) - profit from the demand for testing.",
+      "Medical Device Manufacturers: Primary beneficiary (institutional/arbitrage) - benefit from the widespread use of traditional testing methods."
+    ],
+    "logic_rationale": "Extractiveness (0.6): Moderate. The system extracts time, money, and access from patients and public health agencies. Suppression (0.5): Moderate. Alternative testing methods exist, but they are not widely adopted due to regulatory hurdles, cost, and lack of infrastructure. Theater ratio (0.3): Low. The testing process is largely functional, but there is some performative aspect, such as the need to maintain traditional lab infrastructure.",
+    "perspectival_gap": "Patients see a snare due to access barriers and delays. Public health agencies see a tangled rope because they need the data but are hindered by the system's limitations. Clinical labs and medical device manufacturers see a rope because they benefit financially from the system.",
+    "directionality_logic": "Patients and public health agencies have high directionality values (close to 1) because they are primarily targets of extraction. Clinical labs and medical device manufacturers have low directionality values (close to 0) because they are beneficiaries.",
+    "mandatrophy_analysis": "The tangled rope classification is appropriate because the system has both coordination and extraction aspects. It facilitates diagnosis and treatment but also creates barriers to access and hinders public health efforts. This avoids mislabeling pure extraction, because there is a valid function of delivering test results. The question becomes how that is delivered and what alternatives exist."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

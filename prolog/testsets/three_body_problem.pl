@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: three_body_problem_predictability_limit
+% CONSTRAINT STORY: three_body_problem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-16
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_three_body_problem_predictability_limit, []).
+:- module(constraint_three_body_problem, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,18 +53,35 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: three_body_problem_predictability_limit
+ *   constraint_id: three_body_problem
  *   human_readable: Predictability Limit in the Three-Body Problem
- *   domain: technological
+ *   domain: technological/physics/dynamical_systems
  *
  * SUMMARY:
- *   The three-body problem is a fundamental limit on predictability in dynamical systems.  Given the initial positions and velocities of three celestial bodies interacting via gravity, it is generally impossible to predict their motion for arbitrarily long times. This constraint arises from the chaotic nature of the system.
+ *   The three-body problem represents one of the canonical examples of a
+ *   mathematical natural law in the Deferential Realism framework. Given
+ *   three or more massive bodies interacting under gravity (or any
+ *   sufficiently nonlinear dynamical system), long-term prediction becomes
+ *   impossible due to exponential sensitivity to initial conditions — a
+ *   property known as chaos. This constraint emerges directly from the
+ *   mathematics of nonlinear differential equations and does not depend on
+ *   any institutional arrangement, resource limitation, or observer-relative
+ *   framing. The predictability limit holds universally across all contexts:
+ *   planetary systems, stellar dynamics, exoplanet architectures, asteroid
+ *   scattering, and binary evolution. No computational substrate, measurement
+ *   precision, or algorithmic innovation can overcome this fundamental
+ *   barrier. The constraint is invariant to changes in measurement
+ *   methodology or observational basis — it is a property of the system
+ *   itself, not of how we observe it. All perspectives classify this as a
+ *   Mountain because the structural reality is identical from every vantage
+ *   point: the equations are nonintegrable, the trajectories are chaotic, and
+ *   long-timescale predictability is mathematically impossible.
  *
- * KEY AGENTS (by structural relationship):
- *   - Deterministic Prediction Algorithms: Primary target (powerless/trapped) — suffers from the limitations in predictability.
- *   - Chaos Theory Research: Primary beneficiary (institutional/arbitrage) — benefits from increased interest and funding.
- *   - Applied Physics and Engineering: Secondary actor (moderate/constrained) – affected by the limitations when designing stable systems.
- *   - Analytical Observer: Analytical observer (analytical/analytical) — sees the full structure.
+ * KEY AGENTS:
+ *   - Computational Forecaster: Powerless agent attempting long-term trajectory prediction — faces irreducible divergence of nearby initial conditions
+ *   - Orbital Mechanics Engineer: Organized institutional agent designing spacecraft trajectories — must design within ~10-100 year predictability windows
+ *   - Space Agency Mission Planner: Institutional agent responsible for multi-decade missions — incorporates chaos into mission design horizons
+ *   - Analytical Observer: Civilizational perspective on mathematical limits — recognizes the constraint as a natural law of dynamics
  */
 
 /* ==========================================================================
@@ -72,152 +89,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(three_body_problem_predictability_limit, 0.15).
-domain_priors:suppression_score(three_body_problem_predictability_limit, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(three_body_problem_predictability_limit, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(three_body_problem, 0.12).
+domain_priors:suppression_score(three_body_problem, 0.02).
+domain_priors:theater_ratio(three_body_problem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(three_body_problem_predictability_limit, extractiveness, 0.15).
-narrative_ontology:constraint_metric(three_body_problem_predictability_limit, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(three_body_problem_predictability_limit, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(three_body_problem, extractiveness, 0.12).
+narrative_ontology:constraint_metric(three_body_problem, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(three_body_problem, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
+narrative_ontology:constraint_metric(three_body_problem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(three_body_problem, resistance, 0.08).
 
-narrative_ontology:constraint_metric(three_body_problem_predictability_limit, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(three_body_problem_predictability_limit, resistance, 0.05).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(three_body_problem, mountain).
+narrative_ontology:human_readable(three_body_problem, "Predictability Limit in the Three-Body Problem").
+narrative_ontology:topic_domain(three_body_problem, "technological/physics/dynamical_systems").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(three_body_problem_predictability_limit, mountain).
-narrative_ontology:human_readable(three_body_problem_predictability_limit, "Predictability Limit in the Three-Body Problem").
-narrative_ontology:topic_domain(three_body_problem_predictability_limit, "technological").
+domain_priors:emerges_naturally(three_body_problem).
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(three_body_problem_predictability_limit).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(three_body_problem_predictability_limit). % Required for Tangled Rope
-
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-
-domain_priors:emerges_naturally(three_body_problem_predictability_limit).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(three_body_problem_predictability_limit, chaos_theory_research).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(three_body_problem_predictability_limit, deterministic_prediction_algorithms).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(three_body_problem_predictability_limit, mountain,
+% PERSPECTIVE 1: COMPUTATIONAL FORECASTER (MOUNTAIN) — Any agent attempting to predict the long-term trajectories of three or more gravitationally coupled bodies encounters an irreducible mathematical barrier. No algorithm, computational substrate, or measurement precision can overcome the exponential divergence of nearby initial conditions. This constraint is not imposed by resource limitations or institutional barriers — it is written into the structure of nonlinear dynamics itself. The forecaster cannot exit or negotiate; the limit is immutable from all practical standpoints.
+constraint_indexing:constraint_classification(three_body_problem, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(three_body_problem_predictability_limit, mountain,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: ORBITAL MECHANICS ENGINEER (MOUNTAIN) — Engineers designing spacecraft trajectories in multi-body gravitational fields (Earth-Moon-Sun, or planetary systems) face the three-body problem as a structural ceiling on predictability windows. Even with perfect initial condition measurements and unlimited computational power, predictions degrade beyond ~10-100 years for most solar system configurations. This is not a regulatory constraint or a matter of insufficient funding — it is a consequence of the mathematics of chaos. The engineer must work within this constraint; it cannot be relaxed through design innovation or institutional coordination.
+constraint_indexing:constraint_classification(three_body_problem, mountain,
+    context(agent_power(organized),
             time_horizon(generational),
-            exit_options(arbitrage),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(three_body_problem_predictability_limit, mountain,
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From a mathematical and civilizational perspective, the three-body problem's predictability limit is a natural law: a consequence of the nonintegrability of the equations of motion for N ≥ 3. The constraint emerges directly from the structure of classical mechanics — no auxiliary assumptions, no institution-specific factors. The limit is not a choice or a contingent historical fact; it is a feature of the universe's mathematical grammar.
+constraint_indexing:constraint_classification(three_body_problem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES (declare when applicable) ---
-% When a constraint operates between institutional actors with different
-% structural relationships, declare separate perspectives for each.
-% The engine differentiates via directionality: different exit_options
-% produce different d values even for the same power atom.
-%
-% Example — Regulatory capture:
-%
-% % Perspective 4A: Captured regulator (institutional, constrained exit)
-% constraint_indexing:constraint_classification(three_body_problem_predictability_limit, [type],
-%     context(agent_power(institutional),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(national))).
-%
-% % Perspective 4B: Regulated company (institutional, arbitrage exit)
-% constraint_indexing:constraint_classification(three_body_problem_predictability_limit, [type],
-%     context(agent_power(institutional),
-%             time_horizon(generational),
-%             exit_options(arbitrage),
-%             spatial_scope(national))).
+% PERSPECTIVE 4: SPACE AGENCY MISSION PLANNER (MOUNTAIN) — Institutions responsible for long-term celestial mechanics (NASA, ESA, CNSA) must incorporate the three-body predictability limit into mission planning horizons. Solar system stability predictions, asteroid impact assessments, and planetary alignment forecasts all degrade as time scales extend. No institutional mandate, no budget increase, no policy change can overcome this barrier. The constraint is binding on all agents equally — it is a universal property of the system, not an artifact of organizational structure.
+constraint_indexing:constraint_classification(three_body_problem, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(three_body_problem_predictability_limit_tests).
+:- begin_tests(three_body_problem_tests).
 
-test(perspectival_agreement) :-
-    % Verify perspectival agreement as Mountain.
-    constraint_indexing:constraint_classification(three_body_problem_predictability_limit, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(three_body_problem_predictability_limit, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget == TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(three_body_problem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(three_body_problem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(three_body_problem_predictability_limit, ExtMetricName, E),
-    E =< 0.25. % Mountain extraction must be low.
+    narrative_ontology:constraint_metric(three_body_problem, ExtMetricName, E),
+    domain_priors:suppression_score(three_body_problem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_law_properties) :-
-    narrative_ontology:constraint_metric(three_body_problem_predictability_limit, accessibility_collapse, A),
-    narrative_ontology:constraint_metric(three_body_problem_predictability_limit, resistance, R),
-    A >= 0.85,
-    R =< 0.15,
-    domain_priors:emerges_naturally(three_body_problem_predictability_limit).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(three_body_problem),
+    narrative_ontology:constraint_metric(three_body_problem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(three_body_problem, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
-:- end_tests(three_body_problem_predictability_limit_tests).
+:- end_tests(three_body_problem_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -225,100 +180,89 @@ test(natural_law_properties) :-
 
 /**
  * LOGIC RATIONALE:
- *   The three-body problem is an inherent limitation on our ability to predict the future state of a system. It's base extractiveness is low as the limitation doesn't directly extract resources, but it does limit deterministic predictive power. Suppression is also low because alternative approaches, such as statistical mechanics, exist to deal with the problem. The theater ratio is low, as the limitation is factual and not obscured by theatrical compliance.
+ *   Extractiveness (0.12): Very low. The three-body problem imposes a genuine constraint but does not extract resources or benefits in the sense of Deferential Realism. No agent benefits at the expense of others; instead, all agents face a shared mathematical barrier. The value is assigned to reflect that the constraint does impose a cost (reduced predictability) that all agents must accommodate, but the cost is universal and unavoidable rather than extracted by one party from another. Suppression (0.02): Negligible. There is no suppression of alternatives because the constraint is not a choice or contingent arrangement. The equations of motion are what they are; no agent suppresses competing organizational forms or governance structures. Theater ratio (0.15): Very low. The three-body problem requires no theatrical maintenance or performative justification. Its mathematical foundation is transparent and universally accepted. The small nonzero value reflects minor variation in how the constraint is communicated and taught (pedagogical framing) but not in the fundamental structural reality. The theater does not increase significantly over time because the mathematical proof remains unchanged.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap, as this is considered a fundamental property regardless of perspective. All agents acknowledge the limitation.
+ *   There is no meaningful perspectival gap for this constraint. All four perspectives classify the three-body problem as a Mountain from their distinct structural positions. The computational forecaster, the engineer, the mission planner, and the analytical observer all encounter the same mathematical reality: nonintegrability of the equations of motion, exponential divergence of trajectories, and fundamental unpredictability beyond chaos-dominated timescales. The perspectives differ in scale (from immediate forecasting to civilizational timescales) and in practical application domain (spacecraft design, exoplanet stability, stellar dynamics), but the underlying constraint is invariant. This perspectival uniformity is the signature of a true natural law in the DR framework.
  *
  * DIRECTIONALITY LOGIC:
- *   Chaos theory research benefits from increased study and funding because of the problem. Deterministic prediction algorithms are limited by the problem. The analytical observer sees the problem for what it is.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   N/A
+ *   No directionality computation is necessary for this constraint. In a pure Mountain (natural law), all agents occupy identical structural positions: they are all subject to the same immutable limit with no exit options, no asymmetric benefits, and no coordination function. The constraint does not benefit some agents at the cost of others. Every perspective receives analytical exit_options and derives d ≈ 0.72 from canonical fallback, resulting in a f(d) that does not affect the classification. The constraint's universality means perspectival gaps collapse into perspectival confirmations — all views see the same immutable barrier.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification of the three-body problem as a mountain prevents the mislabeling of this fundamental limitation as pure extraction, where predictability could be seen as something actively suppressed.
+ *   This constraint exhibits zero mandatrophy risk. All perspectives consistently classify as Mountain with no coordination-vs-extraction tension. No agent experiences the constraint as extraction (a snare), nor do any agents perceive a hidden coordination function that could collapse under scrutiny. The constraint is structurally transparent: it emerges from the mathematics, not from institutional arrangements or hidden asymmetries. The risk of false naturalization — treating a contingent institutional limit as a law of nature — does not apply here because the three-body problem is genuinely a mathematical property of nonlinear systems, not a mask for governance choices.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_three_body_problem,
-    'Will advances in computation lead to more accurate approximation techniques for longer time scales?',
-    'Improved computational methods and algorithms.',
-    'If True: Extended predictability range. If False: Limit remains fundamentally unchanged.',
+    numerical_precision_boundary,
+    'Where does measurement precision limit end and genuine unpredictability begin in chaotic three-body systems?',
+    'Theoretical analysis of the Lyapunov exponent and comparison with attainable measurement precision across different observational contexts (planetary systems, stellar binaries, exoplanet systems)',
+    'If precision limits dominate: the barrier is partly technological and could theoretically be pushed back. If genuine chaos dominates: the barrier is immutable regardless of measurement capability.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(numerical_precision_boundary, empirical, 'Boundary between measurement precision limits and fundamental chaos').
+
+omega_variable(
+    approximate_integrability_regimes,
+    'How often do three-body systems occupy approximate integrability regimes where hierarchical perturbation theory provides useful long-timescale predictions?',
+    'Statistical analysis of real astronomical systems (Kepler exoplanet architectures, stellar triple systems, asteroid-planet interactions) to determine the fraction that permit semi-analytical prediction beyond chaos-dominated horizons',
+    'If approximate regimes are common: the mountain classification is correct but the predictability window is often longer than short-term assessments suggest. If rare: the mountain is even steeper than standard analyses indicate.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(approximate_integrability_regimes, empirical, 'Frequency of approximate integrability regimes in real systems').
+
+omega_variable(
+    quantum_versus_classical_limits,
+    'Does quantum mechanics offer any fundamental escape from the classical three-body predictability limit, or is it a limit at all scales?',
+    'Comparison of decoherence timescales in quantum systems with classical Lyapunov timescales; analysis of quantum recurrence and phase-space structure in multi-body quantum systems',
+    'If quantum systems also face chaos: the mountain classification extends to quantum mechanics. If quantum mechanics provides escape routes: the constraint is specific to classical dynamics and represents a limitation rather than a natural law.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(quantum_versus_classical_limits, conceptual, 'Whether quantum mechanics bypasses classical three-body chaos').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(three_body_problem_predictability_limit, 0, 10).
+narrative_ontology:interval(three_body_problem, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(three_body_problem_predictability_limit_tr_t0, three_body_problem_predictability_limit, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(three_body_problem_predictability_limit_tr_t5, three_body_problem_predictability_limit, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(three_body_problem_predictability_limit_tr_t10, three_body_problem_predictability_limit, theater_ratio, 10, 0.10).
+% Theater ratio over time
+narrative_ontology:measurement(tbp_tr_t0, three_body_problem, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(tbp_tr_t50, three_body_problem, theater_ratio, 50, 0.12).
+narrative_ontology:measurement(tbp_tr_t100, three_body_problem, theater_ratio, 100, 0.15).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(three_body_problem_predictability_limit_ex_t0, three_body_problem_predictability_limit, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(three_body_problem_predictability_limit_ex_t5, three_body_problem_predictability_limit, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(three_body_problem_predictability_limit_ex_t10, three_body_problem_predictability_limit, base_extractiveness, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(tbp_be_t0, three_body_problem, base_extractiveness, 0, 0.12).
+narrative_ontology:measurement(tbp_be_t50, three_body_problem, base_extractiveness, 50, 0.12).
+narrative_ontology:measurement(tbp_be_t100, three_body_problem, base_extractiveness, 100, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-% narrative_ontology:coordination_type(three_body_problem_predictability_limit, information_standard).
+narrative_ontology:coordination_type(three_body_problem, information_standard).
+narrative_ontology:affects_constraint(three_body_problem, chaotic_dynamical_systems_predictability).
+narrative_ontology:affects_constraint(three_body_problem, planetary_orbital_stability).
+narrative_ontology:affects_constraint(three_body_problem, exoplanet_architecture_constraint).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-narrative_ontology:boltzmann_floor_override(three_body_problem_predictability_limit, 0.10).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(three_body_problem_predictability_limit, other_constraint_id).
+% DUAL FORMULATION NOTE:
+% The three-body problem is the archetype of a constraint family spanning physics, computational science, and engineering. The specific predictability limit for N ≥ 3 bodies under gravity is upstream of more specialized constraints in orbital mechanics and exoplanet dynamics, which inherit the fundamental chaos limit from their gravitational structure.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(three_body_problem_predictability_limit, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

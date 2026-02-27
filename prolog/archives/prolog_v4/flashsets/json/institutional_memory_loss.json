@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "institutional_memory_loss",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.8,
+    "claimed_type": "piton",
+    "human_readable": "The Amnesiac Organization",
+    "topic_domain": "organizational/political/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "short_term_management"
+    ],
+    "victims": [
+      "long_term_stakeholders",
+      "future_employees"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Long-Term Stakeholders",
+      "comment": "Long-term stakeholders (e.g., future generations, dependent communities) are trapped by the organization's memory loss, as they suffer the consequences of poorly understood or abandoned constraints without the ability to influence or escape."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Future Employees",
+      "comment": "New or future employees find themselves constrained by legacy systems and processes they don't understand, and which no one can adequately explain. While not entirely trapped, their career options are limited by their need for employment, and they must bear the costs of inefficient and opaque systems."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Short-Term Management",
+      "comment": "Short-term management benefits from the lack of institutional memory, as it allows them to implement changes without facing resistance based on historical context or long-term consequences. They can arbitrage this situation for personal gain or career advancement, experiencing it as a coordination mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "An analytical observer sees the organization as a Piton: a once-functional institution now operating largely on inertia and performative rituals, with the original purpose of its constraints forgotten. High theater ratio: policies are followed without understanding their rationale."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "memory_retrieval_feasibility",
+      "question": "Is it technically and economically feasible to retrieve and reconstruct the lost institutional memory?",
+      "resolution_mechanism": "Conduct a comprehensive audit of existing records, interview former employees, and assess the potential for data recovery and knowledge reconstruction.",
+      "impact": "If feasible: the organization can potentially restore its original constraints. If infeasible: the organization is likely to continue operating as a Piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of memory retrieval"
+    },
+    {
+      "id": "stakeholder_empowerment",
+      "question": "Can long-term stakeholders be empowered to hold the organization accountable for its actions and to advocate for the restoration of forgotten constraints?",
+      "resolution_mechanism": "Implement mechanisms for stakeholder engagement, such as advisory boards, public forums, and independent audits.",
+      "impact": "If stakeholders can be empowered: the organization may be forced to address its memory loss and restore forgotten constraints. If not: the organization is likely to continue prioritizing short-term gains over long-term sustainability.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Stakeholder empowerment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Amnesiac Organization describes a scenario where rapid personnel turnover, over-reliance on ephemeral digital communications, and the retirement of 'tacit knowledge' holders cause an institution to lose the 'why' behind its own internal constraints. This results in policies and procedures being followed without understanding their original purpose, leading to inefficiency, unintended consequences, and a general erosion of organizational effectiveness.",
+    "key_agents": [
+      "Short-Term Management: Primary beneficiary (institutional/arbitrage) - benefits from lack of historical context to implement changes quickly.",
+      "Long-Term Stakeholders: Primary victim (powerless/trapped) - suffers from poorly understood/abandoned constraints.",
+      "Future Employees: Secondary victim (moderate/constrained) - constrained by legacy systems they don't understand."
+    ],
+    "logic_rationale": "Extractiveness (0.60): A substantial portion of the organization's resources are effectively wasted due to the lack of understanding of the underlying constraints. Suppression (0.70): The lack of institutional memory suppresses alternative approaches and prevents effective problem-solving. Theater Ratio (0.80): A high proportion of the organization's activities are performative, with policies and procedures being followed without a clear understanding of their purpose.",
+    "perspectival_gap": "Short-term management sees the lack of historical context as an opportunity for arbitrage, while long-term stakeholders and future employees suffer the consequences of poorly understood and inefficient systems. The analytical observer sees a degraded institution operating largely on inertia.",
+    "directionality_logic": "Short-term management benefits because they can make changes without constraints or accountability for long-term consequences (low d). Long-term stakeholders are victims because they bear the costs of poorly understood policies and missed objectives (high d). Future employees are constrained by outdated systems (high d). From an analytical viewpoint, the extraction flows towards future stake holders and away from the leadership."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

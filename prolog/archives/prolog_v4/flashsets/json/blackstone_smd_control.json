@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "blackstone_smd_control",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blackstone Senior Managing Director Voting Control",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_managing_directors"
+    ],
+    "victims": [
+      "common_shareholders",
+      "limited_partners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Senior Managing Directors",
+      "comment": "SMDs benefit from the concentrated voting power, allowing them to maintain control and influence the firm's strategic direction. They can arbitrage this control for personal gain."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Common Shareholders",
+      "comment": "Common shareholders are largely trapped, with little recourse to influence firm direction given the SMDs' voting control. They are vulnerable to decisions that benefit SMDs at their expense."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Limited Partners",
+      "comment": "LPs are constrained by their investment agreements, which limit their ability to exit or directly influence firm governance. They experience a tangled rope: some influence but ultimate SMD control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes the tangled rope nature: coordination and control for SMDs extracting value from other investors. There is coordination value but also asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_governance_structures",
+      "question": "What alternative governance structures could balance SMD control with shareholder rights?",
+      "resolution_mechanism": "Comparative analysis of governance models in similar firms; shareholder proposals for governance reform.",
+      "impact": "If viable alternatives exist: the entanglement may be reformed. If not, the dominance of the SMDs persists.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Are there viable governance structures that balance control with shareholder rights?"
+    },
+    {
+      "id": "smd_alignment",
+      "question": "To what extent are the SMDs' interests aligned with those of other shareholders and LPs?",
+      "resolution_mechanism": "Analysis of SMD compensation structure and investment decisions; tracking of insider trading activity.",
+      "impact": "If interests are aligned: the extraction is seen as less problematic. If misaligned, then the value transfer is considered much worse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How aligned are the SMDs' interests with other stakeholders?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This corporate governance structure, established during Blackstone's 2007 IPO, uses a multi-class unit structure to grant Senior Managing Directors (SMDs) absolute voting control over the firm's general partner. This arrangement ensures SMD control over strategic decisions but raises concerns about potential conflicts of interest with common shareholders and limited partners. While intended to align management with long-term firm performance, the concentration of power can lead to extraction.",
+    "key_agents": [
+      "Senior Managing Directors: Primary beneficiary (institutional/arbitrage) \u2014 wield absolute voting control.",
+      "Common Shareholders: Primary victim (powerless/trapped) \u2014 lack influence over corporate governance.",
+      "Limited Partners: Secondary victim (moderate/constrained) \u2014 contractually limited ability to influence governance."
+    ],
+    "logic_rationale": "The extractiveness is relatively high because SMD control can be used to extract value from the firm at the expense of common shareholders and limited partners. The suppression is also high, as shareholders have little recourse to challenge SMD decisions. The theater ratio is moderate, reflecting some degree of accountability to outside investors, though ultimately constrained by the voting structure.",
+    "perspectival_gap": "SMDs view the structure as coordination, enabling them to execute their strategy effectively. Common shareholders see it as a snare, limiting their influence. LPs experience the tangled rope, with some degree of influence but ultimately subject to SMD control. An analytical observer also views this as a tangled rope.",
+    "directionality_logic": "SMDs benefit significantly from the control structure, allowing them to direct firm strategy and capture value. Common shareholders bear the costs, lacking the ability to effectively challenge SMD decisions. LPs are in a mixed position, with some ability to influence decisions, but ultimately constrained by the governance structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

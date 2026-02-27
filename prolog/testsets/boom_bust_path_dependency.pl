@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: boom_bust_path_dependency
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-02-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_boom_bust_path_dependency, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -59,22 +58,32 @@
  *   domain: economic/policy
  *
  * SUMMARY:
- *   While sovereigntists blame Ottawa, Alberta's own choices—keeping royalties
- *   low, resisting a Norway-style savings fund, and under-investing in health
- *   and social services—created a self-inflicted fiscal vulnerability.
- *   This axis represents the atrophied function of provincial fiscal
- *   stabilization, now maintained through the "theater" of deficit-blaming
- *   and grievance politics.
+ *   Alberta's boom-bust fiscal cycle is a piton: a degraded institutional
+ *   constraint maintained through political inertia and theatrical rhetoric
+ *   despite ample evidence of its dysfunction. The constraint emerges from a
+ *   specific set of policy choices—keeping resource royalties among the
+ *   lowest in North America, rejecting a Norway-style Heritage Fund,
+ *   resisting progressive taxation—that create structural fiscal volatility.
+ *   Rather than address the root causes, political actors (particularly
+ *   sovereigntist movements) externalize blame onto federal transfers and
+ *   'Ottawa capture,' perpetuating a narrative that the volatility is
+ *   exogenous and inevitable. This framing naturalizes what is actually a
+ *   contingent policy regime. The piton's theater ratio (0.78) reflects the
+ *   performative debates about 'fixing the budget' through austerity while
+ *   avoiding the core policy levers. Healthcare workers, public servants, and
+ *   future taxpayers bear the extraction costs; resource extractors and
+ *   low-tax advocates benefit from the regime. The constraint exhibits path
+ *   dependency: early choices (low royalties, no savings fund) created
+ *   institutional and political lock-in that makes reform costly and
+ *   politically fraught, even as the original rationale has degraded.
  *
- * KEY AGENTS (by structural relationship):
- *   - future_generations: Primary target (powerless/trapped) — bears the cost
- *     of depleted resource wealth and under-funded services.
- *   - low_tax_constituencies: Primary beneficiary (organized/mobile) —
- *     benefited from "boom time" low taxes and high immediate consumption.
- *   - public_service_users: Secondary victim (moderate/constrained) —
- *     experiences service stretching during price shocks.
- *   - economic_historians: Analytical observer — compares Alberta's savings
- *     trajectory to peer resource economies.
+ * KEY AGENTS:
+ *   - Healthcare Workers and Public Service Employees: Primary victims (powerless/trapped) — subject to perpetual wage freezes, layoffs, and service cuts; no exit from provincial employment
+ *   - Resource Extractors and Energy Companies: Primary beneficiaries (institutional/arbitrage) — benefit from low, stable royalty rates and predictable tax regime; can shift operations across jurisdictions
+ *   - Rural and Regional Communities: Secondary victims (moderate/constrained) — benefit from boom-time infrastructure but face severe service collapses during busts; high cost of exit
+ *   - Future Taxpayers: Secondary victims (moderate/constrained) — bear intergenerational costs of capital underinvestment and deferred maintenance; trapped by demographic and geographic constraints
+ *   - Provincial Government: Institutional actor maintaining the piton (institutional/arbitrage) — sustains low-tax/low-royalty regime through political theater despite recognition of volatility problem
+ *   - Sovereigntist Political Movement: Institutional amplifier (institutional/arbitrage) — benefits from external blame narrative ('Ottawa's fault'); reinforces piton by externalizing causality
  */
 
 /* ==========================================================================
@@ -82,68 +91,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(boom_bust_path_dependency, 0.22).
-domain_priors:suppression_score(boom_bust_path_dependency, 0.08).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(boom_bust_path_dependency, 0.78).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(boom_bust_path_dependency, 0.38).
+domain_priors:suppression_score(boom_bust_path_dependency, 0.68).
+domain_priors:theater_ratio(boom_bust_path_dependency, 0.78).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(boom_bust_path_dependency, extractiveness, 0.22).
-narrative_ontology:constraint_metric(boom_bust_path_dependency, suppression_requirement, 0.08).
+narrative_ontology:constraint_metric(boom_bust_path_dependency, extractiveness, 0.38).
+narrative_ontology:constraint_metric(boom_bust_path_dependency, suppression_requirement, 0.68).
 narrative_ontology:constraint_metric(boom_bust_path_dependency, theater_ratio, 0.78).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(boom_bust_path_dependency, rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(boom_bust_path_dependency, piton).
 narrative_ontology:human_readable(boom_bust_path_dependency, "The Heritage Fund Piton (Fiscal Volatility Path)").
 narrative_ontology:topic_domain(boom_bust_path_dependency, "economic/policy").
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(boom_bust_path_dependency, low_tax_constituencies).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(boom_bust_path_dependency, future_generations).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(boom_bust_path_dependency, resource_extractors).
+narrative_ontology:constraint_beneficiary(boom_bust_path_dependency, low_tax_advocates).
+narrative_ontology:constraint_victim(boom_bust_path_dependency, healthcare_workers).
+narrative_ontology:constraint_victim(boom_bust_path_dependency, public_service_workers).
+narrative_ontology:constraint_victim(boom_bust_path_dependency, future_taxpayers).
+narrative_ontology:constraint_victim(boom_bust_path_dependency, rural_communities).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE FUTURE GENERATION (PITON)
-% As the primary target, future generations are trapped by the consequences of
-% depleted resource wealth and under-funded services. They see an atrophied,
-% performative system that failed its core stabilization function.
-constraint_indexing:constraint_classification(boom_bust_path_dependency, piton,
+% PERSPECTIVE 1: HEALTHCARE WORKERS (SNARE) — Trapped in a system of perpetual austerity cycles driven by boom-bust commodity volatility. No exit from provincial employment; subject to wage freezes, layoffs, and service cuts during busts. Extract maximum experienced cost with no agency or compensation mechanism. The constraint is enforced through budget discipline and political blame-shifting, not through voluntary coordination.
+constraint_indexing:constraint_classification(boom_bust_path_dependency, snare,
     context(agent_power(powerless),
-            time_horizon(generational),
+            time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE TAX-CUT SUPPORTER (ROPE)
-% Viewed as a necessary coordination mechanism to keep the "Alberta Advantage"
-% and attract investment through low royalties.
-constraint_indexing:constraint_classification(boom_bust_path_dependency, rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(regional))).
-
-% PERSPECTIVE 3: THE FISCAL REALIST (PITON)
-% Recognizes a former coordination tool (the Heritage Fund) that has atrophied
-% into theatrical maintenance while wealth is drained.
-constraint_indexing:constraint_classification(boom_bust_path_dependency, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: RURAL COMMUNITIES (TANGLED ROPE) — Benefit from periodic oil-driven infrastructure investment during booms (roads, schools, utilities) but face service collapses during busts. Constrained exit: costly to relocate; depend on provincial services. Experience both coordination (needed for infrastructure scale) and extraction (unequal burden of austerity). Active enforcement through provincial budget cycles and federal transfer negotiations.
+constraint_indexing:constraint_classification(boom_bust_path_dependency, tangled_rope,
+    context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: RESOURCE EXTRACTORS (ROPE) — Benefit from low and stable royalty rates regardless of commodity cycle. Arbitrage options: can shift operations across jurisdictions or adjust production volume. Experience the constraint primarily as coordination: predictable tax/royalty rates enable long-term investment planning. Net beneficiary — the low royalty regime persists because political actors externalize volatility onto public services rather than stabilizing via resource rents.
+constraint_indexing:constraint_classification(boom_bust_path_dependency, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: PROVINCIAL GOVERNMENT (PITON) — The core piton: maintains a low-tax/low-royalty regime and narrative ('Alberta advantage') despite ample historical evidence that this strategy creates fiscal volatility. The narrative persists through institutional inertia and political theater despite degraded function. The government experiences the volatility problem as externally imposed (blame Ottawa, blame markets) rather than as a consequence of policy choices. Active enforcement through perpetual rhetoric ('we can't raise taxes because the private sector will leave') maintains the piton even as its stated purpose—attracting investment and ensuring prosperity—has degraded. Theater ratio high (0.78): performative debates about 'fixing the budget' while avoiding the core policy levers (royalty rates, Heritage Fund contribution mandates, progressive taxation).
+constraint_indexing:constraint_classification(boom_bust_path_dependency, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (PITON)
-% Identifies the atrophied function and high theater of "fiscal responsibility"
-% rhetoric in a boom-bust cycle.
-constraint_indexing:constraint_classification(boom_bust_path_dependency, rope,
+% PERSPECTIVE 5: FUTURE TAXPAYERS (SNARE) — Trapped by path dependency: today's low-revenue, high-volatility regime constrains tomorrow's fiscal capacity. Capital underinvestment in education, infrastructure, and health systems during austerity cycles compounds intergenerational cost. Cannot exit; will bear increased debt service, deferred maintenance, and limited public investment. No compensation mechanism for the extraction of present prosperity at future expense.
+constraint_indexing:constraint_classification(boom_bust_path_dependency, snare,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER — COMMODITY CURSE (FALSE MOUNTAIN) — From an analytical/civilizational view, commodity-dependent fiscal structures inevitably create volatility: this is a natural law of resource economies. However, this naturalizes what is actually a policy choice: Norway stabilized through a sovereign wealth fund, Chile through countercyclical spending rules, Canada through transfer programs. The mountain classification is a false summit masking contingent institutional design. Alberta's volatility is not inherent to oil; it is inherent to the choice to keep royalties low, avoid wealth fund accumulation, and shift risk onto public employment and service provision.
+constraint_indexing:constraint_classification(boom_bust_path_dependency, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -152,18 +166,13 @@ constraint_indexing:constraint_classification(boom_bust_path_dependency, rope,
 :- begin_tests(boom_bust_path_dependency_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between beneficiaries (organized) and observers (institutional).
-    constraint_indexing:constraint_classification(boom_bust_path_dependency, TypeBeneficiary, context(agent_power(organized), _, _, _)),
-    constraint_indexing:constraint_classification(boom_bust_path_dependency, TypeObserver, context(agent_power(institutional), _, _, _)),
-    TypeBeneficiary \= TypeObserver.
+    constraint_indexing:constraint_classification(boom_bust_path_dependency, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(boom_bust_path_dependency, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(piton_signature) :-
-    % Verify Piton requirements: theater_ratio >= 0.70.
-    narrative_ontology:constraint_metric(boom_bust_path_dependency, theater_ratio, TR), TR >= 0.70.
-
-test(low_extraction) :-
-    % Pitons typically have low effective extraction but high inertial maintenance.
-    narrative_ontology:constraint_metric(boom_bust_path_dependency, extractiveness, E), E =< 0.25.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(boom_bust_path_dependency, TR),
+    TR >= 0.70.
 
 :- end_tests(boom_bust_path_dependency_tests).
 
@@ -173,25 +182,16 @@ test(low_extraction) :-
 
 /**
  * LOGIC RATIONALE:
- *   Classified as a Piton because the "stabilization" function of the Heritage
- *   Fund and royalty system has largely atrophied. It is now maintained
- *   through high-theater rhetoric (0.78) that blames external forces (Ottawa)
- *   for internal decisions to privilege low taxes over long-term savings.
+ *   Extractiveness (0.38): Moderate. The constraint extracts from public service workers and future taxpayers through austerity cycles, but extraction is not as severe as a snare (ε > 0.46) because it is partly voluntarily maintained through political choice rather than structural necessity. The beneficiaries (resource extractors, low-tax advocates) capture value, but the regime's reproduction relies on political rhetoric and institutional inertia, not pure coercion. Suppression (0.68): High. Barriers to exit include: (1) geographic immobility (cannot easily leave provincial employment), (2) political capture (low-tax ideology dominates discourse), (3) institutional lock-in (decades of low-royalty contracts limit revenue capacity), (4) blame-shifting (external attribution to federal transfers prevents internal policy reform). These are suppressed alternatives: progressive taxation, higher royalties, and Heritage Fund mandates are politically radioactive despite strong comparative evidence. Theater ratio (0.78): High. The constraint is maintained substantially through theatrical activity: political debates about 'belt-tightening' and 'fiscal responsibility' that avoid the core policy choices (royalty rates, taxation structure, savings fund requirements). The theater has increased over time as the original rationale (attracting investment) has degraded—Alberta's oil industry is now subject to global commodity markets and climate policy regardless of tax rates, yet the low-tax narrative persists.
  *
  * PERSPECTIVAL GAP:
- *   The gap exists between those who enjoy immediate consumption/low taxes
- *   (seeing a Rope for growth) and those who observe the structural
- *   erosion of resilience (seeing a Piton).
+ *   The perspectival gap reveals how the same constraint structure produces divergent classifications. Resource extractors see Rope (pure coordination of predictable fiscal regime enabling investment). The provincial government sees Piton (recognizes volatility as a problem but maintains the regime through political inertia). Healthcare workers see Snare (trapped in austerity with no exit). Rural communities see Tangled Rope (both coordinated infrastructure provision and extraction through bust-time service cuts). Future taxpayers see Snare (pure extraction via deferred investment and accumulated debt). The analytical observer risks seeing Mountain (commodity volatility as inevitable law of resource economies) but structural analysis reveals this as a false summit: Norway, Chile, and Canada demonstrate that policy design (not commodity curse) determines fiscal stability. The gap between beneficiary (Rope) and victim (Snare) perspectives is maximal, indicating strong asymmetric extraction masked by coordination rhetoric.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries are the constituencies that prioritized "immediate
- *   consumption" during boom years. The victim group is 'future_generations',
- *   who inherit a fiscally vulnerable province with depleted resource wealth.
+ *   Directionality values derive from agents' structural positions relative to the fiscal volatility constraint. Resource extractors (beneficiaries, arbitrage options) experience low d ≈ 0.10-0.15: they benefit from predictable low royalties and can shift production volume to manage revenue risk. The provincial government (institutional beneficiary, arbitrage through political rhetoric) experiences d ≈ 0.20-0.30: they benefit from the low-tax narrative and can avoid internal policy reform through external blame. Public service workers and healthcare employees (trapped, victims) experience high d ≈ 0.90-0.95: they bear volatility costs with no exit option. Rural communities (constrained, mixed victims/beneficiaries) experience moderate d ≈ 0.55-0.65: they benefit from boom-time infrastructure but face severe bust-time service cuts. Future taxpayers (constrained, pure victims) experience high d ≈ 0.80-0.85: they inherit fiscal constraints with no agency in creating them. The engine's directionality derivation automatically computes these from the beneficiary/victim declarations and exit options.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling the current volatility as
- *   "natural" (Mountain). By identifying it as a Piton, we show it is the
- *   result of specific, atrophied provincial policy choices.
+ *   This constraint resolves the mandatrophy by exposing the piton classification itself: the constraint is NOT a mountain of economic necessity, but a piton of institutional inertia. The provincial government maintains the low-tax/low-royalty regime while simultaneously claiming that volatility is an external problem ('Ottawa's fault,' 'commodity markets'). This is the canonical piton pattern: maintaining a defunct institutional arrangement through theater while externalizing causality. The mandatrophy is resolved by recognizing that 'fiscal volatility' is not an irreducible constraint but a consequence of specific policy choices that persist through political narrative rather than structural necessity. The false mountain (commodity curse) naturalizes what is actually institutional design. The true structure is a piton maintained by sovereigntist narrative that externalizes blame, preventing reform to royalty rates, tax progressivity, or Heritage Fund mandates. The constraint persists not because volatility is unavoidable but because reform is politically costly and the cost is externalized onto powerless agents (healthcare workers, future taxpayers).
  */
 
 /* ==========================================================================
@@ -199,44 +199,73 @@ test(low_extraction) :-
    ========================================================================== */
 
 omega_variable(
-    omega_royalty_restitution,
-    'Could a retroactive change in royalty structure restore the atrophied stabilization function?',
-    'Financial modeling of Norway-style royalty adjustments in the Alberta context.',
-    'If yes, the Piton is resolvable; if no, the path dependency is permanent.',
+    counterfactual_heritage_fund,
+    'Would a Norway-style Heritage Fund mandate (e.g., 50% of resource revenues at consistent commodity prices) have stabilized fiscal volatility, or would political pressure have eroded the mandate during booms?',
+    'Historical analysis of failed provincial savings fund mandates (e.g., Alberta Heritage Fund 1976-1987 contribution patterns); comparative study of Norway''s governance structures that sustained the fund vs political dynamics in resource-dependent regions',
+    'If mandate would have held: the piton is a choice masquerading as necessity (false mountain confirmed). If mandate would have been eroded: volatility is a political economy problem requiring stronger institutions, not merely better policy design.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(omega_royalty_restitution, conceptual, 'Reversibility of atrophied fiscal structures').
+narrative_ontology:omega_variable(counterfactual_heritage_fund, empirical, 'Whether Heritage Fund mandate could have stabilized volatility').
+
+omega_variable(
+    attribution_of_austerity_burden,
+    'What share of Alberta''s public service austerity and healthcare cutbacks since 2015 is attributable to federal transfer reductions vs provincial revenue volatility from low royalties?',
+    'Fiscal accounting: decompose provincial budget deficits by source (lower commodity prices, lower royalty take, lower federal transfers, policy choices); comparative analysis of peer provinces with different revenue structures',
+    'If federal transfers dominate: sovereigntist narrative gains traction (piton persists through blaming Ottawa). If low royalties dominate: self-inflicted narrative gains traction (piton exposed as choice, not necessity).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(attribution_of_austerity_burden, empirical, 'Attribution of austerity to federal transfers vs provincial revenue choices').
+
+omega_variable(
+    political_sustainability_of_reform,
+    'If Alberta moved to Scandinavian-level royalty rates (40-50% of resource value) and a mandatory Heritage Fund contribution, would the political coalition supporting low-tax ideology collapse, or would the distributional benefits (reduced volatility, increased public investment) stabilize the reform?',
+    'Comparative political economy: study outcomes of similar reform attempts in resource-dependent regions (Alaska, Canada, Chile); scenario modeling of Alberta fiscal stability under higher royalty regimes; polling and political alignment analysis',
+    'If reform would collapse: path dependency is locked in by political economy (piton is entrenched). If reform would stabilize: the piton is maintained by myopia and elite capture rather than structural necessity.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(political_sustainability_of_reform, preference, 'Political sustainability of moving to higher royalty rates').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(boom_bust_path_dependency, 0, 10).
+narrative_ontology:interval(boom_bust_path_dependency, 1980, 2025).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Theater ratio rising as grievance politics replaces stabilization policy.
-narrative_ontology:measurement(bbpd_tr_t0, boom_bust_path_dependency, theater_ratio, 0, 0.40).
-narrative_ontology:measurement(bbpd_tr_t5, boom_bust_path_dependency, theater_ratio, 5, 0.60).
-narrative_ontology:measurement(bbpd_tr_t10, boom_bust_path_dependency, theater_ratio, 10, 0.78).
+% Theater ratio over time
+narrative_ontology:measurement(bbpd_tr_t0, boom_bust_path_dependency, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(bbpd_tr_t10, boom_bust_path_dependency, theater_ratio, 10, 0.72).
+narrative_ontology:measurement(bbpd_tr_t20, boom_bust_path_dependency, theater_ratio, 20, 0.78).
 
-% Extraction slowly increasing as short-term needs override long-term policy.
-narrative_ontology:measurement(bbpd_ex_t0, boom_bust_path_dependency, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(bbpd_ex_t5, boom_bust_path_dependency, base_extractiveness, 5, 0.19).
-narrative_ontology:measurement(bbpd_ex_t10, boom_bust_path_dependency, base_extractiveness, 10, 0.22).
+% Extraction over time
+narrative_ontology:measurement(bbpd_be_t0, boom_bust_path_dependency, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(bbpd_be_t10, boom_bust_path_dependency, base_extractiveness, 10, 0.33).
+narrative_ontology:measurement(bbpd_be_t20, boom_bust_path_dependency, base_extractiveness, 20, 0.38).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
 narrative_ontology:coordination_type(boom_bust_path_dependency, resource_allocation).
+narrative_ontology:affects_constraint(boom_bust_path_dependency, canadian_transfer_payment_capture).
+narrative_ontology:affects_constraint(boom_bust_path_dependency, resource_curse_narrative).
 
-% Network edge: The vulnerability created by this Piton feeds the separatist
-% "writing on the wall" narrative used in arbitrage.
-narrative_ontology:affects_constraint(boom_bust_path_dependency, sovereignty_as_arbitrage).
+% DUAL FORMULATION NOTE:
+% The boom-bust fiscal path dependency decomposes into two distinct constraint stories: (1) boom_bust_path_dependency (this story, ε=0.38, piton) — the institutional choice to maintain low-tax/low-royalty regime despite recognized volatility costs; (2) commodity_price_transmission (ε=0.08, rope) — the structural necessity for fiscal policy to respond to commodity prices given a resource-dependent revenue base. The piton is downstream of the commodity price transmission constraint but represents a distinct institutional failure to adopt stabilization mechanisms (Heritage Fund, progressive taxation, countercyclical spending) that would convert rope into managed coordination.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(boom_bust_path_dependency, institutional, 0.25).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

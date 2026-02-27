@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "help_to_buy_uk",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "htb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "UK 'Help to Buy' Equity Loan Scheme",
+    "topic_domain": "economic/housing_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "house_builders",
+      "land_developers",
+      "property_owners"
+    ],
+    "victims": [
+      "first_time_buyers",
+      "future_renters",
+      "taxpayers"
+    ],
+    "has_sunset_clause": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The First-Time Buyer",
+      "comment": "PERSPECTIVE 1: FIRST-TIME BUYER (SNARE) \u2014 Trapped by housing market inflation, deposit requirements, and limited alternatives. Without Help to Buy, locked out of homeownership entirely; with it, locked into debt accumulation at inflated prices. Government loan is presented as assistance but functions as debt subordination to mortgage lenders. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "House Builders and Developers",
+      "comment": "PERSPECTIVE 2: HOUSE BUILDERS AND DEVELOPERS (ROPE) \u2014 Primary beneficiary. Government equity loans increase demand elasticity and reduce buyer deposit constraints, enabling developers to raise prices without losing sales volume. Coordination function: scheme coordinates buyer demand with supply-constrained market. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Future Renters and Excluded Cohorts",
+      "comment": "PERSPECTIVE 3: FUTURE RENTERS AND EXCLUDED COHORTS (SNARE) \u2014 Trapped outside the scheme (eligibility limits, regional variation, timing exclusion). Inflated house prices driven by scheme reduce rental supply and increase rents. Later cohorts face higher prices without scheme access. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Taxpayers",
+      "comment": "PERSPECTIVE 4: TAXPAYERS (SNARE) \u2014 Trapped by fiscal obligations. Scheme cost: \u00a337bn gross exposure (2013-2023). Equity losses, loan defaults, and opportunity costs are borne by public finance. Voters cannot exit without political mobilization. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.69."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Policy Reform Coalition",
+      "comment": "PERSPECTIVE 5: POLICY REFORM COALITION (SCAFFOLD) \u2014 Housing charities, think tanks, and economists advocated for supply-side solutions instead of demand-side subsidy. Reform pressure built throughout 2019-2023 as scheme's extractive effects became visible. Scheme announced closure in March 2023 (sunset: July 2023). Organized actors see pathway out through policy sunset. d\u22480.45, f(d)\u22480.45, \u03c3=1.0 \u2192 \u03c7\u22480.23."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Government / Treasury",
+      "comment": "PERSPECTIVE 6: GOVERNMENT / TREASURY (TANGLED ROPE) \u2014 Coordination function: scheme solves short-term housing delivery and homeownership rate targets (political incentives). Extraction: government subordinates its equity to mortgage lenders (poor recovery priority), absorbs losses, and distorts land/building markets. Constrained by electoral cycle pressure and Treasury capacity to absorb losses. Requires active enforcement (scheme administration, equity recovery process, debt management). d\u22480.52, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer (Demand-Side Subsidy Theater)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (PITON) \u2014 From civilizational distance, Help to Buy is a degraded version of supply-side housing policy. The scheme was presented as 'helping buyers' but functioned as a land-value subsidy to developers. Theater_ratio=0.61 reflects the gap between stated purpose (first-time buyer assistance) and actual mechanism (price-neutral demand stimulus capturing by supply). The ritual of 'mortgage approval' masks the constraint: equity loans simply shifted who captures the subsidy without addressing housing shortage. d\u22480.68, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.56."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "supply_demand_elasticity_threshold",
+      "question": "At what elasticity threshold does demand-side subsidy captured by supply-side constraints flip from coordinating buyers to pure extraction?",
+      "resolution_mechanism": "Cross-regional analysis of Help to Buy uptake vs house price growth, controlling for underlying supply constraints; comparison with regions with elastic supply (USA sunbelt) vs inelastic supply (UK southeast)",
+      "impact": "If threshold very elastic: scheme is legitimately coordinating buyer-supply gap (Rope from more perspectives). If threshold highly inelastic: scheme is extraction from outset (Snare confirmed from all perspectives except builders).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Supply elasticity threshold determining demand-subsidy incidence"
+    },
+    {
+      "id": "equity_recovery_realism",
+      "question": "What fraction of government equity loans will ultimately be recovered at positive value or break-even vs loss?",
+      "resolution_mechanism": "Long-term tracking of loan book performance post-scheme closure; analysis of repayment rates, default rates, and house price appreciation relative to purchase price plus government equity stake",
+      "impact": "If >70% recovery: scheme losses are modest, may be defensible as investment. If <30% recovery: scheme is pure transfer to buyers and developers, disguised as loan program.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Government equity loan recovery rate"
+    },
+    {
+      "id": "counterfactual_homeownership_mechanism",
+      "question": "Did Help to Buy create first-time buyers who would not have bought otherwise, or did it subsidize purchases that would have happened through other channels (larger deposits, different property price point)?",
+      "resolution_mechanism": "Cohort analysis comparing Help to Buy recipients with matched non-recipients; analysis of whether Help to Buy buyers were substituting for renters or for same-cohort buyers using larger deposits and lower-price properties",
+      "impact": "If genuine new buyers: scheme enabled new household formation (weaker extraction narrative). If substitution: scheme is pure wealth transfer to buyers already in-queue, magnifying house price inflation (pure snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Help to Buy created marginal buyers or substituted for alternative purchase paths"
+    },
+    {
+      "id": "land_value_capture_redistribution",
+      "question": "Did Help to Buy primarily benefit builders through higher land values, or did price increases distribute to existing property owners as windfall appreciation?",
+      "resolution_mechanism": "Land value appraisal analysis; comparison of vacant land prices pre/post-scheme in Help to Buy active regions vs control regions; analysis of property appreciation rates by owner type (owner-occupier vs investor)",
+      "impact": "If builders captured most gain: Help to Buy is snare against first-time buyers benefiting developers (current narrative). If existing owners captured gain: Help to Buy is inter-generational wealth transfer from younger/poorer cohorts to older/wealthier property-owning cohort (expanded snare narrative).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of Help to Buy-induced land value gains"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK's 'Help to Buy' Equity Loan Scheme (2013-2023) exemplifies a snare constraint disguised as pro-social policy. The scheme offered government equity loans (up to 20% of property price, or 25% in London) to first-time buyers with deposits of 5%, ostensibly to reduce barriers to homeownership. In practice, the scheme operated as a demand-side subsidy in a supply-constrained housing market, primarily benefiting house builders, developers, and existing property owners through inflated house prices, while locking first-time buyers into high-debt purchases and future renters and excluded cohorts into rental dependence and price inflation. The extractiveness evolved from 0.28 (early years, when builders perceived genuine demand expansion) to 0.52 (later years, as price-capture mechanism became visible and builder windfall solidified). Theater ratio increased from 0.38 to 0.61 as the rhetoric of 'first-time buyer assistance' diverged ever more visibly from the reality of demand-neutral, supply-constrained subsidy capture. The scheme's sunset clause (announced March 2023, closed July 2023) reflects political pressure from housing charities and economists who exposed the extractive mechanism, though closure came only after a decade of price inflation and inter-generational redistribution.",
+    "key_agents": [
+      "First-Time Buyers: Primary victim (powerless/trapped) \u2014 ostensible beneficiaries who become debt-holders at inflated prices; lack alternative pathways to homeownership",
+      "House Builders and Developers: Primary beneficiary (institutional/arbitrage) \u2014 capture most price appreciation through reduced buyer deposit constraints; sell same properties at higher prices with reduced price sensitivity",
+      "Future Renters and Excluded Cohorts: Secondary victim (moderate/trapped) \u2014 excluded by scheme timing, geography, or eligibility; face inflated house prices and reduced rental supply as owner-occupancy preference increases",
+      "Taxpayers: Secondary victim (powerless/trapped) \u2014 bear \u00a337bn gross exposure; absorb equity losses and opportunity costs without political exit mechanism",
+      "Housing Charities and Think Tanks: Reform coalition (organized/constrained) \u2014 advocated for supply-side solutions; drove pressure for scheme closure through analysis and advocacy",
+      "Government/Treasury: Institutional actor (institutional/constrained) \u2014 balances short-term homeownership targets (political) against long-term fiscal costs (economically); constrained by electoral cycle"
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The scheme extracts from first-time buyers and future cohorts through debt-at-inflated-prices. The extraction is not immediate/severe enough for highest-tier snare (0.70+) because buyers do receive asset appreciation (though less than they would in less-inflated market), and government equity stake provides some downside protection (though poor recovery priority). The evolution from 0.28 to 0.52 reflects the dynamic: early years, builders saw genuine demand expansion and price-neutral equilibrium; by years 5-10, price capture mechanism had solidified and buyers were locked into premium-price debt with constrained exit. Suppression (0.68): High. First-time buyers face suppressed alternatives: save longer (wage stagnation + rent inflation make this harder), relocate to cheaper regions (job/family constraints), or rent indefinitely (insecurity, no wealth accumulation). Government frames the constraint as 'help' rather than 'debt subordination,' suppressing alternatives through narrative. Builders suppress land supply to maintain price-inelasticity. Theater ratio (0.61): Moderate-high. The scheme's presentation as 'helping first-time buyers' masks its mechanism as 'demand stimulus that builders capture.' Mortgage approval ritual masks equity subordination. Government equity loan is presented as 'investment' but functions as grant-disguised-as-loan due to low recovery prospects. Theater evolved as awareness spread (charities exposed the mechanism), causing public perception gap between official purpose and structural reality.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. First-time buyers experience a snare (trapped by debt-at-inflated-prices with limited alternatives). House builders experience a rope (genuine coordination of demand-supply, with them as beneficiaries). Future renters experience a snare (locked out by inflated prices). Taxpayers experience a snare (fiscal obligation, zero exit). Reform coalition experiences a scaffold (visible sunset pathway through policy change and organized advocacy). Government experiences tangled rope (coordination function\u2014targets met\u2014mixed with extraction\u2014fiscal costs mounting). The analytical observer sees a degraded demand-subsidy mechanism (piton). No agent sees the constraint as beneficial except builders (rope) and benefiting owners (property appreciation). The scheme's sunset (announced March 2023, closed July 2023) was a direct result of perspectival gap becoming politically salient \u2014 housing experts demonstrated the extraction mechanism, shifting policy from 'help' framing to acknowledged fiscal burden and demand-side-subsidy failure.",
+    "directionality_logic": "First-time buyers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction (bounded only by asset appreciation). No exit without reneging on debt or renting indefinitely. House builders: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Can exit scheme (it was voluntary to participate) and benefit from price increases whether they used scheme or not. Future renters: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Locked out by inflated prices; cannot access scheme retroactively. Taxpayers: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.32. Fiscal obligation; zero exit without political mobilization. Government: Institutional + constrained \u2192 d\u22480.52, f(d)\u22480.65. Mixed: coordination function (targets met) but extraction (fiscal losses); constrained by electoral cycle and Treasury capacity. Reform coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.45. Low effective extraction; organized enough to drive policy change (constrained exit achieved through advocacy).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Help to Buy avoids the trap of mislabeling pure extraction as coordination by showing the structural facts: government equity is subordinated to mortgage debt (extraction mechanism), no coordination benefit to buyers (they pay premium prices for access to same property), and builders absorb the subsidy through price capture (not sellers sharing loss). The scheme claims coordination function ('help') but possesses none \u2014 the government-buyer 'partnership' is one-directional extraction. Snare classification is confirmed: victims (first-time buyers, future renters, taxpayers) far outnumber beneficiaries (builders, existing owners); suppression is high (constrained alternatives); extraction is significant (debt-at-inflated-prices). The tangled_rope and scaffold perspectives are real but secondary \u2014 the government's coordination function (meeting homeownership targets) is political theater masking extraction, and the reform coalition's scaffold is a genuine pathway out (policy sunset), validating that the constraint is not immutable. The piton perspective (demand-subsidy theater) reflects the scheme's degradation from stated purpose \u2014 it persisted due to inertia and political commitment despite mounting evidence of ineffectiveness, until organized pressure (charities, economists) made costs salient enough to overcome path dependence. The ultimate closure (July 2023) validates that the constraint was contingent, not natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_housing_shortage",
+      "intergenerational_wealth_inequality",
+      "mortgage_debt_burden"
+    ],
+    "dual_formulation_note": "Help to Buy is a specific policy instantiation of the broader constraint of demand-side-subsidy-in-supply-constrained-markets. It is downstream of housing shortage structural constraints and feeds upstream into intergenerational wealth inequality and household debt burden metrics. The \u03b5=0.52 reflects this specific policy's capture mechanism; the parent constraint (housing shortage) would have higher \u03b5 if it were modeled as a pure snare, but lower if modeled as a coordination problem awaiting supply-side solutions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

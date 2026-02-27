@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "feigenbaum_universality",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "feig"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Feigenbaum Constants (Universality in Chaos)",
+    "topic_domain": "mathematics/dynamical_systems/chaos_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Observer",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL OBSERVER (MOUNTAIN) \u2014 Feigenbaum universality is a proven mathematical fact: all one-parameter families of unimodal maps exhibiting period-doubling cascades converge to the same universal constants (\u03b4 and \u03b1) at their onset of chaos. This is an invariant property of nonlinear dynamics, independent of the specific physical or computational substrate. Zero degrees of freedom. The constants emerge from the topology and measure-theoretic structure of iterated maps."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Experimental Physicist",
+      "comment": "PERSPECTIVE 2: EXPERIMENTAL PHYSICIST (MOUNTAIN) \u2014 Any experiment that realizes a period-doubling bifurcation cascade (fluid turbulence, electronic oscillators, chemical reactions, laser dynamics) observes the same universal scaling. No experimental design choice can avoid this. The constants constrain the observable bifurcation spectrum \u2014 measurement cannot reveal any other values. Maximum accessibility collapse: the phenomenon is mathematically forced, not contingent."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Applied Engineer",
+      "comment": "PERSPECTIVE 3: APPLIED ENGINEER (MOUNTAIN) \u2014 Engineers designing oscillatory systems (power converters, communication circuits, mechanical resonators) cannot escape Feigenbaum scaling. The onset of chaos occurs at parameter values set by \u03b4, regardless of material or design intent. The constraint is not negotiable through iteration or innovation \u2014 it is a property of the nonlinear equations themselves. High resistance to engineering workarounds: the constants are invariant across scales."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Physics Community",
+      "comment": "PERSPECTIVE 4: PHYSICS COMMUNITY (MOUNTAIN) \u2014 The universality of Feigenbaum constants has been confirmed across 45+ years and dozens of physical systems. No institutional framework, funding priority, or theoretical framework has successfully challenged the constants' empirical or theoretical status. The community's 'constraint' is that any credible theory of bifurcation dynamics must account for these values. Acceptance is not coercive \u2014 it is the only mathematically coherent position."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "three_dimensional_universality",
+      "question": "Do Feigenbaum constants apply to period-doubling cascades in three or higher-dimensional systems, or only to one-dimensional maps and two-dimensional flows?",
+      "resolution_mechanism": "Rigorous proof or counterexample for 3D bifurcation universality; experimental verification in high-dimensional chaotic systems",
+      "impact": "If universal in 3D+: the scope of the mountain widens (feature, not bug). If limited to 1D/2D: a boundary condition on the mountain \u2014 still rigorous, but with known domain limits.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Feigenbaum constants generalize to higher-dimensional systems"
+    },
+    {
+      "id": "smooth_vs_discontinuous_maps",
+      "question": "Are Feigenbaum constants invariant only for smooth, differentiable maps, or do they extend to piecewise-smooth or discontinuous systems?",
+      "resolution_mechanism": "Rigorous classification of bifurcation cascades in discontinuous maps; experimental realization of period-doubling in systems with friction transitions or impact events",
+      "impact": "If smooth-only: mountain has a refined specification. If universal for discontinuous maps: even broader universality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether universality holds for discontinuous dynamical systems"
+    },
+    {
+      "id": "computational_approximation_limits",
+      "question": "What precision of numerical simulation is required to resolve Feigenbaum constants to within observable error? Is floating-point computation fundamentally limited?",
+      "resolution_mechanism": "Systematic study of round-off error propagation in bifurcation computations; comparison with arbitrary-precision arithmetic implementations",
+      "impact": "If unlimited precision achievable: mountain stands. If floating-point limits matter: mountain is unchanged (computation is epistemology, not ontology) but requires specification of epistemological bounds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Computational precision requirements for verifying Feigenbaum constants"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 1978,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "Feigenbaum universality is a mathematical and physical property of dynamical systems undergoing period-doubling bifurcation cascades. The Feigenbaum constants (\u03b4 \u2248 4.669 for the bifurcation-onset scaling ratio, \u03b1 \u2248 2.503 for the spatial scaling) characterize the accumulation rate at which bifurcations compress as a control parameter is varied, and the fractal dimension of chaotic attractors. These constants are invariant: they appear in logistic maps, fluid flows, electronic circuits, laser systems, and any other nonlinear dynamical system with unimodal maps and period-doubling routes to chaos. The universality is a mathematical theorem proven rigorously by Feigenbaum (1978), Collet-Eckmann, Lanford, and others over the subsequent decades. Unlike the verification bottleneck (which mixes coordination and extraction), Feigenbaum universality admits no perspectival divergence: all observers (theorists, experimentalists, engineers, mathematicians) experience the same constraint \u2014 the constants are what they are, across all physical substrates and measurement methodologies. This is a pure mountain: zero degrees of freedom, unchangeable across contexts, emerges from the intrinsic mathematical structure of nonlinear iteration.",
+    "key_agents": [
+      "Mathematical Community: Proves and refines universality theorems \u2014 beneficiary of the constraint as it deepens understanding of dynamical systems",
+      "Experimental Physicists: Measure Feigenbaum constants in real systems \u2014 constrained to observe the predicted values; no exit option",
+      "Applied Engineers: Design systems with oscillations or feedback loops \u2014 must account for Feigenbaum scaling when avoiding or inducing chaos",
+      "Computational Scientists: Implement bifurcation algorithms \u2014 constrained by the mathematical invariance; no numerical workaround exists",
+      "Analytical Observer: Universal mathematical and physical truth \u2014 the constraint is invariant across all contexts and observers"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. Feigenbaum universality does not extract value from any agent or redirect resources. It is a passive mathematical property. The low extractiveness reflects that the constants are descriptive facts, not regulatory or coercive mechanisms. Suppression (0.03): Negligible. The constants impose no barriers to action or knowledge \u2014 they are freely publishable, computationally verifiable, and experimentally observable. Resistance to alternatives is not due to suppression but to mathematical necessity. Theater ratio (0.15): Very low. Feigenbaum universality is substantive physics, not performative. Experimental verification is direct: measure the bifurcation cascade, compute the scaling ratios, compare to \u03b4 and \u03b1. The slight theater (0.15 rather than 0.0) accounts for the inevitably approximate nature of experimental and computational procedures \u2014 no measurement is perfect, and numerical resolution has limits. But the core phenomenon is purely functional: the math works, the physics confirms it, and no theatrical framing is required. The constraint has remained stable across 45 years of inquiry (interval 1978-2023). The theater ratio has risen slightly (0.10 \u2192 0.15) as numerical methods have become more sophisticated, introducing more technical complexity in the verification process, but the underlying constraint has not changed.",
+    "perspectival_gap": "There is no perspectival gap. All observers \u2014 mathematical, experimental, applied, computational, institutional \u2014 agree that Feigenbaum constants are invariant properties of period-doubling dynamics. A mathematician sees the theorem; an experimentalist sees the scaling in fluid turbulence; an engineer sees it in their oscillator design; a computational physicist sees it in their bifurcation diagram. All see the same thing, from different angles, but arriving at identical conclusions. This is the defining mark of a mountain constraint: perspectival convergence rather than divergence. Each perspective confirms the others; none contradicts. The constraint is not experienced as coercive because it is not negotiable \u2014 it is simply true.",
+    "directionality_logic": "Directionality derivation does not apply to mountains. Feigenbaum universality has no beneficiaries or victims: it is a structural property of nonlinear systems, not an allocation mechanism or power relation. All agents are equally constrained by the constants; none extracts value or bears costs. The constraint is symmetrical across all observers and contexts. The mathematical community benefits from the universality as a theoretical achievement, but this is a side effect of the constraint's truth, not a function of the constraint itself. The powerless experimental physicist is not victimized by having to observe the predicted values \u2014 they are simply learning the truth about nature. The applied engineer is not extracted from by having to account for Feigenbaum scaling \u2014 they are simply designing with knowledge of a physical boundary. All directionality values (d) collapse to the null case: the constraint is not directional.",
+    "mandatrophy_analysis": "Mandatrophy resolution is not applicable to Feigenbaum universality because the constraint is unanimously classified as a mountain across all perspectives. There is no ambiguity about whether the constraint serves coordination or extraction \u2014 it serves neither. It is a mathematical fact, independent of institutional framing, policy choice, or observational methodology. The constraint cannot be mislabeled as a snare (extraction mechanism) or a rope (coordination mechanism) because its structure is neither. It is a constraint on the possible behaviors of nonlinear dynamical systems, not a social or institutional arrangement. The six-type taxonomy is designed to classify constraints that have distributional consequences (who benefits, who bears costs); Feigenbaum universality has no distributional dimension. It is pure mathematical structure. The mountain classification is not contingent on perspective or context \u2014 it is robust."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "route_to_chaos_via_period_doubling",
+      "universal_scaling_in_turbulence",
+      "bifurcation_onset_prediction"
+    ],
+    "dual_formulation_note": "Feigenbaum universality is a family of mathematically related results. The primary constraint (feigenbaum_universality) covers the universal constants \u03b4 and \u03b1 in period-doubling cascades. Downstream constraints include specific realizations of period-doubling in particular physical systems (turbulence, electronics, chemistry), which are constrained by but not identical to the abstract universality. The network relationship reflects that the abstract mathematical property (this constraint) implies properties of concrete physical realizations (downstream constraints)."
+  },
+  "directionality_overrides": []
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: lula_hemisphere_2026
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-28
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_lula_hemisphere_2026, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,8 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,96 +52,120 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: lula_hemisphere_2026
- * human_readable: The Monroe Doctrine Revival (Unilateral US Hegemony)
- * domain: political
- * * SUMMARY:
- * This constraint models the revival of unilateral hegemonic power, as described by
- * Brazilian President Lula in response to a hypothetical 2026 US military intervention
- * in Venezuela. The action is framed as a violation of the sovereign equality of nations,
- * where "zones of influence" and unilateral force replace the collectively agreed-upon
- * rules of the UN Charter.
- * * KEY AGENTS:
- * - Venezuelan Civilians: Subjects (Powerless) experiencing the intervention as an overwhelming, unchangeable event.
- * - United States Government: Beneficiary (Institutional/Powerful) acting unilaterally to achieve strategic goals.
- * - President Lula of Brazil: Observer (Institutional) advocating for multipolarity and international law.
+ *   constraint_id: lula_hemisphere_2026
+ *   human_readable: The Monroe Doctrine Revival (Unilateral US Hegemony)
+ *   domain: political/international_relations
+ *
+ * SUMMARY:
+ *   The Monroe Doctrine revival, as articulated by President Lula in response
+ *   to hypothetical 2026 US military intervention in Venezuela, represents a
+ *   unilateral reassertion of hemispheric hegemony by the United States. This
+ *   constraint models how a single dominant power maintains enforcement
+ *   capacity over a region through threat credibility, institutional theater,
+ *   and structural power differentials. The extractiveness (0.58) reflects
+ *   that while genuine regional coordination interests exist (hemispheric
+ *   stability, trade frameworks), the dominant benefit flows to the US
+ *   geopolitical position and military-industrial complex. The suppression
+ *   (0.72) is high because regional states cannot exit: they are formally
+ *   sovereign but practically constrained by US military dominance and the
+ *   credible threat of unilateral intervention. The theater ratio (0.48) has
+ *   been declining because the doctrine increasingly relies on direct power
+ *   demonstration rather than institutional narrative — the Cold War
+ *   institutions (OAS, TIAR) that once provided theater are losing
+ *   legitimacy, requiring more explicit threat credibility to maintain the
+ *   constraint. The constraint exhibits all six types from different
+ *   structural positions, making it a diagnostic exemplar for how power
+ *   asymmetry generates perspectival pluralism.
+ *
+ * KEY AGENTS:
+ *   - United States Military-Industrial Complex: Primary beneficiary (institutional/arbitrage) — captures enforcement narrative and defense spending justification
+ *   - Venezuela: Primary victim (powerless/trapped) — faces unilateral threat with no exit mechanism or security alternatives
+ *   - Brazil and Regional States: Secondary victims (moderate/constrained) — formally sovereign but constrained by US power differential; have diplomatic options but no military exit
+ *   - US Democratic Institutions: Mixed (powerful/mobile) — benefit from hegemonic narrative but constrained by domestic political costs of interventionism
+ *   - Cold War Security Institutions (OAS, TIAR): Institutional actors (institutional/arbitrage) — maintain ceremonial role but have lost functional coordination capacity (piton)
+ *   - Emerging Multipolar Coalitions (BRICS, CELAC): Organized actors (organized/constrained) — attempting to build alternative constraint-breaking pathways with potential sunset
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(lula_hemisphere_2026, 0.75). % Rationale: Military capture of a sovereign state's assets and political autonomy represents extreme extraction.
-domain_priors:suppression_score(lula_hemisphere_2026, 0.85).   % Rationale: Unilateral military force explicitly suppresses all other alternatives, such as diplomacy or UN-led processes.
-domain_priors:theater_ratio(lula_hemisphere_2026, 0.10).       % Rationale: The action is primarily functional (military force) rather than performative.
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(lula_hemisphere_2026, 0.58).
+domain_priors:suppression_score(lula_hemisphere_2026, 0.72).
+domain_priors:theater_ratio(lula_hemisphere_2026, 0.48).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(lula_hemisphere_2026, extractiveness, 0.75).
-narrative_ontology:constraint_metric(lula_hemisphere_2026, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(lula_hemisphere_2026, theater_ratio, 0.10).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(lula_hemisphere_2026, extractiveness, 0.58).
+narrative_ontology:constraint_metric(lula_hemisphere_2026, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(lula_hemisphere_2026, theater_ratio, 0.48).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% The hegemonic power claims its action is a necessary enforcement of justice.
-narrative_ontology:constraint_claim(lula_hemisphere_2026, tangled_rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(lula_hemisphere_2026, snare).
 narrative_ontology:human_readable(lula_hemisphere_2026, "The Monroe Doctrine Revival (Unilateral US Hegemony)").
-narrative_ontology:topic_domain(lula_hemisphere_2026, "political").
+narrative_ontology:topic_domain(lula_hemisphere_2026, "political/international_relations").
 
-% Binary flags
-domain_priors:requires_active_enforcement(lula_hemisphere_2026). % The hegemony must be actively maintained by military presence.
+domain_priors:requires_active_enforcement(lula_hemisphere_2026).
 
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(lula_hemisphere_2026, hegemonic_powers).
-narrative_ontology:constraint_victim(lula_hemisphere_2026, sovereign_nations).
-narrative_ontology:constraint_victim(lula_hemisphere_2026, venezuelan_civilians).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(lula_hemisphere_2026, us_military_industrial_complex).
+narrative_ontology:constraint_beneficiary(lula_hemisphere_2026, us_geopolitical_dominance).
+narrative_ontology:constraint_victim(lula_hemisphere_2026, latin_american_sovereignty).
+narrative_ontology:constraint_victim(lula_hemisphere_2026, regional_multipolarity).
+narrative_ontology:constraint_victim(lula_hemisphere_2026, venezuela_political_autonomy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (MOUNTAIN)
-% For a Venezuelan civilian, the intervention is an overwhelming, inescapable force of nature.
-% χ = 0.75 * 1.5 (powerless) * 1.0 (national) = 1.125. High extraction and suppression feel like a Mountain.
+% PERSPECTIVE 1: VENEZUELA (SNARE) — Faces unilateral military threat with no exit mechanism. Cannot organize alternative security arrangements; sovereignty constrained by US capacity to intervene unilaterally. Maximum experienced extraction — regime selection imposed externally.
 constraint_indexing:constraint_classification(lula_hemisphere_2026, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(national))).
-
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% From the perspective of the US strategists executing the plan, it is a functional tool (Rope)
-% to achieve strategic goals where multilateral systems have failed.
-% χ = 0.75 * 0.6 (powerful) * 1.2 (global) = 0.54. Extraction is felt as moderate cost for strategic gain.
-constraint_indexing:constraint_classification(lula_hemisphere_2026, rope,
-    context(agent_power(powerful),
             time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 2: BRAZIL/REGIONAL ACTORS (SNARE) — Formally sovereign but constrained by US military dominance. Regional alternatives (CELAC, ALBA, PROSUR) lack enforcement capacity. Can resist diplomatically but cannot exit the constraint structure. High extraction of regional autonomy through threat credibility.
+constraint_indexing:constraint_classification(lula_hemisphere_2026, snare,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: US MILITARY-INDUSTRIAL COMPLEX (ROPE) — Primary beneficiary. Experiences the constraint as coordination: maintaining hemispheric dominance requires threat credibility and occasional demonstration. Intervention threat generates defense contractor demand, justifies military budgets, establishes geostrategic narrative. Net beneficiary through arbitrage — can redirect resources if hegemony is challenged elsewhere.
+constraint_indexing:constraint_classification(lula_hemisphere_2026, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE REGIONAL OBSERVER (SNARE)
-% For President Lula, this is a coercive, extractive Snare that violates international law
-% to serve hegemonic interests, trapping the region in a dependent relationship.
-% χ = 0.75 * -0.2 (institutional) * 1.1 (continental) = -0.165. The negative extraction reflects
-% the institutional cost and loss of stability for Brazil, classifying it as a predatory Snare.
-constraint_indexing:constraint_classification(lula_hemisphere_2026, rope,
+% PERSPECTIVE 4: US DEMOCRATIC GOVERNANCE (TANGLED ROPE) — US itself experiences coordination function (hemispheric stability narrative) AND asymmetric extraction (military commitment, opportunity cost, domestic political risk of interventionism). Congress theoretically constrains intervention, but executive power to maintain threat credibility enables hegemonic extraction. Hybrid: genuine coordination (hemispheric framework) plus extraction from US domestic resources and democratic discourse.
+constraint_indexing:constraint_classification(lula_hemisphere_2026, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: COLD WAR SECURITY INSTITUTIONS (PITON) — OAS, Inter-American Treaty of Reciprocal Assistance (TIAR), bilateral defense pacts are theater: their institutional forms persist from Cold War logic but the functional security problem has shifted. Invoked ceremonially to justify intervention but lack genuine coordination capacity in multipolar context. Theater ratio high because revival requires performative invocation of anachronistic doctrines.
+constraint_indexing:constraint_classification(lula_hemisphere_2026, piton,
     context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: EMERGING MULTIPOLAR INSTITUTIONS (SCAFFOLD) — BRICS, Shanghai Cooperation Organization, global South coalitions provide temporary constraint on US unilateralism. These represent a scaffold with potential sunset: if successful, they reduce US enforcement capacity and regional states gain exit options. Currently constrained (members have territorial disputes, economic dependencies on US markets) but provides alternative verification pathway for regional autonomy norms.
+constraint_indexing:constraint_classification(lula_hemisphere_2026, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
-            spatial_scope(continental))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (SNARE)
-% The analytical observer sees high base extraction (0.75) and high suppression (0.85),
-% classifying it as a Snare by definition.
-% χ = 0.75 * 1.15 (analytical) * 1.2 (global) = 1.035.
-constraint_indexing:constraint_classification(lula_hemisphere_2026, snare,
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / REALIST VIEW (MOUNTAIN) — From civilizational/universal perspective, hegemonic powers inevitably enforce spheres of influence — this appears as natural law of international politics. Power differentials create structural enforcement without explicit doctrine. However, the base data contradicts mountain classification: the extractiveness (0.58) and suppression (0.72) indicate contingent institutional arrangements (Monroe Doctrine doctrinal revival, threat credibility maintenance) rather than immutable structural limits. False summit detection applies.
+constraint_indexing:constraint_classification(lula_hemisphere_2026, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -135,25 +173,18 @@ constraint_indexing:constraint_classification(lula_hemisphere_2026, snare,
 
 :- begin_tests(lula_hemisphere_2026_tests).
 
-test(perspectival_gap_subject_beneficiary) :-
-    constraint_indexing:constraint_classification(lula_hemisphere_2026, TypePowerless,
-        context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(lula_hemisphere_2026, TypePowerful,
-        context(agent_power(powerful), _, _, _)),
-    TypePowerless == mountain,
-    TypePowerful == rope,
-    TypePowerless \= TypePowerful.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(lula_hemisphere_2026, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(lula_hemisphere_2026, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_snare) :-
-    constraint_indexing:constraint_classification(lula_hemisphere_2026, TypeAnalytical,
-        context(agent_power(analytical), _, _, _)),
-    TypeAnalytical == snare.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(lula_hemisphere_2026, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(snare_threshold_validation) :-
-    narrative_ontology:constraint_metric(lula_hemisphere_2026, extractiveness, E),
-    narrative_ontology:constraint_metric(lula_hemisphere_2026, suppression_requirement, S),
-    E >= 0.46,
-    S >= 0.60.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(lula_hemisphere_2026, TR),
+    TR >= 0.70.
 
 :- end_tests(lula_hemisphere_2026_tests).
 
@@ -163,23 +194,16 @@ test(snare_threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The scores reflect a clear case of hard power projection. Base extractiveness (0.75)
- * is high due to the seizure of national sovereignty and potential resources. Suppression
- * (0.85) is also high because unilateral military force is the ultimate suppressor of
- * alternative solutions like diplomacy.
+ *   Base extractiveness (0.58): Moderate-high. The Monroe Doctrine revival serves clear extraction functions: guarantees US military dominance in the region, enables US resource access (energy, minerals, agricultural markets), and provides geopolitical leverage against China and Russia. However, the extraction is not complete (0.75+) because genuine regional coordination interests exist — hemispheric stability benefits all parties, trade frameworks provide mutual gain, security cooperation has real benefits. The constraint is hybrid extraction plus coordination, not pure extraction. Over the interval (0-6 years), extractiveness increases from 0.42 to 0.58 as US reasserts dominance against multipolar challenges. Suppression (0.72): High. Regional states face significant barriers to exit: military capability gap is immense, institutional alternatives (BRICS, CELAC) lack enforcement capacity, economic dependencies tie regional states to US markets, and threat credibility makes defection costly. However, suppression is not total (0.80+) because some diplomatic and economic counter-options exist — Brazil can navigate multiple relationships, Mexico has USMCA leverage, even Venezuela has Chinese and Russian partnerships. Theater ratio (0.48): Moderate-low and declining. The Monroe Doctrine is invoked ceremonially (theater), but the constraint increasingly relies on direct power demonstration rather than institutional narrative. Cold War institutions have lost legitimacy as doctrine revival becomes more explicit. Theater declines from 0.55 to 0.48 because the narrative must back up with credible threat — performance alone no longer suffices.
  *
- * The Perspectival Gap is stark:
- * - The powerless civilian experiences this as a Mountain: an immutable, catastrophic event.
- * - The powerful hegemon sees it as a Rope: a tool for imposing order and achieving objectives.
- * - The neighboring institutional power (Lula) and the analytical observer see it for what
- *   the metrics compute: a predatory Snare that extracts value while coercively limiting options.
+ * PERSPECTIVAL GAP:
+ *   The perspectival gap is maximum: powerless agents experience snare (pure extraction), institutional beneficiaries experience rope (coordination), moderate actors experience tangled rope (mixed), powerful democratic institutions experience tension between coordination and extraction, anachronistic institutions experience degradation (piton), and emerging coalitions experience a temporary constraint with potential sunset (scaffold). This diversity arises from the same base structural data because directionality values differ — beneficiaries and victims occupy opposite positions in the extraction flow, producing opposite classifications despite identical baseline metrics.
  *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * This case is a classic example of Mandatrophy resolution. A naive analysis might see the
- * hegemon's claim of "enforcing justice" and classify it as a broken Rope. However, the
- * extremely high base extraction and suppression scores, combined with the analytical
- * perspective, force the classification to Snare. This correctly identifies the action's
- * primary function as extractive and coercive, not coordinative, preventing mislabeling.
+ * DIRECTIONALITY LOGIC:
+ *   The beneficiary-victim declarations map directly to directionality derivation. The US military-industrial complex and geopolitical dominance are declared beneficiaries — they experience low d values and thus negative or neutral χ, producing rope classification. Latin American sovereignty, regional multipolarity, and Venezuelan autonomy are declared victims — they experience high d values and thus high χ, producing snare classification. The gradient between beneficiary institutional actors (d ≈ 0.15-0.35) and victim regional states (d ≈ 0.65-0.95) explains the perspectival range. Directionality overrides are not required because the structural beneficiary/victim declarations accurately capture the asymmetry.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by showing that the snare classification from Venezuela's perspective is not mislabeled coordination. Venezuela genuinely receives no coordination benefit — the constraint is purely extractive from the victim's view. Simultaneously, the beneficiary's rope classification is not mislabeled extraction — the US genuinely experiences coordination value (hemispheric stability, predictable access, reduced multipolarity friction). The constraint's extractiveness (0.58) prevents it from being pure rope (which requires ε ≤ 0.45) — there is genuine asymmetric extraction, not pure coordination. The suppression (0.72) prevents it from being pure snare (snare typically requires suppression ≥ 0.60 but often closer to 0.80+) because some regional exit options exist. The measured extractiveness and suppression accurately capture the hybrid nature. The mandatrophy is resolved by recognizing that the constraint IS legitimately both coordination (for beneficiaries) and extraction (for victims) from different structural positions — there is no paradox, only perspectival divergence driven by power asymmetry.
  */
 
 /* ==========================================================================
@@ -187,53 +211,83 @@ test(snare_threshold_validation) :-
    ========================================================================== */
 
 omega_variable(
-    omega_lula_hemisphere_2026_1,
-    'Was the US intervention primarily for human rights justice or for strategic resource extraction?',
-    'Audit of captured president trial evidence vs. US corporate contracts signed in Venezuela post-capture.',
-    'If Justice: the constraint is a failing Rope. If Extraction: the constraint is a predatory Snare.',
+    unilateral_intervention_credibility,
+    'Does US retain unilateral intervention capacity in 2026, or has multipolar fragmentation made solo intervention prohibitively costly?',
+    'Historical assessment: if US intervenes unilaterally and succeeds, credibility confirmed. If costs exceed expected benefits, credibility degrades. If no intervention occurs, counterfactual scenario analysis required.',
+    'If credible: snare classification holds. If credibility collapses: constraint reclassifies as piton or degrades to rope. Entire regional extraction mechanism depends on threat believability.',
     confidence_without_resolution(medium)
 ).
 
+narrative_ontology:omega_variable(unilateral_intervention_credibility, empirical, 'Whether US maintains credible unilateral intervention capacity').
+
 omega_variable(
-    omega_lula_hemisphere_2026_2,
-    'Will Latin American states overcome ideological differences to resist hegemonic pressure as Lula hopes?',
-    'Track voting alignment in OAS/UN and joint infrastructure project funding through 2027.',
-    'If Unified: Regional agency creates a counter-Rope. If Divided: States remain trapped in the Snare.',
-    confidence_without_resolution(low)
+    regional_coalition_counter_capacity,
+    'Can BRICS, CELAC, or emerging multilateral coalitions actually constrain US intervention, or are they diplomatic theater without enforcement teeth?',
+    'Test case: Brazilian/multilateral response to hypothetical US military action. Measurement of actual economic sanctions, military mobilization, or diplomatic isolation inflicted on US.',
+    'If coalitions have teeth: scaffold classification is structural, sunset is real, regional states gain genuine exit options. If purely performative: scaffold is piton (theater without function), regional extraction persists.',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(regional_coalition_counter_capacity, empirical, 'Whether regional coalitions have enforcement capacity against US').
+
+omega_variable(
+    domestic_us_political_constraint,
+    'Does US domestic democratic discourse actually constrain executive intervention capacity, or has security state authority decoupled from democratic accountability?',
+    'Analysis of Congressional authority assertions: do they block interventions (constraint confirmed) or only generate theater of debate while executive acts? Legislative vs executive budget outcomes.',
+    'If Congress actually constrains: tangled rope classification confirmed (genuine coordination + extraction tension). If Congress is theater: executive hegemony increases, constraint reclassifies as pure snare from regional view.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(domestic_us_political_constraint, conceptual, 'Whether US domestic democracy constrains executive power').
+
+omega_variable(
+    ideological_doctrine_necessity,
+    'Does unilateral hegemony require Monroe Doctrine ideology to sustain, or does power differential enforce compliance without doctrinal narrative?',
+    'Comparative analysis: does power work without the doctrine (power realism)? Or does doctrine legitimacy matter for coalition-building and international law compliance?',
+    'If doctrine is necessary: theater ratio correct (extractiveness requires narrative). If power is sufficient: theater is lower, constraint is more purely structural (extractiveness should increase, doctrine is decoration).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(ideological_doctrine_necessity, conceptual, 'Whether doctrinal narrative is necessary for hegemonic enforcement').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing. The narrative is a snapshot in 2026,
-% but the model uses a standard 0-10 interval for drift analysis.
-narrative_ontology:interval(lula_hemisphere_2026, 0, 10).
+narrative_ontology:interval(lula_hemisphere_2026, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data for high-extraction constraint (E > 0.46).
-% Models the escalation of hegemonic pressure over the interval leading to the intervention.
+% Theater ratio over time
+narrative_ontology:measurement(lula_tr_t0, lula_hemisphere_2026, theater_ratio, 0, 0.55).
+narrative_ontology:measurement(lula_tr_t3, lula_hemisphere_2026, theater_ratio, 3, 0.51).
+narrative_ontology:measurement(lula_tr_t6, lula_hemisphere_2026, theater_ratio, 6, 0.48).
 
-% Theater ratio over time (remains low, as actions are functional):
-narrative_ontology:measurement(lula_hemisphere_2026_tr_t0, lula_hemisphere_2026, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(lula_hemisphere_2026_tr_t5, lula_hemisphere_2026, theater_ratio, 5, 0.08).
-narrative_ontology:measurement(lula_hemisphere_2026_tr_t10, lula_hemisphere_2026, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(lula_be_t0, lula_hemisphere_2026, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(lula_be_t3, lula_hemisphere_2026, base_extractiveness, 3, 0.5).
+narrative_ontology:measurement(lula_be_t6, lula_hemisphere_2026, base_extractiveness, 6, 0.58).
 
-% Extraction over time (shows a sharp increase as diplomatic options fail and force is used):
-narrative_ontology:measurement(lula_hemisphere_2026_ex_t0, lula_hemisphere_2026, base_extractiveness, 0, 0.30).
-narrative_ontology:measurement(lula_hemisphere_2026_ex_t5, lula_hemisphere_2026, base_extractiveness, 5, 0.60).
-narrative_ontology:measurement(lula_hemisphere_2026_ex_t10, lula_hemisphere_2026, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This constraint is an act of pure coercion and extraction, not coordination.
-% Therefore, no coordination_type is declared. No network relationships are
-% specified in the source narrative.
+narrative_ontology:coordination_type(lula_hemisphere_2026, enforcement_mechanism).
+narrative_ontology:affects_constraint(lula_hemisphere_2026, brics_multipolarity_challenge).
+narrative_ontology:affects_constraint(lula_hemisphere_2026, venezuela_regime_survival).
+narrative_ontology:affects_constraint(lula_hemisphere_2026, brazilian_regional_leadership).
+narrative_ontology:affects_constraint(lula_hemisphere_2026, us_military_spending_justification).
+
+% DUAL FORMULATION NOTE:
+% The Monroe Doctrine constraint can be decomposed into distinct upstream constraints: US military dominance as pure structural power (higher extractiveness, lower theater), and Monroe Doctrine as doctrinal narrative framework (higher theater, lower pure extraction). This story models the hybrid — the doctrine revival requires both structural power and narrative legitimacy. Upstream constraints affect this one through power differential validation and institutional theater provision.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

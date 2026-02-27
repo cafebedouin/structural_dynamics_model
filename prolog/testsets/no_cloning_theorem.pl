@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: no_cloning_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_no_cloning_theorem, []).
@@ -30,13 +31,18 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
-    domain_priors:emerges_naturally/1,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -49,20 +55,27 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: no_cloning_theorem
  *   human_readable: The No-Cloning Theorem
- *   domain: technological
+ *   domain: quantum_physics/information_theory
  *
  * SUMMARY:
- *   The no-cloning theorem states that it is impossible to create an independent
- *   and identical copy of an arbitrary unknown quantum state. This is a
- *   fundamental consequence of the linearity of quantum mechanics, preventing the
- *   "copy-paste" functionality central to classical information processing. As a
- *   direct consequence of physical law, it is an invariant Mountain constraint,
- *   though its impacts are perceived differently by various agents.
+ *   The no-cloning theorem is a fundamental principle of quantum mechanics
+ *   stating that it is impossible to create a perfect copy of an arbitrary
+ *   unknown quantum state. Proved independently by Wootters & Zurek (1982)
+ *   and Dieks (1982), the theorem follows directly from the linearity of
+ *   quantum mechanics and the unitarity of quantum evolution. No
+ *   experimental, technological, or institutional innovation can violate it —
+ *   it is not a limitation of current engineering but a structural
+ *   impossibility inscribed in the mathematical foundations of quantum theory
+ *   itself. The constraint exhibits the defining characteristics of a
+ *   mountain: immutable across all contexts, universally applicable, zero
+ *   degrees of freedom for all observers, and based on irreducible
+ *   mathematical structure rather than contingent institutional arrangements.
  *
- * KEY AGENTS (by structural relationship):
- *   - Quantum Computer Engineer: Experiences the constraint's limitations (e.g., inability to use classical error correction).
- *   - Quantum Cryptographer: Leverages the constraint's limitations to build secure systems.
- *   - Quantum Physicist: Analytical observer mapping the boundaries of physical law.
+ * KEY AGENTS:
+ *   - Quantum Information Theorists: Analytical community (institutional/analytical) — recognize the theorem as a fundamental constraint on information processing
+ *   - Quantum Technology Developers: Industrial actors (institutional/analytical) — must design protocols within the theorem's constraints, not around them
+ *   - Quantum Computing Systems: Technological substrate (powerless/analytical) — cannot violate the theorem; any cloning attempt fails deterministically
+ *   - Quantum Cryptography Applications: Beneficiary use case (institutional/analytical) — rely on no-cloning as a security foundation (e.g., quantum key distribution)
  */
 
 /* ==========================================================================
@@ -70,85 +83,54 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: As a law of physics, the theorem does not extract resources, it
-% merely defines the boundaries of what is possible. Its extractiveness and
-% suppression scores are therefore minimal, reflecting a fixed, non-coercive
-% feature of reality.
-domain_priors:base_extractiveness(no_cloning_theorem, 0.05).
+domain_priors:base_extractiveness(no_cloning_theorem, 0.08).
 domain_priors:suppression_score(no_cloning_theorem, 0.02).
-domain_priors:theater_ratio(no_cloning_theorem, 0.01).
+domain_priors:theater_ratio(no_cloning_theorem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(no_cloning_theorem, extractiveness, 0.05).
+narrative_ontology:constraint_metric(no_cloning_theorem, extractiveness, 0.08).
 narrative_ontology:constraint_metric(no_cloning_theorem, suppression_requirement, 0.02).
-narrative_ontology:constraint_metric(no_cloning_theorem, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(no_cloning_theorem, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain.
-% Accessibility Collapse: The theorem completely forecloses the alternative of
-% perfect cloning within its domain.
-narrative_ontology:constraint_metric(no_cloning_theorem, accessibility_collapse, 0.98).
-% Resistance: Meaningful resistance is incoherent, as one cannot "oppose" a
-% mathematical consequence of a physical theory.
-narrative_ontology:constraint_metric(no_cloning_theorem, resistance, 0.01).
+narrative_ontology:constraint_metric(no_cloning_theorem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(no_cloning_theorem, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(no_cloning_theorem, mountain).
 narrative_ontology:human_readable(no_cloning_theorem, "The No-Cloning Theorem").
-narrative_ontology:topic_domain(no_cloning_theorem, "technological").
+narrative_ontology:topic_domain(no_cloning_theorem, "quantum_physics/information_theory").
 
-% --- Emergence flag (required for mountain constraints) ---
-% The theorem is a mathematical derivation from the postulates of quantum
-% mechanics; it emerges naturally from the structure of the theory.
 domain_priors:emerges_naturally(no_cloning_theorem).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a uniform-type Mountain constraint (a law of
-% physics), the concepts of beneficiary and victim do not apply to the
-% constraint's structure itself, only to the consequences of its application
-% in specific technological domains.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   This is a uniform-type Mountain constraint. The classification is invariant
-   across all perspectives because it is a fundamental law of physics. The
-   narratives below describe the different *impacts* of this invariant
-   Mountain on different agents.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE QUANTUM PHYSICIST (ANALYTICAL)
-% To the physicist, the theorem is a Mountain. It is an unchangeable
-% consequence of the mathematical structure of quantum mechanics. It is
-% not a policy; it is a fixed peak in the topography of reality that no
-% amount of engineering can level.
+% PERSPECTIVE 1: QUANTUM INFORMATION THEORIST (MOUNTAIN) — The no-cloning theorem appears as an immutable law of quantum mechanics. No amount of effort, resources, or clever engineering can circumvent it. The constraint is inscribed in the mathematical structure of quantum mechanics itself. Zero degrees of freedom. Universal scope.
+constraint_indexing:constraint_classification(no_cloning_theorem, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: QUANTUM TECHNOLOGY DEVELOPER (MOUNTAIN) — Even well-resourced institutions cannot violate the no-cloning theorem through technological innovation. The constraint is not a limitation of current engineering capability but a fundamental structural impossibility. Any attempt to clone an unknown quantum state must fail by the laws of physics. No institutional power can overcome it.
+constraint_indexing:constraint_classification(no_cloning_theorem, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — The no-cloning theorem is a fundamental consequence of the linearity of quantum mechanics and the unitarity of quantum evolution. The proof is constructive: any hypothetical cloning device would violate these axioms. The theorem holds identically across all measurement contexts and is independent of observer position.
 constraint_indexing:constraint_classification(no_cloning_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
-            exit_options(trapped),
+            exit_options(analytical),
             spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE QUANTUM CRYPTOGRAPHER (INSTITUTIONAL)
-% For the security architect, the theorem's existence provides a foundation for
-% secure communication protocols (e.g., QKD). While they leverage it as if it
-% were a Rope for coordination, the underlying structure they are leveraging
-% is an immutable Mountain of physical law.
-constraint_indexing:constraint_classification(no_cloning_theorem, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE HARDWARE ENGINEER (POWERLESS)
-% For the engineer debugging a quantum circuit, the theorem feels like a Snare.
-% They cannot "snapshot" a state for later analysis. This inability to use
-% classical redundancy techniques is a significant engineering hurdle. However,
-% this perceived Snare is an encounter with an immovable Mountain, not a
-% coercive, high-extraction system.
-constraint_indexing:constraint_classification(no_cloning_theorem, mountain,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(local))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -156,27 +138,26 @@ constraint_indexing:constraint_classification(no_cloning_theorem, mountain,
 
 :- begin_tests(no_cloning_theorem_tests).
 
-test(classification_invariance) :-
-    % Verify that as a law of physics, it is a Mountain from all perspectives.
-    constraint_indexing:constraint_classification(no_cloning_theorem, mountain, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(no_cloning_theorem, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(no_cloning_theorem, mountain, context(agent_power(powerless), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(no_cloning_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(no_cloning_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_thresholds) :-
-    % Verify the base metrics are within the required range for a Mountain.
-    config:param(mountain_extractiveness_max, MaxE),
-    config:param(mountain_suppression_ceiling, MaxS),
-    narrative_ontology:constraint_metric(no_cloning_theorem, extractiveness, E),
-    narrative_ontology:constraint_metric(no_cloning_theorem, suppression_requirement, S),
-    E =< MaxE,
-    S =< MaxS.
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(no_cloning_theorem, ExtMetricName, E),
+    domain_priors:suppression_score(no_cloning_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_law_profile_present) :-
-    % Verify the required Natural Law profile metrics are declared.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(no_cloning_theorem),
     narrative_ontology:constraint_metric(no_cloning_theorem, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(no_cloning_theorem, resistance, R),
-    AC > 0.85,
-    R < 0.15.
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(no_cloning_theorem_tests).
 
@@ -186,92 +167,89 @@ test(natural_law_profile_present) :-
 
 /**
  * LOGIC RATIONALE:
- *   The no-cloning theorem is a direct mathematical consequence of the linearity
- *   of quantum mechanics. As such, it is modeled as a uniform-type Mountain
- *   constraint. The base extractiveness (0.05) and suppression (0.02) are set
- *   to minimal values, reflecting that it is a non-coercive, structural feature
- *   of reality, not a system designed for extraction. The key insight is that
- *   while its *impacts* are felt differently by engineers (a cost) and
- *   cryptographers (a benefit), the underlying constraint itself is invariant.
+ *   Extractiveness (0.08): Minimal. The no-cloning theorem is not a mechanism of extraction — no agent extracts value by preventing cloning, and no agent is victimized by the restriction. The low extractiveness reflects that this is a natural law constraint, not a relationship between agents. The value is above zero only to account for the trivial fact that resource expenditure on failed cloning attempts is technically wasted effort. Suppression (0.02): Minimal. There are no alternatives to suppress — the constraint is not suppressing competing technologies but simply reflecting the structure of quantum mechanics. Theater ratio (0.15): Very low. The no-cloning theorem requires no performative enforcement or institutional maintenance. Its truth is proven mathematically and verified experimentally. The minimal theater reflects occasional educational exposition and review talks, but these are explanatory rather than coercive.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap in the formal classification; all agents face
- *   a Mountain. The "gap" is in the narrative interpretation of that Mountain's
- *   impact. For a cryptographer, the Mountain is a useful barrier that protects
- *   their valley. For a hardware engineer, it is an obstacle they must build
- *   around.
+ *   There is no meaningful perspectival gap. All three perspectives classify the no-cloning theorem identically as a mountain. The theorem's truth does not depend on the observer's position, resources, or institutional affiliation. A quantum system cannot be cloned regardless of whether the observer is powerless, institutional, or analytical. This perspectival unanimity is the signature of a genuine natural law constraint.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain constraint, beneficiary/victim declarations are not
- *   applicable to its core structure. The directionality `d` is derived from
- *   the canonical power atom values, but because ε is so low, the resulting
- *   effective extraction χ is always near zero, ensuring a Mountain
- *   classification from all perspectives.
+ *   Mountain constraints do not have directionality in the conventional sense. All agents experience the no-cloning theorem identically — as an immutable natural law. Deriving d would be meaningless; the constraint does not operate through extraction asymmetry. Power atoms (powerless, institutional, analytical) all see the same classification because the constraint is not about power relationships but about the mathematical structure of quantum mechanics. Exit options are universally 'analytical' — the only response to a natural law is to understand and work within it.
  *
  * MANDATROPHY ANALYSIS:
- *   Modeling this as a Mountain prevents misinterpreting its negative
- *   engineering consequences as a Snare. A Snare is a contingent, coercive
- *   system with high extraction and suppression. The no-cloning theorem has
- *   neither; it is a fundamental limit. This distinction is critical for
- *   separating problems of physics from problems of policy.
+ *   The no-cloning theorem resolves the mandatrophy trivially by exhibiting perfect unanimity across all perspectives. All observers agree it is a mountain. This is the expected behavior for a true natural law: there is no contradiction between perceiving pure coordination (Rope) and seeing pure extraction (Snare) because the constraint is neither. The mandatrophy does not arise. The theorem's mountain status is not ambiguous and does not require resolution analysis.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
 omega_variable(
-    omega_no_cloning_theorem,
-    'At what scale of system complexity does the no-cloning limit effectively vanish into classical copyability?',
-    'Experimental mapping of the quantum-to-classical transition across different decoherence models.',
-    'If the transition is sharp and at a low scale, quantum limits are a pervasive Mountain. If it is gradual and at a high scale, they are a local feature of microscopic systems.',
-    confidence_without_resolution(medium)
+    classical_limit_distinction,
+    'Does the no-cloning theorem remain a mountain when restricted to classically-accessible information extraction from quantum systems?',
+    'Analysis of whether classical information can be reliably extracted and copied from quantum states without violating the theorem''s constraints. Examination of classical shadow tomography and weak measurement protocols.',
+    'If classical information copying is unrestricted: no_cloning_theorem might decompose into two constraints — one for full quantum state (mountain) and one for classical information (rope). If classical copying is also fundamentally constrained: the mountain claim is reinforced.',
+    confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_no_cloning_theorem, empirical, 'Determining the effective scale of the quantum-to-classical transition for information cloning.').
+narrative_ontology:omega_variable(classical_limit_distinction, empirical, 'Whether no-cloning applies to classical information extraction from quantum systems').
+
+omega_variable(
+    approximate_cloning_boundary,
+    'At what fidelity threshold does approximate quantum state copying transition from technologically difficult to fundamentally impossible?',
+    'Empirical characterization of optimal cloning fidelity limits via quantum tomography. Theoretical bounds from no-cloning derivations applied to approximate copying scenarios.',
+    'If sharp boundary exists: reinforces mountain classification. If boundary is diffuse: suggests partial relaxation toward rope for approximate copying scenarios.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(approximate_cloning_boundary, empirical, 'Boundary between technologically difficult and fundamentally impossible cloning fidelity').
+
+omega_variable(
+    entanglement_assisted_loopholes,
+    'Do shared entangled states, pre-existing correlations, or superdense coding protocols enable violations of the no-cloning theorem through indirect mechanisms?',
+    'Rigorous proof that all proposed circumventions (via entanglement, post-selection, or auxiliary resources) are either false violations or equivalent to standard quantum mechanics without achieving true cloning.',
+    'If loopholes exist: no_cloning_theorem might downgrade to rope (requires specific resource availability) or tangled_rope (entanglement-dependent extraction). If no loopholes: mountain classification confirmed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(entanglement_assisted_loopholes, empirical, 'Whether entanglement or auxiliary resources enable no-cloning violations').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(no_cloning_theorem, 0, 10).
+narrative_ontology:interval(no_cloning_theorem, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% As a law of physics, the constraint's properties are time-invariant.
-% These measurements reflect that stability.
-%
-% Theater ratio over time:
-narrative_ontology:measurement(nct_tr_t0, no_cloning_theorem, theater_ratio, 0, 0.01).
-narrative_ontology:measurement(nct_tr_t5, no_cloning_theorem, theater_ratio, 5, 0.01).
-narrative_ontology:measurement(nct_tr_t10, no_cloning_theorem, theater_ratio, 10, 0.01).
+% Theater ratio over time
+narrative_ontology:measurement(noclone_tr_t0, no_cloning_theorem, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(noclone_tr_t25, no_cloning_theorem, theater_ratio, 25, 0.14).
+narrative_ontology:measurement(noclone_tr_t50, no_cloning_theorem, theater_ratio, 50, 0.15).
 
-% Extraction over time:
-narrative_ontology:measurement(nct_ex_t0, no_cloning_theorem, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(nct_ex_t5, no_cloning_theorem, base_extractiveness, 5, 0.05).
-narrative_ontology:measurement(nct_ex_t10, no_cloning_theorem, base_extractiveness, 10, 0.05).
+% Extraction over time
+narrative_ontology:measurement(noclone_be_t0, no_cloning_theorem, base_extractiveness, 0, 0.07).
+narrative_ontology:measurement(noclone_be_t25, no_cloning_theorem, base_extractiveness, 25, 0.08).
+narrative_ontology:measurement(noclone_be_t50, no_cloning_theorem, base_extractiveness, 50, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Network relationships (structural influence edges)
-% The no-cloning theorem is a consequence of the broader principles of quantum
-% mechanics, such as the uncertainty principle which limits simultaneous
-% knowledge of conjugate variables, a prerequisite for any cloning process.
-narrative_ontology:affects_constraint(heisenberg_uncertainty_principle, no_cloning_theorem).
+narrative_ontology:coordination_type(no_cloning_theorem, information_standard).
+narrative_ontology:affects_constraint(no_cloning_theorem, quantum_teleportation).
+narrative_ontology:affects_constraint(no_cloning_theorem, quantum_key_distribution_security).
+narrative_ontology:affects_constraint(no_cloning_theorem, quantum_measurement_problem).
+
+% DUAL FORMULATION NOTE:
+% The no-cloning theorem is a foundational constraint in quantum information theory. Related constraints include quantum teleportation (which uses entanglement to achieve state transfer without cloning), quantum key distribution (which depends on no-cloning for security), and the quantum measurement problem (which involves state projection, a related but distinct constraint). These form a constraint family in quantum mechanics with different ε values reflecting their distinct structural properties.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary. The constraint is a uniform-type Mountain, and
-% the canonical derivation of directionality is sufficient.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

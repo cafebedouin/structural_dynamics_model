@@ -1,10 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: po_investigation_protocol_bias
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
-% Source: https://www.bbc.com/news/articles/cvgpd1x00exo
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_po_investigation_protocol_bias, []).
@@ -32,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -41,6 +42,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -52,21 +55,36 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: po_investigation_protocol_bias
  *   human_readable: Post Office Investigation Protocol Bias (Presumption of Guilt)
- *   domain: legal / institutional
+ *   domain: legal/institutional
  *
  * SUMMARY:
- *   A procedural constraint within the UK Post Office that directed internal
- *   investigators to presume guilt and find evidence of a crime in cases of
- *   financial shortfalls, rather than conducting an impartial inquiry. This
- *   protocol served to protect the faulty Horizon IT system by systematically
- *   blaming sub-postmasters, suppressing evidence of system flaws, and
- *   coercively recovering phantom debts.
+ *   The Post Office investigation protocol bias represents a structural
+ *   constraint in which an institutional process — investigation of financial
+ *   shortfalls at subpostmaster-operated branches — was deliberately designed
+ *   or negligently operated to presume guilt and extract evidence of criminal
+ *   conduct rather than conduct impartial inquiry. The Horizon IT system
+ *   failures created real financial discrepancies at branch level. Rather
+ *   than investigate the system, Post Office leadership and investigators
+ *   directed the protocol toward finding evidence of subpostmaster theft.
+ *   This constraint exhibits the classical snare structure: asymmetric
+ *   suppression of alternatives (investigators cannot propose system failure
+ *   as the cause), high coercion (criminal prosecution), extraction
+ *   benefiting institutional leadership while devastating targeted
+ *   subpostmasters. The constraint operated across approximately 20 years
+ *   (1999-2019), generating hundreds of false convictions before external
+ *   judicial review exposed the institutional bias. The constraint's theater
+ *   ratio (0.65) reflects that investigations performed the rituals of
+ *   impartial inquiry (interviews, evidence gathering, written findings)
+ *   while the protocol itself predetermined the conclusions — the form of due
+ *   process masked the substance of presumed guilt.
  *
- * KEY AGENTS (by structural relationship):
- *   - sub_postmasters: Primary target (powerless/trapped) — bore the full financial and legal extraction.
- *   - post_office_legal_and_management: Primary beneficiary (institutional/arbitrage) — benefited by externalizing IT system liability and maintaining institutional authority.
- *   - internal_investigators: Secondary victim/enforcer (organized/constrained) — were subject to "improper pressure" to build criminal cases rather than find facts.
- *   - public_inquiry: Analytical observer — sees the full structure of coercion and coordination failure.
+ * KEY AGENTS:
+ *   - Subpostmasters: Primary victims (powerless/trapped) — face criminal prosecution, asset seizure, reputational destruction, and imprisonment based on investigations designed to find guilt regardless of innocence
+ *   - Post Office Leadership: Primary beneficiary (institutional/arbitrage) — deflects liability for Horizon system failures onto employees; avoids systemic IT investigation and responsibility; extracts from institutional legitimacy reserves
+ *   - Post Office Investigators: Institutional actor (organized/constrained) — constrained by protocol directives; career-dependent on compliance; both benefit (employment security) and suffer (complicity in false investigations)
+ *   - Defense Counsel: Moderate actor (moderate/constrained) — asymmetrically disadvantaged by evidence control and withheld disclosure; no exit from institutional power imbalance
+ *   - Judicial System: Abstract victim (powerless/trapped) — poisoned by false convictions; delegitimized by institutional bias; no effective mechanism to self-correct while protocol remains hidden
+ *   - External Observers: Analytical position (analytical/analytical) — reveal the constraint through longitudinal investigation and appeal hearings
  */
 
 /* ==========================================================================
@@ -74,95 +92,72 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(po_investigation_protocol_bias, 0.55).
-domain_priors:suppression_score(po_investigation_protocol_bias, 0.85).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(po_investigation_protocol_bias, 0.40).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(po_investigation_protocol_bias, 0.68).
+domain_priors:suppression_score(po_investigation_protocol_bias, 0.75).
+domain_priors:theater_ratio(po_investigation_protocol_bias, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(po_investigation_protocol_bias, extractiveness, 0.55).
-narrative_ontology:constraint_metric(po_investigation_protocol_bias, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(po_investigation_protocol_bias, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(po_investigation_protocol_bias, extractiveness, 0.68).
+narrative_ontology:constraint_metric(po_investigation_protocol_bias, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(po_investigation_protocol_bias, theater_ratio, 0.65).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(po_investigation_protocol_bias, tangled_rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(po_investigation_protocol_bias, snare).
 narrative_ontology:human_readable(po_investigation_protocol_bias, "Post Office Investigation Protocol Bias (Presumption of Guilt)").
-narrative_ontology:topic_domain(po_investigation_protocol_bias, "legal / institutional").
+narrative_ontology:topic_domain(po_investigation_protocol_bias, "legal/institutional").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(po_investigation_protocol_bias). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(po_investigation_protocol_bias).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(po_investigation_protocol_bias, post_office_legal_and_management).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(po_investigation_protocol_bias, sub_postmasters).
-narrative_ontology:constraint_victim(po_investigation_protocol_bias, internal_investigators).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
-%   Snare:        victim required -> MET
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(po_investigation_protocol_bias, post_office_leadership).
+narrative_ontology:constraint_victim(po_investigation_protocol_bias, subpostmasters).
+narrative_ontology:constraint_victim(po_investigation_protocol_bias, judicial_system_integrity).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUB-POSTMASTERS (PRIMARY TARGET)
-% They experience overwhelming coercive force with no recourse or alternatives,
-% making the protocol a pure Snare.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-% Calculated χ = 0.55 * 1.42 * 1.0 = 0.781 (Snare, as χ >= 0.66)
-constraint_indexing:constraint_classification(po_investigation_protocol_bias, tangled_rope,
+% PERSPECTIVE 1: ACCUSED SUBPOSTMASTER (SNARE) — Trapped in an institutional process designed to extract guilt regardless of innocence. No meaningful exit: refusing cooperation worsens the case; cooperation feeds predetermined conclusions. Experiences maximum extraction through legal liability, asset seizure, criminal conviction, and reputational destruction. The protocol itself guarantees victims by design.
+constraint_indexing:constraint_classification(po_investigation_protocol_bias, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: POST OFFICE LEGAL & MANAGEMENT (PRIMARY BENEFICIARY)
-% From their perspective, the protocol is a tool for coordination and financial
-% control, shielding them from liability. The extraction is externalized.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-% Calculated χ = 0.55 * -0.12 * 1.0 = -0.066 (Rope, as χ <= 0.35)
+% PERSPECTIVE 2: JUDICIAL SYSTEM INTEGRITY (SNARE) — The abstract collective good of impartial fact-finding cannot defend itself or exit the protocol bias. Poisoned by false convictions. Extraction manifests as institutional delegitimacy and erosion of due process. This perspective reveals the constraint as a violation of fundamental legal norms, not merely a procedural error.
+constraint_indexing:constraint_classification(po_investigation_protocol_bias, snare,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: POST OFFICE LEADERSHIP (ROPE) — Experiences the protocol as a coordination mechanism: manufacturing evidence of employee crime resolves financial shortfalls without examining systemic IT failures or management responsibility. Leadership benefits from deflection (extracting liability from themselves to subpostmasters) while perceiving the protocol as solving an organizational problem. Net beneficiary with high exit optionality — can modify protocol, suppress evidence, resist scrutiny.
 constraint_indexing:constraint_classification(po_investigation_protocol_bias, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (PUBLIC INQUIRY)
-% The observer sees both the stated coordination function (financial integrity)
-% and the actual extractive function, identifying a Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-% Calculated χ = 0.55 * 1.15 * 1.2 = 0.759 (Tangled Rope, as 0.40 <= χ <= 0.90)
-constraint_indexing:constraint_classification(po_investigation_protocol_bias, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: INTERNAL INVESTIGATORS (INTER-INSTITUTIONAL)
-% As both enforcers and victims of "improper pressure," they are trapped in
-% the middle. Their exit is constrained. They see the stated goal but also the
-% coercive extraction they are forced to implement.
-% Engine derives d from: victim + constrained exit + organized power -> d ≈ 0.75 -> f(d) ≈ 1.18
-% Calculated χ = 0.55 * 1.18 * 1.0 = 0.649 (Tangled Rope)
+% PERSPECTIVE 4: POST OFFICE INVESTIGATORS (TANGLED ROPE) — Trapped between protocol directives (find guilt) and professional duty (impartial investigation). Organized actors but constrained by career risk: deviating from the presumption-of-guilt protocol risks retaliation. Benefit from career advancement and job security for complying; bear psychological cost of conducting knowingly false investigations. Neither pure snare nor pure rope — extracted from by institutional pressure while also benefiting from employment stability.
 constraint_indexing:constraint_classification(po_investigation_protocol_bias, tangled_rope,
     context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: DEFENSE COUNSEL (TANGLED ROPE) — Constrained by asymmetric information: Post Office withholds evidence, controls witness access, conducts closed investigations. Benefits from cases (legal fees) but also bears cost of futility — no exit from the institutional imbalance. Moderate power with constrained options. Sees both coordination function (legal representation framework) and extraction (evidentiary disadvantage).
+constraint_indexing:constraint_classification(po_investigation_protocol_bias, tangled_rope,
+    context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(national))).
 
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — At the civilizational/universal level, some inherent tension exists between institutional self-interest and impartial investigation: large organizations always have incentive to blame subordinates rather than examine systemic failure. This perspective risks naturalizing what is actually a contingent institutional choice — the presumption-of-guilt protocol is not inherent to investigation, but rather a deliberate design. The mountain classification is a false summit.
+constraint_indexing:constraint_classification(po_investigation_protocol_bias, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -170,19 +165,14 @@ constraint_indexing:constraint_classification(po_investigation_protocol_bias, ta
 
 :- begin_tests(po_investigation_protocol_bias_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    constraint_indexing:constraint_classification(po_investigation_protocol_bias, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(po_investigation_protocol_bias, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(po_investigation_protocol_bias, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(po_investigation_protocol_bias, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_claim_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(po_investigation_protocol_bias, snare, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_structural_gates_met) :-
-    domain_priors:base_extractiveness(po_investigation_protocol_bias, E), E >= 0.30,
-    domain_priors:suppression_score(po_investigation_protocol_bias, S), S >= 0.40,
-    domain_priors:requires_active_enforcement(po_investigation_protocol_bias),
-    narrative_ontology:constraint_beneficiary(po_investigation_protocol_bias, _),
-    narrative_ontology:constraint_victim(po_investigation_protocol_bias, _).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(po_investigation_protocol_bias, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(po_investigation_protocol_bias_tests).
 
@@ -192,17 +182,16 @@ test(tangled_rope_structural_gates_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): The protocol was highly effective at extracting funds and false confessions from sub-postmasters to cover Horizon's shortfalls. It's not higher because it wasn't perfectly efficient; some sub-postmasters resisted, and eventually the system broke.
- *   - Suppression Score (0.85): Extremely high. Sub-postmasters were contractually bound, faced a monolithic institution that refused to acknowledge IT flaws, and were told they were "the only one." Legal and procedural alternatives were effectively non-existent for individuals.
+ *   Extractiveness (0.68): High. The protocol directly extracts criminal liability (imprisonment), asset liability (financial penalties and restitution), and reputational harm from accused subpostmasters to benefit Post Office leadership by deflecting blame. The extraction is quantifiable: 739+ convictions, hundreds of asset seizures, documented business failures, and psychological/health impacts. Not maximal (0.70+) because the extraction required victims to cooperate with investigations (creating some agency, however constrained) and because external judicial review eventually exposed the mechanism. The extractiveness increased over the interval as the protocol matured and evidence suppression became more systematic. Suppression (0.75): High. Massive barriers to alternative explanations: investigations closed after guilt-confirming findings; exculpatory evidence (Horizon system failure documentation) was withheld or deprioritized; victims had no access to technical evidence; Post Office controlled all internal investigation processes; external oversight was absent for years. Career penalties for investigators who proposed system failure explanations. Minimal formal appeals process. Theater ratio (0.65): Moderate-high. The investigative process performed the rituals of due process — formal interviews, evidence gathering, written findings, legal representation — but these procedures masked a predetermined conclusion. The theater increased over time as the protocol became more established and investigators developed more sophisticated evidence-finding techniques while remaining constrained by the presumption-of-guilt directive.
  *
  * PERSPECTIVAL GAP:
- *   The gap between Snare and Rope is profound. For sub-postmasters (powerless, trapped), the protocol was an inescapable trap designed for extraction. For Post Office management (institutional, arbitrage), it was a business tool for enforcing accountability and protecting the institution's primary assets and reputation, with all costs externalized onto the targets.
+ *   Subpostmasters see snare; investigators see tangled rope (complicity + constraint); Post Office leadership sees rope (coordination mechanism); judicial system sees institutional poisoning; analytical observer sees either false mountain (natural institutional conflict) or the actual snare (deliberate/negligent design). The gap reveals how institutional procedures can appear as legitimate process to beneficiaries while operating as pure extraction to victims.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is derived from the clear structural relationships. `post_office_legal_and_management` are beneficiaries as they designed and deployed the constraint to shield the institution from liability. `sub_postmasters` are the primary victims, bearing all costs. Critically, `internal_investigators` are also modeled as victims due to the "improper pressure" that coerced them into an unethical enforcement role, corrupting their professional function. This is reflected in their `constrained` exit options.
+ *   Directionality values are derived from the structural relationship of each agent to the extraction flow. Subpostmasters: victims + trapped → d ≈ 0.95 → f(d) ≈ 1.42, producing maximum experienced extraction. Post Office leadership: beneficiaries + arbitrage → d ≈ 0.05 → f(d) ≈ -0.12, producing negative experienced extraction (they benefit). Investigators: constrained exit + protocol-directed → d ≈ 0.50-0.60 → f(d) ≈ 0.65-0.85, tangled position. Defense counsel: moderate power + constrained options + asymmetric information → d ≈ 0.65 → f(d) ≈ 1.00, moderate extraction. The protocol itself is the mechanism that locks these directionality values in place by controlling what investigations can conclude. No override needed — the structural data directly generates the observed perspectival gap.
  *
  * MANDATROPHY ANALYSIS:
- *   This is a canonical case of mandatrophy. A legitimate mandate (ensuring financial integrity) was corrupted into a purely extractive function to protect a failed IT system (Horizon). The 'Tangled Rope' classification is crucial because it correctly captures both the claimed coordination function and the overwhelmingly dominant asymmetric extraction. It avoids mislabeling the system as a pure Snare (which would ignore the institutional pretext) or a Rope (which would ignore the devastating, coercive harm). The "Dynamic Coalition" effect is also evident historically: individual sub-postmasters were powerless, but once they organized (e.g., via Alan Bates), their effective power shifted to `organized`, enabling them to challenge and ultimately break the constraint.
+ *   This constraint resolves the mandatrophy by showing that snare classification is not victim bias — it is structural inevitability when a protocol is designed to presume guilt. The protocol does not merely fail to provide due process; it actively prevents due process by suppressing alternative explanations. The tangled rope perspectives (investigators, defense counsel) are real but secondary — they derive from the constraint's operation, not from ambiguity about whether the constraint is extraction or coordination. The underlying constraint is snare; the secondary effects on investigators and counsel are tangled. The false mountain perspective (natural institutional conflict) is exposed as naturalization: presumption of guilt is not inherent to investigation; impartial investigation is the institutional norm (UK procedure code, legal principle). The protocol deliberately inverted this norm, making the snare classification certain rather than perspectival.
  */
 
 /* ==========================================================================
@@ -210,72 +199,74 @@ test(tangled_rope_structural_gates_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_po_bias_intent,
-    'Was the investigative protocol designed with malicious extractive intent from inception, or did it degrade from a flawed coordination mechanism into an extractive one under institutional pressure to conceal Horizon''s failings?',
-    'Unredacted minutes and internal communications from the protocol''s design phase (c. 1999-2001).',
-    'If malicious from inception, the initial ε was high (Snare-like). If it degraded, the initial ε was lower (Rope-like), indicating a process of institutional decay (mandatrophy).',
+    protocol_design_intentionality,
+    'Was the presumption-of-guilt protocol a deliberate design choice to manufacture guilt findings, or an incidental consequence of cost-cutting investigation procedures?',
+    'Documentary evidence: internal memos, training materials, policy justifications; testimony from protocol architects; comparative analysis with UK standard investigative procedures for financial misconduct',
+    'If deliberate: snare classification is certain (intentional extraction design). If incidental: classification may shift to tangled_rope (unintended harm alongside legitimate investigation function).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(protocol_design_intentionality, empirical, 'Whether presumption-of-guilt protocol was deliberate institutional design').
+
+omega_variable(
+    evidence_suppression_mechanism,
+    'To what extent was exculpatory evidence systematically withheld vs. merely inadequately investigated?',
+    'Forensic document review: discovery orders, FOIA requests, trial record analysis; comparison of available evidence to evidence Post Office claimed existed; expert assessment of when IT system failures should have been obvious to investigators',
+    'If systematic withholding: snare classification with high suppression gate locked. If inadequate investigation: snare still holds but suppression value may decrease (shift from 0.75 to 0.60-0.65), making some perspectives tangled_rope instead.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(evidence_suppression_mechanism, empirical, 'Whether evidence suppression was systematic or incidental').
+
+omega_variable(
+    institutional_knowledge_of_horizon,
+    'When did Post Office leadership have reasonable knowledge that Horizon IT system failures (not subpostmaster theft) were the primary cause of shortfalls, and how did this knowledge affect the protocol?',
+    'Timeline of IT system failure reports, internal audits, and litigation; cross-reference with protocol modifications; testimony regarding what information was communicated to investigators and executives',
+    'If knowledge existed but was suppressed: confirms deliberate snare design. If knowledge genuinely didn''t exist: mitigates snare classification toward tangled_rope (victims of systemic misunderstanding rather than institutional extraction).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(institutional_knowledge_of_horizon, empirical, 'Timing of Post Office knowledge of system failures vs. protocol design').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% The main period of prosecutions ran for roughly 15 years.
-narrative_ontology:interval(po_investigation_protocol_bias, 0, 10).
+narrative_ontology:interval(po_investigation_protocol_bias, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data shows the constraint intensifying over time as the Post
-% Office doubled down on its strategy of prosecution to conceal IT flaws.
-% Base_extractiveness is > 0.46, so this section is required.
+% Theater ratio over time
+narrative_ontology:measurement(poinv_tr_t0, po_investigation_protocol_bias, theater_ratio, 0, 0.5).
+narrative_ontology:measurement(poinv_tr_t10, po_investigation_protocol_bias, theater_ratio, 10, 0.65).
+narrative_ontology:measurement(poinv_tr_t20, po_investigation_protocol_bias, theater_ratio, 20, 0.65).
 
-% Theater ratio over time: Investigations became less about fact-finding and more
-% about performative enforcement to maintain the institutional narrative.
-narrative_ontology:measurement(po_bias_tr_t0, po_investigation_protocol_bias, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(po_bias_tr_t5, po_investigation_protocol_bias, theater_ratio, 5, 0.30).
-narrative_ontology:measurement(po_bias_tr_t10, po_investigation_protocol_bias, theater_ratio, 10, 0.40).
+% Extraction over time
+narrative_ontology:measurement(poinv_be_t0, po_investigation_protocol_bias, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(poinv_be_t10, po_investigation_protocol_bias, base_extractiveness, 10, 0.68).
+narrative_ontology:measurement(poinv_be_t20, po_investigation_protocol_bias, base_extractiveness, 20, 0.68).
 
-% Extraction over time: The process became more ruthlessly extractive as the
-% scale of the underlying problem grew.
-narrative_ontology:measurement(po_bias_ex_t0, po_investigation_protocol_bias, base_extractiveness, 0, 0.20).
-narrative_ontology:measurement(po_bias_ex_t5, po_investigation_protocol_bias, base_extractiveness, 5, 0.60).
-narrative_ontology:measurement(po_bias_ex_t10, po_investigation_protocol_bias, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: Its claimed function was as an enforcement mechanism for
-% financial accountability.
 narrative_ontology:coordination_type(po_investigation_protocol_bias, enforcement_mechanism).
+narrative_ontology:affects_constraint(po_investigation_protocol_bias, uk_judicial_review_delays).
+narrative_ontology:affects_constraint(po_investigation_protocol_bias, institutional_evidence_disclosure_asymmetry).
+narrative_ontology:affects_constraint(po_investigation_protocol_bias, criminal_conviction_reversal_friction).
 
-% Network relationships: This biased protocol was a direct consequence of the
-% upstream failure of the Horizon IT system. The institution created this
-% constraint to manage the fallout from the other one.
-narrative_ontology:affects_constraint(horizon_it_system_flaws, po_investigation_protocol_bias).
-
-% --- Network Decomposition (Constraint Families) ---
 % DUAL FORMULATION NOTE:
-% This constraint (the biased protocol) is a downstream effect of the
-% technological constraint posed by the faulty Horizon IT system.
-% Decomposed because they have different structures and ε values.
-% Related stories:
-%   - horizon_it_system_flaws (ε=~0.80, Snare from user perspective)
-%
-% This decomposition follows the ε-invariance principle: the IT system's flaws
-% and the human protocol designed to conceal them are distinct constraints.
+% The Post Office investigation protocol bias is upstream of multiple constraint failures: judicial review delays (external mechanism cannot correct institutional bias quickly), evidence disclosure asymmetry (structural advantage retained by investigating institution), and conviction reversal friction (appeals process inadequate to systematic false convictions). Each downstream constraint has its own extractiveness but is causally dependent on the bias in this protocol.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The structural derivation
-% from beneficiary/victim declarations combined with exit options (trapped,
-% arbitrage, constrained) accurately models the power dynamics and produces
-% the correct perspectival gaps.
+constraint_indexing:directionality_override(po_investigation_protocol_bias, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

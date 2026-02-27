@@ -2,26 +2,26 @@
   "header": {
     "constraint_id": "boe_base_rate_policy_2024",
     "version": "1.0",
-    "generated_date": "2024-05-21",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "boe_rate"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.8,
-    "theater_ratio": 0.3,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "Bank of England's 5.25% Base Interest Rate Policy (2024)",
-    "topic_domain": "economic",
+    "topic_domain": "economic/monetary_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "savers",
-      "commercial_banks",
-      "fixed_income_investors"
+      "savers_fixed_income_holders",
+      "financial_institutions"
     ],
     "victims": [
-      "mortgage_holders",
-      "small_business_borrowers",
-      "the_uk_treasury"
+      "mortgage_borrowers",
+      "business_debt_holders",
+      "young_first_time_buyers"
     ]
   },
   "perspectives": [
@@ -31,123 +31,180 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Mortgage Holder",
-      "comment": "PERSPECTIVE 1: MORTGAGE HOLDER (SNARE) — Faces sharply increased monthly payments with no ability to exit their mortgage or influence the rate. The policy acts as a direct, coercive extraction of disposable income. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+      "label": "The Mortgage Borrower",
+      "comment": "PERSPECTIVE 1: MORTGAGE BORROWER (SNARE) \u2014 Trapped in high-cost debt with no exit. Monthly payments rise sharply; refinancing is not available at previous rates. Cannot reduce exposure to the constraint. Bears maximum extraction cost with zero alternatives."
     },
     {
-      "classification_type": "rope",
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The First-Time Buyer",
+      "comment": "PERSPECTIVE 2: FIRST-TIME BUYER (SNARE) \u2014 Structurally excluded from housing market by high borrowing costs. Cannot acquire property; cannot exit the rental market. Generational impact \u2014 cohort loses wealth-building window. Pure extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Saver",
-      "comment": "PERSPECTIVE 2: SAVER (ROPE) — Benefits from higher returns on cash deposits. Perceives the policy as a functional coordination mechanism that correctly prices capital and rewards saving. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.005. Negative effective extraction indicates a net beneficiary."
+      "label": "The Small Business Owner",
+      "comment": "PERSPECTIVE 3: SMALL BUSINESS OWNER (TANGLED ROPE) \u2014 Faces higher borrowing costs for expansion (extraction), but also benefits from coordinated price stability and reduced inflation risk (coordination). Constrained exit \u2014 some can reduce leverage, but most cannot exit the constraint entirely. Mixed experience: some gain from inflation control, others bear costs of contraction."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Bank of England MPC",
-      "comment": "PERSPECTIVE 3: BANK OF ENGLAND (ROPE) — The institution setting the rate views it as its primary tool for macroeconomic coordination, fulfilling its mandate to control inflation. The extractive effects are seen as necessary, temporary side-effects of a legitimate policy. As the primary beneficiary of its own mandate, d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07."
+      "spatial_scope": "global",
+      "label": "The Financial Institution",
+      "comment": "PERSPECTIVE 4: FINANCIAL INSTITUTION (ROPE) \u2014 Enjoys margin expansion and deposit inflows. High base rate increases spread between borrowing and lending costs. Can arbitrage between UK and international rates. Net beneficiary experiencing the constraint as coordination mechanism for their funding environment."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fixed-Income Saver",
+      "comment": "PERSPECTIVE 5: FIXED-INCOME SAVER (ROPE) \u2014 Benefits from elevated savings rates and bond yields. Primary beneficiary of the policy. Coordination achieved between saver preferences and policy objective. Low suppression of exit options \u2014 can move capital to different instruments or geographies if rates fall."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The UK Government (Treasury)",
-      "comment": "PERSPECTIVE 4: UK GOVERNMENT (TANGLED ROPE) — Experiences the policy as a hybrid. It benefits from the inflation control (a coordination goal) but is also a primary victim via massively increased debt servicing costs, constraining its fiscal options. d≈0.70, f(d)≈1.05, σ=1.0 → χ≈0.58."
+      "label": "The Inflation Control Coalition",
+      "comment": "PERSPECTIVE 6: INFLATION CONTROL COALITION (SCAFFOLD) \u2014 Sees the high-rate regime as temporary, necessary transition mechanism with sunset: once inflation falls to 2% target, rates will normalize downward. Organized actors (central bank, government, businesses planning post-inflation recovery) experience the constraint as a coordinated effort with explicit endpoint. The sunset is publicly declared (policy target: inflation back to 2%). Theater reflects the ritual of monthly MPC meetings with predetermined messaging around inflation targets."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Global Capital Investor",
+      "comment": "PERSPECTIVE 7: GLOBAL CAPITAL INVESTOR (TANGLED ROPE) \u2014 Mobile across currency zones; can arbitrage UK rate advantage against alternatives. Benefits from higher UK yields (coordination coordination). Simultaneously faces extraction if sterling depreciates or capital controls emerge. Exit is mobile but not costless. Experiences mixed extraction and coordination at the global institutional level."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (inflation targeting) and the severe, asymmetric extraction from borrowers to savers. The high suppression (state monopoly) and active enforcement confirm the hybrid nature. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76. While χ is high enough for a Snare, the undeniable coordination function makes Tangled Rope the correct analytical classification."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a macroeconomic equilibrium perspective, the base rate is an immutable feature of modern capitalism: central banks must have a policy rate, and interest rate spreads are inherent to credit markets. No economy operates without some base rate regime. However, this naturalizes what is actually a contingent policy choice \u2014 the rate level (5.25% vs 2% vs 7%) is not a natural law, and monetary policy frameworks are institutional constructs subject to reform."
     }
   ],
   "omegas": [
     {
-      "id": "soft_landing_ambiguity",
-      "question": "Will the high interest rates successfully curb inflation without causing a severe, wealth-destroying recession (a 'soft landing')?",
-      "resolution_mechanism": "Future macroeconomic data on GDP, unemployment, and inflation over the 2024-2026 period.",
-      "impact": "If a soft landing is achieved, the policy's coordination function is validated, making it appear more like a Rope/Scaffold. If a deep recession occurs, the extractive damage dominates, making it appear more like a Snare.",
+      "id": "inflation_trajectory_uncertainty",
+      "question": "Will inflation decline to the 2% target within 18-24 months, validating the rate-hold strategy, or will stagflationary dynamics persist, requiring further tightening?",
+      "resolution_mechanism": "CPI tracking, wage growth analysis, and comparative international inflation data; evaluation of whether current rate levels are sufficient or excessive",
+      "impact": "If inflation falls on schedule: scaffold sunset logic confirmed, constraint transitions to temporary. If inflation persists: extraction component grows, constraint drifts toward snare from more perspectives.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the policy achieves a soft landing or triggers a deep recession"
+      "description": "Timeline and certainty of inflation return to 2% target"
     },
     {
-      "id": "transmission_lag_uncertainty",
-      "question": "What is the true lag time for monetary policy transmission, and has the MPC over-tightened by not waiting for previous hikes to take full effect?",
-      "resolution_mechanism": "Retrospective econometric analysis once sufficient time has passed (c. 2026-2027).",
-      "impact": "If the lag is longer than the MPC's model assumes, the policy is excessively extractive (Snare). If the lag is shorter, the policy is a more responsive and legitimate coordination tool (Rope).",
-      "confidence": "high",
+      "id": "mortgage_market_resilience",
+      "question": "What proportion of UK mortgages will become unsustainable if rates remain at 5.25% for >3 years, and will this trigger broader financial instability?",
+      "resolution_mechanism": "Household debt service ratio tracking, repossession and default rate analysis, stress tests on banking system exposure to residential mortgage portfolios",
+      "impact": "If <5% unsustainable: constraint remains tangled rope with manageable extraction. If >15% unsustainable: constraint becomes snare for critical demographic, potentially requiring policy reversal.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Uncertainty in the lag time of monetary policy's effect on the economy"
+      "description": "Household mortgage sustainability threshold at sustained 5.25% rate"
+    },
+    {
+      "id": "policy_transmission_effectiveness",
+      "question": "Is the 5.25% rate actually controlling inflation through demand suppression, or are other factors (supply-side relief, energy price decline) doing the work, making the rate hold unnecessary?",
+      "resolution_mechanism": "Empirical decomposition of inflation drivers; counterfactual analysis of inflation trajectory under alternative rate scenarios; international comparison with economies using different rate levels",
+      "impact": "If rate is essential: policy justified, constraint serves genuine coordination function. If rate is redundant: extraction is pursuing policy theater rather than genuine inflation control, shifting constraint toward piton or pure snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Causal contribution of base rate to inflation reduction"
+    },
+    {
+      "id": "distributional_intent_clarity",
+      "question": "Is the high-rate policy explicitly designed to redistribute from debtors to savers (intentional extraction), or is distributional impact incidental to inflation control (unintended byproduct)?",
+      "resolution_mechanism": "Analysis of MPC communications, policy statements, and internal deliberations; comparison with alternative policy designs (wage subsidy, targeted demand management) that achieve inflation control with lower distributional cost",
+      "impact": "If intentional: constraint becomes snare with active enforcement (asymmetric extraction). If incidental: constraint remains tangled rope with coordination justification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether distributional consequences are policy objective or incidental byproduct"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2021,
-      "value": 0.1
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2022,
-      "value": 0.3
+      "time_point": 6,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.55
+      "time_point": 12,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2021,
-      "value": 0.3
+      "time_point": 0,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2022,
-      "value": 0.3
+      "time_point": 6,
+      "value": 0.53
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.3
+      "time_point": 12,
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 2021,
-    "end": 2024
+    "start": 0,
+    "end": 12
   },
   "commentary": {
-    "narrative_context": "The Bank of England's policy of maintaining a 5.25% base interest rate is a textbook example of a macroeconomic constraint with a dual function. Its stated purpose is coordination: to reduce inflation towards a 2% target by increasing the cost of borrowing, thereby cooling economic demand. However, this mechanism operates through significant, asymmetric extraction, transferring wealth from borrowers (households with mortgages, businesses with loans) to savers and lenders. The constraint is enforced by the Bank's monopoly power over the UK's monetary system, leaving domestic actors with no alternative.",
+    "narrative_context": "The Bank of England's 5.25% base rate policy in 2024 exemplifies a tangled rope constraint: a hybrid coordination-extraction mechanism that solves a genuine inflation control problem while asymmetrically distributing costs and benefits. The MPC maintains rates at a 16-year high to suppress demand and bring inflation back to the 2% target. This achieves coordination benefit for savers, financial institutions, and those benefiting from price stability. Simultaneously, it extracts from mortgage borrowers, young first-time buyers, and small businesses through elevated debt service costs. The constraint exhibits all six classification types from different structural positions, revealing the indexical nature of how economic policy is experienced. The theater ratio (0.58) reflects that significant MPC communication is ritual performance \u2014 the monthly meeting cycle, forward guidance narratives, and consensus-building theater \u2014 rather than adaptive problem-solving. Yet the coordination component is genuine: controlling inflation does require some demand suppression, and the rate tool is a real (if blunt) mechanism. The constraint's extractiveness (0.52) has risen from 0.35 over 12 months as the accumulated debt burden and housing market impact accumulate. The suppression component (0.68) is high: borrowers cannot reduce their exposure, cannot exit the mortgage market, and cannot arbitrage their way out of rising costs.",
     "key_agents": [
-      "Bank of England (MPC): Institutional enforcer (institutional/arbitrage) — views the policy as a necessary coordination tool.",
-      "Mortgage Holders & Business Borrowers: Primary victims (powerless/trapped) — bear the direct cost of higher interest payments.",
-      "Savers & Lenders: Primary beneficiaries (moderate/mobile) — receive higher returns on capital.",
-      "The UK Government: A constrained institutional actor (institutional/constrained) — benefits from inflation control but is harmed by higher debt servicing costs.",
-      "Analytical Observer: Sees the full hybrid structure (analytical/analytical)."
+      "Mortgage Borrowers: Primary victims (powerless/trapped) \u2014 bear extraction through higher monthly payments with no exit option",
+      "First-Time Buyers: Primary victims (powerless/trapped) \u2014 generationally excluded from wealth-building through housing market; cannot arbitrage into international real estate markets efficiently",
+      "Small Business Owners: Secondary victims (moderate/constrained) \u2014 face higher borrowing costs but some can reduce leverage or pass costs to customers; constrained exit",
+      "Savers & Fixed-Income Holders: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from elevated deposit rates and bond yields; arbitrage into alternative instruments if UK rates decline",
+      "Financial Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture margin expansion and deposit inflows; can arbitrage globally across currency zones",
+      "Inflation Control Coalition: Organized actors (organized/constrained) \u2014 central bank, government, businesses planning post-inflation recovery; see constraint as temporary with public sunset",
+      "Global Capital Investors: Secondary beneficiaries (powerful/mobile) \u2014 arbitrage UK yield advantage; mobile across currency zones; constrained by sterling depreciation risk",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing monetary policy framework as inherent law rather than contingent institutional design"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55): High. The policy directly transfers a significant percentage of national income from one group (borrowers) to another (savers). Suppression (0.80): Very high. The Bank of England has a state-mandated monopoly on setting the base rate; there are no alternative systems for domestic economic actors. Theater Ratio (0.30): Low-to-moderate. While the announcements are ritualized, the policy's effects are direct and highly functional, not performative.",
-    "perspectival_gap": "The gap is stark. For a mortgage holder, the policy is a Snare, extracting hundreds or thousands of pounds monthly with no recourse. For a saver, it is a Rope, a sensible rule that rewards prudence. For the Bank of England, it is also a Rope, the correct tool for their mandate. The analytical view must hold both realities at once: the coordination function is real, but it is achieved via a mechanism of pure, coercive extraction. This is the definition of a Tangled Rope.",
-    "directionality_logic": "Directionality is derived directly from structural roles. Borrowers are victims with trapped exit, yielding a high 'd' value and a Snare classification. Savers are beneficiaries with mobile exit, yielding a low 'd' and a Rope classification. The Bank of England, as the institutional agent executing its own mandate, is a beneficiary with arbitrage exit, also seeing a Rope. The analytical observer's default 'd' value, combined with the high base extractiveness, correctly identifies the Tangled Rope structure.",
-    "mandatrophy_analysis": "This constraint is a classic case for resolving mandatrophy. A naive analysis might label the policy a 'Snare' based on its painful effects, ignoring the legitimate macroeconomic coordination goal. Conversely, accepting the official 'Rope' narrative ignores the massive, asymmetric wealth transfer. The Tangled Rope classification is essential as it correctly identifies that the constraint has *both* a genuine coordination function *and* a severe extractive component. It prevents the misclassification of necessary but painful policy as pure predation, and prevents the misclassification of extractive mechanisms as pure public good."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The base rate increase transfers wealth from borrowers to savers through the spread mechanism. Over 12 months, the accumulated impact on household debt service and business financing costs reaches 0.52, up from 0.35 at policy inception. The rise reflects that extraction is cumulative \u2014 compounding interest costs and mortgage payment shocks. Suppression (0.68): High. Mortgage borrowers and first-time buyers have zero exit options from the constraint \u2014 they cannot refinance at old rates, cannot move to alternative credit markets, and cannot escape UK inflation control without migration. Businesses have slightly more exit through deleveraging, but most cannot reduce borrowing below operational needs. Theater ratio (0.58): Moderate-high. The MPC's monthly meetings, forward guidance communications, and inflation-targeting narrative constitute theater \u2014 the public ritual of deliberation obscures that the policy is largely predetermined by the inflation trajectory. However, the policy is not pure theater (unlike a piton) because rate changes do materially affect the economy. The theater reflects the gap between the central bank's public positioning (careful, data-dependent, gradual) and the underlying structural constraint (inflation requires demand suppression regardless of implementation method). Claimed type (tangled_rope): The policy solves a genuine coordination problem (controlling inflation benefits everyone through price stability) while asymmetrically extracting from debtors. Enforcement is active \u2014 the MPC maintains rates through explicit policy decision against pressure to cut them faster. Beneficiaries are real (savers, financial institutions); victims are real (borrowers, young buyers).",
+    "perspectival_gap": "The constraint demonstrates how economic policy can be simultaneously experienced as coordination and extraction depending on structural position. From the beneficiary's view (institutional saver), the policy is pure rope \u2014 coordination that benefits them. From the victim's view (mortgage borrower), it is pure snare \u2014 extraction with no escape. From the analytical view, it risks appearing as natural law (immutable feature of capitalism) when it is actually a contingent policy choice. The perspectival gap is 6 types wide (mountain to snare), reflecting maximum structural differentiation. This is diagnostic: if all agents experienced the policy the same way, it would be a uniform-type constraint (mountain or rope). The fact that perspectives radically diverge suggests the policy has succeeded in what it intended (distributional effect) while creating structural tensions.",
+    "directionality_logic": "Directionality (d) is derived from each agent's power level, exit options, and beneficiary/victim status. Mortgage borrowers: powerless, trapped, victims \u2192 high d (0.90-0.95) \u2192 high f(d) (1.42) \u2192 maximum experienced extraction. First-time buyers: powerless, trapped, victims \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 maximum extraction. Small business owners: moderate power, constrained exit, partially victims \u2192 d \u2248 0.65 \u2192 f(d) \u2248 1.00 \u2192 moderate extraction. Savers/Financial institutions: institutional power, arbitrage exit, beneficiaries \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.01 \u2192 negative effective extraction (subsidy). Global investors: powerful, mobile exit, beneficiaries with caveats \u2192 d \u2248 0.48 \u2192 f(d) \u2248 0.60 \u2192 moderate positive extraction (benefits with friction). Inflation control coalition: organized, constrained, partially victims/partially beneficiaries \u2192 d \u2248 0.50 \u2192 f(d) \u2248 0.65 \u2192 balanced extraction-coordination. The scope modifier \u03c3(S) = 1.0 for national scope. Effective extraction \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) ranges from negative (beneficiaries) to 1.82 (powerless victims at maximum d and f(d)). The commentary does not compute these explicitly but they are implicit in the perspectival classifications.",
+    "mandatrophy_analysis": "TANGLED ROPE WITH EXTRACTIVE DRIFT: The constraint resolves mandatrophy by explicitly declaring both coordination function (inflation control) and asymmetric extraction (debt burden on borrowers). The MPC solves a genuine problem (inflation at 4-5%, target is 2%) through a mechanism that benefits savers and stabilizes prices. Simultaneously, it extracts from borrowers through higher debt service costs. Both are structural, both are measurable, neither is illusory. The theater ratio (0.58) prevents false classification as pure rope \u2014 the policy communication includes significant ritual (monthly meetings, forward guidance) that obscures the underlying constraint. The measurements show extractiveness rising from 0.35 to 0.52 over 12 months, reflecting accumulating burden on borrowers. The scaffold perspective (sunset when inflation returns to 2%) is analytically justified \u2014 the policy is explicitly temporary, with a public endpoint. However, the shadow omega (inflation may not fall within timeframe) leaves open the possibility that the constraint drifts toward snare (if high rates persist indefinitely). The analytical observer's mountain classification is identified as a false summit \u2014 monetary policy frameworks are institutional constructs, not laws of nature. The mandatrophy resolves through acknowledging the coordination-extraction hybrid as legitimate rather than trying to force it into a single pure type."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "uk_housing_market_affordability",
-      "small_business_solvency_rate"
-    ]
-  }
+      "uk_housing_market_access",
+      "business_investment_throttle",
+      "pension_fund_solvency_relief",
+      "inflation_expectation_anchoring"
+    ],
+    "dual_formulation_note": "The base rate policy can be decomposed into structural components: (1) inflation suppression mechanism (\u03b5 \u2248 0.05, Mountain) \u2014 reducing aggregate demand is an inherent feature of demand-side monetary policy; (2) distributional effect (\u03b5 \u2248 0.62, Snare) \u2014 wealth transfer from borrowers to savers; (3) coordination infrastructure (\u03b5 \u2248 0.15, Rope) \u2014 price stability enables market coordination. This story treats them as integrated, but the network acknowledges downstream constraints that isolate each component."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.93
+    }
+  ]
 }

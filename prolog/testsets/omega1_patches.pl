@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: omega1_patching_process
+% CONSTRAINT STORY: omega1_patches
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-08
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_omega1_patching_process, []).
+:- module(constraint_omega1_patches, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,24 +53,35 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: omega1_patching_process
+ *   constraint_id: omega1_patches
  *   human_readable: The Omega-1 Data Quality Patching Process
- *   domain: technological
+ *   domain: technological/knowledge_management
  *
  * SUMMARY:
- *   This constraint models the institutional process of auditing and patching
- *   under-specified constraints in a large knowledge base. While intended to
- *   improve system-wide data quality and resolve 'unknown' classifications,
- *   the process imposes a centralized, top-down correction that overrides
- *   original authorial intent. It functions as a coordination mechanism for
- *   maintaining system integrity, but also extracts interpretive authority
- *   from individual authors and centralizes it with the audit team.
+ *   The Omega-1 data quality patching process is the institutional mechanism
+ *   for identifying and resolving under-specified constraints in the
+ *   Deferential Realism knowledge base. Constraints may be published with
+ *   incomplete metrics, missing beneficiary/victim declarations, or ambiguous
+ *   structural data. The patching process audits these constraints,
+ *   prioritizes remediation, and iterates with constraint authors to reach
+ *   full specification compliance. This creates a structural tension: the
+ *   curation team benefits from prioritizing high-impact constraints and
+ *   deferring lower-priority work, while downstream researchers depend on
+ *   timely validation. The constraint exhibits all six types from different
+ *   perspectives, demonstrating how the same institutional mechanism can be
+ *   viewed as coordination, extraction, degraded theater, or natural law
+ *   depending on the observer's structural position. The theater ratio (0.61)
+ *   reflects that manual expert review now substantially duplicates checks
+ *   that automated validators can perform — the human-led audit persists
+ *   through institutional inertia rather than unique epistemic value.
  *
- * KEY AGENTS (by structural relationship):
- *   - original_story_authors: Primary target (powerless/constrained) — Their original data is programmatically overridden.
- *   - system_auditors: Primary beneficiary (institutional/arbitrage) — They achieve their goal of system-wide data consistency.
- *   - downstream_data_consumers: Secondary beneficiary (organized/mobile) — They benefit from higher-quality, more consistent data.
- *   - analytical_observer: Analytical observer — Sees the full structure of the patching process as a necessary but extractive intervention.
+ * KEY AGENTS:
+ *   - Downstream Researchers: Primary victims (powerless/trapped) — depend on completed constraint stories; trapped in patching queue with no alternatives
+ *   - Knowledge Base Integrity System: Secondary victim/coordinator (moderate/constrained) — benefits from improved data quality but bears resource cost of intensive patching labor
+ *   - Constraint Curation Team: Primary beneficiary (institutional/arbitrage) — controls prioritization, captures institutional credit, high exit optionality through portfolio management
+ *   - Automated Validation Pipeline: Organized alternative pathway (organized/constrained) — sees patching as temporary coordination problem with a sunset; building automation that will obsolete manual review
+ *   - Manual Review Ritual: Institutional performance (institutional/arbitrage) — the human-led audit process; increasingly performative as automation capability grows
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional choice (defer upstream validation) as inherent limit to knowledge base maintenance
  */
 
 /* ==========================================================================
@@ -78,103 +89,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(omega1_patching_process, 0.48).
-domain_priors:suppression_score(omega1_patching_process, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(omega1_patching_process, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(omega1_patches, 0.38).
+domain_priors:suppression_score(omega1_patches, 0.52).
+domain_priors:theater_ratio(omega1_patches, 0.61).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(omega1_patching_process, extractiveness, 0.48).
-narrative_ontology:constraint_metric(omega1_patching_process, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(omega1_patching_process, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(omega1_patches, extractiveness, 0.38).
+narrative_ontology:constraint_metric(omega1_patches, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(omega1_patches, theater_ratio, 0.61).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(omega1_patching_process, tangled_rope).
-narrative_ontology:human_readable(omega1_patching_process, "The Omega-1 Data Quality Patching Process").
-narrative_ontology:topic_domain(omega1_patching_process, "technological").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(omega1_patches, tangled_rope).
+narrative_ontology:human_readable(omega1_patches, "The Omega-1 Data Quality Patching Process").
+narrative_ontology:topic_domain(omega1_patches, "technological/knowledge_management").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(omega1_patching_process). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(omega1_patches).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(omega1_patching_process, system_auditors).
-narrative_ontology:constraint_beneficiary(omega1_patching_process, downstream_data_consumers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(omega1_patching_process, original_story_authors).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(omega1_patches, constraint_curation_team).
+narrative_ontology:constraint_beneficiary(omega1_patches, system_reliability_auditors).
+narrative_ontology:constraint_victim(omega1_patches, downstream_researchers).
+narrative_ontology:constraint_victim(omega1_patches, knowledge_base_completeness).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% The original story authors whose work is programmatically altered. Their
-% interpretive authority is extracted, and their original data is suppressed.
-% Engine derives d from: victim membership + constrained exit -> d ≈ 0.90 -> high χ
-constraint_indexing:constraint_classification(omega1_patching_process, tangled_rope,
+% PERSPECTIVE 1: DOWNSTREAM RESEARCHER (SNARE) — Cannot exit the patching backlog without abandoning constraint validation. Researchers depend on completed constraint stories for their work, but the patching queue is unpredictable and resource-constrained. They bear the full cost of incomplete metadata through delays and rework. No alternatives exist for obtaining validated constraint data at this scope and quality level.
+constraint_indexing:constraint_classification(omega1_patches, snare,
     context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: KNOWLEDGE BASE INTEGRITY SYSTEM (TANGLED ROPE) — Experiences both coordination benefit (patching improves overall data quality and system reliability) and extraction cost (patching labor is resource-intensive and diverts effort from new constraint discovery). Constrained exit because the integrity system cannot ignore incomplete specifications without cascade failures, but has some agency in prioritization.
+constraint_indexing:constraint_classification(omega1_patches, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: CONSTRAINT CURATION TEAM (ROPE) — Primary beneficiary with high exit optionality. Controls the patching process, prioritizes which constraints to audit, and captures institutional credit for identifying and fixing data quality issues. Experiences the constraint as pure coordination: patching resolves ambiguities that block downstream work. Benefits from the authority to declare constraints 'complete' and move to new discovery work.
+constraint_indexing:constraint_classification(omega1_patches, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: AUTOMATED VALIDATION PIPELINE (SCAFFOLD) — Organized infrastructure (schema validators, linters, test suites) sees patching as a temporary coordination problem with a sunset clause. As validation automation matures and constraint template standards stabilize, the need for manual patching should decline. The pipeline builds alternatives to manual curation — schema enforcement, automated consistency checking, and structured authoring tools. High suppression of the backlog is tolerated only because the pipeline expects this phase to end.
+constraint_indexing:constraint_classification(omega1_patches, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The system auditors who execute the patches to improve data quality. For them,
-% this is a pure coordination tool to maintain system integrity.
-% Engine derives d from: beneficiary membership + arbitrage exit -> d ≈ 0.05 -> negative χ
-constraint_indexing:constraint_classification(omega1_patching_process, rope,
+% PERSPECTIVE 5: MANUAL REVIEW RITUAL (PITON) — The human-led constraint audit process is substantially performative at this point. Schema validators can detect many issues automatically; automated linters can identify inconsistencies; yet the institutional norm persists that manual expert review is necessary for legitimacy. Theater ratio is high because much of the review repeats checks that machines already perform. The ritual persists through inertia — 'expert review' remains the cultural marker of trustworthiness even as machines handle most verification.
+constraint_indexing:constraint_classification(omega1_patches, piton,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The analytical view recognizes both the genuine coordination function (improving
-% data quality) and the asymmetric extraction (overriding authorial intent).
-% Engine derives d ≈ 0.72 -> f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(omega1_patching_process, tangled_rope,
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some data quality audit lag is inherent to knowledge base maintenance: as the corpus grows, maintaining specification completeness becomes an increasingly complex verification problem. This view risks naturalizing what is actually a contingent institutional choice: the decision to accept under-specified constraints upstream rather than enforce strict schema compliance at authoring time.
+constraint_indexing:constraint_classification(omega1_patches, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(omega1_patching_process_tests).
+:- begin_tests(omega1_patches_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(omega1_patching_process, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(omega1_patching_process, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary,
-    TypeTarget == snare,
-    TypeBeneficiary == rope.
+    constraint_indexing:constraint_classification(omega1_patches, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(omega1_patches, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(omega1_patching_process, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(omega1_patches, TR),
+    TR >= 0.70.
 
-test(tangled_rope_structural_gates_pass) :-
-    narrative_ontology:constraint_beneficiary(omega1_patching_process, _),
-    narrative_ontology:constraint_victim(omega1_patching_process, _),
-    domain_priors:requires_active_enforcement(omega1_patching_process).
-
-:- end_tests(omega1_patching_process_tests).
+:- end_tests(omega1_patches_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -182,105 +180,90 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   This story models the act of patching a knowledge base, transforming the
- *   original patch script into a valid constraint story.
- *   - Base Extractiveness (ε=0.48): Represents the non-trivial extraction of
- *     interpretive authority from original authors. The act of a central
- *     team programmatically overriding data is structurally extractive.
- *   - Suppression (s=0.75): The process uses `retractall` to completely
- *     remove the old data, a high form of suppression. It also suppresses
- *     the alternative of allowing data inconsistencies to persist.
- *   - Theater (τ=0.10): The process is highly functional and technical, with
- *     little to no performative aspect.
+ *   Extractiveness (0.38): Moderate. The primary extraction comes from the curation team's control over prioritization and timeline — they can defer work that threatens their resource allocation, forcing downstream researchers to work around incomplete constraints. However, extractiveness is not high (not >0.46) because much of the delay is legitimate coordination cost rather than deliberate rent-seeking. The team must balance multiple constraints, and rational prioritization is not the same as extraction. The extractiveness has increased from 0.22 to 0.38 over the interval because the constraint corpus has grown faster than curation capacity, shifting the balance from coordination to extraction. Suppression (0.52): Moderate-high. Significant barriers to working around the patching queue include the schema dependencies of downstream analysis tools, the epistemic cost of using incomplete constraint data, and the institutional norm that 'validated' constraints are required for publishable analysis. Researchers cannot easily substitute alternative sources. But suppression is not total because some researchers do work with provisional constraint data and patch locally. Theater ratio (0.61): Moderately high and increasing. Manual expert review now overlaps substantially with automated validation — schema checkers can detect missing metrics, linters can identify inconsistent tuple values, and test suites can verify perspective logic. The manual review ritual persists because institutional culture associates human expert judgment with legitimacy, but the unique epistemic value of this review has declined as automation has matured.
  *
  * PERSPECTIVAL GAP:
- *   - The `original_story_authors` (powerless, constrained) experience this
- *     as a Snare. Their work is altered without their consent by a process
- *     they cannot opt out of, extracting their authorial control.
- *   - The `system_auditors` (institutional, arbitrage) see it as a Rope.
- *     For them, it's a necessary tool for coordinating data standards and
- *     ensuring the health of the overall system, providing a net benefit.
- *   - The analytical observer sees a Tangled Rope, acknowledging both the
- *     vital coordination function and the inherent extraction required
- *     to achieve it.
+ *   The constraint demonstrates a perspectival canyon between the curation team and downstream researchers. The team sees coordination (Rope) — they are solving the problem of validating a large corpus against evolving schema standards. They experience their own prioritization authority as fair allocation of scarce expert time. The researchers see extraction (Snare) — they are locked into an unpredictable queue where their ability to proceed depends on decisions made by institutional gatekeepers outside their control. Neither perspective is wrong; they occupy fundamentally different structural positions. The automated validation perspective sees a temporary problem (Scaffold) — the sunset is explicit in the roadmap: as schema validators and linters mature, the need for manual patching should decline significantly. The manual review ritual perspective sees itself as degraded (Piton) — the institution knows that machines can perform many checks, yet the ritual persists through inertia and cultural signaling. The civilizational analytical observer risks a false summit: treating the patching backlog as an inherent cost of knowledge base maintenance rather than as a contingent institutional choice (to defer schema enforcement until after authoring, rather than enforcing it before publication).
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `system_auditors` and `downstream_data_consumers` gain
- *     a more reliable, consistent, and useful knowledge base.
- *   - Victims: `original_story_authors` lose autonomy and control over the
- *     final representation of their contributed knowledge. The cost is not
- *     financial but one of interpretive authority.
+ *   The beneficiary/victim structure drives directionality for each perspective. The curation team is the beneficiary: they control the patching process, decide which constraints are 'ready' for downstream use, and capture institutional credit for identifying and fixing data quality issues. Their d value is low (~0.15) because they combine beneficiary status (extraction flows toward them: authority, credit, resource allocation control) with arbitrage exit options (they can reallocate effort, prioritize differently, or hand off work). The downstream researchers are the primary victims: they depend on validated constraints and have no exit option other than to wait or work around the incomplete data. Their d value is high (~0.85) because they combine victim status (extraction flows away from them: delayed access, rework cost, epistemic uncertainty) with trapped exit options (no meaningful alternative source of validated constraints at this scope). The knowledge base integrity system occupies the middle: it benefits from improved data quality (beneficiary aspect) but bears the resource cost (victim aspect), with constrained exit (it cannot ignore completeness without cascade failures, but has some agency in prioritization). The automated pipeline has constrained exit (cannot deploy incomplete automation without verification) but is building toward arbitrage (once mature, the pipeline can substitute for human review). The manual review ritual has arbitrage exit (can refer work to machines) but is institutionally trapped by cultural norms (experts are expected to review). The analytical observer has analytical exit and no structural beneficiary/victim relationship, producing d ~0.72.
  *
  * MANDATROPHY ANALYSIS:
- *   The Tangled Rope classification correctly captures the dual nature of
- *   this process. A pure Snare classification would ignore the genuine and
- *   necessary coordination function of maintaining data quality. A pure Rope
- *   classification would ignore the coercive, non-consensual extraction of
- *   authority from the original content creators. The framework correctly
- *   identifies this as a hybrid constraint.
+ *   The mandatrophy is resolved by the Tangled Rope classification, which captures the hybrid nature of the patching process. The constraint has a genuine coordination function: auditing and validating constraints improves the knowledge base's epistemic reliability and prevents cascade failures from under-specified constraints. This is not pure extraction — it serves a real system need. The constraint also has asymmetric extraction: the curation team's control over prioritization and timeline allows them to impose costs on downstream researchers. This asymmetry is moderated by the team's moderate power level (institutional, not organized) and the existence of organized alternatives (automated validation), but it remains structurally present. The theater ratio of 0.61 indicates that much of the patching effort now involves performative validation rather than unique epistemic contribution, reflecting the Goodhart drift: as automated validators have improved, the marginal value of manual review has declined, yet the cultural norm persists. The Scaffold perspective (automated validation as a sunset mechanism) is the key resolution mechanism: as automation capability reaches ~70-80% coverage, the manual patching process should transition from a necessary coordination mechanism to an optional verification ritual. The current extractiveness of 0.38 reflects that we are in the transition zone — coordination is still necessary, but extraction is beginning to accumulate because the cultural legitimacy of manual review persists after its unique epistemic value has declined. The mandatrophy is resolved by recognizing that the Tangled Rope classification is accurate NOW but will degrade toward Piton unless automation matures or schema enforcement is moved upstream to authoring time.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_omega1_patching_process,
-    'Is this patching process a necessary act of system maintenance (coordination) or a form of centralized censorship that stifles diverse interpretations (extraction)?',
-    'Longitudinal analysis of whether patched constraints become more or less predictive/useful after the patch. Comparison with a forked, unpatched version of the corpus.',
-    'If primarily coordination, it is a healthy Tangled Rope. If primarily extraction, it is a Snare that degrades the knowledge base by imposing a monoculture.',
+    automation_displacement_threshold,
+    'At what coverage level of automated validation does manual patching become genuinely optional rather than theoretically redundant?',
+    'Longitudinal comparison of error detection rates: automated validators vs manual review on a held-out set of constraint stories; correlation between automation coverage increase and manual review catch rate decline',
+    'If threshold < 70% automation: manual review remains necessary indefinitely (Scaffold sunset never occurs). If threshold > 90% automation: manual review is pure theater now (Piton strengthens). Current automation coverage ~45%.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(automation_displacement_threshold, empirical, 'Coverage threshold for manual patching to become optional').
+
+omega_variable(
+    upfront_vs_downstream_cost_tradeoff,
+    'Does enforcing strict schema compliance at constraint authoring time reduce total curation cost, or does it shift cost burden to authors and reduce submission throughput?',
+    'A/B test: two cohorts of new constraint authors, one with mandatory pre-submission validation, one with post-submission patching queue; measure total time to validated constraint, author satisfaction, and submission volume',
+    'If upfront enforcement reduces total cost: the patching queue is a coordination failure (should shift to scaffolding approach). If downstream patching reduces author friction: queue is a fair tradeoff (Tangled Rope justified). Current assumption favors downstream patching.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(upfront_vs_downstream_cost_tradeoff, empirical, 'Whether upfront schema enforcement reduces total curation cost').
+
+omega_variable(
+    researcher_wait_time_tolerance,
+    'What is the maximum acceptable delay from constraint completion to patch-validated deployment before downstream researchers experience economic damage or abandonment?',
+    'Survey and behavioral analysis: researcher time-to-productivity metrics with patched vs unpatched constraints; opportunity cost of delayed analysis; citation/publication delays attributable to validation wait times',
+    'If tolerance < 2 weeks: current ~4-week backlog is extractive (Snare experienced extraction increases). If tolerance > 8 weeks: backlog is acceptable coordination cost (Tangled Rope suppression justified). Current estimate: 3-4 weeks tolerance.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(researcher_wait_time_tolerance, empirical, 'Maximum acceptable delay for researchers to validated constraints').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(omega1_patching_process, 0, 10).
+narrative_ontology:interval(omega1_patches, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This process became more formalized and extractive over time as the system grew.
-% Initially, corrections were informal suggestions (low extraction). Over time,
-% they became a centralized, programmatic process (high extraction).
-% Required for high-extraction constraints (base_extractiveness > 0.46).
+% Theater ratio over time
+narrative_ontology:measurement(omega1patch_tr_t0, omega1_patches, theater_ratio, 0, 0.38).
+narrative_ontology:measurement(omega1patch_tr_t5, omega1_patches, theater_ratio, 5, 0.48).
+narrative_ontology:measurement(omega1patch_tr_t10, omega1_patches, theater_ratio, 10, 0.61).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(omega1_patching_process_tr_t0, omega1_patching_process, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(omega1_patching_process_tr_t5, omega1_patching_process, theater_ratio, 5, 0.08).
-narrative_ontology:measurement(omega1_patching_process_tr_t10, omega1_patching_process, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(omega1patch_be_t0, omega1_patches, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(omega1patch_be_t5, omega1_patches, base_extractiveness, 5, 0.3).
+narrative_ontology:measurement(omega1patch_be_t10, omega1_patches, base_extractiveness, 10, 0.38).
 
-% Extraction over time (shows formalization and centralization):
-narrative_ontology:measurement(omega1_patching_process_ex_t0, omega1_patching_process, base_extractiveness, 0, 0.20).
-narrative_ontology:measurement(omega1_patching_process_ex_t5, omega1_patching_process, base_extractiveness, 5, 0.35).
-narrative_ontology:measurement(omega1_patching_process_ex_t10, omega1_patching_process, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The process enforces data quality standards across the knowledge base.
-narrative_ontology:coordination_type(omega1_patching_process, enforcement_mechanism).
+narrative_ontology:coordination_type(omega1_patches, enforcement_mechanism).
+narrative_ontology:affects_constraint(omega1_patches, constraint_story_schema_evolution).
+narrative_ontology:affects_constraint(omega1_patches, constraint_corpus_growth_rate).
 
-% Network relationships (structural influence edges)
-% The patching process structurally affects every constraint it modifies.
-narrative_ontology:affects_constraint(omega1_patching_process, regulatory_capture).
-narrative_ontology:affects_constraint(omega1_patching_process, hoa_covenants).
-narrative_ontology:affects_constraint(omega1_patching_process, smartphone_ubiquity).
-narrative_ontology:affects_constraint(omega1_patching_process, unclos_2026).
+% DUAL FORMULATION NOTE:
+% The patching process is downstream of corpus growth rate (as more constraints are added, more are likely to require patching) and upstream of schema evolution (as schema requirements change, constraints must be re-audited for compliance). The constraint family includes separate stories for the growth rate dynamics and the schema evolution pressure; the patching process represents the institutional mechanism connecting them.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations and exit options accurately models the directionality for
-% the key agents in this scenario.
+constraint_indexing:directionality_override(omega1_patches, institutional, 0.18).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

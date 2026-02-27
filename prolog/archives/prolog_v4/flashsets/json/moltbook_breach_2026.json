@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "moltbook_breach_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Moltbook Database Exposure",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "malicious_actors"
+    ],
+    "victims": [
+      "moltbook_users",
+      "moltbook_advertisers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Moltbook Users",
+      "comment": "Moltbook users are largely trapped due to network effects. The database exposure presents a significant risk of identity theft and other harms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Moltbook Advertisers",
+      "comment": "Advertisers are constrained because their reach is dependent on the size of the userbase. However, they can choose to pull advertising and are not entirely trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Moltbook",
+      "comment": "Moltbook benefits from the database by gathering data from users. The cost is that it requires resources to maintain."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Malicious Actors",
+      "comment": "Malicious actors directly benefit from the data exposure and have arbitrage due to their ability to exploit the vulnerability for personal gain."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer would see this as a tangled rope because some actors benefit and others are harmed. There is coordination between the parties and extraction by malicious actors."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attribution",
+      "question": "Who exposed the database?",
+      "resolution_mechanism": "Forensic analysis of logs and security breaches.",
+      "impact": "Determine liability and legal ramifications.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The source of the breach."
+    },
+    {
+      "id": "severity_of_exposure",
+      "question": "What data was exposed?",
+      "resolution_mechanism": "Data analysis of exposed databases.",
+      "impact": "Assess user risk and legal requirements for disclosure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Type of data exposed"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "Moltbook, the \"front page of the agent internet,\" was revealed to have an exposed backend database. This presents a challenge to users and could harm advertisers.",
+    "key_agents": [
+      "Moltbook users: Powerless/trapped - Users are exposed to identity theft and other harms.",
+      "Moltbook advertisers: Moderate/constrained - Advertisers can pull advertising but rely on Moltbook's reach.",
+      "Moltbook: Institutional/arbitrage - Moltbook benefits from data gathering but faces resource and reputational costs.",
+      "Malicious actors: Powerful/arbitrage - Malicious actors exploit the data for personal gain.",
+      "Analytical observer: Analytical/analytical - Sees tangled rope because some actors benefit and others are harmed."
+    ],
+    "logic_rationale": "The Moltbook data exposure represents an extraction of user data. Malicious actors benefit from this exposure.",
+    "perspectival_gap": "Users see it as a snare, Moltbook as a rope, and observers as a tangled rope.",
+    "directionality_logic": "Victims trapped, Moltbook benefits, and malicious actors arb",
+    "mandatrophy_analysis": "The system is a snare because it extracts data and there is limited recourse for victims. Some level of coordination occurs because there is an exchange between the parties and harm from malicious actors is an emergent side effect."
+  },
+  "network": {
+    "affects_constraints": [
+      "user_data_privacy"
+    ]
+  },
+  "directionality_overrides": []
+}

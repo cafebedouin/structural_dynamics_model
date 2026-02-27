@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "proof_of_work_consensus",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pow"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hash-Based Proof-of-Work Consensus",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mining_hardware_manufacturers",
+      "early_adopters",
+      "protocol_maintainers"
+    ],
+    "victims": [
+      "network_energy_consumption",
+      "environmental_externalities",
+      "transaction_inclusion_parity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Environmental Cost Bearer",
+      "comment": "PERSPECTIVE 1: ENVIRONMENTAL COST BEARER (SNARE) \u2014 Bears full externalized cost of network hash power (global electricity consumption, carbon emissions, e-waste). No exit option; cannot refuse to bear environmental cost of transactions. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.88."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Transaction Sender with Insufficient Capital",
+      "comment": "PERSPECTIVE 2: LOW-CAPITAL TRANSACTION SENDER (SNARE) \u2014 Trapped in fee market determined by hash power supply. Cannot exit network without abandoning transaction. Cannot arbitrage to lower-fee alternative when one miner controls majority hash rate. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.87."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competitive Miner",
+      "comment": "PERSPECTIVE 3: COMPETITIVE MINER (TANGLED ROPE) \u2014 Constrained by ASIC capital requirements and electricity costs; also benefits from network security provisioning and block reward structure. Participates in coordination (securing ledger) while experiencing extraction (concentrated reward). d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.49."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mining Hardware Manufacturer",
+      "comment": "PERSPECTIVE 4: MINING HARDWARE MANUFACTURER (ROPE) \u2014 Primary beneficiary. Experiences constraint as pure coordination mechanism: proof-of-work demand drives ASIC innovation and manufacturing. Can exit by pivoting to other hardware. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Maintainer",
+      "comment": "PERSPECTIVE 5: PROTOCOL MAINTAINER (ROPE) \u2014 Benefits from proof-of-work's security properties and decentralized consensus guarantee. Experiences constraint as coordination solution replacing trusted third party. Can arbitrage to alternative consensus mechanisms (PoS, etc.). d\u22480.12, f(d)\u2248-0.02, \u03c3=1.2 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Energy-Constrained Jurisdiction",
+      "comment": "PERSPECTIVE 6: ENERGY-CONSTRAINED JURISDICTION (TANGLED ROPE) \u2014 Mining concentration in jurisdiction drives electricity demand and cost. Local government is constrained by sovereignty limits over hash power flows (miners can relocate). Also depends on mining tax revenue and network access. d\u22480.58, f(d)\u22480.73, \u03c3=1.1 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Legacy Payment Network",
+      "comment": "PERSPECTIVE 7: LEGACY PAYMENT NETWORK (PITON) \u2014 Proof-of-work consensus maintains its perceived necessity through theater (decentralization narrative, censorship resistance discourse) even as institutional alternatives (stablecoins, regulatory payment rails) mature. The constraint persists through market narrative rather than technical necessity. theater_ratio\u22480.58; chain performs payment function poorly (slow, expensive) relative to alternatives. d\u22480.52, f(d)\u22480.65, \u03c3=0.9 \u2192 \u03c7\u22480.19."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Cryptographic Natural Law)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / CRYPTOGRAPHIC NATURAL LAW (MOUNTAIN CANDIDATE) \u2014 From civilizational/universal view, proof-of-work appears as immutable cryptographic principle: majority hash power cannot be forged; consensus requires solving discrete problems with no shortcut. \u03b5=0.52, suppression=0.68 contradict mountain gates (\u03b5\u22640.25, suppression\u22640.05). The 'natural law' framing naturalizes what is actually an institutional choice (proof-of-work vs proof-of-stake vs DAG-based consensus). False summit detection: this is not a cryptographic law but a contingent protocol design."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hashrate_51_percent_threshold",
+      "question": "At what hashrate concentration does proof-of-work security degrade from collective coordination to majoritarian extraction?",
+      "resolution_mechanism": "Empirical monitoring of Herfindahl-Hirschman Index (HHI) for mining pool concentration; threshold where double-spending attacks become economically rational",
+      "impact": "If threshold < 40% concentration: modest extraction, rope dominates. If threshold > 65% concentration: snare dominates, network security is myth.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Hashrate concentration threshold for security degradation"
+    },
+    {
+      "id": "renewable_subsidy_counterfactual",
+      "question": "Would proof-of-work mining occur at current scales without renewable energy subsidies and stranded hydro capacity?",
+      "resolution_mechanism": "Economic modeling of mining profitability under true electricity cost; counterfactual analysis of mining geography in absence of subsidies",
+      "impact": "If mining requires subsidies: suppression of alternative consensus mechanisms is partly artificial (policy-driven extraction). If mining profitable without subsidies: extraction mechanism is more fundamental (resource scarcity drives coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proof-of-work profitability depends on energy subsidies"
+    },
+    {
+      "id": "transaction_fee_market_efficiency",
+      "question": "Does the fee market mechanism reliably allocate block space to highest-value transactions, or does it create deadweight loss through strategic delay and batching?",
+      "resolution_mechanism": "Analysis of unconfirmed transaction pool; comparison of actual allocation vs economic social welfare maximization; measurement of strategic fee underbidding and mempool volatility",
+      "impact": "If efficient: fee extraction is fair market coordination (Rope for more perspectives). If inefficient: fee extraction is pure rent-seeking (Snare for more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether proof-of-work fee market allocates block space efficiently"
+    },
+    {
+      "id": "decentralization_narrative_obsolescence",
+      "question": "As institutional stablecoins and regulated payment rails mature, does the decentralization narrative supporting proof-of-work legitimacy become theater?",
+      "resolution_mechanism": "Survey of actual transaction use case distribution; comparison of proof-of-work adoption in censorship-resistant contexts vs convenience-maximizing contexts",
+      "impact": "If narrative obsolete: piton classification confirmed, theater_ratio should increase. If narrative still functional: rope classification more defensible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether decentralization narrative remains functional vs theatrical"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Proof-of-work consensus replaces trusted third parties (payment processors, central banks) with a distributed computational mechanism: agents race to solve hash puzzles, and the first to solve one earns the right to append a block and collect rewards. This constraint exhibits the full range of DR classifications depending on structural position. From the environmental cost bearer's view, it is pure extraction (Snare) \u2014 they bear global externalities with no exit. From the mining hardware manufacturer's view, it is pure coordination (Rope) \u2014 the mechanism creates demand for innovation and manufacturing. From the competitive miner's view, it is mixed (Tangled Rope) \u2014 they participate in security provisioning while experiencing reward concentration. From the protocol maintainer's view, it solves a genuine coordination problem (Rope) \u2014 replacing trusted intermediaries with cryptographic certainty. From the energy-constrained jurisdiction's view, it is mixed (Tangled Rope) \u2014 mining drives local electricity cost and tax revenue simultaneously. The legacy payment network sees it as degraded theater (Piton) \u2014 the decentralization narrative persists even as technical alternatives mature. The analytical observer risks seeing it as a cryptographic natural law (Mountain), but the structural data reveals this as a false summit: the choice of proof-of-work over proof-of-stake or other mechanisms is contingent institutional design, not immutable law. The constraint's extractiveness (0.52) and suppression (0.68) reveal that proof-of-work functions as tangled coordination/extraction: it genuinely solves consensus without central authority, but it also creates energy rent concentration, transaction fee markets with imperfect efficiency, and environmental externalities that lock out powerless agents.",
+    "key_agents": [
+      "Mining Hardware Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 ASIC innovation and manufacturing driven by proof-of-work demand. Can exit by pivoting hardware.",
+      "Protocol Maintainers: Primary beneficiary (institutional/arbitrage) \u2014 proof-of-work provides decentralized consensus guarantee. Can arbitrage to alternative mechanisms (PoS).",
+      "Environmental Cost Bearers: Primary victim (powerless/trapped) \u2014 global electricity consumption, carbon emissions, e-waste. No exit option.",
+      "Low-Capital Transaction Senders: Secondary victim (powerless/trapped) \u2014 trapped in fee market determined by hash power supply and block space scarcity.",
+      "Competitive Miners: Secondary victim/mixed (moderate/constrained) \u2014 constrained by ASIC and electricity costs; benefit from block rewards and security provisioning.",
+      "Energy-Constrained Jurisdictions: Tertiary actor (organized/constrained) \u2014 mining concentration drives electricity demand and cost; constrained by sovereignty limits over hash flows.",
+      "Legacy Payment Networks: Institutional actor (powerful/mobile) \u2014 perceive threat but maintain relevance through regulatory integration and stablecoin alternatives."
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The protocol creates genuine value (decentralized consensus) but concentrates economic reward through block subsidies and fees. The extraction is not absolute dominance of powerless by powerful, but rather structural asymmetry: those with capital (hardware, electricity) benefit disproportionately. Over the interval, extractiveness has risen from 0.28 to 0.52 as mining has industrialized (ASIC manufacturers captured efficiency gains, small miners dropped out, hash concentration increased). Suppression (0.68): Moderate-high. Barriers to participation include: (1) capital requirements for competitive ASICs (~$10K-$100K), (2) electricity cost arbitrage (miners must locate near cheap power), (3) knowledge barriers (pool participation lowers barrier but centralizes hash), (4) environmental externalities are suppressed from market signals (energy cost not fully reflected in fee market). These barriers are structural, not artificial \u2014 but they are not absolute. Theater ratio (0.58): Moderate-high. The decentralization narrative supports the protocol's legitimacy, but the actual degree of decentralization has declined as pool concentration increased. As of 2025, top 4-5 mining pools control >50% of hash rate. The narrative of 'anyone can mine' persists despite hardware and capital requirements excluding most participants. Theater has risen from 0.35 to 0.58 as institutional alternatives (stablecoins, regulated payment rails) have matured, making the 'trustless' framing increasingly performative for payment use cases.",
+    "perspectival_gap": "The constraint produces maximum perspectival disagreement. Environmental cost bearers see pure extraction (Snare, \u03c7\u22480.88) \u2014 they are trapped and extracting nothing. Mining manufacturers see pure coordination (Rope, \u03c7\u2248-0.04) \u2014 they are beneficiaries and can exit. Competitive miners see tangled coordination/extraction (Tangled Rope, \u03c7\u22480.49) \u2014 they benefit from rewards but constrained by capital and energy costs. The analytical observer risks seeing natural law (Mountain) \u2014 cryptographic proofs cannot be forged \u2014 but the structural data reveals contingent design choices. The legacy payment network sees degraded theater (Piton) \u2014 the mechanism persists through narrative even as technical and regulatory alternatives mature. This perspectival range is diagnostic: it shows that proof-of-work is neither pure coordination nor pure extraction, but a hybrid that appears differently depending on whether you are (a) bearing environmental costs with no exit, (b) manufacturing hardware with market options, (c) competing for rewards under capital constraints, or (d) offering alternative payment rails.",
+    "directionality_logic": "Mining hardware manufacturers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Strong net beneficiary (negative \u03c7 means coordination subsidy). Protocol maintainers: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.02. Net beneficiary. Competitive miners: Victim + constrained \u2192 d\u22480.65, f(d)\u22480.95. Moderate extraction (constrained exit due to sunk capital in hardware and electricity infrastructure). Low-capital transaction senders: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. High extraction (cannot exit, cannot arbitrage). Environmental cost bearers: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction (abstract collective, no agency). Energy-constrained jurisdictions: Constrained + dependent on mining revenue \u2192 d\u22480.58, f(d)\u22480.73. Moderate extraction (benefit from tax revenue but harmed by electricity costs and relocation risk). The directionality derivation shows that proof-of-work creates multiple victim classes with different exit constraints.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that tangled_rope classification is correct: genuine coordination function (decentralized consensus without central authority) coexists with asymmetric extraction (capital and electricity concentration, environmental externalities, fee market power). The mandatrophy resolution: (1) Proof-of-work is NOT pure extraction (Snare) because the consensus mechanism truly solves a coordination problem \u2014 there is real security value. (2) It is NOT pure coordination (Rope) because the extraction mechanisms (mining rewards, fee markets, capital concentration, environmental externalities) are substantial and asymmetric. (3) It exhibits active enforcement (protocol rules enforce puzzle difficulty, block rewards, 10-minute block time). (4) It has beneficiaries (hardware manufacturers, early adopters) and victims (environmental cost bearers, low-capital participants, energy-constrained jurisdictions). (5) The theater ratio (0.58) reflects that the decentralization narrative persists despite declining actual decentralization, and payment use cases are increasingly served by alternatives, making the 'trustless' framing partially theater. The tangled_rope classification is justified: coordination + enforcement + asymmetric extraction + rising theater indicates a hybrid mechanism that genuinely solves consensus but increasingly functions as a wealth concentration device. The false summit (mountain perspective) reveals the analytical risk of naturalizing institutional choices as cryptographic law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_money_supply_ceiling",
+      "mining_pool_centralization",
+      "cryptocurrency_energy_externality"
+    ],
+    "dual_formulation_note": "Proof-of-work consensus is the upstream constraint enabling cryptocurrency networks. Downstream constraints include specific cryptocurrency money supply mechanics (bitcoin_money_supply_ceiling, \u03b5\u22480.08, Rope \u2014 consensus enforces supply cap), mining pool concentration (mining_pool_centralization, \u03b5\u22480.65, Tangled Rope \u2014 extraction mechanism for solo miners), and energy externalities (cryptocurrency_energy_externality, \u03b5\u22480.71, Snare \u2014 pure environmental cost). The constraint family demonstrates \u03b5-invariance principle: the same 'proof-of-work' label covers structurally distinct claims (consensus mechanism, supply enforcement, energy consumption, fee market) with different \u03b5 values and classifications."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ]
+}

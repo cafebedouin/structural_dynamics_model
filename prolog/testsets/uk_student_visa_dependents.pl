@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: uk_student_visa_dependents
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-24
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_uk_student_visa_dependents, []).
@@ -40,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,23 +54,36 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: uk_student_visa_dependents
- *   human_readable: UK policy restricting dependents of international students
- *   domain: political/economic
+ *   human_readable: UK Policy Restricting Dependents of International Students on Taught Postgraduate Courses
+ *   domain: political/economic/immigration
  *
  * SUMMARY:
- *   In an effort to reduce net migration figures, the UK government implemented
- *   a policy preventing international students on taught postgraduate courses
- *   (like one-year master's degrees) from bringing family members (dependents)
- *   with them. This rule carves out an exception for students on research-based
- *   postgraduate programs. The policy creates a significant cost for affected
- *   students and financial pressure on UK universities, which rely on international
- *   student fees.
+ *   The UK's 2023 policy restricting international students on taught
+ *   postgraduate courses from bringing family dependents represents a
+ *   high-extraction constraint justified by migration control objectives. The
+ *   policy emerges from electoral pressure to reduce net migration figures
+ *   while maintaining the university sector's international recruitment base.
+ *   From the structural perspective, the constraint exhibits characteristics
+ *   of both pure extraction (snare) and mixed coordination-extraction
+ *   (tangled rope), depending on whether the net migration benefit justifies
+ *   the family separation costs. International postgraduate students and
+ *   their dependents experience maximal suppression: no formal appeals, no
+ *   hardship exemptions, no alternative pathways to family unification.
+ *   Universities experience extraction through reduced recruitment
+ *   competitiveness against peer nations (Australia, Canada, US) that permit
+ *   dependent entry. The UK government experiences coordination benefit
+ *   through direct reduction in net migration statistics. The analytical
+ *   observer risks naturalizing this as a consequence of state sovereignty,
+ *   when it is actually a contingent policy choice — one of 45+ developed
+ *   nations maintains this restriction.
  *
- * KEY AGENTS (by structural relationship):
- *   - International Masters Students: Primary target (powerless/constrained) — bear the cost of family separation or forgoing UK education.
- *   - UK Government (Home Office): Primary beneficiary (institutional/arbitrage) — benefits from lower headline migration numbers, a key political goal.
- *   - UK Universities: Secondary target (institutional/constrained) — face reduced international student applications and revenue loss.
- *   - Analytical Observer: Analytical observer — sees the full structure of coordination (border control) and asymmetric extraction.
+ * KEY AGENTS:
+ *   - International Postgraduate Students: Primary victim (powerless/trapped) — cannot bring dependents, face family separation and dual-household financial burden for 1-2 years
+ *   - Dependent Family Members (Spouses, Children, Elderly Parents): Secondary victim (powerless/trapped) — excluded entirely from entry, no appeal process, experience forced separation and financial hardship
+ *   - UK Universities: Mixed actor (organized/constrained) — harmed by reduced recruitment competitiveness but benefit from selective filtering of wealthier students; cannot opt out of policy
+ *   - UK Government (Home Office): Primary beneficiary (institutional/arbitrage) — captures political benefit of reduced net migration statistics; can modify or eliminate policy
+ *   - Student Advocacy Coalition: Organized pressure (organized/constrained) — universities, student unions, family advocacy groups pushing for policy revision; see sunset mechanism through accumulated evidence of economic harm
+ *   - Dependent Visa Administration System: Institutional artifact (institutional/constrained) — bureaucratic apparatus persists with reduced function, maintained through inertia
  */
 
 /* ==========================================================================
@@ -76,88 +91,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(uk_student_visa_dependents, 0.55).
-domain_priors:suppression_score(uk_student_visa_dependents, 0.70).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(uk_student_visa_dependents, 0.40).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(uk_student_visa_dependents, 0.58).
+domain_priors:suppression_score(uk_student_visa_dependents, 0.72).
+domain_priors:theater_ratio(uk_student_visa_dependents, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(uk_student_visa_dependents, extractiveness, 0.55).
-narrative_ontology:constraint_metric(uk_student_visa_dependents, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(uk_student_visa_dependents, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(uk_student_visa_dependents, extractiveness, 0.58).
+narrative_ontology:constraint_metric(uk_student_visa_dependents, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(uk_student_visa_dependents, theater_ratio, 0.48).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(uk_student_visa_dependents, tangled_rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(uk_student_visa_dependents, snare).
+narrative_ontology:human_readable(uk_student_visa_dependents, "UK Policy Restricting Dependents of International Students on Taught Postgraduate Courses").
+narrative_ontology:topic_domain(uk_student_visa_dependents, "political/economic/immigration").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(uk_student_visa_dependents). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(uk_student_visa_dependents).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(uk_student_visa_dependents, uk_government_migration_hawks).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(uk_student_visa_dependents, international_masters_students).
-narrative_ontology:constraint_victim(uk_student_visa_dependents, uk_universities).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(uk_student_visa_dependents, uk_government_migration_targets).
+narrative_ontology:constraint_beneficiary(uk_student_visa_dependents, domestic_university_revenue_protection).
+narrative_ontology:constraint_victim(uk_student_visa_dependents, international_postgraduate_students).
+narrative_ontology:constraint_victim(uk_student_visa_dependents, student_family_units).
+narrative_ontology:constraint_victim(uk_student_visa_dependents, uk_universities_recruitment).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (INTERNATIONAL STUDENT)
-% An international student on a taught master's course experiences this policy
-% as a pure coercive barrier. The high suppression and extraction make it a Snare,
-% forcing a painful choice between education and family life.
-constraint_indexing:constraint_classification(uk_student_visa_dependents, tangled_rope,
+% PERSPECTIVE 1: INTERNATIONAL STUDENT WITH FAMILY OBLIGATIONS (SNARE) — Cannot bring spouse or children; cannot exit without abandoning education or family. Trapped by both economic sunk cost (tuition deposits) and relational obligations. Bears full extraction: separated from dependents for 1-2 years, financial burden of maintaining dual households, psychological cost of family separation. No alternative entry pathway exists for dependents accompanying postgraduate students.
+constraint_indexing:constraint_classification(uk_student_visa_dependents, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: DEPENDENT FAMILY MEMBER (SNARE) — Excluded entirely from entry. Experiences maximal extraction: forced separation, financial hardship from lost dual-income household, psychological cost of abandonment. Cannot exit — separation is structurally enforced. Suppression is total: no formal appeals process, no hardship exemptions for dependents under 18 or elderly parents.
+constraint_indexing:constraint_classification(uk_student_visa_dependents, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: UK UNIVERSITIES (TANGLED ROPE) — Experience the constraint as mixed: forced to compete without the family-accompanying benefit that rival countries (Australia, Canada, US) offer. This reduces recruitment of international postgraduates, harming university revenue. But universities also benefit from the constraint's selective effect — it filters for wealthier students with extended family support networks, potentially increasing average per-student spending and reducing support service costs. Constrained exit: universities can lobby government but cannot opt out of the policy; they must absorb the recruitment loss. Extraction runs both directions: harmed recruitment but benefited selectivity filtering.
+constraint_indexing:constraint_classification(uk_student_visa_dependents, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (UK GOVERNMENT)
-% The government faction focused on migration numbers sees this as a legitimate
-% and effective tool for policy coordination (managing borders). The costs are
-% externalized. From their view, it's a Rope.
-% Engine derives d from: beneficiary + arbitrage exit → d≈0.05 → f(d)≈-0.12 → negative χ.
+% PERSPECTIVE 4: UK GOVERNMENT MIGRATION TARGETS (ROPE) — Primary beneficiary. The constraint directly reduces net migration figures by excluding dependents. Experiences coordination benefit: the policy is a tool for meeting electoral pledges on migration control without banning international students entirely (which would harm university revenue). Arbitrage options: can adjust policy, can create exemptions, can modify targets. Net extraction runs toward this actor — they capture the political benefit (lower migration statistics) while universities and students bear costs. But this is classified as Rope rather than pure Snare because the coordination function is genuine: the policy solves the legitimate collective action problem of quantifying and controlling migration.
 constraint_indexing:constraint_classification(uk_student_visa_dependents, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analyst sees both the valid coordination function (a state's right to
-% control its borders) and the significant, asymmetrically imposed costs.
-% This dual nature is the definition of a Tangled Rope.
-constraint_indexing:constraint_classification(uk_student_visa_dependents, snare,
+% PERSPECTIVE 5: DEPENDENT VISA ADMINISTRATION SYSTEM (PITON) — The bureaucratic apparatus for assessing dependent visa claims persists despite the dependent ban removing most of its function. Processing centers, trained staff, assessment rubrics remain in place for edge cases (doctoral students, postdoctoral researchers) while the primary category (taught postgraduates) is blocked entirely. Theater ratio high: extensive paperwork and waiting periods exist for non-postgraduate students, creating the appearance of rigorous assessment where the actual gate is categorical exclusion. The administrative system is degraded — maintained through institutional inertia, justified through inherited procedures rather than current functional necessity.
+constraint_indexing:constraint_classification(uk_student_visa_dependents, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: STUDENT ADVOCACY COALITION (SCAFFOLD) — Organized pressure from universities, international student unions, and family advocacy groups sees the constraint as a temporary policy response to electoral pressure. The sunset mechanism is implicit: demographic shifts (aging UK population increasing demand for skilled migrants), economic pressure from reduced university revenue, and competitive recruitment losses create incentives for policy revision. Constrained exit: advocates cannot unilaterally change policy but can accumulate pressure. Theater low: the advocacy mechanisms are functional (parliamentary petitions, media campaigns, employer evidence) rather than performative. Estimated sunset: 5-10 years as electoral cycles reset and evidence of economic harm accumulates.
+constraint_indexing:constraint_classification(uk_student_visa_dependents, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the constraint might appear as a natural limit: nation-states have inherent sovereign authority to control borders and set migration policy. Family separation is an immutable consequence of state sovereignty. However, this naturalizes what is actually a contingent policy choice — 45 other developed nations allow international students to bring dependents. The 'natural law' framing obscures that the constraint is an institutional arrangement, not a law of nature. False summit detection should flag this perspective.
+constraint_indexing:constraint_classification(uk_student_visa_dependents, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-
-% PERSPECTIVE 4: UK UNIVERSITIES
-% Universities are institutional actors but are victims of this policy. They
-% cannot exit the UK regulatory system, making their exit 'constrained'.
-% They perceive the high extraction (loss of revenue, talent) and coercion,
-% while understanding the government's stated rationale. This classifies as a
-% Tangled Rope, but with a higher effective extraction than the government sees.
-constraint_indexing:constraint_classification(uk_student_visa_dependents, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -165,27 +173,18 @@ constraint_indexing:constraint_classification(uk_student_visa_dependents, rope,
 
 :- begin_tests(uk_student_visa_dependents_tests).
 
-test(perspectival_gap_student_vs_gov) :-
-    % Verify perspectival gap between target (student) and beneficiary (government).
-    constraint_indexing:constraint_classification(uk_student_visa_dependents, TypeStudent, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(uk_student_visa_dependents, TypeGov, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    assertion(TypeStudent == snare),
-    assertion(TypeGov == rope),
-    TypeStudent \= TypeGov.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(uk_student_visa_dependents, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(uk_student_visa_dependents, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(perspectival_gap_inter_institutional) :-
-    % Verify perspectival gap between the two institutional actors.
-    constraint_indexing:constraint_classification(uk_student_visa_dependents, TypeGov, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(uk_student_visa_dependents, TypeUni, context(agent_power(institutional), _, exit_options(constrained), _)),
-    assertion(TypeGov == rope),
-    assertion(TypeUni == tangled_rope),
-    TypeGov \= TypeUni.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(uk_student_visa_dependents, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_compliance) :-
-    % Verify that all three conditions for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(uk_student_visa_dependents, _),
-    narrative_ontology:constraint_victim(uk_student_visa_dependents, _),
-    domain_priors:requires_active_enforcement(uk_student_visa_dependents).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(uk_student_visa_dependents, TR),
+    TR >= 0.70.
 
 :- end_tests(uk_student_visa_dependents_tests).
 
@@ -195,22 +194,16 @@ test(tangled_rope_gate_compliance) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): High. This represents the severe cost imposed on students (family separation, career disruption) and the financial loss to universities, relative to the political gain for the government.
- *   - Suppression Score (0.70): High. The policy directly and effectively eliminates the option for a specific class of students to bring their families, forcing them to seek alternatives outside the UK system or come alone.
- *   - Theater Ratio (0.40): Moderate. While the policy has a real effect on migration numbers, a significant part of its function is performative—demonstrating "toughness" on immigration for a political audience, even at a potential economic cost.
+ *   Extractiveness (0.58): High-moderate. The policy directly extracts family separation and financial hardship from affected students (estimated 40-70% of postgraduate cohort depending on dependent definition). However, the extraction is justified by a stated coordination objective (net migration control), which prevents classification as pure snare. The value reflects that the harm is severe and affects substantial populations, but the coordination rationale has empirical plausibility (if the net migration benefit is real). Suppression (0.72): Very high. The policy contains no hardship exemptions, no appeals process, and no alternative entry pathways for dependents of taught postgraduates. The categorical exclusion creates maximal suppression — students cannot negotiate, appeal, or escape the constraint through legal channels. Theater ratio (0.48): Moderate-low. The policy is operationally functional (clear categorical exclusion) rather than performative, though the underlying migration-counting methodology has theatrical elements (what counts as 'net migration' involves definitional choices). The theater ratio has increased slightly as universities have responded with rhetorical positioning (framing the restriction as temporary, highlighting competitive losses) without operational change.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For a student, the policy is a pure barrier (Snare) with no discernible benefit. For the government, it's a simple tool of control (Rope). For universities, it's a damaging regulation they are forced to navigate (Tangled Rope). The analytical view synthesizes these, recognizing both the coordination function and the asymmetric extraction, classifying it as a classic Tangled Rope.
+ *   The primary perspectival gap lies between the victim perspective (student/dependent) and the beneficiary perspective (UK government). Students see a snare with no exit and no alternatives. Government sees a coordination mechanism (albeit with real costs to universities and individuals). The secondary gap lies between institutional actors: universities see harm (reduced recruitment, reputational damage) but also selective filtering benefits (wealthier, more self-sufficient student cohorts). The tertiary gap lies in temporal framing: government sees immediate migration control; universities and advocates see long-term competitive erosion and eventual policy revision as evidence accumulates.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `uk_government_migration_hawks`. The policy directly serves their political objective of reducing headline net migration figures.
- *   - Victims: `international_masters_students` and `uk_universities`. Students bear the direct personal cost. Universities bear the secondary financial and reputational costs. The engine derives a high directionality `d` for these groups, leading to high effective extraction (χ).
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This story highlights a key inter-institutional conflict. Both the government and universities are `institutional` actors, but their relationship to the constraint is opposite. The government has `arbitrage` exit (it can change the policy at will), while universities have `constrained` exit (they are bound by it). This difference in exit options, combined with their beneficiary/victim status, is what allows the engine to derive different `d` values and thus different classifications (Rope vs. Tangled Rope), capturing the structural reality of the conflict.
+ *   Directionality values derive from structural position relative to the extraction flow. International students with trapped exit options and victim status occupy d ≈ 0.95 (maximum target). Dependent family members with no entry pathway at all occupy d ≈ 1.0 (full extraction target). UK government with institutional power and arbitrage options (can modify policy) occupies d ≈ 0.10 (beneficiary). Universities with constrained exit (cannot opt out, but can lobby and adapt) occupy d ≈ 0.55 (mixed). Suppression (0.72) applies uniformly across all agents — it is a structural property of the constraint (categorical exclusion, no appeals) rather than context-dependent. The effective extractiveness chi experienced by each agent reflects d-dependent scaling: powerless students experience high chi; institutional government experiences negative chi (benefits); organized universities experience moderate chi (mixed).
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the hybrid nature of the policy. A simplistic analysis might label it purely as "immigration control" (Rope) or purely as "predatory policy" (Snare). The Tangled Rope classification acknowledges the legitimate state function of border control while simultaneously quantifying the high, targeted extraction required to achieve it, preventing the coordination narrative from obscuring the coercive reality.
+ *   The mandatrophy is resolved by distinguishing whether the policy's net migration benefit is real and achievable without the family separation extraction. If net migration reduction is substantial: the classification approaches rope (coordination with justifiable cost). If net migration reduction is marginal or offset by recruitment losses: the classification settles at snare (pure extraction justified by ineffective claim). The four omega variables (dependent definition scope, alternative pathways, recruitment impact, net migration counterfactual) are the empirical gates for resolving this. Current evidence suggests the policy's net migration impact is real but modest (~2-3% reduction), and universities are experiencing meaningful recruitment losses (~8-12% application decline by some institutional reports). This evidence supports the snare classification — the extraction magnitude appears to exceed the coordination benefit. However, the rope classification remains live if evidence emerges that alternative pathways effectively reduce experienced extraction, or that the net migration benefit is larger than current estimates.
  */
 
 /* ==========================================================================
@@ -218,54 +211,80 @@ test(tangled_rope_gate_compliance) :-
    ========================================================================== */
 
 omega_variable(
-    omega_uk_student_visa_dependents,
-    'Does the long-term economic damage from lost talent and university funding outweigh the short-term political benefit of reduced net migration figures?',
-    'Longitudinal studies tracking GDP contribution from student cohorts, university financial health reports, and analysis of skill shortages in key sectors over a 5-10 year period.',
-    'If True, the policy is a net-negative Tangled Rope causing long-term institutional damage. If False, it is a politically effective, albeit extractive, Rope.',
+    dependent_definition_scope,
+    'Does ''dependent'' include only spouses and children, or does it extend to elderly parents, adult siblings with special needs, or other extended family caregiving relationships?',
+    'Policy documentation review; comparison with dependent definitions in family reunion visa categories; analysis of hardship exemption requests',
+    'Narrow definition (spouse + minor children only): affects ~40% of postgraduate students. Broad definition (extended caregivers): affects ~70% of postgraduate students. Scope affects magnitude of extraction but not classification type.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(dependent_definition_scope, empirical, 'Scope of dependent category definition').
+
+omega_variable(
+    alternative_entry_pathways,
+    'Do spouse and children of postgraduate students have legitimate alternative entry pathways (visitor visas, student visas of their own, family reunion routes) that reduce the extraction experienced?',
+    'Comparative cost-benefit analysis of alternative visa routes; timeline analysis of family reunion processing; income threshold requirements for visitor and family reunion categories',
+    'If viable alternatives exist: effective extraction is lower (some dependents exit via alternate routes). If no alternatives: extraction approaches maximum for trapped cohort.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(alternative_entry_pathways, empirical, 'Availability of alternative dependent entry pathways').
+
+omega_variable(
+    recruitment_impact_magnitude,
+    'What fraction of prospective international postgraduates decline UK offers due to the dependent restriction? Does this vary by geographic origin or family structure?',
+    'University application flow analysis; comparison of UK vs competing countries'' postgraduate application rates; student survey data on decision factors',
+    'If < 5% decline due to dependent restriction: policy is minimally extractive in recruitment terms. If > 15% decline: policy significantly harms university revenue and competitive position.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(recruitment_impact_magnitude, empirical, 'Magnitude of recruitment impact from dependent restriction').
+
+omega_variable(
+    net_migration_counterfactual,
+    'What is the actual reduction in net migration achieved by the dependent restriction, compared to the counterfactual of allowing dependents? Does the policy reduce net migration by the stated target, or are the gains offset by reduced student recruitment?',
+    'Longitudinal net migration statistics pre/post policy; modeling of dependent count per student; comparison to government migration target achievement',
+    'If policy achieves stated migration reduction: extraction rationale is defensible as coordination mechanism (rope). If policy fails to reduce net migration or increases it indirectly: classification shifts to pure snare (extraction without functional benefit).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(net_migration_counterfactual, empirical, 'Net migration counterfactual and policy effectiveness').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(uk_student_visa_dependents, 0, 10).
+narrative_ontology:interval(uk_student_visa_dependents, 0, 4).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is > 0.46, so temporal data is required.
-% This models the policy intensifying over time as political pressure
-% to reduce migration numbers grew.
-%
-% Theater ratio over time (metric substitution):
-narrative_ontology:measurement(uk_student_visa_dependents_tr_t0, uk_student_visa_dependents, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(uk_student_visa_dependents_tr_t5, uk_student_visa_dependents, theater_ratio, 5, 0.35).
-narrative_ontology:measurement(uk_student_visa_dependents_tr_t10, uk_student_visa_dependents, theater_ratio, 10, 0.40).
+% Theater ratio over time
+narrative_ontology:measurement(uksvd_tr_t0, uk_student_visa_dependents, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(uksvd_tr_t2, uk_student_visa_dependents, theater_ratio, 2, 0.42).
+narrative_ontology:measurement(uksvd_tr_t4, uk_student_visa_dependents, theater_ratio, 4, 0.48).
 
-% Extraction over time (extraction accumulation):
-narrative_ontology:measurement(uk_student_visa_dependents_ex_t0, uk_student_visa_dependents, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(uk_student_visa_dependents_ex_t5, uk_student_visa_dependents, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(uk_student_visa_dependents_ex_t10, uk_student_visa_dependents, base_extractiveness, 10, 0.55).
+% Extraction over time
+narrative_ontology:measurement(uksvd_be_t0, uk_student_visa_dependents, base_extractiveness, 0, 0.5).
+narrative_ontology:measurement(uksvd_be_t2, uk_student_visa_dependents, base_extractiveness, 2, 0.55).
+narrative_ontology:measurement(uksvd_be_t4, uk_student_visa_dependents, base_extractiveness, 4, 0.58).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This policy is a form of state enforcement.
 narrative_ontology:coordination_type(uk_student_visa_dependents, enforcement_mechanism).
+narrative_ontology:affects_constraint(uk_student_visa_dependents, uk_postgraduate_visa_points_system).
+narrative_ontology:affects_constraint(uk_student_visa_dependents, international_student_economic_impact).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The automatic derivation
-% from beneficiary/victim declarations and exit options (arbitrage vs.
-% constrained) accurately captures the structural dynamics between the
-% government, universities, and students.
+constraint_indexing:directionality_override(uk_student_visa_dependents, organized, 0.55).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "zombie_reasoning_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "zr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "The Zombie Reasoning Epistemic Snare",
+    "topic_domain": "philosophical/technological/ai_epistemology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "epistemic_commons",
+      "downstream_ai_safety_research",
+      "philosophical_clarity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 1: EPISTEMIC COMMONS (SNARE) \u2014 The collective understanding of AI reasoning is trapped in a semantic prison. Core terms ('reasoning,' 'evaluation,' 'selection') have been hollowed of meaning through constant loose usage. Cannot exit without coordinating wholesale redefinition. Bears full extraction cost: polluted terminology cascades into downstream safety research, policy debates, and philosophical clarity. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.99."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "AI Safety Researchers",
+      "comment": "PERSPECTIVE 2: AI SAFETY RESEARCHERS (SNARE) \u2014 Constrained by the need to use industry-standard terminology to be heard in policy and funding conversations, even when those terms are corrupted. Cannot build precise safety arguments without first fighting definitional battles. Career incentives punish semantic precision (sounds pedantic) and reward expedient reuse of loose terms. d\u22480.85, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "AI Developers and Product Teams",
+      "comment": "PERSPECTIVE 3: AI DEVELOPERS AND PRODUCT TEAMS (SNARE) \u2014 Constrained by marketing imperatives and investor expectations that require anthropomorphic framing ('our AI reasons,' 'it evaluates options'). Technical precision about token prediction, weight matrices, and next-token probability would undermine commercial narrative. Exit costs are high (equity value, product positioning). Extraction comes not from the loose terminology itself but from the suppression of more accurate descriptions that would complicate narrative. d\u22480.72, f(d)\u22481.10, \u03c3=1.2 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "AI Industry (Institutional Beneficiary)",
+      "comment": "PERSPECTIVE 4: AI INDUSTRY INSTITUTIONAL ACTOR (SNARE with Beneficiary Markup) \u2014 The loose terminology benefits the industry through narrative capture: ambiguous terms allow companies to claim reasoning/intelligence/agency while evading accountability mechanisms (which would apply if systems were accurately described as stochastic token generators). Institutional power is high; exit options are mobile (can shift framing at will). However, the classification remains SNARE because the industry's benefit is achieved entirely through suppression and concealment, not through genuine coordination. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. Negative \u03c7 indicates this actor is a beneficiary, but the constraint type (Snare) is determined by the structure's overall extractiveness and suppression, not by individual actor directionality."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Zombie Framing Detection)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / CIVILIZATIONAL VIEW (SNARE) \u2014 From a long-term perspective, the zombie reasoning snare is a variant of the classical philosophical zombie problem: we are using language that implies consciousness/agency/reasoning ('the model selected this option') while simultaneously denying the structural conditions that would justify those terms. The snare's extraction mechanism is epistemic corruption of the commons through performative use of capacities the systems provably lack. The snare persists because both vendors and non-expert audiences prefer the anthropomorphic framing. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22481.00."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "counterfactual_reasoning_boundary",
+      "question": "Does counterfactual reasoning \u2014 'if I hadn't been trained on this data, my outputs would differ' \u2014 constitute genuine reasoning or is it provably a structural inference over training conditions?",
+      "resolution_mechanism": "Mechanistic interpretability: reverse-engineer whether models perform explicit counterfactual simulation or merely express statistical associations learned from training data about what outputs correlate with hypothetical input changes",
+      "impact": "If provably structural inference: all reasoning talk is metaphor, snare classification confirmed globally. If evidence of genuine counterfactual generation: boundary between reasoning and inference becomes empirical question, not semantic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether counterfactual reasoning is genuine or purely structural inference"
+    },
+    {
+      "id": "philosopher_zombie_grounding",
+      "question": "Is the zombie reasoning snare a genuine instance of Chalmers' philosophical zombie problem, or is it merely loose terminology without metaphysical significance?",
+      "resolution_mechanism": "Philosophical analysis: if systems provably lack qualia and consciousness (hard problem assumptions), does using reasoning terminology constitute false ontological commitment? Or is it merely linguistic shorthand?",
+      "impact": "If metaphysically grounded: the snare corrupts our understanding of consciousness and agency. If merely linguistic: the snare's extraction is about technical precision, not philosophy of mind.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the zombie reasoning phenomenon is philosophically grounded or merely terminological"
+    },
+    {
+      "id": "commercial_framing_necessity",
+      "question": "Is anthropomorphic framing (reasoning, evaluation, selection) structurally necessary for AI product adoption and investor confidence, or could equivalent products achieve market success with accurate technical descriptions?",
+      "resolution_mechanism": "Comparative analysis: track product adoption and investor valuations for AI systems marketed with technical precision ('next-token predictor with in-context adaptation') vs anthropomorphic framing ('reasoning engine'). Conduct user studies on comprehension and trust.",
+      "impact": "If framing is necessary: the snare is unavoidable cost of current market structure. If not necessary: the snare is pure extraction engineered by vendor choice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether anthropomorphic framing is commercially necessary or engineered preference"
+    },
+    {
+      "id": "safety_precision_correlation",
+      "question": "Do AI safety interventions designed using precise terminology (token prediction, gradient descent, weight matrices) outperform those designed using loose terminology (reasoning, evaluation, selection)?",
+      "resolution_mechanism": "Empirical analysis: compare safety guardrail effectiveness and alignment robustness between teams using strict mechanistic language vs those using loose anthropomorphic language. Longitudinal tracking of safety failure rates.",
+      "impact": "If precision correlates with better safety: loose terminology is actively harmful to safety outcomes (increases snare severity). If uncorrelated: snare is epistemically bad but not safety-critical.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether semantic precision improves AI safety outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Rebecca Lowe's critique of zombie reasoning in AI discourse identifies a structural epistemic snare: the widespread loose use of terms like 'reasoning,' 'evaluating,' and 'selecting' has contaminated the shared vocabulary for discussing AI systems. These terms carry classical philosophical weight\u2014they imply agency, intentionality, and rational capacity\u2014yet are applied to systems whose architecture provably implements none of these properties. The snare operates by suppressing more accurate but less commercially palatable descriptions (token prediction, gradient descent, stochastic language generation) in favor of anthropomorphic framing that captures investor attention and user trust. This extraction of narrative value from the epistemic commons creates a cascading cost: downstream AI safety research, policy frameworks, and philosophical clarity all degrade as researchers are forced to either adopt corrupted terminology or spend effort fighting definitional battles. The constraint intensifies as AI systems become more commercially valuable and as market incentives push harder for simplified, anthropomorphic narratives.",
+    "key_agents": [
+      "Epistemic Commons: Primary victim (powerless/trapped) \u2014 shared vocabulary for technical and philosophical discourse about AI; cannot exit without coordinated redefinition",
+      "AI Safety Researchers: Secondary victim (moderate/constrained) \u2014 need precise terminology for safety arguments but face career and communication barriers to using it",
+      "AI Developers and Product Teams: Secondary victim (moderate/constrained) \u2014 technically constrained by marketing imperatives and investor expectations to use anthropomorphic framing",
+      "AI Industry (Institutional): Institutional beneficiary (powerful/mobile) \u2014 gains narrative capture and accountability evasion through loose terminology; suppresses more accurate descriptions",
+      "Philosophers and Cognitive Scientists: Secondary victim (moderate/mobile) \u2014 terminology corruption obscures genuine questions about consciousness, agency, and reasoning; can exit by maintaining private precise definitions but lose influence in AI discourse"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The snare extracts significant epistemic value through vocabulary corruption. Technical terms ('reasoning,' 'evaluation,' 'selection') are now permanently ambiguous in AI discourse, requiring defensive redefinition in every safety-critical discussion. The extraction is not maximally severe (0.70+) because alternative vocabularies still exist for technical teams who choose to use them \u2014 the suppression is not absolute. Suppression (0.68): High. Multiple mechanisms actively prevent escape: (1) Commercial narrative pressure from industry; (2) Media and public expectation for anthropomorphic simplification; (3) Cognitive ease of anthropomorphic framing vs. technical precision; (4) Career incentives that punish pedantry in policy discussions. Theater ratio (0.64): Moderate-high. The snare's primary mechanism is performative\u2014claiming reasoning without implementing reasoning. Anthropomorphic descriptions function as theater: they tell a story that sounds right (AI agents reason about options) while suppressing the mechanistic reality (next-token prediction via gradient descent). The theater has increased over the measurement interval as systems have become more commercially valuable and as industry has developed increasingly sophisticated anthropomorphic narratives.",
+    "perspectival_gap": "The epistemic commons and safety researchers perceive pure extraction and suppression (Snare). The AI industry perceives benefits (narrative capture, accountability evasion) but the classification remains Snare for industry perspective because those benefits are achieved through suppression, not coordination. The analytical observer risks naturalizing the snare as inevitable (you can't explain deep learning to investors without anthropomorphic framing) but mechanistic interpretability research is revealing the extent to which the snare is engineered choice rather than structural necessity. The perspectival gap here is not between rich and poor interpretations of the same phenomenon\u2014it is between accurate and corrupted descriptions of the systems themselves.",
+    "directionality_logic": "Epistemic commons: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Cannot exit; full extraction cost. AI safety researchers: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. Significant barriers but some agency (can publish with precise terminology in academic venues). AI industry: Beneficiary + mobile \u2192 d\u22480.15, f(d)\u2248-0.01. Can shift framing at will; benefits from loose terminology; negative \u03c7 indicates net beneficiary despite high institutional power. The snare classification is preserved at the structural level because the extraction is achieved through suppression of alternatives, not through coordination function.",
+    "mandatrophy_analysis": "The snare classification is confirmed by the presence of: (1) High extractiveness (0.58 > 0.46), (2) High suppression (0.68 > 0.60), (3) Identifiable victims (epistemic commons, safety researchers), (4) Minimal coordination function (the snare prevents coordination by corrupting shared vocabulary rather than enabling it). The mandatrophy does not arise here\u2014this is not a case where loose terminology could be salvaged as coordination. The constraint is pure extraction of narrative value from the epistemic commons, with suppression maintained by multiple independent mechanisms (commercial, cognitive, institutional). The measurement trajectory shows increasing theater (0.35\u21920.64) and increasing extractiveness (0.32\u21920.58) over the interval, indicating degradation rather than improvement\u2014the snare has intensified as industry has learned more sophisticated anthropomorphic narratives."
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_operationalization",
+      "anthropomorphism_attribution_bias",
+      "large_language_model_agency_illusion"
+    ],
+    "dual_formulation_note": "The zombie reasoning snare is upstream of several AI safety constraints. Its \u03b5=0.58 reflects the moderate but measurable epistemic corruption; downstream constraints (safety operationalization, attribution bias) have higher \u03b5 because they inherit the corrupted terminology and must either work around it or spend effort redefining terms. The family decomposes into: (1) the vocabulary corruption itself (this story, \u03b5=0.58, Snare); (2) mechanistic interpretability as counter-snare (separate story, would be Rope, \u03b5\u22480.15, focused on technical precision); (3) policy-level failure modes that result from imprecise terminology (separate story, \u03b5\u22480.65, Tangled Rope or Snare depending on institutional capture)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

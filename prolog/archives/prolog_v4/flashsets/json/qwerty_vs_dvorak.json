@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "qwerty_vs_dvorak",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "QWERTY vs. Dvorak Keyboard Layout: Technological Lock-in",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "qwerty_keyboard_manufacturers",
+      "typing_tutors_qwerty"
+    ],
+    "victims": [
+      "dvorak_keyboard_users",
+      "potential_dvorak_adopters",
+      "ergonomic_health_typing_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Potential Dvorak Adopters",
+      "comment": "Perspective 1: Potential Dvorak Adopters (Snare) - Face high switching costs (retraining, new keyboards), network effects (QWERTY familiarity), and limited support. They are essentially trapped in the QWERTY ecosystem. Maximum perceived extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Dvorak Keyboard Users",
+      "comment": "Perspective 2: Dvorak Keyboard Users (Tangled Rope) - Benefit from potentially faster typing speeds and ergonomic advantages but are constrained by QWERTY's dominance. They experience both coordination (small community) and extraction (compatibility issues)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "QWERTY Keyboard Manufacturers",
+      "comment": "Perspective 3: QWERTY Keyboard Manufacturers (Rope) - Benefit from the established standard, reducing manufacturing and marketing costs. They experience coordination, as their products are widely compatible and accepted. Arbitrage through continued sales"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Typing Tutors (QWERTY)",
+      "comment": "Perspective 4: Typing Tutors (QWERTY) - Benefit from the prevalence of QWERTY keyboards. Retraining is costly, but the status quo supports their business model. Constrained by the market, but benefiting from it too."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 5: Analytical Observer (Tangled Rope) - Observes the lock-in effect and the inefficiencies it creates. Views the situation as a mixed coordination and extraction problem due to network effects and switching costs."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ergonomic_benefit_magnitude",
+      "question": "What is the true magnitude of ergonomic benefits conferred by Dvorak vs QWERTY, accounting for individual variation?",
+      "resolution_mechanism": "Large-scale studies controlling for typing style, posture, and pre-existing conditions.",
+      "impact": "If Dvorak's benefits are substantial, stronger rationale for intervention. If marginal, the lock-in is less problematic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of ergonomic benefits of Dvorak"
+    },
+    {
+      "id": "retraining_cost_barrier",
+      "question": "How significant is the retraining cost for QWERTY users to switch to Dvorak?",
+      "resolution_mechanism": "Studies on learning curves, measuring time and effort required for proficient Dvorak typing.",
+      "impact": "High retraining cost reinforces the snare. Low retraining cost weakens the snare perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Significance of retraining cost"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The QWERTY keyboard layout, despite potential ergonomic and efficiency drawbacks compared to alternatives like Dvorak, has become entrenched due to network effects and switching costs. This creates a technological lock-in where the inferior standard persists. The constraint story analyses the dynamics from different perspectives.",
+    "key_agents": [
+      "Potential Dvorak Adopters: Primary target (powerless/trapped) - bear the cost of lock-in",
+      "Dvorak Keyboard Users: Moderate actors (moderate/constrained) - experience mixed benefits and costs",
+      "QWERTY Keyboard Manufacturers: Primary beneficiaries (institutional/arbitrage) - gain from the standard's dominance",
+      "Typing Tutors (QWERTY): Institutional actors (institutional/constrained) - benefit from training demands.",
+      "Ergonomic Health of the Typing Population: Victim of QWERTY's inefficiency."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. Potential Dvorak adopters face high switching costs, reinforcing QWERTY dominance. Suppression (0.70): High. Network effects and lack of widespread Dvorak support strongly suppress Dvorak adoption. Theater ratio (0.30): Low. Relatively little performative activity; the constraint's effects are largely structural.",
+    "perspectival_gap": "The perspectival gap arises from differing structural positions. Potential Dvorak adopters are trapped in QWERTY's dominance (Snare). QWERTY keyboard manufacturers and tutors benefit from the coordination it provides (Rope), while Dvorak users experience a mix of extraction (compatibility) and coordination (potential efficiency gains) (Tangled Rope).",
+    "directionality_logic": "Directionality is driven by the structural position. Potential adopters are targets and bear the cost, manufacturers are beneficiaries. Dvorak users have both costs and benefits, leading to a moderate directionality. The analytical observer sees the full picture."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "betamax_vs_vhs"
+    ]
+  },
+  "directionality_overrides": []
+}

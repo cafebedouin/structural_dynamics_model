@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: fcc_dji_covered_list
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-22
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_fcc_dji_covered_list, []).
@@ -40,9 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,23 +54,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: fcc_dji_covered_list
- *   human_readable: "FCC 'Covered List' Ban on DJI Drones"
- *   domain: technological/political
+ *   human_readable: FCC 'Covered List' Ban on DJI Drones
+ *   domain: technological/political/regulatory
  *
  * SUMMARY:
- *   The U.S. Federal Communications Commission (FCC) has placed SZ DJI
- *   Technology Co., a leading Chinese drone manufacturer, on its "Covered
- *   List," citing national security risks. This action prohibits the
- *   authorization of future DJI equipment, effectively banning their new
- *   products from the U.S. market. The constraint is a regulatory barrier
- *   that realigns the U.S. drone market away from Chinese technology, creating
- *   both beneficiaries (domestic competitors) and victims (DJI and U.S. users).
+ *   The FCC's 'Covered List' ban on DJI drones (announced 2024, enforced
+ *   2025-present) represents a deliberate regulatory intervention to decouple
+ *   U.S. drone supply chains from Chinese manufacturing and remove suspected
+ *   national security vulnerabilities. The constraint exhibits the core
+ *   mandatrophy tension: Is the ban primarily a coordination mechanism
+ *   (establishing supply-chain security and domestic innovation incentives)
+ *   or an extraction mechanism (transferring market value from DJI users to
+ *   domestic manufacturers)? The constraint demonstrates why indexical
+ *   classification is necessary. From a powerless commercial operator's
+ *   perspective (trapped exit), the ban is pure extraction — they lose their
+ *   preferred supplier with no transition period. From a domestic
+ *   manufacturer's perspective (arbitrage exit), the ban is pure coordination
+ *   — it solves their collective cost-competitiveness problem. From the
+ *   defense establishment's perspective (constrained by geopolitical risk),
+ *   the ban is mixed: genuine security coordination but also constrained by
+ *   retaliation risk. The theater ratio (0.65) reflects that the regulatory
+ *   framing emphasizes supply-chain security, but the actual distributional
+ *   logic is industrial policy — market protection for domestic firms under
+ *   the cover of national security.
  *
- * KEY AGENTS (by structural relationship):
- *   - DJI & US Drone Users: Primary targets (powerless/trapped) — bear the cost of lost market access and higher prices/fewer choices.
- *   - US Domestic Drone Manufacturers: Primary beneficiaries (institutional/arbitrage) — benefit from the elimination of a major competitor.
- *   - US National Security Agencies (FCC/DoD): Institutional beneficiaries & enforcers (institutional/constrained) — benefit from achieving a stated security policy goal.
- *   - Analytical Observer: Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Small Commercial Drone Operators: Primary victims (powerless/trapped) — cannot exit without massive capital reallocation or business closure; no transition period provided
+ *   - Agricultural & Precision Imaging Industry: Secondary victims (organized/constrained) — benefit from coordination but constrained by supplier substitution barriers
+ *   - DJI Commercial Operations: Primary victim (institutional/constrained) — loses U.S. market access; cannot negotiate grandfathering or transition
+ *   - Domestic Drone Manufacturers (Skydio, Altus, Auteryx): Primary beneficiaries (institutional/arbitrage) — gain market share redistribution and government preference
+ *   - U.S. Defense & Intelligence Establishment: Mixed institutional beneficiary (institutional/constrained) — gains supply-chain security but faces geopolitical retaliation risk
+ *   - FCC Regulatory Apparatus: Institutional implementer (institutional/constrained) — enforces a geopolitical decision; formal role is performative
+ *   - The Commercial Drone Transition Coalition: Organized temporary coordinator (organized/mobile) — industry groups see sunset horizon as domestic capabilities mature
  */
 
 /* ==========================================================================
@@ -77,109 +93,83 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(fcc_dji_covered_list, 0.52).
-domain_priors:suppression_score(fcc_dji_covered_list, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(fcc_dji_covered_list, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(fcc_dji_covered_list, 0.58).
+domain_priors:suppression_score(fcc_dji_covered_list, 0.72).
+domain_priors:theater_ratio(fcc_dji_covered_list, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(fcc_dji_covered_list, extractiveness, 0.52).
-narrative_ontology:constraint_metric(fcc_dji_covered_list, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(fcc_dji_covered_list, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(fcc_dji_covered_list, extractiveness, 0.58).
+narrative_ontology:constraint_metric(fcc_dji_covered_list, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(fcc_dji_covered_list, theater_ratio, 0.65).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(fcc_dji_covered_list, tangled_rope).
 narrative_ontology:human_readable(fcc_dji_covered_list, "FCC 'Covered List' Ban on DJI Drones").
-narrative_ontology:topic_domain(fcc_dji_covered_list, "technological/political").
+narrative_ontology:topic_domain(fcc_dji_covered_list, "technological/political/regulatory").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(fcc_dji_covered_list). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(fcc_dji_covered_list).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(fcc_dji_covered_list, us_domestic_drone_manufacturers).
-narrative_ontology:constraint_beneficiary(fcc_dji_covered_list, us_national_security_agencies).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(fcc_dji_covered_list, dji_technology_co).
-narrative_ontology:constraint_victim(fcc_dji_covered_list, us_drone_users).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(fcc_dji_covered_list, domestic_drone_manufacturers).
+narrative_ontology:constraint_beneficiary(fcc_dji_covered_list, u_s_defense_establishment).
+narrative_ontology:constraint_beneficiary(fcc_dji_covered_list, regulatory_enforcement_agencies).
+narrative_ontology:constraint_victim(fcc_dji_covered_list, dji_commercial_operations).
+narrative_ontology:constraint_victim(fcc_dji_covered_list, agricultural_users).
+narrative_ontology:constraint_victim(fcc_dji_covered_list, precision_filmmaking_industry).
+narrative_ontology:constraint_victim(fcc_dji_covered_list, small_commercial_drone_services).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1A: THE INDIVIDUAL USER (POWERLESS VICTIM)
-% Represents hobbyists or small businesses who relied on DJI. They are victims
-% with no ability to influence the policy and face higher costs for alternatives.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(fcc_dji_covered_list, tangled_rope,
+% PERSPECTIVE 1: SMALL COMMERCIAL DRONE OPERATOR (SNARE) — Trapped within the U.S. market with no viable alternative suppliers at comparable price-performance. DJI dominates affordable professional-grade drones; competitors exist but are substantially more expensive or functionally limited. Operators cannot exit without massive capital reallocation or business closure. Suppression is severe: ban enforcement includes seizure penalties, and no grandfathering or transition period was provided for existing DJI fleet operators. High extraction of accumulated business value.
+constraint_indexing:constraint_classification(fcc_dji_covered_list, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 1B: THE CORPORATE TARGET (DJI)
-% DJI is completely locked out of future market access. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(fcc_dji_covered_list, snare,
-    context(agent_power(powerful), % Powerful company, but powerless against state action
-            time_horizon(biographical),
-            exit_options(trapped),
+% PERSPECTIVE 2: AGRICULTURAL & PRECISION IMAGING INDUSTRY (TANGLED ROPE) — Organized actors (agricultural associations, surveying firms, film production guilds) benefit from coordination on supply-chain stability and regulatory clarity. But the ban constrains their choice set — they cannot easily substitute to non-DJI platforms at equivalent cost. They also face genuine coordination benefits from regulation that prevents malicious drone use and establishes safety standards. Requires active enforcement (FAA integration). Mixed extraction: lose preferred supplier, but gain regulatory clarity and coordination certainty.
+constraint_indexing:constraint_classification(fcc_dji_covered_list, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (US DRONE MANUFACTURERS)
-% A protected market is created for them. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+% PERSPECTIVE 3: DOMESTIC DRONE MANUFACTURERS & DEFENSE CONTRACTORS (ROPE) — Primary institutional beneficiary. Market protection through ban creates arbitrage opportunity: DJI market share redistributes to Auteryx, Skydio, Altus, and other U.S.-based firms. Benefits from supply-side coordination: government purchases, R&D subsidies, preferential procurement policies. Experiences constraint as pure coordination — the ban solves their collective action problem (competing with DJI's manufacturing cost advantage).
 constraint_indexing:constraint_classification(fcc_dji_covered_list, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Sees both the coordination (industrial/security policy) and the extraction
-% (costs to users/DJI), classifying it as a Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(fcc_dji_covered_list, snare,
+% PERSPECTIVE 4: U.S. DEFENSE & INTELLIGENCE ESTABLISHMENT (TANGLED ROPE) — Benefits from supply-chain security (reduces technical backdoor risk in civilian drone ecosystem). But constrained by geopolitical retaliation risk: China may retaliate with restrictions on U.S. tech exports or rare-earth mineral restrictions. Also constrained by enforcement burden — the ban requires ongoing verification and interagency coordination. The coordination function is genuine (supply-chain security, counter-espionage), but extraction is present (forcing costs onto civilian operators to achieve security margin that primarily benefits defense).
+constraint_indexing:constraint_classification(fcc_dji_covered_list, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: FCC REGULATORY APPARATUS (PITON) — The FCC exercises regulatory authority over spectrum and equipment certification, but the DJI ban is primarily driven by national security concerns (DoD/CFIUS), not spectrum management or RF safety. The FCC's formal institutional role in the ban is largely performative — the agency implements and enforces a geopolitical decision made elsewhere. Theater ratio is high because the regulatory framing (equipment safety, spectrum integrity) masks the underlying security rationale. Regulatory ritual persists through institutional necessity rather than functional necessity.
+constraint_indexing:constraint_classification(fcc_dji_covered_list, piton,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: COMMERCIAL DRONE INDUSTRY TRANSITION COALITION (SCAFFOLD) — Organized industry groups (drone manufacturers, user associations) see the ban as a temporary coordination mechanism with a sunset: alternative U.S.-based suppliers and open-source platforms are maturing. The ban provides a temporary (sunset ~5-10 years) protection window for domestic industry to scale manufacturing, reduce costs, and achieve feature parity with DJI. Beneficiaries: domestic manufacturers. Coordination function: supply-chain diversification. Theater is moderate because the transition goal is explicit. Suppression is high during the window but has a decay trajectory.
+constraint_indexing:constraint_classification(fcc_dji_covered_list, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / GEOPOLITICAL INEVITABILITY (MOUNTAIN) — From a civilizational perspective, supply-chain decoupling between the U.S. and China is treated as inevitable and structurally irreversible. The ban appears as an immutable law of late-stage great-power competition. However, this perspective risks naturalizing what is actually a contingent policy choice. The constraint is not a mountain — it is a deliberate regulatory intervention with observable distributional costs. The false summit reveals normalization of geopolitical extraction.
+constraint_indexing:constraint_classification(fcc_dji_covered_list, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE INSTITUTIONAL ENFORCER (FCC)
-% As an institutional actor and beneficiary, it sees a Rope. However, its exit
-% is constrained by political mandate, differentiating it from the commercial
-% beneficiaries who can arbitrage the situation.
-% The derived 'd' will be higher than for the domestic manufacturers but still low.
-constraint_indexing:constraint_classification(fcc_dji_covered_list, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
-% PERSPECTIVE 5: THE ORGANIZED END USER (E.G., PUBLIC SAFETY AGENCY)
-% This user is also a victim, facing higher costs and fewer options. Their
-% exit is constrained. Their perspective is a high-extraction Tangled Rope,
-% bordering on a Snare, as they may derive some secondary benefit from
-% using "secure" equipment but pay a direct cost.
-constraint_indexing:constraint_classification(fcc_dji_covered_list, tangled_rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -188,18 +178,17 @@ constraint_indexing:constraint_classification(fcc_dji_covered_list, tangled_rope
 :- begin_tests(fcc_dji_covered_list_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between a target (powerless user) and beneficiary (US mfg).
-    constraint_indexing:constraint_classification(fcc_dji_covered_list, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(fcc_dji_covered_list, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    true.
+    constraint_indexing:constraint_classification(fcc_dji_covered_list, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fcc_dji_covered_list, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(fcc_dji_covered_list, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(fcc_dji_covered_list, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_requirements_met) :-
-    narrative_ontology:constraint_beneficiary(fcc_dji_covered_list, _),
-    narrative_ontology:constraint_victim(fcc_dji_covered_list, _),
-    domain_priors:requires_active_enforcement(fcc_dji_covered_list).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(fcc_dji_covered_list, TR),
+    TR >= 0.70.
 
 :- end_tests(fcc_dji_covered_list_tests).
 
@@ -209,50 +198,16 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.52): Represents the significant economic value
- *     transferred. This includes the lost market share for DJI and the price
- *     premium US users will pay for domestically-sourced, potentially
- *     less-capable alternatives. It's a measure of the market distortion.
- *   - Suppression Score (0.75): The constraint is highly suppressive. It's a
- *     direct, state-enforced ban on the market leader, eliminating the primary
- *     alternative for many users based on price and performance.
- *   - Theater Ratio (0.20): While there's a performative element to national
- *     security posturing, the ban has direct, tangible market effects. It is
- *     primarily a functional regulatory action, not just for show.
+ *   Extractiveness (0.58): Moderately high. The ban redistributes significant market value ($1.5-2.5B annually estimated DJI U.S. revenue) to domestic manufacturers without full compensation to disrupted users. However, extractiveness is not maximal because genuine coordination benefits exist — supply-chain security reduces backdoor risk, and regulatory stability benefits organized operators. The value is extracted but with plausible justification. Suppression (0.72): High. Enforcement includes seized equipment, operation penalties, and no grandfathering for existing users. Barriers to exit are severe: no domestic alternatives achieve DJI's price-performance, open-source platforms are immature, and international procurement is restricted. Theater ratio (0.65): Moderate-high. The regulatory framing emphasizes spectrum safety and equipment certification (FCC's traditional mandate), but the actual driver is national security (DoD/CFIUS). The constraint is justified by security concerns that are difficult to independently verify. Regulatory theater has increased as the ban matured — enforcement shifted from equipment certification focus to geopolitical security rhetoric.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For US domestic drone manufacturers, the ban is a perfect
- *   Rope: it coordinates the market to their benefit, solving the collective
- *   action problem of competing against a dominant, state-backed foreign firm.
- *   For DJI and powerless US users, it is a Snare: a coercive measure that
- *   removes choice, increases costs, and extracts value with no reciprocal
- *   coordination benefit for them.
+ *   The core gap is between beneficiaries and victims. Beneficiaries (domestic manufacturers, defense establishment) experience the ban as legitimate coordination — it solves their collective action problem (DJI cost advantage, supply-chain security). Victims (commercial operators, DJI) experience it as pure extraction — loss of market access with no transition or compensation. The organized intermediate actors (agricultural industry, transition coalition) perceive mixed extraction — loss of supplier choice but gain of regulatory clarity. The gap is irreducible because it reflects genuine asymmetry in exit options and distributional impact, not measurement uncertainty. The constraint is truly a tangled rope: it exhibits both real coordination function (supply-chain security, regulatory clarity) and real extraction (market redistribution without compensation).
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is clear and asymmetric.
- *   - Beneficiaries: `us_domestic_drone_manufacturers` and
- *     `us_national_security_agencies`. They gain market share and achieve policy
- *     goals, respectively. They have `arbitrage` or `constrained` exit options.
- *   - Victims: `dji_technology_co` and `us_drone_users`. They lose market
- *     access and economic surplus. Their `trapped` or `constrained` exit
- *     options lead to high `d` values, resulting in high effective
- *     extraction (χ).
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The model distinguishes between the commercial beneficiary (US manufacturers)
- *   and the institutional enforcer (FCC). Both are beneficiaries and see a Rope.
- *   However, the FCC has `constrained` exit due to its public mandate and the
- *   political capital invested, while the manufacturers have `arbitrage` exit
- *   as they are free to exploit the newly protected market. This nuance is
- *   captured by the engine's directionality derivation without needing an override.
+ *   Directionality values are derived from structural positions relative to the extraction flow. Commercial operators are trapped victims (d ≈ 0.90): high directionality toward target, high experienced extraction. Domestic manufacturers are beneficiaries with arbitrage options (d ≈ 0.10): low directionality, negative experienced extraction. The defense establishment occupies a liminal position: structural beneficiary (supply-chain security) but constrained by geopolitical risk (d ≈ 0.55). Institutional agents with constrained exit options (organized industry groups, FCC apparatus) occupy d ≈ 0.50-0.65: mixed extraction. The derivation chain priority is: (1) explicit override (none declared), (2) structural derivation from beneficiary/victim + exit options, (3) canonical fallback. Most perspectives use structural derivation — the differentiation comes from heterogeneous exit options across agents.
  *
  * MANDATROPHY ANALYSIS:
- *   The Tangled Rope classification is crucial here. Labeling this a pure Snare
- *   (protectionism) would ignore the genuine (or at least claimed) coordination
- *   function around national security. Labeling it a pure Rope (security standard)
- *   would ignore the massive, asymmetric costs imposed on specific parties.
- *   The Tangled Rope classification correctly identifies it as a hybrid policy
- *   where a coordination goal is used to justify significant extraction.
+ *   MANDATROPHY UNRESOLVED: This constraint exhibits the core mandatrophy — the classification is contingent on which framing dominates. If the supply-chain security benefit is treated as primary, the ban is justified as a tangled rope: real coordination (security) with justified extraction (transitional cost). If the market redistribution is treated as primary, the ban is a snare with security theater — the security justification masks industrial policy. The constraint does not resolve mandatrophy because the empirical facts underdetermining the classification are genuinely unresolved: (1) the quantified magnitude of DJI backdoor risk is classified and not independently verifiable, (2) the cost-benefit of the ban relative to alternative security policies (firmware inspection, U.S.-based software layer, hardware escrow) is not transparent, (3) the transition timeline for domestic suppliers to achieve parity is uncertain. The mandate ambiguity persists because decision-makers have not revealed their true cost-benefit calculation. Transparency on the threat assessment would resolve the mandatrophy toward either justified tangled rope (threat confirmed) or security theater snare (threat speculative). Without such transparency, the constraint remains in mandatrophy superposition.
  */
 
 /* ==========================================================================
@@ -260,58 +215,84 @@ test(tangled_rope_gate_requirements_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_fcc_dji_covered_list,
-    'Is the national security threat posed by DJI drones substantial and unique, or is it primarily a pretext for industrial protectionism?',
-    'Declassified intelligence assessments or verifiable, independent third-party hardware/software tear-downs that demonstrate data exfiltration capabilities.',
-    'If the threat is real and severe, the coordination function is primary, validating the Tangled Rope classification. If the threat is minimal or pretextual, the constraint is functionally a Snare disguised as a Tangled Rope.',
+    alternative_supplier_emergence_timeline,
+    'Will domestic drone manufacturers achieve genuine feature/cost parity with DJI platforms within 5-7 years, or will the ban persist indefinitely due to cost asymmetries?',
+    'Track Skydio, Altus, Auteryx technical specifications and pricing trajectory; measure market share recovery for domestic brands post-ban; assess manufacturing cost drivers',
+    'If parity achieved: scaffold sunset is real, ban transitions to maintenance-only enforcement. If parity not achieved: ban becomes permanent snare for commercial users, and the ''temporary protection'' framing was always false.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(alternative_supplier_emergence_timeline, empirical, 'Timeline for domestic drone manufacturers to achieve feature/cost parity with DJI').
+
+omega_variable(
+    supply_chain_security_threat_magnitude,
+    'What is the quantified risk of DJI hardware/software backdoors for U.S. national security, and how large is the actual threat compared to the justified policy response?',
+    'CFIUS threat assessments; NSA/NRO technical analysis of DJI firmware; comparative risk analysis of alternative drone platforms; evidence of actual compromised data collection',
+    'If threat is substantial and well-documented: defense extraction is justified, tangled_rope classification confirmed. If threat is speculative or asymmetric relative to response: ban represents security theater masking economic protectionism, snare classification applies to both users and defense establishment.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(supply_chain_security_threat_magnitude, empirical, 'Quantified national security risk from DJI supply chain vulnerabilities').
+
+omega_variable(
+    distributional_cost_allocation,
+    'How much economic value is extracted from commercial users vs distributed to domestic manufacturers through the ban, and is the allocation justified by coordination benefits?',
+    'Industry loss surveys; competitive bid analysis; market cap redistribution in domestic drone sector; comparison to alternative security policies (e.g., firmware inspection, U.S.-based software layer)',
+    'If cost redistribution is proportional to security benefit: tangled_rope. If extraction vastly exceeds coordination benefit: snare for users, institutional rent-seeking for beneficiaries.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(distributional_cost_allocation, empirical, 'Economic value extraction from commercial users vs benefit to domestic manufacturers').
+
+omega_variable(
+    geopolitical_retaliation_risk,
+    'Will China retaliate with restrictions on U.S. technology exports (semicondulators, software, rare earths), and will the cost of retaliation exceed the security benefit of the DJI ban?',
+    'Trade negotiations analysis; retaliatory action observed post-ban; economic impact assessment; semiconductor supply disruption modeling',
+    'If retaliation is severe: defense establishment bears extraction costs (constraint becomes tangled_rope for them too), and the ban''s net security benefit becomes negative. If retaliation is minimal: extraction flows to domestic manufacturers as intended, ban remains justified.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(geopolitical_retaliation_risk, empirical, 'Likelihood and magnitude of Chinese retaliation against U.S. technology exports').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(fcc_dji_covered_list, 0, 10).
+narrative_ontology:interval(fcc_dji_covered_list, 0, 5).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint intensified over time, moving from concern to active ban.
-% Since base_extractiveness (0.52) > 0.46, temporal data is required.
+% Theater ratio over time
+narrative_ontology:measurement(fcc_dji_tr_t0, fcc_dji_covered_list, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(fcc_dji_tr_t2, fcc_dji_covered_list, theater_ratio, 2, 0.58).
+narrative_ontology:measurement(fcc_dji_tr_t5, fcc_dji_covered_list, theater_ratio, 5, 0.65).
 
-% Theater ratio over time (remains low as actions are functional):
-narrative_ontology:measurement(fcc_dji_covered_list_tr_t0, fcc_dji_covered_list, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(fcc_dji_covered_list_tr_t5, fcc_dji_covered_list, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(fcc_dji_covered_list_tr_t10, fcc_dji_covered_list, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(fcc_dji_be_t0, fcc_dji_covered_list, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(fcc_dji_be_t2, fcc_dji_covered_list, base_extractiveness, 2, 0.55).
+narrative_ontology:measurement(fcc_dji_be_t5, fcc_dji_covered_list, base_extractiveness, 5, 0.58).
 
-% Extraction over time (grows as restrictions become binding):
-narrative_ontology:measurement(fcc_dji_covered_list_ex_t0, fcc_dji_covered_list, base_extractiveness, 0, 0.20). % t=0: Initial security concerns, minor market impact
-narrative_ontology:measurement(fcc_dji_covered_list_ex_t5, fcc_dji_covered_list, base_extractiveness, 5, 0.35). % t=5: DoD ban, growing pressure
-narrative_ontology:measurement(fcc_dji_covered_list_ex_t10, fcc_dji_covered_list, base_extractiveness, 10, 0.52).% t=10: Full FCC Covered List ban
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This regulation is a mechanism to enforce a specific security policy.
 narrative_ontology:coordination_type(fcc_dji_covered_list, enforcement_mechanism).
+narrative_ontology:affects_constraint(fcc_dji_covered_list, semiconductor_supply_chain_decoupling).
+narrative_ontology:affects_constraint(fcc_dji_covered_list, rare_earth_supply_security).
+narrative_ontology:affects_constraint(fcc_dji_covered_list, defense_contractor_procurement_preference).
 
-% Network relationships (structural influence edges)
-% This action is part of a broader strategy of technological decoupling from China.
-narrative_ontology:affects_constraint(fcc_dji_covered_list, tech_decoupling_strategy). % Hypothetical parent constraint
-narrative_ontology:affects_constraint(fcc_dji_covered_list, semiconductor_supply_chain_resilience).
+% DUAL FORMULATION NOTE:
+% The FCC DJI ban represents a downstream enforcement mechanism in a broader constraint family: supply-chain decoupling between the U.S. and China. The semiconductor_supply_chain_decoupling constraint has ε ≈ 0.35 (Rope: pure coordination on redesign and domestic fab development). The DJI ban has ε ≈ 0.58 (Tangled Rope: both coordination and extraction). The family hierarchy reflects that the upstream constraint (semiconductor) is a coordination solution, while the downstream constraint (DJI) is a mixed mechanism that leverages coordination rhetoric to justify extraction.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this story. The standard derivation chain,
-% using the declared beneficiary/victim groups and the specified exit_options
-% for each perspective, accurately models the directionality of the constraint
-% for all key agents.
+constraint_indexing:directionality_override(fcc_dji_covered_list, institutional, 0.52).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "overton_window",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Overton Window of Political Discourse",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "political_elites",
+      "media_outlets"
+    ],
+    "victims": [
+      "fringe_groups",
+      "public_discourse_quality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Fringe Groups",
+      "comment": "Fringe groups are trapped as their views are suppressed, limiting their access to mainstream discourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "General Public",
+      "comment": "The general public is constrained by the limited range of acceptable discourse, but also benefits from the perceived stability and consensus offered by the Overton Window."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Political Elites",
+      "comment": "Political elites benefit by shaping the discourse, maintaining power and control over the range of acceptable policies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Media Outlets",
+      "comment": "Media outlets benefit from increased viewership and influence by amplifying views within the Overton Window, but are constrained by the need to maintain perceived objectivity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a broad analytical perspective, the Overton Window reflects the interplay of power, discourse, and social acceptability, highlighting the manufactured nature of political consensus."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "window_definition",
+      "question": "What are the specific mechanisms by which the Overton Window is defined and maintained?",
+      "resolution_mechanism": "Analysis of media coverage, policy debates, and public opinion surveys.",
+      "impact": "Understanding the specific mechanisms will reveal whether the Overton Window is a naturally occurring phenomenon or actively manipulated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Defines mechanisms behind window definition."
+    },
+    {
+      "id": "elite_influence",
+      "question": "To what extent do political and economic elites influence the Overton Window?",
+      "resolution_mechanism": "Examination of lobbying efforts, campaign finance data, and media ownership patterns.",
+      "impact": "Determining the extent of elite influence will reveal whether the Overton Window primarily serves the interests of the powerful or the general public.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifies influence by elites"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Overton Window, representing the range of acceptable political ideas, shapes public discourse. Political elites and media outlets benefit by controlling the narrative, while fringe groups and the quality of public discourse suffer due to suppression of alternative viewpoints.",
+    "key_agents": [
+      "Political Elites: (institutional/arbitrage) Primary beneficiaries, shaping the window.",
+      "Media Outlets: (powerful/mobile) Amplifying and reinforcing acceptable views.",
+      "Fringe Groups: (powerless/trapped) Victims of suppression, unable to access mainstream discourse.",
+      "Public Discourse Quality: (powerless/trapped) Suffers from the limitation of acceptable ideas."
+    ],
+    "logic_rationale": "The Overton Window extracts from fringe groups and the quality of public discourse (0.60) through suppression (0.70). It benefits political elites and media outlets by solidifying their power and influence, but also requires active enforcement to maintain the boundaries of acceptable discourse. The low theater ratio (0.30) suggests that while some performative elements exist, the enforcement is largely structural and ongoing.",
+    "perspectival_gap": "Fringe groups experience the Overton Window as a snare, as it limits their access to mainstream discourse and suppresses their views. The general public, media outlets and political elites experience it differently depending on their power level and exit options.",
+    "directionality_logic": "Political elites are beneficiaries as they shape the range of acceptable political ideas, enhancing their power. Media outlets benefit by amplifying those views. Fringe groups are victims as the scope limits their access to mainstream discourse. The analytical observer can assess both the benefits and the extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

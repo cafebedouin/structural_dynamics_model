@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "individual_vs_systemic_causation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ivsc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Individual vs. Systemic Causation Attribution in Public Health Policy",
+    "topic_domain": "public_health/policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "healthcare_industry",
+      "private_insurers",
+      "pharmaceutical_companies"
+    ],
+    "victims": [
+      "low_income_populations",
+      "structurally_marginalized_groups",
+      "systemic_health_equity_improvements"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Patient (Individual Blame)",
+      "comment": "PERSPECTIVE 1: LOW-INCOME PATIENT / INDIVIDUAL BLAME FRAME (SNARE) \u2014 Trapped by attribution logic that localizes causation to personal choices (diet, exercise, medication adherence) while structural barriers (food deserts, work schedules, medication costs) remain invisible. Cannot exit the framework without losing access to care. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Community Health Worker (Mixed Coordination-Extraction)",
+      "comment": "PERSPECTIVE 2: COMMUNITY HEALTH WORKER (TANGLED ROPE) \u2014 Experiences real coordination benefit (programs that target behavioral change DO improve health outcomes) but constrained by the individual-blame framework that limits intervention scope and funding. Must work within attribution logic that excludes structural interventions. d\u22480.68, f(d)\u22481.02, \u03c3=0.9 \u2192 \u03c7\u22480.54."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Healthcare Industry (Beneficiary Perspective)",
+      "comment": "PERSPECTIVE 3: HEALTHCARE INDUSTRY / PHARMACEUTICAL SECTOR (ROPE) \u2014 Benefits from individual-blame attribution that generates demand for behavioral interventions, medications, and diagnostic services. Experiences the constraint as coordination: communication of health messaging enables market alignment. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Health Bureaucracy (Degraded Mandate)",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH BUREAUCRACY (PITON) \u2014 Maintains individual-blame framing through institutional inertia despite decades of epidemiological evidence for structural determinants. Theater ratio (0.68) reflects that much public health messaging (personal responsibility campaigns, risk factor reduction) is performative \u2014 addressing individual factors while excluding systemic interventions from policy consideration. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Health Equity Movement (Structural Attribution Pathway)",
+      "comment": "PERSPECTIVE 5: HEALTH EQUITY MOVEMENT / ORGANIZED ADVOCATES (SCAFFOLD) \u2014 Organized actors (health equity networks, social epidemiology groups, community organizing) are building alternative attribution frameworks (social determinants of health, structural racism, policy analysis) that enable systemic interventions. See the individual-blame constraint as temporary, with sunset logic: as structural attribution gains institutional legitimacy (in academia, funders, clinical training), the exclusive dominance of individual-blame framing declines. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Causation Structure)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CIVILIZATIONAL VIEW (MOUNTAIN) \u2014 From a universal perspective, causation in health outcomes IS genuinely multi-level: individual biology, behavioral choices, social environment, policy, and historical context all operate. No single level is 'the' cause. However, the structural data (\u03b5=0.58, suppression=0.65) contradicts the mountain classification \u2014 the constraint is not about causation complexity itself but about the institutional choice to elevate individual attribution while suppressing structural attribution. False summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attribution_counterfactual",
+      "question": "What is the true causal share: what fraction of health disparities would remain if individual behavioral differences were eliminated, holding structural conditions constant?",
+      "resolution_mechanism": "Natural experiments (policy changes that alter structure while controlling for behavioral factors); instrumental variable estimation; synthetic cohort analysis across jurisdictions with different structural policies but similar baseline populations",
+      "impact": "If >70% of disparities remain: individual-blame framing is severely inadequate, and the constraint is pure extraction (Snare from all perspectives). If <30%: individual factors are primary, and the constraint may be justified coordination (Rope from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal share of structural vs. individual factors in health disparities"
+    },
+    {
+      "id": "intervention_counterfactual",
+      "question": "What is the relative effectiveness (cost per health outcome gained) of behavioral interventions vs. structural interventions? Does the individual-blame framing allocate resources sub-optimally?",
+      "resolution_mechanism": "Meta-analysis of RCTs for behavioral interventions vs. policy natural experiments (e.g., Medicaid expansion, living wage policies, food environment regulations); cost-effectiveness comparison across intervention types",
+      "impact": "If structural interventions are substantially more effective: the individual-blame framing is extractive misdirection. If behavioral interventions dominate: the framing may reflect genuine causal priority.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative effectiveness of behavioral vs. structural health interventions"
+    },
+    {
+      "id": "institutional_capture_mechanism",
+      "question": "To what extent does the individual-blame framing persist because it aligns with the financial incentives of healthcare, pharmaceutical, and insurance industries (markets for behavioral interventions, pharmaceuticals) versus because of genuine scientific evidence?",
+      "resolution_mechanism": "Funding source analysis (who funds behavioral vs. structural research); citation network analysis (which framing dominates in funded vs. unfunded literature); comparison of attribution patterns in peer-reviewed journals vs. gray literature from equity-focused organizations",
+      "impact": "If capture is substantial: the constraint is a Snare from the powerless perspective and deliberate extraction (not false summit). If minimal: the framing reflects scientific consensus.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional capture in individual-blame attribution persistence"
+    },
+    {
+      "id": "temporal_sunset_mechanism",
+      "question": "Is the health equity movement's scaffold perspective realistic? What conditions would need to hold for structural attribution to substantially displace individual-blame framing within 20 years?",
+      "resolution_mechanism": "Trend analysis of funding (NIH, foundations) by research type; curricular analysis (public health, medical schools) for social determinants content; policy adoption rates for structural interventions (e.g., housing policy, food policy linked to health)",
+      "impact": "If trends show structural attribution gaining ground: scaffold perspective is accurate and sunset is real. If individual-blame remains hegemonic: the equity movement is aspirational, and the constraint is more extractive than the scaffold framing suggests.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility and timeline of structural attribution displacement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The individual-vs.-systemic causation distinction in public health policy represents a structural constraint that shapes how health problems are defined, who bears responsibility for solutions, and which interventions receive resources. The constraint operates as a classic Tangled Rope: it contains genuine coordination benefits (individual behavior change does improve health outcomes; behavioral messaging systems enable aligned action), but it is simultaneously an extraction mechanism that protects the financial interests of healthcare and pharmaceutical industries by misdirecting causal attribution away from structural interventions that would require policy change and potentially reduce industry revenue. The same structural phenomenon appears as pure extraction (Snare) to powerless patients blamed for outcomes they cannot individually change; as a degraded ritual (Piton) to public health bureaucrats who know individual-blame framing is insufficient but maintain it through institutional inertia; as legitimate beneficiary coordination (Rope) to the healthcare industry; and as a temporary problem being solved (Scaffold) to organized health equity advocates building alternative attribution frameworks. The theater ratio (0.68) reflects that public health campaigns emphasizing personal responsibility operate substantially as performance: the campaigns are highly visible, blame individuals prominently, but produce minimal health gains relative to their messaging reach \u2014 in the Goodhart sense that communicating the message becomes the metric replacing actual health improvement.",
+    "key_agents": [
+      "Low-income and structurally marginalized populations: Primary victims (powerless/trapped) \u2014 bear health consequences while absorbing individual blame for structural barriers",
+      "Healthcare industry and pharmaceutical companies: Primary beneficiaries (institutional/arbitrage) \u2014 generate demand for behavioral and pharmaceutical interventions under individual-blame framing",
+      "Private insurers: Secondary beneficiaries (institutional/arbitrage) \u2014 reduce coverage obligations by attributing adverse outcomes to individual non-compliance rather than inadequate coverage",
+      "Community health workers: Secondary victims (moderate/constrained) \u2014 work within individual-blame framework that limits scope and effectiveness of their interventions",
+      "Public health agencies and departments: Institutional actors (institutional/constrained) \u2014 maintain individual-blame framing through inertia despite epidemiological evidence for structural determinants",
+      "Health equity movement and advocates: Organized agents (organized/mobile) \u2014 building alternative structural attribution frameworks and pushing for policy-level interventions",
+      "Epidemiologists and social epidemiology researchers: Analytical observers (analytical/analytical) \u2014 produce evidence that contradicts individual-blame framing but face institutional and funding pressures"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The individual-blame framing generates substantial extraction from powerless populations through misdirection of causal attribution. Patients internalize responsibility for outcomes driven by structural factors they cannot control (food insecurity, environmental toxins, economic stress). The healthcare and pharmaceutical industries benefit by positioning themselves as solution providers to individual failings rather than structural problems. However, extraction is not maximal (\u03b5 would exceed 0.70) because individual behavior does genuinely affect health outcomes \u2014 the constraint is not pure fiction. The individual-blame framing selectively amplifies one real causal mechanism while suppressing others, creating selective extraction. Suppression (0.65): Moderate-high. Significant barriers prevent structural attribution from entering mainstream policy discourse: (1) Institutional resistance from industries benefiting from individual-blame framing; (2) Training systems in medicine and public health prioritize clinical and behavioral models over policy and structural analysis; (3) Funding mechanisms favor behavioral and pharmaceutical research over social determinants research; (4) Media and health communication systems amplify individual-responsibility messaging. These barriers are not insurmountable \u2014 evidence for structural determinants has accumulated for decades \u2014 but they create substantial friction against alternative framings. Theater ratio (0.68): Moderate-high. Public health campaigns emphasizing personal responsibility and lifestyle modification are highly visible and communicate clear messages, but their actual health impact is modest relative to the communication intensity. The campaigns function performatively: they demonstrate government action on health, generate media attention, and provide visible activity that can be quantified (campaigns launched, messages distributed), while structural interventions that would actually address root causes (income policy, housing policy, environmental regulation) remain politically difficult and are underutilized. The theater has increased over the 50-year interval as individual-blame framing has become more entrenched, while structural approaches remain marginalized.",
+    "perspectival_gap": "The perspectival gap is extreme. The powerless patient (Snare perspective) experiences the constraint as pure extraction: blamed for outcomes driven by structural factors beyond individual control. The beneficiary (Rope perspective) experiences coordination: behavioral change messaging aligns individual and industry interests. The public health bureaucracy (Piton perspective) experiences a degraded ritual maintained through inertia: they know the framing is insufficient but lack political will to challenge it. The health equity movement (Scaffold perspective) experiences a temporary problem being solved: structural attribution is gaining ground in academia, funders are slowly shifting, and 20-year sunset logic is plausible. The civilization-scale observer (Mountain perspective) risks naturalizing the constraint as inherent to causation itself \u2014 'causation is complex, everyone has a role to play' \u2014 but this false summit obscures the institutional choice to elevate individual attribution while suppressing structural attribution.",
+    "directionality_logic": "Low-income patients: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. They cannot exit individual-blame framing without losing access to healthcare messaging and interventions. Healthcare industry: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. They can arbitrage the constraint (shift resources, fund alternative research) but choose not to because individual-blame framing aligns with revenue. Public health bureaucracy: Institutional + constrained \u2192 d\u22480.55, f(d)\u22480.75. Constrained by political economy but not as constrained as powerless populations. They could advocate for structural interventions but face career and institutional risk. Health equity movement: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.30. Mobile agents with alternatives (can fund structural research, build parallel institutions). Lower effective extraction because they have agency. Epidemiologists: Analytical \u2192 d\u22480.70, f(d)\u22481.12. Moderate extraction \u2014 they produce evidence that contradicts the framing but face institutional pressure not to publicize contradictions.",
+    "mandatrophy_analysis": "TANGLED ROPE GATE VERIFICATION: (1) Beneficiaries declared (healthcare_industry, private_insurers, pharmaceutical_companies) \u2713. (2) Victims declared (low_income_populations, structurally_marginalized_groups) \u2713. (3) Active enforcement required (true) \u2713. (4) Genuine coordination function: YES. Individual behavior does affect health outcomes. Behavioral messaging systems do enable coordination of health-promoting actions. This is not manufactured. (5) Asymmetric extraction: YES. The framing selectively amplifies individual causation while suppressing structural causation, creating extraction from powerless populations who internalize responsibility. The constraint is NOT pure coordination (Rope) because the beneficiaries maintain the individual-blame framing BECAUSE it extracts \u2014 they block structural interventions that would be more effective but cost them revenue. The constraint is NOT pure extraction (Snare) because the coordination function is real and the beneficiaries genuinely profit from the messaging's behavioral effects, not from preventing alternatives. The mandatrophy is resolved: Tangled Rope is the correct classification from the analytical observer perspective. The false summit (Mountain) that claims 'causation is inherently complex' is correctly identified as false \u2014 the constraint is not about causation complexity but about institutional choice to privilege certain causal levels over others."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "health_equity_metric_definition",
+      "pharmaceutical_marketing_regulation",
+      "structural_poverty_policy"
+    ],
+    "dual_formulation_note": "The individual-vs.-systemic causation attribution constraint is upstream of specific health outcome disparities. It establishes the explanatory frame within which public health problems are understood. Downstream constraints (health equity metrics, pharmaceutical marketing, poverty policy) are affected by whether causation is attributed to individual or structural factors."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

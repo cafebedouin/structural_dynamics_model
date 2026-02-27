@@ -2,80 +2,146 @@
   "header": {
     "constraint_id": "banach_fixed_point",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bfp"
   },
   "base_properties": {
-    "extractiveness": 0.02,
-    "suppression": 0.01,
-    "theater_ratio": 0.0,
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
     "claimed_type": "mountain",
     "human_readable": "Banach Fixed-Point Theorem",
     "topic_domain": "mathematical/logical",
     "emerges_naturally": true,
-    "accessibility_collapse": 0.98,
-    "resistance": 0.02
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
   },
   "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Applied Mathematician",
+      "comment": "PERSPECTIVE 1: APPLIED MATHEMATICIAN (MOUNTAIN) \u2014 Views the theorem as an inescapable constraint on iterative numerical methods. No agent can bypass the requirement that contraction mappings in complete metric spaces converge to unique fixed points. This is not negotiable, not enforced by external authority, not a policy \u2014 it is a structural property of mathematical space itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Numerical Algorithm Designer",
+      "comment": "PERSPECTIVE 2: NUMERICAL ALGORITHM DESIGNER (MOUNTAIN) \u2014 Must build iterative solvers that respect the contraction property or accept non-convergence. Cannot engineer around the theorem. The convergence guarantee is mathematically absolute \u2014 applies equally to all agents, contexts, and use cases. Zero degrees of freedom for alternative outcomes."
+    },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Pure Mathematician",
-      "comment": "PERSPECTIVE 1: ANALYTICAL (MOUNTAIN) — The theorem is a fundamental, unchangeable feature of the logical landscape of complete metric spaces. Its proof is rigorous and its conclusion inescapable. It has zero degrees of freedom."
+      "label": "The Theoretical Analyst",
+      "comment": "PERSPECTIVE 3: THEORETICAL ANALYST (MOUNTAIN) \u2014 The theorem is a logical consequence of metric space axioms. Its proof derives from first principles (completeness + contraction property \u2192 unique fixed point). No measurement ambiguity, no contextual dependence, no observational basis. The constraint emerges necessarily from the mathematical structure itself."
     },
     {
       "classification_type": "mountain",
       "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Applied Scientist",
-      "comment": "PERSPECTIVE 2: APPLIED SCIENTIST (MOUNTAIN) — For an engineer or economist, the theorem is a tool and a constraint. If its conditions are met, it guarantees convergence of an iterative process. If not, another tool must be found. The theorem itself cannot be altered; it is a fixed part of the environment."
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computational Engineering Team",
+      "comment": "PERSPECTIVE 4: COMPUTATIONAL ENGINEERING TEAM (MOUNTAIN) \u2014 Institutional agents designing large-scale numerical systems must respect Banach convergence. No enforcement mechanism needed \u2014 the theorem is self-enforcing through mathematical proof. Teams that violate the contraction property simply get non-converging algorithms. The constraint is intrinsic, not imposed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "constructive_validity",
+      "question": "Does the Banach Fixed-Point Theorem hold equally in constructive mathematics where existence and uniqueness must be computationally verifiable, or only in classical set theory where existence is postulated?",
+      "resolution_mechanism": "Formal verification in constructive proof systems (Coq, Agda) vs classical axiomatization; comparison of computational content vs abstract existence claims",
+      "impact": "If constructive validity is strict: the theorem is even more fundamental (works in both classical and constructive frameworks). If constructive validity is weakened: suggests the theorem's necessity depends on classical logical axioms, slightly reducing its mountain status.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Validity of the theorem in constructive vs classical mathematics"
     },
     {
-      "classification_type": "mountain",
-      "agent_power": "powerless",
-      "time_horizon": "immediate",
-      "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Student",
-      "comment": "PERSPECTIVE 3: STUDENT (MOUNTAIN) — A student learning the theorem for a course experiences it as an absolute, unchangeable fact that must be memorized and applied. There is no exit from its logical consequences within the context of the curriculum."
+      "id": "metric_space_necessity",
+      "question": "Can the theorem be generalized to non-metric spaces (e.g., partial orders, topological spaces) without losing its core guarantee of unique fixed-point existence?",
+      "resolution_mechanism": "Survey of generalizations to complete lattices, directed complete partial orders (dcpo), and category-theoretic fixed-point theorems; analysis of what structure minimally suffices for the guarantee",
+      "impact": "If generalizations preserve uniqueness guarantee: the theorem's essence is in the contraction principle itself, making the metric structure contingent. If metric structure is necessary: the theorem's mountain status is confirmed but with contingency on metric axioms.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Necessity of metric space structure for the theorem's core guarantee"
     },
     {
-      "classification_type": "mountain",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Academic Field",
-      "comment": "PERSPECTIVE 4: ACADEMIC FIELD (MOUNTAIN) — For fields like economics or computer science, the theorem is a foundational pillar upon which other structures (e.g., proofs of equilibrium existence, convergence of reinforcement learning algorithms) are built. It is a fixed point in the network of dependencies."
+      "id": "algorithmic_complexity",
+      "question": "Does the Banach theorem provide complexity bounds or only existence proofs? If complexity bounds are not constructive, how much practical constraint does the theorem exert on real computation?",
+      "resolution_mechanism": "Formal complexity analysis of contraction-based algorithms; comparison of worst-case convergence rates vs actual empirical performance across domains",
+      "impact": "If bounds are tight and always achieved: the theorem tightly constrains practical algorithms (stronger mountain). If bounds are loose and often beaten heuristically: the theorem guarantees structure but exerts weaker practical constraint (mountain status remains but with lower real-world extraction/suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tightness of complexity bounds provided by the theorem"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
     }
   ],
   "interval": {
-    "start": 1922,
-    "end": 2024
+    "start": 0,
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "The Banach Fixed-Point Theorem is a fundamental result in analysis that guarantees the existence and uniqueness of a fixed point for any contraction mapping on a complete metric space. First stated by Stefan Banach in 1922, it provides a constructive method for finding this point through iteration. As a proven mathematical theorem, it represents a logical certainty—an unchangeable feature of its defined mathematical domain. It is not a social convention or a physical law subject to revision, but a deductive conclusion from a set of axioms.",
+    "narrative_context": "The Banach Fixed-Point Theorem is a mathematical constraint of the first order: for any complete metric space and any contraction mapping on that space, there exists a unique fixed point that the iterative sequence converges toward. This constraint emerges necessarily from the axioms of metric spaces (completeness, distance properties) and the definition of a contraction mapping (Lipschitz constant < 1). No agent \u2014 individual mathematician, computational system, or institutional actor \u2014 can negotiate, suppress, or escape this constraint through policy, incentive, or force. The theorem is invariant across all observables and measurement methodologies. Its structure is identical whether viewed by a pure mathematician, an applied engineer, a computational team, or an external analyst. This makes the Banach Fixed-Point Theorem a canonical example of a Mountain constraint: a natural law that appears as an irreducible logical/mathematical limit. Unlike some purported 'natural laws' that turn out to be contingent institutional arrangements naturalized, the Banach theorem is genuinely immutable \u2014 its falsification would require overturning the axioms of metric space itself.",
     "key_agents": [
-      "Pure Mathematician (analytical/analytical): Views the theorem as an object of study and a fundamental truth within a logical system.",
-      "Applied Scientist (organized/mobile): Uses the theorem as a reliable tool to prove convergence or existence of solutions in models.",
-      "Student (powerless/trapped): Encounters the theorem as a non-negotiable piece of knowledge to be learned.",
-      "Academic Field (institutional/arbitrage): Relies on the theorem as a foundational support for more complex theories and models."
+      "Applied Mathematician: Agent applying the theorem to solve differential equations, optimization problems (analytical/universal view)",
+      "Numerical Algorithm Designer: Engineer building iterative solvers that must respect the contraction property (moderate/universal view)",
+      "Theoretical Analyst: Researcher who proves or extends the theorem; observes it as logical consequence (analytical/universal view)",
+      "Computational Engineering Team: Institutional actors designing large-scale numerical systems; constrained by convergence guarantees (organized/universal view)",
+      "The Mathematical Structure Itself: The constraint is self-enforcing through logical necessity; no external enforcer is needed"
     ],
-    "logic_rationale": "This constraint is a canonical example of a Mountain. Extractiveness (ε=0.02) and Suppression (0.01) are near zero, as a mathematical theorem does not extract value or coercively suppress alternatives; it simply describes what is logically necessary. Theater Ratio (0.0) is zero because the theorem is pure function with no performative aspect. The Natural Law profile is met: it `emerges_naturally` from axioms, has extremely high `accessibility_collapse` (0.98) as its proof is definitive, and extremely low `resistance` (0.02) as one cannot defy a logical proof.",
-    "perspectival_gap": "There is no perspectival gap. The theorem's classification is invariant across all possible observer positions. Whether viewed by a student, a researcher, or an entire academic field, it remains a Mountain. This invariance is the hallmark of constraints that represent logical or mathematical truths. The base properties are so low that even with maximal scaling from directionality and scope, the effective extraction (χ) remains far below any other classification threshold.",
-    "directionality_logic": "The concepts of 'beneficiary' and 'victim' do not apply to a mathematical theorem in a structural sense. While users of the theorem 'benefit' from its utility, this is not a structural extraction of value from a target group. The constraint is symmetric and non-extractive for all parties. The engine will use canonical fallbacks for directionality, but with ε ≈ 0, the resulting effective extraction χ is negligible regardless of the observer's power or exit options.",
-    "mandatrophy_analysis": "This constraint serves as a 'true summit' or baseline for the system, demonstrating a case where the Mountain classification is unambiguous and correct from all perspectives. It helps calibrate the system against the risk of mandatrophy (misclassifying a Snare as a Mountain). Unlike a 'false summit' where a contingent social arrangement is naturalized, the Banach Fixed-Point Theorem is a genuine, irreducible logical constraint. Its clean metric signature provides a clear contrast to the high-extraction, high-suppression signatures of Snares and Tangled Ropes."
+    "logic_rationale": "Base extractiveness (0.08): Very low. The theorem does not extract resources from any agent in the conventional sense. It does not redistribute from one group to another, nor does it require coercive enforcement. The minimal nonzero value (0.08 rather than 0.0) reflects that the theorem does impose a structural cost: agents must design algorithms that respect the contraction property, or face non-convergence. This is a cost of respect-for-structure rather than extraction in the sense of redistribution or asymmetric burden-bearing. Suppression (0.02): Near-zero. There are no suppression mechanisms because there are no alternatives to suppress. No agent is forced to accept this constraint against their will \u2014 it is not a coercive enforcement but a logical boundary. All agents equally find their options constrained by mathematical structure, not by suppression of preferred alternatives. Theater ratio (0.05): Near-zero. The theorem requires no performative maintenance or ritualistic affirmation. Its proof is transparent and verifiable; no agent benefits from obscuring or theatricalizing the constraint. The minimal value reflects that mathematical communication itself has a slight performative component (lectures, seminars, textbooks), but this is not functionally essential to the theorem's constraint \u2014 the structure would hold without any human communication. Accessibility collapse (0.92): Very high. The theorem is highly resistant to alternative interpretation or measurement basis. No matter how you measure iterative convergence in complete metric spaces, contraction mappings produce unique fixed points. The mathematical structure is maximally rigid. Resistance (0.08): Very low. There is no meaningful resistance to the theorem because there is no agent attempting to resist. Resistance here measures the difficulty of 'pushing back' against the constraint, which is zero \u2014 the constraint is not a social arrangement that can be opposed, but a logical limit.",
+    "perspectival_gap": "All four perspectives converge on the same classification: Mountain. There is no perspectival gap because the constraint's structure is invariant across all indices. The applied mathematician, the numerical designer, the theoretical analyst, and the institutional team all experience the same logical requirement with equal force. The theorem is as binding for a powerless individual as for an organized institution, as immediate as for a civilizational view, as locally constrained as globally universal. This invariance is the diagnostic signature of a true mountain: it appears the same from every structural position because it is not a social arrangement but a mathematical fact. The absence of perspectival gap is itself evidence that the constraint is not a snare (which would show extraction from powerless agents), not a rope (which would show coordination benefit), not a tangled rope (which would show asymmetric positions), not a scaffold (which would show temporal contingency), and not a piton (which would show theatrical maintenance). The convergence of six analytical perspectives on a single type is rare and diagnostically significant.",
+    "directionality_logic": "Directionality (d) is indeterminate for a mountain constraint because there are no beneficiaries or victims. The theorem does not redistribute resources from one agent to another; it constrains all agents equally by imposing a structural necessity. The canonical fallback directionality for the analytical agent is d \u2248 0.73, which produces f(d) \u2248 1.15, giving \u03c7 = 0.08 \u00d7 1.15 \u00d7 1.0 = 0.092. However, this computational step is largely formal for a mountain \u2014 the key insight is that d is not derived from relative advantage (beneficiary vs victim) but from the equal applicability of the constraint to all observers. The theorem's extraction value (\u03c7) is uniformly low for all agents not because some gain more advantage than others, but because the constraint is fundamentally non-extractive: it preserves or creates value (ensures convergence and uniqueness) rather than redistributing it."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "picard_lindelof_theorem",
-      "bellman_equation_convergence"
+      "picard_lindelof_existence",
+      "contraction_principle_general"
     ],
-    "dual_formulation_note": "The Banach Fixed-Point theorem is a general principle that provides the logical foundation for more specific constraints, such as the existence and uniqueness of solutions to certain differential equations (Picard-Lindelöf) or the convergence of value iteration in reinforcement learning."
-  }
+    "dual_formulation_note": "The Banach Fixed-Point Theorem is the foundational constraint in the contraction principle family. Picard-Lindel\u00f6f existence theorem for ODEs depends on Banach's theorem for its proof; contraction principles in more general structures (partial orders, category theory) generalize but do not weaken the Banach foundation. Banach is upstream; the others are structural dependents."
+  },
+  "directionality_overrides": []
 }

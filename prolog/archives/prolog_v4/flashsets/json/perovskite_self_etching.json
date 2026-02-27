@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "perovskite_self_etching",
+    "version": "1.0",
+    "generated_date": "2024-03-07",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 2D Perovskite Machinability Constraint",
+    "topic_domain": "technological/semiconductors",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "lithography_equipment_manufacturers",
+      "established_fabrication_facilities"
+    ],
+    "victims": [
+      "perovskite_startups",
+      "emerging_applications"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Perovskite Startups",
+      "comment": "Perovskite startups are trapped by the high cost and limited resolution of existing lithography techniques, hindering their ability to develop and scale novel device architectures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Established Fabrication Facilities",
+      "comment": "Established fabrication facilities benefit from existing lithography infrastructure but are constrained by its limitations when adapting it for perovskites. There is coordination in that they can continue to use their tools, but extraction in that they can't achieve the same level of resolution or throughput."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Lithography Equipment Manufacturers",
+      "comment": "Lithography equipment manufacturers benefit from continued demand for their existing tools, but have the arbitrage option of developing novel lithography techniques specifically for perovskites. They experience it as a coordination mechanism"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees a complex interplay between established infrastructure, emerging materials, and the limitations of current fabrication techniques. Extraction occurs, active enforcement maintains the dominance of existing approaches."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_etching_viability",
+      "question": "Will self-aligned etching or other alternative methods become viable at scale?",
+      "resolution_mechanism": "Demonstration of high-resolution patterning and scalability using alternative etching techniques.",
+      "impact": "If viable: constraint shifts towards rope, facilitating perovskite adoption. If not: snare persists, limiting perovskite applications.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative etching methods for perovskites."
+    },
+    {
+      "id": "materials_stability_limits",
+      "question": "What are the fundamental materials stability limits hindering dry etching?",
+      "resolution_mechanism": "Detailed studies on decomposition pathways during various dry-etch processes.",
+      "impact": "If limits are surmountable: can lead to new etch chemistries, and better adoption. If fundamental limitation: require changes in patterning strategy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Material stability against dry-etch process in perovskites."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the dominance of traditional, high-cost, and destructive lithography techniques when applied to soft lead halide perovskites. This limits the range of device architectures that can be manufactured. The high cost is the barrier that limits adoption by startups. Established lithography facilities are constrained by existing infrastructure.",
+    "key_agents": [
+      "Lithography Equipment Manufacturers: Beneficiaries (institutional/arbitrage) - Benefit from ongoing demand and new innovations to support perovskites.",
+      "Established Fabrication Facilities: Constrained users (moderate/constrained) - Benefit from existing tools, but limited resolution and throughput slows development.",
+      "Perovskite Startups: Primary victim (powerless/trapped) - Trapped by high costs and limited throughput of existing solutions.",
+      "Emerging Applications: Victim (abstract/trapped) - the applications are trapped by the cost and resolution limitations."
+    ],
+    "logic_rationale": "The extractiveness score (0.6) reflects the cost and throughput limitations of adapting existing lithography techniques, which limit the accessibility for emerging companies and novel perovskite device structures. Suppression of 0.7 captures the lack of alternatives due to materials instability to traditional dry etching processes. The theater ratio is low at 0.3 because the high cost of lithography is genuinely a limitation not merely for show.",
+    "perspectival_gap": "The lithography equipment manufacturers view the existing constraint as a coordination mechanism that allows for continued sales and innovation to support the novel material. While established fabs are constrained by existing machinery limitations, new startups are trapped without resolution to the cost. The analytical observer sees extraction happening and the market favoring a particular technique.",
+    "directionality_logic": "The directionality logic is calculated using the exit options. The powerful agents are the big lithography companies who have arbitrage. The victims are powerless because they are trapped by the current process. The fabrication facilities are constrained but are larger companies. The system maintains the extraction."
+  },
+  "network": {
+    "affects_constraints": [
+      "solar_cell_efficiency_limit",
+      "flexible_electronics_throughput"
+    ]
+  },
+  "directionality_overrides": []
+}

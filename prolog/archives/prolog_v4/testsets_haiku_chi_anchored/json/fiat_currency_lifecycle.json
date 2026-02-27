@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "fiat_currency_lifecycle",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fiat"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Lifecycle of a Fiat Currency",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "monetary_authority",
+      "early_adopters",
+      "incumbent_financial_institutions"
+    ],
+    "victims": [
+      "currency_savers",
+      "fixed_income_earners",
+      "late_stage_creditors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Currency Saver",
+      "comment": "PERSPECTIVE 1: CURRENCY SAVER (SNARE) \u2014 Trapped in the fiat system; cannot exit without abandoning accumulated savings or incurring transaction costs to convert to alternatives. Bears full extraction cost as currency depreciates. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.82."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Fixed-Income Earner",
+      "comment": "PERSPECTIVE 2: FIXED-INCOME EARNER (SNARE) \u2014 Receiving wages or pensions in nominal terms; cannot negotiate real (inflation-adjusted) compensation without collective action. Purchasing power erodes predictably. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Late-Stage Creditor",
+      "comment": "PERSPECTIVE 3: LATE-STAGE CREDITOR (SNARE) \u2014 Creditors who extended loans late in the currency lifecycle receive repayment in depreciated nominal units. Extraction via financial repression. d\u22480.75, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Monetary Authority",
+      "comment": "PERSPECTIVE 4: MONETARY AUTHORITY (ROPE) \u2014 Primary beneficiary. Controls currency creation, captures seigniorage. Experiences constraint as coordination mechanism: enabling government spending and stabilizing expectations (when credible). d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.07. Negative extraction = net benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Banking System",
+      "comment": "PERSPECTIVE 5: BANKING SYSTEM (TANGLED ROPE) \u2014 Benefits from access to central bank liquidity and seigniorage distribution (coordination function). Also extracts through financial intermediation and inflation pass-through advantages. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.28."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Fiat Currency Ritual",
+      "comment": "PERSPECTIVE 6: FIAT CURRENCY RITUAL (PITON) \u2014 From civilizational view, the constraint persists through institutional inertia and ceremonial maintenance (central bank communications, GDP reporting, inflation targeting rhetoric). The functional purpose (enabling government spending, coordinating economic activity) has atrophied; the ritual persists because no better alternative has fully displaced it globally. theater_ratio=0.68 satisfies piton gate. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.10."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Currency Coalition",
+      "comment": "PERSPECTIVE 7: ALTERNATIVE CURRENCY COALITION (SCAFFOLD) \u2014 Cryptocurrency, commodity-backed currencies, and multi-national currency unions represent organized agents building exit pathways (Bitcoin, gold, EUR/SDR). The fiat constraint becomes a temporary coordination failure with a sunset: as alternatives mature and network effects shift, the fiat system's extraction mechanism loses force. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.25. Lower extraction because coalition perceives and is building an exit path."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, risks seeing fiat currency lifecycle as immutable law of economics: all currencies eventually debase, all governments face fiscal pressures, all monetary systems are extraction mechanisms. However, the structural data (\u03b5=0.58, suppression=0.65, theater=0.68) contradicts mountain classification. The engine detects this as a false summit: the biological aging of fiat systems is not a natural law but a contingent institutional arrangement subject to policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inflation_v_monetary_expansion",
+      "question": "Is currency depreciation primarily driven by monetary expansion policy or by real economic forces (supply shocks, demographic transitions, productivity growth)?",
+      "resolution_mechanism": "Cross-national regression analysis of monetary base growth vs inflation; counterfactual simulation of alternative policy paths; comparative analysis of tight-monetary-policy regimes (Hong Kong peg, ECB) vs expansionary regimes",
+      "impact": "If monetary expansion dominates: snare classification confirmed \u2014 extraction is deliberate policy choice. If real forces dominate: constraint is coordination problem (rope) \u2014 monetary expansion is endogenous response to structural conditions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether inflation is driven by monetary policy choice or economic structure"
+    },
+    {
+      "id": "credibility_erosion_mechanism",
+      "question": "Does currency depreciation result from loss of credibility in the monetary authority's commitment to price stability, or from fundamental fiscal unsustainability (debt-to-GDP spiral)?",
+      "resolution_mechanism": "Central bank independence index analysis; historical episodes of successful disinflation (Volcker 1980s, ECB credibility); comparison with failed stabilization attempts; market expectation surveys",
+      "impact": "If credibility-driven: snare can be escaped through credible commitment rules (constrained exit becomes mobile). If fiscal-driven: creditors have no exit regardless of credibility \u2014 snare is irreducible at the fiscal level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether currency erosion is credibility-driven or fiscal-driven"
+    },
+    {
+      "id": "alternative_currency_adoption_feasibility",
+      "question": "Can decentralized alternatives (cryptocurrency, commodity baskets, synthetic units) achieve sufficient network effects and institutional acceptance to constitute a genuine exit option for currency savers?",
+      "resolution_mechanism": "Adoption curves of Bitcoin, stablecoins, and cross-border payment systems; regulatory capture patterns; transaction cost analysis vs fiat; volatility and store-of-value function comparison over 10+ year horizons",
+      "impact": "If feasible: scaffold sunset is real \u2014 fiat extraction mechanism weakens as alternatives mature (mobile exit emerges). If infeasible: powerless savers remain trapped \u2014 snare is structural and long-term.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternatives provide viable exit from fiat currency dependence"
+    },
+    {
+      "id": "seigniorage_distribution_equity",
+      "question": "Does seigniorage (the benefit of currency creation) actually flow to savers/taxpayers through lower debt burdens and public goods, or is it captured by early receivers and financial institutions through inflation pass-through asymmetries?",
+      "resolution_mechanism": "Distributional analysis of inflation incidence by income quintile; timing of wage/price adjustment; asset ownership correlation with inflation hedging; government spending allocation tracking",
+      "impact": "If equitably distributed: fiat currency is rope (coordination with benefits broadly shared). If captured: it is snare (extraction concentrated among beneficiaries). This is a preference/empirical hybrid \u2014 depends on measurement methodology and policy design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether seigniorage benefits are equitably distributed"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The lifecycle of a fiat currency exhibits a characteristic temporal progression from effective coordination mechanism (early stage: stable purchasing power, enabled government spending, facilitated trade) to increasingly extractive snare (late stage: predictable depreciation, financial repression of savers and creditors, theater-heavy central bank ritual). A fiat system begins with credible commitment: the monetary authority promises price stability and establishes expectations. Savers willingly hold currency; creditors lend at low real rates; the system coordinates economic activity. Over decades, fiscal pressures, political constraints, and demographic shifts accumulate. The monetary authority faces a choice: either impose real losses (austerity, default, currency appreciation) or gradually inflate. Most fiat systems choose inflation, which redistributes wealth from savers, fixed-income earners, and late-stage creditors to the monetary authority and early beneficiaries who can anticipate and arbitrage the depreciation. The theater increases as central banks develop increasingly sophisticated communication strategies (forward guidance, credibility signals, inflation targeting frameworks) to maintain expectations despite policy choices that undermine them. The constraint exemplifies how institutions degrade from genuine coordination to performative extraction, classified from different perspectives as rope, snare, piton, scaffold, and false-summit mountain depending on the observer's structural relationship and time horizon.",
+    "key_agents": [
+      "Monetary Authority: Primary beneficiary (institutional/arbitrage) \u2014 captures seigniorage; controls currency creation; early perspective sees coordination (Rope)",
+      "Currency Savers: Primary victim (powerless/trapped) \u2014 cannot exit; bears full extraction cost as purchasing power erodes",
+      "Fixed-Income Earners: Victim (moderate/constrained) \u2014 wages/pensions in nominal terms; purchasing power declines predictably",
+      "Banking System: Mixed (institutional/constrained) \u2014 benefits from seigniorage distribution and liquidity access; also extracts through intermediation",
+      "Late-Stage Creditors: Victim (powerful/constrained) \u2014 receive repayment in depreciated units; subject to financial repression",
+      "Alternative Currency Coalition: Organized agents (organized/mobile) \u2014 cryptocurrency, commodity-backed systems, multi-currency unions building exit pathways",
+      "Central Bank Ritual System: Institutional actor (institutional/arbitrage) \u2014 maintains performative communication and inflation-targeting theater; sees own process as degraded (piton perspective)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts wealth from savers and creditors via predictable currency depreciation. However, it is not maximal extraction (>0.66) because fiat systems also provide real coordination benefits (enabling government spending, facilitating trade, stabilizing expectations) that are difficult to fully decompose from the extractive mechanism. The 0.58 value reflects that the system is primarily extraction-oriented but retains residual coordination functionality. Suppression (0.65): High. Significant barriers prevent exit: legal tender laws, deposit insurance tied to domestic currency, currency-denominated debt, capital controls, and social convention all constrain alternatives. Transaction costs and regulatory barriers suppress the emergence of competing currencies. Theater ratio (0.68): High. Central bank communications (inflation targeting, forward guidance, credibility signals) are increasingly theatrical: the rhetoric of price stability persists despite policies that prioritize output and employment, suggesting the theater has increased as functional credibility decayed. The ratio reflects that the central bank maintains legitimacy through communication rather than through achieving the stated objectives of stable prices.",
+    "perspectival_gap": "This constraint demonstrates heterogeneous classification from a single structural data set. The monetary authority sees rope (coordination) because they are the primary beneficiary; the constraint enables government spending and stabilizes broad expectations. Currency savers see snare (pure extraction); they are powerless to exit and absorb all depreciation cost. Fixed-income earners see snare with lower severity (tangled rope transition); their real wages decline but labor income provides some inflation hedge. The banking system sees mixed coordination-extraction (tangled rope); they benefit from seigniorage distribution but also capture some of the extraction premium through intermediation margins. Late-stage creditors see snare (financial repression). The alternative currency coalition sees a temporary problem with a sunset (scaffold); Bitcoin, stablecoins, and decentralized finance represent real exit pathways that are maturing. The civilizational observer risks seeing natural law (mountain) \u2014 'all currencies eventually debase' \u2014 but this naturalizes a contingent policy choice (inflation prioritization over price stability) that could be otherwise constrained by rules.",
+    "directionality_logic": "Currency savers: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Fixed-income earners: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction; some wage-indexation escape routes. Late-stage creditors: Victim + constrained (powerful) \u2192 d\u22480.75, f(d)\u22481.10. Significant extraction via financial repression; but powerful agents may have inflation-hedging alternatives. Monetary authority: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary. Banking system: Mixed beneficiary/victim + constrained \u2192 d\u22480.45, f(d)\u22480.48. Moderate extraction; access to seigniorage distribution but also exposure to real rates and credit quality. Alternative currency coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction because coalition has agency and genuine exit pathways emerging. Central bank ritual system (piton): Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. No extraction at the level of theater maintenance itself; piton classification comes from theater gate, not from directionality.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The fiat currency lifecycle avoids false mandatrophy by distinguishing institutional phases. Early-stage fiat (first 10-20 years): Genuine rope from analytical perspective \u2014 credible commitment, stable expectations, real coordination benefits. Mid-stage (20-50 years): Transition to tangled rope \u2014 some coordination preserved but extraction mechanism activating. Late-stage (50+ years): Snare from most perspectives except the beneficiary (monetary authority) \u2014 extraction mechanism dominant, coordination function atrophied, theater elevated. The constraint's claim is Snare because the prompt frame is 'lifecycle' \u2014 modeling the full trajectory from inception to mature depreciation. If the constraint were restricted to early-stage fiat only, classification would be rope. If restricted to terminal inflation spirals, it would be pure snare. The Snare classification for the full lifecycle correctly captures that the extractive mechanism is the defining feature that endures: the constraint persists because depreciation is inevitable given institutional incentives, not because coordination is necessary. Alternative currencies (scaffold) represent organized escape routes, confirming that fiat extraction is not immutable but contingent on institutional choice. False summit risk: Naturalizing the lifecycle as 'inherent to economics' misses that alternative monetary regimes (gold standard, currency boards, multi-currency baskets) operate differently. The lifecycle is the lifecycle of a specific institutional choice, not of money itself."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "monetary_policy_transmission",
+      "financial_repression_mechanism",
+      "seigniorage_distribution",
+      "inflation_expectations_anchoring"
+    ],
+    "dual_formulation_note": "The fiat currency lifecycle decomposes into three structurally distinct constraints with different \u03b5 values: (1) monetary_policy_transmission (\u03b5\u22480.25, rope) \u2014 the mechanism by which central bank tools affect real economy; (2) financial_repression_mechanism (\u03b5\u22480.72, snare) \u2014 the systematic extraction from creditors via negative real rates; (3) seigniorage_distribution (\u03b5\u22480.55, tangled_rope) \u2014 the coordination and extraction around who captures currency creation benefits. These three constraints are causally linked but have different empirical status and stability. This story models the aggregate lifecycle; the linked stories model specific mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

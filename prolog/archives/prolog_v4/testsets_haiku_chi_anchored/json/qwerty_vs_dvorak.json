@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "qwerty_vs_dvorak",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "qwerty"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "QWERTY Keyboard Lock-in vs. Dvorak Efficiency",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "qwerty_manufacturers",
+      "existing_qwerty_users",
+      "software_ecosystem"
+    ],
+    "victims": [
+      "dvorak_adopters",
+      "typing_efficiency_potential",
+      "alternative_layout_innovators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dvorak Adopter",
+      "comment": "PERSPECTIVE 1: DVORAK ADOPTER (SNARE) \u2014 Individual user trapped in QWERTY ecosystem. Learning Dvorak requires sunk cost (retraining time) with no direct payoff in most contexts where QWERTY is mandatory (shared computers, workplace keyboards). Exit is impossible without bearing costs. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Typing Efficiency Advocate",
+      "comment": "PERSPECTIVE 2: TYPING EFFICIENCY ADVOCATE (TANGLED ROPE) \u2014 Moderate power; constrained exit. Benefits from coordination (standard layout enables shared keyboards and knowledge transfer), but is also extracted from: Dvorak's genuine efficiency advantage (~10% speed, reduced finger travel, fewer same-finger digraphs) is suppressed by QWERTY dominance. The constraint enforces coordination but also prevents superior technology from diffusing. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The QWERTY Hardware Manufacturer",
+      "comment": "PERSPECTIVE 3: QWERTY HARDWARE MANUFACTURER (ROPE) \u2014 Institutional beneficiary. The QWERTY constraint enables coordination: manufacturing one standard reduces inventory complexity, interchangeability across markets, training uniformity. The manufacturer experiences the constraint as a coordination solution, not extraction. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Software Ecosystem Provider",
+      "comment": "PERSPECTIVE 4: SOFTWARE ECOSYSTEM PROVIDER (ROPE) \u2014 Institutional beneficiary. Operating systems, keyboards, input systems all standardize on QWERTY. This enables broader compatibility and reduces software development complexity. The constraint is a coordination good. d\u22480.10, f(d)\u2248-0.06, \u03c3=1.2 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Source Input Method Coalition",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE INPUT METHOD COALITION (SCAFFOLD) \u2014 Organized agents (software developers, keyboard enthusiasts) see QWERTY lock-in as a temporary constraint being circumvented by OS-level input remapping (xmodmap, Karabiner, Windows registry hacks) and programmable keyboards. These tools enable Dvorak adoption at zero hardware cost, dissolving the extraction mechanism. The coalition perceives a sunset: as programmable input becomes standard and OS support for custom layouts becomes trivial, QWERTY's dominance rests on convention alone, not technical lock-in. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.15."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Historical QWERTY Narrative",
+      "comment": "PERSPECTIVE 6: HISTORICAL QWERTY NARRATIVE (PITON) \u2014 The 'QWERTY was designed to prevent mechanical typewriter jams' story is largely mythologized. Modern research shows QWERTY's design was incremental, not optimized for the stated purpose. Yet the narrative persists as theater: manufacturers invoke history, users rationalize acceptance, standards bodies cite precedent. The constraint's theatrical maintenance (theater_ratio=0.55) reflects how the lock-in is sustained not by functional necessity but by institutional inertia and reduced awareness of alternatives. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Network Effects View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NETWORK EFFECTS VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, QWERTY appears to be a natural law: network effects create an insurmountable coordination trap. The larger the user base, the less likely alternative layouts can gain traction. This creates an equilibrium that looks immutable \u2014 like a mountain of economics. However, the structural data (\u03b5=0.38, suppression=0.62, theater=0.55) contradicts pure mountainhood. Programmable input, OS-level remapping, and falling adoption costs suggest the constraint is institutional and contingent, not a law of network dynamics. The analytical perspective risks false naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_necessity_threshold",
+      "question": "What level of keyboard heterogeneity would cause significant productivity loss or frustration? Is QWERTY standardization functionally necessary or merely convenient?",
+      "resolution_mechanism": "Historical comparison: productivity metrics during typewriter-to-computer transition when both machines and layouts were variable. User satisfaction surveys from heterogeneous keyboard environments (shared institutional spaces with mixed layouts).",
+      "impact": "If heterogeneity is highly disruptive: QWERTY functions as coordination (Rope from all perspectives). If heterogeneity is manageable: suppression is primarily institutional preference, not technical requirement (Snare/Tangled Rope dominate).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether QWERTY standardization is functionally necessary for coordination"
+    },
+    {
+      "id": "dvorak_adoption_barrier_elasticity",
+      "question": "If input remapping became universally trivial (one-click OS setting, no retraining required), what fraction of users would switch to Dvorak or alternatives?",
+      "resolution_mechanism": "Controlled experiment: distribute programmable input method; measure adoption rates and retention; survey users on barriers to switching (learning cost, coordination pressure, habit, ergonomic preference).",
+      "impact": "If adoption > 20%: extraction mechanism is suppression + coordination cost. If adoption < 5%: most users find QWERTY adequate or prefer familiarity; constraint is primarily social/path-dependent, not lock-in.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "User willingness to switch if technical barriers are eliminated"
+    },
+    {
+      "id": "efficiency_gain_realization_bottleneck",
+      "question": "Why hasn't Dvorak's ~10% typing speed advantage translated to market adoption? Is it unrealized marginal benefit (users don't perceive the gain as valuable relative to retraining cost), or is the suppression mechanism so effective that users never encounter the alternative?",
+      "resolution_mechanism": "Longitudinal study: train cohorts on Dvorak for fixed duration; measure subjective vs. objective efficiency gains; track willingness to pay for retraining or incentives required to sustain adoption.",
+      "impact": "If users perceive gain but choose QWERTY: constraint is pure extraction (Snare). If users never encounter Dvorak: constraint is suppression of information (Tangled Rope with high theater).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Dvorak efficiency gains are realized or suppressed from user awareness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The QWERTY vs. Dvorak lock-in exemplifies how technological path dependence functions as a constraint that combines coordination benefits with extractive suppression of alternatives. QWERTY became the default keyboard layout through historical accident (compatibility with early typewriter mechanics) but has persisted through a combination of network effects (users trained on QWERTY, manufacturers standardized on QWERTY) and institutional inertia. Dvorak, designed by August Dvorak in 1936 to minimize finger travel and reduce same-finger digraphs, offers measurable typing efficiency (~10% speed improvement, reduced repetitive strain injury) but has never achieved significant market adoption. This constraint is not a mountain \u2014 QWERTY's dominance is not an immutable law of physics or logic. Rather, it is a tangled rope: the QWERTY standard genuinely solves a coordination problem (shared keyboards, trained users, software uniformity), but this coordination function has become a mechanism for suppressing superior alternatives. The extractiveness has grown over time (\u03b5 from 0.18 to 0.38) as the institutional lock-in deepened and the theater ratio rose (manufacturers and standards bodies invoke the 'natural' dominance of QWERTY, obscuring the fact that it was an arbitrary historical choice). The rise of programmable input methods and OS-level remapping suggests an emerging scaffold: tools exist to dissolve the technical lock-in, making QWERTY's dominance purely social and conventional.",
+    "key_agents": [
+      "Dvorak Adopters: Primary victim (powerless/trapped) \u2014 face sunk retraining cost, ecosystem incompatibility, social friction; cannot exit without bearing cost",
+      "Typing Efficiency Advocates: Secondary victim (moderate/constrained) \u2014 constrained by QWERTY dominance; benefit from coordination but lose efficiency gains",
+      "QWERTY Hardware Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 benefit from standardization reducing inventory and design complexity",
+      "Software Ecosystem Providers: Primary beneficiary (institutional/arbitrage) \u2014 OS and application standardization on QWERTY reduces development cost",
+      "Open-Source Input Method Coalition: Organized agents (organized/constrained) \u2014 building tools (programmable keyboards, OS remapping) to circumvent lock-in; perceive sunset as technical barriers fall",
+      "Historical QWERTY Narrative: Institutional theater \u2014 the myth of mechanical typewriter optimization persists despite being historically inaccurate; functions as social justification",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent path dependence as inevitable network-effect law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. QWERTY's lock-in extracts value from Dvorak adopters (retraining cost, incompatibility friction) and suppresses efficiency-seeking users from switching. However, the extraction is not as severe as a pure snare because: (1) QWERTY does provide genuine coordination benefits, (2) the retraining cost is substantial but not infinite, (3) programmable input methods have begun to reduce technical barriers. The trajectory (0.18\u21920.38) reflects increasing extraction as network effects intensified during the computer era: the larger the installed base of QWERTY-trained users and QWERTY-optimized software, the higher the cost to alternatives. Suppression (0.62): Moderate-high. QWERTY's suppression operates through multiple channels: (1) standard office keyboards ship with QWERTY labeling, (2) most software defaults to QWERTY without easy remapping, (3) Dvorak is unknown to most users (information suppression), (4) switching requires perceived value that outweighs learning cost + social friction. Theater ratio (0.55): Moderate. The 'QWERTY prevents typewriter jams' narrative is theatrical mythology \u2014 modern historical research shows QWERTY was a gradual design choice, not optimized for the stated purpose. Yet this narrative persists as social justification. The theater has remained relatively stable as manufacturers invoke tradition without examining it.",
+    "perspectival_gap": "This constraint generates a significant perspectival gap between beneficiaries and victims. QWERTY manufacturers and software providers (institutional actors with arbitrage exit) perceive pure coordination \u2014 the constraint solves a real problem (manufacturing uniformity, software compatibility). Dvorak adopters and typing efficiency advocates perceive extraction \u2014 the constraint prevents them from accessing a superior technology despite willingness to bear the retraining cost. The open-source coalition perceives a scaffold with a sunset \u2014 as programmable input becomes standard, the technical lock-in dissolves, leaving only convention. The piton perspective reveals that the constraint's persistence rests increasingly on institutional inertia and mythologized history, not functional necessity. The analytical observer risks falsely naturalizing the constraint as an inevitable law of network effects, obscuring the contingent institutional choices that sustain it.",
+    "directionality_logic": "QWERTY manufacturers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; experience constraint as coordination good. Software ecosystem: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.06. Net beneficiary. Dvorak adopters: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; cannot exit without bearing full retraining cost. Typing efficiency advocates: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. High extraction; partially can improve their position (programmable input) but remain dependent on ecosystem adoption. Open-source coalition: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low-moderate extraction; have agency to build circumvention tools and perceive a path forward. Historical narrative: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification comes from theater gate, not chi. Analytical observer: analytical \u2192 d\u22480.70, f(d)\u22481.15. Mountain classification is perspectival; risks naturalizing contingent path dependence.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint is properly classified as Tangled Rope, not a false Mountain or pure Snare. The mandatrophy is resolved by showing that QWERTY provides genuine coordination function (shared keyboards, software compatibility, universal training) \u2014 which prevents it from being classified as pure Snare \u2014 AND that this coordination function is asymmetrically distributed (manufacturers + software gain more than users, Dvorak users gain nothing) \u2014 which prevents it from being pure Rope. The constraint requires active enforcement through institutional preference (manufacturers standardize on QWERTY, OS defaults are QWERTY, keyboards ship pre-labeled) and informational suppression (Dvorak remains unknown to most users). The extractiveness has grown over the computer era as the installed base of QWERTY-trained users increased, making the cost to alternatives higher. The theater ratio (0.55) reflects that much of the justification for QWERTY's dominance is mythological (the typewriter jam story) rather than functional. The scaffold perspective (open-source input remapping) suggests the constraint is beginning to shift: as technical barriers fall, QWERTY's dominance rests purely on convention and habit, which is easier to challenge than technical lock-in. This decomposition reveals why QWERTY lock-in is neither inevitable (mountain) nor temporary (scaffold alone) but a persistent institutional arrangement (tangled rope) that will degrade only as alternative input methods become universally easy and as the trained user base eventually shifts."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "alternative_input_method_adoption",
+      "keyboard_manufacturing_standards"
+    ],
+    "dual_formulation_note": "QWERTY lock-in is downstream of historical typewriter design choices but represents a distinct structural constraint in the computer era. The upstream constraint (typewriter mechanical design) is no longer relevant; the downstream manifestations (software default settings, keyboard labeling standards, user training protocols) are the active enforcement mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

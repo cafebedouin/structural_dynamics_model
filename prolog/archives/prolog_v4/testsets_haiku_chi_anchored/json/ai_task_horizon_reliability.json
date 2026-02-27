@@ -1,0 +1,162 @@
+{
+  "header": {
+    "constraint_id": "ai_task_horizon_reliability",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The AI Task Horizon and Reliability Bottleneck",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_developers_and_platform_owners",
+      "top_quartile_adopters",
+      "highly_skilled_operators"
+    ],
+    "victims": [
+      "median_adopters_and_laggards",
+      "deskilled_workforce",
+      "investors_in_overhyped_applications"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Deskilled Workforce",
+      "comment": "PERSPECTIVE 1: DESKILLED WORKFORCE (SNARE) — Faces job displacement or skill atrophy from unreliable AI tools they are mandated to use. They cannot exit the labor market and bear the costs of failed AI implementations and shifting job requirements. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.82."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI Platform Owner",
+      "comment": "PERSPECTIVE 2: AI PLATFORM OWNER (ROPE) — Provides a coordination tool that unlocks productivity. Reliability issues are seen as engineering challenges, not structural flaws. They profit from subscriptions and compute usage regardless of end-user success, experiencing the system as a net benefit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes the dual nature of the constraint: a genuine coordination function (automating simple tasks) combined with significant asymmetric extraction (wasted investment, deskilling, market concentration). This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.66."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Top-Quartile Adopter",
+      "comment": "PERSPECTIVE 4: TOP-QUARTILE ADOPTER (SCAFFOLD) — A technologically sophisticated firm that uses current AI as a temporary support to gain a competitive edge. They understand the limitations and have a strategy to migrate to better tools as they emerge, effectively treating the current reliability bottleneck as having a sunset clause. d≈0.48, f(d)≈0.60, σ=1.0 → χ≈0.29."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Hype-Cycle Investor",
+      "comment": "PERSPECTIVE 5: HYPE-CYCLE INVESTOR (PITON) — Engages in the investment cycle as a performative act, driven by market narratives rather than the technology's current functional reliability. The high theater (demos vs. reality) makes this a piton: the activity persists due to institutional momentum, even if the underlying utility is degraded or not yet realized. theater_ratio=0.65 is close to the 0.70 gate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "architectural_limit_vs_engineering_problem",
+      "question": "Is the reliability bottleneck for long-horizon tasks a fundamental limitation of current AI architectures or merely an engineering problem solvable with more scale and data?",
+      "resolution_mechanism": "Longitudinal studies of model performance on complex, multi-step reasoning tasks as scale increases; discovery of novel architectures that overcome these limitations.",
+      "impact": "If a fundamental limit, the constraint is a durable Mountain/Snare for complex tasks. If an engineering problem, it's a temporary Scaffold that will be dismantled by progress.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the reliability bottleneck is a fundamental architectural limit or a solvable engineering issue."
+    },
+    {
+      "id": "upskilling_vs_deskilling_equilibrium",
+      "question": "Will the widespread deployment of AI lead to a net upskilling of the workforce (AI as a tool) or net deskilling and displacement (AI as a replacement)?",
+      "resolution_mechanism": "Cross-sector analysis of labor productivity, wage polarization, and demand for specific skills in AI-intensive industries over a 5-10 year period.",
+      "impact": "Upskilling equilibrium implies the constraint is a Rope or Scaffold. Deskilling equilibrium implies it is a Snare or Tangled Rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The long-term equilibrium between workforce upskilling and deskilling due to AI adoption."
+    },
+    {
+      "id": "productivity_gain_durability",
+      "question": "Are the observed productivity gains from AI durable and compounding, or a one-time benefit from automating the lowest-hanging fruit?",
+      "resolution_mechanism": "Firm-level analysis of productivity growth rates pre- and post-AI adoption, controlling for the initial wave of simple task automation.",
+      "impact": "Durable gains suggest a Rope. One-time benefits followed by a plateau suggest a Piton, where adoption becomes performative after initial wins.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether AI productivity gains are durable or a one-time effect from automating simple tasks."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 2023,
+    "end": 2028
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the structural limit on current AI systems, where reliability collapses as task complexity and duration (the 'task horizon') increase. This creates a bottleneck for economic deployment, as the most valuable tasks are often the most complex. The system generates both real productivity gains on short-horizon tasks and significant extractive costs from misapplication, wasted investment, and labor market disruption on long-horizon tasks. The constraint is 'enforced' by intense market pressure and capital allocation, compelling adoption even where reliability is insufficient.",
+    "key_agents": [
+      "AI Developers/Platform Owners: Primary beneficiaries (institutional/arbitrage) - Capture value from compute and subscriptions.",
+      "Top-Quartile Adopters: Secondary beneficiaries (powerful/mobile) - Use AI strategically as a temporary scaffold for competitive advantage.",
+      "Deskilled Workforce: Primary victims (powerless/trapped) - Face job insecurity and skill atrophy from mandated use of unreliable tools.",
+      "Median Adopters/Laggards: Secondary victims (moderate/constrained) - Invest heavily due to market pressure but fail to achieve positive ROI due to the reliability bottleneck.",
+      "Hype-Cycle Investors: Participants (powerful/mobile) - Drive the enforcement mechanism through capital allocation, often based on performative metrics."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.48): Moderate-high. Represents the value extracted from failed projects, wasted employee time managing unreliable outputs, and the market concentration benefiting platform owners. Suppression (0.62): High. The intense hype cycle, network effects of dominant platforms, and high switching costs for integrated systems suppress alternatives and critical evaluation. Theater Ratio (0.65): High. There is a significant gap between controlled demos and real-world performance. Marketing and media narratives often obscure the practical limitations of the technology.",
+    "perspectival_gap": "The gap is profound. Platform owners see a pure coordination tool (Rope) for solving problems. Workers on the receiving end of a flawed implementation experience a coercive, job-threatening system (Snare). Sophisticated firms see a temporary tool they can exploit and discard (Scaffold). The analyst sees the whole picture: a system with a genuine coordination function but with deeply embedded, asymmetric extraction (Tangled Rope).",
+    "directionality_logic": "Beneficiaries (platform owners, top adopters) have arbitrage or mobile exit options, leading to low derived directionality (d) and thus low or negative effective extraction (χ). They experience the constraint as a benefit or a manageable tool. Victims (workers, median firms) are trapped or constrained, leading to high derived 'd' and high positive 'χ'. They bear the full cost of the system's failures. This structural difference in position and exit capability is what creates the wide perspectival gap.",
+    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that the 'AI bottleneck' is not a single phenomenon. Labeling it purely as a 'tool' (Rope) ignores the coercive impact on labor. Labeling it purely as 'exploitation' (Snare) ignores the real productivity gains achieved by skilled users. The Deferential Realism framework correctly models it as a multi-faceted structure whose classification depends entirely on the observer's position relative to the flows of cost and benefit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_polarization",
+      "corporate_capital_expenditure_cycles"
+    ]
+  }
+}

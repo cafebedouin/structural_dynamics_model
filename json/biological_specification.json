@@ -2,83 +2,187 @@
   "header": {
     "constraint_id": "biological_specification",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "biospec"
   },
   "base_properties": {
-    "extractiveness": 0.05,
-    "suppression": 0.02,
-    "theater_ratio": 0.1,
-    "claimed_type": "mountain",
-    "human_readable": "Biological Specification as a Natural Limit",
-    "topic_domain": "biology/epistemology",
-    "requires_active_enforcement": false,
-    "emerges_naturally": true,
-    "has_sunset_clause": false,
-    "accessibility_collapse": 0.95,
-    "resistance": 0.05,
-    "beneficiaries": [],
-    "victims": []
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Biological Specification (Real vs. Apparent Design Distinction)",
+    "topic_domain": "biology/philosophy_of_science/evolutionary_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "evolutionary_biology_framework",
+      "mechanistic_research_programs"
+    ],
+    "victims": [
+      "design_inference_methodology",
+      "alternative_explanatory_frameworks"
+    ]
   },
   "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Design Inference Research Communities",
+      "comment": "PERSPECTIVE 1: DESIGN INFERENCE COMMUNITIES (SNARE) \u2014 Trapped within institutional constraints that render alternative hypotheses about specification unpublishable in mainstream venues. Career risk and resource access are explicitly contingent on methodological compliance. No exit option without complete reorientation. Experiences pure extraction: suppressed without coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Practicing Biologists (Field-Level)",
+      "comment": "PERSPECTIVE 2: PRACTICING BIOLOGISTS (TANGLED ROPE) \u2014 Constrained by institutional structure and grant funding mechanisms that require evolutionary framework adoption, but also benefit from the research ecosystem that evolutionary theory enables (sequencing resources, population-level data access, collaborative networks). Significant asymmetry: benefits accrue to committed adopters, costs to dissenters. Some agency (can work around constraints) but not full freedom."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Evolutionary Biology Establishment",
+      "comment": "PERSPECTIVE 3: EVOLUTIONARY BIOLOGY ESTABLISHMENT (ROPE) \u2014 Institutional beneficiary with arbitrage capacity: can navigate between theoretical frameworks at the institutional level, fund preferred research directions, and maintain institutional coherence. Experiences the specification constraint as a coordination mechanism: unified framework enables resource allocation, training pipeline, and publication infrastructure. Low experienced extraction \u2014 they are the architects."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Computational Biology / Systems Perspective",
+      "comment": "PERSPECTIVE 4: COMPUTATIONAL BIOLOGY / SYSTEMS PERSPECTIVE (SCAFFOLD) \u2014 Organized research communities (systems biology, astrobiology, synthetic biology) are developing alternative formalizations of specification that bypass the design inference vs evolutionary dichotomy. These frameworks (information theory, algorithmic information content, mutual information analysis) represent sunset pathways \u2014 as computational tools mature and cross-disciplinary adoption grows, the need to choose between traditional dichotomies declines. Mobile exit through tool development and methodological pluralism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Design Detection Apparatus (Academic Versions)",
+      "comment": "PERSPECTIVE 5: DESIGN DETECTION APPARATUS (PITON) \u2014 Historical design detection methodologies (natural theology, argument from design, specified complexity analysis) persist in academic margins and specialized contexts despite episodic critique and limited empirical productivity. Theater ratio high (0.65): much activity devoted to defending the conceptual coherence of detection methods rather than generating new empirical discoveries. Maintained through institutional inertia (biology history courses) and specialized journal networks, not through functional verification."
+    },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 1: ANALYTICAL (MOUNTAIN) — The irreducible complexity, dynamism, and stochasticity of biological systems represent a fundamental limit on our ability to create a complete specification. This is a natural law, an unchangeable feature of the universe."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, the distinction between real and apparent design may appear as a fundamental limit on biological inquiry: organisms exhibit apparent design (functional integration, hierarchical organization); distinguishing between design and evolution-mimicked design is inherently difficult given observer limitations and historical contingency. This perspective risks naturalizing an institutional/epistemological constraint as a logical or physical limit. False summit detection required."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "specification_measurability",
+      "question": "Is biological specification objectively quantifiable independent of theoretical framework, or is the quantity always theory-laden?",
+      "resolution_mechanism": "Cross-framework analysis of specification measures: algorithmic information content, mutual information, functional requirement metrics. Test whether different frameworks yield commensurate quantifications for the same biological systems.",
+      "impact": "If objective: specification could be framework-neutral, reducing extraction. If theory-laden: specification is inherently contested, and the current framework dominance represents suppression of alternative measurements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether specification is objectively quantifiable"
     },
     {
-      "classification_type": "mountain",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Synthetic Biologist",
-      "comment": "PERSPECTIVE 2: SYNTHETIC BIOLOGIST (ROPE-LIKE FUNCTION) — Experiences the *mapped portions* of the natural limit (e.g., codon tables, promoter logic) as a reliable coordination standard (a Rope) for engineering new systems. The formal classification remains Mountain due to near-zero base extraction (ε), but the functional experience is that of a Rope."
+      "id": "design_inference_distinguishability",
+      "question": "Can evolutionary processes produce the same distribution of apparent-design features as intentional design, making the classes empirically indistinguishable in practice?",
+      "resolution_mechanism": "Comparative analysis of known designed systems (human engineering, synthetic biology) vs evolved systems using consistent detection metrics. Bayesian analysis of false-positive and false-negative rates across framework applications.",
+      "impact": "If indistinguishable: the classification itself is not empirically grounded (high theater), supporting piton/snare classifications. If distinguishable: design inference is a legitimate alternative methodology.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether design and evolution produce empirically distinguishable signatures"
     },
     {
-      "classification_type": "mountain",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Regulatory Agency",
-      "comment": "PERSPECTIVE 3: REGULATORY AGENCY (SCAFFOLD-INDUCING) — Confronts the Mountain of complexity and is forced to construct a simplified, temporary model (a Scaffold) to ensure public safety (e.g., drug specifications). The constraint they face is the Mountain; the Scaffold is their output, a separate, downstream constraint."
+      "id": "institutional_capture_mechanism",
+      "question": "Is the specification constraint enforced primarily through active institutional gatekeeping (grant allocation, journal review, hiring) or through genuine empirical superiority of the evolutionary framework?",
+      "resolution_mechanism": "Historical analysis of publication acceptance rates, funding distribution, and career trajectories for researchers proposing alternative specification frameworks. Comparative study of institutional vs non-institutional research environments.",
+      "impact": "If gatekeeping: tangled rope / snare classifications confirmed. If empirical superiority: the constraint is actually a rope (legitimate coordination on superior method).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional gatekeeping vs genuine methodological superiority"
     },
     {
-      "classification_type": "mountain",
-      "agent_power": "analytical",
-      "time_horizon": "generational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Historian of Science",
-      "comment": "PERSPECTIVE 4: HISTORIAN OF SCIENCE (PITON-GENERATING) — Observes how past, oversimplified attempts to specify biology (e.g., strict genetic determinism) become Pitons—inertial concepts that lose their scientific function but persist theatrically. The Mountain is the underlying reality that inevitably degrades these simplistic models into Pitons."
+      "id": "specification_plasticity",
+      "question": "As computational tools and information theory mature, can multiple specification formalisms coexist productively, or is institutional unification required?",
+      "resolution_mechanism": "Case studies in computational biology, systems biology, and astrobiology where specification questions arise. Track whether diverse methodological approaches generate complementary insights or whether one framework consistently dominates.",
+      "impact": "If coexistence: scaffold perspective is correct, and sunset is real. If unification required: snare/tangled rope classifications are more accurate; pluralism is not viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether diverse specification formalisms can coexist productively"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
     }
   ],
   "interval": {
-    "start": 1859,
-    "end": 2024
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint story models the fundamental limit on our ability to fully specify a biological system. The core tension is between the 'Ideal' specification (a complete, static, perfect description) and the 'Real' (an incomplete, dynamic, and stochastic reality). This gap is not due to a human-made rule but is an inherent feature of the universe, arising from the complexity, evolutionary history, and physical constraints of living systems. It is a natural law.",
+    "narrative_context": "Biological specification \u2014 the question of how to distinguish real design from apparent design produced by evolution \u2014 creates a structural constraint in biological research that exhibits tangled-rope characteristics: genuine coordination function (unified theoretical framework enables efficient resource allocation and knowledge integration) coupled with asymmetric extraction (researchers questioning the specification boundary face institutional barriers disproportionate to methodological concern). The constraint operates across institutional levels: at the research community level, it suppresses alternative specification formalisms through publication bias and funding gatekeeping; at the practicing biologist level, it creates mixed effects (benefits from research infrastructure, costs from methodological constraints); at the establishment level, it provides low-cost coordination. The theater_ratio (0.65) reflects that significant scientific activity is devoted to defending the coherence of design detection or evolutionary adequacy rather than generating novel empirical discoveries. Over a 10-year interval, both theater and extractiveness have increased, indicating institutional consolidation rather than dissolution of the constraint.",
     "key_agents": [
-      "Analytical Observer: Sees the irreducible complexity as a fundamental limit (Mountain).",
-      "Synthetic Biologist: Uses known biological rules as a design standard (experiences as Rope).",
-      "Regulatory Agency: Builds simplified, temporary standards to manage the complexity (induces Scaffolds).",
-      "Historian of Science: Studies how past, failed models persist as inertial ideas (observes Piton generation)."
+      "Design Inference Research Communities: Primary victims (powerless/trapped) \u2014 face publication barriers, funding exclusion, and career risk when proposing specification frameworks outside evolutionary consensus",
+      "Practicing Field Biologists: Secondary victims (moderate/constrained) \u2014 experience mixed effects: benefit from evolutionary framework's research infrastructure but constrained from exploring alternative specification questions",
+      "Evolutionary Biology Establishment: Primary beneficiary (institutional/arbitrage) \u2014 institutional actors maintaining coordinated research direction, controlling resource allocation, and defining specification boundary",
+      "Computational Biology / Systems Perspective: Organized agents (organized/mobile) \u2014 developing alternative formalisms (algorithmic information, mutual information, information-theoretic approaches) that sidestep the traditional specification dichotomy",
+      "Design Detection Methodology Apparatus: Institutional actor (institutional/constrained) \u2014 persists in academic margins through historical continuity and specialized venues; maintains piton status through performative activity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks treating the institutional constraint as a natural limit on biological inquiry"
     ],
-    "logic_rationale": "This constraint is classified as a Mountain because it is an emergent, unchangeable feature of the natural world. Extractiveness (ε=0.05) is near zero; the universe does not 'extract' value, though the effort required for discovery is a cost to humans. Suppression (0.02) is also near zero, as we are free to attempt any method of specification. The key Mountain metrics are met: `emerges_naturally` is true, `accessibility_collapse` (0.95) is high because the closer one looks, the more complexity is revealed, and `resistance` (0.05) is low as one cannot 'push back' against this limit.",
-    "perspectival_gap": "There is no formal perspectival gap in classification; due to the extremely low base extractiveness (ε), all perspectives resolve to Mountain. However, there is a significant gap in functional interpretation. Different agents interact with the Mountain in ways that resemble other constraint types. The synthetic biologist uses it as a Rope (coordination), the regulator builds a Scaffold on it (temporary support), and the historian sees it as a force that degrades old theories into Pitons (inertial objects). This demonstrates how a single Mountain can induce the creation of a diverse ecosystem of human-made constraints.",
-    "directionality_logic": "As a Mountain constraint representing a natural law, there are no structural beneficiaries or victims. The constraint is symmetric and applies universally. Directionality (d) is therefore uniform and close to 0.5 for all actors, but since ε is negligible, the effective extraction (χ) is always near zero, leading to a consistent Mountain classification.",
-    "mandatrophy_analysis": "This case clarifies the relationship between natural law (Mountain) and the social systems built to manage it. A common error is to misclassify a human-made regulatory system (e.g., a Tangled Rope) as an inevitable consequence of nature (a Mountain). This analysis avoids that by applying the ε-invariance principle: the natural limit is a Mountain (ε≈0), while the human regulatory system built upon it is a separate constraint with its own, higher ε. Recognizing the foundational constraint as a Mountain prevents the 'false summit' error of naturalizing contingent, human-made rules."
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts opportunity cost and intellectual labor from design inference researchers, but the extraction is not total \u2014 alternative venues exist (specialized journals, cross-disciplinary research, computational frameworks), and the evolutionary framework itself provides genuine coordination benefits that offset some of the asymmetry. The extractiveness is not as severe as a full snare (which would involve total exclusion) but significantly higher than pure coordination (rope). Suppression (0.48): Moderate-high. Institutional mechanisms suppress design inference research: review bias against specification-focused frameworks, grant funding channeled toward evolutionary mechanism research, hiring preferences for evolutionary competence. However, suppression is not absolute \u2014 escape routes exist through computational reframing, cross-disciplinary positioning, and specialized publication. Theater ratio (0.65): High and increasing. Over the 10-year interval, theater has risen as institutional investment in defending the specification boundary has increased relative to empirical discovery. Much recent literature focuses on demonstrating the adequacy of evolutionary mechanisms to produce apparent design rather than developing novel detection capabilities. Theater increase from 0.42 to 0.65 indicates Goodhart-type drift: defending methodological consensus becomes an end in itself.",
+    "directionality_logic": "The specification constraint's directionality values are determined by each agent's structural position relative to specification research. Design inference communities occupy high-d positions (victims with few exit options) \u2014 they experience strong extraction. The evolutionary establishment occupies low-d positions (beneficiaries with institutional arbitrage) \u2014 they experience coordination as a low-extraction mechanism. Practicing biologists occupy mid-d positions (moderate power, constrained exit) \u2014 they experience mixed effects. The computational/systems biology coalition occupies low-d positions but with mobile exit through methodological alternatives \u2014 they can sidestep the constraint without institutional penalty. The design detection apparatus occupies a degraded position (high theater, low new functionality) \u2014 piton classification. The analytical observer at civilizational scope risks d = 0.72 (observer position) and false mountain classification from naturalizing institutional constraints.",
+    "perspectival_gap": "This constraint demonstrates the full indexical range from institutional establishment (rope, sees coordination) to powerless researchers (snare, sees extraction). The establishment's view of the constraint as coordination (rope) is structurally accurate for them: they experience low extraction, high benefits, and efficient resource allocation. The design inference community's view of the same constraint as pure extraction (snare) is also structurally accurate for them: they experience career risk, publication barriers, and suppressed research opportunity with minimal institutional support. The practicing biologist's moderate-power perspective captures the tangled reality: real research benefits from evolutionary framework (infrastructure, data access, training pipeline) coupled with real penalties for methodological dissent. The computational biology coalition's scaffold perspective is forward-looking: as information-theoretic formalisms mature, they provide an exit pathway that avoids the traditional dichotomy entirely. The piton perspective (design detection apparatus) captures institutional inertia: historical detection methods persist through academic tradition and specialized venues despite episodic critique and limited new empirical yield.",
+    "mandatrophy_analysis": "The mandatrophy here is the temptation to classify specification as either pure coordination (rope \u2014 a unified framework is genuinely useful) or pure extraction (snare \u2014 researchers are clearly suppressed). The correct classification (tangled rope) acknowledges both: the evolutionary framework IS a coordination mechanism with real benefits, AND the specification boundary IS enforced asymmetrically to suppress alternatives. The constraint resolves the mandatrophy by showing that legitimate coordination can coexist with asymmetric extraction. The establishment genuinely benefits from unified frameworks (they are not lying when they defend evolutionary theory's explanatory power). The design inference communities are genuinely suppressed (they are not paranoid when they identify publication bias). Both are true. The piton perspective warns against another mandatrophy: mistaking institutional persistence (theater) for genuine function. Design detection methods survive not because they are continuously validated but because they are historically embedded and defended in specialized contexts. The mountain perspective represents the deepest mandatrophy: the risk of treating the institutional constraint as a law of nature. If specification is fundamentally indistinguishable from evolution-mimicked design (as some analytical perspectives suggest), then the constraint is indeed a mountain \u2014 a limit on biological knowledge. But this risks collapsing the institutional constraint into an epistemic constraint. The framework's job is to keep them separate and measure which dominates."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "drug_approval_specification_process"
+      "evolutionary_mechanism_sufficiency",
+      "intelligent_design_methodology",
+      "specified_complexity_detection"
     ],
-    "dual_formulation_note": "This constraint, the natural limit of biological specification (Mountain), is the upstream cause for many human-made constraints. For example, the 'drug_approval_specification_process' is a downstream Tangled Rope or Scaffold built by regulators to create a workable, simplified model of this underlying complexity. The two are distinct constraints with different ε values."
-  }
+    "dual_formulation_note": "Biological specification decomposes into three related constraints: (1) Evolutionary Mechanism Sufficiency (\u03b5 \u2248 0.12, Mountain) \u2014 whether evolutionary processes can produce observed biological complexity; (2) Specified Complexity Detection (\u03b5 \u2248 0.42, Tangled Rope) \u2014 whether detection methods can reliably distinguish design from evolution-mimicked design; (3) Biological Specification as institutional constraint (this story, \u03b5 = 0.38, Tangled Rope) \u2014 how the specification distinction is institutionally enforced within biology. The first is a factual/scientific question; the second is a methodological question; the third is a structural/institutional question. All three affect each other."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
 }

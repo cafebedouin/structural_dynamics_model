@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "complexity_debt",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cplx"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cumulative Fragility Surcharge",
+    "topic_domain": "technological/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_term_delivery_teams",
+      "executive_leadership"
+    ],
+    "victims": [
+      "long_term_system_reliability",
+      "maintenance_engineers",
+      "future_development_velocity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Maintenance Engineer",
+      "comment": "PERSPECTIVE 1: MAINTENANCE ENGINEER (SNARE) \u2014 Trapped by dependency on undocumented layers, legacy interfaces, and hidden coupling. Each attempted fix risks cascading failures. Cannot exit without career consequences (institutional knowledge lock-in). d\u22480.93, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Future Development Velocity",
+      "comment": "PERSPECTIVE 2: FUTURE DEVELOPMENT VELOCITY (SNARE) \u2014 Constrained by debt accumulation. New features must navigate legacy constraints. Velocity degrades exponentially as abstractions degrade. Abstract collective good (development capacity) bears extraction cost. d\u22480.87, f(d)\u22481.25, \u03c3=1.2 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Short-Term Delivery Team",
+      "comment": "PERSPECTIVE 3: SHORT-TERM DELIVERY TEAM (ROPE) \u2014 Experiences constraint as enabling coordination: quick fixes solve immediate problems and maintain team cohesion under deadline pressure. Benefits from deferring architectural decisions. d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.05. Negative effective extraction = net beneficiary during their tenure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Executive Leadership",
+      "comment": "PERSPECTIVE 4: EXECUTIVE LEADERSHIP (ROPE) \u2014 Organized institutional actor. Experiences constraint as coordination mechanism: debt accumulation defers costs beyond their decision horizon and enables higher quarterly velocity metrics. Exit via rotation to new role. d\u22480.10, f(d)\u2248-0.08, \u03c3=0.9 \u2192 \u03c7\u2248-0.04. Negative effective extraction during their tenure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Level Architecture Advocate",
+      "comment": "PERSPECTIVE 5: MID-LEVEL ARCHITECTURE ADVOCATE (TANGLED ROPE) \u2014 Constrained between pressure to deliver and awareness of debt accumulation. Partial coordination benefit (advocating good design principles) mixed with extraction cost (time spent fighting for refactoring budgets that never arrive). d\u22480.58, f(d)\u22480.72, \u03c3=0.9 \u2192 \u03c7\u22480.35."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Technical Debt Ritual",
+      "comment": "PERSPECTIVE 6: TECHNICAL DEBT RITUAL (PITON) \u2014 Degraded coordination mechanism. Sprint retrospectives and quarterly architecture reviews discuss debt but lack enforcement power or budget authority. Ritual persists through institutional inertia (appears to address the problem) despite minimal functional impact on trajectory. theater_ratio=0.68 satisfies piton gate (\u22650.70, marginal). The technical debt ritual is performed because alternatives haven't replaced it, not because it functions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scale, complexity debt is a coordination mechanism (layers enable rapid feature development) mixed with asymmetric extraction (costs distributed to future maintenance and long-term reliability). The constraint is neither inevitable nor pure extraction. Structural data (\u03b5=0.52, suppression=0.65) confirms tangled rope \u2014 both coordination and extraction are real."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_debt_measurement",
+      "question": "What observable should distinguish 'legitimate architectural layering' from 'accumulated fragility'?",
+      "resolution_mechanism": "Empirical correlation between code churn patterns, bug escape rates, and layer count; comparison of systems with explicit refactoring budgets vs those without",
+      "impact": "If layer count < 8: mostly coordination (Rope). If layer count > 15: mostly extraction (Snare). If 8-15 with refactoring budget: Scaffold. If 8-15 without: Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Observable threshold distinguishing layering from fragility"
+    },
+    {
+      "id": "refactoring_velocity_hypothesis",
+      "question": "Can teams actually refactor complexity debt within a sprint cycle, or is debt always pyramidally cumulative?",
+      "resolution_mechanism": "Longitudinal study of velocity metrics, refactoring spend, and bug rates across teams with vs without protected refactoring time; measurement of whether debt-reduction effort pays compound returns",
+      "impact": "If teams can refactor effectively: constraint is Scaffold with working sunset clause. If pyramidal accumulation is inevitable: constraint is Snare (no exit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether refactoring provides functional debt reduction or mere theatrical relief"
+    },
+    {
+      "id": "organizational_rotation_extraction",
+      "question": "To what extent is the constraint's extraction mechanism dependent on high managerial turnover that hides long-term velocity loss?",
+      "resolution_mechanism": "Comparison of velocity decline curves for organizations with high executive tenure vs high rotation; analysis of whether long-tenured architects perceive higher extraction than rotating managers",
+      "impact": "If rotation-dependent: constraint is Snare hidden by institutional churn. If independent of tenure: constraint is Tangled Rope (real coordination + real extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which constraint depends on organizational turnover for suppression of visibility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Complexity debt accumulates when organizations prioritize short-term delivery velocity over architectural coherence. Each quick fix \u2014 workaround routing layer, specialized data adapter, undocumented API fork, conditional flag for edge case \u2014 solves an immediate coordination problem but defers its structural cost to future maintenance. Over time, the system becomes a palimpsest of accumulated patches, where modifying any component risks cascade failures through poorly documented coupling. The constraint exhibits both genuine coordination benefits (quick fixes enable rapid feature delivery) and asymmetric extraction (maintenance engineers and long-term reliability bear the accrued cost). The theater ratio (0.68) reflects that technical debt reviews are largely performative \u2014 teams discuss the problem in retrospectives without budget or authority to address it systematically. The extractiveness trajectory (0.22 \u2192 0.52) shows debt compounding over the measurement interval, as early fixes create conditions for later fixes to compound nonlinearly.",
+    "key_agents": [
+      "Short-Term Delivery Teams: Primary beneficiary (institutional/arbitrage) \u2014 captures velocity metrics and on-time delivery during their tenure; escapes when assigned to new projects",
+      "Executive Leadership: Primary beneficiary (organized/arbitrage) \u2014 benefits from higher quarterly velocity and defers costs beyond their decision horizon; typically rotates before debt becomes unmanageable",
+      "Maintenance Engineers: Primary victim (powerless/trapped) \u2014 locked into system by institutional knowledge of undocumented layers and hidden coupling; cannot exit without career consequences",
+      "Future Development Velocity: Primary victim (moderate/constrained) \u2014 abstract collective good bearing extraction cost; future teams face exponentially higher costs to add features",
+      "Mid-Level Architecture Advocates: Secondary actor (moderate/constrained) \u2014 aware of debt accumulation but constrained by delivery pressure; partial coordination benefit mixed with extraction cost of unheeded warnings",
+      "Technical Debt Ritual: Institutional degradation (institutional/arbitrage) \u2014 sprint retrospectives and code review processes discussing debt but lacking enforcement power or refactoring budget",
+      "Analytical Observer: System-level perspective (analytical/analytical) \u2014 reveals constraint as genuine tangled rope, not inevitable law; structural data supports both coordination and extraction components"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from future maintenance and long-term reliability. Early measurements (0.22) show low extraction when the system is young and layers are few. Compounding trajectory (\u21920.52) reflects exponential debt accumulation \u2014 each new quick fix increases the difficulty of future modifications. The value (0.52) indicates extraction is real but not total; some systems recover via scheduled refactoring or rewrites. Suppression (0.65): Moderate-high. Significant barriers to escaping debt include: institutional knowledge lock-in (only certain engineers understand undocumented layers), career risk of advocating for refactoring over features, organizational rotation that hides long-term velocity loss from decision-makers, and missing metrics (velocity decline is often attributed to scope increase rather than technical debt). But suppression is not total \u2014 some organizations measure and budget refactoring explicitly. Theater ratio (0.68): Moderate-high. Technical debt reviews, architecture meetings, and code review comments discuss the problem extensively but produce minimal institutional change. The ritual is maintained because alternatives (ignoring debt entirely, or making refactoring a first-class budget item) haven't fully replaced it. The theater has increased over the interval as visible debt accumulation has forced more performative acknowledgment without corresponding action.",
+    "perspectival_gap": "This constraint demonstrates the classic divergence between short-term and long-term perspectives. The delivery team and executive leadership see a coordination mechanism (Rope) \u2014 they are genuinely solving the problem of rapid feature iteration under deadline pressure. Their exit via project rotation allows them to experience the constraint as beneficial. Maintenance engineers see pure extraction (Snare) \u2014 the system's complexity grows exponentially, making their work harder without corresponding benefits to them. The future development velocity sees extraction with some coordination (Tangled Rope from the analytical view) \u2014 some of the quick fixes do enable legitimate coordination, but the compound effect is degraded velocity for future teams. The technical debt ritual sees its own degradation (Piton) \u2014 the performance of addressing debt without actual refactoring. The perspectival gaps are not observational differences but structural differences in who benefits and who bears costs.",
+    "directionality_logic": "Short-term delivery team: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; can exit when assigned to new team. Executive leadership: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary; rotates before long-term costs materialize. Maintenance engineers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.38. Maximum extraction; locked in by institutional knowledge. Future development velocity: Victim + constrained \u2192 d\u22480.87, f(d)\u22481.25. High extraction; abstract collective cannot organize and cannot exit. Mid-level architect: Both + constrained \u2192 d\u22480.58, f(d)\u22480.72. Partial beneficiary (advocacy role valued in some orgs) but constrained (advocacy often unheeded). Technical debt ritual: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Piton classification from theater gate, not directionality. Analytical observer: Measured position between beneficiaries and victims \u2192 d\u22480.52, f(d)\u22480.65. Tangled rope confirmed.",
+    "mandatrophy_analysis": "TANGLED ROPE VALIDATION: The constraint satisfies all three tangled rope gates: (1) Base extraction \u03b5=0.52 (\u22650.30 required), (2) Beneficiaries (short-term teams, executives) + Victims (maintenance engineers, future velocity) declared, (3) Requires active enforcement: true. The constraint is NOT pure extraction because genuine coordination benefits exist \u2014 quick fixes DO enable rapid feature delivery and solve immediate problems. It is NOT pure coordination because asymmetric extraction IS real \u2014 costs are borne disproportionately by future teams and maintenance engineers. The mandatrophy is resolved by recognizing that both components are structural features: the constraint would NOT function as a rent-extraction mechanism if it didn't provide real short-term coordination benefit. The extraction is enabled BY the coordination function. This is the defining characteristic of tangled rope: the hybrid is not a measurement ambiguity but a genuine structural property. No alternative observable would change the classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "velocity_cliff",
+      "knowledge_concentration",
+      "refactoring_budget_scarcity"
+    ],
+    "dual_formulation_note": "Complexity debt is downstream of resource allocation decisions (refactoring budget constraints) and organizational rotation patterns (tenure-dependent visibility of costs). These upstream constraints create the conditions for debt accumulation. The downstream constraints (velocity cliff, knowledge concentration) are structurally dependent on complexity debt as a prerequisite."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ]
+}

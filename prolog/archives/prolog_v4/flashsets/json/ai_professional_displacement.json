@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "ai_professional_displacement",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI-Driven Displacement of Entry-Level Professional Pathways",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_firms",
+      "ai_tool_developers"
+    ],
+    "victims": [
+      "recent_graduates",
+      "educational_institutions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Recent Graduates",
+      "comment": "Recent graduates face a shrinking pool of entry-level positions, making it harder to gain professional experience and advance their careers. They are trapped by the lack of alternatives and the increasing demand for advanced skills, which are hard to acquire without initial professional experience."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Educational Institutions",
+      "comment": "Educational institutions are constrained by the need to adapt their curricula to the changing job market. While they benefit from the demand for updated skills, they also face challenges in preparing students for a future where AI performs many traditional entry-level tasks. They have some agency but are ultimately subject to market forces."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Established Firms",
+      "comment": "Established firms benefit from increased efficiency and reduced labor costs through AI adoption. They have the resources to arbitrage the situation and adapt to the changing landscape, further reinforcing their competitive advantage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "AI Tool Developers",
+      "comment": "AI tool developers benefit directly from the increasing demand for automation solutions. They can arbitrage this demand by providing tools that enable firms to displace entry-level workers and optimize their operations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a civilizational perspective, the AI-driven displacement of entry-level jobs presents a mixed bag. While it increases overall productivity and innovation, it also raises concerns about social inequality and the future of work for young professionals. The analytical observer recognizes both the coordinating and extracting aspects of the situation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_adaptation_threshold",
+      "question": "What is the critical threshold for skills adaptation in the face of AI displacement?  How rapidly can curricula and training programs adapt?",
+      "resolution_mechanism": "Longitudinal study of educational outcomes vs. AI adoption rates in specific industries. Measure time lag between AI deployment and relevant curriculum changes.",
+      "impact": "If adaptation lag is short: the constraint is a scaffold or rope. If lag is long, it's a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining the lag between skill requirements and educational adaptation."
+    },
+    {
+      "id": "new_job_creation_rate",
+      "question": "How quickly are new jobs being created to replace those displaced by AI?",
+      "resolution_mechanism": "Economic modeling and labor market analysis. Compare job creation rates in emerging AI-related fields with displacement rates in traditional entry-level roles.",
+      "impact": "If new job creation matches displacement: the constraint is a rope or scaffold. If displacement exceeds job creation, it's a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The ratio of new job creation versus AI-driven displacement."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The increasing automation of entry-level professional tasks by AI systems creates a structural barrier for recent graduates entering fields like law, finance, and consulting. This trend benefits established firms and AI tool developers while potentially trapping new graduates and straining educational institutions. This constraint represents a significant challenge to social mobility and the future of work.",
+    "key_agents": [
+      "Recent Graduates: Primary victims (powerless/trapped) \u2013 face shrinking entry-level job market.",
+      "Educational Institutions: Secondary victims (moderate/constrained) \u2013 need to adapt curricula, but are not fully trapped.",
+      "Established Firms: Primary beneficiaries (institutional/arbitrage) \u2013 benefit from reduced labor costs and increased efficiency.",
+      "AI Tool Developers: Secondary beneficiaries (powerful/arbitrage) - profit from increased demand for automation solutions."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. AI systems are extracting opportunities from entry-level workers at a rapid rate. Suppression (0.70): High. The lack of viable alternatives for new graduates creates a high level of suppression. Theater Ratio (0.30): Low. The impact is real, not just performative.",
+    "perspectival_gap": "The recent graduate perspective sees a shrinking job market (Snare). Established firms experience efficiency gains (Rope).  Educational institutions face adaptation challenges (Tangled Rope).  The analytical observer attempts to capture the net effect, including the coordinating and extracting aspects.",
+    "directionality_logic": "Beneficiaries (firms, AI developers) experience coordination; d is low. Victims (graduates) experience extraction; d is high. Educational institutions are constrained, occupying a moderate position.  The derived d values and the chi formula capture these relationships, determining the classification from each perspective."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_bias_employment",
+      "skill_polarization"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "ny_private_school_discount",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nyps"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Discount-for-Data Scheme in Private Schools",
+    "topic_domain": "economic/education",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "school_operator",
+      "edtech_licensing_partners"
+    ],
+    "victims": [
+      "enrolled_families",
+      "child_privacy_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Enrolled Family (Cost-Constrained)",
+      "comment": "PERSPECTIVE 1: ENROLLED FAMILY / COST-CONSTRAINED (SNARE) \u2014 Family cannot afford full tuition at competitive private schools. The discount-for-data offer is presented as a choice, but the alternative (public school or unaffordable private school) is foreclosed by household budget constraints. No meaningful exit: withdrawal means loss of educational placement and sunk tuition discount. Data surrender is non-negotiable condition of enrollment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Affluent Family (Mobile)",
+      "comment": "PERSPECTIVE 2: AFFLUENT FAMILY / MOBILE (TANGLED ROPE) \u2014 Has alternative schools available (other private schools, transfer to public with gifted programs). Can exit the scheme, but at some cost (switching friction, educational disruption). Benefits from coordination (access to specialized curriculum, smaller class sizes) and simultaneously bears extraction (data monetization). The threat of exit constrains but does not eliminate the extraction mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The School Operator",
+      "comment": "PERSPECTIVE 3: SCHOOL OPERATOR (ROPE) \u2014 Experiences the constraint as pure coordination: data enables adaptive learning algorithms, personalization, and operational efficiency. Can arbitrage the data (license to edtech vendors, sell insights to curriculum firms). The operator experiences the mechanism as a legitimate value exchange that subsidizes operations and fuels product development. Exit option is frictionless \u2014 stop the scheme and raise tuition. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Parent Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: PARENT ADVOCACY COALITION / ORGANIZED (TANGLED ROPE) \u2014 Organized parents (through education nonprofits, privacy groups) have leverage: public pressure, regulatory attention, reputational risk to the school. Constrained exit because members include both cost-constrained and mobile families with different leverage. Benefits from coordination (school quality improvements funded by data monetization) while organizing against extraction (data practices). This is not a snare because collective action is possible and is happening."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK / FERPA & STATE PRIVACY LAW (PITON) \u2014 FERPA (Family Educational Rights and Privacy Act) technically applies to private schools but is often treated as advisory. State privacy laws (NY SHIELD Act, etc.) have ambiguous application to educational data. The regulatory regime persists as a performative constraint \u2014 it appears to govern the scheme but enforcement is weak and parental consent is interpreted as sufficient cover. Theater ratio is high because compliance is largely theatrical (opt-in consent forms, vague privacy notices) without substantive limitation on monetization. The regulation was designed for an era without automated data extraction and is maintained through inertia rather than functional governance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer / Information Asymmetry View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION ASYMMETRY (FALSE SUMMIT) \u2014 From a civilizational perspective, the scheme might appear to reflect immutable information asymmetry: the operator has technical expertise in data infrastructure that families lack, and this gap is inherent to modern education. Parents cannot reasonably understand the value of their data or the implications of its monetization. This perspective risks naturalizing what is actually a contingent institutional arrangement \u2014 the information asymmetry is real but remediable through transparency, consent standards, and data minimization. It is not a law of nature but a regulatory choice. Engine's false summit detector should identify this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "data_monetization_scale",
+      "question": "What is the actual monetary value extracted from student data per family, and how does it compare to the 42% tuition discount offered?",
+      "resolution_mechanism": "Audit of school licensing agreements; valuation of data through comparable edtech licensing rates; comparison of discount value to estimated data license revenue",
+      "impact": "If extraction > discount value: the scheme is predatory (higher effective extraction than offered discount suggests). If extraction < discount value: scheme is subsidy with data monetization component (lower effective extraction than appears).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Comparison of data monetization value to tuition discount offered"
+    },
+    {
+      "id": "informed_consent_adequacy",
+      "question": "Do parents meaningfully understand the scope, duration, and downstream uses of data they are authorizing when they sign enrollment agreements?",
+      "resolution_mechanism": "Cognitive accessibility testing of consent documents; qualitative interviews with enrolled parents about their understanding; audit of actual data use against disclosed uses",
+      "impact": "If consent is not informed: extraction mechanism is hidden (suppression increases, classification shifts toward snare for mobile families). If consent is genuine: families have agency and extraction is partially mitigated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether parental consent meets informed consent standards"
+    },
+    {
+      "id": "exit_cost_fungibility",
+      "question": "For cost-constrained families, is the exit cost of switching schools actually materially different from the exit cost for affluent families, or is the cost-constrained exit exaggerated by loss aversion?",
+      "resolution_mechanism": "Survey of actual switching costs (application fees, testing, curriculum adjustment time); comparison of actual exit rates between cost-constrained and mobile family cohorts; longitudinal tracking of family satisfaction and retention",
+      "impact": "If exit costs are symmetric: powerless/trapped classification for cost-constrained families is accurate. If exit costs are actually moderable: families have more agency than snare model suggests, and classification should shift toward tangled rope across cohorts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exit costs for cost-constrained families are genuinely prohibitive"
+    },
+    {
+      "id": "collective_action_sufficiency",
+      "question": "Can organized parent coalitions actually compel data practice changes, or is their leverage insufficient given the school's alternative revenue sources?",
+      "resolution_mechanism": "Case study of advocacy outcomes in peer institutions; analysis of school's financial dependence on data licensing revenue vs other sources; documentation of successful and failed parent pressure campaigns",
+      "impact": "If coalitions have leverage: organized perspective and tangled rope classification are structurally accurate. If leverage is minimal: even organized families are constrained, classification shifts toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether parent coalitions have effective leverage over data practices"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "A private school startup in New York offers families a 42% tuition discount in exchange for comprehensive data about their children's academic performance, learning patterns, behavioral metrics, and family socioeconomic information. The school monetizes this data by licensing it to educational technology vendors, curriculum providers, and behavioral analytics firms. The scheme creates a structural tension between legitimate coordination (data enables personalization and school efficiency) and extractive monetization (families subsidize operations through data transfer rather than tuition payment, while the school captures licensing revenue). The constraint exhibits tangled rope characteristics: it has genuine coordination functions (adaptive learning, personalization) and real extraction mechanisms (data monetization, information asymmetry, asymmetric exit costs). The beneficiaries (school operator, edtech partners) have arbitrage and immediate/national exit options. The victims (enrolled families, child privacy commons) have constrained or trapped exit options. The scheme is not pure extraction because the coordination function is real; it is not pure coordination because the extraction is material and suppressed behind enrollment consent.",
+    "key_agents": [
+      "School Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures data licensing revenue and operational subsidy through discount mechanism; can exit by raising tuition",
+      "Enrolled Cost-Constrained Families: Primary victim (powerless/trapped) \u2014 cannot afford alternative private schools; no meaningful exit; bear full extraction",
+      "Affluent Families: Secondary actor (moderate/constrained) \u2014 have exit options (other schools, gifted public programs) but switching has friction; bear partial extraction",
+      "EdTech Licensing Partners: Beneficiary (institutional/arbitrage) \u2014 license student data for product development, behavioral analytics, algorithmic training",
+      "Parent Advocacy Coalition: Organized actor (organized/constrained) \u2014 coordinating privacy concerns, pushing for transparency; members have mixed exit capacity",
+      "Regulatory Framework (FERPA/SHIELD): Institutional constraint (institutional/arbitrage) \u2014 appears to govern but enforcement is weak; maintained through theater (consent forms) rather than functional limitation",
+      "Child Privacy Commons: Victim (powerless/trapped) \u2014 abstract collective good; no exit mechanism; bears externality costs from normalized data monetization"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The school captures material economic value through data monetization (licensing to edtech/behavioral analytics). The 42% discount is genuinely offered, so the extraction is not as severe as a pure snare (would be \u22650.66). However, the extraction is substantial because: (1) families may not understand the true value of their data, (2) cost-constrained families have no exit, (3) the monetization is ongoing and extends beyond the enrollment period (data can be relicensed). The increasing trajectory from 0.35 to 0.58 reflects that the school initially relies on the discount draw but over time increasingly monetizes data as scale grows. Suppression (0.68): High. Barriers to meaningful refusal include: financial necessity (families cannot afford full tuition), information asymmetry (parents do not understand data valuation or downstream uses), regulatory ambiguity (FERPA/SHIELD have weak application), and consent framing (opt-out is formally available but functionally costly). The suppression is not absolute (mobile families can exit, organized groups can pressure for change) but it is substantial. Theater ratio (0.45): Moderate. The regulatory framework (FERPA/SHIELD) and consent processes are partly theatrical \u2014 they appear to govern data practices but enforcement is minimal and consent is interpreted as sufficient cover. However, the school's actual operational use of data for personalization is functional (not purely performative), which lowers the theater ratio compared to a pure regulatory piton. The theater ratio grows from 0.25 to 0.45 as the regulatory regime remains performative while actual monetization scale increases.",
+    "perspectival_gap": "This constraint demonstrates how the same mechanism produces different classifications depending on structural position. The operator sees coordination (Rope) because they benefit and have exit options. The cost-constrained family sees extraction (Snare) because they bear costs and have no exit. The affluent family sees hybrid (Tangled Rope) because they have some exit but also some constraint. The organized coalition sees hybrid with leverage (Tangled Rope with constrained exit rather than trapped). The regulatory perspective sees degraded governance (Piton) because FERPA/SHIELD are performative without enforcement. The analytical perspective risks seeing immutable information asymmetry (Mountain) when it is actually a regulatory and institutional choice. No single perspective is 'correct' \u2014 the constraint IS the distribution of these perspectives over the observation site.",
+    "directionality_logic": "Directionality (d) for each perspective is computed from the agent's power level, exit options, and relationship to the extraction flow. Cost-constrained families: powerless + trapped \u2192 high d (0.95) \u2192 high f(d) (\u22481.42) \u2192 they experience maximum extraction chi. Affluent families: moderate + constrained \u2192 mid-high d (0.55) \u2192 mid-high f(d) (\u22480.75) \u2192 they experience partial extraction. School operator: institutional + arbitrage \u2192 low d (0.05) \u2192 negative f(d) (\u2248-0.12) \u2192 they experience negative extraction (subsidy). Organized coalition: organized + constrained \u2192 mid d (0.40) \u2192 moderate f(d) (\u22480.40) \u2192 they experience moderate extraction but with leverage to reduce it. Regulatory framework: institutional + arbitrage \u2192 low d (0.05) \u2192 they do not bear extraction; they enforce it. The analytics observer: analytical + analytical \u2192 mid-high d (0.72) \u2192 they see the full mechanism but risk naturalizing it.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The scheme resolves the mandatrophy by distinguishing genuine coordination (adaptive learning, personalization, operational efficiency) from extractive rent-seeking (data licensing, behavioral analytics sales). The coordination is real \u2014 the data enables legitimate pedagogical benefits. But the extraction is also real \u2014 families subsidize the school through data transfer while the school captures additional revenue from licensing. This is precisely the structure of a Tangled Rope: both coordination and extraction are structurally present. The scheme is not a Snare because the coordination benefit is not illusory. It is not a Rope because the extraction is material and asymmetric (beneficiaries have arbitrage options; victims have trapped/constrained options). The mandatrophy is resolved by recognizing that both functions coexist in the same institutional mechanism, and the indexical classification (Tangled Rope) accurately captures this hybrid nature. The perspectival gap (cost-constrained families see Snare; operators see Rope; organized groups see constrained Tangled Rope) reflects the same underlying structure viewed from different structural positions \u2014 exactly what the system is designed to reveal."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "education_data_monetization",
+      "student_behavioral_surveillance",
+      "information_asymmetry_edtech"
+    ],
+    "dual_formulation_note": "The discount-for-data scheme is downstream of broader education-sector data monetization practices but represents a distinct structural constraint focused on tuition pricing mechanisms. The scheme is upstream of broader surveillance capitalism normalization in education. This constraint story models the specific institutional arrangement (discount exchange) while upstream and downstream stories model the data exploitation ecosystem and surveillance internalization."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    }
+  ]
+}

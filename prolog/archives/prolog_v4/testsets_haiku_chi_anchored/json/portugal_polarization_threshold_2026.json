@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "portugal_polarization_threshold_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pt_polar"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The \"Cordon Sanitaire\" / Polarization Threshold in Portuguese Politics",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "traditional_party_coalition",
+      "establishment_consensus"
+    ],
+    "victims": [
+      "chega_political_representation",
+      "voter_choice_spectrum",
+      "democratic_representation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Chega Voter / Populist Supporter",
+      "comment": "PERSPECTIVE 1: CHEGA VOTER (SNARE) \u2014 Trapped within the constraint. Despite substantial electoral support (30%+ in some polls), constrained from meaningful representation through systematic exclusion via cordon sanitaire. No viable exit: cannot vote for Chega in viable coalition scenarios; cannot shift support to establish parties without abandoning policy preferences. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72. High effective extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Marginalized Regional Communities",
+      "comment": "PERSPECTIVE 2: MARGINALIZED REGIONAL COMMUNITIES (TANGLED ROPE) \u2014 Constrained by economic exclusion and regional imbalance. Both bear costs of the cordon (representation barriers) and benefit from the constraint (establishment parties' social safety net pledges made credible through non-Chega coalition commitment). d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.55. Mixed coordination-extraction hybrid."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Traditional Party Coalition (PSD/PS/smaller parties)",
+      "comment": "PERSPECTIVE 3: TRADITIONAL PARTY COALITION (ROPE) \u2014 Primary beneficiary. The cordon sanitaire enables coordination among otherwise-competing parties (PSD, PS, centrist actors) through shared exclusion logic. Creates coalition discipline and reduces inter-party fragmentation. Arbitrage exit: can shift coalitional weight, engage with different partners, negotiate government formation from position of strength. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Negative effective extraction = net beneficiary. Sees the constraint as coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Institutional Media and Civil Society",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL MEDIA AND CIVIL SOCIETY (TANGLED ROPE) \u2014 Both enforces and constrained by the cordon. Benefits from narratives that frame Chega as outside-the-pale (coordination function: stabilizes democratic norms, signals shared values). Constrained by risk of appearing partisan (suppression of critical coverage, theater ratios increase). d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34. Mobile exit: can shift framing or exit narratives if reputational cost rises."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "EU Integration Norms and Democratic Legitimacy Framework",
+      "comment": "PERSPECTIVE 5: EU INTEGRATION NORMS / DEMOCRATIC LEGITIMACY (PITON) \u2014 Historically justified the cordon as defense against authoritarian drift (1980s/90s context against far-right extremism). Now largely performative: Chega does not present an immediate coup risk, but exclusion persists through institutional inertia and norm citation rather than current threat assessment. theater_ratio=0.58 suggests moderate theatrical maintenance. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.28. Constrained exit: EU norms are embedded in Portuguese governance frameworks; cannot easily abandon without institutional friction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Democratic Reformers and Pluralist Civil Society",
+      "comment": "PERSPECTIVE 6: DEMOCRATIC REFORMERS / PLURALIST CIVIL SOCIETY (SCAFFOLD) \u2014 Organized agents (civic organizations, academic networks, pluralist media) seeking to replace cordon logic with policy-based competitive dynamics and inclusive representation norms. See the constraint as temporary: as Chega moderates (or fails to), inclusive representation becomes viable. Sunset mechanism: if Chega is demonstrably incompatible with democratic norms through electoral behavior rather than exclusion-by-decree, the cordon becomes unnecessary. Mobile exit: can advocate for norm change, shift political culture. d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.17. Low effective extraction because agents have agency and see a path forward."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "label": "Analytical Observer / Comparative Democratic Theory",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / COMPARATIVE THEORY (TANGLED ROPE) \u2014 Sees the cordon as both functional coordination (protecting consensus democratic norms against populist erosion) and extractive (denying representation to 30%+ of voters, concentrating power in establishment coalition). Analytically indexes the constraint as tangled because it exhibits both functions simultaneously. d\u22480.72, f(d)\u22481.15, \u03c3=1.1 \u2192 \u03c7\u22480.66. This perspective embodies the central mandatrophy tension."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "chega_moderation_trajectory",
+      "question": "Will Chega demonstrate democratic commitment through electoral behavior, or entrench as a destabilizing force that justifies perpetual exclusion?",
+      "resolution_mechanism": "Longitudinal assessment of Chega policy proposals, coalition signaling, and institutional behavior if included in governance roles; comparison with other European far-right parties' trajectories (Italy's Lega, Poland's Law and Justice post-election maturation)",
+      "impact": "If moderate: cordon becomes normatively indefensible; constraint shifts to Scaffold with sunset. If destabilizing: cordon's Snare classification for voters becomes analytically justified; constraint persists as Tangled Rope from establishment perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trajectory of Chega moderation or entrenchment"
+    },
+    {
+      "id": "voter_preference_stability",
+      "question": "Is Chega support a stable constituency preference or a protest vote that dissolves with economic improvement or establishment party repositioning?",
+      "resolution_mechanism": "Panel voter surveys tracking individual transitions; demographic stability of Chega base across election cycles; sensitivity analysis of support to economic indicators, immigration policy shifts, regional investment",
+      "impact": "If stable: Snare classification is durable; exclusion becomes permanent structural feature, driving radicalization. If protest: support may erode; cordon becomes transitional Scaffold, and constraint dissolves naturally.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of Chega voter base"
+    },
+    {
+      "id": "enforcement_sustainability",
+      "question": "Can the cordon sanitaire remain credible if Chega continues gaining seats and mainstream parties face coalition mathematics that require inclusion?",
+      "resolution_mechanism": "Simulation of 2026, 2030 election scenarios with current polling; assessment of coalition viability without Chega as seat count grows; historical precedent from other democracies (Belgium N-VA, Italy FdI)",
+      "impact": "If unsustainable: cordon collapses, constraint transitions to Rope or Scaffold as inclusion becomes structural inevitability. If sustainable: enforcement intensifies, theater ratio rises, Piton classification emerges.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural sustainability of cordon enforcement as Chega grows"
+    },
+    {
+      "id": "democratic_norm_internalization",
+      "question": "Are exclusionary norms (cordon) genuinely internalized as democratic principles, or performatively maintained for elite convenience?",
+      "resolution_mechanism": "Comparative survey of elite vs. citizen support for cordon logic; assessment of whether rejection thresholds adjust with Chega policy positions vs. fixed by institutional decree; discourse analysis of cordon justifications over time",
+      "impact": "If genuinely internalized: cordon reflects authentic democratic values, Tangled Rope classification holds. If performative: the constraint is better classified as Snare (extraction disguised as protection) from analytical view.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree of internalization of cordon sanitaire as democratic norm vs. elite convenience"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Portuguese cordon sanitaire against Chega represents a structural constraint on democratic representation that functions simultaneously as coordination mechanism and extraction device. The traditional party coalition (PSD, PS, centrist parties) maintains a self-enforcing exclusion rule against far-right party Chega despite its consistent electoral performance at 25-35% in voting intention surveys. This constraint exhibits the core mandatrophy tension: from the establishment perspective, the cordon sanitaire coordinates democratic defense against populist erosion and norm-breaking; from the Chega voter perspective, it extracts representation from a substantial electoral minority through institutional gatekeeping. The constraint's enforceability depends on coalition mathematics (whether traditional parties need Chega seats) and norm credibility (whether exclusion appears defensive or self-serving). As the 2026 Presidential election approaches, the sustainability of this enforcement mechanism becomes empirically contested.",
+    "key_agents": [
+      "Traditional Party Coalition (PSD/PS/centrist parties): Primary beneficiary (institutional/arbitrage) \u2014 coordinates around Chega exclusion to maintain government formation control and elite consensus",
+      "Chega Voters: Primary victim (powerless/trapped) \u2014 denied meaningful representation despite substantial electoral share; no viable exit through voting",
+      "Institutional Media and Civil Society: Enforcer/partial victim (powerful/mobile) \u2014 both maintains exclusionary narratives and constrained by appearance of partisanship",
+      "Marginalized Regional Communities: Secondary victim (moderate/constrained) \u2014 excluded from Chega representation option while benefiting from traditional parties' redistribution pledges",
+      "Democratic Reformers: Organized agent (organized/mobile) \u2014 seeking to replace cordon logic with policy-based competitive norms; sees the constraint as sunset-able",
+      "EU Integration Framework: Institutional constraint (institutional/constrained) \u2014 provides historical legitimacy for cordon through anti-extremism norms; increasingly performative",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both coordination and extraction functions; embodies the mandatrophy tension"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts representation from a substantial electoral minority (25-35% voting intention) through institutional rule-making rather than electoral competition. However, extractiveness is not maximal (0.70+) because: (a) voters retain formal franchise rights; (b) some Chega voter preferences may be absorbed into traditional party platforms; (c) the extraction mechanism is partially justified by perceived democratic risk (even if that risk is now contested). The moderate value reflects that this is a genuine Tangled Rope rather than pure Snare. Suppression (0.62): Moderate-high. Significant barriers include: systematic exclusion from coalition mathematics (structural), media normalization of Chega-as-dangerous (discursive), electoral system design that benefits traditional parties, and career/reputational risk for politicians engaging with Chega platforms. However, suppression is not total (0.80+) because: Chega operates openly, contests elections, and maintains organizational capacity. Theater ratio (0.58): Moderate. The cordon sanitaire maintains performative content: media coverage emphasizes Chega's norm-breaking rhetoric rather than policy specifics; establishment parties define legitimacy circularly as 'non-Chega membership'; democratic defense narratives are deployed even when Chega's behavior is indistinguishable from other conservative parties. But the performance is not maximal (0.70+) because policy competition still occurs, and some genuine institutional risk assessment continues.",
+    "perspectival_gap": "The Chega voter perspective (Snare) and traditional party perspective (Rope) define opposite classification outcomes from identical structural data. The traditional coalition experiences the cordon as coordination: shared exclusion discipline creates coalition clarity, reduces inter-party warfare, and strengthens their negotiating position. The Chega voter experiences the same constraint as pure extraction: a systematic denial of representation through institutional rules rather than electoral competition. This perspectival gap is not an observational ambiguity \u2014 it reflects genuine structural asymmetry. The established parties benefit from the constraint; Chega voters bear costs. The mandatrophy tension emerges from the fact that both perspectives are analytically valid: the constraint IS a coordination mechanism (solves the collective action problem of traditional party coalition formation), and it IS asymmetric extraction (concentrates power and denies representation to a large minority). The analytical observer's Tangled Rope classification resolves the tension by acknowledging both functions simultaneously.",
+    "directionality_logic": "Chega voter: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximal extraction directionality. The voter has no meaningful exit within the Portuguese democratic system; cannot shift support without abandoning core preferences; cannot coordinate with like-minded voters in viable governance coalitions. Traditional party coalition: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Negative effective extraction \u2014 net beneficiary. The coalition has multiple exit options (can shift partner composition, negotiate government terms from strength, adapt policy positions) and derives clear benefits from cordon discipline. Institutional media: Powerful + mobile. d\u22480.50, f(d)\u22480.65. Both enforces the constraint (through narrative framing) and experiences constraint-costs (risk of appearing partisan; theater maintenance burden). Mobile exit provides gradual pathway toward norm reframing. Democratic reformers: Organized + mobile. d\u22480.35, f(d)\u22480.32. Low extraction because agents have structural agency and perceive a viable pathway forward (democratic norm evolution). Comparative democratic theory: Analytical perspective with d\u22480.72 embodies the structural tension \u2014 sees both the coordination function (democratic defense) and the extraction function (representation denial) equally.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint centers on whether the cordon sanitaire is 'defensive coordination' (justified exclusion of norm-breakers) or 'extractive gatekeeping' (concentration of power dressed in democratic language). The constraint resolves the mandatrophy through perspectival indexing: from the beneficiary's view (institutional/arbitrage), it is Rope \u2014 genuinely solving the problem of coalition coordination. From the victim's view (powerless/trapped), it is Snare \u2014 systematic extraction without exit. From the organized reformer's view (organized/mobile), it is Scaffold \u2014 temporary constraint being superseded by inclusive norms. From the analytical view, it is Tangled Rope \u2014 containing both genuine coordination function (coalition discipline against fragmentation) and genuine asymmetric extraction (representation denial to 30%+ of voters). The empirical resolution path lies through omega variables: if Chega demonstrates democratic commitment through electoral behavior and policy moderation, the coordination justification weakens and the constraint appears increasingly extractive. If Chega's behavior validates the exclusion logic, the cordon appears more defensible as coordination. The theater_ratio trajectory (rising from 0.42 to 0.58) suggests that performative maintenance is increasing \u2014 the constraint is drifting toward Piton classification as institutional inertia replaces genuine threat assessment. If theater continues rising above 0.70, the constraint becomes a degraded Piton: maintained through habit and narrative rather than functional necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "portuguese_coalition_formation_rules",
+      "populist_mobilization_dynamics_southern_europe"
+    ],
+    "dual_formulation_note": "The cordon sanitaire can be decomposed into two distinct constraints: (1) coalition_formation_coordination (\u03b5\u22480.15, Rope) \u2014 the mechanism by which traditional parties coordinate to form government, which genuinely solves collective action; (2) chega_representation_exclusion (\u03b5\u22480.65, Snare) \u2014 the systematic denial of representation to a large voter group. The current story models these as a single Tangled Rope constraint because they are structurally coupled: the coordination mechanism works by enforcing the exclusion. Separating them would require showing that traditional party coalition could coordinate without Chega exclusion, which is counterfactually weak. The network links show how this constraint affects broader Portuguese democratic structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

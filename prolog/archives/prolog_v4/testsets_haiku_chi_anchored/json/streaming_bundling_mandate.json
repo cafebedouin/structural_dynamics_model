@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "streaming_bundling_mandate",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "stream_bundle"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandatory Streaming Bundling Mandate",
+    "topic_domain": "economic/media_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_cable_operators",
+      "bundled_content_aggregators"
+    ],
+    "victims": [
+      "niche_content_providers",
+      "budget_conscious_consumers",
+      "direct_to_consumer_platforms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Niche Content Creator",
+      "comment": "PERSPECTIVE 1: NICHE CONTENT CREATOR (SNARE) \u2014 Small streaming producers (independent documentary studios, niche comedy channels, vertical content creators) cannot exit the mandate: regulatory law forces them into bundles they didn't choose, fragmenting their audience and destroying direct relationships. They bear suppression (no alternative to bundling), extraction (forced into discount-tier bundles), and have no recourse. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Budget-Conscious Consumer",
+      "comment": "PERSPECTIVE 2: BUDGET-CONSCIOUS CONSUMER (SNARE) \u2014 Consumers who previously subscribed only to specific channels (e.g., HBO Max for one show, Apple TV+ for another) are forced to buy bundles, paying for content they don't want. Trapped: legal prohibition on \u00e0 la carte options. Suppressed: no alternative. Extracted from: forced overpayment. d\u22480.90, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Direct-to-Consumer Platform",
+      "comment": "PERSPECTIVE 3: DIRECT-TO-CONSUMER PLATFORM (TANGLED ROPE) \u2014 Netflix, Disney+, or Apple TV+ experience the mandate as both coordination failure and extraction. Coordination function: bundling reduces consumer choice paralysis and can increase discoverability (consumers try bundled content they wouldn't select alone). Extraction: forced into bundles with competitors, losing pricing power and differentiation. Exit options constrained: cannot leave the national market without losing scale. d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legacy Cable Operator",
+      "comment": "PERSPECTIVE 4: LEGACY CABLE OPERATOR (ROPE) \u2014 Large telecom/cable operators (Comcast, Charter, AT&T) see the mandate as pure coordination: bundling replicates their traditional cable model, reduces churn, and enables cross-selling. They have arbitrage exit: can lobby for carve-outs, can shift to mobile/broadband if streaming fails. Bundling solves their coordination problem (how to retain subscribers). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Regulatory Body",
+      "comment": "PERSPECTIVE 5: REGULATORY BODY (TANGLED ROPE) \u2014 The agency mandating bundling experiences hybrid logic: coordination function (reduce consumer confusion, stabilize industry revenue), but also enforced extraction (mandates protect legacy operators against disruption, artificially sustaining their position). The regulator has powerful agents and arbitrage options (can repeal, can modify), but the mandate itself creates asymmetry \u2014 those regulated cannot exit. d\u22480.40, f(d)\u22480.40, \u03c3=1.0 \u2192 \u03c7\u22480.23."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Content Industry Incumbent",
+      "comment": "PERSPECTIVE 6: CONTENT INDUSTRY INCUMBENT (PITON) \u2014 Established studios (Warner Bros., Paramount, Disney) see the mandate as degraded protection. They once required bundling to enforce windowing (theatrical \u2192 cable \u2192 streaming). The mandate continues bundling logic after its economic function has decayed \u2014 studios now use bundling performatively to maintain antitrust appearances rather than for real market control. theater_ratio \u2248 0.52 (mid-range): bundling is partially functional (cross-promotion), partially performative (anticompetitive theater). \u03c7 \u2248 0.30 from their perspective (constrained + powerful = moderate extraction, but weak exit option)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Internet Coalition",
+      "comment": "PERSPECTIVE 7: OPEN INTERNET COALITION (SCAFFOLD) \u2014 Consumer advocacy groups, independent creators, and tech platforms organized globally see the mandate as temporary coordination failure with a sunset. Technology enables unbundling (algorithms improve discoverability, mobile platforms fracture traditional distribution), and regulatory opposition is mobilizing. The coalition has mobile exit (international platforms, alternative distribution), time horizon for sunset is generational (10-15 years for regulatory regime to shift). d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.15."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bundling_efficiency_claim",
+      "question": "Does bundling genuinely reduce consumer decision fatigue and increase content discovery, or is this a post-hoc rationalization for rent extraction?",
+      "resolution_mechanism": "Randomized field experiments: measure consumer satisfaction, churn rates, and content discovery metrics in bundled vs unbundled markets; compare to pre-streaming cable bundling data",
+      "impact": "If true: bundling is coordination (rope from regulator and operator perspectives strengthens). If false: bundling is pure extraction theater (snare classification hardens across all perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bundling genuinely solves consumer discovery or is extractive theater"
+    },
+    {
+      "id": "direct_to_consumer_viability",
+      "question": "Without the mandate, would niche and independent content creators have sustainable direct-to-consumer models, or do economies of scale require some form of bundling?",
+      "resolution_mechanism": "Historical analysis of unbundled streaming markets (European, Asian markets with lighter bundling mandates); measurement of independent creator revenue and subscriber acquisition costs in mixed regulatory environments",
+      "impact": "If viable: mandate is pure extraction (snare classification hardens for creators). If not viable: mandate is mixed coordination-extraction (tangled rope classification is correct).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether independent creators can thrive without bundling requirement"
+    },
+    {
+      "id": "international_regulatory_convergence",
+      "question": "Will other jurisdictions adopt similar bundling mandates, or will this regime remain isolated and subject to repeal?",
+      "resolution_mechanism": "Tracking of regulatory filings in EU, UK, Canada, Australia; analysis of corporate lobbying positions; correlation with digital services tax and antitrust enforcement trends",
+      "impact": "If converges: mandate becomes entrenched (piton classification hardens). If isolated: mandate is temporary (scaffold classification hardens, sunset becomes more visible).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether bundling mandates will become global norm or remain isolated"
+    },
+    {
+      "id": "technology_unbundling_pressure",
+      "question": "Will algorithmic recommendations, AI-driven curation, and emerging platforms (TikTok, YouTube Shorts, Discord communities) make traditional bundling obsolete regardless of regulation?",
+      "resolution_mechanism": "Trend analysis: track shifts in content consumption patterns among younger cohorts; measure algorithmic discovery vs traditional browsing; monitor platform investment in recommendation systems",
+      "impact": "If yes: mandate becomes vestigial (piton classification hardens, theater_ratio rises as bundling becomes performative). If no: mandates will remain economically relevant (tangled rope or snare holds).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emerging technology makes bundling economically obsolete"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "A mandatory streaming bundling mandate represents a regulatory intervention that forces streaming platforms to offer content exclusively through bundled packages, prohibiting standalone subscriptions. This constraint exhibits classic tangled rope dynamics: it solves a genuine coordination problem (reducing consumer choice paralysis, stabilizing industry revenue) while simultaneously enforcing asymmetric extraction (from niche creators and budget-conscious consumers). The constraint redistributes rent from direct-to-consumer platforms and independent creators toward legacy cable operators and large media conglomerates seeking to reverse cord-cutting. The theater ratio (0.52) reflects that bundling's efficiency claims are partially functional (cross-promotion and discoverability) and partially performative (protecting incumbent market position). The extractiveness (0.58) shows meaningful but not dominant extraction \u2014 the mandate is not a pure snare, because some consumers benefit from bundling (reduced choice paralysis, lower per-title costs for heavy users), and some platforms benefit from improved revenue stability. However, the suppression (0.68) is substantial: regulatory prohibition on unbundling removes alternatives entirely, creating trapped exit for those harmed.",
+    "key_agents": [
+      "Niche Content Creators: Primary victim (powerless/trapped) \u2014 independent studios, vertical creators, and smaller platforms forced into low-visibility bundles with limited direct consumer access",
+      "Budget-Conscious Consumers: Primary victim (powerless/trapped) \u2014 users who previously selected specific channels are legally prohibited from \u00e0 la carte purchasing, forced to buy bundles",
+      "Direct-to-Consumer Platforms: Secondary victim (moderate/constrained) \u2014 Netflix, Disney+, Apple TV+ lose pricing power and market differentiation through forced bundling with competitors",
+      "Legacy Cable Operators: Primary beneficiary (institutional/arbitrage) \u2014 Comcast, Charter, AT&T replicate traditional cable model, improve subscriber retention, cross-sell opportunities",
+      "Regulatory Body: Mixed (powerful/arbitrage) \u2014 enforces mandate, experiences hybrid coordination-extraction logic, has power to modify or repeal",
+      "Large Content Studios: Secondary beneficiary (institutional/constrained) \u2014 Warner Bros., Paramount, Disney use bundling for revenue stability and antitrust-adjacent control"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The mandate extracts from niche creators and budget consumers through suppression of unbundling (complete prohibition), but extraction is not maximal because: (1) some consumers benefit from bundling (reduced decision paralysis, lower per-title cost for heavy users), (2) large platforms retain scale advantages despite bundling, (3) international competition limits rent capture (consumers with VPNs or international accounts can arbitrage). The measurement trajectory shows increasing extractiveness over 6 years (0.32\u21920.58), indicating that bundling's initial efficiency benefits (cross-promotion, discovery) decay while its protective function hardens (legacy operators consolidate subscriber bases through mandatory bundling). Suppression (0.68): High. Regulatory prohibition on unbundling removes the primary alternative. Consumers and creators cannot opt out; enforcement is automatic through regulatory mandate. No legal \u00e0 la carte pathway exists. Theater ratio (0.52): Moderate. Bundling is partially functional (genuine cross-promotion and algorithmic discovery improve consumer experience for some users, reduce decision paralysis) and partially performative (maintains antitrust appearance, protects incumbents against disruption, creates artificial rent protection). The ratio has increased over time (0.38\u21920.52) as the efficiency benefits plateau while the protective theater hardens.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. Niche creators and budget consumers perceive pure snare (trapped exit, suppression, extraction). Direct-to-consumer platforms perceive tangled rope (mixed coordination via bundling's genuine discovery function, mixed extraction via forced participation and lost pricing power). Legacy operators perceive pure rope (genuine coordination problem solved: subscriber retention, cross-selling). The regulatory body perceives tangled rope (coordination function justified, but enforcement creates asymmetry). Content studios perceive piton (bundling was once functional market control; now degraded to performative antitrust theater). The coalitions opposing the mandate perceive scaffold (temporary coordination failure, sunset visible through technological unbundling and regulatory opposition). The analytical observer risks mountain classification (bundling is 'inherent to media economics'), but the structural data reveals this as false summit: extractiveness increased over time, theater ratio is moderate (not nearly invisible), and beneficiaries are identifiable institutional actors, not natural law.",
+    "directionality_logic": "Niche creators: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 cannot exit, cannot organize, no alternatives. Budget consumers: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. Near-maximum extraction \u2014 legal prohibition on preferred option. Direct-to-consumer platforms: Victim + constrained (can theoretically exit market or fight regulation, but practically constrained by scale economics and regulatory hostility) \u2192 d\u22480.65, f(d)\u22480.95. Substantial extraction but not maximal because they have power and exit optionality. Legacy cable operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary \u2014 they lobbied for the mandate, can exit by shifting to broadband, capture rent through subscriber consolidation. Content studios: Beneficiary + constrained (benefit from bundling's revenue stability, but constrained by regulatory pressure and platform fragmentation) \u2192 d\u22480.30, f(d)\u22480.28. Low-moderate extraction; they benefit but lack full freedom to reshape the constraint. Regulatory body: Mixed, powerful agents \u2192 d\u22480.40, f(d)\u22480.40. Moderate extraction \u2014 enforces asymmetry but has arbitage to modify mandate. Open internet coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.35. Low extraction; coalition has international mobility and regulatory counter-pressure.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The mandatrophy is resolved by decomposing bundling into its genuine coordination function and its extractive enforcement. Bundling DOES solve coordination problems: (1) reduces consumer choice paralysis (paradox of choice), (2) enables cross-promotion and discovery (consumers sample content they wouldn't select independently), (3) stabilizes revenue for platforms (predictable subscriber bases improve investment). These are legitimate coordination benefits. Simultaneously, bundling ENABLES extraction: (1) forces budget consumers to overpay, (2) locks out niche creators from direct channels, (3) protects legacy incumbents from disruption. The classification is tangled rope, not snare, because the coordination function is structurally real \u2014 measurable improvements in consumer experience and platform stability \u2014 not theater. The theater ratio (0.52) confirms this: bundling is neither purely functional (rope would have theater \u22640.30) nor purely performative (snare would have theater \u22650.70). The mandate is genuine mixed coordination-extraction. The mandatrophy surfaces when naive classification mistakes bundling for pure consumer benefit (rope from beneficiary only) or pure market control (snare from victim only). Deferential realism's full perspectival analysis reveals the hybrid: each agent's classification is correct from their structural position, and the constraint permits both interpretations because it genuinely performs both functions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cord_cutting_acceleration",
+      "platform_fragmentation_pressure",
+      "independent_creator_viability"
+    ],
+    "dual_formulation_note": "Mandatory streaming bundling is downstream of regulatory capture dynamics (legacy operators lobbying for favorable rules) and upstream of consumer response mechanisms (subscription stacking, VPN usage, piracy substitution). The constraint family links three structural claims: (1) regulatory capture hypothesis (legacy operators lobby for bundling protection), (2) bundling extraction hypothesis (consumers overpay, creators lose access), (3) technology substitution hypothesis (algorithms and emerging platforms unbundle regardless). Each has distinct \u03b5 and classification; they affect the bundling constraint and are affected by it."
+  },
+  "directionality_overrides": []
+}

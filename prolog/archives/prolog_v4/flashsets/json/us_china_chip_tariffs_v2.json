@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "us_china_chip_tariffs_v2",
+    "version": "1.0",
+    "generated_date": "2024-07-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Tariffs on Chinese High-Tech Goods (2024)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_chip_manufacturers",
+      "governments_promoting_domestic_production"
+    ],
+    "victims": [
+      "chinese_chip_manufacturers",
+      "us_consumers",
+      "global_supply_chain_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Chinese Chip Manufacturers",
+      "comment": "Chinese chip manufacturers face limited alternative markets in the short term and are significantly harmed by the tariffs, which restrict their access to the US market. They are largely trapped due to existing trade agreements and technology dependencies."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US Consumers",
+      "comment": "US consumers bear the increased costs of high-tech goods due to the tariffs. While they have some limited mobility through purchasing alternatives, they are largely constrained by the availability and pricing of domestic products. The exit option is 'constrained' because they face switching costs and limited choices."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Chip Manufacturers",
+      "comment": "US chip manufacturers benefit from reduced competition and increased government subsidies/support, creating arbitrage opportunities and incentivizing domestic production. They experience the constraint as a coordination mechanism to strengthen the domestic industry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Supply Chain Efficiency",
+      "comment": "Global supply chain efficiency suffers from the fragmentation and increased costs resulting from the tariffs. It experiences both extraction (due to reduced efficiency) and coordination (attempting to realign to changing regulations)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Governments Promoting Domestic Production",
+      "comment": "Governments in other countries who also seek to reduce dependency on specific nations' chip production benefit from the US's actions by having more global alignment in reducing dependency. However, they are constrained in that US tariffs also apply to other countries that send chips to China, potentially hurting their economies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a global and civilizational perspective, the tariffs represent a tangled rope, with both coordination (re-shoring/friend-shoring, reducing single-country dependence) and extraction (increased costs, inefficiencies in supply chains). The policy requires active enforcement and has asymmetric effects."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effectiveness_of_reshoring",
+      "question": "Will reshoring chip production to the US prove economically sustainable and secure the supply chain?",
+      "resolution_mechanism": "Longitudinal tracking of domestic chip production costs, technological advancement, and vulnerability to geopolitical shocks.",
+      "impact": "If effective: tariffs transition to scaffold/rope for US. If ineffective: tariffs become a piton, causing long-term economic harm.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of domestic chip production"
+    },
+    {
+      "id": "china_retaliation_impact",
+      "question": "How will China retaliate to the tariffs, and what will be the global economic consequences?",
+      "resolution_mechanism": "Monitoring Chinese policy responses and their impact on global trade flows, technology access, and geopolitical stability.",
+      "impact": "If China retaliates strongly: tariffs become snare for global economy. If China adapts: tariffs have limited long-term impact.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of Chinese retaliation"
+    },
+    {
+      "id": "technology_leapfrogging",
+      "question": "Will tariffs incentivize or hinder innovation in semiconductor technology and related sectors?",
+      "resolution_mechanism": "Tracking patent filings, investment trends, and technological breakthroughs in both the US and China.",
+      "impact": "If incentivizes innovation: potential scaffold with sunset as global innovation becomes more balanced. If hinders: becomes a long-term snare or piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact on technological innovation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The US tariffs on Chinese high-tech goods, particularly semiconductors, aim to bolster domestic manufacturing and reduce reliance on foreign suppliers. However, these tariffs also create significant costs for US consumers and disrupt global supply chains. The policy is a complex interplay of economic and political factors, with varying impacts on different stakeholders.",
+    "key_agents": [
+      "US Chip Manufacturers: Primary beneficiary (institutional/arbitrage) - benefits from reduced competition and subsidies.",
+      "Chinese Chip Manufacturers: Primary victim (powerless/trapped) - faces restricted market access.",
+      "US Consumers: Secondary victim (moderate/constrained) - bears increased costs.",
+      "Global Supply Chain Efficiency:  Moderately negatively affected (powerful/constrained).",
+      "Governments Promoting Domestic Production: (institutional/constrained) benefits from US policy direction but constrained by direct cost"
+    ],
+    "logic_rationale": "Extractiveness (0.60): Moderate-high. The tariffs extract value from Chinese manufacturers and US consumers through increased prices and reduced market access. Suppression (0.70): High. The tariffs significantly suppress alternative supply chains and market options for both producers and consumers. Theater Ratio (0.30): Relatively low. The tariffs have a real economic impact beyond mere performative signaling.",
+    "perspectival_gap": "The tariffs are viewed differently by various actors. US chip manufacturers see them as a rope, enhancing their competitiveness. Chinese manufacturers and US consumers experience them as a snare, limiting their choices and increasing costs. Analytical observers recognize the tangled rope nature, with both coordination (domestic production) and extraction (global inefficiency).",
+    "directionality_logic": "The directionality is determined by the agent's position relative to the extraction flow. Beneficiaries (US chip manufacturers) have a low d value, while victims (Chinese manufacturers, US consumers) have a high d value. Global supply chain efficiency is negatively affected due to the disruptions and inefficiencies created by the tariffs. It is moderately negative as some global supply chain will also benefit with increased redundancy in systems.",
+    "mandatrophy_analysis": "The policy is classified as a Tangled Rope because it combines elements of both coordination and extraction. The coordination aspect is the attempt to strengthen the US domestic chip industry and reduce reliance on foreign sources. The extraction aspect is the increased costs and inefficiencies imposed on Chinese manufacturers, US consumers, and global supply chains. This is a Tangled Rope, not just a Snare, because there's a clear and intended coordination function, even if it is implemented with significant coercive costs."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_trade_relations",
+      "semiconductor_supply_chain_resilience"
+    ]
+  },
+  "directionality_overrides": []
+}

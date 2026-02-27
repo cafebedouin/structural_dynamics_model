@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "israel_norwegian_law",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "norwegian"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Norwegian Law (Amendment to Article 42c)",
+    "topic_domain": "political/institutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_ministers",
+      "coalition_governing_parties"
+    ],
+    "victims": [
+      "legislative_representation_fidelity",
+      "backbench_mks",
+      "voter_mandate_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Bypassed Backbench MK",
+      "comment": "PERSPECTIVE 1: BYPASSED BACKBENCH MK (SNARE) \u2014 A legislator further down the party list who entered the Knesset through the resignation mechanism, only to be trapped in temporary status. Cannot remove themselves without weakening the coalition; cannot demand permanent seat without party sanction. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.52. Experiences the mechanism as pure extraction of their legislative tenure and legitimacy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legislative Opposition",
+      "comment": "PERSPECTIVE 2: LEGISLATIVE OPPOSITION (TANGLED ROPE) \u2014 Benefits from the mechanism's transparency and predictability (coordination function: clear succession rules, no institutional mystery). Simultaneously victimized by the extraction: the government can swap MKs without triggering new elections, reducing the opposition's leverage to force electoral accountability. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40. Constrained exit: withdrawal from parliament damages their seat count and coalition stability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Coalition Government",
+      "comment": "PERSPECTIVE 3: COALITION GOVERNMENT (ROPE) \u2014 Primary beneficiary. The mechanism is coordination pure and simple: it allows executive ministers to shed legislative duties without new elections or cabinet reshuffles. The government benefits from flexibility (ministers can exit the Knesset without constitutional crisis) while maintaining its Knesset majority. Arbitrage exit: the government can choose to invoke or ignore the mechanism depending on coalition management needs. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiary; negative effective extraction indicates pure coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Democratic Reform Coalition",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC REFORM COALITION (SCAFFOLD) \u2014 Organized civil society and electoral reform advocates see the mechanism as a temporary solution to a deeper problem: should ministers hold dual legislative/executive roles? The sunset logic: if primary legislation abolishes dual mandates entirely (moving to a pure parliamentary or presidential system), the need for Article 42c evaporates. d\u22480.45, f(d)\u22480.58, \u03c3=1.0 \u2192 \u03c7\u22480.22. Mobile exit: reform advocates can exit through legislative change; they are not trapped. Low theater: the mechanism itself is transparent and rule-bound, unlike other government workarounds."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Israeli Constitutional System",
+      "comment": "PERSPECTIVE 5: ISRAELI CONSTITUTIONAL SYSTEM (PITON) \u2014 Article 42c represents a degraded patch on a fundamentally unstable institutional design: the dual mandate of ministers as both legislators and executives. The mechanism persists not because it solves the underlying problem but because the underlying problem (dual mandates created by proportional representation and coalition governance) has proven intractable. theater_ratio=0.58 indicates performative elements: the 'resignation' is theatrical \u2014 ministers shed legislative status while maintaining executive power, creating a pseudo-exit. The ritual of succession persists through institutional inertia; the foundational issue (should ministers be legislators?) remains unresolved."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Constitutional Tension)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CONSTITUTIONAL TENSION VIEW (MOUNTAIN) \u2014 From a comparative constitutional perspective, the tension between dual mandates and executive effectiveness is inherent to any proportional parliamentary system without clear separation of powers. All such systems face this constraint. However, the structural data (\u03b5=0.38, suppression=0.42, theater=0.58) contradicts the mountain classification. The engine will flag this as a false summit: the 'inherent' framing naturalizes what is actually a contingent institutional choice about how to design parliamentary representation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dual_mandate_necessity",
+      "question": "Is the dual mandate of ministers as legislators inherent to proportional representation, or a solvable institutional design problem?",
+      "resolution_mechanism": "Comparative analysis of parliamentary systems: do other proportional systems require dual mandates? Are there institutional designs that separate executive and legislative roles while maintaining coalition stability?",
+      "impact": "If inherent: the mechanism is a necessary feature (mountain-like). If solvable: the mechanism is a patch on a design flaw (piton-like). The classification hinges on whether the underlying problem is structural or contingent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether dual mandates are an inherent feature of proportional representation"
+    },
+    {
+      "id": "electoral_mandate_fidelity",
+      "question": "Does replacing an elected MK with a list successor preserve the voter's original mandate, or does it constitute an unelected transfer of representation?",
+      "resolution_mechanism": "Legal analysis of democratic theory: does a party's list authority supersede individual electoral mandates? Empirical tracking of how often successors diverge legislatively from their predecessors.",
+      "impact": "If mandate is preserved: the mechanism is legitimate coordination (Rope perspective strengthened). If mandate is broken: the mechanism is extraction of voter intent (Snare perspective strengthened). This determines whether the victim classification for 'voter_mandate_integrity' is accurate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether list succession preserves electoral mandate fidelity"
+    },
+    {
+      "id": "coalition_collapse_risk",
+      "question": "How often do departures/replacements under Article 42c trigger coalition instability or early elections?",
+      "resolution_mechanism": "Historical analysis of Israeli coalitions: frequency of Article 42c invocations, correlation with coalition tension or collapse events, comparison to counterfactual (what would have happened without the mechanism).",
+      "impact": "If frequent triggers: the mechanism is a pressure relief valve (prevents larger extraction; scaffold logic). If rare: the mechanism is cosmetic (piton logic). This affects whether the coordination function is genuine or performative.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Historical frequency of coalition instability tied to Article 42c succession"
+    },
+    {
+      "id": "backbench_mk_disadvantage_magnitude",
+      "question": "What is the actual career damage or legislative disadvantage to a backbench MK who enters via Article 42c succession?",
+      "resolution_mechanism": "Longitudinal career tracking: do list successors achieve re-election to the same or higher positions? Do they suffer committee assignments, legislative influence, or party retaliation?",
+      "impact": "If damage is severe: victimhood classification (Snare perspective) is confirmed. If minimal: the mechanism is neutral coordination (Rope perspective). The suppression value (0.42) and backbench victim classification depend on this.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Career disadvantage to MKs who enter via list succession"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Amendment to Article 42c of the Israeli Basic Law permits ministers to resign from the Knesset while retaining their cabinet positions, with the next member of their party's election list automatically replacing them in the legislature. The mechanism emerged as a pragmatic coordination solution to a structural tension in Israeli parliamentary democracy: the dual mandate problem. Ministers must serve as both executives and legislators, creating a workload conflict. The law allows resolution without triggering new elections or coalition collapse. However, the mechanism also enables extraction: it gives the executive and coalition significant flexibility to reshape the Knesset composition without electoral accountability. Backbench MKs who ascend through this mechanism occupy precarious positions \u2014 they are temporary until a minister returns, giving them reduced leverage and career prospects. The constraint exhibits genuine coordination (predictable succession rules, no constitutional crisis) alongside asymmetric extraction (government flexibility gained at the cost of legislative independence and electoral fidelity).",
+    "key_agents": [
+      "Executive Ministers: Primary beneficiary (institutional/arbitrage) \u2014 shed legislative burden; maintain majority through succession mechanism",
+      "Coalition Governing Parties: Primary beneficiary (organized/arbitrage) \u2014 retain Knesset seats without electoral exposure; control succession through party lists",
+      "Backbench MKs (List Successors): Primary victim (powerless/trapped) \u2014 temporary status; reduced career prospects; vulnerable to party discipline",
+      "Legislative Opposition: Secondary victim (moderate/constrained) \u2014 government can restructure Knesset without triggering elections; reduced leverage for accountability",
+      "Voter Mandate Integrity: Structural victim (powerless/trapped) \u2014 original votes elect specific individuals; mechanism allows party to substitute without new mandate",
+      "Democratic Reform Coalition: Organized agents (organized/mobile) \u2014 civil society and constitutional reformers pushing for separation of powers; see sunset potential in comprehensive institutional redesign",
+      "Israeli Constitutional System: Institutional actor (institutional/arbitrage) \u2014 maintains dual-mandate design; Article 42c patches symptom rather than resolving root tension"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-low. The mechanism is legitimate in addressing a real coordination problem (minister workload). However, extraction exists in: (a) government flexibility to reshape Knesset without elections, (b) party control over succession (not individual choice), (c) reduced accountability for changing representation. The value reflects that the coordination function is genuine, but asymmetric benefits flow to the executive. Suppression (0.42): Moderate. Barriers to alternative solutions include: constitutional rigidity (changing the Basic Law requires 61 Knesset votes), coalition fragility (any institutional reform risks government collapse), and entrenched dual-mandate practice. However, suppression is not total \u2014 democratic reform advocates maintain pressure for comprehensive redesign. Theater ratio (0.58): Moderate-high. The mechanism has performative elements: the 'resignation' is surgical (minister exits legislature but not cabinet), creating appearance of solving the problem without addressing the root dual-mandate conflict. The theatrical element increases over time as the mechanism becomes routine \u2014 it loses its original sense of exceptional coordination and becomes ritualized gap-filling.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence across institutional levels. The coalition government sees pure coordination (Rope) \u2014 the mechanism is a tool for flexible governance. Backbench MKs see pure extraction (Snare) \u2014 the mechanism converts them into temporary placeholders with no independent power. The opposition sees mixed coordination and extraction (Tangled Rope) \u2014 they benefit from the transparency of succession rules but suffer from reduced electoral leverage. Democratic reformers see a temporary patch with a sunset (Scaffold) \u2014 the mechanism will become unnecessary if Israeli institutions separate executive and legislative roles. The constitutional system sees its own degradation (Piton) \u2014 the dual-mandate tension persists, solved only by surgical interventions rather than structural change. The civilizational analytical observer risks seeing an inherent natural law (Mountain) \u2014 all proportional systems have this problem \u2014 but the structural data reveals this as a false summit: the tension is a contingent institutional choice, not a natural law.",
+    "directionality_logic": "Executive ministers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. Coalition parties: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.09. Net beneficiary. Backbench MKs: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit option. Opposition: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction; constrained exit because withdrawing from parliament damages their position. Voter mandate integrity: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Abstract collective; cannot organize or exit. Reform coalition: Organized + mobile \u2192 d\u22480.45, f(d)\u22480.58. Mobile exit through legislative reform; see mechanism as temporary. Constitutional system: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Piton classification comes from theater gate and inertia, not high chi.",
+    "mandatrophy_analysis": "RESOLVES MANDATROPHY by recognizing that the mechanism serves two genuinely distinct functions that could justify different classifications: (1) COORDINATION FUNCTION: Article 42c solves a real problem (dual-mandate workload conflict) and provides predictable succession rules that prevent constitutional crisis. This is legitimate rope-like coordination. (2) EXTRACTION FUNCTION: The same mechanism gives the executive and coalition flexibility to reshape Knesset composition without new elections, and converts list successors into temporary, powerless MKs. This is snare-like extraction. The tangled_rope classification captures that BOTH functions are structurally present and significant. The mechanism is not merely coordination being misperceived as extraction (a mandatrophy error), nor is it extraction disguised as coordination. It genuinely performs both roles. The perspectival gap (coalition sees rope, backbench MK sees snare, reformers see scaffold) reflects the true structure: different agents experience different functions because they occupy different structural positions relative to the mechanism. The classification resolves by accepting that all perspectives are accurate to their context."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "israeli_coalition_stability",
+      "knesset_representation_legitimacy"
+    ],
+    "dual_formulation_note": "Article 42c addresses the dual-mandate problem, which is itself a distinct constraint upstream. The dual-mandate tension (executive vs legislative workload) generates pressure to which Article 42c responds. Decomposition: constraint_dual_mandate_tension (\u03b5\u22480.25, structural property of proportional systems) is upstream; israel_norwegian_law (\u03b5=0.38, political mechanism to manage the tension) is downstream."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

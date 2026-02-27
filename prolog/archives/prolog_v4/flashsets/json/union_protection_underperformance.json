@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "union_protection_underperformance",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "\"Just Cause\" Protection for Underperforming Union Employees",
+    "topic_domain": "economic/labor_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "union_employees",
+      "union_leadership"
+    ],
+    "victims": [
+      "employer_productivity",
+      "non_union_employees",
+      "customers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Employer Productivity",
+      "comment": "The employer experiences this as a snare, as they are trapped by the union contract and cannot easily remove underperforming employees, leading to decreased productivity and potential losses."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Union Leadership",
+      "comment": "Union leadership benefits from the protection, as it solidifies their power and bargaining position. They can leverage this protection to negotiate better terms for all employees. They have arbitrage options due to their institutional power and ability to influence negotiations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Union Employees",
+      "comment": "Union employees benefit from job security, but can also be constrained by the presence of underperforming colleagues, leading to increased workloads and potential resentment. Their exit options are constrained as they are part of the union."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legal System",
+      "comment": "The 'Just Cause' doctrine was initially intended to protect workers from arbitrary dismissal, but now it often creates more legal wrangling than it solves, with both parties expending large amounts of resources to fight. The legal system finds itself locked into an increasingly bureaucratic and unhelpful process, though some lawyers benefit from increased billing hours."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From an analytical perspective, this constraint represents a tangled rope, as it provides a degree of job security for employees (coordination), but also hinders employer flexibility and potentially lowers overall productivity (extraction). The effectiveness of this protection depends on the specific industry, economic conditions, and the strength of the union. The constraint has both coordination and extraction components, making it a tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "performance_measurement_accuracy",
+      "question": "How accurately can employee performance be measured and documented, particularly in roles with subjective performance criteria?",
+      "resolution_mechanism": "Implementation of standardized performance metrics and rigorous documentation processes.",
+      "impact": "If performance can be accurately measured, the extraction is reduced, and the constraint may shift towards a rope. If performance is difficult to measure, the extraction is higher, reinforcing the snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of performance measurement and documentation."
+    },
+    {
+      "id": "union_bargaining_power",
+      "question": "How strong is the union's bargaining power relative to the employer?",
+      "resolution_mechanism": "Analysis of union membership density, strike history, and political influence.",
+      "impact": "Stronger bargaining power leads to greater protection for employees, increasing the extraction from employers. Weaker bargaining power may result in a relaxation of just cause provisions, lessening the extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Strength of union bargaining power."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the \"Just Cause\" and due process provisions in collective bargaining agreements that make it difficult to terminate employees for sub-par performance without exhaustive documentation and remediation attempts. The constraint leads to a variety of consequences, including reduced employer productivity and potential protection of underperforming employees at the expense of more productive ones. Union leadership benefits from increased power, while employers face increased costs and administrative burdens.",
+    "key_agents": [
+      "Union Employees: Beneficiaries of job security (moderate/constrained)",
+      "Union Leadership: Institutional beneficiary with increased power (institutional/arbitrage)",
+      "Employer Productivity: Victim of reduced flexibility (powerless/trapped)",
+      "Non-Union Employees: Indirect victims potentially facing increased workload (moderate/constrained)",
+      "Customers: Indirect victims if product quality or service declines (powerless/trapped)"
+    ],
+    "logic_rationale": "The extractiveness is rated at 0.60 because the constraint significantly reduces employer flexibility and increases costs associated with managing underperforming employees. Suppression is rated at 0.70, because it actively suppresses the employer's ability to terminate employees even if they are not meeting expectations. The theater ratio is at 0.75 because there is a substantial legal and administrative burden associated with documenting and addressing performance issues, and the process is more than just performative. It does involve real resources and effort, and the theater has increased over time as documentation requirements have grown.",
+    "perspectival_gap": "The perspectival gap arises from the differing positions of the stakeholders. Employers experience the constraint as a snare because they are trapped by the collective bargaining agreement. Union leadership views it as a rope, as it strengthens their position and allows them to advocate for their members. Employees experience it as a tangled rope, balancing the benefits of job security with the potential drawbacks of working alongside underperforming colleagues. The analytical perspective captures the complex interplay between coordination and extraction inherent in this constraint.",
+    "directionality_logic": "Directionality is determined by the flow of resources and control. Union leadership benefits from increased power and security, resulting in a low 'd' value. Employers bear the costs of reduced flexibility and productivity, leading to a high 'd' value. Employees experience both benefits and costs, resulting in a moderate 'd' value. The analytical observer assesses the overall impact, taking into account the various perspectives and trade-offs.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by acknowledging that this constraint contains both coordination and extraction elements. While the intention of 'Just Cause' provisions is to provide job security and protect employees from arbitrary dismissal (coordination), the practical implementation often results in reduced employer flexibility and potential protection of underperforming employees (extraction). The classification as a tangled rope reflects this mixed nature."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "minimum_wage_laws",
+      "occupational_safety_regulations"
+    ]
+  },
+  "directionality_overrides": []
+}

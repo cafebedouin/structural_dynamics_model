@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "asymmetric_computational_difficulty",
+    "version": "1.1",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.85,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Proof-of-Work Zero-Day",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "zero_day_exploiter"
+    ],
+    "victims": [
+      "network_participants"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Network Participant",
+      "comment": "A network participant who is unaware of the zero-day vulnerability is trapped and powerless, experiencing the constraint as a snare. They are extracted from without realizing the presence of the attack."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Zero-Day Exploiter",
+      "comment": "The zero-day exploiter benefits from the asymmetric computational difficulty, allowing them to extract value from the network with relative ease. They see this as a coordination tool."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the situation presents a tangled rope where there is both coordination (proof of work) and asymmetric extraction (zero-day exploit)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Blockchain Governance",
+      "comment": "The blockchain governance mechanisms, while intended to provide security, are slow to respond to zero-day exploits, leading to a performative aspect where they appear to be in control but are largely ineffective during the critical exploitation period."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exploit_detection_time",
+      "question": "How long will it take for the zero-day exploit to be detected by the network?",
+      "resolution_mechanism": "Security audits, network monitoring, and community analysis.",
+      "impact": "Shorter detection time reduces the extractiveness. Longer detection time increases the extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Time until zero-day exploit is detected."
+    },
+    {
+      "id": "governance_response_effectiveness",
+      "question": "How effective are the blockchain governance mechanisms in responding to and mitigating zero-day exploits?",
+      "resolution_mechanism": "Analysis of past exploit responses, simulation of governance procedures, and expert review.",
+      "impact": "More effective governance reduces the impact of the exploit. Less effective governance increases the impact of the exploit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of blockchain governance response."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This scenario describes a cryptographic primitive used for coordination (Rope) that has been secretly compromised by a single actor. The asymmetric computational difficulty resulting from a zero-day exploit creates a Snare for network participants, who are unknowingly being extracted from. The exploiter, on the other hand, benefits from this asymmetry. The blockchain governance is slow to react, increasing the theater.",
+    "key_agents": [
+      "Network Participants: Victims (powerless/trapped)",
+      "Zero-Day Exploiter: Beneficiary (powerful/arbitrage)",
+      "Analytical Observer: Observer (analytical/analytical)",
+      "Blockchain Governance: Institutional (constrained)"
+    ],
+    "logic_rationale": "Extractiveness is high because the zero-day exploit allows the attacker to extract significant value from the network. Suppression is high because network participants are unaware of the vulnerability and cannot easily defend against it. Theater ratio is now higher to reflect the performative aspect of the slow blockchain governance response.",
+    "perspectival_gap": "The network participant sees a snare because they are trapped and powerless. The zero-day exploiter sees it as a rope because it allows them to coordinate their extraction. The analytical observer sees it as a tangled rope because there is both coordination (proof of work) and asymmetric extraction (zero-day exploit). Blockchain governance sees a piton.",
+    "directionality_logic": "The network participants are the victims and are trapped. The zero-day exploiter is the beneficiary and has arbitrage. The analytical observer is neutral. Blockchain governance is constrained."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_security"
+    ]
+  },
+  "directionality_overrides": []
+}

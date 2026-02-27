@@ -1,0 +1,159 @@
+{
+  "header": {
+    "constraint_id": "floating_wall_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The East China Sea Maritime Militia Barrier",
+    "topic_domain": "geopolitical/maritime",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "china_coast_guard",
+      "chinese_fishing_fleets"
+    ],
+    "victims": [
+      "japanese_fishing_fleets",
+      "regional_maritime_security"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Japanese Fishing Fleets",
+      "comment": "Japanese fishing fleets are directly impacted by the barrier, limiting their access to fishing grounds and creating a constant threat of confrontation. They have limited exit options due to economic dependence and historical fishing rights."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Maritime Security",
+      "comment": "Regional maritime security is negatively affected by the barrier, as it increases tensions and the risk of escalation. While maritime security actors have some influence, their exit options are limited by the need to maintain regional stability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "China Coast Guard",
+      "comment": "The China Coast Guard benefits from the barrier as it extends their operational range and strengthens their control over disputed waters. They have arbitrage options as they can re-deploy resources to other areas if the barrier is challenged."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Chinese Fishing Fleets",
+      "comment": "Chinese fishing fleets benefit from the barrier as it provides them with protected access to fishing grounds and support from the coast guard. They have some mobility within the region, but are economically dependent on fishing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the barrier represents a complex interplay of strategic interests, economic factors, and historical claims. It serves as a tool for asserting sovereignty but also carries the risk of escalation and destabilization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "barrier_sustainability",
+      "question": "How sustainable is the barrier in the long term, considering the economic and environmental costs?",
+      "resolution_mechanism": "Analysis of the economic impact on Chinese fishing fleets, environmental impact assessments, and cost-benefit analysis.",
+      "impact": "If unsustainable, the barrier may be abandoned or scaled down, reducing its impact on regional security. If sustainable, it may become a permanent feature of the East China Sea.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of the barrier in the long term."
+    },
+    {
+      "id": "escalation_threshold",
+      "question": "At what point does the barrier trigger a military response from Japan or other regional actors?",
+      "resolution_mechanism": "Analysis of Japanese military doctrine, diplomatic statements, and historical responses to similar actions.",
+      "impact": "If the threshold is low, the barrier could lead to a military confrontation. If the threshold is high, the barrier may be tolerated as a fait accompli.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Threshold for military response to the barrier."
+    },
+    {
+      "id": "legal_status",
+      "question": "What is the legal status of the barrier under international law, and how might this affect its legitimacy and acceptance?",
+      "resolution_mechanism": "Legal analysis of maritime law, historical precedents, and opinions of international legal scholars.",
+      "impact": "If the barrier is deemed illegal, it may face international condemnation and pressure to be removed. If it is deemed legal, it may be more widely accepted.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legal status of the barrier under international law."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "China has mobilized massive fleets of fishing vessels to form \"floating walls\" near the Sino-Japanese median line. This tactic aims to assert sovereignty over disputed waters, control access to fishing grounds, and deter Japanese fishing fleets. The barrier raises regional tensions, increases the risk of maritime incidents, and challenges the existing maritime order.",
+    "key_agents": [
+      "China Coast Guard: Benefits through increased control (institutional/arbitrage)",
+      "Chinese Fishing Fleets: Benefit through protected fishing grounds (powerful/mobile)",
+      "Japanese Fishing Fleets: Suffer restricted access (powerless/trapped)",
+      "Regional Maritime Security: Faces increased instability (moderate/constrained)"
+    ],
+    "logic_rationale": "The barrier extracts resources and access from Japanese fishing fleets, giving Chinese fleets a protected zone. Suppression is high due to the sheer number of vessels involved and the coast guard's backing. Theater ratio is relatively low, as the primary purpose is resource control, with signaling as a secondary concern.",
+    "perspectival_gap": "Japanese fleets experience a snare, as they are directly impacted and cannot easily exit. Regional maritime security sees a tangled rope, as the barrier both challenges and reinforces existing power dynamics. China's coast guard and fishing fleets perceive the barrier as a rope, coordinating and protecting their interests.",
+    "directionality_logic": "Directionality is derived from the relative power and exit options of the actors involved. Japanese fleets have limited power and exit options, resulting in a high d value. China's coast guard has significant power and arbitrage options, resulting in a low d value."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "senkaku_islands_dispute",
+      "south_china_sea_claims"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "israel_egypt_gas_deal",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Geopolitical Gas Supply Agreement between Israel and Egypt",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_gas_companies",
+      "egyptian_industrial_sector"
+    ],
+    "victims": [
+      "egyptian_consumers",
+      "alternative_energy_suppliers_egypt"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Egyptian Consumers",
+      "comment": "Egyptian consumers face higher energy costs and limited choice due to the deal. They are trapped as their consumption is necessary and alternatives are limited."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Israeli Gas Companies",
+      "comment": "Israeli gas companies benefit from a stable export market and increased revenue. They can arbitrage this position due to the agreement's long-term nature."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Egyptian Government",
+      "comment": "The Egyptian government benefits from securing a stable gas supply for industry but is constrained by the agreement's terms and geopolitical implications."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a global perspective, the agreement represents a complex interplay of economic and political factors with both benefits and drawbacks."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_price_volatility",
+      "question": "How will long-term gas price volatility affect the economic viability and geopolitical balance of the agreement?",
+      "resolution_mechanism": "Economic modeling and scenario planning based on projected gas market trends.",
+      "impact": "Significant price fluctuations could strain the agreement, leading to renegotiation or even cancellation, altering the regional energy landscape.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of long-term gas price volatility"
+    },
+    {
+      "id": "alternative_energy_development",
+      "question": "To what extent will the agreement inhibit the development of alternative energy sources within Egypt?",
+      "resolution_mechanism": "Analysis of investment trends in renewable energy projects in Egypt and comparison with other countries in the region.",
+      "impact": "If the agreement discourages investment in renewables, it could create a long-term energy dependency and hinder Egypt's transition to a more sustainable energy mix.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact on alternative energy development"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Geopolitical Gas Supply Agreement between Israel and Egypt is a bilateral agreement where Israel supplies natural gas to Egypt. This agreement presents a complex interplay of economic and political interests, with both beneficiary and victim agents affected. The agreement aims to provide Egypt with a stable energy source, while also providing Israel with a profitable export market.",
+    "key_agents": [
+      "Israeli Gas Companies: Primary beneficiary (institutional/arbitrage) \u2013 Benefits from a stable export market and increased revenue.",
+      "Egyptian Industrial Sector: Secondary beneficiary (institutional/constrained) - Benefits from reliable gas supply",
+      "Egyptian Consumers: Primary target (powerless/trapped) \u2013 Face potentially higher energy costs and limited energy choices.",
+      "Alternative Energy Suppliers (Egypt): Secondary target (moderate/constrained) - Limited growth because of low gas prices.",
+      "Egyptian Government: Institutional actor (institutional/constrained) - constrained by the agreement terms"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. The agreement extracts value from Egyptian consumers through potentially higher energy costs and reduced availability of alternative energy sources. The suppression (0.40) arises from the long-term nature of the agreement and the limited options for Egyptian consumers to switch to alternative energy sources in the short term. The relatively low theater ratio reflects the practical, rather than performative, nature of this gas supply agreement. Egypt depends on the gas, and Israel profits from selling it.",
+    "perspectival_gap": "The perspectives diverge based on the agent's position within the agreement. Israeli gas companies view it as a beneficial coordination mechanism (Rope), securing a stable export market. Egyptian consumers experience it as a Snare, facing higher costs and limited alternatives. The Egyptian government perceives it as a Tangled Rope, balancing the need for a stable energy supply with potential economic and political constraints. The analytical observer sees the complex interplay of factors that produces both winners and losers.",
+    "directionality_logic": "The engine derives directionality (d) from agent relationships. Israeli companies are beneficiaries with arbitrage options (low d); Egyptian consumers are victims with trapped options (high d). The Egyptian government is constrained, resulting in a mid-range d reflecting a mix of benefits and costs. The analytical observer has a perspective from both positive and negative sides, therefore having an analytical perspective.",
+    "mandatrophy_analysis": "The classification of Tangled Rope resolves the mandatrophy by acknowledging both the coordination benefits (stable energy supply) and extractive aspects (potentially higher costs for consumers) of the agreement. It prevents mislabeling the agreement as pure coordination (Rope) by recognizing the negative impacts on Egyptian consumers and alternative energy suppliers. It also avoids classifying it as pure extraction (Snare) by acknowledging the benefits for Israeli gas companies and the Egyptian industrial sector."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "egypt_israel_relations",
+      "regional_energy_security"
+    ]
+  },
+  "directionality_overrides": []
+}

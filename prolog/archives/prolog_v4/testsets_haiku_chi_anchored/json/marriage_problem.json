@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "marriage_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "optim"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The 37% Rule (Optimal Stopping Problem)",
+    "topic_domain": "mathematical/algorithmic/decision_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Decision-Maker in Real Time",
+      "comment": "PERSPECTIVE 1: DECISION-MAKER IN REAL TIME (MOUNTAIN) \u2014 The 37% rule is an irreducible structural constraint on choice under incomplete information. The decision-maker cannot escape the mathematical limit: if they reject more than 37% of candidates without committing, they risk rejecting the true optimum with high probability. The constraint emerges from information theory, not institutional design. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Observer",
+      "comment": "PERSPECTIVE 2: MATHEMATICAL OBSERVER (MOUNTAIN) \u2014 From the perspective of probability theory and optimal control, the 37% threshold is a mathematical law: for large N, the probability of success approaches 1/e \u2248 0.368 when using the optimal strategy (reject the first 37%, then accept the first candidate better than all seen so far). This is a proven theorem, not a negotiable institutional arrangement. The constraint is universal, scale-invariant, and irreversible. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Agent with Resources",
+      "comment": "PERSPECTIVE 3: POWERFUL AGENT (MOUNTAIN) \u2014 Even an agent with significant resources (ability to run multiple decision cycles, hire consultants, use algorithms) cannot escape the 37% rule's structural constraint. The law applies regardless of power: gathering information in advance (via reference checking, background investigation) simply redefines what counts as 'information observed' in the sequence, but the mathematical structure persists. The agent can mitigate risk through preprocessing, but cannot repeal the fundamental trade-off between exploration and exploitation. d\u22480.48, f(d)\u22480.60, \u03c3=1.0 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Institution Implementing Selection",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL ACTOR (MOUNTAIN) \u2014 Whether selecting employees, customers, or partners, an institution implementing a hiring or matching process cannot escape the 37% rule. It applies across all domains where sequential choice occurs under incomplete information. The constraint is the same whether N=10 (candidates for a hire) or N=1000 (dating pool). The institution can only change the base rate of success by changing N, not by escaping the mathematical structure. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cardinal_vs_ordinal_information",
+      "question": "Does the 37% rule remain optimal if the decision-maker has partial cardinal information (not just ordinal rankings)?",
+      "resolution_mechanism": "Theoretical extension to information-theoretic frameworks where candidates carry utility values; comparison of optimal thresholds under different information structures",
+      "impact": "If cardinal information changes the threshold: the rule is contingent on the ordinal-ranking assumption and not a universal law. If the threshold remains ~37%: the rule's universality is confirmed across information structures.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cardinal utility information preserves the 37% threshold"
+    },
+    {
+      "id": "horizon_finiteness_effects",
+      "question": "What happens to the 37% rule in finite-horizon settings with small N (N<10)? Does it still apply, or do discrete effects dominate?",
+      "resolution_mechanism": "Computational solution of the optimal stopping problem for small N; comparison of analytic 37% threshold to discrete optimal policies",
+      "impact": "If discrete effects dominate small N: the rule is an asymptotic approximation, not a true law. If the rule holds for small N: the mountain classification is stronger.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Applicability of 37% rule to finite, small-N scenarios"
+    },
+    {
+      "id": "no_recall_assumption_necessity",
+      "question": "Is the no-recall constraint (inability to return to a rejected candidate) essential to the 37% rule, or does it hold under partial recall?",
+      "resolution_mechanism": "Theoretical analysis and simulation of optimal stopping with k-step recall; determination of whether recall changes the structure of the optimal policy",
+      "impact": "If recall eliminates the 37% threshold: the rule depends on a specific institutional constraint (no recall), not on pure mathematics. If the rule persists under partial recall: its universality is confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the no-recall assumption is essential to the 37% rule"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The 37% Rule (or more precisely, the 1/e \u2248 0.368 threshold) is a mathematical law governing optimal stopping under incomplete information. In the classic 'Marriage Problem' (a variant of the Secretary Problem), an agent must select the best candidate from a sequence of N applicants without knowing future candidates' quality or having the ability to recall rejected candidates. The mathematical theorem states that the optimal strategy is to observe and reject the first \u2308N/e\u2309 candidates, then accept the first candidate better than all those observed. This strategy achieves a success probability approaching 1/e as N \u2192 \u221e. The constraint is not a policy choice, institutional arrangement, or power structure \u2014 it is a theorem in decision theory, probability, and optimal control. It applies universally across all sequential-choice scenarios with identical information structure. The rule's extractiveness is minimal (\u03b5=0.08) because it represents a structural ceiling on success rates, not an agent extracting value from others. Suppression is negligible (0.02) \u2014 the constraint is transparent and requires no coercion. Theater is low (0.15) \u2014 the mathematical proof is direct and contains no performative element. This is a canonical mountain constraint.",
+    "key_agents": [
+      "Decision-Maker: The agent conducting the sequential search (powerless/trapped) \u2014 cannot escape the mathematical limit",
+      "Candidate Pool: The N applicants (implicit, symmetric) \u2014 their ordering and ranking structure define the problem",
+      "Mathematical Community: The observer of the theoretical structure (analytical) \u2014 proves and validates the theorem",
+      "Implementation Institution: Any organization applying the rule (institutional/arbitrage) \u2014 benefits from understanding the constraint but cannot exceed its bounds"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The 37% rule is not an extraction mechanism \u2014 it is a natural law of decision-making. It imposes a constraint on achievable success rates (max ~37% for large N), not a redistribution from one agent to another. The low value reflects that no party is being exploited; all agents face the same mathematical ceiling. Suppression (0.02): Negligible. The rule requires no coercion or enforcement. Agents are free to use any strategy they choose; the theorem simply proves which strategy is optimal. Theater ratio (0.15): Low. The mathematical derivation is rigorous and transparent. Unlike institutional constraints that maintain themselves through narrative or performance, the 37% rule's maintenance requires only publication of mathematical proofs \u2014 minimal theater. Claimed type: Mountain. The rule exhibits all four mountain signatures: (1) Emerges naturally from information-theoretic structure, not institutional design. (2) Accessibility collapse = 0.92 \u2014 understanding the theorem requires mathematical sophistication, but the result is accessible to anyone willing to learn probability theory. (3) Resistance = 0.08 \u2014 minimal resistance to the law itself, though individuals may resist accepting its implications for their own decision-making. (4) Extractiveness \u2264 0.25 and suppression \u2264 0.05 satisfied.",
+    "perspectival_gap": "Unlike most constraints, the 37% rule exhibits zero perspectival gap: all four perspectives classify it identically as Mountain. This uniformity is the defining feature of a true natural law. The decision-maker in real time, the mathematical observer, the powerful agent, and the institutional actor all face the same constraint with no disagreement about its nature. The lack of gap does not indicate a weakness in the analysis \u2014 it indicates the constraint's universality. There is no tension between these perspectives because the rule applies uniformly regardless of power, exit options, or temporal horizon.",
+    "directionality_logic": "The 37% rule does not have traditional beneficiaries or victims because it is not an extraction mechanism. No agent benefits from the constraint, and no agent is harmed by it \u2014 all agents face it equally. The rule imposes a ceiling on achievable success rates (~37% for large N), which affects all decision-makers symmetrically. This is the defining characteristic of a pure structural constraint rather than a redistribution mechanism. Each perspective derives d from its observation position: a decision-maker faces the constraint directly (d\u22480.50, symmetric), the mathematical observer studies it analytically (d\u22480.72), a powerful agent still cannot escape it (d\u22480.48), and an institution implementing it faces it institutionally (d\u22480.05, slight beneficiary through understanding). But none of these directionalities represent extraction \u2014 they represent different structural positions relative to a universal law."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "exploration_exploitation_tradeoff",
+      "information_value_paradox"
+    ],
+    "dual_formulation_note": "The 37% rule is upstream in a constraint family involving sequential decision-making. The exploration-exploitation tradeoff and information value paradox are downstream manifestations of the same mathematical structure. All three constraints share the same \u03b5 range and emerge from identical information-theoretic limits."
+  },
+  "directionality_overrides": []
+}

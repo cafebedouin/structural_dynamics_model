@@ -2,25 +2,26 @@
   "header": {
     "constraint_id": "aging_well_assessment",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aging"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "The Commercialized Functional Aging Assessment System",
     "topic_domain": "health/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "assessment_companies",
-      "specialized_clinics",
-      "health_insurers"
+      "assessment_vendors",
+      "intervention_providers",
+      "insurance_risk_managers"
     ],
     "victims": [
-      "elderly_patients",
-      "general_practitioners"
+      "elderly_low_income_populations",
+      "aging_research_commons"
     ]
   },
   "perspectives": [
@@ -29,117 +30,159 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Elderly Patient",
-      "comment": "PERSPECTIVE 1: ELDERLY PATIENT (SNARE) — Experiences the system as coercive. Required by their physician or insurer, they pay for assessments and interventions of unclear value, and the results can be used to increase their insurance premiums. They are trapped by their health needs and lack of alternatives. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. Just below the canonical snare threshold, but the high suppression (0.65) makes the snare classification appropriate."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Assessment Company",
-      "comment": "PERSPECTIVE 2: ASSESSMENT COMPANY (ROPE) — As the primary beneficiary, the company experiences the system as a pure coordination mechanism. It standardizes a valuable service, connects clients with providers, and creates a market. From their view, they are simply facilitating better health outcomes. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07. Negative effective extraction indicates a net subsidy."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Health Insurer",
-      "comment": "PERSPECTIVE 3: HEALTH INSURER (TANGLED ROPE) — An institutional actor that is both a beneficiary (gains valuable risk-stratification data) and constrained by regulations and market pressures. They see both the coordination value of standardized metrics and the extractive potential for pricing risk. d≈0.30, f(d)≈0.20, σ=1.0 → χ≈0.11. Low extraction reflects their mixed role."
+      "label": "The Low-Income Elderly",
+      "comment": "PERSPECTIVE 1: LOW-INCOME ELDERLY (SNARE) \u2014 Trapped in the assessment ecosystem by insurance mandates and physician referrals. Cannot refuse testing without loss of coverage or care access. Costs (repeated assessments, intervention copays, time burden) fall entirely on the vulnerable population. No exit option; maximum experienced extraction relative to coordination benefit received."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The General Practitioner",
-      "comment": "PERSPECTIVE 4: GENERAL PRACTITIONER (TANGLED ROPE) — Constrained by patient demand (driven by marketing) and insurer requirements. They see the clinical utility (coordination) but also the pressure to bill and the potential for over-medicalization (extraction). They are a victim of the system's pressure but also an agent within it. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.51."
+      "spatial_scope": "regional",
+      "label": "The Research Aging Scientist",
+      "comment": "PERSPECTIVE 2: RESEARCH AGING SCIENTIST (TANGLED ROPE) \u2014 Benefits from the commercialized validation of their metrics (increased adoption, funding) but constrained by loss of scientific commons (proprietary data, restricted access, publication bias toward intervention efficacy). Mixed coordination (shared standards) and extraction (standardized metrics now controlled by vendors). Moderate experienced extraction \u2014 has some agency through academic credentials but constrained by institutional dependencies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Assessment Vendor",
+      "comment": "PERSPECTIVE 3: ASSESSMENT VENDOR (ROPE) \u2014 Primary beneficiary. Experiences the constraint as pure coordination: owning the assessment protocol creates switching costs and standardization value. Can arbitrage the system (licensing tests, selling platforms, bundling with interventions). Net extraction flows toward this agent. No cost-bearing from the vendor's perspective \u2014 the system solves their coordination problem of capturing market share."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Insurance Risk Manager",
+      "comment": "PERSPECTIVE 4: INSURANCE RISK MANAGER (TANGLED_ROPE) \u2014 Organized institutional actor. Benefits from risk stratification (identifies high-cost elderly before intervention) but constrained by regulatory requirements, data privacy law, and actuarial liability. The assessment system provides coordination (standardized risk profiles) and extraction (premium differentiation, intervention mandates). Significant enforcement overhead required to sustain the system. Moderate extraction \u2014 organized enough to adapt, but institutionally constrained."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Gerontology Profession",
+      "comment": "PERSPECTIVE 5: GERONTOLOGY PROFESSION (PITON) \u2014 Maintains ritualistic assessment protocols that were developed for research prediction but now serve primarily as billing justification and clinical theater. Physicians use the tests because insurance requires them and vendors market them, not because they substantially change treatment. The profession sees its own processes as partially degraded \u2014 vestiges of evidence-based protocols maintained through institutional inertia and reimbursement incentives rather than functional necessity. Theater ratio high; actual clinical decision-making impact low."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a genuine coordination function (standardizing functional health metrics) but is coupled with a significant, asymmetric extraction mechanism (billing, insurance risk-pricing). This hybrid nature is the hallmark of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a biological universalist view, functional decline with aging is an immutable property of human biology. The constraint appears as a natural fact: assessments measure real biological processes (muscle loss, gait degradation, grip decline), and testing these measures is inherent to gerontological science. However, the structural data \u2014 that the assessment is commercialized, requires active enforcement, extracts from vulnerable populations, and maintains theater \u2014 reveals this perspective as a naturalization of contingent institutional arrangements, not a mountain."
     }
   ],
   "omegas": [
     {
-      "id": "predictive_utility_vs_risk_sorting",
-      "question": "Is the system's primary function to improve patient health outcomes (coordination) or to provide insurers with granular data for risk-sorting and premium pricing (extraction)?",
-      "resolution_mechanism": "Longitudinal studies comparing health outcomes of participants vs. non-participants, controlling for baseline health. Analysis of how insurers change premiums based on assessment scores.",
-      "impact": "If outcomes improve significantly, it strengthens the Rope/Scaffold case. If premiums rise for low-scorers without commensurate support, it confirms the Snare/Tangled Rope classification.",
+      "id": "predictive_validity_threshold",
+      "question": "What level of predictive validity justifies mandatory assessment frequency and intervention mandates for low-income populations?",
+      "resolution_mechanism": "Prospective cohort analysis comparing assessment-guided interventions vs non-assessed controls; cost-effectiveness analysis relative to invasiveness and population burden",
+      "impact": "If validity low (r\u00b2 < 0.30): assessment is extraction without coordination benefit. If validity moderate (0.30 < r\u00b2 < 0.50): tangled rope classification confirmed. If validity high (r\u00b2 > 0.70): classification shifts toward rope.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Distinguishing between the system's health benefit and its insurance risk-sorting function."
+      "description": "Predictive validity of commercialized functional tests for actual health outcomes"
     },
     {
-      "id": "intervention_efficacy",
-      "question": "Do the standardized interventions recommended based on the assessments lead to clinically significant improvements, or do they primarily serve as a billable service?",
-      "resolution_mechanism": "Randomized controlled trials on the recommended interventions (e.g., specific exercise regimens, supplements) versus generalized lifestyle advice.",
-      "impact": "High efficacy supports the coordination function. Low efficacy suggests the interventions are part of the extractive theater, strengthening the Snare classification for victims.",
+      "id": "intervention_efficacy_independent",
+      "question": "Are intervention outcomes driven by the assessment itself (early detection, adherence motivation) or by vendor marketing and selective targeting of populations likely to improve anyway?",
+      "resolution_mechanism": "Randomized controlled trial comparing assessment-identified vs clinician-identified vs unselected controls for intervention effectiveness; analysis of outcome drift post-commercialization",
+      "impact": "If assessment is causal: tangled rope with genuine coordination function confirmed. If outcomes driven by vendor selection bias or publication bias: assessment is theater, classification shifts toward piton or snare.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Determining if recommended interventions are clinically effective or primarily for revenue."
+      "description": "Whether assessment drives intervention efficacy or reflects selection bias"
+    },
+    {
+      "id": "equity_enforcement_mechanism",
+      "question": "Is suppression maintained by billing/insurance mandate (active enforcement) or by knowledge barriers and cultural factors (passive suppression)?",
+      "resolution_mechanism": "Policy analysis of reimbursement requirements; qualitative interviews with low-income elderly populations; comparison of assessment adoption in systems with vs without insurance mandates",
+      "impact": "If active enforcement dominates: suppression is designed, extraction is intentional, classification remains tangled rope/snare. If passive suppression dominates: constraint may degrade toward piton as enforcement fails.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is actively enforced or passively sustained"
+    },
+    {
+      "id": "open_data_commons_viability",
+      "question": "Could a non-proprietary, open-access aging assessment framework provide equivalent predictive validity without vendor lock-in and cost extraction?",
+      "resolution_mechanism": "Comparative analysis of open-source gerontology metrics (public datasets, published protocols) vs proprietary vendor platforms; international comparisons (countries with public assessment systems)",
+      "impact": "If viable: the commercialization is contingent rent-seeking, not inevitable. Constraint could decompose into a Mountain (biological invariance of aging) + Snare (vendor extraction) + Rope (research coordination). If not viable: vendor control reflects coordination necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of open-source aging assessment alternatives"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.15
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
       "value": 0.35
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.55
-    },
-    {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.1
+      "time_point": 5,
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.25
+      "value": 0.64
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 20,
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
       "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint describes the evolution of functional aging tests (e.g., grip strength, walking speed) from academic research tools into a commercialized system. This system packages assessment, intervention recommendations, and billing into a product marketed to individuals, clinics, and insurers. While it offers a standardized language for discussing and tracking functional health (a coordination function), its commercial nature introduces significant extraction through service fees and the use of data for insurance risk stratification.",
+    "narrative_context": "The Commercialized Functional Aging Assessment System transforms research-derived physical proxy tests (Sitting-Rising Test, 4-Meter Walking Speed, Grip Strength) into a standardized clinical tool for risk stratification, intervention prescription, and billing justification. Originally developed as predictive biomarkers in prospective aging cohorts, these tests have been packaged by assessment vendors into proprietary platforms, marketed to insurance companies as cost-containment mechanisms, and embedded into clinical care through reimbursement mandates. The constraint exhibits a complex tangled structure: genuine coordination value (standardized risk assessment, early intervention opportunity) mixed with extraction mechanisms (cost concentration on low-income elderly, vendor control over metrics, clinical theater replacing genuine decision-making). The system requires active enforcement (insurance mandates, physician referrals) and suppression (knowledge asymmetry, limited alternatives, cultural barriers to refusing assessment). The theater ratio has risen as the system matured \u2014 the clinical value of the assessment appears to have plateaued while the administrative and billing overhead has increased, suggesting institutional degradation toward piton status.",
     "key_agents": [
-      "Elderly Patients: Primary targets (powerless/trapped) — pay for services and bear the risk of negative insurance consequences.",
-      "Assessment Companies & Specialized Clinics: Primary beneficiaries (institutional/arbitrage) — profit from the sale of assessments and interventions.",
-      "Health Insurers: Secondary beneficiaries (institutional/constrained) — gain data to price risk more accurately, but operate within a regulated environment.",
-      "General Practitioners: Secondary victims (moderate/constrained) — pressured to adopt the system, which can supersede their holistic clinical judgment."
+      "Assessment Vendors (Institutional/Arbitrage): Primary beneficiary \u2014 owns protocol, licenses tests, sells bundled platforms; benefits from switching costs and market consolidation",
+      "Low-Income Elderly (Powerless/Trapped): Primary victim \u2014 bears assessment costs and copays; cannot refuse without losing insurance coverage; no agency in system design",
+      "Insurance Risk Managers (Organized/Constrained): Secondary beneficiary \u2014 uses assessment for risk stratification and premium differentiation; constrained by regulation and liability",
+      "Research Aging Scientists (Moderate/Constrained): Beneficiary and victim \u2014 validates metrics (funding benefit) but loses commons (proprietary data, restricted access)",
+      "Gerontology Profession (Institutional/Arbitrage): Theater-maintainer \u2014 uses assessments as billing justification and clinical ritual; sees own processes as degraded",
+      "Analytical Observer (Analytical/Analytical): Risks naturalizing commercial extraction as biological inevitability"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55) is high, reflecting the direct costs to patients and the indirect costs via insurance premium adjustments. Suppression (0.65) is also high, as patients have few 'official' alternatives if the system is endorsed by their doctor or insurer, and marketing creates strong social pressure to 'age well'. The theater ratio (0.40) is moderate; the tests have real clinical grounding, but the commercial packaging and marketing add a performative layer of promising precise control over the aging process.",
-    "perspectival_gap": "The gap is stark. The company providing the service sees a pure Rope, a tool for empowering users. The patient, facing costs and potential penalties, sees a Snare they cannot easily escape. The insurer and doctor, caught in the middle, see a Tangled Rope, recognizing both the utility of the data and the coercive, extractive pressures the system creates. The analytical view confirms the Tangled Rope, as the system's existence depends on both its coordination function and its ability to extract value.",
-    "directionality_logic": "Beneficiaries (assessment companies, insurers) have low derived directionality (d), resulting in low or negative effective extraction (χ), classifying the constraint as a Rope or low-extraction Tangled Rope from their perspective. Victims (patients, GPs) have high derived directionality, leading to high χ and a Snare or high-extraction Tangled Rope classification. The system's structure creates these divergent experiences.",
-    "mandatrophy_analysis": "This case is a classic example of how a seemingly beneficial coordination tool (standardizing health metrics) becomes a Tangled Rope when commercialized. A simple analysis might label it a 'scam' (Snare) or a 'health innovation' (Rope). The Deferential Realism framework correctly identifies its dual nature. The system is not purely one or the other; its stability comes from serving a genuine coordination need for some actors while simultaneously extracting from others. This resolves the mandatrophy by showing the structure is a hybrid, not a mis-classified pure type."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The vendors capture significant economic value through licensing, platform fees, and bundled interventions. Low-income populations bear assessment costs as copays and time burden without proportional benefit. The extraction is substantial but not maximal because some populations do benefit from early intervention, and the assessment provides genuine information value. The rise from 0.28 to 0.52 over the interval reflects increasing vendor control and commercialization deepening. Suppression (0.58): Moderate-high. Strong barriers include insurance reimbursement mandates (active enforcement), knowledge asymmetry (elderly populations cannot assess test validity), limited alternative pathways (proprietary metrics block open-source competition), and cultural/medical authority factors. But suppression is not total \u2014 some elderly populations can refuse, some providers challenge the system, and resistance is emerging. Theater ratio (0.64): High and rising. Initially (t=0), the tests had research validity and clinicians used them for genuine prediction. Over time, the clinical decision-making value plateaued while administrative burden increased. Physicians now order tests primarily because insurance requires them and because billing depends on test documentation, not because the results substantially change care decisions. The rise from 0.35 to 0.64 indicates Goodhart drift \u2014 the metric has become decoupled from the outcome it was supposed to predict.",
+    "directionality_logic": "Directionality is determined by structural position relative to the extraction flow. Assessment vendors (institutional, arbitrage exit) experience low d (~0.10) \u2014 they are primary beneficiaries with escape options; the system solves their market problem. Low-income elderly (powerless, trapped exit) experience high d (~0.90) \u2014 they are trapped targets with no exit; maximum experienced extraction. Research scientists (moderate, constrained exit) experience moderate d (~0.55) \u2014 they benefit from validation but constrained by intellectual property control; mixed experience. Insurance managers (organized, constrained exit) experience low-moderate d (~0.35) \u2014 institutional enough to adapt but constrained by regulation; moderate experienced extraction. The pipeline computes f(d) from these d values and applies scope modifiers: low-income elderly in a national scope experience \u03c7 \u2248 0.90 \u00d7 1.0 \u2248 0.90; vendors in global scope with low d experience \u03c7 \u2248 0.52 \u00d7 (-0.12) \u00d7 1.2 \u2248 negligible (beneficiary discount).",
+    "perspectival_gap": "This constraint demonstrates how the same structural mechanism is experienced as coordination, extraction, theater, or natural law depending on position. The vendor sees Rope \u2014 the system solves their standardization and licensing problem. The low-income elderly see Snare \u2014 mandatory, costly, inescapable. The research scientist sees Tangled Rope \u2014 benefits (validation, adoption) mixed with costs (loss of commons, data control). The insurance manager sees Tangled Rope \u2014 risk stratification benefit mixed with regulatory constraint. The gerontologist sees Piton \u2014 the ritual persists through inertia and billing, not functional necessity. The analytical observer risks seeing Mountain \u2014 aging is biological fact \u2014 but the structural data reveals this as naturalization: the extraction is institutional, not biological. The perspectival gap is the entire story.",
+    "mandatrophy_analysis": "This constraint avoids the mandatrophy (false coordinate/extraction distinction) by clearly separating genuine coordination function (standardized risk assessment, early detection) from extraction mechanism (vendor licensing, cost concentration, knowledge asymmetry). The tangled rope classification affirms both: the system does coordinate prediction (genuine coordination value) AND extracts through reimbursement mandates, proprietary metrics, and suppression of alternatives (genuine extraction). The theater ratio rising above 0.5 indicates that the coordination function is degrading while the extraction mechanism persists \u2014 the system is drifting toward Snare (extraction) and Piton (theater-without-function). The mandatrophy is resolved by recognizing that commercialization was not inevitable: the original research tests were pure Rope (coordination through shared standards); the commercialization layer is a Snare added on top. Decomposing into separate stories would split these, but they are causally linked (vendor control of coordination enables extraction), so a single Tangled Rope story captures the hybrid structure correctly."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "biomarker_discovery_capture",
+      "geriatric_clinical_guideline_ossification"
+    ],
+    "dual_formulation_note": "The commercialized assessment system is downstream of legitimate research advances in aging biomarkers but represents a distinct structural constraint. The upstream constraint (biomarker discovery capture by pharma) has different \u03b5 reflecting the research/development boundary; this constraint has \u03b5=0.52 reflecting the clinical/commercial implementation layer and its extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
 }

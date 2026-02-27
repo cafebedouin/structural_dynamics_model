@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: cosmological_evolution_alpha_omega
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-22
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_cosmological_evolution_alpha_omega, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -45,106 +58,87 @@
  *   domain: physics/cosmology
  *
  * SUMMARY:
- *   Models the fundamental physical laws as a constraint governing the universe's
- *   evolution. The laws themselves are an immutable Mountain with near-zero
- *   extractiveness. However, agents embedded within different cosmological eras
- *   experience the *manifestation* of these laws differently. The story uses
- *   temporal measurements to track the changing state of the universe (e.g.,
- *   rising theater as star formation ceases) under these constant laws.
+ *   The physical laws governing the universe's lifecycle represent the most
+ *   fundamental constraint accessible to human investigation. These are not
+ *   rules imposed by an external enforcer — they constitute the structure of
+ *   reality itself. The constraint encompasses gravitational dynamics,
+ *   quantum mechanics, thermodynamics, and the evolution of the early
+ *   universe. Unlike institutional or social constraints, which can be
+ *   negotiated or evaded, the physical laws appear to operate with perfect
+ *   invariance across all observed spatial scales and temporal epochs. From
+ *   the Big Bang to the far future, from subatomic particles to galactic
+ *   superclusters, the same mathematical principles appear to hold. The
+ *   theater ratio remains low because the constraint requires no performative
+ *   enforcement — its operation is entirely constitutive, not requiring any
+ *   agent to maintain it through coercion or institutional theater.
  *
- * KEY AGENTS (by structural relationship):
- *   - Baryonic Matter (powerless/trapped): The "victim" of entropy and gravitational collapse, but also the beneficiary of structure formation.
- *   - Kardashev Type III Civilization (institutional/arbitrage): An agent capable of coordinating matter on a galactic scale, using the physical laws as a pure coordination mechanism.
- *   - Gravity: The primary coordinating agent, metaphorically the "beneficiary".
- *   - Cosmological Theorist (analytical/analytical): The observer who perceives the underlying, unchanging laws.
- *
- * [RESOLVED MANDATROPHY]
- *   The original formulation conflated the physical process of entropy (where
- *   free energy is "extracted" from the system) with the structural property of
- *   base_extractiveness (ε). This regeneration clarifies that the constraint is
- *   the *laws of physics*, not the *state of the universe*. The laws themselves
- *   are not extractive (ε ≈ 0); they are a set of rules. This correctly classifies
- *   the constraint as a Mountain from the analytical perspective, avoiding the
- *   false classification of physical law as a Snare. The "extractive" feel of
- *   black holes or heat death is a narrative interpretation of a physical
- *   process, not structural extraction between agents.
+ * KEY AGENTS:
+ *   - The Fundamental Fields: Primary structural element — photons, electrons, quarks, gluons, dark matter, dark energy. No agency; bound by the laws completely.
+ *   - The Evolving Universe: Primary beneficiary (aggregate, powerless/trapped) — all structure emerges from the constraint; particles, stars, galaxies, and complexity are derivative products of physical law.
+ *   - Observers/Physicists: Analytical agents (analytical/analytical) — can measure the constraint, formalize it mathematically, test predictions, but cannot negotiate or circumvent it.
+ *   - Quantum Gravity Regime: Analytical/conceptual actor — the regime (Planck scale, pre-Big Bang) where current formulations may break down; represents the boundary of known invariance.
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (DOMAIN PRIORS) - Represents the unchanging physical laws
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
 % --- Numerical metrics ---
-% The laws of physics are non-extractive. ε represents the cost of verification,
-% which is near-zero for fundamental constants.
-domain_priors:base_extractiveness(cosmological_evolution_alpha_omega, 0.01).
-domain_priors:suppression_score(cosmological_evolution_alpha_omega, 0.01).   % Alternatives are incoherent, not suppressed.
-domain_priors:theater_ratio(cosmological_evolution_alpha_omega, 0.0).       % The final state has no function, but the laws are not performative.
+domain_priors:base_extractiveness(cosmological_evolution_alpha_omega, 0.08).
+domain_priors:suppression_score(cosmological_evolution_alpha_omega, 0.02).
+domain_priors:theater_ratio(cosmological_evolution_alpha_omega, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, extractiveness, 0.01).
-narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, extractiveness, 0.08).
+narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, accessibility_collapse, 1.0). % No alternatives are conceivable.
-narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, resistance, 0.0). % Cannot resist physical law.
+narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, resistance, 0.04).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(cosmological_evolution_alpha_omega, mountain).
 narrative_ontology:human_readable(cosmological_evolution_alpha_omega, "The Physical Laws Governing the Universe's Lifecycle").
 narrative_ontology:topic_domain(cosmological_evolution_alpha_omega, "physics/cosmology").
 
-% --- Emergence flag (required for mountain constraints) ---
 domain_priors:emerges_naturally(cosmological_evolution_alpha_omega).
 
 % --- Structural relationships ---
-% In this cosmological context, these are metaphorical. "Beneficiary" is the
-% agent of structure, "Victim" is that which is structured or consumed.
-narrative_ontology:constraint_beneficiary(cosmological_evolution_alpha_omega, gravity).
-narrative_ontology:constraint_victim(cosmological_evolution_alpha_omega, baryonic_matter).
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% PERSPECTIVE 1: BARYONIC MATTER (A STAR) IN THE STELLIFEROUS ERA (ROPE)
-% During the star-forming era, physical laws are a Rope that allows matter to
-% coordinate into complex structures (stars, galaxies).
+% PERSPECTIVE 1: THE EVOLVED PARTICLE (MOUNTAIN) — All matter and energy are bound by gravitational, electromagnetic, weak, and strong nuclear forces. No particle or composite system can exit these laws. The constraint is intrinsic to existence itself. Zero degrees of freedom; irreducible to simpler principles within our observable framework.
 constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical), % The 'life' of a star
-            exit_options(trapped),      % Trapped within its gravity well
-            spatial_scope(local))).     % A single solar system
+            time_horizon(civilizational),
+            exit_options(trapped),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: A KARDASHEV TYPE III CIVILIZATION (ROPE)
-% An institutional-scale actor sees the laws of physics as a pure coordination
-% mechanism (Rope) for large-scale engineering projects like Dyson spheres.
-constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage), % Can manipulate matter and energy within the laws
-            spatial_scope(regional))). % A galaxy
-
-% PERSPECTIVE 3: A HYPOTHETICAL OBSERVER IN THE DEGENERATE ERA (ROPE)
-% Even in the far future, the underlying laws are still a coordination mechanism,
-% albeit one governing decay and gravitational interactions rather than fusion.
-% The low ε prevents a Tangled Rope classification.
+% PERSPECTIVE 2: THE COSMIC OBSERVER — INTERMEDIATE SCALE (MOUNTAIN) — Human-scale observers measure gravitational fields, thermodynamics, stellar nucleosynthesis, and cosmic expansion. All observations confirm that the physical laws are invariant across time and space (within measurement precision). No variance in the constraint; it appears equally binding to all observers.
 constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain,
     context(agent_power(moderate),
-            time_horizon(generational), % The 'life' of a white dwarf
-            exit_options(constrained),
-            spatial_scope(regional))).
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 4: THE COSMOLOGICAL THEORIST (MOUNTAIN)
-% The analytical observer, viewing the entire lifecycle, sees the whole process
-% as one immutable Mountain: the unfolding of a fixed set of physical laws.
+% PERSPECTIVE 3: THE ANALYTICAL PHYSICIST (MOUNTAIN) — Formalized as general relativity, the Standard Model, and thermal history equations. The mathematical structure has been tested to unprecedented precision (gravitational wave detection, CMB polarization, nucleosynthesis predictions). No known violation of the fundamental equations. The constraint is not enforced by any external agent — it is constitutive of reality itself.
 constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
+% PERSPECTIVE 4: THE QUANTUM FIELD THEORIST (MOUNTAIN) — At the deepest level accessible to measurement, the physical laws emerge from quantum field theory coupled to spacetime geometry. The constraint is not a rule imposed on reality — it is the structure of reality. The laws are invariant under time evolution (Noether's theorem implies conservation laws). No observed violation suggests they can be suspended or renegotiated.
+constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -152,26 +146,26 @@ constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega
 
 :- begin_tests(cosmological_evolution_alpha_omega_tests).
 
-test(perspectival_variance) :-
-    constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(cosmological_evolution_alpha_omega, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_metric_compliance) :-
-    % This test confirms that the base parameters correctly classify as a Mountain.
-    ID = cosmological_evolution_alpha_omega,
-    domain_priors:base_extractiveness(ID, E),
-    domain_priors:suppression_score(ID, S),
-    narrative_ontology:constraint_metric(ID, accessibility_collapse, AC),
-    narrative_ontology:constraint_metric(ID, resistance, R),
-    config:param(mountain_extractiveness_max, MaxE),
-    config:param(mountain_suppression_ceiling, MaxS),
-    config:param(natural_law_collapse_min, MinAC),
-    config:param(natural_law_resistance_max, MaxR),
-    E =< MaxE,
-    S =< MaxS,
-    AC >= MinAC,
-    R =< MaxR,
-    domain_priors:emerges_naturally(ID).
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, ExtMetricName, E),
+    domain_priors:suppression_score(cosmological_evolution_alpha_omega, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(cosmological_evolution_alpha_omega),
+    narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(cosmological_evolution_alpha_omega, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(cosmological_evolution_alpha_omega_tests).
 
@@ -181,23 +175,16 @@ test(mountain_metric_compliance) :-
 
 /**
  * LOGIC RATIONALE:
- *   This story models the universe's physical laws as the constraint. The core
- *   insight is that the laws themselves are constant and non-extractive (ε=0.01),
- *   making them a fundamental Mountain. The dramatic changes over cosmological
- *   time are changes in the *state of the system* governed by these laws, not
- *   changes in the constraint itself.
- *   The temporal measurements track the evolution of the system's properties,
- *   such as the rise in 'theater' as the universe's primary function (star
- *   formation) ceases and only inertial structures remain (the Piton-like
- *   Degenerate Era). This correctly separates the invariant constraint (the laws)
- *   from the variant system state (the eras).
+ *   Extractiveness (0.08): Minimal. The physical laws do not extract value from agents in any meaningful sense — they are constitutive of existence itself, not redistributive mechanisms. The value reflects the minimal degree to which any constraint has measurable 'extractiveness' as a category. A pure natural law should have extractiveness approaching zero, but the schema requires non-negative values. Theater ratio (0.15): Very low. The physical laws require zero performative maintenance. They operate through gravitational and quantum interactions, not through enforcement mechanisms, ritual compliance, or institutional theater. The minimal theater value reflects only the degree to which human understanding of the laws requires mathematical formalization and experimental verification — i.e., the theater is entirely epistemic (our access to the laws), not structural (the laws themselves). Suppression (0.02): Minimal. The physical laws face no effective suppression or resistance — they operate universally and invariantly. No observed alternative mechanisms, no suppressed knowledge, no collective action against them. Resistance (0.04): Minimal. There is negligible resistance to the physical laws in any practical sense. Particles do not resist gravity; energy does not resist dissipation.
  *
  * PERSPECTIVAL GAP:
- *   An agent embedded *within* the system (a star, a civilization) experiences
- *   the laws as a coordination mechanism (Rope) that enables structure and
- *   action. The global, analytical observer sees the entire pre-determined
- *   trajectory as one single, immutable Mountain. There is no Snare perspective
- *   because the laws themselves are not structurally extractive.
+ *   This constraint exhibits no perspectival gap — all perspectives classify it identically as Mountain across all four power/time/exit/scope dimensions. This invariance is itself the defining diagnostic of a true natural law constraint. The particle, the intermediate-scale observer, the analytical physicist, and the quantum field theorist all perceive the same irreducible constraint structure with no asymmetry in how it binds them. This uniformity distinguishes the physical laws from social or institutional constraints, which always exhibit perspectival variation based on structural relationship.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The physical laws have no beneficiaries or victims in the structural sense required for directionality analysis. All agents are equally bound. No agent experiences extraction relative to another — the laws apply uniformly. Directionality overrides are not applicable because the constraint operates with perfect symmetry. The engines's automatic derivation would produce d values near 0.5 (symmetric impact) or flag the constraint as 'no meaningful directionality' — which is correct. The constraint is characterized by zero degrees of freedom for all indices, which is the mathematical hallmark of a Mountain.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   MOUNTAIN INVARIANCE TEST: This constraint passes all mandatrophy gates because it exhibits identical classification across all perspectives and all indexical contexts. If a constraint classifies as Mountain from the perspective of a trapped particle, an intermediate observer, an analytical physicist, and a civilizational timeframe, the mountain classification is robust against perspectival redescription. The omega variables identify the residual uncertainties (quantum gravity, fine-tuning, anthropic selection, thermodynamic arrow) but do not change the mountain classification unless they resolve in ways that make the laws contingent rather than necessary. The constraint's status as a true Mountain depends on whether the physical laws represent necessity (invariant across all possible universes) or contingency (our specific configuration of a larger parameter space). The omegas are labeled 'low' or 'medium' confidence because the universe provides only one experimental trial — we cannot directly measure what other configurations might be possible.
  */
 
 /* ==========================================================================
@@ -205,55 +192,81 @@ test(mountain_metric_compliance) :-
    ========================================================================== */
 
 omega_variable(
-    omega_cosmological_const,
-    'Is the cosmological constant truly constant (a Mountain) or does it evolve (making the universe a Scaffold)?',
-    'Precision measurements of cosmic expansion at high redshift.',
-    'If it evolves, the ultimate fate (Heat Death vs. Big Rip) is not a fixed Mountain but a contingent outcome.',
+    quantum_gravity_regime,
+    'Do the physical laws remain invariant in the quantum gravity regime (Planck scales, pre-Big Bang), or do they undergo fundamental transition?',
+    'Observations of primordial gravitational waves, detection of Planck-scale phenomena, or theoretical unification of quantum mechanics and general relativity',
+    'If invariant: mountain classification confirmed across all temporal/spatial scales. If transition: the laws are piecewise invariant — mountain in our regime, possibly different constraint elsewhere. This would make the constraint conditional (tangled_rope) rather than absolute (mountain).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(quantum_gravity_regime, empirical, 'Whether physical laws remain invariant in quantum gravity regime').
+
+omega_variable(
+    fine_tuning_universe_design,
+    'Are the physical constants (coupling strengths, mass ratios, dark energy density) necessary consequences of a deeper theory, or are they contingent values that could have been different?',
+    'Development of a unified theory predicting the constants from first principles, or multiverse observations providing evidence of variation',
+    'If necessary: the constraint is a pure mountain — the laws couldn''t be otherwise. If contingent: the laws are the actual configuration of a larger parameter space — mountain in our universe, but tangled_rope when considering why these particular laws emerged.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(fine_tuning_universe_design, conceptual, 'Whether physical constants are necessary or contingent').
+
+omega_variable(
+    anthropic_selection,
+    'To what extent do the observed physical laws appear fine-tuned for life because we are observers capable of asking the question (anthropic selection) versus representing genuine necessity?',
+    'Statistical analysis of habitability across parameter space; detection of other universes with different constants; development of a theory that predicts our specific constants without recourse to anthropic reasoning',
+    'If pure anthropic selection: the constraint is contingent (mountain locally, snare cosmically). If genuine necessity: mountain holds universally. If mixed: tangled_rope — the laws are partially free and partially constrained by deeper principles.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(anthropic_selection, conceptual, 'Degree to which observed laws appear fine-tuned due to anthropic selection').
+
+omega_variable(
+    thermodynamic_arrow_direction,
+    'Is the arrow of time (entropy increase, expansion of the universe, radiation decoupling) a fundamental feature of the laws or an emergent property of initial conditions?',
+    'Resolution of the initial condition problem; detection of processes violating the second law; theoretical framework unifying quantum mechanics with cosmological thermodynamics',
+    'If fundamental: the laws as understood include temporal directionality (mountain). If emergent: the symmetric laws are the constraint, and thermodynamic arrow is a secondary effect (rope or scaffold depending on mechanism).',
     confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(thermodynamic_arrow_direction, empirical, 'Whether thermodynamic arrow is fundamental or emergent').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(cosmological_evolution_alpha_omega, 0, 20).
+narrative_ontology:interval(cosmological_evolution_alpha_omega, 0, 13400).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% The constraint (physical law) is stable (ε is constant). These measurements
-% track the changing properties of the *system* governed by the constraint.
+% Theater ratio over time
+narrative_ontology:measurement(cosmo_tr_t0, cosmological_evolution_alpha_omega, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(cosmo_tr_t6700, cosmological_evolution_alpha_omega, theater_ratio, 6700, 0.14).
+narrative_ontology:measurement(cosmo_tr_t13400, cosmological_evolution_alpha_omega, theater_ratio, 13400, 0.15).
 
-% T=0-8: Stelliferous Era (Functional, Rope-like manifestation)
-narrative_ontology:measurement(cosmo_ex_t0, cosmological_evolution_alpha_omega, base_extractiveness, 0, 0.01).
-narrative_ontology:measurement(cosmo_th_t0, cosmological_evolution_alpha_omega, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(cosmo_su_t0, cosmological_evolution_alpha_omega, suppression_score, 0, 0.01).
-narrative_ontology:measurement(cosmo_ex_t8, cosmological_evolution_alpha_omega, base_extractiveness, 8, 0.01).
-narrative_ontology:measurement(cosmo_th_t8, cosmological_evolution_alpha_omega, theater_ratio, 8, 0.10).
-narrative_ontology:measurement(cosmo_su_t8, cosmological_evolution_alpha_omega, suppression_score, 8, 0.01).
+% Extraction over time
+narrative_ontology:measurement(cosmo_be_t0, cosmological_evolution_alpha_omega, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(cosmo_be_t13400, cosmological_evolution_alpha_omega, base_extractiveness, 13400, 0.08).
 
-% T=9-14: Degenerate Era (Inertial, Piton-like manifestation)
-narrative_ontology:measurement(cosmo_ex_t9, cosmological_evolution_alpha_omega, base_extractiveness, 9, 0.01).
-narrative_ontology:measurement(cosmo_th_t9, cosmological_evolution_alpha_omega, theater_ratio, 9, 0.70). % Function (star formation) ceases, structure remains
-narrative_ontology:measurement(cosmo_su_t9, cosmological_evolution_alpha_omega, suppression_score, 9, 0.02).
-narrative_ontology:measurement(cosmo_ex_t14, cosmological_evolution_alpha_omega, base_extractiveness, 14, 0.01).
-narrative_ontology:measurement(cosmo_th_t14, cosmological_evolution_alpha_omega, theater_ratio, 14, 0.80).
-narrative_ontology:measurement(cosmo_su_t14, cosmological_evolution_alpha_omega, suppression_score, 14, 0.03).
-
-% T=15-20: Black Hole Era -> Heat Death (Final state, Mountain-like manifestation)
-narrative_ontology:measurement(cosmo_ex_t15, cosmological_evolution_alpha_omega, base_extractiveness, 15, 0.01).
-narrative_ontology:measurement(cosmo_th_t15, cosmological_evolution_alpha_omega, theater_ratio, 15, 0.40). % Activity resumes (black holes), theater drops
-narrative_ontology:measurement(cosmo_su_t15, cosmological_evolution_alpha_omega, suppression_score, 15, 0.04).
-narrative_ontology:measurement(cosmo_ex_t20, cosmological_evolution_alpha_omega, base_extractiveness, 20, 0.01). % Final value
-narrative_ontology:measurement(cosmo_th_t20, cosmological_evolution_alpha_omega, theater_ratio, 20, 0.0).   % Final value
-narrative_ontology:measurement(cosmo_su_t20, cosmological_evolution_alpha_omega, suppression_score, 20, 0.01).   % Final value (matches base property)
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
 narrative_ontology:coordination_type(cosmological_evolution_alpha_omega, global_infrastructure).
+narrative_ontology:affects_constraint(cosmological_evolution_alpha_omega, thermodynamic_arrow_of_time).
+narrative_ontology:affects_constraint(cosmological_evolution_alpha_omega, quantum_measurement_problem).
+narrative_ontology:affects_constraint(cosmological_evolution_alpha_omega, fine_structure_constant_stability).
+
+% DUAL FORMULATION NOTE:
+% The physical laws as a constraint decompose into three distinct sub-constraints when observed at different scales: (1) thermodynamic_arrow_of_time (ε≈0.05, Mountain) — entropy production and temporal directionality in the early universe; (2) quantum_measurement_problem (ε≈0.35, Tangled Rope) — the interaction between quantum systems and classical measurements introduces ambiguity in wave function collapse that is not fully determined by the laws; (3) fine_structure_constant_stability (ε≈0.12, Mountain) — the electromagnetic coupling strength remains invariant across cosmic time. These three stories share the cosmological_evolution_alpha_omega parent constraint but represent distinct empirical questions. The parent constraint (alpha_omega) represents the invariant mathematical structure; the children represent specific observational puzzles within that structure.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

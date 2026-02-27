@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "institutional_mutation_without_selection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "zombbur"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "The Zombie Bureaucracy Drift",
+    "topic_domain": "organizational/political",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "public_stakeholders",
+      "subordinate_staff",
+      "policy_effectiveness"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subordinate Staff",
+      "comment": "PERSPECTIVE 1: SUBORDINATE STAFF (SNARE) \u2014 Trapped within the institution's escalating internal bureaucracy. Must comply with mutating rules that no longer serve stated organizational purpose. No exit without career termination; no leverage to reform. Maximum extraction: comply with contradictory mandates, document compliance, absorb blame when outcomes fail."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Public Stakeholders",
+      "comment": "PERSPECTIVE 2: PUBLIC STAKEHOLDERS (SNARE) \u2014 Citizens, communities, or constituents depend on institutional outputs (education, welfare, infrastructure, justice). As internal mutation accelerates, outputs degrade while institution remains unaccountable. Exit is partial or impossible (cannot switch police department, state licensing board, or primary school without relocation). Bear full cost; cannot reform mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Level Administrators",
+      "comment": "PERSPECTIVE 3: MID-LEVEL ADMINISTRATORS (TANGLED ROPE) \u2014 Can influence internal mutation through policy memo circulation, budget reallocation, hiring decisions. Benefit from expanded domain control and reduced external scrutiny. Constrained by civil service rules and organizational hierarchy. Mixed extraction: gain agency in a degraded institution; lose alignment with institutional mission; bear reputational risk when outputs fail."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Political Leadership",
+      "comment": "PERSPECTIVE 4: POLITICAL LEADERSHIP (ROPE) \u2014 Insulated from direct institutional mutation by civil service protections. Can shift blame to bureaucracy; claim credit for stated intentions while ignoring actual outputs. High arbitrage: can exit political role without consequence; can defer structural reform indefinitely. Sees constraint as coordination mechanism: managing information about institutional performance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Formal Accountability Theater",
+      "comment": "PERSPECTIVE 5: FORMAL ACCOUNTABILITY THEATER (PITON) \u2014 Audit trails, compliance reporting, performance metrics, and oversight hearings persist despite disconnection from actual institutional function. These rituals maintain legitimacy while shielding mutation from correction. Piton classification: high theater_ratio (0.81), low effective function. The apparatus is maintained through institutional inertia; its degradation is obvious but replacement is politically costly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational distance, zombie bureaucracy represents a coordination mechanism (internal mutation requires collective maintenance) that extracts from public trust. The constraint is neither a natural law nor pure extraction \u2014 it is an institution-specific pathology enabled by missing accountability selection. The analytical view sees this as a Tangled Rope because genuine coordination occurs (staff coordination around new internal rules) alongside asymmetric extraction from those without exit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mutation_detection_threshold",
+      "question": "At what rate of internal rule mutation does organizational output begin to systematically degrade relative to the institution's stated mission?",
+      "resolution_mechanism": "Longitudinal comparison of organizational output metrics (graduation rates for schools, case resolution for courts, infrastructure maintenance for public works) against rate of internal procedural changes; cross-sectional comparison of high-mutation vs low-mutation institutions in same domain",
+      "impact": "If threshold is low (mutation rate > 5% per year causes measurable output decline): mutation is the primary causal driver, not a symptom. If threshold is high (mutation rate > 15% per year required): other factors (resource constraints, external policy) dominate, and mutation is secondary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of internal mutation required to cause measurable output degradation"
+    },
+    {
+      "id": "accountability_mechanism_sufficiency",
+      "question": "Can existing accountability mechanisms (elections, audits, legislative oversight, voter initiative) actually trigger institutional reform when mutation-driven output degradation is chronic but slow enough to normalize?",
+      "resolution_mechanism": "Case study analysis of institutional reforms triggered by performance metrics vs those triggered by political crisis; identification of latency periods (how long degradation persists before formal remediation); comparison of institutions with different accountability architectures (elected vs appointed leadership, sunset clauses vs open-ended mandates)",
+      "impact": "If accountability sufficient: Snare classification is incorrect \u2014 mechanism exists to check mutation. If insufficient: Snare is correct; institutional mutation is inherently shielded from correction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether formal accountability mechanisms can trigger reform for chronically degraded institutions"
+    },
+    {
+      "id": "mutation_origin_internalization",
+      "question": "To what extent do staff internalize mutated rules as legitimate organizational purpose, vs. recognizing them as exogenous drift?",
+      "resolution_mechanism": "Survey and interview analysis comparing staff perception of institutional mission vs actual internal rules; longitudinal tracking of mission statements vs procedural manuals; analysis of staff advocacy for specific rule changes (do they advocate for alignment with original mission, or for continuation of current practice?)",
+      "impact": "If staff internalize mutation: compliance is volitional, and the constraint operates with lower suppression. If staff recognize drift: suppression must be actively maintained through sanctions; mutation is visibly contested.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which staff internalize mutated rules as legitimate vs recognize them as drift"
+    },
+    {
+      "id": "external_selection_simulation",
+      "question": "If external selection pressure were restored (market competition, electoral threat, performance-based funding), would institutional mutation reverse or would path dependency lock in the degraded configuration?",
+      "resolution_mechanism": "Natural experiments: comparison of institutional reform trajectories following exogenous accountability changes (new legislation, budget crisis, leadership transition with explicit mandate); agent-based modeling of institutional mutation under different selection regimes",
+      "impact": "If selection easily reverses mutation: the constraint is contingent and conditional on missing accountability. If selection cannot reverse mutation: path dependency is the true constraint, not the absence of selection.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether restoring external selection pressure would reverse institutional mutation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A zombie bureaucracy is an institution whose internal rules and operational procedures have mutated substantially from their original design, but which is shielded from external accountability mechanisms that would normally trigger reform or dissolution. The institution persists in a degraded state because: (1) stakeholders have incomplete exit options (public services cannot be abandoned, regulated entities cannot easily relocate), (2) formal accountability mechanisms (audits, oversight, elections) operate on longer cycles than mutation accumulates, and (3) the institution itself maintains sufficient symbolic legitimacy (compliance theater, mission statements, leadership turnover) to deflect reform pressure. The constraint is structural: as long as exit is constrained and external selection is weak relative to internal mutation rate, the institution will accumulate procedural cruft that serves internal constituency interests rather than public mission. This creates a Snare dynamic: subordinate staff and public stakeholders bear the extraction cost (compliance burden, degraded services, wasted time), while accountability mechanisms prove insufficient to arrest the drift. The theater ratio (0.81) reflects that compliance apparatus (audits, reporting, reviews, oversight briefings) becomes increasingly performative relative to actual institutional function \u2014 the institution can document its procedures in excruciating detail while delivering outputs that fail the original mission.",
+    "key_agents": [
+      "Subordinate Staff: Primary victims (powerless/trapped) \u2014 must comply with mutating rules, bear blame for performance failures, cannot exit without career termination",
+      "Public Stakeholders: Primary victims (powerless/trapped) \u2014 depend on institutional outputs; cannot exit or reform institution; bear service degradation",
+      "Mid-Level Administrators: Secondary beneficiaries (organized/constrained) \u2014 gain expanded domain control and reduced external scrutiny; constrained by hierarchy and civil service rules; bears reputational risk",
+      "Political Leadership: Institutional beneficiary (institutional/arbitrage) \u2014 insulated from institutional mutation by civil service protections; can defer reform indefinitely",
+      "Formal Accountability Theater: Institutional actor (institutional/arbitrage) \u2014 maintains legitimacy through compliance documentation while being functionally disconnected from actual institutional control",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 sees the constraint as a structural feature of institutions where exit is constrained and external selection is weak relative to internal mutation rate"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The institution extracts from subordinate staff (compliance burden, career risk, blame for failures) and from public stakeholders (degraded service quality, wasted time, opportunity cost). The extraction is not maximal (0.90+) because some institutional function persists and some stakeholders can negotiate partial exits. However, the extraction is substantial and increasing over time because mutation accumulates faster than accountability mechanisms can arrest it. Suppression (0.68): High. Multiple mechanisms: civil service rules prevent firing mid-level administrators despite institutional degradation; exit costs for stakeholders are high (cannot switch to alternative school, police department, or regulator); career consequences silence internal critics; political insulation allows leadership to defer reform indefinitely. Theater ratio (0.81): Very high. Compliance apparatus (audit trails, performance metrics, oversight hearings, annual reviews) persists and grows even as institutional function degrades. The theater masks the mutation \u2014 formal procedures create legitimacy while actual operations drift. The increase over the measurement interval (0.55 \u2192 0.81) reflects that institutions under low selection pressure systematically increase their documentary/ceremonial burden to justify continued existence. Beneficiaries: None declared because the constraint is purely extractive \u2014 no group benefits while others pay. The mid-level administrators gain expanded domain control, but this is a secondary consequence, not a coordination function. Political leadership gains insulation, but they are the mechanism that prevents accountability, not a beneficiary of the constraint itself.",
+    "perspectival_gap": "This constraint demonstrates how the same institutional structure appears as pure extraction (Snare) to trapped agents, as coordination-with-constraints (Tangled Rope) to intermediate agents with partial agency, as a coordination mechanism (Rope) to beneficiaries with exit, and as degraded ritual (Piton) to observers of the formal apparatus. The gap is not about disagreement on facts \u2014 all perspectives agree that mutation is accumulating and accountability is weak \u2014 but about experienced directionality. The trapped see their costs mounting. The intermediate see expanded control offset by constraint. The beneficiaries see a problem solved (how to defer difficult choices while maintaining legitimacy). The formal apparatus sees itself as degraded. The resolution of this perspectival gap depends on which accountability mechanisms can be activated: if external selection can be restored (elections, market pressure, performance-based funding), the constraint collapses and Snare classification was correct. If selection cannot overcome path dependency, the constraint is true and the Snare classification holds.",
+    "directionality_logic": "Directionality derives from structural position within the mutation-accountability feedback loop. Subordinate staff are trapped victims (d \u2248 0.95): high power of constraint over them, no exit, full bearing of extraction. Public stakeholders are similarly trapped victims (d \u2248 0.90): constrained exits (cannot simply relocate), dependent on institutional output, cannot reform mechanism. Mid-level administrators occupy intermediate position (d \u2248 0.55): they benefit from expanded control (low d) but are also constrained by hierarchy and reputational risk (high d); the net effect is near-symmetric. Political leadership are beneficiaries with high exit (d \u2248 0.10): can exit political role without consequence; insulated from institutional mutation; experience constraint as solution to their coordination problem. The analytical observer (d \u2248 0.73) sees the full structure without stake in any position; derives moderate-high effective extraction from analyzing the constraint's operation.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint avoids the false naturalization trap by refusing to classify the mutation as an inherent property of bureaucracy itself. The Snare classification is conditional: it requires that exit be constrained AND that external selection be weak relative to internal mutation rate. If either condition changes, the classification changes. The constraint is not 'bureaucracies are extractive' (false naturalization) but 'institutions without accountability relative to mutation rate become extractive' (conditional and resolvable). The analytical observer's Tangled Rope classification captures the true structure: the institution does perform coordination functions (internal rules coordination, blame management, symbolic legitimacy maintenance), but alongside extraction from those without exit. The Piton classification for the accountability theater is diagnostically valuable: it flags that compliance apparatus has become performative \u2014 the theater maintains institutional legitimacy while being functionally disconnected from control. This creates a key diagnostic insight: institutions under low external selection pressure do NOT become less rule-bound; they become MORE rule-bound while their rules become increasingly disconnected from function. The theater ratio increase (0.55 \u2192 0.81) is not a sign of improving accountability; it is a sign of deteriorating institutional health. The constraint resolves mandatrophy by showing that all six types can be legitimate perspectival readings without claiming that any single type is 'the' answer \u2014 the presheaf over institutional contexts is the answer, and the constraint's structural reality is the mapping between accountability strength and institutional purity."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "civil_service_path_dependency",
+      "political_accountability_lag",
+      "bureaucratic_compliance_creep"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

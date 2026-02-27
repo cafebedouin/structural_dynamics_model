@@ -19,7 +19,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PROMPT_PATH = REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md"
 SCHEMA_PATH = REPO_ROOT / "python" / "constraint_story_schema.json"
-EXAMPLE_PATH = REPO_ROOT / "json" / "verification_bottleneck.json"
+EXAMPLE_PATH = REPO_ROOT / "agent" / "verification_bottleneck.json"
 JSON_DIR = REPO_ROOT / "json"
 TESTSETS_DIR = REPO_ROOT / "prolog" / "testsets"
 PROLOG_DIR = REPO_ROOT / "prolog"
@@ -142,6 +142,14 @@ def build_prompt(source_description, context_text=""):
     schema_text = _load_context_file(SCHEMA_PATH)
     example_text = _load_context_file(EXAMPLE_PATH)
 
+    example_text = _load_context_file(EXAMPLE_PATH)
+    example_note = (
+        "\n\nNOTE: The example above shows ONE structural position pattern "
+        "(Archetype A — extraction visible from below). Your constraint's "
+        "structural positions will differ. Refer to the Perspective Diversity "
+        "section in the generation prompt for other archetypes. Do NOT copy "
+        "the example's power/exit/directionality assignments.\n"
+   	)
     parts = [
         "=== GENERATION PROMPT ===\n",
         prompt_text,
@@ -149,6 +157,7 @@ def build_prompt(source_description, context_text=""):
         schema_text,
         "\n\n=== EXAMPLE JSON ===\n",
         example_text,
+        example_note,
         "\n\n=== YOUR TASK ===\n",
         f"Generate a complete constraint story JSON for: {source_description}\n",
         "Follow the schema exactly. Output ONLY valid JSON — no markdown fences, no commentary.\n",

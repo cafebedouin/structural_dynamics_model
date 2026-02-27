@@ -1,0 +1,60 @@
+{
+  "header": {
+    "constraint_id": "ergo_lets_protocol",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Ergo Local Exchange Trading System (LETS)",
+    "topic_domain": "economic/technological",
+    "beneficiaries": [
+      "lets_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "LETS Participant",
+      "comment": "LETS participant views the system as a coordination mechanism, enabling local trade and exchange without reliance on centralized authorities. They can easily exit the system by ceasing to participate."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer sees the LETS as a pure coordination mechanism facilitating trade within a local community.  The Ergo blockchain ensures trustless operation, minimizing potential extraction or suppression."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "LETS on the Ergo blockchain is a trustless mutual credit system where the sum of all participant balances is always zero. It allows participants to create their own money and trade locally, fostering community resilience. The system operates with minimal extraction or suppression due to the decentralized nature of the Ergo blockchain.",
+    "key_agents": [
+      "lets_participants: Primary beneficiaries (moderate/mobile) - benefit from facilitated local trade.",
+      "analytical_observer: observes minimal extraction"
+    ],
+    "logic_rationale": "The extractiveness is low (0.35) as the system aims to facilitate trade rather than extract value. Suppression is also low (0.2) as participants are free to join or leave the system. Theater ratio is low (0.1) as the system is primarily functional.",
+    "perspectival_gap": "Both the participant and the analytical observer see the system as a coordination mechanism. There is no significant perspectival gap.",
+    "directionality_logic": "Participants benefit from the system, therefore 'd' is closer to 0.  Analytical observer's directionality is derived from lack of extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "toxic_social_infection",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tsi"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "The Infecting Character (Psychic Vampire)",
+    "topic_domain": "social/psychological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "proximity_exposed_individuals",
+      "organizational_morale",
+      "social_network_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Trapped Proximity",
+      "comment": "PERSPECTIVE 1: PROXIMITY-EXPOSED INDIVIDUAL (SNARE) \u2014 Family member, coworker, or intimate partner cannot exit the relationship without social cost (family obligations, workplace hierarchy, emotional entanglement). Bears full psychological and emotional extraction. d\u22480.92, f(d)\u22481.39, \u03c3=0.8 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Extended Social Network",
+      "comment": "PERSPECTIVE 2: EXTENDED SOCIAL NETWORK (TANGLED ROPE) \u2014 Friends, colleagues beyond immediate proximity experience both coordination benefit (shared complaint, mutual support against the infecting character) and extraction (emotional labor of managing the person, obligation to listen, risk of being drawn into drama). d\u22480.68, f(d)\u22481.04, \u03c3=0.9 \u2192 \u03c7\u22480.54."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Organizational Container",
+      "comment": "PERSPECTIVE 3: ORGANIZATIONAL CONTAINER (PITON) \u2014 Workplace, family system, or community organization maintains the person through habit and theater despite degraded function. Formal performance reviews, family gatherings, institutional rituals persist as performative containers. theater_ratio=0.64 reflects that much institutional response is procedural ritual rather than functional change. d\u22480.55, f(d)\u22480.75, \u03c3=0.9 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Aware Moderate (Escape-Capable)",
+      "comment": "PERSPECTIVE 4: AWARE MODERATE WITH MOBILE EXIT (SNARE) \u2014 Individual in the network who recognizes the dynamic and can theoretically leave but faces real costs: social reputation (labeled as 'cold' or 'unsupportive'), guilt programming, loss of social capital. Mobile exit exists but extraction penalty is high. d\u22480.58, f(d)\u22480.76, \u03c3=0.8 \u2192 \u03c7\u22480.35."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Structured Container (Bounded Professional)",
+      "comment": "PERSPECTIVE 5: STRUCTURED PROFESSIONAL (ROPE) \u2014 Therapist, doctor, or professional helper who has role-based containment boundaries and paid compensation. Experience is coordination (providing structure, being paid for labor) rather than extraction. d\u22480.08, f(d)\u2248-0.07, \u03c3=0.8 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees the infecting character as both a coordination problem (social systems need mechanisms for containing disruption) and an extraction mechanism (the instability redistributes burden to those around it). Civilization develops containers (therapy, clergy, peer support) precisely because this dynamic is recurring and structured. d\u22480.70, f(d)\u22481.13, \u03c3=1.2 \u2192 \u03c7\u22480.74."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_vs_structural",
+      "question": "Does the infecting character deliberately extract emotional labor and attention, or is the extraction a structural byproduct of their genuine instability?",
+      "resolution_mechanism": "Analysis of pattern consistency across relationships (deliberate extraction would vary by context to optimize gain; structural extraction is invariant). Interview-based study comparing subject's reported intentionality against observer-coded behavioral patterns.",
+      "impact": "If intentional: classification drifts toward deliberate snare; suppression increases, moral culpability enters. If structural: classification remains snare but frames extraction as non-volitional property of the person's emotional dysregulation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether extraction is intentional or a structural byproduct"
+    },
+    {
+      "id": "contagion_mechanism_threshold",
+      "question": "What is the empirical threshold of exposure time or relationship intimacy at which the infecting character's instability causally transfers to proximity individuals, versus proximity individuals' distress being reaction rather than contagion?",
+      "resolution_mechanism": "Longitudinal psychometric tracking of individuals before and after prolonged proximity. Analysis of stress markers, mood disorder incidence, and sleep disruption in those with high vs low exposure. Randomized exposure control to test causal direction.",
+      "impact": "If contagion threshold is low (<10 hours exposure): almost everyone in proximity becomes infected; extractiveness is higher. If high (>100 hours): only intimate contacts show markers; extraction is more selective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Exposure threshold for contagion of instability"
+    },
+    {
+      "id": "container_saturation_point",
+      "question": "At what point does a social container (family, organization, community) become destabilized by the infecting character's presence rather than merely stressed?",
+      "resolution_mechanism": "Organizational collapse case studies; measurement of turnover, productivity, cohesion before/after a high-infection person joins or leaves. Threshold analysis of maximum infectious load per container size.",
+      "impact": "If saturation is high (person can be absorbed by large systems): suppression is lower, extraction more distributed. If low (person destabilizes any group above critical mass): suppression is higher, network-level effect is more severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Organizational saturation point for infectious character disruption"
+    },
+    {
+      "id": "treatment_versus_lifetime_trait",
+      "question": "Is the infecting character's instability treatable through therapy/medication/intervention, or is it a personality-level constant that persists regardless of external intervention?",
+      "resolution_mechanism": "Longitudinal follow-up of individuals identified as infecting characters who enter therapy vs control groups. Measurement of behavioral change, relationship stability, and infectious output after intervention.",
+      "impact": "If treatable: extraction is theoretically reducible; scaffolding interventions could have sunset logic. If permanent: extraction is structural and unavoidable; only containment strategies work.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Treatability of the infecting character's core instability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The infecting character\u2014or 'psychic vampire'\u2014is a social phenomenon in which a specific individual's chronic instability, emotional dysregulation, or personality pathology creates an extractive constraint on those in proximity. Unlike deliberate manipulation or coercion, the extraction operates through the character's radiation of disaster, crisis, and emotional emergency. Those nearby are drawn into caretaking, crisis response, emotional absorption, and management of the person's recurring crises. The constraint extracts attention, emotional labor, psychological stability, and relational bandwidth from the proximity network while offering no reciprocal coordination benefit. The infecting character often lacks intent to harm\u2014the extraction is a structural property of their dysregulation\u2014yet the effect is severe and persistent. Social containers (families, workplaces, communities) develop rituals and role specializations to manage the person, leading to a piton-like degradation in which the container maintains the person through theater rather than functional change. The constraint violates the assumption that proximity relationships are fundamentally reciprocal, and creates a peculiar moral and practical problem: the person is often suffering themselves, yet their suffering generates suffering in others through psychological contagion.",
+    "key_agents": [
+      "Infecting Character: Unstable source (moderate power, biographical horizon) \u2014 chronically dysregulated; generates instability that radiates outward; often lacks conscious intent but creates structural extraction",
+      "Proximity-Exposed Individual: Primary victim (powerless/trapped) \u2014 family member, intimate partner, or close coworker; cannot exit without major life cost; bears full psychological and emotional extraction",
+      "Extended Social Network: Secondary victims (moderate/constrained) \u2014 friends, colleagues, community members; experience both coordination (shared complaint, mutual support) and extraction (emotional labor of managing the person)",
+      "Organizational Container: Institutional responder (institutional/constrained) \u2014 workplace, family system, community; maintains formal procedures and rituals to contain the person despite degraded function; piton-like persistence",
+      "Professional Helper: Bounded responder (powerful/arbitrage) \u2014 therapist, counselor, doctor; has role-based boundaries and compensation; experiences coordination rather than extraction",
+      "Analytical Observer: Civilizational witness (analytical/analytical) \u2014 sees the infecting character as both a recurring social problem and a coordination failure; recognizes that civilization develops containers (therapy, clergy, peer support) precisely because this dynamic is structural"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not maximal. The infecting character extracts significant emotional labor, attention, and psychological stability from those in proximity, but the extraction is not deliberate or economically quantifiable like debt extraction. The trajectory from 0.35 to 0.58 reflects that exposure time amplifies the extraction mechanism \u2014 initial contact involves curiosity and willingness to help (low extraction), but sustained proximity reveals the depth of the person's instability and the reciprocity deficit (extraction increases). The value remains below 0.66 (snare threshold) because some relationships do benefit from association with the person (secondary gains like social coalition formation), and the person's own suffering creates counterbalancing sympathy. Suppression (0.68): High. Multiple barriers prevent exit or refusal to engage: social norms around care and loyalty, guilt programming ('I'm the only one who understands them'), family obligation, workplace hierarchy, and fear of social judgment. The person often creates crises that demand immediate attention, leaving no space for reflection or boundary-setting. Theater ratio (0.64): Elevated. Social response to the infecting character is substantially performative: family gatherings occur despite anticipating chaos, workplace procedures are followed despite knowing they won't change the person's behavior, friends maintain contact despite the relational drain. The theater increases over time as the container learns to manage through ritual rather than expecting behavioral change.",
+    "perspectival_gap": "The infecting character creates a perspectival divergence that exceeds most constraints. The trapped proximity individual (powerless/trapped) experiences pure snare with minimal escape \u2014 the constraint appears totalizing. The extended network (moderate/constrained) experiences tangled rope \u2014 they have some organizational agency through group support but remain partially extracted. The organizational container (institutional/constrained) experiences piton \u2014 the formal procedures persist despite low functional output. The aware individual with mobile exit (moderate/mobile) experiences snare with an escape option, but the escape carries high psychological cost. The professional helper (powerful/arbitrage) experiences rope \u2014 their role provides containment boundaries and compensation. The analytical observer experiences the full complexity: tangled rope at the societal level, because civilization needs both the ability to contain such people (coordination) and accepts the extraction cost (asymmetry). None of these perspectives align, creating a profound misalignment about whether the constraint is primarily a care problem (therapeutic framing) or an extraction problem (victim framing) or a societal regulation problem (institutional framing).",
+    "directionality_logic": "Proximity-exposed individual: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction relative to power. Cannot exit; bears full instability transfer. Extended network: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.04. Significant extraction but some organizational agency through group support. Aware moderate with mobile exit: Victim + mobile \u2192 d\u22480.58, f(d)\u22480.76. Extraction reduced by exit option, but exit penalty (guilt, reputation) remains high. Professional helper: Beneficiary (compensated labor) + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.07. Role-based boundaries and payment flip the relationship; they benefit from the interaction. Organizational container: Not primarily beneficiary or victim, but constrained institutional actor; piton classification derives from theater gate, not directionality. Analytical observer: Sees full structure; d\u22480.70, f(d)\u22481.13, reflecting recognition that the extraction problem is systemic and unavoidable at scale.",
+    "mandatrophy_analysis": "The infecting character constraint resolves the mandatrophy by distinguishing between intentional snare (predatory extraction, moral culpability) and structural snare (dysregulation radiates extraction despite lack of intent). This prevents mislabeling as rope or scaffold. The rope misclassification would claim that the infecting character's presence 'solves' a coordination problem \u2014 it doesn't; it creates one. The scaffold misclassification would claim the extraction is temporary and reducible through structural intervention \u2014 it persists unless the person undergoes fundamental change (treatment threshold omega). The snare classification is correct across all proximate perspectives because the extraction is non-reciprocal and the exit barriers are structural. The piton perspective (organizational container maintaining through theater) is a secondary observation: the organization is not being snared, but rather maintaining a snared person through ritual. The professional helper perspective (rope) is correct within bounded role constraints \u2014 the helper's role provides protection that the intimate proximity individual lacks. The mandatrophy is resolved by recognizing that moral culpability is decoupled from structural classification: the person can be both genuinely suffering AND causing genuine extraction, with neither canceling the other."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "emotional_labor_extraction",
+      "loyalty_obligation_enforcement",
+      "care_responsibility_asymmetry"
+    ],
+    "dual_formulation_note": "The infecting character is downstream of personality pathology and individual dysregulation but represents a distinct structural constraint on social systems. Upstream constraints concern the mechanisms by which personality disorders emerge and persist; this constraint concerns the extraction mechanism that radiates from dysregulated individuals to their proximity networks. The network links reflect that the infecting character phenomenon produces extractive load on care systems, creates asymmetric loyalty obligations, and externalizes the person's emotional labor burden onto those nearby."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

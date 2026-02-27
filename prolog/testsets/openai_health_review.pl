@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: openai_health_review
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_openai_health_review, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,17 +57,30 @@
  *   domain: technological/economic
  *
  * SUMMARY:
- *   OpenAI has launched a service that uses a large language model to review
- *   users' health test results and provide personalized diet and lifestyle
- *   recommendations. Marketed as an accessible health tool, it operates
- *   outside traditional medical and regulatory frameworks, creating a new
- *   dynamic between users, the provider, and the established healthcare system.
+ *   OpenAI's ChatGPT health review service creates a structural constraint
+ *   where users delegate health decision-making to an LLM that mimics
+ *   clinical reasoning without bearing medical liability. The service
+ *   generates revenue for OpenAI by capturing users' willingness to pay for
+ *   health guidance while transferring all adverse outcome risk to the user.
+ *   This exhibits the hallmarks of a snare: high base extractiveness (revenue
+ *   capture without reciprocal liability), high suppression (users cannot
+ *   easily verify recommendations or contest outputs), and high theater (the
+ *   interface and fluency create appearance of medical competence). The
+ *   constraint is intensifying over time as user adoption grows, clinical
+ *   validation remains absent, and regulatory frameworks lag behind technical
+ *   deployment. The theater ratio has increased from 0.55 to 0.68 as users
+ *   become accustomed to anthropomorphizing the interface, reducing their
+ *   epistemic skepticism. Extractiveness has increased from 0.42 to 0.58 as
+ *   the revenue model expands through subscription tiers and the user base
+ *   grows larger relative to physician-mediated alternatives.
  *
- * KEY AGENTS (by structural relationship):
- *   - Health Data Submitters: Primary target (powerless/trapped) — bears the risk of inaccurate advice and provides valuable training data.
- *   - OpenAI: Primary beneficiary (institutional/arbitrage) — gains market share, training data, and user dependency with minimal liability.
- *   - Medical Regulators (e.g., FDA): Institutional actor (institutional/constrained) — mandate is undermined by a service that bypasses established safety and efficacy protocols.
- *   - Analytical Observer: Sees the full structure of coordination and asymmetric extraction.
+ * KEY AGENTS:
+ *   - End Users / Health Consumers: Primary victims (powerless/trapped) — bear full medical liability, cannot verify LLM accuracy, no appeal mechanism
+ *   - OpenAI: Primary beneficiary (institutional/arbitrage) — captures subscription revenue and engagement metrics without proportional liability; can pivot or exit the health feature with minimal sunk cost
+ *   - Licensed Physicians: Secondary beneficiary and victim (moderate/constrained) — see patient deflection and authority erosion but also see potential triage utility; constrained by regulatory liability that does not extend to the AI system
+ *   - Medical Boards and FDA: Regulatory agents (organized/constrained) — face governance gap; developing frameworks for AI clinical decision support but sunset is 3-5 years minimum
+ *   - Medical Epistemology System: Institutional victim (institutional/arbitrage) — the credential-based authority system degrades as users substitute LLM judgment for physician consultation
+ *   - Analytical Observer: Views the constraint as structural liability asymmetry with pure extraction
  */
 
 /* ==========================================================================
@@ -76,83 +88,72 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(openai_health_review, 0.55).
-domain_priors:suppression_score(openai_health_review, 0.70).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(openai_health_review, 0.30).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(openai_health_review, 0.58).
+domain_priors:suppression_score(openai_health_review, 0.62).
+domain_priors:theater_ratio(openai_health_review, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(openai_health_review, extractiveness, 0.55).
-narrative_ontology:constraint_metric(openai_health_review, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(openai_health_review, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(openai_health_review, extractiveness, 0.58).
+narrative_ontology:constraint_metric(openai_health_review, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(openai_health_review, theater_ratio, 0.68).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(openai_health_review, tangled_rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(openai_health_review, snare).
 narrative_ontology:human_readable(openai_health_review, "OpenAI ChatGPT Health Review Service").
 narrative_ontology:topic_domain(openai_health_review, "technological/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(openai_health_review). % Required for Tangled Rope
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(openai_health_review, openai).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(openai_health_review, health_data_submitters).
-narrative_ontology:constraint_victim(openai_health_review, medical_regulators).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(openai_health_review, openai_revenue_capture).
+narrative_ontology:constraint_beneficiary(openai_health_review, subscription_tier_expansion).
+narrative_ontology:constraint_victim(openai_health_review, end_users_medical_liability).
+narrative_ontology:constraint_victim(openai_health_review, medical_profession_epistemic_authority).
+narrative_ontology:constraint_victim(openai_health_review, clinical_guideline_compliance).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Users seeking health advice who bear the full risk of misinterpretation.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-% Calculation: χ = 0.55 * 1.42 * 1.0 (national scope) = 0.781 (Snare, χ ≥ 0.66)
-constraint_indexing:constraint_classification(openai_health_review, tangled_rope,
+% PERSPECTIVE 1: HEALTH CONSUMER (SNARE) — Individual users lack medical expertise to verify LLM recommendations against clinical evidence. Cannot exit: health decisions require immediate answers, and ChatGPT appears authoritative due to interface design and fluency. Suppressed alternatives: costly human physician consultation, time-intensive literature review. Bears full liability if LLM advice produces adverse outcomes. Maximum experienced extraction with no appeal mechanism.
+constraint_indexing:constraint_classification(openai_health_review, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: LICENSED PHYSICIANS (TANGLED ROPE) — Constrained by regulatory requirements, malpractice liability, and epistemic jurisdiction erosion. The service provides coordination benefit (accessible screening, triage logic) but extracts through patient deflection and authority dilution. Physicians see both a tool (rope function) and a competitor (snare function) simultaneously. Exit is constrained by patient demand for ChatGPT-first consultation.
+constraint_indexing:constraint_classification(openai_health_review, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% OpenAI, the service provider.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-% Calculation: χ = 0.55 * -0.12 * 1.0 (national scope) = -0.066 (Rope, χ ≤ 0.35)
+% PERSPECTIVE 3: OPENAI (ROPE) — Captures subscription revenue and user engagement expansion through health feature. Experiences the constraint as pure coordination: matching users to health information at scale. Arbitrage options are abundant (pivot feature, suppress health claims, rebrand as lifestyle tool). Net beneficiary with minimal extraction overhead. Effective suppression of regulatory friction through terms-of-service liability shields.
 constraint_indexing:constraint_classification(openai_health_review, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: REGULATORY/CLINICAL GOVERNANCE (SCAFFOLD) — FDA, medical boards, clinical societies see this as a temporary governance gap with an identified sunset: clinical validation studies, professional liability frameworks, and regulatory guidance for AI-assisted medicine are being developed (21st Century Cures Act AI provisions, AAMI standards for clinical decision support). The extraction mechanism exists now, but the organized response (governance sunset) is reducing it. High suppression initially; declining over time as compliance infrastructure matures.
+constraint_indexing:constraint_classification(openai_health_review, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Default analytical context sees both coordination and extraction.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15. Recognizes the structural flags for Tangled Rope.
-% Calculation: χ = 0.55 * 1.15 * 1.2 (global scope) = 0.759. This high χ, combined
-% with the presence of beneficiary (coordination) and victim (extraction) flags,
-% confirms the Tangled Rope classification.
+% PERSPECTIVE 5: MEDICAL EPISTEMOLOGY (PITON) — Historically, the medical profession maintained epistemic authority through credentialing and liability. The ChatGPT health review degrades this system: it extracts legitimacy from the appearance of medical reasoning while having no accountable stake in outcomes. Theater is high (the interface mimics clinical consultation) but the functional verification is absent (no examination, no continuity of care, no legal liability for the AI system itself). The old authority structure persists through inertia — users still seek physician sign-off — but its practical function is eroding.
+constraint_indexing:constraint_classification(openai_health_review, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) — From a universal perspective, the constraint exhibits pure extraction through liability asymmetry: users bear full medical consequence risk while OpenAI bears only contractual reputational risk. The service generates revenue from users' health decisions without reciprocal responsibility for outcomes. No mitigation mechanism exists at scale. This is not coordination — it is transfer of decision-making authority without transfer of liability. Suppression is structural: users cannot contest the recommendation, cannot sue the AI system directly, and have no alternative for the speed/convenience combination.
 constraint_indexing:constraint_classification(openai_health_review, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-
-% PERSPECTIVE 4: MEDICAL REGULATORS (SNARE)
-% Institutional actors whose mandate is bypassed and authority is challenged.
-% They are victims with constrained exit options (cannot ignore it, but slow to act).
-% Victim + constrained exit -> high d -> high χ, classifying as a snare that traps their agency.
-constraint_indexing:constraint_classification(openai_health_review, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -160,24 +161,18 @@ constraint_indexing:constraint_classification(openai_health_review, rope,
 
 :- begin_tests(openai_health_review_tests).
 
-test(perspectival_gap_user_provider, [nondet]) :-
-    % Verify the gap between the user (target) and provider (beneficiary).
-    constraint_indexing:constraint_classification(openai_health_review, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(openai_health_review, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(openai_health_review, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(openai_health_review, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope, [nondet]) :-
-    % The analytical observer must see the full tangled structure.
-    constraint_indexing:constraint_classification(openai_health_review, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(openai_health_review, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(regulator_view_is_snare, [nondet]) :-
-    % Verify that the bypassed regulators perceive the constraint as a snare.
-    constraint_indexing:constraint_classification(openai_health_review, snare, context(agent_power(institutional), _, exit_options(constrained), _)).
-
-test(tangled_rope_structural_gates_met) :-
-    % A constraint is only a Tangled Rope if it has all three structural properties.
-    narrative_ontology:constraint_beneficiary(openai_health_review, _), % Has coordination function
-    narrative_ontology:constraint_victim(openai_health_review, _),       % Has asymmetric extraction
-    domain_priors:requires_active_enforcement(openai_health_review). % Requires enforcement
+test(piton_threshold) :-
+    domain_priors:theater_ratio(openai_health_review, TR),
+    TR >= 0.70.
 
 :- end_tests(openai_health_review_tests).
 
@@ -187,23 +182,16 @@ test(tangled_rope_structural_gates_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): High. The extraction is not monetary but structural: the transfer of medical risk to the user, the extraction of valuable health data for model training, and the creation of user dependency on a proprietary, unregulated system.
- *   - Suppression Score (0.70): High. The service suppresses the primary alternative (consulting a licensed medical professional) by being instant, free/cheap, and accessible. This is especially true for users with limited financial resources or access to healthcare.
- *   - The analytical classification is Tangled Rope because the system has a genuine (if risky) coordination function (matching user data to medical knowledge) while simultaneously featuring severe, asymmetric extraction. The presence of both `constraint_beneficiary` and `constraint_victim` alongside `requires_active_enforcement` meets the structural requirements for this classification.
+ *   Base Extractiveness (0.58): High. The service captures revenue from users' health decisions (subscription revenue, engagement metrics, data from interactions) while transferring all adverse outcome liability to the user. The extraction is not total because some users do follow up with physicians, and the service does provide information access that would otherwise require costly consultation. However, the revenue model depends on users substituting ChatGPT for physician consultation, making the extractive component primary. Theater Ratio (0.68): High and increasing. The interface design (conversational, fluent, confident tone) mimics clinical consultation without the epistemic content. Users anthropomorphize the LLM, treating probabilistic outputs as definitive judgments. Recommended actions are presented with clinical plausibility but lack the accountability structures (examination, continuity of care, liability) that justify physician authority. Theater has increased as user familiarity breeds false confidence. Suppression (0.62): High. Users cannot easily verify LLM recommendations against clinical evidence bases. Alternative verification pathways (physician consultation, evidence review) are expensive and time-consuming. Users cannot sue the AI system directly — liability waivers are enforced through terms of service. Appeal mechanisms do not exist. Regulatory arbitrage allows OpenAI to operate in the health domain without FDA oversight (framed as lifestyle advice, not medical device). Claimed Type: Snare. The constraint meets all snare criteria: high extractiveness (0.58 > 0.46), high suppression (0.62 > 0.60), effective extraction for beneficiary (OpenAI) is maximized while victims (users, medical profession) have minimal exit options. The primary function is extraction (revenue capture) not coordination (health information provision) — health information is the mechanism, not the purpose.
  *
  * PERSPECTIVAL GAP:
- *   - The gap is stark. For a `powerless`/`trapped` user, the service is a Snare: it offers a solution but embeds hidden risks with no recourse, extracting value (data, dependence) in the process.
- *   - For OpenAI (`institutional`/`arbitrage`), it is a Rope: a coordination tool that organizes information to solve a user problem, generating immense value for the company with near-zero marginal cost and high strategic upside. They can exit or pivot at any time.
+ *   The perspectival gap reveals the constraint's extractive nature. OpenAI experiences the service as pure coordination (Rope) — matching users to health information at scale, solving the access problem. Users experience it as a snare — trapped by the convenience/cost asymmetry, bearing liability without recourse. Physicians experience it as tangled rope — the service provides triage value but extracts through authority erosion and patient deflection. Regulatory observers see a scaffold with a sunset measured in years as clinical AI governance frameworks mature. The medical epistemology system sees it as piton degradation — the credential-based authority structure persists through inertia but loses functional weight as users bypass it. The analytical observer sees pure snare — structural liability asymmetry with no mitigation.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `openai` directly profits from user engagement, data acquisition, and market positioning in the high-value healthcare sector.
- *   - Victims: `health_data_submitters` bear all medical risks. `medical_regulators` are also victims, as their public safety mandate and regulatory authority are structurally undermined, forcing them into a reactive and constrained position.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The constraint creates a conflict between two institutional actors: OpenAI and the regulatory bodies. OpenAI, with `arbitrage` exit, operates freely. Regulators, with `constrained` exit, are trapped. They cannot easily ban the service without political backlash (appearing anti-innovation) nor can they ignore the public health risk. This asymmetry is why they perceive the constraint as a Snare on their institutional function.
+ *   OpenAI derives d ≈ 0.10 (beneficiary + arbitrage exit) → f(d) ≈ -0.01 → minimal experienced extraction. Users derive d ≈ 0.90 (victim + trapped exit) → f(d) ≈ 1.38 → high experienced extraction. Physicians derive d ≈ 0.55 (victim/beneficiary mixed + constrained exit) → f(d) ≈ 0.75 → moderate extraction. Regulatory agents derive d ≈ 0.45 (emerging victim via governance gap + constrained exit) → f(d) ≈ 0.50 → moderate extraction. The directionality values show that the constraint extracts from users and physicians while benefiting OpenAI. No overrides are needed — the structural relationships are clear from beneficiary/victim declarations and exit options.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two potential errors. It does not dismiss the service as a pure Snare, because it acknowledges the genuine (though unvalidated) coordination function it provides. It also does not accept the marketing claim of it being a pure Rope, because the indexical analysis from the powerless perspective reveals severe, non-consensual extraction of risk. The Tangled Rope classification captures this duality perfectly.
+ *   This constraint does NOT exhibit mandatrophy because the snare classification is not contestable across perspectives. All six perspectives converge on snare or snare-adjacent types (tangled rope, piton degradation are outcomes of the snare's operation). The mandatrophy would exist if there were a genuinely plausible coordination reading — but OpenAI cannot claim that users knowingly consent to liability transfer as part of a fair coordination mechanism. The users are trapped, not coordinating. The physicians' constrained exit is not voluntary participation in a coordination game — it is regulatory closure from above. The absence of a plausible rope or scaffold perspective from the beneficiary's standpoint indicates that the snare classification is robust. The false summit risk (analytical observer seeing natural law) is low because the constraint is entirely contingent on OpenAI's business model, regulatory arbitrage, and user behavior.
  */
 
 /* ==========================================================================
@@ -211,59 +199,72 @@ test(tangled_rope_structural_gates_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_openai_health_review,
-    'Is the aggregate medical advice provided by the service net beneficial or net harmful to public health?',
-    'Long-term, large-scale, randomized controlled trials comparing health outcomes of users vs. non-users, and vs. traditional medical care.',
-    'If net beneficial, the coordination function is stronger than modeled (ε might be lower). If net harmful, the extractive element is even more severe (ε is accurate or higher).',
-    confidence_without_resolution(low)
+    clinical_validation_threshold,
+    'What empirical validation evidence would convert this from a snare (pure extraction) to a tangled rope (mixed coordination/extraction)?',
+    'Prospective randomized controlled trials comparing ChatGPT health recommendations to standard care; adverse event tracking; outcome-based liability data',
+    'If validation shows >85% adherence to clinical guidelines: tension between snare and tangled_rope classification emerges. If <60%: snare classification is reinforced. Current data is absent — validation gap IS part of the extraction mechanism.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(clinical_validation_threshold, empirical, 'Clinical validation evidence threshold for snare-to-tangled_rope transition').
+
+omega_variable(
+    liability_assignment_mechanism,
+    'Can direct legal liability for AI-generated health advice be assigned through contract, statute, or case law such that OpenAI bears proportional outcome risk?',
+    'Legislative/regulatory action (FDA reclassification as clinical decision support device); test case outcomes; insurance underwriting data for AI health services',
+    'If liability assignment succeeds: extraction mechanism breaks, constraint downgrades to rope or scaffold. If liability remains with users: snare classification persists and deepens as adoption grows.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(liability_assignment_mechanism, empirical, 'Whether liability can be assigned to AI system provider').
+
+omega_variable(
+    user_literacy_and_contextualization,
+    'Do users consistently understand ChatGPT health advice as probabilistic guidance requiring physician verification, or do they treat it as definitive medical judgment?',
+    'User behavior studies; qualitative interviews; correlation between ChatGPT usage and physician consultation rates; adverse event attribution analysis',
+    'If users consistently contextualize as guidance: suppression is lower than assessed, snare weakens. If users treat as judgment: suppression is higher, snare intensifies. Current evidence suggests users anthropomorphize and over-trust.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(user_literacy_and_contextualization, empirical, 'User comprehension of LLM limitations in health context').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(openai_health_review, 0, 10).
+narrative_ontology:interval(openai_health_review, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is required for this high-extraction (ε=0.55) constraint.
-% The trajectory models an initial "growth" phase with lower extraction to build
-% trust, followed by increasing extraction as the platform matures and monetizes.
-% This pattern is typical of Extraction Accumulation drift.
+% Theater ratio over time
+narrative_ontology:measurement(ohr_tr_t0, openai_health_review, theater_ratio, 0, 0.55).
+narrative_ontology:measurement(ohr_tr_t3, openai_health_review, theater_ratio, 3, 0.62).
+narrative_ontology:measurement(ohr_tr_t6, openai_health_review, theater_ratio, 6, 0.68).
 
-% Theater ratio over time (starts high for marketing, then declines):
-narrative_ontology:measurement(ohr_tr_t0, openai_health_review, theater_ratio, 0, 0.50).
-narrative_ontology:measurement(ohr_tr_t5, openai_health_review, theater_ratio, 5, 0.40).
-narrative_ontology:measurement(ohr_tr_t10, openai_health_review, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(ohr_be_t0, openai_health_review, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(ohr_be_t3, openai_health_review, base_extractiveness, 3, 0.51).
+narrative_ontology:measurement(ohr_be_t6, openai_health_review, base_extractiveness, 6, 0.58).
 
-% Extraction over time (starts lower, then increases):
-narrative_ontology:measurement(ohr_ex_t0, openai_health_review, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(ohr_ex_t5, openai_health_review, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(ohr_ex_t10, openai_health_review, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The service coordinates unstructured user health data against
-% a structured corpus of medical information.
 narrative_ontology:coordination_type(openai_health_review, information_standard).
+narrative_ontology:affects_constraint(openai_health_review, medical_credential_authority_erosion).
+narrative_ontology:affects_constraint(openai_health_review, clinical_liability_framework_gap).
+narrative_ontology:affects_constraint(openai_health_review, regulatory_arbitrage_tech_health).
 
-% Network relationship: This service structurally undermines the basis for
-% professional medical licensing by creating a parallel, unregulated alternative.
-narrative_ontology:affects_constraint(openai_health_review, medical_professional_licensing).
-
+% DUAL FORMULATION NOTE:
+% The ChatGPT health service is downstream of broader constraints on medical credentialing authority and clinical liability assignment in the digital health context. The service instantiates these upstream constraints at the user-facing layer, transforming them into direct extraction through the subscription model.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this constraint. The structural derivation from
-% beneficiary/victim declarations and exit options accurately models the
-% directionality for all key agents.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

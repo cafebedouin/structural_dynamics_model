@@ -2,25 +2,29 @@
   "header": {
     "constraint_id": "ancestral_pueblo_hydrology",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "apueblo"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.7,
-    "theater_ratio": 0.3,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
     "human_readable": "Ancestral Puebloan Hydrological Debt",
     "topic_domain": "environmental/social",
-    "requires_active_enforcement": true,
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
     "beneficiaries": [
-      "puebloan_elites"
+      "regional_elite_households"
     ],
     "victims": [
-      "puebloan_farmers",
-      "future_generations",
-      "regional_hydrology"
-    ]
+      "subsistence_farmers",
+      "downstream_communities",
+      "future_generations"
+    ],
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
@@ -29,17 +33,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "The Puebloan Farmer",
-      "comment": "PERSPECTIVE 1: THE FARMER (SNARE) — Trapped by sunk costs in an agricultural system dependent on increasingly unreliable water. Bears the full cost of crop failure and environmental degradation, ultimately forced into migration. The system extracts their livelihood and security. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.83."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "The Chacoan Elite",
-      "comment": "PERSPECTIVE 2: THE ELITE (ROPE) — Experiences the system as pure coordination. They direct labor to build and maintain water infrastructure, manage food surplus, and lead rituals, all for the perceived collective good. The social hierarchy and resource control are seen as necessary functions of a complex society. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.07."
+      "label": "The Subsistence Farmer",
+      "comment": "Subsistence farmers operating in Chaco and Mesa Verde regions experience the hydrological constraint as a snare. Dependent on seasonal water availability for corn, beans, and squash; no alternative livelihood options; cannot migrate without abandoning ancestral lands. As water stress increases, suppression becomes total \u2014 agricultural failure equals starvation. No exit. Maximum extraction experienced as pure resource deprivation."
     },
     {
       "classification_type": "tangled_rope",
@@ -47,98 +42,136 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Descendant Communities",
-      "comment": "PERSPECTIVE 3: DESCENDANT COMMUNITIES (TANGLED ROPE) — Inherit both the cultural knowledge of water management (a coordination benefit) and the legacy of collapse and displacement (an extracted cost). They are constrained by this history but organized through cultural continuity. The story of their ancestors is both a guide and a burden."
+      "label": "The Regional Puebloan Coalition",
+      "comment": "Pueblo nation-states and inter-settlement confederations experience the constraint as tangled rope. Coordinating defense, trade, and ceremonial exchange requires shared water infrastructure and astronomical observation \u2014 cooperation provides genuine benefits. But this coordination mechanism is asymmetrically captured by elite households controlling water redistribution. Chiefs and kivas extract disproportionate surpluses under the guise of ceremonial obligation. Exit is constrained: abandoning the coalition means losing shared defense and trade networks."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Elite Household Network",
+      "comment": "Chacoan elites and kiva societies experience the constraint as rope \u2014 pure coordination. Water-management systems (terracing, check dams, reservoirs) solve genuine collective action problems: flood protection, drought buffering, seasonal distribution. The elite households that control water allocation see themselves as solving coordination problems through ritual and ceremonial redistribution. They experience the constraint as solving, not exploiting \u2014 institutional arbitrage with low experienced extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Paleoclimatic Record",
+      "comment": "From the deep temporal perspective of paleoclimate and dendrochronology, the Ancestral Puebloan system appears as piton \u2014 a degraded water-management institution persisting through theatrical maintenance. The civilization's water-control systems, while functionally sophisticated, became increasingly performative as climatic conditions deteriorated. Monumental construction continued despite declining yields; ceremonial redistribution theater expanded as material redistributive capacity contracted. The institutions persisted through narrative (the Corn Mother, emergence myths) long after real hydrological function declined. Theater ratio rises as drought persists."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerless",
-      "time_horizon": "civilizational",
-      "exit_options": "trapped",
-      "spatial_scope": "universal",
-      "label": "The Fatalist View",
-      "comment": "PERSPECTIVE 4: THE FATALIST VIEW (MOUNTAIN) — This perspective naturalizes the collapse, attributing it solely to an insurmountable external shock (the Great Drought). It frames the outcome as an inevitable clash with natural law, ignoring the social and environmental debt that created the underlying vulnerability. The engine will flag this as a false summit, as the base properties (ε=0.65) are inconsistent with a Mountain."
-    },
-    {
-      "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "regional",
-      "label": "The Archaeologist/Climatologist",
-      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full system dynamics. The water management infrastructure was a genuine coordination solution, but it enabled population growth that exceeded the region's long-term carrying capacity, creating a highly extractive system vulnerable to climatic shocks. The classification captures both the coordination function and the asymmetric extraction. d≈0.73, f(d)≈1.15, σ=0.9 → χ≈0.67."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Paleoclimatic Necessity)",
+      "comment": "From a civilizational analytical perspective, the hydrological constraint appears as mountain \u2014 an immutable natural law. Chaco Canyon received 8-10 inches annual precipitation (semi-arid limit); mesa-top communities relied on episodic flooding. Sustained population growth always faced a ceiling: no technology or social organization can overcome the thermodynamic ceiling of regional precipitation. The mountain classification reflects that all alternative trajectories (irrigation intensification, technological innovation, social reorganization) hit the same hydrological boundary. However, this classification risks naturalizing what is partly contingent: the civilization's extractive intensification (elite appropriation of surpluses, monumental construction, population centralization) made the eventual collapse more severe, not inevitable."
     }
   ],
   "omegas": [
     {
-      "id": "social_vs_climate_driver",
-      "question": "Was the collapse primarily driven by the severity of the 13th-century Great Drought (external shock) or by internal social dynamics (elite mismanagement, conflict, overpopulation)?",
-      "resolution_mechanism": "Higher-resolution paleoclimatic data correlated with archaeological evidence of social stratification, resource hoarding, and violence just prior to abandonment.",
-      "impact": "A stronger climate driver pushes the classification towards Mountain (an unavoidable natural limit). Stronger social drivers confirm the Tangled Rope/Snare classification (a failure of a human system).",
-      "confidence": "high",
+      "id": "elite_extraction_vs_coordination",
+      "question": "To what degree did elite water control represent genuine coordination against drought versus extraction of surplus labor and agricultural output?",
+      "resolution_mechanism": "Archaeological analysis of labor allocation (monument construction vs subsistence activity); isotopic evidence of elite diet quality vs commoner diet; settlement dispersal patterns after elite collapse",
+      "impact": "If coordination-dominant: constraint reclassifies toward Rope. If extraction-dominant: constraint reclassifies toward Snare. Current estimate (0.68 extractiveness) assumes mixed model.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Primary driver of collapse: external climate shock vs. internal social failure."
+      "description": "Proportion of elite water control attributable to genuine coordination versus extraction"
     },
     {
-      "id": "elite_intent_and_knowledge",
-      "question": "Were the elites knowingly operating an unsustainable system for their own benefit, or were they good-faith coordinators overwhelmed by unprecedented environmental change?",
-      "resolution_mechanism": "Analysis of food storage patterns (communal vs. elite-controlled), settlement patterns, and evidence of responses to prior, smaller droughts.",
-      "impact": "Evidence of good-faith coordination strengthens the Rope perspective. Evidence of resource hoarding and control points towards a more extractive Snare.",
+      "id": "climate_determinism_boundary",
+      "question": "What fraction of the Ancestral Puebloan collapse was driven by megadrought (hydroclimate) versus institutional failure (elite extraction, population density, maladaptive investment)?",
+      "resolution_mechanism": "Climate reconstruction from tree-rings, stalagmites, lake cores; modeling of population-carrying capacity under reconstructed rainfall; comparison with alternative societies facing similar climatic stress",
+      "impact": "If >70% climate-determined: mountain classification is justified. If <50%: classification should reflect human agency and institutional failure, shifting toward Snare or Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of collapse to paleoclimate versus institutional factors"
+    },
+    {
+      "id": "ceremonial_redistribution_function",
+      "question": "Did kiva-based ceremonial redistribution actually equalize resource distribution or primarily redistribute upward to elite households?",
+      "resolution_mechanism": "Archaeological distribution of exotic goods, cache contents, and ritual deposits; bone chemistry (isotopic) evidence of diet access; spatial analysis of storage facilities relative to settlement hierarchy",
+      "impact": "If downward-redistributing: Rope classification strengthens. If upward-concentrating: Snare classification strengthens. Current mixed classification reflects uncertainty.",
       "confidence": "low",
+      "type_class": "empirical",
+      "description": "Net direction of ceremonial redistribution flows"
+    },
+    {
+      "id": "alternative_trajectory_availability",
+      "question": "Were there viable alternative trajectories (reduced population density, settlement dispersal, intensified trade) that the Ancestral Puebloans could have pursued to avoid collapse?",
+      "resolution_mechanism": "Comparative analysis with other semi-arid civilizations (Nabataeans, Pre-Columbian Sonoran Desert societies); modeling of population sustainability under dispersed settlement patterns; trade network analysis",
+      "impact": "If alternatives existed: extraction and institutional failure are more culpable, constraint reclassifies toward Snare. If alternatives unavailable: mountain/parity classification more justified.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Degree to which elites understood and managed systemic risk vs. extracted benefits."
+      "description": "Whether viable alternatives to the collapse trajectory existed"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 900,
-      "value": 0.2
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1100,
-      "value": 0.5
+      "time_point": 150,
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1300,
-      "value": 0.65
+      "time_point": 300,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
-      "time_point": 900,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1100,
+      "time_point": 0,
       "value": 0.25
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1300,
-      "value": 0.3
+      "time_point": 150,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.55
     }
   ],
   "interval": {
-    "start": 900,
-    "end": 1300
+    "start": 0,
+    "end": 300
   },
   "commentary": {
-    "narrative_context": "This constraint models the socio-environmental system of the Ancestral Puebloans in the Four Corners region, particularly during the period leading to the abandonment of major centers like Chaco Canyon and Mesa Verde around 1300 AD. The 'hydrological debt' represents the accumulated environmental degradation (deforestation, soil erosion, water table depletion) and social fragility resulting from a successful but ultimately unsustainable adaptation to an arid environment. A period of population growth and agricultural intensification, supported by sophisticated water management, created a system that was highly vulnerable to the severe, prolonged 'Great Drought' of the late 13th century.",
+    "narrative_context": "The Ancestral Puebloan hydrological constraint models the structural entrapment created by water-dependent agricultural societies in semi-arid environments when elite institutions capture coordination mechanisms for extractive purposes. Chaco Canyon (c. 900-1150 CE) and Mesa Verde (c. 1190-1300 CE) developed sophisticated hydrological infrastructure (terraces, check dams, reservoirs) that genuinely solved collective action problems: flood management, seasonal distribution, drought buffering. However, elite households and kiva societies used control of water distribution to extract labor, agricultural surplus, and status goods from subsistence farmers. The constraint exhibits the full mandatrophy: from the subsistence farmer's perspective, the system appears as a pure snare (trapped in extraction, no exit); from the elite perspective, it appears as rope (solving coordination problems); from the paleoclimatic view, it appears as mountain (immutable regional precipitation ceiling); from the deep temporal view, it appears as piton (theatrical ceremonial redistribution persisting despite declining hydrological function). The extractiveness rose from 0.35 to 0.68 over the interval as drought intensified (megadrought 1130-1180 CE and 1240-1300 CE), forcing elite institutions to intensify appropriation. Theater ratio rose from 0.25 to 0.55 as ceremonial narrative expansion compensated for declining material redistributive capacity. The collapse (settlement abandonment by 1320 CE) followed the intersection of prolonged drought and institutional failure \u2014 the constraint became unsustainable when hydrological stress exceeded both elite extraction capacity and commoner subsistence margins.",
     "key_agents": [
-      "Puebloan Farmers: Primary victims (powerless/trapped) — dependent on the agricultural system and directly exposed to its failure.",
-      "Puebloan Elites: Primary beneficiaries (institutional/arbitrage) — directed the water management projects and controlled the agricultural surplus that supported their status.",
-      "Descendant Communities: Inheritors of the legacy (organized/constrained) — carry forward cultural knowledge but are also shaped by the historical trauma of the collapse.",
-      "Analytical Observer: Modern archaeologist or climatologist (analytical/analytical) — able to reconstruct the long-term dynamics of the climate and social system."
+      "Subsistence Farmers: Primary victims (powerless/trapped) \u2014 dependent on seasonal water for agricultural survival; bear full cost of drought intensification and elite extraction",
+      "Regional Elite Households: Primary beneficiaries (institutional/arbitrage) \u2014 control water distribution, extract labor and surplus; experience constraint as coordination mechanism",
+      "Kiva Societies: Secondary institutional actors (organized/constrained) \u2014 ceremonial and defense function; serve as extraction intermediaries for elite households",
+      "Downstream Communities: Secondary victims (moderate/constrained) \u2014 experience water shortage as upstream water-harvesting systems intensify; reduced access to seasonal flooding",
+      "Future Generations: Abstract victim (powerless/trapped) \u2014 experience the legacy of environmental degradation and settlement collapse; no contemporary exit options",
+      "Paleoclimatic System: Analytical observer (analytical/analytical) \u2014 deep temporal view reveals the constraint as both natural law (precipitation ceiling) and contingent institutional failure (elite extraction intensity)"
     ],
-    "logic_rationale": "Extractiveness (ε=0.65): High. Represents the rate of resource consumption (water, timber, soil fertility) exceeding the natural rate of replenishment, leading to a systemic deficit or 'debt'. Suppression (0.70): High. The commitment to maize agriculture and settled life in large communities created high sunk costs, suppressing alternatives like nomadic foraging which could not support the established population density. Theater Ratio (0.30): Low. The water management systems and associated social rituals were highly functional for centuries. The ratio rises slightly over time as functional solutions may have begun to fail, increasing reliance on purely supplicatory rituals.",
-    "perspectival_gap": "The gap is stark. For the farmer, the system becomes a Snare as the climate shifts and the land fails, trapping them in a losing battle. For the elite, it remains a Rope—a complex coordination problem they are tasked with solving. The analytical observer sees the synthesis: a Tangled Rope, where the very mechanisms of coordination (waterworks, food storage) are what enable the unsustainable extraction and create the asymmetric risk profile that defines the system's fragility.",
-    "directionality_logic": "Beneficiaries (puebloan_elites) with arbitrage exit options (ability to relocate with retained status/resources) experience the system as coordination, leading to a low 'd' value and a Rope classification. Victims (puebloan_farmers) who are trapped by their agricultural investments bear the full cost of failure, leading to a high 'd' value and a Snare classification. The analytical view balances these, recognizing both functions, resulting in the Tangled Rope classification.",
-    "mandatrophy_analysis": "This case is a powerful example of how a system can be simultaneously a brilliant coordination solution and a devastatingly extractive one. Mandatrophy is avoided by refusing to collapse the analysis into a single judgment. The system wasn't simply 'bad' (a Snare) or 'good' (a Rope). It was a complex adaptation (Tangled Rope) whose internal logic was rational from the perspective of its managers (Rope) but catastrophic for its most vulnerable participants and its environmental foundation (Snare). The DR framework captures this essential duality."
+    "logic_rationale": "Extractiveness (0.68): High but not maximum. Elite households extract significant labor surpluses and agricultural output through control of water redistribution, but the extraction is partial and mediated through ceremonial obligation rather than total coercion. Subsistence farmers retain some autonomous production capacity and ceremonial participation generates psychological and status benefits. The value reflects moderate-high extraction constrained by legitimacy requirements of ceremonial redistribution. Suppression (0.72): High. Subsistence farmers face complete dependence on elite-controlled water systems with no technological alternative, no exit option, and no organizational capacity for collective resistance. Migrating meant abandoning ancestral lands and losing access to regional trade networks. Suppression is total by the end of the interval. Theater ratio (0.55): Moderate-rising. Early period (900-1050 CE) water management was functionally sophisticated \u2014 ceremonial redistribution legitimately coordinated collective action. As drought intensified, the same ceremonial institutions persisted but became increasingly performative: kiva construction continued despite declining yields; redistribution theater expanded as material capacity contracted. The theater ratio rise indicates institutional degradation (piton dynamics) where ceremonial maintenance replaced functional hydrological management.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (elite control of water in a semi-arid region) generates completely different classifications from different perspectives. The subsistence farmer sees a snare: they are trapped, suppressed, exploited with no exit. The elite see rope: they are solving the genuine coordination problem of managing scarce water and have substantial agency. The kiva societies see tangled rope: they coordinate defense and ceremonial exchange, but their position is constrained by elite capture of their redistribution function. The paleoclimatic observer sees mountain: no region-specific technology can overcome the 8-10 inch annual precipitation ceiling. The deep temporal observer sees piton: the ceremonial institutions persisted through narrative and ritual long after their hydrological function declined. The perspectival gap is fundamental \u2014 no single classification captures the full structural reality. The snare classification for the subsistence farmer is not wrong; nor is the rope classification for the elite; nor is the mountain classification for the paleoclimatic view. The constraint is a presheaf over observation positions.",
+    "directionality_logic": "Directionality values are derived from structural position within the extraction flow. Subsistence farmers occupy d \u2248 0.95 (trapped victims with no exit) \u2192 f(d) \u2248 1.42 \u2192 high experienced extractiveness. Elite households occupy d \u2248 0.10 (beneficiaries with arbitrage options) \u2192 f(d) \u2248 -0.01 \u2192 negative experienced extraction (they experience net benefit). Kiva societies occupy d \u2248 0.50 (symmetric: they coordinate but are partly captured) \u2192 f(d) \u2248 0.65 \u2192 moderate experienced extraction. The scope modifier \u03c3(regional) = 0.9 applies because verification of elite extraction requires local knowledge of distribution patterns and ceremonial obligations. The computed \u03c7 values reflect how different agents experience the same constraint: \u03c7_farmer \u2248 0.68 \u00d7 1.42 \u00d7 0.9 \u2248 0.87 (high effective extraction); \u03c7_elite \u2248 0.68 \u00d7 (-0.01) \u00d7 0.9 \u2248 -0.006 (negative/benefit); \u03c7_kiva \u2248 0.68 \u00d7 0.65 \u00d7 0.9 \u2248 0.40 (moderate extraction). The directionality derivation is straightforward structural causation \u2014 no overrides needed.",
+    "mandatrophy_analysis": "RESOLVING THE MANDATROPHY: The constraint resolves the apparent paradox of simultaneous coordination and extraction by showing that mandatrophy is not 'which type is correct?' but 'who is measuring?' The Ancestral Puebloan hydrological system WAS a genuine coordination mechanism that solved real collective action problems (flood protection, seasonal distribution, drought buffering). It also WAS an extraction mechanism that concentrated labor, surplus, and status in elite households. These are not contradictory \u2014 they are simultaneous structural facts. The mandatrophy resolves by recognizing that legitimacy (the psychological and social acceptance of the system) creates coordination benefits even within extraction relationships. Subsistence farmers participated in kiva ceremonies, accepted elite redistribution as legitimate, and genuinely benefited from collective flood protection. They were simultaneously trapped in extraction with no exit. Both truths hold. The mountain classification (from the paleoclimatic view) risks naturalizing the constraint by treating the 8-10 inch precipitation ceiling as the cause of collapse. But alternative trajectories existed: other semi-arid societies (Nabataeans, Hohokam in their early phases) maintained lower-density settlement patterns and avoided elite extraction intensification. The Ancestral Puebloan collapse was not inevitable from climate alone \u2014 it resulted from institutional choices (elite appropriation, population centralization, ceremonial intensification) that made the inevitable hydrological stress more severe. The snare classification is the most honest frame: commoners were trapped by elite institutions into a system that appeared coordinated but functioned as extraction, and when drought stress exceeded carrying capacity, the legitimacy failed catastrophically."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "southwestern_megadrought_1130_1180",
+      "chaco_road_network_hierarchy",
+      "puebloan_kiva_ceremonialism"
+    ],
+    "dual_formulation_note": "The hydrological constraint is downstream of paleoclimatic forcing (megadroughts) and upstream of institutional collapse dynamics. Separate constraint stories exist for the megadrought as natural law (mountain) and for the elite extraction institutions as social snare. The hydrological debt story bridges them: it models how elite institutions intensified extraction in response to climatic stress, amplifying the eventual collapse beyond what climate alone would produce."
+  },
+  "directionality_overrides": []
 }

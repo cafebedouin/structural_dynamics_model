@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "cholesterol_pill_cost",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "chol"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Cost of Patented Cholesterol Medication",
+    "topic_domain": "economic/healthcare/pharmaceutical",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "pharmaceutical_manufacturer"
+    ],
+    "victims": [
+      "low_income_patients",
+      "uninsured_patients",
+      "healthcare_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Low-Income Patient",
+      "comment": "PERSPECTIVE 1: LOW-INCOME PATIENT (SNARE) \u2014 Cannot afford the patented medication; faces choice between medication and other necessities. No exit option: patent protection prevents generic alternatives, insurance coverage is denied, and switching to alternative treatments means accepting higher cardiovascular risk. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Insured Patient",
+      "comment": "PERSPECTIVE 2: INSURED PATIENT (SNARE) \u2014 Faces high copayments or formulary restrictions. Can switch medications but at clinical cost (switching to lower-efficacy alternatives). Patent excludes generics, and insurance tier placement is dictated by pharmacy benefit manager contracts (themselves often influenced by manufacturer rebates). d\u22480.75, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Healthcare System (Payer)",
+      "comment": "PERSPECTIVE 3: HEALTHCARE SYSTEM/PAYER (TANGLED ROPE) \u2014 Experiences mixed coordination and extraction. Coordination function: patent incentivizes R&D investment in novel cholesterol therapeutics that might not exist under generic competition. Extraction function: high drug prices increase overall treatment costs, strain budgets, and force formulary restrictions that limit patient access. Healthcare systems have some mobility (can negotiate prices, substitute alternative therapies, lobby for patent reform) but are constrained by clinical obligation to offer effective treatments and contractual lock-in with pharmacy benefit managers. d\u22480.52, f(d)\u22480.67, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Primary beneficiary. Patent protection solves a coordination problem: without exclusivity, firms would underinvest in drug development (market would be flooded with generics immediately upon approval, destroying R&D incentives). The manufacturer sees the constraint as enabling innovation coordination \u2014 their price-setting power is the legitimate return on R&D risk capital. High exit options: can shift R&D focus to other therapeutic areas, license patents internationally, extend patent life through regulatory strategies (evergreening). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Patent System Institution",
+      "comment": "PERSPECTIVE 5: PATENT SYSTEM INSTITUTION (PITON) \u2014 Theater ratio = 0.45 (below piton threshold, but this is a piton from institutional inertia perspective). The patent system's primary function was to incentivize innovation under 20th-century conditions (high R&D costs, long drug development timelines, weak copycat mechanisms). Modern conditions have degraded this function: (1) biologics and manufacturing complexity already provide 10-15 years of de facto exclusivity before biosimilars appear; (2) regulatory data exclusivity provides additional protection layers; (3) evergreening strategies (minor reformulations, combination therapies) extend exclusivity beyond patent expiration without new innovation. The institutional theater persists because alternatives (prize systems, open-source drug development, government R&D funding) have not fully matured. Suppression is high (0.68) \u2014 patient access is actively restricted by legal enforcement. d\u22480.10, f(d)\u2248-0.06, \u03c3=1.2 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational timescale viewing global access, this is a snare: patent protection creates a structural asymmetry where pharmaceutical manufacturers extract rent from patients in high-income countries to fund innovation, while patients in low-income countries have limited access at any price. The system cannot be exited (patients cannot choose to not need statins; they cannot become unpatentable), and the suppression is structural (patent law enforcement is active and global). d\u22480.88, f(d)\u22481.35, \u03c3=1.2 \u2192 \u03c7\u22480.93."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "r_and_d_incentive_dependence",
+      "question": "How much of current cholesterol drug R&D genuinely depends on patent-based revenue capture versus alternative incentive structures (government contracts, advance market commitments, prize funds)?",
+      "resolution_mechanism": "Comparative analysis of R&D spending and molecule discovery rates under different patent regimes (e.g., US pre/post Bayh-Dole, countries with compulsory licensing, public drug development programs)",
+      "impact": "If R&D is highly dependent (>70% of innovation driven by patent rents): patent extraction is justified coordination overhead. If weakly dependent (<30%): current patent system is pure extraction with institutional inertia.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Dependence of cholesterol drug R&D on patent-based revenue"
+    },
+    {
+      "id": "clinical_necessity_threshold",
+      "question": "At what patient income/insurance level does the medication transition from 'beneficial optional improvement' to 'medically necessary to prevent death'?",
+      "resolution_mechanism": "Longitudinal health outcome data comparing patients with and without access; cost-benefit analysis of medication efficacy gain versus out-of-pocket cost burden",
+      "impact": "If threshold is high (only severe familial hypercholesterolemia): medication is elective, suppression is lower. If threshold is low (all high-risk patients): medication is essential, suppression is high (0.68 confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Clinical necessity threshold for cholesterol medication access"
+    },
+    {
+      "id": "generic_entry_timeline_counterfactual",
+      "question": "If the patent expired tomorrow, how quickly would generic equivalents reduce the price, and at what price would manufacturing reach equilibrium?",
+      "resolution_mechanism": "Historical precedent from other statin patents (atorvastatin, rosuvastatin, pravastatin patent expirations); manufacturing cost analysis; generic market entry timelines",
+      "impact": "If generics reduce price 80-90% within 1 year: current patent generates rents well above innovation cost recovery. If reduced only 20-30%: manufacturing/distribution has high legitimate costs.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Generic entry price trajectory and equilibrium"
+    },
+    {
+      "id": "international_pharmaceutical_arbitrage",
+      "question": "How much of the global market extraction is enabled by price discrimination (different prices in different countries) versus a single global monopoly price?",
+      "resolution_mechanism": "International price comparison data for the same molecule; analysis of parallel importation barriers; assessment of gray-market generic access in low-income countries",
+      "impact": "If arbitrage is significant (3-5x price differences): suppression is partially enabled by legal trade restrictions (additional extraction vector). If prices are globally similar: suppression is extraction via scarcity, not discrimination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "International price discrimination and arbitrage barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Patented cholesterol medications exemplify the core tension in pharmaceutical intellectual property: patents provide crucial innovation incentives by allowing manufacturers to recoup R&D investments through temporary monopoly pricing, but this same mechanism creates severe access barriers for low-income patients who cannot afford the monopoly price and have no substitute (switching to generic alternatives is impossible, and clinical necessity makes non-treatment a poor option). The constraint exhibits distinct structures depending on perspective. For manufacturers, the patent is a legitimate coordination mechanism solving the underinvestment problem of drug development. For healthcare payers, it represents mixed coordination (incentivizing R&D) and extraction (raising total treatment costs). For low-income patients, it is a pure snare: they are trapped by medical need, cannot exit through generic alternatives, and face suppression in the form of active patent enforcement. The extractiveness has increased over the interval (0.35 to 0.58) as the manufacturer has extended patent life through evergreening strategies (reformulations, combination therapies) and price increases have outpaced inflation. The theater ratio remains low (0.45) because the constraint functions mechanically \u2014 patents are not maintained through performative institutional ritual but through straightforward legal enforcement.",
+    "key_agents": [
+      "Low-Income Patients: Primary victim (powerless/trapped) \u2014 medical need creates inescapable demand; patent excludes generics; financial barriers force medication denial or other necessity trade-offs",
+      "Uninsured/Underinsured Patients: Primary victim (moderate/constrained) \u2014 insurance formulary restrictions and high copayments create barriers; can substitute with lower-efficacy alternatives but at clinical cost",
+      "Healthcare Systems (Payers): Secondary actor (organized/mobile) \u2014 experience mixed coordination and extraction; can negotiate prices, lobby for policy change, but are constrained by clinical obligation and benefit manager contracts",
+      "Pharmaceutical Manufacturer: Primary beneficiary (institutional/arbitrage) \u2014 captures monopoly rents from patent protection; sees constraint as enabling innovation; has high exit options (can focus R&D on other conditions)",
+      "Patent System Institution: Institutional actor (institutional/arbitrage) \u2014 maintains legal enforcement mechanism; increasingly theater-like as evergreening strategies extend exclusivity beyond genuine innovation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees extraction through global lens where innovation benefits are concentrated in high-income markets while access barriers affect low-income populations"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The medication's efficacy is genuine and valuable, but the price is set well above manufacturing and distribution cost, generating substantial economic surplus capture by the manufacturer. The \u03b5 is not higher (0.70+) because the innovation is real \u2014 the R&D investment does require some monopoly protection to justify. However, the 20-year patent term often extends beyond the period needed to recover development costs, and evergreening strategies further increase the rent-extraction period. Suppression (0.68): High. Patent law actively prevents generic entry, and pricing creates financial barriers to access. Patients cannot legally produce or import generics; they cannot modify the medication to escape patent claims; they cannot choose not to need the medication. The constraint is enforced through law, not just market mechanisms. Theater ratio (0.45): Low-moderate. The constraint functions mechanistically \u2014 patents are straightforward legal tools, not maintained through institutional theater. However, the claim that patents 'incentivize innovation' is partly performative; much cholesterol drug development is now incremental (me-too reformulations) rather than breakthrough, yet the patent system treats all claims equally. The theater ratio is not higher because the mechanism is transparent, but it is not zero because the innovation narrative masks incremental optimization as breakthrough research.",
+    "perspectival_gap": "The gap is stark. The manufacturer sees a coordination solution (Rope) \u2014 enabling innovation that would not occur under competition. Low-income patients see a snare (Snare) \u2014 pure extraction with no escape. Healthcare systems see a hybrid (Tangled Rope) \u2014 the system enables innovation but extracts unsustainable costs. The patent system itself sees its function degrading (Piton) \u2014 evergreening extends exclusivity beyond innovation into pure rent-seeking. The analytical observer, viewing global access, sees extraction (Snare) \u2014 innovation subsidized by high-income patients and denied to low-income populations. The perspectival gap reveals that no single type captures the full structure; the constraint is legitimately coordination-enabling for innovation while simultaneously being legitimate-rent-extracting from patients.",
+    "directionality_logic": "Low-income patients: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. No exit: medical need, patent blocks generics, financial barriers are absolute. Insured patients: Victim + constrained \u2192 d\u22480.75, f(d)\u22481.10. High extraction but not maximal; can switch to alternatives (at clinical cost), have some insurance cushioning. Healthcare systems: Victim + organized + mobile \u2192 d\u22480.52, f(d)\u22480.67. Moderate extraction; can negotiate prices, substitute therapies, lobby for policy change. Manufacturer: Beneficiary + institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; can set prices, extend patents, shift R&D focus. Patent system: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.06. Net beneficiary (maintains legal monopoly rents); but piton classification comes from theater degradation, not from positive d. Analytical observer: d\u22480.88, f(d)\u22481.35. High extraction from global perspective; innovation concentrated in high-income markets, access barriers affect low-income globally.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint simultaneously serves coordination (innovation incentive) and extraction (monopoly rent capture). The manufacturer's legitimate claim that patents incentivize R&D is true at the margin \u2014 without patent protection, some fraction of current innovation would not occur. However, the empirical fraction is uncertain (omega_1: how much R&D actually depends on patent rents?), and current patent terms and evergreening practices substantially exceed the minimum needed for incentive. The constraint resolves from Rope (pure coordination) to Tangled Rope (mixed) to Snare (pure extraction) as one moves from manufacturer perspective to healthcare system to patient perspective. The mandatrophy is not 'is this coordination or extraction?' but 'at what point does the coordination function degrade into pure rent-seeking?' The theater ratio (0.45) is low because the constraint is enforced transparently (patent law), not hidden behind institutional ritual. This transparency is actually a liability for Tangled Rope classification \u2014 without theater obscuring the extraction mechanism, the constraint appears more nakedly extractive than it actually is. The resolution is honest: this is a Snare from the patient perspective and will remain so unless the patent term is shortened, generic entry barriers are lowered, or alternative incentive structures (prize funds, government R&D) substitute for monopoly rents."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "insulin_patent_pricing",
+      "rare_disease_drug_access",
+      "generic_drug_entry_barriers"
+    ],
+    "dual_formulation_note": "The cholesterol medication cost constraint is one member of a pharmaceutical pricing family. Upstream constraints include generic entry barriers (structural/legal); downstream constraints include specific disease categories (insulin, rare diseases) where the same patent mechanism operates with different patient vulnerability profiles. The network reflects causal dependency: patent mechanism affects all downstream drug prices, and legal barriers to generic entry are the common structural element."
+  },
+  "directionality_overrides": []
+}

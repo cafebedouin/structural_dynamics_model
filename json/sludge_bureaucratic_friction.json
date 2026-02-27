@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "sludge_bureaucratic_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sludge"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sludge (Intentional Administrative Friction)",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_fiscal_apparatus",
+      "administrative_gatekeepers"
+    ],
+    "victims": [
+      "benefit_claimants",
+      "rights_seekers",
+      "service_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Benefit Claimant",
+      "comment": "PERSPECTIVE 1: BENEFIT CLAIMANT (SNARE) \u2014 Low-income individuals navigating welfare systems face insurmountable procedural burdens: form complexity, document requirements, appointment scheduling, language barriers, transportation. Exit is not available\u2014they need the benefits to survive. The sludge functions as pure extraction: gatekeepers accumulate discouragement rent through administrative burden. Maximum experienced extractiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Service Bureaucrat",
+      "comment": "PERSPECTIVE 2: SERVICE BUREAUCRAT (TANGLED ROPE) \u2014 Lower-level administrators experience sludge as both coordination (legitimate eligibility verification requires documentation) and extraction (upper management uses processing delays as a lever to reduce benefit rolls without legislative action). They are trapped between genuine coordination requirements and institutional pressure to discourage access. Moderate power with constrained exit\u2014they cannot abandon the role without career loss."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fiscal Authority",
+      "comment": "PERSPECTIVE 3: FISCAL AUTHORITY (ROPE) \u2014 Central budget authority experiences sludge as pure coordination: documentation requirements genuinely enable verification of eligibility, prevent fraud, and distribute limited resources fairly. From this institutional perspective, the friction is the legitimate cost of information-gathering. The authority has arbitrage options: it can adjust system design, technology, staffing. Net beneficiary\u2014sludge enables their control function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Sludge Elimination Coalition",
+      "comment": "PERSPECTIVE 4: SLUDGE ELIMINATION COALITION (SCAFFOLD) \u2014 Civil rights organizations, benefits advocacy groups, and some state agencies are building alternative pathways: automated eligibility verification, simplified forms, mobile applications, presumptive eligibility. These constitute a sunset mechanism\u2014as digital systems and process redesign mature, the friction mechanism loses its suppressive force. Organized agents with constrained exit but visible decrement over 10-15 year horizon."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legacy Paper-Based System",
+      "comment": "PERSPECTIVE 5: LEGACY PAPER-BASED SYSTEM (PITON) \u2014 The physical infrastructure of bureaucracy (in-person offices, paper forms, scheduling systems) persists through institutional inertia despite technology that could eliminate most friction. The theater_ratio is high (0.65) because much ritual persists: form-filling, waiting, documentation verification. The system maintains itself through path dependency and staff training, not because it functions well. A degraded Snare that used to extract but now mostly performs."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Verification Problem View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / VERIFICATION PROBLEM (MOUNTAIN) \u2014 From a civilizational/universal perspective, all resource-allocation systems face an inherent information problem: distributing limited benefits requires verifying need and eligibility. Some friction is structurally unavoidable\u2014you cannot allocate public goods without knowing who qualifies. However, the engine will detect this as a false summit: modern technology and administrative design have reduced verification friction to < 0.15 in some jurisdictions (Estonia's digital government, simplified tax-return systems). The naturalization of bureaucratic friction as immutable misses the contingency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_threshold",
+      "question": "What constitutes 'intentional' administrative friction versus legitimate procedural complexity?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions with low-friction systems (Estonia, Taiwan) vs high-friction systems (US welfare, UK disability assessment); measurement of discretionary complexity removal where politically feasible",
+      "impact": "If intentionality is documentable (memo traffic, policy statements): snare classification strengthens. If friction emerges from budget constraints only: tangled_rope classification solidifies (legitimate coordination + unintended extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinction between intentional and inadvertent administrative friction"
+    },
+    {
+      "id": "discouragement_extraction_rate",
+      "question": "What percentage of eligible claimants are deterred by sludge rather than self-selecting out of genuine ineligibility?",
+      "resolution_mechanism": "Randomized administrative burden reduction (Oregon SNAP simplification pilot, UK pension form shortening); measurement of uptake elasticity with respect to friction reduction",
+      "impact": "If > 30% of non-claimants are sludge-deterred: snare extraction is quantifiable. If < 10%: friction may be incidental rather than extractive.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical discouragement rate from administrative friction"
+    },
+    {
+      "id": "legitimate_verification_floor",
+      "question": "What is the minimum friction required for effective fraud prevention and eligibility verification?",
+      "resolution_mechanism": "Comparative analysis of fraud rates across low- and high-friction systems; technical audit of simplified verification methods; pilot programs with friction floors at different levels",
+      "impact": "If minimum floor is 0.15: most observed sludge (0.72 suppression) is extractive overage. If minimum floor is 0.45: sludge is mostly legitimate coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum friction required for legitimate eligibility verification"
+    },
+    {
+      "id": "digital_transition_viability",
+      "question": "Can automated/digital eligibility verification achieve feature parity with paper-based systems at substantially lower friction?",
+      "resolution_mechanism": "Technical feasibility studies; international comparison of digital systems (Estonia, Singapore, Korea); cost-benefit analysis of automation investments",
+      "impact": "If yes: scaffold classification is confirmed\u2014digital pathway represents real sunset mechanism. If no: sludge is structurally necessary, and mitigation rather than elimination is realistic.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether digital systems can replace paper-based friction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Sludge\u2014intentional or consequential administrative friction\u2014operates as a structural constraint on access to benefits, rights, and services. Unlike direct exclusion or price barriers, sludge works through procedural burden: excessive paperwork, opaque requirements, long wait times, fragmented systems, and deliberate complexity. The constraint exhibits multiple perspectives because it serves genuine coordination functions (eligibility verification, fraud prevention, resource allocation) while simultaneously extracting through discouragement. Benefit claimants experience it as pure suppression; fiscal authorities experience it as coordination; eliminating it requires technological and organizational redesign. The extractiveness has increased over the 20-year interval as systems have accumulated legacy complexity without corresponding simplification, and as intentional policy tightening has added friction layers atop legitimate procedural requirements.",
+    "key_agents": [
+      "Benefit Claimants: Primary victims (powerless/trapped) \u2014 require benefits; cannot exit; bear full discouragement cost",
+      "Service Bureaucrats: Secondary actors (moderate/constrained) \u2014 execute sludge mechanisms; experience mixed coordination and extraction pressure",
+      "Fiscal Authority: Primary beneficiary (institutional/arbitrage) \u2014 controls resource allocation; experiences sludge as legitimate coordination tool",
+      "Sludge Elimination Coalition: Organized advocates (organized/constrained) \u2014 building technological and procedural alternatives; represent sunset pathway",
+      "Legacy Administrative System: Institutional actor (institutional/arbitrage) \u2014 paper-based, in-person infrastructure; maintains through path dependency",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing friction as inherent to all public administration"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Sludge extraction flows from claimants to the fiscal apparatus through discouragement. However, the extraction is not total (0.70+) because legitimate coordination functions exist: eligibility verification genuinely requires information; fraud prevention requires barriers; resource constraints require rationing. The measured 0.58 reflects that roughly half the observed friction plausibly serves coordination, while the remainder is extractive overage (intentional discouragement or unmotivated legacy complexity). Suppression (0.72): High. Multiple barriers compound: documentation requirements, appointment scheduling, language/literacy barriers, transportation costs, time-off-work costs, form complexity, knowledge asymmetry. Claimants have no formal appeal for 'friction is too high'\u2014the system defines its own legitimacy. Theater ratio (0.65): Moderate-high. Much ritual persists: waiting rooms, filing rituals, form submission, documentation proof. However, a residual coordination core remains genuine\u2014some waiting and documentation reflects actual verification work, not pure theater. Digital systems in advanced jurisdictions reduce theater to 0.20-0.30 while maintaining verification function, demonstrating that current theater includes performative components.",
+    "directionality_logic": "Directionality computation flows from structural position. Benefit claimants with trapped exit and victim status experience maximum d \u2248 0.95, producing high f(d) \u2248 1.42 and perceived \u03c7 after scope adjustment. Fiscal authorities with institutional power and arbitrage exit experience low d \u2248 0.05, producing negative f(d) \u2248 -0.12 and net-beneficiary \u03c7. Service bureaucrats with moderate power and constrained exit occupy middle ground: d \u2248 0.60, f(d) \u2248 0.85, experiencing tangled_rope proportions where both coordination and extraction are real. The organized coalition has organized power with constrained exit but visible pathway out\u2014their d \u2248 0.40 reflects that they can influence system design even if they cannot opt out individually.",
+    "perspectival_gap": "The core perspectival gap separates the fiscal authority's (Rope) experience from the claimant's (Snare). The authority sees procedural burden as legitimate coordination cost\u2014eligibility verification genuinely requires information-gathering. The claimant sees pure extraction\u2014they must comply or lose needed benefits. Both are structurally correct: sludge serves both functions simultaneously. The organized coalition perspective (Scaffold) introduces the critical insight that this is not inevitable: digital systems and simplified processes can reduce friction from 0.72 to 0.25 while maintaining verification integrity. This possibility reveals the current sludge as a Piton (degraded legacy system) or a Snare (intentional extraction), not as a Mountain (immutable coordination requirement). The analytical observer's mountain perspective is false\u2014it naturalizes what is demonstrably contingent.",
+    "mandatrophy_analysis": "Sludge resolves the mandatrophy by documenting that all perspectives are correct within their observational frame. The mandatrophy would accuse the framework of contradiction: 'Is sludge coordination (Rope) or extraction (Snare)?' The answer is: both, from different structural positions. The fiscal authority genuinely uses sludge for coordination\u2014they need verification tools. The claimant genuinely experiences extraction\u2014they bear the friction cost and can be deterred. The tangled_rope classification for service bureaucrats captures the hybrid: they enforce coordination requirements while being pressured to use friction as a discouragement mechanism. The scaffold classification reveals that the mandatrophy itself is based on false necessity: the apparent trade-off between 'coordination friction' and 'pure extraction' is artifact of legacy technology. Digital systems and redesigned processes (Estonia's approach) achieve both lower friction and higher verification integrity, demonstrating that the trade-off was contingent, not structural. The piton classification documents that much of the observed sludge is now theater\u2014maintenance of forms, rituals, and office visits that persist without functional justification. This resolution does not eliminate the constraint; it recategorizes it as a legacy extraction mechanism (Piton) with a visible exit pathway (Scaffold), not as a coordination necessity (Mountain)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "welfare_eligibility_verification",
+      "means_testing_extraction",
+      "bureaucratic_capture"
+    ],
+    "dual_formulation_note": "Sludge is downstream of eligibility verification requirements and upstream of actual benefit delivery. The constraint's extractiveness (0.58) reflects a hybrid of legitimate verification friction and intentional or path-dependent discouragement. Upstream constraint 'welfare_eligibility_verification' has lower extractiveness (\u03b5 \u2248 0.20) reflecting pure coordination; downstream constraint 'means_testing_extraction' has higher extractiveness reflecting concentrated extraction pressure on the poorest claimants. Sludge mediates between these two, converting verification requirements into discouragement rents."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

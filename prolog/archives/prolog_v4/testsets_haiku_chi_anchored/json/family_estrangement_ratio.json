@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "family_estrangement_ratio",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fam_est"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The 'Family is Forever' Dogma",
+    "topic_domain": "social/family_dynamics",
+    "requires_active_enforcement": false,
+    "victims": [
+      "estranged_individuals",
+      "abuse_survivors",
+      "relational_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Estranged Child or Abuse Survivor",
+      "comment": "PERSPECTIVE 1: ESTRANGED INDIVIDUAL (SNARE) \u2014 Trapped by social/family pressure to maintain contact despite harm. No culturally legitimated exit. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96. Maximum extraction: cannot exit without bearing severe social cost (shame, family rejection, alienation from extended kin, loss of cultural identity)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Concerned Extended Family Member",
+      "comment": "PERSPECTIVE 2: EXTENDED FAMILY (SNARE) \u2014 Constrained by obligation to maintain kin bonds and pressure to 'fix' the estrangement. Faces internal role conflict and social scrutiny. d\u22480.68, f(d)\u22481.02, \u03c3=0.9 \u2192 \u03c7\u22480.60. Moderate extraction: feels obligated to intervene, mediate, or judge the estranged member's decision."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutions Enforcing the Dogma",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL ENFORCERS (ROPE) \u2014 Churches, therapists, cultural leaders, media narratives benefit from positioning 'family reconciliation' as the moral imperative. Arbitrage exit: can choose to enforce or relax the dogma without structural penalty. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net coordination benefit: the dogma provides institutional legitimacy and positions these actors as mediators."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Therapeutic Establishment",
+      "comment": "PERSPECTIVE 4: THERAPEUTIC ESTABLISHMENT (PITON) \u2014 Family therapy and psychology professions maintain reconciliation as default goal despite growing evidence that estrangement can be healthy. theater_ratio=0.68 (high performative content): therapeutic protocols emphasize 'working through' family conflict, reframing estrangement as failure of individual emotional regulation rather than rational boundary-setting. The therapeutic narrative persists through institutional inertia and lucrative family counseling markets, not because it consistently produces better outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Estrangement Support Movement",
+      "comment": "PERSPECTIVE 5: ESTRANGEMENT SUPPORT MOVEMENT (TANGLED ROPE) \u2014 Organized agents (support groups, advocacy networks, trauma-informed therapists) seek to legitimize estrangement as a valid boundary strategy. Both coordinate new norms (allowing estrangement) and extract through creating alternative institutional authority. d\u22480.45, f(d)\u22480.43, \u03c3=1.2 \u2192 \u03c7\u22480.30. Moderate extraction: these organizations position themselves as moral gatekeepers of 'healthy estrangement' while criticizing traditional family enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, kinship bonds are seen as natural/immutable: family relationships are inherent to human nature and cannot be authentically severed, only damaged or suppressed. This perspective risks naturalizing what is actually a contingent cultural norm. The structural data (\u03b5=0.58, suppression=0.72, theater=0.68) contradicts mountain classification \u2014 the engine will flag this as a false summit, revealing that 'family is forever' is a culturally constructed dogma, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "harm_threshold_definition",
+      "question": "At what threshold of documented family harm (emotional abuse, physical violence, financial exploitation, sexual abuse) does estrangement become a rational boundary rather than emotional failure?",
+      "resolution_mechanism": "Longitudinal outcome study comparing psychological health, financial stability, and social functioning of estranged vs reconciled abuse survivors; meta-analysis of family therapy success rates when abuse is present",
+      "impact": "If threshold is low (documented abuse alone): estrangement is plainly rational, and the dogma becomes clearly extractive. If threshold is high or ambiguous: the dogma can claim most estrangements are premature, maintaining suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Harm threshold defining rational vs dysfunctional estrangement"
+    },
+    {
+      "id": "cultural_variance_authenticity",
+      "question": "Is the 'family is forever' dogma a universal feature of human kinship or a specific cultural/historical construction?",
+      "resolution_mechanism": "Comparative anthropology of kinship dissolution norms across cultures; historical analysis of when 'reconciliation at all costs' became the Western norm (vs medieval/ancient practices of formal disownment, banishment)",
+      "impact": "If universal: some version of the constraint may be natural law. If culturally constructed: the dogma is purely institutional, and suppression values are learned rather than inevitable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether family permanence is universal or culturally constructed"
+    },
+    {
+      "id": "cost_of_false_reconciliation",
+      "question": "What are the aggregate social and psychological costs when estranged individuals are pressured into contact with abusers or toxic family members?",
+      "resolution_mechanism": "Epidemiological study linking reconciliation pressure to rates of depression, PTSD, substance abuse, and suicide in estranged populations; cost-benefit analysis comparing healthcare/social service costs of forced reconciliation vs supported estrangement",
+      "impact": "If costs are high: the dogma's suppression directly harms victims, strengthening snare classification. If costs are low: the constraint might be better modeled as rope (coordination problem) rather than snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Health and social costs of forced reconciliation"
+    },
+    {
+      "id": "institutional_incentive_alignment",
+      "question": "Do therapeutic, religious, and cultural institutions that enforce the dogma profit or gain authority from maintaining the suppression of estrangement as a valid option?",
+      "resolution_mechanism": "Economic analysis of family therapy market size and growth; content analysis of religious texts and contemporary sermons positioning reconciliation as moral imperative; institutional profit motive studies",
+      "impact": "If institutions profit: the rope perspective (institutional enforcers) is revealed as a beneficiary rather than neutral arbiter, strengthening snare classification. If institutions are indifferent: constraint might be explained by pure cultural transmission rather than active extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether institutions profit from enforcing the reconciliation dogma"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 'Family is Forever' dogma is a social constraint that suppresses the option for individuals to make clean exits from harmful family relationships. The constraint operates across multiple institutional domains\u2014religious teaching, therapeutic practice, cultural narratives, legal kinship structures\u2014to position estrangement as moral failure, emotional immaturity, or psychological damage requiring repair. For abuse survivors and individuals in genuinely toxic family systems, this dogma creates a structural snare: the cultural/social costs of estrangement (shame, loss of identity, alienation from extended kin) are enforced through gossip, intervention attempts, religious condemnation, and therapeutic pressure toward reconciliation. The dogma has intensified over the past decade as social media has made estrangement more visible and as reconciliation narratives have proliferated in therapeutic and religious content, increasing the theater ratio (performative reconciliation work) while actual harm prevention has not improved. The constraint's extraction lies in the forced choice between maintaining contact with abusers or bearing the full social cost of rupture alone\u2014no legitimate third path is culturally available.",
+    "key_agents": [
+      "Estranged Individuals: Primary victims (powerless/trapped) \u2014 individuals who have ended family contact due to abuse, toxicity, or irreconcilable harm; bear full social cost of their decision",
+      "Abuse Survivors: Primary victims (powerless/trapped) \u2014 subset of estranged individuals dealing with documented abuse; face pressure to reconcile despite ongoing danger",
+      "Extended Family Members: Secondary victims (moderate/constrained) \u2014 feel obligated to maintain bonds, mediate conflict, and judge the estranged member's decision",
+      "Religious Institutions: Institutional enforcers (institutional/arbitrage) \u2014 churches and faith communities teach reconciliation as moral imperative; benefit from moral authority",
+      "Therapeutic Establishment: Institutional enforcers (institutional/arbitrage) \u2014 family therapy and psychology professions maintain reconciliation as default goal; profit from family counseling",
+      "Estrangement Support Networks: Organized challengers (organized/constrained) \u2014 support groups and trauma-informed practitioners building alternative legitimacy for estrangement; extract through positioning themselves as moral authority",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the dogma as inherent to kinship"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The dogma extracts from estranged individuals by forcing them to choose between contact with abusers and social isolation. The extraction is not maximal because some individuals do successfully exit and build alternative communities; the system lacks absolute enforcement mechanisms (legal, economic) beyond social pressure. The increasing measurement from 0.35 to 0.58 reflects growing institutional investment in reconciliation narratives and increasing visibility of estrangement in media/therapy discourse, which paradoxically increases suppression by making the choice more explicitly moralized. Suppression (0.72): High. Multiple reinforcing barriers prevent clean estrangement: (1) cultural/religious teaching that family bonds are sacred/permanent, (2) lack of institutional support for healthy estrangement (contrast with legal divorce), (3) therapeutic framing of estrangement as symptom of family dysfunction rather than rational response, (4) social media pressure and extended family intervention, (5) legal ambiguity about kinship dissolution (no formal social ritual). Theater ratio (0.68): High and increasing. Much of the institutional response to estrangement is performative: family therapy sessions that reframe the issue as individual emotional dysregulation, religious rituals emphasizing reconciliation without addressing abuse, social media performative shaming of estranged individuals as ungrateful/selfish. The rise from 0.42 to 0.68 reflects increased visibility and moralization of estrangement without corresponding increase in abuse prevention or structural support.",
+    "perspectival_gap": "This constraint shows a stark perspectival split between victims and enforcers. The estranged individual sees a snare: trapped by social cost. The extended family sees a snare too, but from a different angle: trapped by obligation. Institutional enforcers (churches, therapists) see a rope: they are solving the coordination problem of family harmony. But the analytical observer risks seeing a mountain\u2014family bonds as natural law\u2014when the constraint is actually a culturally constructed dogma enforced through institutional suppression. The estrangement support movement sees a tangled rope: they are creating new norms but also extracting through moral gatekeeping. The therapeutic establishment sees a piton: the reconciliation ritual persists through professional inertia despite low functional outcome.",
+    "directionality_logic": "Estranged individuals: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction: bear full social cost, cannot exit. Extended family: Victims + constrained \u2192 d\u22480.68, f(d)\u22481.02. Significant extraction: feel obligated to maintain bonds and judge the estranged member. Institutional enforcers (churches, therapists): Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiaries: profit from reconciliation narratives. Estrangement support networks: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.43. Moderate extraction: build alternative authority while criticizing traditional enforcement. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Risks naturalizing a contingent constraint.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the snare classification (\u03b5\u22480.58) is correct: the constraint does exhibit high suppression (0.72) and primarily benefits institutional enforcers while harming estranged individuals. The false summit risk (mountain perspective) is a deliberate distortion used to defend the dogma\u2014'family is forever' is positioned as natural law to avoid examining the institutional extraction. The estrangement support movement's tangled rope perspective reveals the constraint's true structure: there IS a coordination problem (how to maintain meaningful family relationships) but it has been solved through coercive suppression of exit options rather than through genuine coordination mechanisms. The therapeutic piton perspective is particularly clarifying: family therapy maintains the reconciliation ritual despite low evidence of benefit, and the ritual persists through professional investment in the market rather than through demonstrated effectiveness. The constraint is a snare masquerading as a mountain through institutional narrative power."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "reproductive_coercion_social_pressure",
+      "domestic_abuse_reporting_suppression"
+    ],
+    "dual_formulation_note": "The 'Family is Forever' dogma is downstream of broader kin-obligation norms but represents a distinct structural constraint focused specifically on suppressing estrangement as a valid option. Related constraints (reproductive coercion, domestic abuse reporting suppression) operate within the same institutional ecosystem and are reinforced by the same narrative of family permanence."
+  },
+  "directionality_overrides": []
+}

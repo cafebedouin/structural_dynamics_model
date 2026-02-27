@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "kim_jong_un_succession",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "kju_succ"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.85,
+    "theater_ratio": 0.78,
+    "claimed_type": "snare",
+    "human_readable": "Kim Jong-un's Succession Plan and Dynastic Constraint",
+    "topic_domain": "political/authoritarian_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "kim_family_dynasty"
+    ],
+    "victims": [
+      "north_korean_populace",
+      "military_hierarchy",
+      "party_cadre"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The North Korean Populace",
+      "comment": "PERSPECTIVE 1: NORTH KOREAN POPULACE (SNARE) \u2014 Subject to succession constraint through no choice or exit mechanism. Political regime dictates all life circumstances: birth, education, employment, movement, ideology. Succession dynamics determine whether current oppressive structure persists or intensifies. No alternative leadership possible. Maximum suppression and extraction with zero exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Military and Party Cadre",
+      "comment": "PERSPECTIVE 2: MILITARY AND PARTY CADRE (TANGLED ROPE) \u2014 Organized actors with some internal coordination function (army structure, party hierarchy provide order and resource flows). But also subject to extraction: purges, reassignments, execution of rivals to succession control. Benefits from regime continuity (positions, power); constrained by vulnerability to purges during succession transitions. Succession uncertainty destabilizes their positions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Regional Powers (China, Russia, USA)",
+      "comment": "PERSPECTIVE 3: REGIONAL POWERS (SCAFFOLD) \u2014 External actors experience the succession as a temporary coordination problem with management window. Succession transitions are unstable periods offering potential influence opportunities or requiring stabilization efforts. Can exit through diplomatic pressure, sanctions, or military positioning. Sunset logic: succession will eventually stabilize into a new equilibrium, reducing uncertainty."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Kim Dynasty Core",
+      "comment": "PERSPECTIVE 4: KIM DYNASTY CORE (ROPE) \u2014 Succession mechanism functions as coordination device preserving dynasty stability and perpetuating family rule. Female succession (if Ju-ae becomes heir) is portrayed as innovation maintaining legitimacy. Benefits from system that ensures power concentration and family wealth perpetuation. Experiences constraint as coordination problem solved by succession planning, not as extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ideological Legitimacy Apparatus",
+      "comment": "PERSPECTIVE 5: IDEOLOGICAL LEGITIMACY APPARATUS (PITON) \u2014 Juche ideology, revolutionary legitimacy narratives, and cult-of-personality propaganda are ostensibly functional but increasingly performative. The succession constraint requires constant narrative maintenance: portraying dynasty continuation as inevitable historical progress, legitimizing female succession through reframed ideology. Theater ratio high because the ideological maintenance is detached from actual power mechanisms (coercion and military control). Institutional inertia maintains the apparatus despite reduced functional necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The succession constraint exhibits both coordination function (managing power transfer, preventing state collapse) and extraction function (perpetuating authoritarian dynasty, extracting labor and ideology from populace, suppressing leadership alternatives). Cannot be reduced to either pure coordination or pure extraction. Requires active enforcement (cult of personality, military loyalty mechanisms, party purges). Has both beneficiaries (dynasty) and victims (populace, rival elites). Analytical classification: Tangled Rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "female_succession_legitimacy",
+      "question": "Can female succession maintain ideological legitimacy within the North Korean system's patriarchal tradition and revolutionary mythology?",
+      "resolution_mechanism": "Monitoring of official propaganda framing, elite acceptance signals, military loyalty demonstrations, and public compliance measures over 5-10 year succession period",
+      "impact": "If legitimacy holds: succession constraint remains stable Snare/Tangled Rope. If legitimacy erodes: constraint shifts toward Scaffold (temporary) as system searches for alternatives or faces instability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether female succession maintains ideological legitimacy in DPRK system"
+    },
+    {
+      "id": "military_factional_stability",
+      "question": "Will military factions accept subordination to a young female leader, or will succession trigger internal coups?",
+      "resolution_mechanism": "Analysis of elite purges during transition, military appointment patterns, naval/ground force power dynamics, and WMD program control shifts",
+      "impact": "If stable: constraint persists as Snare. If military factional instability emerges: constraint becomes Scaffold or degrades toward Piton as enforcement mechanisms fail.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Military factional stability during female succession transition"
+    },
+    {
+      "id": "sanctions_regime_exit",
+      "question": "Can North Korea sustain its extraction of population labor and resources under intensified international sanctions during a succession transition?",
+      "resolution_mechanism": "Monitoring of black market activity, smuggling routes, sanctions evasion effectiveness, economic output, and population survival indicators",
+      "impact": "If extraction capacity maintained: Snare persists. If sanctions effectiveness increases: constraint shifts toward Scaffold (narrowing window) or Piton (degraded enforcement).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sanctions regime sustainability during succession period"
+    },
+    {
+      "id": "juche_ideology_substitutability",
+      "question": "Is Juche ideology functionally necessary for regime control, or is it purely performative theater maintainable regardless of actual power mechanics?",
+      "resolution_mechanism": "Counterfactual analysis: comparison with other authoritarian regimes with lower ideological apparatus costs; examination of whether ideology changes are coordinated with coercion changes",
+      "impact": "If ideology is necessary: theater ratio assessment is too high; constraint may be Tangled Rope rather than containing Piton perspective. If purely performative: Piton classification is confirmed; succession planning can substitute ideology without losing control.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Functional necessity of Juche ideology versus performative theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Kim Jong-un's grooming of his daughter as a potential successor creates a structural constraint on North Korean politics by embedding dynastic continuity within a system designed to extract labor, ideology, and absolute obedience from the populace. The succession plan functions simultaneously as a coordination mechanism (ensuring regime stability and power transfer predictability) and as an extraction mechanism (perpetuating authoritarian rule and dynasty wealth concentration). The constraint exhibits high suppression (0.85) because exit from North Korean political control is nearly impossible for the populace; high extractiveness (0.68) because the system extracts resources, labor, and ideological compliance; and high theater (0.78) because the ideological apparatus (Juche, revolutionary mythology, cult of personality, now adapted for female succession) maintains legitimacy narratives detached from actual coercion mechanisms. The theater has increased over the measurement interval as propaganda effort has intensified to frame female succession as historically inevitable while maintaining patriarchal revolutionary mythology. The constraint mandatrophy is resolved by recognizing that the succession plan is structurally Tangled Rope from the analytical perspective (combining coordination and extraction) but appears as pure Snare from the powerless populace perspective (trapped with no exit) and as Rope from the dynasty perspective (pure coordination of power transfer).",
+    "key_agents": [
+      "North Korean Populace: Primary victim (powerless/trapped) \u2014 subject to regime control with no exit mechanism; succession determines future oppression level",
+      "Military Hierarchy: Secondary victim and partial beneficiary (organized/constrained) \u2014 depends on regime continuation for positions and power but faces purge risk during succession instability",
+      "Party Cadre: Secondary victim and partial beneficiary (organized/constrained) \u2014 similar to military, vulnerable to succession-driven purges and reassignments",
+      "Kim Dynasty Core: Primary beneficiary (institutional/arbitrage) \u2014 succession plan preserves dynasty wealth, power, and legitimacy; experiences constraint as coordination problem solved",
+      "Regional Powers (China, Russia, USA): External observers (powerful/mobile) \u2014 can influence succession outcomes through diplomacy or pressure; experience constraint as temporary coordination challenge with management window",
+      "Ideological Legitimacy Apparatus: Institutional maintenance function (institutional/constrained) \u2014 propaganda, ideology education, cult of personality require constant narrative updating to frame female succession; theater-heavy because detached from actual power mechanics",
+      "Analytical Observer: Structural analyst (analytical/analytical) \u2014 sees constraint as irreducible hybrid combining genuine coordination function (power transfer, regime stability) with genuine extraction function (population control, dynasty perpetuation)"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The succession constraint perpetuates a system that extracts labor, ideology, and life prospects from the North Korean populace with virtually no compensation or exit. The extraction is comprehensive: economic (labor extraction with minimal wage), political (absolute absence of choice or representation), social (control of movement, association, expression), and ideological (mandatory belief in regime narrative). The value reflects that while the succession plan itself is primarily a coordination mechanism for the dynasty, it serves the function of perpetuating an extractive system. Suppression (0.85): Very high. North Korea maintains possibly the highest suppression in modern states: border closure, execution of escape attempts, public executions of political prisoners, complete control of information, mandatory state ideology indoctrination, control of all economic activity. The succession plan requires maintaining and potentially intensifying this suppression (purges of succession rivals, elimination of alternative candidates). Theater ratio (0.78): High and rising. The ideological apparatus (Juche, revolutionary narrative, cult of personality) consumes significant resources and effort but functions primarily to maintain narrative legitimacy rather than to produce actual power. The transition to female succession required extensive ideological reframing (portraying Ju-ae as historically inevitable, adapting revolutionary mythology to female leadership) despite her having no obvious functional qualifications. This theater has increased over time as each generational transition requires new narrative construction.",
+    "perspectival_gap": "The perspectival gap between the dynasty and the populace is maximal. The Kim family core experiences succession as a coordination problem: how to transfer power smoothly, maintain legitimacy, prevent internal military coup, ensure continuity of dynasty wealth. They see the constraint as functional and beneficial \u2014 it solves the succession coordination problem. The North Korean populace experiences the same constraint as pure extraction: they have no voice in the succession, cannot exit the regime, and will be subject to whatever leadership emerges. The populace experiences maximum extraction and suppression because the succession mechanism perpetuates the very system that oppresses them. The military and party cadre occupy intermediate positions: they benefit from regime continuation (their positions depend on regime stability) but face purge risk during succession transitions (rivals must be eliminated, and new leadership may restructure power). The analytical observer recognizes that both perspectives are structurally correct: the succession mechanism simultaneously solves a genuine coordination problem (power transfer without state collapse) AND functions as an extraction mechanism (perpetuating authoritarian rule). This is the core mandatrophy: is the constraint primarily Rope (pure coordination) or primarily Snare (pure extraction)? The answer is Tangled Rope \u2014 it genuinely combines both functions.",
+    "directionality_logic": "Directionality derivation produces different d values for different agents. The Kim dynasty core enters as beneficiaries with arbitrage exit options (they can negotiate succession terms, shape succession narrative, potentially negotiate safe exit if regime faces collapse risk) \u2014 derived d \u2248 0.05-0.15, producing negative or very low f(d), indicating they experience low or negative effective extraction (they extract from the system rather than the system extracting from them). The North Korean populace enters as victims with trapped exit (no ability to exit the regime, no alternative political options, escape attempts result in execution or family punishment) \u2014 derived d \u2248 0.95, producing high f(d) \u2248 1.42, indicating they experience maximum effective extraction. The military cadre enter as partial beneficiaries and partial victims: they benefit from regime continuation (institutional positions) but face victim status during succession (purge risk) and have constrained exit (can defect to China or South Korea but face high cost of family punishment, social execution, and loss of status) \u2014 derived d \u2248 0.50-0.65, producing moderate f(d), indicating mixed experience. The analytical observer is external, not embedded in the extraction flow, so derives d \u2248 0.72, producing f(d) \u2248 1.15, matching the analytical power atom canonical value.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The succession constraint demonstrates how the same structural arrangement can be Rope (pure coordination of power transfer) or Snare (pure extraction perpetuation) depending on perspective. The resolution recognizes that BOTH perspectives are structurally accurate: (1) From the dynasty's structural position, succession planning solves a genuine coordination problem \u2014 how to transfer power without regime collapse or civil war. This is a legitimate coordination function. (2) From the populace's structural position, the succession constraint perpetuates a system that extracts everything from them with no exit and no voice. This is genuine extraction. The constraint is neither pure coordination nor pure extraction \u2014 it is Tangled Rope because it SIMULTANEOUSLY serves both functions: it coordinates power transfer AND extracts from the populace. The mandatrophy is resolved by: (a) Recognizing that coordination and extraction are not mutually exclusive \u2014 a system can both solve a genuine problem AND exploit victims; (b) Declaring both beneficiaries (dynasty, military hierarchy) and victims (populace, cadre at risk during purges); (c) Requiring active enforcement (cult of personality, purges, propaganda, coercion); (d) Noting the extractiveness is high (0.68) but not extreme (not 0.95) because some portion of the constraint's function is legitimate coordination; (e) Noting the suppression is very high (0.85) and the theater is also high (0.78) because regime legitimacy requires both coercion AND narrative maintenance. The analytical classification (Tangled Rope) resolves the mandatrophy by rejecting the false binary (is it coordination or extraction?) in favor of the structural reality: it is a hybrid with both functions, and the framework must account for both simultaneously."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "north_korean_sanctions_regime",
+      "northeast_asian_wmd_proliferation",
+      "sino_north_korean_strategic_dependency"
+    ],
+    "dual_formulation_note": "The succession constraint is downstream of the underlying extraction system (DPRK regime control mechanisms) but represents a distinct structural problem: how to perpetuate dynasty while maintaining regime stability. The upstream constraint (regime control extraction) has higher extractiveness (near 0.95); the succession constraint has moderate-high extractiveness (0.68) because it functions partially as coordination. The succession constraint influences downstream geopolitical constraints through its impact on regime stability and WMD program control."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "us_visa_lottery",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dv_lottery"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Diversity Visa Lottery",
+    "topic_domain": "political_economy/immigration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_selective_employer_constituency",
+      "immigration_bureaucracy"
+    ],
+    "victims": [
+      "excluded_high_immigration_countries",
+      "diversity_lottery_losers",
+      "family_reunification_seekers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Lottery Loser",
+      "comment": "PERSPECTIVE 1: LOTTERY LOSER (SNARE) \u2014 Applicant from eligible country with near-zero winning probability (0.0003 odds) trapped in bureaucratic randomness. No appeal mechanism, no skill-based alternative pathway, no recourse. Extraction is near-total: applicant bears full cost (application fees, documentation, time, psychological cost of hope) with essentially zero probability of benefit. Suppression is maximal \u2014 alternatives (family sponsorship, employment visa) are blocked or have multi-year waits."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded High-Immigration Country",
+      "comment": "PERSPECTIVE 2: EXCLUDED HIGH-IMMIGRATION COUNTRY (SNARE) \u2014 India, Philippines, Mexico, and other high-immigration nations are structurally disadvantaged by the per-country cap (7% maximum of available visas). Citizens face extraction through exclusion: the same lottery rules that theoretically apply to all countries operationally suppress their chances by 85-90% relative to low-immigration countries. They bear the cost of visa system complexity and bureaucratic overhead with minimal probability of benefit. No exit from the constraint without sovereign policy change."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Family Reunification Seeker",
+      "comment": "PERSPECTIVE 3: FAMILY REUNIFICATION SEEKER (TANGLED ROPE) \u2014 Individual with family ties in the US faces extraction (multi-year wait times, limited visa categories, no guarantee) but also experiences coordination benefits through US family connections and kinship networks that facilitate initial settlement. Constrained exit: cannot walk away from family obligation, but organized kin networks provide partial agency and information. Mixed classification reflects both the barrier (extraction) and the social infrastructure (coordination) that characterizes family-based immigration pathways."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Selective Employer",
+      "comment": "PERSPECTIVE 4: SELECTIVE EMPLOYER (ROPE) \u2014 High-skilled labor market actors (tech companies, research institutions, healthcare providers) benefit from the DV lottery as a coordination mechanism: it supplies mid-skilled workers without requiring employer sponsorship (EB visa) or competing with workers sponsored by rivals. The lottery offloads hiring risk to the randomness system and provides plausible deniability for selective hiring. Employers experience the constraint as pure coordination \u2014 a mechanism that solves the labor arbitrage problem. High exit: employers can shift hiring strategies, use alternative visa categories, or offshore work."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Immigration Bureaucracy",
+      "comment": "PERSPECTIVE 5: IMMIGRATION BUREAUCRACY (TANGLED ROPE) \u2014 USCIS and DOS manage the DV lottery as both a coordination mechanism (allocates scarce visa slots across countries) and an extraction mechanism (generates application fees, maintains bureaucratic authority, ensures predictable visa distribution). Constrained exit: statutory mandate to administer the lottery limits policy flexibility, but agency discretion over implementation details and fee structures creates room for extraction. The lottery simultaneously serves coordination function (matching visa supply to policy intent) and extraction function (generating revenue and bureaucratic gatekeeping)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Policy Ritual",
+      "comment": "PERSPECTIVE 6: POLICY RITUAL (PITON) \u2014 The diversity visa lottery persists as a performative response to the 1990 Immigration Act's mandate to 'diversity' US immigration sources. The randomness mechanism appeals to fairness ideology while operationally maintaining gatekeeping: the per-country caps ensure that high-immigration-pressure countries remain excluded despite the lottery. Theater is high (fairness narrative, transparency of randomness) while function is degraded (effectiveness at actually diversifying sources is limited by simultaneous structural barriers). The constraint is maintained through institutional inertia \u2014 replacing it would require congressional action that faces organized opposition from selective employer constituencies."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Global Aspiring Immigrant Class",
+      "comment": "PERSPECTIVE 7: GLOBAL ASPIRING IMMIGRANT CLASS (SNARE) \u2014 From a civilizational perspective, the lottery system extracts global labor value through bureaucratic gatekeeping. The constraint forces potential migrants to apply repeatedly, accumulate documentation, pay fees (avg $500-$1000 across applications), and wait years for each draw. The system's design ensures that success requires either luck or institutional privilege (knowledge of application mechanics, money for repeated tries, network connections to lottery winners). Extraction is structural and total for the powerless: global poor bear 100% of costs with minimal benefit probability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "randomness_authenticity_vs_gatekeeping",
+      "question": "Does the random-draw mechanism genuinely distribute visa opportunity fairly, or does it operationally function as a gatekeeping device that advantages high-skill, high-resource applicants despite randomness?",
+      "resolution_mechanism": "Longitudinal analysis of diversity visa winner profiles: education level, income, prior US connections, language proficiency. Comparison to population-level demographics in source countries.",
+      "impact": "If winners are random across socioeconomic strata: rope classification (pure coordination) confirmed. If winners cluster in high-skill/high-resource profiles: snare classification (extraction disguised as randomness) confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether lottery randomness genuinely distributes opportunity or functions as gatekeeping"
+    },
+    {
+      "id": "per_country_cap_structural_necessity",
+      "question": "Is the per-country 7% cap necessary for coordination (preventing any single source from overwhelming the system) or is it primarily an extraction mechanism (maintaining exclusion of high-immigration countries)?",
+      "resolution_mechanism": "Counterfactual modeling: visa distribution under uncapped lottery vs. under different cap levels. Immigration system stress analysis under different distribution scenarios. Comparison to visa distributions in other developed democracies without per-country caps.",
+      "impact": "If cap is coordination necessity: constraint is hybrid (tangled rope). If cap is primarily exclusionary: constraint is snare operating through 'neutral' rules.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether per-country cap is coordination necessity or exclusionary mechanism"
+    },
+    {
+      "id": "alternative_visa_category_substitution",
+      "question": "Would eliminating the DV lottery shift demand to other visa categories (family sponsorship, employment sponsorship) or would it reduce overall immigration?",
+      "resolution_mechanism": "Time-series analysis of visa category demand elasticity. Natural experiments from policy changes in other countries. Prospective surveys of applicants on alternative pathways.",
+      "impact": "If significant substitution: lottery is extractive overlay on a coordination system (tangled rope confirmed). If little substitution: lottery fills genuine visa supply gap (rope or mountain confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether eliminating lottery shifts demand to other categories"
+    },
+    {
+      "id": "bureaucratic_fee_extraction_magnitude",
+      "question": "What portion of the constraint's extractiveness is attributable to application fees and repeated application cycles vs. structural visa scarcity?",
+      "resolution_mechanism": "Fee analysis: total fees collected from DV applicants annually. Per-applicant cost modeling (application fees, translation, medical exams, travel to interviews). Comparison of fee burden to applicant income in source countries.",
+      "impact": "If fees > 20% of total extraction: fee removal would significantly reduce snare classification. If fees < 10%: structural visa scarcity is the primary extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of bureaucratic fee extraction vs. visa scarcity extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The US Diversity Visa lottery allocates 50,000 immigrant visas annually through random selection from eligible countries with historically low immigration rates to the United States. Established by the 1990 Immigration Act, the DV-1 program aims to diversify the immigration stream. However, the constraint exhibits a profound structural contradiction: a formally random allocation mechanism layered over per-country caps, skill-selective application prerequisites, and fee barriers that operationally concentrate benefits and distribute costs unequally. From the perspective of lottery losers and citizens of high-immigration-pressure countries, the lottery is a pure extraction device: they bear application costs, bureaucratic overhead, and the psychological cost of hope with near-zero probability of benefit. From the perspective of selective employers and immigration bureaucracy, the lottery is coordination infrastructure that solves labor supply and policy compliance problems. The rising theater_ratio (0.42 \u2192 0.58 over 30 years) reflects growing disjunction between the fairness narrative (random selection) and the operational gatekeeping function (per-country caps and skill biases). This constraint is a diagnostic case of how formalized randomness can mask structural extraction.",
+    "key_agents": [
+      "Lottery Losers: Primary victims (powerless/trapped) \u2014 bear full application costs with ~0.03% winning probability per application",
+      "High-Immigration Countries: Primary victims (powerless/trapped) \u2014 India, Philippines, Mexico etc. structurally excluded by per-country 7% cap despite eligibility",
+      "Selective Employers: Primary beneficiary (institutional/arbitrage) \u2014 access mid-skilled workers without EB visa sponsorship competition",
+      "Immigration Bureaucracy: Secondary beneficiary (institutional/constrained) \u2014 generates application fees (~$100M+ annually), maintains visa allocation authority",
+      "Family Reunification Seekers: Secondary victim (organized/constrained) \u2014 constrained by family obligation, enabled by kinship networks",
+      "Policy Ritual Observers: Analytical perspective (analytical/analytical) \u2014 see performative fairness masking structural gatekeeping"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. The lottery extracts from applicants through application fees, repeated cycles (most applicants reapply 3-5 times), and opportunity costs, while producing minimal benefit (50K visas distributed to ~15M qualified applicants globally annually = 0.33% per-application win probability). The per-country cap further concentrates extraction: citizens of high-immigration countries face 85-90% suppression of their nominal chances. However, extractiveness is not total (0.66+): some coordination benefit exists for the immigration system (allocates visas according to policy intent), and winners experience genuine immigration gain. Suppression (0.68): High. Multiple barriers suppress alternatives: family sponsorship has multi-year backlogs; employment sponsorship requires employer sponsorship and wage certification; humanitarian categories are tightly limited. No pathway exists for ordinary citizens of excluded countries to bypass the lottery. Theater ratio (0.58): Moderate-high and rising. The randomness narrative appeals to fairness ideology and transparency, while the operational mechanism (per-country caps, fee barriers, skill bias in application materials) ensures structured gatekeeping. The theater has increased over time as the contradiction between fairness narrative and exclusionary outcome has become more visible.",
+    "directionality_logic": "Directionality varies sharply by agent. Lottery losers (powerless/trapped) experience d \u2248 0.95 (full target): they are victims with no exit options. Their experienced extractiveness is maximum. High-immigration countries (powerless/trapped) experience d \u2248 0.92 (near-full target): structurally disadvantaged by per-country caps. Selective employers (institutional/arbitrage) experience d \u2248 0.10 (near-beneficiary): they have high exit (can use other visa categories) and benefit from the lottery's labor supply coordination. Immigration bureaucracy (institutional/constrained) experiences d \u2248 0.35 (moderate beneficiary): they benefit from fee revenue and visa authority but are constrained by statutory mandate. Family reunification seekers (organized/constrained) experience d \u2248 0.55 (neutral): they bear extraction costs but benefit from kinship network coordination effects. The perspectival gap between lottery losers and selective employers is maximal \u2014 they experience the same constraint as snare vs. rope respectively, revealing the deep asymmetry in how the system's costs and benefits are distributed.",
+    "perspectival_gap": "This constraint demonstrates extreme perspectival divergence. Lottery losers see a snare: random selection provides legitimating narrative for what is operationally a complete extraction device. High-immigration countries see exclusion: the per-country cap ensures their citizens bear disproportionate cost. Selective employers see coordination: the lottery solves their labor supply problem without requiring them to compete in employer sponsorship markets. Immigration bureaucracy sees mandate fulfillment: the lottery implements the 1990 Act's diversity intent while generating fee revenue. The family reunification seeker sees mixed extraction and coordination: constrained by structural barriers but enabled by kinship networks. The analytical observer sees a piton: a degraded policy ritual where the fairness narrative (randomness) masks structural gatekeeping (per-country caps, skill biases, fee barriers). The perspectival gap reveals that the constraint's primary function differs by observer: for the powerless it is pure extraction, for the institutional it is coordination, for the analytical it is performative gatekeeping.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the extraction-vs-coordination ambiguity by decomposing the DV lottery into its actual structural components. The lottery IS a coordination mechanism (allocates visa supply across eligible countries according to policy intent). The lottery IS ALSO an extraction mechanism (distributes costs to applicants and benefits to employers and bureaucracy). The tangled rope classification captures both simultaneously: extractiveness (0.52) reflects the net asymmetry between costs borne by applicants and benefits captured by employers; suppression (0.68) reflects the multiple barriers that prevent exit to alternative pathways; requires_active_enforcement (true) reflects that the constraint depends on continuous bureaucratic administration and legal authority. The rising theater_ratio (0.42 \u2192 0.58) indicates degradation in the coordination function: the fairness narrative becomes increasingly performative as the per-country cap's exclusionary effect becomes visible. If the theater_ratio reaches 0.70+, the constraint would degrade from tangled rope to piton (institutional inertia). The mandatrophy is resolved by recognizing that the constraint is legitimately both coordination (for the immigration system) and extraction (for individual applicants and excluded countries) \u2014 the classification depends on which structural relationship you measure from. No single type is 'the' answer."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_family_sponsored_visa_backlog",
+      "us_employment_visa_gatekeeping"
+    ],
+    "dual_formulation_note": "The DV lottery is downstream of broader US immigration visa allocation constraints. Its extractiveness is amplified by bottlenecks in family sponsorship and employment visa pathways, which force applicants toward the lottery as a supposedly lower-barrier alternative. All three constraints share a common structural problem (visa supply scarcity) but operate through different allocation mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

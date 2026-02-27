@@ -1,0 +1,165 @@
+{
+  "header": {
+    "constraint_id": "dutch_minority_govt_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dutch Minority Government External Support Agreement (2026)",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "governing_coalition",
+      "external_support_parties"
+    ],
+    "victims": [
+      "opposition_parties",
+      "general_electorate"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The General Electorate",
+      "comment": "PERSPECTIVE 1: THE GENERAL ELECTORATE (SNARE) - Feels trapped by the limited policy options and reduced accountability of a minority government reliant on external support. Loses direct influence on policy decisions due to opaque negotiations and compromises."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Opposition Parties",
+      "comment": "PERSPECTIVE 2: OPPOSITION PARTIES (TANGLED ROPE) - Constrained by the agreement's pre-negotiated terms and limited ability to influence policy. However, they can gain political leverage by highlighting the government's instability and lack of a clear mandate. They benefit from the situation by potentially gaining support from disillusioned voters."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Governing Coalition",
+      "comment": "PERSPECTIVE 3: GOVERNING COALITION (ROPE) - Benefits from maintaining power and implementing their core policy agenda, even if it requires compromises. They can leverage the external support agreement to achieve stability and avoid snap elections. They arbitrage the political system to maintain control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "External Support Parties",
+      "comment": "PERSPECTIVE 4: EXTERNAL SUPPORT PARTIES (TANGLED ROPE) - Benefits from influencing policy and gaining political concessions in exchange for their support. They have increased influence compared to being in opposition. However, they are constrained by the need to maintain their credibility and avoid being seen as unconditionally supporting the government. They have the power to withdraw support but risk political backlash."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Dutch Parliamentary System",
+      "comment": "PERSPECTIVE 5: DUTCH PARLIAMENTARY SYSTEM (PITON) - The system's intended function of stable governance is degraded due to the reliance on external support and constant negotiation. The agreement creates a performative aspect where the government must constantly demonstrate its stability, even if policy outcomes are suboptimal."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) - The agreement is a mixed bag. It provides short-term stability but undermines long-term democratic accountability and policy effectiveness. The agreement represents both a coordination mechanism (allowing the government to function) and an extraction mechanism (reducing the influence of opposition parties and the electorate)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "policy_effectiveness_tradeoff",
+      "question": "To what extent does the need for compromise in a minority government with external support lead to sub-optimal policy outcomes?",
+      "resolution_mechanism": "Comparative analysis of policy outcomes under different government formations in the Netherlands and other countries with similar parliamentary systems.",
+      "impact": "If policy outcomes are significantly worse, the constraint leans towards snare. If outcomes are comparable, it's more of a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which policy effectiveness is compromised."
+    },
+    {
+      "id": "democratic_accountability_erosion",
+      "question": "Does the reliance on external support reduce democratic accountability and transparency in the policy-making process?",
+      "resolution_mechanism": "Analysis of parliamentary debates, public consultations, and access to information requests regarding policy decisions made under the minority government.",
+      "impact": "If accountability is significantly reduced, the constraint leans toward snare. If accountability remains relatively high, it's more of a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which democratic accountability is undermined."
+    },
+    {
+      "id": "political_instability_risk",
+      "question": "What is the likelihood of the external support agreement collapsing, leading to a government crisis and potential snap elections?",
+      "resolution_mechanism": "Monitoring of political dynamics, public opinion polls, and the stability of the relationship between the governing coalition and the external support parties.",
+      "impact": "If the risk of collapse is high, the constraint becomes more unstable and scaffold-like. If the agreement proves durable, it's more of a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The risk of the agreement collapsing and causing political instability."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "Following a fragmented 2025 election result in the Netherlands, the far-right PVV, despite being the largest party, cannot form a majority coalition. A minority government is formed, relying on an external support agreement with other parties to pass legislation. This arrangement creates a complex web of political incentives and compromises, affecting different actors in different ways. The base extractiveness reflects the fact that the government is extracting more control by relying on external support while also limiting the power of other parties and the general electorate.",
+    "key_agents": [
+      "Governing Coalition: Primary beneficiary (institutional/arbitrage) - maintains power and implements core policy agenda.",
+      "External Support Parties: Secondary beneficiary (powerful/mobile) - gains influence and political concessions.",
+      "Opposition Parties: Primary victim (moderate/constrained) - limited influence and ability to shape policy.",
+      "General Electorate: Primary victim (powerless/trapped) - reduced influence on policy decisions and accountability.",
+      "Dutch Parliamentary System: Degraded Institution (analytical/generational) - System's function is degraded by external supports and constant negotiation",
+      "Analytical Observer: (analytical/civilizational) Sees both the coordination and extraction aspects of the government agreement."
+    ],
+    "logic_rationale": "The extractiveness is relatively high because the government must rely on external support to function which takes away from the electorate. The suppression is relatively high because the external support agreement limits accountability. The theater ratio is now above 0.7, reflecting the performative aspect where the government must constantly demonstrate its stability, even if policy outcomes are suboptimal.",
+    "perspectival_gap": "The general electorate feels trapped and without influence, seeing a snare. Opposition parties are constrained, seeing a tangled rope. The governing coalition benefits, seeing a rope. The external support parties see a tangled rope because they must balance power and influence. The system is also being degraded, resembling a piton. And the analytical observer sees it as a tangled rope.",
+    "directionality_logic": "The directionality is derived from the structural position of each agent within the political system. The governing coalition and external support parties are beneficiaries, while the opposition parties and the general electorate are victims. The government is relying on external support and therefore extracting more control while also limiting the power of other parties and the general electorate. They have power to pass legislation and make decisions, therefore benefiting. While other parties and the electorate have limited influence."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

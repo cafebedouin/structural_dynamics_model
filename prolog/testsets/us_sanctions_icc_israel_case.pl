@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: us_sanctions_icc_israel_case
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-06-25
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_us_sanctions_icc_israel_case, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,21 +54,34 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: us_sanctions_icc_israel_case
  *   human_readable: US Sanctions Threat Against ICC Officials Investigating Israel
- *   domain: political
+ *   domain: political/international_law
  *
  * SUMMARY:
- *   A bipartisan bill in the US Senate proposes sanctions (visa bans, asset
- *   freezes) against officials of the International Criminal Court (ICC)
- *   involved in prosecuting Israeli nationals for alleged war crimes. This
- *   constraint represents the use of national sovereign power to suppress
- *   the actions of an international legal body, creating a conflict between
- *   geopolitical interests and transnational justice.
+ *   The bipartisan US bill proposing sanctions against ICC officials
+ *   investigating alleged Israeli war crimes creates a direct structural
+ *   conflict between national sovereignty and international criminal
+ *   jurisdiction. The constraint operates through credible threat of coercive
+ *   penalties (visa bans, asset freezes) against individuals attempting to
+ *   fulfill their institutional mandate. The constraint exhibits classical
+ *   snare structure: suppression is high (threat of personal sanctions,
+ *   potential loss of career), extractiveness is significant (forces ICC to
+ *   abandon or slow investigation), and the extracted value flows to the
+ *   Israeli state and US alliance interests. However, the constraint also
+ *   exhibits tangled rope characteristics from the US perspective (it solves
+ *   genuine coordination problems around alliance relationships and immunity
+ *   management) and piton characteristics from the historical view (the
+ *   US-ICC distance is partly performative posturing). The theater ratio has
+ *   increased over the interval as the threat has become more explicit and
+ *   visible, while base extractiveness has increased as the bill moved from
+ *   proposal to serious legislative consideration.
  *
- * KEY AGENTS (by structural relationship):
- *   - ICC Officials: Primary target (institutional/constrained) — bear the coercive extraction.
- *   - US Government: Primary architect & beneficiary (institutional/arbitrage) — benefits from asserting power and protecting an ally.
- *   - Israeli Government: Primary beneficiary (institutional/arbitrage) — benefits from immunity from prosecution.
- *   - International Law Scholars: Analytical observer — sees the full structure of coercive coordination and extraction.
+ * KEY AGENTS:
+ *   - ICC Prosecutors and Investigators: Primary victims (powerless/trapped) — face personal legal and financial jeopardy; cannot exit without abandoning institutional duty
+ *   - Israeli State: Primary beneficiary (institutional/arbitrage) — shields nationals from ICC prosecution; captures immunity through US power
+ *   - US Congress and Executive: Enforcer (institutional/constrained) — uses sanctions authority to manage ICC reach; benefits from immunity management but incurs reputational costs
+ *   - International Criminal Justice System: Secondary victim (moderate/constrained) — loses institutional independence; constrained by US enforcement threats
+ *   - ICC Member States: Tertiary actors (organized/mobile) — face incentives to abandon ICC support if prosecution becomes politically costly through alliance pressure
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing institutional design vulnerabilities as inherent law of international relations
  */
 
 /* ==========================================================================
@@ -77,93 +89,72 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(us_sanctions_icc_israel_case, 0.60).
-domain_priors:suppression_score(us_sanctions_icc_israel_case, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(us_sanctions_icc_israel_case, 0.15).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(us_sanctions_icc_israel_case, 0.58).
+domain_priors:suppression_score(us_sanctions_icc_israel_case, 0.72).
+domain_priors:theater_ratio(us_sanctions_icc_israel_case, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(us_sanctions_icc_israel_case, extractiveness, 0.60).
-narrative_ontology:constraint_metric(us_sanctions_icc_israel_case, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(us_sanctions_icc_israel_case, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(us_sanctions_icc_israel_case, extractiveness, 0.58).
+narrative_ontology:constraint_metric(us_sanctions_icc_israel_case, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(us_sanctions_icc_israel_case, theater_ratio, 0.65).
 
-% --- NL Profile Metrics are not applicable for this constraint type ---
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(us_sanctions_icc_israel_case, snare).
 narrative_ontology:human_readable(us_sanctions_icc_israel_case, "US Sanctions Threat Against ICC Officials Investigating Israel").
-narrative_ontology:topic_domain(us_sanctions_icc_israel_case, "political").
+narrative_ontology:topic_domain(us_sanctions_icc_israel_case, "political/international_law").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(us_sanctions_icc_israel_case). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(us_sanctions_icc_israel_case).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(us_sanctions_icc_israel_case, us_government).
-narrative_ontology:constraint_beneficiary(us_sanctions_icc_israel_case, israeli_government).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(us_sanctions_icc_israel_case, icc_officials).
-
-% Gate requirements check:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement -> MET.
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(us_sanctions_icc_israel_case, israeli_state).
+narrative_ontology:constraint_victim(us_sanctions_icc_israel_case, icc_prosecutorial_independence).
+narrative_ontology:constraint_victim(us_sanctions_icc_israel_case, international_criminal_justice_system).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (ICC OFFICIALS)
-% As individuals, they are powerless against a state actor and trapped by their professional mandate.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
-% χ = 0.60 * 1.42 * 1.2 (global scope) ≈ 1.02. This classifies as a Snare.
-constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, tangled_rope,
+% PERSPECTIVE 1: ICC PROSECUTORS/INVESTIGATORS (SNARE) — Face explicit threat of personal sanctions (visa bans, asset freezes) if they continue investigation. No viable exit: resigning abandons institutional mandate; continuing faces legal and financial jeopardy. Maximum suppression through threat of coercive sanctions. Cannot negotiate or coordinate around the threat — it is unilateral and credible. Structural position: full victim of extraction.
+constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (US GOVERNMENT)
-% The architect and beneficiary, using its power to create an exception to international norms.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12.
-% χ = 0.60 * -0.12 * 1.2 ≈ -0.086. Negative extraction -> classifies as a Rope.
-constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Sees both the coordination function for the beneficiaries and the asymmetric extraction from the target.
-% Engine derives canonical d ≈ 0.72 → f(d) ≈ 1.15.
-% χ = 0.60 * 1.15 * 1.2 ≈ 0.828. This value falls within the Tangled Rope range [0.40, 0.90].
-% Given that the structural requirements (beneficiary, victim, enforcement) are met, it's a Tangled Rope.
+% PERSPECTIVE 2: ICC AND INTERNATIONAL JUSTICE SYSTEM (SNARE) — Constrained by dependence on US cooperation for enforcement (asset seizure, extradition support). Cannot investigate cases threatening US ally interests without incurring institutional penalties. Exit options exist but are costly: pursuing investigation despite sanctions harms the institution's legitimacy and funding. The constraint extracts institutional compliance through threat of withdrawal and reputational damage.
 constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% This constraint operates between two institutional actors with vastly different power and exit options.
-
-% Perspective 4A: The ICC as an Institution
-% The ICC is an institution but is the target of coercion and has limited ability to evade it.
-% Engine derives d from: victim + institutional(constrained) -> high d ≈ 0.90 -> f(d) ≈ 1.36.
-% χ = 0.60 * 1.36 * 1.2 ≈ 0.979. This is a Snare.
-constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, rope,
-    context(agent_power(institutional),
+    context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
+
+% PERSPECTIVE 3: ISRAELI STATE (ROPE) — Primary beneficiary. Experiences the constraint as effective coordination against threats to state security (exemption from ICC prosecution). High arbitrage capacity — can leverage alliance relationships and US power asymmetry. Net extraction runs toward this actor. The constraint solves the collective action problem of managing ICC prosecution risk.
+constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: US STATE AND CONGRESS (TANGLED ROPE) — Benefits from constraint (ability to shield allied state from ICC accountability) AND bears coordination costs (reputational damage, alliance strain, legal inconsistency). High suppression via legislative threat. Extraction is hybrid: uses coercive power (sanctions authority) to extract compliance but also genuinely solves coordination problem (preventing ICC from undermining alliance relationships). Active enforcement required; extraction is not pure.
+constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: US-ICC STRUCTURAL RELATIONSHIP (PITON) — The US has never joined the ICC, maintaining structural independence from the institution. The threat to sanction ICC officials is partly performative — it reinforces the US posture of unaccountability to international institutions. The historical pattern (US non-participation, periodic threats to constrain ICC reach) is maintained through institutional theater rather than functional necessity. Theater ratio high because the threat operates primarily through reputational posturing and alliance signaling.
+constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, piton,
+    context(agent_power(powerful),
+            time_horizon(civilizational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN-FRAMING) — From a civilizational view, the conflict between national sovereignty and international criminal jurisdiction is a structural feature of the current international system. No state can be forced to join the ICC; the ICC has no independent enforcement capacity; prosecution of nationals of non-member states creates alignment problems between the court and its dependency on state cooperation. This perspective risks naturalizing what is actually a contingent institutional design problem as an immutable law of international relations.
+constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -171,26 +162,18 @@ constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, rope
 
 :- begin_tests(us_sanctions_icc_israel_case_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify perspectival gap between an individual target and the beneficiary.
-    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    true.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(perspectival_gap_institutional) :-
-    % Verify the gap between the two institutional actors.
-    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare, context(agent_power(institutional), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    true.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(us_sanctions_icc_israel_case, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_sanctions_icc_israel_case, snare, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_structural_gates_met) :-
-    % Verifies that all three required flags for Tangled Rope are present.
-    narrative_ontology:constraint_beneficiary(us_sanctions_icc_israel_case, _),
-    narrative_ontology:constraint_victim(us_sanctions_icc_israel_case, _),
-    domain_priors:requires_active_enforcement(us_sanctions_icc_israel_case).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(us_sanctions_icc_israel_case, TR),
+    TR >= 0.70.
 
 :- end_tests(us_sanctions_icc_israel_case_tests).
 
@@ -200,21 +183,16 @@ test(tangled_rope_structural_gates_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.60): The threat is not absolute but is designed to impose a severe cost on the ICC's core function, effectively extracting its agency in this specific domain.
- *   - Suppression Score (s=0.80): The sanctions aim to make the legally mandated path (prosecution) prohibitively costly, strongly suppressing this alternative in favor of inaction.
- *   - Theater Ratio (t=0.15): This is a credible threat, backed by past actions and bipartisan political will. It is not primarily performative.
+ *   Extractiveness (0.58): High-moderate. The constraint extracts investigative compliance from the ICC system through credible threat of sanctions against individual officials. The extraction is not total (ICC retains formal independence) but is substantial enough to deter investigation of cases affecting allied states. The measure reflects the trajectory from legislative proposal (0.35, theoretical threat) through serious consideration (0.58, credible implementation risk). Suppression (0.72): High. Multiple suppression mechanisms operate: personal financial/career risk to investigators, institutional reputational damage to ICC if it defies US sanctions, alliance pressure on ICC member states to discourage prosecution, and political costs to supporting states. Investigators have no safe exit: complying abandons mandate, continuing risks sanctions. Theater ratio (0.65): Moderate-high. The constraint operates through both performative and functional mechanisms. Performative: alliance posturing, public statements of US exceptionalism, legislative theater around ICC limitations. Functional: actual sanctions would impose real costs. The theater has increased as the threat became more visible and explicit.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For the beneficiaries (US/Israel), the sanction threat is a 'Rope'—an effective coordination tool to protect strategic interests with low internal cost. For the target (ICC), it is a 'Snare'—a purely coercive, high-extraction constraint that paralyzes their function and for which they have no meaningful escape.
+ *   The snare perspective (investigators trapped, ICC system victimized) conflicts sharply with the rope perspective (US solves genuine coordination problem of managing ICC reach). From the Israeli state view, the constraint is beneficial coordination preventing prosecutions. From the ICC view, the constraint is pure coercion blocking legitimate investigation. From the US state view, the constraint is both coordination (managing alliance relationships) and coercion (enforcing immunity through threat). The piton perspective reveals that the US-ICC distance is maintained partly through performative posturing (the US never joined the ICC, maintains structural independence). The analytical observer risks seeing immutable law (structural vulnerability of ICC to state pressure) when the constraint actually reflects contingent choices about institutional design and funding dependence.
  *
  * DIRECTIONALITY LOGIC:
- *   The beneficiaries (us_government, israeli_government) gain strategic immunity and assert sovereign power. The victims (icc_officials) bear the direct personal and institutional costs of the coercion. The `exit_options` are key: the beneficiaries have `arbitrage` (they operate outside the rules they enforce on others), while the ICC has `constrained` exit (it cannot simply abandon its mandate). This asymmetry in exit options drives the stark difference in derived directionality (d) and classification, even between two institutional actors.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This is a classic example of inter-institutional power dynamics. Both the US and the ICC are 'institutional' actors, but they are not peers in this interaction. The US government's `arbitrage` exit option and beneficiary status gives it a low `d` value, classifying the constraint as a Rope. The ICC's `constrained` exit and victim status gives it a high `d` value, classifying the constraint as a Snare. This correctly models the asymmetric power relationship where one institution imposes its will upon another.
+ *   ICC investigators and prosecutors derive high d (d ≈ 0.92) from victim status (explicit sanction threats) and trapped exit options (cannot abandon mandate without institutional failure, cannot continue without legal jeopardy). This produces high f(d) ≈ 1.38, amplifying effective extraction. The Israeli state derives low d (d ≈ 0.10) from beneficiary status and arbitrage capacity (can leverage alliance relationships and US power). This produces negative f(d) ≈ -0.05, making effective extraction negative (constraint subsidizes this actor). The ICC system derives moderate-high d (d ≈ 0.68) from victim status but constrained (not trapped) exit options — institutional options exist but all are costly. This produces f(d) ≈ 1.05, moderate experienced extraction. The US state derives d ≈ 0.55 from mixed position: beneficiary of immunity management (low d contribution) but also enforcement costs and alliance strain (high d contribution). This produces f(d) ≈ 0.75, blended extraction reflecting the tangled_rope hybrid nature.
  *
  * MANDATROPHY ANALYSIS:
- *   This case could be mislabeled a pure Snare if one ignores its function for the beneficiaries. The Tangled Rope classification from the analytical view correctly identifies that the constraint possesses both a genuine (if perverse) coordination function (aligning US/Israeli policy against the ICC) and severe, asymmetric extraction. This prevents oversimplifying the dynamic as mere destruction, recognizing it as a tool with a clear strategic purpose for its architects.
+ *   This constraint resolves the mandatrophy by showing that the snare and tangled_rope classifications capture different structural realities from different positions. From the ICC and investigator perspective, it is purely extractive (snare) — the threat offers no coordination benefit, only suppression. From the US state perspective, it is hybrid (tangled_rope) — it solves genuine coordination problems (managing alliance relationships, preventing politically costly prosecutions) while also imposing reputational costs and legal inconsistency. The mandatrophy is resolved by recognizing that both readings are correct at their respective observation sites. The constraint is a snare TO the ICC system and a tangled rope FROM the US state perspective. The analytical observer's mountain framing (ICC dependence on state cooperation is a law of international relations) is partially valid but risks naturalizing contingent institutional design choices (ICC funding structures, enforcement mechanisms, member commitment) as immutable features. The proper analysis distinguishes structural vulnerability (how ICC is designed) from strategic response (US choice to weaponize sanctions threat).
  */
 
 /* ==========================================================================
@@ -222,60 +200,81 @@ test(tangled_rope_structural_gates_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_us_sanctions_icc_israel_case,
-    'Is the bipartisan legislative threat a fully credible deterrent intended for enforcement, or is it primarily a political signal that would not survive a presidential veto or executive inaction?',
-    'Observation of US executive branch action (or inaction) if the ICC proceeds with issuing arrest warrants.',
-    'If credible, the ε=0.60 and Snare classification for the target holds. If primarily a signal (higher theater), ε would be lower and the constraint might degrade towards a Piton from some perspectives.',
+    us_enforcement_credibility,
+    'Will the US actually implement sanctions if ICC investigators proceed with the case, or is the threat primarily performative?',
+    'Observation of US behavior if ICC issues arrest warrants; tracking of actual sanctions implementation and their severity; Congressional follow-through on legislative threats',
+    'If credible: constraint is highly suppressive (0.72+), snare classification robust. If performative: suppression drops to 0.40-0.50, constraint may degrade to rope or tangled_rope.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(us_enforcement_credibility, empirical, 'Whether US sanctions threat is credible or performative').
+
+omega_variable(
+    icc_prosecutorial_independence_resilience,
+    'Can ICC investigators maintain independence and pursue investigations despite sanctions threats, or does the threat effectively block the investigation?',
+    'Tracking of ICC investigative activity before and after sanctions threat; analysis of investigator departures, budget impacts, and case decisions; comparison to other cases where ICC faced pressure',
+    'If ICC maintains independence: snare perspective is one view; constraint has lower functional suppression. If investigators are deterred: snare perspective confirmed — threat achieves full extraction.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(icc_prosecutorial_independence_resilience, empirical, 'Whether ICC can maintain independence under sanctions threat').
+
+omega_variable(
+    alliance_compliance_threshold,
+    'What is the minimum level of enforcement (sanctions implementation, asset seizures) required to keep ICC member states from challenging US exceptions?',
+    'Analysis of ICC member state responses to US sanctions threat; comparison of responses to cases where ICC faced pressure; modeling of alliance incentives and free-riding behavior',
+    'If low threshold: US needs minimal enforcement to maintain compliance. If high threshold: credible enforcement is necessary or alternative pressure mechanisms must emerge.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alliance_compliance_threshold, conceptual, 'Enforcement level needed to maintain alliance compliance').
+
+omega_variable(
+    structural_icc_vulnerability,
+    'Is ICC prosecutorial vulnerability to state pressure (especially US pressure) an inherent feature of the current institutional design, or a contingent policy problem?',
+    'Comparative analysis of ICC operational independence vs other international courts; historical analysis of ICC''s institutional evolution and capacity-building',
+    'If inherent: mountain perspective has merit — ICC dependence on state cooperation is a structural law of international relations. If contingent: constraint reflects policy choices about ICC funding, enforcement mechanisms, and member commitment.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(structural_icc_vulnerability, conceptual, 'Whether ICC vulnerability to pressure is structural or contingent').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(us_sanctions_icc_israel_case, 0, 10).
+narrative_ontology:interval(us_sanctions_icc_israel_case, 0, 4).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has intensified over time, from diplomatic pressure to active sanctions.
-% T=0: Post-9/11 era, initial US hostility to ICC.
-% T=5: Trump administration sanctions over Afghanistan investigation (c. 2020).
-% T=10: Current bipartisan legislative threat (c. 2024).
+% Theater ratio over time
+narrative_ontology:measurement(ussicc_tr_t0, us_sanctions_icc_israel_case, theater_ratio, 0, 0.5).
+narrative_ontology:measurement(ussicc_tr_t2, us_sanctions_icc_israel_case, theater_ratio, 2, 0.58).
+narrative_ontology:measurement(ussicc_tr_t4, us_sanctions_icc_israel_case, theater_ratio, 4, 0.65).
 
-% Theater ratio over time (remains low as threats are credible):
-narrative_ontology:measurement(us_sanctions_icc_israel_case_tr_t0, us_sanctions_icc_israel_case, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(us_sanctions_icc_israel_case_tr_t5, us_sanctions_icc_israel_case, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(us_sanctions_icc_israel_case_tr_t10, us_sanctions_icc_israel_case, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(ussicc_be_t0, us_sanctions_icc_israel_case, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(ussicc_be_t2, us_sanctions_icc_israel_case, base_extractiveness, 2, 0.48).
+narrative_ontology:measurement(ussicc_be_t4, us_sanctions_icc_israel_case, base_extractiveness, 4, 0.58).
 
-% Extraction over time (escalation from pressure to direct sanctions):
-narrative_ontology:measurement(us_sanctions_icc_israel_case_ex_t0, us_sanctions_icc_israel_case, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(us_sanctions_icc_israel_case_ex_t5, us_sanctions_icc_israel_case, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(us_sanctions_icc_israel_case_ex_t10, us_sanctions_icc_israel_case, base_extractiveness, 10, 0.60).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: This is a coercive enforcement mechanism designed to
-% impose a specific behavioral norm (inaction) on a target.
 narrative_ontology:coordination_type(us_sanctions_icc_israel_case, enforcement_mechanism).
+narrative_ontology:affects_constraint(us_sanctions_icc_israel_case, icc_structural_legitimacy).
+narrative_ontology:affects_constraint(us_sanctions_icc_israel_case, us_international_accountability_exemption).
 
-% Network relationships: This constraint directly impacts the perceived
-% legitimacy and effectiveness of international law as a whole.
-narrative_ontology:affects_constraint(us_sanctions_icc_israel_case, international_law_legitimacy).
+% DUAL FORMULATION NOTE:
+% This constraint is downstream of structural ICC vulnerabilities (dependence on state cooperation for enforcement) but represents a distinct strategic choice to weaponize sanctions threat. The upstream structural constraints define the vulnerability; this constraint operationalizes that vulnerability through explicit threat. Link via affects_constraints captures the functional dependency while preserving the analytical distinction between vulnerability and exploitation.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this story. The structural derivation chain,
-% using beneficiary/victim declarations combined with the distinct exit_options
-% for the institutional actors (arbitrage vs. constrained), accurately
-% computes the asymmetric directionality values (d) that reflect the
-% underlying power dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

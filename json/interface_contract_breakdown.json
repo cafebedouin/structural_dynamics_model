@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "interface_contract_breakdown",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iface"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Protocol Dissolution",
+    "topic_domain": "technological/software_architecture",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_maintainer"
+    ],
+    "victims": [
+      "dependent_systems",
+      "integration_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent System",
+      "comment": "PERSPECTIVE 1: DEPENDENT SYSTEM (SNARE) \u2014 A downstream service or library that depends on the API. Cannot exit without massive refactor; trapped by integration depth. Faces cascading failures as undocumented breaking changes propagate through the protocol. No negotiating power; no alternative platforms for legacy constraints."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Integration Ecosystem",
+      "comment": "PERSPECTIVE 2: INTEGRATION ECOSYSTEM (TANGLED ROPE) \u2014 Third-party developers and service providers. Benefit from the API's network effects and market reach, but constrained by undocumented side effects and breaking changes. Suppressed ability to fork or migrate due to lock-in effects. Active enforcement: platform maintainer can change contract unilaterally; ecosystem absorbs adaptation costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Maintainer",
+      "comment": "PERSPECTIVE 3: PLATFORM MAINTAINER (ROPE) \u2014 Experiences the API contract as a coordination mechanism. Rapid feature iteration (agile) benefits early movers and internal product development. Can arbitrage between maintaining stability and shipping features. Extracts value through network effects and market position but frames feature creep as solving customer problems."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standards Body / API Council",
+      "comment": "PERSPECTIVE 4: STANDARDS BODY (SCAFFOLD) \u2014 Organized actors (OpenAPI standards, API governance councils, versioning best practices) see the contract breakdown as a temporary coordination failure with sunset potential. Semantic versioning, deprecation schedules, and formal API specifications are building alternative governance pathways. Constrained by existing ecosystem migration costs, but see an exit path toward mature specification discipline."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Legacy Specification Document",
+      "comment": "PERSPECTIVE 5: LEGACY SPECIFICATION DOCUMENT (PITON) \u2014 Written API contracts (OpenAPI specs, WSDL files, RPC documentation) are largely performative theater. Implementations diverge from documented behavior; side effects are undocumented; the specification persists through inertia rather than function. High theater ratio (0.64) reflects that the document maintains appearance of contract governance while actual governance is implicit and breaking."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, some contract drift is inherent to living systems: any sufficiently complex protocol will accumulate undocumented behavior, side effects will emerge faster than documentation, and the gap between specified and actual behavior is a structural feature of software evolution. This perspective risks naturalizing what is actually a contingent architectural choice \u2014 that agile iteration has been prioritized over specification discipline."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "breaking_change_severity_threshold",
+      "question": "What magnitude of breaking change constitutes extraction versus legitimate evolution?",
+      "resolution_mechanism": "Metric analysis of downstream failure rates; correlation between specification drift and integration failures; survey of dependent system costs",
+      "impact": "If threshold is strict (minor changes count as breaking): many necessary updates are blocked; extraction is minimized but innovation is constrained. If threshold is loose (only major changes count as breaking): much drift is masked; extraction is hidden.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for distinguishing legitimate evolution from specification breach"
+    },
+    {
+      "id": "documentation_lag_causality",
+      "question": "Is undocumented behavior primarily due to agile process constraints or intentional opacity?",
+      "resolution_mechanism": "Analysis of commit history and deprecation patterns; interviews with maintainers about documentation incentives; comparison with projects using formal specification workflows",
+      "impact": "If process constraint: scaffold perspective is correct \u2014 discipline improvements can reduce extraction without changing maintainer power. If intentional: suppression is high and structural; only power redistribution resolves it.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether undocumented behavior reflects process constraints or opacity strategy"
+    },
+    {
+      "id": "ecosystem_migration_cost",
+      "question": "Can dependent systems realistically migrate to alternative APIs or is lock-in total?",
+      "resolution_mechanism": "Cost analysis of forking, reimplementation, and alternative platform adoption; longitudinal tracking of actual migration projects; ecosystem resilience testing",
+      "impact": "If migration is feasible: exit_options shift from trapped to constrained; snare perspective degrades to tangled_rope. If migration is prohibitively costly: exit is illusory; snare classification is confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether dependent systems can realistically exit through migration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The protocol dissolution constraint describes the structural tension between rapid feature iteration (agile development) and stable API contracts in distributed systems. The constraint emerges when platform maintainers prioritize shipping features over maintaining documented, stable interfaces \u2014 creating asymmetric costs: dependent systems and integration ecosystems absorb the burden of breaking changes while maintainers capture the value of rapid innovation. This exhibits the full spectrum of DR classifications depending on observer position. The theater_ratio (0.64) reflects that formal API specifications (OpenAPI, WSDL, RPC documentation) increasingly diverge from actual implementation behavior \u2014 the documentation persists as performative governance while real contract governance is implicit, undocumented, and unilateral. The theater has grown as agile practices have accelerated feature velocity beyond specification discipline. Suppression (0.58) manifests through lock-in: dependent systems face massive refactor costs; ecosystem participants lack negotiating power; platform switching is prohibitively expensive. Beneficiaries are platform maintainers who extract value through network effects while externalizing coordination costs.",
+    "key_agents": [
+      "Platform Maintainer: Primary beneficiary (institutional/arbitrage) \u2014 extracts value through rapid feature iteration, network effects, and lock-in; can change contract unilaterally",
+      "Dependent Systems: Primary victim (powerless/trapped) \u2014 face cascading failures from undocumented breaking changes; trapped by integration depth and refactor costs",
+      "Integration Ecosystem: Secondary victim (moderate/constrained) \u2014 third-party developers and services benefit from network reach but constrained by lock-in and suppressed negotiating power",
+      "Standards Body / API Council: Organized actors (organized/constrained) \u2014 building alternative governance (semantic versioning, formal specs, deprecation schedules) with sunset potential",
+      "Legacy Specification Document: Institutional artifact (institutional/arbitrage) \u2014 persists as performative governance; actual behavior diverges from documented contract",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing agile iteration as inherent to software evolution rather than contingent architectural choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The platform maintainer extracts significant value through unilateral contract changes, forced dependent system upgrades, and ecosystem adaptation costs. However, the extraction is constrained by reputation effects and alternative platform risk \u2014 total extraction is not maximal because ecosystems can eventually migrate. The 0.52 value reflects the asymmetry is real and structural but not absolute. Suppression (0.58): Moderate-high. Dependent systems face substantial barriers to exit: deep integration requires major refactors; ecosystem lock-in is enforced through network effects; alternative platforms exist but migration is costly. Documentation opacity and undocumented side effects amplify suppression \u2014 dependent systems cannot even plan migrations without reverse-engineering actual behavior. Theater ratio (0.64): High. Formal API specifications maintain the appearance of contract governance (OpenAPI docs, deprecation notices, changelog entries) while actual governance is implicit and unilateral. Feature releases often include undocumented breaking changes; the specification document lags actual implementation by quarters or years. This is quintessential piton theater: the document persists through institutional inertia, not functional governance.",
+    "directionality_logic": "Each perspective's directionality derives from structural position within the extraction flow. The maintainer (institutional/arbitrage) benefits from contract flexibility and can absorb minimal costs of breaking changes \u2014 their d is low (beneficiary with exit options), producing negative or near-zero chi. Dependent systems (powerless/trapped) bear full costs of breaking changes with no negotiating power \u2014 their d is high (~0.95), producing maximum experienced extraction chi. The ecosystem (moderate/constrained) has some mobility through alternative platforms but faces lock-in and coordination problems \u2014 their d is moderate (~0.65), producing moderate chi. The standards body (organized/constrained) sees the dissolution as solvable through process change (semantic versioning, deprecation schedules) \u2014 their d is constrained (0.55) but they perceive an exit path (scaffold sunset). The piton perspective derives from high theater and low functional governance \u2014 the specification maintains appearance without substance. The mountain perspective risks naturalizing agile velocity as inherent rather than contingent.",
+    "perspectival_gap": "This constraint demonstrates divergent classifications from identical base metrics. The maintainer sees pure coordination (Rope) \u2014 the contract is a tool for communicating feature capabilities to customers. The dependent system sees pure extraction (Snare) \u2014 they bear all costs with no voice. The ecosystem sees mixed coordination and extraction (Tangled Rope) \u2014 they benefit from the platform but are suppressed by lock-in and opacity. The standards body sees a solvable temporary problem (Scaffold) \u2014 formal specification discipline and versioning norms are building alternative governance. The specification document sees its own degradation (Piton) \u2014 persisting through institutional inertia as agile practices outpace documentation. The civilizational observer risks seeing inevitability (Mountain) \u2014 that software evolution necessarily outpaces specification. The perspectival gap reveals that the 'dissolution' is not natural law but a redistributive choice: agile velocity has been optimized at the cost of contract stability, externalizing the costs to dependent systems.",
+    "mandatrophy_analysis": "STRUCTURAL DISAMBIGUATION: The constraint resolves mandatrophy by revealing that 'protocol dissolution' conflates two distinct structural claims: (1) Agile Process Constraint \u2014 feature velocity necessarily outpaces documentation (proces limitation, lower \u03b5), and (2) Unilateral Contract Breaking \u2014 the platform maintainer prioritizes new features over dependent system stability (extractive choice, higher \u03b5). At \u03b5=0.52, the tangled_rope classification captures both: there is genuine coordination value (network effects, ecosystem benefits) AND asymmetric extraction (unilateral breaking changes, externalized costs). The theater_ratio (0.64) confirms that specification documents are increasingly performative \u2014 they maintain governance appearance while actual governance is implicit and unilateral. If documentation lag were purely technical (process constraint), theater would be lower (~0.30-0.40) and the constraint would classify as Rope. If the breaking changes were purely extractive (maintainer indifference to ecosystem costs), theater would be lower and the constraint would classify as Snare. At 0.64, the specification document is maintaining governance theater while actual behavior drifts, which is quintessential piton behavior at the institutional level. The mandatrophy is resolved by recognizing that agile velocity is a contingent architectural choice, not a law of software nature \u2014 alternatives (Scaffold) exist and are deployable through discipline (semantic versioning, formal specifications, deprecation schedules)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "distributed_system_coherence",
+      "microservice_boundary_instability"
+    ],
+    "dual_formulation_note": "The protocol dissolution is downstream of specific architectural choices (agile process priority, specification discipline trade-offs) but represents a distinct structural constraint on ecosystem stability. Upstream constraints involve technical dependencies and integration patterns; this constraint captures the coordination failure between maintainers and dependent systems."
+  },
+  "directionality_overrides": []
+}

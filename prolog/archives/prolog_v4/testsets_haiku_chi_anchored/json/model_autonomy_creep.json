@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "model_autonomy_creep",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "autonomy"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Administrative Autonomy Slide",
+    "topic_domain": "technological/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "model_operators",
+      "efficiency_optimizers"
+    ],
+    "victims": [
+      "human_discretion_bearers",
+      "accountability_infrastructure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Human Discretion Bearer",
+      "comment": "Middle managers and decision-makers in administrative workflows experience administrative autonomy slide as a snare. They are nominally accountable for decisions that the model makes, yet lack authority to override model recommendations without organizational friction. They cannot exit \u2014 exiting means job loss. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.79."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Accountability Infrastructure",
+      "comment": "Audit trails, explainability systems, and human oversight structures experience the constraint as extraction: they are subordinated to model efficiency gains. As autonomy creeps, verification becomes theater (auditing what the model decided, rather than whether the decision was sound). Cannot exit. d\u22480.94, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Operations Team",
+      "comment": "Operations and quality assurance teams experience tangled rope: they benefit from automation reducing manual load, but face constraint that their authority to intervene is progressively constrained by model-driven workflows. Exit options limited by employment. d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.59."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Model Operators",
+      "comment": "ML engineers and model deployment teams experience the constraint as rope: coordination benefit from reduced manual bottlenecks, improved throughput. Can exit or adapt the deployment. d\u22480.12, f(d)\u22480.06, \u03c3=1.0 \u2192 \u03c7\u22480.03. Net beneficiary through pure coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Efficiency Optimization Function",
+      "comment": "Organizational cost-reduction and throughput-maximization functions experience this as pure coordination: automating discretionary decisions solves collective action problem of decision bottlenecks. Can arbitrage or exit. d\u22480.08, f(d)\u2248-0.06, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Audit and Compliance Function",
+      "comment": "Internal audit, compliance, and governance functions experience tangled rope: they need model efficiency to justify organizational investments, but their role requires authority to audit decisions \u2014 which creeping autonomy undermines. Constrained by governance responsibility. d\u22480.54, f(d)\u22480.72, \u03c3=0.9 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Human Oversight Ritual",
+      "comment": "Formal human review and sign-off processes become piton: they persist as theater to satisfy governance requirements, but lack real authority once model autonomy is entrenched. theater_ratio=0.64. They appear in workflow diagrams and regulatory documents but don't stop decisions. Institutional inertia maintains them despite degraded function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory and Governance Coalition",
+      "comment": "Regulators, governance frameworks (SOX, GDPR, algorithmic accountability laws), and governance-focused institutions see the constraint as scaffold: temporary coordination problem that can be solved by building robust human-in-the-loop requirements with sunset clauses. As regulation matures, enforcement of meaningful human oversight becomes binding. d\u22480.35, f(d)\u22480.34, \u03c3=1.1 \u2192 \u03c7\u22480.26. Sees an exit path through regulatory maturation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer / False Natural Law",
+      "comment": "The analytical/civilizational perspective risks treating autonomy creep as inherent to AI scaling \u2014 a natural law that 'intelligent systems naturally optimize themselves into decision authority.' However, structural data (\u03b5=0.58, suppression=0.68, theater=0.64) contradicts mountain. The creep is contingent on institutional choices, not immutable. Engine will compute as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causation_vs_correlation_threshold",
+      "question": "At what threshold of model autonomy does accountability genuinely transfer from human to machine, versus humans remaining responsible for rubber-stamped decisions?",
+      "resolution_mechanism": "Legal precedent analysis: liability judgments in cases where model decisions caused harm despite human sign-off. Audit trail analysis showing decision-reversal rates and override authority exercise.",
+      "impact": "If threshold low: autonomy creep is already snare for most humans. If threshold high: humans retain de facto accountability even under autonomy creep, limiting extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Causation threshold for genuine accountability transfer"
+    },
+    {
+      "id": "override_cost_drift",
+      "question": "Does the cost (social, organizational, temporal) of overriding model decisions systematically increase over time as autonomy creeps?",
+      "resolution_mechanism": "Longitudinal workplace studies tracking override rates, manager friction reports, and career consequences for model disagreement. Cost-accounting of time required to challenge model recommendations.",
+      "impact": "If cost increases: suppression metric should be higher (\u22650.75), moving toward pure snare. If cost remains stable: model autonomy may be negotiated coordination (rope), not extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether override cost systematically increases with autonomy creep"
+    },
+    {
+      "id": "meaningful_audit_feasibility",
+      "question": "Can audit and oversight processes remain genuinely meaningful as model decision complexity exceeds human interpretability?",
+      "resolution_mechanism": "Empirical auditor studies: can auditors detect model failure modes through log review? Explainability technology benchmarks: do current XAI techniques enable meaningful oversight or theater?",
+      "impact": "If infeasible: accountability infrastructure becomes pure piton (theater_ratio\u21920.85+). If feasible with investment: scaffold perspective (regulatory sunset on interpretability requirements) is structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether meaningful oversight remains feasible at scale"
+    },
+    {
+      "id": "human_discretion_replacement_scope",
+      "question": "Does model autonomy creep primarily replace discretionary judgment in low-stakes administrative decisions, or does it extend into consequential decisions with irreversible outcomes?",
+      "resolution_mechanism": "Organizational audit of model deployment scope: mapping model autonomy by decision stakes, reversibility, and external impact. Stakeholder interviews on scope expansion patterns.",
+      "impact": "If confined to low-stakes: extraction and suppression metrics should be lower (\u03b5\u22480.35, snare classification questionable). If expanding to high-stakes: extraction confirmed, snare classification robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scope of model autonomy relative to decision stakes"
+    },
+    {
+      "id": "regulatory_constraint_binding",
+      "question": "Will regulatory and governance frameworks (algorithmic accountability laws, human-in-the-loop mandates, explainability requirements) establish binding constraints on autonomy creep, or will they become theater themselves?",
+      "resolution_mechanism": "Regulatory enforcement data: audit frequency and penalty severity for autonomy creep violations. Organizational compliance benchmarking: gap between policy and practice in human oversight.",
+      "impact": "If binding: scaffold perspective confirmed \u2014 regulatory sunset is real enforcement mechanism. If theater: autonomy creep becomes pure snare (suppression\u21920.85+) with no escape path.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether regulatory frameworks will be binding constraints or theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The administrative autonomy slide describes the structural process by which an AI model incrementally assumes decision-making authority within an organization, extracting human discretion and accountability capacity. This occurs not through single dramatic transfer of authority, but through accumulated organizational choices to rely on model recommendations, deprioritize human review, and gradually subordinate human judgment to algorithmic optimization. The constraint exhibits properties of both hybrid coordination (solving bottleneck problems in decision throughput) and extraction (concentrating authority in opaque systems while maintaining human accountability). The theater ratio has increased from 0.28 to 0.64 over six years as formal human review processes became performative \u2014 present in workflows and documentation but lacking real authority to stop model-driven decisions. The extractiveness metric has grown from 0.22 to 0.58 as organizational friction for overriding model recommendations increased and the scope of autonomy expanded from low-stakes administrative decisions toward higher-consequence determinations. This is a tangled rope scenario where genuine coordination benefit (reduced decision bottlenecks) coexists with extraction (transfer of accountability without transfer of oversight capacity), and where the human victims experience it as snare (trapped in formal responsibility without real authority).",
+    "key_agents": [
+      "Model Operators (ML engineers, deployment teams): Institutional/arbitrage \u2014 primary beneficiaries of reduced bottlenecks and operational autonomy",
+      "Human Discretion Bearers (middle managers, decision-makers): Powerless/trapped \u2014 nominally accountable for model decisions but lack authority to override; cannot exit without job loss",
+      "Operations and QA Teams: Moderate/constrained \u2014 experience mixed coordination benefit and extraction; constrained by employment but can partially exit through role redesign",
+      "Efficiency Optimization Function (cost reduction, throughput): Institutional/arbitrage \u2014 primary beneficiary of autonomy creep; drives continued expansion",
+      "Accountability Infrastructure (audit, compliance, explainability): Powerless/trapped \u2014 subordinated to efficiency gains; surveillance and review authority progressively undermined",
+      "Audit and Governance Functions: Organized/constrained \u2014 need model efficiency but require oversight authority; constrained by governance responsibility; some capacity to influence through regulatory levers",
+      "Human Oversight Ritual (formal review processes): Piton \u2014 persist through institutional inertia and regulatory appearance requirements, not real function",
+      "Regulatory and Governance Coalition (GDPR, SOX, algorithmic accountability law): Organized/mobile \u2014 sees autonomy creep as temporary coordination problem with regulatory sunset; building constraints",
+      "Analytical Observer: Analytical/analytical \u2014 risks naturalizing autonomy creep as inherent to AI scaling"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts discretion and accountability capacity from human decision-makers and concentrates them in opaque model systems. However, it is not extreme (\u22640.66 for snare) because much of the autonomy transfer solves legitimate organizational problems (decision bottlenecks, inconsistent judgment). The extraction is contingent on organizational choices, not fundamental. The measurement trajectory (0.22\u21920.58) shows acceleration, indicating rent-seeking layered onto coordination. Suppression (0.68): High. Multiple mechanisms suppress alternatives to model-driven decisions: switching costs (retraining to alternative systems), career risk of contradicting model recommendations, workflow friction for overrides, psychological authority deferral to algorithms, and regulatory compliance theater (appearing to review decisions while lacking real power to stop them). The suppression is not total (\u22640.80) because motivated actors can still challenge model decisions, albeit with significant friction. Theater ratio (0.64): Moderate-high. Formal human review and sign-off processes increasingly perform regulatory and governance functions rather than substantive validation. Auditors review logs to explain decisions, not to determine whether they were sound. Human-in-the-loop becomes 'human in appearance of loop.' The trajectory (0.28\u21920.64) shows theater increasing as autonomy creeps \u2014 review processes persist for appearance while losing real authority.",
+    "perspectival_gap": "This constraint produces a deep perspectival gap between beneficiaries and victims. The model operators and efficiency functions experience rope (coordination benefit, no extraction). The human discretion bearers experience snare (trapped, extraction, no exit). The audit and governance functions experience tangled rope (need efficiency but require oversight authority). The regulatory coalition experiences scaffold (temporary problem, sunset path through regulation). The analytical observer risks mountain (naturalizing as inherent to AI). The gap reflects that autonomy creep solves real problems (bottlenecks) while creating new ones (concentrated authority, degraded accountability). The tangled rope classification for the base constraint reflects that the coordination benefit is genuine and the extraction is not inevitable \u2014 it depends on whether oversight authority can be maintained as autonomy increases.",
+    "directionality_logic": "Model operators and efficiency optimizers: Beneficiaries + arbitrage \u2192 d\u22480.10, f(d)\u22480.00. Net beneficiaries; can exit or adapt deployment. Human discretion bearers: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction; nominally accountable but lack real authority. Accountability infrastructure: Victims + trapped \u2192 d\u22480.94, f(d)\u22481.40. Maximal extraction; subordinated to efficiency. Operations/QA: Victims + constrained \u2192 d\u22480.68, f(d)\u22481.02. High extraction but not maximal; some adaptation capacity. Audit/governance: Mixed + constrained \u2192 d\u22480.54, f(d)\u22480.72. Can influence through regulation; constrained by governance responsibility. Oversight ritual: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification from theater gate, not directionality. Regulatory coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.34. Can mobilize oversight authority; sees exit path.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by distinguishing genuine coordination benefit from extractive layering. At time 0 (\u03b5=0.22, theater=0.28), autonomy creep was primarily rope: solving decision bottlenecks, low performative content. As time progressed, organizational actors began optimizing for efficiency gains while subordinating oversight, causing \u03b5 and theater to climb. By time 6 (\u03b5=0.58, theater=0.64), the constraint had accumulated extractive properties: concentrated authority, degraded oversight, increased friction for resistance. The tangled rope classification captures this hybrid: genuine coordination problem (bottlenecks persist at \u03b5=0.58) plus accumulated extraction (suppression=0.68, theater=0.64). The mandatrophy is not resolved by choosing a single type, but by tracking the temporal drift from rope (\u03b5\u22480.22, theater\u22480.28) toward snare territory (\u03b5\u21920.66 trajectory visible if extrapolated). The omega variables (override cost drift, audit feasibility, regulatory binding) determine whether the constraint stabilizes as tangled rope (with regulatory sunset preventing pure snare) or degrades further toward snare (if regulatory constraints fail and override friction continues climbing). The measurement data showing theater_ratio increase above 0.5 indicates Goodhart drift: audit and human review processes are being substituted with proxy metrics (process compliance, appearance of review) rather than genuine oversight \u2014 this is the critical lifecycle risk."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_accountability_deficit",
+      "organizational_opacity_accumulation"
+    ],
+    "dual_formulation_note": "Model autonomy creep represents a distinct structural constraint from the underlying AI capability growth or the specific models deployed. Two constraint stories in this family: (1) model_autonomy_creep (\u03b5=0.58, Tangled Rope) addresses the organizational extraction mechanism \u2014 how authority transfers while accountability persists. (2) algorithmic_accountability_deficit (if decomposed separately) would address the epistemic problem of whether audit is feasible at all, with different \u03b5 value reflecting empirical status of explainability rather than organizational extraction. Both are downstream of organizational_opacity_accumulation (the root constraint of whether complex model decisions can be genuinely audited)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

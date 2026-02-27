@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "manga_distribution_duopoly",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "manga"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Manga Distribution Duopoly in North America",
+    "topic_domain": "economic/publishing",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "viz_media",
+      "yen_press"
+    ],
+    "victims": [
+      "independent_manga_publishers",
+      "small_press_creators",
+      "north_american_readers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Independent Manga Publisher",
+      "comment": "PERSPECTIVE 1: INDEPENDENT MANGA PUBLISHER (SNARE) \u2014 Trapped by duopolistic control of retail distribution channels (bookstores, comic shops, Amazon). No alternative distribution pathway exists at scale. Career and survival depend on negotiating with one of two gatekeepers. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Press Creator",
+      "comment": "PERSPECTIVE 2: SMALL PRESS CREATOR (SNARE) \u2014 Cannot distribute directly to retail; forced into either Viz/Yen contract terms (unfavorable royalties ~10-15% of cover price after retailer discounts) or self-publishing (no retail presence). Webcomic + self-publishing path exists but has negligible income. d\u22480.85, f(d)\u22481.18, \u03c3=0.9 \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The North American Reader",
+      "comment": "PERSPECTIVE 3: NORTH AMERICAN READER (TANGLED ROPE) \u2014 Benefits from concentrated distribution (reliable availability, consistent formatting standards, retail shelf space). Also constrained by limited title selection \u2014 duopoly has gatekeeping incentives to narrow catalog to proven sellers. Can exit to Japanese imports or webcomics but with friction. d\u22480.60, f(d)\u22480.75, \u03c3=0.9 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Viz Media / Yen Press",
+      "comment": "PERSPECTIVE 4: VIZ MEDIA / YEN PRESS (ROPE) \u2014 Experiences the constraint as coordination: duopoly enables standardization of formats, retail relations, and logistics. Both firms benefit from divided market (reduced price competition, defined territory). Can exit by vertically integrating upstream (licensing) or downstream (direct sales). d\u22480.10, f(d)\u22480.05, \u03c3=0.9 \u2192 \u03c7\u22480.03."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Japanese Publishers and Rights Holders",
+      "comment": "PERSPECTIVE 5: JAPANESE PUBLISHERS / RIGHTS HOLDERS (SNARE) \u2014 Constrained by geographic distance and contract lock-in. Licensing deals with Viz/Yen are long-term and exclusive; lack direct access to North American retail. Arbitrage-seeking by Japanese firms (direct e-publishing) is blocked by existing exclusive contracts. d\u22480.80, f(d)\u22481.12, \u03c3=1.1 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Print Retail Infrastructure",
+      "comment": "PERSPECTIVE 6: PRINT RETAIL INFRASTRUCTURE (PITON) \u2014 Bookstores and comic shops function as channels for duopolistic extraction but are themselves degraded. Theater_ratio=0.45 reflects that retail shelving decisions are partly performative gatekeeping by distributor preference, not consumer demand. Infrastructure persists through inertia (no viable alternative for physical retail); both duopolists reinforce retail dependence despite erosion from digital/webcomic platforms."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Digital / Webcomic Alternative Pathways",
+      "comment": "PERSPECTIVE 7: DIGITAL ALTERNATIVE PATHWAYS (SCAFFOLD) \u2014 Web-based distribution (Webtoon, Tapas, Patreon, direct Kickstarter) represents a growing sunset for print duopoly. Creators increasingly bypass traditional distribution entirely. Sunset timeline: 10-15 years as digital-native cohorts replace print-dependent readers. d\u22480.35, f(d)\u22480.33, \u03c3=1.2 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (FALSE SUMMIT RISK) \u2014 May naturalize duopoly as inevitable (geographic distance, language barrier, scale economics of print distribution). However, structural data (\u03b5=0.58, suppression=0.68) contradicts mountain classification \u2014 this is an extractive institutional arrangement, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "vertical_integration_feasibility",
+      "question": "Can Japanese publishers or new entrants vertically integrate directly into North American retail without the duopoly's infrastructure, and what are the true economics?",
+      "resolution_mechanism": "Case studies of direct Japanese retail attempts (Kadokawa's attempts, manga publishers' e-commerce platforms); cost analysis of warehousing and shipping vs distributor fees",
+      "impact": "If feasible and economical: snare classification weakens\u2014alternative pathways exist. If infeasible: snare reinforced\u2014structural barrier (logistics cost) justifies duopoly.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether vertical integration can break the duopoly"
+    },
+    {
+      "id": "digital_transition_speed",
+      "question": "How quickly will digital/webcomic distribution eclipse print manga distribution in North America, and will duopolists adapt or be displaced?",
+      "resolution_mechanism": "Market share tracking: print vs digital revenue for major manga titles; creator migration rates to webcomic platforms; generational reading habit surveys",
+      "impact": "If transition < 10 years: scaffold sunset is real and near. If transition > 20 years: print duopoly persists; snare classification stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Speed of digital transition relative to print distribution"
+    },
+    {
+      "id": "licensing_contract_exclusivity_duration",
+      "question": "What are the typical exclusivity durations in Japanese publisher licensing agreements with Viz/Yen, and are they shortening?",
+      "resolution_mechanism": "Contract data from Japanese publishers (Shueisha, Kodansha, Kadokawa); analysis of renewal timelines; frequency of non-exclusive or shorter-term deals",
+      "impact": "If durations > 15 years and rigid: snare extraction entrenched. If durations < 5 years and declining: alternative licensees can enter; snare extraction weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Exclusivity duration and trend in manga licensing"
+    },
+    {
+      "id": "independent_publisher_survival_rates",
+      "question": "What percentage of independent manga publishers and small-press creators achieve economic viability outside the duopoly, and is this rate increasing?",
+      "resolution_mechanism": "Longitudinal tracking of Kickstarter manga projects, self-published creators, and independent press survival rates; income distribution analysis for independent vs duopoly-licensed creators",
+      "impact": "If survival rate < 10%: duopoly trap is severe (snare). If > 30% and rising: viable escape routes exist (tangled rope, not snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viable pathways for independent manga distribution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The North American manga distribution market exhibits duopolistic control by Viz Media and Yen Press, which dominate retail placement through exclusive licensing agreements with major Japanese publishers and long-standing relationships with bookstores and comic shops. This constraint operates at the interface between Japanese intellectual property, North American logistics/retail infrastructure, and reader demand. The duopoly extracts economic rent from independent publishers and creators who lack alternative distribution channels, while also extracting from Japanese rights holders through unfavorable licensing terms (typically 40-50% of retail proceeds to distributor, 10-15% to original licensee). Extractiveness has increased over the past 20 years as the duopolists have consolidated market share and consolidated retail relationships. However, a scaffold dynamic is emerging: webcomic platforms, direct digital distribution, and Kickstarter-funded projects represent growing exit routes for creators, particularly younger cohorts. The theater ratio reflects that duopolistic gatekeeping involves both functional coordination (retail standardization, reliable distribution logistics) and performative control (shelf placement decisions driven by distributor preference rather than reader demand).",
+    "key_agents": [
+      "Viz Media: Primary beneficiary (institutional/arbitrage) \u2014 dominant market position, exclusive licensing control, retail channel dominance",
+      "Yen Press: Primary beneficiary (institutional/arbitrage) \u2014 secondary but significant market position, exclusive licensing control, retail channel presence",
+      "Independent Manga Publishers: Primary victim (powerless/trapped) \u2014 no viable distribution alternatives; must negotiate unfavorable terms or abandon print distribution",
+      "Small Press Creators: Primary victim (moderate/constrained) \u2014 cannot reach retail independently; forced into contract terms (10-15% royalties) or self-publishing with minimal income",
+      "North American Readers: Secondary victim (moderate/mobile) \u2014 limited title selection; benefits from retail availability but constrained by gatekeeping",
+      "Japanese Publishers / Rights Holders: Secondary victim (organized/constrained) \u2014 locked into exclusive long-term contracts; limited direct access to North American market",
+      "Print Retail Infrastructure: Institutional channel (institutional/arbitrage) \u2014 reinforces duopolistic control through dependence on distributor relationships; piton status reflects degradation as digital alternatives erode retail relevance",
+      "Digital Distribution Platforms: Emerging alternative (organized/mobile) \u2014 Webtoon, Tapas, Patreon, Kickstarter represent structural sunset for print duopoly"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The duopolists capture 40-50% of retail cover price as distributor fees, independent publishers and creators are locked into unfavorable contracts (10-15% royalties after retailer discount), and Japanese publishers face exclusive licensing restrictions that prevent them from developing direct North American distribution. The extraction is not as severe as a pure monopoly (which would be 0.70+) because (1) some creators achieve viability through self-publishing and digital platforms, (2) readers benefit from reliable retail availability, and (3) the duopolists maintain competitive pressure on each other (preventing even more extraction). Suppression (0.68): High. Multiple barriers prevent exit: (1) exclusive licensing contracts with major Japanese publishers, (2) retail relationships built over decades that strongly favor the duopolists, (3) logistical barriers to independent warehousing and distribution, (4) publisher risk aversion toward unproven small presses. However, suppression is not absolute (0.85+) because digital distribution is eroding print dependence. Theater ratio (0.45): Moderate. The duopolists maintain retail gatekeeping through shelf placement decisions and retailer relationships, which are partly performative (reflect distributor preference, not demand) but also functional (they do solve the coordination problem of getting diverse titles to diverse stores). The ratio has increased over time as market concentration has increased, but remains below 0.70 (piton threshold) because the underlying distribution logistics are genuinely functional.",
+    "perspectival_gap": "Independent publishers and creators perceive pure extraction (Snare) \u2014 they have no viable exit and depend entirely on duopolist terms. Readers perceive mixed coordination and extraction (Tangled Rope) \u2014 they benefit from retail availability but are constrained by limited selection. The duopolists perceive coordination (Rope) \u2014 market division and standardized logistics benefit both firms. Japanese rights holders perceive extraction (Snare) \u2014 locked into long-term exclusive contracts with limited visibility into North American sales data. The print retail infrastructure persists through inertia (Piton) \u2014 it solves a coordination problem but increasingly inefficiently as digital alternatives grow. Digital platforms represent an emerging exit (Scaffold) \u2014 webcomic distribution and direct sales are building alternative pathways with eventual sunset of print dependence. The false summit risk is naturalizing the duopoly as inevitable due to 'economics of scale' and 'geographic distance' \u2014 the structural data reveals this as an institutional arrangement (snare extraction + rope gatekeeping), not a natural law.",
+    "directionality_logic": "Independent publishers and creators: Victims + trapped \u2192 d\u22480.90, f(d)\u22481.38. Maximum extraction; no exit options within the print distribution system. Readers: Victims + mobile (constrained but with digital alternatives) \u2192 d\u22480.60, f(d)\u22480.75. Significant extraction but not maximum; readers can exit to webcomics, Japanese imports, or digital platforms. Duopolists (Viz/Yen): Beneficiaries + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Net beneficiaries; can exit if they choose or adapt to digital competition. Japanese publishers: Victims + constrained (locked in by exclusive contracts but with long-term alternative strategies) \u2192 d\u22480.80, f(d)\u22481.12. High extraction; trapped in current licensing regime but not permanently. Retail infrastructure: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Piton classification comes from theater gate, not from high chi; retailers benefit from duopolist relationships but are themselves degraded by shifting demand.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that the constraint exhibits genuine snare characteristics for small/independent actors (high extraction, high suppression, high d-values for victims) while simultaneously containing rope/scaffold components for duopolists and alternative platform providers. The constraint is NOT purely extractive (that would be \u03b5\u22650.70, \u03c7\u22650.66 for all perspectives, suppression\u22650.60) \u2014 it also solves a coordination problem (retail standardization, format consistency) that benefits readers and firms. The theater ratio (0.45) is moderate because the duopolistic gatekeeping, while performative, rests on genuinely functional distribution infrastructure. The snare classification is justified because victims (independent creators) have effectively zero exit options within the print system, suppression is high (exclusive licensing, retail barriers), and the extraction mechanism (40-50% distributor fee + unfavorable royalty terms) is substantial. The scaffold perspective is credible because digital platforms are already capturing significant market share from younger cohorts and projections suggest print will decline to <30% of manga revenue within 15 years. This resolves the mandatrophy: the duopoly is a snare for small actors and creators, a rope for the duopolists themselves, a scaffold for digital alternatives, and a piton for print retail \u2014 all simultaneously, from different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "japanese_publishing_market_concentration",
+      "digital_manga_platform_ecosystem"
+    ],
+    "dual_formulation_note": "This constraint is downstream of Japanese publishing industry concentration (which limits available titles for North American licensing) and upstream of digital manga platform ecosystems (which represent structural alternatives to print distribution). The duopoly's extractiveness is amplified by upstream concentration but weakened by downstream digital alternatives."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

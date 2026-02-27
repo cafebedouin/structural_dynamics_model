@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "us_employer_health_insurance",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "esi"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "US Employer-Sponsored Insurance (ESI) System",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_employers",
+      "insurance_companies",
+      "high_income_workers"
+    ],
+    "victims": [
+      "non_employed_individuals",
+      "low_income_workers",
+      "gig_economy_workers",
+      "unemployed_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsured and Precariously Employed",
+      "comment": "PERSPECTIVE 1: UNINSURED/PRECARIOUSLY EMPLOYED (SNARE) \u2014 Lacks access to employer coverage due to unemployment, gig work, or part-time status. Trapped by healthcare necessity and cost; cannot exit employment without losing coverage. Cannot opt into affordable alternative systems. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Employer-Dependent Worker",
+      "comment": "PERSPECTIVE 2: EMPLOYER-DEPENDENT WORKER (SNARE) \u2014 Covered by employer plan but constrained by switching costs. Changing jobs risks coverage gap, pre-existing condition exclusions (historically), or plan discontinuity. Extraction mechanism: employer captures labor compliance beyond productivity value; worker pays implicit cost through wage suppression. d\u22480.80, f(d)\u22481.22, \u03c3=1.0 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Large Employer",
+      "comment": "PERSPECTIVE 3: LARGE EMPLOYER (ROPE) \u2014 Benefits from tax subsidies (employer contributions deductible, employee benefits excluded from taxable income), negotiating leverage with insurers, and labor cost bundling. Experiences constraint as coordination mechanism: offers coverage to attract and retain talent, solve adverse selection by pooling risk. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Insurance Industry",
+      "comment": "PERSPECTIVE 4: INSURANCE INDUSTRY (ROPE) \u2014 Captured both demand (employer mandate for coverage to attract workers) and supply (regulatory entrenchment through tax code; direct billing to employers creates sticky relationships). Benefits from pooling, fee extraction, and administrative complexity. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Self-Employed and Small Business",
+      "comment": "PERSPECTIVE 5: SELF-EMPLOYED/SMALL BUSINESS (TANGLED ROPE) \u2014 Can negotiate coverage and costs (mobile exit), but faces adverse selection risk and price disadvantage vs. large pools (constrained by scale). Experiences both coordination (risk pooling) and extraction (premium loading for small group). requires_active_enforcement: true because small group insurance requires regulatory coordination (state insurance regulators, ERISA exemptions) and ongoing enforcement of coverage standards. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsurable Population",
+      "comment": "PERSPECTIVE 6: UNINSURABLE POPULATION (SNARE) \u2014 Historically excluded from private coverage due to pre-existing conditions (now legally prohibited, but enforcement remains patchy). Trapped by systemic exclusion; no legitimate exit path within the ESI system. Medicaid (alternative) is state-dependent, income-conditional, and carries stigma. Effective extraction is maximal. d\u22480.98, f(d)\u22481.50, \u03c3=1.0 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Tax Code and Regulatory Framework",
+      "comment": "PERSPECTIVE 7: TAX CODE/REGULATORY FRAMEWORK (PITON) \u2014 The constraint's institutional substrate. ESI persists because of path-dependent tax treatment (26 U.S.C. \u00a7 162(a), \u00a7 106: employer contributions deductible, employee benefits excluded from income) and regulatory carve-outs (ERISA safe harbors). The tax structure is largely performative \u2014 it creates the illusion of 'employer-provided' coverage while obscuring the economic reality (employer payments are deferred compensation). theater_ratio=0.61 reflects high administrative overhead (claims processing, verification, compliance) with declining functional coupling to actual health outcomes. The framework persists through institutional inertia; reforming it requires Congressional action that accumulated interests block."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Health System and Labor Regulators",
+      "comment": "PERSPECTIVE 8: PUBLIC HEALTH/LABOR REGULATORS (TANGLED ROPE) \u2014 Tasked with ensuring health coverage access and preventing employment discrimination, but structurally dependent on ESI as the dominant coverage mechanism. Sees constraint as requiring active enforcement (ACA mandate enforcement, HIPAA portability rules, pre-existing condition protections). Constrained by Congressional reluctance to dismantle tax subsidies (worth ~$300B/year). Experiences both coordination (risk pooling for large employers) and extraction (regulatory complexity creates barriers for small/medium firms). d\u22480.60, f(d)\u22480.82, \u03c3=1.0 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 Risks naturalizing ESI as inevitable: 'Healthcare must be tied to employment because employers have the bargaining power and risk pools.' This perspective treats the constraint as immutable \u2014 an emergent property of labor markets and insurance economics. However, the structural data (\u03b5=0.52, suppression=0.68, theater=0.61) contradicts true natural law signature (\u22640.25 extractiveness, \u22640.05 suppression). The engine identifies this as a false summit: ESI is a contingent institutional arrangement (WWII tax code accident + regulatory path-dependence), not a law of nature. The false natural law framing obscures policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "employer_exit_feasibility",
+      "question": "Could large employers realistically switch to defined-contribution healthcare financing (give workers vouchers rather than coverage) without triggering regulatory resistance or adverse selection collapse?",
+      "resolution_mechanism": "Modeling of enrollment dynamics if all large employers switched to healthcare voucher systems; measurement of adverse selection effects on individual market; regulatory impact analysis of Congressional action required to eliminate tax subsidies",
+      "impact": "If feasible: constraint is primarily path-dependent tax code artifact (easier to reform). If infeasible: constraint is locked in by labor market coordination failure (harder to reform).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether employer exit from coverage provision is structurally feasible"
+    },
+    {
+      "id": "individual_market_sufficiency",
+      "question": "Can the individual health insurance market (including ACA exchanges) achieve the same risk-pooling efficiency and adverse-selection prevention as large employer group plans without regulatory intervention?",
+      "resolution_mechanism": "Comparative analysis of premium loading, coverage denial rates, and adverse selection magnitude in individual market vs. group plans; assessment of whether individual market would stabilize with long-term subsidies or regulatory mandates",
+      "impact": "If sufficient: ESI is extractive without coordination benefit (pure Snare). If insufficient: constraint has genuine coordination function (Tangled Rope justified).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether individual market can achieve group plan efficiency without ESI"
+    },
+    {
+      "id": "political_reform_threshold",
+      "question": "What distribution of costs (uninsured rate, per-capita healthcare spending, employer administrative burden) would trigger Congressional action to eliminate ESI tax subsidies and move to universal coverage?",
+      "resolution_mechanism": "Historical policy reform analysis; survey of reform proposals and Congressional estimates; scenario modeling of trigger points for legislative coalitions",
+      "impact": "If threshold is near current trajectory: constraint is unstable and could collapse quickly. If threshold is very high: constraint is institutionally locked and will persist unless exogenous shock (pandemic, macroeconomic shift) changes calculus.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political threshold for ESI tax subsidy elimination"
+    },
+    {
+      "id": "wage_suppression_magnitude",
+      "question": "How much of the wage stagnation in real compensation (1980-2023) is attributable to workers bearing implicit costs of ESI employment lock (foregone job mobility, skill misallocation, employer rent-extraction)?",
+      "resolution_mechanism": "Econometric estimation of wage premiums for jobs offering ESI vs. equivalent jobs without coverage; measurement of switching costs and job-match quality loss from employment lock; comparison of wage trajectories in high vs. low ESI coverage regions",
+      "impact": "If large (>1% of annual wage growth foregone): constraint is severely extractive. If small (<0.1%): extraction is localized to vulnerable subpopulations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of wage suppression from ESI lock-in"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 1945,
+    "end": 2015
+  },
+  "commentary": {
+    "narrative_context": "The US employer-sponsored insurance (ESI) system is a path-dependent artifact of World War II wage controls. During the war, the Treasury ruled that employer contributions to health insurance were not subject to wage caps or income tax, creating an incentive for employers to offer coverage instead of raising wages. This tax treatment persisted after the war and hardened into institutional reality. ESI now covers ~160 million Americans and is the dominant source of private insurance. The constraint operates through employment lock: workers fear losing coverage when changing jobs, suppressing labor mobility and enabling employers to extract rents in the form of compressed wages and reduced job flexibility. The system is extractive for uninsured workers (powerless victims), constrained for employer-dependent workers (moderate victims), beneficial for large employers and insurers (institutional beneficiaries), and performative for the tax code and regulatory framework (piton). The false natural law view treats this as inevitable, but the structural metrics reveal it as a contingent institutional arrangement that has become increasingly dysfunctional as healthcare costs and employment precarity have grown.",
+    "key_agents": [
+      "Large employers (institutional/arbitrage): Primary beneficiary \u2014 captures tax subsidies, negotiating leverage, labor compliance beyond productivity",
+      "Uninsured individuals (powerless/trapped): Primary victim \u2014 excluded from affordable coverage; cannot exit healthcare necessity",
+      "Employer-dependent workers (moderate/constrained): Secondary victims \u2014 locked into jobs due to coverage dependency; face wage suppression",
+      "Insurance companies (institutional/arbitrage): Secondary beneficiary \u2014 direct billing to employers creates sticky relationships; pooling at scale",
+      "Self-employed/small business (powerful/mobile): Mixed experience \u2014 can exit but face adverse selection; constrained by scale disadvantage",
+      "Uninsurable population (powerless/trapped): Maximal extraction victim \u2014 historically excluded from private coverage; trapped by stigmatized alternatives",
+      "Tax code and regulatory framework (institutional/arbitrage): Institutional substrate \u2014 26 U.S.C. \u00a7 162(a), \u00a7 106 create the formal structure; ERISA safe harbors entrench insurer power",
+      "Public health and labor regulators (organized/constrained): Institutional actors with conflicting mandates \u2014 tasked with access but dependent on ESI as primary mechanism",
+      "Analytical observer (analytical/analytical): Risks naturalizing contingent arrangement as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts measurably from three victim groups: uninsured workers (denied coverage), employer-dependent workers (wage suppression ~2-3% of compensation), and small businesses (adverse selection loading). However, extractiveness is not maximal because large employers experience net benefits (arbitrage), and the coordination function (risk pooling) is real, even if increasingly dysfunctional. The trajectory shows growth from 0.28 (1945, when ESI was marginal) to 0.52 (2015, when ESI became extractive as uninsured rates rose and healthcare costs accumulated). Suppression (0.68): High. Multiple barriers prevent exit: healthcare necessity (cannot opt out of needing care), switching costs (coverage gaps, pre-existing condition loading until 2014), regulatory entrenchment (tax code makes alternative systems uncompetitive), and labor market structure (most job offers include coverage, making refusal difficult). The Affordable Care Act (2010) reduced suppression by enabling individual market access, but state-level variation and persistent premium gaps maintain suppression. Theater ratio (0.61): Moderate-high. ESI exhibits substantial administrative overhead (~8-12% of premiums) that doesn't correlate with health outcomes. Employer-negotiated plan design (metal tiers, deductibles, network restrictions) creates the appearance of meaningful choice while obscuring the reality that employers design plans around cost management, not patient benefit. The rise in high-deductible plans (2005-2015) reflects employers shifting costs to workers while maintaining the coverage theater. Beneficiaries/Victims: Large employers and insurers benefit from labor lock-in and regulatory entrenchment. Victims are uninsured individuals, employer-dependent workers facing wage suppression, gig economy workers excluded from coverage, and small businesses paying adverse-selection premiums.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival disagreement. Large employers see pure Rope (coordination mechanism for risk pooling and labor competition). Insurers see Rope (pooling benefit, regulatory stability). Uninsured workers see Snare (locked out by cost and structure). Employer-dependent workers see Snare (locked in by switching costs and healthcare necessity). Small businesses see Tangled Rope (both risk pooling and adverse-selection extraction). Regulators see Tangled Rope (mandated to ensure access while dependent on ESI as mechanism). The analytical observer risks seeing Mountain (healthcare must follow employment because of insurance economics), but this naturalizes what is actually a regulatory choice. The perspectival gap reflects that the same structural phenomenon \u2014 tying healthcare to employment \u2014 creates coordination benefits for some agents and extraction for others, without a coherent mechanism to satisfy all perspectives simultaneously.",
+    "directionality_logic": "Large employers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary through tax subsidies and labor compliance. Insurance industry: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary through regulatory entrenchment and pooling. Uninsured individuals: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction; no legitimate exit within ESI framework. Employer-dependent workers: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.22. High extraction through wage suppression and employment lock; some mobility but at high cost. Self-employed/small business: Mixed + mobile \u2192 d\u22480.55, f(d)\u22480.75. Can exit (mobile) but face adverse selection; balanced between coordination benefit and extraction cost. Uninsurable population: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.50. Maximal extraction; historical exclusion from coverage, trapped by systemic gatekeeping. Public health regulators: Constrained + organized \u2192 d\u22480.60, f(d)\u22480.82. Intermediate extraction; have institutional power but face Congressional constraints on tax code reform.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that ESI is a Snare, not a Rope. The extraction (0.52) exceeds the coordination benefit because the suppression (0.68) prevents exit while the pooling could be achieved through individual market reform (with subsidies). The Tangled Rope classification from self-employed and regulator perspectives is justified by their constrained exit options and need for active enforcement, but the aggregate system is extractive. The false natural law view (Mountain classification from analytical observer) is revealed as such by the base properties: \u03b5=0.52 >> 0.25 (mountain threshold), suppression=0.68 >> 0.05 (mountain threshold). The engine's false summit detector flags this. The functional test: could the coordination function (risk pooling) be achieved through alternative mechanisms (individual market + subsidies, public option, universal coverage)? Yes, empirically demonstrated in other high-income countries. Therefore, the constraint is not a coordination failure requiring ESI to solve \u2014 it is a regulatory choice maintaining ESI for beneficiary extraction. This is the mandatrophy resolution: the constraint is a Snare (extractive) with some theaters of coordination (Rope-like experiences for beneficiaries and large pooled workers), not a Rope with some extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_healthcare_cost_escalation",
+      "employment_mobility_suppression",
+      "uninsured_population_trap",
+      "small_business_adverse_selection"
+    ],
+    "dual_formulation_note": "ESI is composed of multiple structurally distinct constraints that should ideally be decomposed: (1) the tax code structure (why ESI receives preferential tax treatment), (2) the regulatory entrenchment (why individual market cannot achieve competitive equilibrium), (3) the employment lock mechanism (how wage suppression occurs), (4) the adverse selection dynamics (how uninsured and small-group pools degrade). This story treats them as a unified system constraint; a more refined corpus would separate these into linked stories with individual \u03b5 values reflecting their different empirical status."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
+}

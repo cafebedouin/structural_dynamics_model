@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "ua_mobilization_protector_cert",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ua_prot"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Ukrainian 'Protector' Certificate Mobilization System",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_mobilization_authority",
+      "state_security_apparatus"
+    ],
+    "victims": [
+      "conscriptable_male_population",
+      "labor_market_fluidity",
+      "civil_liberties"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Conscriptable Citizen",
+      "comment": "PERSPECTIVE 1: CONSCRIPTABLE CITIZEN (SNARE) \u2014 Male citizens subject to mobilization have no exit option from the Protector certificate system. Movement, employment, and travel are contingent on certificate status. Cannot avoid the constraint; extraction (mobilization obligation, surveillance cost) is maximal. High suppression via legal and practical barriers to geographic exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Private Sector Employer",
+      "comment": "PERSPECTIVE 2: PRIVATE SECTOR EMPLOYER (TANGLED ROPE) \u2014 Benefits from workforce stability predictability (the state certifies who is available) and reduced unplanned mobilization shocks. But constrained by mandatory credential verification, unable to hire undocumented workers, and subject to state enforcement audits. Mixed coordination (manages labor supply) and extraction (state control of hiring decisions)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Central Mobilization Authority",
+      "comment": "PERSPECTIVE 3: CENTRAL MOBILIZATION AUTHORITY (ROPE) \u2014 Primary beneficiary. The certificate system solves a genuine coordination problem: identifying available manpower, verifying status in real-time, and reducing administrative overhead. The authority experiences the constraint as pure coordination tool with net benefit. High exit optionality through control over system rules."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Regional Labor Market",
+      "comment": "PERSPECTIVE 4: REGIONAL LABOR MARKET (SNARE) \u2014 Unable to exit the digital gatekeeping constraint. Labor fluidity and cross-border mobility are reduced by certificate requirements. Workers cannot seek employment outside the tracking system. The labor market's flexibility is extracted; compensation (wage growth, job quality) does not rise to offset lost dynamism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Society/Rights Coalition",
+      "comment": "PERSPECTIVE 5: CIVIL SOCIETY RIGHTS COALITION (PITON) \u2014 Organized resistance frames the certificate system as rights-violating surveillance infrastructure. But the coalition's primary function \u2014 advocacy for legal protections \u2014 has degraded: actual monitoring practices often exceed legal safeguards; enforcement is theatrical (publicized arrests for fraud while elite evasion proceeds). The constraint persists through institutional inertia and emergency justification, not because it solves the advocacy problem."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Military Aid Consortium",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL MILITARY AID CONSORTIUM (SCAFFOLD) \u2014 NATO and allied military advisors designed the Protector system as a temporary coordination mechanism for the acute phase of conflict (2024-2026). The system has an implicit sunset: as conflict intensity declines and regular conscription resumes, the digital infrastructure is meant to transition to standard military records. International actors have arbitrage optionality \u2014 they can withdraw support and technical infrastructure if Ukraine's political use of the system diverges from military necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational vantage, state mobilization capacity requires population tracking \u2014 the argument goes that any wartime state needs to know who is available for conscription. This perspective risks naturalizing the Protector system as an inevitable requirement of sovereignty and defense. However, the structural data contradicts the mountain classification: high suppression (0.72) and active enforcement requirement indicate contingent institutional design, not natural law. This is a false summit \u2014 a naturalized contingency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "certificate_scope_creep",
+      "question": "Does the Protector certificate system remain limited to military mobilization, or does it expand to labor control, movement restrictions, and social benefit allocation?",
+      "resolution_mechanism": "Historical tracking of system scope; analysis of secondary legislation and enforcement guidelines; comparison of stated legal scope vs actual administrative use",
+      "impact": "If scope remains limited: certificate system is scaffold (temporary, military-specific). If scope expands: system becomes snare (permanent surveillance infrastructure). Scope creep would increase extractiveness from 0.68 to 0.85+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of mission creep beyond military mobilization"
+    },
+    {
+      "id": "international_sunset_enforcement",
+      "question": "Will the international military aid consortium actually enforce the sunset clause by withdrawing technical/logistical support when the acute conflict phase ends?",
+      "resolution_mechanism": "Monitoring of international statements on system duration; analysis of NATO technical support agreements; observation of decommissioning timelines in post-conflict scenarios",
+      "impact": "If sunset enforced: scaffold classification confirmed, high plausibility of system termination. If sunset not enforced: system transitions to permanent piton (degraded surveillance theater). Sunset failure would reveal that international actors have arbitrage exit in principle only.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether international partners will enforce the system's sunset"
+    },
+    {
+      "id": "elite_evasion_rates",
+      "question": "What percentage of elite/politically connected males successfully evade Protector certificate obligations compared to non-elite populations?",
+      "resolution_mechanism": "Statistical analysis of mobilization rates by socioeconomic quintile and political affiliation; investigation of exemption grant patterns; analysis of deployment outcomes",
+      "impact": "If evasion rates are equal: system functions as neutral coordination tool (snare classification confirmed equally across groups). If elite evasion >> non-elite: extraction is asymmetric and regressive, confirming snare + rights violation framing. Evasion differential > 3x would increase mandatrophy urgency.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Differential evasion rates by social class"
+    },
+    {
+      "id": "certificate_fraud_prevalence",
+      "question": "What is the actual rate of Protector certificate fraud (fake status updates, bribed officials, stolen credentials) relative to the theater of enforcement?",
+      "resolution_mechanism": "Audit of certificate issuance procedures; investigation of documented fraud cases; comparison of enforcement arrests vs estimated fraud volume; analysis of insider threat reports",
+      "impact": "If fraud is widespread: certificate system is piton (theatrical enforcement masking actual chaos). If fraud is rare: system is effective snare (genuine tracking + suppression). Theater ratio (0.58) suggests moderate fraud; empirical resolution would clarify whether theater exceeds actual functionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of certificate fraud relative to enforcement theater"
+    },
+    {
+      "id": "conscientious_objector_pathway",
+      "question": "Does Ukraine's legal framework provide a real, accessible alternative to military service for conscientious objectors, or is the alternative (civilian service) substantially more burdensome?",
+      "resolution_mechanism": "Comparative analysis of military vs civilian service requirements; documentation of conscientious objector case outcomes; assessment of actual accessibility of alternative pathways",
+      "impact": "If alternative is genuinely accessible and comparable: exit_options for some conscriptable population would upgrade from 'trapped' to 'constrained', changing chi calculation. If alternative is illusory: trapped classification confirmed, snare strengthened. This omega affects mandatrophy severity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Real accessibility of conscientious objector pathways"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The Ukrainian Protector certificate system represents a wartime digital mobilization infrastructure designed to track conscriptable population status, verify labor market participation, and coordinate rapid deployment. Launched in 2024 as an emergency measure, the system combines genuine military coordination needs (the state must identify available manpower) with powerful state extraction capacity (surveillance, movement control, mandatory participation). The constraint exhibits high suppression (0.72) through both technical barriers (biometric requirements, constant credential verification) and legal mechanisms (penalties for non-compliance, restrictions on employment and travel without valid certificates). Theater ratio (0.58) reflects the gap between the system's stated function (efficient mobilization coordination) and its actual operation (enforcement is visible but incomplete; elite evasion persists; administrative procedures are often performative). Extractiveness has risen from 0.52 at system launch to 0.68 by 2026, driven by scope creep into labor market controls and the degradation of promised sunset mechanisms. The constraint manifests as pure extraction (snare) from the perspective of trapped conscriptable citizens, mixed coordination-extraction (tangled rope) from employers' perspectives, pure coordination (rope) from the central mobilization authority's perspective, and false natural law (mountain) from analytical observers who naturalize surveillance as inherent to state defense. The mandatrophy (\u03c7 > 0.70 requires resolution) is resolved through explicit acknowledgment that the system, while delivering genuine coordination benefits to state actors, imposes severe costs on citizens with no exit options and exhibits signs of degradation toward permanent surveillance infrastructure (piton trajectory).",
+    "key_agents": [
+      "Conscriptable Male Citizens: Primary victims (powerless/trapped) \u2014 subject to mandatory participation, movement restrictions, mandatory credential verification; no legal exit short of emigration",
+      "Central Mobilization Authority: Primary beneficiary (institutional/arbitrage) \u2014 benefits from real-time population tracking, efficient manpower identification, deployment coordination; full control over system rules",
+      "Private Sector Employers: Secondary beneficiary (moderate/constrained) \u2014 gain workforce stability predictability and reduced mobilization shocks, but constrained by mandatory verification and hiring controls",
+      "International Military Aid Consortium: Temporary beneficiary (organized/arbitrage) \u2014 designed system for military coordination purposes; retains withdrawal option if system diverges from military necessity",
+      "Civil Society Rights Organizations: Organized opposition (organized/constrained) \u2014 advocate for legal protections; constrained by emergency justifications and enforcement theater; primary function degraded",
+      "Regional Labor Market: Diffuse victim (powerless/trapped) \u2014 unable to exit gatekeeping constraint; loses fluidity and cross-border mobility; no compensation mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The system extracts substantial value from the conscriptable population in the form of surveillance costs, movement restrictions, and forced labor availability. The 2-year trajectory from 0.52 to 0.68 reflects both system maturation (initial 0.52 was optimistic) and scope creep into labor market controls. The value is not maximal (0.85+) because some structural features remain partial: elite evasion occurs; enforcement is incomplete; international sunset clause is nominally present. Suppression (0.72): High. Technical barriers (biometric authentication, digital credential requirements) and legal barriers (employment penalties, travel restrictions, criminal liability) create substantial suppression. Exit cost for conscriptable males is extremely high \u2014 emigration (or elite-level corruption) are the primary exit routes. Theater ratio (0.58): Moderate-high. The system maintains visible enforcement (publicized arrests for fraud, credential revocation ceremonies) while actual prevention effectiveness is unclear due to endemic fraud and elite evasion. The theater appears to be increasing as the system matures \u2014 more elaborate enforcement procedures with less proportional impact. Claimed type (snare): Justified by high extractiveness, high suppression, and beneficiary-victim asymmetry. The system is designed to solve a real coordination problem (military mobilization) but its implementation has characteristics of extraction: asymmetric burden distribution, limited exit options, and institutional inertia toward permanence.",
+    "directionality_logic": "Directionality values are derived from structural positions within the mobilization flow. Conscriptable citizens occupy the position of full targets: they are victims with no exit optionality (d \u2192 0.95, f(d) \u2192 1.42, high experienced \u03c7). The central authority occupies the position of full beneficiary: they receive the coordination value with arbitrage exit optionality (d \u2192 0.05, f(d) \u2192 -0.12, negative experienced \u03c7). Employers occupy intermediate positions: they are partial beneficiaries (workforce predictability) but also constrained (hiring controls), so d \u2248 0.45-0.55 depending on sector. International actors have arbitrage exit, placing them at low d despite organization level. Civil society organizations face trapped constraints (cannot exit advocacy function) with powerless institutional status (can advocate but cannot block system), yielding d \u2248 0.65. The regional labor market is abstract and powerless with no exit mechanism (d \u2192 0.95). The directionality pattern shows a sharp asymmetry: institutional beneficiaries at low d, conscriptable population at very high d, creating the snare signature.",
+    "perspectival_gap": "The perspectival gap is extreme. The central authority sees a well-functioning coordination mechanism (rope) \u2014 the certificate system genuinely solves the problem of identifying available manpower and reducing deployment lags. Employers see a mixed coordination-extraction system (tangled rope) \u2014 they benefit from workforce predictability but are constrained by state control. Conscriptable citizens see pure extraction (snare) \u2014 no benefit to offset the surveillance, movement control, and forced availability. International actors see a temporary coordination scaffold (scaffold) \u2014 designed for the acute conflict phase with implicit sunset. Civil society sees a degraded rights violation system (piton) \u2014 the legal framework for protecting conscientious objectors exists but is increasingly theatrical; enforcement proceeds with minimal regard for the stated protections. The analytical observer risks seeing naturalized necessity (mountain) \u2014 that states require population tracking for defense \u2014 which is contradicted by the structural data showing high suppression and active enforcement, indicating contingent institutional design rather than immutable law. This perspectival gap is the primary diagnostic marker that the constraint is not a mountain but rather a snare with false natural law narratives.",
+    "mandatrophy_analysis": "The constraint exhibits mandatrophy at \u03c7 \u2248 0.73-0.78 (depending on perspective and scope modifiers). The mandatrophy is resolved through multi-level recognition: (1) The system delivers genuine coordination benefits to state actors and employers \u2014 this is not false extraction dressed as coordination, but real coordination mixed with severe extraction from other perspectives. (2) The asymmetry is extreme and structural: conscriptable citizens bear >90% of the cost with near-zero coordination benefit, while the authority reaps >90% of the benefit with near-zero cost. This asymmetry exceeds the coordination threshold and confirms the snare classification. (3) The scope has expanded beyond military coordination into labor market control, indicating mission creep and institutional inertia toward permanence. (4) The theater ratio (0.58) is elevated, suggesting that enforcement is becoming increasingly performative relative to actual prevention. (5) International actors retain arbitrage exit (conditional support), which distinguishes this snare from a total trap but does not resolve the mandatrophy \u2014 it only clarifies that the snare is constrainable rather than absolute. The resolution concludes: This is a genuine snare with coordination components (not pure extraction), but the extraction vastly exceeds the coordination value and is borne by trapped agents with no exit optionality. The system is resolvable only by (a) genuine sunset enforcement, (b) equitable burden-sharing (elite inclusion in conscription, not just evasion), or (c) genuine conscientious objector pathways. Absence of all three mechanisms confirms mandatrophy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ukraine_labor_market_mobilization_drag",
+      "diaspora_return_disincentive"
+    ],
+    "dual_formulation_note": "The Protector system is the primary technological constraint; it links upstream to the geopolitical conflict necessitating mobilization and downstream to labor market and diaspora effects. Related constraints include the labor market drag from conscriptable population unavailability and the diaspora return disincentive created by certificate requirement for re-entry. This story focuses on the direct certificate system; downstream stories model its economic and social consequences."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -2,159 +2,224 @@
   "header": {
     "constraint_id": "china_africa_zero_tariff_2026",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cazt"
   },
   "base_properties": {
-    "extractiveness": 0.55,
+    "extractiveness": 0.52,
     "suppression": 0.65,
-    "theater_ratio": 0.4,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "China-Africa Zero-Tariff Trade Framework",
-    "topic_domain": "economic/geopolitical",
+    "topic_domain": "economic/trade_policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "chinese_state_and_industry",
-      "participating_african_exporters"
+      "chinese_manufacturing_exporters",
+      "african_consumer_markets",
+      "chinese_state_infrastructure_lenders"
     ],
     "victims": [
-      "eswatini_government",
-      "western_trade_blocs",
-      "uncompetitive_african_domestic_industries"
+      "african_domestic_manufacturers",
+      "african_fiscal_revenues",
+      "african_industrial_development"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
-      "agent_power": "organized",
+      "agent_power": "powerless",
       "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "The Excluded Nation (Eswatini)",
-      "comment": "PERSPECTIVE 1: ESWATINI (SNARE) - As a nation-state, Eswatini is 'organized' but is 'trapped' outside this framework due to political conditionality (Taiwan relations). The constraint acts as pure coercive extraction of political alignment, offering no coordination benefit and suppressing its access relative to its neighbors. d is derived high from victim+trapped status, leading to high χ and a Snare classification."
+      "label": "The African Domestic Manufacturer",
+      "comment": "PERSPECTIVE 1: AFRICAN DOMESTIC MANUFACTURER (SNARE) \u2014 Cannot exit the zero-tariff framework without losing market access; faces unmediated competition from subsidized Chinese manufactures. Small enterprises lack scale, logistics infrastructure, and state support to compete. Maximum experienced extraction \u2014 immobile, facing elimination from own domestic market."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The African Government Treasury",
+      "comment": "PERSPECTIVE 2: AFRICAN GOVERNMENT TREASURY (TANGLED ROPE) \u2014 Benefits from reduced import costs for consumer goods and infrastructure components; faces reduced tariff revenue and loss of fiscal capacity for industrial policy. Constrained by debt obligations to Chinese lenders (infrastructure financing creates obligation to support trade framework). Mixed coordination-extraction: achieves consumer welfare gains but loses fiscal autonomy and development capacity."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Framework Architect (China)",
-      "comment": "PERSPECTIVE 2: CHINA (ROPE) - As the architect, China has 'arbitrage' exit and experiences the framework as a pure coordination mechanism to secure resources, expand markets, and build geopolitical influence. The structural trade imbalance is viewed as a feature, not a bug. d is derived low from beneficiary+arbitrage status, yielding negative χ (net benefit)."
+      "label": "Chinese Manufacturing Exporters",
+      "comment": "PERSPECTIVE 3: CHINESE MANUFACTURING EXPORTERS (ROPE) \u2014 Primary beneficiaries with full arbitrage exit (can redirect exports elsewhere; negotiate terms through state apparatus). Experience the framework as pure coordination mechanism \u2014 access to market that would otherwise require tariff navigation. Positive extraction for this agent; net subsidizer of the constraint through domestic Chinese state policy."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Participating African Nation",
-      "comment": "PERSPECTIVE 3: PARTICIPATING AFRICAN NATION (TANGLED ROPE) - Experiences both a genuine coordination benefit (tariff-free market access) and asymmetric extraction (risk of dependency, exacerbation of trade imbalance). Exit is 'constrained' by the high economic and diplomatic costs of withdrawal. This mixed experience is the canonical Tangled Rope."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "institutional",
       "time_horizon": "generational",
       "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Pan-African Trade Coalition",
+      "comment": "PERSPECTIVE 4: PAN-AFRICAN TRADE COALITION (TANGLED ROPE) \u2014 Organized resistance (African Union, ECOWAS, regional trade bodies) can negotiate framework terms but lack exit option (collective sanction would isolate Africa from trade entirely). Framework provides some coordination benefit (market access, reduced transaction costs) alongside extraction (lost policy autonomy, deindustrialization risk). Organized power and constrained exit produce moderate experienced extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Geopolitical Competitor (Western Powers)",
-      "comment": "PERSPECTIVE 4: WESTERN POWERS (TANGLED ROPE) - View the framework as a hybrid of legitimate trade coordination and an extractive geopolitical tool that undermines their own leverage and market access. Their ability to offer a competitive alternative is 'constrained'. They are a structural victim of the shift in influence."
+      "label": "The Neoliberal Trade Regime",
+      "comment": "PERSPECTIVE 5: NEOLIBERAL TRADE REGIME (PITON) \u2014 The broader institutional apparatus (WTO norms, structural adjustment doctrine, development finance conditionality) presents the zero-tariff framework as optimal policy and inevitable outcome. The regime's verification mechanism (comparative advantage theory, aggregate growth metrics) is substantially performative \u2014 high theater because actual outcomes (deindustrialization, fiscal squeeze, debt accumulation) contradict the theoretical narrative. The regime persists through institutional inertia and ideological investment, not functional verification of its claims."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Chinese State Apparatus",
+      "comment": "PERSPECTIVE 6: CHINESE STATE APPARATUS (TANGLED ROPE) \u2014 Uses zero-tariff framework as tool for geopolitical influence and market expansion. Maintains exit optionality (can modulate framework, shift trade flows, or reorient development focus). Simultaneously constrained by WTO MFN obligations and need for stable supply chains. Framework achieves both coordination (regional market integration) and extraction (industrial hierarchy, debt leverage through infrastructure financing). Asymmetric power and mobile exit produce moderate effective extraction from Beijing's perspective \u2014 high agency in determining terms."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The African Industrial Policy Insurgency",
+      "comment": "PERSPECTIVE 7: AFRICAN INDUSTRIAL POLICY INSURGENCY (SCAFFOLD) \u2014 Organized movements (Ethiopia's manufacturing corridor, Rwanda's tech investment, South Africa's renewables policy) are building alternatives that bypass dependence on zero-tariff imports. These efforts are temporary scaffolding: they lack the scale and state backing of coordinated African industrial policy but represent pathways to exit extraction. Theater ratio for this perspective is lower \u2014 direct manufacturing investment has immediate functional verification (jobs, tax revenue, skills) rather than relying on comparative-advantage narrative."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) - The system's default view. It recognizes the genuine coordination function (market access) but also the high base extraction (ε=0.55) from the structural trade imbalance and the high suppression (0.65) from political conditionality and lack of alternatives. This confirms the Tangled Rope classification."
+      "label": "The Analytical Observer (Immutable Logic View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / IMMUTABLE LOGIC VIEW (MOUNTAIN) \u2014 From a civilizational, universal perspective, zero-tariff trade is presented as an immutable law of optimal economics: comparative advantage dictates specialization; tariffs distort efficiency; free trade maximizes aggregate welfare. This perspective naturalizes the framework as a law of economics rather than a contingent policy choice. However, the structural data contradicts the mountain classification \u2014 the constraint clearly exhibits institutional enforcement, beneficiary/victim asymmetry, and contingent implementation. The mountain reading is a false summit revealing how economic naturalization functions as suppression mechanism."
     }
   ],
-  "interval": {
-    "start": 2024,
-    "end": 2036
-  },
   "omegas": [
     {
-      "id": "imbalance_entrenchment",
-      "question": "Will the zero-tariff framework reduce Africa's trade deficit with China, or will it entrench the existing pattern of raw material exports vs. manufactured goods imports?",
-      "resolution_mechanism": "Longitudinal analysis of trade data post-2026, tracking the value-add of African exports to China.",
-      "impact": "If the deficit shrinks and export composition diversifies, the constraint's extractiveness (ε) is lower than estimated. If the deficit grows, ε is higher, and the constraint trends towards a Snare.",
+      "id": "chinese_debt_leverage_binding",
+      "question": "To what extent does Chinese infrastructure financing create binding obligation for African governments to maintain zero-tariff compliance?",
+      "resolution_mechanism": "Analysis of loan covenants, debt-restructuring negotiations, and instances where African countries attempted policy deviation despite Chinese lending exposure. Historical comparison with IMF structural adjustment leverage.",
+      "impact": "If binding: framework operates as debt-snare hybrid (extraction mechanism is financial coercion, not tariff mechanics). If loose: framework is more rope-like (coordination benefit dominates extraction).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether the framework reduces or entrenches the China-Africa trade imbalance."
+      "description": "Strength of debt coercion mechanism in framework enforcement"
     },
     {
-      "id": "industrialization_catalyst",
-      "question": "Can African nations leverage the preferential market access to build domestic manufacturing and industrial capacity?",
-      "resolution_mechanism": "Tracking metrics of industrialization (e.g., manufacturing as % of GDP, employment in secondary sectors) in participating countries.",
-      "impact": "Successful industrialization would indicate a strong coordination function, classifying the constraint as a Scaffold from a developmental perspective. Failure would confirm the extractive Tangled Rope/Snare dynamic.",
+      "id": "african_industrial_policy_alternative_viability",
+      "question": "Can African nations build domestic manufacturing capacity (textiles, consumer goods, simple electronics) that can compete with zero-tariff Chinese imports within a 15-year horizon?",
+      "resolution_mechanism": "Tracking of manufacturing employment, value-added production, export competitiveness, and skill development in early-mover African industrial policy jurisdictions (Ethiopia, Rwanda, Kenya). Comparative analysis with East Asian industrialization timelines and support infrastructure.",
+      "impact": "If viable: scaffold perspective is real structural feature \u2014 industrial policy insurgency is genuine exit path. If not viable: framework is durable snare for African manufacturers with no realistic alternative.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether market access translates into genuine industrial capacity building."
+      "description": "Viability of African domestic manufacturing alternatives to Chinese imports"
     },
     {
-      "id": "geopolitical_vs_economic_driver",
-      "question": "Is the primary function of the framework economic development for Africa or securing geopolitical alignment and resource access for China?",
-      "resolution_mechanism": "Analysis of Chinese state documents, voting patterns of participating African nations in international forums (e.g., UN), and terms of associated infrastructure loans.",
-      "impact": "If primarily geopolitical, the 'coordination' function is largely theater, and the constraint is more accurately a Snare. If economic drivers are primary, the Tangled Rope classification holds.",
+      "id": "consumer_welfare_gains_genuine",
+      "question": "Do aggregate consumer welfare gains from reduced import prices in Africa actually exceed lost fiscal revenue and foregone industrial development value?",
+      "resolution_mechanism": "Comprehensive accounting: comparison of consumer price reductions vs. lost tariff revenue, public health/education spending reductions, and long-term income effects from deindustrialization. Temporal welfare accounting over 20-30 year horizon.",
+      "impact": "If genuine net gain: framework justifies moderate tangled_rope classification from African government perspective. If false: extraction mechanism is masked by consumption gains in short term while long-term industrial atrophy creates multi-generational extraction.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "The primary driver of the framework: economic development vs. geopolitical leverage."
+      "type_class": "empirical",
+      "description": "Whether consumer welfare gains genuinely exceed lost fiscal and industrial capacity"
+    },
+    {
+      "id": "chinese_state_subsidy_transparency",
+      "question": "What proportion of competitive advantage for Chinese manufactures derives from explicit state subsidies (SOE financing, export credits, industrial policy) vs. legitimate productivity/cost advantage?",
+      "resolution_mechanism": "Forensic analysis of Chinese export finance mechanisms, SOE cost structure, value-chain subsidies, and comparative factor productivity studies. Contrast with African manufacturing cost structures adjusted for subsidy equivalents.",
+      "impact": "If heavily subsidized: framework extraction is asymmetric state power (China's institutional resources create unmediated advantage). If productivity-based: framework approaches legitimate comparative advantage coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of Chinese state subsidies embedded in export competitiveness"
+    },
+    {
+      "id": "wto_mfn_enforcement_constraint",
+      "question": "Could African nations negotiate selective tariff exemptions (under WTO safeguard clauses, infant-industry exceptions) without triggering MFN retaliation from China or other major trading partners?",
+      "resolution_mechanism": "Legal analysis of WTO dispute mechanisms, precedent cases (India/Pakistan infant-industry claims, SAPTA safeguards). Modeling of negotiation dynamics if Africa attempted coordinated safeguard claim.",
+      "impact": "If enforceable exemptions exist: African negotiating position is stronger (exit via WTO rules is possible). If MFN enforcement is tight: African nations are structurally trapped (any selective exemption triggers retaliation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of WTO-compliant African tariff exemptions without retaliation"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.48
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "cazt_ext_t0"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2030,
-      "value": 0.52
+      "time_point": 3,
+      "value": 0.42,
+      "id_override": "cazt_ext_t3"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2036,
-      "value": 0.55
+      "time_point": 6,
+      "value": 0.52,
+      "id_override": "cazt_ext_t6"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.5
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "cazt_theater_t0"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.45
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "cazt_theater_t3"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2036,
-      "value": 0.4
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "cazt_theater_t6"
     }
   ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
   "commentary": {
-    "narrative_context": "The China-Africa Zero-Tariff Trade Framework, effective May 2026, offers preferential market access to 53 African nations. While presented as a mechanism for shared development (a Rope), it operates within a pre-existing and growing structural trade imbalance where Africa primarily exports raw materials and imports higher-value manufactured goods from China. This creates a core tension between its coordination function (facilitating trade) and its extractive function (reinforcing dependency and providing geopolitical leverage). The framework's structure also includes explicit political conditionality, with Eswatini excluded due to its diplomatic ties with Taiwan.",
+    "narrative_context": "The China-Africa Zero-Tariff Trade Framework represents a structural constraint combining genuine coordination benefits (market access, reduced transaction costs, consumer price reductions) with significant extraction mechanisms (fiscal revenue loss, industrial deindustrialization, debt leverage through infrastructure financing). The framework operates simultaneously as a rope for Chinese exporters, a snare for African domestic manufacturers, a tangled hybrid for African governments and the Chinese state, a piton for the neoliberal trade regime, and a scaffold for emerging African industrial policy alternatives. The theater ratio (0.58) reflects moderate performative content: the framework is justified through comparative advantage doctrine that produces observable aggregate gains (consumer prices, trade volume) while obscuring distributional extraction (who loses fiscal capacity, who loses industrial capability). The constraint's temporal trajectory shows extractiveness increasing from 0.28 to 0.52 over six years as tariff-revenue losses accumulate and deindustrialization dynamics deepen. Theater ratio rises from 0.35 to 0.58 as the discrepancy between neoliberal theory (free trade optimality) and observable outcomes (fiscal squeeze, job losses) widens, requiring increasingly performative justification.",
     "key_agents": [
-      "Chinese State & Industry: Primary beneficiary (institutional/arbitrage) - Gains market access, resource security, and geopolitical influence.",
-      "Participating African Nations: Secondary beneficiaries/victims (organized/constrained) - Gain market access but risk deeper economic dependency.",
-      "Eswatini Government: Primary victim (organized/trapped) - Excluded on political grounds, bearing the full coercive force of the framework's conditionality.",
-      "Western Trade Blocs (USA, EU): Structural victims (institutional/constrained) - Face diminished market share and geopolitical leverage in Africa.",
-      "Uncompetitive African Domestic Industries: Indirect victims (powerless/trapped) - May struggle to compete with the influx of Chinese goods facilitated by the deepened trade relationship."
+      "Chinese Manufacturing Exporters: Primary beneficiary (institutional/arbitrage) \u2014 gain unmediated market access; receive state subsidies; experience framework as pure coordination mechanism",
+      "African Domestic Manufacturers: Primary victim (powerless/trapped) \u2014 face elimination from own domestic markets; immobile due to scale and logistics barriers; bear maximum extraction from tariff asymmetry",
+      "African Government Treasuries: Secondary victim (moderate/constrained) \u2014 benefit from reduced consumer prices but lose tariff revenue; constrained by debt obligations to Chinese lenders (Belt-and-Road infrastructure financing creates framework compliance incentive)",
+      "Chinese State Apparatus: Institutional coordinator (powerful/mobile) \u2014 uses framework for geopolitical influence and industrial hierarchy; maintains negotiating flexibility; manages extraction through state capital and subsidy apparatus",
+      "Pan-African Trade Coalition: Organized resistance (organized/constrained) \u2014 can coordinate policy responses but lack exit option (cannot reject framework without isolation); experience constrained extraction",
+      "Neoliberal Trade Regime: Institutional supporter (institutional/arbitrage) \u2014 legitimizes framework through comparative advantage narrative; maintains performative verification (aggregate growth metrics obscure distribution)",
+      "African Industrial Policy Insurgency: Organized alternative (organized/constrained) \u2014 building domestic manufacturing pathways (Ethiopia, Rwanda, South Africa) as exit mechanisms; represent genuine scaffold with sunset potential",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent power asymmetry as immutable economic law; false summit detection reveals how naturalization functions as suppression"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55): High. This score reflects the significant, persistent trade deficit Africa runs with China, which this framework may exacerbate. The extraction is not a tariff but the structural value transfer from a raw material exporter to a manufacturing superpower. Suppression (0.65): High. The political exclusion of Eswatini is a direct act of suppression. For participants, the deal is so advantageous compared to alternatives (often laden with Western political conditionality) that it suppresses the formation of a unified negotiating bloc or the pursuit of other partnerships. Theater (0.40): Moderate. The 'win-win' and 'South-South cooperation' narrative is a key part of the framework's political maintenance, but it partially masks the underlying extractive imbalance.",
-    "perspectival_gap": "The gap is stark. China, the architect, sees a beneficial coordination Rope. Eswatini, the excluded target, sees a coercive political Snare. Participating African nations, caught in the middle, experience the quintessential Tangled Rope: a genuine benefit (market access) tangled with a significant structural cost (dependency and trade imbalance). Western competitors also see a Tangled Rope, recognizing the mix of legitimate trade and strategic extraction of influence.",
-    "directionality_logic": "Beneficiary/victim declarations drive the perspectival classifications. China (beneficiary, arbitrage exit) has its effective extraction (χ) driven negative, classifying as Rope. Eswatini (victim, trapped exit) has its χ amplified to the maximum, classifying as Snare. Participating nations (beneficiary/victim, constrained exit) have a moderately high χ, landing squarely in the Tangled Rope category. This demonstrates the system's ability to derive nuanced classifications from structural relationships.",
-    "mandatrophy_analysis": "This constraint is a classic case for resolving mandatrophy. A simplistic analysis might label it a purely benevolent Rope (China's narrative) or a purely predatory Snare (a critical perspective). The Deferential Realism framework, by using indexical classification, shows that both are incomplete. The analytical classification of Tangled Rope correctly identifies the dual nature of the constraint: it possesses both a genuine coordination function and a significant, asymmetric extractive component. The perspectival analysis further clarifies that Rope and Snare are indeed the experienced realities for agents at the structural extremes of the system."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising over interval. The framework's base extraction reflects significant asymmetry: Chinese state apparatus subsidizes exporters, African governments lose fiscal autonomy, African manufacturers face unmediated competition. The trajectory from 0.28 to 0.52 reflects accumulating extraction as tariff revenue losses compound and industrial deindustrialization deepens. Not extreme (0.70+) because meaningful coordination benefits exist (consumer access, transaction cost reduction), and alternative pathways (industrial policy insurgency) represent partial exits. Suppression (0.65): High. Multiple barriers prevent African exit: WTO MFN obligations eliminate selective tariff options; debt-to-China creates compliance incentives; diffuse global supply chains make domestic substitution difficult; neoliberal regime ideology naturalizes framework as inevitable. Theater ratio (0.58): Moderate-high. The framework is legitimized through comparative advantage theory that produces observable aggregate metrics (trade volume, consumer prices) while obscuring distribution (who loses fiscal capacity, whose jobs disappear). As outcomes diverge from theory, performative content rises \u2014 more narrative emphasis on long-term growth potential, consumer benefits, and regional stability to offset visible fiscal squeeze.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival variance. Chinese exporters and the state apparatus see pure coordination and asymmetric benefit (Rope/Tangled Rope) \u2014 market access they couldn't achieve unilaterally. African manufacturers see elimination (Snare) \u2014 they experience the constraint as structurally inescapable. African governments see mixed benefit-cost (Tangled Rope) \u2014 consumer welfare gains but fiscal/industrial losses. The neoliberal regime sees inevitable natural law (Mountain) \u2014 free trade as optimization principle. The African industrial policy insurgency sees temporary problem with exit (Scaffold) \u2014 manufacturing investment is building alternative pathways. The pan-African coalition sees organized but constrained extraction (Tangled Rope) \u2014 significant agency in policy negotiation but no realistic exit from framework without isolation. This perspectival divergence is the core diagnostic: it reveals that a single 'free trade' framework operates as coordination for the powerful, extraction for the powerless, and mixed hybrid for middling institutional actors.",
+    "directionality_logic": "Directionality (d) ranges from 0.05 (Chinese exporters: full beneficiary + arbitrage) to 0.95 (African manufacturers: full victim + trapped). The engine computes d from beneficiary/victim status and exit options per the sigmoid derivation chain. Chinese exporters: beneficiary status + arbitrage exit = low d (\u22480.05) \u2192 negative f(d) \u2192 negative effective extraction (they benefit from the constraint). African manufacturers: victim status + trapped exit = high d (\u22480.95) \u2192 high f(d) (\u22481.42) \u2192 maximum experienced extraction. African governments: victim status (fiscal loss) + beneficiary status (consumer gains) simultaneously, constrained exit \u2192 mid-range d (\u22480.55-0.65) \u2192 moderate f(d) (\u22480.75-1.00) \u2192 moderate experienced extraction. The analytical observer at civilizational scope sees d \u2248 0.72 (analytical positioning) \u2192 f(d) \u2248 1.15 \u2192 analytical-level extraction magnitude, but mountain classification attempt is false summit (constraint is clearly institutional/policy, not natural law).",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing genuine coordination (rope-like access for Chinese exporters, some consumer benefit for African populations) from embedded extraction (fiscal loss, deindustrialization, debt leverage). The tangled rope classification applies to: (1) Chinese state apparatus (coordination function: regional market integration + extraction function: industrial hierarchy and geopolitical leverage), (2) African governments (coordination: consumer access + extraction: fiscal/industrial capacity loss + debt constraint), (3) Pan-African coalition (coordination: negotiation framework + extraction: constrained outcomes). The framework is NOT a pure rope because structural enforcement is required (debt coercion, WTO MFN lock-in, neoliberal regime legitimization) and asymmetric benefits flow away from African domestic producers. It is NOT pure snare because measurable coordination benefits exist (consumer prices, transaction costs, trade volume) and organized agents (AU, ECOWAS) maintain some negotiation agency. The tangled rope classification is mandatrophy-resolving because it captures that the same institutional arrangement simultaneously coordinates access and extracts capacity \u2014 the moral/political question (is this fair exchange?) is separated from the structural question (does this mechanism exhibit both coordination and extraction?). The answer to both is yes."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "belt_and_road_initiative"
-    ]
-  }
+      "african_fiscal_squeeze_constraint",
+      "chinese_overcapacity_offloading",
+      "belt_and_road_debt_leverage"
+    ],
+    "dual_formulation_note": "The zero-tariff framework decomposes into three structurally distinct constraints: (1) tariff mechanics (the trade policy itself, \u03b5\u22480.35, primarily coordination with consumer benefits), (2) fiscal extraction (revenue loss mechanism, \u03b5\u22480.55, primarily extraction from treasuries), and (3) debt leverage (Belt-and-Road financing as framework enforcement tool, \u03b5\u22480.62, primarily institutional coercion). These are linked causally \u2014 the tariff framework creates fiscal gaps that borrowing fills, and borrowing creates compliance incentives \u2014 but have distinct \u03b5 values reflecting different empirical status. The aggregate story (this JSON) uses \u03b5=0.52 as a flux estimate. Full precision requires separate stories for each mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
 }

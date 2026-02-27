@@ -1,0 +1,120 @@
+{
+  "header": {
+    "constraint_id": "asymmetric_computational_difficulty",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.85,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Proof-of-Work Zero-Day",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "zero_day_exploiter"
+    ],
+    "victims": [
+      "network_participants"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Network Participant",
+      "comment": "A network participant who is unaware of the zero-day vulnerability is trapped and powerless, experiencing the constraint as a snare. They are extracted from without realizing the presence of the attack."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Zero-Day Exploiter",
+      "comment": "The zero-day exploiter benefits from the asymmetric computational difficulty, allowing them to extract value from the network with relative ease. They see this as a coordination tool."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the situation presents a tangled rope where there is both coordination (proof of work) and asymmetric extraction (zero-day exploit)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exploit_detection_time",
+      "question": "How long will it take for the zero-day exploit to be detected by the network?",
+      "resolution_mechanism": "Security audits, network monitoring, and community analysis.",
+      "impact": "Shorter detection time reduces the extractiveness. Longer detection time increases the extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Time until zero-day exploit is detected."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This scenario describes a cryptographic primitive used for coordination (Rope) that has been secretly compromised by a single actor. The asymmetric computational difficulty resulting from a zero-day exploit creates a Snare for network participants, who are unknowingly being extracted from. The exploiter, on the other hand, benefits from this asymmetry.",
+    "key_agents": [
+      "Network Participants: Victims (powerless/trapped)",
+      "Zero-Day Exploiter: Beneficiary (powerful/arbitrage)",
+      "Analytical Observer: Observer (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness is high because the zero-day exploit allows the attacker to extract significant value from the network. Suppression is high because network participants are unaware of the vulnerability and cannot easily defend against it. Theater ratio is low because there is little performative activity associated with the exploit.",
+    "perspectival_gap": "The network participant sees a snare because they are trapped and powerless. The zero-day exploiter sees it as a rope because it allows them to coordinate their extraction. The analytical observer sees it as a tangled rope because there is both coordination (proof of work) and asymmetric extraction (zero-day exploit).",
+    "directionality_logic": "The network participants are the victims and are trapped. The zero-day exploiter is the beneficiary and has arbitrage. The analytical observer is neutral."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_security"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "commercial_data_brokerage",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cdb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Commercial Data Brokerage Ecosystem",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "data_brokers",
+      "advertising_platforms",
+      "downstream_purchasers"
+    ],
+    "victims": [
+      "data_subjects",
+      "informational_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Subject",
+      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Individual whose data is collected, aggregated, and sold without meaningful knowledge or consent. Trapped by ubiquitous data collection infrastructure; no practical exit option exists short of total digital withdrawal. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.97. Pure extraction: subject bears full cost of surveillance and profiling, has no countervailing benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Data Broker Network",
+      "comment": "PERSPECTIVE 2: DATA BROKER NETWORK (ROPE) \u2014 Primary beneficiary. Experiences the constraint as a coordination mechanism enabling the monetization of behavioral traces. Arbitrage exit (can shift to new data sources, markets, or business models). d\u22480.02, f(d)\u2248-0.19, \u03c3=1.2 \u2192 \u03c7\u2248-0.13. Net beneficiary; experiences effective negative extraction (subsidy)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Advertising and Marketing Industry",
+      "comment": "PERSPECTIVE 3: ADVERTISING & MARKETING INDUSTRY (TANGLED ROPE) \u2014 Secondary beneficiary with both coordination and extraction characteristics. Benefits from data brokerage as infrastructure for targeted marketing (coordination function). But also subject to broker price extraction and platform gatekeeping. Mobile exit (can develop in-house data collection or move to alternative platforms). d\u22480.38, f(d)\u22480.38, \u03c3=1.2 \u2192 \u03c7\u22480.27. Mixed extraction; sees both value and cost."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Consumer Advocate / Regulatory Inspector",
+      "comment": "PERSPECTIVE 4: CONSUMER ADVOCATE / REGULATOR (SNARE) \u2014 Tasked with protecting data subjects but faces structural constraints: complexity of data flows, jurisdictional fragmentation, resource gaps relative to industry scale, and regulatory arbitrage (operations move across borders). Constrained exit; enforcement effectiveness is limited. d\u22480.82, f(d)\u22481.22, \u03c3=1.0 \u2192 \u03c7\u22480.71. Faces high effective extraction of enforcement resources."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Privacy Regulation Theater",
+      "comment": "PERSPECTIVE 5: PRIVACY REGULATION THEATER (PITON) \u2014 GDPR, CCPA, and similar regulations create performative compliance requirements (privacy notices, cookie banners, data subject access requests) that impose costs on both brokers and platforms but do little to reduce data collection or asymmetry. Theater ratio=0.68 (privacy consent forms, data deletion requests that often fail, opacity of secondary data trading). Regulation persists through institutional inertia despite minimal functional reduction in extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a universal/civilizational view, data brokerage is a hybrid coordination-extraction mechanism. Coordination function: aggregating behavioral data enables personalization, fraud detection, credit decisions, public health signals. Extraction function: asymmetric capture of informational value; data subjects receive no compensation; brokers extract economic rent from asymmetric information. The constraint is structurally hybrid because both functions are real and inseparable. d\u22480.60, f(d)\u22480.85, \u03c3=1.2 \u2192 \u03c7\u22480.59. Intermediate effective extraction reflecting the hybrid character."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_threshold_ambiguity",
+      "question": "What constitutes meaningful consent for data collection in a context where data collection is ubiquitous and the alternative (digital non-participation) imposes severe opportunity costs?",
+      "resolution_mechanism": "Empirical study of actual consumer understanding and choice: do privacy notices correlate with genuine informed consent or merely satisfy legal ritual? Behavioral experiments testing whether realistic consent mechanisms reduce collection.",
+      "impact": "If genuine informed consent is structurally impossible at scale: the constraint is a pure snare (extraction without valid authorization). If meaningful consent mechanisms exist and are deployable: the constraint degrades to tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether meaningful digital consent is structurally achievable"
+    },
+    {
+      "id": "data_utility_coordination_value",
+      "question": "What fraction of the economic value captured by data brokers derives from genuine coordination benefits (fraud detection, personalization, credit underwriting) versus pure rent extraction (behavioral profiling, manipulation, discriminatory pricing)?",
+      "resolution_mechanism": "Decompose broker revenue into coordination-justified components (fraud prevention ROI, legitimate underwriting) and extractive components (behavioral ad-targeting, manipulation). Empirical comparison of personalization value to data subjects versus value captured by platforms.",
+      "impact": "If coordination fraction > 60%: constraint is structurally tangled_rope at multiple perspectives. If coordination fraction < 20%: constraint is structurally snare from all but beneficiary perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coordination versus extraction components of data brokerage revenue"
+    },
+    {
+      "id": "regulatory_arbitrage_persistence",
+      "question": "Can any single jurisdiction achieve meaningful data brokerage regulation, or does regulatory asymmetry (differential costs across jurisdictions) create unstoppable arbitrage that defeats enforcement?",
+      "resolution_mechanism": "Longitudinal tracking of regulatory effectiveness across GDPR, CCPA, and emerging regimes. Test whether compliant operators maintain data collection, whether arbitrage-optimized operators relocate or fragment, whether cross-border enforcement is scalable.",
+      "impact": "If regulatory arbitrage is insurmountable: enforcement regime is structurally piton (theater). If coordinated international enforcement becomes viable: regulation could mature from piton to functional constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory arbitrage defeats data brokerage enforcement"
+    },
+    {
+      "id": "informational_autonomy_valuation",
+      "question": "Is informational autonomy (control over one's data traces) an intrinsic good that data subjects should be compensated for, or is it a convenience feature to be traded off against personalization benefits?",
+      "resolution_mechanism": "Philosophical analysis of informational autonomy as a fundamental right. Empirical measurement of consumer willingness-to-pay for data control versus willingness-to-accept data extraction.",
+      "impact": "If autonomy is intrinsic: data brokerage extracts a fundamental good without compensation, reinforcing snare classification. If autonomy is instrumental: extraction may be justified trade, moving classification toward tangled_rope.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Fundamental status of informational autonomy as a right"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The commercial data brokerage ecosystem represents a structural asymmetry in informational power where personal data is systematically collected, aggregated, and monetized by specialized intermediaries without meaningful knowledge, consent, or compensation to data subjects. The constraint has strengthened over the 20-year interval as collection technology has become ubiquitous (smartphones, IoT devices, web tracking), aggregation has become increasingly sophisticated (machine learning, behavioral inference), and downstream markets (advertising, risk assessment, political targeting) have created ever-growing demand for refined behavioral profiles. Base extractiveness has increased from 0.32 (early 2000s: siloed data, limited matching) to 0.58 (present: comprehensive profiling, cross-domain integration). Theater ratio has increased from 0.25 to 0.68, reflecting the rise of performative privacy compliance (GDPR notices, cookie banners, data deletion requests that fail) that creates the appearance of consumer protection without reducing the fundamental asymmetry. The constraint exhibits all key characteristics of a snare: high base extraction (data brokers capture the full economic value of behavioral data), high suppression (consumer awareness is low, practical exit options are nonexistent), and increasing theater (regulatory responses add friction but not protection).",
+    "key_agents": [
+      "Data Subjects: Victims (powerless/trapped) \u2014 individuals whose behavioral traces are collected, aggregated, and monetized without compensation or meaningful control",
+      "Data Brokers: Primary beneficiary (institutional/arbitrage) \u2014 intermediaries who aggregate and sell profiles to downstream purchasers; capture full economic value; have exit optionality through business model innovation",
+      "Advertising and Marketing Industry: Secondary beneficiary (powerful/mobile) \u2014 use brokered data for targeted marketing; benefit from and co-extract with data brokers; have some exit via in-house collection",
+      "Technology Platforms: Secondary beneficiary (institutional/arbitrage) \u2014 leverage first-party data collection and broker partnerships; capture data rents; can shift between data sources",
+      "Consumer Advocates and Regulators: Tertiary victim (moderate/constrained) \u2014 tasked with protecting data subjects but face resource gaps, jurisdictional fragmentation, and regulatory arbitrage",
+      "Informational Autonomy: Systemic victim (powerless/trapped) \u2014 abstract collective good; the epistemic commons deteriorates as behavioral inference improves",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both coordination function (fraud detection, personalization) and extraction mechanism (behavioral profiling, manipulation)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Data brokers capture the full economic value of personal behavioral data (estimated $200-300 billion annually in the US alone) while data subjects receive zero direct compensation. The extraction is not maximal (some data has low market value, some collection fails, compliance costs reduce net extraction) but is severe and systematic. Suppression (0.72): High. Multiple barriers prevent effective resistance: (1) Ubiquity: data collection occurs through dozens of channels with no single chokepoint. (2) Opacity: data flows are deliberately obscured; subjects cannot observe or track their own profiles. (3) Absence of practical alternatives: meaningful digital participation requires exposure to collection. (4) Regulatory fragmentation: no single jurisdiction has achieved enforcement; regulatory arbitrage disperses operations across permissive regimes. Theater ratio (0.68): High and increasing. Privacy regulations (GDPR, CCPA) mandate consent notices, data subject access requests, and deletion rights, but actual effectiveness is low: notices are unread, access requests reveal incomplete profiles, deletion requests often fail. The theater serves to legitimize the system while preserving core extraction. The increasing theater ratio (0.25\u21920.68) reflects that regulatory compliance is becoming more performative as the industry responds to pressure by adding friction (notices, forms) rather than reducing collection.",
+    "perspectival_gap": "The data subject sees a pure extraction mechanism (snare): trapped in ubiquitous collection infrastructure, receiving no benefit, bearing full cost of profiling and manipulation. The data broker sees a coordination mechanism (rope): enabling efficient matching of products to consumer interests; experiences the constraint as facilitating legitimate business. The advertising industry sees a hybrid (tangled_rope): benefits from brokered data but also subject to broker price extraction and platform gatekeeping. The regulator sees an enforcement-resistant snare: attempting to protect subjects through rules but facing structural arbitrage and complexity. The privacy regulation system sees itself as functional (rope) but the data subject knows it is theater (piton): consent forms, deletion requests, and access mechanisms are performatively compliant but functionally ineffective. The analytical observer recognizes genuine coordination value (fraud detection, personalization) but also genuine extraction (informational asymmetry, behavioral manipulation), placing the constraint in tangled_rope territory. The perspectival gaps are large and structural: the beneficiary genuinely experiences coordination while the victim genuinely experiences pure extraction.",
+    "directionality_logic": "Data subjects: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. No exit option short of digital withdrawal; no compensation; no say in use of data. Data brokers: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.19. Net subsidy; can shift business models; face no structural constraint on operations. Advertising industry: Mixed beneficiary/victim + mobile \u2192 d\u22480.38, f(d)\u22480.38. Benefits from data access but subject to broker pricing power and platform mediation. Regulators: Tertiary victim + constrained \u2192 d\u22480.82, f(d)\u22481.22. Trapped by jurisdictional fragmentation and regulatory arbitrage; resource-constrained relative to industry. Informational autonomy: Systemic victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Abstract collective that cannot organize or exit; deteriorates as inference capabilities improve. Analytical observer: Neutral + analytical \u2192 d\u22480.60, f(d)\u22480.85. Sees both coordination and extraction; neither beneficiary nor victim but capable of observing full structure.",
+    "mandatrophy_analysis": "This constraint does NOT resolve the mandatrophy through perspectival multiplicity. Instead, it reveals the mandatrophy directly: the snare classification (from data subject perspective) is empirically correct for the primary extraction mechanism, but the tangled_rope classification (from analytical perspective) is also empirically correct because genuine coordination value exists (fraud prevention, personalization). The analytical observer's challenge is not to pick between snare and tangled_rope, but to acknowledge that the constraint is STRUCTURALLY snare (extraction-dominant, suppression-high, theater-high) while FUNCTIONALLY hybrid (coordination benefits coexist with extraction). The resolution is not to change the classification but to recognize that high-extractiveness tangled ropes often appear as snares from victim perspectives. The policy implication: recognizing the genuine coordination function does NOT justify the current asymmetric extraction. A structurally honest tangled rope would compensate data subjects for coordination value extracted, converting snare behavior into legitimate rent-sharing. The current system appears snare from below (powerless/trapped) because the coordination function is captured entirely by beneficiaries with no pass-through to subjects."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "behavioral_advertising_targeting",
+      "consumer_credit_risk_assessment",
+      "digital_platform_gatekeeping"
+    ],
+    "dual_formulation_note": "The commercial data brokerage ecosystem is decomposed into three downstream constraints: (1) behavioral_advertising_targeting (\u03b5=0.52) examines the use of brokered data for ad personalization and behavioral manipulation; (2) consumer_credit_risk_assessment (\u03b5=0.48) examines data brokerage in lending decisions and algorithmic credit scoring; (3) digital_platform_gatekeeping (\u03b5=0.64) examines how platforms leverage data brokerage partnerships to maintain exclusive market position. Each downstream constraint has its own perspectives and structural data; all link upstream to commercial_data_brokerage as the enabling mechanism."
+  },
+  "directionality_overrides": []
+}

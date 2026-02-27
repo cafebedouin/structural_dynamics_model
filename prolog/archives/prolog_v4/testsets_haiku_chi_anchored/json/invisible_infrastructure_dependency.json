@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "invisible_infrastructure_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "invinfra"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Submerged Substrate Trap",
+    "topic_domain": "technological/logistical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "infrastructure_provider",
+      "ecosystem_dependents_initial"
+    ],
+    "victims": [
+      "downstream_service_operators",
+      "end_users",
+      "alternative_providers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In Service Operator",
+      "comment": "PERSPECTIVE 1: LOCKED-IN SERVICE OPERATOR (SNARE) \u2014 Once dependent on the infrastructure, cannot exit without catastrophic operational failure. The service operator's business model is built on the assumption of substrate availability; switching is economically impossible mid-deployment. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22481.03."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 2: END USER (SNARE) \u2014 Does not perceive the substrate; outages appear as service failure, not infrastructure dependency. Cannot switch providers without losing accumulated data, configuration, or integration. Suppression is extreme: users have no visibility into substrate risk. d\u22480.88, f(d)\u22481.32, \u03c3=1.2 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Large Enterprise with Partial Alternatives",
+      "comment": "PERSPECTIVE 3: LARGE ENTERPRISE WITH ALTERNATIVES (TANGLED ROPE) \u2014 Powerful organizations with resources to architect multi-provider solutions experience the constraint as tangled: genuine benefits from economies of scale (coordination function) but also locked into specific substrate features (extraction). Exit is expensive but possible; creates negotiating power but requires constant architectural work. d\u22480.60, f(d)\u22480.73, \u03c3=1.0 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Infrastructure Provider (Commercial)",
+      "comment": "PERSPECTIVE 4: INFRASTRUCTURE PROVIDER (ROPE) \u2014 Sees the substrate as a coordination mechanism: enabling ecosystem growth, reducing operational friction for users, creating network effects. Provider can easily exit (redirect infrastructure, sunset service, migrate users) but chooses not to because lock-in is profitable. Experiences the constraint as low-cost coordination with arbitrage upside. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Negative chi = net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Body",
+      "comment": "PERSPECTIVE 5: REGULATORY BODY (PITON) \u2014 Recognizes the substrate trap as a critical risk (market concentration, systemic fragility) but enforcement is performative: compliance testing, auditing, and reporting exist, yet dependencies persist and actually deepen. Regulation maintains the appearance of oversight without disrupting the profitable lock-in. theater_ratio=0.55 reflects that regulatory interventions are substantially theater (they do not prevent lock-in, only document it). d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.36."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Alternative Infrastructure Providers",
+      "comment": "PERSPECTIVE 6: ALTERNATIVE PROVIDERS (SNARE) \u2014 New entrants cannot compete because switching costs for ecosystem dependents are prohibitive. Network effects and lock-in create winner-take-most dynamics. Alternative providers are effectively excluded from the market, not through technical superiority but through substrate entrenchment. d\u22480.94, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22481.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a sufficiently abstracted level, infrastructure lock-in appears to be an inevitable consequence of complex systems: any substrate that works well enough becomes indispensable; dependency is a law of technological progress. However, the high extractiveness (0.62), suppression (0.68), and active enforcement requirement contradict the mountain gates. This is a false summit: what appears natural is actually contingent on policy choices (intellectual property, data portability rules, interoperability standards, antitrust enforcement)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 8: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Organized actors (open-source communities, standards bodies, data-portability advocates) experience the substrate trap as a temporary coordination failure with an exit pathway: open APIs, containerization, federated architectures, and data export standards are building alternatives to substrate lock-in. Exit options improve over time as standards mature. theater_ratio would be low for this perspective (~0.35) because the technical mechanisms (containerization, APIs) have genuine function, not just appearance. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.24."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_threshold",
+      "question": "At what total switching cost (in USD or operations hours) does a lock-in trap transition from temporary coordination overhead to permanent extraction mechanism?",
+      "resolution_mechanism": "Economic analysis of historical platform migrations; comparison of post-migration satisfaction and cost reduction across 50+ large-scale transitions; industry benchmarks for break-even switching costs",
+      "impact": "If threshold < 100k USD: many enterprises could defect but don't (indicates pure extraction suppression). If threshold > 10M USD: switching is genuinely impossible (indicates structural lock-in, not predatory design).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold separating coordination overhead from permanent extraction"
+    },
+    {
+      "id": "data_portability_feasibility",
+      "question": "Is true data portability (reversible migration preserving all state and integrations) technically feasible at scale, or does substrate lock-in involve inherent information loss?",
+      "resolution_mechanism": "Technical case studies of attempted migrations in cloud platforms, SaaS applications, and logistics networks; measurement of data fidelity, integration recreation time, and hidden dependency discovery during migration",
+      "impact": "If feasible: scaffold perspective is technically valid (exit cost can be reduced to near-zero). If inherently lossy: apparent alternatives are illusory, snare classification is correct for all dependents.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether true data portability is technically feasible"
+    },
+    {
+      "id": "provider_intentionality_in_lock_in",
+      "question": "To what degree is substrate lock-in a deliberate extractive design choice versus an inevitable emergent property of complex systems?",
+      "resolution_mechanism": "Analysis of design decisions: API versioning practices, data format choices, integration hooks; comparison of intentionally-portable architectures (federated systems, open protocols) vs proprietary lock-in designs; deposition of internal provider documentation revealing design intent",
+      "impact": "If deliberate: snare classification is correct; extraction is active enforcement. If emergent: tangled rope classification is more accurate; coordination benefit is genuine but creates lock-in as side effect.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether lock-in is intentional design or emergent property"
+    },
+    {
+      "id": "single_point_of_failure_systemic_risk",
+      "question": "Does the infrastructure provider's market concentration create systemic risk sufficient to classify the constraint as a snare even for willing participants?",
+      "resolution_mechanism": "Network analysis of failure propagation; measurement of economically critical services depending on single provider; historical analysis of provider outages and cascade effects; game-theoretic modeling of provider incentives during systemic crises",
+      "impact": "If high systemic risk: snare classification justified even for beneficiaries (extraction occurs through risk imposition). If low risk: rope classification more accurate; provider reliability genuinely benefits ecosystem.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether infrastructure concentration creates systemic risk"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The submerged substrate trap describes the phenomenon wherein a critical technological or logistical infrastructure becomes so deeply embedded in the operational foundation of dependent organizations that its presence is rendered invisible \u2014 both literally (it does not appear in organizational awareness or decision-making) and economically (the cost of dependence is not transparently charged). Classic examples include cloud computing platforms (AWS, Google Cloud, Azure), open-source core libraries (npm, Python packages, Kubernetes), global logistics networks (shipping containers, port infrastructure, just-in-time supply), payment systems, and DNS/CDN infrastructure. The trap operates through several mechanisms: (1) Early coordination benefit \u2014 the infrastructure reduces operational friction and enables rapid scaling; (2) Architectural embedding \u2014 dependent systems integrate the substrate into their core logic, making reversal architecturally expensive; (3) Visibility collapse \u2014 once the infrastructure works reliably, operators stop perceiving it as a separate system and treat it as a natural law of their operational environment; (4) Lock-in emergence \u2014 by the time dependency is recognized, switching costs are prohibitive; (5) Extraction phase \u2014 the infrastructure provider, now insulated by lock-in, can increase prices, reduce service quality, impose terms of service changes, or extract data value with minimal customer defection risk. The constraint exhibits all six DR types from different structural positions, revealing the perspectival nature of infrastructure dependency.",
+    "key_agents": [
+      "Infrastructure Provider: Primary beneficiary (institutional/arbitrage) \u2014 captures switching-cost rent and network effect monopoly; experiences constraint as low-cost coordination with arbitrage upside",
+      "Locked-In Service Operators: Primary victims (powerless/trapped) \u2014 operational systems depend entirely on substrate; cannot exit without complete rebuild; bear full extraction cost",
+      "End Users: Secondary victims (moderate/trapped) \u2014 perceive only service quality, not substrate dependency; experience outages as service failures; have no exit option without data loss",
+      "Large Enterprises with Alternatives: Mixed actors (powerful/constrained) \u2014 resources to architect multi-provider solutions; experience genuine benefits but also face extraction; can negotiate but remain locked-in",
+      "Alternative Infrastructure Providers: Excluded competitors (powerless/trapped) \u2014 cannot enter market due to network effects and switching costs; trapped outside the lock-in ecosystem",
+      "Regulatory Bodies: Institutional gatekeepers (institutional/constrained) \u2014 recognize the trap but enforcement is performative; regulation documents risk without preventing lock-in",
+      "Open Standards Coalition: Organized resistance (organized/mobile) \u2014 building technical alternatives (federated systems, open APIs, data portability standards) with genuine exit pathways; experience constraint as temporary problem with sunset"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High but not extreme. The infrastructure provider captures significant switching-cost rent and can extract through price increases, service degradation, or policy changes. However, extractiveness is moderated by (a) competitive threat from open standards and federation (reducing effective extraction to below 0.70), (b) customer perception of alternatives (even if switching is expensive), and (c) reputational risk if extraction becomes visible. The initial extractiveness (0.35) reflects the honest coordination phase; the rise to 0.62 reflects lock-in accumulation over 10 time periods. Suppression (0.68): High. Operators are systematically prevented from perceiving the substrate as a separate system; visibility collapse is the mechanism. Contractual terms often prevent competitive benchmarking or public disclosure of costs. Technical complexity obscures the true scope of dependency. Switching is suppressed by architecture, data format lock-in, and sunk costs. Theater ratio (0.55): Moderate. Regulatory oversight and industry standards bodies exist (compliance testing, audits, service-level agreements), but these provide the appearance of control without preventing lock-in. SLAs guarantee uptime but not portability. Audits verify provider compliance but not alternative feasibility. The theater has increased from 0.38 to 0.55 as regulatory pressure has grown, forcing providers to adopt performative compliance mechanisms.",
+    "perspectival_gap": "This constraint demonstrates a stark perspectival divide. The infrastructure provider (Rope) experiences genuine coordination benefit and low extraction; they are solving a real problem and collecting modest arbitrage profits. Locked-in operators and end users (Snare) experience pure extraction; they have no perception of the substrate as a separate system and no ability to exit. Large enterprises (Tangled Rope) occupy the middle: they perceive both coordination and extraction but have negotiating power. Regulators (Piton) maintain performative oversight without disrupting the profitable arrangement. Alternative providers (Snare) are excluded entirely by network effects. The open standards coalition (Scaffold) sees the trap as temporary and builds technical exit pathways. The analytical observer risks naturalizing the lock-in as an inevitable law of technology (Mountain), but the high extractiveness and suppression metrics reveal it as contingent on policy and design choices. The perspectival gap is maximal between the beneficiary's rope and the victims' snare.",
+    "directionality_logic": "Infrastructure provider: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; experiences low-cost coordination. Locked-in service operators: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit options. End users: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.32. High extraction; visibility collapse prevents perception of substrate as separate system. Large enterprises: Mixed + constrained \u2192 d\u22480.60, f(d)\u22480.73. Significant extraction but constrained rather than trapped; have alternative architectures but remain locked-in for operational reasons. Alternative providers: Victim (excluded) + trapped \u2192 d\u22480.94, f(d)\u22481.42. Maximum extraction through exclusion; trapped outside the lock-in ecosystem. Regulatory bodies: Observer + constrained \u2192 d\u22480.50, f(d)\u22480.65. Intermediate; recognize the trap but enforcement is constrained by political and economic pressures. Open standards coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction; mobile exit options and organized agency reduce chi.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves mandatrophy by clarifying the dual nature of infrastructure dependency. (1) The initial coordination benefit is genuine (Rope perspective) \u2014 the infrastructure reduces friction and enables scaling that would be impossible without it. (2) The lock-in that emerges is also genuine (Snare perspective) \u2014 operators become unable to exit without catastrophic cost. These are not contradictory; they are sequential phases. The constraint is tangled because both coordination and extraction are structurally present. The error would be to classify it as pure Rope (ignoring the extraction trap) or pure Snare (ignoring the legitimate coordination benefit). The tangled rope classification accurately captures that the constraint provides real value while simultaneously imposing real costs that exceed the value provided to trapped operators. The theater ratio (0.55) reveals that regulatory responses are largely performative \u2014 they create the appearance of control without enabling actual exit or reducing extraction. The scaffold perspective (open standards coalition) is crucial because it shows that mandatrophy can be resolved by building genuine alternatives: if federated systems, containerization, and data portability standards mature, the constraint's extraction mechanism weakens (effectively becoming a Rope or Scaffold). The mandatrophy is resolved by distinguishing the temporal phases (coordination \u2192 lock-in \u2192 extraction) and the perspectival phases (provider's coordination, operator's extraction, coalition's exit pathway)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "cloud_provider_market_concentration",
+      "open_source_supply_chain_dependency",
+      "just_in_time_logistics_fragility"
+    ],
+    "dual_formulation_note": "The submerged substrate trap decomposes into domain-specific instantiations: cloud infrastructure (AWS/Azure/GCP), core libraries (npm/PyPI), logistics networks, payment systems, and CDN/DNS. Each instantiation has its own \u03b5 value reflecting domain-specific exit costs and network effects. Cloud infrastructure has higher \u03b5 (~0.65) due to architectural lock-in; open-source libraries have lower \u03b5 (~0.45) due to easier forking and alternatives; logistics has higher \u03b5 (~0.70) due to sunk infrastructure. All are linked by the common structural mechanism: visibility collapse + switching cost + network effects \u2192 lock-in \u2192 extraction. This story models the generic mechanism; domain-specific stories detail the \u03b5 values for each instantiation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

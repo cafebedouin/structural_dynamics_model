@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: pla_aerial_carrier_doctrine
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-10-27
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_pla_aerial_carrier_doctrine, []).
@@ -40,9 +41,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,21 +54,33 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: pla_aerial_carrier_doctrine
  *   human_readable: China's Development of an Aerial Drone Carrier Doctrine
- *   domain: technological/political
+ *   domain: technological/military/political
  *
  * SUMMARY:
- *   Based on reports of China developing a large, unmanned aerial vehicle
- *   (UAV) capable of launching and recovering smaller drones, this constraint
- *   models the strategic doctrine this capability enables. The system creates
- *   a new reality for regional military planning, forcing adversaries to
- *   account for persistent, wide-area drone swarm operations while serving
- *   as a powerful force multiplier for the People's Liberation Army (PLA).
+ *   The PLA's development of an aerial carrier doctrine — a large unmanned
+ *   aerial vehicle capable of launching and recovering smaller drone swarms —
+ *   represents a strategic constraint that operates across multiple layers:
+ *   technological capability, regional power projection, doctrinal
+ *   competition, and international rules-based order legitimacy. The
+ *   constraint exhibits classic snare mechanics at the regional victim level
+ *   (powerless states in contested waters face drone dominance with no exit)
+ *   but generates complex tangled-rope dynamics at the coalition/great-power
+ *   level (forced military escalation and counter-capability investment). The
+ *   extractiveness trajectory reflects increasing operational maturity and
+ *   doctrinal integration from 2014-2024, while theater ratio decreases as
+ *   the capability shifts from speculative concept to operational doctrine.
+ *   The constraint is downstream of Chinese strategic ambitions in the
+ *   Indo-Pacific but represents a distinct structural innovation that
+ *   reshapes air power dynamics independent of broader geopolitical
+ *   competition.
  *
- * KEY AGENTS (by structural relationship):
- *   - PLA Strategic Command: Primary beneficiary (institutional/arbitrage) — gains a powerful coordination and power projection tool.
- *   - Regional Adversaries (e.g., Taiwan): Primary target (powerless/trapped or organized/constrained) — face a new coercive threat that extracts strategic freedom.
- *   - US Indo-Pacific Command: Inter-institutional peer competitor (institutional/constrained) — must adapt doctrine and technology to counter the new capability.
- *   - Defense Analyst: Analytical observer — sees the dual coordination/extraction nature of the system.
+ * KEY AGENTS:
+ *   - PLA Strategic Command: Primary beneficiary (institutional/arbitrage) — doctrine enables force projection and aerial carrier logistics solution
+ *   - Contested Airspace States (Vietnam, Philippines, Taiwan neighbors): Primary victims (powerless/trapped) — face unilateral drone capability with no defense or exit
+ *   - Regional Coalition (QUAD/AUKUS): Secondary victim and organized responder (organized/constrained) — forced into counter-capability development; constrained by geography and logistics
+ *   - Contested Territory Civilian Populations: Secondary victims (moderate/mobile) — face surveillance and strike capability; theoretical mobility (emigration) but practically trapped
+ *   - US Military Establishment: Mixed (powerful/arbitrage) — benefits from justified budget increases but forced into reactive posture; arbitrage exit constrained politically
+ *   - International Rules-Based Order: Institutional actor (institutional/arbitrage) — doctrine operates under veneer of 'international waters freedom' but actually extracts de facto sovereignty
  */
 
 /* ==========================================================================
@@ -74,90 +88,70 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(pla_aerial_carrier_doctrine, 0.55).
-domain_priors:suppression_score(pla_aerial_carrier_doctrine, 0.75).   % Structural property (raw, unscaled). High coercion.
-domain_priors:theater_ratio(pla_aerial_carrier_doctrine, 0.15).       % Not a Piton; this is a functional system under development.
+domain_priors:base_extractiveness(pla_aerial_carrier_doctrine, 0.58).
+domain_priors:suppression_score(pla_aerial_carrier_doctrine, 0.68).
+domain_priors:theater_ratio(pla_aerial_carrier_doctrine, 0.35).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(pla_aerial_carrier_doctrine, extractiveness, 0.55).
-narrative_ontology:constraint_metric(pla_aerial_carrier_doctrine, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(pla_aerial_carrier_doctrine, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(pla_aerial_carrier_doctrine, extractiveness, 0.58).
+narrative_ontology:constraint_metric(pla_aerial_carrier_doctrine, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(pla_aerial_carrier_doctrine, theater_ratio, 0.35).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(pla_aerial_carrier_doctrine, tangled_rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(pla_aerial_carrier_doctrine, snare).
+narrative_ontology:human_readable(pla_aerial_carrier_doctrine, "China's Development of an Aerial Drone Carrier Doctrine").
+narrative_ontology:topic_domain(pla_aerial_carrier_doctrine, "technological/military/political").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(pla_aerial_carrier_doctrine). % Required for Tangled Rope. The system is inert without active military use.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(pla_aerial_carrier_doctrine, pla_strategic_command).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(pla_aerial_carrier_doctrine, regional_adversaries).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three satisfied)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_victim(pla_aerial_carrier_doctrine, regional_air_sovereignty).
+narrative_ontology:constraint_victim(pla_aerial_carrier_doctrine, contested_airspace_states).
+narrative_ontology:constraint_victim(pla_aerial_carrier_doctrine, asymmetric_defense_postures).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Regional adversaries who cannot escape the new strategic reality.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
-% High ε (0.55) and high suppression (0.75) amplified by high f(d) results in
-% a high χ, classifying as a Snare.
-constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, tangled_rope,
+% PERSPECTIVE 1: CONTESTED AIRSPACE STATE (SNARE) — Small or medium-sized nation in contested waters (South China Sea, East China Sea) faces PLA aerial carrier doctrine with no practical exit. Cannot match capability; constrained politically to accept de facto aerial dominance. Full victim — bears extraction without recourse or deterrent capability.
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The PLA, for whom this is a pure coordination tool.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12.
-% The high base extractiveness is inverted, resulting in a negative χ.
-constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(continental))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% A global defense analyst sees both the coordination and extraction functions.
-% The engine's derived d ≈ 0.72 → f(d) ≈ 1.15 produces a χ in the Tangled Rope range.
-constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% The US military is a peer competitor, not a direct beneficiary or a trapped victim.
-
-% Perspective 4A: US Indo-Pacific Command (Peer Competitor)
-% Institutional power, but constrained exit (cannot ignore this development).
-% Engine derives a moderate-to-high 'd' as a non-beneficiary with constrained options.
-% The resulting χ is positive and significant, revealing the coercive aspect of the
-% doctrine. It is also a Tangled Rope, but the computed χ will be lower than for
-% the powerless victim but higher (and positive) than for the PLA beneficiary.
-constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: REGIONAL COALITION (TANGLED ROPE) — Organized states (US, Japan, India, Australia) respond with counter-doctrine (distributed air defense, sensor networks, allied air patrols). The doctrine creates a coordination problem (building allied response) but also extracts through forced military investment and doctrinal escalation. Coalition members constrained by geography and logistics but retain strategic agency.
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: PLA STRATEGIC COMMAND (ROPE) — Experiences the doctrine as a coordination mechanism — pooling drone assets under a carrier platform solves logistics and deployment problems. Net beneficiary; the constraint enables force projection. Arbitrage exit: can shift to hypersonic delivery, satellite swarms, or other escalation vectors.
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
+% PERSPECTIVE 4: CONTESTED TERRITORY CIVILIAN POPULATION (SNARE) — Taiwan, Philippines, Vietnam, or other adjacent populations face escalated drone surveillance and strike capability with limited protection. Mobility is hypothetical (expensive, slow); suppression is high (cannot organize counter-capability). Extraction visible as loss of airspace freedom and privacy.
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 5: US MILITARY ESTABLISHMENT (TANGLED ROPE) — Benefits from doctrine validation (justifies budget increases, force posture shifts, allied dependency). Also bears extraction through forced doctrinal response and deployment costs. Powerful actor with arbitrage exit (shift posture to Middle East, reassess alliance burden) — but faces political constraints on exit.
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: INTERNATIONAL RULES-BASED ORDER (PITON) — Doctrine is marketed as operating within 'freedom of navigation' and 'international waters' norms, but its actual function is to establish de facto sovereignty over contested zones. The performative claim of rules-based operation masks unilateral extraction. Theater ratio high (doctrine presented as defensive/normal) despite function as offense. Piton classification: the institutional inertia of rules-based framing persists despite the mechanism having shifted to extraction.
+constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -165,24 +159,18 @@ constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, rope,
 
 :- begin_tests(pla_aerial_carrier_doctrine_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify the core perspectival gap.
-    constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    format('Perspectival gap validated: Target (Snare) vs. Beneficiary (Rope)').
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(pla_aerial_carrier_doctrine, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(inter_institutional_distinction) :-
-    % Verify that peer competitor and beneficiary have different experiences.
-    classify(pla_aerial_carrier_doctrine, context(agent_power(institutional), time_horizon(generational), exit_options(arbitrage), spatial_scope(continental)), _, ChiBeneficiary, _),
-    classify(pla_aerial_carrier_doctrine, context(agent_power(institutional), time_horizon(generational), exit_options(constrained), spatial_scope(global)), _, ChiCompetitor, _),
-    ChiBeneficiary < 0,
-    ChiCompetitor > 0,
-    format('Inter-institutional distinction validated: Beneficiary χ (~w) < 0, Competitor χ (~w) > 0', [ChiBeneficiary, ChiCompetitor]).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(pla_aerial_carrier_doctrine, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_compliance) :-
-    narrative_ontology:constraint_beneficiary(pla_aerial_carrier_doctrine, _),
-    narrative_ontology:constraint_victim(pla_aerial_carrier_doctrine, _),
-    domain_priors:requires_active_enforcement(pla_aerial_carrier_doctrine).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(pla_aerial_carrier_doctrine, TR),
+    TR >= 0.70.
 
 :- end_tests(pla_aerial_carrier_doctrine_tests).
 
@@ -192,18 +180,16 @@ test(tangled_rope_gate_compliance) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): The doctrine is inherently extractive, designed to degrade an adversary's military options and impose high strategic costs.
- *   - Suppression (S=0.75): The system's purpose is to suppress air defenses and deny access, directly limiting the target's freedom of action.
- *   - The combination of a clear coordination function (for the PLA) and a clear asymmetric extraction function (against its targets), backed by active enforcement, makes this a canonical Tangled Rope.
+ *   Extractiveness (0.58): High-moderate. The doctrine extracts regional air sovereignty from contested states through unilateral capability and creates asymmetric deterrence against coalition responses. The value reflects operational maturity (not purely theoretical) and functional integration into regional coercion (not yet fully strategic). If operational platforms exceed 5-6 units and integrate into offensive doctrine, extractiveness would rise to 0.70+. Current value (0.58) assumes 2-4 operational platforms with specialized reconnaissance/harassment role. Suppression (0.68): High. Contested states have no practical defense against aerial carriers (cost, complexity, political constraints prevent matching). Coalition response is possible but expensive and logistically constrained. Asymmetric power difference creates suppression through inability to counter-escalate symmetrically. Theater ratio (0.35): Low and declining. The doctrine's function is increasingly real (operational deployment, system integration) rather than performative. Initial theater ratio was higher (0.42) when capability was speculative; as it matures, the function becomes visible and the performance justification necessary decreases. This inverse relationship (theater declining while extractiveness rising) indicates transition from threat signaling to operational extraction.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the PLA Strategic Command (beneficiary), the system is a Rope—a pure coordination tool that multiplies their effectiveness with negative effective extraction (χ < 0). For a regional adversary (target), it is a Snare—a coercive trap with high effective extraction (χ > 0.66) that severely limits their options and autonomy. This disagreement is not a matter of opinion but a direct result of their differing structural relationships to the constraint.
+ *   The gap between perspectives reveals how the same capability is experienced as pure extraction (snare) by powerless victims, forced coordination (tangled rope) by organized responders, beneficial logistics (rope) by the beneficiary, and legitimacy maintenance (piton) by the rules-based order. Contested states see unilateral coercion; coalitions see doctrinal competition requiring investment; the PLA sees a coordination solution to force projection. The US military sees doctrine validation (justifies budget) but also sees forced posture shift (extraction through required response). The piton perspective is critical: the doctrine operates within claimed 'international waters freedom' norms, yet its actual function is to establish de facto aerial sovereignty. The international order sees its own norms being used to legitimize capability that undermines those norms.
  *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This story highlights a key v6.0 feature. We model both the PLA and the US military as `institutional` actors, but their different `exit_options` (`arbitrage` vs. `constrained`) and structural relationships (beneficiary vs. competitor) lead the engine to derive vastly different directionality (`d`) values. The PLA experiences the system as a helpful Rope (negative χ), while the US experiences it as a coercive Tangled Rope (positive χ). This captures the essence of strategic competition, where a capability developed by one institution imposes costs and constraints on another.
+ * DIRECTIONALITY LOGIC:
+ *   Directionality derives from structural position. Contested states are full victims (trapped exit, no arbitrage, no mobility) — d approaches 1.0, experiencing maximum f(d). The PLA is beneficiary with institutional power and arbitrage exit — d approaches 0.0-0.1, experiencing low or negative extraction. Coalition members are organized with constrained (not mobile) exit — d ~0.5-0.6, experiencing moderate extraction despite organized power. The US military is powerful but politically constrained on exit — d ~0.4-0.5, experiencing moderate extraction despite power. The rules-based order is an institutional actor experiencing extraction through norms-erosion but maintains arbitrage (can theoretically redefine norms) — d ~0.3-0.4, experiencing low-moderate extraction. The civilians in contested territory have theoretical mobility but practical traps — d ~0.8-0.9, experiencing high extraction.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this system as a simple Rope (ignoring the victims) or a simple Snare (ignoring its genuine coordination function for the PLA) would be a failure of analysis. The Tangled Rope classification, derived from the analytical perspective, correctly identifies its dual nature, preventing the mislabeling that often occurs in military-strategic analysis where a system's internal benefits are emphasized while its external costs are downplayed.
+ *   The constraint does NOT exceed extractiveness 0.70, so mandatrophy resolution is not required. However, mandatrophy tension is visible: the doctrinal claim is that aerial carriers are 'defensive force projection' enabling 'freedom of navigation.' The structural reality is asymmetric capability enabling de facto sovereignty extraction. The false mountain perspective (international rules-based order / piton) attempts to naturalize this by framing it as normal naval doctrine evolution. Mandatrophy resolution would require either: (a) accepting that the doctrine is extractive (snare classification) and abandoning rules-based framing, or (b) accepting that extraction is justified because it enforces international order (tangled-rope with coordination benefits). Current framing (piton/theater) defers this resolution by maintaining performative rules-compliance while functional extraction proceeds. If operational maturity increases to 5+ platforms with clear offensive integration, extractiveness will exceed 0.70 and mandatrophy resolution will become unavoidable.
  */
 
 /* ==========================================================================
@@ -211,62 +197,72 @@ test(tangled_rope_gate_compliance) :-
    ========================================================================== */
 
 omega_variable(
-    omega_pla_carrier_effectiveness,
-    'What is the true operational effectiveness and reliability of the aerial carrier system versus its theoretical potential?',
-    'Intelligence reports on test deployments, system failures, and integration with existing PLA C4ISR structures.',
-    'If highly effective, the ε=0.55 is accurate or low. If unreliable (a "paper tiger"), the true ε is much lower, and the constraint is closer to a Piton from an analytical view.',
+    capability_maturity_timeline,
+    'How many operational aerial carrier platforms does the PLA actually possess, and at what operational maturity?',
+    'Satellite imagery analysis, technical documentation capture, defector testimony, operational deployment evidence',
+    'If 1-2 prototypes: doctrine is aspirational (Piton-Rope hybrid). If 5+: doctrine is functional (full Snare/Tangled Rope). Maturity affects extraction timeline by 5-10 years.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(capability_maturity_timeline, empirical, 'Actual capability maturity and operational platform count').
+
+omega_variable(
+    doctrinal_integration_scope,
+    'Is the aerial carrier doctrine integrated into offensive PLA planning or remain a specialized reconnaissance/harassment capability?',
+    'PLA strategic doctrine publications, military exercise patterns, force procurement correlations, defector technical analysis',
+    'If integrated into offensive doctrine: extractiveness rises to 0.70+ (Mountain-breaking snare). If specialized harassment: remains 0.55-0.65 (tactical snare). Classification impact is significant.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(doctrinal_integration_scope, empirical, 'Integration of aerial carrier into PLA strategic offensive doctrine').
+
+omega_variable(
+    escalation_response_coupling,
+    'Does allied counter-development (directed energy, autonomous swarms, hypersonic defense) couple tightly to PLA doctrine evolution, or operate on independent timelines?',
+    'Correlation analysis of PLA capability announcements vs allied budget/procurement cycles; doctrine publication timing; deployment pattern responses',
+    'If tightly coupled: tangled-rope perspectives are correct (forced coordination). If independent: snare perspectives dominate (extraction without genuine response requirement). Affects mandatrophy resolution.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(escalation_response_coupling, empirical, 'Coupling between PLA doctrine evolution and allied counter-development').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(pla_aerial_carrier_doctrine, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data for this high-extraction (ε=0.55) constraint.
-% Models a system moving from early development (T=0) to full operational
-% capability (T=10), with extractiveness increasing as the doctrine matures.
-% Theater ratio remains low as it's a functional, not performative, system.
+% Theater ratio over time
+narrative_ontology:measurement(plaacd_tr_t0, pla_aerial_carrier_doctrine, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(plaacd_tr_t5, pla_aerial_carrier_doctrine, theater_ratio, 5, 0.38).
+narrative_ontology:measurement(plaacd_tr_t10, pla_aerial_carrier_doctrine, theater_ratio, 10, 0.35).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(pla_ac_tr_t0, pla_aerial_carrier_doctrine, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(pla_ac_tr_t5, pla_aerial_carrier_doctrine, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(pla_ac_tr_t10, pla_aerial_carrier_doctrine, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(plaacd_be_t0, pla_aerial_carrier_doctrine, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(plaacd_be_t5, pla_aerial_carrier_doctrine, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(plaacd_be_t10, pla_aerial_carrier_doctrine, base_extractiveness, 10, 0.58).
 
-% Extraction over time (increasing with doctrinal maturity):
-narrative_ontology:measurement(pla_ac_ex_t0, pla_aerial_carrier_doctrine, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(pla_ac_ex_t5, pla_aerial_carrier_doctrine, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(pla_ac_ex_t10, pla_aerial_carrier_doctrine, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: It solves a complex problem of allocating drone assets
-% and sensor data across a wide battlespace.
-narrative_ontology:coordination_type(pla_aerial_carrier_doctrine, resource_allocation).
+narrative_ontology:coordination_type(pla_aerial_carrier_doctrine, enforcement_mechanism).
+narrative_ontology:affects_constraint(pla_aerial_carrier_doctrine, south_china_sea_sovereignty_dispute).
+narrative_ontology:affects_constraint(pla_aerial_carrier_doctrine, us_indo_pacific_force_posture).
+narrative_ontology:affects_constraint(pla_aerial_carrier_doctrine, regional_air_defense_procurement).
 
-% Network relationships: This doctrine directly impacts the strategic
-% stability and defense planning of regional actors.
-narrative_ontology:affects_constraint(pla_aerial_carrier_doctrine, taiwan_defense_posture).
-narrative_ontology:affects_constraint(pla_aerial_carrier_doctrine, south_china_sea_freedom_of_navigation).
-
+% DUAL FORMULATION NOTE:
+% The aerial carrier doctrine is downstream of Chinese strategic ambitions in the Indo-Pacific but represents a technologically distinct constraint. The doctrine itself creates extraction independent of the broader geopolitical competition. Upstream constraints (strategic ambition, naval modernization) influence doctrine development; downstream constraints (allied counter-capability, regional militarization) are structured by doctrine operational maturity.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this story. The structural declarations of
-% beneficiary/victim combined with the different exit_options for the
-% institutional actors (PLA vs. US) are sufficient for the engine to
-% correctly derive the different directionality values and produce the
-% nuanced classifications.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

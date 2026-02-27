@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "gaza_border_control_rafah",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rafah"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Control regime over the Gaza-Egypt (Rafah) border crossing",
+    "topic_domain": "geopolitical/border_control/humanitarian_access",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "gaza_civilian_population",
+      "humanitarian_organizations",
+      "palestinian_medical_patients",
+      "trapped_third_country_nationals"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Gaza Civilian Population",
+      "comment": "PERSPECTIVE 1: GAZA CIVILIAN POPULATION (SNARE) \u2014 2 million residents with no alternative exit routes (Israeli border sealed, sea access blocked). Closure periods create humanitarian crises: medical emergencies cannot reach Egyptian hospitals, students cannot access universities, families cannot reunite. Trapped exit + victim status \u2192 d\u22480.95, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.86. Pure extraction: bear full costs of closure with zero compensation or voice."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Humanitarian Organizations (Inside Gaza)",
+      "comment": "PERSPECTIVE 2: HUMANITARIAN ORGANIZATIONS (SNARE) \u2014 NGOs operating in Gaza depend on the crossing for staff rotation, supply delivery, and evacuation of urgent cases. Constrained exit: organizations can theoretically relocate operations, but doing so abandons their beneficiaries. Career and funding dependencies mean most staff cannot leave. Closure periods force operational suspension. d\u22480.80, f(d)\u22481.20, \u03c3=0.9 \u2192 \u03c7\u22480.70. High extraction: organizations forced to choose between operational continuity and humanitarian access."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Israeli Security Establishment",
+      "comment": "PERSPECTIVE 3: ISRAELI SECURITY ESTABLISHMENT (SNARE) \u2014 Primary enforcer of closure regime. Maintains operational closure authority despite international pressure. Mobile exit (could open the crossing unilaterally) is strategically rejected as incompatible with security doctrine. Maintains closure as extraction mechanism: generates deterrence value, maintains civilian population pressure, controls information flow, creates leverage over both Gaza and Egypt. d\u22480.15, f(d)\u2248-0.01, \u03c3=0.9 \u2192 \u03c7\u2248-0.01. Structural position: beneficiary of extraction (controls exit valve); classification as Snare reflects that the extraction is coercive and suppresses alternatives, not that the security establishment is victimized. NOTE: This perspective reveals the paradox of the snare classification \u2014 snare captures that the constraint IS extraction-based (high suppression, high extractiveness), not that all parties within it are victims."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Egyptian Government",
+      "comment": "PERSPECTIVE 4: EGYPTIAN GOVERNMENT (TANGLED ROPE) \u2014 Operates the crossing gates on Egypt's side but faces severe constraints: Israeli security coordination requirements, own domestic security concerns (Sinai militants use crossing), economic pressure from tourism/trade disruption, humanitarian obligations under international law. Constrained exit: cannot unilaterally open without Israeli coordination (de facto veto). Coordination function: manages humanitarian flow, processes asylum seekers, maintains infrastructure. Extraction: tolls, visa fees, currency exchange control. Benefits from controlled crossing as revenue source and security tool; pays costs through refugee settlement burdens, economic disruption, and legitimacy damage from humanitarian crises. d\u22480.55, f(d)\u22480.75, \u03c3=1.1 \u2192 \u03c7\u22480.62. Mixed: genuine coordination necessity (must process flows somehow) coupled with asymmetric extraction (controls the valve, extracts rents)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Trapped Third-Country Nationals",
+      "comment": "PERSPECTIVE 5: TRAPPED THIRD-COUNTRY NATIONALS (SNARE) \u2014 Foreigners stranded in Gaza (students, workers, aid staff) cannot exit via Israel, have limited consular support, depend entirely on Rafah crossing operational status. Multiple closure periods have trapped individuals for months. Zero negotiating power, zero alternatives. d\u22480.98, f(d)\u22481.44, \u03c3=0.9 \u2192 \u03c7\u22480.88. Maximal extraction: zero agency, total dependence on regime's discretion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a structural analytical position, the Rafah crossing control regime is a pure extraction mechanism: high suppression (no alternatives exist), high extractiveness (closure directly inflicts humanitarian costs), minimal coordination benefit (crossing's function is mere passage, not complex coordination). All classical beneficiaries (Israeli security, Egyptian state) are beneficiaries through extraction, not through genuine coordination. Theater ratio (0.58) reflects moderate performative justification: humanitarian protocols exist but are frequently violated; security rationales are stated but often contradicted by operational patterns (closures during non-crisis periods). The analytical classification is Snare because the structure exhibits no coordinate benefit that would justify the suppression \u2014 only asymmetric power and coercion. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.78."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_necessity_threshold",
+      "question": "What fraction of closures are structurally necessary for legitimate security concerns vs. discretionary use of closure as political leverage?",
+      "resolution_mechanism": "Temporal correlation analysis: closure timing vs. reported security incidents vs. political events (Israeli elections, Gaza political dynamics, Egyptian bilateral tensions). Comparison to other border crossing closure patterns globally.",
+      "impact": "If >70% necessary: constraint may degrade from Snare toward Tangled Rope (justified mixed mechanism). If <30% necessary: confirms pure extraction classification (Snare). If 30-70%: remains Snare but with structural ambiguity about closure justification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of closures driven by security necessity vs. political discretion"
+    },
+    {
+      "id": "humanitarian_alternative_feasibility",
+      "question": "Could alternative humanitarian access routes (sea corridors, northern crossings, underground infrastructure) functionally replace Rafah crossing at scale?",
+      "resolution_mechanism": "Engineering analysis of capacity constraints; political negotiation feasibility; cost-benefit comparison to Rafah opening. Historical cases of alternative crossing development (during Rafah closures).",
+      "impact": "If technically feasible and politically achievable: removes 'no alternatives' justification; recasts as Tangled Rope (mixed coordination/extraction with viable exit). If infeasible: confirms trap status (Snare classification holds).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of alternative humanitarian access routes"
+    },
+    {
+      "id": "extraction_mechanism_beneficiary_chain",
+      "question": "Who actually captures value from Rafah closure? Does extraction flow to Israeli security establishment, Egyptian state revenue, arms dealers, or private security contractors?",
+      "resolution_mechanism": "Financial tracking of closure-related revenue flows (visa fees, humanitarian aid contracts, security contracts, remittance timing correlations). Institutional analysis of who controls closure decisions vs. who benefits from them.",
+      "impact": "If extraction is widely distributed: may indicate coordination failure (multiple actors with veto power) rather than single-actor extraction. If concentrated: confirms snare (single beneficiary extracting from trapped population).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Identification of actual beneficiaries in the extraction chain"
+    },
+    {
+      "id": "civilian_exit_demand_elasticity",
+      "question": "How does closure duration/frequency affect Gaza civilian population's adaptive capacity (home-based education, telemedicine, internal economy adaptation)?",
+      "resolution_mechanism": "Longitudinal data on Gaza economic metrics, school enrollment, healthcare outcomes during varying closure regimes. Comparison to other isolated populations (Crimea, North Korea sanctions).",
+      "impact": "If high elasticity (populations adapt quickly): constraint becomes background condition (Piton). If low elasticity (repeated harm, no adaptation): extraction persists in full force (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Civilian population's adaptive capacity to sustained closures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Rafah border crossing represents a structural constraint on movement and humanitarian access for 2 million Gaza civilians. The crossing functions as the primary exit point for the Gaza Strip, with the Israeli border sealed to civilian passage and the Mediterranean coast inaccessible. Control over the crossing is exercised through coordination between Israeli security authorities (who determine closure decisions) and Egyptian officials (who operate gates). The constraint exhibits high suppression (no viable alternatives exist) and high extractiveness (closure periods create humanitarian emergencies: blocked medical access, family separation, supply shortages). Extractiveness has increased over the measured interval as closures have become longer and more frequent, and theater ratio has risen as humanitarian justifications have become more formulaic despite operational patterns suggesting political/security discretion. The constraint classifies as Snare from the perspective of trapped populations, Egyptian state (constrained actor), humanitarian organizations, and analytical observers. No perspective yields Rope classification because the crossing's function (mere passage, not complex coordination) does not justify the suppression levels. The Israeli security establishment benefits from the extraction mechanism (maintains control, generates deterrence, leverages closure as political tool) but is not victimized by the constraint, creating a perspectival anomaly: snare classification correctly captures that this IS extraction-based coercion, but some perspectives of the snare (the beneficiaries) do not experience victimization. This reveals the precision of the DR system: snare classifies by extraction structure (high \u03b5, high suppression, minimal coordination benefit), not by whether all parties within it are equally harmed.",
+    "key_agents": [
+      "Gaza Civilian Population: Primary victim (powerless/trapped) \u2014 2 million residents with no alternative exit routes; bear full humanitarian costs of closure periods",
+      "Israeli Security Establishment: Primary beneficiary and enforcer (powerful/mobile, but strategically rejects exit) \u2014 controls closure decisions, extracts deterrence and political leverage; maintains regime through military enforcement",
+      "Egyptian Government: Constrained institutional actor (institutional/constrained) \u2014 operates crossing gates but faces Israeli coordination requirements; extracts rents and security control; pays costs through refugee burden and legitimacy damage",
+      "Humanitarian Organizations: Secondary victim (moderate/constrained) \u2014 depend on crossing for operations; forced to choose between access continuity and operational presence during closures",
+      "Third-Country Nationals: Acute victim (powerless/trapped) \u2014 stranded individuals with zero negotiating power; subject to regime's discretionary closure decisions",
+      "Analytical Observer: Civilizational/structural perspective (analytical/analytical) \u2014 views crossing control as pure extraction with minimal coordination function"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Closure periods directly inflict humanitarian costs on trapped populations with zero compensation or negotiation. The extractiveness has increased over the interval (0.52\u21920.68) as closures have become longer and more frequent, reflecting increasing use of the crossing as a control mechanism rather than functional infrastructure. The value reflects that extraction is the primary function, not a byproduct. Suppression (0.72): High. No viable alternatives exist: Israeli border is sealed to civilian passage; Mediterranean is blockaded; underground tunnels are periodically destroyed; no sea corridors function at scale. Trapped populations have zero agency in whether the crossing opens. Suppressiveness reflects that the constraint operates through elimination of choice, not through choice-distorting incentives. Theater ratio (0.58): Moderate. Humanitarian protocols exist (vulnerable categories prioritized, medical referrals processed) but are frequently suspended during closures or undermined by operational patterns (closures without stated security rationale; delays that contradict stated capacity constraints). The theater has increased over the interval (0.42\u21920.58) as justifications have become more routine and operational violations more frequent \u2014 indicating that performative legitimation is becoming more important as actual security justification weakens. Claimed type: Snare. Classification holds from all victim-perspective viewpoints. No beneficiary perspective yields Rope because there is no genuine coordination function \u2014 the crossing's role is mere passage, not complex coordination requiring suppression. The Israeli beneficiary's interest is in control and deterrence, not in managing collective goods.",
+    "perspectival_gap": "This constraint demonstrates extreme perspectival divergence. The trapped Gaza civilian sees maximal extraction (Snare, \u03c7\u22480.86). The humanitarian organization sees constrained operation under crisis conditions (Snare, \u03c7\u22480.70). The Egyptian state sees mixed coordination necessity and extraction opportunity (Tangled Rope, \u03c7\u22480.62). The Israeli security establishment sees itself as beneficiary of a control mechanism (beneficiary position within Snare structure, d\u22480.15, negative \u03c7). The analytical observer sees pure extraction with minimal coordination function (Snare, \u03c7\u22480.78). The unique feature: Israeli beneficiary classification does not contradict Snare classification. Snare classification is structural (high \u03b5, high suppression, minimal coordination benefit); it does not depend on whether all parties within it are victimized. The Israeli position is beneficiary from extraction, not beneficiary from coordination. This is the precise distinction that DR enables: distinguishing extraction-based control from coordination-based governance.",
+    "directionality_logic": "Gaza civilian population: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction magnitude. Humanitarian organizations: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.20. High extraction but with some agency (organizations can theoretically relocate; most choose not to). Israeli security establishment: Beneficiary + mobile (but strategically rejects exit) \u2192 d\u22480.15, f(d)\u2248-0.01. Negative effective extraction from their perspective (they benefit from the mechanism). The apparent paradox is resolved by noting that d reflects structural position relative to the constraint, not absolute power. Israeli security establishment is a beneficiary of extraction (extraction flows to them), so their d is low despite their absolute power. Trapped populations are victims of extraction, so their d is high despite their absolute powerlessness. Egyptian government: Mixed (victim of refugee burden + beneficiary of rent extraction) + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction: genuine costs (humanitarian obligations, refugee settlement) coupled with genuine benefits (security tool, revenue extraction). Analytical observer: analytical exit \u2192 d\u22480.72, f(d)\u22481.15. Standard analytical derivation from canonical fallback."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "gaza_israeli_blockade_total",
+      "palestinian_humanitarian_access_system",
+      "egypt_israel_security_coordination"
+    ],
+    "dual_formulation_note": "The Rafah crossing control regime is downstream of the broader Gaza blockade (which determines why Rafah is the only exit) and upstream of the humanitarian access system (which depends on Rafah for critical supply flows). The constraint exhibits higher extractiveness than the broader blockade because the crossing functions as a control valve that can be weaponized; the blockade is the structural precondition. Network decomposition: (1) total blockade (\u03b5=0.55, Snare) establishes the trap; (2) Rafah control (\u03b5=0.68, Snare) weaponizes it; (3) humanitarian access system (\u03b5=0.52, Tangled Rope) attempts to mitigate through humanitarian protocols. All three are distinct constraints with different \u03b5 values reflecting their different structural functions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

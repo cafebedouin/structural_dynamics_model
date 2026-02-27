@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "ai_evaluators_matching",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aiem"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Talent Evaluators: Efficiency vs. Opacity in Automated Hiring",
+    "topic_domain": "labor_economics/human_resources_technology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hiring_organizations",
+      "evaluation_vendors"
+    ],
+    "victims": [
+      "candidate_job_access",
+      "labor_market_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Job Candidate",
+      "comment": "PERSPECTIVE 1: JOB CANDIDATE (SNARE) \u2014 Trapped in AI evaluation system with no meaningful exit. Candidates cannot opt out, cannot understand decision criteria, cannot appeal opaque rejections. System extracts economic opportunity with maximum suppression: alternatives are non-existent when majority of employers deploy same AI evaluators."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Hiring Manager",
+      "comment": "PERSPECTIVE 2: HIRING MANAGER (TANGLED ROPE) \u2014 Constrained by organizational scaling demands and candidate volume, but also benefits from reduced manual screening burden. Experiences genuine coordination function (faster hiring) alongside extraction (loss of human judgment discretion and implicit bias correction capability). Moderate power and constrained exit: can influence selection within constraints but cannot easily abandon AI evaluation system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Evaluation Vendor",
+      "comment": "PERSPECTIVE 3: EVALUATION VENDOR (ROPE) \u2014 Pure coordination from vendor perspective: system solves the collective action problem of matching large candidate pools to organizational needs. Vendor has arbitrage exit (can switch to other business models) and captures most efficiency gains as revenue. Experiences constraint as coordination mechanism, not extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Organized advocacy groups, labor unions, and regulators see AI hiring systems as temporary coordination failure with mandated sunset: algorithmic transparency requirements, adversarial testing mandates, and explainability standards create alternative verification pathways that bypass vendor opacity. Theater suppression declining as transparency mandates mature. Has sunset clause in principle (regulatory compliance path exists)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Resume Filtering Industry",
+      "comment": "PERSPECTIVE 5: RESUME FILTERING INDUSTRY (PITON) \u2014 Legacy keyword-matching and rule-based filtering persists through institutional inertia despite being demonstrably inferior to modern AI evaluation. Theater ratio high (0.64): vendors market 'explainability' and 'fairness' as ritual compliance while actual decision logic remains opaque. Primary function (filtering high volume) has degraded into theater performance; constraint maintained because organizational alternatives haven't fully displaced legacy systems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational perspective, AI evaluation systems exhibit genuine coordination function (solving matching problem at unprecedented scale) AND asymmetric extraction (vendor capture of efficiency gains, candidate access foreclosure, labor market opacity). The constraint is not a natural law \u2014 efficiency vs. opacity is not inherent to AI \u2014 but a contingent institutional structure combining real coordination benefit with real power asymmetry. Effective extraction is substantial but bounded by regulatory pressure and transparency mandates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transparency_sufficiency_threshold",
+      "question": "What degree of algorithmic explainability actually enables meaningful candidate appeal and regulatory audit, vs. cosmetic transparency that provides no real oversight?",
+      "resolution_mechanism": "Comparison of appeal success rates under different explainability regimes; analysis of whether explanations match actual decision factors; longitudinal tracking of hiring outcome distributions after transparency mandates",
+      "impact": "If true transparency achievable: constraint shifts from Snare to Tangled Rope for candidates. If explainability is performative theater: constraint remains Snare regardless of regulatory mandates, and suppression persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether explainability requirements can overcome opacity suppression"
+    },
+    {
+      "id": "alternative_matching_viability",
+      "question": "Can decentralized, candidate-controlled credential systems (portfolios, skill badges, open assessments) actually compete with centralized AI evaluators for organizational efficiency?",
+      "resolution_mechanism": "Empirical comparison of hiring speed and outcome quality under alternative matching architectures; analysis of network effects preventing decentralized alternatives from achieving scale",
+      "impact": "If alternatives viable: scaffold sunset becomes structural rather than aspirational, and organizational lock-in is relaxed. If alternatives fail: vendor lock-in is durable, and suppression remains high.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of decentralized alternatives to centralized AI evaluation"
+    },
+    {
+      "id": "bias_vs_discrimination_attribution",
+      "question": "Are observed disparities in AI hiring evaluations caused by model bias (remediable through technical intervention) or by structural discrimination baked into training data and evaluation metrics (only remediable through institutional restructuring)?",
+      "resolution_mechanism": "Decomposition of hiring disparities into model bias, training data bias, and metric bias components; controlled experiments comparing debiased models to original; longitudinal tracking of whether technical debiasing reduces disparities in practice",
+      "impact": "If technical remediation works: constraint is Tangled Rope with bounded extraction. If structural discrimination dominates: constraint is Snare for marginalized candidates, with high suppression resistant to vendor-side fixes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of hiring disparities to remediable bias vs. structural discrimination"
+    },
+    {
+      "id": "vendor_lock_in_depth",
+      "question": "How durable is organizational lock-in to specific AI evaluation platforms once hiring data accumulates in vendor systems? Can organizations switch evaluators without losing institutional knowledge?",
+      "resolution_mechanism": "Analysis of switching costs: time to retrain replacement systems, data extraction friction, organizational inertia. Comparison of churn rates under regulatory pressure vs. market competition.",
+      "impact": "If lock-in is shallow: candidates and regulators have more leverage, and extraction coefficients are lower. If lock-in is durable: vendor control persists even under regulatory pressure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Durability of vendor lock-in to specific evaluation systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "AI talent evaluation systems create a structural tension between organizational efficiency (legitimate coordination gain) and candidate access opacity (asymmetric extraction). Hiring organizations and evaluation vendors benefit from dramatically reduced screening burden and improved throughput; job candidates lose visibility into evaluation criteria, face irreversible rejections from opaque algorithms, and experience suppression of alternative matching pathways as evaluators consolidate market position. The constraint exhibits multiple classification types from different perspectives: pure extraction (Snare) for candidates with no exit, mixed coordination-extraction (Tangled Rope) for hiring managers with constrained agency, coordination (Rope) for vendors with arbitrage options, and temporary extraction with regulatory sunset (Scaffold) from the perspective of transparency advocates. The rising theater ratio (0.38 \u2192 0.64) reflects vendor deployment of 'explainability' and 'fairness' features as ritual compliance rather than functional oversight \u2014 the public commitment to transparency increases while actual decision opacity remains unchanged. The rising base extractiveness (0.35 \u2192 0.58) shows that as AI evaluation systems consolidate market position and lock organizations into vendor platforms, the extraction coefficients deepen through reduced switching capacity and candidate data accumulation.",
+    "key_agents": [
+      "Job Candidates: Primary victims (powerless/trapped) \u2014 face irreversible rejections from opaque algorithms with no appeal mechanism or alternative pathways",
+      "Hiring Organizations: Primary beneficiaries (institutional/arbitrage) \u2014 capture dramatic efficiency gains through automation and volume throughput; maintain exit option via vendor switching",
+      "Evaluation Vendors: Secondary beneficiaries (institutional/arbitrage) \u2014 extract rents through lock-in and scale; control access to candidate evaluation tools and organizational data",
+      "Hiring Managers: Secondary actors (moderate/constrained) \u2014 benefit from automated screening but lose discretion over hiring decisions and human judgment capabilities",
+      "Regulatory Coalition: Organized opposition (organized/constrained) \u2014 labor agencies, civil rights advocates, transparency advocates pushing for algorithmic transparency and explainability mandates",
+      "Labor Market Transparency: Abstract victim (powerless/trapped) \u2014 institutional good that cannot organize; bears cost of opaque matching mechanisms that degrade market efficiency"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The evaluation vendor captures substantial efficiency gains while candidates lose economic opportunity and market transparency. However, extraction is not maximal (0.70+) because some organizations can and do switch evaluators, regulatory pressure is mounting, and the underlying matching function provides real coordination value that benefits multiple parties. Base extractiveness reflects the structural asymmetry: vendors have arbitrage exit while candidates have none. Suppression (0.68): High. Candidates cannot opt out of AI evaluation (majority of employers use it), cannot understand rejection criteria, cannot appeal algorithmically-mediated decisions, and face reduced alternative matching pathways as evaluators consolidate. Alternatives (direct applications, recruiter networks, credential verification) are available but increasingly marginalized as employers automate away from them. Theater ratio (0.64): Moderate-high. Vendors increasingly market 'explainability' and 'fairness' features as public commitment to transparency, but underlying decision logic remains proprietary and opaque. The rise in theater ratio (0.38 \u2192 0.64) tracks vendor adoption of compliance theater: fairness audits, bias testing frameworks, and explainability dashboards deployed to satisfy regulatory concern while preserving vendor control over evaluation criteria.",
+    "perspectival_gap": "The candidate sees pure extraction (Snare) \u2014 irreversible loss of opportunity with no appeal mechanism. The hiring manager sees coordination (Tangled Rope) \u2014 solving their volume problem but losing discretion. The vendor sees coordination (Rope) \u2014 solving the matching problem at scale. The regulatory coalition sees temporary extraction with a sunset (Scaffold) \u2014 transparency mandates and algorithmic auditing will eventually close the opacity gap. The legacy industry sees degraded function (Piton) \u2014 the constraint persists through institutional inertia despite better alternatives available. The analytical observer sees real coordination function (efficient matching) combined with real power asymmetry (vendor control, candidate foreclosure), classifying as Tangled Rope at civilization scope \u2014 the efficiency vs. opacity tension is not inherent to AI but a contingent institutional structure that could be restructured to preserve coordination while reducing extraction.",
+    "directionality_logic": "Each agent's directionality value (d) reflects their position in the extraction flow and their exit capacity. Candidates (powerless/trapped) derive high d \u2192 high f(d) \u2192 high experienced extraction from their total dependence on AI evaluation and complete lack of exit alternatives. Vendors (institutional/arbitrage) derive low d \u2192 negative f(d) \u2192 negative experienced extraction because they have multiple business models available and capture efficiency gains as revenue. Hiring managers (moderate/constrained) derive moderate d \u2192 moderate f(d) \u2192 moderate experienced extraction because they benefit from screening efficiency but face organizational and regulatory constraints on discretion. Regulatory actors (organized/constrained) derive moderate-low d because they have leverage through mandates but cannot unilaterally exit the system. The analytical observer derives moderate d reflecting the balanced coordination-extraction structure: real matching value exists, but real asymmetry in capture exists. No agent sees the system as purely extractive except the candidate, and no agent except the vendor sees it as purely beneficial.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the 'efficiency vs. opacity' framing naturalizes what is actually a contingent institutional structure. The true mandatrophy is: 'Is AI evaluation extraction or coordination?' The constraint exhibits both. The vendor efficiency gain (real coordination) and the candidate foreclosure (real extraction) are not trade-offs inherent to AI \u2014 they are consequences of institutional choices: vendor control of evaluation criteria, organizational outsourcing of hiring discretion, regulatory lag in algorithmic transparency mandates, and network effects enabling evaluator consolidation. The constraint is Tangled Rope, not Snare masquerading as Rope, because the coordination function is genuinely valuable (employers solve a real matching problem; candidates can be matched more efficiently in principle). However, the current institutional structure captures that coordination value asymmetrically: vendors and organizations capture efficiency gains while candidates bear opacity and access costs. The mandatrophy resolution is structural: decentralized credential systems, algorithmic transparency requirements, and portable evaluation records could preserve the coordination function while reducing extraction. The Scaffold perspective (regulatory sunset) is not aspirational \u2014 algorithmic transparency requirements (EU AI Act, EEOC guidance, state transparency laws) are already mandating explainability and algorithmic auditing. The extraction window is closing through regulatory intervention, not through market competition alone."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "job_market_search_friction",
+      "hiring_bias_perpetuation",
+      "labor_data_asymmetry"
+    ],
+    "dual_formulation_note": "AI evaluation systems occupy the top of a constraint family decomposing the labor matching problem. Job search friction (upstream) creates demand for evaluation efficiency. Hiring bias perpetuation (downstream) results from training data biases in evaluation systems. Labor data asymmetry (parallel) reflects vendor control of candidate data accumulated through hiring systems. All three are structurally linked: improvements in evaluation transparency and portability reduce downstream bias and upstream friction simultaneously."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

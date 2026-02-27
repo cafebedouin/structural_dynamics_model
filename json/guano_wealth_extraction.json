@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "guano_wealth_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "guano"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Guano-based Wealth Extraction in the Chincha Islands",
+    "topic_domain": "economic/resource_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chincha_elite"
+    ],
+    "victims": [
+      "guano_harvesters",
+      "tributary_populations",
+      "ecological_commons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Guano Harvester",
+      "comment": "PERSPECTIVE 1: GUANO HARVESTER (SNARE) \u2014 Trapped in labor obligation to extract guano under elite control. No exit option: flight incurs severe punishment. Bearing full extraction cost through labor coercion. Suppression is high: alternatives (migration, refusal) are blocked by state enforcement and social sanctions."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Tributary Population",
+      "comment": "PERSPECTIVE 2: TRIBUTARY POPULATION (SNARE) \u2014 Obligated to supply labor and resources to support guano extraction infrastructure. Trapped by tributary obligation encoded in social hierarchy. Suppression: refusal means loss of status, resource access, and community inclusion. Multigenational extraction burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Chincha Elite",
+      "comment": "PERSPECTIVE 3: CHINCHA ELITE (ROPE) \u2014 Organizes labor and guano trade. Experiences constraint as coordination mechanism: managing harvest cycles, maintaining trade networks, distributing extraction benefits. Has arbitrage options (trade partnerships, ceremonial exchange). Net beneficiary experiencing the constraint as coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Merchant Trader",
+      "comment": "PERSPECTIVE 4: MERCHANT TRADER (TANGLED ROPE) \u2014 Benefits from guano trade access but constrained by Chincha elite monopoly on harvest. Can arbitrage within constraints but cannot fully exit. Experiences both coordination (access to unique commodity) and extraction (restricted pricing power). Moderate agency but significant overhead costs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Ceremonial Redistribution System",
+      "comment": "PERSPECTIVE 5: CEREMONIAL REDISTRIBUTION SYSTEM (PITON) \u2014 Formal mechanism for distributing guano wealth appears functional but increasingly theatrical. Ceremonial feasts and redistribution rituals legitimize extraction as reciprocal obligation. Theater ratio: redistribution ceremonies are performative; actual wealth concentration in elite hands continues. Coordination function (legitimation) persists through ritual maintenance despite diminishing actual wealth sharing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Ecological Constraint View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ECOLOGICAL CONSTRAINT VIEW (MOUNTAIN) \u2014 From universal analytical perspective, the guano island ecosystem's finite regeneration capacity is an immutable natural law. Guano accumulates at fixed biological rate; harvest cannot exceed regeneration without collapse. This creates absolute scarcity regardless of social organization. However, the structural data reveals this is a false summit: the Chincha managed sustainable harvest for 600 years, proving the ecological limit is not what drives extraction severity \u2014 the institutionalized monopoly and coercive labor system are contingent, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ecological_carrying_capacity_knowledge",
+      "question": "Did the Chincha elite possess explicit knowledge of guano regeneration rates and intentionally limit harvest to sustainable levels, or did sustainable practice emerge from cultural tradition without explicit ecological science?",
+      "resolution_mechanism": "Archaeological analysis of harvest records, guano deposit stratigraphy, isotope signatures in midden deposits, ethnohistorical accounts of harvest management protocols",
+      "impact": "If intentional knowledge: constraint includes a genuine coordination function (sustainable resource management) alongside extraction. If traditional practice: coordination emerges from cultural ratcheting rather than explicit constraint design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ecological carrying capacity was explicitly known and managed"
+    },
+    {
+      "id": "harvester_surplus_extraction_boundary",
+      "question": "What portion of harvesters' labor surplus was extracted as pure rent vs. necessary cost for guano extraction infrastructure (boats, processing, storage)?",
+      "resolution_mechanism": "Comparative analysis of labor time required for physical extraction vs. labor time demanded; calculation of elite consumption rates vs. infrastructure maintenance costs",
+      "impact": "If infrastructure overhead is high: extractiveness should be lower (0.55-0.60). If pure rent dominates: extractiveness confirmed at 0.72. Classification sensitivity: impacts whether this is snare or tangled_rope from harvester perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of labor extraction that is pure rent vs. infrastructure overhead"
+    },
+    {
+      "id": "tributary_reciprocal_benefit_measurement",
+      "question": "What proportion of tributary populations perceived genuine reciprocal benefit from elite protection, ceremonial redistribution, and social stability vs. perceiving pure extraction?",
+      "resolution_mechanism": "Ethnohistorical analysis of tribute narratives; oral tradition preservation; settlement pattern analysis showing elite and tributary settlement synchrony/conflict periods",
+      "impact": "If beneficiaries experienced reciprocity: snare classification for tributaries is overstated; should be tangled_rope. If pure extraction: snare classification confirmed from tributary perspective.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether tributaries perceived reciprocal benefit or pure extraction"
+    },
+    {
+      "id": "collapse_causation_extractive_vs_ecological",
+      "question": "Did the Chincha system collapse around 1400 AD primarily due to ecological exhaustion (guano regeneration could not support expanding extraction demand) or due to political fragmentation and loss of labor enforcement capacity?",
+      "resolution_mechanism": "Guano deposit analysis for signs of post-1350 overharvesting; settlement archaeology showing elite residence abandonment vs. harvester settlement persistence; proxy records of climate change affecting marine bird productivity",
+      "impact": "If ecological: validates mountain perspective (ecological limit is binding constraint). If political: reveals extraction dynamics were contingent institutional arrangements, not natural limits. Mandatrophy resolution hinges on this.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether collapse was driven by ecological exhaustion or political fragmentation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Chincha Islands guano deposits (800 AD \u2013 1400 AD) generated wealth concentration and labor coercion at unprecedented scale. The structural constraint involves a resource monopoly (elite control of guano harvest rights), coercive labor enforcement (tributary obligation and harvester servitude), and asymmetric wealth distribution (guano export value captured by elite, labor costs borne by commoners). The constraint's extractiveness increased over the 600-year cycle as elite demand for luxury goods and monumental architecture expanded, requiring higher guano export volumes and correspondingly higher labor extraction. Theater ratio remained low because the extractive mechanism was direct and undisguised: elite wealth derived visibly from guano trade, labor obligation was explicit, and the constraint required continuous enforcement rather than performative legitimation. The ceremonial redistribution system provided some legitimation (piton perspective) but was insufficient to mask the fundamental asymmetry. Collapse around 1400 AD involved both ecological pressures (guano regeneration limits) and political fragmentation (loss of enforcement capacity as regional rivals organized), though the relative weighting remains contested. The constraint exemplifies how resource monopolies in pre-industrial economies generate pure extraction (snare) unless offsetting coordination functions (reciprocal obligation, genuine risk-sharing) are present.",
+    "key_agents": [
+      "Chincha Elite: Primary beneficiary (institutional/arbitrage) \u2014 controls guano harvest monopoly, captures trade surplus, directs labor through tributary obligations",
+      "Guano Harvesters: Primary victims (powerless/trapped) \u2014 coerced labor, no exit option, direct exposure to dangerous extraction conditions",
+      "Tributary Populations: Secondary victims (powerless/trapped) \u2014 obligated labor service to support elite and extraction infrastructure, multigenenerational extraction",
+      "Merchant Traders: Secondary actors (moderate/constrained) \u2014 access guano trade but subject to elite price monopoly and supply restrictions",
+      "Ceremonial Redistribution System: Institutional performance (institutional/arbitrage) \u2014 legitimizes extraction through ritualized wealth distribution that is increasingly theatrical",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing monopoly as ecological necessity rather than contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.72): High. The Chincha elite captured guano export surplus (commodity value minus extraction costs) while transferring all labor and risk to coerced populations. The progression from 0.50 to 0.72 reflects expansion of extraction intensity as elite demand outpaced guano availability, requiring intensification of labor coercion. Suppression (0.68): High. Harvesters face coercive labor obligation with capital punishment for flight or refusal. Tributaries face loss of status, resource access, and social inclusion for non-compliance. Alternative livelihoods are blocked. Theater ratio (0.35): Low. The extractive mechanism is direct and undisguised: guano trade wealth flows to elite visibly, labor obligation is encoded in explicit tributary status, enforcement is physical rather than performative. This low theater distinguishes it from piton constraints, which use ritual to mask declining function. Mandatrophy resolved: Yes. The constraint is classified as snare (pure extraction) rather than tangled_rope because the coordination benefits to exploited populations are minimal. The tributary system provides some reciprocal redistribution (feast participation, elite protection), but this is insufficient to offset the coercive labor surplus. The analysis confirms snare: suppression \u2265 0.60, extractiveness \u2265 0.46, \u03c7 \u2265 0.66 (estimated 0.78 at powerless perspective).",
+    "perspectival_gap": "The Chincha elite experience the constraint as coordination (rope) \u2014 managing trade networks, organizing harvest cycles, maintaining tributary relationships. The harvesters and tributaries experience it as pure extraction (snare) \u2014 uncompensated labor obligation, resource seizure, suppressed alternatives. The merchant traders experience mixed coordination and extraction (tangled_rope) \u2014 access to valuable commodity but restricted by monopoly pricing. The ceremonial system preserves a fiction of reciprocity (piton) \u2014 redistribution rituals persist while wealth concentration increases. The analytical observer risks naturalizing this as ecological necessity (mountain) \u2014 'finite guano requires elite coordination to prevent overharvest' \u2014 but the structural evidence reveals the ecological constraint as stable and the social extraction as expanding. The perspectival gap is sharp: from the elite view, the system coordinates sustainable resource use; from the victim view, the system enforces coercive labor extraction that happens to be sustainable as a side effect of elite wealth maximization (not by design).",
+    "directionality_logic": "The directionality of each perspective derives from structural position in the extraction flow. Harvesters have d \u2248 0.95 (full targets): powerless + trapped + victim \u2192 high f(d) \u2192 high \u03c7. Tributaries have d \u2248 0.92 (near-full targets): powerless + trapped + victim + multigenenerational \u2192 high \u03c7. Chincha elite have d \u2248 0.05 (full beneficiaries): institutional + arbitrage + beneficiary \u2192 negative f(d) \u2192 negative \u03c7 (experienced as coordination benefit). Merchant traders have d \u2248 0.50 (symmetric): moderate power + constrained exit + mixed beneficiary/victim \u2192 \u03c7 moderate. The ceremonial system has d \u2248 0.15 (beneficiary with institutional inertia): performs legitimation function for elite. Analytical observer has d \u2248 0.73 (observer position): sees structural pattern from outside, risks false summit (naturalizing contingency as necessity)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "tributary_labor_obligation_system",
+      "maritime_trade_monopoly"
+    ],
+    "dual_formulation_note": "The guano extraction system decomposes into three structurally distinct constraints: (1) ecological regeneration limit (mountain), (2) tributary labor mobilization (snare), (3) merchant trader monopoly (tangled_rope). This story focuses on the labor extraction mechanism. The ecological constraint is upstream (affects all three). The merchant monopoly is downstream (enabled by labor extraction infrastructure)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
+}

@@ -2,26 +2,27 @@
   "header": {
     "constraint_id": "ai_performance_watermark",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aipw"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "Mandatory Watermarking for Synthetic Media",
     "topic_domain": "technological/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "creative_ip_holders",
-      "watermark_tech_providers",
-      "legacy_media_platforms"
+      "established_performers",
+      "creative_guilds",
+      "regulatory_bodies"
     ],
     "victims": [
-      "open_source_developers",
-      "independent_creators",
-      "public_epistemic_commons"
+      "ai_development_companies",
+      "content_creators_using_synthetic_media",
+      "downstream_market_efficiency"
     ]
   },
   "perspectives": [
@@ -31,136 +32,188 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Open-Source Developer",
-      "comment": "PERSPECTIVE 1: OPEN-SOURCE DEVELOPER (SNARE) — Trapped by a mandate that imposes significant computational and compliance costs, stifling innovation. The constraint is pure extraction with no coordination benefit for this agent. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+      "label": "Small AI Development Teams",
+      "comment": "PERSPECTIVE 1: SMALL AI DEVELOPMENT TEAMS (SNARE) \u2014 Trapped by mandatory watermarking implementation costs (embedding systems, verification infrastructure) with no exit. Cannot compete without expensive compliance; cannot migrate to unregulated jurisdictions without losing market access. Maximum experienced extraction directed at capability ceiling. Theater is performed through compliance audits and watermark certification schemes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Content Creators",
+      "comment": "PERSPECTIVE 2: INDEPENDENT CONTENT CREATORS (TANGLED ROPE) \u2014 Constrained by mandatory watermarking requirements (cannot create fully synthetic media without disclosure), but also benefit from the constraint: watermarking legitimizes their use of synthetic media by establishing a transparent disclosure norm, reducing legal liability and audience backlash. Mixed extraction and coordination \u2014 they bear compliance costs but gain legitimacy and market differentiation."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Creative IP Holder",
-      "comment": "PERSPECTIVE 2: CREATIVE IP HOLDER (ROPE) — Experiences the mandate as a pure coordination mechanism to protect likeness and performance rights, solving a collective action problem. Can arbitrage between tech providers and lobby for favorable terms. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (provenance) and the asymmetric extraction from developers to IP holders. The high suppression and active enforcement confirm the hybrid nature. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "label": "Established Performers and Creative Guilds",
+      "comment": "PERSPECTIVE 3: ESTABLISHED PERFORMERS AND CREATIVE GUILDS (ROPE) \u2014 Primary beneficiaries. Watermarking protects their market position by making synthetic replacement more visible and legally encumbered. Can arbitrage between jurisdictions (support watermarking in home countries, use synthetic media elsewhere). Experience the constraint as coordination: establishing a disclosure norm that protects their livelihoods while appearing to protect audiences."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Government Regulator",
-      "comment": "PERSPECTIVE 4: GOVERNMENT REGULATOR (SCAFFOLD) — Views the mandate as a temporary measure to stabilize the information ecosystem until more robust technologies or norms emerge. The policy has an implicit sunset clause tied to technological maturity. d≈0.40, f(d)≈0.40, σ=1.0 → χ≈0.22."
+      "spatial_scope": "global",
+      "label": "Technology Standardization Bodies",
+      "comment": "PERSPECTIVE 4: TECHNOLOGY STANDARDIZATION BODIES (SCAFFOLD) \u2014 Organized actors (W3C, NIST, ISO working groups) see watermarking as a temporary coordination solution with a sunset clause: as detection and authentication technology matures, mandatory watermarking becomes redundant. The scaffold is legitimate \u2014 standards can be phased out once technical alternatives (content authentication, cryptographic signatures, provenance tracking) achieve sufficient maturity. Sunset estimated 5-15 years as multi-signature and blockchain-based provenance become industry standard."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Enforcement Infrastructure",
+      "comment": "PERSPECTIVE 5: REGULATORY ENFORCEMENT INFRASTRUCTURE (PITON) \u2014 Watermarking compliance and verification is largely performative. Detection of watermarks requires access to original files and metadata (often unavailable); circumvention is trivial (recompression, format conversion, overlay); verification authority is unclear (who certifies the watermark as authentic?). The enforcement theater persists through institutional inertia \u2014 regulators maintain audit and certification schemes despite knowing watermarks are easily defeated. Piton classification: theater_ratio 0.68, functional verification ability low."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
       "time_horizon": "generational",
-      "exit_options": "constrained",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Emerging Artists and Independent Producers",
+      "comment": "PERSPECTIVE 6: EMERGING ARTISTS AND INDEPENDENT PRODUCERS (SNARE) \u2014 Trapped by dual mandate: cannot use synthetic media without watermarking (blocking low-cost production), but also cannot compete without using synthetic media (high barriers to traditional production). Caught between compliance and economic viability. No exit path: small budgets preclude both watermarking infrastructure and traditional production methods."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Late-Stage Compliance Body",
-      "comment": "PERSPECTIVE 5: LATE-STAGE COMPLIANCE BODY (PITON) — After watermarks are routinely bypassed, the functional purpose atrophies, but the compliance bureaucracy persists due to institutional inertia. The high theater_ratio (0.75) reflects the large gap between the performative act of compliance and its actual effectiveness."
+      "label": "Large Content Platforms",
+      "comment": "PERSPECTIVE 7: LARGE CONTENT PLATFORMS (TANGLED ROPE) \u2014 Organized actors (YouTube, TikTok, Netflix) experience watermarking as both coordination (they can monetize authentic content by excluding synthetic replacements) and extraction (they must implement detection, metadata tracking, and takedown infrastructure). Can arbitrage between jurisdictions (strict watermarking in EU, permissive in Asia). Mixed benefits and costs with significant agency to shape enforcement implementation."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Championing Politician (False Summit)",
-      "comment": "PERSPECTIVE 6: CHAMPIONING POLITICIAN (FALSE SUMMIT) — Frames the mandate as a permanent, unchangeable law necessary to protect society from the 'threat' of AI. This naturalizes a highly contingent and extractive policy. The engine will detect this as a false summit, as the base properties (ε=0.55, suppression=0.65) are incompatible with a Mountain classification."
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Immutability View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / IMMUTABILITY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some disclosure requirement for synthetic media is an immutable property of rational information systems: audiences have the right to know the provenance of content they consume, and this is an irreducible natural law of transparent communication. However, the structural data reveals this as a false summit: mandatory watermarking is a contingent regulatory choice, not a law of nature. Cryptographic signatures, metadata standards, and detection technology are alternatives that achieve the same informational goal without the extraction mechanisms embedded in watermarking mandates."
     }
   ],
   "omegas": [
     {
-      "id": "technical_arms_race",
-      "question": "Will watermark robustness keep pace with adversarial removal techniques, or will it become trivially easy to bypass?",
-      "resolution_mechanism": "Longitudinal analysis of watermark detection success rates against state-of-the-art removal algorithms over time.",
-      "impact": "If watermarks are consistently broken, the constraint degrades into a pure Piton (compliance theater). If they remain robust, the Rope and Tangled Rope classifications are strengthened.",
+      "id": "watermark_circumvention_arms_race",
+      "question": "Will mandatory watermarking create a permanent arms race between detection and circumvention, or does technical maturity eventually stabilize?",
+      "resolution_mechanism": "Historical analysis of watermarking robustness across formats (audio, video, images); measurement of circumvention time-to-defeat for emerging techniques; comparative analysis with digital rights management (DRM) arms race",
+      "impact": "If arms race is permanent: watermarking is extraction theater (Piton) with no functional endpoint. If stabilization is achievable: scaffold perspective is correct, and sunset is realistic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether watermark circumvention creates permanent arms race"
+    },
+    {
+      "id": "alternative_authentication_viability",
+      "question": "Can cryptographic content authentication (hash chains, blockchain provenance, multi-signature verification) replace mandatory watermarking while achieving the same disclosure goals?",
+      "resolution_mechanism": "Technical specification comparison; deployment feasibility studies; user experience testing across content platforms; cost analysis for small vs large creators",
+      "impact": "If viable alternatives exist: mandatory watermarking is extractive rather than coordinative (reclassifies toward Snare from more perspectives). If alternatives are infeasible: watermarking is a legitimate coordination solution (reclassifies toward Rope).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "The ongoing arms race between watermark robustness and adversarial removal techniques."
+      "description": "Whether alternatives to watermarking can achieve disclosure goals"
+    },
+    {
+      "id": "detection_accuracy_asymmetry",
+      "question": "Will detection and verification accuracy remain fundamentally asymmetric (easy to evade, hard to detect), or can mature detection technology catch most circumvention attempts?",
+      "resolution_mechanism": "Measurement of false negative and false positive rates over time; evaluation of detection against known circumvention techniques; cross-platform consistency analysis",
+      "impact": "If asymmetry is permanent: suppression score should increase (watermarking becomes increasingly ineffective). If detection matures: suppression score should decrease and extractiveness becomes more coordinative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Persistent asymmetry between watermark evasion and detection"
+    },
+    {
+      "id": "enforcement_selective_targeting",
+      "question": "Will enforcement of mandatory watermarking be applied selectively to powerless actors while large platforms and established performers face lighter scrutiny?",
+      "resolution_mechanism": "Analysis of takedown and compliance audit data; comparison of enforcement rates across company size and creator status; jurisdictional variation in penalty severity",
+      "impact": "If enforcement is selective: extractiveness and suppression scores should increase (structural asymmetry becomes more apparent). If enforcement is uniform: classification shifts toward legitimate coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Selective enforcement targeting small actors over large platforms"
     },
     {
       "id": "market_consolidation_effect",
-      "question": "Will the compliance costs of the mandate lead to significant market consolidation around a few large AI labs and tech providers?",
-      "resolution_mechanism": "Comparative market share analysis of independent/open-source vs. large corporate AI model usage, pre- and post-mandate.",
-      "impact": "High consolidation would confirm the Snare perspective for a larger class of agents and increase the base extractiveness (ε). Low impact on market structure would support the Scaffold/Rope perspectives.",
-      "confidence": "medium",
+      "question": "Does mandatory watermarking with high compliance costs accelerate market consolidation, pushing small creators and AI developers out of the market?",
+      "resolution_mechanism": "Measurement of market concentration (HHI index) before and after watermarking mandates; entry/exit rates for small companies; funding and venture capital flows to compliance-heavy vs low-cost solutions",
+      "impact": "If consolidation is significant: extractiveness should be reclassified higher, and the constraint becomes a structural barrier to market entry (moves toward pure Snare). If market remains diverse: extraction is legitimate coordination cost.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether compliance costs will squeeze out smaller players and consolidate the market."
-    },
-    {
-      "id": "chilling_effects_on_speech",
-      "question": "To what extent will the mandate be used to de-anonymize or suppress legitimate anonymous speech, parody, or political dissent?",
-      "resolution_mechanism": "Case law analysis and tracking of enforcement actions, particularly those targeting non-commercial or political content.",
-      "impact": "Evidence of use against dissent would dramatically increase the suppression score and validate the Snare classification for anonymous speakers.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "The potential for the watermarking system to be used for surveillance and censorship."
+      "description": "Market consolidation driven by compliance burden"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
       "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.65
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.75
+      "time_point": 6,
+      "value": 0.52
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "A proposed regulatory and technical framework mandates a 'digital watermark' on all AI-generated performances, championed by creative guilds and high-profile actors to protect their intellectual property and likeness. While presented as a solution to misinformation and unauthorized use (a coordination function), the mandate imposes significant compliance costs on developers, potentially stifling innovation in the open-source community and consolidating the market around large, well-funded entities (an extraction function). The technical brittleness of watermarks, which can often be removed or bypassed, introduces a high degree of theater, where the appearance of control and safety may exceed the reality.",
+    "narrative_context": "Mandatory watermarking for synthetic media emerged as a regulatory proposal from creative guilds and established performers seeking to protect against AI-generated replacements. The constraint combines legitimate coordination (audiences need to know provenance; creators need liability clarity) with extractive elements (compliance costs, market barriers, selective enforcement). This exemplar demonstrates how a constraint can be fundamentally Tangled Rope \u2014 possessing both genuine coordination function and asymmetric extraction \u2014 while appearing to different stakeholders as pure coordination (Rope), temporary solution (Scaffold), theater (Piton), or pure extraction (Snare). The theater_ratio trajectory (0.42 \u2192 0.68) reflects that enforcement infrastructure becomes increasingly performative as technical circumvention becomes trivial and detection unreliable. The extractiveness trajectory (0.35 \u2192 0.52) reflects growing realization that compliance burden concentrates in small actors while large platforms maintain bargaining power.",
     "key_agents": [
-      "Creative IP Holders: Primary beneficiaries (institutional/arbitrage) who seek to protect their likeness and performance rights.",
-      "Open-Source Developers: Primary victims (powerless/trapped) who bear the compliance and computational costs.",
-      "Watermark Tech Providers: Secondary beneficiaries (powerful/arbitrage) who gain a captive market for their services.",
-      "Independent Creators: Secondary victims (moderate/constrained) who face new barriers to entry and competition.",
-      "The Public Epistemic Commons: An abstract victim (powerless/trapped) that suffers from a false sense of security if watermarks fail.",
-      "Government Regulators: Organized agents (organized/constrained) who see the policy as a temporary fix (scaffold)."
+      "Established Performers: Primary beneficiary (institutional/arbitrage) \u2014 capture market protection and liability reduction during watermark enforcement period",
+      "Creative Guilds: Primary beneficiary (institutional/arbitrage) \u2014 champion the mandate to protect member livelihoods; can lobby for enforcement favoritism",
+      "Small AI Development Teams: Primary victim (powerless/trapped) \u2014 bear disproportionate compliance costs; cannot exit without losing market access",
+      "Independent Content Creators: Secondary victim/beneficiary (moderate/constrained) \u2014 gain legitimacy through watermarking but bear implementation costs",
+      "Large Content Platforms: Mixed actor (organized/arbitrage) \u2014 benefit from synthetic media detection and market control, bear detection infrastructure costs, can navigate multi-jurisdictional regulations",
+      "Emerging Artists: Secondary victim (powerless/trapped) \u2014 caught between synthetic media necessity (cost) and watermarking prohibition (liability)",
+      "Technology Standardization Bodies: Intermediate actor (organized/constrained) \u2014 implement technical standards; recognize watermarking as temporary solution with sunset",
+      "Regulatory Enforcement Bodies: Theater maintainer (institutional/arbitrage) \u2014 perform verification and certification while knowing watermarks are easily defeated"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55) is high, reflecting the transfer of value from a broad base of developers (in the form of compliance costs and stifled innovation) to a narrow group of IP holders and technology providers. Suppression (0.65) is high because the legal mandate effectively outlaws non-compliant forms of AI development and distribution, creating a chokepoint. Theater Ratio (0.75) is very high, as research indicates current watermarking technologies are vulnerable to adversarial attacks and removal, meaning the system's claimed function (reliable provenance) is significantly undermined, leaving a performative compliance ritual.",
-    "perspectival_gap": "The gap is stark. IP holders see a necessary coordination tool (Rope) to manage a chaotic new technology. Open-source developers see a costly, coercive barrier to entry imposed by powerful incumbents (Snare). An analyst sees both functions operating simultaneously (Tangled Rope). A regulator may view it as a temporary, imperfect solution (Scaffold), while a future compliance body, overseeing a technically obsolete system, experiences it as pure institutional inertia (Piton). This diversity of classifications from a single set of metrics is a hallmark of a complex, contested socio-technical system.",
-    "directionality_logic": "Beneficiaries (IP holders, tech providers) have arbitrage and institutional power, leading to low or negative directionality (d) and a Rope classification. Victims (developers, creators) are trapped or constrained, leading to high directionality and a Snare classification. The analytical observer's default high-d position reveals the underlying extractive conflict, classifying it as a Tangled Rope. The regulator, as an organized but constrained actor, has a moderate d-value, resulting in the low effective extraction (χ) required for a Scaffold.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that a single policy can be a Rope, Snare, and Piton simultaneously, depending on the observer's index. Labeling it simply 'a regulation' is insufficient. The DR framework correctly identifies that for IP holders, it coordinates; for developers, it extracts; and for a future observer of its technical failure, it is merely a performative ritual. The high theater ratio is critical, as it directly enables the Piton classification, capturing the likely degradation of the system's function over time while its form persists."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from small AI developers and independent creators through compliance costs, implementation burden, and market access barriers. The extraction flows to established performers and platforms that can afford detection infrastructure and lobby for favorable enforcement. Not maximal (0.70+) because legitimate disclosure coordination exists: watermarking does provide some provenance information before it is circumvented. The moderate value reflects that the extractive component is real but not the constraint's only function. Suppression (0.58): Moderate-high. Significant barriers to circumventing watermarking exist (technical sophistication, time), but barriers are not absolute \u2014 recompression, format conversion, and adversarial perturbation defeat most watermarks. Suppression is structural (lack of exit from compliance) rather than technical. Theater ratio (0.68): High and rising. Watermark verification authority is unclear; detection requires access to original files; circumvention is technically trivial for small amounts of content; enforcement theater grows as the gap between mandate and actual protection widens. Theater increases over the measurement interval because compliance burden grows while functional detection doesn't improve proportionally.",
+    "perspectival_gap": "This constraint demonstrates how established actors use coordination language ('transparency,' 'audience protection,' 'creator rights') to justify extractive mechanisms. Watermarking's legitimate coordination function (provenance disclosure) is real but separable from its extractive mechanism (compliance burden + selective enforcement). The gap between beneficiary (Rope) and victim (Snare) perspectives is maximized because the constraint provides genuine benefit to one class (established performers gain market protection) while imposing costs with no offsetting benefit to another class (small developers must implement systems that don't actually protect them). This is the defining signature of Tangled Rope: the coordination and extraction are structurally interlocked \u2014 you cannot have the coordination benefit (market clarity, liability reduction) without the extraction mechanism (compliance cost, enforcement theater).",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status and exit options. Established performers are beneficiaries with arbitrage exit (d \u2248 0.05-0.15): they benefit and can exit through jurisdictional shopping or influence on enforcement priority. Small developers are victims trapped in compliance (d \u2248 0.90-0.95): they bear costs and have no exit. Independent creators are mixed (d \u2248 0.55-0.65): they gain some legitimacy but face implementation costs and constrained exit options. Large platforms are organized beneficiaries with arbitrage (d \u2248 0.20-0.35): they benefit from market consolidation and detection infrastructure dominance but must invest in compliance. Each agent's experienced extractiveness (\u03c7) is computed from base extractiveness (\u03b5 = 0.52), their directionality d, and scope modifier \u03c3(S). Small developers with d \u2248 0.95 and mobile exit constrained experience \u03c7 significantly higher than institutional beneficiaries with d \u2248 0.10 and arbitrage exit.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids false classification through explicit beneficiary/victim declaration and enforcement requirement. Beneficiaries (established performers, creative guilds) are clearly identified and gain market protection. Victims (small developers, emerging artists) are clearly identified and bear compliance costs. The constraint requires active enforcement (watermark verification, compliance audits), confirming Tangled Rope gate requirements. The mandatrophy is resolved by recognizing that 'transparency' and 'creator protection' are legitimate coordination goals, but they are NOT the only function of mandatory watermarking \u2014 the constraint simultaneously provides market concentration benefits to large platforms and performers. A pure Rope classification (coordination only) would miss the extraction; a pure Snare classification (extraction only) would miss the legitimate transparency coordination. Tangled Rope is structurally accurate because both functions are essential to how the constraint operates. The scaffold perspective indicates that watermarking is temporary \u2014 cryptographic authentication will eventually supersede it \u2014 but the mandatrophy resolution shows this is a genuine temporal sunset (declining theater_ratio as alternatives mature) rather than aspirational. The piton perspective (performative verification) reflects the constraint's trajectory: as circumvention becomes trivial, enforcement becomes increasingly theatrical, but the regulatory structure persists through institutional inertia and beneficiary lobbying. This is not mandatrophy \u2014 it is accurate identification of degradation pathway."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_training_data_licensing",
+      "synthetic_media_liability_frameworks",
+      "performer_likeness_rights"
+    ],
+    "dual_formulation_note": "Mandatory watermarking decomposes into distinct structural constraints: (1) the coordination problem of content provenance disclosure (independent of watermarking technology choice), and (2) the extractive mechanism of compliance-cost concentration (specific to watermarking implementation). These are sometimes conflated in policy debate but have different \u03b5 values. The coordination goal (audience right-to-know) is achievable via multiple mechanisms (watermarking, metadata standards, cryptographic signatures) and is upstream of the extractive mechanism. Upstream story: content_provenance_disclosure (lower \u03b5, more Rope-like) describes the generic coordination problem. This story (ai_performance_watermark, \u03b5=0.52, Tangled Rope) describes the specific regulatory choice to mandate watermarking, which embeds extraction in the implementation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
 }

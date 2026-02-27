@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "us_embargo_cuba",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "emb"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "US Embargo of Cuba",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_strategic_interests",
+      "us_aligned_latin_american_governments",
+      "cuban_exile_political_coalition"
+    ],
+    "victims": [
+      "cuban_population",
+      "cuban_economy",
+      "regional_trade_partners"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Cuban Population and Economy",
+      "comment": "PERSPECTIVE 1: CUBAN POPULATION / ECONOMY (SNARE) \u2014 No meaningful exit option. Cuba cannot unilaterally lift the embargo; cannot fully bypass US financial system; cannot access US market; constrained from trading with US companies and third parties doing business in US. Trapped exit + victim status \u2192 d\u22480.95, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.86. Pure extraction with minimal coordination function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Trade Partners and Latin American States",
+      "comment": "PERSPECTIVE 2: REGIONAL TRADE PARTNERS (SNARE) \u2014 Countries trading with Cuba face choice: maintain Cuba trade or access US markets/investment. Many choose constrained compliance rather than full exit. Effective extraction mechanism: secondary sanctions and loss of US investment. d\u22480.70, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.64. Constrained exit limits alternative pathways but not zero-cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Strategic-Aligned Coalition",
+      "comment": "PERSPECTIVE 3: US STRATEGIC COALITION (ROPE) \u2014 US policymakers, aligned Latin American governments, Cuban exile leadership coordinate embargo maintenance as geopolitical alignment mechanism. For these actors, the embargo serves a coordination function: signaling strategic commitment, managing regional bloc discipline. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.09. Net beneficiary; experiences constraint as legitimate coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Corporate and Financial Interests",
+      "comment": "PERSPECTIVE 4: US CORPORATE / FINANCIAL SECTOR (TANGLED ROPE) \u2014 US firms excluded from Cuban market (victim of coordination enforcement), but dominant US financial institutions benefit from capital controls and sanctions compliance mechanisms (beneficiary of extraction fees, compliance consulting, market concentration). Dual relationship creates mixed experience. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.41. Moderate mixed extraction and coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Trade and Humanitarian Organizations",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL ORGS / HUMANITARIAN COALITION (SCAFFOLD) \u2014 UN resolutions, OAS arguments, humanitarian organizations frame embargo as temporary violation of international trade norms with explicit sunset logic: diplomatic normalization would end embargo. Coalition sees constraint as coordination failure to be overcome via negotiation with built-in exit (normalized relations). d\u22480.50, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.37. Theater ratio (0.58) reflects mix of humanitarian rhetoric and geopolitical realism; has_sunset_clause reflects negotiation pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Institutional Cold War Inertia",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL INERTIA / CIVILIZATIONAL VIEW (PITON) \u2014 The embargo persists through institutional momentum and legislation (Helms-Burton Act, 1996) despite degraded original function (Cold War containment irrelevant post-1991). Theater_ratio (0.58) reflects substantial performative maintenance: embargo renewal justified via outdated threat narratives, Cold War rhetoric persists in policy discussions, actual enforcement is inconsistent. Institutional inertia keeps mechanism alive despite functional atrophy. d\u22480.55, f(d)\u22480.75, \u03c3=1.1 \u2192 \u03c7\u22480.46."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer / Global Trade Law Perspective",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global scope, the embargo violates established international trade law (WTO principles, OAS charter, UN charter). Observer sees structural extraction: Cuba trapped, enforcement mechanisms active, suppression high (financial system control), with rationalization via Cold War threat narrative that no longer applies. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.94. High effective extraction; observer sees snare despite coordination framing."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cold_war_threat_reality",
+      "question": "Is Cuba a genuine strategic threat to US security, or is the threat narrative maintained primarily for domestic political coalitions?",
+      "resolution_mechanism": "Declassified intelligence assessment; comparison of stated threat justifications (1960s, 1980s, 2000s, 2020s); analysis of actual military/security incidents vs projected threat level",
+      "impact": "If genuine threat: snare classification is justified security extraction. If primarily narrative: snare is unmasked as pure extraction mechanism absent coordination function. Shifts mandatrophy from resolved-as-legitimate to resolved-as-illicit.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Cuban threat narrative is genuine security concern or maintained for political coalition"
+    },
+    {
+      "id": "embargo_economic_efficacy",
+      "question": "Does the embargo demonstrably constrain Cuban regime behavior, or does it entrench regime by eliminating reform pressure and providing external scapegoat?",
+      "resolution_mechanism": "Comparative analysis of regime behavior under embargo vs during periods of normalized trade (1960s pre-embargo, brief 2015-2017 normalization window); econometric modeling of counterfactual Cuban political trajectory without embargo",
+      "impact": "If efficacious: supports beneficiary claim of strategic value. If counterproductive: reveals extraction mechanism disguised as coordination; pivots classification from snare-with-coordination to pure snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether embargo constrains regime behavior or entrenches it"
+    },
+    {
+      "id": "regional_support_fragility",
+      "question": "Is the Latin American coalition support for embargo enforcement fragile (maintained via pressure) or stable (genuinely shared strategic interest)?",
+      "resolution_mechanism": "Analysis of voting patterns in OAS on embargo-related resolutions; interviews with non-aligned Latin American governments on rationale for any embargo compliance; tracking of trade partnership patterns with Cuba during embargo period",
+      "impact": "If fragile: region-scale snare revealed (region trapped by US pressure). If stable: genuine regional coordination. Differentiates whether suppression is bilateral (US-Cuba) or systemic (US-enforced regional control).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional support for embargo is fragile or stable"
+    },
+    {
+      "id": "normalization_exit_credibility",
+      "question": "Would actual diplomatic normalization (as negotiated 2015-2017) constitute a genuine sunset, or would new enforcement mechanisms (tariffs, sectoral sanctions) replace embargo terminology?",
+      "resolution_mechanism": "Analysis of 2015-2017 normalization agreement implementation; comparison of trade/financial restrictions before vs after normalization renaming; tracking of sanctions architecture evolution in other cases (Iran, Russia, Vietnam)",
+      "impact": "If genuine sunset: scaffold classification is structurally sound. If replacement mechanisms: sunset is illusory; constraint persists via relabeling (snare persists as modified snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether normalization constitutes genuine sunset or mechanism replacement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 32,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 32
+  },
+  "commentary": {
+    "narrative_context": "The US Embargo of Cuba, initiated in 1962 and maintained continuously for over six decades, represents a structural extraction mechanism justified by security and geopolitical coordination narratives. The constraint emerged from Cold War threat containment (legitimate coordination function) but persists through institutional inertia and domestic political coalitions long after the original threat justification has degraded. The embargo operates as a layered extraction system: primary victims (Cuban population, economy) are trapped with no exit; secondary victims (regional trade partners, international firms) are constrained through secondary sanctions and financial system control; beneficiaries (US strategic coalition, Cuban exile political leadership) maintain the mechanism through legislative architecture (Helms-Burton Act) and threat narrative renewal. The perspectival analysis reveals all six constraint types are coherent readings of the same structural data, but mandatrophy resolution pivots on whether the original coordination function (Cold War containment) remains genuine or has degraded into pure extraction maintained by inertia. The increasing theater ratio (0.25 \u2192 0.58) indicates growing performative maintenance: Cold War threat narrative persists despite geopolitical irrelevance; actual enforcement is inconsistent; humanitarian exceptions and partial normalization attempts suggest the mechanism no longer serves clear coordination function.",
+    "key_agents": [
+      "Cuban population and state: Primary victim (powerless/trapped) \u2014 bears full extraction cost; cannot exit; no meaningful negotiating leverage",
+      "Cuban economy: Primary victim (powerless/trapped) \u2014 excluded from US markets; constrained from third-party trade; subject to secondary sanctions",
+      "Regional trade partners (Mexico, Canada, Caribbean states): Secondary victim (moderate/constrained) \u2014 face choice between Cuba trade and US market access; many choose constrained compliance",
+      "US strategic coalition (State Department, Defense, Cuban exile leadership): Primary beneficiary (institutional/arbitrage) \u2014 maintains embargo as geopolitical alignment mechanism; experiences as legitimate coordination",
+      "US corporate and financial sector: Mixed (powerful/arbitrage) \u2014 excluded from Cuban market (victim), but benefits from sanctions compliance mechanisms and market concentration (beneficiary)",
+      "International trade and humanitarian organizations: Organized challenger (organized/mobile) \u2014 frames embargo as violation of international norms; advocates for negotiated sunset via normalization",
+      "Institutional Cold War structure: Inertial beneficiary (institutional/constrained) \u2014 Helms-Burton Act, legislative restrictions, threat narratives maintain mechanism through institutional momentum",
+      "Analytical observer: Global trade law perspective (analytical/analytical) \u2014 sees embargo as violation of WTO/OAS/UN principles; classifies as pure snare despite coordination framing"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The embargo extracts significant costs from Cuba: reduced GDP growth (~2-3% annual loss estimates), medical/food shortages, brain drain, technological isolation. The extraction is substantial but not absolute (Cuba maintains some trade with third parties, limited services economy). The 0.68 value reflects that the mechanism does work as intended (constrains Cuban economic development) but is not maximally tight. Suppression (0.75): High. Cuba has minimal exit options: cannot unilaterally lift embargo (requires US action); cannot fully bypass US financial system (dollar dominance); faces secondary sanctions if third parties trade too openly. Regional partners also face suppression: US market access penalty for Cuba trade. Theater ratio (0.58): Moderate-high. The original Cold War justification (Soviet proxy, Communist threat) is now substantially performative (Soviet Union dissolved 1991; Cuba poses minimal military threat; actual enforcement is selective). Threat narratives persist in policy debates and legislative renewal, but actual security measures are inconsistent. Theater has increased from 0.25 (early Cold War period when threat was structurally real) to 0.58 (contemporary period when narrative is maintained despite degraded functionality). Claimed type (snare): Justified by high extractiveness (0.68 > 0.46), high suppression (0.75 > 0.60), effective extraction \u03c7 in snare range. Mandatrophy resolved (true): The constraint exists at the intersection of two interpretations (coordination vs extraction). Mandatrophy is resolved by acknowledging both are present: the constraint has genuine geopolitical coordination function (US-Cuba regional positioning) AND asymmetric extraction (Cuba bears costs). The resolution is that a snare can be a legitimate instrument of statecraft (security extraction) without being mislabeled. Whether the original security justification remains genuine is the omega variable that would shift the mandatrophy resolution from 'legitimate snare' to 'illegitimate snare'.",
+    "perspectival_gap": "The perspectival gap between beneficiary and victim is maximal. The Cuban population (trapped, powerless) experiences pure extraction with no coordination benefit (snare). Regional trade partners (constrained, moderate) experience mixed extraction and coordination pressure (snare, but with partial coordination rationale). The US strategic coalition (institutional, arbitrage) experiences pure coordination (rope) \u2014 geopolitical alignment and regional bloc discipline are genuine coordination functions. The analytical observer (analytical/global scope) sees the system as violating international trade law, classifying as snare despite beneficiary framing as coordination. The international humanitarian coalition (organized, mobile) frames the constraint as a temporary coordination failure with explicit sunset (scaffold) \u2014 negotiation can resolve it. The institutional inertia perspective (piton) reveals that much of the constraint's maintenance is performative ritual divorced from original function. These six perspectives cover the full range from pure snare (victim view) to pure rope (beneficiary view) to piton (institutional view), revealing that the constraint's classification depends entirely on the observer's structural position.",
+    "directionality_logic": "Cuban population: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Regional trade partners: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. Significant extraction but not absolute (some can exit via economic diversification). US strategic coalition: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; experiences as legitimate coordination. US corporate sector: Mixed beneficiary/victim + arbitrage \u2192 d\u22480.45, f(d)\u22480.50. Dual role: excluded from market (victim), benefits from compliance infrastructure (beneficiary). International orgs/humanitarian: Organized observer + mobile \u2192 d\u22480.50, f(d)\u22480.65. Neutral observer with exit option to advocate alternative. Institutional inertia: Institutional + constrained \u2192 d\u22480.55, f(d)\u22480.75. Somewhat constrained by its own maintenance costs; high theater indicates degrading function. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. Standard analytical perspective; sees high effective extraction.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED AS: Snare classification is legitimate under the current security justification framework. The constraint exhibits all snare properties (\u03b5=0.68, suppression=0.75, \u03c7=0.86) and serves an explicit coordination function (geopolitical alignment, regional bloc discipline) that is not merely rhetorical. However, the omega variable 'cold_war_threat_reality' is the critical uncertainty: if the original threat justification is revealed to be primarily narrative rather than genuine, the mandatrophy pivots. Current resolution assumes threat narrative has some basis, making the extraction a legitimate if problematic security instrument. The increasing theater ratio (0.58) indicates the narrative is degrading \u2014 if theater_ratio crosses 0.70, the constraint would shift toward piton classification, indicating the coordination function is substantially atrophied and the extraction is maintained primarily by institutional inertia. The scaffold perspective (international orgs) argues for explicit sunset via negotiated normalization \u2014 if a credible negotiation pathway exists (2015-2017 precedent suggests yes), the constraint could transition to scaffold classification. Current assessment is snare with degrading coordination function; future trajectory is piton (if theater rises and coordination atrophies) or scaffold (if normalization becomes viable)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_sanctions_regime_architecture",
+      "secondary_sanctions_financial_system",
+      "regional_trade_bloc_formation"
+    ],
+    "dual_formulation_note": "The US embargo of Cuba exists at the intersection of two constraint types: (1) Pure geopolitical extraction (snare) targeting Cuban economic development, and (2) Regional enforcement mechanism (enforcement_mechanism coordination type) maintaining US-aligned Latin American bloc discipline. The snare classification emphasizes the extraction/suppression axis; the enforcement_mechanism designation emphasizes the coordination function. Network links reveal that the embargo's persistence affects secondary sanctions architecture (enforcement_mechanism design) and regional bloc formation responses (adaptive coordination). Normalization would shift the constraint toward scaffold or eliminate it entirely, with downstream effects on sanctions regime design and regional trade patterns."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

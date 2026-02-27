@@ -1,0 +1,176 @@
+{
+  "header": {
+    "constraint_id": "perseverance_ai_drive",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "persev"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "AI-Driven Martian Rover Autonomy Constraint",
+    "topic_domain": "technological/space_exploration",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "nasa_jpl_mission_control",
+      "planetary_science_community",
+      "earth_based_operators"
+    ],
+    "has_sunset_clause": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "NASA JPL Mission Control",
+      "comment": "PERSPECTIVE 1: NASA JPL MISSION CONTROL (ROPE) \u2014 Primary beneficiary. Experiences AI autonomy as a pure coordination mechanism solving the light-delay problem (11-22 minute round-trip communication lag). Direct human teleoperation is impossible; autonomous planning is the only viable solution. Benefits from reduced operational overhead and mission flexibility. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Planetary Science Community",
+      "comment": "PERSPECTIVE 2: PLANETARY SCIENCE COMMUNITY (ROPE) \u2014 Secondary beneficiary. Organized scientists benefit from increased rover throughput and mission longevity. Autonomy enables daily drive plans without multi-day planning cycles. Experience no extraction \u2014 this is pure coordination gain. d\u22480.20, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.02. Near-zero effective extraction; coordination benefit is clear."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Communication Physics Constraint (Analytical View)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER / NATURAL LAW VIEW (ROPE) \u2014 The light-delay constraint is a fundamental property of planetary distances. No agent can exit or arbitrage this physical limit. The autonomy requirement emerges necessarily from the constraint. From this view, autonomy is not extraction but a coordination solution to an immutable physical fact. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.21. Moderate effective extraction reflects the constraint's structural inevitability \u2014 the 'cost' is the necessity of autonomous planning, which all agents must bear equally."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Future Mars Exploration Missions",
+      "comment": "PERSPECTIVE 4: FUTURE MARS EXPLORATION MISSIONS (SCAFFOLD) \u2014 Powerful actors with mobile exit options see AI autonomy as a temporary coordination framework with a sunset. As communication infrastructure improves (relay satellites, local communication networks), the need for onboard autonomy will decrease. Initial autonomy constraints are tolerated because they are time-limited. Sunset horizon: 15-25 years as Mars infrastructure matures. d\u22480.45, f(d)\u22480.45, \u03c3=1.0 \u2192 \u03c7\u22480.14. Low effective extraction because the constraint is recognized as temporary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "International Space Agencies",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL SPACE AGENCIES (ROPE) \u2014 Moderate power actors with constrained exit options. Must adopt similar autonomy strategies because no alternative exists for Mars operations. Experience the constraint as mandatory coordination rather than extraction. Benefit from NASA's demonstrated solution and can adopt/adapt it. d\u22480.50, f(d)\u22480.65, \u03c3=0.9 \u2192 \u03c7\u22480.19. Moderate effective extraction reflects that they must follow NASA's lead but gain genuine coordination benefits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_sufficiency_threshold",
+      "question": "What level of onboard AI autonomy is necessary and sufficient for safe Mars rover navigation, and is Perseverance's current implementation at that threshold or overshooting it?",
+      "resolution_mechanism": "Comparative analysis of mission success rates, distance covered per planning cycle, and navigation error rates across autonomy levels; correlation with terrain complexity and hazard density",
+      "impact": "If current autonomy is minimal necessary: rope classification confirmed across all perspectives. If overshooting with unnecessary sophistication: suggests extraction (vendor lock-in, capabilities beyond mission need) and shifts toward snare/tangled rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether current autonomy level is necessary-sufficient or excessive"
+    },
+    {
+      "id": "communication_infrastructure_roadmap",
+      "question": "What is the realistic timeline for Mars relay satellite networks to reduce light-delay constraints, and would that enable return to direct teleoperation?",
+      "resolution_mechanism": "NASA Artemis/Mars architecture roadmaps; feasibility studies for Mars communication constellation; technical analysis of light-delay reduction via relay networks",
+      "impact": "If infrastructure timeline is 10-15 years: scaffold sunset is credible, constrains classification upward. If infrastructure timeline > 50 years: autonomy is not temporary, shifts toward rope as permanent solution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for communication infrastructure reducing light-delay constraints"
+    },
+    {
+      "id": "closed_loop_decision_authority",
+      "question": "In the current autonomy constraint, where does decision authority actually reside: with the rover's AI, with human planners setting constraints, or distributed between them?",
+      "resolution_mechanism": "Analysis of drive-planning procedure; identification of which decisions are algorithmic vs human-vetted; observation of failure modes (who overrides whom)",
+      "impact": "If authority is genuinely distributed: tangled rope (mixed coordination-extraction). If authority is actually with AI: snare for human operators (loss of control). If authority remains with humans and AI is purely advisory: pure rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Locus of decision authority between rover AI and human planners"
+    },
+    {
+      "id": "vendor_dependency_lock_in",
+      "question": "Does the autonomy constraint create vendor lock-in to specific AI/robotics platforms, limiting other space agencies' ability to develop alternatives?",
+      "resolution_mechanism": "Analysis of Perseverance's autonomy software architecture; assessment of portability to other rover designs; review of technology licensing and export control restrictions",
+      "impact": "If lock-in is significant: suggests extraction mechanism (NASA/JPL benefits from dependency), shifts toward tangled rope or snare. If architecturally open: pure rope confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of vendor lock-in to specific autonomy platforms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.29
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "NASA's Perseverance rover successfully executed autonomous AI-planned navigation for the first time on Mars in March 2021, autonomously traversing 200 feet (61 meters) without direct human teleoperation. This milestone represents the solution to a fundamental constraint: the 11-22 minute round-trip light delay between Earth and Mars makes real-time remote control impossible. The autonomy constraint emerges from communication physics, not from institutional design. However, the constraint also creates secondary extraction opportunities: vendor dependency on NASA/JPL's autonomy algorithms, potential lock-in of other space agencies to existing platforms, and concentration of decision authority during the planning-execution cycle. The constraint classification varies sharply depending on the observer's structural position. For NASA JPL, autonomy is a pure coordination mechanism solving an unavoidable problem. For the planetary science community, it is the same. For international space agencies with constrained exit options, it is a mandatory framework they must adopt. For future missions with better communication infrastructure, it is a temporary scaffold. The analytical observer risks naturalizing contingent institutional implementation details as inherent to the physics. The core constraint is physical (communication delay), but the autonomy *implementation* contains extractive and theatrical elements that deserve scrutiny.",
+    "key_agents": [
+      "NASA JPL Mission Control: Institutional beneficiary (institutional/arbitrage) \u2014 designs and implements autonomy system; benefits from reduced operational overhead and sole proprietor of the solution",
+      "Planetary Science Community: Organized beneficiary (organized/mobile) \u2014 benefits from increased mission throughput and daily planning cycles",
+      "Perseverance Rover: Technical artifact (analytical/analytical) \u2014 the locus of autonomous decision-making; makes localized navigation choices within human-set constraints",
+      "International Space Agencies: Moderate power actors (moderate/constrained) \u2014 must adopt similar autonomy strategies; constrained by technical/export control barriers to developing alternatives",
+      "Future Mars Infrastructure: Powerful future actor (powerful/mobile) \u2014 will have exit option via relay satellites and reduced light-delay; experiences current autonomy constraint as temporary",
+      "Earth-Based Human Operators: Secondary institutional actor (institutional/arbitrage) \u2014 lose direct teleoperation capability but gain planning authority; experience shift in decision locus"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate-low. The autonomy constraint solves a genuine coordination problem (light delay) that all agents face equally. However, extractiveness is not zero because: (1) NASA/JPL maintains proprietary control of the autonomy algorithms, creating vendor dependency; (2) the implementation concentrates decision authority in closed-loop onboard systems, reducing transparency of failure modes; (3) other space agencies cannot easily replicate or adapt the system due to technical and export control barriers. The rising trajectory (0.15 \u2192 0.32) reflects that as the autonomy system matures and becomes mission-critical, the vendor lock-in and decision concentration effects accumulate. Suppression (0.28): Moderate-low. Barriers to alternatives include technical complexity, capital requirements for developing competing systems, and export control restrictions on space-qualified AI/robotics. However, suppression is not high because international space agencies retain theoretical capacity to develop alternatives (ESA, CNSA, Roscosmos have comparable engineering capability), and the constraint is recognized as legitimate by all parties. Theater ratio (0.35): Low-moderate. The autonomy process includes some performative elements: daily planning briefings for stakeholder engagement, media coverage of autonomous decisions, communication protocols that involve human sign-off even for pre-planned routes. However, the core function (safe navigation in communication-delayed environment) is genuine and not theatrical. The theater ratio has risen slightly over the interval (0.22 \u2192 0.35) as the autonomy system became more prominent in mission narratives and public engagement.",
+    "perspectival_gap": "This constraint demonstrates a perspectival gap between institutional beneficiary (NASA) and constrained secondary actors (international agencies). NASA JPL sees pure rope \u2014 they designed the solution and benefit from its elegance and mission success. The planetary science community also sees rope \u2014 pure coordination gain. But international space agencies see the same constraint differently: it looks like rope in its coordination function, but the vendor dependency and export control barriers impose extraction costs. The analytical observer risks seeing the constraint as a natural law (communication physics) and missing the extractive implementation choices layered on top (proprietary algorithms, centralized decision authority). The scaffold perspective (future missions with better infrastructure) is partially aspirational \u2014 it assumes that relay networks will be deployed within 15-25 years, which is credible but not certain.",
+    "directionality_logic": "NASA JPL: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; they designed the solution. Planetary science community: Beneficiary + mobile \u2192 d\u22480.20, f(d)\u22480.05. Nearly zero extraction; genuine coordination gain with high mobility. International space agencies: Victim (constrained exit) + mobile aspirationally \u2192 d\u22480.50, f(d)\u22480.65. Moderate extraction because they must adopt the system but retain some theoretical capacity to develop alternatives. Future missions with infrastructure: Mobile + temporary \u2192 d\u22480.45, f(d)\u22480.45. Low extraction because the constraint has a sunset and the actors have exit options. Analytical observer: d\u22480.50, f(d)\u22480.65. The constraint's physical basis means no agent can exit entirely, but the implementation choices (not the physics) create asymmetries.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by separating the *physical constraint* (communication delay requiring autonomy) from the *implementation constraint* (NASA's proprietary autonomy system). The physical constraint is a rope \u2014 pure coordination solution to an inevitable problem. The implementation constraint is potentially a snare or tangled rope \u2014 vendor dependency, export control restrictions, and decision authority concentration create extraction opportunities. The classification should track the implementation, not the physics. If NASA released the autonomy algorithms as open-source and international agencies could freely adapt them, the constraint would shift firmly toward pure rope. The current classification (rope with moderate extractiveness) reflects that the coordination function is genuine but the implementation includes extractive elements. The mandatrophy is resolved by recognizing that a rope can have extractive components without becoming a snare \u2014 the coordination function must be real and broadly beneficial, which it is."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mars_communication_infrastructure",
+      "space_exploration_technology_export_control"
+    ],
+    "dual_formulation_note": "The autonomy constraint decomposes into two structurally distinct claims: (1) the physical necessity of onboard autonomy due to light-delay (pure coordination, rope), and (2) the institutional implementation via proprietary NASA/JPL systems (potential extraction/snare). The first claim is robust across all observables; the second claim varies with observer position and access to alternative implementations. Both are linked here because the implementation dependencies affect whether the coordination solution remains open or becomes captured."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

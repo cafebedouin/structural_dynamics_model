@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "evolutionary_knowledge",
+    "version": "1.0",
+    "generated_date": "2024-04-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Primordial Pain-Epistemic Constraint",
+    "topic_domain": "biological/philosophy/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "organisms_avoiding_immediate_threats"
+    ],
+    "victims": [
+      "organisms_experiencing_pain",
+      "objective_understanding_of_reality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Organism Experiencing Pain",
+      "comment": "PERSPECTIVE 1: ORGANISM EXPERIENCING PAIN (SNARE) - Trapped in immediate suffering, focus is solely on escaping the pain, limiting higher-level cognitive functions and objective understanding."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Organism Learning from Pain",
+      "comment": "PERSPECTIVE 2: ORGANISM LEARNING FROM PAIN (TANGLED ROPE) - Constrained by past painful experiences, which shapes future behaviour and decision-making. Also benefits by adapting for future survival. Experiencing both positive and negative impact, so effective extraction is mid-range."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Species Benefiting from Pain",
+      "comment": "PERSPECTIVE 3: SPECIES BENEFITING FROM PAIN (ROPE) - Benefits from avoiding the immediate threat that triggered the pain. Extraction runs towards the species, thus negative extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) - From a civilizational/universal perspective, the observer recognizes pain as a mechanism intertwined with the evolutionary development of intelligence and knowledge, producing a tangled rope effect. While suffering constrains objective perception, it simultaneously drives survival adaptations. Significant extraction from individual experience, but necessary for collective survival and future knowledge."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subjectivity_objectivity_tradeoff",
+      "question": "To what extent does the inherent subjectivity of pain distort or enhance our objective understanding of reality?",
+      "resolution_mechanism": "Philosophical analysis and neuroscientific investigation into the relationship between subjective experience and objective measurement.",
+      "impact": "Understanding the tradeoff will refine our assessment of the epistemic value of pain and its influence on knowledge acquisition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Assess the inherent subjectivity of pain on our objective understanding of reality."
+    },
+    {
+      "id": "long_term_epistemic_consequences",
+      "question": "What are the long-term epistemic consequences of grounding knowledge in the sensation of pain, as opposed to other possible foundations?",
+      "resolution_mechanism": "Historical and comparative analysis of different knowledge systems and their relationship to emotional and sensory experiences.",
+      "impact": "Revealing the long-term consequences will inform discussions about alternative foundations for knowledge.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Determine what the epistemic consequences will be grounding knowledge in pain."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Knowledge is an evolved biological adaptation rooted in the sensation of pain. Organisms learn to avoid stimuli that cause harm, leading to increased survival rates. This constraint presents a complex interplay between subjective experience, objective understanding, and evolutionary advantage. While pain creates extraction on an individual level it simultaneously allows benefits to arise on a larger level.",
+    "key_agents": [
+      "Organisms Experiencing Pain: Primary target (powerless/trapped) - Suffer direct negative experience.",
+      "Organisms Avoiding Immediate Threats: Primary beneficiary (institutional/arbitrage) - Species benefits from survival.",
+      "Objective Understanding of Reality: Victim (Moderate/Constrained) - Subject to distorted perception.",
+      "Analytical Observer: Civilizational observer (analytical/analytical) - Recognizes the complex interplay."
+    ],
+    "logic_rationale": "Extractiveness: Moderate - The pain acts as an extraction process for the organism. Suppression: High - The pain acts as an extraction process for the organism. High suppression of possible alternative behaviours due to strong stimuli. Theater ratio: Low - Minimal theater involved.",
+    "perspectival_gap": "The organism experiencing pain sees pure extraction, while the species benefits from this extraction process. Objective understanding gets warped but the species benefits.",
+    "directionality_logic": "Each perspective's directionality value (d) is determined by the agent's structural position - their power level, exit options, and relationship to the extraction flow. The pipeline computes d from these context parameters and applies the sigmoid f(d) to produce experienced extractiveness chi.",
+    "mandatrophy_analysis": "The presence of victims (organisms) and beneficiaries (species) ensures that the constraint is tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

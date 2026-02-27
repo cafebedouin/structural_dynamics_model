@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp08",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.3,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Lestrygonian Food Chain (Lunchtime Dublin)",
+    "topic_domain": "social/economic/biological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "restaurant_owners",
+      "food_suppliers"
+    ],
+    "victims": [
+      "hungry_poor",
+      "animals"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Hungry Poor",
+      "comment": "Perspective 1: The Hungry Poor (Snare) - Trapped by poverty, they have limited access to food and are victims of the economic system. They experience direct extraction from the food chain. They have no real exit option and are powerless."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Average Dubliner",
+      "comment": "Perspective 2: The Average Dubliner (Tangled Rope) - They are constrained by their income and food prices, but can still participate in the food chain. They experience mixed coordination and extraction, benefiting from the availability of food but also paying for it. Limited mobility due to financial constraints."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Restaurant Owners",
+      "comment": "Perspective 3: Restaurant Owners (Rope) - They benefit from the food chain by selling food and making a profit. They experience the system as coordination, as they provide a service and receive payment. They can change their menu or prices (arbitrage) to increase profits."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 4: The Analytical Observer (Tangled Rope) - This perspective acknowledges the entire cycle, understanding the necessary extraction from some to facilitate sustenance for others."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ethical_sourcing_vs_profit",
+      "question": "To what degree is the extraction from animals justified by the benefit to humans?",
+      "resolution_mechanism": "Philosophical debate, economic analysis of alternative food sources.",
+      "impact": "If extraction is deemed unethical, then significant changes to the food chain would be necessary. If seen as justified, then the current system continues.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Ethical implications of animal exploitation"
+    },
+    {
+      "id": "distribution_efficiency",
+      "question": "How efficiently is food distributed within Dublin?",
+      "resolution_mechanism": "Economic analysis of food prices, access, and waste.",
+      "impact": "If distribution is inefficient, then interventions may be needed to improve access for the poor. If efficient, then other solutions are needed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficiency of food distribution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Leopold Bloom wanders Dublin at lunchtime, contemplating the \"predatory\" nature of existence. The Lestrygonian episode in Ulysses examines the food chain as a social, economic, and biological constraint, where some benefit at the expense of others. This constraint story analyzes the perspectives of different actors within that food chain.",
+    "key_agents": [
+      "Restaurant Owners: Primary beneficiary (institutional/arbitrage)",
+      "Food Suppliers: Secondary beneficiary (institutional/constrained)",
+      "Hungry Poor: Primary victim (powerless/trapped)",
+      "Animals: Secondary victim (powerless/trapped)",
+      "Average Dubliner: Moderate participant (moderate/constrained)",
+      "Analytical Observer: Global Perspective (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The food chain extracts from animals and the poor to sustain the wealthy. Suppression (0.30): Low to moderate. There are some alternatives (vegetarianism, charity), but they are not readily available to all. Theater Ratio (0.20): Low. There is limited performative aspect to the actual sustenance requirement.",
+    "perspectival_gap": "The poor experience the system as pure extraction (snare), as they are trapped with little access to food. Restaurant owners see it as coordination (rope), as they facilitate the exchange of food for money. The analytical observer sees the mixed nature of the system (tangled rope).",
+    "directionality_logic": "The beneficiaries are restaurant owners and food suppliers (low directionality); the victims are the hungry poor and animals (high directionality); and the average Dubliner experiences a mix of benefit and cost (moderate directionality).",
+    "mandatrophy_analysis": "The system prevents mislabeling coordination as pure extraction by understanding that the food chain, while extractive to some, provides necessary sustenance to others. The entanglement is that without the extraction, the entire system cannot operate. Therefore, the analysis must assess what kind of changes can exist which still benefit the collective while minimising the extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

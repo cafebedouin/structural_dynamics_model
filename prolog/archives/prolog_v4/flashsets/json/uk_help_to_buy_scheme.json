@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "uk_help_to_buy_scheme",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK 'Help to Buy' Equity Loan Scheme",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "new_home_builders",
+      "mortgage_lenders"
+    ],
+    "victims": [
+      "first_time_buyers",
+      "uk_taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "First-Time Buyers",
+      "comment": "First-time buyers with limited savings are highly incentivized (almost 'trapped') into using the scheme to get on the property ladder. They face high repayment costs relative to income if property values stagnate or fall, especially in later years of the loan. Limited exit options once committed."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "New Home Builders",
+      "comment": "New home builders benefited from increased demand and sales volumes due to the scheme. They were able to sell properties more quickly and at higher prices than they might have otherwise. They have arbitrage exit options given market incentives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Taxpayers",
+      "comment": "UK Taxpayers bear the risk of the government's equity loans not being repaid in full if property values fall significantly. While the scheme aimed to stimulate the housing market, taxpayers are constrained by the potential financial liability if the housing market underperforms. Also, they benefit indirectly from the increased housing supply. Moderate power due to election process."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Government Housing Policy (Post-Scheme)",
+      "comment": "The Help to Buy scheme, having ended in 2023, has left a legacy of altered market dynamics. Future government housing policies may be influenced by the scheme's successes and failures, leading to a reliance on similar interventions even if their effectiveness diminishes over time. High theater ratio due to performative need to 'help' first time buyers even if it is economically unsound."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a global analytical perspective, the scheme represents a targeted intervention in the housing market. It exhibits characteristics of both coordination (helping first-time buyers) and extraction (inflating prices, benefiting builders at taxpayer expense). The long-term effects on housing affordability and market stability are uncertain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "house_price_volatility",
+      "question": "How will future house price volatility impact the repayment of equity loans and the financial stability of first-time buyers?",
+      "resolution_mechanism": "Longitudinal analysis of house price data and repayment rates under different economic scenarios.",
+      "impact": "High volatility could lead to significant losses for both first-time buyers and the government. Low volatility would make the scheme more sustainable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of house price volatility on equity loan repayments."
+    },
+    {
+      "id": "additionality_vs_displacement",
+      "question": "To what extent did the scheme generate additional housing supply versus simply displacing existing demand?",
+      "resolution_mechanism": "Comparative analysis of new housing starts and sales before, during, and after the scheme, controlling for other market factors.",
+      "impact": "High additionality would suggest the scheme successfully stimulated construction. High displacement would indicate it mainly inflated prices.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The effect of the scheme on new housing supply."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK 'Help to Buy' Equity Loan Scheme (2013-2023) aimed to assist first-time buyers in purchasing new-build homes by providing government equity loans. The scheme's impact is multifaceted, with both positive and negative consequences for various stakeholders. Builders benefited from increased demand, while first-time buyers faced potential debt burdens. Taxpayers bore the risk of loan defaults, and the scheme's long-term effects on housing affordability remain uncertain.",
+    "key_agents": [
+      "First-Time Buyers: Primary target (powerless/trapped) - incentivized to enter the market with limited savings.",
+      "New Home Builders: Primary beneficiary (institutional/arbitrage) - increased demand and sales volumes.",
+      "UK Taxpayers: Secondary target (moderate/constrained) - bear the risk of loan defaults.",
+      "Mortgage Lenders: Secondary beneficiary (institutional/mobile) - increased lending activity.",
+      "Government Housing Policy: (Institutional/Analytical) - attempting to stimulate economy through housing market",
+      "Analytical Observer: Global perspective (analytical/analytical) - assesses the scheme's overall impact and sustainability."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-High. The scheme extracted value from first-time buyers through higher house prices and potential debt burdens if prices stagnated. Also from taxpayers via potential defaults. Suppression (0.45): Moderate. The scheme suppressed alternative options for first-time buyers, pushing them towards new-build homes and government-backed mortgages. Theater Ratio (0.75): High. The scheme had a high theater ratio as it was presented as a solution to help first-time buyers, while also benefiting builders and lenders. The performative aspect of 'helping' first-time buyers was a key element of its public image.",
+    "perspectival_gap": "First-time buyers experience the scheme as a snare, as they are highly incentivized to participate but face significant financial risks. New home builders see it as a rope, facilitating increased sales and profits. Taxpayers may view it as a tangled rope, as they bear the risk of loan defaults but may also benefit from a stimulated economy. The analytical observer recognizes the mixed effects of coordination and extraction.",
+    "directionality_logic": "The directionality values are determined by the agents' structural positions within the scheme. First-time buyers (victims) have limited exit options and bear the costs of participation, resulting in a high 'd' value. New home builders (beneficiaries) have arbitrage options and benefit from increased demand, resulting in a low 'd' value. UK Taxpayers have moderate power and constrained exit due to the election cycle, so they bear moderate costs. The analytical perspective observes from outside the system."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_housing_affordability",
+      "mortgage_market_regulation"
+    ]
+  },
+  "directionality_overrides": []
+}

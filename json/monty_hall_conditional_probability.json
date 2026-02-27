@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "monty_hall_conditional_probability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mh"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The Monty Hall Problem (Conditional Probability)",
+    "topic_domain": "mathematical/probability_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Confused Contestant",
+      "comment": "PERSPECTIVE 1: THE CONFUSED CONTESTANT \u2014 A contestant selecting one of three doors faces irreducible mathematical constraint. The probabilities are determined by conditional expectation given the host's action. No amount of social power, institutional authority, or temporal advantage can alter the mathematical structure. The constraint appears as immutable natural law."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Analyst",
+      "comment": "PERSPECTIVE 2: THE MATHEMATICAL ANALYST \u2014 From the perspective of formal probability theory, the Monty Hall constraint is a mountain: the posterior probability P(prize behind door 1 | host opened door 3) = 2/3 follows necessarily from Bayes' theorem. This is not a social constraint, institutional arrangement, or contingent empirical claim. It is a logical necessity derivable from the problem statement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Game Show Host (Institutional View)",
+      "comment": "PERSPECTIVE 3: THE GAME SHOW HOST (INSTITUTIONAL VIEW) \u2014 Even the host, who controls which door to reveal, cannot escape the mathematical constraint. If the host must reveal a non-winning door (the canonical interpretation), the host's action mechanically alters the information structure. The host has no freedom to change the conditional probability \u2014 only to choose which losing door to reveal. The constraint is binding at every level of agency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Problem Designer",
+      "comment": "PERSPECTIVE 4: THE PROBLEM DESIGNER \u2014 Even the authority who created the problem cannot alter its logical structure. Changing the setup rules changes the problem itself, not the solution to the original problem. The constraint is independent of power \u2014 it persists under all attempts to override it through authority."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "host_knowledge_assumption",
+      "question": "Is the assumption that the host knows the prize location an essential or contingent feature of the constraint?",
+      "resolution_mechanism": "Formal analysis of the problem under variants: (a) host knows and never opens the prize, (b) host is ignorant and may open the prize by chance, (c) host has partial information. Compare posterior distributions for each variant.",
+      "impact": "If essential: the constraint is the logical interdependence of the host's knowledge and the contestant's updating. If contingent: the core constraint is Bayesian updating itself, and the host's knowledge is merely one instantiation. Resolves whether the mountain is about conditional probability or about epistemic dependencies.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether host knowledge is essential or contingent to the constraint"
+    },
+    {
+      "id": "interpretation_sensitivity",
+      "question": "Do different framings of 'what the host knows' or 'what the contestant observes' produce substantively different probability values, or only apparent differences due to notation?",
+      "resolution_mechanism": "Formal derivation of posterior under all reasonable interpretations: (a) door numbers are arbitrary labels, (b) door positions carry physical significance, (c) the host's choice reveals information about the initial distribution. Compute chi-squared distance between posterior distributions.",
+      "impact": "If only notational: the constraint is fully robust \u2014 a true mountain. If substantive differences: multiple conditional probability structures are lurking in the problem formulation, suggesting decomposition into separate constraints.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Sensitivity of posterior probability to problem interpretation"
+    },
+    {
+      "id": "empirical_replication_fidelity",
+      "question": "Why do human intuitions so strongly violate the mathematical posterior? Is this a failure of intuitive reasoning or a sign that humans are solving a different problem (e.g., one with asymmetric priors or different information states)?",
+      "resolution_mechanism": "Cognitive science experiments with varied problem framings: (a) original Monty Hall, (b) 100-door variant, (c) explicit Bayesian updating instructions, (d) visual/interactive simulations. Measure convergence to 2/3 posterior under each framing.",
+      "impact": "If failure of reasoning: the constraint is mathematically rigid but empirically fragile (humans don't integrate information correctly). If different problem: humans are implicitly solving under different assumptions (e.g., uncertainty about host intentions), and the 'constraint' is actually an ambiguity in the problem specification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Why human intuitions violate the mathematical posterior"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Monty Hall problem exemplifies a pure mathematical constraint: a logical structure that determines outcomes regardless of the observer's power, time horizon, exit options, or spatial scope. The constraint arises from the interaction of three elements: (1) initial uniform distribution over three equally probable door locations, (2) the host's knowledge of the prize location and commitment to reveal a non-winning door, and (3) the contestant's ability to observe which door the host opened and to update their beliefs via Bayes' theorem. The posterior probability of winning by switching is 2/3, derived necessarily from conditional expectation. This is not a social contract, institutional arrangement, or coordination mechanism \u2014 it is a fact about information and probability. The constraint is invariant across all observables and measurement methodologies that preserve the problem structure. Changing the setup rules (number of doors, host knowledge, contestant options) produces a different problem with a different posterior, not a different measurement of the same constraint.",
+    "key_agents": [
+      "The Contestant: Powerless/analytical agent attempting to maximize winning probability through strategic door selection",
+      "The Host: Institutional agent controlling information revelation, bound by the rule to reveal a non-winning door",
+      "The Prize Distribution: The underlying random variable whose structure determines all posterior calculations",
+      "The Mathematical System: The logical/formal system in which Bayesian updating occurs \u2014 the constraint itself"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Extremely low. The constraint imposes no extraction in the classical sense. No agent benefits at another's expense through the constraint \u2014 the probability structure is neutral. The value reflects minimal measurement ambiguity in specifying what 'conditional probability' means in a formal system. Suppression (0.02): Minimal. The mathematical system suppresses nothing \u2014 it is transparent. The value reflects only notational or pedagogical barriers (human difficulty understanding conditional probability), not structural barriers in the constraint itself. Theater ratio (0.15): Low and increasing slightly over time. The core mathematical structure requires no performative elements \u2014 the derivation is direct. The small theater ratio and its slight increase reflect growing pedagogical elaboration: explanations, simulations, and intuitive framings that add scaffolding but don't alter the mathematical fact. The mountain profile (accessibility_collapse \u2265 0.85, resistance \u2264 0.15) is fully satisfied: the constraint cannot be escaped through institutional redesign, social power, or temporal advantage. It is logically rigid.",
+    "perspectival_gap": "Remarkably, there is NO perspectival gap in this constraint. All four perspectives produce the same classification (Mountain) and the same posterior probability (2/3 to switch). The powerless contestant, the analytical mathematician, the institutional host, and the powerful problem designer all face the same logical necessity. This invariance across perspectives is the signature of a true mountain \u2014 the constraint does not decompose into beneficiaries and victims, does not vary with agent power or exit options, and does not change under different temporal horizons. If perspectival gaps were to emerge (e.g., if different agents computed different posteriors), that would indicate misspecification of the problem or decomposition into multiple constraints.",
+    "mandatrophy_analysis": "The Monty Hall constraint is a gold-standard mountain: it exhibits zero degrees of freedom under all reasonable perspectives. It does not risk mandatrophy (mislabeling as pure extraction or pure coordination) because it has neither extraction nor coordination \u2014 it is a pure logical structure. The constraint serves as a diagnostic anchor for the system: if a supposedly complex constraint can be shown to have mountain structure across all perspectives, it has been fully understood mathematically. Conversely, constraints that remain controversial (human intuitions diverge, domain experts disagree) are candidates for decomposition: the label may be hiding multiple constraints with different \u03b5 values, different beneficiary structures, or different logical foundations."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "bayes_theorem_formal_derivation",
+      "conditional_expectation_mathematical_structure"
+    ],
+    "dual_formulation_note": "The Monty Hall problem is a canonical application of Bayes' theorem to a finite probability space. It affects the comprehension and application of Bayesian updating in decision-making under uncertainty. The constraint family includes (1) Bayes' theorem itself (the mathematical foundation, \u03b5 \u2248 0.05, Mountain), (2) the Monty Hall problem (the well-known pedagogical exemplar, \u03b5 \u2248 0.08, Mountain), and (3) empirical decision-making under uncertainty (how humans actually update beliefs, \u03b5 \u2248 0.35, Tangled Rope or Snare depending on institutional context). This story focuses on the mathematical constraint; the downstream stories would address the cognitive and institutional barriers to applying it correctly."
+  },
+  "directionality_overrides": []
+}

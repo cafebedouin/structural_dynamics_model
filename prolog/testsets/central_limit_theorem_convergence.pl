@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: central_limit_theorem
+% CONSTRAINT STORY: central_limit_theorem_convergence
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_central_limit_theorem, []).
+:- module(constraint_central_limit_theorem_convergence, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -31,7 +32,6 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
@@ -41,9 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,36 +53,32 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: central_limit_theorem
- *   human_readable: Central Limit Theorem (CLT)
- *   domain: mathematical
+ *   constraint_id: central_limit_theorem_convergence
+ *   human_readable: Central Limit Theorem (CLT) — Convergence to Normality
+ *   domain: mathematical/probability_theory
  *
  * SUMMARY:
- *   The Central Limit Theorem (CLT) establishes that, under certain
- *   conditions (e.g., finite variance), the sum or average of a large number
- *   of independent random variables will be approximately normally distributed,
- *   regardless of the underlying distribution. It is a foundational principle
- *   in probability theory and statistics, acting as a "gravitational force"
- *   that pulls aggregates toward a Gaussian form. This story models the
- *   theorem itself as a pure mathematical constraint (a Mountain).
+ *   The Central Limit Theorem is a foundational result in probability theory
+ *   and mathematical statistics. It states that the sum or average of a large
+ *   number of independent random variables, each with finite variance,
+ *   converges in distribution to a normal (Gaussian) distribution, regardless
+ *   of the underlying distribution of the individual variables. This
+ *   constraint exhibits the defining properties of a Mountain in the DR
+ *   framework: it is an invariant structural fact that emerges from first
+ *   principles of probability theory; it cannot be negotiated, enforced, or
+ *   circumvented; and it holds universally across all contexts where its
+ *   conditions obtain. The theorem does not extract value from any agent,
+ *   impose suppression on alternatives, or rely on institutional enforcement.
+ *   Rather, it defines a fundamental boundary of what is mathematically
+ *   possible. The CLT has been proven rigorously in multiple formulations
+ *   (classical, Lindeberg, Lyapunov, multivariate) and is invariant across
+ *   all observational perspectives.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Individual Variable (Subject): A powerless entity whose unique
- *     distributional identity is subsumed into the aggregate.
- *   - The Statistician (Observer): An institutional or analytical agent who
- *     uses the theorem for inference, modeling, and verification.
- *   - The Risk Manager (Mis-applier): An agent in a separate, linked
- *     constraint who incorrectly applies this Mountain to a domain where its
- *     assumptions are violated (e.g., finance with fat-tailed risks),
- *     experiencing a Snare.
- *
- * DUAL FORMULATION NOTE:
- * This constraint is one of 2 stories decomposed from the colloquial use of "CLT".
- * Decomposed because ε differs across observables (ε-invariance principle).
- * Related stories:
- *   - central_limit_theorem (ε=0.08, Mountain) - The mathematical theorem itself.
- *   - clt_misapplication_in_finance (ε=0.65, Snare) - The institutional policy of
- *     enforcing CLT-based models (e.g., VaR) in domains with heavy-tailed risks.
+ * KEY AGENTS:
+ *   - Applied Statistician: Uses CLT to justify inference from finite samples without knowing true distribution — experiences the theorem as an enabling constraint (analytical/universal)
+ *   - Probability Theorist: Formalizes and proves CLT in multiple contexts — views it as emergent from probability axioms (analytical/civilizational)
+ *   - Practicing Data Analyst: Applies CLT assumptions in hypothesis testing and confidence intervals — relies on the theorem's invariance (moderate/biographical)
+ *   - Mathematical Community: Maintains and extends CLT through research (e.g., weak dependence, multivariate, stable distributions) — theorem is beyond debate, only domain specification is open (institutional/civilizational)
  */
 
 /* ==========================================================================
@@ -90,117 +86,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: Low extraction. The CLT "extracts" the identity of individual
-% distributions to form a smooth aggregate, but this is a descriptive act of
-% mathematics, not a coercive extraction of value.
-domain_priors:base_extractiveness(central_limit_theorem, 0.08).
-
-% Rationale: Very low suppression. As a mathematical theorem, it does not
-% suppress alternatives; it describes a reality given certain axioms.
-% This value is set to be compliant with the Mountain classification threshold (<= 0.05).
-domain_priors:suppression_score(central_limit_theorem, 0.05).
-
-% Rationale: Zero theater. The theorem is a pure, functional mathematical truth.
-domain_priors:theater_ratio(central_limit_theorem, 0.0).
+domain_priors:base_extractiveness(central_limit_theorem_convergence, 0.12).
+domain_priors:suppression_score(central_limit_theorem_convergence, 0.02).
+domain_priors:theater_ratio(central_limit_theorem_convergence, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(central_limit_theorem, extractiveness, 0.08).
-narrative_ontology:constraint_metric(central_limit_theorem, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(central_limit_theorem, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(central_limit_theorem_convergence, extractiveness, 0.12).
+narrative_ontology:constraint_metric(central_limit_theorem_convergence, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(central_limit_theorem_convergence, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-% Accessibility Collapse: Alternatives are logically incoherent. Value of 1.0.
-narrative_ontology:constraint_metric(central_limit_theorem, accessibility_collapse, 1.0).
-% Resistance: Resistance to a mathematical theorem is incoherent. Value of 0.0.
-narrative_ontology:constraint_metric(central_limit_theorem, resistance, 0.0).
+narrative_ontology:constraint_metric(central_limit_theorem_convergence, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(central_limit_theorem_convergence, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(central_limit_theorem, mountain).
-narrative_ontology:human_readable(central_limit_theorem, "Central Limit Theorem (CLT)").
-narrative_ontology:topic_domain(central_limit_theorem, "mathematical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(central_limit_theorem_convergence, mountain).
+narrative_ontology:human_readable(central_limit_theorem_convergence, "Central Limit Theorem (CLT) — Convergence to Normality").
+narrative_ontology:topic_domain(central_limit_theorem_convergence, "mathematical/probability_theory").
 
-% --- Emergence flag (required for mountain constraints) ---
-% The CLT emerges from the axioms of probability theory without human design.
-domain_priors:emerges_naturally(central_limit_theorem).
+domain_priors:emerges_naturally(central_limit_theorem_convergence).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a Mountain (natural law), the CLT does not have
-% structural beneficiaries or victims in the sense of receiving or bearing
-% asymmetric extraction. Its effects are universal for all agents observing
-% a system that meets its criteria.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE RANDOM VARIABLE (MOUNTAIN)
-% For an individual data point being summed, the convergence to a normal
-% distribution is an inescapable mathematical law. It has no agency or exit.
-constraint_indexing:constraint_classification(central_limit_theorem, mountain,
+% PERSPECTIVE 1: APPLIED STATISTICIAN (MOUNTAIN) — The CLT is an invariant structural fact: whatever the underlying distribution, sufficient averaging will produce normality. No exit, no extraction — the constraint simply defines the boundary of what is mathematically possible. The statistician cannot negotiate with the theorem.
+constraint_indexing:constraint_classification(central_limit_theorem_convergence, mountain,
     context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE STATISTICIAN (MOUNTAIN)
-% For an institutional actor like a polling firm or scientific body, the CLT
-% is an unchangeable feature of the world they are modeling. It is a fixed
-% point of reference, a natural law of aggregation.
-constraint_indexing:constraint_classification(central_limit_theorem, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% From a global, civilizational perspective, the theorem is a fundamental,
-% fixed constraint on the behavior of aggregated random systems.
-constraint_indexing:constraint_classification(central_limit_theorem, mountain,
+% PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) — From the civilizational/universal view, the CLT is a law of probability theory. It does not extract value, suppress alternatives, or require enforcement. It simply holds wherever its conditions (finite variance, independence) obtain. The theorem is emergent from first principles of measure theory and probability axioms.
+constraint_indexing:constraint_classification(central_limit_theorem_convergence, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: PRACTICING DATA ANALYST (MOUNTAIN) — In daily practice, the CLT is an immutable fact: it enables inference from finite samples without knowing the true distribution. The analyst cannot escape the constraint — it is a precondition for the validity of their methods. But this is not extraction; it is simply the structure of probability itself.
+constraint_indexing:constraint_classification(central_limit_theorem_convergence, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(analytical),
             spatial_scope(global))).
+
+% PERSPECTIVE 4: MATHEMATICAL COMMUNITY (MOUNTAIN) — The CLT is a foundational theorem, proven and reproven across multiple formulations (Lindeberg, Lyapunov, multivariate). There is no debate about whether it holds — the debate (if any) concerns whether conditions are met in specific empirical contexts. The theorem itself is invariant.
+constraint_indexing:constraint_classification(central_limit_theorem_convergence, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(central_limit_theorem_tests).
+:- begin_tests(central_limit_theorem_convergence_tests).
 
-test(perspectival_invariance) :-
-    % Verify that the classification is Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(central_limit_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(central_limit_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget == mountain,
-    TypeBeneficiary == mountain.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(central_limit_theorem_convergence, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(central_limit_theorem_convergence, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation_mountain) :-
-    % Verify the metrics adhere to the Mountain classification thresholds.
-    narrative_ontology:constraint_metric(central_limit_theorem, extractiveness, E),
-    narrative_ontology:constraint_metric(central_limit_theorem, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(central_limit_theorem_convergence, ExtMetricName, E),
+    domain_priors:suppression_score(central_limit_theorem_convergence, S),
     E =< 0.25,
     S =< 0.05.
 
 test(nl_profile_validation) :-
-    % Verify the Natural Law profile metrics are present and valid.
-    narrative_ontology:constraint_metric(central_limit_theorem, accessibility_collapse, AC),
-    narrative_ontology:constraint_metric(central_limit_theorem, resistance, R),
-    domain_priors:emerges_naturally(central_limit_theorem),
+    domain_priors:emerges_naturally(central_limit_theorem_convergence),
+    narrative_ontology:constraint_metric(central_limit_theorem_convergence, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(central_limit_theorem_convergence, resistance, R),
     AC >= 0.85,
     R =< 0.15.
 
-:- end_tests(central_limit_theorem_tests).
+:- end_tests(central_limit_theorem_convergence_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -208,85 +177,86 @@ test(nl_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   This story models the Central Limit Theorem itself, not its applications
- *   or misapplications. As a mathematical truth, it has very low base
- *   extractiveness (0.08) and suppression (0.05), qualifying it as a Mountain.
- *   The suppression score is 0.05 to comply with the Mountain threshold,
- *   reflecting that the theorem describes reality rather than coercively
- *   suppressing alternatives. The full Natural Law profile (accessibility_collapse=1.0,
- *   resistance=0.0, emerges_naturally=true) is declared to ensure it passes
- *   the engine's certification chain for Mountain classification.
+ *   Extractiveness (0.12): Extremely low. The CLT does not extract value from any agent. It does not favor one distribution over another; it does not subsidize one interpretation of data over another. The theorem is a pure structural fact. The low value reflects that there is no asymmetric benefit flow — all parties gain equally from the theorem's validity, or the theorem is indifferent to value distribution altogether. Suppression (0.02): Minimal. The CLT does not suppress alternatives — it simply defines the asymptotic distribution. Distributions that fail the finite variance condition fall under different limit theorems (stable law convergence, etc.), but they are not suppressed by the CLT; they are outside its domain. Theater ratio (0.05): Negligible. There is no performative component. The CLT either holds or does not, based on mathematical rigor. There are no ceremonial gates, no institutional enforcement, no proxy metrics. The theorem's validity is determined by proof and mathematical analysis, not by social agreement or institutional ritual.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a Mountain-type constraint (natural law),
- *   the classification is invariant across all observer indices. All agents,
- *   regardless of power or exit options, perceive it as a fixed feature of
- *   their environment.
+ *   All perspectives converge on the same classification: Mountain. This is characteristic of natural law constraints. The applied statistician, the theoretical probabilist, the practicing analyst, and the institutional mathematical community all experience the CLT as an immutable structural fact. The constraint exhibits zero perspectival gap because there is no distributional asymmetry in how it applies — it is not relative to an agent's power, exit options, or time horizon. The universality of the classification is the hallmark of a true Mountain.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain, the CLT has no structural beneficiaries or victims.
- *   Therefore, `constraint_beneficiary/2` and `constraint_victim/2` are not
- *   declared. The directionality `d` is derived from canonical power atom
- *   fallbacks, but since ε is so low, the resulting effective extraction χ
- *   is negligible from all perspectives, leading to a uniform Mountain
- *   classification.
+ *   Directionality derivation is not applicable to this constraint because there are no beneficiaries or victims. The CLT is a structural invariant of probability theory that applies equally across all contexts. The constraint does not create or require asymmetric relationships between agents. Each agent (statistician, theorist, analyst) experiences the theorem identically: as a precondition for valid inference, not as extraction.
  *
- * MANDATROPHY ANALYSIS (ε-Invariance Principle):
- *   The original story conflated the theorem (a Mountain) with its
- *   misapplication in finance (a Snare). This violates the ε-invariance
- *   principle, as the base extractiveness of "using VaR models based on CLT"
- *   is vastly different from the ε of the theorem itself. This revised file
- *   correctly models only the theorem. The "Snare" of misapplication is
- *   modeled as a separate constraint, `clt_misapplication_in_finance`, which
- *   is causally affected by this one. This decomposition prevents the
- *   mislabeling of a natural law as a coercive instrument.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_clt,
-    'Is the CLT a purely abstract mathematical construct or a fundamental organizing principle of the physical universe (a "law of physics" for complex systems)?',
-    'Empirical verification in novel physical domains (e.g., quantum chaos, cosmological structures) where aggregation occurs.',
-    'If physical law, it is an unassailable Mountain. If purely abstract, it is a powerful Rope for modeling, but could be superseded by a more fundamental theory.',
+    finite_variance_requirement,
+    'What is the scope and necessity of the finite variance condition? Do stable distributions with infinite variance violate the CLT or illustrate a different limit theorem?',
+    'Rigorous classification of distributions by tail behavior; mapping of which limit theorems apply to which classes; specification of when generalized CLT (e.g., stable law convergence) replaces classical CLT',
+    'If variance requirement is absolute: CLT is truly mountain-like for a strict domain. If generalized CLT extends to infinite-variance cases: the constraint is a special case of a broader convergence principle, still mountain-like but more precisely scoped.',
     confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(finite_variance_requirement, conceptual, 'Scope and necessity of finite variance condition for CLT validity').
+
+omega_variable(
+    dependence_structure_boundaries,
+    'At what level of dependence does the CLT cease to apply? Are weakly dependent sequences (mixing conditions) still governed by CLT, or do they require separate limit theorems?',
+    'Formal analysis of mixing properties (φ-mixing, α-mixing); comparison of CLT, central limit theorems for dependent variables, and other asymptotic results',
+    'If CLT extends to weak dependence: the constraint captures a broader class of phenomena. If dependence breaks CLT entirely: the theorem''s domain is narrower than classical intuition suggests.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(dependence_structure_boundaries, empirical, 'Boundaries of CLT applicability under dependence structures').
+
+omega_variable(
+    empirical_convergence_rate,
+    'How does convergence rate to normality vary across distributions? Are distributions with high kurtosis or skewness practically non-normal even at large n?',
+    'Berry-Esseen bounds and refinements; empirical convergence studies across heavy-tailed, skewed, and multimodal distributions; application to real data',
+    'If convergence is uniformly fast: CLT is reliably applicable. If convergence is highly distribution-dependent (slower for some): practical applications may misclassify non-normal data as approximately normal.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(empirical_convergence_rate, empirical, 'Distribution-dependent convergence rates to normality').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(central_limit_theorem, 1810, 2026).
+narrative_ontology:interval(central_limit_theorem_convergence, 0, 200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required for low-extraction constraints (base_extractiveness <= 0.46).
+% Theater ratio over time
+narrative_ontology:measurement(clt_tr_t0, central_limit_theorem_convergence, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(clt_tr_t100, central_limit_theorem_convergence, theater_ratio, 100, 0.05).
+narrative_ontology:measurement(clt_tr_t200, central_limit_theorem_convergence, theater_ratio, 200, 0.05).
+
+% Extraction over time
+narrative_ontology:measurement(clt_be_t0, central_limit_theorem_convergence, base_extractiveness, 0, 0.12).
+narrative_ontology:measurement(clt_be_t100, central_limit_theorem_convergence, base_extractiveness, 100, 0.12).
+narrative_ontology:measurement(clt_be_t200, central_limit_theorem_convergence, base_extractiveness, 200, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The CLT acts as a standard for understanding and modeling aggregate data.
-narrative_ontology:coordination_type(central_limit_theorem, information_standard).
+narrative_ontology:coordination_type(central_limit_theorem_convergence, information_standard).
+narrative_ontology:affects_constraint(central_limit_theorem_convergence, law_of_large_numbers).
+narrative_ontology:affects_constraint(central_limit_theorem_convergence, normal_distribution_empirical_frequency).
 
-% Network relationships (structural influence edges)
-% The mathematical truth of the CLT enables the creation of a separate,
-% highly extractive social constraint: the mandatory use of CLT-based models
-% in domains where they are inappropriate.
-narrative_ontology:affects_constraint(central_limit_theorem, clt_misapplication_in_finance).
+% DUAL FORMULATION NOTE:
+% The CLT is foundational to multiple statistical constraints. Related constraints include the Law of Large Numbers (weaker form, convergence to expectation) and empirical applications of normality assumptions in statistical hypothesis testing. The CLT is upstream: its validity enables or constrains the validity of downstream statistical procedures.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for a uniform-type Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

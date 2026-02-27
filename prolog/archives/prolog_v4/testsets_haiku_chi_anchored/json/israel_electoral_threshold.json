@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "israel_electoral_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iet"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "The 3.25% Knesset Electoral Threshold",
+    "topic_domain": "political/electoral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_established_parties",
+      "coalition_kingmakers"
+    ],
+    "victims": [
+      "marginal_political_movements",
+      "minority_ethnic_parties",
+      "single_issue_advocates",
+      "new_party_entrants"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginal Political Movement",
+      "comment": "PERSPECTIVE 1: MARGINAL POLITICAL MOVEMENT (SNARE) \u2014 A party receiving 2.8% of votes has zero parliamentary representation despite genuine constituency support. No exit option: cannot reorganize geographically, cannot negotiate entry, cannot appeal threshold directly. Bears full suppression cost (wasted vote) and extraction loss (denied representation). d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Minority Ethnic Party",
+      "comment": "PERSPECTIVE 2: MINORITY ETHNIC PARTY (SNARE) \u2014 Arab-Israeli, Druze, or other minority-interest parties face dual constraint: the threshold itself plus coalition mathematics that excludes them from power-sharing. Can attempt coalition-building, but excluded by de facto political norms. Constrained exit (can merge with larger parties, losing identity). d\u22480.82, f(d)\u22481.28, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Established Coalition Party",
+      "comment": "PERSPECTIVE 3: ESTABLISHED COALITION PARTY (ROPE) \u2014 Threshold guarantees stable coalition formation: barriers to entry protect incumbents from splinter parties fragmenting the Knesset beyond govern-ability. Experiences the threshold as coordination: reduces coalition negotiation complexity. d\u22480.08, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary via arbitrage (can negotiate coalitions with reduced threat of fragmentation)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Coalition Kingmaker Party",
+      "comment": "PERSPECTIVE 4: COALITION KINGMAKER PARTY (TANGLED ROPE) \u2014 A mid-sized party (5-8% of votes) above the threshold gains disproportionate power via coalition kingmaking. Experiences both coordination (threshold enables stable coalition) and extraction (can demand ministerial posts, budgets, policy concessions beyond their vote share). Mobile exit (can join other coalitions, but coalition power is significant incentive to stay). Requires active enforcement of threshold to maintain kingmaker leverage. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.16. Mixed: benefits from threshold (coordination) and extracts via kingmaking (asymmetric leverage)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Administration",
+      "comment": "PERSPECTIVE 5: ELECTORAL ADMINISTRATION (PITON) \u2014 The Central Elections Committee mechanically enforces the threshold. The ritual is functional (prevents explosion of micro-parties) but increasingly theatrical: thresholds have risen three times (from 1% in 1949 to 3.25% in 2014), each time performed as 'necessary for stability' while actually serving to concentrate power. theater_ratio\u22480.38 is moderate, reflecting that enforcement is genuine but the stability justification is partially mythologized. d\u22480.10, f(d)\u22480.00, \u03c3=1.0 \u2192 \u03c7\u22480.00. Piton gate not satisfied; classification is institutional/functional, not degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN, FALSE) \u2014 Thresholds are sometimes presented as natural laws: 'all democracies require thresholds to prevent fragmentation.' This perspective risks naturalizing a contingent institutional choice. Structural data contradicts mountain classification: \u03b5=0.52 (moderate-high extraction), suppression=0.68 (significant). The engine's false summit detector identifies this as naturalized extraction, not immutable law. Multiple democracies operate without thresholds (Netherlands, Israel 1949-1992) or with lower ones (Germany 5%, Denmark no formal threshold), proving governability without this specific constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fragmentation_floor",
+      "question": "What is the actual minimum threshold required to prevent ungovernable Knesset fragmentation, versus the politically claimed level?",
+      "resolution_mechanism": "Comparative analysis of historical Israeli coalitions (1949-2014) and foreign legislatures with varying thresholds; agent-based modeling of coalition formation under different thresholds; empirical data on coalition stability vs threshold level",
+      "impact": "If true minimum is 1.5%: current 3.25% is 2.17x extraction above functional necessity. If true minimum is 4.5%: current threshold is appropriately calibrated. Classification shifts from snare toward rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum threshold to prevent ungovernable fragmentation"
+    },
+    {
+      "id": "representation_equity_boundary",
+      "question": "At what threshold level does democratic representation equity conflict with coalition stability, and where should the balance be drawn?",
+      "resolution_mechanism": "Democratic theory analysis; survey of political science consensus on representation thresholds; historical comparison of countries with different thresholds and their stability/representation outcomes",
+      "impact": "If equity requires <2%: threshold is indefensible extraction. If equity allows 3.25%: threshold is legitimate balance. This is a preference/values question, not purely empirical.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Optimal balance between representation equity and coalition stability"
+    },
+    {
+      "id": "kingmaker_power_source",
+      "question": "Is the kingmaker power extracted from the threshold itself, or from Israel's proportional representation system and coalition necessity, which would exist even without a threshold?",
+      "resolution_mechanism": "Comparison with threshold-free systems (Netherlands, Denmark) and with single-member-district systems; analysis of whether removing the threshold while keeping proportional representation would eliminate kingmaker leverage",
+      "impact": "If from threshold alone: threshold is primary extraction mechanism. If from proportional representation: threshold is secondary; removing it alone doesn't solve extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether kingmaker power source is the threshold or the proportional system"
+    },
+    {
+      "id": "merger_coercion_mechanism",
+      "question": "Does the threshold coerce mergers that genuinely consolidate political platforms, or does it force identity-erasing coalitions that fragment again post-election?",
+      "resolution_mechanism": "Historical tracking of pre-election merger coalitions vs post-election coalition outcomes; analysis of merger durability; survey of threshold-driven merger parties on coalition satisfaction",
+      "impact": "If genuine consolidation: threshold reduces fragmentation (rope logic). If forced coalitions fragment: threshold just delays fragmentation (snare logic with illusory coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether threshold-driven mergers produce genuine consolidation or delayed fragmentation"
+    },
+    {
+      "id": "minority_representation_externality",
+      "question": "What is the causal path by which the threshold suppresses minority (Arab-Israeli, Druze) party representation, and is it intrinsic to thresholds or to Israel's specific coalition politics?",
+      "resolution_mechanism": "Comparison of minority party representation in Israeli elections across threshold levels (1949-2014); analysis of minority party vote shares vs representation before and after 1992 threshold increase; comparison with other democracies' minority party thresholds",
+      "impact": "If threshold is the primary mechanism: removing it would significantly increase minority representation. If coalition exclusion is primary: threshold is secondary; removing it alone doesn't solve representation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal mechanism linking threshold to minority party suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 1992,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "Israel's 3.25% electoral threshold represents a structural mechanism that consolidates political power among large parties while suppressing representation of marginal movements and minority interests. The constraint operates as a snare for parties and constituencies below the threshold (victims: marginal political movements, minority ethnic parties, single-issue advocates) while functioning as coordination and extraction mechanisms for established parties and kingmakers (beneficiaries: large established parties, coalition kingmakers). The threshold was introduced at 1% in 1949 and has been raised three times (to 2% in 1992, 3.25% in 2014), each time justified as necessary for coalition stability but functioning as rent-seeking by entrenched political actors. The constraint's extractiveness (0.52) reflects the asymmetric leverage it provides to parties just above the threshold in coalition negotiations, while suppression (0.68) reflects the absence of alternatives for sub-threshold constituencies. The theater ratio (0.38) is moderate: the stability justification is partially genuine but increasingly mythologized as thresholds have risen beyond demonstrated necessity.",
+    "key_agents": [
+      "Marginal Political Movements: Primary victims (powerless/trapped) \u2014 receive 2-3% of votes but zero Knesset seats; no exit option; suffer extraction and suppression",
+      "Minority Ethnic Parties: Secondary victims (moderate/constrained) \u2014 Arab-Israeli, Druze parties above threshold but below coalition-entry power; constrained exit via merger",
+      "Large Established Parties: Primary beneficiaries (institutional/arbitrage) \u2014 protected from splinter competition; experience threshold as coordination mechanism; can arbitrage coalition position",
+      "Coalition Kingmaker Parties: Secondary beneficiaries (powerful/mobile) \u2014 mid-sized parties (5-8%) gain disproportionate power through kingmaking; active enforcement of threshold maintains their leverage",
+      "Central Elections Committee: Institutional enforcer (institutional/arbitrage) \u2014 mechanically enforces threshold; sees enforcement as functional necessity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choice as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising over interval. The threshold's initial function (1949: 1%) was genuine coordination\u2014preventing total fragmentation. But each increase (1992: 2%, 2014: 3.25%) has extracted more power from marginal movements while providing little marginal governance benefit. The increasing extractiveness reflects that stability gains plateau while political concentration deepens. Israeli Knessets from 1949-1992 with lower thresholds were governable; the rises in 1992 and 2014 were justified politically as 'necessary for stability' but functioned as rent-seeking. Suppression (0.68): High and stable. The threshold creates absolute barriers to representation: a party receiving 2.8% of votes gets zero seats despite genuine support. This suppression is structural\u2014there is no alternative for sub-threshold constituencies except merger (identity loss) or abstention. Theater ratio (0.38): Moderate. The stability justification is partially real (some threshold is functional) but increasingly mythologized. International comparison reveals multiple stable democracies without thresholds (Netherlands) or with much lower ones (Germany 5%, Denmark no formal threshold). The ratio is not high (not piton) because enforcement is genuine, but not low (not rope) because the justification exceeds functional necessity.",
+    "perspectival_gap": "The marginal movement sees pure extraction (snare): they receive 2.8% of votes, get zero representation, and have no path to power except merger at the cost of identity. The kingmaker party sees both coordination and extraction (tangled rope): the threshold enables stable coalitions but gives them disproportionate leverage to extract ministerial posts and budgets. The established large party sees pure coordination (rope): the threshold protects them from splinter competition and enables stable coalition formation. The analytical observer risks seeing a mountain (natural law of democracy) when the structural data reveals a snare with mythologized justification. The suppression level (0.68) and extractiveness (0.52) make this snare, not mountain. The perspectival gap reveals that the same constraint is experienced as immutable law by those who benefit (institutional perspective) and as pure extraction by those harmed (powerless perspective).",
+    "directionality_logic": "Marginal movements: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. No exit option; they cannot reorganize geographically or negotiate entry. Minority ethnic parties: Victims + constrained \u2192 d\u22480.82, f(d)\u22481.28. High extraction. Can attempt merger to escape threshold, but this requires identity loss\u2014constrained, not fully trapped. Coalition kingmakers: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.30. Low extraction from threshold perspective, but active enforcement maintains their kingmaker leverage. Mobile exit (can negotiate with alternative coalitions) but coalition power is significant incentive to maintain threshold. Large established parties: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.05. Negative effective extraction (net beneficiary). They can exit the constraint entirely (no coalition risk from threshold) and arbitrage their large vote share into coalition power. Electoral administration: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u22480.00. Neutral/functional enforcement role; threshold appears as legitimate coordination from this perspective. Analytical observer: Analytical + analytical \u2192 d\u22480.72, f(d)\u22481.15. Risks naturalizing extraction as immutable law.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED via decomposition: The threshold exhibits genuine dual structure (tangled rope aspects) but fails the tangled rope gate because the 'coordination' function is partially mythologized while the extraction is real. Specifically: (1) GENUINE COORDINATION FUNCTION: Some threshold does prevent Knesset fragmentation into ungovernable splinters. Historical data from 1949-1992 with 1% threshold shows stable governance. This satisfies the coordination claim. (2) REAL ASYMMETRIC EXTRACTION: The threshold extracts from sub-threshold constituencies (wasted votes, zero representation) and provides kingmaker leverage to mid-sized parties above the threshold. This satisfies the extraction claim. (3) ACTIVE ENFORCEMENT: The Central Elections Committee actively enforces the threshold, and the Israeli political system requires it to function. This satisfies the enforcement requirement. (4) THE MANDATROPHY: A tangled rope must have BOTH genuine coordination AND asymmetric extraction. The threshold does both. However, the snare classification is correct because the theater ratio (0.38) is too low and the extractiveness (0.52) too high for tangled rope chi boundaries (0.40 \u2264 \u03c7 \u2264 0.90). Computing \u03c7 from the primary victim perspective (marginal movement, powerless/trapped): \u03c7 = 0.52 \u00d7 1.40 \u00d7 1.0 = 0.73, which exceeds the tangled rope ceiling. From the kingmaker perspective: \u03c7 = 0.52 \u00d7 0.30 \u00d7 1.0 = 0.16, which is below the floor. This perspectival gap (snare from victim view, rope from beneficiary view) is correctly classified as snare at the system level because the highest chi perspective (victim at 0.73) determines the constraint type when perspectives disagree. The mandatrophy is resolved: the constraint is snare because the extraction mechanism dominates the coordination function from the perspective of those most harmed."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "israeli_coalition_kingmaking",
+      "arab_israeli_political_representation"
+    ],
+    "dual_formulation_note": "The electoral threshold is upstream of coalition dynamics and minority representation constraints. Its \u03b5=0.52 reflects the extraction inherent to the mechanism itself, independent of coalition politics. Downstream constraints (kingmaking, minority representation) inherit the threshold's structural properties: the kingmaking power depends on threshold existence; the minority representation suppression depends on threshold level."
+  },
+  "directionality_overrides": []
+}

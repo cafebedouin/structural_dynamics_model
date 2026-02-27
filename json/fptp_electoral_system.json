@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "fptp_electoral_system",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fptp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The First-Past-the-Post (Plurality) Electoral System",
+    "topic_domain": "political/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_parties",
+      "geographically_concentrated_interests"
+    ],
+    "victims": [
+      "minor_parties",
+      "geographically_dispersed_interests",
+      "electoral_representation_fidelity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Third-Party Voter",
+      "comment": "PERSPECTIVE 1: THIRD-PARTY VOTER (SNARE) \u2014 Structurally trapped by mathematical properties of FPTP. Voting for preferred candidate risks 'wasting' the vote and enabling worse outcome (spoiler effect). Strategic voting under duress becomes mandatory. No exit: cannot change local district structure or aggregate vote rules without national coordination. Experiences maximum extraction of ballot intention."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Minor Party Organizer",
+      "comment": "PERSPECTIVE 2: MINOR PARTY ORGANIZER (TANGLED_ROPE) \u2014 Constrained but not fully trapped. FPTP suppresses their vote share (15% votes = <5% seats), but the system also provides coordination function: district-level campaigns are relatively simple to organize, candidates are locally known, ballot access is clear. Experiences both coordination benefit and systematic extraction. Exit exists but costly (re-platforming to major party, supporting fusion voting experiments)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Major Party Leadership",
+      "comment": "PERSPECTIVE 3: MAJOR PARTY LEADERSHIP (ROPE) \u2014 Benefits from FPTP's mechanical suppression of competitors. The system solves a genuine coordination problem: two-party binary choice simplifies voter decision-making and candidate recruitment. Major parties experience FPTP as coordination mechanism that happens to concentrate power in their favor. Can exit via supporting alternative systems but faces institutional inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Reform Coalition",
+      "comment": "PERSPECTIVE 4: ELECTORAL REFORM COALITION (SCAFFOLD) \u2014 Organized agents (proportional representation advocates, ranked-choice voting proponents, local democracy labs) view FPTP as a solvable temporary coordination failure with clear institutional exit path: legal rule change to alternative voting method. Many jurisdictions (Maine, Alaska, New Zealand) have already transitioned or are transitioning away from pure FPTP. Sunset clause: as alternative systems prove viable and political barriers decline, FPTP's suppression mechanism loses institutional support."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Colonial Electoral Legacy",
+      "comment": "PERSPECTIVE 5: COLONIAL ELECTORAL LEGACY (PITON) \u2014 From civilizational view, FPTP is a degraded institutional artifact: it was designed for relatively homogeneous two-party systems in mid-20th century context. Its primary function (simplifying voter choice, enabling local accountability) persists but is substantially theatrical in modern context. The system is maintained through institutional inertia, habit, and resistance to complexity rather than because it optimally solves modern electoral coordination. Theater ratio reflects that much FPTP discourse centers on defending familiar procedures rather than defending their outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Constraint View",
+      "comment": "PERSPECTIVE 6: MATHEMATICAL CONSTRAINT VIEW (MOUNTAIN) \u2014 From universal analytical perspective, FPTP appears as consequence of a mathematical law: any single-round, single-winner voting system with more than two candidates must allow some voters' preferences to be non-decisive (Arrow's impossibility theorem analogue). The claim is that FPTP is not a contingent institutional choice but a natural boundary of voting mathematics. HOWEVER: this perspective naturalizes a choice point (single-round, single-winner) that is itself contingent. The mathematical constraint is narrower than the institutional one."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "spoiler_effect_severity",
+      "question": "How much of FPTP's suppression of minor parties is attributable to mechanical vote-splitting (spoiler effect) versus genuine voter preference for major parties?",
+      "resolution_mechanism": "Jurisdictional comparison: vote-share vs seat-share analysis across FPTP jurisdictions; exit polling on strategic voting rates; simulation of ranked-choice outcomes in FPTP districts",
+      "impact": "If spoiler dominates: FPTP is pure extraction mechanism (higher snare classification). If preference dominates: FPTP is legitimate coordination (higher rope classification from minor party perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of minor party suppression to mathematical spoiler effect versus genuine voter preference"
+    },
+    {
+      "id": "accountability_preservation_capacity",
+      "question": "Do alternative voting systems (proportional representation, ranked choice, open list) preserve or degrade local district accountability that FPTP enables?",
+      "resolution_mechanism": "Comparative institutional analysis across electoral systems; constituent service rates; MP-constituent contact frequency; correlation between geographic representation and policy responsiveness",
+      "impact": "If alternatives preserve accountability: scaffold perspective confirmed, sunset is robust. If degraded: FPTP coordination function is less easily replaced, tangled_rope rather than scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative voting systems maintain local accountability"
+    },
+    {
+      "id": "two_party_equilibrium_stability",
+      "question": "Is the two-party equilibrium under FPTP a stable attractor (mathematically inevitable) or a contingent historical outcome that could be disrupted by coordination?",
+      "resolution_mechanism": "Game-theoretic modeling of voter choice under FPTP with varying candidate entry; historical analysis of third-party surges and their suppression; experimental economics with FPTP voting",
+      "impact": "If stable attractor: FPTP constraint is closer to mountain (immutable aggregate property). If contingent: it is more clearly institutional choice (snare/tangled_rope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether FPTP two-party equilibrium is mathematically inevitable or contingent"
+    },
+    {
+      "id": "suppression_mechanism_attribution",
+      "question": "Is electoral suppression of minor parties driven by mechanical FPTP rules or by independent institutional factors (ballot access, campaign finance, debate rules)?",
+      "resolution_mechanism": "Jurisdictional analysis of FPTP vs proportional systems with identical campaign finance and debate rules; counterfactual reconstruction of FPTP outcomes with relaxed ballot access",
+      "impact": "If mechanical FPTP is dominant driver: suppression is intrinsic (snare). If institutional factors dominate: suppression could be reduced without changing voting rule (tangled_rope becomes more rope-like).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of electoral suppression to mechanical rules versus institutional context"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The First-Past-the-Post electoral system is a structural constraint that exhibits all six DR types from different vantage points. At its origin (interval start), FPTP functioned primarily as coordination mechanism: it simplified voter choice, enabled local accountability, and clarified winner determination. Over time (interval progression), its extractive properties have become more pronounced as electorates have become more ideologically fragmented. Modern FPTP simultaneously enables major party coordination while systematically suppressing minor party representation. This creates a mixed constraint that combines genuine coordination function (simplified voting, clear local accountability) with substantial extraction (mathematical spoiler effect, geographic distortion of proportionality). The constraint's theater ratio has risen because much modern electoral discourse centers on defending familiar FPTP procedures rather than on defending their representational outcomes.",
+    "key_agents": [
+      "Major Parties: Primary beneficiary (institutional/arbitrage) \u2014 experience FPTP as coordination mechanism that systematically suppresses competitors; can exit via supporting alternative systems",
+      "Minor Parties: Primary victim (moderate/constrained) \u2014 systematically suppressed by spoiler effect; constrained but not trapped; can attempt fusion voting or cross-endorsement",
+      "Voters Preferring Minor Parties: Severe victim (powerless/trapped) \u2014 mathematically coerced into strategic voting; no exit within single election cycle",
+      "Geographically Concentrated Interests: Beneficiary (powerful/mobile) \u2014 FPTP advantages groups clustered in districts; can form stable local coalitions",
+      "Geographically Dispersed Interests: Victim (powerless/trapped) \u2014 minorities scattered across districts receive no seats despite aggregate vote share",
+      "Electoral Representation Fidelity: Victim (powerless/trapped) \u2014 abstract collective good; systematic distortion between vote share and seat share; unmeasurable direct exit",
+      "Electoral Reform Coalition: Organized agent (organized/constrained) \u2014 building alternative systems with institutional sunset logic",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional choice as mathematical law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. FPTP creates measurable extraction of minor party vote share into major party seats. The system suppresses third-party representation even when they receive 15-20% national vote share (resulting in <5% seat share). However, the extraction is not as severe as pure snare mechanisms (which approach 0.90+) because the coordination function is real: two-choice ballot simplification genuinely reduces cognitive load and enables local accountability. The historical rise from 0.35 to 0.58 reflects increasing ideological fragmentation and rise of minor party movements (Greens, populists, independence parties), making FPTP's suppression more visible. Suppression (0.62): High. FPTP creates multiple barriers to minor party success: spoiler effect mathematically punishes vote-splitting, geographic representation advantage goes to spatially concentrated groups, and two-party equilibrium creates credibility barrier for third-party entry. But suppression is not total (0.90+) because voter loyalty and candidate recruitment are partly independent of FPTP mechanics. Theater ratio (0.45): Moderate. FPTP discourse contains substantial theatrical elements (defending procedure for procedural familiarity rather than outcomes), but the voting mechanism itself is mechanically simple and outcomes are algorithmically clear. Theater has risen historically as representational failures (geographic distortion, minority suppression) have become more visible, forcing defensive institutional rhetoric.",
+    "directionality_logic": "Each perspective's directionality is derived from structural position. Major party institutional actors experience low d (beneficiary with arbitrage exit) \u2014 they are structurally favored and can shift to alternative systems if politically expedient. Third-party voters experience high d (victim with trapped exit) \u2014 they cannot change voting rules within a cycle and cannot strategically exit spoiler effect. Minor party organizers experience mid-high d (victim with constrained exit) \u2014 they can attempt fusion voting or migration to major party, but with significant cost. Reform coalition experiences mid d (organized with constrained exit) \u2014 they have institutional power and exit strategy (legal rule change) but face major party resistance. The engine derives these directionalities from beneficiary/victim declarations and exit options.",
+    "perspectival_gap": "Major parties see FPTP as coordination (Rope) \u2014 it genuinely simplifies their candidate recruitment and voter messaging. Third-party voters see extraction (Snare) \u2014 they are mathematically coerced into strategic voting. Minor party organizers see mixed extraction and coordination (Tangled Rope) \u2014 the system constrains them but also provides simple, locally-focused campaign structure. Reform coalition sees a temporary problem with institutional exit (Scaffold) \u2014 alternative voting methods are proven viable, sunset is real. The colonial legacy perspective sees degraded ritual (Piton) \u2014 FPTP is maintained through institutional habit rather than functional necessity in modern context. The mathematical perspective risks seeing immutable law (Mountain) \u2014 voting mathematics might require single-round, single-winner constraints \u2014 but this naturalizes a design choice.",
+    "mandatrophy_analysis": "FPTP resolves the mandatrophy through clear perspectival differentiation. It is NOT purely extractive (snare) because it provides genuine coordination benefit: binary choice simplifies voting, district-level races enable accountability, outcome determination is mechanically clear. It is NOT purely coordinative (rope) because it systematically suppresses minority representation and creates spoiler effect trap for voters. The tangled_rope classification captures both: major parties coordinate through a system that happens to extract from minorities; voters experience it as mixed benefit (simplified choice) and harm (coerced strategy). The scaffold perspective reveals that the constraint has institutional exit path \u2014 electoral system change has occurred in New Zealand, Maine, Alaska, and is under active consideration in many jurisdictions. The piton perspective reveals theatrical maintenance: much defender rhetoric focuses on 'tried and tested' and 'simple' rather than on outcomes. The mountain perspective is false: FPTP is not a law of nature but a contingent institutional choice \u2014 mathematical voting constraints exist, but FPTP is one particular solution to them, not the inevitable one."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gerrymandering_district_design",
+      "two_party_political_polarization",
+      "campaign_finance_concentration"
+    ],
+    "dual_formulation_note": "FPTP is structurally linked to gerrymandering (district design becomes critical under FPTP winner-take-all), two-party polarization (FPTP mathematically incentivizes binary coalitions), and campaign finance concentration (major parties can acquire disproportionate resources due to fundraising advantages from FPTP position). These constraints form a family where FPTP is upstream: alternative voting systems reduce but do not eliminate the pressure toward these downstream effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "world_factbook_sunset_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wfb"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "scaffold",
+    "human_readable": "CIA World Factbook Termination (2026)",
+    "topic_domain": "geopolitical/information",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "cia_core_operations",
+      "classified_intelligence_budget"
+    ],
+    "victims": [
+      "open_intelligence_commons",
+      "academic_researchers",
+      "development_organizations",
+      "journalistic_fact_checking"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Open Intelligence Commons",
+      "comment": "PERSPECTIVE 1: OPEN INTELLIGENCE COMMONS (SNARE) \u2014 Global researchers, journalists, NGOs dependent on World Factbook data as freely accessible baseline. No alternative centralized source; cannot exit. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.63. Termination extracts knowledge labor already performed and redistributes it as proprietary/paywalled."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Academic Researchers and Development Organizations",
+      "comment": "PERSPECTIVE 2: ACADEMIC/NGO SECTOR (SNARE) \u2014 Universities, USAID, World Bank analysts integrated Factbook into citation pipelines and program baselines. Switching costs high; alternatives (various national sources, UN databases, commercial APIs) are less complete or require expensive aggregation. d\u22480.75, f(d)\u22481.10, \u03c3=1.2 \u2192 \u03c7\u22480.50. Moderate extraction with constrained exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Foreign Governments and Intelligence Services",
+      "comment": "PERSPECTIVE 3: FOREIGN GOVERNMENTS (TANGLED ROPE) \u2014 Beneficiaries of Factbook as reliable U.S.-curated reference (reduces information ambiguity, standardizes reporting). Victims of termination (lose low-cost baseline). Also benefits from U.S. intelligence prioritization for bilateral relationships. d\u22480.58, f(d)\u22480.78, \u03c3=1.0 \u2192 \u03c7\u22480.30. Mixed: loses public good but retains classified intelligence channel."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "CIA Core Operations and Classified Budget",
+      "comment": "PERSPECTIVE 4: CIA CORE OPERATIONS (ROPE) \u2014 Primary beneficiary. Redirects ~$2-5M annual Factbook budget to classified collection, analysis, and White House access. Sees termination as pure coordination: reallocating resources to highest-value intelligence products. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiary through budget reallocation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Alternative Open Data Coalitions",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE DATA ECOSYSTEMS (SCAFFOLD) \u2014 Wikipedia geodata, Wikidata, CSIS country profiles, UCDP conflict data, World Bank Indicators, UN COMTRADE are building decentralized alternatives. The Factbook termination accelerates adoption of these distributed sources (mobile exit for organized actors). d\u22480.35, f(d)\u22480.33, \u03c3=1.2 \u2192 \u03c7\u22480.15. Low effective extraction; coalitions have agency and exit pathways. Sunset: 3-5 years for mature open alternatives to replace Factbook's primary use cases."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "U.S. Public Diplomacy and Soft Power Infrastructure",
+      "comment": "PERSPECTIVE 6: U.S. SOFT POWER INFRASTRUCTURE (PITON) \u2014 Historically, Factbook was a secondary soft-power tool: presenting U.S. as custodian of objective global knowledge (brand differentiation from Soviet propaganda). Theater_ratio=0.58: the Factbook's soft-power function has already degraded as alternative sources proliferate and U.S. credibility narratives weakened (2010s-2020s). Termination formalizes what is functionally already inert. The 'value to America's international standing' claim is performative \u2014 actually residual justification for institutional maintenance, now being dissolved."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Information Economics View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal view, the Factbook termination risks being naturalized as inevitable cost-cutting or 'core mission focus.' But the structural data (\u03b5=0.38, suppression=0.42, theater=0.58) contradicts mountain classification. The constraint is contingent (policy choice), not inevitable (information economics law). The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_source_consolidation_timeline",
+      "question": "How long will it take for decentralized alternatives (Wikipedia, Wikidata, CSIS, UN data) to reach functional parity with Factbook for the 80% use-case coverage that justifies sunset?",
+      "resolution_mechanism": "Citation tracking of Factbook vs alternative sources in academic papers, policy documents, journalistic reporting; completeness audits of geopolitical baseline coverage; researcher satisfaction surveys",
+      "impact": "If < 2 years: scaffold sunset is realistic, constraint degrades predictably. If > 5 years: many users remain trapped longer than anticipated, snare classification persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for alternative sources to reach functional parity with Factbook"
+    },
+    {
+      "id": "classified_budget_reallocation_actual_use",
+      "question": "Will the redirected Factbook budget ($2-5M annually) actually flow to genuine intelligence collection/analysis, or will it be absorbed into administrative overhead and existing operations?",
+      "resolution_mechanism": "GAO audit of CIA budget reallocation post-termination; tracking of hiring, collection priorities, and analysis product volume in successor projects",
+      "impact": "If genuinely reallocated to core ops: rope classification confirmed, beneficiary experience is real. If absorbed into general overhead: beneficiary status unclear, termination may be primarily theater (piton reclassification).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether redirected budget flows to core intelligence or administrative overhead"
+    },
+    {
+      "id": "information_asymmetry_amplification_scope",
+      "question": "Does Factbook termination increase structural dependence of developing nations and global south actors on fragmented proprietary data sources (World Bank, commercial APIs, bilateral intelligence channels)?",
+      "resolution_mechanism": "Analysis of post-termination data access patterns; comparison of information acquisition costs for LDCs vs developed countries; measurement of policy-relevant data gaps in underrepresented regions",
+      "impact": "If significant: termination creates new extractive asymmetry (developing nations lose low-cost baseline), snare classification amplifies for global-south actors. If marginal: alternative sources adequately substitute.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether termination increases information asymmetry for developing nations"
+    },
+    {
+      "id": "white_house_staffing_rationalization_genuineness",
+      "question": "Is the stated rationale (return to core missions amid staffing cuts) the primary driver, or is it a proxy for deprioritizing open intelligence and realigning information access toward White House political control?",
+      "resolution_mechanism": "Analysis of other terminated intelligence products/transparency initiatives in same period; comparison to historical precedent for CIA budget reallocation under executive pressure; archival evidence of White House directives",
+      "impact": "If primary driver: pure efficiency rationale (rope/scaffold logic). If proxy: extraction and information control motive (snare/tangled rope), suggesting deeper constraint than stated.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether staffing cuts rationalize or proxy deeper information control motives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The CIA World Factbook, published continuously since 1962, represents a unique institutional product: a government intelligence agency producing unclassified, freely available, globally comprehensive reference data on every nation-state. Its 60+ year existence reflects a Cold War strategic choice to position U.S. intelligence as the custodian of objective geopolitical knowledge. In February 2026, CIA Director John Ratcliffe announced termination, citing budget reallocation to core intelligence missions within the context of White House-mandated staffing cuts. The constraint exhibits all characteristics of a Scaffold: a temporary coordination mechanism with explicit sunset (open alternatives maturing), moderate extraction (budget redirection), and declining performative value (soft-power function already attenuated). However, the termination also creates measurable snare-like extraction for powerless dependent communities (researchers, NGOs, developing nations), and carries potential piton characteristics if the soft-power rationale masks institutional degradation rather than genuine core-mission prioritization.",
+    "key_agents": [
+      "CIA Core Operations: Primary beneficiary (institutional/arbitrage) \u2014 redirects Factbook budget to classified intelligence priorities",
+      "Open Intelligence Commons: Primary victim (powerless/trapped) \u2014 global researchers, journalists, fact-checkers dependent on single centralized baseline; no alternative with same completeness/accessibility",
+      "Academic and Development Sector: Secondary victim (moderate/constrained) \u2014 universities, USAID, World Bank analysts face switching costs to fragmented alternatives",
+      "Foreign Governments and Intelligence Services: Mixed (moderate/constrained) \u2014 benefit from U.S.-curated reference; lose public-good access but retain classified intelligence channels",
+      "Alternative Data Ecosystems: Organized beneficiary (organized/mobile) \u2014 Wikipedia, Wikidata, CSIS, UN databases accelerate adoption as Factbook exits; have exit pathways and coalition capacity",
+      "U.S. Public Diplomacy Infrastructure: Degraded beneficiary (institutional/arbitrage) \u2014 soft-power function residual; termination formalizes already-atrophied institutional role",
+      "White House Executive Oversight: Structural controller (institutional/arbitrage) \u2014 staffing mandate drives reallocation; may embed information control motives beneath efficiency rationale"
+    ],
+    "logic_rationale": "Base extractiveness (0.38): Moderate. The constraint extracts approximately $2-5M annually that was dedicated to open intelligence production and redirects it to classified operations. For users dependent on Factbook, this is genuine extraction of a previously available public good. However, the extraction is limited by existence of imperfect alternatives (not total monopoly like a snare) and explicit sunset pathway (alternative sources maturing, reducing dependence). Suppression (0.42): Moderate. Barriers to exit are significant but not total. Users face switching costs, aggregation labor, and data quality gaps when moving to alternatives \u2014 but alternatives do exist. Developing nations and low-resourced organizations face higher suppression than wealthy actors with capital for data infrastructure. Theater ratio (0.58): Moderate-high. The stated rationale ('return to core missions') has genuine plausibility \u2014 intelligence agencies do face resource constraints \u2014 but also obscures deeper questions about information control and data sovereignty. The soft-power framing (Factbook as U.S. soft power asset) is increasingly performative; the product's actual geopolitical influence has declined as alternative sources proliferated and U.S. intelligence credibility faced sustained challenges (post-2003 Iraq intelligence disputes, post-2016 social media disinformation, post-2020 election challenges).",
+    "perspectival_gap": "The core perspectival gap is between institutional beneficiaries (CIA core ops, White House) and distributed victims (researchers, NGOs, developing nations). CIA sees coordination: reallocation of resources to higher-value intelligence production. Academic researchers see snare: loss of access to comprehensive baseline data without migration path. Foreign governments see tangled rope: lose public good but retain classified channels. Alternative data coalitions see scaffold: temporary constraint being resolved by open alternatives. U.S. public diplomacy sees piton: soft-power justification is theatrical cover for budget cuts, not genuine strategic investment. The analytical observer risks seeing mountain (inevitable cost-cutting as natural law of budgetary scarcity) but the structural data reveals contingency: this is a policy choice, not a physical law.",
+    "directionality_logic": "CIA core operations: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Budget reallocation concentrates resources toward classified operations with higher institutional value to intelligence leadership. Open intelligence commons: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Dependent populations have no equivalent alternative; cannot exit without significant labor and cost. Academic/NGO sector: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. High extraction but not maximal; alternatives exist but require switching and aggregation labor. Foreign governments: Beneficiary (public data loss) + victim (intelligence priorities), constrained \u2192 d\u22480.55, f(d)\u22480.75. Mixed, moderate extraction. Alternative data coalitions: Organized agents + mobile \u2192 d\u22480.30, f(d)\u22480.20. Low effective extraction; coalitions have agency and can mobilize substitute capacity. U.S. public diplomacy: Institutional + arbitrage, but functionally degraded \u2192 d\u22480.05, f(d)\u2248-0.12. Classified as piton (theater=0.58), not snare, because soft-power function is already atrophied.",
+    "mandatrophy_analysis": "SCAFFOLD WITH SNARE TEMPORALITY: The constraint resolves mandatrophy by showing that Scaffold classification is valid IF AND ONLY IF the sunset mechanism (alternative data sources maturing) functions as predicted. The omega variables measure this directly: alternative source consolidation timeline (omega_id: alternative_source_consolidation_timeline) determines whether users remain trapped (snare reclassifies) or successfully migrate (scaffold confirmed). The theater_ratio (0.58) indicates moderate performativity: the 'core mission' rationale has plausibility but also obscures information control motives. The constraint is NOT a pure coordination problem (rope) because the termination imposes asymmetric costs (powerless actors bear full cost, while CIA benefits). It is also NOT a pure extraction (snare) because organized alternatives are actively building exit pathways. Scaffold classification is therefore conditional: SCAFFOLD if alternative sources reach 80% functional parity within 3-5 years; SNARE if migration stalls and dependence persists. The measurement trajectory shows rising theater_ratio (0.42\u21920.58) indicating that performative justification is increasing relative to functional value \u2014 a piton signature. This suggests the constraint may be transitioning from temporary coordination mechanism (authentic scaffold) toward degraded institutional inertia (piton), with snare-like extraction persisting for immobilized populations. Confidence in sunset mechanism: MEDIUM. Alternative data initiatives (Wikidata, CSIS, UN indicators) are real and maturing, but their adoption by dependent communities (especially in global south) is uncertain."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "intelligence_classification_regime",
+      "developing_nation_data_infrastructure",
+      "open_source_intelligence_capacity"
+    ],
+    "dual_formulation_note": "World Factbook termination is downstream of two distinct constraints: (1) U.S. White House budgetary/staffing prioritization (immediate driver), (2) Broader degradation of U.S. public diplomacy soft-power infrastructure (structural context). These are separate constraint stories with different \u03b5 values. Factbook termination itself (\u03b5=0.38) represents the coordination/extraction hybrid of a temporary information access mechanism. The budgetary constraint upstream has higher extractiveness; the soft-power degradation is a piton. All three are linked by network causality."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

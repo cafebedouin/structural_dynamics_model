@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "us_taiwan_arms_sales",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Arms Sales Policy toward Taiwan",
+    "topic_domain": "geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_defense_industry",
+      "taiwan_defense_forces"
+    ],
+    "victims": [
+      "china_regional_influence",
+      "us_taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "China's Regional Influence",
+      "comment": "PERSPECTIVE 1: CHINA (SNARE) \u2014 China's regional influence is constrained by US arms sales, limiting its options for asserting control over Taiwan. China is essentially trapped in this scenario, bearing the cost of containment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US Taxpayers",
+      "comment": "PERSPECTIVE 2: US TAXPAYERS (TANGLED ROPE) \u2014 US Taxpayers bear the financial burden of subsidizing arms sales but also benefit from the perceived security and stability provided by the policy. Their exit options are constrained by the bipartisan political consensus on Taiwan's defense."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Defense Industry",
+      "comment": "PERSPECTIVE 3: US DEFENSE INDUSTRY (ROPE) \u2014 US defense contractors benefit economically from arms sales to Taiwan, experiencing the constraint as a coordination mechanism that ensures continued revenue and market access. They can 'arbitrage' this situation by lobbying to maintain the policy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Taiwan Defense Forces",
+      "comment": "PERSPECTIVE 4: Taiwan's Defense Forces (Rope) - Benefits from the increased military capabilities and deterrence provided by the arms sales. Although constrained by the US\u2019s selection and timing of arms provisions, the policy overall offers a coordination benefit for Taiwan."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global, civilizational perspective, the policy is a complex mix of coordination (deterrence, regional stability) and extraction (financial costs, potential for escalation). Extraction is likely to increase over time as China's military capabilities grow."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "china_response_threshold",
+      "question": "At what point does the level/type of arms sales trigger a disproportionate or destabilizing response from China?",
+      "resolution_mechanism": "Game-theoretic modeling of escalation dynamics; analysis of historical precedent in similar geopolitical scenarios.",
+      "impact": "If threshold is low: the policy becomes a snare for regional stability. If threshold is high: the policy remains a tangled rope with a net coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Arms sales level that triggers Chinese overreaction"
+    },
+    {
+      "id": "taiwan_defense_autonomy",
+      "question": "To what extent does reliance on US arms sales undermine Taiwan's own defense industrial base and strategic autonomy?",
+      "resolution_mechanism": "Comparative analysis of Taiwan's defense budget allocation; assessment of indigenous weapons development programs.",
+      "impact": "If high dependence: Taiwan remains trapped. If Taiwan builds up its independent base: Taiwan will have greater mobile exit options.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Taiwan's dependence on US arms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The US Arms Sales Policy toward Taiwan is a long-standing geopolitical constraint aimed at deterring Chinese aggression and maintaining stability in the region. Codified in the Taiwan Relations Act, this policy involves the sale of defensive weapons systems to Taiwan. However, this policy also creates structural tensions between competing interests, extraction from some parties and coordination for others. The analytical perspective shows how the overall situation is a tangled rope.",
+    "key_agents": [
+      "US Defense Industry: Primary beneficiary (institutional/arbitrage) - profits from arms sales.",
+      "Taiwan Defense Forces: Secondary beneficiary (institutional/constrained) - receives advanced weaponry.",
+      "China Regional Influence: Primary victim (powerless/trapped) - constrained by US support for Taiwan.",
+      "US Taxpayers: Secondary victim (moderate/constrained) - funds the arms sales."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate to High. The policy requires significant financial investment from US taxpayers, and China experiences it as a constraint on its regional ambitions. Suppression (0.40): Moderate. The policy suppresses China's options for resolving the Taiwan issue by force, and limits Taiwan's strategic autonomy by making it dependent on US arms. Theater ratio (0.30): Low. The policy is primarily functional, with a relatively small performative element. Most activity is directly aimed at improving Taiwan's defenses and sending a signal to China. ",
+    "perspectival_gap": "China sees the policy as a Snare, directly impeding its goals. US taxpayers experience it as a Tangled Rope because they bear the cost but also perceive a benefit in terms of national security. The US defense industry views it as a Rope, facilitating its economic goals. Taiwan views it as a Rope for the defense forces and an element of deterrence. The analytical observer sees the situation as a Tangled Rope because it embodies elements of both coordination and extraction, with a tendency towards greater extraction as China's military power increases.",
+    "directionality_logic": "Directionality is determined by each actor's structural position. China, as the target of containment, experiences maximum extraction. US taxpayers bear the financial costs, resulting in moderate extraction. US defense contractors benefit economically, resulting in negative extraction. Taiwan receives coordinated support in defense, so that party experiences extracted benefit."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

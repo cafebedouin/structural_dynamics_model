@@ -2,63 +2,72 @@
   "header": {
     "constraint_id": "arrows_impossibility_theorem",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arrow"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "Arrow's Impossibility Theorem (as a political justification)",
     "topic_domain": "political/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "political_incumbents",
-      "status_quo_partisans"
+      "incumbent_political_coalition",
+      "voting_system_administrators"
     ],
     "victims": [
-      "electoral_reform_advocates",
-      "disenfranchised_voters",
-      "third_party_movements"
+      "disenfranchised_preference_groups",
+      "collective_choice_accuracy"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Electoral Reform Advocate",
-      "comment": "PERSPECTIVE 1: ELECTORAL REFORM ADVOCATE (SNARE) — Trapped within a political system they seek to change. The theorem is wielded as an unassailable justification for inaction, creating a snare that extracts political agency and suppresses alternatives. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+      "label": "The Disenfranchised Minority",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED MINORITY (SNARE) \u2014 Powerless voters whose preferences are structurally excluded or weighted near-zero by the chosen voting system. The Arrow theorem is invoked to justify why no better system exists, trapping them in the current mechanism. No exit option: they cannot adopt an alternative voting system unilaterally. Maximum extraction \u2014 their voice is suppressed by a 'necessity' that is actually institutional choice."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform-Seeking Electoral Coalition",
+      "comment": "PERSPECTIVE 2: REFORM-SEEKING COALITION (TANGLED ROPE) \u2014 Moderate power agents seeking ranked-choice voting or proportional representation. They benefit from the Arrow theorem as a conversation tool (coordination function: 'we all know no perfect system exists, so let's discuss tradeoffs') but are also trapped by it (extraction function: the invocation of Arrow in policy discourse legitimizes inaction and suppresses voting system reform). Asymmetric extraction \u2014 they bear the cost of gridlock while benefiting from the vocabulary of the discussion."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Status Quo Incumbent",
-      "comment": "PERSPECTIVE 2: STATUS QUO INCUMBENT (ROPE) — Benefits from the current flawed system. The theorem is a pure coordination tool to maintain consensus, prevent disruptive reforms, and ensure stability (of their own power). d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07. Negative extraction signifies a net subsidy."
+      "label": "The Incumbent Political Coalition",
+      "comment": "PERSPECTIVE 3: INCUMBENT POLITICAL COALITION (ROPE) \u2014 Institutional actors (majority party, sitting legislators) benefit from the current voting system by design. Arrow's theorem is their primary coordination tool: it allows them to claim that no alternative system is 'better' and to dismiss reform proposals as theoretically naive. They experience the constraint as pure coordination: leveraging Arrow legitimizes the status quo through mathematical authority. Net beneficiary position."
     },
     {
       "classification_type": "piton",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Cynical Pundit",
-      "comment": "PERSPECTIVE 3: THE CYNICAL PUNDIT (PITON) — The theorem's mathematical substance is inert in the political debate; its function is purely theatrical. Invoking it signals intellectual authority to shut down arguments, a performative act that persists due to institutional inertia in political discourse. theater_ratio=0.75 satisfies the piton gate (≥0.70)."
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Mathematical Community",
+      "comment": "PERSPECTIVE 4: ACADEMIC MATHEMATICAL COMMUNITY (PITON) \u2014 Possesses the authoritative voice on Arrow's theorem but is largely disengaged from its political application. The theorem is cited extensively by non-specialists; the mathematics community has moved beyond Arrow to richer preference frameworks (preference intensities, liquid democracy, quadratic voting), but the original theorem remains deployed in policy discourse as an immutable law. The academic authority is maintained performatively through constant citation despite technical obsolescence. Theater ratio driven by the gap between sophisticated current work (liquid democracy, participatory budgeting) and the frozen invocation of 1950s result."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine (if minimal) coordination function of preventing endless cycling over voting systems, and the significant asymmetric extraction where incumbents benefit at the expense of reformers. The high suppression and extraction are undeniable. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Voting Reform Movement",
+      "comment": "PERSPECTIVE 5: VOTING REFORM MOVEMENT (SCAFFOLD) \u2014 Organized agents (local electoral commissions, voting reform nonprofits, participatory democracy practitioners) are creating alternative voting mechanisms at scale: ranked-choice voting in municipalities, proportional representation experiments, liquid democracy pilots. These experiments demonstrate that Arrow's theorem does not mandate the current system \u2014 it only mandates that no voting system satisfies ALL of Arrow's five axioms simultaneously. The reform movement sees a sunset path: as alternatives prove functional in practice, the invocation of Arrow loses its suppressive force. Sunset timeline: 15-25 years as municipal experiments accumulate evidence."
     },
     {
       "classification_type": "mountain",
@@ -66,88 +75,122 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Mathematical Purist",
-      "comment": "PERSPECTIVE 5: THE MATHEMATICAL PURIST (MOUNTAIN) — This perspective ignores the political application and sees only the theorem itself: an unchangeable, fixed limit of social choice theory. This is a 'false summit'; the engine will reject this classification because the base properties (ε=0.55, suppression=0.75) are inconsistent with a Mountain. This demonstrates the naturalization of a social constraint."
+      "label": "The Mathematical Impossibility View",
+      "comment": "PERSPECTIVE 6: MATHEMATICAL IMPOSSIBILITY (MOUNTAIN) \u2014 From a civilizational/universal perspective, Arrow's theorem is presented as a natural law: no voting system can simultaneously satisfy the five axioms (unrestricted domain, non-dictatorship, Pareto efficiency, independence of irrelevant alternatives, collective rationality). This perspective treats the mathematical result as immutable \u2014 any actual voting system must violate at least one axiom. However, the structural data contradicts the mountain classification. The axioms are chosen premises, not natural laws. The theorem is a logical result conditioned on accepting the five axioms. This is a false summit \u2014 mathematical truth is being naturalized to justify political inaction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Administration Institution",
+      "comment": "PERSPECTIVE 7: ELECTORAL ADMINISTRATION INSTITUTION (TANGLED ROPE) \u2014 Administrators of voting systems (election commissions, election officials) coordinate voters and tabulate results (Rope function) but also extract lock-in costs through system switching resistance. They benefit from Arrow invocation because it justifies path-dependent inaction ('changing systems is theoretically impossible'). They bear costs from complexity mismanagement ('we have to operate a system we know is flawed'). Asymmetric: they have arbitrage exit (they can propose reform) but use Arrow as justification for constraining it."
     }
   ],
   "omegas": [
     {
-      "id": "public_comprehension_impact",
-      "question": "To what extent does the public's lack of understanding of the theorem's technical details enable its use as a tool of suppression?",
-      "resolution_mechanism": "Comparative analysis of reform debates in populations with high vs. low mathematical literacy; polling on the theorem's perceived authority vs. actual understanding.",
-      "impact": "If low comprehension is the primary enabler, the constraint is a Snare based on information asymmetry. If elites use it to persuade other elites regardless of public opinion, it's a Tangled Rope of elite consensus.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Impact of public's technical understanding on the constraint's power"
+      "id": "axiom_selection_contingency",
+      "question": "Are Arrow's five axioms the unique set of mathematically necessary conditions for voting systems, or are they one particular choice among multiple defensible axiom sets?",
+      "resolution_mechanism": "Literature review of alternative axiomatizations (liquid democracy axioms, participatory budgeting axioms, preference-intensity axioms); comparison of logical necessity vs. conventional choice for each axiom",
+      "impact": "If axioms are contingent choices: Arrow's theorem is a limited result applicable only to systems accepting those specific axioms. The invocation of impossibility becomes a deliberate constraint selection, not a discovery of natural law. If axioms are necessary: the theorem is broader and the natural law framing is justified.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Arrow's axioms are uniquely necessary or contingent choices"
     },
     {
-      "id": "alternative_system_viability",
-      "question": "Are there viable voting systems (e.g., ranked-choice, approval, score voting) that, while not 'perfect' by Arrow's criteria, are demonstrably superior to the status quo?",
-      "resolution_mechanism": "Empirical studies of jurisdictions using these alternative systems, measuring voter satisfaction, representation fidelity, and spoiler effects.",
-      "impact": "If viable, superior alternatives are proven to exist, the 'impossibility' justification becomes a pure Snare. If all alternatives have significant, comparable trade-offs, the justification retains a Tangled Rope character.",
+      "id": "practical_system_performance",
+      "question": "Do ranked-choice voting, approval voting, and proportional representation systems actually produce empirically better outcomes on measures like representativeness, voter satisfaction, and consensus-building compared to first-past-the-post?",
+      "resolution_mechanism": "Comparative analysis of electoral outcomes in jurisdictions with different voting systems (Maine, Ireland, New Zealand, Belgium); voter satisfaction surveys; policy diversity metrics; coalition stability",
+      "impact": "If alternatives perform better: Arrow invocation becomes pure rationalization ('we know a better system exists, but the theorem says none does'). If alternatives show similar or worse performance: Arrow invocation gains epistemic weight as a genuine theoretical constraint on improvement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical performance of alternative voting systems compared to FPTP"
+    },
+    {
+      "id": "incumbent_advantage_magnitude",
+      "question": "How much of the political coalitioninvocation of Arrow is motivated by genuine belief in mathematical impossibility vs. motivated reasoning to protect incumbent advantage in the current system?",
+      "resolution_mechanism": "Discourse analysis: comparison of Arrow citations when current system favors the speaker vs. when it disadvantages them; behavior change after electoral power shifts; comparative rhetoric across parties and policy debates",
+      "impact": "If genuine: the constraint is a true intellectual binding (though false summit remains possible). If motivated: the constraint is primarily extractive rationalization, and suppression is intentional rather than believed-necessary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of motivated reasoning in Arrow invocation by incumbent coalitions"
+    },
+    {
+      "id": "axiom_relaxation_feasibility",
+      "question": "Which of Arrow's five axioms can be relaxed without creating catastrophic outcomes, and which relaxations produce better real-world voting performance?",
+      "resolution_mechanism": "Literature review of relaxed-axiom voting systems (removal of IIA, collective rationality, etc.); empirical testing of these systems in municipal voting experiments; comparison of outcome quality metrics",
+      "impact": "If most axioms can be relaxed productively: Arrow's result is a boundary condition, not a fundamental limit. The framing of inevitability collapses. If relaxations create worse outcomes: Arrow's theorem gains practical validity despite being a false summit mathematically.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether viable, superior voting systems exist in practice"
+      "description": "Feasibility and outcomes of relaxing Arrow's axioms"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 39,
       "value": 0.4
     },
     {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
       "metric": "base_extractiveness",
-      "time_point": 73,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.35
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 39,
-      "value": 0.6
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.44
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 73,
-      "value": 0.75
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
     }
   ],
   "interval": {
-    "start": 1951,
-    "end": 2024
+    "start": 0,
+    "end": 50
   },
   "commentary": {
-    "narrative_context": "This constraint story models the political USE of Arrow's Impossibility Theorem, not the mathematical theorem itself. The theorem, a formal proof about the limits of ranked-voting systems, is a mathematical Mountain (ε≈0). However, its application in political discourse functions as a social constraint to justify flawed status-quo voting systems and suppress reform efforts. By framing any imperfection in an alternative system as a fatal flaw predicted by an inexorable mathematical law, political incumbents create a powerful rhetorical barrier to change.",
+    "narrative_context": "Arrow's Impossibility Theorem, published in 1951, proves that no voting system can simultaneously satisfy five axioms: unrestricted domain, non-dictatorship, Pareto efficiency, independence of irrelevant alternatives, and collective rationality. This mathematical result has become a primary political justification for maintaining existing voting systems and dismissing electoral reform proposals. The constraint operates as a Tangled Rope: it serves a genuine coordination function (allowing all parties to agree that 'no perfect system exists') while simultaneously extracting political value by legitimizing inaction and suppressing alternatives. The theater ratio (0.68) reflects the increasing performative invocation of Arrow in policy discourse detached from the mathematical nuances \u2014 the theorem is cited as immutable law while academic work on voting systems has moved far beyond it (liquid democracy, participatory budgeting, preference-intensity models). The extractiveness (0.52) reflects moderate asymmetric costs: beneficiaries (incumbent coalitions) capture the suppression of reform while bearing no cost of system flaws; victims (disenfranchised preference groups, collective choice accuracy) pay through reduced representation and policy suboptimality. The suppression (0.65) is substantial but not total \u2014 voting reform movements have achieved real wins at municipal scale, demonstrating that the arrow theorem does not mandate the status quo, only that any system must relax at least one axiom.",
     "key_agents": [
-      "Political Incumbents: Primary beneficiaries (institutional/arbitrage) — Use the theorem to defend the existing electoral system that advantages them.",
-      "Electoral Reform Advocates: Primary victims (powerless/trapped) — Their proposals are dismissed as mathematically naive, extracting their political agency.",
-      "Cynical Pundits: Enforcers (powerful/mobile) — Wield the theorem as a theatrical tool to signal authority and shut down debate.",
-      "Disenfranchised Voters: Secondary victims (powerless/trapped) — Bear the costs of the sub-optimal voting system.",
-      "Analytical Observer: Sees the full structure of coordination and extraction."
+      "Incumbent Political Coalition: Primary beneficiary (institutional/arbitrage) \u2014 leverages Arrow theorem to dismiss reform, consolidates power under current system, experiences constraint as pure coordination tool",
+      "Disenfranchised Preference Groups: Primary victim (powerless/trapped) \u2014 excluded or near-zero-weighted by current voting system, cannot exit, bear suppression of reform alternatives",
+      "Electoral Reform Movement: Organized secondary actor (organized/constrained) \u2014 seeks proportional representation, ranked-choice voting, and participatory budgeting; sees Arrow as temporary constraint with sunset path",
+      "Electoral Administration Institution: Secondary institutional actor (institutional/arbitrage) \u2014 coordinates voting but locked into defending current system, uses Arrow to justify path dependence",
+      "Academic Mathematical Community: Authority source (institutional/arbitrage) \u2014 produces theorems and extensions to Arrow framework but is disengaged from political application; community has moved beyond pure Arrow work but original result remains frozen in policy discourse",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing a mathematical axiom choice as an immutable law"
     ],
-    "logic_rationale": "Extractiveness (0.55): Represents the significant extraction of political agency and possibility from reform movements and the general populace. Suppression (0.75): The argument from 'mathematical impossibility' is an extremely effective tool for shutting down debate and delegitimizing alternative proposals. Theater Ratio (0.75): Invoking a complex, Nobel-winning mathematical theorem that few understand is a classic example of performative intellectualism in politics, where the gesture of authority is more important than the technical substance.",
-    "perspectival_gap": "The gap is profound. Incumbents see a Rope that coordinates everyone around a stable (and beneficial) system. Reformers experience a Snare that uses abstract logic to trap them in a broken reality. Pundits use it as a Piton, a rhetorical club that has lost its original analytical function but still works to win arguments. The analytical observer sees the Tangled Rope: a mix of a legitimate (if misapplied) coordination principle and a clear extractive agenda. The 'Mathematical Purist' perspective illustrates the category error of conflating a law of logic with a law of politics, a 'false summit' the framework is designed to detect.",
-    "directionality_logic": "Beneficiaries (incumbents) have arbitrage exit from the debate's substance and benefit from the outcome, leading to a low 'd' value and a Rope classification. Victims (reformers) are trapped in the system and bear the full cost of inaction, leading to a high 'd' value and a Snare classification. The analytical observer's position derives a 'd' value that correctly identifies the mixed nature of the constraint as a Tangled Rope.",
-    "mandatrophy_analysis": "This case resolves the mandatrophy by strictly separating the mathematical object from its political deployment. To label the political situation a 'Mountain' because its justification is rooted in a mathematical theorem is a category error that naturalizes a contingent political choice. The framework correctly identifies the political use-case as a high-extraction, high-suppression social constraint (Tangled Rope/Snare), while acknowledging that a different constraint story (`arrows_theorem_mathematical`) would correctly classify the theorem itself as a Mountain. This decomposition is central to the ε-invariance principle."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The incumbent coalition captures real political value by invoking Arrow to suppress voting system reform. The extraction is not complete (\u03b5 not \u2265 0.66) because alternative voting systems do function at municipal scale, and the intellectual authority of Arrow is eroding as alternatives accumulate evidence. The constraint's extractive power is declining \u2014 it is working harder (theater ratio rising) to accomplish less (extractiveness modest). Suppression (0.65): Moderate-high. The invocation of Arrow creates substantial barriers to voting reform: any proposal faces the reflexive objection 'Arrow proved no system is better.' Negative framing of alternatives ('no perfect system') discourages experimentation. But suppression is not total \u2014 municipalities are adopting ranked-choice voting and proportional representation despite Arrow invocation. Theater ratio (0.68): Increasing. Over the 50-year interval, the political use of Arrow has become increasingly detached from mathematical content. The theorem is cited in policy discourse but without engagement with relaxed-axiom systems, participatory budgeting, liquid democracy, or the contingency of the axiom choices themselves. The performative invocation of Arrow increases while its actual intellectual justification weakens \u2014 classic Goodhart drift.",
+    "directionality_logic": "The beneficiaries (incumbent coalition, electoral administrators) experience low directionality (d \u2248 0.15\u20130.25) because they have arbitrage exit options and the constraint extraction flows toward them. The victims (disenfranchised groups) experience high d (d \u2248 0.85\u20130.95) because they are trapped and extraction flows away from them. The reform movement (organized/constrained) experiences intermediate d (d \u2248 0.55\u20130.65) because they have some agency but constrained exit. The academic community's d is negligible (d \u2248 0.05\u20130.15, institutional/arbitrage) \u2014 they produce the theorem but bear no political cost or benefit. The analytical observer (d \u2248 0.72) sees the full structure but risks internalizing the false summit framing.",
+    "perspectival_gap": "The incumbent coalition sees pure Rope (coordination utility: 'we all accept that no system is perfect'). The disenfranchised minority sees pure Snare (suppression: 'the theorem says reform is impossible'). The reform movement sees Scaffold with a real sunset (experiments in Maine, New Zealand, and Ireland show alternatives work; as they scale, Arrow loses suppressive force). The academic community sees itself as irrelevant (Piton \u2014 the original result is performatively cited but the field has moved to richer axiomatizations). The electoral administration institution sees Tangled Rope (coordination: running elections, extraction: locked into defending a flawed system). The civilizational analytical observer risks seeing Mountain (inevitability: 'no voting system can satisfy all axioms') but the structural data reveals this as a false summit \u2014 the axioms are chosen premises, not natural laws.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that Arrow's theorem IS a coordination mechanism (all parties can agree on its premise) AND an extraction mechanism (the incumbent coalition uses the impossibility conclusion to suppress reform). This is the canonical Tangled Rope structure: genuine coordination function co-resident with asymmetric extraction. The false summit (mountain classification from the analytical observer) is detected by the schema conditional: if claiming mountain, accessibility_collapse must \u2265 0.85, resistance \u2264 0.15, and emerges_naturally must be true. Arrow's theorem is mathematically sound but not a natural law \u2014 its five axioms are chosen premises, and the impossibility is conditional on accepting them. The accessibility_collapse of voting systems as a constraint is not \u2265 0.85 \u2014 alternatives exist and function. The resistance to alternatives is institutional inertia (0.65), not a fundamental impossibility (0.15). The false summit detection system flags this perspective as naturalization of a contingent choice."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "first_past_the_post_voting",
-      "two_party_system_dominance"
+      "first_past_the_post_lock_in",
+      "voting_system_path_dependence"
     ],
-    "dual_formulation_note": "This story models the political *use* of Arrow's Theorem, a social constraint with ε=0.55. The underlying mathematical theorem is a separate constraint, `arrows_theorem_mathematical`, which is a Mountain with ε≈0.0. The political constraint weaponizes the authority of the mathematical one."
-  }
+    "dual_formulation_note": "Arrow's Impossibility Theorem can be analyzed as two distinct constraints: (1) the mathematical theorem itself (mountain or rope, depending on whether axioms are natural laws or chosen premises), and (2) its political invocation as justification for maintaining specific voting systems (tangled rope extraction with theater). This story models the second constraint \u2014 the use of the theorem as political justification. The first constraint (the mathematics) would be a separate story decomposed by the \u03b5-invariance principle."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
 }

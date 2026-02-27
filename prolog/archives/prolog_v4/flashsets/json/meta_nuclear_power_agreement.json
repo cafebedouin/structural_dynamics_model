@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "meta_nuclear_power_agreement",
+    "version": "1.0",
+    "generated_date": "2024-05-03",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.3,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Meta's direct investment and offtake agreements for advanced nuclear power",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "meta",
+      "advanced_nuclear_developers"
+    ],
+    "victims": [
+      "traditional_utilities",
+      "renewable_energy_sector"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Meta",
+      "comment": "Meta secures a long-term, stable, and potentially carbon-neutral power supply, reducing its reliance on traditional utilities and hedging against future energy price volatility. They can potentially arbitrage by selling excess power back to the grid."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Advanced Nuclear Developers",
+      "comment": "Secures long-term funding and guaranteed revenue streams, de-risking their projects and making them more attractive to investors. Allows them to scale production and compete with established energy sources."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Traditional Utilities",
+      "comment": "Face increased competition from direct power purchase agreements, potentially losing large customers and market share. Constrained by existing infrastructure and regulatory frameworks, making it difficult to compete with the agility of direct investment deals."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Sector",
+      "comment": "The renewable energy sector faces increased competition for investment and market share, as advanced nuclear is presented as a comparably green energy source with consistent availability. Mobile in that investment can flow towards other projects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Views Meta's agreement as a tangled rope: some coordination of a novel technology with guaranteed investment. Asymmetric extraction between those who benefit from the technology and those disadvantaged by the reduction in investment for alternative green energy technologies."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Local Communities near Nuclear Sites",
+      "comment": "These communities bear the risks associated with nuclear power generation, including potential accidents and long-term waste storage. Trapped due to limited mobility and economic dependence on the energy infrastructure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_safety",
+      "question": "What are the long-term safety implications of advanced nuclear reactors?",
+      "resolution_mechanism": "Longitudinal monitoring of reactor performance, independent safety reviews, and public health studies.",
+      "impact": "If safe: supports continued investment and expansion. If unsafe: undermines public trust and leads to regulatory restrictions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the long-term safety and environmental impact of advanced nuclear technologies."
+    },
+    {
+      "id": "economic_viability",
+      "question": "Are advanced nuclear reactors economically competitive with other energy sources?",
+      "resolution_mechanism": "Cost-benefit analysis of reactor construction and operation, comparison with renewable energy and fossil fuels, and market demand analysis.",
+      "impact": "If economically viable: accelerates adoption and reduces reliance on subsidies. If not viable: limits scalability and hinders market penetration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty around the economic viability of advanced nuclear energy compared to renewable energy or traditional utilities."
+    },
+    {
+      "id": "waste_disposal_solution",
+      "question": "Will there be a permanent waste disposal solution for nuclear waste?",
+      "resolution_mechanism": "Research and development of advanced waste disposal technologies, political consensus on waste storage sites, and public acceptance of waste management practices.",
+      "impact": "If successful: alleviates environmental concerns and fosters public support. If unsuccessful: exacerbates environmental risks and hinders reactor deployment.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Uncertainty around the solution to the current nuclear waste disposal problem."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Meta, a massive energy consumer for its AI data centers, is signing direct agreements with advanced nuclear power developers (e.g., for Small Modular Reactors). This is done to secure a long-term, stable, and potentially carbon-neutral power supply, reducing its reliance on traditional utilities. This development can be viewed as a tangled rope, where Meta and advanced nuclear developers benefit while traditional utilities and renewable energy sectors potentially face disadvantages.",
+    "key_agents": [
+      "Meta: Beneficiary (institutional/arbitrage) - Secures stable power supply and energy price hedge.",
+      "Advanced Nuclear Developers: Beneficiary (institutional/arbitrage) - Secures long-term funding and revenue.",
+      "Traditional Utilities: Victim (moderate/constrained) - Face increased competition and potential market share loss.",
+      "Renewable Energy Sector: Victim (moderate/mobile) - Faces increased competition for investment.",
+      "Local Communities near Nuclear Sites: Victim (powerless/trapped) - Bear the risks associated with nuclear power generation."
+    ],
+    "logic_rationale": "Extractiveness (0.45): Meta's investment redirects capital from other energy sources, creating a moderate extraction from other energy markets and local communities. Suppression (0.30): The agreement suppresses investment and growth in the renewable energy sector and constrains traditional utilities. The theater ratio is low (0.20), indicating a genuine move towards advanced power infrastructure.",
+    "perspectival_gap": "Meta and nuclear developers see a win-win, a pure rope classification. Traditional utilities view it as a snare, as they have fewer options to change course. The renewable energy sector also views it as a tangled rope, given it may indirectly benefit from cheaper power but faces competition. From an analytical perspective, this constraint is a tangled rope, coordinating funding of novel tech but asymmetrically impacting incumbents.",
+    "directionality_logic": "Meta has arbitrage and benefits from the deal. Nuclear developers arbitrage and benefit from the deal. Traditional utilities are constrained and bear costs. Renewable energy are mobile but bear costs. Local communities are trapped and bear costs."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "renewable_energy_investment",
+      "energy_grid_stability"
+    ]
+  },
+  "directionality_overrides": []
+}

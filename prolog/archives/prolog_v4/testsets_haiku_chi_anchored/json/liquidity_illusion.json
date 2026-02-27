@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "liquidity_illusion",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "liq"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Exit Door Mirage",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "market_makers",
+      "insider_traders",
+      "exchange_operators"
+    ],
+    "victims": [
+      "retail_investors",
+      "locked_capital_holders",
+      "market_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Investor During Liquidity Crisis",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) \u2014 Believes liquidity display reflects genuine exit capacity. During normal trading, bid-ask spreads are tight and volumes appear deep. When stress hits (flash crash, forced redemptions, contagion), the exit door vanishes. Trapped with no alternative market. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.86. Pure extraction: illusion of liquidity extracts capital via lock-in."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Fund Manager",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL FUND MANAGER (TANGLED ROPE) \u2014 Coordinates portfolio rebalancing and risk management through liquid trading (genuine coordination function). Yet also experiences suppression: quarterly redemption windows, lockup periods, and hidden position constraints mean exit is constrained, not free. Liquidity illusion extracts through redemption lags. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.55. Mixed: coordination benefit + extraction cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Maker",
+      "comment": "PERSPECTIVE 3: MARKET MAKER (ROPE) \u2014 Experiences liquidity provision as pure coordination. They profit from bid-ask spreads during normal markets; the illusion is profitable precisely because it enables their arbitrage function. Can exit or shift exposure in microseconds. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary; sees constraint as enabling their market-making service."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized agents (SEC, ESMA, central banks, fintech innovators) are building circuit breakers, real-time transparency, and alternative settlement layers (blockchain, T+0) that reduce reliance on bid-ask theater. These reforms have a sunset: as transparent liquidity metrics and on-chain settlement mature, the illusion becomes structurally impossible. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.30. Low effective extraction because coalition has agency and sees an exit path (regulatory/technical maturation)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exchange Listing System",
+      "comment": "PERSPECTIVE 5: EXCHANGE LISTING SYSTEM (PITON) \u2014 Primary function (price discovery via continuous matching) has been partly displaced by dark pools, algorithmic routing, and off-exchange trading, yet exchanges maintain the theater of continuous quotes and open orderbooks. theater_ratio=0.68 satisfies piton gate. Institutional inertia: exchanges persist because regulatory mandate and habit require them, not because they are the functional hub. Beneficiaries (exchange operators, brokers) maintain the illusion through regulatory capture."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Exchange Operators and Brokers",
+      "comment": "PERSPECTIVE 6: EXCHANGE OPERATORS / BROKERS (TANGLED ROPE) \u2014 Coordinate market access and price discovery (genuine coordination function). Also extract rents through order flow sales, maker-taker fees, and privileged access to liquidity data. Constrained by regulatory requirements and competition from alternative venues. d\u22480.42, f(d)\u22480.42, \u03c3=1.2 \u2192 \u03c7\u22480.28. Moderate extraction; they see the constraint as necessary for maintaining market infrastructure credibility."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Market Microstructure View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, liquidity is inherently quantity-dependent: in stress scenarios, any finite market has a liquidity cliff because the order book has depth, not infinite supply. This perspective naturalizes liquidity illusion as an inevitable feature of finite markets. However, the structural data (\u03b5=0.52, suppression=0.65, theater=0.68) contradicts pure mountain classification \u2014 the gap between real depth and displayed depth is not an immutable law but a contingent design choice (bid/ask display rules, circuit breaker thresholds, dark pool opacity). The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "real_vs_apparent_depth",
+      "question": "What fraction of displayed liquidity is real (executable at stated price) vs apparent (phantom bids/asks, fleeting quotes)?",
+      "resolution_mechanism": "High-frequency analysis of quote lifetimes, cancellation rates, and fill success rates at claimed depths; comparison across venue (exchange vs dark pool vs OTC) and market condition (normal vs stressed)",
+      "impact": "If real depth >> apparent: liquidity is reliable (Rope/Scaffold from more perspectives). If apparent >> real: illusion is structural and severe (Snare/Piton prevalence increases).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ratio of real to apparent liquidity depth"
+    },
+    {
+      "id": "crisis_contagion_mechanism",
+      "question": "When liquidity evaporates in one asset class or venue, what structural mechanism prevents contagion to others? Is it genuine compartmentalization or illusion?",
+      "resolution_mechanism": "Analysis of correlation in bid-ask spreads, volume drying, and price impact across assets and venues during flash crashes, regulatory events, and funding shocks (2008, 2020 COVID, 2023 SVB)",
+      "impact": "If genuine compartmentalization: crises are venue-local (Rope/Scaffold logic applies). If contagion is universal: the liquidity network is illusory and interdependent (Snare logic applies across the market).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether liquidity crises are venue-local or systemic"
+    },
+    {
+      "id": "regulatory_circuit_breaker_effectiveness",
+      "question": "Do circuit breakers (trading halts, position limits, margin requirements) actually prevent liquidity evaporation or merely delay and intensify it?",
+      "resolution_mechanism": "Comparative analysis of price recovery, volatility persistence, and retail losses in markets with vs without circuit breakers; correlation of halt duration with ultimate price discovery accuracy",
+      "impact": "If effective: circuit breakers support the Scaffold perspective (temporary problem being solved). If ineffective: they are performative theater (Piton prevalence increases) and may worsen ultimate dislocation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether circuit breakers prevent or merely delay liquidity crises"
+    },
+    {
+      "id": "blockchain_settlement_scalability",
+      "question": "Can on-chain settlement (Ethereum, Solana, Bitcoin L2s) achieve settlement finality at sufficient speed and cost to eliminate liquidity illusion through transparency?",
+      "resolution_mechanism": "Measurement of block time, confirmation latency, transaction cost per settlement, and orderbook depth for DEXs (Uniswap, dYdX) vs centralized exchanges (Coinbase, Kraken) under stress conditions",
+      "impact": "If scalable: blockchain provides genuine alternative (Scaffold sunset real; transition to Rope/transparent pricing possible). If not: on-chain settlement becomes niche (illusion persists).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether blockchain settlement can replace traditional liquidity provision"
+    },
+    {
+      "id": "insider_information_extraction",
+      "question": "How much of the profitability of market makers and high-frequency traders depends on private information flow (dark pool order flow, regulatory filings before public release) vs genuine liquidity provision?",
+      "resolution_mechanism": "Analysis of trading profitability under regimes with different information access (pre-trade transparency, dark pool restrictions, delayed reporting); comparison of HFT profitability across venues with different surveillance",
+      "impact": "If information dominates: extraction is severe and structural (Snare from retail perspective confirmed). If liquidity provision dominates: Rope logic applies and extraction is justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Information advantage vs liquidity provision as driver of market maker profits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The liquidity illusion is a structural constraint where markets display continuous bid-ask quotes, tight spreads, and apparent depth during normal conditions, creating confidence that capital is easily mobilized. This apparent liquidity is real most of the time \u2014 market makers fulfill quoted prices in ordinary trading. However, the illusion reveals itself during stress: when volume concentrates on one side (forced selling, funding shock, contagion), the displayed depth evaporates and the 'exit door' locks. Retail investors and locked-in capital believe they can exit at any time based on historical experience and visible orderbooks. Exchange operators and brokers profit from the illusion by capturing spreads and order flow that would not exist if true depth were visible. Regulators and fintech innovators are building alternatives (circuit breakers, real-time transparency, blockchain settlement) that would make the illusion structurally impossible by forcing display of true constraints. This constraint demonstrates how a pure coordination mechanism (price discovery) becomes a hybrid extraction system when combined with information asymmetry, theater of liquidity, and suppression of alternative markets.",
+    "key_agents": [
+      "Retail Investors: Primary victims (powerless/trapped) \u2014 believe displayed liquidity reflects genuine exit capacity; experience catastrophic losses during stress when exit door vanishes",
+      "Locked-in Capital Holders: Primary victims (powerless/trapped) \u2014 pension funds, savings accounts, insurance reserves with redemption windows that create forced buyers/sellers during stress",
+      "Market Integrity (Epistemic Victim): Primary victim (powerless/trapped) \u2014 price discovery becomes corrupted by flash crashes and liquidity-driven dislocations; cannot exit or appeal",
+      "Market Makers and HFT: Primary beneficiaries (institutional/arbitrage) \u2014 profit from bid-ask spreads, order flow information, and the ability to withdraw supply when stress hits",
+      "Exchange Operators and Brokers: Primary beneficiaries (institutional/arbitrage) \u2014 capture transaction fees, maintain theater of continuous quotes, benefit from regulatory mandate requiring exchange listing",
+      "Regulatory Bodies (SEC, ESMA, central banks): Secondary agents (organized/constrained) \u2014 building circuit breakers and transparency mandates as sunset mechanism",
+      "Fintech/DeFi Innovators: Secondary agents (organized/constrained) \u2014 developing alternative settlement layers and transparent liquidity provision"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The illusion extracts capital through two mechanisms: (1) lock-in during stress (retail sells at worst prices, market makers capture spread). (2) Rent extraction on spreads during normal periods (justified as compensation for liquidity provision but enabled by information asymmetry). The 0.52 value reflects that extraction is real but not total \u2014 genuine liquidity provision occurs most of the time, so beneficiaries cannot extract continuously. Suppression (0.65): High. Significant barriers to true exit include: (a) regulatory mandate requiring exchange listing (alternative venues constrained by SEC approval), (b) dark pool opacity hiding true depth, (c) circuit breaker halts preventing exit during stress, (d) settlement lags (T+1 or T+2 forcing holding period), (e) informational barriers (retail cannot see institutional flows). Suppression is not total because brokers can execute off-exchange and some retail platforms offer alternatives. Theater ratio (0.68): High. The primary performance is the continuous quote display \u2014 the orderbook visible to all. This theater is performative because: (a) many visible bids/asks are phantom (cancelled within milliseconds), (b) displayed depth does not indicate execution-at-depth probability during stress, (c) circuit breakers halt trading during stress, preventing the implied exit. The theater increased over the interval (from 0.42 to 0.68) as high-frequency trading expanded, creating more ephemeral quotes and widening the gap between apparent and real depth.",
+    "perspectival_gap": "This constraint exhibits a dramatic perspectival gap between beneficiaries and victims. Retail investors and locked-in capital holders see a Snare: they believed they could exit but cannot during stress. Regulatory reformers see a Scaffold: circuit breakers, transparency requirements, and blockchain settlement are building ways to eliminate the illusion. Market makers see a Rope: they genuinely provide liquidity coordination services and profit fairly from bid-ask spreads. Exchange operators see a Piton: the exchange listing system is increasingly performative (dark pools and OTC handle more volume) yet persists through regulatory mandate. The analytical observer risks seeing a Mountain (finite markets always have liquidity cliffs) but the structural data reveals this as a false summit: the gap between real and apparent depth is not inherent but a design choice (quote display rules, dark pool opacity, circuit breaker thresholds). The perspectival gap is intentional: the beneficiaries (market makers, exchanges) maintain the illusion because transparency would collapse their profit margins.",
+    "directionality_logic": "Retail investors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Cannot exit during crisis and have no information about true depth. Maximal extraction. Locked-in capital: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. Forced sellers during stress; redemption windows create involuntary timing. Near-maximal extraction. Market makers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Can exit instantly and profit from others' forced trading. Net beneficiary. Exchange operators: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Regulatory mandate ensures their role; they profit from theater. Net beneficiary. Fund managers: Both + constrained \u2192 d\u22480.68, f(d)\u22481.05. Benefit from liquidity coordination but trapped by redemption windows and lockups. Mixed. Regulators: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Have power to reform but constrained by regulatory capture and need for market confidence. Low extraction. Market integrity: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Corrupted by flash crashes and liquidity-driven mispricings; cannot organize or exit. Maximal extraction.",
+    "mandatrophy_analysis": "RESOLVING THE EXTRACTION/COORDINATION TENSION: The liquidity illusion resolves mandatrophy by showing that a genuine coordination mechanism (price discovery through continuous matching) becomes an extraction system when combined with (a) information asymmetry, (b) theater (displayed depth \u2260 real depth), and (c) suppression (alternatives constrained by regulation or cost). The beneficiaries profit precisely because they can exit when victims cannot \u2014 the asymmetry is structural, not accidental. Regulators are not just improving a coordination system; they are reducing the extraction rent by making true constraints visible (circuit breakers force public acknowledgment of liquidity cliffs; real-time transparency reveals depth limitations; blockchain settlement removes hidden intermediaries). The Scaffold perspective is real: reforms are sunset mechanisms because they target the theater (making depth truthful), not the underlying physics (finite markets have finite liquidity). Once true constraints are visible, the illusion cannot extract anymore \u2014 victims will self-select out or demand compensation for real risk. The constraint's high theater ratio (0.68) is the smoking gun: if liquidity provision were purely coordination, there would be no need for performative quotes. The theater is the extraction mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "flash_crash_contagion",
+      "stablecoin_death_spiral",
+      "margin_call_cascade"
+    ],
+    "dual_formulation_note": "The liquidity illusion is upstream of specific crisis manifestations (flash crashes, stablecoin unravels, margin cascades). Each downstream constraint has its own \u03b5 value reflecting the severity of the specific failure mode; the liquidity illusion (\u03b5=0.52) represents the structural precondition that makes all of them possible. Reforms addressing the illusion (transparency, circuit breakers) would prevent or mitigate all downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "boundary_dissolution_risk",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Infinite Porosity Trap",
+    "topic_domain": "technological/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers",
+      "monitoring_technology_providers"
+    ],
+    "victims": [
+      "digital_workers",
+      "gig_economy_freelancers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Salaried Digital Worker",
+      "comment": "PERSPECTIVE 1: THE DIGITAL WORKER (SNARE) — Individually unable to opt-out of 'always-on' culture and monitoring without risking employment. Experiences the constraint as pure extraction of personal time and autonomy. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78. This high effective extraction, combined with high suppression, meets the Snare classification gates."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 2: THE EMPLOYER (ROPE) — Experiences the constraint as a pure coordination mechanism for managing a distributed workforce and maximizing productivity. As a primary beneficiary with arbitrage options (switching tech, accessing global labor), the effective extraction is negative. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Gig Worker",
+      "comment": "PERSPECTIVE 3: THE GIG WORKER (TANGLED ROPE) — Experiences both the coordination benefits (flexibility) and the extractive costs (platform surveillance, precariousness). Has mobility to switch platforms, but all platforms impose similar constraints. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.76. This falls within the Tangled Rope range, reflecting the hybrid nature of their experience."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy HR Department",
+      "comment": "PERSPECTIVE 4: LEGACY HR (PITON) — Tasked with implementing monitoring policies. The original function (productivity assurance) has degraded into a theatrical performance of measuring 'online presence' (keystrokes, mouse movement). The high theater_ratio (0.75) satisfies the Piton gate (≥0.70), reflecting a system maintained by institutional inertia despite its declining functional relevance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full structure: a genuine coordination function (enabling remote work) is inextricably linked to an asymmetric extraction mechanism (eroding worker autonomy and personal time). The classification reflects the hybrid nature of the constraint. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "productivity_causality",
+      "question": "Does pervasive monitoring causally increase genuine productivity, or does it primarily incentivize performative work (theatrical 'busyness')?",
+      "resolution_mechanism": "Controlled studies comparing output quality and innovation rates between monitored and non-monitored teams in creative/knowledge work domains.",
+      "impact": "If monitoring boosts only performative work, the constraint is closer to a pure Snare. If it genuinely boosts productivity, the Rope/Tangled Rope classifications are more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal link between monitoring and genuine vs. performative productivity."
+    },
+    {
+      "id": "autonomy_vs_flexibility_tradeoff",
+      "question": "Is the loss of boundary-defined autonomy an acceptable and fair trade for the gain in location and time flexibility?",
+      "resolution_mechanism": "Revealed preference surveys and labor market analysis on wage premiums/discounts for jobs with different mixes of flexibility and surveillance.",
+      "impact": "Defines whether the extraction is perceived as a cost or a price. If workers value flexibility more, the constraint functions more like a Rope. If they value autonomy more, it functions as a Snare.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Worker valuation of the tradeoff between flexibility and autonomy."
+    },
+    {
+      "id": "normalization_threshold",
+      "question": "At what point does this technologically-mediated practice become an irreversible social norm, effectively a cultural 'Mountain'?",
+      "resolution_mechanism": "Longitudinal analysis of 'right to disconnect' legislation success/failure and shifts in management theory and labor contracts over a generational timescale.",
+      "impact": "If the practice becomes fully normalized, exit options collapse and suppression approaches 1.0, potentially transforming the constraint into a Mountain from most non-analytical perspectives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Threshold at which boundary dissolution becomes a fixed social norm."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2023,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2023,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 2008,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "The 'Infinite Porosity Trap' describes the erosion of boundaries between professional and private life, driven by pervasive digital connectivity and workplace monitoring. While enabling flexible and remote work, this dissolution creates a structure that extracts uncompensated time, attention, and data from workers, while suppressing their ability to disconnect. The constraint is not a simple top-down imposition but a complex system with genuine coordination functions intertwined with extractive mechanisms.",
+    "key_agents": [
+      "Digital Workers: Primary victims (powerless/trapped) — bear the costs of eroded boundaries, including burnout and loss of autonomy.",
+      "Employers: Primary beneficiaries (institutional/arbitrage) — gain perceived productivity, operational control, and flexibility from a distributed workforce.",
+      "Monitoring Technology Providers: Secondary beneficiaries (institutional/arbitrage) — profit from the sale of surveillance and productivity management tools.",
+      "Legacy HR Departments: Institutional actors (institutional/constrained) — implement monitoring policies, often resulting in performative compliance rather than functional productivity gains.",
+      "Gig Economy Freelancers: Secondary victims (moderate/mobile) — experience an extreme version of the trap, trading precarity for flexibility under constant platform surveillance."
+    ],
+    "logic_rationale": "Extractiveness (0.55): High. Represents the value of uncompensated 'on-call' time, mental availability outside of work hours, and the productivity data extracted from workers. Suppression (0.65): High. Opting out of the 'always-on' culture or refusing monitoring is often career-limiting or impossible, effectively removing alternatives. Theater Ratio (0.75): Very High. Monitoring often incentivizes performative 'busyness' (e.g., mouse jiggling) over actual productive work, meaning a large portion of the activity is for show, satisfying the Piton classification for the HR perspective.",
+    "perspectival_gap": "The gap is stark. Employers view the system as a Rope, a tool for coordinating work. For the individual worker, who cannot escape the expectation of constant availability, it is a Snare, extracting their personal life. HR departments, caught in the middle, see a Piton—a degraded ritual of productivity theater. The analytical view recognizes both the coordination and extraction elements, classifying it as a Tangled Rope. This diversity of classification from a single set of metrics is a hallmark of a complex, socially embedded constraint.",
+    "directionality_logic": "Directionality is derived from structural position. Employers and tech providers are declared beneficiaries with arbitrage exit, yielding a low 'd' value and a negative effective extraction (χ), hence the Rope classification. Workers are victims with trapped or mobile exit options, yielding a high 'd' and a high positive χ, leading to Snare or Tangled Rope classifications. This demonstrates how the χ formula correctly maps structural relationships to perspectival classifications.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by correctly identifying the dual nature of the system. A naive analysis might label it a pure Snare (focusing only on the worker's experience) or a pure Rope (focusing only on the employer's claims). The Deferential Realism framework, by using indexical classification, shows that both are valid perspectives. The analytical classification of Tangled Rope correctly captures the core truth: a genuine coordination function has been coupled with a powerful, asymmetric extraction mechanism. It is the entanglement of the two that makes the constraint so stable and difficult to reform."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "mental_health_outcomes_knowledge_work",
+      "future_of_labor_organizing"
+    ]
+  }
+}

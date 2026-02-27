@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "bangladesh_july_national_charter",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The July National Charter Referendum",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "muhammad_yunus_led_interim_government",
+      "pro_reform_civil_society_groups"
+    ],
+    "victims": [
+      "opposition_political_parties",
+      "general_electorate"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The General Electorate",
+      "comment": "PERSPECTIVE 1: GENERAL ELECTORATE (SNARE) - Faced with a binary choice on a complex set of reforms, and potentially pressured by the interim government's influence. Limited exit options due to the significance of the referendum and potential consequences. High suppression as the electorate's nuanced views are forced into a simple yes/no decision."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Opposition Political Parties",
+      "comment": "PERSPECTIVE 2: OPPOSITION POLITICAL PARTIES (TANGLED ROPE) - While opposing the reforms, they are constrained by the interim government's control and the potential backlash from opposing popular reforms. They benefit from increased visibility by taking a stand but also face suppression due to government control over media and potential legal repercussions. Extraction arises from curtailed political freedoms and limited campaigning abilities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Muhammad Yunus-led Interim Government",
+      "comment": "PERSPECTIVE 3: MUHAMMAD YUNUS-LED INTERIM GOVERNMENT (ROPE) - Benefits from the increased power and legitimacy gained if the reforms are approved. They see it as a means of implementing positive change. The referendum facilitates coordination between the government and the populace, enabling them to move forward with a clear mandate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Pro-Reform Civil Society Groups",
+      "comment": "PERSPECTIVE 4: PRO-REFORM CIVIL SOCIETY GROUPS (TANGLED ROPE) - Support the reforms and actively campaign for them. They benefit from increased visibility and influence if the reforms are passed, but are also subject to some suppression from dissenting groups. They have a mobile exit option by redirecting their support elsewhere if the referendum fails. A genuine coordination function is present because civil society's buy-in will be needed to implement the Charter."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) - Sees the referendum as a complex situation with both coordination and extraction elements. The long-term impact on democracy and governance is uncertain, with potential benefits and risks depending on the specific reforms and how they are implemented."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_of_interim_government",
+      "question": "How legitimate is the interim government's mandate to implement sweeping constitutional reforms via referendum, especially so close to a general election?",
+      "resolution_mechanism": "Public opinion polls, expert legal analysis, post-referendum assessments of democratic processes.",
+      "impact": "If mandate is weak: referendum seen as illegitimate power grab (more Snare-like). If mandate is strong: referendum seen as legitimate reform effort (more Rope-like).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy of the interim government's mandate."
+    },
+    {
+      "id": "reform_complexity_clarity",
+      "question": "How well do the 80 constitutional reforms (the full 'bundle') lend themselves to a simple binary 'Yes/No' vote?",
+      "resolution_mechanism": "Analysis of the reforms themselves, public understanding assessments, expert legal commentary.",
+      "impact": "If reforms are simple & clear: referendum is a fair decision. If reforms are complex: referendum is a misleading simplification (more Snare-like).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Clarity of individual impacts of 80-part package."
+    },
+    {
+      "id": "potential_for_coercion",
+      "question": "To what extent were the general electorate able to vote freely, without undue external influence, persuasion, or threat?",
+      "resolution_mechanism": "Election monitoring reports, post-referendum surveys, legal challenges to the vote.",
+      "impact": "If vote was free: democratic choice is affirmed. If vote was coerced: referendum lacks democratic legitimacy (more Snare-like).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Potential for coercion in election."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The July National Charter Referendum, a bundle of 80 constitutional reforms proposed by the Muhammad Yunus-led interim government, was presented as a binary 'Yes/No' referendum alongside the February 12, 2026, general elections. This constraint story examines the structural dynamics of this event, classifying its impact on different agents and identifying potential for both coordination and extraction.",
+    "key_agents": [
+      "Muhammad Yunus-led Interim Government: Primary beneficiary (institutional/arbitrage)",
+      "Opposition Political Parties: Target (moderate/constrained)",
+      "General Electorate: Target (powerless/trapped)",
+      "Pro-Reform Civil Society Groups: Beneficiary (organized/mobile)"
+    ],
+    "logic_rationale": "Extractiveness: 0.55 - The referendum extracts consent from the general electorate, forcing them to accept or reject the entire package of 80 reforms. It also extracts political freedom from opposition parties, limiting their ability to campaign. Suppression: 0.65 - The binary choice suppresses alternative viewpoints and nuances within the electorate and political parties. The government's influence and control over media also contribute to suppression. Theater Ratio: 0.40 - The referendum serves a performative function, demonstrating public support for the government and its reform agenda. However, the underlying complexity of the reforms suggests this function is higher, and there is genuine effort to implement positive changes through genuine coordination. The complexity causes the ratio to be lower.",
+    "perspectival_gap": "The general electorate, particularly those with nuanced views or limited access to information, experiences the referendum as a snare. Opposition parties see it as a tangled rope, balancing opportunities for increased visibility with the constraints imposed by the interim government. The interim government views the referendum as a rope, a tool for coordinating action and legitimizing their authority. Pro-Reform Civil Society Groups see the situation also as a tangled rope, as their actions are helpful but may also lead to some forms of suppression. The analytical observer recognizes the combination of coordination and extraction, highlighting the trade-offs and potential unintended consequences of the process.",
+    "directionality_logic": "The interim government benefits from increased power and legitimacy if the referendum passes, placing them in a beneficiary position. The opposition parties and general electorate face extraction in the form of limited political freedom and a forced choice. The specific design of the reforms may further extract from specific groups, depending on who benefits from specific portions of the package. The calculation for directionality appropriately adjusts for these variables. The government benefits, while some face limited freedom to campaign. This is weighed and factored into the logic for the overall rating.",
+    "mandatrophy_analysis": "The referendum is not purely extractive because it includes elements of coordination and public choice. Distinguishing it from a pure extraction snare requires consideration of the reforms' content, the government's intentions, and the level of public understanding and free choice involved. The mandatrophy is handled by classifying the perspectives to highlight the variety of experiences. The perspective of the electorate helps emphasize the potential for the 'snare' type situation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -2,23 +2,26 @@
   "header": {
     "constraint_id": "bip_narrative_illusion",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bip"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.72,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
     "human_readable": "The Black Iron Prison (BIP) and Sensory Optimization",
     "topic_domain": "philosophical/social/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "the_empire_institutional_power"
+      "institutional_power_structures",
+      "corporate_narrative_apparatus"
     ],
     "victims": [
-      "unawakened_individuals",
-      "human_autonomy"
+      "individual_epistemic_autonomy",
+      "genuine_subjective_experience",
+      "countercultural_alternatives"
     ]
   },
   "perspectives": [
@@ -28,44 +31,35 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Unawakened Individual",
-      "comment": "PERSPECTIVE 1: THE UNWAKENED INDIVIDUAL (SNARE) — Trapped within a reality constructed by sensory optimization and media narratives. Lacks awareness of the prison's existence, making exit impossible. Their attention, economic output, and compliance are extracted to power the system. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11. This high χ value firmly classifies the experience as a Snare."
+      "label": "The Imprisoned Consciousness",
+      "comment": "PERSPECTIVE 1: IMPRISONED CONSCIOUSNESS (SNARE) \u2014 Individual agents perceive the world through sensory optimization systems they cannot exit or modify. Corporate and institutional narrative apparatus constructs the 'reality tunnel' within which subjective experience occurs. Maximum extraction: the trapped consciousness funds, sustains, and validates the system that constrains it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Skeptical Subculture",
+      "comment": "PERSPECTIVE 2: SKEPTICAL SUBCULTURE (TANGLED ROPE) \u2014 Countercultural agents (mystics, artists, dissidents) recognize the BIP narrative but remain materially embedded in it. They benefit from distributed communication networks and niche communities while bearing costs of marginalization and resource deprivation. Neither full extraction nor clean escape \u2014 hybrid constraint."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Empire's Architects",
-      "comment": "PERSPECTIVE 2: THE EMPIRE'S ARCHITECTS (ROPE) — The institutional powers that benefit from the BIP see it as a necessary system for social coordination and economic stability. Sensory optimization is merely a tool for managing consumer demand and ensuring social cohesion. From this vantage point, extraction is invisible, perceived only as efficient system management. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. A net beneficiary."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer (Gnostic)",
-      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — This observer (e.g., a philosopher like Philip K. Dick) recognizes both the coordination function (society requires structure) and the severe, asymmetric extraction. The system is a hybrid: it provides order but at the cost of authentic reality and individual sovereignty. This is the default analytical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Utopian Technologist",
-      "comment": "PERSPECTIVE 4: THE UTOPIAN TECHNOLOGIST (SCAFFOLD) — Believes that current control systems, including sensory optimization, are temporary scaffolds necessary to guide humanity towards a more advanced, liberated state. They see a sunset clause where technology eventually transcends its control function to enable true human flourishing. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.49. The classification is Scaffold due to the perceived sunset clause, despite the high chi."
+      "label": "The Narrative Apparatus",
+      "comment": "PERSPECTIVE 3: NARRATIVE APPARATUS (ROPE) \u2014 Institutional and corporate actors experience the BIP constraint as coordination infrastructure. Media systems, advertising networks, recommendation algorithms, and narrative frameworks coordinate attention flows and stabilize consumer behavior. Low experience of extraction because these institutions designed and benefit from the system."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Mid-Level Bureaucrat",
-      "comment": "PERSPECTIVE 5: THE MID-LEVEL BUREAUCRAT (PITON) — An agent within the system who perpetuates its rules not out of malice, but inertia. They experience the system's functions as largely performative rituals (e.g., quarterly reports, compliance checks) detached from any real purpose, yet the rules must be followed. The high theater_ratio (0.72) triggers the Piton classification, reflecting a system running on degraded, inertial logic."
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Philosophical Observer",
+      "comment": "PERSPECTIVE 4: PHILOSOPHICAL OBSERVER (PITON) \u2014 From a civilizational perspective, the BIP narrative exhibits high theater (0.68): mystical language about 'Black Iron' and 'Empire' performs explanatory work while remaining empirically underdetermined. The framing naturalizes institutional power as cosmic inevitability. Theater persists through institutional inertia and narrative appeal, not through demonstrated functional necessity."
     },
     {
       "classification_type": "mountain",
@@ -73,97 +67,114 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Social Determinist",
-      "comment": "PERSPECTIVE 6: THE SOCIAL DETERMINIST (MOUNTAIN) — Argues that a 'Black Iron Prison' is an inevitable, emergent property of any large-scale technological society. It is a natural law of social physics, not a contingent creation. This perspective naturalizes the constraint, rendering it immutable. The engine will flag this as a false summit, as the high ε and suppression values are inconsistent with a true Mountain."
+      "label": "The Structural Limits View",
+      "comment": "PERSPECTIVE 5: STRUCTURAL LIMITS VIEW (MOUNTAIN) \u2014 From the analytical/universal perspective, any system of distributed consciousness faces fundamental verification bottlenecks: subjective experience cannot be directly observed by external agents; narrative frameworks are unavoidable mediation layers; sensory optimization is intrinsic to how information systems work. This perspective risks falsely naturalizing contingent institutional arrangements as invariant structural features of consciousness itself."
     }
   ],
   "omegas": [
     {
-      "id": "agency_vs_emergence",
-      "question": "Is the Black Iron Prison a consciously designed system by 'The Empire' or an agentless, emergent phenomenon of complex systems?",
-      "resolution_mechanism": "Tracing decision-making chains within key institutions (corporate, state) to identify intent versus path-dependency and unintended consequences.",
-      "impact": "If consciously designed, it reinforces the Snare classification for victims. If emergent, it strengthens the Piton and Tangled Rope classifications, pointing to systemic dysfunction rather than directed malice.",
+      "id": "narrative_vs_structural_extraction",
+      "question": "Is the BIP constraint primarily a narrative/epistemological illusion (false consciousness) or a structural/institutional extraction mechanism (real material asymmetry)?",
+      "resolution_mechanism": "Comparative analysis of material outcomes for agents who reject vs accept BIP framing; measurement of resource flows and decision-making power between institutional actors and individual agents; empirical testing of whether alternative narrative frameworks produce different outcomes",
+      "impact": "If primarily narrative: constraint is partially self-sustaining through belief \u2014 reclassification possible via epistemological shift. If primarily structural: constraint is real regardless of narrative framing \u2014 exit requires material reorganization.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Distinguishing between conscious design and emergent properties of the BIP."
+      "description": "Whether BIP is a narrative illusion or structural extraction mechanism"
     },
     {
-      "id": "technological_determinism",
-      "question": "Will advanced technologies like AI and neuro-interfaces inevitably reinforce the prison, or can they be used as tools for 'gnosis' and liberation?",
-      "resolution_mechanism": "Empirical analysis of the centralizing vs. decentralizing effects of new technologies as they are deployed.",
-      "impact": "If they reinforce control, the Scaffold perspective is invalidated. If they enable liberation, the system's suppression score would decrease over time, potentially transforming it into a true Scaffold.",
+      "id": "sensory_optimization_necessity",
+      "question": "Can distributed consciousness operate without some form of sensory optimization and narrative mediation, or is the optimization layer an artifact of specific institutional choices?",
+      "resolution_mechanism": "Historical analysis of pre-industrial narrative systems and attention flows; experimental design of alternative coordination mechanisms with different optimization priorities; comparison of consciousness states across cultures with radically different sensory optimization frameworks",
+      "impact": "If optimization is structurally necessary: BIP is closer to Mountain \u2014 inevitable constraint on consciousness. If contingent: BIP is structurally a Snare of specific institutional choices.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether technology is a tool for liberation or control."
+      "description": "Whether sensory optimization is intrinsic to consciousness or institutionally contingent"
     },
     {
-      "id": "existence_of_exterior",
-      "question": "Is there a coherent, accessible 'true reality' outside the constructed reality of the BIP?",
-      "resolution_mechanism": "This is a metaphysical question, unresolvable by empirical means. It can only be explored via philosophical argument and phenomenological reports.",
-      "impact": "If no exterior exists, the BIP is functionally a Mountain—an inescapable condition of existence. If an exterior exists, then classifications like Snare and Tangled Rope, which imply a loss of something real, are valid.",
+      "id": "empire_vs_polycentric_power",
+      "question": "Is institutional power organized as a unified 'Empire' (singular control) or as polycentric overlapping hierarchies without central controller?",
+      "resolution_mechanism": "Network analysis of institutional decision-making; identification of unified command structures vs distributed coordination failures; testing whether 'Empire' is explanatory or metaphorical",
+      "impact": "If unified: BIP framing is structurally accurate; single extraction mechanism. If polycentric: BIP narrative oversimplifies; multiple intersecting Snares and Tangled Ropes, not singular Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional power is unified Empire or polycentric structure"
+    },
+    {
+      "id": "exit_mechanism_viability",
+      "question": "Do genuine exit mechanisms exist from the BIP constraint (alternative consciousness states, countercultural networks, mystical practices), or are all apparent exits merely repositioning within the same constraint?",
+      "resolution_mechanism": "Longitudinal tracking of agents claiming successful BIP exit; measurement of whether alternative frameworks produce materially different outcomes; analysis of whether countercultural movement is structurally independent or parasitic on mainstream systems",
+      "impact": "If viable exits exist: constraint is closer to Tangled Rope from subculture perspective \u2014 real alternatives available. If exits are illusions: constraint is closer to pure Snare \u2014 all apparent alternatives are narrative repositioning.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "The metaphysical status of a 'true reality' outside the BIP."
+      "type_class": "empirical",
+      "description": "Whether genuine exits from BIP narrative exist"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2002,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.65
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.3
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2002,
+      "time_point": 5,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.72
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 1980,
-    "end": 2024
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint models the 'Black Iron Prison' (BIP), a concept from Philip K. Dick's gnostic philosophy, as a system of social control. The BIP is a perceived false reality constructed by institutional powers ('The Empire') to keep individuals subordinate. In this model, modern sensory optimization—through targeted advertising, algorithmic media feeds, and curated consumer experiences—serves as the primary mechanism for building and maintaining the prison walls. The constraint is not a physical prison but a psychic and social one that operates by shaping perception to foreclose alternatives to the dominant system.",
+    "narrative_context": "The Black Iron Prison (BIP) narrative frames the modern world as a totalizing system created by corporate and institutional power that maintains human subordination through sensory optimization and narrative framing. The constraint operates across technological, social, and philosophical domains: advertising systems, algorithmic content curation, institutional mythology, and the structure of human perception itself all function as components of a unified extraction mechanism. From the perspective of an individual consciousness embedded in this system, exit appears impossible \u2014 the 'reality tunnel' through which subjective experience is filtered is constructed and maintained by Empire. From the perspective of the institutional apparatus, the BIP functions as a coordination mechanism that stabilizes attention flows, consumer behavior, and social legitimacy. The constraint exhibits high theater (0.68) \u2014 the BIP narrative performs explanatory and motivational work while remaining epistemically underdetermined. The core ambiguity is whether the BIP is primarily a narrative illusion (false consciousness that dissolves upon proper interpretation) or a structural reality (institutional extraction that requires material reorganization to escape).",
     "key_agents": [
-      "The Empire's Architects: Primary beneficiary (institutional/arbitrage) — Corporate and state powers that design and profit from the system of control.",
-      "Unawakened Individuals: Primary victim (powerless/trapped) — The general populace, whose perception is managed and whose autonomy is extracted.",
-      "The Gnostic/Resistor: Secondary victim (moderate/constrained) — Individuals aware of the prison who struggle against its influence.",
-      "The Utopian Technologist: Organized agent (organized/mobile) — Believes technology is a temporary means to a better end, viewing the control system as a scaffold.",
-      "The Analytical Observer: Observer (analytical/analytical) — Describes the system's structure, risking either accurate classification (Tangled Rope) or naturalizing it (Mountain)."
+      "Individual Consciousness: Primary victim (powerless/trapped) \u2014 embedded in sensory optimization systems, perceives world through institutional narrative frameworks with no exit",
+      "Corporate Narrative Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 advertising networks, media systems, recommendation algorithms coordinate attention and sustain extraction",
+      "Institutional Power Structures: Secondary beneficiary (institutional/arbitrage) \u2014 government, bureaucracy, educational systems maintain legitimacy through BIP mythology",
+      "Countercultural Subcultures: Victims and partial beneficiaries (moderate/constrained) \u2014 recognize BIP constraint but remain materially embedded; benefit from distributed niche networks",
+      "Philosophical/Mystical Traditions: Secondary victims (moderate/mobile) \u2014 offer alternative frameworks but operate in margins of institutional system",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees systemic constraint but risks naturalizing contingent institutional arrangements as inevitable"
     ],
-    "logic_rationale": "Extractiveness (0.65) is high, representing the immense value (attention, data, economic activity, political compliance) extracted from the populace. Suppression (0.75) is also high, as the system actively marginalizes or co-opts dissenting narratives and alternative lifestyles, making escape or rebellion seem impossible or irrational. Theater Ratio (0.72) is high because the system's primary mechanism of control is the performance of freedom and choice (e.g., consumer choice, electoral politics) that masks an underlying lack of structural agency.",
-    "perspectival_gap": "This constraint is a diagnostic exemplar, demonstrating how a single set of structural properties can generate all six classifications. For the trapped victim, it is a Snare. For the beneficiary, it is a Rope for social coordination. For the aware resistor, it is a Tangled Rope of control and function. For the optimistic builder, it is a temporary Scaffold. For the inertial bureaucrat, it is a degraded Piton. For the determinist philosopher, it is an inescapable Mountain. The perspectival gap is total, spanning the entire classification system.",
-    "directionality_logic": "Beneficiaries ('The Empire') have arbitrage exit options and a low derived directionality (d), resulting in a negative effective extraction (χ) and a Rope classification. Victims ('Unawakened Individuals') are trapped with no exit, leading to a high d, a high f(d) multiplier, and a χ value that crosses the Snare threshold. Other agents fall in between, with their power, exit options, and structural relationship determining their d value and thus their perspectival classification.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by showing that the question 'Which type is it?' is ill-posed. The constraint's identity is the complete set of all perspectival classifications derived from its fixed base properties. The system is simultaneously a Rope to its creators and a Snare to its captives. Deferential Realism's power lies in holding these contradictory but structurally valid truths within a single analytical framework, preventing the collapse into a single, privileged description."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The BIP constraint extracts from individual consciousness through continuous attention capture, behavioral conditioning, and narrative colonization of subjective experience. The extraction is not absolute (some consciousness remains, some resistance emerges) but substantial \u2014 individuals fund and validate systems that constrain them. Suppression (0.72): High. Multiple suppression mechanisms operate: technological (algorithmic filtering, notification systems), institutional (media gatekeeping, credential systems), psychological (narrative framing that naturalizes subordination), and epistemological (difficulty accessing alternative worldviews). The suppression is not total but formidable. Theater ratio (0.68): High. The BIP narrative performs significant explanatory work \u2014 it accounts for perceived unfairness, powerlessness, and alienation in modern life. But it also obscures the mechanisms through which it operates and risks naturalizing institutional power as cosmic inevitability. The gap between the narrative's explanatory appeal and its empirical precision is substantial.",
+    "perspectival_gap": "The imprisoned consciousness experiences the BIP as an inescapable Snare \u2014 sensory optimization shapes perception, narrative frameworks limit possibilities, exit appears impossible. The institutional apparatus experiences the same constraint as a Rope \u2014 coordination of attention and behavior produces stable systems that serve institutional interests. The skeptical subculture experiences a Tangled Rope \u2014 they perceive the constraint but remain dependent on institutional infrastructure; resistance and benefit are mixed. The philosophical observer recognizes high theater and risks naturalizing the BIP as a Mountain \u2014 an inevitable feature of consciousness itself. The structural limits view (analytical/universal) must wrestle with whether verification bottlenecks in consciousness research justify the mountain classification or whether they simply reflect current methodological limitations.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position relative to the extraction flow. Individual consciousness: high d (0.90+) due to trapped exit status and victim position \u2014 full target of extraction. Institutional apparatus: low d (0.10-0.20) due to arbitrage exit and beneficiary position \u2014 benefits from the system. Countercultural subcultures: moderate d (0.55-0.65) due to constrained exit and mixed victim/beneficiary status \u2014 neither fully target nor fully beneficiary. The analytical observer at civilizational scope: moderate-high d (0.72) as analytical observer \u2014 sees systemic structure but doesn't occupy structural position within it. The derived f(d) values feed into the chi calculation: high-d agents experience larger effective extraction; low-d agents experience smaller (or negative) effective extraction.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION STRATEGY: The BIP constraint avoids the mandatrophy (false labeling of coordination as extraction or vice versa) through its perspectival structure. From the trapped individual's view, it is genuinely a Snare (extraction dominates). From the institutional view, it is genuinely a Rope (coordination function is primary). These are not contradictory \u2014 they are incompatible measurements from incompatible structural positions. The mandatrophy is resolved by recognizing that no single type caption is correct; the presheaf of perspectives IS the answer. The false summit risk (mountain classification) is addressed by the analytical observer's perspective: the claim that BIP is inevitable/natural is deconstructed as a naturalization of contingent institutional arrangements. The high theater ratio (0.68) detects the performative excess in BIP narrativization \u2014 the explanatory apparatus exceeds what empirical evidence supports."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "social_media_addiction",
-      "consumer_debt_trap",
-      "narrative_collapse_disorder"
-    ]
-  }
+      "algorithmic_attention_capture",
+      "narrative_mythology_enforcement",
+      "sensory_substitution_dependency"
+    ],
+    "dual_formulation_note": "BIP constraint decomposes into three structurally distinct sub-constraints: (1) algorithmic attention capture (technical/economic extractiveness), (2) institutional narrative mythology (social/epistemological extractiveness), (3) sensory optimization dependency (cognitive/existential extractiveness). Each has different \u03b5 values and different materialization pathways. The unified 'Black Iron Prison' narrative conflates these three constraints into a single explanatory frame \u2014 this conflation is itself part of the theater mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.6
+    }
+  ]
 }

@@ -2,25 +2,27 @@
   "header": {
     "constraint_id": "asean_ceasefire_2011",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "asean"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
     "human_readable": "2011 ASEAN-mediated Thai-Cambodian Ceasefire Agreement",
     "topic_domain": "geopolitical",
     "requires_active_enforcement": true,
-    "has_sunset_clause": true,
     "beneficiaries": [
-      "asean_diplomatic_corps",
-      "incumbent_political_elites"
+      "asean_institutional_credibility",
+      "thai_government_stability",
+      "cambodian_government_legitimacy"
     ],
     "victims": [
-      "displaced_border_civilians",
-      "frontline_soldiers"
+      "civilian_border_populations",
+      "independent_verification_capacity",
+      "dispute_resolution_finality"
     ]
   },
   "perspectives": [
@@ -29,9 +31,27 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "regional",
-      "label": "The Displaced Border Civilian",
-      "comment": "PERSPECTIVE 1: DISPLACED CIVILIAN (SNARE) — For those living in the conflict zone, the ceasefire is a failed promise that does not provide lasting security. They are trapped by geography and bear the full cost of the agreement's collapse (death, injury, displacement) with no recourse. The agreement functions as a pure extraction of their safety and stability. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.70."
+      "spatial_scope": "local",
+      "label": "The Border Civilian Population",
+      "comment": "PERSPECTIVE 1: BORDER CIVILIAN POPULATION (SNARE) \u2014 Trapped between Thai and Cambodian military forces with no exit option and no agency in ceasefire negotiation. Ceasefires are imposed upon them; compliance is coerced through fear of military action. They bear the full suppression cost (shelter restrictions, movement barriers, economic disruption) while extraction is captured by military commands securing territorial claims."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Thai Military Command",
+      "comment": "PERSPECTIVE 2: THAI MILITARY COMMAND (TANGLED ROPE) \u2014 Benefits from ceasefire as coordination mechanism (prevents escalation, enables strategic repositioning, secures Preah Vihear territorial claims against Cambodia). Also bears extraction costs through ASEAN mediation constraints and international pressure to maintain restraint. Active enforcement required to prevent unilateral escalation; constrained exit (cannot unilaterally withdraw without regional isolation). Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Cambodian Military Command",
+      "comment": "PERSPECTIVE 3: CAMBODIAN MILITARY COMMAND (TANGLED ROPE) \u2014 Mirrors Thai position. Benefits from ceasefire coordination (prevents catastrophic escalation against larger Thai military). Also constrained by ASEAN mediation and international oversight. Extraction arises from Thai military advantage in conventional capability \u2014 ceasefire asymmetrically favors Thai strategic position while constraining Cambodian escalation options. Active enforcement required."
     },
     {
       "classification_type": "rope",
@@ -39,112 +59,142 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "regional",
-      "label": "The ASEAN Mediator",
-      "comment": "PERSPECTIVE 2: ASEAN MEDIATOR (ROPE) — From the perspective of the ASEAN diplomatic corps (led by Indonesia), the agreement is a pure coordination success. It halted a hot war between member states, affirmed ASEAN's role as a regional peacemaker, and enhanced its international prestige. The costs are externalized. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.06."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The State Actor (Thailand/Cambodia)",
-      "comment": "PERSPECTIVE 3: STATE ACTOR (TANGLED ROPE) — For the governments of Thailand and Cambodia, the agreement is a hybrid. It provides a genuine coordination benefit (de-escalation, avoiding further military/political costs) but also imposes significant extraction (accepting foreign observers, ceding some sovereignty, managing domestic nationalist backlash). They are constrained by international pressure and the lack of better alternatives. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.61."
+      "label": "ASEAN Institutional Framework",
+      "comment": "PERSPECTIVE 4: ASEAN INSTITUTIONAL FRAMEWORK (ROPE) \u2014 Primary beneficiary. Ceasefire agreement demonstrates ASEAN's conflict resolution capacity and legitimacy in regional disputes (ASEAN Way coordination mechanism). Arbitrage exit available: ASEAN can claim success and move to other regional issues; the agreement vindicates ASEAN's non-interference + mediation doctrine. No significant extraction from ASEAN's perspective \u2014 the coordination function is primary."
     },
     {
       "classification_type": "scaffold",
-      "agent_power": "organized",
+      "agent_power": "powerful",
       "time_horizon": "biographical",
       "exit_options": "mobile",
-      "spatial_scope": "regional",
-      "label": "The Optimistic Diplomat",
-      "comment": "PERSPECTIVE 4: OPTIMISTIC DIPLOMAT (SCAFFOLD) — This perspective sees the ceasefire not as an end but as a temporary support structure. Its purpose is to create stability for a permanent resolution (e.g., via the ICJ). The implicit sunset clause is the final border demarcation, which would render the ceasefire obsolete. From this view, it's a necessary, temporary coordination tool. d≈0.15, f(d)≈-0.01, σ=0.9 → χ≈-0.005."
+      "spatial_scope": "global",
+      "label": "International Mediation Partners",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL MEDIATION PARTNERS (SCAFFOLD) \u2014 UN, ICJ, and bilateral partners view the ceasefire as temporary scaffolding pending resolution of the underlying Preah Vihear temple dispute through ICJ adjudication. Theater ratio reflects performative elements of ASEAN-brokered agreements that historically lack enforcement mechanisms. Mobile exit available: international actors can escalate through ICJ or disengage if ceasefire breaks down. Sunset clause implicit: ICJ ruling on maritime boundary disputes (2013 phase 1, ongoing phases) will eventually replace the ceasefire."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Regional Diplomatic Ritual",
+      "comment": "PERSPECTIVE 6: REGIONAL DIPLOMATIC RITUAL (PITON) \u2014 The ceasefire perpetuates the performative structure of Thai-Cambodian diplomacy: periodic ceasefires, ASEAN mediation, token enforcement mechanisms, and persistent underlying territorial disputes. Theater ratio 0.65 reflects that the ceasefire is largely theatrical \u2014 armed clashes resume repeatedly (2011, 2013, 2014 resurgences), the underlying Preah Vihear claim remains unresolved, and ASEAN enforcement capacity is minimal. The ritual persists through institutional inertia (ASEAN's mediation role generates political utility even when agreements fail) rather than functional dispute resolution."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes both the coordination function and the severe extractive costs. The high theater ratio (0.75) indicates its performative nature, while the high base extractiveness (0.55) and suppression (0.65) confirm its coercive and costly structure for those trapped within it. This matches the system's claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Historical Inevitability View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / HISTORICAL INEVITABILITY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the Preah Vihear territorial dispute is an irreducible legacy of 19th-century French colonial boundary demarcation errors and Thai-Cambodian national interests, making occasional violence and periodic ceasefires inevitable features of the regional system. This perspective risks naturalizing what is actually a contingent institutional failure (inability to enforce ICJ rulings and implement binding dispute resolution)."
     }
   ],
   "omegas": [
     {
-      "id": "mediator_intent_vs_outcome",
-      "question": "Was the agreement's primary function genuine conflict resolution or a performative act to enhance ASEAN's institutional prestige?",
-      "resolution_mechanism": "Analysis of internal ASEAN communications and diplomatic memoirs from the period to distinguish stated goals from revealed preferences.",
-      "impact": "If intent was prestige, it confirms the high theater and extractive nature (Tangled Rope/Snare). If intent was genuine resolution, it was a well-intentioned but failed Scaffold.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Distinguishing between genuine resolution intent and institutional prestige-seeking in ASEAN's mediation."
-    },
-    {
-      "id": "domestic_nationalist_capture",
-      "question": "To what extent were the Thai and Cambodian governments constrained by domestic nationalist factions, making a permanent resolution politically impossible?",
-      "resolution_mechanism": "Comparative political analysis of the influence of nationalist groups on government policy in both nations during 2011-2013.",
-      "impact": "High nationalist capture implies the conflict was a Mountain of domestic politics, making the ceasefire merely theater. Low capture suggests the failure was in the diplomatic instrument itself.",
+      "id": "asean_enforcement_capacity",
+      "question": "Does ASEAN possess genuine enforcement capacity to prevent bilateral escalation, or are ceasefires conditional solely on the bilateral parties' calculations of cost-benefit?",
+      "resolution_mechanism": "Comparative analysis of ASEAN-brokered ceasefires that held vs. those that failed; examination of whether enforcement actions were ever invoked or merely threatened",
+      "impact": "If genuine capacity: ceasefire is Tangled Rope (coordination with enforcement overlay). If illusory: ceasefire is Piton (theatrical agreement with minimal functional constraint). Evidence suggests illusory \u2014 ASEAN has never invoked sanctions against Thai or Cambodian escalation despite 2013, 2014 resurgences.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Assessing the degree of state capture by domestic nationalist factions."
+      "description": "Whether ASEAN has real enforcement capacity or merely coordination theater"
+    },
+    {
+      "id": "icj_preah_vihear_finality",
+      "question": "Will ICJ rulings on the Preah Vihear maritime boundary eventually resolve the underlying dispute, or will territorial claims persist as permanent sources of friction?",
+      "resolution_mechanism": "Historical pattern analysis of ICJ territorial rulings; evidence of whether losing parties accept adverse rulings; implementation timeline for phased ICJ phases on maritime boundaries",
+      "impact": "If ICJ finality is achieved: ceasefire transitions to scaffolding (sunset via adjudication). If ICJ fails: ceasefire remains permanent piton (theatrical perpetuation). Current trajectory suggests ICJ phase 2-4 rulings will extend through 2030s without comprehensive finality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ICJ dispute resolution will provide lasting settlement or perpetuate territorial friction"
+    },
+    {
+      "id": "extraction_beneficiary_asymmetry",
+      "question": "Does the Thai military gain asymmetric strategic advantage from the ceasefire relative to Cambodian military capacity, making the constraint extractive for Cambodia despite the coordination frame?",
+      "resolution_mechanism": "Comparative military capability analysis; force posture changes during ceasefire periods; territorial consolidation benefits to each side; interviews with military strategists",
+      "impact": "If Thai advantage is asymmetric: extraction flows from Cambodia to Thailand, elevating Cambodian perspective to higher d-value (more snare-like). If balanced: coordination frame holds (tangled rope confirmed). Evidence suggests Thai asymmetry is significant \u2014 Thai military conventionally dominant.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ceasefire creates asymmetric military advantage for Thailand over Cambodia"
+    },
+    {
+      "id": "regional_mediation_theater_substitution",
+      "question": "Has ASEAN mediation become a substitute for actual dispute resolution\u2014i.e., does the theater of brokering ceasefires allow the underlying conflict to persist indefinitely?",
+      "resolution_mechanism": "Timeline analysis of dispute resolution attempts; count of ceasefire agreements and resurgences; evidence of progress toward binding settlements vs. perpetuation of ceasefire cycles",
+      "impact": "If theater substitution confirmed: piton classification elevated in salience; mandatrophy reveals that coordination narrative masks perpetual extraction from border populations. If false: ASEAN mediation is genuine constraint that will eventually enable resolution.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether ASEAN mediation theater substitutes for actual dispute resolution"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2,
-      "value": 0.55
-    },
-    {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.7
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
       "time_point": 1,
-      "value": 0.72
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 2,
-      "value": 0.75
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52
     }
   ],
   "interval": {
-    "start": 2011,
-    "end": 2013
+    "start": 0,
+    "end": 2
   },
   "commentary": {
-    "narrative_context": "Following deadly border clashes near the Preah Vihear temple in early 2011, ASEAN, under Indonesia's chairmanship, mediated a ceasefire agreement between Thailand and Cambodia. The agreement called for a cessation of hostilities and the deployment of unarmed Indonesian observers. However, the ceasefire was fragile and ultimately failed to hold, as it did not address the root cause of the conflict: the undemarcated border. The agreement functioned primarily as a performative de-escalation to satisfy the international community, while the underlying structural conflict remained unresolved until a 2013 ICJ ruling.",
+    "narrative_context": "The 2011 ASEAN-mediated ceasefire agreement between Thailand and Cambodia represents a constraint operating simultaneously as coordination mechanism, extractive arrangement, and theatrical institutional ritual. Following deadly border clashes near the Preah Vihear temple (part of a larger territorial dispute over Khmer temple ruins in a region claimed by both states), ASEAN brokered a ceasefire in February 2011 under the ASEAN Way doctrine of non-interference plus mediation. The agreement created a structural tension: the ceasefire genuinely solved the bilateral coordination problem (preventing escalation to full-scale war), but it also entrenched asymmetric military advantages, suppressed civilian agency in border regions, and substituted theatrical mediation for actual dispute resolution. The constraint exhibits Tangled Rope properties at the institutional level (coordination with active enforcement) but Snare properties for border civilians (trapped extraction) and Piton properties at the regional ritual level (theater substituting for resolution).",
     "key_agents": [
-      "Displaced Border Civilians: Primary victims (powerless/trapped) — bear the direct costs of the failed ceasefire.",
-      "ASEAN Diplomatic Corps: Primary beneficiary (institutional/arbitrage) — gains prestige from its role as a regional mediator.",
-      "Thai & Cambodian Governments: State actors (powerful/constrained) — experience the agreement as a mixed tool for de-escalation and a source of political cost.",
-      "Frontline Soldiers: Secondary victims (powerless/trapped) — face death and injury when the ceasefire breaks down."
+      "ASEAN Institutional Framework: Primary beneficiary (institutional/arbitrage) \u2014 demonstrates regional mediation capacity; vindicates ASEAN Way doctrine",
+      "Thai Military Command: Organized beneficiary with mixed extraction (organized/constrained) \u2014 gains strategic coordination and territorial claim consolidation; constrained by ASEAN pressure",
+      "Cambodian Military Command: Organized victim (organized/constrained) \u2014 achieves escalation prevention but accepts Thai military asymmetry; constrained by ASEAN framework",
+      "Border Civilian Population: Primary victim (powerless/trapped) \u2014 bears suppression costs and restriction of movement; no exit option from imposed ceasefire",
+      "Independent Verification Capacity: Institutional victim (institutional/arbitrage) \u2014 undermined by ASEAN's non-interference principle; ICJ rulings create verification lag",
+      "International Mediation Partners (UN, ICJ, bilateral actors): Powerful observers (powerful/mobile) \u2014 view ceasefire as temporary scaffold pending ICJ adjudication",
+      "Dispute Resolution Finality: Structural victim (analytical/analytical) \u2014 ceasefire perpetuates conflict by substituting mediation theater for binding settlement"
     ],
-    "logic_rationale": "Extractiveness (0.55): High. This reflects the severe cost of the agreement's failure, which is borne by civilians and soldiers in the form of death, injury, and displacement. The failure to secure peace is a form of extraction. Suppression (0.65): High. At the peak of the crisis, there were few viable alternatives to ASEAN mediation, forcing both parties into an agreement they were not fully committed to. Theater Ratio (0.75): Very High. The agreement was largely for an international audience, a way to demonstrate that action was being taken. Its rapid collapse reveals its low functional value compared to its high performative value. The `has_sunset_clause` is considered true because the ceasefire was implicitly temporary, designed to hold only until a permanent diplomatic or legal resolution was found.",
-    "perspectival_gap": "The gap is stark. For ASEAN diplomats, the agreement is a successful coordination mechanism (Rope) that burnishes their institutional credentials. For a civilian in the line of fire, it is a cruel trap (Snare) that offers the illusion of safety before collapsing. For the state actors themselves, it is a complex, costly, and necessary tool of statecraft (Tangled Rope). The classification depends entirely on whether the observer benefits from the performance, is constrained by the structure, or is a victim of its failure.",
-    "directionality_logic": "The directionality derivations drive the perspectival classifications. The `displaced_border_civilians` are victims with trapped exit options, maximizing their directionality (d≈0.95) and thus the effective extraction (χ), leading to a Snare classification. The `asean_diplomatic_corps` are beneficiaries with arbitrage exit options, minimizing their directionality (d≈0.05) and making the effective extraction negative, hence a Rope. The state actors are in a mixed position, modeled as victims with constrained exit, resulting in a high-but-not-maximal directionality (d≈0.75) that classifies as a Tangled Rope.",
-    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that a single diplomatic instrument is not monolithically a 'coordination' or 'extraction' mechanism. Its classification is indexical. Labeling the ceasefire as a pure Rope (the ASEAN view) would ignore the immense costs borne by local populations. Labeling it as a pure Snare (the civilian view) would ignore the genuine, if temporary, de-escalation it provided at the state level. The Deferential Realism framework correctly identifies it as a multi-faceted object whose character changes with the observer's structural relationship to it."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The ceasefire extracts from border civilians (confined movement, restricted economic activity) and from Cambodia (forced acceptance of Thai military asymmetry and territorial claims). Extraction rises from 0.38 to 0.52 over the interval as ASEAN's inability to prevent resurgences (2013, 2014 clashes) becomes apparent, revealing enforcement theater. Suppression (0.68): High. Ceasefire implementation relies on military pressure\u2014civilians cannot freely cross borders, media access to conflict zones is restricted, independent verification of compliance is minimal (ASEAN observers lack capacity). Both sides maintain heightened military presence. Theater ratio (0.65): Moderate-high. ASEAN brokering is substantially performative\u2014the institutional framework of 'mediation' generates political utility (ASEAN demonstrates relevance) independent of whether it achieves actual conflict resolution. Repeated ceasefire-violation cycles (2011, 2013, 2014) reveal that enforcement mechanisms are theatrical rather than structural.",
+    "perspectival_gap": "Maximum perspectival divergence across the seven perspectives reveals the constraint's hybrid nature. ASEAN institutional framework treats the ceasefire as a coordination success (Rope); Thai military sees mixed coordination-extraction (Tangled Rope); Cambodian military experiences more extraction than coordination (Tangled Rope with victim markers); border civilians experience pure extraction with suppression (Snare); international mediators view it as temporary scaffolding (Scaffold); the regional diplomatic ritual sees its own theater (Piton); the analytical observer risks false naturalization (Mountain). This spectrum demonstrates that indexical classification captures real structural differences in how the same constraint affects different observers.",
+    "directionality_logic": "Each perspective's directionality is determined by structural position relative to extraction flows and enforcement mechanisms. ASEAN benefits from the mediation role (low d, negative chi from their perspective\u2014the constraint gives them institutional credibility). Thai military gains strategic advantage (d \u2248 0.35: mixed beneficiary-victim status; constrained exit raises effective extraction). Cambodian military accepts strategic disadvantage (d \u2248 0.65: victim status with constrained exit; higher effective extraction). Border civilians are trapped targets (d \u2248 0.95: maximum extraction from their perspective). The engine's derivation chain maps beneficiary/victim declarations + power level + exit options to these d values and produces chi via the sigmoid f(d) and scope modifier \u03c3(S) = 1.1 for continental scope.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids false classification as pure coordination (Rope) by explicitly declaring victim groups (civilian populations, dispute finality, verification capacity) and enforcement mechanisms (ASEAN military coordination, border restrictions). The tangled_rope classification holds at the institutional level because the coordination function (preventing bilateral escalation) is genuine and structurally necessary. However, the mandatrophy is complex: the Thai-Cambodian dyad experiences the ceasefire as hybrid coordination-extraction; Cambodia bears disproportionate extraction; civilians bear pure extraction. The piton perspective reveals that ASEAN mediation has become theatrical\u2014the ritual of brokering ceasefires generates institutional utility independent of whether underlying disputes are resolved. The periodic resurgences (2013, 2014) confirm piton structure: theater ratio rises as ASEAN mediation repeats without functional breakthrough. The mandatrophy is NOT resolved by a single classification; it is resolved by recognizing that the constraint exhibits different types from different perspectives, and the perspectival gap IS the answer: institutional mediation theater (piton) masks asymmetric military extraction (tangled rope) imposed on border civilians (snare)."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "south_china_sea_code_of_conduct"
-    ]
-  }
+      "preah_vihear_territorial_claim",
+      "icj_maritime_boundary_dispute",
+      "thai_cambodian_military_asymmetry"
+    ],
+    "dual_formulation_note": "The 2011 ceasefire is downstream of the underlying Preah Vihear territorial dispute (constraint: preah_vihear_territorial_claim) but represents a distinct structural phenomenon: the substitution of mediation theater for dispute resolution finality. The ceasefire's extractiveness (0.52) reflects enforcement mechanisms and asymmetric military advantage; the territorial claim's extractiveness would be higher (0.65+, snare-like, with suppression \u2265 0.75). The two constraints are decomposed because their \u03b5 values differ materially and their failure modes are distinct. Upstream constraint (territorial claim) drives the ceasefire; ceasefire enables perpetuation of the claim by substituting theatrical mediation for binding adjudication."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.38
+    }
+  ]
 }

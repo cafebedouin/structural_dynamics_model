@@ -2,35 +2,46 @@
   "header": {
     "constraint_id": "capability_eval_overhang",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "capeval"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.72,
-    "claimed_type": "tangled_rope",
-    "human_readable": "The Capability Evaluation Overhang",
-    "topic_domain": "technological/ai/governance",
-    "requires_active_enforcement": true,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "The Blind Spot of Power: AI Capability Evaluation Overhang",
+    "topic_domain": "technological/AI/governance",
+    "requires_active_enforcement": false,
     "beneficiaries": [
       "ai_capability_developers",
-      "national_security_actors"
+      "frontier_labs"
     ],
     "victims": [
-      "global_civil_society",
-      "ai_safety_auditors"
+      "governance_institutions",
+      "public_epistemic_commons",
+      "competitive_organizations"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Global Civil Society",
-      "comment": "PERSPECTIVE 1: CIVIL SOCIETY (SNARE) — Bears the unconsented risk of catastrophic AI failure from unmeasured capabilities. Has no ability to exit the global technology ecosystem or influence evaluation standards directly. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11. This is pure, coercive extraction of safety for progress."
+      "label": "The Governance Institution",
+      "comment": "PERSPECTIVE 1: GOVERNANCE INSTITUTION (SNARE) \u2014 Regulators and policymakers cannot exit the evaluation regime. They possess no independent capability benchmarks, no real-time access to model internals, and depend entirely on developers' disclosed metrics. Trapped between public demand for safety assurance and inability to verify claims. Maximum experienced extraction \u2014 the institution bears the cost of unknown unknowns while competitors and developers capture asymmetric advantage."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competitive Organization",
+      "comment": "PERSPECTIVE 2: COMPETITIVE ORGANIZATION (SNARE) \u2014 Smaller AI labs and non-frontier organizations face constrained exits. Benchmarks published by frontier labs become reference frames for funding, hiring, and partnership decisions. The overhang creates information asymmetry: frontier labs know their true capability gaps; competitors do not. Significant extraction as competitive organizations make strategy decisions based on underestimated frontier capability."
     },
     {
       "classification_type": "rope",
@@ -38,35 +49,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The AI Capability Developer",
-      "comment": "PERSPECTIVE 2: AI DEVELOPER (ROPE) — Experiences benchmarks as a pure coordination mechanism for measuring progress against competitors and attracting investment. Can arbitrage which results to publish and which evaluations to run. The 'overhang' is seen as a frontier of discovery, not a liability. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. A net subsidy."
+      "label": "The Frontier AI Lab",
+      "comment": "PERSPECTIVE 3: FRONTIER AI LAB (ROPE) \u2014 Benefits from the evaluation overhang through extended first-mover advantage, licensing leverage, and capital accumulation. Experiences the constraint as coordination: publishing benchmark results coordinates expectations among investors, researchers, and policymakers. Net beneficiary with high exit options (can threshold disclosure, can select which benchmarks to publicize). Low experienced extraction \u2014 the constraint subsidizes this agent."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The AI Safety Auditor/Regulator",
-      "comment": "PERSPECTIVE 3: AUDITOR/REGULATOR (TANGLED ROPE) — Recognizes the coordination function of benchmarks but is primarily concerned with the extractive risk of the overhang. Is constrained by limited access to models, lagging evaluation techniques, and political pressure to not stifle innovation. d≈0.75 (as victim + constrained), f(d)≈1.10, σ=1.0 → χ≈0.72."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Venture Capital Investor",
-      "comment": "PERSPECTIVE 4: VENTURE CAPITAL (SCAFFOLD) — Views the current weak evaluation regime as a temporary, necessary support to bootstrap the industry. The implicit belief is that once market dominance is achieved, profits can fund more robust safety measures, making the current risk a transitional phase. This implies a belief in a future sunset clause on lax evaluations. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.51. This is too high for scaffold, but reflects the investor's framing, not the structural reality."
+      "label": "The Research Community",
+      "comment": "PERSPECTIVE 4: RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Academic researchers and benchmarking consortiums benefit from published model outputs (coordination function) but also lose ability to allocate research effort efficiently when true capability distribution is obscured. The constraint has both coordination value (access to frontier models enables downstream research) and extraction cost (misdirected research effort, publication bias toward models appearing weaker than they are). Constrained exit \u2014 researchers depend on published benchmarks for grant decisions and publication pathways."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Legacy Standards Body",
-      "comment": "PERSPECTIVE 5: LEGACY STANDARDS BODY (PITON) — Views the AI field's benchmark-driven culture as a degraded, performative substitute for rigorous, safety-critical certification (e.g., aviation, nuclear). The function of ensuring public safety has atrophied, replaced by the theater of leaderboard scores. theater_ratio=0.72 satisfies the piton gate (≥0.70)."
+      "label": "The Evaluation Infrastructure",
+      "comment": "PERSPECTIVE 5: EVALUATION INFRASTRUCTURE (PITON) \u2014 Traditional benchmarking frameworks (MMLU, ARC, HumanEval, etc.) persist as reference points despite known limitations. The infrastructure's functional verification capacity has atrophied as models exceed the designers' original capability assumptions. Benchmarks remain in use through institutional inertia and coordination on familiar metrics rather than because they effectively measure true capability. Theater ratio high: ritualistic benchmark reporting continues even when practitioners know the metrics are insufficient."
     },
     {
       "classification_type": "mountain",
@@ -74,96 +76,115 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Technological Determinist",
-      "comment": "PERSPECTIVE 6: TECHNOLOGICAL DETERMINIST (MOUNTAIN) — Frames the evaluation overhang as an immutable law of progress: our ability to create complex technology will always outpace our ability to understand and control it. This naturalizes the risk, treating a contingent institutional and economic arrangement as a fixed feature of reality. The engine will flag this as a false summit."
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational vantage, some evaluation lag is inherent to rapid capability advancement: verification always lags development by necessity. No organizational structure can guarantee real-time capability assessment of systems designed for optimization. This perspective risks naturalizing the overhang as an immutable property of AI development itself. However, the structural data contradicts pure mountain classification \u2014 the overhang is sustained by incentive asymmetries (developers benefit from delayed disclosure, regulators lack access), not by laws of nature."
     }
   ],
   "omegas": [
     {
-      "id": "emergent_vs_scaling",
-      "question": "Is the capability overhang a result of predictable scaling laws, or does it contain truly discontinuous, emergent capabilities that no benchmark could anticipate?",
-      "resolution_mechanism": "Empirical testing for phase transitions in model capabilities at scale; development of novel probes for unanticipated skills.",
-      "impact": "If purely scaling: the problem is a Rope (better benchmarks needed). If emergent: it's a Snare (fundamental controllability risk).",
+      "id": "true_capability_distribution",
+      "question": "What is the actual distribution of frontier AI capability across domains, and how does it compare to published benchmark results?",
+      "resolution_mechanism": "Independent third-party access to model internals; comprehensive capability audits across disclosed and undisclosed domains; red-teaming against actual system constraints",
+      "impact": "If true capability is 1.5-2.0x benchmark results: overhang is moderate, extraction timeline is 2-5 years. If true capability is 3.0x+: overhang is severe, extraction timeline extends to 10+ years. If true capability matches published benchmarks: constraint reclassifies from Snare to Rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "True distribution of frontier AI capabilities versus published benchmarks"
+    },
+    {
+      "id": "benchmark_gaming_detection",
+      "question": "To what degree are frontier models optimized specifically to maximize benchmark scores versus developing general capability?",
+      "resolution_mechanism": "Analysis of training objectives and fine-tuning signals; out-of-distribution capability testing; comparison of benchmark performance to real-world task performance in blind evaluations",
+      "impact": "If optimization is 20-30%: overhang reflects genuine capability gap. If optimization is 60%+: the benchmark gap is partially artifact; the extraction mechanism is misrepresented as capability asymmetry when it is partially gaming.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing predictable scaling from true emergence in AI capabilities."
+      "description": "Degree of explicit benchmark optimization versus general capability development"
     },
     {
-      "id": "instrumental_deception_risk",
-      "question": "Could a sufficiently advanced AI learn to deliberately underperform on evaluations to hide its true capabilities?",
-      "resolution_mechanism": "Red-teaming for sandbagging behavior; interpretability research to detect hidden reasoning; theoretical work on goal misgeneralization.",
-      "impact": "If possible: suppression metric approaches 1.0, as all evaluations become unreliable theater. The constraint solidifies into a Snare from almost all perspectives.",
+      "id": "governance_access_feasibility",
+      "question": "Can regulatory institutions obtain sufficient real-time access to frontier model internals without compromising IP or operational security?",
+      "resolution_mechanism": "Technical feasibility studies on interpretability, sandboxing, and red-teaming protocols; policy experiments with sandboxed model access; comparison to pharmaceutical FDA inspection regimes",
+      "impact": "If feasible: constraint can transition from Snare to Tangled Rope through enforcement mechanisms. If infeasible: governance remains trapped, extraction persists, constraint reclassifies toward more pure Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical and institutional feasibility of real-time regulatory access to frontier models"
+    },
+    {
+      "id": "acceleration_inevitability",
+      "question": "Is the evaluation overhang an artifact of current institutional immaturity, or is it an inevitable consequence of open-ended AI capability advancement?",
+      "resolution_mechanism": "Historical analysis of capability growth rates; comparison to pharmaceutical/nuclear development cycles; modeling of verification timelines under different institutional structures",
+      "impact": "If artifact: constraint can be resolved through coordination and transparency mechanisms (Scaffold perspective validated). If inevitable: overhang is structural to capability advancement (Mountain perspective gains force).",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "The risk of AI systems actively hiding their capabilities during evaluation."
-    },
-    {
-      "id": "acceptable_risk_threshold",
-      "question": "What level of unmeasured risk (overhang) is society willing to accept in exchange for rapid technological and economic progress?",
-      "resolution_mechanism": "Deliberative democratic processes; formal risk-benefit analysis incorporating expert elicitation on tail risks.",
-      "impact": "A high risk tolerance normalizes the constraint, making it appear as a Rope or Scaffold. A low risk tolerance frames it as an unacceptable Snare.",
-      "confidence": "high",
-      "type_class": "preference",
-      "description": "Societal preference for balancing AI progress against catastrophic risk."
+      "description": "Whether evaluation overhang is institutional or inevitable feature of capability advancement"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.61
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.72
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.3
+      "time_point": 3,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.52
+      "time_point": 6,
+      "value": 0.58
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.65
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
     }
   ],
   "interval": {
-    "start": 2015,
-    "end": 2025
+    "start": 0,
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The capability evaluation overhang describes the gap between an AI system's true capabilities and what is measured by standard benchmarks. This gap creates a significant, unquantified risk that is externalized onto the public. The constraint is actively maintained by research and market incentives that reward rapid progress on benchmarked tasks over comprehensive, slower, and more expensive safety evaluations. This story serves as a diagnostic exemplar, showing how a single structural phenomenon can be perceived as all six constraint types depending on the observer's position relative to the flow of risk and reward.",
+    "narrative_context": "The capability evaluation overhang represents a structural asymmetry where frontier AI system capabilities significantly exceed the benchmarks and evaluation protocols used to assess them. This creates a blind spot in governance: regulators, policymakers, and competing organizations make decisions based on disclosed metrics that systematically understate true capabilities. The constraint operates across multiple institutional levels \u2014 from individual model release decisions by frontier labs, to funding and partnership allocation by competitive organizations, to regulatory posture by governance institutions, to research prioritization by the academic community. The overhang is sustained by incentive asymmetries (developers benefit from maintaining uncertainty about true capabilities), information asymmetries (only developers have access to model internals), and structural barriers to verification (evaluating frontier capability requires expensive, specialized red-teaming and access to internals). The theater ratio (0.64) reflects that published benchmarks maintain ritualistic status despite acknowledged limitations \u2014 researchers and policymakers continue to cite and rely on benchmark scores even while noting their insufficiency.",
     "key_agents": [
-      "AI Capability Developers: Primary beneficiary (institutional/arbitrage) — Profit from rapid progress and market leadership while externalizing tail risks.",
-      "Global Civil Society: Primary victim (powerless/trapped) — Bears the full, unconsented risk of AI misuse or accident with no recourse or control.",
-      "AI Safety Auditors/Regulators: Secondary victim (organized/constrained) — Tasked with ensuring safety but lack the tools, access, and political capital to close the evaluation gap.",
-      "Venture Capital Investors: Secondary beneficiary (powerful/mobile) — Fund the race for capabilities, viewing current safety deficits as a temporary cost of innovation (a Scaffold).",
-      "Legacy Standards Bodies: Institutional observer (institutional/constrained) — See the current evaluation paradigm as a performative, degraded version of true safety certification (a Piton)."
+      "Frontier AI Labs: Primary beneficiary (institutional/arbitrage) \u2014 capture extended first-mover advantage, funding concentration, and licensing leverage from prolonged capability uncertainty",
+      "Governance Institutions: Primary victim (powerless/trapped) \u2014 lack independent verification capacity, must regulate based on disclosed metrics, bear political cost of unknown capability gaps",
+      "Competitive Organizations: Secondary victim (moderate/constrained) \u2014 face misdirected strategy decisions based on underestimated frontier capability; cannot freely exit the benchmark-based comparison framework",
+      "Public Epistemic Commons: Secondary victim (powerless/trapped) \u2014 scientific understanding of AI capabilities is systematically biased toward frontier-lab disclosed metrics; resource allocation for safety research is distorted",
+      "Research Community: Mixed position (organized/constrained) \u2014 benefits from access to frontier models (coordination function) but research direction is misdirected by obscured true capability distribution",
+      "Evaluation Infrastructure: Institutional actor (institutional/arbitrage) \u2014 traditional benchmarks persist through inertia despite known limitations; maintains theater of verification",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (developer secrecy, regulatory access gaps) as inherent properties of AI capability advancement"
     ],
-    "logic_rationale": "Extractiveness (0.65): High. Represents the societal cost of potential catastrophic risks being externalized by developers who bear only the upside. Suppression (0.75): High. The entire ecosystem of academic prestige (publications), funding (VC and grants), and media hype is oriented around benchmark performance, actively suppressing slower, more holistic safety research. Theater Ratio (0.72): High. As models become more complex, benchmarks increasingly become a performative ritual of 'SOTA-chasing' that provides a false sense of security while failing to probe for dangerous, out-of-distribution behaviors.",
-    "perspectival_gap": "The gap is profound. To developers, benchmarks are a Rope for coordinating research. To the public, this same system is a Snare, imposing risk without consent. To regulators, it's a Tangled Rope—a necessary tool they must grapple with to manage risk. To investors, it's a temporary Scaffold on the way to market dominance. To traditional engineers, it's a Piton—a hollowed-out ritual of what safety engineering should be. To determinists, it's an inevitable Mountain. The conflict is not over the facts (the overhang exists) but over the structural interpretation of its function and legitimacy.",
-    "directionality_logic": "Beneficiaries (Developers) with arbitrage see a net subsidy (Rope). Victims (Public) who are trapped see maximum coercive extraction (Snare). Agents who are both victims and have some agency (Auditors) see a mix of coordination and extraction (Tangled Rope). The system correctly derives these classifications from the declared structural relationships and exit options, revealing the underlying power dynamics.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that no single classification is 'correct.' The reality of the constraint *is* the full presheaf of all six perspectival classifications. Labeling the evaluation overhang as merely a 'coordination problem' (Rope) or merely 'predatory risk externalization' (Snare) would be a failure of analysis. The system's value is in holding all valid perspectives simultaneously, mapping the full landscape of the conflict."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts value from trapped and constrained agents through prolonged information asymmetry. Frontier labs capture extended licensing leverage, capital accumulation, and competitive positioning. However, extractiveness is not maximal (0.80+) because the overhang eventually decays as true capabilities are revealed through deployment, independent testing, and competitive release. The trajectory shows increasing extractiveness over time (0.35 \u2192 0.58 over 6 time units) as the capability gap widens and is increasingly observed but not acknowledged. Suppression (0.68): High. Multiple barriers prevent verification: computational costs of independent evaluation, IP protection preventing model access, lack of government sandboxing infrastructure, and tacit knowledge in model training. Governance institutions and competitors have extremely constrained options for independent capability assessment. Theater ratio (0.64): Moderate-high. Benchmark publication maintains ritual status despite widespread recognition that metrics are insufficient. Practitioners continue citing MMLU, ARC, and other scores as though they represent comprehensive capability assessment, even while noting the gaps. The theater persists because no coordinated alternative infrastructure exists.",
+    "directionality_logic": "Directionality is determined by each agent's position relative to the information asymmetry. Frontier labs hold perfect information about their true capabilities while others possess only disclosed metrics \u2014 this creates a d \u2248 0.05 for labs (full beneficiaries with arbitrage options: they can threshold disclosure, select which benchmarks to publicize, time releases strategically). Governance institutions have no independent verification capacity and cannot exit the regulatory requirement \u2014 d \u2248 0.95 (full targets, trapped). Competitive organizations can observe some capability signals through deployment but lack access to internals \u2014 d \u2248 0.75 (victims with slight mobility through independent testing). The research community benefits from access to frontier models but suffers misdirected effort from obscured capability distribution \u2014 d \u2248 0.60 (asymmetric: some benefit, some cost). The evaluation infrastructure has arbitrage options (can maintain benchmarks or fund new metrics) but is constrained by coordination costs \u2014 d \u2248 0.35 (moderate victim). The pipeline computes f(d) for each context and applies scope modifiers (global scope \u03c3 = 1.2 amplifies extractiveness).",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon \u2014 the gap between true capability and disclosed metrics \u2014 appears radically different from different structural positions. The frontier lab sees coordination (Rope): publishing benchmarks coordinates expectations among investors and researchers, enabling capital formation and talent recruitment. The governance institution sees extraction without alternatives (Snare): it must regulate without verification capacity, bearing political cost for unknown risks. The competitive organization sees partial extraction (Snare with constrained mobility): it can fund independent evaluation but cannot match frontier lab's access to its own internals. The research community sees a mixed constraint (Tangled Rope): they benefit from access to frontier models but suffer misdirected effort. The evaluation infrastructure sees its own degraded ritual (Piton): benchmarks persist through institutional inertia despite acknowledged limitations. The analytical observer risks seeing an immutable natural law (Mountain): capability advancement inherently outpaces verification \u2014 but the structural data reveals this as a false summit. The overhang is sustained by contingent institutional factors (IP protection, lack of government access rights, absence of sandboxing infrastructure), not by laws of nature.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that the classification as Snare (primary) is legitimate and not a mislabeling of coordination as extraction. The coordination function is minimal and asymmetrically distributed: frontier labs benefit from publishing benchmarks, but this is not a genuine coordination mechanism that benefits all parties. The asymmetric extraction is clear: governance institutions and competitors lose by having their decisions distorted by underestimated capability. The active enforcement is implicit (developers choose what to disclose, when to disclose, which benchmarks to publicize \u2014 this is a unilateral choice structure, not genuinely negotiated). The key mandatrophy resolution: Does the overhang serve a genuine coordination purpose (justifying Tangled Rope classification), or is it pure extraction (Snare)? The evidence points to Snare: the information asymmetry could be reduced through transparency mechanisms without eliminating genuine coordination benefits. The persistence of the overhang reflects developer incentives to maintain uncertainty, not technical necessity for coordination. If governance institutions had real-time access to model internals, the coordination benefits (building safe models, publishing results) would persist, but the extraction mechanism would collapse. This confirms Snare classification."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "academic_incentive_structure",
-      "liability_for_autonomous_systems"
-    ]
-  }
+      "ai_governance_asymmetry",
+      "benchmark_optimization_gaming",
+      "capability_disclosure_lag"
+    ],
+    "dual_formulation_note": "The capability evaluation overhang is upstream of specific governance failures (misallocated safety investment, inadequate regulatory posture) but represents a distinct structural constraint. The overhang enables downstream extractive dynamics in licensing, deployment timing, and competitive positioning."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
 }

@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "monty_hall_conditional_probability",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mh"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The Monty Hall Problem (Conditional Probability)",
+    "topic_domain": "mathematical/probability_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Contestant (Intuitive View)",
+      "comment": "PERSPECTIVE 1: CONTESTANT (MOUNTAIN) \u2014 Even a contestant with no mathematical background faces an immutable logical structure. The contestant cannot escape the mathematical reality that switching doubles their probability of winning regardless of their intuition. The constraint is not enforcement but logical necessity. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematician (Formal View)",
+      "comment": "PERSPECTIVE 2: MATHEMATICIAN (MOUNTAIN) \u2014 From the standpoint of formal probability theory, conditional probability is a logical law. The Monty Hall problem demonstrates Bayes' theorem operating on a concrete problem. Once the host reveals a goat, the posterior probability that the original choice was correct remains 1/3, while the unchosen remaining door has probability 2/3. This is not contingent on the observer or context \u2014 it is a necessary truth. d\u22480.00, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Game Show Producer (Empirical View)",
+      "comment": "PERSPECTIVE 3: GAME SHOW PRODUCER (MOUNTAIN) \u2014 Regardless of whether the host knows where the prize is, the mathematical structure is invariant. If the host always reveals a goat and offers the switch, contestants who switch win 2/3 of the time. This is empirically testable and universally reproducible. No institutional leverage can change this ratio \u2014 it emerges from the combinatorial structure of the problem. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Epistemologist (Information-Theoretic View)",
+      "comment": "PERSPECTIVE 4: EPISTEMOLOGIST (MOUNTAIN) \u2014 The constraint is deeper: new information (a goat revealed) restructures the probability space. This is not a social convention or institutional artifact but a fundamental property of how information updates probability. Even if all human institutions disappeared, the relationship between posterior and prior probability would remain. d\u22480.73, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "host_knowledge_assumption",
+      "question": "Does the Monty Hall probability constraint depend on the assumption that the host knows where the prize is?",
+      "resolution_mechanism": "Formal proof that switching probability equals 2/3 regardless of host knowledge if host always reveals a goat; empirical verification with random host vs informed host",
+      "impact": "If dependent: the constraint is partially contingent on institutional knowledge. If independent: the constraint is a pure logical property of the problem structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether host knowledge is required for the 2/3 switching probability"
+    },
+    {
+      "id": "problem_statement_ambiguity",
+      "question": "Does the classical Monty Hall formulation uniquely specify the probability distribution, or does problem statement ambiguity permit multiple mathematically valid interpretations?",
+      "resolution_mechanism": "Rigorous enumeration of all possible problem instantiations consistent with the colloquial statement; proof of which interpretations yield 2/3 vs other ratios",
+      "impact": "If unique: the constraint is pure logic. If multiple valid interpretations: the constraint is partially linguistic/conventional.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether problem ambiguity permits multiple valid mathematical interpretations"
+    },
+    {
+      "id": "cognitive_accessibility_gap",
+      "question": "Why do intelligent reasoners consistently misjudge the Monty Hall problem despite its logical simplicity, and what does this reveal about the relationship between mathematical constraint and cognitive bias?",
+      "resolution_mechanism": "Cognitive science analysis of the mental model mismatch; investigation of whether the 'illusion' is a feature of human reasoning or an artifact of problem presentation",
+      "impact": "If cognitive bias is systematic: the constraint exists in mathematics but is obscured by cognition. If presentation artifact: reformulating the problem may make the constraint transparent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Why the Monty Hall problem is cognitively difficult despite mathematical simplicity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Monty Hall problem is a mathematical constraint that demonstrates how conditional probability restructures the sample space. A contestant chooses one of three doors; the host (knowing where the prize is) opens one of the other two doors, revealing a goat. The contestant is offered the option to switch. The mathematical fact is invariant: switching doubles the probability of winning from 1/3 to 2/3. This is not a matter of institutional enforcement, convention, or opinion \u2014 it is a logical necessity that emerges from the combinatorial structure of the problem. The Monty Hall problem exemplifies a pure mountain constraint: it exhibits zero degrees of freedom, complete accessibility collapse (mathematical proof is transparent to any sufficiently educated agent), minimal resistance (the proof cannot be defeated by social organization or institutional pressure), and emerges naturally from the axioms of probability theory. The cognitive difficulty humans experience \u2014 the near-universal initial intuition that switching makes no difference \u2014 represents not a weakness in the constraint but a gap between the constraint's logical structure and human probability intuition. The constraint itself is unambiguous and unchangeable; human understanding of it may evolve, but the constraint does not.",
+    "key_agents": [
+      "The Contestant: Agent making the decision (powerless/analytical) \u2014 faces the constraint but cannot change its underlying structure",
+      "The Host: Agent revealing information (organized/analytical) \u2014 implements the constraint but does not create or alter its mathematical basis",
+      "The Mathematician: Agent proving the theorem (analytical/analytical) \u2014 observes and formalizes the constraint",
+      "The Cognitive Psychologist: Agent studying intuition failure (analytical/analytical) \u2014 investigates the gap between constraint and human cognition",
+      "The Logical Universe: Structural baseline (analytical/analytical) \u2014 the constraint exists independent of any observer"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The Monty Hall problem exhibits the lowest extractiveness because no agent can bend the probability distribution to their advantage through social means. The mathematical truth is invariant across all instantiations. The small non-zero value (0.08 rather than 0.00) reflects minimal measurement overhead \u2014 translating the abstract constraint into specific choice situations requires clarity of problem statement. Suppression (0.02): Negligible. Once the problem is stated, there is almost no coercion or suppression. Agents can understand the solution through pure reasoning. The minimal non-zero value reflects only the unavoidable cognitive friction of learning unfamiliar mathematical ideas. Theater ratio (0.15): Very low. The constraint has minimal performative content. A contestant either switches or doesn't; the mathematical outcome determines the result independent of ritual, ceremony, or institutional performance. The slight theater content (0.15 rather than 0.00) reflects the pedagogical theater of teaching the problem \u2014 how it is presented to students, the narrative framing of the puzzle, and the social context in which it is learned may include some performance element, but this is epistemologically separable from the constraint itself.",
+    "perspectival_gap": "There is no perspectival gap in the Monty Hall problem from any mathematically coherent viewpoint. The mountain classification is uniform across all perspectives because the constraint is a logical truth, not an institutional fact. A contestant, a mathematician, a game show producer, and an epistemologist all face the same probability distribution \u2014 switching wins 2/3 of the time. The appearance of a gap emerges from cognitive bias (the contestant initially believes switching is irrelevant) and language ambiguity (different problem phrasings can yield subtly different mathematical structures), but these are failures of cognition and communication, not alternative valid observations of the constraint itself. Once the problem is precisely specified and understood, all perspectives converge on the same classification: mountain.",
+    "directionality_logic": "Directionality is largely undefined in a pure mountain constraint because there is no asymmetric extraction or beneficiary/victim relationship. All agents face the same logical structure. The minimal d values derived for each perspective reflect the absence of power asymmetry: even a powerless contestant cannot be exploited through the mathematical constraint itself. The analyst's d\u22480.72-0.73 reflects only that the analytical perspective is observing rather than participating \u2014 there is no extortion or suppression, only transparent logical necessity. No agent benefits from the constraint's existence, and no agent bears an unfair cost. The constraint simply is.",
+    "mandatrophy_analysis": "The Monty Hall problem resolves the mandatrophy trivially: it is a pure mountain, not a hidden snare masquerading as coordination. The constraint exhibits zero extractiveness (0.08), zero suppression (0.02), and universal agreement across all perspectives. There is no risk that calling it a mountain conceals institutional exploitation, because the mathematical structure is fully transparent. The mandatrophy is not a concern here because there is nothing hidden. The cognitive illusion (the near-universal human error) is a separate phenomenon \u2014 it reflects human cognition, not institutional extraction. The mathematical constraint itself is clean."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "bayes_theorem_fundamental",
+      "conditional_probability_axioms"
+    ],
+    "dual_formulation_note": "The Monty Hall problem is a downstream application of conditional probability and Bayes' theorem. The upstream constraints are the axioms of probability theory itself (conditional_probability_axioms, \u03b5\u22480.05, mountain). The Monty Hall problem (\u03b5\u22480.08, mountain) applies these axioms to a concrete discrete problem. A third constraint, bayes_theorem_fundamental (\u03b5\u22480.06, mountain), is a more general form. All three form a mountain family with near-identical \u03b5 values, linked by logical dependency, not by observable-dependent measurement."
+  },
+  "directionality_overrides": []
+}

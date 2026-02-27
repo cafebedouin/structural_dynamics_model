@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "railway_gauge_standard",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rgauge"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Standard Railway Gauge (4 ft 8.5 in / 1435 mm)",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_rail_operators",
+      "gauge_standardized_equipment_manufacturers",
+      "international_rail_connectivity_users"
+    ],
+    "victims": [
+      "gauges_not_standardized_regions",
+      "alternative_gauge_proponents",
+      "interoperability_marginal_regions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Isolated Narrow-Gauge Region",
+      "comment": "PERSPECTIVE 1: ISOLATED NARROW-GAUGE REGION (SNARE) \u2014 Railway infrastructure in regions that historically adopted non-standard gauges (3 ft in India before partial standardization, 2 ft 6 in in East Africa, 3 ft 6 in in South Africa) faces enormous sunk costs converting to 1435 mm. Trapped: conversion costs exceed regional economic capacity; alternative gauge equipment is disappearing. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regional Railway Authorities",
+      "comment": "PERSPECTIVE 2: REGIONAL RAILWAY AUTHORITIES (TANGLED ROPE) \u2014 EU, North American, and Asian railway operators benefit from 1435 mm standardization (cross-border freight, locomotive interchange, equipment economies of scale) but remain constrained by sunk infrastructure and conversion costs. Must maintain dual-gauge systems or absorb conversion expense. d\u22480.58, f(d)\u22480.72, \u03c3=1.1 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Gauge Equipment Manufacturers",
+      "comment": "PERSPECTIVE 3: GAUGE EQUIPMENT MANUFACTURERS (ROPE) \u2014 Locomotive, wagon, and rail manufacturers benefit enormously from standardization: massive production runs, global supply chains, parts interchangeability. Standard gauge is a pure coordination benefit \u2014 enables markets that would not exist with fragmentation. d\u22480.10, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.02. Net beneficiary through coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Emerging High-Speed Rail Networks",
+      "comment": "PERSPECTIVE 4: EMERGING HIGH-SPEED RAIL NETWORKS (SCAFFOLD) \u2014 New high-speed rail (China, Japan, South Korea) can adopt optimal gauge de novo without legacy constraint. These projects adopt 1435 mm or 1676 mm as strategic choices, not inherited lock-in. They benefit from standardization (Shanghai-Beijing interoperability) but could theoretically choose differently. d\u22480.35, f(d)\u22480.33, \u03c3=1.2 \u2192 \u03c7\u22480.15. Low extraction because agents have agency in new infrastructure decisions."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Gauge Standardization Bodies",
+      "comment": "PERSPECTIVE 5: LEGACY GAUGE STANDARDIZATION BODIES (PITON) \u2014 International railway standards (ISO 4435, UIC standards) maintain 1435 mm as the canonical reference. The formal standardization apparatus persists through institutional inertia \u2014 it produces specifications, testing protocols, and certification procedures, but the real coordination happened 150+ years ago. Theater ratio reflects that much standards activity is performative compliance ritual rather than active problem-solving. theater_ratio=0.58. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Civilizational Analytical Observer",
+      "comment": "PERSPECTIVE 6: CIVILIZATIONAL ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT RISK) \u2014 The analytical perspective risks naturalizing the gauge standard as an immutable consequence of network effects and coordination physics. From this view, 1435 mm is inevitable: once it achieves critical mass, any alternative is mathematically dominated (Schelling point logic). However, structural data (\u03b5=0.38, suppression=0.52, theater=0.58) contradicts mountain classification. The 'inevitability' is narrative not physics \u2014 other gauges are equally stable locally (India 5 ft 6 in is self-reinforcing within India; Japan's gauge fragmentation is self-equilibrating). The gauge appears natural only from the perspective of those benefiting from 1435 mm dominance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optimal_gauge_physics",
+      "question": "Is 1435 mm objectively superior to alternative gauges from engineering and safety perspectives, or is it merely a local optimum that became dominant through historical accident?",
+      "resolution_mechanism": "Engineering analysis: structural stability, derailment risk, aerodynamic efficiency, and maintenance cost across gauge options. Comparative performance data from regions with different historical gauges.",
+      "impact": "If 1435 mm is objectively superior: constraint approaches Mountain (natural law of rail engineering). If locally optimal but not globally superior: constraint remains Tangled Rope (contingent lock-in, not inevitable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether 1435 mm is objectively optimal or merely dominant"
+    },
+    {
+      "id": "conversion_cost_threshold",
+      "question": "At what regional economic threshold does gauge conversion become economically rational rather than sunk-cost imprisonment?",
+      "resolution_mechanism": "Cost-benefit analysis: conversion expense vs. long-term freight efficiency gains, interoperability value, equipment lifecycle amortization. Regional economic modeling for India, East Africa, and South Africa.",
+      "impact": "If threshold is low (~$5-10B): snare perspective is temporary; regions will convert as wealth increases. If threshold is high (>$50B): snare is structural; trapped regions remain trapped indefinitely.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Economic threshold for rational gauge conversion"
+    },
+    {
+      "id": "dual_gauge_viability",
+      "question": "Can dual-gauge systems (mixed 1435 mm and alternative gauge on same corridor) remain economically viable indefinitely, or do they inevitably collapse toward monogauge?",
+      "resolution_mechanism": "Historical analysis of dual-gauge systems (Spain, Russia, Australia); cost tracking of mixed-gauge operations; maintenance and switching yard economics.",
+      "impact": "If dual-gauge is viable: snare is partially escapable through mixed systems (reduces d). If inevitably collapses: snare is structural (victims must eventually choose).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dual-gauge systems can remain viable long-term"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Standard Railway Gauge (4 ft 8.5 in / 1435 mm) exemplifies technological lock-in and path dependence. Originating from English colliery tramways and propagated globally through British imperial infrastructure exports, 1435 mm became the dominant global standard despite never being optimized through deliberate engineering. The constraint operates as a Tangled Rope at the aggregate level: it provides genuine coordination value (cross-border freight, equipment economies of scale, global manufacturing) while simultaneously extracting from regions that historically adopted alternative gauges and now face enormous conversion costs. The constraint exhibits a 100-year measurement interval showing rising extractiveness and theater ratio as sunk infrastructure accumulates and standardization governance becomes increasingly ritualized. Regional isolation effects are severe: the narrow-gauge regions of India (5 ft 6 in), East Africa (2 ft 6 in), and South Africa (3 ft 6 in) experience the constraint as a snare, trapped by path-dependent infrastructure decisions made 100-150 years ago. Emerging high-speed rail networks in Asia demonstrate that the constraint is not immutable\u2014new infrastructure can choose its gauge\u2014but the global manufacturing base is now so concentrated on 1435 mm that deviating from the standard incurs massive economic penalties.",
+    "key_agents": [
+      "Established Rail Operators (Global North): Primary beneficiary (institutional/arbitrage) \u2014 capture economies of scale, cross-border freight efficiency, and equipment cost advantages from 1435 mm dominance",
+      "Gauge Equipment Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 massive production runs and global supply chains enabled by standardization",
+      "Isolated Narrow-Gauge Regions (India, East Africa, South Africa): Primary victim (powerless/trapped) \u2014 sunk costs in non-standard gauges exceed conversion capacity; trapped in legacy infrastructure",
+      "Regional Railway Authorities (Mixed-Gauge Regions): Secondary victim (organized/constrained) \u2014 must maintain expensive dual-gauge systems or absorb conversion costs; constrained but not powerless",
+      "Emerging High-Speed Networks: Organized agent (powerful/mobile) \u2014 can theoretically choose alternative gauges but face ecosystem pressure toward 1435 mm standardization",
+      "Gauge Standardization Bodies: Institutional actor (institutional/arbitrage) \u2014 maintain formal standards apparatus; governance increasingly performative as real coordination happened 150+ years ago"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The constraint imposes real costs on non-standard regions (conversion expense, equipment scarcity, isolation from global freight networks) while providing genuine benefits to standard-gauge users. The extraction is not coercive (no active enforcement of gauge adoption) but structural: lock-in effects create asymmetric costs. Extractiveness has risen from 0.18 (early 20th century, when gauge variance was more tolerable and equipment was less specialized) to 0.38 (21st century, as manufacturing concentrated and global interoperability premiums increased). Suppression (0.52): Moderate-high. Alternatives to 1435 mm are not actively forbidden, but barriers to adoption are severe: equipment unavailable, repair networks absent, economic scale disadvantages, and lock-in effects on existing infrastructure. These are structural suppressions, not coercive. Theater ratio (0.58): Moderate. Governance theater has increased: formal standardization bodies produce extensive documentation, testing protocols, and certification procedures. Much of this activity is performative\u2014the real coordination happened in the 19th century\u2014but enough genuine problem-solving remains (interoperability verification, safety certification) to keep theater below 0.70 (piton threshold).",
+    "perspectival_gap": "The constraint exhibits a stark perspectival split between beneficiaries and victims. Manufacturers and established operators (Rope perspective) see pure coordination: the standard enables markets. Emerging networks (Scaffold perspective) see a temporary constraint on new projects\u2014they can choose alternatives, but face ecosystem pressure. Isolated narrow-gauge regions (Snare perspective) see pure extraction: they are locked into disadvantageous infrastructure with no exit. Regional authorities managing dual-gauge systems (Tangled Rope perspective) see the constraint as a mixed bag: benefits from cross-border interoperability, costs from maintenance complexity. The standardization bodies (Piton perspective) maintain governance rituals that were once functional but are now largely ceremonial. The civilizational observer (Mountain perspective) risks naturalizing contingency as inevitability, claiming the standard is a universal law of transportation physics\u2014a false summit that ignores historical accident and power asymmetry.",
+    "directionality_logic": "Gauge Equipment Manufacturers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Net beneficiary; see pure coordination. Established Rail Operators: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary; interoperability value outweighs any constraint costs. Emerging High-Speed Networks: Mobile agent + strategic choice \u2192 d\u22480.35, f(d)\u22480.33. Low extraction; these agents have agency. Regional Railway Authorities (Dual-Gauge): Victim + constrained \u2192 d\u22480.58, f(d)\u22480.72. Moderate extraction; trapped by infrastructure but not powerless. Narrow-Gauge Regions: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit options. Standardization Bodies: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification driven by theater_ratio, not directionality.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The Standard Railway Gauge resolves mandatrophy through decomposition by agent type. The constraint is Rope at the manufacturing level (pure coordination benefit, no asymmetric cost), Tangled Rope at the regional operator level (mixed coordination and extraction), Snare at the powerless-region level (pure extraction), and Scaffold at the emerging-network level (temporary constraint with agency and alternatives). No single type is correct; the presheaf over different agents IS the correct answer. The false summit (Mountain perspective) arises when analysts naturalize the standard as inevitable due to 'network effects' or 'Schelling point logic.' However, other gauges demonstrate equally stable equilibrium: Indian 5 ft 6 in is self-reinforcing within India; Japan's mixed-gauge system is self-equilibrating; Russian broad gauge (1520 mm) covers Eurasia independently. The 1435 mm standard is dominant globally not because it is physically inevitable but because it benefited from British imperial export and first-mover advantage in global manufacturing. The constraint became increasingly extractive as manufacturing consolidated and equipment specialization increased, raising the cost of deviation. The theater ratio has risen because standardization governance now consists largely of certification and testing rituals (functional maintenance of existing standard) rather than active coordination problem-solving (standardization was once that\u2014now it is bureaucracy)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "rail_gauge_india_standardization",
+      "east_africa_narrow_gauge_conversion",
+      "japanese_gauge_fragmentation",
+      "interoperability_eurasian_rail"
+    ],
+    "dual_formulation_note": "The Standard Railway Gauge as a global constraint is distinct from regional gauge choices (India 5 ft 6 in, South Africa 3 ft 6 in, Japan mixed-gauge, Russia 1520 mm). This story models the 1435 mm standard as a global coordination mechanism that simultaneously creates lock-in for non-adopting regions. Downstream constraints represent regional-specific victims (India standardization pressure, East Africa conversion costs) and independent parallel systems (Russian broad gauge, Japanese multi-gauge fragmentation). All are linked: the global 1435 mm standard creates competitive pressure on alternative systems."
+  },
+  "directionality_overrides": []
+}

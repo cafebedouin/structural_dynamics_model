@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "pe_fund_level_leverage",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Shadow Leverage via fund-level debt in Private Equity",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "private_equity_firms",
+      "fund_lenders"
+    ],
+    "victims": [
+      "limited_partners",
+      "portfolio_companies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Limited Partners (LPs)",
+      "comment": "LPs (pension funds, endowments) are often locked into long-term commitments and lack transparency into fund-level leverage. They bear the increased risk without commensurate reward."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Portfolio Companies",
+      "comment": "Portfolio companies may benefit from GPs having more capital to deploy and improve operational capabilities. However, they also bear additional financial risk from the debt incurred at the fund level, potentially leading to pressure to increase cash flow."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Private Equity Firms (GPs)",
+      "comment": "GPs benefit from increased returns from the leverage and the ability to deploy capital more quickly. They also take on risk if the fund performs poorly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Fund Lenders",
+      "comment": "Fund lenders benefit from the interest payments and fees generated from the NAV loans."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Fund-level leverage is a tangled rope because it provides benefits to GPs and Lenders by allowing them to increase returns, and simultaneously introduces systemic risk and extracts value from LPs through obscured leverage and potential portfolio company distress."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transparency_standards",
+      "question": "What transparency standards regarding fund-level leverage would adequately protect LPs?",
+      "resolution_mechanism": "Analysis of historical fund performance under different leverage and transparency regimes; LP surveys regarding information needs.",
+      "impact": "If high transparency: shifts classification towards rope. If low transparency: reinforces snare classification for LPs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transparency standards impact on LP vulnerability."
+    },
+    {
+      "id": "systemic_risk_threshold",
+      "question": "At what level of aggregate fund-level leverage does systemic risk become unacceptably high?",
+      "resolution_mechanism": "Stress testing of PE fund portfolios under various economic scenarios; Monte Carlo simulation of default cascades.",
+      "impact": "If low systemic risk: fund-level leverage is primarily a coordination mechanism. If high systemic risk: fund-level leverage introduces substantial negative externalities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Aggregate leverage risk tolerance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Private equity firms are increasingly using fund-level leverage, such as Net Asset Value (NAV) loans, to borrow against the entire portfolio of a fund. This allows them to increase returns and deploy capital more quickly, but it also introduces systemic risk and can extract value from limited partners (LPs) and portfolio companies.",
+    "key_agents": [
+      "Private Equity Firms (GPs): Primary beneficiary (institutional/arbitrage).",
+      "Fund Lenders: Secondary beneficiary (institutional/arbitrage).",
+      "Limited Partners (LPs): Primary victim (powerless/trapped).",
+      "Portfolio Companies: Secondary victim (moderate/constrained)."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. GPs and Lenders benefit financially, while LPs face increased risk and potentially lower returns due to hidden leverage. Portfolio companies may face increased pressure. Suppression (0.40): Moderate. LPs have limited ability to monitor or control fund-level leverage due to opaque reporting and long-term commitments. The use of fund-level leverage can obscure the true financial risk of a fund, suppressing alternatives for LPs. Theater Ratio (0.30): Relatively low. While there is some 'theater' in the marketing of fund performance, the leverage decisions are functionally driven by financial considerations.",
+    "perspectival_gap": "The perspectival gap arises from the asymmetric information and power dynamics. GPs and lenders see a coordination mechanism (Rope) that allows them to enhance returns and deploy capital effectively. However, LPs are often unaware of the extent of leverage and the associated risks, leading to a Snare classification. Portfolio companies find themselves in a mixed position (Tangled Rope) facing increased pressure, but also potential benefits.",
+    "directionality_logic": "The directionality is determined by the flow of benefits and risks. GPs and lenders are positioned as beneficiaries with arbitrage options. LPs are victims with limited exit options, leading to high directionality and a snare perspective. Portfolio companies have constrained exit options, and bear costs while also potentially benefitting from greater GP funding power."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

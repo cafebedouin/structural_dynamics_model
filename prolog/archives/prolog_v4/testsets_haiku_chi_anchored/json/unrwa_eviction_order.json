@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "unrwa_eviction_order",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "unrwa"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Israeli Land Authority's Eviction Order for UNRWA HQ in East Jerusalem",
+    "topic_domain": "geopolitical/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_state_authority"
+    ],
+    "victims": [
+      "unrwa_humanitarian_operations",
+      "palestinian_refugee_population",
+      "regional_stability"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "UNRWA Operations (Trapped Actor)",
+      "comment": "PERSPECTIVE 1: UNRWA OPERATIONS (SNARE) \u2014 Faces 30-day eviction order with no legal recourse in Israeli courts; cannot relocate humanitarian infrastructure; trapped by sovereignty and jurisdictional asymmetry. Extraction occurs through forced abandonment of facilities, cessation of services, and erosion of operational capacity. d\u22480.92, f(d)\u22481.39, \u03c3=0.8 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Palestinian Refugee Population (Constrained Exit)",
+      "comment": "PERSPECTIVE 2: PALESTINIAN REFUGEE POPULATION (SNARE) \u2014 Depends on UNRWA services (health, education, social assistance); cannot obtain equivalent services through Palestinian Authority; trapped by displacement history and legal status. UNRWA closure represents extraction of essential services and hardening of refugee condition. d\u22480.88, f(d)\u22481.32, \u03c3=0.9 \u2192 \u03c7\u22480.79."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Israeli State Authority (Beneficiary with Arbitrage)",
+      "comment": "PERSPECTIVE 3: ISRAELI STATE AUTHORITY (ROPE) \u2014 Experiences eviction order as enforcement of territorial sovereignty and legal property claims. Framed as coordination: assert state authority over disputed property; establish legal clarity; remove infrastructure perceived as supporting adverse claims to land. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.1 \u2192 \u03c7\u2248-0.07. Negative effective extraction = net beneficiary. Exit option is arbitrage: can shift ground to alternative legal claims or international pressure without operational cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Humanitarian Governance (Mobile Agent)",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL HUMANITARIAN GOVERNANCE (TANGLED ROPE) \u2014 UN agencies operate under coordination mandate (humanitarian access, impartiality) but experience extraction through political pressure, jurisdictional constraints, and delegitimization. Mobile because can invoke international law, diplomatic channels, and funding constituencies; but constrained by host-state sovereignty and dependence on Israeli cooperation for operational access. d\u22480.62, f(d)\u22480.78, \u03c3=1.2 \u2192 \u03c7\u22480.41."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "UN Legal Immunity Framework (Degraded Institutional)",
+      "comment": "PERSPECTIVE 5: UN LEGAL IMMUNITY FRAMEWORK (PITON) \u2014 UNRWA's operational immunity (Convention on Privileges and Immunities of the United Nations) is institutionally degraded: nominal protection exists but enforcement is performative because implementation depends on host-state compliance and Security Council backing (which Israel can veto). Theater ratio 0.65 reflects gap between stated immunity and actual enforceability. The legal framework persists through inertia despite low functional protection. d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural Dependency View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational perspective, the constraint reveals structural dependency: UNRWA's continued operation depends on the sufferance of host states; humanitarian agencies have no independent enforcement mechanism; UN immunity is aspirational rather than real. The eviction order demonstrates that UNRWA is trapped by institutional dependency, not protected by it. d\u22480.78, f(d)\u22481.18, \u03c3=1.2 \u2192 \u03c7\u22480.64."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legal_jurisdictional_ambiguity",
+      "question": "Does Israeli Land Authority have legitimate legal jurisdiction over the UNRWA compound in East Jerusalem under international law, domestic Israeli law, or Oslo Accords provisions?",
+      "resolution_mechanism": "Legal analysis by International Court of Justice or UN legal experts; review of Oslo Accords land designation (Area C vs Area A/B); examination of chain of title and UNRWA's legal status as UN agency",
+      "impact": "If Israel has legitimate jurisdiction: eviction order becomes standard property enforcement (Rope/Piton). If jurisdiction is contested: eviction becomes political extraction (Snare/Tangled Rope). If UNRWA has legal immunity: order is void (Mountain-like legal constraint on enforcement).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Israeli jurisdiction is legally valid"
+    },
+    {
+      "id": "humanitarian_replacement_feasibility",
+      "question": "Can Palestinian Authority or international bodies replace UNRWA services (health, education, social assistance) within 30 days or any reasonable timeframe?",
+      "resolution_mechanism": "Assessment of PA institutional capacity; cost and timeline estimates for service transfer; documentation of service gaps in refugee communities if UNRWA closes",
+      "impact": "If replacement feasible: constraint is temporary disruption (Scaffold). If infeasible: constraint is permanent harm (Snare). If partial: tangled outcome (Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative service provision is possible"
+    },
+    {
+      "id": "enforcement_mechanism_reliability",
+      "question": "Can Israeli authorities actually enforce a 30-day eviction order against a UN agency with claimed immunity, or does the order require international compliance?",
+      "resolution_mechanism": "Monitoring of actual enforcement attempts; observation of whether UNRWA leaves voluntarily, is physically removed, or remains; tracking of UN and international response",
+      "impact": "If enforced unilaterally: snare classification confirmed (state power overrides immunity). If blocked by international action: order becomes theater (Piton). If prolonged conflict: reveals tangled rope (extraction + coordination hybrid).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether eviction order can be actually enforced"
+    },
+    {
+      "id": "political_motive_vs_legal_claim",
+      "question": "Are the stated grounds (contract violation, illegal construction) genuine legal violations or pretext for political objectives (reduce Palestinian institutional presence, delegitimize UNRWA, restrict aid)?",
+      "resolution_mechanism": "Forensic examination of construction records; comparison with enforcement patterns against Israeli and Palestinian entities; analysis of timing relative to geopolitical events; expert engineering assessment",
+      "impact": "If genuine legal violations: order is legitimate enforcement (Rope). If pretext: order is extraction through false legality (Snare). If mixed: order is tangled rope (coordination language masking extraction).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether legal claims are primary motivation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Israeli Land Authority's 30-day eviction order for UNRWA headquarters in East Jerusalem represents a structural extraction mechanism masked by legal language and sovereignty claims. UNRWA operates as the de facto social safety net for 5.9 million Palestinian refugees across the Middle East, providing health, education, and social services. The headquarters closure would disrupt regional operations and symbolically demonstrate that humanitarian agencies cannot maintain infrastructure in territories under Israeli control without Israeli permission. The constraint exhibits structural characteristics of a pure snare: high suppression (institutional dependency on Israeli sufferance), high extractiveness (forced service abandonment), moderate theater (legal justifications for political objectives), and trapped victims (UNRWA has no meaningful exit options and Palestinian refugees cannot substitute services). However, the constraint also displays perspectival complexity: Israeli authorities frame it as legitimate property enforcement (Rope from their perspective); international humanitarian governance experiences it as mixed coordination-extraction (Tangled Rope); the degraded UN immunity framework appears as institutional inertia (Piton); and analytical observers see structural dependency as the real constraint (Snare). The theater ratio reflects increasing resort to legal language to justify political extraction \u2014 initial justifications were vague, but over months they crystallized into specific contract and construction allegations, indicating performative legalization of a foundational sovereignty claim.",
+    "key_agents": [
+      "Israeli Land Authority: Primary beneficiary (institutional/arbitrage) \u2014 exercises state sovereignty, establishes property control, removes infrastructure perceived as supporting Palestinian institutional claims",
+      "UNRWA Operations: Primary victim (powerless/trapped) \u2014 faces eviction with no legal recourse, cannot relocate facilities, forced to cease regional coordination from HQ location",
+      "Palestinian Refugee Population: Primary victim (moderate/trapped) \u2014 depends on UNRWA services; cannot obtain equivalent services through PA; trapped by legal status and displacement history",
+      "International Humanitarian System: Secondary actor (powerful/mobile) \u2014 can invoke international law and diplomatic pressure but constrained by dependence on Israeli cooperation and host-state sovereignty",
+      "UN Legal Immunity Framework: Institutional actor (institutional/constrained) \u2014 nominally protects UN agencies but functionally dependent on enforcement by host states and Security Council (degraded piton)",
+      "Analytical Observer: Institutional perspective (analytical/analytical) \u2014 reveals that humanitarian institutions operate under structural dependency, not legal immunity"
+    ],
+    "logic_rationale": "Base extractiveness (0.68): High. The eviction order forces UNRWA to abandon HQ operations, cease regional coordination from East Jerusalem, and transfer services elsewhere \u2014 representing material extraction of institutional capacity. The extraction is not absolute (UNRWA could theoretically relocate) but severe given infrastructure investment, operational disruption, and symbolic loss of presence. Suppression (0.78): Very high. Multiple suppressive mechanisms operate simultaneously: (1) Israeli sovereignty claims preclude legal recourse; (2) Palestinians and UN agencies lack enforcement mechanisms; (3) 30-day timeline creates artificial urgency; (4) alternative locations for HQ are diplomatically fraught or unavailable; (5) UNRWA operates in 5 host countries but has no coordination mechanism independent of host-state permission. Theater ratio (0.65): Moderate-high. The eviction order is framed in legal language (contract violations, building code enforcement) but these justifications appear post-hoc: the underlying driver is political assertion of Israeli control over East Jerusalem. Legal claims may have genuine basis (construction without permits is typical in Palestinian areas), but selective enforcement against UN agencies rather than Palestinian or Israeli violators indicates performative legalism. Theater ratio increases over the interval as arguments crystallize into legalistic form.",
+    "perspectival_gap": "The constraint demonstrates severe perspectival divergence. Israeli authorities experience it as legitimate sovereignty enforcement (Rope) \u2014 they are solving the problem of establishing clear legal control over disputed territory. UNRWA experiences it as an inescapable trap (Snare) \u2014 the agency has no option to remain, no ability to legally contest the order, and no political constituency powerful enough to block enforcement. Palestinian refugees experience it as service extraction (Snare) \u2014 UNRWA closure means loss of services they depend on and cannot replace. International humanitarian governance experiences it as a mixed constraint (Tangled Rope) \u2014 they benefit from coordination with UNRWA (humanitarian effectiveness) but face extraction through political pressure to comply or risk losing access. The UN legal immunity framework appears institutionally degraded (Piton) \u2014 it nominally protects UNRWA but has no enforcement mechanism independent of Israeli willingness to comply. The analytical observer sees this as revealing structural dependency (Snare) \u2014 humanitarian institutions are not protected by international law but rather operate at the sufferance of host states, and the eviction order demonstrates this powerlessness.",
+    "directionality_logic": "Israeli State Authority: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary. Can walk away from any legal challenge (arbitrage exit) and benefits from territorial assertion. UNRWA: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction. Has no exit option \u2014 cannot stay without Israeli permission, cannot legally contest, cannot relocate without losing operational effectiveness. Palestinian Refugees: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.32. High extraction. Depend on UNRWA services and cannot exit even if dissatisfied; loss of UNRWA means loss of services. International Humanitarian Governance: Victim + mobile (but constrained) \u2192 d\u22480.62, f(d)\u22480.78. Moderate extraction. Can invoke international law and diplomatic pressure (mobile) but depends on Israeli cooperation for access (constrained). UN Legal Framework: Institutional + constrained \u2192 d\u22480.45, f(d)\u22480.50. Cannot exit the dependency on host-state enforcement.",
+    "mandatrophy_analysis": "SNARE CONFIRMATION: The high extractiveness (0.68) combined with high suppression (0.78) and the presence of clear victims (UNRWA, Palestinian refugees) confirms snare classification despite Israeli framing as property enforcement. The mandatrophy resolution depends on recognizing that 'legitimate legal authority' and 'extraction mechanism' are not mutually exclusive \u2014 states can exercise legal sovereignty while simultaneously extracting value from trapped populations. The constraint's mandatrophy is resolved by the perspectival analysis: the beneficiary (Israeli state) experiences it as Rope (coordination of property control), but the victims experience it as Snare (inescapable harm). The analytical observer's role is to recognize that when a legal mechanism produces trapped victims and asymmetric extraction, the legal language is secondary to the structural reality. The theater ratio (0.65) indicates that legal justifications are significant but not dominant \u2014 the order is partially performative. Mandatrophy is fully resolved: this is a snare (\u03b5=0.68, suppression=0.78, \u03c7\u22480.76 from victim perspective), with perspectival variation showing why beneficiaries might deny or minimize the extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "palestinian_authority_institutional_capacity",
+      "east_jerusalem_legal_status",
+      "refugee_services_substitution"
+    ],
+    "dual_formulation_note": "This constraint is downstream of the fundamental legal status of East Jerusalem and the sovereignty question. The eviction order is a specific enforcement action that reveals the broader structural constraint: UNRWA's continued operation depends on the sufferance of host states and the fragile assumption that humanitarian agencies have meaningful legal immunity. The upstream constraint is jurisdictional ambiguity; the downstream constraint is service delivery system vulnerability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.78
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "east_jerusalem_legal_status",
+      "palestinian_authority_institutional_capacity"
+    ]
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "uk_necc_formation",
+    "version": "0.1",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK National Economic Crime Centre (NECC) Formation",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_government",
+      "law_abiding_businesses",
+      "citizens"
+    ],
+    "victims": [
+      "economic_criminals",
+      "organized_crime_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Economic Criminals",
+      "comment": "Economic criminals face increased scrutiny and risk of prosecution, with limited options to avoid the NECC's reach."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Government",
+      "comment": "The UK government benefits from a centralized agency to combat economic crime, improving its reputation, increasing tax revenues, and maintaining stability in the financial system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the NECC formation as a tangled rope: it coordinates law enforcement efforts but also extracts resources and power, potentially leading to mission creep or abuse."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Law Abiding Businesses",
+      "comment": "Law-abiding businesses benefit from a more secure economic environment and fairer competition."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mission_creep_scope",
+      "question": "Will the NECC's mandate remain focused on core economic crimes, or will it expand into other areas of law enforcement?",
+      "resolution_mechanism": "Legislative and budgetary oversight, independent audits, and public reporting on the NECC's activities.",
+      "impact": "A narrow scope will limit the NECC's effectiveness against evolving threats. A broad scope risks overreach and potential abuses of power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The scope of mission creep within NECC enforcement actions."
+    },
+    {
+      "id": "resource_allocation_efficiency",
+      "question": "Will the NECC be adequately resourced and effectively managed to achieve its objectives?",
+      "resolution_mechanism": "Performance metrics, cost-benefit analyses, and comparisons to similar agencies in other countries.",
+      "impact": "Insufficient resources or poor management will undermine the NECC's effectiveness. Excessive resources could lead to waste and inefficiency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The efficiency of resource allocation within NECC operations."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK government is establishing a new law enforcement agency, the National Economic Crime Centre (NECC), modeled on the American FBI, to combat economic crimes such as fraud, money laundering, and kleptocracy. This constraint story examines the intended effects and potential unintended consequences of this initiative.",
+    "key_agents": [
+      "UK Government: Primary beneficiary (institutional/arbitrage) - Establishes and controls the NECC, gaining increased power and legitimacy.",
+      "Economic Criminals: Primary victim (powerless/trapped) - Face increased scrutiny and prosecution.",
+      "Law-Abiding Businesses: Beneficiary (moderate/mobile) - Benefit from a more secure and stable economic environment.",
+      "Citizens: Beneficiary (moderate/constrained) - Benefit from reduced economic crime and increased financial stability.",
+      "Organized Crime Groups: Victim (moderate/constrained) - Face increased law enforcement pressure."
+    ],
+    "logic_rationale": "Extractiveness: 0.35 - The NECC extracts resources from the economy through its operating budget. It also extracts freedom from economic criminals through investigation and prosecution. Suppression: 0.25 - The NECC limits the options available to economic criminals and organized crime groups. Theater Ratio: 0.30 - The NECC's activities have a degree of performative action to demonstrate its effectiveness and deter crime, but primarily provides functional work.",
+    "perspectival_gap": "The perspective gap arises because economic criminals view the NECC as a pure snare, while the government views it as a rope for coordinating law enforcement. An analytical observer recognizes the tangled nature of the rope, understanding both coordination and extraction elements.",
+    "directionality_logic": "The directionality logic stems from the intended design of the NECC to curtail economic crime through increased resources and investigation. The UK Government and law-abiding businesses should benefit while criminals pay the cost. The analytical observer perspective must factor in the potential unintended consequences."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

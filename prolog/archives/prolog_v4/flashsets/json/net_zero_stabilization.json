@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "net_zero_stabilization",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Net Zero Carbon Constraint",
+    "topic_domain": "scientific/political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fossil_fuel_companies",
+      "high_carbon_emitting_nations"
+    ],
+    "victims": [
+      "future_generations",
+      "developing_nations",
+      "climate_vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "Future generations are trapped by the consequences of past and present emissions, bearing the brunt of climate change impacts with limited means of escape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Developing Nations",
+      "comment": "Developing nations face constraints in their development pathways due to the need to reduce emissions, while also being vulnerable to climate impacts. They benefit somewhat from technology transfer and adaptation aid, but bear a disproportionate burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Fossil Fuel Companies",
+      "comment": "Fossil fuel companies initially benefited from the exploitation of carbon resources. Now, some benefit from carbon capture technologies and offsets, while experiencing arbitrage in markets and policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "High Carbon Emitting Nations",
+      "comment": "High carbon emitting nations initially benefited from industrialization. They are now constrained by climate policies, but also seek arbitrage through carbon markets and offsets. They wield powerful influence in climate negotiations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes the complex interplay of factors influencing the net-zero carbon constraint, including scientific understanding, political will, and economic feasibility."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "climate_sensitivity",
+      "question": "What is the Earth's climate sensitivity to increased CO2 concentrations?",
+      "resolution_mechanism": "Improved climate models, paleoclimate data analysis, observations of recent warming trends.",
+      "impact": "Higher climate sensitivity implies a smaller carbon budget and more stringent mitigation requirements.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty in climate sensitivity"
+    },
+    {
+      "id": "carbon_cycle_feedbacks",
+      "question": "How will carbon cycle feedbacks (e.g., permafrost thaw, forest dieback) affect the remaining carbon budget?",
+      "resolution_mechanism": "Improved earth system models, observations of carbon cycle dynamics, process-based understanding of feedback mechanisms.",
+      "impact": "Positive feedbacks could further reduce the carbon budget, necessitating deeper and faster emissions cuts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty in carbon cycle feedbacks"
+    },
+    {
+      "id": "technological_feasibility",
+      "question": "What is the feasibility and scalability of carbon capture and storage (CCS) and other negative emissions technologies?",
+      "resolution_mechanism": "Pilot projects, technological demonstration, economic analysis, life cycle assessments.",
+      "impact": "If CCS proves infeasible or too expensive, the carbon budget will be further constrained, requiring more radical emissions reductions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of negative emission technologies"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The net-zero carbon constraint represents the global effort to limit temperature rise by achieving a balance between emissions and removals of greenhouse gases. This requires a complex interplay of scientific understanding, political will, and economic feasibility. Before 2005, the scientific consensus was that global temperatures could be stabilized while still allowing for a small budget of CO2 emissions.",
+    "key_agents": [
+      "Future Generations: Primary victims (powerless/trapped)",
+      "Developing Nations: Secondary victims (moderate/constrained)",
+      "Fossil Fuel Companies: Initial beneficiaries, some now arbitrageurs (institutional/arbitrage)",
+      "High Carbon Emitting Nations: Powerful actors, constrained by policy (powerful/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.6): The constraint extracts resources and freedom of action from future generations and developing nations to benefit current generations and carbon-intensive industries. Suppression (0.7): Strong suppression arises from technological lock-in, vested interests, and the difficulty of coordinating global action. Theater Ratio (0.3): Some theatrical elements are present in climate policy, but there is also significant genuine effort toward mitigation and adaptation.",
+    "perspectival_gap": "Future generations see a snare, trapped by past emissions. Developing nations see a tangled rope, constrained by the need to develop sustainably while also adapting to climate impacts. Fossil fuel companies see a rope, as they adapt and seek arbitrage opportunities. High carbon emitting nations see a tangled rope, constrained by policy but also wielding power in negotiations. The analytical observer recognizes the complexity of the situation.",
+    "directionality_logic": "Directionality is determined by each agent's power, exit options, and relationship to the carbon constraint. Future generations, with no power or exit, experience maximum extraction. Fossil fuel companies, with power and arbitrage, experience benefit. Developing nations are victims due to being constrained. High carbon emitting nations are powerful, therefore see a lower impact from the constraint.",
+    "mandatrophy_analysis": "The net-zero carbon constraint resolves the mandatrophy by encompassing the entire range of potential perspectives, from pure extraction to coordination. The key is to analyze each agent's position within the system."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_carbon_market",
+      "paris_agreement"
+    ]
+  },
+  "directionality_overrides": []
+}

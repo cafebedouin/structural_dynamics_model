@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "perovskite_self_etching",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pero"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 2D Perovskite Machinability Constraint",
+    "topic_domain": "technological/semiconductors",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_lithography_vendors",
+      "silicon_ecosystem_incumbents"
+    ],
+    "victims": [
+      "perovskite_device_yield",
+      "cost_reduction_pathway",
+      "alternative_fabrication_researchers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Perovskite Device Yield",
+      "comment": "PERSPECTIVE 1: PEROVSKITE DEVICE YIELD (SNARE) \u2014 Cannot escape destructive lithography protocols. Soft organic-inorganic halide perovskites degrade under traditional photoresist solvents, UV exposure, and ion beam etching. The constraint forces researchers to either accept 40-60% yield loss or abandon perovskite integration altogether. No alternative pathway exists within the established supply chain \u2014 trapped with maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Perovskite Research Community",
+      "comment": "PERSPECTIVE 2: PEROVSKITE RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Constrained by capital costs of alternative fabrication tools (nanoimprint, direct writing, self-assembly) and institutional dependence on established fabs. But also benefits from the constraint's status as an 'open problem' \u2014 publication pipeline, grant funding for 'perovskite integration,' and prestige for solving machinability drive research effort. Mixed experience: genuine extraction (forced to use suboptimal techniques) but also coordination benefit (field cohesion, research opportunity)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Established Lithography Vendors",
+      "comment": "PERSPECTIVE 3: ESTABLISHED LITHOGRAPHY VENDORS (ROPE) \u2014 Experiences the constraint as coordination of their existing installed base. Every perovskite research group that attempts traditional lithography becomes a customer for expensive equipment upgrades, process consulting, and consumables. The constraint ensures perovskite researchers remain dependent on the silicon ecosystem's tools. Net beneficiary \u2014 extraction runs toward these actors through customer lock-in."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Alternative Fabrication Coalition",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE FABRICATION COALITION (SCAFFOLD) \u2014 Organized agents developing self-assembly, nanoimprint, direct-write, and solvent-free patterning technologies see the machinability constraint as a temporary bottleneck with a sunset. These emerging techniques are maturing (nanoimprint resolution now <10nm, self-assembly patterning approaches commercialization). The coalition has agency and a plausible exit timeline \u2014 5-10 years for alternative methods to reduce destructive lithography dependency. Low effective extraction because agency and sunset path are evident."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Silicon Foundry Protocol Standards",
+      "comment": "PERSPECTIVE 5: SILICON FOUNDRY PROTOCOL STANDARDS (PITON) \u2014 Traditional fab design rules and process windows (photoresist compatibility, resist tone, etching chemistries) were optimized for silicon and inorganic semiconductors. Applying them to perovskites is substantially performative \u2014 the protocols persist because they are standardized and integrated into supply chains, not because they are optimal for soft materials. Theater ratio (0.58) reflects that much of the fabrication activity (expensive resist coating, UV curing, ion beam prep) is non-functional for perovskites \u2014 it's inherited ritual from the silicon playbook. The standards persist through institutional inertia despite low functional verification for this material class."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational timescale, the machinability constraint exhibits both genuine coordination (perovskite research depends on access to patterning infrastructure) and asymmetric extraction (the coordination is enforced through material damage, yield loss, and supply chain lock-in). The constraint persists because silicon-era lithography is the only standardized pathway, not because it is inherently necessary for 2D perovskites. The extractiveness is moderate-to-high (0.52) because the extraction is enforced through technical suppression (material incompatibility) rather than explicit coercion. Suppression (0.68) is high: researchers have no practical alternatives within institutional timescales."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "material_damage_mechanism_primacy",
+      "question": "Are perovskite damage mechanisms under traditional lithography fundamental material limitations or contingent to specific process chemistries?",
+      "resolution_mechanism": "Mechanistic analysis of photoresist solvent compatibility with halide perovskites; identification of alternative resist chemistries (inert fluoropolymers, sol-gel oxides) that do not trigger degradation; controlled experiments with modified process windows",
+      "impact": "If fundamental: the constraint approaches Mountain status (inherent to the material). If contingent: alternative resist families exist, collapsing extractiveness to 0.25-0.35 (Rope). This is the primary axis of uncertainty.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether perovskite damage is material-fundamental or process-contingent"
+    },
+    {
+      "id": "alternative_fabrication_maturity_timeline",
+      "question": "Will nanoimprint lithography, self-assembly patterning, or direct-write techniques achieve cost-parity and yield-parity with traditional lithography for 2D perovskites within 5-10 years?",
+      "resolution_mechanism": "Technology readiness level assessment; comparison of unit economics ($/chip), defect density, and throughput for emerging methods vs traditional lithography on test structures; roadmap tracking from equipment vendors and research groups",
+      "impact": "If timeline is realistic: scaffold classification confirmed, sunset path is real. If timeline slips beyond 15 years: scaffold downgrade to tangled_rope (mixed extraction + coordination with uncertain exit). If timeline extends to >20 years: reclassifies toward snare (extraction persists indefinitely).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for cost-parity of alternative fabrication methods"
+    },
+    {
+      "id": "silicon_supply_chain_lock_in_degree",
+      "question": "How much of the perovskite machinability problem is enforced by institutional dependence on silicon foundries vs inherent material incompatibility?",
+      "resolution_mechanism": "Comparative analysis of perovskite yield in dedicated soft-material fabs (few exist globally) vs silicon fabs; capital cost analysis for building vertical integration; survey of research groups that bypassed traditional lithography entirely",
+      "impact": "If institutional dependence dominates (>70% of suppression): beneficiary extraction is largely through lock-in, not material necessity \u2014 reclassifies extractiveness toward 0.65+ (pure snare). If material incompatibility dominates (>60% of suppression): constraint approaches Mountain or Rope (depending on availability of material-compatible alternatives). This determines whether the constraint is contingent or structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of silicon supply chain lock-in vs material incompatibility"
+    },
+    {
+      "id": "cross_licensing_barrier_strength",
+      "question": "Do alternative fabrication technologies (nanoimprint, self-assembly) face IP barriers or materials-based restrictions that prevent rapid deployment for perovskites?",
+      "resolution_mechanism": "Patent landscape analysis; licensing availability and cost for emerging patterning tools; materials compatibility data from vendor technical specifications; identification of IP control concentration",
+      "impact": "If barriers are strong: alternative coalition faces institutional extractiveness in addition to technical challenges \u2014 mandatrophy becomes multidimensional (extraction by incumbents + extraction by IP holders). If barriers are weak: alternatives scale rapidly, collapsing the constraint toward Rope (pure coordination). This determines whether the scaffold sunset is technically feasible or blocked by institutional mechanisms.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "IP and licensing barriers to alternative fabrication deployment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 2D perovskite machinability constraint models the dominance of destructive, incompatible lithography techniques when applied to soft lead halide perovskites. Traditional photolithography\u2014designed for rigid silicon and inorganic semiconductors\u2014causes material degradation in halide perovskites through photoresist solvent attack, UV-induced decomposition, and ion beam damage. This constraint forces the perovskite research community into a bind: accept severe yield losses (40-60%), pay for expensive equipment workarounds, or abandon perovskite integration entirely. The constraint exhibits all six DR types from different structural positions, revealing how institutional dependence on silicon-era tooling creates extraction that resembles natural law but is actually contingent on the absence of viable alternatives. Theater ratio (0.58) reflects that much traditional lithography activity is non-functional for perovskites\u2014expensive resist coatings and UV curing are performed out of protocol compliance, not because they advance the fabrication goal. Extractiveness (0.52) is moderate-to-high because the extraction is enforced through both material incompatibility and supply chain lock-in. Suppression (0.68) is high because researchers have no practical alternatives within institutional timescales.",
+    "key_agents": [
+      "Perovskite Device Yield: Primary victim (powerless/trapped) \u2014 forced to accept destructive protocols; degradation unavoidable within established supply chain",
+      "Perovskite Research Community: Secondary victim (moderate/constrained) \u2014 faces capital barriers to alternative fabrication; also benefits from 'open problem' status and publication opportunity",
+      "Established Lithography Vendors: Primary beneficiary (institutional/arbitrage) \u2014 capture customer dependency through constraint; extract through equipment/process consulting lock-in",
+      "Silicon Foundry Incumbents: Secondary beneficiary (institutional/arbitrage) \u2014 maintain supply chain dominance; constraint ensures perovskite researchers remain integrated into silicon ecosystem",
+      "Alternative Fabrication Coalition: Organized agents (organized/constrained) \u2014 nanoimprint, self-assembly, direct-write communities; building exit pathway with plausible 5-10 year sunset",
+      "Silicon Foundry Protocol Standards: Institutional actor (institutional/arbitrage) \u2014 maintains inherited fab design rules through standardization inertia, not functional compatibility"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-to-high. The constraint extracts from perovskite researchers through multiple mechanisms: forced adoption of expensive, incompatible lithography equipment; yield loss during patterning (40-60%); and institutional dependence on silicon supply chains. The extraction is not as severe as a pure snare (0.70+) because some workarounds exist (self-assembly, direct-write prototyping) at laboratory scale, and the research community has some agency through grant funding and publication incentives. However, the extraction is higher than pure coordination (Rope, <0.35) because the incompatibility is material and suppliers profit from the dependency. Suppression (0.68): High. Significant barriers prevent escape: (1) lack of standardized alternatives within established fabs, (2) capital cost of dedicated soft-material fabrication infrastructure, (3) institutional inertia (design rules, process protocols, supplier contracts), (4) potential IP barriers to alternative technologies. But suppression is not total (0.85+) because alternative fabrication methods are maturing and some research groups have demonstrated workarounds at small scale. Theater ratio (0.58): Moderate-to-high. Traditional lithography protocols applied to perovskites are substantially performative: resist coating, UV curing, resist development, and ion beam prep are executed per silicon foundry standards but do not serve their intended function for soft materials. Much activity is protocol compliance rather than functional necessity. Theater has increased over the interval as more research groups adopted traditional lithography without understanding material incompatibility, leading to more performative process activity (elaborate troubleshooting, process optimization for incompatible techniques, expensive workarounds).",
+    "directionality_logic": "Beneficiaries (lithography vendors, silicon foundries) experience low directionality (d \u2248 0.1-0.2): they benefit from the constraint and have arbitrage exit options (can shift to other customers, other materials). Their effective extractiveness (chi) is negative or near-zero \u2014 they see the constraint as beneficial coordination. Victims (perovskite device yield, alternative fabrication researchers) experience high directionality (d \u2248 0.75-0.90): they bear the cost of incompatibility and have constrained or trapped exit options. Their effective extractiveness is amplified by high d values \u2014 they experience the constraint as severe extraction. The research community (moderate power) experiences d \u2248 0.55-0.65: they have some constrained exit options (can pursue alternative materials, can prototype at lab scale) but face institutional barriers to full escape. Their chi is moderate-to-high, reflecting mixed extraction and coordination. The alternative fabrication coalition (organized power) experiences d \u2248 0.40-0.50: they have organized capacity to develop and deploy alternatives, giving them lower directionality than trapped victims. Their effective extractiveness reflects mixed experience \u2014 they benefit from the constraint's status as an 'open problem' but bear extraction costs during the transition period.",
+    "perspectival_gap": "This constraint exhibits a wide perspectival gap between suppliers and victims. Lithography vendors and silicon foundries see a coordination mechanism (Rope) \u2014 perovskite integration uses their standardized tools, creating customer lock-in and pulling the research community deeper into their ecosystem. The perovskite research community sees mixed coordination and extraction (Tangled Rope) \u2014 they use the constraint to justify funding and publication pipelines, but also suffer real yield loss and cost penalties. The perovskite device yield sees pure extraction (Snare) \u2014 no benefit, only damage from incompatible chemistry. The alternative fabrication coalition sees a temporary problem with a sunset (Scaffold) \u2014 emerging technologies are approaching viability, and they have agency to accelerate the transition. The silicon foundry protocols see their own ritual as degraded (Piton) \u2014 the inherited design rules persist through standardization inertia, not because they serve perovskites. The analytical observer sees a tangled rope with institutional extraction (Tangled Rope) \u2014 genuine coordination (patterning infrastructure is necessary), but enforced through material incompatibility and supply chain lock-in rather than explicit coercion. The perspectival gap is large because supplier benefit (Rope) and victim cost (Snare) are almost perfectly opposed.",
+    "mandatrophy_analysis": "The machinability constraint resolves mandatrophy by disambiguating apparent naturalization from actual institutional contingency. The mountain perspective ('perovskites are inherently incompatible with all lithography') would naturalize what is actually a contingent technical-institutional arrangement. The omega variables (material damage mechanism primacy, alternative fabrication maturity) distinguish between fundamental material limits and contingent supply chain dominance. If omega_1 (material damage mechanism) resolves toward 'contingent to specific process chemistries,' the constraint collapses toward Rope (coordination with alternative materials-compatible resists). If omega_2 (alternative fabrication timeline) resolves toward '5-10 year maturity,' the scaffold sunset becomes real and extractiveness declines. If omega_3 (supply chain lock-in degree) reveals that 70%+ of suppression is institutional rather than material, the constraint is purely extractive (Snare), not natural law. The mandatrophy resolution is that the constraint is empirically Tangled Rope (mixed coordination of fabrication access + extraction through incompatibility), with a plausible sunset contingent on alternative fabrication maturation, not an immutable natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "lead_halide_perovskite_stability",
+      "perovskite_solar_cell_certification_gap",
+      "semiconductor_manufacturing_vertical_integration"
+    ],
+    "dual_formulation_note": "The machinability constraint is downstream of material-level lead halide perovskite chemistry (instability, bandgap tunability) and upstream of device-level challenges (certification, encapsulation). The constraint represents a distinct structural phenomenon: the dominance of silicon-era lithography techniques when applied to soft materials. Alternative fabrication methods (nanoimprint, self-assembly, direct-write) are maturing as a parallel pathway that bypasses this constraint entirely, making it a temporary institutional lock-in rather than a fundamental material limit."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ]
+}

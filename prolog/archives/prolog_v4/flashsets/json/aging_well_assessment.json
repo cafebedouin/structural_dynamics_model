@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "aging_well_assessment",
+    "version": "0.2",
+    "generated_date": "2024-01-05",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Commercialized Functional Aging Assessment System",
+    "topic_domain": "health/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_assessment_companies",
+      "associated_healthcare_providers"
+    ],
+    "victims": [
+      "elderly_patients",
+      "public_health_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Elderly Patient Perspective",
+      "comment": "Elderly patients often feel trapped within the system, pressured to undergo assessments and interventions without fully understanding the benefits or risks. They may lack the resources or knowledge to seek alternative options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Systems Perspective",
+      "comment": "Public health systems are constrained by budget limitations and are often forced to adopt the commercialized assessment system, leading to increased costs and potentially misallocated resources. However, they also benefit from a standardized assessment approach."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Commercial Assessment Companies Perspective",
+      "comment": "Commercial assessment companies benefit directly from the system through increased revenue and market share. They have arbitrage opportunities through various pricing models and service offerings."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Research Community Perspective",
+      "comment": "The research community that initially developed these tests may find that the commercialized system is a degraded version of its original intent. They are somewhat constrained because they lose control over the application of their research findings."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer Perspective",
+      "comment": "An analytical observer sees a mixed system with coordination benefits (standardized assessment) and extraction risks (over-medicalization, misallocation of resources). The long-term effects of this commercialization on societal well-being are uncertain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "clinical_validity_proxy_tests",
+      "question": "How well do these proxy tests actually correlate with meaningful health outcomes for elderly patients?",
+      "resolution_mechanism": "Longitudinal studies comparing assessment results with subsequent health events (hospitalizations, mortality, etc.)",
+      "impact": "If correlation is weak, the system primarily extracts without providing meaningful benefits. If strong, extraction is justified by improved health outcomes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of proxy tests in predicting health outcomes"
+    },
+    {
+      "id": "over_medicalization_threshold",
+      "question": "At what point does the assessment-intervention cycle lead to unnecessary medical interventions that harm rather than help elderly patients?",
+      "resolution_mechanism": "Analysis of intervention rates and adverse event rates following assessments, compared to control groups.",
+      "impact": "If the threshold is easily crossed, the system has a high risk of being a net negative for patient health. If hard to cross, the intervention cycle is generally beneficial.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Risk of over-medicalization due to the system"
+    },
+    {
+      "id": "equitable_access_stratification",
+      "question": "Does the system exacerbate existing health disparities by selectively targeting affluent patients or neglecting underserved populations?",
+      "resolution_mechanism": "Analysis of assessment adoption rates across different socioeconomic and demographic groups.",
+      "impact": "If access is highly stratified, the system reinforces existing inequalities. If access is equitable, it may help reduce disparities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Equitability of access to the assessment system"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A suite of physical proxy tests (e.g., Sitting-Rising, Walking Speed, Grip Strength) originally used for research has been commercialized into a system of assessment, intervention, and billing. This creates a structural tension between the potential for improved healthcare for the elderly and the incentives for commercial entities to maximize profits, potentially leading to over-medicalization and misallocation of resources. The system combines aspects of coordination through standardized assessment protocols and extraction through commercialized services. The theater_ratio reflects the performative aspects of the assessment, where the tests are used for marketing and billing purposes, even if their clinical validity is limited.",
+    "key_agents": [
+      "Commercial Assessment Companies: Primary beneficiary (institutional/arbitrage) - Benefits directly from revenue generated through assessments and associated services.",
+      "Associated Healthcare Providers: Secondary beneficiary (institutional/constrained) - Benefits from increased patient volume and standardized assessment reports, but is constrained by contractual obligations.",
+      "Elderly Patients: Primary victim (powerless/trapped) - Bear the costs of assessments and interventions, potentially without fully understanding the benefits or having alternative options.",
+      "Public Health Systems: Secondary victim (moderate/constrained) - Bear the costs of implementing the system and potentially face misallocation of resources. However, also benefit from the standardized assessment approach.",
+      "Research Community: Constrained observer (institutional/constrained) - May see their original research findings being applied in ways they did not intend or foresee."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The system extracts value from elderly patients and public health systems through direct costs of assessments and interventions. It is not a pure extraction as there are potential benefits, but the commercial incentives introduce a level of extraction. Suppression (0.40): Moderate. There are limited alternatives to this commercialized system for functional aging assessment, and there is a pressure on elderly patients to participate due to social norms and healthcare provider recommendations. Theater ratio (0.75): High. The assessment process involves a significant degree of performative activity, as some tests may have limited clinical validity but are used for marketing and billing purposes. This is further exacerbated by the commercial incentives.",
+    "perspectival_gap": "Elderly patients experience the system as a snare, as they often lack the knowledge or power to opt out of assessments and interventions. Commercial assessment companies and associated healthcare providers experience the system as a rope, as they benefit directly from the revenue and patient volume generated. Public health systems see a tangled rope as they bear the costs but also benefit from the standardized assessment approach. The research community sees a piton, as they see the original intent of their research being distorted by commercial interests. An analytical observer sees a tangled rope, recognizing both the potential benefits and the extraction risks of the commercialized system.",
+    "directionality_logic": "The directionality values reflect the power and exit options of the different agents. Commercial assessment companies have high power and arbitrage opportunities, resulting in a low directionality value. Elderly patients have low power and limited exit options, resulting in a high directionality value. Public health systems have moderate power and are constrained by budget limitations, resulting in a moderate directionality value.",
+    "mandatrophy_analysis": "The system is classified as a tangled rope because it combines both coordination (standardized assessment) and extraction (commercialized services). The mandatrophy is resolved by recognizing that the system is not purely beneficial or purely harmful, but a complex mix of both, depending on the perspective. The potential for over-medicalization and misallocation of resources necessitates a careful assessment of the clinical validity and equitable access of the system."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

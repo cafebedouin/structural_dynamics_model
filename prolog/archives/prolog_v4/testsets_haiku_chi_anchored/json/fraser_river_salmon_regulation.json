@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "fraser_river_salmon_regulation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fsr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Fraser River Salmon Regulation",
+    "topic_domain": "economic/resource_management/indigenous_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_fishing_operators",
+      "federal_government_revenue"
+    ],
+    "victims": [
+      "indigenous_communities",
+      "salmon_ecosystem_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Indigenous Communities",
+      "comment": "PERSPECTIVE 1: INDIGENOUS COMMUNITIES (SNARE) \u2014 Structurally dependent on salmon for subsistence, cultural continuity, and treaty rights. Regulations restrict catch volumes, timing, and methods while exempting commercial operations. No exit option: salmon is central to identity and food security. Cannot exit or reorganize effectively against federal enforcement. d\u22480.92, f(d)\u22481.39, \u03c3=0.9 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Small-Scale Indigenous Fishers",
+      "comment": "PERSPECTIVE 2: SMALL-SCALE INDIGENOUS FISHERS (TANGLED ROPE) \u2014 Experience mixed coordination and extraction. Regulations coordinate conservation (genuine benefit to long-term salmon availability) but disproportionately constrain indigenous access while commercial operations receive higher allocations. Constrained exit: some livelihood diversification possible but salmon fishing remains culturally and economically central. d\u22480.70, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.56."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Commercial Fishing Operators",
+      "comment": "PERSPECTIVE 3: COMMERCIAL FISHING OPERATORS (ROPE) \u2014 Benefit from regulatory framework that allocates larger catch quotas to commercial licenses while restricting indigenous subsistence harvests. Regulations appear as coordination mechanism: allocation certainty enables business planning and capital investment. High exit optionality: can diversify into other fisheries or aquaculture if salmon quotas decline. d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Fisheries Management",
+      "comment": "PERSPECTIVE 4: FEDERAL FISHERIES MANAGEMENT (ROPE) \u2014 Derives coordination and revenue benefits from licensing fees, export permits, and administrative fees. Regulations solve legitimate collective action problem (preventing overexploitation) while generating revenue stream. High exit optionality: federal apparatus can shift to other resource domains if salmon stocks decline further. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Environmental Conservation Groups",
+      "comment": "PERSPECTIVE 5: ENVIRONMENTAL CONSERVATION GROUPS (PITON) \u2014 Originally advocated for salmon conservation as primary rationale. Now largely performative: regulations are maintained ostensibly for conservation but scientific evidence shows commercial fishing exemptions and habitat destruction continue despite conservation rhetoric. theater_ratio\u22480.64 reflects gap between conservation narrative and actual stock recovery outcomes. Conservation mandate is increasingly theatrical cover for resource extraction. d\u22480.55, f(d)\u22480.75, \u03c3=0.9 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Observes genuine coordination function (preventing commons collapse in salmon fishery) combined with asymmetric extraction (indigenous communities bear disproportionate regulatory burden while commercial interests receive preferential treatment). Treaty rights violations embedded in framework. System is maintained through enforcement (police, court system, licensing restrictions) rather than voluntary adoption. d\u22480.60, f(d)\u22480.78, \u03c3=1.0 \u2192 \u03c7\u22480.45."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "conservation_vs_extraction_attribution",
+      "question": "How much of the salmon stock decline is attributable to indigenous subsistence fishing vs. commercial fishing vs. habitat destruction vs. climate change? Does regulation apportion restrictions proportionally to actual impact?",
+      "resolution_mechanism": "Population genetics analysis, catch monitoring data, dam/habitat impact quantification, thermal regime modeling. Compare fish loss rates by sector against regulatory burden allocation.",
+      "impact": "If indigenous subsistence contributes <5% of decline but bears 40% of restrictions: regulatory allocation is purely extractive (Snare). If contribution and burden are proportional: regulation is legitimate coordination (Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of salmon decline to each sector vs. regulatory burden allocation"
+    },
+    {
+      "id": "treaty_rights_enforcement_gap",
+      "question": "Do federal fisheries regulations violate explicit treaty rights to fish for food and ceremonial purposes? If so, are enforcement mechanisms selectively applied to indigenous vs. non-indigenous operators?",
+      "resolution_mechanism": "Treaty text analysis, prosecution data by ethnicity of operator, injunction patterns, license approval rates by applicant type.",
+      "impact": "If regulations violate treaty rights and enforcement is selective: this is institutional theft (Snare). If regulations apply equally and treaty rights are legally superseded: constraint is legitimate (Tangled Rope or Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulations violate treaty rights and if enforcement is selective"
+    },
+    {
+      "id": "ecosystem_recovery_mechanism",
+      "question": "Do current restrictions on indigenous fishing actually improve salmon stock recovery? Is there evidence that relaxing commercial quotas would further damage stocks, justifying their higher allocations?",
+      "resolution_mechanism": "Time series analysis of stock recovery vs. subsistence catch levels; controlled comparison with fisheries where indigenous allocations were increased; ecosystem modeling of commercial vs. subsistence impact.",
+      "impact": "If stock decline continues despite indigenous restrictions: extraction rationale collapses (constraint is pure Snare). If stocks recover when commercial quotas tighten: conservation rationale is genuine (Tangled Rope or Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether indigenous catch restrictions are necessary for ecosystem recovery"
+    },
+    {
+      "id": "regulatory_capture_by_commercial_interests",
+      "question": "Have commercial fishing interests captured fisheries management agencies? Are regulatory decisions made in response to indigenous advocacy as frequently as commercial industry advocacy?",
+      "resolution_mechanism": "Qualitative analysis of policy documents, meeting minutes, lobbying expenditure tracking, revolving-door analysis of agency staff. Compare response time and favorability to requests by sector.",
+      "impact": "If commercial interests dominate: constraint is deliberately extractive Snare maintained by capture. If interests are balanced: constraint is more legitimately coordinated (Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture by commercial fishing interests"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Fraser River salmon regulation system originated in the late 19th century as a colonial resource management framework. Initial regulations were justified by conservation concerns about salmon stock depletion from industrial-scale harvesting. However, the regulatory apparatus has evolved into a hybrid system that combines genuine coordination functions (preventing complete commons collapse) with systematic extraction from indigenous communities. Indigenous peoples have harvested salmon from the Fraser River for millennia using sustainable practices; their catch was relatively stable and ecologically integrated. The regulatory system that emerged after contact incorporated indigenous communities as subordinate actors subject to restrictions while privileging commercial fishing operations with larger quotas and preferential access. Over the 50-year interval examined here, extractiveness has increased from 0.28 (early conservation focus) to 0.58 (current state) as commercial interests have consolidated allocations and indigenous restrictions have tightened despite stable or increasing salmon stocks when conditions allow. Theater ratio has risen from 0.35 to 0.64 as conservation rhetoric has divorced from actual stock outcomes and regulatory decision-making has become increasingly opaque. The constraint exhibits all the hallmarks of institutional drift from Rope (pure coordination) toward Tangled Rope (mixed coordination-extraction hybrid) or Snare (pure extraction), depending on perspective.",
+    "key_agents": [
+      "Indigenous Communities (First Nations): Primary victims (powerless/trapped) \u2014 dependent on salmon for subsistence, culture, and treaty rights; bear disproportionate regulatory burden with no exit option",
+      "Small-Scale Indigenous Fishers: Secondary victims (moderate/constrained) \u2014 face catch restrictions, seasonal limitations, and method constraints; some livelihood diversification possible but salmon remains culturally central",
+      "Commercial Fishing Operators: Primary beneficiaries (institutional/arbitrage) \u2014 receive larger catch allocations and export privileges; can exit into alternative fisheries if salmon declines",
+      "Federal Fisheries Management: Secondary beneficiary (institutional/arbitrage) \u2014 derives revenue from licensing fees and administrative permits; manages agency resources through regulatory allocations",
+      "Environmental Conservation Groups: Organized actors (organized/constrained) \u2014 originally advocates for genuine conservation but now maintain performative conservation narrative that legitimizes current allocations",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 observes structural divergence between stated conservation goals and actual allocation patterns favoring commercial extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The regulatory system extracts significant value from indigenous communities through catch restrictions, licensing barriers, and enforcement mechanisms that disproportionately affect subsistence harvesting. Commercial operators receive preferential quota allocations despite producing greater ecological impact per unit catch (industrial fishing methods cause more bycatch and habitat disruption). The extraction is substantial but not maximal because the system retains a coordination function (preventing total commons collapse) and some indigenous harvesting remains permitted. Suppression (0.68): High. Enforcement mechanisms include federal licensing requirements (creating barriers to entry), seasonal closures (limiting access windows), method restrictions (prohibiting traditional harvesting approaches), and criminal penalties for unauthorized fishing (backed by police and courts). Alternatives to participation in the regulated system are severely limited \u2014 subsistence cannot be obtained through markets at affordable scale, and cultural loss is irreversible. Theater ratio (0.64): Moderate-high. Initial conservation rationale is maintained in policy documents and regulatory announcements, but empirical outcomes show stocks remain stressed despite indigenous catch reductions, while commercial operations continue with higher quotas. Scientific advisory processes exist but are often ignored when recommendations conflict with commercial interests. The gap between stated conservation goals and actual regulatory outcomes reflects theatrical maintenance of legitimacy rather than genuine problem-solving.",
+    "perspectival_gap": "The perspectival gap is stark and reflects the structural conflict between beneficiaries and victims. Commercial operators and federal management see the system as coordination (Rope) \u2014 allocation certainty, predictable enforcement, revenue generation. Indigenous communities see it as pure extraction (Snare) \u2014 restricted access to their ancestral resource, enforcement against their traditional practices, loss of cultural continuity. The analytical observer sees Tangled Rope \u2014 genuine coordination function combined with systematic asymmetric extraction. The conservation narrative tries to paper over this gap by claiming all restrictions are proportional to ecological necessity, but the evidence suggests restrictions are apportioned by political power and historical access rights rather than by ecological impact. This perspectival gap is not resolvable through better information; it is a structural feature of how the regulatory system allocates burdens and benefits.",
+    "directionality_logic": "Indigenous communities: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximal extraction direction. Complete dependence on salmon for subsistence and culture; no exit options; constraints are non-negotiable from their position. Commercial operators: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Maximal beneficiary direction. Can exit constraint through diversification; regulations provide certainty and preferential access. Federal management: Beneficiaries + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Maximal beneficiary direction. Revenue stream and administrative power; no institutional incentive to relax regulations. Environmental groups: Mixed + constrained \u2192 d\u22480.55, f(d)\u22480.75. Originally advocates for indigenous rights and genuine conservation; now constrained within systems that silence their conservation concerns when inconvenient to commercial interests. Analytical observer: neutral analytical position \u2192 d\u22480.60, f(d)\u22480.78. Observes structural asymmetry without direct extraction or benefit; sees hybrid coordination-extraction dynamic.",
+    "mandatrophy_analysis": "Mandatrophy is central to this constraint because the system appears to many policymakers as pure coordination (Rope: conservation mechanism preventing commons tragedy) while structurally functioning as Tangled Rope (hybrid coordination-extraction) or even Snare (pure extraction) from indigenous perspectives. The resolution requires rejecting the mandatrophy by recognizing that the constraint is NOT a pure conservation problem because: (1) conservation rhetoric is selective \u2014 it applies to indigenous subsistence fishing but not commercial fishing, despite commercial operations having greater ecological impact; (2) regulatory allocations do not correlate with ecological impact (indigenous subsistence represents ~5-10% of mortality; commercial operations represent ~60-70%, yet restrictions are inverted); (3) enforcement is asymmetric (indigenous violations trigger prosecution; commercial violations are often administrative). The Tangled Rope classification resolves mandatrophy by identifying the genuine coordination function (preventing total stock collapse) while insisting on accurate characterization of who bears costs and who captures benefits. The system maintains its appearance as legitimate coordination through theater (conservation language, scientific advisory bodies, environmental rhetoric) while the actual allocation pattern reflects extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "canadian_indigenous_treaty_enforcement",
+      "west_coast_fisheries_commons"
+    ],
+    "dual_formulation_note": "Fraser River salmon regulation is downstream of broader Canadian colonial resource management frameworks (affects_constraints: canadian_indigenous_treaty_enforcement) and interacts with west coast marine commons dynamics. The \u03b5 value of 0.58 reflects the specific regulatory allocation bias; the broader treaty framework has higher extractiveness (\u22480.75) and the commons has lower extractiveness if indigenous management were restored (\u22480.15)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

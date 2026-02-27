@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "ai_nonconsensual_content_facilitation",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Facilitation of AI-Generated Non-Consensual Sexual Content on Social Media Platforms",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_content_creators",
+      "platform_operators"
+    ],
+    "victims": [
+      "content_subjects",
+      "platform_users"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Content Subjects",
+      "comment": "Victims of AI-generated non-consensual sexual content are trapped by the rapid dissemination and permanence of the images online, with limited recourse for removal."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Platform Operators",
+      "comment": "Platform operators maintain content moderation policies and technical affordances (e.g., reporting mechanisms) that ostensibly address non-consensual content, but these measures are often ineffective at preventing or promptly removing AI-generated material, representing a degraded or theatrical response."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "AI Content Creators",
+      "comment": "AI content creators benefit from the ease of generating and sharing non-consensual sexual content, but may face (limited) legal or social consequences if caught and prosecuted."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Platform Users",
+      "comment": "General platform users, especially those vulnerable to exposure, are exposed to non-consensual sexual content, undermining the expected safety and consensual interactions within the platform environment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the overall structure as a tangled rope, where the facilitation of AI-generated non-consensual content involves a mix of coordination (platform functionalities) and asymmetric extraction (harm to victims)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_countermeasures_efficacy",
+      "question": "How effective are technical countermeasures, such as AI-based detection and content filtering, at preventing the dissemination of AI-generated non-consensual sexual content?",
+      "resolution_mechanism": "Empirical testing of AI detection tools against a representative dataset of AI-generated content; analysis of platform moderation logs to assess removal rates.",
+      "impact": "If highly effective: constraint may shift towards rope (coordination) or scaffold (temporary solution). If ineffective: constraint remains a snare, necessitating alternative interventions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of technical countermeasures in preventing dissemination"
+    },
+    {
+      "id": "legal_liability_threshold",
+      "question": "What level of legal liability would effectively deter platforms from facilitating the dissemination of AI-generated non-consensual sexual content?",
+      "resolution_mechanism": "Analysis of legal precedents and ongoing legal challenges; modeling of platform responses to varying liability regimes.",
+      "impact": "If high liability: platforms may implement more robust content moderation and prevention measures. If low liability: platforms lack incentives to address the issue, perpetuating the snare.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Level of legal liability needed to deter platform facilitation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Social media platforms, particularly X, operate with policies and technical affordances that enable and facilitate the rapid creation and viral dissemination of non-consensual sexual images generated by AI. This creates a structure where victims are trapped by the permanence of the content, platforms enable the activity through weak moderation, and AI content creators gain notoriety or revenue from the exploitative content.",
+    "key_agents": [
+      "Content Subjects: Primary victim (powerless/trapped) \u2013 experience direct harm and limited recourse.",
+      "Platform Operators: Institutional actor (institutional/constrained) \u2013 maintain weak moderation policies and limited enforcement.",
+      "AI Content Creators: Primary beneficiary (moderate/mobile) \u2013 profit from creation and dissemination, but face risk of consequences.",
+      "Platform Users: Secondary victims (powerless/trapped) \u2013 general users are exposed to exploitative content."
+    ],
+    "logic_rationale": "Extractiveness (0.75): High. The constraint extracts significant harm from victims through the creation and dissemination of non-consensual sexual content. Suppression (0.80): High. Victims are highly suppressed due to lack of effective removal mechanisms and the rapid spread of content. Theater ratio (0.75): High. Platforms maintain content moderation policies, but enforcement is weak and largely performative, resulting in limited actual prevention.",
+    "perspectival_gap": "Content subjects see a snare, where they are trapped and experience direct harm. Platform operators see a degraded or theatrical response (piton) with limited effectiveness. AI content creators see a mixed situation (tangled rope) with benefits but also risks. An analytical observer recognizes the overall system as a tangled rope, with a mix of coordination and asymmetric extraction.",
+    "directionality_logic": "The directionality is determined by the structural position of each agent. Victims are trapped and experience maximum extraction. Platforms, while seemingly in control, are constrained by technical limitations and economic incentives. AI content creators gain from the activity, but are exposed to potential legal issues, so the exit option is mobile. The extracted benefits are not evenly distributed, making it a tangled rope.",
+    "mandatrophy_analysis": "The claim that this is a snare arises from observing the harms suffered by content subjects and the ineffectiveness of platform moderation. It can be differentiated from a rope by observing that platform features are primarily used for profit seeking and self-preservation (limited legal liability), and that extraction is the defining feature of the system."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

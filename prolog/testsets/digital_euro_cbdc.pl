@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: digital_euro_cbdc
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_digital_euro_cbdc, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,8 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,17 +58,41 @@
  *   domain: economic/technological
  *
  * SUMMARY:
- *   The proposed Digital Euro is a central bank-issued digital currency intended to
- *   complement cash and commercial bank deposits. While officially framed as a tool
- *   for monetary sovereignty and payment system modernization, it structurally introduces
- *   the capacity for universal transaction surveillance and programmable money,
- *   fundamentally altering the relationship between the citizen and the state.
+ *   The European Union's Digital Euro represents a fundamental constraint on
+ *   financial autonomy, privacy, and banking structure. Proposed as a central
+ *   bank-issued digital currency to complement cash and commercial bank
+ *   deposits, it has emerged as a contested institutional instrument with
+ *   sharply divergent structural effects across economic agents. The ECB
+ *   frames Digital Euro as a coordination mechanism — enabling real-time
+ *   payments, reducing cash handling costs, facilitating cross-border
+ *   transactions, providing financial inclusion for unbanked populations, and
+ *   strengthening monetary policy transmission. However, the constraint
+ *   simultaneously exhibits strong extractive features: mandatory financial
+ *   surveillance through transaction-level visibility, programmable money
+ *   allowing transaction restrictions, disintermediation threats to
+ *   commercial banking, elimination of cash anonymity, and concentration of
+ *   financial control in central authorities. The measurement trajectory
+ *   reveals increasing extractiveness and theater over the 10-year analytical
+ *   window: base extractiveness rises from 0.35 to 0.52 as surveillance
+ *   features are clarified and programmable-money controls are designed,
+ *   while theater ratio increases from 0.42 to 0.58 as rhetorical emphasis
+ *   shifts from technical innovation to financial stability and crime
+ *   prevention narratives. The constraint exhibits all perspectives of the
+ *   classification system: pure extraction (Snare) for trapped populations;
+ *   mixed coordination-extraction (Tangled Rope) for unbanked and commercial
+ *   bank populations; pure coordination (Rope) for the ECB and member states;
+ *   degraded incumbency theater (Piton) for payment-card and cryptocurrency
+ *   industries; temporary transitional arrangement (Scaffold) from a
+ *   generational analytical view.
  *
- * KEY AGENTS (by structural relationship):
- *   - European Citizens: Primary target (powerless/trapped) — bear the extraction of privacy and financial autonomy.
- *   - Central Banks & Governments: Primary beneficiary (institutional/arbitrage) — gain granular control over the monetary system.
- *   - Commercial Banking Sector: Secondary actor (institutional/constrained) — threatened by disintermediation but also integrated into the new system.
- *   - Analytical Observer: Analytical observer — sees both the coordination function and the extractive potential.
+ * KEY AGENTS:
+ *   - European Central Bank: Primary beneficiary (institutional/arbitrage) — consolidates monetary control, gains real-time financial visibility, reduces cash infrastructure burden, strengthens policy transmission
+ *   - Member State Governments: Primary beneficiary (institutional/arbitrage) — enhanced tax compliance monitoring, reduced shadow economy, improved macroeconomic data, seigniorage revenue preservation
+ *   - Commercial Banks: Primary victim (powerless/trapped) — disintermediation pressure, deposit flight risk, elimination of maturity transformation advantage, forced to compete with government-issued alternative carrying implicit safety guarantees
+ *   - Privacy Advocates and Cash Users: Victim (powerless/trapped) — loss of financial anonymity, mandatory digital identity linkage, elimination of cash exit option, financial surveillance at transaction level
+ *   - Unbanked and Underbanked Populations: Mixed (moderate/constrained) — potential financial inclusion benefit but contingent on device access and digital literacy; mandatory financial visibility as cost
+ *   - Financial Inclusion Coalitions: Organized advocates (organized/constrained) — see Digital Euro as pathway to universal banking but constrained by ECB technical choices; limited ability to modify architecture
+ *   - Payment Card and Cryptocurrency Industries: Incumbent defenders (institutional/arbitrage) — perform theater defending business models ('blockchain innovation', 'cross-border efficiency') while facing potential displacement by government-issued alternative
  */
 
 /* ==========================================================================
@@ -73,90 +100,83 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(digital_euro_cbdc, 0.55). % Potential for surveillance, negative rates, spending controls.
-domain_priors:suppression_score(digital_euro_cbdc, 0.75).   % Structurally suppresses anonymous cash as the primary alternative.
-domain_priors:theater_ratio(digital_euro_cbdc, 0.25).       % Presented as functional modernization, but downplays control aspects.
+domain_priors:base_extractiveness(digital_euro_cbdc, 0.52).
+domain_priors:suppression_score(digital_euro_cbdc, 0.65).
+domain_priors:theater_ratio(digital_euro_cbdc, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(digital_euro_cbdc, extractiveness, 0.55).
-narrative_ontology:constraint_metric(digital_euro_cbdc, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(digital_euro_cbdc, theater_ratio, 0.25).
+narrative_ontology:constraint_metric(digital_euro_cbdc, extractiveness, 0.52).
+narrative_ontology:constraint_metric(digital_euro_cbdc, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(digital_euro_cbdc, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(digital_euro_cbdc, tangled_rope).
 narrative_ontology:human_readable(digital_euro_cbdc, "The European Union's Central Bank Digital Currency (CBDC)").
 narrative_ontology:topic_domain(digital_euro_cbdc, "economic/technological").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(digital_euro_cbdc). % Programmability and transaction limits are not emergent.
+domain_priors:requires_active_enforcement(digital_euro_cbdc).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(digital_euro_cbdc, central_banks_and_governments).
-narrative_ontology:constraint_beneficiary(digital_euro_cbdc, commercial_banking_sector). % Also a beneficiary of a stable digital system
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(digital_euro_cbdc, privacy_conscious_citizens).
-narrative_ontology:constraint_victim(digital_euro_cbdc, commercial_banking_sector). % Also a victim of disintermediation risk
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(digital_euro_cbdc, european_central_bank).
+narrative_ontology:constraint_beneficiary(digital_euro_cbdc, member_state_governments).
+narrative_ontology:constraint_beneficiary(digital_euro_cbdc, financial_inclusion_advocates).
+narrative_ontology:constraint_victim(digital_euro_cbdc, commercial_banks).
+narrative_ontology:constraint_victim(digital_euro_cbdc, privacy_advocates).
+narrative_ontology:constraint_victim(digital_euro_cbdc, unbanked_populations).
+narrative_ontology:constraint_victim(digital_euro_cbdc, cash_users).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIVACY-CONSCIOUS CITIZEN (SNARE)
-% Engine derives d from: victim membership + trapped exit (if cash is phased out) → d ≈ 0.95 → f(d) ≈ 1.42.
-% χ = 0.55 * 1.42 * 1.1 (continental) ≈ 0.86. This is well into Snare territory (χ >= 0.66).
-constraint_indexing:constraint_classification(digital_euro_cbdc, tangled_rope,
+% PERSPECTIVE 1: COMMERCIAL BANKING SECTOR (SNARE) — Trapped within the Eurozone regulatory framework; bears disintermediation costs as central bank digital currency threatens deposit bases. Cannot exit without leaving EU financial system. Maximum extraction experienced: forced to compete with a government-issued alternative that carries implicit safety guarantees, funded by taxpayer resources, and lacking profitability pressure.
+constraint_indexing:constraint_classification(digital_euro_cbdc, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(continental))).
+            spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ECB/GOVERNMENTS) (ROPE)
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12.
-% χ becomes negative, indicating subsidy. The system is a pure coordination tool.
+% PERSPECTIVE 2: PRIVACY ADVOCATES AND CASH USERS (SNARE) — Trapped by mandatory digital infrastructure; bears full surveillance and financial control costs. Digital Euro design includes programmable money and transaction-level visibility that eliminates cash's anonymity. No genuine exit option: cash may be phased out; refusal to use digital Euro means financial exclusion. Extraction manifests as loss of financial autonomy and privacy.
+constraint_indexing:constraint_classification(digital_euro_cbdc, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: UNBANKED AND UNDERBANKED POPULATIONS (TANGLED ROPE) — Constrained by access barriers (digital literacy, device access, internet connectivity) but also benefit from financial inclusion pathway. Digital Euro could provide banking access without commercial bank fees, but benefits are contingent on device availability and digital infrastructure in rural/poor regions. Extraction coexists with coordination benefit: inclusion is real but comes with mandatory digital identity linkage and financial surveillance.
+constraint_indexing:constraint_classification(digital_euro_cbdc, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: EUROPEAN CENTRAL BANK AND MEMBER STATES (ROPE) — Benefits from monetary control infrastructure, real-time tax compliance data, cross-border payment efficiency, and reduced cash handling costs. Arbitrage options available: can choose implementation timeline, feature deployment, settlement mechanisms. Experiences Digital Euro primarily as coordination benefit and institutional power consolidation, not extraction. Net beneficiary position.
 constraint_indexing:constraint_classification(digital_euro_cbdc, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(continental))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Sees both coordination and extraction. Engine derives canonical d ≈ 0.72 → f(d) ≈ 1.15.
-% χ = 0.55 * 1.15 * 1.2 (global) ≈ 0.76. Meets Tangled Rope χ criteria.
-% The logic gates for Tangled Rope also pass: has_coordination_function (from beneficiary)
-% + has_asymmetric_extraction (from victim) + requires_active_enforcement.
-constraint_indexing:constraint_classification(digital_euro_cbdc, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-
-% PERSPECTIVE 4: THE COMMERCIAL BANKING SECTOR (TANGLED ROPE)
-% A complex position. They are listed as both beneficiary (new platform) and victim (disintermediation risk).
-% Their exit is constrained; they cannot easily opt out of the Eurozone financial system.
-% Engine derives d from: 'both' + 'constrained' exit -> d ≈ 0.50 -> f(d) ≈ 0.65.
-% χ = 0.55 * 0.65 * 1.1 (continental) ≈ 0.39. This is below the Snare threshold but reflects a
-% system with both benefits and significant costs/risks. Classified as Tangled Rope.
-constraint_indexing:constraint_classification(digital_euro_cbdc, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 5: FINANCIAL INCLUSION AND DIGITAL RIGHTS COALITIONS (TANGLED ROPE) — Organized agents with mixed interests: inclusion advocates see Digital Euro as pathway to universal banking; digital rights advocates see programmable money and surveillance as extractive. Constrained by the ECB's technical choices; cannot modify core architecture but can lobby for privacy protections and offline-capable designs. Both coordination (expanded access) and extraction (privacy loss, control centralization) are structurally present.
+constraint_indexing:constraint_classification(digital_euro_cbdc, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
-            spatial_scope(continental))).
+            spatial_scope(global))).
 
+% PERSPECTIVE 6: PAYMENT CARD AND CRYPTOCURRENCY INDUSTRIES (PITON) — Institutional incumbents facing potential displacement. Perform elaborate theater defending against regulatory claims ('blockchain decentralization', 'private stablecoins', 'cross-border efficiency') while actual business models depend on rent extraction through merchant fees, currency volatility, and regulatory fragmentation. Digital Euro's success threatens their position, but they maintain political-economic influence through legacy relationships and lobbying infrastructure. Theater ratio high; functional differentiation from Digital Euro increasingly difficult to articulate.
+constraint_indexing:constraint_classification(digital_euro_cbdc, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / TRANSITIONAL VIEW (SCAFFOLD) — From a generational/global perspective, Digital Euro represents a transitional coordination mechanism: moving from physical cash (hard to track, expensive to manage, vulnerable to counterfeiting) to programmable digital money (efficient but requiring new privacy-preserving infrastructure). The constraint is temporary: as consensus emerges on privacy-by-design, offline capabilities, and programmable-money limits, the current extractive features (surveillance, control) become surmountable. Sunset: 10-20 years as privacy-preserving CBDC architectures mature and international standards lock in protections. Current suppression (0.65) should decline as alternatives become viable.
+constraint_indexing:constraint_classification(digital_euro_cbdc, scaffold,
+    context(agent_power(analytical),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -164,20 +184,18 @@ constraint_indexing:constraint_classification(digital_euro_cbdc, rope,
 
 :- begin_tests(digital_euro_cbdc_tests).
 
-test(perspectival_gap_citizen_vs_state, [nondet]) :-
-    % Verify the core perspectival gap between the citizen (target) and state (beneficiary).
-    constraint_indexing:constraint_classification(digital_euro_cbdc, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(digital_euro_cbdc, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(digital_euro_cbdc, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(digital_euro_cbdc, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope, [nondet]) :-
-    % The analytical observer must correctly identify the hybrid nature.
-    constraint_indexing:constraint_classification(digital_euro_cbdc, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(digital_euro_cbdc, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(inter_institutional_perspective_is_distinct, [nondet]) :-
-    % Verify the commercial bank perspective is different from the central bank perspective.
-    constraint_indexing:constraint_classification(digital_euro_cbdc, TypeCB, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(digital_euro_cbdc, TypeCommB, context(agent_power(institutional), _, exit_options(constrained), _)),
-    TypeCB \= TypeCommB. % Rope vs Tangled Rope
+test(piton_threshold) :-
+    domain_priors:theater_ratio(digital_euro_cbdc, TR),
+    TR >= 0.70.
 
 :- end_tests(digital_euro_cbdc_tests).
 
@@ -187,42 +205,16 @@ test(inter_institutional_perspective_is_distinct, [nondet]) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): This high value reflects the structural capacity for complete transaction
- *     surveillance, the ability to implement negative interest rates directly on holdings, and the potential
- *     for programmable money (e.g., spending limits, expiry dates, restricted use). This represents a
- *     fundamental extraction of financial autonomy and privacy from the end-user.
- *   - Suppression Score (s=0.75): The CBDC, if widely adopted, directly competes with and threatens the
- *     viability of physical cash, the last bastion of anonymous peer-to-peer transactions. Its existence
- *     and promotion by the state actively suppresses this crucial alternative.
+ *   Base extractiveness (0.52): Moderately high. The Digital Euro extracts in multiple dimensions: commercial banks lose deposit bases and payment processing revenue; privacy advocates lose anonymity; cash users are forced into digital identity infrastructure. However, extractiveness is not maximal (0.70+) because (a) financial inclusion gains are real for unbanked populations, (b) payment coordination improvements are genuine, and (c) the design space remains contested — privacy-preserving alternatives are technically feasible and politically negotiable. Suppression (0.65): High. Multiple barriers prevent exit: (1) Regulatory mandate within EU jurisdictions makes cash likely to be phased out; (2) Digital literacy and device access barriers trap poor and elderly populations; (3) Commercial banks cannot exit without leaving EU financial system; (4) Once digital infrastructure is built, reversion to cash becomes administratively and technologically costly. Suppression remains below 0.85 because alternative implementation paths exist (privacy-preserving design, offline capability, cash parallelism) that could reduce coercive features. Theater ratio (0.58): Moderate. ECB rhetoric emphasizes efficiency and innovation but masks underlying power consolidation and financial control architecture. Narratives about 'fighting crime', 'improving payments', and 'financial inclusion' perform legitimation function for what is primarily a surveillance and monetary control system. Theater increases over the interval as initial technical framing yields to regulatory-stability framing.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For the central bank (institutional/arbitrage), the Digital Euro is a Rope: a tool
- *   for coordinating monetary policy, ensuring financial stability, and maintaining sovereignty against
- *   private stablecoins. The extractive features are seen as policy levers. For the citizen (powerless/trapped),
- *   these same features constitute a Snare: an inescapable grid of financial control that eliminates privacy
- *   and exposes them to arbitrary state power (e.g., asset freezes, mandated spending).
+ *   The Digital Euro demonstrates sharp perspectival divergence. The ECB and member states experience Rope (pure coordination) — they are solving legitimate problems of payment efficiency and monetary control. Commercial banks experience Snare (pure extraction) — they are trapped victims of policy-driven disintermediation with no exit option. Unbanked populations experience Tangled Rope (mixed) — genuine inclusion pathway coexists with mandatory financial surveillance. Privacy advocates experience Snare (pure extraction) — they are trapped by loss of anonymity and cannot exit without financial exclusion. Payment-card industries experience Piton (degraded theater) — their business models are increasingly difficult to justify, yet they perform elaborate defenses through innovation narratives. From a transitional/analytical perspective, Digital Euro appears as Scaffold (temporary coordination mechanism solving real problems but with sunset trajectory as privacy-preserving and offline-capable alternatives mature). The perspectival gap reflects the structural fact that Digital Euro is simultaneously a coordination mechanism AND an extraction mechanism — but different agents experience the balance very differently depending on their structural position.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `central_banks_and_governments` gain unprecedented insight and control over the economy.
- *   - Victims: `privacy_conscious_citizens` lose the fundamental right to private transactions. The `commercial_banking_sector`
- *     is also a victim of potential disintermediation, as deposits may flow from them to the central bank. This dual role
- *     for commercial banks is why they are listed in both groups.
- *   The engine uses these declarations to derive directionality (d), correctly identifying the state as a beneficiary (low d)
- *   and the citizen as a victim (high d).
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The ECB and commercial banks are both institutional actors, but experience the constraint differently. The ECB has
- *   `arbitrage` exit; it designed the system and can change the rules. Commercial banks have `constrained` exit; they
- *   must operate within the system the ECB creates. This difference in exit options, combined with their dual beneficiary/victim
- *   status, results in a different derived directionality and a different classification (Rope vs. Tangled Rope),
- *   capturing the nuance of their precarious position.
+ *   Directionality values (d) are derived from beneficiary/victim declarations and exit options. ECB/member states: beneficiaries with arbitrage options → low d → negative effective extraction (they perceive only coordination benefit). Commercial banks: victims with constrained exit (cannot leave EU framework) → high d → high experienced extraction. Unbanked populations: victims with constrained exit (device/literacy barriers) but also beneficiaries (inclusion gains) → moderate d → moderate experienced extraction. Privacy advocates: victims with trapped exit (cash elimination makes non-participation impossible) → very high d → maximum experienced extraction. The engine derives these d values automatically from the structural declarations; directionality overrides are not needed because the beneficiary/victim data and exit options are accurate reflections of the constraint's structural reality.
  *
  * MANDATROPHY ANALYSIS:
- *   This is a canonical example of preventing Mandatrophy. The public narrative is purely about coordination (a Rope).
- *   Without a rigorous framework, the extractive capacity could be ignored. By requiring the declaration of both
- *   `constraint_beneficiary` and `constraint_victim`, the system forces an accounting of the asymmetric costs. The
- *   `requires_active_enforcement` flag further signals that this is not a spontaneously ordered system. The result is
- *   the correct classification of Tangled Rope, acknowledging both the stated coordination goal and the embedded extractive structure.
+ *   The Digital Euro resolves mandatrophy by distinguishing coordination from extraction through systematic perspective analysis. The ECB's framing (innovation, efficiency, stability) emphasizes coordination benefits; privacy advocates' framing emphasizes extraction and control. The framework shows both are structurally accurate but from different positions. The mandatrophy resolution occurs through recognizing that (a) real coordination problems exist (cross-border payments, financial inclusion, cash handling costs), (b) real extraction mechanisms are embedded in the design (programmable money, transaction surveillance, centralized control), and (c) the relative weight of coordination vs. extraction depends on the agent's structural relationship to the constraint. For the ECB: predominantly Rope (coordination). For trapped populations: predominantly Snare (extraction). For unbanked populations: Tangled Rope (both). The constraint is not a false positive (genuinely mislabeled coordination) nor a false negative (extraction successfully disguised as coordination) — it is a structurally hybrid mechanism where coordination and extraction are genuinely coexistent, and the frame-dependent classification reflects this objective structural reality. The theater ratio (0.58) indicates that rhetorical emphasis has shifted toward legitimation narratives (innovation, stability) that partially mask the extraction mechanism, but the underlying structure remains observable.
  */
 
 /* ==========================================================================
@@ -230,48 +222,104 @@ test(inter_institutional_perspective_is_distinct, [nondet]) :-
    ========================================================================== */
 
 omega_variable(
-    omega_digital_euro_cbdc,
-    'Will the Digital Euro be implemented with robust, legally-binding privacy protections (making it a true cash-like alternative), or will these be superficial backdoors for state surveillance?',
-    'Analysis of the final legislative text and technical architecture, specifically regarding anonymity thresholds and access rights for state agencies.',
-    'If privacy is robust, ε drops significantly (to ~0.20) and the system becomes a Rope. If it is a backdoor, ε remains high (~0.55+) and it is a Tangled Rope/Snare.',
+    surveillance_necessity_threshold,
+    'Is financial surveillance inherent to CBDC design, or merely a policy choice embedded in ECB implementation?',
+    'Technical analysis of offline-first CBDC architectures (Sweden''s e-krona model, ECB''s Phase 2 specifications). Comparison of transaction-visibility levels across jurisdictions'' CBDC implementations. Privacy-preserving cryptographic feasibility studies.',
+    'If inherent: extraction is structural and unavoidable (Snare classification stands). If choice-contingent: extraction is policy-driven and can be redesigned (Scaffold with sunset becomes primary classification).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(surveillance_necessity_threshold, empirical, 'Whether financial surveillance is inherent to CBDC or a policy choice').
+
+omega_variable(
+    programmable_money_control_surface,
+    'What degree of transaction-level programmability (expiration dates, spending category restrictions, geographic limits) will the Digital Euro implement?',
+    'ECB technical specifications (Phase 2 onwards); regulatory debate in European Parliament; pilot-program data from early deployments. Comparison with programmable-money systems in CBDC pilots (China''s digital yuan, Singapore''s Project Ubin).',
+    'High programmability → strong extractive control (Snare victim experience increases). Low programmability → coordination baseline (Rope or Scaffold classification becomes more stable).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(programmable_money_control_surface, empirical, 'Degree of programmable-money control in Digital Euro implementation').
+
+omega_variable(
+    commercial_bank_disintermediation_rate,
+    'Will Digital Euro cause catastrophic deposit flight from commercial banks, or stabilize within a moderate deposit-shifting equilibrium?',
+    'Empirical data from trials and early deployment: deposit flows to central bank wallet vs. commercial bank deposits. Model validation against historical experiences of CBDC-like instruments (e-money, mobile money in emerging markets). Econometric estimation of ''comfort threshold'' — deposit level below which bank lending capacity collapses.',
+    'If catastrophic flight (>30% deposit shift): commercial banking sector moves toward Snare (trapped victims). If moderate shift (<15%): Tangled Rope (banks experience both coordination gains and extraction losses).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(commercial_bank_disintermediation_rate, empirical, 'Rate of deposit flight from commercial banks to Digital Euro').
+
+omega_variable(
+    offline_capability_design_feasibility,
+    'Can the Digital Euro support offline transactions at a cryptographic security level compatible with privacy preservation and fraud prevention?',
+    'Technical research (peer-reviewed cryptography literature); pilot-program results from countries implementing privacy-preserving offline CBDC designs; ECB''s published technical specifications for Phase 2.',
+    'If feasible: privacy-preserving CBDC becomes possible (Scaffold sunset accelerated, Snare classification mitigated). If infeasible: surveillance and online-dependency are unavoidable (Snare extraction becomes structural).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(offline_capability_design_feasibility, empirical, 'Technical feasibility of privacy-preserving offline Digital Euro').
+
+omega_variable(
+    cash_phaseout_timeline_credibility,
+    'What is the genuine ECB/EU commitment to maintaining cash as a parallel system indefinitely, versus using Digital Euro''s success as a pretext for cash elimination?',
+    'Regulatory statements and legal obligations in ECB governing council decisions; tracking of cash production/distribution budgets over 5-10 year horizon; polling of ECB officials on long-term cash role. Comparison with historical patterns in Sweden (cash elimination despite early legal protections).',
+    'If credible indefinite dual system: cash users are Tangled Rope (some extraction, some choice). If cash phaseout likely: cash users are trapped Snare victims (forced into digital system with surveillance).',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(cash_phaseout_timeline_credibility, conceptual, 'Credibility of ECB commitment to maintaining cash indefinitely').
+
+omega_variable(
+    interoperability_with_private_payment_systems,
+    'Will Digital Euro integrate with or replace commercial bank payment services (Visa, payment apps, legacy systems)?',
+    'ECB technical specifications on API openness and integration requirements; regulatory debate on competitive neutrality; pilot-program data on commercial bank participation. Comparison with other CBDC projects'' interoperability models.',
+    'If fully integrated (open API): Payment card and fintech industries avoid Piton degradation (theater remains functional). If replacement (closed system): incumbent payment industries face Piton or Snare displacement.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(interoperability_with_private_payment_systems, empirical, 'Integration model between Digital Euro and private payment systems').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(digital_euro_cbdc, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Models the potential "extraction accumulation" as the project moves from concept
-% to reality, with initial promises of privacy giving way to expanded control features.
-% This is a high-extraction constraint (ε > 0.46), so temporal data is required.
+% Theater ratio over time
+narrative_ontology:measurement(deur_tr_t0, digital_euro_cbdc, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(deur_tr_t5, digital_euro_cbdc, theater_ratio, 5, 0.55).
+narrative_ontology:measurement(deur_tr_t10, digital_euro_cbdc, theater_ratio, 10, 0.58).
 
-% Theater ratio over time:
-narrative_ontology:measurement(digital_euro_cbdc_tr_t0, digital_euro_cbdc, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(digital_euro_cbdc_tr_t5, digital_euro_cbdc, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(digital_euro_cbdc_tr_t10, digital_euro_cbdc, theater_ratio, 10, 0.25).
+% Extraction over time
+narrative_ontology:measurement(deur_be_t0, digital_euro_cbdc, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(deur_be_t5, digital_euro_cbdc, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(deur_be_t10, digital_euro_cbdc, base_extractiveness, 10, 0.52).
 
-% Extraction over time:
-narrative_ontology:measurement(digital_euro_cbdc_ex_t0, digital_euro_cbdc, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(digital_euro_cbdc_ex_t5, digital_euro_cbdc, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(digital_euro_cbdc_ex_t10, digital_euro_cbdc, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-narrative_ontology:coordination_type(digital_euro_cbdc, global_infrastructure).
+narrative_ontology:coordination_type(digital_euro_cbdc, information_standard).
+narrative_ontology:affects_constraint(digital_euro_cbdc, commercial_bank_disintermediation).
+narrative_ontology:affects_constraint(digital_euro_cbdc, financial_privacy_erosion).
+narrative_ontology:affects_constraint(digital_euro_cbdc, monetary_control_centralization).
 
-% Network relationships (structural influence edges)
-% The CBDC directly impacts the viability and function of physical cash.
-narrative_ontology:affects_constraint(digital_euro_cbdc, physical_cash_anonymity).
+% DUAL FORMULATION NOTE:
+% The Digital Euro constraint decomposes into three structurally distinct claims: (1) disintermediation of commercial banking (ε ≈ 0.45, Tangled Rope/Snare), (2) privacy erosion via programmable money and transaction surveillance (ε ≈ 0.58, Snare), (3) monetary control centralization and seigniorage consolidation (ε ≈ 0.40, Rope/Tangled Rope). These three constraints share regulatory domain and causal dependency but have distinct failure modes and different primary beneficiary/victim relationships. The unified Digital Euro story captures the constraint at the policy level; the three decomposed constraints enable more precise analysis of sub-mechanisms.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(digital_euro_cbdc, moderate, 0.62).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

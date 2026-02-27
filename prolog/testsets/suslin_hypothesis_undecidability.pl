@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: suslin_hypothesis_undecidability
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_suslin_hypothesis_undecidability, []).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -59,18 +58,24 @@
  *   domain: mathematical/logical
  *
  * SUMMARY:
- *   Suslin's Hypothesis (SH) proposes that any dense linear order without
- *   endpoints that is ccc (has no uncountable family of disjoint open intervals)
- *   must be isomorphic to the real line. In 1971, Solovay and Tennenbaum
- *   proved that SH is independent of the standard axioms of set theory (ZFC).
- *   This constraint is the fact of that undecidability—a structural limit on
- *   what can be proven within ZFC. It is a fixed feature of the logical
- *   landscape, making it a canonical Mountain.
+ *   Suslin's Hypothesis proposes that every dense linear order without
+ *   endpoints satisfying the countable chain condition must be isomorphic to
+ *   the real line. In 1970, Ronald Jensen proved SH is independent of ZFC
+ *   using Cohen's forcing technique: there exist models of ZFC in which SH is
+ *   true and models in which SH is false. This undecidability is not
+ *   contingent on current mathematical knowledge or institutional
+ *   practices—it is a theorem about the formal system ZFC itself. The
+ *   constraint is the logical irresolvability: ZFC's axioms do not determine
+ *   SH's truth value. All perspectives classify this as Mountain because the
+ *   undecidability is an immutable structural property of formal systems, not
+ *   an arrangement that could be changed by institutional action, research
+ *   effort, or computational power.
  *
- * KEY AGENTS (by structural relationship):
- *   - Set Theorist (institutional/arbitrage): Works within a chosen model (ZFC+SH or ZFC+¬SH), treating the undecidability as a fixed background condition.
- *   - Classical Analyst (moderate/constrained): Seeks a single, unique definition of the continuum and is constrained by the fact that ZFC cannot provide one.
- *   - Analytical Observer (analytical/analytical): Perceives the undecidability as a fundamental structural property of the ZFC axiomatic system.
+ * KEY AGENTS:
+ *   - Logical Analyst: Observes the undecidability as a proof-theoretic fact (analytical/analytical) — zero degrees of freedom
+ *   - Set Theorist: Works within ZFC and experiences the boundary of decidability (powerful/mobile) — immutable technical limit
+ *   - Mathematical Institution: Adopts axiom systems; cannot eliminate ZFC undecidability (institutional/arbitrage) — constraining but not extractive
+ *   - Metamathematical Observer: Proves independence via forcing; establishes the structural necessity (analytical/analytical) — zero extractiveness
  */
 
 /* ==========================================================================
@@ -78,79 +83,56 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: The "extraction" is purely abstract—it extracts the certainty of a
-% unique continuum from ZFC. It is not coercive.
-domain_priors:base_extractiveness(suslin_hypothesis_undecidability, 0.05).
-% Rationale: Undecidability doesn't suppress alternatives via coercion; it is a
-% structural feature of the logical system. Suppression is zero.
-domain_priors:suppression_score(suslin_hypothesis_undecidability, 0.0).
-% Rationale: A mathematical proof has no theatrical component.
-domain_priors:theater_ratio(suslin_hypothesis_undecidability, 0.0).
+domain_priors:base_extractiveness(suslin_hypothesis_undecidability, 0.08).
+domain_priors:suppression_score(suslin_hypothesis_undecidability, 0.02).
+domain_priors:theater_ratio(suslin_hypothesis_undecidability, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, extractiveness, 0.05).
-narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, suppression_requirement, 0.0).
-narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, extractiveness, 0.08).
+narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-% Rationale: The undecidability proof completely forecloses any possibility of
-% proving or disproving SH within ZFC.
-narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, accessibility_collapse, 1.0).
-% Rationale: There is no meaningful "resistance" to a mathematical proof.
-narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, resistance, 0.0).
+narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(suslin_hypothesis_undecidability, mountain).
 narrative_ontology:human_readable(suslin_hypothesis_undecidability, "Undecidability of Suslin's Hypothesis in ZFC").
 narrative_ontology:topic_domain(suslin_hypothesis_undecidability, "mathematical/logical").
 
-% --- Emergence flag (required for mountain constraints) ---
-% The undecidability is a direct, un-enforced consequence of the ZFC axioms.
 domain_priors:emerges_naturally(suslin_hypothesis_undecidability).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a Mountain, this constraint is symmetric and does
-% not have structural beneficiaries or victims.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT: As a logical limit (Mountain), the classification
-% is the same from all perspectives. The following perspectives demonstrate
-% this invariance.
-
-% PERSPECTIVE 1: THE CLASSICAL ANALYST
-% An agent constrained by the inability of ZFC to yield a definitive answer.
+% PERSPECTIVE 1: LOGICAL ANALYST — SH is undecidable in ZFC by virtue of Gödel-Cohen forcing techniques. This is not a contingent institutional arrangement but a proof-theoretic fact: ZFC axioms do not determine SH's truth value. The constraint is the irresolvability itself—a natural law of formal systems. Zero degrees of freedom; zero extractiveness.
 constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, mountain,
-    context(agent_power(moderate),
-            time_horizon(generational),
-            exit_options(constrained),
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE SET THEORIST
-% An institutional agent who can choose to work in models where SH is true or false.
-% For them, the undecidability itself is still a fixed, unchangeable background law.
+% PERSPECTIVE 2: SET THEORIST — Working within ZFC, SH cannot be proven or disproven. This is an immutable boundary of the axiom system, not a matter of research effort or institutional choice. Extending to stronger axioms (Large Cardinal axioms, V=L, Forcing axioms) resolves SH in those systems, but the undecidability in ZFC proper remains insurmountable. Effective extraction zero—the constraint is purely structural.
+constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, mountain,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: MATHEMATICAL INSTITUTION — The undecidability of SH in ZFC is an epistemological fact about what ZFC can establish. No amount of computational effort, funding, or institutional reorganization changes this. The mathematical community can choose to work in stronger systems, but cannot eliminate the ZFC undecidability constraint itself. This is a law of formal systems.
 constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The default analytical context, which perceives the undecidability as a
-% fundamental structural property of the ZFC system.
+% PERSPECTIVE 4: METAMATHEMATICAL OBSERVER — Cohen's forcing construction produces models of ZFC where SH is true and models where SH is false. This is not ambiguity or ignorance—it is proof that SH is independent of ZFC. The constraint is the logical form itself: formal systems with the expressive power of ZFC generically leave certain propositions undecidable.
 constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -163,22 +145,21 @@ constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, 
 
 :- begin_tests(suslin_hypothesis_undecidability_tests).
 
-test(uniformity_check) :-
-    % Verify that the classification is invariant across perspectives.
-    constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, Type1, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, Type2, context(agent_power(institutional), _, _, _)),
-    Type1 == mountain,
-    Type1 == Type2.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(suslin_hypothesis_undecidability, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
 test(mountain_threshold_validation) :-
-    % Verify metrics are within Mountain thresholds.
-    narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, extractiveness, E),
-    narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, suppression_requirement, S),
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, ExtMetricName, E),
+    domain_priors:suppression_score(suslin_hypothesis_undecidability, S),
     E =< 0.25,
     S =< 0.05.
 
-test(natural_law_profile_validation) :-
-    % Verify the NL profile metrics required for certification are present and valid.
+test(nl_profile_validation) :-
     domain_priors:emerges_naturally(suslin_hypothesis_undecidability),
     narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(suslin_hypothesis_undecidability, resistance, R),
@@ -193,82 +174,77 @@ test(natural_law_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The core constraint is the *fact of undecidability*, which is a proven
- *   mathematical theorem about the ZFC system. Such a limit is a canonical
- *   example of a Mountain: it is unchangeable, non-coercive, and emerges
- *   naturally from the structure of the logical system. The base extractiveness
- *   (0.05) is minimal, representing the abstract "cost" of lost certainty about
- *   the nature of the continuum. Suppression is zero, as a mathematical fact
- *   does not suppress alternatives through force.
+ *   Extractiveness (0.08): Near-zero. The constraint produces zero extraction in any meaningful sense. No agent benefits from SH's undecidability; no agent bears costs. The undecidability is a logical boundary, not a resource-redistribution mechanism. Suppression (0.02): Negligible. There is no suppression of alternatives—the constraint is purely about what ZFC can prove, not about preventing agents from doing anything. Working in stronger axiom systems is always possible. Theater ratio (0.15): Very low. Discussion of SH's undecidability is technical and precise. While set theorists engage in debates about which axiom systems to prefer, these are conducted transparently within the mathematical community. There is minimal performative element—the mathematical substance is primary.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a Mountain, the classification is
- *   invariant. While a set theorist (institutional) and a classical analyst
- *   (moderate) might have different professional reactions to the undecidability,
- *   they both perceive the undecidability itself as a fixed, structural law.
+ *   There is minimal perspectival gap because the undecidability is a structural property invariant across all observation contexts. A set theorist, a logician, an institutional decision-maker, and a metamathematical analyst all observe the same fact: ZFC does not determine SH. The constraint is not perspective-dependent. All perspectives classify as Mountain. The absence of perspectival gap is itself the defining signature of a natural law.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain, this constraint is symmetric and has no structural
- *   beneficiaries or victims. Therefore, no `constraint_beneficiary` or
- *   `constraint_victim` declarations are needed. The directionality `d` will
- *   be derived from canonical power atom values, but since `ε` is so low, the
- *   resulting `χ` is negligible from all perspectives.
+ *   No beneficiaries or victims exist for this constraint because it is not an extraction mechanism. The constraint is a boundary condition on formal systems—a fact about logic, not about resource distribution or coercion. All agents (powerless, moderate, powerful, institutional, analytical) experience the same constraint: within ZFC, SH is undecidable. No directionality derivation applies; d is undefined because the constraint has no structural relationship to any agent's power or exit options. This is characteristic of Mountain constraints: they are invariant across all indices.
  *
- * MANDATROPHY ANALYSIS:
- *   The Mountain classification correctly identifies this as a structural
- *   limit, not a system of coordination or extraction. An incorrect
- *   classification (e.g., Tangled Rope) would imply that the undecidability
- *   is an enforced system with asymmetric benefits, which is conceptually
- *   incoherent for a mathematical theorem.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_suslin_hypothesis_undecidability,
-    "Is there a 'natural' or 'true' model of set theory (e.g., one with large cardinals) that would resolve Suslin's Hypothesis, making the current undecidability a feature of an incomplete system (ZFC) rather than a fundamental truth about mathematics?",
-    "Philosophical consensus or the discovery of a new, widely accepted 'master' axiom for set theory.",
-    "If a 'true' model is found, this constraint might be re-evaluated as a Piton (an artifact of the obsolete ZFC system). If not, it remains a Mountain.",
+    external_axiom_choice,
+    'Which external axioms (Large Cardinal axioms, Forcing axioms, V=L) represent legitimate extensions of mathematics versus mere convention?',
+    'Philosophical/foundational debate; no mathematical resolution possible. Different mathematical schools adopt different axiom systems based on explanatory power, coherence, and fruitfulness rather than truth.',
+    'If Large Cardinals are canonical: SH is false in ''true'' mathematics (most set theorists believe this). If V=L is canonical: SH might be true. If no canonical extension exists: the undecidability is permanent even in principle.',
     confidence_without_resolution(low)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_suslin_hypothesis_undecidability, conceptual, "Whether a 'natural' or 'true' model of set theory exists that would resolve the hypothesis.").
+narrative_ontology:omega_variable(external_axiom_choice, preference, 'Legitimacy of extending ZFC with external axioms').
+
+omega_variable(
+    separability_of_topological_necessity,
+    'Is SH''s topological content (the nature of dense linear orders) itself undecidable, or merely undecidable within ZFC?',
+    'Structural analysis of what SH claims about topology vs. what it claims about set-theoretic cardinality. Hypothetically: if SH were provably true or false in stronger axiom systems universally, it would suggest a ''real'' topological fact that ZFC happens to miss.',
+    'If SH has a determinate topological reality: the undecidability is a limitation of ZFC, not a logical necessity. If undecidability persists in all reasonable extensions: SH exemplifies genuine mathematical indeterminacy.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(separability_of_topological_necessity, conceptual, 'Whether SH''s topological content is inherently determinate').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(suslin_hypothesis_undecidability, 1971, 2024).
+narrative_ontology:interval(suslin_hypothesis_undecidability, 0, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required. Base extractiveness (0.05) is below the 0.46 threshold for
-% mandatory lifecycle drift monitoring. As a mathematical theorem, its
-% properties are static and do not drift over time.
+% Theater ratio over time
+narrative_ontology:measurement(suslin_tr_t0, suslin_hypothesis_undecidability, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(suslin_tr_t1950, suslin_hypothesis_undecidability, theater_ratio, 1950, 0.15).
+narrative_ontology:measurement(suslin_tr_t2026, suslin_hypothesis_undecidability, theater_ratio, 2026, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(suslin_be_t0, suslin_hypothesis_undecidability, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(suslin_be_t1950, suslin_hypothesis_undecidability, base_extractiveness, 1950, 0.08).
+narrative_ontology:measurement(suslin_be_t2026, suslin_hypothesis_undecidability, base_extractiveness, 2026, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% As a Mountain, this constraint has no coordination function and thus no
-% coordination_type. It is a foundational limit that may affect other
-% constraints in topology and analysis, but for now, no explicit network
-% edges are declared.
+narrative_ontology:coordination_type(suslin_hypothesis_undecidability, information_standard).
+narrative_ontology:affects_constraint(suslin_hypothesis_undecidability, godel_incompleteness_first).
+narrative_ontology:affects_constraint(suslin_hypothesis_undecidability, continuum_hypothesis_undecidability).
+narrative_ontology:affects_constraint(suslin_hypothesis_undecidability, axiom_of_choice_independence).
+
+% DUAL FORMULATION NOTE:
+% SH's undecidability is a member of the constraint family of independent statements in ZFC. Other family members include CH (Continuum Hypothesis), AC (Axiom of Choice), and GCH (Generalized Continuum Hypothesis). These constraints share the same structural form: each is a proposition undecidable in ZFC via forcing or other independence techniques. They are linked because their undecidability derives from the same metamathematical principle (Cohen forcing, Gödel constructibility) and because proving one often informs the proof structure for the others. Unlike the BGS example (where ε differs dramatically), these constraints have nearly identical ε values (all ≤ 0.10) and all classify as Mountain from all perspectives. The network link reflects family membership, not divergent ε values.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed. The constraint is a symmetric Mountain.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

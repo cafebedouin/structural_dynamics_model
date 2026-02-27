@@ -2,24 +2,25 @@
   "header": {
     "constraint_id": "boundary_dissolution_risk",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "boundary"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
     "claimed_type": "tangled_rope",
     "human_readable": "The Infinite Porosity Trap",
     "topic_domain": "technological/labor",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "employers",
-      "monitoring_technology_providers"
+      "platform_operators",
+      "surveillance_infrastructure_vendors"
     ],
     "victims": [
-      "digital_workers",
-      "gig_economy_freelancers"
+      "knowledge_workers",
+      "autonomy_commons"
     ]
   },
   "perspectives": [
@@ -28,9 +29,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Monitored Worker",
+      "comment": "PERSPECTIVE 1: THE MONITORED WORKER (SNARE) \u2014 Professional boundary collapse is structurally irreversible within current labor markets. Employees cannot exit surveillance without forfeiting employment. The work-life boundary, once discrete, is now permeable in one direction only: surveillance flows inward constantly. No technical, contractual, or social alternative exists. Maximum extraction \u2014 worker bears full cost of porosity while receiving no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Salaried Digital Worker",
-      "comment": "PERSPECTIVE 1: THE DIGITAL WORKER (SNARE) — Individually unable to opt-out of 'always-on' culture and monitoring without risking employment. Experiences the constraint as pure extraction of personal time and autonomy. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78. This high effective extraction, combined with high suppression, meets the Snare classification gates."
+      "label": "The Knowledge Worker Collective",
+      "comment": "PERSPECTIVE 2: THE KNOWLEDGE WORKER COLLECTIVE (TANGLED ROPE) \u2014 Workers benefit from remote work access and asynchronous collaboration enabled by connectivity. They also bear extraction costs: boundary dissolution, surveillance penetration, always-on expectation. Constrained exit (cannot easily switch to offline-only work without career penalty). Mixed structure: genuine coordination function (distributed work) paired with asymmetric surveillance extraction. Active enforcement through productivity monitoring and algorithmic management."
     },
     {
       "classification_type": "rope",
@@ -38,123 +48,141 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Employer",
-      "comment": "PERSPECTIVE 2: THE EMPLOYER (ROPE) — Experiences the constraint as a pure coordination mechanism for managing a distributed workforce and maximizing productivity. As a primary beneficiary with arbitrage options (switching tech, accessing global labor), the effective extraction is negative. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: THE PLATFORM OPERATOR (ROPE) \u2014 Experiences connectivity infrastructure as pure coordination mechanism: enabling global labor matching, asynchronous work, and automated task distribution. From their perspective, monitoring is a coordination tool (verify task completion, match workers to tasks). Benefits from arbitrage (can move surveillance capabilities between markets, extract rents from data asymmetry). Low suppression experienced \u2014 they control the infrastructure and set the rules. Net beneficiary."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Gig Worker",
-      "comment": "PERSPECTIVE 3: THE GIG WORKER (TANGLED ROPE) — Experiences both the coordination benefits (flexibility) and the extractive costs (platform surveillance, precariousness). Has mobility to switch platforms, but all platforms impose similar constraints. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.76. This falls within the Tangled Rope range, reflecting the hybrid nature of their experience."
+      "label": "The Privacy Rights Coalition",
+      "comment": "PERSPECTIVE 4: THE PRIVACY RIGHTS COALITION (SCAFFOLD) \u2014 Organized agents (privacy advocates, labor unions, EU regulatory frameworks) see boundary dissolution as a temporary market failure with a sunset: data minimization laws (GDPR), right-to-disconnect regulations, portable work credentials, and decentralized identity systems are building alternative architectures. Sunset estimate: 15-25 years as regulatory frameworks mature and alternatives (federation, peer-to-peer) demonstrate viability. Low theater: these movements focus on structural alternatives rather than performative compliance. Constrained exit reflects regulatory capture resistance."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Legacy HR Department",
-      "comment": "PERSPECTIVE 4: LEGACY HR (PITON) — Tasked with implementing monitoring policies. The original function (productivity assurance) has degraded into a theatrical performance of measuring 'online presence' (keystrokes, mouse movement). The high theater_ratio (0.75) satisfies the Piton gate (≥0.70), reflecting a system maintained by institutional inertia despite its declining functional relevance."
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employment Contract Ritual",
+      "comment": "PERSPECTIVE 5: THE EMPLOYMENT CONTRACT RITUAL (PITON) \u2014 The formal employment contract once created a boundary: company property vs. personal time, workplace vs. home. Digital connectivity has eroded this boundary's practical function, but the contract ritual persists through institutional inertia. Companies still claim 'off-hours' are personal time while simultaneously monitoring email, Slack, location, and productivity metrics. Theater ratio high (0.55): the boundary is performatively maintained in contract language while being systematically violated in practice. Piton: the original function (clear separation) has atrophied; the form remains."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full structure: a genuine coordination function (enabling remote work) is inextricably linked to an asymmetric extraction mechanism (eroding worker autonomy and personal time). The classification reflects the hybrid nature of the constraint. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Limit View)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / PHYSICAL LIMIT VIEW (MOUNTAIN) \u2014 From a universal perspective, boundary dissolution appears as an inevitable feature of ubiquitous connectivity: once information can flow costlessly across space, the distinction between 'here' and 'there,' 'work time' and 'personal time' becomes a matter of computational convention rather than physical reality. The porosity is inherent to the medium. However, this naturalizes a contingent institutional choice: we could design systems with hard boundaries (end-to-end encryption, data silos, temporal firewalls), but instead we choose architectures that maximize data flow. The mountain classification is a false summit \u2014 it mistakes a design choice for a law of nature."
     }
   ],
   "omegas": [
     {
-      "id": "productivity_causality",
-      "question": "Does pervasive monitoring causally increase genuine productivity, or does it primarily incentivize performative work (theatrical 'busyness')?",
-      "resolution_mechanism": "Controlled studies comparing output quality and innovation rates between monitored and non-monitored teams in creative/knowledge work domains.",
-      "impact": "If monitoring boosts only performative work, the constraint is closer to a pure Snare. If it genuinely boosts productivity, the Rope/Tangled Rope classifications are more accurate.",
+      "id": "monitoring_technology_reversibility",
+      "question": "Can monitoring infrastructure be technically reversed or replaced once installed and normalized?",
+      "resolution_mechanism": "Historical analysis of surveillance infrastructure retraction (when has monitoring been successfully removed or opt-in made genuinely frictionless?); technical assessment of decentralized alternatives' deployment barriers",
+      "impact": "If reversible: constraint is Scaffold (temporary, with exit path). If irreversible: constraint approaches Snare (structural lock-in). Current evidence suggests partial irreversibility due to data accumulation and algorithmic dependencies.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Causal link between monitoring and genuine vs. performative productivity."
+      "description": "Whether monitoring infrastructure can be technically reversed or replaced"
     },
     {
-      "id": "autonomy_vs_flexibility_tradeoff",
-      "question": "Is the loss of boundary-defined autonomy an acceptable and fair trade for the gain in location and time flexibility?",
-      "resolution_mechanism": "Revealed preference surveys and labor market analysis on wage premiums/discounts for jobs with different mixes of flexibility and surveillance.",
-      "impact": "Defines whether the extraction is perceived as a cost or a price. If workers value flexibility more, the constraint functions more like a Rope. If they value autonomy more, it functions as a Snare.",
+      "id": "boundary_cognitive_cost",
+      "question": "Is the cognitive cost of living in a porous boundary environment a structural feature of digital work or a transitional adaptation cost?",
+      "resolution_mechanism": "Longitudinal cognitive load studies comparing workers with clear boundaries (offline-only) vs. porous boundaries (always-on); measurement of stress, focus capacity, creativity metrics over generational timescales",
+      "impact": "If structural: workers will always experience extraction regardless of regulatory fixes \u2014 constraint is closer to Mountain (inherent cost of digital labor). If transitional: new cognitive norms and technologies can reduce cost \u2014 constraint remains Snare/Tangled Rope but with possibility of mitigation.",
       "confidence": "low",
-      "type_class": "preference",
-      "description": "Worker valuation of the tradeoff between flexibility and autonomy."
+      "type_class": "empirical",
+      "description": "Whether boundary porosity cost is structural or transitional"
     },
     {
-      "id": "normalization_threshold",
-      "question": "At what point does this technologically-mediated practice become an irreversible social norm, effectively a cultural 'Mountain'?",
-      "resolution_mechanism": "Longitudinal analysis of 'right to disconnect' legislation success/failure and shifts in management theory and labor contracts over a generational timescale.",
-      "impact": "If the practice becomes fully normalized, exit options collapse and suppression approaches 1.0, potentially transforming the constraint into a Mountain from most non-analytical perspectives.",
+      "id": "opt_out_career_viability",
+      "question": "Can workers actually maintain competitive careers while opting out of boundary dissolution (going fully offline, refusing monitoring, maintaining hard time boundaries)?",
+      "resolution_mechanism": "Comparative analysis of career trajectories for boundary-respecting vs. boundary-porous workers; measurement of wage differential, advancement rates, opportunities; assessment of alternative labor market segments (cooperatives, offline firms) and their scale",
+      "impact": "If viable opt-out exists: exit_options upgrade from trapped to constrained \u2014 classification shifts from Snare toward Tangled Rope. If opt-out is purely performative or career-terminal: exit remains trapped.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether career viability is possible while opting out of boundary dissolution"
+    },
+    {
+      "id": "surveillance_data_asymmetry_necessity",
+      "question": "Is worker monitoring technically necessary for platform coordination, or is it primarily value extraction?",
+      "resolution_mechanism": "Comparison of coordination outcomes in platforms with minimal monitoring vs. maximum monitoring; analysis of task-matching efficiency, user satisfaction, and completion rates; identification of which specific monitoring datapoints are actually used for coordination decisions",
+      "impact": "If necessary for coordination: Tangled Rope classification solidified (genuine coordination + extraction). If unnecessary: classification shifts toward Snare (pure extraction masquerading as coordination).",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Threshold at which boundary dissolution becomes a fixed social norm."
+      "type_class": "empirical",
+      "description": "Whether monitoring is technically necessary or primarily extractive"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2008,
-      "value": 0.2
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2023,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2008,
+      "time_point": 0,
       "value": 0.25
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.5
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2023,
-      "value": 0.75
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
     }
   ],
   "interval": {
-    "start": 2008,
-    "end": 2023
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The 'Infinite Porosity Trap' describes the erosion of boundaries between professional and private life, driven by pervasive digital connectivity and workplace monitoring. While enabling flexible and remote work, this dissolution creates a structure that extracts uncompensated time, attention, and data from workers, while suppressing their ability to disconnect. The constraint is not a simple top-down imposition but a complex system with genuine coordination functions intertwined with extractive mechanisms.",
+    "narrative_context": "The Infinite Porosity Trap describes the structural dissolution of boundaries between professional and personal domains through ubiquitous connectivity, digital surveillance, and algorithmic management. Once discrete domains (office vs. home, work time vs. personal time, digital vs. physical presence) have become permeable, with surveillance and coordination infrastructure flowing in one direction: inward. Workers experience constant availability expectations, monitoring of productivity metrics, location tracking, communication analysis, and behavioral prediction. The constraint exhibits a perspectival range from Snare (powerless workers) through Tangled Rope (workers benefiting from remote work but under surveillance) to Rope (platform operators seeing only coordination benefits) to Scaffold (regulatory movements toward alternatives) to Piton (degraded employment contract ritual). The extractiveness trajectory shows acceleration: from 0.25 (early remote work, relatively lightweight monitoring) to 0.58 (mature surveillance capitalism integrated with employment), while theater ratio rises from 0.35 (monitoring partly functional) to 0.55 (increasingly performative compliance with anti-monitoring rhetoric while surveillance deepens). The constraint's defining feature is irreversibility within opt-in framing: once connectivity infrastructure exists, opting out requires exit from the labor market entirely.",
     "key_agents": [
-      "Digital Workers: Primary victims (powerless/trapped) — bear the costs of eroded boundaries, including burnout and loss of autonomy.",
-      "Employers: Primary beneficiaries (institutional/arbitrage) — gain perceived productivity, operational control, and flexibility from a distributed workforce.",
-      "Monitoring Technology Providers: Secondary beneficiaries (institutional/arbitrage) — profit from the sale of surveillance and productivity management tools.",
-      "Legacy HR Departments: Institutional actors (institutional/constrained) — implement monitoring policies, often resulting in performative compliance rather than functional productivity gains.",
-      "Gig Economy Freelancers: Secondary victims (moderate/mobile) — experience an extreme version of the trap, trading precarity for flexibility under constant platform surveillance."
+      "Knowledge Workers: Primary victims (powerless/trapped) \u2014 cannot exit surveillance without losing employment; experience one-way boundary dissolution",
+      "Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture value from data asymmetry and monitoring capabilities; control enforcement infrastructure",
+      "Surveillance Vendors: Secondary beneficiary (institutional/arbitrage) \u2014 provide monitoring technology to platforms; benefit from increasing instrumentation",
+      "Privacy Rights Coalition: Organized agents (organized/constrained) \u2014 labor unions, regulatory bodies (EU GDPR), academic researchers building alternatives; constrained by political economy of platform capital",
+      "Employment Contract System: Institutional actor (institutional/arbitrage) \u2014 maintains performative boundary (contract says off-hours are personal) while infrastructure violates it; sees own legitimacy degrading (piton)",
+      "Autonomy Commons: Victim (powerless/trapped) \u2014 abstract collective good of worker agency and psychological separation; cannot organize or exit; bears full cost of porosity"
     ],
-    "logic_rationale": "Extractiveness (0.55): High. Represents the value of uncompensated 'on-call' time, mental availability outside of work hours, and the productivity data extracted from workers. Suppression (0.65): High. Opting out of the 'always-on' culture or refusing monitoring is often career-limiting or impossible, effectively removing alternatives. Theater Ratio (0.75): Very High. Monitoring often incentivizes performative 'busyness' (e.g., mouse jiggling) over actual productive work, meaning a large portion of the activity is for show, satisfying the Piton classification for the HR perspective.",
-    "perspectival_gap": "The gap is stark. Employers view the system as a Rope, a tool for coordinating work. For the individual worker, who cannot escape the expectation of constant availability, it is a Snare, extracting their personal life. HR departments, caught in the middle, see a Piton—a degraded ritual of productivity theater. The analytical view recognizes both the coordination and extraction elements, classifying it as a Tangled Rope. This diversity of classification from a single set of metrics is a hallmark of a complex, socially embedded constraint.",
-    "directionality_logic": "Directionality is derived from structural position. Employers and tech providers are declared beneficiaries with arbitrage exit, yielding a low 'd' value and a negative effective extraction (χ), hence the Rope classification. Workers are victims with trapped or mobile exit options, yielding a high 'd' and a high positive χ, leading to Snare or Tangled Rope classifications. This demonstrates how the χ formula correctly maps structural relationships to perspectival classifications.",
-    "mandatrophy_analysis": "This constraint avoids mandatrophy by correctly identifying the dual nature of the system. A naive analysis might label it a pure Snare (focusing only on the worker's experience) or a pure Rope (focusing only on the employer's claims). The Deferential Realism framework, by using indexical classification, shows that both are valid perspectives. The analytical classification of Tangled Rope correctly captures the core truth: a genuine coordination function has been coupled with a powerful, asymmetric extraction mechanism. It is the entanglement of the two that makes the constraint so stable and difficult to reform."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Base measurement reflects the magnitude of data and behavioral control extracted from workers. Unlike raw data theft, this extraction is nested within an employment relationship where workers receive wages in exchange for some degree of monitoring. However, the scope has expanded far beyond what employment legitimately requires \u2014 always-on availability expectations, real-time productivity metrics, location tracking, communication surveillance, and predictive behavioral monitoring constitute extraction beyond reasonable job performance verification. The trajectory from 0.25 to 0.58 over the interval reflects the deepening of surveillance integration as platforms mature and competitive pressure drives monitoring expansion. Suppression (0.68): High. Significant structural barriers limit workers' exit options: (1) labor market concentration (few alternative employers without surveillance), (2) skill specialization (switching careers is costly), (3) regulatory capture (employment law enables rather than restricts monitoring), (4) technological lock-in (accumulated data and credentials are platform-specific), (5) career risk (refusing monitoring signals unreliability), (6) normalized expectations (always-on is now industry standard). Suppression is not absolute \u2014 some workers can negotiate boundaries, some labor markets respect offline-only arrangements \u2014 but the path is narrow. Theater ratio (0.55): Moderate. Monitoring is partly functional (task verification, user matching) and partly performative (showing 'productivity' to justify salary, creating illusion of control). The rise from 0.35 to 0.55 reflects increasing theater as monitoring systems proliferate beyond functional necessity \u2014 heat maps, keystroke analysis, email sentiment analysis, meeting attendance tracking. Companies simultaneously use monitoring for real coordination decisions AND use the same data to justify power over workers. The performative content has grown as technical capabilities have exceeded coordination needs.",
+    "directionality_logic": "Directionality differs sharply by structural position. Platform operators (institutional/arbitrage) have d \u2248 0.05-0.15 (net beneficiaries): they control infrastructure, set enforcement rules, and arbitrage data value. Their exit options are excellent \u2014 they can shift business models, move to new markets, offshore operations. Beneficiaries experience low or negative f(d). Knowledge workers (powerless/trapped) have d \u2248 0.90-0.95 (net targets): they cannot exit without career termination, their data is continuously extracted, and they have no control over enforcement. Trapped exit status combined with victim status produces maximum d and maximum f(d) \u2248 1.40, yielding the highest experienced extraction. Moderate workers (moderate/constrained) have d \u2248 0.65-0.75: they benefit from remote work coordination but face real career penalties for opting out. Their constrained exit produces moderate-high d. Organized agents (privacy coalition) have d \u2248 0.40-0.50: constrained by political economy but with real agency through regulatory change and alternative infrastructure. Analytical observer at civilizational scale treats porosity as universal feature (potential d \u2248 0.50 for symmetric view), but structural data reveals this as false summit.",
+    "perspectival_gap": "The monitored worker (Snare) and platform operator (Rope) perceive opposite constraints from identical infrastructure. The worker experiences one-way surveillance extraction \u2014 boundary dissolution is enforced, irreversible, and bears maximum cost. The platform operator experiences bidirectional coordination \u2014 they see monitoring as a tool for matching workers to tasks efficiently. Both are describing the same infrastructure, but the directionality is inverted. The knowledge worker collective (Tangled Rope) occupies the middle: they genuinely benefit from remote work access (which requires connectivity and some monitoring) while being harmed by the surveillance expansion beyond what coordination requires. The scaffold perspective (privacy coalition) sees the current state as temporary \u2014 regulatory frameworks and alternative architectures (decentralized identity, data minimization, federation) are building paths toward lower-extraction coordination. The piton perspective reveals that the employment contract (institution maintaining the boundary performatively) is degrading \u2014 its legitimacy rests on a boundary it no longer enforces. The mountain perspective risks naturalizing the porosity as an inherent feature of digital connectivity, when it is actually a choice about infrastructure design.",
+    "mandatrophy_analysis": "The mandatrophy here resolves through decomposition by agent position. This is NOT a case of mislabeled pure extraction or pure coordination \u2014 both exist structurally. The Tangled Rope classification is correct: there IS genuine coordination (remote work, global labor matching, asynchronous collaboration) AND there IS asymmetric extraction (surveillance, data collection, always-on expectations). The trap is that the coordination justification is used to legitimize extraction beyond what coordination requires. The platform operator's Rope perspective is not wrong \u2014 they genuinely solve coordination problems. But it is partial: it observes only the coordination function while systematically underobserving the extraction. The worker's Snare perspective is also not wrong \u2014 they do experience maximal extraction. But it too is partial: it may underobserve the real benefits of remote work access. The Scaffold perspective resolves the mandatrophy by showing that lower-extraction alternatives exist: decentralized platforms, worker-owned cooperatives, federation architectures, and data minimization by design could deliver the same coordination benefits (remote work, task matching, asynchronous work) with far lower extraction and suppression. The existence of feasible lower-extraction designs proves that the current high extractiveness is not inherent to coordination but is a choice. Therefore, the constraint is correctly classified as Tangled Rope (0.58 extractiveness, 0.68 suppression, 0.55 theater) with a genuine sunset clause (alternative architectures are technically viable and legally possible in EU/progressive jurisdictions). This is not coordination masquerading as extraction, nor is it extraction masquerading as coordination \u2014 it is hybrid, with the key analytical point being that the extraction component is unnecessary."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "mental_health_outcomes_knowledge_work",
-      "future_of_labor_organizing"
-    ]
-  }
+      "algorithmic_management_escalation",
+      "work_life_boundary_erosion",
+      "data_asymmetry_labor_markets"
+    ],
+    "dual_formulation_note": "Boundary dissolution is downstream of platform infrastructure design choices and upstream of specific labor exploitation mechanisms (wage suppression, algorithmic discipline). This constraint represents the structural condition that enables downstream extractive mechanisms. Coordinate with algorithmic_management_escalation (which models the enforcement layer) and data_asymmetry_labor_markets (which models the economic extraction layer). The family shares a common root: the choice to design systems maximizing data flow rather than maintaining hard boundaries."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
 }

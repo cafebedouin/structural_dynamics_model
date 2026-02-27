@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "confidential_ai_whatsapp",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cai_whatsapp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Use of Confidential Computing for AI in WhatsApp",
+    "topic_domain": "technology/privacy/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "meta_corporate_interests",
+      "ai_development_teams",
+      "nvidia_hardware_vendors"
+    ],
+    "victims": [
+      "user_privacy_expectations",
+      "regulatory_oversight_capacity",
+      "end_to_end_encryption_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Users cannot audit or exit the confidential computing environment. They must accept opaque AI processing of their messages with no transparency mechanism. No alternative for accessing WhatsApp's network effect. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.88."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Privacy Advocates and Civil Society",
+      "comment": "PERSPECTIVE 2: PRIVACY ADVOCATES (SNARE) \u2014 Cannot access the compute environment to verify claims. Cannot require disclosure without regulatory authority. Constrained by resource asymmetry against Meta's legal and technical capacity. d\u22480.88, f(d)\u22481.30, \u03c3=1.2 \u2192 \u03c7\u22480.85."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Bodies and Data Protection Authorities",
+      "comment": "PERSPECTIVE 3: REGULATORS (TANGLED ROPE) \u2014 Have statutory authority to demand transparency but lack technical capacity to verify confidential compute internals. Coordination function: enforcing disclosure obligations. Extraction: Meta's proprietary framework limits regulators' ability to inspect compute behavior. d\u22480.62, f(d)\u22480.88, \u03c3=1.0 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Meta Corporation",
+      "comment": "PERSPECTIVE 4: META CORPORATE (ROPE) \u2014 Primary beneficiary. Deploying confidential compute solves a coordination problem: how to run AI features while managing regulatory pressure and user trust concerns. The 'confidential' framing enables both capability deployment and plausible deniability. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "NVIDIA and Hardware Vendors",
+      "comment": "PERSPECTIVE 5: NVIDIA/HARDWARE VENDORS (ROPE) \u2014 Secondary beneficiary. Confidential compute is a market differentiator. Creates vendor lock-in for Meta's infrastructure choices. Coordination function: enabling trusted compute. d\u22480.12, f(d)\u22480.02, \u03c3=1.2 \u2192 \u03c7\u22480.01."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Transparency Theater Framework",
+      "comment": "PERSPECTIVE 6: TRANSPARENCY THEATER (PITON) \u2014 The 'confidential compute' label itself is performative. It claims trustworthiness without providing verifiable mechanisms. Users cannot audit. Regulators cannot inspect. The framework persists through institutional acceptance of corporate claims about hardware-level security. theater_ratio=0.65 reflects that the transparency narrative (attestation protocols, enclave proofs) does not compensate for structural opacity. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.78."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attestation_protocol_validity",
+      "question": "Can attestation protocols for confidential computing provide meaningful assurance to regulators and users, or are they theater that obscures rather than clarifies compute behavior?",
+      "resolution_mechanism": "Independent cryptographic audit of attestation claims; reverse engineering of enclave behavior; comparison of claimed vs observed data access patterns",
+      "impact": "If valid: classification shifts toward Rope (coordination mechanism works). If theater: classification confirmed as Snare (extraction with illusory transparency).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether attestation protocols provide meaningful assurance of compute isolation"
+    },
+    {
+      "id": "ai_feature_necessity_threshold",
+      "question": "How much of WhatsApp's proposed AI functionality requires compute access to plaintext user messages, versus what could be performed on-device?",
+      "resolution_mechanism": "Technical specification of each AI feature; capability analysis showing which features require central compute; benchmarking of on-device alternatives",
+      "impact": "If most features feasible on-device: confidential compute is extraction mechanism for data centralization. If most features require central compute: confidential compute is necessary coordination infrastructure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether AI features require central plaintext access or can run on-device"
+    },
+    {
+      "id": "regulatory_inspection_capacity",
+      "question": "Can data protection authorities technically inspect confidential compute environments, or does the hardware-level proprietary nature of enclave attestation prevent regulatory access?",
+      "resolution_mechanism": "Survey of DPA technical capacity; examination of existing regulatory precedents for confidential compute inspection; vendor cooperation with inspection requests",
+      "impact": "If inspectable: regulators have enforcement mechanism (Tangled Rope confirmed). If opaque: regulators are structurally excluded (Snare confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulators can technically inspect confidential compute behavior"
+    },
+    {
+      "id": "side_channel_attack_surface",
+      "question": "Do confidential compute environments have exploitable side-channel vulnerabilities (timing, power analysis, speculative execution) that could leak plaintext despite encryption claims?",
+      "resolution_mechanism": "Academic security research; vulnerability disclosure in confidential compute stacks; historical analysis of side-channel discoveries",
+      "impact": "If exploitable: 'confidential' is false promise (Snare confirmed at higher \u03c7). If resistant: encryption claim is partially credible (extraction reduced).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether confidential compute has exploitable side-channel vulnerabilities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Meta's deployment of confidential computing for AI features in WhatsApp represents a hybrid constraint combining genuine technical coordination (how to run AI at scale) with structural extraction (centralizing access to plaintext messages while claiming privacy protection). The 'confidential' framing obscures rather than resolves the underlying asymmetry: users cannot audit the compute, regulators cannot inspect the environment, and Meta gains access to AI training signals from billions of conversations under a privacy narrative. The constraint exhibits tangled rope structure from the institutional perspective (coordination function + asymmetric extraction + active enforcement), but appears as pure snare to powerless end users (trapped with no audit mechanism) and to civil society advocates (constrained by technical asymmetry). The theater_ratio (0.65) reflects that attestation protocols and enclave security claims constitute performative transparency \u2014 the framing suggests trustworthiness without providing verifiable access or behavioral auditability.",
+    "key_agents": [
+      "End Users: Primary victims (powerless/trapped) \u2014 cannot audit AI compute, cannot exit WhatsApp's network effect, must accept opaque processing",
+      "Privacy Advocates and Civil Society: Secondary victims (moderate/constrained) \u2014 cannot access compute environment, cannot force disclosure without regulatory authority",
+      "Meta Corporation: Primary beneficiary (institutional/arbitrage) \u2014 deploys AI at scale, captures training signals, maintains plausible deniability through confidential compute framing",
+      "Regulatory Bodies (DPAs, GDPR enforcers): Organized victims (organized/constrained) \u2014 have statutory authority but lack technical capacity to inspect confidential compute internals",
+      "NVIDIA and Hardware Vendors: Secondary beneficiaries (institutional/arbitrage) \u2014 gain market differentiation and vendor lock-in through confidential compute infrastructure",
+      "Analytical Observer: Sees structural opacity framed as technical privacy protection"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Meta gains three forms of extraction: (1) centralized access to plaintext message data for AI training under privacy narrative, (2) behavioral targeting signals enriched by message content understanding, (3) network lock-in \u2014 users cannot audit or migrate. The extraction is not total because end-to-end encryption still protects messages from external observers; Meta's extraction is confined to internal use. However, internal use for unbounded AI training substantially exceeds what users expected from e2e encryption. Suppression (0.68): High. Technical barriers to verification are substantial: confidential compute internals are proprietary to NVIDIA/hardware vendors, require specialized expertise to audit, and are explicitly designed to resist inspection. Regulatory suppression is high because DPAs lack technical capacity to audit confidential compute environments. User exit is suppressed by WhatsApp's network effect (2B+ users, no functionally equivalent alternative with same reach). Theater ratio (0.65): Moderate-high and rising. The 'confidential' framing, attestation protocols, and enclave security rhetoric constitute performative transparency. No user or regulator can verify behavior inside the compute environment. The measurement trajectory (0.35 \u2192 0.65) reflects that the theater has expanded over deployment \u2014 more attestation claims, more security narratives, more complexity that obscures rather than clarifies what happens to messages.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Meta sees coordination: solving the engineering problem of running AI features while managing regulatory pressure (Rope). Regulators see mixed coordination and extraction: they have authority to demand transparency but lack technical capacity (Tangled Rope). Users see pure extraction: they cannot audit, cannot exit, and bear the cost of their messages being processed by opaque AI (Snare). Privacy advocates see extraction constrained only by their own powerlessness (Snare). Hardware vendors see coordination: enabling trusted compute infrastructure (Rope). The analytical observer sees a false transparency mechanism \u2014 the confidential compute framing performs trustworthiness without delivering verifiability (Piton). This perspectival gap is not an observational illusion; it reflects real structural differences in power, exit options, and information asymmetry.",
+    "directionality_logic": "End users: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction from powerless agents with no exit. Privacy advocates: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.30. Significant extraction; constrained by resource asymmetry against Meta's legal capacity. Regulators: Victim + constrained + organized \u2192 d\u22480.62, f(d)\u22480.88. Moderate extraction; have statutory authority but lack technical inspection capacity. Meta: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; experiences confidential compute as enabling coordination (accessing data while managing regulatory pressure). NVIDIA: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.02. Minor beneficiary; infrastructure provision. The analytical observer's d\u22480.72 reflects that external observers cannot access the compute environment \u2014 they must rely on corporate claims.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing the coordination function from the extraction mechanism. Meta claims that confidential computing coordinates a genuine problem: running AI features at scale while protecting privacy. This coordination claim is partially true \u2014 the technical problem (how to run inference without exposing plaintext) has a real solution. However, the extraction mechanism uses the same infrastructure to centralize access to plaintext for training and behavioral analysis. The constraint is not 'is this coordination or extraction?' but 'is the extraction hidden behind the coordination narrative?' The theater_ratio (0.65) and the perspectival gap (users see snare, Meta sees rope) reveal that the answer is yes: the confidential compute framing performs trustworthiness while extracting value. The constraint is Tangled Rope at institutional level (genuine coordination + asymmetric extraction) but appears as Snare to powerless agents and Piton (theater) from the analytical perspective. The mandatrophy is resolved by accepting that all three readings are structurally accurate \u2014 they are not competing claims, but different nodes in the presheaf of observation sites."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_data_centralization",
+      "ai_training_signal_extraction",
+      "regulatory_technical_capacity_gap"
+    ],
+    "dual_formulation_note": "The confidential computing constraint decomposes into distinct sub-constraints: (1) technical coordination (can AI run securely on shared hardware?) with \u03b5\u22480.08, Mountain; (2) privacy protection claim (does encryption prevent Meta access?) with \u03b5\u22480.42, Tangled Rope; (3) regulatory inspection capacity (can authorities audit compute behavior?) with \u03b5\u22480.55, Snare. This story represents the integrated institutional constraint (\u03b5=0.52, Tangled Rope). Upstream constraints are platform_data_centralization (why centralize at all?) and ai_training_signal_extraction (what data flows to training systems?). Downstream constraints are regulatory_technical_capacity_gap (how can regulators inspect proprietary hardware?) and end_to_end_encryption_integrity (does e2e remain meaningful if central compute has plaintext?)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.62
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "platform_data_centralization"
+    ]
+  }
+}

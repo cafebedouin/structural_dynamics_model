@@ -1,0 +1,133 @@
+{
+  "header": {
+    "constraint_id": "feedback_loop_desynchronization",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Decoupled Ecological-Economic Signaling",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_term_profit_seekers",
+      "status_quo_maintainers"
+    ],
+    "victims": [
+      "long_term_ecosystem_health",
+      "future_generations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "Future generations bear the costs of ecological damage without a voice in current economic systems. They are trapped by the decisions of the present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Short-Term Profit Seekers",
+      "comment": "Those who benefit from exploiting resources in the short term see the decoupling as a coordination mechanism that allows for continued profit without immediate repercussions. They can arbitrage the system by externalizing costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees the desynchronization as a tangled rope because it involves both coordination (economic activity) and extraction (environmental degradation). The extraction is not immediately reflected in economic signals, creating a complex dynamic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tipping_point_identification",
+      "question": "At what point does ecological damage become irreversible, and how can this be accurately predicted?",
+      "resolution_mechanism": "Ecosystem modeling, long-term ecological monitoring, and analysis of historical ecological collapses.",
+      "impact": "Determines the severity of the 'snare' classification. If tipping points are easily identifiable, the constraint is less severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identification of ecological tipping points and their predictability."
+    },
+    {
+      "id": "discount_rate_justification",
+      "question": "What is the appropriate discount rate for future ecological costs in current economic decision-making?",
+      "resolution_mechanism": "Ethical and philosophical debates, economic modeling of long-term costs and benefits, and political negotiation.",
+      "impact": "Determines the extent to which future generations are considered in current decisions. A higher discount rate exacerbates the extraction.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Justification for the discount rate applied to future ecological costs."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The decoupling between ecological collapse and economic signals creates a dangerous lag where environmental degradation is not immediately reflected in market prices or economic incentives. This constraint arises because ecological damage is often localized and its global economic consequences are delayed, creating a situation where short-term economic gains can be made at the expense of long-term ecological health. This desynchronization allows for the continued exploitation of resources without immediate economic penalties, leading to a build-up of environmental debt.",
+    "key_agents": [
+      "Short-Term Profit Seekers: Primary beneficiary (institutional/arbitrage) - Benefits from the desynchronization, externalizing environmental costs.",
+      "Long-Term Ecosystem Health: Primary victim (powerless/trapped) - Suffers from the extraction, unable to effectively communicate its value to the economic system.",
+      "Future Generations: Secondary victim (powerless/trapped) - Inherits the ecological debt, trapped by the decisions of the present.",
+      "Status Quo Maintainers: Beneficiary (powerful/constrained) - Benefit from continued operations of established economic systems."
+    ],
+    "logic_rationale": "Extractiveness (0.60): The constraint extracts value from long-term ecosystem health and future generations, transferring it to short-term profit seekers. Suppression (0.70): The desynchronization suppresses the ecological feedback signals in the economic system, preventing effective responses to environmental degradation. Theater Ratio (0.30): There is relatively little performative action aimed at addressing the desynchronization problem. Real efforts to improve the feedback mechanisms are less visible than the underlying economic activity causing extraction.",
+    "perspectival_gap": "Future generations experience a snare because they are trapped by the consequences of present economic decisions, with no ability to influence them. Short-term profit seekers experience the situation as a rope because they can arbitrage the desynchronization, reaping profits without immediately facing the costs of environmental damage. The analytical observer sees a tangled rope, recognizing the complex interplay of economic activity and ecological extraction.",
+    "directionality_logic": "The primary beneficiaries, short-term profit seekers, have high institutional power and arbitrage exit options, resulting in a low directionality value and a 'rope' perspective. The primary victims, future generations and long-term ecosystem health, have low power and are trapped, resulting in a high directionality value and a 'snare' perspective. The analytical observer sees the constraint as a tangled rope due to the combination of coordination and extraction.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the different perspectives represent valid experiences of the same underlying constraint. The seeming paradox is that short-term economic gains can be made at the expense of long-term ecological health, but the economic system does not accurately reflect this cost. This desynchronization is not a failure of the economic system per se, but rather a consequence of the time scales involved and the difficulty of valuing non-market goods like ecosystem services. Addressing the problem requires improving the feedback mechanisms between ecological health and economic signals."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_change_inaction",
+      "resource_curse"
+    ]
+  },
+  "directionality_overrides": []
+}

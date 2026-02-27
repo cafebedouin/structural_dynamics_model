@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "gs1_gln_identification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gln"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Global Location Number (GLN) Standard",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gs1_organization",
+      "large_retailers",
+      "multinational_logistics_providers"
+    ],
+    "victims": [
+      "small_enterprises",
+      "healthcare_systems_in_developing_regions",
+      "supply_chain_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Unregistered Small Merchant",
+      "comment": "PERSPECTIVE 1: UNREGISTERED SMALL MERCHANT (SNARE) \u2014 A small vendor or distributor in a developing region cannot participate in modern supply chains without GLN registration and GS1 fees. Exit is blocked: without GLN, access to major retail networks is impossible. Suppression is structural: GS1 licensing is mandatory for electronic commerce in regulated sectors. Maximum extraction experienced by those with no alternative identification systems and no resources to absorb licensing costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Healthcare Provider",
+      "comment": "PERSPECTIVE 2: REGIONAL HEALTHCARE PROVIDER (TANGLED ROPE) \u2014 Benefits from GLN standardization: interoperable inventory tracking, medication traceability, regulatory compliance documentation. But constrained by mandatory GS1 membership fees, complex administrative overhead for location updates, and dependency on GS1's monopolistic standard. Some exit options exist (proprietary hospital systems, alternative identifiers) but incur switching costs and regulatory friction. Mixed experience: genuine coordination value plus moderate extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Multinational Logistics Provider",
+      "comment": "PERSPECTIVE 3: MULTINATIONAL LOGISTICS PROVIDER (ROPE) \u2014 Primary beneficiary. GLN enables global asset tracking, regulatory compliance across jurisdictions, and standardized data interchange with supply chain partners. Can switch to proprietary systems if desired but finds GLN's universal adoption economically advantageous. Benefits from coordination without experiencing extraction \u2014 the standard solves their fundamental problem of locating goods and locations across heterogeneous systems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority (Healthcare/Trade)",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Organized agents (FDA, EMA, customs authorities) benefit from GLN's standardization for enforcement and auditing. But constrained by dependency on GS1's governance structure for standard updates, limited ability to modify the standard for jurisdiction-specific needs, and vulnerability to GS1's commercial decisions. Some agency through industry consortia, but structural asymmetry: regulators adopt GS1 standards but do not control them. Both coordination function and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The GS1 Organization",
+      "comment": "PERSPECTIVE 5: GS1 ORGANIZATION (ROPE) \u2014 Primary beneficiary and de facto enforcer. GLN is GS1's flagship identification system; revenue streams from membership fees, GLN registration, and data services are entirely enabled by the standard's universal adoption. Can unilaterally modify the standard; faces minimal exit pressure because no effective alternative exists at equivalent scale. Experiences constraint as pure coordination \u2014 a standard that solves everyone's interoperability problem and funds the organization maintaining it."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 6: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Organized advocates for interoperable, non-proprietary identification standards (blockchain-based supply chain protocols, open UID systems, EPCIS alternative implementations) see GLN's dominance as a temporary coordination monopoly with an emerging sunset. As decentralized ledgers and open-source supply chain protocols mature, GLN's enforceability diminishes. Low effective extraction from this perspective because the coalition has agency and sees a clear exit path \u2014 adoption of alternative standards is already beginning in niche supply chains (local food networks, pharmaceutical traceability via blockchain)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Enterprise System Administrator",
+      "comment": "PERSPECTIVE 7: LEGACY ENTERPRISE SYSTEM ADMINISTRATOR (PITON) \u2014 Institutional actors maintaining older EDI and XML-based data interchange systems that nominally use GLN but encode significant theatrical compliance overhead. GLN's actual verification of physical location information is often minimal \u2014 many warehouses register GLN numbers but the identifier maps to outdated or inaccurate location data. The standard persists through institutional inertia: GLN integration is embedded in decades-old supply chain software, switching costs are prohibitive, and regulatory expectations enforce continued use despite the existence of more accurate locational technologies (GPS, cell tower triangulation, RFID). Theater ratio elevated by the gap between GLN's theoretical role (precise location identification) and its actual function (administrative reference number for legacy systems)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Theory View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / INFORMATION THEORY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some form of standardized location identification is an immutable requirement for global supply chain coordination. The constraint appears as a natural law: any distributed system requiring location-aware asset tracking needs a globally agreed namespace. GLN is the instantiation, but the need itself is structural to logistics at scale. However, this naturalizes what is actually a contingent institutional design: alternative namespaces (URIs with hierarchical encoding, blockchain-based distributed identity, region-specific numbering systems) could serve the same function. The engine's false summit detector identifies this as naturalization of a particular technological choice rather than a law of logistics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "data_accuracy_vs_compliance_theater",
+      "question": "Is GLN's primary value in actual location data accuracy or in providing a standardized compliance token that enables regulatory auditing regardless of underlying data quality?",
+      "resolution_mechanism": "Audit of GLN-registered location data against ground truth (GPS, facility records); comparison of enforcement outcomes under GLN-based vs direct-verification regulatory frameworks",
+      "impact": "If accuracy primary: GLN functions as genuine coordination (Rope from more perspectives). If compliance theater primary: GLN functions as extraction mechanism (Snare from regulator perspective, Piton from enterprise perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether GLN provides data accuracy or primarily serves as compliance token"
+    },
+    {
+      "id": "monopoly_lock_in_vs_network_effect_necessity",
+      "question": "Does GS1's market dominance derive from genuine network effects (universal adoption becoming more valuable the more widespread it is) or from switching cost lock-in (early adoption creates path dependency preventing alternative standards)?",
+      "resolution_mechanism": "Historical analysis of GLN adoption barriers and technical switching costs; case study of regions attempting to implement alternative identification standards; comparison of switching costs between GLN and open-source alternatives",
+      "impact": "If network effects: GLN is a natural coordination monopoly (Rope perspective justified). If lock-in: GLN is a maintained Snare (victims trapped by switching costs rather than technical necessity).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether GLN dominance reflects network effects or switching cost lock-in"
+    },
+    {
+      "id": "blockchain_alternative_maturity",
+      "question": "Are decentralized, blockchain-based location identification systems (distributed ledger supply chain protocols, NFT-based asset tracking) technically and economically viable alternatives that could replace GLN in the next 10-20 years?",
+      "resolution_mechanism": "Technical feasibility assessment of blockchain-based location identification at scale; cost comparison analysis; pilot program results in early-adopter supply chains (pharmaceutical, food safety)",
+      "impact": "If viable: scaffold perspective is correct \u2014 GLN's sunset is real and predictable. If not viable: scaffold is aspirational, and GLN maintains structural monopoly indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether blockchain alternatives can provide viable replacement for GLN"
+    },
+    {
+      "id": "healthcare_specific_regulatory_capture",
+      "question": "In healthcare supply chains, does GLN's mandatory adoption (enforced by FDA and EMA traceability regulations) represent a genuine regulatory requirement or a regulatory capture scenario where GS1 lobbying has embedded proprietary standards into law?",
+      "resolution_mechanism": "Analysis of regulatory history: when and why GLN became mandatory in pharmaceutical traceability regulations; comparison with alternative standards considered during regulation drafting; interview evidence from regulatory agency decision-makers",
+      "impact": "If genuine requirement: healthcare perspective remains Tangled Rope (mixed coordination and extraction). If capture: healthcare victim status (Snare) is more accurate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether healthcare GLN mandates reflect regulation or regulatory capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 1974,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The Global Location Number (GLN) is a 13-digit identification standard maintained by GS1 (Global Standards 1, formerly known as the Uniform Code Council). Introduced in 1974 as the Universal Product Code (UPC) and evolved into a comprehensive suite of identification standards, GLN identifies physical locations (warehouses, hospital rooms, distribution centers) and legal entities (corporations, branches, departments). The constraint exhibits a hybrid structure: GLN provides genuine coordination value for global supply chains and regulatory compliance, but also creates structural extraction mechanisms through mandatory membership fees, lock-in to GS1's governance decisions, and suppression of alternative identification standards. The constraint operates at the intersection of technology (identification infrastructure), economics (supply chain efficiency), and regulation (FDA, EMA, customs authorities mandate GLN for pharmaceutical traceability and cross-border commerce). The perspectival analysis reveals why the same standard appears as pure coordination to beneficiaries with arbitrage options, pure extraction to trapped actors, and degraded ritual to legacy systems. The constraint's extractiveness has grown from 0.18 (1974: genuine coordination without significant monopoly position) to 0.38 (2024: consolidated global monopoly with mandatory regulatory adoption).",
+    "key_agents": [
+      "GS1 Organization: Primary beneficiary (institutional/arbitrage) \u2014 controls standard evolution, derives revenue from membership and registration fees, has unilateral power to modify GLN specification",
+      "Multinational Logistics Providers: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from global interoperability without incurring switching costs; can maintain parallel proprietary systems if needed",
+      "Small Enterprises (Unregistered): Primary victim (powerless/trapped) \u2014 cannot access modern supply chains without GLN registration; no alternative identification system with equivalent market acceptance",
+      "Healthcare Systems (Developing Regions): Secondary victim (moderate/constrained) \u2014 benefit from traceability coordination but constrained by mandatory fee structures and administrative overhead not designed for low-resource settings",
+      "Regulatory Authorities (FDA, EMA, Customs): Organized semi-beneficiary (organized/constrained) \u2014 benefit from standardized location identification for enforcement but constrained by dependency on GS1's technical governance and unable to modify standard for jurisdiction-specific needs",
+      "Open Standards Coalition: Organized aspirational actor (organized/constrained) \u2014 developing blockchain and distributed ledger alternatives; sees GLN monopoly as temporary",
+      "Legacy Enterprise Systems: Institutional maintainers (institutional/arbitrage) \u2014 nominally use GLN but with significant theatrical compliance overhead; switching costs prohibitive despite availability of more accurate locational technologies"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. GLN extracts through mandatory membership fees ($1,500-$15,000 annually depending on organization size and jurisdiction), per-GLN registration costs, and data service fees. However, extraction is not severe (would be 0.46+) because: (1) genuine coordination value reduces relative extraction burden for users who benefit from global interoperability, (2) some alternative systems exist (proprietary identifiers, regional standards) providing partial exit options, and (3) multinational actors can distribute costs across operations. The value of 0.38 reflects that extraction is real but mediated by genuine coordination function. Suppression (0.52): Moderate-high. Suppression mechanisms include: regulatory mandates (FDA traceability rules make GLN quasi-mandatory for pharmaceuticals), institutional lock-in (supply chain software integration costs), and the absence of viable alternatives at equivalent scale. However, suppression is not maximal (would be 0.60+) because: (1) organizations can technically use proprietary identifiers alongside GLN, (2) blockchain alternatives are emerging, and (3) some regional systems (China's internal logistics standards, India's informal supply chains) operate outside GLN. Theater ratio (0.48): Moderate. GLN's stated purpose is precise location identification, but actual implementation often involves: (1) location data that becomes outdated quickly (enterprises maintain separate real-time locational databases), (2) administrative use where the GLN functions as a compliance token rather than a locational identifier, and (3) enterprise systems that encode GLN in legacy EDI protocols with minimal real-time accuracy benefits. Theater has increased over the interval as enterprises added GLN to existing systems without redesigning for genuine real-time location transparency.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position relative to the GLN constraint. GS1 Organization (institutional power + arbitrage exit) experiences d \u2248 0.05 \u2014 full beneficiary with ability to exit (but no incentive, as GLN is their primary revenue source). Their f(d) \u2248 -0.12 produces negative effective extraction (coordination is net benefit). Multinational Logistics Providers (institutional + arbitrage) experience similar d \u2248 0.15 \u2014 beneficiary with exit options (could use proprietary systems) but benefits from universal adoption outweigh switching costs. Small enterprises (powerless + trapped) experience high d \u2248 0.95 \u2014 no exit options without sacrificing supply chain access, forced to absorb membership and registration costs. Regulatory authorities (organized + constrained) experience d \u2248 0.50 \u2014 symmetric position: benefit from standardization but constrained by inability to modify standard. This differentiation produces the perspectival gap: beneficiaries experience Rope, trapped actors experience Snare, organized constrained actors experience Tangled Rope. The analytical observer's mountain perspective is challenged by the structural evidence of lock-in and extracted rents, revealing it as a false summit (naturalization of a contingent monopoly).",
+    "perspectival_gap": "The perspectival gap across the eight perspectives is substantial and reveals the constraint's true hybrid nature. GS1 and multinational logistics providers see pure coordination (Rope) \u2014 the standard solves their fundamental problem of global interoperability at minimal perceived cost. Unregistered small merchants and developing-region enterprises see pure extraction (Snare) \u2014 they are trapped outside modern supply chains without absorbing mandatory costs. Healthcare regulators and regional authorities see mixed coordination and extraction (Tangled Rope) \u2014 they benefit from standardization for enforcement but constrained by inability to control standard evolution. Legacy enterprise systems see degraded ritual (Piton) \u2014 GLN integration persists through institutional inertia despite the existence of more accurate locational technologies. The open standards coalition sees a temporary monopoly with emerging alternatives (Scaffold) \u2014 blockchain and distributed ledger systems are building replacement pathways. The analytical observer risks naturalizing this as immutable (Mountain) \u2014 'global supply chains inherently require a unified identification standard' \u2014 but the structural evidence reveals this as a particular instantiation of a more general need. Alternative namespaces could serve the same function with different extraction profiles.",
+    "mandatrophy_analysis": "GLN resolves the mandatrophy by demonstrating how a coordination standard can accumulate extraction mechanisms without losing its coordination function. The constraint is genuinely Tangled Rope: it provides both coordination value (solved global supply chain interoperability) and asymmetric extraction (mandatory fees, lock-in, suppression of alternatives). The mandatrophy question is: 'Is GLN a coordination mechanism that has accumulated extraction, or an extraction mechanism that maintains a coordination facade?' The answer from the structural data: both, from different perspectives. GS1 and logistics multinationals see pure coordination (Rope). Small enterprises and developing-region healthcare systems see the extraction (Snare). The constraint's extractiveness has grown over 50 years not because the coordination function degraded, but because GS1's monopoly position strengthened, allowing them to extract more rent from a standard that users cannot exit (lock-in). The theater ratio's increase reflects that GLN's actual benefit in real-time location accuracy has not kept pace with alternative technologies (GPS, RFID, blockchain), but GLN persists because the switching costs from 50 years of institutional embedding are prohibitive. This is the classic pattern of Tangled Rope evolution: a coordination mechanism that works becomes an extraction mechanism that persists."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "barcode_standardization",
+      "pharmaceutical_supply_chain_traceability",
+      "epcis_interoperability"
+    ],
+    "dual_formulation_note": "GLN is the instantiation layer of a broader constraint family: the need for standardized identification in global logistics is a primary constraint (lower extractiveness, higher coordination value); GLN's specific monopolistic governance by GS1 is a secondary constraint (higher extractiveness, enforced through lock-in). These could be modeled as separate stories: gs1_identification_need (the coordination problem) and gs1_gln_monopoly (the extraction mechanism). This story integrates both because the coordination need and the monopolistic implementation cannot be cleanly separated in practice \u2014 exit from GLN means losing access to the coordination value it provides."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.6
+    }
+  ]
+}

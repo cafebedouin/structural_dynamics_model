@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: fermat_proof_barrier
+% CONSTRAINT STORY: fermats_last_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [RESOLVED MATHEMATICALLY]
 % ============================================================================
 
-:- module(constraint_fermat_proof_barrier, []).
+:- module(constraint_fermats_last_theorem, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,17 +53,35 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: fermat_proof_barrier
+ *   constraint_id: fermats_last_theorem
  *   human_readable: The Difficulty of Proving Fermat's Last Theorem
- *   domain: mathematical
+ *   domain: mathematical/number_theory
  *
  * SUMMARY:
- *   Fermat's Last Theorem, the claim that no three positive integers a, b, and c can satisfy the equation a^n + b^n = c^n for any integer value of n greater than 2, posed a significant barrier to mathematicians for over 350 years. The constraint represents the inherent difficulty and intellectual labor required to overcome this mathematical challenge. This wasn't simply a computational problem; it demanded novel conceptual frameworks.
+ *   Fermat's Last Theorem presents a paradigmatic case of a mathematical
+ *   constraint that is genuinely irreducible. For 358 years, the statement
+ *   'no three positive integers a, b, c can satisfy a^n + b^n = c^n for
+ *   integer n > 2' resisted proof despite efforts by the world's greatest
+ *   mathematicians. The constraint is not social, institutional, or
+ *   extractive—it is structural to the mathematical knowledge system itself.
+ *   The difficulty of proving FLT emerges from the logical architecture of
+ *   number theory: the proof requires the Taniyama-Shimura conjecture
+ *   (connecting elliptic curves to modular forms), Frey's observation linking
+ *   FLT to elliptic curve properties, Ribet's proof that a counterexample
+ *   would violate modularity, and finally Wiles's 100-page proof of the
+ *   Taniyama-Shimura conjecture. Each prerequisite required decades of
+ *   foundational work. The constraint classifies as Mountain from all
+ *   perspectives because no observer—individual mathematician, mathematical
+ *   community, institution, or outside agent—could bypass the logical
+ *   requirement. The extractiveness remains stable and low (ε ≈ 0.12) across
+ *   the entire interval because the constraint's structure does not change:
+ *   it is an immutable feature of mathematical knowledge.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mathematicians attempting to prove the theorem: Observer (moderate/constrained) — bears the intellectual labor of discovery.
- *   - The broader mathematical community: Observer (institutional/analytical) — benefits from the collective effort and discoveries.
- *   - Analytical observer: Observer (analytical/analytical) — Sees the full structure and consequences of the theorem.
+ * KEY AGENTS:
+ *   - Individual Mathematicians (powerless/analytical): Euler, Legendre, Lamé, Kummer, Fermat himself—each constrained by the logical prerequisites they could not yet access. No individual could exit this constraint.
+ *   - Mathematical Community (organized/constrained): Collected efforts of number theory specialists across continents and centuries. Despite coordination, the community was collectively powerless against the logical barrier.
+ *   - Mathematical Institutions (institutional/analytical): Universities, academies, societies provided infrastructure but could not overcome the proof's structural requirements.
+ *   - Analytical Observer (analytical/analytical): Sees the constraint as a feature of mathematical knowledge itself—not a social phenomenon but a logical one.
  */
 
 /* ==========================================================================
@@ -71,108 +89,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(fermat_proof_barrier, 0.20).
-domain_priors:suppression_score(fermat_proof_barrier, 0.05).   % Structural property (raw, unscaled). Must be <= 0.05 for Mountain.
-domain_priors:theater_ratio(fermat_proof_barrier, 0.05).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(fermats_last_theorem, 0.12).
+domain_priors:suppression_score(fermats_last_theorem, 0.03).
+domain_priors:theater_ratio(fermats_last_theorem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(fermat_proof_barrier, extractiveness, 0.20).
-narrative_ontology:constraint_metric(fermat_proof_barrier, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(fermat_proof_barrier, theater_ratio, 0.05).
+narrative_ontology:constraint_metric(fermats_last_theorem, extractiveness, 0.12).
+narrative_ontology:constraint_metric(fermats_last_theorem, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(fermats_last_theorem, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-narrative_ontology:constraint_metric(fermat_proof_barrier, accessibility_collapse, 0.90).
-narrative_ontology:constraint_metric(fermat_proof_barrier, resistance, 0.10).
+narrative_ontology:constraint_metric(fermats_last_theorem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(fermats_last_theorem, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(fermat_proof_barrier, mountain).
-narrative_ontology:human_readable(fermat_proof_barrier, "The Difficulty of Proving Fermat's Last Theorem").
-narrative_ontology:topic_domain(fermat_proof_barrier, "mathematical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(fermats_last_theorem, mountain).
+narrative_ontology:human_readable(fermats_last_theorem, "The Difficulty of Proving Fermat's Last Theorem").
+narrative_ontology:topic_domain(fermats_last_theorem, "mathematical/number_theory").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(fermat_proof_barrier).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(fermat_proof_barrier). % Required for Tangled Rope
+domain_priors:emerges_naturally(fermats_last_theorem).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this, the
-% classify_from_metrics mountain clause will not fire.
-domain_priors:emerges_naturally(fermat_proof_barrier).
-
-% --- Structural relationships (No enrichment needed for Mountain constraints) ---
-% As a Mountain constraint (a feature of mathematical reality), the concepts of
-% 'beneficiary' and 'victim' do not apply in a structural sense. The constraint
-% is uniform for all observers. The 'cost' borne by mathematicians is the
-% intellectual labor required for discovery, not an asymmetric extraction imposed
-% by another group.
-% narrative_ontology:constraint_beneficiary(fermat_proof_barrier, mathematical_community).
-% narrative_ontology:constraint_victim(fermat_proof_barrier, mathematicians).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE WORKING MATHEMATICIAN
-% For a natural law constraint (mountain-only), the classification is the same
-% from all perspectives. We include multiple perspectives to demonstrate this
-% invariance.
-constraint_indexing:constraint_classification(fermat_proof_barrier, mountain,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE MATHEMATICAL COMMUNITY
-% The institutional perspective also sees an unchangeable feature of
-% mathematical reality.
-constraint_indexing:constraint_classification(fermat_proof_barrier, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
+% PERSPECTIVE 1: CONTEMPORARY MATHEMATICIAN (MOUNTAIN) — A working mathematician in any era from 1637–1995 faces an immutable logical barrier: the theorem's proof requires tools not yet invented or understood. The constraint is not social or institutional but structural to mathematical knowledge itself. No amount of effort by individual mathematicians could overcome the barrier without centuries of advancement in algebraic number theory, elliptic curves, and modular forms. The powerless agent experiences this as a ceiling: genuine mathematical limits, not suppression or extraction.
+constraint_indexing:constraint_classification(fermats_last_theorem, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The default analytical context confirms the Mountain classification, which
-% is used by the bridge to derive the constraint_claim.
-constraint_indexing:constraint_classification(fermat_proof_barrier, mountain,
+% PERSPECTIVE 2: MATHEMATICAL COMMUNITY (MOUNTAIN) — Even coordinated international effort in number theory cannot bypass logical necessity. The constraint persists because the underlying mathematical structure requires proof techniques that depend on prior theorems (Taniyama-Shimura conjecture, Frey curves, Ribet's theorem) that took decades to establish. The community has no 'arbitrage' option: they cannot choose an easier path. This is collective powerlessness against a structural mathematical limit.
+constraint_indexing:constraint_classification(fermats_last_theorem, mountain,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational and universal perspective, Fermat's Last Theorem is a statement about the logical structure of number theory itself. The constraint is not that 'proving FLT is hard' but that 'proving FLT requires a coherent mathematical framework.' This constraint emerges from the axiomatic nature of mathematics: given Peano arithmetic and the axioms of set theory, certain propositions require certain proof structures. The difficulty is not an artifact of institutional delay or suppression—it is an irreducible feature of mathematical knowledge.
+constraint_indexing:constraint_classification(fermats_last_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
+% PERSPECTIVE 4: MATHEMATICAL INSTITUTIONS (MOUNTAIN) — Universities and mathematical societies cannot force a proof of FLT through institutional investment alone. Funding for number theory research, hiring of specialists, and collaborative workshops all contribute to the eventual proof, but the constraint—the logical requirement for specific foundational results—remains independent of institutional structure. The institutions can facilitate the approach to the proof but cannot circumvent the proof's inherent structure.
+constraint_indexing:constraint_classification(fermats_last_theorem, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(fermat_proof_barrier_tests).
+:- begin_tests(fermats_last_theorem_tests).
 
-test(perspectival_agreement) :-
-    % Verify perspectival agreement (all perspectives classify as mountain).
-    constraint_indexing:constraint_classification(fermat_proof_barrier, mountain, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(fermat_proof_barrier, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(fermat_proof_barrier, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(fermats_last_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fermats_last_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
-    narrative_ontology:constraint_metric(fermat_proof_barrier, ExtMetricName, E),
-    narrative_ontology:constraint_metric(fermat_proof_barrier, SuppMetricName, S),
-    E =< 0.25, % Mountain extractiveness threshold
-    S =< 0.05. % Mountain suppression threshold
+    narrative_ontology:constraint_metric(fermats_last_theorem, ExtMetricName, E),
+    domain_priors:suppression_score(fermats_last_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(fermat_proof_barrier_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(fermats_last_theorem),
+    narrative_ontology:constraint_metric(fermats_last_theorem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(fermats_last_theorem, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(fermats_last_theorem_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -180,76 +180,85 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness is set to 0.20 because solving the problem requires significant intellectual effort, time, and resources. However, it's not pure extraction, as the process often yields valuable byproducts (new mathematical techniques, insights). Suppression is very low (0.05) because there are no active attempts to prevent mathematicians from working on the problem; its inherent difficulty naturally limits the number of successful attempts. The theater ratio is low (0.05) because the focus is genuinely on solving the mathematical problem, not on performative aspects. The constraint is a Mountain because it is a feature of mathematical reality, not a socially constructed rule.
-
- * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a mathematical truth, the constraint is a Mountain from all perspectives. The moderate perspective acknowledges the struggle of discovery, while the institutional and analytical perspectives recognize the profound implications and the unwavering nature of the mathematical truth.
+ *   Extractiveness (0.12): Very low, reflecting that the constraint imposes no asymmetric extraction—no agent benefits from other agents' inability to prove the theorem. The difficulty is symmetric: it applies equally to all mathematicians regardless of power or position. The slight non-zero value (rather than 0.00) accounts for the minor benefit captured by Wiles in establishing the proof first, which provides priority and professional recognition. However, this benefit is vastly smaller than the public good of the proof itself (mathematics advances for all). Suppression (0.03): Near zero. There is no active suppression mechanism—no institutional barrier, no information hiding, no cartel preventing access. The constraint emerges purely from logical necessity, not from deliberate coercion. Accessibility collapse (0.92): Very high. The theorem is stated simply and can be understood by secondary-school mathematics students, but accessing the proof requires mastery of algebraic number theory, elliptic curve theory, and modular forms—concepts at the frontier of mathematical knowledge. The gap between statement and proof is maximal. Resistance (0.08): Very low. Once the proof was discovered, it faced no resistance—the mathematical community immediately accepted it. There is no countervailing force or alternative framework that rejects the proof.
  *
- * DIRECTIONALITY LOGIC:
- *   As a Mountain constraint (a feature of mathematical reality), the concepts of 'beneficiary' and 'victim' do not apply in a structural sense. The constraint is uniform for all observers. The 'cost' borne by mathematicians is the intellectual labor required for discovery, not an asymmetric extraction imposed by another group. The 'benefit' to the community is the expansion of collective knowledge. For these reasons, beneficiary/victim declarations are omitted as they are not structurally meaningful for a natural law.
+ * PERSPECTIVAL GAP:
+ *   Unlike typical constraints that show dramatic perspectival gaps, FLT classifies as Mountain from all perspectives because the logical barrier is truly invariant across observation positions. A powerless mathematician, the organized community, institutions, and the analytical observer all face the same immutable constraint: the proof requires specific prerequisite theorems. The perspectival gap is not a gap—it is consensus. All perspectives converge on Mountain. This uniformity is itself diagnostic: it confirms that the constraint is structural (mathematical) rather than social (institutional). If the constraint were actually institutional—if it derived from gatekeeping, suppression, or extraction—then perspectives would diverge: the beneficiary would see Rope while the victim would see Snare. The fact that no such divergence occurs validates the Mountain classification.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification as a Mountain prevents mislabeling the intellectual labor of discovery as a form of social extraction. The theorem's difficulty arises from its inherent mathematical structure, not from any artificial extraction mechanism. It's not a rope, as there's no designed coordination; it's a fixed challenge that emerges from the axioms of arithmetic.
+ *   FLT resolves the mandatrophy trivially: all perspectives produce Mountain, all extractiveness and suppression metrics are below their thresholds, all omegas remain unresolved at low confidence, and the constraint emerges naturally from logical necessity. There is no risk of mislabeling FLT as pure extraction (Snare) disguised as a natural law—the structural data is unambiguous. No beneficiaries, no victims, no asymmetric extraction, no theater. The mandatrophy resolution is the ABSENCE of doubt: when all perspectives agree on Mountain and all metrics support it, the constraint is genuinely a natural law, not a social phenomenon masquerading as one.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_fermat,
-    'Is the known proof''s complexity an unavoidable consequence of the theorem''s structure, or could a simpler proof exist?',
-    'Further mathematical research and potential discovery of alternative proofs.',
-    'If simpler proof exists: Reduced perceived difficulty and wider accessibility. If not: Reinforces the inherent complexity of the theorem and its connection to advanced mathematical concepts.',
+    proof_necessity_vs_contingency,
+    'Is the 350-year gap between conjecture and proof a necessary feature of mathematical knowledge, or could faster proof techniques have been discovered earlier?',
+    'Analysis of the proof dependency graph: Taniyama-Shimura → Frey curves → Ribet''s theorem → Wiles''s proof. Examine whether any component required centuries of prerequisite development or whether faster routes existed but were not explored.',
+    'If necessary: the constraint is purely mathematical (Mountain, ε ≤ 0.25). If contingent: the constraint includes institutional path-dependence (Tangled Rope, ε > 0.30). The distinction determines whether FLT exemplifies irreducible mathematical difficulty or path-dependent research allocation.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(proof_necessity_vs_contingency, conceptual, 'Whether the 350-year gap reflects mathematical necessity or contingent research paths').
+
+omega_variable(
+    computational_verification_vs_proof,
+    'Does computational verification of FLT for all exponents up to 4×10^18 constitute an alternative form of justification, or is a closed-form proof structurally necessary for mathematical certainty?',
+    'Philosophical analysis of proof standards in mathematics; examination of how other conjectures (Goldbach, twin primes) are justified via computation vs proof.',
+    'If computation suffices: the constraint is not purely mathematical but institutional-epistemological (Rope or Scaffold, ε ≤ 0.45). If proof is necessary: the constraint is purely mathematical (Mountain, ε ≤ 0.25).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(computational_verification_vs_proof, conceptual, 'Whether proof is necessary beyond computational verification').
+
+omega_variable(
+    wiles_proof_accessibility,
+    'Is Wiles''s proof the unique proof of FLT, or do alternative proofs exist that might have been discovered via different research paths?',
+    'Ongoing mathematical research for simplifications or alternative approaches; analysis of proof structure to identify whether modularity and elliptic curves are necessary or just sufficient.',
+    'If unique: the constraint structure is more rigid (Mountain). If alternatives exist: the constraint includes elements of discovery path (Tangled Rope with lower ε).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(wiles_proof_accessibility, empirical, 'Whether Wiles''s proof is the only possible proof structure').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(fermat_proof_barrier, 0, 10).
+narrative_ontology:interval(fermats_last_theorem, 1637, 1995).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is not required for low-extraction constraints (ε <= 0.46),
-% but is included here to demonstrate the stability of this mathematical constant.
-%
-% Theater ratio over time (stable):
-narrative_ontology:measurement(fermat_proof_barrier_tr_t0, fermat_proof_barrier, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(fermat_proof_barrier_tr_t5, fermat_proof_barrier, theater_ratio, 5, 0.05).
-narrative_ontology:measurement(fermat_proof_barrier_tr_t10, fermat_proof_barrier, theater_ratio, 10, 0.05).
+% Theater ratio over time
+narrative_ontology:measurement(fermat_tr_t0, fermats_last_theorem, theater_ratio, 0, 0.08).
+narrative_ontology:measurement(fermat_tr_t175, fermats_last_theorem, theater_ratio, 175, 0.12).
+narrative_ontology:measurement(fermat_tr_t350, fermats_last_theorem, theater_ratio, 350, 0.15).
 
-% Extraction over time (stable):
-narrative_ontology:measurement(fermat_proof_barrier_ex_t0, fermat_proof_barrier, base_extractiveness, 0, 0.20).
-narrative_ontology:measurement(fermat_proof_barrier_ex_t5, fermat_proof_barrier, base_extractiveness, 5, 0.20).
-narrative_ontology:measurement(fermat_proof_barrier_ex_t10, fermat_proof_barrier, base_extractiveness, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(fermat_be_t0, fermats_last_theorem, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(fermat_be_t175, fermats_last_theorem, base_extractiveness, 175, 0.11).
+narrative_ontology:measurement(fermat_be_t350, fermats_last_theorem, base_extractiveness, 350, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Not applicable for a Mountain constraint.
-% narrative_ontology:coordination_type(fermat_proof_barrier, information_standard).
+narrative_ontology:coordination_type(fermats_last_theorem, information_standard).
+narrative_ontology:affects_constraint(fermats_last_theorem, bgs_spectral_universality).
+narrative_ontology:affects_constraint(fermats_last_theorem, halting_problem_undecidability).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Not applicable for a Mountain constraint.
-% narrative_ontology:boltzmann_floor_override(fermat_proof_barrier, 0.20).
-
-% Network relationships (structural influence edges)
-% The proof of Fermat's Last Theorem relies on the Taniyama-Shimura conjecture.
-narrative_ontology:affects_constraint(taniyama_shimura_conjecture, fermat_proof_barrier).
+% DUAL FORMULATION NOTE:
+% FLT is a canonical example of a mathematical constraint that does not decompose into multiple ε values across observables. The theorem is either true or false; its proof either exists or does not. There is no measurement-basis dependence. The constraint family includes other irreducible mathematical theorems (Gödel's Incompleteness, Halting Problem) that exhibit similar Mountain classifications. These are linked not by causal dependence but by their shared property: emergence from logical necessity.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable for a Mountain constraint where directionality is uniform.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

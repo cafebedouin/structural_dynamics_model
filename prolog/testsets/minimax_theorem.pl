@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: minimax_theorem_game_equilibrium
+% CONSTRAINT STORY: minimax_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-27
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_minimax_theorem_game_equilibrium, []).
+:- module(constraint_minimax_theorem, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,18 +53,38 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: minimax_theorem_game_equilibrium
+ *   constraint_id: minimax_theorem
  *   human_readable: Minimax Theorem Enforcement in Strategic Games
- *   domain: economic
+ *   domain: economic/game_theory
  *
  * SUMMARY:
- *   The Minimax Theorem guarantees the existence of a Nash equilibrium in zero-sum games, where one player's gain is exactly balanced by the losses of the other player. While mathematically sound, enforcing this equilibrium in real-world strategic interactions often leads to a constraint where powerful players extract value by subtly influencing the game's rules or information available to others, even if they theoretically should expect the other player to act optimally. This constraint describes the difference between theoretical minimax solutions and actual power dynamics in game situations.
+ *   The Minimax Theorem, proved by John von Neumann in 1928, establishes that
+ *   for any finite, zero-sum, two-player game, there exists a Nash
+ *   equilibrium in mixed strategies where each player's payoff equals their
+ *   minimax value — the value they can guarantee against an optimal opponent.
+ *   This theorem is a cornerstone of game theory and economic equilibrium
+ *   analysis. From a Deferential Realism perspective, the minimax theorem
+ *   represents a natural law constraint: a logical necessity that emerges
+ *   from the formal structure of simultaneous-move games with perfect payoff
+ *   information. No agent can escape the constraint through strategic
+ *   innovation, coalition formation, or institutional redesign. The
+ *   constraint applies uniformly across all zero-sum game contexts — poker,
+ *   zero-sum trading, competitive bidding, military strategy, sports
+ *   competition — and is invariant across all observable measurement
+ *   methodologies. The accessibility collapse is near-total (0.92):
+ *   understanding the minimax theorem requires only knowledge of game theory,
+ *   available to any agent with access to educational resources or
+ *   computational tools. The resistance to the constraint is minimal (0.08):
+ *   agents cannot resist the logical necessity of the theorem, though they
+ *   may fail to compute or implement the equilibrium due to computational
+ *   complexity.
  *
- * KEY AGENTS (by structural relationship):
- *   - Weaker Player: Primary target (powerless/trapped) — Bears extraction due to information asymmetry or rule manipulation.
- *   - Powerful Player: Primary beneficiary (institutional/arbitrage) — Benefits from influencing the game in their favor.
- *   - Game Designer/Rule Maker: Secondary actor (powerful/constrained) — Constrained by the need to maintain the appearance of a fair game while potentially favoring one player.
- *   - Analytical Observer: Analytical observer (analytical/analytical) — Sees the complete structure of the game and the theorem's application.
+ * KEY AGENTS:
+ *   - The Player in Zero-Sum Competition: Constrained by the theorem to converge to minimax equilibrium (powerless/analytical) — cannot escape rational response logic
+ *   - The Opponent: Equally constrained by symmetric minimax structure (powerless/analytical) — locked into best-response dynamics
+ *   - The Game Theorist: Observes the theorem as a mathematical fact (analytical/analytical) — sees logical necessity, not contingent coordination
+ *   - The Market Institution: Enforces zero-sum payoff structure (institutional/analytical) — constraint applies regardless of institutional form
+ *   - The Practitioner: Experiences the constraint in strategic competition (moderate/biographical) — optimal play approximates minimax equilibrium over time
  */
 
 /* ==========================================================================
@@ -72,94 +92,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(minimax_theorem_game_equilibrium, 0.48). % Moderate extraction, representing the inherent advantage taken by more powerful player through subtle manipulation.
-domain_priors:suppression_score(minimax_theorem_game_equilibrium, 0.62).   % Moderate suppression. Other strategies aren't impossible, but the dominant player ensures they are less effective.
-domain_priors:theater_ratio(minimax_theorem_game_equilibrium, 0.20).       % Relatively low theater; the effect is subtle, not overtly performative.
+domain_priors:base_extractiveness(minimax_theorem, 0.08).
+domain_priors:suppression_score(minimax_theorem, 0.02).
+domain_priors:theater_ratio(minimax_theorem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(minimax_theorem_game_equilibrium, extractiveness, 0.48).
-narrative_ontology:constraint_metric(minimax_theorem_game_equilibrium, suppression_requirement, 0.62).
-narrative_ontology:constraint_metric(minimax_theorem_game_equilibrium, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(minimax_theorem, extractiveness, 0.08).
+narrative_ontology:constraint_metric(minimax_theorem, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(minimax_theorem, theater_ratio, 0.15).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(minimax_theorem_game_equilibrium, tangled_rope).
-narrative_ontology:human_readable(minimax_theorem_game_equilibrium, "Minimax Theorem Enforcement in Strategic Games").
-narrative_ontology:topic_domain(minimax_theorem_game_equilibrium, "economic").
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(minimax_theorem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(minimax_theorem, resistance, 0.08).
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(minimax_theorem_game_equilibrium). % Active enforcement of the equilibrium to maintain the extraction dynamic.
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(minimax_theorem, mountain).
+narrative_ontology:human_readable(minimax_theorem, "Minimax Theorem Enforcement in Strategic Games").
+narrative_ontology:topic_domain(minimax_theorem, "economic/game_theory").
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(minimax_theorem_game_equilibrium, powerful_player).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(minimax_theorem_game_equilibrium, weaker_player).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+domain_priors:emerges_naturally(minimax_theorem).
+
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(minimax_theorem_game_equilibrium, tangled_rope,
+% PERSPECTIVE 1: PLAYER CONSTRAINED BY RATIONALITY (MOUNTAIN) — An agent in a zero-sum game cannot escape the minimax equilibrium through any strategy or coalition. The constraint emerges from the logical structure of simultaneous-move games with perfect payoff information. No degree of freedom exists; the theorem guarantees the existence and uniqueness of mixed-strategy equilibrium regardless of the player's preferences, bargaining power, or coalition options. The constraint is invariant across all observable measurement approaches.
+constraint_indexing:constraint_classification(minimax_theorem, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(national))).
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(minimax_theorem_game_equilibrium, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(minimax_theorem_game_equilibrium, tangled_rope,
+% PERSPECTIVE 2: FORMAL ANALYST (MOUNTAIN) — From the perspective of game-theoretic analysis, the minimax theorem is a mathematical fact: for any finite, zero-sum, two-player game, a Nash equilibrium exists and can be computed via linear programming or iterative methods. The theorem's existence proof is independent of institutional arrangements, enforcement mechanisms, or player behavior. It is a logical necessity, not a contingent coordination mechanism.
+constraint_indexing:constraint_classification(minimax_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: INSTITUTIONAL IMPLEMENTER (MOUNTAIN) — Markets, auctions, and strategic competition operate under the minimax constraint universally. Even institutions that attempt to circumvent equilibrium through coordination, collusion, or regulatory intervention cannot escape the theorem's logical necessity. The constraint applies to any strategic interaction with zero-sum payoff structure, regardless of institutional form.
+constraint_indexing:constraint_classification(minimax_theorem, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(analytical),
             spatial_scope(global))).
+
+% PERSPECTIVE 4: PRACTITIONER IN COMPETITION (MOUNTAIN) — A business competitor or trader in zero-sum markets (commodities futures, zero-sum betting, head-to-head auctions) experiences the minimax constraint as an immutable structure: their optimal strategy is mathematically determined by the opponent's rational response. No amount of bargaining, side-payments, or coalition-building changes the underlying equilibrium structure for symmetric zero-sum games.
+constraint_indexing:constraint_classification(minimax_theorem, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(analytical),
+            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(minimax_theorem_game_equilibrium_tests).
+:- begin_tests(minimax_theorem_tests).
 
-test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(minimax_theorem_game_equilibrium, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(minimax_theorem_game_equilibrium, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(minimax_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(minimax_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(minimax_theorem_game_equilibrium, ExtMetricName, E),
-    (E =< 0.25 -> true ; E >= 0.46). % Mountain or high-extraction Snare/Tangled.
+    narrative_ontology:constraint_metric(minimax_theorem, ExtMetricName, E),
+    domain_priors:suppression_score(minimax_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(minimax_theorem_game_equilibrium_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(minimax_theorem),
+    narrative_ontology:constraint_metric(minimax_theorem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(minimax_theorem, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(minimax_theorem_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -167,97 +183,96 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness is set to 0.48, indicating a moderate level of inherent extraction. The suppression score is 0.62, as weaker players often have their options limited, though not entirely eliminated. The theater ratio is low (0.20) because the manipulations are often subtle and not for public display. The requirement for active enforcement stems from the need to maintain the equilibrium, preventing weaker players from breaking free from the imposed constraints.
+ *   Extractiveness (0.08): The minimax theorem does not extract value from one agent to another in the manner of snares or tangled ropes. Rather, it distributes payoffs according to strategic competence and payoff structure. The low extractiveness reflects that no agent gains structural asymmetry from the constraint — both players converge to mathematically identical equilibrium values under their respective strategies. The slight nonzero value (0.08 rather than 0.00) accounts for the theoretical necessity that in practice, one agent's gain is exactly mirrored by the other's loss, with computational implementation costs. Suppression (0.02): Minimal suppression. Agents can freely explore all mixed strategies; the constraint does not block alternatives but rather determines which alternatives are optimal. The theorem guarantees that experimentation converges to equilibrium, so 'suppression' is not a relevant structural feature. Theater ratio (0.15): Very low. The minimax constraint is functional, not performative. The computational and strategic analysis required to implement equilibrium is directly instrumental — it serves prediction and optimization, not legitimation or ritual. The slight nonzero value reflects that practical game implementation may include some theatrical elements (e.g., announcing strategic randomization to preserve credibility), but the core constraint is purely logical.
  *
  * PERSPECTIVAL GAP:
- *   The weaker player perceives a snare, as their options are limited and they are extracted from. The powerful player perceives a rope, as they view the system as beneficial for them, allowing them to extract value within the rules. The analytical observer sees a tangled rope, acknowledging both the coordination aspects of game equilibrium and the extraction imposed by the powerful player.
- *
- * DIRECTIONALITY LOGIC:
- *   The powerful player benefits by subtly influencing the rules and/or information available, allowing them to extract value consistently. The weaker player bears the cost, as their options are limited, and they are often in a position where they are predictably taken advantage of. The beneficiary declaration maps to the structural relationship by explicitly stating who benefits (powerful player) and who bears the cost (weaker player).
+ *   Remarkably, all four perspectives converge on the same classification (Mountain) with minimal perspectival gap. This uniformity is diagnostic of a true natural law constraint: the minimax theorem applies to all agents, all time horizons, and all institutional contexts identically. The powerless player and the analytical observer reach the same conclusion — the constraint is universal and inescapable. The institutional actor cannot circumvent the theorem through regulatory or organizational design. Even the practitioner with biographical time horizons eventually converges to minimax play through learning and market pressure. The absence of perspectival disagreement confirms the mountain classification: all observation angles reveal the same logical structure.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this as a tangled rope prevents mislabeling the situation as pure coordination (rope). Although the minimax theorem provides a framework for achieving equilibrium (coordination), powerful players often manipulate the system to extract value, leading to an imbalanced outcome that isn't purely coordinated. It also prevents mistaking it as pure extraction (snare) as the theorem does provide some level of theoretical coordination, even if it's subverted in practice.
+ *   The minimax theorem is immune to mandatrophy concerns because it does not conflate coordination with extraction. The theorem proves that a unique (up to indifference) equilibrium exists where each player's payoff equals their minimax value — exactly what they can guarantee against rational opposition. There is no hidden extraction or coordination surplus. The constraint is neither a snare (no agent is worse off than they could guarantee themselves) nor a rope masquerading as a snare. The theorem's logical necessity precludes mislabeling. The only residual uncertainty (captured in the omegas) concerns boundary cases: games with incomplete information, computational intractability, and behavioral deviation. But in the core case of finite, zero-sum, perfect-information games, the minimax theorem is a pure logical constraint with no mandatrophy risk.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_minimax_theorem_game_equilibrium,
-    'To what extent can the seemingly "fair" rules of the game be subtly manipulated by powerful players to extract value from weaker players?',
-    'Empirical analysis of real-world game scenarios, including economic and political interactions, focusing on rule-making processes and information asymmetry.',
-    'If True (high manipulation): The constraint leans more towards a snare. If False (low manipulation): The constraint leans more towards a rope.',
+    computational_accessibility_gap,
+    'Does the gap between theoretical existence (guaranteed by minimax) and practical computation of equilibrium constitute an effective escape from the constraint?',
+    'Empirical comparison: outcomes in real strategic games vs minimax predictions; measurement of computational complexity barriers vs actual agent behavior',
+    'If gap is material: the constraint may degrade to Rope or Scaffold (agents use heuristics and coordination). If gap is negligible: Mountain classification confirmed (agents approximate equilibrium despite computational cost).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(computational_accessibility_gap, empirical, 'Whether computational intractability of minimax creates practical escape from the constraint').
+
+omega_variable(
+    information_structure_sensitivity,
+    'Does the minimax theorem''s guarantee hold when agents have asymmetric or incomplete information?',
+    'Comparison of theoretical minimax equilibria with empirical outcomes in games with information asymmetry; examination of Bayesian game theory extensions',
+    'If theorem fails under asymmetric info: the mountain classification applies only to perfect-information subclass. If theorem extends: constraint is more universal than initially classified.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(information_structure_sensitivity, conceptual, 'Whether minimax extends beyond perfect-information games').
+
+omega_variable(
+    behavioral_deviation_prevalence,
+    'How frequently do real agents deviate from minimax equilibrium in experimental and field settings?',
+    'Meta-analysis of behavioral game theory experiments; measurement of deviation rates across agent sophistication levels',
+    'If deviations are rare (< 10%): Mountain classification confirmed. If deviations are systematic (> 30%): constraint may be Piton (theoretically mandated but behaviorally degraded).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(behavioral_deviation_prevalence, empirical, 'Empirical frequency of deviation from minimax play in strategic games').
+
+omega_variable(
+    zero_sum_boundary_ambiguity,
+    'Where does the constraint boundary lie for games that are nearly zero-sum, or zero-sum in some aspects but not others?',
+    'Analysis of equilibrium robustness as payoff structure deviates from perfect zero-sum (epsilon-zero-sum games); measurement of minimax prediction accuracy',
+    'If minimax predictions degrade sharply: constraint applies only to mathematically pure zero-sum. If predictions remain robust: constraint extends to quasi-zero-sum and mixed-motive games.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(zero_sum_boundary_ambiguity, conceptual, 'Applicability of minimax to approximately zero-sum games').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(minimax_theorem_game_equilibrium, 0, 10).
+narrative_ontology:interval(minimax_theorem, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(minimax_theorem_game_equilibrium_tr_t0, minimax_theorem_game_equilibrium, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(minimax_theorem_game_equilibrium_tr_t5, minimax_theorem_game_equilibrium, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(minimax_theorem_game_equilibrium_tr_t10, minimax_theorem_game_equilibrium, theater_ratio, 10, 0.25).
+% Theater ratio over time
+narrative_ontology:measurement(minimax_tr_t0, minimax_theorem, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(minimax_tr_t50, minimax_theorem, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(minimax_tr_t100, minimax_theorem, theater_ratio, 100, 0.15).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(minimax_theorem_game_equilibrium_ex_t0, minimax_theorem_game_equilibrium, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(minimax_theorem_game_equilibrium_ex_t5, minimax_theorem_game_equilibrium, base_extractiveness, 5, 0.48).
-narrative_ontology:measurement(minimax_theorem_game_equilibrium_ex_t10, minimax_theorem_game_equilibrium, base_extractiveness, 10, 0.55).
+% Extraction over time
+narrative_ontology:measurement(minimax_be_t0, minimax_theorem, base_extractiveness, 0, 0.05).
+narrative_ontology:measurement(minimax_be_t50, minimax_theorem, base_extractiveness, 50, 0.08).
+narrative_ontology:measurement(minimax_be_t100, minimax_theorem, base_extractiveness, 100, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-narrative_ontology:coordination_type(minimax_theorem_game_equilibrium, enforcement_mechanism).
+narrative_ontology:coordination_type(minimax_theorem, information_standard).
+narrative_ontology:affects_constraint(minimax_theorem, nash_equilibrium_existence).
+narrative_ontology:affects_constraint(minimax_theorem, zero_sum_game_dynamics).
+narrative_ontology:affects_constraint(minimax_theorem, strategic_dominance).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(minimax_theorem_game_equilibrium, 0.3).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(minimax_theorem_game_equilibrium, other_constraint_id).
+% DUAL FORMULATION NOTE:
+% The minimax theorem is a special case of the broader Nash equilibrium existence theorem. This constraint story focuses on zero-sum games specifically; the upstream Nash constraint covers general n-player games. The minimax theorem's stronger guarantee (existence of pure strategy minimax values plus mixed strategy equilibrium) is downstream of but more restrictive than Nash existence.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(minimax_theorem_game_equilibrium, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

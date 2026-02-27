@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "inference_cost_scaling_law",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "infcost"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "The Computational Tollgate: Inference Cost Scaling Law",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": false,
+    "victims": [
+      "small_scale_researchers",
+      "emerging_ai_startups",
+      "developing_economy_innovators",
+      "open_source_model_developers"
+    ],
+    "beneficiaries": [
+      "hyperscale_compute_providers",
+      "frontier_model_labs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Small-Scale Researcher",
+      "comment": "PERSPECTIVE 1: SMALL-SCALE RESEARCHER (SNARE) \u2014 Cannot afford frontier inference costs; trapped in lower-capability tiers. No alternative to proprietary APIs for access to state-of-art models. d\u22480.92, f(d)\u22481.39, \u03c3=1.2 \u2192 \u03c7\u22480.95. Maximal extraction from structural position."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Emerging Startup",
+      "comment": "PERSPECTIVE 2: EMERGING STARTUP (SNARE) \u2014 Can access inference APIs but faces massive scaling costs. Constrained by venture burn rate and inability to negotiate volume pricing. Exit paths (building own inference infrastructure) require capital beyond startup reach. d\u22480.85, f(d)\u22481.20, \u03c3=1.0 \u2192 \u03c7\u22480.70. High extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Hyperscale Compute Provider",
+      "comment": "PERSPECTIVE 3: HYPERSCALE COMPUTE PROVIDER (ROPE) \u2014 Experiences the scaling law as a coordination mechanism: higher inference costs translate directly to revenue capture from the entire ecosystem. Capital leverage and unit economics produce net beneficiary status. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Negative effective extraction = pure beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Model Coalition",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE MODEL COALITION (TANGLED ROPE) \u2014 Coordinating actors (Hugging Face, Meta's open releases, community fine-tuning networks) are building an alternative inference pathway that reduces computational costs through model distillation, quantization, and edge deployment. Benefits from coordination (shared knowledge, reduced inference costs through optimization). Constrained by capital intensity of model research. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.45. Mixed extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Frontier Model Lab's Cost Justification",
+      "comment": "PERSPECTIVE 5: FRONTIER MODEL LAB COST JUSTIFICATION (PITON) \u2014 Internal narratives about 'training costs justify inference pricing' or 'compute scarcity forces allocation mechanisms' have atrophied: actual inference APIs are highly profitable despite marginal cost being orders of magnitude below published pricing. The cost story is maintained through institutional inertia (legacy pricing models) and theatrical scarcity narratives. theater_ratio=0.38 is borderline; the piton gate requires \u22650.70, so this perspective does not formally classify as piton, but the institutional degradation is observable."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulated Frontier",
+      "comment": "PERSPECTIVE 6: REGULATED FRONTIER (SCAFFOLD) \u2014 If regulatory intervention (EU AI Act, potential US compute governance) mandates open access to frontier models or subsidizes inference costs for public research, the constraint becomes temporary. Powerful regulatory actors see this as a coordination problem with a sunset: once open-access models mature and cost curves flatten through competition, the tollgate loses extraction capacity. d\u22480.45, f(d)\u22480.45, \u03c3=1.2 \u2192 \u03c7\u22480.25. Lower effective extraction because exit path is visible to powerful actors."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational scope, the inference cost scaling law is not a natural law but a contingent market structure enforced by capital concentration. The constraint extracts across all scales: small-scale researchers are locked out entirely (d\u22480.92), moderate actors are squeezed (d\u22480.85), powerful actors who own compute negotiate freely (d\u22480.08). The constraint's structural property is asymmetric exit options across power levels, not algorithmic necessity. d\u22480.82, f(d)\u22481.18, \u03c3=1.2 \u2192 \u03c7\u22480.82."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_necessity_vs_market_structure",
+      "question": "Is inference cost scaling an immutable algorithmic property (more parameters = more compute required) or a contingent market structure (artificial scarcity + pricing power)?",
+      "resolution_mechanism": "Compare inference cost per FLOP across competing providers; track cost curves after market entry or regulatory intervention; analyze relationship between model parameter count and minimum viable inference cost",
+      "impact": "If algorithmic: constraint is closer to Mountain (\u03b5\u22480.15). If market structure: constraint is Snare (\u03b5\u22480.58, current). Resolution determines whether open-source alternatives can actually undercut or only serve lower-capability tiers.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether inference cost scaling is algorithmic or market-driven"
+    },
+    {
+      "id": "competitive_entry_barrier_height",
+      "question": "What minimum capital threshold is required to offer competitive inference services (price within 30% of frontier providers)?",
+      "resolution_mechanism": "Historical analysis of new inference provider launches; capital requirements vs time-to-price-parity; identification of unit-economic breakeven points",
+      "impact": "If < $100M: competitive entry is possible, snare classification weakens. If > $500M: barriers are severe, snare classification strengthens, scaffold sunset becomes increasingly speculative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Capital barrier to competitive inference service entry"
+    },
+    {
+      "id": "open_source_model_substitution_rate",
+      "question": "At what rate do open-source models close the capability gap with frontier proprietary models?",
+      "resolution_mechanism": "Benchmark tracking (MMLU, GSM8K, real-world task performance) for open-source vs proprietary models over time; user adoption curves for open-source alternatives; cost savings achieved by practitioners switching",
+      "impact": "If gap closes within 6-12 months: snare classification degrades to tangled_rope (scaffold exit visible). If gap persists > 2 years: snare classification hardens, victims remain trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of open-source model capability convergence"
+    },
+    {
+      "id": "inference_margin_compression_feasibility",
+      "question": "Can inference pricing margins compress through competition without regulatory intervention, given the capital requirements for compute infrastructure?",
+      "resolution_mechanism": "Economic modeling of inference provider competition; analysis of price movements in GPU/TPU markets; comparison to other infrastructure-intensive markets (cloud compute, telecommunications)",
+      "impact": "If margins compress naturally: snare weakens toward rope (competitive extraction reduces to coordination). If margins persist: snare hardens, regulatory scaffold becomes necessary for constraint resolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Natural margin compression vs structural persistence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The inference cost scaling law represents a structural extraction mechanism in AI economics where the cost of running advanced models (LLMs, vision transformers, multimodal systems) scales at rates that prevent small-scale actors from accessing frontier capability in real-time. As model sizes and training costs have increased, inference pricing has followed, creating a tiered market where (1) hyperscale compute providers extract economic rent from everyone downstream, (2) frontier model labs (OpenAI, Anthropic, Google) maintain artificial scarcity through API rate-limiting and tiered pricing, (3) small-scale researchers and startups are locked into constrained tiers or forced to build on deprecated open-source models, and (4) developing-economy innovators are excluded entirely. The constraint is not that inference requires computational resources\u2014it is that capital concentration has made frontier access a tollgate, and the cost structure enforces this tollgate through market leverage rather than algorithmic necessity. This story identifies the constraint as a Snare from most structural positions, but reveals competing perspectives: hyperscale providers and frontier labs see coordination (Rope), open-source coalitions see a hybrid with a visible exit path (Tangled Rope with Scaffold features), and powerful regulated actors might impose a sunset via governance intervention (Scaffold).",
+    "key_agents": [
+      "Hyperscale Compute Providers (Google Cloud TPUs, AWS SageMaker, Azure OpenAI): Primary beneficiary (institutional/arbitrage) \u2014 capture margin on every inference call; control commodity price floor",
+      "Frontier Model Labs (OpenAI, Anthropic, Google DeepMind): Primary beneficiary (institutional/immediate) \u2014 maintain pricing power through API rate-limiting and capability gatekeeping",
+      "Small-Scale Researchers (academic labs, independent researchers): Primary victim (powerless/trapped) \u2014 locked out of frontier access; confined to lower-capability open-source models",
+      "Emerging AI Startups: Secondary victim (moderate/constrained) \u2014 face runaway inference costs; forced to build on legacy models or negotiate unfavorable enterprise deals",
+      "Developing Economy Innovators: Tertiary victim (powerless/trapped) \u2014 inability to pay in hard currency excludes entire regions from frontier AI access",
+      "Open Source Model Coalition (Hugging Face, Meta, community fine-tuning): Organized actors (organized/constrained) \u2014 building alternative pathways; constrained by capital intensity but achieving cost reduction through quantization and distillation",
+      "Regulatory Actors (potential EU/US governance): Powerful actors (powerful/mobile) \u2014 potential imposers of sunset; could mandate open access or subsidize frontier research access"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not maximum. The constraint extracts significantly from small-scale actors (they are locked out) and moderate actors (they face unsustainable scaling costs). However, extractiveness is not at snare ceiling (\u22650.66) because: (1) open-source alternatives exist and are improving, providing a partial exit path, and (2) some frontier labs have released models via APIs at reduced margins. The trajectory shows growth from 0.32 (early 2023, when open-source models were closer in capability) to 0.58 (current, reflecting widening gap). Suppression (0.68): High. Multiple barriers prevent exit: (a) algorithmic barrier\u2014frontier models are genuinely more capable, and replicating capability requires similar capital investment; (b) economic barrier\u2014building inference infrastructure costs $100M+; (c) institutional barrier\u2014frontier labs' data and training know-how are proprietary; (d) temporal barrier\u2014open-source models lag by 6-12 months. Theater ratio (0.38): Moderate. The cost story has theatrical elements (scarcity narratives, 'training cost allocation' justifications) but is not purely performative\u2014actual inference costs do scale with model size and request volume. The theater is rising (0.22\u21920.38) as the gap between published marginal costs and API pricing has widened; the functional cost is real, but the extraction ratio is increasingly unmoored from underlying compute economics.",
+    "perspectival_gap": "This constraint produces a stark perspectival gulf. The hyperscale provider sees pure coordination (Rope, d\u22480.08): inference pricing is a mechanism for allocating scarce compute resources. The small-scale researcher sees pure extraction (Snare, d\u22480.92): they are locked out entirely. The emerging startup sees extraction with constrained options (Snare, d\u22480.85): they can access frontier models but face unsustainable costs. The open-source coalition sees a hybrid (Tangled Rope, d\u22480.50): they benefit from coordination effects (shared knowledge, distributed optimization) but are constrained by capital requirements. The regulatory actor sees a temporary problem (Scaffold, d\u22480.45): they have the power to impose a sunset via mandates. The analytical observer sees pure extraction (Snare, d\u22480.82): the constraint's structure is asymmetric exit options enforced by capital concentration, not by algorithmic necessity. The gap widens as actors move from beneficiary to victim: beneficiaries experience the constraint as infrastructure; victims experience it as a tollgate.",
+    "directionality_logic": "Hyperscale provider: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. They control the commodity (compute) and set the price. Frontier lab: Beneficiary + immediate \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary despite higher time pressure. Small-scale researcher: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction. No alternatives; complete dependence on providers' terms. Emerging startup: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.20. High extraction. Can access frontier models but scaling costs force suboptimal product decisions (lower-capability alternatives, reduced model switching). Open-source coalition: Organized + constrained \u2192 d\u22480.50, f(d)\u22480.65. Mixed extraction. Coalition has collective agency (can optimize inference) but constrained by capital barriers to closing the capability gap. Regulatory actor: Powerful + mobile \u2192 d\u22480.45, f(d)\u22480.45. Low effective extraction from their perspective; they have exit path (regulation) and organizational capacity to impose it. Analytical observer: Analytical \u2192 d\u22480.82, f(d)\u22481.18. The observer sees the constraint as enforced asymmetry: exit options diverge based on capital availability, not on any property of inference itself.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is NOT a law of computation or scarcity. The apparent conflict between 'inference requires compute (true)' and 'inference is extractive (true)' is false: both propositions are true but address different domains. Inference cost SCALING (more tokens \u2192 more cost) is algorithmic necessity. Inference cost LEVELS (the absolute price per token) is market structure. The snare classification applies to the level and its distribution across actors, not to the scaling relationship itself. Beneficiaries see the constraint as coordinating access to scarce resources (Rope truthfully applied to the coordination function). Victims see it as a tollgate enforcing extraction (Snare truthfully applied to the asymmetric exit structure). The mandatrophy resolution: the constraint is simultaneously a real coordination mechanism (limiting access to prevent tragedy of the commons in compute) AND an extraction mechanism (concentrating that access limitation to benefit capital holders). It is a Tangled Rope viewed neutrally, becomes a Snare from the victim's position, becomes a Rope from the beneficiary's position. The constraint's type depends on the observer's structural relationship to the exit options, not on the truth value of either framing."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "model_capability_frontier_gap",
+      "training_cost_accumulation",
+      "compute_access_equity"
+    ],
+    "dual_formulation_note": "The inference cost scaling law is upstream of three related constraints: (1) model_capability_frontier_gap (\u03b5\u22480.25, Mountain-adjacent) \u2014 the algorithmic fact that frontier models are more capable; (2) training_cost_accumulation (\u03b5\u22480.52, Snare) \u2014 the total cost of training and serving models at scale; (3) compute_access_equity (\u03b5\u22480.61, Snare) \u2014 the structural inequality in access to computational resources. The inference cost scaling law synthesizes these into a single extraction mechanism. The network edges show dependency: without frontier capability gaps, pricing power would erode; without training cost accumulation, scarcity narratives would fail; without compute access inequality, the tollgate would not function."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "training_cost_accumulation"
+    ]
+  }
+}

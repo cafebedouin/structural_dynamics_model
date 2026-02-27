@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "asean_ceasefire_2011",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "2011 ASEAN-mediated Thai-Cambodian Ceasefire Agreement",
+    "topic_domain": "geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "asean_member_states",
+      "international_community"
+    ],
+    "victims": [
+      "thai_border_residents",
+      "cambodian_border_residents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Thai Border Residents",
+      "comment": "Thai border residents near Preah Vihear experienced the agreement as a snare. They were trapped in the conflict zone and remained vulnerable despite the ceasefire, as sporadic clashes continued.  They have limited power to influence the agreement."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Cambodian Border Residents",
+      "comment": "Cambodian border residents near Preah Vihear experienced the agreement as a snare. They were trapped in the conflict zone and remained vulnerable despite the ceasefire, as sporadic clashes continued.  They have limited power to influence the agreement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Thailand",
+      "comment": "Thailand experiences the agreement as a tangled rope. It constrains their military actions and limits their ability to unilaterally resolve the border dispute. However, it also benefits from the agreement by maintaining a semblance of stability and avoiding further escalation of the conflict, bolstering its international image."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Cambodia",
+      "comment": "Cambodia experiences the agreement as a tangled rope. It constrains their military actions and limits their ability to unilaterally resolve the border dispute. However, it also benefits from the agreement by maintaining a semblance of stability and avoiding further escalation of the conflict, garnering international support."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "ASEAN Member States",
+      "comment": "ASEAN member states benefit from the agreement as it reinforces ASEAN's role as a regional mediator and promotes regional stability. They can arbitrage their position by enhancing their diplomatic influence. While they expend resources, the coordination yields a net positive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "International Community",
+      "comment": "The international community benefits from the agreement, as it prevents a larger conflict and maintains regional stability. It promotes adherence to international norms and laws. It observes the situation analytically."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_mechanism_strength",
+      "question": "How effective are the enforcement mechanisms of the ceasefire agreement?",
+      "resolution_mechanism": "Monitoring of border incidents and investigation of violations.",
+      "impact": "Strong enforcement: Agreement is more likely to be a rope. Weak enforcement: Agreement is more likely to be a piton or tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strength of ceasefire enforcement mechanisms"
+    },
+    {
+      "id": "underlying_dispute_resolution",
+      "question": "To what extent does the agreement address the underlying causes of the border dispute?",
+      "resolution_mechanism": "Analysis of diplomatic efforts and progress in border demarcation negotiations.",
+      "impact": "Addresses underlying causes: Agreement is more likely to be a scaffold. Fails to address causes: Agreement is more likely to be a tangled rope or piton.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree to which underlying border dispute is resolved"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "Following deadly border clashes near the Preah Vihear temple, Thailand and Cambodia agreed to an ASEAN-mediated ceasefire in February 2011. This agreement aimed to de-escalate tensions and prevent further conflict along the disputed border region. The agreement's effectiveness was limited, as sporadic clashes continued despite the ceasefire.",
+    "key_agents": [
+      "Thai Border Residents: Primary victims (powerless/trapped)",
+      "Cambodian Border Residents: Primary victims (powerless/trapped)",
+      "Thailand: Moderate actor (moderate/constrained)",
+      "Cambodia: Moderate actor (moderate/constrained)",
+      "ASEAN Member States: Primary beneficiaries (institutional/arbitrage)",
+      "International Community: Observer (institutional/analytical)"
+    ],
+    "logic_rationale": "The extractiveness score (0.55) reflects the continued suffering and displacement of border residents, who bear the brunt of the conflict despite the ceasefire. The suppression score (0.65) reflects the limitations on both Thailand and Cambodia's ability to act unilaterally, as well as the limits on the border residents' ability to influence the situation. The theater ratio (0.30) is relatively low, as the ceasefire was more than just a symbolic gesture, but did not fully resolve the conflict.",
+    "perspectival_gap": "The Thai and Cambodian border residents experience the agreement as a snare, as they remain vulnerable to sporadic clashes. Thailand and Cambodia experience the agreement as a tangled rope, as it constrains their actions but also benefits them by preventing further escalation. ASEAN member states and the international community benefit from the agreement as it reinforces regional stability and promotes international norms.",
+    "directionality_logic": "The directionality is determined by the agent's structural position relative to the agreement. Border residents bear the costs and have limited exit options, resulting in a high d value. Thailand and Cambodia experience both costs and benefits, resulting in a moderate d value. ASEAN member states and the international community primarily benefit from the agreement, resulting in a low d value.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating how the agreement can be viewed differently depending on the perspective. It is not simply a case of coordination or extraction, but rather a complex interplay of both. The agreement's effectiveness is limited, and it does not fully address the underlying causes of the border dispute."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preah_vihear_temple_dispute"
+    ]
+  },
+  "directionality_overrides": []
+}

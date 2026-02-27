@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "s1_visa",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.25,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "SEC S-1 Registration Framework for Initial Public Offerings",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "sec",
+      "investment_banks",
+      "investing_public_early_access"
+    ],
+    "victims": [
+      "issuing_companies",
+      "investing_public_late_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Issuing Company",
+      "comment": "The issuing company is trapped by the regulatory requirements and bears the costs of compliance (legal, accounting, administrative)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Securities and Exchange Commission (SEC)",
+      "comment": "The SEC benefits from the S-1 process through increased regulatory oversight and enforcement capabilities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the S-1 registration as a system of mixed coordination and extraction. It coordinates the public offering of securities but also extracts rents and creates barriers to entry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Investment Banks",
+      "comment": "Investment banks benefit from underwriting IPOs and advising companies on S-1 filings."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Investing Public (late access)",
+      "comment": "The investing public is extracted from by the higher-than-necessary costs for compliance as well as by the first-mover advantage of insiders."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "omegas": [
+    {
+      "id": "compliance_cost_threshold",
+      "question": "What is the threshold for compliance cost at which the benefit is no longer net positive?",
+      "resolution_mechanism": "Cost benefit analysis of compliance vs. benefits to the issuer, the SEC and the public. Comparison with alternative mechanisms such as direct listings.",
+      "impact": "If cost is determined to exceed benefit, then reclassification to snare for all participants other than SEC, implying a lower net benefit of the structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Compliance cost threshold at which benefits are no longer net positive"
+    },
+    {
+      "id": "information_asymmetry_reduction",
+      "question": "To what degree is information asymmetry truly mitigated by S-1 disclosures, considering the complexity of financial statements and the ability of sophisticated actors to exploit loopholes?",
+      "resolution_mechanism": "Empirical analysis of post-IPO performance relative to S-1 disclosures, accounting for various control variables. Examination of enforcement actions and litigation related to misleading disclosures.",
+      "impact": "If information asymmetry is substantially reduced: S-1 framework is primarily a coordination mechanism (Rope). If asymmetry persists: S-1 framework is more of an extraction mechanism (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The true impact of the S-1 on the investing public"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The SEC S-1 registration framework governs the public offering of securities in the US. It mandates the filing of Form S-1 under the Securities Act of 1933. This framework aims to protect investors by requiring companies to disclose detailed information about their business, financial condition, and management. However, the framework also imposes significant costs on issuing companies and creates opportunities for rent-seeking by intermediaries. The S-1 process can be viewed as a tangled rope, with both coordination and extraction aspects.",
+    "key_agents": [
+      "Issuing Companies: Primary target (powerless/trapped) \u2014 bears the costs of compliance.",
+      "Securities and Exchange Commission (SEC): Primary beneficiary (institutional/arbitrage) \u2014 benefits from increased regulatory oversight.",
+      "Investment Banks: Intermediary (powerful/arbitrage) \u2014 benefits from underwriting IPOs and advising companies on S-1 filings.",
+      "Investing Public (late access): Secondary target (moderate/constrained) - bears the costs of higher-than-necessary compliance and first mover advantage of insiders.",
+      "Investing Public (early access): Secondary beneficiary (powerful/arbitrage) - benefits from the first mover advantage over retail."
+    ],
+    "logic_rationale": "Extractiveness: 0.45 - The S-1 process does extract value in the form of compliance costs, legal fees, accounting fees and potentially slower process. However, the intent of the framework is to benefit all parties via the regulation of fraud and the promotion of transparency. Suppression: 0.25 - Low suppression - there are many ways for issuers to avoid the S-1 framework, including private placements, Regulation A+ offerings, and foreign listings. Theater Ratio: 0.30 - The S-1 framework aims to promote transparency and accountability. However, there is a theatrical aspect to compliance, as companies may prioritize meeting legal requirements over genuinely informative disclosures. An increasing prevalence of boilerplate disclosures and legal jargon is not necessarily indicative of underlying value to the public.",
+    "perspectival_gap": "The issuing company views the S-1 process as a snare, as it is trapped by the regulatory requirements and bears the costs of compliance. The SEC views the S-1 process as a rope, as it benefits from increased regulatory oversight and enforcement capabilities. An analytical observer sees the S-1 registration as a system of mixed coordination and extraction. It coordinates the public offering of securities but also extracts rents and creates barriers to entry. Investment banks view it as a rope as they make rents from advising and underwriting. The investing public (late access) see the process as a snare as they are extracted from via greater compliance costs as well as by first movers.",
+    "directionality_logic": "The directionality logic reflects the structural relationships between the agents. The issuing company is the primary target and has a high directionality value. The SEC is the primary beneficiary and has a low directionality value. Investment banks and the early-access investing public are also beneficiaries, but to a lesser extent. The investing public has a higher directionality value as the ultimate victim."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

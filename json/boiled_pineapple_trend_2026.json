@@ -2,130 +2,168 @@
   "header": {
     "constraint_id": "boiled_pineapple_trend_2026",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bpt"
   },
   "base_properties": {
-    "extractiveness": 0.15,
-    "suppression": 0.2,
-    "theater_ratio": 0.95,
+    "extractiveness": 0.18,
+    "suppression": 0.52,
+    "theater_ratio": 0.81,
     "claimed_type": "piton",
     "human_readable": "The Bromelain Denaturing Piton (Viral Pineapple Tea)",
     "topic_domain": "social/wellness/technological",
     "requires_active_enforcement": false,
     "beneficiaries": [
       "wellness_influencers",
-      "content_platforms"
+      "supplement_vendors",
+      "social_media_platforms"
     ],
     "victims": [
-      "trend_followers",
-      "epistemic_commons"
+      "health_consumer_time",
+      "medical_credibility"
     ]
   },
   "perspectives": [
     {
       "classification_type": "piton",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "The Biochemist / Analytical Observer",
-      "comment": "PERSPECTIVE 1: ANALYTICAL (PITON) — The core claimed function (active bromelain) is destroyed by the preparation method (boiling). The ritual persists due to social inertia and misinformation, detached from its original purpose. theater_ratio=0.95 >> 0.70, triggering the Piton classification. This is the ground-truth perspective."
-    },
-    {
-      "classification_type": "rope",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
-      "exit_options": "trapped",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Trend Follower",
-      "comment": "PERSPECTIVE 2: TREND FOLLOWER (ROPE) — Experiences the trend as a low-cost, beneficial coordination activity for health. They are unaware of the denaturation, so from their view, there is no theater. As a victim with trapped exit (in the info-bubble), d is high (≈0.95), but base ε is so low (0.15) that effective extraction χ remains below the Rope threshold (χ ≈ 0.26)."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Wellness Influencer",
-      "comment": "PERSPECTIVE 3: WELLNESS INFLUENCER (ROPE) — Experiences the trend as a pure coordination mechanism to generate engagement and ad revenue. As a beneficiary with arbitrage exit (can pivot to the next trend instantly), d is very low (≈0.15), resulting in negative effective extraction (net benefit)."
+      "label": "The Health Consumer",
+      "comment": "PERSPECTIVE 1: HEALTH CONSUMER (PITON) \u2014 Individual who encounters the boiled pineapple trend through social media. Has exit option (can stop consuming pineapple water) but faces sunk effort (already purchased ingredients, watched videos) and social reinforcement. Experiences low extractiveness due to mobility, but the high theater (ritualistic preparation, performance of health consciousness) keeps the constraint alive despite minimal functional benefit. Theater-driven persistence rather than coercive lock-in."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Content Platform",
-      "comment": "PERSPECTIVE 4: CONTENT PLATFORM (ROPE) — Structurally indifferent to the content's validity, the platform sees a pure coordination signal that drives user engagement. The trend is a low-cost mechanism for capturing attention. As an institutional beneficiary, its effective extraction is negative."
+      "label": "Wellness Influencers and Vendors",
+      "comment": "PERSPECTIVE 2: WELLNESS INFLUENCERS & VENDORS (ROPE) \u2014 Primary beneficiaries. Coordinate consumer attention and purchasing behavior through content distribution. Extract engagement metrics and sales revenue. Institutional power and arbitrage options (can promote alternative trends) make their experience one of genuine coordination: they are solving the problem of 'how to monetize wellness interest.' Net benefit to this agent class \u2014 extraction runs toward them."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Medical Credibility (Epistemic Victim)",
+      "comment": "PERSPECTIVE 3: MEDICAL CREDIBILITY (SNARE) \u2014 The epistemic commons bears the cost of misinformation persistence. Cannot exit. Faces displacement of evidence-based health guidance by theatrical alternatives. Boiling pineapple denatures bromelain (eliminating the active compound being sought), rendering the practice functionally inert \u2014 yet the trend persists due to theater, not efficacy. This represents extraction of epistemic authority without coordination benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law Framing)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (PITON/FALSE MOUNTAIN) \u2014 Risks misclassifying this as a natural law ('people are drawn to simple health hacks') when it is actually a degraded institutional practice. The viral mechanism is not inherent to human nature but to algorithmic amplification and influencer economics. Theater ratio of 0.81 indicates the constraint persists primarily through performative signaling (health consciousness, natural remedy appeal) rather than functional benefit. The practice has atrophied: original bromelain extraction rationale has been functionally eliminated by heat denaturation, yet the ritual remains."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Public Health Educators",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH EDUCATORS (SCAFFOLD) \u2014 See the trend as a coordination failure with a sunset clause. Evidence-based nutrition education is gradually replacing wellness theater as AI-mediated misinformation detection improves and health literacy increases. Constrained by resource limits and counter-signaling effects (debunking can amplify false claims), but exit path exists: better information infrastructure. Sunset timeline: 5-10 years as generational consumer cohorts age out of TikTok echo chambers and AI literacy improves."
     }
   ],
   "omegas": [
     {
-      "id": "placebo_effect_magnitude",
-      "question": "Does the ritual of preparing and consuming the tea provide a significant placebo effect, thus creating a non-biochemical function?",
-      "resolution_mechanism": "A randomized controlled trial comparing boiled pineapple tea against a similarly prepared placebo beverage and a no-intervention group, measuring self-reported wellness outcomes.",
-      "impact": "A strong placebo effect would mean the constraint provides a genuine (though misattributed) coordination benefit, potentially shifting the analytical classification from Piton to a low-extraction Rope, as the 'function' would no longer be zero.",
-      "confidence": "medium",
+      "id": "bromelain_biological_persistence",
+      "question": "Does boiling actually denature bromelain sufficiently to eliminate anti-inflammatory activity, or is residual activity sufficient to explain anecdotal benefit reports?",
+      "resolution_mechanism": "Biochemical assay of boiled pineapple extract for residual bromelain activity; correlation with reported symptom improvement in controlled trial",
+      "impact": "If bromelain is completely denatured: constraint is pure theater (piton confirmed). If residual activity persists: constraint shifts toward tangled_rope (legitimate coordination of folk knowledge extraction method with theatrical performance).",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Quantifying the placebo effect of the pineapple tea ritual"
+      "description": "Whether boiling denatures bromelain or residual activity persists"
+    },
+    {
+      "id": "placebo_boundary_precision",
+      "question": "How much of the reported health benefit derives from placebo effect vs. any active compound; and does the placebo mechanism itself constitute coordination or extraction?",
+      "resolution_mechanism": "Double-blind randomized controlled trial comparing boiled pineapple water to inert control; neuroimaging of placebo response pathways",
+      "impact": "If pure placebo: whether ritualistic health practice counts as coordination (self-care ritual) or extraction (false health claims). If mixed: threshold determination for when placebo crosses into deception.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between placebo effect and active benefit"
+    },
+    {
+      "id": "algorithmic_amplification_inevitability",
+      "question": "Is viral spread of low-evidence health trends an inevitable property of recommendation algorithms, or a contingent outcome of current platform design?",
+      "resolution_mechanism": "Comparative analysis of wellness content amplification across different algorithm types; audit of platform suppression policies for health misinformation",
+      "impact": "If inevitable: constraint approaches mountain status (inherent to information networks). If contingent: constraint is purely social/institutional, maintainable only through specific business incentives (engagement maximization).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether algorithm-driven amplification is inevitable or contingent"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.5
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.76
     },
     {
       "metric": "theater_ratio",
       "time_point": 12,
-      "value": 0.8
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.95
+      "value": 0.81
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
       "value": 0.15
     },
     {
       "metric": "base_extractiveness",
       "time_point": 12,
-      "value": 0.15
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 24,
-      "value": 0.15
+      "value": 0.18
     }
   ],
   "interval": {
     "start": 0,
-    "end": 24
+    "end": 12
   },
   "commentary": {
-    "narrative_context": "This constraint analyzes the viral wellness trend of boiling pineapple peels and cores to create a 'tea' purported to have anti-inflammatory benefits from the enzyme bromelain. However, bromelain is a protein that is denatured (structurally destroyed and rendered inactive) by boiling. The constraint is therefore a classic Piton: a practice whose claimed primary function has been nullified by its own process, but which persists due to social proof, ritual, and misinformation. The activity is almost entirely performative (theater), with negligible biochemical function.",
+    "narrative_context": "The boiled pineapple tea trend exemplifies a degraded wellness practice maintained through theatrical performance rather than functional benefit. Beginning as a folk remedy based on bromelain (a proteolytic enzyme with documented anti-inflammatory properties), the trend has been algorithmically amplified into a viral phenomenon on TikTok and Instagram. However, the preparation method (boiling) denatures bromelain, eliminating the active compound the practice ostensibly targets. The constraint persists not because it produces health benefits, but because it performs health consciousness and taps into the cultural narrative of 'natural remedies.' This makes it a classic piton: a former rope (the original bromelain extraction method) that has atrophied into pure theater, but remains institutionalized through influencer promotion and consumer habit. The extractiveness is low (0.18) because consumers retain high exit mobility \u2014 they can stop making pineapple tea without significant cost. The suppression is moderate (0.52) because social media algorithms suppress critical information while amplifying health claims, but consumer access to rebuttals is available. The theater ratio is high (0.81) because the practice's persistence correlates with social signaling rather than measurable health outcomes.",
     "key_agents": [
-      "Trend Followers: Primary victims (powerless/trapped) — invest time and belief for a biochemically nullified benefit.",
-      "Wellness Influencers: Primary beneficiaries (powerful/arbitrage) — gain engagement, followers, and revenue by promoting the trend.",
-      "Content Platforms: Institutional beneficiaries (institutional/arbitrage) — profit from the viral engagement loop, regardless of content validity.",
-      "Analytical Observers (e.g., scientists, debunkers): Identify the functional degradation and classify the constraint as a Piton."
+      "Health Consumer: Powerless/mobile agent \u2014 can exit easily but faces social reinforcement and sunk effort. Experiences low extractiveness but persists due to theater.",
+      "Wellness Influencers: Institutional/arbitrage beneficiaries \u2014 capture engagement metrics and product affiliate revenue. See the trend as coordination mechanism for monetizing health interest.",
+      "Supplement and Pineapple Vendors: Institutional/arbitrage beneficiaries \u2014 direct sales beneficiaries. Coordinate supply chain to meet induced demand.",
+      "Social Media Platforms: Institutional/arbitrage beneficiaries \u2014 maximize engagement through recommendation algorithms that amplify health claims without epistemic gatekeeping.",
+      "Medical Establishment: Institutional victim \u2014 bearing credibility loss as evidence-based guidance is displaced by theatrical alternatives in public discourse.",
+      "Health Consumer Epistemic Commons: Powerless/trapped victim \u2014 abstract collective good that absorbs cost of misinformation persistence and credibility erosion."
     ],
-    "logic_rationale": "Extractiveness (0.15) is very low; the primary cost to victims is wasted time and pineapple scraps, not significant financial loss. Suppression (0.20) is also low; alternatives are readily available, but are suppressed by the social proof of the viral trend. The defining metric is the Theater Ratio (0.95), which is extremely high because the claimed benefit is entirely negated by the preparation method. The activity's persistence is purely a function of social performance and belief, not biochemical efficacy. This high theater ratio is the key signal for the Piton classification.",
-    "perspectival_gap": "The gap is stark. From the analytical perspective of a biochemist, the constraint is a Piton—a hollowed-out ritual with no function. From the perspective of a trend follower or influencer, it is a Rope—a beneficial coordination game. They are either unaware of or indifferent to the denaturation of bromelain, and thus perceive the activity's function as intact. The disagreement is not about the cost (which all agree is low), but about the existence of the function itself.",
-    "directionality_logic": "Beneficiaries (influencers, platforms) have arbitrage exit and benefit from the engagement, leading to a low 'd' value and negative effective extraction (they see a pure coordination good). Victims (trend followers) are trapped in an information bubble and bear the opportunity cost, leading to a high 'd' value. However, because base extractiveness (ε) is so low, even for victims the effective extraction (χ) does not cross the threshold into Tangled Rope or Snare territory, hence their Rope classification.",
-    "mandatrophy_analysis": "This case correctly uses the Piton classification to identify a low-harm, high-theater phenomenon. A naive analysis might misclassify it as a Snare based on the misinformation aspect, but the low extraction and suppression metrics prevent this. It could also be misclassified as a simple Rope if one ignores the scientific reality and only looks at the social coordination function. The Piton type precisely captures the critical feature: the decoupling of a ritual from its original, now-degraded, function."
+    "logic_rationale": "Extractiveness (0.18): Low. The original bromelain extraction has been functionally eliminated by boiling (heating above 65\u00b0C denatures the enzyme), but the practice persists. Extraction is minimal because: (1) consumers have high exit mobility (can stop without significant cost), (2) vendors extract primarily through engagement metrics rather than direct markup (pineapples are inexpensive), and (3) the practice produces no measurable health benefit sufficient to justify high extraction potential. The constraint's persistence is explained by theater, not by coercive extraction. Suppression (0.52): Moderate. Algorithmic suppression of critical information (debunking content underperforms in recommendation systems) combined with barriers to accessing medical evaluation create friction against exit, but do not trap consumers. Consumers retain access to refutation evidence; the barrier is attention and algorithmic preference, not censorship. Theater ratio (0.81): High and increasing. The practice's functional purpose (bromelain extraction) has atrophied, but the ritual persists because it signals health consciousness and aligns with cultural narratives of 'natural remedies.' The high theater ratio confirms piton classification: institutional inertia maintains a practice whose primary function has been functionally eliminated.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence within the same beneficiary/victim frame. The consumer and influencer perspectives create a perspectival gap: the consumer sees a low-extraction wellness practice (piton, mobile, low chi); the influencer sees a coordination mechanism for monetizing health interest (rope, institutional, negative chi). The epistemic victim (medical credibility) sees pure extraction (snare, powerless, high chi). The analytical observer risks naturalizing this as a law of human psychology ('people are drawn to simple health hacks') when the actual constraint is contingent institutional design (recommendation algorithms + influencer economics + theater). The public health educator sees a temporary coordination failure with a sunset (scaffold, organized, constrained) \u2014 health literacy and AI-assisted misinformation detection will gradually displace the trend.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by revealing that piton classification is valid despite multiple perspectives showing higher extraction types. The piton classification holds because the constraint persists primarily through theater (0.81) rather than functional efficacy or coercive suppression. The key distinction: a snare would require victims to be trapped (high suppression, low exit); here consumers are mobile. A tangled rope would require genuine coordination benefit (bromelain extraction); here the functional purpose has atrophied. A scaffold would require a sunset mechanism; here the trend persists indefinitely without planned sunsetting. The piton classification correctly identifies this as institutional inertia: the original practice (bromelain-based folk remedy) has been functionally degraded by the preparation method (boiling denatures the active compound), but the ritual persists through performative health signaling and algorithmic amplification. This is characteristic piton decay: low extractiveness, high theater, no functional purpose maintenance."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "wellness_misinformation_ecosystem"
-    ]
-  }
+      "social_media_health_misinformation",
+      "supplement_industry_regulatory_capture"
+    ],
+    "dual_formulation_note": "The boiled pineapple trend is downstream of broader social media health misinformation dynamics (algorithmic amplification without epistemic gatekeeping) and upstream from supplement industry demand cycles. The constraint could be decomposed further: (1) the algorithmic amplification mechanism (theater_ratio focus, upstream snare for epistemology), (2) the consumer-level ritual practice (piton focus, current story), and (3) the vendor benefit extraction (rope focus, weak coordination). This story focuses on the consumer-level piton manifestation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
 }

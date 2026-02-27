@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "us_debt_ceiling",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "usdc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Debt Ceiling",
+    "topic_domain": "political/fiscal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "congressional_hardliners",
+      "deficit_hawks",
+      "ideological_spending_opponents"
+    ],
+    "victims": [
+      "fiscal_continuity",
+      "bond_markets",
+      "federal_workforce",
+      "benefit_recipients",
+      "economic_growth"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Federal Employees and Benefit Recipients",
+      "comment": "PERSPECTIVE 1: FEDERAL EMPLOYEES & BENEFIT RECIPIENTS (SNARE) \u2014 No ability to exit. During debt ceiling crises, payment is uncertain; cannot negotiate individual exemptions. Bears full cost (delayed wages, benefit interruption). d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Bond Markets and Institutional Investors",
+      "comment": "PERSPECTIVE 2: BOND MARKETS & INSTITUTIONAL INVESTORS (SNARE) \u2014 Constrained: cannot exit Treasury obligations without realizing losses. Default or delayed payment destroys collateral value. Faces recurring extraction during ceiling negotiations. d\u22480.80, f(d)\u22481.18, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Congressional Majority Coalition",
+      "comment": "PERSPECTIVE 3: CONGRESSIONAL MAJORITY COALITION (TANGLED ROPE) \u2014 Can exit (raise ceiling), but costs include internal coalition collapse and primary challenges. Benefits from coordination on fiscal priorities, but extracts from powerless actors via ceiling brinkmanship. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Congressional Spending Restraint Coalition",
+      "comment": "PERSPECTIVE 4: SPENDING RESTRAINT COALITION (TANGLED ROPE) \u2014 Benefits from coordination mechanism (ceiling negotiation as leverage point for spending controls). Extracts concessions (spending caps, benefit reforms) from broader electorate and opposing coalition. Mobile exit if leverage fails. d\u22480.45, f(d)\u22480.60, \u03c3=1.0 \u2192 \u03c7\u22480.35."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Federal Reserve and Treasury Department",
+      "comment": "PERSPECTIVE 5: FEDERAL RESERVE & TREASURY (ROPE) \u2014 Institutional actors with arbitrage options (delay spending, manage cash, coordinate with Congress). Experience constraint as pure coordination mechanism for budgetary communication. Can navigate ceiling without catastrophic failure through technical maneuvers. d\u22480.10, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Constitutional Original Intent School",
+      "comment": "PERSPECTIVE 6: CONSTITUTIONAL ORIGINAL INTENT SCHOOL (PITON) \u2014 Theater ratio \u2265 0.70. The ceiling's original function (periodic review of federal borrowing) has atrophied; it persists through institutional inertia and political theater. Legal scholars note the constraint is vestigial relative to its stated purpose. d\u22480.15, f(d)\u22480.08, \u03c3=1.0 \u2192 \u03c7\u22480.06."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Fiscal Restraint Reform Movement",
+      "comment": "PERSPECTIVE 7: FISCAL RESTRAINT REFORM MOVEMENT (SCAFFOLD) \u2014 Sees ceiling as temporary scaffolding for broader fiscal reform. If constitutional amendment or multi-year budget rules replace the ceiling, the constraint's extraction mechanism becomes obsolete. Has sunset logic: temporary hardship to incentivize permanent structural change. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Fiscal Structure Analyst",
+      "comment": "PERSPECTIVE 8: FISCAL STRUCTURE ANALYST (TANGLED ROPE) \u2014 Pure analytical view. The ceiling is a genuine coordination mechanism (forces periodic negotiation of fiscal priorities) coupled with asymmetric extraction (leverages powerless actors for political concessions). Both functions are real. \u03b5=0.58, suppression=0.68 confirm the hybrid. d\u22480.70, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.64."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_ratio",
+      "question": "What fraction of the debt ceiling's political utility comes from genuine fiscal coordination versus extracting concessions via default threat?",
+      "resolution_mechanism": "Historical analysis of ceiling negotiations: compare fiscal outcomes when ceiling was raised routinely vs when it was weaponized; measure policy concessions achieved vs fiscal transparency/oversight gained.",
+      "impact": "If coordination > 60%: Rope classification from more perspectives. If extraction > 60%: Snare classification from more perspectives. Current assumption is ~50/50 (Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of coordination vs extraction to ceiling's political function"
+    },
+    {
+      "id": "default_cascade_probability",
+      "question": "What is the true probability of catastrophic default cascading from a missed ceiling deadline, given Treasury cash management and Federal Reserve tools?",
+      "resolution_mechanism": "Stress-test simulation; analysis of prior near-misses (2011, 2013, 2023) to estimate actual vs perceived risk; review of Treasury contingency protocols.",
+      "impact": "If true probability < 5%: suppression is inflated (theater > real coercive power). Snare classifications weaken. If true probability > 20%: suppression is validated; snare classifications strengthen.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "True catastrophic default risk given Treasury tools and Federal Reserve capacity"
+    },
+    {
+      "id": "alternative_fiscal_mechanism_viability",
+      "question": "Would a shift to multi-year budget approval or constitutional fiscal rules replace the ceiling's coordination function without replicating its extraction mechanism?",
+      "resolution_mechanism": "Comparative institutional analysis: countries with constitutional budget rules (Germany, Switzerland); long-term budget frameworks (EU); assess whether these achieve fiscal transparency without debt ceiling brinkmanship.",
+      "impact": "If viable alternatives exist: scaffold sunset logic is real; constraint has structural exit path. If no viable alternatives: constraint is entrenched; scaffold perspective is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether fiscal alternatives can replace debt ceiling's coordination without its extraction"
+    },
+    {
+      "id": "partisan_weaponization_threshold",
+      "question": "At what level of partisan polarization does the ceiling transition from coordination mechanism to pure extraction tool?",
+      "resolution_mechanism": "Quantitative measure of partisan gap on fiscal policy over time; correlation with frequency and severity of ceiling crises; historical turning points (1995, 2011, 2013, 2023).",
+      "impact": "If weaponization threshold already crossed: current classification underestimates snare component. If threshold is forward-looking: tangled rope classification holds but may degrade.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Partisan polarization level triggering shift from coordination to extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "usdc_extractiveness_1980s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38,
+      "id_override": "usdc_extractiveness_2000s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "usdc_extractiveness_2020s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "usdc_theater_1980s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5,
+      "id_override": "usdc_theater_2000s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65,
+      "id_override": "usdc_theater_2020s"
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The US debt ceiling is a legal authorization limit on federal borrowing, ostensibly enacted to provide fiscal oversight. Since its creation in 1917, it has evolved from a routine procedural mechanism into a recurring instrument of political leverage. The constraint exhibits structural properties of both coordination (it forces periodic negotiation of fiscal priorities) and extraction (it concentrates coercive power in the hands of a legislative minority capable of threatening default). The asymmetry is severe: powerless actors (federal employees, benefit recipients, bond markets) bear the cost of brinkmanship while the negotiating coalitions reap political concessions. The theater ratio (0.65) reflects substantial performative content: much of each crisis is staged negotiation, with actual default probability lower than perceived. Over four decades, the ceiling has transitioned from a coordination mechanism with minimal extraction toward a hybrid tangled rope with increasing snare characteristics.",
+    "key_agents": [
+      "Federal Employees and Benefit Recipients: Powerless/trapped \u2014 face wage delays and benefit interruption with no negotiating power; bear full extraction cost.",
+      "Bond Markets and Institutional Investors: Moderate/constrained \u2014 cannot exit Treasury exposure; extraction via uncertainty premium and potential default losses.",
+      "Congressional Majority Coalition: Organized/mobile \u2014 can raise ceiling but faces internal coalition costs; benefits from coordination mechanism.",
+      "Congressional Spending Restraint Coalition: Organized/mobile \u2014 extracts fiscal concessions (spending caps, benefit reforms) via leverage; benefits from ceiling as negotiation point.",
+      "Federal Reserve and Treasury Department: Institutional/arbitrage \u2014 has technical tools to navigate ceiling without default; perceives constraint as pure coordination.",
+      "Fiscal Restraint Reform Movement: Organized/mobile \u2014 sees ceiling as temporary scaffold for broader fiscal reform; believes structural alternatives can achieve coordination without extraction.",
+      "Constitutional Original Intent School: Institutional/arbitrage \u2014 observes that ceiling's original function (periodic fiscal review) has atrophied; classifies as piton (degraded institution)."
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint enables extraction through default threat \u2014 minority coalitions can force concessions from the broader electorate and federal constituencies. Historical trend shows extractiveness increasing from 0.25 (1980s, routine raises) to 0.58 (2020s, weaponized brinksmanship). The 2011, 2013, and 2023 crises all yielded fiscal concessions from non-negotiating constituencies. Suppression (0.68): High. Multiple barriers prevent escape: Congress cannot simply vote without the ceiling (statute requires authorization); Treasury has limited discretionary tools; Federal Reserve cannot unilaterally raise ceiling. Default threat suppresses alternatives (emergency spending, bond issuance). Theater ratio (0.65): Moderate-high. Each ceiling crisis involves substantial performative negotiation: public grandstanding, deadline extensions, last-minute deals announced at 11:59 PM. Yet the underlying threat is real (default cascade is possible, though low-probability). The rise from 0.35 (1980s) to 0.65 (2020s) reflects increased theatrical performance as partisan polarization made the mechanism more contentious.",
+    "perspectival_gap": "This constraint demonstrates substantial perspectival divergence. Federal employees see a pure snare (trapped, no exit, bear full cost). Bond markets see snare-to-tangled-rope (constrained exit, significant extraction). Congressional majorities see tangled rope (mix of coordination and extraction). Spending restraint coalitions see rope-to-scaffold (genuine fiscal leverage enabling policy change). Treasury/Fed see rope (coordination mechanism). Constitutional scholars see piton (degraded institution, maintained by inertia). Fiscal reform advocates see scaffold (temporary hardship incentivizing structural change). The analytical observer sees tangled rope (both coordination and asymmetric extraction are structurally real). The gap between powerless actors and organized coalitions is maximal: the former experience pure harm, the latter experience net benefit.",
+    "directionality_logic": "Federal employees/benefit recipients: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Bond markets: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.18. High extraction. Congressional majority: Beneficiary + mobile \u2192 d\u22480.50, f(d)\u22480.65. Symmetric (some benefit, some cost from coalition fragility). Spending restraint coalition: Beneficiary + mobile \u2192 d\u22480.45, f(d)\u22480.60. Net beneficiary (extracts fiscal concessions). Federal Reserve/Treasury: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Net beneficiary (can navigate ceiling, coordinate policy). Fiscal reform movement: Ambiguous + mobile \u2192 d\u22480.35, f(d)\u22480.30. Sees constraint as temporary harness for change. Constitutional scholars: Institutional + arbitrage \u2192 d\u22480.15, f(d)\u22480.08. Piton classification from theater gate, not directionality.",
+    "mandatrophy_analysis": "The debt ceiling exemplifies the mandatrophy trap for coordination mechanisms. Initially (1917), it was intended as pure coordination \u2014 periodic congressional review of borrowing. Over time, it became weaponized: minority coalitions learned to use the ceiling as a leverage point for unrelated concessions (spending caps, benefit reforms, ideological demands). The constraint's evolution from rope \u2192 tangled rope \u2192 snare (depending on perspective) reveals the mechanism: once a coordination tool is in place, actors with higher risk tolerance can exploit it for extraction. The mandatrophy is resolved by acknowledging that the ceiling contains BOTH genuine coordination (forcing fiscal negotiation) AND genuine extraction (enabling minorities to harm powerless constituencies). The classification as tangled rope captures this hybrid nature. The rising theater ratio (0.35 \u2192 0.65) reflects Goodhart drift: as the mechanism was politicized, its performative content increased, suggesting the functional coordination benefit is declining while the extraction mechanism persists. If theater continues rising above 0.75, the constraint will degrade toward piton (maintained by institutional inertia, functional content atrophied)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "federal_fiscal_discretion",
+      "bond_market_stability",
+      "monetary_policy_independence"
+    ],
+    "dual_formulation_note": "The debt ceiling is often conflated with broader fiscal policy (spending, taxation, deficits). These are structurally distinct constraints. The ceiling is specifically a borrowing authorization limit; it affects fiscal outcomes but is not identical to fiscal policy itself. This story focuses on the ceiling's structural properties (coordination + extraction). Upstream constraints include specific fiscal demands (spending caps, benefit reforms) that are leveraged via ceiling negotiations but exist independently."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

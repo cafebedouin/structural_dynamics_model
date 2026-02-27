@@ -2,125 +2,151 @@
   "header": {
     "constraint_id": "antifragility",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "antifrag"
   },
   "base_properties": {
-    "extractiveness": 0.5,
-    "suppression": 0.65,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.28,
+    "suppression": 0.12,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
     "human_readable": "Antifragility (Gaining from Disorder)",
     "topic_domain": "technological/economic/biological",
-    "requires_active_enforcement": true,
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.9,
+    "resistance": 0.08,
     "beneficiaries": [
-      "complex_adaptive_systems",
-      "evolutionary_processes",
-      "system_architects"
-    ],
-    "victims": [
-      "individual_fragile_components",
-      "over_optimized_incumbents"
-    ],
-    "mandatrophy_resolved": false
+      "adaptive_systems",
+      "evolutionary_populations",
+      "decentralized_networks"
+    ]
   },
   "perspectives": [
-    {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "trapped",
-      "spatial_scope": "national",
-      "label": "The Individual Fragile Component",
-      "comment": "PERSPECTIVE 1: FRAGILE COMPONENT (SNARE) — A small business failing in a recession, a species going extinct, or a single server terminated by Chaos Monkey. From this perspective, the 'stressor' that strengthens the system is a catastrophic, uncompensated event. The component is sacrificed for the benefit of the whole. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.71."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The System Architect",
-      "comment": "PERSPECTIVE 2: SYSTEM ARCHITECT (ROPE) — An engineer implementing chaos engineering, a central banker allowing creative destruction, or evolution itself. This agent benefits from the increased resilience of the total system and sees the imposed stress as a pure coordination mechanism to achieve that goal. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07. The negative extraction indicates a net subsidy."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "regional",
-      "label": "The Resilient Component",
-      "comment": "PERSPECTIVE 3: RESILIENT COMPONENT (TANGLED ROPE) — A muscle fiber growing stronger after being stressed, or a company that successfully adapts during a downturn. This agent experiences both the cost of the stressor and the benefit of adaptation. It is a victim, but its mobility allows it to navigate the constraint. d≈0.85, f(d)≈1.15, σ=0.9 → χ≈0.52."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Legacy System Maintainer",
-      "comment": "PERSPECTIVE 4: LEGACY MAINTAINER (PITON) — A regulator trying to bail out failing, fragile incumbents to prevent volatility. Their actions are largely performative attempts to preserve a system that has lost its function, fighting against the natural antifragile dynamics of the market/ecosystem. The theater_ratio of 0.75 meets the Piton gate (≥0.70)."
-    },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) — This perspective frames antifragility as an immutable, amoral law of complex systems, akin to natural selection. It naturalizes the extraction by viewing it as a fundamental feature of reality. The engine will flag this as a false summit, as the base properties (ε=0.50, suppression=0.65) are inconsistent with a true Mountain."
+      "label": "The Natural Law Perspective",
+      "comment": "PERSPECTIVE 1: NATURAL LAW VIEW (MOUNTAIN) \u2014 Antifragility is a fundamental principle of complex adaptive systems across scales: biological evolution gains from environmental stress, market economies discover innovations through competition and failure, immune systems strengthen through pathogen exposure. The constraint emerges naturally from the mathematics of optimization under volatility and from the physics of information integration in far-from-equilibrium systems. No agent enforces it; it is an irreducible structural feature of how adaptive systems work. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Evolutionary Population",
+      "comment": "PERSPECTIVE 2: EVOLUTIONARY POPULATION (ROPE) \u2014 Populations that experience environmental volatility develop greater genetic diversity and phenotypic flexibility. Stressors eliminate weak adaptations and concentrate viable ones. The constraint is pure coordination: individual organisms cooperate (through mating, resource sharing, colony structures) to capture antifragility benefits. No asymmetric extraction \u2014 all members of the population benefit from the collective response to disorder. The suppression is minimal (natural selection is costless in information-theoretic terms). Theater ratio is low (actual adaptive mechanisms, not performative ones)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Decentralized Network",
+      "comment": "PERSPECTIVE 3: DECENTRALIZED NETWORK (ROPE) \u2014 Internet protocols, peer-to-peer systems, and open-source ecosystems gain robustness through distributed redundancy and failure. No central authority enforces antifragility; the constraint emerges from the coordination of autonomous nodes. Each node benefits from the network's resilience (benefits are evenly distributed). Suppression is low (the protocol simply works). Theater ratio is low (redundancy and failure recovery are functional, not performative). Beneficiaries and victims are identical: all network participants."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business Owner",
+      "comment": "PERSPECTIVE 4: SMALL BUSINESS OWNER (TANGLED ROPE) \u2014 A business that survives market downturns becomes stronger (if it survives). But the path to antifragility is painful: operational stress, job losses, near-insolvency experiences, and survival-driven innovation. The owner benefits from antifragility if the business survives, but bears concentrated extraction during the disorder phase. Coordination function exists (the market selects for viable strategies), but extraction is asymmetric: the owner experiences the full stress of the volatility; external investors and creditors can exit. Active enforcement is present in the form of bankruptcy law, creditor pressure, and market discipline. Suppression is moderate (the owner cannot easily exit during downturns; constrained exit option)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 5: PRECARIOUS WORKER (SNARE) \u2014 A worker exposed to high volatility in labor markets (gig economy, seasonal employment, contract work) gains no antifragility benefit. Each downturn causes immediate income loss. No coordination function protects workers; the suppression is high (limited social safety net, no union power, trapped in contract terms). The constraint extracts from workers: they bear full volatility risk while benefiting from none of the system's adaptability gains. No exit option \u2014 workers cannot leave the labor market, and individual volatility exposure cannot be hedged. High extraction, high suppression, minimal theater (the precarity is real, not performative)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Resilience-Building Coalition",
+      "comment": "PERSPECTIVE 6: RESILIENCE-BUILDING COALITION (SCAFFOLD) \u2014 Disaster-preparedness organizations, redundancy-building initiatives, and resilience investment programs create temporary coordination scaffolds that accelerate antifragility development. These have explicit sunset clauses: once redundancy is built, the scaffold is no longer needed. Early stage: high suppression (mandatory participation in preparedness drills, compliance costs, resource allocation). Late stage: suppression declines as redundancy becomes normal and the scaffolding is removed. Theater ratio is moderate (some performative compliance to safety standards, but mostly functional infrastructure). Beneficiaries: all parties who inherit the resilient system. Victims: those bearing upfront compliance costs during early phases."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Antifragility Industry",
+      "comment": "PERSPECTIVE 7: ANTIFRAGILITY INDUSTRY (PITON) \u2014 Consulting firms, business books, and corporate 'resilience programs' sell antifragility as a service. The actual antifragility principle (gain from disorder) requires real exposure to volatility and failure. Corporate programs substitute performative 'stress-testing' and 'resilience training' for actual antifragility. Employees participate in resilience theater while the corporation avoids real volatility (hedging risk, protecting divisions from accountability). Theater ratio is very high (0.75+): the program appears functional but delivers minimal actual antifragility. The constraint persists through institutional inertia (HR departments maintain the programs) despite degraded function. No real beneficiary except the consulting vendor."
     }
   ],
   "omegas": [
     {
-      "id": "extraction_necessity",
-      "question": "Is the sacrifice of components a necessary feature of antifragility, or a bug of its current implementations?",
-      "resolution_mechanism": "Formal modeling of complex systems to find pathways to systemic resilience without component failure; empirical study of systems that adapt via non-destructive transformation.",
-      "impact": "If sacrifice is necessary, the constraint is fundamentally a Tangled Rope/Snare. If not, it could be re-engineered into a Rope.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether antifragility requires sacrificial components"
-    },
-    {
-      "id": "scale_invariance",
-      "question": "Does antifragility at one scale create fragility at a higher scale?",
-      "resolution_mechanism": "Multi-scale analysis of economic and ecological systems. For example, does a highly antifragile financial sector (that profits from volatility) make the overall economy more fragile?",
-      "impact": "If the property is not scale-invariant, then the 'beneficiary' at one level may be the 'victim' at another, changing the entire directionality map.",
+      "id": "antifragility_vs_fragility_measurement",
+      "question": "What empirical metric distinguishes antifragile gain from fragile loss when both involve volatility exposure?",
+      "resolution_mechanism": "Time-series analysis of system capability (fitness, revenue, adaptive capacity) conditional on volatility shock; comparison of pre- and post-shock trajectory slopes; longitudinal tracking across multiple stressor types",
+      "impact": "If metric is capability gain: antifragility is real and measurable (Mountain confirmed). If metric is merely survival: concept collapses into robustness (not antifragility). If metric is option value: antifragility is a financial derivative property (Rope confirmed).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether antifragility at one scale induces fragility at another"
+      "description": "How to measure genuine antifragile gain versus noise or mere robustness"
+    },
+    {
+      "id": "domain_specificity_of_antifragility",
+      "question": "Is antifragility a universal principle or domain-specific? Does the same mechanism that builds evolutionary fitness also build economic resilience or technological robustness?",
+      "resolution_mechanism": "Cross-domain comparative analysis: identify structural homologies and differences in antifragility mechanisms across biological, economic, and technological systems; examine whether optimized volatility exposure in one domain transfers to another",
+      "impact": "If universal (same mechanism): single constraint story with multiple perspectives (current approach confirmed). If domain-specific: decompose into separate constraints (antifragility_biological, antifragility_economic, antifragility_technological) with different \u03b5 values and structural data.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether antifragility is a universal principle or multiple domain-specific phenomena"
+    },
+    {
+      "id": "extraction_via_volatility_asymmetry",
+      "question": "When different agents bear different volatility exposure (owner vs precarious worker), is the extraction mechanism a feature of antifragility or a separate constraint (labor market extraction)?",
+      "resolution_mechanism": "Decompose the snare perspective (precarious worker) from the tangled rope perspective (small business owner) into separate constraint stories with independent \u03b5 values; verify whether removing the extraction mechanism would also remove the antifragility benefit",
+      "impact": "If extraction is essential to antifragility: single story confirmed (current approach). If extraction is contingent: precarious_worker_exposure becomes a separate snare story downstream of antifragility (network link). Precarious worker cannot gain antifragility without changing structural position (exit option, power level).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether volatility-based extraction is inherent to antifragility or a separate institutional arrangement"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.15
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.45
+      "value": 0.22
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.5
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.5
+      "value": 0.2
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.65
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.75
+      "value": 0.35
     }
   ],
   "interval": {
@@ -128,25 +154,37 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "Antifragility describes the property of systems that gain capability from stressors, shocks, and volatility. This is distinct from resilience (recovering) or robustness (resisting). The core structural tension arises because the system's gain in strength is often derived from the harm or failure of its individual components. This creates a dynamic of internal extraction for external benefit, where the system as a whole benefits at the direct cost of its most fragile parts.",
+    "narrative_context": "Antifragility is a structural principle describing systems that gain capability from volatility, stressors, and disorder. The constraint operates across biological, economic, and technological domains. Its core mechanism is simple: variation enables selection; selection concentrates viable adaptations; concentrated adaptations increase system capability. Antifragility is fundamentally different from robustness (resistance to disorder) or resilience (recovery after disorder). An antifragile system does not merely survive volatility \u2014 it becomes stronger through exposure. Evolution is the canonical example: genetic variation is the raw material; environmental stress selects viable phenotypes; the population becomes fitter. Markets exhibit antifragility: business failures eliminate unviable strategies; surviving firms innovate to escape competition; the economy becomes more adaptive. Decentralized networks gain robustness from redundancy: node failures force protocol redesign; redesigned protocols are more robust than the original. The constraint's extractiveness is moderate because the benefit distribution is context-dependent: evolutionary populations share antifragility gains equally; decentralized networks distribute gains to all nodes; small business owners bear concentrated stress but capture gains if they survive; precarious workers bear stress with zero antifragility benefit; institutional consultants extract rent by selling performative antifragility. The theater ratio has increased over the 10-unit interval as corporate 'resilience programs' have become widespread \u2014 the appearance of antifragility-building is increasingly decoupled from actual volatility exposure. The constraint emerges naturally (it is not enforced), but its distribution across agents is deeply unequal, creating extraction dynamics when institutional structures concentrate volatility exposure and unequally distribute gains.",
     "key_agents": [
-      "Complex Adaptive Systems: Primary beneficiary (abstract) — The ecosystem, market, or organization that becomes more resilient.",
-      "System Architects: Primary beneficiary (institutional/arbitrage) — Agents who design or manage systems to be antifragile (e.g., chaos engineers).",
-      "Individual Fragile Components: Primary victim (powerless/trapped) — The parts of the system that are damaged or destroyed by stressors.",
-      "Over-Optimized Incumbents: Secondary victim (powerful/constrained) — Brittle, established entities that are harmed by volatility.",
-      "Legacy System Maintainers: Institutional actor (institutional/constrained) — Regulators or managers who try to suppress volatility, often performatively."
+      "Adaptive Systems: Primary beneficiary (analytical/analytical) \u2014 gain capability from volatility through evolutionary/market/network selection mechanisms",
+      "Evolutionary Populations: Beneficiary (organized/constrained) \u2014 biological entities that benefit from environmental volatility through genetic diversity and phenotypic flexibility",
+      "Decentralized Networks: Beneficiary (institutional/arbitrage) \u2014 distributed systems that gain robustness from failure and redundancy",
+      "Small Business Owner: Mixed (moderate/constrained) \u2014 benefits from antifragility if business survives; bears concentrated stress during volatility; experiences asymmetric extraction from creditors and market discipline",
+      "Precarious Worker: Primary victim (powerless/trapped) \u2014 bears full volatility exposure with zero antifragility benefit; no exit option; experiences extraction without corresponding gain",
+      "Resilience-Building Coalition: Secondary agent (organized/constrained) \u2014 creates temporary scaffolds that accelerate antifragility development with explicit sunset clauses",
+      "Antifragility Industry: Institutional actor (institutional/arbitrage) \u2014 sells performative antifragility programs; benefits from theater expansion; sees constraint as source of revenue rather than real principle"
     ],
-    "logic_rationale": "Extractiveness (ε=0.50): Represents the significant cost imposed on sacrificed components for the benefit of the whole system. Suppression (0.65): High, as individual components within such a system often cannot opt out of being exposed to potentially fatal stressors. Theater Ratio (0.75): High, reflecting the co-opting of 'antifragility' as a management buzzword, often applied performatively without implementing the necessary structural properties like redundancy and decentralized control. The ratio has increased over the interval as the term gained popularity.",
-    "perspectival_gap": "The gap is profound. The System Architect, who can deploy stressors from a position of safety, sees a beneficial coordination mechanism (Rope). The fragile component that is destroyed by that same stressor experiences a pure extractive trap (Snare). The component that survives and adapts sees a mix of harm and benefit (Tangled Rope). A regulator trying to prevent this 'creative destruction' engages in performative, inertial actions (Piton). Finally, an observer can mistake this brutal extractive process for an amoral law of nature (Mountain), a classification the engine identifies as a false summit.",
-    "directionality_logic": "Beneficiaries (System Architects) with arbitrage exit options have a low 'd' value, resulting in negative effective extraction (χ < 0), classifying the constraint as a Rope. Victims (Fragile Components) with trapped exit options have a high 'd' value, leading to high positive effective extraction (χ > 0.66), classifying it as a Snare. The analytical observer's 'Mountain' classification is a perspectival error, stemming from framing a contingent, extractive process as a natural law.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy between 'natural law' and 'extractive system' by showing they can be perspectives on the same phenomenon. The analytical tendency to classify antifragility as a Mountain is a naturalization error. The framework correctly identifies the underlying structure as a Tangled Rope (ε=0.50, suppression=0.65) and demonstrates that the Mountain view is a false summit, while the Snare view is the ground-truth experience for the system's powerless components."
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The constraint's base extractiveness is low because antifragility is a pure coordination mechanism in most contexts \u2014 evolutionary populations, decentralized networks, and market economies all benefit from the antifragility principle without asymmetric extraction. However, extractiveness increases in institutionalized contexts where volatility exposure is concentrated (small business owners, precarious workers, resilience programs with compliance costs) and where performative versions of antifragility substitute for real volatility exposure (corporate resilience consulting). The trajectory from 0.15 to 0.28 reflects increasing theater and institutional layering. Suppression (0.12): Low. Antifragility does not require high suppression \u2014 systems achieve antifragility through exposure and adaptation, not coercion. Some institutional versions (scaffold perspective with compliance mandates, snare perspective with labor market traps) exhibit higher suppression, but the core principle has minimal suppressive overhead. Theater ratio (0.35, increasing from 0.20): Moderate and rising. Biological and market antifragility exhibit low theater (actual adaptations working). Decentralized networks have low theater (redundancy and failure recovery are functional). However, institutional antifragility programs (consulting, corporate training, compliance scaffolds) are increasingly performative \u2014 they create the appearance of antifragility without requiring agents to actually face real volatility. The rise in theater ratio indicates that institutional mediation is substituting ritual for reality.",
+    "perspectival_gap": "This constraint demonstrates how a universal principle (antifragility) manifests as different constraint types depending on structural position. The analytical observer sees an immutable natural law (Mountain): antifragility is how adaptive systems work at all scales. The evolutionary population and decentralized network see pure coordination (Rope): benefits are evenly distributed, no extraction, minimal theater. The small business owner sees a mixed coordination-extraction hybrid (Tangled Rope): some genuine antifragility benefit if survival occurs, but concentrated stress during volatility and constrained exit options during downturns. The precarious worker sees pure extraction (Snare): full volatility exposure with zero antifragility gain; trapped exit option; high suppression from labor market structure. The resilience-building coalition sees a temporary scaffold (Scaffold): intentional coordination to build antifragility infrastructure with explicit sunset. The antifragility industry sees a degraded ritual (Piton): performative resilience programs that substitute theater for real volatility exposure; maintains institutional presence through consulting revenue, not through functional antifragility delivery. The perspectival gap reveals that antifragility is not inherently extractive \u2014 its extractiveness depends entirely on whether institutional structures concentrate volatility exposure and unequally distribute the gains from adaptation.",
+    "directionality_logic": "Directionality is derived from each agent's structural relationship to volatility exposure and antifragility gain distribution. Agents that voluntarily expose to volatility and capture adaptive gains (evolutionary populations, decentralized networks, market entrepreneurs) have low d (beneficiary position) \u2014 they choose disorder because it improves their position. Agents with institutional power to avoid volatility while capturing gains (institutional investors, corporate executives hedging risk) have lower d than their formal power level would suggest (arbitrage exit option reduces d). Agents forced to bear volatility with zero adaptive gain (precarious workers, trapped in labor market) have high d (victim position) \u2014 they experience the full extraction without the benefit. The small business owner's mixed position (moderate power, constrained exit) produces mid-range d reflecting both benefit and extraction. The scaffold and piton perspectives derive from enforcement levels and theater ratios rather than power-level directionality.",
+    "mandatrophy_analysis": "Antifragility resolves the mandatrophy by showing how a pure coordination principle can be institutionally converted into extraction. The mountain perspective correctly identifies the core principle: antifragility is a natural law of adaptive systems. The rope perspectives (evolutionary population, decentralized network) show that when agents voluntarily expose to disorder and share gains equally, no extraction occurs. The tangled rope perspective shows how institutional structures (financing arrangements, market discipline) convert shared antifragility into asymmetric extraction \u2014 the business owner captures gains only if they survive, but bears full stress during volatility. The snare perspective shows how institutional structures (labor market segmentation, no social safety net, volatile gig contracts) can extract volatility exposure without distributing any antifragility gains. The scaffold perspective shows how temporary institutional coordination can accelerate antifragility with declining suppression over time. The piton perspective shows how institutional actors (consulting firms, corporate HR) can substitute performative antifragility (training programs, stress-testing rituals) for real volatility exposure, converting a natural principle into an extractive revenue stream. The mandatrophy is resolved by recognizing that antifragility is a mountain-level principle, but its distribution through institutional structures creates secondary constraints (small_business_leverage, precarious_worker_volatility_extraction, corporate_resilience_theater) that range from rope to snare to piton. The network links these secondary constraints back to the antifragility foundation."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "market_creative_destruction"
-    ]
-  }
+      "market_selection_mechanism",
+      "genetic_variation_pressure",
+      "precarious_worker_volatility_extraction",
+      "corporate_resilience_theater"
+    ],
+    "dual_formulation_note": "Antifragility is the upstream constraint: a universal principle of adaptive systems gaining from volatility. Downstream constraints inherit this principle but express it through institutional structures with different \u03b5 values: market_selection_mechanism (\u03b5\u22480.15, Rope) implements antifragility in competitive economies; precarious_worker_volatility_extraction (\u03b5\u22480.68, Snare) is an institutional extraction mechanism that forces volatility exposure without distributing antifragility gains; corporate_resilience_theater (\u03b5\u22480.25, Piton) is a degraded version where performative programs substitute for real antifragility. The network decomposition recognizes that 'antifragility' as a natural principle (Mountain, \u03b5\u22480.08) is distinct from how institutional actors distribute its costs and benefits."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
 }

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_liberties",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "magc"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Great Charter of Liberties (Magna Carta, 1215)",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rebellious_barons",
+      "free_men_charter_holders"
+    ],
+    "victims": [
+      "royal_prerogative",
+      "unfree_peasants",
+      "jewish_creditors"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unfree Peasantry",
+      "comment": "PERSPECTIVE 1: UNFREE PEASANTRY (SNARE) \u2014 The vast majority of England's population, bound to manorial holdings, remains outside the charter's protections. They bear extraction through labor obligations, feudal rents, and wardship exactions without recourse. The charter explicitly excludes them from 'free men' protections. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.54."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Lesser Knights and Freeholders",
+      "comment": "PERSPECTIVE 2: LESSER KNIGHTS AND FREEHOLDERS (TANGLED ROPE) \u2014 Middling landholders benefit from some charter protections (no arbitrary reliefs, defined wardship terms) but remain constrained by feudal hierarchy and royal authority. They gain coordination benefits (predictable tenure, due process for major disputes) while bearing costs of enforcement and royal resistance. d\u22480.60, f(d)\u22480.85, \u03c3=1.0 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Baronial Confederation",
+      "comment": "PERSPECTIVE 3: REBELLIOUS BARONS (ROPE) \u2014 The charter's primary architects and beneficiaries. Extract wealth protection and political consultation rights while presenting the charter as universal justice. Experience the constraint as coordinating their collective action against royal arbitrary power. Benefit from defined inheritance, relief terms, and guaranteed counsel before taxation. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.11. Moderate effective extraction because they also benefit from the coordination function they created."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Royal Administration",
+      "comment": "PERSPECTIVE 4: ROYAL ADMINISTRATION (PITON) \u2014 King John initially accepts the charter as a forced peace agreement, then repudiates it. The charter becomes a performative document \u2014 repeated reissue (1217, 1225) and reinterpretation with minimal enforcement, maintained through institutional ritual and baronial pressure rather than functional restraint on royal authority. Theater_ratio=0.65 reflects that the charter persists largely as a claims document about justice rather than as an enforceable constraint. d\u22480.10, f(d)\u2248-0.02, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. The crown sees the charter as degraded restraint maintained through performance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Jewish Creditors and Financial Communities",
+      "comment": "PERSPECTIVE 5: JEWISH CREDITORS (SNARE) \u2014 The charter includes explicit extraction from Jewish moneylenders through debt forgiveness and wardship provisions that redirect revenue from Jewish estates to the crown and barons. This is a secondary extraction mechanism: Jewish creditors are trapped (restricted residential options, legal disabilities, economic dependence on credit markets) and explicitly named victims of the charter's financial redistribution. d\u22480.90, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.51."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the charter is a hybrid: it coordinates baronial collective action against arbitrary royal prerogative (coordination function) while extracting from unfree peasants, Jews, and future royal authority (asymmetric extraction). The charter claims to establish universal principles of justice ('to no one will we sell, deny, or delay right or justice') while systematically excluding 95% of the population. This is the defining characteristic of tangled rope: genuine coordination mechanism + structural exclusion = hybrid. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.25."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "charter_enforcement_mechanism",
+      "question": "Was the Magna Carta ever functionally enforced as a binding constraint on royal authority, or did it remain a performative document?",
+      "resolution_mechanism": "Comparative analysis of charter terms vs. documented royal behavior (1215-1265); tracking of reissues and modifications; correlation between charter violations and baronial response",
+      "impact": "If functionally enforced: tangled rope classification holds, charter represents genuine hybrid. If purely performative: piton classification dominates, charter is inertial theater. The 1265 Mise of Lewes and barons' wars suggest partial enforcement, but enforcement degrades by 1300.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Magna Carta functioned as binding constraint or performative document"
+    },
+    {
+      "id": "peasant_exclusion_intentionality",
+      "question": "Is the charter's exclusion of unfree peasants a deliberate extraction mechanism or merely a reflection of contemporary feudal hierarchy?",
+      "resolution_mechanism": "Textual analysis of charter's language ('free men'); comparison with earlier royal documents; examination of whether alternative formulations were debated; tracking of peasant revolts' charter invocation (1381 Peasants' Revolt explicitly claims charter protections)",
+      "impact": "If deliberate extraction: snare classification for peasants is justified; charter is weaponized hierarchy. If unreflective: charter is tangled rope that could expand (and eventually does expand in 1381 reinterpretation)",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether peasant exclusion was intentional extraction or unreflective of feudal norms"
+    },
+    {
+      "id": "jewish_debt_provision_motive",
+      "question": "Do the charter's provisions on Jewish debt forgiveness target Jewish creditors specifically as extraction victims, or are they collateral consequences of broader feudal reform?",
+      "resolution_mechanism": "Comparison of Jewish provisions with earlier royal debt policy; tracking of crown revenue from Jewish wardship 1215-1230; examination of whether similar provisions applied to Christian creditors",
+      "impact": "If targeted extraction: charter is explicitly a multi-victim snare for Jews. If incidental: charter is tangled rope with embedded anti-Semitic effect but without intentional targeting.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Jewish creditors were deliberately targeted by charter extraction provisions"
+    },
+    {
+      "id": "charter_reissue_authenticity",
+      "question": "Do the 1217 and 1225 reissues represent genuine baronial enforcement or erosion of the charter through royal manipulation?",
+      "resolution_mechanism": "Textual comparison of three versions; tracking of which provisions were dropped, modified, or enforced; analyzing who requested reissues and under what pressure; examining 1265 Mise of Lewes for reference back to original terms",
+      "impact": "If genuine enforcement: charter shows increasing constraint power (tangled rope strengthening). If erosion: charter shows piton degradation (theater increasing as function declines)",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether charter reissues strengthened or weakened constraints on royal authority"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Magna Carta of 1215 is a forced peace treaty between King John and a coalition of rebellious barons, presented as establishing universal principles of justice ('to no one will we sell, deny, or delay right or justice') but systematically structured to benefit the baronial coalition while extracting from or excluding other populations. The charter coordinates baronial collective action against arbitrary royal prerogative through defined protections: guaranteed trial by peers, restricted reliefs and wardship terms, consent required for major taxation. Simultaneously, it consolidates extraction from unfree peasants (explicitly excluded from 'free men' protections), Jewish creditors (subject to specific debt forgiveness and wardship provisions), and the royal prerogative itself (permanently constrained from a baronial perspective but temporarily and incompletely from the crown's perspective). The charter's enforceability degrades rapidly: King John repudiates it within months; it requires reissue in 1217 and 1225 under pressure; by 1265 the Mise of Lewes must reinvoke it in the barons' wars. The theater ratio increases over time as the charter becomes increasingly performative\u2014reissued as a claims document about justice rather than an enforceable constraint\u2014while extraction mechanisms persist against excluded populations. This makes the Magna Carta a diagnostic case of tangled rope: genuine coordination mechanism + structural extraction + degradation over time.",
+    "key_agents": [
+      "Rebellious Barons: Primary beneficiaries (organized/constrained) \u2014 Extract wealth protection and political voice while coordinating against royal arbitrary power",
+      "King John and Royal Administration: Institutional actor (institutional/arbitrage) \u2014 Initially loses prerogative through force, then incrementally recovers authority through reinterpretation and non-enforcement",
+      "Unfree Peasantry: Primary victims (powerless/trapped) \u2014 Systematically excluded from charter protections; remain subject to manorial extraction without recourse",
+      "Lesser Knights and Freeholders: Secondary beneficiaries (moderate/constrained) \u2014 Benefit from some protections but remain hierarchically constrained",
+      "Jewish Creditors and Financial Communities: Secondary victims (moderate/trapped) \u2014 Explicitly targeted by debt forgiveness provisions; subject to crown wardship extraction",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 Sees the charter as performing universalism while embedding exclusion; coordination + extraction hybrid"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The charter extracts wealth and prerogative from the crown (benefiting barons) and financial rights from Jews (through wardship and debt provisions) while consolidating feudal extraction against peasants. The net extraction is moderate because much of the baronial gain is legitimate first-mover power consolidation (solving the coordination problem of opposing royal arbitrariness), not pure rent-seeking. Suppression (0.72): High. Multiple mechanisms prevent alternatives or exit: unfree peasants have no legal recourse or mobility; Jews face legal disabilities and economic dependence; barons must maintain collective action to enforce the charter against royal resistance; the charter itself explicitly forbids alternative frameworks ('to no one will we... deny... right or justice'). Theater ratio (0.65): Moderate-high. The charter is repeatedly reissued with modifications, suggesting performative maintenance rather than stable enforcement. The gap between charter claims (universal justice) and reality (systematic exclusion) indicates that the charter functions partly as a claims document establishing baronial legitimacy rather than as a functional constraint on power.",
+    "perspectival_gap": "The baronial perspective sees coordination (Rope/Tangled Rope) \u2014 solving the collective action problem of opposing arbitrary royal power and establishing predictable tenure. The royal perspective sees degraded constraint (Piton) \u2014 the charter persists as a performance obligation while royal authority is gradually recovered. The peasant perspective sees exclusion (Snare) \u2014 no protection, no voice, extraction continues with explicit charter sanction. The Jewish perspective sees targeted extraction (Snare) \u2014 wealth confiscation through wardship and debt cancellation, justified by the charter's language. The analytical observer sees the charter as tangled rope: genuine coordination mechanism + structural extraction + exclusion + degradation. The perspectival gap reveals that the 'universal' language of the charter masks a coalition-specific instrument.",
+    "directionality_logic": "Rebellious barons: Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.30. Moderate effective extraction because they also benefit from the coordination function. Unfree peasants: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 no exit, explicitly excluded. Lesser freeholders: Mixed (beneficiary of some protections + constrained) \u2192 d\u22480.60, f(d)\u22480.85. Moderate extraction. Jewish creditors: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. High extraction through targeted debt provisions. King John: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.02. Initially forced into victim role but rapidly recovers prerogative through reinterpretation. Analytical observer: analytical \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position \u2014 sees both coordination and extraction clearly.",
+    "mandatrophy_analysis": "The mandatrophy in the Magna Carta is the tension between the charter's explicit claim to universal justice and its systematic exclusion of the majority population. The charter asserts 'To no one will we sell, deny, or delay right or justice' \u2014 a universal principle \u2014 while explicitly limiting 'justice' to 'free men,' a category that excludes perhaps 95% of England's population (unfree peasants, Jews, women, non-landholders). This is not a misreading or later corruption: the charter itself defines the exclusion. The resolution is that the Magna Carta is genuinely a tangled rope from the analytical perspective: it is simultaneously (1) a real coordination mechanism solving the baronial collective action problem, (2) an asymmetric extraction mechanism benefiting barons while consolidating peasant subjection, and (3) a claims document establishing the ideology of 'rule of law' that will eventually expand (1381 Peasants' Revolt invokes the charter for peasant protections). The mandatrophy is not 'is it coordination or extraction?' but 'for whom?' The charter works as coordination for barons and as extraction for peasants and Jews. Declaring both beneficiaries and victims resolves the mandatrophy: it is hybrid because it serves both functions simultaneously for different populations."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_tenure_hierarchy",
+      "baronial_collective_action_problem"
+    ],
+    "dual_formulation_note": "The Magna Carta operates between two structural levels: (1) coordination among barons to solve their collective action problem (organizing against arbitrary royal power), and (2) consolidation of feudal extraction against peasants and Jews. These are not two observations of the same constraint but two aspects of a hybrid constraint. The charter's claim to universalism masks this hybridity, which is why it persists \u2014 the universalist ideology conceals the specific beneficiaries."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "necessary_day_job",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dayj"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Necessary Day Job for Creatives",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers_of_day_labor",
+      "cultural_gatekeepers"
+    ],
+    "victims": [
+      "creative_practitioners",
+      "artistic_output_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Struggling Artist",
+      "comment": "PERSPECTIVE 1: STRUGGLING ARTIST (SNARE) \u2014 Trapped by cost of living and lack of alternative income paths. Must trade creative time for subsistence labor. Cannot exit without destitution. Suppression is severe: no childcare support for artists, no basic income, no patron systems for emerging work. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.94. Pure extraction from the artist's structural position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 2: EMPLOYER (ROPE) \u2014 Benefits from reliable, educated labor force (many creatives take day jobs requiring skills they developed artistically). Experiences the constraint as coordination: day jobs provide income stability that enables unpaid internships, networking, and creative work during off-hours. Employer captures value from the educational subsidy (artists developed skills through artistic practice). d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary through arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Established Mid-Career Creative",
+      "comment": "PERSPECTIVE 3: ESTABLISHED MID-CAREER CREATIVE (TANGLED ROPE) \u2014 Constrained by age, family obligations, and career lock-in (switching to full-time creative work risks losing healthcare, retirement contributions). But also benefits from the constraint structure: day job provides stability that enables artistic risk-taking, tax deductions for supplies, professional network that influences artistic work. d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.52. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Arts Infrastructure Coalition",
+      "comment": "PERSPECTIVE 4: ARTS INFRASTRUCTURE COALITION (SCAFFOLD) \u2014 Arts councils, grants programs, artist residencies, and emerging patronage platforms (Patreon, arts funding platforms) see the day job as a temporary coordination failure with a sunset. These agents are building alternative pathways: grants reduce time burden, residencies replace day labor, collective funding enables lower-hour work. Theater is moderate (0.48) because the coalition's infrastructure is increasingly real and functional. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.17. Low extraction; coalition agents see alternatives maturing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Institution",
+      "comment": "PERSPECTIVE 5: ACADEMIC INSTITUTION (PITON) \u2014 Universities and art schools position themselves as the primary patron of artists, but increasingly rely on adjunct labor and unpaid artistic output (student artists produce work that subsidizes institutional prestige). The institutional self-image (patron/educator) persists despite structural degradation (adjuncts earn subsistence wages, full-time faculty positions decline). Theater ratio = 0.48 is below piton gate (0.70), but the institutional perspective emphasizes how the academy's patronage function has atrophied while the rhetorical claim persists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the day job represents a genuine hybrid: economies need creative output (design, culture, innovation) but have historically underfunded direct artistic production. The constraint redistributes cost from consumers (who underpay for art) to artists (who subsidize creative work via day labor). This is structurally entrenched: it coordinates artistic production with economic reality, but extracts disproportionately from artists. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.76. The analytical perspective confirms the tangled rope classification rather than seeing a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cultural_output_causality",
+      "question": "Does the day job actually subsidize artistic output, or does it primarily suppress it?",
+      "resolution_mechanism": "Comparative analysis of artistic productivity and quality between supported artists (grants, residencies, teaching positions) vs. day-job artists; longitudinal tracking of career trajectories",
+      "impact": "If subsidizing: constraint functions as partial coordination (scaffolding structure is real). If suppressing: constraint is pure extraction masquerading as necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether day jobs enable or suppress artistic output"
+    },
+    {
+      "id": "alternative_patronage_sufficiency",
+      "question": "Can emerging patronage systems (public funding, Patreon, artist collectives) scale to replace the day job within a generational timescale?",
+      "resolution_mechanism": "Projection of alternative funding growth rates; analysis of funding capacity per artist in emerging systems; comparison with historical patronage systems",
+      "impact": "If yes: scaffold sunset is structurally real, and this constraint is degrading (Piton). If no: the day job is a permanent feature (Snare or Tangled Rope from powerless perspective).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative patronage can scale sufficiently"
+    },
+    {
+      "id": "exploitation_threshold",
+      "question": "At what hours of day-job labor does the constraint tip from 'enabling creative work' (coordination) to 'preventing creative work' (extraction)?",
+      "resolution_mechanism": "Time-use studies correlating day-job hours with artistic productivity; threshold analysis of creative output vs. wage income",
+      "impact": "If threshold is low (20 hrs/week): most creatives are in extraction zone. If threshold is high (40+ hrs/week): day job is genuinely enabling for many.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Hours threshold between enabling and suppressing artistic work"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "The necessary day job for creatives represents a structural decoupling of creative vocation from subsistence income. This constraint has shaped artistic production across industries\u2014music, visual art, literature, design\u2014for centuries, but has intensified as cultural institutions have shifted cost from consumers to artists. A musician might earn $15/hour gigging but work 40 hours/week at a service job to cover rent. A visual artist might receive $0-$500 per gallery show but hold a day job that pays the bills. A writer might spend 10 hours/week writing and 40 hours/week at an administrative position. The constraint extracts artistic labor time that would otherwise be creative production, but it also coordinates artistic output with economic subsistence\u2014without this coupling mechanism, many artists could not practice their vocation at all. This creates a mixed extraction-and-coordination dynamic (Tangled Rope) from most perspectives, but appears as pure extraction (Snare) to those without resources, patronage, or alternative pathways. The constraint's theater ratio has risen over the past 60 years as cultural gatekeeping has increasingly emphasized the 'struggle' narrative and the romantic myth of the starving artist, even as the actual economic conditions have worsened. The emergence of grants, residencies, artist collectives, and patronage platforms (Patreon, Kickstarter, arts councils) suggests a scaffold structure with a genuine sunset: alternative funding pathways are maturing, which could eventually reduce the extractiveness of the day job requirement.",
+    "key_agents": [
+      "Creative Practitioners: Primary victims (powerless/trapped, moderate/constrained) \u2014 bear the cost of decoupled vocation and subsistence; time diverted from creative work to wage labor",
+      "Employers of Day Labor: Primary beneficiaries (institutional/arbitrage) \u2014 capture educated, skilled labor force (many creatives have trained artistic skills); benefit from low wages sustained by creative aspirations",
+      "Cultural Gatekeepers (galleries, publishers, venues): Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from unpaid or underpaid artistic output; can access competitive talent because artists will work for exposure/prestige",
+      "Arts Infrastructure Coalition (grants, residencies, platforms): Organized agents (organized/constrained) \u2014 building alternative pathways (Scaffold); working to reduce day-job dependency through direct funding",
+      "Academic Institutions: Institutional actors (institutional/arbitrage) \u2014 provide some patronage through teaching positions and residencies; but increasingly rely on adjunct labor and underpaid artistic output",
+      "Analytical Observer: Sees both coordination function (enabling artistic practice) and extraction mechanism (suppressing artistic output); identifies the tangled rope classification"
+    ],
+    "logic_rationale": "Extractiveness (0.55): High-moderate. The constraint extracts creative time from artists\u2014time they cannot allocate to artistic production. This is not total extraction (which would be 0.85+) because some artists do maintain significant creative output alongside day jobs, and some cultural sectors (academic art, publicly-funded work) provide more direct support. But the average extractiveness is substantial: a typical artist might spend 60-70% of working hours on subsistence labor, reducing artistic output accordingly. The 60-year trajectory (0.35 \u2192 0.55) reflects erosion of institutional patronage and cultural funding relative to cost of living. Suppression (0.65): High. Barriers to exit include: no childcare support for artists, healthcare tied to employment, lack of basic income, cultural devaluation of artistic work (payment expectations remain low despite rising skill requirements), credential-based hiring that prevents mid-career transitions. The suppression has structural depth\u2014it's not just individual barrier but systemic: no alternative pathway exists for most artists except wealthy backgrounds or rare breakthrough success. Theater ratio (0.48): Moderate. There is substantial performative content in how the day job is discussed culturally ('paying your dues,' 'the struggling artist myth') and in how cultural institutions celebrate artistic production while underfunding direct support. But the constraint is not purely theatrical\u2014day jobs do actually provide income. The theater ratio has risen as the gap between romantic narratives and economic reality has widened.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The struggling artist sees Snare (pure extraction, no exit). The employer sees Rope (coordination mechanism that provides skilled labor). The mid-career creative sees Tangled Rope (both enabling and constraining). The arts infrastructure coalition sees Scaffold (temporary problem with a sunset). The academic institution sees Piton (degraded patronage role maintained through rhetoric). The analytical observer sees Tangled Rope (genuine hybrid of coordination and extraction at civilizational scale). The perspectival gap is driven by power asymmetry (who benefits from the coupling) and exit capacity (who can exit and who cannot). The gap widens when comparing powerless to institutional perspectives\u2014the artist cannot exit, but the employer or gatekeeper can arbitrage their position.",
+    "directionality_logic": "Creative practitioners: Victim + trapped (powerless) \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction from structural position. Victim + constrained (moderate) \u2192 d\u22480.65, f(d)\u22480.95. High extraction but not maximum; mid-career creatives have some agency (teaching, residencies, established platforms). Employers: Beneficiary + arbitrage (institutional) \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary; the constraint provides them reliable labor. Cultural gatekeepers: Beneficiary + arbitrage (institutional) \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary; artists work for exposure/prestige. Arts infrastructure: Organized + constrained \u2192 d\u22480.40, f(d)\u22480.40. Low extraction; these agents have agency and see alternatives. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Observes full structure including extraction from most vulnerable.",
+    "mandatrophy_analysis": "MANDATROPHY IDENTIFICATION: The constraint resolves mandatrophy by acknowledging that the day job serves BOTH coordination and extraction functions simultaneously, depending on perspective. From a powerless artist's view, it is pure extraction (Snare). From an employer's view, it is coordination (Rope). From the analytical view, it is a hybrid (Tangled Rope). The tangled rope classification at the analytical level reveals the structural truth: the day job does enable some artistic production (coordination function is real) but at the cost of suppressing overall output and redistributing wealth from artists to employers and gatekeepers (extraction function is real). The mandatrophy is resolved by recognizing that both readings are structurally true\u2014the constraint simultaneously coordinates artistic output with subsistence and extracts labor time that would otherwise be creative. The classification does not collapse into one type; instead, the perspectival gap IS the resolution. The high-extractiveness measurement (0.55) and the presence of both beneficiaries and victims in the base properties confirm the tangled rope diagnosis: this is not a pure coordination mechanism masquerading as extraction, nor a pure extraction mechanism with a coordination justification. It is a genuine structural hybrid."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cultural_gatekeeping",
+      "artist_network_access",
+      "intellectual_property_extraction"
+    ],
+    "dual_formulation_note": "The day job constraint is downstream of broader economic inequality and cultural devaluation of artistic work. It represents a specific manifestation of how economies distribute subsistence costs across creative practitioners. The upstream constraints (economic inequality, cultural gatekeeping) have their own \u03b5 values; the day job has \u03b5=0.55 reflecting the specific structural coupling of creative vocation with wage labor."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.08
+    }
+  ]
+}

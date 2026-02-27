@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "delta_force_selection_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "delta"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.52,
+    "claimed_type": "snare",
+    "human_readable": "Delta Force (1st SFOD-D) Selection & Assessment",
+    "topic_domain": "military/special_operations",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "special_operations_command"
+    ],
+    "victims": [
+      "candidate_soldiers",
+      "military_unit_cohesion",
+      "standard_army_morale"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Candidate Soldier",
+      "comment": "PERSPECTIVE 1: CANDIDATE SOLDIER (SNARE) \u2014 Trapped in selection process with no meaningful exit. Extraction: 2-3 years of unpaid physical/psychological degradation, career opportunity cost. Cannot quit without stigma or retaliation. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.95."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Originating Unit Commander",
+      "comment": "PERSPECTIVE 2: ORIGINATING UNIT COMMANDER (SNARE) \u2014 Loses personnel to selection process; faces extraction of operational capacity and institutional continuity. Exit is constrained by military command structure \u2014 cannot refuse to send candidates. d\u22480.82, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.85."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Special Operations Command",
+      "comment": "PERSPECTIVE 3: SPECIAL OPERATIONS COMMAND (ROPE) \u2014 Net beneficiary. Acquires proven operators through extreme filtration. Selection process solves coordination problem: identifying who can perform in high-risk environments. SOCOM sees the constraint as legitimate vetting mechanism. d\u22480.10, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Military Personnel System",
+      "comment": "PERSPECTIVE 4: MILITARY PERSONNEL SYSTEM (SNARE) \u2014 Organized institutional perspective. Selection creates systemic extraction: loss of trained personnel, psychological trauma affecting retention, institutional erosion of morale across conventional units. The system is constrained by statutory force structure requirements \u2014 cannot exit without Congressional authorization. d\u22480.70, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Selection Institution Itself",
+      "comment": "PERSPECTIVE 5: SELECTION INSTITUTION (PITON) \u2014 Selection protocols persist through institutional inertia despite degraded functionality: theater_ratio=0.52. Instructors acknowledge that physical punishment (sleep deprivation, cold water, land navigation) is largely theatrical \u2014 the real selection happens in earlier, less performative stages. Yet the brutal ritual persists as a legitimation mechanism: 'we survived the gauntlet' becomes proof of worthiness. d\u22480.15, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW \u2014 From a civilizational perspective, extreme filtering is an irreducible feature of any profession requiring consistent performance under conditions where failure means death. Some minimum threshold of selection intensity is inherent to the task structure. However, the base properties (\u03b5=0.68, suppression=0.78, theater=0.52) contradict the mountain classification \u2014 the engine will detect a false summit, revealing that specific institutional practices (the 'hell week' ritual, psychological domination, deliberate humiliation) are contingent design choices, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "selection_intensity_threshold",
+      "question": "What level of selection intensity is functionally necessary versus theatrically excessive for identifying operators capable of high-stakes performance?",
+      "resolution_mechanism": "Longitudinal performance correlation: compare operators selected through harsh vs moderate selection protocols; track operational success, team integration, psychological health, retention rates",
+      "impact": "If harsh selection correlates with superior performance: justifies current intensity as functional filtering (Rope). If correlation weak or negative: selection is extraction mechanism (Snare) masquerading as necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold between functional selection intensity and theatrical excess"
+    },
+    {
+      "id": "psychological_trauma_institutional_cost",
+      "question": "What is the true institutional cost of psychological trauma and PTSD incidence in originating units, relative to the operational benefit of successful candidates?",
+      "resolution_mechanism": "Medical records analysis; unit morale metrics before/after selection deployments; retention data for traumatized non-selected candidates; operational casualty rates attributable to team degradation",
+      "impact": "If trauma cost exceeds operational benefit: selection is extractive net-negative (Snare confirmed). If benefit exceeds cost: may justify classification shift toward Tangled Rope (mixed coordination/extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Institutional cost-benefit of psychological trauma from selection"
+    },
+    {
+      "id": "alternative_selection_sufficiency",
+      "question": "Could equally effective operators be identified through non-degrading selection protocols (cognitive assessment, situational judgment, peer evaluation, simulation)?",
+      "resolution_mechanism": "Comparative selection study: implement alternative protocols on trial cohort; measure identification accuracy and downstream operator performance; compare attrition and psychological health outcomes",
+      "impact": "If alternatives are sufficient: current harsh protocols are purely extractive (Snare confirmed, suppression justified as unnecessary). If alternatives fail: selection maintains functional necessity (shifts toward Tangled Rope or even Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative selection methods can achieve equivalent outcomes"
+    },
+    {
+      "id": "institutional_legitimacy_dependence",
+      "question": "How much does Delta Force institutional legitimacy and recruitment depend on the reputation for extreme selection versus actual operational effectiveness?",
+      "resolution_mechanism": "Narrative analysis of recruitment messaging; surveys of candidates on motivation factors; comparison of elite operators from less brutal selection processes (Australian SAS, British SAS); institutional prestige decoupling from selection brutality",
+      "impact": "If legitimacy heavily depends on brutality reputation: selection is performative (theater ratio higher than 0.52). If legitimacy independent: selection can be reformed without institutional collapse.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "How institutional legitimacy depends on harsh selection reputation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The 1st Special Forces Operational Detachment-Delta selection process represents a high-extractiveness constraint that operates through extreme suppression of alternatives and candidate agency. The constraint exhibits the structural signature of a snare: candidates face exceptional physical, psychological, and temporal costs with no meaningful exit path; originating units bear organizational depletion; yet SOCOM and the selection institution itself benefit from the process. The 30-year interval tracks a subtle but significant trend: as the operational environment has become more complex and non-kinetic, the selection process has become more theatrical (theater_ratio rising from 0.38 to 0.52) while extractiveness has increased from 0.55 to 0.68. This pattern suggests institutional drift toward rent-seeking: the selection process has become increasingly detached from functional filtering and more oriented toward legitimacy maintenance and institutional perpetuation. The false summit detected from the analytical perspective reveals that defenders of current selection intensity often invoke natural law arguments ('this is inherent to elite warfare') that are actually contingent institutional choices.",
+    "key_agents": [
+      "Candidate Soldiers: Primary victims (powerless/trapped) \u2014 bear 2-3 years of unpaid degradation, career opportunity cost, psychological trauma with no exit mechanism",
+      "Originating Unit Commanders: Secondary victims (moderate/constrained) \u2014 lose trained personnel to selection, face operational capacity extraction",
+      "Special Operations Command: Primary beneficiary (institutional/arbitrage) \u2014 acquires filtered operators, maintains institutional prestige, controls elite force narrative",
+      "Military Personnel System: Systemic victim (organized/constrained) \u2014 loses personnel, experiences morale degradation, bears long-term PTSD/retention costs",
+      "Selection Institution: Institutional actor (institutional/arbitrage) \u2014 maintains legitimacy through ritual persistence despite degraded functional necessity",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional practices as inherent requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Candidates invest 2-3 years of unpaid labor, psychological trauma, and foregone career advancement opportunities. Success rate of 1-3% means 97-99% of candidates experience extraction with no benefit. SOCOM captures operational advantage without proportional cost. The trajectory (0.55\u21920.68 over 30 years) indicates increasing extraction intensity. Suppression (0.78): Very high. Candidates cannot exit without severe stigma, retaliation, or career termination. The originating unit system prevents horizontal mobility \u2014 soldiers cannot easily transfer to other units to avoid the selection deployment. Psychological pressure is structured to maximize compliance and suppress alternatives (self-care, unit cohesion, rational cost-benefit analysis). Theater ratio (0.52): Moderate-high. Significant portion of selection is performative: sleep deprivation and cold water immersion are documented as poor predictors of actual operator performance; the real selection is cognitive and judgment-based and happens earlier; yet the brutal rituals persist as legitimation theater. The upward trend (0.38\u21920.52) suggests degradation toward more theatrical maintenance as functional necessity declines.",
+    "perspectival_gap": "The constraint produces a radical perspectival divergence. SOCOM sees legitimate coordination (Rope) \u2014 a mechanism for identifying who can perform in life-or-death contexts. Candidates see pure extraction (Snare) \u2014 a mechanism for extracting 2-3 years of unpaid labor and psychological trauma from individuals with no exit option. Originating units see organizational predation (Snare) \u2014 systematic depletion of trained personnel. The selection institution sees its own ritual as degraded but legitimate (Piton) \u2014 protocols persist through inertia despite weak functional grounding. The analytical observer risks seeing immutable necessity (Mountain) but the data reveals contingency: theater_ratio of 0.52 shows that 52% of selection protocols have no direct bearing on operator capability prediction. If the theatrical component were removed, selection would become less exclusive but not less effective.",
+    "directionality_logic": "Candidate soldiers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction \u2014 no exit, full bearing of costs. Originating unit commanders: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.25. High extraction \u2014 constrained by command structure, cannot refuse to deploy personnel. SOCOM: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.10. Net beneficiary \u2014 can deploy candidates to multiple conflicts, maintains institutional autonomy, can set selection standards unilaterally. Military personnel system: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. Systemic extraction \u2014 constrained by force structure requirements, bears long-term PTSD/retention costs without compensation mechanism. Selection institution: Institutional + arbitrage \u2192 d\u22480.15, f(d)\u22480.05. Piton classification reflects that institution maintains ritual through inertia; directionality is low because institution has agency to reform protocols but chooses not to (arbitrage exit).",
+    "mandatrophy_analysis": "SNARE CONFIRMATION: The mandatrophy is resolved by recognizing that Delta selection presents itself as pure coordination (identifying best operators) but functions as pure extraction (capturing 2-3 years of unpaid labor from 97-99% of candidates). The snare classification is confirmed across all victim-perspective readings: candidates, originating units, and the military personnel system all perceive the constraint as extraction-dominant. The only perspective that sees coordination (SOCOM) is the beneficiary perspective. The rising extractiveness (0.55\u21920.68) and rising theater (0.38\u21920.52) over 30 years indicate a drift away from functional filtering and toward rent-seeking legitimacy maintenance. The analytical observer's mountain is a false summit: while extreme filtering may be inherent to elite military selection in principle, the specific practices (deliberate humiliation, sleep deprivation rituals, psychological domination) are not inherent \u2014 they are institutional choices that persist because they serve legitimacy functions rather than selection functions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "military_recruitment_quality",
+      "special_operations_institutional_autonomy",
+      "unit_cohesion_retention"
+    ],
+    "dual_formulation_note": "Delta selection is downstream of the broader military institutional structure (recruitment, force structure, command authority) but represents a distinct extractive mechanism. The upstream constraints establish the context (how many soldiers are available, what command authority exists); Delta selection is the extractive lever that operates within that context."
+  },
+  "directionality_overrides": []
+}

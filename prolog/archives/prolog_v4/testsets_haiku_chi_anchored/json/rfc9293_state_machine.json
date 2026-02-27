@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_state_machine",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rfc9293"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "TCP State Machine Constraints (RFC 9293)",
+    "topic_domain": "technological/institutional",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Endpoint Implementation",
+      "comment": "PERSPECTIVE 1: ENDPOINT IMPLEMENTATION (MOUNTAIN) \u2014 TCP implementations are logically trapped in state transitions defined by the RFC. No endpoint can deviate from valid state sequences without breaking the protocol. d\u22480.95, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.09. The constraint appears as an immutable logical law from the implementation perspective."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Protocol Formalism)",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a formal protocol perspective, the TCP state machine is a minimal finite automaton (13 states + transition rules) that solves the reliable ordered delivery problem over unreliable packet-switched networks. The state sequence is logically necessary, not contingent. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09. This is a natural law of network protocols."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standardization Body",
+      "comment": "PERSPECTIVE 3: STANDARDIZATION BODY (MOUNTAIN) \u2014 IANA/IETF sees the state machine as a fixed reference specification. Deviations require new RFCs (e.g., RFC 9293 obsoletes RFC 793). The standard's role is to document what works, not to enforce change. From the standardizer's view, the constraint is an emergent property of decades of accumulated implementation experience \u2014 stable enough to encode as immutable law. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. Negative extraction: stabilizing the standard benefits all implementers equally."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Application Developer",
+      "comment": "PERSPECTIVE 4: APPLICATION DEVELOPER (MOUNTAIN) \u2014 Developers cannot build reliable networked applications by ignoring the TCP state machine. Attempts to violate it result in undefined behavior, connection resets, or data loss. The constraint is experienced as a technical law \u2014 you can study it, work within it, but not around it. d\u22480.80, f(d)\u22481.13, \u03c3=1.0 \u2192 \u03c7\u22480.09. High power deficit makes the mountain seem restrictive, but the restriction solves a real coordination problem (reliable delivery)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "implementation_variance",
+      "question": "Do TCP implementations exhibit measurable deviations from RFC 9293 state machine in practice (Linux, Windows, BSD kernel variants)?",
+      "resolution_mechanism": "Packet capture and state tracking across implementations; comparison of actual connection lifecycles against RFC specification",
+      "impact": "If variance < 0.5%: mountain classification confirmed. If variance > 2%: constraint may be rope (coordinated approximation) not mountain (strict law).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of implementation variance from RFC specification"
+    },
+    {
+      "id": "necessity_vs_convention",
+      "question": "Are the 13 states and their transitions logically necessary for reliable ordered delivery, or are they conventional choices that could be replaced by alternative finite automata with equivalent guarantees?",
+      "resolution_mechanism": "Formal proof that alternative state machines cannot achieve TCP guarantees; analysis of whether specific state transitions (e.g., TIME-WAIT) are essential or historical artifacts",
+      "impact": "If necessary: mountain classification stands. If conventional: constraint is rope (coordinated standard) optimized by history but not physically immutable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether state machine is logically necessary or conventionally optimal"
+    },
+    {
+      "id": "quic_replacement_status",
+      "question": "Does QUIC provide equivalent reliability guarantees with a structurally simpler state machine, suggesting RFC 9293 is not the minimum for solving the coordination problem?",
+      "resolution_mechanism": "Formal equivalence proof of TCP vs QUIC state spaces; analysis of whether QUIC's complexity is lower or merely distributed differently",
+      "impact": "If QUIC simpler: TCP state machine becomes scaffold (sunset clause: migration to QUIC) rather than mountain. If QUIC equally complex: TCP is the natural solution for the problem class.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural simplicity of QUIC relative to TCP"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The TCP state machine, as defined in RFC 9293 and its predecessors (RFC 793), is a finite automaton governing the lifecycle of a Transmission Control Protocol connection from initial handshake (SYN, SYN-ACK) through data exchange and termination (FIN, FIN-ACK, TIME-WAIT). The constraint is presented here as a candidate mountain: a logical and physical structure that emerges necessarily from the problem of providing reliable, ordered delivery over unreliable packet-switched networks. Every TCP implementation \u2014 in Linux, Windows, BSD, embedded systems \u2014 must implement functionally equivalent state machines or fail to interoperate. The state sequence is not arbitrary: reordering states or omitting transitions breaks the guarantees (no data loss, no duplication, in-order delivery) that TCP provides to applications. This analysis examines whether the state machine is a natural law (mountain), a coordinated standard (rope), or a sunset-candidate (scaffold as QUIC adoption accelerates).",
+    "key_agents": [
+      "Endpoint Implementation: Powerless/trapped \u2014 must implement states correctly or break protocol guarantees",
+      "Application Developer: Moderate/constrained \u2014 cannot violate state transitions without encountering undefined behavior or connection failures",
+      "Standardization Body (IETF/IANA): Institutional/arbitrage \u2014 stabilizes the standard; benefits all implementers equally",
+      "Analytical Observer: Civilizational/analytical \u2014 examines whether the state machine is logically necessary or historically contingent"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The TCP state machine imposes no asymmetric cost on any implementer. All endpoints follow the same rules. The constraint does not extract resources from one group for another's benefit \u2014 it enables coordination that benefits all parties symmetrically. Suppression (0.02): Minimal. While implementations are 'trapped' in valid state sequences, this is not suppression in the DR sense \u2014 there is no hidden alternative foreclosed by coercion. The 'trap' is logical, not coercive: invalid state transitions cause immediate, observable failure (connection reset, data loss). Transparency is maximal. Theater ratio (0.15): Very low. The state machine is functionally pure. Each state and transition serves a specific purpose in the reliable delivery protocol. There is minimal performative content \u2014 debugging tools (tcpdump, netstat) expose the actual state directly.",
+    "perspectival_gap": "This constraint presents minimal perspectival gap across all four observer positions. All perspectives classify as mountain because all stakeholders experience the same logical necessity. Endpoint implementations see a logical law (cannot deviate). Developers see a technical law (violation causes failure). The standardization body sees an emergent stable property of the problem (document what works). The analytical observer sees a mathematical necessity (finite automaton for reliable delivery). The constraint is perspectively invariant \u2014 a hallmark of true mountains. This uniformity is evidence FOR the mountain classification: if all stakeholders experienced different constraint types, it would suggest the 'constraint' was actually multiple distinct phenomena (per the \u03b5-invariance principle). Here, the single \u03b5 (0.08) and uniform classification across all perspectives indicate a natural law.",
+    "directionality_logic": "All perspectives have minimal directionality because there is no extraction. Endpoint implementation: d\u22480.95 (trapped in logic) but f(d)\u22481.42 \u00d7 0.08 \u00d7 0.8 (local scope) \u2192 \u03c7\u22480.09. Beneficiary/victim distinction does not apply: all implementers are equally constrained and equally enabled. Application developer: d\u22480.80 (constrained but not trapped) \u2192 \u03c7\u22480.09. Standardization body: d\u22480.05 (beneficiary in the sense that it stabilizes the standard and benefits all) \u2192 \u03c7\u2248-0.01. Analytical observer: d\u22480.72 (neutral observer) \u2192 \u03c7\u22480.09. The consistency of \u03c7 across different d values \u2014 all around 0.08-0.09 \u2014 is characteristic of mountains: the constraint's effective extractiveness is stable regardless of which perspective you occupy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "congestion_control_algorithms",
+      "tcp_timeout_exponential_backoff",
+      "retransmission_queue_management"
+    ],
+    "dual_formulation_note": "The TCP state machine is upstream of all TCP-dependent constraints (congestion control, timeout handling, retransmission logic). These downstream constraints operate within the state space defined by RFC 9293. If the state machine is truly a mountain, these dependents are constrained by natural law. If the state machine is actually a rope (coordinated convention), the dependents are contingent on that convention and may be revisable via QUIC migration or next-generation protocols."
+  }
+}

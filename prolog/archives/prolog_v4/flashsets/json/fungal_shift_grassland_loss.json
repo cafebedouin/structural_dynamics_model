@@ -1,0 +1,142 @@
+{
+  "header": {
+    "constraint_id": "fungal_shift_grassland_loss",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ecological Transition from Grassland to Scrub via Fungal Network Disruption",
+    "topic_domain": "ecological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "scrub_species",
+      "opportunistic_fungi"
+    ],
+    "victims": [
+      "grassland_species",
+      "specialized_fungi"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Grassland Ecosystem",
+      "comment": "The grassland ecosystem is trapped and unable to adapt quickly enough to the changing conditions. They bear the cost of the transition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Scrub Species",
+      "comment": "Scrub species benefit from the altered environment and expand their range. They see it as coordination of resources in their favor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Ecological Modelers",
+      "comment": "Ecological modelers observe the transition and see the tangled web of interactions, including both coordination and extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Specialized Fungi",
+      "comment": "Specialized fungi that rely on specific grassland plants are trapped and unable to adapt, leading to their decline."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "climate_variability",
+      "question": "How much will climate variability impact snowpack stability?",
+      "resolution_mechanism": "Climate models and historical data analysis",
+      "impact": "High variability could accelerate the transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent to which climate variability impacts snowpack stability."
+    },
+    {
+      "id": "fungal_network_resilience",
+      "question": "How resilient are the existing fungal networks to disturbance?",
+      "resolution_mechanism": "Ecological experiments and network analysis",
+      "impact": "High resilience could slow or prevent the transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The resilience of the existing fungal networks to disturbance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Warming winters reduce stable snowpack in mountain ecosystems, altering the soil environment. This leads to a disruption of existing fungal networks that support grassland species. The disrupted networks benefit opportunistic fungi and scrub species, leading to a shift from grassland to scrubland.",
+    "key_agents": [
+      "Grassland Ecosystem: Primary target (powerless/trapped) \u2014 loses habitat and biodiversity.",
+      "Scrub Species: Primary beneficiary (institutional/arbitrage) \u2014 gains habitat and expands range.",
+      "Specialized Fungi: Secondary target (powerless/trapped) - loss of host plant.",
+      "Opportunistic Fungi: Secondary beneficiary (institutional/arbitrage) - new environment to colonize",
+      "Ecological Modelers: Analytical observer."
+    ],
+    "logic_rationale": "The disruption of fungal networks represents a significant extraction of resources and support from the grassland ecosystem. The increased suppression reflects the reduced ability of grassland to compete with the encroaching scrub species.",
+    "perspectival_gap": "Grassland ecosystems view the change as a snare due to their inability to adapt. Scrub species see the shift as a coordination of resources in their favor. Ecological modelers see the full picture as a tangled rope of ecological interactions.",
+    "directionality_logic": "Beneficiaries like scrub species gain resources and expand their range. Victims like grassland species lose habitat and biodiversity. Fungi fall into both categories, some losing (specialized) while others benefit (opportunistic). The directionality values reflect these relationships."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_change_impacts",
+      "biodiversity_loss"
+    ]
+  },
+  "directionality_overrides": []
+}

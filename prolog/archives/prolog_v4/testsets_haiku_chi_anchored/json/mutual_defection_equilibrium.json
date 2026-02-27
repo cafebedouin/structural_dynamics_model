@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "mutual_defection_equilibrium",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mde"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "The Infinite Prisoner's Dilemma Stalemate",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "all_agents",
+      "collective_welfare"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Individual Defector",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL DEFECTOR (SNARE) \u2014 Each agent is locked in defection because unilateral cooperation guarantees exploitation. No escape from the strategy without coordination mechanism. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.96. Maximum extraction: rational individual choice produces collective harm with no exit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Iterated Population",
+      "comment": "PERSPECTIVE 2: ITERATED POPULATION (SNARE) \u2014 Over multiple generations, defection becomes cultural norm. Cooperation attempts are branded as weakness. Exit requires cultural shift with massive coordination cost. d\u22480.85, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.93. Severe extraction with cultural enforcement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Local Coalition (Defection Coordinators)",
+      "comment": "PERSPECTIVE 3: LOCAL COALITION COORDINATORS (ROPE) \u2014 Some institutional actors benefit from coordination on mutual defection: they enforce the norms, extract legitimacy, and exploit the stability. d\u22480.10, f(d)\u22480.00, \u03c3=0.8 \u2192 \u03c7\u22480.00. They see defection coordination as a pure coordination problem they solve."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Game-Theoretic Observer",
+      "comment": "PERSPECTIVE 4: GAME-THEORETIC OBSERVER (MOUNTAIN) \u2014 From a mathematical perspective, mutual defection is a Nash equilibrium: no player can improve by unilateral deviation. This appears as an immutable law of rational choice. \u03b5\u22480.15, suppression\u22480.03. However, this is a false summit \u2014 the 'law' depends on the payoff matrix and information structure, both contingent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The External Enforcer (Superpower)",
+      "comment": "PERSPECTIVE 5: EXTERNAL ENFORCER (TANGLED ROPE) \u2014 A powerful external actor can impose cooperation mechanisms (treaties, enforcement institutions, punishment regimes) and benefit from the coordination. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.41. Mixed: provides coordination but extracts legitimacy and compliance rent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Experimental Defector Coalition",
+      "comment": "PERSPECTIVE 6: EXPERIMENTAL DEFECTOR COALITION (SCAFFOLD) \u2014 Some organized groups attempt to break the equilibrium via local cooperation bubbles (TFT networks, trust-based communities). If successful, these create an exit path. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.29. Temporary support structure with potential sunset if alternative equilibria stabilize."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "payoff_matrix_contingency",
+      "question": "Is mutual defection a Nash equilibrium of the game's inherent structure, or a consequence of the specific payoff values we have chosen to represent it?",
+      "resolution_mechanism": "Parametric analysis: vary payoff values (rewards for cooperation, punishment for defection, temptation payoff) and track equilibrium type. Map the payoff space to equilibrium regions.",
+      "impact": "If contingent on payoffs: the constraint is not a natural law but an artifact of representation. Reframing the payoff matrix (e.g., long-term reputation effects, altruistic preferences) can dissolve the equilibrium. If robust across payoff families: mutual defection is a deeper structural property.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the Nash equilibrium depends on contingent payoff choices"
+    },
+    {
+      "id": "iteration_finite_or_infinite",
+      "question": "Is the iteration truly infinite, or does uncertainty about the game's end create de facto finite horizons? How does this uncertainty affect equilibrium stability?",
+      "resolution_mechanism": "Comparison of infinite-horizon analysis with finite-horizon models; empirical measurement of agent expectations about game duration; analysis of backward-induction logic in real populations.",
+      "impact": "If finite: backward induction destabilizes cooperation even further, making the snare even more severe. If infinite but agents believe it finite: cooperation becomes viable in tail games, and the mountain classification fails.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether infinite iteration is a realistic or idealized assumption"
+    },
+    {
+      "id": "information_asymmetry_escape",
+      "question": "Can bounded agents with limited information about others' payoffs or strategies escape the defection trap through strategic ignorance or misunderstanding?",
+      "resolution_mechanism": "Agent-based models with information asymmetry; empirical studies of cooperation in conditions of payoff uncertainty; analysis of whether misbeliefs stabilize cooperation.",
+      "impact": "If yes: the snare is dependent on complete information. Information opacity creates alternative equilibria. If no: opacity merely adds noise without changing the fundamental extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether information asymmetry enables escape from defection equilibrium"
+    },
+    {
+      "id": "reputation_mechanism_binding",
+      "question": "Can reputation effects (losses from being known as a defector) generate sufficient incentive to sustain cooperation even in the infinite horizon?",
+      "resolution_mechanism": "Empirical measurement of reputation penalties in real cooperation environments; game-theoretic models embedding reputation costs; longitudinal tracking of cooperators vs defectors in repeated-game populations.",
+      "impact": "If reputation penalties are severe: cooperation becomes locally stable even without external enforcement (Rope classification dominates). If weak or absent: snare classification persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether reputation costs can sustain cooperation against defection"
+    },
+    {
+      "id": "collective_action_threshold",
+      "question": "Is there a critical mass of cooperators above which the equilibrium tips toward cooperation, or is defection stable even with high cooperation levels?",
+      "resolution_mechanism": "Phase-transition analysis of cooperation in large populations; measurement of tipping points in real economies; spatial game-theoretic models with local interaction neighborhoods.",
+      "impact": "If threshold exists and is reachable: the scaffold perspective is viable (sunset to cooperation equilibrium). If no threshold or it is unreachable: defection is locked in unless external intervention occurs.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether a critical mass of cooperators can shift the equilibrium"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The infinite prisoner's dilemma stalemate represents a fundamental coordination failure where rational individual incentives produce collectively irrational outcomes. Each agent, facing no guarantee that others will cooperate, defects. All agents defect. All agents are worse off than if all cooperated. Yet no single agent can unilaterally escape this equilibrium \u2014 switching to cooperation alone guarantees exploitation. This constraint exemplifies how extraction can be enforced by mathematical structure rather than by explicit coercion. The extraction is mutual and symmetric: every agent both extracts from and is extracted from by every other agent. Yet because the extraction is stable (no single agent can improve by deviating), it persists indefinitely. Over time, defection becomes culturally normalized, and attempts at cooperation are viewed as weakness or irrationality. The constraint's extractiveness increases (0.55 \u2192 0.68) as the defection norm hardens into institutions and cultural expectations. The theater ratio increases as well (0.30 \u2192 0.45) because actors begin to perform justifications for defection ('self-interest is rational,' 'cooperation is naive') rather than simply defecting without commentary.",
+    "key_agents": [
+      "Individual agents: Primary victims (powerless/trapped) \u2014 rationally defect despite knowing collective harm results; no unilateral escape.",
+      "All agents collectively: Aggregate victim (powerless/trapped) \u2014 generate mutual extraction through rational pursuit of self-interest; trapped in coordination failure.",
+      "Cultural institutions: Secondary enforcer (institutional/arbitrage) \u2014 propagate defection norms, making cooperation seem irrational or weak; benefit from norm stabilization.",
+      "Local cooperative coalitions: Experimental agents (organized/constrained) \u2014 attempt to break equilibrium through tit-for-tat strategies or trust-based communities; constrained by defection pressure.",
+      "External enforcers (e.g., states, regulators): Powerful coordinator (powerful/mobile) \u2014 can impose cooperation mechanisms through binding agreements and punishment regimes; extract legitimacy rent.",
+      "Game-theoretic analyst: Analytical observer (analytical/analytical) \u2014 risks naturalizing the equilibrium as an immutable law when it depends on contingent payoff structures and information asymmetries."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint generates welfare loss equal to the gap between mutual cooperation payoff and mutual defection payoff. This loss is borne by all agents. In standard PD payoffs (mutual cooperation: 3, mutual defection: 1, temptation: 5, sucker: 0), the loss is 2 units per agent per round. Over infinite rounds, cumulative loss approaches infinity. The extraction is mutual but mathematically guaranteed. Suppression (0.75): Very high. Agents cannot cooperate unilaterally without severe punishment (sucker payoff: 0). The threat of exploitation by potential cooperators creates complete suppression of unilateral cooperation attempts. This is not enforced by external coercion but by the payoff structure itself \u2014 the structure is the enforcement mechanism. Theater ratio (0.45): Moderate. Initially, agents simply defect without commentary. Over time, as the equilibrium hardens, they develop justifications ('rationality,' 'self-interest,' 'human nature') that perform a narrative role distinct from the simple strategic fact. This narrative layer grows as the defection norm becomes cultural; hence the trajectory from 0.30 to 0.45.",
+    "perspectival_gap": "The individual agent sees a snare (powerless/trapped) \u2014 they are locked in by rational incentives with no escape. The population sees a snare with cultural hardening (moderate/constrained) \u2014 over generations, defection becomes the 'natural' or 'realistic' strategy, and cooperation attempts are dismissed as naive. The institutional actor (defection coordinators) sees a rope (institutional/arbitrage) \u2014 they coordinate the defection norm and benefit from its stability. The game-theoretic analyst risks seeing a mountain (analytical/analytical) \u2014 mutual defection is a Nash equilibrium by the laws of game theory, making it seem immutable. The powerful external enforcer sees a tangled rope (powerful/mobile) \u2014 they can impose cooperation mechanisms and extract compliance rent. The organized experimental coalition sees a scaffold (organized/constrained) \u2014 they attempt local cooperation bubbles that might grow into an alternative equilibrium with a sunset to widespread cooperation. These perspectives are not reconcilable into a single 'true' classification \u2014 each reflects a real structural position relative to the constraint.",
+    "directionality_logic": "Individual agent (victim): Rational self-interest + trapped exit \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction: no escape. Population (victim): Cultural norm + constrained exit \u2192 d\u22480.85, f(d)\u22481.15. High extraction: cultural entrenchment makes exit costly. Institutional defection coordinators (beneficiary): Coordinate norm + arbitrage exit \u2192 d\u22480.10, f(d)\u22480.00. They benefit from defection coordination. External enforcer (powerful actor): Can impose cooperation + mobile exit \u2192 d\u22480.45, f(d)\u22480.50. Balanced: provides coordination mechanism but extracts legitimacy. Experimental coalition (organized agent): Attempt cooperation break + constrained exit \u2192 d\u22480.50, f(d)\u22480.65. Moderate extraction: they bear cost of cooperation attempts but have some agency.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves the mandatrophy (potential mislabeling of extraction as coordination) through five diagnostic tests: (1) BENEFICIARY TEST: The constraint has NO clear beneficiary. All agents are harmed by mutual defection. The only candidates for benefit are institutional actors who propagate the defection norm \u2014 but they benefit from the norm's stability, not from coordination function. (2) COOPERATION TEST: If all agents cooperated, all would be better off. The existence of a Pareto-superior outcome proves this is not pure coordination. (3) UNILATERAL DEVIATION TEST: No single agent can improve by switching strategy. This locks in the equilibrium but is characteristic of extraction (snare), not coordination (rope). A rope equilibrium would allow individual improvement through coordination; a snare equilibrium does not. (4) EXIT TEST: Agents cannot exit unilaterally. Exit requires collective coordination on an alternative equilibrium \u2014 itself a coordination problem. (5) HISTORICAL TEST: As defection norms harden (theater_ratio 0.30 \u2192 0.45), agents develop narratives ('self-interest is rational') that perform a normative role beyond the strategic fact. This narrative layer is characteristic of snare consolidation, not rope maturation. Conclusion: This is a SNARE (mutual extraction under Nash equilibrium) that can be temporarily transformed into a TANGLED ROPE (if external enforcement is imposed) or a SCAFFOLD (if local cooperation bubbles grow). The mandatrophy is fully resolved: the constraint is extraction enforced by mathematical structure and cultural norm, not coordination failure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "arms_race_dynamics",
+      "tragedy_of_the_commons",
+      "regulatory_capture_equilibrium"
+    ],
+    "dual_formulation_note": "The infinite prisoner's dilemma stalemate is a foundational constraint that appears in multiple domain-specific instantiations (arms races, tragedy of the commons, market races to the bottom). Each domain story should link to this abstract constraint via network.affects_constraints to show how the general coordination failure manifests in specific contexts."
+  },
+  "directionality_overrides": []
+}

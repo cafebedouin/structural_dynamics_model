@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "project_vault_extraction_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pv"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Project Vault: Debt-Financed Strategic Extraction",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "exim_bank_creditors",
+      "integrated_mining_corporations"
+    ],
+    "victims": [
+      "resource_host_nation",
+      "environmental_commons",
+      "artisanal_miners",
+      "domestic_processing_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Resource Host Nation",
+      "comment": "PERSPECTIVE 1: RESOURCE HOST NATION (SNARE) \u2014 The host country faces structural extraction. Debt servicing obligations are denominated in foreign currency; export revenues are the only means to service debt; Project Vault monopolizes critical mineral extraction; legal sovereignty is constrained by loan covenants (export quotas, pricing formulas, operational control); re-negotiation is politically costly and triggers default risk. Trapped exit with powerless negotiating position. Maximum extractiveness experienced."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Artisanal Miners and Local Communities",
+      "comment": "PERSPECTIVE 2: ARTISANAL MINERS AND LOCAL COMMUNITIES (SNARE) \u2014 Displaced from traditional mining territories; no legal standing in Project Vault licensing; no revenue share in operational profits; bear full environmental externalities (water depletion, soil contamination); trapped by land laws and security arrangements that exclude alternative livelihoods. Extraction flows entirely away from these agents \u2014 they are forced to absorb costs without compensation or exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "EXIM Bank and Creditor Syndicate",
+      "comment": "PERSPECTIVE 3: EXIM BANK AND CREDITOR SYNDICATE (ROPE) \u2014 Experiences the constraint as coordination: the bank mobilizes capital for strategic mineral security; debt covenants ensure operational compliance and revenue flows; profit mandate aligns bank incentives with mine output. Net beneficiary \u2014 extraction runs toward this agent. The coordination function is genuine (securing critical supply chains); the extraction is the profitable margin extracted from the host nation's trapped position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Integrated Mining Corporations",
+      "comment": "PERSPECTIVE 4: INTEGRATED MINING CORPORATIONS (ROPE) \u2014 Operate Project Vault under management contracts; secure long-term supply chains at below-market prices (enforced by debt covenants on the host nation); arbitrage between covenant-locked supply prices and global spot prices; de facto control over operational decisions despite legal host-country sovereignty. Net beneficiary \u2014 extraction mechanism sustained through asymmetric contract power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Importing Nations and Strategic Manufacturers",
+      "comment": "PERSPECTIVE 5: IMPORTING NATIONS AND STRATEGIC MANUFACTURERS (TANGLED ROPE) \u2014 Benefit from secured critical mineral supply (coordination function: strategic security). However, the covenants lock them into single-source dependency via Project Vault's monopoly structure; diversification is constrained by debt servicing logic of the host nation (extraction mechanism: they cannot exit without supply disruption). Mixed \u2014 coordination benefit (security) entangled with extraction risk (supply lock-in). Suppression operates via their inability to develop alternative sources."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Development Finance Institutions",
+      "comment": "PERSPECTIVE 6: DEVELOPMENT FINANCE INSTITUTIONS (PITON) \u2014 Nominally present (World Bank, regional development banks) but functionally degraded. They endorse sustainability assessments and debt sustainability analyses that fail to flag extraction mechanisms; their presence is performative \u2014 legitimizing Project Vault without constraining its operation. Theater ratio high because the DFI oversight is largely ceremonial; real power resides with EXIM Bank and mining operators."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer: Global Commodity Systems Perspective",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a systems perspective, Project Vault exemplifies debt-financed extraction mechanisms that replicate colonial commodity dependency via modern financial engineering. The structure: high-value resource + foreign debt + export-revenue servicing + monopoly control + tied purchasing = systematic extraction of economic surplus from resource-rich but capital-poor nations. This is not natural law \u2014 it is a contingent institutional arrangement, but one with deep entrenchment through legal contracts, security arrangements, and geopolitical stakes."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "covenant_renegotiation_threshold",
+      "question": "At what mineral price threshold does the host nation's debt burden become unsustainable, triggering default or forced renegotiation?",
+      "resolution_mechanism": "Debt sustainability analysis under varying commodity price scenarios; historical comparison with similar resource-backed debt arrangements (Zambia copper, Mozambique natural gas)",
+      "impact": "If threshold < current prices: host nation is locked in for decades (high extraction). If threshold > current prices by margin < 15%: extraction is temporary, pressure-release possible. If threshold unknown/contingent: modeling uncertainty itself is part of the extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mineral price threshold for debt unsustainability and forced renegotiation"
+    },
+    {
+      "id": "alternative_financing_feasibility",
+      "question": "Could the host nation finance comparable mineral extraction without EXIM debt by accessing concessional development finance or regional banking?",
+      "resolution_mechanism": "Cost-benefit analysis comparing EXIM terms to World Bank IDA/IFC terms, China Development Bank terms, and African Development Bank terms for equivalent projects",
+      "impact": "If concessional alternatives exist but were rejected: extraction is by choice (not snare). If concessional alternatives unavailable: host nation is genuinely trapped (confirms snare). If alternatives exist but require IMF conditionality: extraction mechanism transfers to IMF, not eliminated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of alternative concessional financing for comparable projects"
+    },
+    {
+      "id": "environmental_cost_externalization",
+      "question": "What is the true environmental remediation cost of Project Vault operations, and is it factored into debt covenants or externalized to the host nation?",
+      "resolution_mechanism": "Independent environmental audit comparing Project Vault's environmental liability estimates to actual remediation costs in comparable mining projects; longitudinal tracking of water depletion and soil recovery timelines",
+      "impact": "If externalized costs exceed 20% of project revenue: extraction mechanism is substantially financial (confirmed snare). If costs are bonded/reserved: extraction is reduced but not eliminated. If costs are unknown: this uncertainty itself enables extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True environmental remediation costs and their allocation between operator and host nation"
+    },
+    {
+      "id": "domestic_processing_displacement",
+      "question": "Does Project Vault's structure actively prevent the host nation from developing domestic mineral processing capacity, or is processing capacity development contingent on host nation investment?",
+      "resolution_mechanism": "Analysis of loan covenants regarding value-added processing; comparison of raw ore export vs processed mineral exports; assessment of whether covenants contain clauses restricting domestic refining/processing to low-margin activities",
+      "impact": "If covenants actively prevent processing: extraction mechanism is structural (colonialism by contract). If neutral on processing: host nation can develop capacity (reduces extraction over time). If covenants incentivize export of raw materials: extraction is baked into financial structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether project covenants prevent or enable domestic mineral processing capacity development"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Project Vault exemplifies modern debt-financed extraction: a $12 billion critical minerals reserve funded by a $10 billion EXIM Bank loan with an explicit profit mandate. The structure combines legitimate strategic objectives (securing critical mineral supply chains) with extraction mechanisms that operate through financial engineering rather than explicit coercion. The host nation retains nominal sovereignty but operates under debt covenants that lock in export quotas, pricing formulas, and operational control to the mining operator and creditor. The resource-rich but capital-scarce host nation has no exit: debt servicing requires export revenues; alternative financing is unavailable or more expensive; renegotiation triggers default risk and secondary sanctions. This is a Snare from the host nation's perspective \u2014 pure extraction with no coordination benefit to the trapped actor \u2014 but appears as Rope (coordination) from the creditor and operator perspectives. Artisanal miners and local communities are displaced without compensation and trapped in the host nation's negotiating constraints. Importing nations benefit from secured supply but are themselves locked into single-source dependency. Development finance institutions provide performative oversight (Piton) without material constraint on extraction.",
+    "key_agents": [
+      "Host Nation Government: Primary victim (powerless/trapped) \u2014 structurally trapped by debt covenants; cannot exit without default; nominally sovereign but operationally constrained",
+      "EXIM Bank and Creditor Syndicate: Primary beneficiary (institutional/arbitrage) \u2014 secured revenue stream from debt servicing; profit mandate aligns incentives toward maximum extraction",
+      "Integrated Mining Operators: Primary beneficiary (institutional/arbitrage) \u2014 management contracts provide de facto control; arbitrage between covenant-locked supply prices and global spot prices",
+      "Artisanal Miners and Local Communities: Secondary victim (powerless/trapped) \u2014 displaced from extraction zones; no revenue share; bear full environmental externalities; trapped by land laws and security arrangements",
+      "Importing Nations and Strategic Manufacturers: Mixed actor (moderate/constrained) \u2014 benefit from supply security but locked into single-source dependency by host nation's debt structure",
+      "Development Finance Institutions: Institutional observer (institutional/arbitrage) \u2014 provide performative sustainability assessment; functionally degraded (piton); presence legitimizes without constraining",
+      "Analytical Observer: Systemic view (analytical/analytical) \u2014 reveals constraint as modern colonialism by financial contract, not natural law or inevitable trade necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint systematically extracts economic surplus from the host nation through multiple channels: (1) debt servicing obligations denominated in foreign currency drain 15-25% of project revenues; (2) covenant-enforced export quotas prevent supply management to secure higher prices; (3) pricing formulas lock the host nation into below-market rates; (4) operator management contracts transfer operational decision-making to creditor-aligned entity; (5) environmental externalities are not bonded or reserved, creating unfunded liabilities for the host nation. The extractiveness is lower than pure colonial appropriation (0.85+) because the host nation formally retains nominal ownership and sovereignty, but higher than normal commercial lending (0.35) because the structure is explicitly designed to extract maximum surplus while maintaining legal legitimacy. Suppression (0.72): High. Suppression operates through multiple mechanisms: (1) capital constraints prevent the host nation from financing alternative projects; (2) legal covenants restrict policy options (export management, pricing, processing); (3) debt default triggers secondary sanctions and credit market exclusion; (4) political economy of loan conditionality makes renegotiation costly (IMF, World Bank conditionality often attached); (5) security arrangements (foreign operators, international security firms) enforce compliance; (6) information asymmetry \u2014 creditor and operators have superior data on mineral reserves and market conditions; (7) artisanal miners and local communities have zero legal standing. Theater ratio (0.48): Moderate. The constraint has low theater at the structural level \u2014 debt covenants and profit mandates are explicit, not performatively framed. However, the sustainability assessments and development finance institution involvement add moderate theater (appearing more concessional and development-oriented than the underlying structure warrants). The theater is declining over time as local scrutiny and international attention expose the extraction mechanism.",
+    "perspectival_gap": "The constraint produces radically different classifications across perspectives. The host nation and displaced communities see a Snare \u2014 maximum extraction with no exit, no coordination benefit, and full cost absorption. The creditor and mining operator see Rope \u2014 a coordination mechanism solving the legitimate problem of securing critical supply chains, with aligned incentives and clear contractual frameworks. Importing nations see Tangled Rope \u2014 coordination benefit (supply security) entangled with extraction risk (supply lock-in). Development finance institutions see themselves as providing Rope (coordination oversight) but operate at the Piton level (performative legitimation). The analytical observer sees a Snare at the systems level \u2014 the constraint's structure replicates colonial extraction patterns through financial contracts. The gap reflects genuinely different structural positions: the creditor and operator control the constraint's design and benefit from its enforcement; the host nation is forced into it by capital scarcity; artisanal miners have no seat at the table.",
+    "directionality_logic": "Directionality values are derived from power, exit options, and beneficiary/victim status. Host nation government: powerless power atom, trapped exit \u2192 high d (0.90+) \u2192 experiences full extraction coefficient. EXIM Bank: institutional power atom, arbitrage exit \u2192 low d (0.05-0.15) \u2192 experiences negative/minimal extraction (net beneficiary). Mining operator: institutional power atom, arbitrage exit \u2192 low d (0.05-0.15) \u2192 net beneficiary. Artisanal miners: powerless power atom, trapped exit \u2192 d(0.95+) \u2192 maximum extraction experienced but from even weaker structural position than host nation (no formal negotiating capacity). Importing nations: moderate power atom, constrained exit (cannot develop alternative sources without supply disruption) \u2192 d(0.55-0.65) \u2192 moderate extraction experienced despite nominal purchasing power. Development finance institutions: institutional power atom, arbitrage exit \u2192 low d but constrained by reputational risk \u2192 d(0.25-0.35) \u2192 their arbitrage is reputational rather than financial. The pipeline's f(d) function then maps these directionality values to experienced extraction coefficients via the sigmoid.",
+    "mandatrophy_analysis": "Project Vault resolves the mandatrophy by exposing the structural distinction between coordination and extraction that financial euphemism obscures. EXIM Bank's framing emphasizes coordination (securing critical supply) and treats extraction (high margins, debt servicing terms) as legitimate compensation. Host nation's framing experiences the constraint as pure extraction (Snare) with no coordination benefit \u2014 the 'supply security' language refers to the creditor and operator's security, not the host nation's economic security. The analytical observer's task is to measure which framing is structural and which is rhetorical. The measurements show that extractiveness (0.68) and suppression (0.72) are high and increasing over time, while theater (0.48) is moderate and declining. This pattern indicates a genuine extraction mechanism becoming less performatively hidden \u2014 confirming the Snare classification. If the constraint were genuinely Rope, we would expect symmetrically declining extractiveness over time as coordination mechanisms matured. Instead, extractiveness is increasing, indicating path-dependent lock-in rather than coordination stabilization. Debt servicing obligations deepen with time; covenant restrictions accumulate; alternative financing options close as Project Vault dominates critical minerals markets. The mandatrophy resolves in favor of Snare at the structural level, with beneficiary-perspective Rope being a function of power asymmetry, not genuine coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "critical_mineral_supply_security",
+      "developing_nation_debt_sustainability",
+      "artisanal_mining_displacement"
+    ],
+    "dual_formulation_note": "Project Vault decomposes into three constraint stories: (1) Critical Mineral Supply Security (\u03b5=0.15, Mountain/Rope) \u2014 the physical necessity of securing rare earth and cobalt supply is genuine. (2) Project Vault Extraction (\u03b5=0.68, Snare) \u2014 the specific financial structure of the $12B EXIM loan with profit mandate. (3) Artisanal Mining Displacement (\u03b5=0.62, Snare) \u2014 the secondary extraction from displaced miners. The first story represents the legitimate coordination problem; the second and third represent how that coordination problem is resolved through extraction mechanisms. Project Vault (2) is downstream of Critical Minerals (1) and upstream of Displacement (3)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

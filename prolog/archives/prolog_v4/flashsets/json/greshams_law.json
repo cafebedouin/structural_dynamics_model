@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "greshams_law",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gresham's Law (\"Bad money drives out good\")",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "governments_issuing_debased_currency",
+      "individuals_making_payments"
+    ],
+    "victims": [
+      "holders_of_good_money",
+      "long_term_savers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Holders of 'Good Money'",
+      "comment": "Holders of 'good money' with limited options to arbitrage outside the national scope are trapped, facing suppressed alternatives as the debased currency dominates transactions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "General Populace",
+      "comment": "The general populace is constrained. They benefit from having money to transact with, even if debased, but are harmed by the long-term effects of inflation and the disappearance of sound money."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Governments issuing debased currency",
+      "comment": "Governments benefit in the immediate term by being able to inflate the money supply and pay debts with cheaper currency. They can also extract seigniorage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, Gresham's Law reflects a recurring pattern where short-term incentives to debase currency undermine long-term economic stability."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Long-term savers",
+      "comment": "Long-term savers are unable to protect their wealth and are effectively targeted by the effects of inflation over the long term. This may trap them in poverty over their lifetimes."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "degree_of_currency_substitution",
+      "question": "To what extent can 'good money' be substituted with other currencies or assets, mitigating the effects of Gresham's Law?",
+      "resolution_mechanism": "Econometric analysis of currency substitution rates and asset diversification strategies.",
+      "impact": "High substitutability reduces the snare effect and makes it easier to escape the bad money. Low substitutability strengthens the snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The ability to escape the effects of Gresham's Law"
+    },
+    {
+      "id": "government_commitment_to_sound_money",
+      "question": "How credible is the government's commitment to maintaining the value of its currency?",
+      "resolution_mechanism": "Analysis of monetary policy decisions, central bank independence, and historical track record.",
+      "impact": "Strong commitment reduces extractiveness; weak commitment increases it.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Government's commitment to sound money"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Gresham's Law describes how, when two forms of currency are legally stipulated to be of equal value but differ in intrinsic worth, the currency with higher intrinsic value tends to be hoarded while the 'bad money' circulates more freely. This dynamic benefits the issuer of debased currency (typically governments) in the short term but harms holders of 'good money' and undermines long-term economic stability. It leads to suppressed alternatives for those seeking to store value.",
+    "key_agents": [
+      "Governments issuing debased currency: Beneficiary (institutional/arbitrage)",
+      "Holders of 'good money': Victim (powerless/trapped)",
+      "General Populace: Mixed effects (moderate/constrained)",
+      "Long term savers: Victim (powerless/trapped)"
+    ],
+    "logic_rationale": "Extractiveness is rated at 0.55 due to the moderate loss of value to holders of 'good money.' Suppression is rated 0.70 because alternatives may be limited or expensive and government enforcement is required.",
+    "perspectival_gap": "Holders of 'good money' see a snare because their wealth is devalued. Governments see a coordination mechanism because they can manage the money supply. The general populace experiences a mix of benefits and costs, resulting in a tangled rope classification. The analytical observer takes a long-term view and recognizes the inherent instability and wealth transfer associated with Gresham's Law.",
+    "directionality_logic": "Governments benefit from seigniorage and short-term economic stimulus (low d). Holders of good money are forced to transact with debased currency (high d). General populace experiences a mixed effect (moderate d).",
+    "mandatrophy_analysis": "The Tangled Rope classification correctly captures the dual nature of Gresham's Law. It's not purely extractive because there are some benefits to the government issuing the debased currency and the populace at large when there is no other option, nor a straightforward coordination mechanism due to wealth extraction. The extraction and enforcement elements justify the chosen classification. The rope like properties stem from a government trying to solve the problem of needing more money at a cost of devaluing what is already in circulation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "tragedy_of_the_commons",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Tragedy of the Commons",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individual_users"
+    ],
+    "victims": [
+      "shared_resource",
+      "future_generations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Shared Resource",
+      "comment": "The shared resource is trapped and powerless to prevent its own depletion. Its time horizon is generational, as depletion impacts future users. High extraction and suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Individual User",
+      "comment": "Individual users benefit in the short term from exploiting the resource, but are constrained by the actions of others and face long-term consequences. They can exit by reducing their resource use, but often don't. Moderate power, immediate time horizon, mobile exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regulatory Body",
+      "comment": "A regulatory body attempts to coordinate resource use and prevent depletion, but faces challenges in enforcement and may be subject to capture or arbitrage. Institutional power, generational time horizon, arbitrage exit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Established Norms",
+      "comment": "Established norms of resource use, which were once effective, have become degraded and are no longer sufficient to prevent depletion. Powerful actors are constrained by existing legal frameworks, even when those frameworks are ineffective. Civilizational time horizon, global scope, constrained exit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "discount_rate",
+      "question": "What is the appropriate discount rate for future costs?",
+      "resolution_mechanism": "Ethical and economic analysis of intergenerational equity",
+      "impact": "A high discount rate justifies continued depletion; a low rate requires conservation.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The appropriate discount rate for future costs associated with resource depletion."
+    },
+    {
+      "id": "enforcement_cost",
+      "question": "What is the cost of enforcing resource use restrictions?",
+      "resolution_mechanism": "Cost-benefit analysis of different enforcement mechanisms",
+      "impact": "High enforcement costs may make regulation infeasible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The cost of enforcing resource use restrictions."
+    },
+    {
+      "id": "resource_substitutability",
+      "question": "How easily can alternative resources be substituted?",
+      "resolution_mechanism": "Technological and market analysis",
+      "impact": "High substitutability reduces the impact of resource depletion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The ease with which alternative resources can be substituted."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The tragedy of the commons describes a situation where individual users of a shared resource, acting independently and rationally in their own self-interest, behave contrary to the common good by depleting or spoiling that resource through their collective action. This constraint highlights the tension between individual incentives and collective outcomes, often leading to unsustainable resource use.",
+    "key_agents": [
+      "Individual Users: Primary beneficiaries in the short term (moderate/mobile)",
+      "Shared Resource: Primary victim (powerless/trapped)",
+      "Future Generations: Secondary victim (powerless/trapped)",
+      "Regulatory Body: Attempts to coordinate (institutional/arbitrage)",
+      "Established Norms: Degraded coordination mechanism (powerful/constrained)"
+    ],
+    "logic_rationale": "Extractiveness is high due to the depletion of the resource, benefiting individual users but harming the collective. Suppression is moderate as regulations and social norms attempt to curb overuse, but are often ineffective. The theater ratio is moderate, as some regulations are performative rather than truly effective.",
+    "perspectival_gap": "The shared resource perspective sees a pure snare, while individual users experience a tangled rope due to the short-term benefits but long-term consequences. The regulatory body tries to establish a rope but is often constrained. The established norms are seen as a piton due to their degraded effectiveness.",
+    "directionality_logic": "Individual users benefit from exploiting the resource, giving them a lower d. The shared resource is trapped, experiencing a high d. The regulatory body attempts to mediate the situation. The norms exert extraction, with high d.",
+    "mandatrophy_analysis": "The tragedy of the commons is classified as a tangled rope because there is a coordination problem (resource use) and an asymmetric extraction (resource depletion). Mislabeling this as a pure snare would ignore the coordination aspect, while mislabeling it as a rope would ignore the extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_change",
+      "overfishing"
+    ]
+  },
+  "directionality_overrides": []
+}

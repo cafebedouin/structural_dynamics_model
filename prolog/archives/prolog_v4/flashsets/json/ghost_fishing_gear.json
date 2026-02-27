@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "ghost_fishing_gear",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Persistence of Abandoned, Lost, or Discarded Fishing Gear (ALDFG)",
+    "topic_domain": "ecological/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "commercial_fishing_fleets"
+    ],
+    "victims": [
+      "marine_ecosystems",
+      "small_scale_fishers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Marine Ecosystems",
+      "comment": "Perspective 1: Marine Ecosystems (Snare) - Marine ecosystems are the primary victims, facing ongoing harm from ghost fishing. They are essentially trapped, unable to escape the persistent threat. This results in a high degree of extractiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Small-Scale Fishers",
+      "comment": "Perspective 2: Small-Scale Fishers (Tangled Rope) - Small-scale fishers are negatively impacted by ALDFG, which reduces fish stocks and damages their gear. They are constrained in their ability to address the problem due to limited resources and political influence. However, they also benefit somewhat from cleaner oceans and better fishing grounds if ALDFG is reduced. This creates a mixed experience of extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Commercial Fishing Fleets",
+      "comment": "Perspective 3: Commercial Fishing Fleets (Rope) - From the perspective of large commercial fishing fleets, the loss of gear is primarily a coordination problem. While they may incur some costs from lost gear, they also benefit from reduced regulation and lower operational expenses associated with not retrieving damaged or lost equipment."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Environmental NGOs",
+      "comment": "Perspective 4: Environmental NGOs (Scaffold) - Environmental NGOs see the ALDFG issue as a coordination problem that can be addressed through organized efforts such as cleanup initiatives, policy advocacy, and technological solutions. They are somewhat constrained by funding and political barriers but believe their efforts can eventually lead to a sunset of the ALDFG problem through increased awareness and better management practices."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Fisheries Management Organizations",
+      "comment": "Perspective 5: International Fisheries Management Organizations (Piton) - These organizations are intended to manage fisheries sustainably but often lack the resources and enforcement capabilities to effectively address ALDFG. Their function has degraded over time, becoming more of a performative exercise than a functional solution. They are constrained in their ability to enforce regulations due to political pressures and jurisdictional limitations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 6: The Analytical Observer (Tangled Rope) - From a global, long-term perspective, the ALDFG problem represents a tangled rope. It involves both coordination failures (lack of incentives for responsible fishing practices) and extraction (damage to marine ecosystems and small-scale fisheries). Active enforcement and international cooperation are needed to mitigate the problem."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gear_degradation_rate",
+      "question": "What is the average degradation rate of different types of fishing gear in various marine environments?",
+      "resolution_mechanism": "Material science studies and long-term monitoring of ALDFG in different ocean regions.",
+      "impact": "Impacts the perceived urgency and scale of the problem. Faster degradation reduces long-term harm, slower degradation increases it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degradation rate of fishing gear"
+    },
+    {
+      "id": "fisher_compliance_incentives",
+      "question": "How can incentives be designed to encourage responsible gear management and retrieval by fishers?",
+      "resolution_mechanism": "Economic modeling of different incentive mechanisms (deposit refund systems, gear buyback programs).",
+      "impact": "Determines the effectiveness of policy interventions. Stronger incentives improve compliance, weaker incentives lead to continued ALDFG.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Incentives for responsible gear management"
+    },
+    {
+      "id": "ecosystem_resilience",
+      "question": "To what extent are marine ecosystems resilient to the impacts of ghost fishing?",
+      "resolution_mechanism": "Ecological studies assessing the recovery rates of different marine habitats after ALDFG removal.",
+      "impact": "Determines the long-term consequences of ALDFG. Higher resilience reduces negative impacts, lower resilience exacerbates them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ecosystem resilience to ghost fishing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Industrial fishing operations frequently lose or abandon gear (nets, traps, lines) at sea. This abandoned, lost, or discarded fishing gear (ALDFG), also known as 'ghost gear,' continues to fish unattended, entangling marine life, damaging habitats, and disrupting food webs. The persistence of ALDFG poses a significant threat to marine ecosystems and coastal communities, representing a complex problem with ecological, economic, and social dimensions.",
+    "key_agents": [
+      "Marine Ecosystems: Primary target (powerless/trapped) - bears the brunt of the ecological damage from ALDFG.",
+      "Small-Scale Fishers: Secondary target (moderate/constrained) - suffers economic losses due to reduced fish stocks and gear damage.",
+      "Commercial Fishing Fleets: Primary beneficiary (institutional/arbitrage) - benefits from reduced operational costs associated with abandoning gear.",
+      "Environmental NGOs: Organized actor (organized/constrained) - works to mitigate the ALDFG problem through cleanup efforts and policy advocacy.",
+      "International Fisheries Management Organizations: Institutional actor (institutional/constrained) - responsible for sustainable fisheries management but often ineffective in addressing ALDFG."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. ALDFG causes significant and ongoing harm to marine ecosystems, extracting resources and disrupting ecological balance. Suppression (0.70): High. The problem persists due to lack of enforcement, inadequate incentives for responsible gear management, and the difficulty of retrieving gear from the ocean floor. Theater Ratio (0.30): Low. While some efforts are made to address the problem, they are often insufficient to significantly reduce the scale of ALDFG. The efforts are more about solving the problem and less about just looking like they are doing so.",
+    "perspectival_gap": "The perspective gap arises from the differing impacts and roles of various stakeholders. Marine ecosystems experience ALDFG as a pure snare, with no benefits and significant harm. Small-scale fishers experience it as a tangled rope, with both costs (reduced fish stocks) and some benefits (potential for improved fishing grounds if ALDFG is reduced). Commercial fishing fleets see it as a coordination problem (rope), with some costs (lost gear) but overall benefits (reduced expenses). Environmental NGOs view it as a problem that can be addressed through collective action (scaffold), while international management organizations often struggle to effectively address the issue (piton).",
+    "directionality_logic": "Directionality is determined by the structural position of each agent. Marine ecosystems, as primary victims, experience high extraction. Small-scale fishers experience mixed extraction and coordination. Commercial fishing fleets benefit from reduced costs, resulting in low or negative extraction. Environmental NGOs aim to reduce extraction through organized efforts. International management organizations are constrained and often ineffective, leading to a degraded function.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that different actors perceive ALDFG differently based on their structural positions. Classifying ALDFG solely as a snare would ignore the coordination aspects (e.g., the need for international cooperation) and the potential for solutions. Similarly, classifying it solely as a coordination problem would ignore the significant harm caused to marine ecosystems and small-scale fisheries. The tangled rope classification for the analytical observer captures the complexity of the issue, while the perspectives of individual actors reflect their specific experiences and roles."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "sustainable_fishing_practices",
+      "marine_plastic_pollution"
+    ]
+  },
+  "directionality_overrides": []
+}

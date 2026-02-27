@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "three_body_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Predictability Limit in the Three-Body Problem",
+    "topic_domain": "mathematics/physics/technology",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.04,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Satellite Navigation Technician",
+      "comment": "PERSPECTIVE 1: SATELLITE NAVIGATION TECHNICIAN (MOUNTAIN) \u2014 Cannot escape the three-body limit. Long-term orbit prediction for Earth-Moon-Sun systems is fundamentally constrained by sensitivity to initial conditions. No exit option exists; the limit is intrinsic to the dynamical system. d\u22481.0, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Space Agency Orbital Mechanics Team",
+      "comment": "PERSPECTIVE 2: SPACE AGENCY ORBITAL MECHANICS TEAM (MOUNTAIN) \u2014 Organized agents managing space missions encounter the three-body constraint as a fixed limit on prediction horizon, not as extraction or coercion. They respond by developing numerical methods, Monte Carlo propagation, and probabilistic orbital estimates rather than seeking to escape the constraint. The constraint enables rather than blocks their work by defining the boundary of valid prediction. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.08."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Analyst (Birkhoff, Poincar\u00e9, Arnold Legacy)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER / MATHEMATICIAN (MOUNTAIN) \u2014 From the vantage of pure dynamical systems theory, the three-body problem is a structural feature of Hamiltonian mechanics itself: the nonintegrability of three or more gravitationally interacting bodies follows from the topology of phase space and the absence of sufficient conserved quantities. This is not a law of physics but a law of mathematics. The constraint is universal, unchangeable, and applies identically to all observers. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Computational Approximation Framework",
+      "comment": "PERSPECTIVE 4: COMPUTATIONAL APPROXIMATION FRAMEWORK (MOUNTAIN) \u2014 Modern numerical solvers (N-body simulations, perturbative expansions, chaos-aware step-size control) have institutionalized the limit into algorithmic practice. The framework is not evading the constraint but operationalizing it: users accept a prediction horizon window (a few centuries for solar-system scale, microseconds for atomic-scale three-body interactions) and work within it. The mountain becomes a tool boundary rather than a barrier. d\u22480.15, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.001."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "chaos_threshold_precision",
+      "question": "Is the predictability limit a consequence of exponential sensitivity (Lyapunov exponents) or of fundamental measurement precision constraints in quantum mechanics?",
+      "resolution_mechanism": "Analysis of whether classical Lyapunov exponents fully explain observed prediction horizons, or whether quantum uncertainty enters the classical dynamics through gravitational wave effects or measurement backaction",
+      "impact": "If purely classical chaos: the constraint is mathematical (mountain). If quantum effects intrude: the constraint is hybrid (physical law + measurement limit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the limit stems from classical chaos or includes quantum effects"
+    },
+    {
+      "id": "stability_island_exploitability",
+      "question": "Can the Kirkwood gaps and resonance structures in planetary systems be leveraged to extend prediction horizons selectively, or are those structures themselves chaotic?",
+      "resolution_mechanism": "Study of whether quasi-periodic orbits near resonances permit longer-baseline predictions than generic trajectories; analysis of whether metric stability of resonance structures generalizes",
+      "impact": "If islands permit extended prediction: constraint is relaxable for special cases (mountain with structure). If all resonances degrade: constraint is absolute (mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether resonance structures enable selective prediction extension"
+    },
+    {
+      "id": "observer_dependent_timescale",
+      "question": "Is the predictability limit observer-independent or does it depend on the required precision of the prediction task?",
+      "resolution_mechanism": "Parametric study of prediction error growth rates as a function of (1) required accuracy threshold, (2) system scale, (3) measure of 'separatedness' among the three bodies",
+      "impact": "If observer-independent: pure mountain. If dependent on required precision: the limit is relational (mountain for some observers, lower-extractiveness constraint for others).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the limit is objective or observer-relative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "commentary": {
+    "narrative_context": "The three-body problem represents a fundamental limit on predictability in deterministic dynamical systems. Unlike two-body gravitational systems (solved exactly by Newton and Kepler), systems of three or more mutually gravitating bodies exhibit sensitive dependence on initial conditions: arbitrarily small changes in starting position or velocity lead to exponentially diverging trajectories. This is not an engineering limitation or a measurement problem \u2014 it is a structural feature of the phase space topology. The constraint manifests differently across technological domains: satellite navigation can predict Earth-Moon-Sun orbital configurations reliably for a few centuries but becomes probabilistic beyond that horizon; asteroid impact prediction degrades rapidly after 10-20 years; molecular dynamics simulations of three-body interactions in chemical reactions operate on picosecond timescales before deterministic trajectories become indistinguishable. Yet the constraint is universal and invariant: no computational method, no measurement precision, no technological advance can eliminate the underlying mathematical barrier. This makes it a canonical mountain constraint \u2014 an irreducible feature of dynamical systems that agents encounter not as coercion but as a boundary condition of rational prediction.",
+    "key_agents": [
+      "Satellite Navigation Technician: Powerless agent (trapped/immediate) \u2014 operates within prediction horizon constraints set by the three-body dynamics; cannot extend forecasting windows arbitrarily",
+      "Space Agency Orbital Mechanics Team: Organized institutional actor (analytical/civilizational) \u2014 develops Monte Carlo methods, numerical simulations, and probabilistic orbital estimates as rational response to the constraint",
+      "Mathematical Analyst (Dynamicist): Theoretical observer (analytical/civilizational) \u2014 recognizes the constraint as a consequence of Hamiltonian topology and nonintegrability, not a technological gap",
+      "Computational Approximation Framework: Institutional infrastructure (institutional/arbitrage) \u2014 operationalizes the limit as a tool boundary; accepts prediction horizon windows and works within them"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The three-body constraint does not extract value from any agent \u2014 it imposes equal structural limits on all users of predictive systems. No agent gains advantage by suppressing alternatives; the constraint is invariant across all technological pathways. Base extraction \u2264 0.25 satisfies mountain gate. Suppression (0.02): Minimal. No coercion or lack of alternatives is operative. The constraint is not enforced through institutional suppression but through mathematical necessity. Agents can choose different approximation methods, computational scales, or prediction horizons, but cannot eliminate the underlying limit. Theater ratio (0.08): Very low. No performative activity is required to maintain the constraint \u2014 it requires no institutional enforcement, no theatrical legitimacy, no ritual. The constraint is self-evident in numerical results.",
+    "perspectival_gap": "Surprisingly small. All four perspectives classify the constraint as mountain. The perspectival gap that does exist is in experience, not in classification: the satellite technician experiences the constraint as a barrier (cannot predict 1000 years ahead); the space agency experiences it as a tool boundary (here is our valid prediction envelope); the mathematician experiences it as an insight (here is why nonintegrability follows); the computational framework experiences it as a design specification (work within this error budget). But all agree that the constraint is unchangeable, universal, and not subject to extraction or coercion. The mountain classification is robust.",
+    "directionality_logic": "No beneficiaries or victims. All agents experience the three-body limit uniformly as a constraint on their own actions and on what is knowable, not as an extraction mechanism. The directionality derivation is uniform: the constraint is not asymmetric. Different agents have different exit options (technician: trapped, mathematician: analytical), but all trajectories through the phase space follow the same sensitivity rules. The limit is not a zero-sum extraction but a shared structural reality."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "lyapunov_exponent_measurement",
+      "weather_prediction_horizon",
+      "molecular_dynamics_timescale"
+    ],
+    "dual_formulation_note": "The three-body problem is often decomposed into specialized constraints for specific domains (orbital mechanics, atmospheric chaos, molecular dynamics). Each domain constraint has its own \u03b5 reflecting domain-specific measurement precision and required prediction accuracy. The three-body problem itself is the upstream mathematical constraint (\u03b5=0.12, Mountain) that conditions all downstream domain-specific constraints."
+  },
+  "directionality_overrides": []
+}

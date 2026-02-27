@@ -2,30 +2,27 @@
   "header": {
     "constraint_id": "abstraction_boundary_overrun",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "abst"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.75,
-    "theater_ratio": 0.65,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "The Leaky Black-Box Collapse",
     "topic_domain": "technological/computational",
     "requires_active_enforcement": true,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
-    "accessibility_collapse": 0.3,
-    "resistance": 0.6,
     "beneficiaries": [
-      "platform_maintainers",
+      "abstraction_maintainers",
       "early_adopters"
     ],
     "victims": [
-      "downstream_developers",
-      "end_users"
-    ],
-    "mandatrophy_resolved": false
+      "dependent_systems",
+      "naive_users",
+      "system_reliability"
+    ]
   },
   "perspectives": [
     {
@@ -34,44 +31,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Downstream Developer",
-      "comment": "PERSPECTIVE 1: DOWNSTREAM DEVELOPER (SNARE) — Trapped by dependency on the abstraction. The cost of migrating the entire system is prohibitive. Leaks are a constant, coercive tax on time and cognitive load, extracting productivity. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+      "label": "The Dependent Developer",
+      "comment": "PERSPECTIVE 1: DEPENDENT DEVELOPER (SNARE) \u2014 Trapped by the abstraction's public contract. When internal leakage occurs (e.g., implementation details force workarounds), the developer cannot exit: their code and career depend on the abstraction working. They must patch, adapt, and accept blame for 'misusing' the layer. Zero alternatives; maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Library Maintainer",
+      "comment": "PERSPECTIVE 2: LIBRARY MAINTAINER (TANGLED ROPE) \u2014 Constrained by backward compatibility and user expectations. Fixing leaks requires breaking changes, which damages reputation and adoption. But also benefits: maintaining the abstraction provides authority, job security, and first access to optimization opportunities. Active enforcement of the abstraction boundary (documentation, warnings, versioning) required to sustain the boundary."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Platform Maintainer",
-      "comment": "PERSPECTIVE 2: PLATFORM MAINTAINER (ROPE) — Experiences the abstraction as a pure coordination good. Leaks are seen as bugs or advanced features, not structural flaws. Their specialized knowledge becomes a source of power and consulting revenue, a net benefit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (simplifying development) and the asymmetric extraction (the hidden costs of leaks borne by users). This is the canonical view of the constraint. d≈0.72, f(d)≈1.15, σ=1.0 → χ≈0.63."
+      "label": "The Framework Vendor",
+      "comment": "PERSPECTIVE 3: FRAMEWORK VENDOR (ROPE) \u2014 Experiences the abstraction as coordination mechanism. Hidden complexity allows the vendor to ship features fast and capture market share. When leaks occur, the vendor can fix them unilaterally (next version), then sell the fix. Net beneficiary; the abstraction enables their business model. Exit via arbitrage: can migrate users to new abstraction if old one collapses."
     },
     {
       "classification_type": "scaffold",
-      "agent_power": "moderate",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The New Adopter",
-      "comment": "PERSPECTIVE 4: NEW ADOPTER (SCAFFOLD) — Sees the abstraction as a temporary tool to accelerate initial development. At this stage, exit is cheap and the leaks haven't appeared. The abstraction provides support with an implicit sunset clause: 'I'll use it until it becomes a problem'. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.51. Note: χ is high, but the 'scaffold' classification is perspectival, based on perceived temporariness."
-    },
-    {
-      "classification_type": "piton",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Legacy System Maintainer",
-      "comment": "PERSPECTIVE 5: LEGACY MAINTAINER (PITON) — The original coordination benefit has atrophied; the system is now maintained through inertia. The abstraction's promise of simplicity is pure theater compared to the daily reality of working around its quirks. The rules remain because removing them is too costly. theater_ratio=0.65 is high, driving this perspectival classification."
+      "spatial_scope": "global",
+      "label": "The Standardization Body",
+      "comment": "PERSPECTIVE 4: STANDARDIZATION BODY (SCAFFOLD) \u2014 Organized agents (W3C, ECMA, POSIX committees) see the leaky abstraction as a temporary coordination failure with a planned sunset. Formal specification, test suites, and reference implementations are building stricter abstraction boundaries that expose implementation details only through controlled channels. Low effective extraction because the oversight coalition has agency and an exit path \u2014 formalization of the specification layer."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Specification",
+      "comment": "PERSPECTIVE 5: LEGACY SPECIFICATION (PITON) \u2014 The original abstraction boundary was designed with clear internal/external separation. But decades of patches, ad-hoc extensions, and vendor tweaks have made the boundary itself performative: it exists as documentation and formal claims but has lost functional force. Systems work around it; the specification is maintained through inertia, not because it achieves its purpose. Theater ratio high because the abstraction is mostly symbolic."
     },
     {
       "classification_type": "mountain",
@@ -79,96 +76,104 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Theoretical Purist",
-      "comment": "PERSPECTIVE 6: THEORETICAL PURIST (MOUNTAIN) — Argues from the 'Law of Leaky Abstractions' that all non-trivial abstractions are inherently leaky. This perspective naturalizes the constraint as an unavoidable law of computing. The engine will flag this as a false summit, as the base properties (ε=0.55, suppression=0.75) fail the mountain gates."
-    }
-  ],
-  "interval": {
-    "start": 2005,
-    "end": 2025
-  },
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.15
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.5
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.65
+      "label": "The Analytical Observer (Information Theory View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION THEORY VIEW (MOUNTAIN) \u2014 From a computational complexity perspective, some information leakage is inevitable: a black box that hides all internal state cannot respond to novel error conditions without the boundary becoming brittle. The tension between abstraction and diagnosticity is a fundamental trade-off in information theory. However, the structural data reveals this as a false summit \u2014 the leakage is not inevitable but engineered (poor encapsulation, insufficient error handling), not a law of computation."
     }
   ],
   "omegas": [
     {
-      "id": "inherent_vs_contingent_leakiness",
-      "question": "Is the degree of leakiness an inherent, unavoidable property of this type of abstraction (Mountain), or a contingent result of specific design choices and under-investment (Tangled Rope)?",
-      "resolution_mechanism": "Comparative analysis with alternative, less-leaky abstractions in the same problem domain. Formal verification of the abstraction boundary.",
-      "impact": "If inherent, the constraint is a Mountain and efforts should focus on mitigation. If contingent, it is a Tangled Rope or Snare that could be fixed or replaced.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Distinguishing between inherent leakiness (Mountain) and contingent design flaws (Tangled Rope)."
-    },
-    {
-      "id": "intentionality_of_complexity",
-      "question": "Is the complexity and leakiness a result of unintentional scope creep, or is it implicitly or explicitly maintained to create vendor lock-in and a market for expert consulting?",
-      "resolution_mechanism": "Analysis of platform maintainers' business models, support contracts, and responses to community-submitted simplification patches.",
-      "impact": "If unintentional, it's a classic Tangled Rope. If intentional, it's a Snare from more perspectives, as the extraction is deliberate.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Determining if the leakiness is a bug (Tangled Rope) or a feature (Snare)."
-    },
-    {
-      "id": "cost_quantification_for_exit",
-      "question": "Can the cumulative cost of developer time spent debugging leaks be reliably quantified against the projected cost of migrating to a new platform?",
-      "resolution_mechanism": "Analysis of engineering time-tracking data, bug report frequencies, and developer surveys, compared with cost models for large-scale software re-platforming.",
-      "impact": "If the cost of leaks is demonstrably higher than migration, the 'trapped' exit condition weakens, potentially shifting the classification from Snare to Tangled Rope for developers.",
+      "id": "encapsulation_sufficiency_threshold",
+      "question": "What level of internal implementation detail is unavoidable for error diagnostics without making the abstraction intractable?",
+      "resolution_mechanism": "Comparative analysis of well-encapsulated systems (ML frameworks with rich error messages) vs over-protected systems (legacy APIs with cryptic errors); measurement of user ability to debug failures at each level",
+      "impact": "If threshold is high (much detail necessary): leakage is partly structural (Rope from some perspectives). If threshold is low (little detail necessary): leakage is contingent (Snare from all perspectives).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Quantifying the extraction cost to evaluate the viability of exit."
+      "description": "How much internal detail is structurally necessary for diagnostics"
+    },
+    {
+      "id": "backward_compatibility_enforcement_cost",
+      "question": "Does maintaining abstraction boundary fidelity impose unacceptable performance or feature velocity penalties on the vendor?",
+      "resolution_mechanism": "Cost-benefit analysis of strict vs pragmatic boundaries; case studies of frameworks that prioritized boundary fidelity vs those that prioritized feature speed; correlation between abstraction strictness and adoption rates",
+      "impact": "If penalties are real and severe: the library maintainer cannot enforce the boundary without business risk (Tangled Rope confirmed). If penalties are manageable: boundary enforcement is a choice, not structural (Snare confirmed from dependent perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost to vendors of maintaining strict abstraction boundaries"
+    },
+    {
+      "id": "standardization_enforceability",
+      "question": "Can formal specifications and test suites actually prevent implementation leakage, or do vendor variations always outpace the standard?",
+      "resolution_mechanism": "Historical analysis of standards (CSS, JavaScript, HTML) that achieved strict boundaries vs those that fragmented; measurement of vendor conformance over time; identification of systematic pressure points where vendors diverge",
+      "impact": "If enforceable: scaffold sunset is real \u2014 standardization can rebuild abstraction boundaries. If not enforceable: standardization is aspirational (Piton perspective confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether standardization can enforce abstraction boundaries against vendor pressure"
     }
   ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
   "commentary": {
-    "narrative_context": "In software engineering, an abstraction is a simplified interface to a complex system. The 'Leaky Black-Box Collapse' occurs when this simplification fails, forcing users (developers) to grapple with the underlying complexity the abstraction was meant to hide. This creates a structural conflict: the abstraction provides a real coordination benefit (faster development initially) but imposes a severe extractive cost when it fails, a cost borne entirely by those who depend on it.",
+    "narrative_context": "The leaky black-box collapse occurs when a software abstraction (API, library, framework, protocol) fails to hide the messy, low-level complexity it was designed to simplify. Users encounter implementation details through error messages, workarounds, or performance surprises that should have been hidden. This creates a structural tension between the library maintainer's incentive to ship fast (allowing leaks to persist) and the dependent developer's trapped position (forced to work around leaks). The constraint exhibits five distinct classification types from different observatories: pure extraction (from the trapped developer's view), mixed coordination-extraction (from the maintainer's pragmatic position), coordination with sunset (from the standardization body), degraded ritual (from the legacy specification's perspective), and a false-summit natural law claim (from the civilizational analytical view). The theater ratio rises over time as documentation and warnings about internal implementation details accumulate \u2014 the boundary becomes more performative than functional.",
     "key_agents": [
-      "Downstream Developers: Primary victims (powerless/trapped) — build on the abstraction and are forced to pay the 'leak tax' in time and effort.",
-      "Platform Maintainers: Primary beneficiaries (institutional/arbitrage) — create and control the abstraction; their expert knowledge becomes a source of power and revenue.",
-      "New Adopters: Prospective users (moderate/mobile) — see only the initial coordination benefit, viewing the tool as a temporary scaffold.",
-      "Legacy System Maintainers: Inertial users (organized/constrained) — experience the abstraction as a degraded set of rules to be worked around.",
-      "Theoretical Purists: Analytical observers (analytical/analytical) — frame the issue as an unavoidable 'natural law' of computing."
+      "Dependent Developer: Primary victim (powerless/trapped) \u2014 bound by abstraction contract; forced to work around leakage without alternatives",
+      "Library Maintainer: Primary beneficiary and secondary victim (moderate/constrained) \u2014 benefits from market position and optimization control; constrained by backward compatibility and user expectations",
+      "Framework Vendor: Secondary beneficiary (institutional/arbitrage) \u2014 captures market share via fast feature delivery; can arbitrage to new abstraction if old one fails",
+      "Standardization Body: Organized coalition (organized/constrained) \u2014 W3C, ECMA, POSIX build formal specs and test suites to rebuild abstraction boundaries with sunset logic",
+      "Legacy Specification: Institutional guardian (institutional/arbitrage) \u2014 maintains the original boundary design through documentation and versioning conventions",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing implementation leakage as inevitable trade-off in information theory"
     ],
-    "logic_rationale": "Extractiveness (0.55): Represents the significant developer time and cognitive overhead lost to debugging the abstraction's internal workings. This is a direct extraction of productivity from the victims. Suppression (0.75): High, reflecting the prohibitive cost and risk of migrating a complex system off a foundational technology. This locks users in and prevents them from switching to less-leaky alternatives. Theater Ratio (0.65): High. There is a large gap between the marketed simplicity of the abstraction ('just use this one simple command!') and the complex reality of its failure modes.",
-    "perspectival_gap": "The constraint is a powerful diagnostic because its classification depends entirely on the observer's position. For the maintainer who profits from their expertise, it's a Rope. For the developer trapped by it, it's a Snare. For the analyst, it's a Tangled Rope. For the newcomer, it's a Scaffold. For the maintainer of a 10-year-old system, it's a Piton. For the theorist, it's a Mountain. The same base metrics produce all six classifications, revealing that the 'type' is not inherent to the object but to the relationship between the object and the observer.",
-    "directionality_logic": "Beneficiaries (platform_maintainers) have arbitrage exit and benefit from the information asymmetry, leading to a low/negative derived directionality (d). Victims (downstream_developers) are trapped and bear the full cost of the leaks, leading to a very high derived d. This structural difference in power and exit options drives the massive perspectival gap between seeing the constraint as a Rope versus a Snare.",
-    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that a single phenomenon can be correctly classified in multiple ways. The error is to insist on a single 'true' classification. The DR framework shows that the Rope, Snare, and Tangled Rope perspectives are all valid structural readings from different positions. The system's value is in mapping this presheaf of perspectives, not in collapsing it to one privileged view. The 'Mountain' perspective is revealed as a false summit, an attempt to naturalize a contingent technological arrangement."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The library maintainer extracts value by controlling the optimization opportunities and migration paths available to dependent developers. When leaks force workarounds, the maintainer can later claim credit for 'fixing' issues. The extraction is systematic but not total \u2014 dependent developers have some agency through forking, switching libraries, or temporal workarounds. Suppression (0.58): Moderate-high. The abstraction's contractual promise ('you don't need to know internal details') suppresses alternatives: developers cannot access alternative implementations without breaking compatibility, cannot inspect internals to understand failures, and cannot opt out without rewriting code. But suppression is not maximal because open-source alternatives and documentation leakage provide partial transparency. Theater ratio (0.64): High-moderate. The abstraction boundary is increasingly performative: warnings about 'implementation-dependent behavior' in documentation acknowledge that the boundary is porous, yet the API surface continues to claim full encapsulation. The theater rises over time as patches and workarounds accumulate \u2014 the boundary becomes a ritual of disclaimers rather than a functional seal.",
+    "directionality_logic": "Directionality values derive from each agent's structural position. The trapped dependent developer (d \u2248 0.95) experiences maximum extraction \u2014 high power ceiling, no exit, forced adaptation. The constrained library maintainer (d \u2248 0.55) experiences moderate extraction \u2014 they benefit from market position but are constrained by backward compatibility, so they experience mixed costs and benefits. The arbitraging vendor (d \u2248 0.05) experiences negative extraction (net benefit) \u2014 they can exit via new abstraction designs and control the optimization pathway. The standardization body's constrained position (d \u2248 0.50) reflects symmetric cost-benefit: they benefit from stricter standards but are constrained by need for vendor consensus. The analytical observer (d \u2248 0.72) sees the system as a whole and cannot exit the abstraction tier itself, so experiences moderate extraction from the structural tension.",
+    "perspectival_gap": "This constraint shows how identical base properties (extractiveness=0.52, suppression=0.58) produce radically different classifications across structural positions. The trapped developer sees Snare \u2014 pure extraction with no exit. The constrained maintainer sees Tangled Rope \u2014 genuine coordination function (enabling fast development) mixed with asymmetric extraction. The vendor sees Rope \u2014 coordination mechanism for market capture. The standardization body sees Scaffold \u2014 temporary problem being solved by formal specs with a sunset horizon. The legacy specification sees Piton \u2014 the original functional boundary has degraded into performative ritual. The analytical observer risks seeing Mountain \u2014 'abstraction always leaks' is naturalized as computational law \u2014 but the structural data reveals this as a false summit: the leakage is engineered, not inevitable. The perspectival gap reveals that the abstraction boundary collapse is not a single constraint but a cluster of structural phenomena experienced differently by agents with different power and exit options.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids the mislabeling trap by distinguishing coordination function from extraction mechanism. The maintainer's perspective (Tangled Rope) captures both: the abstraction genuinely enables fast development (coordination) AND creates optimization control asymmetry (extraction). The dependent's perspective (Snare) captures pure extraction because they have no alternative and cannot benefit from the coordination. The vendor's perspective (Rope) captures coordination because they can arbitrage. The scaffold perspective confirms that formal standardization can rebuild the boundary \u2014 the sunset is real, not aspirational. The piton perspective identifies that legacy specifications have become performative rather than functional. The false mountain claim is detected by the structural data: the leakage is not inevitable but engineered (poor encapsulation design, insufficient error handling, vendor incentive misalignment). The mandatrophy is resolved by showing that all six types are structurally accurate from different positions \u2014 the constraint is a presheaf of observations, not a single type."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "technical_debt_interest_rate",
-      "developer_burnout_cycle"
-    ]
-  }
+      "api_surface_stability",
+      "vendor_lock_in_cycle"
+    ],
+    "dual_formulation_note": "The abstraction boundary overrun is downstream of specific API design choices and upstream of dependent system failures. Separate constraint stories could be written for: (1) the vendor's optimization control (high \u03b5), (2) the dependent's workaround burden (\u03b5 varies by abstraction maturity), and (3) the standardization body's specification effort (low \u03b5, scaffolding function). This story integrates all three perspectives on the single boundary condition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
 }

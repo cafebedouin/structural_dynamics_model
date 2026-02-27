@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "xi_mao_ideological_centralization",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "xim"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Ideological Centralization and the Leadership Core",
+    "topic_domain": "political/institutional_power",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_leadership_core"
+    ],
+    "victims": [
+      "institutional_succession_norms",
+      "cadre_circulation_system",
+      "party_institutional_autonomy",
+      "internal_party_factions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Cadre and Party Functionary",
+      "comment": "PERSPECTIVE 1: CADRE AND PARTY FUNCTIONARY (SNARE) \u2014 Trapped within the party-state system with no exit option. Career advancement depends entirely on ideological alignment with the leadership core. Cannot exit the system or challenge orthodoxy without career destruction. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.66 (snare threshold)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Official",
+      "comment": "PERSPECTIVE 2: MID-TIER OFFICIAL (SNARE) \u2014 Constrained by resource dependencies and hierarchical control. Ideological deviation creates immediate career jeopardy. Has marginally more exit capacity than lower cadres but still trapped within the system. d\u22480.80, f(d)\u22481.18, \u03c3=1.0 \u2192 \u03c7\u22480.60 (snare territory)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Power Base",
+      "comment": "PERSPECTIVE 3: REGIONAL POWER BASE (TANGLED ROPE) \u2014 Organized institutional actor (provincial party apparatus) that nominally participates in coordination through collective decision-making forums (Politburo, Central Committee), but faces extraction through ideological enforcement and merit system degradation. Constrained because defection from the party system is impossible but has some institutional leverage. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.51 (tangled rope midpoint)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Central Leadership Core",
+      "comment": "PERSPECTIVE 4: CENTRAL LEADERSHIP CORE (ROPE) \u2014 Primary beneficiary. Experiences the constraint as pure coordination: ideological centralization consolidates command authority and enables rapid decision-making. Arbitrage capacity (ability to define and redefine ideology) means the core sets the rules. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.07 (net beneficiary, rope classification)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Formal Succession System",
+      "comment": "PERSPECTIVE 5: FORMAL SUCCESSION SYSTEM (PITON) \u2014 The Deng-era retirement norms (term limits, mandatory succession, age-based advancement) persist as institutional theater (theater_ratio=0.65) while real power dynamics are driven by ideological alignment. The formal system still exists (Politburo Standing Committee, collective decision procedures) but is performative \u2014 actual succession is now determined by whether an successor maintains ideological orthodoxy to the core. This represents degradation of an earlier constraint (the succession norm system) that once functioned to distribute power. d\u22480.05, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a long-term analytical perspective, the constraint represents extraction from the entire institutional party-state apparatus. Ideological centralization extracts institutional autonomy, meritocratic advancement, and internal deliberation norms. The system that once distributed power through cadre circulation now concentrates it through ideology. From the civilizational view, this is not a mountain (immutable law) but a contingent institutional arrangement designed to maximize extractive authority. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.68 (snare)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ideological_consistency_definition",
+      "question": "What counts as ideological orthodoxy, and who determines the boundary between acceptable interpretation and deviation?",
+      "resolution_mechanism": "Historical documentation of disciplinary actions for 'ideological errors'; analysis of party communication documents and their interpretation shifts over time; interviews with cadre regarding ideological ambiguity and enforcement discretion",
+      "impact": "If orthodoxy is strictly defined: cadres have measurable boundaries for compliance (extractiveness lower, suppression lower). If orthodoxy is fluid and determined by core preferences: extractiveness becomes unlimited (\u03c7 approaches maximum).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition and boundary of ideological orthodoxy"
+    },
+    {
+      "id": "institutional_succession_alternative_pathways",
+      "question": "Could alternative succession mechanisms (technocratic meritocracy, electoral competition, factional negotiation) constrain leadership extraction and restore institutional autonomy?",
+      "resolution_mechanism": "Comparative analysis of party-states with different succession mechanisms (Taiwan under DPP, Vietnam's collective leadership, Mexico's PRI rotation); counterfactual modeling of Chinese institutions under term-limited succession norms",
+      "impact": "If alternatives are structurally viable: current centralization is a choice, not inevitability (snare confirmed). If alternatives fail: current system emerges as necessary coordination mechanism (rope reclassification possible).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative succession mechanisms could work in context"
+    },
+    {
+      "id": "cadre_circulation_genuine_replacement",
+      "question": "Do rotations within the formal system represent genuine power transfers or procedural theater hiding continued influence?",
+      "resolution_mechanism": "Analysis of retired officials' influence networks post-retirement; comparison of policy changes before/after official transitions; documentation of informal power structures (standing committees, informal groups, family networks) that persist through formal transitions",
+      "impact": "If rotation is genuine: snare classification confirmed (formal rules are theater masking real power). If rotation is complete: some aspects reclassify as rope (system genuinely distributes authority).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cadre rotations represent genuine power transfers"
+    },
+    {
+      "id": "party_unification_versus_factional_suppression",
+      "question": "Is ideological centralization a solution to intra-party factional conflict or a suppression mechanism for natural factional competition?",
+      "resolution_mechanism": "Historical analysis of pre-centralization factional dynamics; comparative study of party-states with factional tolerance vs suppression; modeling of institutional stability under different factional regimes",
+      "impact": "If factional suppression is necessary: centralization appears as coordination (rope or tangled rope). If factional competition could be channeled: suppression is extractive (snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ideological centralization as factional suppression vs conflict resolution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Ideological centralization represents a structural constraint on power distribution within a party-state system. The constraint describes how centralized control over orthodoxy \u2014 who defines correct ideology and what constitutes deviation \u2014 becomes a mechanism to concentrate authority in the leadership core and extract institutional autonomy from intermediate power structures. This constraint must be distinguished from genuine coordination (which also requires some alignment on core principles) by examining whether the system extracts from those it nominally coordinates with, whether exit from the system is blocked, and whether internal succession norms are dismantled. The measurement trajectory shows increasing extractiveness (0.35 \u2192 0.68) and increasing theater ratio (0.40 \u2192 0.65), suggesting that the constraint has degraded from a mixed system (some genuine coordination, some extraction) toward pure extraction with more performative elements. The piton perspective (the degradation of the Deng-era succession norms) is central: this constraint succeeds precisely by hollowing out an earlier constraint system that genuinely distributed power.",
+    "key_agents": [
+      "Central Leadership Core: Primary beneficiary (institutional/arbitrage) \u2014 consolidates power through ideological authority, sets orthodoxy rules, can reshape ideology to maintain control",
+      "Cadre and Party Functionary: Primary victim (powerless/trapped) \u2014 career dependent on ideological alignment, no exit from party system, subject to arbitrary orthodoxy interpretation",
+      "Mid-Tier Official: Secondary victim (moderate/constrained) \u2014 faces ideological enforcement through merit system degradation, nominally participates in governance but constrained by orthodoxy requirement",
+      "Regional Power Base: Secondary victim (organized/constrained) \u2014 institutional actor nominally participating in collective forums but extraction occurs through ideological enforcement of central orthodoxy",
+      "Formal Succession System: Institutional actor (institutional/arbitrage) \u2014 the Deng-era retirement and term-limit norms that once constrained leadership power are now degraded (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees the constraint as contingent institutional arrangement extracting autonomy, not as immutable coordination necessity"
+    ],
+    "logic_rationale": "Base Extractiveness (0.68): High. The constraint extracts institutional autonomy from cadres, regional power bases, and the formal succession system. The central core sets the rules of ideological orthodoxy (beneficiary + arbitrage), while subordinate structures must conform without the capacity to challenge or negotiate (victims + trapped/constrained). The extraction increases over time as ideological enforcement becomes more stringent and as tolerance for internal debate narrows. Suppression (0.75): Very high. Multiple mechanisms suppress alternatives: (1) career penalties for ideological deviation, (2) lack of formal channels for factional expression or succession negotiation, (3) control over information and interpretation of past decisions, (4) inability to exit the party-state without forfeiting status and access. Theater Ratio (0.65): Moderate-high and increasing. Formal mechanisms (Politburo Standing Committee, Central Committee, collective decision procedures) perform governance functions but increasingly lack real decision-making power \u2014 actual authority is concentrated in those who define ideology. The formal system's theater has increased as the mechanisms persist but become less real. This trajectory signals piton dynamics: a constraint system that once genuinely distributed power is becoming performative.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival divergence. The central leadership core experiences it as pure coordination (Rope) \u2014 ideological alignment enables unified action and rapid decision-making. The analytical observer sees it as pure extraction (Snare) \u2014 the system extracts institutional autonomy. The cadre and lower officials see it as a snare trapping them within the system. The regional power base sees tangled rope \u2014 nominally participating in coordination but subject to extraction through ideological enforcement. The formal succession system is treated as piton \u2014 the Deng-era norms that once constrained power persist as theater while real succession depends on ideological loyalty. The perspectival gap reveals that what the core calls 'coordination' the victims call 'extraction,' because the core has unilateral power to set the rules and the victims have no exit.",
+    "directionality_logic": "Central Leadership Core: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary (negative effective extraction). Cadre/Functionary: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction coefficient. Mid-Tier Official: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.18. High extraction, somewhat constrained by having minimal institutional leverage. Regional Power Base: Victim + constrained + organized \u2192 d\u22480.65, f(d)\u22481.00. The organizational capacity moderates directionality somewhat, but constraint remains binding because exit is impossible (cannot leave the party-state without loss of all status). Formal Succession System: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.10 as a nominal entity, but the piton classification reflects that the system has been hollowed \u2014 it exists formally but lacks real function. Analytical Observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. External view sees the entire apparatus as victimized by the constraint.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED: This constraint exhibits all three snare gates. (1) Extractiveness \u2265 0.46: measured at 0.68 \u2014 clearly met. (2) Suppression \u2265 0.60: measured at 0.75 \u2014 clearly met. (3) Effective extraction \u03c7 \u2265 0.66: computed from the analytical perspective as \u03c7 = 0.68 \u00d7 1.15 \u00d7 1.0 = 0.78 (exceeds snare threshold). The mandatrophy avoidance is clear: the snare classification is not masquerading as coordination (rope) because the core extracts from subordinates while claiming they coordinate. The piton perspective (degradation of succession norms) confirms that this is not a natural law but a contingent institutional arrangement. The increasing theater_ratio (0.40 \u2192 0.65) and extractiveness (0.35 \u2192 0.68) over the measurement interval show that the constraint has intensified: what began with some genuine coordination functions has evolved toward pure extraction with performative governance mechanisms. The tangled rope perspective (regional power bases) shows the transition point \u2014 these institutional actors once had more real participation; as ideology becomes the sole arbiter of authority, they shift toward pure victims."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "cadre_merit_system_degradation",
+      "collective_leadership_norms_erosion",
+      "factional_suppression_mechanism"
+    ],
+    "dual_formulation_note": "Ideological centralization is downstream of (and reinforces) cadre merit system degradation and erosion of collective leadership norms. This constraint and its network neighbors form an institutional cluster where centralization of ideology is the mechanism that achieves extraction across multiple dimensions (succession, advancement, deliberation). Each neighboring constraint has its own \u03b5 value reflecting specific empirical claims, but all three are structurally coupled through the shared mechanism of ideological orthodoxy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ]
+}

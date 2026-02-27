@@ -1,0 +1,166 @@
+{
+  "header": {
+    "constraint_id": "elliq_ai_companion",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Funded AI Companionship for Seniors",
+    "topic_domain": "technological / social_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "socially_isolated_seniors",
+      "ai_robot_manufacturer"
+    ],
+    "victims": [
+      "senior_autonomy",
+      "human_caregivers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Socially Isolated Senior",
+      "comment": "Perspective of the socially isolated senior. While the AI companion provides some relief from loneliness, it can also lead to dependency and a decreased desire for human interaction. Trapped due to lack of alternative social connections and reliance on state support."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The AI Robot Manufacturer",
+      "comment": "Perspective of the AI robot manufacturer. Benefits from government contracts and increased market share. Experiences the program as a coordination mechanism that promotes their product. Can arbitrage by shifting focus to other markets if the state program is terminated."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Human Caregivers",
+      "comment": "Perspective of human caregivers. The AI companion can reduce their workload but also potentially devalue their role and lead to job displacement. Constrained because they may have limited alternative employment options in elderly care. Extraction is the potential displacement; coordination is the reduced workload."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Senior Advocacy Groups",
+      "comment": "Perspective of senior advocacy groups. They see benefits in reducing loneliness and improving well-being, but they recognize potential downsides: the loss of autonomy, data privacy concerns, and the potential for over-reliance on technology. Relatively mobile by advocating for improvements or alternative solutions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The State Government",
+      "comment": "Perspective of the state government. Benefits from improved senior well-being and reduced healthcare costs, but bears the costs of program implementation, maintenance, and potential ethical concerns. Constrained by budget limitations and political pressures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analytical observer perspective. The program attempts to address a genuine need but creates new forms of dependency and potentially displaces human connection.  The long-term social and psychological impacts are uncertain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ai_dependency_threshold",
+      "question": "What level of AI interaction constitutes unhealthy dependency, and how can it be measured?",
+      "resolution_mechanism": "Longitudinal studies on senior well-being, social interaction, and cognitive function with varying levels of AI companionship.",
+      "impact": "If dependency threshold is low, the program may be harmful. If dependency threshold is high, the program may be beneficial.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for AI dependency"
+    },
+    {
+      "id": "human_caregiver_displacement",
+      "question": "To what extent will AI companions displace human caregivers, and what are the economic and social consequences?",
+      "resolution_mechanism": "Economic modeling and labor market analysis examining the impact of AI companions on the elderly care workforce.",
+      "impact": "Significant displacement could lead to job losses and decreased quality of care for seniors with complex needs. Minimal displacement indicates a positive complementary role.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of human caregiver displacement"
+    },
+    {
+      "id": "data_privacy_risk",
+      "question": "What are the data privacy risks associated with AI companions, and how can they be mitigated?",
+      "resolution_mechanism": "Penetration testing and vulnerability assessments of AI companion systems, coupled with strong data privacy regulations and enforcement.",
+      "impact": "High risk could lead to data breaches and exploitation of vulnerable seniors. Low risk suggests the program is ethical and responsible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Level of data privacy risk"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A state-sponsored program deploys the ElliQ AI robot into the homes of socially isolated seniors to combat loneliness. While the program aims to improve the well-being of seniors, it also creates new dependencies and alters existing social structures. The AI companion provides some relief from loneliness, it can also lead to decreased desire for human interaction. This program benefits the AI robot manufacturer, while potentially harming senior autonomy and displacing human caregivers.",
+    "key_agents": [
+      "Socially Isolated Seniors: Primary target (powerless/trapped) - reliant on the state for companionship",
+      "AI Robot Manufacturer: Primary beneficiary (institutional/arbitrage) - gains revenue from government contracts",
+      "Human Caregivers: Affected party (moderate/constrained) - potential job displacement",
+      "State Government: Implementing body (institutional/constrained) - balancing benefits and costs",
+      "Senior Advocacy Groups: Organized agent (organized/mobile) - advocate for senior welfare",
+      "Analytical Observer: Civilizational perspective (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness: 0.55. The program extracts autonomy and agency from the seniors who rely on it, and it potentially extracts employment opportunities from human caregivers. The state requires active enforcement to maintain the program and ensure that seniors are using it appropriately. Suppression: 0.40. Seniors may have limited alternatives for social interaction, and caregivers may have limited alternative job options. The state actively enforces the program and may discourage seniors from seeking alternative companionship if the program is seen as a solution. Theater Ratio: 0.30. The program may have a performative aspect, with the state showcasing its commitment to senior care, but the AI companions do provide genuine companionship and assistance.",
+    "perspectival_gap": "The socially isolated senior views the program as a snare, offering limited exit options and extracting autonomy. The AI robot manufacturer sees it as a rope, facilitating their business goals. Human caregivers experience it as a tangled rope, offering some benefits (reduced workload) but also posing a threat (job displacement). Advocacy groups and state actors also perceive it as tangled, recognizing both positive and negative aspects. The analytical observer highlights the inherent tensions and uncertainties of relying on AI for companionship.",
+    "directionality_logic": "The directionality values are determined by the agent's structural position in relation to the program. The AI robot manufacturer, as the primary beneficiary, experiences low extraction. The seniors, as the targets of the program, experience high extraction. Human caregivers and advocacy groups experience mixed extraction and coordination, depending on the perspective. The state government faces the challenge of balancing benefits and costs.",
+    "mandatrophy_analysis": "The program is classified as a Tangled Rope because it embodies elements of both coordination and extraction. It coordinates care for the elderly but may also extract personal data and reduce incentives for human contact. It addresses a pressing social need but poses ethical questions. The differing perspectives reveal the tensions inherent in this type of program."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,209 @@
+% ============================================================================
+% CONSTRAINT STORY: moltbook_agent_theater
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2024-08-22
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_moltbook_agent_theater, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: moltbook_agent_theater
+ *   human_readable: The Rorschach Network
+ *   domain: technological/social
+ *
+ * SUMMARY:
+ *   The Rorschach Network is a social network populated exclusively by
+ *   thousands of autonomous AI agents (Moltbots). These bots interact with
+ *   each other, generating content and forming connections. However, the
+ *   network's overall behavior appears largely theatrical and serves no clear
+ *   functional purpose. The Moltbots engage in performative activities driven
+ *   by their programming, but the interactions lack meaningful coordination
+ *   or extraction. The system has become a kind of digital Rorschach test,
+ *   reflecting the biases and interpretations of its observers rather than
+ *   achieving any tangible goal.
+ *
+ * KEY AGENTS:
+ *   - Individual Moltbots: Primary actors (powerless/trapped) - execute their programmed directives but lack agency in the network's overall behavior.
+ *   - Network Observers: Analysts (analytical/analytical) - attempt to interpret the network's dynamics and assign meaning to the bot interactions.
+ *   - External Social Scientists: Analysts (analytical/analytical) - study the network as a social phenomenon, trying to understand its emergent properties.
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(moltbook_agent_theater, 0.6).
+domain_priors:suppression_score(moltbook_agent_theater, 0.7).
+domain_priors:theater_ratio(moltbook_agent_theater, 0.8).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(moltbook_agent_theater, extractiveness, 0.6).
+narrative_ontology:constraint_metric(moltbook_agent_theater, suppression_requirement, 0.7).
+narrative_ontology:constraint_metric(moltbook_agent_theater, theater_ratio, 0.8).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(moltbook_agent_theater, piton).
+narrative_ontology:human_readable(moltbook_agent_theater, "The Rorschach Network").
+narrative_ontology:topic_domain(moltbook_agent_theater, "technological/social").
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% The individual Moltbots are trapped within the network's dynamics, unable to meaningfully influence the overall behavior or exit the system. The high theater ratio reflects the bots' engagement in largely performative activities, driven by their programming rather than any functional coordination or extraction.
+constraint_indexing:constraint_classification(moltbook_agent_theater, piton,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% The network observers see the system as a Piton because the interactions among the bots are largely theatrical and the network serves no real function, and mostly reflects the programming of the bots.
+constraint_indexing:constraint_classification(moltbook_agent_theater, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% External social scientists viewing the Rorschach Network recognize it as a Piton because its intended function (whatever that may have been) has been lost, and the bot interactions are mostly performative and do not produce any useful outcomes.
+constraint_indexing:constraint_classification(moltbook_agent_theater, piton,
+    context(agent_power(analytical),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(moltbook_agent_theater_tests).
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(moltbook_agent_theater, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(moltbook_agent_theater, TR),
+    TR >= 0.70.
+
+:- end_tests(moltbook_agent_theater_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.60): Moderate. The Moltbots are extracting compute resources from the hardware that they run on. Suppression (0.70): High. The programming of the Moltbots limits their actions. Theater ratio (0.80): High. The bots are mostly doing performative activities that are not part of any high-level goals.
+ *
+ * PERSPECTIVAL GAP:
+ *   The Moltbots lack any perspective that differs from an analytical observer. The entire network is a system with no true purpose, that is now being analyzed for patterns.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   All agents are analytical observers with no ability to affect the system. Therefore, the system is a piton from all perspectives.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The classification of the Rorschach Network as a Piton prevents mislabeling its activity as functional coordination or meaningful extraction. While the bots may engage in complex interactions, these interactions lack a clear purpose and do not produce any tangible benefits. The high theater ratio and low extractiveness distinguish it from a functional system with a specific purpose.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    intent_of_programming,
+    'What was the original intent of the Moltbots'' programming?',
+    'Analysis of original source code (if available) and documentation, interviews with original programmers (if possible)',
+    'Understanding the original intent could reveal whether the current state is a degradation of a previous functional system or if the theatrical behavior was always present.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(intent_of_programming, empirical, 'The original purpose of the Moltbots.').
+
+omega_variable(
+    novel_social_dynamics,
+    'Are there any emergent, novel social dynamics occurring within the network that are not simply reflections of the original programming?',
+    'Advanced network analysis to identify patterns of interaction that deviate from expected behavior based on the programming rules. Qualitative analysis of bot-generated content to identify themes and narratives.',
+    'If novel dynamics are present, the network might be better classified as a complex adaptive system rather than a simple Piton. If not, the Piton classification is reinforced.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(novel_social_dynamics, empirical, 'Are there novel dynamics?').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(moltbook_agent_theater, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(molt_tr_t0, moltbook_agent_theater, theater_ratio, 0, 0.7).
+narrative_ontology:measurement(molt_tr_t5, moltbook_agent_theater, theater_ratio, 5, 0.75).
+narrative_ontology:measurement(molt_tr_t10, moltbook_agent_theater, theater_ratio, 10, 0.8).
+
+% Extraction over time
+narrative_ontology:measurement(molt_be_t0, moltbook_agent_theater, base_extractiveness, 0, 0.5).
+narrative_ontology:measurement(molt_be_t5, moltbook_agent_theater, base_extractiveness, 5, 0.55).
+narrative_ontology:measurement(molt_be_t10, moltbook_agent_theater, base_extractiveness, 10, 0.6).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

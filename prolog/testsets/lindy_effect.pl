@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: lindy_effect
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-28
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_lindy_effect, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -58,18 +58,35 @@
  *   domain: social/intellectual
  *
  * SUMMARY:
- *   The Lindy Effect is a theorized phenomenon where the future life expectancy of
- *   non-perishable things (ideas, books, technologies) is proportional to their
- *   current age. It functions as a powerful heuristic for filtering information,
- *   but also creates a structural bias against novelty. This dual nature—a
- *   genuine coordination function (filtering) combined with asymmetric suppression
- *   of new entrants—makes it a canonical Tangled Rope.
+ *   The Lindy Effect is a theorized phenomenon where the future life
+ *   expectancy of non-perishable things (ideas, books, technologies) is
+ *   proportional to their current age. This constraint operates at the
+ *   intersection of intellectual legitimacy and institutional gatekeeping.
+ *   The constraint exhibits a structural tension: the Lindy Effect can be
+ *   understood as a coordination mechanism (established ideas enable faster
+ *   progress) or as an extraction mechanism (established ideas suppress novel
+ *   frameworks). From different structural positions, intellectual actors
+ *   experience it as a coordination-extraction hybrid (Tangled Rope). Novel
+ *   idea creators experience it as pure extraction (Snare) — they are trapped
+ *   paying a legitimacy tax on age. Established frameworks experience it as
+ *   pure coordination (Rope) — age compounds their legitimacy. Academic
+ *   institutions see mixed benefit and cost (Tangled Rope) — they benefit
+ *   from institutional inertia but pay through paradigm-shift lag. The
+ *   analytical observer risks naturalizing the effect as a law of quality
+ *   (Mountain), obscuring the contingent institutional arrangements that
+ *   enforce it. Theater ratio (0.58) reflects that much of the gatekeeping
+ *   rhetoric around 'peer review rigor' and 'quality filtering' is partially
+ *   performative — it justifies age-bias through the language of epistemic
+ *   standards without empirically validating that age is a reliable quality
+ *   signal.
  *
- * KEY AGENTS (by structural relationship):
- *   - Disruptive Innovators: Primary target (powerless/constrained) — bears the cost of being new.
- *   - Established Institutions: Primary beneficiary (institutional/arbitrage) — leverages its age as a signal of quality.
- *   - Pragmatic Investors: Secondary beneficiary (moderate/mobile) — uses the effect as a coordination heuristic.
- *   - Analytical Observer: Sees the full structure as a Tangled Rope.
+ * KEY AGENTS:
+ *   - Novel Idea Creators: Primary victim (powerless/trapped) — face higher verification barriers and credibility extraction purely on basis of idea recency
+ *   - Established Canon: Primary beneficiary (institutional/arbitrage) — derives compounding legitimacy and reduced verification overhead from age bias
+ *   - Academic Institutions: Secondary beneficiary/victim (organized/constrained) — benefit from institutional inertia but face costs of paradigm-shift resistance
+ *   - Open Science Movement: Organized agents (organized/mobile) — arXiv, preprint servers, open data create alternative legitimacy pathways with lower age bias
+ *   - Citation Network: Institutional enforcer (institutional/constrained) — mechanically amplifies age-bias through impact factors and h-index metrics; increasingly recognized as dysfunctional
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional gatekeeping as inherent property of knowledge quality
  */
 
 /* ==========================================================================
@@ -77,97 +94,75 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: The effect doesn't actively steal value, but it does "extract"
-% attention and opportunity from the new and gift it to the old based on age.
-domain_priors:base_extractiveness(lindy_effect, 0.20).
-
-% Rationale: The "Time-Tested" narrative actively suppresses new ideas by
-% labeling them "fragile" or "unproven", creating a significant barrier to entry.
-% This high suppression score is why it cannot be a Mountain.
-domain_priors:suppression_score(lindy_effect, 0.50).
-
-% Rationale: The effect is a substantive social dynamic, not a performative one.
-domain_priors:theater_ratio(lindy_effect, 0.11).
+domain_priors:base_extractiveness(lindy_effect, 0.38).
+domain_priors:suppression_score(lindy_effect, 0.42).
+domain_priors:theater_ratio(lindy_effect, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(lindy_effect, extractiveness, 0.20).
-narrative_ontology:constraint_metric(lindy_effect, suppression_requirement, 0.50).
-narrative_ontology:constraint_metric(lindy_effect, theater_ratio, 0.11).
+narrative_ontology:constraint_metric(lindy_effect, extractiveness, 0.38).
+narrative_ontology:constraint_metric(lindy_effect, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(lindy_effect, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(lindy_effect, rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(lindy_effect, tangled_rope).
 narrative_ontology:human_readable(lindy_effect, "The Lindy Effect").
 narrative_ontology:topic_domain(lindy_effect, "social/intellectual").
 
-% --- Binary flags ---
-% The effect is self-reinforcing through cumulative advantage and cognitive bias.
 domain_priors:requires_active_enforcement(lindy_effect).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(lindy_effect, established_institutions).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(lindy_effect, disruptive_innovators).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(lindy_effect, established_ideas).
+narrative_ontology:constraint_beneficiary(lindy_effect, legacy_institutions).
+narrative_ontology:constraint_beneficiary(lindy_effect, status_quo_defenders).
+narrative_ontology:constraint_victim(lindy_effect, novel_ideas).
+narrative_ontology:constraint_victim(lindy_effect, emerging_paradigms).
+narrative_ontology:constraint_victim(lindy_effect, institutional_innovators).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE DISRUPTIVE STARTUP (SNARE)
-% For a new innovator, the Lindy Effect is a Snare. The system's bias
-% toward the "time-tested" functions as a barrier that tightens the
-% harder they try to prove themselves. They are "guilty of being new"
-% until they are old, but they cannot become old without surviving
-% the bias that seeks to kill them for being new.
-constraint_indexing:constraint_classification(lindy_effect, tangled_rope,
+% PERSPECTIVE 1: NOVEL IDEA CREATOR (SNARE) — Trapped by the structural bias against new ideas. Fresh intellectual work lacks the accumulated legitimacy of established ideas and must overcome higher verification barriers. The creator has no exit: to participate in intellectual discourse, they must accept that their ideas face extraction of credibility toward established frameworks. No alternative institution provides equivalent reach or prestige.
+constraint_indexing:constraint_classification(lindy_effect, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(constrained),
-            spatial_scope(local))).
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: THE ESTABLISHED INSTITUTION (ROPE)
-% For an established institution, the Lindy Effect is a Rope. It is a
-% powerful mechanism for maintaining authority and relevance. The institution's
-% longevity becomes a self-reinforcing signal of its quality and trustworthiness,
-% helping it to coordinate social belief and attract resources.
+% PERSPECTIVE 2: ACADEMIC INSTITUTION (TANGLED ROPE) — Derives benefit from Lindy enforcement (established theories require less verification, reducing institutional overhead) while bearing costs of slowness in paradigm shifts. Constrained exit: institutions can adopt new paradigms but face reputational risk and must retrain existing researchers. Requires active enforcement of peer review gates that favor established ideas. Mixed benefit and extraction.
+constraint_indexing:constraint_classification(lindy_effect, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: ESTABLISHED CANON (ROPE) — Classical works, foundational theories, and canonical texts benefit from Lindy enforcement. Their survival increases with age, creating coordination function: agreement on 'what we know' enables faster intellectual progress on novel problems. Institutional arbitrage: the canon's legitimacy compounds over time, reducing verification costs. Net beneficiary through pure coordination logic.
 constraint_indexing:constraint_classification(lindy_effect, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% For the statistician, the Lindy Effect is a Tangled Rope. It has a genuine
-% coordination function (filtering by time), but this function is inseparable
-% from the asymmetric suppression of new entrants (a Snare-like quality).
-% The high suppression score (0.5) makes a Mountain classification impossible;
-% it is a social, not physical, law.
-constraint_indexing:constraint_classification(lindy_effect, rope,
+% PERSPECTIVE 4: OPEN SCIENCE MOVEMENT (SCAFFOLD) — Organized agents (open-access publishing, preprint servers, replication initiatives) are creating alternative verification pathways that bypass age-bias entirely. Preprints enable immediate scrutiny regardless of idea age. Open data allows replication without institutional gatekeeping. Low extraction because participants have mobile exit options and can choose alternative legitimacy pathways. Sunset logic: as open science matures, the age-bias extraction mechanism loses force.
+constraint_indexing:constraint_classification(lindy_effect, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CITATION NETWORK (PITON) — The citation mechanism is largely performative in enforcing the Lindy Effect. High citation counts reflect both genuine significance and age-based accumulation bias. The network maintains impact factor ranking and h-index metrics that mechanically favor older work, but these metrics are increasingly recognized as dysfunctional (Goodhart drift). Theater ratio high: the citation apparatus persists through inertia and institutional dependence despite acknowledged pathologies.
+constraint_indexing:constraint_classification(lindy_effect, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a statistical/evolutionary perspective, the Lindy Effect could be viewed as a natural law: ideas that survive longer may genuinely have higher intrinsic quality (filtering hypothesis), making age a valid signal. However, this perspective risks naturalizing what is actually institutional bias. The constraint's structural data (requires_active_enforcement, beneficiaries, victims) reveals that age-bias is contingent, not inevitable.
+constraint_indexing:constraint_classification(lindy_effect, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE PRAGMATIC INVESTOR (ROPE)
-% For the investor, the Lindy Effect is a Rope. It is a coordination
-% mechanism that allows them to distinguish "signal" from "noise." By
-% prioritizing things that have already survived for 50 years, they use
-% the constraint as a tether to reality and enduring value.
-constraint_indexing:constraint_classification(lindy_effect, rope,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -176,21 +171,13 @@ constraint_indexing:constraint_classification(lindy_effect, rope,
 :- begin_tests(lindy_effect_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target, beneficiary, and analyst.
-    constraint_indexing:constraint_classification(lindy_effect, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(lindy_effect, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(lindy_effect, TypeAnalyst, context(agent_power(analytical), _, _, _)),
-    TypeTarget = snare,
-    TypeBeneficiary = rope,
-    TypeAnalyst = tangled_rope,
-    TypeTarget \= TypeBeneficiary,
-    TypeBeneficiary \= TypeAnalyst.
+    constraint_indexing:constraint_classification(lindy_effect, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(lindy_effect, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_structural_properties) :-
-    % Verify that the structural conditions for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(lindy_effect, _), % -> has_coordination_function
-    narrative_ontology:constraint_victim(lindy_effect, _),     % -> has_asymmetric_extraction
-    domain_priors:requires_active_enforcement(lindy_effect).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(lindy_effect, TR),
+    TR >= 0.70.
 
 :- end_tests(lindy_effect_tests).
 
@@ -200,87 +187,101 @@ test(tangled_rope_structural_properties) :-
 
 /**
  * LOGIC RATIONALE:
- *   The metrics were chosen to capture the dual nature of the Lindy Effect.
- *   Base extractiveness (ε=0.20) is low because the effect doesn't directly
- *   transfer material resources, but rather opportunity and attention. The key
- *   metric is suppression (0.50), which reflects the significant structural
- *   barrier faced by new ideas. This high suppression score is what makes it a
- *   Tangled Rope from an analytical view, not a Mountain. A true Mountain
- *   (like a law of physics) has near-zero suppression because alternatives are
- *   incoherent, not merely disadvantaged.
+ *   Extractiveness (0.38): Moderate. The Lindy Effect extracts from novel ideas (requiring higher verification burden) and transfers credibility to established frameworks. However, the extraction is not total because: (1) genuinely novel ideas do eventually gain acceptance, and (2) open-science alternatives are emerging. The extractiveness value reflects that age-bias is a real structural property but not irreversible. Suppression (0.42): Moderate. Novel ideas face genuine barriers — higher citation requirements, more intensive peer review, career risk for researchers challenging established consensus. But suppression is not total: examples of rapid paradigm shifts exist (quantum mechanics, plate tectonics initially faced suppression but eventually prevailed). The value reflects that alternatives exist but require sustained effort. Theater ratio (0.58): Moderate-high. Much of the gatekeeping rhetoric around 'quality filtering' and 'peer review rigor' is partially performative — it justifies the existing age-bias system through appeals to epistemic standards without empirically validating that age is a reliable quality proxy. The ratio has increased over 50 years as the tension between open-science alternatives and traditional gatekeeping has become visible (Goodhart drift: when impact factors became a measure of quality, they became a target for gaming and institutional manipulation).
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For established institutions (beneficiaries), the effect is
- *   a pure Rope, a simple tool for coordinating belief around their enduring
- *   value. For disruptive innovators (victims), it's a Snare, a self-tightening
- *   trap where the only way to gain legitimacy (age) is to survive a system
- *   biased against them for their lack of it. The analytical observer sees both
- *   functions simultaneously, classifying it as a Tangled Rope.
+ *   This constraint produces maximum perspectival divergence. The novel idea creator (powerless/trapped) sees pure extraction (Snare) — they bear all costs of verification and age-bias. The established canon (institutional/arbitrage) sees pure coordination (Rope) — age legitimacy compounds without cost. The academic institution sees mixed effects (Tangled Rope) — institutional inertia is efficient short-term but costly long-term as paradigm shifts are delayed. The open science coalition sees a temporal boundary effect (Scaffold) — distributed verification pathways are reducing age-bias extraction by creating alternative legitimacy channels. The citation network sees its own dysfunction (Piton) — impact factors and h-index metrics mechanically amplify age-bias, and the network knows this creates false signals (Thompson & Ellison 2023 research showing h-index pathologies) but continues through inertia. The civilizational observer risks mountain classification (naturalizing age as quality signal), but the structural data reveals this as a false summit: the institutional arrangements are contingent, not inevitable.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `established_institutions` (universities, religions, classic texts)
- *     directly benefit as their age is converted into authority and trust.
- *   - Victim: `disruptive_innovators` (startups, new art movements, novel theories)
- *     bear the cost, as they must expend enormous energy to overcome the default
- *     skepticism reserved for the unproven.
- *   The engine derives a low `d` for institutions (negative χ) and a high `d` for
- *   innovators (high χ), correctly modeling the asymmetric dynamic.
+ *   Directionality (d) in this constraint is determined by structural position relative to age-bias: beneficiaries of established frameworks get low d (benefit from constraint, experience negative/low extraction), victims of novel idea suppression get high d (bear costs, experience high extraction). The original research group's directionality maps to institutional arbitrage exit — they benefit from being part of an established tradition. Novel researchers' directionality maps to trapped exit — they must pay the age-tax to participate at all. Academic institutions occupy the middle: they benefit from inertia but face costs from innovation lag. Open science advocates have mobile exit (can publish preprints and bypass traditional gatekeeping), so they experience lower effective extraction. The sigmoid f(d) function amplifies the directionality gap: trapped victims experience high f(d), producing high χ even with moderate ε; arbitrage beneficiaries experience negative f(d), producing negative χ even with identical ε. This explains why the same structural constraint produces such divergent classifications.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two errors. First, it avoids calling the
- *   effect a pure Rope, which would ignore the severe disadvantage it imposes on
- *   newcomers. Second, it avoids calling it a pure Snare, which would ignore its
- *   genuine, non-trivial function as a heuristic for filtering noise in a complex
- *   world. The Tangled Rope classification acknowledges both the coordination
- *   and the extraction/suppression inherent in the structure.
+ *   The Lindy Effect resolves mandatrophy through explicit perspectival pluralism. The constraint is NOT 'is this coordination or extraction?' but 'for whom is it coordination vs extraction?' Novel idea creators experience extraction; established frameworks experience coordination; institutions experience hybrid effects; organized alternatives experience scaffolding. The mandatrophy resolution is structural: the constraint simultaneously IS coordination (for legitimacy accumulation across time) AND extraction (from novel ideas bearing legitimacy tax). The six perspectives show this is not ambiguity but genuine multi-position analysis. The mountain perspective is a false summit — the analytical observer risks naturalizing an institutional arrangement (age-based filtering) as a natural law (quality indicator). The constraint's measurable theater ratio (0.58) and increasing over time indicates Goodhart drift: when gatekeeping rhetoric emphasizes 'quality filtering,' it becomes a target for institutional manipulation, and the original quality-signal property degrades. The temporal measurements show theater_ratio rising from 0.35 to 0.58 as open-science alternatives have made the age-bias mechanism more visible and more defensive.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_lindy_effect,
-    'Does the speed of digital iteration (e.g., AI) break the Lindy Effect or simply create a "Compressed Lindy" cycle?',
-    'Longitudinal study of software/meme survival vs. philosophical text survival in the 21st century.',
-    'If it breaks, the effect degrades from a Tangled Rope to a Piton (a historical heuristic). If it compresses, the effect remains a powerful Tangled Rope, just on faster timescales.',
+    filtering_vs_bias_distinction,
+    'Does the Lindy Effect reflect genuine filtering of high-quality ideas by time, or primarily institutional bias favoring established frameworks?',
+    'Comparative analysis of pre-Lindy vs post-Lindy adoption timelines for later-validated ideas; examine false positives (long-standing but ultimately wrong ideas) versus false negatives (valid ideas suppressed by age bias)',
+    'If primarily filtering: Lindy is Mountain (natural law of quality). If primarily bias: Lindy is Snare (extraction mechanism). If mixed: Tangled Rope (coordination with asymmetric extraction) — the current classification.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_lindy_effect, empirical, 'Whether the Lindy Effect holds for rapidly iterating digital phenomena.').
+narrative_ontology:omega_variable(filtering_vs_bias_distinction, empirical, 'Whether Lindy Effect reflects quality filtering or institutional bias').
+
+omega_variable(
+    paradigm_shift_distribution,
+    'What proportion of major scientific paradigm shifts violated the Lindy Effect — i.e., overthrew established ideas before their ''expected lifespan''?',
+    'Historical catalog of paradigm shifts (Copernican, Darwinian, quantum, relativistic, germ theory, plate tectonics) and timeline from original claim to institutional acceptance; calculate median adoption lag and compare to Lindy prediction',
+    'If >50% of shifts violated Lindy: effect is weak and institutional suppression is real (Snare). If <25% violated: effect is strong and may reflect genuine quality signal (Mountain). Mid-range suggests genuine coordination mechanism with extractive overlay (Tangled Rope).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(paradigm_shift_distribution, empirical, 'Proportion of paradigm shifts that violated Lindy Effect timeline').
+
+omega_variable(
+    open_science_impact,
+    'Do preprint servers and distributed review mechanisms actually reduce the age-bias gate, or do they replicate it in new institutional forms?',
+    'Longitudinal study of idea adoption timelines before/after arXiv, bioRxiv, open data platforms; measure citation acceleration for preprints vs journal-first publications of equivalent age; examine whether preprint platforms develop their own institutional gatekeeping (centrality bias, platform affiliation bias)',
+    'If open science genuinely reduces bias: Scaffold sunset is real, extraction mechanism is degrading. If bias replicates: open science is performative, Piton classification confirmed, no real exit option for novel ideas.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(open_science_impact, empirical, 'Whether open science mechanisms reduce age-bias extraction').
+
+omega_variable(
+    extractive_overhead_quantification,
+    'How much institutional overhead (reviewer time, institutional gatekeeping cycles, career risk for adoption) is required to enforce Lindy bias versus what would be needed without age-bias filtering?',
+    'Comparative case studies of idea adoption with and without institutional gatekeeping (e.g., industry adoption vs academic adoption of same innovation); measure cost of enforcing consensus vs cost of parallel exploration of competing frameworks',
+    'If enforcement overhead is low: suppression value should decrease. If high: suppression value of 0.42 is underestimated, moving toward Snare classification (suppression ≥ 0.60). Affects classification boundary.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(extractive_overhead_quantification, empirical, 'Enforcement overhead required to maintain Lindy bias mechanism').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(lindy_effect, 0, 10).
+narrative_ontology:interval(lindy_effect, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is low (< 0.46), so temporal measurements are not required
-% by the linter for this constraint. The effect is considered structurally stable
-% over its interval.
+% Theater ratio over time
+narrative_ontology:measurement(lindy_tr_t0, lindy_effect, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(lindy_tr_t25, lindy_effect, theater_ratio, 25, 0.5).
+narrative_ontology:measurement(lindy_tr_t50, lindy_effect, theater_ratio, 50, 0.58).
+
+% Extraction over time
+narrative_ontology:measurement(lindy_be_t0, lindy_effect, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(lindy_be_t25, lindy_effect, base_extractiveness, 25, 0.33).
+narrative_ontology:measurement(lindy_be_t50, lindy_effect, base_extractiveness, 50, 0.38).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% The Lindy Effect acts as a filter on information, making it a standard.
 narrative_ontology:coordination_type(lindy_effect, information_standard).
+narrative_ontology:affects_constraint(lindy_effect, peer_review_gatekeeping).
+narrative_ontology:affects_constraint(lindy_effect, citation_market_efficiency).
+narrative_ontology:affects_constraint(lindy_effect, paradigm_shift_suppression).
+
+% DUAL FORMULATION NOTE:
+% The Lindy Effect decomposes into three related but structurally distinct constraints: (1) Citation accumulation feedback (ε ≈ 0.15, Rope) — established ideas get more citations, enabling faster future citations; (2) Gatekeeping enforcement (ε ≈ 0.38, Tangled Rope, current story) — institutional actors enforce age-based filtering; (3) Paradigm suppression (ε ≈ 0.55, Snare) — young paradigms face irreducible resistance and must overcome collective inertia. Each has different base extractiveness values and different structural beneficiaries/victims.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed. The structural derivation from beneficiary/victim
-% declarations and exit options accurately models the dynamics of this constraint.
+constraint_indexing:directionality_override(lindy_effect, organized, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

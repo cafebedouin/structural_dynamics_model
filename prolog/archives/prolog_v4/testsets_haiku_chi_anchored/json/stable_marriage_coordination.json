@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "stable_marriage_coordination",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "stm"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Stable Marriage Problem (Gale-Shapley Algorithm)",
+    "topic_domain": "economic/social/algorithmic_coordination",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "matching_participants",
+      "market_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Individual Participant (Proposer)",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL PROPOSER (ROPE) \u2014 Participant with proposal power experiences the constraint as pure coordination. The algorithm guarantees a stable outcome without coercion: each proposer can engage or withdraw. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.12. Low effective extraction because exit is mobile and the mechanism is non-coercive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Individual Participant (Responder)",
+      "comment": "PERSPECTIVE 2: INDIVIDUAL RESPONDER (ROPE) \u2014 Participant with response power experiences similar coordination benefit. Can always switch to better offers (holding option improves over algorithm iterations). d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.12. Symmetric coordination: both proposers and responders benefit from stability guarantee without asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Market Ecosystem (Platform/Institution)",
+      "comment": "PERSPECTIVE 3: MARKET ECOSYSTEM (ROPE) \u2014 Institutional implementers (matching platforms, medical residency programs, school choice systems) benefit from algorithm adoption. The stable matching property reduces disputes, increases participation, and builds trust. d\u22480.30, f(d)\u22480.15, \u03c3=1.2 \u2192 \u03c7\u22480.03. Minimal extraction \u2014 institutions capture coordination surplus through reputation and network effects, not through coercive mechanisms."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Mathematical Necessity)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the civilizational/universal perspective, the Stable Marriage Problem and its algorithmic solution represent a mathematical necessity: any two-sided matching with inconsistent preferences must either have blocking pairs or accept instability. The Gale-Shapley algorithm's existence and properties are theorems, not contingent institutions. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.21. However, this mountain classification is properly grounded: \u03b5=0.18, suppression=0.12, accessibility_collapse=0.91, resistance=0.08, emerges_naturally=true satisfy all NL gates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "preference_revelation_truthfulness",
+      "question": "Do participants truthfully reveal preferences under Gale-Shapley, or do they engage in strategic misrepresentation?",
+      "resolution_mechanism": "Empirical analysis of preference statements in medical residency matching (NRMP), school choice systems, and online matching platforms; comparison of revealed preferences to ex-post satisfaction and switching behavior",
+      "impact": "If truthful: algorithm achieves true stability. If strategic: revealed stability is mechanical, not substantive \u2014 participants are gaming the mechanism. Constraint type remains Rope, but beneficiary/victim distinction becomes more pronounced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether participants truthfully reveal preferences or engage in strategic misrepresentation"
+    },
+    {
+      "id": "proposer_advantage_asymmetry",
+      "question": "Does the proposer-optimal stable matching create a persistent advantage for proposers that accumulates across repeated market interactions?",
+      "resolution_mechanism": "Longitudinal study of proposer satisfaction vs responder satisfaction in repeated matching games; analysis of whether proposer-advantaged outcomes persist when market composition changes",
+      "impact": "If no asymmetry persists: Gale-Shapley is truly symmetric Rope. If asymmetry persists: the algorithm encodes an extraction mechanism favoring proposers, shifting classification toward Tangled Rope for some perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether proposer advantage creates persistent asymmetric extraction"
+    },
+    {
+      "id": "alternative_stability_concepts",
+      "question": "Are there other stability concepts (core stability, Pareto stability, envy-freeness) that would produce different matchings, and if so, why is pairwise stability privileged?",
+      "resolution_mechanism": "Mathematical analysis of stability concept families; comparative institutional analysis of which concept is adopted in different matching markets (medical residency, school choice, etc.) and the distributional outcomes",
+      "impact": "If alternative concepts are equally valid: Gale-Shapley is contingent institutional choice, not mathematical necessity. Constraint downgraded from Mountain. If pairwise stability is uniquely justified: Mountain classification confirmed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether pairwise stability is uniquely justified or contingent institutional choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Stable Marriage Problem (SMP) represents a pure coordination constraint with minimal extraction overhead. Given two equally sized sets of agents (proposers and responders) with ranked preference lists, the Gale-Shapley algorithm produces a stable matching: one where no pair would prefer each other to their assigned partners. The constraint emerges from the mathematical structure of preference aggregation\u2014the impossibility of simultaneously satisfying all preference orderings creates an inherent coordination problem. The algorithm solves this through a decentralized proposal-response mechanism that guarantees stability without coercive enforcement. The constraint exhibits low extractiveness (\u03b5=0.18) because: (1) participation is voluntary and mobile, (2) the algorithm produces outcomes strictly preferable to no matching, (3) no agent can unilaterally improve their outcome by exiting, and (4) the mechanism generates no surplus for capture. Suppression is minimal (0.12) because alternative preference expressions are costless and algorithm participation is uncoerced. Theater ratio is low (0.25) because the mechanism's function is transparent: the algorithm demonstrably terminates in a stable state; the performative component consists only of initial preference elicitation and outcome announcement, not of legitimation rituals or opacity.",
+    "key_agents": [
+      "Proposers (moderate/mobile): Agents making offers under the algorithm; experience mobile exit options and benefit from the stability guarantee; see pure coordination (Rope)",
+      "Responders (moderate/mobile): Agents receiving and responding to offers; hold options improve across iterations; also experience pure coordination benefit",
+      "Market Ecosystem/Platform (institutional/arbitrage): Matching platforms, medical residency programs (NRMP), school choice systems; benefit from algorithmic legitimacy and participant trust; capture coordination surplus through institutional adoption",
+      "Mathematical Structure (analytical/analytical): The constraint's civilizational foundation; the impossibility of preference aggregation without blocking pairs is a theorem, not a contingent fact"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low-moderate. The algorithm produces a stable matching that is Pareto-superior to random assignment for all participants. However, \u03b5 is not zero because: (1) the proposer-optimal stable matching systematically favors proposers over responders in the preference ordering (Roth & Sotomayor), and (2) institutional implementations (NRMP, school choice systems) capture some coordination surplus through legitimacy and network effects. The non-zero value reflects that stability is not costless to achieve\u2014some preference satisfaction is sacrificed. Suppression (0.12): Low. Agents are not coerced to participate, can freely express preferences, and retain mobile exit options throughout. The algorithm does not suppress alternatives; it merely aggregates preferences under a specific stability criterion. Theater ratio (0.25): Low. The mechanism's function is mathematically transparent and empirically verifiable. The performative component is minimal\u2014preference collection, algorithm execution, and outcome announcement. The algorithm output is not legitimated through ritual or opacity; stability is mechanically checkable.",
+    "perspectival_gap": "The perspectival gap is minimal in this constraint. Both proposers and responders classify the algorithm as Rope with similar \u03c7 values (\u22480.12) because the coordination benefit is genuinely symmetric in structure, even if the proposer-optimal outcome favors proposers slightly. The institutional perspective (Rope with \u03c7\u22480.03) reflects lower effective extraction because institutions experience the constraint as a pure coordination benefit\u2014the algorithm solves their matching problem without requiring them to enforce extraction. The analytical perspective classifies the constraint as Mountain because from the civilizational view, the mathematical structure of the Stable Marriage Problem is invariant: preference inconsistency always produces blocking pairs; the algorithm is the unique solution to a structural impossibility. This is not a perspectival gap (disagreement) but rather a vertical integration\u2014the analytical view transcends the participant perspectives and reveals the underlying necessity.",
+    "directionality_logic": "Proposers and responders: Symmetric beneficiaries with mobile exit \u2192 d\u22480.50, f(d)\u22480.65. Both benefit from stability guarantee equally (in expectation). No asymmetric extraction because neither group is trapped or coerced. Market ecosystem: Beneficiary with arbitrage exit \u2192 d\u22480.30, f(d)\u22480.15. Captures coordination surplus through adoption but does not extract from participants directly\u2014the mechanism is non-coercive and participants voluntarily use it because stability benefits them. Analytical observer: Mathematical necessity \u2192 d\u22480.72 (canonical), f(d)\u22481.15. Not a high-extraction perspective; mountain classification comes from the accessibility_collapse and resistance metrics, indicating that the constraint is mathematically invariant, not observationally contingent.",
+    "mandatrophy_analysis": "The Stable Marriage Problem resolves the mandatrophy through its genuine status as a coordination constraint without disguised extraction. The proposer-optimal stable matching does create a minor asymmetry favoring proposers, but this is acknowledged in game-theoretic analysis (Roth & Sotomayor) and is not hidden behind institutional opacity. The algorithm is truthfully about coordination, not about extracting from responders. The Mountain classification for the analytical observer is properly justified: the constraint reflects a mathematical necessity (preference aggregation impossibility), not a contingent institutional arrangement naturalizing extraction. This constraint exemplifies how real coordination constraints (low \u03b5, low suppression) classify as Rope across participant perspectives and Mountain from the civilizational view\u2014no mandatrophy because there is no hidden extraction to unmask."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "two_sided_matching_stability",
+      "preference_aggregation_impossibility"
+    ],
+    "dual_formulation_note": "The Stable Marriage Problem has a mathematical prerequisite (preference aggregation impossibility \u2014 every preference inconsistency produces blocking pairs) and institutional implementations (medical residency matching, school choice systems). The mathematical prerequisite is a Mountain; the implementations are Rope. The network relationship captures this: the mathematical necessity creates the coordination problem; the algorithm solves it in practice."
+  },
+  "directionality_overrides": []
+}

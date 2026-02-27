@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: start_treaty
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-15
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_start_treaty, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,8 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,82 +53,112 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: start_treaty
- * human_readable: START Treaty Expiration
- * domain: political
- * * SUMMARY:
- * The expiration of the New START treaty between the US and Russia removes legally binding limits on their nuclear arsenals for the first time in half a century. This creates uncertainty and increases the risk of a nuclear arms race. The constraint is the new, unregulated environment that emerges post-expiration.
- * * KEY AGENTS:
- * - Global Community: Subject (Powerless) / Victim
- * - Arms Manufacturers: Beneficiary (Institutional)
- * - Auditor (Analytical)
+ *   constraint_id: start_treaty
+ *   human_readable: START Treaty Expiration and Nuclear Arsenal Limits
+ *   domain: political/international_security
+ *
+ * SUMMARY:
+ *   The New START treaty, ratified in 2011, imposed legally binding limits on
+ *   US and Russian strategic nuclear arsenals (1,550 deployed warheads each,
+ *   verified through on-site inspection and data exchange). Its expiration in
+ *   February 2026 removes the only remaining bilateral nuclear arms control
+ *   agreement between the superpowers, ending half a century of continuous
+ *   treaty-based limits. This creates a structural constraint where two
+ *   institutional actors with maximum destructive capacity can pursue
+ *   unrestricted modernization while non-nuclear states and the global
+ *   security system bear the existential risk. The constraint exhibits a
+ *   sharp perspectival divergence: the nuclear powers experience it as
+ *   coordination enabling modernization; the verification community
+ *   experiences it as degraded ritual; non-nuclear states experience it as
+ *   extraction they cannot escape. The theater ratio (0.48) reflects that
+ *   post-treaty arms control has become primarily performative—strategic
+ *   dialogue and policy statements substitute for binding verification.
+ *   Extractiveness has risen over the interval (0.35→0.58) as modernization
+ *   programs accelerate without constraint, shifting the structural balance
+ *   from constrained competition (treaty period) to unrestricted competition
+ *   (post-treaty).
+ *
+ * KEY AGENTS:
+ *   - US Nuclear Establishment: Primary beneficiary (institutional/arbitrage) — treaty expiration enables ICBM modernization, submarine expansion, warhead redesign without numerical constraints; can arbitrage between domestic strategic autonomy narratives and nuclear posture
+ *   - Russian Strategic Forces: Primary beneficiary (institutional/arbitrage) — enables modernization programs to close perceived gaps with US capabilities; arbitrage between defensive necessity framing and expansion
+ *   - Non-Nuclear States: Primary victims (powerless/trapped) — bear existential risk of nuclear escalation without ability to negotiate, participate in verification, or exit the bipolar strategic competition
+ *   - NATO Allies and Strategic Partners: Secondary victims (moderate/constrained) — depend on US nuclear guarantees but face rising instability and increased military spending; constrained exit due to alliance dependency
+ *   - Global Nuclear Stability: Abstract victim (powerless/trapped) — transparency loss and unverified arsenals increase strategic uncertainty; no mechanism for self-defense or coalition action
+ *   - Arms Control Verification Community: Institutional actor (organized/constrained) — verification infrastructure persists through inertia (classified monitoring, policy dialogue) but lacks binding function; theater ratio reflects continued signaling without enforcement
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(start_treaty, 0.55). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
-domain_priors:suppression_score(start_treaty, 0.70).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
-domain_priors:theater_ratio(start_treaty, 0.2).       % Piton detection (>= 0.70)
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(start_treaty, 0.58).
+domain_priors:suppression_score(start_treaty, 0.72).
+domain_priors:theater_ratio(start_treaty, 0.48).
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
-narrative_ontology:constraint_metric(start_treaty, extractiveness, 0.55).
-narrative_ontology:constraint_metric(start_treaty, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(start_treaty, theater_ratio, 0.2).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(start_treaty, extractiveness, 0.58).
+narrative_ontology:constraint_metric(start_treaty, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(start_treaty, theater_ratio, 0.48).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Values: natural_law, coordination, constructed, enforcement
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(start_treaty, tangled_rope).
-narrative_ontology:human_readable(start_treaty, "START Treaty Expiration").
-narrative_ontology:topic_domain(start_treaty, "political").
+narrative_ontology:human_readable(start_treaty, "START Treaty Expiration and Nuclear Arsenal Limits").
+narrative_ontology:topic_domain(start_treaty, "political/international_security").
 
-% Binary flags
-% narrative_ontology:has_sunset_clause(start_treaty).      % Mandatory if Scaffold
-domain_priors:requires_active_enforcement(start_treaty). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(start_treaty).
 
-% Structural property derivation hooks:
-%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
-%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-% Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(start_treaty, arms_manufacturers).
-narrative_ontology:constraint_victim(start_treaty, global_community).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(start_treaty, us_nuclear_modernization).
+narrative_ontology:constraint_beneficiary(start_treaty, russian_strategic_capacity).
+narrative_ontology:constraint_victim(start_treaty, non_nuclear_states).
+narrative_ontology:constraint_victim(start_treaty, global_nuclear_stability).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE/MOUNTAIN)
-% The global community is trapped in a more dangerous world with no alternative.
-constraint_indexing:constraint_classification(start_treaty, tangled_rope,
+% PERSPECTIVE 1: NON-NUCLEAR STATES (SNARE) — Countries without nuclear weapons cannot exit the strategic competition between US and Russia. They bear the existential risk of nuclear escalation while having zero ability to negotiate arsenal limits. Verification mechanisms (ICBM monitoring, satellite surveillance) exclude their participation. Maximum extraction with no exit option.
+constraint_indexing:constraint_classification(start_treaty, snare,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Arms manufacturers see the lack of a treaty as a pure coordination mechanism
-% for increased defense spending and production.
+% PERSPECTIVE 2: NATO ALLIES (TANGLED ROPE) — Experience treaty expiration as both coordination mechanism and extraction. Benefits from US security guarantees and deterrence capability; forced to accept escalation risk and destabilization of regional strategic balance. Cannot withdraw from alliance structure but faces rising costs (military spending, extended deterrence risk). Constrained exit reflects dependency on US nuclear umbrella.
+constraint_indexing:constraint_classification(start_treaty, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 3: US NUCLEAR ESTABLISHMENT (ROPE) — Treaty expiration enables modernization programs, ICBM procurement cycles, submarine fleet expansion. Benefits from coordination failure: absence of limits increases budgets and technical autonomy. Can arbitrage between US domestic politics (strategic autonomy framing) and nuclear posture. Net beneficiary with maximum exit optionality.
 constraint_indexing:constraint_classification(start_treaty, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile),
-            spatial_scope(national))).
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The situation has both a coordination function (residual norms, strategic
-% posturing) and high asymmetric extraction (risk borne by populace).
-constraint_indexing:constraint_classification(start_treaty, snare,
+% PERSPECTIVE 4: RUSSIAN NUCLEAR ESTABLISHMENT (ROPE) — Treaty constraints previously limited Russian inventory expansion relative to older US warhead stockpiles. Expiration removes asymmetry, enabling catch-up modernization at lower opportunity cost. Net beneficiary with arbitrage capacity (can claim defensive necessity while pursuing modernization).
+constraint_indexing:constraint_classification(start_treaty, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: ARMS CONTROL VERIFICATION COMMUNITY (PITON) — Treaty verification apparatus (ICBM monitoring, on-site inspections, data exchanges) was primary institutional function. Without treaty, verification infrastructure persists through inertia (classified briefings, technical monitoring) but lacks binding force or transparency. Theater ratio reflects continued performative arms control signaling (policy statements, strategic dialogue) despite absence of enforcement. Professional community maintains itself without core constraint.
+constraint_indexing:constraint_classification(start_treaty, piton,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational perspective, mutual nuclear deterrence stability is a structural feature of bipolar great power systems with second-strike capability. The constraint of reciprocal vulnerability creates automatic equilibrium independent of treaties. Treaty expiration appears as reversion to underlying constraint, not genuine change. However, this perspective risks naturalizing contingent human agreements (verification protocols, numerical limits) as immutable physical laws of nuclear strategy.
+constraint_indexing:constraint_classification(start_treaty, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -122,22 +167,17 @@ constraint_indexing:constraint_classification(start_treaty, snare,
 :- begin_tests(start_treaty_tests).
 
 test(perspectival_gap) :-
-    % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(start_treaty, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(start_treaty, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeInstitutional.
+    constraint_indexing:constraint_classification(start_treaty, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    % Ensures it's a high-extraction constraint as intended.
-    narrative_ontology:constraint_metric(start_treaty, extractiveness, E),
-    E >= 0.46.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(start_treaty, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_conditions_met) :-
-    % Verify that the conditions for a tangled_rope are met for the analytical perspective.
-    constraint_indexing:constraint_classification(start_treaty, snare, context(agent_power(analytical), _, _, _)),
-    domain_priors:requires_active_enforcement(start_treaty),
-    narrative_ontology:constraint_beneficiary(start_treaty, _),
-    narrative_ontology:constraint_victim(start_treaty, _).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(start_treaty, TR),
+    TR >= 0.70.
 
 :- end_tests(start_treaty_tests).
 
@@ -147,61 +187,92 @@ test(tangled_rope_conditions_met) :-
 
 /**
  * LOGIC RATIONALE:
- * The expiration of the START treaty is modeled as a Tangled Rope from an analytical view, with significant perspectival gaps. The constraint is the new, unregulated strategic environment.
+ *   Extractiveness (0.58, rising): Moderate-high. The constraint reflects genuine structural asymmetry. Two institutional actors (US, Russia) benefit from unrestricted modernization; non-nuclear actors bear cost without recourse. The rise from 0.35 to 0.58 over the interval marks transition from constrained competition (treaty) to unrestrained (post-treaty). Base extraction rises because the removal of numerical limits increases the asymmetry between modernization capacity (concentration in two states) and vulnerability (universal). Suppression (0.72): High. Non-nuclear states have severe barriers to exit: no capacity to develop countervailing nuclear forces, no veto over bilateral decisions, no ability to enforce binding alternatives (NPT has no enforcement mechanism). NATO allies can theoretically develop independent deterrents but face enormous costs and political barriers. Suppression reflects that the constraint is enforced by structural asymmetry, not explicit coercion, but the coerciveness is nearly absolute. Theater ratio (0.48, declining): Moderate-low and falling. The constraint exhibits lower theater than many political constraints because the underlying extractiveness is high. Arms control signaling (policy dialogue, strategic stability commissions, non-binding agreements) persists but has secondary importance. Real function (unrestricted modernization) has become primary. The decline from 0.62 to 0.48 reflects shift from treaty-era verification ritual (high theater) to post-treaty modernization focus (lower theater, higher naked extraction).
  *
- * *Subject (Snare)*: For the global community (powerless, trapped), the absence of the treaty is a Snare. It imposes the high cost and risk of a renewed arms race without their consent and with no viable alternative, suppressing global security for the benefit of a few.
- * *Beneficiary (Rope)*: From the perspective of an institutional beneficiary like an arms manufacturer, the *absence* of the treaty is a perfect `Rope`. It removes regulatory friction and coordinates national security policy and government spending towards armament, creating a predictable and profitable market. For this agent, the extraction is negligible and the system is purely enabling.
- * *Analytical (Tangled Rope)*: An analytical observer sees a system with both a coordination function (the remaining strategic doctrines and communication channels that prevent immediate catastrophe) and a severe asymmetric extraction function (the global populace bears the risk and cost, while arms manufacturers and hawkish political factions benefit). It requires active enforcement (military posturing, budget allocation) to sustain. This meets all requirements for a Tangled Rope.
+ * PERSPECTIVAL GAP:
+ *   Extreme divergence across power dimensions. The US and Russian strategic establishments (institutional/arbitrage) classify treaty expiration as ROPE—pure coordination enabling modernization. NATO allies (moderate/constrained) classify it as TANGLED ROPE—coordination benefit (extended deterrence) mixed with extraction (rising instability and military spending). The verification community (organized/constrained) classifies it as PITON—their core function has degraded, verification persists through ritual. Non-nuclear states (powerless/trapped) classify it as SNARE—pure extraction with no exit. The analytical observer (civilizational/universal) risks classifying it as MOUNTAIN—nuclear deterrence is an immutable structural feature. The perspectival gap reflects power differential: those with capacity to modernize (institutional, arbitrage) see opportunity; those dependent on stability without capacity to influence it (powerless, trapped) see extraction. The gap is NOT resolvable by further information—it is structural. Different observers have genuinely different interests and exit options.
  *
- * *PERSPECTIVAL GAP*: The gap is stark: what is a Snare of existential risk for the powerless is a Rope of economic opportunity for the institutional beneficiary. The Tangled Rope classification captures this duality.
+ * DIRECTIONALITY LOGIC:
+ *   Directionality derivation for each perspective flows from structural position and exit capacity. US Strategic Command (institutional/arbitrage beneficiary): low d → negative f(d) → low experienced extraction (benefits flow toward this agent). Russian Strategic Forces (institutional/arbitrage beneficiary): identical structural position, identical d, identical low extraction. NATO Allies (moderate/constrained, mixed beneficiary-victim): d ≈ 0.60 → higher f(d) (constrained exit magnifies extraction pressure despite beneficiary status from security guarantees). Non-nuclear states (powerless/trapped, pure victims): d ≈ 0.95 → maximum f(d) → maximum experienced extraction. The pipeline produces high chi for non-nuclear agents because they are trapped victims with no arbitrage. The beneficiaries experience low or negative chi because they have arbitrage options and benefit from the constraint. This produces the observed perspectival gap: institutional actors see coordination and opportunity; powerless actors see pure extraction.
  *
- * *MANDATROPHY ANALYSIS*: [RESOLVED MANDATROPHY] The Tangled Rope classification correctly identifies that this is not pure, functionless extraction (Snare). It acknowledges the residual coordination functions (strategic stability doctrines) that coexist with the extractive arms race, preventing a misclassification that would ignore the system's complex internal logic.
+ * MANDATROPHY ANALYSIS:
+ *   MANDATROPHY ALERT: Initial intuition treats START expiration as a pure snare (extraction of global stability by two nuclear powers). But the constraint exhibits genuine coordination function (deterrence stabilization through mutual vulnerability). Without treaty constraints, both sides face incentive to maintain strategic balance—neither wants the other to achieve decisive advantage. This is not false coordination (like a protection racket). It is real coordination with asymmetric extraction layered on top. Therefore TANGLED ROPE is correct at base level: (1) coordination function—mutual deterrence depends on both sides believing the other has second-strike capability; (2) asymmetric extraction—non-nuclear states and alliance partners bear cost of instability while deriving zero benefit from deterrence; (3) active enforcement—neither side can unilaterally exit modernization race (security dilemma logic enforces participation). The mandatrophy resolves by recognizing that great power deterrence is a genuine coordination mechanism (not falsifiable as pure extraction) BUT that coordination is unjustly asymmetric. The victims (non-nuclear states) bear cost without benefit or voice. This is not 'coordination vs extraction' but 'hybrid mechanism with unjust burden distribution.' Extractiveness > 0.70 gate is NOT triggered (0.58 < 0.70) so mandatrophy_resolved remains false—further data needed to determine if coordination or extraction dominates.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_start_treaty,
-    'Will the expiration of the treaty trigger a new, unrestrained arms race, or will informal norms suffice to maintain stability?',
-    'Monitoring of strategic weapons development, deployment, and national security doctrines by key state actors over the next decade.',
-    'If a race begins, the extraction score is accurate. If norms hold, the extraction is lower and the constraint is closer to a pure Rope (for states) or Piton (the ghost of the treaty).',
+    verification_cascade_failure,
+    'Does transparency loss from treaty expiration trigger cascade verification failures that destabilize strategic calculation below threshold where rational deterrence holds?',
+    'Analysis of second-strike survivability assessments during post-treaty period; measurement of confidence intervals in strategic force estimates; detection of hedging behavior (unexplained deployments, accelerated modernization) by both sides',
+    'If yes: constraint transitions from tangled_rope to snare (uncontrolled extraction from global stability). If no: mountain perspective validated (deterrence holds regardless of treaty status).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(verification_cascade_failure, empirical, 'Whether loss of transparency causes strategic instability cascade').
+
+omega_variable(
+    escalation_brinkmanship_window,
+    'What window of time does treaty expiration create where one side can gain temporary advantage through undeclared modernization before the other detects and responds?',
+    'Historical analysis of previous arms control breakdowns and response timelines; technical assessment of detection lag for ICBM tests and warhead assembly; correlation with regional conflicts or crisis escalation patterns',
+    'If window > 18 months and overlaps with crisis period: constraint becomes extraction mechanism (snare for global stability). If window < 6 months or no overlap with crisis windows: coordination function dominant (rope to tangled_rope maintained).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(escalation_brinkmanship_window, empirical, 'Duration of advantage window from undeclared modernization').
+
+omega_variable(
+    coalition_formation_non_nuclear,
+    'Can non-nuclear states develop coalition power to impose costs on unrestricted nuclear expansion through trade restrictions, technology controls, or diplomatic isolation?',
+    'Assessment of NPT Review Conference coordination; monitoring of nuclear supplier arrangements; analysis of non-nuclear state voting coalitions in UN General Assembly on disarmament resolutions',
+    'If coalition effective: powerless agents gain mobile exit option, classification shifts from snare to tangled_rope. If ineffective: snare classification confirmed — non-nuclear states remain structurally trapped.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(coalition_formation_non_nuclear, empirical, 'Whether non-nuclear coalitions can constrain nuclear modernization').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(start_treaty, 0, 10).
+narrative_ontology:interval(start_treaty, 0, 8).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data models the intensification of the unregulated environment after
-% the treaty expires. Required for high-extraction constraints (base_extractiveness > 0.46).
-%
-% Theater ratio over time (remains low, indicating function over performance):
-narrative_ontology:measurement(start_treaty_tr_t0, start_treaty, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(start_treaty_tr_t5, start_treaty, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(start_treaty_tr_t10, start_treaty, theater_ratio, 10, 0.2).
+% Theater ratio over time
+narrative_ontology:measurement(start_tr_t0, start_treaty, theater_ratio, 0, 0.62).
+narrative_ontology:measurement(start_tr_t4, start_treaty, theater_ratio, 4, 0.56).
+narrative_ontology:measurement(start_tr_t8, start_treaty, theater_ratio, 8, 0.48).
 
-% Extraction over time (models the gradual buildup of arsenals and risk):
-narrative_ontology:measurement(start_treaty_ex_t0, start_treaty, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(start_treaty_ex_t5, start_treaty, base_extractiveness, 5, 0.53).
-narrative_ontology:measurement(start_treaty_ex_t10, start_treaty, base_extractiveness, 10, 0.55).
+% Extraction over time
+narrative_ontology:measurement(start_be_t0, start_treaty, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(start_be_t4, start_treaty, base_extractiveness, 4, 0.48).
+narrative_ontology:measurement(start_be_t8, start_treaty, base_extractiveness, 8, 0.58).
+
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The new environment coordinates resource allocation towards armaments.
-narrative_ontology:coordination_type(start_treaty, resource_allocation).
+narrative_ontology:coordination_type(start_treaty, enforcement_mechanism).
+narrative_ontology:affects_constraint(start_treaty, intermediate_range_nuclear_forces).
+narrative_ontology:affects_constraint(start_treaty, nuclear_deterrence_stability).
+narrative_ontology:affects_constraint(start_treaty, non_proliferation_treaty_enforcement).
+
+% DUAL FORMULATION NOTE:
+% START treaty constraint should be decomposed into two stories: (1) START as a ROPE constraint during treaty period (1991-2026)—mutual verification and counting rules solved collective action problem of monitoring arsenals at lower cost than unilateral surveillance; (2) POST-TREATY constraint (2026+)—reversion to unrestricted competition creates new structural constraint. These are temporally distinct but causally linked. The upstream story explains why coordination was possible; the downstream story explains the extraction that emerges when coordination collapses.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(start_treaty, powerless, 0.95).
+constraint_indexing:directionality_override(start_treaty, institutional, 0.05).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "debt_service_squeeze",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dss"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Consumer Debt Service Squeeze on Higher-Income Households",
+    "topic_domain": "economic/consumer_finance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "financial_institutions",
+      "asset_holders"
+    ],
+    "victims": [
+      "high_income_wage_earners",
+      "consumer_purchasing_power"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Squeezed High-Income Household",
+      "comment": "PERSPECTIVE 1: SQUEEZED HIGH-INCOME HOUSEHOLD (SNARE) \u2014 Trapped by prior debt obligations contracted at lower rates. When inflation and rising interest rates hit, refinancing is expensive or unavailable. Must service existing debt while new borrowing becomes costlier. No exit: cannot discharge debt, cannot easily relocate away from labor market, cannot avoid auto/housing needs. Experiences maximum extraction \u2014 debt servicing consumes growing share of real income."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Credit-Dependent Wage Earner",
+      "comment": "PERSPECTIVE 2: CREDIT-DEPENDENT WAGE EARNER (TANGLED ROPE) \u2014 Benefits from credit access that enables purchasing (vehicle, home, education, emergencies). But constraints on refinancing and rising rates create asymmetric extraction. Can reduce discretionary spending or seek higher income, but cannot easily exit the credit system itself. Mixed: coordination benefit (credit) + extraction (rising service burden)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Financial Institutions and Creditors",
+      "comment": "PERSPECTIVE 3: FINANCIAL INSTITUTIONS (ROPE) \u2014 Net beneficiary. Rising rates increase net interest margin. Existing fixed-rate loans become valuable assets (locked-in spread). New lending captures higher-rate environment. Can arbitrage across markets, refinance their own funding, and diversify portfolios. Experiences the constraint as pure coordination: managing rate environment and customer payment flows. No extraction against them \u2014 extraction flows toward them."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Debt Reform and Housing Policy Advocates",
+      "comment": "PERSPECTIVE 4: DEBT REFORM COALITION (SCAFFOLD) \u2014 Organized agents (consumer advocates, progressive policy makers, labor unions) see the squeeze as a temporary policy failure addressable via: student debt forgiveness, mortgage rate caps, auto lending regulation, bankruptcy reform. The coalition has agency and perceives a sunset: policy interventions can reset the debt-service ratio and restore purchasing power. Constraint is high-suppression but low theater (problem is real, not performative), with perceived exit path via political reform."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Credit Rating and Consumer Finance Regulation",
+      "comment": "PERSPECTIVE 5: CREDIT RATING / REGULATORY SYSTEM (PITON) \u2014 Credit bureaus and consumer finance regulations (Dodd-Frank, Fair Credit Reporting Act) maintain a performative role: they create the appearance of consumer protection through score-based lending criteria and disclosure requirements, but the core mechanism (rising rates as policy tool, inflation eroding real income) is unaddressed by these rules. Regulatory theater persists due to institutional path-dependency even as its functional effectiveness at preventing debt-service squeeze has atrophied."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a macroeconomic universality perspective, some debt-service squeeze is inherent to any credit system under inflation and rising policy rates: the real cost of prior borrowing rises, and nominal incomes lag. This perspective naturalizes the squeeze as an inevitable feature of monetary policy. However, the structural data reveals this as false naturalization: the squeeze's severity depends on regulatory choices (predatory lending standards, lack of rate caps, bankruptcy restrictions), not on immutable economic laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rate_pass_through_timing",
+      "question": "How quickly do rising policy rates transmit to consumer lending rates, and is this transmission uniform across credit types?",
+      "resolution_mechanism": "Time-series analysis of Federal Funds Rate vs. auto loan APRs, credit card rates, and mortgage rates; control for market concentration and lender funding costs",
+      "impact": "If transmission is fast and uniform: debt-service burden is mechanical (Mountain-like). If transmission is slow/variable: debt-service squeeze reveals extractive lending practices (Snare-like, not Mountain).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Rate transmission speed and uniformity across credit products"
+    },
+    {
+      "id": "refinancing_access_barriers",
+      "question": "What percentage of high-income households with existing debt can refinance at lower rates, and what structural barriers prevent refinancing?",
+      "resolution_mechanism": "Survey of credit-eligible households; analysis of denial rates by credit score, debt-to-income ratio, and loan type; institutional lending policy review",
+      "impact": "If barriers are low: households have genuine exit option (not Snare). If barriers are high: refinancing is illusory, confirming trapped exit (Snare classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Barriers to refinancing and rate-relief access"
+    },
+    {
+      "id": "real_wage_lag_causality",
+      "question": "Is nominal wage stagnation (failure to keep pace with inflation) a mechanical consequence of labor-market slack, or is it a structural feature of employer power concentration?",
+      "resolution_mechanism": "Wage growth decomposition; productivity growth vs. wage growth trends; labor market tightness indicators; union density and bargaining power time series",
+      "impact": "If mechanical slack: debt squeeze is temporary coordination problem (Scaffold). If structural employer power: wage suppression is extractive mechanism (Snare/Tangled Rope), and squeeze persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage lag is mechanical or structural"
+    },
+    {
+      "id": "debt_accumulation_necessity",
+      "question": "How much of high-income household debt is truly necessary (housing, education, essential vehicle) vs. discretionary (lifestyle, consumption smoothing)?",
+      "resolution_mechanism": "Household debt survey with categorization by necessity; analysis of debt growth vs. asset accumulation; comparison with debt levels in income-equal European economies with stronger public housing/transport",
+      "impact": "If mostly necessary: debt-service squeeze is externally imposed (Snare). If significantly discretionary: households have some agency in debt accumulation (shifts to Tangled Rope or Scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity vs. discretionary split in household debt accumulation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The consumer debt service squeeze on higher-income households represents a structural extraction mechanism operating through the credit system and monetary policy. Households earning $75,000+ were historically considered 'safe' credit risks and were marketed aggressively into auto loans, credit cards, and mortgage products. When inflation accelerated (2021-2023) and the Federal Reserve raised policy rates to combat it, the real burden of prior debt increased sharply while new borrowing became more expensive. Nominal wages have not kept pace with inflation and rising debt-service costs, creating a growing squeeze on discretionary income even for households with above-median earnings. The constraint operates through institutional structures (lending standards, bankruptcy law, Federal Reserve policy) that create asymmetric extraction: financial institutions and asset holders benefit from higher rates and locked-in spreads, while borrowers bear the service burden. The theater ratio (0.48) is moderate because consumer finance regulation (credit scores, disclosure rules) creates the appearance of protection without addressing the underlying mechanism. The extractiveness value (0.52) reflects that the squeeze has become severe enough to impact household behavior (reduced spending, delayed major purchases, increased financial stress), yet not absolute \u2014 many households retain some capacity to service debt or adjust consumption.",
+    "key_agents": [
+      "High-income wage earners ($75k+): Primary victim (powerless/trapped) \u2014 bear growing debt-service burden; cannot easily refinance or escape credit system",
+      "Financial institutions and lenders: Primary beneficiary (institutional/arbitrage) \u2014 capture higher net interest margins, hold valuable fixed-rate assets, benefit from policy rate increases",
+      "Asset holders and real estate investors: Secondary beneficiary (powerful/arbitrage) \u2014 benefit from credit-constrained purchasing power (lower demand for housing/vehicles reduces price pressure), can arbitrage rate environment",
+      "Consumers in aggregate: Collective victim (powerless/trapped) \u2014 purchasing power eroded; aggregate demand dampened; consumer spending as share of GDP constrained",
+      "Debt reform coalition: Organized agents (organized/constrained) \u2014 advocating for debt forgiveness, rate caps, bankruptcy reform; perceive exit path via policy change",
+      "Federal Reserve and monetary policy makers: Institutional actor (institutional/arbitrage) \u2014 set policy rates to address inflation; have agency to create or mitigate squeeze through rate and regulatory decisions",
+      "Credit rating agencies and consumer finance regulators: Institutional actors (institutional/arbitrage) \u2014 maintain performative oversight; rules focus on disclosure and lending criteria rather than aggregate debt burden or rate-pass-through mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over the interval. Base extractiveness reflects the structural asymmetry: borrowers' real income falls relative to debt obligations (extraction), while lenders' margins expand (benefit flow). The value has risen from 0.28 to 0.52 as policy rates increased and wage growth lagged inflation. Not maximum (0.70+) because households retain some capacity to adjust consumption or seek higher income; refinancing is difficult but not impossible for some. Suppression (0.65): High. Barriers include: inability to refinance profitably, limited bankruptcy protections (student loans exempt, limited discharge), concentrated lending market (few competitors for rates), geographic labor market immobility, essential nature of debt (vehicle, housing). These create a suppression environment where alternatives are severely constrained. Theater ratio (0.48): Moderate. Consumer finance regulation (Fair Credit Reporting Act, Dodd-Frank, credit scoring) creates appearance of consumer protection, but addresses symptoms (individual lending decisions) not mechanisms (aggregate rate environment, debt accumulation necessity). The rules are functional at the disclosure level but have low explanatory power for the aggregate squeeze.",
+    "directionality_logic": "Directionality derivation flows from power, exit options, and beneficiary/victim declarations. High-income wage earners enter as victims with trapped exit (derived d \u2248 0.95, f(d) \u2248 1.42) \u2014 maximum experienced extraction. Financial institutions enter as beneficiaries with arbitrage exit (derived d \u2248 0.05, f(d) \u2248 -0.12) \u2014 negative effective extraction (they benefit). The organized coalition (debt reform advocates) enters as organized/constrained (derived d \u2248 0.50, f(d) \u2248 0.65) \u2014 moderate effective extraction, because they have some agency (advocacy, potential policy wins) but face institutional resistance. The Federal Reserve enters as institutional/arbitrage (canonical d \u2248 0.00, f(d) \u2248 -0.12) \u2014 they set policy rates and have maximal agency; they do not experience extraction from this constraint but rather deploy it as a tool. Scope modifier \u03c3(national) = 1.0 leaves \u03c7 = \u03b5 \u00d7 f(d) \u00d7 1.0 for each agent.",
+    "perspectival_gap": "The perspectival gap between the squeezed household (Snare) and the financial institution (Rope) is maximal. From the household's position (powerless/trapped), the constraint is pure extraction with no coordination benefit \u2014 they need credit access but the current system imposes rising costs with no escape. From the institution's position (institutional/arbitrage), the constraint is pure coordination \u2014 managing the rate environment and customer payment flows generates steady returns. The household sees debt service as a burden that grows against their will; the institution sees it as a profitable business model. The debt reform coalition (Scaffold) introduces a perspectival layer: they see the squeeze as addressable via policy change (sunset mechanism via debt forgiveness, rate caps, bankruptcy reform). The regulatory system (Piton) claims to address the problem through credit scoring and disclosure rules, but these are performative relative to the actual mechanism (rate pass-through, inflation, wage suppression). The analytical observer's Mountain view (inherent to credit systems under inflation) naturalizes what is actually a contingent institutional arrangement \u2014 the squeeze could be mitigated or eliminated by policy choices (rate controls, debt jubilee, wage floor mechanisms), revealing it as structurally constructed rather than naturally inevitable.",
+    "mandatrophy_analysis": "The mandatrophy here is: 'Is the debt service squeeze a necessary feature of credit systems (Mountain/coordination) or an extractive mechanism enabled by institutional choices (Snare/Tangled Rope)?' The resolution requires distinguishing between (a) the mechanical fact that rising policy rates increase service burden on fixed-rate debt (true, but not extractive per se) and (b) the institutional choices that make this burden severe and inescapable: predatory lending standards that encourage over-borrowing, bankruptcy law that exempts student loans, concentrated lending markets that prevent rate competition, wage suppression that prevents nominal income growth, lack of public alternatives (public housing, public transit) that would reduce borrowing necessity. The Tangled Rope classification resolves this: the constraint includes a genuine coordination function (credit access enables consumption smoothing and major purchases) AND asymmetric extraction (lenders benefit from rate environment while borrowers bear burden). Both are real. The classification prevents two errors: (1) calling it pure extraction (Snare) and ignoring that credit access is valuable, and (2) calling it pure coordination (Rope) and ignoring the asymmetry. The theater ratio (0.48) is relatively low because the squeeze is real and measurable, not performative \u2014 households' debt-service ratios genuinely rise. The institutional response (regulation) is performative relative to the mechanism, but that's captured in the Piton perspective, not in the base extractiveness."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_growth_suppression",
+      "housing_affordability_crisis",
+      "consumer_purchasing_power_erosion"
+    ],
+    "dual_formulation_note": "The debt service squeeze is downstream of both monetary policy (Federal Reserve rate decisions) and labor market dynamics (wage suppression). This story focuses on the household-level experience of the credit-rate-wage squeeze. Upstream constraints include wage_growth_suppression (structural employer power limiting nominal income growth) and housing_affordability_crisis (which drives mortgage debt accumulation). The squeeze affects downstream consumer purchasing power and aggregate demand dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.02
+    }
+  ]
+}

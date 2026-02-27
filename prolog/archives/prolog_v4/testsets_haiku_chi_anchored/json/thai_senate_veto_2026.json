@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "thai_senate_veto_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "thai_sen"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Senate Constitutional Veto (Post-Transitory Residual)",
+    "topic_domain": "political/constitutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "junta_institutional_legacy",
+      "conservative_establishment"
+    ],
+    "victims": [
+      "elected_house_reform_agenda",
+      "democratic_supermajority"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Elected House Democratic Coalition",
+      "comment": "PERSPECTIVE 1: ELECTED HOUSE DEMOCRATIC COALITION (SNARE) \u2014 Cannot exit constitutional process; 67% supermajority in House insufficient to overcome 34% Senate veto. Structural target of extraction: Senate veto power blocks reform without negotiation pathway. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Pro-Democracy Reform Coalition",
+      "comment": "PERSPECTIVE 2: PRO-DEMOCRACY REFORM COALITION (TANGLED ROPE) \u2014 Constrained by constitutional thresholds but benefits from institutional voice and veto over non-reform amendments. Mixed: experiences both extraction (blocked amendments) and coordination (check on revanchist amendments). d\u22480.70, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.56."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Junta-Legacy Senate Bloc",
+      "comment": "PERSPECTIVE 3: JUNTA-LEGACY SENATE BLOC (ROPE) \u2014 Institutional beneficiary (arbitrage exit: can withdraw from coalitions without cost). Experiences veto power as coordination mechanism: preserves constitutional stability against radical amendments. Asymmetry favors this bloc through unilateral veto. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Society Pressure Bloc",
+      "comment": "PERSPECTIVE 4: CIVIL SOCIETY PRESSURE BLOC (SCAFFOLD) \u2014 Organized agents (labor unions, pro-democracy NGOs, youth movements) see the veto as a temporary institutional constraint with sunset logic: continued Senate obstruction of reform drives public pressure and increases coalition leverage for eventual constitutional renegotiation. Theater manifests as Senate legitimacy performance (framing veto as 'stability') that degrades as public support for reform grows. d\u22480.45, f(d)\u22480.45, \u03c3=1.0 \u2192 \u03c7\u22480.23."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Constitutional Court Doctrine",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL COURT DOCTRINE (PITON) \u2014 The veto power is constitutionally enshrined but functionally atrophied: its primary function was to preserve junta influence during the five-year transitory period. With that period expired, the veto persists through institutional inertia \u2014 the Court has ruled that Senate participation in amendment voting is not discretionary despite the loss of legitimacy. Theater_ratio=0.65 reflects that constitutional proceduralism masks extraction. The doctrine is maintained not because it serves its original function but because constitutional change requires the very majority it blocks."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Constitutional Structure View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CONSTITUTIONAL STRUCTURE VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some constitutional entrenchment is inherent to governance: supermajority requirements prevent tyranny of the majority and provide stability. The veto power is structural to bicameral constitutional systems. However, structural data (\u03b5=0.52, suppression=0.68, theater=0.65) contradicts mountain classification \u2014 the engine flags this as a false summit. The naturalizing frame ignores that the Senate's legitimacy is derivative (junta-appointed, not elected), making the entrenchment asymmetric, not neutral."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "senate_legitimacy_collapse",
+      "question": "At what threshold of public support for reform does the Senate's veto power become politically unsustainable, forcing constitutional renegotiation?",
+      "resolution_mechanism": "Public opinion polling on constitutional reform support; coalition size measurements; opposition party supermajority confirmation; street protest scale metrics",
+      "impact": "If threshold < 60% public support: veto becomes unenforceable within 5 years (scaffold thesis). If threshold > 80%: junta legacy can maintain veto indefinitely despite public opposition (snare thesis).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Political sustainability threshold for Senate veto under public pressure"
+    },
+    {
+      "id": "defection_mechanism",
+      "question": "Will elected senators defect from the junta coalition to gain political legitimacy as democracy supporters, creating a voting majority for reform without constitutional renegotiation?",
+      "resolution_mechanism": "Tracking of senator defections; comparative advantage analysis for individual senators switching coalitions; inter-election survey data on voter preference for defecting senators",
+      "impact": "If defection > 20%: veto becomes supermajority-breakable (effective end of constraint). If defection < 5%: veto remains structurally durable (snare thesis confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether individual senator defections can dissolve the junta coalition"
+    },
+    {
+      "id": "precedent_amendment_sequencing",
+      "question": "Can reformers pass incremental constitutional amendments that reduce the Senate veto threshold incrementally, or does the veto block all self-modifying amendments?",
+      "resolution_mechanism": "Historical analysis of Supreme Constitutional Court rulings on amendment precedent; test cases of threshold-reduction amendments; political feasibility studies for 5/6 or 4/5 supermajority strategies",
+      "impact": "If incremental reduction viable: tangled rope thesis (mixed coordination/extraction). If veto blocks all self-modification: snare thesis confirmed (extraction with no exit).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether veto power can be incrementally reduced through constitutional amendments"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Thai Senate constitutional veto represents a post-transitory institutional residual \u2014 a power structure designed for a temporary junta-legitimizing role that persists after its original function has expired. The five-year transitory provision allowing junta-appointed senators to vote for Prime Minister ended, but Article 256's one-third veto power over constitutional amendments remains. This creates a structural asymmetry: the elected House can command 67% supermajority support for constitutional reform, but the unelected Senate retains 34% blocking power. The constraint exhibits mixed coordination and extraction: some extraction occurs (reform agenda is blocked without negotiation), but the veto also functions as a check on radical constitutional change. The core tension is between democratic legitimacy (elected House majority) and constitutional entrenchment (Senate veto). Theater has increased over the measurement interval as the Senate increasingly justifies the veto through stability rhetoric rather than substantive negotiation. The constraint is neither pure coordination (genuine negotiation mechanism) nor pure extraction (unbreakable monopoly), but a degrading hybrid where performative legitimacy masks structural bias toward the ancien r\u00e9gime.",
+    "key_agents": [
+      "Junta-Legacy Senate Bloc: Primary beneficiary (institutional/arbitrage) \u2014 retains institutional veto power without electoral accountability; can enforce blocking power unilaterally",
+      "Elected House Democratic Coalition: Primary victim (powerless/trapped) \u2014 cannot exit constitutional process; 67% supermajority insufficient to overcome Senate veto; faces perpetual negotiation asymmetry",
+      "Pro-Democracy Reform Coalition: Secondary victim (moderate/constrained) \u2014 benefits from voice but blocked from implementing reform agenda; constrained by constitutional thresholds",
+      "Civil Society Pressure Bloc: Organized actors (organized/constrained) \u2014 external pressure on Senate veto to collapse through delegitimation; represents exit pathway via public pressure accumulation",
+      "Constitutional Court: Institutional interpreter (institutional/constrained) \u2014 enforces formal veto power but constrained by legitimacy questions; doctrine increasingly questioned",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the veto as a constitutional principle when it is actually a transitory residual"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The Senate veto power blocks constitutional reform without a clear negotiation pathway, representing meaningful extraction. However, it is not maximal (0.70+) because some path exists through public pressure and coalition dynamics \u2014 the constraint is not airtight. The measurement trajectory (0.38\u21920.52) reflects that extractiveness increased as the Senate's legitimacy degraded post-transitory period, forcing it to rely more heavily on pure veto rather than negotiated constitutional change. Suppression (0.68): High. The constraint operates through constitutional entrenchment, making exit extremely difficult. The elected majority has no legal pathway to override the veto without constitutional amendment \u2014 which requires the veto-holder's cooperation. This circularity creates severe suppression: those bearing the cost (reform coalition) cannot exit or bypass the constraint. Theater ratio (0.65): Moderately high, increasing over time. The Senate increasingly frames the veto as necessary for 'constitutional stability' and 'preventing radical change,' but this is performative legitimacy rather than substantive constitutional theory. The rise from 0.42\u21920.65 reflects growing gap between formal justification and actual function (institutional bias preservation). The theater is not total (0.70+) because some genuine constitutional deliberation occurs, but the veto's blocking function overshadows negotiation.",
+    "perspectival_gap": "The constraint demonstrates a striking gap between beneficiary and victim experience. The junta-legacy Senate bloc sees a coordination mechanism \u2014 the veto preserves constitutional stability against radical amendments and ensures consultative input on major constitutional changes. The elected House democratic coalition sees a snare \u2014 they are structurally unable to implement democratic mandates without Senate permission. The reform coalition sees a tangled rope \u2014 extraction (blocked reforms) mixed with coordination benefits (check on revanchist amendments). The civil society pressure bloc sees a temporary problem with a sunset mechanism \u2014 continued obstruction drives public delegitimation and creates leverage for eventual renegotiation. The Constitutional Court doctrine sees itself as preserving stability (piton perspective \u2014 the doctrine is maintained through institutional inertia despite degraded function). The analytical observer risks naturalizing the veto as a constitutional principle (mountain) but the structural data reveals it as a contingent transitory residual.",
+    "directionality_logic": "Junta-legacy Senate bloc: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary with unilateral exit option. Elected House coalition: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction \u2014 cannot exit constitutional process. Reform coalition: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.08. Significant extraction but constrained by their own institutional position (can organize but cannot unilaterally break the veto). Civil society: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.45. Low-to-moderate effective extraction; external pressure has leverage over time. Constitutional Court: Institutional + constrained \u2192 d\u22480.20, f(d)\u22480.05. Doctrine maintains veto but constrained by legitimacy pressure; piton classification emerges from theater gate, not from high chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival (observer naturalizes constraint as structural); engine's false summit detector identifies this.",
+    "mandatrophy_analysis": "CONSTRAINT TYPE RESOLUTION: This constraint resolves the mandatrophy by disambiguating the Senate veto's function across different time horizons and institutional positions. The junta-legacy bloc genuinely experiences it as coordination (rope) \u2014 from their position of institutional stability, the veto is a mechanism for ensuring consultative input. The elected House coalition genuinely experiences it as extraction (snare) \u2014 from their position of blocked democratic mandate, the veto is a unilateral blocking mechanism. The reform coalition genuinely experiences it as tangled rope \u2014 mixed coordination (constitutional checks) and extraction (blocked amendments) from a constrained institutional position. The civil society bloc genuinely experiences it as a temporary constraint with sunset logic (scaffold) \u2014 their outside pressure creates a pathway that degrades the veto's sustainability. The mandatrophy dissolves when we recognize that the same structural fact (Senate veto under Article 256) is experienced as different constraint types depending on the agent's structural relationship to the mechanism. The false summit (analytical naturalization) is detected by the engine because the structural data (\u03b5=0.52, suppression=0.68) contradicts the mountain claim \u2014 if the veto were a constitutional principle, suppression would be much lower (\u22640.15) and extractiveness would be negligible."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "thai_house_senate_electoral_asymmetry",
+      "thai_constitutional_amendment_supermajority"
+    ],
+    "dual_formulation_note": "The Senate veto is downstream of the broader Thai constitutional framework and upstream of specific amendment attempts. The electoral asymmetry (appointed vs elected) is the upstream constraint generating the veto's extractive potential; the supermajority requirement is the downstream constraint defining what amendments the veto blocks."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

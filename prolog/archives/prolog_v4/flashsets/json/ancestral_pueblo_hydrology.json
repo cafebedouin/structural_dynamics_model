@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "ancestral_pueblo_hydrology",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ancestral Puebloan Hydrological Debt",
+    "topic_domain": "environmental/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_settlers"
+    ],
+    "victims": [
+      "late_settlers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Late Settlers",
+      "comment": "Perspective of late settlers who experience the full brunt of hydrological debt as a snare, with limited exit options due to established societal structures and resource depletion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Chacoan Leadership",
+      "comment": "Perspective of Chacoan leadership who benefitted initially but were ultimately constrained by the environmental limits and increasing social strain."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Archaeological Observer",
+      "comment": "Perspective of an archaeologist who can see the long-term impact but has no active role in the system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Early Settlers",
+      "comment": "Perspective of early settlers who initially benefited from resource exploitation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "climate_change_vs_resource_management",
+      "question": "To what extent was the collapse caused by climate change versus unsustainable resource management practices?",
+      "resolution_mechanism": "Paleoclimatic data analysis combined with archaeological evidence of resource use.",
+      "impact": "Different classifications depending on which factor was dominant. If climate, more mountain-like. If management, more snare-like.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of climate change vs resource management."
+    },
+    {
+      "id": "social_complexity_threshold",
+      "question": "At what level of social complexity did the system become unsustainable?",
+      "resolution_mechanism": "Correlation of population size, social stratification, and environmental degradation.",
+      "impact": "Impacts the power/exit options assigned to victims and the nature of the snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Social complexity threshold for unsustainability."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the collapse of the Chaco Canyon and Mesa Verde urban centers (c. 900-1300 CE) as a consequence of exceeding hydrological carrying capacity. Early settlers benefited from abundant rainfall and fertile land, leading to population growth and increased agricultural demands. This eventually led to deforestation, soil erosion, and depletion of water resources, creating a hydrological debt that future generations had to bear. The resulting ecological damage combined with prolonged drought periods contributed to social unrest and ultimately, the abandonment of these once-thriving settlements.",
+    "key_agents": [
+      "Early Settlers: Primary beneficiaries (powerful/mobile) \u2013 Initially benefited from resource abundance.",
+      "Late Settlers: Primary victims (powerless/trapped) \u2013 Faced the consequences of resource depletion.",
+      "Chacoan Leadership: Constrained actors (institutional/constrained) - Oversaw resource allocation but failed to prevent collapse",
+      "Archaeological Observer: Analytical (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness is high (0.6) because the system extracted resources beyond its sustainable capacity. Suppression is also high (0.7) due to the lack of viable alternatives for later generations. Theater Ratio is now set to 0.75 to reflect the performative aspects of rituals intended to ensure continued resource availability.",
+    "perspectival_gap": "Early settlers see the initial benefits as coordination (rope), while later settlers experience the hydrological debt as a trap (snare). Chacoan leadership might have initially viewed the system as rope, but were ultimately constrained and failed to address the issue. The archaeologist sees the long-term piton outcome.",
+    "directionality_logic": "Early settlers benefited, d close to 0. Late settlers bore costs, d close to 1. Leadership was caught in the middle and initially benefited. Archeologist is analytical."
+  },
+  "network": {
+    "affects_constraints": [
+      "deforestation_impact",
+      "soil_erosion"
+    ]
+  },
+  "directionality_overrides": []
+}

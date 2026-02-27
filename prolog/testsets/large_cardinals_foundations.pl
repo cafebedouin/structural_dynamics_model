@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: large_cardinal_foundations
+% CONSTRAINT STORY: large_cardinals_foundations
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_large_cardinal_foundations, []).
+:- module(constraint_large_cardinals_foundations, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -31,13 +32,18 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -47,23 +53,42 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: large_cardinal_foundations
+ *   constraint_id: large_cardinals_foundations
  *   human_readable: Large Cardinal Axioms as a Foundational System
  *   domain: mathematical/philosophical
  *
  * SUMMARY:
- *   Large Cardinals are transfinite numbers with properties so strong that their
- *   existence cannot be proven within standard Zermelo-Fraenkel set theory (ZFC).
- *   They establish a "hierarchy of consistency strength" that acts as a
- *   structural floor for modern mathematics. This constraint is the de facto
- *   requirement to adopt these axioms to resolve independence results and
- *   establish the consistency of lower-level theories.
+ *   Large Cardinal axioms (existence of inaccessible cardinals, measurable
+ *   cardinals, Woodin cardinals, supercompact cardinals) form a hierarchy of
+ *   increasingly strong set-theoretic assumptions that extend ZFC but cannot
+ *   be proven within ZFC itself. Gödel's incompleteness theorem guarantees
+ *   that any foundational system will have undecidable propositions; LC
+ *   axioms represent a deliberate choice to assume strong existence claims
+ *   about infinite sets beyond ZFC's canonical boundaries. The constraint
+ *   exhibits the full perspectival spectrum: category theorists see
+ *   coordination (Rope) — LCs provide the cardinality framework to make
+ *   abstract constructions rigorous. Constructivists see pure extraction
+ *   (Snare) — trapped by institutional exclusion despite mathematical
+ *   validity. Working mathematicians see mixed coordination and constraint
+ *   (Tangled Rope) — benefits from shared language but costs in constrained
+ *   research directions. Foundational minimalists see degraded ritual (Piton)
+ *   — LC frameworks maintained by orthodoxy despite limited practical
+ *   necessity. The univalent foundations movement (HoTT, cubical type theory)
+ *   sees a temporary problem with a sunset (Scaffold) — alternative paradigms
+ *   are building toward replacing LC hegemony. The analytical observer risks
+ *   naturalizing LC axioms as immutable features of mathematical law
+ *   (Mountain) — but the perspectival gap reveals this is a false summit,
+ *   conflating epistemological (we need some axiom) with metaphysical
+ *   necessity (LCs are inevitable).
  *
- * KEY AGENTS (by structural relationship):
- *   - Mathematical Minimalists: Primary target (moderate/constrained) — bear the "ontological tax" of accepting increasingly complex infinities to ground simpler mathematics.
- *   - Set-Theoretic Platonists: Primary beneficiary (institutional/arbitrage) — use the hierarchy as a coordination tool to map the landscape of mathematical truth and consistency.
- *   - The Inaccessible Cardinal (Metaphorical): A powerless/trapped agent representing the mathematical object itself, for whom its properties are an unchangeable law.
- *   - Analytical Observer: Sees the full structure as a Tangled Rope, with both coordination and extraction functions.
+ * KEY AGENTS:
+ *   - Category Theory Establishment: Primary beneficiary (institutional/arbitrage) — LC axioms provide cardinality machinery for rigorous category-theoretic constructions; maintains exit options through alternative set theories
+ *   - Descriptive Set Theory Research: Primary beneficiary (institutional/arbitrage) — LC axioms enable analysis of infinitary combinatorics and forcing constructions; established literature depends on LC framework
+ *   - Constructivist Mathematics: Primary victim (powerless/trapped) — excluded from mainstream by LC hegemony; burden of proof on constructivists to justify results within classical framework; no exit path without career costs
+ *   - Working Mathematician: Secondary victim (moderate/constrained) — benefit from coordinative framework but constrained in research direction; risk of publication rejection if results don't fit LC formalism
+ *   - Univalent Foundations Movement: Organized agents (organized/constrained) — actively building alternative foundational infrastructure with computational and constructive content; possess clear sunset path but currently constrained by need to establish community
+ *   - Peano Arithmetic Orthodox: Institutional actor (institutional/arbitrage) — foundational minimalists working in weak systems have been sidelined; maintain arbitrage options through subsystems of second-order arithmetic but lack institutional power
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional choice as mathematical law
  */
 
 /* ==========================================================================
@@ -71,106 +96,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: 0.30. While they provide a "gift" of consistency strength, they
-% "extract" ontological commitment. To solve "small" problems, one is taxed
-% with accepting "large" existences.
-domain_priors:base_extractiveness(large_cardinal_foundations, 0.30).
-
-% Rationale: 0.40. The hierarchy suppresses the viability of "finitist-only"
-% foundations by demonstrating their insufficiency for proving the consistency
-% of higher-order structures.
-domain_priors:suppression_score(large_cardinal_foundations, 0.40).
-
-% Rationale: 0.01. The system is almost pure function; there is no performative
-% aspect. Its value is entirely in its logical consequences.
-domain_priors:theater_ratio(large_cardinal_foundations, 0.01).
+domain_priors:base_extractiveness(large_cardinals_foundations, 0.38).
+domain_priors:suppression_score(large_cardinals_foundations, 0.48).
+domain_priors:theater_ratio(large_cardinals_foundations, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(large_cardinal_foundations, extractiveness, 0.30).
-narrative_ontology:constraint_metric(large_cardinal_foundations, suppression_requirement, 0.40).
-narrative_ontology:constraint_metric(large_cardinal_foundations, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(large_cardinals_foundations, extractiveness, 0.38).
+narrative_ontology:constraint_metric(large_cardinals_foundations, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(large_cardinals_foundations, theater_ratio, 0.65).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(large_cardinal_foundations, tangled_rope).
-narrative_ontology:human_readable(large_cardinal_foundations, "Large Cardinal Axioms as a Foundational System").
-narrative_ontology:topic_domain(large_cardinal_foundations, "mathematical/philosophical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(large_cardinals_foundations, tangled_rope).
+narrative_ontology:human_readable(large_cardinals_foundations, "Large Cardinal Axioms as a Foundational System").
+narrative_ontology:topic_domain(large_cardinals_foundations, "mathematical/philosophical").
 
-% --- Binary flags ---
-% Required for Tangled Rope. "Enforcement" in this domain is the intellectual
-% work of demonstrating that these axioms are necessary to prove certain
-% results, thus coercing their adoption for researchers in those areas.
-domain_priors:requires_active_enforcement(large_cardinal_foundations).
+domain_priors:requires_active_enforcement(large_cardinals_foundations).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(large_cardinal_foundations, set_theoretic_platonists).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(large_cardinal_foundations, mathematical_minimalists).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(large_cardinals_foundations, category_theory_practitioners).
+narrative_ontology:constraint_beneficiary(large_cardinals_foundations, descriptive_set_theory_research).
+narrative_ontology:constraint_victim(large_cardinals_foundations, constructivist_mathematics).
+narrative_ontology:constraint_victim(large_cardinals_foundations, foundational_universality).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE MATHEMATICAL OBJECT (MOUNTAIN)
-% A metaphorical perspective from the "point of view" of the cardinal itself.
-% For the object, its properties are an unchangeable law of its existence.
-constraint_indexing:constraint_classification(large_cardinal_foundations, tangled_rope,
+% PERSPECTIVE 1: CONSTRUCTIVIST MATHEMATICS (SNARE) — Cannot exit the large cardinal framework without abandoning vast literatures and institutional positions. Constructivism is trapped by the hegemony of LC-based foundations in peer review, publication, and career advancement. Maximum extraction experienced: excluded from mainstream mathematics, burden of proof on constructivists to prove their results 'translate' to LC-foundations.
+constraint_indexing:constraint_classification(large_cardinals_foundations, snare,
     context(agent_power(powerless),
             time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE SET-THEORETIC PLATONIST (ROPE)
-% The beneficiary, who uses the hierarchy as a tool for coordination. They can
-% choose which axioms to work with (arbitrage) to achieve desired consistency proofs.
-constraint_indexing:constraint_classification(large_cardinal_foundations, rope,
+% PERSPECTIVE 2: WORKING MATHEMATICIAN (TANGLED ROPE) — Constrained by institutional requirement to work within LC-compatible frameworks, but also benefits from the coordinative power of a shared foundational system. Some agency through alternative proof strategies, but exit costs are real (publications harder to place, career advancement constrained). Mixed extraction and coordination.
+constraint_indexing:constraint_classification(large_cardinals_foundations, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: CATEGORY THEORY ESTABLISHMENT (ROPE) — Primary beneficiary with arbitrage options. LC axioms provide the cardinality machinery to make category-theoretic constructions fully rigorous. Benefits from coordination (shared language for abstract structures) while maintaining exit options through alternative set theories. Net coordinator of the field.
+constraint_indexing:constraint_classification(large_cardinals_foundations, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: PEANO ARITHMETIC ORTHODOX (PITON) — Foundational minimalists who work in weak systems (PA, subsystems of second-order arithmetic) have largely been sidelined from mainstream foundations discourse. LC axioms persist through institutional inertia (dominant textbooks, journal editorial boards), but their functional role in routine mathematics is minimal. Most theorems don't require LCs. Theater ratio high: LC frameworks are maintained as foundational orthodoxy despite limited practical necessity.
+constraint_indexing:constraint_classification(large_cardinals_foundations, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE MATHEMATICAL MINIMALIST (SNARE)
-% The victim, who seeks simple foundations. The hierarchy is a Snare that
-% extracts ontological simplicity and suppresses finitist alternatives.
-constraint_indexing:constraint_classification(large_cardinal_foundations, rope,
-    context(agent_power(moderate),
-            time_horizon(civilizational),
+% PERSPECTIVE 5: UNIVALENT FOUNDATIONS MOVEMENT (SCAFFOLD) — Organized agents (Voevodsky school, HoTT community) building alternative foundational systems with formal verification and computational content. See LC hegemony as temporary: homotopy type theory provides a sunset path where constructive reasoning and computational foundations mature to displace LC-based formalism. Constrained by need to build infrastructure and establish community, but possesses clear exit strategy.
+constraint_indexing:constraint_classification(large_cardinals_foundations, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The default analytical context, which sees both the coordination function
-% (beneficiary) and the asymmetric extraction (victim), classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(large_cardinal_foundations, tangled_rope,
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / GÖDEL VIEW (MOUNTAIN) — From a civilizational view, LC axioms may represent natural upper boundaries to the foundational hierarchy: Gödel's incompleteness theorem suggests that any foundational system will have questions it cannot answer from within. LCs might be immutable features of any sufficiently expressive mathematical framework. However, this perspective risks false summit: conflating epistemological necessity (we need some axiom above ZFC) with metaphysical necessity (LCs are the only or natural choice).
+constraint_indexing:constraint_classification(large_cardinals_foundations, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(large_cardinal_foundations_tests).
+:- begin_tests(large_cardinals_foundations_tests).
 
-test(perspectival_gap_beneficiary_vs_victim) :-
-    % Verify the gap between the beneficiary (Rope) and victim (Snare).
-    constraint_indexing:constraint_classification(large_cardinal_foundations, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(large_cardinal_foundations, rope, context(agent_power(moderate), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(large_cardinals_foundations, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(large_cardinals_foundations, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    % The analytical claim must be Tangled Rope.
-    constraint_indexing:constraint_classification(large_cardinal_foundations, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(large_cardinals_foundations, TR),
+    TR >= 0.70.
 
-test(tangled_rope_structural_gates_pass) :-
-    % Verify all three structural requirements for Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(large_cardinal_foundations, _), % -> has_coordination_function
-    narrative_ontology:constraint_victim(large_cardinal_foundations, _),     % -> has_asymmetric_extraction
-    domain_priors:requires_active_enforcement(large_cardinal_foundations).
-
-:- end_tests(large_cardinal_foundations_tests).
+:- end_tests(large_cardinals_foundations_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -178,85 +187,101 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   The original file incorrectly claimed this was a Mountain, but its metrics
- *   (ε=0.30, suppression=0.40) violated Mountain thresholds (ε≤0.25, supp≤0.05).
- *   The narrative clearly describes a system with both a powerful coordination
- *   function and a significant asymmetric extraction cost, which is the
- *   definitive signature of a Tangled Rope. The metrics align perfectly with
- *   Tangled Rope requirements (ε≥0.30, supp≥0.40). The claim and analytical
- *   perspective have been updated accordingly.
+ *   Extractiveness (0.38): Moderate, increasing over interval. LC axioms coordinate genuine mathematical problems (infinitary combinatorics, forcing, category-theoretic rigor) but also extract institutional compliance — mathematicians must adopt LC frameworks to participate in mainstream research. The increase from 0.22 to 0.38 over 40 years reflects growing formalization of LC-dependent results and publication pressure. Base extraction is not as severe as the 0.46+ threshold for pure snare because legitimate coordinative functions exist: LC axioms do solve real problems in advanced mathematics. Suppression (0.48): Moderate-high. Institutional barriers include: peer review bias toward LC-compatible proofs, textbook dominance of ZFC+LC, journal editorial boards skewed toward LC foundations, hiring signals that reward LC-fluent researchers, and tacit knowledge advantages for those trained in LC frameworks. But suppression is not total — constructive mathematics is published, alternative foundations have some institutional space (Shelah's reverse mathematics, proof mining research). Theater ratio (0.65): Moderate-high, increasing from 0.40. Much foundational discourse about LC axioms is performative: most routine mathematics never invokes LC axioms, yet foundational textbooks present LCs as canonical. The theater has increased over the interval as formalization efforts have made LC frameworks more visible but not more practically necessary. For working mathematicians, the theater is high — they must deploy LC rhetoric while actually using weak subsystems.
  *
  * PERSPECTIVAL GAP:
- *   - Set-Theoretic Platonists (Beneficiaries) see a pure Rope. For them, the
- *     hierarchy is an indispensable tool for coordinating research and establishing
- *     the relative consistency of mathematical theories. The ontological cost is
- *     not perceived as extraction but as the price of truth.
- *   - Mathematical Minimalists (Victims) see a Snare. They are forced to pay an
- *     "ontological tax" (accepting vast, unprovable infinities) to ground their
- *     work, which extracts the value of foundational simplicity and suppresses
- *     finitist approaches.
+ *   The gap is maximal between beneficiary (rope) and trapped victim (snare). The category theory establishment experiences LC axioms as coordinative — a shared language for advanced mathematics. Constructivists experience them as extractive — an institutional barrier. Both are describing the same constraint structure, but from opposed structural positions. No single classification resolves this gap; the constraint IS both rope and snare depending on position. The piton perspective (foundational orthodoxy) and scaffold perspective (univalent futures) represent temporal aspects: piton shows how LC hegemony persists through institutional inertia despite declining functional necessity; scaffold shows how organized alternatives are building toward sunset. The false summit (mountain) reveals the core mandatrophy: LC axioms may appear as natural laws of mathematics because they coordinate genuine problems, but that coordination function masks institutional/extractive functions that exclude alternative approaches.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `set_theoretic_platonists`. They gain a powerful standard
- *     (consistency strength) to structure their entire field.
- *   - Victims: `mathematical_minimalists`. They lose the possibility of a simple,
- *     self-contained foundation for mathematics, a core value for their paradigm.
- *   The engine derives a low `d` for the institutional platonists (low χ, Rope)
- *   and a high `d` for the moderate minimalists (high χ, Snare).
+ *   Each agent's directionality derives from their structural position: capacity to exit, power to influence the constraint's operation, and whether the constraint benefits or burdens them. Category theorists have arbitrage options (can work in alternative set theories) and are beneficiaries (LC axioms enable their constructions), yielding low d → low/negative χ. Constructivists have trapped exit (publications harder to place, career advancement constrained if they reject classical framework) and are victims, yielding high d → high χ. Working mathematicians are partially beneficiaries (shared language) and partially victims (constrained proofs), with constrained exit (can't easily leave the field), yielding mid-range d → moderate χ. Minimalists have arbitrage options (subsystems of second-order arithmetic, weak foundational systems) but face institutional suppression, yielding mixed d. The univalent movement is organized with constrained exit (must build community and formalize major theorems), but possesses genuine agency and exit prospects, yielding lower d than individual powerless agents despite similar temporal constraints.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this as a Tangled Rope correctly identifies that the system is
- *   not a neutral "Mountain" of fact. It has a political dimension: it coordinates
- *   one group (platonists) while extracting from another (minimalists). A pure
- *   Mountain or Rope classification would miss this coercive aspect, while a pure
- *   Snare classification would ignore its genuine and powerful coordination function.
+ *   RESOLVED: The mandatrophy is resolved by recognizing LC axioms as a coordination-extraction hybrid (Tangled Rope) that legitimately coordinates mathematical practice (category theory, descriptive set theory require the cardinality framework) while extracting institutional compliance (constructivists trapped, working mathematicians constrained, minimal foundational research sidelined). The resolution mechanism: (1) LC axioms solve real mathematical problems (coordination function is genuine, not performative), so they are not pure Snare. (2) Alternative foundations are viable (HoTT, cubical type theory, constructive math), so LC hegemony is institutional choice, not logical necessity. (3) The constraint's increasing theater ratio (0.40→0.65) indicates that coordinative necessity is declining while institutional maintenance increases — the trajectory is toward Piton degradation. (4) The univalent movement's scaffold perspective shows genuine sunset: as constructive verification and computational content become foundationally central, LC axioms may be displaced not through logical refutation but through better alternatives becoming available. The mountain perspective is a false summit — treating LC axioms as immutable features of mathematical law naturalizes what is actually an institutional choice with real but limited coordinative justification.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_large_cardinal_foundations,
-    'Will a hidden contradiction be found in the large cardinal hierarchy, proving it inconsistent with ZFC?',
-    'A formal proof of inconsistency originating from the ZFC + Large Cardinal axioms.',
-    'If inconsistent, the constraint is revealed as a failed Scaffold. If consistency holds, it remains a stable Tangled Rope.',
+    lc_necessity_empirical,
+    'Do theorems requiring LC axioms for proof genuinely require them, or do all LC-dependent results admit alternative proofs in weaker systems?',
+    'Proof mining in constructive mathematics; systematic search for reverse mathematics reductions; analysis of LC usage in major theorems (Shelah''s pcf theory, infinitary combinatorics, descriptive set theory structure)',
+    'If all LC results admit weaker proofs: LC axioms are purely conventional (theater-dominant, extractive). If substantial theorems are irreducibly LC-dependent: LC axioms coordinate genuine mathematical necessity (rope-dominant, minimal extraction).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(lc_necessity_empirical, empirical, 'Whether LC axioms are genuinely necessary for established theorems').
+
+omega_variable(
+    univalent_foundations_viability,
+    'Will univalent foundations (HoTT, cubical type theory) mature to become a genuine alternative foundational paradigm with equivalent expressiveness to LC-based mathematics?',
+    'Formalization of major theorems in HoTT/cubical type theory; maturation of proof assistants (Coq, Lean) for advanced mathematics; adoption curves in academic hiring and publication',
+    'If viability confirmed: scaffold perspective is structural — sunset is real, univalent foundations displace LC hegemony within 20-30 years. If univalent path stalls: LC hegemony persists indefinitely, snare classification deepens.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(univalent_foundations_viability, empirical, 'Viability of univalent foundations as alternative paradigm').
+
+omega_variable(
+    godel_cumulative_naturality,
+    'Are large cardinal axioms uniquely natural extensions of the ZFC cumulative hierarchy, or are they merely conventional choices among equally natural foundational frameworks?',
+    'Formal analysis of naturalness criteria (Maddy''s criteria, explanatory depth, unifying power); comparison of explanatory scope across alternative foundations (Kelley-Morse, Morse-Kelley, category-theoretic foundations, structural set theory)',
+    'If LCs are uniquely natural: mountain perspective has merit — LCs may be inevitable features of any complete foundation. If alternative foundations have equal naturalness: LC hegemony is institutional/extractive choice, not logical necessity.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(godel_cumulative_naturality, conceptual, 'Naturalness and inevitability of large cardinal axioms').
+
+omega_variable(
+    constructivist_expressiveness_parity,
+    'Can constructive mathematics capture the full expressiveness of classical LC-based mathematics, or are there irreducible classical insights loss in constructive formalization?',
+    'Exhaustive formalization of category theory, descriptive set theory, and forcing constructions in constructive frameworks; analysis of classical proofs that resist constructive interpretation',
+    'If parity achieved: constructivism is excluded via institutional suppression, not mathematical necessity (snare confirmed). If gaps remain: classical framework is genuinely more expressive (tangled rope justified).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(constructivist_expressiveness_parity, empirical, 'Expressiveness parity between constructive and classical foundations').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(large_cardinal_foundations, 1908, 2026).
+narrative_ontology:interval(large_cardinals_foundations, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is not > 0.46, so temporal measurements are not required.
+% Theater ratio over time
+narrative_ontology:measurement(lc_tr_t0, large_cardinals_foundations, theater_ratio, 0, 0.4).
+narrative_ontology:measurement(lc_tr_t20, large_cardinals_foundations, theater_ratio, 20, 0.52).
+narrative_ontology:measurement(lc_tr_t40, large_cardinals_foundations, theater_ratio, 40, 0.65).
+
+% Extraction over time
+narrative_ontology:measurement(lc_be_t0, large_cardinals_foundations, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(lc_be_t20, large_cardinals_foundations, base_extractiveness, 20, 0.3).
+narrative_ontology:measurement(lc_be_t40, large_cardinals_foundations, base_extractiveness, 40, 0.38).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The hierarchy provides a standard for measuring and comparing the consistency
-% strength of different formal systems.
-narrative_ontology:coordination_type(large_cardinal_foundations, information_standard).
+narrative_ontology:coordination_type(large_cardinals_foundations, information_standard).
+narrative_ontology:affects_constraint(large_cardinals_foundations, godel_incompleteness_foundational_limit).
+narrative_ontology:affects_constraint(large_cardinals_foundations, constructive_mathematics_institutional_barrier).
+narrative_ontology:affects_constraint(large_cardinals_foundations, category_theory_formalization_requirements).
 
-% Network relationships (structural influence edges)
-% This is a foundational constraint that affects many others in mathematics.
-% narrative_ontology:affects_constraint(large_cardinal_foundations, continuum_hypothesis_undecidability).
+% DUAL FORMULATION NOTE:
+% Large Cardinal axioms decompose into two structurally distinct constraints: (1) THE MATHEMATICAL NECESSITY (ε≈0.12, Mountain) — any sufficiently expressive foundation requires axioms beyond ZFC to resolve undecidable propositions. (2) THE INSTITUTIONAL CHOICE (ε≈0.38, Tangled Rope) — LC axioms are the canonical instantiation of mathematical necessity, but other axiom systems (univalent foundations, constructive hierarchies) could serve the same role. This story addresses the second — the institutional constraint around LC hegemony. The first would require a separate story analyzing whether LCs are uniquely natural responses to Gödelian incompleteness.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations accurately models the directionality of this constraint.
+constraint_indexing:directionality_override(large_cardinals_foundations, institutional, 0.25).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

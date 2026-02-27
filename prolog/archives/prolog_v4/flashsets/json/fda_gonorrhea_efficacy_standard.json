@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "fda_gonorrhea_efficacy_standard",
+    "version": "1.0",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FDA Unified Efficacy Standard for Gonorrhea Treatment",
+    "topic_domain": "technological/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_companies",
+      "public_health_agencies"
+    ],
+    "victims": [
+      "patients_with_resistant_gonorrhea",
+      "smaller_pharmaceutical_companies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Patients with Resistant Gonorrhea",
+      "comment": "Patients who develop gonorrhea and for whom existing treatments are ineffective due to increasing resistance are trapped by the constraint. They bear the costs of limited treatment options and the potential for severe health consequences."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Smaller Pharmaceutical Companies",
+      "comment": "Smaller companies are constrained by the high cost and regulatory hurdles of developing new antibiotics to meet the FDA efficacy standard. They also benefit from a clear regulatory pathway but are disadvantaged compared to larger companies with more resources."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The FDA",
+      "comment": "The FDA benefits from the efficacy standard by ensuring that approved treatments are effective, protecting public health, and maintaining its regulatory authority. The constraint coordinates the approval process."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Larger Pharmaceutical Companies",
+      "comment": "Larger companies benefit from the higher standard because they are better equipped to meet them. They are also subject to the rules and face the risk of non-approval but have arbitrage options in other markets."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer of the system, notes that the FDA efficacy standard is intended to provide a rope for public health by ensuring effective treatments for Gonorrhea but the high bar to entry creates a tangled rope for smaller companies and patients as resistance develops."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "resistance_development_rate",
+      "question": "How quickly will gonorrhea develop resistance to new antibiotics?",
+      "resolution_mechanism": "Surveillance of antibiotic resistance patterns and mathematical modeling of resistance development.",
+      "impact": "Faster resistance development would make the efficacy standard more difficult to meet, potentially leading to fewer new treatments and worse health outcomes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of resistance development affects the long-term effectiveness of the efficacy standard."
+    },
+    {
+      "id": "alternative_treatment_strategies",
+      "question": "Are there alternative treatment strategies (e.g., vaccines, novel drug targets) that could bypass the need for new antibiotics?",
+      "resolution_mechanism": "Basic and translational research on gonorrhea pathogenesis and immune responses.",
+      "impact": "Successful alternative strategies could reduce the pressure to develop new antibiotics and potentially eliminate the need for the efficacy standard.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Alternative treatment strategies could alter the landscape of gonorrhea treatment."
+    },
+    {
+      "id": "regulatory_flexibility",
+      "question": "To what extent is the FDA willing to be flexible in its application of the efficacy standard, considering the increasing threat of antibiotic resistance?",
+      "resolution_mechanism": "FDA policy statements and actions regarding antibiotic approvals.",
+      "impact": "Greater flexibility could allow for the approval of new treatments that are not as effective as existing treatments but still offer a benefit to patients with resistant infections.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "FDA's willingness to adapt the standard affects the availability of new treatments."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The FDA efficacy standard for gonorrhea treatment is intended to ensure that approved antibiotics are effective against the disease. However, the standard has become increasingly difficult to meet due to the rapid development of antibiotic resistance in gonorrhea.  An FDA advisory panel voted against approving a new oral antibiotic for uncomplicated gonorrhea, due to efficacy concerns. This decision highlights the tension between maintaining a high efficacy standard and the need for new treatments to combat drug-resistant infections. The high bar makes developing and approving new drugs very expensive and challenging for smaller companies. ",
+    "key_agents": [
+      "Patients with Resistant Gonorrhea: Primary target (powerless/trapped) \u2013 limited treatment options.",
+      "Smaller Pharmaceutical Companies: Secondary target (moderate/constrained) \u2013 high development costs.",
+      "Larger Pharmaceutical Companies: Primary beneficiary (institutional/arbitrage) \u2013 better equipped to meet standards.",
+      "Public Health Agencies: Beneficiary (institutional/arbitrage) - benefits from reduced spread of disease.",
+      "The FDA: Regulator (institutional/arbitrage) - enforces the standard to protect public health."
+    ],
+    "logic_rationale": "Extractiveness: 0.55 - The standard extracts from smaller pharma and resistant patients in order to attempt to constrain development of resistance.  Suppression: 0.70 - Significant suppression because resistant patients have no treatment options, and few new drugs can enter the pipeline. Theater ratio: 0.30 - relatively low theater in this case. The standards are objective and science based, so low opportunity for theater.",
+    "perspectival_gap": "Patients with resistance have very few options due to the high bar, and thus feel they are in a snare.  Larger pharma companies, with sufficient resources to get over the high bar, see it as a coordination mechanism to ensure efficacy.",
+    "directionality_logic": "The standard directionality logic applies.  Patients are trapped, pharma is constrained but with potential exit, and regulators have arbitrage due to the scope of options available. Smaller pharmaceutical companies, while benefiting from a clear regulatory pathway, are at a disadvantage compared to larger companies with more resources to meet the high efficacy standards, thus experiencing the effect of a Tangled Rope.",
+    "mandatrophy_analysis": "The constraint does not mislabel coordination as extraction. The FDA is trying to coordinate development of effective drug treatments with the need to stop resistance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

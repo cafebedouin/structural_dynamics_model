@@ -2,23 +2,23 @@
   "header": {
     "constraint_id": "awareness_without_leverage",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cassandra"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
-    "human_readable": "The Cassandra Paradox",
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "The Cassandra Paradox: Awareness Without Leverage",
     "topic_domain": "social/political",
-    "requires_active_enforcement": true,
-    "beneficiaries": [
-      "status_quo_stakeholders"
-    ],
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
     "victims": [
-      "cassandra_agents",
-      "general_public"
+      "informed_observers",
+      "epistemic_commons",
+      "prediction_accuracy"
     ]
   },
   "perspectives": [
@@ -27,45 +27,45 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "national",
-      "label": "The General Public",
-      "comment": "PERSPECTIVE 1: THE GENERAL PUBLIC (SNARE) — Trapped within the system, they will bear the full, unavoidable cost of the predicted crisis. From their view, the system is purely extractive, silencing necessary warnings to their detriment. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+      "spatial_scope": "global",
+      "label": "The Cassandra (Aware but Powerless)",
+      "comment": "PERSPECTIVE 1: THE CASSANDRA (SNARE) \u2014 Possesses accurate foresight but no mechanism to alter outcomes. Bears full cost of being disbelieved: credibility damage, psychological burden of futile warning, isolation. No exit available \u2014 cannot unknow the failure, cannot compel action, cannot protect themselves from reputational harm when prediction fails or succeeds. Maximum structural extraction from a powerless epistemic position."
     },
     {
       "classification_type": "snare",
       "agent_power": "moderate",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Cassandra Agent",
-      "comment": "PERSPECTIVE 2: THE CASSANDRA AGENT (SNARE) — Possesses knowledge but is structurally silenced. Their exit is constrained by professional reputation and moral commitment. They experience the system as a high-suppression trap that invalidates their primary asset (knowledge). d≈0.80, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "spatial_scope": "national",
+      "label": "The Institutional Whistleblower",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL WHISTLEBLOWER (SNARE) \u2014 Has internal credibility and technical expertise (moderate power) but constrained exit: retaliation risk, career destruction, legal jeopardy. The institutional position gives them platform but the suppression mechanisms (NDAs, retaliation threat, institutional reputation protection) remove their exit option. Aware of structural failure and has some voice, but unable to amplify without bearing severe costs."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Status Quo Leadership",
-      "comment": "PERSPECTIVE 3: STATUS QUO LEADERSHIP (ROPE) — Benefits from ignoring the warning, maximizing short-term stability, profit, or political capital. They can exit or insulate themselves before the crisis hits. For them, the system is a coordination mechanism to maintain order and suppress dissent. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Activist Coalition",
-      "comment": "PERSPECTIVE 4: ACTIVIST COALITION (SCAFFOLD) — Organized groups that believe the warning see the current institutional failure as a temporary state. They are building parallel structures (awareness campaigns, political pressure) intended to force change, after which their intense mobilization can be sunset. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.41."
+      "spatial_scope": "global",
+      "label": "The Decision-Making Authority",
+      "comment": "PERSPECTIVE 3: DECISION-MAKING AUTHORITY (ROPE) \u2014 Receives early warnings but benefits from the status quo through institutional inertia, deferral of action costs, and information asymmetry. Experiences the Cassandra constraint as a coordination mechanism: the predictive failure allows them to claim surprise when disaster strikes ('nobody could have foreseen this'). Can exit by choosing to act or not; experiences no suppression because they control the enforcement apparatus."
     },
     {
       "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Bureaucratic Process",
-      "comment": "PERSPECTIVE 5: THE BUREAUCRATIC PROCESS (PITON) — The institutional machinery itself (committees, review boards, studies) is largely performative. It gives the appearance of addressing the warning while functionally serving to delay action. Its own function has atrophied, persisting through inertia. theater_ratio=0.75 satisfies the piton gate (≥0.70)."
+      "spatial_scope": "global",
+      "label": "The Institutional Reputation System",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL REPUTATION SYSTEM (PITON) \u2014 Theoretically, reputation damage from ignoring accurate warnings should constrain decision-makers. But institutional reputation systems are heavily theatrical: organizations survive public scandals, bad predictions are redefined or forgotten, and the act of 'taking warnings seriously' is performed without actual behavior change. The reputation mechanism persists as scaffolding but has lost functional leverage. Theater ratio high because institutional responses (crisis committees, official apologies, token reforms) are performative rather than structural."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Media/Epistemic Intermediary",
+      "comment": "PERSPECTIVE 5: MEDIA/EPISTEMIC INTERMEDIARY (TANGLED ROPE) \u2014 Has platform and reach (powerful, mobile) but also embedded in attention economy and advertisers' interests. Benefits from catastrophe narratives (coordination function: alerts public to risk). But also extracts through sensationalism, false balance (giving credibility to deniers), and attention-capture without action mechanisms. Possesses leverage but partly uses it for extraction rather than warning escalation."
     },
     {
       "classification_type": "mountain",
@@ -73,91 +73,105 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Cynical Observer",
-      "comment": "PERSPECTIVE 6: THE CYNICAL OBSERVER (MOUNTAIN) — This perspective naturalizes the failure, claiming that large human systems are inherently deaf to prophetic warnings. It frames a contingent social structure as an immutable law of nature. The engine will detect this as a false summit, as the base properties (ε=0.55, suppression=0.75) fail the mountain classification gates."
+      "label": "The Analytical Observer (Systems View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (NATURAL LAW VIEW) \u2014 From a civilizational perspective, information asymmetry in complex systems is an immutable structural property: decision-makers always have incomplete information, incentives are always misaligned, and accurate predictions about low-probability high-impact events always face credibility barriers. The paradox appears as inherent to governance under uncertainty. HOWEVER: the structural data contradicts this \u2014 the extractiveness arises from specific institutional choices (suppression, retaliation mechanisms, reputational theater), not from physics or logic."
     }
   ],
   "omegas": [
     {
-      "id": "intentionality_vs_inertia",
-      "question": "Is the suppression of the warning a deliberate, coordinated act by beneficiaries, or an emergent property of uncoordinated institutional inertia?",
-      "resolution_mechanism": "Internal communications analysis (e.g., leaked documents, whistleblower testimony) to distinguish between explicit strategy and implicit bias.",
-      "impact": "If intentional, strengthens the Snare classification. If inertial, strengthens the Piton classification for the system's core.",
+      "id": "credibility_threshold_mechanism",
+      "question": "What determines whether an accurate prediction achieves behavioral change: the quality of evidence, the source's institutional status, the catastrophe's proximity, or the decision-maker's prior commitment?",
+      "resolution_mechanism": "Historical case comparison (ignored accurate warnings vs warnings that triggered action); interview analysis of decision-maker reasoning; causal pathway detection",
+      "impact": "If evidence quality dominates: Cassandra problem is solvable through better communication. If institutional status dominates: problem requires structural power redistribution. If proximity dominates: problem is time-horizon misalignment. If prior commitment dominates: problem is intractable without replacing decision-makers.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing between deliberate suppression and emergent institutional inertia."
+      "description": "Mechanism determining whether predictions trigger behavioral change"
     },
     {
-      "id": "critical_mass_threshold",
-      "question": "Is there a quantifiable threshold of public awareness, elite consensus, or crisis proximity at which the system's resistance collapses and the warning is heeded?",
-      "resolution_mechanism": "Comparative historical analysis of ignored warnings that were eventually acted upon, correlating action with polling data, media saturation, and proximity to disaster.",
-      "impact": "If a predictable threshold exists, the constraint is better modeled as a Scaffold with a conditional sunset clause. If not, it reinforces the Snare/Piton view of a more stable, self-perpetuating system.",
-      "confidence": "low",
+      "id": "suppression_enforcement_agent",
+      "question": "Does suppression of Cassandra warnings operate through active institutional enforcement (retaliation, censorship) or through structural incentive misalignment (career risk, attention scarcity)?",
+      "resolution_mechanism": "Detailed case analysis of suppression mechanisms in specific predictions (climate models suppressed how?, financial system warnings suppressed how?); distinction between explicit retaliation vs passive neglect",
+      "impact": "If active enforcement: suppression coefficient \u2265 0.70, snare classification robust. If structural incentive only: suppression coefficient may be overestimated, constraint shifts toward tangled_rope.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Threshold for public awareness to overcome systemic resistance."
+      "description": "Nature of suppression mechanism (enforcement vs incentive)"
     },
     {
-      "id": "communication_framing_efficacy",
-      "question": "To what extent is the failure structural versus a failure of communication? Could a different rhetorical framing have overcome the resistance?",
-      "resolution_mechanism": "A/B testing of crisis messaging on policy-maker proxies; retrospective analysis of cases where similar warnings were heeded, focusing on the communication strategy used.",
-      "impact": "If framing is highly effective, the constraint's suppression value is lower than estimated. If all frames fail, the suppression is confirmed to be deeply structural.",
+      "id": "extractive_vs_coordinate_benefit",
+      "question": "Does the decision-making authority benefit from their own prediction-ignoring (extraction from Cassandra), or do they simply fail to pay the cost of action (coordination failure)?",
+      "resolution_mechanism": "Analysis of whether decision-maker receives direct benefit from catastrophe (insurance payoff, avoided transition costs, maintained power structure) vs simply defers action costs; counterfactual analysis of what decision-maker gains from inaction",
+      "impact": "If extraction benefit present: snare classification confirmed across perspectives. If only coordination failure: multiple perspectives should classify as rope or scaffold, not snare.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether the failure is purely structural or a matter of communication framing."
+      "description": "Whether decision-maker extracts from ignoring predictions or simply fails to coordinate"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.55
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.5
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.65
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.75
+      "value": 0.64
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The Cassandra Paradox describes the structural condition where an agent possesses accurate, often critical, foresight about a systemic risk but lacks the leverage or credibility to compel action. The constraint is not the lack of information, but the system's organized deafness to it. This deafness is maintained by institutional inertia, misaligned incentives, and active suppression by those who benefit from the status quo. The paradox creates a type-diverse landscape where the same set of facts is perceived as coordination (Rope), pure extraction (Snare), temporary dysfunction (Scaffold), or performative ritual (Piton), depending entirely on the observer's structural position.",
+    "narrative_context": "The Cassandra Paradox describes a structural constraint where accurate knowledge of systemic failure provides no leverage to prevent it. The constraint manifests across domains: climate scientists publishing peer-reviewed predictions that policy-makers ignore; financial system analysts warning of bubble dynamics before collapses; epidemiologists forecasting pandemic waves unheeded; security specialists predicting infrastructure vulnerabilities left unpatched. The constraint exhibits high extractiveness (0.52) because the suppression mechanism (0.68) operates not through rational disagreement but through institutional inertia, retaliation threat, and performative response theater (0.64). The Cassandra bears full cost of awareness \u2014 psychological burden, credibility damage, isolation \u2014 while decision-making authorities capture benefits of inaction through deferral of expensive corrections. The constraint's extractiveness has increased over the interval (0.32 \u2192 0.52) as information asymmetry and institutional complexity have grown: more actors possess more data, fewer decision-makers integrate it, and theater (official acknowledgment without behavioral change) has become more sophisticated as an avoidance mechanism.",
     "key_agents": [
-      "The Cassandra Agent: The expert/whistleblower with foresight (moderate/constrained) - primary victim.",
-      "Status Quo Stakeholders: Institutional leadership benefiting from inaction (institutional/arbitrage) - primary beneficiary.",
-      "The General Public: The population who will suffer the eventual consequences (powerless/trapped) - secondary victim.",
-      "The Bureaucratic Process: The institutional machinery of delay (institutional/constrained) - source of theater and inertia.",
-      "The Activist Coalition: Organized opposition attempting to force change (organized/mobile) - agents of potential sunset.",
-      "The Cynical Observer: The analyst who naturalizes the failure (analytical/analytical) - source of the false mountain claim."
+      "Cassandra (informed observer): Powerless/trapped \u2014 possesses accurate foresight; bears costs of disbelief and isolation",
+      "Institutional whistleblower: Moderate/constrained \u2014 has technical expertise and internal platform; faces retaliation risk and career jeopardy",
+      "Decision-making authority: Institutional/arbitrage \u2014 receives warnings; benefits from inaction through deferral costs and maintains status quo",
+      "Institutional reputation system: Organized/constrained \u2014 theoretically constrains authority but operates through theater rather than enforcement",
+      "Media/epistemic intermediary: Powerful/mobile \u2014 amplifies warnings but benefits from catastrophe narratives and attention scarcity; mixed coordination-extraction",
+      "Analytical observer: Civilizational/analytical \u2014 risks naturalizing contingent suppression mechanisms as immutable features of governance"
     ],
-    "logic_rationale": "Extractiveness (0.55): Represents the deferred but significant cost of the eventual crisis, which is effectively extracted from the future to maintain present stability/profit. Suppression (0.75): Extremely high. The core of the paradox is the structural silencing of a correct warning through mechanisms like groupthink, credential-assassination, and bureaucratic delay. Theater Ratio (0.75): High. The system's response to the warning is typically performative: forming committees, commissioning endless studies, and holding listening sessions that create an illusion of action while ensuring none is taken. This high theater score is crucial for the Piton perspective.",
-    "perspectival_gap": "The gap is profound and demonstrates the core of the indexical method. For leadership, maintaining the status quo is a successful coordination (Rope). For the public and the Cassandra, it's a trap (Snare). For activists, it's a temporary problem to be overcome (Scaffold). For the bureaucracy itself, it's a hollowed-out ritual (Piton). For the detached cynic, it's an unchangeable law of social physics (Mountain). The base properties are fixed; the classification shifts with the observer's relationship to power, exit, and time.",
-    "directionality_logic": "Beneficiaries (Status Quo Stakeholders) with arbitrage exit options derive a very low directionality (d), resulting in low or negative effective extraction (χ), hence they perceive a Rope. Victims (Public, Cassandra) with trapped or constrained exit options derive a very high d, leading to high χ and a Snare classification. Organized agents (Activists) have more agency, leading to a moderate d and a χ value that falls into the Scaffold or Tangled Rope range. The system's classification is driven by who benefits from the silence and who pays the price for the eventual failure.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that a single phenomenon can be correctly classified as multiple types simultaneously. The error is to insist on a single 'true' classification. The Cassandra Paradox is not *just* a Snare or *just* a Piton; it is the entire presheaf of classifications over the different structural positions. The analytical task is to map this landscape, not to pick a peak. The framework correctly identifies the 'Mountain' view as a false summit, preventing the naturalization of a contingent, and deeply political, institutional failure."
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The constraint extracts from Cassandras through credibility damage, psychological cost, and isolation. Decision-making authorities extract through inaction benefits: deferral of costly corrections, maintenance of existing power structures, avoidance of admitting prior failures. The extraction is not maximal (snare threshold is 0.46 effective extraction) because some accurate predictions do eventually change behavior, creating partial exit for Cassandras and some accountability for authorities. Suppression (0.68): High. Multiple suppression mechanisms operate: (1) institutional retaliation against whistleblowers; (2) structural incentive misalignment \u2014 Cassandras' positions (researchers, junior analysts, outside observers) lack institutional decision-making power; (3) performative institutional response theater that simulates action without behavioral change; (4) attention economy dynamics that favor dramatic narratives over sustained technical warnings; (5) temporal mismatch \u2014 warnings about slow-moving systemic failures compete for urgency against immediate operational demands. Theater ratio (0.64): Moderate-high and increasing. The institutional response to warnings has become increasingly performative: crisis committees are convened (signal of seriousness), apologies are issued, official reviews are commissioned, future prevention is promised \u2014 all with low probability of actual structural change. The theater has increased over the measurement interval (0.48 \u2192 0.64) as institutions have learned that performance of responsiveness can substitute for actual response, at least in the medium term.",
+    "perspectival_gap": "The Cassandra and whistleblower perspectives classify as pure snare: high extraction, no exit, trapped in awareness without leverage. The decision-making authority classifies as rope: they experience the warning system as pure coordination (information provision without enforcement) because they control the response decision and benefit from inaction. The media/intermediary perspective is tangled rope: genuine coordination function (alerting public to risk) combined with extraction (attention capture, sensationalism profit). The reputation system is piton: theoretically constrains authority but persists through theatrical performance rather than functional constraint. The analytical observer risks mountain classification (information asymmetry is inherent to governance) but the structural data reveals contingent institutional choices, not natural law. The perspectival gap is maximum because powerless observers and powerful decision-makers have completely opposite experiences of the same constraint: one experiences extraction without exit, the other experiences low-cost coordination.",
+    "directionality_logic": "Directionality for Cassandra (powerless/trapped): d \u2248 0.95, experiences maximum effective extraction (high f(d)). No beneficiary relationship; full victim status. Exit options: none \u2014 cannot unknow the future, cannot force action, cannot protect reputation. Directionality for whistleblower (moderate/constrained): d \u2248 0.70, experiences significant extraction. Victim status (bears retaliation risk); constrained exit (cannot leave without career cost). Directionality for authority (institutional/arbitrage): d \u2248 0.10, experiences near-zero or negative extraction. Beneficiary status (inaction benefits); arbitrage exit (can choose response or inaction at low structural cost). Directionality for media (powerful/mobile): d \u2248 0.50, experiences symmetric mixed extraction and benefit. Both beneficiary (attention profit, narrative material) and victim (credibility cost if predictions fail); mobile exit (can choose coverage or ignore). The engine derives d from beneficiary/victim declarations and exit options; in this case, the constraints are heavily asymmetric across perspectives, producing the maximum perspectival gap.",
+    "mandatrophy_analysis": "EXTRACTIVE VS COORDINATION AMBIGUITY: The Cassandra constraint initially appears as pure coordination failure (information provision without response) but resolves as extraction when institutional incentives are examined. The authority benefits from inaction (deferral of costly corrections, maintained status quo), making the constraint extractive rather than purely coordinative. However, the authority does not actively prevent warnings from being issued (no censorship in most cases) \u2014 suppression operates through structural incentive misalignment and retaliation threat, not through active enforcement of silence. This is the defining feature of tangled rope candidates: genuine coordination function (warnings are issued and disseminated) combined with asymmetric extraction (Cassandras bear costs, authorities capture benefits). The snare classification at powerless/trapped perspective is robust because the epistemic commons and informed observers have zero leverage and bear all costs. The rope classification at institutional/arbitrage perspective reflects the authority's genuine experience: warnings are a low-cost informational input they can ignore without structural consequence. The divergence resolves by noting that the constraint operates at different structural levels: (1) information level: coordination (warnings are transmitted); (2) decision level: extraction (authorities benefit from ignoring warnings); (3) epistemic level: snare (epistemic reliability is degraded and no agent advocates for it). The presheaf over these observation sites shows the constraint simultaneously coordinates on information transmission and extracts on decision outcomes."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
-  }
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "reputational_theater",
+      "temporal_mismatch_governance",
+      "institutional_learned_helplessness"
+    ],
+    "dual_formulation_note": "The Cassandra Paradox decomposes into multiple structurally distinct constraints: (1) information asymmetry (who knows what) \u2014 coordination problem; (2) decision-making authority alignment (who decides) \u2014 extraction problem; (3) institutional reputation response (how authority responds publicly) \u2014 piton problem. Each has its own \u03b5 value and classification. This story focuses on the integrated constraint of awareness without leverage, which is the snare intersection of all three. The downstream constraints map specific institutional contexts: reputational theater in governance, temporal mismatch between warning timescales and decision timescales, and learned helplessness (Cassandras stopping warnings after repeated failure)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
 }

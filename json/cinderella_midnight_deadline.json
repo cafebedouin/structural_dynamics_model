@@ -2,92 +2,184 @@
   "header": {
     "constraint_id": "cinderella_midnight_deadline",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cind"
   },
   "base_properties": {
-    "extractiveness": 0.28,
-    "suppression": 0.9,
-    "theater_ratio": 0.15,
-    "claimed_type": "scaffold",
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
     "human_readable": "The Fairy Godmother's Midnight Deadline",
     "topic_domain": "magical/social",
     "requires_active_enforcement": true,
     "has_sunset_clause": true,
     "beneficiaries": [
       "cinderella",
-      "fairy_godmother"
+      "royal_court"
     ],
     "victims": [
-      "cinderella"
+      "cinderella_authentic_identity",
+      "stepfamily_authority"
     ]
   },
   "perspectives": [
     {
-      "classification_type": "scaffold",
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Cinderella at Midnight",
+      "comment": "PERSPECTIVE 1: CINDERELLA AT MIDNIGHT (SNARE) \u2014 The transformation is temporary and enforced by external magic. Cinderella cannot negotiate, extend, or escape the deadline. The constraint extracts her authentic identity and replaces it with a borrowed persona that dissolves at midnight. She is trapped by the magic's termination rule \u2014 no alternatives, no escape options, maximum suppression of her agency."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "Cinderella (The User)",
-      "comment": "PERSPECTIVE 1: CINDERELLA (SCAFFOLD) — For Cinderella, the magic is a temporary support structure enabling her to achieve a specific goal (attend the ball, meet the Prince). The deadline is the explicit sunset clause. She is both beneficiary (gains access) and victim (bears the risk of humiliating reversion). Her exit is constrained; she cannot alter the terms. The low effective extraction (χ ≈ 0.19) reflects the net positive utility despite the risk."
+      "spatial_scope": "regional",
+      "label": "Cinderella's Negotiated Position",
+      "comment": "PERSPECTIVE 2: CINDERELLA NEGOTIATED (TANGLED ROPE) \u2014 The Fairy Godmother grants the transformation voluntarily as a gift. Cinderella benefits from access to the ball, social elevation, and romantic possibility. However, the benefit is conditional on the deadline \u2014 she cannot stay, cannot claim the transformation as her own, cannot make it permanent. She is both coordinated (given agency to attend) and extracted (stripped of the ability to sustain that agency beyond midnight). Active enforcement via magical termination."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "local",
-      "label": "The Fairy Godmother (The Provider)",
-      "comment": "PERSPECTIVE 2: FAIRY GODMOTHER (ROPE) — As the provider of the magic, the Fairy Godmother perceives the constraint as a pure coordination mechanism. She sets the terms (arbitrage) to solve a problem for her beneficiary. The deadline is simply a parameter of the solution. Her directionality is that of a pure beneficiary (d≈0.05), resulting in negative effective extraction (χ≈-0.03), the signature of a subsidy or gift."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Prince (The Unaware Observer)",
-      "comment": "PERSPECTIVE 3: THE PRINCE (MOUNTAIN) — From the Prince's perspective, Cinderella's sudden departure is an inexplicable, absolute event. He is powerful within his domain but trapped by his ignorance of the constraint's nature. He cannot negotiate with it, prevent it, or understand it. It appears as an immutable law of this specific situation. The engine will flag this as a false summit, as the constraint's base properties (ε=0.28, suppression=0.90, emerges_naturally=false) are inconsistent with a true Mountain."
+      "label": "The Fairy Godmother",
+      "comment": "PERSPECTIVE 3: FAIRY GODMOTHER (ROPE) \u2014 Grants a temporary coordination gift that enables Cinderella's participation in court society. The Fairy Godmother is a pure benefactor experiencing this as a coordination mechanism: she solves the access problem (how Cinderella can attend) without extraction. She has full exit (can grant or refuse the magic) and sees no extraction flowing toward her. This is genuine gift coordination."
     },
     {
       "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Royal Court's Social Mobility Norms",
+      "comment": "PERSPECTIVE 4: ROYAL COURT SOCIAL MOBILITY (SCAFFOLD) \u2014 The magical intervention temporarily suspends the status system that normally excludes servant-class individuals from court. The deadline is explicitly a sunset clause \u2014 midnight reverts the social structure to its original form. The constraint enables temporary upward mobility with a built-in sunset, functioning as a transitional coordination mechanism. Court norms are mobile enough to accommodate temporary exceptions; the real marriage at the end would represent permanent renegotiation rather than scaffold collapse."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Stepfamily's Authority System",
+      "comment": "PERSPECTIVE 5: STEPFAMILY AUTHORITY (PITON) \u2014 The household authority structure that makes Cinderella a servant persists through theatrical performance of household order and tradition. The Fairy Godmother's intervention bypasses this system entirely by taking Cinderella outside the house. The stepfamily's authority is degraded/inertial \u2014 it has no enforcement mechanism beyond physical proximity and social convention. When Cinderella leaves, the authority dissolves. It is maintained through habit and theater, not genuine power."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (SCAFFOLD) — The analytical view confirms the constraint's structural identity as a Scaffold. It is a temporary, enabling structure with a defined, non-negotiable end point, designed to facilitate a change in state for a specific agent. The combination of a clear coordination function, an explicit sunset clause, and low effective extraction confirms this classification."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a universal/civilizational view, the magical transformation embodies an immutable constraint: all borrowed power has an expiration date. The deadline is not a convention but a law of magic itself \u2014 transformation cannot be sustained indefinitely without deeper change. The stroke of midnight represents the fundamental impossibility of maintaining a false identity. However, the engine will identify this as a false summit: the 'law' is actually a contract term set by the Fairy Godmother, not a natural limit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "magic_sustainability_threshold",
+      "question": "Is the midnight deadline a hard magical law or a negotiable contract term set by the Fairy Godmother?",
+      "resolution_mechanism": "Counterfactual analysis: Can the deadline be extended if Cinderella and the Fairy Godmother agree? Does the magic enforce the deadline or does the Godmother?",
+      "impact": "If hard law: constraint is Mountain (transformation decay is inherent to magic). If negotiable: constraint is Snare (the deadline is a form of coercion enforced by the Godmother's authority).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether midnight deadline is immutable magic law or negotiable contract"
+    },
+    {
+      "id": "royal_recognition_binding_power",
+      "question": "Does the Prince's recognition of Cinderella at the ball constitute a permanent social bond that could override the magical deadline?",
+      "resolution_mechanism": "Narrative analysis: Can the Prince's subsequent search for the slipper owner override the Fairy Godmother's termination? Is royal recognition sufficient to make the transformation permanent?",
+      "impact": "If recognition is binding: the midnight deadline is merely a test (Scaffold). If recognition has no power: the deadline is truly separating (Snare/Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether royal recognition can override the magical deadline"
+    },
+    {
+      "id": "stepfamily_authority_reinforcement",
+      "question": "Does the magical intervention reveal the stepfamily's authority as fundamentally weak, or does the Fairy Godmother's deadline itself reinforce their control by ensuring Cinderella must return?",
+      "resolution_mechanism": "Structural analysis: Is the deadline a tool of liberation or a mechanism that forces re-subordination? Does it strengthen the stepfamily's hold by making escape temporary?",
+      "impact": "If liberation: Fairy Godmother opposes the stepfamily. If reinforcement: the Fairy Godmother's deadline inadvertently serves the stepfamily's interest in keeping Cinderella subordinate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the deadline reinforces or undermines stepfamily authority"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4,
+      "id_override": "cind_theater_0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.65,
+      "id_override": "cind_theater_4"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.65,
+      "id_override": "cind_theater_8"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "cind_extract_0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52,
+      "id_override": "cind_extract_4"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52,
+      "id_override": "cind_extract_8"
     }
   ],
   "interval": {
-    "start": 2000,
-    "end": 2400
+    "start": 0,
+    "end": 8
   },
-  "omegas": [
-    {
-      "id": "magical_law_vs_arbitrary_rule",
-      "question": "Is the midnight deadline an inherent, immutable limitation of the Fairy Godmother's magic, or is it an arbitrary rule she imposed for pedagogical or narrative reasons?",
-      "resolution_mechanism": "Comparative analysis of magical systems in the story's universe; direct testimony from the Fairy Godmother.",
-      "impact": "If it's an inherent limitation, the constraint has Mountain-like properties, and the Fairy Godmother's power is less absolute. If it's an arbitrary rule, it is purely a Scaffold, and the suppression is a feature of her choice, not a necessity.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether the deadline is a fundamental limit of magic or an imposed rule."
-    }
-  ],
   "commentary": {
-    "narrative_context": "A Fairy Godmother grants Cinderella a temporary, high-status transformation (coach, gown, glass slippers) to attend a royal ball, enabling a brief circumvention of her oppressive social reality. The transformation is bound by a single, absolute constraint: it will expire at the stroke of midnight, at which point all magical items will revert to their mundane original forms. This constraint serves as the central tension of the narrative's climax.",
+    "narrative_context": "The Fairy Godmother's midnight deadline creates a structural tension between gift and coercion. On its surface, the constraint grants Cinderella temporary social elevation and access to the royal court \u2014 a genuine coordination benefit. But the mechanism is enforced by magical termination: at midnight, the transformation dissolves, forcing Cinderella to flee and reverting her to servant status. This constraint exhibits five distinct classification types from different structural positions, revealing how the same gift can be experienced as coordinate mechanism (rope), temporary mobility platform (scaffold), pure extraction (snare), mixed gift-coercion (tangled rope), or degraded social authority (piton), depending on the observer's relationship to the deadline. The theater_ratio (0.65) reflects that the ball itself is performative \u2014 Cinderella plays a role, the court performs courtship rituals, the Fairy Godmother's magic is theatrical spectacle. What appears to be social transformation is largely role-play with a hard termination rule. The extractiveness (0.52) is moderate-high: the deadline extracts Cinderella's agency to negotiate or remain, while the gift coordination function provides genuine (temporary) benefit.",
     "key_agents": [
-      "Cinderella: Primary beneficiary and victim (moderate/constrained) — receives the benefit of the transformation but bears the risk of the deadline.",
-      "Fairy Godmother: The constraint's author and enforcer (institutional/arbitrage) — provides the magical 'scaffolding' and sets its terms.",
-      "The Prince: Unaware observer (powerful/trapped) — interacts with the *effect* of the constraint (Cinderella's presence and sudden departure) but is ignorant of its cause, perceiving it as an absolute, inexplicable event."
+      "Cinderella: Primary victim/beneficiary (powerless/trapped-to-constrained) \u2014 receives temporary transformation but is trapped by the midnight deadline; cannot negotiate, cannot stay, cannot claim the elevated identity as her own",
+      "Fairy Godmother: Primary benefactor (institutional/arbitrage) \u2014 grants the transformation as a gift; has full exit and sees the interaction as pure coordination without extraction flowing toward her",
+      "Stepfamily: Institutional authority holder (institutional/arbitrage) \u2014 their household power is degraded and theatrical; the deadline paradoxically ensures Cinderella's re-subordination by forcing her return",
+      "Royal Court/Prince: Secondary beneficiary (powerful/mobile) \u2014 enables Cinderella's participation in court society; benefits from the narrative outcome (marriage) which validates the temporary mobility system",
+      "Cinderella's Authentic Identity: Abstract victim (powerless/trapped) \u2014 the transformation extracts and suppresses her true identity, replacing it with a borrowed persona that must dissolve at midnight",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the deadline as a law of magic when it is actually a contractual term set by the Fairy Godmother"
     ],
-    "logic_rationale": "Extractiveness (ε=0.28): Low. The constraint is fundamentally a gift. The 'extraction' represents the potential social cost and humiliation Cinderella faces if she fails to adhere to the deadline. It's a risk, not a direct transfer of value. Suppression (0.90): High. The deadline is absolute and non-negotiable. There are no alternative magical providers or ways to extend the time. Cinderella's only option is compliance. Theater Ratio (0.15): Low. While the transformation itself is high-theater, the *deadline* is a brutally functional, non-performative rule. Its enforcement is automatic and devoid of ritual.",
-    "perspectival_gap": "The gap is driven by information asymmetry. Cinderella, knowing the terms, sees a temporary support structure (Scaffold). The Fairy Godmother, setting the terms, sees a coordination tool (Rope). The Prince, knowing nothing of the terms, experiences the consequence as an unchangeable fact of his reality (Mountain). This demonstrates how an artificial, contingent rule can appear as a natural law to those outside its operational context.",
-    "directionality_logic": "Cinderella is declared as both beneficiary and victim. She gains the opportunity but also carries the entire risk of the spell's collapse. This dual role is characteristic of agents using temporary, high-stakes support systems. The Fairy Godmother is a beneficiary, as her goal (Cinderella's happiness) is advanced. This structural relationship correctly derives a low-to-moderate directionality (d) for Cinderella and a very low d for the Godmother, producing the Scaffold and Rope classifications respectively.",
-    "mandatrophy_analysis": "This constraint is a canonical example of a Scaffold. It avoids mandatrophy by correctly identifying the structure as temporary and enabling, rather than purely extractive (Snare) or permanent (Mountain). The Prince's 'Mountain' perspective highlights a common failure mode: mistaking the local, observable effects of a contingent, man-made rule for an immutable law of nature. The DR system correctly identifies this as a 'false summit' by checking the constraint's underlying structural properties, which lack the signature of a natural law."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The deadline mechanism extracts Cinderella's ability to sustain the transformation or negotiate its terms. She receives a gift (coordination benefit) but at the cost of temporal termination \u2014 the magical enforcement ensures she cannot keep the elevation. The extractiveness increased from 0.25 (initial grant) to 0.52 (sustained until midnight) because the forced return compounds the extraction. Suppression (0.68): High. Cinderella has no alternatives to midnight termination. She cannot negotiate the deadline, extend it, or refuse the magic's return. The stepfamily holds her under physical and social control; the Fairy Godmother's magic is absolute. The suppress value reflects both the lack of exit options and the external magical enforcement. Theater ratio (0.65): Moderate-high. The ball is performative spectacle. Cinderella performs a role, the court performs courtship, the Fairy Godmother's magic is theatrical transformation. But the theater is functional \u2014 it enables social participation that would otherwise be impossible. The high theater reflects that the 'real' work (romance, social recognition) happens within the performed interaction. Theater increased from 0.40 (before the ball) to 0.65 (during and after, as the magic becomes central to the narrative).",
+    "directionality_logic": "Cinderella's directionality (d) is high: she is the primary victim of the deadline enforcement, has trapped exit options, and bears the cost of the termination rule. The Fairy Godmother's d is low: she is a benefactor with arbitrage exit, sees no extraction flowing toward herself, and experiences the constraint as pure coordination. The stepfamily's d is paradoxical: they appear to be targets of disruption (Cinderella leaves their authority), but the deadline ensures her return, so they benefit from the constraint's termination rule enforcing re-subordination. The royal court's d is moderate: they benefit from the social opening (temporary mobility) but are not directly coerced by the deadline. The engine derives Cinderella's high d from victim status + trapped exit options, producing high f(d) and high effective extraction. The Fairy Godmother's low d (beneficiary + arbitrage) produces low or negative f(d), appearing as no extraction to her. The stepfamily's paradoxical d requires an override if the structural data is to capture their benefit from the deadline's return mechanism.",
+    "perspectival_gap": "This constraint shows maximum perspectival disagreement across the six types. Cinderella experiences it as a snare (pure extraction via forced termination). The Fairy Godmother experiences it as rope (pure coordination gift). The royal court experiences it as scaffold (temporary mobility with an expected sunset). The stepfamily experiences it as piton (their degraded authority is maintained only by Cinderella's forced return). The analytical observer risks seeing mountain (the deadline as immutable magic law) but the structural data reveals this as a false summit. The perspectival gap is not due to measurement ambiguity but to genuine structural differences in exit options and relationship to the deadline. Each observer's classification is locally correct for their position \u2014 the global picture requires all six types simultaneously.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing between the gift's coordination function and the deadline's extraction mechanism. The Fairy Godmother's grant is genuine coordination (Rope from her perspective) \u2014 it solves the access problem without extraction. But the deadline is genuine extraction (Snare from Cinderella's perspective) \u2014 it forces termination without negotiation. The Tangled Rope classification at moderate power and constrained exit captures the hybrid: Cinderella benefits from access and elevation (coordination) but is extracted from via forced return (coercion). The scaffold perspective shows how the deadline could be beneficial if it were genuinely temporary (e.g., a test or trial period before permanent elevation) \u2014 but without commitment to permanent integration, it remains extraction of her agency. The false summit (mountain view) naturalizes the deadline as magic law rather than the Fairy Godmother's contractual choice. Mandatrophy is resolved by showing that the gift and deadline are separable: the first is coordination, the second is extraction. Their combination is neither pure rope nor pure snare, but the mixed mechanism that Tangled Rope captures."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "stepfamily_servitude_authority",
+      "royal_status_hierarchy"
+    ],
+    "dual_formulation_note": "The Fairy Godmother's midnight deadline decomposes into two structurally distinct constraints: (1) the gift coordination mechanism (Rope, \u03b5\u22480.08) which enables Cinderella's temporary access to the court, and (2) the deadline enforcement mechanism (Tangled Rope/Snare, \u03b5\u22480.52) which forces her return and maintains her subordination. The gift alone would be pure coordination; the deadline mechanism converts it into extraction. These are linked via network dependency \u2014 the deadline's extractive force depends on the stepfamily's pre-existing authority structure, and the stepfamily's authority is revealed as theatrical (piton) by the gift's demonstration that escape is possible."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
 }

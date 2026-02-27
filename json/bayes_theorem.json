@@ -2,47 +2,72 @@
   "header": {
     "constraint_id": "bayes_theorem",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bayes"
   },
   "base_properties": {
-    "extractiveness": 0.08,
-    "suppression": 0.04,
-    "theater_ratio": 0.1,
-    "claimed_type": "mountain",
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
     "human_readable": "Bayesian Reasoning Bias (Base Rate Neglect)",
-    "topic_domain": "social/cognitive_science",
-    "emerges_naturally": true,
-    "accessibility_collapse": 0.9,
-    "resistance": 0.1
+    "topic_domain": "social/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "persuaders_exploiting_bias",
+      "institutional_gatekeepers"
+    ],
+    "victims": [
+      "individual_reasoners",
+      "epistemic_accuracy"
+    ]
   },
   "perspectives": [
     {
-      "classification_type": "mountain",
+      "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
-      "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Untrained Individual",
-      "comment": "PERSPECTIVE 1: UNTRAINED INDIVIDUAL (MOUNTAIN) — For an individual without statistical training, the bias is an inescapable feature of their own cognition. It's not a rule imposed on them; it's the path of least resistance for their thinking. They are trapped within their own intuitive judgments, making this a Mountain from their perspective."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "institutional",
       "time_horizon": "biographical",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Manipulator (Marketer/Demagogue)",
-      "comment": "PERSPECTIVE 2: THE MANIPULATOR (MOUNTAIN) — An agent who exploits the bias (e.g., a marketer using a vivid testimonial over statistics) also perceives the bias itself as a Mountain. It is a reliable, unchangeable feature of the human landscape they can leverage. The low base extractiveness (ε=0.08) of the bias itself means it remains a Mountain even for a beneficiary. The exploitation is a separate, downstream constraint."
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Reasoner",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL REASONER (SNARE) \u2014 Cognitive architecture produces systematic neglect of base rates regardless of education or training. Cannot exit the bias through awareness alone; requires constant external scaffolding (decision aids, Bayesian training). Trapped in a structural cognitive constraint with no easy exit."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Persuader",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL PERSUADER (ROPE) \u2014 Benefits from base rate neglect through framing flexibility. Marketing, risk communication, and political messaging coordinate around the bias \u2014 using salient cases rather than statistics. Net beneficiary with arbitrage options (can frame information advantageously or switch messaging strategies)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Risk Communicator",
+      "comment": "PERSPECTIVE 3: RISK COMMUNICATOR (TANGLED ROPE) \u2014 Public health, insurance, and regulatory professionals must work within the bias constraint while also trying to overcome it. Constrained by the cognitive limitation of their audience (cannot make base rates salient through willpower alone) but also benefits from coordination tools (standardized risk formats, visual aids, decision trees). Mixed extraction and coordination \u2014 bears cost of imperfect transmission but also gains coordination function."
+    },
+    {
+      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Debiasing Intervention",
+      "comment": "PERSPECTIVE 4: DEBIASING INTERVENTION (SCAFFOLD) \u2014 Educational programs, decision support systems, and deliberative institutions (citizen assemblies, expert panels) provide temporary scaffolding to bypass base rate neglect. These interventions have a sunset: as individuals acquire metacognitive awareness and institutions develop Bayesian literacy, the constraint's grip weakens. Theater ratio low (actual functional content: teaching explicit calculation) because scaffolding directly addresses the mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Mitigator (Educator/System Designer)",
-      "comment": "PERSPECTIVE 3: THE MITIGATOR (MOUNTAIN) — An educator or designer working to counteract the bias sees it as a fundamental obstacle to be engineered around. They don't try to change the mountain but build paths (scaffolds) over it, like presenting data in frequencies. The underlying cognitive tendency remains a fixed part of the terrain."
+      "label": "The Formal Logic Establishment",
+      "comment": "PERSPECTIVE 5: FORMAL LOGIC ESTABLISHMENT (PITON) \u2014 Normative decision theory prescribes Bayesian updating, but this prescription is ceremonial for most human contexts. Formal education teaches Bayes' theorem; professional standards invoke Bayesian principles; but actual decision-making in organizations relies on heuristics and salient cases. The formal framework persists through institutional inertia (science requires formal probability language) but the actual constraint-solving function has atrophied."
     },
     {
       "classification_type": "mountain",
@@ -50,33 +75,114 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) — From a formal perspective, the bias is a well-documented, predictable deviation from normative Bayesian reasoning. It functions as a natural law of cognitive science. Its properties are stable and discoverable, meeting the criteria for a Mountain."
+      "label": "The Evolutionary Perspective",
+      "comment": "PERSPECTIVE 6: EVOLUTIONARY PERSPECTIVE (MOUNTAIN) \u2014 From an analytical view, base rate neglect may be unavoidable given computational constraints and ancestral environments where local frequency information was more reliable than abstract statistics. The bias could be seen as a rational adaptation to information scarcity rather than a defect. However, this perspective risks naturalizing what is actually a contingent mismatch between modern information environments and evolved heuristics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "accessibility_of_base_rates",
+      "question": "Is base rate neglect a constraint on reasoning itself, or a constraint on information access and salience?",
+      "resolution_mechanism": "Experimental variation of base rate presentation (explicit frequency statements vs implicit proportions vs visual representations) and measurement of reasoning accuracy across presentation formats",
+      "impact": "If information access: constraint is lower \u03b5 (mountain/rope). If reasoning constraint: constraint is higher \u03b5 (snare/tangled_rope). Different interventions required.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the bias reflects computational constraint or information format"
+    },
+    {
+      "id": "domain_specificity_of_bias",
+      "question": "Does base rate neglect persist uniformly across all reasoning domains, or is it domain-dependent (worse for low-frequency events, worse for abstract categories)?",
+      "resolution_mechanism": "Meta-analysis of base rate neglect experiments across domains (medical diagnosis, criminal justice, weather prediction, social statistics); systematic variation of event frequency, category concreteness, and agent expertise",
+      "impact": "If universal: single constraint applies globally. If domain-dependent: separate constraint stories for high-frequency vs low-frequency reasoning; different \u03b5 values per domain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether base rate neglect is domain-specific or universal"
+    },
+    {
+      "id": "training_permanence",
+      "question": "Does Bayesian training produce durable debiasing or merely temporary compliance?",
+      "resolution_mechanism": "Longitudinal follow-up studies of trained reasoners; measurement of reasoning accuracy weeks, months, years after training; comparison of trained vs untrained performance in naturalistic decision-making contexts",
+      "impact": "If durable: scaffold perspective confirmed. If temporary: training is theater (piton perspective confirmed). Affects both the sunset clause logic and the mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether debiasing interventions produce lasting change"
+    },
+    {
+      "id": "institutional_exploitation_intent",
+      "question": "Is base rate neglect actively maintained by institutional actors (persuaders deliberately avoiding Bayesian formats), or merely exploited opportunistically?",
+      "resolution_mechanism": "Analysis of institutional practices in marketing, risk communication, and political messaging; measurement of base rate salience in public communication before and after regulatory intervention",
+      "impact": "If actively maintained: constraint is snare with enforcement. If exploited: constraint is snare with lower suppression and lower extractiveness. Affects classification and directionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether base rate neglect is institutionally enforced or naturally persisting"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 1970,
-    "end": 2024
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint describes the cognitive bias of base rate neglect, where individuals systematically underutilize general statistical information (base rates) in favor of specific, often more vivid, case information. This deviation from normative Bayesian reasoning is a robust feature of human cognition, often explained by dual-process theories where fast, intuitive 'Type 1' thinking overrides slow, deliberate 'Type 2' analysis. The constraint is not an external rule but an internal, emergent property of the human cognitive apparatus.",
+    "narrative_context": "Base rate neglect is a cognitive bias where individuals systematically underweight or ignore statistical base rate information (prior probabilities) when making judgments, relying instead on salient case information or vivid exemplars. This constraint operates at the intersection of individual cognition and institutional exploitation. Individual reasoners cannot escape the bias through awareness alone \u2014 it persists even in trained statisticians when cognitive load is high or information is presented in low-salience formats. Simultaneously, institutional actors (marketers, risk communicators, political persuaders, insurance companies) navigate the bias strategically \u2014 sometimes exploiting it for persuasion, sometimes fighting it through redesigned communication formats. The constraint exhibits a perspectival spread: individual reasoners experience it as an inescapable snare; persuaders experience it as coordination opportunity (rope); debiasing institutions see a temporary coordination problem solvable through scaffolding; formal logic establishments maintain ceremonial commitment to Bayesian reasoning while actual practice remains heuristic-driven (piton); and from a civilizational view, the bias might be a rational adaptation to ancestral information environments rather than a defect (false mountain). The theater ratio has increased over the measured interval as institutional persuasion has become more sophisticated at exploiting base rate neglect while simultaneously debiasing interventions have proliferated.",
     "key_agents": [
-      "Untrained Individuals: The subjects of the bias (e.g., jurors, patients, investors), who experience it as their natural mode of judgment.",
-      "Manipulators: Agents who exploit the bias for strategic gain (e.g., marketers, demagogues, trial lawyers).",
-      "Mitigators: Agents who design systems or educational programs to counteract the bias (e.g., statisticians, UI/UX designers, public health officials).",
-      "Analytical Observer: The cognitive scientist or statistician who studies the bias as a formal object."
+      "Individual Reasoners: Primary victims (powerless/trapped) \u2014 cannot escape the bias through awareness; require external support",
+      "Institutional Persuaders: Primary beneficiaries (institutional/arbitrage) \u2014 exploit the bias for marketing, political messaging, and risk communication persuasion",
+      "Risk Communicators: Mixed position (moderate/constrained) \u2014 public health, insurance, and regulatory professionals must work within the bias while attempting to overcome it",
+      "Debiasing Institutions: Organized agents (organized/constrained) \u2014 educational programs, decision support systems, expert institutions providing scaffolding solutions",
+      "Formal Logic Establishment: Institutional actor (institutional/arbitrage) \u2014 maintains normative commitment to Bayesian reasoning; actual constraint-solving function degraded",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 can see the bias as either a defect or a rational adaptation to ancestral environments"
     ],
-    "logic_rationale": "Extractiveness (ε=0.08) is very low because the bias itself does not extract value; it is a cognitive error pattern. The consequences of decisions made under this bias can be highly extractive, but those are downstream effects modeled as separate constraints. Suppression (0.04) is also very low, as the bias can be consciously overcome with training and effortful application of statistical rules (Type 2 thinking); there is no external force preventing this. The constraint is classified as a Mountain because it emerges naturally from cognitive architecture (emerges_naturally=true), is the default mode of thinking (accessibility_collapse=0.90), and the path of least cognitive resistance (resistance=0.10).",
-    "perspectival_gap": "There is no perspectival gap in classification; all perspectives correctly identify the constraint as a Mountain. The difference between agents is not in how they classify the bias, but in their strategic response to it. The untrained individual is trapped by it, the manipulator leverages it as high ground, and the mitigator attempts to build routes around it. The uniform classification demonstrates the robustness of the Mountain type for fundamental cognitive or physical laws.",
-    "directionality_logic": "As a Mountain, this constraint has no formal beneficiaries or victims. However, in practice, those who understand and exploit the bias become de facto beneficiaries, while those subject to it without awareness become de facto victims. This dynamic is modeled by linking this Mountain to downstream constraints (Snares, Tangled Ropes) where the extraction actually occurs. The Mountain itself is symmetric; its effects are not.",
-    "mandatrophy_analysis": "This constraint is a critical case for preventing mandatrophy through decomposition. An analyst might observe a person being financially ruined by a scam that exploits base rate neglect and incorrectly classify the bias itself as a Snare. This is an error. The framework correctly decomposes the situation into two linked constraints: 1) The cognitive bias, a Mountain with ε≈0.08. 2) The financial scam, a Snare with ε≈0.80, which is causally dependent on the Mountain. This separation of the underlying natural law from the contingent social system that exploits it is essential for accurate intervention design."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The bias enables significant value extraction by institutional persuaders who frame information to exploit base rate neglect (underestimating risk frequencies, amplifying salient case information). However, the extraction is not as severe as a pure snare because: (1) debiasing interventions create competitive pressure on persuaders, (2) some institutional actors (risk communicators, public health) bear costs trying to overcome the bias, and (3) individual reasoners retain some capacity to notice and correct for the bias under deliberate reflection. The value has increased over the interval as persuasion techniques have become more sophisticated. Suppression (0.65): High. Multiple barriers prevent escape: cognitive architecture constraints, information format limitations, time pressure under which heuristics dominate, institutional incentives to maintain salient (rather than Bayesian) communication, and lack of accessible debiasing tools in most decision contexts. However, suppression is not total \u2014 formal education, decision support systems, and deliberative institutions can reduce the bias's force. Theater ratio (0.58): Moderate-high and rising. Formal statistical education teaches Bayes' theorem but most reasoning occurs in heuristic mode. Institutional risk communication employs scientific framing (percentages, probabilities) while still relying on salient exemplars. Debiasing programs teach Bayesian logic but their actual effect on naturalistic reasoning is limited.",
+    "perspectival_gap": "The constraint demonstrates different structural experiences across observation contexts. Individual reasoners trapped in the bias see a snare with no escape (except through constant external support). Institutional persuaders see the same bias as a coordination tool \u2014 a lever they can use to align audience beliefs with their messaging. Risk communicators see mixed extraction and coordination: they are both constrained by the audience's bias and enabled by it (they can use salience strategically for public health messaging). Debiasing institutions see a temporary problem with a sunset: training, decision support, and institutional redesign gradually reduce the bias's grip. The formal logic establishment sees a ceremonial framework that persists despite mismatch with actual practice. The analytical observer risks seeing the bias as a natural law of evolved cognition rather than a defect in modern information environments \u2014 this is a false mountain, naturalizing a contingent mismatch.",
+    "directionality_logic": "Directionality varies by institutional position. Individual reasoners are trapped victims with no exit options \u2014 they bear full cost of the bias (misestimation, poor decisions, exploitation). Persuaders have arbitrage options \u2014 they can frame information advantageously and switch messaging strategies. Risk communicators are constrained but not trapped: they can partially overcome the bias through format redesign, though not completely. Debiasing institutions have constrained options (dependent on funding, institutional access, individual motivation to learn) but can improve outcomes. The piton classification derives from the theater ratio and the atrophy of the formal logic framework's actual function. The mountain classification is perspectival \u2014 from a civilizational view, the bias appears inevitable given cognitive constraints, but this naturalizes what is actually a changeable institutional arrangement.",
+    "mandatrophy_analysis": "Mandatrophy is UNRESOLVED in this constraint. The classification hinges on whether base rate neglect is primarily an individual cognitive defect (suggesting snare/piton) or a structural mismatch between cognitive heuristics and modern information environments (suggesting tangled_rope with debiasing scaffolds). The institutional exploitation is real (high suppression, high extractiveness in persuasion contexts) but the bias also has legitimate coordination functions (salience heuristics often provide quick approximations that work in many natural contexts). The constraint is labeled tangled_rope to reflect this ambiguity: there is genuine extraction (persuaders benefit from the bias persisting), but the constraint also enables coordination (shared heuristics allow rapid group decision-making). Full mandatrophy resolution would require: (1) empirical determination of whether base rate neglect persists after optimal debiasing intervention, (2) measurement of institutional intentionality in maintaining the bias, and (3) clarification of whether the coordination function (salience heuristics as efficient approximation) is genuinely valuable or merely serves power asymmetries. Until these empirical questions resolve, the classification remains in the tangled_rope band."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "misinformation_virality",
-      "predatory_lending_models",
-      "forensic_evidence_fallibility"
+      "availability_heuristic",
+      "representativeness_bias",
+      "conjunction_fallacy"
     ],
-    "dual_formulation_note": "This constraint models the cognitive bias itself as a Mountain of human psychology. Downstream social and economic systems that exploit this bias (e.g., marketing strategies, legal arguments) should be modeled as separate, higher-extraction constraints (Ropes, Tangled Ropes, or Snares) that are structurally dependent on this foundational Mountain."
-  }
+    "dual_formulation_note": "Base rate neglect overlaps with availability heuristic and representativeness bias but is structurally distinct: it specifically concerns the underweighting of prior probabilities relative to case information. The network links represent empirical co-occurrence in the same cognitive domain and institutional exploitation patterns. A full constraint family would decompose into cognitive mechanism (\u03b5 \u2248 0.15, mountain for pure reasoning constraint) vs institutional exploitation (\u03b5 \u2248 0.65, snare for persuasion context). This story focuses on the institutional extraction version."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
 }

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "consensus_without_truth",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "consensus"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "The Social Cohesion Mirage",
+    "topic_domain": "social/political/informational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "narrative_beneficiaries",
+      "institutional_gatekeepers"
+    ],
+    "victims": [
+      "epistemic_commons",
+      "reality_alignment_agents",
+      "future_planners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Reality-Aligned Observer",
+      "comment": "PERSPECTIVE 1: REALITY-ALIGNED OBSERVER (SNARE) \u2014 Cannot exit the consensus without severe social cost (ostracism, career damage, isolation). Bears full cost of misalignment between narrative and reality. Suppression is maximal: dissent is defined as heresy/dangerousness. d\u22480.93, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Marginalized Dissident",
+      "comment": "PERSPECTIVE 2: MARGINALIZED DISSIDENT (SNARE) \u2014 Knows the narrative is false but faces institutional barriers (loss of employment, community standing, family relationships) to speaking truth. Exit is costly but not impossible; some dissidents do leave or build counter-communities. d\u22480.82, f(d)\u22481.25, \u03c3=0.9 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Local Authority or Opinion Leader",
+      "comment": "PERSPECTIVE 3: LOCAL AUTHORITY (TANGLED ROPE) \u2014 Benefits from enforcing consensus (social stability, reputation, control); constrained because deviation risks losing institutional legitimacy. Experiences mixed extraction (benefits from harmony) and coercion (must enforce narrative). d\u22480.55, f(d)\u22480.75, \u03c3=0.9 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Narrative Sponsor",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL NARRATIVE SPONSOR (ROPE) \u2014 Benefits enormously from consensus (legitimacy, control, resource flows). Experiences constraint as pure coordination: maintaining the narrative requires minimal coercive overhead because believers do the enforcement work themselves. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.08. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Reality-Based Coalition",
+      "comment": "PERSPECTIVE 5: REALITY-BASED COALITION (SCAFFOLD) \u2014 Organized epistemic agents (researchers, fact-checkers, alternative media) building verification pathways and exit routes. See the consensus constraint as temporary \u2014 as information access improves and people discover contradictions with lived experience, the false narrative loses force. d\u22480.45, f(d)\u22480.45, \u03c3=1.2 \u2192 \u03c7\u22480.25. Low effective extraction due to coalition agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Institutional Maintenance Class",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL MAINTENANCE CLASS (PITON) \u2014 Bureaucrats, enforcers, educators who perpetuate the consensus narrative through institutional routine (curriculum, policy, appointment criteria). The mechanism is largely theatrical: repetition, ritual, authority invocation. Theater ratio = 0.81 (high \u2014 the enforcement is performative, not calibrated to reality). These actors see the constraint as degraded: they know the narrative is false but maintain it because alternatives haven't replaced it. d\u22480.50, f(d)\u22480.65, \u03c3=0.9 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalization Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZATION RISK (MOUNTAIN) \u2014 Risk of falsely classifying the consensus as immutable natural law ('humans are tribal/consensus-seeking by nature'). Emergentist argument: shared meaning requires agreement, therefore some consensus-building is inevitable. CRITICAL: This perspective is a false summit. Base properties (\u03b5=0.58, suppression=0.68, theater=0.81) contradict mountain thresholds (\u03b5\u22640.25, suppression\u22640.05). The engine's false natural law detector will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "feedback_loop_escape_velocity",
+      "question": "At what point does a false consensus become self-perpetuating regardless of external reality?",
+      "resolution_mechanism": "Historical case analysis: societies where false narratives collapsed (USSR economic statistics, Nazi racial science, tobacco denial). Identify the tipping point where reality alignment became irrecoverable vs. where institutional collapse preceded epistemic recovery.",
+      "impact": "If escape velocity is low (< 2 generations): consensus can flip quickly when reality contradicts it (Scaffold perspective valid). If escape velocity is high (> 3 generations): false consensus can persist indefinitely (Snare is permanent, not temporary).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Self-perpetuation threshold for false consensus"
+    },
+    {
+      "id": "enforcement_vs_belief_asymmetry",
+      "question": "Does consensus enforcement require active coercion or do believers enforce the narrative themselves, reducing the energy cost to sponsors?",
+      "resolution_mechanism": "Measurement of enforcement resource allocation: proportion of institutional budget devoted to actively punishing dissent vs. passive norm enforcement through socialization. Survey data on whether dissidents cite direct punishment or social isolation as primary barrier.",
+      "impact": "If self-enforcing: extractiveness is lower (beneficiary still benefits, but without paying coercion costs) \u2014 Rope classification more defensible. If externally enforced: extractiveness is higher and suppression is more severe \u2014 Snare classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of self-enforcement vs active coercion in consensus"
+    },
+    {
+      "id": "reality_contact_degradation",
+      "question": "Does maintaining a false consensus require progressive degradation of reality contact (isolation, information control, institutional restructuring to prevent empirical contradiction)?",
+      "resolution_mechanism": "Historical pattern analysis: does false consensus require increasing institutional opacity, information silos, or re-definition of reality metrics (moving from objective measures to subjective satisfaction/belief measures)?",
+      "impact": "If yes: false consensus becomes increasingly expensive to maintain, suggesting temporary nature (Scaffold). If no: false consensus can coexist indefinitely with selective reality contact (Snare permanent).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether false consensus requires progressive reality isolation"
+    },
+    {
+      "id": "alternative_narrative_viability",
+      "question": "Are there organizationally viable alternative narratives ready to replace the false consensus, or must reality alignment build institutions from scratch?",
+      "resolution_mechanism": "Institutional readiness assessment: do counter-communities, fact-based media, or reality-aligned institutions have sufficient resources and reach to offer exit routes? Capacity analysis of alternative institutions.",
+      "impact": "If viable alternatives exist: scaffold sunset is realistic, reality-based coalition can succeed. If alternatives must be built: exit is harder, snare may be more durable than scaffold suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of viable alternative narratives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.67
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The Social Cohesion Mirage describes a structural constraint that emerges when a community achieves total agreement on a shared narrative that is factually false or decoupled from physical reality. This constraint is a diagnostic exemplar of how institutional coordination mechanisms can invert: what appears to be a coordination solution (achieving consensus) becomes an extraction mechanism (suppressing reality-aligned dissent) because the consensus is maintained not by making the narrative true but by making dissent costly. The constraint exhibits a perverse stability: the beneficiaries of the false narrative (institutional gatekeepers, narrative sponsors) have strong incentives to enforce belief, while the victims (reality-aligned agents, the epistemic commons, future planners) bear the cost of misalignment between collective action and physical reality. Theater ratio (0.81) indicates that consensus enforcement is substantially performative \u2014 repetition of the narrative, ritual affirmation, authority invocation \u2014 rather than grounded in evidence or calibration. The constraint's evolution over the interval shows both metrics rising, suggesting a pattern of deepening narrative entrenchment combined with increasing performative enforcement overhead (Goodhart drift). The analytical risk is that observers may naturalize this pattern as inevitable ('humans are consensus-seeking') when the constraint is actually a contingent institutional arrangement that could be unwound.",
+    "key_agents": [
+      "Reality-Aligned Observer: Primary victim (powerless/trapped) \u2014 cannot exit without severe social cost; bears full cost of narrative-reality misalignment",
+      "Marginalized Dissident: Secondary victim (moderate/constrained) \u2014 knows narrative is false; faces institutional barriers to truth-telling but retains some exit capacity",
+      "Local Authority/Opinion Leader: Secondary actor (institutional/constrained) \u2014 enforces consensus through social norm management; benefits from harmony but constrained by need for legitimacy",
+      "Institutional Narrative Sponsor: Primary beneficiary (institutional/arbitrage) \u2014 captures legitimacy and resource flows from consensus; experiences constraint as low-cost coordination",
+      "Reality-Based Coalition: Organized agent (organized/mobile) \u2014 building epistemic counter-institutions (fact-checking, alternative media, verification networks); sees sunset pathway",
+      "Institutional Maintenance Class: Tertiary actor (institutional/arbitrage) \u2014 perpetuates narrative through bureaucratic routine; perceives own mechanism as degraded (piton perspective)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent constraint as immutable law of human nature"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The false narrative generates significant extraction from reality-aligned agents (suppression of truth, enforced conformity, behavioral alignment with false worldview). But extraction is not as severe as pure predatory snares (0.70+) because some exit routes exist (intellectual dissident communities, emigration, counter-institutions). The measurement trend (0.38\u21920.58) shows increasing extraction as enforcement deepens. Suppression (0.68): High. Dissent is actively discouraged through social ostracism, institutional penalties, and rhetorical delegitimization. Alternative information sources are degraded or blocked. Exit costs are substantial. Theater ratio (0.81): Very high. Consensus enforcement is substantially theatrical \u2014 repetition, ritual, authority appeals rather than empirical calibration. The trend (0.52\u21920.81) shows rising theater, indicating that maintaining the false narrative requires increasing performative overhead (Goodhart drift). The constraint is claimed as Snare because: (1) effective extraction \u03c7 = 0.58 \u00d7 f(d) \u00d7 \u03c3 for powerless victim yields \u03c7\u22480.72 (high); (2) suppression is severe (0.68); (3) at least one victim group (epistemic commons) has no exit option.",
+    "perspectival_gap": "The perspectival gap here is acute and diagnostic. The narrative sponsor sees Rope (pure coordination with minimal enforcement cost) while the powerless observer sees Snare (suppression with no exit). The institutional maintenance class sees Piton (degraded ritual) while the reality-aligned coalition sees Scaffold (temporary constraint with escape velocity). The local authority sees Tangled Rope (mixed benefits and constraints) because they experience both the stability benefits and the moral cost of enforcing falsehood. The analytical observer risks Mountain (naturalizing as inevitable) but the structural data contradicts this \u2014 consensus without truth requires active suppression and theater, not passive emergence. The seven perspectives together show that this is a genuine Snare from the primary target's view, but appears as coordination (Rope) from the primary beneficiary's view. This gap is the constraint's diagnostic signature.",
+    "directionality_logic": "Reality-aligned observer: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction burden. Cannot exit consensus without catastrophic social cost. Marginalized dissident: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.25. High extraction; some exit possible through dissent communities. Local authority: Neither beneficiary nor pure victim (mixed role) + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction because authority benefits from consensus but constrained by legitimacy requirements. Institutional narrative sponsor: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Minimal extraction cost; net beneficiary. Reality-based coalition: Organized + mobile \u2192 d\u22480.45, f(d)\u22480.45. Low effective extraction due to coalition agency and exit options. Institutional maintenance class: Beneficiary (through institutional position) + arbitrage but aware of degradation \u2192 d\u22480.50, f(d)\u22480.65. Moderate extraction with performative character. Analytical observer: Analytical perspective \u2192 d\u22480.72, f(d)\u22481.15 for naturalization risk. Engine's false natural law detector applies.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint is claimed as Snare (not Rope or Tangled Rope) because the false narrative provides minimal coordination benefit and requires active suppression. A true Rope or Tangled Rope would solve a genuine collective action problem (e.g., achieving agreement on safety standards, information protocols). This constraint does NOT solve a collective action problem \u2014 it CREATES extraction by decoupling agreement from reality. The false narrative may feel coordinating to its believers, but this is theatrical coordination: it aligns action in the short term while misaligning action from physical reality in the long term, creating deferred extraction costs. The mandatrophy is resolved by distinguishing: (1) Rope: consensus on factually accurate coordination mechanism (e.g., agreed safety protocols). (2) Consensus Without Truth (Snare): consensus on false narrative maintained by suppression. The difference is empirical testability and extraction structure. The false narrative extracts from reality-aligned agents and the epistemic commons because it requires them to either conform (suppressing true knowledge) or exit (incurring social cost). A genuine coordination mechanism would not require this choice."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_narrative_capture",
+      "epistemic_commons_degradation",
+      "reality_contact_breakdown"
+    ],
+    "dual_formulation_note": "The Social Cohesion Mirage decomposes into three distinct structural constraints: (1) Institutional Narrative Capture (how narratives become entrenched in institutions); (2) Epistemic Commons Degradation (how shared knowledge infrastructure fails when consensus replaces truth); (3) Reality Contact Breakdown (progressive isolation from contradictory evidence). All three are downstream of the consensus constraint and share its suppression mechanism, but each has distinct \u03b5 values reflecting different extraction pathways."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ]
+}

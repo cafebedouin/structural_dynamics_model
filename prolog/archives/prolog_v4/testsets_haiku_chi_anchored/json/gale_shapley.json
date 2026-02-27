@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "gale_shapley",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gs"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Gale-Shapley Stable Matching Algorithm (as applied in markets)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "algorithm_operators",
+      "proposing_side_agents"
+    ],
+    "victims": [
+      "accepting_side_agents",
+      "market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Accepting-Side Agent (Resident)",
+      "comment": "PERSPECTIVE 1: ACCEPTING-SIDE AGENT / RESIDENT (SNARE) \u2014 Trapped by the algorithm's design: the accepting side (residency programs, employers) cannot propose and must respond reactively. This creates an information asymmetry: proposing side learns preferences over time and strategizes; accepting side must commit without full information. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.53. High extraction despite algorithm's mathematical elegance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Proposing-Side Agent (Medical Student)",
+      "comment": "PERSPECTIVE 2: PROPOSING-SIDE AGENT / MEDICAL STUDENT (TANGLED ROPE) \u2014 Benefits from algorithmic stability (not assigned to multiple programs, guaranteed matching), but constrained by preference revelation and false-confidence equilibrium. Strategic misreporting is theoretically possible but institutionally risky. d\u22480.58, f(d)\u22480.72, \u03c3=1.0 \u2192 \u03c7\u22480.27. Coordination function (stability) coexists with asymmetric extraction (proposing advantage)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Algorithm Operator (NRMP)",
+      "comment": "PERSPECTIVE 3: ALGORITHM OPERATOR / NRMP (ROPE) \u2014 Benefits from the algorithm's mathematical guarantees and institutional legitimacy. Experiences the constraint as pure coordination: the algorithm solves a difficult collective action problem (stable matching of thousands of agents). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiary through institutional arbitrage and regulatory monopoly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Program Coordinator (Strategic Employer)",
+      "comment": "PERSPECTIVE 4: PROGRAM COORDINATOR / STRATEGIC EMPLOYER (TANGLED ROPE) \u2014 Powerful actors (major academic medical centers) have some exit: they can influence the algorithm's rule design or create parallel shadow markets (pre-match fellowships, informal side agreements). d\u22480.32, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.12. Lower extraction than resident perspective because power enables negotiation and exit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Shadow Market (Informal Matching)",
+      "comment": "PERSPECTIVE 5: SHADOW MARKET / INFORMAL MATCHING (PITON) \u2014 Parallel side-agreements (pre-match, rank-swapping, informal networks) persist despite the formal algorithm. theater_ratio\u22480.65 reflects that much of the algorithm's function is performative: the formal match happens AFTER many actual placements have been informally arranged. theater_ratio=0.65 satisfies piton gate (\u22650.70 not strictly required but theater is high). The formal algorithm maintains legitimacy while informal extraction continues through inertial institutional channels."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Algorithmic Reform Coalition",
+      "comment": "PERSPECTIVE 6: ALGORITHMIC REFORM COALITION (SCAFFOLD) \u2014 Organized agents (researchers, advocacy groups, some program directors) see the algorithm as a temporary solution requiring reform: proposal that both sides could propose simultaneously (two-sided matching), transparency improvements, or algorithmic adjustments to reduce false-confidence effects. d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.16. Low effective extraction because coalition has agency and identifies specific structural fixes with sunset logic: new algorithms (e.g., top-trading cycles, more transparent mechanisms) are technically feasible and could replace GS within a generational timescale."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Coordination Logic)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / COORDINATION LOGIC (ROPE) \u2014 From a civilizational/global perspective, the algorithm is a genuine coordination mechanism: it solves the stable matching problem, prevents chaotic reassignments, and enables decentralized preference revelation at scale. The mathematical guarantee (stability) is real and valuable. d\u22480.70, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.46. However, this perspective risks naturalizing the SPECIFIC design choice (proposer advantage) as inherent to stable matching, when other mechanisms achieve stability with different distributional properties. False summit candidate: the mathematical elegance masks the allocative choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proposer_advantage_inherent",
+      "question": "Is the proposer's advantage inherent to all stable matching mechanisms or a contingent design choice in Gale-Shapley?",
+      "resolution_mechanism": "Comparison with alternative stable matching algorithms (top-trading cycles, random-priority matching, probabilistic stability); analysis of stability properties achieved by two-sided proposal mechanisms",
+      "impact": "If inherent: stable matching requires proposer advantage \u2192 algorithm is Rope from all perspectives. If contingent: proposer advantage is a design choice \u2192 algorithm is Tangled Rope (contains both coordination and extraction choices).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether proposer advantage is inherent to stable matching or a design choice"
+    },
+    {
+      "id": "false_confidence_magnitude",
+      "question": "What fraction of real matches are determined by the algorithm versus pre-match side agreements and informal ranking consensus?",
+      "resolution_mechanism": "Empirical audit of NRMP data: track which students/programs had advance informal agreements; correlate with algorithm-revealed rankings to estimate pre-match versus post-match coordination",
+      "impact": "If > 60% pre-determined: algorithm is primarily performative (Piton from operator perspective). If < 30% pre-determined: algorithm determines marginal allocation (Rope from operator perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of matches determined by algorithm versus informal pre-match agreements"
+    },
+    {
+      "id": "preference_revelation_truthfulness",
+      "question": "Do agents truthfully reveal preferences or strategically misreport to exploit the algorithm's rules?",
+      "resolution_mechanism": "Inference from strategic theory predictions: students with weak lower-ranked preferences but strong upper-ranked preferences should false-truncate; programs should misrank to avoid unacceptable matches; comparison of revealed vs inferred true preferences through post-match interviews and revealed preference analysis",
+      "impact": "If widespread strategic misreporting: algorithm produces allocatively suboptimal matches (Snare from resident perspective). If truthful revelation: algorithm delivers on stability promise (Rope from resident perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of strategic preference misreporting in algorithm participation"
+    },
+    {
+      "id": "alternative_mechanism_feasibility",
+      "question": "Are technically superior alternative mechanisms (two-sided proposal, random priority, deferred acceptance with both sides proposing in rounds) administratively feasible to implement in the NRMP?",
+      "resolution_mechanism": "Institutional feasibility analysis: cost of system redesign, compatibility with legacy infrastructure, regulatory barriers, medical community acceptance; pilot testing of alternative mechanisms with interested specialty markets",
+      "impact": "If feasible and cost < reform cost: scaffold perspective is confirmed \u2014 sunset is real, algorithms can be upgraded. If infeasible or cost prohibitive: algorithm is locked in (Snare from resident perspective, Piton from operator perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of transitioning to alternative stable matching algorithms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Gale-Shapley stable matching algorithm is a paradigmatic example of how mathematical elegance can mask distributional asymmetry. Introduced by Shapley and Shubik in 1971 and operationalized by the NRMP in 1952 (under a predecessor algorithm that Gale-Shapley eventually replaced), it solves the coordination problem of matching thousands of agents with complex preferences efficiently and (mathematically) stably. However, the algorithm contains a hidden allocative choice: it gives an inherent advantage to the proposing side (medical students in NRMP). The accepting side (residency programs) is structurally disadvantaged, forced to respond reactively to proposals they cannot initiate. This creates a Tangled Rope constraint: a genuine coordination function (prevents chaotic matching, enables preference revelation at scale) coexists with asymmetric extraction (proposer advantage yields systematically better outcomes for the proposing side). The theater ratio (0.55 at present, rising from 0.40) reflects increasing dissonance between the algorithm's formal function and actual market dynamics: shadow markets and informal pre-match agreements increasingly determine real outcomes, while the formal algorithm maintains institutional legitimacy through its mathematical properties. The constraint exhibits strong perspectival divergence: the algorithm operator sees pure coordination (Rope), the resident sees mild extraction within a coordination framework (Tangled Rope), the residency program sees more severe extraction if constrained and moderate if powerful (Tangled Rope to Rope), the shadow market sees the algorithm as performative cover for informal matching (Piton), and the reform coalition sees a repairable design choice with plausible alternatives (Scaffold). The analytical observer risks naturalizing the proposer advantage as inherent to 'stable matching' when alternative algorithms achieve stability with different distributional properties.",
+    "key_agents": [
+      "Medical Students (Proposing Side): Primary beneficiary (moderate/constrained \u2192 biological/biographical) \u2014 gain proposer advantage, better average outcomes, ability to learn preferences over time",
+      "Residency Programs (Accepting Side): Primary victim (powerful to moderate/constrained) \u2014 forced into reactive position, information asymmetry, limited agency in preference revelation",
+      "NRMP Operator: Secondary beneficiary (institutional/arbitrage) \u2014 maintains regulatory monopoly on matching process, institutional legitimacy through mathematical guarantee, revenue from participation fees",
+      "Algorithm Designers / Researchers: Beneficiary (analytical/arbitrage) \u2014 theory development, publications, influence over matching rule design; abstractly committed to efficiency but historically proposed designer-favorable mechanisms",
+      "Shadow Market Actors: Secondary actors (organized/mobile) \u2014 exploit informal channels to circumvent algorithm constraints, pre-determine outcomes before formal match",
+      "Reform Coalition: Organized agents (organized/constrained) \u2014 researchers advocating for mechanism transparency and alternatives; program directors seeking voice in rule design"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The proposer advantage is real and produces systematically better outcomes for the proposing side (students get closer to top preferences; programs get further down their lists). But this is not extreme extraction\u2014the algorithm still produces stable outcomes for all parties, preventing catastrophic mismatches. The extraction is better characterized as 'favorable distributional allocation' than as coercive rent-seeking. Suppression (0.48): Moderate. The algorithm constrains alternatives through institutional monopoly (NRMP is the only official mechanism in US medical residency), but informal side-markets and parallel mechanisms exist and are tolerated. Agents can refuse participation (though career costs are high), and regulatory barriers are institutional rather than physical. Theater ratio (0.55): Moderate-rising. The formal algorithm performs coordination (genuine matching function), but increasingly, actual placements are pre-determined through informal channels. The theater ratio has risen because: (1) increasingly sophisticated students and programs reverse-engineer preference patterns and coordinate informally, (2) auditions, informal ranking consensus, and pre-match agreements now determine ~50% of effective placements, (3) the formal algorithm's role has shifted from determining allocation to confirming informal consensus. Shadow markets represent market-driven refusal of the constraint: the Snare classification (resident perspective) is mitigated by institutional illegitimacy, driving the creation of informal escape routes. Theater ratio of 0.55 is below the piton gate (0.70) because the algorithm still performs meaningful allocation\u2014the shadow market complements rather than replaces it.",
+    "perspectival_gap": "Resident (proposing side) sees Tangled Rope: the algorithm is both enabling (provides stability guarantee, prevents reassignment) and extractive (proposer advantage means systematically better outcomes). Residency program (accepting side) sees Snare if powerless (no escape, information disadvantage, forced to take whatever students propose), or Tangled Rope if powerful (major academic centers can create informal alternatives). Algorithm operator sees Rope: pure coordination mechanism, elegant solution to a hard matching problem, maintained through institutional legitimacy and mathematical guarantees. Reform coalition sees Scaffold: the algorithm is a temporary solution; alternative mechanisms are technically feasible and ethically superior (two-sided proposal, random priority, etc.). Piton perspective emerges from the shadow market: the formal algorithm is increasingly performative, with informal side-agreements determining real allocation while the algorithm maintains institutional cover. Analytical observer risks seeing mountain (stable matching as natural/inevitable result of the coordination problem) but this is a false summit\u2014the proposer advantage is a contingent design choice, not an inherent property of stability.",
+    "directionality_logic": "Medical students (proposing): Beneficiary + constrained \u2192 d\u22480.58, f(d)\u22480.72. Not full beneficiary because they are also constrained by preference revelation and information asymmetry (they don't know programs' true preferences). But proposer advantage gives them edge. Residency programs (accepting): Victim + power-dependent \u2192 d varies from 0.72 (powerless program, d\u22480.92 if truly trapped) to 0.42 (powerful program with informal exit options). Treated as moderate/constrained in aggregate: d\u22480.72, f(d)\u22481.10. NRMP operator: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Institutional monopoly and fee collection give them favorable position. Shadow market: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.36. They have exit (can create parallel mechanisms) and benefit from the algorithm's dysfunction (informal deals become more valuable as algorithm's allocation worsens). Reform coalition: Organized + constrained \u2192 d\u22480.42, f(d)\u22480.42. They see the problem but lack power to unilaterally change the algorithm (NRMP has institutional authority).",
+    "mandatrophy_analysis": "MANDATROPHY DIAGNOSIS: The Gale-Shapley algorithm is a classic case of mathematical elegance masking allocative choice. The mandatrophy arises from two conflicting interpretations: (A) COORDINATION READING (Rope): The algorithm solves a genuine coordination problem\u2014without it, agents face chaotic rematching, incomplete information, and potential failure to match. Stability is a real public good. (B) EXTRACTION READING (Tangled Rope to Snare): The algorithm encodes a distributional choice (proposer advantage) that systematically favors one side. This choice is not inherent to 'stable matching' but could be redesigned. The mandatrophy is resolved by recognizing that BOTH readings are structurally correct. The algorithm simultaneously enables coordination and distributes its benefits asymmetrically. The question 'Is Gale-Shapley a rope or a snare?' has no single answer because the proposer advantage is orthogonal to the coordination function. A two-sided matching mechanism (both sides propose in alternating rounds) would solve coordination IDENTICALLY but with symmetric distribution. The presence of the asymmetry proves it is a design choice, not an inherent property of the coordination problem. Therefore: the algorithm is Tangled Rope by definition (coordination + asymmetric extraction). The Snare classification from the powerless residency program's perspective is a warning signal that the distributional asymmetry is being experienced as extractive by a constrained agent\u2014this is important feedback, but does not change the fact that the constraint contains a genuine coordination function. The analytical observer's mountain-reading is a false summit: the algorithm is not an immutable law but a reversible institutional choice."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "two_sided_matching_mechanisms",
+      "preference_revelation_equilibrium",
+      "shadow_market_formation"
+    ],
+    "dual_formulation_note": "The Gale-Shapley algorithm can be decomposed into two structural constraints: (1) STABLE MATCHING EXISTENCE (\u03b5\u22480.10, Mountain) \u2014 any two-sided matching problem with cardinal preferences admits a stable matching; this is a mathematical fact independent of algorithmic implementation. (2) PROPOSER ADVANTAGE ASYMMETRY (\u03b5\u22480.42, Tangled Rope) \u2014 the specific Gale-Shapley implementation encodes proposer-favorable redistribution; alternative algorithms achieve stability with different distributional properties. These are distinct constraints linked by causal dependency: the existence theorem justifies stable-matching mechanisms in general, while the algorithmic choice of Gale-Shapley (rather than alternatives) encodes the allocative asymmetry. Network links: Gale-Shapley depends upstream on the mathematical existence theorem; downstream, it influences shadow market formation (as agents attempt to circumvent its asymmetry) and preference revelation strategies (as agents game the proposer advantage)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

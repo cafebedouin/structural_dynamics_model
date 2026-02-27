@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "statecraft_virtu",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Machiavellian Virt\u00f9 and State Maintenance",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ruling_elite",
+      "state_stability"
+    ],
+    "victims": [
+      "individual_liberty",
+      "political_opposition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Oppressed Citizen",
+      "comment": "The ordinary citizen who experiences the full force of the Prince's virt\u00f9. Lacking power and mobility, they are subject to the state's extractive and suppressive measures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ambitious Noble",
+      "comment": "The noble who must navigate the Prince's court, balancing loyalty and self-interest. They benefit from state stability but are also vulnerable to the Prince's caprice."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Ruling Elite",
+      "comment": "The ruling class that benefits from the Prince's virt\u00f9, which maintains order and secures their privileged position. They use the system to their advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "A detached observer who sees the system as a whole, recognizing its mixed nature of coordination (maintaining order) and extraction (suppressing dissent)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_threshold",
+      "question": "At what point does the Prince's virt\u00f9 become tyranny?",
+      "resolution_mechanism": "Historical analysis of successful vs. failed states; correlation between repression and stability",
+      "impact": "If threshold too low: state is brittle and prone to revolt. If threshold too high: state is inefficient and vulnerable to external threats.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The balance between repression and stability"
+    },
+    {
+      "id": "alternative_governance_models",
+      "question": "Are there alternative models of governance that can achieve the same level of stability with less extraction?",
+      "resolution_mechanism": "Comparative analysis of different political systems; case studies of states with strong institutions and citizen participation",
+      "impact": "If alternatives exist: the Prince's virt\u00f9 is not necessary and may be harmful. If no alternatives exist: the Prince's virt\u00f9 is the lesser of two evils.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Alternatives to Machiavellian statecraft"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Machiavellian virt\u00f9 is the set of strategic constraints a ruler imposes to maintain power and order. It involves a mix of coordination (establishing laws, defending the state) and extraction (suppressing dissent, extracting resources). Different agents experience this system differently.",
+    "key_agents": [
+      "The Prince: Primary beneficiary (institutional/arbitrage) \u2013 benefits from order and stability.",
+      "The Ruling Elite: Secondary beneficiary (institutional/constrained) \u2013 benefits from the state's power, but is also subject to its control.",
+      "The Oppressed Citizen: Primary victim (powerless/trapped) \u2013 bears the cost of suppression and extraction.",
+      "The Ambitious Noble: Secondary victim (moderate/constrained) \u2013 faces risk and uncertainty in the Prince's court",
+      "State Stability: The abstract collective good (institutional/constrained) benefits from the enforcement of constraints."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. The Prince extracts resources and compliance from the population to maintain power. Suppression (0.65): Moderate-high. Dissent is suppressed to maintain order and prevent challenges to the Prince's authority. Theater ratio (0.30): Low. The Prince prioritizes effective action over appearances, focusing on real power rather than theatrical displays.",
+    "perspectival_gap": "The oppressed citizen experiences the Prince's virt\u00f9 as a snare, while the ruling elite experience it as a rope. The ambitious noble experiences it as a tangled rope, balancing opportunity and risk. The analytical observer recognizes the mixed nature of the system, seeing it as a tangled rope overall.",
+    "directionality_logic": "Beneficiaries (ruling_elite, state_stability) have low d-values and negative chi. Victims (individual_liberty, political_opposition) have high d-values and high chi. The Prince, as the enforcer of the system, occupies a unique position, with a moderate d-value reflecting the dual nature of virt\u00f9.",
+    "mandatrophy_analysis": "This system is classified as a tangled rope because it combines coordination (maintaining order) and extraction (suppressing dissent). It is not a pure snare because it does provide some benefits to the population (security, stability). It is not a pure rope because it involves significant coercion and extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

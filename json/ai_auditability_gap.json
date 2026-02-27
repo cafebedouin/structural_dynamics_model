@@ -2,24 +2,25 @@
   "header": {
     "constraint_id": "ai_auditability_gap",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aiaudit"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.7,
-    "theater_ratio": 0.6,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Black Box Impasse",
+    "human_readable": "The Black Box Impasse: AI Auditability Gap",
     "topic_domain": "technological/governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "ai_system_deployers"
+      "ai_developers",
+      "deploying_organizations"
     ],
     "victims": [
-      "individuals_subject_to_ai",
-      "regulators",
-      "societal_trust"
+      "affected_populations",
+      "regulatory_oversight_bodies"
     ]
   },
   "perspectives": [
@@ -28,9 +29,27 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Affected Population",
+      "comment": "PERSPECTIVE 1: AFFECTED POPULATION (SNARE) \u2014 Subject to AI decisions (credit denial, hiring rejection, benefit eligibility, criminal risk assessment) with no capacity to understand, challenge, or exit the system. Cannot audit the decision logic, cannot appeal based on reasoning, cannot migrate to alternative systems. Trapped in maximum extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Regulatory Oversight Bodies",
+      "comment": "PERSPECTIVE 2: REGULATORY OVERSIGHT BODIES (SNARE) \u2014 Charged with ensuring fair and lawful AI deployment but structurally unable to audit black box systems. Cannot verify that decision logic complies with fairness mandates. Suppressed by technological complexity that exceeds regulatory capacity. Possess formal authority but zero audit capability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Individual Subject to AI Decision",
-      "comment": "PERSPECTIVE 1: THE INDIVIDUAL (SNARE) — An individual denied a loan, job, or parole by an opaque algorithm has no meaningful recourse. They are trapped by a decision they cannot understand, appeal, or audit. The system is pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+      "label": "Civil Society Auditors and Researchers",
+      "comment": "PERSPECTIVE 3: CIVIL SOCIETY AUDITORS (TANGLED ROPE) \u2014 Can perform adversarial auditing (stress-testing, bias probing, behavioral reverse-engineering) to infer black box logic. Benefits from access to system outputs and can sometimes expose failures. Constrained by access restrictions, computational resources, and legal liability for vulnerability disclosure. Mixed experience: some agency through research methods, but dependent on developer cooperation."
     },
     {
       "classification_type": "rope",
@@ -38,122 +57,141 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The AI System Deployer",
-      "comment": "PERSPECTIVE 2: THE DEPLOYER (ROPE) — From the perspective of the corporation deploying the AI, the system is a pure coordination tool for efficient resource allocation. Opacity is a feature that protects intellectual property and reduces the burden of justification. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07. The negative effective extraction indicates a net subsidy."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Regulator",
-      "comment": "PERSPECTIVE 3: THE REGULATOR (TANGLED ROPE) — Regulators are tasked with ensuring fairness and safety, but lack the technical tools to audit these systems. They see both the societal benefits (coordination) and the significant, unpriced harms (extraction). Their exit is constrained by their mandate. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.41."
+      "label": "AI Developers and Deploying Organizations",
+      "comment": "PERSPECTIVE 4: AI DEVELOPERS AND DEPLOYING ORGANIZATIONS (ROPE) \u2014 Benefit from black box opacity: avoids forced disclosure of proprietary training data, model weights, fine-tuning methods, and business-critical decision logic. Experiences auditability requirements as a coordination problem to be managed through selective transparency, security audits, and compliance theater. Can arbitrage between jurisdictions with different audit requirements."
     },
     {
       "classification_type": "scaffold",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Explainable AI (XAI) Researcher",
-      "comment": "PERSPECTIVE 4: THE XAI RESEARCHER (SCAFFOLD) — Researchers developing explainability techniques view the current opacity as a temporary technical problem. They see their work as a scaffold that will eventually be removed once inherently transparent models are developed or auditing tools become mature. The 'sunset clause' is the anticipated technological breakthrough. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈0.76. Note: High chi, but scaffold classification is driven by the sunset clause belief."
+      "label": "Interpretability Research Community",
+      "comment": "PERSPECTIVE 5: INTERPRETABILITY RESEARCH COMMUNITY (SCAFFOLD) \u2014 Organized scientific effort to develop tools and methods for AI auditability: explainable AI (XAI), mechanistic interpretability, neural network dissection, saliency mapping. Sees the black box gap as a temporary technical problem with a sunset \u2014 as interpretability methods mature and are standardized, auditability becomes embedded in AI development rather than forensic analysis after deployment. High agency and visible exit path."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Algorithmic Accountability Theater",
+      "comment": "PERSPECTIVE 6: ALGORITHMIC ACCOUNTABILITY THEATER (PITON) \u2014 Compliance audits, ethics reviews, bias audits, and transparency reports by third-party firms or internal teams. Largely performative: assess models on test sets that do not reflect real-world deployment, check documentation compliance, certify processes without verifying actual decision logic. Theater ratio high because the audit ritual persists despite widespread recognition that it cannot penetrate black box systems. Maintained through institutional inertia and regulatory theater."
+    },
+    {
+      "classification_type": "piton",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Complexity Theorist",
-      "comment": "PERSPECTIVE 5: THE COMPLEXITY THEORIST (MOUNTAIN) — This perspective frames the auditability gap as an insurmountable consequence of complexity, akin to Gödel's incompleteness. It posits that any system complex enough to solve certain problems will be inherently un-auditable by a less complex system (like a human). This view naturalizes the constraint, but the engine will flag it as a false summit given the high base extraction and suppression, which are signs of contingent, not natural, constraints."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The system's default analytical view. It recognizes the genuine coordination function (automating complex pattern recognition) while also acknowledging the severe, asymmetric extraction enabled by opacity and maintained by IP law and technical barriers. This is the basis for the constraint's claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "label": "The Analytical Observer: Computational Limits View",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / COMPUTATIONAL LIMITS (PITON with false mountain risk) \u2014 From a civilizational perspective, the auditability gap might appear as an immutable limit: proving correctness of neural networks is NP-hard, human interpretability of high-dimensional representations is mathematically constrained, and verification at scale faces unavoidable complexity. However, this risks naturalizing what is partly a governance choice (choice to use opaque architectures, choice to prioritize scale over interpretability, choice to permit deployment without auditability infrastructure). Engine's false summit detector identifies this as contingent institutional arrangement."
     }
   ],
   "omegas": [
     {
-      "id": "inherent_vs_contingent_opacity",
-      "question": "Is the auditability gap an inherent, unavoidable property of complex systems (Mountain) or a contingent result of specific design choices and IP regimes (Tangled Rope/Snare)?",
-      "resolution_mechanism": "Development of provably transparent-by-design AI architectures that match the performance of black box models. If successful, opacity is contingent. If not, it may be inherent.",
-      "impact": "Resolution towards 'contingent' confirms the Tangled Rope/Snare classifications. Resolution towards 'inherent' would lend weight to the Mountain perspective, fundamentally changing the regulatory landscape.",
+      "id": "interpretability_adequacy_threshold",
+      "question": "At what level of model interpretability can audit claims transition from performative to functionally meaningful?",
+      "resolution_mechanism": "Comparative analysis of audit outcomes: systems audited with mechanistic interpretability tools vs. systems audited via black-box behavioral testing. Measurement of failures caught by each method over 2-3 year deployments.",
+      "impact": "If threshold is achievable with current/near-term methods: scaffold perspective confirmed, sunset is real. If threshold remains unreachable: black box gap persists, snare classification stable.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether AI opacity is a fundamental limit or an engineering choice"
+      "description": "Threshold for interpretability to enable functional auditing"
     },
     {
-      "id": "sufficiency_of_xai",
-      "question": "Can post-hoc explainability methods (e.g., LIME, SHAP) ever provide legally and ethically sufficient justification for high-stakes decisions?",
-      "resolution_mechanism": "Judicial precedent and regulatory standards defining what constitutes a legally sufficient 'explanation'. Empirical studies on the fidelity of XAI methods to the model's true logic.",
-      "impact": "If XAI is deemed sufficient, the constraint's suppression and extraction values would decrease. If deemed insufficient (mere 'theater'), the Snare classification becomes more dominant.",
+      "id": "proprietary_protection_versus_auditability_trade_off",
+      "question": "Is the developer/deployer choice to maintain black box opacity driven by legitimate proprietary protection needs or primarily by desire to avoid accountability?",
+      "resolution_mechanism": "Comparison of auditability across different governance models: full-disclosure systems (open-source models, research models) vs. proprietary systems. Analysis of whether proprietary models actually outperform disclosure-friendly architectures. Investigation of disclosure costs to developers.",
+      "impact": "If proprietary protection is functionally necessary: constraint partly reflects coordination problem (Rope aspects justified). If protection is discretionary: extractive component is larger, snare aspects dominate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether black box opacity is necessary for competitive advantage"
+    },
+    {
+      "id": "regulatory_capacity_constraint",
+      "question": "Is regulatory inability to audit black boxes a permanent feature of technological complexity or a remediable gap in technical capacity and resource allocation?",
+      "resolution_mechanism": "Analysis of regulatory hiring, training, and budget allocation in AI oversight bodies. Comparison of audit outcomes before/after technical upskilling. Assessment of whether sufficient resources could build regulatory audit capacity equivalent to industry capacity.",
+      "impact": "If permanent: regulatory snare is structural, suppression remains high. If remediable: regulatory perspective could shift toward mobile/constrained exit, reducing experienced extraction.",
       "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether post-hoc explanations are sufficient for due process"
+      "type_class": "empirical",
+      "description": "Whether regulatory audit capacity is improvable or structurally limited"
+    },
+    {
+      "id": "scalability_of_auditability_methods",
+      "question": "Do interpretability methods scale functionally to the size and complexity of production AI systems (billion-parameter models, ensemble systems, fine-tuned variations)?",
+      "resolution_mechanism": "Empirical testing of mechanistic interpretability, saliency mapping, and other XAI methods on progressively larger production systems. Measurement of method degradation as model size increases.",
+      "impact": "If methods scale: scaffold sunset is realistic. If scalability fails: black box gap may be technically immutable, risk of false mountain classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scalability of interpretability techniques to production systems"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.3
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2022,
-      "value": 0.45
+      "time_point": 5,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2030,
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
       "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2022,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.6
+      "time_point": 10,
+      "value": 0.65
     }
   ],
   "interval": {
-    "start": 2015,
-    "end": 2030
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The AI auditability gap refers to the growing chasm between the complexity of automated decision-making systems and the capacity for human oversight, verification, or appeal. As models (especially deep neural networks) ingest vast datasets to learn subtle correlations, their internal logic becomes inscrutable to their own creators, let alone to regulators or affected individuals. This opacity is not merely a technical footnote; it is a structural feature that reallocates power and risk, creating a new and potent form of extraction.",
+    "narrative_context": "The auditability gap in AI systems creates a structural asymmetry between the capacity to deploy opaque decision systems and the capacity to verify their correctness, fairness, and lawfulness. As AI systems have moved from research contexts to production deployment in high-stakes domains (credit scoring, hiring, healthcare triage, criminal risk assessment, benefit eligibility), the gap between model complexity and audit capacity has widened. Developers possess architectural knowledge and computational access enabling them to understand and defend their systems; affected populations, regulators, and even courts lack forensic tools to verify whether AI decisions comply with fairness mandates or were made through recognizable decision logic. This creates a pure information asymmetry leveraged as extraction: developers and deployers gain operational freedom and reduced accountability; affected populations lose explainability and recourse; regulators are suppressed below enforceability. The constraint exhibits tangled rope structure because it simultaneously solves a real coordination problem (how to deploy complex systems efficiently) while enabling asymmetric extraction (opacity benefits developers at cost to oversight). The theater ratio (0.65) reflects the proliferation of algorithmic accountability compliance processes\u2014ethics reviews, bias audits, third-party certifications\u2014that largely assess documentation and test-set performance rather than auditing actual deployment behavior. The extractiveness trajectory (0.35\u21920.58) shows the gap widening as model scale increased and deployment scope expanded.",
     "key_agents": [
-      "AI System Deployers: Primary beneficiary (institutional/arbitrage) - Gain efficiency and predictive power while externalizing risks of error and bias.",
-      "Individuals Subject to AI: Primary victim (powerless/trapped) - Bear the costs of opaque, potentially biased decisions with no effective mechanism for appeal.",
-      "Regulators: Secondary victim (organized/constrained) - Tasked with ensuring fairness and accountability but lack the technical means for verification.",
-      "Societal Trust: Abstract victim (powerless/trapped) - The epistemic commons is eroded as accountability becomes diffuse and trust in automated systems declines."
+      "Affected Populations: Primary victims (powerless/trapped) \u2014 subject to opaque AI decisions in credit, hiring, benefits, criminal justice with no audit capacity and no exit option",
+      "Regulatory Oversight Bodies: Victim (powerless/trapped) \u2014 charged with ensuring AI compliance but structurally unable to audit black boxes, suppressed by complexity exceeding regulatory technical capacity",
+      "Civil Society Auditors and Researchers: Secondary actor (organized/constrained) \u2014 can perform adversarial auditing and bias probing but constrained by access restrictions and legal liability, dependent on developer cooperation",
+      "AI Developers and Deploying Organizations: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from opacity that protects proprietary methods and avoids accountability, can arbitrage between jurisdictions with different audit requirements",
+      "Interpretability Research Community: Organized actor (organized/mobile) \u2014 developing technical methods to make black boxes auditable, sees gap as temporary problem with sunset",
+      "Algorithmic Accountability Profession: Institutional actor (institutional/arbitrage) \u2014 performs compliance audits and certifications that are largely performative, maintains theater through institutional inertia"
     ],
-    "logic_rationale": "Extractiveness (0.55): High. The value is extracted by shifting the burden of proof and the cost of error onto the powerless. The deployer gains efficiency, while the subject absorbs the risk of an unexplainable, incorrect decision. Suppression (0.70): High. For an individual, there is often no alternative to interacting with the system (e.g., a bank's only loan application portal). Legal and technical barriers (IP law, code obfuscation) actively suppress attempts at auditing. Theater Ratio (0.60): Significant. The rise of 'AI Ethics' dashboards, fairness toolkits, and corporate responsibility reports often serves a performative function, creating an illusion of control and accountability that masks the underlying opacity.",
-    "perspectival_gap": "The gap is profound. The deployer experiences a Rope, a tool for efficient coordination. The trapped individual experiences a Snare, a form of arbitrary power. The regulator, caught in the middle, sees a Tangled Rope, acknowledging both the utility and the harm. The XAI researcher sees a temporary Scaffold, believing technology will solve the problem. Finally, the complexity theorist risks misclassifying a contingent institutional arrangement as a Mountain, a law of nature. The system's ability to hold all these truths simultaneously is its core function.",
-    "directionality_logic": "Beneficiaries (AI Deployers) have arbitrage exit options and institutional power, driving their directionality `d` near zero and producing negative effective extraction (a net subsidy). Victims (Individuals) are trapped and powerless, driving `d` near one and maximizing effective extraction. Regulators are organized but constrained, placing them in the middle. This structural differentiation is what creates the wide perspectival gap from a single set of base properties.",
-    "mandatrophy_analysis": "This constraint is a classic example of resolving mandatrophy. A naive analysis might label the system a 'Snare' based on its impact on individuals, or a 'Rope' based on its utility to deployers. Deferential Realism avoids this by showing that both are valid, indexed classifications. The 'true' nature of the constraint is the full set of these perspectives, revealing it as a site of intense structural conflict. The analytical classification of Tangled Rope correctly identifies the core structure: a system with a genuine coordination function that has been co-opted for asymmetric extraction."
+    "logic_rationale": "Extractiveness (0.58): The black box architecture benefits developers and deployers through reduced accountability burden and competitive opacity. It imposes costs on affected populations (reduced explainability, no meaningful appeal process) and regulators (enforcement impossibility). However, extractiveness is not maximal (0.66+) because some deployment does occur with partial transparency mechanisms, interpretability research is advancing, and organizational liability for AI failures creates countervailing incentives for some auditability investment. The constraint is not pure rent extraction but rather a mixed coordination-extraction hybrid. Suppression (0.68): High. Barriers to auditability include: mathematical hardness of neural network verification (NP-hard), architectural choices that prioritize scale over interpretability, proprietary protection of training data and model weights, legal frameworks that prevent security researchers from disclosing vulnerabilities, and resource constraints that make regulatory hiring lag technological development. These barriers are both technical and governance-based. Theater ratio (0.65): Moderate-high. The proliferation of algorithmic accountability processes (ethics reviews, bias audits, certifications) is substantially performative. Audits assess test-set performance and documentation compliance but cannot penetrate black box decision logic in deployment. The theater has increased as deployment scale and regulatory pressure both increased, creating demand for compliance rituals that cannot deliver functional auditability.",
+    "perspectival_gap": "The perspectives reveal a full perspectival gap across all six types. Developers see rope (solving legitimate deployment coordination). Interpretability researchers see scaffold (temporary problem with technical sunset). The accountability profession sees piton (performative ritual maintained through inertia). Regulatory bodies see snare (trapped, suppressed, zero audit capacity). Affected populations see snare (subject to opaque decisions, no exit). Civil society auditors see tangled rope (mixed agency and constraint). The civilizational analytical view risks false mountain (computational limits appear immutable). This divergence occurs because the same structural phenomenon\u2014architectural opacity\u2014is genuinely beneficial for some actors (developers/deployers) and genuinely harmful for others (affected populations/regulators). The constraint solves a real problem for one group while creating a real problem for another.",
+    "directionality_logic": "Directionality values derive from beneficiary/victim status plus exit options. Developers and deployers (beneficiaries with arbitrage options) experience low effective extraction\u2014they benefit from the opacity and can migrate to less-stringent regulatory jurisdictions if pushed. Affected populations (victims with trapped exit) experience high effective extraction\u2014they bear full cost of opaque decisions with no capacity to exit, audit, or challenge. Regulators (victims with trapped exit but with organized power) experience moderate-high extraction\u2014they face suppression (limited audit capacity) but maintain some agency through formal authority. Civil society auditors (secondary actors with mobile exit) experience constrained rather than trapped conditions\u2014they can publish research findings and move to better-resourced organizations. The perspectival gap reflects this structural differentiation: beneficiaries see coordination, victims see extraction.",
+    "mandatrophy_analysis": "The auditability gap resolves mandatrophy through structural decomposition. This is NOT a case of mislabeling pure extraction as coordination. Rather, it is a genuine tangled rope where both functions are real: (1) Coordination function: Complex AI systems provide efficiency gains, predictive accuracy improvements, and scalability benefits that are genuinely valuable for deploying organizations and end-users. (2) Extraction function: Those same systems enable developers/deployers to escape accountability and shift risk to affected populations. The constraint is tangled because both benefits and extractions are simultaneously present. The mandate against calling pure extraction 'coordination' is satisfied: this is NOT mislabeled snare. The mandate against calling coordination 'pure extraction' is satisfied: this IS NOT mislabeled rope. The tangled rope classification is structurally justified by the presence of beneficiaries (AI developers/deployers), victims (affected populations/regulators), active enforcement (regulatory mandates, compliance requirements), AND measurable extraction (opacity reducing accountability). The theater ratio (0.65) is explicitly accounted for as performative compliance, not as an indicator of false coordination. The false mountain risk at the analytical perspective (computational limits appear immutable) is caught by the engine's false summit detector, which identifies this as a naturalization of governance choices rather than a true natural law."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "consumer_credit_scoring",
-      "predictive_policing_feedback_loops"
-    ]
-  }
+      "algorithmic_fairness_verification",
+      "ai_deployment_liability_framework",
+      "model_interpretability_standardization"
+    ],
+    "dual_formulation_note": "The auditability gap is downstream of AI architectural choices (choice to use opaque deep learning over interpretable systems, choice to scale to billion-parameter models). It also affects downstream regulatory and liability frameworks that depend on audit capacity to function. Network links reflect causal dependencies: improvements in interpretability standards could alter the auditability gap; improvements in deployment liability frameworks could create incentives for architectural choices that enhance auditability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ]
 }

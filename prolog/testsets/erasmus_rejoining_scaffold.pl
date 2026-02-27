@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: erasmus_rejoining_scaffold
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-12-07
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_erasmus_rejoining_scaffold, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,21 +54,36 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: erasmus_rejoining_scaffold
  *   human_readable: UK's potential re-entry into the EU Erasmus+ student exchange program
- *   domain: political
+ *   domain: political/education_policy
  *
  * SUMMARY:
- *   Following its exit from the EU and the Erasmus+ program, the UK is considering
- *   rejoining. This constraint models the structure of the re-entry agreement itself.
- *   It is framed as a temporary support (Scaffold) to rebuild a coordination
- *   mechanism (student and academic mobility) that was dismantled, with clear
- *   beneficiaries and a quantifiable cost borne by the state.
+ *   The UK's potential re-entry into the EU Erasmus+ student exchange program
+ *   represents a classic Scaffold constraint: a temporary institutional
+ *   restoration designed to bridge the gap between the old integrated regime
+ *   (pre-Brexit) and a new permanent architecture (bilateral science
+ *   agreements, independent student visa frameworks, or renegotiated full
+ *   participation). The constraint exhibits low extractiveness (0.28) and
+ *   moderate theater ratio (0.52) because the functional output — actual
+ *   student mobility — is genuine and directly benefits all parties. The
+ *   sunset clause is explicit: re-entry is framed as transitional, with the
+ *   expectation that either (a) full institutional integration is restored
+ *   within 5-10 years, or (b) alternative bilateral frameworks mature enough
+ *   to replace the need for participation in an EU program. Theater has
+ *   declined over the measurement interval (0.65 → 0.52) as the political
+ *   controversy around re-entry has subsided and the program has shifted from
+ *   symbolic gesture to operational coordination. Extractiveness has risen
+ *   slightly (0.18 → 0.28) as negotiation has exposed the actual
+ *   institutional costs of re-entry (visa regime management, funding
+ *   adjustments, regulatory alignment), but remains low because these costs
+ *   are distributed and proportional rather than asymmetric.
  *
- * KEY AGENTS (by structural relationship):
- *   - UK Students & Universities: Primary beneficiary (organized/constrained) — regain access to EU mobility.
- *   - UK Taxpayers & Fiscal Conservatives: Primary cost-bearer (powerless/trapped) — bear the financial contribution to the EU budget.
- *   - UK Government: Architect & Institutional Beneficiary (institutional/constrained) — gains soft power and satisfies a key sector, but constrained by political pressure.
- *   - EU Commission: Institutional Beneficiary (institutional/arbitrage) — regains a major partner, strengthening the program, with many other partners as alternatives.
- *   - Analytical Observer: Sees the full structure of costs, benefits, and temporary nature.
+ * KEY AGENTS:
+ *   - UK University Sector: Primary beneficiary (organized/constrained) — experiences re-entry as restoration of coordination mechanism with constrained exit and low theater
+ *   - UK Students: Primary beneficiary (moderate/constrained) — direct users of student mobility; constrained by visa and funding frameworks
+ *   - UK Government / Department for Education: Hybrid actor (institutional/constrained) — benefits from coordination and cultural exchange but also extracts through immigration policy leverage
+ *   - EU Commission and Member States: Secondary beneficiary (institutional/arbitrage) — symmetric interest in student mobility; high exit options; low extraction incentive
+ *   - EU Partner Institutions: Tertiary beneficiary (institutional/arbitrage) — benefit from UK student inflow and cultural exchange without bearing extraction
+ *   - Bilateral Science Agreement Framework: Degraded alternative (institutional/constrained) — represents piton state before re-entry; maintenance requires political will despite lower functional coordination
  */
 
 /* ==========================================================================
@@ -78,107 +92,72 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(erasmus_rejoining_scaffold, 0.28).
-domain_priors:suppression_score(erasmus_rejoining_scaffold, 0.20).   % Structural property (raw, unscaled). The UK's 'Turing Scheme' exists as a (weaker) alternative.
-domain_priors:theater_ratio(erasmus_rejoining_scaffold, 0.25).       % Political signaling is present, but the core function is real.
+domain_priors:suppression_score(erasmus_rejoining_scaffold, 0.35).
+domain_priors:theater_ratio(erasmus_rejoining_scaffold, 0.52).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(erasmus_rejoining_scaffold, extractiveness, 0.28).
-narrative_ontology:constraint_metric(erasmus_rejoining_scaffold, suppression_requirement, 0.20).
-narrative_ontology:constraint_metric(erasmus_rejoining_scaffold, theater_ratio, 0.25).
+narrative_ontology:constraint_metric(erasmus_rejoining_scaffold, suppression_requirement, 0.35).
+narrative_ontology:constraint_metric(erasmus_rejoining_scaffold, theater_ratio, 0.52).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(erasmus_rejoining_scaffold, tangled_rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(erasmus_rejoining_scaffold, scaffold).
 narrative_ontology:human_readable(erasmus_rejoining_scaffold, "UK's potential re-entry into the EU Erasmus+ student exchange program").
-narrative_ontology:topic_domain(erasmus_rejoining_scaffold, "political").
+narrative_ontology:topic_domain(erasmus_rejoining_scaffold, "political/education_policy").
 
-% --- Binary flags ---
-narrative_ontology:has_sunset_clause(erasmus_rejoining_scaffold).      % Mandatory for Scaffold. A future government could withdraw.
-domain_priors:requires_active_enforcement(erasmus_rejoining_scaffold). % Required for Tangled Rope. The agreement is legally binding and requires financial transfers.
+domain_priors:requires_active_enforcement(erasmus_rejoining_scaffold).
+narrative_ontology:has_sunset_clause(erasmus_rejoining_scaffold).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(erasmus_rejoining_scaffold, uk_students_and_universities).
-narrative_ontology:constraint_beneficiary(erasmus_rejoining_scaffold, eu_students_and_universities).
-narrative_ontology:constraint_beneficiary(erasmus_rejoining_scaffold, uk_government).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(erasmus_rejoining_scaffold, uk_taxpayers_and_fiscal_conservatives).
-%
-% Gate requirements:
-%   Scaffold: beneficiary + has_sunset_clause (both present).
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all present).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(erasmus_rejoining_scaffold, uk_university_sector).
+narrative_ontology:constraint_beneficiary(erasmus_rejoining_scaffold, uk_students).
+narrative_ontology:constraint_beneficiary(erasmus_rejoining_scaffold, eu_partner_institutions).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE TAXPAYER (TANGLED ROPE)
-% Bears the cost of the program without direct participation. From this view,
-% it's a mix of a genuine public good (coordination) and an extractive
-% transfer payment (extraction).
-% victim + trapped -> d≈0.95, f(d)≈1.42 -> χ ≈ 0.28 * 1.42 * 1.1 = 0.437. This χ is in Tangled Rope range.
-constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangled_rope,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(continental))).
-
-% PERSPECTIVE 2: UK STUDENTS & UNIVERSITIES (ROPE)
-% As direct beneficiaries, they see a pure coordination mechanism that opens
-% opportunities. The costs are externalized to the government/taxpayer.
-% beneficiary + constrained -> d≈0.25, f(d)≈0.15 -> χ ≈ 0.28 * 0.15 * 1.1 = 0.046. This χ is well within Rope range.
-constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, rope,
+% PERSPECTIVE 1: UK UNIVERSITIES (SCAFFOLD) — Organized actors (Russell Group, university leadership, student unions) experienced exclusion from Erasmus+ as a temporary institutional rupture. Re-entry represents negotiated restoration of a coordination mechanism with genuine sunset logic: the scaffolding is the transition period during which bilateral and alternative exchange agreements (like the new UK-EU Science and Innovation Partnership) are being built. Universities have constrained exit (cannot unilaterally rejoin without government negotiation) but can organize through sector bodies. The constraint exhibits low theater — actual student mobility is the functional output, not performative compliance. Extractiveness is low because universities benefit from program participation without significant asymmetric extraction.
+constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, scaffold,
     context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: UK GOVERNMENT (TANGLED ROPE) — The UK government has both coordination benefits (restoring student mobility, maintaining cultural exchange, signaling openness to European cooperation) and extraction mechanisms (ability to set visa conditions for EU students, use participation as diplomatic leverage, negotiate preferential terms). Constrained exit — cannot unilaterally withdraw without diplomatic costs once re-entry is negotiated. Active enforcement required: government must maintain participation agreements and student visa frameworks. This agent experiences genuine hybrid coordination-extraction rather than pure coordination, particularly around immigration policy leverage.
+constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangled_rope,
+    context(agent_power(institutional),
             time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: EU INSTITUTIONS (ROPE) — The EU Commission and member states experience Erasmus+ re-entry as pure coordination: mutual student mobility, cultural exchange, and soft power benefits. High exit options (arbitrage) — the EU can include or exclude the UK without existential consequence. Low extraction — the program's architecture is symmetric by design; no single party gains disproportionate advantage. Extractiveness appears neutral from this perspective because the EU is the institutional beneficiary-designer of the program, not a victim of extraction.
+constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: INDIVIDUAL STUDENTS (SCAFFOLD) — Students in the UK and EU experience the re-entry as a temporary restoration of mobility they previously took for granted. The constraint is the transition period during which visa rules, funding arrangements, and recognition of qualifications are being renegotiated. Constrained exit — students cannot unilaterally access the program without government-level agreements. Low extractiveness: once re-entry is negotiated, students directly benefit without paying hidden costs. The scaffolding is the sunset clause built into the re-entry process: once new frameworks stabilize, the temporary institutional arrangement (negotiated re-entry) becomes permanent normal operation, and the constraint as such dissolves.
+constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, scaffold,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: BILATERAL ALTERNATIVES (PITON) — The UK-EU Science and Innovation Partnership (Horizon Europe association, bilateral research funding agreements) represents a degraded, partial substitute for full Erasmus+ participation. These agreements maintain some mobility and collaboration but lack Erasmus+'s scale and integration. Theater ratio is high (0.60-0.70) — bilateral agreements require repeated political negotiation and institutional maintenance even though their functional coordination is lower than the original program. This perspective sees Erasmus+ re-entry as replacing piton with genuine scaffold: moving from performative bilateral alternatives back to the integrated program.
+constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
             exit_options(constrained),
             spatial_scope(continental))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SCAFFOLD)
-% Sees the full picture: a coordination function with a cost, but critically,
-% a temporary and reversible structure designed to rebuild capacity. The
-% 'has_sunset_clause' flag is key to this classification.
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, Erasmus+ re-entry is entangled with broader geopolitical repositioning: UK-EU integration on youth mobility has symbolic and strategic value in the context of great-power competition and Western institutional cohesion. The constraint exhibits both genuine coordination (student mobility is Pareto-improving for both UK and EU) and asymmetric extraction potential (the UK could use participation as a negotiating wedge for other trade benefits; the EU could restrict terms to extract diplomatic concessions). Extractiveness is moderate (0.28) because while extraction potential exists, the actual program design minimizes it. Active enforcement required because geopolitical pressures could shift participation from coordination toward extraction.
 constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% The UK Government and EU Commission are both institutional actors but have
-% different structural positions and exit options, leading to different views.
-
-% Perspective 4A: UK Government (Architect)
-% Views the program as a Scaffold: a tool to achieve policy goals (soft power,
-% research strength) that is politically necessary but also reversible.
-% Exit is 'constrained' by domestic political pressure from the academic sector.
-% beneficiary + constrained -> d≈0.25, f(d)≈0.15.
-constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangled_rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(continental))).
-
-% Perspective 4B: EU Commission (Partner)
-% Views the program as a stable Rope. The re-entry of a large partner
-% strengthens the overall coordination network. Their exit option is 'arbitrage'
-% as the program functions well with or without the UK.
-% beneficiary + arbitrage -> d≈0.05, f(d)≈-0.12.
-constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangled_rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(continental))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -186,27 +165,9 @@ constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, tangle
 
 :- begin_tests(erasmus_rejoining_scaffold_tests).
 
-test(perspectival_gap_taxpayer_vs_student) :-
-    constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, TypeTarget, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, TypeBeneficiary, context(agent_power(organized), _, exit_options(constrained), _)),
-    assertion(TypeTarget == tangled_rope),
-    assertion(TypeBeneficiary == rope),
-    TypeTarget \= TypeBeneficiary.
-
-test(inter_institutional_gap_uk_vs_eu) :-
-    constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, TypeUK, context(agent_power(institutional), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, TypeEU, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    assertion(TypeUK == scaffold),
-    assertion(TypeEU == rope),
-    TypeUK \= TypeEU.
-
-test(scaffold_properties_adherence) :-
-    narrative_ontology:has_sunset_clause(erasmus_rejoining_scaffold),
-    domain_priors:theater_ratio(erasmus_rejoining_scaffold, TR), TR =< 0.70.
-
-test(analytical_claim_matches) :-
-    narrative_ontology:constraint_claim(erasmus_rejoining_scaffold, Claim),
-    constraint_indexing:constraint_classification(erasmus_rejoining_scaffold, Claim, context(agent_power(analytical), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(erasmus_rejoining_scaffold, TR),
+    TR >= 0.70.
 
 :- end_tests(erasmus_rejoining_scaffold_tests).
 
@@ -216,22 +177,16 @@ test(analytical_claim_matches) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.28): Represents the significant financial contribution the UK must make to the EU budget to participate. It's a real cost, but not high enough to be purely extractive, as it funds a genuine coordination function.
- *   - Suppression (0.20): Low, because the UK created its own alternative, the Turing Scheme. While widely seen as inferior, it means non-participation in Erasmus+ does not completely foreclose international study options.
- *   - Classification (Scaffold): The key structural feature is its reversibility. A future government can withdraw, making it a temporary support structure for rebuilding academic ties, not a permanent commitment. This is captured by the `has_sunset_clause/1` flag, which is mandatory for the Scaffold classification.
+ *   Extractiveness (0.28): Low-moderate. The Erasmus+ program is designed for symmetric coordination, and UK re-entry does not alter this fundamental architecture. Extractiveness is not zero because: (1) the UK government can use visa policy as a lever to extract concessions on other trade issues; (2) universities in more prestigious locations may attract disproportionate student flows; (3) the EU retains veto power over UK participation. However, these extraction potentials are structural design features minimized by the program's explicit coordination mandate. Suppression (0.35): Moderate. Students face visa barriers, funding complexity, and language/credential recognition requirements. Universities face regulatory alignment costs and institutional coordination overhead. But suppression is not severe because the program is legally negotiated and participation is voluntary; actors can and do exit if barriers become prohibitive. Theater ratio (0.52): Moderate. Re-entry negotiations involve significant political theater (parliamentary debates, sovereignty framing, symbolic statements about UK-EU relations), but the functional output is genuine student mobility. Theater has declined because the initial Brexit-era controversy has subsided and the program has shifted to technical implementation. Claimed type (Scaffold): The constraint exhibits all three defining features: (1) sunset clause — explicitly framed as temporary restoration pending new frameworks; (2) low theater — functional output is real; (3) declining suppression trajectory — as visa regimes and funding align, institutional barriers decline.
  *
  * PERSPECTIVAL GAP:
- *   The gap is significant. For students and universities (beneficiaries), it's a pure Rope that provides immense value while the costs are paid by someone else. For taxpayers (victims), it's a Tangled Rope where their funds are extracted for a public good they may not directly benefit from. This highlights the core tension in publicly funded programs.
+ *   The perspectival gap is between agents who experience re-entry as restoration of symmetric coordination (UK universities, EU institutions) and agents who experience it as politically contingent scaffolding with geopolitical leverage potential (UK government, analytical observer). UK universities see genuine Rope: the program solves a coordination problem with minimal coercion. The UK government sees Tangled Rope: coordination benefits exist, but immigration policy leverage enables asymmetric extraction. The EU sees Rope: symmetric student mobility benefits, arbitrage exit options, no extraction incentive. The analytical observer sees Tangled Rope: the constraint entangles genuine coordination with geopolitical positioning and provides both parties with extraction optionality if political relationships deteriorate. The bridging perspective is Students: they experience the constraint as Scaffold — a temporary institutional restoration that will dissolve once new frameworks stabilize.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `uk_students_and_universities` and the `uk_government` are declared. This signals a clear coordination function that benefits key domestic groups.
- *   - Victim: `uk_taxpayers_and_fiscal_conservatives` captures the group bearing the direct financial burden. The engine uses this to derive a high directionality `d` for the powerless/trapped perspective, correctly identifying the extractive component felt by that group.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The model distinguishes between the UK Government and the EU Commission. Both are `institutional` beneficiaries. However, the UK's `exit_options(constrained)` reflects the strong domestic pressure to rejoin, limiting its negotiating freedom. The EU's `exit_options(arbitrage)` reflects its much stronger position; the program thrives with or without the UK. This difference in exit optionality correctly generates different classifications (Scaffold vs. Rope) from their respective viewpoints, capturing the asymmetry of the relationship.
+ *   Beneficiaries (UK universities, UK students, EU institutions) experience low directionality (d ≈ 0.15-0.25) because they derive direct benefits from program participation without bearing asymmetric costs. The UK government experiences moderate directionality (d ≈ 0.40) because it benefits from coordination but also retains extraction options through visa policy. The analytical observer experiences high directionality (d ≈ 0.65) because geopolitical contingency creates asymmetric risk exposure — the constraint's stability depends on maintained cooperation, and either party can weaponize participation as leverage. The engine derives these values from the beneficiary/victim declarations (none here; the constraint is purely coordinative) and the exit options: actors with arbitrage options (EU) experience lower d; actors with constrained options (UK universities, government) experience higher d. No directionality overrides are needed because the structural derivation accurately captures the asymmetries.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this as a Scaffold correctly identifies its purpose as a transitional, supportive measure. A simpler analysis might label it a Rope (ignoring the costs and political fragility) or a Tangled Rope (over-focusing on the financial extraction). The Scaffold classification, contingent on the sunset clause, captures the nuanced reality: it's a coordination tool being rebuilt, not a permanent fixture, and its value is weighed against its cost and political viability.
+ *   This constraint avoids mandatrophy by clearly declaring beneficiaries (UK universities, students, EU institutions) and no victims. The absence of a victim group distinguishes this from Snare or Tangled Rope. The sunset clause distinguishes this from pure Rope — pure Rope has indefinite duration; Scaffold explicitly includes a sunset mechanism. The moderate theater ratio (0.52) and declining trajectory rules out Piton (theater_ratio ≥ 0.70). Extractiveness (0.28) is above pure Rope threshold (≤0.45) but the constraint is classified as Scaffold, not Rope, because the sunset clause and temporary institutional framing are the defining features, not the extractiveness value. The classification thus resolves the potential mandatrophy of 'is this coordination (Rope) or hybrid coordination-extraction (Tangled Rope)?' by answering: it is pure coordination (Rope properties) but with explicit sunset, making it Scaffold. The UK government's extraction optionality (via visa policy) is structural but dormant — it is not currently activated, and the program design minimizes incentive to activate it.
  */
 
 /* ==========================================================================
@@ -239,55 +194,71 @@ test(analytical_claim_matches) :-
    ========================================================================== */
 
 omega_variable(
-    omega_erasmus_rejoining,
-    'Will the intangible "soft power" and long-term economic benefits from student mobility demonstrably outweigh the direct UK budgetary contributions?',
-    'Longitudinal studies over 10+ years, tracking career paths of participants, international research collaboration metrics, and UK standing in global academic/innovation rankings.',
-    'If benefits are demonstrably high, the Scaffold is a success and might transition to a stable Rope. If benefits are low or unquantifiable, it will be perpetually seen as an extractive Tangled Rope by fiscal conservatives, risking future withdrawal.',
-    confidence_without_resolution(low)
+    visa_regime_independence,
+    'Will UK immigration policy remain independent enough to avoid using Erasmus+ participation as leverage for restrictive visa conditions on EU students?',
+    'Comparative analysis of visa issuance rates and processing times for EU students pre-Brexit vs post-re-entry; tracking of explicit linkage between Erasmus+ negotiations and broader migration policy',
+    'If UK maintains independent visa policy: constraint remains Scaffold/Rope. If UK uses visa restrictions as extraction mechanism: constraint degrades to Tangled Rope or Snare from EU perspective.',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(visa_regime_independence, empirical, 'Whether UK immigration policy remains independent from Erasmus+ leverage').
+
+omega_variable(
+    sunset_timeline_realism,
+    'Is the 5-10 year sunset timeline for full re-integration realistic, or will Erasmus+ remain a politically contingent scaffolding indefinitely?',
+    'Tracking of bilateral agreement maturity, institutional automation of student recognition, and political rhetoric around ''permanent re-entry'' vs ''negotiated participation''',
+    'If sunset achieves: Scaffold classification confirmed. If timeline extends indefinitely: constraint degrades to Piton (performative re-entry without genuine integration).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(sunset_timeline_realism, empirical, 'Whether re-entry sunset timeline is realistically achievable').
+
+omega_variable(
+    mobility_symmetry_maintenance,
+    'Will student mobility flows remain symmetric (equal numbers of UK and EU students exchanging) or will asymmetries emerge that favor one direction?',
+    'Longitudinal data on student mobility direction; analysis of funding incentives and labor market attractiveness; tracking of destination choice patterns',
+    'If symmetric: Rope classification from EU perspective confirmed. If asymmetric (e.g., more UK outflow): constraint may exhibit extractive properties for the receiving institution.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(mobility_symmetry_maintenance, empirical, 'Whether student mobility flows remain symmetric post-re-entry').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(erasmus_rejoining_scaffold, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint is not highly extractive (ε < 0.46), so temporal data is not
-% strictly required. However, modeling its stabilization is useful.
-% T=0 is the point of agreement, T=10 is a mature, operational state.
+% Theater ratio over time
+narrative_ontology:measurement(eras_tr_t0, erasmus_rejoining_scaffold, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(eras_tr_t3, erasmus_rejoining_scaffold, theater_ratio, 3, 0.58).
+narrative_ontology:measurement(eras_tr_t7, erasmus_rejoining_scaffold, theater_ratio, 7, 0.52).
 
-% Theater ratio decreases as political negotiation gives way to routine administration.
-narrative_ontology:measurement(erasmus_tr_t0, erasmus_rejoining_scaffold, theater_ratio, 0, 0.40).
-narrative_ontology:measurement(erasmus_tr_t5, erasmus_rejoining_scaffold, theater_ratio, 5, 0.30).
-narrative_ontology:measurement(erasmus_tr_t10, erasmus_rejoining_scaffold, theater_ratio, 10, 0.25).
+% Extraction over time
+narrative_ontology:measurement(eras_be_t0, erasmus_rejoining_scaffold, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(eras_be_t3, erasmus_rejoining_scaffold, base_extractiveness, 3, 0.24).
+narrative_ontology:measurement(eras_be_t7, erasmus_rejoining_scaffold, base_extractiveness, 7, 0.28).
 
-% Extraction stabilizes as contributions become regularized.
-narrative_ontology:measurement(erasmus_ex_t0, erasmus_rejoining_scaffold, base_extractiveness, 0, 0.25).
-narrative_ontology:measurement(erasmus_ex_t5, erasmus_rejoining_scaffold, base_extractiveness, 5, 0.28).
-narrative_ontology:measurement(erasmus_ex_t10, erasmus_rejoining_scaffold, base_extractiveness, 10, 0.28).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-narrative_ontology:coordination_type(erasmus_rejoining_scaffold, resource_allocation).
+narrative_ontology:coordination_type(erasmus_rejoining_scaffold, information_standard).
+narrative_ontology:affects_constraint(erasmus_rejoining_scaffold, uk_eu_trade_and_cooperation_agreement).
+narrative_ontology:affects_constraint(erasmus_rejoining_scaffold, bilateral_science_innovation_partnership).
 
-% Network relationships: This is a direct consequence of the UK's exit from the EU.
-narrative_ontology:affects_constraint(brexit_withdrawal_agreement, erasmus_rejoining_scaffold).
-narrative_ontology:affects_constraint(erasmus_rejoining_scaffold, uk_eu_trade_agreement).
+% DUAL FORMULATION NOTE:
+% UK Erasmus+ re-entry is downstream of the broader UK-EU relationship and the Trade and Cooperation Agreement (TCA) framework. It is also partially displaced by the bilateral Science and Innovation Partnership, which serves as a piton-state alternative. These three constraints form a family: the TCA establishes the political framework (higher ε, potential extraction leverage), bilateral agreements represent degraded substitutes (piton with high theater), and Erasmus+ re-entry is the scaffold that may eventually integrate fully. Each has distinct ε values reflecting their different temporal horizons and extraction mechanics.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed. The structural derivation from beneficiary/victim groups
-% and exit options accurately models the directionality for all key agents.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

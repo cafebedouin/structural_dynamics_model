@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "manganese_catalysis_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mncatalysis"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Manganese-Formate Fuel Pathway Catalysis and Commercialization Control",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "catalyst_developer_institutions",
+      "early_patent_holders"
+    ],
+    "victims": [
+      "competing_catalyst_pathways",
+      "carbon_neutral_fuel_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Competing Catalyst Researchers",
+      "comment": "PERSPECTIVE 1: COMPETING CATALYST RESEARCHERS (SNARE) \u2014 Trapped in a narrow publication window before patent disclosure. Cannot develop alternative manganese catalysts without infringing or requiring licensing. No exit from research community dependency. d\u22480.90, f(d)\u22481.35, \u03c3=1.2 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Carbon-Neutral Fuel Supply Accessibility",
+      "comment": "PERSPECTIVE 2: CARBON-NEUTRAL FUEL SUPPLY ACCESSIBILITY (SNARE) \u2014 Abstract collective good. If manganese catalyst is gatekept via patent licensing, fuel pathway remains restricted to high-margin applications. Trapped in dependency on developer licensing terms. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Secondary Fuel Cell Manufacturers",
+      "comment": "PERSPECTIVE 3: SECONDARY FUEL CELL MANUFACTURERS (TANGLED ROPE) \u2014 Benefit from advances in formate supply chain; constrained by licensing requirements and developer's supply agreements. Mixed: coordination function (fuel pathway development) + extraction (licensing tax). d\u22480.72, f(d)\u22481.13, \u03c3=1.0 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Catalyst Developer Institution",
+      "comment": "PERSPECTIVE 4: CATALYST DEVELOPER INSTITUTION (ROPE) \u2014 Primary beneficiary. Experiences constraint as coordination: establishing manganese catalyst as technical standard, licensing pathway, supply security. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Negative effective extraction = net beneficiary through first-mover advantage and licensing arbitrage."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Catalyst Research Coalition",
+      "comment": "PERSPECTIVE 5: OPEN CATALYST RESEARCH COALITION (SCAFFOLD) \u2014 Organized agents (academic labs, DOE-funded initiatives, open-source computational chemistry) see manganese catalysis as a temporary bottleneck. Coalition is developing alternative catalysts (iron, nickel, copper-based) and publishing open-source design principles to bypass proprietary pathway. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.23. Theater_ratio declining as open alternatives mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Energy Infrastructure",
+      "comment": "PERSPECTIVE 6: TRADITIONAL ENERGY INFRASTRUCTURE (PITON) \u2014 Legacy fossil fuel systems maintain regulatory favoritism through incumbency despite manganese catalyst offering superior margins. The constraint appears as a technical bottleneck (we need better catalysts) when it is actually a deployment bottleneck (catalysts exist but face infrastructure lock-in). Theater_ratio=0.65 \u2014 narratives about 'green hydrogen challenges' obscure that the constraint is economic/political, not technical. d\u22480.15, f(d)\u22480.05, \u03c3=1.1 \u2192 \u03c7\u22480.04. Piton degrades as fuel cell infrastructure scales."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational view, catalytic efficiency and reaction kinetics are governed by quantum chemistry constraints. Formate formation from CO2 + H2 is thermodynamically favorable but kinetically slow without catalysts \u2014 the bottleneck appears as inherent physics. However, structural data (\u03b5=0.38, suppression=0.48, theater=0.65) reveals this is a false summit: the 'catalytic bottleneck' naturalizes what is actually a contingent commercialization gate (patent licensing, scaling risk, incumbent competition)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "catalyst_efficiency_ceiling",
+      "question": "Is manganese catalysis efficiency fundamentally limited by quantum mechanical constraints, or is the apparent ceiling a contingent feature of current synthesis/reactor design?",
+      "resolution_mechanism": "Theoretical quantum chemistry modeling; experimental exploration of alternative reactor geometries, dopants, and temperature regimes; comparison with computational upper bounds",
+      "impact": "If quantum ceiling: constraint classification shifts toward Mountain. If contingent design ceiling: constraint is Tangled Rope extraction mechanism (developers restrict optimization pathways to preserve licensing value).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether manganese catalysis efficiency has a hard physical ceiling or is design-contingent"
+    },
+    {
+      "id": "open_source_alternative_maturity",
+      "question": "Do open-source alternatives (iron, nickel, copper-based catalysts published by coalitions) achieve performance parity with proprietary manganese systems within 5-10 years?",
+      "resolution_mechanism": "Tracking of published catalyst performance metrics; benchmarking against manganese baseline; patent landscape analysis for alternative pathways; experimental replication studies",
+      "impact": "If parity achieved: Scaffold sunset is real, constraint collapses to Rope as open alternatives commoditize. If alternatives lag: manganese remains gatekeeping mechanism, Tangled Rope persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether open-source catalyst alternatives achieve competitive efficiency"
+    },
+    {
+      "id": "infrastructure_deployment_barrier",
+      "question": "Is the primary constraint on manganese-formate deployment technical (catalyst efficiency) or economic/political (fuel infrastructure incumbency, regulatory capture)?",
+      "resolution_mechanism": "Cost-benefit analysis of manganese catalysis vs traditional hydrogen production; infrastructure investment models; regulatory policy landscape analysis; deployment pilot studies",
+      "impact": "If technical bottleneck: constraints remain as classified (multiple technical perspectives). If economic/political gate: Traditional Energy Infrastructure piton dominates; manganese catalysis is sufficient but deployment is structurally suppressed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether deployment constraint is technical or economic/political"
+    },
+    {
+      "id": "patent_enforcement_robustness",
+      "question": "Can manganese catalyst patents be enforced globally against alternative formulations and manufacturing routes, or are loopholes sufficient for circumvention?",
+      "resolution_mechanism": "Patent claim analysis; precedent studies in catalysis and battery patent enforcement; industrial circumvention attempts; jurisdictional variation in patent strength",
+      "impact": "If robust enforcement: Snare victim extraction is durable, constraint persists. If weak enforcement: patents become theater, constraint downgrades to Piton or dissipates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether patent enforcement can sustain gatekeeping"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The manganese-formate fuel pathway represents a critical technological development for carbon-neutral hydrogen economy. However, the constraint generated by this pathway is not purely technical \u2014 it is fundamentally about who controls access to the catalytic gate. Researchers have demonstrated high-efficiency manganese catalysts for CO2 conversion to formate, which can serve as a hydrogen carrier for fuel cells. This creates a structural opportunity for gatekeeping: institutions that develop and patent the technology can license access to competitors, fuel cell manufacturers, and nations seeking carbon-neutral fuels. The constraint exhibits characteristics of a Tangled Rope (hybrid coordination-extraction), where the genuine coordination function \u2014 establishing a viable fuel pathway \u2014 is paired with asymmetric extraction through licensing control and patent enforcement. Theater is high (0.65) because much of the public narrative frames this as a 'catalytic bottleneck' that science must overcome, obscuring that the bottleneck is actually economic/political gatekeeping. Over the 6-year interval, as patent disclosure occurs and alternative catalyst research accelerates, theater has risen while extractiveness has also risen \u2014 the developer institution increasingly relies on narrative (green hydrogen narrative, technical complexity claims) to justify licensing restrictions as necessary for 'scaling safely' rather than as capture mechanisms.",
+    "key_agents": [
+      "Catalyst Developer Institution: Primary beneficiary (institutional/arbitrage) \u2014 captures licensing fees, supply-chain control, regulatory influence as green hydrogen standard-setter",
+      "Competing Catalyst Researchers: Primary victim (powerless/trapped) \u2014 face publication timing pressure, patent blocking, licensing requirements for alternative development",
+      "Carbon-Neutral Fuel Supply Accessibility: Primary victim (powerless/trapped) \u2014 abstract collective good; restricted to high-cost licensed pathways rather than commoditized supply",
+      "Secondary Fuel Cell Manufacturers: Secondary victim (moderate/constrained) \u2014 benefit from formate supply but constrained by licensing terms and developer's supply agreements",
+      "Open Catalyst Research Coalition: Organized agents (organized/constrained) \u2014 DOE-funded labs, academic consortia developing open-source alternatives; building coalition power against gatekeeping",
+      "Traditional Energy Infrastructure: Institutional incumbents (institutional/arbitrage) \u2014 maintain regulatory favoritism; Piton perspective reflects that infrastructure lock-in suppresses deployment despite technology readiness",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing commercialization constraints as immutable physics"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The developer institution captures licensing revenue and supply-chain control, but extraction is not maximal because: (1) alternative catalysts are publicly developing in parallel, creating competitive pressure; (2) patent duration limits gatekeeping to ~15-20 years; (3) open-source research coalition is an organized counter-force. The 0.38 value reflects genuine extraction (licensing asymmetry, publication timing advantage) without the absoluteness of a Snare. Suppression (0.48): Moderate-high. Significant barriers include: patent blocking of alternative manganese formulations; publication pressure (first-to-disclose advantage); tacit knowledge in catalyst synthesis; capital barriers to pilot-scale reactor design; regulatory approval pathways favoring incumbent hydrogen producers. But suppression is not total \u2014 competing pathways are publicly funded, publications accelerate alternatives, and some jurisdictions (EU, Japan) fund open-source catalyst initiatives. Theater ratio (0.65): Elevated and rising. The narrative frames manganese catalysis as a 'catalytic bottleneck' (technical necessity) when the constraint is actually deployment gatekeeping (economic/political contingency). Theater rose from 0.40 to 0.65 as the developer institution shifted marketing from 'scientific achievement' to 'scaling challenges requiring careful licensing management.' The theater reflects that much published work emphasizes reaction efficiency metrics rather than deployment economics and licensing structure.",
+    "perspectival_gap": "This constraint displays a clean separation between technical and economic perspectives. The catalyst developer and beneficiary institutions see Rope (coordination mechanism for fuel pathway). The open catalyst coalition sees Scaffold (temporary bottleneck with open-source sunset). Competing researchers see Snare (blocked from development, trapped by patents). The abstract collective (fuel supply accessibility) sees Snare (restricted to licensed pathways). Traditional energy incumbents see Piton (technical narrative obscures economic lock-in). The analytical observer risks seeing Mountain (catalytic efficiency as inherent physics constraint) but structural data reveals false summit: the constraint is contingent gatekeeping, not immutable science. The perspectival gap is widest between the developer institution (Rope) and competing researchers (Snare) \u2014 both face the same technology, but their exit options and structural positions create opposite classifications.",
+    "directionality_logic": "Catalyst Developer Institution: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary via licensing and supply control. Competing Researchers: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. Cannot exit research domain, cannot develop alternatives without infringement. Fuel Supply Accessibility: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Abstract collective cannot organize or exit. Secondary Manufacturers: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.13. Can partially exit (alternative suppliers, other pathways) but constrained by licensing. Open Coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.50. Coalition has agency and developing alternatives; constraint is temporary from their perspective. Traditional Energy: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Piton classification driven by theater gate, not chi \u2014 extractiveness is low from their perspective because they maintain regulatory advantage despite technical displacement.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves mandatrophy by distinguishing genuine coordination (formate fuel pathway development) from asymmetric extraction (licensing gatekeeping). The Tangled Rope classification holds because: (1) COORDINATION FUNCTION: Manganese catalysis solves a real technical problem (CO2 conversion efficiency); establishing it as a standard enables downstream fuel cell development and supply chains. (2) ASYMMETRIC EXTRACTION: Developer institution captures licensing rent; competitors are blocked; fuel supply accessibility is restricted. (3) ACTIVE ENFORCEMENT: Patent law, publication timing control, supply chain exclusivity enforce the constraint. All three Tangled Rope gates are satisfied. The false summit detector catches the analytical observer's Mountain classification: quantum chemistry does constrain catalysis, but the constraint on deployment is economic/political, not physical. Mandatrophy is not 'is this coordination or extraction?' but 'what portion of the observed gatekeeping is necessary for coordination, and what portion is rent capture?' The answer: ~60% coordination function (formate fuel pathway development requires standardization and capital investment), ~40% extraction (licensing markup, competitor blocking, supply control). The classification reflects this mixed structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hydrogen_infrastructure_standard_setting",
+      "green_fuel_licensing_regimes",
+      "open_source_catalyst_coalitions"
+    ],
+    "dual_formulation_note": "The manganese catalysis constraint decomposes into two structural components: (1) Technical catalysis efficiency (relatively minor constraint, \u03b5\u22480.08, approaching Mountain from physics perspective), (2) Commercialization gatekeeping (primary constraint, \u03b5=0.38, Tangled Rope). These are distinct claims linked by causal dependency: technical achievement enables commercialization bottleneck. Upstream: hydrogen_infrastructure_standard_setting (what fuels the system adopts). Downstream: green_fuel_licensing_regimes (how access is controlled) and open_source_catalyst_coalitions (alternative pathways)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

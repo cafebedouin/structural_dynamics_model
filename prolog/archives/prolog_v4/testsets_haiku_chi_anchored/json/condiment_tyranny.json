@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "condiment_tyranny",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cond"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Tyranny of the Default Condiment Offering",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_food_service_operators",
+      "condiment_manufacturers"
+    ],
+    "victims": [
+      "culinary_preference_diversity",
+      "small_condiment_producers",
+      "consumers_with_niche_preferences"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Consumer with Niche Palate",
+      "comment": "PERSPECTIVE 1: NICHE PALATE CONSUMER (SNARE) \u2014 Trapped within global food service system where regional, spicy, fermented, or unconventional condiments are unavailable. Individual cannot exit without bearing high cost (seeking specialty shops, meal preparation overhead). d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Small Artisanal Condiment Producer",
+      "comment": "PERSPECTIVE 2: SMALL ARTISANAL PRODUCER (SNARE) \u2014 Locked out of major distribution channels by supply chain standardization and volume requirements. Replicating access to national restaurant chains is prohibitively expensive. d\u22480.90, f(d)\u22481.36, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Independent Restaurant Owner",
+      "comment": "PERSPECTIVE 3: INDEPENDENT RESTAURANT (TANGLED ROPE) \u2014 Constrained by supply chain efficiency pressures and customer expectations set by chains, yet benefits from coordination function: standardized condiments reduce sourcing complexity and customer confusion. d\u22480.62, f(d)\u22480.85, \u03c3=0.9 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Food Service Chain",
+      "comment": "PERSPECTIVE 4: LARGE FOOD SERVICE CHAIN (ROPE) \u2014 Primary beneficiary. Standardized condiment offering solves genuine coordination problem: reduces inventory complexity, enables supply chain efficiency, and creates consistent customer experience across locations. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Condiment Manufacturer",
+      "comment": "PERSPECTIVE 5: DOMINANT CONDIMENT MANUFACTURER (ROPE) \u2014 Solves coordination for food service operators: single supplier managing consistent quality, volume, and pricing. Benefits from network effects and switching costs. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Coordination function outweighs extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Consumer Expectation Inertia",
+      "comment": "PERSPECTIVE 6: CONSUMER EXPECTATION INERTIA (PITON) \u2014 The constraint persists partly through habituation: customers expect certain condiments because they've always been offered. Theater_ratio=0.58 suggests moderate performative content \u2014 the justification (efficiency, consistency) is real but increasingly theatrical as supply chains mature. The constraint is maintained by inertia as much as genuine functional necessity. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Craft Food Movement Coalition",
+      "comment": "PERSPECTIVE 7: CRAFT FOOD MOVEMENT (SCAFFOLD) \u2014 Organized counter-movement (artisanal restaurants, farmers markets, food tourism, regional cuisine revival) is creating parallel distribution pathways for diverse condiments. This perspective sees the tyranny as a temporary coordination failure with a sunset: as localism and culinary diversity become market values, supply chains will fragment and revert to regional/niche offerings. d\u22480.35, f(d)\u22480.32, \u03c3=0.9 \u2192 \u03c7\u22480.10. Low effective extraction because exit pathways exist and are expanding."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "functional_necessity_threshold",
+      "question": "What fraction of supply chain cost reduction is genuine efficiency necessity versus cost externalization/convenience for operators?",
+      "resolution_mechanism": "Comparative analysis of supply chain costs with regional/diverse condiment sourcing vs standardized supply; cost accounting including customer satisfaction and churn rates across diverse vs standard menus",
+      "impact": "If necessity > 70%: constraint is primarily Rope (coordination). If necessity < 40%: constraint is primarily Snare (extraction via convenience tax). This determines whether the constraint is reclassified as pure coordination or pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of standardization cost reduction that is genuine necessity vs convenience"
+    },
+    {
+      "id": "consumer_preference_revelation",
+      "question": "What is the actual distribution of consumer condiment preferences when choices are not constrained by supply availability?",
+      "resolution_mechanism": "Comparative study of condiment usage in regions with diverse offerings (markets, international communities) vs standardized-only markets; willingness-to-pay studies for diverse vs standard condiments",
+      "impact": "If diversity preference is high (>60% seek alternatives): constraint extracts significant consumer surplus. If diversity preference is low (<30%): constraint reflects genuine consumer demand. This determines victim classification and \u03c7 computation for consumer perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual distribution of consumer condiment preferences under choice abundance"
+    },
+    {
+      "id": "supply_chain_technology_trajectory",
+      "question": "Are advances in logistics, automation, and micromanufacturing making diverse condiment sourcing economically feasible at scale?",
+      "resolution_mechanism": "Technology trend analysis: cold chain efficiency, precision portion packaging, automated inventory management, 3D flavor printing, modular condiment dispensing. Comparison with adoption rates in tech-forward food service (QSR innovation labs, meal kit services)",
+      "impact": "If technology trajectory enables feasibility: scaffold perspective is structural (sunset is real). If technology lags: scaffold is aspirational. This determines whether the constraint has genuine temporal decline or persists indefinitely.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether emerging logistics and automation make diverse sourcing economically viable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The tyranny of the default condiment offering is a structural constraint emerging from the economics of large-scale food service operations. QSR chains, casual dining, institutional cafeterias, and airline catering have converged on a standardized set of condiments (ketchup, mustard, mayonnaise, hot sauce, ranch dressing) that minimize sourcing complexity, inventory management, and customer decision time. This standardization creates genuine efficiencies: reduced SKU count, simplified procurement, predictable supply chains, and consistent customer experience across locations. However, it simultaneously constrains the condiment preferences of consumers in many regions, locks out small artisanal producers, and gradually homogenizes food culture. The constraint exhibits hybrid character \u2014 it solves real coordination problems (Rope from the chain and manufacturer perspectives) while simultaneously extracting diversity from consumer surplus and market access from niche producers (Snare from their perspectives). The theater_ratio (0.58) reflects that while the efficiency justification is substantive, it increasingly serves as post-hoc rationalization for convenience \u2014 supply chain technology has matured to the point where diversity is economically feasible but not yet operationally normalized. The craft food movement and regionalization trends suggest the constraint may have a temporal sunset as consumer demand for culinary diversity increases market value for sourcing complexity.",
+    "key_agents": [
+      "Consumers with Niche Preferences: Primary victim (powerless/trapped) \u2014 trapped by global standardization; cannot access preferred condiments within mainstream food service",
+      "Small Artisanal Condiment Producers: Primary victim (powerless/trapped) \u2014 locked out of national distribution by volume requirements and supply chain standardization",
+      "Large Food Service Chains: Primary beneficiary (institutional/arbitrage) \u2014 capture efficiency gains and network coordination benefits from standardization",
+      "Dominant Condiment Manufacturers: Secondary beneficiary (organized/arbitrage) \u2014 benefit from volume concentration and switching costs",
+      "Independent Restaurant Owners: Mixed position (moderate/constrained) \u2014 constrained by supply chain efficiency pressures but also benefit from coordination",
+      "Craft Food Movement: Organized counter-force (organized/mobile) \u2014 creating alternative distribution pathways with potential sunset logic"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts consumer surplus (niche preferences unavailable), producer surplus (market access barriers), and diversity from the food system. However, the extraction is not severe because (a) consumers can still access preferred condiments outside mainstream food service, (b) alternative distribution channels exist (specialty shops, farmers markets, international markets), and (c) the constraint does solve genuine coordination problems. The value (0.38 vs initial overestimate of 0.50+) reflects that the extraction is real but bounded. Suppression (0.52): Moderate-high. Significant barriers exist: supply chain economies of scale, infrastructure designed for standardized inputs, consumer expectations trained by chain consistency, and the high cost for independent operators to maintain diverse inventory. But suppression is not total \u2014 regions with strong food cultures maintain alternatives, and emerging logistics technologies are reducing barriers. Theater ratio (0.58): Moderate. The efficiency justification for standardization has real content (supply chain complexity reduction, inventory management simplification), but increasingly serves as post-hoc rationalization. As logistics mature, the performative content rises relative to functional necessity. The rising trajectory (0.35\u21920.58 over 50 years) reflects that the constraint persists increasingly through habituation and expectation management rather than hard technical necessity.",
+    "perspectival_gap": "This constraint demonstrates how structural position determines classification. Large chains and manufacturers experience it as coordination (Rope) \u2014 solving genuine problems of complexity and consistency. Consumers with diverse preferences and artisanal producers experience it as pure extraction (Snare) \u2014 locked out with no viable alternative. Independent restaurants occupy the middle (Tangled Rope) \u2014 constrained by system pressures but also benefiting from coordination. The craft food movement sees a temporary state with a sunset (Scaffold) \u2014 emerging alternative pathways (localism, culinary tourism, farm-to-table) are building ways to escape the tyranny. Inertia perspective (Piton) reveals that the constraint increasingly persists through habituation rather than necessity. The perspectival gap reflects genuine structural differences in exit options and beneficiary/victim status, not measurement ambiguity.",
+    "directionality_logic": "Large chain operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Strong net beneficiaries. Condiment manufacturers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiaries. Niche consumers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction \u2014 no viable exit. Small producers: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.36. High extraction \u2014 market access blocked. Independent restaurants: Mixed (moderate/constrained) \u2192 d\u22480.62, f(d)\u22480.85. Constrained by system but also benefiting from coordination. Craft movement: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction because coalition has agency and visible exit paths. The divergence between beneficiary and victim directionalities drives the perspectival gap and mandates the Tangled Rope classification at the moderately-powered level.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY DECOMPOSITION: The 'condiment tyranny' conflates two structurally distinct constraints that should be analyzed separately: (1) the supply chain standardization constraint (\u03b5\u22480.28, primarily Rope + Piton), which solves genuine coordination problems but is increasingly theatrical, and (2) the market access barrier constraint (\u03b5\u22480.50, primarily Snare), which locks small producers out of mainstream distribution regardless of whether standardization is functionally necessary. The unified analysis treats the constraint at \u03b5=0.38 (tangled rope) to capture both effects. Mandatrophy is resolved by showing that the constraint IS genuinely hybrid: both coordination function (supply chain efficiency) and extraction (consumer/producer surplus loss) are real structural features. No single perspective can claim 'the true type' \u2014 all six are legitimate readings from different structural positions. The Rope perspectives (chain, manufacturer) see the genuine coordination benefit. The Snare perspectives (consumers, producers) experience the genuine extraction. The Scaffold perspective (craft movement) sees the temporal bound. The Piton perspective (consumer habituation) sees the degraded functional necessity. The constraint maintains its Tangled Rope classification because beneficiaries + victims + active enforcement are all present in the structural data."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "food_cultural_homogenization",
+      "small_producer_market_access",
+      "consumer_preference_suppression"
+    ],
+    "dual_formulation_note": "The condiment tyranny is upstream of food cultural homogenization (which it enables) and downstream of supply chain standardization economics (which it executes). The constraint represents the point where logistical efficiency becomes social/economic extraction."
+  },
+  "directionality_overrides": []
+}

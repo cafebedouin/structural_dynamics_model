@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "fmeca_procedures_1980",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fmeca"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "MIL-STD-1629A (FMECA Procedures)",
+    "topic_domain": "technological/military/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "defense_contractors",
+      "military_procurement_bureaucracy",
+      "risk_management_certification_industry"
+    ],
+    "victims": [
+      "program_cost_containment",
+      "system_design_agility",
+      "small_defense_suppliers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Small Defense Supplier",
+      "comment": "PERSPECTIVE 1: SMALL SUPPLIER (SNARE) \u2014 Trapped in compliance burden. Cannot exit DoD contract work without abandoning that revenue stream. Must absorb FMECA overhead regardless of system complexity or risk profile. No flexibility in methodology or scope. Bears extraction cost without meaningful exit path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Defense Program Management Office",
+      "comment": "PERSPECTIVE 2: PROGRAM MANAGEMENT OFFICE (TANGLED ROPE) \u2014 Constrained by regulatory requirement to mandate FMECA, but also genuinely benefits from structured failure analysis discipline. The procedure enforces risk discipline and creates institutional accountability. However, extraction occurs through procedural overhead: PMOs can defer to FMECA compliance as risk justification without conducting independent analysis. Coordination benefit (structured risk thinking) plus extractive benefit (procedural liability transfer)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Defense Acquisition Bureaucracy",
+      "comment": "PERSPECTIVE 3: DoD ACQUISITION BUREAUCRACY (ROPE) \u2014 Primary beneficiary. FMECA procedures establish institutional power: procurement offices can impose standardized requirements, contractors must comply, and compliance is delegated to external contractors/consultants. The constraint solves a genuine coordination problem (how to enforce risk discipline across thousands of suppliers) while creating extractive rents (consulting fees, contractor overhead). Can arbitrage between competing contractors; can modify FMECA scope and interpretation to favor preferred suppliers."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Commercial Defense Industry Reform Coalition",
+      "comment": "PERSPECTIVE 4: COMMERCIAL INDUSTRY REFORM (SCAFFOLD) \u2014 Organized agents (industry consortia, government efficiency advocates, software-centric defense firms) see FMECA as a temporary procedural constraint with a sunset. Modern software testing practices, agile risk management, and continuous integration/deployment create alternative verification pathways that bypass traditional FMECA's static analysis model. The constraint persists due to institutional inertia but is being superseded by adaptive methods. Theater ratio declining as practices shift."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The FMECA Consulting Industry",
+      "comment": "PERSPECTIVE 5: FMECA CONSULTING ESTABLISHMENT (PITON) \u2014 Institutional actor maintaining the procedural ritual despite degraded functionality. FMECA analysis is often performed as compliance theater: contractors hire certified FMECA consultants, generate required documentation, present findings to PMO, then design and operate systems using alternative risk methods (design reviews, failure prediction, reliability growth testing). The procedure persists through contractual requirement and institutional inertia, not because it's the primary mechanism by which risk discipline is actually enforced."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, structured failure analysis is a fundamental requirement of complex system design: you cannot responsibly operate safety-critical systems without systematically identifying and analyzing failure modes. FMECA codifies this necessity. However, the mountain classification is vulnerable to false summit detection: the necessity is for failure analysis, not for the specific 1980-era procedure and its theater elements. The procedure itself is contingent institutional arrangement, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fmeca_necessity_vs_procedure",
+      "question": "Is the mandatory extraction cost attributable to FMECA's intrinsic necessity, or to the specific 1980-era standard's procedural overhead?",
+      "resolution_mechanism": "Comparative analysis: cost/schedule impact of FMECA-compliant programs vs. modern risk-engineering practices (continuous integration, property-based testing, formal verification); correlation between FMECA procedural scope and risk reduction achieved",
+      "impact": "If intrinsic necessity: constraint classification remains tangled_rope across all contexts. If procedural overhead: classification shifts to scaffold/piton, indicating the specific standard is degraded and can be replaced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extraction cost is inherent to failure analysis or to the 1980 standard's design"
+    },
+    {
+      "id": "small_supplier_exit_cost",
+      "question": "What proportion of small DoD suppliers would exit the contracting pool if FMECA compliance were discretionary rather than mandatory?",
+      "resolution_mechanism": "Industry survey of compliance cost as percentage of contract value; analysis of margin pressure on different supplier segments; historical analysis of supplier concentration trends before/after MIL-STD-1629A adoption",
+      "impact": "If >30% would exit: suppression is high (trapped exit is real). If <10% would exit: suppression is moderate (some suppliers have option value in defense work).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of small suppliers with economically-forced participation"
+    },
+    {
+      "id": "pmoa_independent_analysis",
+      "question": "What fraction of Program Management Office risk decisions are made independent of FMECA findings, vs. deferring to FMECA as proxy?",
+      "resolution_mechanism": "PMO decision log analysis: compare programs with and without FMECA requirements; measure correlation between FMECA risk ratings and actual design decisions; assess PMO risk capacity vs. FMECA complexity",
+      "impact": "If >60% defer: extraction mechanism confirmed (PMO uses FMECA as liability shield). If <30% defer: coordination benefit is primary (PMO uses FMECA as input to independent analysis).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether PMO conducts independent risk analysis or defers to FMECA"
+    },
+    {
+      "id": "alternative_method_effectiveness",
+      "question": "Do agile risk methods (continuous failure tracking, automated testing, design review integration) achieve equivalent or superior risk discipline compared to FMECA's static upfront analysis?",
+      "resolution_mechanism": "Comparative failure rate analysis: FMECA-mandated programs vs. modern risk-engineered programs; time-to-detection of critical failure modes; rework rates; correlation between method used and post-delivery reliability growth",
+      "impact": "If superior/equivalent: scaffold perspective confirmed \u2014 alternative methods can replace FMECA, establishing sunset path. If inferior: FMECA remains necessary despite procedural overhead.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative effectiveness of agile risk methods vs. FMECA"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "MIL-STD-1629A established mandatory Failure Mode, Effects, and Criticality Analysis (FMECA) procedures for U.S. Department of Defense systems acquisition in 1980. The standard represents a hybrid constraint: a genuine coordination mechanism for enforcing risk discipline across thousands of defense contractors, combined with procedural extraction that benefits the DoD acquisition bureaucracy and creates overhead rents for the consulting industry. The constraint exhibits all six classification types from different structural positions. For large contractors with diverse portfolios, FMECA is coordination (Rope) \u2014 they have arbitrage power and genuinely integrate failure analysis into design. For small suppliers, FMECA is extraction (Snare) \u2014 trapped by contractual requirement, bearing overhead without negotiating power. For program management offices, it is hybrid (Tangled Rope) \u2014 they enforce a genuine discipline while deferring risk accountability to the procedure. For the consulting industry, it is degraded ritual (Piton) \u2014 maintaining itself through institutional inertia despite alternative methods being available. For reform-minded industry coalitions, it is a temporary problem being solved (Scaffold) \u2014 modern software testing and agile risk methods create pathways around traditional FMECA. The analytical observer risks naturalizing the standard as an immutable law (Mountain) \u2014 the necessity for failure analysis is real, but the 1980-era procedure itself is contingent and declining in functionality.",
+    "key_agents": [
+      "DoD Acquisition Bureaucracy: Primary beneficiary (institutional/arbitrage) \u2014 imposes standardized requirements, controls supplier behavior, delegates risk accountability",
+      "Defense Contractors (Large): Secondary beneficiary (powerful/arbitrage) \u2014 can negotiate FMECA scope, integrate with own risk processes, use compliance as market differentiation",
+      "Small Defense Suppliers: Primary victim (powerless/trapped) \u2014 cannot exit contracts, absorb overhead regardless of system complexity, no negotiating power on scope",
+      "Program Management Offices: Moderate actor (moderate/constrained) \u2014 benefit from structured risk discipline but constrained by requirement to impose procedure; use FMECA as risk proxy",
+      "FMECA Consulting Industry: Institutional actor (institutional/arbitrage) \u2014 maintains procedure through contractual demand; maintains itself through inertia despite declining functional necessity",
+      "Commercial Defense Industry Reform Coalition: Organized agents (organized/constrained) \u2014 developing alternative verification pathways (agile risk, continuous integration); constrained by regulatory requirement but building exit path",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as inherent to failure analysis necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The constraint transfers significant overhead cost to contractors, particularly small suppliers. FMECA documentation, analysis, and revision cycles consume engineering resources and calendar time. However, extraction is not maximal (0.66+) because some of the overhead serves genuine risk discipline \u2014 failure analysis is real work, not pure waste. The extraction occurs through procedural overkill: requiring the same analysis depth and documentation rigor regardless of system complexity or risk profile. Suppression (0.52): Moderate-high. Contractors cannot negotiate FMECA scope or depth; the procedure is mandated in contract terms. Suppliers cannot avoid the cost without exiting defense contracts. However, suppression is not total (0.60+) because alternatives exist (though they are not currently accepted in DoD contracts). There is institutional flexibility to modify the standard, but doing so requires government-level action. Theater ratio (0.65): Moderate-high. A significant fraction of FMECA activity is compliance documentation rather than generative analysis. Consultants are hired to produce FMECA reports that satisfy contractual requirements; the actual failure analysis discipline often occurs through parallel engineering processes (design reviews, testing, reliability modeling). The theater ratio has increased over the interval (from 0.42 to 0.65) as the standard has aged and alternative methods have become available, making the procedure's necessity less obvious.",
+    "perspectival_gap": "The primary perspectival gap is between the DoD acquisition bureaucracy's experience (Rope: coordination mechanism with net benefit to the imposed standard) and small suppliers' experience (Snare: pure extraction with trapped exit). Large contractors occupy an intermediate position (Rope to Tangled Rope depending on negotiating power). The PMO's Tangled Rope perspective arises because the requirement benefits PMOs (structured risk discipline) while extracting from them (accountability deferral to procedure). The consulting industry's Piton perspective reflects that the procedure persists despite declining functional necessity \u2014 the ritual is maintained through contractual requirement and institutional inertia, not because FMECA is the primary mechanism by which risk is actually managed in modern defense programs. The commercial reform coalition's Scaffold perspective reflects genuine structural change: agile methods, continuous integration, and property-based testing provide alternative verification pathways that bypass traditional FMECA's static analysis model. The analytical observer's Mountain perspective risks false summit \u2014 the necessity for failure analysis is real, but the 1980-era procedure is contingent and increasingly obsolescent.",
+    "directionality_logic": "Directionality values are derived from structural position within the extraction flow. The DoD bureaucracy benefits from imposed standard + arbitrage options \u2192 low d \u2192 negative/low \u03c7 (experienced as Rope). Large contractors benefit + have some negotiating power + mobile/arbitrage \u2192 low-moderate d \u2192 moderate \u03c7 (experienced as Rope). Small suppliers bear full cost + trapped exit + no negotiating power \u2192 high d \u2192 high \u03c7 (experienced as Snare). PMOs enforce requirement + benefit from discipline + constrained by requirement \u2192 moderate d \u2192 moderate \u03c7 (experienced as Tangled Rope). The consulting industry benefits from ongoing contract requirement + arbitrage \u2192 low-moderate d \u2192 moderate \u03c7 (experienced as Piton due to high theater ratio rather than high extractiveness). Reform coalition is organized + constrained + sees exit path \u2192 moderate d \u2192 moderate \u03c7 (experienced as Scaffold due to sunset clause perception). The analytical observer sits at universal scope + civilizational time horizon \u2192 d=0.72 (canonical analytical) \u2192 high f(d) \u2192 would suggest Snare, but the false summit detection gate identifies the mountain claim as naturalization.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR OF MANDATROPHY RESOLUTION: This constraint demonstrates how the mandatrophy is resolved by distinguishing between the necessity of the functional requirement (failure analysis) and the contingency of the institutional procedure (MIL-STD-1629A). The false summit detector identifies the analytical observer's mountain classification as naturalizing a contingent procedure as an immutable law. The true necessity (failure analysis of complex systems) is real and immutable; the institutional procedure is not. The constraint resolves mandatrophy by decomposing: (1) the underlying functional requirement (necessity \u2014 mountain-class), and (2) the 1980-era standard and its procedural overhead (contingent institutional arrangement \u2014 tangled_rope/scaffold/piton depending on perspective and time horizon). The standard itself exhibits theater ratio drift (0.42 \u2192 0.65 over 20 years) indicating that the procedure's functional necessity is declining relative to its performative content. This suggests the constraint is transitioning from Tangled Rope (genuine coordination + extraction) toward Piton (degraded ritual) and toward its sunset as alternative methods mature (Scaffold perspective). The extraction is real and quantifiable (overhead cost), but it is separable from the underlying necessity for risk discipline."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "defense_acquisition_cost_escalation",
+      "supplier_consolidation_barrier",
+      "military_technology_agility"
+    ],
+    "dual_formulation_note": "MIL-STD-1629A is a specific institutional instantiation of the more general constraint that complex systems require failure analysis. The underlying functional requirement (failure analysis necessity) is a mountain-class constraint; the 1980-era procedure with its modern overhead is a tangled_rope/scaffold/piton hybrid. These are decomposed into separate logical constraints in the network: the functional necessity is invariant; the procedural form is path-dependent and declining in functionality as alternative methods mature."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

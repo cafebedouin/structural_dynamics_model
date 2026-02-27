@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "stable_marriage_coordination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sm"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Stable Marriage Problem (Gale-Shapley Algorithm)",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "matching_algorithm_users",
+      "both_participant_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Individual Participant",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL PARTICIPANT (ROPE) \u2014 Participants in stable matching systems (job markets, university admissions, organ allocation) benefit from coordination that produces outcomes all parties prefer to unmatched states. Exit is mobile \u2014 individuals can always opt out of the matching mechanism and pursue decentralized search. The algorithm solves a genuine coordination problem with minimal coercive overhead. Experienced extraction is low because the participant receives a legitimate outcome improvement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Deployer",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL DEPLOYER (ROPE) \u2014 Organizations deploying stable matching (labor market clearinghouses, medical residency matching, school choice systems) benefit from reduced transaction costs and improved system efficiency. The algorithm provides coordination infrastructure with low administrative overhead. Exit is arbitrage \u2014 institutions can license, customize, or switch implementations. Net beneficiary with low extraction because the institutional benefit is genuine coordination value, not rent extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mathematical Necessity)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER / MATHEMATICAL NECESSITY (MOUNTAIN) \u2014 From a civilizational perspective, the stable marriage problem reflects an immutable property of preference aggregation: stable matchings always exist when preferences are complete and transitive. Gale-Shapley is not a sociological constraint but a mathematical theorem. The matching mechanism emerges from logical necessity, not institutional design. Accessibility collapse is high (\u22650.85) because no alternative can escape the mathematical structure \u2014 all algorithms must produce matchings from the preference set, and stable matchings must exist by the theorem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Collective Participant Group",
+      "comment": "PERSPECTIVE 4: COLLECTIVE PARTICIPANT GROUP (ROPE) \u2014 When participants organize (professional associations, residency applicant networks, student bodies), they gain agency in the matching system. Stable matching algorithms benefit organized groups by enabling group-level preference expression and preference revelation equilibrium. Exit is constrained by the institutional framework but groups can lobby for algorithm adjustments or alternative mechanisms. Low extraction experienced because organized participants can articulate and defend their interests."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Constrained Applicant",
+      "comment": "PERSPECTIVE 5: CONSTRAINED APPLICANT (TANGLED ROPE) \u2014 In some applications (refugee resettlement, organ allocation, school assignment for disadvantaged students), participants face trapped exit \u2014 they cannot opt out without significant harm, and their preference ranking is constrained by limited information or external pressure. The algorithm provides coordination (ensures they receive a matching), but also enforces an assignment from a limited option set. Moderate extraction because the trapped exit and constrained preference expression create asymmetric outcomes relative to voluntary participants."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Legacy Matching Bureau",
+      "comment": "PERSPECTIVE 6: LEGACY MATCHING BUREAU (PITON) \u2014 Traditional manual matching institutions (matchmakers, hiring departments conducting sequential matching, administrative clearinghouses using older procedures) view the stable matching algorithm as a replacement mechanism. The legacy institution persists through institutional inertia and professional credentialing despite algorithmic alternatives being available. Theater ratio is moderate to high because the legacy operation includes ritual and performative elements (interviews, deliberation, subjective weighting) that the algorithm bypasses. The constraint here is the institutional resistance to algorithmic replacement, not the algorithm itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "preference_revelation_incentive_compatibility",
+      "question": "Do participants truthfully reveal their preferences, or do they engage in strategic preference misrepresentation?",
+      "resolution_mechanism": "Empirical comparison of revealed preferences (stated in matching system) vs inferred true preferences (from behavior post-matching, switching patterns, side agreements). Analysis of strategic behavior in specific applications (e.g., Boston School Choice before and after mechanism change).",
+      "impact": "If preferences are revealed truthfully: Gale-Shapley produces optimal stable matches. If systematic strategic misrepresentation exists: the algorithm solves a different problem than preference aggregation, and extraction mechanisms emerge from incentive incompatibility.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether participants truthfully reveal preferences or engage in strategic misrepresentation"
+    },
+    {
+      "id": "preference_externality_scope",
+      "question": "Do participants' satisfaction and preference stability depend only on their own match, or on comparative outcomes with others?",
+      "resolution_mechanism": "Analysis of stability definitions: Does the constraint consider blocking pairs based on absolute outcome improvement or relative status comparison? Survey and observational data on participant satisfaction correlated with relative outcomes.",
+      "impact": "If preferences are purely personal: stable matching solves the stated problem cleanly (Rope). If preferences encode relative comparison: the algorithm can produce individually stable but collectively unstable outcomes, creating latent extraction when coordination-based fairness fails.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether preference stability depends on absolute or relative outcomes"
+    },
+    {
+      "id": "algorithmic_proposer_advantage",
+      "question": "Does the side designated as proposer (vs responder) in Gale-Shapley algorithm implementation gain structural advantage in outcome outcomes?",
+      "resolution_mechanism": "Empirical comparison of matching outcomes when proposer/responder sides are swapped for the same preference data. Analysis of real-world applications (medical residency: do program/applicant proposer designations affect outcome distribution?). Theoretical analysis of strategy-proofness properties.",
+      "impact": "If proposer advantage is systematic and significant: the algorithm encodes a hidden extraction mechanism favoring one side (Tangled Rope). If advantage is negligible: algorithm is coordinatively neutral (Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether proposer side gains structural advantage in matching outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Stable Marriage Problem (1962, Gale-Shapley) represents a class of matching constraints where two equally-sized groups with ranked preferences over each other require a stable allocation. The algorithm has become the canonical coordination mechanism in economic applications: medical residency matching (NRMP), school choice systems (Boston, NYC), job market clearinghouses, organ allocation, and refugee resettlement. The constraint exhibits a perspectival split between its mathematical essence (always produces stable matching \u2014 Mountain from analytical view) and its institutional deployment (solves coordination problems with low overhead \u2014 Rope from participant and institutional views). The constraint's low extractiveness (0.18) and low suppression (0.12) reflect that Gale-Shapley is fundamentally a coordination mechanism: both groups benefit from matching rather than remaining unmatched or engaging in costly decentralized search. The low theater ratio (0.25) indicates minimal performative content \u2014 the algorithm is transparent, deterministic, and produces outcomes directly from stated preferences. However, several omega variables remain unresolved: preference revelation incentives, relative outcome externalities, and proposer-side advantage. These reflect not failures of the algorithm but structural questions about its deployment context.",
+    "key_agents": [
+      "Individual Participants: Moderate/mobile (beneficial coordination) \u2014 benefit from stable matching vs unmatched or sequential bargaining states; can opt out and pursue decentralized search",
+      "Institutional Deployers: Institutional/arbitrage (administrative benefit) \u2014 reduce transaction costs, improve system efficiency, enable objective allocation",
+      "Participant Collectives: Organized/constrained (preference aggregation) \u2014 organized groups can articulate interests and influence mechanism design",
+      "Constrained Applicants: Powerless/trapped (unequal coordination) \u2014 in allocation systems with externalities (refugee resettlement, organ allocation), forced participation creates asymmetry",
+      "Legacy Matching Institutions: Institutional/arbitrage (inertial resistance) \u2014 manual matching operators persist through credentialing and institutional routine despite algorithmic alternatives",
+      "Analytical Observer: Analytical/analytical (mathematical necessity) \u2014 views stable matching as a theorem, not a design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The Gale-Shapley algorithm solves a genuine coordination problem. Both groups benefit from stable matching relative to unmatched states or sequential bargaining with search costs. The extractiveness is not zero because institutional deployment creates asymmetries: proposer-side advantage, information asymmetry in preference ranking, and institutional control over mechanism parameters. But the base value reflects that the primary function is coordination, not extraction. The measurement shows slight increase over time (0.10 \u2192 0.18), indicating institutional layering of extraction mechanisms (strategic preference manipulation, mechanism design gaming) onto the pure coordination function. Suppression (0.12): Low. Participants can typically opt out (mobile exit) and pursue alternatives. Preference revelation is voluntary (no coercion to truthful disclosure). Constraints on preferences come from external factors (limited job market, geographic constraints, qualification thresholds) not from the matching mechanism itself. Theater ratio (0.25): Low. Gale-Shapley is algorithmically transparent and deterministic \u2014 outcomes follow directly from stated preferences and the algorithm logic. Minimal performative ritual is required. The slight increase over time (0.20 \u2192 0.25) reflects institutional deployment layering: interview rituals, subjective preference weighting, and bureaucratic procedures that surround the pure algorithm but are not essential to it.",
+    "perspectival_gap": "The Analytical Observer's Mountain perspective ('stable matching is mathematically necessary') conflicts with the Constrained Applicant's Tangled Rope perspective ('I am forced into this system with limited options'). The conflict reveals the distinction between mathematical inevitability and institutional choice. The theorem guarantees stable matchings exist, but the choice to deploy Gale-Shapley in mandatory allocation systems (school assignment, refugee resettlement, organ allocation) is institutional, not mathematical. The Legacy Matching Bureau's Piton perspective ('algorithmic replacement is degrading our profession') reflects institutional inertia: the mechanism persists because organizations have invested in existing procedures and professional credentialing, not because it functions better than alternatives. The Collective Participant Group's Rope perspective (organized actors get preference aggregation power) contrasts with the powerless Individual Participant's Tangled Rope (trappped in limited options). The gap shows that participation level and organizational capacity determine whether the mechanism functions as pure coordination (organized groups) or mixed coordination-extraction (isolated individuals).",
+    "directionality_logic": "Directionality derives from each agent's structural position relative to the matching process. Institutional deployers (arbitrage exit, beneficiary status) experience low or negative d because they control deployment and benefit from administrative efficiency. Individual participants with mobile exit experience moderate d \u2014 they benefit from coordination but face proposer-side disadvantage and information asymmetry. Constrained applicants (trapped exit, victim status) experience high d \u2014 they cannot escape the mechanism and their preferences are externally limited. The algorithm itself has low d (beneficiary-favorable) because it enables coordination that all parties prefer to alternatives. The legacy institution has moderate d (constrained exit, victim status relative to replacement) \u2014 it experiences the algorithmic mechanism as a threat to institutional position. The mathematical necessity view (analytical) has zero d because it is a perspective, not an agent in the exchange.",
+    "mandatrophy_analysis": "This constraint does not exhibit mandatrophy. The rope classification is stable across perspectives because the underlying problem is genuinely coordinative. The Gale-Shapley algorithm solves a real preference aggregation problem with minimal coercive overhead. The Tangled Rope perspective (constrained applicants) does not contradict this \u2014 it simply identifies that deployment contexts (mandatory allocation) create asymmetric participation. The Mountain perspective (mathematical necessity) is orthogonal rather than contradictory \u2014 it identifies a different constraint (logical/mathematical inevitability) that is related to but distinct from the institutional coordination mechanism. The Piton perspective (legacy institution resistance) is also orthogonal \u2014 it identifies inertial institutional behavior that uses the matching algorithm as a replacement target, not a property of the algorithm itself. The mandatrophy would arise only if the base properties created a mismatch (e.g., if extractiveness were above 0.46 while claimed_type were rope) \u2014 here they are consistently low, confirming the rope classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "kidney_exchange_mechanism",
+      "school_choice_system",
+      "job_market_clearinghouse"
+    ],
+    "dual_formulation_note": "Stable Marriage Problem is upstream of multiple allocation mechanisms that rely on stable matching as a coordination infrastructure. Specific allocation constraints (kidney exchange, school choice, job market) inherit the low-extraction property of Gale-Shapley but add domain-specific extraction layers (organ scarcity value, school catchment politics, labor market power asymmetries). The stable matching coordination is the shared substructure across all three downstream constraints."
+  },
+  "directionality_overrides": []
+}

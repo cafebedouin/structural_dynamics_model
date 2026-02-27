@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "kidney_exchange_market",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "kidney_exch"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.42,
+    "claimed_type": "rope",
+    "human_readable": "Kidney Exchange Cycles and Chains",
+    "topic_domain": "social/technological/biological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "incompatible_patient_donor_pairs",
+      "list_waitlist_patients"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incompatible Pair",
+      "comment": "PERSPECTIVE 1: INCOMPATIBLE DONOR-PATIENT PAIR (ROPE) \u2014 Faces life-threatening kidney failure with willing donor whose blood type or crossmatch is incompatible. No direct exit option (death without transplant is the alternative). Experiences kidney exchange as pure coordination mechanism solving a collective action problem: their incompatibility becomes solvable when linked to other incompatible pairs. No extraction\u2014only enabling of mutual benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Transplant Center Network",
+      "comment": "PERSPECTIVE 2: TRANSPLANT CENTER NETWORK (ROPE) \u2014 Institutional beneficiary with arbitrage options (can operate traditional kidney transplant programs, living donor programs, or deceased donor allocation). Experiences kidney exchange as coordination infrastructure that expands their surgical capacity and patient access without coercive overhead. Network effects create value: larger pools enable longer chains and better HLA matches. Benefits from algorithmic optimization and matching logistics, but extraction is minimal\u2014centers gain reputation and case volume, not monopoly rents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Waitlist Patient Outside Exchange",
+      "comment": "PERSPECTIVE 3: WAITLIST PATIENT NOT IN EXCHANGE (TANGLED ROPE) \u2014 Waiting for deceased donor kidney; incompatible pairs in exchange systems may have better match probabilities and shorter waits than traditional waitlist. Experiences both coordination benefit (exchange system increases total transplants available) and extractive asymmetry (deceased donor kidneys may be preferentially allocated to exchange participants, creating two-tier system). Trapped\u2014no exit option; constrained by organ scarcity and cannot join exchange without compatible donor. Moderate extraction due to structural prioritization of pairs over unpaired waitlist patients."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Organ Procurement Organization",
+      "comment": "PERSPECTIVE 4: ORGAN PROCUREMENT ORGANIZATION (OPO) \u2014 Manages allocation of deceased donor organs and coordinates living donor exchanges. Experiences kidney exchange as coordination mechanism that increases total transplant volume and donor utilization efficiency. Has arbitrage options (can prioritize deceased donors for exchange or traditional waitlist). Benefits from exchange participation without bearing suppression costs\u2014no coercion required, only algorithmic matching and logistics."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Altruistic Donor Coalition",
+      "comment": "PERSPECTIVE 5: ALTRUISTIC DONOR COALITION (SCAFFOLD) \u2014 Donors motivated by health equity and enabling access. Organized participation in chains and pools. Temporary coordination feature: altruistic donor participation creates 'chain starters' that unlock longer sequences. Sees exchange as temporary coordination scaffold because altruistic participation may decline if commodification concerns or matching inefficiencies emerge. Has sunset logic: if genetic typing and cross-platform matching improve sufficiently, or if directed altruistic donation becomes more formalized, this coalition's role may transition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 From civilizational and global scope, kidney exchange represents a coordination solution to the allocation problem of scarce incompatible organs. Base extraction is low (\u03b5=0.28) because the mechanism is optionally entered and generates mutual gain with minimal coercive overhead. Suppression (0.35) reflects real barriers: incompatible pairs have limited alternatives (death without exchange), but the constraint solves rather than creates scarcity. Theater ratio (0.42) reflects moderate performative elements: matching algorithms are publicly reviewed, but some centers may emphasize exchange participation for reputation rather than patient benefit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exchange_vs_deceased_donor_prioritization",
+      "question": "Does prioritizing incompatible exchange pairs over unpaired waitlist patients for deceased donor organs constitute extractive allocation, or legitimate coordination incentive?",
+      "resolution_mechanism": "Longitudinal outcome data: waitlist time and graft survival for paired patients in exchange vs unpaired patients on traditional waitlist; allocation policy analysis across OPO regions",
+      "impact": "If exchange priority is justified by better outcomes: rope classification confirmed. If outcomes are equivalent but allocation follows politics: tangled_rope classification for waitlist patients strengthened.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exchange prioritization is medically justified or politically driven"
+    },
+    {
+      "id": "altruistic_donor_sustainability",
+      "question": "Can altruistic donor participation in chains be sustained without commodification risk or burnout dynamics?",
+      "resolution_mechanism": "Longitudinal tracking of altruistic donor recruitment and participation rates; qualitative analysis of donor motivation; policy changes addressing commodification concerns",
+      "impact": "If sustainable: scaffold sunset logic is real. If declining: exchange system becomes dependent on paired donors only, reducing flexibility and potentially increasing extracted rents from centers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term viability of altruistic donor participation"
+    },
+    {
+      "id": "algorithmic_matching_manipulation",
+      "question": "Do transplant centers strategically withhold compatible pairs or manipulate donor information to optimize their exchange participation and chain length?",
+      "resolution_mechanism": "Analysis of center-level compatibility disclosures; empirical comparison of stated vs inferred blood type/crossmatch distributions; audit of matching algorithm inputs",
+      "impact": "If manipulation occurs: suppression increases and extraction emerges. If rare: rope classification reflects genuine coordination with minimal gaming.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether centers manipulate matching to optimize exchange participation"
+    },
+    {
+      "id": "global_vs_local_pool_extraction",
+      "question": "Does expanding kidney exchange to national or international pools benefit all participants equally, or do resource-rich centers extract value from resource-poor regions?",
+      "resolution_mechanism": "Comparative outcomes analysis by center size and resources; waitlist time differential across regions; cross-border flow patterns in international exchange programs",
+      "impact": "If equal benefit: rope classification holds globally. If resource-rich centers gain disproportionately: snare or tangled_rope classification for smaller centers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether larger pools create equitable or extractive outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Kidney exchange cycles and chains solve the critical biological incompatibility problem: a patient with end-stage renal disease has a willing donor (spouse, family, friend) whose blood type or HLA crossmatch is incompatible with the recipient. In the absence of exchange, the willing donor cannot help their intended recipient, and both face the shortage of deceased donor organs on the national waitlist. Kidney exchange creates a coordination mechanism where incompatible pairs are matched with other incompatible pairs, enabling mutually beneficial swaps. An altruistic (non-directed) donor can initiate a chain that begins with an incompatible pair and continues through multiple exchanges, maximizing transplants from a single altruistic donation. This constraint demonstrates how low-extraction coordination mechanisms solve acute biological scarcity problems while managing fairness between paired and unpaired patients competing for organs.",
+    "key_agents": [
+      "Incompatible Donor-Patient Pairs: Primary beneficiary (moderate/constrained) \u2014 face death without exchange; gain life-extending transplant through coordination",
+      "Waitlist Patients Without Donors: Secondary agent (powerless/trapped) \u2014 waiting for deceased donor kidney; may experience extraction if exchange pairs receive prioritized allocation",
+      "Transplant Centers: Institutional beneficiary (powerful/arbitrage) \u2014 gain surgical volume and reputation; operate exchange infrastructure",
+      "Organ Procurement Organizations: Institutional coordinator (institutional/arbitrage) \u2014 manage deceased and living donor allocation; coordinate multi-center exchanges",
+      "Altruistic Donors: Organized beneficiary (organized/constrained) \u2014 enable chain initiation; provide coordination catalyst through non-directed donation",
+      "Analytical Observer: Sees coordination mechanism with emerging allocation tensions (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The base mechanism is optionally entered and creates mutual gain. Incompatible pairs gain access to transplantation they would not otherwise have. Transplant centers gain case volume and reputation without monopoly power\u2014multiple centers can participate and benefit. The extractiveness is not zero because: (1) paired patients may gain prioritization over unpaired waitlist patients for deceased donor organs, creating two-tier access; (2) larger transplant centers with more resources may have algorithmic advantage in matching and chain optimization; (3) reputational benefits may concentrate among prestigious centers. Suppression (0.35): Moderate. Incompatible pairs have limited practical alternatives (death or extended waitlist). However, suppression is not high because: (1) exchange is genuinely voluntary\u2014no coercion is used; (2) traditional transplant pathways still exist (paired exchange, altruistic donor directed donation, waitlist); (3) constraints are biological (incompatibility, organ scarcity) not imposed by the coordination mechanism itself. Theater ratio (0.42): Moderate. Matching algorithms are publicly reviewed and validated, but some centers may emphasize exchange participation for reputation or publicity rather than patient benefit. The performative element has increased over time as exchange programs have expanded nationally, with centers competing on exchange volume as a quality metric.",
+    "directionality_logic": "Incompatible pairs (moderate/constrained/immediate) derive d from their constraint status: they are victims of incompatibility but beneficiaries of exchange, placing them in the middle of the directionality spectrum. Transplant centers (powerful/arbitrage) derive low d because they have exit options and benefit from exchange participation without bearing suppression costs. Waitlist patients (powerless/trapped) derive high d because they have no exit option and may experience extraction through prioritization of paired patients. The analytical perspective (analytical/analytical) sees the constraint as genuine coordination with emerging extractive distortions\u2014d reflects the balance between mutual benefit and fairness concerns.",
+    "perspectival_gap": "Incompatible pairs and transplant centers both see kidney exchange as pure coordination (Rope) because it creates mutual benefit with low coercive overhead. Waitlist patients see tangled rope or incipient snare because exchange may extract resources (deceased donor priority) from their access. Altruistic donors see scaffold because their participation is temporary and sunset-dependent on sustainability of motivation. The analytical observer sees rope because the base mechanism is coordination-driven, but notes emerging tensions around allocation fairness and center-level gaming that could degrade the constraint toward tangled rope or snare if not managed.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing genuine coordination from extraction based on structural incentives. Kidney exchange would be pure Snare if it were coercive, monopolistic, or extracted rents from paired patients. It is Rope because: (1) participation is voluntary; (2) both parties to each swap benefit; (3) the mechanism solves a collective action problem (incompatibility) without creating the scarcity it addresses; (4) suppression is low\u2014constraints are biological, not institutional. The emerging tension with waitlist patients creates the potential for tangled rope classification if deceased donor prioritization becomes systematically extractive. The scaffold perspective for altruistic donors correctly identifies the sunset logic: if altruistic participation declines or if matching efficiency improves with better typing technology, the chain-starting role becomes less critical and the coordination value shifts."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organ_scarcity_allocation",
+      "living_donor_coercion_risk",
+      "transplant_center_competition"
+    ]
+  },
+  "directionality_overrides": []
+}

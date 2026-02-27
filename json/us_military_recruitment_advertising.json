@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "us_military_recruitment_advertising",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "milrec"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "US Military Recruitment Advertising",
+    "topic_domain": "political/labor_market",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "military_recruitment_command",
+      "defense_contractors"
+    ],
+    "victims": [
+      "economically_vulnerable_recruits",
+      "young_adults_without_alternatives"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Economically Vulnerable Recruit",
+      "comment": "PERSPECTIVE 1: ECONOMICALLY VULNERABLE RECRUIT (SNARE) \u2014 Limited employment alternatives in their region, inadequate information about actual deployment risks and quality of life. High suppression: housing costs, healthcare barriers, and limited job market create desperation that recruitment messaging exploits. No meaningful exit option once enlisted; bears full cost of extraction through low initial pay, service commitment, and occupational hazards."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Class Recruit with Alternatives",
+      "comment": "PERSPECTIVE 2: MIDDLE-CLASS RECRUIT WITH ALTERNATIVES (TANGLED ROPE) \u2014 Benefits from military service (education benefits, job training, healthcare, career pathway) but also experiences extraction through training intensity, deployment risk, and service commitment constraints. Has constrained exit (can exit with penalty but has backup options). Mixed extraction and coordination \u2014 the service provides genuine training while also extracting labor."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Military Recruitment Command",
+      "comment": "PERSPECTIVE 3: MILITARY RECRUITMENT COMMAND (ROPE) \u2014 Benefits directly from recruitment targets. Advertising enables coordination of labor supply with military staffing needs. Views the constraint as pure coordination: presenting military service as attractive solves the labor-matching problem. Has arbitrage options and faces minimal enforcement cost for advertising messaging."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Military Transparency and Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: TRANSPARENCY AND ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (veterans' advocacy groups, parent organizations, transparency advocates) view recruitment advertising as a temporary coordination problem being solved through disclosure requirements, truth-in-advertising enforcement, and alternative education pathways. See sunset mechanism: GI Bill modernization, apprenticeship programs, and income-share agreements are creating exit alternatives that reduce reliance on military recruitment for economic mobility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Institutional Recruitment Ritual",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL RECRUITMENT RITUAL (PITON) \u2014 The formal military recruitment apparatus persists through institutional inertia despite declining effectiveness. High school recruitment programs, slick advertising campaigns, and enlistment incentives continue despite competition from civilian labor market. Theater ratio high (0.81): much of recruitment activity is performative\u2014maintaining recruiting stations, running advertisements, participating in career fairs\u2014relative to actual conversion impact. The constraint persists because alternatives are not yet fully institutionalized."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some information asymmetry in labor markets is inherent: employers always present idealized images of work, and young adults always lack full information about long-term career consequences. This perspective sees recruitment advertising as an immutable feature of labor markets themselves. However, structural data contradicts the mountain classification\u2014the measured suppression (0.68) and theater (0.81) reveal this as a false summit, exposing that what appears 'natural' is actually a contingent regulatory choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "information_asymmetry_threshold",
+      "question": "What level of information disclosure would reduce suppression to acceptable levels without eliminating recruitment capacity?",
+      "resolution_mechanism": "Comparative analysis of disclosure requirements across allied militaries; A/B testing of recruitment messaging with varying risk and casualty information; longitudinal tracking of recruitment success under different transparency regimes",
+      "impact": "If threshold is achievable: suppression can be reduced without structural change (snare \u2192 tangled_rope possible). If threshold requires suppression to remain high: snare classification is structural, not remediable through disclosure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for information disclosure that maintains recruitment while reducing asymmetry"
+    },
+    {
+      "id": "economic_alternative_sufficiency",
+      "question": "Do civilian education and apprenticeship pathways provide genuine alternatives that reduce economic pressure driving military recruitment of vulnerable populations?",
+      "resolution_mechanism": "Regional analysis of recruitment rates vs. availability of alternative economic pathways; comparison of military vs civilian compensation and benefits; longitudinal tracking of substitute program expansion",
+      "impact": "If alternatives are sufficient: scaffold sunset is real, extraction mechanism weakens over time. If alternatives remain insufficient: economic trapping persists, snare classification is stable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether civilian alternatives provide sufficient economic mobility"
+    },
+    {
+      "id": "advertising_conversion_efficacy",
+      "question": "How much of military recruitment success derives from advertising messaging versus structural economic desperation?",
+      "resolution_mechanism": "Regional controlled trials varying advertising intensity while holding economic conditions constant; analysis of recruitment success during economic booms vs busts; comparison of advertising spend to conversion rates across economic strata",
+      "impact": "If advertising is primary driver: constraint is primarily manipulation (snare confirmed, theater high). If economic desperation dominates: advertising is performative cover for structural extraction (piton classification strengthened).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of advertising vs economic desperation to recruitment success"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.73
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "US military recruitment advertising operates at the intersection of labor market information asymmetry and economic vulnerability. The military targets young adults aged 17-24, with disproportionate targeting of communities with limited economic alternatives. The constraint exhibits significant suppression (0.68)\u2014barriers to exit include service commitments (8-10 years), occupational hazards (combat deployment, injury risk), and information deficits about actual quality of life. Theater ratio is high (0.81), reflecting that recruitment campaigns emphasize adventure, camaraderie, and personal growth while minimizing casualty statistics, PTSD prevalence, and post-service employment barriers. Extractiveness (0.52) reflects that the military captures labor substantially below what would be required in a competitive market with full information, sustained through limited alternative pathways for economically vulnerable populations. The constraint's classification varies across perspectives: pure snare for trapped recruits, mixed rope-snare for middle-class recruits, pure rope for recruiters, temporary scaffold for transparency advocates, degraded piton for the institutional apparatus, and false mountain for those who naturalize information asymmetry as inevitable.",
+    "key_agents": [
+      "Economically Vulnerable Recruits: Primary victims (powerless/trapped) \u2014 limited regional job opportunities, inadequate healthcare access, housing insecurity create structural desperation that recruitment messaging exploits",
+      "Military Recruitment Command: Primary beneficiary (institutional/arbitrage) \u2014 achieves staffing targets through targeted messaging; benefits directly from information asymmetry",
+      "Defense Contractors: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from sustained military recruitment and staffing levels that support procurement contracts",
+      "Middle-Class Recruits: Secondary actors (moderate/constrained) \u2014 experience mixed coordination and extraction; have backup options but still bear deployment risk",
+      "Veterans' Advocacy Groups: Organized agents (organized/constrained) \u2014 push for transparency, disclosure requirements, and alternative pathways; see sunset potential",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing labor market information asymmetry as inherent rather than contingent"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Military recruitment achieves below-market labor compensation through information advantage and limited alternatives. A recruit earning $28,000-$32,000 annually in base pay, with housing and food provided, would earn $50,000+ in equivalent civilian employment for comparable skills. The gap is extraction, but not maximal\u2014the military also provides genuine benefits (healthcare, housing, training, education assistance). Suppression (0.68): High. Significant barriers to informed decision-making: casualty and injury statistics are not routinely disclosed in recruitment messaging; PTSD prevalence is understated; post-service employment barriers are rarely mentioned; regional economic alternatives are not presented. Career changers have constrained options once enlisted. Theater ratio (0.81): High and increasing. Recruitment campaigns emphasize emotional appeal and aspirational narratives (leadership development, global impact, brotherhood/sisterhood) relative to functional information about actual service conditions. The ratio has increased over the 20-year interval as campaigns have become more sophisticated and economically vulnerable populations have faced greater desperation, making emotional appeals more effective.",
+    "directionality_logic": "The economically vulnerable recruit's directionality is derived from their trapped exit position and victim status: they have no meaningful alternatives outside the military for accessing healthcare, housing stability, and economic security. This produces high d (approximately 0.92), and the sigmoid f(d) converts this to strong experienced extraction. The military recruiter's directionality is derived from beneficiary status and arbitrage exit options: they are capturing labor surplus and face no personal cost for information asymmetry. This produces low d (approximately 0.10), yielding negative experienced extraction (they benefit). The middle-class recruit has constrained exit (can exit with penalties) and mixed victim/beneficiary status (they gain training but lose freedom), producing intermediate d (approximately 0.55). The difference in perspectives arises from the true asymmetry in the structural relationship: exit options differ fundamentally between economic strata.",
+    "perspectival_gap": "The constraint demonstrates sharp perspectival divergence. Military recruiters perceive pure coordination\u2014matching labor supply to organizational need. Economically vulnerable recruits perceive pure extraction\u2014trapped in a coercive arrangement. Transparency advocates perceive a temporary problem with architectural solutions (disclosure, alternative pathways). The institutional apparatus perceives its own degradation (piton)\u2014maintaining recruitment theater despite declining effectiveness. The analytical observer risks naturalizing asymmetry as inevitable but the structural metrics expose this as false: the suppression and theater values reveal design choices, not laws of nature.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED: The constraint classifies as snare from the powerless/trapped perspective because it meets the three-gate combination: extractiveness (0.52) \u2265 0.46, suppression (0.68) \u2265 0.60, and effective extraction chi (via f(d) with d \u2248 0.92 for trapped agents) \u2265 0.66. The mandatrophy test requires demonstrating that this is not misclassified as pure extraction when coordination elements exist. Coordination elements are present\u2014military service genuinely provides training, healthcare, and economic stability. However, these are not proportional to the extraction: (1) a vulnerable recruit has no choice to participate; (2) the extraction premium (below-market labor compensation) is non-consensual; (3) the information deficit is actively maintained through selective messaging. The coordination function is subordinate to extraction function. The middle-class perspective (tangled_rope) confirms that when exit options improve, the classification shifts\u2014the same institution appears as hybrid rather than pure extraction. This perspectival difference validates the snare classification for trapped agents."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "information_asymmetry_labor_markets",
+      "socioeconomic_mobility_constraints"
+    ],
+    "dual_formulation_note": "Military recruitment advertising is downstream of broader labor market information asymmetries but represents a distinct structural constraint focused on military-specific recruitment. The upstream constraint (labor market asymmetry) has different extractiveness; this constraint is more specific to the military context and the strategic deployment of advertising to exploit economic vulnerability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

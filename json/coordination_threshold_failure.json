@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "coordination_threshold_failure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "coord_threshold"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Critical Mass Chasm",
+    "topic_domain": "social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_network_operators",
+      "early_adopters_post_threshold"
+    ],
+    "victims": [
+      "bootstrapping_participants",
+      "network_switching_victims"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Stranded Bootstrapper",
+      "comment": "PERSPECTIVE 1: STRANDED BOOTSTRAPPER (SNARE) \u2014 Early participants who join before critical mass is reached experience zero utility while bearing all adoption costs (setup time, learning curve, social friction). No exit option exists without losing their sunk investment. The network provides no benefit until threshold, yet requires their participation to reach threshold. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Threshold Strategist",
+      "comment": "PERSPECTIVE 2: THRESHOLD STRATEGIST (TANGLED ROPE) \u2014 Participants who time their entry near the critical mass inflection point benefit from coordination (network becomes useful just as they join) but also face extraction through lock-in effects. They have constrained exit options \u2014 leaving after threshold crossing means losing network effects. Moderate experienced extraction balanced against genuine benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Operator",
+      "comment": "PERSPECTIVE 3: INCUMBENT OPERATOR (ROPE) \u2014 Network operator or dominant platform benefits from the threshold mechanism as a coordination tool: the chasm creates a natural barrier to competition (competitors must also cross the threshold), protects market share, and extracts switching costs from locked-in users. Experiences the constraint as pure coordination \u2014 the chasm solves their problem of maintaining network position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Bootstrap Organizer",
+      "comment": "PERSPECTIVE 4: BOOTSTRAP ORGANIZER (SCAFFOLD) \u2014 Organized groups (early-adopter communities, transition champions, open-source foundations) solve the chasm through structured onboarding campaigns with built-in sunset logic: coordinated bootstrap events are designed to push past critical mass in finite time. Once threshold is crossed, the organizing pressure is no longer needed. Low effective extraction because the pressure declines post-threshold."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Legacy Threshold Guardian",
+      "comment": "PERSPECTIVE 5: LEGACY THRESHOLD GUARDIAN (PITON) \u2014 Institutional defenders of old-network effects maintain the threshold mechanism long after its functional purpose has expired. The chasm persists through ritual and institutional inertia (device compatibility checks, membership vetting, protocol redundancy) even though the network has achieved critical mass and could handle lower barriers. Theater ratio high because the enforcement serves theatrical gatekeeping rather than genuine coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a systemic view, the threshold chasm exhibits both genuine coordination function (it solves the cold-start problem and protects from low-value participants pre-threshold) and structural extraction (it imposes costs on bootstrappers and creates lock-in for post-threshold participants). The constraint's functional necessity for bootstrapping is real, but the post-threshold lock-in mechanism is extraction. The analytical view integrates both."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_value_legitimacy",
+      "question": "Is the critical mass threshold value empirically necessary for network function, or is it artificially maintained for lock-in purposes?",
+      "resolution_mechanism": "Comparative analysis across network implementations: identify networks that successfully function below the claimed threshold; measure actual minimum viable participant count vs declared threshold; analyze network protocol technical requirements vs threshold enforcement mechanisms",
+      "impact": "If threshold is artificial: extractiveness increases to 0.55+, classification shifts toward Snare for bootstrappers. If threshold is technically necessary: extractiveness remains justified, Tangled Rope classification sustained.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether critical mass threshold is technically necessary or artificially maintained"
+    },
+    {
+      "id": "bootstrap_cost_internalization",
+      "question": "Who bears the cost of the bootstrapping chasm \u2014 early adopters, incumbent operators, or society broadly through missed coordination gains?",
+      "resolution_mechanism": "Cost accounting: measure direct costs to early participants (learning, setup, opportunity cost); measure incumbent benefits (market protection, switching costs); measure social cost (delayed network value realization); longitudinal analysis of wealth transfer through network effects post-threshold",
+      "impact": "If early adopters bear most costs: Snare classification confirmed, suppression >= 0.60. If costs distributed: Tangled Rope confirmed at moderate extraction. If network externalities dominate: suppression decreases, extraction becomes harder to justify.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost distribution in the bootstrapping phase"
+    },
+    {
+      "id": "alternative_bootstrap_mechanisms",
+      "question": "Can the coordination problem solved by the threshold chasm be solved through alternative mechanisms (subsidized early adoption, federation, protocol compatibility) that avoid extraction?",
+      "resolution_mechanism": "Case study analysis of networks using graduated entry costs, federated joins, or interoperability. Measure success rates of smooth-barrier networks vs threshold-barrier networks. Analyze why threshold mechanism persists if alternatives exist.",
+      "impact": "If smooth-barrier alternatives succeed: current threshold mechanism is revealed as Snare (incumbent extraction). If smooth barriers fail or are absent: threshold mechanism may be justified as the only workable coordination solution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-extraction bootstrap mechanisms are technically viable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The critical mass chasm is a structural coordination problem where a network or protocol provides zero utility to participants until a participation threshold is crossed. This creates a temporal valley: early adopters bear all costs (learning, setup, network externality loss) while receiving zero benefit, because the network cannot function until sufficient participants are present. Once the threshold is crossed, the network provides massive value to all participants, including those who joined after threshold. The constraint exhibits fundamental tension between necessity (the chasm is real \u2014 some mechanisms genuinely require critical mass) and extraction (the threshold mechanism can be, and often is, artificially maintained or exploited by incumbent operators to exclude competitors and lock in users). The extractiveness trajectory reflects this: severe extraction during bootstrap (0.72), moderate during threshold approach (0.55), reduced post-threshold stabilization (0.38). Theater ratio increases over time as the functional necessity of the threshold barrier declines but institutional gatekeeping persists.",
+    "key_agents": [
+      "Stranded Bootstrappers: Primary victims (powerless/trapped) \u2014 early adopters who bear adoption costs before threshold; zero utility during bootstrap phase; maximum extraction because no exit option exists without losing investment",
+      "Threshold Strategists: Secondary participants (moderate/constrained) \u2014 time entry near critical mass inflection; benefit from coordination but face lock-in extraction; constrained exit due to network effects",
+      "Incumbent Operators: Primary beneficiaries (institutional/arbitrage) \u2014 network operators or dominant platforms benefit from threshold mechanism as coordination tool and competitive moat; threshold protects market share and extracts switching costs",
+      "Bootstrap Organizers: Organized agents (organized/mobile) \u2014 early-adopter communities, transition champions, foundations that solve chasm through structured campaigns; structured pressure has sunset logic (needed only until threshold crossed)",
+      "Legacy Threshold Guardians: Institutional maintainers (powerful/constrained) \u2014 defend threshold mechanisms through institutional inertia even after functional necessity expires; maintain gatekeeping theater",
+      "Analytical Observer: Systemic view (analytical/analytical) \u2014 integrates both coordination function (solves cold-start) and extraction (lock-in) perspectives"
+    ],
+    "logic_rationale": "Extractiveness (0.38 final): Moderate. The constraint exhibits genuine coordination function (networks require critical mass to provide value) balanced against genuine extraction (lock-in effects post-threshold, artificial threshold maintenance). The value reflects the mixed nature \u2014 extractiveness is neither low enough to be pure Rope nor high enough to be pure Snare. The trajectory (0.72\u21920.55\u21920.38) shows that extractiveness is highest during bootstrap (early adopters bear maximum cost for zero benefit) and decreases post-threshold as the coordination benefit becomes real. Suppression (0.52): Moderate-high. Significant barriers include: network effects (cannot use network without critical mass of peers), switching costs (leaving means losing social/technical investment), information asymmetries (early adopters cannot know if threshold will be reached), and institutional gatekeeping (incumbents actively maintain barriers). Suppression is not total because bootstrap organizers and federated alternatives can reduce barriers. Theater ratio (0.48 final, increasing from 0.25): Moderate and rising. Early in the interval, the threshold enforcement is functionally necessary (low theater) \u2014 the chasm solves a real bootstrapping problem. Over time, as the network matures past critical mass, the threshold enforcement becomes increasingly performative (rising theater) \u2014 barrier maintenance shifts from coordination solution to incumbent gatekeeping.",
+    "directionality_logic": "Directionality values are derived from structural position within the threshold mechanism. Stranded bootstrappers occupy the worst position: they are victims (the chasm exists to solve the coordination problem, and they bear its cost), they are trapped (no exit option without losing investment), and they have no power to change the threshold value. Their d-value approaches 1.0 (full target of extraction). Incumbent operators occupy the opposite position: they are beneficiaries (the threshold protects their market position), they have arbitrage options (can adjust or remove threshold if competitive advantage shifts), and they are powerful (can control threshold enforcement). Their d-value is near 0.0 (beneficiary with escape velocity). Threshold strategists occupy an intermediate position: they benefit from the coordination function (join near threshold and immediately gain network value) but face lock-in extraction (constrained exit post-threshold). Their d-value is near 0.50 (symmetric costs and benefits). The analytical observer has d=0.72 (approaching victim position but with full information optionality \u2014 can exit the analysis if desired, giving slight positive bias toward beneficiary).",
+    "perspectival_gap": "The perspectival gap is maximal between stranded bootstrappers and incumbent operators. The bootstrapper experiences the chasm as pure extraction (Snare): they pay costs (time, learning, setup friction) with zero return until a threshold beyond their control is reached. They perceive themselves as victims in an asymmetric coordination game where the operator sets the rules. The incumbent operator experiences the same structure as pure coordination (Rope): they see the threshold as a mechanism for solving the legitimate problem of cold-start network failure. They do not experience it as extraction because they are beneficiaries and have exit options (can lower threshold, can switch networks). The threshold strategist occupies the middle ground \u2014 they experience coordination value (join at the inflection point and immediately gain utility) but also lock-in extraction (constrained exit post-threshold), classifying the constraint as Tangled Rope from their perspective. The bootstrap organizer, through coordinated action, can reshape the chasm's severity, converting it from a Snare into a Scaffold with a built-in sunset. The legacy guardian represents institutional persistence of the mechanism beyond its functional necessity, shifting theater from functional necessity toward performative gatekeeping, reclassifying as Piton. The analytical observer integrates all perspectives and sees the constraint as genuinely hybrid \u2014 the bootstrapping chasm solves a real coordination problem AND creates extractive lock-in, making Tangled Rope the appropriate systemic classification.",
+    "mandatrophy_analysis": "The critical mass chasm resolves mandatrophy by demonstrating that the classification depends entirely on temporal position within the constraint's lifecycle. During bootstrap (T=0-2), the mechanism is functionally necessary: the chasm solves the cold-start problem, and some form of coordination threshold is unavoidable. From this phase, the constraint is Tangled Rope (genuine coordination function + unavoidable asymmetric costs). However, the post-threshold (T=3+) institutional persistence of the barrier is extraction: once network effects are established, the threshold enforcement becomes gatekeeping rather than coordination. From this phase, the constraint is Snare for bootstrappers and incumbent-protective Rope for operators. The mandatrophy is resolved by recognizing that the functional justification for extraction declines over the constraint's lifecycle \u2014 early extraction is justified by coordination necessity, later persistence is not. The constraint is transitioning from Tangled Rope (justified hybrid) toward Snare (unjustified extraction) as the theater ratio rises and the functional necessity of the barrier declines. A well-designed constraint would have built-in sunset logic (the Scaffold perspective) \u2014 a commitment to reduce the threshold as the network matures, converting the temporary extraction into a sunset mechanism. The rise in theater ratio (0.25\u21920.48) tracks this degradation: the constraint is moving from functional coordination toward performative gatekeeping."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_cold_start_problem",
+      "switching_cost_lock_in",
+      "incumbent_competitive_moat"
+    ],
+    "dual_formulation_note": "The critical mass chasm decomposes into two structurally distinct constraints: (1) the genuine cold-start coordination problem (why networks require critical mass, \u03b5\u22480.15, Mountain or Rope), and (2) the institutional persistence of threshold barriers post-threshold (why gatekeeping continues after coordination necessity expires, \u03b5\u22480.55, Snare). These are linked: the second constraint is justified by appeal to the first, but the justification becomes stale over time as theater ratio rises. This story captures both \u2014 it is the story of how justified temporary extraction (Tangled Rope) degrades into unjustified persistent extraction (Snare) as the functional necessity declines. The upstream constraints represent the coordination problem; this story tracks how the solution mechanism can outlive its justification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.15
+    }
+  ]
+}

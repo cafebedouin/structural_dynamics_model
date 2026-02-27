@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "politeness_face_negotiation",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Face Negotiation Constraint (Politeness Theory)",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "social_cohesion",
+      "individual_relationships"
+    ],
+    "victims": [
+      "unfiltered_expression",
+      "efficiency_of_communication"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Individual Feeling Constrained",
+      "comment": "Individuals who feel they cannot express their true opinions or desires without risking social disapproval.  They perceive the constraint as a snare because they are trapped in a situation where they must constantly monitor their behavior."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Society Enforcing Norms",
+      "comment": "Society as a whole benefits from the maintenance of social order and the avoidance of conflict. The norms of politeness are internalized and enforced through social pressure. The constraint is a rope because it facilitates social interaction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "Politeness is a universal social constraint where individuals manage a 'face'--a social self-image. It balances social cohesion with individual autonomy. It functions to both extract from individuals (suppressing some actions) and coordinate social interactions. Thus, it is a Tangled Rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Individuals in Relationships",
+      "comment": "In relationships, individuals benefit from politeness creating harmony and mutual respect, though it may require suppressing one's true feeling at times. Here politeness facilitates coordination and positive relationship development."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Cultural Institutions",
+      "comment": "Cultural institutions (schools, media) both promote politeness and allow for some level of dissent within boundaries. They extract conformity but also coordinate expression."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cultural_relativity_threshold",
+      "question": "To what extent are politeness norms culturally relative, and what is the impact of cross-cultural misunderstandings?",
+      "resolution_mechanism": "Cross-cultural studies comparing politeness strategies and their interpretations; analysis of communication breakdowns in intercultural interactions.",
+      "impact": "High cultural relativity: Politeness is less of a universal constraint and more of a collection of local ropes. Low cultural relativity: Politeness is a stronger universal tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree of cultural relativity in politeness norms."
+    },
+    {
+      "id": "individual_variation_threshold",
+      "question": "How much does individual personality impact adherence to politeness norms, and how does this vary across contexts?",
+      "resolution_mechanism": "Personality studies correlating traits with politeness behavior; analysis of communication in different contexts based on personality.",
+      "impact": "High individual variation: Politeness is weaker constraint with many exit options. Low individual variation: Politeness is a stronger constraint and may be classified more as a Snare for some people.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The variation of individual adherence to politeness."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Politeness theory suggests that individuals engage in 'face work' to maintain their own and others' social image, balancing the desire for social acceptance (positive face) with the need for autonomy (negative face). This constraint manifests differently based on the actors involved. While politeness helps create social cohesion, it also can inhibit unfiltered expression and efficiency.",
+    "key_agents": [
+      "Individual Feeling Constrained: Powerless/Trapped - Individuals who must suppress true opinions.",
+      "Society Enforcing Norms: Institutional/Arbitrage - Society that enforces the cultural standard",
+      "Analytical Observer: Analytical/Analytical - The abstract perspective that the process works to create benefits and costs"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. Individuals must sacrifice some expression to comply with social norms. Suppression (0.40): Moderate. Social pressure exists for polite behavior. Theater ratio (0.20): Low. While there is ritualized politeness in some settings, much of it is sincere and contributes to social harmony.",
+    "perspectival_gap": "Individuals who feel constantly constrained by politeness norms will view this constraint as a snare. Societal entities promoting cohesion are benefitting from this constraint.  This creates the distinction for a tangled rope.",
+    "directionality_logic": "The directionality is derived from who benefits and who is burdened. Society benefits from maintained structure.  Individuals are burdened from what they must forfeit in open expression.",
+    "mandatrophy_analysis": "Politeness is clearly not a pure snare, because it coordinates as well as extracts. The tangled rope classification acknowledges this duality.  Without enforcement and at least a perceived coordination benefit, the type would likely be snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

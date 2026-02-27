@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "rotmigration_decision_threshold",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.3,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Migration Decision Threshold (Cost-Benefit Equilibrium)",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "destination_country_employers",
+      "remittance_receiving_families"
+    ],
+    "victims": [
+      "origin_country_economy",
+      "vulnerable_migrants"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Vulnerable Migrants",
+      "comment": "For vulnerable migrants with limited information and resources, the migration decision threshold can act as a snare, trapping them in exploitative situations in the destination country."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Destination Country Employers",
+      "comment": "Employers in destination countries benefit from the labor supplied by migrants, especially in sectors with labor shortages. They arbitrage the difference in labor costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Average Migrant",
+      "comment": "The average migrant experiences a tangled rope: benefits from higher wages and opportunities but is also constrained by integration challenges and potential exploitation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the migration decision threshold is a tangled rope, involving both coordination (labor allocation) and extraction (exploitation of vulnerable migrants, brain drain from origin countries)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Origin Country Economy",
+      "comment": "The origin country economy can experience a piton effect as skilled workers emigrate (brain drain), and the benefits of remittances may not fully compensate for the loss of human capital. There is a high level of theatrical activity (e.g. government programs to encourage return migration) but the original coordinating function has atrophied."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "information_asymmetry",
+      "question": "How much does incomplete information about the destination country affect migration decisions and outcomes?",
+      "resolution_mechanism": "Surveys of migrants' expectations versus their actual experiences; analysis of information networks and access to reliable data.",
+      "impact": "If high information asymmetry, migration decision becomes a snare. If low, can function as a rope or scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of information asymmetry on migration decisions"
+    },
+    {
+      "id": "integration_policies",
+      "question": "How effective are integration policies in destination countries at mitigating the negative impacts of migration and maximizing its benefits?",
+      "resolution_mechanism": "Comparative studies of integration policies across different countries; analysis of migrants' socio-economic outcomes under different policy regimes.",
+      "impact": "Strong integration policies can shift from snare to scaffold or rope. Weak policies reinforce snare or piton.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Effectiveness of integration policies"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The migration decision threshold represents the point at which an individual or family decides to migrate based on a perceived cost-benefit analysis. Factors include economic opportunities, political stability, social networks, and the costs and risks of migration. This threshold is not static, but influenced by policy interventions, information availability, and individual circumstances.",
+    "key_agents": [
+      "Vulnerable Migrants: Primary target (powerless/trapped) - Face exploitation and limited exit options.",
+      "Destination Country Employers: Primary beneficiary (institutional/arbitrage) - Benefit from low-cost labor.",
+      "Average Migrant: Secondary actor (moderate/constrained) - A mix of benefits and constraints.",
+      "Remittance-Receiving Families: Beneficiary (powerless, mobile) - benefit from monetary support",
+      "Origin Country Economy: Victim (institutional, constrained) - suffers from brain drain."
+    ],
+    "logic_rationale": "Extractiveness (0.5): Moderate. Some exploitation and loss of labor from origin countries. Suppression (0.3): Moderate. Limited information, costs, and legal barriers suppress choices. Theater Ratio (0.75): Relatively high. Theatrical activity includes government programs to encourage return migration, campaigns to promote national identity, and symbolic gestures aimed at mitigating the effects of brain drain. While these activities may have some functional impact, a significant portion is performative, aimed at maintaining social cohesion and political stability in the face of emigration.",
+    "perspectival_gap": "Migrants who are well-informed and have access to resources may view the migration decision as a beneficial rope (coordination), while vulnerable migrants may experience it as a snare (extraction). Destination country employers see it as a rope, while the origin country economy might see a piton effect (degraded coordination). The average migrant feels a Tangled Rope dynamic. The analytical observer sees the constraint as tangled rope.",
+    "directionality_logic": "Beneficiaries: Employers in destination countries gain access to labor, reducing costs. Remittance-receiving families get resources. Victims: Origin countries lose skilled labor, and vulnerable migrants are subject to exploitation. The vulnerable have no real exit and the source country is constrained by their decisions.",
+    "mandatrophy_analysis": "The migration decision is not pure extraction or pure coordination, but a complex interplay of both. It is also not a pure mountain: The amount of suppression is subject to policy changes and other interventions. The high theater ratio and the other metrics justify the tangled rope classification. The mandatrophy is resolved by showing the different perspectives and their rationales."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "net_zero_stabilization",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nzcs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Net Zero Carbon Constraint",
+    "topic_domain": "climate/energy/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "fossil_fuel_incumbents",
+      "high_emission_economies",
+      "carbon_intensive_industries"
+    ],
+    "victims": [
+      "climate_vulnerable_populations",
+      "future_generations",
+      "global_south_nations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Climate-Vulnerable Small Island States",
+      "comment": "PERSPECTIVE 1: CLIMATE-VULNERABLE POPULATIONS (SNARE) \u2014 Island nations and low-lying regions face existential threat with zero exit options. The constraint traps them: carbon budgets sufficient for wealthy nations to continue high-emission development for decades while poor nations suffer immediate consequences. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.99."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Developing Economies",
+      "comment": "PERSPECTIVE 2: DEVELOPING ECONOMIES (TANGLED ROPE) \u2014 Need energy for development but constrained by carbon budgets negotiated by historical emitters. Benefit from coordination (climate stability norms) but bear asymmetric extraction (development restrictions). d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Renewable Energy Sector",
+      "comment": "PERSPECTIVE 3: RENEWABLE ENERGY SECTOR (ROPE) \u2014 Benefits from net-zero transition as coordination mechanism. Can arbitrage between carbon-constrained and emerging-tech markets. Low extraction; genuine coordination function. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Fossil Fuel Incumbents",
+      "comment": "PERSPECTIVE 4: FOSSIL FUEL INCUMBENTS (TANGLED ROPE) \u2014 Primary beneficiaries during the 2005-2020 window. Net-zero framing provides coordination narrative (climate action) while permitting continued emissions through offsets, carbon capture mythology, and delayed implementation. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Negative chi because beneficiary status dominates; but requires_active_enforcement=true and suppression=0.68 because the constraint suppresses structural alternatives (rapid phase-out, nationalization, technology transfer) through decades of 'transition' rhetoric."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Climate Justice Coalitions",
+      "comment": "PERSPECTIVE 5: CLIMATE JUSTICE COALITIONS (SCAFFOLD) \u2014 Organized pressure (indigenous groups, young people, south-global activists) pushing for faster transitions and loss-and-damage funds. See net-zero as temporary constraint with sunset: reparations and technology transfer would create alternative coordination pathways. d\u22480.48, f(d)\u22480.62, \u03c3=1.2 \u2192 \u03c7\u22480.44. Scaffold because coalition action is building institutional alternatives (Paris Agreement loss-and-damage mechanisms, renewable tech transfer) that could replace the current carbon-budget framework."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Climate Governance",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL CLIMATE GOVERNANCE (PITON) \u2014 UNFCCC processes, carbon markets, and net-zero pledges perform climate action without requiring structural change. Theater ratio=0.65: Nationally Determined Contributions (NDCs) are largely aspirational; carbon accounting permits offsetting that doesn't reduce atmospheric CO2; 'net-zero by 2050' is 30+ years away (beyond election cycles). Governance persists through inertia \u2014 governments can claim climate leadership while maintaining emission trajectories. d\u22480.10, f(d)\u2248-0.07, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 The pre-2005 scientific framing that 'some emissions are compatible with stabilization' naturalizes what is actually a political choice: wealthy nations can continue high-emission development while poor nations accept development constraints. This perspective risks treating unequal extraction as an inherent limit of climate physics rather than a contingent institutional arrangement. However, structural data (\u03b5=0.58, suppression=0.68) contradicts mountain classification \u2014 engine detects false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "carbon_budget_allocation_legitimacy",
+      "question": "On what moral and economic principle should historical cumulative emissions be allocated in carbon budgets \u2014 equal per-capita future entitlements, historical responsibility discount, or development-stage adjustment?",
+      "resolution_mechanism": "Philosophical consensus on equity principles (Rawlsian, capabilities-based, or utilitarian); empirical determination of whether any allocation principle is being consistently applied in UNFCCC negotiations",
+      "impact": "If per-capita: developing nations have legitimate claim to vastly larger future budgets than assigned. If historical responsibility: wealthy nations owe reparations as extraction cost. If development-stage: creates permanent hierarchy. No allocation principle is natural law \u2014 all are political choices.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Philosophical basis for carbon budget allocation across nations"
+    },
+    {
+      "id": "net_zero_offset_sufficiency",
+      "question": "Can engineered carbon removal and natural sinks (reforestation, wetland restoration) credibly offset residual emissions at net-zero targets, or is 'net' semantics permitting continued extraction?",
+      "resolution_mechanism": "Long-term atmospheric CO2 monitoring correlated with offset claims; life-cycle analysis of offset projects for permanence, additionality, and leakage; assessment of whether offset markets incentivize genuine removal or just accounting gimmicks",
+      "impact": "If offsets work: net-zero is a legitimate transition pathway. If offsets fail: net-zero is pure theater masking continued extraction \u2014 classification shifts from tangled_rope toward snare at high extractiveness (\u03b5\u21920.75+).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether carbon offsets can achieve genuine atmospheric CO2 neutrality"
+    },
+    {
+      "id": "extraction_timeline_to_extraction_ratio",
+      "question": "What proportion of global decarbonization must occur by 2030 (this decade) to have >50% probability of limiting warming to 1.5\u00b0C, versus what is mandated by current policy commitments?",
+      "resolution_mechanism": "IPCC AR6 emissions gap analysis; retrospective assessment of 2030 actual vs committed reductions; climate-model sensitivity to cumulative emissions through 2035",
+      "impact": "If gap is >30%: current net-zero framing is extracting decades of continued emissions while pretending action is underway \u2014 suppression rises to 0.80+, \u03b5\u21920.72, classification shifts toward snare. If gap is <10%: tangled_rope framing is accurate; extraction is real but mixed with genuine coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Emissions reduction gap between Paris targets and policy commitments"
+    },
+    {
+      "id": "technology_transfer_lock_in",
+      "question": "Do intellectual property frameworks and technology licensing terms for renewable energy prevent developing nations from building domestic capacity, or is 'technology transfer' a viable pathway to decoupling emission constraints from development constraints?",
+      "resolution_mechanism": "Analysis of renewable energy capital costs in high-IP-enforcement vs weak-IP-enforcement regions; mapping of renewable tech patents and licensing barriers; empirical comparison of domestic capacity buildout timelines with and without IP restrictions",
+      "impact": "If IP blocks transfer: developing nations are locked into fossil fuels by structural constraint (licensing costs), making the extraction mechanism explicit (snare from south-global perspective; \u03b5\u21920.75+). If transfer works: tangled_rope framing stands; coordination function is real but imperfectly executed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of IP frameworks in enabling or blocking clean technology transfer"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 21,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 21,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 2005,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The net-zero carbon constraint embodies a structural tension between climate stabilization as a genuine coordination problem and climate action as a mechanism for extracting continued development advantages for high-emission economies. Before 2005, scientific framings portrayed a 'small carbon budget' compatible with stabilization \u2014 implicitly distributing that budget unequally, with wealthy nations capturing most of the permitted emissions while developing nations accepted constrained growth. Since then, the constraint has evolved from a relatively transparent climate-physics problem into a complex hybrid mechanism mixing real climate coordination (reducing emissions is necessary) with asymmetric extraction (permits for wealthy nations to continue high-emission development while poor nations accept development restrictions, at least until 2050). The constraint exhibits all six DR types: powerless island nations experience it as a snare, developing economies as tangled rope, renewable sectors as rope, incumbent fossil fuel industries as rope with active enforcement suppressing alternatives, climate justice coalitions as a scaffold with sunset potential, international governance as a degraded piton ritual, and analytical observers risk naturalizing it as an immutable law when it is actually a contingent political arrangement. The extractiveness has grown from 0.32 (2005: relatively narrow technical question about carbon budgets) to 0.58 (2026: major structural question about which nations can emit and which must constrain). Theater ratio has similarly increased from 0.38 to 0.65, reflecting growing disconnection between climate pledges and actual emissions trajectories, and between 'net-zero by 2050' promises and the physics-required reductions before 2035.",
+    "key_agents": [
+      "Climate-Vulnerable Populations (Powerless/Trapped): Island nations and low-lying regions facing existential threat with no exit options. Bear extraction cost immediately; wealthy nations have 25+ year delay.",
+      "Developing Economies (Powerful/Constrained): Emerging markets needing energy for development but constrained by carbon budgets negotiated by historical high emitters. Experience tangled rope: benefit from climate stability norms but bear asymmetric development restrictions.",
+      "Fossil Fuel Incumbents (Institutional/Arbitrage): Primary beneficiaries during transition window. Net-zero framing permits continued emissions through offsets, delayed implementation, and carbon-capture mythology while capturing renewable transition opportunities. Experience rope: genuine first-mover advantage in low-carbon sectors.",
+      "Renewable Energy Sector (Institutional/Arbitrage): Beneficiaries of net-zero transition as coordination mechanism. Can arbitrage between carbon-constrained and emerging markets. Low extraction; pure coordination function.",
+      "Climate Justice Coalitions (Organized/Constrained): Indigenous groups, young people, south-global activists building pressure for faster transitions and reparations. Organized enough to create alternative pathways (loss-and-damage funds, technology transfer mandates) with sunset logic.",
+      "International Climate Governance (Institutional/Arbitrage): UNFCCC processes, carbon markets, NDCs that perform climate action without structural change. Institutional theater that maintains negotiation processes while permitting continued extraction.",
+      "Analytical Observer (Analytical/Analytical): Risks naturalizing contingent political arrangements (unequal carbon budgets, delayed action timelines) as inherent properties of climate physics."
+    ],
+    "logic_rationale": "Extractiveness (0.58): The constraint permits high-emission economies to continue development through 2050 while requiring immediate constraints on low-emission nations. This is extraction \u2014 the budget allocation is structured so wealthy nations consume most of the remaining atmospheric carbon capacity. The value (0.58, not higher) reflects that the extraction is mixed with genuine coordination (all nations do need to reduce emissions eventually) and that some coordination mechanisms (Paris Agreement, renewable cost reductions) genuinely do enable lower-emission development. Suppression (0.68): High, but not maximum. Structural alternatives are suppressed: rapid fossil fuel phase-out is not discussed seriously in policy (requires treating stranded assets as losses); technology transfer is limited by IP frameworks; loss-and-damage financing is blocked by wealthy nations; radical reorganization of energy systems is off the table. But suppression is not total \u2014 renewable energy is growing, some nations are achieving real decarbonization, and climate justice coalitions have institutional voice. Theater ratio (0.65): Mid-to-high. NDCs are largely aspirational; carbon markets permit offsets that don't reduce atmospheric CO2; 'net-zero by 2050' is far enough away that governments can claim leadership while maintaining emission trajectories; renewable technology is celebrated while fossil subsidies continue unabated. Theater has increased because the gap between announced targets and actual emissions is widening \u2014 the performative content is growing.",
+    "perspectival_gap": "Extreme perspectival divergence. Island nations see a snare \u2014 they have no exit and bear immediate costs. Developing economies see mixed coordination and extraction \u2014 they need the climate stability coordination but are constrained unfairly. Fossil incumbents see rope \u2014 they are solving the coordination problem AND capturing transition advantages. Renewable sectors see pure rope \u2014 they benefit from coordination without bearing extraction costs. Climate justice coalitions see a scaffold with sunset \u2014 they are organized enough to see alternatives (reparations, technology transfer) that could replace the current constraint. Governance institutions see a piton \u2014 their processes are largely performative but persist through inertia. The analytical observer risks seeing a mountain \u2014 'some nations must constrain development to stabilize climate' sounds like a law of nature, but the allocation of constraints to poor nations rather than rich ones is a political choice, not physics.",
+    "directionality_logic": "Climate-vulnerable populations: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction; no exit. Developing economies: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.15. Significant extraction because development constraints are asymmetrically applied to them. Fossil fuel incumbents: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; they can exit high-emission development through investment in renewables while claiming climate leadership. Renewable sector: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary with minimal extraction. Climate justice coalitions: Organized + constrained \u2192 d\u22480.48, f(d)\u22480.62. Moderate extraction because they are constrained by power asymmetries but organized enough to build alternatives. International governance: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.07. Low extraction because they capture institutional advantage (legitimacy, negotiation forums) and have exit via disengage.",
+    "mandatrophy_analysis": "The net-zero constraint resolves mandatrophy through institutional asymmetry. Wealthy nations experience it as rope (coordination for mutual benefit + arbitrage opportunity in renewables). Poor nations experience it as snare (no exit, immediate costs). Fossil incumbents experience it as rope (first-mover advantage in transition). Climate justice coalitions experience it as scaffold (organized enough to build alternatives). The mandatrophy is resolved not by finding a single 'correct' type but by observing that: (1) the constraint IS a genuine coordination problem (climate stabilization requires global emissions reduction), AND (2) it IS also a mechanism of extraction (the burden is allocated unequally, with wealthy nations capturing most of the benefits of continued development while poor nations accept constraints). Both are true simultaneously. The constraint is a hybrid mechanism that solves the coordination problem while functioning as an extraction apparatus. Indexical classification reveals this: from the perspective of powerless island nations, it's pure snare; from the perspective of fossil incumbents, it's rope; from the perspective of analytical observers, it's tangled rope. No single type 'resolves' the mandatrophy \u2014 the multiperspectival view does."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "carbon_market_permanence",
+      "renewable_technology_access",
+      "loss_and_damage_compensation",
+      "energy_system_lock_in"
+    ],
+    "dual_formulation_note": "The net-zero constraint decomposes into multiple structural claims with different \u03b5 values: (1) Climate stabilization requires reduced atmospheric CO2 (mountain, \u03b5\u22480.02); (2) Global emissions must decline (rope, \u03b5\u22480.15, pure coordination); (3) Wealthy nations can delay action to 2050 while poor nations constrain now (snare, \u03b5\u22480.72); (4) Carbon offsets and technology capture permit continued high-emission development (tangled rope, \u03b5\u22480.58). This story captures the institutional constraint at the political-economic level (\u03b5=0.58). Upstream constraints (climate physics, emission pathways) have different \u03b5 values. Downstream constraints (renewable access, loss-and-damage financing) are affected by this constraint's allocation decisions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

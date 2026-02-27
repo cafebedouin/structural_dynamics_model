@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "demand_response_cost_shift",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "drcs"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Smart Grid Demand Response Rate Structure",
+    "topic_domain": "economic/technological/energy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "grid_operators",
+      "peak_load_industrial_users",
+      "utility_shareholders"
+    ],
+    "victims": [
+      "price_sensitive_households",
+      "small_businesses",
+      "grid_reliability_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Price-Sensitive Household",
+      "comment": "PERSPECTIVE 1: PRICE-SENSITIVE HOUSEHOLD (SNARE) \u2014 Cannot exit the grid. Faces binary choice: curtail discretionary consumption during peak hours or pay peak rates. No real flexibility for essential loads (heating/cooling, refrigeration). No arbitrage option \u2014 trapped into the rate structure with zero degrees of freedom. Experiences maximum extractiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Business",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS (TANGLED ROPE) \u2014 Constrained by regulatory participation mandates and limited capital for load-shifting investments (battery storage, HVAC scheduling). Benefits from grid stability that enables their operations. But extraction is real: demand response programs often shift costs to smaller firms that lack sophisticated load management. Moderate power, constrained exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Grid Operators and Utilities",
+      "comment": "PERSPECTIVE 3: GRID OPERATORS & UTILITIES (ROPE) \u2014 Experience demand response as pure coordination mechanism: stabilize peak loads without building expensive generation or transmission capacity. Benefits from lower capital requirements and operational flexibility. Arbitrage exit option (can adjust rate structure, expand demand response, or build capacity if needed). Net beneficiary, but classify as rope because the primary function is genuine coordination, not pure extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Peak-Load Industrial Users",
+      "comment": "PERSPECTIVE 4: PEAK-LOAD INDUSTRIAL USERS (ROPE) \u2014 Large manufacturers with flexible production schedules and capital to invest in demand response technology (automated load shifting, on-site generation). Derive significant economic benefit from peak hour rebates. Have arbitrage options: relocate production, invest in generation, adjust schedules. Coordinate with grid operators to mutual benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Renewable Integration Coalition",
+      "comment": "PERSPECTIVE 5: RENEWABLE INTEGRATION COALITION (SCAFFOLD) \u2014 Organized agents (environmental regulators, renewable operators, grid modernization advocates) view demand response as a temporary coordination mechanism with a sunset clause. As distributed solar, battery storage, and grid-scale storage mature, demand response's coordination function becomes less critical. Low theater \u2014 actual grid stability function is real. But temporary: within 15-20 years, storage and microgrids reduce dependence on curtailment-based demand response. Constrained because investment in demand response infrastructure is now required for transition."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Regulatory Framework",
+      "comment": "PERSPECTIVE 6: LEGACY REGULATORY FRAMEWORK (PITON) \u2014 The rate-structure theater of demand response: the existing framework (time-of-use rates, critical peak pricing, etc.) persists through regulatory inertia. The framework was innovative 15 years ago but is increasingly performative as it fails to address deeper problems (grid stability, equity, decarbonization). Maintained because alternatives haven't fully replaced it, not because it functions optimally. Theater ratio high because compliance and measurement activity dominates actual demand shifting effectiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Demand response exhibits genuine coordination function (reducing peak loads, enabling renewable integration) AND asymmetric cost shifting (to price-sensitive households, small businesses, communities without capital for smart devices). Active enforcement through regulatory mandates and tariff structures confirms the tangled nature. This is not a mountain (immutable law) nor a pure rope (coordination without extraction). The structure is contingent on rate design choices that could be reformed to reduce the victim burden."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "flexibility_distribution_threshold",
+      "question": "What percentage of total addressable load must be shiftable without harm to cross the threshold from extraction-dominant (Snare) to coordination-dominant (Rope)?",
+      "resolution_mechanism": "Empirical measurement of actual load flexibility by household type, sector, and climate zone; identification of non-shiftable loads (heating/cooling, medical, refrigeration); sensitivity analysis on rate structure design",
+      "impact": "If threshold < 30%: current demand response inherently extracts from immobile load-holders. If threshold > 60%: demand response could be redesigned as net-neutral coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Load flexibility threshold for coordination-dominant classification"
+    },
+    {
+      "id": "cost_shift_magnitude",
+      "question": "How much of the grid cost savings from demand response is genuinely accrued to the system vs. shifted to price-sensitive households through higher base rates?",
+      "resolution_mechanism": "Decomposition of utility cost structures; tracking of savings from avoided peak generation, transmission, and capacity investment vs. changes in base rates and fixed charges; comparison across utilities with different DR program designs",
+      "impact": "If shift > 70%: primary function is extraction disguised as coordination. If shift < 30%: legitimate coordination with minimal victim burden.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of cost savings shifted to captive consumers"
+    },
+    {
+      "id": "technology_equity_timeline",
+      "question": "How long until smart demand response technology (connected devices, automated control, real-time pricing) diffuses to >80% of households at costs <$500?",
+      "resolution_mechanism": "Tracking of device adoption, cost curves, and government subsidy programs; projections from renewable energy system cost learning curves; historical technology diffusion models",
+      "impact": "If < 10 years: extraction is temporary (scaffold classification strengthened). If > 30 years: extraction persists long-term for significant population (snare classification strengthened).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for cost-effective demand response technology access"
+    },
+    {
+      "id": "renewable_storage_substitutability",
+      "question": "Can grid-scale battery storage and distributed solar + storage fully replace demand response for grid stabilization within the projected energy transition?",
+      "resolution_mechanism": "Comparative techno-economic modeling of different grid stabilization strategies; cost curves for batteries, solar, and grid modernization; analysis of demand response irreplaceability under high renewable penetration scenarios",
+      "impact": "If fully substitutable: demand response is purely temporary (scaffold). If partially required: some tangled rope persists even post-transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether storage technology can eliminate demand response necessity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "Demand response programs were initially designed as pure coordination mechanisms: incentivize users to reduce electricity consumption during peak hours, thereby avoiding the need to build expensive generation and transmission capacity while enabling higher renewable energy penetration. However, the policy implementation creates asymmetric cost burdens. Utilities implement time-of-use rates and critical peak pricing that penalize households and small businesses lacking capital to invest in smart devices, battery storage, or load-shifting infrastructure. Meanwhile, large industrial users and facilities with sophisticated load management benefit from rebates and favorable rate structures. The result is a hybrid constraint: genuine grid stabilization function (coordination) coupled with systematic cost shifting from price-sensitive, less-mobile consumers to grid operators and capital-rich industrial users (extraction). The constraint operates through rate structure design and regulatory mandate, not through deception. Households know the peak hour rates. But the trapped position of price-sensitive consumers creates asymmetric vulnerability: they cannot exit the grid, cannot afford demand response technology, and face binary choices between consumption curtailment and financial burden.",
+    "key_agents": [
+      "Price-Sensitive Households: Primary victim (powerless/trapped) \u2014 no flexibility, no technology access, no exit option; bear disproportionate cost of grid stabilization",
+      "Small Businesses: Secondary victim (moderate/constrained) \u2014 limited capital for smart load management, regulatory participation mandates, constrained flexibility relative to industrial users",
+      "Grid Operators & Utilities: Primary beneficiary (institutional/arbitrage) \u2014 avoid expensive capacity investments, reduce operational costs, gain flexibility; arbitrage exit options",
+      "Peak-Load Industrial Users: Secondary beneficiary (powerful/arbitrage) \u2014 flexible production, capital for smart technology, derive rebate benefits; mobile across rate structures and locations",
+      "Renewable Integration Coalition: Transitional actor (organized/constrained) \u2014 view demand response as temporary necessity for high renewable penetration; building alternatives (storage, distributed generation)",
+      "Legacy Regulatory Framework: Institutional actor (institutional/arbitrage) \u2014 maintains rate structure through regulatory inertia; theater-heavy because actual peak reduction effectiveness is modest relative to monitoring/compliance costs"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The primary extraction is the systematic cost shift from price-sensitive households to utilities and industrial users. The measurement tracks this increase over the interval: as demand response programs mature, utilities layer additional complexity (critical peak pricing, behavioral demand response, real-time pricing) that increases the coordination function but also the administrative overhead and cost shifting. From the trapped household perspective, extractiveness is near 1.0. From the industrial beneficiary perspective, it approaches 0.0. The average of 0.52 reflects that significant populations experience genuine extraction while others experience genuine coordination benefit. Suppression (0.58): Moderate-high. The suppression operates through regulatory mandate (participation required in many jurisdictions), technological barriers (smart devices, real-time pricing capability), and informational asymmetry (households often unclear on actual peak hours or peak rate magnitude). Crucially, suppression is not coercive violence but structural: trapped position in grid + no arbitrage technology + rate structure design. Theater ratio (0.61): Moderate-high. Significant performative content: demand response effectiveness is often overestimated because it measures voluntary curtailment during called events (typically <40 hours/year) rather than actual peak reduction. Utilities report demand response 'capacity' in their marketing but actual delivered response varies widely. Regulatory compliance reporting creates theater\u2014sophisticated metering and monitoring infrastructure is deployed to measure curtailment, but the actual grid benefit is modest relative to the infrastructure cost. As smart grid technology matures, theater should decrease (automated response, real-time data), but regulatory inertia keeps it high.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence driven by exit options and structural position. The powerless household trapped in the grid and the institutional utility with arbitrage options experience fundamentally different constraints\u2014snare vs. rope\u2014from the same rate structure. The gap is not due to measurement ambiguity or subjective framing but to structural asymmetry in exit capacity. A household cannot exit electricity; a utility can adjust rates or capacity strategy. Small businesses occupy the middle ground (constrained exit) and thus the middle classification (tangled rope). The renewable integration coalition adds a temporal dimension: they see the constraint as temporary (scaffold) because storage and distributed generation create a sunset clause that will make demand response less critical. The legacy regulatory framework appears as piton to the civilizational observer because it's maintaining a ritual (rate structure, monitoring, compliance) whose original function (avoiding expensive generation) is being superceded by cheaper alternatives. The analytical observer's tangled rope classification is the 'view from nowhere': both coordination function and extraction are real, both are necessary given current technology, but both are contingent on policy choices.",
+    "directionality_logic": "Directionality is determined by the agent's position in the extraction flow. Grid operators and utilities are beneficiaries with arbitrage options (they can adjust rate structures, build generation, or exit demand response programs): d \u2248 0.05-0.15, derived from beneficiary status + arbitrage exit \u2192 low d \u2192 low/negative f(d) \u2192 low experienced chi. Price-sensitive households are victims with trapped exit (they cannot leave the grid, cannot afford alternative supply, cannot shift essential loads): d \u2248 0.90-0.95, derived from victim status + trapped exit \u2192 high d \u2192 high f(d) \u2192 high experienced chi. Small businesses are victims with constrained exit (they can adjust operations but face capital and regulatory barriers): d \u2248 0.65-0.75. Peak-load industrial users are beneficiaries with mobile exit options (they can relocate production or invest in generation): d \u2248 0.20-0.30. The analytical observer's directionality is derived from their structural position as a neutral analyst (d \u2248 0.72-0.73 canonical), which places them outside the extraction flow but able to observe it completely. The engine computes these automatically from beneficiary/victim declarations and exit options.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Demand response cost shift resolves the false positive trap by distinguishing genuine coordination (grid stabilization, renewable integration) from asymmetric extraction (cost shifting to immobile consumers) within a single structure. The constraint is NOT a snare disguised as coordination (false negative); it is BOTH coordination AND extraction simultaneously, which is the definition of tangled rope. The mandatrophy appears when asking: 'Is demand response good policy (pure rope) or exploitative (snare)?' The answer is both. The analytical perspective correctly identifies tangled rope because (1) demand response has a genuine coordination function\u2014it stabilizes grids and enables renewables, which is not fictional or theater; (2) demand response has asymmetric extraction\u2014cost and burden are systematically shifted to those least able to absorb them; (3) the constraint requires active enforcement through regulatory mandate and rate structure design, confirming that it is not a natural coordination outcome. The mandatrophy is resolved by recognizing that coordination and extraction are not opposites but can be co-present. The policy question is not 'Is this coordination or extraction?' but 'How should we redesign the rate structure to preserve coordination function while reducing extraction?' This requires changing the beneficiary/victim relationship, not declaring the constraint misclassified."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "electricity_grid_reliability",
+      "renewable_energy_integration",
+      "utility_cost_recovery"
+    ],
+    "dual_formulation_note": "Demand response cost shift is downstream of the renewable energy integration constraint and the grid reliability constraint. These upstream constraints create demand for demand response as a coordination mechanism; the cost shift constraint represents the policy implementation choices that transform that demand into asymmetric extraction. The three constraints form a family where demand response is the bridge between grid technical requirements and their distributional consequences."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "eu_renewable_energy_mandate",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eu_ren"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Renewable Energy Directive and Support Schemes",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "renewable_energy_producers",
+      "equipment_manufacturers",
+      "eu_climate_goals"
+    ],
+    "victims": [
+      "fossil_fuel_incumbents",
+      "electricity_consumers",
+      "grid_flexibility_operators"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Household Consumer",
+      "comment": "PERSPECTIVE 1: HOUSEHOLD CONSUMER (SNARE) \u2014 Trapped within national electricity markets with no exit option. Bears the cost of subsidized renewable energy through higher tariffs and grid stabilization costs. Cannot switch to cheaper suppliers or self-generate without major capital expenditure. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Fossil Fuel Incumbent Workers",
+      "comment": "PERSPECTIVE 2: FOSSIL FUEL INCUMBENT WORKERS (SNARE) \u2014 Trapped in coal, gas, and oil industries facing accelerated phase-out timelines. Regional economies dependent on fossil fuel infrastructure have limited mobility. No explicit compensation mechanism for stranded skills. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Industrial Electricity Consumers",
+      "comment": "PERSPECTIVE 3: INDUSTRIAL ELECTRICITY CONSUMERS (TANGLED ROPE) \u2014 Constrained by energy costs and grid reliability requirements, but also benefit from EU decarbonization partnerships and access to renewable energy procurement. Can shift to cheaper grids within EU but face switching costs and regulatory restrictions. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Renewable Energy Producers and Equipment Manufacturers",
+      "comment": "PERSPECTIVE 4: RENEWABLE ENERGY PRODUCERS AND EQUIPMENT MANUFACTURERS (ROPE) \u2014 Primary beneficiaries. Guaranteed market access and pricing floors through feed-in tariffs and contracts for difference. Can arbitrage between EU member states and export technologies. EU directives solve the collective action problem of coordinating transition investment. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.1 \u2192 \u03c7\u2248-0.06. Negative effective extraction = net beneficiary through coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Grid Operators and Transmission System Operators",
+      "comment": "PERSPECTIVE 5: GRID OPERATORS AND TRANSMISSION SYSTEM OPERATORS (TANGLED ROPE) \u2014 Organized institutional actors. Coordination benefit: EU directives enable cross-border grid integration and investment in transmission infrastructure. Extraction: forced to manage intermittency costs, grid balancing expenses, and weather-dependent supply with limited cost recovery mechanisms. Constrained by regulatory price caps. d\u22480.55, f(d)\u22480.73, \u03c3=1.1 \u2192 \u03c7\u22480.42."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "EU Climate Policy Institutions and Environmental Advocates",
+      "comment": "PERSPECTIVE 6: EU CLIMATE POLICY INSTITUTIONS AND ENVIRONMENTAL ADVOCATES (SCAFFOLD) \u2014 Organized actors see the directive as a temporary coordination tool with a sunset clause: as renewable energy costs decline and grid storage technology matures, the support schemes (feed-in tariffs, CfD) will become less necessary. Climate targets will transition from mandatory support to market-competitive economics. High mobility: these actors can withdraw support if targets are met. d\u22480.35, f(d)\u22480.25, \u03c3=1.1 \u2192 \u03c7\u22480.15. Low effective extraction because agents perceive declining necessity and have policy agency to terminate."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Member State Energy Ministers",
+      "comment": "PERSPECTIVE 7: MEMBER STATE ENERGY MINISTERS (PITON) \u2014 Constrained by EU treaty obligations and political pressure to meet binding renewables targets. The directive persists through institutional inertia even as market conditions change. Many support schemes are theater: maintaining the appearance of progress on climate targets while protecting incumbent energy interests. Theater ratio reflects complex compliance reporting (accounting rules, renewable accounting, green bonds) that substitutes for actual transformation. d\u22480.45, f(d)\u22480.48, \u03c3=1.1 \u2192 \u03c7\u22480.29."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer: Energy Transition Economics",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / ENERGY TRANSITION VIEW (TANGLED ROPE) \u2014 From a civilizational economic perspective, the directive solves the coordination failure problem of decarbonization (pure rope function) but simultaneously extracts from locked-in incumbent industries and consumers through stranded assets and tariff mechanisms (snare function). Extractiveness reflects the asymmetric burden on fossil fuel workers and consumers. The support schemes are efficient from climate economics perspective but regressive from distribution perspective. d\u22480.62, f(d)\u22480.88, \u03c3=1.2 \u2192 \u03c7\u22480.47."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cost_internalization_threshold",
+      "question": "What support scheme subsidy level internalizes true environmental costs without creating pure extraction from grid operators and consumers?",
+      "resolution_mechanism": "Life cycle assessment of externalities; comparison of environmental damage avoided vs consumer tariff burden across EU member states",
+      "impact": "If threshold is achievable at <20% cost adder: directive transitions from tangled_rope to rope (coordination-dominant). If threshold requires >40% adders: directive is classified as snare for consumers (extraction-dominant). Current evidence suggests 15-35% range creates ambiguity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Support scheme subsidy level that internalizes environmental costs without pure extraction"
+    },
+    {
+      "id": "stranded_asset_inevitability",
+      "question": "Are coal and gas plant stranding inevitable from decarbonization physics, or contingent on policy design choices that could phase transition more gradually?",
+      "resolution_mechanism": "Scenario analysis: techno-economic models comparing abrupt vs gradual phase-out costs; historical analysis of prior energy transitions (coal to gas, nuclear adoption)",
+      "impact": "If inevitable: worker impacts are feature of thermodynamic/economic constraint (mountain-like). If contingent: stranding is extractive choice embedded in the directive (snare feature for workers). Current policy trajectory suggests contingent design: faster phase-out than techno-economics requires.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether stranded asset externalities are inevitable or contingent on policy design"
+    },
+    {
+      "id": "grid_intermittency_storage_capability",
+      "question": "Will battery storage, green hydrogen, and demand flexibility technologies mature fast enough to make support schemes obsolete (proving scaffold hypothesis) or will they hit capacity ceilings (proving permanent tangled_rope)?",
+      "resolution_mechanism": "Tracking battery cost curves, electrolyzer deployment rates, and grid storage capacity additions; comparison against projected renewable variability; historical rates of technology adoption",
+      "impact": "If storage scales fast: scaffold perspective is structural \u2014 support schemes are temporary bridge. If storage hits ceilings: support schemes persist indefinitely (tangled_rope hardens into snare). Current trajectory suggests 2035-2045 inflection point.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether storage technology will enable phase-out of support schemes (scaffold sunset)"
+    },
+    {
+      "id": "cross_border_arbitrage_regulatory_response",
+      "question": "Will harmonized EU regulation prevent member states from using support schemes to create regulatory arbitrage and attract multinational renewable producers at others' expense?",
+      "resolution_mechanism": "Analysis of support scheme differentiation across member states; investigation of renewable investment flows and cherry-picking of high-subsidy jurisdictions; modeling of zero-sum competition",
+      "impact": "If harmonization succeeds: directive functions as pure coordination for EU-wide energy transition (rope). If arbitrage persists: directive becomes extraction tool for capital-rich member states at expense of fiscally constrained states (snare at international level).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether EU harmonization prevents member-state-level regulatory arbitrage"
+    },
+    {
+      "id": "incumbent_political_capture_durability",
+      "question": "To what extent do fossil fuel incumbents capture renewable energy support schemes (biasing toward natural gas as 'transition fuel' vs solar/wind), and how durable is that capture against policy reform?",
+      "resolution_mechanism": "Forensic policy analysis: budget allocations to gas support vs renewables; gas infrastructure investment vs renewable grid modernization; political economy of gas industry influence on member state regulators",
+      "impact": "If capture is durable: directive functions as snare for climate goals (locks in gas as permanent infrastructure, not transition). If capture is reversible: piton classification is correct (theater can be exposed and reform attempted).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political durability of fossil fuel incumbent capture of renewable support schemes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The EU Renewable Energy Directive and its supporting mechanisms (feed-in tariffs, contracts for difference, investment guarantees) represent a hybrid constraint that combines genuine coordination toward decarbonization with asymmetric extraction from fossil fuel incumbents, grid operators, and electricity consumers. The constraint solves the collective action problem of energy system transformation \u2014 no individual member state has incentive to invest heavily in renewables if neighbors free-ride on technology learning curves and grid infrastructure investments. However, the directive simultaneously transfers wealth from locked-in fossil fuel assets to renewable energy producers, concentrates costs on dispersed and politically weak populations (household consumers, fossil fuel workers), and creates operational stress for grid systems designed for baseload generation. The theater ratio (0.55) reflects the substantial performative element in compliance: complex accounting schemes (green bonds, renewable energy credits), political declarations of progress that mask continued gas infrastructure investment, and the diversion of support toward 'transition fuel' natural gas rather than aggressive decarbonization. The extractiveness (0.52) and suppression (0.48) indicate a constraint that is neither pure coordination nor pure predation, but genuinely hybrid \u2014 all eight perspectives produce different classifications, signaling that the constraint's true nature depends entirely on the observer's structural position and exit capacity.",
+    "key_agents": [
+      "Renewable Energy Producers and Equipment Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 capture guaranteed market access, pricing floors, and technology export opportunities",
+      "EU Climate Policy Institutions: Organized beneficiaries (organized/mobile) \u2014 benefit from coordinated investment and progress toward climate targets; see directive as temporary with sunset",
+      "Household Electricity Consumers: Primary victims (powerless/trapped) \u2014 bear cost of subsidized renewable energy through higher tariffs and grid stabilization charges; cannot exit national markets",
+      "Fossil Fuel Incumbent Workers: Primary victims (powerless/trapped) \u2014 face accelerated phase-out and stranded skills with limited compensation or transition support",
+      "Grid Operators and Transmission System Operators: Mixed victims (organized/constrained) \u2014 benefit from coordination and infrastructure investment but bear operational costs of managing intermittent supply",
+      "Industrial Electricity Consumers: Secondary victims (moderate/constrained) \u2014 face energy cost increases but can shift to cheaper grids and benefit from EU partnerships",
+      "Member State Energy Ministers: Institutional actors (institutional/constrained) \u2014 constrained by EU obligations; maintain theater through compliance reporting while protecting domestic incumbents",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both the genuine coordination function and the regressive distributional effects"
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The directive extracts significantly from fossil fuel incumbents (stranded assets) and consumers (tariff burden), but this extraction is partially justified by internalization of environmental externalities. The base value reflects that the asymmetry is real and substantial \u2014 renewable producers and manufacturers capture massive wealth transfers through support schemes \u2014 but the extraction is not pure predation; it serves the articulated public good of decarbonization. The measurement progression (0.38 \u2192 0.46 \u2192 0.52) shows increasing extraction as the directive has matured: initial support schemes were more modest, but recent iterations (especially post-2020) have concentrated support toward larger-scale renewable projects while shifting costs to consumers. Suppression (0.48): Moderate. Significant barriers to exit and voice exist \u2014 consumers cannot leave national markets, fossil fuel workers have limited geographic mobility, and member states cannot easily opt out of EU climate targets. However, suppression is not total: renewable producers have high exit options (arbitrage between member states), grid operators are organized and can negotiate, and some industrial consumers can relocate. Theater ratio (0.55): Moderate. The directive exhibits substantial theater: complex green finance accounting rules, renewable energy credits and certificates that can be traded or banked without corresponding generation, political announcements of progress that mask continued gas infrastructure, and 'just transition' rhetoric not matched by fund allocation. However, it's not pure theater \u2014 actual renewable capacity is being deployed at scale, grid infrastructure is being upgraded, and technology learning curves are genuine. The theater reflects the political need to maintain coalition support across ideologically diverse member states while executing systemic change.",
+    "perspectival_gap": "This constraint demonstrates a dramatic perspectival spectrum. At one extreme, renewable energy producers and equipment manufacturers see the directive as pure coordination (Rope) \u2014 it solves the problem of coordinating massive infrastructure investment and learning-curve development that no single actor has incentive to undertake alone. The support schemes enable them to finance projects that would be unprofitable in an undirected market. At the other extreme, household consumers and fossil fuel workers see the directive as pure extraction (Snare) \u2014 they bear costs without benefits and have no exit option. In the middle, grid operators see tangled rope (genuine coordination benefit in cross-border integration and infrastructure development, but extraction through unpaid balancing services and regulatory price caps). The analytical observer sees all perspectives simultaneously: the directive is genuinely solving a coordination problem (decarbonization requires coordinated investment) while genuinely extracting from those with the least power to exit (consumers, workers). The pivotal disagreement is whether the extraction is *justified* by the public good produced (climate stabilization) or *illegitimate* rent-seeking disguised as climate policy. This mirrors the mandatrophy tension: are we looking at a rope mechanism that has extractive side effects, or a snare mechanism that claims coordination as legitimation?",
+    "directionality_logic": "Renewable Energy Producers: Beneficiary + arbitrage \u2192 d\u22480.06, f(d)\u2248-0.09. Net beneficiaries with high exit options (can invest in other EU member states or globally). Household Consumers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction \u2014 cannot exit national electricity markets, cannot avoid tariff increases. Fossil Fuel Workers: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 stranded skills, regional lock-in, limited compensation mechanisms. Industrial Consumers: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction but with some exit options (grid switching, relocation). Grid Operators: Mixed (organized + constrained) \u2192 d\u22480.55, f(d)\u22480.73. Intermediate extraction reflecting both coordination benefits and uncompensated operational costs. EU Climate Institutions: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.25. Low extraction; these actors see the constraint as temporary (sunset logic) and have policy agency. Member State Ministers: Constrained institution \u2192 d\u22480.45, f(d)\u22480.48. Intermediate; trapped by EU obligations but able to negotiate implementation details and maintain theater. Analytical Observer: analytical \u2192 d\u22480.62, f(d)\u22480.88. High directionality reflecting that the observer sees the constraint as genuine extraction despite its coordination rationale.",
+    "mandatrophy_analysis": "RESOLUTION PATHWAY: This constraint resolves the mandatrophy by disaggregating the directive into its genuine coordination function and its extractive side effects. The coordination function (rope core) is: solving the problem of decentralized energy system transformation that creates free-rider incentives for individual actors. The extractive overlay (snare shell) is: concentrating wealth transfers to renewable producers while distributing costs to politically weak populations. The high theater ratio (0.55) indicates that the institutional apparatus is partially performing legitimation theater \u2014 justifying the wealth transfers through climate rhetoric and 'just transition' language that is not matched by resource allocation. The tangled_rope classification at the analytical level reflects that this is genuinely BOTH mechanisms simultaneously, not a rope with side effects or a snare disguised as coordination. The mandatrophy resolves at extractiveness > 0.70 because the constraint has clear directionality: it benefits concentrated interests (renewable producers, climate-conscious EU institutions) at expense of diffuse interests (consumers, workers). This asymmetry is the signature of extraction, even though the extraction serves an articulated public good. The scaffold perspective (temporary, with sunset via storage technology maturation) provides the escape hatch: as renewable energy becomes cheaper than fossil fuels and storage technology matures, the support schemes will be made unnecessary by market economics, and the extractive element can be unwound. Until that point, the constraint is structurally extractive \u2014 it transfers wealth from the politically weak to the politically organized, and it is only justified (not exonerated) by the climate goals it serves."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "fossil_fuel_stranded_assets",
+      "electricity_grid_intermittency",
+      "eu_carbon_price_mechanism",
+      "natural_gas_infrastructure_lock_in"
+    ],
+    "dual_formulation_note": "The EU Renewable Energy Directive decomposes into three structurally distinct constraints: (1) the coordination function of decarbonized energy system investment (rope-dominant, \u03b5\u22480.15); (2) the extractive wealth transfer to renewable producers and away from fossil fuel incumbents (snare-dominant, \u03b5\u22480.65); (3) the consumer tariff burden mechanism (snare-dominant, \u03b5\u22480.58). The directive as a unified policy object creates a single effective constraint with \u03b5\u22480.52 that reflects the mixture. Downstream constraints like grid intermittency and stranded asset management inherit this mixed nature and are affected by the tangled rope's internal tensions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

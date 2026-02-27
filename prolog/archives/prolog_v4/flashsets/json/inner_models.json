@@ -1,0 +1,159 @@
+{
+  "header": {
+    "constraint_id": "inner_models",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Confirmation Bias in Inner Model Updating",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_narrative_holders",
+      "in_group_members"
+    ],
+    "victims": [
+      "challenger_narratives",
+      "out_group_members",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Silenced Dissenter",
+      "comment": "An individual holding a challenger narrative finds themselves trapped within a social structure dominated by the prevailing narrative. They are actively suppressed in expressing dissenting viewpoints, and have limited ability to influence or exit the situation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Dissident Community",
+      "comment": "A dissident community that challenges the dominant narrative. This community faces suppression from the dominant narrative holders, who may act to limit their influence and prevent their narrative from gaining traction. They benefit from the narrative, if any, by its explanatory value in their setting, and are constrained because they cannot easily exit from the system without cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Dominant Narrative Holders",
+      "comment": "Individuals or groups who benefit from the confirmation bias that reinforces their existing beliefs. The inner model updating is a rope as they arbitrage their position and the information landscape. The benefits accrue from greater social cohesion and continued power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Epistemic Institutions",
+      "comment": "The epistemic commons is both influenced by and tries to correct this confirmation bias. As such, scientific journals and similar institutions are extracted from, because they are required to expend resources to correct the confirmation bias."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Legacy Media Ecosystems",
+      "comment": "The traditional media ecosystem maintains theatrical support for the dominant narrative to retain their audience's attention. As such, their support is largely performative, as there is little true conviction behind their claims."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees a mixed dynamic of extraction and coordination. The confirmation bias problem is an issue of epistemic corruption."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fact_check_threshold",
+      "question": "What is the threshold for fact-checking to be considered effective?",
+      "resolution_mechanism": "Empirical studies comparing the effectiveness of different fact-checking approaches.",
+      "impact": "Determines the required investment in fact-checking to counter confirmation bias.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Defines the standard for fact-checking."
+    },
+    {
+      "id": "polarization_strength",
+      "question": "To what extent does this bias contribute to social polarization?",
+      "resolution_mechanism": "Measuring echo chamber formation and the impact of counter-narratives.",
+      "impact": "Informs strategies for reducing division and fostering constructive dialogue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifies the effect of confirmation bias on polarization."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Confirmation bias in inner model updating describes the tendency of individuals to selectively gather, interpret, and remember information that confirms their existing beliefs or values. This manifests in echo chambers and filter bubbles, limiting exposure to diverse perspectives. The presence of algorithmic recommendation systems exacerbates this bias, creating challenges for epistemic reliability.",
+    "key_agents": [
+      "Challenger Narratives: Primary victim (powerless/trapped) \u2014 faces suppression and invalidation",
+      "Dominant Narrative Holders: Primary beneficiary (institutional/arbitrage) \u2014 gains greater social cohesion and power",
+      "Epistemic Institutions: Secondary victim (moderate/constrained) \u2014 expends resources to correct bias",
+      "Out-Group Members: Secondary Victim (moderate/constrained) - Face systematic discrimination for their beliefs and values.",
+      "In-Group Members: Secondary Beneficiary (moderate/constrained) - Social cohesion and support."
+    ],
+    "logic_rationale": "Extractiveness: The base extractiveness (0.55) represents the degree to which the suppression of alternative narratives limits access to diverse perspectives and creates social polarization. Suppression: Suppression (0.65) is high, due to the way that information is shared through filter bubbles. Theatrical Ratio (0.75) is related to efforts for performative actions.",
+    "perspectival_gap": "The perspectives differ based on the agent's power and exit options. The silenced dissenter experiences a snare, while the dominant narrative holders benefit from a rope. Epistemic institutions and the analytical observer see a tangled rope, reflecting the mixed dynamics of extraction and coordination. Legacy media ecosystems exhibit piton-like behavior, maintaining theatrical support for the dominant narrative.",
+    "directionality_logic": "The directionality is derived from the beneficiary/victim declarations and the exit options. Dominant narrative holders, as beneficiaries with arbitrage options, have a low directionality. Challenger narratives, as victims with trapped exit options, have a high directionality. Epistemic institutions and the analytical observer have moderate directionality due to their constrained exit options and mixed role.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that different agents experience the same phenomenon differently. The snare, rope, tangled rope, and piton classifications are all valid from different perspectives. The analytical observer's tangled rope perspective provides a comprehensive view of the mixed dynamics of extraction and coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

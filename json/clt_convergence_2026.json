@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "clt_convergence_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "clt"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The Central Limit Theorem",
+    "topic_domain": "mathematics/statistics",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Empiricist (Historical)",
+      "comment": "PERSPECTIVE 1: EMPIRICIST VIEW \u2014 Observes that distributions of sample means converge to normality across wildly different parent distributions. No escape from this observation \u2014 it holds regardless of whether one studies coin flips, measurement errors, or astronomical data. The pattern is invariant across millennia of observation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematician (Formal Proof)",
+      "comment": "PERSPECTIVE 2: MATHEMATICIAN VIEW \u2014 The CLT is a consequence of basic axioms of probability theory and the structure of convergence. The theorem's validity cannot be negotiated, politicized, or circumvented through clever institutional design. It emerges directly from the formal foundations."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Applied Statistician",
+      "comment": "PERSPECTIVE 3: APPLIED STATISTICIAN \u2014 Uses the CLT as a constraint on valid inference. Confidence intervals, hypothesis tests, and control charts all depend on CLT-enabled normal approximations. Cannot escape the theorem's applicability conditions \u2014 they define the boundary of valid statistical practice. No institutional workaround exists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computational Analyst",
+      "comment": "PERSPECTIVE 4: COMPUTATIONAL ANALYST \u2014 Simulation and numerical verification reproduce the theorem's predictions with mechanical precision. The convergence rate, the shape of the limiting distribution, and the role of sample size all match theoretical predictions. No deviation from the mathematical law is possible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "boundary_condition_robustness",
+      "question": "Do the finite-sample corrections and boundary conditions (e.g., Lyapunov condition, identically distributed requirement) constitute practical limits that elevate the CLT from mathematical law to policy-dependent approximation?",
+      "resolution_mechanism": "Empirical analysis of convergence rates for heavy-tailed distributions, dependent samples, and finite moments. Determination of whether practical violation of assumptions is widespread or rare.",
+      "impact": "If violations are rare: CLT remains a mountain. If violations are common in real data: CLT becomes a scaffold or tangled rope for practitioners who must choose approximations.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether practical boundary conditions convert the CLT from law to policy"
+    },
+    {
+      "id": "multivariate_extension_necessity",
+      "question": "Does the multivariate CLT require additional structural assumptions (covariance structure, dimension scaling) that introduce policy-dependent elements?",
+      "resolution_mechanism": "Analysis of high-dimensional CLT variants (random matrix theory, dimension-dependent convergence rates). Review of whether modern data science practices violate multivariate CLT assumptions.",
+      "impact": "If multivariate extensions preserve mountain status: theorem is robust. If dimensional scaling introduces practical constraints: suggests degradation to piton in high-dimensional regimes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether multivariate extensions preserve mountain status"
+    },
+    {
+      "id": "nonindependence_scope",
+      "question": "How prevalent are real-world sampling schemes that violate independence \u2014 time series, clustered sampling, network data \u2014 and do these constitute a systematic exclusion of major application domains?",
+      "resolution_mechanism": "Survey of assumption violations in published statistical analyses. Analysis of whether dependent-case CLT variants (e.g., mixing conditions) capture most practical scenarios or represent edge cases.",
+      "impact": "If independence violation is rare: CLT mountain holds for nearly all applications. If violation is prevalent: mountain classification applies only to idealized scenarios, suggesting a gap between theory and practice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Prevalence of independence violation in real-world sampling"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "The Central Limit Theorem is a foundational principle in probability and statistics that establishes the inevitable convergence of properly normalized sums of independent random variables to a normal distribution, regardless of the shape of the underlying parent distribution. This constraint exemplifies a mathematical natural law: it emerges from the axiomatic foundations of probability theory and holds with zero degrees of freedom across all observational contexts. The theorem's power lies in its universality \u2014 the same mathematical structure guarantees the result whether applied to coin flips, measurement errors, actuarial data, or quantum mechanical observables. The extractiveness value (0.12) is minimal because there is no coercive mechanism, no asymmetric benefit, and no suppressed alternative. The suppression value (0.02) reflects only the intellectual effort required to verify the theorem's conditions in a specific application. The theater ratio (0.15) is low because the theorem's predictions are directly verifiable through simulation and empirical measurement \u2014 there is minimal performative activity surrounding the core claim.",
+    "key_agents": [
+      "Mathematical Community: Guardians of axiomatic foundations \u2014 no extraction, no suppression. Derives d \u2248 0.0 (pure observer of mathematical structure).",
+      "Applied Practitioners (Engineers, Statisticians, Economists): End users of CLT-based inference \u2014 experience the theorem as a constraint on valid method selection, not as extraction. Derives d \u2248 0.1 (slight constraint on methodological freedom).",
+      "Empiricists: Observers of convergence in nature \u2014 neutral position relative to the theorem. Derives d \u2248 0.5 (neither beneficiary nor victim).",
+      "Computational Systems: Simulations that verify the theorem's predictions \u2014 neutral execution. Derives d \u2248 0.5."
+    ],
+    "logic_rationale": "Extractiveness (0.12): The CLT has no extractive function in the DR sense. No agent benefits asymmetrically at another's cost. The minimal value reflects only that understanding and applying the theorem requires intellectual work \u2014 a cost borne equally by all users. No institutional mechanism amplifies this cost for some groups. Suppression (0.02): Virtually zero suppression. The theorem's conditions are transparent, its proofs are accessible, and violations are verifiable. The minimal value reflects only that some practitioners may lack training in probability theory \u2014 a knowledge gap, not institutional suppression. Theater ratio (0.15): Low performative content. The CLT's predictions are directly testable through simulation. Monte Carlo verification produces convergence curves that match theoretical predictions precisely. There is minimal opportunity for theatrical obscuration \u2014 either the sample means converge to normality or they do not. Accessibility collapse (0.92): The theorem is maximally accessible in the sense that no institutional gatekeeper controls its validity. Any researcher with a computer can verify convergence numerically. The accessibility threshold for practical application is the understanding of convergence rates and boundary conditions \u2014 moderately high barrier but not institutional. Resistance (0.08): Minimal structural resistance. The theorem does not require enforcement or active maintenance. It holds regardless of belief, political preference, or institutional investment. No coalition has incentive to suppress the CLT.",
+    "perspectival_gap": "The remarkable feature of this constraint is the absence of a perspectival gap. All four perspectives classify it identically as Mountain. The empiricist, mathematician, applied statistician, and computational analyst all observe the same invariant structure. This uniformity is diagnostic of a true natural law constraint \u2014 no observer position reveals extraction, no agent benefits asymmetrically, and no institutional arrangement modifies the fundamental relationship. The mathematical structure is the same regardless of who observes it.",
+    "directionality_logic": "Directionality is uniformly near zero across all perspectives because there are no beneficiaries or victims relative to the CLT itself. The theorem is not an extraction mechanism \u2014 it is a mathematical law that applies equally to all users. No agent derives d > 0.5 (victim status) because no agent bears disproportionate cost. No agent derives d < 0.5 (beneficiary status) because no agent captures asymmetric benefit. The canonical d for analytical observers is 0.73, but this is overridden by the structural fact that the CLT has no extractive content. The actual d converges to ~0.5 (symmetric neutral observation) across all perspectives.",
+    "mandatrophy_analysis": "The CLT resolves the mandatrophy by being a uniform mountain across all perspectives. There is no risk of mislabeling extraction as coordination (a key mandatrophy hazard) because the theorem exhibits neither extraction nor coordination. It is a mathematical constraint, not a social constraint. The theorem does not require beneficiaries, victims, enforcement mechanisms, or institutional maintenance. Its stability comes from mathematical necessity, not from institutional inertia. No perspective would classify the CLT as Rope (pure coordination) because there is no coordination problem to solve \u2014 the convergence is automatic. No perspective would classify it as Snare (pure extraction) because no agent profits from enforcing the theorem's conditions. The mountain classification is the complete and accurate description from all structural positions."
+  },
+  "boltzmann": {},
+  "network": {
+    "affects_constraints": [
+      "law_of_large_numbers",
+      "normal_approximation_conditions",
+      "convergence_rate_bounds"
+    ],
+    "dual_formulation_note": "The Central Limit Theorem is a foundational constraint that structurally grounds statistical inference. Related constraints in the network (law of large numbers, normal approximation conditions) are either preconditions or extensions of the CLT. The CLT itself is a pure mathematical mountain with zero institutional content."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "very_low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  }
+}

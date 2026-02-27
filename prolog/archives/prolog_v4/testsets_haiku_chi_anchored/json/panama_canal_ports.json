@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "panama_canal_ports",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pcp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Panama Canal Port Control",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "united_states_strategic_interests",
+      "chinese_belt_and_road_expansion"
+    ],
+    "victims": [
+      "panama_national_sovereignty",
+      "global_shipping_neutrality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Panama National Sovereignty",
+      "comment": "PERSPECTIVE 1: PANAMA SOVEREIGNTY (SNARE) \u2014 Panama controls the canal physically but not strategically; cannot exit geopolitical competition without economic devastation. Trapped by dependence on port revenues and unable to maintain canal without great-power backing. d\u22480.93, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Panama Government",
+      "comment": "PERSPECTIVE 2: PANAMA GOVERNMENT (TANGLED ROPE) \u2014 Coordinates global shipping through canal administration while trapped between US and Chinese pressure. Benefits from port revenues and strategic positioning; bears costs of escalating geopolitical tension and sovereignty erosion. d\u22480.72, f(d)\u22481.08, \u03c3=0.9 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "United States Strategic Command",
+      "comment": "PERSPECTIVE 3: US STRATEGIC COMMAND (ROPE) \u2014 Experiences port control as coordination of hemispheric security and trade flows. Can arbitrage between multiple security commitments and has exit options through alternative naval bases. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Chinese Belt and Road Initiative",
+      "comment": "PERSPECTIVE 4: CHINA BELT AND ROAD INITIATIVE (ROPE) \u2014 Experiences port control as coordination of global trade infrastructure and logistics networks. Can arbitrage between multiple port locations and has exit options through alternative gateway investments. d\u22480.12, f(d)\u22480.02, \u03c3=1.2 \u2192 \u03c7\u22480.01. Net beneficiary but lower effective extraction than from Panama perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Shipping Industry",
+      "comment": "PERSPECTIVE 5: GLOBAL SHIPPING INDUSTRY (TANGLED ROPE) \u2014 Benefits from competitive pressure between US and China on port efficiency and cost reductions; incurs costs from geopolitical risk, potential supply chain disruptions, and increased insurance premiums. Can mobilize to alternative routes (Suez, around Cape) but at significant cost. d\u22480.58, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Maritime Regulatory Bodies",
+      "comment": "PERSPECTIVE 6: IMO / INTERNATIONAL MARITIME BODIES (SCAFFOLD) \u2014 Attempt to maintain neutral governance of canal transit as temporary coordination mechanism. Low extractiveness because regulatory authority is weak; theater_ratio reflects performative international law enforcement. Has sunset clause: as shipping demand grows, alternative routes and technological solutions (Arctic passage, autonomous shipping) create exit pathways. d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.18."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "us_military_necessity_threshold",
+      "question": "What level of Chinese port control in Panama triggers US military intervention or coercive retaliation?",
+      "resolution_mechanism": "Declassified strategic doctrine; historical precedent from Suez Crisis; threshold crossing empirical observation",
+      "impact": "If threshold low: constraint becomes snare for Panama (US enforces exclusion). If threshold high: tangled_rope persists longer (both powers coexist). If threshold undefined: instability mechanism (game-theoretic spiral).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Threshold for US military response to Chinese port control"
+    },
+    {
+      "id": "chinese_strategic_value_computation",
+      "question": "Is Chinese port investment in Panama aimed at military positioning, economic arbitrage, or both?",
+      "resolution_mechanism": "Analysis of investment structure, dual-use facility characteristics, PLA Navy deployment patterns, long-term economic ROI models",
+      "impact": "If primarily military: snare classification for Panama confirmed (geopolitical trap). If primarily economic: tangled_rope persists (competition rather than domination). Misclassification here produces worst strategic errors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strategic intent behind Chinese port investments"
+    },
+    {
+      "id": "panama_exit_viability",
+      "question": "Can Panama neutralize itself (Costa Rica model) and maintain canal operations without choosing between great powers?",
+      "resolution_mechanism": "Comparative analysis of Costa Rican neutrality outcomes; Panama economic dependency modeling; alternative power guarantor identification",
+      "impact": "If viable: Panama's exit_options upgrade from trapped to constrained (reclassifies snare to tangled_rope from Panama perspective). If not viable: snare classification confirmed (no exit exists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Panama can achieve functional neutrality"
+    },
+    {
+      "id": "supply_chain_fragmentation_rate",
+      "question": "How quickly will global shipping develop redundant routes and reduce Panama Canal dependence?",
+      "resolution_mechanism": "Forecast of Arctic shipping viability, Cape of Good Hope transit economics, mega-ship expansion timelines, autonomous vessel deployment",
+      "impact": "If rapid (< 15 years): scaffold classification confirmed (sunset clause is real); constraint loses extraction power. If slow (> 30 years): tangled_rope persists longer; geopolitical competition remains high-stakes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of supply chain diversification away from Panama Canal"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Panama Canal port control constraint represents a hybrid geopolitical competition between the United States and China over chokepoint infrastructure critical to global commerce and hemispheric security. Both powers have invested in port terminals along the canal corridor, creating overlapping influence structures that nominally serve shipping efficiency but functionally serve great-power strategic positioning. Panama occupies the structural trap position: it controls the canal physically but cannot exclude either power without economic devastation and faces escalating geopolitical pressure. The extractiveness (0.58) reflects the asymmetry between Panama's nominal sovereignty and its constrained agency; suppression (0.68) reflects barriers to genuine neutrality and costs of resistance; theater (0.62) reflects diplomatic performance of 'neutral administration' masking strategic competition. The constraint exhibits all six types from different perspectives because it conflates three structurally distinct claims: (1) canal administration (rope-type coordination), (2) geopolitical competition (tangled_rope or snare depending on observer), and (3) regulatory neutrality (scaffold with sunset clause as alternative routes develop). Panama's government experiences all three simultaneously.",
+    "key_agents": [
+      "Panama Government: Primary victim (moderate/constrained) \u2014 controls canal but cannot exit geopolitical competition without economic devastation",
+      "US Strategic Command: Primary beneficiary (institutional/arbitrage) \u2014 maintains hemispheric security position; can arbitrage between multiple commitments",
+      "Chinese Belt and Road Initiative: Primary beneficiary (institutional/arbitrage) \u2014 expands global logistics network; can arbitrage between alternative gateway ports",
+      "Panama National Sovereignty: Abstract victim (powerless/trapped) \u2014 abstract collective good (national autonomy) cannot organize or exit",
+      "Global Shipping Industry: Secondary victim (powerful/mobile) \u2014 benefits from competitive pressure on costs but incurs geopolitical risk and supply-chain uncertainty",
+      "International Maritime Regulatory Bodies: Weak coordinator (organized/constrained) \u2014 attempt neutral administration of transit; limited enforcement capacity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Both powers extract strategic advantage from port positioning\u2014control over logistics networks, military positioning, and canal administration. Panama bears the costs of geopolitical vulnerability. The extractiveness has risen over time (0.35\u21920.58) as Chinese investment deepened, shifting from implicit US dominance to explicit competition. Suppression (0.68): High. Significant barriers to Panama's autonomy: economic dependence on canal revenues (15% of GDP), inability to maintain security without great-power backing, diplomatic costs of excluding either power, and escalating military pressure in the region. Theater ratio (0.62): Moderate-high. Both powers perform neutral commercial interests while pursuing strategic objectives. International organizations perform neutral administration while lacking enforcement capacity. The theater has increased as diplomatic language disguises deepening competition. Suppression and extractiveness are both high because the constraint operates by denying Panama exit options while claiming commercial neutrality.",
+    "perspectival_gap": "This constraint reveals maximum perspectival divergence. The US and China see coordination (Rope) \u2014 they are solving legitimate problems of global commerce and regional security. Panama sees extraction (Snare) \u2014 trapped in a position where choosing either power isolates it from the other. Global shipping sees mixed effects (Tangled Rope) \u2014 competitive pressure reduces costs but creates supply-chain risk. International bodies see a sunset (Scaffold) \u2014 alternative routes will eventually reduce Panama's strategic value. The analytical observer risks seeing a natural law (immutable geopolitics) but the structural data reveals this as a contingent institutional arrangement where Panama's exit options are artificially constrained by economic dependence and security architecture. The perspectival gap confirms tangled_rope classification: genuine coordination (canal administration, shipping efficiency) is inseparable from asymmetric extraction (strategic positioning, geopolitical dominance).",
+    "directionality_logic": "US Strategic Command: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; multiple exit options. Chinese BRI: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.02. Net beneficiary; multiple exit options; slightly higher d than US because investment is more recent and less established. Panama Government: Mixed (victim-leaning) + constrained \u2192 d\u22480.72, f(d)\u22481.08. Significant extraction; constrained by economic and security dependence. Panama Sovereignty (abstract): Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction; no exit option. Global Shipping: Beneficiary (competitive pressure) + mobile (can shift routes) \u2192 d\u22480.58, f(d)\u22480.65. Mixed; benefits from competition but incurs geopolitical risk. IMO/Regulators: Weak + constrained \u2192 d\u22480.42, f(d)\u22480.42. Low effective extraction but cannot mobilize enforcement; sunset clause reduces perceived severeness.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by disambiguating three separate claims conflated under 'Panama Canal port control': (1) CANAL ADMINISTRATION (Rope): Neutral governance of shipping through a critical waterway\u2014legitimate coordination problem. Both powers claim to support this. (2) GEOPOLITICAL COMPETITION (Tangled Rope/Snare): Strategic positioning, military access, and hemispheric influence\u2014extraction mechanism disguised as commerce. Both powers pursue this. (3) NEUTRALITY REGIME (Scaffold): International law (1977 Torrijos-Carter Treaty) nominally guarantees neutral canal operation\u2014performative; sunset clause exists as alternative routes mature. The system's classification as Tangled Rope is correct because the constraint operationally conflates coordination (shipping efficiency benefits both sides) with extraction (strategic positioning benefits neither side actually benefits Panama). The mandate-trophy (confusion of types) occurs when observers claim 'this is just neutral commerce' (Rope) or 'this is inevitable geopolitics' (natural law Mountain). The structural data (high suppression, rising extractiveness, moderate theater) shows the constraint is a hybrid in which coordination serves as cover for extraction. Panama's trapped agency is the revealing fact: if this were pure coordination (Rope), Panama would have exit options (choose which power to partner with); if this were pure extraction (Snare), suppression would be higher (both powers would openly exclude alternatives). The tangled_rope captures the hybrid structure precisely."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "suez_canal_geopolitical_control",
+      "strait_of_malacca_chokepoint",
+      "critical_minerals_supply_chain"
+    ],
+    "dual_formulation_note": "Panama Canal port control is downstream of broader chokepoint infrastructure competition. The constraint shares structural properties with Suez, Malacca, and Arctic passages but has unique features: (1) Panama is physically part of a sovereign state (unlike international straits), (2) historical US hegemony creates path-dependent expectations, (3) Chinese Belt and Road strategy explicitly targets canal-adjacent ports. Each chokepoint has distinct \u03b5 values reflecting local geographic and institutional conditions. The network links represent causal contamination: escalation in one chokepoint constrains options in others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "us_china_strategic_competition",
+      "global_chokepoint_infrastructure"
+    ]
+  }
+}

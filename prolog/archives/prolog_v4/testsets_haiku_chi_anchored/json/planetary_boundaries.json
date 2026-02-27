@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "planetary_boundaries",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Planetary Boundaries Framework",
+    "topic_domain": "environmental/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_consumption_economies",
+      "extractive_industries"
+    ],
+    "victims": [
+      "future_generations",
+      "global_south_populations",
+      "ecosystem_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Future Generation",
+      "comment": "PERSPECTIVE 1: FUTURE GENERATIONS (SNARE) \u2014 Trapped by current overshoot dynamics with no voice in present policy. Bears full cost of cumulative boundary transgression. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.99."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global South Communities",
+      "comment": "PERSPECTIVE 2: GLOBAL SOUTH POPULATIONS (SNARE) \u2014 Constrained by resource dependency and limited access to alternative economies. Bear disproportionate extraction through environmental degradation while having limited agency in boundary-setting governance. d\u22480.90, f(d)\u22481.30, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Developing Nations",
+      "comment": "PERSPECTIVE 3: DEVELOPING NATIONS (TANGLED ROPE) \u2014 Constrained by debt, trade requirements, and technology access. Faces boundary constraints as coordination problem (need for sustainable development pathways) but also extracted from through colonial-era boundary definitions that lock in current inequities. d\u22480.62, f(d)\u22480.82, \u03c3=1.0 \u2192 \u03c7\u22480.48."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "High-Income Economies",
+      "comment": "PERSPECTIVE 4: HIGH-INCOME ECONOMIES (ROPE) \u2014 Primary beneficiaries. Experience boundaries as coordination challenge solved through technological substitution and efficiency gains. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Extractive Industries",
+      "comment": "PERSPECTIVE 5: EXTRACTIVE INDUSTRIES (ROPE) \u2014 Organize around the boundaries as coordination frame enabling market capture. Benefit from carbon pricing, offsetting, and 'sustainable resource' premium pricing. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Environmental NGO Coalition",
+      "comment": "PERSPECTIVE 6: ENVIRONMENTAL NGO COALITION (SCAFFOLD) \u2014 Organized advocates treating boundaries as temporary coordination problem with technology and policy pathways to compliance. See sunset logic: renewable transitions, circular economy norms, and regenerative agriculture are building exit routes. d\u22480.45, f(d)\u22480.52, \u03c3=1.2 \u2192 \u03c7\u22480.36."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Governance Bodies",
+      "comment": "PERSPECTIVE 7: INTERNATIONAL GOVERNANCE BODIES (PITON) \u2014 UN frameworks, IPCC, and multilateral agreements maintain the boundary theater (COP meetings, net-zero pledges, corporate ESG metrics) while structural extraction persists. theater_ratio=0.62 reflects performative commitments disconnected from enforcement mechanisms. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Views boundaries as hybrid coordination (legitimate limit-setting to preserve habitability) AND extraction mechanism (unequal burden distribution, historical responsibility obscured by present-tense framing, technology-solutionism delaying redistribution). d\u22480.60, f(d)\u22480.78, \u03c3=1.2 \u2192 \u03c7\u22480.58."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "boundary_equity_threshold",
+      "question": "What historical baseline defines 'fair' boundary allocation \u2014 pre-industrial emissions, equal per-capita current allocation, or responsibility-weighted based on cumulative historical emissions?",
+      "resolution_mechanism": "Analysis of competing allocation frameworks (per-capita equity, cumulative responsibility, capability-based distribution); examination of which framework is embedded in major climate agreements",
+      "impact": "If pre-industrial baseline: current high-income economies are in massive overshoot and should face rapid contraction (snare classification stronger). If equal per-capita: developing nations must be subsidized or face extraction (tangled_rope confirmed). If responsibility-weighted: historical emitters fund transition for others (scaffold pathway possible).",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "How boundary allocations should account for historical responsibility"
+    },
+    {
+      "id": "technology_substitution_feasibility",
+      "question": "Can renewable transitions, precision agriculture, and circular economy systems actually decarbonize at the scale and speed required to achieve boundary compliance without absolute contraction of material throughput?",
+      "resolution_mechanism": "Empirical analysis of renewable energy scaling rates, land-use requirements for green agriculture, material recycling recovery rates; comparison with boundary transgression timelines",
+      "impact": "If feasible: scaffold pathway is real, high-income economies genuinely experience as coordination problem. If infeasible: high-income economies are trapped in extraction by biophysical limits, classification shifts toward snare for powerless actors and rope-to-snare for wealthy beneficiaries.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technology can achieve decarbonization without material contraction"
+    },
+    {
+      "id": "enforcement_mechanism_credibility",
+      "question": "Do current climate governance mechanisms (COP commitments, national NDCs, corporate pledges, carbon markets) actually constrain behavior or primarily serve as performative legitimation?",
+      "resolution_mechanism": "Tracking of emission trajectories against pledge timelines; analysis of carbon market effectiveness, offset accounting accuracy, and compliance enforcement rates",
+      "impact": "If credible: boundaries function as genuine coordination with enforcement (move toward rope classification). If performative: boundaries function as theater masking extraction (piton classification strengthens, snare confirmed for powerless agents).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether governance mechanisms actually enforce boundary compliance"
+    },
+    {
+      "id": "ecosystem_tipping_point_irreversibility",
+      "question": "Are some boundary transgressions (Amazon dieback, ice sheet collapse, coral system collapse) point-of-no-return even if emissions subsequently decline, or are there restoration pathways?",
+      "resolution_mechanism": "Paleoclimate analysis of recovery timescales after past excursions; modeling of system resilience and hysteresis in Earth system processes",
+      "impact": "If irreversible: boundaries are immutable natural law (mountain classification), and transgression represents permanent extraction from future generations. If reversible: extraction is temporary (scaffold classification valid), and restoration represents exit pathway.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ecosystem collapse from boundary transgression is reversible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Planetary Boundaries framework, proposed by Rockstr\u00f6m et al. (2009), defines a 'safe operating space for humanity' across nine critical Earth system processes: climate change, biosphere integrity, land-system change, freshwater use, phosphorus and nitrogen cycles, ocean acidification, chemical pollution, ozone depletion, and atmospheric aerosol loading. The framework creates a structural tension between wealthy economies that benefit from present consumption patterns and all other actors who bear the costs of boundary transgression. This constraint exhibits a perspectival chasm: high-income economies and extractive industries experience boundaries as a coordination problem (rope/scaffold) solvable through technology and market mechanisms; future generations, global south communities, and ecosystem integrity experience boundaries as extraction (snare) with no exit pathway. The theater ratio (0.62) reflects the gap between governance performance (COP pledges, net-zero commitments, ESG reporting) and actual decarbonization outcomes \u2014 ambitious targets are announced while structural emissions patterns persist. The constraint's extractiveness (0.58) has risen from 0.35 to its current level as boundary transgression has accelerated despite growing awareness, suggesting that the governance theater is decoupling from functional outcomes.",
+    "key_agents": [
+      "Future Generations: Primary powerless victim (powerless/trapped) \u2014 will inherit boundary-transgressed systems with no agency in policy choices",
+      "Global South Populations: Secondary victim (moderate/constrained) \u2014 bear disproportionate environmental costs while locked into colonial extraction patterns",
+      "High-Income Economies: Primary beneficiary (institutional/arbitrage) \u2014 accumulated wealth through high-emission development, now positioned to fund transition without fundamental consumption reduction",
+      "Extractive Industries: Organized beneficiary (organized/arbitrage) \u2014 capture boundary framework as market opportunity through carbon pricing, green credentials, and sustainability premium markets",
+      "Developing Nations: Constrained player (powerful/constrained) \u2014 navigate between boundary compliance and development rights, structurally disadvantaged by framework design",
+      "Environmental NGO Coalition: Organized advocate (organized/constrained) \u2014 push for genuine boundary compliance through sunset logic: renewable transitions, circular economy, regenerative systems",
+      "International Governance Bodies: Institutional theater maintainer (institutional/arbitrage) \u2014 manage performative compliance (COP meetings, pledges, agreements) while lacking enforcement mechanisms",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes hybrid coordination-extraction structure and identifies key ambiguities in boundary equity and enforcement credibility"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The framework enables persistent extraction despite increasing boundary awareness. High-income economies benefit from carbon-intensive development while pledging future decarbonization; extractive industries capture 'sustainable resource' premium pricing; developing nations face constrained development pathways. The extractiveness has increased from 0.35 to 0.58 as gap between pledge and outcome has widened. Suppression (0.65): High. Significant barriers include: technology requirements and capital costs lock out poorer actors; alternative development pathways (degrowth, redistribution) are politically suppressed; narrative emphasis on individual responsibility masks structural drivers; carbon accounting methodologies obscure Scope 3 emissions and outsourced impacts. Theater ratio (0.62): Moderate-high. Performative components include: net-zero pledges without enforcement; carbon offset markets enabling emission accounting fiction; ESG reporting disconnected from actual impact; COP meetings producing aspirational commitments that don't bind behavior. Legitimate components remain: scientific boundary-setting itself is functional, and some renewable transitions demonstrate real decarbonization. The theater ratio has increased from 0.42 to 0.62 as governance discourse has expanded while structural outcomes have stagnated.",
+    "perspectival_gap": "This constraint shows maximal perspectival divergence. Future generations and global south see a snare (trapped, high extraction, no exit). Developing nations see tangled rope (mixed coordination and extraction). High-income economies and extractive industries see rope (legitimate coordination challenge). Environmental advocates see scaffold (temporary problem with technological sunset). Governance bodies see piton (performative ritual disconnected from function). The analytical observer sees tangled rope with elevated extraction due to equity gaps. The gap is not measurement error \u2014 it reflects genuine structural position differences. An agent with arbitrage exit (wealthy economy) experiences different effective constraints than an agent with trapped exit (future generations). The framework legitimizes this divergence by treating boundaries as neutral science, obscuring how boundary allocation embeds historical inequities and concentrated decision-making power.",
+    "directionality_logic": "High-income economies: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiaries. Can fund transitions, access premium markets for green technology, delay contraction through offsets. Extractive industries: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Capture boundary frame as market opportunity (carbon pricing, green credentials, sustainability premiums). Developing nations: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.82. Trapped between boundary limits and development aspiration; cannot exit without permission/subsidy from wealthy economies. Global south populations: Victim + constrained \u2192 d\u22480.90, f(d)\u22481.30. Highest extraction \u2014 bear environmental costs of both their own development AND outsourced impacts from wealthy economies. Future generations: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 no voice in present policy, will inherit transgressed system. Environmental NGO coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.52. Has agency and advocates for pathways, but constrained by political economy. International governance: Beneficiary + arbitrage (institutional perspective) \u2192 d\u22480.05, f(d)\u2248-0.12. Theater maintenance serves institutional interests even if not benefiting directly.",
+    "mandatrophy_analysis": "CRITICAL MANDATROPHY: The planetary boundaries framework is presented as neutral science establishing natural limits, but the indexical classification reveals embedded extraction and power asymmetries. The framework sets boundaries based on Earth system science (legitimate coordination framing \u2014 'safe operating space for humanity') but does NOT specify how boundaries should be allocated across nations or actors. This omission enables extraction: wealthy nations interpret boundaries as AVERAGE limits, positioning themselves as compliant while outsourcing impacts; poorer nations face STRICT interpretation as limits on their own activities. The analytical observer (perspective 8) correctly identifies this as tangled rope with elevated extraction (d\u22480.60), not pure rope. The mandatrophy resolution is: (1) acknowledge that boundary-setting is coordination (rope/scaffold elements are real \u2014 biophysical limits do exist and require coordination), BUT (2) recognize that boundary ALLOCATION is a distribution mechanism with extractive elements (snare/tangled_rope), and (3) make allocation design explicit rather than hidden in 'neutral science' framing. The current framework satisfies mandatrophy only if interpreted as implicit support for per-capita equity in boundary allocation \u2014 but this is not the framework's stated position, making the current instantiation a mandatrophy FAILURE. A compliant version would either: (a) explicitly allocate boundaries with historical responsibility weighting (moving classification toward scaffold for developing nations), or (b) acknowledge and formalize the inequitable allocation (moving to snare classification for powerless actors but with transparent extraction structures rather than naturalized science framing)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "carbon_budget_governance",
+      "biodiversity_tipping_point",
+      "agricultural_land_system",
+      "freshwater_allocation",
+      "nitrogen_phosphorus_cycles",
+      "ocean_acidification",
+      "chemical_accumulation",
+      "ozone_layer_depletion",
+      "aerosol_atmospheric_loading"
+    ],
+    "dual_formulation_note": "Planetary boundaries decompose into two structural claims: (1) Earth system boundaries are real biophysical limits (\u03b5\u22480.05-0.15, near-mountain), (2) Global allocation of boundary space is an extraction mechanism with embedded historical inequities (\u03b5\u22480.58, tangled_rope). The framework conflates these as a single 'safe operating space' claim. The network represents actual causal dependencies among the nine boundary processes, but the constraint story here captures the GOVERNANCE structure (how boundaries are allocated and enforced), not the Earth system coupling. Each individual boundary process (carbon, biodiversity, nitrogen, etc.) would have its own story with lower \u03b5 values reflecting biophysical necessity; the planetary_boundaries story captures the meta-level extraction that occurs through unequal allocation and performative governance."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.62
+    }
+  ]
+}

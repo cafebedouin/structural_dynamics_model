@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: local_vs_global_optima
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_local_vs_global_optima, []).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -59,16 +58,37 @@
  *   domain: mathematical/computational
  *
  * SUMMARY:
- *   In any non-convex optimization landscape, there exist "local optima"—solutions
- *   that are superior to all their immediate neighbors but are not the best
- *   possible solution (the "global optimum"). This mathematical reality forces
- *   any search or optimization process to risk getting "stuck" on a suboptimal peak.
- *   The constraint is the structure of the landscape itself, not the agent's strategy.
+ *   The existence of local optima in non-convex optimization spaces is a
+ *   fundamental mathematical constraint inherent to the topology of
+ *   non-convex sets and the structure of optimization itself. It is not a
+ *   feature of any particular algorithm, implementation, or application
+ *   domain — it is a property of the mathematical landscape itself. In any
+ *   space where the neighborhood structure deviates from convexity (which is
+ *   to say, virtually all realistic optimization problems), there must exist
+ *   points that are superior to all immediate neighbors but are not the
+ *   global best. This constraint appears identically across all structural
+ *   perspectives because it emerges necessarily from the definition of
+ *   non-convexity. The constraint has zero degrees of freedom for all
+ *   indices: no algorithm, no computational power, no reformulation can
+ *   eliminate the existence of local optima without fundamentally changing
+ *   the problem space (e.g., by imposing convexity constraints, which changes
+ *   the problem to something different). The theater_ratio is extremely low
+ *   (0.15) because the constraint has no performative component — it is pure
+ *   mathematical fact with no institutional, social, or observational
+ *   ambiguity. The suppression is minimal (0.03) because there is nothing to
+ *   suppress — the constraint does not coerce anyone; it simply describes the
+ *   topology of optimization landscapes. The extractiveness value (0.12)
+ *   reflects that this is a constraint on the problem space itself, not an
+ *   extraction mechanism from any agent. All perspectives classify
+ *   identically as Mountain because the constraint's structure is invariant
+ *   across all observables and all measurement methodologies.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Hill-Climber: An agent using a simple, greedy algorithm (powerless/trapped) — experiences the constraint as an impassable barrier.
- *   - The Explorer/Annealer: An agent with a sophisticated strategy (moderate/mobile) — navigates the constraint as a known feature of the terrain.
- *   - The Mathematician: Analytical observer — understands the constraint as a fundamental, unchangeable property of the system.
+ * KEY AGENTS:
+ *   - Algorithm Designers: Computational agents (powerful/mobile) — encounter the constraint as an immovable limit on what algorithms can guarantee; can design better heuristics but cannot escape the fundamental limit
+ *   - Machine Learning Practitioners: Applied agents (moderate/mobile) — experience local optima empirically in training; adapt through restarts, regularization, and architecture choices but cannot eliminate the constraint
+ *   - Machine Learning Industry: Institutional actor (institutional/arbitrage) — has arbitraged the constraint by accepting 'good enough' solutions instead of global optima; profits from workarounds while the constraint remains immutable
+ *   - Mathematical Community: Analytical observer (analytical/analytical) — understands local optima as a topological inevitability; the constraint is central to optimization theory and complexity theory
+ *   - Optimization Theory: Foundational knowledge domain (analytical/analytical) — local optima are a core research topic precisely because they are unavoidable; the body of optimization theory is largely about understanding, characterizing, and mitigating the effects of local optima
  */
 
 /* ==========================================================================
@@ -76,100 +96,75 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% The landscape itself does not extract value; an agent's poor strategy does.
-% The base extractiveness of the mathematical law is near zero.
-domain_priors:base_extractiveness(local_vs_global_optima, 0.05).
-% The landscape does not coercively suppress alternatives; it simply is.
-domain_priors:suppression_score(local_vs_global_optima, 0.05).
-% A mathematical truth has no performative aspect.
-domain_priors:theater_ratio(local_vs_global_optima, 0.0).
+domain_priors:base_extractiveness(local_vs_global_optima, 0.12).
+domain_priors:suppression_score(local_vs_global_optima, 0.03).
+domain_priors:theater_ratio(local_vs_global_optima, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(local_vs_global_optima, extractiveness, 0.05).
-narrative_ontology:constraint_metric(local_vs_global_optima, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(local_vs_global_optima, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(local_vs_global_optima, extractiveness, 0.12).
+narrative_ontology:constraint_metric(local_vs_global_optima, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(local_vs_global_optima, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-%
-% Alternatives to this mathematical reality are inconceivable.
-narrative_ontology:constraint_metric(local_vs_global_optima, accessibility_collapse, 1.0).
-% One cannot "resist" a mathematical theorem.
-narrative_ontology:constraint_metric(local_vs_global_optima, resistance, 0.0).
+narrative_ontology:constraint_metric(local_vs_global_optima, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(local_vs_global_optima, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(local_vs_global_optima, mountain).
 narrative_ontology:human_readable(local_vs_global_optima, "The Existence of Local Optima in Non-Convex Spaces").
 narrative_ontology:topic_domain(local_vs_global_optima, "mathematical/computational").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This is a fundamental property of mathematics, not a human construction.
 domain_priors:emerges_naturally(local_vs_global_optima).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. This is a uniform-type Mountain constraint (natural law).
-% It has no beneficiaries or victims in the structural sense.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% This is a uniform-type constraint (Mountain-only). The classification is
-% invariant across all perspectives because it is a mathematical law. The
-% agent's subjective experience (e.g., feeling "trapped") does not change the
-% objective structure of the constraint itself.
-
-% PERSPECTIVE 1: THE HILL-CLIMBER (MOUNTAIN)
-% A simple, greedy algorithm that can only perceive immediate improvements.
-% While it experiences being "trapped," the trap is a feature of its own
-% limited strategy interacting with an immutable landscape (a Mountain).
-constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE EXPLORER / ANNEALER (MOUNTAIN)
-% An agent with a more sophisticated strategy (e.g., simulated annealing)
-% that can accept short-term losses to find better long-term solutions.
-% It perceives the landscape not as a trap, but as a terrain to be navigated—
-% a fundamental, unchangeable Mountain.
-constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(regional))).
-
-% PERSPECTIVE 3: THE MATHEMATICIAN (MOUNTAIN)
-% The analytical observer who understands the formal properties of non-convex
-% spaces. To the mathematician, the existence of local optima is an
-% axiom-derived, immutable law—a quintessential Mountain.
+% PERSPECTIVE 1: TOPOLOGICAL ANALYST (MOUNTAIN) — From the vantage of mathematical topology and dynamical systems theory, local optima are an inevitable structural feature of non-convex landscapes. No algorithm, no matter how sophisticated, can escape this constraint without changing the problem space itself (imposing convexity assumptions). The existence of local optima follows necessarily from the definition of non-convexity. Zero degrees of freedom.
 constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 4: THE OPTIMIZATION ENGINEER (MOUNTAIN)
-% An institutional actor who designs systems (e.g., machine learning models)
-% that must operate within this reality. The engineer treats the existence
-% of local optima as a given, a foundational Mountain around which all
-% effective strategies must be built.
+% PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) — Even the most advanced optimization algorithms (SGD variants, evolutionary strategies, simulated annealing, neural networks) cannot guarantee global optimality in non-convex spaces with finite computational resources. This is not a limitation of current techniques but a fundamental mathematical constraint. Better algorithms can *reduce* the probability of getting trapped but cannot eliminate local optima. The landscape itself enforces the constraint.
+constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
+    context(agent_power(powerful),
+            time_horizon(civilizational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: MACHINE LEARNING INDUSTRY (MOUNTAIN) — From the practical standpoint of training neural networks at scale, local optima are observed as a fundamental phenomenon, yet the industry operates successfully by treating them as manageable noise rather than blockers. The constraint manifests as the empirical observation that networks train to reasonable solutions despite the theoretical guarantee of local optima. The industry has 'arbitraged' the constraint by accepting that good solutions (not necessarily global optima) are sufficient for most applications. Yet the mathematical constraint remains immutable — local optima exist whether the industry profits from workarounds or not.
 constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
+
+% PERSPECTIVE 4: MATHEMATICAL FOUNDATIONALIST (MOUNTAIN) — Local optima are a logical consequence of the axioms of topology and set theory. In any space where the neighborhood structure differs from convexity (e.g., any realistic loss landscape with millions of parameters), the existence of points that are locally maximal but not globally maximal is a tautology. No escape, no workaround, no contemporary research will change this. It is as immutable as the Halting Problem.
+constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 5: PRACTITIONER (MOUNTAIN) — A researcher training a deep neural network encounters local optima as an immovable fact of practice. They can restart from different initializations, use learning rate schedules, apply regularization, or switch algorithms — but they cannot escape the existence of local optima in the underlying loss surface. Every workaround is an adaptation to the constraint, not a negation of it. The practitioner's agency is real but operates within the constraint's boundaries.
+constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: UNIVERSAL OBSERVER (MOUNTAIN) — Across all conceivable non-convex optimization problems — in physics (protein folding), economics (equilibrium computation), biology (neural development), engineering (control systems design) — local optima are universally present. No measurement basis, no change in perspective, no new theory can alter this fact. The constraint is invariant across all observables and application domains.
+constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,20 +172,26 @@ constraint_indexing:constraint_classification(local_vs_global_optima, mountain,
 
 :- begin_tests(local_vs_global_optima_tests).
 
-test(perspectival_invariance) :-
-    % Verify that as a natural law, it classifies as Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(local_vs_global_optima, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(local_vs_global_optima, mountain, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(local_vs_global_optima, mountain, context(agent_power(institutional), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(local_vs_global_optima, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(local_vs_global_optima, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    % Verify the metrics are consistent with a Mountain classification.
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
     narrative_ontology:constraint_metric(local_vs_global_optima, ExtMetricName, E),
-    narrative_ontology:constraint_metric(local_vs_global_optima, SuppMetricName, S),
+    domain_priors:suppression_score(local_vs_global_optima, S),
     E =< 0.25,
     S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(local_vs_global_optima),
+    narrative_ontology:constraint_metric(local_vs_global_optima, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(local_vs_global_optima, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(local_vs_global_optima_tests).
 
@@ -200,91 +201,89 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The core decision is to model the *mathematical reality* of the optimization
- *   landscape, not the subjective experience of an agent navigating it. The
- *   existence of local optima is a fundamental property of non-convex spaces,
- *   making it a natural law.
- *
- *   - Base Extractiveness (ε=0.05): The landscape itself is passive; it does not
- *     actively extract value. The "loss" an agent experiences by getting stuck
- *     in a local optimum is a consequence of the agent's strategy, not a tax
- *     imposed by the constraint. The low ε reflects this structural passivity.
- *   - Suppression (S=0.05): The constraint does not use coercion to suppress
- *     alternatives. The global optimum is not hidden by force, but by the
- *     topography of the space.
- *   - NL Profile: Accessibility collapse is 1.0 because a different mathematical
- *     reality is inconceivable. Resistance is 0.0 because one cannot "oppose"
- *     a theorem. `emerges_naturally` is true. These facts certify it as a
- *     natural law.
+ *   Extractiveness (0.12): Very low. The constraint does not extract value from anyone; it is a property of the mathematical landscape. The value is not zero because some agents (practitioners, algorithm designers) must expend resources (computational time, research effort) to work around or adapt to the constraint. But this is not extraction in the DR sense — it is not asymmetric transfer of value. It is the cost of engaging with a constrained problem space. Suppression (0.03): Minimal. There is nothing suppressed. No agent can be 'freed' from this constraint through different framing, exit, or negotiation. The constraint is identical for all participants. Theater_ratio (0.15): Very low. The constraint is purely functional — there is no performative institutional component. The mathematical literature does not contain 'theater' around local optima; it contains rigorous proofs of their existence and analysis of their properties. The small non-zero value reflects only minor presentation/pedagogical choices in how the constraint is communicated, but these do not change the underlying reality.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap in classification; all agents view the
- *   constraint's structure as a Mountain. The gap is in the *subjective
- *   experience*. A powerless "hill-climber" feels trapped (a Snare-like
- *   experience), while a mobile "explorer" feels challenged but free (a
- *   Rope-like experience). However, the underlying structure they are both
- *   interacting with is the same immutable Mountain. This story demonstrates
- *   the system's ability to distinguish objective structure from subjective
- *   experience.
+ *   There is no perspectival gap. All six perspectives classify as Mountain identically because the constraint's existence is independent of the observer's position, power, time horizon, exit options, or scope. The constraint does not vary based on who measures it or how they measure it. This is the defining feature of a true Mountain constraint in the DR framework.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain (natural law), this constraint has no beneficiaries or
- *   victims. It is a symmetric feature of reality that affects all agents
- *   impartially, based on their chosen strategies. Therefore, no
- *   beneficiary/victim declarations are needed.
+ *   Directionality (d) is not applicable for Mountain constraints because there is no extraction mechanism. All agents are equally 'subject to' the constraint in the sense that it describes the topology of their problem space, not because it extracts from them. There is no beneficiary and no victim — the constraint simply exists as a boundary condition on all non-convex optimization problems.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the phenomenon as a feature of
- *   the environment (Mountain) rather than a coercive trap (Snare). A mis-
- *   classification as Snare would imply the local optimum is an artificial,
- *   enforced state designed to extract value, which is false. The framework
- *   correctly attributes the "trap" to the agent's limited power and exit
- *   options, not to the constraint's inherent structure.
+ *   Mandatrophy does not arise for this constraint because it is uniformly classified as Mountain from all perspectives. There is no risk of mislabeling coordination as extraction (or vice versa) because the constraint has no coordination function and no extraction mechanism. It is pure mathematical structure.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_local_vs_global_optima,
-    'Is the "cost" of being in a local optimum a form of structural extraction or merely a strategic failure?',
-    'Conceptual analysis of agency vs. structure. Does a passive landscape that predictably causes failure in simple agents count as extractive?',
-    'If considered extraction, ε would rise, potentially shifting the classification for powerless agents to Tangled Rope. If strategic failure, it remains a Mountain.',
+    global_vs_local_definition_precision,
+    'Does the mathematical definition of ''global optimum'' and ''local optimum'' require discrete/continuous topology assumptions that might vary across problem classes?',
+    'Formal review of topology textbooks and Morse theory; analysis of whether definitions hold equally in discrete optimization (NP-complete problems) and continuous (differentiable) optimization',
+    'If definitions are universal: constraint is mountain across all problem classes. If definitions require assumption sets: local optima might not exist in some formally distinct problem spaces (e.g., fully discrete, or non-Hausdorff topologies).',
     confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_local_vs_global_optima, conceptual, 'Distinguishing structural extraction from strategic failure in a passive landscape.').
+narrative_ontology:omega_variable(global_vs_local_definition_precision, conceptual, 'Precision of global vs local optima definitions across topology classes').
+
+omega_variable(
+    convexity_escape_mechanisms,
+    'Can a non-convex optimization problem be transformed into an equivalent convex problem through change of variables or problem reformulation?',
+    'Survey of convex relaxation techniques in operations research; analysis of when transformations preserve optimality vs when they create new constraints',
+    'If transformations preserve optimality universally: the constraint becomes variable-dependent (might be a Rope or Tangled Rope for problem designers). If transformations always lose information: local optima are truly immutable.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(convexity_escape_mechanisms, empirical, 'Whether non-convex problems can be transformed to convex equivalents').
+
+omega_variable(
+    landscape_concentration_limits,
+    'In very high-dimensional spaces (e.g., neural networks with billions of parameters), do concentration phenomena (high-dimensional Gaussian measure concentration, loss landscape smoothness at scale) reduce the practical relevance of local optima even if they theoretically exist?',
+    'Analysis of recent work on neural network loss landscape geometry (e.g., mode connectivity, loss landscape visualization); empirical measurement of how often gradient descent gets stuck vs reaches acceptable solutions',
+    'If concentration makes local optima rare or harmless in high dimensions: the constraint becomes less binding in practice (Scaffold or Piton). If local optima remain pervasive and harmful: the constraint stays Mountain.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(landscape_concentration_limits, empirical, 'Relevance of local optima in high-dimensional neural network optimization').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(local_vs_global_optima, 0, 10).
+narrative_ontology:interval(local_vs_global_optima, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not applicable. Base extractiveness is < 0.46, and the constraint is a
-% timeless mathematical law.
+% Theater ratio over time
+narrative_ontology:measurement(lgo_tr_t0, local_vs_global_optima, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(lgo_tr_t25, local_vs_global_optima, theater_ratio, 25, 0.14).
+narrative_ontology:measurement(lgo_tr_t50, local_vs_global_optima, theater_ratio, 50, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(lgo_be_t0, local_vs_global_optima, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(lgo_be_t25, local_vs_global_optima, base_extractiveness, 25, 0.12).
+narrative_ontology:measurement(lgo_be_t50, local_vs_global_optima, base_extractiveness, 50, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Not applicable for this type of fundamental constraint.
+narrative_ontology:coordination_type(local_vs_global_optima, information_standard).
+narrative_ontology:affects_constraint(local_vs_global_optima, no_free_lunch_theorem).
+narrative_ontology:affects_constraint(local_vs_global_optima, np_hardness_computational).
+narrative_ontology:affects_constraint(local_vs_global_optima, convergence_rate_bounds).
+
+% DUAL FORMULATION NOTE:
+% Local optima are a structural feature of non-convex spaces; they are upstream of many computational complexity results (NP-hardness, no-free-lunch theorem, convergence rate bounds). Decomposition into separate constraint stories would be inappropriate — local optima is a single, unified mathematical phenomenon with invariant ε across all measurement bases.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. This is a symmetric, natural law constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

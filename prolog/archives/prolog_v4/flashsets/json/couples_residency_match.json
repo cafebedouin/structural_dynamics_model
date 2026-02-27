@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "couples_residency_match",
+    "version": "1.0",
+    "generated_date": "2024-08-22",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Medical Residency Couples Match Algorithm",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nrmp",
+      "hospitals"
+    ],
+    "victims": [
+      "applicant_couples"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Applicant Couples",
+      "comment": "Applicant couples can feel trapped by the algorithm due to geographical limitations and the desire to stay together. The algorithm can extract concessions regarding program rank or specialty from each partner in a couple."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The NRMP",
+      "comment": "The NRMP benefits from the Couples Match algorithm as it maintains its control over the residency placement system and charges fees for participation. It presents itself as providing a valuable service to applicants and residency programs alike."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the Couples Match algorithm can be seen as a tangled rope. It attempts to coordinate the preferences of couples with the needs of residency programs, but also extracts value from the applicants by limiting their options and enforcing a centralized matching process."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Hospitals and Residency Programs",
+      "comment": "Hospitals and Residency Programs also benefit from the system by filling their open slots and potentially getting a more willing cohort of residents. The labor market dynamics allow programs to extract value from residents."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_matching_algorithms",
+      "question": "Could alternative matching algorithms better address the needs of couples while minimizing constraints?",
+      "resolution_mechanism": "Comparative analysis of different matching algorithms in simulation or real-world settings.",
+      "impact": "If alternative algorithms are superior, the Couples Match could be reclassified as a piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Possibility of alternative, less-constraining matching algorithms."
+    },
+    {
+      "id": "applicant_preference_weighting",
+      "question": "How accurately does the algorithm capture and weight the individual preferences of each partner in a couple?",
+      "resolution_mechanism": "Surveys and interviews with couples participating in the match, combined with analysis of rank order lists.",
+      "impact": "If preferences are poorly represented, extraction increases. If well-represented, coordination increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of preference representation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Couples Match algorithm is a part of the NRMP that allows couples to link their rank order lists (ROLs). This aims to enable both partners to obtain residency positions in the same geographic location. However, it can also impose constraints on the choices available to couples, extracting concessions from both partners. It coordinates a national scale matching program, so has an inherent coordination function.",
+    "key_agents": [
+      "Applicant Couples: Primary targets (powerless/trapped) - experience limited choices and potential career compromise.",
+      "NRMP: Primary beneficiary (institutional/arbitrage) - maintains control over residency placements and extracts fees.",
+      "Hospitals: Beneficiary (institutional/arbitrage) - fills residency positions using an established system."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. Couples face limitations on their choices and may need to compromise on preferred programs or specialties to stay together. NRMP maintains control over the system and charges fees. Suppression (0.40): Moderate. Couples may feel pressured to participate in the match, even if it limits their options. The centralized nature of the system suppresses alternative matching mechanisms. Theater Ratio (0.20): Low. The Couples Match algorithm is primarily functional, aiming to facilitate residency placements. The performative aspect is relatively low.",
+    "perspectival_gap": "Applicant couples can feel trapped by the algorithm, limiting their options and potentially extracting career compromises. The NRMP benefits from the system's control and the revenue it generates. Hospitals also benefit by filling their residency slots. The analytical observer sees a tangled rope - a mix of coordination and extraction.",
+    "directionality_logic": "The directionality is derived from the relationship between the agents and the constraint. Applicant couples are victims because they bear the cost of limited choices. The NRMP and hospitals are beneficiaries as they gain from the system's coordination function and control. This determines the extraction values experienced by each agent.",
+    "mandatrophy_analysis": "The Couples Match algorithm aims to coordinate couples' preferences with residency program openings, but it can also extract value from the applicants by limiting their options. Properly classified, it is a tangled rope, neither pure coordination nor pure extraction. Alternative systems are not readily available, and can often only be accessed through personal connections. The algorithm presents an equitable option, though with potentially restrictive conditions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

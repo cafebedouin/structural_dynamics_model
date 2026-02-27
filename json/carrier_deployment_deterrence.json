@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "carrier_deployment_deterrence",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "carrier"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Carrier Strike Group Deployment as Regional Deterrent",
+    "topic_domain": "geopolitical/military",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_military_establishment",
+      "regional_allied_states",
+      "global_maritime_commerce"
+    ],
+    "victims": [
+      "target_state_autonomy",
+      "regional_power_balance",
+      "competing_naval_powers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Target Regional State",
+      "comment": "PERSPECTIVE 1: TARGET REGIONAL STATE (SNARE) \u2014 Faced with a carrier strike group deployed to constrain its military options, this state experiences maximum extraction with minimal coordination benefit. Its own strategic autonomy is suppressed; alternative responses (military escalation, counter-deterrence) are all costly. No exit option \u2014 the carrier's presence imposes constraints regardless of state consent. Extraction is experienced as coercive power projection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Allied States",
+      "comment": "PERSPECTIVE 2: REGIONAL ALLIED STATES (TANGLED ROPE) \u2014 Benefit from the deterrent effect (security coordination) but are also constrained by the carrier's presence \u2014 their own strategic options are partially dictated by the US naval posture. They cannot freely pursue independent regional policies. Mixed experience: genuine security benefit coupled with asymmetric dependence. Constrained exit because abandoning the alliance carries significant costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Military Establishment",
+      "comment": "PERSPECTIVE 3: US MILITARY ESTABLISHMENT (ROPE) \u2014 Deploys the carrier as a coordination mechanism for allied deterrence and free navigation assurance. Primary beneficiary with arbitrage options \u2014 can redeploy, can choose which threats to deter, can extract geopolitical leverage without significant constraint on its own options. Experiences the deployment as solving a coordination problem (regional security provision) with minimal cost to itself."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Maritime Commerce Coalition",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL MARITIME COMMERCE COALITION (SCAFFOLD) \u2014 The carrier deployment enforces free navigation and passage through contested straits (Strait of Malacca, South China Sea, Strait of Hormuz). This is temporary coordination with a sunset: as regional security institutions mature (ASEAN protocols, multilateral dispute resolution), distributed enforcement replaces unilateral carrier presence. Low effective extraction because the coordination function is being transferred to alternative mechanisms. Theater is moderate \u2014 the carrier performs both deterrence and genuine traffic protection."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Cold War Deterrence Doctrine",
+      "comment": "PERSPECTIVE 5: COLD WAR DETERRENCE DOCTRINE (PITON) \u2014 The carrier deployment strategy is substantially inertial, maintained from Cold War territorial competition logic even where regional threat environments have shifted. The deployment ritual (forward presence, freedom of navigation operations, allied reassurance messaging) persists through institutional momentum \u2014 Navy fleet sizing, budget allocation, strategic planning all assume carrier forward presence. The functional deterrence value has degraded as near-peer competitors possess hypersonic anti-ship weapons and asymmetric strategies that reduce carrier invulnerability. Theater ratio reflects performative reassurance (allies see presence; threat is credible but containable) masking reduced functional deterrent effect. Maintained by inertia, not because it works as designed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Competing Naval Powers (China, Russia)",
+      "comment": "PERSPECTIVE 6: COMPETING NAVAL POWERS (TANGLED ROPE) \u2014 Experience the carrier deployment as both a coordinating signal (establishing mutual strategic awareness and deterrence stability through visible presence) and an extractive constraint on their own regional influence. The carrier's presence enforces a regional power ceiling \u2014 prevents unilateral military dominance but also forces them to bear costs of counter-deterrence (their own naval buildout, asymmetric strategies). Mixed extraction: genuine strategic communication coupled with suppression of their preferred regional hierarchy."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Structural Necessity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / STRUCTURAL NECESSITY (MOUNTAIN) \u2014 From a civilizational view, global maritime commerce requires enforcement against piracy and regional disruption. The carrier is one solution among many (multilateral coast guard cooperation, private security, international law enforcement). The observer risks naturalizing the US carrier system as inevitable, necessary, and immutable \u2014 but the structural data contradicts this: the deployment is contingent on specific institutional arrangements (US naval industrial base, alliance politics, strategic doctrine), not on laws of physics or irreducible logical limits. This is a false summit \u2014 carrier deterrence is coordination + extraction, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hypersonic_weapon_vulnerability",
+      "question": "Do hypersonic anti-ship weapons fundamentally eliminate carrier invulnerability, converting the deterrent from credible to performative?",
+      "resolution_mechanism": "Technical assessment of hypersonic missile interception rates; wargaming outcomes with near-peer carrier engagement; vulnerability modeling against distributed swarms",
+      "impact": "If vulnerable: carrier deterrent shifts from mountain/rope (works) to piton (inertial ritual). Extraction mechanism weakens because threatened states see carrier presence as theater rather than real suppression. If defended: mountain classification gains support \u2014 carrier remains immutable constraint on regional power.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether hypersonic weapons render carriers operationally vulnerable"
+    },
+    {
+      "id": "regional_institution_adequacy",
+      "question": "Can ASEAN, QUAD, or multilateral maritime protocols provide equivalent security coordination without unilateral US carrier presence?",
+      "resolution_mechanism": "Comparative analysis of dispute resolution success rates pre/post carrier deployment; regional maritime incident escalation patterns under different enforcement regimes; state security perception surveys",
+      "impact": "If adequate: scaffold perspective confirmed \u2014 carrier deployment has a real sunset as multilateral alternatives mature. If inadequate: deterrent function remains structurally necessary, and scaffold is aspirational rather than structural. Affects classification: adequate alternatives \u2192 stronger scaffold gate; inadequate \u2192 tangled_rope becomes dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional institutions can substitute for carrier deterrence"
+    },
+    {
+      "id": "extraction_mechanism_clarity",
+      "question": "Is the carrier deployment primarily a coordination mechanism (deterrence + free navigation) or primarily an extraction mechanism (regional hegemony maintenance + cost imposition on competitors)?",
+      "resolution_mechanism": "Historical analysis of carrier deployment decisions: correlation with genuine regional threats vs geopolitical opportunity; allied state benefit analysis (security gain vs dependency cost); cost-benefit accounting for US burden vs allied benefit distribution",
+      "impact": "If primarily coordination: rope or scaffold classification dominant. If primarily extraction: snare and tangled_rope dominant. Affects tangled_rope gate closure: requires demonstrating BOTH coordination function (yes) AND asymmetric extraction (yes); if only one present, misclassified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether carrier deployment is coordination or extraction mechanism"
+    },
+    {
+      "id": "allied_autonomy_constraint",
+      "question": "Does the carrier's presence constrain regional allied states' strategic autonomy more than it enables their security?",
+      "resolution_mechanism": "Analysis of allied state military spending trends, regional policy initiatives, and stated strategic preferences; comparison of allied autonomy pre/post deployment; survey of allied strategic perception",
+      "impact": "If constraints exceed enablement: allied perspective shifts from tangled_rope toward snare; extraction mechanism revealed as dominant. If benefits exceed constraints: rope perspective strengthened; coordination dominates. Affects directionality derivation: constrained exit + victim status \u2192 higher d \u2192 higher chi for allies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether carrier presence constrains allied strategic autonomy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The deployment of a US Carrier Strike Group (CSG) into a contested region functions simultaneously as a coordination mechanism (deterrence, freedom of navigation assurance, allied security provision) and as an extraction mechanism (regional hegemony maintenance, suppression of competing naval powers' autonomy, enforcement of US-preferred regional hierarchy). The constraint exhibits all six classification types from different perspectives. From the US military establishment's viewpoint, the deployment is pure coordination (Rope) \u2014 solving the problem of regional security provision with minimal cost to itself. From a target state's perspective, it is pure extraction (Snare) \u2014 coercive power projection with no coordination benefit. From regional allied states, it is a hybrid (Tangled Rope) \u2014 genuine security benefit coupled with strategic dependence. From the perspective of international maritime commerce, it is temporary coordination being replaced by multilateral alternatives (Scaffold). From the perspective of Cold War-era strategic doctrine, it is an institutional ritual maintained by inertia despite degraded function in the era of hypersonic weapons and asymmetric strategies (Piton). From competing naval powers, it is a mixed signal (Tangled Rope) \u2014 coordinating mutual deterrence stability while suppressing their preferred regional hierarchy. The analytical observer risks naturalizing the carrier system as an immutable constraint on regional power (Mountain), but the structural data reveals this as a contingent institutional arrangement. The constraint's theater ratio (0.64) reflects the performative aspects of deterrence signaling \u2014 the carrier's presence communicates resolve and capability, but the actual deterrent effect depends on credibility assumptions that may be eroding as near-peer anti-ship capabilities mature.",
+    "key_agents": [
+      "US Military Establishment: Primary beneficiary (institutional/arbitrage) \u2014 deploys carrier, captures deterrence effect and regional influence; high exit flexibility",
+      "Target Regional State: Primary victim (powerless/trapped) \u2014 faces constrained autonomy and suppressed military options; no exit from deterrent presence",
+      "Regional Allied States: Secondary beneficiary and victim (moderate/constrained) \u2014 gain security coordination but lose strategic autonomy; constrained exit due to alliance dependence",
+      "Competing Naval Powers: Secondary victim and agent (organized/constrained) \u2014 experience deterrent suppression and regional power ceiling; constrained counter-deterrence options",
+      "International Maritime Commerce: Tertiary beneficiary (organized/mobile) \u2014 benefits from enforced free navigation; exit options emerging via multilateral institutions",
+      "Cold War Strategic Doctrine: Institutional momentum actor (institutional/constrained) \u2014 maintains deployment ritual through inertia; constrained by budget and planning cycles",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent arrangement as natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The carrier deployment extracts substantial benefits for the US military establishment (geopolitical leverage, force projection capability, alliance dependence maintenance) while imposing costs on target states (autonomy suppression), competing powers (deterrent ceiling), and allied states (strategic dependence). However, extraction is not maximal (not 0.70+) because the deployment genuinely provides coordination functions \u2014 deterrence prevents more costly outcomes (regional conflict escalation), and free navigation enforcement is a real public good. The tension between coordination and extraction is what makes this Tangled Rope rather than pure Snare. Suppression (0.68): Moderate-high. Target states face significant constraints on military options (cannot escalate without facing carrier-backed response); competing powers face constraints on regional influence expansion; allied states face constraints on independent policy formulation. However, suppression is not total \u2014 alternative strategies exist (asymmetric warfare, diplomatic negotiation, building counter-deterrent capabilities), though all carry costs. Theater ratio (0.64): Moderate-high. The deterrent effect depends substantially on signaling and credibility \u2014 much of the carrier's impact comes from visible presence, photogenic operations, and repeated deployments that communicate resolve. The actual military capability against near-peer adversaries with hypersonic weapons is contested and possibly degraded. The theater has increased over the interval (42 \u2192 64) as deployment doctrine has shifted toward more frequent rotations and public visibility operations, partly compensating for reduced operational effectiveness.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position: beneficiary vs victim status, power level, and exit options. The US military establishment has low d (high beneficiary, arbitrage exit) \u2192 low f(d) \u2192 extraction runs toward them. Target states have high d (victim, trapped exit) \u2192 high f(d) \u2192 maximum experienced extraction. Regional allies have moderate d (mixed beneficiary/victim, constrained exit) \u2192 moderate f(d) \u2192 mixed experience. Competing powers have moderate-high d (victim status, constrained exit for counter-deterrence) \u2192 moderate-high f(d) \u2192 significant extraction. Maritime commerce has low d (beneficiary, mobile exit) \u2192 low f(d) \u2192 low experienced extraction. Cold War doctrine has moderate d (institutional, constrained exit from budget/planning cycles) \u2192 moderate f(d) \u2192 moderate theater-driven cost. Analytical observer has high d (analytical exit, observing all perspectives) \u2192 high f(d) \u2192 sees full extraction spectrum. The directionality derivation confirms tangled_rope classification: coordination function (deterrence, free navigation) is real, but asymmetric extraction (beneficiaries insulated by arbitrage/mobility, victims trapped by geography/power asymmetry) is also real.",
+    "perspectival_gap": "The perspectival gap is maximal here \u2014 observers see radically different classifications based on their structural position relative to the carrier. The beneficiary (US military) sees rope \u2014 a coordination mechanism with benefits and no extraction. The victim (target state) sees snare \u2014 pure extraction. The mixed agent (regional allies) sees tangled rope \u2014 both coordination and extraction. The beneficiary of secondary functions (maritime commerce) sees scaffold \u2014 temporary coordination being replaced. The institutional actor maintaining inertial deployment sees piton \u2014 ritual without function. The competing power sees tangled rope \u2014 deterrent suppression coupled with mutual strategic awareness. The civilizational observer risks mountain \u2014 naturalizing a contingent arrangement as immutable structural necessity. This gap demonstrates why indexical classification is essential: the 'true' nature of the carrier deployment is not a single type but a presheaf of types across the observation sites, each capturing something real about the constraint from that perspective.",
+    "mandatrophy_analysis": "The tangled_rope classification resolves the mandatrophy by demonstrating that the constraint has BOTH genuine coordination function (deterrence prevents escalation, free navigation assurance is real public good) AND asymmetric extraction (benefits flow disproportionately to the US military, costs are borne by target states and competing powers, regional allies lose autonomy). The gate requirements are met: (1) beneficiaries declared (US military, regional allies, maritime commerce), (2) victims declared (target state autonomy, competing power influence, allied strategic autonomy), (3) active enforcement required (yes \u2014 carrier deployment requires continuous operational commitment, rules of engagement, threat assessment). The false summit (mountain classification from analytical perspective) is correctly identified: the deployment is not an immutable law but a contingent institutional arrangement dependent on specific strategic doctrines, budgetary choices, and alliance politics. If alternative regional institutions mature, or if carrier vulnerability to hypersonic weapons is confirmed, the constraint's function degrades \u2014 it becomes piton rather than mountain. The mandatrophy is resolved by showing that carrier deterrence is *contingently* necessary for current regional stability, not *necessarily* immutable for all possible regional orderings."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "south_china_sea_freedom_of_navigation",
+      "strait_of_hormuz_passage_security",
+      "regional_military_balance_stability",
+      "hypersonic_weapon_development_race"
+    ],
+    "dual_formulation_note": "Carrier deployment as deterrent is upstream of specific regional disputes (South China Sea, Strait of Hormuz) and downstream of broader US military strategy and alliance architecture. The coordination function (free navigation, deterrence) is decomposed from the extraction function (regional hegemony maintenance, power suppression). Stories can be written separately for each functional aspect, with the deterrent story linking both."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "rare_earth_coop_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "morec"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.32,
+    "theater_ratio": 0.41,
+    "claimed_type": "rope",
+    "human_readable": "Manufacturer-Owned Rare Earth Cooperative (MOREC)",
+    "topic_domain": "economic/industrial",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "participating_manufacturers",
+      "downstream_electronics_industry"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Participating Manufacturer",
+      "comment": "PERSPECTIVE 1: PARTICIPATING MANUFACTURER (ROPE) \u2014 Sees MOREC as pure coordination mechanism. Solves collective action problem of supply security without intermediary extraction. Joint capital pooling reduces individual carry costs and creates pricing transparency. d\u22480.48, f(d)\u22480.60, \u03c3=1.2 \u2192 \u03c7\u22480.20. Low effective extraction; mechanism directly serves member interests."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Downstream Electronics Industry",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM ELECTRONICS INDUSTRY (ROPE) \u2014 Benefits from cooperative supply stability and competitive pricing that bypasses Project Vault's profit-seeking markup. Exit constrained by supply chain integration, but MOREC membership provides collective security. d\u22480.52, f(d)\u22480.68, \u03c3=1.2 \u2192 \u03c7\u22480.19. Coordination benefit outweighs extraction cost."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Member Smaller Manufacturer",
+      "comment": "PERSPECTIVE 3: NON-MEMBER SMALLER MANUFACTURER (SNARE) \u2014 Excluded from cooperative due to capital requirements or political barriers. Faces higher rare earth costs and supply uncertainty without membership. Cannot independently access alternative supply chains. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.34. Trapped in disadvantaged position; extraction is exclusionary mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The State Supply Authority",
+      "comment": "PERSPECTIVE 4: STATE SUPPLY AUTHORITY (TANGLED ROPE) \u2014 Sees MOREC as both coordinating critical supply chains (state benefit) AND potentially avoiding state-mandated stockpile requirements (state loss). Coordination function genuine (manufacturers pool capital for resilience); extraction asymmetry exists (cooperative members avoid certain regulations that isolated manufacturers face). d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.34. Requires active enforcement of membership terms to prevent regulatory arbitrage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) \u2014 From civilizational/universal perspective, MOREC is a peer-coordinated supply management mechanism solving a genuine collective action problem without external coercion. The cooperative structure exhibits low suppression (members can exit, though at cost), low theater (capital pooling and supply management are functional, not performative), and moderate extractiveness (extraction is limited to exclusionary membership barriers). d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.22. Engine classification: Rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "membership_capital_threshold_inclusivity",
+      "question": "Is the cooperative capital requirement designed for supply resilience or as a disguised cartel gate to exclude competitors?",
+      "resolution_mechanism": "Comparative analysis of capital requirements vs actual supply chain management costs; historical correlation between membership thresholds and excluded firm size distribution; survey of excluded firms on stated reasons for non-participation",
+      "impact": "If threshold is resilience-driven: MOREC is Rope from all perspectives. If threshold is cartel-driven: classification shifts to Snare with exclusionary extraction; \u03c7 increases substantially.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether capital requirement serves supply resilience or cartel gatekeeping"
+    },
+    {
+      "id": "regulatory_arbitrage_intent",
+      "question": "Does MOREC's structure intentionally avoid state stockpile mandates, environmental compliance costs, or labor standards that apply to independent sourcing?",
+      "resolution_mechanism": "Comparison of compliance obligations for MOREC members vs non-members; analysis of regulatory filing patterns; interviews with state supply authorities on enforcement challenges",
+      "impact": "If intentional arbitrage: requires_active_enforcement flag should be true; Tangled Rope from state perspective is primary; extraction increases. If unintentional: Rope classification is robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cooperative structure enables regulatory arbitrage"
+    },
+    {
+      "id": "alternative_supply_pathways",
+      "question": "Do open-market rare earth suppliers continue to offer viable alternatives to MOREC members, or does cooperative membership consolidate supply access in ways that raise switching costs?",
+      "resolution_mechanism": "Market analysis of independent rare earth suppliers; tracking of price differentials and lead times for MOREC members vs non-members; historical data on member exit rates",
+      "impact": "If alternatives exist: exit option is mobile, suppression stays low, Rope is stable. If MOREC creates lock-in: exit becomes constrained; suppression rises; classification drifts toward Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether independent rare earth suppliers remain viable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.41
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "MOREC represents a manufacturer-coordinated response to the high-extraction rare earth supply regime imposed by Project Vault. Rather than accepting Vault's profit-seeking markup and allocation restrictions, participating manufacturers pool capital to establish independent supply chains, stockpiling capacity, and processing infrastructure. This constraint exhibits core characteristics of pure coordination (Rope): the mechanism solves a genuine collective action problem (manufacturers cannot individually secure diverse rare earth supply; coordinated pooling reduces carry costs and enables price negotiation), exhibits low suppression (members can exit, though at cost to their individual supply security), and requires no external enforcement (the cooperative's governance structure is self-policing through membership interests). However, the constraint also exhibits exclusionary characteristics that create victims: manufacturers without sufficient capital or political standing are locked out of the cooperative, forcing them to source through Project Vault at higher cost. This creates a perspectival gap: members see coordination; excluded manufacturers see extraction.",
+    "key_agents": [
+      "Participating Manufacturers: Primary beneficiaries (powerful/mobile) \u2014 pool capital to reduce supply-chain risk and pricing pressure; enjoy collective bargaining power",
+      "Downstream Electronics Industry: Secondary beneficiary (organized/constrained) \u2014 benefits from stable, competitively-priced rare earth supply through cooperative membership; supply chain integration constrains exit but MOREC provides group security",
+      "Non-Member Smaller Manufacturers: Primary victims (moderate/trapped) \u2014 excluded from cooperative by capital requirements; forced to source at higher Vault-imposed costs; cannot individually negotiate better terms",
+      "State Supply Authority: Institutional actor (institutional/constrained) \u2014 benefits from supply chain resilience (coordination function); loses direct control over compliance mandates and stockpile requirements (extraction asymmetry); experiences regulatory arbitrage as members optimize to cooperative structure rather than state directive",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees MOREC as horizontal coordination mechanism that reduces dependency on profit-seeking intermediary; low extractiveness reflects genuine coordination benefit"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Moderate-low. The base extraction reflects two countervailing factors: (1) Coordination benefit: manufacturers genuinely solve a collective action problem through capital pooling and supply diversification; extraction is limited to the exclusionary membership mechanism (non-members pay higher costs); (2) Trajectory analysis: extractiveness rose from 0.15 to 0.28 over 6 years, indicating early-stage consolidation \u2014 as membership stabilizes and alternative supply paths close, exclusionary extraction increases. Current 0.28 reflects the coordinate mechanism phase before lock-in dynamics dominate. Suppression (0.32): Moderate. Suppression mechanisms include capital threshold barriers (prevents entry), information asymmetry (cooperative members have supply data non-members lack), and supply-chain integration lock-in (members become dependent on cooperative infrastructure for cost parity). But suppression is not coercive \u2014 non-members can attempt to form competing cooperatives or negotiate directly with suppliers; they simply face higher friction. Theater ratio (0.41): Low-moderate. Capital pooling and supply management are functional activities; the cooperative's governance focuses on real supply-chain operations rather than performative ritual. Theater has slightly increased (0.35\u21920.41) as cooperative governance incorporates more stakeholder reporting and regulatory compliance theater, but the primary function remains supply coordination rather than symbolic legitimacy.",
+    "perspectival_gap": "The perspectival gap between member and non-member is the dominant structural feature of this constraint. Members classify MOREC as Rope (coordination solving a real problem). Non-members classify it as Snare (exclusionary mechanism extracting through access denial). The state supply authority sees Tangled Rope: the cooperative coordinates supply resilience (state benefit) but enables regulatory arbitrage (state loss). The analytical observer sees Rope because the constraint's primary function is genuinely coordinating supply chains \u2014 the exclusionary extraction is secondary to the coordination purpose. The gap is not about measurement or framing; it is about structural position: your extraction experience depends on whether you can pay the membership capital threshold.",
+    "directionality_logic": "Participating manufacturers: Beneficiary + mobile \u2192 d\u22480.48, f(d)\u22480.60. Net beneficiary experiencing low effective extraction. Downstream electronics: Beneficiary + constrained \u2192 d\u22480.52, f(d)\u22480.68. Also net beneficiary; constrained exit reflects supply chain integration but MOREC provides group security reducing individual exit friction. Non-member smaller manufacturers: Victim + trapped \u2192 d\u22480.85, f(d)\u22481.15. Experience high effective extraction through exclusionary mechanism. State supply authority: Partially victim (regulatory arbitrage) + constrained \u2192 d\u22480.65, f(d)\u22481.00. Institutional relationship is mixed: state benefits from supply resilience coordination but loses regulatory leverage; extractive mechanism (circumventing mandates) operates at institutional level. Analytical observer: analytical \u2192 d\u22480.50, f(d)\u22480.65. Sees coordination as primary function; extraction as secondary effect of membership structure.",
+    "mandatrophy_analysis": "MOREC does not trigger mandatrophy because it is primarily a coordination mechanism, not a mislabeled extraction system. The constraint's low extractiveness (0.28) and low suppression (0.32) confirm that the primary function is coordinating supply security, not extracting rents. The exclusionary membership barrier creates real extraction for non-members (Snare perspective), but this is secondary to the coordination function and is resolved through different perspectives rather than through false natural law claims. The state supply authority's Tangled Rope perspective correctly identifies the hybrid nature: genuine coordination (supply resilience) + asymmetric extraction (regulatory arbitrage). No Mandatrophy pattern is triggered because the classification schema (Rope-with-Snare-secondary) accurately reflects the actual structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "project_vault_supply_monopoly",
+      "semiconductor_supply_security",
+      "rare_earth_geopolitical_dependency"
+    ],
+    "dual_formulation_note": "MOREC is downstream of Project Vault's high-extraction monopoly regime and affects semiconductor supply security and geopolitical rare earth dynamics. The cooperative emerges as a coordination response to Vault's extraction; understanding MOREC requires analyzing it alongside the upstream constraint it is designed to bypass."
+  },
+  "directionality_overrides": []
+}

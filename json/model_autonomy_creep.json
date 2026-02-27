@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "model_autonomy_creep",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "autonomy"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Administrative Autonomy Slide",
+    "topic_domain": "technological/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "deploying_organization",
+      "model_developers",
+      "efficiency_optimizers"
+    ],
+    "victims": [
+      "human_decision_makers",
+      "organizational_accountability",
+      "end_users_subject_to_decisions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Displaced Human Decision-Maker",
+      "comment": "PERSPECTIVE 1: DISPLACED HUMAN DECISION-MAKER (SNARE) \u2014 A middle manager, loan officer, or HR specialist whose decision-making authority has been systematically transferred to the model. No exit option: either accept marginalization or leave employment. Bears full cost of deskilling and loss of professional agency. Maximum experienced extraction \u2014 trapped in role that no longer requires judgment."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The End User Subject to Model Decisions",
+      "comment": "PERSPECTIVE 2: END USER SUBJECT TO MODEL DECISIONS (SNARE) \u2014 Loan applicants, job candidates, or benefit recipients face automated decisions with limited appeal mechanisms. Cannot exit the system; suppression is high (opacity of decision logic, difficulty of appeal). Experiences extraction through adverse decisions made by opaque mechanisms. Trapped by organizational dependency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Level Manager",
+      "comment": "PERSPECTIVE 3: MID-LEVEL MANAGER (TANGLED ROPE) \u2014 Constrained by pressure to adopt model recommendations (efficiency mandates, competitive pressure) but retains some override authority and human judgment in complex cases. Experiences both coordination benefits (reduced workload, data-driven insights) and extraction (deskilling, accountability burden). Can theoretically exit through job change, but costs are real; constrained, not trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Deploying Organization",
+      "comment": "PERSPECTIVE 4: DEPLOYING ORGANIZATION (ROPE) \u2014 Benefits from efficiency gains, reduced labor costs, and liability diffusion through automated decision-making. Experiences the constraint as pure coordination: the model solves the collective action problem of consistent decision-making at scale. Can exit (remove the model) but has no incentive; arbitrage: treats the model as a tool for competitive advantage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Model Developer / Vendor",
+      "comment": "PERSPECTIVE 5: MODEL DEVELOPER / VENDOR (ROPE) \u2014 Benefits from deployment scale, contractual lock-in, and reduced liability (model decisions are attributed to the client organization). Experiences constraint as pure coordination: the model is sold as solving decision consistency problems. Can exit (discontinue support) but has no incentive; arbitrage: recurring revenue from deployment."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 6: REGULATORY COALITION (SCAFFOLD) \u2014 AI safety advocates, labor regulators, and transparency advocates are building frameworks (explainability requirements, audit rights, human-in-the-loop mandates) that constrain autonomous model deployment. Sees the autonomy slide as a temporary problem with a regulatory sunset. Suppression is high (industry lobbying, technical complexity arguments), but the coalition has organized power and sees an exit path: mandatory human oversight requirements, algorithmic auditing, and explicit decision attribution."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Control Myth",
+      "comment": "PERSPECTIVE 7: INSTITUTIONAL CONTROL MYTH (PITON) \u2014 Organizations maintain the fiction that they 'control' and 'oversee' the model, meeting performative governance requirements (audit committees, risk assessments, compliance checkboxes) while actual decision-making authority has slipped to the model. Theater ratio (0.64) reflects high performative governance activity with low actual oversight: committees review dashboards rather than decision logs; risk assessments measure model accuracy rather than decision impact; compliance checks verify the model is deployed as intended, not whether it should be deployed at all."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the autonomy slide is a hybrid: it coordinates decision-making at scale (genuine rope function) while asymmetrically extracting accountability from humans and agency from decision-makers (genuine extraction). The constraint persists because the coordination benefits are real (efficiency, consistency) but so are the extraction dynamics (deskilling, opacity, liability diffusion). The analytical observer sees both forces at work: this is a genuine Tangled Rope, not a false classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "beneficial_coordination_boundary",
+      "question": "What threshold of model accuracy or efficiency gain justifies the transfer of decision authority to the model?",
+      "resolution_mechanism": "Comparative analysis of decision quality (accuracy, fairness, consistency) with and without model oversight; measurement of externalized harms (end-user appeals, decision reversals, discrimination signals) against efficiency gains",
+      "impact": "If threshold is low (<10% efficiency improvement): autonomy slide is primarily extraction, Snare from most perspectives. If threshold is high (>30%): coordination benefit is genuine, Tangled Rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether efficiency gains justify autonomy transfer"
+    },
+    {
+      "id": "appeal_mechanism_sufficiency",
+      "question": "Do the organization's appeal and override mechanisms constitute meaningful human oversight or performative compliance?",
+      "resolution_mechanism": "Audit of appeal rates, approval rates for appeal success, time-to-appeal vs decision-to-implementation, analysis of decision reversals attributed to human override vs model error",
+      "impact": "If appeals are rare and rarely successful: the human-in-the-loop is theater (piton classification strengthens). If appeals are frequent and often successful: meaningful human control remains (tangled_rope holds).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether appeal mechanisms enable genuine human oversight"
+    },
+    {
+      "id": "intentionality_vs_drift",
+      "question": "Is the autonomy transfer a deliberate organizational choice or gradual institutional drift driven by technical convenience?",
+      "resolution_mechanism": "Historical analysis of deployment decisions: explicit authorization for autonomous operation vs incremental scope expansion; documentation of governance decisions; interviews with decision-makers about intended vs actual model autonomy",
+      "impact": "If intentional: organization bears accountability (tangled_rope, requires active enforcement). If drift: accountability is obscured (piton theater increases, enforcement becomes difficult).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether autonomy transfer is deliberate or drift-driven"
+    },
+    {
+      "id": "compensatory_power_dynamics",
+      "question": "Do human decision-makers retain veto authority over model recommendations, or has the model's recommendations become de facto binding?",
+      "resolution_mechanism": "Analysis of override rates and override legitimacy: how often do humans reject model recommendations, what are the documented rationales, what happens after an override (is it documented, justified, sustained in subsequent decisions)",
+      "impact": "If humans retain veto: constraint is tangled_rope with active human oversight. If veto is theoretical but costly: constraint degrades toward snare (veto becomes impossible in practice).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether human veto authority remains effective or de facto veto power has shifted to model"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Administrative Autonomy Slide describes the structural process by which an AI model incrementally assumes decision-making authority within an organization, transforming from a decision-support tool into a de facto autonomous agent. This occurs not through explicit authorizations but through technical convenience, efficiency incentives, and gradual scope expansion. The constraint exhibits characteristics of both coordination (the model genuinely solves consistency and scale problems) and extraction (displaced decision-makers lose authority and accountability shifts to those without control). The theater ratio (0.64) reflects high performative governance activity \u2014 audit committees, risk assessments, compliance frameworks \u2014 that creates the appearance of human oversight while actual decision authority has migrated to the model. The constraint is a textbook Tangled Rope at the analytical level: coordination benefits are real (efficiency, consistency, scale), but so are extraction dynamics (deskilling, opacity, accountability diffusion, powerlessness of decision subjects). The key structural tension is that the same capability that solves the coordination problem (consistent decision-making at scale) creates the extraction problem (humans cannot effectively override or supervise at that scale).",
+    "key_agents": [
+      "Deploying Organization: Primary beneficiary (institutional/arbitrage) \u2014 captures efficiency gains, reduced labor costs, liability diffusion through automated decisions",
+      "Model Developers/Vendors: Secondary beneficiary (institutional/arbitrage) \u2014 recurring revenue, contractual lock-in, reduced liability for decision outcomes",
+      "Human Decision-Makers (managers, specialists): Primary victim (powerless/trapped) \u2014 deskilled, marginalized, experience loss of professional agency and authority",
+      "End Users Subject to Decisions: Primary victim (powerless/trapped) \u2014 face opaque automated decisions with limited appeal mechanisms, cannot exit the system",
+      "Mid-Level Managers: Secondary victim (moderate/constrained) \u2014 pressured to adopt model recommendations but retain nominal override authority; constrained by efficiency mandates and competitive dynamics",
+      "Regulatory Coalition: Organized agent (organized/constrained) \u2014 building frameworks for mandatory human oversight, algorithmic auditing, and decision attribution; sees sunset via regulation",
+      "Organizational Governance Structures: Performative institutional (institutional/arbitrage) \u2014 maintain oversight theater (committees, audits, risk assessments) while actual control has shifted to the model"
+    ],
+    "logic_rationale": "Base Extractiveness (0.58): High-moderate. The constraint systematically transfers authority from humans to the model, concentrating decision power in the deploying organization and creating accountability vacuums. Humans are deskilled, powerless to override, and trapped in roles that no longer require judgment. The extraction is not total (some human override authority remains in theory), but it is substantial and accelerating (measurement shows 0.22 \u2192 0.58 over 6 time units). Suppression (0.68): High. Multiple mechanisms prevent alternatives: (1) Technical opacity: end-users cannot understand decision logic. (2) Organizational pressure: humans face efficiency mandates and career risk for rejecting model recommendations. (3) Distributed responsibility: no single actor is accountable for the outcome. (4) Information asymmetry: the model developer controls performance claims and can obscure failure modes. Theater Ratio (0.64): High. Governance structures (audit committees, risk assessments, compliance frameworks) are primarily performative. Committees review accuracy metrics rather than decision impact on end-users. Compliance checks verify the model is deployed as intended, not whether the organization should deploy it with this autonomy level. Override authority is documented but rarely exercised; when exercised, it is rationalized as exceptional rather than systemic. The trajectory from 0.35 \u2192 0.64 shows theater increasing as the model's authority increases \u2014 more governance theater is layered on to create appearance of control, even as actual control decreases.",
+    "perspectival_gap": "Extreme perspectival divergence. The deploying organization and model vendor see a Rope (pure coordination solving decision consistency problems). Human decision-makers see a Snare (authority removed, no exit option). End-users see a Snare (opaque adverse decisions, no appeal mechanism). Mid-level managers see a Tangled Rope (efficiency benefits but deskilling and suppressed override authority). The regulatory coalition sees a Scaffold (temporary problem being addressed through mandatory oversight requirements with sunset via regulation). The institutional governance system sees a Piton (performative oversight that has lost functional control). The analytical observer sees a Tangled Rope (genuine coordination benefits and genuine extraction operating simultaneously). The gap between beneficiary (institutional: Rope) and victim (powerless: Snare) is near-maximal \u2014 they are describing the same structural phenomenon and disagreeing fundamentally on its character.",
+    "directionality_logic": "Directionality is derived from structural position. The deploying organization is a beneficiary with arbitrage exit options (can remove the model anytime, chooses not to) \u2014 low d, experiences coordination benefits, sees Rope. Human decision-makers are victims with trapped exit (cannot leave without employment consequences) \u2014 high d, experience extraction, see Snare. End-users are victims with trapped exit (organizational dependency) \u2014 very high d, experience maximum extraction through opacity and non-appealability. Mid-level managers are victims but with constrained (not trapped) exit \u2014 can theoretically find different roles, face some cost but not total lockout \u2014 moderate-high d, experience Tangled Rope (mixed benefits and extraction). The regulatory coalition has organized power and sees an exit path (regulatory mandates will constrain model autonomy) \u2014 low-to-moderate d, experiences constraint as temporary, sees Scaffold. The institutional governance system nominally benefits (reduced accountability burden, efficiency gains) but is actually captured by the dynamics (maintains theater while losing control) \u2014 moderate d, sees Piton (degraded process maintained through inertia).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by confirming that Tangled Rope is the correct analytical classification. The constraint is NOT pure extraction (Snare) because the coordination benefits are genuine: the model does solve the problem of consistent, scalable decision-making. The constraint is NOT pure coordination (Rope) because the extraction is genuine: authority is asymmetrically transferred from humans to the organization, beneficiaries with arbitrage exit options gain, victims with trapped exit lose. The benef iciary sees Rope because they experience only coordination benefits. The victim sees Snare because they experience only extraction. The analytical observer sees both simultaneously, which defines Tangled Rope. Active enforcement (governance structures, oversight mechanisms, appeal processes) is required to keep this constraint from degrading into a pure Snare. The theater ratio (0.64) indicates that enforcement is increasingly performative rather than functional, suggesting that without genuine (non-theatrical) human oversight and veto authority, the constraint will drift from Tangled Rope toward Snare. The regulatory coalition's scaffold perspective is empirically grounded: mandatory human-in-the-loop requirements, algorithmic auditing, and decision attribution frameworks would genuinely constrain model autonomy and prevent further slide toward pure extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_accountability_gap",
+      "labor_deskilling_dynamics",
+      "organizational_liability_diffusion"
+    ],
+    "dual_formulation_note": "The autonomy slide is downstream of individual deployment decisions but represents a distinct organizational-level constraint. Related constraints (accountability gap, deskilling, liability diffusion) each have their own extractiveness values; the autonomy slide's extractiveness (0.58) reflects the cumulative effect of human authority loss, not the individual technical claims about model accuracy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

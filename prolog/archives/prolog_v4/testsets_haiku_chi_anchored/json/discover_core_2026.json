@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "discover_core_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "disc26"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Google Discover Feb 2026 Core Update",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "google_platform",
+      "established_publishers_with_scale"
+    ],
+    "victims": [
+      "independent_content_creators",
+      "niche_publishers",
+      "non_english_creators",
+      "emerging_regions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Creator",
+      "comment": "PERSPECTIVE 1: INDEPENDENT CONTENT CREATOR (SNARE) \u2014 No ability to exit Google Discover without abandoning algorithmic traffic entirely. Cannot negotiate terms, has no visibility into ranking signals, faces extraction of content value with zero bargaining power. d\u22480.92, f(d)\u22481.39, \u03c3=1.2 \u2192 \u03c7\u22480.87."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Emerging Market Creator",
+      "comment": "PERSPECTIVE 2: EMERGING MARKET CREATOR (SNARE) \u2014 'Locally relevant' criterion systematically deprioritizes creators in non-English languages and lower-income regions. Trapped by platform dependency; no alternative distribution exists at comparable scale. d\u22480.95, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.75."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Publisher",
+      "comment": "PERSPECTIVE 3: REGIONAL PUBLISHER (TANGLED ROPE) \u2014 Receives benefit from Discover distribution for locally-relevant content but faces uncertainty about algorithm changes and extraction through ranking volatility. Constrained exit: building independent audience takes years, but Discover traffic is unreliable. d\u22480.68, f(d)\u22481.03, \u03c3=1.0 \u2192 \u03c7\u22480.54."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Established Publisher with Scale",
+      "comment": "PERSPECTIVE 4: ESTABLISHED PUBLISHER WITH SCALE (ROPE) \u2014 Has resources to hire SEO teams, A/B test content, and coordinate with Google through public feedback channels. Benefits from Discover through traffic without extraction risk. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Google's Discover System",
+      "comment": "PERSPECTIVE 5: GOOGLE DISCOVER SYSTEM (PITON) \u2014 The system performs its stated function (relevance ranking) but relies on opaque criteria and constant rule changes to maintain control. Theater ratio (0.65) reflects the gap between 'quality ranking' framing and actual extraction mechanism. The system persists through platform lock-in and is maintained performatively through published 'core update' announcements that obscure algorithmic enforcement. d\u22480.02, f(d)\u2248-0.19, \u03c3=1.2 \u2192 \u03c7\u2248-0.12."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a structural perspective, the constraint is extractive: Google unilaterally controls distribution access, suppresses alternatives (no competing algorithmic discovery feeds at scale), and changes ranking signals to extract value from dependent creators. The 'local relevance' framing is theater that naturalizes the extraction as quality improvement. d\u22480.78, f(d)\u22481.12, \u03c3=1.2 \u2192 \u03c7\u22480.70."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "local_relevance_measurement",
+      "question": "What constitutes 'locally relevant' and how is it measured? Does the criterion primarily serve end-user experience or does it systematically advantage large, geographically concentrated publishers?",
+      "resolution_mechanism": "Comparative analysis of traffic distribution before/after update across creator scale (independent vs institutional) and geography (English vs non-English, developed vs emerging markets); audit of ranking changes by creator profile",
+      "impact": "If locally-relevant criterion genuinely improves user experience: constraint reclassifies toward Rope (coordination mechanism). If criterion correlates with publisher size/geography independent of quality: confirms Snare classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether 'locally relevant' serves user experience or advantages incumbent publishers"
+    },
+    {
+      "id": "originality_signal_gaming",
+      "question": "Can the 'originality' signal be gamed through content distribution networks, syndication patterns, or publication timing coordination that is invisible to human creators?",
+      "resolution_mechanism": "Analysis of creators who report ranking recovery through syndication changes, timing shifts, or distribution strategy modifications; correlation between publisher network structure and ranking stability",
+      "impact": "If originality signal is gameable: constraint becomes extractive tax on sophistication (Snare confirmed). If signal is robust: originality criterion may represent genuine coordination incentive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether originality signal can be systematically gamed"
+    },
+    {
+      "id": "alternative_discovery_infrastructure",
+      "question": "Is there a viable alternative to algorithmic feed discovery that independent creators can access without platform dependency? Could decentralized or federated discovery systems reduce extraction?",
+      "resolution_mechanism": "Assessment of emerging platforms (Bluesky, Threads, ActivityPub-based discovery); creator behavior analysis of traffic diversification strategies; technical feasibility of open discovery standards",
+      "impact": "If viable alternatives exist: creators have exit option, constraint reclassifies toward Tangled Rope or Scaffold. If Google Discover remains the only option at scale: constraint deepens into structural Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether viable alternative discovery infrastructure exists for independent creators"
+    },
+    {
+      "id": "regulatory_response_trajectory",
+      "question": "Will DMA (EU Digital Markets Act) or equivalent regulation force algorithmic transparency or creator revenue sharing before the Discover extraction mechanism fully consolidates?",
+      "resolution_mechanism": "Monitoring of regulatory action timeline; technical feasibility assessments of mandated transparency requirements; compliance cost analysis for Google",
+      "impact": "If regulation enforced within 2-3 years: constraint may scaffold toward transparency and limited autonomy. If regulation delayed/weakened: extraction mechanism deepens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulation will force algorithm transparency or revenue sharing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Google Discover Feb 5, 2026 core update announces prioritization of 'locally relevant' and 'original' content. Structurally, the update represents algorithmic enforcement of unilateral extraction from independent content creators dependent on algorithmic distribution. The constraint exhibits core Snare properties: high suppression (creators have no alternative at comparable scale), high extraction (Google captures distribution value while creators lose traffic), and performative framing ('quality improvement' masks algorithm enforcement). The update particularly impacts independent creators, niche publishers, and non-English-language content producers who have no bargaining power with Google and no exit mechanism that preserves audience reach. Established publishers with resources and scale experience the same update as a Rope (coordination mechanism for relevance) or even minor noise, while independent creators face algorithmic suppression that reduces their viability. The theater ratio (0.65) reflects the gap between the announced justification ('users deserve locally relevant, original content') and the structural mechanism (unilateral ranking change that extracts value from platform-dependent creators).",
+    "key_agents": [
+      "Independent Content Creators: Primary victims (powerless/trapped) \u2014 depend entirely on Discover for algorithmic distribution; no negotiation capacity; extract value flows to Google",
+      "Niche Publishers: Secondary victims (moderate/constrained) \u2014 specialized content loses distribution unless 'locally relevant' by geography; high switching cost to build independent audiences",
+      "Non-English Creators: Secondary victims (powerless/trapped) \u2014 'locally relevant' criterion systematically deprioritizes non-English content in non-native-English regions; compounded by network effects favoring English-language scale",
+      "Established Publishers with Scale: Primary beneficiary (institutional/arbitrage) \u2014 resources to optimize for new signals; existing audience provides fallback; algorithm changes are background noise",
+      "Google (as platform): Institutional beneficiary (institutional/arbitrage) \u2014 captures distribution value through unilateral ranking control; maintains lock-in through opaque algorithm; performs enforcement through 'core updates'",
+      "Users (Discover audience): Structural beneficiary without agency \u2014 receive distributed content aligned with Google's signal interpretation; benefit assumes signals actually correlate with quality",
+      "Analytical Observer: Sees full extraction structure (analytical/analytical) \u2014 algorithm enforcement is performed through quality-improvement framing; suppression maintained by platform control over alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The Feb 2026 update reduces traffic to independent creators by deprioritizing content that doesn't match Google's 'locally relevant' and 'originality' signals. This is straightforward extraction \u2014 creators lose distribution access while Google consolidates ranking control. The value (algorithmic attention) flows from creators to Google. Value extraction is not total because some creators adapt through optimization, but this is a coordination cost imposed by the platform. Suppression (0.68): High. Creators have no viable alternative at comparable scale. Alternatives (building independent email lists, RSS, social media) take years to develop and reach fraction of Discover scale. Exit is theoretically possible but practically prohibitive. This locks dependent creators into accepting Google's unilateral ranking changes. Theater ratio (0.65): Moderate-high. Google's framing emphasizes 'quality' and 'user relevance,' but the mechanism is opaque ranking changes that benefit established publishers with resources to optimize. The performative element is the quality narrative masking the platform control logic. The theater isn't complete (some creators can see traffic changes and infer signals) but substantial enough to obscure extraction mechanisms from casual analysis.",
+    "perspectival_gap": "Independent creators see extraction (Snare) \u2014 they lose traffic and have no recourse. Established publishers see coordination (Rope) \u2014 the update helps them reach relevant audiences more efficiently. Google sees enforcement (Piton) \u2014 maintaining the system through periodic 'core updates' that are announced as quality improvements. Emerging market creators see geographic suppression (Snare) \u2014 'locally relevant' systematically deprioritizes non-dominant languages and regions. The analytical observer sees platform control (Snare) \u2014 the constraint maintains extraction through unilateral ranking authority and suppression of alternatives. The perspective gap is fundamental: beneficiaries experience coordination while victims experience extraction from identical algorithmic changes.",
+    "directionality_logic": "Independent creators: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction. No alternative, no bargaining power. Emerging market creators: Victim + trapped + geographic suppression \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction plus geographic targeting. Regional publishers: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.03. Significant extraction but some ability to optimize. Established publishers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary from the change. Google: Beneficiary + institutional control \u2192 d\u22480.02, f(d)\u2248-0.19. Full beneficiary; extraction mechanism is their structural position.",
+    "mandatrophy_analysis": "SNARE CONFIRMED: The constraint meets all snare gates. Base extractiveness (0.52) > 0.46 \u2713. Suppression (0.68) > 0.60 \u2713. Effective extraction \u03c7 (computed from d values: independent creator: 0.52 \u00d7 1.39 \u00d7 1.2 \u2248 0.87; emerging: 0.52 \u00d7 1.42 \u00d7 0.9 \u2248 0.67; aggregate: ~0.70+) exceeds 0.66 \u2713. No genuine coordination benefit exists for powerless creators \u2014 the constraint is pure extraction with performative framing. The mandatrophy is resolved by recognizing that the quality-improvement narrative is theater (theater_ratio = 0.65), not evidence of coordination function. Established publishers experience Rope-like coordination benefits because they have resources to optimize, but this doesn't change the constraint's core nature for powerless creators. The constraint is a Snare from the perspective of those it extracts from, regardless of how it appears to institutional beneficiaries."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_distribution_dependency",
+      "platform_ranking_opacity"
+    ],
+    "dual_formulation_note": "The Discover Feb 2026 update is structurally downstream of platform algorithmic control and upstream of creator economic vulnerability. The 'locally relevant' and 'originality' signals represent new enforcement mechanisms within the existing platform extraction structure, not independent constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ]
+}

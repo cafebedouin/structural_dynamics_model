@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "social_narrative_casting",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Social Narrative Casting (Criticism-as-Projection)",
+    "topic_domain": "social/psychological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "the_director"
+    ],
+    "victims": [
+      "the_subject"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Subject (Trapped)",
+      "comment": "The subject, when unable to escape the narrative imposed upon them, experiences the criticism as a snare. Their agency is diminished, and their actions are reinterpreted to fit the director's narrative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Subject (Constrained)",
+      "comment": "The subject may attempt to resist the role imposed on them, leading to a tangled rope dynamic. They are constrained by the director's influence, but also have some capacity to negotiate or redefine their role. Some subjects also derive benefit from playing the role cast for them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Director",
+      "comment": "The director benefits by reinforcing their internal narrative and exercising control over the relationship. The criticism, in their view, serves to maintain the stability of their own worldview."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the social narrative casting is a tangled rope - the director benefits from narrative control, the subject is extracted from, and the dynamic is actively enforced. The degree of extraction and power dynamic shifts based on the power dynamic."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Institutional Observer",
+      "comment": "An institutional observer, such as a therapist or social worker, might see the dynamic as a rope if they believe it serves a therapeutic purpose or maintains social order, even if it involves some extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "narrative_fixity",
+      "question": "How fixed is the director's internal narrative?",
+      "resolution_mechanism": "Psychological assessment of the director's cognitive rigidity and resistance to alternative interpretations.",
+      "impact": "High fixity implies greater resistance from the director, reinforcing the tangled rope dynamic. Low fixity allows for negotiation and shifting of roles.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which the director's internal narrative is resistant to change."
+    },
+    {
+      "id": "subject_agency",
+      "question": "How capable is the subject of resisting the imposed narrative?",
+      "resolution_mechanism": "Assessment of the subject's self-esteem, assertiveness, and social support network.",
+      "impact": "Low agency reinforces the snare dynamic. High agency leads to negotiation or escape from the narrative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which the subject can resist the imposed narrative."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the act of criticism as an attempt by a critic (the 'Director') to 'hire' the subject into a specific role (villain, victim, obstacle) within the critic's internal narrative. The Director benefits by reinforcing their worldview while the Subject can experience extraction depending on their power and ability to escape the narrative.",
+    "key_agents": [
+      "The Director: Primary beneficiary (powerful/mobile) - benefits from reinforcing their internal narrative.",
+      "The Subject: Primary victim (powerless/trapped) - experiences diminished agency and imposition of a negative role.",
+      "Analytical Observer: Analyzes the interaction. (analytical/analytical)",
+      "Institutional Observer: Therapist or social worker (institutional/arbitrage)"
+    ],
+    "logic_rationale": "Extractiveness: Moderate (0.55). The Director extracts from the Subject by limiting their agency and imposing a specific role upon them. Suppression: Moderate (0.45). The Director suppresses the Subject's alternative narratives. Theater ratio: Low (0.30) because in many cases, there is genuine care and concern, but it devolves into narrative casting.",
+    "perspectival_gap": "The Director sees their actions as helpful or necessary, while the Subject experiences them as oppressive. The analytical observer recognizes the power dynamic and the extraction taking place. An institutional observer might see it as a necessary, if imperfect, means of maintaining social order.",
+    "directionality_logic": "The Director benefits by reinforcing their internal narrative, leading to a low directionality value. The Subject experiences a loss of agency and imposition of a negative role, leading to a high directionality value. The Analytical Observer attempts to understand the dynamics and assess the overall impact. The institutional observer's directionality depends on their assessment of the overall social benefit."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

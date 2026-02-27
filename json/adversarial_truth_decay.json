@@ -2,26 +2,28 @@
   "header": {
     "constraint_id": "adversarial_truth_decay",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "adv_truth"
   },
   "base_properties": {
-    "extractiveness": 0.75,
-    "suppression": 0.8,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
-    "human_readable": "The Epistemic Siege",
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "The Epistemic Siege: Asymmetric Cost of Misinformation Generation vs. Truth Verification",
     "topic_domain": "social/technological/political",
-    "requires_active_enforcement": true,
-    "has_sunset_clause": true,
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
     "beneficiaries": [
-      "disinformation_creators",
-      "platform_shareholders"
+      "bad_faith_actors",
+      "narrative_capture_institutions"
     ],
     "victims": [
-      "general_public",
-      "democratic_institutions",
-      "professional_journalists"
+      "epistemic_commons",
+      "ordinary_citizens",
+      "truth_verification_systems"
     ],
     "mandatrophy_resolved": true
   },
@@ -32,44 +34,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Information Consumer",
-      "comment": "PERSPECTIVE 1: THE PUBLIC (SNARE) — Trapped in an information ecosystem where the cost of verification is offloaded onto them. The sheer volume of high-fidelity falsehoods acts as a coercive force, eroding trust and the ability to make informed decisions. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.28 (capped at 1.0). This is a maximal extraction scenario."
+      "label": "The Ordinary Citizen (Information Consumer)",
+      "comment": "PERSPECTIVE 1: ORDINARY CITIZEN (SNARE) \u2014 Cannot distinguish high-fidelity misinformation from truth without prohibitive cognitive investment. Exit options are illusory: ignoring information reduces agency; engaging with verification is cognitively overwhelming and time-prohibitive. Trapped in an epistemic commons degraded by asymmetric attack. Maximum extraction: bears full cost of living in compromised information environment with no mechanism for reliable orientation."
     },
     {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Disinformation Creator",
-      "comment": "PERSPECTIVE 2: DISINFORMATION CREATOR (ROPE) — For malicious actors, generative AI is a pure coordination tool. It dramatically lowers the cost of influence operations, enabling them to achieve political or financial goals with unprecedented efficiency. They experience no extraction. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.01. Negative effective extraction signifies a net subsidy."
-    },
-    {
-      "classification_type": "tangled_rope",
+      "classification_type": "snare",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Fact-Checker / Journalist",
-      "comment": "PERSPECTIVE 3: THE FACT-CHECKER (TANGLED ROPE) — Experiences the dual nature of the technology. AI tools can aid in research (coordination), but the firehose of AI-generated falsehoods makes their primary job nearly impossible (extraction). They are constrained to operate within this hostile environment. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.86. This high chi value reflects the severe extractive pressure on their work."
+      "label": "The Fact-Checker and Verification Institution",
+      "comment": "PERSPECTIVE 2: FACT-CHECKER / VERIFICATION INSTITUTION (SNARE) \u2014 Faces structural deficit: must deploy expensive expert time to debunk each false claim while attackers generate thousands daily. Constrained exit: funding models are precarious; audience fatigue sets in (corrections fail once backfire effect cascades); institutional burnout accelerates. Non-negligible extraction: operates at resource deficit relative to attack volume. Cannot escape the verification treadmill."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The AI Tool Creator",
-      "comment": "PERSPECTIVE 4: THE AI DEVELOPER (SCAFFOLD) — Views the current epistemic crisis as a temporary, transitional phase. They argue that better detection tools and new social norms will eventually emerge, creating a 'sunset' for the current problem. This perspective frames the technology as a scaffold for a new, more advanced information infrastructure. The `has_sunset_clause` is based on this claimed technological and social evolution."
-    },
-    {
-      "classification_type": "piton",
+      "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Social Media Platform",
-      "comment": "PERSPECTIVE 5: THE PLATFORM (PITON) — The platform's content moderation and AI detection systems are largely performative. Given the cost asymmetry, they cannot possibly vet all content. Their efforts persist due to regulatory pressure and PR concerns, not because they solve the underlying problem. The high theater_ratio (0.75) triggers the Piton classification, reflecting a system whose primary function (ensuring information quality) has atrophied."
+      "label": "The Bad-Faith Actor (Misinformation Generator)",
+      "comment": "PERSPECTIVE 3: BAD-FAITH ACTOR (ROPE) \u2014 Experiences the constraint as pure coordination: deploying generative AI to saturate information space is a low-cost coordination mechanism for narrative capture. Benefits directly from the asymmetry: extraction runs toward this agent. Arbitrage options abound (reputational arbitrage, agenda-setting arbitrage, funding flows). Net beneficiary. The constraint appears as efficient collaboration with AI systems to capture discourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Platform Governance System",
+      "comment": "PERSPECTIVE 4: PLATFORM GOVERNANCE (TANGLED ROPE) \u2014 Organized actors (Twitter, Meta, YouTube) benefit from engagement signals (misinformation drives engagement) while also bearing reputational and regulatory costs of hosting false content. Mixed incentives: enforcement is costly and imperfect; non-enforcement is politically untenable. Constrained: cannot exit the epistemic siege without losing business models or audience. Exhibits both coordination (content moderation infrastructure) and extraction (engagement-driven misinformation amplification). Active enforcement required but asymmetrically distributed."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Traditional Epistemology (Institutional Knowledge Institutions)",
+      "comment": "PERSPECTIVE 5: TRADITIONAL EPISTEMOLOGY / KNOWLEDGE INSTITUTIONS (PITON) \u2014 Universities, journals, scientific societies once functioned as gatekeepers and truth-certifiers. This role is now substantially theater: traditional institutions still perform epistemic authority (peer review rituals, journal prestige) but lack enforcement capacity in the distributed information ecosystem. Theater ratio 0.58 reflects this degradation: the institutional apparatus persists through inertia while its actual epistemic power has atrophied. Constrained exit from the verification regime even as their verification mechanisms fail."
     },
     {
       "classification_type": "mountain",
@@ -77,98 +79,129 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Technological Determinist",
-      "comment": "PERSPECTIVE 6: THE DETERMINIST (MOUNTAIN) — Argues that major technological shifts (like the printing press) inevitably cause periods of epistemic chaos. This view naturalizes the crisis as an unchangeable law of technological progress. The engine will identify this as a false summit, as the high ε, high suppression, and active enforcement are hallmarks of a contingent, artificial system, not a natural law."
+      "label": "The Analytical Observer (Computational Complexity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPUTATIONAL COMPLEXITY (MOUNTAIN) \u2014 From a civilizational perspective, the asymmetry between generation and verification cost has deep computational foundations: generating plausible text is a scaling problem (solvable with larger models); verifying truth requires causal reasoning about the world (fundamentally harder). This perspective risks naturalizing what is partially an institutional and incentive arrangement as a computational law of nature. However, the structural data suggests this is a false summit \u2014 the cost asymmetry is contingent on current AI architectures, verification infrastructure funding, and information incentive structures, not a universal law."
     }
   ],
   "omegas": [
     {
-      "id": "detection_scaling_parity",
-      "question": "Can AI-driven verification and detection tools ever achieve cost and scale parity with AI-driven generation tools?",
-      "resolution_mechanism": "Economic and performance analysis of red-teaming vs. blue-teaming AI models; tracking the marginal cost of detection vs. generation over time.",
-      "impact": "If parity is possible, the constraint could evolve into a Rope (an arms race with symmetric costs). If not, it remains a Snare for the public.",
+      "id": "verification_cost_trajectory",
+      "question": "Will automated verification and AI-assisted fact-checking reduce the verification cost faster than generative AI reduces misinformation generation cost?",
+      "resolution_mechanism": "Longitudinal measurement of (1) cost per false claim to generate vs. (2) cost per claim to verify across 5-10 year horizon. Tracking of AI architecture improvements in both domains.",
+      "impact": "If verification cost drops faster: snare may transition to tangled_rope or rope. If generation cost continues to drop faster: snare persists and extraction deepens. Reversibility of the epistemic siege depends on this ratio.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether detection can ever scale as cheaply as generation"
+      "description": "Whether automated verification can outpace generative misinformation on cost grounds"
     },
     {
-      "id": "cognitive_adaptation_rate",
-      "question": "Will human populations develop cognitive 'antibodies' and new media literacy heuristics faster than generative models can adapt to circumvent them?",
-      "resolution_mechanism": "Longitudinal studies of media consumption habits, belief formation, and susceptibility to misinformation in high-exposure populations.",
-      "impact": "Rapid adaptation would lower the effective extractiveness (ε). Slow or no adaptation means ε remains high.",
+      "id": "bad_faith_actor_coalition_emergence",
+      "question": "Do bad-faith actors coordinate into stable coalitions capable of saturating verification capacity intentionally, or is saturation an emergent byproduct of independent actors using cheap tools?",
+      "resolution_mechanism": "Analysis of misinformation narratives across time and sources: detecting vs. non-detecting organized targeting. Tracking funding flows and operational coherence. Comparing saturation patterns to null hypothesis of independent agent behavior.",
+      "impact": "If coordinated: snare is deliberate structural attack; victims are intentional targets. If emergent: snare arises from incentive asymmetry without central coordination. Changes interpretation of mitigation strategies (target coordinators vs. flatten cost asymmetry).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether epistemic siege results from organized coordination or emergent incentive asymmetry"
+    },
+    {
+      "id": "epistemic_commons_recovery_capacity",
+      "question": "Can distributed peer-to-peer verification networks (e.g., community fact-checking, Ethereum-like epistemic registries) restore the epistemic commons without centralized institutional authority?",
+      "resolution_mechanism": "Pilot studies of decentralized fact-checking systems; measurement of coverage, speed, and accuracy relative to institutional verification. Tracking of adoption and sustainability metrics.",
+      "impact": "If viable: scaffold or rope perspective (transition mechanisms exist). If unviable: snare classification hardens; trapped victims remain trapped. Determines feasibility of sunset clauses based on technical alternatives.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "The rate of human cognitive adaptation to AI misinformation"
+      "description": "Whether decentralized epistemic infrastructure can replace centralized verification"
     },
     {
-      "id": "regulatory_effectiveness",
-      "question": "What level of platform regulation (e.g., watermarking, liability shifts) can effectively mitigate harm without causing unacceptable censorship or chilling effects?",
-      "resolution_mechanism": "Comparative policy analysis of different regulatory regimes implemented globally.",
-      "impact": "Effective regulation could increase suppression for malicious actors and lower it for the public, fundamentally altering the constraint's structure. Ineffective regulation could increase theater.",
+      "id": "information_consumer_agency_boundary",
+      "question": "At what misinformation saturation level does the average information consumer abandon effort to verify and adopt tribal/intuitive epistemology instead?",
+      "resolution_mechanism": "Behavioral economics studies of information-seeking under saturation. Surveys of epistemological strategies under high-uncertainty information environments. Tracking of cognitive load and decision-making pathways.",
+      "impact": "If boundary is crossed: ordinary citizens transition from trapped/constrained to acceptance (psychological cage replaces material constraint). Deepens snare extraction by making victims complicit in their own epistemic disempowerment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which information consumers abandon verification effort"
+    },
+    {
+      "id": "regulatory_intervention_effectiveness",
+      "question": "Can regulatory mandates (labeling AI-generated content, requiring content provenance, liability for misinformation) reduce generation/distribution while preserving speech freedoms?",
+      "resolution_mechanism": "Analysis of regulatory regimes (EU Digital Services Act, proposed US legislation): measuring compliance costs, effectiveness at reducing distribution, unintended consequences on legitimate speech.",
+      "impact": "If effective: snare may transition to scaffold (regulatory sunset) or tangled_rope (balanced enforcement). If ineffective or counterproductive: regulatory theater increases (piton degradation) and extraction persists. Determines viability of policy-based mitigation.",
       "confidence": "medium",
       "type_class": "preference",
-      "description": "The impact and trade-offs of different regulatory interventions"
+      "description": "Whether regulation can mitigate epistemic siege without harming legitimate expression"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.32,
+      "id_override": "adv_truth_extractiveness_2018"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.65
+      "time_point": 3,
+      "value": 0.52,
+      "id_override": "adv_truth_extractiveness_2021"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.75
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "adv_truth_extractiveness_2024"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.35,
+      "id_override": "adv_truth_theater_2018"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.6
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "adv_truth_theater_2021"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.75
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "adv_truth_theater_2024"
     }
   ],
   "interval": {
-    "start": 2020,
-    "end": 2030
+    "start": 0,
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The 'Epistemic Siege' describes a structural reality where the cost to generate high-fidelity, synthetic misinformation has fallen below the cost to verify information. This fundamental economic asymmetry creates a powerful new vector for social manipulation, eroding the shared factual basis required for functional democracies and social trust. The constraint is not the AI technology itself, but the cost imbalance it creates, which can be weaponized at scale.",
+    "narrative_context": "The Epistemic Siege describes a structural constraint where the marginal cost of generating high-fidelity misinformation via generative AI (GPT, Claude, Gemini, etc.) has fallen below the marginal cost of verifying truth. This creates an asymmetric attack surface on the epistemic commons: bad-faith actors can deploy synthetic narratives, deepfakes, and AI-assisted disinformation at industrial scale (pennies per claim) while fact-checkers and verification institutions must deploy expensive expert time (dollars to hundreds of dollars per debunking) to counter each claim. The constraint exhibits all six DR types depending on the observer's structural position. For ordinary information consumers and verification institutions, the siege is a Snare: they are trapped by escalating verification demands in a degraded epistemic environment. For bad-faith actors and narrative-capture institutions, the siege is a Rope: they experience it as efficient low-cost coordination to shape discourse. For platforms, the siege is a Tangled Rope: they benefit from engagement (misinformation drives clicks) while bearing reputational costs. For traditional knowledge institutions (universities, journals), the siege appears as a Piton: their institutional authority (peer review, editorial gatekeeping) persists as theater while their actual epistemic power atrophies. The civilizational analytical observer risks seeing this as a Mountain\u2014a computational law where verification is fundamentally harder than generation\u2014but the structural data suggests this is a false summit: the cost asymmetry is partially contingent on AI architecture choices, verification infrastructure funding, and information incentive structures, not a universal law.",
     "key_agents": [
-      "Disinformation Creators: Primary beneficiaries (organized/arbitrage) - Exploit the low cost to generate influence.",
-      "General Public: Primary victims (powerless/trapped) - Bear the cognitive and social costs of a polluted information environment.",
-      "Social Media Platforms: Institutional actors (institutional/arbitrage) - Maintain a performative moderation system while benefiting from engagement.",
-      "Fact-Checkers & Journalists: Secondary victims (moderate/constrained) - Face unsustainable costs in their mission to verify truth.",
-      "AI Tool Creators: Institutional beneficiaries (institutional/arbitrage) - Frame the crisis as a temporary, solvable problem (a scaffold).",
-      "Democratic Institutions: Abstract victim (powerless/trapped) - The epistemic commons on which they depend is degraded."
+      "Ordinary Citizens/Information Consumers: Primary victims (powerless/trapped) \u2014 bear cognitive and decision-making costs of living in epistemic commons compromised by asymmetric misinformation attack. Cannot exit without sacrificing agency or overwhelming cognitive load.",
+      "Fact-Checkers and Verification Institutions: Secondary victims (moderate/constrained) \u2014 operate at structural resource deficit; must deploy expensive expert time to counter cheap synthetic claims. Constrained by funding models and audience fatigue (backfire effect).",
+      "Bad-Faith Actors and Disinformation Campaigns: Primary beneficiaries (institutional/arbitrage) \u2014 benefit directly from low-cost misinformation generation. Coordinate narrative capture and discourse shaping at minimal cost. Arbitrage opportunities in attention, funding, political power.",
+      "Platform Governance Systems: Mixed institutional actor (organized/constrained) \u2014 benefit from misinformation-driven engagement while bearing reputational and regulatory costs. Mixed incentives create tangled rope structure: enforcement is costly and imperfect.",
+      "Traditional Knowledge Institutions: Degraded institutional actor (institutional/constrained) \u2014 universities, journals, scientific societies once certified truth; now their institutional authority is substantially performative. Theater persists through inertia (piton classification).",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional/incentive asymmetries as computational laws of nature."
     ],
-    "logic_rationale": "Extractiveness (ε=0.75) is very high, representing the massive offloading of verification costs onto society and individuals. Suppression (0.80) is also very high; the sheer volume of falsehoods effectively suppresses truth through noise, a 'firehose of falsehood' strategy that makes finding reliable information exceptionally difficult. Theater Ratio (0.75) is high because platform-level interventions (content moderation, AI detectors) are largely performative; they address symptoms at the margins without altering the core cost asymmetry, thus creating an illusion of control.",
-    "perspectival_gap": "This constraint is a diagnostic exemplar, producing all six classifications from a single set of base properties. For the powerless public, it's a Snare. For the malicious creator, it's a Rope. For the overwhelmed fact-checker, it's a Tangled Rope. For the optimistic AI developer, it's a Scaffold. For the platform maintaining appearances, it's a Piton. For the determinist who naturalizes the chaos, it's a Mountain. The gap reveals that the 'nature' of the constraint is entirely dependent on one's structural relationship to the underlying cost asymmetry.",
-    "directionality_logic": "Beneficiaries (disinformation creators) have arbitrage exit and low structural costs, leading to a negative chi (Rope). Primary victims (the public) are trapped with no exit, leading to a maximal chi (Snare). Constrained actors (journalists) face high costs but have some agency, resulting in a high-but-not-maximal chi (Tangled Rope). The classification for institutional actors like platforms and AI developers is determined by other gates: the high theater_ratio for platforms makes it a Piton, while the claimed sunset clause for developers makes it a Scaffold.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that a single, severe constraint (ε=0.75) is not monolithically a 'Snare'. Its classification is a function of the observer's index. The analytical error is to pick one perspective (usually the victim's Snare or the beneficiary's Rope) and declare it the 'true' type. The Deferential Realism model shows that all six perspectives are structurally valid readings of the same underlying reality. The complete description is the full set of indexed classifications, not any single one."
+    "logic_rationale": "Extractiveness (0.68): High. The structural asymmetry between generation and verification costs has grown sharply: generative AI model scaling has reduced the marginal cost of high-fidelity text generation to near-zero (cost per claim approaching pennies as models scale); meanwhile, expert-driven fact-checking remains labor-intensive (cost per claim remains dollars to hundreds of dollars). The extraction flow runs toward bad-faith actors and away from verification institutions and ordinary citizens. The measured value reflects the ratio of benefits captured by misinformation generators vs. costs borne by verification victims, across a 6-year period (2018-2024) during which the asymmetry has widened dramatically. Suppression (0.72): High. Multiple suppression mechanisms operate: (1) cognitive burden\u2014verifying complex claims requires domain expertise and time investment that ordinary citizens cannot maintain across thousands of claims; (2) platform amplification\u2014algorithms favor engagement over accuracy, giving false claims distribution advantages; (3) backfire effects\u2014corrections fail to reduce belief in false claims and often entrench them; (4) institutional degradation\u2014traditional epistemic authorities (journals, universities) lack enforcement capacity in distributed information ecosystems; (5) funding precarity\u2014verification institutions operate on grant funding while misinformation generators benefit from political/corporate funding flows. Theater ratio (0.58): Moderate-high. Reflects that a significant portion of verification activity is performative: fact-checking articles are published and circulated but reach only small audiences; corrections amplify initial false claims through backlash effects; institutional peer review persists as a gatekeeping ritual while lacking actual epistemic power in the broader information ecosystem. The theater has increased over the measurement interval (0.35 in 2018 \u2192 0.58 in 2024) as the scale of misinformation has overwhelmed institutional verification capacity, forcing verification institutions to engage in performative theater rather than effective debunking.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position relative to the extraction asymmetry. Bad-faith actors and misinformation generators have d \u2248 0.05 (full beneficiaries with arbitrage exit options\u2014they can move between platforms, topics, and narrative frames costlessly)\u2014they experience negative effective extraction (extraction runs toward them). Ordinary citizens and verification institutions have d \u2248 0.85-0.95 (trapped victims with constrained exit)\u2014they experience maximum effective extraction (extraction runs away from them). Platform systems have d \u2248 0.50 (symmetric: they benefit from engagement but bear regulatory and reputational costs)\u2014mixed directionality produces tangled rope classification. Traditional knowledge institutions have d \u2248 0.40 (partially captured by the siege; their exit is constrained by institutional inertia)\u2014the piton classification derives from their degraded institutional capacity and high theater, not from high experienced extraction. The analytical observer has d \u2248 0.72 (moderate extraction as a feature of the information environment they observe)\u2014but the mountain classification would be a false summit, naturalizing contingent institutional asymmetries as computational laws.",
+    "perspectival_gap": "The gap between the snare-perceiving victims (ordinary citizens, fact-checkers) and the rope-perceiving beneficiaries (bad-faith actors) is maximal: they experience structurally opposite extraction flows despite being governed by identical base properties. This perspectival divergence is the defining feature of the constraint. Ordinary citizens see a degraded epistemic commons with no viable exit (snare). Bad-faith actors see an efficient, low-cost mechanism for narrative capture (rope). Platforms see mixed incentives (tangled rope). Traditional institutions see their own authority as theatrical and inert (piton). The analytical observer risks seeing an immutable computational constraint (mountain) when the true structure is an institutional/incentive arrangement vulnerable to structural intervention (verification infrastructure funding, AI regulation, platform redesign). The gap is not merely observational\u2014it reflects genuinely different structural positions: agents with arbitrage options experience the constraint as coordination; agents with trapped exit experience it as extraction.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The epistemic siege is not a coordination problem (rope) disguised as extraction (snare). It is a genuine snare with aspects that partially resemble coordination from the beneficiary perspective. The distinction is stable across the six perspectives: (1) Bad-faith actors genuinely benefit from low-cost misinformation generation\u2014their rope classification is their actual structural experience. (2) Ordinary citizens are genuinely trapped\u2014they cannot exit without sacrificing epistemic agency or entering cognitive overload. (3) The asymmetry between generation and verification costs is real and measurable, not an artifact of framing. The mandatrophy resolution shows that calling this 'coordination for information-sharing' (false rope classification) would obscure the extraction structure experienced by verification victims and ordinary citizens. Conversely, calling it purely coordination from the beneficiary's perspective would miss the structural asymmetry that enables bad-faith actors to outpace verification. The correct classification is: snare from the perspectives of trapped victims; rope from the perspective of beneficiaries; tangled rope from platform perspectives (mixed incentives). The false mountain classification (viewing this as a computational law of verification complexity) is explicitly rejected: the cost asymmetry is contingent on current AI architectures, verification infrastructure choices, and incentive structures\u2014not a universal law. Regulatory intervention (Platform liability, transparency mandates, public funding for verification) could materially shift the cost ratio. This confirms the snare classification: the constraint is not immutable; it is enforced by structural asymmetries that are policy-changeable."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "electoral_integrity",
-      "public_health_compliance",
-      "financial_market_stability"
-    ]
-  }
+      "platform_engagement_amplification",
+      "fact_checker_resource_scarcity",
+      "deepfake_synthesis_accessibility"
+    ],
+    "dual_formulation_note": "The epistemic siege decomposes into three structurally distinct constraints: (1) platform_engagement_amplification (algorithmic incentives that favor engagement over accuracy); (2) fact_checker_resource_scarcity (funding and labor constraints on verification institutions); (3) deepfake_synthesis_accessibility (cost and ease of generating high-fidelity misinformation via generative AI). The parent constraint (adversarial_truth_decay) models the combined system-level extraction; the three child constraints model the specific mechanisms. \u03b5 values differ: engagement amplification \u03b5 \u2248 0.45 (rope/tangled rope from platform perspective), fact-checker scarcity \u03b5 \u2248 0.52 (tangled rope\u2014mixed coordination and extraction), synthesis accessibility \u03b5 \u2248 0.35 (rope\u2014benefits all information creators equally, but asymmetry emerges only when combined with amplification and scarcity). The parent constraint captures the emergent snare that arises only when all three mechanisms operate together."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
 }

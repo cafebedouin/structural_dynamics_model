@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "israel_override_clause",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 61-Member Judicial Override Clause",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ruling_coalition",
+      "knesset"
+    ],
+    "victims": [
+      "supreme_court",
+      "minority_rights",
+      "rule_of_law"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Minority Rights",
+      "comment": "Perspective of minority rights: the override clause weakens protections against potential abuses by the majority, with limited recourse due to the override mechanism. They are trapped within the system and highly vulnerable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Supreme Court",
+      "comment": "Perspective of the Supreme Court: While not entirely powerless, the Court faces a constraint on its ability to check the Knesset's power. It benefits from its continued role in interpreting laws, but its power to invalidate legislation is significantly curtailed. The court is constrained rather than fully trapped due to public opinion and the need for basic law compliance by the Knesset."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Knesset",
+      "comment": "Perspective of the Knesset: The Knesset, particularly the ruling coalition, benefits from increased power and reduced judicial oversight, facilitating the implementation of its agenda. Members of the Knesset can arbitrage the situation by supporting legislation that aligns with their political goals, even if it is constitutionally questionable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees a tangled rope: a system that allows for quicker legislative action (coordination), but at the cost of potentially reduced checks and balances, and increased risk to minority rights (extraction). The long-term effects on the rule of law are uncertain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scope_of_basic_laws",
+      "question": "How broadly will 'Basic Laws' be interpreted, and how frequently will legislation be challenged under them?",
+      "resolution_mechanism": "Tracking the number and types of laws challenged and overridden, as well as the reasoning provided by the Supreme Court and the Knesset.",
+      "impact": "If interpreted narrowly and challenges are infrequent: the override clause has limited practical effect. If interpreted broadly and challenges are frequent: the override clause fundamentally alters the balance of power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Breadth of Basic Law interpretation and frequency of challenges."
+    },
+    {
+      "id": "public_opinion_backlash",
+      "question": "To what extent will public opinion react negatively to the use of the override clause, and will this affect the Knesset's willingness to use it?",
+      "resolution_mechanism": "Polling data and analysis of election results following high-profile uses of the override clause.",
+      "impact": "Strong negative reaction: the Knesset may be hesitant to use the clause, limiting its impact. Weak or no reaction: the Knesset may use the clause more frequently, leading to significant changes in policy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Public opinion reaction to the use of the override clause."
+    },
+    {
+      "id": "erosion_of_rule_of_law",
+      "question": "Does the override clause lead to a gradual erosion of the rule of law and the independence of the judiciary?",
+      "resolution_mechanism": "Comparative analysis of judicial independence indices and expert assessments of the rule of law in Israel over time.",
+      "impact": "Significant erosion: the democratic character of Israel is fundamentally altered. Limited erosion: the override clause is a temporary or exceptional measure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Potential erosion of the rule of law."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 61-Member Judicial Override Clause in Israel is a proposed mechanism to allow the Knesset, by a majority of 61 out of 120 MKs, to bypass Supreme Court rulings that invalidate legislation for violating Basic Laws. This clause represents a significant shift in the balance of power between the legislative and judicial branches, potentially impacting minority rights and the rule of law. The constraint is analyzed from the perspectives of different actors, revealing its multifaceted nature as both a potential tool for efficient governance and a threat to democratic principles.",
+    "key_agents": [
+      "Ruling Coalition: Beneficiary (institutional/arbitrage) - Gains increased power and reduced judicial oversight.",
+      "Supreme Court: Victim (moderate/constrained) - Loses power to invalidate legislation, but retains interpretive role.",
+      "Minority Rights: Victim (powerless/trapped) - Increased vulnerability to the will of the majority.",
+      "Knesset: Beneficiary (institutional/arbitrage) - Overall power of the legislative branch is strengthened.",
+      "Rule of Law: Target (powerless/trapped) - Abstract principle, subject to interpretation and potential erosion."
+    ],
+    "logic_rationale": "Extractiveness (0.65): Moderate-High. The clause extracts power from the judiciary and transfers it to the legislature. It also extracts protections for minority rights, making them more vulnerable to the will of the majority. Suppression (0.70): High. The override clause actively suppresses the Supreme Court's ability to act as a check on the Knesset's power. It also suppresses alternative legal interpretations that could protect minority rights. Theater Ratio (0.30): Low. The clause has a relatively low theater ratio, as its primary purpose is to directly alter the balance of power, rather than to create a superficial appearance of action.",
+    "perspectival_gap": "The perspectival gap arises from the differing structural positions of the actors involved. The Knesset views the clause as a means to overcome judicial obstacles and implement its agenda, while the Supreme Court sees it as a threat to its independence and ability to uphold the law. Minority rights groups perceive the clause as a direct threat to their protections, while an analytical observer recognizes the potential for both benefits and risks depending on its implementation and long-term effects.",
+    "directionality_logic": "The Knesset benefits from reduced judicial oversight, granting it greater legislative authority. The Supreme Court is constrained, experiencing reduced power to check legislative actions. Minority rights are targeted, as their protections are weakened by the override clause, making them vulnerable to potential abuses of power by the majority. These declarations determine the directionality values and subsequent classifications from each perspective.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the 61-member override clause is a tangled rope. It is not a pure snare, as it can facilitate governance by allowing the Knesset to implement its agenda more efficiently. However, it is not a pure rope, as it also poses a risk to minority rights and the rule of law. The various perspectives reflect the complex trade-offs inherent in this mechanism, highlighting the need for careful consideration of its potential consequences."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

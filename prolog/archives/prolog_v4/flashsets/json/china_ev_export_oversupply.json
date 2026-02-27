@@ -1,0 +1,144 @@
+{
+  "header": {
+    "constraint_id": "china_ev_export_oversupply",
+    "version": "1.0",
+    "generated_date": "2024-01-09",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Chinese EV Export Oversupply and Market Distortion",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_ev_manufacturers",
+      "chinese_government"
+    ],
+    "victims": [
+      "foreign_ev_manufacturers",
+      "consumer_choice",
+      "domestic_ev_industries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Foreign EV Industries",
+      "comment": "Foreign EV industries are trapped by the oversupply and face suppressed profits, potential bankruptcies, and reduced market share. They have limited exit options due to the scale and government backing of Chinese EV manufacturers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Chinese EV Manufacturers",
+      "comment": "Chinese EV manufacturers benefit from government subsidies and an oversupply, allowing them to gain market share and establish a dominant position. They can arbitrage their position due to government support and economies of scale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees a tangled rope: Chinese EV manufacturers gain global market share and political capital, while foreign industries and consumer choice are suppressed. This dynamic has long-term implications for the global economy and geopolitical relations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Domestic EV Industries (Non-China)",
+      "comment": "Domestic EV industries outside of China are constrained by the subsidized EVs and must compete in an uneven market. They may have some organizational capacity to lobby for protectionist measures but are ultimately constrained by the economic pressure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsidy_level_sustainability",
+      "question": "To what extent can the Chinese government continue to subsidize the EV industry at its current level?",
+      "resolution_mechanism": "Analysis of China's fiscal capacity and political priorities.",
+      "impact": "If subsidies are unsustainable, the oversupply may correct itself. If sustainable, market distortion will persist.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of Chinese EV subsidies"
+    },
+    {
+      "id": "trade_protection_effectiveness",
+      "question": "How effective will trade protection measures be in mitigating the impact of the oversupply?",
+      "resolution_mechanism": "Analysis of trade policies and their historical impact on similar industries.",
+      "impact": "If effective, domestic industries may be shielded. If ineffective, they will continue to struggle.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of trade protection measures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "China's extensive subsidies for its electric vehicle (EV) industry, coupled with aggressive export strategies, are creating a global oversupply of EVs. This oversupply distorts international markets, suppresses competition, and puts pressure on other countries' EV industries. The long-term effects of these policies on global trade and technological innovation are uncertain but potentially significant.",
+    "key_agents": [
+      "Chinese EV Manufacturers: Primary beneficiaries (institutional/arbitrage)",
+      "Chinese Government: Primary beneficiary (institutional/arbitrage)",
+      "Foreign EV Manufacturers: Primary victim (powerless/trapped)",
+      "Consumer Choice: Victim (moderate/constrained)",
+      "Domestic EV Industries: Victim (organized/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The constraint extracts significant value from foreign EV industries and consumers by creating an artificial oversupply. Suppression (0.70): High. The scale of the subsidies and exports suppress competition from foreign manufacturers, limiting their ability to compete effectively. Theater ratio (0.30): Low. The Chinese government's support for the EV industry is largely substantive, with real effects on production and exports. There is limited performative aspect to the support.",
+    "perspectival_gap": "Chinese EV manufacturers benefit from government support and see the oversupply as a means of gaining market share. Foreign EV industries are trapped by the oversupply and face suppressed profits. An analytical observer sees a tangled rope, with China gaining economic and political power while other countries' industries are weakened.",
+    "directionality_logic": "Chinese EV manufacturers and the Chinese government are beneficiaries with arbitrage options, experiencing low extraction. Foreign EV industries are victims with trapped exit options, experiencing high extraction. Domestic EV industries are victims with constrained exit options, experiencing moderate extraction.",
+    "mandatrophy_analysis": "The constraint is classified as a Tangled Rope due to the coordination function of the subsidies (supporting the Chinese EV industry) and the extractive nature of the oversupply (harming foreign industries). This prevents mislabeling it as pure coordination or pure extraction, as both elements are present."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_trade_imbalances",
+      "industrial_policy_competition"
+    ]
+  },
+  "directionality_overrides": []
+}

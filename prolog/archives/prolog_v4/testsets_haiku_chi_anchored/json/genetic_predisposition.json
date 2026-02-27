@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "genetic_predisposition",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "genpred"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "Socio-Economic Response to Genetic Predisposition",
+    "topic_domain": "technological/social/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "genetic_testing_industry",
+      "insurance_companies",
+      "high_income_interpreters"
+    ],
+    "victims": [
+      "genetically_predisposed_individuals",
+      "low_income_populations",
+      "field_of_behavioral_genetics"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Genetically Predisposed Individual",
+      "comment": "PERSPECTIVE 1: GENETICALLY PREDISPOSED INDIVIDUAL (SNARE) \u2014 Cannot exit genetic identity; bears costs of probabilistic stigma, insurance discrimination, employment screening, and reproductive pressure. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.95."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Low-Income Population",
+      "comment": "PERSPECTIVE 2: LOW-INCOME POPULATION (SNARE) \u2014 Constrained by cost of genetic screening and interpretation; trapped by risk of genetic information asymmetry with institutions that can afford testing. d\u22480.85, f(d)\u22481.18, \u03c3=1.0 \u2192 \u03c7\u22480.69."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Genetic Testing Industry",
+      "comment": "PERSPECTIVE 3: GENETIC TESTING INDUSTRY (TANGLED ROPE) \u2014 Solves coordination problem (making genetic information accessible) but extracts rent through monopoly patents, high test costs, and proprietary interpretation algorithms. Benefits from expanded testing mandates; exploits information asymmetry with low-income populations. d\u22480.12, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.04."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Insurance and Employment Gatekeepers",
+      "comment": "PERSPECTIVE 4: INSURANCE AND EMPLOYMENT GATEKEEPERS (TANGLED ROPE) \u2014 Use genetic information to coordinate risk pools and resource allocation, but extract value by denying coverage, raising premiums, or excluding applicants based on probabilistic predisposition. d\u22480.15, f(d)\u22480.08, \u03c3=1.0 \u2192 \u03c7\u22480.06."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Field of Behavioral Genetics",
+      "comment": "PERSPECTIVE 5: BEHAVIORAL GENETICS FIELD (SNARE) \u2014 Constrained by incentive to find genetic signals (publication bias, funding dependency on positive results); trapped by inability to establish causation from correlations. Victim of social demand for genetic explanations that exceed empirical support. d\u22480.72, f(d)\u22481.13, \u03c3=1.2 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Genetic Determinism Narrative",
+      "comment": "PERSPECTIVE 6: GENETIC DETERMINISM NARRATIVE (PITON) \u2014 Persists as social theater despite weak empirical foundation; phenotype correlations with genetic variants are consistently overinterpreted as causal determinants. Theater ratio=0.64 reflects that much public discourse on 'genetic predisposition' is performative essentialism rather than functional science. Institutional inertia maintains the narrative through educational curricula, media coverage, and policy frameworks that predate robust evidence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Limits View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LIMITS VIEW (MOUNTAIN) \u2014 From civilizational scope, some limits on prediction from genetic data are intrinsic: incomplete penetrance, gene-environment interactions, polygenic variance, and nonlinear phenotypic mapping create irreducible epistemic barriers. However, the structural data (\u03b5=0.58, suppression=0.68, theater=0.64) contradicts mountain classification \u2014 social extraction and institutional suppression are contingent, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causal_vs_correlational",
+      "question": "At what effect size threshold does genetic correlation warrant causal claims in social prediction domains?",
+      "resolution_mechanism": "Mendelian randomization studies, natural experiments, and intervention trials; longitudinal tracking of prediction error rates in polygenic risk scores across diverse populations",
+      "impact": "If threshold is low: genetic predisposition becomes functionally predictive (justifies gatekeeping). If threshold is high: genetic signals remain correlational noise (snare classification confirmed). If threshold is culture-dependent: extraction is revealed as adaptive to institutional convenience rather than empirical robustness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for causal claims from genetic correlation data"
+    },
+    {
+      "id": "population_specificity",
+      "question": "How much do polygenic risk scores computed in one population lose predictive validity in genetically distinct populations?",
+      "resolution_mechanism": "Cross-population comparison of polygenic score performance; validation studies in African, Asian, Indigenous, and admixed populations; measurement of bias propagation",
+      "impact": "If scores generalize well: genetic predisposition is universal (field legitimacy increases). If scores fail in diverse populations: institutional gatekeeping becomes racially biased extraction (snare classification deepens; suppression gate fires harder).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Generalizability of polygenic risk scores across populations"
+    },
+    {
+      "id": "intervention_cascade",
+      "question": "Do genetic risk stratification interventions (screening, counseling, preventive treatment) reduce measured adverse outcomes, or primarily reduce diagnostic uncertainty?",
+      "resolution_mechanism": "RCTs comparing genetic screening + intervention vs standard care on clinical outcomes; measurement of unnecessary medication or treatment in low-risk individuals; health equity analysis by socioeconomic status",
+      "impact": "If interventions improve outcomes: coordination function is real (tangled_rope classification). If interventions mainly reduce uncertainty without improving outcomes: institutions benefit while populations bear costs (snare classification confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether genetic risk interventions improve health outcomes"
+    },
+    {
+      "id": "institutional_capture",
+      "question": "Do insurance/employment policies based on genetic information reflect evidence-based risk assessment or institutional convenience in excluding costly groups?",
+      "resolution_mechanism": "Audit studies of genetic-based decisions; analysis of decision thresholds vs actuarial necessity; comparison of genetic exclusions to environmental risk factors of equivalent magnitude",
+      "impact": "If institutional thresholds match empirical evidence: gatekeeping is rational coordination (rope). If thresholds are lower than evidence supports: gatekeeping is extractive discrimination (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether genetic gatekeeping matches empirical risk thresholds"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The socio-economic response to genetic predisposition creates a structural tension between the legitimate scientific ambition to understand biological variation and institutional incentives to extract value from genetic information asymmetry. This constraint is NOT the biological fact that genetic variants correlate with phenotypes \u2014 that is a natural phenomenon (potentially a Mountain at high confidence). Rather, it is the institutional system built on genetic data: testing regimes, insurance risk stratification, employment screening, reproductive counseling, and public health policy. This system exhibits all six DR types from different perspectives. The same genetic information appears as pure extraction (Snare) to the powerless individual bearing stigma, as coordination-plus-extraction (Tangled Rope) to institutions using genetic risk for resource allocation, as performative theater (Piton) in the genetic determinism narrative, and as a natural epistemic limit (Mountain) to the analytical observer who risks naturalizing contingent institutional choices. The extractiveness has increased from 0.32 to 0.58 over the measurement interval as institutional gatekeeping (insurance, employment, reproductive pressure) has expanded faster than evidence-based thresholds. The theater ratio has risen from 0.42 to 0.64 as genetic predisposition discourse has become more deterministic in popular culture than empirical evidence supports. The constraint exemplifies how socio-economic systems can crystallize around scientific facts while implementing institutional extraction that exceeds the facts' empirical scope.",
+    "key_agents": [
+      "Genetically Predisposed Individuals: Primary victim (powerless/trapped) \u2014 bear stigma, discrimination, and reproductive pressure; cannot exit genetic identity",
+      "Low-Income Populations: Secondary victim (moderate/constrained) \u2014 face information asymmetry with institutions; cannot afford comprehensive genetic interpretation",
+      "Genetic Testing Industry: Primary beneficiary (institutional/arbitrage) \u2014 extracts rent through monopoly patents, proprietary algorithms, and expanded testing mandates",
+      "Insurance and Employment Gatekeepers: Secondary beneficiary (institutional/arbitrage) \u2014 use genetic information to stratify risk pools and exclude costly individuals",
+      "Behavioral Genetics Field: Victim and partial beneficiary (powerful/constrained) \u2014 trapped by publication bias and funding incentives; constrained by inability to establish causation",
+      "Genetic Determinism Narrative: Institutional performance (institutional/arbitrage) \u2014 maintains social theater despite weak empirical foundation; benefits institutions seeking simple risk models"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Institutions extract value by controlling access to genetic information and using it to deny insurance coverage, exclude job applicants, and pressure reproductive choices. The extraction is not as severe as a pure financial snare (e.g., debt traps, predatory lending) because the genetic information has some legitimate utility for risk assessment. However, extraction occurs because institutions use genetic signals beyond evidence-based thresholds \u2014 they employ simplified models (genetic determinism) that exceed the empirical support. The 10-point rise (0.32 \u2192 0.58) reflects accelerating institutional gatekeeping. Suppression (0.68): High. Multiple barriers prevent individuals from exiting or resisting the constraint: (1) genetic identity is non-negotiable, (2) institutional gatekeeping is asymmetric (institutions know more than individuals), (3) regulatory frameworks (genetic non-discrimination laws) are weak and unenforced, (4) social pressure for genetic 'explanation' of behavior constrains reproductive autonomy, (5) low-income populations cannot afford independent genetic interpretation. Theater ratio (0.64): High-moderate. Public discourse on 'genetic predisposition' is substantially performative: headlines claim genetic 'determinism' despite twin study heritabilities of 30-60%; genetic risk scores explain 2-5% of phenotypic variance yet are marketed as predictive; insurance companies invoke genetic risk while ignoring larger environmental factors; media coverage naturalizes genetic explanations that lack mechanistic evidence.",
+    "perspectival_gap": "The genetically predisposed individual sees pure extraction (Snare) \u2014 they bear costs (stigma, discrimination, reproductive pressure) with no offsetting benefit. The low-income population sees extraction magnified by information asymmetry (Snare) \u2014 they cannot afford to contest institutional interpretation. The genetic testing industry and insurance gatekeepers see coordination (Tangled Rope) \u2014 they solve a real problem (risk assessment) but extract rent through monopoly and asymmetry; they frame themselves as both beneficiary and provider of social good. The behavioral genetics field sees a Snare from within \u2014 pressured to find genetic signals, trapped by publication bias, constrained by inability to establish causation. The genetic determinism narrative is Piton \u2014 institutional theater maintained by inertia and convenience despite empirical rot. The analytical observer risks seeing a Mountain (genetic limits are real) but the structural data reveals this as a false summit: institutional extraction and suppression are contingent, not laws of nature.",
+    "directionality_logic": "Genetically Predisposed Individual: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction \u2014 cannot exit genetic identity. Low-Income Population: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.18. High extraction \u2014 cannot afford interpretation or contestation. Genetic Testing Industry: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.05. Net beneficiary \u2014 controls proprietary technology and gatekeeps access. Insurance/Employment Gatekeepers: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.08. Net beneficiary \u2014 use genetic information to lower costs and exclude expensive individuals. Behavioral Genetics Field: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.13. Moderate-high extraction \u2014 constrained by publication bias, trapped by funding incentives, victimized by pressure to overstate findings. Analytical Observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival risk \u2014 observer might naturalize institutional choices as epistemic inevitability.",
+    "mandatrophy_analysis": "The mandatrophy in genetic predisposition arises from the conflation of two distinct constraints: (1) THE BIOLOGICAL CONSTRAINT: Genetic variants causally influence phenotypes within bounded heritabilities. This is a Mountain (emerges naturally, \u03b5\u22480.08, low suppression, high accessibility). (2) THE INSTITUTIONAL CONSTRAINT: Socio-economic systems extract value by using genetic information to stratify, exclude, and control populations. This is a Snare (\u03b5=0.58, suppression=0.68, requires active enforcement via institutional gatekeeping). The false claim 'genetic predisposition is a natural law therefore institutional gatekeeping is natural' naturalizes the second constraint by hiding it inside the first. The framework resolves this by separating them: the biological fact is a Mountain (or possibly a Rope if we model it as the coordination function 'understanding shared genetic basis for population variation'); the institutional response is a Snare because it enforces asymmetric extraction by controlling information access. The Piton perspective (genetic determinism narrative) is the theater that sustains the false conflation \u2014 it maintains institutional extraction by claiming it merely reflects natural differences. The framework catches this through theater ratio (0.64 > 0.50, Goodhart drift) and field victimization (behavioral genetics trapped by incentives to find genetic signals). Resolution: distinguish biological constraint from institutional response; model each separately; acknowledge that extractiveness (0.58) and suppression (0.68) are institutional facts, not natural laws."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "insurance_risk_stratification",
+      "employment_screening_systems",
+      "reproductive_autonomy_constraint"
+    ],
+    "dual_formulation_note": "The genetic predisposition constraint decomposes into upstream and downstream components: UPSTREAM: the biological fact that genetic variants correlate with phenotypes (\u03b5\u22480.08, Mountain). DOWNSTREAM: the institutional response that uses genetic information for gatekeeping and extraction (\u03b5=0.58, Snare). The biological fact is necessary but not sufficient for institutional extraction \u2014 extraction emerges only when institutions control access and use information asymmetrically. The two constraints are linked via network.affects_constraints: if the biological constraint (correlation) is contested or weakened by new evidence, the institutional constraint's justification erodes but institutional practices persist (Piton degradation)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.72
+    }
+  ]
+}

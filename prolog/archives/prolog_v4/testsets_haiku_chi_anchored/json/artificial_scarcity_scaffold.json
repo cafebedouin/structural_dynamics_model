@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "artificial_scarcity_scaffold",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.65,
+    "theater_ratio": 0.2,
+    "claimed_type": "scaffold",
+    "human_readable": "The Resource-Migration Scaffold",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "platform_owner",
+      "new_resource_provider"
+    ],
+    "victims": [
+      "legacy_users",
+      "late_adopters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Late Adopter",
+      "comment": "PERSPECTIVE 1: LATE ADOPTER (SNARE) — Trapped after the legacy system is fully deprecated. Faces exorbitant migration costs or complete loss of function with no viable alternatives. Experiences the constraint as pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.60."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy User",
+      "comment": "PERSPECTIVE 2: LEGACY USER (TANGLED ROPE) — Experiences both the coordination benefit of an industry-wide standard shift and the extractive cost of a forced migration. Their exit is constrained by switching costs and dependencies on the legacy system. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.40."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Owner",
+      "comment": "PERSPECTIVE 3: PLATFORM OWNER (SCAFFOLD) — The architect of the transition. Sees the artificial scarcity as a necessary, temporary support structure to achieve a desirable end-state (universal adoption of the new resource). As the primary beneficiary with full control, they experience no extraction. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.05."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (SCAFFOLD) — Recognizes the temporary nature ('has_sunset_clause') and the coordination function of the constraint. The classification holds because the coercive elements are time-bound and serve a stated transitional purpose, fitting the definition of a scaffold. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.48, but the sunset clause gate makes it a scaffold."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Future Userbase",
+      "comment": "PERSPECTIVE 5: FUTURE USERBASE (ROPE) — From a future standpoint, the turmoil of the transition is invisible. This group only experiences the new, superior, and standardized resource. The constraint appears as a pure coordination mechanism that established the beneficial status quo. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.004."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scaffold_necessity",
+      "question": "Is the enforced scarcity truly a necessary mechanism for the migration, or is it a pretext for rent-seeking on the legacy platform before its obsolescence?",
+      "resolution_mechanism": "Comparative analysis of similar technological transitions, contrasting outcomes of voluntary vs. forced migration paths. Economic modeling of platform revenue streams during the transition period.",
+      "impact": "If the scarcity is proven unnecessary for a successful transition, the constraint's primary classification shifts from Scaffold to Tangled Rope or Snare, as the 'coordination' claim becomes theatrical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the artificial scarcity is a necessary tool or a rent-seeking pretext."
+    },
+    {
+      "id": "benefit_distribution",
+      "question": "Do the long-term benefits of the new resource equitably compensate for the short-term costs imposed on legacy users?",
+      "resolution_mechanism": "Longitudinal cost-benefit analysis tracking total cost of ownership for migrated users versus the quantified benefits of the new platform over a 5-10 year horizon.",
+      "impact": "If migration costs systematically outweigh the realized benefits for a significant user segment, the constraint functions as a Snare for that segment, even if it is a Scaffold for others.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether long-term benefits outweigh the imposed short-term migration costs."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models a planned, temporary period of artificial scarcity designed to compel users to migrate from a legacy technology or resource to a new one. The 'scaffold' is the set of policies (e.g., ending support, raising prices, limiting availability) that makes staying on the old system untenable, thereby supporting the construction of a new, universal standard. Examples include forcing users from on-premise software to cloud subscriptions, or phasing out leaded gasoline. The core tension is between the stated goal of beneficial progress and the coercive, extractive nature of the mechanism used to achieve it.",
+    "key_agents": [
+      "Platform Owner: Primary beneficiary (institutional/arbitrage) — orchestrates the migration to consolidate their market on the new platform.",
+      "Legacy Users: Primary victims (moderate/constrained) — bear the financial and operational costs of the forced migration.",
+      "Late Adopters: Secondary victims (powerless/trapped) — face the highest costs and risk being left with a non-functional system.",
+      "Future Userbase: Indirect beneficiary (organized/mobile) — inherits the benefits of the new standard without experiencing the transition costs."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.35): Moderate. The constraint imposes real costs (financial, time, labor) on users forced to migrate. It's not pure coordination; value is extracted during the transition. Suppression (0.65): High. The mechanism works by actively suppressing the alternative of staying with the legacy system, making it prohibitively expensive or non-functional. Theater Ratio (0.20): Low. While there is marketing rhetoric, the primary function—forcing migration—is direct and non-performative. The `has_sunset_clause` is true by definition, as the scarcity is designed to end once migration is complete.",
+    "perspectival_gap": "The gap is stark. The Platform Owner sees a necessary, temporary 'Scaffold' to build a better future for everyone. The Legacy User, bearing the costs, sees a 'Tangled Rope'—a mix of coercive extraction and a potential coordination benefit. The Late Adopter, with no options left, sees a pure 'Snare'. This perspectival divergence is characteristic of constraints where benefits and costs are asymmetrically distributed over time and across populations.",
+    "directionality_logic": "Beneficiaries (Platform Owner) have arbitrage exit and control the terms, leading to a low/negative effective extraction (χ), classifying the constraint as a Scaffold from their view. Victims (Legacy Users, Late Adopters) have constrained or trapped exit options, leading to a high derived directionality (d) and thus a high χ. This pushes their classification towards Tangled Rope and Snare, accurately reflecting their experience of being targeted by the constraint.",
+    "mandatrophy_analysis": "This case prevents mandatrophy by correctly using the 'Scaffold' classification. A naive analysis might label it a 'Snare' due to the high suppression and coercive nature. However, the explicit and credible 'has_sunset_clause' is a critical structural feature. The DR system correctly identifies it as a Scaffold from the analytical and beneficiary perspectives, while still acknowledging the Snare-like experience of the victims. It distinguishes a temporary, goal-oriented coercive measure from a permanent system of pure extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "legacy_system_interoperability",
+      "new_platform_lock_in"
+    ]
+  }
+}

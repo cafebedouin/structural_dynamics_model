@@ -1,0 +1,125 @@
+{
+  "header": {
+    "constraint_id": "advice_as_dangerous_gift",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Hazard of Counsel",
+    "topic_domain": "social/philosophical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "advice_givers"
+    ],
+    "victims": [
+      "advice_receivers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Naive Advisee",
+      "comment": "The advice receiver, lacking experience or knowledge, may be trapped by the advice, suffering negative consequences. The advice may be self-serving for the giver or simply incorrect, but the receiver is now committed."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "Tradition/Cultural Wisdom",
+      "comment": "Established traditions and cultural wisdom provide a coordinating function, guiding individuals through common life challenges. The advice is generally beneficial due to its proven track record and widespread acceptance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Advice can be both helpful and harmful. It provides guidance and coordination, but also introduces the risk of manipulation, bias, and unintended consequences. The net effect is a complex interplay of extraction and coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "advice_validity",
+      "question": "Is the advice valid and applicable to the specific situation of the receiver?",
+      "resolution_mechanism": "Empirical testing of the advice's effectiveness; careful consideration of the receiver's context.",
+      "impact": "If valid, advice is a rope; if invalid, it's a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The validity of the advice being given."
+    },
+    {
+      "id": "advisor_intent",
+      "question": "Does the advisor have benevolent or self-serving intentions?",
+      "resolution_mechanism": "Assessing the advisor's motives and potential conflicts of interest.",
+      "impact": "Benevolent intent makes the advice more likely to be a rope; self-serving intent increases the likelihood of a snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The intent behind the advice giving."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "From J.R.R. Tolkien's Lord of the Rings, the giving and receiving of advice can be fraught with peril. While good counsel can guide and protect, poor or malicious advice can lead to ruin. This constraint explores the dual nature of advice as both a potential benefit and a significant hazard. The extractiveness arises from the advisor potentially benefiting from the advisee's actions, regardless of the outcome for the advisee.",
+    "key_agents": [
+      "advice_givers: Those offering guidance (institutional/arbitrage)",
+      "advice_receivers: Those following guidance (powerless/trapped)",
+      "tradition_wisdom: established practices (institutional/arbitrage)",
+      "analytical_observer: evaluates outcome (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The advice giver may gain status or influence from giving advice, even if the advice harms the receiver. The receiver is extracted from because they lose autonomy and potentially suffer negative consequences. Suppression (0.40): Moderate. The receiver's options are limited by the advice; they may feel compelled to follow it, reducing their freedom of choice. The advice may also suppress other, potentially better options.",
+    "perspectival_gap": "The receiver, often in a vulnerable position, experiences the advice as a snare if it leads to negative outcomes. The giver, on the other hand, may see it as a helpful act of coordination, even if it's flawed. The analytical observer recognizes the complex interplay of potential benefits and risks.",
+    "directionality_logic": "Advice givers benefit through increased status, influence, and sometimes tangible resources if the advice is followed successfully. Receivers are vulnerable and thus 'trapped' by the advice if it leads to adverse consequences. The directionality derives from this power asymmetry and potential for self-serving counsel."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

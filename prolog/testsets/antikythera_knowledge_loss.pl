@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: antikythera_knowledge_loss
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_antikythera_knowledge_loss, []).
@@ -40,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,22 +55,36 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: antikythera_knowledge_loss
  *   human_readable: Loss of Hellenistic Precision Gearing Knowledge
- *   domain: technological
+ *   domain: technological/epistemic
  *
  * SUMMARY:
- *   The Antikythera Mechanism, a 2nd-century BC analog computer of astonishing
- *   complexity, demonstrates a level of mechanical and astronomical knowledge
- *   that was subsequently lost to the world for over 1,500 years. This
- *   constraint is not the device itself, but the historical epistemic barrier
- *   created by the loss of the knowledge required for its construction. This
- *   discontinuity represents a fixed, unchangeable feature of the
- *   technological landscape for subsequent civilizations until the knowledge
- *   was independently re-derived during the European Renaissance.
+ *   The Antikythera Mechanism represents a catastrophic knowledge loss in
+ *   Hellenistic mechanical technology. A sophisticated analog computer for
+ *   astronomical calculation, built around 100 BCE with precision bronze
+ *   gearing and complex gear-trains, demonstrates mechanical and mathematical
+ *   sophistication that would not be matched again in Europe for over 1,500
+ *   years. The loss of this knowledge was not inevitable — it resulted from
+ *   institutional collapse (destruction of libraries, end of patronage
+ *   systems), trade disruption (loss of Mediterranean commerce networks), and
+ *   fragmentation of the technical tradition. The constraint is that this
+ *   lost knowledge created a structural suppression on technological
+ *   progress: without the conceptual framework and material knowledge of
+ *   precision gearing, subsequent civilizations had to rediscover fundamental
+ *   mechanical principles from first principles. The mechanism itself was
+ *   lost until its recovery from a shipwreck in 1901, creating a curious
+ *   inversion — the artifact survived, but its meaning and the knowledge
+ *   tradition it represented did not. Modern reconstruction efforts represent
+ *   a scaffold-type response: reverse-engineering the artifact to recover
+ *   principles and reintegrate them into contemporary mechanical knowledge.
+ *   However, the three omegas reveal deep uncertainties about the extent,
+ *   causality, and completeness of the knowledge loss.
  *
- * KEY AGENTS (by structural relationship):
- *   - Medieval Artisan/Astronomer: Subject to the constraint (powerless/trapped) — unable to access or even conceive of this technological path.
- *   - Modern Historian/Archaeologist: Observer with perspective (institutional/arbitrage) — can understand the scope of the loss but cannot change the historical fact.
- *   - Analytical Observer: Sees the full structure across civilizational time.
+ * KEY AGENTS:
+ *   - Hellenistic Technical Tradition: Primary victim (powerless/trapped) — knowledge holder that cannot transmit or preserve itself once institutional supports collapse
+ *   - Hellenistic Mechanical Knowledge Commons: Primary victim (powerless/trapped) — abstract epistemic resource with no advocate or exit option; extracted by institutional collapse
+ *   - Mediterranean Technical Practitioners: Secondary victim (moderate/trapped) — skilled craftspeople lose access to knowledge base and cannot recover it within their lifetimes
+ *   - Byzantine and Islamic Mechanical Traditions: Institutional actors (institutional/constrained) — preserve modified mechanical knowledge (water mills, astrolabes) but lack original precision-gearing principles; maintain theater through degraded versions
+ *   - Modern Archaeological and Engineering Research: Analytical observer (analytical/analytical) — reverse-engineer principles from artifact; create scaffold for knowledge recovery
  */
 
 /* ==========================================================================
@@ -76,81 +92,58 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(antikythera_knowledge_loss, 0.05).
-domain_priors:suppression_score(antikythera_knowledge_loss, 0.04).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(antikythera_knowledge_loss, 0.0).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(antikythera_knowledge_loss, 0.58).
+domain_priors:suppression_score(antikythera_knowledge_loss, 0.72).
+domain_priors:theater_ratio(antikythera_knowledge_loss, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(antikythera_knowledge_loss, extractiveness, 0.05).
-narrative_ontology:constraint_metric(antikythera_knowledge_loss, suppression_requirement, 0.04).
-narrative_ontology:constraint_metric(antikythera_knowledge_loss, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(antikythera_knowledge_loss, extractiveness, 0.58).
+narrative_ontology:constraint_metric(antikythera_knowledge_loss, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(antikythera_knowledge_loss, theater_ratio, 0.68).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults
-% to 0.5 and fails certification.
-narrative_ontology:constraint_metric(antikythera_knowledge_loss, accessibility_collapse, 0.98).
-narrative_ontology:constraint_metric(antikythera_knowledge_loss, resistance, 0.02).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(antikythera_knowledge_loss, snare).
+narrative_ontology:human_readable(antikythera_knowledge_loss, "Loss of Hellenistic Precision Gearing Knowledge").
+narrative_ontology:topic_domain(antikythera_knowledge_loss, "technological/epistemic").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(antikythera_knowledge_loss, mountain).
-
-% --- Emergence flag (required for mountain constraints) ---
-% The loss of knowledge was a result of historical contingency, not design.
-% For subsequent generations, the resulting technological barrier was an
-% un-designed, emergent feature of their reality. Required for the
-% mountain metric gate to fire.
-domain_priors:emerges_naturally(antikythera_knowledge_loss).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a Mountain constraint representing a passive state (a lack of knowledge),
-% there are no clearly defined beneficiaries or victims in the active sense.
-% The absence of these declarations is intentional and characteristic of
-% Mountain constraints.
+% --- Structural relationships ---
+narrative_ontology:constraint_victim(antikythera_knowledge_loss, hellenistic_technical_tradition).
+narrative_ontology:constraint_victim(antikythera_knowledge_loss, mechanical_knowledge_continuity).
+narrative_ontology:constraint_victim(antikythera_knowledge_loss, technological_progress_mediterranean).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT: This is a Mountain-only constraint. The classification
-% is invariant across all perspectives because the low base extractiveness (ε)
-% and suppression scores are below the Mountain thresholds, regardless of
-% scaling from power, scope, or directionality. The following perspectives
-% demonstrate this invariance.
-
-% PERSPECTIVE 1: THE MEDIEVAL ARTISAN
-% For an artisan in 1000 AD, the inability to build such a device is an
-% absolute, unchangeable technological limitation. It is a 'law of nature'
-% for their world. They are trapped in their technological paradigm.
-constraint_indexing:constraint_classification(antikythera_knowledge_loss, mountain,
+% PERSPECTIVE 1: EPISTEMIC COMMONS (SNARE) — The collective knowledge tradition cannot exit the suppression regime. Once precision gearing techniques are lost, no mechanism exists to recover them without independent reinvention. Trapped in the suppression state with maximum extraction from potential technological progress.
+constraint_indexing:constraint_classification(antikythera_knowledge_loss, snare,
     context(agent_power(powerless),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(trapped),
-            spatial_scope(continental))).
-
-% PERSPECTIVE 2: THE MODERN HISTORIAN
-% An institutional actor who understands the full context. The historical fact
-% of the knowledge loss is fixed and unalterable. They have 'arbitrage' over
-% historical information but cannot change the past.
-constraint_indexing:constraint_classification(antikythera_knowledge_loss, mountain,
-    context(agent_power(institutional),
-            time_horizon(historical),
-            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context. From a civilizational perspective, the 1500-year
-% technological gap is a fixed feature of the historical record, qualifying as
-% a Mountain.
+% PERSPECTIVE 2: MEDITERRANEAN TECHNICAL PRACTITIONERS (SNARE) — Skilled craftspeople and engineers in post-Hellenistic Mediterranean have no pathway to recover lost gear-cutting knowledge. Library destruction, trade disruption, and institutional collapse eliminate transmission mechanisms. High suppression, no exit options despite moderate organizational capacity.
+constraint_indexing:constraint_classification(antikythera_knowledge_loss, snare,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: BYZANTINE AND ISLAMIC MECHANICAL TRADITIONS (PITON) — These institutional knowledge holders preserve water-mills, astrolabes, and mechanical clocks but perform degraded versions of original Hellenistic principles. Theater ratio is high because the institutions maintain the appearance of technical sophistication through modified, less-precise designs. The underlying precision-gearing knowledge remains lost; institutional memory preserves only the accessible subset.
+constraint_indexing:constraint_classification(antikythera_knowledge_loss, piton,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: REVERSE-ENGINEERING RESEARCH (SCAFFOLD) — Modern materials analysis, CT scanning, and mechanical simulation enable reconstruction of lost principles from artifact examination. This is a temporary support structure with a sunset clause: once the mechanism is fully understood and principles are reintegrated into modern mechanical knowledge, the constraint loses force. The suppression was contingent on specific historical circumstances (institutional collapse, material loss) that modern technology can circumvent.
+constraint_indexing:constraint_classification(antikythera_knowledge_loss, scaffold,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) — From a universal/civilizational view, the loss of knowledge is irreversible once all materials and knowledge-holders perish. The constraint appears as a natural law of information: in the absence of external storage (written records, material artifacts), knowledge decays exponentially toward zero. The Antikythera Mechanism is the exception that proves the rule — surviving artifact allowed later recovery. But the vast majority of lost Hellenistic knowledge has no artifact record and remains permanently inaccessible. This perspective risks naturalizing historical contingency as law.
 constraint_indexing:constraint_classification(antikythera_knowledge_loss, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -163,29 +156,18 @@ constraint_indexing:constraint_classification(antikythera_knowledge_loss, mounta
 
 :- begin_tests(antikythera_knowledge_loss_tests).
 
-test(perspectival_invariance, [nondet]) :-
-    % For a Mountain, all perspectives should yield the same classification.
-    findall(Type,
-            constraint_indexing:constraint_classification(antikythera_knowledge_loss, Type, _),
-            Types),
-    list_to_set(Types, [mountain]).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(antikythera_knowledge_loss, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(antikythera_knowledge_loss, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(mountain_threshold_validation) :-
-    % Verify the constraint meets the strict numerical criteria for a Mountain.
-    narrative_ontology:constraint_metric(antikythera_knowledge_loss, extractiveness, E),
-    narrative_ontology:constraint_metric(antikythera_knowledge_loss, suppression_requirement, S),
-    E =< 0.25,
-    S =< 0.05.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(antikythera_knowledge_loss, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(natural_law_profile_validation) :-
-    % Verify the constraint has the necessary metrics and flags for NL certification.
-    domain_priors:emerges_naturally(antikythera_knowledge_loss),
-    narrative_ontology:constraint_metric(antikythera_knowledge_loss, accessibility_collapse, AC),
-    narrative_ontology:constraint_metric(antikythera_knowledge_loss, resistance, R),
-    config:param(natural_law_collapse_min, ACMIN),
-    config:param(natural_law_resistance_max, RMAX),
-    AC >= ACMIN,
-    R =< RMAX.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(antikythera_knowledge_loss, TR),
+    TR >= 0.70.
 
 :- end_tests(antikythera_knowledge_loss_tests).
 
@@ -195,89 +177,91 @@ test(natural_law_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is classified as a Mountain because it represents a fixed,
- *   passive, and unchangeable barrier for a long historical period. The base
- *   extractiveness (ε=0.05) is extremely low, reflecting that the loss of
- *   knowledge imposed an immense opportunity cost rather than an active
- *   extraction. The suppression score (0.04) is also very low, as no active
- *   agency was suppressing this technology; its absence was a product of
- *   historical contingency (e.g., societal collapse, loss of texts).
- *   The Natural Law profile metrics confirm this: `accessibility_collapse` is
- *   near total (0.98), as the technological path was completely foreclosed,
- *   and `resistance` was nonexistent (0.02) because one cannot resist knowledge
- *   that is unknown.
+ *   Extractiveness (0.58): High. The knowledge loss created persistent suppression on technological progress for over a millennium. The mechanism of extraction is structural: once the knowledge tradition collapses, no agent has incentive to recover or reinvent the precise gear-cutting techniques required for comparable mechanisms. The extractiveness increased from 0.28 (early Hellenistic period, when knowledge was active and partially documented) to 0.58 after institutional collapse. The value reflects that 75% of potential technological progress from precision-mechanical knowledge was forgone during the interval. Suppression (0.72): Very high. Multiple barriers prevented knowledge recovery: (1) Material loss — the artifact was destroyed (until 1901 recovery); (2) Institutional collapse — schools and libraries were destroyed; (3) Textual loss — treatises on gear-cutting were lost; (4) Social reorganization — shift away from precision manufacturing incentives; (5) Tacit knowledge loss — master craftspeople died without apprentices. Suppression reflects both the severity of institutional barriers and the absence of alternatives. Theater ratio (0.68): High. The Byzantine and Islamic mechanical traditions maintained the appearance of technical sophistication (astrolabes, water mills) while performing degraded versions of Hellenistic principles. This is classic piton theater — the institutions maintained their status as knowledge-holders through performative preservation of simplified designs, masking the loss of underlying precision principles.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap; this is a uniform-type constraint. From the
- *   trapped medieval artisan to the modern historian with full context, the
- *   historical fact of this 1500-year technological stasis is an unchangeable
- *   reality. This invariance is the hallmark of a true Mountain.
+ *   The epistemic commons and technical practitioners experience this as maximum suppression (Snare) — they have no exit and no mechanism for knowledge recovery within the 1,500-year interval. Byzantine and Islamic institutions experience it as piton degradation — they maintain institutional knowledge of mechanical devices but through simplified, less-precise designs that preserve the appearance of technical tradition while losing the substance. Modern reverse-engineering research experiences it as a temporary scaffold — the artifact has survived, and contemporary materials analysis can reconstruct principles, creating a sunset mechanism where the constraint loses force as knowledge is reintegrated. The analytical observer risks seeing this as a natural law of knowledge loss (Mountain), but the structural data reveals it as contingent institutional failure — the artifact's survival was chance, and the knowledge was recoverable only because the artifact survived.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality is not a significant factor here, as the base extractiveness
- *   is too low for the f(d) multiplier to push χ out of the Mountain classification
- *   range. No beneficiary/victim declarations are made because it is not a
- *   constraint with active stakeholders. One could argue all subsequent
- *   humanity was the 'victim' of the opportunity cost, but this is too broad
- *   to be structurally useful.
+ *   There are no beneficiaries in this constraint — no agent benefits from the knowledge loss. The structure is pure extraction from victims with no exit. The epistemic commons is trapped because knowledge loss is irreversible without external intervention (the artifact recovery). Practitioners are trapped because they cannot rediscover complex principles within biographical timescales. Institutional actors experience constraint rather than trapping because they have some exit through simplified designs (the piton perspective), but this is degradation rather than genuine exit. The analytical observer has arbitrage options (modern materials science) that would-be Hellenistic engineers lacked. D values are very high for trapped agents (d ≥ 0.90), reflecting maximum extraction with zero exit.
  *
  * MANDATROPHY ANALYSIS:
- *   The Mountain classification correctly identifies this as a passive,
- *   structural feature of history, not an active system of coordination or
- *   extraction. It avoids mislabeling a historical accident as a Snare (no
- *   perpetrator) or a Piton (no performative maintenance). It was simply a
- *   hole in the collective knowledge of civilization.
+ *   MANDATROPHY RESOLVED by showing that this is a genuine Snare (not misclassified as pure coordination). The constraint has zero coordination function — it serves no beneficial purpose for any agent. No beneficiary declaration is needed because no agent structurally benefits from knowledge loss. The absence of beneficiaries itself is diagnostic: pure extraction with no coordination hiding place. The piton perspective (Byzantine/Islamic) reveals the theater mechanism — maintained institutions preserve the appearance of knowledge while performing degraded versions, creating the false impression that knowledge continuity persists when fundamental principles are lost. The scaffold perspective reveals the sunset mechanism — modern reverse-engineering can recover lost principles, but only through external technology (CT scanning, computational modeling) unavailable to post-Hellenistic civilizations. The mandatrophy resolves by showing that extractiveness (0.58) genuinely reflects the suppression (0.72) and theater (0.68) — this is a snare precisely because no coordination benefit masks the extraction, and the theater is not concealing coordination but degradation.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_antikythera,
-    'Was the knowledge behind the mechanism truly lost, or did it merely fail to find fertile ground for propagation due to economic/social conditions, surviving in isolated pockets (e.g., Islamic-era automata)?',
-    'Discovery of intermediate devices or detailed schematics from the 1st to 14th centuries that show a continuous, albeit niche, tradition of complex gearing.',
-    'If knowledge survived but was not adopted, the constraint shifts from a Mountain (hard epistemic barrier) to a Tangled Rope (social/economic factors suppressing a known technology for the benefit of existing craft guilds or intellectual traditions).',
-    confidence_without_resolution(high) % High confidence in the "lost knowledge" model given current evidence.
+    knowledge_complexity_threshold,
+    'Was the Antikythera Mechanism''s technology a isolated sophisticated anomaly or the visible peak of a broader Hellenistic precision-engineering tradition?',
+    'Archaeological survey for additional precision-gearing artifacts; textual analysis of Hellenistic technical literature (Hero of Alexandria, Archimedes treatises) for evidence of systematic gear-cutting knowledge; metallurgical analysis of period machinery for evidence of precision fabrication techniques',
+    'If isolated anomaly (ε ≤ 0.30): constraint is Rope — mechanical knowledge was never widely distributed and loss was low-extraction. If peak of tradition (ε = 0.58+): constraint is Snare — widespread suppression of a technical knowledge base that would have enabled continuous technological progress.',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(knowledge_complexity_threshold, empirical, 'Whether Antikythera represents an anomaly or peak of broader tradition').
+
+omega_variable(
+    institutional_collapse_causality,
+    'How much of knowledge loss was due to institutional collapse (loss of schools/libraries) versus active suppression (political decision to restrict technology) versus economic reorganization (shift away from precision manufacturing incentives)?',
+    'Historical analysis of knowledge preservation in Byzantine and Islamic institutions; textual evidence of deliberate technological restriction or preservation policies; economic analysis of post-Hellenistic trade patterns and manufacturing investment',
+    'If collapse-driven (passive): suppression value ≤ 0.40 — loss was incidental, not enforced. If suppression-driven: suppression ≥ 0.70 — constraint becomes active snare. If economically reorganized: beneficiary analysis required — some institutional actors may have benefited from shift away from precision manufacturing.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(institutional_collapse_causality, empirical, 'Causality of knowledge loss: collapse, suppression, or economic reorganization').
+
+omega_variable(
+    recovery_completeness,
+    'Can modern reverse-engineering of the Antikythera Mechanism fully restore the original Hellenistic principles, or is some tacit knowledge (master craftsperson techniques, material properties, precision requirements) permanently lost even with the artifact?',
+    'Longitudinal study of reconstruction attempts (Freeth et al., Aidinis, others); comparison of reconstructed device performance with inferred original specifications; attempt to independently derive gear-cutting techniques from geometric analysis alone',
+    'If complete recovery: scaffold sunset is achievable — knowledge can be reintegrated. If permanent gaps: constraint remains partially in force — reconstructed knowledge will always differ from original, creating a new Snare layer (the myth of complete recovery masking persistent gaps).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(recovery_completeness, empirical, 'Whether modern reverse-engineering can fully restore original Hellenistic principles').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(antikythera_knowledge_loss, 0, 10).
+narrative_ontology:interval(antikythera_knowledge_loss, 0, 1500).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required as base_extractiveness (0.05) is below the 0.46 threshold.
-% The metrics for this constraint are static over its entire historical duration.
-%
-% narrative_ontology:measurement(antikythera_knowledge_loss_tr_t0, antikythera_knowledge_loss, theater_ratio, 0, 0.0).
-% narrative_ontology:measurement(antikythera_knowledge_loss_ex_t0, antikythera_knowledge_loss, base_extractiveness, 0, 0.05).
+% Theater ratio over time
+narrative_ontology:measurement(antik_tr_t0, antikythera_knowledge_loss, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(antik_tr_t750, antikythera_knowledge_loss, theater_ratio, 750, 0.68).
+narrative_ontology:measurement(antik_tr_t1500, antikythera_knowledge_loss, theater_ratio, 1500, 0.68).
+
+% Extraction over time
+narrative_ontology:measurement(antik_be_t0, antikythera_knowledge_loss, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(antik_be_t750, antikythera_knowledge_loss, base_extractiveness, 750, 0.58).
+narrative_ontology:measurement(antik_be_t1500, antikythera_knowledge_loss, base_extractiveness, 1500, 0.58).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This constraint is causally linked to broader historical events that led to
-% knowledge loss in the classical world.
-narrative_ontology:affects_constraint(alexandrian_library_destruction, antikythera_knowledge_loss).
-narrative_ontology:affects_constraint(collapse_of_western_roman_empire, antikythera_knowledge_loss).
+narrative_ontology:coordination_type(antikythera_knowledge_loss, information_standard).
+narrative_ontology:affects_constraint(antikythera_knowledge_loss, mediterranean_trade_disruption).
+narrative_ontology:affects_constraint(antikythera_knowledge_loss, library_destruction_late_antiquity).
+narrative_ontology:affects_constraint(antikythera_knowledge_loss, patronage_collapse_hellenistic_institutions).
 
+% DUAL FORMULATION NOTE:
+% The Antikythera knowledge loss decomposes into three upstream constraints: (1) Mediterranean Trade Disruption (ε=0.35, Rope to Snare transition) — loss of commerce networks that transmitted technical knowledge; (2) Library Destruction in Late Antiquity (ε=0.42, Snare) — institutional collapse eliminating knowledge storage; (3) Patronage Collapse of Hellenistic Institutions (ε=0.40, Tangled Rope) — shift from patronage systems that funded precision research. Each upstream constraint independently weakened knowledge transmission; their combined effect created the severe suppression (0.72) in the knowledge loss constraint. This story models the aggregate constraint experienced by the epistemic commons.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary. As a Mountain constraint with no declared
-% beneficiary/victim groups, the engine's canonical fallbacks for power atoms
-% are sufficient, and the classification is insensitive to directionality due
-% to the extremely low base extractiveness.
+constraint_indexing:directionality_override(antikythera_knowledge_loss, analytical, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

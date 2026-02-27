@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "columbia_2026_elections",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "col2026"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "2026 Colombian Presidential Election Structure",
+    "topic_domain": "political/electoral",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "incumbent_political_coalition",
+      "established_parties",
+      "regional_power_brokers"
+    ],
+    "victims": [
+      "outsider_candidates",
+      "electoral_transparency",
+      "marginalized_constituencies"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Marginalized Rural Voters",
+      "comment": "PERSPECTIVE 1: MARGINALIZED RURAL VOTERS (SNARE) \u2014 Structurally locked into participation without meaningful agency. Election machinery in remote regions depends on local caciques (power brokers) who control information, transportation, and vote counting. Exit via abstention or spoiled ballots incurs social cost. Maximum extraction: voters bear institutional burden while their preferences are filtered through intermediaries."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Political Movements",
+      "comment": "PERSPECTIVE 2: REGIONAL POLITICAL MOVEMENTS (TANGLED ROPE) \u2014 Moderate power but constrained exit. Participate in elections (coordination benefit: legitimate channel for preferences) but face institutional barriers: ballot access requirements, campaign financing concentrated among established parties, media access skewed toward incumbent coalition. Mixed extraction and coordination \u2014 some candidates emerge through this process, but the structure favors incumbent-aligned movements."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Political Coalition",
+      "comment": "PERSPECTIVE 3: INCUMBENT POLITICAL COALITION (ROPE) \u2014 Institutional beneficiary with full arbitrage. The one-term constitutional limit forces transition but also guarantees the party machinery survives intact. Coalition coordinates succession (choosing next-generation leaders), accesses state resources for campaign, leverages incumbent visibility. Net beneficiary \u2014 extraction runs toward this coalition. The constraint (one-term limit) is experienced as coordination mechanism for managed succession."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Established Opposition Parties",
+      "comment": "PERSPECTIVE 4: ESTABLISHED OPPOSITION PARTIES (TANGLED ROPE) \u2014 Powerful institutional actors with some mobility (can field candidates, campaign across regions, access media through party infrastructure) but constrained by incumbent advantages. Electoral rules create mixed signals: the one-term limit opens space for opposition victory (coordination benefit) but incumbent machinery controls voter rolls, regional networks, and administrative resources (extraction mechanism). Effective extraction moderate because established parties have organizational capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Electoral Commission (CNE)",
+      "comment": "PERSPECTIVE 5: ELECTORAL COMMISSION (PITON) \u2014 Formally independent but structurally dependent on both incumbent and opposition for legitimacy. Theater ratio high (0.58): public validation rituals (voting ceremonies, transparency audits, international observer protocols) persist despite chronic capacity constraints in vote counting, especially in remote regions. The commission maintains institutional inertia \u2014 continues formal procedures that have limited verification capacity \u2014 because alternatives haven't replaced it and both coalitions prefer predictable theater to unpredictable dispute."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Election Observers",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL ELECTION OBSERVERS (SCAFFOLD) \u2014 Organized external actors (OAS, UN, Carter Center, EU) who validate election legitimacy. Temporary function: observer presence reduces extraction by increasing verification cost and enabling dispute resolution. Constrained exit (must withdraw after election day) but high agency during campaign. Scaffold logic: observers create temporary constraint on obvious manipulation, with sunset when observers leave. Theater ratio drops during observation period (0.42), rises after (0.65)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Constitutional One-Term Limit (Natural Law View)",
+      "comment": "PERSPECTIVE 7: CONSTITUTIONAL ONE-TERM LIMIT (MOUNTAIN) \u2014 From civilizational analytical view, the one-term limit appears as a natural law: a constitutional constraint that is binding, irreversible, and uniform across all agents. Cannot be suspended by either coalition. Engine will flag this as potential false summit \u2014 the 'immutable constitutional rule' naturalizes what is actually a political equilibrium: the one-term limit persists because both dominant coalitions prefer the predictability of managed succession to the chaos of authoritarian persistence. If one coalition gained absolute power, they would revise the constitution. The mountainness depends on actual binding force, not formal status."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "constitutional_revision_risk",
+      "question": "Under what conditions would a dominant coalition attempt constitutional revision to allow presidential reelection?",
+      "resolution_mechanism": "Historical precedent from Peru (1992), Venezuela (1999, 2009), Bolivia (2009). Monitoring of political concentration \u2014 if one coalition achieves supermajority control of legislature, revision pressure increases. Polling on public appetite for reelection.",
+      "impact": "If revision probability > 0.15: the mountain classification is false; one-term limit is contingent on current power balance, not inherent. If probability < 0.05: mountain holds \u2014 limit is durable across foreseeable political scenarios.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Constitutional revision probability as function of political concentration"
+    },
+    {
+      "id": "regional_extraction_opacity",
+      "question": "In regions without independent verification infrastructure, what fraction of extractive activity (vote trading, cacique leverage, ballot fraud) remains unobserved and unquantified?",
+      "resolution_mechanism": "Post-election audits in high-marginalization departments; comparison of pre-announced voting intentions vs official results; qualitative interviews with regional observers and voters. Measurement of vote-buyer effectiveness (how many votes can be purchased per unit expenditure in different regions).",
+      "impact": "If opacity > 0.60: suppression index may be understated (should be 0.75+). Extraction may be snare-level (not tangled rope) for rural victims. If opacity < 0.30: current tangled-rope classification from moderate regional perspective is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Opacity of regional extraction mechanisms"
+    },
+    {
+      "id": "observer_effectiveness_paradox",
+      "question": "Do international observers reduce extraction by increasing verification cost, or do they provide symbolic legitimation that enables extraction by reducing domestic scrutiny?",
+      "resolution_mechanism": "Comparison of vote irregularities in observed vs unobserved elections. Analysis of electoral disputes: are observers' presence correlated with fewer or more fraud allegations? Exit surveys in regions with vs without observer presence.",
+      "impact": "If observers reduce extraction: scaffold classification confirmed. If observers enable extraction through legitimation: scaffold is theater-heavy false classification, extraction persists underneath observer protocols, true classification for powerless agents should be snare (not tangled rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether observers reduce or legitimize extraction"
+    },
+    {
+      "id": "successor_autonomy",
+      "question": "To what degree is the designated successor (chosen by incumbent coalition) bound to fulfill commitments made to coalition allies, vs. exercising genuine presidential autonomy once in office?",
+      "resolution_mechanism": "Historical analysis of Colombian successions: do new presidents execute predecessor's coalition agreements? Defection rate and consequences. Comparison with peer democracies (Mexico, Chile) with similar constraints.",
+      "impact": "If successor autonomy high: one-term limit genuinely blocks indefinite extraction accumulation (true coordinating function). If autonomy low: successor is puppet, extraction continues through alternate mechanism (limit is fake \u2014 piton rather than mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Successor autonomy relative to incumbent coalition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Colombia's 2026 presidential election is structured around a constitutional one-term limit that forces executive succession. This constraint simultaneously functions as democratic coordination mechanism (guaranteeing turnover, preventing indefinite executive power accumulation), as coordination infrastructure for the incumbent coalition (managed succession, preservation of party machinery), and as extraction mechanism (incumbent advantages in campaign resources, administrative capacity, regional networks). The structure exhibits the full range of DR classifications depending on the observer's structural position and exit capacity. For powerless rural voters locked into vote-trading networks with local caciques, the election appears as pure extraction (snare). For established opposition parties with organizational capacity, it appears as a mixed coordination-extraction hybrid (tangled rope). For the incumbent coalition, it appears as coordination mechanism for managed succession (rope). The constitutional one-term limit itself appears as natural law (mountain) from a civilizational analytical perspective, but this classification requires scrutiny: if the limit persists because both dominant coalitions prefer its predictability, it is contingent on current power distribution, not immutable. The measurement trajectory shows extractiveness increasing from 0.38 to 0.52 over the election cycle, and theater ratio rising from 0.48 to 0.62, indicating that as the election approaches, both the performative content and the actual extraction mechanisms intensify.",
+    "key_agents": [
+      "Incumbent Political Coalition: Primary beneficiary (institutional/arbitrage) \u2014 controls state resources, enjoys visibility advantages, manages succession through coalition machinery",
+      "Established Opposition Parties: Secondary beneficiary (powerful/mobile) \u2014 the one-term limit creates opposition electoral opportunity, but they face incumbent infrastructure advantages",
+      "Regional Power Brokers (Caciques): Tertiary beneficiary (powerful/arbitrage) \u2014 control local electoral machinery, extract rents through vote trading, benefit from incumbent machinery coordination",
+      "Marginalized Rural Voters: Primary victim (powerless/trapped) \u2014 structurally locked into local political hierarchies, vote preferences filtered through cacique intermediaries, bear extraction costs without agency",
+      "Electoral Commission (CNE): Institutional actor (institutional/arbitrage) \u2014 maintains formal independence but depends on coalitions' acceptance for legitimacy, exhibits piton characteristics (performative procedures)",
+      "International Election Observers: Organized external actors (organized/constrained) \u2014 temporary presence during campaign creates verification pressure, scaffold logic (sunset after election day)",
+      "Urban Middle-Class Voters: Moderate agent (moderate/mobile) \u2014 higher information access, can exit through spoiled ballots or abstention with lower social cost, constrained but not trapped",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the constitutional one-term limit as unchangeable when it depends on political equilibrium"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The incumbent coalition and regional power brokers extract significant rents from the election: control of campaign timing, access to administrative resources, ability to condition rural voters' participation through local hierarchies. However, the extraction is not total (snare-level 0.70+) because the constitutional one-term limit does force genuine succession \u2014 some positions become available to opposition-aligned candidates, and voter preferences are partially expressed through electoral channels. The 0.52 value reflects that the structure has both coordination function (legitimate channel for preferences) and extraction mechanism (incumbent advantages). Suppression (0.68): High. Multiple barriers constrain electoral competition: (1) voter registration mechanisms concentrated in urban areas favor known constituencies, (2) campaign financing asymmetry (incumbent has state resources), (3) media access skewed toward coalition-aligned candidates, (4) vote-buying networks in rural areas reduce meaningful choice, (5) ballot access requirements screen out new candidates. Theater ratio (0.58): Moderate-high. Public validation rituals (voting ceremonies, observer presence, official result announcements) are substantial, but verification capacity lags in remote regions. Urban polling stations have higher transparency; rural stations have lower. Election Commission maintains formal procedures (vote counting oversight, observer protocols) despite chronic underfunding. Theater increases over campaign cycle as pressure mounts for legitimacy performance.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival diversity. The incumbent coalition sees coordination (rope); rural voters see extraction (snare); established opposition sees mixed signals (tangled rope); electoral commission sees degraded ritual (piton); international observers see temporary pressure (scaffold); and the constitutional limit appears as natural law (mountain) to civilization-scale analysis. This is a diagnostic exemplar of why indexical classification requires perspectival multiplicity: no single 'correct' type. The same structural arrangement generates six different experiences depending on power level, exit capacity, time horizon, and scope. The mandatrophy is resolved by recognizing that all six readings are simultaneously true \u2014 they describe the same constraint structure from different observation posts.",
+    "directionality_logic": "Directionality values (d) encode each agent's structural relationship to the extraction flow. Incumbent coalition and caciques derive d from beneficiary status + arbitrage exit options \u2192 low d \u2192 low/negative f(d) \u2192 negative or minimal \u03c7 (they experience the constraint as coordination, not extraction). Established opposition derives d from mixed beneficiary/victim status + mobile exit options \u2192 moderate d \u2192 moderate f(d) \u2192 moderate \u03c7 (they benefit from the succession opportunity but constrained by incumbent advantages). Marginalized rural voters derive d from victim status + trapped exit options \u2192 high d \u2192 high f(d) \u2192 high \u03c7 (maximum experienced extraction). Electoral commission derives d from institutional position + arbitrage exit options, modified by captured status \u2192 moderate d, overrideable upward if analysis suggests actual capture. Urban middle-class voters derive d from moderate power + mobile exit \u2192 moderate d \u2192 moderate \u03c7. The engine computes these from the beneficiary/victim declarations and exit capacity. Directionality overrides are not needed here because the structural relationships are clear: beneficiaries have arbitrage or mobile options with low d; victims have trapped or constrained options with high d.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint is classified as tangled rope because it possesses both genuine coordination function (legitimate channel for electoral preferences, guaranteed succession preventing indefinite power accumulation, inter-party transition mechanism) and asymmetric extraction (incumbent advantages in resources, cacique vote-trading networks, regional administrative control, information asymmetry). All three required elements are present: (1) beneficiaries declared (incumbent_political_coalition, established_parties, regional_power_brokers) provide coordination function; (2) victims declared (outsider_candidates, electoral_transparency, marginalized_constituencies) experience extraction; (3) requires_active_enforcement true (the constraint requires active electoral machinery, campaign coordination, vote-counting procedures). The tangled rope classification prevents false reductions in either direction: this is neither pure coordination (rope) nor pure extraction (snare). It is genuinely both. The perspectival gap is resolved by noting that different agents experience different ratios of coordination to extraction: incumbents experience high coordination/low extraction (rope from their viewpoint); powerless rural voters experience minimal coordination/high extraction (snare from their viewpoint); moderate opposition actors experience balanced mixed (tangled rope). The mountain classification from civilizational perspective is rejected as a false summit \u2014 the one-term limit appears unchangeable only because both dominant coalitions currently prefer its stability. It is contingent on this political equilibrium, not immutable."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "colombia_rural_vote_buying",
+      "colombia_campaign_finance_asymmetry",
+      "colombia_media_access_disparity"
+    ],
+    "dual_formulation_note": "The 2026 election structure is upstream of three subordinate constraints: (1) rural vote-buying networks that operationalize extraction in local contexts, (2) campaign finance asymmetry that manifests incumbent advantage, (3) media access disparity that skews information flows. Each subordinate constraint has higher \u03b5 values reflecting more concentrated extraction at the implementation level. The election structure itself has moderate \u03b5 (0.52) because it integrates both coordination (succession mechanism) and extraction (incumbent advantage). Downstream constraints have \u03b5 > 0.60, indicating that the structural vulnerabilities of the election system are exploited more severely at regional implementation levels."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "ergot_grain_poisoning",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ergot"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Ergot/Famine Dilemma",
+    "topic_domain": "social/technological/biological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "grain_producers_with_selection_knowledge",
+      "religious_authorities_interpreting_plagues"
+    ],
+    "victims": [
+      "subsistence_populations",
+      "marginal_grain_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Subsistence Population",
+      "comment": "PERSPECTIVE 1: SUBSISTENCE POPULATION (SNARE) \u2014 Trapped between consuming contaminated grain (ergot poisoning) or facing starvation. No exit: cannot afford to reject grain, cannot relocate to unaffected regions, cannot access uncontaminated food supplies. Extraction is severe: the constraint forces consumption of a poisoned commodity without alternative. d\u22480.94, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Marginal Grain Consumer",
+      "comment": "PERSPECTIVE 2: MARGINAL GRAIN CONSUMER (TANGLED ROPE) \u2014 Constrained by poverty and harvest vulnerability, but also benefits from grain availability itself (coordination function: grain production enables survival). During ergot years, bears disproportionate cost because wealthy can afford clean grain or alternative foods. d\u22480.72, f(d)\u22481.13, \u03c3=0.9 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Grain Producers with Ergot Knowledge",
+      "comment": "PERSPECTIVE 3: GRAIN PRODUCERS WITH ERGOT KNOWLEDGE (ROPE) \u2014 Institutional coordination: those who understand ergot (can identify sclerotia, know winnowing techniques, understand wet/damp conditions favor infection) benefit from both grain production AND knowledge selection. They can reduce ergot risk through crop rotation, drying practices, and visual inspection. They experience the constraint as a coordination problem: disseminating knowledge would stabilize grain supplies. d\u22480.15, f(d)\u22480.02, \u03c3=0.9 \u2192 \u03c7\u22480.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Religious Authorities (Plague Interpretation)",
+      "comment": "PERSPECTIVE 4: RELIGIOUS AUTHORITIES (TANGLED ROPE) \u2014 Interpret ergot poisoning epidemics as divine punishment (St. Anthony's Fire), which reinforces their institutional authority and generates pilgrimage revenue and donations. Coordination function: church offers sanctuary and collective prayer during crisis. Extraction: church captures authority to define the plague's meaning and solution, directing fear-driven resources to ecclesiastical institutions. They have arbitrage exit (can reframe causation, redirect blame). d\u22480.25, f(d)\u22480.08, \u03c3=0.9 \u2192 \u03c7\u22480.04."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Agricultural Reformers and Public Health Advocates",
+      "comment": "PERSPECTIVE 5: AGRICULTURAL REFORMERS (SCAFFOLD) \u2014 Organized agents (agronomists, clergy promoting hygiene, local authorities mandating grain inspection) see ergot as a problem WITH a sunset: systematic grain inspection, crop rotation, and improved drying practices can reduce contamination. This is temporary coordination to build toward a permanent solution (fungicide-resistant varieties, industrial grain cleaning). d\u22480.35, f(d)\u22480.28, \u03c3=0.9 \u2192 \u03c7\u22480.13. Sunset clause: by 18th-19th centuries, these reforms reduce ergot outbreaks to near-zero in regions with centralized grain control."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Medieval Grain Storage and Distribution Systems",
+      "comment": "PERSPECTIVE 6: MEDIEVAL GRAIN STORAGE SYSTEMS (PITON) \u2014 The feudal tithe and grain storage system is largely performative by the ergot era (13th-16th centuries): granaries exist but are poorly maintained, drying is inconsistent, and inspection is minimal. Theater ratio (0.48) is moderate here\u2014some functional storage exists but much is degraded ritual. The system persists through institutional inertia (lord's duty, tithe obligation) rather than effectiveness. d\u22480.40, f(d)\u22480.40, \u03c3=0.9 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Biological Inevitability View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / BIOLOGICAL INEVITABILITY (MOUNTAIN?) \u2014 From a civilizational perspective, ergot is a fungal parasite that will infect damp grain wherever human agriculture exists. This appears as an immutable biological law: grain cultivation creates the ecological conditions for Claviceps; prevention requires knowledge or technology not available before the 19th century. However, structural data (\u03b5=0.52, suppression=0.68, theater=0.48) contradicts mountain criteria (\u03b5\u22640.25). The engine will classify this as a false summit: ergot is contingent on grain handling practices, not an inherent biological necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ergot_knowledge_distribution_threshold",
+      "question": "What fraction of a grain-producing region's population needs to understand ergot identification and prevention for transmission of contaminated grain to cease?",
+      "resolution_mechanism": "Historical analysis of regional grain contamination rates correlated with documented spread of agronomic knowledge; comparison of regions with organized guild knowledge (bakers, millers) vs decentralized peasant farming",
+      "impact": "If threshold < 15%: constraint becomes rope-dominant even at regional scale. If threshold > 50%: ergot persists as snare until industrial grain cleaning (19th century).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Knowledge distribution threshold for ergot control"
+    },
+    {
+      "id": "religious_authority_capture_mechanism",
+      "question": "Does the church's interpretation of ergot as divine punishment (St. Anthony's Fire) reduce or increase contamination by directing resources toward actual prevention?",
+      "resolution_mechanism": "Comparison of ergot outbreak rates in regions with strong ecclesiastical authority over grain distribution vs secular-managed regions; analysis of church-sponsored grain inspection vs pilgrimage-driven wealth extraction",
+      "impact": "If prevention-dominant: religious interpretation functions as coordination (constraint becomes Rope from church perspective). If extraction-dominant: religious interpretation is purely extractive narrative (remains Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether religious authority reduces or exploits ergot epidemics"
+    },
+    {
+      "id": "famine_severity_feedback_loop",
+      "question": "Does rejection of ergot-contaminated grain during scarcity increase starvation-driven mortality more severely than ergotism mortality, creating a perverse incentive to consume poison?",
+      "resolution_mechanism": "Historical mortality data comparing ergotism deaths vs starvation deaths in same regions during same years; economic analysis of grain prices and availability during outbreak years",
+      "impact": "If starvation > ergotism: constraint becomes unavoidable (suppression\u22650.80). If ergotism > starvation: populations could theoretically refuse contaminated grain (suppression closer to 0.50).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Starvation vs ergotism mortality trade-off"
+    },
+    {
+      "id": "winnowing_sufficiency_for_prevention",
+      "question": "Does mechanical winnowing and visual inspection of rye actually remove ergot sclerotia at rates sufficient to reduce contamination below poisoning thresholds?",
+      "resolution_mechanism": "Technical analysis of sclerotia size and density vs winnowing effectiveness; historical accounts of miller and baker practices in regions with low ergot rates",
+      "impact": "If sufficient: ergot becomes manageable through coordination of grain handling (constraint becomes rope). If insufficient: constraint remains snare until fungicide or modern grain cleaning.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mechanical removal effectiveness for ergot prevention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 1200,
+    "end": 1800
+  },
+  "commentary": {
+    "narrative_context": "The ergot/famine dilemma represents a constraint at the intersection of biology, agriculture, and social power that persisted across 600 years of European history until modern grain handling eliminated it. Ergot (Claviceps purpurea) is a fungal parasite that produces ergotamine alkaloids\u2014the chemical parent of LSD\u2014causing convulsions, hallucinations, gangrene, and death when consumed in contaminated grain. From the subsistence population's perspective, the constraint is a snare: eat poisoned grain or starve. From the grain producer's perspective with ergot knowledge, it is coordination problem: disseminating prevention techniques would reduce contamination. From the church's perspective, ergot epidemics are divine punishment that reinforce ecclesiastical authority and generate pilgrimage revenue\u2014a tangled rope mixing genuine sanctuary provision with extraction of fear-driven donations. The constraint exhibits theater: medieval grain storage systems are largely performative (granaries exist but lack effective drying and inspection), yet persist through institutional obligation. The extractiveness has increased over the interval (0.28 to 0.52) as population pressure intensified competition for grain and as religious interpretations of ergot became institutionalized, directing resources toward pilgrimage sites rather than agricultural reform. The constraint has no single type\u2014it is all six, depending on observational position.",
+    "key_agents": [
+      "Subsistence populations: Primary victims (powerless/trapped) \u2014 forced to consume contaminated grain or face starvation; zero exit options",
+      "Marginal grain consumers: Secondary victims (moderate/constrained) \u2014 poorer populations consume higher-contamination lots; cannot afford alternative foods",
+      "Grain producers with ergot knowledge: Primary beneficiaries (institutional/arbitrage) \u2014 understand sclerotia identification, winnowing, drying; can reduce contamination through selective practices",
+      "Religious authorities: Institutional beneficiaries (powerful/arbitrage) \u2014 interpret ergot as divine punishment; capture authority and resources through pilgrimage; provide genuine sanctuary but extract wealth and social control",
+      "Agricultural reformers: Organized agents (organized/constrained) \u2014 develop grain inspection mandates and crop rotation rules; see ergot as temporary problem with sunset through agricultural science",
+      "Medieval feudal grain systems: Institutional actor (institutional/constrained) \u2014 tithe collection, granary maintenance; largely performative by ergot era, persisting through obligation rather than effectiveness",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent agricultural practices as immutable biological law"
+    ],
+    "logic_rationale": "Extractiveness (0.52, final): Moderate-high and rising. The constraint extracts through multiple mechanisms: (1) Population growth and marginal land cultivation increase ergot exposure (wetter soils favor fungus); (2) Feudal tithe systems prioritize tax grain collection over quality control, concentrating contamination in poorer households; (3) Religious interpretations direct crisis response toward pilgrimage rather than prevention. The trajectory from 0.28 to 0.52 over the interval reflects intensifying extraction as population density increased and religious institutions monopolized interpretation of the plague. By 1500s, ergot epidemics were endemic in some regions, extracting immense cost in mortality, disability, and institutional loyalty. Suppression (0.68, high): Substantial barriers prevent escape. Subsistence farmers cannot refuse grain. Alternative proteins (legumes, meat) are expensive or unavailable. Geographic mobility is restricted (feudalism). Knowledge of prevention is not accessible (guild secrets, clerical monopoly on written knowledge). The only escape is wealth\u2014the wealthy buy clean grain or alternative foods. Suppression is structural and deliberate: feudal systems did not invest in grain quality control because contaminated grain still collected taxes and kept populations dependent. Theater ratio (0.48, moderate): Grain storage systems are partly functional and partly performative. Granaries do exist and serve real coordination purposes (stabilizing supply across seasons). But inspection and drying are inconsistent. The performative element increases over time: religious processions and pilgrimages to St. Anthony's shrines are ritual responses that displace actual prevention. By 1600s, the theater dominates institutional response\u2014pilgrimage revenue grows as ergot episodes continue.",
+    "perspectival_gap": "This constraint demonstrates radical perspectival divergence. The subsistence population sees an unavoidable poisoning mechanism (snare). The grain producer with knowledge sees a solvable problem requiring information dissemination (rope). The religious authority sees an opportunity to reinforce institutional power through interpretation (tangled rope, mixing genuine sanctuary with extraction). The agricultural reformer sees a temporary problem yielding to systematic reform (scaffold). The feudal grain system sees itself as functional coordination, but the analytical observer sees it as largely performative (piton). The civilizational observer risks seeing immutable biological fate (mountain), but the structural data reveals contingency: ergot is not inevitable\u2014it results from damp grain handling, population pressure on marginal lands, and institutional failure to invest in quality control. The perspectival gap measures institutional capture: the church monopolizes interpretation, preventing the knowledge-holder's (grain producer's) rope perspective from becoming dominant.",
+    "directionality_logic": "Subsistence population: Victim + trapped \u2192 d\u22480.94, f(d)\u22481.40. Maximum extraction. Marginal grain consumer: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.13. High extraction; has minimal alternatives. Grain producers with knowledge: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.02. Net beneficiary; can exit through knowledge transfer or relocation. Religious authorities: Beneficiary + arbitrage (but partly captured by their own institutional narrative) \u2192 d\u22480.25, f(d)\u22480.08. Institutional beneficiary; they have exit (can reframe causation) but are somewhat locked into the pilgrimage-interpretation narrative. Agricultural reformers: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.28. Low effective extraction; they see the constraint as temporary and solvable. Feudal grain systems: Institutional + constrained (not true arbitrage because the system cannot easily modernize) \u2192 d\u22480.40, f(d)\u22480.40. Moderate extraction as a piton.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that tangled_rope is the correct canonical classification at the civilizational analytical level, not mountain (false summit via naturalization). The extractiveness (0.52) and suppression (0.68) clearly exceed mountain thresholds (\u03b5\u22640.25, suppression\u22640.05). The constraint exhibits both coordination (grain production enables survival) and asymmetric extraction (the constraint forces poisoned consumption on the powerless while benefiting authorities). Beneficiaries include grain producers with knowledge and religious institutions that profit from epidemic interpretation. Victims include subsistence populations and marginal consumers. The constraint requires active institutional enforcement: feudal tithe systems, clerical monopoly on knowledge, lack of grain quality regulation. These three features (beneficiaries, victims, active enforcement) satisfy the tangled_rope gate. The rope perspective (beneficiary grain producer) is empirically real but minority\u2014confined to elites with agronomic knowledge. The snare perspective (subsistence population) is the majority experience. The mandatrophy is resolved by recognizing that the constraint IS a tangled rope (mixing genuine coordination with extraction) across all temporal and spatial scales, but the extraction component dominates at the subsistence level because knowledge is monopolized and institutions fail to disseminate prevention. The scaffold and piton perspectives show that this could be resolved\u2014agricultural reform reduces ergot to negligible levels by 1850\u2014but resolution was delayed by institutional capture (church monopolizing interpretation) and economic structures (feudal systems not incentivized to improve grain quality)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_grain_monopoly",
+      "ecclesiastical_knowledge_monopoly",
+      "agricultural_innovation_diffusion"
+    ],
+    "dual_formulation_note": "The ergot dilemma is downstream of feudal grain monopolies (constraints on who can own/trade grain) and ecclesiastical monopolies on written knowledge (constraints on who can disseminate agricultural know-how). These upstream constraints have their own \u03b5 values (likely higher, as they are purely extractive). The ergot constraint (\u03b5=0.52) represents the intersection of biological contingency with institutional capture. Decomposition: ergot_as_biological_hazard (\u03b5\u22480.15, rope\u2014pure coordination problem) vs ergot_as_extracted_famine_mechanism (\u03b5\u22480.52, tangled_rope\u2014institutional capture of response)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.32
+    }
+  ]
+}

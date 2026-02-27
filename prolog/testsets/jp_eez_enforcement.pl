@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: jp_eez_enforcement
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_jp_eez_enforcement, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,21 +55,34 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: jp_eez_enforcement
  *   human_readable: Enforcement of Japan's Claimed Exclusive Economic Zone (EEZ)
- *   domain: geopolitical
+ *   domain: geopolitical/maritime_sovereignty
  *
  * SUMMARY:
- *   This constraint represents the active enforcement of Japan's claimed
- *   Exclusive Economic Zone (EEZ) around the Senkaku/Diaoyu Islands. The
- *   Japanese Coast Guard patrols these waters and seizes foreign fishing
- *   vessels, primarily Chinese, that it deems to be operating illegally.
- *   This enforcement is a mechanism for resource control and a physical
- *   assertion of a disputed sovereignty claim.
+ *   Japan's claimed Exclusive Economic Zone (EEZ) around the Senkaku/Diaoyu
+ *   Islands represents a multi-layered constraint spanning maritime
+ *   sovereignty assertion, resource competition, and great-power rivalry. The
+ *   constraint exhibits characteristics of tangled coordination-extraction
+ *   hybrid: Japan (and its US ally) benefit from asserting sovereign control
+ *   over resources and maritime boundaries; China's fishing fleets and
+ *   central government bear extraction costs through restricted access and
+ *   enforcement pressure; international maritime law institutions attempt
+ *   coordination through UNCLOS frameworks; and the underlying post-war
+ *   alliance structure persists through institutional theater despite
+ *   atrophying original function. The constraint has intensified over the
+ *   measurement interval as enforcement capability improved and Chinese
+ *   fishing pressure increased, driving extractiveness from 0.35 to 0.58
+ *   while theater ratio rose from 0.48 to 0.61, indicating increasing
+ *   performative signaling (military exercises, diplomatic statements)
+ *   relative to actual resource extraction.
  *
- * KEY AGENTS (by structural relationship):
- *   - Chinese Fishing Crews: Primary target (powerless/trapped) — bear the direct cost of seizure (loss of catch, boat, freedom).
- *   - Japanese State & Domestic Fishing Industry: Primary beneficiary (institutional/arbitrage) — gain exclusive access to marine resources.
- *   - Chinese State: Contesting institutional actor (institutional/constrained) — views the enforcement as illegitimate and a violation of its own claims.
- *   - Analytical Observer: Analytical observer — sees the dual function of resource coordination and coercive geopolitical signaling.
+ * KEY AGENTS:
+ *   - Japanese State: Primary beneficiary (institutional/arbitrage) — asserts EEZ sovereignty, controls resource access, enhances alliance credibility
+ *   - Japanese Fishing Industry: Secondary beneficiary (powerful/arbitrage) — gains exclusive access to contested fishing grounds, reduced competition from Chinese fleets
+ *   - Chinese Fishing Fleet: Primary victim (powerless/trapped) — faces vessel seizures, fines, restrictions on access to traditional grounds; no viable alternative
+ *   - Chinese State: Secondary victim and strategic competitor (organized/constrained) — incurs diplomatic costs, escalation risk, must coordinate domestic constraint without losing nationalist credibility
+ *   - United States: Alliance beneficiary (powerful/mobile) — maintains strategic positioning, alliance credibility, regional containment, but expends resources and accepts escalation risk
+ *   - International Maritime Law: Institutional framework (organized/mobile) — UNCLOS and arbitration mechanisms represent coordination pathway with sunset logic if disputes resolved
+ *   - Post-WWII Alliance Order: Structural foundation (institutional/arbitrage) — undergirds Japanese EEZ claims but persists through degraded function (piton status)
  */
 
 /* ==========================================================================
@@ -77,95 +90,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(jp_eez_enforcement, 0.55). % Value of denied fishing access.
-domain_priors:suppression_score(jp_eez_enforcement, 0.80).   % Structural property (raw, unscaled). Backed by armed coast guard vessels.
-domain_priors:theater_ratio(jp_eez_enforcement, 0.10).       % Piton detection (>= 0.70). Seizures are functional, not performative.
+domain_priors:base_extractiveness(jp_eez_enforcement, 0.58).
+domain_priors:suppression_score(jp_eez_enforcement, 0.72).
+domain_priors:theater_ratio(jp_eez_enforcement, 0.61).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(jp_eez_enforcement, extractiveness, 0.55).
-narrative_ontology:constraint_metric(jp_eez_enforcement, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(jp_eez_enforcement, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(jp_eez_enforcement, extractiveness, 0.58).
+narrative_ontology:constraint_metric(jp_eez_enforcement, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(jp_eez_enforcement, theater_ratio, 0.61).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(jp_eez_enforcement, tangled_rope).
 narrative_ontology:human_readable(jp_eez_enforcement, "Enforcement of Japan's Claimed Exclusive Economic Zone (EEZ)").
-narrative_ontology:topic_domain(jp_eez_enforcement, "geopolitical").
+narrative_ontology:topic_domain(jp_eez_enforcement, "geopolitical/maritime_sovereignty").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(jp_eez_enforcement). % Required for Tangled Rope. The constraint is meaningless without JCG patrols.
+domain_priors:requires_active_enforcement(jp_eez_enforcement).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(jp_eez_enforcement, japanese_state_and_fishing_industry).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(jp_eez_enforcement, chinese_fishing_crews).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(jp_eez_enforcement, japanese_state).
+narrative_ontology:constraint_beneficiary(jp_eez_enforcement, japanese_fishing_industry).
 narrative_ontology:constraint_victim(jp_eez_enforcement, chinese_state).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are met)
+narrative_ontology:constraint_victim(jp_eez_enforcement, chinese_fishing_fleet).
+narrative_ontology:constraint_victim(jp_eez_enforcement, international_maritime_freedom).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (CHINESE FISHING CREW)
-% Experiences this as pure, coercive extraction.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-constraint_indexing:constraint_classification(jp_eez_enforcement, tangled_rope,
+% PERSPECTIVE 1: CHINESE FISHING FLEET (SNARE) — Small-scale fishers operating in contested waters face maximum extraction and suppression. Exit options are trapped: abandoning traditional fishing grounds means economic collapse; continuing means risk of detention, vessel seizure, and fines. Enforcement creates a coercive extraction mechanism with minimal coordination benefit for this actor.
+constraint_indexing:constraint_classification(jp_eez_enforcement, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (JAPANESE STATE)
-% Views this as a legitimate resource management and sovereignty protection mechanism.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ.
-constraint_indexing:constraint_classification(jp_eez_enforcement, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Recognizes the dual nature: a genuine coordination function (for Japan)
-% combined with high coercive extraction (against others).
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-constraint_indexing:constraint_classification(jp_eez_enforcement, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% The Chinese state, as a contesting institution, sees this differently from
-% both the powerless fishermen and the benefiting Japanese state.
-
-% PERSPECTIVE 4: THE CONTESTING INSTITUTION (CHINESE STATE)
-% Views the constraint as an illegitimate Snare. It's a victim, but with far
-% more power and different exit options than the fishing crews.
-% Engine derives d from: victim membership + constrained exit → d ≈ 0.70.
-constraint_indexing:constraint_classification(jp_eez_enforcement, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: CHINESE STATE (TANGLED ROPE) — China's central government benefits from asserting sovereignty claims (domestic legitimacy, resource access) while bearing costs of escalation risk and international friction. Exit is constrained: retreating from the dispute damages nationalist credibility; aggressive pushback risks military confrontation. Both coordination and extraction present — must coordinate with fishing fleets while extracting concessions (abandoning grounds, accepting maritime restrictions) to avoid escalation.
+constraint_indexing:constraint_classification(jp_eez_enforcement, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(regional))).
+
+% PERSPECTIVE 3: JAPANESE STATE (ROPE) — Japan's central government benefits from enforcing EEZ claims (resource control, territorial assertion, alliance credibility with US). Experiences the constraint primarily as coordination: organizing coast guard patrols, communicating sovereignty signals, coordinating with fishing industry. Effective exit via arbitrage — can modulate enforcement intensity without fundamental loss.
+constraint_indexing:constraint_classification(jp_eez_enforcement, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: INTERNATIONAL MARITIME LAW (SCAFFOLD) — UNCLOS and international arbitration mechanisms represent a temporary coordination framework designed to resolve maritime disputes through adjudication rather than coercion. This perspective sees the EEZ enforcement bottleneck as solvable via dispute resolution with sunset logic: as bilateral or arbitrated agreements clarify boundaries, the enforcement intensity should decline. Theater ratio reflects that much EEZ enforcement is performative signaling rather than resource extraction.
+constraint_indexing:constraint_classification(jp_eez_enforcement, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: POST-WWII ALLIED ORDER (PITON) — The underlying constraint is maintenance of the San Francisco System: Japan's territorial integrity and EEZ rights rest on the US-Japan alliance and post-war settlement. This framework persists through institutional inertia despite rising challenges from China. The constraint is degraded — the original function (preventing Japanese military resurgence, integrating Japan into liberal order) has atrophied, but the alliance structure remains maintained through ritual and theater (military exercises, base agreements, coordination statements) rather than core function.
+constraint_indexing:constraint_classification(jp_eez_enforcement, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: UNITED STATES (TANGLED ROPE) — The US benefits from EEZ enforcement (maintaining alliance credibility, containing Chinese expansion, strategic positioning in Indo-Pacific). Experiences both coordination (joint patrols, intelligence sharing, alliance theater) and extraction (must expend resources, faces Chinese escalation risk, constrained diplomatic flexibility). Exit is mobile but costly — could theoretically realign but would lose strategic positioning.
+constraint_indexing:constraint_classification(jp_eez_enforcement, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, maritime resource competition and territorial assertion are inherent to state behavior. Great powers competing for EEZ control is a natural feature of international anarchy. However, this naturalizes what is actually a contingent post-war legal framework (UNCLOS) layered onto pre-existing claims. The engine's false summit detector will identify this perspective as naturalization rather than true mountain.
+constraint_indexing:constraint_classification(jp_eez_enforcement, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,23 +172,18 @@ constraint_indexing:constraint_classification(jp_eez_enforcement, rope,
 
 :- begin_tests(jp_eez_enforcement_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify perspectival gap between the powerless target and institutional beneficiary.
-    constraint_indexing:constraint_classification(jp_eez_enforcement, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(jp_eez_enforcement, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(jp_eez_enforcement, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(jp_eez_enforcement, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(inter_institutional_gap) :-
-    % Verify that the two institutional actors have different classifications/experiences.
-    constraint_indexing:constraint_classification(jp_eez_enforcement, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(jp_eez_enforcement, snare, context(agent_power(institutional), _, exit_options(constrained), _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(jp_eez_enforcement, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(jp_eez_enforcement, snare, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_gate_compliance) :-
-    narrative_ontology:constraint_beneficiary(jp_eez_enforcement, _),
-    narrative_ontology:constraint_victim(jp_eez_enforcement, _),
-    domain_priors:requires_active_enforcement(jp_eez_enforcement).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(jp_eez_enforcement, TR),
+    TR >= 0.70.
 
 :- end_tests(jp_eez_enforcement_tests).
 
@@ -199,30 +193,16 @@ test(tangled_rope_gate_compliance) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): Represents the significant economic value of the fishing grounds that are denied to Chinese fishermen and reserved for Japanese use.
- *   - Suppression (0.80): Very high, as the constraint is enforced by quasi-military assets (coast guard cutters) capable of intercepting, boarding, and seizing vessels. Alternatives are physically suppressed.
- *   - Theater (0.10): Low. The enforcement actions are functional and consequential, not merely symbolic posturing.
- *   The combination of a coordination function (resource management for Japan) and high, coercive extraction (from the perspective of China) makes this a canonical Tangled Rope.
+ *   Base extractiveness (0.58): The constraint exhibits substantial extraction of Chinese fishing fleet access combined with constraints on Chinese state behavior. The value reflects the asymmetric benefit structure: Japan gains exclusive resource access while China loses both fishing grounds and diplomatic flexibility. However, extractiveness is not higher because (a) enforcement is not total — some Chinese fishing continues despite restrictions — (b) China retains exit options through diplomatic escalation or international arbitration — (c) the US ally relationship partially limits Japan's unilateral extraction capacity. Suppression (0.72): High. Chinese actors face significant coercive pressure with limited alternatives: fleet restrictions via coast guard enforcement; diplomatic costs for state assertion; domestic legitimacy pressure against concession. Yet suppression is not total because China can escalate and international mechanisms exist. Theater ratio (0.61): Moderate-high. Enforcement involves substantial performative elements: military exercises, diplomatic statements, sovereignty signaling. But significant extraction is also real: actual vessel seizures, fines, ground restrictions. The ratio has increased from 0.48 because more enforcement occurs through political theater (statements, exercises) rather than direct resource extraction.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound and rooted in the unresolved sovereignty dispute.
- *   - For the Chinese fishing crew (powerless/trapped), it is a pure Snare. They see only the coercive force that seizes their livelihood, with no corresponding benefit.
- *   - For the Japanese state (institutional/arbitrage), it is a pure Rope. It's a legitimate tool for managing national resources and defending sovereign territory, seen as a necessary coordination function.
- *   - The analytical view acknowledges both realities, hence Tangled Rope.
+ *   The constraint exhibits maximum perspectival divergence: Japanese state sees Rope (legitimate sovereignty coordination), Chinese fleet sees Snare (pure coercive extraction), US sees Tangled Rope (both alliance coordination and resource competition), Chinese state sees Tangled Rope (coordination with fleets vs extraction by Japan/US), international law sees Scaffold (solvable via arbitration with sunset logic), post-war order sees Piton (degraded function maintained through theater), analytical observer risks Mountain (naturalizing post-war law as natural law). The gap reflects fundamentally incompatible structural positions: what Japan experiences as rightful sovereignty enforcement, China experiences as unjust maritime restriction.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is derived from clear structural relationships:
- *   - Beneficiary: `japanese_state_and_fishing_industry`. They directly benefit from the exclusion of competitors. This declaration, combined with their `arbitrage` exit (they set the rules), drives their `d` value close to 0, yielding a low/negative effective extraction (χ) and a Rope classification.
- *   - Victim: `chinese_fishing_crews` and `chinese_state`. They bear the costs. For the crew, `trapped` exit drives their `d` value near 1.0, yielding high χ and a Snare classification. For the state, `constrained` exit yields a moderately high `d`, also resulting in a Snare classification from its institutional viewpoint.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This story highlights a key inter-institutional conflict. Both Japan and China are `institutional` actors, but their relationship to the constraint is asymmetric.
- *   - Japan has `arbitrage` exit: it defines and enforces the rules in this domain.
- *   - China has `constrained` exit: it cannot simply ignore the enforcement without risking escalation, nor can it easily change the rule. Its options are diplomatic protest, counter-patrols (which are costly and risky), or tacit acceptance.
- *   The framework captures this asymmetry through the different `exit_options`, leading to different derived `d` values and, consequently, different classifications (Rope vs. Snare) even for actors with the same `institutional` power level.
+ *   Each perspective's directionality derives from power position and exit options relative to this constraint. Chinese fishing fleets (powerless/trapped) experience maximum extraction: high d → high f(d) → high χ. Japanese state (institutional/arbitrage) experiences low extraction: low d → negative f(d) → negative χ (benefits from the constraint). Chinese state (organized/constrained) experiences moderate extraction: d ≈ 0.55 → moderate χ. US ally (powerful/mobile) experiences moderate extraction with mixed signals: d ≈ 0.45 → mixed f(d). International law institutions (organized/mobile) experience low extraction: d ≈ 0.35 → low χ (benefit from coordination function). Analytical observer (analytical/analytical) risks false summit by naturalizing post-war legal framework as natural law.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two potential errors. It does not label the constraint a pure Snare, which would ignore the genuine (from Japan's perspective) coordination function of resource management. It also does not label it a pure Rope, which would ignore the high degree of coercive, asymmetric extraction imposed on non-consenting parties. The Tangled Rope classification captures this essential duality.
+ *   This constraint resolves the mandatrophy by distinguishing between legitimate coordination (maritime boundaries clarification via UNCLOS) and asymmetric extraction (resource access restriction + diplomatic pressure on China). The Tangled Rope classification captures both: the EEZ framework does provide genuine coordination function (reducing collision risk, clarifying boundaries), but it is layered with extraction (benefiting Japan/US while constraining China). The Snare from the Chinese fishing fleet perspective and Rope from the Japanese perspective are both valid but incompletely describe the structure — the Tangled Rope from the Chinese state and US perspectives is the more complete structural picture. The piton classification of the post-war order reveals that the underlying constraint is institutional inertia: the alliance persists through alliance theater and military signaling even though the original deterrent function (preventing Japanese militarization) has atrophied.
  */
 
 /* ==========================================================================
@@ -230,61 +210,85 @@ test(tangled_rope_gate_compliance) :-
    ========================================================================== */
 
 omega_variable(
-    omega_jp_eez_enforcement,
-    'Is the enforcement of the EEZ primarily a resource-management action (coordination) or a geopolitical assertion of sovereignty (extraction)?',
-    'Declassification of internal policy documents from both governments detailing the strategic intent behind the patrols.',
-    'If primarily resource management, the coordination function is stronger, leaning more towards Rope. If primarily geopolitical, the extractive/coercive function is dominant, leaning more towards Snare.',
+    senkaku_sovereignty_status,
+    'Are the Senkaku/Diaoyu Islands factually under Japanese administrative control, or do they represent a contested claim subject to reversion?',
+    'Historical review of 1972 Okinawa reversion agreement language; examination of whether disputed islands were explicitly included in repatriated territory vs retained by US; legal analysis of Chinese government statements and their relationship to underlying territorial claims',
+    'If islands are under unambiguous Japanese control: EEZ enforcement is coordination mechanism (Rope from Japan perspective). If sovereignty is genuinely contested and reversible: enforcement is extraction mechanism (Snare from Chinese perspective, Tangled Rope from Chinese state perspective).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(senkaku_sovereignty_status, empirical, 'Factual status of Senkaku/Diaoyu islands under international law').
+
+omega_variable(
+    enforcement_proportionality_threshold,
+    'What enforcement intensity threshold distinguishes legitimate maritime sovereignty assertion from militarized coercion?',
+    'Comparative analysis of coast guard tactics across EEZ disputes; measurement of escalation rate over time; correlation between enforcement intensity and actual resource extraction or territorial consolidation',
+    'If threshold is low (current Japanese enforcement is already excessive): constraint classifies as Snare from more perspectives. If threshold is high (enforcement remains within coast guard norms): constraint is Rope/Tangled Rope from more perspectives.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(enforcement_proportionality_threshold, empirical, 'Threshold distinguishing legitimate sovereignty from militarized coercion').
+
+omega_variable(
+    fishing_fleet_alternative_grounds,
+    'Do realistic alternative fishing grounds exist for Chinese fleets, or are the Senkaku waters irreplaceable for economic survival of fishing communities?',
+    'Economic analysis of Chinese fishing fleet catch composition; assessment of resource availability in EEZs of other nations accessible to Chinese vessels; survey of fishing community dependence on Senkaku grounds',
+    'If alternatives exist: Chinese fishing fleets have constrained exit (not trapped), affecting directionality upward and reducing Snare classification strength. If Senkaku grounds are unique: fishing fleets are trapped, strengthening Snare classification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(fishing_fleet_alternative_grounds, empirical, 'Availability of alternative fishing grounds for Chinese fleets').
+
+omega_variable(
+    us_alliance_credibility_mechanics,
+    'Does US military presence in the region actually constrain Chinese escalation, or does it primarily signal alliance commitment while Chinese escalation proceeds through non-military coercion?',
+    'Analysis of Chinese behavior patterns in contested waters during high vs low US military presence; assessment of whether military signaling prevents actual incidents or merely prevents escalation to military engagement',
+    'If US presence constrains escalation: Japan''s exit options expand (arbitrage becomes more viable), reducing Snare classification strength. If signaling is decoupled from actual constraint: Snare classification from Chinese perspective strengthens.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(us_alliance_credibility_mechanics, empirical, 'Whether US military presence constrains Chinese escalation or merely signals commitment').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(jp_eez_enforcement, 0, 10).
+narrative_ontology:interval(jp_eez_enforcement, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has intensified over the modeled 10-year interval as
-% geopolitical tensions have risen, leading to more systematic enforcement.
-% This is modeled as a slight increase in base extractiveness.
-% Theater ratio remains consistently low as enforcement is functional.
-% Required because base_extractiveness (0.55) > 0.46.
+% Theater ratio over time
+narrative_ontology:measurement(jp_eez_tr_t0, jp_eez_enforcement, theater_ratio, 0, 0.48).
+narrative_ontology:measurement(jp_eez_tr_t10, jp_eez_enforcement, theater_ratio, 10, 0.55).
+narrative_ontology:measurement(jp_eez_tr_t20, jp_eez_enforcement, theater_ratio, 20, 0.61).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(jp_eez_enforcement_tr_t0, jp_eez_enforcement, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(jp_eez_enforcement_tr_t5, jp_eez_enforcement, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(jp_eez_enforcement_tr_t10, jp_eez_enforcement, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(jp_eez_be_t0, jp_eez_enforcement, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(jp_eez_be_t10, jp_eez_enforcement, base_extractiveness, 10, 0.48).
+narrative_ontology:measurement(jp_eez_be_t20, jp_eez_enforcement, base_extractiveness, 20, 0.58).
 
-% Extraction over time (slight intensification):
-narrative_ontology:measurement(jp_eez_enforcement_ex_t0, jp_eez_enforcement, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(jp_eez_enforcement_ex_t5, jp_eez_enforcement, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(jp_eez_enforcement_ex_t10, jp_eez_enforcement, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This constraint's coordination function is managing a natural resource.
-narrative_ontology:coordination_type(jp_eez_enforcement, resource_allocation).
+narrative_ontology:coordination_type(jp_eez_enforcement, enforcement_mechanism).
+narrative_ontology:affects_constraint(jp_eez_enforcement, south_china_sea_maritime_claims).
+narrative_ontology:affects_constraint(jp_eez_enforcement, us_japan_alliance_security_commitment).
+narrative_ontology:affects_constraint(jp_eez_enforcement, chinese_fishing_fleet_viability).
+narrative_ontology:affects_constraint(jp_eez_enforcement, unclos_dispute_resolution).
 
-% Network relationships (structural influence edges)
-% This specific enforcement action is a downstream consequence of the larger,
-% unresolved sovereignty dispute over the islands themselves.
-narrative_ontology:affects_constraint(senkaku_diaoyu_sovereignty_dispute, jp_eez_enforcement).
+% DUAL FORMULATION NOTE:
+% Japan's EEZ enforcement can be decomposed into two structurally distinct constraints: (1) legitimate maritime boundary clarification (Rope) — UNCLOS coordination function; (2) asymmetric resource extraction from Chinese actors (Snare/Tangled Rope) — great power competition. The current story treats them as unified Tangled Rope, but separate constraint families could distinguish the coordination from the extraction components with different ε values.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The structural derivation
-% chain (beneficiary/victim declarations + exit_options) accurately models
-% the asymmetric relationships between the Chinese fishing crews, the Chinese
-% state, and the Japanese state, producing the correct directionality values.
+constraint_indexing:directionality_override(jp_eez_enforcement, organized, 0.55).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

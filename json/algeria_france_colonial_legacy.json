@@ -2,53 +2,73 @@
   "header": {
     "constraint_id": "algeria_france_colonial_legacy",
     "version": "1.0",
-    "generated_date": "2024-05-21",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "algfr"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.35,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
     "claimed_type": "tangled_rope",
     "human_readable": "The persistent structural legacy of French colonization in Algeria",
-    "topic_domain": "geopolitical/economic",
+    "topic_domain": "geopolitical/economic/postcolonial",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "french_state_and_corporations",
-      "algerian_comprador_elites"
+      "french_capital_interests",
+      "francophone_elites_algeria"
     ],
     "victims": [
-      "algerian_populace",
-      "algerian_sovereign_development"
+      "algerian_working_class",
+      "resource_sovereignty",
+      "educational_autonomy"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Algerian Populace",
-      "comment": "PERSPECTIVE 1: ALGERIAN POPULACE (SNARE) — Experiences the legacy as a trap of limited economic opportunity, political disenfranchisement, and cultural dependency. Exit is impossible for the vast majority. High base extraction and trapped status yield a χ value deep in the snare category (χ ≈ 0.96), reflecting a system of pure coercive extraction."
+      "label": "The Algerian Working Class",
+      "comment": "PERSPECTIVE 1: ALGERIAN WORKING CLASS (SNARE) \u2014 Trapped in structural dependency on French language, capital flows, and institutional templates. Education system reproduces French cultural dominance; labor markets value French credentials; emigration requires French visa regimes. No plausible exit without decades of institutional reorientation. Experiences maximum extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Algerian State Institutions",
+      "comment": "PERSPECTIVE 2: ALGERIAN STATE INSTITUTIONS (TANGLED ROPE) \u2014 Constrained by inherited French institutional templates, legal codes, and bureaucratic structures. Coordinating function: French infrastructure investments, technical cooperation, market access. Extraction function: currency mechanisms (CFA-equivalent pressures through trade dependence), professional licensing requirements favoring francophone credentials, terms-of-trade asymmetries. Some agency through diversification efforts but decades of path dependency create lock-in."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The French State & Corporations",
-      "comment": "PERSPECTIVE 2: FRENCH STATE (ROPE) — Perceives the relationship as a beneficial coordination mechanism for managing trade, migration, and geopolitical interests. With arbitrage exit options, the directionality is inverted, resulting in negative effective extraction (χ ≈ -0.10). The constraint is a net subsidy, appearing as pure coordination."
+      "label": "French Capital and Political Elite",
+      "comment": "PERSPECTIVE 3: FRENCH CAPITAL AND POLITICAL ELITE (ROPE) \u2014 Experiences the legacy constraint as pure coordination mechanism: privileged market access, labor force trained in French language and cultural norms, institutional alignment reducing transaction costs. Benefits from Algerian energy exports, agricultural production, and remittances without enforcement overhead. Effective extraction is subsidized by asymmetric exit options \u2014 France can arbitrage toward other markets; Algeria cannot escape institutional embedding."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
+      "agent_power": "organized",
       "time_horizon": "biographical",
       "exit_options": "mobile",
       "spatial_scope": "national",
-      "label": "The Algerian Comprador Elite",
-      "comment": "PERSPECTIVE 3: ALGERIAN ELITE (TANGLED ROPE) — Benefits from the extractive system but is also constrained by it. Their power depends on maintaining the structure, which requires active management of both popular dissent and the relationship with France. They see both the coordination function (maintaining power) and the extraction they facilitate. High suppression and active enforcement are salient features."
+      "label": "Francophone Algerian Elites",
+      "comment": "PERSPECTIVE 4: FRANCOPHONE ALGERIAN ELITES (TANGLED ROPE) \u2014 Organized actors benefiting from cultural capital asymmetry: French language fluency as rare skill in job markets, access to French networks, educational prestige. But also constrained by dependence on French validation of credentials and periodic pressure to assimilate French political positions. Ambivalent relationship: benefits from extraction mechanism but also embedded in it. Some agency through elite networking but vulnerable to shifts in French policy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Colonial Administration Apparatus (Residual)",
+      "comment": "PERSPECTIVE 5: RESIDUAL COLONIAL APPARATUS (PITON) \u2014 Forms like language policy, educational curriculum, administrative codes, and visa regimes persist through institutional inertia despite formal independence. Theater ratio: high. These mechanisms perform legitimacy (described as mutual cooperation, shared civilization, bilateral partnership) while maintaining extraction. The apparatus has lost direct military/political enforcement capacity but retains behavioral lock-in through path dependency and lack of institutional alternatives. Maintainable only through constant theatrical reinforcement."
     },
     {
       "classification_type": "tangled_rope",
@@ -56,94 +76,114 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Post-Colonial Analyst",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's true nature. It possesses a genuine (though perverse) coordination function (language, trade routes, elite networks) layered onto a foundation of severe asymmetric extraction. The high suppression of alternatives and requirement for active enforcement confirm the Tangled Rope classification, distinguishing it from a natural economic outcome."
+      "label": "Analytical Observer (Structural Postcolonial View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees the constraint as a hybrid coordination-extraction mechanism operating via institutional embedding rather than direct coercion. Coordination elements: investment, trade, technical cooperation. Extraction elements: asymmetric dependency, cultural dominance, terms-of-trade disadvantage. The constraint persists because it is embedded in institutions perceived as neutral (language, law, education, currency) rather than coercive. Recognition of both functions is required to avoid false naturalness."
     }
   ],
   "omegas": [
     {
-      "id": "endogenous_vs_exogenous_factors",
-      "question": "Are Algeria's developmental challenges primarily a direct result of the colonial legacy, or are they driven by internal governance failures and broader global economic pressures?",
-      "resolution_mechanism": "Comparative analysis with non-colonized nations with similar resource profiles; econometric models isolating the causal impact of specific colonial-era institutions.",
-      "impact": "If primarily legacy-driven, the Snare/Tangled Rope classifications are confirmed. If primarily internal/global, the constraint might be better modeled as a Rope with high friction or a Mountain of development economics.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Distinguishing colonial legacy impact from other developmental factors"
-    },
-    {
-      "id": "elite_agency",
-      "question": "To what degree are Algerian elites independent actors pursuing their own interests versus agents structurally determined by the post-colonial system?",
-      "resolution_mechanism": "Analysis of capital flight patterns, policy decisions that deviate from French interests, and elite network formation outside the Franco-Algerian sphere.",
-      "impact": "High agency suggests their perspective is closer to a beneficiary of a Rope they help maintain. Low agency suggests they are also partially victims of a Tangled Rope, trapped in a system they must perpetuate.",
+      "id": "institutional_path_dependency_or_deliberate_maintenance",
+      "question": "Does the colonial legacy persist primarily through institutional lock-in and path dependency, or through deliberate maintenance by French elites?",
+      "resolution_mechanism": "Comparative institutional analysis: Do French policy shifts favor Algerian institutional autonomy? Do remittance patterns and capital flows reflect structural embedding or active steering? Analysis of French diplomatic pressure vs. Algerian policy choice autonomy.",
+      "impact": "If path dependency dominates: constraint classification shifts toward Piton (degraded, theater-driven). If deliberate maintenance dominates: classification remains Tangled Rope or shifts toward Snare (active extraction).",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Assessing the independent agency of Algerian elites"
+      "description": "Whether the colonial legacy is maintained through path dependency or deliberate French policy"
     },
     {
-      "id": "pathway_to_exit",
-      "question": "Can alternative economic and political alliances (e.g., with China, Russia, or Pan-African blocs) provide a genuine exit from the constraint, or do they merely substitute one form of dependency for another?",
-      "resolution_mechanism": "Longitudinal study of trade balance, debt structure, and policy sovereignty in nations that have attempted similar geopolitical pivots.",
-      "impact": "If genuine exit is possible, the 'suppression' score is too high and the system is less coercive than a Snare. If it's dependency substitution, the high suppression score is validated.",
+      "id": "francophone_elite_beneficiary_status",
+      "question": "Are Francophone Algerian elites genuine beneficiaries of the colonial legacy or trapped participants whose collaboration is extracted by French interests?",
+      "resolution_mechanism": "Longitudinal analysis of elite economic mobility: Do francophone credentials improve material outcomes relative to arabophone peers? Do elites have genuine exit options or are they locked into dependency relationships? Analysis of elite political autonomy from French pressure.",
+      "impact": "If genuine beneficiaries: extraction is less severe, regime stability is higher, transition difficulties increase. If trapped collaborators: the constraint is more purely extractive, regime vulnerability is higher, coalition potential among elites increases.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Viability of alternative alliances as an exit from dependency"
+      "description": "Whether Francophone elites are beneficiaries or trapped collaborators"
+    },
+    {
+      "id": "language_sovereignty_reversibility",
+      "question": "How reversible is the institutional embedding of French language in Algerian education, law, and administration? What would transition costs be?",
+      "resolution_mechanism": "Feasibility studies from comparable postcolonial transitions (Indonesia's language shift, India's education pluralism). Cost-benefit analysis of Arabicization or Berber/Tamazight elevation vs. maintaining French. Measurement of public demand for language shift vs. elite resistance.",
+      "impact": "If reversible at moderate cost: institutional lock-in is weaker than assumed, exit options improve, extraction classification downgrades. If highly costly: path dependency is structural, exit is genuinely trapped, extraction is amplified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Reversibility of French language institutional embedding"
+    },
+    {
+      "id": "alternative_coordination_pathway_viability",
+      "question": "Could North African (Moroccan, Tunisian, Berber-centered) institutional templates provide functional alternatives to French ones without massive disruption?",
+      "resolution_mechanism": "Comparative institutional design: Are Moroccan/Tunisian legal codes functionally superior or just different? Could Berber/Arabic education systems provide equivalent human capital? Analysis of regional cooperation frameworks (AU, Arab League) as alternative institutional anchors.",
+      "impact": "If viable alternatives exist: the constraint is more extractive than inevitable, transition is plausible, classification remains Tangled Rope or shifts toward Snare. If no alternatives credibly exist: the constraint approaches necessity, extractiveness interpretation shifts toward Rope or even Mountain (coordination necessity).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Viability of alternative non-French institutional templates"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.8
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 31,
       "value": 0.72
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 62,
-      "value": 0.68
+      "time_point": 32,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 64,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 31,
-      "value": 0.25
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 62,
       "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 32,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 64,
+      "value": 0.55
     }
   ],
   "interval": {
     "start": 0,
-    "end": 62
+    "end": 64
   },
   "commentary": {
-    "narrative_context": "This constraint models the enduring, multi-generational impact of France's 132-year colonization of Algeria. After formal independence in 1962, the deep structures of economic dependency, political influence, and cultural orientation remained. These structures were not accidental; they were the result of a colonial project designed for resource extraction and the suppression of indigenous sovereignty. The legacy persists through linguistic ties, established trade routes, monetary policy influence (historically via the Franc zone), and the vested interests of both French corporations and a co-opted Algerian elite.",
+    "narrative_context": "The structural legacy of French colonization in Algeria persists 62 years after formal independence (1962-2024) as a hybrid coordination-extraction mechanism embedded in institutions perceived as neutral rather than coercive. France occupied and colonized Algeria for 132 years (1830-1962), establishing French as the administrative, educational, and economic lingua franca while extracting resources and labor through systematic institutional structures. Formal decolonization transferred political sovereignty but left intact institutional templates (legal codes, educational curricula, language regimes, administrative procedures, currency mechanisms via trade dependence) that reproduce French cultural and economic dominance. The constraint operates through this institutional embedding rather than through direct military coercion \u2014 making it more durable than conventional extraction and harder to recognize as extraction at all. The working class experiences this as a trap: educational mobility requires French language fluency; labor markets reward French credentials; emigration requires negotiating French visa regimes; capital flows are denominated in relationship to French markets. Algerian state institutions are constrained by path dependency on inherited French templates while coordinating genuine functions (infrastructure, trade, technical cooperation). Francophone elites benefit from cultural capital asymmetries but are also locked into the extraction mechanism. French capital interests experience the arrangement as pure coordination \u2014 market access, linguistic homogeneity, institutional predictability \u2014 with no perceived enforcement overhead because the enforcement is built into institutions. The theater ratio reflects that the colonial legacy is increasingly maintained through institutional inertia and linguistic embedding rather than active political enforcement. Over the 64-year postcolonial interval, extractiveness has declined from 0.72 to 0.58 as Algerian institutional autonomy has expanded (central bank independence, energy sector diversification, arabicization of education expansion), but the constraint remains severe because path dependency is structural.",
     "key_agents": [
-      "Algerian Populace: Primary target (powerless/trapped) — bears the costs of underdevelopment and limited sovereignty.",
-      "French State and Corporations: Primary beneficiary (institutional/arbitrage) — reaps economic and geopolitical benefits from the established relationship.",
-      "Algerian Comprador Elites: Secondary beneficiary/enforcer (powerful/mobile) — maintains power and wealth by managing the extractive system.",
-      "Post-Colonial Analyst: Analytical observer (analytical/analytical) — identifies the hybrid nature of the constraint."
+      "Algerian Working Class: Primary victim (powerless/trapped) \u2014 trapped in French language dependency, colonial education curricula, and institutional templates; experiences maximum extraction with minimal coordination benefit",
+      "Algerian State Institutions: Secondary victim (moderate/constrained) \u2014 constrained by inherited French legal codes, bureaucratic structures, and institutional lock-in; some agency through diversification efforts",
+      "French Capital and Political Elite: Primary beneficiary (institutional/arbitrage) \u2014 experiences the constraint as pure coordination mechanism with privileged market access and labor force trained in compatible cultural norms",
+      "Francophone Algerian Elites: Ambivalent actor (organized/mobile) \u2014 benefits from French language cultural capital but also constrained by dependence on French validation of credentials and elite network participation",
+      "Algerian Resource Sectors: Victim (moderate/constrained) \u2014 subject to asymmetric terms of trade with French markets, currency mechanism pressures, and energy export dependency",
+      "Residual Colonial Administrative Apparatus: Structural persistence mechanism (institutional/arbitrage) \u2014 maintains constraint through language policy, educational curricula, legal codes, and visa regimes operating as neutral institutions"
     ],
-    "logic_rationale": "Extractiveness (ε=0.68) is high, reflecting persistent unequal terms of trade, capital flight, and brain drain that systematically benefit the French economy at the expense of Algerian development. Suppression (0.75) is also high; the colonial project actively dismantled or co-opted pre-existing institutions, and post-colonial structures make it extremely difficult and costly for Algeria to pursue truly independent development paths. Theater Ratio (0.35) is moderate; while there is significant diplomatic and cultural performance around the 'special relationship,' the underlying economic extraction is highly functional and not merely inertial.",
-    "perspectival_gap": "The profound perspectival gap is central to this constraint's persistence. The French state experiences a beneficial Rope, a natural and efficient coordination of mutual interests. The Algerian populace experiences a coercive Snare, a system from which they cannot escape and which extracts their future. The Algerian elite navigates a Tangled Rope, benefiting from their position while being bound to the system's logic. The analytical view confirms the Tangled Rope, recognizing that the 'coordination' seen by the beneficiary is the very mechanism of extraction experienced by the victim.",
-    "directionality_logic": "The directionality derivation correctly captures the structural positions. The French state (beneficiary + arbitrage) has a low 'd' value, leading to negative effective extraction (a subsidy). The Algerian populace (victim + trapped) has a very high 'd' value, leading to maximum effective extraction. The Algerian elite (beneficiary + mobile) has a low 'd', but their national scope and role as enforcers place them in a complex hybrid position. The analytical observer's default 'd' value, combined with the high base metrics, correctly identifies the severe extraction inherent in the system's structure.",
-    "mandatrophy_analysis": "This case is a powerful resolution of mandatrophy. A simplistic analysis might label the entire system a Snare, ignoring the agency and benefits accrued by local elites, or a Rope, echoing the neocolonial narrative of 'cooperation.' The Tangled Rope classification is essential, as it correctly identifies the simultaneous existence of a genuine coordination function (for the elites and France) and a deeply extractive function (for the populace). It forces an analysis of *who* benefits and *who* pays, revealing that the coordination *is* the extraction."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The colonial legacy extracts through institutional embedding rather than direct coercion: asymmetric language dependency creates labor market barriers; educational curricula privilege French cultural content; legal codes reproduce French institutional logic; currency mechanisms create trade asymmetries. The extraction is real but lower than during direct colonial period (0.72) because Algerian state has acquired some institutional autonomy (central bank, energy sector management, educational arabicization expansion). Suppression (0.68): High. Barriers to exit include: decades of path dependency in institutional templates; absence of plausible alternative institutional anchors (Moroccan/Tunisian models are not clearly superior; Berber/Arabic institutional capacity is underdeveloped); high transition costs for language shift; demographic lock-in (600,000+ French settlers left but cultural/linguistic legacy persists in institutions, not population). Suppression is not total because some Algerian agency exists \u2014 arabicization programs are expanding, regional trade cooperation is developing, French language is declining in education. Theater ratio (0.55): Moderate. The constraint is increasingly maintained through institutional inertia and linguistic embedding rather than active enforcement. Language policy is presented as neutral educational choice, not colonial legacy; trade relationships are framed as mutual benefit; visa regimes are administrative routine, not extraction mechanism. But theater has increased over the interval because the constraint has lost its overt enforcement apparatus \u2014 persistence depends entirely on perception of institutions as natural rather than coercive.",
+    "perspectival_gap": "Extreme. The beneficiary (French capital) sees pure coordination and mutual benefit. The organized elite (Francophone Algerians) sees mixed benefit and constraint. The state institutions see constrained coordination. The working class sees pure extraction. The residual apparatus sees neutral administrative routine. The analytical observer sees tangled rope \u2014 genuine coordination functions embedded in extraction mechanisms. The perspectival gap arises because the constraint operates through institutional embedding: the same language regime is experienced as educational infrastructure by some, as cultural domination by others, as market access facilitator by France, as labor market barrier by workers. No single perspective is wrong \u2014 the presheaf over institutional positions IS the structure.",
+    "directionality_logic": "Each agent's structural position determines their d value and experienced extractiveness. French capital interests derive d \u2248 0.10 (beneficiary with arbitrage exit) \u2192 f(d) \u2248 -0.08 \u2192 negative \u03c7 (they are subsidized by the constraint). Algerian working class derives d \u2248 0.92 (victim with trapped exit) \u2192 f(d) \u2248 1.38 \u2192 high \u03c7 (they bear maximum extraction). Algerian state institutions derive d \u2248 0.58 (mixed, some victim status, constrained exit) \u2192 f(d) \u2248 0.72 \u2192 moderate \u03c7. Francophone elites derive d \u2248 0.35 (partial beneficiary, but constrained by French network dependence) \u2192 f(d) \u2248 0.25 \u2192 low-moderate \u03c7. The constraint is tangled rope at the state/institutional level because genuine coordination functions (trade, technical cooperation, investment) are bundled with extraction mechanisms (asymmetric dependency, terms-of-trade disadvantage, cultural dominance). Neither can be cleanly separated.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint cannot be classified as pure Rope because the extraction is structurally embedded \u2014 asymmetric language dependency, terms-of-trade disadvantage, and cultural dominance are not artifacts of measurement but structural features. It cannot be classified as pure Snare because genuine coordination benefits exist (infrastructure investment, trade access, technical cooperation) and France experiences no enforcement overhead. The Tangled Rope classification resolves the mandatrophy by acknowledging both functions: the constraint solves real coordination problems (how to maintain institutional compatibility, facilitate trade, enable technical cooperation) AND extracts asymmetrically (through language dominance, institutional lock-in, terms-of-trade imbalance). The critical distinction is that the extraction persists not through force but through institutional embedding \u2014 the machinery of constraint is perceived as neutral (education, law, administration, language) rather than as coercive apparatus. Mandatrophy would occur if we forced this into either pure coordination (Rope) or pure extraction (Snare). The Tangled Rope classification reveals that the constraint's durability derives precisely from this hybrid nature \u2014 beneficiaries experience only coordination, victims experience only extraction, and the institutional apparatus maintains separation of concerns that obscures the asymmetry."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
-      "francafrique_system"
-    ]
-  }
+      "maghreb_economic_integration",
+      "francophone_education_systems",
+      "north_african_currency_regimes"
+    ],
+    "dual_formulation_note": "The colonial legacy constraint decomposes into three structural components: (1) Language/education embedding (\u03b5 \u2248 0.48, Tangled Rope) \u2014 institutional lock-in through French language and curriculum dominance. (2) Trade/currency dependency (\u03b5 \u2248 0.65, Snare at working-class perspective) \u2014 asymmetric market access and capital flow mechanisms. (3) Administrative/legal templates (\u03b5 \u2248 0.42, Rope at state level) \u2014 inherited institutional structures that coordinate but also embed dependency. These are linked via network.affects_constraints but operate with distinct \u03b5 values reflecting their different structural mechanisms. The aggregate constraint story (\u03b5 \u2248 0.58) represents their combined effect."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
 }

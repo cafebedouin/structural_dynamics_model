@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "ncaa_eligibility_rules",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NCAA Eligibility Rules for Student Athletes",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ncaa",
+      "universities"
+    ],
+    "victims": [
+      "student_athletes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Student Athletes",
+      "comment": "Student athletes are trapped by the rules, with limited ability to monetize their skills outside of the NCAA framework. They bear the costs of restricted economic opportunities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NCAA",
+      "comment": "The NCAA benefits from the eligibility rules, as they ensure control over the athlete pool and maintain the amateurism model, enabling revenue generation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Universities",
+      "comment": "Universities benefit from the rules by attracting talented athletes and generating revenue, but are also constrained by the need to comply with NCAA regulations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a broad perspective, the rules present a mixed bag of coordination (organizing college sports) and extraction (limiting athlete compensation), creating a tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "athlete_compensation_limits",
+      "question": "What is the optimal level of compensation for student-athletes that balances their economic rights with the amateurism model?",
+      "resolution_mechanism": "Economic modeling, legal precedent, athlete surveys",
+      "impact": "Determines whether the rules are a justified coordination mechanism or an exploitative snare.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Level of athlete compensation"
+    },
+    {
+      "id": "ncaa_enforcement_effectiveness",
+      "question": "How effectively are NCAA eligibility rules enforced, and what are the consequences of non-compliance?",
+      "resolution_mechanism": "Review of enforcement actions, legal cases, compliance audits",
+      "impact": "Impacts the perceived fairness and legitimacy of the rules.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of rule enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The NCAA eligibility rules govern who can participate in college athletics, restricting the economic opportunities of student-athletes while generating significant revenue for universities and the NCAA. This creates a structural tension between the benefits to the institutions and the costs to the athletes.",
+    "key_agents": [
+      "Student Athletes: Primary target (powerless/trapped) \u2013 limited economic opportunities",
+      "NCAA: Primary beneficiary (institutional/arbitrage) \u2013 revenue generation and control",
+      "Universities: Secondary beneficiary (institutional/constrained) \u2013 revenue and talent acquisition"
+    ],
+    "logic_rationale": "The extractiveness is high because student-athletes generate significant revenue for the NCAA and universities, while their compensation is limited. Suppression is also high due to the lack of alternatives for athletes seeking to play at a high level. The theater ratio is moderate, reflecting that while there is some emphasis on amateurism, the commercial aspects of college sports are significant.",
+    "perspectival_gap": "Student athletes experience the rules as a snare because they are trapped with limited outside options. The NCAA sees the rules as a rope that coordinates the athletic landscape. Universities view it as a tangled rope, because they benefit from revenue but are also constrained by compliance.",
+    "directionality_logic": "The NCAA and universities benefit from the rules, leading to a low directionality value. Student athletes are targeted by the rules, resulting in a high directionality value. The analytical observer sees a mixed effect, resulting in an intermediate value."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

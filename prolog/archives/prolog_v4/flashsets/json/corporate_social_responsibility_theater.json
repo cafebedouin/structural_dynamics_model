@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "corporate_social_responsibility_theater",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Corporate Social Responsibility Theater",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_management",
+      "shareholders"
+    ],
+    "victims": [
+      "intended_beneficiaries",
+      "affected_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Intended Beneficiaries of CSR",
+      "comment": "Those who are supposed to benefit from the CSR initiatives often see little real change and are trapped in their circumstances."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "General Public",
+      "comment": "The general public may recognize the CSR as largely performative but are constrained in their ability to hold companies accountable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Corporate Management",
+      "comment": "Corporate management benefits from enhanced reputation and public image, facilitating arbitrage opportunities in markets and attracting investors."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Shareholders",
+      "comment": "Shareholders benefit from increased stock prices and brand value associated with CSR initiatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the CSR as a tangled rope, with both coordination and extraction elements. Companies coordinate to enhance their image while extracting value from the system by not fully addressing social problems."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genuine_impact_metrics",
+      "question": "What metrics can accurately measure the genuine social and environmental impact of CSR initiatives, beyond superficial PR measures?",
+      "resolution_mechanism": "Development of standardized, independently verified impact assessments for CSR projects.",
+      "impact": "Improved metrics would shift the classification away from theater towards genuine rope if positive impact can be verified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurement of genuine social impact"
+    },
+    {
+      "id": "regulatory_oversight",
+      "question": "To what extent should regulatory bodies oversee and enforce CSR commitments to prevent 'greenwashing'?",
+      "resolution_mechanism": "Comparative analysis of CSR effectiveness under different regulatory regimes.",
+      "impact": "Increased oversight may shift from a tangled rope/snare to scaffold if CSR becomes a coordinated effort to achieve specific targets under government regulation.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Role of regulatory oversight in CSR"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Companies often engage in Corporate Social Responsibility (CSR) initiatives that prioritize public relations and marketing over genuine social impact. This 'CSR theater' allows them to maintain a positive image without significantly altering their core business practices or addressing systemic issues. This constraint affects the intended beneficiaries and the general public, while benefiting corporate management and shareholders.",
+    "key_agents": [
+      "Corporate Management: Primary beneficiary (institutional/arbitrage) - benefits from enhanced reputation and investor confidence.",
+      "Shareholders: Secondary beneficiary (powerful/arbitrage) - benefit from increased stock prices and brand value.",
+      "Intended Beneficiaries: Primary victim (powerless/trapped) - see little real change in their circumstances.",
+      "General Public: Secondary victim (moderate/constrained) - recognize the performative nature but have limited recourse.",
+      "Analytical Observer: Sees the mixed coordination and extraction (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. Companies extract value by enhancing their image and avoiding more costly genuine changes. Suppression (0.40): Moderate. While CSR initiatives may superficially seem beneficial, they often suppress calls for more fundamental and systemic changes. Theater ratio (0.80): High. CSR initiatives are often more about signaling and public relations than actual impact.",
+    "perspectival_gap": "The intended beneficiaries of CSR are often trapped in their circumstances and experience the ineffectiveness of the initiatives (Snare). The general public is somewhat aware of the performative nature of CSR, but is constrained in holding companies accountable (Piton). Corporate management and shareholders benefit from increased reputation and brand value (Rope). The analytical observer sees a tangled rope, with coordination (enhanced image) and extraction (lack of real impact).",
+    "directionality_logic": "Corporate management and shareholders benefit (low d value) while the intended beneficiaries and general public are victims (high d value). This asymmetry drives the tangled rope classification. The relatively high theater ratio is the key determinant, as it reflects the performative nature of the CSR activities.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing the complex interplay of benefits and costs. The model acknowledges that CSR can have both positive and negative aspects, depending on the stakeholder and perspective. Classifying it solely as a 'snare' would ignore the genuine reputational benefits experienced by the corporation (however performative), whereas classifying it solely as 'rope' would ignore the missed opportunities to genuinely help the affected community. Tangled rope acknowledges the both-and character of the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "greenwashing"
+    ]
+  },
+  "directionality_overrides": []
+}

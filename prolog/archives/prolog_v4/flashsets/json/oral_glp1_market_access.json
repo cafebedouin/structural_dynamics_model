@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "oral_glp1_market_access",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Patent-Protected Market for Oral GLP-1 Agonists",
+    "topic_domain": "economic/technological/healthcare",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturer",
+      "shareholders"
+    ],
+    "victims": [
+      "patients",
+      "payers",
+      "competing_drug_manufacturers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Patients without Insurance Coverage",
+      "comment": "Patients without adequate insurance or means to pay face high prices and limited access due to patent protection. Their exit options are severely limited."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Payers (Insurers)",
+      "comment": "Insurers are constrained by their need to provide coverage while managing costs. They negotiate with the manufacturer but are often forced to accept high prices due to lack of alternatives. They benefit from offering a popular treatment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturer",
+      "comment": "The manufacturer benefits from patent protection, allowing them to set prices and maximize profits. They can arbitrage different markets globally."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Competing Drug Manufacturers",
+      "comment": "Manufacturers of older, less effective drugs face declining market share and are constrained by the patent protection of the new drug. They may benefit slightly if patient interest expands the overall market."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes the mixed incentives of innovation and restricted access. Patent system encourages innovation but limits availability due to high prices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "patent_duration_vs_innovation",
+      "question": "What is the optimal patent duration to balance innovation incentives with affordable access?",
+      "resolution_mechanism": "Economic modeling of pharmaceutical R&D investment vs. generic entry impact; historical analysis of drug prices and access post-patent expiration.",
+      "impact": "Shorter duration increases generic competition, but may decrease innovation. Longer duration increases manufacturer profits, but restricts patient access.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal patent duration for oral GLP-1 agonists"
+    },
+    {
+      "id": "market_exclusivity_alternatives",
+      "question": "Are there alternative market exclusivity mechanisms (e.g., data exclusivity, regulatory extensions) that could provide sufficient incentive without patent thickets?",
+      "resolution_mechanism": "Comparative analysis of different exclusivity models in pharmaceutical innovation; case studies of drug development under various regulatory regimes.",
+      "impact": "Alternatives may reduce patent litigation and improve access, but may also be less effective at incentivizing high-risk R&D.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Alternatives to patent protection for oral GLP-1 agonists"
+    },
+    {
+      "id": "tier_price_acceptability",
+      "question": "What level of price discrimination between insured and uninsured patients is ethically and practically acceptable?",
+      "resolution_mechanism": "Ethical framework development; survey of public attitudes toward drug pricing; analysis of the effect of price discrimination on patient access and manufacturer profits.",
+      "impact": "High price discrimination may improve overall access, but could lead to inequitable treatment. Low price discrimination may improve equity but reduce overall access.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Acceptable price discrimination level for oral GLP-1 agonists"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The patent-protected market for oral GLP-1 agonists presents a complex scenario where innovation incentives clash with affordable access. The pharmaceutical manufacturer benefits significantly from patent protection, allowing for high prices and maximized profits. However, patients without adequate insurance coverage face significant barriers, and payers (insurers) are constrained by their need to provide coverage while managing costs. Competing drug manufacturers also face declining market share.",
+    "key_agents": [
+      "Pharmaceutical Manufacturer: Primary beneficiary (institutional/arbitrage) - Patent protection allows for high prices and maximized profits.",
+      "Patients: Primary victims (powerless/trapped) - Lack of insurance or means to pay limits access due to patent protection.",
+      "Payers (Insurers): Moderate influence (moderate/constrained) - Constrained by providing coverage while managing costs, they negotiate prices but face limited alternatives.",
+      "Competing Drug Manufacturers: Victims (moderate/constrained) - Face declining market share due to the patent-protected drug's effectiveness."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The patent allows for significant extraction from patients and payers due to the lack of generic alternatives. Suppression (0.75): High. Patent protection actively suppresses competition, limiting alternatives and driving up prices. Theater Ratio (0.30): Low. Minimal performative activity; real medical benefits and efficacy.",
+    "perspectival_gap": "Patients without insurance view the situation as a snare due to lack of access and high prices. Payers see a tangled rope, constrained by costs but also providing a valuable treatment. The pharmaceutical manufacturer views it as a rope, benefiting from market exclusivity.",
+    "directionality_logic": "Directionality is determined by the agent's structural position. The manufacturer, as the patent holder, has arbitrage options and benefits. Patients without insurance are trapped and bear the cost. Payers are constrained but still derive some benefit from providing a treatment option."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_innovation_incentives",
+      "healthcare_cost_containment"
+    ]
+  },
+  "directionality_overrides": []
+}

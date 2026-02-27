@@ -1,0 +1,144 @@
+{
+  "header": {
+    "constraint_id": "demand_response_cost_shift",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Smart Grid Demand Response Rate Structure",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "grid_operators",
+      "early_adopting_customers"
+    ],
+    "victims": [
+      "late_adopting_customers",
+      "low_usage_customers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Low Usage Customers",
+      "comment": "Low usage customers (e.g., those with solar panels or minimal electricity needs) find themselves paying a disproportionately higher rate because they don't benefit from the DR incentives and still bear the fixed costs of grid maintenance and DR program implementation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Late Adopting Customers",
+      "comment": "Customers who cannot easily adjust their usage patterns, either due to inflexible schedules or lack of smart appliances, are constrained. They partially benefit from a more stable grid, but also bear the costs through increased rates as the load is shifted to off-peak hours. Constrained by their inability to arbitrage and mobile."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Grid Operators",
+      "comment": "Grid operators benefit from the DR program by reducing peak demand and improving grid stability. They can arbitrage by adjusting resource allocation and leveraging real-time grid conditions. Viewed as coordination from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Early Adopting Customers",
+      "comment": "Early adopters of smart technologies who can actively manage their electricity consumption can lower their bills, contribute to grid stability, and reap the rewards, mobile by design."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The observer sees the combined extraction and coordination and enforcement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "elasticity_of_demand",
+      "question": "How responsive are different customer segments to price signals and incentives for demand response?",
+      "resolution_mechanism": "Econometric analysis of customer usage data under varying DR program designs.",
+      "impact": "Determines the effectiveness of DR programs and the magnitude of cost shifts between customer segments.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Customer price elasticity and DR responsiveness"
+    },
+    {
+      "id": "fixed_cost_allocation",
+      "question": "How should the fixed costs of grid infrastructure and DR program implementation be allocated across different customer classes?",
+      "resolution_mechanism": "Cost-benefit analysis of alternative allocation methodologies, considering fairness and economic efficiency.",
+      "impact": "Determines the extent to which low-usage customers subsidize DR programs and whether cost shifts are equitable.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Fixed cost allocation methodology"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Demand Response (DR) programs are designed to stabilize electrical grids by incentivizing users to reduce consumption during peak hours. While benefiting grid operators and some customers, DR programs can also create cost shifts that negatively impact certain customer segments, particularly those with low electricity usage or limited ability to adjust their consumption patterns.",
+    "key_agents": [
+      "Grid Operators: Primary beneficiary (institutional/arbitrage) \u2014 benefits from reduced peak demand and improved grid stability",
+      "Early Adopting Customers: Secondary beneficiary (powerful/mobile) \u2014 benefits from lower bills through adjusted usage",
+      "Late Adopting Customers: Primary victim (moderate/constrained) \u2014 costs through inflexible schedules, pays increased rates",
+      "Low Usage Customers: Secondary victim (powerless/trapped) \u2014 costs through fixed costs/rates"
+    ],
+    "logic_rationale": "The extractiveness score (0.55) reflects the redistribution of costs from high-usage to low-usage customers. Suppression (0.40) captures the limited exit options for customers who are unable to participate in DR programs due to technological or economic constraints. The theater ratio (0.20) is low, DR programs are more substantive then theatric.",
+    "perspectival_gap": "Low usage customers experiences the DR as a pure extraction because they cannot respond and are burdened by the fixed costs. Early adopting customers sees this as coordination because they have the agency and exit options to mobilize. The analytical observer is at the highest abstraction and sees enforcement mechanism and a way to allocate resources.",
+    "directionality_logic": "Beneficiaries and victims are determined by their relative increase and decrease in cost. Early adopters benefit through reduced costs and grid operators benefit through higher stability. The directionality logic captures who benefits and bears the cost."
+  },
+  "directionality_overrides": [],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  }
+}

@@ -2,24 +2,27 @@
   "header": {
     "constraint_id": "belief_argument_conclusion",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "belief"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.8,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "The Futility of Arguing Against Instinctive Belief",
     "topic_domain": "social/philosophical",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "instinct_holder",
-      "social_group"
+      "belief_holders",
+      "status_quo_maintainers"
     ],
     "victims": [
-      "rational_arguer"
-    ]
+      "argument_makers",
+      "epistemic_commons"
+    ],
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
@@ -27,124 +30,159 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Rational Arguer",
-      "comment": "PERSPECTIVE 1: RATIONAL ARGUER (SNARE) — Trapped in a futile exchange, their time, energy, and reason are extracted with no return. The cognitive mechanisms of the believer create a high-suppression environment where logical alternatives are inaccessible. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.74. This high effective extraction classifies the constraint as a Snare."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The Instinctive Believer",
-      "comment": "PERSPECTIVE 2: INSTINCTIVE BELIEVER (MOUNTAIN) — Experiences their belief as an immutable, natural law. The argument is not a threat but a confirmation of this 'law's' strength. The constraint feels unchangeable and fundamental. This is a 'false summit' perspective; the engine will flag it because the base properties (ε=0.65) violate Mountain criteria (ε≤0.25)."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "The Cohesive Social Group",
-      "comment": "PERSPECTIVE 3: SOCIAL GROUP (ROPE) — For the group sharing the belief, the futility of outside arguments is a pure coordination mechanism. It reinforces in-group identity, strengthens social bonds, and prevents fragmentation. d≈0.15, f(d)≈-0.01, σ=0.9 → χ≈-0.006. The negative extraction indicates a net benefit."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Public Debater",
-      "comment": "PERSPECTIVE 4: PUBLIC DEBATER (PITON) — Engages in the argument as a performance. The original function (persuasion) has atrophied, replaced by the theatrical function of signaling intelligence, tribal affiliation, or moral conviction. The high theater_ratio (0.75) satisfies the Piton gate (≥0.70)."
+      "spatial_scope": "global",
+      "label": "The Argument Maker",
+      "comment": "PERSPECTIVE 1: ARGUMENT MAKER (SNARE) \u2014 Invests time, emotional labor, and cognitive resources in rational argumentation against instinctive beliefs. Structural reality: arguments do not change instinctive convictions. The arguer cannot exit \u2014 to stop arguing feels like complicity; to continue is futile. Maximum experienced extraction: effort channeled into a mechanism that structurally cannot succeed. No alternative exists within the social frame."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Belief Holder",
+      "comment": "PERSPECTIVE 2: BELIEF HOLDER (TANGLED ROPE) \u2014 Experiences the constraint as both coordination and extraction. Coordination: arguments provide social proof that their belief is worth defending; the ritual of debate signals group membership. Extraction: sustained argument attacks the belief itself, creating cognitive dissonance and social friction. Constrained exit \u2014 can reject arguments but at cost of social isolation within communities that value rational discourse. Mixed experience of constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Norm-Keeper",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL NORM-KEEPER (ROPE) \u2014 Benefits from the constraint's coordination function. The futility of argument sustains the social norm that 'we debate rationally even when outcomes are predetermined.' Institutions (media, academia, public discourse) monetize this ritual \u2014 argument entertainment generates engagement. Arbitrage exit: institutions can shift to other coordination mechanisms (tribalism, narrative, identity) if debate loses audience value. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Epistemic Reform Movement",
+      "comment": "PERSPECTIVE 4: EPISTEMIC REFORM MOVEMENT (SCAFFOLD) \u2014 Organized agents (cognitive science researchers, educators, media critics) see the argument futility as a temporary institutional failure addressable through structural reform: belief-change techniques (values-affirming framing, backfire-effect understanding, narrative reframing), design interventions (choice architecture, information sequencing), and educational initiatives (scientific literacy, probabilistic reasoning). The constraint has a sunset: as these interventions scale, instinctive belief persistence becomes less extractive. Organized resistance with exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Enlightenment Discourse Ritual",
+      "comment": "PERSPECTIVE 5: ENLIGHTENMENT DISCOURSE RITUAL (PITON) \u2014 The institutionalized belief in rational argument's power \u2014 that reasoned discourse can change minds \u2014 persists despite empirical failure. The theater ratio (0.68) reflects that argument institutions (debate formats, op-ed sections, public forums) are largely performative: the structure of 'winning an argument' is maintained as social ritual even though the mechanism no longer functions. Argument institutions persist through inertia, not efficacy. Piton classification derives from sustained performance despite degraded function."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full structure: a genuine coordination function (social cohesion for the believers) combined with asymmetric extraction (wasted effort from the arguers). This dual nature is the hallmark of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a cognitive neuroscience perspective, some arguments fail against instinctive beliefs due to irreducible structural facts: instincts are evolutionarily calibrated to environmental pressures that rational argument does not override. The amygdala (threat detection) and limbic system (value assignment) operate on timescales and with signal priorities that cortical reasoning cannot suppress. From this view, argument futility is a natural law of human cognition \u2014 beliefs rooted in fear, kin selection, or tribal loyalty have structural immunity to rational refutation. However, the structural data contradicts true mountain status \u2014 the empirical resistance to argument is partly neurological but also partly institutional (media incentive structures, in-group conformity pressure, belief ecosystem incentives). The 'natural law' framing risks naturalizing what is partly contingent social architecture."
     }
   ],
   "omegas": [
     {
-      "id": "belief_malleability",
-      "question": "Are these 'instinctive' beliefs truly immutable (Mountain-like), or are they deeply conditioned but ultimately malleable under specific circumstances?",
-      "resolution_mechanism": "Longitudinal studies on belief change; effectiveness trials of de-radicalization programs or therapeutic interventions like Street Epistemology.",
-      "impact": "If beliefs are found to be malleable, the constraint is confirmed as a Tangled Rope/Snare. If they are truly immutable, it would lend credence to the Believer's Mountain perspective, suggesting a biological or cognitive limit.",
+      "id": "instinct_definition_boundary",
+      "question": "What precisely distinguishes an 'instinctive belief' from a belief held with high confidence but in principle open to argument?",
+      "resolution_mechanism": "Neuroscientific measurement: fMRI response patterns to direct challenges of the belief; skin conductance and pupil dilation (autonomic markers of threat response); longitudinal tracking of belief revision attempts with explicit manipulation of argument framing",
+      "impact": "If the boundary is neurological (amygdala activation threshold): mountain classification holds. If boundary is social/institutional (group conformity pressure, identity threat): snare classification holds. If both: true tangled rope.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether instinctive beliefs are immutable or merely deeply conditioned."
+      "description": "Neuroscientific vs social demarcation of instinctive beliefs"
     },
     {
-      "id": "arguer_secondary_gain",
-      "question": "Does the 'rational arguer' receive non-obvious benefits, such as social status, self-satisfaction, or reinforcement of their own identity as a rational person?",
-      "resolution_mechanism": "Psychological analysis of arguers' motivations and the social rewards for performing rationality.",
-      "impact": "If significant secondary gains exist, the 'extraction' is lower than modeled, potentially shifting the Arguer's perspective from Snare to Tangled Rope. If gains are negligible, the Snare classification holds.",
+      "id": "argument_mechanism_failure_mode",
+      "question": "Does argument fail because instinctive beliefs are neurologically protected, or because argument-making is structurally designed to trigger defensive identity responses?",
+      "resolution_mechanism": "Controlled trials: argument reframing that avoids identity threat (values-affirming, third-person perspective, narrative embedding); comparison of belief-change rates via direct argumentation vs indirect influence (narrative, social proof, sequential reasoning)",
+      "impact": "If failure is neurological: extractiveness remains ~0.58 regardless of argument quality. If failure is partly institutional (triggering defensiveness): lower extractiveness possible with reformed argument formats (~0.35) \u2014 suggesting the constraint is partly contingent social design, not natural law.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether argument failure is neurological or socially constructed"
+    },
+    {
+      "id": "belief_ecosystem_feedback",
+      "question": "To what extent do media incentive structures (engagement maximization, tribal signaling) amplify the futility of argument by incentivizing inflammatory framing that triggers defensive responses?",
+      "resolution_mechanism": "Comparative analysis: argument effectiveness in contexts with different media incentives (academic peer review vs social media vs curated epistemic communities); measurement of engagement metrics for different argument framings; longitudinal tracking of belief persistence in low-incentive vs high-incentive communication channels",
+      "impact": "If media incentives drive argument failure: extractiveness in low-incentive contexts drops to ~0.35-0.40 (institutional Rope), and the current snare classification becomes partly contingent on media ecosystem design. If argument fails equally in all contexts: true cognitive neurological limitation.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the arguer receives secondary gains that offset the futility."
+      "type_class": "empirical",
+      "description": "Role of media incentive structures in argument futility"
+    },
+    {
+      "id": "reform_intervention_sufficiency",
+      "question": "Can structured belief-change interventions (values-affirming, narrative reframing, sequential logic) achieve measurable belief revision against instinctive convictions?",
+      "resolution_mechanism": "Randomized controlled trials of belief-change protocols; measurement of sustained belief change vs temporary agreement; analysis of which belief domains (political identity, health, outgroup threat) show revision and which remain intractable",
+      "impact": "If interventions succeed at >30% sustained revision rates: scaffold sunset is real and constraint is partly contingent on current institutional practice. If success rates <10%: mountain or true snare classification holds; reform is aspirational.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Efficacy of structured belief-change interventions"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.6
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.68
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.75
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 0,
       "value": 0.55
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.6
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.65
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
     }
   ],
   "interval": {
-    "start": 2000,
-    "end": 2020
+    "start": 0,
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "This constraint models the futility of using rational argumentation to change beliefs rooted in instinct, emotion, or group identity. Cognitive mechanisms like confirmation bias, belief perseverance, and motivated reasoning act as powerful enforcement, making the believer's worldview resistant to external evidence. The act of arguing becomes a social dynamic with different functions and costs depending on one's structural position relative to the belief in question.",
+    "narrative_context": "The futility of arguing against instinctive beliefs creates a constraint structure where the argument mechanism itself becomes a coordination ritual that masks extraction. Argument makers invest cognitive and emotional labor in a process that structurally cannot change instinctive convictions rooted in threat-detection, kin-selection, tribal identity, or evolved threat hierarchies. The constraint exhibits a perspectival gap spanning all six classification types: the argument maker experiences pure extraction (snare \u2014 effort channeled into a failed mechanism); the belief holder experiences mixed coordination and extraction (tangled rope \u2014 arguments provide social proof but attack core identity); institutional norm-keepers benefit from the argument ritual's entertainment and engagement value (rope); epistemic reformers see a temporary institutional failure with sunset (scaffold \u2014 intervention research and communication design can lower the futility); the discourse ritual itself persists through inertia despite empirical failure (piton); and a civilizational observer might naturalize argument futility as a law of human cognition (mountain). The constraint's extractiveness (0.58) reflects that the primary extraction flows to belief-holding groups (who achieve social validation without belief change) and to institutional discourse mediators (who monetize the ritual), while extraction is experienced by argument makers and the epistemic commons (whose confidence in rational discourse erodes with repeated futility). Suppression is high (0.72) because alternatives to argument-based belief change (direct social influence, narrative embedding, environmental design) are not culturally legitimized and individuals remain trapped in the norm that 'rational argument should work.' Theater ratio (0.68) reflects that public argument has become substantially performative: the structure and choreography of debate dominate its epistemic function, with participants optimizing for rhetorical victory rather than actual belief exploration. The constraint's extractiveness has increased from 0.42 to 0.58 over the interval, indicating institutional layering of more sophisticated extractive mechanisms (micro-targeted messaging, algorithmic belief amplification) atop the core futility.",
     "key_agents": [
-      "Rational Arguer: Primary victim (powerless/trapped) — invests time and energy into a futile process.",
-      "Instinctive Believer: Primary beneficiary (moderate/mobile) — their cognitive comfort and identity are protected from challenge.",
-      "Social Group: Institutional beneficiary (organized/arbitrage) — uses the belief's resilience to maintain group cohesion and identity.",
-      "Public Debater: Performative actor (powerful/mobile) — uses the argument as a stage for signaling rather than persuasion.",
-      "Analytical Observer: Sees the full, mixed structure (analytical/analytical)."
+      "Argument Makers: Primary victims (powerless/trapped) \u2014 invest effort in mechanism structurally designed to fail; experience maximum extraction; no socially legitimate exit",
+      "Belief Holders: Mixed beneficiaries and victims (moderate/constrained) \u2014 gain social validation from debate without changing core conviction; experience constraint as both coordination (group signaling) and extraction (identity threat)",
+      "Institutional Discourse Mediators: Primary beneficiaries (institutional/arbitrage) \u2014 monetize argument ritual through engagement metrics, advertising, attention capture; sustain the norm that debate is valuable despite empirical futility",
+      "Epistemic Reform Movement: Organized agents (organized/constrained) \u2014 cognitive scientists, educators, communication designers building alternative belief-change mechanisms; see constraint as temporary institutional failure with sunset path",
+      "Enlightenment Discourse Tradition: Institutional actor (institutional/arbitrage) \u2014 maintains cultural belief in rational discourse's power; sustains ritual performance despite degraded function; Piton classification",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (media incentives, tribal conformity norms, cognitive heuristics) as irreducible laws of human nature"
     ],
-    "logic_rationale": "Extractiveness (ε=0.65): High. Represents the significant, unrecoverable cost in time, cognitive effort, and emotional energy expended by the arguer for zero persuasive return. Suppression (0.80): Very High. The internal cognitive biases of the believer strongly suppress the alternative outcome (i.e., changing one's mind). It is extremely difficult to bypass these defenses with logic alone. Theater Ratio (0.75): High. As persuasion fails, the argument increasingly becomes a performative ritual of identity defense (for the believer) and intellectual signaling (for the arguer), satisfying the Piton gate.",
-    "perspectival_gap": "The gap is profound. The Arguer experiences a Snare, a trap that extracts their resources. The Believer experiences a Mountain, perceiving their belief as an unchangeable law of nature. Their Social Group sees a Rope, a tool for coordination and unity. The Public Debater sees a Piton, a hollowed-out ritual. The Analytical Observer synthesizes these views, identifying a Tangled Rope: a structure that simultaneously coordinates one group while extracting from another.",
-    "directionality_logic": "Beneficiaries are the Instinctive Believer and their Social Group, as the constraint shields their worldview and reinforces social bonds. This leads to low 'd' values and low/negative effective extraction (χ). The victim is the Rational Arguer, whose efforts are consumed by the constraint, leading to a high 'd' value and a high χ that classifies their experience as a Snare.",
-    "mandatrophy_analysis": "This case is a strong resolver of mandatrophy. It demonstrates that a single phenomenon is not monolithically a 'Snare' or a 'Rope'. The classification is an indexical property of the observer's relationship to the constraint. The system correctly identifies that the same base metrics can produce Snare, Rope, Mountain, Piton, and Tangled Rope classifications simultaneously, depending on the (P,T,E,S) tuple, without contradiction. The mandatrophy is resolved by moving from a single 'correct' classification to a presheaf of classifications over different observer sites."
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The primary extraction mechanism is misdirection of effort: argument makers invest in a process that does not achieve its stated goal (belief change), while the misdirected effort benefits institutional mediators (engagement, attention capture, status signaling). However, extractiveness is not at snare levels (0.66+) because some genuine coordination occurs \u2014 arguments do provide social proof and group identity reinforcement for believers, and they serve epistemic functions (clarifying logical structure, surfacing disagreement, generating novel framings) even when they fail to change instinctive convictions. The extraction is embedded in a coordination function, making it tangled. Suppression (0.72): High. Multiple structural barriers prevent escape: (1) cultural legitimization of rational discourse as the 'correct' way to resolve disagreement \u2014 rejection of argument is socially penalized as irrationality; (2) lack of culturally accepted alternatives \u2014 belief-change techniques (values-affirming, narrative, social proof) are not mainstream norms; (3) identity threat from admitting argument's futility \u2014 societies invested in Enlightenment epistemology face reputational cost from accepting argument limitations; (4) psychological sunk-cost effects \u2014 individuals already committed to argumentative approaches resist acknowledging futility. Theater ratio (0.68): High and rising. Argument has become increasingly performative: debate formats optimize for rhetorical victory (gotchas, quick rebounds, audience applause) rather than genuine epistemic exploration. Participants are evaluated on argument skill rather than belief authenticity or revision capacity. The theater has risen over the interval as media incentive structures (social media, podcast debates, clips-for-engagement) have selected for entertainment value over epistemics. Initial theater ratio (0.55) reflects that some genuine belief exploration still occurs in lower-stakes contexts (small group discussions, academic seminars); final ratio (0.68) reflects institutional dominance of performative debate.",
+    "directionality_logic": "Each perspective's directionality is derived from the agent's structural position relative to the extraction flow: Argument makers are trapped victims with no exit \u2014 d \u2248 0.95, producing maximum experienced \u03c7 (snare). Belief holders are mixed \u2014 they benefit from group validation but experience identity threat; they have constrained exit (can isolate but at social cost) \u2014 d \u2248 0.50-0.55, producing moderate \u03c7 (tangled rope). Institutional mediators benefit from argument's continued performance and have arbitrage options (can shift to other engagement mechanisms) \u2014 d \u2248 0.10-0.15, producing negative \u03c7 relative to them (rope). The epistemic reform movement is organized with partial exit paths (can build alternative mechanisms) and constrained by resource and cultural barriers \u2014 d \u2248 0.40-0.50, producing moderate \u03c7. The discourse tradition is an institutional beneficiary with full arbitrage (can maintain or abandon rational discourse norms) \u2014 d \u2248 0.05, rope from its perspective. The analytical observer's directionality is observational rather than beneficiary/victim derived \u2014 d \u2248 0.72 (analytical observer canonical), producing moderate-high perceived extraction from civilizational distance. The structural data shows a perspectival presheaf where beneficiaries and victims occupy genuinely different structural positions within the same constraint architecture.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence across the six types. The argument maker and belief holder occupy near-opposite structural positions despite participating in the same mechanism. The argument maker's snare (trapped in futile effort) is the belief holder's tangled rope (social validation with identity threat). Institutional beneficiaries see rope (pure coordination without personal extraction); the epistemic commons experiences snare (effort extraction without benefit). The discourse tradition sees itself as rope (sustaining rational norms); analytical observers see piton (performative ritual) or mountain (natural law of cognition). The gap reveals that the constraint is not a monolithic structure but a distributed extraction architecture where different agents experience radically different extraction rates despite operating within the same institutional frame. The perspectival minimum rule applies: all six types are legitimate readings of the same structural data from different observation positions.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED by perspectival composition: The constraint resolves the mandatrophy by showing that 'is argument futility a coordination problem or an extraction mechanism?' depends entirely on the agent's position in the structure. From the argument maker's view: pure extraction (snare). From the belief holder's view: mixed coordination and extraction (tangled rope). From the institutional beneficiary's view: pure coordination (rope). The mandatrophy is not 'which classification is correct?' but 'which agent are you modeling?' The constraint's tangled rope status is robust: it demonstrates genuine coordination function (social proof, group signaling, norm maintenance) AND asymmetric extraction (argument makers and epistemic commons bear costs; institutional mediators and belief holders capture benefits). The beneficiary/victim asymmetry is clear: belief_holders and status_quo_maintainers benefit from the constraint's continuation; argument_makers and epistemic_commons (abstract collective good) bear costs. The suppression is structural: escaping the norm of rational discourse incurs real social penalties. The extraction escalation (0.42 to 0.58 over 30 units) reflects that institutional layering has made the mechanism increasingly sophisticated \u2014 micro-targeted messaging, algorithmic amplification of inflammatory content, tribal signaling in debate format \u2014 creating a more effective extraction apparatus. The constraint is genuine tangled rope: not a pure coordination mechanism (which would have low extraction and victims), not a snare (which would have suppression \u2265 0.60 and no coordination benefit). It is a hybrid where the coordination function (debate sustains pluralistic discourse norms) is authentic but instrumentalized for extraction (institutional mediators harvest attention; status quo beliefs are insulated from change without cost to believers)."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "political_polarization",
-      "epistemic_closure"
-    ]
-  }
+      "tribal_identity_entrenchment",
+      "media_engagement_optimization"
+    ],
+    "dual_formulation_note": "This constraint is downstream of both cognitive neuroscience limits on belief change and institutional media incentive structures. The 'tribal_identity_entrenchment' constraint captures the neurological/evolutionary substrate (instinctive belief formation); this constraint models the social-institutional layer (argument futility as extractive ritual). The 'media_engagement_optimization' constraint captures the incentive structure that amplifies argument performativity. The three form a family: neuroscience enables > institutional extraction > media amplification. Decomposition reflects different \u03b5 values: tribal entrenchment (\u03b5 \u2248 0.15, mountain) models natural cognitive limits; argument futility (\u03b5 \u2248 0.58, tangled rope) models the social architecture built on those limits; media optimization (\u03b5 \u2248 0.72, snare) models the extractive apparatus that monetizes the futility."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
 }

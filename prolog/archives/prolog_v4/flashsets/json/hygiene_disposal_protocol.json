@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "hygiene_disposal_protocol",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.8,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Institutional Hygiene Protocol (Incineration)",
+    "topic_domain": "clinical/institutional",
+    "requires_active_enforcement": true,
+    "victims": [
+      "patients_personal_effects",
+      "waste_management_personnel"
+    ],
+    "beneficiaries": [
+      "hospital_administrators",
+      "public_health_officials"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Patients' Personal Effects",
+      "comment": "The disposal protocol leads to a complete loss of patient belongings with no recourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Waste Management Personnel",
+      "comment": "Workers are required to handle potentially infectious materials, accepting risk in service of public health."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Public Health Officials",
+      "comment": "This is seen as a necessary measure for preventing widespread outbreaks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Hospital Administrators",
+      "comment": "While adhering to protocol, they balance cost, legal liability and public health concerns."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "This is viewed as a tradeoff between individual rights and public health imperatives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "patient_autonomy_vs_public_health",
+      "question": "What is the relative value of patient autonomy and the right to personal property versus public health interests?",
+      "resolution_mechanism": "A legal and ethical determination based on prevailing social values and risk assessments.",
+      "impact": "If patient autonomy is paramount, the protocol may be modified or abandoned. If public health is prioritized, the protocol will likely remain.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Preference assigned to patient autonomy."
+    },
+    {
+      "id": "availability_of_alternative_methods",
+      "question": "Are there alternative methods of disinfection and disposal that are equally effective but less intrusive?",
+      "resolution_mechanism": "Scientific research into new disinfection technologies and methods.",
+      "impact": "If alternative methods are found, the current protocol may be relaxed or replaced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of alternative disposal methods."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This protocol involves the mandatory incineration of personal belongings of patients diagnosed with Scarlet Fever (or other highly contagious disease) to prevent the spread of infection within an institutional setting. This safety measure comes at the expense of the patients' personal property and, potentially, emotional well-being.  The policy requires the suppression of any possible alternative actions that patients might wish to perform, such as cleaning and reclaiming their own belongings.",
+    "key_agents": [
+      "Patients' Personal Effects: Primary target (powerless/trapped) \u2014 bears extraction (loss of belongings).",
+      "Waste Management Personnel: Secondary target (moderate/constrained) \u2014 bear extraction (risk of exposure).",
+      "Hospital Administrators: Primary beneficiary (institutional/arbitrage) \u2014 benefit from reduced legal/financial risk.",
+      "Public Health Officials: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from disease control."
+    ],
+    "logic_rationale": "Extractiveness (0.6): High. The incineration protocol results in a direct and uncompensated loss of personal property for patients. Suppression (0.8): Very High. Patients have no say in the matter; their belongings are taken and destroyed regardless of their wishes. Theater Ratio (0.3): Low. The protocol is implemented with little ceremony and minimal public display.",
+    "perspectival_gap": "The protocol appears as a Snare to the patient due to the loss of their possessions. To Public Health Officials, it is seen as a Rope - pure coordination in defense of public health. The Waste Management Personnel see this as Tangled Rope because they incur some extra risk to their own personal safety.",
+    "directionality_logic": "Patients bear the cost (d=1) and have no exit (trapped), and thus experience high extraction. Public Health Officials benefit (d=0) and can shift focus (arbitrage), and thus perceive coordination. Waste Management Personnel have some agency (constrained), placing them between the extremes."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

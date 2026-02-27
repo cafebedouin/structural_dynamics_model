@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "sts86_ascent_checklist",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sts86"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Space Shuttle Ascent/Abort Procedural Matrix (JSC-48005)",
+    "topic_domain": "aerospace_engineering/institutional_safety",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "requires_active_enforcement": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Flight Crew",
+      "comment": "PERSPECTIVE 1: FLIGHT CREW (MOUNTAIN) \u2014 Pilots and mission specialists are bound by the ascent checklist with zero degrees of freedom during launch sequence. The procedural matrix is experienced as immutable natural law \u2014 deviation is physically impossible (systems lock out unauthorized commands) or catastrophic (loss of vehicle and crew). No exit option exists; the constraint emerges from the irreducible requirements of orbital mechanics, propellant sequencing, and fail-safe design. Accessible only through perfect compliance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mission Control / Flight Directors",
+      "comment": "PERSPECTIVE 2: MISSION CONTROL / FLIGHT DIRECTORS (MOUNTAIN) \u2014 Mission control has procedural authority but is similarly bound by the checklist matrix. They can delay launch or abort, but they cannot authorize deviation from the sequence without triggering hard engineering constraints. The checklist is generational \u2014 it encodes lessons from decades of spaceflight and accident investigations (Apollo 1, Challenger, Columbia). Changing the sequence requires generational timescale evidence and validation. From the flight director's perspective, the constraint is natural law: attempt to skip steps and the shuttle's avionics refuse the command."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer / Aerospace Engineering",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the civilizational/universal view of aerospace systems theory, the ascent checklist emerges from irreducible physical constraints: orbital mechanics, thermodynamics, materials limits, and human cognitive capacity during emergency scenarios. The checklist is not policy \u2014 it is encoded physics. It cannot be negotiated, traded away, or substituted with alternatives. The accessibility collapse reflects that no meaningful alternative to sequential verification exists; the resistance is minimal because compliance is self-enforcing through hardware interlocks. This constraint exhibits the deepest natural law signature in human-machine systems."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "NASA Flight Operations Authority",
+      "comment": "PERSPECTIVE 4: NASA FLIGHT OPERATIONS AUTHORITY (ROPE) \u2014 At the biographical/national level, NASA Flight Operations sees the checklist as coordination mechanism: it solves the collective action problem of sequencing hundreds of interdependent systems and verifying their state. The institutional actor experiences the checklist as enabling rather than constraining \u2014 it provides clarity, reduces communication overhead, and distributes cognitive load. This perspective recognizes that without the procedural matrix, coordination between launch control, mission control, and crew would be impossible. From this view, the constraint is a pure coordination tool (Rope), not an extractive mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hardware_vs_procedure_boundary",
+      "question": "Is the checklist constraint inherent to orbital mechanics/thermodynamics (mountain), or is it a contingent institutional procedure (scaffold/rope)?",
+      "resolution_mechanism": "Comparative analysis across space agencies: do all launch systems converge on structurally identical procedural sequences, or do they vary significantly? Analysis of regulatory vs. engineering origins of each checklist item.",
+      "impact": "If convergent across agencies: mountain classification is validated. If divergent: the constraint is institutional scaffolding (scaffold/rope), not natural law, and classification downgrades to coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether checklist is inherent physical law or contingent institutional procedure"
+    },
+    {
+      "id": "human_cognitive_load_floor",
+      "question": "Is the checklist length/complexity driven by irreducible human cognitive limits during emergency response, or by overcautious institutional design?",
+      "resolution_mechanism": "Cognitive science analysis of pilot decision-making under stress; simulation studies of abbreviated vs. full checklist performance; comparison to commercial aerospace practices (which operate with fewer/shorter checklists).",
+      "impact": "If cognitive floor is real: mountain classification stands (accessibility collapse remains \u22650.85). If overcautious: extractiveness may increase (institutional actors are preserving complexity to maintain procedural control), reclassifying to tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether checklist complexity is driven by cognitive limits or institutional overcaution"
+    },
+    {
+      "id": "automation_substitution_feasibility",
+      "question": "Could automated systems (AI flight envelope monitors, autonomous abort sequencing) fully replace the human-readable checklist without loss of safety margin?",
+      "resolution_mechanism": "Technical analysis of automation sufficiency for launch abort scenarios; review of automation failures in aviation/aerospace; assessment of regulatory barriers vs. technical barriers to full automation.",
+      "impact": "If automation is feasible: the checklist is institutional/human-specific rather than universal. Classification may downgrade. If automation is insufficient: mountain classification is confirmed (irreducible to non-human systems).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether automation could replace human checklist procedures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "The Space Shuttle Ascent Checklist (JSC-48005) is the definitive procedural constraint governing vehicle preparation, launch sequence, and abort decision logic for the Space Transportation System. Spanning T-minus 5 minutes through Main Engine Cutoff, the checklist encodes the irreducible sequence of system verifications, propellant loading sequences, aerodynamic envelope constraints, and emergency response procedures. The constraint exhibits characteristics of natural law: it cannot be negotiated, alternatives are inaccessible, and deviation triggers either hardware interlocks or mission failure. Extractiveness is minimal (0.08) because no agent benefits asymmetrically from the constraint; it distributes risk symmetrically across crew and mission stakeholders. Theater ratio is low (0.15) because the checklist is predominantly functional \u2014 each item serves a direct purpose in maintaining vehicle integrity and crew safety. The constraint's accessibility collapse (0.92) reflects that the checklist represents the only viable path to orbit; all alternatives (unprepared ascent, abbreviated procedures, deviation from safety margins) result in catastrophic failure. The resistance (0.08) is minimal because compliance is self-enforcing through hardware interlocks and regulatory oversight.",
+    "key_agents": [
+      "Flight Crew (Orbiter Commander, Pilot, Mission Specialists): Powerless/trapped \u2014 bound by the checklist with zero authorized deviation during ascent",
+      "Mission Control / Flight Directors: Organized/constrained \u2014 have abort authority but are bound by the procedural sequence; cannot authorize deviation",
+      "NASA Flight Operations: Institutional/constrained \u2014 maintains the checklist, distributes cognitive load, enables coordination between ground and flight",
+      "Aerospace Engineering Community: Analytical observer \u2014 analyzes the constraint as emergent from orbital mechanics and human cognitive limits",
+      "Regulatory Agencies (FAA, Congress): Institutional/analytical \u2014 oversee safety compliance but do not author the technical checklist"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. No agent benefits asymmetrically from the checklist. The flight crew, mission control, and NASA all share identical safety incentives \u2014 successful ascent and crew return. The checklist distributes work (cognitive load, verification tasks) but does not extract value from one party to another. The low extractiveness is the signature of a pure coordination mechanism (or in this case, a mountain that enables coordination). Suppression (0.02): Negligible. The checklist does not suppress alternatives through coercion \u2014 alternatives are inaccessible because they are physically infeasible. There is no coercive apparatus; there is only irreducible physics and engineering. Theater ratio (0.15): Low. The checklist is predominantly functional. Each item \u2014 cryogenic loading sequences, main engine start checks, flight control system verifications \u2014 serves a direct purpose. Some procedural elements (standardized call-out formats, crew briefings) have a small theatrical component for redundancy and error-catching, but the majority is technical substance. Accessibility collapse (0.92): High. The checklist represents the only viable ascent path. All alternatives (abbreviated procedures, parallel sequencing, deviation from thermal/propellant margins) result in vehicle loss. The accessibility threshold for entering orbit without the checklist is effectively infinite \u2014 it is not a choice available to any agent. Resistance (0.08): Low. The checklist is self-enforcing through avionics interlocks, propellant system sequencing, and hardware design. No external coercive force is required to maintain compliance; the vehicle's systems refuse the alternative.",
+    "perspectival_gap": "All four perspectives converge on the mountain classification, but they experience the constraint from different structural positions. The flight crew experiences the checklist as immutable law imposed from above (powerless/trapped). Mission control experiences it as both constraint and tool \u2014 they maintain procedural authority but are themselves bound by the same sequence (organized/constrained). NASA Flight Operations experiences the checklist as enabling \u2014 it solves the coordination problem (institutional/constrained). The analytical observer sees the constraint as emerging from irreducible orbital mechanics and human cognitive limits (analytical/analytical). The convergence across perspectives is the signature of a true mountain: there is no structured perspectival gap because the constraint is invariant to observer position. Even agents with high institutional power cannot authorize deviation; they can only delay or abort.",
+    "mandatrophy_analysis": "This constraint does not exhibit mandatrophy (false natural law masquerading as coordination, or vice versa). The mountain classification is validated by the convergence of all perspectives and the minimal theater ratio. The constraint is either natural law or extremely high-quality institutional design \u2014 the evidence cannot distinguish, which is the essence of a mountain in human systems. The key omega variables address the boundary: if comparative analysis across space agencies reveals significant procedural divergence, the mountain classification downgrades to institutional scaffolding. If cognitive science analysis shows that the checklist is designed with overcautious margins that exceed human cognitive limits, extractiveness may increase (to maintain procedural control) and classification may shift to tangled_rope. Until those omegas are resolved, the constraint stands as a mountain \u2014 an immutable procedural law of spaceflight."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "challenger_thermal_protection_failure",
+      "columbia_foam_shedding_hazard"
+    ],
+    "dual_formulation_note": "The ascent checklist is downstream of physical constraints (orbital mechanics, materials limits) but upstream of specific failure modes (Challenger O-ring failure, Columbia foam loss). The checklist encodes lessons from accident investigations and serves as the institutional mechanism for preventing known failure modes. Upstream constraints are the irreducible physical laws; downstream constraints are specific failure scenarios that the checklist is designed to prevent."
+  },
+  "directionality_overrides": []
+}

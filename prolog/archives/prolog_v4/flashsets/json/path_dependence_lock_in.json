@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "path_dependence_lock_in",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "The QWERTY Inertia Trap",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "qwerty_keyboard_manufacturers",
+      "qwerty_trained_typists"
+    ],
+    "victims": [
+      "potential_dvorak_users",
+      "ergonomic_efficiency"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Potential Dvorak Users",
+      "comment": "Perspective 1: Potential Dvorak Users - Trapped by the network effect and high switching costs, even if Dvorak offers ergonomic benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "QWERTY Keyboard Manufacturers",
+      "comment": "Perspective 2: QWERTY Keyboard Manufacturers - Benefit from economies of scale and established production lines. No incentive to switch."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "QWERTY-trained typists",
+      "comment": "Perspective 3: QWERTY-trained typists - Constrained by needing to relearn a new layout, but also benefiting from current widespread adoption and job opportunities"
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Ergonomic Efficiency",
+      "comment": "Perspective 4: Ergonomic efficiency - An abstract, difficult to organize victim is trapped by the QWERTY layout, where efficiency is considered in terms of the existing technology and not by any potential alternatives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_strength",
+      "question": "How strong are the network effects that lock users into QWERTY?",
+      "resolution_mechanism": "Analyze user adoption rates of alternative layouts, controlled experiments",
+      "impact": "Weak network effects may allow alternatives to gain traction. Strong network effects lock QWERTY in.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying network effect strength"
+    },
+    {
+      "id": "switching_cost_quantification",
+      "question": "What are the true costs (time, money, effort) for users and institutions to switch?",
+      "resolution_mechanism": "Surveys, simulations, cost-benefit analysis",
+      "impact": "Low switching costs: easier to escape the lock-in. High switching costs: QWERTY remains dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measuring switching costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the structural inability to pivot to a superior standard because the accumulated network effects and sunk costs of the current (inferior) path make the cost of transition prohibitive. QWERTY's dominance persists despite arguably better alternatives like Dvorak because of the existing installed base, training, and manufacturing infrastructure.",
+    "key_agents": [
+      "potential_dvorak_users: Primary target (powerless/trapped) \u2014 bears the cost of inferior ergonomics and efficiency",
+      "qwerty_keyboard_manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 benefits from economies of scale and lack of disruption",
+      "qwerty_trained_typists: Secondary actor (moderate/constrained) \u2014 benefits from widespread adoption but is constrained by switching costs",
+      "ergonomic_efficiency: Analytical Observer - trapped by QWERTY even though it could be enhanced by adopting Dvorak"
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The constraint extracts ergonomic and efficiency gains from users due to QWERTY's persistence. Suppression (0.75): High. Network effects and switching costs strongly suppress the adoption of superior alternatives. Theater Ratio (0.30): Low. Very little purely theatrical activity is present.",
+    "perspectival_gap": "Potential Dvorak users experience this as a snare because of the inability to switch, while QWERTY keyboard manufacturers see it as a rope due to a lack of disruptions. The typists face a Tangled Rope because of the initial constraint of learning something new, but the payoff of greater efficiency may be worth it to some.",
+    "directionality_logic": "Directionality is determined by the relationship to the extraction flow. Potential Dvorak users, trapped by high switching costs, experience high d. QWERTY manufacturers, benefiting from the status quo, experience low d. Typists experience a mixed d due to both costs and benefits.",
+    "mandatrophy_analysis": "This is clearly not a pure coordination mechanism because there are ergonomic and efficiency costs being imposed on powerless agents, which excludes rope. There are high barriers to switching, so this is definitely a snare."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

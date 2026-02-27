@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "evfta_trade_agreement",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU-Vietnam Free Trade Agreement (EVFTA)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eu_exporters",
+      "vietnamese_exporters",
+      "multinational_corporations"
+    ],
+    "victims": [
+      "small_and_medium_sized_enterprises",
+      "vietnamese_laborers",
+      "eu_farmers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Vietnamese Laborers",
+      "comment": "Vietnamese laborers may face increased pressure to accept lower wages and poorer working conditions to remain competitive, with limited ability to exit the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "EU Farmers",
+      "comment": "EU farmers face increased competition from Vietnamese agricultural products. While they receive some subsidies and protections, their ability to adapt and compete is constrained."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "EU Exporters",
+      "comment": "EU exporters benefit from reduced tariffs and increased access to the Vietnamese market, allowing them to arbitrage trade opportunities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Vietnamese Exporters",
+      "comment": "Vietnamese exporters gain increased access to the EU market, enabling them to arbitrage trade benefits."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Multinational Corporations",
+      "comment": "Multinational corporations (MNCs) benefit from lower tariffs and increased access to both the EU and Vietnamese markets. They have the power and mobility to exploit the agreement's provisions, but are still subject to some regulatory constraints."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the EVFTA represents a tangled rope, promoting trade and economic growth while also potentially exacerbating inequalities and environmental degradation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "labor_standards_enforcement",
+      "question": "How effectively are labor standards enforced in Vietnam under the EVFTA?",
+      "resolution_mechanism": "Monitoring of labor practices by international organizations and trade unions, assessment of legal frameworks and enforcement mechanisms.",
+      "impact": "Weak enforcement could lead to exploitation of workers and undermine the benefits of the agreement. Strong enforcement could improve working conditions and promote sustainable development.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of labor standards enforcement in Vietnam."
+    },
+    {
+      "id": "environmental_impact",
+      "question": "What is the environmental impact of increased trade between the EU and Vietnam under the EVFTA?",
+      "resolution_mechanism": "Assessment of deforestation rates, pollution levels, and greenhouse gas emissions associated with increased production and transportation.",
+      "impact": "Increased trade could lead to environmental degradation if not managed sustainably. Effective environmental safeguards and policies are needed to mitigate negative impacts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Environmental impact of increased trade under the EVFTA."
+    },
+    {
+      "id": "sme_adaptation",
+      "question": "How well are SMEs adapting to the increased competition from the EVFTA?",
+      "resolution_mechanism": "Surveys of SMEs, analysis of government support programs, and assessment of market access opportunities.",
+      "impact": "If SMEs struggle to adapt, the benefits of the agreement could be concentrated among larger firms. Targeted support programs and policies are needed to help SMEs compete and thrive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adaptation of SMEs to increased competition under the EVFTA."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The EU-Vietnam Free Trade Agreement (EVFTA) aims to boost trade and investment between the EU and Vietnam by eliminating tariffs and reducing non-tariff barriers. While the agreement offers significant opportunities for economic growth, it also presents challenges related to labor standards, environmental protection, and the competitiveness of small and medium-sized enterprises (SMEs).",
+    "key_agents": [
+      "EU Exporters: Beneficiary (institutional/arbitrage) - gains access to the Vietnamese market.",
+      "Vietnamese Exporters: Beneficiary (institutional/arbitrage) - gains access to the EU market.",
+      "Multinational Corporations: Beneficiary (powerful/mobile) - benefits from reduced tariffs and increased market access.",
+      "Small and Medium-sized Enterprises: Victim (moderate/constrained) - faces increased competition.",
+      "Vietnamese Laborers: Victim (powerless/trapped) - may face pressure to accept lower wages.",
+      "EU Farmers: Victim (moderate/constrained) - faces increased competition from Vietnamese imports."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The agreement extracts concessions and adjustments from certain sectors (e.g., SMEs, laborers, farmers) in exchange for broader economic benefits. Suppression (0.40): Moderate. There are some mechanisms to address negative impacts (e.g., labor standards provisions, environmental safeguards), but these may not be fully effective in suppressing negative consequences. Theater ratio (0.30): Relatively low, suggesting that the agreement's stated goals of promoting trade and economic growth are largely reflected in its actual implementation.",
+    "perspectival_gap": "The EVFTA is viewed differently by various stakeholders. EU and Vietnamese exporters see it as an opportunity for growth and increased market access (Rope). MNCs perceive it as a chance to enhance their global operations (Tangled Rope). However, Vietnamese laborers and EU farmers may experience it as a snare due to increased competition and potential exploitation. SMEs may also struggle to adapt, leading to a tangled rope scenario where they face both opportunities and challenges.",
+    "directionality_logic": "Directionality is determined by the agent's position within the trade agreement's framework. Exporters and MNCs benefit from the agreement (low d), while laborers, farmers, and SMEs may bear the costs (high d). The analytical perspective considers the overall impact and potential trade-offs. Institutional actors have arbitrage options due to their power and resources, while powerless agents have limited exit options.",
+    "mandatrophy_analysis": "The EVFTA resolves the mandatrophy by acknowledging the diverse perspectives and potential trade-offs associated with trade agreements. While the agreement aims to promote economic growth and cooperation, it also has the potential to exacerbate inequalities and create winners and losers. By considering the perspectives of all stakeholders and implementing appropriate safeguards, the EVFTA can be structured to maximize benefits and minimize negative impacts."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wto_trade_agreements",
+      "vietnam_economic_reforms"
+    ]
+  },
+  "directionality_overrides": []
+}

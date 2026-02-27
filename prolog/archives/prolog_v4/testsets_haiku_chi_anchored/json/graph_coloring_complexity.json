@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "graph_coloring_complexity",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gc_complexity"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Application of Graph Coloring to Resource Allocation",
+    "topic_domain": "technological/computational_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "optimization_engineers",
+      "system_allocators"
+    ],
+    "victims": [
+      "resource_contention_actors",
+      "allocation_fairness"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Resource-Starved Subsystem",
+      "comment": "PERSPECTIVE 1: RESOURCE-STARVED SUBSYSTEM (SNARE) \u2014 Cannot exit the graph coloring constraint; trapped by the NP-hardness of optimal coloring. Has no alternative path to fair resource allocation. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Allocation Fairness Imperative",
+      "comment": "PERSPECTIVE 2: ALLOCATION FAIRNESS (TANGLED ROPE) \u2014 Constrained by computational limits and algorithmic approximation quality, but also benefits from the graph coloring framework which at least guarantees conflict-free allocation. d\u22480.72, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Optimization Engineers",
+      "comment": "PERSPECTIVE 3: OPTIMIZATION ENGINEERS (ROPE) \u2014 Primary beneficiaries. Control the choice of approximation algorithms and heuristics. Can arbitrage between different problem formulations. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Net beneficiary through algorithmic control."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Machine Learning Coalition",
+      "comment": "PERSPECTIVE 4: MACHINE LEARNING COALITION (SCAFFOLD) \u2014 Organized agents (neural network schedulers, quantum annealing protocols, approximation learning systems) see graph coloring constraints as temporary bottlenecks with a sunset: learned heuristics and hybrid classical-quantum approaches are building alternative allocation pathways. d\u22480.38, f(d)\u22480.38, \u03c3=1.2 \u2192 \u03c7\u22480.18. Low effective extraction because coalition has visible exit trajectory."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Classical CS Curriculum",
+      "comment": "PERSPECTIVE 5: CLASSICAL CS CURRICULUM (PITON) \u2014 Graph coloring as pedagogical exemplar persists through institutional inertia. The teaching ritual (prove NP-completeness, implement greedy heuristics, discuss approximation ratios) is mostly performative: students rarely encounter authentic resource allocation problems where graph coloring is the binding constraint. theater_ratio=0.58 reflects that textbook graph coloring problems are simplified proxies for real allocation challenges. The curriculum sees its own process as degraded \u2014 maintained because it's canonical, not because it's the best way to teach allocation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Computational Complexity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPLEXITY THEORY VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, the NP-hardness of chromatic number determination is an immutable property of the computational landscape: no polynomial-time algorithm can optimally color arbitrary graphs unless P=NP. This perspective naturalizes the constraint as a law of computation. However, the structural data (\u03b5=0.32, suppression=0.48, theater=0.58) contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that the 'hardness is inevitable' framing conflates theoretical intractability with practical allocation constraints."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "nph_versus_practical_hardness",
+      "question": "Is the practical intractability of graph coloring in resource allocation caused by NP-hardness of the decision problem, or by poor approximation algorithm quality relative to problem structure?",
+      "resolution_mechanism": "Comparison of approximation algorithm performance on real-world resource graphs vs theoretical worst-case bounds; analysis of whether domain-specific heuristics achieve better-than-worst-case performance consistently",
+      "impact": "If NP-hardness is binding: mountain classification is legitimate. If approximation quality is binding: constraint is institutional choice (engineers select conservative algorithms), making it a Snare or Tangled Rope from victim perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether NP-hardness or approximation quality drives practical allocation failure"
+    },
+    {
+      "id": "resource_contention_graph_properties",
+      "question": "Do real-world resource allocation graphs have structural properties (planarity, bounded clique width, sparse connectivity) that make them easier to color than arbitrary graphs?",
+      "resolution_mechanism": "Graph property analysis of authentic frequency assignment networks, register allocation interference graphs, and scheduling constraint graphs; comparison to worst-case NP-hard instances",
+      "impact": "If real graphs are structured: approximation algorithms may perform near-optimally on authentic problems (rope perspective). If graphs approach worst-case density: hardness is genuine structural barrier (mountain perspective weaker).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Structural properties of real resource allocation graphs"
+    },
+    {
+      "id": "quantum_annealing_practical_advantage",
+      "question": "Do quantum annealing or other non-classical approaches provide practically significant speedup over classical approximation algorithms for graph coloring in realistic resource allocation problem sizes?",
+      "resolution_mechanism": "Empirical comparison of wall-clock time and solution quality: quantum hardware vs classical heuristics on authentic frequency assignment and register allocation instances; cost-benefit analysis including hardware overhead",
+      "impact": "If significant advantage exists: scaffold sunset is real \u2014 alternative pathways to resource allocation are emerging. If no advantage: resource allocation remains bound to classical approximation (constraint is more structural).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quantum methods provide practical advantage over classical approximation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The application of graph coloring to resource allocation represents a constraint at the intersection of mathematical theory and practical systems design. Graph coloring formulations (frequency assignment, register allocation, task scheduling) appear elegant in textbooks but encounter persistent friction in real deployments: the NP-hardness of chromatic number determination creates apparent intractability, yet practical systems routinely find allocations that are good-enough using greedy and heuristic methods. This constraint demonstrates how theoretical hardness can be naturalized as an immutable law while actually representing a choice to use classical, polynomial-time approximation algorithms rather than explore alternative allocation paradigms (quantum annealing, neural schedulers, hybrid approaches). The extractiveness (0.32) reflects moderate capture by classical optimization engineering: engineers control algorithm choice and can suppress discussion of alternatives. The suppression (0.48) is substantial but incomplete \u2014 approximation algorithms do work for many problem instances, and open-source implementations exist. The theater ratio (0.58) captures the pedagogical degradation: graph coloring is taught as fundamental, yet most resource allocation problems in practice are solved by specialized heuristics or learned schedulers that do not invoke explicit graph coloring.",
+    "key_agents": [
+      "Optimization Engineers: Primary beneficiary (institutional/arbitrage) \u2014 control algorithm selection, approximation quality thresholds, and problem formulation choices",
+      "Resource-Starved Subsystems: Primary victim (powerless/trapped) \u2014 have no alternative to whatever allocation the graph coloring algorithm produces; cannot exit the constraint",
+      "Allocation Fairness Imperative: Secondary victim (moderate/constrained) \u2014 wants optimal allocation but must accept approximation bounds; benefits from conflict-free guarantee but suffers from suboptimal color counts",
+      "Machine Learning Coalition: Organized agents (organized/constrained) \u2014 neural schedulers, reinforcement learning allocators, quantum annealing providers building alternatives with clear exit trajectories",
+      "Classical CS Curriculum: Institutional actor (institutional/arbitrage) \u2014 maintains graph coloring as canonical exemplar; sees own pedagogy as degraded (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the choice of classical approximation as inherent computational limit"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate. The true source is not the NP-hardness itself (which is immutable) but the choice to solve resource allocation via polynomial-time approximation algorithms that may be significantly suboptimal. Engineers extract value by controlling which approximation method is used and what solution quality threshold triggers re-allocation. The extraction is not maximal because approximation algorithms do provide valid (conflict-free) allocations, and the underlying problem structure is partially transparent. Suppression (0.48): Moderate. Barriers include the mathematical difficulty of the NP-hardness narrative (suppresses discussion of alternatives), the institutional weight of classical CS pedagogy, and the computational cost of exploring non-classical approaches. But suppression is incomplete: open-source graph coloring libraries exist, approximation guarantees are published, and alternative approaches (ML schedulers, quantum methods) are increasingly visible. Theater ratio (0.58): Moderate-high. The pedagogical exemplar of graph coloring has become detached from its application contexts. Students learn to implement Welsh-Powell heuristics and recite NP-completeness proofs, but these activities rarely connect to authentic resource allocation challenges where domain-specific constraints and problem structure make the textbook algorithm irrelevant. The ratio has increased over the interval as specialized methods have become dominant in practice while the curriculum maintained classical graph coloring as foundational.",
+    "perspectival_gap": "This constraint shows how the same structural phenomenon (difficulty of optimal resource allocation) appears as an immutable computational law (mountain from the analytical perspective), a coordination mechanism with degraded pedagogy (piton from the curriculum perspective), a mixed coordination-extraction hybrid (tangled rope from fairness perspective), temporary bottleneck with emerging alternatives (scaffold from ML coalition), pure extraction (snare from resource-starved subsystem), and coordination with control value (rope from optimization engineers). The perspectival gap reveals that 'NP-hardness makes coloring hard' is an explanation only from the complexity theory view. From the allocation fairness view, the hardness is real but approximation algorithms solve it well-enough. From the optimization engineer view, the constraint is primarily about controlling which algorithm to use. From the resource-starved subsystem view, the constraint is that whatever allocation is made becomes unavoidable.",
+    "directionality_logic": "Optimization engineers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary through control of algorithm selection and approximation quality thresholds. Resource-starved subsystems: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction \u2014 subsystem bears whatever allocation emerges and cannot negotiate or exit. Allocation fairness: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.08. Significant extraction but bounded by approximation guarantees. Classical curriculum: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification comes from theater gate (0.58 \u2265 0.70 threshold not met, but piton is still detectable via domain analysis). ML coalition: Organized + constrained \u2192 d\u22480.38, f(d)\u22480.38. Low effective extraction because coalition has visible alternative pathways. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival; the engine's false summit detector should identify this as naturalized institutional choice rather than computational law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "frequency_assignment_spectrum_contention",
+      "register_allocation_compiler_bottleneck",
+      "task_scheduling_heterogeneous_systems"
+    ],
+    "dual_formulation_note": "Graph coloring complexity is upstream of specific resource allocation problems (frequency assignment, register allocation, task scheduling). Those constraints have their own \u03b5 values reflecting domain-specific structural properties and institutional choices; graph coloring complexity has \u03b5=0.32 reflecting the extractiveness of algorithm selection and approximation quality control by optimization engineers."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.38
+    }
+  ]
+}

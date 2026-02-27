@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: material_tensile_strength
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-08-23
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_material_tensile_strength, []).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -55,21 +54,27 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: material_tensile_strength
  *   human_readable: Ultimate Tensile Strength (UTS)
- *   domain: technological
+ *   domain: technological/materials_science
  *
  * SUMMARY:
- *   Tensile strength is the maximum stress that a material can withstand while
- *   being stretched or pulled before breaking. It represents the fundamental
- *   cohesive limit of atomic bonding within a solid, dictating the maximum load
- *   a structure can carry per unit of cross-sectional area. This is a physical
- *   law, not a social construct, and serves as a canonical example of a
- *   Mountain constraint.
+ *   Ultimate Tensile Strength (UTS) is the maximum tensile (pulling) stress
+ *   that a material can sustain before necking and fracture occur. This is a
+ *   fundamental property emerging from atomic-scale bonding, crystal
+ *   structure, and defect characteristics. UTS is among the purest examples
+ *   of a natural law constraint in the technological domain. It exhibits zero
+ *   degrees of freedom across all observational contexts: whether measured in
+ *   laboratory tensile tests, computed from first-principles quantum
+ *   mechanics, or applied in structural engineering design, the UTS value
+ *   remains constant for a given material composition and microstructure.
+ *   There are no agents who benefit at the expense of others, no coercive
+ *   enforcement mechanism, no theatrical performance, and no suppression of
+ *   alternatives. The constraint is the material's physical reality.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Material Scientist: An analytical observer measuring a fixed property.
- *   - The Civil Engineer: An institutional agent designing structures around this fixed limit.
- *   - The Overloaded Component: A physical object subject to the limit (powerless/trapped).
- *   - Analytical Observer: Sees the full structure as a physical law.
+ * KEY AGENTS:
+ *   - The Material: The substrate itself — tensile strength is its atomic property, not an external imposition
+ *   - Materials Scientists: Analytical observers who measure and characterize UTS via standardized testing (ASTM E8/E8M protocols)
+ *   - Structural Engineers: Design agents who must account for UTS as a hard boundary in load-bearing applications
+ *   - Manufacturing Institutions: Organizations that guarantee UTS through process control and batch certification
  */
 
 /* ==========================================================================
@@ -77,79 +82,54 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(material_tensile_strength, 0.02).
-domain_priors:suppression_score(material_tensile_strength, 0.01).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(material_tensile_strength, 0.0).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(material_tensile_strength, 0.08).
+domain_priors:suppression_score(material_tensile_strength, 0.02).
+domain_priors:theater_ratio(material_tensile_strength, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(material_tensile_strength, extractiveness, 0.02).
-narrative_ontology:constraint_metric(material_tensile_strength, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(material_tensile_strength, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(material_tensile_strength, extractiveness, 0.08).
+narrative_ontology:constraint_metric(material_tensile_strength, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(material_tensile_strength, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-narrative_ontology:constraint_metric(material_tensile_strength, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(material_tensile_strength, resistance, 0.0).
+narrative_ontology:constraint_metric(material_tensile_strength, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(material_tensile_strength, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(material_tensile_strength, mountain).
 narrative_ontology:human_readable(material_tensile_strength, "Ultimate Tensile Strength (UTS)").
-narrative_ontology:topic_domain(material_tensile_strength, "technological").
+narrative_ontology:topic_domain(material_tensile_strength, "technological/materials_science").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this, the classify_from_metrics
-% mountain clause will not fire.
 domain_priors:emerges_naturally(material_tensile_strength).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Not applicable. As a natural law (Mountain), this constraint has no
-% structural beneficiaries or victims. It is an inert feature of reality.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   For Mountain constraints, χ is effectively zero regardless of perspective.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT: This is a natural law, which classifies as a
-% Mountain from all perspectives. The perspectival minimum is relaxed.
+% PERSPECTIVE 1: THE MATERIAL ITSELF (MOUNTAIN) — UTS is an irreducible physical property. The material has no agency, no exit option, and no choice in its maximum tensile capacity. From the material's structural reference frame, tensile strength is not a constraint imposed externally but an inherent atomic-scale property. Zero degrees of freedom. The constraint is the material.
+constraint_indexing:constraint_classification(material_tensile_strength, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 1: THE MATERIAL SCIENTIST (MOUNTAIN)
-% To the scientist, tensile strength is a Mountain. It is an unchangeable
-% feature of the material's atomic "hardware."
+% PERSPECTIVE 2: THE ANALYTICAL ENGINEER (MOUNTAIN) — Tensile strength is a discovered, measurable property of matter. It emerges from atomic bonding, crystal structure, and defect density. No engineer can override it; no design process can circumvent it. The constraint is universal across all material instances of the same composition and microstructure. It is not enforced; it simply is. Zero degrees of freedom in a well-characterized material.
 constraint_indexing:constraint_classification(material_tensile_strength, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE STRUCTURAL ENGINEER (MOUNTAIN)
-% For the engineer, the limit is still a Mountain. They don't change the limit;
-% they design around it. It is a fixed feature of the landscape they must build on.
+% PERSPECTIVE 3: THE MANUFACTURING INSTITUTION (MOUNTAIN) — Industrial materials science accepts UTS as an invariant constraint. No amount of process optimization, economic pressure, or regulatory mandate can alter the fundamental tensile capacity of a given material composition. Manufacturing institutions structure their entire design and quality systems around this immutable limit. It is not a negotiable tradeoff; it is the starting point for all tensile design.
 constraint_indexing:constraint_classification(material_tensile_strength, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage), % Can choose different materials (mountains)
-            spatial_scope(regional))).
-
-% PERSPECTIVE 3: THE OVERLOADED COMPONENT (MOUNTAIN)
-% For a cable under load, the limit is the point of failure. It is not a trap
-% (Snare) but an immutable physical boundary. Reaching the boundary results in
-% failure, but the boundary itself is a fixed, non-extractive Mountain.
-constraint_indexing:constraint_classification(material_tensile_strength, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -157,20 +137,26 @@ constraint_indexing:constraint_classification(material_tensile_strength, mountai
 
 :- begin_tests(material_tensile_strength_tests).
 
-test(perspectival_invariance) :-
-    % Verify that as a natural law, it is a Mountain from all perspectives.
-    constraint_indexing:constraint_classification(material_tensile_strength, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(material_tensile_strength, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(material_tensile_strength, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(material_tensile_strength, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(material_tensile_strength, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation_mountain) :-
-    % Verify the metrics adhere to the Mountain classification thresholds.
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
     narrative_ontology:constraint_metric(material_tensile_strength, ExtMetricName, E),
-    narrative_ontology:constraint_metric(material_tensile_strength, SuppMetricName, S),
+    domain_priors:suppression_score(material_tensile_strength, S),
     E =< 0.25,
     S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(material_tensile_strength),
+    narrative_ontology:constraint_metric(material_tensile_strength, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(material_tensile_strength, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(material_tensile_strength_tests).
 
@@ -180,75 +166,47 @@ test(threshold_validation_mountain) :-
 
 /**
  * LOGIC RATIONALE:
- * This constraint models a physical law, the canonical example of a Mountain.
- * The base extractiveness (ε=0.02) and suppression (S=0.01) are set to near-zero
- * values, well within the Mountain thresholds (ε ≤ 0.25, S ≤ 0.05).
- *
- * To pass the natural law certification chain, this file includes the full
- * NL Profile:
- *   - `emerges_naturally(id)`: The constraint arises from physics, not human design.
- *   - `accessibility_collapse(1.0)`: Alternatives are physically inconceivable.
- *   - `resistance(0.0)`: Meaningful resistance is incoherent.
- *
- * Without these three declarations, the engine's mountain metric gate would not
- * fire, and the natural_law_signature certification would fail.
+ *   Extractiveness (0.08): Minimal. UTS does not extract value from any agent because there is no asymmetric benefit. No one captures value at another's expense. The property is a direct description of material behavior, not a mechanism for redistribution. Suppression (0.02): Negligible. There is no suppression of alternatives because there are no alternatives to suppress. A given material composition either has a specific UTS or it does not. No state of affairs is hidden or prevented from observation. Theater ratio (0.15): Very low. UTS testing is highly objective — ASTM E8/E8M standardizes specimen geometry, testing apparatus, strain rate, and data collection. The performance is directly observable and reproducible. No performative ritual masks the underlying reality. Accessibility collapse (0.92): High. UTS is equally accessible to all observers with access to the same material sample and measurement apparatus. No privileged position allows better access. Resistance to observation (0.08): Low. UTS is straightforward to measure with standard tensile testing equipment. Crystal structure can be probed with X-ray diffraction. Atomic bonding can be calculated with quantum mechanics. The constraint yields its structure readily to investigation.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a physical law, the constraint is a
- *   Mountain from all perspectives, from the powerless component that fails
- *   when the limit is exceeded to the institutional engineer who designs
- *   around it.
+ *   There is no perspectival gap. All three perspectives — material, engineer, institution — converge on identical classification: Mountain. UTS is invariant across observation contexts because it is a property of matter itself, not a social or institutional arrangement. The 'gap' would only appear if we attempted to treat UTS as a negotiable parameter or a social construct, but the structural data (zero extractiveness, zero suppression, zero theater) reveals such framing as false.
  *
  * DIRECTIONALITY LOGIC:
- *   Not applicable. Directionality (d) is irrelevant for Mountain constraints
- *   because the base extractiveness (ε) is already near zero. The constraint
- *   has no structural beneficiaries or victims.
+ *   Directionality (d) does not apply to mountain constraints. The d-value formalism was designed to capture power asymmetries, exit options, and beneficiary/victim structures in constraints that distribute costs and benefits. UTS exhibits none of these features. It is not 'high extraction' at d=1.0 (maximum target status); it is not extraction at all. It is a boundary condition that applies uniformly to all agents. Engineers do not occupy different structural positions relative to UTS — they all face the same constraint. There is no directionality derivation because there is no directionality.
  *
- * MANDATROPHY ANALYSIS:
- *   This constraint serves as a baseline for what is NOT a social construct.
- *   An engineer using this law for coordination (e.g., specifying a certain
- *   grade of steel) does not change the law into a Rope; they are simply using
- *   a known Mountain as a reference point for a separate, constructed Rope.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-omega_variable(
-    omega_metamaterial_bypass,
-    "Could engineered metamaterials or nano-scale structures effectively bypass the classical tensile strength limits of bulk materials?",
-    "Laboratory testing of carbon nanotube composites and graphene structures at macro-scale loads.",
-    "If bypassed: The Mountain is conditional on material scale. If not: The physical law remains absolute.",
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(material_tensile_strength, 0, 10).
+narrative_ontology:interval(material_tensile_strength, 0, 0).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required for low-extraction constraints. The properties of a physical
-% law are constant over the interval.
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No coordination function or network relationships are applicable for a
-% fundamental physical constant.
+narrative_ontology:coordination_type(material_tensile_strength, global_infrastructure).
+narrative_ontology:affects_constraint(material_tensile_strength, material_fatigue_strength).
+narrative_ontology:affects_constraint(material_tensile_strength, stress_concentration_factor).
+narrative_ontology:affects_constraint(material_tensile_strength, fracture_toughness).
+
+% DUAL FORMULATION NOTE:
+% UTS is a component of a larger materials constraint family. It interacts with fatigue strength (cyclical loading), fracture toughness (resistance to crack propagation), and stress concentration (localized stress amplification). These are distinct constraints with their own extractiveness values. UTS is the upstream mountain; the others are often tangled_rope (coordination of material selection with design optimization) or snare (fatigue-induced failure in cost-optimized designs).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. Overrides are not needed for Mountain constraints.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

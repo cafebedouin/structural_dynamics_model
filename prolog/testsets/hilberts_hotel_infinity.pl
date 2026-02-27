@@ -1,12 +1,13 @@
 % ============================================================================
 % CONSTRAINT STORY: hilberts_hotel_infinity
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_hilberts_hotel, []).
+:- module(constraint_hilberts_hotel_infinity, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -30,7 +31,8 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
-    domain_priors:emerges_naturally/1,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,9 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -57,22 +58,27 @@
  *   domain: mathematical/logical
  *
  * SUMMARY:
- *   Hilbert's Hotel is a thought experiment illustrating the counter-intuitive
- *   properties of infinite sets. It describes a hotel with infinitely many
- *   rooms, all occupied. Despite being "full," the hotel can still accommodate
- *   new guests by shifting existing guests according to mathematical rules
- *   (e.g., Guest n moves to Room n+1). This constraint represents the
- *   unyielding logic of transfinite arithmetic, which is fixed and unchangeable.
+ *   Hilbert's Hotel is a logical constraint embedded in the structure of
+ *   countable infinity. It states: no matter how many guests are accommodated
+ *   in a countably infinite hotel, any countable arrival can be
+ *   re-accommodated by shifting existing guests. This is not a paradox in
+ *   logic but a revelation of how infinite cardinality behaves under
+ *   bijection. The constraint has zero degrees of freedom — it emerges
+ *   necessarily from the definition of countable infinity via Dedekind's
+ *   characterization. No boarding manager can evade it; no alternative
+ *   axiomatics within standard mathematics can avoid it. The apparent
+ *   'problem' (how to fit new guests) has a forced solution (re-index all
+ *   guests) that works at infinite scale but violates finite intuition. The
+ *   constraint's classification as Mountain is invariant across all
+ *   observables: whether expressed via ordinal induction, Cantor pairing, or
+ *   algorithmic re-accommodation, the bijective closure of countable infinity
+ *   produces the same structural result.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Guest (powerless/trapped): An agent whose position is dictated by
- *     the mapping function f(n), with no ability to resist the logic.
- *   - The Mathematician/Educator (institutional/mobile): An agent who uses
- *     the paradox as a tool to coordinate understanding of transfinite numbers.
- *   - Agents relying on finite intuition (powerless/trapped): Those whose
- *     understanding of concepts like "fullness" is invalidated by the constraint.
- *   - The Analytical Observer (analytical/analytical): Sees the complete,
- *     unchangeable logical structure.
+ * KEY AGENTS:
+ *   - Mathematical Formalism: The constraint is inherent in the formal definition of countable infinity; no agent bears or benefits from it
+ *   - Intuitive Cognition: Finite minds encounter the constraint as paradox until formal training disambiguates it
+ *   - Set Theory Foundation: The axioms of ZFC (or equivalent) generate the constraint necessarily
+ *   - Pedagogical System: Mathematics education must teach that intuitions fail at infinity; the constraint is immutable but understanding can improve
  */
 
 /* ==========================================================================
@@ -80,83 +86,58 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: Low extraction. The paradox "extracts" the intuitive human sense
-% of "fullness" and "location," but does not extract material value.
-domain_priors:base_extractiveness(hilberts_hotel_infinity, 0.15).
-% Rationale: Very low suppression. As a logical truth, it doesn't suppress
-% alternatives; it simply defines the behavior of infinite sets within its
-% axiomatic system. Set to meet the Mountain threshold.
-domain_priors:suppression_score(hilberts_hotel_infinity, 0.05).
-% Rationale: Zero theater. The paradox is a pure, functional logical concept.
-domain_priors:theater_ratio(hilberts_hotel_infinity, 0.0).
+domain_priors:base_extractiveness(hilberts_hotel_infinity, 0.08).
+domain_priors:suppression_score(hilberts_hotel_infinity, 0.02).
+domain_priors:theater_ratio(hilberts_hotel_infinity, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(hilberts_hotel_infinity, extractiveness, 0.15).
-narrative_ontology:constraint_metric(hilberts_hotel_infinity, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(hilberts_hotel_infinity, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(hilberts_hotel_infinity, extractiveness, 0.08).
+narrative_ontology:constraint_metric(hilberts_hotel_infinity, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(hilberts_hotel_infinity, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain.
-% Rationale: Within ZFC set theory, no alternative is conceivable.
-narrative_ontology:constraint_metric(hilberts_hotel_infinity, accessibility_collapse, 1.0).
-% Rationale: Resistance is incoherent; one cannot "resist" a mathematical proof.
-narrative_ontology:constraint_metric(hilberts_hotel_infinity, resistance, 0.0).
+narrative_ontology:constraint_metric(hilberts_hotel_infinity, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(hilberts_hotel_infinity, resistance, 0.03).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(hilberts_hotel_infinity, scaffold).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(hilberts_hotel_infinity, mountain).
 narrative_ontology:human_readable(hilberts_hotel_infinity, "Hilbert's Paradox of the Grand Hotel").
 narrative_ontology:topic_domain(hilberts_hotel_infinity, "mathematical/logical").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Emerges naturally from the axioms of Set Theory (ZFC).
 domain_priors:emerges_naturally(hilberts_hotel_infinity).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% While the core constraint is a Mountain, its application in pedagogy has a
-% coordination function, justifying these declarations for the Rope perspective.
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(hilberts_hotel_infinity, mathematicians).
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(hilberts_hotel_infinity, agents_relying_on_finite_intuition).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE HOTEL GUEST (MOUNTAIN)
-% For the guest, the rule that "there is always room" is a natural law of
-% their universe. They have no agency to resist the shifting rule. The
-% Mountain of transfinite arithmetic is unyielding.
-constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE MATHEMATICS TEACHER (ROPE)
-% For the educator, Hilbert's Hotel is a "Rope"—a functional coordination
-% mechanism. It allows them to pull students away from the confusion of
-% finite intuition and toward a standard understanding of set theory.
-constraint_indexing:constraint_classification(hilberts_hotel_infinity, scaffold,
-    context(agent_power(institutional),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The analytical observer sees the constraint for what it is: a fixed,
-% unchangeable logical consequence of the axioms of infinity.
+% PERSPECTIVE 1: FORMAL MATHEMATICAL STRUCTURE (MOUNTAIN) — The constraint is the logical structure of countable infinity itself. For any countably infinite set N and any countable subset S, there exists a bijection that exhausts S within N without remainder. This is invariant across all observables and representations. Zero degrees of freedom.
 constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
     context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: SET-THEORETIC FOUNDATION (MOUNTAIN) — Cantor's definition of countable infinity via the Dedekind-infinite property creates an irreducible constraint: no finite procedure can enumerate the set in time; no finite resource constraint can prevent re-accommodation. The constraint emerges necessarily from the axioms of ZFC set theory.
+constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
+    context(agent_power(analytical),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: INTUITIVE OBSERVER (MOUNTAIN) — The 'paradox' dissolves when the constraint is recognized: our intuitions about finite collections do not transfer to infinite ones. This is not a failure of logic but a boundary of finite cognition. The constraint (countable infinity's bijective closure) is immutable. What changes is understanding, not the constraint's structure.
+constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: MATHEMATICAL EDUCATION SYSTEM (MOUNTAIN) — The constraint functions pedagogically: no finite model can make countable infinity intuitive; the gap between finite and infinite cannot be bridged by intuition alone. Students encounter an irreducible conceptual barrier that formal proof must overcome. This is not a flaw in pedagogy but a structural feature of how infinite mathematics enters finite minds.
+constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
+    context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
@@ -165,23 +146,30 @@ constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(hilberts_hotel_tests).
+:- begin_tests(hilberts_hotel_infinity_tests).
 
-test(perspectival_gap) :-
-    % Verify the gap between the guest's experience and the teacher's application.
-    constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
-        context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(hilberts_hotel_infinity, scaffold,
-        context(agent_power(institutional), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(hilberts_hotel_infinity, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hilberts_hotel_infinity, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(analytical_view_is_mountain) :-
-    constraint_indexing:constraint_classification(hilberts_hotel_infinity, mountain,
-        context(agent_power(analytical), _, _, _)).
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(hilberts_hotel_infinity, ExtMetricName, E),
+    domain_priors:suppression_score(hilberts_hotel_infinity, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(hilberts_hotel_infinity).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(hilberts_hotel_infinity),
+    narrative_ontology:constraint_metric(hilberts_hotel_infinity, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(hilberts_hotel_infinity, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
-:- end_tests(hilberts_hotel_tests).
+:- end_tests(hilberts_hotel_infinity_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -189,95 +177,88 @@ test(natural_emergence) :-
 
 /**
  * LOGIC RATIONALE:
- *   The core of this constraint is a logical truth, making its fundamental
- *   classification a Mountain (ε=0.15, suppression=0.05). The extractiveness
- *   score of 0.15 reflects the "cost" of abandoning finite intuition, a
- *   non-material extraction. The suppression is set to the Mountain ceiling
- *   (0.05) as the logic does not suppress alternatives but merely defines its
- *   domain. The NL profile metrics (accessibility_collapse=1.0, resistance=0.0)
- *   are set to their logical extremes, as is appropriate for a mathematical axiom.
+ *   Extractiveness (0.08): Minimal. The constraint imposes no asymmetric extraction — no agent gains at another's expense. The re-accommodation is a neutral operation on the formal structure. The value reflects only that any logical constraint imposes some minimal cognitive cost to understand it. Suppression (0.02): Nearly absent. The constraint suppresses no alternatives — it is the only possible outcome given Dedekind infinity. Finite alternatives are simply impossible given the definitions. Theater ratio (0.15): Low. The formal proof requires no performative scaffolding. Pedagogically, the thought experiment uses theatrical language ('hotel,' 'guests,' 'manager') to communicate a formal result, but the underlying mathematics is transparent. As formalism, theater ratio is near-zero; the small value reflects the pedagogical staging.
  *
  * PERSPECTIVAL GAP:
- *   The gap is between the perception of the constraint as an unchangeable
- *   law of reality (Mountain, for the guest and analyst) and its use as a
- *   functional tool for coordinating knowledge (Rope, for the educator).
- *   The educator benefits from this structure, using it to teach, while the
- *   guest (or anyone trapped by finite intuition) simply experiences its
- *   immutable effects.
+ *   All perspectives converge on Mountain classification. The constraint is invariant across observables: the formal mathematician, the pedagogical educator, the set-theorist, and the intuition-confronting student all encounter the same irreducible structural property. There is no perspectival gap because the constraint has no degrees of freedom for observation to modulate. This uniformity is itself the diagnostic signature of a true Mountain — not because perspectives happen to agree, but because the constraint's structure admits no perpective-dependent variation.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries are 'mathematicians' who gain a powerful tool for reasoning
- *   about infinity. Victims are 'agents_relying_on_finite_intuition', as
- *   their conceptual models are invalidated. This victimhood is abstract,
- *   leading to a low base extraction score.
+ *   No beneficiary/victim structure exists. The constraint operates on formal structures (countable infinite sets) that have no agents. There is no extraction relationship, no power asymmetry, no directionality. The directionality derivation chain does not apply to this constraint — it is an example of a pure mathematical boundary, where the six-type classification system reduces to a single type (Mountain) across all contexts. This is one of the rare cases where the DR framework reveals that a concept has no agent-relative degrees of freedom.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification as a Mountain from the analytical perspective prevents
- *   misinterpreting the pedagogical "Rope" as the entire story. It correctly
- *   identifies the underlying structure as a fixed, non-negotiable property
- *   of a logical system, not a socially constructed coordination device.
+ *   No mandatrophy resolution needed. Hilbert's Hotel is a Mountain from all perspectives, which satisfies the logical requirement that natural laws exhibit zero degrees of freedom. The thought experiment's apparent paradox is fully resolved by recognizing the constraint's structural necessity — it is not possible to classify this as Snare (extraction exists), Rope (coordination exists), or any hybrid type because no agents are present and no asymmetry exists. The constraint is pure mathematical boundary: as immutable as the speed of light, as indifferent to perspective as the Halting Problem. The pedagogical difficulty (intuitive paradox) does not change the constraint's type; it merely reflects that finite cognition must learn to work within an infinite boundary.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_hilberts_hotel,
-    "Is the 'extraction' from finite intuition a meaningful cost, or simply the price of knowledge?",
-    "Philosophical analysis of cognitive frameworks and the value of counter-intuitive truths.",
-    "If it's a true cost, the extraction score could be higher. If it's just learning, the score is appropriate.",
+    intuition_gap_nature,
+    'Is the intuitive paradox a property of Hilbert''s Hotel (cognitive illusion) or a revealed feature of infinite set structure (deep insight)?',
+    'Compare intuitive difficulty of Hilbert''s Hotel with other bijective constructions (e.g., Cantor pairing function, ordinal arithmetic). If all carry similar cognitive resistance, the gap is cognitive; if Hilbert''s is uniquely difficult, the hotel structure may reveal something special.',
+    'If cognitive illusion: constraint is purely structural (mountain). If revealed feature: constraint may have pedagogical or conceptual substructure worth studying separately.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(intuition_gap_nature, conceptual, 'Whether the intuitive paradox reflects cognition or deep structure').
+
+omega_variable(
+    cardinality_choice_dependence,
+    'Does the re-accommodation property depend on the Axiom of Choice, making it contingent rather than universal?',
+    'Examine whether the Dedekind-infinite property (core of Hilbert''s constraint) requires Choice. In ZF without Choice, do all infinite sets admit the bijection that exhausts new arrivals?',
+    'If Choice-dependent: constraint is weaker in constructive mathematics; mountain classification is relative to ZFC. If Choice-independent: constraint is truly universal; mountain status is absolute.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_hilberts_hotel, conceptual,
-    "Whether the invalidation of finite intuition constitutes genuine extraction.").
+narrative_ontology:omega_variable(cardinality_choice_dependence, empirical, 'Choice-dependence of countable infinity bijection').
+
+omega_variable(
+    infinity_type_universality,
+    'Does the constraint apply equally to all infinite cardinalities (ℵ₀, 2^ℵ₀, etc.) or does it break down at uncountable infinities?',
+    'Test whether Hilbert''s re-accommodation works for uncountably many new guests. The constraint depends on the arrival set being countable relative to the hotel cardinality.',
+    'If universal: constraint is a property of cardinality hierarchy, not specific to countable infinity. If cardinality-specific: constraint is narrower; enables decomposition into countable vs uncountable stories.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(infinity_type_universality, empirical, 'Universality across infinite cardinalities').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(hilberts_hotel_infinity, 1924, 2026).
+narrative_ontology:interval(hilberts_hotel_infinity, 0, 1000).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is not required as base_extractiveness (0.15) is below the
-% 0.46 threshold. The logical constraint is static and does not drift.
+% Theater ratio over time
+narrative_ontology:measurement(hilbert_tr_t0, hilberts_hotel_infinity, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(hilbert_tr_t500, hilberts_hotel_infinity, theater_ratio, 500, 0.15).
+narrative_ontology:measurement(hilbert_tr_t1000, hilberts_hotel_infinity, theater_ratio, 1000, 0.15).
 
-/*
-narrative_ontology:measurement(hilberts_hotel_infinity_tr_t0, hilberts_hotel_infinity, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(hilberts_hotel_infinity_tr_t5, hilberts_hotel_infinity, theater_ratio, 5, 0.0).
-narrative_ontology:measurement(hilberts_hotel_infinity_tr_t10, hilberts_hotel_infinity, theater_ratio, 10, 0.0).
+% Extraction over time
+narrative_ontology:measurement(hilbert_be_t0, hilberts_hotel_infinity, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(hilbert_be_t500, hilberts_hotel_infinity, base_extractiveness, 500, 0.08).
+narrative_ontology:measurement(hilbert_be_t1000, hilberts_hotel_infinity, base_extractiveness, 1000, 0.08).
 
-narrative_ontology:measurement(hilberts_hotel_infinity_ex_t0, hilberts_hotel_infinity, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(hilberts_hotel_infinity_ex_t5, hilberts_hotel_infinity, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(hilberts_hotel_infinity_ex_t10, hilberts_hotel_infinity, base_extractiveness, 10, 0.15).
-*/
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The pedagogical use of the paradox is an information standard.
-% narrative_ontology:coordination_type(hilberts_hotel_infinity, information_standard).
+narrative_ontology:coordination_type(hilberts_hotel_infinity, information_standard).
+narrative_ontology:affects_constraint(hilberts_hotel_infinity, cantor_cardinality_hierarchy).
+narrative_ontology:affects_constraint(hilberts_hotel_infinity, dedekind_infinite_property).
 
-% Network relationships (structural influence edges)
-% narrative_ontology:affects_constraint(hilberts_hotel_infinity, other_constraint_id).
+% DUAL FORMULATION NOTE:
+% Hilbert's Hotel is the intuitive gateway to countable infinity's bijective closure property. The constraint decomposes into: (1) the Dedekind-infinite property (ε ≈ 0.05, Mountain — the formal definition), (2) the Cantor cardinality hierarchy (ε ≈ 0.10, Mountain — the broader context of infinite sets), and (3) Hilbert's pedagogical thought experiment (ε ≈ 0.08, this story — the communication vehicle). All three stories are Mountains; Hilbert's is the most conceptually accessible entry point.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed. The structural derivation from beneficiary/victim
-% status and exit options is sufficient to model the perspectives.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

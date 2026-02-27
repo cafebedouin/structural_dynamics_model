@@ -2,149 +2,191 @@
   "header": {
     "constraint_id": "anticipatory_capacity_failure",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "antcap"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.75,
-    "theater_ratio": 0.78,
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Blindside Equilibrium",
+    "human_readable": "The Blindside Equilibrium: Anticipatory Capacity Failure",
     "topic_domain": "organizational/technological/cognitive",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "current_system_management",
-      "short_term_shareholders"
+      "optimization_beneficiaries",
+      "short_term_efficiency_winners"
     ],
     "victims": [
-      "future_self_of_the_organization",
-      "downsized_employees_post_shock",
-      "long_term_shareholders"
+      "adaptive_capacity_commons",
+      "shock_vulnerable_constituencies"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Shock-Vulnerable Constituency",
+      "comment": "PERSPECTIVE 1: SHOCK-VULNERABLE CONSTITUENCY (SNARE) \u2014 Individuals and communities bearing the full cost of organizational blindness when out-of-distribution shocks arrive. No exit option; cannot choose to avoid the cascading failure. Extraction is maximal because the system sacrifices their adaptive welfare for current efficiency gains. The constraint suppresses their ability to organize defensive responses."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Future Organization",
-      "comment": "PERSPECTIVE 1: THE FUTURE ORGANIZATION (SNARE) — The organization's long-term viability is the primary victim. It cannot advocate for itself in the present and is trapped by decisions that extract its future resilience for present gain. The high suppression of alternatives (maintaining slack) and high extraction of future potential make this a classic snare. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+      "label": "The Middle-Layer Operators",
+      "comment": "PERSPECTIVE 2: MIDDLE-LAYER OPERATORS (TANGLED ROPE) \u2014 Frontline workers (logistics coordinators, system administrators, middle managers) experience both benefit and extraction. They gain efficiency gains and career stability during normal operation (coordination benefit). But when shock arrives, they are blamed for failures they lacked authority to prevent. Constrained exit: cannot leave during crisis without destroying their professional standing. Mixed experience of benefit and cost."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "local",
-      "label": "The Optimized Manager",
-      "comment": "PERSPECTIVE 2: THE OPTIMIZED MANAGER (ROPE) — From the perspective of management focused on quarterly KPIs, the system is a pure coordination mechanism for maximizing efficiency. They are a direct beneficiary and have arbitrage exit (can leave before a crisis). The constraint appears as a tool for success. d≈0.05, f(d)≈-0.12, σ=0.8 → χ≈-0.05. Negative effective extraction signifies a net subsidy."
+      "spatial_scope": "global",
+      "label": "The Optimization Leadership",
+      "comment": "PERSPECTIVE 3: OPTIMIZATION LEADERSHIP (ROPE) \u2014 Senior executives and architects of efficiency systems experience the constraint as pure coordination. The high-optimization equilibrium solves the collective action problem of resource allocation. They benefit from performance metrics, shareholder returns, and organizational prestige during the stable phase. Arbitrage exit: can transition to new institutions or sectors when instability threatens."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Resilience Advocates",
+      "comment": "PERSPECTIVE 4: RESILIENCE ADVOCATES (SCAFFOLD) \u2014 Organized groups (risk officers, scenario planners, resilience consultants, crisis management teams) perceive this as a temporary problem with a sunset. They are building redundancy protocols, stress-testing frameworks, and scenario simulation programs that create alternative anticipatory pathways. Sunset: as these practices mature and regulatory mandates enforce scenario planning, the blindside equilibrium degrades. Theater is moderate because resilience building is functionally engaged, not merely performative."
     },
     {
       "classification_type": "piton",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Skeptical Engineer",
-      "comment": "PERSPECTIVE 3: THE SKEPTICAL ENGINEER (PITON) — An internal actor who sees that the organization's adaptive functions have atrophied. 'Resilience planning' and 'innovation labs' are seen as performative rituals. The high theater_ratio (0.78) meets the piton gate (≥0.70), reflecting a system maintained by inertia despite its core adaptive purpose being degraded."
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Risk Management Theater",
+      "comment": "PERSPECTIVE 5: RISK MANAGEMENT THEATER (PITON) \u2014 Risk committees, compliance departments, and stress-testing procedures exist but are substantially performative. They maintain the appearance of anticipatory capacity while the actual system remains blind to out-of-distribution events. Theater ratio (0.48 rising to 0.65) reflects that risk processes focus on in-distribution tail risks, not genuine black swans. The constraint persists through institutional inertia despite degraded function."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The default analytical view recognizes both the genuine coordination function (achieving efficiency) and the asymmetric extraction (sacrificing future resilience for present gain). It requires active enforcement (via KPIs and budget cuts) and has clear beneficiaries and victims. This is the canonical Tangled Rope classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Fatalist View",
-      "comment": "PERSPECTIVE 5: THE FATALIST VIEW (MOUNTAIN) — This perspective frames the equilibrium as an inevitable outcome of competitive dynamics, a 'natural law' of complex systems. It sees the eventual failure as an irreducible property of optimization. The engine will flag this as a false summit, as the base properties (high ε, high suppression) are inconsistent with a natural law."
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the constraint exhibits both genuine coordination function (organizing resource flows under normal conditions) and irreducible extraction (sacrificing adaptive capacity for efficiency). The tension between optimization and resilience is not resolvable through better management \u2014 it reflects a deep structural trade-off. The blindside equilibrium is not a failure of execution but an equilibrium outcome of rational short-term incentives."
     }
   ],
   "omegas": [
     {
-      "id": "equilibrium_inevitability",
-      "question": "Is the loss of anticipatory capacity an inevitable consequence of competitive pressure, or a contingent failure of governance and imagination?",
-      "resolution_mechanism": "Comparative analysis of firms in high-pressure environments, identifying counterexamples that successfully maintained resilience and cognitive surplus.",
-      "impact": "If deemed inevitable, the constraint would be re-classified as a Mountain from more perspectives. If contingent, it confirms the Tangled Rope/Snare classification based on policy choices.",
+      "id": "shock_classification_boundary",
+      "question": "What distinguishes a true out-of-distribution shock from a merely low-probability in-distribution tail event that risk systems should have anticipated?",
+      "resolution_mechanism": "Post-hoc analysis of shock characteristics: whether ex-ante scenario planning could have included it, whether analogous historical events existed, whether physical/technical limits were exceeded",
+      "impact": "If shock classification is subjective: 'blindside' becomes an excuse (systems can always claim a shock was unforeseeable). If sharp boundary: some organizations genuinely lose anticipatory capacity while others maintain it.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether the Blindside Equilibrium is an inevitable market outcome or a contingent policy failure."
+      "type_class": "conceptual",
+      "description": "Classification boundary between true black swans and tail risk failures"
     },
     {
-      "id": "optimal_slack_quantification",
-      "question": "Can the value of organizational slack and cognitive surplus be quantified *before* a shock, or is its value only legible in hindsight?",
-      "resolution_mechanism": "Development and validation of leading indicators for organizational brittleness (e.g., network analysis of communication, diversity of project portfolios, mean time to pivot).",
-      "impact": "If quantifiable, the constraint can be managed as a Rope (a known trade-off). If its value remains illegible pre-crisis, it functions as a Snare from the future's perspective, as its cost is invisible and thus cannot be negotiated.",
+      "id": "efficiency_resilience_tradeoff_depth",
+      "question": "Is the efficiency-resilience trade-off a contingent artifact of specific optimization strategies, or a fundamental structural property of complex adaptive systems?",
+      "resolution_mechanism": "Comparative organizational analysis: do systems that maintain high resilience and high efficiency exist? What structural properties enable both? Historical examples of institutional survival through high-volatility periods.",
+      "impact": "If contingent: the blindside equilibrium is a remediable design failure (Scaffold or Rope). If fundamental: it reflects an irreducible constraint on anticipatory capacity (Mountain or Snare). Classification depends on resolving this.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether efficiency-resilience trade-off is contingent or fundamental"
+    },
+    {
+      "id": "cognitive_surplus_recovery_rate",
+      "question": "How rapidly can organizations recover cognitive surplus and scanning capacity after optimizing it away? Does unused capacity atrophy irreversibly or remain dormant?",
+      "resolution_mechanism": "Post-shock organizational studies: measurement of how quickly crisis-activated institutions can mobilize novel responses; whether pre-optimization cognitive capacity can be reconstructed or must be rebuilt from scratch",
+      "impact": "If recovery is fast: shock response is a Rope problem (coordination lag). If recovery is slow/irreversible: the constraint is closer to Snare (capacity permanently extracted). Recovery rate determines whether shock response is adaptation or collapse.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "The legibility of the value of 'wasteful' slack before a crisis."
+      "type_class": "empirical",
+      "description": "Speed of cognitive surplus recovery after optimization depletion"
+    },
+    {
+      "id": "measurement_gaming_in_resilience",
+      "question": "To what extent do organizations meet resilience and scenario planning mandates through theater (compliance reports, scenario simulations) rather than genuine structural changes that would constrain efficiency?",
+      "resolution_mechanism": "Crisis impact analysis: comparing organizations with formal resilience programs vs those without, conditional on similar efficiency levels. Measurement of whether scenario exercises predict better shock responses.",
+      "impact": "If gaming is widespread: resilience advocates are building Piton (performative) institutions. If genuine: Scaffold classification holds. Theater ratio dynamics will reveal this.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of gaming in formal resilience and scenario planning programs"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.5
+      "time_point": 3,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.78
+      "time_point": 6,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.4
+      "time_point": 3,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.55
+      "time_point": 6,
+      "value": 0.58
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The Blindside Equilibrium describes a state where a system's hyper-optimization for its current environment erodes the cognitive surplus, redundancy, and structural flexibility needed to anticipate or withstand 'out-of-distribution' shocks. The constraint is the set of incentives and metrics that drive this optimization, creating a temporal extraction where present-day efficiency is purchased with future resilience. This dynamic is actively enforced through management practices like stringent KPI monitoring and cost-cutting that penalize 'unproductive' slack.",
+    "narrative_context": "The Blindside Equilibrium describes a structural dynamic in which organizations ruthlessly optimize their operational efficiency during periods of stability, progressively reducing cognitive surplus, redundancy, scenario-planning capacity, and peripheral awareness. This optimization appears to solve a coordination problem\u2014efficiently allocating resources under known constraints\u2014but it systematically degrades the organization's capacity to anticipate or respond to shocks that fall outside the distribution of historical experiences. The constraint operates across technological systems (supply chains, financial networks, power grids), organizational hierarchies (startups scaling too fast, institutions reducing middle management), and cognitive domains (expertise specialization reducing cross-domain pattern recognition). The extractiveness comes from the fact that the efficiency gains accrue to leadership and optimization beneficiaries during the stable phase, while the adaptive capacity loss is distributed across future shock victims and broader collective institutions. The suppression is structural: once an organization has optimized away redundancy, it cannot easily rebuild scanning capacity without destroying the efficiency that justifies the structure.",
     "key_agents": [
-      "Current System Management: Primary beneficiary (institutional/arbitrage) - Maximizes short-term metrics and bonuses.",
-      "Future Self of the Organization: Primary victim (powerless/trapped) - Bears the catastrophic cost of failure when a shock occurs.",
-      "Skeptical Engineer: Internal observer (moderate/constrained) - Recognizes the growing brittleness and performative nature of 'resilience' efforts.",
-      "Analytical Observer: External analyst (analytical/analytical) - Sees the full structure of coordination and extraction."
+      "Optimization Leadership (institutional/arbitrage): Primary beneficiary \u2014 captures efficiency gains, performance improvements, competitive advantage during stable phase. Can transition institutions when instability looms.",
+      "Short-term Efficiency Winners (institutional/arbitrage): Include shareholders, strategic partners, customers receiving lean services. Benefit from optimization; exit when shock arrives.",
+      "Shock-Vulnerable Constituencies (powerless/trapped): Employees in hollowed-out roles, supply-chain dependencies, communities exposed to system failures. No exit; bear full shock cost.",
+      "Adaptive Capacity Commons (powerless/trapped): Abstract institutional good (redundancy, slack, scenario planning capacity) that is extracted and cannot be recovered during crisis.",
+      "Middle-Layer Operators (moderate/constrained): Frontline staff who execute optimization but lack authority to maintain buffers. Blame-bearing during failure despite having constrained agency.",
+      "Resilience Advocates (organized/constrained): Risk officers, scenario planners, redundancy architects. See the constraint as remediable but institutionally constrained; building alternative pathways.",
+      "Risk Management Theater (institutional/arbitrage): Compliance departments, stress-testing teams maintaining performative capacity. Theater increases as genuine capacity decreases.",
+      "Analytical Observer (analytical/analytical): Views the constraint as reflecting a fundamental tension between short-term incentive structures and long-term adaptive requirements."
     ],
-    "logic_rationale": "Extractiveness (ε=0.55): Represents the significant value of future resilience and adaptability being sacrificed for present-day performance gains. Suppression (0.75): High. The culture of optimization actively suppresses alternatives. Proposals for maintaining costly slack, funding speculative R&D, or building redundant systems are systematically rejected as inefficient. Theater Ratio (0.78): High. As genuine resilience is engineered out, it is often replaced with performative substitutes like 'innovation theater' or superficial disaster recovery plans that create a false sense of security, satisfying the Piton classification gate.",
-    "perspectival_gap": "The gap is profound and demonstrates the indexical nature of classification. For management executing the strategy, the system is a Rope—a tool for efficient coordination. For the organization's future, which bears the ultimate cost, it's a Snare—a trap with no escape. For the engineer on the ground, the system is a Piton—a set of rituals that have lost their original adaptive function. The analytical observer, weighing both the efficiency gains and the extracted resilience, classifies it as a Tangled Rope.",
-    "directionality_logic": "The directionality `d` is derived from structural positions. The manager, as a beneficiary with arbitrage exit, has a very low `d`, resulting in negative effective extraction (a net benefit). The future organization, as a trapped victim, has a very high `d`, maximizing effective extraction and leading to the Snare classification. The constrained engineer has a moderate `d`, while the analytical observer has a canonical high `d` that is not maximal, reflecting their observer status.",
-    "mandatrophy_analysis": "This case resolves the mandatrophy by showing that 'optimizing for efficiency' is not a monolithic concept. It is simultaneously a beneficial coordination mechanism (Rope) for those who profit in the short term and a coercive extraction mechanism (Snare) for the future entity that will pay the price. The system correctly identifies that the same set of actions can be both, depending on the indexical frame of reference. The high theater ratio also correctly triggers the Piton classification, identifying the decay of function into ritual."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint systematically transfers adaptive capacity (a shared institutional resource) into efficiency gains (private to beneficiaries) during stable phases. The extraction is not coercive in the moment\u2014organizations voluntarily embrace optimization\u2014but it becomes visible when shocks arrive and victims cannot respond. The value reflects both the magnitude of capacity loss and the distributed harm. Suppression (0.65): High. Once cognitive surplus is optimized away, organizations face structural barriers to rebuilding it: restoring redundancy requires sacrificing efficiency metrics, maintaining scenario capacity competes with immediate productivity, cross-functional awareness is suppressed by specialization incentives. But suppression is not total\u2014organizations can rebuild, at great cost, during crisis. Theater ratio (0.28 rising to 0.48): Moderate and rising. In early optimization phases, risk management is functionally engaged (genuine stress testing, scenario planning). As optimization deepens, theater increases\u2014organizations maintain compliance procedures while actual anticipatory capacity erodes. The rise from 0.28 to 0.48 over the interval reflects this degradation into performativity.",
+    "perspectival_gap": "The fundamental gap is temporal. Leadership perceives a Rope because they operate in immediate/biographical horizons where optimization pays off. Shock victims perceive a Snare because they operate in biographical/generational horizons where capacity loss becomes catastrophic. The constraint is genuinely both: it is a coordination mechanism that solves present resource allocation AND an extraction mechanism that depletes future adaptive capacity. The Tangled Rope classification at the analytical level reflects this irreducible duality\u2014the constraint cannot be understood as pure coordination (Rope) nor pure extraction (Snare) when viewed across time horizons.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by their relationship to the efficiency flow and shock costs. Beneficiaries of optimization (leadership with arbitrage exit) derive low d (~0.05) because they capture gains and can exit. Shock victims (trapped, powerless) derive high d (~0.95) because they bear costs with no exit. Middle operators (moderate power, constrained exit) derive moderate-high d (~0.70) because they experience both benefit (during stability) and extraction (during shock, through blame). Resilience advocates (organized, constrained exit) derive moderate d (~0.50) because they see the constraint as solvable and can build alternatives. Risk management (institutional, arbitrage) derives low d (~0.15) because they benefit from performative compliance during stable phase and can exit through role transition during crisis. The analytical observer (analytical context) derives d from the structural symmetry: the constraint benefits some agents' short-term interests while extracting from others' long-term capacity, producing d \u2248 0.50 (symmetric extraction/benefit across time).",
+    "mandatrophy_analysis": "RESOLVING THE EFFICIENCY-EXTRACTION MANDATE: The mandatrophy arises from the question 'Is the Blindside Equilibrium a failure of coordination or a success of extraction?' The Tangled Rope classification at the analytical level resolves this: it is both simultaneously. The constraint provides genuine coordination function (organizations solve the allocation problem under constraints they perceive as binding) AND produces real extraction (they systematically sacrifice future adaptive capacity for present efficiency). The Scaffold perspective from resilience advocates shows that the constraint is partially remediable\u2014building redundancy protocols and scenario frameworks can maintain efficiency while preserving scanning capacity. But the Piton perspective shows that actual organizations often implement theater rather than genuine alternatives, suggesting that the extraction is being sustained through compliance performance rather than substantive change. The mandatrophy resolves to: the blindside equilibrium is a stable Tangled Rope that institutional actors perceive as Rope (coordination only) and victims perceive as Snare (extraction only), with resilience advocates building Scaffold alternatives that risk degrading into Piton theater if genuine structural changes are not enforced."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.35
   },
   "network": {
     "affects_constraints": [
-      "quarterly_reporting_pressure"
-    ]
-  }
+      "supply_chain_brittleness",
+      "expertise_specialization_trap",
+      "organizational_slack_elimination",
+      "scenario_planning_atrophy"
+    ],
+    "dual_formulation_note": "The Blindside Equilibrium is upstream of specific institutional failures (supply-chain collapse, financial crisis cascades, infrastructure vulnerability). It represents the structural mechanism by which organizations create their own shock-vulnerability. Constraint family: the anticipatory capacity failure enables all downstream shock-amplification constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
 }

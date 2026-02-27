@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: gaza_aid_permit_revocation
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_gaza_aid_permit_revocation, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,23 +55,39 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: gaza_aid_permit_revocation
  *   human_readable: Revocation of Work Permits for Local Aid Workers in Gaza
- *   domain: political
+ *   domain: political/humanitarian_access
  *
  * SUMMARY:
- *   The Israeli state, through its military and civil administration (COGAT),
- *   is revoking work permits for local Palestinian staff of international
- *   humanitarian organizations operating in Gaza. This action effectively
- *   halts or severely cripples the ability of these organizations to deliver
- *   aid, directly impacting the civilian population dependent on it. The
- *   stated justification is to exert pressure on Hamas, but the immediate
- *   effect is the denial of essential resources to a trapped population.
+ *   The revocation of work permits for local Palestinian staff of
+ *   international humanitarian organizations in Gaza represents a structural
+ *   extraction mechanism operating through administrative control. Israeli
+ *   military administration (COGAT) controls permit issuance and revocation
+ *   for all personnel working in humanitarian organizations operating within
+ *   occupied Gaza. Beginning in late 2023 and intensifying through 2024-2025,
+ *   systematic permit revocations have eliminated employment for Palestinian
+ *   aid workers, forcing organizations to either reduce operations, employ
+ *   expensive international replacements (with reduced local knowledge and
+ *   access), or halt programs entirely. The constraint exhibits the
+ *   characteristics of a pure snare from the perspective of Palestinian aid
+ *   workers and the dependent Gaza population: no exit options, maximum
+ *   suppression (no alternative employment, blockade conditions), and high
+ *   extraction (loss of livelihood, reduced aid access). From the Israeli
+ *   military perspective, the mechanism appears as legitimate security
+ *   coordination. From the international community perspective, it is a
+ *   partially enforceable but degraded humanitarian protection mechanism
+ *   (piton). The constraint's theater ratio (0.45) reflects that permit
+ *   revocations are justified primarily through security screening rationales
+ *   that may or may not have actual security function, obscuring the
+ *   extraction mechanism beneath ostensible regulatory authority.
  *
- * KEY AGENTS (by structural relationship):
- *   - Palestinian Civilians in Gaza: Primary target (powerless/trapped) — bear the extraction of essential aid and services.
- *   - Local Palestinian Aid Workers: Secondary target (moderate/trapped) — bear the direct extraction of their livelihood and ability to work.
- *   - Israeli State & Military: Primary beneficiary (institutional/arbitrage) — benefits from the increased leverage and control gained by the policy.
- *   - International Aid Organizations & Donor Nations: Secondary victim (organized/constrained) — their operations are blocked, and their influence is suppressed.
- *   - Analytical Observer: Analytical observer — sees the full structure of coercion and extraction.
+ * KEY AGENTS:
+ *   - Palestinian Aid Workers: Primary victims (powerless/trapped) — lose employment and livelihood with zero alternatives due to Gaza blockade and economic collapse
+ *   - International Humanitarian Organizations: Secondary victims (moderate/constrained) — forced to reduce operations or employ expensive international replacements; cannot exit Gaza without abandoning mandate
+ *   - Gaza Population: Indirect victims (powerless/trapped) — dependent on aid delivery; reduced aid worker capacity means reduced aid access and increased humanitarian emergencies
+ *   - Israeli Military Administration (COGAT): Primary beneficiary (institutional/arbitrage) — controls aid worker access; extracts operational control and political leverage over humanitarian sector
+ *   - International Community / Human Rights Monitors: Organized observers (organized/constrained) — document violations but have limited enforcement capacity; dependent on Israeli cooperation for access and information
+ *   - International Humanitarian Law Framework: Institutional structure (institutional/arbitrage in theory) — provides legal framework for humanitarian protection but enforcement is degraded (piton)
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing occupation-based control as inherent and immutable rather than contingent policy choice
  */
 
 /* ==========================================================================
@@ -79,91 +95,80 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(gaza_aid_permit_revocation, 0.85). % Extracts survival resources and leverage.
-domain_priors:suppression_score(gaza_aid_permit_revocation, 0.90).   % Structural property (raw, unscaled). Alternatives are blockaded.
-domain_priors:theater_ratio(gaza_aid_permit_revocation, 0.15).       % The action is highly functional to its coercive goal, not primarily theatrical.
+domain_priors:base_extractiveness(gaza_aid_permit_revocation, 0.68).
+domain_priors:suppression_score(gaza_aid_permit_revocation, 0.75).
+domain_priors:theater_ratio(gaza_aid_permit_revocation, 0.45).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(gaza_aid_permit_revocation, extractiveness, 0.85).
-narrative_ontology:constraint_metric(gaza_aid_permit_revocation, suppression_requirement, 0.90).
-narrative_ontology:constraint_metric(gaza_aid_permit_revocation, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(gaza_aid_permit_revocation, extractiveness, 0.68).
+narrative_ontology:constraint_metric(gaza_aid_permit_revocation, suppression_requirement, 0.75).
+narrative_ontology:constraint_metric(gaza_aid_permit_revocation, theater_ratio, 0.45).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(gaza_aid_permit_revocation, snare).
 narrative_ontology:human_readable(gaza_aid_permit_revocation, "Revocation of Work Permits for Local Aid Workers in Gaza").
-narrative_ontology:topic_domain(gaza_aid_permit_revocation, "political").
+narrative_ontology:topic_domain(gaza_aid_permit_revocation, "political/humanitarian_access").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(gaza_aid_permit_revocation). % Enforced by COGAT and military.
+domain_priors:requires_active_enforcement(gaza_aid_permit_revocation).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(gaza_aid_permit_revocation, israeli_state_and_military).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(gaza_aid_permit_revocation, palestinian_civilians_in_gaza).
-narrative_ontology:constraint_victim(gaza_aid_permit_revocation, international_aid_organizations).
-narrative_ontology:constraint_victim(gaza_aid_permit_revocation, local_palestinian_aid_workers).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(gaza_aid_permit_revocation, israeli_military_administration).
+narrative_ontology:constraint_victim(gaza_aid_permit_revocation, palestinian_aid_workers).
+narrative_ontology:constraint_victim(gaza_aid_permit_revocation, humanitarian_organizations).
+narrative_ontology:constraint_victim(gaza_aid_permit_revocation, gazan_population_access_to_aid).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% The Palestinian civilian population dependent on aid. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → very high χ
-constraint_indexing:constraint_classification(gaza_aid_permit_revocation, tangled_rope,
+% PERSPECTIVE 1: PALESTINIAN AID WORKER (SNARE) — No meaningful exit. Permit revocation eliminates employment in humanitarian sector; alternative employment in Gaza is nonexistent due to blockade and economic collapse. Family depends on aid sector wages. Faces maximum coercive pressure with zero alternatives. Maximum experienced extraction.
+constraint_indexing:constraint_classification(gaza_aid_permit_revocation, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: INTERNATIONAL HUMANITARIAN ORGANIZATIONS (SNARE) — Cannot exit Gaza without abandoning mission; must operate within permit system controlled by Israeli military. Constrained exit: can relocate staff but cannot redirect mission. Faces extraction through forced employment of international staff (higher cost) or mission reduction. Suppression is structural: no alternative channels exist for aid delivery into Gaza.
+constraint_indexing:constraint_classification(gaza_aid_permit_revocation, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The Israeli state enacting the policy. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+% PERSPECTIVE 3: ISRAELI MILITARY ADMINISTRATION (COGAT) (ROPE) — Experiences permit revocation as a coordination mechanism: controlling aid worker permits enables military security screening and operational control. From this perspective, the system solves a real coordination problem (vetting aid workers for security risks). Beneficiary with full arbitrage options — can revoke, reinstate, or modify permit conditions at will. Low effective extraction from own perspective; sees the mechanism as security coordination.
 constraint_indexing:constraint_classification(gaza_aid_permit_revocation, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SNARE)
-% Default analytical context. Sees the high base extraction and coercion.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(gaza_aid_permit_revocation, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% International aid organizations and donor states like Norway. They are
-% institutional actors but are victims of the policy with constrained options.
-% Engine derives d from: victim membership + constrained exit -> d > 0.5 -> high χ
-constraint_indexing:constraint_classification(gaza_aid_permit_revocation, snare,
+% PERSPECTIVE 4: INTERNATIONAL COMMUNITY / HUMAN RIGHTS MONITORS (TANGLED ROPE) — Has coordination function (documenting violations, applying diplomatic pressure) but also experiences extraction (limited ability to influence permit policy, dependent on Israeli cooperation for access). Can organize multilateral response but exits are constrained by geopolitical relationships. Sees mixed coordination-extraction structure.
+constraint_indexing:constraint_classification(gaza_aid_permit_revocation, tangled_rope,
     context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
-            spatial_scope(continental))).
+            spatial_scope(global))).
 
+% PERSPECTIVE 5: INTERNATIONAL HUMANITARIAN LAW FRAMEWORK (PITON) — Theoretically governs permit revocation through Geneva Conventions (protecting humanitarian access). Framework persists as institutional ritual despite selective enforcement and frequent violations. Theater ratio reflects gap between legal obligations and actual protection mechanisms. IHL exists and is cited but has degraded functional capacity to prevent permit revocations in practice.
+constraint_indexing:constraint_classification(gaza_aid_permit_revocation, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: GAZA POPULATION (INDIRECT VICTIM) (SNARE) — Cannot exit or organize response. Dependent on humanitarian aid for survival; aid worker permit revocations reduce aid delivery capacity. Bears extraction through reduced aid access, increased hunger, medical emergencies left untreated. No alternatives; no exit options. Maximum experienced harm with zero agency.
+constraint_indexing:constraint_classification(gaza_aid_permit_revocation, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / SOVEREIGNTY VIEW (MOUNTAIN) — From a civilizational/universal perspective, occupying powers have inherent authority to control entry/exit and permit issuance for populations under military control. Permit revocation is presented as an immutable consequence of military occupation status. However, the structural data reveals false summit: permit revocation is a contingent policy choice, not an inherent feature of occupation. The mountain classification naturalizes what is actually a discretionary extraction mechanism.
+constraint_indexing:constraint_classification(gaza_aid_permit_revocation, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -171,33 +176,18 @@ constraint_indexing:constraint_classification(gaza_aid_permit_revocation, snare,
 
 :- begin_tests(gaza_aid_permit_revocation_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(gaza_aid_permit_revocation, TypeTarget, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(gaza_aid_permit_revocation, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    TypeTarget == snare,
-    TypeBeneficiary == rope,
-    TypeTarget \= TypeBeneficiary.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(gaza_aid_permit_revocation, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(gaza_aid_permit_revocation, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(perspectival_gap_ngo_beneficiary) :-
-    % Verify perspectival gap between constrained NGO and beneficiary.
-    constraint_indexing:constraint_classification(gaza_aid_permit_revocation, TypeNGO, context(agent_power(organized), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(gaza_aid_permit_revocation, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    TypeNGO == snare,
-    TypeBeneficiary == rope,
-    TypeNGO \= TypeBeneficiary.
-
-test(analytical_claim_matches) :-
-    % Verify the analytical view matches the overall constraint claim.
-    narrative_ontology:constraint_claim(gaza_aid_permit_revocation, ClaimType),
-    constraint_indexing:constraint_classification(gaza_aid_permit_revocation, AnalyticalType, context(agent_power(analytical), _, _, _)),
-    ClaimType == AnalyticalType.
-
-test(threshold_validation_snare) :-
+test(extraction_signature) :-
     domain_priors:base_extractiveness(gaza_aid_permit_revocation, E),
-    domain_priors:suppression_score(gaza_aid_permit_revocation, S),
-    E >= 0.46,
-    S >= 0.60.
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(gaza_aid_permit_revocation, TR),
+    TR >= 0.70.
 
 :- end_tests(gaza_aid_permit_revocation_tests).
 
@@ -207,115 +197,101 @@ test(threshold_validation_snare) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (0.85): The constraint directly removes access to
- *     life-sustaining resources (food, water, medicine) from a population. This
- *     is one of the highest possible forms of extraction, converting human
- *     suffering into geopolitical leverage.
- *   - Suppression Score (0.90): The targeted population is under a blockade,
- *     meaning there are no viable alternative channels for receiving aid if the
- *     primary international organizations are incapacitated. The constraint
- *     functions by actively suppressing alternatives.
- *   - Theater Ratio (0.15): While there is a political narrative (pressuring
- *     Hamas), the primary effect of the constraint is its direct, functional
- *     impact on aid delivery. The action is coercive enforcement, not performative.
+ *   Extractiveness (0.68): High. The constraint produces direct economic extraction (loss of Palestinian worker income), operational extraction (forcing organizations to redirect resources), and instrumental extraction (gaining political control over humanitarian access). The trajectory from 0.52 to 0.68 reflects intensification: initial selective revocations (security-justified) evolved into systematic exclusion. Base extraction is legitimized through security rhetoric but functions structurally as employment elimination and humanitarian access control. Suppression (0.75): Very high. Palestinian aid workers face suppression through: (1) no alternative employment in Gaza (blockade conditions, economic collapse), (2) no ability to challenge permit decisions (military administrative authority), (3) family dependence on aid sector wages, (4) no exit or substitution options. Organizations face suppression through: (1) inability to operate without permits, (2) no alternative aid delivery channels, (3) choice between mission abandonment or cost escalation. Theater ratio (0.45): Moderate-low. Permit revocation justification relies on security screening rhetoric ('vetting for Hamas connections,' 'preventing aid diversion'), but the structural function is access control and employment elimination. The theater is lower than traditional bureaucratic mechanisms because the security justification is often transparent as secondary rationale; the primary function (control through permit authority) is visible. The ratio increases slightly over the interval as revocations become more systematic and less individually justified.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme. For the Palestinian civilians (powerless, trapped), the
- *   constraint is an existential threat with no exit, a textbook Snare. For the
- *   Israeli state (institutional, arbitrage), it is a policy instrument—a tool
- *   for coordinating state power to achieve a strategic objective. From this
- *   perspective, it functions as a Rope, coordinating military and civil
- *   actions. This difference in classification arises directly from their
- *   structural positions and the derived directionality (d).
+ *   The constraint demonstrates a 'Rope-Snare duality' — the same structural mechanism (permit control by military authority) is experienced as coordination by the beneficiary and as maximum extraction by victims. This gap is not a measurement ambiguity but a fundamental structural property: permit authority inherently centralizes control in one agent and removes alternatives for all others. The gap cannot be closed through better information or clarification — it reflects the irreducible asymmetry of permit-based access control. The piton perspective (IHL framework) shows that international humanitarian law nominally addresses this gap through humanitarian carve-outs and presumptive protection of aid access, but enforcement mechanisms are degraded, converting the legal framework into performative ritual.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `israeli_state_and_military`. They design and enforce the
- *     constraint and are the sole beneficiaries of the leverage it creates.
- *     Combined with `arbitrage` exit, this yields a low `d` and negative `χ`.
- *   - Victims: `palestinian_civilians_in_gaza` and `local_palestinian_aid_workers`.
- *     They bear the full cost. Combined with `trapped` exit, this yields a
- *     high `d` and high `χ`.
+ *   Palestinian aid workers: Structural position as victims with trapped exit options produces maximum directionality d ≈ 0.95, yielding f(d) ≈ 1.42 (powerless equivalent). They experience the full weight of extraction with zero agency or exit. Israeli military administration: Position as beneficiary with arbitrage exit options produces low directionality d ≈ 0.05-0.15, yielding negative or near-zero f(d) — they experience the constraint as coordination benefit (control gained), not extraction cost. International organizations: Position as moderate-power victims with constrained exit produces d ≈ 0.65-0.75, yielding f(d) ≈ 1.00-1.15 (moderate experienced extraction) — they can partially exit (relocate staff, change operations) but cannot fully exit without abandoning mandate. Gaza population: Position as powerless indirect victims with trapped options produces d ≈ 0.93, f(d) ≈ 1.40 — maximum experienced extraction despite not being direct permit holders. International community: Position as organized observers with analytical/constrained exit produces d ≈ 0.70-0.75, f(d) ≈ 1.12 — can document and pressure but cannot prevent, experiencing moderate extraction through limited agency.
  *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   International aid organizations represent an interesting inter-institutional
- *   case. They are powerful, organized actors, but in this context, their agency
- *   is nullified. Their `exit_options(constrained)` reflects their inability to
- *   override the sovereign decision of the Israeli state on its controlled
- *   territory. Despite being 'institutional', they are structurally victims of
- *   this constraint, causing it to classify as a Snare from their perspective
- *   as well, albeit with a slightly lower effective extraction (χ) than for the
- *   trapped civilians.
- *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- *   This is a clear case of a Snare. Any attempt to frame it as a coordination
- *   mechanism (Rope) fails because the coordination function is entirely
- *   internal to the enforcing agent. For those subjected to it, there is no
- *   coordination benefit, only asymmetric extraction. The system correctly
- *   identifies this by separating the beneficiary's view (Rope) from the
- *   victim's and analytical views (Snare), preventing the beneficiary's
- *   framing from defining the constraint's objective nature.
+ * MANDATROPHY ANALYSIS:
+ *   MANDATROPHY PRESENT AND REQUIRES RESOLUTION: The classification as Snare is clear from victim perspectives (Palestinian workers, Gaza population, organizations). However, the Israeli military administration's perspective generates the false Rope classification — the mandate to provide security coordination is real and legitimate, but it is being used as cover for extraction. The risk is conflating 'security coordination is a legitimate function' with 'therefore the mechanism is Rope rather than Snare.' Mandatrophy resolution requires recognizing that extraction mechanisms can be justified through legitimate mandates without becoming coordination mechanisms. The permit system serves BOTH coordination (security screening) AND extraction (employment elimination, political control). The mandatrophy is resolved by acknowledging that the classification depends on the extraction ratio: if security screening is the primary function and employment impact is secondary, the mechanism is Tangled Rope (hybrid). If employment control is primary and security screening is secondary justification, the mechanism is Snare with security theater. The intensity of permit revocations (0.52 → 0.68 extractiveness trajectory) and the breadth of victimization (Palestinian workers, organizations, Gaza population all trapped) suggest the constraint functions as Snare with security mandate (i.e., security coordination is the stated mandate but extraction is the structural outcome). The mandate is genuine but is being operationalized as extraction mechanism.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_gaza_aid_permit_revocation,
-    'Is the primary strategic goal of the policy to pressure Hamas leadership, or to collectively punish the civilian population for leverage?',
-    'Declassified internal policy memos, credible whistleblower testimony, or a change in policy direction after a verifiable change in Hamas behavior.',
-    'If primarily targeting Hamas (Tangled Rope), it suggests a flawed but rational strategic logic. If primarily collective punishment (Snare), it implies a different and more severe moral and legal calculus.',
-    confidence_without_resolution(low)
+    security_vetting_necessity,
+    'Are permit revocations genuinely necessary for security screening, or do they serve primarily as extraction/control mechanisms with minimal actual security function?',
+    'Comparative analysis: security incidents involving permit holders vs. revoked workers; data on permit revocation grounds (percentage citing security vs. other administrative reasons); cross-case comparison with other occupied territories and conflict zones',
+    'If genuine security necessity: constraint shifts toward Rope/Tangled Rope from some perspectives. If primarily extraction: Snare classification confirmed across all victim perspectives.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(security_vetting_necessity, empirical, 'Whether permit revocations serve genuine security functions').
+
+omega_variable(
+    alternative_aid_delivery_capacity,
+    'Could international aid organizations maintain comparable aid delivery using only international (non-Palestinian) staff, or is Palestinian local staff functionally irreplaceable?',
+    'Logistics analysis: cost differential for international vs. local staffing; operational capacity comparisons pre- and post-revocation; documented bottlenecks that cannot be overcome with international staff alone',
+    'If international staff can substitute: suppression floor lowers, extraction becomes partial. If local staff irreplaceable: suppression remains high, confirms maximum extraction logic.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_aid_delivery_capacity, empirical, 'Whether Palestinian aid workers are functionally replaceable by international staff').
+
+omega_variable(
+    permit_revocation_reversibility,
+    'What is the historical pattern of permit reinstatement? Are revocations intended as permanent exclusion or temporary coercive pressure?',
+    'Historical data: percentage of revoked permits reinstated; timeline of revocation-to-reinstatement; conditions for reinstatement; declarations by COGAT on permanence vs. temporality of revocations',
+    'If commonly reinstated: constraint may have Scaffold element (temporary coercion with exit path). If permanent: pure Snare confirmed (no possibility of restored employment).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(permit_revocation_reversibility, empirical, 'Historical pattern of permit reinstatement vs. permanent revocation').
+
+omega_variable(
+    humanitarian_carve_out_enforceability,
+    'Is the humanitarian carve-out in international law (presumptive protection of humanitarian access) structurally enforceable against permit revocation, or is it merely aspirational?',
+    'Legal precedent analysis: cases where humanitarian carve-outs have successfully prevented permit-based access denial; documentation of enforcement mechanisms (sanctions, court orders, etc.); comparison to other territorial control scenarios',
+    'If enforceable: Piton classification confirmed (legal framework exists but enforcement degraded). If purely aspirational: moves toward acknowledging IHL as theater, Piton confirmed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(humanitarian_carve_out_enforceability, conceptual, 'Whether humanitarian carve-out in international law has structural enforceability').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(gaza_aid_permit_revocation, 0, 10).
+narrative_ontology:interval(gaza_aid_permit_revocation, 0, 12).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. This policy represents an
-% intensification of control over time. We model an increase in extraction
-% and a decrease in theater as diplomatic justifications wear thin and
-% direct enforcement becomes the norm.
-% Required because base_extractiveness (0.85) > 0.46.
+% Theater ratio over time
+narrative_ontology:measurement(gaza_permit_tr_t0, gaza_aid_permit_revocation, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(gaza_permit_tr_t6, gaza_aid_permit_revocation, theater_ratio, 6, 0.4).
+narrative_ontology:measurement(gaza_permit_tr_t12, gaza_aid_permit_revocation, theater_ratio, 12, 0.45).
 
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(gaza_aid_tr_t0, gaza_aid_permit_revocation, theater_ratio, 0, 0.30).
-narrative_ontology:measurement(gaza_aid_tr_t5, gaza_aid_permit_revocation, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(gaza_aid_tr_t10, gaza_aid_permit_revocation, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(gaza_permit_be_t0, gaza_aid_permit_revocation, base_extractiveness, 0, 0.52).
+narrative_ontology:measurement(gaza_permit_be_t6, gaza_aid_permit_revocation, base_extractiveness, 6, 0.62).
+narrative_ontology:measurement(gaza_permit_be_t12, gaza_aid_permit_revocation, base_extractiveness, 12, 0.68).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(gaza_aid_ex_t0, gaza_aid_permit_revocation, base_extractiveness, 0, 0.60).
-narrative_ontology:measurement(gaza_aid_ex_t5, gaza_aid_permit_revocation, base_extractiveness, 5, 0.75).
-narrative_ontology:measurement(gaza_aid_ex_t10, gaza_aid_permit_revocation, base_extractiveness, 10, 0.85).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This constraint functions as a mechanism of coercive enforcement.
 narrative_ontology:coordination_type(gaza_aid_permit_revocation, enforcement_mechanism).
+narrative_ontology:affects_constraint(gaza_aid_permit_revocation, gaza_humanitarian_access_blockade).
+narrative_ontology:affects_constraint(gaza_aid_permit_revocation, palestinian_employment_collapse).
+narrative_ontology:affects_constraint(gaza_aid_permit_revocation, international_ngo_operational_reduction).
 
-% Network relationships (structural influence edges)
-% This constraint is likely downstream of broader blockade policies.
-% affects_constraint(gaza_blockade, gaza_aid_permit_revocation).
-% (Leaving commented as gaza_blockade is not yet defined in this context).
+% DUAL FORMULATION NOTE:
+% The permit revocation mechanism is downstream of broader Gaza blockade constraints but represents a distinct structural lever. The blockade constrains all economic activity; permit revocation specifically targets humanitarian sector. These are separate constraints with different extractiveness profiles: blockade affects all Palestinians (broader but less directly controlled), while permit revocation affects aid workers specifically (narrower but more directly enforced through administrative mechanism).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this story. The structural derivation from
-% beneficiary/victim declarations and exit options accurately models the
-% power dynamics and directionality of the constraint.
+constraint_indexing:directionality_override(gaza_aid_permit_revocation, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

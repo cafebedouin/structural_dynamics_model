@@ -1,0 +1,91 @@
+{
+  "header": {
+    "constraint_id": "automatic_enrollment_defaults",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.7,
+    "claimed_type": "piton",
+    "human_readable": "Automatic Enrollment Defaults in Retirement Plans",
+    "topic_domain": "economic/social",
+    "beneficiaries": [
+      "retirement_plan_providers",
+      "employees_future_selves"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Retirement Plan Providers",
+      "comment": "Benefits from increased participation and asset management fees."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Employees' Future Selves",
+      "comment": "Benefits from increased retirement savings, even if they are initially unaware or resistant."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Employers",
+      "comment": "Benefit from simplified plan administration and potential tax advantages. They have some exit options as they can choose which plans to offer."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Behavioral Economists",
+      "comment": "See this as a scaffold - a way to encourage retirement savings until individuals become more engaged and make active decisions."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Disengaged Employees",
+      "comment": "Employees who are automatically enrolled but remain disengaged may end up with suboptimal investment allocations or contribution rates. While they may not be actively harmed, the system is not actively benefitting them, making it function as a Piton - an inert structure."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "Automatic enrollment leverages behavioral economics to increase participation in retirement savings plans. By making enrollment the default, individuals are more likely to participate, addressing inertia and procrastination. This design choice has implications for retirement plan providers, employees, and employers.",
+    "key_agents": [
+      "Retirement Plan Providers: Primary beneficiaries (institutional/arbitrage) \u2014 increased participation and asset management fees",
+      "Employees' Future Selves: Secondary beneficiaries (moderate/mobile) \u2014 increased retirement savings",
+      "Employers: Facilitators (powerful/mobile) \u2014 simplified plan administration",
+      "Disengaged Employees: constrained (powerless/constrained) \u2014 may have suboptimal allocations due to inertia",
+      "Behavioral Economists: Analytical observer (analytical/analytical) - advocate for the system"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Low to moderate. There is some extraction in the form of management fees, but the primary goal is to encourage savings. Suppression (0.20): Low. Individuals can easily opt-out, so suppression is minimal. Theater Ratio (0.70): High. The system is primarily functional, but there is a performative aspect to the initial enrollment process, as it creates the illusion of active engagement even when individuals remain passive.",
+    "perspectival_gap": "Retirement plan providers benefit directly from increased participation. Employees benefit through long-term savings, even if they initially perceive it as a minor inconvenience or don't fully understand the implications. Employers benefit from simpler plan administration and potential tax advantages. The piton perspective accounts for employees who, while enrolled, do not actively manage their account.",
+    "directionality_logic": "Plan providers are structural beneficiaries with high arbitrage; employee's future selves benefit over a long time horizon with high mobility. Employers are powerful, but do not derive the primary benefit, thus d is moderate and exit options are good. Disengaged employees are structurally powerless/constrained as their plans stagnate and do not change."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

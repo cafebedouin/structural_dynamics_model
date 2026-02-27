@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "elite_overproduction_instability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eop"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Aspirant's Bottleneck: Elite Overproduction Instability",
+    "topic_domain": "social/educational/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_elites",
+      "credentialing_institutions"
+    ],
+    "victims": [
+      "surplus_aspirants",
+      "social_cohesion"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Surplus Aspirant",
+      "comment": "PERSPECTIVE 1: SURPLUS ASPIRANT (SNARE) \u2014 Educated, credentialed, but structurally trapped in a system that promised status in exchange for conformity to the credential pathway. No exit: cannot uncredential, cannot unlearn, cannot opt out of the comparison game. Bears full extraction: delayed gratification, debt burden, status anxiety, precarious employment despite credentials. Maximum suppression through social norming and credential-gatekeeping."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Downwardly Mobile Credential Holder",
+      "comment": "PERSPECTIVE 2: DOWNWARDLY MOBILE CREDENTIAL HOLDER (SNARE) \u2014 Possesses credentials signaling elite position but cannot access corresponding roles. Constrained exit: some mobility into adjacent fields but penalized for 'waste' of education. High suppression through credential ranking and field-specific gatekeeping. Experiences extraction as credential demotion and constant justification for status mismatch."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Elite",
+      "comment": "PERSPECTIVE 3: INCUMBENT ELITE (ROPE) \u2014 Benefits from credential surplus: excess aspirants competing for limited positions drives down wage expectations and increases compliance with organizational norms. High selectivity enables elite groups to extract cultural homogeneity and ideological conformity. Experiences the constraint as coordination mechanism: selecting from a surplus pool is more efficient than rationing scarce positions. Arbitrage exit available \u2014 elites can shift to parallel credential systems or build alternative hierarchies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Credentialing Institution",
+      "comment": "PERSPECTIVE 4: CREDENTIALING INSTITUTION (ROPE) \u2014 Structurally benefits from overproduction: excess aspirants increase enrollment, tuition revenue, and credential value (through scarcity signaling). Experiences the constraint as pure coordination: matching aspirants to positions (even failed matches) validates the institution's function. Arbitrage exit available \u2014 can shift credentialing definitions, create new tiers (honors, specializations), or claim meritocratic sorting even as sorting fails."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Aspirant Coalition",
+      "comment": "PERSPECTIVE 5: ASPIRANT COALITION (TANGLED ROPE) \u2014 Organized surplus aspirants (professional associations, credential holders' unions, activist networks) observe both coordination function and extraction. The system does provide genuine upward mobility for some and genuine status signaling; but it also enforces conformity and extracts psychological and financial resources from the many to benefit the few. Active enforcement of credential standards keeps the bottleneck in place; but coalitional organizing is building pressure on salaries, working conditions, and credential signaling practices."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Meritocratic Legitimation System",
+      "comment": "PERSPECTIVE 6: MERITOCRATIC LEGITIMATION SYSTEM (PITON) \u2014 The overproduction constraint is maintained by the performative claim that positions are allocated meritocratically and that all credential holders are competing fairly. This narrative is largely degraded \u2014 elite positions correlate more with social origin than credential differentiation \u2014 yet the meritocratic theater persists through institutional inertia. High theater ratio: credentialing rituals, ranking systems, and selection ceremonies maintain the appearance of fairness while actual allocation follows social network and resource availability. The system itself acknowledges its own degradation (well-known selection bias, credential inflation, meritocratic myths) but continues ritual performance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "equilibrium_position_count",
+      "question": "What is the true structural demand for elite positions (controlling for credential inflation and role proliferation)?",
+      "resolution_mechanism": "Historical analysis of elite role creation, credential requirement changes, and actual task complexity changes; comparison of role definitions 50 years prior vs. current; survey of elite-position incumbents on necessity of credential levels",
+      "impact": "If true demand is higher than assumed: overproduction diagnosis may be overstated, and constraint is more coordination (Rope) than extraction (Snare). If true demand is flat or declining: overproduction is systemic and extractive classification is correct.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True structural demand for elite positions vs. credential supply"
+    },
+    {
+      "id": "status_competition_endogeneity",
+      "question": "Does credential overproduction cause aspirants to acquire credentials, or does credential demand cause overproduction? (Which is the driver?)",
+      "resolution_mechanism": "Causal analysis of credential growth vs. position availability over time; identification of inflection points when supply began exceeding demand; analysis of aspirant motivation (intrinsic interest vs. positional competition)",
+      "impact": "If aspirants are driven by positional competition: extraction is endogenous and the system is a snare. If credential demand is genuinely independent: overproduction is exogenous shock, and the constraint is temporary (Scaffold not Snare).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether overproduction is endogenous or exogenous to aspirant behavior"
+    },
+    {
+      "id": "social_cohesion_causation",
+      "question": "Does elite overproduction directly destabilize social cohesion, or does it merely correlate with other destabilizing factors (economic stagnation, globalization, polarization)?",
+      "resolution_mechanism": "Comparative study of societies with similar overproduction rates but different cohesion outcomes; causal pathway analysis between credential mismatch and political instability; identification of confounders (income inequality, geographic mobility, demographic change)",
+      "impact": "If direct causation: constraint victimizes social_cohesion and should remain in victims list. If correlation only: social_cohesion is affected but not a victim of the constraint itself \u2014 classification changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Direct causal link between overproduction and cohesion loss"
+    },
+    {
+      "id": "alternative_hierarchy_viability",
+      "question": "Can alternative credential or status systems (guild certification, skill-based sorting, network-based advancement) successfully compete with the traditional elite hierarchy?",
+      "resolution_mechanism": "Case studies of alternative credential systems (vocational certification, open-source credentials, direct hire models); measurement of adoption rates and stability; comparison of satisfaction and stability outcomes",
+      "impact": "If viable alternatives exist: bottleneck is Scaffold (sunset clause implicit) not Snare. If alternatives are suppressed or systematically outcompeted: Snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative status systems as exits from elite hierarchy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Elite overproduction creates a structural bottleneck where educational and credentialing institutions produce far more individuals prepared for high-status positions than the economy or social hierarchy can accommodate. This constraint exhibits the full range of indexical perspectives because it combines a genuine coordination function (matching talent to selective roles) with systematic extraction (surplus aspirants bear the costs of positional competition while incumbent elites capture benefits). The constraint operates through a tangled rope mechanism: credentialing institutions enforce credential standards (requiring enforcement), aspirants genuinely benefit from education and status signaling, but the system extracts from the surplus through psychological costs (status anxiety, credential burden), financial costs (debt, underemployment), and social costs (cohesion loss, political instability). Theater has increased as the meritocratic legitimation narrative\u2014that positions are allocated fairly to the most talented\u2014has degraded relative to observable allocation patterns that track social origin.",
+    "key_agents": [
+      "Surplus Aspirants: Primary victims (powerless/trapped) \u2014 educated, credentialed, but structurally unable to access promised elite positions; bear debt burden, status anxiety, precarious employment",
+      "Incumbent Elites: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from credential surplus enabling selective hiring, wage depression, and cultural homogeneity; can arbitrage into alternative hierarchies if threatened",
+      "Credentialing Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture enrollment revenue, tuition streams, and credential scarcity value; maintain institutional autonomy through arbitrage (credential redefinition, tier creation)",
+      "Aspirant Coalition: Organized actors (organized/constrained) \u2014 professional associations, credential holders' unions, activist networks organizing response to bottleneck; building pressure on salaries, working conditions, credential standards",
+      "Social Cohesion: Victim (powerless/trapped) \u2014 abstract collective good; overproduction correlates with political instability, polarization, and trust decline; no organized advocate",
+      "Meritocratic Legitimation System: Institutional (institutional/arbitrage) \u2014 performative claim that elite selection is merit-based; degraded through observable allocation bias but maintained through ritual (ranking systems, certification ceremonies, selection narratives)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from surplus aspirants through credential burden and status anxiety, but also provides genuine educational benefit and some upward mobility pathway. The trajectory from 0.35 to 0.58 reflects credential inflation accelerating over the interval: more positions require credentials, more credentials are produced, credential value declines, extraction pressure increases. Suppression (0.68): High. Multiple mechanisms suppress alternatives to credential competition: social norming (all respectable careers require credentials), institutional gatekeeping (role access tied to certified credentials), cultural narratives (meritocratic justification discourages questioning the system). Exit options are severely limited \u2014 surplus aspirants cannot uncredential, cannot exit the comparison game without status loss, and cannot access alternative hierarchies that bypass credential requirements. Theater ratio (0.62): Moderate-high. The system maintains significant performative content: ranking systems create illusion of differentiation, selection ceremonies (interviews, applications, assessments) create impression of merit-based sorting despite observed allocation bias, meritocratic narratives persist despite degradation. Theater increased over the interval as credential inflation accelerated \u2014 more symbolic ranking created to preserve illusion of scarcity and differentiation as actual differentiation declined.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is maximal. Incumbent elites and credentialing institutions experience the constraint as coordination (Rope) \u2014 surplus aspirants provide efficient matching and enable selective hiring. But surplus aspirants experience the constraint as extraction (Snare) \u2014 the system promises status in exchange for conformity but systematically fails to deliver for the majority. The aspirant coalition occupies a middle position (Tangled Rope) \u2014 they recognize both the coordination function (education has real value) and the extraction (credential burden exceeds educational benefit for many). The piton perspective reveals that the entire system is degraded: meritocratic legitimation is now largely performative theater, yet the ritual persists through institutional inertia because no actor has sufficient power or incentive to fundamentally restructure the hierarchy. The meritocratic narrative is maintained not because it is believed, but because it is convenient for incumbents and because alternatives (explicit stratification, lottery-based allocation, skill-based sorting) threaten the credentialing institutions themselves.",
+    "directionality_logic": "Directionality is determined by structural position relative to the extraction flow. Surplus aspirants are trapped in the credential competition (d \u2248 0.95) \u2014 they cannot exit without status loss, have no arbitrage options, and bear maximum suppression through social norming. Their d value produces high f(d) \u2248 1.42, making their experienced extractiveness very high. Incumbent elites are beneficiaries with arbitrage options (d \u2248 0.05) \u2014 they benefit from the surplus, can exit into alternative hierarchies, and experience the constraint as coordination rather than extraction. Their d value produces negative f(d), lowering their experienced \u03c7. Credentialing institutions occupy a similar position (d \u2248 0.10) \u2014 beneficiaries with arbitrage options (they can redefine credentials, create new tiers, or shift credentialing mechanisms). The aspirant coalition has constrained but organized options (d \u2248 0.55) \u2014 they can neither fully exit nor fully accept; they are building pressure that produces moderate experienced extraction. The meritocratic legitimation system is institutional/arbitrage (d \u2248 0.10) \u2014 it primarily serves incumbent interests through narrative justification and experiences low \u03c7 because it can arbitrage into new narratives if current ones fail.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint resolves the mandatrophy by showing that both coordination and extraction are genuine structural features of the same system. The bottleneck IS a coordination mechanism (matching talent to selective roles through credentials) AND an extraction mechanism (surplus aspirants bear the costs of competition while benefits concentrate). The suppression of the coordination function by extraction is the key: as overproduction increases, the coordination value decreases (most credentials don't lead to elite positions, so matching efficiency declines) while extraction increases (more aspirants competing for fewer positions). The theater ratio increase (0.45 to 0.62) indicates Goodhart degradation: the meritocratic legitimation narrative has become increasingly decoupled from actual allocation, suggesting the system is shifting from 'genuine coordination with extraction overhead' toward 'pure extraction with coordination performance.' The classified type (tangled_rope) is correct at current interval end: enforced credential standards + multiple beneficiaries + multiple victims + genuine but asymmetric benefit flow. However, the trajectory toward higher theater suggests the system may degrade toward piton (pure performance) if meritocratic legitimation continues to fail. The aspirant coalition's organizing effort represents potential pressure toward scaffold (sunset) if alternative credential systems gain viability."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "credentialism_signaling_cascade",
+      "downward_mobility_precarity",
+      "populist_backlash_instability"
+    ],
+    "dual_formulation_note": "Elite overproduction is upstream of credentialism-as-signaling cascade (the constraint creates excess demand for credentials, which accelerates signaling inflation). It is also upstream of downward mobility precarity (the bottleneck creates credential holders unable to access promised positions). The constraint network includes: credential requirement inflation \u2192 elite overproduction \u2192 social cohesion loss \u2192 political instability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

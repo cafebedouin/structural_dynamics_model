@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "reputational_cascade_failure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "reputational"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Social Liquidity Trap",
+    "topic_domain": "social/economic/informational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_disseminators",
+      "narrative_gatekeepers"
+    ],
+    "victims": [
+      "target_agent",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Reputationally Targeted Agent",
+      "comment": "PERSPECTIVE 1: REPUTATIONALLY TARGETED AGENT (SNARE) \u2014 Once negative information circulates, the target has no viable exit. Attempts to counter the narrative amplify its spread. Social disinvestment accelerates regardless of factual accuracy. The target experiences maximum extraction: isolated, defunded, professionally eliminated. No coordination benefit, only suppression and cascade damage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Credibility-Seeking Peer Group",
+      "comment": "PERSPECTIVE 2: CREDIBILITY-SEEKING PEER GROUP (TANGLED ROPE) \u2014 Colleagues face a coordination problem (preventing damage to shared domain reputation) but also asymmetric extraction (their own reputations gain value by distancing from the target). They benefit from the cascade by demonstrating alignment with emerging consensus while coordinating a defensive posture for their domain. Constrained exit because abandoning peers or openly defending the target carries reputational cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Narrative Gatekeeper Institution",
+      "comment": "PERSPECTIVE 3: NARRATIVE GATEKEEPER INSTITUTION (ROPE) \u2014 Media outlets, platform algorithms, and institutional statements coordinate audience attention around the narrative. They experience the cascade as a pure coordination mechanism: aggregating emerging consensus, directing discourse, maintaining relevance. Their exit options are unrestricted \u2014 they can pivot narratives, suppress or amplify stories, move on to the next target. Benefits from cascade through engagement metrics and narrative control."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Due Process System",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL DUE PROCESS SYSTEM (PITON) \u2014 Formal dispute resolution, appeals, and legal remedies exist but function theatrically. Discovery lags cascade formation by months to years. By the time legal judgment arrives, social damage is permanent and irreversible. The system performs due diligence but its procedural timeline cannot compete with information cascade velocity. Theater ratio reflects the gap between the appearance of impartial review and its actual remedial capacity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Epistemic Resilience Movement",
+      "comment": "PERSPECTIVE 5: EPISTEMIC RESILIENCE MOVEMENT (SCAFFOLD) \u2014 Organized efforts to build information verification systems (fact-checking networks, community notes, epistemic communities with reputational stakes) create alternative pathways for cascade prevention. These systems have a sunset: as verification infrastructure matures, cascade formation becomes detectable and correctable before social disinvestment becomes irreversible. Constrained exit because the movement must work within existing institutional frameworks while building alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Flow Limit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION FLOW LIMIT (MOUNTAIN) \u2014 From a civilizational view, some cascade risk is inherent to information systems: any distributed network with fast information flow and uncertain verification will exhibit cascade vulnerability. The speed of communication exceeds the speed of verification. This appears as a natural law of information dynamics. However, the structural data contradicts this classification \u2014 cascade severity depends on institutional choice variables (platform algorithms, verification investment, narrative concentration), not immutable limits. The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cascade_ignition_threshold",
+      "question": "What minimum social distribution of negative information triggers irreversible cascade formation?",
+      "resolution_mechanism": "Empirical measurement of cascade velocity vs correction capacity across multiple domains; identification of critical mass thresholds by platform type and information fitness",
+      "impact": "If threshold is low (< 0.5% initial adoption): cascades are nearly inevitable. If threshold is high (> 5% adoption): intervention windows remain open. Determines whether the constraint is snare (predetermined) or tangled rope (preventable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum information distribution triggering irreversible cascade"
+    },
+    {
+      "id": "information_fitness_vs_accuracy",
+      "question": "Does narrative fitness (emotional salience, cognitive consonance, sharability) correlate with cascade severity independently of factual accuracy?",
+      "resolution_mechanism": "Comparative analysis of true vs false negative information cascades; measure cascade velocity and amplitude against information fitness scores controlling for accuracy",
+      "impact": "If fitness dominates accuracy: cascades are driven by memetic properties, not truth. Constraint is extraction mechanism (Snare/Tangled Rope). If accuracy is predictive: institutional and individual verification barriers are the constraint. Enables distinction between cascade-as-natural-consequence vs cascade-as-exploitable-mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relationship between narrative fitness and cascade severity independent of accuracy"
+    },
+    {
+      "id": "verification_infrastructure_sunset",
+      "question": "Can distributed epistemic communities (fact-checkers, verification networks, community notes) scale to compete with cascade velocity?",
+      "resolution_mechanism": "Time-series analysis of correction lag vs cascade lag across platforms and claim types; measurement of collective action efficiency in epistemic communities",
+      "impact": "If verification scales: Scaffold perspective is structural (sunset is real). If verification lags: cascade velocity is quasi-immutable and the constraint remains Snare/Tangled Rope. Determines trajectory toward epistemic resilience.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of verification infrastructure to match cascade velocity"
+    },
+    {
+      "id": "institutional_reputation_vs_target_reputation",
+      "question": "Do peer institutions benefit net-positively or net-negatively from dissociation with a targeted agent?",
+      "resolution_mechanism": "Longitudinal measurement of institutional reputation metrics (funding, partnerships, hiring, publication citation) before/after public dissociation; comparison with control institutions",
+      "impact": "If dissociation is net-beneficial: tangled rope classification confirmed (active enforcement pays). If neutral or net-negative: cascade is driven purely by damage-prevention, not extraction. Determines beneficiary intentionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net reputational benefit to institutions dissociating from cascade target"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The reputational cascade failure constraint models a self-reinforcing loop where unverified but high-fitness negative information triggers coordinated social disinvestment from a target agent. The constraint combines genuine coordination (peers organizing to protect domain reputation) with asymmetric extraction (the target bears all cost while other agents gain value through alignment signaling). The theater ratio reflects the gap between public justifications for dissociation (protecting domain standards) and the actual mechanism (reputation laundering through distance). Early disseminators and narrative gatekeepers benefit from narrative control and engagement metrics; the target and the epistemic commons (which loses nuanced information and trust in verification) bear costs. The constraint's severity is not determined by information accuracy but by information fitness \u2014 emotional salience, cognitive consonance, and narrative elegance. Cascades form faster around well-crafted stories than true ones. This makes the mechanism partially exploitable: actors can deliberately craft high-fitness false narratives knowing that cascade velocity will outrun verification capacity. The epistemic resilience movement represents a scaffold intervention \u2014 distributed verification systems, community notes, and epistemic communities with reputational stakes can compete with cascade velocity if sufficiently resourced and architected. The cascade represents both a coordination problem (how do we prevent false information from destroying trust?) and an extraction opportunity (how can we eliminate a rival or secure reputation advantage by initiating a cascade?).",
+    "key_agents": [
+      "Target Agent: Primary victim (powerless/trapped) \u2014 once cascade ignites, exit is impossible; reputation destroyed regardless of factual defense",
+      "Early Disseminators: Primary beneficiary (institutional/arbitrage) \u2014 gain credibility, narrative authority, first-mover advantage; can pivot to next target without cost",
+      "Narrative Gatekeepers: Secondary beneficiary (institutional/arbitrage) \u2014 media outlets, platform algorithms, institutional communications coordinate and amplify; benefit from engagement and narrative control",
+      "Credibility-Seeking Peers: Secondary victim and partial beneficiary (moderate/constrained) \u2014 face coordination problem but extract value through public dissociation; career safety via alignment",
+      "Epistemic Commons: Structural victim (powerless/trapped) \u2014 loses nuanced information, truth-tracking capacity, and epistemic trust; no agent represents its interests",
+      "Institutional Due Process: Performer (institutional/arbitrage) \u2014 maintains appearance of review but remediation timeline cannot compete with cascade; theater rather than function",
+      "Epistemic Resilience Movement: Organizer (organized/constrained) \u2014 building verification infrastructure and community notes; competing with cascade velocity; faces resource and adoption barriers"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting the substantial career and reputational costs borne by the target but tempering the initial assessment because some degree of verification delay is inherent to any information system. The increase from 0.32 to 0.58 over the 6-unit interval reflects cascade acceleration \u2014 early skepticism gives way to consensus as bandwagon effects dominate. Suppression (0.68): High. Multiple barriers prevent the target from countering: (a) information paradox \u2014 correcting false narratives amplifies them; (b) algorithmic amplification of novel/negative information; (c) institutional pressure on platforms to moderate without transparency; (d) publication bias against exculpatory information. Suppression is not total because some targets do mount successful defenses, typically through institutional backing or legal remedies that arrive too late to prevent social damage. Theater ratio (0.65): Moderate-high. The constraint operates through a combination of genuine coordination (protecting domain reputation from contamination) and theatrical performance (public dissociation as reputation management). Institutional statements about 'standards' and 'due diligence' mask the extraction mechanism \u2014 reputation laundering through distance. Theater increases over time as justifications become more elaborate and less tethered to specific facts.",
+    "directionality_logic": "Directionality for each perspective is derived from the agent's structural relationship to the cascade mechanism. The target agent (powerless/trapped) experiences maximum extraction: d \u2248 0.95, f(d) \u2248 1.42. The epistemic commons (powerless/trapped, abstract actor with no voice) also derives high d despite not appearing in perspectives because it bears costs with no benefit mechanism. Early disseminators (institutional/arbitrage) experience low d \u2248 0.00 because they benefit (arbitrage exit means they can move on; institutional power means the cascade serves their narrative control). Credibility-seeking peers (moderate/constrained) derive mid-range d \u2248 0.55 because they face mixed costs (career risk of defending the target) and mixed benefits (reputation gain from alignment). Peers with exit to another domain or movement would have lower d; peers with tight coupling to shared domain reputation have higher d. The institutional due process system (institutional/arbitrage) derives low d despite appearance of neutrality because its function (remediation) is subordinate to cascade velocity \u2014 it experiences the constraint as coordinating other agents' actions but not controlling outcomes. The epistemic resilience movement (organized/constrained) derives mid-range d \u2248 0.40 because it must work within existing power structures to build alternatives.",
+    "perspectival_gap": "The perspectival gap in this constraint is extreme. The target sees a snare \u2014 irreversible damage driven by information spread beyond their control. The peers see a tangled rope \u2014 a genuine coordination problem (preventing domain contamination) that also happens to extract value through alignment signaling. The gatekeepers see a rope \u2014 pure coordination of audience attention and narrative coherence. The due process system sees a piton \u2014 the maintenance of procedural rituals that no longer function in real time. The epistemic resilience movement sees a scaffold \u2014 a temporary problem with a sunset as verification infrastructure matures. The civilizational analyst risks seeing a mountain \u2014 cascade vulnerability as inherent to information flow. These are not disagreements about facts but about structural relationships to the constraint. The same information spread appears as an immutable trap to the target, a coordination tool to the peers, a narrative resource to gatekeepers, a performative ritual to institutions, and a solvable infrastructure problem to the resilience movement. The perspectival variance is a diagnostic feature: it reveals that the constraint is not about information quality (which would produce more convergent judgments) but about structural power asymmetries in determining whose version of the cascade (intentional extraction vs accidental coordination vs natural information flow) becomes canonical.",
+    "mandatrophy_analysis": "MANDATROPHY STRUCTURE: The reputational cascade exhibits the full mandatrophy trap. Is it a coordination problem (Rope/Tangled Rope) or pure extraction (Snare)? The answer is context-dependent in a way that cannot be resolved by adding measurement axes or observables. From the target's perspective, it is pure extraction: the cascade serves no coordination function, only damage. From the peers' perspective, it is genuinely coordinating a response to threat \u2014 preventing contamination of domain reputation. Both readings are structurally accurate; they are not contradictory perspectives on the same fact pattern but perspectives from different agent positions where the constraint has different functions. The mandatrophy resolution lies in declaring the constraint as Tangled Rope (hybrid coordination-extraction) and recognizing that the extractive component is not an abuse of the coordination mechanism but its inherent asymmetry. Early disseminators coordinate the response while extracting value through narrative control. Peers coordinate domain defense while extracting reputation gain through public dissociation. The constraint cannot be classified as pure Rope because the coordination benefits are not evenly distributed; they concentrate on those who initiate or amplify the cascade. The constraint cannot be classified as pure Snare because there is a genuine coordination function \u2014 preventing false information from permanently contaminating domain reputation is a legitimate collective action problem. The tension between these truths is the mandatrophy. Resolving it requires accepting that the same constraint operates as both coordination and extraction, that the two functions are entangled rather than separable, and that no observable-dependent measure can dissolve this tension. The constraint is Tangled Rope precisely because the mandatrophy cannot be escaped \u2014 it is structural."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_reputation_laundering",
+      "algorithmic_amplification_bias",
+      "verification_lag_asymmetry"
+    ],
+    "dual_formulation_note": "The reputational cascade failure decomposes into three related constraints with distinct epsilon values. (1) Institutional reputation laundering (\u03b5 \u2248 0.35) focuses on the peer coordination mechanism and how dissociation signals status. (2) Algorithmic amplification bias (\u03b5 \u2248 0.42) focuses on platform architecture favoring novel/negative information independent of accuracy. (3) Verification lag asymmetry (\u03b5 \u2248 0.28) focuses on the structural velocity gap between information spread and verification. The reputational cascade (\u03b5 = 0.58) is downstream of all three and emerges when all three align."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

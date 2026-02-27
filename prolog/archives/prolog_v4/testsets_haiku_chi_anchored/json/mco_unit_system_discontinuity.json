@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "mco_unit_system_discontinuity",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mco"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.42,
+    "theater_ratio": 0.78,
+    "claimed_type": "piton",
+    "human_readable": "Persistence of Imperial Units in a Metric World",
+    "topic_domain": "technological/institutional",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "legacy_industrial_contractors",
+      "aviation_sector",
+      "aerospace_manufacturers"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy Aerospace Contractor",
+      "comment": "PERSPECTIVE 1: LEGACY AEROSPACE CONTRACTOR (PITON) \u2014 Constrained by massive sunk investment in Imperial-calibrated tooling, CAD libraries, and supply-chain infrastructure. The constraint persists through institutional inertia and switching cost rather than active enforcement. theater_ratio=0.78 reflects that compliance with Imperial specifications is largely performative \u2014 measurements could be expressed in metric but are maintained in feet/inches/pounds for ritual consistency. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.002."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Metric-Native Software Engineer",
+      "comment": "PERSPECTIVE 2: METRIC-NATIVE SOFTWARE ENGINEER (ROPE) \u2014 Sees unit system choice as a pure coordination problem. Metric is mathematically simpler (base-10), more interoperable globally, and reduces conversion errors. The constraint operates as coordination around a legacy standard rather than extraction. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.075. Low effective extraction; the engineer has both skill and mobility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Scientific Standards Body",
+      "comment": "PERSPECTIVE 3: SCIENTIFIC STANDARDS BODY (PITON) \u2014 SI (metric) is the official standard globally; Imperial persists through institutional resistance and legacy systems rather than through active enforcement of the standard itself. theater_ratio=0.78 reflects the performative nature of maintaining Imperial 'for compatibility' while the functional standard (SI) is what actually drives new research. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.0002."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Manufacturing Technician",
+      "comment": "PERSPECTIVE 4: MANUFACTURING TECHNICIAN (ROPE) \u2014 Bilingual in both unit systems. Sees Imperial persistence as a coordination mechanism enabling communication with legacy designs and tooling. The constraint solves the problem of maintaining compatibility with existing infrastructure. d\u22480.45, f(d)\u22480.58, \u03c3=0.9 \u2192 \u03c7\u22480.082."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Metric Conversion Initiative",
+      "comment": "PERSPECTIVE 5: METRIC CONVERSION INITIATIVE (SCAFFOLD) \u2014 Organizations (ISO, national standards bodies, EU regulations) are systematically migrating to metric with sunset timelines for Imperial. This is temporary support with a planned exit: as legacy contractors retire and CAD systems fully adopt metric-first design, Imperial requirements will fade. \u03c7 \u2264 0.30 satisfied by explicit sunset clauses in regulatory migration schedules. d\u22480.35, f(d)\u22480.28, \u03c3=1.1 \u2192 \u03c7\u22480.058."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (NATURAL LAW VIEW) \u2014 From a universal/civilizational view, unit system choice is a pure coordination problem with no objective 'best answer': any self-consistent system works. The apparent persistence of Imperial could be framed as an equilibrium that reflects the deep structure of coordination cost. However, \u03b5=0.18 and suppression=0.42 contradict a mountain classification \u2014 the engine will flag this as a false summit, revealing that naturalizing the unit system discontinuity disguises what is actually a degraded institutional artifact."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "functional_vs_ritual_compliance",
+      "question": "How much of Imperial persistence is functional (technical incompatibility) versus ritual (symbolic/organizational inertia)?",
+      "resolution_mechanism": "Process analysis of conversions in actual manufacturing workflows; measurement of errors introduced by Imperial vs metric specifications; tracking of conversion-step elimination as systems migrate",
+      "impact": "If primarily functional: constraint is rope-like coordination. If primarily ritual: constraint is degraded piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Functional vs ritual compliance in unit system persistence"
+    },
+    {
+      "id": "switching_cost_asymmetry",
+      "question": "What is the actual switching cost (tooling, CAD migration, supply chain recalibration) for legacy contractors versus new market entrants?",
+      "resolution_mechanism": "Cost analysis of metric conversion for major aerospace/defense contractors; comparison with conversion costs for startups and new entrants; timeline data for completed migrations",
+      "impact": "If switching cost is low: constraint is theater-based inertia (piton). If switching cost is very high: constraint may be snare-like extraction against contractors forced to maintain dual systems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Switching cost asymmetry between legacy and new entrants"
+    },
+    {
+      "id": "regulatory_sunset_enforceability",
+      "question": "Are metric conversion timelines enforced by regulators, or do they allow indefinite Imperial waivers?",
+      "resolution_mechanism": "Policy analysis of FAA, DoD, ESA regulations; tracking of deadline extensions or waivers granted; measurement of actual vs planned conversion timelines",
+      "impact": "If enforced: scaffold perspective is correct; constraint has real sunset. If repeatedly waived: scaffold is aspirational; constraint is piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforceability of regulatory metric conversion deadlines"
+    },
+    {
+      "id": "global_competitive_advantage",
+      "question": "Does maintaining Imperial give domestic contractors competitive advantage (cost savings from legacy systems) or disadvantage (incompatibility with global supply chains)?",
+      "resolution_mechanism": "Market share analysis for Imperial-compliant vs metric-first contractors; cost structure comparison; client survey on unit system preferences",
+      "impact": "If advantage: beneficiary group is correct, extraction is subtle. If disadvantage: persistence is purely inertial, constraint is degraded.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Competitive advantage or disadvantage of Imperial persistence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 1970,
+    "end": 2010
+  },
+  "commentary": {
+    "narrative_context": "The persistence of Imperial units (feet, inches, pounds) in aerospace, aviation, and manufacturing sectors despite global adoption of metric (SI) is a classic Piton constraint: a former functional requirement that has degraded into institutional inertia and ritual compliance. The constraint exhibits low extractiveness (\u03b5=0.18) and high theater ratio (0.78), indicating that the primary mechanism maintaining Imperial is not active enforcement but rather the switching cost of legacy tooling, CAD libraries, supply chains, and engineer training. The theater ratio has increased over the interval from 0.55 (1970, when Imperial was functionally integrated) to 0.78 (2010, when metric is globally standard but Imperial persists through ritual). This trajectory is characteristic of Piton degradation: the functional reason for maintaining the standard has faded, but the institutional apparatus persists. Regulatory bodies (FAA, ESA, DoD) have established metric conversion timelines with sunset clauses, supporting the Scaffold interpretation for forward-looking actors, but the compliance mechanisms remain weak. Legacy contractors face suppression (constraints on exit: tooling cannot be instantly converted) but do not face severe extraction \u2014 maintaining Imperial is largely a distributed coordination ritual that extracts no concentrated benefit.",
+    "key_agents": [
+      "Legacy Aerospace Contractors: Constrained beneficiary (institutional/constrained) \u2014 benefit from massive sunk investments in Imperial tooling/specs; exit is suppressed by switching cost",
+      "Metric-Native Engineers: Powerful beneficiary (powerful/mobile) \u2014 metric reduces conversion errors and improves global interoperability; high exit mobility to metric-first firms",
+      "Manufacturing Technicians: Moderate coordinators (moderate/mobile) \u2014 bilingual in both systems; maintain compatibility bridges",
+      "Scientific Standards Bodies (ISO, NIST): Organized enforcers (organized/constrained) \u2014 declare metric as official standard but cannot unilaterally force industry conversion",
+      "Regulatory Agencies (FAA, DoD, ESA): Organized planners (organized/constrained) \u2014 set metric conversion timelines but allow extended waivers",
+      "Metric Conversion Coalition: Organized agents (organized/constrained) \u2014 advocate for and implement metric migrations; see constraint as temporary with planned sunset",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing unit system choice as a deep structural feature rather than institutional artifact"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The constraint does not concentrate value extraction. Legacy contractors benefit from avoiding conversion costs, but this is a diffuse coordination equilibrium rather than concentrated rent extraction. No single actor is systematically extracting from others. Suppression (0.42): Moderate. Switching costs for legacy tooling and supply chains suppress exit options for entrenched actors, but the suppression is not total \u2014 new entrants can build metric-native systems from the ground up, and partial conversions are possible. Theater ratio (0.78): High. Compliance with Imperial specifications in aerospace is substantially performative. Measurements could be expressed in metric but are maintained in feet/inches/pounds for ritual consistency with legacy documentation. The theater has increased over the interval as the functional reason for Imperial has faded but the institutional apparatus persists. The constraint exhibits all hallmarks of Piton degradation: low extractiveness, high theater, and inertial persistence despite the existence of a superior coordination standard (metric). The interval data shows extractiveness declining slightly (0.22 \u2192 0.18) as functionality shifts to metric, while theater increases (0.55 \u2192 0.78) as compliance becomes purely ritualistic.",
+    "perspectival_gap": "Legacy contractors see Imperial as a functional necessity for system integration (Rope or Piton). Metric-native engineers see it as a pure coordination problem that metric solves better (Rope). Regulatory bodies see it as a temporary migration problem with sunset timelines (Scaffold). Standards bodies see it as an obsolete standard they have officially replaced but cannot directly eliminate (Piton). The analytical observer risks seeing unit system choice as a deep structural feature (Mountain \u2014 any consistent system works), but the structural data (low \u03b5, high theater, explicit regulatory sunsets) reveals this as a false summit. The real constraint is institutional inertia, not natural law.",
+    "directionality_logic": "Legacy aerospace contractors: Beneficiary + constrained \u2192 d\u22480.05, f(d)\u2248-0.12. They benefit from avoiding conversion costs but exit is suppressed by switching costs; the net effect is slightly negative extraction (they are subsidized by the constraint). Metric-native engineers: Powerful + mobile \u2192 d\u22480.45, f(d)\u22480.58. They experience the constraint as a coordination inefficiency but have high exit mobility. Manufacturing technicians: Moderate + mobile \u2192 d\u22480.45, f(d)\u22480.58. Bilingual coordinators with low extraction exposure. Regulatory agencies: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.28. They have declared metric standard but cannot force compliance \u2014 constrained power. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. The false summit test catches the naturalization: unit system choice is not a mountain.",
+    "mandatrophy_analysis": "The Piton classification resolves the mandatrophy by correctly identifying that Imperial persistence is institutional inertia rather than active functional coordination (Rope) or concentrated extraction (Snare). The theater ratio (0.78) confirms that compliance is largely ritualistic \u2014 measurements could be metric but are maintained Imperial for symbolic compatibility. The explicit regulatory sunset clauses (FAA, ESA, DoD metric conversion timelines) confirm that this is a degraded constraint: the forward-looking institutions have declared it temporary. The low extractiveness (0.18) rules out Snare. The high theater rules out Rope. The Piton classification captures the real mechanism: a former functional standard maintained through institutional inertia despite the availability of a superior standard (metric). The constraint will degrade further as legacy contractors retire and metric-native design becomes the universal standard."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "aerospace_supply_chain_fragmentation",
+      "manufacturing_process_standardization"
+    ],
+    "dual_formulation_note": "The Imperial persistence constraint is downstream of historical path-dependency (US industrial dominance in mid-20th century locked in Imperial standards), but functions as a distinct structural phenomenon with its own metrics and perspectives."
+  },
+  "directionality_overrides": []
+}

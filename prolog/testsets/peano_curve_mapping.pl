@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: peano_curve_mapping
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_peano_curve_mapping, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,24 +55,29 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: peano_curve_mapping
  *   human_readable: Peano Space-Filling Curve
- *   domain: mathematical/technological
+ *   domain: mathematical/theoretical
  *
  * SUMMARY:
- *   The Peano Curve is the first discovered space-filling curve, a continuous
- *   mapping from a one-dimensional interval onto a two-dimensional square. It
- *   represents a fundamental constraint on the relationship between dimension
- *   and cardinality, proving that a 1D line can "occupy" all points in a 2D space.
- *   This is a mathematical fact, an unchangeable feature of topology.
+ *   The Peano Curve is a mathematical limit case: a continuous function
+ *   f:[0,1]→[0,1]² that is surjective (onto) but not injective (not
+ *   one-to-one). Discovered by Giuseppe Peano in 1890, it resolved a
+ *   conceptual crisis in topology by demonstrating that 'continuous' does not
+ *   imply 'dimension-preserving.' The constraint classifies as Mountain from
+ *   all perspectives because its existence follows from logical principles
+ *   and cannot be negotiated, suppressed, or extracted value from. No agent
+ *   benefits by hiding the Peano Curve; no agent can escape it through
+ *   institutional innovation or resource investment. The constraint is
+ *   invariant across all observables: whether viewed through pure topology,
+ *   computational geometry, or pedagogy, the dimensional collapse is
+ *   immutable. Unlike constraints that blend coordination and extraction
+ *   (Tangled Rope) or that depend on measurement basis (Piton), the Peano
+ *   Curve is a prototype of an irreducible structural fact.
  *
- * KEY AGENTS (by structural relationship):
- *   - Classical Dimension Intuition (Victim): The observer's common-sense
- *     distinction between 1D and 2D, which is invalidated by the mapping.
- *   - Database Architects (Beneficiary): Agents using space-filling logic
- *     (e.g., Z-order or Hilbert curves) as a "Rope" for data locality.
- *   - A Point on the Curve (Target): A powerless agent whose position in 2D space
- *     is strictly determined by its 1D "time" parameter.
- *   - Analytical Observer: Sees the full mathematical structure and its
- *     applications.
+ * KEY AGENTS:
+ *   - Mathematical Community: Analytical stakeholder — observes and articulates the constraint; cannot negotiate its existence
+ *   - Topological Foundation: The abstract system itself — defines the constraint through definitional necessity
+ *   - Computational Engineers: Practical agents (powerful/analytical) — encounter the constraint when building spatial indexing systems; cannot circumvent it regardless of resources
+ *   - Students and Learners: Biographical agents (moderate/analytical) — experience accessibility collapse when intuitions about dimension are violated
  */
 
 /* ==========================================================================
@@ -80,106 +85,59 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: 0.25. The curve "extracts" 1D locality (points that are close
-% in 1D may be far in 2D) to satisfy the space-filling requirement. This is
-% a structural cost of the mapping, at the ceiling for a Mountain.
-domain_priors:base_extractiveness(peano_curve_mapping, 0.25).
-
-% Rationale: 0.05. A mathematical theorem does not suppress alternatives in a
-% coercive sense; it simply is. The alternatives (a world where such a mapping
-% is impossible) do not exist. The suppression score is at the ceiling for a
-% Mountain classification.
-domain_priors:suppression_score(peano_curve_mapping, 0.05).
-
-% Rationale: 0.01. The constraint is a formal mathematical truth with
-% substantive applications and near-zero performative component.
-domain_priors:theater_ratio(peano_curve_mapping, 0.01).
+domain_priors:base_extractiveness(peano_curve_mapping, 0.08).
+domain_priors:suppression_score(peano_curve_mapping, 0.02).
+domain_priors:theater_ratio(peano_curve_mapping, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(peano_curve_mapping, extractiveness, 0.25).
-narrative_ontology:constraint_metric(peano_curve_mapping, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(peano_curve_mapping, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(peano_curve_mapping, extractiveness, 0.08).
+narrative_ontology:constraint_metric(peano_curve_mapping, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(peano_curve_mapping, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-narrative_ontology:constraint_metric(peano_curve_mapping, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(peano_curve_mapping, resistance, 0.0).
+narrative_ontology:constraint_metric(peano_curve_mapping, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(peano_curve_mapping, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(peano_curve_mapping, scaffold).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(peano_curve_mapping, mountain).
 narrative_ontology:human_readable(peano_curve_mapping, "Peano Space-Filling Curve").
-narrative_ontology:topic_domain(peano_curve_mapping, "mathematical/technological").
+narrative_ontology:topic_domain(peano_curve_mapping, "mathematical/theoretical").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
 domain_priors:emerges_naturally(peano_curve_mapping).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Although the claim is Mountain, the use of the curve as a tool creates
-% beneficiary/victim dynamics in application, justifying these declarations.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(peano_curve_mapping, spatial_database_architects).
-narrative_ontology:constraint_beneficiary(peano_curve_mapping, image_compression_designers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(peano_curve_mapping, classical_dimension_intuition).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: A POINT ON THE CURVE (MOUNTAIN)
-% For a point moving along the curve, the mapping is an unyielding law.
-% If it is at parameter 't', it *must* be at coordinate (x,y). There are zero
-% degrees of freedom.
-constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE GIS ENGINEER (ROPE)
-% For the engineer, the space-filling curve is a "Rope"—a tool for functional
-% coordination. It allows them to "pull" 2D spatial data into a 1D
-% linear order for efficient indexing and range searches.
-constraint_indexing:constraint_classification(peano_curve_mapping, scaffold,
-    context(agent_power(institutional),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: LOCALITY PRESERVATION (ROPE)
-% The loss of locality is not pure extraction (Snare) but a structural cost
-% of the coordination function. The curve trades perfect 1D locality for
-% manageable 2D locality. This is a Rope, as the cost is inherent to the
-% coordination benefit.
-constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(constrained),
-            spatial_scope(local))).
-
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% From a purely mathematical standpoint, the existence of the curve is a
-% fundamental, unchangeable fact of topology. Its properties are fixed.
-% The metrics (ε=0.25, suppression=0.05) and natural emergence firmly place
-% it in the Mountain category, which overrides any χ-based classification.
+% PERSPECTIVE 1: MATHEMATICAL COMMUNITY (MOUNTAIN) — The existence of a continuous surjection from [0,1] onto [0,1]² is a logical necessity, not contingent on institutional arrangement or convention. No agent can extract value by denying or suppressing the mapping; no agent benefits from its existence. The constraint is purely structural — it defines the boundary of what continuous functions can accomplish.
 constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: TOPOLOGICAL FOUNDATION (MOUNTAIN) — From the perspective of topology itself, the Peano Curve exemplifies an invariant: continuous maps preserve connectedness but not dimension. This is not something anyone 'enforces'—it follows from the definition of continuity and connectedness. Every continuous surjection from 1D to 2D exhibits the same dimensional collapse. Zero degrees of freedom.
+constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
+    context(agent_power(analytical),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: COMPUTATIONAL/ENGINEERING PERSPECTIVE (MOUNTAIN) — Even agents seeking to exploit or circumvent space-filling curves for data compression or spatial indexing encounter the same constraint: no continuous bijection from [0,1] onto [0,1]² exists. Engineers building databases (Z-order curves, Hilbert curves) must accept the trade-off between continuity and injectivity. The constraint is inescapable regardless of power or resources.
+constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
+    context(agent_power(powerful),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: PEDAGOGICAL PERSPECTIVE (MOUNTAIN) — From the student's view, the Peano Curve is an accessibility collapse: it violates intuition about dimension and injectivity, forcing fundamental revision of conceptual understanding. The resistance to accepting the result is high initially (does this really mean a 1D interval can map onto a 2D square?), but the proof is airtight. No alternative framing makes the constraint disappear.
+constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
             exit_options(analytical),
             spatial_scope(global))).
 
@@ -189,18 +147,26 @@ constraint_indexing:constraint_classification(peano_curve_mapping, mountain,
 
 :- begin_tests(peano_curve_mapping_tests).
 
-test(perspectival_gap) :-
-    % Verify perspectival gap between the abstract point and the engineer using it.
-    constraint_indexing:constraint_classification(peano_curve_mapping, mountain, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(peano_curve_mapping, scaffold, context(agent_power(institutional), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(peano_curve_mapping, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(peano_curve_mapping, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(locality_coordination_cost) :-
-    % A powerless data sequence (constrained) sees the loss of locality as a
-    % coordination cost (Rope), not a Snare, because the base extraction is too low.
-    constraint_indexing:constraint_classification(peano_curve_mapping, rope, context(agent_power(powerless), _, exit_options(constrained), _)).
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(peano_curve_mapping, ExtMetricName, E),
+    domain_priors:suppression_score(peano_curve_mapping, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(analytical_view_is_mountain) :-
-    constraint_indexing:constraint_classification(peano_curve_mapping, mountain, context(agent_power(analytical), _, _, _)).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(peano_curve_mapping),
+    narrative_ontology:constraint_metric(peano_curve_mapping, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(peano_curve_mapping, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(peano_curve_mapping_tests).
 
@@ -210,76 +176,87 @@ test(analytical_view_is_mountain) :-
 
 /**
  * LOGIC RATIONALE:
- *   The core of this constraint is a mathematical theorem, which is a canonical
- *   Mountain. Base extractiveness (ε=0.25) represents the structural "cost"
- *   of the mapping in terms of lost 1D locality, a property inherent to the
- *   theorem. The suppression score (0.05) reflects that a mathematical truth
- *   does not coercively suppress alternatives, as they are logically impossible.
- *   The constraint is declared as `emerges_naturally` with full accessibility
- *   collapse (1.0) and zero resistance (0.0), satisfying the Natural Law profile.
+ *   Extractiveness (0.08): Minimal. The Peano Curve generates no asymmetric value extraction. No agent captures rents or benefits from asymmetric information. The mathematical fact is public, stable, and equally available to all. Even computational engineers cannot exploit it as an extraction mechanism—they must work within its constraints, not benefit from suppressing alternatives. Suppression (0.02): Negligible. The result is mathematically proven; no coercive power is required to maintain it. It cannot be forgotten because it is rediscovered independently by each mathematician learning topology. Theater ratio (0.15): Low. Pedagogical exposition of the Peano Curve involves some performative elements (drawing approximations, illustrating the limit process), but the underlying claim is purely structural, not theatrical. The proof is complete and transparent.
  *
  * PERSPECTIVAL GAP:
- *   The gap is between the abstract mathematical fact (Mountain) and its
- *   practical application (Rope). For a point on the curve or an analytical
- *   observer, the mapping is an unchangeable law. For an engineer, it is a
- *   tool for coordination (mapping 2D data to 1D), making it a Rope. The
- *   loss of locality is better understood as a coordination cost inherent
- *   to the Rope's function, not a form of parasitic extraction.
+ *   The Peano Curve exhibits zero perspectival gap—all four analytical contexts (mathematics, topology, engineering, pedagogy) classify it identically as Mountain. This uniformity is itself diagnostic. When a constraint produces the same classification from powerless, moderate, powerful, organized, institutional, and analytical perspectives, the constraint is a natural law. The absence of divergent perspectives confirms that no extraction mechanism exists. The student's high accessibility_collapse (difficulty of intuitive understanding) is not extraction—it is cognitive effort required to align understanding with mathematical reality, not institutional coercion.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `spatial_database_architects` and `image_compression_designers`
- *     use the curve's coordination properties to build efficient systems.
- *   - Victims: `classical_dimension_intuition` represents the conceptual cost.
- *     The mapping demonstrates that our intuitive understanding of dimensionality
- *     is incomplete, a form of conceptual "extraction."
+ *   Directionality (d) is undefined for the Peano Curve in the standard sense because there are no beneficiaries or victims. The constraint is not asymmetric in who it advantages or disadvantages. The sigmoid function f(d) is not applied because the constraint does not involve extraction. The chi formula χ = ε × f(d) × σ(S) reduces to zero extraction regardless of f(d) or σ(S) because ε=0.08 and no agent directs the constraint toward or away from themselves. The constraint is invariant across all (P,T,E,S) tuples.
  *
- * MANDATROPHY ANALYSIS:
- *   By classifying the core constraint as a Mountain, we avoid mislabeling a
- *   fundamental mathematical truth as a social construct. The perspectival
- *   shift to Rope for its application correctly identifies its function as a
- *   coordination tool, where the "extraction" of locality is a necessary
- *   trade-off for the benefit of dimensional mapping, not a parasitic feature.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_peano_curve_mapping,
-    "Is there a 'Rope' (a different curve) that preserves locality better than Peano's original construction, making it a comparatively worse tool?",
-    "Comparison of Peano vs. Hilbert vs. Morton curves using a formal 'Clustering Factor' metric.",
-    "If Hilbert is proven superior for all relevant use cases, then choosing the Peano curve over Hilbert could be seen as a Piton (inertial choice) or a mild Snare (extracting performance).",
+    construction_versus_existence,
+    'Does the abstract mathematical existence of the Peano Curve differ structurally from its explicit recursive construction?',
+    'Formal comparison of non-constructive existence proofs (topology via Brouwer''s theorem) versus explicit iterative construction (Peano''s 1890 definition). Analysis of whether both produce the same constraint or represent distinct claims.',
+    'If different: two constraint stories needed (abstract existence vs constructibility). If same: confirms mountain classification is robust across proof methods.',
     confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(construction_versus_existence, conceptual, 'Distinction between abstract existence and explicit construction of the curve').
+
+omega_variable(
+    dimension_preservation_across_measures,
+    'Does the Peano Curve''s dimensional behavior remain invariant under non-Euclidean metrics or alternative topologies?',
+    'Mathematical analysis of space-filling curves in metric spaces with different dimension definitions (Hausdorff, box dimension, topological dimension). Testing whether the constraint holds in non-standard geometries.',
+    'If invariant: confirms universal scope. If metric-dependent: constraint may require refinement to ''Peano Curve in Euclidean space'' and decompose into separate stories.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(dimension_preservation_across_measures, empirical, 'Whether dimensional collapse holds across alternative topologies').
+
+omega_variable(
+    computational_approximation_limits,
+    'Do discrete approximations to the Peano Curve (finite-resolution grids) asymptotically approach the continuous limit, or do they exhibit systematic errors?',
+    'Numerical analysis of discretized space-filling curves; measurement of coverage gaps, self-intersection rates, and convergence to the continuous limit under resolution refinement.',
+    'If approaches limit: discrete implementations are faithful approximations (Rope classification for engineering). If systematic errors persist: discrete space-filling curves are a distinct constraint with partial extraction hidden in approximation (Tangled Rope).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(computational_approximation_limits, empirical, 'Convergence properties of discrete approximations to continuous Peano Curve').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(peano_curve_mapping, 1890, 2026).
+narrative_ontology:interval(peano_curve_mapping, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is not required as base_extractiveness (0.25) is below the
-% 0.46 threshold for mandatory lifecycle drift detection.
+% Theater ratio over time
+narrative_ontology:measurement(peano_tr_t0, peano_curve_mapping, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(peano_tr_t50, peano_curve_mapping, theater_ratio, 50, 0.14).
+narrative_ontology:measurement(peano_tr_t100, peano_curve_mapping, theater_ratio, 100, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(peano_be_t0, peano_curve_mapping, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(peano_be_t50, peano_curve_mapping, base_extractiveness, 50, 0.08).
+narrative_ontology:measurement(peano_be_t100, peano_curve_mapping, base_extractiveness, 100, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No Boltzmann or network data declared for this constraint.
+narrative_ontology:coordination_type(peano_curve_mapping, information_standard).
+narrative_ontology:affects_constraint(peano_curve_mapping, space_filling_curve_family).
+narrative_ontology:affects_constraint(peano_curve_mapping, dimension_preservation_in_continuous_maps).
+narrative_ontology:affects_constraint(peano_curve_mapping, topological_invariant_universality).
+
+% DUAL FORMULATION NOTE:
+% The Peano Curve is upstream in a constraint family. Downstream constraints include discrete space-filling approximations (which may introduce extraction through discretization trade-offs) and applications to computational geometry (which may exhibit partial extraction in spatial indexing schemes). Each downstream constraint has higher extractiveness than the abstract mathematical principle.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No directionality overrides are needed. The structural derivation from
-% beneficiary/victim declarations and exit options is accurate.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

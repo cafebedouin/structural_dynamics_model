@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "comitatus_bond",
+    "version": "0.1",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Germanic Comitatus Code",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ring_giver",
+      "thane_collective_reputation"
+    ],
+    "victims": [
+      "individual_thane_autonomy",
+      "vassal_families_long_term"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Individual Thane (Oathbound)",
+      "comment": "The individual thane, bound by oath, finds his autonomy heavily suppressed. Desertion brings dishonor and loss of protection."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Ring-Giver (Lord)",
+      "comment": "The ring-giver, as the institutional leader, benefits from the comitatus in terms of loyalty, military strength, and social order. They can choose to move or replace vassals."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a civilizational perspective, the comitatus showcases a blend of coordination (mutual defense) and extraction (limited individual freedom). The long-term impact shapes social structures and power dynamics."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Thanes as a Collective",
+      "comment": "Thanes as a group benefit from collective reputation and security but are constrained by the need to maintain loyalty and perform in battle. A strong band of warriors provides a powerful advantage, even if it limits their individual power."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Vassal Families (Long-Term)",
+      "comment": "Families become deeply enmeshed in the comitatus's power structure, making them vulnerable to consequences from broken oaths or battlefield deaths."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oath_enforcement_power",
+      "question": "How consistently and effectively are oaths enforced within the comitatus?",
+      "resolution_mechanism": "Archaeological evidence of punishment, literary accounts of oath-breaking and retribution, comparative legal studies",
+      "impact": "Strong enforcement shifts classification towards Snare; weak enforcement allows drift towards Rope or Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strength of oath enforcement within the comitatus structure"
+    },
+    {
+      "id": "lord_generosity_verification",
+      "question": "To what extent is the 'ring-giver' truly generous versus self-serving?",
+      "resolution_mechanism": "Historical analysis of gift-giving patterns, resource distribution records, and critiques of specific rulers",
+      "impact": "Verified generosity strengthens Rope classification; consistent self-serving behavior reinforces Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Analysis of the ring-giver's true generosity."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The comitatus is the foundational socio-political constraint governing the relationship between a lord (the \"ring-giver\") and his thanes in early Germanic society. It creates a system of mutual obligation, wherein the lord provides protection, resources, and leadership, while the thanes offer loyalty, military service, and counsel. The comitatus shaped Germanic social and political structures and influenced later feudal systems. It exemplifies a blend of coordination and extraction, with benefits distributed unevenly between parties.",
+    "key_agents": [
+      "Ring-Giver: Primary beneficiary (institutional/arbitrage) - Benefits from loyalty and military strength.",
+      "Individual Thane: Primary target (powerless/trapped) - Individual autonomy is suppressed.",
+      "Thanes as a Collective: Organized (constrained) - Group reputation and security, limited individual power.",
+      "Vassal Families (Long-Term): Trapped - Families become enmeshed in comitatus structure",
+      "Analytical Observer: Analytical (analytical) - Considers coordination/extraction balance."
+    ],
+    "logic_rationale": "The extractiveness value (0.6) is high because the system extracts significant personal autonomy from the thanes. Suppression (0.7) is also high due to limited exit options and social consequences for breaking the oath. The theater ratio (0.2) is low because the primary function of the comitatus is military strength, not performative display. This is a low theater ratio relative to systems where fealty rituals overwhelm substantive obligations.",
+    "perspectival_gap": "The lord sees the comitatus as a rope (coordination mechanism), enabling military strength and societal order. The individual thane experiences it as a snare, limiting personal freedom and mandating obedience. The analytical observer recognizes the tangled rope, a system blending cooperation with asymmetric extraction. The Thane collective gains reputational benefits but accepts constrained freedom to operate.",
+    "directionality_logic": "The ring-giver benefits, resulting in low directionality. The individual thane experiences extraction, leading to high directionality. The analytical observer understands the blend, which results in moderate overall directionality."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

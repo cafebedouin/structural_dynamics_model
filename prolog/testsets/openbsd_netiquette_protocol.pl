@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: openbsd_netiquette_protocol
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_openbsd_netiquette_protocol, []).
@@ -31,14 +32,18 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,20 +58,32 @@
  *   domain: technological/social
  *
  * SUMMARY:
- *   This constraint represents the rigorous online communication standards for
- *   OpenBSD mailing lists, which prioritize content clarity and technical
- *   preparation over formatting and social convenience. It mandates that
- *   contributors "do their homework" (research, provide logs, etc.) and strip
- *   away formatting distractions (HTML, top-posting) to facilitate efficient
- *   technical discussion. The protocol acts as a strong filter, coordinating
- *   expert communication while extracting significant preparatory labor from
- *   all participants, especially newcomers.
+ *   The OpenBSD mailing list netiquette protocol represents a constraint that
+ *   enforces strict communication standards — proper formatting,
+ *   comprehensive problem descriptions, specific questions, reproducible test
+ *   cases, no HTML or attachments, careful English grammar — to maintain
+ *   discussion quality and prevent noise. This constraint exhibits tension
+ *   between coordination (enabling technical focus) and extraction (excluding
+ *   contributors who cannot meet rigid standards). The same structural
+ *   phenomenon — strict communication norms enforced by core developers —
+ *   appears as a necessary coordination mechanism (rope), an extractive
+ *   barrier to entry (snare), a temporary structure being supplanted by
+ *   alternative platforms (scaffold), a performative ritual (piton), a mixed
+ *   mechanism (tangled rope), or an immutable aspect of large-group
+ *   collaboration (mountain), depending on the observer's structural
+ *   position. The protocol's theater ratio (0.48) reflects that enforcement
+ *   balances functionality with performative demonstration of project values
+ *   — public corrections serve both to improve future messages and to perform
+ *   the project's commitment to rigor.
  *
- * KEY AGENTS (by structural relationship):
- *   - Newcomers/Casual Contributors: Primary target (powerless/trapped) — bear the extraction of preparatory "homework" and risk being ignored or rebuked for non-compliance.
- *   - Core Developers/Maintainers: Primary beneficiary (institutional/arbitrage) — benefit from high-signal, low-noise communication that conserves their attention.
- *   - Experienced Contributors: Secondary target/beneficiary (moderate/mobile) — understand and benefit from the rules but must still perform the extracted labor.
- *   - Analytical Observer: Sees the full dual-function structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Core OpenBSD Developers: Primary beneficiary (institutional/arbitrage) — experience constraint as enabling; can bypass standards or use private channels; benefit from filtered discussion
+ *   - Technical Discussion Quality: Primary beneficiary (institutional/arbitrage) — abstract collective good that benefits from reduced noise and focused problem-solving
+ *   - Novice Contributors: Primary victim (powerless/trapped) — face message rejection, thread exclusion, and barrier to entry; cannot exit without abandoning project participation
+ *   - Casual Users: Secondary victim (moderate/constrained) — can lurk without posting; attempt to contribute triggers enforcement; partial exit option (read-only participation)
+ *   - Non-English Speakers: Secondary victim (moderate/constrained) — grammar and formatting requirements implicitly filter for native speakers; constrained exit (can post in native language but may face rejection)
+ *   - Alternative Platform Ecosystem: Organized competitor (organized/mobile) — Mastodon, Matrix, Discord, GitHub discussions offer alternative coordination channels with lower entry barriers; mobile exit available
+ *   - Email Infrastructure: Institutional actor (institutional/arbitrage) — mailing list persists through inertia despite degraded UX; performs project identity more than function
  */
 
 /* ==========================================================================
@@ -74,95 +91,74 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: High. The "homework tax" is significant. It extracts substantial
-% preparatory labor, log analysis, and formatting effort before a question is
-% even considered. This conserves the collective attention of the group at the
-% direct expense of the individual contributor.
-domain_priors:base_extractiveness(openbsd_netiquette_protocol, 0.60).
-
-% Rationale: High. The protocol explicitly suppresses common communication modes
-% like HTML email, top-posting, and casual social chatter. Alternatives are
-% actively rejected to maintain the integrity of the information standard.
-domain_priors:suppression_score(openbsd_netiquette_protocol, 0.60).
-
-% Rationale: Very low. The protocol is almost entirely functional. The rules
-% directly serve the goal of technical clarity with minimal performative overhead.
-domain_priors:theater_ratio(openbsd_netiquette_protocol, 0.05).
+domain_priors:base_extractiveness(openbsd_netiquette_protocol, 0.38).
+domain_priors:suppression_score(openbsd_netiquette_protocol, 0.52).
+domain_priors:theater_ratio(openbsd_netiquette_protocol, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(openbsd_netiquette_protocol, extractiveness, 0.60).
-narrative_ontology:constraint_metric(openbsd_netiquette_protocol, suppression_requirement, 0.60).
-narrative_ontology:constraint_metric(openbsd_netiquette_protocol, theater_ratio, 0.05).
+narrative_ontology:constraint_metric(openbsd_netiquette_protocol, extractiveness, 0.38).
+narrative_ontology:constraint_metric(openbsd_netiquette_protocol, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(openbsd_netiquette_protocol, theater_ratio, 0.48).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(openbsd_netiquette_protocol, snare).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(openbsd_netiquette_protocol, tangled_rope).
 narrative_ontology:human_readable(openbsd_netiquette_protocol, "OpenBSD Mailing List Netiquette Protocol").
 narrative_ontology:topic_domain(openbsd_netiquette_protocol, "technological/social").
 
-% --- Binary flags ---
-% Required for Tangled Rope. The norms are actively enforced by moderators and
-% community members who will ignore or correct non-compliant posts.
 domain_priors:requires_active_enforcement(openbsd_netiquette_protocol).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(openbsd_netiquette_protocol, core_developers_and_maintainers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(openbsd_netiquette_protocol, newcomers_and_casual_contributors).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(openbsd_netiquette_protocol, core_openbsd_developers).
+narrative_ontology:constraint_beneficiary(openbsd_netiquette_protocol, technical_discussion_quality).
+narrative_ontology:constraint_victim(openbsd_netiquette_protocol, novice_contributors).
+narrative_ontology:constraint_victim(openbsd_netiquette_protocol, casual_users).
+narrative_ontology:constraint_victim(openbsd_netiquette_protocol, non_english_speakers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE NEWCOMER (PRIMARY TARGET)
-% For a newcomer unfamiliar with the rules, the protocol is a Snare. Their
-% request for help is "strangled" by the high preparatory requirements, and
-% non-compliance leads to being ignored (social liquidation), extracting their
-% time and effort with no return.
-% Math: χ = 0.60 * f(d=0.95) * σ(local=0.8) ≈ 0.60 * 1.42 * 0.8 ≈ 0.68 (Snare)
-constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE CORE DEVELOPER (PRIMARY BENEFICIARY)
-% For the maintainers, the protocol is a pure Rope. It coordinates communication
-% efficiently, filtering out noise and ensuring they only see well-researched,
-% clearly articulated issues. The extractive cost is borne by others.
-% Math: χ = 0.60 * f(d=0.05) * σ(national=1.0) ≈ 0.60 * -0.12 * 1.0 ≈ -0.07 (Rope)
-constraint_indexing:constraint_classification(openbsd_netiquette_protocol, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE EXPERIENCED CONTRIBUTOR
-% For a regular, experienced contributor, the protocol is a Tangled Rope. They
-% benefit from the coordination (Rope aspect) but must still perform the
-% significant "homework" labor (Snare aspect) for every contribution. They
-% experience both the coordination function and the asymmetric extraction.
-% Math: χ = 0.60 * f(d=0.85) * σ(global=1.2) ≈ 0.60 * 1.15 * 1.2 ≈ 0.83 (Tangled Rope)
+% PERSPECTIVE 1: ASPIRING CONTRIBUTOR (SNARE) — Cannot exit the communication standards without sacrificing project participation. Trapped between desire to contribute and rigid enforcement of formatting, tone, and preparation requirements. Moderation can result in message rejection, thread exclusion, or public shaming. Maximum experienced extraction due to zero degrees of freedom.
 constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: PERIPHERAL DEVELOPER (TANGLED ROPE) — Experiences both coordination benefit and extraction burden. The standards enforce discussion quality that benefits all (enables focused technical problem-solving). But enforcement is punitive and discretionary — public corrections, thread exclusions, and informal reputation penalties. Constrained exits: can post to forums or blogs instead, but mailing list participation carries higher technical weight in the project.
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: CORE DEVELOPMENT TEAM (ROPE) — Benefits from strict netiquette as a coordination mechanism. Standards filter noise, reduce moderation burden, and accelerate decision-making. Team members experience the constraint as enabling: clear rules allow them to skip off-topic threads and focus on technical content. Arbitrage exit: can use private channels or direct communication if needed. Net beneficiary.
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: OPEN SOURCE ECOSYSTEM (SCAFFOLD) — Sees the protocol as a temporary coordinating structure with an implicit sunset. As communication tools mature (Mastodon, Matrix, Discord, collaborative wikis), the mailing list's role as the sole coordination medium diminishes. The strictness serves a purpose during the list-era but is becoming redundant. Mobile exit: developers can migrate to other platforms without losing project voice. Theater ratio low for this perspective because the protocol is purely functional, not performative.
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
             exit_options(mobile),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% The analytical observer sees the complete structure: a system with a genuine
-% coordination function that is sustained by high, asymmetric extraction and
-% active enforcement. This is the definition of a Tangled Rope.
-% Math: χ = 0.60 * f(d=0.72) * σ(global=1.2) ≈ 0.60 * 1.15 * 1.2 ≈ 0.83 (Tangled Rope)
-constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare,
+% PERSPECTIVE 5: EMAIL PROTOCOL INFRASTRUCTURE (PITON) — The mailing list format and enforcement are maintained through institutional inertia despite better alternatives existing. Email threading is degraded for large discussions; rich formatting is deliberately suppressed; mobile-friendly composition is difficult. The constraint persists because OpenBSD's identity is built on 'no bullshit' culture — the performance of strictness matters as much as its function. Theater ratio high: the enforcement ritual (public corrections, canonical thread formats) is performative — it demonstrates project values more than it improves outcomes.
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some standardization of discourse is inherent to collective technical problem-solving: large groups always require clarity norms, and enforcing preparation gates (test cases, reproducible reports, specific questions) is a structural feature of effective debugging collaboration. However, the structural data contradicts the mountain classification — the engine will compute this as a false summit, revealing that the 'inherent to technical collaboration' framing naturalizes what is actually a contingent institutional choice about enforcement severity.
+constraint_indexing:constraint_classification(openbsd_netiquette_protocol, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -171,17 +167,13 @@ constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare
 :- begin_tests(openbsd_netiquette_protocol_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between the newcomer (target) and core dev (beneficiary).
-    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, tangled_rope, context(agent_power(powerless), _, trapped, _)),
-    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, rope, context(agent_power(institutional), _, arbitrage, _)),
-    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, snare, context(agent_power(analytical), _, _, _)).
+    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(openbsd_netiquette_protocol, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    % Verify the base metrics align with a high-extraction Tangled Rope/Snare.
-    narrative_ontology:constraint_metric(openbsd_netiquette_protocol, extractiveness, E),
-    narrative_ontology:constraint_metric(openbsd_netiquette_protocol, suppression_requirement, S),
-    E >= 0.46,
-    S >= 0.40.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(openbsd_netiquette_protocol, TR),
+    TR >= 0.70.
 
 :- end_tests(openbsd_netiquette_protocol_tests).
 
@@ -191,39 +183,16 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The original file's metrics (ε=0.3) were too low to be consistent with its
- *   own narrative of a "Snare" for newcomers. The base extractiveness was
- *   increased to 0.60 to reflect the significant "homework tax" the protocol
- *   imposes on all contributors. This tax is not a side effect; it is the
- *   primary mechanism that makes the coordination function work for the
- *   beneficiaries. The suppression score of 0.60 reflects the explicit and
- *   active rejection of common communication standards (HTML, top-posting).
+ *   Extractiveness (0.38): Moderate. The protocol does enforce participation barriers — message rejection, public shaming, thread exclusion — that extract from those unable or unwilling to meet standards. But the extraction is not as severe as a snare (0.66+) because legitimate alternatives exist (read-only participation, alternative platforms) and the standards do serve a real coordination function. The value reflects that the constraint contains both genuine coordination and genuine exclusion. Suppression (0.52): Moderate-high. Significant barriers to participation include formatting requirements, English proficiency expectations, pressure to do advance research before posting, and discretionary moderation. But suppression is not total — messages can be reposted with corrections, and lurking remains accessible. Theater ratio (0.48): Moderate. The enforcement ritual (public corrections, canonical thread formats, 'no top-posting' policing) serves partly to maintain discussion quality (functional) and partly to perform the project's identity as rigorous and uncompromising (performative). The ratio is not low (pure functionality) or high (pure performance) — it's genuinely mixed.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the core developers (beneficiaries), the system is
- *   a perfect Rope, delivering high-quality information with minimal effort on
- *   their part. For the newcomer (target), it is a Snare, demanding immense
- *   upfront work with a high risk of failure and social rebuke. The experienced
- *   contributor and the analytical observer see the true nature: a Tangled Rope
- *   where the valuable coordination is inextricably linked to, and paid for by,
- *   the coercive extraction of labor.
+ *   This constraint demonstrates a clear perspectival gap between institutional beneficiaries and powerless victims. The core development team sees coordination (Rope) — strict standards enable focused problem-solving. Aspiring contributors see extraction (Snare) — rigid barriers prevent participation. The open source ecosystem sees a temporary structure (Scaffold) — alternative platforms are reducing the mailing list's monopoly on project voice. The mailing list infrastructure itself sees a degraded ritual (Piton) — email threading is worse than modern alternatives, yet persists. Peripheral developers experience the mixed reality (Tangled Rope) — the standards do enable quality discussion, but enforcement is punitive. The civilizational analytical observer risks a false summit (Mountain) — 'large groups always need communication standards' — when the structural data reveals a contingent choice about enforcement severity.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `core_developers_and_maintainers`. They receive the benefit
- *     (clarity, saved time) without bearing the full cost. Their institutional
- *     power and arbitrage exit options give them a low directionality (d).
- *   - Victims: `newcomers_and_casual_contributors`. They bear the full cost of
- *     the "homework tax" and risk social liquidation. Their powerless status
- *     and trapped exit options (to get help, they must comply) give them a
- *     high directionality (d).
+ *   Each perspective's directionality is determined by structural position relative to the constraint. Core developers benefit from filtering (low d) and have escape routes (arbitrage exit). Aspiring contributors bear costs and cannot escape (high d). The constraint extracts from those trying to enter. Peripheral developers experience mixed costs and benefits (moderate d). The open source ecosystem sees the constraint as temporary (mobile exit, lower experienced d). The analytical observer risks naturalizing a contingent institutional choice (high false d). The directionality derivation reflects that beneficiaries are institutional, have arbitrage options, and experience low effective extraction; victims are powerless or moderate, have trapped/constrained options, and experience high effective extraction.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the constraint as a Tangled Rope,
- *   avoiding two potential errors. It is not a pure Rope, because the
- *   coordination is funded by significant, asymmetric extraction. It is not a
- *   pure Snare, because it possesses a genuine and highly effective coordination
- *   function for its beneficiaries. The `tangled_rope` classification captures
- *   this essential duality.
+ *   DIAGNOSTIC: This constraint resolves the mandatrophy by exposing how the same netiquette mechanism can be read as pure coordination (rope) from the core developer's perspective or pure extraction (snare) from the aspiring contributor's perspective. The mandate is not 'what should netiquette be?' but 'who benefits from this particular implementation of netiquette standards?' The resolution shows that the coordination function (filtering noise) is real AND the extraction function (excluding non-conformists) is real. Both readings are structurally correct from their respective positions. The constraint is not mislabeled coordination; it is genuine hybrid (tangled rope) because it simultaneously enables and excludes. The theater ratio (0.48) prevents piton misclassification — the enforcement is not purely performative. The moderate extractiveness (0.38) prevents snare misclassification — the coordination function is real.
  */
 
 /* ==========================================================================
@@ -231,51 +200,75 @@ test(threshold_validation) :-
    ========================================================================== */
 
 omega_variable(
-    omega_openbsd_netiquette_protocol,
-    "Is the 'homework' requirement a functional necessity for clarity (Tangled Rope) or an elitist tool for social gatekeeping whose primary function is exclusion (Snare)?",
-    "Audit of community growth vs. problem-resolution speed in 'high-homework' vs 'low-homework' technical communities.",
-    "If necessity: A functional Tangled Rope. If gatekeeping: A pure Snare masquerading as a coordination tool.",
+    enforcement_severity_threshold,
+    'What level of netiquette enforcement (warnings vs. message rejection vs. thread exclusion) distinguishes necessary coordination from punitive extraction?',
+    'Comparative analysis of list quality metrics (signal-to-noise ratio, resolution time, code quality) across enforcement regimes; survey of contributor experience before/after policy changes',
+    'If threshold is high (low enforcement): contributors participate freely but discussion quality degrades. If threshold is low (high enforcement): discussion quality maintained but contributor base shrinks and becomes homogeneous.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(enforcement_severity_threshold, empirical, 'Enforcement severity threshold for coordination vs. extraction').
+
+omega_variable(
+    alternative_platform_migration,
+    'If OpenBSD moved development discussion to structured platforms (GitHub discussions, GitLab issues, Discourse forums), would discussion quality improve, degrade, or remain equivalent?',
+    'Historical analysis of other projects'' migrations (Debian, PostgreSQL); comparison of signal-to-noise ratios, resolution times, and contributor diversity across platforms',
+    'If quality improves: netiquette strictness is not necessary for coordination (snare classification strengthened). If quality degrades: strictness is functional (rope classification strengthened). If equivalent: choice of platform is orthogonal to underlying coordination problem.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_platform_migration, empirical, 'Whether alternative platforms would support equivalent discussion quality').
+
+omega_variable(
+    implicit_english_proficiency_gate,
+    'To what extent do netiquette standards (complex formatting rules, cultural assumptions about tone, English grammar expectations) implicitly filter for native English speakers and exclude non-native contributors?',
+    'Analysis of contributor linguistic diversity before/after policy changes; correlation between English fluency and message rejection rates; survey of non-native speakers on barriers to participation',
+    'If high barrier: netiquette is extracting from linguistic minorities (snare classification strengthened, victim group clarified). If low barrier: standards are culturally inclusive (rope classification strengthened).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(implicit_english_proficiency_gate, empirical, 'Language proficiency gate implicit in netiquette standards').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(openbsd_netiquette_protocol, 0, 10).
+narrative_ontology:interval(openbsd_netiquette_protocol, 0, 15).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is required as base_extractiveness > 0.46.
-% These norms are stable within established technical communities, so we model
-% a flat trajectory over the interval.
+% Theater ratio over time
+narrative_ontology:measurement(obsd_net_tr_t0, openbsd_netiquette_protocol, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(obsd_net_tr_t7, openbsd_netiquette_protocol, theater_ratio, 7, 0.45).
+narrative_ontology:measurement(obsd_net_tr_t15, openbsd_netiquette_protocol, theater_ratio, 15, 0.48).
 
-% Theater ratio over time:
-narrative_ontology:measurement(onp_tr_t0, openbsd_netiquette_protocol, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(onp_tr_t5, openbsd_netiquette_protocol, theater_ratio, 5, 0.05).
-narrative_ontology:measurement(onp_tr_t10, openbsd_netiquette_protocol, theater_ratio, 10, 0.05).
+% Extraction over time
+narrative_ontology:measurement(obsd_net_be_t0, openbsd_netiquette_protocol, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(obsd_net_be_t7, openbsd_netiquette_protocol, base_extractiveness, 7, 0.33).
+narrative_ontology:measurement(obsd_net_be_t15, openbsd_netiquette_protocol, base_extractiveness, 15, 0.38).
 
-% Extraction over time:
-narrative_ontology:measurement(onp_ex_t0, openbsd_netiquette_protocol, base_extractiveness, 0, 0.60).
-narrative_ontology:measurement(onp_ex_t5, openbsd_netiquette_protocol, base_extractiveness, 5, 0.60).
-narrative_ontology:measurement(onp_ex_t10, openbsd_netiquette_protocol, base_extractiveness, 10, 0.60).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% The protocol's primary function is to standardize communication for clarity.
 narrative_ontology:coordination_type(openbsd_netiquette_protocol, information_standard).
+narrative_ontology:affects_constraint(openbsd_netiquette_protocol, open_source_contributor_retention).
+narrative_ontology:affects_constraint(openbsd_netiquette_protocol, technical_documentation_quality).
+narrative_ontology:affects_constraint(openbsd_netiquette_protocol, project_governance_legitimacy).
+
+% DUAL FORMULATION NOTE:
+% The netiquette protocol is downstream of OpenBSD's broader culture of rigor and skepticism. Separate constraints track specific effects: contributor retention (snare from victims' perspective), documentation quality (rope from beneficiaries' perspective), and governance legitimacy (piton as culture performance).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed. The structural derivation from beneficiary/victim
-% declarations and exit options accurately models the dynamics of this constraint.
+constraint_indexing:directionality_override(openbsd_netiquette_protocol, powerless, 0.92).
+constraint_indexing:directionality_override(openbsd_netiquette_protocol, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

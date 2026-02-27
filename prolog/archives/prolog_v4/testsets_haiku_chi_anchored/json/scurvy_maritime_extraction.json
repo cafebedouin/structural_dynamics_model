@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "scurvy_maritime_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scurvy"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Scurvy/Empire Trade-off: Biological Constraint and Institutional Extraction",
+    "topic_domain": "biological/political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "imperial_trading_companies",
+      "metropolitan_governments",
+      "ship_owners_capital_holders"
+    ],
+    "victims": [
+      "ship_crews",
+      "colonies_indigenous_populations",
+      "long_distance_maritime_expansion"
+    ],
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Ship's Crew",
+      "comment": "PERSPECTIVE 1: THE SHIP'S CREW (SNARE) \u2014 Pressed or conscripted sailors face 40-50% mortality rates on long voyages, primarily from scurvy. No exit short of mutiny or desertion (both punishable by death). The biological constraint (vitamin C deficiency) is real, but its severity is actively amplified by provisioning decisions made to maximize company profit. Crews see pure extraction: survival requires vitamin-rich provisions (citrus, fresh greens) that are deliberately withheld to save cargo space for tradeable goods. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.72. Terminal extraction \u2014 crews have no bargaining power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Colonial Settlement",
+      "comment": "PERSPECTIVE 2: THE COLONIAL SETTLEMENT (TANGLED ROPE) \u2014 Colonies experience mixed coordination and extraction. Long-distance supply chains from Europe provide manufactured goods and capital, enabling colonial settlement. But these same chains extract raw materials and agricultural surplus under asymmetric terms. Colonies cannot exit the imperial trading network (constrained) \u2014 independence requires local production capacity they lack. d\u22480.68, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.50. The constraint enables colonial expansion (coordination function) while simultaneously extracting resources (asymmetric extraction) \u2014 defining tangled_rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Imperial Trading Company",
+      "comment": "PERSPECTIVE 3: THE IMPERIAL TRADING COMPANY (ROPE) \u2014 From the company's structural position, scurvy is a coordination problem, not an extraction mechanism. The biological constraint limits voyage duration; solving it requires coordination: provisioning decisions, sailing route optimization, crew knowledge exchange. The company benefits from long-distance trade and sees the constraint as a technical problem to solve through innovation (faster routes, better navigation, eventually citrus provisioning). Arbitrage position: can shift to routes with lower scurvy incidence (via fresh supplies at way-stations), can invest in provisioning if it improves profit. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. Negative effective extraction \u2014 the company's solution is to invest in voyage efficiency, which also reduces crew mortality (coincidental alignment)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Metropole Government",
+      "comment": "PERSPECTIVE 4: THE METROPOLE GOVERNMENT (TANGLED ROPE) \u2014 Governments experience scurvy as a strategic constraint on imperial expansion. The biological limit on voyage duration constrains the scope of colonial acquisition and trade volume (coordination function \u2014 scurvy limits how much empire is buildable). But governments also extract from the empire: they regulate trade routes, levy tariffs, deploy naval power to secure routes, and redirect colonial wealth toward metropolitan centers. The government cannot fully exit (constrained) \u2014 abandoning long-distance trade surrenders geopolitical power to rival nations. d\u22480.52, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.37. Symmetric position: the constraint both enables and limits imperial strategy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Naval Establishment (Institutional Inertia View)",
+      "comment": "PERSPECTIVE 5: THE NAVAL ESTABLISHMENT (PITON) \u2014 Naval institutions maintain the scurvy extraction system through inertia despite knowing better. By the 18th century, scurvy's cause and cure (vitamin C, citrus) were established, yet the provisioning system persisted \u2014 treating scurvy as an inevitable naval fact rather than a solvable problem. Theater ratio: captains and admirals maintained an ideology of 'hardy sailor' culture, natural hardship, and inevitable mortality, even as the biological solution (lemon juice rations) became available. The institutional ritual (press gangs, sparse provisions, acceptance of high mortality) persisted not because it was functional but because it served cost-minimization narratives and crew social control. theater_ratio=0.62 reflects moderate institutional performance covering low functional benefit. By the late 18th century, even as the solution was known, implementation lagged for decades (Britain formalized citrus rations in 1795, century after the mechanism was understood)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, vitamin C deficiency on long ocean voyages is presented as an immutable constraint of human physiology: the human body cannot synthesize ascorbic acid and cannot store it long-term. This creates an absolute requirement for dietary vitamin C replacement. The biological constraint is real (accessibility_collapse\u22480.88, resistance\u22480.08). However, the structural data (\u03b5=0.52, suppression=0.68, theater=0.38) reveals this as a false summit. The mountain is the biological fact (vitamin C requirement); the extraction is the institutional choice to withold known solutions to maximize profit. The constraint is not 'humans need vitamin C' (mountain); the constraint is 'trading companies deliberately provision ships without adequate vitamin C despite knowing the requirement' (tangled_rope \u2192 snare from crew perspective). The 'natural law' framing naturalizes what is an institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cure_knowledge_lag",
+      "question": "Why did naval institutions maintain high-mortality provisioning systems decades after the vitamin C cure was scientifically established and practically available?",
+      "resolution_mechanism": "Historical analysis of scurvy treatment protocols in naval archives; timing of citrus procurement vs. scientific publications; institutional resistance to provisioning investment",
+      "impact": "If lag was epistemological (knowledge unknown): constraint is biological mountain. If lag was institutional (knowledge available but suppressed): constraint is extraction system (snare/tangled_rope) \u2014 the biological substrate masks an institutional choice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Historical lag between scurvy cure discovery and naval implementation"
+    },
+    {
+      "id": "provisioning_cost_vs_mortality",
+      "question": "What was the actual cost-benefit calculation: did the cargo space saved by minimal provisioning exceed the loss from crew mortality and reduced voyage efficiency?",
+      "resolution_mechanism": "Economic reconstruction of company ledgers; calculation of profit per voyage vs. crew mortality rates; comparison of high-provision vs. low-provision voyage profitability",
+      "impact": "If provisioning was economically optimal: constraint reflects real trade-offs (tangled_rope). If provisioning was not economically optimal but was enforced anyway: constraint is pure extraction (snare), motivated by power/control rather than profit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic calculation of provisioning costs vs. mortality losses"
+    },
+    {
+      "id": "crew_exit_alternatives",
+      "question": "Did sailors have any genuine exit options beyond ship service, or was maritime labor fully trapped?",
+      "resolution_mechanism": "Labor market analysis: wage rates, alternative employment, desertion rates and punishments, indentured vs. voluntary crew composition",
+      "impact": "If exit options existed: crews constrained (d\u22480.75) \u2192 tangled_rope. If no exit: crews trapped (d\u22480.92) \u2192 snare. This changes the powerless perspective classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Historical labor market options for maritime workers"
+    },
+    {
+      "id": "indigenous_population_scurvy",
+      "question": "Did indigenous populations in colonial settlements experience the same scurvy burden, or was dietary access (fresh provisions) distributed unequally within settlements?",
+      "resolution_mechanism": "Historical medical records from colonial settlements; diet reconstruction; differential mortality by population group",
+      "impact": "If indigenous populations had better access to fresh provisions: scurvy became an instrument of colonial control (extraction mechanism). If uniform: scurvy is a shared biological constraint (coordination problem). This changes whether scurvy is fundamentally biological or fundamentally institutional.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Differential scurvy burden across colonial populations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1750,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1750,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 1500,
+    "end": 1750
+  },
+  "commentary": {
+    "narrative_context": "Scurvy was a primary killer on long-distance ocean voyages during the Age of Sail (15th-18th centuries), but it represents not a pure biological constraint but a structural tension between biological limits and institutional extraction. The constraint operates at multiple levels: (1) the irreducible biological fact that humans require dietary vitamin C; (2) the technical problem of provisioning ships for months-long voyages without refrigeration; (3) the institutional choice to minimize provisions to maximize cargo space and profit; (4) the power dynamic that allows companies to impose mortality on crews without accountability. This constraint exhibits the full spectrum of DR classification. From the crew's perspective, it is a pure snare: they face 40-50% mortality from a preventable cause with no exit option. From the company's perspective, it is a coordination problem (rope): how to provision ships efficiently. From the analytical observer's perspective, it risks being falsely naturalized as a mountain \u2014 'humans need vitamin C, long voyages are dangerous' \u2014 when the actual constraint is institutional: 'companies choose to withhold known cures to maximize profit.' The constraint's extractiveness increased over the period as company provisioning practices became more systematized and less ad-hoc, and as the scientific understanding of scurvy became available (late 17th century) yet was systematically delayed in implementation (until 1795 in British Navy). The theater ratio increased over the same period as naval institutions developed elaborate ideologies of 'hardy sailor' culture and natural hardship to justify known-preventable mortality.",
+    "key_agents": [
+      "Ship's Crew: Primary victim (powerless/trapped) \u2014 face 40-50% mortality rates from scurvy; no exit short of mutiny or desertion",
+      "Imperial Trading Companies (e.g., VOC, EIC): Primary beneficiary (institutional/arbitrage) \u2014 maximize profit by minimizing provisions and cargo space allocation to crew support",
+      "Metropolitan Governments (Portugal, Spain, England, Netherlands): Secondary beneficiary and organized actor (organized/constrained) \u2014 regulate trade routes, deploy naval power, extract colonial wealth; see scurvy as strategic constraint on imperial expansion",
+      "Colonial Settlements: Secondary victim and moderate actor (moderate/constrained) \u2014 receive manufactured goods and capital but export raw materials under asymmetric terms; cannot exit imperial supply chains",
+      "Naval Establishment: Institutional actor (institutional/arbitrage) \u2014 maintains provisioning ideology and crew control systems despite knowledge of scurvy causes; represents inertial piton perspective",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional choices as biological necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The constraint combines an irreducible biological requirement (vitamin C) with a fully reversible institutional choice (withhold provisions). By 1700, the biological component was understood (scurvy as nutritional disease); the extraction component was the deliberate choice to suppress cure implementation. The 0.52 value reflects that the institutional layer is substantial (not a minor add-on to biology) but not total (the biological substrate is real). Early in the period (1500), extractiveness was lower (0.32) because provisioning was more ad-hoc and crew knowledge was less systematized. By 1750, extractiveness had increased to 0.52 as company provisioning systems became more standardized and the science was known but suppressed. Suppression (0.68): High. Crews face multiple suppression mechanisms: (1) legal \u2014 pressed/conscripted sailors have no legal recourse; (2) epistemic \u2014 crew knowledge of scurvy cures was suppressed in institutional hierarchies; (3) physical \u2014 malnutrition and disease prevent organized resistance; (4) structural \u2014 no alternative maritime employment available. Theater ratio (0.38\u21920.62): Moderate, increasing. Early in the period, scurvy was treated as a mysterious medical problem (low theater). By 1700-1750, naval institutions had developed elaborate narratives of 'hardy sailor' culture, natural hardship, and inevitable mortality despite knowing the cause and cure. The theater increased as the ideology became more conscious and systematized. Claimed type: Tangled Rope. The constraint has both a genuine coordination function (solving long-distance sailing problems, enabling colonial expansion) and a substantial extraction component (crew mortality from withheld provisions). Both elements are structurally necessary \u2014 it is not a snare with a thin coordination veneer.",
+    "perspectival_gap": "This constraint demonstrates a critical perspectival gap between the beneficiary and victim that maps onto the institutional/powerless power differential. From the company's perspective, the constraint is a coordination problem (rope) \u2014 how to balance provisioning costs with voyage efficiency. From the crew's perspective, the constraint is pure extraction (snare) \u2014 deliberate withholding of a known cure. From the government's perspective, the constraint is mixed (tangled_rope) \u2014 it enables empire but limits expansion. From the naval establishment's perspective, the constraint is degraded performance justified by ideology (piton) \u2014 scurvy is treated as inevitable despite being preventable. The false mountain perspective (analytical observer naturalizing as biological necessity) is the most dangerous, as it obscures the institutional choice. The perspectival gap is not between different measurements of the same thing, but between different structural positions within a hierarchical system that benefits from naturalizing extraction as biology.",
+    "directionality_logic": "Ship's crew: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum directionality toward target. The crew has zero exit options and bears the full cost of the constraint. Colonial settlements: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. High directionality toward target but not maximal \u2014 some options exist (trade diversification, local production) but are costly. Imperial trading companies: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Negative directionality toward target \u2014 net beneficiary. Can shift to provisioning solutions if profitable. Metropolitan governments: Mixed beneficiary and victim, organized + constrained \u2192 d\u22480.52, f(d)\u22480.65. Symmetric directionality \u2014 scurvy limits empire but empire extraction depends on the constraint's existence. Naval establishment: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.06. Institutional beneficiary of the status quo (maintains control systems justified by hardship ideology). Directionality is low because arbitrage options exist (can shift to citrus provisioning) but are not exercised due to institutional inertia.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that scurvy is not a pure biological mountain but a tangled coordination-extraction hybrid. The false summit risk is the 'naturalization trap' \u2014 treating institutional choices as biological necessity. The resolution: The biological component (vitamin C requirement) is real and approximately mountain-like (accessibility_collapse would be ~0.88, resistance ~0.08 for the pure biological claim). But the constraint story is not about biology \u2014 it is about the institutional choice to suppress solutions to biology. The claimed constraint is 'long-distance sailing under conditions of withheld provisions' (tangled_rope), not 'human vitamin C requirement' (mountain). These are different constraints with different \u03b5 values. If the story were about pure biology, \u03b5 would be \u22640.25 (mountain); the 0.52 value reflects the institutional extraction layer. The mandatrophy is resolved by keeping the biological and institutional constraints separate in the conceptual model, even though they are entangled in the historical system."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "colonial_supply_chain_asymmetry",
+      "maritime_labor_coercion"
+    ],
+    "dual_formulation_note": "Scurvy represents a constraint family decomposed into (1) the biological requirement for vitamin C (mountain, \u03b5\u22480.08) and (2) the institutional choice to withhold provisions (tangled_rope/snare, \u03b5\u22480.52). The corpus treats them as separate constraints linked via network dependency: the biological mountain is upstream and affects the institutional extraction story. Failure to decompose leads to false naturalization of institutional choices."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

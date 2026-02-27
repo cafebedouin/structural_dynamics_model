@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "social_media_participation_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "smpt"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "The 2025 Digital Participation Threshold",
+    "topic_domain": "social/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "platform_corporations"
+    ],
+    "victims": [
+      "non_adopters",
+      "privacy_conscious_users",
+      "economically_excluded_populations",
+      "information_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Non-Adopter",
+      "comment": "PERSPECTIVE 1: NON-ADOPTER (SNARE) \u2014 Individuals who do not maintain active social media presence face systematic exclusion from job postings, community information, emergency alerts, government services, and informal social coordination. Exit is effectively unavailable \u2014 withdrawal means material loss of economic opportunity and social participation. The constraint extracts from this agent maximally: they bear full cost of non-participation while beneficiaries capture the coordination premium."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Privacy-Conscious Users",
+      "comment": "PERSPECTIVE 2: PRIVACY-CONSCIOUS USERS (SNARE) \u2014 Users who object to data extraction, algorithmic profiling, and attention capture face binary choice: participate under extractive terms or exit entirely. Limited alternative platforms exist with comparable network reach. Exit options are severely constrained \u2014 attempting to maintain privacy while participating requires constant vigilance and acceptance of degraded service. The extraction is high: users pay in attention, data, and behavioral modification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Casual Participants",
+      "comment": "PERSPECTIVE 3: CASUAL PARTICIPANTS (TANGLED ROPE) \u2014 Users who adopt platforms for genuine coordination benefits (family connection, community organizing, information sharing) experience genuine value alongside extraction. The constraint provides real coordination function: matching distant relatives, enabling local mutual aid, distributing time-sensitive information. But coordination is entangled with extraction: attention harvesting, algorithmic manipulation, and data monetization are bundled with legitimate functions. Exit is constrained but possible \u2014 users can reduce participation or switch platforms at some social cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Corporations",
+      "comment": "PERSPECTIVE 4: PLATFORM CORPORATIONS (ROPE) \u2014 From the institutional beneficiary perspective, the platforms solve a genuine coordination problem: connecting billions of users across geographic and temporal distance at near-zero marginal cost. The platforms experience the constraint as pure coordination mechanism. Their exit options are maximal \u2014 they can modify platform design, pricing, features. Extraction runs toward them: captured user attention, data assets, and network effects produce extraordinary returns. The constraint appears as legitimate coordination from this perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Information Commons",
+      "comment": "PERSPECTIVE 5: INFORMATION COMMONS (SNARE) \u2014 Public discourse, news distribution, and informational coordination have migrated to proprietary platforms. The commons itself becomes dependent on private platform infrastructure for basic function. Platform algorithm modifications, moderation policies, and business decisions directly shape what information reaches public view. The information commons has no exit option and no negotiating power. Extraction is high and asymmetric: platforms control information flow with minimal accountability to the commons."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Government and Institutional Services",
+      "comment": "PERSPECTIVE 6: GOVERNMENT AND INSTITUTIONAL SERVICES (PITON) \u2014 Public institutions have increasingly shifted service delivery to social media (official announcements, permit applications, emergency alerts) without developing systematic alternatives. This creates institutional dependence on proprietary platforms for public functions. The theater ratio is high: formal regulatory structures appear to govern platform access to public services, but enforcement is minimal and platforms retain effective veto power. The degradation derives from institutional inertia \u2014 government built dependency rather than recognizing the structural risk. Exit pathways exist but are politically expensive."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Digital Rights Advocates",
+      "comment": "PERSPECTIVE 7: DIGITAL RIGHTS ADVOCATES (SCAFFOLD) \u2014 Organized advocates for alternative platforms, data rights regulation, and algorithmic transparency see the participation threshold as a temporary coordination failure with structural exit mechanisms available: interoperability standards, federated platforms (Mastodon, Bluesky), regulatory frameworks (EU DMA, DSA), and public digital infrastructure investment. This perspective recognizes extraction but frames it as solvable via institutional redesign. The sunset logic is conditional: if interoperability and platform alternatives mature, the participation threshold loses enforcement power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit Test)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE SUMMIT RISK (MOUNTAIN?) \u2014 A civilizational-scale analysis might frame digital platform dependency as an immutable consequence of network-effect economics: any coordination mechanism at global scale will concentrate power in a small number of dominant platforms. This perspective risks naturalizing what is actually a contingent policy choice. The base metrics reveal this as a false summit: the extractiveness (0.62), suppression (0.68), and structural enforcement requirements indicate institutional design choices (algorithm design, moderation policies, network effects protection, regulatory capture), not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interoperability_technical_feasibility",
+      "question": "Can interoperability standards (ActivityPub-style federated protocols) achieve parity with proprietary platforms for real-time coordination, content discovery, and network effects?",
+      "resolution_mechanism": "Technical performance benchmarks: latency, scalability, feature parity. Adoption metrics for federated platforms. Cross-platform compatibility testing.",
+      "impact": "If technically viable: scaffold sunset mechanism is structural (threshold dissolves as alternatives mature). If technically infeasible: participation threshold hardens into mountain-like immutability despite organizational origins.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federated interoperability can achieve platform feature parity"
+    },
+    {
+      "id": "regulatory_enforcement_capacity",
+      "question": "Can national/supranational regulators enforce interoperability, data portability, or algorithmic transparency mandates against platform resistance?",
+      "resolution_mechanism": "Case analysis: EU DMA enforcement, FTC antitrust actions, state-level legislation. Tracking platform compliance or non-compliance, penalties, and behavioral response.",
+      "impact": "If enforceable: regulatory scaffold provides exit mechanism (victims can force platform API access, migrate data). If unenforceable: platforms maintain structural veto; threshold remains snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulators can enforce interoperability and data portability"
+    },
+    {
+      "id": "network_effects_substitutability",
+      "question": "Are network effects in social coordination substitutable \u2014 can a secondary platform achieve critical mass if primary platforms become unacceptable?",
+      "resolution_mechanism": "Historical case studies (MySpace\u2192Facebook transition, Twitter\u2192Bluesky dynamics). Analysis of adoption barriers for alternative platforms. User switching cost measurements.",
+      "impact": "If substitutable: threshold is contingent institutional arrangement (snare/tangled_rope). If irreplaceable: network effects are quasi-structural (threshold approaches mountain-like hardness).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether social network effects permit meaningful competition and switching"
+    },
+    {
+      "id": "privacy_preserving_coordination_alternatives",
+      "question": "Can coordination functions (job matching, community organizing, emergency alerts) be provided via privacy-preserving alternatives without network-effect penalties?",
+      "resolution_mechanism": "Technical research on differential privacy, encrypted coordination protocols, and decentralized matching algorithms. Pilot deployment and user preference studies.",
+      "impact": "If viable: privacy-conscious exit becomes available (snare extraction reduces for victim group). If impossible: extraction of privacy attention is immutable (victims face permanent sacrifice for participation).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether privacy-preserving alternatives can replace proprietary platform functions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 2025 digital participation threshold represents a structural transition point where social media platforms shifted from optional communication tools to de facto mandatory infrastructure for economic and social participation. This constraint operates across employment, education, government services, community organizing, and information distribution. Non-adopters face systematic exclusion; privacy-conscious users face binary choice between surveillance and marginalization; casual users experience genuine coordination benefits entangled with data extraction; platforms capture network-effect monopolies; and public institutions have built dependency on proprietary systems. The constraint exhibits snare characteristics (high extraction, high suppression, trapped exit) from the perspective of non-adopters and privacy-conscious populations, tangled-rope characteristics (genuine coordination plus extraction) from casual users, rope characteristics (pure coordination benefit) from platforms themselves, and potential scaffold characteristics (with organized advocacy for alternatives with sunset logic). The theater ratio has increased modestly as platforms develop sophisticated algorithmic governance that performs legitimacy while extracting attention and data.",
+    "key_agents": [
+      "Non-Adopters: Primary victim (powerless/trapped) \u2014 face systematic exclusion from economic opportunity and social information; no meaningful exit option",
+      "Privacy-Conscious Users: Primary victim (powerless/trapped) \u2014 forced choice between data extraction and participation; limited alternative platforms with comparable reach",
+      "Casual Participants: Secondary victim-beneficiary (moderate/constrained) \u2014 experience genuine coordination benefits (family connection, community organizing) entangled with extraction; can reduce participation at social cost",
+      "Platform Corporations: Primary beneficiary (institutional/arbitrage) \u2014 capture attention, data assets, and network effects; see constraint as pure coordination problem; maximal exit options",
+      "Information Commons: Structural victim (moderate/trapped) \u2014 dependent on proprietary platforms for discourse and information distribution; extraction is high and asymmetric",
+      "Government and Institutional Services: Institutional actor (organized/constrained) \u2014 built dependency on social media for public service delivery; created piton through institutional inertia rather than strategic choice",
+      "Digital Rights Advocates: Organized actors (organized/constrained) \u2014 developing alternative platforms, regulatory frameworks, and interoperability standards as scaffold mechanisms with sunset logic",
+      "Analytical Observer: Civilizational observer (analytical/analytical) \u2014 risks false summit error by naturalizing network-effect concentration as immutable law rather than contingent policy outcome"
+    ],
+    "logic_rationale": "Extractiveness (0.62): Moderate-high, increasing over the interval. The constraint begins with voluntary participation (\u03b5 \u2248 0.35) but has hardened as institutions migrate core functions to platforms. By 2025, non-adoption carries material economic and social penalties \u2014 exclusion from job postings, community information, emergency alerts, government services. The extraction is not total (platforms do provide genuine coordination) but is substantial and growing. The trajectory reflects institutional lock-in: as more actors depend on platform presence, the cost of non-participation rises exponentially. Suppression (0.68): High. Alternatives exist but are structurally inferior: federated platforms lack network effects, traditional coordination mechanisms (email, web) lack reach and discoverability, opting out means accepting marginalization. The suppression derives from network effects (concentrated in few dominant platforms) and institutional migration (services moved to platforms). Theater ratio (0.45): Moderate. The constraint operates with relatively low performative overhead \u2014 extraction is explicit and acknowledged by participants (users know they are providing attention and data in exchange for access). The theater rises slightly as platforms develop algorithmic governance that frames surveillance as 'personalization' and data extraction as 'service improvement,' but this is limited theater relative to other constraints (e.g., judicial process, academic peer review).",
+    "perspectival_gap": "The gap between snare and rope readings is maximal: non-adopters experience the constraint as extractive coercion with no exit; platforms experience it as voluntary coordination that enables connection at scale. The tangled rope reading (casual participants) occupies the middle: genuine coordination value mixed with extraction. The piton reading (government institutions) reveals institutional degradation: official oversight without real enforcement. The scaffold reading (digital rights advocates) provides the only exit mechanism: interoperability and alternatives with clear sunset. The false summit risk appears in the civilizational analysis: naturalizing network effects as immutable law rather than recognizing them as contingent on platform dominance strategies and regulatory choices. The perspectival richness of this constraint makes it diagnostically valuable for testing whether index-based classification can capture the full complexity of institutional extraction that looks like coordination.",
+    "directionality_logic": "Directionality is determined by each agent's power level, exit options, and structural relationship to the extraction flow. Non-adopters and privacy-conscious users are trapped (d \u2192 0.95, f(d) \u2248 1.42): maximum experienced extraction. Casual participants are constrained but with some mobile options (d \u2192 0.55, f(d) \u2248 0.75): moderate-high extraction. Platform corporations are institutional beneficiaries with arbitrage options (d \u2192 0.05, f(d) \u2248 -0.12): extraction flows toward them, appearing as low or negative cost (they gain). Information commons has no agency (d \u2192 1.0, f(d) \u2248 1.42): maximum extraction. Government institutions are constrained (d \u2192 0.65, f(d) \u2248 1.00): moderate extraction from their institutional perspective. Digital rights advocates are organized with constrained exit (d \u2192 0.40, f(d) \u2248 0.40): low-moderate extraction. The analytical observer operates at the universal scope boundary (d \u2192 0.72, f(d) \u2248 1.15): observational extraction (effort to understand and classify the constraint). The effective extractiveness (\u03c7) for each perspective scales this base extractiveness (\u03b5 = 0.62) by f(d) and scope modifier \u03c3(S). Non-adopter chi: 0.62 \u00d7 1.42 \u00d7 1.2 (global scope) \u2248 1.06 (capped at 1.0). Platform chi: 0.62 \u00d7 (-0.12) \u00d7 1.2 \u2248 -0.09 (negative \u2014 extraction flows toward them).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves the mandatrophy by showing that snare, tangled rope, and rope classifications coexist without contradiction \u2014 they are perspectival readings from different structural positions. The question 'is social media a snare or a rope?' has no binary answer; the constraint is a snare to non-adopters, tangled rope to casual participants, and rope to platforms. The false summit risk (civilizational analyst naturalizing network effects as immutable) is correctly identified by the engine: the structural data shows extractiveness, suppression, and active enforcement dynamics, not natural law properties (no accessibility collapse, resistance metrics don't support mountain). The mandatrophy is resolved by accepting that the constraint is genuinely a Snare-Tangled Rope-Rope presheaf over the observation site, with institutional solutions (regulation, interoperability, alternatives) available via the scaffold mechanism. The extraction is not immutable; it is architecturally contingent."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_content_filtering",
+      "data_monetization_asymmetry",
+      "network_effect_concentration",
+      "digital_divide_exclusion"
+    ],
+    "dual_formulation_note": "The participation threshold constraint family decomposes into four related but structurally distinct constraints: (1) participation_threshold (this story) \u2014 the dependency on platforms for access to coordination and information; (2) algorithmic_content_filtering \u2014 the extraction via attention and behavioral modification; (3) data_monetization_asymmetry \u2014 the extraction via data and profile commodification; (4) network_effect_concentration \u2014 the structural mechanism that maintains platform monopoly. The participation threshold is upstream of all three: it establishes why platforms have coercive power in the first place. Each story has distinct \u03b5, suppression, and theater ratios reflecting different aspects of the same underlying institutional arrangement."
+  },
+  "directionality_overrides": []
+}

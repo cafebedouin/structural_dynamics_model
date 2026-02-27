@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "infrastructure_interoperability_decay",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "silos"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Protocol Silo Trap",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_platform_providers"
+    ],
+    "victims": [
+      "end_users",
+      "interoperable_ecosystem",
+      "emerging_competitors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Lock-In User",
+      "comment": "PERSPECTIVE 1: LOCK-IN USER (SNARE) \u2014 Individual users cannot migrate between incompatible protocol implementations without abandoning networks, contacts, data, and investments. Switching costs are extreme; exit is blocked. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.88. The constraint extracts switching-cost rents from trapped users."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Emerging Competitor",
+      "comment": "PERSPECTIVE 2: EMERGING COMPETITOR (SNARE) \u2014 New entrants cannot interoperate with dominant platforms, forcing them to either replicate the entire protocol (massive fixed cost) or build to a proprietary subset. Constrained by network effects; cannot credibly exit without duplicating infrastructure. d\u22480.85, f(d)\u22481.15, \u03c3=0.9 \u2192 \u03c7\u22480.54."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standards Maintenance Body",
+      "comment": "PERSPECTIVE 3: STANDARDS MAINTENANCE BODY (TANGLED ROPE) \u2014 Standards organizations (IETF, IEEE, etc.) have a coordination function: maintaining the published protocol spec. But they are also constrained by provider dominance and often lack enforcement power. They see the constraint as a coordination problem with asymmetric capture. d\u22480.60, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dominant Platform Provider",
+      "comment": "PERSPECTIVE 4: DOMINANT PLATFORM PROVIDER (ROPE) \u2014 Benefits from claiming adherence to the open standard while implementing proprietary extensions. Experiences lock-in as legitimate network coordination: protocol helps their ecosystem grow. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Protocol Enforcer",
+      "comment": "PERSPECTIVE 5: LEGACY PROTOCOL ENFORCER (PITON) \u2014 Regulatory or industry bodies (FCC, ETSI, government spectrum allocation) maintain formal protocol compliance but lack capacity to detect or enforce interoperability. Performative enforcement dominates actual verification. theater_ratio=0.58 reflects moderate performative content; legacy protocols persist through regulatory inertia. d\u22480.12, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Network effects create a genuine coordination function (the standard itself enables scale), but the same mechanism drives proprietary fragmentation (vendors profit from lock-in). The protocol serves both coordination and extraction simultaneously. d\u22480.70, f(d)\u22481.10, \u03c3=1.2 \u2192 \u03c7\u22480.58. The constraint exhibits both properties."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentional_vs_emergent_fragmentation",
+      "question": "Does protocol silo formation result from deliberate vendor strategy to lock in users, or from emergent technical decisions driven by legitimate feature requirements that happen to diverge?",
+      "resolution_mechanism": "Historical analysis of vendor technical decisions: cross-reference internal product roadmaps, patent filings, and engineering decisions against the timeline of ecosystem divergence. Detection of deliberate incompatible extensions (documented but withheld from standards bodies) vs genuine technical divergence.",
+      "impact": "If deliberate: Snare classification is robust; extraction is intentional. If emergent: constraint might be misclassified \u2014 what appears as lock-in might be natural protocol evolution or coordination failure rather than pure extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether silo formation is deliberate strategy or emergent technical divergence"
+    },
+    {
+      "id": "interoperability_enforcement_feasibility",
+      "question": "Given the technical complexity of modern protocols (cellular, networking stacks), can mandated interoperability testing actually detect and prevent proprietary fragmentation, or does the enforcement overhead itself become theatrical?",
+      "resolution_mechanism": "Analysis of existing interoperability mandates (e.g., USB-C, 3GPP standards): audit test coverage completeness, detection rates of incompatible extensions, and costs of achieving certification vs actual user-facing compatibility.",
+      "impact": "If feasible: scaffold perspective (sunset clause through enforcement) becomes plausible. If enforcement becomes theatrical: piton perspective dominates; degraded ritual replaces functional standards.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interoperability enforcement can actually prevent silo formation"
+    },
+    {
+      "id": "network_effect_inevitability",
+      "question": "Are network effects themselves an irreducible constraint on interoperability, or is the lock-in effect contingent on regulatory and business model choices?",
+      "resolution_mechanism": "Comparative analysis of open-protocol ecosystems (email, XMPP, ActivityPub adoption) vs locked ecosystems (proprietary messaging, cellular); measurement of actual vs theoretical switching costs in scenarios with forced interoperability (e.g., GDPR data portability).",
+      "impact": "If irreducible: Mountain perspective is justified; silo formation is natural law. If contingent: constraint is a Tangled Rope or Snare sustained by choices, not inherent to networks.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether network effects make lock-in inevitable or contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Protocol Silo Trap describes the structural mechanism by which universal communication or transport standards (initially designed as open coordination mechanisms) fragment into incompatible proprietary sub-layers as dominant providers implement extensions, encrypt proprietary layers, or withhold implementation details. The constraint exhibits a classic Tangled Rope structure: the standard itself provides genuine coordination value (enabling ecosystem scale, interoperability, shared infrastructure), but the same mechanism that enables this scale also enables lock-in. A user or competitor adopting the standard gains access to a large network but becomes trapped by the dominance of a specific vendor's implementation. The standard is simultaneously a Rope (coordinating the ecosystem) and a Snare (trapping users and competitors). As the interval progresses, base extractiveness increases from 0.25 to 0.52 (vendors progressively implement incompatible extensions and create vendor-specific 'profiles' of the standard), while theater_ratio rises from 0.40 to 0.58 (regulatory and standards-body compliance becomes increasingly performative as real interoperability erodes). The suppression mechanism is high (0.68) because switching costs include data migration, network effects, and the need to replicate entire protocol stacks; alternatives exist in principle but are prohibitively expensive.",
+    "key_agents": [
+      "End Users (powerless/trapped) \u2014 locked into dominant platform implementations; cannot interoperate across silos without abandoning network and data",
+      "Emerging Competitors (moderate/constrained) \u2014 face network effect barriers and must either replicate infrastructure or build proprietary subsets; cannot credibly exit",
+      "Dominant Platform Providers (institutional/arbitrage) \u2014 primary beneficiaries; profit from lock-in while claiming standards compliance",
+      "Standards Maintenance Bodies (organized/constrained) \u2014 attempt to coordinate; captured by dominant vendors; lack enforcement power",
+      "Legacy Protocol Enforcers (institutional/arbitrage) \u2014 regulatory and government bodies; maintain formal compliance checks that miss actual incompatibility",
+      "Analytical Observer (analytical/analytical) \u2014 sees both the coordination function (network effects are real) and the extraction mechanism (lock-in is profitable)"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The dominant provider captures switching-cost rents and network lock-in premiums. The extractiveness increased over the interval as vendors implemented incompatible extensions while maintaining nominal standards compliance. This is not extreme extraction (like a pure monopoly could impose), because the open standard remains accessible and competing implementations remain theoretically possible \u2014 the extraction is enabled by the standard itself, not enforced by pure coercion. Suppression (0.68): High. Users and competitors face substantial barriers: migrating users requires coordinating network effects across millions of nodes; building alternative implementations requires replicating decades of evolutionary protocol complexity; the standard body lacks enforcement power to detect incompatible extensions; regulatory bodies lack technical capacity to enforce true interoperability. Theater ratio (0.58): Moderate. Standards compliance certifications exist but often miss actual incompatibility; vendors claim commitment to interoperability while implementing proprietary extensions; regulatory enforcement is performative (checking that vendors claim compliance, not verifying users can actually interoperate). The theater has increased over time as the gap between claimed adherence and actual incompatibility widened. Claimed type (Tangled Rope): The constraint exhibits both coordination (the standard enables ecosystem scale) and extraction (the same mechanism enables lock-in); active enforcement (vendors implement and maintain incompatible extensions); beneficiaries (dominant platform providers) and victims (end users, competitors). All three tangled_rope gates are satisfied.",
+    "perspectival_gap": "The perspectival gap is profound. The dominant platform provider experiences the standard as a coordination mechanism (Rope) \u2014 it enabled their growth, their network effects, and their ecosystem. They are implementing a 'profile' of the standard, which is reasonable infrastructure design. The end user experiences the same standard as a Snare \u2014 they adopted it expecting interoperability but cannot migrate without losing their data and network. The standards body experiences it as a Tangled Rope \u2014 they created a coordination tool, but it's being used as an extraction mechanism, and they lack power to stop it. The emerging competitor experiences it as a Snare \u2014 they cannot interoperate with the dominant implementation, forcing them to choose between building proprietary alternatives (forfeiting standards benefits) or attempting to replicate the dominance. The analytical observer sees a Tangled Rope at the system level: the standard simultaneously coordinates and extracts. The dominant platform's Rope experience is compatible with the user's Snare experience if and only if you accept that the standard-enabled network effects constitute a legitimate coordination benefit that the user willingly accepted. But the user's lock-in suggests the choice was not informed or reversible. This gap reveals the asymmetric information structure: vendors understand the system as designed; users experience only the lock-in.",
+    "directionality_logic": "End users: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.88. Maximum extraction. Emerging competitors: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15, \u03c3=0.9 \u2192 \u03c7\u22480.54. High extraction; they can theoretically exit (build proprietary systems) but at prohibitive cost. Standards maintenance body: Mixed (coordination function + victim to capture) + constrained \u2192 d\u22480.60, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.47. Moderate extraction; they have agency through standards evolution but are constrained by vendor dominance. Dominant platform provider: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary; the standard creates arbitrage opportunities they exploit. Legacy protocol enforcer: Weak beneficiary (maintains protocol legitimacy) + arbitrage \u2192 d\u22480.12, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.01. Minimal extraction; they claim enforcement authority but rarely exercise it. Analytical observer: Observing both coordination and extraction \u2192 d\u22480.70, f(d)\u22481.10, \u03c3=1.2 \u2192 \u03c7\u22480.58. The system itself is extracted from; the observer sees the constraint as real and structural.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint exhibits genuine coordination function (the standard creates ecosystem scale) AND asymmetric extraction (the same mechanism enables lock-in). This is a textbook Tangled Rope, not a Rope misclassified as extraction, nor an extraction mechanism misclassified as coordination. The trap is that both functions are REQUIRED for the mechanism to work: if you removed the extraction incentives (through mandated interoperability), vendors would not implement the standard; if you removed the coordination value (by allowing unlimited proprietary variation), users would not adopt it. The mandatrophy resolves by accepting that this is a hybrid constraint: it solves a real coordination problem (enabling communication across diverse implementations) while simultaneously creating extraction opportunities (lock-in rents). Policy interventions that attempt to preserve pure coordination (open-source enforcement, mandated APIs) must account for the loss of vendor incentive to maintain the standard. Policy interventions that maximize extraction (vendor lock-in, proprietary profiling) destroy the coordination value and create the Snare perspective experienced by users and competitors."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "vendor_lock_in_mechanisms",
+      "network_effects_irreversibility",
+      "standards_governance_capture"
+    ],
+    "dual_formulation_note": "The protocol silo trap can be decomposed into three related constraints: (1) the technical mechanism of proprietary extensions (vendor_lock_in_mechanisms, higher \u03b5 for intentional incompatibility), (2) the network effect that makes adoption irreversible (network_effects_irreversibility, \u03b5 driven by user coordination needs), and (3) the governance capture of standards bodies by dominant vendors (standards_governance_capture, \u03b5 reflecting the loss of enforcement power). This story treats the integrated system; the component stories would have different \u03b5 values and different perspectives."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    }
+  ]
+}

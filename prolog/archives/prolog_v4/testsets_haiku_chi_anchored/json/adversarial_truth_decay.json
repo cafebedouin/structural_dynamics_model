@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "adversarial_truth_decay",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Epistemic Siege",
+    "topic_domain": "social/technological/political",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "disinformation_creators",
+      "platform_shareholders"
+    ],
+    "victims": [
+      "general_public",
+      "democratic_institutions",
+      "professional_journalists"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Information Consumer",
+      "comment": "PERSPECTIVE 1: THE PUBLIC (SNARE) — Trapped in an information ecosystem where the cost of verification is offloaded onto them. The sheer volume of high-fidelity falsehoods acts as a coercive force, eroding trust and the ability to make informed decisions. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.28 (capped at 1.0). This is a maximal extraction scenario."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Disinformation Creator",
+      "comment": "PERSPECTIVE 2: DISINFORMATION CREATOR (ROPE) — For malicious actors, generative AI is a pure coordination tool. It dramatically lowers the cost of influence operations, enabling them to achieve political or financial goals with unprecedented efficiency. They experience no extraction. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.01. Negative effective extraction signifies a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Fact-Checker / Journalist",
+      "comment": "PERSPECTIVE 3: THE FACT-CHECKER (TANGLED ROPE) — Experiences the dual nature of the technology. AI tools can aid in research (coordination), but the firehose of AI-generated falsehoods makes their primary job nearly impossible (extraction). They are constrained to operate within this hostile environment. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.86. This high chi value reflects the severe extractive pressure on their work."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI Tool Creator",
+      "comment": "PERSPECTIVE 4: THE AI DEVELOPER (SCAFFOLD) — Views the current epistemic crisis as a temporary, transitional phase. They argue that better detection tools and new social norms will eventually emerge, creating a 'sunset' for the current problem. This perspective frames the technology as a scaffold for a new, more advanced information infrastructure. The `has_sunset_clause` is based on this claimed technological and social evolution."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Social Media Platform",
+      "comment": "PERSPECTIVE 5: THE PLATFORM (PITON) — The platform's content moderation and AI detection systems are largely performative. Given the cost asymmetry, they cannot possibly vet all content. Their efforts persist due to regulatory pressure and PR concerns, not because they solve the underlying problem. The high theater_ratio (0.75) triggers the Piton classification, reflecting a system whose primary function (ensuring information quality) has atrophied."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Technological Determinist",
+      "comment": "PERSPECTIVE 6: THE DETERMINIST (MOUNTAIN) — Argues that major technological shifts (like the printing press) inevitably cause periods of epistemic chaos. This view naturalizes the crisis as an unchangeable law of technological progress. The engine will identify this as a false summit, as the high ε, high suppression, and active enforcement are hallmarks of a contingent, artificial system, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "detection_scaling_parity",
+      "question": "Can AI-driven verification and detection tools ever achieve cost and scale parity with AI-driven generation tools?",
+      "resolution_mechanism": "Economic and performance analysis of red-teaming vs. blue-teaming AI models; tracking the marginal cost of detection vs. generation over time.",
+      "impact": "If parity is possible, the constraint could evolve into a Rope (an arms race with symmetric costs). If not, it remains a Snare for the public.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether detection can ever scale as cheaply as generation"
+    },
+    {
+      "id": "cognitive_adaptation_rate",
+      "question": "Will human populations develop cognitive 'antibodies' and new media literacy heuristics faster than generative models can adapt to circumvent them?",
+      "resolution_mechanism": "Longitudinal studies of media consumption habits, belief formation, and susceptibility to misinformation in high-exposure populations.",
+      "impact": "Rapid adaptation would lower the effective extractiveness (ε). Slow or no adaptation means ε remains high.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The rate of human cognitive adaptation to AI misinformation"
+    },
+    {
+      "id": "regulatory_effectiveness",
+      "question": "What level of platform regulation (e.g., watermarking, liability shifts) can effectively mitigate harm without causing unacceptable censorship or chilling effects?",
+      "resolution_mechanism": "Comparative policy analysis of different regulatory regimes implemented globally.",
+      "impact": "Effective regulation could increase suppression for malicious actors and lower it for the public, fundamentally altering the constraint's structure. Ineffective regulation could increase theater.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The impact and trade-offs of different regulatory interventions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 2020,
+    "end": 2030
+  },
+  "commentary": {
+    "narrative_context": "The 'Epistemic Siege' describes a structural reality where the cost to generate high-fidelity, synthetic misinformation has fallen below the cost to verify information. This fundamental economic asymmetry creates a powerful new vector for social manipulation, eroding the shared factual basis required for functional democracies and social trust. The constraint is not the AI technology itself, but the cost imbalance it creates, which can be weaponized at scale.",
+    "key_agents": [
+      "Disinformation Creators: Primary beneficiaries (organized/arbitrage) - Exploit the low cost to generate influence.",
+      "General Public: Primary victims (powerless/trapped) - Bear the cognitive and social costs of a polluted information environment.",
+      "Social Media Platforms: Institutional actors (institutional/arbitrage) - Maintain a performative moderation system while benefiting from engagement.",
+      "Fact-Checkers & Journalists: Secondary victims (moderate/constrained) - Face unsustainable costs in their mission to verify truth.",
+      "AI Tool Creators: Institutional beneficiaries (institutional/arbitrage) - Frame the crisis as a temporary, solvable problem (a scaffold).",
+      "Democratic Institutions: Abstract victim (powerless/trapped) - The epistemic commons on which they depend is degraded."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.75) is very high, representing the massive offloading of verification costs onto society and individuals. Suppression (0.80) is also very high; the sheer volume of falsehoods effectively suppresses truth through noise, a 'firehose of falsehood' strategy that makes finding reliable information exceptionally difficult. Theater Ratio (0.75) is high because platform-level interventions (content moderation, AI detectors) are largely performative; they address symptoms at the margins without altering the core cost asymmetry, thus creating an illusion of control.",
+    "perspectival_gap": "This constraint is a diagnostic exemplar, producing all six classifications from a single set of base properties. For the powerless public, it's a Snare. For the malicious creator, it's a Rope. For the overwhelmed fact-checker, it's a Tangled Rope. For the optimistic AI developer, it's a Scaffold. For the platform maintaining appearances, it's a Piton. For the determinist who naturalizes the chaos, it's a Mountain. The gap reveals that the 'nature' of the constraint is entirely dependent on one's structural relationship to the underlying cost asymmetry.",
+    "directionality_logic": "Beneficiaries (disinformation creators) have arbitrage exit and low structural costs, leading to a negative chi (Rope). Primary victims (the public) are trapped with no exit, leading to a maximal chi (Snare). Constrained actors (journalists) face high costs but have some agency, resulting in a high-but-not-maximal chi (Tangled Rope). The classification for institutional actors like platforms and AI developers is determined by other gates: the high theater_ratio for platforms makes it a Piton, while the claimed sunset clause for developers makes it a Scaffold.",
+    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that a single, severe constraint (ε=0.75) is not monolithically a 'Snare'. Its classification is a function of the observer's index. The analytical error is to pick one perspective (usually the victim's Snare or the beneficiary's Rope) and declare it the 'true' type. The Deferential Realism model shows that all six perspectives are structurally valid readings of the same underlying reality. The complete description is the full set of indexed classifications, not any single one."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "electoral_integrity",
+      "public_health_compliance",
+      "financial_market_stability"
+    ]
+  }
+}

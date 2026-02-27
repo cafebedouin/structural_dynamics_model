@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "satellite_d2m_standard",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "d2m"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Direct-to-Mobile (D2M) Satellite Communication Standard",
+    "topic_domain": "technological/telecommunications/space_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "satellite_operators",
+      "telecommunications_integrators",
+      "device_manufacturers",
+      "rural_underserved_populations"
+    ],
+    "victims": [
+      "terrestrial_telecom_incumbents",
+      "frequency_spectrum_commons",
+      "electromagnetic_interference_susceptibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Unconnected Populations in Remote Regions",
+      "comment": "PERSPECTIVE 1: UNCONNECTED RURAL/REMOTE POPULATIONS (SNARE) \u2014 Nominally gain connectivity access, but are trapped within proprietary D2M ecosystem requirements (device compatibility, service terms, data throttling). No alternative infrastructure in their regions. Cannot exit or negotiate terms. Bear extraction in form of service pricing, data limitations, and dependency on operator mercy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Secondary Telecommunications Operators",
+      "comment": "PERSPECTIVE 2: SECONDARY TELECOM OPERATORS (TANGLED ROPE) \u2014 Gain coordination benefit from access to D2M standard integration (expands service area without building infrastructure), but constrained by dependence on satellite operator terms, spectrum allocation rules, and device ecosystem gatekeeping. Some extraction: forced to pay access fees, subordinate to primary satellite operators, cannot negotiate standard terms. Both coordination and asymmetric extraction present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Satellite Operators and Device Manufacturers",
+      "comment": "PERSPECTIVE 3: SATELLITE OPERATORS & DEVICE MANUFACTURERS (ROPE) \u2014 Primary beneficiaries. D2M standard enables market expansion, new revenue streams, and strategic positioning in next-generation mobile. Arbitrage options available (can exit to alternative standards, alternative markets, alternative devices). Perceive constraint as pure coordination: unified standard reduces fragmentation, enables economies of scale, creates new business models. Net beneficiary \u2014 extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Spectrum Regulatory Bodies and Standards Consortia",
+      "comment": "PERSPECTIVE 4: SPECTRUM REGULATORS & STANDARDS BODIES (TANGLED ROPE) \u2014 Must enforce spectrum allocation, interference management, and interoperability standards (coordination function). Simultaneously extracted from by satellite operators (spectrum allocation pressure, industry lobbying), by consumer advocates (universal access mandates), and by incumbent telecom (regulatory capture efforts). Active enforcement required. Exit constrained by international coordination requirements and geopolitical spectrum treaties."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Terrestrial Telecom Incumbents",
+      "comment": "PERSPECTIVE 5: TERRESTRIAL TELECOM INCUMBENTS (PITON) \u2014 D2M represents structural threat to legacy business model (rural markets no longer require terrestrial infrastructure). Incumbents perform resistance through regulatory delay, standard-setting obstruction, and technical critique, but lack genuine exit mechanism beyond accepting market share loss. Theater high (regulatory arguments, technical complaints) masking functional decline. Inertial constraint: maintained through institutional lobbying and captured regulators, not because the constraint itself is valuable."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Spectrum and Universal Access Coalitions",
+      "comment": "PERSPECTIVE 6: OPEN SPECTRUM COALITIONS (SCAFFOLD) \u2014 See D2M standard as temporary coordination mechanism with built-in sunset: standardization phase enables market bootstrap, but sunset clause should include transition to open-access spectrum sharing and device interoperability mandates. Organized agents (NGOs, some regulators, public telecom companies) pushing for sunset timeline and access guarantees. Suppression moderates because coalition has agency and regulatory attention."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physical Constraints View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL CONSTRAINTS (MOUNTAIN) \u2014 From deep-time analytical view, D2M standardization reflects immutable constraint: bandwidth-limited satellite payload capacity combined with growth in mobile demand creates an irreducible allocation problem. Spectrum scarcity is not contingent but physical law. However, this risks false summit \u2014 the 'natural law' framing naturalizes extractive allocation mechanisms (spectrum auctions, commercial prioritization) that are policy choices, not physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "spectrum_sharing_feasibility",
+      "question": "Can satellite D2M spectrum be shared with terrestrial networks through advanced interference management (cognitive radio, beamforming, geofencing) without degrading service quality for either?",
+      "resolution_mechanism": "Technical demonstrations of coexistence protocols; empirical data on interference thresholds and real-world sharing efficacy; comparison with terrestrial-satellite coexistence in other frequency bands",
+      "impact": "If feasible: D2M becomes Scaffold (sunset to open sharing). If infeasible: D2M remains Snare/Tangled Rope (scarcity enforces extraction). Shifts entire classification trajectory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether satellite-terrestrial spectrum sharing is technically viable"
+    },
+    {
+      "id": "device_interoperability_timeline",
+      "question": "Can D2M devices achieve hardware-agnostic interoperability (work on multiple satellite operators' systems) within 5-10 years, or are lock-in effects structural?",
+      "resolution_mechanism": "Analysis of chipset/modem design requirements for multi-operator compatibility; comparison with historical telecom standards (LTE, 5G) adoption timelines; regulatory mandate feasibility assessment",
+      "impact": "If achievable: exit options for users improve (mobile \u2192 arbitrage), classification shifts toward Rope. If lock-in structural: exit remains trapped, extraction persists (Snare/Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline for achieving multi-operator device interoperability"
+    },
+    {
+      "id": "rural_subsidy_sustainability",
+      "question": "Can satellite D2M service to remote regions be economically sustained without continuous cross-subsidy from urban markets, or is extraction inevitable?",
+      "resolution_mechanism": "Cost modeling of D2M service provision to ultra-low-density regions; comparison with terrestrial economics; analysis of regulatory universal service fund mechanisms",
+      "impact": "If sustainable: coordination constraint (Rope) dominates. If subsidy-dependent: extraction mechanism (Snare/Tangled Rope) is structural, not contingent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic sustainability of rural D2M service without subsidy"
+    },
+    {
+      "id": "geopolitical_spectrum_fragmentation",
+      "question": "Will geopolitical tensions (US-China-EU-India spectrum allocation divergence) fragment D2M into incompatible regional standards, or will economic gravity enforce global unification?",
+      "resolution_mechanism": "Monitoring of regional spectrum allocation decisions (ITU filings, national regulatory changes); analysis of equipment manufacturer commitment to unified vs regional variants; trade agreement provisions on spectrum harmonization",
+      "impact": "If unified: global standard constrains all parties equally (Mountain perspective strength). If fragmented: D2M becomes context-dependent (different \u03b5 per region), requires separate constraint stories.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Risk of geopolitical fragmentation of D2M standard"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The D2M satellite communication standard (exemplified by ISRO's Bluebird satellite for Omnispace) represents an emerging infrastructure constraint that simultaneously enables universal connectivity and creates new extraction mechanisms. Nominally, D2M solves a coordination problem: providing broadband to regions where terrestrial infrastructure is economically infeasible. However, the standard-setting process, spectrum allocation, device ecosystem gatekeeping, and service pricing structures embed asymmetric extraction alongside genuine coordination benefits. The constraint operates across multiple institutional layers \u2014 satellite operators (primary beneficiaries), regulatory bodies (enforcing allocation), terrestrial incumbents (threatened), device manufacturers (ecosystem gatekeepers), and rural populations (nominally served but constrained). The theater ratio has increased from 0.35 to 0.52 as regulatory framing emphasizes 'universal access' while commercial deployment prioritizes profitable segments, decoupling performative access mandates from actual service provision. The constraint exhibits features of all six types depending on perspective: Mountain (physical spectrum scarcity), Rope (coordination mechanism), Tangled Rope (hybrid benefits/extraction), Snare (rural users trapped), Scaffold (international sunset potential), and Piton (incumbent resistance theater).",
+    "key_agents": [
+      "Satellite Operators (ISRO/Omnispace, Amazon Kuiper, others): Primary beneficiary (institutional/arbitrage) \u2014 capture new market, spectrum rights, positioning in mobile future",
+      "Device Manufacturers (Qualcomm, Apple, others): Primary beneficiary (institutional/arbitrage) \u2014 new product category, proprietary ecosystems, ecosystem control",
+      "Rural/Remote Populations: Primary victim (powerless/trapped) \u2014 gain connectivity but locked into proprietary ecosystem, service terms, pricing; no alternative infrastructure in region",
+      "Terrestrial Telecom Incumbents (Verizon, Vodafone, etc.): Secondary victim (institutional/constrained) \u2014 market threat, forced to compete with subsidy-advantaged satellite providers, regulatory capture resistance",
+      "Spectrum Regulatory Bodies (FCC, TRAI, ETSI): Intermediary (organized/constrained) \u2014 enforce allocation, manage interference, balance incumbent protection vs innovation, captured by multiple interests",
+      "Open Spectrum Coalitions (Access Now, digital rights NGOs): Organized agent (organized/constrained) \u2014 advocating for interoperability, universal access guarantees, sunset conditions",
+      "Frequency Spectrum Commons: Victim (powerless/trapped) \u2014 electromagnetic interference, irreversible occupation of spectrum band, no exit or self-advocacy"
+    ],
+    "logic_rationale": "Base extractiveness (0.38): Moderate. D2M provides real coordination value (solves rural connectivity problem) but embeds extraction mechanisms through: (1) spectrum allocation creates artificial scarcity enabling monopolistic pricing; (2) device ecosystem lock-in prevents interoperability; (3) service terms heavily favor operators over users. The value 0.38 reflects that coordination benefits are genuine but asymmetrically distributed \u2014 operators capture disproportionate value. Suppression (0.48): Moderate. Rural users have limited exit options (no terrestrial alternative in region) but retention is somewhat soft \u2014 they can reject D2M and remain unconnected (costly exit, not impossible). Terrestrial incumbents face higher suppression (forced to participate in standard ecosystem or lose market share). Spectrum regulators face regulatory constraints but international coordination pathways exist. Theater ratio (0.52): Moderate-high. Substantial performative element: regulatory framing emphasizes 'universal access' while commercial deployment prioritizes profitable urban fringes. Interoperability mandates announced but not enforced. Open access commitments made but not binding. Theater has increased over interval as gap between access rhetoric and commercial reality has widened.",
+    "directionality_logic": "Each agent's experienced extractiveness (\u03c7) is computed from base extractiveness (0.38), their directionality value (d), and scope modifier. Satellite operators with d \u2248 0.05 (beneficiary + arbitrage) experience negative \u03c7 \u2014 the constraint subsidizes them. Rural users with d \u2248 0.95 (victim + trapped) experience high \u03c7 \u2014 the constraint extracts maximum. Regulators with d \u2248 0.50 (symmetric, constrained) experience \u03c7 scaled by f(0.50) \u2248 0.65. The global scope (\u03c3 = 1.2) amplifies these differentials \u2014 satellite infrastructure is geopolitically strategic, making extraction more difficult to detect or challenge. The suppression value (0.48) is not scaled \u2014 it is a structural property of the constraint independent of observer position.",
+    "perspectival_gap": "The satellite operator sees D2M as pure coordination (Rope) \u2014 they are solving a legitimate problem and capturing legitimate value. The rural user sees it as extraction (Snare) \u2014 they gain connectivity at whatever price/terms the monopolist sets, with no alternative. The terrestrial incumbent sees it as a threat masked by regulatory theater (Piton) \u2014 they argue D2M service is inferior, coverage is spotty, etc., performing technical critique while actually experiencing market displacement. The regulator sees a hybrid (Tangled Rope) \u2014 they must balance incumbent protection, operator profit, and universal access commitments, enforcing rules that benefit some stakeholders at expense of others. The spectrum commons cannot see anything (Snare victim, powerless) \u2014 it experiences irreversible electromagnetic interference with no recourse. The open spectrum coalition sees a sunset opportunity (Scaffold) \u2014 they advocate for time-limited spectrum licenses and interoperability mandates as conditions for D2M approval, building an exit strategy for vendors into competitive markets. The analytical observer risks naturalizing the extraction (Mountain) \u2014 'spectrum scarcity is a law of physics' \u2014 which obscures policy choices in allocation mechanism.",
+    "mandatrophy_analysis": "The D2M constraint resolves the mandatrophy by showing that classification depends on which agent's experience you are measuring. The satellite operator's Rope is genuine \u2014 they ARE solving coordination. The rural user's Snare is equally genuine \u2014 they ARE experiencing extraction. The constraint is not 'really' one or the other; it is both simultaneously. The mandatrophy is resolved by recognizing that the same infrastructure can be beneficial coordination from one structural position and pure extraction from another. The analytical observer's false summit (Mountain) must be rejected: spectrum scarcity is a physical reality, but the allocation mechanism (auctions, monopoly grants, proprietary lock-in) is policy contingent. The constraint's real nature is Tangled Rope at the systemic level \u2014 genuine coordination benefits embedded within asymmetric extraction structure. The theater ratio (0.52) captures the institutional contradiction: public rhetoric of 'universal connectivity' (performative) masks private reality of profitable market segments (functional)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "spectrum_allocation_mechanism",
+      "terrestrial_mobile_incumbent_protection",
+      "device_ecosystem_interoperability"
+    ],
+    "dual_formulation_note": "D2M standard may decompose into separate constraint stories depending on observable: (1) as a technical coordination problem (\u03b5 \u2248 0.15, pure Rope) if measured by engineering interoperability success; (2) as a geopolitical allocation mechanism (\u03b5 \u2248 0.55, Tangled Rope/Snare) if measured by spectrum rights distribution and rural pricing. Current story uses integrated measure (\u03b5 = 0.38) capturing both. If empirical analysis reveals these \u03b5 values differ significantly, decompose into two linked stories per \u03b5-invariance principle."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

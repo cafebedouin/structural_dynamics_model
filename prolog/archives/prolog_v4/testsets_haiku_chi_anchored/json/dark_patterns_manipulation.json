@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "dark_patterns_manipulation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dark"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Dark Patterns (Interface Coercion)",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "platform_operators"
+    ],
+    "victims": [
+      "end_users",
+      "consumer_autonomy",
+      "attention_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Trapped between switching costs, network effects, and information asymmetry. Cannot exit platform ecosystems without abandoning social/commercial infrastructure. Dark patterns exploit cognitive limitations (default effects, sunk costs, loss aversion) that users cannot overcome through individual effort. d\u22480.93, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22481.03."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Privacy-Conscious Consumer Coalition",
+      "comment": "PERSPECTIVE 2: PRIVACY-CONSCIOUS CONSUMER COALITION (TANGLED ROPE) \u2014 Organized enough to demand alternatives but constrained by network effects and platform lock-in. Benefits from the surveillance infrastructure through free/low-cost services; bears extraction cost through data exfiltration and manipulative UX. d\u22480.72, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.70."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Experiences dark patterns as a pure coordination mechanism: steering user attention, engagement, and purchasing behavior toward profitable outcomes. The constraint solves the platform's coordination problem of how to monetize user attention. Suppression of user agency is the functional mechanism. d\u22480.02, f(d)\u2248-0.18, \u03c3=1.2 \u2192 \u03c7\u2248-0.11. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regulatory Coalition (EU/GDPR/DMA)",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION EU/GDPR/DMA (TANGLED ROPE) \u2014 Organized to constrain dark patterns through law (GDPR consent, Digital Markets Act transparency requirements). Benefits from reduced manipulation in regulated markets; constrained by enforcement costs and platform regulatory arbitrage (non-EU jurisdictions). d\u22480.58, f(d)\u22480.72, \u03c3=1.1 \u2192 \u03c7\u22480.49."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Attention Economy Theory",
+      "comment": "PERSPECTIVE 5: ATTENTION ECONOMY THEORY (PITON) \u2014 The 'attention economy' framing of digital platforms was once functional (explained business models); now largely theater. Platforms no longer explain their business as attention monetization but rebrand as social goods, safety platforms, or discovery engines. The attention economy theory persists through academic inertia and residual institutional usage but has been displaced by darker framings. theater_ratio=0.55 reflects moderate performativity: the attention economy description is not entirely false but increasingly incomplete \u2014 it avoids naming the predatory coercion mechanisms (dark patterns, addictive design, behavioral targeting)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Civilizational perspective: dark patterns exploit fundamental cognitive architecture of human decision-making. Loss aversion, default effects, sunk cost fallacy, and present bias are features of human neurobiology, not bugs of platform design. From this view, steering behavior toward platform benefit is inevitable once platforms exist. However, the structural data (\u03b5=0.62, suppression=0.68) contradicts this \u2014 the severity of extraction is driven by contingent platform design choices (dark patterns are engineered, not inherent), not by immutable cognitive limits. This is a false summit: naturalizing extractive design choices as inevitable psychological laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cognitive_bias_vs_design_choice",
+      "question": "To what extent is dark pattern effectiveness driven by immutable cognitive biases vs. contingent UX design choices?",
+      "resolution_mechanism": "A/B testing alternative transparent UI designs that preserve platform functionality but eliminate dark patterns; measurement of user behavior shift; comparison with platforms using ethical defaults",
+      "impact": "If immutable bias dominates: mountain classification is justified, dark patterns are inevitable. If design choice dominates: snare classification is justified, alternatives exist, extraction is contingent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Immutable cognitive bias vs. engineered design choice"
+    },
+    {
+      "id": "exit_feasibility_threshold",
+      "question": "What network effect size threshold converts dark patterns from 'costly to exit' to 'exit is structurally impossible'?",
+      "resolution_mechanism": "Historical analysis of platform migration patterns; measurement of switching costs as function of network size; comparison of exit rates before/after critical mass threshold",
+      "impact": "If threshold is below current platform sizes: users are genuinely trapped (powerless perspective justified, snare classification). If threshold is higher: exit is constrained but possible (moderate perspective justified, tangled rope classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Network effect threshold for structural exit impossibility"
+    },
+    {
+      "id": "regulatory_effectiveness_lag",
+      "question": "Can regulatory responses (GDPR, DMA, consent requirements) outpace dark pattern innovation, or is regulatory coercion necessarily lagged?",
+      "resolution_mechanism": "Timeline comparison between regulatory intervention and next-generation dark pattern deployment; analysis of regulatory arbitrage (non-EU platforms, gray-zone designs)",
+      "impact": "If regulation can match innovation pace: scaffold classification with real sunset is justified. If regulatory lag is structural: regulation is tangled rope or piton, not scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulation can outpace dark pattern innovation"
+    },
+    {
+      "id": "transparency_sufficiency",
+      "question": "Does algorithmic transparency (as required by DMA/GDPR) actually reduce dark pattern effectiveness, or does informed users still fall prey to manipulation?",
+      "resolution_mechanism": "Measurement of user behavior after transparency disclosure; comparison of dark pattern effectiveness pre- vs. post-transparency; studies of informed vs. uninformed users",
+      "impact": "If transparency sufficient: suppression metric should decrease with disclosure; regulatory intervention can reduce \u03c7. If insufficient: transparency is theater; suppression remains high despite disclosure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic transparency reduces dark pattern effectiveness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.49
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Dark patterns represent a structural mechanism through which digital platforms extract user value (attention, data, purchasing behavior, time) by exploiting cognitive biases and asymmetric information. Unlike crude extraction mechanisms (surveillance, data theft), dark patterns work through deliberate UX design that steers user behavior toward platform-beneficial outcomes while maintaining plausible deniability ('users chose to click the button'; 'the default was transparent'). The constraint exhibits all six DR types depending on the observer's structural position. From the user's perspective, trapped by network effects and switching costs, dark patterns are a snare with no exit. From the platform's perspective, they are a coordination mechanism that solves the problem of converting attention into revenue. From a regulatory perspective, they are a hybrid coordination/extraction problem with a sunset pathway (GDPR/DMA transparency and consent requirements). From the psychological theory perspective, they risk naturalizing extractive design choices as inevitable features of human cognition. The extractiveness metric has increased from 0.35 to 0.62 over the observation interval (14 years, roughly 2010-2024) as dark patterns have become more sophisticated and as user awareness has paradoxically increased platforms' investment in subtler manipulation (dark pattern arms race). Theater ratio has increased from 0.38 to 0.55, reflecting that platforms increasingly rebrand extraction as safety/discovery/engagement rather than acknowledging attention monetization.",
+    "key_agents": [
+      "End Users: Primary victim (powerless/trapped) \u2014 unable to exit despite harm; exploit cognitive limits that individuals cannot overcome alone",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture user attention, data, and purchasing behavior; experience dark patterns as a functional coordination mechanism",
+      "Privacy-Conscious Consumer Coalition: Secondary victim (moderate/constrained) \u2014 organized enough to demand alternatives but locked in by network effects; benefit from free services but bear extraction cost",
+      "Regulatory Coalition (EU/GDPR/DMA): Organized constraint (organized/constrained) \u2014 impose transparency and consent requirements; benefit from reduced manipulation but constrained by enforcement and platform arbitrage",
+      "Attention Economy Theory: Degraded institutional frame (piton) \u2014 once explained platform business models; now theater that obscures dark pattern mechanisms",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent design choices as inevitable cognitive limits"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High. Dark patterns systematically steer user behavior toward outcomes that benefit the platform (increased engagement, continued use, data sharing, purchases) at direct cost to user welfare. The extraction is measurable: users report regretting clicks, spending more time/money than intended, sharing more data than they would under transparent choice. However, it is not maximal (0.70+) because users retain some agency \u2014 dark patterns influence but do not eliminate choice. The metric reflects structured manipulation that works through cognitive exploitation rather than total coercion. Suppression (0.68): High. Suppression operates through multiple mechanisms: (a) information asymmetry \u2014 users don't understand how platforms achieve steering effects; (b) cognitive barriers \u2014 biases that even informed users cannot overcome (default effects, loss aversion); (c) exit barriers \u2014 network effects and switching costs prevent users from choosing alternative platforms; (d) legal theater \u2014 platforms frame dark patterns as 'user choice' or 'design defaults' despite knowing their coercive effect. Theater ratio (0.55): Moderate. The 'attention economy' framing (platforms optimize user engagement) has become increasingly performative as dark patterns have become more coercive. Platforms now rebrand as safety/discovery engines or social goods rather than openly acknowledging attention extraction. However, the theater is not maximal (0.70+) because some legitimate coordination function remains \u2014 platforms do optimize legitimate user interests (discovery, connection, relevance) alongside extraction. The theater has increased over time as user awareness of dark patterns has forced platforms into euphemistic rebranding.",
+    "perspectival_gap": "This constraint exhibits a sharp perspectival divide between users and platforms. Users see a snare (trapped, no exit, extraction). Platforms see a rope (coordination mechanism solving attention monetization). Regulatory observers see a tangled rope (mixed coordination/extraction with a policy sunset). The gap is primarily driven by directionality (d values 0.93 for users vs 0.02 for platforms) and exit options (trapped vs arbitrage). The analytical observer risks collapsing this gap by framing dark patterns as inevitable features of human cognition (mountain), thereby naturalizing what is actually a contingent institutional choice. This false summit is the key diagnostic insight: dark patterns are not inevitable; they are engineered. Alternative platforms have demonstrated that user engagement can be sustained with transparent UX design (Signal, DuckDuckGo, some open-source tools). The snare classification is justified not because cognitive biases are immutable but because platforms have deliberately chosen to exploit them rather than working around them.",
+    "directionality_logic": "End users: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.38. Maximum extraction. Cannot exit due to network effects and switching costs; cannot overcome cognitive biases through individual effort. Platform operators: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.18. Net beneficiary. Can exit or renegotiate; experience the constraint as functionally solving their revenue problem. Privacy-conscious coalitions: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.12. High extraction but not maximum; organized enough to demand alternatives and to partially mitigate through privacy tools, but constrained by lock-in. Regulatory coalition: Mixed victim/beneficiary + constrained \u2192 d\u22480.58, f(d)\u22480.72. Can impose rules (arbitrage for this purpose) but constrained by enforcement and regulatory arbitrage (platforms operating outside jurisdiction). Attention economy theory: Institutional + constrained \u2192 d\u22480.48, f(d)\u22480.60. Piton classification comes from theater gate (0.55), not from high directionality. The theory's degradation reflects that it can no longer explain modern dark patterns without cognitive dissonance. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival (observer naturalizes); the false summit detector flags this because extractiveness is driven by contingent design choices, not immutable laws.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION VALIDATION: Dark patterns satisfy the snare criteria unambiguously from the user perspective: \u03b5=0.62 (high extraction), suppression=0.68 (high \u2014 multiple mechanisms prevent escape), \u03c7\u22481.03 (effective extraction from powerless/trapped user). No ambiguity between pure extraction and coordination \u2014 dark patterns explicitly trade user welfare for platform benefit. The classification is not mandatrophic because beneficiary/victim roles are clear (platforms benefit, users bear costs), and the mechanisms are asymmetrically extractive (not coordination-hybrid). However, the snare classification is perspectival \u2014 it is true only from the user's view. From the platform's view, the same mechanisms are rope (solving the engagement/monetization coordination problem). The system does not resolve this into a single type; rather, it documents the perspectival gap as evidence that this is a genuine snare viewed by those harmed by it (users, regulatory bodies) and a rope viewed by beneficiaries (platforms). The mandatrophy is resolved by showing that the multiplicity of types is itself the data: snare from below, rope from above, is precisely the pattern that characterizes structural extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_economy_rent_extraction",
+      "behavioral_targeting_information_asymmetry",
+      "platform_switching_costs"
+    ],
+    "dual_formulation_note": "Dark patterns decompose into three structurally distinct constraints: (1) cognitive bias exploitation (\u03b5\u22480.55, snare from user perspective), (2) information asymmetry in platform mechanics (\u03b5\u22480.48, tangled rope between platforms and regulators), (3) network effects enabling exit barriers (\u03b5\u22480.65, snare for switching users). These are linked: dark patterns work because cognitive biases are exploitable AND users cannot switch AND platforms can hide mechanics. Each story gets its own \u03b5 and network of perspectives."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

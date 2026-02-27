@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "mars_rovers_navigational_autonomy",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "marsnav"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Mars Surface Navigational Autonomy (AutoNav) Constraint",
+    "topic_domain": "technological/robotics/planetary_exploration",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Physicist's View (Relativistic Signal Latency)",
+      "comment": "PERSPECTIVE 1: ANALYTICAL OBSERVER / RELATIVISTIC CONSTRAINT (MOUNTAIN) \u2014 Signal propagation to Mars operates at light speed; the one-way latency ranges 3-22 minutes depending on orbital geometry. This is an irreducible physical law. No technological advance can exceed the speed of light. \u03b5=0.18, suppression=0.03 (minimal coercive overhead; it's simply physics). accessibility_collapse\u22650.85 (confirmed). emergence is natural (confirmed). Resistance\u22640.15 (confirmed). This perspective is Mountain from all index positions."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Mission Commander (Operational Reality)",
+      "comment": "PERSPECTIVE 2: MISSION COMMANDER / OPERATIONAL CONSTRAINT (MOUNTAIN) \u2014 Even possessing unlimited budget and engineering capability, the commander cannot transmit a command and receive feedback within a single Sol. The constraint is not institutional or political \u2014 it is inscribed in spacetime. All rovers must operate with pre-loaded waypoint sequences and onboard autonomous obstacle avoidance. This is not a choice; it is imposed by physics. d\u22480.50 (symmetric: constraint affects commander equally with engineers), f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.12. Still firmly mountain: even at maximum structural power, the constraint is immutable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Rover Engineering Team (Design Necessity)",
+      "comment": "PERSPECTIVE 3: ROVER ENGINEERING TEAM / TECHNICAL DESIGN (MOUNTAIN) \u2014 The constraint forces a specific architectural solution: rovers must carry sufficient onboard computation (vision systems, hazard avoidance, terrain classification) to navigate autonomously for 8-12 hours between ground-command upload windows. This is not optional; it emerges from the signal latency. The team's exit option is 'mobile' only in the sense that they could theoretically use radio relays, orbital satellites, or pre-computed routes \u2014 but these do not escape the latency constraint, they only distribute the problem differently. The constraint is invariant across architectural choices. \u03b5=0.18, suppression=0.03 (no suppression of alternatives because the constraint is not enforced coercively). Mountain classification holds."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Space Agency (Coordination Function)",
+      "comment": "PERSPECTIVE 4: SPACE AGENCY / INSTITUTIONAL VIEW (ROPE) \u2014 From the agency perspective, the latency constraint is a solved coordination problem. NASA/JPL have developed proven techniques: pre-loaded drive commands, hazard detection vision, dead-reckoning localization. The constraint is reframed as a coordination mechanism: it forces disciplined operational planning (staging commands, testing in testbeds, validating sensor outputs) rather than reactive teleoperation. The agency sees this as coordination, not extraction. Beneficiary: mission success rate (higher autonomy \u2192 lower single-point-of-failure risk). Victim: none (the agency coordinated around the constraint and benefits from its forcing function). d\u22480.15 (beneficiary + arbitrage), f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.002. Negative effective extraction = coordination only. Classification: Rope (or arguably natural-law-aware rope, but schema allows pure rope)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Rover Hardware (Objective Reality)",
+      "comment": "PERSPECTIVE 5: ROVER HARDWARE / PHYSICS PERSPECTIVE (MOUNTAIN) \u2014 The rover itself experiences the constraint as absolute. It cannot receive real-time commands. It must decide when to stop, when to avoid rocks, when to retreat from steep terrain. The hardware design (onboard CPU, vision processing, propulsion controllers) is entirely structured around this inescapable constraint. From the rover's perspective (however we anthropomorphize it), there is no exit, no negotiation, no coercion \u2014 only an immutable physical fact. \u03b5=0.18, suppression\u22480 (no suppression needed; the constraint enforces itself through physics). This is the clearest mountain perspective: a pure physical limit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quantum_entanglement_communication",
+      "question": "Could quantum entanglement be leveraged to transmit control information to Mars rovers instantaneously or at FTL speeds, circumventing light-speed latency?",
+      "resolution_mechanism": "Theoretical physics research on no-communication theorem and whether it definitively rules out FTL information transfer via entanglement; any positive breakthrough would require re-evaluation of the constraint's mountain status",
+      "impact": "If entanglement communication becomes viable: constraint degrades from Mountain to Rope or Scaffold (technology-dependent). If no-communication theorem is provably airtight: constraint remains Mountain with certainty.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quantum entanglement communication feasibility"
+    },
+    {
+      "id": "relay_satellite_network_completeness",
+      "question": "Does a Mars orbital relay satellite network reduce autonomous navigation requirements sufficiently to become a functional alternative to onboard autonomy, or does latency remain the bottleneck?",
+      "resolution_mechanism": "Simulation and deployment testing of Mars Relay Network concepts; measurement of latency reduction and control bandwidth improvement; comparison with terrestrial UAV autonomy architectures that use relay networks",
+      "impact": "If relay network effectively reduces latency to sub-3-minute range: constraint shifts from Mountain to Rope (coordination of multi-rover systems via relay). If latency reduction is marginal: constraint remains Mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relay satellite network latency reduction effectiveness"
+    },
+    {
+      "id": "human_cognitive_latency_equivalence",
+      "question": "Is the human operator's ability to make real-time decisions equivalent to or better than pre-programmed rover autonomy when latency prevents real-time teleoperation?",
+      "resolution_mechanism": "Comparative mission data: success rates of autonomously navigated segments vs. segments using pre-computed commands; failure analysis of collisions, immobilization, and navigation errors",
+      "impact": "If pre-loaded autonomy is superior: constraint reinforces mountain classification (no human option available). If human planning is superior: constraint shifts toward coordination (humans and rovers coordinate via staging discipline rather than real-time control).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Autonomy effectiveness vs human-planned command sequences"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Mars rovers operate under an inescapable physical constraint: the finite speed of light. Signal latency to Mars ranges from 3 minutes (closest approach) to 22 minutes (maximum separation), creating a one-way communication delay of 6 to 44 minutes round-trip. This constraint is not institutional, economic, or political \u2014 it is inscribed in spacetime itself. No rover can receive real-time commands from Earth. All navigation autonomy must be pre-loaded into onboard computer systems. The constraint exhibits the key signature of a Mountain: it cannot be negotiated, suppressed, or overcome through organizational effort. Rovers (Spirit, Opportunity, Perseverance) are designed with sophisticated onboard autonomy precisely because the constraint is immutable. This is not a limitation begrudgingly accepted; it is a law of physics that engineers work *with*, not against. The minimal theater ratio (0.15) reflects that the onboard autonomy is genuine function, not performance: hazard detection uses real sensor data, pathfinding uses actual terrain classification, and the rover's actions have direct consequences. There is no pretense or ritual\u2014only physics and engineering.",
+    "key_agents": [
+      "Signal propagation physics: Immutable constraint (light-speed limit) \u2014 defines the problem space",
+      "Mars rover hardware: Constrained actor (powerless/trapped) \u2014 must execute autonomy because latency forbids real-time control",
+      "Rover engineering team: Problem-solver (organized/mobile) \u2014 designs onboard autonomy as the solution; no exit from the constraint itself",
+      "Mission commander/NASA JPL: Institutional beneficiary (institutional/arbitrage) \u2014 benefits from latency constraint's forcing function (disciplined planning, lower single-point-of-failure risk)",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 recognizes the constraint as a fundamental law of physics"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low, as required for Mountain classification. This value reflects the extractiveness of the constraint qua constraint \u2014 not the cost of solving it (which is high), but the structural extraction of autonomy capacity from the rover. The rover cannot choose whether to be autonomous; latency forces it. However, this 'extraction' is purely structural, not coercive. No agent is suppressing alternatives. The extractiveness is the irreducible portion of the constraint's logical structure. Suppression (0.03): Minimal, as required for Mountain classification. There is no coercive enforcement because the constraint enforces itself via physics. No organization maintains it; no suppression of alternatives is needed. Engineers are free to propose any alternative (quantum entanglement, relay networks, etc.), and the constraint remains indifferent to proposals. Theater ratio (0.15): Very low. Onboard autonomy is genuine function, not performance. The rover's hazard avoidance processes actual sensor data; its pathfinding uses real-time terrain classification. There is no ritual, no theatrical display \u2014 only authentic problem-solving under a real constraint. The slight rise over time (0.12 \u2192 0.15) reflects minor increases in mission complexity and sensor fusion processing, not degradation into theater.",
+    "perspectival_gap": "The perspectival gap here is subtle because the constraint is truly immutable across all observables. However, the gap exists in *meaning*, not structure. The physicist sees a law of nature (relativity). The mission commander sees a design requirement (onboard autonomy). The engineering team sees a technical challenge (vision systems, hazard detection). The space agency sees a forcing function for disciplined operations (coordination benefit). The rover sees a brute physical fact (no real-time control possible). All perspectives converge on Mountain classification because the constraint is genuinely invariant. The perspectival gap is not about disagreement but about different framings of the same immutable reality. This is the hallmark of a true Mountain: all perspectives, when honestly rendered, arrive at the same structural conclusion.",
+    "directionality_logic": "Mars rovers (powerless/trapped): d\u22480.95. The rover has no exit from the constraint and no choice in autonomy. However, this is not 'victimization' \u2014 the rover is a tool designed to operate under these conditions. Mission commander (powerful/constrained): d\u22480.50. Even unlimited power cannot overcome light-speed limits. The constraint is symmetric from the commander's perspective: it applies universally, not asymmetrically. Rover engineering team (organized/mobile): d\u22480.40. The team can propose alternatives (relay networks, quantum entanglement), but the constraint remains immutable regardless. These alternatives would not escape the constraint; they would redistribute it. Space agency (institutional/arbitrage): d\u22480.15. The agency benefits from the constraint's forcing function (disciplined operations), so it is a beneficiary. The derived d values are consistent with Mountain classification across all perspectives \u2014 none produce high chi because suppression is minimal and the constraint is not extractive in the coercive sense."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mars_dust_storm_visibility",
+      "power_generation_solar_mars"
+    ],
+    "dual_formulation_note": "The navigational autonomy constraint is downstream of more fundamental physical constraints (signal latency, power limitations, sensor noise). The latency constraint (signal propagation) is the primary structural limit; autonomy design is the human response to that limit. The power and dust constraints create secondary pressures on autonomy (energy budget for computation, visibility for hazard detection) but do not replace the latency constraint."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  }
+}

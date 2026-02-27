@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "negative_emissions_arbitrage",
+    "version": "0.1",
+    "generated_date": "2024-02-29",
+    "status": "DRAFT"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Negative Emissions Arbitrage Market",
+    "topic_domain": "economic/political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "carbon_offset_providers",
+      "carbon_credit_verifiers"
+    ],
+    "victims": [
+      "future_generations",
+      "communities_affected_by_climate_change"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "Future generations are trapped by the consequences of climate change, bearing the costs of insufficient or fraudulent negative emissions offsets."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Companies purchasing carbon credits",
+      "comment": "Companies are constrained by market pressures to appear environmentally responsible, but also benefit from the ability to offset emissions without fundamentally altering their operations. They experience both coordination (access to offset markets) and extraction (cost of credits, potential reputational damage from ineffective offsets)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Carbon Offset Providers",
+      "comment": "Carbon offset providers benefit from the demand for negative emissions credits, experiencing the market as a coordination mechanism. They can arbitrage opportunities by developing and selling credits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Carbon Credit Verifiers",
+      "comment": "Carbon credit verifiers benefit from the demand for independent verification of carbon offsets, experiencing the market as a coordination mechanism. They can arbitrage opportunities by offering verification services."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the negative emissions arbitrage market as a tangled rope, balancing the coordination of emissions reduction efforts with the potential for extraction and greenwashing."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "additionality_measurement",
+      "question": "How can we accurately measure the additionality of negative emissions projects?",
+      "resolution_mechanism": "Develop robust baselines and methodologies for quantifying the impact of negative emissions technologies.",
+      "impact": "If additionality is poorly measured, the market will fail to deliver real emissions reductions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty in measuring the additionality of negative emissions projects."
+    },
+    {
+      "id": "permanence_risk",
+      "question": "How can we ensure the permanence of carbon storage in negative emissions projects?",
+      "resolution_mechanism": "Implement monitoring, reporting, and verification (MRV) systems to track carbon storage over time.",
+      "impact": "If carbon storage is not permanent, the market will fail to deliver real emissions reductions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty in ensuring the long-term permanence of carbon storage."
+    },
+    {
+      "id": "moral_hazard",
+      "question": "Does the availability of negative emissions credits create a moral hazard, discouraging emissions reductions at the source?",
+      "resolution_mechanism": "Implement policies that prioritize emissions reductions at the source and limit the use of negative emissions credits to offset residual emissions.",
+      "impact": "If moral hazard is not addressed, the market will undermine efforts to reduce emissions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The risk that negative emissions credits discourage emissions reductions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The scientific consensus that global warming stops only at \"net-zero\" emissions created a global carbon ledger. Entities that cannot reduce their emissions to zero can purchase offsets from others who remove excess carbon from the atmosphere. This system creates an arbitrage market for \"negative emissions,\" with potential for both coordination (funding carbon removal projects) and extraction (greenwashing, ineffective offsets).",
+    "key_agents": [
+      "Carbon Offset Providers: Primary beneficiary (institutional/arbitrage) - Develop and sell carbon credits.",
+      "Carbon Credit Verifiers: Secondary beneficiary (institutional/arbitrage) - Verify carbon offset projects.",
+      "Companies purchasing carbon credits: Moderate Actor (moderate/constrained) - constrained to purchase credits but benefit from appearing environmentally responsible",
+      "Communities affected by climate change: Primary victim (powerless/trapped) - Suffer the consequences of ineffective offsets.",
+      "Future Generations: Primary victim (powerless/trapped) - Suffer the long-term consequences of climate change."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The market extracts value from future generations and communities affected by climate change by allowing companies to continue emitting without fully offsetting their impact. The market also extracts value from companies seeking to reduce their carbon footprint, as they may pay for offsets that are not truly effective. Suppression (0.60): Moderate-high. The market suppresses alternative solutions to climate change, such as reducing emissions at the source, by providing an easier and less costly alternative. It is difficult for companies to exit the market due to societal pressures. Theater ratio (0.40): Moderate. While there is some performative aspect to carbon offsetting, the market also facilitates real carbon removal projects.",
+    "perspectival_gap": "Future generations (snare) are trapped by the consequences of ineffective offsets, while carbon offset providers (rope) benefit from the demand for credits. Companies purchasing carbon credits (tangled rope) face pressures to appear environmentally responsible but may not be fully aware of the risks. The analytical observer (tangled rope) sees the market as a mix of coordination and extraction.",
+    "directionality_logic": "Beneficiaries (carbon offset providers, carbon credit verifiers) benefit from the market and have the ability to arbitrage, resulting in low d values and rope classifications. Victims (future generations, communities affected by climate change) are trapped by the consequences of climate change and have no exit, resulting in high d values and snare classifications.",
+    "mandatrophy_analysis": "The analysis resolves the mandatrophy by recognizing that the negative emissions arbitrage market is a tangled rope, balancing the coordination of emissions reduction efforts with the potential for extraction and greenwashing. Different actors experience the market in different ways, reflecting their structural position and exit options."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "carbon_pricing_mechanisms",
+      "sustainable_development_goals"
+    ]
+  },
+  "directionality_overrides": []
+}

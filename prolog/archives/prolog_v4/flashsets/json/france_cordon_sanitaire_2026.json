@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "france_cordon_sanitaire_2026",
+    "version": "1.1",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The \"Front R\u00e9publicain\" (Republican Front) Cordon Sanitaire",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mainstream_political_parties"
+    ],
+    "victims": [
+      "marginalized_voters",
+      "moderate_right_voters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Marginalized Voters",
+      "comment": "Perspective of marginalized voters whose concerns are not addressed by mainstream parties, leading to further alienation and support for extremist alternatives. They are trapped within a system that does not represent them."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mainstream Political Parties",
+      "comment": "Perspective of mainstream political parties clinging to the cordon sanitaire despite its diminishing effectiveness and increasing irrelevance, constrained by tradition and fear of being perceived as legitimizing the far-right. They recognize the ineffectiveness but continue performative adherence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Moderate Right Voters",
+      "comment": "Perspective of moderate right voters who may have been willing to vote for mainstream parties to block the far-right in the past, but now feel constrained by the cordon sanitaire and consider other options, including abstaining or voting for protest parties. They have some mobility but face social and political constraints."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Far-Right Parties",
+      "comment": "Perspective of far-right parties who benefit from the cordon sanitaire by framing themselves as the only alternative to the status quo, and arbitraging on the political exclusion and the perceived failure of the mainstream parties."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Political Science Observer",
+      "comment": "Perspective of political science analysts who observe the cordon sanitaire as a historical artifact, a once-functional mechanism that has ossified into a theatrical ritual, maintained through inertia and lacking its original effectiveness. Analytical perspective highlighting the ineffectiveness of the cordon sanitaire."
+    }
+  ],
+  "interval": {
+    "start": 2000,
+    "end": 2026
+  },
+  "omegas": [
+    {
+      "id": "cordon_effectiveness",
+      "question": "To what extent does the cordon sanitaire still influence voter behavior?",
+      "resolution_mechanism": "Analysis of voting patterns, surveys, and focus groups.",
+      "impact": "If effective, the cordon sanitaire is a rope. If ineffective, it is a piton or tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The effectiveness of the cordon sanitaire in influencing voter behavior."
+    },
+    {
+      "id": "alternative_representation",
+      "question": "Are there alternative mechanisms to address the concerns of marginalized voters?",
+      "resolution_mechanism": "Comparative analysis of different electoral systems and political representation models.",
+      "impact": "If alternatives exist, the cordon sanitaire is less justified. If not, it may be a necessary evil.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alternative mechanisms to address the concerns of marginalized voters."
+    },
+    {
+      "id": "far_right_legitimacy",
+      "question": "Does the cordon sanitaire inadvertently legitimize the far-right by portraying them as victims of political exclusion?",
+      "resolution_mechanism": "Analysis of media coverage, public discourse, and the far-right's own rhetoric.",
+      "impact": "If it does, the cordon sanitaire is counterproductive. If not, it may still serve a purpose.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The extent to which the cordon sanitaire legitimizes the far-right."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 13,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 26,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 13,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 26,
+      "value": 0.55
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The \"Front R\u00e9publicain\" (Republican Front) in France, once a functional mechanism to block the far-right, has transitioned into a Tangled Rope state by early 2026. While initially effective in preventing the far-right from gaining power, the cordon sanitaire has become a theatrical ritual, maintained through inertia and increasingly extracting from marginalized and moderate right voters. Mainstream parties continue to invoke it, but its impact on voter behavior has diminished, and it may even be counterproductive, fueling resentment and further empowering extremist forces.",
+    "key_agents": [
+      "Marginalized Voters: Primary target (powerless/trapped) - feel unrepresented and excluded.",
+      "Mainstream Political Parties: Maintaining the cordon sanitaire (institutional/constrained) - clinging to a tradition, benefiting from the exclusion of the far-right.",
+      "Moderate Right Voters: Affected by the cordon sanitaire (moderate/constrained) - seeking alternatives.",
+      "Far-Right Parties: Beneficiary (powerful/arbitrage) - capitalizing on the exclusion.",
+      "Political Science Observer: Analytical perspective (analytical/analytical) - observing the historical trend."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-High. The cordon sanitaire extracts votes from marginalized voters and moderate right voters, pushing them towards abstention or extremist alternatives. Suppression (0.60): High. Voters have limited alternatives and are increasingly unwilling to be constrained by the cordon sanitaire, but the political system actively suppresses alternative voices. Theater ratio (0.80): High. The cordon sanitaire is largely a performative ritual, with limited functional impact.",
+    "perspectival_gap": "Marginalized voters experience a snare because the cordon sanitaire reinforces their exclusion. Mainstream parties experience a piton because they are stuck with a ritual. Moderate right voters see it as a snare. Far right parties see it as a rope as it supports their position. The analytical observer sees a piton showing the degraded state.",
+    "directionality_logic": "Directionality is derived from the relationship to the cordon sanitaire. Marginalized voters and moderate right voters are targets (high d), mainstream parties benefit (low d), far-right parties benefit (low d). The analytical observer's d is based on the analysis of the structural function."
+  },
+  "boltzmann": {},
+  "network": {},
+  "directionality_overrides": []
+}

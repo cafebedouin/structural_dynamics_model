@@ -1,0 +1,69 @@
+{
+  "header": {
+    "constraint_id": "cap_theorem",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.05,
+    "theater_ratio": 0.1,
+    "claimed_type": "mountain",
+    "human_readable": "CAP Theorem (Brewer's Theorem)",
+    "topic_domain": "technological",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "Powerless System Architect",
+      "comment": "The system architect designing a distributed system is fundamentally constrained by the CAP theorem. They cannot violate the trade-offs it imposes. There is no escape from this constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Institutional Database Vendor",
+      "comment": "The database vendor understands the fundamental limitations imposed by the CAP theorem. They must design their systems to adhere to these constraints. While they can offer configurations prioritizing different aspects (CA, AP, CP), they cannot bypass the theorem itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the CAP theorem is a fundamental limitation in distributed systems. It's a proven theorem, and no implementation can bypass it."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The CAP theorem states that any distributed data store can only provide two of three guarantees: Consistency (every read receives the most recent write), Availability (every request receives a response), and Partition Tolerance (the system continues to operate despite network failures). This theorem imposes fundamental limitations on the design of distributed systems, forcing architects to make trade-offs between these guarantees.",
+    "key_agents": [
+      "System Architect: Designs distributed systems, constrained by the CAP theorem (powerless/trapped)",
+      "Database Vendor: Creates and sells distributed databases, understands CAP theorem limitations (institutional/analytical)",
+      "Analytical Observer: Researches and analyzes distributed systems, sees the CAP theorem as a fundamental truth (analytical/analytical)"
+    ],
+    "logic_rationale": "The CAP theorem is a proven mathematical theorem. Extractiveness and suppression are low because it's a fundamental limitation, not an actively enforced constraint. The theater ratio is low because there is little performative activity related to it; systems simply operate within its constraints.",
+    "perspectival_gap": "There is minimal perspectival gap because the CAP theorem is a fundamental limitation recognized by all parties. While different actors might prioritize different aspects (CA, AP, CP), they cannot escape the underlying trade-offs imposed by the theorem.",
+    "directionality_logic": "All perspectives view the CAP theorem as a natural limitation, leading to a mountain classification for all. Since it's a fundamental limitation, there is no real directionality in terms of beneficiaries and victims. It simply is.",
+    "mandatrophy_analysis": "The CAP theorem is not subject to mandatrophy because it is a fundamental limitation proven mathematically. It's not a coordination problem mislabeled as extraction or vice versa; it's a hard constraint."
+  },
+  "omegas": [],
+  "measurements": [],
+  "boltzmann": {},
+  "network": {},
+  "directionality_overrides": []
+}

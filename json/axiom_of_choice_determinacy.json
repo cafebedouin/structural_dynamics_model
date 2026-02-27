@@ -2,27 +2,20 @@
   "header": {
     "constraint_id": "axiom_of_choice_determinacy",
     "version": "1.0",
-    "generated_date": "2024-07-16",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aoc"
   },
   "base_properties": {
-    "extractiveness": 0.02,
-    "suppression": 0.04,
-    "theater_ratio": 0.05,
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
     "claimed_type": "mountain",
     "human_readable": "The Axiom of Choice (AC)",
     "topic_domain": "mathematical/logical",
-    "requires_active_enforcement": false,
     "emerges_naturally": true,
-    "has_sunset_clause": false,
-    "accessibility_collapse": 0.98,
-    "resistance": 0.02,
-    "beneficiaries": [
-      "zfc_practitioners"
-    ],
-    "victims": [
-      "constructivist_mathematicians"
-    ]
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
   },
   "perspectives": [
     {
@@ -31,60 +24,135 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Set Theorist",
-      "comment": "PERSPECTIVE 1: ANALYTICAL (MOUNTAIN) — The logician recognizes AC's independence from ZF as a fundamental, irreducible logical fact, proven by Gödel and Cohen. It is an unchangeable feature of the ZFC landscape, a true Mountain of logic."
+      "label": "The Logical Observer (Pure Mathematics)",
+      "comment": "PERSPECTIVE 1: PURE MATHEMATICS VIEW (MOUNTAIN) \u2014 AC is a foundational axiom of set theory, independent of ZF and unprovable from weaker foundations. Its logical status is invariant across all mathematical contexts. Emergence is natural: the structure of infinite choice sets forces the question. No agent benefits or bears cost; no suppression exists. The axiom either holds or does not in a formal system \u2014 this is a property of logical entailment, not institutional arrangement."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "institutional",
+      "agent_power": "powerful",
       "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "universal",
-      "label": "The Mainstream Mathematician",
-      "comment": "PERSPECTIVE 2: INSTITUTIONAL (MOUNTAIN) — The practitioner in analysis, algebra, or topology experiences AC as a foundational tool. While it feels like a useful convention (Rope-like), its structural properties are those of an unchangeable axiom. Its consequences, like the existence of a basis for every vector space, are treated as laws of nature within their field."
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Mathematical Community (Institutional Context)",
+      "comment": "PERSPECTIVE 2: MATHEMATICAL COMMUNITY ADOPTION (MOUNTAIN) \u2014 In practice, the mathematical community has overwhelmingly adopted AC as a working axiom despite its non-constructive nature. This adoption is not extractive or coercive \u2014 it is pragmatic coordination around a proven powerful tool. AC is treated as a natural law of mathematics because it reliably generates true theorems. Resistance to AC is low (restricted to constructivists and intuitionists, <10% of mathematicians). Accessibility collapse is high: once AC's logical independence is understood, mathematicians cannot 'exit' its reality \u2014 they can only choose to use it or not. The constraint here is logical, not institutional."
     },
     {
       "classification_type": "mountain",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "universal",
-      "label": "The Constructivist Critic",
-      "comment": "PERSPECTIVE 3: MODERATE (MOUNTAIN) — The constructivist experiences AC as an arbitrary and problematic axiom. Its non-constructive nature is a fixed, unchangeable feature of the dominant ZFC landscape that they must actively work around by choosing alternative logical systems. It is an immovable object they philosophically oppose."
+      "spatial_scope": "national",
+      "label": "The Working Mathematician",
+      "comment": "PERSPECTIVE 3: WORKING MATHEMATICIAN (MOUNTAIN) \u2014 Individual mathematicians experience AC as a constraint of their logical environment, not as an institutional extraction. When proving theorems in analysis, topology, or algebra, AC is ubiquitous (Tychonoff's theorem, Hausdorff maximality lemma, etc.). A mathematician cannot avoid encountering AC-dependent results. The constraint is not suppressive \u2014 mathematicians freely choose to invoke AC because it works. The foundational debate (constructivism vs classicism) is resolved by effectiveness, not enforcement. Exit options are 'constrained' because one can restrict to constructive mathematics, but this severely limits theorem availability \u2014 the cost is prohibitive, not coercive."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "trapped",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Applied Scientist/Engineer",
-      "comment": "PERSPECTIVE 4: POWERLESS (MOUNTAIN) — The user of mathematics is trapped within the ZFC framework. The theorems derived from AC are simply part of the toolkit they are given. They have no agency to change this foundation; it is as fixed as a law of physics."
+      "label": "The Formal Logic Observer (Independence Result)",
+      "comment": "PERSPECTIVE 4: FORMAL LOGIC / INDEPENDENCE (MOUNTAIN) \u2014 From the standpoint of formal logic, AC is independent of ZF (G\u00f6del/Cohen). This means: ZF \u22a2 AC if and only if ZF is inconsistent (for classical logic). AC is an irreducible additional axiom. This independence is a mathematical fact, not subject to negotiation or institutional pressure. The constraint is the logical structure itself \u2014 the space of consistent set theories that either include or exclude AC. No suppression, no extraction, no theater. AC emerges necessarily from asking: 'Given arbitrary non-empty sets, what choice structures exist?'"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Set Theory Axiomatization Project",
+      "comment": "PERSPECTIVE 5: AXIOM SYSTEM COORDINATION (ROPE) \u2014 ZFC (Zermelo-Fraenkel + Choice) is pure coordination: mathematicians agree on a common foundation so that theorems stated in one institution are recognizable in another. This agreement has no extraction \u2014 mathematicians do not 'lose' to the axiom system; they gain a shared language. The axiom system provides coordination value without coercive overhead. ZF alone is weaker; AC makes it strong enough for most classical mathematics. This is low-extraction coordination, not enforcement. There is no beneficiary (beyond all mathematicians equally); there is no victim."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "constructive_truth_status",
+      "question": "Is the non-constructive nature of AC (existence without construction method) a logical limit or a feature of classical logic that becomes unnecessary in constructive mathematics?",
+      "resolution_mechanism": "Comparison of theorem density and applicability: constructive mathematics with/without variants of choice principles; empirical assessment of whether constructive mathematics sacrifices essential results",
+      "impact": "If constructive is genuinely sufficient: AC is a convenience axiom, not a necessity \u2014 classification remains mountain but on pragmatic grounds. If constructive mathematics loses essential theorems: AC is a logical necessity for certain theorems \u2014 mountain classification is strengthened by indispensability.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical status of non-constructiveness in AC"
+    },
+    {
+      "id": "dependent_choice_sufficiency",
+      "question": "For practically all mathematical theorems, is the Axiom of Dependent Choice (DC) or other weaker choice variants sufficient, making full AC unnecessary?",
+      "resolution_mechanism": "Systematic survey of published theorems claiming AC dependency; reclassification with respect to DC and other choice variants; measure of theorems genuinely requiring full AC vs those requiring only weak choice",
+      "impact": "If DC suffices for most theorems: AC is over-strong, and mathematicians use it out of convenience rather than necessity. Mountain classification remains but with lower necessity floor. If full AC is genuinely needed for significant theorems: AC is indispensable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether weaker choice principles suffice for most mathematics"
+    },
+    {
+      "id": "models_without_choice",
+      "question": "Do consistent models of ZF without AC (e.g., Solovay's model) support sufficient mathematics to be considered viable alternatives, or do they degrade mathematical practice unacceptably?",
+      "resolution_mechanism": "Evaluation of theorem availability and proof accessibility in AC-free models; measure of degradation in mathematical expressiveness; assessment of whether AC-free mathematics remains coherent and useful",
+      "impact": "If AC-free models are viable alternatives: AC is a choice point, not a natural law. If viable alternatives are severely constrained: AC is effectively necessary. Mountain classification persists but with clarification that 'natural law' means 'pragmatically indispensable given classical logic,' not 'logically required.'",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Viability of mathematics without AC"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
     }
   ],
   "interval": {
-    "start": 1904,
-    "end": 2024
+    "start": 0,
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "The Axiom of Choice (AC) is a foundational axiom in set theory stating that for any collection of non-empty sets, a 'choice function' exists that selects one element from each set. Its inclusion in Zermelo-Fraenkel set theory creates the standard modern foundation for mathematics, ZFC. AC is non-constructive; it asserts existence without providing a method of construction. This leads to counter-intuitive but logically consistent results like the Banach-Tarski paradox. Crucially, AC is independent of the other ZF axioms: it can neither be proven nor disproven from them. This makes it a fundamental, unchangeable feature of the logical landscape.",
+    "narrative_context": "The Axiom of Choice is a foundational axiom in set theory asserting that for any collection of non-empty sets, there exists a function selecting exactly one element from each set. AC is independent of Zermelo-Fraenkel set theory (ZF) alone and was proven independent by G\u00f6del (1938, consistency) and Cohen (1966, independence). Despite its non-constructive character and long-standing philosophical debate, AC has become universally adopted in classical mathematics and underlies most theorems in analysis, topology, algebra, and functional analysis. The constraint structure is NOT institutional extraction but logical necessity: mathematicians collectively treat AC as a natural law because (1) it is logically independent of weaker foundations, (2) it is irreplaceable for a vast class of theorems, and (3) it is pragmatically indispensable for classical mathematics. No agent benefits at another's expense; no suppression enforces adoption; no theater masks function. The axiom's logical status is invariant across all observers and measurement methodologies.",
     "key_agents": [
-      "ZFC Practitioners: Mainstream mathematicians (institutional/arbitrage) who rely on AC for fundamental theorems in their fields.",
-      "Constructivist Mathematicians: A school of thought (moderate/constrained) that rejects non-constructive proofs and thus finds AC philosophically unacceptable.",
-      "Logicians/Set Theorists: Analytical observers (analytical/analytical) who study the formal properties of axiom systems, including AC's independence.",
-      "Applied Scientists: Users of mathematics (powerless/trapped) who inherit the consequences of AC without influencing its axiomatic status."
+      "The Logical Structure: The mathematical foundation \u2014 AC emerges as a necessary question once infinite collections are introduced. No agent; no extraction.",
+      "Pure Mathematicians: Users of AC (analytical/analytical) \u2014 freely choose to invoke AC because it enables powerful theorems. Benefit entirely from its adoption; no cost imposed.",
+      "Mathematical Community: Institutional coordinating entity (institutional/arbitrage) \u2014 collectively adopts ZFC as standard foundation. Gain shared language and theorem database; no extraction.",
+      "Constructivists and Intuitionists: Alternative framework advocates (organized/constrained) \u2014 can and do develop mathematics without full AC. Small minority; their exit is technically possible but costlier in terms of theorem availability.",
+      "Formal Logic Observers: Analytical perspective (analytical/analytical) \u2014 assess the independence result and logical structure. No stake in adoption; purely epistemic position."
     ],
-    "logic_rationale": "This constraint is a canonical Mountain. Extractiveness (ε=0.02) is near zero; AC is a logical principle, not a mechanism for resource transfer. The 'cost' to constructivists is philosophical, not material. Suppression (0.04) is minimal; while ZFC is dominant, alternative systems like ZF and constructive mathematics are valid fields of study. The NL profile is definitive: AC emerges naturally from logical necessity (emerges_naturally=true), it is a fundamental, unavoidable part of the ZFC system (accessibility_collapse=0.98), and it cannot be altered or resisted within that system (resistance=0.02).",
-    "perspectival_gap": "There is no perspectival gap in classification, only in philosophical stance. The extremely low base extractiveness (ε=0.02) and suppression (0.04) ensure that from every possible index (P,T,E,S), the constraint classifies as a Mountain. The disagreement between a mainstream mathematician and a constructivist is not about the structure of the constraint—both recognize it as a fixed, unchangeable rule—but about whether this particular Mountain is a desirable feature of the mathematical landscape. This demonstrates the robustness of the classification system in distinguishing structural properties from normative judgments.",
-    "directionality_logic": "Beneficiaries (ZFC practitioners) and victims (constructivists) are declared to capture the historical and philosophical tension surrounding AC. However, because base extractiveness (ε) is negligible, the directionality `d` derived from these roles has almost no impact on the effective extraction χ. For all observers, χ remains near zero, reinforcing the Mountain classification. The 'extraction' is purely conceptual: the imposition of a non-constructive mode of reasoning.",
-    "mandatrophy_analysis": "This case is a primary diagnostic for preventing mandatrophy. A naive analysis might label AC a 'Rope' for its utility or a 'Snare' for its philosophical 'coercion' of constructivists. Both would be incorrect. The system correctly identifies that the structural metrics (ε, suppression, resistance, etc.) are determinative. AC is not a coordination agreement that can be renegotiated (not a Rope) nor an actively enforced system of extraction (not a Snare). It is a fundamental, unchangeable axiom of a logical system, and the framework correctly classifies it as a Mountain from all perspectives."
+    "logic_rationale": "Extractiveness (0.12): Very low. AC does not extract resources or benefits from a subset of agents. Rather, AC is a shared logical foundation that benefits all mathematicians equally. The low value reflects that there is no asymmetric flow of costs or benefits \u2014 adoption is purely a coordination mechanism around a proven powerful tool. Suppression (0.03): Minimal. There is no coercion enforcing AC adoption. Constructivists and intuitionists can and do develop alternative mathematics; their exit is expensive (theorem availability decreases) but not forbidden. Suppression would require forbidding alternative frameworks \u2014 mathematicians do not do this. Theater ratio (0.15): Very low. AC is not performative. Mathematicians invoke AC precisely where needed for proofs; when an AC-free proof exists, mathematicians prefer it (lower complexity, stronger result). The small non-zero theater reflects minor pedagogical presentation (e.g., introductory mathematics texts sometimes invoke AC informally without detailed discussion) but this is negligible. Accessibility collapse (0.92): Very high. Once the logical independence of AC is understood, mathematicians cannot 'unsee' its necessity for certain theorems. The structure of the infinite forces the question. Resistance (0.08): Very low. The philosophical debate over AC (Brouwer, constructivism) lasted ~60 years; today, >90% of mathematicians work within classical logic where AC is standard. The remaining resistance comes from constructivists, who are a small, organized minority with full exit rights.",
+    "perspectival_gap": "Unlike the verification bottleneck exemplar, the Axiom of Choice produces MINIMAL perspectival gap. All perspectives classify as Mountain or Rope. The working mathematician sees it as an immutable logical constraint; the formal logician sees logical independence; the axiom system sees pure coordination; the mathematical community sees pragmatic necessity. No perspective experiences AC as extraction, suppression, or enforcement. This uniformity is characteristic of genuine natural laws \u2014 the structure of the phenomenon is invariant across all reasonable measurement methodologies and observer positions. The small gap that exists (Rope perspective for axiom systems vs Mountain perspective for pure logic) reflects the distinction between the abstract logical structure (invariant, mountain) and the practical adoption mechanism (coordinated choice, rope). Both are correct; they emphasize different aspects of the same phenomenon.",
+    "directionality_logic": "AC has no directionality in the sense of beneficiary/victim dynamics. There is no agent d-value because there is no extraction structure. All agents (mathematicians, logicians, axiom systems) benefit equally from AC or can easily exit to alternative frameworks. The constraint is structural, not relational. The absence of directionality overfitting is itself significant \u2014 it confirms that AC is not an extraction mechanism but a logical property.",
+    "mandatrophy_analysis": "AC RESOLVES MANDATROPHY BY BEING GENUINELY NON-EXTRACTIVE. The mandatrophy is the risk that mathematicians have mislabeled a coordinated fiction (voluntary axiom adoption) as a natural law. Resolution: (1) Independence result is proven \u2014 AC is irreducible in classical logic. (2) Exit is possible \u2014 constructivists and intuitionists can and do develop alternative mathematics. (3) Adoption is pragmatic \u2014 mathematicians choose AC because it works, not because they are forced. (4) No suppression \u2014 alternative frameworks are published and studied openly. (5) Theater is minimal \u2014 AC is invoked precisely where needed. These five facts together constitute a complete resolution: AC is a natural law of logical structure, not a Snare masquerading as a Mountain. The mountain classification is secure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
+      "zorn_lemma",
       "well_ordering_theorem",
-      "zorns_lemma",
-      "banach_tarski_paradox"
+      "tychonoff_theorem"
     ],
-    "dual_formulation_note": "The Axiom of Choice is a foundational constraint that enables other mathematical results, which can be modeled as their own downstream constraints. For example, the Well-Ordering Theorem and Zorn's Lemma are logically equivalent to AC and thus share its Mountain classification."
-  }
+    "dual_formulation_note": "AC is a foundational axiom that structurally supports multiple dependent constraints (Zorn's lemma, well-ordering theorem, Tychonoff's theorem, Hausdorff maximality lemma). These downstream constraints have higher extractiveness values reflecting the empirical contestedness of their consequences (e.g., Tychonoff's infinitary compactness was controversial for topological spaces). AC itself remains a pure mountain; the downstream consequences inherit AC's independence structure but face additional philosophical debates."
+  },
+  "directionality_overrides": []
 }

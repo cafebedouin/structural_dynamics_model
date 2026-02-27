@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "notary_ink_dependency",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Notary/Wet-Ink Persistence",
+    "topic_domain": "legal/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "notary_profession",
+      "document_custodians"
+    ],
+    "victims": [
+      "remote_transactors",
+      "efficiency_of_commerce"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Remote Transactor",
+      "comment": "The individual who is unable to easily access a notary and is forced to comply with the in-person signature requirement to complete a transaction. Trapped due to lack of alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Notary Profession",
+      "comment": "Notaries benefit from the continued requirement for their services, experiencing this as a coordination mechanism that maintains their professional relevance and income."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Document Custodians",
+      "comment": "Large institutions that are legally required to maintain document custody, they benefit from the persistence of paper processes even if they could technically adopt digital workflows. They are constrained by compliance concerns."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes the mix of coordination (security and authentication) and extraction (rent-seeking and inefficiency) inherent in the wet-ink dependency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "digital_signature_trust",
+      "question": "How reliable and resistant to fraud are digital signature technologies, and what level of public trust do they command?",
+      "resolution_mechanism": "Ongoing audits of digital signature platforms, analysis of fraud rates compared to wet-ink signatures, and surveys of public confidence in digital signatures.",
+      "impact": "If high reliability and trust: Pressure increases to relax wet-ink dependency. If low: The status quo persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reliability and trust in digital signature technology"
+    },
+    {
+      "id": "regulatory_capture_risk",
+      "question": "To what extent is the persistence of wet-ink requirements driven by regulatory capture or lobbying by the notary profession?",
+      "resolution_mechanism": "Analysis of campaign finance and lobbying records, studies of regulatory decision-making processes, and public interest litigation challenging restrictive regulations.",
+      "impact": "If high regulatory capture: Wet-ink dependency may persist despite technological advancements. If low: Regulations may adapt more readily to new technologies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which wet-ink persistence is driven by regulatory capture"
+    },
+    {
+      "id": "security_vs_convenience",
+      "question": "What is the acceptable trade-off between security and convenience in legal document signing?",
+      "resolution_mechanism": "Legal and philosophical debates, policy discussions, cost-benefit analyses of different authentication methods.",
+      "impact": "A strong preference for security will lead to the continuation of stringent requirements. A higher value placed on convenience will push towards more flexible alternatives.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Balance between security and convenience in legal documents"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The persistence of notary and wet-ink requirements for legal documents reflects a balance between ensuring document integrity and creating barriers to efficient transactions. While intended to provide security and authentication, these requirements can impose significant costs on individuals and businesses, particularly those in remote locations or lacking easy access to notarial services. The constraint can be viewed as a tangled rope, where coordination (security) is intertwined with extraction (rent-seeking and inefficiency).",
+    "key_agents": [
+      "Remote Transactors: Primary target (powerless/trapped) \u2014 bears the cost of inconvenience and delays.",
+      "Notary Profession: Primary beneficiary (institutional/arbitrage) \u2014 benefits from the continued demand for their services.",
+      "Document Custodians: Secondary beneficiary (powerful/constrained) \u2014 benefits from existing procedures, constrained by legal requirements.",
+      "Efficiency of Commerce: Indirect victim (powerless/trapped) \u2014 overall economic activity is hampered by the friction introduced by the requirement."
+    ],
+    "logic_rationale": "Extractiveness: Moderate. The requirement extracts time and money from remote transactors but also provides security to the legal system. Suppression: High. Alternatives like digital signatures are suppressed by legal and institutional inertia. Theater Ratio: Moderate-High. While there is some functional benefit to the wet-ink requirement (verification of identity), the requirement is also performative (gives the impression of security without necessarily increasing it).",
+    "perspectival_gap": "The remote transactor sees this as a snare because they bear the costs. The notary profession sees this as a rope, as it is a coordination mechanism to provide their service. The document custodians sees this as a tangled rope, because they benefit from the stability, but it limits their efficiency.",
+    "directionality_logic": "Remote transactors are the primary victims, bearing the cost of the constraint in terms of time, money, and convenience. The notary profession benefits directly from the requirement, as it guarantees demand for their services. Document custodians benefit from the persistence of paper processes even if they could technically adopt digital workflows. The directionality values are derived from these structural relationships."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_signature_adoption",
+      "legal_document_security"
+    ]
+  },
+  "directionality_overrides": []
+}

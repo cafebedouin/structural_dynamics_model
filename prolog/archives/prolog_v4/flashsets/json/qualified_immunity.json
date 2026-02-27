@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "qualified_immunity",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Qualified Immunity Doctrine",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_officers",
+      "municipalities"
+    ],
+    "victims": [
+      "victims_of_police_misconduct"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Victims of Police Misconduct",
+      "comment": "Perspective of victims who are often unable to seek redress for rights violations due to the immunity shield."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Law Enforcement Officers",
+      "comment": "Perspective of law enforcement officers who are protected from liability, allowing them to perform their duties without fear of frivolous lawsuits."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer",
+      "comment": "Analyzes the balance between protecting officers and providing recourse for victims, recognizing both coordination and extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Judiciary",
+      "comment": "The judiciary finds itself upholding a doctrine with questionable origins, and of questionable value. The theater is in the continued upholding of the doctrine despite its flaws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "balancing_test",
+      "question": "How can a fair balancing test be developed and applied to effectively weigh the need to protect law enforcement officers from unwarranted liability against the imperative of providing recourse for victims of police misconduct?",
+      "resolution_mechanism": "Develop and apply metrics to measure the degree to which qualified immunity protects officers from liability for conduct violating constitutional rights, and whether those rights were clearly established at the time.",
+      "impact": "If the test favors officers, victims have difficulty obtaining redress. If the test favors victims, officers may hesitate in their duties.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "How to balance interests."
+    },
+    {
+      "id": "clearly_established_law",
+      "question": "How should \"clearly established law\" be defined and determined to ensure that law enforcement officers have fair notice of the legal boundaries of their conduct while also safeguarding the ability of victims to seek redress for violations of their constitutional rights?",
+      "resolution_mechanism": "Legal scholarship, expert panels",
+      "impact": "If narrowly defined, less accountability for officers. If broadly defined, more accountability for officers.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Meaning of clearly established law."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Qualified immunity is a U.S. legal doctrine that shields government officials from liability in civil lawsuits unless their conduct violates clearly established statutory or constitutional rights, and there's no precedent saying they acted wrongly. This protection is provided only for liability in civil lawsuits; qualified immunity provides no protection from criminal prosecution. The doctrine aims to balance the need to hold public officials accountable when they exercise power irresponsibly and the need to shield them from harassment, distraction, and liability when they perform their duties reasonably.",
+    "key_agents": [
+      "Law Enforcement Officers: Primary beneficiaries, protected from liability.",
+      "Victims of Police Misconduct: Primary targets, unable to seek redress.",
+      "Municipalities: Secondary beneficiaries, shielded from financial burden of lawsuits.",
+      "Judiciary: Interprets and applies the doctrine, balancing competing interests.",
+      "Analytical Observer: Assesses the overall impact of the doctrine on justice and accountability."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The doctrine significantly limits the ability of victims of police misconduct to seek legal redress, effectively extracting their right to sue for damages. Suppression (0.70): High. The 'clearly established law' standard sets a high bar for overcoming qualified immunity, suppressing potential lawsuits and limiting accountability for officials. Theater Ratio (0.75): High. The doctrine is functionally effective in shielding officials from liability, but the judiciary's continued upholding of the doctrine despite its flaws constitutes a form of theater.",
+    "perspectival_gap": "Victims see a snare, law enforcement see a rope, and analytical observers see a tangled rope because the doctrine simultaneously protects officers and limits recourse for victims, creating a complex interplay of coordination and extraction. The judiciary perspective is that of a piton, as it is often forced to uphold the problematic doctrine.",
+    "directionality_logic": "Law enforcement officers benefit from the protection afforded by the doctrine, experiencing it as a coordination mechanism that enables them to perform their duties without fear of frivolous lawsuits. Victims of police misconduct bear the costs of the doctrine, as it limits their ability to seek redress for rights violations. The judiciary must balance these competing interests when applying the doctrine.",
+    "mandatrophy_analysis": "The qualified immunity doctrine exhibits characteristics of both a coordination mechanism (protecting officers) and an extraction mechanism (limiting recourse for victims). The tangled rope classification captures this duality, acknowledging both the benefits and the costs of the doctrine. The competing perspectives (snare vs rope) highlight the need for careful consideration of the doctrine's impact on all stakeholders."
+  },
+  "network": {
+    "affects_constraints": [
+      "civil_asset_forfeiture",
+      "excessive_force"
+    ]
+  },
+  "directionality_overrides": []
+}

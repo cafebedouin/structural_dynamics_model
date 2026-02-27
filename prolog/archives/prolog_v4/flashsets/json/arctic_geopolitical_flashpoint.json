@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "arctic_geopolitical_flashpoint",
+    "version": "1.0",
+    "generated_date": "2024-11-02",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.5,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Melting Ice and the Scramble for Greenland",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "great_power_actors",
+      "mining_corporations"
+    ],
+    "victims": [
+      "greenlandic_autonomy",
+      "arctic_ecosystems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Greenlandic Autonomy",
+      "comment": "Greenland's limited population and economic dependence constrain its ability to resist external pressures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Great Power Actors (US, China, Russia)",
+      "comment": "These nations benefit from access to resources and strategic positioning, leveraging economic and political influence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The melting ice presents both opportunities for resource extraction and heightened geopolitical risks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Denmark",
+      "comment": "Denmark, holding sovereignty, is caught between strategic interests and maintaining regional stability and navigating a complex relationship with Greenland."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Arctic Ecosystems",
+      "comment": "Ecosystems are vulnerable to resource extraction, pollution, and increased maritime traffic. The Arctic ecosystems have no exit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "greenlandic_sovereignty_threshold",
+      "question": "At what point does external economic influence compromise Greenland's political autonomy?",
+      "resolution_mechanism": "Analysis of Greenlandic policy decisions under varying degrees of foreign investment and influence.",
+      "impact": "If compromised: shifts toward snare classification. If maintained: remains tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold of economic influence impacting Greenlandic sovereignty."
+    },
+    {
+      "id": "resource_curse_manifestation",
+      "question": "Will Greenland successfully manage its resource wealth, or will it succumb to the 'resource curse'?",
+      "resolution_mechanism": "Monitoring Greenlandic economic development, corruption levels, and distribution of resource revenues.",
+      "impact": "If resource curse manifests: shifts toward snare classification. If managed effectively: remains tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Potential for 'resource curse' to impact Greenland's development."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Rapid Arctic ice melt has exposed massive critical mineral reserves and opened the Northern Sea Route (NSR), turning Greenland into a strategic 'chessboard.' This has triggered increased geopolitical interest and economic activity. The melting ice creates both opportunities for resource extraction and heightened geopolitical risks involving multiple actors with competing interests. Greenland's autonomy and Arctic ecosystems are vulnerable.",
+    "key_agents": [
+      "Great Power Actors: Primary beneficiaries (institutional/arbitrage) - seeking resource access and strategic positioning.",
+      "Greenlandic Autonomy: Primary victim (powerless/trapped) - facing external pressures on its political and economic self-determination.",
+      "Arctic Ecosystems: Secondary victim (powerless/trapped) - impacted by resource extraction, pollution, and maritime traffic.",
+      "Denmark: Moderate Agent (moderate/constrained) - balancing sovereign responsibilities with regional and global interests.",
+      "Mining Corporations: Beneficiaries (powerful/arbitrage) - pursuing resource extraction opportunities."
+    ],
+    "logic_rationale": "Extractiveness (0.6): Significant. Great powers and mining corporations extract resources and strategic advantages, placing considerable pressure on Greenlandic autonomy and the fragile Arctic environment. Suppression (0.5): Moderate. Greenland's limited capacity to resist external pressures and the suppression of alternative development paths contribute to the constraint's coercive nature. Theater ratio (0.4): Moderate. There is some genuine economic activity and infrastructure development, but also performative displays of power and influence by external actors.",
+    "perspectival_gap": "Great power actors see this as a coordination problem and benefit (Rope), while Greenland faces a snare, with limited options to resist extraction and environmental degradation. An analytical observer recognizes the mixed coordination and extraction (Tangled Rope). Denmark's perspective is a hybrid (Tangled Rope) based on its own mixed constraints and coordination aims.",
+    "directionality_logic": "Great power actors and mining corporations benefit from resource access and strategic positioning (low d). Greenland faces pressures on its autonomy and environment (high d). Denmark's perspective is a balance (moderate d) given its role and responsibilities."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_change_arctic_feedback_loop",
+      "critical_minerals_supply_chain"
+    ],
+    "dual_formulation_note": "The Arctic geopolitical flashpoint is a distinct constraint influenced by broader climate change dynamics and global supply chain vulnerabilities."
+  },
+  "directionality_overrides": []
+}

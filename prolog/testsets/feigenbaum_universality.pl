@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: feigenbaum_universality
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_feigenbaum_universality, []).
@@ -31,7 +32,6 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
@@ -41,9 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,21 +55,34 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: feigenbaum_universality
  *   human_readable: Feigenbaum Constants (Universality in Chaos)
- *   domain: mathematical/physical
+ *   domain: mathematics/dynamical_systems/chaos_theory
  *
  * SUMMARY:
- *   The Feigenbaum constants (e.g., δ ≈ 4.669) describe universal scaling
- *   properties for systems exhibiting period-doubling bifurcations on their
- *   route to chaos. This mathematical law dictates that the geometry of this
- *   transition is identical across disparate physical systems (e.g., fluid
- *   dynamics, electronic circuits, population models), regardless of their
- *   specific underlying equations. It functions as a fixed, unchangeable
- *   feature of a certain class of nonlinear dynamics.
+ *   Feigenbaum universality is a mathematical and physical property of
+ *   dynamical systems undergoing period-doubling bifurcation cascades. The
+ *   Feigenbaum constants (δ ≈ 4.669 for the bifurcation-onset scaling ratio,
+ *   α ≈ 2.503 for the spatial scaling) characterize the accumulation rate at
+ *   which bifurcations compress as a control parameter is varied, and the
+ *   fractal dimension of chaotic attractors. These constants are invariant:
+ *   they appear in logistic maps, fluid flows, electronic circuits, laser
+ *   systems, and any other nonlinear dynamical system with unimodal maps and
+ *   period-doubling routes to chaos. The universality is a mathematical
+ *   theorem proven rigorously by Feigenbaum (1978), Collet-Eckmann, Lanford,
+ *   and others over the subsequent decades. Unlike the verification
+ *   bottleneck (which mixes coordination and extraction), Feigenbaum
+ *   universality admits no perspectival divergence: all observers (theorists,
+ *   experimentalists, engineers, mathematicians) experience the same
+ *   constraint — the constants are what they are, across all physical
+ *   substrates and measurement methodologies. This is a pure mountain: zero
+ *   degrees of freedom, unchangeable across contexts, emerges from the
+ *   intrinsic mathematical structure of nonlinear iteration.
  *
- * KEY AGENTS (by structural relationship):
- *   - The System State (e.g., a variable in a logistic map): Primary target (powerless/trapped) — its evolution is dictated by the constant.
- *   - The Control Engineer: Observer/User (institutional/mobile) — uses knowledge of the constant to predict and avoid chaotic regimes.
- *   - The Theoretical Physicist: Analytical observer — studies the constant as a fundamental law.
+ * KEY AGENTS:
+ *   - Mathematical Community: Proves and refines universality theorems — beneficiary of the constraint as it deepens understanding of dynamical systems
+ *   - Experimental Physicists: Measure Feigenbaum constants in real systems — constrained to observe the predicted values; no exit option
+ *   - Applied Engineers: Design systems with oscillations or feedback loops — must account for Feigenbaum scaling when avoiding or inducing chaos
+ *   - Computational Scientists: Implement bifurcation algorithms — constrained by the mathematical invariance; no numerical workaround exists
+ *   - Analytical Observer: Universal mathematical and physical truth — the constraint is invariant across all contexts and observers
  */
 
 /* ==========================================================================
@@ -77,91 +90,58 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: As a fundamental mathematical constant, it has near-zero
-% structural extraction or suppression. It doesn't extract value; it describes
-% an inherent property of a system's state space. The previous values (0.3/0.2)
-% were based on a metaphorical interpretation of "extracting uniqueness" which
-% is not a structural property. These values are corrected to meet the Mountain
-% classification thresholds.
-domain_priors:base_extractiveness(feigenbaum_universality, 0.05).
-domain_priors:suppression_score(feigenbaum_universality, 0.01).
-domain_priors:theater_ratio(feigenbaum_universality, 0.0).
+domain_priors:base_extractiveness(feigenbaum_universality, 0.12).
+domain_priors:suppression_score(feigenbaum_universality, 0.03).
+domain_priors:theater_ratio(feigenbaum_universality, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(feigenbaum_universality, extractiveness, 0.05).
-narrative_ontology:constraint_metric(feigenbaum_universality, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(feigenbaum_universality, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(feigenbaum_universality, extractiveness, 0.12).
+narrative_ontology:constraint_metric(feigenbaum_universality, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(feigenbaum_universality, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. A high accessibility_collapse score (>=0.85)
-% indicates alternatives are structurally foreclosed. A low resistance
-% score (<=0.15) indicates no meaningful opposition exists.
-narrative_ontology:constraint_metric(feigenbaum_universality, accessibility_collapse, 0.98).
-narrative_ontology:constraint_metric(feigenbaum_universality, resistance, 0.01).
+narrative_ontology:constraint_metric(feigenbaum_universality, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(feigenbaum_universality, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(feigenbaum_universality, mountain).
 narrative_ontology:human_readable(feigenbaum_universality, "Feigenbaum Constants (Universality in Chaos)").
-narrative_ontology:topic_domain(feigenbaum_universality, "mathematical/physical").
+narrative_ontology:topic_domain(feigenbaum_universality, "mathematics/dynamical_systems/chaos_theory").
 
-% --- Binary flags ---
-% No active enforcement is required for a mathematical law.
-
-% --- Emergence flag (required for mountain constraints) ---
-% This flag is required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
 domain_priors:emerges_naturally(feigenbaum_universality).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a uniform-type Mountain (a law of nature), this constraint does not have
-% structural beneficiaries or victims in the sense of coordination or extraction.
-% Its utility to engineers is an application of knowledge about the Mountain,
-% not a coordination function provided by it. No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% This is a uniform-type constraint (Mountain-only). The classification is
-% invariant across all perspectives because the base metrics (ε, suppression)
-% are extremely low, forcing a Mountain classification regardless of the
-% scaling factors f(d) and σ(S). The previous Rope/Snare classifications were
-% based on metaphorical interpretations that are structurally incorrect.
-
-% PERSPECTIVE 1: THE SYSTEM STATE (MOUNTAIN)
-% For the mathematical state variable, the scaling constant is an absolute,
-% unchangeable feature of the nonlinear landscape. It has no agency.
-constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE CONTROL ENGINEER (MOUNTAIN)
-% For an engineer, the constant is not a coordination tool (Rope) but an
-% unchangeable law of nature (Mountain) that they must design around.
-% Their ability to use this knowledge does not change the nature of the constraint itself.
-constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
-    context(agent_power(institutional),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The default analytical context correctly identifies the constant as a
-% fundamental, unchangeable feature of mathematics.
+% PERSPECTIVE 1: MATHEMATICAL OBSERVER (MOUNTAIN) — Feigenbaum universality is a proven mathematical fact: all one-parameter families of unimodal maps exhibiting period-doubling cascades converge to the same universal constants (δ and α) at their onset of chaos. This is an invariant property of nonlinear dynamics, independent of the specific physical or computational substrate. Zero degrees of freedom. The constants emerge from the topology and measure-theoretic structure of iterated maps.
 constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
     context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: EXPERIMENTAL PHYSICIST (MOUNTAIN) — Any experiment that realizes a period-doubling bifurcation cascade (fluid turbulence, electronic oscillators, chemical reactions, laser dynamics) observes the same universal scaling. No experimental design choice can avoid this. The constants constrain the observable bifurcation spectrum — measurement cannot reveal any other values. Maximum accessibility collapse: the phenomenon is mathematically forced, not contingent.
+constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(trapped),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: APPLIED ENGINEER (MOUNTAIN) — Engineers designing oscillatory systems (power converters, communication circuits, mechanical resonators) cannot escape Feigenbaum scaling. The onset of chaos occurs at parameter values set by δ, regardless of material or design intent. The constraint is not negotiable through iteration or innovation — it is a property of the nonlinear equations themselves. High resistance to engineering workarounds: the constants are invariant across scales.
+constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: PHYSICS COMMUNITY (MOUNTAIN) — The universality of Feigenbaum constants has been confirmed across 45+ years and dozens of physical systems. No institutional framework, funding priority, or theoretical framework has successfully challenged the constants' empirical or theoretical status. The community's 'constraint' is that any credible theory of bifurcation dynamics must account for these values. Acceptance is not coercive — it is the only mathematically coherent position.
+constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
+    context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
@@ -172,21 +152,26 @@ constraint_indexing:constraint_classification(feigenbaum_universality, mountain,
 
 :- begin_tests(feigenbaum_universality_tests).
 
-test(classification_invariance, [nondet]) :-
-    % Verify that the constraint is a uniform-type Mountain from multiple key perspectives.
-    constraint_indexing:constraint_classification(feigenbaum_universality, Type1, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(feigenbaum_universality, Type2, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(feigenbaum_universality, Type3, context(agent_power(analytical), _, _, _)),
-    Type1 == mountain,
-    Type2 == mountain,
-    Type3 == mountain.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(feigenbaum_universality, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(feigenbaum_universality, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_threshold_adherence) :-
-    % Verify the metrics are consistent with the Mountain classification.
-    narrative_ontology:constraint_metric(feigenbaum_universality, extractiveness, E),
-    narrative_ontology:constraint_metric(feigenbaum_universality, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(feigenbaum_universality, ExtMetricName, E),
+    domain_priors:suppression_score(feigenbaum_universality, S),
     E =< 0.25,
     S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(feigenbaum_universality),
+    narrative_ontology:constraint_metric(feigenbaum_universality, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(feigenbaum_universality, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(feigenbaum_universality_tests).
 
@@ -196,80 +181,89 @@ test(mountain_threshold_adherence) :-
 
 /**
  * LOGIC RATIONALE:
- *   This file was regenerated to correct a MOUNTAIN_METRIC_CONFLICT and a
- *   MISSING_NL_PROFILE error. The original file claimed the constraint was a
- *   Mountain but assigned base_extractiveness (0.3) and suppression_score (0.2)
- *   that violated the strict Mountain thresholds (ε ≤ 0.25, suppression ≤ 0.05).
- *   It also lacked the required Natural Law profile metrics (accessibility_collapse,
- *   resistance) and the emerges_naturally flag, which are mandatory for a
- *   Mountain to pass the linter and the engine's certification chain.
- *
- *   The metrics have been corrected to ε=0.05 and suppression=0.01, and the
- *   full NL profile has been added, reflecting the structural reality that a
- *   mathematical law does not perform extraction or require active suppression.
- *   It is a feature of the landscape.
+ *   Extractiveness (0.12): Minimal. Feigenbaum universality does not extract value from any agent or redirect resources. It is a passive mathematical property. The low extractiveness reflects that the constants are descriptive facts, not regulatory or coercive mechanisms. Suppression (0.03): Negligible. The constants impose no barriers to action or knowledge — they are freely publishable, computationally verifiable, and experimentally observable. Resistance to alternatives is not due to suppression but to mathematical necessity. Theater ratio (0.15): Very low. Feigenbaum universality is substantive physics, not performative. Experimental verification is direct: measure the bifurcation cascade, compute the scaling ratios, compare to δ and α. The slight theater (0.15 rather than 0.0) accounts for the inevitably approximate nature of experimental and computational procedures — no measurement is perfect, and numerical resolution has limits. But the core phenomenon is purely functional: the math works, the physics confirms it, and no theatrical framing is required. The constraint has remained stable across 45 years of inquiry (interval 1978-2023). The theater ratio has risen slightly (0.10 → 0.15) as numerical methods have become more sophisticated, introducing more technical complexity in the verification process, but the underlying constraint has not changed.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. This is a uniform-type Mountain. The previous
- *   classifications of Rope (for an engineer) and Snare (for a simulation)
- *   were metaphorical. An engineer *uses* knowledge of the Mountain; the
- *   constraint itself is not a coordination Rope. A simulation hits a
- *   computational limit *because of* the Mountain's properties; the constraint
- *   is not an extractive Snare. The classification is invariant.
+ *   There is no perspectival gap. All observers — mathematical, experimental, applied, computational, institutional — agree that Feigenbaum constants are invariant properties of period-doubling dynamics. A mathematician sees the theorem; an experimentalist sees the scaling in fluid turbulence; an engineer sees it in their oscillator design; a computational physicist sees it in their bifurcation diagram. All see the same thing, from different angles, but arriving at identical conclusions. This is the defining mark of a mountain constraint: perspectival convergence rather than divergence. Each perspective confirms the others; none contradicts. The constraint is not experienced as coercive because it is not negotiable — it is simply true.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain, beneficiary and victim declarations are not applicable.
- *   The concept of directionality (d) does not meaningfully alter the
- *   classification due to the extremely low base extraction.
+ *   Directionality derivation does not apply to mountains. Feigenbaum universality has no beneficiaries or victims: it is a structural property of nonlinear systems, not an allocation mechanism or power relation. All agents are equally constrained by the constants; none extracts value or bears costs. The constraint is symmetrical across all observers and contexts. The mathematical community benefits from the universality as a theoretical achievement, but this is a side effect of the constraint's truth, not a function of the constraint itself. The powerless experimental physicist is not victimized by having to observe the predicted values — they are simply learning the truth about nature. The applied engineer is not extracted from by having to account for Feigenbaum scaling — they are simply designing with knowledge of a physical boundary. All directionality values (d) collapse to the null case: the constraint is not directional.
  *
  * MANDATROPHY ANALYSIS:
- *   By correctly classifying this as a Mountain, we avoid mislabeling a
- *   fundamental law of nature as a social or economic construct like a Rope
- *   or Snare. This upholds the principle that the classification system
- *   describes the constraint's structure, not just how agents interact with it.
+ *   Mandatrophy resolution is not applicable to Feigenbaum universality because the constraint is unanimously classified as a mountain across all perspectives. There is no ambiguity about whether the constraint serves coordination or extraction — it serves neither. It is a mathematical fact, independent of institutional framing, policy choice, or observational methodology. The constraint cannot be mislabeled as a snare (extraction mechanism) or a rope (coordination mechanism) because its structure is neither. It is a constraint on the possible behaviors of nonlinear dynamical systems, not a social or institutional arrangement. The six-type taxonomy is designed to classify constraints that have distributional consequences (who benefits, who bears costs); Feigenbaum universality has no distributional dimension. It is pure mathematical structure. The mountain classification is not contingent on perspective or context — it is robust.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_feigenbaum_universality,
-    'Is the Feigenbaum constant a true universal, or does it fail for systems with non-quadratic extrema?',
-    'Numerical audits of bifurcation rates in maps with different critical orders (e.g., |x|^z where z is not 2).',
-    'If it fails, its classification would shift from a universal Mountain to a more context-dependent constraint. If it holds, its status as a fundamental Mountain is reinforced.',
+    three_dimensional_universality,
+    'Do Feigenbaum constants apply to period-doubling cascades in three or higher-dimensional systems, or only to one-dimensional maps and two-dimensional flows?',
+    'Rigorous proof or counterexample for 3D bifurcation universality; experimental verification in high-dimensional chaotic systems',
+    'If universal in 3D+: the scope of the mountain widens (feature, not bug). If limited to 1D/2D: a boundary condition on the mountain — still rigorous, but with known domain limits.',
     confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(three_dimensional_universality, empirical, 'Whether Feigenbaum constants generalize to higher-dimensional systems').
+
+omega_variable(
+    smooth_vs_discontinuous_maps,
+    'Are Feigenbaum constants invariant only for smooth, differentiable maps, or do they extend to piecewise-smooth or discontinuous systems?',
+    'Rigorous classification of bifurcation cascades in discontinuous maps; experimental realization of period-doubling in systems with friction transitions or impact events',
+    'If smooth-only: mountain has a refined specification. If universal for discontinuous maps: even broader universality.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(smooth_vs_discontinuous_maps, empirical, 'Whether universality holds for discontinuous dynamical systems').
+
+omega_variable(
+    computational_approximation_limits,
+    'What precision of numerical simulation is required to resolve Feigenbaum constants to within observable error? Is floating-point computation fundamentally limited?',
+    'Systematic study of round-off error propagation in bifurcation computations; comparison with arbitrary-precision arithmetic implementations',
+    'If unlimited precision achievable: mountain stands. If floating-point limits matter: mountain is unchanged (computation is epistemology, not ontology) but requires specification of epistemological bounds.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(computational_approximation_limits, empirical, 'Computational precision requirements for verifying Feigenbaum constants').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(feigenbaum_universality, 1975, 2026).
+narrative_ontology:interval(feigenbaum_universality, 1978, 2023).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required. Base extractiveness (0.05) is below the 0.46 threshold for
-% mandatory temporal tracking. As a mathematical constant, its properties
-% do not drift over time.
+% Theater ratio over time
+narrative_ontology:measurement(feig_tr_t0, feigenbaum_universality, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(feig_tr_t25, feigenbaum_universality, theater_ratio, 25, 0.15).
+narrative_ontology:measurement(feig_tr_t45, feigenbaum_universality, theater_ratio, 45, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(feig_be_t0, feigenbaum_universality, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(feig_be_t25, feigenbaum_universality, base_extractiveness, 25, 0.12).
+narrative_ontology:measurement(feig_be_t45, feigenbaum_universality, base_extractiveness, 45, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No coordination type, floor override, or network relationships are defined
-% for this fundamental mathematical constraint.
+narrative_ontology:coordination_type(feigenbaum_universality, information_standard).
+narrative_ontology:affects_constraint(feigenbaum_universality, route_to_chaos_via_period_doubling).
+narrative_ontology:affects_constraint(feigenbaum_universality, universal_scaling_in_turbulence).
+narrative_ontology:affects_constraint(feigenbaum_universality, bifurcation_onset_prediction).
+
+% DUAL FORMULATION NOTE:
+% Feigenbaum universality is a family of mathematically related results. The primary constraint (feigenbaum_universality) covers the universal constants δ and α in period-doubling cascades. Downstream constraints include specific realizations of period-doubling in particular physical systems (turbulence, electronics, chemistry), which are constrained by but not identical to the abstract universality. The network relationship reflects that the abstract mathematical property (this constraint) implies properties of concrete physical realizations (downstream constraints).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed. The classification is insensitive to directionality
-% due to the low base metrics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

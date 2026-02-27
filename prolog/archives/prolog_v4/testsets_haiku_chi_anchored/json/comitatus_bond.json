@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "comitatus_bond",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "comitatus"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.65,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Germanic Comitatus Code",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ring_giver_lord",
+      "thane_martial_elite"
+    ],
+    "victims": [
+      "commoner_producers",
+      "subordinate_tribes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Tributary Commoner",
+      "comment": "PERSPECTIVE 1: TRIBUTARY COMMONER (SNARE) \u2014 Bound to produce surplus for the comitatus while unable to exit. Faces military conscription obligations and extraction of goods with no reciprocal protection beyond minimal subsistence. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Thane Warrior",
+      "comment": "PERSPECTIVE 2: THANE WARRIOR (TANGLED ROPE) \u2014 Receives gifts, land, and status from the lord; coordinates loyalty, raiding, and defense within the comitatus structure. But also bears obligation to die in the lord's service and cannot leave without disgrace. d\u22480.58, f(d)\u22480.72, \u03c3=0.9 \u2192 \u03c7\u22480.30."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Ring-Giver Lord",
+      "comment": "PERSPECTIVE 3: RING-GIVER LORD (ROPE) \u2014 Benefits from the coordinated loyalty structure. Distributes gifts (rings, gold, weapons) to secure thane allegiance. Experiences the comitatus as a coordination mechanism solving the collective-action problem of defense and territorial control. d\u22480.10, f(d)\u22480.05, \u03c3=0.9 \u2192 \u03c7\u22480.002. Minimal effective extraction; net beneficiary through coordination surplus."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Subordinate Tribe",
+      "comment": "PERSPECTIVE 4: SUBORDINATE TRIBE (SNARE) \u2014 Integrated into the comitatus hierarchy through conquest or vassalage. Extracts military value for the overlord but retains no independent exit option; absorption into the comitatus structure is mandatory. d\u22480.85, f(d)\u22481.18, \u03c3=0.9 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Feudal Successor Institutions",
+      "comment": "PERSPECTIVE 5: FEUDAL SUCCESSOR INSTITUTIONS (SCAFFOLD) \u2014 Early medieval successor states (Frankish, Anglo-Saxon kingdoms) gradually formalize and institutionalize the comitatus into hereditary feudalism with written charters, land tenure codes, and manorial obligations. The raw comitatus extraction mechanism is being replaced by contractual reciprocity and institutional delegation. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.18. Lower effective extraction because institutional successors have agency in codifying the relationship."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Historical Mythmaking System",
+      "comment": "PERSPECTIVE 6: HISTORICAL MYTHMAKING (PITON) \u2014 By the High Middle Ages, the comitatus is remembered as a purely voluntary, honorific relationship of mutual loyalty rather than as an extractive institution. Medieval epics (Beowulf, Nibelungenlied) mythologize the bond as noble and reciprocal. The historical reality of coercion and extraction is obscured by performative celebration of loyalty. theater_ratio=0.55, indicating significant but not dominant performative content. The institutional memory serves to legitimize successor feudal structures."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural Necessity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / STRUCTURAL NECESSITY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the comitatus appears as an immutable solution to the coordination problem of pre-state defense and resource sharing in acephalous societies. The constraint emerges naturally from the absence of centralized authority and the necessity of violent protection. However, the structural data (\u03b5=0.38, suppression=0.65, theater=0.55) contradicts the mountain classification \u2014 the engine will identify this as a false summit, revealing that what appears structurally necessary is actually contingent on the absence of alternative coordination mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntarism_vs_coercion_threshold",
+      "question": "At what point does the comitatus transition from voluntary gift-reciprocity to mandatory extraction of labor and military service?",
+      "resolution_mechanism": "Historical analysis of thane defection rates, lord replacement cycles, and evidence of forced assimilation of conquered tribes. Comparison of early comitatus (Tacitus' Germania) with later feudal codification.",
+      "impact": "If primarily voluntary: classification shifts toward Rope from more perspectives. If primarily coercive: classification shifts toward Snare from thane perspective, confirming Tangled Rope reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold between voluntary reciprocal gift-giving and mandatory extraction"
+    },
+    {
+      "id": "subordinate_tribe_agency",
+      "question": "Did subordinate tribes retain capacity to exit the comitatus through migration, rebellion, or diplomatic realignment, or was absorption irreversible?",
+      "resolution_mechanism": "Archaeological and historical evidence of tribal migration patterns, rebellion frequencies, and successful diplomatic realignment. Study of boundary zones and buffer populations.",
+      "impact": "If exit available: subordinate tribe perspective shifts toward Rope or Scaffold. If exit blocked: confirms Snare perspective for tributary populations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subordinate tribes retained meaningful exit options"
+    },
+    {
+      "id": "threshold_extraction_point",
+      "question": "Does the comitatus primarily function as coordination (mutual defense + resource distribution) or extraction (tribute capture with minimal reciprocal benefit)?",
+      "resolution_mechanism": "Comparative analysis of thane/lord wealth ratios, land distribution, actual combat roles in warfare, and resource allocation during peace vs. raid cycles. Cross-cultural comparison with other gift-economy systems.",
+      "impact": "If primarily coordination: \u03b5 should be \u22640.25, pushing classification toward Rope. If primarily extraction: \u03b5\u22480.38 confirms current Tangled Rope reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether comitatus is fundamentally coordination or extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Germanic comitatus code represents the foundational socio-political constraint governing the relationship between a lord (the 'ring-giver') and his thanes in early Germanic and proto-feudal society (approximately 1st-10th centuries CE). The constraint exhibits a structural hybrid: it provides genuine coordination benefits (mutual defense, resource pooling, territorial stability) while simultaneously enabling extraction of surplus labor, military obligation, and tribute from subordinate populations. The comitatus is neither pure coordination nor pure extraction \u2014 it is a tangled rope that solves a coordination problem for the privileged (lords and thanes) by shifting suppression and extraction costs to the powerless (commoners and subordinate tribes). The constraint's theater_ratio (0.55) reflects the balance between functional loyalty-binding and performative celebration of the bond in warrior culture. Over the interval from early Germanic settlement to the formalization of feudalism, extractiveness increased (0.22 \u2192 0.38) as the ad-hoc gift-reciprocity system was progressively codified into mandatory tribute and service obligations. Theater ratio also increased (0.35 \u2192 0.55) as historical mythologizing obscured the coercive mechanisms beneath the honorific language of loyalty.",
+    "key_agents": [
+      "Ring-Giver Lord: Primary beneficiary (institutional/arbitrage) \u2014 consolidates power through gift distribution and loyalty structuring; experiences comitatus as coordination mechanism",
+      "Thane Warrior: Mixed beneficiary-victim (moderate/constrained) \u2014 receives gifts and status but faces death obligation; experiences tangled coordination-extraction",
+      "Tributary Commoner: Primary victim (powerless/trapped) \u2014 produces surplus with no exit option; bears full cost of extraction and conscription",
+      "Subordinate Tribe: Secondary victim (powerful/mobile on paper, constrained in practice) \u2014 integrated through conquest; retains no meaningful independence",
+      "Feudal Successor Institutions: Organized agents (organized/constrained) \u2014 formalize comitatus into hereditary feudalism with written codification; create sunset mechanisms",
+      "Historical Mythmaking System: Institutional memory (institutional/arbitrage) \u2014 celebrates bond as purely honorific; obscures extraction mechanisms through performative elevation of loyalty",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable structural necessities"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The comitatus extracts significant surplus (labor, military service, goods) from commoners and subordinate tribes, but also provides coordination value (mutual defense, resource redistribution) that benefits all levels. The early Germanic version (\u03b5\u22480.22) was weighted more heavily toward coordination and gift-reciprocity; later feudal codification pushed it toward extraction (\u03b5\u22480.38) as obligations became mandatory rather than voluntary. Suppression (0.65): High. Commoners face military conscription, tribute extraction, and inability to exit without abandonment. Exit costs are severe \u2014 leaving the comitatus means loss of protection, land, and social identity. Thanes also face high suppression (death obligation) but with mitigating factors (status, property, agency in warfare). Theater ratio (0.55): Moderate. The comitatus includes genuine functional elements (coordination of defense, resource allocation) alongside performative elements (gift-giving ritual, loyalty celebration in epics). The theater increases over time as later medieval societies mythologize the bond while the actual extraction mechanisms become more legalized and routinized.",
+    "perspectival_gap": "This constraint demonstrates how a single structural arrangement generates fundamentally different classifications across observer positions. The ring-giver lord sees coordination (Rope) \u2014 the solution to collective-action defense problems. The thane sees mixed coordination-extraction (Tangled Rope) \u2014 benefits from status and gifts but faces death obligation. The tributary commoner sees pure extraction (Snare) \u2014 produces surplus with no exit and minimal reciprocal protection. The subordinate tribe sees conquest-based extraction (Snare) \u2014 absorbed into hierarchy with no exit. Feudal successors see a temporary problem (Scaffold) \u2014 formalizing and moderating the bond through written obligation. Historical mythmaking sees a degraded, performatively sustained institution (Piton) \u2014 the actual extraction is obscured by celebratory narrative. The civilizational analytical observer risks seeing natural law (Mountain) \u2014 that comitatus emerges necessarily from pre-state conditions \u2014 but the structural data reveals this as a false summit: alternative coordination mechanisms existed (kinship reciprocity, tribal councils, non-hierarchical raiding bands), so the comitatus was not inevitable.",
+    "directionality_logic": "Ring-giver lord: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Net beneficiary. Thane warrior: Mixed (benefits from gift/status, victim of death obligation) + constrained \u2192 d\u22480.58, f(d)\u22480.72. Moderate extraction. Tributary commoner: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. High extraction \u2014 abstract but concrete collective good (peace, stability) is captured by elite while costs (labor, conscription) fall on powerless. Subordinate tribe: Victim + mobile (theoretically; actually constrained by military strength differential) \u2192 d\u22480.85, f(d)\u22481.18. High extraction \u2014 conquest and absorption eliminate independent exit. Feudal successors: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Low effective extraction; these agents have agency in codifying and moderating the relationship. Historical mythmaking: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Piton classification derives from theater gate (0.55 \u2265 0.70 threshold not met, but still elevated), not from directionality.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The comitatus resolves the mandatrophy by revealing how indexical classification captures the transition from pure coordination (early Germanic gift-reciprocity) to tangled coordination-extraction (classical comitatus) to formal feudal extraction (later codified). The constraint is NOT a mountain (immutable law of pre-state organization) \u2014 alternative coordination mechanisms existed in contemporary societies (tribal councils, egalitarian raiding bands, kinship-based reciprocity). The constraint IS a tangled rope because it genuinely solves coordination problems for the elite while simultaneously enabling extraction from the powerless. The perspectival gap between the lord's 'coordination problem solved' (Rope) and the commoner's 'extraction without exit' (Snare) is the diagnostic signature: when one group's coordination benefit is another group's suppression and extraction, the system is tangled rope, not pure coordination. The theater ratio (0.55) confirms this: if the system were pure coordination, theater would be low (\u22640.30); if pure extraction, theater might be high but with no genuine function. At 0.55, the constraint has both functional and performative elements, characteristic of tangled rope. The historical mythmaking (Piton perspective) shows how the constraint's legitimacy was maintained through narrative elevation of honor and loyalty \u2014 once the explicit coercion could be formalized (feudalism), the need for performative elevation actually declined, suggesting a sunset mechanism where the comitatus is being institutionalized into something more contractual."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_obligation_hierarchy",
+      "tribal_subordination_dynamic"
+    ],
+    "dual_formulation_note": "The comitatus is upstream of feudal obligation systems \u2014 feudalism is the institutional formalization and moderation of the raw comitatus extraction. The comitatus is also affected by tribal subordination dynamics: as tribes are conquered and absorbed into the comitatus hierarchy, their internal coordination systems (tribal councils, kinship reciprocity) are displaced by external extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    }
+  ]
+}

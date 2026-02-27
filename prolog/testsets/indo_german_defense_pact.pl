@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: indo_german_defense_pact
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-24
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_indo_german_defense_pact, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,20 +58,30 @@
  *   domain: geopolitical/economic
  *
  * SUMMARY:
- *   The strategic partnership between India and Germany aims to deepen defense
- *   industry collaboration through co-development, co-production, and
- *   technology transfer. While framed as a mutually beneficial coordination
- *   effort to diversify India's military hardware away from Russia and counter
- *   regional threats, it also establishes a long-term, asymmetric dependency
- *   where Germany acts as a high-end technology supplier to a capital-intensive
- *   Indian market. This creates a structural extraction channel alongside the
- *   genuine strategic coordination.
+ *   The India-Germany Defense Industrial Partnership represents a
+ *   geopolitical constraint combining genuine coordination interests with
+ *   structural extraction mechanisms. Both nations benefit from technology
+ *   cooperation and industrial capacity development, but the partnership
+ *   operates within legacy export control architectures and asymmetric power
+ *   relationships that favor established German defense industrial bases.
+ *   India seeks technology sovereignty and strategic autonomy; Germany seeks
+ *   market access and industrial revenue. The constraint exhibits hybrid
+ *   characteristics: coordination function (solving mutual strategic
+ *   interests) combined with extraction mechanism (technology access
+ *   asymmetry, licensing dependencies, supply chain lock-in). The theater
+ *   ratio (0.62) reflects that significant portions of the compliance and
+ *   certification frameworks are performative institutional maintenance
+ *   rather than functional security mechanisms. Extractiveness has increased
+ *   over time as practical co-production reveals hidden dependency
+ *   relationships not apparent in initial bilateral rhetoric.
  *
- * KEY AGENTS (by structural relationship):
- *   - German Defense Industry: Primary beneficiary (institutional/arbitrage) — gains a major export market and strategic partner.
- *   - Indian Government/MoD: Ambivalent actor (institutional/constrained) — benefits from modernization but bears the financial cost and dependency risk.
- *   - Indian Taxpayers & Domestic SMEs: Primary target (powerless/trapped) — bears the immense financial cost and risks market capture by foreign primes.
- *   - Analytical Observer: Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - German Defense Industrial Base: Primary beneficiary (institutional/arbitrage) — gains market access, licensing fees, co-production contracts without major domestic reorganization
+ *   - Indian Strategic Autonomy Coalition: Primary victim and secondary beneficiary (organized/constrained) — seeks technology and capability development while constrained by partnership dependency and export controls
+ *   - Indian Procurement Officers: Trapped agent (powerless/trapped) — operationally locked into German-certified supply chains and technical oversight requirements
+ *   - Indian Domestic Defense Innovation Initiative: Exit pathway agent (organized/mobile) — Make in India programs create sunset logic for co-production dependency
+ *   - Export Control Architecture: Institutional inertia (institutional/constrained) — Cold War certification frameworks applied to new partnerships through ritual rather than functional necessity
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — sees constraint as hybrid coordination-extraction operating within legacy geopolitical structures
  */
 
 /* ==========================================================================
@@ -79,84 +89,68 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(indo_german_defense_pact, 0.48).
-domain_priors:suppression_score(indo_german_defense_pact, 0.65).   % Structural property (raw, unscaled). High due to limited alternative high-tech suppliers.
-domain_priors:theater_ratio(indo_german_defense_pact, 0.30).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(indo_german_defense_pact, 0.52).
+domain_priors:suppression_score(indo_german_defense_pact, 0.58).
+domain_priors:theater_ratio(indo_german_defense_pact, 0.62).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(indo_german_defense_pact, extractiveness, 0.48).
-narrative_ontology:constraint_metric(indo_german_defense_pact, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(indo_german_defense_pact, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(indo_german_defense_pact, extractiveness, 0.52).
+narrative_ontology:constraint_metric(indo_german_defense_pact, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(indo_german_defense_pact, theater_ratio, 0.62).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(indo_german_defense_pact, tangled_rope).
 narrative_ontology:human_readable(indo_german_defense_pact, "India-Germany Defense Industrial Partnership").
 narrative_ontology:topic_domain(indo_german_defense_pact, "geopolitical/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(indo_german_defense_pact). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(indo_german_defense_pact).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(indo_german_defense_pact, german_defense_industry).
-narrative_ontology:constraint_beneficiary(indo_german_defense_pact, indian_government).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(indo_german_defense_pact, indian_taxpayers).
-narrative_ontology:constraint_victim(indo_german_defense_pact, indian_domestic_smes).
-narrative_ontology:constraint_victim(indo_german_defense_pact, indian_government). % The govt is both beneficiary and victim of the costs/dependencies
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(indo_german_defense_pact, german_defense_industrial_base).
+narrative_ontology:constraint_beneficiary(indo_german_defense_pact, indian_strategic_autonomy_aspirations).
+narrative_ontology:constraint_victim(indo_german_defense_pact, indian_technology_sovereignty).
+narrative_ontology:constraint_victim(indo_german_defense_pact, german_export_control_constraints).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (Indian Taxpayers)
-% They see a massive, multi-decade financial drain with indirect benefits,
-% paying for systems that create foreign, not domestic, value.
-% Engine derives: victim + trapped exit -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ -> SNARE
-constraint_indexing:constraint_classification(indo_german_defense_pact, naturalized,
+% PERSPECTIVE 1: INDIAN PROCUREMENT OFFICER (SNARE) — Trapped within dependency relationships. Co-production agreements require German technical oversight, certification, and component supply. Exit options are minimal: domestic production timelines are longer, and strategic urgency creates pressure to accept unfavorable terms. Extraction flows from India to Germany through locked-in supply relationships and technology access asymmetries.
+constraint_indexing:constraint_classification(indo_german_defense_pact, snare,
     context(agent_power(powerless),
-            time_horizon(generational),
+            time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (German Defense Industry)
-% They see a lucrative, long-term market secured by strategic alignment,
-% with minimal downside risk.
-% Engine derives: beneficiary + arbitrage exit -> d ≈ 0.05 -> f(d) ≈ -0.12 -> negative χ -> ROPE
+% PERSPECTIVE 2: GERMAN DEFENSE INDUSTRIAL BASE (ROPE) — Institutional beneficiary with arbitrage options. Partnership expands market access to Indian defense procurement without requiring major domestic reorganization. German firms gain co-production contracts, technology licensing fees, and supply chain positioning. From German industry perspective, the constraint operates as coordination mechanism — partners share development costs and gain market expansion.
 constraint_indexing:constraint_classification(indo_german_defense_pact, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% The Indian Government is also an institutional actor, but with a different
-% structural position than its German counterpart. Its exit options are limited.
-
-% PERSPECTIVE 3: The Indian Government (Constrained Institutional Actor)
-% It simultaneously pursues the coordination goal (strategic autonomy, modernization)
-% while bearing the costs and dependency risks of the extraction.
-% Engine derives: beneficiary/victim + constrained exit -> middling d -> f(d) > 0 -> TANGLED ROPE
-constraint_indexing:constraint_classification(indo_german_defense_pact, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 3: INDIAN STRATEGIC AUTONOMY COALITION (TANGLED ROPE) — Organized Indian defense establishment sees partnership as both essential coordination (technology acquisition, industrial development) and extractive constraint (dependency on German certification, export controls, component supply). Strategic autonomy requires technology transfer, but partnership structure limits it. Constrained exit: cannot simply walk away from strategic partnerships in multipolar environment.
+constraint_indexing:constraint_classification(indo_german_defense_pact, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 4: DOMESTIC DEFENSE INNOVATION (SCAFFOLD) — Emerging indigenous development programs (Make in India defense initiatives, DRDO autonomy) create exit pathways. Co-production with Germany is viewed as transitional: build capability and capacity through partnership, then migrate to independent production. Partnership has implicit sunset as Indian technical capacity matures. Low experienced extraction because structured transition exists.
+constraint_indexing:constraint_classification(indo_german_defense_pact, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% Sees both the valid coordination function and the asymmetric extraction.
-% Engine derives d ≈ 0.72 -> f(d) ≈ 1.15. With high ε, this classifies as Tangled Rope.
+% PERSPECTIVE 5: EXPORT CONTROL ARCHITECTURE (PITON) — German export controls (ITAR-adjacent restrictions, technology classification schemes) persist largely through institutional inertia. Originally designed for NATO alliance management, now applied to India partnership through ritualized compliance frameworks. Functional purpose (preventing proliferation) has degraded relative to theater (certification procedures, documentation requirements). High theater ratio reflects that much of the process is performative institutional maintenance rather than effective security mechanism.
+constraint_indexing:constraint_classification(indo_german_defense_pact, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational scale, the partnership represents coordination (technology cooperation toward shared strategic stability) and extraction (structural dependency relationships favoring established defense industrial powers). Neither pure coordination nor pure extraction. The constraint combines genuine coordination function with asymmetric power flows.
 constraint_indexing:constraint_classification(indo_german_defense_pact, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -169,24 +163,18 @@ constraint_indexing:constraint_classification(indo_german_defense_pact, tangled_
 
 :- begin_tests(indo_german_defense_pact_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify the core perspectival gap between the primary target and beneficiary.
-    constraint_indexing:constraint_classification(indo_german_defense_pact, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(indo_german_defense_pact, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(indo_german_defense_pact, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(indo_german_defense_pact, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(inter_institutional_gap) :-
-    % Verify that the two institutional actors classify the constraint differently.
-    constraint_indexing:constraint_classification(indo_german_defense_pact, TypeGerman, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(indo_german_defense_pact, TypeIndian, context(agent_power(institutional), _, exit_options(constrained), _)),
-    TypeGerman \= TypeIndian,
-    TypeGerman = rope,
-    TypeIndian = tangled_rope.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(indo_german_defense_pact, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_conditions_met) :-
-    % Verify that the structural requirements for a Tangled Rope are declared.
-    narrative_ontology:constraint_beneficiary(indo_german_defense_pact, _),
-    narrative_ontology:constraint_victim(indo_german_defense_pact, _),
-    domain_priors:requires_active_enforcement(indo_german_defense_pact).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(indo_german_defense_pact, TR),
+    TR >= 0.70.
 
 :- end_tests(indo_german_defense_pact_tests).
 
@@ -196,82 +184,93 @@ test(tangled_rope_conditions_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): This reflects the significant, long-term financial outflow from India to Germany and the creation of technological dependency. It's not outright plunder, but it's a highly asymmetric value exchange inherent in high-tech arms deals.
- *   - Suppression (0.65): India's geopolitical need to diversify from Russian arms and modernize its forces is urgent. The number of nations with top-tier submarine or fighter jet technology willing to engage in meaningful transfer is very small, heavily suppressing alternative options.
+ *   Extractiveness (0.52): Moderate-high. The partnership combines legitimate technology access benefits with structural lock-in through certification dependencies, licensing fee structures, and component supply asymmetries. Indian firms cannot easily substitute German components or bypass German technical oversight without losing partnership access. The value reflects both genuine coordination value (~0.30) and extraction overhead (~0.22) embedded in the partnership structure. Suppression (0.58): Moderate-high. Barriers include export control frameworks limiting technology depth, German IP protections restricting independent modifications, supply chain dependencies creating switching costs, and geopolitical pressure to maintain partnership despite unfavorable terms. However, suppression is not total — Indian domestic programs create exit pathways and reduce suppression over time. Theater ratio (0.62): Moderate-high. Significant portions of the compliance framework are performative: export control certification procedures reflect Cold War institutional patterns rather than contemporary security logic; documentation requirements consume resources without proportional security benefit; German oversight maintains institutional control beyond functional necessity.
  *
- * PERSPECTIVAL GAP:
- *   The gap is profound. The German defense industry sees a pure coordination win (Rope): they solve India's problem (supply diversification) and get paid well, with a global scope and other customers if this fails (arbitrage). Indian taxpayers see a pure extraction scheme (Snare): a massive financial burden for equipment whose strategic value is abstract, with no ability to opt out (trapped).
- *
- * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: The 'german_defense_industry' is the clearest beneficiary. The 'indian_government' is also listed as a beneficiary because it achieves real strategic goals (modernization, geopolitical alignment).
- *   - Victims: 'indian_taxpayers' and 'indian_domestic_smes' bear the direct financial costs and the opportunity costs of market capture. The 'indian_government' is also a victim of the dependency and high costs, creating its ambivalent structural position. This dual role is key to its Tangled Rope classification.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This story is a prime example of inter-institutional dynamics. Both the German industry and Indian government are 'institutional' actors, but their structural positions differ sharply, captured by their `exit_options`. Germany has `arbitrage` (many potential buyers globally), leading to a low derived directionality (d) and a Rope classification. India has `constrained` options (few alternative suppliers for this level of tech), leading to a higher d and a Tangled Rope classification. The framework correctly models that not all institutions experience a constraint symmetrically.
- *
- * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the dual nature of the pact. A naive analysis might label it purely as a Snare (focusing only on the cost to India) or a Rope (focusing only on the strategic alignment). The Tangled Rope classification, supported by the inter-institutional perspectives, correctly identifies that it is BOTH: a genuine coordination mechanism layered with significant, asymmetric extraction. This prevents mislabeling a complex geopolitical arrangement as either purely cooperative or purely exploitative.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_indo_german_defense_pact,
-    'Is the "technology transfer" clause substantive enough to create sovereign Indian defense capabilities, or is it a "screwdriver clause" designed to perpetuate dependency?',
-    'Analysis of final contract terms for specific projects (e.g., P75I submarines) over a 10-15 year period, measuring the percentage of value-add and critical IP developed and owned indigenously.',
-    'If substantive, the constraint drifts towards Rope (ε decreases). If a screwdriver clause, it hardens into a Snare (ε remains high, theater ratio increases as "Make in India" proves hollow).',
+    technology_transfer_threshold,
+    'Does co-production enable genuine Indian technology sovereignty or create permanent dependency on German technical oversight and component supply?',
+    'Longitudinal analysis of Indian independent production capacity; tracking of domestic design capability growth; assessment of German component substitutability over 10-year horizon',
+    'If transfer is genuine: Scaffold perspective confirmed, constraint has real sunset. If transfer is constrained by design: Snare perspective dominates, dependency is structural not temporary.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(technology_transfer_threshold, empirical, 'Whether technology transfer enables Indian sovereignty or creates permanent dependency').
+
+omega_variable(
+    export_control_enforcement_level,
+    'Are German export controls applied as functional security mechanisms or as institutional theater maintaining legacy architectures?',
+    'Analysis of denied technologies vs approved transfers; comparison of Indian vs NATO partner treatment; assessment of security rationale vs market protection rationale in control decisions',
+    'If functional: controls represent real coordinated security framework. If theatrical: controls are Piton inertia constraining legitimate partnership.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(export_control_enforcement_level, empirical, 'Whether export controls function as security or as institutional theater').
+
+omega_variable(
+    strategic_multipolarity_lock,
+    'Does geopolitical multipolarity lock India into accepting unfavorable partnership terms because alternatives are limited or unreliable?',
+    'Assessment of Indian options with Russia, Israel, Japan, or indigenous development; analysis of cost-benefit vs alternatives; geopolitical risk evaluation of each alternative',
+    'If lock-in is structural: Snare extraction from trapped agent is dominant read. If alternatives exist: Tangled Rope classification more accurate, agency is higher.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(strategic_multipolarity_lock, empirical, 'Whether geopolitical constraints lock India into accepting unfavorable terms').
+
+omega_variable(
+    symmetry_of_benefit,
+    'Does partnership provide symmetrical strategic benefit (German market access, Indian capability development) or asymmetrical benefit (German rent extraction, Indian dependency)?',
+    'Comparative analysis of contract terms, licensing fee structures, IP ownership, export margin capture; long-term cost-benefit accounting for both parties; strategic autonomy gains for India vs market access for Germany',
+    'If asymmetrical: extraction interpretation (Snare/Tangled Rope lower perspectives) dominates. If symmetrical: coordination interpretation (Rope/Scaffold) more accurate.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(symmetry_of_benefit, empirical, 'Whether partnership benefits are symmetrical or asymmetrical').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(indo_german_defense_pact, 0, 10).
+narrative_ontology:interval(indo_german_defense_pact, 0, 15).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This relationship evolved from diplomatic overtures to hard-nosed commercial/strategic pacts.
-% The initial phase had more theater and lower realized extraction. Over time, as
-% contracts are signed, the extraction becomes concrete and dependency sets in.
-
-% Theater ratio over time (declines as deals become concrete):
+% Theater ratio over time
 narrative_ontology:measurement(igdp_tr_t0, indo_german_defense_pact, theater_ratio, 0, 0.45).
-narrative_ontology:measurement(igdp_tr_t5, indo_german_defense_pact, theater_ratio, 5, 0.35).
-narrative_ontology:measurement(igdp_tr_t10, indo_german_defense_pact, theater_ratio, 10, 0.30).
+narrative_ontology:measurement(igdp_tr_t7, indo_german_defense_pact, theater_ratio, 7, 0.55).
+narrative_ontology:measurement(igdp_tr_t15, indo_german_defense_pact, theater_ratio, 15, 0.62).
 
-% Extraction over time (increases as dependency is locked in):
-narrative_ontology:measurement(igdp_ex_t0, indo_german_defense_pact, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(igdp_ex_t5, indo_german_defense_pact, base_extractiveness, 5, 0.42).
-narrative_ontology:measurement(igdp_ex_t10, indo_german_defense_pact, base_extractiveness, 10, 0.48).
+% Extraction over time
+narrative_ontology:measurement(igdp_be_t0, indo_german_defense_pact, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(igdp_be_t7, indo_german_defense_pact, base_extractiveness, 7, 0.48).
+narrative_ontology:measurement(igdp_be_t15, indo_german_defense_pact, base_extractiveness, 15, 0.52).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The pact allocates high-end technological and capital resources.
 narrative_ontology:coordination_type(indo_german_defense_pact, resource_allocation).
+narrative_ontology:affects_constraint(indo_german_defense_pact, indian_domestic_defense_autonomy).
+narrative_ontology:affects_constraint(indo_german_defense_pact, european_export_control_regime).
+narrative_ontology:affects_constraint(indo_german_defense_pact, us_strategic_pivot_to_india).
 
-% Network relationships: This pact directly impacts and is influenced by broader
-% geopolitical constraints, particularly India's historic reliance on Russia.
-narrative_ontology:affects_constraint(indo_german_defense_pact, india_russia_relations).
-
+% DUAL FORMULATION NOTE:
+% The partnership decomposes into coordination value (technology transfer for strategic stability) and extraction mechanism (dependency lock-in). Initial partnership descriptions emphasize coordination; operational implementation reveals extraction. These are distinct constraint families: the idealized partnership (coordination focus) vs the operational partnership (extraction dominant). Theater ratio and extractiveness trends show migration from coordination rhetoric to extraction practice over the 15-year interval.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this story. The structural declarations
-% (beneficiary/victim lists) combined with the distinct exit_options
-% (arbitrage vs. constrained) for the institutional actors allow the
-% directionality derivation engine to compute accurate and differentiated
-% d-values automatically.
+constraint_indexing:directionality_override(indo_german_defense_pact, institutional, 0.28).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

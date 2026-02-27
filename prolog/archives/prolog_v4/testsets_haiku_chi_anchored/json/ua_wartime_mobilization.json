@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "ua_wartime_mobilization",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uamob"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Wartime Mobilization Law in Ukraine",
+    "topic_domain": "political/military",
+    "requires_active_enforcement": true,
+    "mandatrophy_resolved": true,
+    "beneficiaries": [
+      "ukrainian_state_defense_apparatus"
+    ],
+    "victims": [
+      "conscripted_male_citizens",
+      "draft_eligible_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Conscripted Male Citizen",
+      "comment": "PERSPECTIVE 1: CONSCRIPTED MALE CITIZEN (SNARE) \u2014 Trapped by law and nation-state enforcement. Exit options systematically closed: crossing borders without permission is illegal; draft evasion incurs legal penalties and social stigma; refusal is grounds for arrest. The constraint extracts full labor value and life risk. d\u22480.98, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22481.02."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Draft-Eligible Population (Gender-Neutral Access)",
+      "comment": "PERSPECTIVE 2: DRAFT-ELIGIBLE POPULATION WITH EXPANDED CONSCRIPTION (SNARE) \u2014 As of 2024-2025, Ukraine expanded conscription eligibility beyond traditional male-only cohorts to women and gender-diverse citizens in certain roles. This broader cohort faces constrained exit: legal emigration is difficult under wartime restrictions; work deferments are narrowly applied; essential occupations have narrow carve-outs. d\u22480.92, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Ukrainian Elite / Oligarchs",
+      "comment": "PERSPECTIVE 3: UKRAINIAN ELITE / OLIGARCHS (TANGLED ROPE) \u2014 Wealthier citizens have genuine exit options (emigration, secured positions in support roles, legal deferrals for essential economic roles). They experience mobilization law as a coordination mechanism (sharing national defense burden) AND asymmetric extraction (leveraging wealth to minimize personal risk). Benefits from state victory; bears lower cost through elite exemptions. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.22."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Ukrainian State Defense Apparatus",
+      "comment": "PERSPECTIVE 4: UKRAINIAN STATE DEFENSE APPARATUS (ROPE) \u2014 The state enacts mobilization law to coordinate national defense: conscription pools human resources for existential defense against invasion. From the state's perspective, this is fundamentally a coordination mechanism \u2014 aligning individual incentives with collective survival. The law is functional (not primarily extractive) because state victory benefits all citizens including conscripts. d\u22480.02, f(d)\u2248-0.14, \u03c3=1.0 \u2192 \u03c7\u2248-0.10."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "International Humanitarian Organizations & Oversight Bodies",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL HUMANITARIAN & OVERSIGHT ACTORS (SCAFFOLD) \u2014 International bodies (ICRC, UNHCR, UN Human Rights Monitoring Mission) view mobilization law as a temporary wartime measure with necessary sunset logic: conscription intensity should decline as military advantage stabilizes or conflict ends. The law is enforceable with humanitarian constraints (welfare of conscripts, medical exemptions). d\u22480.55, f(d)\u22480.75, \u03c3=1.1 \u2192 \u03c7\u22480.48. Theater ratio remains low (0.35) \u2014 enforcement is functional, not purely performative, because state faces existential threat."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Wartime Exigency View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CIVILIZATIONAL VIEW (SNARE) \u2014 From a global historical perspective, wartime conscription during existential defense is a legitimate state power. However, the structural data (\u03b5=0.72, suppression=0.78, theater=0.35, beneficiary=state, victims=conscripts) classifies this as Snare, not as a natural law or justifiable extraction. The analytical perspective sees this as snare rather than mountain because the extraction is contingent on the war's continuation \u2014 it is not an immutable structural feature of Ukrainian society. Post-war, the conscription infrastructure must be dismantled or consensually reformed. This differs from true natural laws (mathematical limits) or coordinated defenses (mutual agreement to shared burden). The snare classification holds because exit options remain systematically suppressed even for groups (elites) with material capacity to exit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "wartime_exigency_threshold",
+      "question": "At what point does a wartime conscription law transition from justified state emergency power (Rope/Scaffold) to sustained extraction (Snare)?",
+      "resolution_mechanism": "Historical comparison: duration of mobilization laws in other post-WW2 conflicts; empirical measurement of conscript welfare, casualty rates, and economic burden; statistical comparison of burden distribution across socioeconomic groups",
+      "impact": "If threshold < 2 years continuous warfare: current status as Snare is justified. If threshold > 5 years: analysis must consider whether the law has transitioned to extraction disguised as emergency, suggesting need for democratic reformulation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which emergency conscription becomes sustained extraction"
+    },
+    {
+      "id": "elite_exemption_legitimacy",
+      "question": "Do exemptions for economic elites reflect legitimate essential-services deferments or systematic class-based extraction avoidance?",
+      "resolution_mechanism": "Audit of deferment applications and approvals by socioeconomic quintile; comparison of casualty rates across income brackets; analysis of criteria for essential-occupation exemptions; tracking of draft-eligible wealthy citizens who fled vs those who served",
+      "impact": "If elites bear proportional burden: mobilization law approaches Rope classification (shared sacrifice). If casualty rates show 3:1 or higher ratio (conscript:elite), then tangled_rope perspective from elite cohort is accurate \u2014 asymmetric extraction confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether elite exemptions constitute legitimate deferrals or class-based extraction"
+    },
+    {
+      "id": "postwar_demobilization_credibility",
+      "question": "Is the mobilization law credibly temporary, with institutional commitment to demobilization after conflict resolution? Or does the wartime apparatus show signs of institutional perpetuation?",
+      "resolution_mechanism": "Legislative statements on sunset provisions; comparative analysis of WW2 and Cold War demobilization timelines; expert assessment of military doctrine regarding peacetime force structure; tracking of state expansion of conscription scope (age limits, gender, occupational categories) during conflict",
+      "impact": "If credible sunset with documented demobilization plans: Scaffold classification is accurate. If no sunset provisions and expanding scope: law drifts toward Snare-in-perpetuity, suggesting state use of external threat to normalize conscription infrastructure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether mobilization law has genuine sunset or perpetuates as permanent state apparatus"
+    },
+    {
+      "id": "conscript_agency_and_refusal_costs",
+      "question": "What are the actual enforcement and punishment costs for conscription refusal? Are they calibrated to wartime exigency or do they constitute coercive extraction?",
+      "resolution_mechanism": "Tracking of legal prosecutions for draft evasion; analysis of punishment severity across jurisdictions; comparison with international norms for wartime conscientious objection; documented cases of refusal and outcomes",
+      "impact": "If punishments are severe (imprisonment, asset seizure): high suppression (0.78) is confirmed, snare classification holds. If alternative service paths exist with reasonable costs: suppression may be lower than assessed, potentially shifting moderate-cohort perspective toward Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual enforcement severity and refusal costs for conscription"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "Ukraine's wartime mobilization law (enacted 2022, expanded 2024-2025) represents a state constraint that oscillates between legitimacy (necessary coordination for existential defense) and extraction (systematic suppression of exit options and asymmetric burden distribution). The constraint embodies the classic wartime dilemma: conscription is rationally necessary for national defense against invasion, yet the structural suppression of exit options (legal penalties for draft evasion, border controls, occupational conscription) produces a Snare from the perspective of the conscripted population. The extractiveness has increased over 24 months (0.55 \u2192 0.72) as the conflict persists and conscription scope expands (gender-neutral eligibility, lower age limits, broader occupational conscription). Theater ratio remains low (0.35) because the enforcement is genuinely functional \u2014 the state faces existential military threat, and mobilization produces real military capacity, not merely performative activity. However, the presence of systematic elite exemptions (Tangled Rope perspective) combined with powerless-cohort suppression (Snare perspective) reveals that the law functions both as coordination mechanism (existential defense) AND as extraction mechanism (burden disproportionately borne by non-elite conscripts). The central analytical tension is whether wartime exigency legitimates this extraction structure, or whether the expanding scope and increasing extractiveness signal drift toward institutionalized conscription infrastructure maintained beyond wartime necessity.",
+    "key_agents": [
+      "Conscripted Male Citizens: Primary victims (powerless/trapped) \u2014 bear full extraction; exit options systematically closed by law and enforcement",
+      "Draft-Eligible Population (Expanded Cohorts): Secondary victims (moderate/constrained) \u2014 face constrained exit; may include women and gender-diverse citizens in expanded conscription; bear significant extraction with more capacity than powerless cohort",
+      "Ukrainian Elite / Oligarchs: Secondary beneficiary (powerful/mobile) \u2014 experience mobilization as mixed coordination and extraction; have genuine exit options via wealth; face lower personal risk through exemptions and deferments",
+      "Ukrainian State Defense Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 coordinates national defense; extracts labor and life value from conscripted population; benefits from collective victory",
+      "International Humanitarian Organizations: Oversight actors (organized/constrained) \u2014 view law as temporary scaffold with humanitarian constraints; provide external monitoring and constraint on state behavior",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 assesses whether wartime exigency legitimates the extraction structure or whether expanding scope indicates drift toward institutionalized conscription"
+    ],
+    "logic_rationale": "Extractiveness (0.72): High and increasing. The state extracts full labor value, life risk, and bodily autonomy from conscripted population. The increase from 0.55 (initial mobilization) to 0.72 (2024-2025) reflects expansion of conscription scope beyond traditional male cohorts, inclusion of occupational conscription, and persistence of enforcement despite battlefield stabilization. The extractiveness plateau at 0.72 rather than maximum reflects that conscription is legitimated by genuine wartime exigency and international legal frameworks, not purely extractive greed. Suppression (0.78): High. Exit options are systematically closed: legal penalties for evasion; border controls preventing emigration; occupational conscription extends enforcement to previously protected sectors; conscientious objection paths are narrow or absent; refusal is grounds for criminal prosecution. However, suppression is not total (0.95+) because some elite citizens successfully obtain exemptions, and humanitarian space for objection exists within constraints. Theater ratio (0.35): Low. Mobilization enforcement is functionally oriented, not performative. The state genuinely needs military manpower for defense against invasion; conscripts are deployed in combat; enforcement produces measurable military capacity. Low theater indicates that the constraint's primary function is real (coordination/extraction), not theatrical maintenance. The low theater also distinguishes this from Piton classification \u2014 the mobilization law is not inertial or vestigial.",
+    "perspectival_gap": "The primary perspectival gap runs between the powerless conscript (Snare: trapped, full extraction) and the state defense apparatus (Rope: coordination, net beneficiary). From the conscript's view, mobilization is pure extraction \u2014 they are compelled to risk their life for the state's defense. From the state's view, mobilization is coordination \u2014 aligning all citizens behind existential defense. The secondary gap runs between the elite cohort (Tangled Rope: mobile exit, asymmetric burden) and the non-elite conscript (Snare: trapped, symmetric burden). The elite experience both coordination benefits (state victory protects their assets and status) and extraction exemption (they bear lower casualty risk than non-elite cohorts). The international observer (Scaffold perspective) sees the law as temporary emergency measure with necessary sunset \u2014 it is functional and necessary now, but requires institutional dismantling post-conflict. The civilizational analyst (Snare perspective) notes that even accepting wartime exigency, the expanding scope and increasing extractiveness signal institutional drift toward conscription permanence, suggesting that wartime exigency is being used to normalize a state apparatus that may persist beyond the exigency itself.",
+    "directionality_logic": "Conscripted Male Citizens: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.42. Near-maximal extraction. Minimal exit capacity; legal penalties for refusal; compelled bodily service. Draft-Eligible Population (Expanded): Victim + constrained \u2192 d\u22480.92, f(d)\u22481.35. Very high extraction. Constrained exit (emigration is difficult under wartime restrictions; work deferments narrowly applied); compelled service in broader occupational scope than traditional conscription. Ukrainian Elite: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.30. Moderate effective extraction (or moderate benefit). Mobile exit (wealth enables emigration, legal deferrals); beneficiary from state victory and defense of assets; bear lower casualty risk. Ukrainian State Defense: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.14. Net beneficiary. Extracts resources and manpower; benefits from coordinated defense; possesses unilateral enforcement power.",
+    "mandatrophy_analysis": "CRITICAL CASE: Wartime mobilization law resolves mandatrophy by distinguishing JUSTIFIED EXTRACTION from PURE SNARE. The law is snare-classified (high extractiveness, high suppression, powerless cohort), yet the mandatrophy is partially resolved by the wartime exigency: the state faces genuine existential threat from invasion; conscription is rationally necessary for defense; the constraint coordinates collective action for mutual survival. However, the mandatrophy is NOT fully resolved because: (1) The elite cohort experiences the same law as Tangled Rope (mixed coordination and extraction), revealing that the constraint functions differently based on structural position. (2) Extractiveness is increasing (0.55 \u2192 0.72) despite military stabilization, suggesting institutional drift toward conscription perpetuation beyond wartime exigency. (3) The law's scope is expanding (gender-neutral conscription, occupational conscription, lower age limits), indicating institutional normalization rather than temporary emergency. The resolution is that wartime conscription law is CONDITIONALLY JUSTIFIED as a Snare: it is legitimate extraction during the exigency, but the expanding scope and increasing extractiveness require post-conflict demobilization and institutional reform to prevent the wartime apparatus from solidifying into permanent conscription infrastructure. If the state fails to implement credible sunset provisions and demobilization, the law drifts from justified wartime Snare toward illegitimate peacetime Snare-in-perpetuity. Current status (\u03b5=0.72, mandatrophy_resolved=true) reflects that the wartime exigency provides justification, but this justification is temporally bounded and contingent on institutional commitment to demobilization."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ukrainian_labor_migration_restrictions",
+      "ukrainian_border_control_wartime",
+      "ukrainian_emergency_economic_controls"
+    ],
+    "dual_formulation_note": "Wartime mobilization law is a high-level constraint that structures multiple downstream constraints: labor migration restrictions enforce conscription scope; border controls prevent draft evasion; emergency economic controls allocate resources to defense. These constraints are linked through the enforcement apparatus of mobilization law."
+  },
+  "directionality_overrides": []
+}

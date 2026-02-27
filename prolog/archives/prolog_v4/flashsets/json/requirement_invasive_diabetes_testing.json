@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "requirement_invasive_diabetes_testing",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Requirement for Invasive Blood Testing to Diagnose and Monitor Diabetes",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "medical_device_manufacturers",
+      "medical_testing_laboratories"
+    ],
+    "victims": [
+      "diabetes_patients"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Diabetes Patients",
+      "comment": "Patients often feel trapped, needing regular testing for health management but face discomfort, cost, and access barriers due to the invasive nature of blood tests. Lack power to change the system alone."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Primary Care Physicians",
+      "comment": "Physicians are constrained by established protocols and liability concerns. They benefit from reliable diagnostic tools but face time constraints and patient compliance issues. They have some mobility via technology adoption but face inertia."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Medical Device Manufacturers",
+      "comment": "Medical device manufacturers benefit from the established market for blood glucose monitoring systems. They can arbitrage this position by innovating new technologies, but the existing market provides a stable revenue stream. They actively coordinate market share and innovation cycles."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Healthcare Regulators",
+      "comment": "Regulators benefit from maintaining standards and ensuring patient safety but are also constrained by the need to avoid stifling innovation and face lobbying from incumbent device manufacturers. They have constrained exits - must serve multiple groups."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Traditional Medical Education System",
+      "comment": "Medical education perpetuates the standard of care, even as new technologies emerge. It is a degraded institution, once necessary, now possibly inertial and theatrical, not truly beneficial."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observers see the mixed coordination/extraction inherent in relying on invasive testing when non-invasive options exist, highlighting how established practice can create unnecessary burdens and delay adoption of superior methods."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "non_invasive_accuracy_threshold",
+      "question": "What level of accuracy in non-invasive glucose monitoring is required to displace blood tests?",
+      "resolution_mechanism": "Clinical trials comparing non-invasive and blood-based methods; analysis of cost-benefit ratios for different accuracy levels.",
+      "impact": "Determines if the barrier is truly technological, or primarily regulatory and economic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum accuracy required for non-invasive testing to replace blood tests"
+    },
+    {
+      "id": "regulatory_capture_degree",
+      "question": "To what extent do incumbent medical device manufacturers influence regulatory decisions regarding non-invasive technologies?",
+      "resolution_mechanism": "Lobbying expenditure analysis; examination of regulator-industry revolving door; Freedom of Information Act requests.",
+      "impact": "Reveals if the 'extraction' component is driven by structural advantage or active rent-seeking.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Influence of incumbents on regulation of non-invasive technologies"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The persistent reliance on invasive blood testing for diabetes management creates a structural tension between established medical practice and emerging non-invasive technologies. This constraint highlights the coordination benefits of standardized testing alongside the extractive burdens placed on patients. The inertial persistence of the blood-test requirement raises questions about technological lock-in and regulatory capture, making the overall landscape a tangled rope.",
+    "key_agents": [
+      "Diabetes Patients: Primary victim (powerless/trapped) - faces discomfort, cost, access barriers.",
+      "Medical Device Manufacturers: Primary beneficiary (institutional/arbitrage) - benefits from stable market, but also faces incentives to innovate.",
+      "Primary Care Physicians: Moderate, (constrained)- Constrained by established protocols, time, and patient needs.",
+      "Healthcare Regulators: (organized/constrained) Balance between safety, progress, and political pressures",
+      "Traditional Medical Education System: Degraded Institution with inertia (institutional/constrained)",
+      "Analytical Observer: Sees the gap between available tech and actual practice (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. Patients experience extraction via pain, cost, inconvenience, and time. The economic rent is split with manufacturers who also take on liability with testing devices. Suppression (0.65): High. The traditional medical system suppresses alternatives such as new non-invasive techniques through regulations or habit. Theater ratio (0.75): High. While medical testing serves a direct practical function, the persistence of invasive methods despite the existence of less invasive alternatives suggests a significant degree of theatrical maintenance of established protocols and procedures.",
+    "perspectival_gap": "The core point of perspectival difference lies in the view of patients versus industry. Patients experience a SNARE - a costly, painful, and required intervention. Industry sees the traditional system as a ROPE - a coordinating mechanism to diagnose and treat diabetes. The other perspectives, as constrained groups, express elements of both.",
+    "directionality_logic": "Directionality values reflect the structural position of each agent. Patients (powerless/trapped) experience high extraction (d=1). Manufacturers (institutional/arbitrage) benefit from the established market (d ~ 0). Physicians (moderate/constrained) experience a mixed position (d ~ 0.5). Healthcare regulators (organized/constrained) similarly face a mixed position, balancing different priorities (d = 0.4). The analytical observer sees the system as a whole and its effects (d = 0.72)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "us_venezuela_plausible_deniability_2025",
+    "version": "1.0",
+    "generated_date": "2025-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "usvpd"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Plausible Deniability of US Covert Action in Venezuela",
+    "topic_domain": "geopolitical/covert_operations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_national_security_apparatus",
+      "us_executive_branch"
+    ],
+    "victims": [
+      "venezuelan_civilian_population",
+      "international_legal_accountability",
+      "congressional_oversight"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Venezuelan Civilians and Affected Communities",
+      "comment": "PERSPECTIVE 1: VENEZUELAN CIVILIANS (SNARE) \u2014 Cannot verify or contest the US government's denial of involvement. Trapped within Venezuela's borders under regime vulnerability to external coercion. Bears full cost of potential covert operations with zero accountability mechanism. d\u22480.95, f(d)\u22481.42, \u03c3=1.1 \u2192 \u03c7\u22481.06."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "International Legal and Diplomatic System",
+      "comment": "PERSPECTIVE 2: INTERNATIONAL LEGAL ACCOUNTABILITY (SNARE) \u2014 The plausible deniability framework structurally prevents evidence accumulation sufficient for legal action or institutional accountability. Trapped by the logic of non-attribution. Bears cost through erosion of international legal norms and precedent-setting for future covert action. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22481.11."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US Congress and Oversight Bodies",
+      "comment": "PERSPECTIVE 3: US CONGRESS/OVERSIGHT (TANGLED ROPE) \u2014 Receives coordination benefit (plausible deniability allows executive flexibility without legislative constraint) but also suffers extraction: institutional capacity for genuine oversight is degraded by deliberate opacity. Constrained by executive control of classified information and intelligence sources. Requires active enforcement of compartmentalization to prevent leaks. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US National Security Apparatus",
+      "comment": "PERSPECTIVE 4: US NATIONAL SECURITY APPARATUS (ROPE) \u2014 Primary beneficiary. Plausible deniability solves a genuine coordination problem: enabling rapid operational response without legislative veto. Maintains flexibility for strategic action. Experiences constraint as pure coordination (operational capability). d\u22480.02, f(d)\u2248-0.15, \u03c3=1.2 \u2192 \u03c7\u2248-0.11."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Coalition for Transparency",
+      "comment": "PERSPECTIVE 5: TRANSPARENCY ADVOCATES / INTERNATIONAL COALITION (SCAFFOLD) \u2014 Organized actors (NGOs, international press, human rights bodies) building alternative verification pathways: crowdsourced evidence, satellite imagery analysis, witness networks. Experience the constraint as temporary \u2014 sunset clause is increasing transparency norms and technical capacity for non-attribution verification. d\u22480.45, f(d)\u22480.49, \u03c3=1.2 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Cold War Intelligence Doctrine",
+      "comment": "PERSPECTIVE 6: COLD WAR DOCTRINE (PITON) \u2014 Plausible deniability is a vestigial institutional form maintained through inertia despite degraded functionality. The post-Cold War environment (open-source intelligence, satellite imagery, whistleblower networks) has substantially reduced the actual plausibility of deniability, yet the doctrine persists through bureaucratic habit and classification authority. Theater ratio reflects the gap between the institutional claim ('we can maintain deniability') and operational reality ('attribution is increasingly easy'). theater_ratio\u22480.68. d\u22480.55, f(d)\u22480.77, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Structural Coercion View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 Civilizational scope reveals that plausible deniability is a structural mechanism for coercion: it decouples action from accountability, creating a universal asymmetry where powerful states can act without consequences while weak states cannot deny attributive scrutiny. The constraint is not an immutable law (mountain) but a contingent institutional arrangement that restructures power differentials. d\u22480.85, f(d)\u22481.22, \u03c3=1.2 \u2192 \u03c7\u22480.93."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attribution_verifiability_threshold",
+      "question": "At what level of evidence does plausible deniability become technically impossible rather than merely strained?",
+      "resolution_mechanism": "Empirical test: satellite imagery resolution, signals intelligence leaks, whistleblower capacity, and forensic analysis of operational artifacts (weapons signatures, unit patches, communication protocols) compared to historical CIA capability and attribution patterns.",
+      "impact": "If threshold is high: plausible deniability remains functionally operative (Rope/Piton). If threshold is low: deniability is already collapsed, making the institutional claim false (Snare confirmed). The piton classification depends on whether the doctrine still has operational plausibility.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical threshold at which attribution becomes irrefutable"
+    },
+    {
+      "id": "executive_congressional_intent",
+      "question": "Does Congress's tolerance of plausible deniability represent genuine preference for operational flexibility, or active extraction of power through information asymmetry?",
+      "resolution_mechanism": "Historical analysis of Congressional behavior: frequency of explicit authorization denials, effectiveness of oversight mechanisms when invoked, patterns of post-hoc authorization for covert action, testimony and classified briefing records.",
+      "impact": "If Congress prefers flexibility: constraint is tangled rope (coordination + extraction in acceptable balance). If Congress is deliberately kept ignorant: constraint is snare (Congress is a victim). Classification of oversight perspective turns on this omega.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Congressional tolerance represents preference or extraction"
+    },
+    {
+      "id": "alternative_intelligence_doctrine_feasibility",
+      "question": "Would a transparent intelligence doctrine (immediate public disclosure of covert operations with retroactive legal authorization) actually compromise US national security, or is this belief institutional myth?",
+      "resolution_mechanism": "Counterfactual analysis: comparison of transparency norms in allied democracies (UK, Canada, Australia); feasibility studies of retroactive authorization mechanisms; assessment of whether operational secrecy is necessary for tactical success or primarily for political cover.",
+      "impact": "If feasible: scaffold perspective is real (sunset is achievable). If infeasible: scaffold is aspirational rather than structural, and plausible deniability is closer to snare than to constraint-in-transition.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether transparent intelligence doctrine is operationally feasible"
+    },
+    {
+      "id": "coercive_effect_on_venezuela",
+      "question": "Does the mere existence of plausible deniability of US action structure Venezuelan decision-making and reduce its autonomous agency, independent of whether any covert action actually occurred?",
+      "resolution_mechanism": "Political science analysis: comparison of Venezuelan defensive behavior (militarization, alliance-seeking) with documented incidents of confirmed US covert action; correlation between news reports of alleged CIA involvement and subsequent Venezuelan institutional/diplomatic decisions; counterfactual assessment of Venezuelan policies absent the credible threat of covert action.",
+      "impact": "If coercive effect is present: extractiveness increases (deniability prevents accountability for structural coercion, not just specific operations). If effect is absent: extractiveness is lower (deniability merely protects individual operations, not systematic domination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether plausible deniability itself coerces Venezuelan agency independent of actual operations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The plausible deniability doctrine for US covert action in Venezuela represents a structural constraint that decouples operational action from institutional accountability. Following news reports alleging CIA-led operations inside Venezuela, the US government's policy of neither confirming nor denying involvement maintains a framework where potential violations of international law (Article 2(4) of the UN Charter, non-intervention principles) cannot be prosecuted, investigated through diplomatic channels, or addressed through formal accountability mechanisms. The constraint exhibits characteristics of both pure extraction (Snare) and institutional inertia (Piton), depending on whether one views it as an active mechanism of power consolidation or a vestigial Cold War doctrine persisting through bureaucratic momentum. The theater ratio has increased over the interval (0.35\u21920.68) as open-source intelligence, satellite imagery, whistleblower networks, and journalistic investigation have made plausible deniability increasingly performative \u2014 the institutional claim of opacity persists despite rising technical implausibility of actual deniability.",
+    "key_agents": [
+      "US National Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 maintains operational flexibility without legislative veto or legal accountability",
+      "US Executive Branch: Primary beneficiary (institutional/arbitrage) \u2014 preserves unilateral decision-making authority over covert action",
+      "Venezuelan Civilian Population: Primary victim (powerless/trapped) \u2014 cannot verify, contest, or seek remedies for alleged operations; structurally coerced by credible threat of deniable action",
+      "International Legal System: Victim (powerless/trapped) \u2014 cannot accumulate evidence or establish precedent; undermined by non-attribution framework",
+      "US Congress and Oversight Bodies: Secondary actor (organized/constrained) \u2014 receives briefings on compartmentalized basis; constrained by executive control of classification; receives coordination benefit (operational flexibility) but pays extraction cost (degraded oversight)",
+      "Transparency Advocates and International Coalition: Organized agents (organized/mobile) \u2014 building alternative verification through crowdsourced evidence, satellite analysis, witness networks; pushing toward sunset of deniability doctrine",
+      "Cold War Intelligence Doctrine: Institutional actor (institutional/constrained) \u2014 persists through inertia despite reduced plausibility in open-source age; maintained by classification authority and bureaucratic momentum"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The plausible deniability framework structurally prevents accountability for coercive action and creates asymmetric risk: powerful states can deny involvement without consequences; weak states cannot deny scrutiny or attribution. The extraction is not merely from direct victims of operations but from the international legal system itself, which loses the ability to establish precedent or deter future violations. The value reflects that the constraint enables systematic coercion beyond individual operations. Suppression (0.75): High. Multiple reinforcing mechanisms prevent evidence accumulation and accountability: compartmentalized classification, legal immunity for intelligence officers, diplomatic non-response to allegations, control of investigation sources, and institutional culture of silence. Whistleblowers face severe legal consequences. Congressional oversight is episodic and classified. Theater ratio (0.68): Moderate-high. The doctrine maintains theatrical elements \u2014 official denials, claims of non-involvement, performance of legal compliance \u2014 but the theater has degraded significantly over the interval. Open-source intelligence (satellite imagery, signals interception leaks, unit identification, weapons signatures) makes actual plausibility of deniability increasingly low. The constraint persists more through institutional inertia and legal cover than through genuine opacity.",
+    "perspectival_gap": "This constraint demonstrates extreme perspectival divergence. The national security apparatus sees pure coordination (Rope) \u2014 the constraint solves the legitimate problem of operational security. Congress sees mixed extraction and coordination (Tangled Rope) \u2014 flexibility is traded against oversight capacity. Venezuelan civilians see pure extraction (Snare) \u2014 they are structurally coerced without recourse. The international legal system sees extraction (Snare) \u2014 its norms are undermined. Transparency advocates see a temporary problem with an achievable sunset (Scaffold) \u2014 new attribution methods and transparency norms are eroding deniability's plausibility. The Cold War doctrine sees itself as persisting functionality (Piton) \u2014 the institutional claim of continued necessity increasingly diverges from operational reality. The analytical observer (civilizational scope) sees systemic asymmetric coercion (Snare) \u2014 the constraint is not a law of nature but a power arrangement masquerading as technical necessity.",
+    "directionality_logic": "Venezuelan civilians: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 no exit capacity, no accountability mechanism. International legal system: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Structurally prevented from functioning (establishing precedent, prosecuting violations). US Congress: Victim + constrained + partial beneficiary \u2192 d\u22480.68, f(d)\u22481.05. Constrained exit (classified compartmentalization) but partial coordination benefit (operational flexibility preferred by many members). Tangled rope classification reflects this mixed position. US security apparatus: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.15. Net beneficiary; experiences constraint as pure coordination. Transparency advocates: Organized + mobile \u2192 d\u22480.45, f(d)\u22480.49. Moderate extraction but mobile exit (building alternative verification pathways). Cold War doctrine: Institutional + constrained \u2192 d\u22480.55, f(d)\u22480.77. Piton classification from theater ratio (0.68\u22650.70 gate not met but approaching) and the gap between institutional claim (continued necessity) and operational reality (degraded plausibility).",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED: The mandatrophy is resolved by distinguishing between the beneficiary's perception (Rope: operational flexibility as pure coordination) and the structural reality (Snare: non-accountability as systematic coercion). The national security apparatus experiences the constraint as coordination because it provides genuine operational benefit. But from powerless agents (Venezuelan civilians, international legal system), the constraint is pure extraction \u2014 it decouples action from accountability in a manner that prevents all remedies and establishes precedent for unaccountable state action. The analytical observer's civilizational perspective reveals that plausible deniability is not a technical necessity (mountain) but a power arrangement that extracts from weak actors and generates systematic asymmetry. The theater ratio (0.68) indicates that the institutional claim of necessity is increasingly performative rather than functionally essential. The Piton perspective shows the doctrine persisting through inertia despite reduced plausibility. The Tangled Rope perspective on Congress captures how the constraint provides coordination benefit (executive flexibility) while extracting oversight capacity \u2014 this is the mandate: Congress receives the benefit of operational dexterity that plausible deniability enables, but at the cost of genuine accountability capacity. The Scaffold perspective on transparency advocates suggests a real sunset mechanism (open-source attribution technology) that could erode the constraint's effectiveness, though the political will to sunset the doctrine remains unclear. The snare classification is robust across multiple perspectives, confirming that the structural asymmetry of non-accountability is the essential feature, not merely the operational flexibility."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "venezuelan_regime_consolidation",
+      "us_latin_american_hegemony",
+      "international_non_intervention_norm"
+    ],
+    "dual_formulation_note": "Plausible deniability is upstream of specific alleged operations in Venezuela but represents a distinct institutional constraint on accountability and verification. The constraint operates at the level of the accountability mechanism itself, not at the level of individual covert actions. Downstream constraints (regime consolidation, hegemonic stability) depend on whether plausible deniability prevents accountability for their enabling operations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ]
+}

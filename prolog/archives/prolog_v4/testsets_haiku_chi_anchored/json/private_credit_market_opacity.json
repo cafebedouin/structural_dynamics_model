@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "private_credit_market_opacity",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pcmo"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Opacity and Systemic Risk Externalization in Private Credit Markets",
+    "topic_domain": "economic/financial_regulation",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "private_credit_fund_managers",
+      "specialized_lenders"
+    ],
+    "victims": [
+      "pension_fund_beneficiaries",
+      "systemic_financial_stability",
+      "regulatory_authorities",
+      "public_credit_markets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Pension Fund Beneficiaries",
+      "comment": "PERSPECTIVE 1: PENSION FUND BENEFICIARIES (SNARE) \u2014 Beneficiaries exposed to private credit risk through pension fund allocation decisions made without meaningful transparency or consent. No exit mechanism; trapped in the outcome of fund manager decisions. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Authorities",
+      "comment": "PERSPECTIVE 2: REGULATORY AUTHORITIES (SNARE) \u2014 Tasked with maintaining financial stability but lack real-time visibility into private credit portfolios, leverage ratios, concentration risks, and interconnectedness. Constrained by jurisdictional limits and regulatory arbitrage. d\u22480.88, f(d)\u22481.32, \u03c3=1.2 \u2192 \u03c7\u22480.90."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Systemic Financial Stability",
+      "comment": "PERSPECTIVE 3: SYSTEMIC FINANCIAL STABILITY (SNARE) \u2014 Abstract collective good with no agency, no exit, and full exposure to correlated default risk across opaque portfolios. Cannot organize or advocate. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.98."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Institutional Investors",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL INVESTORS (TANGLED ROPE) \u2014 Large sovereign wealth funds and institutional investors benefit from higher yields and portfolio diversification, but also face information asymmetry and counterparty risk. Have arbitrage exit (can reallocate capital) but accept the opacity trade-off for yield. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.22."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Private Credit Fund Managers",
+      "comment": "PERSPECTIVE 5: PRIVATE CREDIT FUND MANAGERS (ROPE) \u2014 Experience opacity as coordination: exclusive access to deal information and borrower data is the core value proposition. Opacity enables higher margins and reduces competitive pressure from public markets. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Public Credit Markets",
+      "comment": "PERSPECTIVE 6: PUBLIC CREDIT MARKETS (PITON) \u2014 Regulated public credit markets (corporate bonds, loan syndication) once functioned as price discovery and risk assessment mechanisms. Private credit has degraded this function \u2014 creditworthy borrowers bypass public markets entirely, leaving public markets with worse credit quality and reduced information signaling. Theater persists through regulatory appearances and disclosure requirements that no longer capture reality. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational perspective, the opacity is not an inherent feature of private credit but a structural extraction mechanism. The constraint exhibits all hallmarks of pure extraction: high suppression (information barriers prevent exit), high extractiveness (fund manager rents), asymmetric beneficiary/victim relationship, and reliance on regulatory arbitrage rather than coordination function. d\u22480.70, f(d)\u22481.10, \u03c3=1.2 \u2192 \u03c7\u22480.76."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "opacity_necessity_threshold",
+      "question": "Is opacity structurally necessary for private credit to function as a yield-generation mechanism, or is it contingent on regulatory arbitrage and fund manager rents?",
+      "resolution_mechanism": "Comparative analysis of transparent private credit funds vs opaque peers; correlation between transparency level and fund returns; simulation of regulatory regimes requiring standardized reporting",
+      "impact": "If structurally necessary: opacity is coordination cost (Rope from some perspectives). If contingent: opacity is pure extraction mechanism (Snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opacity is structurally necessary or contingent on rent extraction"
+    },
+    {
+      "id": "systemic_risk_correlation",
+      "question": "Are private credit portfolios sufficiently correlated with public credit markets and macro risks to trigger systemic cascade effects, or are they isolated from broad financial system shocks?",
+      "resolution_mechanism": "Portfolio correlation analysis under stress scenarios; stress-test modeling of shared borrower exposures; empirical analysis of 2023-2024 credit market dislocations and private credit exposure",
+      "impact": "If highly correlated: snare classification confirmed (systemic stability is victim). If isolated: risk is private (Tangled Rope from investor perspective). This determines whether externalization to public system occurs.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Systemic risk correlation of private credit to public markets"
+    },
+    {
+      "id": "regulatory_arbitrage_sustainability",
+      "question": "Can regulatory frameworks close the arbitrage window through standardized reporting and prudential limits, or is the opacity structural to how private credit fund economics operate?",
+      "resolution_mechanism": "Analysis of SEC, FCA, EBA regulatory proposals and implementation timelines; modeling of fund manager response to transparency mandates; comparison with regulated alternatives (BDCs, loan ETFs)",
+      "impact": "If closable: scaffold perspective is valid (regulatory sunset possible). If structural: snare is permanent unless market structure fundamentally changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory arbitrage can be closed through policy"
+    },
+    {
+      "id": "beneficiary_knowledge_asymmetry",
+      "question": "Do institutional investors (pension funds, endowments) genuinely understand the opacity, leverage, and correlation risks they are accepting, or does marketing and complexity obscure true risk profile?",
+      "resolution_mechanism": "Survey of institutional investor risk assessment practices; analysis of due diligence documentation; interviews with pension fund CIOs and risk officers; comparison of stated risk tolerance vs actual portfolio composition",
+      "impact": "If well-informed: constraint is Tangled Rope (beneficiary consciously accepts trade-off). If obscured: constraint is closer to Snare (beneficiary is victimized by information asymmetry).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional investor knowledge of private credit risks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The private credit market has grown to $1.7+ trillion by positioning itself as an alternative to regulated public credit markets, offering institutional investors higher yields in exchange for reduced transparency, longer lockup periods, and acceptance of information asymmetry. The core structural feature is that private credit fund managers control access to deal information, borrower identity, leverage ratios, and portfolio composition \u2014 information that would be mandated disclosure in public markets. This opacity extraction mechanism benefits fund managers through reduced competitive pressure and enables systematic overpricing of risk relative to actual default probability. The constraint manifests as a Snare because: (1) the victims (pension fund beneficiaries, systemic stability) have no exit and cannot organize, (2) suppression is high (information barriers prevent independent assessment), (3) extractiveness is substantial (fund managers capture yield differential that reflects risk underpricing), and (4) the mechanism relies on regulatory arbitrage rather than coordination function. The theater ratio (0.55) reflects that the constraint is partially obscured by marketing framing ('yield enhancement,' 'financial engineering') and institutional legitimacy (major asset managers operate private credit platforms). From the analytical observer perspective, this is clearly extraction: the same borrower obtains credit at lower cost in private markets than public markets, not because the risk is lower (it isn't), but because institutional investors accept information opacity for yield in a yield-constrained environment (post-2022 interest rate hikes).",
+    "key_agents": [
+      "Private Credit Fund Managers: Primary beneficiary (institutional/arbitrage) \u2014 extract rents through information asymmetry and regulatory arbitrage; control deal selection and pricing",
+      "Institutional Investors (Pension Funds, Sovereign Wealth Funds): Secondary beneficiary with victim characteristics (organized/arbitrage) \u2014 gain yield but accept opacity and leverage risks; cannot meaningfully exercise governance",
+      "Pension Fund Beneficiaries: Primary victim (powerless/trapped) \u2014 exposure without consent or meaningful transparency; no exit mechanism from pension fund allocation decisions",
+      "Regulatory Authorities: Victim (moderate/constrained) \u2014 tasked with systemic stability but lack real-time visibility; constrained by jurisdictional limits and regulatory arbitrage",
+      "Systemic Financial Stability: Abstract victim (powerless/trapped) \u2014 exposed to correlated default risks and potential cascade effects; no agency or exit",
+      "Public Credit Markets: Degraded institution (institutional/arbitrage) \u2014 lose creditworthy borrowers to private markets, leaving public markets with worse credit quality and reduced price discovery function"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High and growing. Fund managers extract rents through three mechanisms: (1) yield capture differential (borrowers pay higher rates in private markets despite lower risk-free-rate environment), (2) fee extraction (management fees 1.5-2% annually plus performance fees), and (3) information monopoly (exclusive access to deal data). The trajectory from 0.35 to 0.58 reflects the market's growth and increasing concentration of capital with fewer fund managers, reducing borrower competition. Suppression (0.68): High. Information barriers are intentional design features: fund managers control borrower identity, leverage ratios, covenant terms, and default timelines. Pension fund investors receive aggregated portfolio metrics but not underlying loan-level details. Regulatory authorities have no real-time visibility into private credit positions across their jurisdictions. This suppression is enforced through contractual confidentiality and the absence of standardized reporting requirements. Theater ratio (0.55): Moderate. The constraint includes performative elements \u2014 fund managers market themselves as 'sophisticated alternative investment managers' with superior deal sourcing and credit analysis, implying that opacity reflects specialized expertise rather than regulatory arbitrage. Marketing materials emphasize 'access' and 'yield generation' rather than information asymmetry. However, this is not pure theater (like traditional peer review); there is genuine fund manager activity (deal sourcing, due diligence, portfolio monitoring). The theater has increased from 0.32 to 0.55 as the market has professionalized and adopted more elaborate governance narratives.",
+    "perspectival_gap": "The gap is between beneficiaries and victims. Fund managers and institutional investors (perspectives 4-5) experience private credit as solving a genuine coordination problem: matching capital supply (institutional investors seeking yield) with demand (mid-market borrowers excluded from public markets by SEC requirements and credit rating thresholds). But pension fund beneficiaries, regulatory authorities, and systemic stability (perspectives 1-3) experience the same mechanism as extraction without coordination benefit \u2014 they bear risks they did not choose and cannot assess. The public credit market perspective (6) sees degradation: the exit of creditworthy borrowers has hollowed out price discovery in public markets, leaving them with adverse selection (lower-quality borrowers). The analytical observer (7) identifies this as Snare because the coordination narrative ('serving borrowers excluded from public markets') is subordinate to the extraction mechanism ('capturing yield differential through information opacity'). If coordination were primary, private credit would include standardized reporting and leverage limits; instead, opacity and leverage are features, not bugs.",
+    "directionality_logic": "Pension fund beneficiaries: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximum extraction. Regulatory authorities: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction; they are tasked with oversight but lack information. Systemic stability: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Institutional investors: Beneficiary + arbitrage \u2192 d\u22480.35, f(d)\u22480.32. However, the beneficiary status is nuanced \u2014 institutional investors have agency (can reallocate capital) and awareness of risks, so they are not pure victims. The Tangled Rope classification reflects this: they coordinate with fund managers (gain access) while accepting asymmetric information. Private credit fund managers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary with low effective extraction because they have full agency and benefit from the constraint. Public credit markets: Symmetric/victim split \u2192 d\u22480.50, f(d)\u22480.65. Piton classification reflects that they once functioned as coordination (price discovery) but are now largely performative (survival through regulatory requirements without real function).",
+    "mandatrophy_analysis": "This constraint avoids the mandatrophy between coordination and extraction by clarifying the structural distinction: private credit DOES solve a coordination problem (matching capital to borrowers excluded from public markets), but the solution is contaminated by extraction (opacity enables yield differential extraction). The Snare classification is correct not because coordination is absent but because extraction is the dominant mechanism. If the constraint were Tangled Rope, we would expect to see: (1) transparent reporting of leverage and concentration, (2) standardized covenants limiting downside for beneficiaries, (3) real governance rights for institutional investors. Instead, we observe the opposite: opacity and minimal governance. The institutional investor perspective (Tangled Rope) reflects their choice to accept this trade-off for yield; the beneficiary and systemic stability perspectives reflect being trapped with risks they did not choose. The mandatrophy is resolved by distinguishing who is benefiting (fund managers via arbitrage) from who is extracting (fund managers via information monopoly) \u2014 they are the same actor, but the mechanism is extraction, not coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "leverage_cascade_systemic_risk",
+      "public_bond_market_degradation",
+      "regulatory_arbitrage_capital_flight"
+    ],
+    "dual_formulation_note": "Private credit market opacity can be decomposed into at least two structurally distinct claims: (1) information asymmetry as necessary for market function (\u03b5\u22480.25, Rope perspective), vs (2) information asymmetry as extraction mechanism for fund manager rents (\u03b5\u22480.58, Snare perspective). The story presented here emphasizes the extraction reading (\u03b5=0.58) because the empirical trajectory (growth from 0.35 to 0.58) and the absence of offsetting transparency safeguards indicate extraction is dominant. A pure Rope formulation would require evidence that opacity serves a coordination function that cannot be achieved through standardized reporting; the data does not support this."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

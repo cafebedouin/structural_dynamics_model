@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "ritualistic_transition_scaffold",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.65,
+    "claimed_type": "scaffold",
+    "human_readable": "The Habit-Building Scaffold",
+    "topic_domain": "social/institutional",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "organization_members",
+      "leadership_team"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Organizational Member",
+      "comment": "PERSPECTIVE 1: ORGANIZATIONAL MEMBER (SCAFFOLD) \u2014 Constrained by chaos but sees the ritual structure as temporary stabilization enabling competence development. d\u22480.50, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.15. Low extraction because the constraint is transparently scaffolding toward independence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Leadership Team",
+      "comment": "PERSPECTIVE 2: LEADERSHIP TEAM (ROPE) \u2014 Implements ritual procedures as coordination mechanism to structure chaotic workflow. Experiences constraint as enabling: procedural theater creates common reference points for collective action. d\u22480.10, f(d)\u2248-0.05, \u03c3=0.8 \u2192 \u03c7\u2248-0.02. Net beneficiary through coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Ritualized Routine (Organizational Inertia)",
+      "comment": "PERSPECTIVE 3: RITUALIZED ROUTINE (PITON) \u2014 From a long-term view, the procedural theater can become vestigial \u2014 maintaining ritual structure after the underlying chaos has resolved. theater_ratio=0.65 indicates risk of performative drift. d\u22480.90, f(d)\u22481.35, \u03c3=0.8 \u2192 \u03c7\u22480.31. This perspective tracks the risk that the scaffold persists past its sunset date."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 Sees the constraint as a deliberate, time-bounded use of theater to stabilize and enable capability building. The sunset clause is structural: rituals succeed when they internalize and then dissolve. \u03c7\u22640.30 and theater\u22640.70 indicate genuine scaffolding architecture, not pure extraction. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.28. Constraint is classified as designed, temporary coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "internalization_threshold",
+      "question": "At what point do organizational members internalize the procedural structure such that the external scaffold is no longer necessary?",
+      "resolution_mechanism": "Measurement of member competence in executing procedures without prompting; assessment of whether decisions improve without ritual structure; member self-report of confidence in autonomous execution",
+      "impact": "If internalization occurs rapidly (3-6 months): scaffold succeeds and can be formally dissolved. If internalization is slow or incomplete: scaffold becomes piton through inertia rather than success.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline and indicators of procedural internalization"
+    },
+    {
+      "id": "theater_creep_onset",
+      "question": "Does the procedural theater gradually replace substantive decision-making rather than enabling it?",
+      "resolution_mechanism": "Tracking of time spent on ritual performance vs. decision content; measurement of whether procedure adherence correlates with outcome quality; detection of when ritual becomes substitution rather than scaffold",
+      "impact": "If theater creep is detected early: constraint can be modified or dissolved before degradation to piton. If undetected: constraint persists as performative vestige.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Detection of procedural theater replacing substantive function"
+    },
+    {
+      "id": "organizational_readiness_assessment",
+      "question": "How should the sunset clause timing be calibrated to match actual organizational capacity rather than predetermined schedule?",
+      "resolution_mechanism": "Establishment of readiness criteria (member competence levels, decision quality metrics, process variance reduction); comparison of predetermined sunset with readiness-based sunset timelines",
+      "impact": "If sunset is too early: organization regresses when scaffold is removed. If sunset is too late: constraint degrades to piton through institutional inertia. Calibration determines whether scaffold succeeds as designed.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Sunset clause calibration to organizational readiness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Organizations in chaotic or transitional states often employ structured rituals\u2014daily standups, formal review cycles, standardized documentation templates\u2014not to extract value but to create stable reference points around which members can coordinate and develop competence. The Habit-Building Scaffold is an intentional use of procedural theater to stabilize a chaotic organization during a transition period. Unlike pure extraction (Snare) or pure coordination (Rope), the scaffold combines low-level extraction overhead with temporary, explicit constraints that members understand will dissolve as they internalize the procedures. The constraint succeeds if the theater becomes internalized as habit and can then be dissolved; it degrades to a Piton if the ritual persists after internalization due to institutional inertia. This story models how scaffolding differs structurally from both coordinate-only and extract-only constraints through its sunset clause\u2014the explicit temporal design that distinguishes temporary support from permanent extraction.",
+    "key_agents": [
+      "Organization Members: Primary beneficiary (moderate/constrained) \u2014 constrained by ritual structure but experience it as enabling competence development and reducing chaos-induced anxiety",
+      "Leadership Team: Secondary beneficiary (institutional/arbitrage) \u2014 implements scaffold as coordination mechanism; experiences low extraction overhead; benefits from reduced cognitive load from shared procedures",
+      "Organizational Workflow: Implicit victim/constraint object (powerless/trapped) \u2014 abstract process state that the ritual stabilizes; subject to degradation risk if ritual persists past its functional window",
+      "Analytical Observer: External evaluator (analytical/analytical) \u2014 assesses whether scaffold is functioning as designed and tracking toward sunset vs. degrading toward piton"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-to-moderate. The ritual structure does impose costs\u2014members must comply with procedures, spend time on meetings, document decisions formally\u2014but these costs are low relative to the coordination benefits and are understood by members as temporary. The extractiveness is not near-zero because leadership maintains some structural advantage (they design and can modify procedures), but it is far from snare-level extraction (0.46+) because members see the constraint as enabling, not oppressive. Suppression (0.35): Moderate. Members are constrained in how they execute work (must follow procedures, cannot informally shortcut) but retain exit options (can leave, can push back on procedures). The suppression is not high because the constraint is transparent and the coercion is legitimized by the scaffolding frame. Theater ratio (0.65): Moderate-high. Much of the procedural structure is explicitly theatrical\u2014rituals and ceremonies designed to stabilize emotional and cognitive state, not purely functional. Daily standups have theater content (team gathering, shared awareness) alongside coordination content (status updates). The theater is intentional and appropriate to the scaffolding function. Claimed type (Scaffold): Fits schema constraints: \u03c7 \u2264 0.30 (computed: 0.28 \u00d7 0.65 \u00d7 0.8 \u2248 0.15), theater \u2264 0.70 (actual: 0.65), has_sunset_clause (explicit in constraint design), beneficiaries present (organization members, leadership), extractiveness trajectory rising slightly (internalization phase, theater becoming more ritualized) but not exceeding threshold for degradation.",
+    "perspectival_gap": "The organizational member and leadership team both see the constraint as scaffold because they understand the sunset logic and experience the coercion as proportional and temporary. The piton perspective emerges from a long-term view where ritual persists past its functional window\u2014this is the degradation risk that the sunset clause is designed to prevent. The analytical observer sees the scaffold structure as intentional design, validating the classification, but also tracks the omegas that would indicate degradation. The perspectival gap is not between fundamentally opposed views (as in snare vs. rope) but between different temporal horizons: short-term members see scaffolding; long-term institutional inertia risks sees piton degradation. The constraint's success depends on closing this gap\u2014dissolving the ritual before it becomes vestigial.",
+    "directionality_logic": "Organization members: Beneficiary + constrained \u2192 d\u22480.50, f(d)\u22480.65. Members experience both costs (procedural compliance) and benefits (chaos reduction, competence scaffolding) in roughly equal measure. Leadership team: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Net beneficiary; leadership can exit the constraint (design procedures differently) and benefits from coordination coordination coordination gains. Organizational workflow (as piton perspective): Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. Abstract process cannot exit; at risk from persistent theater post-sunset. Analytical observer: analytical \u2192 d\u22480.65, f(d)\u22481.00. Standard analytical derivation for observer position.",
+    "mandatrophy_analysis": "The Habit-Building Scaffold resolves mandatrophy by making explicit the temporal design that distinguishes scaffolding from pure extraction. A snare would hide its extraction mechanism and lack a sunset clause; a rope would have no temporal limit because coordination is intrinsically beneficial; a scaffold is temporally bounded and transparently theatrical. The constraint avoids false natural law framing (mountain) by virtue of its low base extractiveness and the mechanisms (internalization, reduced chaos) that enable dissolution. The primary mandatrophy risk is degradation to piton\u2014the ritual persists after its scaffolding function is complete due to institutional inertia or member comfort with familiar procedures. The omegas (internalization_threshold, theater_creep_onset) track this risk. The classification holds if the sunset clause is honored and the ritual is genuinely dissolved when members internalize the procedures. If the ritual persists past internalization, the constraint reclassifies to piton (theater \u2265 0.70, \u03b5 \u2264 0.25, institutional inertia maintained) and the mandatrophy is unresolved."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The Habit-Building Scaffold is a standalone constraint with no upstream dependencies. It may affect organizational outcomes (productivity, member satisfaction) but does not functionally depend on other constraints. If the organization experiences multiple chaotic transitions, separate scaffold stories would track each transition; this story models the generic structure."
+  },
+  "directionality_overrides": []
+}

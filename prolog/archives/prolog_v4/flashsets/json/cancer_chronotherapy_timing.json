@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "cancer_chronotherapy_timing",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Circadian Lifeline",
+    "topic_domain": "health/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cancer_patients_early_treatment",
+      "oncologists_early_treatment"
+    ],
+    "victims": [
+      "cancer_patients_late_treatment",
+      "oncologists_late_treatment"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Cancer Patients (Late Treatment)",
+      "comment": "Patients receiving immunotherapy outside the optimal circadian window experience reduced treatment efficacy, acting as a snare due to lower T-cell congregation at the tumor site."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Cancer Patients (Early Treatment)",
+      "comment": "Patients receiving immunotherapy within the optimal circadian window benefit from increased treatment efficacy due to higher T-cell presence at the tumor site, acting as a rope."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Oncologists (Standard Practice)",
+      "comment": "Oncologists are constrained by standard practice and scheduling logistics but also benefit from improved patient outcomes when adhering to circadian timing. They coordinate care, but there is extraction between patients based on when they receive the treatment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees that the practice is a tangled rope, because of the extraction based on timing, and coordination in using circadian timing for improved outcomes, but is not always followed because of scheduling."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "patient_adherence",
+      "question": "To what extent can patients adhere to specific treatment times given their daily routines and schedules?",
+      "resolution_mechanism": "Conduct patient surveys and track appointment adherence rates.",
+      "impact": "If low adherence, then the benefit of circadian timing is negated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Patient adherence to treatment schedules"
+    },
+    {
+      "id": "confounding_factors",
+      "question": "Are there other confounding factors that influence treatment efficacy beyond circadian timing?",
+      "resolution_mechanism": "Conduct multivariate analysis considering patient genetics, lifestyle, and disease stage.",
+      "impact": "If significant confounding factors exist, then the impact of circadian timing is overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Confounding factors affecting treatment efficacy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The timing of immunotherapy, specifically before 3pm, leverages T-cell congregation around tumors, which can improve cancer treatment efficacy. This constraint affects patients differently depending on their treatment schedule. Patients treated within the optimal circadian window experience improved outcomes, while those treated outside this window receive less benefit. The medical community is both coordinating to leverage this knowledge, but there is still extraction between patients based on scheduling logistics.",
+    "key_agents": [
+      "Cancer Patients (Early Treatment): Benefit from increased treatment efficacy (moderate/mobile)",
+      "Cancer Patients (Late Treatment): Experience reduced treatment efficacy (powerless/trapped)",
+      "Oncologists (Standard Practice): Constrained by scheduling logistics but can benefit from improved patient outcomes (institutional/constrained)",
+      "Analytical Observer: Views the constraint from a global perspective (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate extraction occurs because patients receiving treatment outside the optimal window experience reduced efficacy. Suppression (0.40): There is moderate suppression due to scheduling constraints, lack of awareness among all practitioners, and patient convenience.",
+    "perspectival_gap": "The perspectival gap exists because patients treated at different times of the day experience different outcomes. Patients treated within the optimal circadian window experience improved treatment efficacy. Patients treated outside experience reduced efficacy, and the analytical perspective observes both, as well as the oncologist coordinating this.",
+    "directionality_logic": "Patients receiving immunotherapy outside the optimal circadian window bear the cost (high d value). Patients receiving the treatment in the optimal window benefit (low d value). Oncologists are constrained by logistics, but benefit from good outcomes."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "immunotherapy_effectiveness",
+      "cancer_treatment_side_effects"
+    ]
+  },
+  "directionality_overrides": []
+}

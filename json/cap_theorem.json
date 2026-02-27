@@ -2,19 +2,20 @@
   "header": {
     "constraint_id": "cap_theorem",
     "version": "1.0",
-    "generated_date": "2024-05-21",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cap"
   },
   "base_properties": {
-    "extractiveness": 0.02,
-    "suppression": 0.01,
-    "theater_ratio": 0.0,
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
     "claimed_type": "mountain",
     "human_readable": "CAP Theorem (Brewer's Theorem)",
-    "topic_domain": "distributed_systems/computer_science",
+    "topic_domain": "technological/distributed_systems",
     "emerges_naturally": true,
-    "accessibility_collapse": 0.95,
-    "resistance": 0.05
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
   },
   "perspectives": [
     {
@@ -23,59 +24,111 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The System Architect",
-      "comment": "PERSPECTIVE 1: THE SYSTEM ARCHITECT (MOUNTAIN) — The theorem is a fundamental, unchangeable law of the design space for distributed systems. It cannot be exited, only analyzed and designed around. This is the canonical analytical view."
+      "label": "The Theoretical Consensus",
+      "comment": "PERSPECTIVE 1: THEORETICAL CONSENSUS (MOUNTAIN) \u2014 The CAP theorem is a proven mathematical constraint on distributed systems. From a formal logic perspective, any distributed database must sacrifice one of three properties. This is invariant across all implementations, architectures, and design choices. Zero degrees of freedom. The constraint emerges from the incompleteness of information propagation across partitioned networks."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Startup Founder",
-      "comment": "PERSPECTIVE 2: THE STARTUP FOUNDER (MOUNTAIN) — A resource-constrained actor is completely trapped by the theorem's logic. They cannot build a system that violates it, regardless of their goals or resources. It is an immutable environmental constraint."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Cloud Provider",
-      "comment": "PERSPECTIVE 3: THE CLOUD PROVIDER (MOUNTAIN) — An institutional actor with vast resources still cannot violate the theorem. Their 'exit' is arbitrage: offering different services that make different trade-offs (e.g., a CP database vs. an AP one), but the underlying constraint remains fixed."
+      "label": "The Systems Architect",
+      "comment": "PERSPECTIVE 2: SYSTEMS ARCHITECT (MOUNTAIN) \u2014 Even with unlimited resources and engineering skill, the CAP constraint cannot be circumvented. The architect cannot buy their way out, cannot design around it, cannot implement a system that violates the theorem. The constraint is a ceiling on design possibility, not a friction cost. Recognized by every major database vendor as an immutable architecture tradeoff."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Engineering Organization",
+      "comment": "PERSPECTIVE 3: ENGINEERING ORGANIZATION (MOUNTAIN) \u2014 Distributed systems teams across decades and continents have arrived independently at the same conclusion: all production systems choose two of three. No organizational coalition, standards body, or market competition has produced a system that violates CAP. The constraint persists as a structural reality independent of economic incentives or collective action."
     },
     {
       "classification_type": "mountain",
       "agent_power": "moderate",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The End User",
-      "comment": "PERSPECTIVE 4: THE END USER (MOUNTAIN) — The user experiences the consequences of the trade-offs (e.g., stale data vs. an error message), but the underlying constraint is a fixed limit. Their ability to switch services doesn't change the theorem's validity."
+      "spatial_scope": "global",
+      "label": "The Database Developer",
+      "comment": "PERSPECTIVE 4: DATABASE DEVELOPER (MOUNTAIN) \u2014 Individual engineers implementing distributed data stores encounter the CAP constraint as an unavoidable design forcing function. Choosing which two of three to provide is not optional; it is the primary decision. The constraint appears as a natural law of system behavior, not as an external rule imposed on them."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "partition_tolerance_necessity",
+      "question": "Is partition tolerance truly optional, or do all practical distributed systems require it because network partitions are empirically inevitable?",
+      "resolution_mechanism": "Analysis of production systems claiming CA (no partition tolerance): examine failure modes when network partitions occur; compare stated guarantees to actual behavior under adverse conditions",
+      "impact": "If partition tolerance is empirically unavoidable: effective CAP reduces to CP vs AP choice in practice. The theorem remains mathematical but the practical space is narrower.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether partition tolerance is truly optional or empirically unavoidable"
+    },
+    {
+      "id": "consistency_definition_boundary",
+      "question": "Does the theorem's definition of 'consistency' (linearizability) capture all forms of data correctness that systems require, or do weaker consistency models (eventual, causal) represent a different constraint class?",
+      "resolution_mechanism": "Formal analysis of consistency hierarchy; examination of systems that claim to exceed CAP via weaker consistency models; determine if these systems have simply redefined 'consistency' rather than violated the theorem",
+      "impact": "If weaker models are a different constraint: CAP remains invariant for its formal definition but does not address practical system design. If they violate CAP: theorem requires revision.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether consistency definitions beyond linearizability constitute theorem violations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.12
     }
   ],
   "interval": {
-    "start": 2000,
-    "end": 2024
+    "start": 0,
+    "end": 40
   },
   "commentary": {
-    "narrative_context": "The CAP theorem, or Brewer's theorem, is a fundamental principle in distributed computing. It states that any distributed data store can only provide two of three guarantees simultaneously: Consistency (every read receives the most recent write or an error), Availability (every request receives a non-error response, without guarantee that it contains the most recent write), and Partition Tolerance (the system continues to operate despite an arbitrary number of messages being dropped or delayed by the network between nodes). Since network partitions are a given in real-world distributed systems, the choice is effectively between Consistency and Availability (CP vs. AP). This is not a policy choice but a logical impossibility, making it a classic example of a Mountain constraint.",
+    "narrative_context": "The CAP theorem (formalized by Eric Brewer, proven by Lynch and Gilbert) establishes that any distributed data storage system can guarantee at most two of three properties: Consistency (every read returns the most recent write), Availability (every request receives a response), and Partition Tolerance (the system continues operating during network partitions). This constraint is invariant across all implementations, market conditions, engineering skill levels, and economic incentives. It is not a friction cost that can be engineered away, not a regulation that can be reformed, not a coordination problem that can be solved by coalition. It is a logical consequence of the structure of distributed information systems operating under adversarial network conditions. All major database systems (PostgreSQL, MongoDB, Cassandra, Dynamo, Spanner) recognize and design around this constraint by explicitly choosing their position in the CA-CP-AP space.",
     "key_agents": [
-      "System Architects: Analytical agents who use the theorem as a foundational design principle.",
-      "Startup Founders: Powerless agents (relative to the theorem) who must build their systems within its constraints.",
-      "Cloud Providers: Institutional agents who offer services that embody different CAP trade-offs, but cannot escape the theorem itself.",
-      "End Users: Moderate agents who experience the downstream effects of the design choices mandated by the theorem."
+      "Distributed Systems Theory: Analytical observer \u2014 derives the theorem from first principles; sees pure mathematical constraint",
+      "Systems Architects: Powerful/analytical \u2014 design production systems; face the constraint as an unavoidable tradeoff; cannot escape through engineering",
+      "Database Vendors: Institutional/arbitrage \u2014 implement systems that choose two of three; compete on which two they prioritize",
+      "Application Developers: Moderate/constrained \u2014 must select databases that match their consistency/availability requirements; face the tradeoff indirectly through vendor choices",
+      "Network Infrastructure: Powerless/trapped \u2014 cannot prevent partitions; subjected to the constraint's reality"
     ],
-    "logic_rationale": "This constraint is classified as a Mountain because it represents a fundamental, logically derived limit. Extractiveness (ε=0.02) and Suppression (0.01) are near zero because the theorem does not extract value or coerce behavior; it merely describes the possible state space. It emerges naturally (true) from the properties of distributed networks. Resistance (0.05) is minimal as the theorem is formally proven. Accessibility Collapse (0.95) is high; once the terms are understood, the trade-off becomes self-evident and is a cornerstone of distributed systems education. There is no theater (0.0).",
-    "perspectival_gap": "There is no perspectival gap. This is a key diagnostic feature of a true Mountain constraint. All observers, regardless of their power, exit options, or time horizon, converge on the same classification. The theorem is an invariant feature of the environment for all actors.",
-    "directionality_logic": "The constraint is symmetric and non-extractive, so there are no beneficiaries or victims. The directionality `d` for any agent will be derived from canonical fallbacks based on their power level. However, with a base extractiveness (ε) of 0.02, the effective extraction (χ) is negligible (≈0) for all perspectives, reinforcing the Mountain classification across the board.",
-    "mandatrophy_analysis": "The CAP theorem serves as a perfect baseline for identifying true Mountain constraints. It prevents the mandatrophy of misclassifying a fundamental limit as a contingent policy choice or an extractive system. Any attempt to frame the CAP trade-off as a 'snare' imposed by cloud providers, for example, would be immediately falsified by the structural metrics. It is a non-negotiable feature of reality, not an artificial rule."
+    "logic_rationale": "Extractiveness (0.12): Minimal. The constraint imposes no extraction from any party \u2014 it does not transfer resources or opportunities from one agent to another. It is a purely structural limit, not a distribution mechanism. The value is near-zero, reflecting only the minor friction of having to make an explicit choice among three options. Suppression (0.03): Negligible. The constraint suppresses no alternatives \u2014 engineers are free to choose any two of the three; there is no coercion or reduction of choices. The small value reflects only the fact that one choice (the third guarantee) must be forgone. Theater ratio (0.15): Very low. The constraint exhibits no performative content. Its function is purely technical: it partitions design possibility space. There is no gap between the declared function (mathematical proof) and actual behavior. The small value reflects minor pedagogical theater in how the theorem is taught (simplified examples vs full formal proof).",
+    "perspectival_gap": "All four perspectives classify as Mountain because the CAP constraint is invariant across all observation points. No perspectival gap exists \u2014 the theoretical consensus, the architect, the organization, and the developer all encounter the same immutable constraint. This uniformity is diagnostic: it indicates a genuine natural law of distributed systems. Unlike the verification bottleneck exemplar (which showed all six types from different perspectives of a contingent institutional arrangement), the CAP constraint exhibits no perspectival variance. This is the signature of a true mountain.",
+    "directionality_logic": "Directionality is not applicable to mountain constraints. There is no extraction flow, no beneficiary/victim structure, and no power asymmetry to model. The constraint operates identically regardless of the observer's power level, exit options, or time horizon. Every agent experiences the same logical ceiling on design possibility."
   },
   "network": {
     "affects_constraints": [
-      "eventual_consistency",
-      "acid_compliance"
+      "eventual_consistency_semantics",
+      "quorum_consensus_protocols"
     ],
-    "dual_formulation_note": "The CAP theorem is an upstream logical constraint that necessitates the creation of downstream coordination patterns like 'eventual consistency' to manage the trade-offs it imposes."
+    "dual_formulation_note": "The CAP theorem has two decompositions in the literature: (1) Lynch-Gilbert formal proof (2003), which rigorously establishes the incompatibility of strong consistency with partition tolerance; (2) Brewer's original conjecture (2000), which stated the tradeoff informally. Both converge on the same constraint structure. Network links reflect constraints that are downstream of or conditional on CAP: eventual consistency models represent design choices acknowledging the AP or CP selection; consensus protocols (Raft, Paxos) are implementations that explicitly choose the CP position."
   }
 }

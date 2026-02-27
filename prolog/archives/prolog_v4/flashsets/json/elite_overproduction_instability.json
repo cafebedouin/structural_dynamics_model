@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "elite_overproduction_instability",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Aspirant's Bottleneck",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_elites"
+    ],
+    "victims": [
+      "overproduced_elite_aspirants",
+      "social_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Overproduced Elite Aspirant",
+      "comment": "Perspective of the individual who invested heavily in education and preparation, but faces limited opportunities. They are trapped in a system where their efforts are not rewarded with expected elite positions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Elites",
+      "comment": "Perspective of established elites who benefit from the overproduction as it provides a larger pool of talent to select from and maintain their positions. They can also use the threat of competition to maintain control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Social Stability",
+      "comment": "From the perspective of general societal stability. While a meritocratic system is intended to improve efficiency and social mobility (a 'rope'), elite overproduction can lead to instability, frustration, and potential unrest (extraction)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees that there are benefits and extraction involved. It can drive innovation and efficiency because of the competition but can also create resentment if the process isn't fair."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "meritocracy_measurement",
+      "question": "How accurately does the system select the most competent individuals?",
+      "resolution_mechanism": "Statistical analysis of selected individuals' performance compared to non-selected individuals' performance.",
+      "impact": "If the system is highly meritocratic, elite overproduction might still be a problem but more accepted. If not, the instability increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measuring the meritocracy of the system"
+    },
+    {
+      "id": "opportunity_availability",
+      "question": "What is the actual number of available elite positions?",
+      "resolution_mechanism": "Detailed census of elite positions across different sectors.",
+      "impact": "A higher number of available opportunities reduces the tension of elite overproduction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Measuring the number of available positions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Elite overproduction occurs when the number of individuals qualified and desiring elite positions exceeds the actual availability of such positions. This creates a bottleneck where many aspirants are left disappointed, leading to potential social instability. Incumbent elites benefit from a larger pool of talent, while the aspirants face frustration and limited opportunities.",
+    "key_agents": [
+      "Overproduced Elite Aspirants: Primary target (powerless/trapped) - They bear the cost of investing in skills and education without guaranteed rewards.",
+      "Incumbent Elites: Primary beneficiary (institutional/arbitrage) - They benefit from increased competition and a larger pool of potential recruits.",
+      "Social Stability: Secondary actor (moderate/constrained) - Overall stability is negatively impacted by widespread frustration and resentment among overproduced elites."
+    ],
+    "logic_rationale": "The extractiveness is high because the system extracts resources (time, money, effort) from the aspirants. The suppression is high because it's difficult for individuals to create their elite pathways or escape the competition. The theater ratio is lower reflecting that some of the education has some genuine utility even if the aspiration is thwarted.",
+    "perspectival_gap": "The overproduced aspirant views the system as a snare, while the incumbent elites view it as a beneficial rope. Societal stability experiences the tension between the supposed benefits of meritocracy and the potential for unrest. The analytical observer recognizes this duality.",
+    "directionality_logic": "Incumbent elites benefit, so d is low. Overproduced elites are the primary victims, so d is high. Social stability as a concept feels the downstream effects."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

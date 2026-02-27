@@ -1,0 +1,164 @@
+{
+  "header": {
+    "constraint_id": "cholesterol_pill_cost",
+    "version": "1.0",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Cost of Patented Cholesterol Medication",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_company",
+      "shareholders"
+    ],
+    "victims": [
+      "patients",
+      "taxpayers",
+      "uninsured_individuals"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Patients with High Cholesterol",
+      "comment": "Patients with high cholesterol and limited financial resources are trapped by the high cost of the medication and have limited exit options due to health needs and lack of alternatives. They experience the constraint as a snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Company",
+      "comment": "The pharmaceutical company benefits from the patent protection and high pricing, enabling them to recoup R&D costs and generate profit. From their perspective, the patent system and pricing strategy act as a rope, facilitating coordination and investment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Insured Individuals",
+      "comment": "Insured individuals are constrained by insurance premiums and co-pays, but also benefit from access to the medication. They experience the constraint as a tangled rope, with both benefits and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Government Healthcare Systems",
+      "comment": "Government healthcare systems (e.g., Medicare, NHS) are constrained by the high cost of the drug and the need to provide access to patients, but also benefit from improved patient health outcomes. They experience the constraint as a tangled rope, balancing costs and benefits."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Patent System",
+      "comment": "The patent system, while intended to incentivize innovation, can become a piton when it allows for excessive pricing and limited access, hindering overall societal welfare. The original coordination function has atrophied."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the cost of patented cholesterol medication is a tangled rope. It balances the need to incentivize pharmaceutical innovation with the need to ensure affordable access to essential medicines, reflecting asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "patent_term_vs_innovation",
+      "question": "What is the optimal patent term that balances incentivizing innovation with ensuring timely access to affordable medicines?",
+      "resolution_mechanism": "Economic modeling and empirical studies on the impact of patent term length on pharmaceutical R&D investment and drug prices.",
+      "impact": "If patent term is too long: delayed access and higher healthcare costs. If patent term is too short: reduced incentive for pharmaceutical innovation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal patent term balancing innovation and access"
+    },
+    {
+      "id": "pricing_regulation_impact",
+      "question": "What is the impact of government price regulation on pharmaceutical R&D investment and drug availability?",
+      "resolution_mechanism": "Comparative analysis of pharmaceutical innovation and drug prices in countries with and without price regulation.",
+      "impact": "If price regulation is too strict: reduced pharmaceutical R&D investment and drug availability. If price regulation is too weak: excessive drug prices and limited access.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of government price regulation on pharmaceutical R&D"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The high cost of patented cholesterol medication creates a tension between incentivizing pharmaceutical innovation and ensuring affordable access to essential medicines. The patent system, while intended to promote innovation, can lead to monopolistic pricing and limited access, particularly for vulnerable populations. The lack of generic alternatives and the complexities of drug pricing further exacerbate the problem, making it a snare for patients and taxpayers.",
+    "key_agents": [
+      "Pharmaceutical Company: Primary beneficiary (institutional/arbitrage) - benefits from patent protection and high prices",
+      "Patients: Primary victim (powerless/trapped) - bear the cost of high prices with limited alternatives",
+      "Taxpayers: Secondary victim (moderate/constrained) - indirectly bear the cost through government healthcare programs",
+      "Uninsured Individuals: Severely impacted (powerless/trapped) - Face exorbitant costs with almost no access",
+      "Government Healthcare Systems: Tangled between cost and patient access (organized/constrained)",
+      "Shareholders: Benefit greatly from high pricing strategies (institutional/arbitrage)"
+    ],
+    "logic_rationale": "Extractiveness (0.75): The high price of the patented medication extracts significant value from patients and taxpayers, particularly those with limited financial resources and those needing the medication. Suppression (0.80): The patent protection and lack of generic alternatives suppress competition and limit access to affordable options. Theater Ratio (0.75): The theater ratio has increased over time as the focus has shifted towards marketing and lobbying efforts to maintain high prices, rather than on further R&D for this specific drug.",
+    "perspectival_gap": "Patients see a snare as they are trapped by the high cost. Pharmaceutical companies see a rope, where the patent protection and pricing helps them to continue creating drugs. The government is in the middle as a tangled rope between patient access and cost.",
+    "directionality_logic": "The pharmaceutical company benefits from the patent protection and pricing, while patients bear the costs. The government is in a constrained position, balancing the need to provide access with the financial burden of high drug prices.",
+    "mandatrophy_analysis": "While the patent system is intended to incentivize innovation, in this case, the high cost of the medication suggests a potential imbalance, where the extraction outweighs the coordination benefits for society as a whole. Resolved by identifying patients as trapped, while pharma companies have arbitrage, indicating a transfer of wealth. The requires_active_enforcement flag is set because the patent system requires ongoing legal and regulatory enforcement to maintain the pharmaceutical company's exclusive rights."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "drug_patent_system",
+      "healthcare_access_disparities"
+    ]
+  },
+  "directionality_overrides": []
+}

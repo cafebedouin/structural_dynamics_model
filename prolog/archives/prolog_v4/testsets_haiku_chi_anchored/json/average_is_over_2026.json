@@ -1,0 +1,158 @@
+{
+  "header": {
+    "constraint_id": "average_is_over_2026",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The AI-Talent Barbell Economy",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_leveraging_talent",
+      "capital_owners"
+    ],
+    "victims": [
+      "mid_skill_cognitive_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Mid-Skill Cognitive Worker",
+      "comment": "PERSPECTIVE 1: THE MID-SKILL WORKER (SNARE) — From the perspective of an individual whose skills are being devalued by AI, the system is a trap. Their career capital is eroding, wages are stagnating, and the cost of retraining is high with uncertain outcomes. They are trapped within a national economy undergoing this shift. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92. This is pure extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI-Leveraging Talent",
+      "comment": "PERSPECTIVE 2: THE AI-LEVERAGING TALENT (ROPE) — For the top 1-5% of talent who can use AI as a force multiplier, the system is a pure coordination mechanism. It allows them to scale their abilities, find opportunities globally, and generate immense value. They experience no extraction, only subsidy. d≈0.15 (beneficiary+mobile), f(d)≈-0.01, σ=1.2 → χ≈-0.01. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees both the immense productivity and coordination gains (the Rope function) and the severe, asymmetric extraction from the middle class (the Snare function). The system requires active market enforcement to maintain this disequilibrium. This matches the claimed_type. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Policymaker",
+      "comment": "PERSPECTIVE 4: THE POLICYMAKER (SCAFFOLD) — Governments view this economic shift as a temporary, turbulent transition. They implement policies like retraining programs, tax credits, and social safety nets as temporary scaffolds, intended to support the workforce until new, stable job categories emerge. The 'sunset clause' is the implicit belief that the market will eventually create a new equilibrium. This perspective acknowledges the problem but frames it as solvable and temporary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy University System",
+      "comment": "PERSPECTIVE 5: THE LEGACY UNIVERSITY (PITON) — The traditional university system's function of credentialing for mid-skill cognitive jobs is being hollowed out. Yet, it persists due to institutional inertia, brand value, and its role as a social/cultural ritual. Its core economic function has degraded, while the performative aspects (campus life, alumni networks, signaling) remain. The high theater_ratio (0.75) of the overall constraint captures this perfectly, satisfying the piton gate."
+    }
+  ],
+  "interval": {
+    "start": 2022,
+    "end": 2032
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2027,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2032,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2027,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2032,
+      "value": 0.75
+    }
+  ],
+  "omegas": [
+    {
+      "id": "new_job_creation_rate",
+      "question": "Will new job categories, accessible to the median worker, emerge fast enough to absorb those displaced from the 'middle'?",
+      "resolution_mechanism": "Longitudinal labor market analysis tracking job title creation/destruction and associated wage/skill data.",
+      "impact": "If new jobs emerge, the constraint softens towards a Scaffold or Rope. If not, it hardens into a permanent Snare for a large segment of the population.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of emergence for new, accessible job categories."
+    },
+    {
+      "id": "policy_intervention_efficacy",
+      "question": "Can policy interventions like UBI, wealth taxes, or large-scale public retraining programs effectively counteract the market's extractive tendencies?",
+      "resolution_mechanism": "Comparative analysis of national policy experiments and their effect on income inequality and social mobility metrics.",
+      "impact": "High efficacy reduces suppression and effective extraction, shifting the classification. Low efficacy confirms the Snare/Tangled Rope structure as dominant.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Efficacy of policy in counteracting market-driven extraction."
+    },
+    {
+      "id": "talent_vs_access",
+      "question": "Is the 'top talent' on one end of the barbell a reflection of innate ability, or a product of privileged access to elite education, networks, and capital?",
+      "resolution_mechanism": "Sociological studies correlating 'AI-leveraging' success with socioeconomic background, controlling for cognitive test scores.",
+      "impact": "If primarily innate, the structure may resemble a Mountain (a law of cognitive physics). If primarily access, it confirms the structure is a socially constructed Snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the 'talent' pole is innate ability or privileged access."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The 'AI-Talent Barbell Economy' describes a structural shift where economic rewards are concentrated at two poles, hollowing out the middle. At one end are those who can leverage AI and complex systems ('AI-Leveraging Talent' and 'Capital Owners'). At the other are those with skills resistant to automation (e.g., high-touch manual trades). In the middle, the value of routine cognitive work plummets, creating a large class of economically precarious 'Mid-Skill Cognitive Workers'. This constraint is not a specific law but the emergent outcome of technological progress interacting with existing market structures.",
+    "key_agents": [
+      "Mid-Skill Cognitive Workers: Primary victims (powerless/trapped) — their skills and economic security are being extracted.",
+      "AI-Leveraging Talent: Primary beneficiaries (powerful/arbitrage) — experience the system as a productivity-enhancing coordination tool.",
+      "Capital Owners: Primary beneficiaries (institutional/arbitrage) — own the AI systems and platforms, capturing the lion's share of productivity gains.",
+      "Policymakers: Institutional actors (institutional/constrained) — attempt to manage the transition with temporary support structures.",
+      "Legacy University System: Institutional actors (institutional/constrained) — their primary function is degrading, persisting through inertia."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The system systematically transfers economic surplus from labor in the middle of the skill distribution to capital and labor at the top. Suppression (0.75): High. For an individual worker, opting out is not feasible; they must adapt or face marginalization. Alternatives at a systemic level (e.g., different economic models) are heavily suppressed by political and institutional inertia. Theater Ratio (0.75): High. This reflects the massive industry of performative 'upskilling' programs, 'future of work' consulting, and political rhetoric that often fails to deliver concrete pathways for displaced workers, alongside the credentialing rituals of legacy institutions that no longer map to economic reality.",
+    "perspectival_gap": "The gap is extreme. For the beneficiary at the top, this is a golden age of progress and coordination (Rope). For the victim in the middle, it is a coercive trap that devalues their life's work (Snare). Policymakers see a temporary, manageable crisis (Scaffold), while legacy institutions experience their own functional decay (Piton). The analytical view (Tangled Rope) must hold both the coordination and extraction functions in tension to understand the full picture.",
+    "directionality_logic": "Beneficiaries (AI Talent, Capital Owners) have arbitrage exit options, leading to a low or negative derived directionality (d), classifying the constraint as a Rope from their view. Victims (Mid-Skill Workers) are trapped, leading to a maximal d-value and a Snare classification. Institutional actors like governments and universities are constrained, leading to intermediate d-values, where the classification is then determined by other factors like the sunset clause (Scaffold) or high theater (Piton).",
+    "mandatrophy_analysis": "This constraint resolves a key mandatrophy: mistaking a technologically-driven structural transformation for either pure progress (a Rope) or pure exploitation (a Snare). The Deferential Realism framework shows it is both simultaneously. The analytical classification of Tangled Rope correctly identifies the dual nature of the system—it genuinely coordinates resources in a highly productive way while also creating a severe, asymmetric extraction from a specific, structurally-defined victim class. Ignoring either function leads to a dangerously incomplete model of reality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "credentialism_as_gatekeeping"
+    ]
+  }
+}

@@ -2,25 +2,25 @@
   "header": {
     "constraint_id": "antikythera_knowledge_loss",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "antik"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.1,
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
     "claimed_type": "snare",
     "human_readable": "Loss of Hellenistic Precision Gearing Knowledge",
-    "topic_domain": "technological/historical",
-    "requires_active_enforcement": true,
-    "beneficiaries": [
-      "elite_patrons_of_antiquity",
-      "dogmatic_knowledge_systems"
-    ],
+    "topic_domain": "technological/epistemic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
     "victims": [
-      "future_generations",
-      "hellenistic_engineers_lineage"
-    ]
+      "hellenistic_technical_tradition",
+      "mechanical_knowledge_continuity",
+      "technological_progress_mediterranean"
+    ],
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
@@ -29,35 +29,35 @@
       "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Future Generations",
-      "comment": "PERSPECTIVE 1: FUTURE GENERATIONS (SNARE) - Trapped by the arrow of time, future civilizations bore the full 1500-year opportunity cost of this lost knowledge. They had no exit and could not influence the past. The loss represents a pure, unrecoverable extraction of technological potential. d≈0.95, f(d)≈1.42, σ=1.2 -> χ≈1.11."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "Hellenistic Elite Patrons",
-      "comment": "PERSPECTIVE 2: ELITE PATRONS (ROPE) - For the wealthy individuals who commissioned such devices, the technology was a coordination tool for demonstrating status, predicting events, and organizing society (e.g., timing of games). Its rarity enhanced its value. They were pure beneficiaries with arbitrage power. d≈0.05, f(d)≈-0.12, σ=0.9 -> χ≈-0.07."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "Hellenistic Engineers",
-      "comment": "PERSPECTIVE 3: HELLENISTIC ENGINEERS (TANGLED ROPE) - The artisans who built the mechanism benefited from their unique, high-value skills (coordination) but were also victims of a system where this knowledge was not widely disseminated and was dependent on fragile patronage networks (extraction). Their lineage was trapped by societal collapse. d≈0.75, f(d)≈1.10, σ=0.8 -> χ≈0.57."
+      "label": "The Epistemic Commons of Mechanical Knowledge",
+      "comment": "PERSPECTIVE 1: EPISTEMIC COMMONS (SNARE) \u2014 The collective knowledge tradition cannot exit the suppression regime. Once precision gearing techniques are lost, no mechanism exists to recover them without independent reinvention. Trapped in the suppression state with maximum extraction from potential technological progress."
     },
     {
       "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Mediterranean Technical Practitioners",
+      "comment": "PERSPECTIVE 2: MEDITERRANEAN TECHNICAL PRACTITIONERS (SNARE) \u2014 Skilled craftspeople and engineers in post-Hellenistic Mediterranean have no pathway to recover lost gear-cutting knowledge. Library destruction, trade disruption, and institutional collapse eliminate transmission mechanisms. High suppression, no exit options despite moderate organizational capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Byzantine and Islamic Mechanical Traditions",
+      "comment": "PERSPECTIVE 3: BYZANTINE AND ISLAMIC MECHANICAL TRADITIONS (PITON) \u2014 These institutional knowledge holders preserve water-mills, astrolabes, and mechanical clocks but perform degraded versions of original Hellenistic principles. Theater ratio is high because the institutions maintain the appearance of technical sophistication through modified, less-precise designs. The underlying precision-gearing knowledge remains lost; institutional memory preserves only the accessible subset."
+    },
+    {
+      "classification_type": "scaffold",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "Modern Historian of Technology",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (SNARE) - The analytical view sees a systemic failure. The combination of knowledge concentration, institutional fragility, and societal upheaval created a structural trap that captured and extinguished a critical technological capability for over a millennium. This matches the claimed type."
+      "label": "Knowledge Reconstruction Through Scientific Reverse-Engineering",
+      "comment": "PERSPECTIVE 4: REVERSE-ENGINEERING RESEARCH (SCAFFOLD) \u2014 Modern materials analysis, CT scanning, and mechanical simulation enable reconstruction of lost principles from artifact examination. This is a temporary support structure with a sunset clause: once the mechanism is fully understood and principles are reintegrated into modern mechanical knowledge, the constraint loses force. The suppression was contingent on specific historical circumstances (institutional collapse, material loss) that modern technology can circumvent."
     },
     {
       "classification_type": "mountain",
@@ -65,95 +65,104 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The 'Cyclical History' View",
-      "comment": "PERSPECTIVE 5: CYCLICAL HISTORY VIEW (MOUNTAIN) - This perspective naturalizes the loss, framing it as an inevitable consequence of civilizational rise and fall, a 'law of history'. It misclassifies a contingent institutional failure as an unchangeable mountain. The engine will flag this as a false summit, as the base properties (high ε and suppression) are inconsistent with a natural law."
-    }
-  ],
-  "interval": {
-    "start": 0,
-    "end": 1600
-  },
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 400,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1600,
-      "value": 0.65
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 400,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1600,
-      "value": 0.1
+      "label": "The Analytical View: Knowledge Loss as Irreversible Until Recovery",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a universal/civilizational view, the loss of knowledge is irreversible once all materials and knowledge-holders perish. The constraint appears as a natural law of information: in the absence of external storage (written records, material artifacts), knowledge decays exponentially toward zero. The Antikythera Mechanism is the exception that proves the rule \u2014 surviving artifact allowed later recovery. But the vast majority of lost Hellenistic knowledge has no artifact record and remains permanently inaccessible. This perspective risks naturalizing historical contingency as law."
     }
   ],
   "omegas": [
     {
-      "id": "knowledge_dissemination_scope",
-      "question": "How widespread was the knowledge to build these mechanisms in the Hellenistic world?",
-      "resolution_mechanism": "Archaeological discovery of other similar mechanisms, fragments, or workshops; textual analysis of engineering treatises.",
-      "impact": "If knowledge was widespread (e.g., dozens of workshops), the loss is more indicative of active suppression (Snare). If it was confined to a single school or workshop, the loss is more a result of fragility (Tangled Rope).",
+      "id": "knowledge_complexity_threshold",
+      "question": "Was the Antikythera Mechanism's technology a isolated sophisticated anomaly or the visible peak of a broader Hellenistic precision-engineering tradition?",
+      "resolution_mechanism": "Archaeological survey for additional precision-gearing artifacts; textual analysis of Hellenistic technical literature (Hero of Alexandria, Archimedes treatises) for evidence of systematic gear-cutting knowledge; metallurgical analysis of period machinery for evidence of precision fabrication techniques",
+      "impact": "If isolated anomaly (\u03b5 \u2264 0.30): constraint is Rope \u2014 mechanical knowledge was never widely distributed and loss was low-extraction. If peak of tradition (\u03b5 = 0.58+): constraint is Snare \u2014 widespread suppression of a technical knowledge base that would have enabled continuous technological progress.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The extent of precision gearing knowledge in antiquity."
+      "description": "Whether Antikythera represents an anomaly or peak of broader tradition"
     },
     {
-      "id": "active_suppression_vs_neglect",
-      "question": "Was the loss of knowledge a result of passive societal decay and neglect, or was there active suppression by rising dogmatic/religious ideologies?",
-      "resolution_mechanism": "Historical analysis of late Roman and early medieval texts for evidence of suppression of mechanical philosophy or specific scientific traditions.",
-      "impact": "Clear evidence of active suppression would confirm the Snare classification and the 'requires_active_enforcement' flag. A finding of pure neglect would weaken the Snare case in favor of a catastrophic Piton (a functional system that simply broke and was forgotten).",
-      "confidence": "low",
+      "id": "institutional_collapse_causality",
+      "question": "How much of knowledge loss was due to institutional collapse (loss of schools/libraries) versus active suppression (political decision to restrict technology) versus economic reorganization (shift away from precision manufacturing incentives)?",
+      "resolution_mechanism": "Historical analysis of knowledge preservation in Byzantine and Islamic institutions; textual evidence of deliberate technological restriction or preservation policies; economic analysis of post-Hellenistic trade patterns and manufacturing investment",
+      "impact": "If collapse-driven (passive): suppression value \u2264 0.40 \u2014 loss was incidental, not enforced. If suppression-driven: suppression \u2265 0.70 \u2014 constraint becomes active snare. If economically reorganized: beneficiary analysis required \u2014 some institutional actors may have benefited from shift away from precision manufacturing.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Distinguishing between active suppression and passive neglect."
+      "description": "Causality of knowledge loss: collapse, suppression, or economic reorganization"
     },
     {
-      "id": "mechanism_practical_efficacy",
-      "question": "How accurate and reliable was the mechanism in practice?",
-      "resolution_mechanism": "Advanced modeling of gear wear, friction, and potential inaccuracies based on known Hellenistic manufacturing tolerances.",
-      "impact": "If highly effective, its loss is a true Snare. If it was impressive but ultimately unreliable, it may have been a technological dead-end that was abandoned for practical reasons, making the 'loss' more of a Piton-like degradation.",
+      "id": "recovery_completeness",
+      "question": "Can modern reverse-engineering of the Antikythera Mechanism fully restore the original Hellenistic principles, or is some tacit knowledge (master craftsperson techniques, material properties, precision requirements) permanently lost even with the artifact?",
+      "resolution_mechanism": "Longitudinal study of reconstruction attempts (Freeth et al., Aidinis, others); comparison of reconstructed device performance with inferred original specifications; attempt to independently derive gear-cutting techniques from geometric analysis alone",
+      "impact": "If complete recovery: scaffold sunset is achievable \u2014 knowledge can be reintegrated. If permanent gaps: constraint remains partially in force \u2014 reconstructed knowledge will always differ from original, creating a new Snare layer (the myth of complete recovery masking persistent gaps).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The real-world reliability and accuracy of the device."
+      "description": "Whether modern reverse-engineering can fully restore original Hellenistic principles"
     }
   ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 750,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 750,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1500
+  },
   "commentary": {
-    "narrative_context": "The Antikythera Mechanism reveals a level of Hellenistic engineering that was subsequently lost for over 1,500 years. The constraint is not the device itself, but the set of systemic factors—knowledge concentration, institutional fragility, and societal upheaval—that allowed this advanced capability to be completely erased from the technological landscape. This systemic fragility acted as a snare, trapping knowledge and imposing a massive opportunity cost on subsequent generations.",
+    "narrative_context": "The Antikythera Mechanism represents a catastrophic knowledge loss in Hellenistic mechanical technology. A sophisticated analog computer for astronomical calculation, built around 100 BCE with precision bronze gearing and complex gear-trains, demonstrates mechanical and mathematical sophistication that would not be matched again in Europe for over 1,500 years. The loss of this knowledge was not inevitable \u2014 it resulted from institutional collapse (destruction of libraries, end of patronage systems), trade disruption (loss of Mediterranean commerce networks), and fragmentation of the technical tradition. The constraint is that this lost knowledge created a structural suppression on technological progress: without the conceptual framework and material knowledge of precision gearing, subsequent civilizations had to rediscover fundamental mechanical principles from first principles. The mechanism itself was lost until its recovery from a shipwreck in 1901, creating a curious inversion \u2014 the artifact survived, but its meaning and the knowledge tradition it represented did not. Modern reconstruction efforts represent a scaffold-type response: reverse-engineering the artifact to recover principles and reintegrate them into contemporary mechanical knowledge. However, the three omegas reveal deep uncertainties about the extent, causality, and completeness of the knowledge loss.",
     "key_agents": [
-      "Future Generations: Primary victim (powerless/trapped) - Bore the 1500-year cost of the technological reset.",
-      "Hellenistic Engineers' Lineage: Secondary victim (moderate/constrained) - Possessed valuable skills but were dependent on a fragile system that ultimately collapsed.",
-      "Elite Patrons of Antiquity: Primary beneficiary (institutional/arbitrage) - Used the rare technology as a tool for coordination and status.",
-      "Dogmatic Knowledge Systems: Secondary beneficiary (institutional/constrained) - The absence of a mechanical, predictive model of the cosmos reinforced worldviews based on divine will rather than natural law.",
-      "Modern Historians: Analytical observer - Perceive the full scope of the systemic failure."
+      "Hellenistic Technical Tradition: Primary victim (powerless/trapped) \u2014 knowledge holder that cannot transmit or preserve itself once institutional supports collapse",
+      "Hellenistic Mechanical Knowledge Commons: Primary victim (powerless/trapped) \u2014 abstract epistemic resource with no advocate or exit option; extracted by institutional collapse",
+      "Mediterranean Technical Practitioners: Secondary victim (moderate/trapped) \u2014 skilled craftspeople lose access to knowledge base and cannot recover it within their lifetimes",
+      "Byzantine and Islamic Mechanical Traditions: Institutional actors (institutional/constrained) \u2014 preserve modified mechanical knowledge (water mills, astrolabes) but lack original precision-gearing principles; maintain theater through degraded versions",
+      "Modern Archaeological and Engineering Research: Analytical observer (analytical/analytical) \u2014 reverse-engineer principles from artifact; create scaffold for knowledge recovery"
     ],
-    "logic_rationale": "Extractiveness (ε=0.65): Represents the immense opportunity cost imposed on subsequent civilizations. The 1500-year gap in precision mechanical engineering is a direct measure of the value extracted from the timeline. Suppression (0.75): High. The combination of the collapse of the Roman empire, the destruction of libraries (like Alexandria), and the rise of worldviews less conducive to mechanical philosophy created an environment where rediscovery was nearly impossible. The alternative (possessing this knowledge) was effectively suppressed. Theater Ratio (0.10): Low. The loss was a structural failure, not a performative act.",
-    "perspectival_gap": "The gap is stark. For the elite patron, the device was a useful Rope for coordination. For the engineer, it was a Tangled Rope of specialized skill and precarious employment. For future generations, the system that allowed its loss was a catastrophic Snare. For a determinist historian, the loss appears as an inevitable Mountain of civilizational cycles. This demonstrates how a single historical event is classified differently based on structural position relative to the flow of knowledge and time.",
-    "directionality_logic": "The beneficiaries are the ancient elites who monopolized the knowledge and the later dogmatic systems whose dominance was unchallenged by a mechanistic worldview. The victims are the artisans whose craft died and, most significantly, all subsequent generations who had to re-derive the lost principles from scratch. The high extraction value is primarily borne by these powerless, temporally distant victims.",
-    "mandatrophy_analysis": "This case resolves a potential mandatrophy where 'history' is seen as a series of random events. The framework classifies the loss not as an accident, but as a structural failure of a knowledge-preservation system. It was a Snare with identifiable properties (high concentration, low dissemination, institutional fragility) that predictably traps and extinguishes complex, non-obvious knowledge during periods of instability. The 'Mountain' perspective is revealed as a false summit that naturalizes this preventable failure."
+    "logic_rationale": "Extractiveness (0.58): High. The knowledge loss created persistent suppression on technological progress for over a millennium. The mechanism of extraction is structural: once the knowledge tradition collapses, no agent has incentive to recover or reinvent the precise gear-cutting techniques required for comparable mechanisms. The extractiveness increased from 0.28 (early Hellenistic period, when knowledge was active and partially documented) to 0.58 after institutional collapse. The value reflects that 75% of potential technological progress from precision-mechanical knowledge was forgone during the interval. Suppression (0.72): Very high. Multiple barriers prevented knowledge recovery: (1) Material loss \u2014 the artifact was destroyed (until 1901 recovery); (2) Institutional collapse \u2014 schools and libraries were destroyed; (3) Textual loss \u2014 treatises on gear-cutting were lost; (4) Social reorganization \u2014 shift away from precision manufacturing incentives; (5) Tacit knowledge loss \u2014 master craftspeople died without apprentices. Suppression reflects both the severity of institutional barriers and the absence of alternatives. Theater ratio (0.68): High. The Byzantine and Islamic mechanical traditions maintained the appearance of technical sophistication (astrolabes, water mills) while performing degraded versions of Hellenistic principles. This is classic piton theater \u2014 the institutions maintained their status as knowledge-holders through performative preservation of simplified designs, masking the loss of underlying precision principles.",
+    "perspectival_gap": "The epistemic commons and technical practitioners experience this as maximum suppression (Snare) \u2014 they have no exit and no mechanism for knowledge recovery within the 1,500-year interval. Byzantine and Islamic institutions experience it as piton degradation \u2014 they maintain institutional knowledge of mechanical devices but through simplified, less-precise designs that preserve the appearance of technical tradition while losing the substance. Modern reverse-engineering research experiences it as a temporary scaffold \u2014 the artifact has survived, and contemporary materials analysis can reconstruct principles, creating a sunset mechanism where the constraint loses force as knowledge is reintegrated. The analytical observer risks seeing this as a natural law of knowledge loss (Mountain), but the structural data reveals it as contingent institutional failure \u2014 the artifact's survival was chance, and the knowledge was recoverable only because the artifact survived.",
+    "directionality_logic": "There are no beneficiaries in this constraint \u2014 no agent benefits from the knowledge loss. The structure is pure extraction from victims with no exit. The epistemic commons is trapped because knowledge loss is irreversible without external intervention (the artifact recovery). Practitioners are trapped because they cannot rediscover complex principles within biographical timescales. Institutional actors experience constraint rather than trapping because they have some exit through simplified designs (the piton perspective), but this is degradation rather than genuine exit. The analytical observer has arbitrage options (modern materials science) that would-be Hellenistic engineers lacked. D values are very high for trapped agents (d \u2265 0.90), reflecting maximum extraction with zero exit.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED by showing that this is a genuine Snare (not misclassified as pure coordination). The constraint has zero coordination function \u2014 it serves no beneficial purpose for any agent. No beneficiary declaration is needed because no agent structurally benefits from knowledge loss. The absence of beneficiaries itself is diagnostic: pure extraction with no coordination hiding place. The piton perspective (Byzantine/Islamic) reveals the theater mechanism \u2014 maintained institutions preserve the appearance of knowledge while performing degraded versions, creating the false impression that knowledge continuity persists when fundamental principles are lost. The scaffold perspective reveals the sunset mechanism \u2014 modern reverse-engineering can recover lost principles, but only through external technology (CT scanning, computational modeling) unavailable to post-Hellenistic civilizations. The mandatrophy resolves by showing that extractiveness (0.58) genuinely reflects the suppression (0.72) and theater (0.68) \u2014 this is a snare precisely because no coordination benefit masks the extraction, and the theater is not concealing coordination but degradation."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "medieval_clockmaking_delay"
-    ]
-  }
+      "mediterranean_trade_disruption",
+      "library_destruction_late_antiquity",
+      "patronage_collapse_hellenistic_institutions"
+    ],
+    "dual_formulation_note": "The Antikythera knowledge loss decomposes into three upstream constraints: (1) Mediterranean Trade Disruption (\u03b5=0.35, Rope to Snare transition) \u2014 loss of commerce networks that transmitted technical knowledge; (2) Library Destruction in Late Antiquity (\u03b5=0.42, Snare) \u2014 institutional collapse eliminating knowledge storage; (3) Patronage Collapse of Hellenistic Institutions (\u03b5=0.40, Tangled Rope) \u2014 shift from patronage systems that funded precision research. Each upstream constraint independently weakened knowledge transmission; their combined effect created the severe suppression (0.72) in the knowledge loss constraint. This story models the aggregate constraint experienced by the epistemic commons."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.15
+    }
+  ]
 }

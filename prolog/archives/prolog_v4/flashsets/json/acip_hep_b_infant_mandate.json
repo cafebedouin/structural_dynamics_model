@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "acip_hep_b_infant_mandate",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ACIP Universal Hepatitis B Vaccination Mandate for Infants (1991-2025)",
+    "topic_domain": "social/medical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_companies",
+      "healthcare_providers",
+      "infant_population_health"
+    ],
+    "victims": [
+      "parents_opposed_vaccination",
+      "infants_with_adverse_reactions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Parents Opposed to Vaccination",
+      "comment": "Parents who strongly oppose vaccination feel trapped by the mandate, facing social pressure and potential legal repercussions if they refuse. They perceive the mandate as a pure extraction of their autonomy. d=0.95, f(d)=1.42, chi=0.35*1.42*1.0=0.497"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Pharmaceutical Companies",
+      "comment": "Pharmaceutical companies benefit directly from increased vaccine sales due to the mandate. They experience it as coordination, facilitating market expansion. d=0.05, f(d)=-0.12, chi=0.35*(-0.12)*1.0=-0.042"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Healthcare Providers",
+      "comment": "Healthcare providers are required to administer the vaccine, facing potential liability for adverse reactions but also benefiting from increased patient volume and reduced Hep B cases. d=0.50, f(d)=0.65, chi=0.35*0.65*1.0=0.2275"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a broad perspective, the mandate represents a complex interplay of public health benefits, economic incentives, and individual autonomy. It is a tangled rope due to the combination of coordination (public health improvement) and asymmetric extraction (restrictions on parental choice). d=0.72, f(d)=1.15, chi=0.35*1.15*1.0=0.4025"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "vaccine_efficacy_vs_adverse_effects",
+      "question": "What is the precise ratio of vaccine efficacy in preventing Hep B versus the incidence of adverse reactions in infants?",
+      "resolution_mechanism": "Longitudinal studies tracking Hep B incidence and adverse reaction rates in vaccinated vs. unvaccinated populations.",
+      "impact": "If efficacy is significantly higher than adverse effects, the mandate is justified. If adverse effects are more prevalent, the mandate should be re-evaluated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Balancing vaccine efficacy with adverse effects"
+    },
+    {
+      "id": "alternative_vaccination_schedules",
+      "question": "Are there alternative vaccination schedules that could mitigate adverse reactions while maintaining sufficient protection against Hep B?",
+      "resolution_mechanism": "Clinical trials comparing different vaccination schedules and their impact on Hep B incidence and adverse reaction rates.",
+      "impact": "If alternative schedules are effective, the mandate could be modified to offer more flexibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Exploring alternative vaccination schedules"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The ACIP's universal hepatitis B vaccination mandate for infants, introduced in 1991, aimed to eradicate Hep B transmission. While it has significantly reduced infection rates, it also created tensions between public health goals, pharmaceutical company profits, and parental autonomy. The mandate exemplifies a complex social constraint with both positive and negative aspects, leading to varying perspectives.",
+    "key_agents": [
+      "Pharmaceutical Companies: Primary beneficiary (institutional/arbitrage) - benefit from increased vaccine sales.",
+      "Healthcare Providers: Intermediary (moderate/constrained) - required to administer vaccine; face liability risks and patient care responsibilities.",
+      "Parents Opposed to Vaccination: Primary target (powerless/trapped) - face social pressure, potential legal repercussions, and concerns about adverse reactions.",
+      "Infant Population Health: Beneficiary (abstract/universal) - overall health of infants improved through reduced Hep B infections.",
+      "Infants with Adverse Reactions: Victim (powerless/trapped) - experience negative health consequences from the vaccine."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.35) due to the overall public health benefits, but suppression is present (0.40) because of limited parental choice and potential social pressure. The theater ratio is low (0.20), as the primary focus is on genuine health outcomes rather than performative compliance.",
+    "perspectival_gap": "The perspectival gap arises from the differing positions of those affected. Pharmaceutical companies see a beneficial market expansion. Healthcare providers navigate a complex situation with benefits and risks. Parents opposed to vaccination feel coerced and see their autonomy diminished. The analytical observer recognizes the inherent trade-offs between individual liberty and collective well-being.",
+    "directionality_logic": "Directionality is determined by the beneficiary/victim status and exit options. Pharmaceutical companies (beneficiary, arbitrage) have a low d value. Parents opposed to vaccination (victim, trapped) have a high d value. Healthcare providers and the analytical observer occupy intermediate positions reflecting their mixed experiences."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "childhood_vaccination_schedule",
+      "vaccine_hesitancy"
+    ]
+  },
+  "directionality_overrides": []
+}

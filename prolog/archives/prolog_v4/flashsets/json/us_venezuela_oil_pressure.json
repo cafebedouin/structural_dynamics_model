@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "us_venezuela_oil_pressure",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.85,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "US Geopolitical & Economic Pressure on Venezuela's Oil Sector",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_oil_companies",
+      "us_government"
+    ],
+    "victims": [
+      "venezuelan_people",
+      "venezuelan_government"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Venezuelan People",
+      "comment": "The Venezuelan people are trapped within a collapsing economy exacerbated by sanctions, with limited exit options and bearing the brunt of the pressure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Venezuelan Government",
+      "comment": "The Venezuelan government is constrained by US pressure but also benefits from oil revenues (albeit diminishing) and retains some agency through alliances and resourcefulness. Extraction is high, but not absolute."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Oil Companies",
+      "comment": "US oil companies benefit from access to Venezuelan oil resources, experiencing the constraint as a facilitator for resource extraction and market dominance. Arbitrage is available through global markets and shifting alliances."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Other Nations",
+      "comment": "Other nations dependent on oil may find that the actions of the United States constrains their exit options with regard to oil supplies and their price."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "US Government",
+      "comment": "The US Government benefits from exerting influence over Venezuelan oil resources, maintaining geopolitical leverage in the region, but also faces constraints from international relations and domestic politics. The effectiveness is mixed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the analytical observer sees a Tangled Rope where US pressure achieves its geopolitical and economic goals, extracting resources and influence, but with significant costs to the Venezuelan people and potential long-term damage to international relations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_oil_sources",
+      "question": "To what extent can alternative oil sources and energy technologies reduce global dependence on Venezuelan oil, diminishing the US geopolitical rationale?",
+      "resolution_mechanism": "Analysis of global energy market trends, technological advancements in renewable energy, and shifts in geopolitical alliances.",
+      "impact": "If dependence decreases significantly, the constraint shifts towards a scaffold, as the US incentive for pressure diminishes. If dependence remains high, the constraint solidifies as a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The availability of alternative oil sources affects the US geopolitical rationale."
+    },
+    {
+      "id": "venezuelan_government_stability",
+      "question": "What is the probability of a regime change in Venezuela that aligns with US interests?",
+      "resolution_mechanism": "Political risk analysis, assessment of internal and external pressures on the Venezuelan government, and evaluation of potential alternative leadership.",
+      "impact": "If a pro-US regime emerges, the constraint could transform into a rope, representing a coordinated relationship. If the current regime persists or a hostile regime rises, the constraint will solidify as a snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The stability of the Venezuelan government impacts the US strategy."
+    },
+    {
+      "id": "international_condemnation_threshold",
+      "question": "At what point does international condemnation of US pressure on Venezuela outweigh the perceived benefits of resource control?",
+      "resolution_mechanism": "Assessment of UN resolutions, diplomatic statements from key nations, and the effectiveness of Venezuelan lobbying efforts.",
+      "impact": "If international pressure becomes overwhelming, the constraint may shift towards a piton, as the US faces increasing isolation and the policy becomes unsustainable. If the US is able to withstand criticism, the constraint will remain a snare.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The international condemnation of the US affects policy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the decades-long United States policy of exerting diplomatic, economic, and covert pressure on Venezuela to ensure its vast oil reserves remain accessible and favorable to US corporate and geopolitical interests. This has taken the form of sanctions, support for opposition movements, and diplomatic isolation. The pressure has significantly impacted the Venezuelan economy and society.",
+    "key_agents": [
+      "US Oil Companies: Primary beneficiary (institutional/arbitrage)",
+      "US Government: Secondary beneficiary (institutional/mobile)",
+      "Venezuelan People: Primary victim (powerless/trapped)",
+      "Venezuelan Government: Secondary victim (moderate/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.75): High. The US extracts significant economic and geopolitical benefits from exerting pressure on Venezuela. The Venezuelan economy has suffered greatly, and the US gains favorable access to oil resources and maintains its influence in the region. Suppression (0.85): High. The US actively suppresses alternative political and economic models in Venezuela, limiting the country's options and maintaining its dependence. The US suppresses other countries doing business with Venezuela as well, making this a high suppression item. Theater Ratio (0.30): Relatively low, although some is performative. Public diplomacy efforts and justifications often mask underlying strategic objectives.",
+    "perspectival_gap": "The Venezuelan people experience the constraint as a pure Snare, with limited exit options and bearing the brunt of the pressure. The Venezuelan government sees a Tangled Rope, constrained by US pressure but also retaining some agency. US oil companies experience the constraint as a facilitator for resource extraction and market dominance, a Rope. The US government views the constraint as achieving its geopolitical and economic goals, a Tangled Rope. The analytical observer recognizes the long-term costs and consequences, a Tangled Rope, while the sanctions placed on trade constrains other nations oil supplies.",
+    "directionality_logic": "The directionality is determined by the power and exit options of each agent. The Venezuelan people are powerless and trapped, experiencing high extraction. US oil companies have arbitrage options and benefit, experiencing low or negative extraction. The US government has moderate power and mobility, experiencing mixed results. International power relations are the primary determinant of directionality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "opec_oil_production",
+      "us_iran_sanctions"
+    ]
+  },
+  "directionality_overrides": []
+}

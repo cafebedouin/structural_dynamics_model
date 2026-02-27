@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "lehman_repo_105",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "repo105"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.85,
+    "claimed_type": "snare",
+    "human_readable": "Lehman Brothers Repo 105 Accounting Maneuver",
+    "topic_domain": "economic/financial_regulation",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "lehman_counterparties",
+      "lehman_equity_investors",
+      "lehman_debt_investors",
+      "financial_system_stability"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Lehman Equity Investors",
+      "comment": "PERSPECTIVE 1: LEHMAN EQUITY INVESTORS (SNARE) \u2014 Retail and institutional shareholders held equity while leverage was concealed via Repo 105. They could not exit without realizing losses; the constraint trapped them through information asymmetry. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Lehman Counterparties (Smaller)",
+      "comment": "PERSPECTIVE 2: LEHMAN COUNTERPARTIES / CREDITORS (SNARE) \u2014 Counterparties extending credit in repo markets faced hidden leverage and liquidity risk. They could not detect or exit the relationship due to opacity; collateral values collapsed when Lehman failed. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Debt Investors & Bondholders",
+      "comment": "PERSPECTIVE 3: LEHMAN DEBT INVESTORS (SNARE) \u2014 Corporate and government bond buyers faced inflated credit quality due to reported leverage ratios. They could theoretically exit but faced market illiquidity and switching costs; information asymmetry was severe. d\u22480.78, f(d)\u22481.20, \u03c3=1.2 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Financial System as Whole",
+      "comment": "PERSPECTIVE 4: FINANCIAL SYSTEM STABILITY (SNARE) \u2014 The aggregate financial system faced systemic risk from hidden leverage cascading through repo markets and counterparty networks. Organized actors (regulators, central banks) were constrained by incomplete information and interconnection. d\u22480.68, f(d)\u22481.02, \u03c3=1.2 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Lehman Management & Treasury",
+      "comment": "PERSPECTIVE 5: LEHMAN MANAGEMENT / TREASURY (TANGLED ROPE) \u2014 Lehman's finance team benefited from quarter-end accounting relief: Repo 105 allowed temporary leverage reduction for reporting, enabling executive compensation, credit rating maintenance, and access to funding. The constraint provided coordination function (managing end-of-period balance sheets) alongside extraction (deception). d\u22480.15, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03. Negative extraction: net beneficiary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Accounting Standards & Auditors",
+      "comment": "PERSPECTIVE 6: ACCOUNTING STANDARDS / AUDITOR SYSTEM (SNARE) \u2014 Auditors (Ernst & Young) faced structural incentives to avoid antagonizing a major client. The constraint (Repo 105's accounting treatment under FAS 140) trapped the auditor through client dependence, regulatory complexity, and limited enforceability. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.55. High theater_ratio (0.85) reflects that audits were performative; technical compliance (FAS 140 literalism) masked economic substance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Regulatory Framework)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (PITON) \u2014 From a regulatory/civilizational perspective, Repo 105 exploited a technical loophole (FAS 140's sale treatment of repos with repurchase obligations) in what was supposed to be a substance-over-form framework. The constraint persists via institutional inertia in accounting standards that prioritize literal compliance over economic reality. theater_ratio=0.85 indicates primarily performative compliance. The regulatory framework sees its own process as degraded."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fas_140_substance_intent",
+      "question": "Did FAS 140 intend to permit repos treated as true sales, or was Repo 105 an unforeseen technical loophole in the standard?",
+      "resolution_mechanism": "Analysis of FASB deliberations, comment letters, and subsequent rule amendments (ASC 860); comparison of stated principles vs. literal language in FAS 140",
+      "impact": "If intent: constraint is systematic (Rope or Tangled Rope). If loophole: constraint is pure extraction (Snare) by design flaw. Affects whether blame accrues to Lehman or to standard-setters.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether FAS 140 intentionally permitted Repo 105 treatment"
+    },
+    {
+      "id": "rating_agency_detection_capability",
+      "question": "Could Moody's, S&P, or Fitch have detected Repo 105 from public disclosures or access to Lehman's credit files?",
+      "resolution_mechanism": "Forensic review of rating agency workpapers, access logs, and due diligence procedures; comparison with post-failure Lehman bankruptcy disclosures",
+      "impact": "If detectable: rating agencies were negligent (constraint is Snare on their judgment). If not detectable: information asymmetry was inherent (constraint is more structural Snare on investors). Changes accountability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rating agencies could detect Repo 105 from available information"
+    },
+    {
+      "id": "repo_market_knowledge_prevalence",
+      "question": "How widespread was knowledge of Repo 105 usage among institutional investors, counterparties, and regulators before the March 2008 near-failure and September 2008 bankruptcy?",
+      "resolution_mechanism": "Testimony from counterparties, institutional investors, and regulators; historical news coverage; internal emails from other financial institutions",
+      "impact": "If widespread: constraint is coordination failure masquerading as secrecy (Tangled Rope). If unknown: constraint is pure information extraction (Snare). Affects whether Lehman's advantage came from secrecy or from others' negligence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Prevalence of knowledge about Repo 105 before failure"
+    },
+    {
+      "id": "auditor_regulatory_independence",
+      "question": "Was Ernst & Young's failure to flag Repo 105 due to technical FAS 140 compliance (captured by literal standard) or to client capture and reputational risk?",
+      "resolution_mechanism": "Analysis of EY's FAS 140 guidance vs. peer practices; comparison with audits at other financial institutions using similar techniques; investigation of EY's engagement incentives and client relationships",
+      "impact": "If technical compliance: constraint is system-wide (Rope with low per-auditor responsibility). If client capture: constraint is Snare on auditor independence. Changes remediation strategy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether auditor failure was technical compliance or client capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Repo 105 was an accounting maneuver used by Lehman Brothers from approximately 2001-2008 to temporarily move billions in liabilities off its balance sheet at quarter-end, primarily to reduce reported leverage and hide financial deterioration from investors, credit rating agencies, and regulators. The mechanism exploited a technical loophole in FAS 140 (Financial Accounting Standard 140: 'Accounting for Transfers and Servicing of Financial Assets and Extinguishments of Liabilities'). Lehman would sell mortgage-backed securities and other assets to financial institutions (primarily Deutsche Bank and Barclays) with a simultaneous repurchase agreement at slightly higher prices. Under FAS 140, if the repo had a sufficiently short maturity and the seller retained minimal economic interest, it was treated as a 'true sale' rather than a financing arrangement \u2014 meaning the assets and corresponding liabilities could be removed from the balance sheet entirely. Lehman would then re-enter into similar repos after quarter-end to restore the same exposure. The constraint extracted value through information asymmetry: reported leverage ratios overstated financial health, enabling Lehman to maintain investment-grade credit ratings, access cheaper funding, and inflate equity prices during periods when true leverage was catastrophic. The constraint operated at scale: by September 2008, Lehman was using Repo 105 to hide approximately $50 billion in liabilities (roughly 11% of reported assets). The theater ratio increased over time as the maneuver became more routine and institutionalized\u2014auditors and counterparties internalized the technical compliance without assessing substance. The extractiveness increased as Lehman's actual financial condition deteriorated and the gap between reported and true leverage widened. When Lehman collapsed in September 2008, the constraint reversed catastrophically: counterparties discovered they held collateral pledged multiple times over, investors realized they had been lied to through lawful accounting, and the financial system faced systemic risk from hidden interconnections. The mandatrophy is resolved: Repo 105 is unambiguously a Snare from the victims' perspective (trapped investors and counterparties). From management's perspective it appeared as a Rope (coordination mechanism for balance sheet management), masking the underlying extraction. The key question is whether the extraction came from Lehman's deception or from the regulatory framework's failure to align accounting with economic substance.",
+    "key_agents": [
+      "Lehman Management & Treasury: Primary beneficiary (institutional/arbitrage) \u2014 benefited from quarter-end leverage reduction, rating maintenance, funding access, and executive compensation tied to reported metrics",
+      "Lehman Equity Investors: Primary victim (powerless/trapped) \u2014 retail and institutional shareholders held equity during concealment period; could not exit without realizing losses",
+      "Lehman Counterparties (repo participants): Secondary victim (powerless/trapped) \u2014 creditors in repo markets faced hidden leverage and liquidity risk; collateral pledged multiple times over",
+      "Lehman Debt Investors: Secondary victim (moderate/constrained) \u2014 bondholders and debt investors faced inflated credit quality; some ability to exit but market illiquidity was severe",
+      "Ernst & Young (Auditors): Trapped institutional actor (institutional/constrained) \u2014 faced incentives to avoid antagonizing major client; technical FAS 140 compliance masked substance",
+      "Rating Agencies: Institutional observer (institutional/constrained) \u2014 access to Lehman's internal data but analytical capacity limited by complexity; constrained by modeling assumptions",
+      "Financial System: Systemic victim (organized/constrained) \u2014 aggregate system faced contagion risk from hidden interconnections and counterparty uncertainty"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Lehman captured substantial value through leverage reduction that concealed financial deterioration. The extraction was not maximal (0.68 rather than 0.95) because the maneuver had explicit costs (repo spreads, operational complexity, funding to repurchase) and benefited only Lehman, not a broader coalition. Suppression (0.78): Very high. Repo 105 worked entirely through information asymmetry. Lehman actively concealed the maneuver by timing repos to quarter-end, using offshore counterparties (Deutsche Bank's Dublin office), and exploiting the technical complexity of FAS 140. Counterparties, investors, and auditors could not easily detect the practice; it remained hidden until the Lehman bankruptcy examiner's 2010 report. Theater ratio (0.85): Very high and increasing. Audits were performative: Ernst & Young reviewed the FAS 140 compliance without assessing economic substance. Lehman's quarterly earnings calls emphasized reported leverage ratios that had been artificially reduced. Credit rating reviews relied on Lehman's published financial statements without detecting the off-balance-sheet maneuver. By 2008, the constraint had become entirely theatrical\u2014the true leverage was 30-40x while reported leverage appeared 15-20x. Claimed type (snare): Mandatory. High extractiveness (0.68), high suppression (0.78), and multiple victims with no exit create the snare signature. The chi threshold (\u03c7 \u2265 0.66) is met: \u03c7 = 0.68 \u00d7 f(0.95) \u00d7 \u03c3(global) = 0.68 \u00d7 1.42 \u00d7 1.2 \u2248 1.16 for equity investors (d\u22480.95), and \u03c7 = 0.68 \u00d7 f(0.92) \u00d7 \u03c3(global) \u2248 1.12 for creditors.",
+    "perspectival_gap": "The perspectival gap is extreme. Lehman management viewed Repo 105 as a beneficial coordination mechanism (Rope) for managing balance sheet liquidity at quarter-end\u2014a technical solution to a legitimate accounting problem. Equity investors, debt holders, and counterparties viewed it as pure extraction (Snare)\u2014a mechanism to deceive them about Lehman's true financial condition. Ernst & Young's perspective was trapped between technical compliance (FAS 140 permit) and substance-over-form principles\u2014they classified it as a Snare on the auditor system itself (unable to exit without antagonizing a major client or openly accusing management of fraud). Rating agencies should have classified it as Snare but had insufficient detection capability. The analytical observer (civilizational perspective) sees a Piton: the accounting framework (FAS 140) has become degraded and performative, allowing literal compliance to diverge from economic substance. The gap reveals that 'coordination' and 'extraction' are not intrinsic to the maneuver but depend entirely on informational position. Lehman sees coordination; victims see extraction.",
+    "directionality_logic": "Lehman equity investors: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. They held shares during the entire concealment period and could not exit without realizing losses. Information asymmetry prevented them from detecting Lehman's true condition. Lehman creditors & counterparties: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Nearly maximum extraction. They extended credit based on false leverage ratios; collateral pledged multiple times; no ability to detect or exit when leverage was discovered. Lehman debt investors: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.20. High extraction with some exit option. Bondholders could theoretically sell debt, but secondary market illiquidity and credit rating reliance made exit costly. Lehman management: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.05. Net beneficiary. Captured quarter-end accounting relief, maintained ratings, accessed cheaper funding. Negative effective extraction (\u03c7 \u2248 0.03). Auditors: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.15. High extraction on the auditor system itself. Client dependence and technical complexity trapped auditors in literal compliance. Financial system: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.02. Moderate-high extraction on systemic stability. Regulators and central banks could theoretically intervene but faced incomplete information and interconnection complexity.",
+    "mandatrophy_analysis": "RESOLVED: Repo 105 is unambiguously a Snare. The mandatrophy (misclassification as coordination when it is extraction) is definitively resolved through the empirical outcome: when Lehman collapsed, the coordination benefits (quarter-end balance sheet relief) evaporated instantly while the extraction harm (investor and creditor losses) persisted catastrophically. This reveals that the apparent 'coordination' was purely theatrical\u2014the balance sheet relief was temporary and costless to Lehman (reversed post-quarter), while the deception was systematic and costly to victims (permanent information loss). Lehman management's Rope perspective is a false consciousness\u2014what they experienced as legitimate quarter-end management was actually a sophisticated deception scheme. The snare classification is robust across all perspectives except the beneficiary's. Ernst & Young's perspective (Snare on auditor independence) and the regulatory framework's perspective (Piton\u2014degraded accounting standards) do not contradict the snare classification; they identify secondary constraints that enabled the snare to function. The mandatrophy is resolved not through theoretical argument but through structural observation: extractiveness > 0.65, suppression > 0.75, multiple victims with no exit, and empirically verified collapse of coordination benefits upon constraint failure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "financial_leverage_opacity",
+      "accounting_standard_arbitrage",
+      "credit_rating_model_failure"
+    ],
+    "dual_formulation_note": "Repo 105 is downstream of broader accounting standard design (FAS 140 loophole) and credit rating methodology (reliance on reported financials). It is upstream of systemic risk (hidden interconnection in repo markets). The constraint family includes: (1) FAS 140 technical design (\u03b5\u22480.12, Mountain-like rigidity of literal standard), (2) Repo 105 exploitation (\u03b5\u22480.68, Snare), and (3) Credit rating cascade failure (\u03b5\u22480.55, Tangled Rope). Repo 105 cannot be understood in isolation from the accounting standard that enabled it or the rating agency models that amplified it."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "accounting_standard_arbitrage",
+      "financial_system_interconnection"
+    ]
+  }
+}

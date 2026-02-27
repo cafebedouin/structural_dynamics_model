@@ -1,0 +1,133 @@
+{
+  "header": {
+    "constraint_id": "franchisee_corporate_squeeze",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Franchise Agreement Squeeze",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_franchisor"
+    ],
+    "victims": [
+      "individual_franchisees"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Individual Franchisee",
+      "comment": "Individual franchisees often find themselves trapped in agreements with limited exit options and high costs associated with breaking the contract. They are highly vulnerable to extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Corporate Franchisor",
+      "comment": "The corporate franchisor benefits from the franchise agreement through royalties, fees, and brand expansion. They can arbitrage different aspects of the agreement for their benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Theorist",
+      "comment": "From a global perspective, the franchise agreement represents a complex interaction involving elements of both coordination and extraction. The analytical observer sees the structural tensions inherent in the arrangement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Franchisee Association",
+      "comment": "A franchisee association could potentially organize and exert some influence, but is still constrained by the legal agreement and the power of the franchisor."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "contractual_power_imbalance",
+      "question": "To what extent does the franchise agreement structurally favor the franchisor, limiting franchisee autonomy and profitability?",
+      "resolution_mechanism": "Legal analysis of standard franchise agreements, empirical studies of franchisee profitability vs. franchisor revenue.",
+      "impact": "If high power imbalance: Snare classification more apt. If balanced: could shift to Rope or Tangled Rope depending on other factors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of contractual power imbalance between franchisor and franchisee."
+    },
+    {
+      "id": "enforcement_effectiveness",
+      "question": "How effectively are franchise agreements enforced, and what recourse do franchisees have against unfair practices?",
+      "resolution_mechanism": "Analysis of franchise litigation outcomes, surveys of franchisee experiences with dispute resolution.",
+      "impact": "Weak enforcement: mitigates Snare classification. Strong enforcement: strengthens Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of franchise agreement enforcement."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Franchise agreements, while intended for mutual benefit, can become mechanisms for extracting wealth from franchisees by the corporate franchisor. This squeeze occurs through various means, including high royalty fees, mandatory purchases from the franchisor at inflated prices, and restrictive operational requirements. The power imbalance between the franchisor and franchisee often leads to the franchisee bearing a disproportionate share of the risk and cost, while the franchisor benefits from brand expansion and revenue generation with limited liability.",
+    "key_agents": [
+      "corporate_franchisor: Primary beneficiary (institutional/arbitrage) - benefits from royalty fees and brand expansion.",
+      "individual_franchisees: Primary victim (powerless/trapped) - trapped in agreements with limited exit options.",
+      "franchisee_association: Organized actor (organized/constrained) - attempts to exert influence but is limited by the agreement and franchisor power"
+    ],
+    "logic_rationale": "The extractiveness is high (0.65) because the franchisor often dictates terms that heavily favor them, extracting wealth from the franchisees. Suppression is also high (0.70) because franchisees have limited exit options and are often bound by restrictive covenants. The theater ratio is low (0.30) as the actions undertaken have very little to do with theatrical performances or signaling.",
+    "perspectival_gap": "The franchisor views the agreement as a mutually beneficial partnership (Rope), while the franchisee experiences it as a Snare. This is because the franchisor benefits from the franchisee's labor and capital investment while bearing minimal risk, whereas the franchisee is heavily dependent on the franchisor and bears most of the operational risks. The theorist recognizes elements of both coordination and extraction (Tangled Rope).",
+    "directionality_logic": "The corporate franchisor benefits directly from the franchise agreement through royalties and fees. Individual franchisees bear the costs of operation and are subject to the franchisor's control. The franchisee association attempts to balance these dynamics."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "gaza_aid_permit_revocation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gaperm"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Revocation of Work Permits for Local Aid Workers in Gaza",
+    "topic_domain": "political/humanitarian",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_security_establishment",
+      "israeli_state_control_apparatus"
+    ],
+    "victims": [
+      "palestinian_aid_workers",
+      "humanitarian_organizations",
+      "displaced_gaza_population"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Palestinian Aid Worker",
+      "comment": "PERSPECTIVE 1: PALESTINIAN AID WORKER (SNARE) \u2014 Trapped. Revocation eliminates livelihood within Gaza with no external employment available due to movement restrictions. No appeal mechanism; revocation is final. Faces pressure to provide security intelligence as condition of permit renewal. d\u22480.92, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.75. Pure extraction with coercive mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The International Humanitarian Organization",
+      "comment": "PERSPECTIVE 2: INTERNATIONAL HUMANITARIAN ORG (SNARE) \u2014 Constrained. Revocation of local staff undermines operational capacity. Organizations cannot easily replace specialized staff (local language, community trust, institutional memory). Limited ability to contest revocations through diplomatic channels. Can exit via withdrawal but at cost of abandoning beneficiary population. d\u22480.68, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.65. Extraction through operational disruption."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Israeli Security Apparatus",
+      "comment": "PERSPECTIVE 3: ISRAELI SECURITY APPARATUS (TANGLED ROPE) \u2014 Mobile exit option (can revoke or issue permits; can adjust policy). Perceives genuine security coordination function: identifying and excluding individuals with alleged security threats. Also extracts significant control benefit: leverage over which aid reaches which populations, intelligence from coerced workers. d\u22480.35, f(d)\u22480.32, \u03c3=0.9 \u2192 \u03c7\u22480.20. Tangled: coordination rationale (security screening) bundled with extraction (population control, leverage)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Israeli State Administration",
+      "comment": "PERSPECTIVE 4: ISRAELI STATE ADMINISTRATION (ROPE) \u2014 Arbitrage exit (can adjust permit policy via administrative channels; can negotiate with international pressure). Frames constraint as coordination: ensuring aid reaches populations without undermining state security. Permits system coordinates who can work, when, where. d\u22480.15, f(d)\u22480.03, \u03c3=1.0 \u2192 \u03c7\u22480.02. Institutional beneficiary; experiences as legitimate regulatory coordination."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Humanitarian Community",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL HUMANITARIAN COMMUNITY (SNARE) \u2014 Organized actors (UN agencies, Red Crescent, major NGOs) constrained by competing mandates: maintain operations to serve population vs protest permit revocations and risk total exclusion. Can mobilize diplomatic pressure but only moderate effect. Revocation system extracts compliance (silence on security rationale) as price of continued access. d\u22480.72, f(d)\u22481.12, \u03c3=1.2 \u2192 \u03c7\u22480.58. Extraction through institutional silence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 Structural analysis: permit revocation system has high base extractiveness (\u03b5=0.68), high suppression (no appeal, no transparency, coercion mechanism), and meets snare gates (\u03c7\u22480.68 \u2265 0.66). Suppression \u2265 0.60 through lack of procedural safeguards. Minimal coordination benefit (security screening is pretext for control). System existence depends on suppressing: transparency, due process, appeals, alternative coordination mechanisms. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.55."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_threat_legitimacy",
+      "question": "What percentage of permit revocations are based on credible security threats vs security pretexts for population control?",
+      "resolution_mechanism": "Access to revocation rationales; forensic analysis of revocation patterns (correlation with aid distribution, population pressure points); interviews with security personnel; third-party security audits",
+      "impact": "If >80% credible threats: reclassifies as primarily tangled_rope (coordination bundled with incidental extraction). If <30% credible: confirms snare classification (security is theater for population control).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Legitimacy of security threat rationale for revocations"
+    },
+    {
+      "id": "coercion_mechanism_scope",
+      "question": "How many revoked workers face direct coercion (pressure to provide intelligence) vs indirect pressure (loss of livelihood)?",
+      "resolution_mechanism": "Confidential interviews with revoked workers; documentation of coercion attempts; cross-reference with intelligence service activity patterns",
+      "impact": "If coercion scope >50%: suppression gate rises above 0.75 (high coercion). If <20%: suppression might lower to 0.55 (economic punishment without direct coercion), potentially borderline tangled_rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Extent of direct coercion vs indirect economic pressure in revocation system"
+    },
+    {
+      "id": "appeal_mechanism_existence",
+      "question": "Do revoked workers have access to any formal appeal or reconsideration process, however limited?",
+      "resolution_mechanism": "Documentation of official appeal procedures; empirical success rate of appeals; comparison with other permit systems' due process standards",
+      "impact": "If formal appeal exists and >5% succeed: suppression lowers (procedural floor raised). If no appeal exists or success <1%: confirms suppression \u2265 0.75 (system has no exit valve).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Existence and efficacy of appeal mechanisms for permit revocation"
+    },
+    {
+      "id": "humanitarian_impact_threshold",
+      "question": "At what level of aid worker revocation do humanitarian organizations have moral/operational capacity to withdraw entirely rather than continue under coercion?",
+      "resolution_mechanism": "Longitudinal tracking of org statements and withdrawal decisions; surveys of organizational leadership on threshold; empirical correlation between revocation rates and exit decisions",
+      "impact": "If low threshold (<5% of staff): organizations have real exit option; reclassifies as tangled_rope from org perspective. If high threshold (>30%): confirms trapped classification.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Humanitarian organization threshold for withdrawal vs continued operations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The revocation of work permits for Palestinian staff of international humanitarian organizations operating in Gaza represents a structural extraction mechanism operated by the Israeli state through COGAT (Coordination of Government Activities in the Territories). The constraint functions through denial of legal employment authorization, creating pressure on aid workers to provide security intelligence or accept unemployment within a severely restricted labor market. The system is characterized by: (1) non-transparent revocation criteria with no meaningful appeal process; (2) collective punishment effects (entire organizations lose access when staff are revoked); (3) coercive pressure on workers (implicit and explicit conditioning of permit renewal on cooperation with security services); (4) claimed security rationale that cannot be independently verified; (5) extraction of organizational compliance through threat of total exclusion. The constraint exhibits mandatrophy resolution: the claimed coordination benefit (legitimate security screening) is bundled with extraction mechanisms (population control, intelligence procurement, aid distribution leverage) such that the coordination function cannot be separated from extraction.",
+    "key_agents": [
+      "Palestinian Aid Workers: Primary victims (powerless/trapped) \u2014 face revocation without appeal, coercive pressure to provide intelligence, loss of livelihood within restricted economy",
+      "International Humanitarian Organizations: Secondary victims (moderate/constrained) \u2014 operational disruption, loss of local staff, coercive silence on security practices to maintain access",
+      "Israeli Security Apparatus (COGAT, Military Intelligence): Primary beneficiary (powerful/mobile) \u2014 gains intelligence procurement leverage, population control through aid distribution control, suppression of organizational criticism",
+      "Israeli State Administration: Secondary beneficiary (institutional/arbitrage) \u2014 frames permit system as legitimate regulatory coordination; maintains control over humanitarian access",
+      "International Humanitarian Community: Organized victim (organized/constrained) \u2014 collective action suppressed by competing mandate (serve population vs protest injustice); can mobilize diplomatic pressure but with limited effect",
+      "Gaza Displaced Population: Tertiary victim (powerless/trapped) \u2014 dependent on aid workers; loses access when workers are revoked; collective punishment effect"
+    ],
+    "logic_rationale": "Base Extractiveness (\u03b5=0.68): High. The system extracts multiple values: (1) labor from workers (payment but under coercion); (2) intelligence from workers (implicit/explicit pressure for security cooperation); (3) organizational compliance from NGOs (silence on abuses to maintain access); (4) population control (discretionary aid access). The extraction is not maximal (0.70+) because some legitimate security screening may be occurring, but the non-transparent mechanism and coercive component suggest extraction is dominant over coordination. Suppression (0.75): High. Suppression operates through: (1) no appeal mechanism (revocation is final and unreviewed); (2) lack of transparency in revocation criteria; (3) coercive threat (permit revocation = unemployment + potential family hardship); (4) organizational silence requirement (criticizing revocation risks total exclusion); (5) restricted labor market (no alternative employment available). Theater Ratio (0.58): Moderate. Theater is moderate rather than high (0.70+) because security screening has some genuine function content, even if extraction is primary. However, the theater component is rising over time as: (1) security rationale becomes more routinized and less individually justified; (2) organizational compliance becomes performative (NGOs publicly support security while privately documenting abuses); (3) permit reviews become annual ritual rather than individualized assessment.",
+    "perspectival_gap": "The constraint exhibits stark perspectival divergence. Palestinian aid workers perceive pure extraction and coercion (Snare). Humanitarian organizations perceive operational disruption but also moral complicity, creating internal contradictions (Snare). The Israeli security apparatus perceives legitimate security coordination bundled with necessary state control (Tangled Rope, where coordination is claimed though extraction is visible). The Israeli state administration perceives orderly regulatory coordination (Rope from institutional perspective). The international humanitarian community experiences institutional silence under duress (Snare). The analytical observer sees the system as a clear snare with suppressed coordination function (security screening exists but is pretext). The largest gap is between the security apparatus (Tangled Rope: 'we are solving a genuine security problem') and the aid workers (Snare: 'we are being coerced and have no exit').",
+    "directionality_logic": "Palestinian Aid Workers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction directionality. No employment alternative; no legal recourse; coercive pressure. f(d)\u22481.40 (powerless victim with no exit) produces \u03c7 from moderate \u03b5. Israeli Security Apparatus: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low to moderate extraction directionality despite being beneficiary, because mobile exit option means the apparatus chooses the constraint rather than being trapped by it. This differentiates them from powerless victims. Israeli State Administration: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.03. Minimal extraction directionality from state perspective (arbitrage exit means state has full policy flexibility). International Humanitarian Organizations: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction directionality. Can exit but only at cost of abandoning beneficiary population (moral trap). Humanitarian Community: Victim + constrained (organized) \u2192 d\u22480.72, f(d)\u22481.12. High extraction despite organization because competing mandates limit actual exit capacity. Analytical Observer: Observer + analytical \u2192 d\u22480.72, f(d)\u22481.15. See full structure; perceive high extraction.",
+    "mandatrophy_analysis": "MANDATROPHY GATE SATISFIED (\u03b5=0.68 > 0.70 requires mandatrophy_resolved: true). The constraint exhibits the classic mandatrophy structure: the Israeli security apparatus claims a genuine coordination function (security screening to prevent weapons/fighters from entering via aid distribution) that cannot be cleanly separated from extraction. How to resolve? (1) COORDINATION HYPOTHESIS: If security screening were primary, we would observe: transparent criteria, successful appeals, proportional revocations (only credible threats), absence of coercive intelligence demands. These are NOT observed. (2) EXTRACTION HYPOTHESIS: If extraction were primary, we would observe: non-transparent criteria, zero appeals, high revocation rates during population pressure peaks, explicit conditioning of permits on intelligence cooperation, organizational silence. These ARE largely observed. Resolution: The suppression structure (no appeal, no transparency, coercive mechanism) confirms that extraction is primary and coordination is pretext. The mandatrophy is resolved by showing that the suppression gates required for snare classification (suppression \u2265 0.60, \u03c7 \u2265 0.66) are met even if we grant the most charitable interpretation of security necessity. A legitimate security coordination system could exist with: (a) published criteria, (b) independent appeals, (c) proportional enforcement, (d) no intelligence coercion. The absence of these indicates the coordination function has been subordinated to extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gaza_humanitarian_access_control",
+      "palestinian_labor_market_restriction",
+      "israeli_security_intelligence_system"
+    ],
+    "dual_formulation_note": "Permit revocation is downstream of the broader Israeli control system in Gaza (movement restrictions, security coordination, labor market regulation). This constraint represents the extraction mechanism within the humanitarian access domain specifically. Upstream constraints include general Palestinian movement restrictions and labor market control; downstream effects include humanitarian service delivery gaps and indirect population control through aid distribution leverage."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

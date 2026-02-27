@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "dk_us_alliance_espionage",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dkus"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Implicit 'No Industrial Espionage' Norm within Western Alliances",
+    "topic_domain": "geopolitical/alliance_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_intelligence_apparatus",
+      "hegemon_information_advantage"
+    ],
+    "victims": [
+      "allied_industrial_security",
+      "technological_sovereignty",
+      "trust_in_alliance_framework"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Allied Nation (Denmark/Nordic State)",
+      "comment": "PERSPECTIVE 1: ALLIED NATION (SNARE) \u2014 Trapped within NATO; cannot credibly exit without loss of security guarantees, defense cooperation, and regional stability. Bears extraction of industrial/technological information. Cannot monitor surveillance targeting. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.72. Maximal effective extraction from constrained-plus-trapped position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "European Alliance Coalition (EU/NATO Collective)",
+      "comment": "PERSPECTIVE 2: EUROPEAN ALLIANCE COALITION (TANGLED ROPE) \u2014 Organized capacity to resist (GDPR, diplomatic pressure, counter-intelligence) but constrained by dependence on NATO/US security umbrella. Experiences genuine coordination (NATO interoperability, intelligence-sharing frameworks) alongside asymmetric intelligence extraction. d\u22480.58, f(d)\u22480.75, \u03c3=1.1 \u2192 \u03c7\u22480.48. Mixed extraction with active resistance capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Intelligence Apparatus",
+      "comment": "PERSPECTIVE 3: US INTELLIGENCE APPARATUS (ROPE) \u2014 Frames the constraint as coordination: all-source intelligence reduces ambiguity in threat assessment, enables integrated defense planning, prevents strategic surprise. Benefits from privileged access to allied technical capabilities and industrial secrets. Interprets the 'norm' as a coordination device for information flow optimization. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary; negative effective extraction indicates the apparatus gains more from the 'norm' than it pays."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "NATO Institutional Framework",
+      "comment": "PERSPECTIVE 4: NATO INSTITUTIONAL FRAMEWORK (TANGLED ROPE) \u2014 Must coordinate alliance defense while tacitly tolerating US intelligence asymmetry. Requires active enforcement: member states must maintain public commitment to intelligence-sharing while privately accepting that some 'sharing' flows only one direction. Theater_ratio reflects the performative language of 'partnership' masking extraction. d\u22480.50, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.41. Symmetric interest in maintaining alliance; asymmetric enforcement (USA enforces norms against non-allies, not itself)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Cold War Institutional Legacy",
+      "comment": "PERSPECTIVE 5: COLD WAR INSTITUTIONAL LEGACY (PITON) \u2014 The 'norm against industrial espionage' is a degraded form of the historical Five Eyes intelligence-sharing architecture, which emerged from genuine mutual threat (USSR). The norm persists through institutional inertia and diplomatic theater despite the original justification (common enemy threat) degrading post-1991. theater_ratio=0.62 reflects that the norm is maintained through performative language and plausible deniability rather than active institutional function. The extraction mechanism (surveillance, data access) continues without the coordination benefit that originally justified it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Power Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 At civilizational scale, power asymmetry appears immutable: all hegemonies extract information from periphery; alliance subordinates always lose secrets to superiors; intelligence advantage is inherent to military hierarchy. However, this classification (\u03b5=0.58, suppression=0.68, theater=0.62) contradicts mountain thresholds (\u03b5\u22640.25, suppression\u22640.05). The 'natural law' framing naturalizes what is actually a contingent institutional choice: the USA could enforce the norm symmetrically (e.g., through binding intelligence audit protocols), but chooses not to. Engine will flag as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "surveillance_scope_boundary",
+      "question": "Does the implicit norm distinguish between: (a) foreign intelligence collection on allied governments/militaries (permitted), (b) industrial espionage targeting private companies (prohibited), or (c) no real distinction in practice?",
+      "resolution_mechanism": "Declassified documents, leaks (e.g., Snowden files), forensic analysis of NSA targeting; historical cases where industrial espionage crossed a stated norm boundary",
+      "impact": "If (a): the constraint is narrower than assumed \u2014 espionage on allied industry is actually permitted and the norm is theatre. If (c): there is no real norm, only plausible deniability, and the constraint is pure extraction (Snare from allied perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scope of the no-espionage norm: industrial vs governmental vs blanket"
+    },
+    {
+      "id": "enforcement_asymmetry_reversibility",
+      "question": "Is the asymmetry in enforcement (USA does not face credible espionage from allies) a structural feature of hegemonic power or a negotiable treaty provision?",
+      "resolution_mechanism": "Counterfactual: if Denmark or France conducted equivalent surveillance on US industry, would they face sanction? Evidence from attempted counter-surveillance incidents; diplomatic responses to allied intelligence operations.",
+      "impact": "If structural: no alternative norm is possible (mountain). If negotiable: the constraint could be renegotiated as symmetric enforcement (Rope) through binding protocols and verification mechanisms.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether enforcement asymmetry is inherent to hegemony or renegotiable"
+    },
+    {
+      "id": "coordination_benefit_residual",
+      "question": "How much of the contemporary intelligence-sharing benefit derives from: (a) genuine threat reduction (original Cold War justification), (b) interoperability and joint operations (ongoing), or (c) US access to allied industrial secrets (extraction with coordination framing)?",
+      "resolution_mechanism": "Analysis of NATO intelligence product flow; case studies of operations where intelligence-sharing prevented specific threats vs operations where shared intelligence was primarily one-directional extraction",
+      "impact": "If mostly (a)+(b): constraint is legitimate Rope or Tangled Rope with real coordination. If mostly (c): the 'coordination' framing is theatre and the constraint is pure Snare (with elaborate institutional cover). Affects whether the piton (degraded) perspective is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of intelligence-sharing that serves coordination vs extraction"
+    },
+    {
+      "id": "treaty_formalization_feasibility",
+      "question": "Could the implicit norm be converted into explicit treaty language with symmetric verification (e.g., industrial espionage audit protocols, mutual inspection regimes)?",
+      "resolution_mechanism": "Examination of similar formalization attempts (e.g., IAEA verification, arms control treaties); interviews with negotiators; analysis of why explicit treaties on industrial espionage do not exist in NATO framework",
+      "impact": "If feasible: the constraint's current form (implicit, asymmetric) is a choice favoring extraction over coordination; formalization could shift it to Rope. If infeasible: the asymmetry is structurally embedded and the constraint is locked in Snare/Tangled Rope.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether implicit norm can be formalized into explicit symmetric treaty"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 35
+  },
+  "commentary": {
+    "narrative_context": "The implicit 'no industrial espionage' norm within NATO represents a structural tension between alliance coordination (genuine need for integrated intelligence for collective defense) and hegemonic extraction (US privileged access to allied industrial secrets, technological capabilities, and internal security assessments). This constraint emerged as a formal principle during the Cold War when the common Soviet threat aligned incentives for comprehensive intelligence-sharing. Post-1991, the threat justification degraded while the extraction mechanism persisted, creating the contemporary form: a hybrid coordination-extraction system maintained through diplomatic theatre and plausible deniability. The constraint exhibits all six DR types depending on perspective. The allied nation (Denmark) experiences maximal extraction (Snare). The NATO collective experiences mixed coordination and extraction (Tangled Rope). The US intelligence apparatus frames it as pure coordination (Rope) for interoperability and threat reduction. The NATO institutional framework performs commitment to the norm while tacitly accepting asymmetric enforcement (Tangled Rope). The Cold War intelligence architecture persists through institutional inertia despite its original justification degrading (Piton). The analytical observer risks naturalizing the asymmetry as inherent to all hegemonic systems (false summit). The constraint's theater_ratio has increased from ~0.35 (early Cold War, when the norm had real coordination content) to ~0.62 (contemporary, when much of the 'intelligence-sharing' is asymmetric extraction framed as partnership). Extractiveness has similarly increased from ~0.32 to ~0.58 as allied nations developed industrial capabilities worth surveilling.",
+    "key_agents": [
+      "US Intelligence Apparatus (NSA, CIA, Five Eyes): Primary beneficiary (institutional/arbitrage) \u2014 captures industrial, technological, and diplomatic intelligence from allies without equivalent exposure",
+      "Allied Nation (Denmark, Nordic/European states): Primary victim (powerless/trapped) \u2014 cannot exit alliance without security cost; bears surveillance and industrial espionage",
+      "European Coalition (EU/NATO institutions): Organized victim (organized/constrained) \u2014 can resist through GDPR, diplomatic pressure, counter-intelligence but constrained by dependence on US security guarantees",
+      "NATO Institutional Framework: Coordinating actor (institutional/constrained) \u2014 must maintain alliance cohesion while tacitly accepting US intelligence privilege",
+      "Cold War Intelligence Architecture (Five Eyes legacy): Historical institutional actor \u2014 persists through inertia despite original threat justification degrading",
+      "Analytical Observer (International Relations perspective): Civilizational view (analytical/analytical) \u2014 risks naturalizing hegemonic extraction as structural law rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing. The US gains significant advantage through asymmetric access to allied industrial secrets (semiconductor supply chain intelligence, defense contractors' IP, digital infrastructure vulnerabilities). The extraction is not maximal because: (1) allies do maintain counter-intelligence capabilities, (2) some intelligence-sharing is genuinely mutual (operationally relevant threat information), (3) surveillance is constrained by diplomatic sensitivity. The increasing trend (0.32\u21920.58) reflects post-Cold War degradation: as Soviet threat receded, the original coordination justification weakened, leaving pure extraction unmasked. Suppression (0.68): Moderately high. Allied nations face significant barriers to resisting: exiting NATO incurs security cost; counter-surveillance risks retaliation in intelligence-sharing; diplomatic complaints risk marginalization. However, suppression is not total\u2014EU/GDPR provides some friction, allied counter-intelligence can document violations, leaks (Snowden) expose the system. Theater ratio (0.62): Moderate-high, increasing. The norm is maintained through performative language ('partnership,' 'intelligence-sharing allies,' 'trust'). The Snowden files revealed this theatre\u2014the 'norm' was being violated at scale but through plausible deniability. Contemporary surveillance (post-Snowden) continues with slightly more transparency about the asymmetry.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Allied nations see extraction (Snare d\u22480.92) \u2014 they are trapped, surveilled, and cannot exit. The European coalition sees mixed extraction-coordination (Tangled Rope d\u22480.58) \u2014 they have organized resistance capacity but constrained by alliance dependence. The US apparatus sees pure coordination (Rope d\u22480.08) \u2014 framing surveillance as threat reduction and operational integration. NATO institutions perform commitment to the norm (Tangled Rope d\u22480.50) \u2014 enforcing symmetric principles while tacitly permitting asymmetric practice. The Cold War institutional legacy sees degraded ritual (Piton) \u2014 the norm persists through theatre despite its original coordination function degrading. The civilizational analytical observer risks seeing immutable hegemonic structure (false summit) \u2014 'all hegemonies extract secrets; this is structural.' The engine will flag the summit as false, revealing that the asymmetry is a contingent institutional choice (treaty-formalized symmetric verification is technically feasible but politically chosen against).",
+    "directionality_logic": "Allied nation (victim + trapped): d\u22480.92, f(d)\u22481.38. Maximum extraction. No exit without security cost; cannot organize collective defense outside NATO. US apparatus (beneficiary + arbitrage): d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Can exit the norm with minimal cost (alternative intelligence partnerships); captures asymmetric advantage. European coalition (victim + constrained): d\u22480.58, f(d)\u22480.75. Significant extraction but with organized resistance. Can partially exit through counter-intelligence, GDPR enforcement, diplomatic pressure, but constrained by alliance value. NATO institutional (both + constrained): d\u22480.50, f(d)\u22480.65. Symmetric interest in maintaining alliance framework; asymmetric enforcement (USA enforces selectively against non-allies, not itself). Cold War legacy (institutional + arbitrage): d\u22480.05, f(d)\u2248-0.12. Net beneficiary from institutional inertia. Analytical observer (analytical): d\u22480.72, f(d)\u22481.15. Mountain derivation attempts to naturalize the asymmetry.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves the mandatrophy by showing how a single structural phenomenon can be legitimately read as Snare (allied perspective), Tangled Rope (coalition perspective), Rope (beneficiary perspective), Piton (institutional legacy perspective), and false-summit Mountain (naturalizing perspective). No single type is correct \u2014 the presheaf of perspectives IS the constraint. The mandatrophy is resolved by accepting that: (1) All classifications are empirically accurate from their respective observables. (2) The allied nation genuinely experiences Snare-level extraction. (3) The US apparatus genuinely frames it as Rope-level coordination. (4) The institutional system genuinely performs Tangled Rope dynamics while degrading toward Piton. (5) The false summit (naturalization of extraction as structural law) is a classification error that the engine detects. The constraint is structurally a Tangled Rope at the NATO level (mixed coordination + asymmetric extraction, active enforcement required) but with significant variance across perspectives. If the norm were formalized into explicit symmetric audit protocols, the entire constraint family would shift toward Rope. If the norm were abandoned, the classification would collapse into pure Snare from allied perspective. The machinery for renegotiation exists (treaty formalization is technically feasible); the constraint persists because the US apparatus benefits from asymmetric enforcement and the allied nations are trapped within the coordination framework that benefits them defensively."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nato_interoperability_standards",
+      "five_eyes_intelligence_asymmetry",
+      "allied_defensive_integration"
+    ],
+    "dual_formulation_note": "The no-espionage norm is downstream of the broader Five Eyes intelligence architecture (\u03b5 lower, more firmly embedded). It also affects downstream constraints on allied technological sovereignty (\u03b5 higher, more contested). The family decomposes along the coordination/extraction axis: Five Eyes architecture (more Rope, higher coordination benefit) \u2192 no-espionage norm (Tangled Rope, mixed) \u2192 allied industrial espionage exposure (more Snare, higher extraction). Each story has distinct \u03b5 reflecting the balance of coordination and extraction at its level."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

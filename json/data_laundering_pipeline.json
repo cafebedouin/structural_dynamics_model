@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "data_laundering_pipeline",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dlp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "The Provenance Eraser: Data Laundering Pipeline",
+    "topic_domain": "technological/legal/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_training_operators",
+      "data_aggregators"
+    ],
+    "victims": [
+      "original_data_subjects",
+      "copyright_holders",
+      "epistemic_commons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Subject",
+      "comment": "PERSPECTIVE 1: THE DATA SUBJECT (SNARE) \u2014 Individual whose personal data was scraped and has no practical recourse once it enters the pipeline. Cannot exit the constraint. Suppression is maximal: legal frameworks (GDPR, CCPA) do not track transformed data; technical tools to identify origin are absent; costs of litigation exceed recovery. Extraction is severe and irreversible."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Copyright Holder (Creative Work)",
+      "comment": "PERSPECTIVE 2: COPYRIGHT HOLDER (SNARE) \u2014 Artist, author, or creator whose copyrighted work was fed into synthetic generation pipelines. Original copyright protections dissolve once work is vectorized and used as training data. Cannot enforce rights against derived synthetic outputs. Trapped by the speed of distribution and cost of litigation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "AI Training Operator",
+      "comment": "PERSPECTIVE 3: AI TRAINING OPERATOR (ROPE) \u2014 Entity operating the pipeline experiences it as a coordination mechanism: laundering protections enables efficient model training at scale. High arbitrage options: can relocate operations to regulatory arbitrage jurisdictions, redirect training pipeline, or acquire already-laundered datasets. Net beneficiary with full agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Government or data protection authority sees the constraint as mixed: has coordination function (preventing total anarchy of data handling) but also extractive (leverages enforcement authority asymmetrically against small operators while large platforms gain regulatory capture exemptions). Constrained by cross-border jurisdictional gaps and resource limitations."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Privacy-by-Design Compliance Framework",
+      "comment": "PERSPECTIVE 5: PRIVACY-BY-DESIGN FRAMEWORK (PITON) \u2014 Legal privacy frameworks (GDPR Article 35, CCPA, etc.) maintain theater of provenance protection through impact assessments and transparency requirements. In practice, these frameworks are largely performative: transformations are documented as 'anonymization' despite reversibility, impact assessments rubber-stamped, and enforcement costs prohibitive. The framework persists through institutional inertia and public legitimacy theater, not effective function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Data Provenance Tracking Coalition",
+      "comment": "PERSPECTIVE 6: DATA PROVENANCE TRACKING COALITION (SCAFFOLD) \u2014 Emerging technical and legal infrastructure (cryptographic watermarking, immutable provenance logs, synthetic data labeling mandates) aims to create alternative verification pathways that restore traceability despite transformations. Sees the laundering pipeline as a temporary coordination failure with sunset: distributed audit trails and mandatory provenance metadata are building exit pathways. High suppression but declining theater as technical controls mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational/universal perspective, information flows always tend toward entropy: once data is released into digital networks, perfect provenance tracking is physically impossible. The compression and transformation of data necessarily degrades origin signal. This perspective frames the constraint as a natural law of information systems. However, this false summit naturalizes what is actually a contingent governance failure: cryptographic watermarking, ledger-based provenance, and mandatory transformation disclosure can restore practical traceability. The engine's false summit detector will identify this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reversibility_of_transformation",
+      "question": "Can modern synthetic data generation, vectorization, or multi-hop relay truly irreversibly sever provenance, or do adversarial reverse-engineering techniques allow recovery of original data?",
+      "resolution_mechanism": "Empirical testing of reversibility against state-of-the-art synthetic data attacks; analysis of watermark robustness; cryptanalysis of claimed anonymization techniques",
+      "impact": "If truly irreversible: extraction is structural (snare classification confirmed). If reversible: much of the claimed laundering is theater and extraction is moderate (tangled rope from beneficiary perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether data transformation is truly irreversible or subject to reverse-engineering"
+    },
+    {
+      "id": "regulatory_intent_vs_capture",
+      "question": "Do privacy-by-design frameworks represent genuine regulatory intent to protect data subjects, or do they function primarily to provide cover for institutional actors (platforms, AI operators) while appearing to enforce?",
+      "resolution_mechanism": "Historical analysis of enforcement actions: ratio of enforcement against small operators vs large platforms; analysis of exemptions and safe harbors; cost-benefit analysis of compliance vs fines",
+      "impact": "If genuine intent: regulatory authority perspective is correct (tangled rope with mixed function). If captured: framework is pure theater (piton perspective dominates) and systemic extraction is higher.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether privacy frameworks are genuine enforcement or regulatory theater"
+    },
+    {
+      "id": "synthetic_data_parity_illusion",
+      "question": "Is synthetic data generated from copyrighted originals genuinely non-infringing, or does it constitute derivative work under copyright law regardless of technical transformation?",
+      "resolution_mechanism": "Legal precedent analysis; analysis of similarity metrics between synthetic and original; court rulings on fair use vs training data (e.g., New York Times v. OpenAI outcomes)",
+      "impact": "If synthetic is infringing: laundering pipeline is legal violation (extraction is snare). If synthetic is non-infringing: much claimed extraction is prevented by valid legal doctrine and effective extraction is lower.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether synthetic data is legally derivative work or non-infringing"
+    },
+    {
+      "id": "mandatory_provenance_feasibility",
+      "question": "Can cryptographic watermarking, provenance ledgers, and mandatory transformation disclosure actually scale to global data flows without creating a parallel dystopia of surveillance infrastructure?",
+      "resolution_mechanism": "Technical analysis of watermark robustness at scale; cost analysis of ledger maintenance; analysis of surveillance risks of global provenance tracking infrastructure",
+      "impact": "If feasible without creating worse harms: scaffold sunset is real and extraction will decline. If surveillance risk is prohibitive: scaffold is aspirational and constraint persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mandatory provenance tracking can scale without creating surveillance dystopia"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The data laundering pipeline represents a structural extraction mechanism where personal data, copyrighted works, and other legally protected information are passed through automated transformations to strip away original legal protections and attribution requirements. The constraint operates across three domains: personal data (GDPR/CCPA protections), copyright (creative works used without compensation or attribution), and epistemic integrity (synthetic data generations that obscure original provenance). The pipeline creates a structural asymmetry: data subjects and copyright holders bear the costs of unauthorized use, while AI training operators and data aggregators capture the benefits of unrestricted training datasets. The constraint's extractiveness (0.58) reflects that the transformation process is intentionally designed to evade legal detection, and victims have minimal practical recourse once data has been laundered. Suppression (0.68) reflects significant barriers to tracking transformed data, enforcing rights across jurisdictions, and identifying origin information once vectorized or synthesized. The theater ratio (0.61) indicates that privacy-by-design compliance frameworks create performative protection through impact assessments and transparency requirements while actual enforcement is weak and evasion is technically straightforward.",
+    "key_agents": [
+      "Data Subject: Primary victim (powerless/trapped) \u2014 personal data stripped of privacy protections; no recourse mechanism",
+      "Copyright Holder: Primary victim (powerless/trapped) \u2014 creative works used for training without compensation or attribution",
+      "AI Training Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures value from unrestricted training datasets; can relocate to arbitrage jurisdictions",
+      "Data Aggregator: Secondary beneficiary (institutional/arbitrage) \u2014 monetizes laundered datasets; high exit optionality",
+      "Regulatory Authority: Mixed actor (organized/constrained) \u2014 has coordination function but constrained by jurisdictional gaps and resource limits",
+      "Privacy Framework: Institutional actor (institutional/arbitrage) \u2014 maintains performative protection theater; degraded function (piton perspective)",
+      "Provenance Coalition: Organized agents (organized/constrained) \u2014 emerging technical infrastructure (watermarking, ledgers) building alternative pathways with sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent governance failure as information entropy law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The pipeline is specifically engineered to enable extraction: each transformation step (vectorization, synthetic generation, API relay) is chosen to degrade recoverable provenance information while maintaining utility for training. The base extraction value reflects that the mechanism is not coercive in the traditional sense but is systematically designed to evade legal protections. The trajectory from 0.35 \u2192 0.58 reflects that as transformations become more sophisticated, detection and recovery become harder, increasing effective extraction. Suppression (0.68): High. Multiple barriers prevent victims from enforcing rights: (1) jurisdictional gaps between data origin and processing location, (2) technical opacity \u2014 transformations obscure origin sufficiently that tracking requires specialized forensic analysis, (3) cost asymmetry \u2014 individual litigation costs exceed typical personal data damages, (4) public authority enforcement is resource-constrained and reactive rather than preventive. Theater ratio (0.61): Moderate-high. Privacy frameworks (GDPR, CCPA) maintain substantial theater: impact assessments are often generic templates, anonymization claims are reversible, consent-to-training is buried in terms of service, and enforcement is rare against well-resourced operators. However, the theater is not as extreme as in traditional compliance (0.85+) because technical detection of laundering is advancing and some enforcement actions are visible. Theater has increased from 0.42 \u2192 0.61 as frameworks have evolved, indicating that performative elements are being added faster than substantive enforcement.",
+    "directionality_logic": "Directionality values are determined by structural position relative to extraction flow. Data subjects and copyright holders are powerless/trapped victims: they cannot exit the pipeline once data has been released; they bear full costs of unauthorized use; their d values are high (0.90+), producing maximum experienced extractiveness. AI operators and aggregators are institutional/arbitrage beneficiaries: they can relocate operations, acquire datasets from different sources, and have multiple exit options; their d values are low (0.10-0.20), producing negative or minimal experienced extractiveness (they benefit). Regulatory authorities occupy a mixed position: they have power and some exit (can enforce or not) but are constrained by jurisdictional realities; their d is intermediate (0.40-0.55). The piton classification for the privacy framework derives from high theater_ratio (0.61) combined with degraded function: the framework persists through legitimacy theater (compliance visibility) rather than actual enforcement effectiveness.",
+    "perspectival_gap": "This constraint demonstrates a sharp perspectival gap between victims and beneficiaries. Data subjects and copyright holders see the pipeline as pure extraction (snare): they have no exit, no benefit, maximal costs, and no recourse. AI operators see the pipeline as pure coordination (rope): they solve the legitimate problem of obtaining diverse training data at scale; they have multiple exit options and net benefit. Regulatory authorities see mixed coordination and extraction (tangled rope): the framework serves both to prevent total anarchy and to enable selective enforcement. The privacy-by-design framework sees itself as performatively protecting (piton): maintaining legitimacy theater through impact assessments while actual function degrades as transformations become more sophisticated. The provenance tracking coalition sees a solvable temporary problem (scaffold): emerging technical infrastructure (watermarking, ledgers) can restore traceability with a 5-15 year sunset. The analytical observer risks seeing an immutable law of information (mountain): once data is transformed, perfect provenance recovery is impossible. The perspectival gap is irreducible because the agents have genuinely incompatible structural interests.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (extractiveness 0.58 > 0.46): The classification prevents mislabeling the pipeline as pure coordination (rope) by requiring separate perspectives from victims and beneficiaries. If only the AI operator's perspective were considered (rope), the constraint would appear benign \u2014 a useful coordination mechanism for training data acquisition. If only the data subject's perspective were considered (snare), the constraint would appear to have no legitimate function. The mandatrophy is resolved by requiring all six perspectives: the beneficiary's rope (legitimate coordination need), the victim's snare (genuine extraction), the regulatory authority's tangled rope (mixed function with institutional capture), the framework's piton (performative protection), the coalition's scaffold (technical exit path), and the analytical observer's false summit (risked naturalization). The resolution confirms that the constraint is genuinely extractive (snare/tangled rope predominates) but claims a coordination function (rope perspective is valid) that masks the extraction. The beneficiary's experience of efficient training data acquisition is real; the victim's experience of irreversible unauthorized use is equally real. The constraint is a snare with coordination theater, not a rope with equity problems."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "synthetic_data_authenticity",
+      "copyright_attribution_erasure",
+      "gdpr_enforceability_gap"
+    ],
+    "dual_formulation_note": "The data laundering pipeline decomposes into three structurally distinct constraints: (1) synthetic_data_authenticity (\u03b5 \u2248 0.42) \u2014 whether synthetic outputs are genuinely non-infringing; (2) copyright_attribution_erasure (\u03b5 \u2248 0.65) \u2014 whether transformation strips copyright obligations; (3) gdpr_enforceability_gap (\u03b5 \u2248 0.51) \u2014 whether privacy frameworks can track and enforce across transformations. Each has different \u03b5 values reflecting different empirical uncertainty. The present story (data_laundering_pipeline) is the hybrid constraint capturing how these three interact in the pipeline architecture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

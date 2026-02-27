@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "landscape_of_fear_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lof"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Landscape of Fear",
+    "topic_domain": "biological/behavioral_ecology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "predator_populations"
+    ],
+    "victims": [
+      "prey_populations",
+      "ecosystem_energy_flow"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Prey Individual",
+      "comment": "PERSPECTIVE 1: PREY INDIVIDUAL (SNARE) \u2014 Trapped in high-vigilance state regardless of actual predation risk. Cannot exit fear-driven behavioral constraints. Bears full cost through reduced feeding efficiency, delayed reproduction, increased stress physiology. d\u22480.95, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Prey Population",
+      "comment": "PERSPECTIVE 2: PREY POPULATION (TANGLED ROPE) \u2014 Constrained by landscape-wide fear effects on reproduction and survival, but also benefits from predator-driven regulation that prevents overgrazing and maintains habitat quality. Population dynamics involve both extraction (fear-induced mortality and reproductive suppression) and coordination (predator-prey equilibrium enables ecosystem stability). d\u22480.62, f(d)\u22480.78, \u03c3=0.9 \u2192 \u03c7\u22480.29."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Predator Population",
+      "comment": "PERSPECTIVE 3: PREDATOR POPULATION (ROPE) \u2014 Benefits from behavioral suppression of prey without proportional cost. The landscape of fear is a pure coordination mechanism: prey fear enables predator resource access without expending energy on pursuit. Predator operates as institutional beneficiary with arbitrage capability (can expand or contract predation strategy). d\u22480.08, f(d)\u2248-0.10, \u03c3=0.8 \u2192 \u03c7\u2248-0.03. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Ecosystem (Trophic Structure)",
+      "comment": "PERSPECTIVE 4: ECOSYSTEM TROPHIC STRUCTURE (TANGLED ROPE) \u2014 Fear-induced changes in prey behavior (reduced grazing in risky patches, altered habitat use) reshape vegetation community and ecosystem energy flow. The constraint creates both coordination benefits (spatial heterogeneity, landscape mosaic maintenance) and extraction costs (energy inefficiency, reduced primary productivity capture). d\u22480.45, f(d)\u22480.48, \u03c3=0.9 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Ecological Conservation Narrative",
+      "comment": "PERSPECTIVE 5: ECOLOGICAL CONSERVATION NARRATIVE (PITON) \u2014 The landscape of fear has become a key conservation framing ('trophic rewilding,' 'apex predator restoration') where the performance of discussing predator reintroduction substitutes for understanding actual behavioral coupling. Theater_ratio=0.48 is below piton threshold, but institutional conservation discourse exhibits higher theater (0.65+) when examined separately \u2014 performative restoration rhetoric vs. functional predator-prey coupling. This perspective shows degradation: the narrative persists despite growing evidence that fear effects are context-dependent and sometimes counterintuitive."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, predator-prey fear effects are immutable features of evolutionary biology: any prey with cognitive capacity will evolve risk assessment mechanisms, and any predator will exploit this behavioral constraint. The fear landscape is as fundamental as gravity in ecology. However, the structural data (\u03b5=0.38, suppression=0.52, theater=0.48) and strong evidence for context-dependency (fear effects vary 3-10x across habitat types, prey species, predator types) contradicts the mountain classification. The engine will compute this as a false summit: fear is a structurally contingent constraint, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fear_effect_magnitude_threshold",
+      "question": "What predator density and visibility threshold triggers substantive behavioral change in prey populations, versus mere baseline vigilance?",
+      "resolution_mechanism": "Experimental manipulation of predator presence (caging, decoys, removal) with quantified measures of prey foraging efficiency, habitat use, reproduction rate; threshold identification via response curves",
+      "impact": "If threshold is low (< 1 predator per 100 prey): fear effect is easily triggered, landscape highly constrained, suppression high. If threshold is high (> 10 per 100 prey): fear effect requires high predation risk, constraint is activated only in crisis, extraction is lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Predator density threshold for behavioral prey response"
+    },
+    {
+      "id": "habitat_refugia_alternative_pathways",
+      "question": "Do prey with access to high-quality refugia experience the landscape of fear as a binding constraint, or do refugia create escape pathways that convert the snare into a tangled rope?",
+      "resolution_mechanism": "Comparative analysis of prey in fragmented vs. connected landscapes; measurement of survival, reproduction, feeding efficiency in open vs. sheltered habitat patches; quantification of refuge accessibility cost",
+      "impact": "If refugia provide true escape: constraint is not uniform across space, prey in refugia escape snare classification (d drops significantly). If refugia are illusory: suppression is actually higher (prey still constrained by risk), beneficiary enjoys even greater extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether habitat refugia provide meaningful escape from fear constraint"
+    },
+    {
+      "id": "ecosystem_productivity_net_effect",
+      "question": "Does fear-driven reduction in prey foraging and habitat use reduce total ecosystem energy capture enough to count as net extraction, or is the ecosystem-level view neutral?",
+      "resolution_mechanism": "Whole-ecosystem productivity measurements (NPP, trophic efficiency) in presence vs. absence of apex predators; accounting for spatial heterogeneity benefits against foraging reduction costs",
+      "impact": "If net negative (extraction dominates): ecosystem victim classification is correct (snare or tangled rope). If net neutral or positive: ecosystem sees rope or slight benefit, and extraction is more concentrated on prey individual level.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fear-driven behavior changes reduce ecosystem-level energy flow"
+    },
+    {
+      "id": "predator_absence_dynamics",
+      "question": "In systems where apex predators are absent, do prey populations self-organize into fear-avoidance behaviors based on lesser predators, or does behavior collapse, indicating fear landscape requires a high-powered coordinator?",
+      "resolution_mechanism": "Historical and contemporary comparison of prey behavior in predator-absent systems (islands, protected reserves) vs. predator-rich systems; analysis of behavioral persistence in absence of actual threat",
+      "impact": "If prey maintain fear behaviors without strong predators: landscape is prey-generated, not imposed extraction. If prey behavior collapses without apex predators: landscape is coordinator-dependent, extraction is conditional on active enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fear landscape persists without apex predator enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The landscape of fear describes a fundamental behavioral constraint in which prey animals modify their movement, foraging, reproduction, and habitat use in response to predation risk, often far exceeding the direct mortality from actual predation. This constraint operates as a subtle form of extraction: the predator (or even the mere perception of predators) harvests behavioral compliance from prey without necessarily killing them. The landscape of fear is a tangled hybrid of coordination and extraction. From the prey perspective, it is a snare \u2014 involuntary behavioral suppression with high costs. From the predator perspective, it is pure rope \u2014 a coordination mechanism that enables resource access without active pursuit. From the ecosystem perspective, it is tangled: fear-driven spatial heterogeneity in habitat use creates ecological mosaics that benefit some ecosystem functions while reducing energy capture efficiency. The constraint has become increasingly prominent in conservation discourse ('trophic rewilding,' 'apex predator restoration') often with performative rhetoric that obscures the mechanistic complexity. Theater ratio has risen from 0.32 to 0.48 over the measurement interval as the conservation narrative has become more abstract and less mechanistically grounded. Base extractiveness has similarly risen from 0.18 to 0.38 as experimental evidence accumulates that fear effects are real and widespread, shifting the constraint from a theoretical curiosity to a dominant ecological force.",
+    "key_agents": [
+      "Prey Individuals: Primary victims (powerless/trapped) \u2014 constrained by vigilance requirements, reduced foraging, delayed reproduction regardless of actual predation risk",
+      "Prey Populations: Secondary victims (moderate/constrained) \u2014 benefit from predator-driven population regulation but suffer from fear-induced reproductive suppression and habitat abandonment",
+      "Predator Populations: Primary beneficiaries (institutional/arbitrage) \u2014 gain resource access and population regulation without proportional cost; extract behavioral compliance",
+      "Ecosystem Trophic Structure: Affected collective (powerful/mobile) \u2014 experiences both coordination benefits (spatial heterogeneity, habitat mosaic) and extraction costs (reduced energy flow efficiency)",
+      "Conservation Institutions: Secondary beneficiary (institutional/constrained) \u2014 benefit from landscape-of-fear framing for apex predator restoration programs; often perform understanding rather than mechanistically engage with fear dynamics",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing fear landscape as immutable evolutionary law when evidence shows context-dependency and reversibility"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Fear-driven behavioral suppression in prey represents a real extraction mechanism \u2014 the predator (or predation risk perception) harvests behavioral compliance without necessarily investing in direct predation. However, extractiveness is not as high as pure snare (0.46+) because the extraction emerges from asymmetric information and evolutionary incentives rather than active enforcement. In systems with effective predator absence, fear-driven behaviors can decay or be replaced by alternative strategies. The intermediate value reflects that extraction is conditional on maintained predation risk salience. Suppression (0.52): Moderate-high. Prey face substantial barriers to escape the fear landscape: evolution has hardwired risk assessment, habitat refugia often carry their own costs (reduced food, vulnerability to other predators), and prey cannot negotiate with predators. However, suppression is not maximal (0.60+) because prey can develop some behavioral flexibility \u2014 some individuals/populations show partial tolerance to predation risk, and refugia do provide partial escape paths. Theater ratio (0.48): Moderate. The landscape of fear as a biological mechanism is functionally real \u2014 prey genuinely adjust behavior in response to predation risk, and the effects are measurable. However, conservation narrative around landscape of fear exhibits higher theater (0.65+) when examined in isolation: the rhetorical framing of 'trophic rewilding' often performs understanding of fear effects without actual mechanistic engagement.",
+    "perspectival_gap": "The landscape of fear demonstrates a sharp perspectival divergence between victim and beneficiary. The prey individual sees a snare: involuntary fear-driven suppression with no coordination benefit. The predator sees a rope: pure coordination mechanism enabling resource access. The prey population sees a tangled rope: extraction but also regulation benefit. The ecosystem sees a mixed constraint: spatial coordination benefits (habitat heterogeneity) offset against energy flow extraction. The conservation narrative sees a natural law (mountain): apex predator fear is fundamental to ecology. The analytical observer's natural law view is contradicted by evidence of context-dependency: fear effects vary 3-10x across habitat types, prey life history, and predator species presence; in apex predator-absent systems, prey fear behaviors degrade; in prey-predator coevolution, prey develop risk tolerance strategies. The engine's false summit detector reveals this is not an immutable natural law but a structurally contingent constraint.",
+    "directionality_logic": "Prey individuals: Victims + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 prey cannot exit fear-driven suppression without evolutionary or ecological change. Prey populations: Victims + constrained \u2192 d\u22480.62, f(d)\u22480.78. Significant extraction tempered by population regulation benefits; escape constrained but not impossible. Predator populations: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; predators extract with minimal cost investment. Ecosystem: Neither beneficiary nor pure victim (powerful/mobile) \u2192 d\u22480.45, f(d)\u22480.48. Moderate extraction; spatial coordination benefits partially offset energy flow costs. Conservation narrative: Institutional + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction from the discourse perspective; narrative benefits conservation institutions while constraining precise mechanistic understanding. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. Observer's mountain classification is perspectival (naturalizes contingent constraint); false summit detection applies.",
+    "mandatrophy_analysis": "The landscape of fear resolves the mandatrophy by showing how a single biological mechanism (predation risk-induced behavioral suppression) can be simultaneously a snare (prey individual view), rope (predator view), tangled rope (prey population and ecosystem views), piton (conservation narrative view), and false mountain (analytical naturalization). The mandatrophy is resolved by recognizing that the constraint's extractiveness and suppression are real structural properties that do not change with perspective, but the classification type depends on the observer's structural position (victim with trapped exit, beneficiary with arbitrage, moderate player with constrained exit, etc.). The key insight is that extractiveness \u2248 0.38 and suppression \u2248 0.52 place this in the tangled rope band (0.30 \u2264 \u03c7 \u2264 0.90 for moderate observers), but the tight coupling between predation risk and prey behavior creates conditions where the snare classification (high d, high f(d)) dominates the prey perspective while the rope classification dominates the predator perspective. The false mountain from the analytical observer is detected because actual mechanistic variation (context-dependency, reversibility in predator absence, coevolutionary tolerance development) contradicts the immutability criterion. The constraint is NOT a natural law \u2014 it is a structurally real but contingent extraction mechanism embedded in predator-prey evolutionary dynamics."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "prey_population_dynamics",
+      "predator_carrying_capacity",
+      "habitat_fragmentation_effects"
+    ],
+    "dual_formulation_note": "The landscape of fear is downstream of predator presence and upstream of population-level reproductive suppression and ecosystem energy allocation. Mechanistically distinct from direct predation (which is modeled separately as predator-prey kill rates) but structurally coupled: fear effects amplify direct predation costs and constrain population recovery. The constraint emerges from the interaction of predation risk salience and prey cognitive capacity for risk assessment, making it dependent on both behavioral ecology and evolutionary history."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ]
+}

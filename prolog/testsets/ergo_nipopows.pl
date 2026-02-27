@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: ergo_nipopows
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_ergo_nipopows, []).
@@ -40,10 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -59,16 +57,32 @@
  *   domain: technological/cryptographic
  *
  * SUMMARY:
- *   NiPoPoWs are succinct cryptographic proofs that allow a client to verify the
- *   state of a Proof-of-Work blockchain with very little data—kilobytes instead
- *   of gigabytes. They enable true "full-node security" on light devices like
- *   mobile phones. The constraint is the mathematical property that makes this
- *   compression possible.
+ *   Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) enable lightweight
+ *   clients to verify blockchain state by downloading only kilobytes of proof
+ *   data instead of gigabytes of full chain history. This creates a
+ *   structural tension: the technology is coordination infrastructure (making
+ *   PoW blockchains accessible to resource-constrained participants) but
+ *   simultaneously extracts value from full node operators by enabling
+ *   clients to gain security guarantees without bearing validation costs. The
+ *   constraint exhibits tangled rope structure because NiPoPoWs serve a
+ *   genuine coordination function (enabling broader participation) while
+ *   simultaneously establishing an asymmetric extraction relationship (light
+ *   clients benefit from validation work they don't perform, externalizing
+ *   costs to full nodes). The theater_ratio (0.55) reflects that while
+ *   NiPoPoWs are technically elegant, they perpetuate a performative security
+ *   model: the 'lightweight' verification still depends on the existence of a
+ *   network of expensive full nodes doing the real work. The constraint's
+ *   extractiveness (0.38) is moderate because the asymmetry, while real, is
+ *   partially justified by network effects—light clients increase ecosystem
+ *   value and thus create secondary benefits for validators.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mobile Users: Primary beneficiary (powerless/mobile) — gains access to full-node security.
- *   - Protocol Auditors/Bridge Developers: Primary beneficiary (institutional/arbitrage) — uses proofs for trustless cross-chain state verification.
- *   - Cryptographers/Mathematicians: Analytical observer — views the proofs as a fixed feature of cryptographic probability.
+ * KEY AGENTS:
+ *   - Light Client Users: Primary beneficiary (institutional/arbitrage) — gain blockchain access with minimal bandwidth and hardware; can switch protocols freely
+ *   - Full Node Operators: Primary victim (powerless/trapped) — bear full validation costs that enable light clients; cannot exit without degrading network security
+ *   - Network Node Operators: Secondary victim (moderate/constrained) — face ongoing proof verification and chain monitoring costs; partial agency via lightweight client adoption
+ *   - Ergo Foundation / Ecosystem Stewards: Organized implementer (organized/constrained) — driving NiPoPoW adoption; see constraint as transitional (scaffold) infrastructure
+ *   - Proof-of-Work Consensus Model: Institutional actor (institutional/arbitrage) — perpetuates validation cost structure; NiPoPoWs patch rather than replace this model
+ *   - Analytical Observer: Civilizational context (analytical/analytical) — observes both coordination function and extraction mechanism; sees constraint as tangled rope bridging accessibility and sustainability
  */
 
 /* ==========================================================================
@@ -76,83 +90,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ergo_nipopows, 0.10).
-domain_priors:suppression_score(ergo_nipopows, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(ergo_nipopows, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(ergo_nipopows, 0.38).
+domain_priors:suppression_score(ergo_nipopows, 0.42).
+domain_priors:theater_ratio(ergo_nipopows, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ergo_nipopows, extractiveness, 0.10).
-narrative_ontology:constraint_metric(ergo_nipopows, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(ergo_nipopows, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(ergo_nipopows, extractiveness, 0.38).
+narrative_ontology:constraint_metric(ergo_nipopows, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(ergo_nipopows, theater_ratio, 0.55).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-narrative_ontology:constraint_metric(ergo_nipopows, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(ergo_nipopows, resistance, 0.05).
-
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(ergo_nipopows, scaffold).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(ergo_nipopows, tangled_rope).
 narrative_ontology:human_readable(ergo_nipopows, "Non-Interactive Proofs of Proof-of-Work (NiPoPoWs)").
 narrative_ontology:topic_domain(ergo_nipopows, "technological/cryptographic").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint emerges from the mathematical properties of hash functions
-% and probability theory, not from human design or enforcement.
-domain_priors:emerges_naturally(ergo_nipopows).
+domain_priors:requires_active_enforcement(ergo_nipopows).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(ergo_nipopows, mobile_users).
-narrative_ontology:constraint_beneficiary(ergo_nipopows, protocol_auditors).
-
-% Who bears disproportionate cost?
-% No group bears a disproportionate cost. This is a public good technology.
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(ergo_nipopows, light_client_users).
+narrative_ontology:constraint_beneficiary(ergo_nipopows, ergo_ecosystem_validators).
+narrative_ontology:constraint_victim(ergo_nipopows, full_node_operators).
+narrative_ontology:constraint_victim(ergo_nipopows, bandwidth_constrained_networks).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE MOBILE USER (ROPE)
-% For a user with limited computational resources, NiPoPoWs are a liberating
-% 'Rope'. It grants them the security of a full node without the impossible
-% burden of downloading the entire blockchain. It's a tool that coordinates
-% trust in a decentralized way.
-constraint_indexing:constraint_classification(ergo_nipopows, mountain,
+% PERSPECTIVE 1: FULL NODE OPERATOR (SNARE) — Trapped by network economics. Full nodes must validate entire chains to participate trustlessly. NiPoPoW extracts value by enabling light clients that depend on this validation work without compensating validators. No exit option: cannot both verify blockchain state and avoid the computational cost of full validation that their work subsidizes.
+constraint_indexing:constraint_classification(ergo_nipopows, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
-            exit_options(mobile),
-            spatial_scope(local))).
+            exit_options(trapped),
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PROTOCOL AUDITOR / BRIDGE DEVELOPER (ROPE)
-% For an institution building a cross-chain bridge, NiPoPoWs are also a 'Rope'.
-% They provide a trustless mechanism to verify events on another chain, forming
-% the foundation for secure interoperability.
-constraint_indexing:constraint_classification(ergo_nipopows, scaffold,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: NETWORK NODE (TANGLED ROPE) — Constrained by bandwidth costs and hardware requirements. Benefits from network utility (more light clients = more ecosystem activity) but bears costs of proof verification and chain monitoring. Partial agency: can run lightweight clients themselves, but full node ecosystem benefits would accrue to light clients primarily.
+constraint_indexing:constraint_classification(ergo_nipopows, tangled_rope,
+    context(agent_power(moderate),
             time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: LIGHT CLIENT USER (ROPE) — Institutional beneficiary with arbitrage options. Can move between blockchains, protocols, or verification models. NiPoPoW provides coordination: enables participation in PoW ecosystems without bearing full validation costs. Network effect positive-sum: more participants = stronger security consensus.
+constraint_indexing:constraint_classification(ergo_nipopows, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE CRYPTOGRAPHER / ANALYTICAL OBSERVER (MOUNTAIN)
-% From a mathematical standpoint, the ability to compress PoW history into
-% superblocks via NiPoPoWs is a 'Mountain'. It is a fixed, discoverable
-% property of cryptographic probability that cannot be changed or resisted.
-constraint_indexing:constraint_classification(ergo_nipopows, mountain,
+% PERSPECTIVE 4: ERGO FOUNDATION / ECOSYSTEM STEWARDS (SCAFFOLD) — Organized agents implementing NiPoPoW as transitional infrastructure. The constraint has a sunset: as light clients proliferate and mobile verification becomes standard, the asymmetry between full node costs and light client benefits will stabilize into a normalized incentive structure. Suppression (mandatory proof validation) declines as protocols mature. Current theater reflects the innovation phase where NiPoPoW adoption is still being established.
+constraint_indexing:constraint_classification(ergo_nipopows, scaffold,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: PROOF-OF-WORK ASSUMPTION (PITON) — From civilizational view, PoW's claim to trustless verification is increasingly performative. NiPoPoWs solve an artifact problem: the bloat created by requiring clients to validate entire PoW chains. But as alternative consensus (PoS, hierarchical, sharded) mechanisms mature, the constraint degrades to theatrical: NiPoPoW is a clever patch on an antiquated model. Theater ratio high because the 'solution' perpetuates the underlying PoW extraction (mining) rather than addressing it.
+constraint_indexing:constraint_classification(ergo_nipopows, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From universal perspective, NiPoPoWs coordinate two conflicting objectives: making PoW accessible to light clients (coordination benefit) while preserving the security model that requires full nodes to do expensive validation work (extraction mechanism). The constraint is both enabling (new use cases) and extractive (externalizing validation costs).
+constraint_indexing:constraint_classification(ergo_nipopows, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -161,19 +165,13 @@ constraint_indexing:constraint_classification(ergo_nipopows, mountain,
 :- begin_tests(ergo_nipopows_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between users and the analytical observer.
-    constraint_indexing:constraint_classification(ergo_nipopows, TypeUser, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(ergo_nipopows, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    TypeUser \= TypeAnalytical,
-    TypeUser == rope,
-    TypeAnalytical == mountain.
+    constraint_indexing:constraint_classification(ergo_nipopows, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ergo_nipopows, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(mountain_threshold_validation) :-
-    % Verify that metrics for the mountain classification are within bounds.
-    narrative_ontology:constraint_metric(ergo_nipopows, extractiveness, E),
-    narrative_ontology:constraint_metric(ergo_nipopows, suppression_requirement, S),
-    E =< 0.25,
-    S =< 0.05.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(ergo_nipopows, TR),
+    TR >= 0.70.
 
 :- end_tests(ergo_nipopows_tests).
 
@@ -183,82 +181,88 @@ test(mountain_threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (0.10) is very low as NiPoPoWs are a public good
- *   technology that enhances security and accessibility without extracting value.
- *   The suppression score (0.05) is also very low; it's a mathematical fact,
- *   so it doesn't "suppress" alternatives in a coercive sense, it just exists.
- *   The classification as Mountain from an analytical view required lowering the
- *   original suppression score from 0.1 to 0.05 to meet the strict threshold.
- *   The necessary NL Profile metrics (accessibility_collapse, resistance) have
- *   been added to ensure the mountain classification passes certification.
+ *   Extractiveness (0.38): Moderate-high. Light clients derive security guarantees from full node validation work without directly compensating that work. The extraction is real—clients externalize costs—but justified partially by network effects. As light client adoption increases (from 0.22 at interval start to 0.38 at interval end), the extractiveness rises because the asymmetry compounds. Suppression (0.42): Moderate. Full nodes cannot refuse to validate proofs or exclude light clients—they must participate in the consensus mechanism. However, suppression is not total because validators can choose whether to run full nodes vs joining mining pools or light client networks. The constraint is suppressive but has exit points. Theater_ratio (0.55): Moderate-high and increasing. NiPoPoWs perform the function of 'lightweight verification' but perpetuate the underlying PoW theater—clients accept probabilistic security guarantees based on the assumption that full nodes are performing expensive work. As adoption spreads, the performative aspect (claiming lightweight security while depending on expensive infrastructure) becomes more apparent.
  *
  * PERSPECTIVAL GAP:
- *   The gap is between the *application* of a principle and the *principle itself*.
- *   End-users and developers interact with the application, which is a coordination
- *   tool (Rope) for achieving trustless validation.
- *   Mathematicians and cryptographers see the underlying principle, which is an
- *   unchangeable fact about probability and hashing (Mountain).
+ *   The beneficiary (light client user) sees rope: 'NiPoPoWs solve a real coordination problem by enabling mobile verification.' The victim (full node operator) sees snare: 'I bear costs with no exit; clients free-ride on my validation.' The ecosystem steward sees scaffold: 'This is temporary infrastructure with declining theater as adoption stabilizes incentives.' The PoW model itself, from civilizational perspective, sees piton: 'NiPoPoWs are a patch on an outdated system; they perpetuate rather than resolve the underlying cost structure.' The analytical observer sees the full tangled rope: 'Both perspectives are structurally correct. Coordination and extraction are co-present. The constraint's stability depends on whether light client benefits to the ecosystem outweigh the private costs to full nodes.'
  *
  * DIRECTIONALITY LOGIC:
- *   The constraint benefits anyone needing to validate a PoW chain efficiently.
- *   The beneficiaries are `mobile_users` and `protocol_auditors`. There are no
- *   direct victims; the technology does not impose costs on any specific group.
- *   Therefore, no `constraint_victim` is declared.
+ *   Full node operators derive d ≈ 0.95 (victim + trapped exit): they bear validation costs for light clients with no ability to opt out without degrading network security. f(d) ≈ 1.42 gives them maximum experienced extraction. Light client users derive d ≈ 0.10 (beneficiary + arbitrage exit): they gain access without validation costs and can move to alternative protocols freely. f(d) ≈ -0.01 gives them negative/negligible extraction. Network nodes occupy a middle ground: d ≈ 0.55 (both + constrained exit), reflecting their mixed experience of benefit (ecosystem strength) and cost (proof verification). The ergo foundation and ecosystem stewards occupy institutional roles with arbitrage options (d ≈ 0.15), seeing NiPoPoWs as a coordination mechanism with declining suppression over time (scaffold logic). The analytical observer uses d ≈ 0.72 (observer status) to hold the entire structure in view.
  *
  * MANDATROPHY ANALYSIS:
- *   This case is straightforward. The low extraction and suppression scores
- *   prevent any misclassification as a Snare or Tangled Rope. The primary
- *   distinction is between Rope (a useful tool) and Mountain (the law of nature
- *   that makes the tool possible), which the framework handles correctly.
+ *   RESOLVES THE MANDATROPHY: The constraint avoids false classification as 'pure coordination' (Rope) or 'pure extraction' (Snare) by recognizing that both functions are genuine. NiPoPoWs DO solve a coordination problem (enabling light client participation). They DO extract value (externalizing validation costs). The tangled_rope classification captures this duality: base extraction (0.38) is high enough to establish a real asymmetry; suppression (0.42) is significant but not total; beneficiaries and victims are both present and structurally necessary for the mechanism to function. The perspectives reveal that this is not a measurement ambiguity but a structural feature: different agents genuinely experience the constraint differently because they occupy different structural positions. The light client perspective (rope) and full node perspective (snare) are not competing descriptions of the same thing—they are accurate descriptions of different structural relationships to the same constraint.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_nipopow_velvet_fork,
-    "Can a velvet fork or soft fork break NiPoPoW assumptions by altering the superblock interlink structure?",
-    "Formal verification of NiPo-PoW security proofs against protocol upgrade scenarios on Ergo mainnet.",
-    "If vulnerable: The Rope weakens under governance disputes. If robust: Security guarantee holds across forks.",
+    security_margin_validity,
+    'What security margin is preserved when light clients accept NiPoPoW proofs vs full validation? Does the ''succinct'' proof sacrifice practical security guarantees?',
+    'Formal analysis of proof-of-work collision probability under NiPoPoW sampling; empirical testing of proof forgery difficulty; comparison to full node security margins under network attack conditions',
+    'If margin is negligible (< 1% security loss): NiPoPoWs are pure coordination mechanism (Rope from more perspectives). If margin is significant (> 10% security loss): extraction mechanism (victims bear security risk) becomes primary.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(security_margin_validity, empirical, 'Security margin preservation in NiPoPoW light client verification').
+
+omega_variable(
+    full_node_incentive_sustainability,
+    'Can full node networks sustain if the primary use case (mobile verification) becomes feasible without full node infrastructure?',
+    'Economic modeling of full node operator incentives; analysis of mining pool centralization if light client dominance reduces full node demand; historical comparison to other ''light'' protocol implementations (SPV, Ethereum light clients)',
+    'If sustainable: constraint is coordination (ecosystem can support both). If unsustainable: NiPoPoWs create a tragedy of the commons where the infrastructure (full nodes) degrades under its own success.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_nipopow_velvet_fork, empirical, "Vulnerability of NiPoPoW security assumptions to protocol soft forks.").
+narrative_ontology:omega_variable(full_node_incentive_sustainability, empirical, 'Long-term viability of full node incentives under NiPoPoW light client adoption').
+
+omega_variable(
+    adoption_threshold_externality,
+    'At what light client adoption percentage does the security of the full PoW network degrade? Is there a critical mass above which NiPoPoWs undermine their own security base?',
+    'Network simulation; empirical analysis of mining distribution and orphan rates under various light client percentages; analysis of attack surface expansion when full node diversity decreases',
+    'If threshold is high (> 80% light clients): NiPoPoWs can scale without undermining PoW security. If threshold is low (< 20% light clients): NiPoPoWs create a fundamental instability — success produces conditions for failure.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(adoption_threshold_externality, empirical, 'Critical adoption threshold for NiPoPoW light client security externality').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(ergo_nipopows, 0, 10).
+narrative_ontology:interval(ergo_nipopows, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required for this constraint as base_extractiveness (0.10) is below the
-% 0.46 threshold for mandatory lifecycle drift monitoring.
+% Theater ratio over time
+narrative_ontology:measurement(nipopow_tr_t0, ergo_nipopows, theater_ratio, 0, 0.38).
+narrative_ontology:measurement(nipopow_tr_t3, ergo_nipopows, theater_ratio, 3, 0.48).
+narrative_ontology:measurement(nipopow_tr_t6, ergo_nipopows, theater_ratio, 6, 0.55).
+
+% Extraction over time
+narrative_ontology:measurement(nipopow_be_t0, ergo_nipopows, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(nipopow_be_t3, ergo_nipopows, base_extractiveness, 3, 0.3).
+narrative_ontology:measurement(nipopow_be_t6, ergo_nipopows, base_extractiveness, 6, 0.38).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% NiPoPoWs serve as a standard for efficiently communicating and verifying
-% blockchain state information.
 narrative_ontology:coordination_type(ergo_nipopows, information_standard).
+narrative_ontology:affects_constraint(ergo_nipopows, proof_of_work_light_client_security).
+narrative_ontology:affects_constraint(ergo_nipopows, full_node_economic_sustainability).
+
+% DUAL FORMULATION NOTE:
+% NiPoPoWs can be analyzed as a pure coordination mechanism (light client infrastructure enabling broader participation) or as an extraction mechanism (externalizing validation costs to full nodes). These are not observables of the same constraint but structurally distinct claims. Upstream: proof-of-work security assumptions (whether PoW guarantees are actually preserved under light client dominance). Downstream: full node incentive structures (whether validators can sustain without explicit compensation from light clients).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed. The structural derivation from beneficiary status
-% and exit options correctly models the relationships for all agents.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

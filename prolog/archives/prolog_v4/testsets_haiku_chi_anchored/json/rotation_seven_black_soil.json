@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "rotation_seven_black_soil",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "r7bs"
+  },
+  "base_properties": {
+    "extractiveness": 0.88,
+    "suppression": 0.95,
+    "theater_ratio": 0.15,
+    "claimed_type": "snare",
+    "human_readable": "R7 Black Soil Toxicity",
+    "topic_domain": "biological/environmental",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "station_structural_integrity_maintenance"
+    ],
+    "victims": [
+      "exposed_crew_members",
+      "planetary_biology_mission"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Exposed Crew Member",
+      "comment": "PERSPECTIVE 1: EXPOSED CREW MEMBER (SNARE) \u2014 Crew assigned to R7 sector have no meaningful exit option; exposure results in irreversible kidney failure and death. Zero degrees of freedom. d\u22480.98, f(d)\u22481.45, \u03c3=0.8 \u2192 \u03c7\u22481.02. Pure extraction with maximum coercion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Planetary Biology Mission",
+      "comment": "PERSPECTIVE 2: PLANETARY BIOLOGY MISSION (SNARE) \u2014 The mission depends on samples and data from R7; contamination would invalidate years of research. Mission cannot exit without total loss. Constrained by scientific investment and crew rotation dependencies. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22481.10. High extraction; the constraint forces suboptimal choices (incomplete sampling, incomplete analysis, or accepting crew risk)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Station Command and Life Support",
+      "comment": "PERSPECTIVE 3: STATION COMMAND / LIFE SUPPORT (SCAFFOLD) \u2014 Command has options: containment, decontamination protocols, sector abandonment, or return to Earth for resupply/repair. The toxin is a constraint on operational choices, not on existence itself. Command experiences the black soil as a temporary obstacle with known sunset \u2014 the underlying biological process can be studied, remediated, or avoided through engineering changes. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.31. Low effective extraction; institutional actors retain agency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Toxicity View)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / NATURAL TOXICITY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, biological toxins in extraterrestrial soil are inherent to planetary contamination risk. No organism can 'exit' fundamental biochemistry. The toxin is a natural constraint on habitability, not a constructed one. However, the structural data (\u03b5=0.88, suppression=0.95, no natural emergence) contradicts mountain classification. This is a false summit: the toxin itself is natural, but the constraint (crew assignment to contaminated sector without adequate protective equipment or decontamination) is institutional."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "toxin_production_mechanism",
+      "question": "Is the black soil toxin actively produced by a biological organism in the soil, or is it a degradation product of the original habitat material from the planet?",
+      "resolution_mechanism": "Laboratory analysis of soil samples; culturing of microbial populations; toxin accumulation assays over time; geochemical analysis of toxin precursors",
+      "impact": "If actively produced: the constraint is dynamic and may worsen over time (higher extraction trajectory). If degradation product: the constraint has finite duration (scaffold perspective strengthens). If geological: the constraint is immutable (mountain perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether toxin is actively produced or residual"
+    },
+    {
+      "id": "protective_equipment_sufficiency",
+      "question": "Can existing or rapidly deployable protective equipment (isolation suits, air-recycling systems, enzymatic filters) prevent exposure with acceptable usability and reliability?",
+      "resolution_mechanism": "Toxin degradation/isolation testing of current suit materials; field trials in contained R7 sector; failure mode analysis; crew acceptance and performance metrics with PPE",
+      "impact": "If adequate protection exists: the constraint is operational (Scaffold) \u2014 remediation is a logistics problem. If protection is marginal or failure-prone: the constraint remains Snare \u2014 crew risk persists despite intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether protective equipment can prevent exposure reliably"
+    },
+    {
+      "id": "crew_rotation_economics",
+      "question": "What is the economic and logistical threshold (rotation schedule, medical screening, quarantine duration) that makes R7 sector assignment sustainable without accepting crew fatalities as inevitable?",
+      "resolution_mechanism": "Cost-benefit analysis of: extended quarantine protocols, accelerated rotation cycles, specialized training, medical monitoring frequency; comparison to mission-critical objectives in R7",
+      "impact": "If sustainable threshold exists below crew fatality rates: the constraint is a tradeoff problem (Tangled Rope). If no sustainable threshold: the constraint is non-negotiable extraction (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability threshold for crew rotation in contaminated sector"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.82
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.88
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The R7 sector black soil toxin represents a structural extraction constraint in a closed microcosm (space station). A biological toxin of unknown origin and mechanism causes irreversible kidney failure in exposed humans. The constraint is not negotiable through policy or incentive \u2014 exposure leads to death \u2014 making it appear natural. However, the structural mechanism is institutional: crew are assigned to contaminated work without adequate protective equipment, decontamination protocols, or rotation schedules that would allow safety margins. The constraint extracts risk and health from powerless crew members (no exit option) and scientific value from the planetary biology mission (dependent on R7 samples). Station command retains options (containment, remediation, sector abandonment, supply return) and experiences the toxin as a temporary operational obstacle. The analytical observer risks treating biological toxicity as an immutable natural law; the structural data reveals it is a contingent arrangement of institutional neglect and resource prioritization.",
+    "key_agents": [
+      "Exposed Crew Members: Primary victim (powerless/trapped) \u2014 assigned to R7 sector; no exit option; exposure causes irreversible harm",
+      "Planetary Biology Mission: Secondary victim (moderate/constrained) \u2014 depends on R7 samples; cannot exit without total scientific loss; forced into suboptimal choices",
+      "Station Command and Life Support: Primary beneficiary / institutional actor (institutional/arbitrage) \u2014 maintains sector access for operational/scientific goals; retains agency and remediation options",
+      "On-Station Medical and Decontamination Systems: Secondary institutional actor (institutional/constrained) \u2014 constrained by resource limits and protocol effectiveness; benefits from mission continuation but bears liability for crew exposure",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing an institutional failure as a law of biology"
+    ],
+    "logic_rationale": "Extractiveness (0.88): Very high. The constraint forces uncompensated risk acceptance (kidney failure, death) from crew in exchange for mission continuation and scientific data. The extraction is not negotiable \u2014 no payment, rotation, or risk premium can offset irreversible health damage. The upward trajectory from 0.72 to 0.88 over 6 intervals reflects that without intervention, the constraint becomes more severe as crew repeat exposures accumulate and remediation efforts (if any) fail. Suppression (0.95): Near-maximum. Crew have no meaningful alternative to sector assignment without career/mission consequences. No protective equipment is mentioned as reliable. No decontamination protocol is described. The only exit is mission abandonment or death. Theater ratio (0.15): Very low. The constraint is not performative \u2014 it kills. Crew awareness of toxicity is likely direct (medical reports, crew loss) rather than ritualized or symbolic. The low theater reflects that this is a structural reality, not an institutional performance.",
+    "perspectival_gap": "The exposed crew member sees only extraction and entrapment (Snare). The planetary biology mission sees high extraction with constrained exit (also Snare, but with slightly lower d due to mission agency). Station command sees a temporary operational obstacle with known remediation pathways (Scaffold) \u2014 the toxin limits but does not prevent action. The analytical observer risks seeing biological inevitability (Mountain) \u2014 toxins exist in nature \u2014 but the structural reality is institutional neglect of crew safety. The perspectival gap reveals that the constraint's severity depends entirely on institutional choices: if command prioritizes crew safety (protective equipment, rotation, quarantine), the constraint becomes manageable (Scaffold). If command accepts crew loss as a cost of mission continuation, the constraint remains a Snare.",
+    "directionality_logic": "Exposed crew members: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.45. Maximum extraction. Planetary biology mission: Victim + constrained \u2192 d\u22480.92, f(d)\u22481.38. High extraction; mission cannot exit without total loss. Station command: Beneficiary + arbitrage \u2192 d\u22480.30, f(d)\u22480.30. Low effective extraction; command retains agency and can choose remediation. Medical/decontamination systems: Institutional + constrained (caught between crew safety and mission demands) \u2192 d\u22480.55, f(d)\u22480.75. Mixed position; neither pure beneficiary nor pure victim. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. False summit risk: naturalizing institutional arrangement as biological law.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED (\u03b5=0.88, suppression=0.95, \u03c7\u22650.66). The constraint exhibits all snare signatures: high base extraction, high suppression (zero exits for crew), high effective extraction across relevant perspectives, no coordination benefit, and existence that depends on suppressing alternatives (abandoning the sector, accepting mission failure, or properly equipping/rotating crew). The false summit risk (analytical observer naturalizing toxicity) is mitigated by the low theater ratio (0.15) \u2014 this is not a performative constraint pretending to be natural; it is a structural reality with clear causal chains. Mandatrophy is resolved: the constraint is legitimately a Snare, not a misconstrued Rope or Scaffold. Crew extraction is non-negotiable because exit options are truly absent, not merely expensive."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "space_station_crew_rotation_policy",
+      "planetary_sample_acquisition_safety"
+    ],
+    "dual_formulation_note": "R7 black soil toxicity is a distinct constraint from the underlying biological/geological causes of the toxin. The natural existence of the toxin is a property of the planet; the structural constraint is the institutional decision to expose crew to it without adequate protection or compensation. These could be decomposed into: (1) constraint_r7_toxin_existence (\u03b5\u22480.05, Mountain \u2014 inherent to planetary contamination), and (2) constraint_rotation_seven_black_soil (\u03b5=0.88, Snare \u2014 institutional exposure). The current story focuses on the institutional constraint (the Snare) because that is where policy intervention is possible."
+  },
+  "directionality_overrides": []
+}

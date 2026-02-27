@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "indian_import_tariffs_eu",
+    "version": "1.0",
+    "generated_date": "2024-01-09",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Indian Protective Tariffs on European Union Imports (Autos & Spirits)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "indian_domestic_producers",
+      "indian_government_revenue"
+    ],
+    "victims": [
+      "european_union_exporters",
+      "indian_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Indian Consumers",
+      "comment": "Indian consumers face higher prices and reduced choices due to the tariffs, with limited ability to influence policy or switch to alternative products. Trapped due to limited import options and high prices, powerless to change the policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "European Union Exporters",
+      "comment": "EU exporters, particularly car manufacturers and spirits producers, face reduced market access and competitiveness in India. They are constrained by the tariffs but can seek alternative markets or lobby for policy changes. Moderate power, exit is constrained but not fully trapped - could focus on other markets. Benefits in the long-term due to Indian market growth/investment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Indian Domestic Producers",
+      "comment": "Indian domestic producers benefit from reduced competition, allowing them to maintain higher prices and market share. They have arbitrage exit options as they can always sell domestically and capture larger market share. Institutional power, arbitrage opportunities, benefits from protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Indian Government Revenue",
+      "comment": "Indian government revenue benefits from tariff collection, providing funding for various programs. However, it is constrained by potential retaliatory tariffs from the EU and the impact on consumer welfare. Constrained exit (need the revenue, don't want a trade war)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the tariffs as a complex interplay of protectionism, revenue generation, and international trade dynamics. The system is actively enforced to benefit specific actors while extracting from others, hence a Tangled Rope classification. Trade-offs exist between protecting domestic industry and consumer welfare. Analytical perspective, civilizational scope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tariff_elasticity",
+      "question": "What is the price elasticity of demand for imported cars and spirits in India? ",
+      "resolution_mechanism": "Econometric analysis of historical sales data and tariff changes.",
+      "impact": "High elasticity: tariffs reduce sales significantly. Low elasticity: tariffs generate revenue with minimal impact on consumption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determines the revenue generation potential and consumption impact of the tariffs."
+    },
+    {
+      "id": "retaliation_risk",
+      "question": "What is the likelihood of the EU imposing retaliatory tariffs on Indian exports?",
+      "resolution_mechanism": "Analysis of EU trade policy and diplomatic relations with India.",
+      "impact": "High risk: trade war reduces overall welfare. Low risk: India benefits from protectionism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the potential for retaliatory measures from the EU."
+    },
+    {
+      "id": "long_term_competitiveness",
+      "question": "Do the tariffs promote long-term competitiveness of Indian domestic producers, or do they create inefficiencies?",
+      "resolution_mechanism": "Comparative analysis of productivity and innovation in protected vs. unprotected industries.",
+      "impact": "Promote competitiveness: tariffs are beneficial. Create inefficiencies: tariffs are harmful.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Impact on long-term competitiveness of domestic producers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "India imposes high tariffs on certain European imports, notably cars and alcoholic beverages. These tariffs are intended to protect domestic industries, generate revenue, and reduce trade deficits. However, they also increase prices for consumers and potentially harm international trade relations. The effect of these protective tariffs is viewed differently across various agents.",
+    "key_agents": [
+      "Indian Domestic Producers: Primary beneficiary (institutional/arbitrage) - benefits from reduced competition.",
+      "Indian Government Revenue: Secondary beneficiary (institutional/constrained) - benefits from tariff collection.",
+      "European Union Exporters: Primary victim (moderate/constrained) - faces reduced market access.",
+      "Indian Consumers: Secondary victim (powerless/trapped) - pays higher prices.",
+      "Analytical Observer: Global perspective (analytical/analytical) - evaluates the overall impact on trade and welfare."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High - tariffs extract significant value from EU exporters and Indian consumers. Suppression (0.70): High - tariffs create substantial barriers to entry for EU products. Theater Ratio (0.30): Low - the tariffs have a clear functional purpose (protectionism and revenue generation), with limited performative elements. The economic impact is direct and measurable.",
+    "perspectival_gap": "Indian consumers experience the tariffs as a Snare, limiting their choices and increasing prices. EU exporters view it as a Tangled Rope, where they are constrained by reduced market access but still maintain some export volume. Indian domestic producers see the tariffs as a beneficial Rope, facilitating their growth and profitability. The Indian government experiences it as a Tangled Rope due to benefits from revenue vs diplomatic considerations. The analytical observer sees the full picture as a Tangled Rope \u2013 active enforcement to benefit one set of actors by extracting from another.",
+    "directionality_logic": "Beneficiaries: Indian domestic producers and government revenue benefit from the tariffs. Victims: EU exporters and Indian consumers bear the costs. The power and exit options of each agent influence their perception of the constraint. High tariffs mean the directional relationship is significantly skewed towards the beneficiaries at the expense of the victims."
+  },
+  "network": {
+    "affects_constraints": [
+      "global_trade_organization_rules"
+    ]
+  },
+  "directionality_overrides": []
+}

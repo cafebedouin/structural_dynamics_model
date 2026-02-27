@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "hhs_fetal_tissue_research_ban_2019",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hhs_fetal"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "2019 HHS Ban on Fetal Tissue Research Funding",
+    "topic_domain": "political/scientific/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "anti_abortion_political_coalition"
+    ],
+    "victims": [
+      "fetal_tissue_dependent_researchers",
+      "disease_modeling_programs",
+      "regenerative_medicine_development",
+      "translational_medicine_pipeline"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Fetal Tissue-Dependent Research Community",
+      "comment": "PERSPECTIVE 1: FETAL TISSUE-DEPENDENT RESEARCHERS (SNARE) \u2014 Cannot exit the constraint without abandoning lines of research with decade-long institutional investment. No alternative tissue substrate provides equivalent developmental staging or disease modeling capacity. Career-trapped: retraining costs are prohibitive; postdocs and graduate students lose funded positions. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Disease Research Pipeline",
+      "comment": "PERSPECTIVE 2: DISEASE RESEARCH PIPELINE (SNARE) \u2014 Constrained exit: can migrate research to international centers (UK, Europe, Canada) but at high institutional cost and loss of U.S. leadership in translational medicine. Parkinson's, diabetes, spinal cord injury programs lose fetal-tissue models with no sanctioned substitutes. d\u22480.78, f(d)\u22481.13, \u03c3=1.2 \u2192 \u03c7\u22480.82."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Anti-Abortion Political Coalition",
+      "comment": "PERSPECTIVE 3: ANTI-ABORTION POLITICAL COALITION (ROPE) \u2014 Benefits from the ban as coordination among single-issue voters and religious constituencies. Experiences the constraint as enforcement of shared moral principle. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.006. Negative effective extraction: net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The HHS Regulatory Institution",
+      "comment": "PERSPECTIVE 4: HHS REGULATORY INSTITUTION (TANGLED_ROPE) \u2014 Constrained by political mandate and administrative precedent. Enforcement requires ongoing compliance monitoring, grant de-obligation, and managed transition (the coordination function). But the constraint extracts institutional autonomy: HHS cannot exercise independent scientific judgment on research merit. Theater_ratio=0.68 reflects substantial compliance documentation theater. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Federal Research Funding System",
+      "comment": "PERSPECTIVE 5: FEDERAL RESEARCH FUNDING SYSTEM (PITON) \u2014 The ban persists partly through institutional inertia: reversing it requires active political effort despite scientific consensus on tissue utility. Theater_ratio=0.68 (compliance documentation, ethics review theater, alternative tissue justifications) indicates degradation: the funding bureaucracy maintains the ban's appearance of scientific reasonableness through regulatory theater. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.005."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Research Leadership",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL RESEARCH LEADERSHIP (TANGLED_ROPE) \u2014 Mobile exit: Europe, Canada, Australia, Japan continue fetal tissue research with no restrictions. U.S. research institutions can collaborate internationally but lose first-author positions and funding leadership. The constraint extracts U.S. scientific priority while coordinating internationally-compliant research programs. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN?) \u2014 Risks naturalizing the ban as a permanent fixture of U.S. science policy ('America's values are incompatible with fetal tissue research'). The structural data (\u03b5=0.58, suppression=0.72, theater=0.68) contradicts mountain classification \u2014 this is a contingent political constraint, not an immutable natural law. The false summit framing conceals the extractive mechanism behind moral language."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tissue_substitution_technical_viability",
+      "question": "Do organoid models, induced pluripotent stem cells (iPSCs), or organ-on-chip technologies provide functionally equivalent alternatives to fetal tissue for developmental staging and disease modeling?",
+      "resolution_mechanism": "Comparative empirical validation: parallel studies using alternative substrates vs historical fetal tissue protocols for the same developmental questions; publication of equivalency studies; adoption rates in disease modeling pipelines",
+      "impact": "If alternatives viable: constraint is coordination/scaffolding (temporary, with sunset as tech matures). If alternatives insufficient: constraint is pure extraction (snare, permanent structural damage to translational pipeline).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative tissue substrates provide technical equivalence"
+    },
+    {
+      "id": "political_reversibility_timeline",
+      "question": "What is the structural likelihood and timeline for political reversal of the ban under different U.S. political coalitions?",
+      "resolution_mechanism": "Historical analysis of similar politically-motivated research bans (e.g., stem cell funding restrictions 2001-2009); polling on public support for fetal tissue research; legislative session records; executive action precedents",
+      "impact": "If reversible within 5-10 years: scaffold classification is legitimate (sunset is real). If reversible only after generational political shift (30+ years): constraint is effectively snare for current research generation.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Timeline for political reversal of the ban"
+    },
+    {
+      "id": "international_competitive_displacement",
+      "question": "How much U.S. translational medicine leadership is structurally displaced to international centers by the ban, and is this displacement reversible?",
+      "resolution_mechanism": "Bibliometric analysis: first-author publication share, grant leadership, clinical trial initiation rates for fetal-tissue-dependent diseases (Parkinson's, spinal cord injury, diabetes); tracking of U.S. researcher migration to international labs; institutional partnership data",
+      "impact": "If displacement is large and irreversible: snare classification confirmed (extraction of scientific priority). If displacement is marginal or reversed by international collaboration: tangled_rope classification confirmed (mixed coordination-extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude and reversibility of U.S. scientific leadership displacement"
+    },
+    {
+      "id": "moral_framing_necessity",
+      "question": "Is the anti-abortion moral framing of the ban a core structural feature or a contingent political wrapper around economic/ideological extraction mechanisms?",
+      "resolution_mechanism": "Textual analysis of policy justifications; comparison with similar bans in other countries with different moral frameworks; analysis of who benefits from the ban independent of stated moral rationale",
+      "impact": "If moral framing is core: beneficiary perspective (organized coalition) is genuine. If framing is contingent: snare classification is strengthened (extraction disguised as principle).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether moral framing is essential or incidental to the ban"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "On June 5, 2019, the U.S. Department of Health and Human Services (HHS) announced a ban on federal funding for human fetal tissue research, effective immediately. The ban prohibited new grants for research using human fetal tissue obtained from induced abortions and terminated NIH-funded contracts with Advanced Biotherapeutic (ABT), which had been procuring fetal tissue for research. Existing grants were allowed to continue but could not be renewed. The stated rationale was ethical concern about participation in abortion; the constraint's actual structural function is extraction: it redistributes research priority, development capital, and scientific leadership away from U.S. laboratories dependent on fetal tissue models and toward international research centers (Europe, Canada, Australia, Japan, China) where no equivalent restrictions exist. The constraint exhibits snare characteristics (high suppression, trapped victims, no coordination benefit) disguised as moral principle through theater (compliance documentation, alternative-tissue justifications, ethics review expansion). Extractiveness increased over the interval (0.35\u21920.58) as researchers exhausted workarounds and realized the ban was durable political commitment, not temporary policy. Theater increased (0.45\u21920.68) as the regulatory system developed performative alternatives to substitute for lost research capacity. The constraint is a pure snare from the perspective of trapped researchers; mixed coordination-extraction from international competitors' perspective; coordination victory from the anti-abortion coalition's perspective; and degraded ritual from HHS's institutional perspective. The false summit risk is high: the civilizational observer may naturalize the ban as 'America's values,' concealing that the constraint functions as extraction of scientific priority, not enforcement of universal principle.",
+    "key_agents": [
+      "Fetal Tissue-Dependent Researchers: Primary victims (powerless/trapped) \u2014 neurodegeneration, spinal cord injury, diabetes, developmental biology researchers lose 20+ years of protocol development; cannot retrain; no substitute substrate provides equivalent developmental staging",
+      "Disease Research Institutes: Primary victims (moderate/constrained) \u2014 Parkinson's, diabetes, spinal cord injury programs lose funded research lines; can migrate internationally but at high institutional cost",
+      "Anti-Abortion Political Coalition: Primary beneficiary (organized/arbitrage) \u2014 coordinates single-issue voters and religious constituencies; gains political credibility with core supporters",
+      "HHS Regulatory Institution: Secondary actor (institutional/constrained) \u2014 enforces mandate; loses scientific autonomy; develops compliance theater to justify enforcement",
+      "International Research Centers: Secondary beneficiary (powerful/mobile) \u2014 Europe, Canada, Japan capture displaced U.S. leadership; low cost to absorb U.S. researchers",
+      "Federal Research Funding System: Tertiary actor (institutional/arbitrage) \u2014 maintains ban through inertia; develops alternative-tissue documentation theater; loses research priority without active reversal"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts U.S. scientific priority through denial of access to a tissue substrate with unique developmental staging capacity. No approved substitute provides equivalent functionality (iPSCs lack gestational synchronization; organoids lack vascularization and immune cell integration; organ-on-chip lacks multi-tissue interactions). Researchers cannot simply 'switch substrates' \u2014 fetal tissue has 30+ years of protocol development. The extraction is not total: international collaboration and alternative models provide partial workarounds. Initial extractiveness (0.35) reflects optimism that alternatives would mature quickly; trajectory to 0.58 reflects realization that substitution is much slower than anticipated. Suppression (0.72): High. Barriers include: grant de-obligation precedent (researchers cannot reverse a funded project once terminated), political durability of the ban (requires active reversal, not passive expiration), lack of legislative alternative pathway (cannot access fetal tissue through international partnerships with federal funding), and career risk of advocacy (researchers publicly supporting fetal tissue research face political backlash and funding uncertainty). Theater ratio (0.68): High. Substantial performative content includes: (a) ethics review theater \u2014 HHS created new Institutional Review Board scrutiny for alternative-tissue research to justify enforcement through process rather than principle; (b) alternative-tissue justifications \u2014 researchers develop iPSC protocols not because they are equivalent but because they satisfy compliance; (c) funding mechanism theater \u2014 NIH published guidance on how to study 'developmental biology without fetal tissue,' creating the performative appearance of scientific equivalence where none exists. Theater increased over interval as regulatory system doubled down on compliance documentation.",
+    "perspectival_gap": "The constraint produces radically different classifications across observer positions. Trapped researchers (powerless/biographical) see pure snare: the ban is arbitrary, career-ending, and offers no coordination benefit. Constrained researchers in disease modeling (moderate/generational) see snare with some international escape: they can migrate research but lose U.S. funding and institutional base. The anti-abortion coalition (organized/immediate) sees pure rope: the ban coordinates their political base and enforces principle with no perceived extraction. HHS (institutional/biographical) sees tangled rope: forced to enforce an unpopular policy while maintaining scientific credibility. International research centers (powerful/generational) see net coordination: they capture displaced leadership and benefit from cross-border collaboration without restrictions. The analytical observer (civilizational/universal) risks seeing a mountain \u2014 'America's ethical commitment to life' \u2014 when the structural data reveals a snare: career extraction disguised as moral principle. This perspectival collapse is the fingerprint of false summit risk.",
+    "directionality_logic": "Anti-abortion coalition: Beneficiary + arbitrage exit \u2192 d\u22480.08. They coordinate their political base and extract credibility without bearing implementation cost. Fetal tissue researchers: Victim + trapped exit \u2192 d\u22480.92. Cannot exit the constraint without abandoning career investment; no alternative substrate provides equivalent functionality. Disease research pipeline: Victim + constrained exit \u2192 d\u22480.78. Can migrate internationally but at high institutional cost; constrained by U.S. funding dependency. International research centers: Beneficiary + mobile exit (from U.S. perspective, but victimized from global perspective) \u2192 d\u22480.25 (global scoped). They benefit from displaced leadership and lack restrictions; if anything, they have low d as beneficiaries. HHS institutional: Victim + constrained exit \u2192 d\u22480.60. Forced to enforce unpopular policy; cannot independently reverse (requires political action); constrained by administrative precedent.",
+    "mandatrophy_analysis": "SNARE VS REGULATORY COORDINATION: The mandatrophy resolves by observing that the beneficiary coalition (anti-abortion voters) experiences genuine coordination (rope), while the victim researchers experience genuine extraction (snare). These are not the same constraint viewed from different angles \u2014 they are different structural realities. The constraint's function for the coalition is coordination: binding together religious and single-issue voters around enforcement of a principle. The constraint's function for researchers is extraction: denying access to a research substrate that gives others competitive advantage. The fact that the constraint coordinates one group while extracting from another is the defining signature of a snare: it uses political power to enforce asymmetric extraction while cloaking it in moral language that appeals to a coalition. The false summit risk ('this is America's ethical principle, an immutable feature of U.S. values') must be rejected because: (1) the constraint is reversible (political choice, not natural law); (2) other democracies with similar values (Canada, Germany, France) permit fetal tissue research; (3) the theater ratio (0.68) indicates performative compliance, not principled commitment; (4) the constraint redistributes scientific priority to international competitors, which is extraction, not principle. The mandatrophy is resolved: this is snare, not mountain; snare, not rope; snare disguised as rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "stem_cell_research_funding_restrictions",
+      "international_research_brain_drain",
+      "regenerative_medicine_development_delays"
+    ],
+    "dual_formulation_note": "The 2019 HHS ban is a descendant of the 2001-2009 stem cell funding restrictions (different tissue substrate, same coordination-of-extraction mechanism). The upstream constraint (stem cell restrictions) created precedent for politically-motivated research bans; the 2019 ban demonstrates institutional durability of that precedent. Both are snares disguised as moral principle. Downstream constraints (brain drain to international centers, regenerative medicine development delays) are consequences of the ban's extraction of scientific priority."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "stem_cell_research_funding_restrictions"
+    ]
+  }
+}

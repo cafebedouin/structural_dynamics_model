@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: us_greenland_envoy
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_us_greenland_envoy, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,20 +57,29 @@
  *   domain: geopolitical/economic
  *
  * SUMMARY:
- *   Following a public expression of interest in purchasing Greenland, a US
- *   administration appoints a "special envoy for Greenlandic affairs".
- *   Ostensibly for "deepening partnership and economic development," the
- *   move is widely seen as a mechanism to secure preferential access to
- *   Greenland's vast rare earth mineral deposits and strategic location,
- *   while countering Chinese and Russian influence in the Arctic. The
- *   constraint is the diplomatic and economic pressure exerted through
- *   this special channel.
+ *   The appointment of a US Special Envoy for Greenlandic Affairs follows a
+ *   public statement of interest in acquiring Greenland and represents a
+ *   structural constraint on Greenlandic sovereignty, Danish independence,
+ *   and Arctic diplomatic norms. The envoy role extracts diplomatic leverage
+ *   from both Greenland and Denmark by maintaining a standing US presence
+ *   focused on Greenlandic affairs while keeping the implicit territorial
+ *   acquisition interest alive as background pressure. The constraint
+ *   combines snare characteristics (suppression of exit options, extraction
+ *   of sovereignty legitimacy) with piton characteristics (high theater,
+ *   degraded functional content) and tangled rope elements (genuine
+ *   coordination on Arctic policy, but asymmetrically benefiting US
+ *   interests). The theater ratio (0.78) reflects that the envoy's primary
+ *   function is performative — signaling US commitment and maintaining
+ *   acquisition interest — rather than substantive diplomatic work that
+ *   couldn't occur through existing channels.
  *
- * KEY AGENTS (by structural relationship):
- *   - Greenlandic Government & People: Primary target (powerless/trapped) — possesses resources sought, faces intense pressure.
- *   - US Administration & Strategic Industries: Primary beneficiary (institutional/arbitrage) — seeks resources and geopolitical advantage.
- *   - Danish Government: Constrained institutional actor (institutional/constrained) — caught between its obligations to Greenland and its alliance with the US.
- *   - Analytical Observer: External analyst — sees the coordination narrative and the underlying extractive function.
+ * KEY AGENTS:
+ *   - Greenlandic Government: Primary victim (powerless/trapped) — structurally unable to exit without diplomatic cost; sovereignty legitimacy extracted through implicit acquisition threat
+ *   - Danish Government: Secondary victim (moderate/constrained) — trapped between supporting Greenland and maintaining NATO/US relationships; diplomatic leverage extracted
+ *   - US Strategic Planning: Primary beneficiary (institutional/arbitrage) — gains permanent diplomatic bandwidth on Greenlandic affairs, signaling commitment, maintaining optionality on resource and geopolitical interests
+ *   - US Diplomatic Apparatus: Institutional performance (institutional/arbitrage) — operates the envoy role with high theater; minimal functional capacity beyond existing structures; maintains through bureaucratic inertia
+ *   - Arctic Resource Actors: Secondary beneficiary (powerful/mobile) — benefit from US commitment to Arctic governance but face elevated uncertainty on resource deals and geopolitical positioning
+ *   - Analytical Observer: Meta-perspective (analytical/analytical) — observes both genuine Arctic coordination function and extractive suppression of sovereignty; notes false summit risk if envoy is naturalized as legitimate Arctic governance mechanism
  */
 
 /* ==========================================================================
@@ -79,94 +87,70 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(us_greenland_envoy, 0.65).
-domain_priors:suppression_score(us_greenland_envoy, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(us_greenland_envoy, 0.40).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(us_greenland_envoy, 0.52).
+domain_priors:suppression_score(us_greenland_envoy, 0.65).
+domain_priors:theater_ratio(us_greenland_envoy, 0.78).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(us_greenland_envoy, extractiveness, 0.65).
-narrative_ontology:constraint_metric(us_greenland_envoy, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(us_greenland_envoy, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(us_greenland_envoy, extractiveness, 0.52).
+narrative_ontology:constraint_metric(us_greenland_envoy, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(us_greenland_envoy, theater_ratio, 0.78).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(us_greenland_envoy, snare).
 narrative_ontology:human_readable(us_greenland_envoy, "US Special Envoy for Greenlandic Affairs").
 narrative_ontology:topic_domain(us_greenland_envoy, "geopolitical/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(us_greenland_envoy). % Required for Tangled Rope
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(us_greenland_envoy, us_strategic_interests).
-%
-% Who bears disproportionate cost?
 narrative_ontology:constraint_victim(us_greenland_envoy, greenlandic_sovereignty).
-narrative_ontology:constraint_victim(us_greenland_envoy, danish_sovereignty).
+narrative_ontology:constraint_victim(us_greenland_envoy, danish_independence).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: GREENLAND (THE PRIMARY TARGET)
-% As the target of intense geopolitical pressure with limited ability to resist,
-% Greenland experiences the envoy as a highly coercive mechanism.
-% Engine derives d from: victim + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-% χ ≈ 0.65 * 1.42 * 1.0 (national) = 0.923. This is well above the Snare threshold (χ ≥ 0.66).
+% PERSPECTIVE 1: GREENLANDIC LEADERSHIP (SNARE) — Greenland's government is structurally trapped. Accepting the envoy legitimizes territorial pressure and courtship by a superpower; rejecting it risks damaging trade and security relationships with the US. Both strategies carry costs with no genuine exit. The constraint extracts political legitimacy and negotiating position while suppressing Greenlandic sovereignty through the implicit threat of renewed acquisition interest.
 constraint_indexing:constraint_classification(us_greenland_envoy, snare,
     context(agent_power(powerless),
-            time_horizon(generational),
+            time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(regional))).
 
-% PERSPECTIVE 2: US ADMINISTRATION (THE PRIMARY BENEFICIARY)
-% The US sees this as a low-cost, high-leverage diplomatic tool. It's pure coordination
-% from their perspective, facilitating access and influence.
-% Engine derives d from: beneficiary + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ.
-% χ ≈ 0.65 * -0.12 * 1.0 (national) = -0.078. This is firmly a Rope.
+% PERSPECTIVE 2: DANISH GOVERNMENT (SNARE) — Denmark is constrained, not trapped. It can formally dismiss the envoy but risks US strategic distance in NATO and Arctic affairs. It can formally support Greenlandic autonomy but that assertion itself becomes a spectacle for US domestic consumption. The envoy creates a standing invitation for the US to frame Greenlandic affairs as open to negotiation — an extraction of diplomatic leverage over its North Atlantic partner.
+constraint_indexing:constraint_classification(us_greenland_envoy, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: US STRATEGIC PLANNING (ROPE) — The US administration experiences the envoy as a coordination mechanism: signaling commitment to Arctic strategy, demonstrating willingness to prioritize polar geopolitics, and maintaining permanent diplomatic bandwidth on Greenlandic affairs. The envoy enables resource allocation, relationship-building, and optionality. This perspective experiences the constraint as beneficial coordination.
 constraint_indexing:constraint_classification(us_greenland_envoy, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: US DIPLOMATIC APPARATUS (PITON) — The special envoy role is largely performative institutional theater. Diplomatic channels to Greenland already exist through the embassy in Copenhagen and US-Greenland bilateral mechanisms. The envoy title adds visibility and symbolic commitment but minimal functional capacity beyond what existing structures provide. High theater (0.78) reflects that the role's actual leverage derives from the background threat of territorial acquisition, not from diplomatic function.
+constraint_indexing:constraint_classification(us_greenland_envoy, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analyst sees both the coordination narrative (economic development) and the
-% severe underlying extraction (resource access). This dual nature is the
-% definition of a Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-% χ ≈ 0.65 * 1.15 * 1.2 (global) = 0.897. This fits Tangled Rope (0.40 ≤ χ ≤ 0.90).
-constraint_indexing:constraint_classification(us_greenland_envoy, snare,
+% PERSPECTIVE 5: ARCTIC RESOURCE ACTORS (TANGLED_ROPE) — Multinational corporations and Arctic states with resource interests experience the envoy as both coordinating Arctic policy frameworks and extracting leverage over resource deals. The envoy legitimizes US interest in Greenlandic mineral resources, climate-opened shipping routes, and geopolitical positioning. Resource actors can exit (reallocate to other Arctic jurisdictions) but face coordination costs. Mixed extraction and coordination.
+constraint_indexing:constraint_classification(us_greenland_envoy, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED_ROPE) — From a civilizational view, the envoy represents a hybrid: it is partly a genuine coordination mechanism (US commitment to Arctic governance, relational deepening with Greenland) and partly an extraction mechanism (suppressing Greenlandic sovereignty options, extracting diplomatic leverage over Denmark, maintaining the threat of territorial acquisition as background pressure). The constraint requires active enforcement through diplomatic performance and periodic renewal of acquisition interest. The observer sees both coordination function (binding Arctic relationships) and asymmetric extraction (coercive leverage over smaller powers).
+constraint_indexing:constraint_classification(us_greenland_envoy, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-
-% PERSPECTIVE 4: DANISH GOVERNMENT (CONSTRAINED INSTITUTION)
-% Denmark is a powerful state but is trapped in a difficult position between its
-% major security ally (US) and its autonomous territory (Greenland). It cannot
-% easily exit its NATO obligations or its responsibilities to Greenland.
-% Engine derives d from: victim + constrained exit → d ≈ 0.90 → f(d) ≈ 1.35 → high χ.
-% χ ≈ 0.65 * 1.35 * 1.0 (national) = 0.8775. From Denmark's perspective, this is a
-% coercive Snare that compromises its sovereignty and diplomatic freedom.
-constraint_indexing:constraint_classification(us_greenland_envoy, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,28 +158,18 @@ constraint_indexing:constraint_classification(us_greenland_envoy, rope,
 
 :- begin_tests(us_greenland_envoy_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    constraint_indexing:constraint_classification(us_greenland_envoy, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(us_greenland_envoy, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    % This test verifies the core Rope/Snare gap.
-    true.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(us_greenland_envoy, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(us_greenland_envoy, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(perspectival_gap_inter_institutional) :-
-    % Verify the gap between the two institutional actors.
-    constraint_indexing:constraint_classification(us_greenland_envoy, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(us_greenland_envoy, TypeConstrained, context(agent_power(institutional), _, exit_options(constrained), _)),
-    TypeBeneficiary = rope,
-    TypeConstrained = snare,
-    TypeBeneficiary \= TypeConstrained.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(us_greenland_envoy, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(us_greenland_envoy, snare, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_gate_requirements_met) :-
-    % Verify that all three conditions for a Tangled Rope are present.
-    narrative_ontology:constraint_beneficiary(us_greenland_envoy, _),
-    narrative_ontology:constraint_victim(us_greenland_envoy, _),
-    domain_priors:requires_active_enforcement(us_greenland_envoy).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(us_greenland_envoy, TR),
+    TR >= 0.70.
 
 :- end_tests(us_greenland_envoy_tests).
 
@@ -205,22 +179,16 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.65): High. The value of Greenland's rare earth minerals and strategic military position is orders of magnitude greater than the US investment in diplomatic envoys and promised aid. The potential for asymmetric value transfer is immense.
- *   - Suppression Score (S=0.75): High. The creation of a "special" high-level diplomatic channel effectively crowds out and suppresses Greenland's ability to form alternative partnerships, particularly with geopolitical rivals like China. It creates a coercive preferential relationship.
- *   - Theater Ratio (T=0.40): Moderate. While there is significant diplomatic theater about "partnership," the underlying function of securing access is very real and actively pursued. The theater serves to legitimate the extraction, not replace the function.
+ *   Extractiveness (0.52): Moderate-high. The envoy mechanism extracts diplomatic leverage from Greenland and Denmark by maintaining a standing interest in Greenlandic affairs backed by the implicit threat of territorial acquisition. The extraction is not maximal because the envoy also serves genuine Arctic coordination functions — US commitment to polar strategy, resource discussions, and relational deepening. The net effect is asymmetric: US gains options and leverage; Greenland and Denmark lose sovereignty maneuvering room. Theater ratio (0.78): High and increasing. The envoy role's primary function is performative signaling of commitment rather than substantive diplomatic work unavailable through existing US-Greenland and US-Denmark channels. The theater has increased from 0.65 to 0.78 over the 5-year interval as the envoy accumulated ceremonial functions (presidential meetings, Arctic council coordination, announcement authority) while its actual decision-making authority remained constrained. This progression is characteristic of piton degradation — institutions maintain through performance after functional necessity has declined. Suppression (0.65): High. Greenland and Denmark face significant suppression of exit options: rejecting the envoy risks US strategic distance; accepting it legitimizes territorial pressure and frames Greenlandic affairs as open to superpower negotiation. Both powers are constrained by NATO/Arctic security dependencies that make US alignment essential, creating structural trap conditions.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme. The US (beneficiary) sees a low-cost, effective coordination mechanism (Rope) to achieve strategic goals. Greenland (target) and Denmark (constrained institution) see a highly coercive diplomatic maneuver that threatens their sovereignty and autonomy (Snare). This gap arises directly from the directionality of the constraint: it funnels value and strategic advantage from Greenland/Denmark to the US.
+ *   The envoy creates a maximal perspectival gap between beneficiary (US) and victims (Greenland, Denmark). The US institutional perspective (Rope) views the envoy as pure coordination — signaling Arctic commitment, deepening relationships, enabling resource discussions. The Greenlandic perspective (Snare) views the same structure as pure extraction — sovereignty suppressed, diplomatic maneuvering constrained, territorial legitimacy taxed by the acquisition interest. The Danish perspective (Snare) is intermediate — constrained but not trapped, benefiting from US Arctic commitment but paying costs in diminished influence over Greenlandic affairs and appearance of alignment with US pressure on a NATO ally. The piton perspective (US diplomatic apparatus) observes that the envoy's function has atrophied to theater while its institutional form persists. The analytical observer (Tangled Rope) synthesizes these gaps by noting that the constraint is genuinely a hybrid — it does coordinate Arctic policy, but it does so asymmetrically, extracting leverage from smaller powers and suppressing their autonomy. The false summit risk lies in naturalizing the envoy as a legitimate Arctic governance mechanism when its structure is fundamentally coercive.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `us_strategic_interests`. This includes the military-industrial complex and tech sectors reliant on rare earth minerals. They gain resources and geopolitical dominance.
- *   - Victims: `greenlandic_sovereignty` and `danish_sovereignty`. They bear the cost through loss of autonomy, pressure to accept unfavorable deals, and limitations on their foreign policy options. The declarations correctly map this asymmetric relationship.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This is a classic inter-institutional case. Both the US and Denmark are `institutional` actors, but their relationship to the constraint is radically different due to their `exit_options`. The US has `arbitrage` (it can pursue other resources or use other diplomatic tools). Denmark has a `constrained` exit; it cannot easily abandon its NATO alliance with the US nor its constitutional responsibilities to Greenland. This lack of exit optionality places it in a victim position, causing it to perceive the constraint as a Snare, just as the less powerful Greenland does.
+ *   Directionality values map from beneficiary/victim declarations and exit options. The US (institutional/arbitrage) has low d (~0.05-0.15) — they are the beneficiary with exit options; the constraint runs away from them toward other actors. Greenland (powerless/trapped) has high d (~0.90-0.95) — they are the victim with no exit; the constraint runs directly into them. Denmark (moderate/constrained) has intermediate-high d (~0.70-0.80) — they are a victim with some exit (NATO realignment, Arctic coalition-building) but face costs for exercising it. The derived f(d) values reflect these positions: beneficiaries experience low or negative effective extraction; trapped victims experience maximum extraction; constrained actors experience moderate-high extraction. The scope modifier (regional=0.9 for Greenland perspective, global=1.2 for US perspective) amplifies this gap — the US experiences the constraint at a global scale with global multiplier; Greenland experiences it at regional scale where their exit options are naturally more constrained.
  *
  * MANDATROPHY ANALYSIS:
- *   This case demonstrates the power of the framework in preventing mandatrophy. A naive analysis might see the envoy's official mandate ("economic development") and classify this as a Rope or Scaffold. However, the high base extractiveness (ε) and suppression (S), combined with the perspectival analysis, reveals the true structure: a Tangled Rope. The system correctly identifies that the coordination function is a veneer for a primarily extractive purpose, preventing the mislabeling of coercion as cooperation.
+ *   RESOLUTION THROUGH PERSPECTIVAL DECOMPOSITION: The mandatrophy is resolved by recognizing that the envoy is a legitimate Tangled Rope from the analytical perspective (genuine Arctic coordination + asymmetric extraction), while appearing as Snare to victims (Greenland, Denmark) and Rope to beneficiaries (US). The piton classification (US diplomatic apparatus) identifies the degradation mechanism: the envoy's functional content has atrophied while its theatrical form persists through institutional habit. The false summit risk arises if policymakers naturalize the envoy as an inherent feature of Arctic governance (Mountain) — the structural data contradicts this. The envoy is contingent institutional arrangement, not a law of geopolitics. Its persistence derives from US strategic interest + Greenlandic/Danish structural vulnerability, not from any immutable constraint. The mandatrophy is resolved by making this contingency explicit in the analytical perspective and by tracking the theater ratio's increase (0.65→0.78) as a signature of degradation.
  */
 
 /* ==========================================================================
@@ -228,60 +196,72 @@ test(tangled_rope_gate_requirements_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_us_greenland_envoy,
-    'Is the "economic development" component genuine coordination or pure theater?',
-    'Observing the terms of resulting investment deals: do they favor local Greenlandic enterprise and retain profits domestically, or do they primarily benefit US corporations with minimal local return?',
-    'If genuine (significant local benefit), base extractiveness (ε) would decrease. If purely theatrical (extractive terms), ε would be even higher than 0.65.',
+    acquisition_threat_credibility,
+    'Does the public acquisition interest represent genuine US policy or domestic political theater that de-legitimizes the subsequent envoy role?',
+    'Analysis of policy documents, budget allocations, military infrastructure plans, and successive administrations'' treatment of the envoy role',
+    'If genuine: envoy is a credible coordination mechanism backed by real strategic interest. If theater: envoy is a snare that exploits Greenlandic vulnerability without substantive intent, making suppression extractive rather than security-motivated.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(acquisition_threat_credibility, empirical, 'Whether acquisition interest is genuine policy or domestic theater').
+
+omega_variable(
+    greenlandic_sovereignty_extraction,
+    'Does the envoy structure itself (independent special envoy, not routed through Denmark) extract Greenlandic legitimacy as an autonomous entity, or does it genuinely facilitate Greenlandic voice in US-Arctic policy?',
+    'Examination of envoy mandate scope, reporting lines, decision authority on Greenlandic affairs, and whether Greenland gains agency or primarily responds to US interest',
+    'If extractive: snare classification confirmed — Greenland''s sovereignty is taxed by the implicit territorial claim. If facilitating: tangled rope with stronger coordination component and reduced suppression.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(greenlandic_sovereignty_extraction, empirical, 'Whether envoy extracts or facilitates Greenlandic sovereignty').
+
+omega_variable(
+    nato_alliance_reconfiguration,
+    'Is the envoy part of a broader Arctic NATO reorganization that strengthens collective security (rope) or a unilateral US extraction of Arctic primacy (snare)?',
+    'Analysis of NATO Arctic strategy documents, comparison of US-Greenland envoy role with similar envoy roles in other NATO Arctic regions, examination of whether envoy decisions are coordinated with Denmark or unilateral',
+    'If collective security: constraint classifies as tangled rope with stronger coordination. If unilateral primacy: constraint is snare with minimal coordination justification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(nato_alliance_reconfiguration, empirical, 'Whether envoy is part of collective Arctic security or unilateral US extraction').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(us_greenland_envoy, 0, 10).
+narrative_ontology:interval(us_greenland_envoy, 0, 5).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.65 > 0.46), so temporal data is required.
-% The trajectory models the constraint intensifying over time: starting as diplomatic
-% theater and evolving into overt pressure for resource extraction.
+% Theater ratio over time
+narrative_ontology:measurement(greenland_tr_t0, us_greenland_envoy, theater_ratio, 0, 0.65).
+narrative_ontology:measurement(greenland_tr_t3, us_greenland_envoy, theater_ratio, 3, 0.72).
+narrative_ontology:measurement(greenland_tr_t5, us_greenland_envoy, theater_ratio, 5, 0.78).
 
-% Theater ratio over time (starts high, then decreases as the real function emerges):
-narrative_ontology:measurement(us_greenland_envoy_tr_t0, us_greenland_envoy, theater_ratio, 0, 0.70).
-narrative_ontology:measurement(us_greenland_envoy_tr_t5, us_greenland_envoy, theater_ratio, 5, 0.55).
-narrative_ontology:measurement(us_greenland_envoy_tr_t10, us_greenland_envoy, theater_ratio, 10, 0.40).
+% Extraction over time
+narrative_ontology:measurement(greenland_be_t0, us_greenland_envoy, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(greenland_be_t3, us_greenland_envoy, base_extractiveness, 3, 0.48).
+narrative_ontology:measurement(greenland_be_t5, us_greenland_envoy, base_extractiveness, 5, 0.52).
 
-% Extraction over time (starts lower, increases as demands become concrete):
-narrative_ontology:measurement(us_greenland_envoy_ex_t0, us_greenland_envoy, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(us_greenland_envoy_ex_t5, us_greenland_envoy, base_extractiveness, 5, 0.58).
-narrative_ontology:measurement(us_greenland_envoy_ex_t10, us_greenland_envoy, base_extractiveness, 10, 0.65).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The constraint's stated purpose is to coordinate investment,
-% making it a resource allocation mechanism.
-narrative_ontology:coordination_type(us_greenland_envoy, resource_allocation).
+narrative_ontology:coordination_type(us_greenland_envoy, enforcement_mechanism).
+narrative_ontology:affects_constraint(us_greenland_envoy, arctic_resource_extraction).
+narrative_ontology:affects_constraint(us_greenland_envoy, greenlandic_autonomy).
+narrative_ontology:affects_constraint(us_greenland_envoy, nato_arctic_strategy).
 
-% Network relationships: This policy is a direct response to global resource
-% competition and dependency on specific supply chains.
-narrative_ontology:affects_constraint(global_rare_earth_dependency, us_greenland_envoy).
-narrative_ontology:affects_constraint(us_greenland_envoy, china_arctic_presence).
-
+% DUAL FORMULATION NOTE:
+% The US Greenland envoy is downstream of broader Arctic geopolitical competition and upstream of specific resource negotiation constraints. The envoy structure itself represents the extraction mechanism by which US Arctic interest (higher ε, lower theater, genuine coordination) becomes coercive pressure on Greenlandic sovereignty (higher ε, high theater, minimal coordination benefit to Greenland).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for this story. The structural derivation chain
-% (beneficiary/victim declarations + exit options) accurately models the
-% directionality for all key agents, including the distinct experiences
-% of the two institutional actors (US and Denmark).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

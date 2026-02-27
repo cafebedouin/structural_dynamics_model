@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "pla_loyalty_purge",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pla"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "PLA Loyalty Purge Mechanism",
+    "topic_domain": "political/military_coercion",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "xi_faction_loyalists"
+    ],
+    "victims": [
+      "pla_officer_corps",
+      "regional_military_commanders",
+      "institutional_autonomy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Targeted Officer",
+      "comment": "PERSPECTIVE 1: THE TARGETED OFFICER (SNARE) \u2014 Military officers subject to purges face maximum extraction. Exit is structurally trapped: resignation invites investigation, defection is national betrayal, internal opposition is documented as disloyalty. The purge mechanism relies on surveillance, denunciation, and career termination as enforcement tools. No genuine alternatives exist."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Command Structure",
+      "comment": "PERSPECTIVE 2: REGIONAL COMMAND STRUCTURE (TANGLED ROPE) \u2014 Regional military leaders experience both coordination (clear chain of command) and extraction (loyalty pressure, resource centralization, threat of purge). They benefit from institutional stability but at cost of autonomy. Exit is constrained \u2014 resignation is possible but career-ending; internal restructuring is possible within limits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Xi Faction Loyalists",
+      "comment": "PERSPECTIVE 3: XI FACTION LOYALISTS (ROPE) \u2014 Core loyalists experience the purge as pure coordination: identifying threats, consolidating command, clarifying hierarchy. They benefit from removing competitors and strengthening institutional alignment. Exit options are favorable \u2014 they can arbitrage between civilian and military authority, between competing factions, between central and local power bases."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Institutional Reform Advocates",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL REFORM ADVOCATES (SCAFFOLD) \u2014 Some reformers view the purge as a temporary mechanism for consolidating civilian party control over a historically autonomous military institution. The extraction (surveillance, fear) is tolerated as temporary, with expectation that once unified command is achieved, fear-based enforcement will decline. Sunset logic: as meritocratic promotion norms replace purge-based discipline, effective extraction should decrease. Sunset timeline: 10-15 years if institutional norm-setting succeeds."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Military Bureaucracy",
+      "comment": "PERSPECTIVE 5: MILITARY BUREAUCRACY (PITON) \u2014 The formal structure of military discipline, hierarchy, and performance evaluation persists and provides theater for purges. Anti-corruption campaigns provide official justification; performance metrics justify removals; promotion rituals maintain institutional legitimacy. The bureaucracy itself has atrophied as a constraint on arbitrary action \u2014 formal procedures are followed but are substantially performative, enabling purges that would be impossible under genuine rule-of-law constraints."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global and long-term view, the purge serves two structural functions: (1) genuine coordination to align military institution with civilian party control and (2) extraction to consolidate factional power and suppress alternative power centers. Both functions are real and structural, not reducible to one or the other. The constraint exhibits both Rope features (coordination of military hierarchy) and Snare features (suppression of dissent and removal of competitors)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "anti_corruption_versus_purge_boundary",
+      "question": "How much of the officer removal is driven by genuine corruption investigation versus factional loyalty pressure?",
+      "resolution_mechanism": "Comparative analysis of corruption charges: conviction rates for purged officers vs non-purged officers; correlation between purge waves and factional threat perception; consistency of charges across regions and institutional levels",
+      "impact": "If primarily corruption-driven: reclassifies as Scaffold with sunset logic (corruption-driven reforms can eventually normalize). If primarily loyalty-driven: confirms Snare classification. If mixed: confirms Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between legitimate anti-corruption and factional purge"
+    },
+    {
+      "id": "institutional_norm_recovery_timeline",
+      "question": "After centralization is achieved, will fear-based enforcement decline or become permanent feature of military hierarchy?",
+      "resolution_mechanism": "Historical comparison to Deng-era military reforms, tracking of removal rates over next 15 years, correlation between institutional stability and purge frequency, analysis of successor planning under unified command",
+      "impact": "If extraction declines as promised: Scaffold classification confirmed, sunset is real, constraint transitions to Rope. If extraction remains high: Snare persists, purge becomes institutionalized coercion, constraint is mislabeled as temporary.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether purge-based discipline can transition to institutional norms"
+    },
+    {
+      "id": "officer_corps_exit_elasticity",
+      "question": "As purge risk increases, do capable officers seek exit (emigration, early retirement, sector change), creating brain drain that forces higher extraction to maintain compliance?",
+      "resolution_mechanism": "Tracking of PLA officer emigration rates; analysis of early retirement requests; correlation between purge intensity and retirements; comparison to exit rates in professional militaries",
+      "impact": "If exit elasticity is high: extractiveness becomes unstable (purges cause exits, exits require higher extraction to maintain compliance, higher extraction causes more exits). If exit is trapped: Snare persists stably.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether officer exit flows create feedback loop with extraction intensity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 2012,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The People's Liberation Army loyalty purge under Xi Jinping represents a structural mechanism of coercive organizational consolidation within China's military institution. Since Xi assumed leadership of the Central Military Commission in 2012, the PLA has undergone sustained removal of senior officers and regional commanders, officially framed as anti-corruption campaigns but structurally functioning as a consolidation of factional control. The constraint exhibits both genuine coordination features (aligning military command hierarchy with civilian party authority) and pure extraction features (removing power competitors, enforcing ideological compliance, establishing surveillance-based loyalty mechanisms). The purge operates through multiple enforcement channels: formal anti-corruption investigations, loyalty denunciations, performance evaluations, and career termination. Officers face trapped exit options: resignation invites investigation, defection constitutes national betrayal, internal opposition triggers documentation as disloyalty. The mechanism relies on suppression of alternatives and institutional surveillance to maintain compliance. The theater ratio (0.55) reflects that formal bureaucratic procedures (performance reviews, corruption charges, promotion rituals) provide legitimating cover for what is substantially an arbitrary loyalty enforcement mechanism.",
+    "key_agents": [
+      "Xi Jinping faction: Primary beneficiary (institutional/arbitrage) \u2014 consolidates power by removing military competitors; controls appointment and removal mechanisms",
+      "Officer corps (targeted): Primary victim (powerless/trapped) \u2014 face career termination, reputation destruction, and investigation risk; cannot exit or resist without facing career consequences",
+      "Regional military commanders: Secondary victim (organized/constrained) \u2014 balance operational autonomy against loyalty pressure; face resource centralization and command authority constraints",
+      "Central Military Commission apparatus: Institutional enforcer (institutional/immediate) \u2014 implements purges, manages denunciations, maintains surveillance systems",
+      "Military bureaucracy: Institutional theater provider (institutional/arbitrage) \u2014 maintains formal procedures that legitimize purges; provides plausible deniability",
+      "Analytical observer: Structural analyst (analytical/analytical) \u2014 identifies both genuine coordination and extraction functions operating simultaneously"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The purge extracts loyalty compliance from the officer corps through threat and career termination. Benefits accrue to the Xi faction (consolidated control, removal of competitors) while costs fall on targeted officers and the institutional autonomy of the military structure itself. The measurement trajectory (0.45 \u2192 0.62 \u2192 0.68) shows rising extraction intensity over the purge interval, indicating escalation rather than stabilization. Suppression (0.78): Very high. Officers have minimal alternatives: internal options (resistance, denunciation, lateral movement) trigger investigation; external options (resignation, emigration) trigger investigation and career destruction; strategic silence is the dominant strategy but provides no protection. The suppression arises from comprehensive surveillance, institutional control over advancement, and the life-or-death stakes of military careers. Theater ratio (0.55): Moderate. The purge is not pure performance \u2014 genuine institutional restructuring occurs and real officers are removed \u2014 but the formal mechanisms (anti-corruption charges, performance metrics) provide substantial theater. Charges may be legitimate or fabricated; the distinction is often unknowable to observers. The theater has remained stable because it serves a legitimating function that cannot be abandoned without revealing the arbitrary nature of the enforcement.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The targeted officer sees pure extraction (Snare) \u2014 their exit is trapped and costs are total. The regional command sees mixed coordination and extraction (Tangled Rope) \u2014 they benefit from unified command but at cost of autonomy. The Xi faction sees pure coordination (Rope) \u2014 the purge solves the problem of military alignment with party authority. The institutional reformer sees temporary extraction with sunset (Scaffold) \u2014 once unified command is established, fear-based discipline can decline. The military bureaucracy sees its own degraded legitimacy (Piton) \u2014 formal procedures persist but are increasingly performative. The analytical observer sees genuine Tangled Rope \u2014 both coordination and extraction are real structural features that cannot be separated. This perspectival gap is irreducible: it reflects genuine differences in structural position, not measurement error or perspective bias.",
+    "directionality_logic": "Directionality (d) varies by structural position. Targeted officers (powerless/trapped) have d \u2248 0.95, experiencing maximum extraction through the sigmoid function. Regional commanders (organized/constrained) have d \u2248 0.55-0.65, experiencing mixed coordination and extraction. Xi faction loyalists (institutional/arbitrage) have d \u2248 0.05-0.15, experiencing coordination benefits with minimal extraction cost. The purge mechanism relies on high suppression (0.78) to maintain extraction despite the costs it imposes \u2014 suppression is not scaled by d, it is a structural feature of the constraint that applies equally across positions. The beneficiary/victim declarations reflect real structural asymmetry: the Xi faction benefits; targeted officers, regional command autonomy, and military institution integrity are the victims.",
+    "mandatrophy_analysis": "RESOLVED THROUGH TANGLED ROPE AUTHENTICATION: The constraint resolves the mandatrophy by acknowledging that the purge serves TWO structurally real and inseparable functions: (1) genuine coordination to establish civilian party control over the military (Rope function) and (2) extraction to consolidate factional power and suppress alternative power centers (Snare function). Neither can be eliminated without destroying the other. The Xi faction cannot consolidate party control without removing competing power centers. The officer corps cannot resist without threatening party-military relations. The analytical observer cannot separate the legitimate institutional function from the factional extraction mechanism \u2014 they are structurally coupled in the purge mechanism itself. Tangled Rope classification is the correct analytical category because both functions are real and both extractiveness and active enforcement are required by the structural design. The constraint cannot be understood as 'really just' coordination with incidental extraction side effects, nor as 'really just' extraction dressed up in coordination language \u2014 it is genuinely hybrid."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "chinese_civil_military_relations",
+      "factional_power_consolidation"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

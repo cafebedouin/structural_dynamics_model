@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "couples_residency_match",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "couples"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Medical Residency Couples Match Algorithm",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "program_directors",
+      "institutional_match_stability"
+    ],
+    "victims": [
+      "coupled_applicants",
+      "single_applicants",
+      "lower_tier_programs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Coupled Applicant",
+      "comment": "PERSPECTIVE 1: COUPLED APPLICANT (SNARE) \u2014 Trapped within the match algorithm with no exit option during the critical matching year. Must accept whatever joint outcome the algorithm produces or face costly delays (postponing match, geographic separation, leaving medicine). Bears asymmetric cost: if match fails, career and life plans collapse simultaneously. Cannot negotiate, cannot exit during match window, cannot reverse decision. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Single Applicant",
+      "comment": "PERSPECTIVE 2: SINGLE APPLICANT (TANGLED ROPE) \u2014 Benefits from the couples match's existence because it removes some highly-qualified applicants from the single pool (improving their relative position). Also harmed because the algorithm's prioritization of couple stability reduces total matching efficiency, leaving more positions unfilled and creating cascading effects. Constrained exit: can apply multiple times or delay, but this is costly. Mixed extraction and coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Program Directors (Beneficiary)",
+      "comment": "PERSPECTIVE 3: PROGRAM DIRECTORS / NRMP (ROPE) \u2014 Experience the couples match as a pure coordination mechanism. The algorithm solves a collective action problem: without couples matching, many high-quality applicants withdraw or mismatch. With it, programs obtain stable placements and reduce vacancy rates. Directors can arbitrage (adjust ROL strategy year-to-year). Net benefit with low extraction cost \u2014 the mechanism coordinates a Pareto-efficient outcome from their institutional vantage point."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Elite Programs (Top-Tier Institutions)",
+      "comment": "PERSPECTIVE 4: ELITE PROGRAMS (TANGLED ROPE) \u2014 Benefit from couples matching because it increases match stability, reducing post-match attrition and improving cohort quality. Also benefit from increased leverage over applicants: couples have lower bargaining power (must choose between couple security and individual program preference). Can extract through misaligned preference signaling. Mobile exit: can modify their ROL strategy across years. Both coordination benefit and asymmetric extraction present."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Lower-Tier Programs",
+      "comment": "PERSPECTIVE 5: LOWER-TIER PROGRAMS (SNARE) \u2014 Structurally harmed by couples matching. High-quality applicants who couple are more likely to rank elite programs, reducing competition for lower-tier programs. Vacancy rates increase. Cannot exit: must participate in NRMP system to recruit residents. Forced to accept whatever remaining applicants couple-match processes leave behind. Suppression: regulatory requirement to use NRMP."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Match Algorithm Authority",
+      "comment": "PERSPECTIVE 6: MATCH ALGORITHM AUTHORITY / NRMP GOVERNANCE (PITON) \u2014 Maintains the couples match algorithm largely through institutional inertia and ceremonial oversight. The algorithm performs its stated function (matching couples) but increasingly serves as theater for managing market stability. The governance structure is degraded: algorithmic decisions are not subject to real transparency, appeals processes are limited, and the underlying matching criterion (couple welfare maximization vs. Pareto efficiency) is never publicly debated. The mechanism persists because no coalitional force has successfully challenged the NRMP's monopoly. Theater ratio is moderate but rising as algorithmic complexity increases without corresponding accountability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_coupling_stability",
+      "question": "Does the couples match algorithm actually maximize couple welfare, or does it primarily maximize program director convenience while claiming to serve couples?",
+      "resolution_mechanism": "Longitudinal tracking of couple outcomes post-match: geographic separation rates, career trajectory divergence, relationship dissolution. Comparison with counterfactual (couples independently matching vs. coupled matching). Survey data on couple satisfaction with algorithm-proposed outcomes.",
+      "impact": "If couples genuinely benefit: tangled_rope classification is correct, and suppression/extraction is moderate justified coordination cost. If couples are worse off: couples match is a pure extraction mechanism disguised as beneficence (snare reclassification across all perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether couples match maximizes couple welfare or program stability"
+    },
+    {
+      "id": "alternative_matching_feasibility",
+      "question": "Could a decoupled algorithm (each member of couple submits independent ROL with geographic or timing constraints) achieve comparable stability outcomes with less extraction?",
+      "resolution_mechanism": "Computational modeling of alternative matching mechanisms. Historical analysis of pre-couples-match era match outcomes. Simulation of constraint-based matching on actual NRMP data.",
+      "impact": "If feasible: couples match is a form of unnecessary extraction, and classification shifts toward snare from all victim perspectives. If infeasible: coupling mechanism genuinely solves an intractable coordination problem, justifying current extraction as necessary suppression cost.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of decoupled matching with geographic constraints"
+    },
+    {
+      "id": "information_asymmetry_extraction",
+      "question": "Do program directors systematically exploit couples' reduced bargaining power through preference signaling (e.g., offering couple sub-optimal joint matches that individual negotiation would reject)?",
+      "resolution_mechanism": "Econometric analysis of couple rank list clustering vs. single applicant clustering. Interview data with couples and program directors. Pattern analysis of acceptance rates: do couples accept lower-preference matches at higher rates than singles?",
+      "impact": "If systematic exploitation detected: extractiveness increases to 0.55+, suppression rises to 0.65+. Classification becomes pure snare from couple perspective. If exploitation absent: extraction is incidental rather than structural, classification remains tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether programs exploit couple bargaining weakness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The National Resident Matching Program's Couples Match algorithm exemplifies how a coordination mechanism can gradually accrete extraction properties through institutional ossification. Established in the 1990s to solve a real collective action problem\u2014high-quality applicants declining the match or leaving medicine entirely when forced to choose between career and relationship\u2014the algorithm has become a hybrid mechanism that delivers genuine coordination benefit to institutions while exacting increasing extraction costs from coupled applicants. The constraint operates through a technological apparatus (the matching algorithm) and economic incentive structure (program director preferences, applicant desperation, career irreversibility). Different stakeholders experience the same mechanism radically differently: program directors see pure coordination value; coupled applicants see an inescapable asymmetric cost structure; single applicants see a secondary harm; lower-tier programs see competitive disadvantage; and the governance authority sees an increasingly ceremonial legitimacy ritual. The mechanism's theater has risen over three decades as algorithmic complexity has increased without corresponding transparency or appeals mechanisms, and as the underlying matching criterion has drifted from stated couple welfare maximization toward de facto program stability optimization.",
+    "key_agents": [
+      "Coupled Applicants: Primary victims (powerless/trapped) \u2014 bear maximum extraction cost through algorithmic lock-in during critical career decision year",
+      "Program Directors / NRMP Leadership: Primary beneficiaries (institutional/arbitrage) \u2014 experience algorithm as coordination mechanism solving recruitment problem",
+      "Single Applicants: Secondary victims (moderate/constrained) \u2014 harmed through pool composition changes but also benefit from reduced competition",
+      "Elite Programs: Secondary beneficiaries (powerful/mobile) \u2014 increase match stability and leverage over applicants",
+      "Lower-Tier Programs: Secondary victims (moderate/constrained) \u2014 structurally disadvantaged by couples matching, left with reduced candidate pools",
+      "Algorithm Governance Authority: Institutional actor (institutional/arbitrage) \u2014 maintains mechanism through procedural legitimacy despite increasing opacity"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The couples match algorithm extracts from coupled applicants through (a) reduced bargaining power during matching (programs can offer suboptimal couple matches knowing couples have fewer exit options), (b) geographic lock-in (acceptance commits both parties to one location regardless of individual preference), and (c) temporal irreversibility (a failed couple match costs an entire year). However, extraction is not maximal because the algorithm does deliver some genuine coordination value (preventing couples from leaving medicine entirely, enabling some couple matches that would not occur under single matching). The value of 0.38 reflects moderate extraction with partial legitimacy. Suppression (0.52): Moderate-high. Couples face significant barriers to exit or negotiation: the matching window is compressed, the algorithm is opaque, appeals are limited, and the regulatory environment (NRMP monopoly plus medical licensure requirements) creates trapped conditions. However, suppression is not total because couples can theoretically delay match, pursue individual matching, or leave medicine\u2014these are costly but not impossible. Theater ratio (0.48): Moderate. The algorithm's stated purpose (couple welfare maximization) has drifted toward actual purpose (program stability optimization) without formal acknowledgment. The governance ritual around the algorithm emphasizes transparency and fairness, but the actual mechanism is increasingly a black box. Theater has risen over time as the algorithm has become more complex and less subject to public scrutiny.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Program directors perceive pure coordination (Rope) and experience no extraction\u2014the algorithm solves a genuine recruitment problem. Coupled applicants perceive asymmetric extraction (Snare) and experience maximum cost. Elite programs perceive mixed coordination and extraction advantage (Tangled Rope). Single applicants perceive a mechanism that both helps and harms them (Tangled Rope). Lower-tier programs perceive pure extraction disadvantage (Snare). The algorithm authority perceives an increasingly ceremonial mechanism (Piton) maintained through institutional inertia. The gap between the beneficiary's view (this solves a real problem) and the victim's view (this locks us into suboptimal outcomes) is unbridgeable without examining the structural asymmetries in bargaining power, exit options, and information distribution.",
+    "directionality_logic": "Directionality is determined by structural position within the matching ecosystem. Coupled applicants occupy the highest-d position (0.90+): they are maximally dependent on the algorithm's outcome, have trapped exit options, and bear concentrated costs. Program directors occupy the lowest-d position (0.10-0.20): they are beneficiaries with arbitrage options (can adjust ROL strategy year-to-year), face low cost from mechanism malfunction, and capture the coordination benefit. Single applicants occupy a middle position (0.55): they benefit from the reduced competition of coupled applicants but are harmed by reduced matching efficiency. The derivation chain maps these structural positions through f(d), producing experienced extractiveness that matches each group's actual perceptions of fairness and burden.",
+    "mandatrophy_analysis": "The couples match resolves the mandatrophy by demonstrating that legitimate coordination needs can become vehicles for extraction when structural asymmetries are present. The algorithm genuinely solves the problem it claims to solve (enabling couples to match), which is a coordination benefit. However, the solution creates extracted costs that program directors do not bear. The mandatrophy question becomes: 'Is the extraction incidental to coordination, or is the extraction the mechanism's actual function disguised as coordination?' The data suggests the answer has shifted over time. In the 1990s-2000s, couples match was primarily coordination (Rope or light Tangled Rope). By 2020s, program director behavior has increasingly exploited the reduced bargaining power of couples, and algorithmic opacity has increased theater ratio. The constraint is transitioning from Tangled Rope toward Snare as the coordination function atrophies and the extraction function becomes dominant. This lifecycle drift is captured in the measurements: base_extractiveness rising from 0.22 to 0.38, theater_ratio rising from 0.35 to 0.48 over 30 years."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "medical_labor_market_monopsony",
+      "physician_geographic_distribution",
+      "dual_career_household_economics"
+    ],
+    "dual_formulation_note": "The couples match algorithm is downstream of structural market conditions (physician labor monopsony, geographic scarcity of high-quality training programs) but represents a distinct constraint operating at the algorithmic level. Upstream constraints (monopsony power of large institutions, geographic concentration of top-tier residencies) create the conditions under which couples matching becomes an extractive mechanism rather than a pure coordination tool."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

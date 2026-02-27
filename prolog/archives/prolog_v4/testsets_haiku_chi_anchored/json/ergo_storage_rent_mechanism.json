@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "ergo_storage_rent_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "esr"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ergo Storage Rent (Demurrage) Mechanism",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "active_network_validators",
+      "resource_efficient_ecosystem"
+    ],
+    "victims": [
+      "dormant_utxo_holders",
+      "long_term_cold_storage_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dormant UTXO Holder",
+      "comment": "PERSPECTIVE 1: DORMANT UTXO HOLDER (SNARE) \u2014 Individual users holding ERG in unspent outputs without activity face automatic erosion of holdings via storage rent. No exit mechanism short of moving funds (incurring transaction costs) or abandoning the constraint entirely. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small-Scale Cold Storage User",
+      "comment": "PERSPECTIVE 2: SMALL-SCALE COLD STORAGE USER (TANGLED ROPE) \u2014 Must periodically move funds to pay rent or face gradual depletion. Benefits from the network's resource optimization (lower full-node costs benefit the ecosystem they use); constrained by friction of required transaction maintenance. d\u22480.68, f(d)\u22481.04, \u03c3=0.9 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Active Network Node Operator",
+      "comment": "PERSPECTIVE 3: ACTIVE NETWORK NODE OPERATOR (ROPE) \u2014 Storage rent directly reduces the on-chain state size they must maintain, lowering hardware requirements and syncing times. They experience the constraint as a coordination mechanism solving the tragedy of the commons (disk space). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Designer / Long-Term Ecosystem",
+      "comment": "PERSPECTIVE 4: PROTOCOL DESIGNER / LONG-TERM ECOSYSTEM (ROPE) \u2014 Storage rent is an elegant solution to a recognized coordination failure: without demurrage, blockchains accumulate unbounded state, eventually becoming unverifiable. The mechanism incentivizes network health over time horizons. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The User-Side Organizational Response",
+      "comment": "PERSPECTIVE 5: USER-SIDE ORGANIZATIONAL RESPONSE (SCAFFOLD) \u2014 Wallet providers and DeFi protocols are implementing automated rent-payment mechanisms and educational campaigns. This is a temporary coordination layer (sunset: as rent management becomes native to all wallets and becomes invisible to users, the organizational scaffolding dissolves). d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.13."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Economic Incentive Logic",
+      "comment": "PERSPECTIVE 6: TRADITIONAL ECONOMIC INCENTIVE LOGIC (PITON) \u2014 Storage rent relies on the assumption that users will actively manage holdings or abandon them. In practice, for many users, the rent mechanism is invisible (mediated by wallet automation, managed by custodians, or simply accepted as a cost of participation). The performative element: rent is charged in theory; in practice, automation and custodial services abstract it away. theater_ratio\u22480.35 is moderate but the piton classification comes from the assumption-dependence: the mechanism works only if users respond to price signals, but many users don't see the signal. d\u22480.12, f(d)\u2248-0.06, \u03c3=1.2 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (False Summit Test)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN CANDIDATE) \u2014 From a universal perspective, unbounded state growth is a mathematical inevitability without some decay mechanism. Storage rent as a solution is as fundamental as conservation laws. However, the structural data (\u03b5=0.52, suppression=0.48) contradicts true mountain classification. The 'inevitability' naturalizes what is actually a design choice among many possible solutions (sharding, pruning, state expiration without rent, etc.). The engine's false summit detector will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rent_rate_adequacy",
+      "question": "Is the storage rent rate (currently ~0.14 ERG per byte per year) adequate to incentivize state cleanup without creating unacceptable friction for legitimate users?",
+      "resolution_mechanism": "Empirical measurement: (a) growth rate of UTXO set over time, (b) fraction of UTXOs becoming inactive vs being actively managed, (c) user churn rates correlated with rent burden, (d) comparison to actual hardware cost of state storage",
+      "impact": "If rate is too low: state bloat continues (constraint fails). If rate is too high: legitimate users are driven to custodial solutions or other chains (extraction becomes excessive). Optimal rate depends on hardware cost dynamics and user base composition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether storage rent rate balances state cleanup against user friction"
+    },
+    {
+      "id": "custodial_absorption",
+      "question": "What fraction of ERG holdings are mediated by custodial services, and does custodial absorption of rent liability fundamentally alter the constraint's character?",
+      "resolution_mechanism": "On-chain analysis of address behavior (automated patterns of rent-paying wallets vs manual); survey and documentation of major custodian policies on rent; measurement of non-custodial vs custodial UTXO distributions",
+      "impact": "If custodial absorption is > 70%: most users never experience the rent constraint directly (becomes invisible, piton-like). The constraint is effectively a tax on non-custodial users and long-term developers. If < 30%: users broadly experience friction and coordination response is real.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree to which custodial services absorb rent liability and abstract it from users"
+    },
+    {
+      "id": "state_expiration_alternative",
+      "question": "Could state expiration (automatic deletion of old UTXOs without rent extraction) achieve the same state-cleanup coordination goal with lower extraction?",
+      "resolution_mechanism": "Comparative analysis of Ergo's rent mechanism vs Tezos's state expiration vs Cardano's UTxO model; empirical measurement of state growth rates and user experience friction in each system; theoretical analysis of incentive structures",
+      "impact": "If expiration is feasible with lower extraction: current design is a choice favoring extractive mechanism over coordination mechanism, reclassifying from Tangled Rope toward Snare. If expiration creates worse problems (loss of funds, security issues): rent is revealed as the least-extractive solution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether state expiration could replace rent as a coordination mechanism"
+    },
+    {
+      "id": "network_value_distribution",
+      "question": "Who ultimately benefits from the state cleanup that storage rent enables? Is the benefit captured by validators, the ecosystem, or distributed broadly?",
+      "resolution_mechanism": "Economic analysis: measure reduced hardware costs for full nodes; track adoption and security metrics as state growth is controlled; identify which actors' incentives are aligned with rent collection vs state reduction",
+      "impact": "If benefits accrue primarily to validators: constraint is closer to pure extraction (Snare). If benefits are network-wide (lower full-node costs, improved accessibility, security): constraint is genuinely a coordination mechanism (Rope/Tangled Rope justified).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of benefits from state cleanup across network stakeholders"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Ergo's storage rent mechanism (demurrage) represents a sophisticated attempt to solve a deep coordination problem in blockchain design: how to prevent unbounded state growth while maintaining a globally verifiable ledger. Every unspent transaction output (UTXO) on Ergo's chain carries a small annual rent (~0.14 ERG per byte per year), payable when the output is spent or automatically deducted if inactive. This creates a continuous incentive for users to either actively manage their holdings or consciously abandon them, preventing the accumulation of \"dust\" that would eventually render full-node operation infeasible. The mechanism operates at the intersection of protocol design, economic incentive, and user behavior, exhibiting all six DR types from different vantage points. From the perspective of dormant UTXO holders, it functions as a snare: funds erode automatically with no realistic exit except to move them (incurring transaction costs) or lose them. From the perspective of network validators and node operators, it functions as a pure coordination mechanism (rope): storage rent directly solves a commons tragedy by reducing the disk footprint everyone must maintain. From a protocol design perspective, it is an elegant solution to a mathematical inevitability \u2014 without decay, blockchain state becomes unbounded. Yet from a user-experience perspective, it creates friction that custodial services and wallet automation partially abstract away, making the constraint performative for many users. The mechanism's extractiveness has increased over time (0.28 \u2192 0.52) as the ecosystem matured and users understood its implications, while its theater ratio has decreased (0.55 \u2192 0.35) as automated rent-payment solutions normalized the friction.",
+    "key_agents": [
+      "Dormant UTXO Holders: Primary victims (powerless/trapped) \u2014 experience automatic erosion of holdings; no exit mechanism short of transaction cost or abandonment",
+      "Active Network Validators: Primary beneficiaries (institutional/arbitrage) \u2014 directly benefit from reduced state size and lower hardware requirements",
+      "Long-Term Cold Storage Users: Secondary victims (moderate/constrained) \u2014 must periodically move funds to service rent or accept gradual depletion",
+      "Protocol Designers: Secondary beneficiaries (powerful/arbitrage) \u2014 achieve elegant solution to state growth coordination problem",
+      "Wallet Providers and DeFi Protocols: Organized responders (organized/mobile) \u2014 implementing automated rent-payment and educational mechanisms",
+      "Custodial Services: Institutional mediators (institutional/arbitrage) \u2014 absorb rent liability, abstracting constraint from users",
+      "Analytical Observer: Civilization-scale view (analytical/analytical) \u2014 risks naturalizing a design choice as physical inevitability"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increased over time. Initial extractiveness was lower (0.28) when the rent rate was understood as theoretical; as users realized actual fund depletion, extractiveness increased to 0.42. Current level (0.52) reflects genuine extraction for non-custodial cold storage users balanced against the legitimacy of the coordination function (state cleanup is a real problem). Suppression (0.48): Moderate. Dormant UTXO holders face automatic erosion but are not coercively prevented from moving funds; the friction is real but not total. Exit options exist (spend, move, accept loss, use custodial service) but all carry costs. Theater ratio (0.35): Low-moderate. Storage rent is a direct economic mechanism without performative elements in the protocol itself; the theater arises at the user layer where automation and custodial services mediate the rent payment, making it invisible to many users. The ratio is decreasing (0.55 \u2192 0.35) as automation matures.",
+    "perspectival_gap": "The core perspectival gap is between those who experience rent as an extractive burden (dormant holders, cold storage users) and those who experience it as essential coordination (validators, protocol designers). Dormant UTXO holders see a snare: automatic wealth erosion with no benefit. Active validators see a rope: their full-node costs decrease directly. The protocol designer sees this as a fundamental solution to an unbounded growth problem \u2014 a mountain, a natural law of blockchain design. Yet the analytical observer must resist this naturalization: storage rent is a design choice among many (state expiration, sharding, pruning). The false summit test applies. For custodial users, the constraint is increasingly performative (piton-like): rent is charged in protocol, but wallet automation and custodial services mediate it so thoroughly that individual users rarely experience friction. This creates a two-tier system: non-custodial users experience extraction; custodial users experience invisibility.",
+    "directionality_logic": "Dormant UTXO holders: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Nearly maximal extraction \u2014 no realistic exit. Active validators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiaries with active management. Cold storage users: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.04. Significant extraction but can periodically move funds to service rent. Protocol designers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. They achieve their coordination goal; the mechanism works as intended from their perspective. User-side organizations (wallet providers, DeFi protocols): Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. They have agency and can create technical solutions (automation, batching) that reduce friction. Custodial services: Institutional + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.06. They benefit by absorbing liability and charging users fees; their structural position is similar to protocol designers. Traditional incentive logic (piton): Institutional + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.06. The logic works in theory but is increasingly mediated by abstraction layers.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that storage rent is genuinely a hybrid (Tangled Rope), not a false positive for either pure extraction or pure coordination. The tangled rope classification is justified: (1) Coordination function is real and substantial: storage rent solves an authentic commons tragedy (unbounded state growth). Validators genuinely experience coordination benefit. (2) Asymmetric extraction is real and substantial: dormant UTXO holders experience extraction with no coordination benefit; the wealth transfer is direct and non-consensual. (3) Active enforcement is real: the rent is enforced by protocol rules, not by voluntary participation or emergent norms. All three tangled rope gates are satisfied. The mandatrophy does not resolve by finding 'the real type' but by recognizing that the constraint successfully combines both functions: it achieves state cleanup (coordination) by imposing costs on dormant holders (extraction). The confusion arises when observers try to frame it as purely one or the other. Protocol designers naturally emphasize the coordination function (we are solving a real problem). Dormant users naturally experience the extraction (my wealth is eroding). Both are structurally correct. The constraint's long-term stability depends on maintaining this balance: if extractiveness grows toward 0.70+ (reclassifying toward Snare), the mechanism becomes delegitimized as pure rent-seeking; if coordination function fails (state bloat returns), the mechanism loses its justification. Current levels (\u03b5=0.52, suppression=0.48) indicate a viable equilibrium where both functions remain salient."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.35
+  },
+  "network": {
+    "affects_constraints": [
+      "utxo_model_scalability",
+      "blockchain_state_growth"
+    ],
+    "dual_formulation_note": "Storage rent is downstream of the fundamental state growth constraint (unbounded accumulation of UTXOs) and upstream of custodial service design choices. The state growth constraint (\u03b5\u22480.15, Mountain) describes the mathematical inevitability; storage rent (\u03b5=0.52, Tangled Rope) describes a policy solution; custodial service designs (separate constraint story) describe how the rent mechanism is mediated away from users."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "humanities_phd_funding_model",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hpd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The 'Fully Funded' Humanities PhD Model in the US",
+    "topic_domain": "economic/social/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "research_universities",
+      "tenured_faculty",
+      "university_administration"
+    ],
+    "victims": [
+      "phd_students",
+      "adjunct_labor_market",
+      "humanities_intellectual_commons"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The PhD Student",
+      "comment": "PERSPECTIVE 1: PhD STUDENT (SNARE) \u2014 Trapped in multi-year apprenticeship model. 'Full funding' (stipend + tuition waiver) creates appearance of generosity while concealing low compensation (~$18k-28k annually), required teaching labor (120-180 hours/year), and zero job prospects outside academia (~3-5% academic placement rate). Cannot exit without sunk cost loss (5-7 years). d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Research University",
+      "comment": "PERSPECTIVE 2: RESEARCH UNIVERSITY (ROPE) \u2014 Benefits from coordination function: PhD program generates prestige ranking, research output, teaching labor, and recruitment pipeline for junior faculty. University captures 50-70% of student stipend through tuition waiver accounting. Coordination benefit (teaching labor + research output + prestige) justified formally as 'training.' d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; classifies as rope because extraction is not primary goal."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Adjunct Faculty Member",
+      "comment": "PERSPECTIVE 3: ADJUNCT FACULTY (SNARE) \u2014 Secondary victim. PhD program produces oversupply of labor (1000+ new PhDs/year in humanities, ~100 tenure-track positions). Adjunct market absorbs excess: 50-70% of faculty are now part-time/non-tenure-track earning $25k-40k annually with no benefits. PhD funding model directly supplies this labor. Constrained exit (credential lock-in, geographic immobility). d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Tenured Faculty Cohort",
+      "comment": "PERSPECTIVE 4: TENURED FACULTY (PITON) \u2014 Became tenured under a different labor market (1970s-1990s tenure track at 50%+ of faculty positions). Now depends on PhD students for teaching labor and prestige output but faces no direct extraction cost (salaries are set, benefits secured). Maintains the system through inertia and institutional gatekeeping (controls admissions, curriculum, hiring standards). Theater ratio high: faculty defends model as 'apprenticeship' and 'training investment' despite degraded labor outcomes. d\u22480.15, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.01. Low chi (slight beneficiary) but theater\u22480.68 defines piton."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Interdisciplinary Program (Alternative Model)",
+      "comment": "PERSPECTIVE 5: INTERDISCIPLINARY ALTERNATIVE (TANGLED ROPE) \u2014 Programs explicitly rejecting traditional model (public humanities, professional doctorates, certificate + 2yr research tracks) show genuine coordination benefit (skills matching job market + lower sunk cost) AND reduced extraction (students have exit options). These alternatives exist but are marginalized by prestige hierarchy and accreditation requirements. d\u22480.52, f(d)\u22480.68, \u03c3=0.9 \u2192 \u03c7\u22480.35. Tangled rope: coordination + suppression (prestige hierarchy suppresses alternative models)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 6: REFORM COALITION (SCAFFOLD) \u2014 Graduate student unions, Open Humanties Press, and department-level reformers see the constraint as temporary and solvable. Union campaigns have established transparency requirements, stipend floors (~$28k minimum), and explicit job-market training. Policy changes (accreditation reform, public funding) could shift model toward 2-3 year programs with salary parity. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.28. Sunset clause: if funding model shifts to federal/state stipend (decoupled from tuition waiver accounting) and 2-yr terminal MA becomes prestige-neutral, the extraction mechanism collapses."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Labor Economics)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From labor economics perspective, the model is a pure extraction mechanism: systematic oversupply of credentialed labor (demand ~150/year, supply ~1000+/year), credential lock-in preventing lateral exit, suppression of alternative credentials, and labor arbitrage (full-time work at part-time wages). Suppression is structural: accreditation privileges 5-7yr PhD, library systems indexed by research output, prestige hierarchies reward publication, professional associations gatekeep by credential. d\u22480.73, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67. This perspective rejects naturalizing the model as 'how academic apprenticeship works.'"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "prestige_hierarchy_necessity",
+      "question": "Is the 5-7 year PhD prestige signal genuinely necessary for scholarly credibility, or is it a contingent status marker?",
+      "resolution_mechanism": "Comparative analysis of publication quality, citation impact, and professional impact between PhD and non-PhD researchers in humanities; historical analysis of when credential hierarchy became rigid (1980s expansion phase); cross-country comparison (European 3-yr PhDs, professional master's in UK)",
+      "impact": "If necessary: PhD funding model is coordinating legitimate expertise verification (Rope from more perspectives). If contingent: prestige hierarchy is suppressing alternative credentials that would enable exit (confirms Snare + Scaffold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether 5-7yr PhD is necessary or status-contingent"
+    },
+    {
+      "id": "teaching_labor_substitutability",
+      "question": "Could teaching labor requirements be met by professional teaching staff (lecturers, instructional designers) rather than PhD apprentices, and if so, why is the apprenticeship model maintained?",
+      "resolution_mechanism": "Cost analysis: full lecturer salary (~$50k) vs PhD student stipend+teaching load; pedagogical outcomes comparison (student evaluations, course design quality); institutional resistance mapping (which stakeholders oppose teaching-staff model and why)",
+      "impact": "If substitutable at comparable cost: labor extraction is an option chosen for rent-capture (confirms Snare). If genuinely cost-saving: teaching labor is coordination, not extraction (revises to Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether teaching labor can be substituted by professional staff"
+    },
+    {
+      "id": "oversupply_intentionality",
+      "question": "Is the 6-10x oversupply of PhD graduates (1000+ awarded/year, ~100-150 tenure track) a side effect of research prestige incentives, or an intentional mechanism to suppress wage competition?",
+      "resolution_mechanism": "Historical institutional records (admissions, cohort planning); interviews with DGSs and administrators; analysis of admissions policy changes correlated with job market contractions; comparison to programs that reduced cohort size in response to job market collapse",
+      "impact": "If intentional: confirms Snare + active enforcement. If side effect: revises toward Tangled Rope (coordination with collateral extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether PhD oversupply is intentional wage suppression"
+    },
+    {
+      "id": "alternative_model_viability",
+      "question": "Do 2-3 year terminal MA programs or professional doctorates produce equivalent scholarly competency and job-market outcomes as 5-7 year research PhDs?",
+      "resolution_mechanism": "Longitudinal tracking of MA vs PhD cohorts (publication output, job placement, salary, career satisfaction); pedagogical analysis of what 5-7 years accomplishes vs 2-3 years + professional training; external labor market assessment (employers' perception of credentials)",
+      "impact": "If equivalent: alternative model could replace traditional PhD, confirming Scaffold sunset logic. If PhD-dependent: model is less exploitative than appears (revises baseline extraction downward).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative credentials produce equivalent outcomes"
+    },
+    {
+      "id": "federal_funding_decoupling",
+      "question": "If federal/state funding for PhD students were decoupled from tuition waivers (direct stipend instead), would universities maintain current cohort sizes?",
+      "resolution_mechanism": "Policy simulation using institutional budgets; comparison to countries with direct stipend models (Germany, France); university financial statements isolating tuition revenue from PhD students",
+      "impact": "If cohort sizes would collapse: confirms tuition-waiver accounting drives oversupply (Snare active enforcement). If stable: model is coordination with genuine funding constraints (revises to Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decoupled funding would change PhD cohort sizes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The 'fully funded' US humanities PhD represents a structural labor arrangement where universities systematically oversupply credentialed graduates (~1000+/year in humanities) relative to academic demand (~100-150 tenure-track positions/year), producing a permanent adjunct labor market at wages 40-50% below professional norms. The model is maintained through institutional inertia, prestige hierarchy, and accounting mechanisms (tuition-waiver revenue recognition) that obscure the cost transfer from universities to students. Students experience it as apprenticeship and credential investment; labor economics reveals it as systematic wage suppression and credential lock-in. The constraint operates differently from the perspective of PhD students (trapped, no exit), universities (beneficial coordination), adjunct faculty (oversupply-driven precarity), tenured faculty (maintained through gatekeeping), reform movements (temporary problem with sunset if funding decouples), alternative credential programs (suppressed by prestige hierarchy), and analytical observers (structural labor extraction). The theater ratio has risen from 0.45 to 0.68 over the 40-year interval (1980-2020) as the market diverged from the apprenticeship narrative: in 1980, tenure track was still ~40% of faculty, making PhD training plausible; by 2020, tenure track collapsed to ~30% of faculty while PhD production stayed constant, forcing the 'training' rhetoric to perform harder against empirical failure.",
+    "key_agents": [
+      "PhD Students: Primary victims (powerless/trapped) \u2014 experience 5-7 year apprenticeship at $18k-28k annual stipend, required teaching labor, credential lock-in, <5% academic placement rate",
+      "Research Universities: Primary beneficiary (institutional/arbitrage) \u2014 capture prestige, research output, teaching labor, tuition-waiver revenue (50-70% of stated cost); maintain system through admissions control",
+      "Adjunct Faculty: Secondary victims (moderate/constrained) \u2014 permanent labor supply generated by PhD oversupply; earn $25k-40k as part-time/non-tenure-track without benefits",
+      "Tenured Faculty (1970s-1990s Cohort): Institutional gatekeeper (institutional/arbitrage) \u2014 benefited from tight labor market now supervise oversupply; maintain model through accreditation control and hiring standards; bear no direct extraction cost",
+      "Interdisciplinary/Alternative Programs: Marginal actors (powerful/mobile) \u2014 2-3 year MA and professional doctorates offer exit but are prestige-suppressed and harder to fund",
+      "Graduate Student Unions and Reform Coalition: Organized agents (organized/constrained) \u2014 campaign for transparency, stipend floors, explicit job-market training; see sunset path if funding decouples",
+      "Analytical Observer (Labor Economics): Observational perspective \u2014 identifies structural oversupply, wage suppression, and credential lock-in as the extractive mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The model extracts through wage suppression (PhD stipends 30-40% below professional norms for credential holders), credential lock-in (PhD degree required for academic jobs but insufficient for job placement), and systematic oversupply (6-10x demand ratio maintains competitive pressure). This is not maximum extraction (0.70+) because students do receive full funding for tuition and stipend, create genuine research output, and gain credential value. The extraction is sophisticated: concealed by 'apprenticeship' framing and access to full funding that obscures wage arbitrage. Suppression (0.72): High. Structural barriers to exit include: (1) credential necessity (PhD required for academic jobs, lateral credentials stigmatized), (2) opportunity cost (5-7 year time investment + psychological sunk cost), (3) prestige hierarchy (2-3 year MA seen as inferior), (4) information asymmetry (job market outcomes hidden, placed faculty numbers understated), (5) institutional gatekeeping (admissions committees control cohort size without transparency). Graduate student organizing has recently raised suppression awareness but not structural barriers. Theater ratio (0.68): High. The framing of PhD funding as 'training investment' and 'apprenticeship' performs heavily. Universities publish 'full funding' guarantees while obscuring that (a) stipends are below professional wages, (b) job placement outcomes are ~3-5%, (c) teaching load is contractually required, (d) prestige hierarchy has already shifted the credential's value. Tenure-track faculty defend the system using apprenticeship rhetoric despite knowing that tenure-track positions have collapsed. The theater increased from 0.45 (1980) to 0.68 (2020) as the gap between narrative (training pipeline) and reality (permanent adjunct supply) widened.",
+    "perspectival_gap": "This constraint produces stark perspectival disagreement. PhD students and adjunct faculty classify it as a Snare (pure extraction from trapped/constrained agents). Universities classify it as Rope (coordination: teaching labor + research output + prestige justified as training). Tenured faculty classify it as Piton (degraded ritual maintained by inertia and gatekeeping). Reform movements see Scaffold (temporary problem with sunset once funding decouples). Alternative credential programs see Tangled Rope (genuine coordination benefit suppressed by prestige hierarchy). The analytical observer classifies it as Snare (systematic wage suppression + oversupply). The perspectival gap reveals the constraint's structural dynamics: those who benefit (universities, tenured faculty) see coordination; those who bear costs (students, adjuncts) see extraction; those with organized capacity to exit (reform coalitions) see temporary fixable problems; those outside the prestige hierarchy (alternative credentials) see suppression. This gap is NOT a measurement ambiguity \u2014 it reflects real differences in exit options and benefit/cost distribution.",
+    "directionality_logic": "PhD Students: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. No exit option; credential lock-in forces continuation despite poor job prospects. Universities: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Can exit (reduce cohorts, hire teaching staff) but benefits from status quo (tuition revenue, prestige, labor supply). Adjunct Faculty: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. Credential lock-in + geographic immobility prevent exit; oversupply maintains wage depression. Tenured Faculty: Institutional + arbitrage \u2192 d\u22480.15, f(d)\u22480.02. Low extraction cost (salaries set, benefits secured); benefits through gatekeeping (hiring power). Reform Coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Has agency to organize and pressure but constrained by institutional power. Alternative Programs: Powerful + mobile \u2192 d\u22480.52, f(d)\u22480.68. Can exit prestige hierarchy but structurally suppressed by accreditation and funding mechanisms. Analytical Observer: analytical \u2192 d\u22480.73, f(d)\u22481.15. Measures from labor economics perspective; derives high extraction from wage suppression + oversupply dynamic.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY. The constraint exhibits genuine coordination benefits (teaching labor supply, research output, credential credibility) alongside systematic extraction (wage suppression, oversupply, credential lock-in). The binary classification breaks here: it is neither pure coordination (Rope) nor pure extraction (Snare). The resolution requires identifying which function is PRIMARY. Labor economics analysis suggests: (1) teaching could be supplied by professional staff at comparable cost (substitutability test), (2) PhD oversupply emerged in 1980s-2000s when prestige incentives aligned with tuition-revenue benefits (causal test), (3) alternative credentials (MA, professional doctorates) are pedagogically equivalent but prestige-suppressed (hierarchy test). If (1) teaching is substitutable, (2) oversupply is margin-driven (tuition benefit), and (3) alternatives are suppressed, then the constraint is a SNARE with a performative coordination veneer \u2014 the extraction is primary, the training is theatrical. The claimed type is SNARE because suppression (0.72) and extractiveness (0.58) exceed the coordination threshold and base_properties declares victims (phd_students, adjuncts) without meaningful beneficiary coordination beyond institutional prestige. However, the seven perspectives reveal a Tangled Rope structure: genuine coordination (teaching + research + training) exists but is asymmetrically captured (universities benefit more than students). Resolving this would require either: (a) restructuring funding (direct stipend, decoupled from tuition) to eliminate revenue incentive for oversupply, or (b) redesigning programs (2-3yr MA + professional training) to eliminate the long apprenticeship gate. The reform coalition's scaffold perspective assumes (a) is achievable; the analytical observer's snare perspective assumes (a) won't happen without structural change."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "adjunct_labor_market",
+      "academic_prestige_hierarchy",
+      "research_output_incentive"
+    ],
+    "dual_formulation_note": "The humanities PhD funding model decomposes into three structurally distinct constraints: (1) research_output_incentive (\u03b5\u22480.10, Mountain) \u2014 pressure to produce publications is natural selection property of knowledge systems; (2) academic_prestige_hierarchy (\u03b5\u22480.45, Tangled Rope) \u2014 rank-ordering of institutions suppresses alternative credentials; (3) humanities_phd_funding_model (\u03b5\u22480.58, Snare) \u2014 labor economics of credential oversupply. The constraint family links as follows: research-output pressure creates prestige hierarchy, which then maintains PhD requirement, which produces oversupply in a labor-arbitrage model. Removing any one alone fails; all three must be reformed together."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

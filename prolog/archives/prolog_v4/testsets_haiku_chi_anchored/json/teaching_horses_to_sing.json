@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "teaching_horses_to_sing",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ths"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Sing-or-Die Gambit",
+    "topic_domain": "political/power_dynamics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "condemned_thief",
+      "collective_rationality"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Condemned Thief",
+      "comment": "PERSPECTIVE 1: THE CONDEMNED THIEF (SNARE) \u2014 Faces execution. The gambit appears as salvation but is structurally a snare: extraction of hope under false pretense. Cannot refuse without immediate death; cannot succeed; cannot negotiate exit. d\u22480.98, f(d)\u22481.41, \u03c3=0.8 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Monarch",
+      "comment": "PERSPECTIVE 2: THE MONARCH (SNARE) \u2014 Possesses formal power but becomes trapped by vanity and the need to maintain authority. If the horse sings, impossible credit accrues to the thief (threatens legitimacy); if it doesn't, executing the thief admits the bargain was theater (threatens authority). Simultaneously benefits from the constraint (extracting deference and public spectacle) and trapped by it (cannot exit without loss of face). d\u22480.52, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.30."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Court and Nobility",
+      "comment": "PERSPECTIVE 3: THE COURT AND NOBILITY (SNARE) \u2014 Organized actors (judges, nobles, advisors) are trapped by precedent and the need to appear rational. The bargain was publicly made; its theater is now institutional fact. They benefit from the spectacle and from demonstrating the monarch's mercy and wisdom, but are trapped by the impossible condition. Cannot advise the monarch to execute the thief without admitting the bargain was extractive theater. d\u22480.65, f(d)\u22481.00, \u03c3=0.9 \u2192 \u03c7\u22480.59."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Public (Spectators)",
+      "comment": "PERSPECTIVE 4: THE PUBLIC (TANGLED ROPE) \u2014 Witnesses to the bargain. Experiences both coordination and extraction. Benefits from the spectacle, the display of royal mercy, and the entertainment value. Constrained by institutional norms requiring them to suspend disbelief (coordination function: accepts the bargain as structurally meaningful). Also bears cost: invests emotional and narrative capital in an outcome known to be impossible, experiencing collective delusion. d\u22480.58, f(d)\u22480.75, \u03c3=0.9 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Institution of Sovereignty",
+      "comment": "PERSPECTIVE 5: THE INSTITUTION OF SOVEREIGNTY (PITON) \u2014 The bargain itself has become a performative ritual in folklore and pedagogy. The constraint persists as inert institutional memory (teaching wisdom about mortality, royal authority, the limits of cleverness) long after its functional extraction has dissipated. Theater ratio\u22480.68 reflects that the actual power dynamics have degraded to symbolic reenactment. The institution benefits from the narrative (demonstrates absolute sovereignty) but the real enforcement mechanism is atrophied \u2014 modern retellings are cautionary tales, not active coercive tools."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational view, the gambit is a structural snare with no natural law justification. It reveals how authority creates extraction mechanisms through the asymmetry of power and the performative closure of impossible demands. The constraint is maintained by suppression (legal authority + threat of death) and theater (public spectacle + narrative plausibility). d\u22480.70, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.65."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "thief_rational_expectation",
+      "question": "Does the thief rationally believe the horse might sing, or does the thief rationally accept death while extracting a one-year reprieve?",
+      "resolution_mechanism": "Historical or textual analysis of the thief's stated motivations; comparison with versions where the thief's intent is explicitly revealed",
+      "impact": "If belief is genuine: constraint is a tragedy (impossible hope). If rational acceptance: constraint is pure extraction of time (thief extracts 12 months of life for the cost of a false promise). If mixed: thief extracts time while the monarch extracts theater, making it symmetric snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the thief believes in the promise or rationally accepts death"
+    },
+    {
+      "id": "monarch_knowledge_of_impossibility",
+      "question": "Does the monarch believe the horse might sing, or does the monarch know the condition is impossible and structures the bargain as pure extraction?",
+      "resolution_mechanism": "Textual analysis of the monarch's speeches and asides; comparison across folklore versions; analysis of the monarch's behavior after one year",
+      "impact": "If monarch genuinely uncertain: constraint is tangled rope (both parties are trapped by shared delusion). If monarch knows: constraint is snare (monarch is pure extractor, using authority to extract deference and theater from the thief).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the monarch believes the promise is possible"
+    },
+    {
+      "id": "suppression_enforcement_mechanism",
+      "question": "What makes the thief unable to break the promise and flee? Is it legal authority (execution threat enforced), or social authority (inability to break a sworn bargain with the monarch), or resignation (rational acceptance of death after one year)?",
+      "resolution_mechanism": "Analysis of historical enforcement: do thieves who break such bargains face capture/execution, or do they successfully flee? Analysis of cultural narratives about oath-breaking with sovereigns.",
+      "impact": "If legal enforcement: suppression is institutional (0.72 is justified). If social enforcement: suppression is cultural (may be weaker; theater ratio higher). If resignation: suppression is psychological (thief is self-enforcing; constraint is piton not snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The enforcement mechanism that binds the thief to the impossible promise"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The Sing-or-Die Gambit is a classical narrative structure in which a condemned prisoner negotiates a stay of execution in exchange for an impossible promise. The thief offers to teach the monarch's horse to sing within one year; if successful, the thief goes free; if unsuccessful, the thief is executed. The constraint operates as a structural snare: it creates the appearance of escape while ensuring extraction of hope, time, and public spectacle. The thief gains a 12-month reprieve at the cost of a false promise that will inevitably result in execution and public humiliation. The monarch gains theater (demonstrating mercy and confidence in authority) while extracting deference, submission to an impossible test, and the performative confirmation of absolute sovereignty. The court gains institutional legitimacy through the spectacle of rational deliberation. The public gains narrative entertainment and a cautionary tale about the limits of cleverness against authority. The constraint's suppression (0.72) comes from the death sentence as enforcement; its extractiveness (0.58) comes from the asymmetry of power and the impossibility of the condition; its theater (0.68) comes from the performative framing of mercy and wisdom. Over the 12-month interval, extractiveness increases (0.35\u21920.72) as the thief's situation becomes more desperate and the impossibility of the promise becomes undeniable. Theater increases (0.45\u21920.68) as the court performs its role and the narrative takes on ceremonial weight.",
+    "key_agents": [
+      "Condemned Thief: Primary victim (powerless/trapped) \u2014 under death sentence; trades false hope for 12-month reprieve; ultimately executed or humiliated",
+      "Monarch: Primary beneficiary and actor (powerful/mobile) \u2014 extracts deference, theater, and confirmation of absolute sovereignty; simultaneously trapped by the need to maintain authority",
+      "Court and Nobility: Secondary institutional actors (organized/constrained) \u2014 trapped by precedent and the need to maintain the performance of rationality",
+      "Public (Spectators): Secondary victims/witnesses (moderate/constrained) \u2014 consume the spectacle while suspending disbelief about the impossibility of the condition",
+      "Institution of Sovereignty: Structural beneficiary (institutional/arbitrage) \u2014 gains legitimacy and confirmation through the ritual; benefits persist long after individual enforcement atrophies",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the constraint as a structural mechanism for extracting deference through impossible demands"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The thief gives up 12 months of life and ultimately faces execution or humiliation; the monarch extracts deference, public spectacle, and confirmation of authority; the court extracts institutional legitimacy; the public extracts narrative entertainment. However, extractiveness is not maximal (0.72) because the thief retains agency in the gambit itself (the promise is the thief's invention, not imposed by the monarch) and because the extraction is performative rather than material. The thief trades hope for time, not wealth or freedom. Suppression (0.72): High. The death sentence is a credible enforcement threat; the thief cannot refuse without immediate execution; the thief cannot break the promise without execution at the appointed time. The thief is trapped by legal authority and the asymmetry of power. Theater (0.68): Moderate-high. The spectacle of the bargain, the performance of royal mercy, the ceremonial progression toward the inevitable conclusion \u2014 these constitute a substantial performative component. The court knows the condition is impossible; the public knows the condition is impossible; the thief may or may not know. The constraint persists through theater as much as through coercion.",
+    "perspectival_gap": "The thief sees execution postponed (snare: temporary reprieve at the cost of a false promise). The monarch sees sovereignty confirmed (snare: extraction of deference and theater; simultaneously trapped by the need to maintain authority). The court sees institutional legitimacy (snare: forced to participate in a ritual that exposes the impossibility of rational deliberation within absolute monarchy). The public sees a narrative closure (tangled rope: consumption of spectacle while bearing the cost of collective delusion about the possible). The institution of sovereignty sees perpetuation of itself (piton: theater persists as cautionary tale long after the specific enforcement mechanism disappears). The analytical observer sees a structural mechanism for extracting submission through impossible demands (snare: universal pattern visible in all power asymmetries).",
+    "directionality_logic": "Condemned thief: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.41. Maximal directionality as target. No exit options; under death sentence. Monarch: Powerful + mobile + beneficiary (extracts deference and theater) AND victim (trapped by need to maintain authority) \u2192 d\u22480.52, f(d)\u22480.65. Moderate directionality reflecting dual role. Court and nobility: Organized + constrained + victim (forced to rationalize impossible condition) \u2192 d\u22480.65, f(d)\u22481.00. High directionality reflecting constraint despite organizational capacity. Public: Moderate + constrained + mixed (benefit from spectacle; bear cost of delusion) \u2192 d\u22480.58, f(d)\u22480.75. Moderate-high directionality reflecting mixed role. Institution of sovereignty: Institutional + arbitrage + beneficiary \u2192 d\u22480.00, f(d)\u2248-0.12. Net beneficiary through persistent narrative legitimacy. Analytical observer: Analytical \u2192 d\u22480.70, f(d)\u22481.12. High directionality reflecting observer's structural position outside the constraint but able to measure its mechanisms.",
+    "mandatrophy_analysis": "The constraint resolves potential mandatrophy by displaying it fully. The thief experiences it as a snare (extraction of hope). The monarch experiences it as both snare (extracts deference) and tangled rope (trapped by authority). The court experiences it as pure snare (forced participation in ritual that exposes its own limits). The public experiences it as tangled rope (benefits from spectacle; bears cost of delusion). The institution experiences it as piton (theater persists long after functional extraction atrophies). No single type is correct \u2014 the constraint is a presheaf of readings. The mandatrophy is not resolved by choosing a type but by recognizing that the constraint's power lies precisely in enabling multiple, non-communicating readings of the same structural fact. The thief believes (or pretends to believe) the horse might sing; the monarch knows it cannot; the court performs certainty; the public suspends disbelief; the institution preserves the narrative. Each agent's reading validates the others' participation in the ritual. This is not a defect in the classification system but a deep feature of how authority-based constraints work: they require asymmetric knowledge and asymmetric readings to maintain their coercive force."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "absolute_monarchy_legitimacy",
+      "impossible_standards_enforcement"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.52
+    }
+  ]
+}

@@ -2,26 +2,25 @@
   "header": {
     "constraint_id": "ad_fus_coordination",
     "version": "1.0",
-    "generated_date": "2024-07-16",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "adfus"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.2,
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Focused Ultrasound Alzheimer's Intervention",
+    "human_readable": "Focused Ultrasound Alzheimer's Intervention Coordination",
     "topic_domain": "medical/neurological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "pharmaceutical_companies",
-      "medical_device_manufacturers",
-      "research_institutions"
+      "device_manufacturers",
+      "neuromodulation_research_groups"
     ],
     "victims": [
-      "alzheimers_patients",
-      "healthcare_payers",
-      "competing_research_programs"
+      "patient_access_equity",
+      "long_term_safety_evidence"
     ]
   },
   "perspectives": [
@@ -30,122 +29,160 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Alzheimer's Patients in Early Stages",
+      "comment": "PERSPECTIVE 1: EARLY-STAGE PATIENTS (SNARE) \u2014 Trapped in disease progression with limited therapeutic options. FUS clinical trial participation or access is restricted by device availability, treatment center location, and trial enrollment criteria. No meaningful exit option; bears full risk of experimental intervention without guarantee of benefit. Maximum experienced extraction \u2014 desperation creates dependence on institutions controlling access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Alzheimer's Patient",
-      "comment": "PERSPECTIVE 1: PATIENT (SNARE) — Facing a terminal diagnosis with few effective alternatives, the patient is structurally trapped. The high cost, unknown long-term risks of BBB opening, and reliance on a proprietary system constitute severe extraction, despite the therapeutic promise. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+      "label": "Neurology Clinicians and Community Hospitals",
+      "comment": "PERSPECTIVE 2: CLINICIANS AND COMMUNITY HOSPITALS (TANGLED ROPE) \u2014 Constrained by regulatory requirements, device certification timelines, and liability exposure. Benefits from coordination incentive: FUS access increases their institutional prestige and enables participation in multi-site trials. Moderate extraction due to training requirements and equipment costs; moderate coordination benefit from shared research infrastructure."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Technology Developer",
-      "comment": "PERSPECTIVE 2: PHARMA/DEVICE CO. (ROPE) — For the developer, FUS is a pure coordination solution. It solves the problem of delivering drugs across the blood-brain barrier, creating new markets for previously failed therapeutics. From this position of arbitrage, the system is a net benefit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07."
+      "label": "Device Manufacturers and Patent Holders",
+      "comment": "PERSPECTIVE 3: DEVICE MANUFACTURERS (ROPE) \u2014 Primary beneficiary with arbitrage options. Controls device access, patent protections, and commercial licensing. Experiences FUS coordination as enabling market creation. Net extraction runs toward this actor \u2014 they coordinate the intervention pathway while capturing licensing revenue and first-mover advantage."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Clinical Researcher",
-      "comment": "PERSPECTIVE 3: CLINICAL RESEARCHER (TANGLED ROPE) — Researchers are constrained by funding and career incentives tied to the technology. They see both the coordination function (a new tool to fight AD) and the extractive pressures (reliance on proprietary tech, pressure for positive results, ethical burden). d≈0.60, f(d)≈0.87, σ=1.0 → χ≈0.48."
+      "spatial_scope": "global",
+      "label": "Regulatory Bodies and Academic Medical Centers",
+      "comment": "PERSPECTIVE 4: REGULATORY AND ACADEMIC COORDINATION (SCAFFOLD) \u2014 FDA, EMA, and academic medical centers see FUS as a temporary coordination mechanism: structured trials, outcome registries, and standardized safety protocols are building the evidence base toward eventual regulatory approval or market expansion. Low effective extraction because organized agents see sunset pathway: once efficacy/safety is established, FUS moves from experimental coordination to standard clinical practice, reducing the friction of access control."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Established Pharma Pipeline",
+      "comment": "PERSPECTIVE 5: ESTABLISHED PHARMA (PITON) \u2014 Large pharmaceutical companies have invested heavily in amyloid-targeting drugs (monoclonal antibodies, secretase inhibitors) approved or in late trials. FUS coordination creates competitive pressure but also reputational theater: endorsing multimodal approaches (drug + device) maintains institutional legitimacy while preserving existing product revenue. Theater ratio high because pharma support for FUS is performative \u2014 they benefit more from monopolizing the treatment narrative than from genuine adoption."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The analytical view recognizes the dual nature of the constraint: a genuine coordination mechanism for therapy delivery that is structurally coupled with a high-extraction system benefiting developers at the expense of patients and payers. This is the canonical Tangled Rope. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the coordination bottleneck in neurotechnology development appears inherent: complex interventions targeting the brain require extensive safety validation before scaling, and the clinical trial apparatus represents an immutable constraint imposed by epistemic and regulatory necessity. However, structural data contradicts this \u2014 the bottleneck is enforced institutional arrangement, not natural law."
     }
   ],
-  "interval": {
-    "start": 2015,
-    "end": 2030
-  },
   "omegas": [
     {
-      "id": "long_term_safety",
-      "question": "What are the neurological consequences of repeated, targeted blood-brain barrier openings over a patient's remaining lifespan?",
-      "resolution_mechanism": "Longitudinal studies (10+ years) tracking cognitive decline, brain atrophy, and incidence of opportunistic infections or other pathologies in treated vs. control cohorts.",
-      "impact": "If long-term effects are negligible, the constraint's extractiveness (ε) decreases, shifting classifications toward Rope. If significant negative effects emerge, ε increases, reinforcing the Snare perspective.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Uncertainty over long-term safety of repeated BBB opening"
-    },
-    {
-      "id": "efficacy_generalizability",
-      "question": "Is the observed plaque reduction and cognitive improvement a robust, generalizable effect, or an artifact of specific patient subgroups and trial conditions?",
-      "resolution_mechanism": "Large-scale, multi-center, double-blind, placebo-controlled trials with diverse patient populations.",
-      "impact": "High generalizability confirms a strong coordination function (Rope/Tangled Rope). Low generalizability suggests the system is more extractive, functioning as a high-cost intervention with limited benefit (Snare/Piton).",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether therapeutic effects are robust and generalizable"
-    },
-    {
-      "id": "cost_benefit_threshold",
-      "question": "At what price point does the intervention shift from a justifiable therapeutic cost to an extractive burden on public and private healthcare systems?",
-      "resolution_mechanism": "Health economic analysis (QALY calculations) combined with policy debate on acceptable cost ceilings for end-of-life care.",
-      "impact": "This defines the boundary between Tangled Rope and Snare for the 'healthcare_payers' victim group. There is no single empirical answer; it depends on societal preference.",
+      "id": "fus_mechanism_clarity",
+      "question": "Does FUS modulate Alzheimer's pathology through mechanical disruption of protein aggregates, or through modulation of neuroimmune responses and blood-brain barrier permeability?",
+      "resolution_mechanism": "Multi-modal imaging studies (PET, MRI, ultrasound backscatter); biomarker tracking (CSF/blood phospho-tau, amyloid clearance); mechanistic intervention studies (FUS alone vs FUS + BBB opening inhibitors)",
+      "impact": "If mechanism is direct mechanical: FUS is a device coordination tool with predictable dose-response. If mechanism is neuroimmune modulation: FUS requires personalized timing relative to immune state, increasing complexity and extraction opacity.",
       "confidence": "medium",
-      "type_class": "preference",
-      "description": "Price point at which the intervention becomes unacceptably extractive"
+      "type_class": "empirical",
+      "description": "Mechanism of FUS action on Alzheimer's pathology"
+    },
+    {
+      "id": "long_term_safety_trajectory",
+      "question": "What is the long-term neurological safety profile of repetitive FUS exposure over years? Are there delayed adverse effects, cumulative damage, or off-target effects not visible in short-term trials?",
+      "resolution_mechanism": "Long-term follow-up of Phase 2/3 trial participants (5-10 year cohorts); neuroimaging for white matter changes, microhemorrhages, or network disruption; comparison to device-naive Alzheimer's cohorts matched on disease stage",
+      "impact": "If safe: FUS enters standard care pathway rapidly (scaffold sunset accelerates). If significant delayed risks: victim extraction persists indefinitely (snare perspective confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Long-term safety of repeated FUS treatment"
+    },
+    {
+      "id": "access_equity_constraint",
+      "question": "Is FUS equipment cost and geographic concentration inherently unequal (mountain-like property of technology capital), or a contingent market extraction enforced by patent and licensing?",
+      "resolution_mechanism": "Comparative health economics: cost analysis of FUS vs. established AD treatments (monoclonal antibodies, cholinesterase inhibitors); geographic availability modeling; licensing terms analysis; investigation of generic/open-source ultrasound hardware feasibility",
+      "impact": "If inherent to technology: inequality is persistent (structural property). If contingent: different licensing and manufacturing models could reduce access barriers (scaffold sunset feasible).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether access inequality is inherent or contingent"
+    },
+    {
+      "id": "trial_completion_feasibility",
+      "question": "Can adequately powered Phase 3 trials demonstrating cognitive benefit or disease modification be completed within 5-10 years, or does the heterogeneity of Alzheimer's pathology and slow progression rates make rapid trial closure infeasible?",
+      "resolution_mechanism": "Analysis of ongoing trial enrollment rates, dropout rates, and cognitive decline slopes; biomarker-stratified subgroup analysis; feasibility of surrogate endpoints (amyloid/tau biomarkers) vs. cognitive outcomes",
+      "impact": "If trials can complete on standard timeline: regulatory approval pathway visible, scaffold sunset real. If trials require >10 years: coordination mechanism persists as extraction structure, piton classification deepens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of Phase 3 trial completion timelines"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2022,
-      "value": 0.5
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2030,
-      "value": 0.55
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2015,
-      "value": 0.1
+      "time_point": 4,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2022,
-      "value": 0.15
+      "time_point": 8,
+      "value": 0.68
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.2
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38
     }
   ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
   "commentary": {
-    "narrative_context": "High-intensity Focused Ultrasound (FUS) for Alzheimer's Disease represents a novel therapeutic pathway that coordinates ultrasonic energy to temporarily open the blood-brain barrier (BBB), enabling enhanced drug delivery and potential plaque clearance. While promising, this intervention creates a new structural constraint system. The system has a genuine coordination function (solving the BBB delivery problem) but is coupled with significant extraction (high costs, unknown long-term risks for patients, and large profits for patent holders). The classification of this constraint is therefore highly dependent on the observer's structural position.",
+    "narrative_context": "Focused Ultrasound (FUS) has emerged as a promising neuromodulation tool for Alzheimer's disease intervention, with proposed mechanisms including mechanical disruption of amyloid-beta aggregates, enhancement of blood-brain barrier permeability for drug delivery, and modulation of glial responses. However, the FUS-AD ecosystem exhibits a structural tension between genuine coordination (multi-site trials, standardized protocols, shared evidence generation) and institutional extraction (device manufacturer control, licensing gatekeeping, restricted patient access during clinical development phases). This constraint demonstrates how a potentially beneficial technology can simultaneously function as a coordination mechanism for clinical validation AND as an extraction apparatus that maintains patient desperation and geographic/economic inequity during the extended development phase. The theater_ratio (0.68) reflects the gap between performative multi-site trial infrastructure and the limited evidence for clinical cognitive benefit \u2014 institutions perform rigorous trial design and regulatory compliance while mechanistic understanding remains contested and long-term safety data is absent.",
     "key_agents": [
-      "Alzheimer's Patients: Primary victims (powerless/trapped) — bear the physical risks and financial costs with few alternative treatments.",
-      "Pharmaceutical/Device Companies: Primary beneficiaries (institutional/arbitrage) — gain new markets for drugs and proprietary FUS systems.",
-      "Clinical Researchers: Secondary beneficiaries/victims (organized/constrained) — advance science and careers but are dependent on proprietary technology and funding cycles.",
-      "Healthcare Payers (Insurers/Governments): Secondary victims (institutional/constrained) — must bear the high cost of a new standard of care."
+      "Early-Stage Alzheimer's Patients: Primary victim (powerless/trapped) \u2014 desperate for options, trapped in disease progression, dependent on trial access controlled by others",
+      "Device Manufacturers (Insightec, Philips, etc.): Primary beneficiary (institutional/arbitrage) \u2014 control device production, licensing, and distribution; capture monopoly rents during development phase",
+      "Neurology Clinicians and Community Hospitals: Secondary actor (moderate/constrained) \u2014 gain prestige and research participation benefits but constrained by equipment costs and liability; extract some benefit from coordination",
+      "Regulatory Bodies (FDA, EMA) and Academic Medical Centers: Organized coordinator (organized/constrained) \u2014 structure trial pathways, set safety standards, possess sunset visibility to eventual approval/integration",
+      "Established Pharma (Biogen, Eli Lilly, Roche): Competing beneficiary (institutional/arbitrage) \u2014 maintain drug-centric narrative while performing support for multimodal approaches; preserve existing market dominance",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks misinterpreting institutional trial complexity as immutable scientific necessity rather than contingent governance structure"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55): High. This reflects the significant financial cost of a cutting-edge procedure, the value captured by patent-holding technology developers, and the physical risks (pathogen entry, long-term effects) borne by the patient. Suppression (0.65): High. For patients with progressing Alzheimer's, effective therapeutic alternatives are scarce, creating a situation of low effective choice. Access to the technology is also suppressed by its proprietary nature and high cost, limiting it to specialized centers. Theater Ratio (0.20): Low. The mechanism is largely functional, with measurable BBB opening and plaque reduction. The theater component is minor, related to marketing and hype cycles rather than core function.",
-    "perspectival_gap": "The perspectival gap is stark. For the technology developer with arbitrage options, FUS is a Rope that solves a technical problem and creates value. For the patient trapped by their diagnosis, the same system is a Snare, offering hope at a potentially devastating cost and unknown risk. The analytical observer and clinical researcher, who can see both the coordination benefits and the extractive costs, classify it as a Tangled Rope. This divergence is not a contradiction but the core analytical output of the DR system, revealing how the same constraint is experienced differently from different structural positions.",
-    "directionality_logic": "Beneficiaries (Pharma/Device Co.) with arbitrage exit options have a very low directionality (d≈0.05), resulting in negative effective extraction (χ<0) and a Rope classification. Victims (Patients) who are trapped have the highest possible directionality (d≈0.95), leading to amplified effective extraction (χ>0.66) and a Snare classification. Agents in the middle, like researchers, have moderate directionality, leading to a Tangled Rope classification. The final classification depends entirely on which agent's perspective is adopted.",
-    "mandatrophy_analysis": "This case resolves a potential mandatrophy by refusing to label the FUS intervention as simply 'good' (Rope) or 'bad' (Snare). The Tangled Rope classification from the analytical perspective correctly identifies the dual nature of the system. It acknowledges the genuine coordination function (it helps patients) while simultaneously accounting for the asymmetric distribution of risk and reward (it helps corporations more). This prevents the mislabeling of a high-extraction medical system as a pure coordination good, while also avoiding the cynical dismissal of its real therapeutic potential."
+    "logic_rationale": "Extractiveness (0.38): Moderate. Device manufacturers capture licensing revenue and market control during clinical development, but extraction is tempered by genuine R&D costs, regulatory compliance burden, and uncertainty over commercialization success. The 'extraction' reflects information asymmetry (patients cannot assess device efficacy) and access gatekeeping (limited trial slots, geographic concentration), not pure predation. Suppression (0.52): Moderate-high. Barriers to independent verification include proprietary device specifications, restricted trial data access, need for specialized equipment and training, and regulatory requirements limiting off-label use. But suppression is not total \u2014 academic medical centers participate in trials, published results appear, and alternative ultrasound hardware exists (though not optimized for FUS-AD). Theater ratio (0.68): Moderately high, increasing over interval. Early FUS development (t=0) emphasized mechanistic plausibility and proof-of-concept; by t=8, the ecosystem has built elaborate trial infrastructure, regulatory engagement, and multimodal treatment narratives, but evidence for cognitive benefit remains limited and mechanistic understanding contested. Theater has accumulated as institutional stakeholders perform clinical legitimacy.",
+    "directionality_logic": "Device manufacturers occupy the strongest beneficiary position (institutional power, arbitrage exit) \u2014 they set device specifications, licensing terms, and treatment protocols with limited external constraint. Early-stage patients occupy the weakest position (powerless, trapped exit) \u2014 disease progression creates desperation that overwhelms alternatives; they cannot arbitrage to other Alzheimer's treatments with demonstrated efficacy. Clinicians and hospitals occupy a middle position (moderate power, constrained exit) \u2014 they gain from institutional prestige and research participation but cannot easily exit due to equipment sunk costs and training investment. Regulatory bodies and academic centers operate as organized coordinators (constrained exit, sunset visibility) \u2014 they structure the trial pathway but are also constrained by the manufacturer's technology and intellectual property. Pharma occupies a strategic position (institutional power, but with competitive threat from FUS) \u2014 they perform support for multimodal approaches while protecting existing drug revenue streams. The directionality gradient from powerless patients to institutional manufacturers drives the tangled_rope classification: genuine coordination function (multi-site trials, standardized protocols) coexists with asymmetric extraction (access control, information asymmetry, licensing rents).",
+    "perspectival_gap": "The beneficiary (device manufacturer) sees this constraint as a pure coordination mechanism enabling clinical development and market creation \u2014 they emphasize the shared trial infrastructure, regulatory collaboration, and standardized safety protocols. The victim (early-stage patients) sees extraction \u2014 restricted access, high treatment costs (if commercialized), and desperation-driven enrollment in trials with uncertain benefit. Clinicians see a mixed picture (tangled rope) \u2014 coordination benefits (prestige, research participation, access to novel technology) coupled with extraction (equipment costs, liability, training burden). Regulatory bodies see a temporary coordination problem with sunset (scaffold) \u2014 trials are building evidence toward approval, after which FUS transitions from restricted coordination mechanism to standard clinical practice. Established pharma sees competitive threat but maintains performative support (piton) \u2014 endorsing multimodal treatment preserves institutional legitimacy while defending existing drug revenue. The analytical observer risks seeing an immutable natural law of neurotechnology development (mountain) \u2014 the elaborate trial apparatus appears necessary for safety validation \u2014 but structural data reveals this as naturalization of a contingent institutional arrangement: manufacturer control, patent-driven exclusivity, and regulatory gatekeeping are policy choices, not laws of nature.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying which coordination function is genuine vs. performative. GENUINE COORDINATION: Multi-site trials, standardized protocols, safety monitoring, and regulatory alignment create real collective action benefits \u2014 they reduce duplicate effort, enable statistical power, and generate trustworthy evidence. These functions would survive scrutiny from any perspective. EXTRACTIVE LAYERING: Device manufacturer monopoly on hardware production, licensing gatekeeping, patent-protected treatment protocols, and restricted trial access create barriers that persist even after the genuine coordination function is complete. If FUS efficacy is confirmed, the scaffold sunset should transition FUS to commodity neuroimaging with open-source hardware development and low licensing friction. The theater ratio (0.68) and rising trajectory indicates that institutional stakeholders are investing in performative legitimacy (elaborate trial infrastructure, regulatory engagement theater) to maintain the extraction apparatus beyond the point where genuine coordination is necessary. The mandatrophy is resolved by distinguishing: (a) coordination that would continue because it solves a real problem (multi-site evidence generation), and (b) extraction that depends on suppressing alternatives and maintaining information asymmetry (device monopoly, patent licensing, restricted access). The constraint exhibits tangled rope, not pure snare, because the genuine coordination function is substantial and participants actually benefit from it \u2014 clinicians gain prestige, patients gain access to a novel therapy, manufacturers gain market opportunity. But the extraction layer (licensing rents, access control) is not necessary to the coordination function and would fall away under open-source hardware and nonexclusive licensing."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "alzheimers_drug_approval_pipeline"
-    ]
-  }
+      "amyloid_targeting_drug_approval",
+      "neuroimaging_standardization",
+      "clinical_trial_patient_recruitment"
+    ],
+    "dual_formulation_note": "The FUS-AD constraint overlaps with three structural mechanisms: (1) amyloid-targeting drug approval (upstream pharmacological competitor), (2) neuroimaging standardization (shared infrastructure dependency), and (3) clinical trial patient recruitment (shared victim population). FUS represents an alternative therapeutic pathway that could displace or integrate with existing approaches. The constraint family requires separate stories for each mechanism with different epsilon values reflecting their distinct empirical status and extraction profiles."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
 }

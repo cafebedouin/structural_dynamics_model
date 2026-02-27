@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: openai_prism_development
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-12-14
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_openai_prism_development, []).
@@ -40,9 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,24 +54,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: openai_prism_development
- *   human_readable: Information Asymmetry in Frontier AI Model Development (OpenAI's "Prism"/GPT-5)
- *   domain: technological
+ *   human_readable: Information Asymmetry in Frontier AI Model Development (OpenAI's Prism/GPT-5)
+ *   domain: technological/artificial_intelligence
  *
  * SUMMARY:
- *   The development of OpenAI's next-generation "Prism" model (GPT-5) represents a
- *   structural constraint characterized by extreme information asymmetry. A small,
- *   private consortium (OpenAI and Microsoft) controls access, training data,
- *   safety testing, and capability disclosure, while the broader ecosystem of
- *   competitors, researchers, regulators, and the public bears the disruptive
- *   risks and impacts without commensurate insight or control. This structure
- *   simultaneously solves a coordination problem (creating a new technological
- *   platform) while extracting immense value and concentrating power.
+ *   OpenAI's development of frontier AI models (Prism/GPT-5) creates a
+ *   structural constraint characterized by extreme information asymmetry
+ *   between the developer and multiple victim classes: external safety
+ *   researchers, regulatory bodies, competing AI developers, and the public
+ *   stakeholder commons. The constraint exhibits the characteristics of a
+ *   pure snare from the perspective of those bearing consequences without
+ *   access to relevant information. OpenAI leadership experiences this as a
+ *   coordination mechanism (rope) through which they manage capability
+ *   announcements, regulatory engagement, and deployment sequencing. The
+ *   constraint is enforced through technical opacity (model weights and
+ *   internals are proprietary), institutional gatekeeping (third-party audits
+ *   have limited access), and competitive advantage maintenance. Theater
+ *   ratio (0.65) reflects that public commitments to safety research and
+ *   transparency coexist with minimal external verification mechanisms — the
+ *   responsible disclosure ritual is largely performative. Base
+ *   extractiveness (0.68) reflects that the information asymmetry translates
+ *   into concrete extraction: first-mover advantages in policy influence,
+ *   timing advantages in deployment, and protection from regulatory pressure
+ *   that other actors bear without compensating information access.
  *
- * KEY AGENTS (by structural relationship):
- *   - OpenAI & Microsoft: Primary beneficiary (institutional/arbitrage) — Control the technology, narrative, and timeline, capturing market value.
- *   - Independent AI Developers & Researchers: Primary target (powerless/trapped) — Face existential business/research risk from a technology they cannot access or audit.
- *   - Government Regulators: Inter-institutional victim (institutional/constrained) — Tasked with governing a technology whose capabilities and risks are opaque to them.
- *   - Analytical Observer: Sees the full dual function of coordination and extraction.
+ * KEY AGENTS:
+ *   - OpenAI Leadership & Board: Primary beneficiary (institutional/arbitrage) — controls information flow, timing announcements, regulatory engagement strategy; captures policy influence and deployment timing advantages
+ *   - External AI Safety Researchers: Primary victim (powerless/trapped) — lack access to model internals, training data, capability evaluations; trapped by funding and collaboration dependencies; bear responsibility without visibility
+ *   - Regulatory Bodies & Public Stakeholders: Secondary victim (powerless/trapped) — must assess and manage systemic risks (labor displacement, misinformation, decision automation) without access to development details or deployment plans
+ *   - Competing AI Developers (Anthropic, DeepSeek, Google DeepMind): Tertiary victim (organized/constrained) — operate at informational disadvantage relative to OpenAI; have some independent research capacity but face timing disadvantages and policy capture risk
+ *   - Industry Self-Regulation Ecosystem: Institutional actor (institutional/arbitrage) — maintains performative transparency commitments; benefits from appearance of oversight while information gates remain closed
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks mistaking technical complexity (inherent information challenges in frontier AI) for institutional choices about disclosure and competitive advantage protection
  */
 
 /* ==========================================================================
@@ -78,97 +92,75 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(openai_prism_development, 0.55).
-domain_priors:suppression_score(openai_prism_development, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(openai_prism_development, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(openai_prism_development, 0.68).
+domain_priors:suppression_score(openai_prism_development, 0.78).
+domain_priors:theater_ratio(openai_prism_development, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(openai_prism_development, extractiveness, 0.55).
-narrative_ontology:constraint_metric(openai_prism_development, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(openai_prism_development, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(openai_prism_development, extractiveness, 0.68).
+narrative_ontology:constraint_metric(openai_prism_development, suppression_requirement, 0.78).
+narrative_ontology:constraint_metric(openai_prism_development, theater_ratio, 0.65).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(openai_prism_development, snare).
-narrative_ontology:topic_domain(openai_prism_development, "technological").
-narrative_ontology:human_readable(openai_prism_development, "Information Asymmetry in Frontier AI Model Development (OpenAI's \"Prism\"/GPT-5)").
+narrative_ontology:human_readable(openai_prism_development, "Information Asymmetry in Frontier AI Model Development (OpenAI's Prism/GPT-5)").
+narrative_ontology:topic_domain(openai_prism_development, "technological/artificial_intelligence").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(openai_prism_development). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(openai_prism_development).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(openai_prism_development, openai_microsoft_nexus).
-narrative_ontology:constraint_beneficiary(openai_prism_development, early_access_enterprise_customers).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(openai_prism_development, independent_ai_developers).
-narrative_ontology:constraint_victim(openai_prism_development, public_knowledge_commons).
-narrative_ontology:constraint_victim(openai_prism_development, government_regulators).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(openai_prism_development, openai_leadership).
+narrative_ontology:constraint_beneficiary(openai_prism_development, frontier_ai_labs).
+narrative_ontology:constraint_victim(openai_prism_development, ai_safety_researchers).
+narrative_ontology:constraint_victim(openai_prism_development, regulatory_bodies).
+narrative_ontology:constraint_victim(openai_prism_development, public_stakeholder_commons).
+narrative_ontology:constraint_victim(openai_prism_development, competing_ai_developers).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (INDEPENDENT AI DEVELOPERS)
-% Experiences the constraint as a pure Snare. Their business models and research
-% paths are threatened by a superior, inaccessible technology whose development
-% extracts value from the public data they also rely on.
-% Engine derives: victim + trapped -> d ≈ 0.95 -> f(d) ≈ 1.42 -> high χ
-% χ = 0.55 * 1.42 * 1.2 (global scope) ≈ 0.94
-constraint_indexing:constraint_classification(openai_prism_development, naturalized,
+% PERSPECTIVE 1: AI SAFETY RESEARCHERS — Cannot exit the development cycle. External safety researchers lack access to model internals, training data, capability evaluations, or deployment decisions. Trapped by institutional dependencies (funding, collaboration access, publication venues) while bearing responsibility for identifying risks they cannot observe. Maximum experienced extraction — structural denial of exit.
+constraint_indexing:constraint_classification(openai_prism_development, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (OPENAI & MICROSOFT)
-% Experiences the constraint as a pure coordination mechanism (Rope) for building
-% the next technological platform. The extractive element is invisible or justified
-% as a necessary cost of innovation.
-% Engine derives: beneficiary + arbitrage -> d ≈ 0.05 -> f(d) ≈ -0.12 -> negative χ
-% χ = 0.55 * -0.12 * 1.2 ≈ -0.08
+% PERSPECTIVE 2: REGULATORY BODIES & PUBLIC STAKEHOLDERS — Cannot exit deployment consequences. Governments and publics bear risks (labor displacement, misinformation, decision-automation failures) of deployment without access to training details, capability evaluations, or development timelines. Suppression enforced through technical obscurity and institutional opacity. No exit option — must accept risks or attempt regulation against informational disadvantage.
+constraint_indexing:constraint_classification(openai_prism_development, snare,
+    context(agent_power(powerless),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: COMPETING AI DEVELOPERS — Constrained but organized. Competing labs cannot access OpenAI's training specifics, but have some agency through independent research programs, capital access, and publication strategies. Experience mixed extraction (OpenAI's information advantage translates to policy influence and market timing) and coordination (information arms race creates common baseline requirements). Organized power limits maximum extraction experienced.
+constraint_indexing:constraint_classification(openai_prism_development, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: OPENAI LEADERSHIP & BOARD — Benefits from information asymmetry. Controls timing of capability announcements, regulatory engagement strategy, deployment sequencing, and safety disclosures. Experiences constraint as coordination mechanism: managing information flow enables effective decision-making and stakeholder management. Net beneficiary with full arbitrage options (can adjust disclosure, timing, partnerships).
 constraint_indexing:constraint_classification(openai_prism_development, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Recognizes both the genuine coordination function (creating a powerful new tool)
-% and the severe asymmetric extraction (market concentration, risk externalization).
-% This dual nature is the hallmark of a Tangled Rope.
-% Engine derives: analytical -> d ≈ 0.73 -> f(d) ≈ 1.15
-% χ = 0.55 * 1.15 * 1.2 ≈ 0.76
-constraint_indexing:constraint_classification(openai_prism_development, snare,
+% PERSPECTIVE 5: INDUSTRY SELF-REGULATION NORMS (PITON) — Responsible disclosure practices, safety evaluations, and transparency commitments persist largely as theater. Public commitments to safety research and third-party audits are performative — actual enforcement mechanisms are absent, and informational gates remain closed. The ritual of responsible disclosure continues through institutional inertia despite minimal functional verification or external accountability. Theater ratio high; functional transparency low.
+constraint_indexing:constraint_classification(openai_prism_development, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER — From a civilizational view, frontier AI development's information asymmetry could appear as a natural law: the scale and technical complexity of model development inherently create information gaps that external parties cannot bridge. However, the structural data reveals this as a false summit — the asymmetry is substantially enforced through corporate IP strategies, competitive advantage protections, and institutional choices about disclosure, not as an immutable property of technical complexity.
+constraint_indexing:constraint_classification(openai_prism_development, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-
-% PERSPECTIVE 4: GOVERNMENT REGULATORS
-% An institutional actor, but one that is a victim of the information asymmetry.
-% They are forced to regulate reactively with incomplete data. Their exit is
-% 'constrained' as they cannot opt out of their duty but have limited tools.
-% The engine derives a 'd' value between the beneficiary and the trapped target.
-% Engine derives: victim + institutional power + constrained exit -> d ≈ 0.65 -> f(d) ≈ 1.0
-% χ = 0.55 * 1.0 * 1.1 (continental scope, e.g., EU AI Act) ≈ 0.61
-constraint_indexing:constraint_classification(openai_prism_development, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(continental))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -176,20 +168,18 @@ constraint_indexing:constraint_classification(openai_prism_development, rope,
 
 :- begin_tests(openai_prism_development_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify the core perspectival gap: Snare for the target, Rope for the beneficiary.
-    constraint_indexing:constraint_classification(openai_prism_development, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(openai_prism_development, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(openai_prism_development, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(openai_prism_development, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    % The analytical observer must correctly identify the mixed nature of the constraint.
-    constraint_indexing:constraint_classification(openai_prism_development, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(openai_prism_development, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_requirements_met) :-
-    % Verify that the structural data required for Tangled Rope classification exists.
-    narrative_ontology:constraint_beneficiary(openai_prism_development, _),
-    narrative_ontology:constraint_victim(openai_prism_development, _),
-    domain_priors:requires_active_enforcement(openai_prism_development).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(openai_prism_development, TR),
+    TR >= 0.70.
 
 :- end_tests(openai_prism_development_tests).
 
@@ -199,22 +189,16 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): High, reflecting the value captured from public data commons and the market concentration enabled by controlling a frontier model.
- *   - Suppression (s=0.75): High, due to the immense capital/data requirements, trade secrecy, and network effects that create formidable barriers to entry for competitors.
- *   - Active Enforcement: The constraint is maintained by NDAs, API access controls, and intellectual property law, meeting a key requirement for Tangled Rope.
+ *   Base extractiveness (0.68): High. The information asymmetry between OpenAI and external parties translates into concrete extraction: timing advantages in policy positioning, protection from regulatory scrutiny that other actors must navigate, and first-mover advantage in deployment decisions. The trajectory from 0.42 to 0.68 reflects accumulated extraction as model capabilities increased and deployment stakes raised — information value compounds as model power increases. Suppression (0.78): High. Multiple institutional gates maintain the asymmetry: proprietary IP protections, limited third-party audit access, technical complexity barriers, and competitive advantage claims. Suppression enforces against external verification attempts through legal (IP), institutional (audit access), and technical (model complexity) mechanisms. Theater ratio (0.65): Moderate-high. Public commitments to safety research, responsible disclosure, and third-party evaluations exist, but verification mechanisms are weak. The Frontier Model Forum, safety partnerships, and transparency initiatives are substantive but significantly constrained by what information is actually disclosed. Theater has increased over the interval as public pressure for transparency has mounted while actual disclosure depth has increased slowly.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For OpenAI/Microsoft (beneficiary), this is a Rope: a colossal engineering effort to coordinate resources and create a new utility. For an independent developer (target), it is a Snare: a black box that can render their work obsolete overnight, built on the public commons they cannot access at the same scale. The beneficiary sees innovation; the target sees enclosure and extraction.
+ *   This constraint demonstrates sharp perspectival divergence between beneficiaries and victims. OpenAI leadership sees a coordination mechanism (Rope) — managing information enables effective decision-making under uncertainty. Safety researchers see extraction with no exit (Snare) — trapped in responsibility without visibility. Competitors see constrained extraction with some agency (Tangled Rope) — they can build independent programs but face timing disadvantages and policy capture risk. The public/regulatory perspective sees a structural trap (Snare) — bearing consequences of decisions made without their information access. Industry norms see a performative ritual (Piton) — safety commitments are substantive but verification mechanisms are weak. The civilizational observer risks naturalizing this as inherent to technical complexity (Mountain) — frontier AI's scale creates information gaps that cannot be bridged. However, the structural data reveals substantial choice in disclosure depth, timing, and verification mechanisms — the asymmetry is substantially enforced rather than inevitable.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `openai_microsoft_nexus` directly profits and controls the asset. `early_access_enterprise_customers` gain a competitive edge.
- *   - Victims: `independent_ai_developers` face existential risk. `public_knowledge_commons` is the resource being extracted without compensation. `government_regulators` are structurally disadvantaged by the information asymmetry, bearing the cost of managing societal risk without full insight. These declarations drive the directionality `d` and thus the effective extraction `χ` for each perspective.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The regulator perspective highlights a key modern dynamic. Both OpenAI and the regulator are 'institutional' actors, but their relationship to the constraint is fundamentally different. OpenAI has `arbitrage` exit (it controls the terms), while the regulator has `constrained` exit (it must engage but on terms set by the developer). This difference in exit options, combined with their respective beneficiary/victim status, allows the engine to derive different `d` values and correctly classify the constraint as a Rope for one and a Tangled Rope for the other, quantifying the structural power imbalance.
+ *   Each agent's experienced extractiveness (chi) is computed from their structural position relative to the information asymmetry. OpenAI leadership have arbitrage exit options (can adjust disclosure timing, choose regulatory partners, shape policy framing) combined with beneficiary status — they experience low or negative chi (the constraint benefits them). External safety researchers have trapped exit options (cannot walk away from responsibility without funding, cannot build independent capability assessment without access) combined with victim status — they experience maximum chi (extracted from without compensation or escape). Regulatory bodies have trapped options (must deploy governance without complete information) and victim status (bear consequences of deployment decisions made under information disadvantage). Competing developers have constrained exits (can build independent programs but with timing lag) and victim status (policy capture risk, timing disadvantage) — they experience moderate chi. The derived d values from beneficiary/victim status and exit options produce the perspectival gap observed across perspectives.
  *
  * MANDATROPHY ANALYSIS:
- *   This model prevents misclassification. A simplistic analysis might label frontier AI development as a pure Snare (focusing only on data extraction) or a pure Rope (focusing only on technological progress). The Tangled Rope classification, derived from the analytical perspective, correctly identifies that it is BOTH: a system that performs a genuine, powerful coordination function that is inextricably linked to an asymmetric extractive process. This is the definition of mandatrophy's core subject.
+ *   This constraint resolves mandatrophy by distinguishing between technical necessity (some information asymmetry is inherent to proprietary model development) and institutional choice (depth of asymmetry, disclosure timing, verification access). The false summit risk is high: frontier AI development could be legitimately classified as a Mountain if the asymmetry were truly immutable. However, the trajectory of base_extractiveness (0.42→0.68) and theater_ratio (0.48→0.65) reveals accumulating institutional choice, not technical inevitability. The constraint is a Snare with potential Tangled Rope aspects (innovation benefits from some proprietary protection) — not a Mountain. The mandatrophy analysis focuses on whether the beneficiary (OpenAI) is extracting rent through artificial information control (Snare) or whether the information advantage is a necessary coordination mechanism for innovation (Rope/Tangled Rope). The high suppression (0.78), victim class scale (safety researchers, regulators, public, competitors), and enforcement mechanisms through IP and institutional gatekeeping argue for Snare classification despite coordination benefits to innovation. The perspective divergence confirms extraction: if this were pure coordination, all agents would perceive it as Rope.
  */
 
 /* ==========================================================================
@@ -222,64 +206,84 @@ test(tangled_rope_gate_requirements_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_prism_capabilities,
-    'Are the emergent capabilities of "Prism", particularly autonomous agency, a predictable scaling effect or an uncontrollable, qualitative phase transition?',
-    'Independent, adversarial, and public auditing of the model prior to widespread deployment.',
-    'If predictable -> Tangled Rope (manageable risks). If phase transition -> a potential civilizational-scale Snare (unmanageable externalized risk).',
+    safety_capability_verification_boundary,
+    'Can external safety researchers verify capability claims and risk boundaries without access to model weights, training data, and deployment parameters?',
+    'Independent capability evaluations using adversarial prompting, benchmark comparisons, and behavioral analysis; correlation between public claims and observed behavior across diverse deployment scenarios',
+    'If verifiable: information asymmetry is primarily about timing, not fundamental opacity. If not verifiable: safety research is fundamentally constrained, and the asymmetry is structural. High impact on whether mountain (technical necessity) or snare (enforced opacity) classification is correct.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(safety_capability_verification_boundary, empirical, 'Whether external researchers can verify AI capability and safety claims').
+
+omega_variable(
+    competitive_advantage_necessity,
+    'Does model development require proprietary secrecy to maintain competitive advantage, or is the information barrier primarily defensive against regulatory/safety scrutiny?',
+    'Industry historical analysis: compare information disclosure patterns with competitive pressure; examine whether public training details correlate with market share loss; analyze R&D productivity in transparent vs. closed settings (academic vs. industry)',
+    'If competitive necessity: suppression (0.78) and extractiveness (0.68) may be overstated; constraint could degrade toward Rope or Scaffold. If primarily defensive: snare classification confirmed; extraction is intentional asymmetry maintenance.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(competitive_advantage_necessity, conceptual, 'Whether information barriers are competitively necessary or defensive').
+
+omega_variable(
+    regulatory_capture_timing,
+    'Does OpenAI''s information control enable regulatory capture — shaping AI governance through selective disclosure and timing of announcements to policymakers?',
+    'Policy timeline analysis: correlation between OpenAI disclosure events and regulatory positioning; examination of preferential access given to government bodies vs. safety researchers; tracking of policy language that mirrors OpenAI framing',
+    'If captured: snare classification confirmed and extended to regulatory domain; affects_constraints should include AI_governance mechanisms. If not: snare is primarily about safety researchers and public, not regulatory capture.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_capture_timing, empirical, 'Whether information control enables regulatory capture').
+
+omega_variable(
+    public_interest_vs_innovation_tension,
+    'What disclosure level balances legitimate innovation incentives against public interest in understanding systemic risks of frontier AI deployment?',
+    'Welfare analysis: measure innovation productivity under different transparency regimes; estimate public risk reduction from incremental disclosure; identify minimum viable secrecy for competitive advantage vs. current disclosure levels',
+    'Determination would resolve whether extractiveness (0.68) reflects necessary innovation protection (potentially overstated) or genuine rent-seeking. Could shift claimed_type toward Tangled Rope (with benefits to innovation) rather than pure Snare.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(public_interest_vs_innovation_tension, preference, 'Balance between innovation incentives and public disclosure needs').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(openai_prism_development, 0, 10).
+narrative_ontology:interval(openai_prism_development, 0, 5).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has intensified over time, demonstrating 'extraction_accumulation'
-% as the technology moved from academic research to a highly commercialized asset.
-% Base extraction is > 0.46, so temporal data is required.
+% Theater ratio over time
+narrative_ontology:measurement(prism_tr_t0, openai_prism_development, theater_ratio, 0, 0.48).
+narrative_ontology:measurement(prism_tr_t2, openai_prism_development, theater_ratio, 2, 0.58).
+narrative_ontology:measurement(prism_tr_t5, openai_prism_development, theater_ratio, 5, 0.65).
 
-% Theater ratio over time (stable and low, function dominates):
-narrative_ontology:measurement(prism_tr_t0, openai_prism_development, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(prism_tr_t5, openai_prism_development, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(prism_tr_t10, openai_prism_development, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(prism_be_t0, openai_prism_development, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(prism_be_t2, openai_prism_development, base_extractiveness, 2, 0.55).
+narrative_ontology:measurement(prism_be_t5, openai_prism_development, base_extractiveness, 5, 0.68).
 
-% Extraction over time (shows clear accumulation):
-% T=0: GPT-3 era, more academic/research focus
-% T=5: GPT-4 era, heavy commercialization and API monetization
-% T=10: Prism/GPT-5 era, aiming for market dominance and platform lock-in
-narrative_ontology:measurement(prism_ex_t0, openai_prism_development, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(prism_ex_t5, openai_prism_development, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(prism_ex_t10, openai_prism_development, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This constraint functions as a new layer of digital infrastructure.
-narrative_ontology:coordination_type(openai_prism_development, global_infrastructure).
+narrative_ontology:coordination_type(openai_prism_development, information_standard).
+narrative_ontology:affects_constraint(openai_prism_development, ai_governance_policy_capture).
+narrative_ontology:affects_constraint(openai_prism_development, frontier_ai_safety_research_capacity).
+narrative_ontology:affects_constraint(openai_prism_development, labor_market_automation_uncertainty).
 
-% Network relationships (structural influence edges)
-% The development of such a model directly increases society's vulnerability
-% to sophisticated, automated disinformation campaigns.
-narrative_ontology:affects_constraint(openai_prism_development, global_disinformation_vulnerability).
-narrative_ontology:affects_constraint(openai_prism_development, knowledge_worker_labor_market).
-
+% DUAL FORMULATION NOTE:
+% Information asymmetry in frontier AI development decomposes into separable constraints: (1) Technical information barriers (inherent to model complexity, ε≈0.25, Mountain), (2) Competitive advantage barriers (enforced through IP and institutional gatekeeping, ε≈0.50, Tangled Rope), (3) Regulatory capture (selective disclosure enabling policy influence, ε≈0.65, Snare). This story focuses on the aggregated institutional constraint (ε=0.68) but should be understood as downstream from technical necessity and upstream from policy capture effects.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this story. The structural derivation chain,
-% using beneficiary/victim declarations and exit options, accurately captures
-% the directionality for all key agents, including the nuanced difference
-% between the two institutional actors (developer vs. regulator).
+constraint_indexing:directionality_override(openai_prism_development, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

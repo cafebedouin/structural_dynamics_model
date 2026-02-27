@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "collective_action_deadlock",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "colact"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Infinite Deliberation Loop",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "veto_wielding_minorities",
+      "status_quo_preservers"
+    ],
+    "victims": [
+      "collective_action_capacity",
+      "threat_responsive_groups"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Immobilized Collective",
+      "comment": "PERSPECTIVE 1: IMMOBILIZED COLLECTIVE (SNARE) \u2014 The group as a whole experiences total extraction of decision-making capacity. Trapped within the deliberation framework with no exit. Unable to act despite consensus on threat urgency. Maximum experienced extraction; collective action potential is entirely suppressed by the veto mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Veto-Wielding Minority",
+      "comment": "PERSPECTIVE 2: VETO-WIELDING MINORITY (ROPE) \u2014 Experiences the constraint as pure coordination mechanism: the veto rule gives them voice proportional to their size, enabling minority protection. Low extraction cost; they can exit via accepting the majority position (arbitrage option). Net beneficiary of the rule structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ordinary Coalition Member",
+      "comment": "PERSPECTIVE 3: ORDINARY COALITION MEMBER (TANGLED ROPE) \u2014 Constrained by the need for consensus but also benefits from the protection mechanism if they become a minority position later. Mixed experience: benefits from minority veto protection (coordination), but pays cost of immobility in urgent situations (extraction). Constrained exit \u2014 leaving the coalition is costly but possible."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Reform Movement",
+      "comment": "PERSPECTIVE 4: REFORM MOVEMENT (SCAFFOLD) \u2014 Organized actors proposing supermajority rules, sunset clauses on veto rights for existential threats, or emergency decision protocols. See the deadlock as a temporary institutional failure with a sunset: rule reforms or threat escalation will eventually force new decision structures. Mobile exit \u2014 they can shift to alternative decision frameworks or splinter groups."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Consensus Ritual",
+      "comment": "PERSPECTIVE 5: CONSENSUS RITUAL (PITON) \u2014 The deliberation process itself has become largely performative. Meetings occur, positions are restated, no new information changes minds, no decision emerges. The ritual persists through institutional inertia \u2014 consensus-building is maintained as a legitimacy theater despite failing its core function (enabling collective action). Theater dominates function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE SUMMIT \u2014 Risks naturalizing the deadlock as an immutable feature of democratic groups: 'Consensus by definition takes time; urgent decisions require authoritarianism.' But the structural data contradicts this mountain claim \u2014 the deadlock is not inherent to democracy or collective decision-making; it is a contingent property of the specific rule structure (unrestricted veto). Other democracies with supermajority rules or emergency protocols do not experience the same deadlock. Engine will flag this as false summit: naturalization of institutional choice as natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threat_urgency_threshold",
+      "question": "At what threat severity do rational actors abandon consensus requirements in favor of majority rule or delegation?",
+      "resolution_mechanism": "Empirical analysis of historical coalitions facing escalating threat levels; correlation between threat magnitude and rule change incidence",
+      "impact": "If threshold is low: deadlock dissolves quickly under pressure, constraint classification shifts toward Scaffold. If threshold is high or absent: deadlock persists despite severe threats, constraint shifts toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threat severity threshold triggering rule abandonment"
+    },
+    {
+      "id": "veto_bloc_unification",
+      "question": "Is the veto-wielding minority a unified strategic bloc or a collection of actors with divergent interests using veto tactically?",
+      "resolution_mechanism": "Game-theoretic analysis of veto-wielder incentive alignment; historical tracking of veto coalition stability across different threat scenarios",
+      "impact": "If unified bloc: veto power is stable, extraction is systematic, constraint is durable Snare/Tangled Rope. If tactically divided: veto power is fragile, defection risk is high, constraint collapses under threat or side-payments.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether veto minority is strategically unified or tactically divided"
+    },
+    {
+      "id": "exit_costliness_asymmetry",
+      "question": "Do different coalition members face asymmetric costs of exiting the consensus framework (coalition exit vs framework exit)?",
+      "resolution_mechanism": "Structural analysis of coalition interdependencies; measurement of defection costs by stakeholder group; historical examples of coalition dissolution",
+      "impact": "If exit is symmetric: all members experience equal constraint, classification is uniform. If exit is asymmetric: some actors are trapped while others are mobile, creates conditions for coalition fragmentation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Asymmetry in exit costs across coalition members"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The collective action deadlock emerges when a group adopts decision rules that grant veto power to any single stakeholder (or small bloc), creating a structural situation where the group cannot coordinate a response to an external threat without unanimous consent. This constraint represents a hybrid extraction mechanism: the rule structure simultaneously enables minority protection (a genuine coordination function) and prevents majority from acting (an extraction of collective action capacity). The deadlock is not inherent to groups or democracy \u2014 it is a contingent property of specific institutional rules. Over time, as the constraint persists, the deliberation process becomes increasingly theatrical: meetings occur, positions are restated without change, consensus-building rituals proliferate while actual decision-making capacity atrophies (Piton dynamics). The threat-responsive capacity of the group is extracted by actors who benefit from status quo preservation, even when those actors themselves recognize the threat. The constraint demonstrates how coordination rules can be weaponized into extraction mechanisms.",
+    "key_agents": [
+      "Immobilized Collective: Primary victim (powerless/trapped) \u2014 the group's decision-making capacity is entirely extracted; bears cost of inability to respond to threats",
+      "Veto-Wielding Minority: Primary beneficiary (organized/arbitrage) \u2014 captures protection from majority overrule; benefits from rule structure; can exit via accepting majority position",
+      "Ordinary Coalition Members: Secondary actors (moderate/constrained) \u2014 experience mixed coordination (minority protection) and extraction (immobility); benefits depend on whether they are in minority or majority on this specific issue",
+      "Threat-Responsive Groups: Secondary victim \u2014 actors outside the coalition who bear costs of the group's inability to act (environmental degradation, unaddressed crises, externalized harms)",
+      "Reform Movement: Organized changemakers (organized/mobile) \u2014 pushing for supermajority rules, emergency protocols, or sunset clauses; see the deadlock as temporary institutional failure",
+      "Consensus Ritual Maintainers: Institutional actors (institutional/constrained) \u2014 facilitators, process designers who maintain the deliberation theater; may recognize its performative nature but continue it through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the deadlock as inherent to democratic processes"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts approximately 58% of the collective's decision-making capacity. This is not a high-extraction snare (>0.66) because minority members genuinely benefit from the veto rule when they are in minority, and some actors retain the arbitrage option of accepting majority positions. However, the extraction is substantial because the group as a whole loses its ability to coordinate, and external parties (threat-responsive groups) bear costs of inaction. The temporal measurement shows extractiveness rising from 0.38 to 0.58 as the deadlock persists \u2014 the constraint becomes worse over time as deliberation patterns entrench. Suppression (0.68): High. Significant barriers prevent escaping the deadlock without breaking the coalition: (1) unanimous consent requirement eliminates normal majority action; (2) defection costs are high (loss of coalition membership, reputational damage, loss of future minority protections); (3) no rule amendment mechanism that doesn't require veto. Actors are suppressed by the rule structure itself. Theater ratio (0.64): Moderate-high. As deadlock persists, the deliberation process becomes increasingly performative. Meetings and discussions continue but with zero probability of changing outcomes \u2014 positions remain fixed, same arguments repeat, ritual consensus-building replaces genuine deliberation. Theater rises from 0.35 to 0.64 over the interval, indicating metric substitution (Goodhart drift): the system measures 'deliberation quality' by frequency and inclusivity of meetings rather than by actual decision output.",
+    "directionality_logic": "Directionality varies sharply by stakeholder position. Veto-wielding minorities (beneficiaries with arbitrage options) derive low or negative d-values \u2014 they experience the rule as beneficial coordination, not extraction. They can exit the veto requirement by accepting majority positions, giving them arbitrage optionality. Ordinary coalition members experience moderate d-values: they benefit from minority protection but pay extraction costs when they are in majority. Constrained exit options (leaving the coalition is costly) mean they cannot fully arbitrage. The immobilized collective (powerless/trapped) experiences maximum d-value approaching 1.0 \u2014 no exit, maximum extraction. Threat-responsive groups outside the coalition have no formal voice in the decision structure, experiencing it as pure external constraint. The derivation shows why the same rule structure produces rope-type benefits for minorities and snare-type harm for the majority: the directionality computation is agent-relative, and veto grants directionality advantage to small groups.",
+    "perspectival_gap": "This constraint exhibits maximal perspectival divergence. The veto-wielding minority sees the rule as coordination (Rope) \u2014 protecting their interests and enabling their voice. The immobilized collective sees it as pure extraction (Snare) \u2014 loss of all decision-making capacity. Ordinary members experience it as hybrid (Tangled Rope) \u2014 protection and extraction simultaneously. The reform movement sees it as temporary (Scaffold) \u2014 a solvable institutional problem with a sunset. The consensus ritual maintainers see it as performative degradation (Piton) \u2014 a form that persists despite lost function. The analytical observer risks seeing it as inevitable (Mountain) \u2014 but this is a false summit. The perspectival gap is fully explained by the agent's structural position (beneficiary vs victim, trapped vs mobile, organized vs powerless). No additional contextual axis is needed \u2014 the four canonical axes fully capture the divergence.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The Infinite Deliberation Loop resolves the mandatrophy by exposing how a coordination mechanism (minority protection) can be weaponized into an extraction mechanism (immobility). The rule satisfies both definitions: it genuinely enables coordination for minority protection (Rope function) AND it systematically extracts collective action capacity from the majority (Snare function). These are not two different interpretations of the same data \u2014 they are simultaneous structural realities for different stakeholders. The Tangled Rope classification captures this dual nature: the rule requires active enforcement (minorities must invoke the veto), it produces genuine coordination benefits (minority protection), it extracts from identifiable victims (the immobilized collective), and it generates suppression (defection costs). The mandatrophy is not resolved by choosing one type; it is resolved by recognizing that the constraint is genuinely hybrid, and the perspectival gap (Rope for beneficiaries, Snare for victims) is the diagnostic signature of Tangled Rope. The false summit (analytical observer's Mountain) serves as a cautionary example: the deadlock appears inevitable and immutable only if you naturalize the specific rule choice. Other decision structures (supermajority, emergency delegation, time-limited veto) avoid the deadlock entirely, proving it is contingent institutional design, not natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "committee_tyranny_of_minority",
+      "consensus_requirement_coordination"
+    ],
+    "dual_formulation_note": "The Infinite Deliberation Loop is upstream of specific policy deadlocks but represents a distinct structural constraint on decision-making itself. It affects multiple downstream constraints that inherit its immobility signature: regulatory capture uses deadlock to preserve status quo, committee tyranny uses veto to extract minority benefits, consensus-based coordination mechanisms inherit the deadlock risk. The constraint family shares the property that decision rules can be weaponized into extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.25
+    }
+  ]
+}

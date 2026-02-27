@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "bonbon_drop_sticker_craze",
+    "version": "1.0",
+    "generated_date": "2024-07-28",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UHA Mikakuto's \"Bonbon Drop\" Collectible Sticker Promotion",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uha_mikakuto",
+      "sticker_manufacturer_qlia",
+      "resellers"
+    ],
+    "victims": [
+      "collectors",
+      "parents_of_collectors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Child Collector",
+      "comment": "From the perspective of a child collector, the system is a snare. Participation is driven by peer dynamics and the desire for specific rare stickers. Exit (quitting) means social exclusion. The 'gacha' mechanic feels coercive and frustrating when desired stickers are not found, extracting allowance money for unwanted candy. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. This just misses the snare threshold of 0.66, but the lived experience is one of being trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Manufacturer (UHA Mikakuto)",
+      "comment": "The manufacturer experiences the system as a pure coordination mechanism (Rope). It coordinates consumer demand, drives sales, and builds brand loyalty. The manufactured scarcity is a feature, not a bug, that increases engagement. As the primary beneficiary with full control, they experience no extraction. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07 (net subsidy)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Adult 'Heisei Joji' Collector",
+      "comment": "Adult collectors, often driven by nostalgia, see both sides. They enjoy the community, trading, and the thrill of the hunt (coordination), but are also aware of the financial cost and exploitative gacha mechanic (extraction). They have mobile exit options (they can switch hobbies), making the constraint a Tangled Rope rather than a Snare. d≈0.85, f(d)≈1.15, σ=0.9 → χ≈0.57."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical view confirms the Tangled Rope classification. The system possesses a genuine coordination function (creating a collector community) and a clear, asymmetric extraction mechanism (profiting from randomized, scarcity-driven repeat purchases). Both components are essential to its function. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reseller/Scalper",
+      "comment": "Resellers are organized beneficiaries. They see the system as a coordination mechanism for profit, coordinating scarce supply with high demand. They are not the primary institutional beneficiary but exploit the system's properties. Their exit is mobile (they can scalp the next popular item), and for them, the system is a pure Rope for generating income. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.005."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "nostalgia_vs_speculation",
+      "question": "Is the market primarily driven by genuine collector nostalgia ('Heisei Joji' culture) or by secondary market speculation and hype?",
+      "resolution_mechanism": "Analysis of secondary market sales volume and price velocity versus social media sentiment and community forum activity focused on collecting itself.",
+      "impact": "If nostalgia-driven, the coordination aspect is stronger (Rope/Tangled Rope). If speculation-driven, the extraction is more severe (Tangled Rope/Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between nostalgia-driven collecting and market speculation"
+    },
+    {
+      "id": "saturation_point",
+      "question": "At what point does collector burnout or market saturation cause the craze to collapse?",
+      "resolution_mechanism": "Longitudinal tracking of sales data, secondary market prices for common and rare stickers, and social media engagement metrics.",
+      "impact": "Identifies the natural lifecycle of such manufactured-scarcity systems, determining if it's a short-term phenomenon (Scaffold-like) or a durable extractive model (Snare-like).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The market saturation and burnout threshold for the sticker craze"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The UHA Mikakuto 'Bonbon Drop' sticker promotion is a classic example of a gacha (randomized collectible) mechanic applied to a low-cost consumer good. By bundling collectible, scarce stickers with candy, the system incentivizes repeat purchases far beyond the consumer's desire for the base product. This is amplified by social dynamics, including peer pressure among children and a nostalgia-driven resurgence of 'Heisei Joji' (90s/00s girl) culture among adults. The resulting manufactured scarcity creates a frantic consumer culture ('sticker patrols') and a lucrative secondary market for resellers.",
+    "key_agents": [
+      "UHA Mikakuto & Q-LiA: Primary beneficiaries (institutional/arbitrage) - Drive candy sales and brand engagement through manufactured scarcity.",
+      "Collectors (Children & Adults): Primary victims (powerless/trapped to moderate/mobile) - Bear the financial cost of the gacha mechanic.",
+      "Parents of Collectors: Secondary victims (moderate/constrained) - Provide the funding for children's collections under social pressure.",
+      "Resellers: Secondary beneficiaries (organized/mobile) - Exploit the manufactured scarcity for profit on the secondary market.",
+      "Analytical Observer: Sees the full structure of coordination and extraction."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55): Moderately high. The core extraction is the value paid for unwanted candy to obtain a chance at a desired sticker. While the candy has some value, the purchasing behavior is driven by the randomized reward, indicating a significant portion of the price is pure extraction. Suppression (0.65): High. There is no alternative way to obtain new stickers from the primary source; one must buy the candy. This forces participation in the gacha system or the inflated secondary market. Theater Ratio (0.30): Moderate. While social performance like trading and 'sticker patrols' is part of the craze, the core economic function of selling candy is direct and non-performative.",
+    "perspectival_gap": "The gap is stark. The manufacturer (UHA Mikakuto) sees a brilliant marketing campaign (Rope). The child collector, subject to peer pressure and allowance limits, experiences a coercive and frustrating chase (Snare). The adult collector, with more agency and funds, recognizes the exploitative nature but also derives genuine nostalgic joy and community, landing on a mixed classification (Tangled Rope). This highlights how the same system can be perceived as pure coordination, pure extraction, or a hybrid, depending on the agent's power and exit options.",
+    "directionality_logic": "Beneficiaries are the company and resellers, who profit from the system. Their structural position gives them a low directionality (d). Victims are the collectors and their parents, who bear the financial costs and psychological pressure. Their structural position gives them a high directionality (d). The engine's derivation from these declarations correctly models the flow of value, resulting in negative or low effective extraction (χ) for beneficiaries and high χ for victims.",
+    "mandatrophy_analysis": "This case effectively resolves the mandatrophy. To label the craze as merely a 'fun hobby' (Rope) would ignore the structurally coercive and extractive gacha mechanic at its core. Conversely, to label it a pure 'scam' (Snare) would ignore the genuine coordination function it serves in creating a vibrant collector community and tapping into powerful nostalgic sentiment. The analytical classification of Tangled Rope correctly identifies that both functions are present and structurally essential to the phenomenon's success."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  }
+}

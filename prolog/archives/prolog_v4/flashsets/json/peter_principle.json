@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "peter_principle",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "peter"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Peter Principle (Promotion to Incompetence)",
+    "topic_domain": "organizational/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incompetent_employees",
+      "senior_management"
+    ],
+    "victims": [
+      "organization",
+      "competent_employees"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Organization",
+      "comment": "The organization suffers decreased efficiency and innovation, cannot easily remove the incompetent employee, and bears the cost of their salary and inaction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Competent Employees",
+      "comment": "Competent employees are constrained by the incompetence of their superiors. They may be forced to pick up the slack, or leave the organization altogether. They see the Peter Principle as a degraded promotion system that no longer rewards merit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Incompetent Employees",
+      "comment": "Incompetent employees benefit from the Peter Principle by attaining a higher salary and status, despite their lack of ability. They are now insulated from job loss and have an incentive to maintain the status quo. They see the Peter Principle as a coordination mechanism for career advancement, even if they are not suited for the role."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Senior Management",
+      "comment": "Senior Management benefits from the Peter Principle by maintaining their position of power and control. However, they are also constrained by the overall inefficiency of the organization. They see the Peter Principle as a mixed system that enables some advancement but also results in extraction from the organization as a whole."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational/global perspective, the Peter Principle is a tangled rope that extracts from the overall efficiency of organizations but is also a product of promotion systems that are not entirely merit-based. These systems still solve a coordination problem by incentivizing workers to seek higher roles and allowing organizations to move people through the ranks, even if some of those people prove to be incompetent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "meritocracy_measurement",
+      "question": "How accurately can 'merit' be measured for promotion decisions?",
+      "resolution_mechanism": "Statistical analysis of performance reviews vs. objective metrics.",
+      "impact": "High accuracy: reduced Peter Principle effect. Low accuracy: Peter Principle more prevalent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the ability to assess and measure merit."
+    },
+    {
+      "id": "incentive_alignment",
+      "question": "How well aligned are individual incentives with organizational goals?",
+      "resolution_mechanism": "Survey of employee perception of organizational goals and whether their work advances them.",
+      "impact": "High alignment: less extraction. Low alignment: more extraction and inefficiency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Alignment of individual and organizational incentives."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Peter Principle describes the phenomenon where individuals in a hierarchy are promoted based on their success in previous roles, rather than their suitability for the new role. This leads to individuals eventually being promoted to a position where they are incompetent, resulting in organizational inefficiency and value extraction. Senior management may inadvertently perpetuate this effect through promotion practices that favor loyalty or seniority over competence. The theater ratio is high because promotions are often based on past performance rather than future potential, and performance reviews may not accurately reflect an employee's true capabilities.",
+    "key_agents": [
+      "Incompetent Employees: The individuals who have reached their level of incompetence and are extracting value from the organization.",
+      "Senior Management: The decision-makers who are responsible for promotions and are potentially benefiting from the Peter Principle (loyalty, control), even if indirectly.",
+      "Organization: The entity that suffers from the decreased efficiency and innovation caused by the Peter Principle.",
+      "Competent Employees: The employees who are capable but are constrained by the incompetence of their superiors, potentially leading to frustration and turnover."
+    ],
+    "logic_rationale": "Extractiveness (0.6): The Peter Principle results in a significant extraction of value from the organization, as incompetent employees are being paid a salary without providing commensurate value. Suppression (0.4): There is suppression because of organizational culture, difficulty in demoting people, and lack of objective performance metrics. Theater Ratio (0.75): There is significant theater in that promotion practices often reward performance metrics of the old role rather than aptitude for the new role. Performance reviews may be inflated or based on subjective criteria.",
+    "perspectival_gap": "The organization, as a whole, is negatively impacted (Snare). Competent employees feel constrained by the incompetence of their superiors and the limited opportunities (Piton). The incompetent employees, now insulated at their level, see this is a coordination and benefit structure (Rope). Senior Management are both beneficiaries and constrained by this practice (Tangled Rope).",
+    "directionality_logic": "The organization (powerless/trapped) bears the highest cost. The incompetent employees (institutional/arbitrage) benefit. Senior management (institutional/constrained) benefit from loyalty/control, but are constrained by the inefficiencies. The competent employees (moderate/constrained) are also constrained by the negative effects of incompetent management.",
+    "mandatrophy_analysis": "The Peter Principle resolves the Mandatrophy by clarifying that while individual employees might benefit from promotions, the organization and competent employees are negatively affected. By considering different perspectives, the tangled rope designation resolves the tension of viewing the promotion process as purely beneficial or purely detrimental. The organization is extracted from overall, even as senior members make use of it. The high theater ratio indicates that the promotion process is not truly meritocratic, but rather a performance of meritocracy."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "protocol_capture_tangled_rope",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Captured Commons (Embrace, Extend, Extinguish)",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_entity"
+    ],
+    "victims": [
+      "open_source_community",
+      "downstream_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Open Source Community",
+      "comment": "The open source community initially benefits from the wider adoption of the protocol but ultimately suffers as the dominant entity's extensions fragment the ecosystem and render the original implementation obsolete. They are trapped because switching costs are high and network effects favor the dominant platform."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Downstream Developers",
+      "comment": "Downstream developers are initially attracted to the platform due to its reach and potential for monetization. However, they become constrained by the platform's lock-in effects and the risk of being out-competed by the dominant entity's first-party extensions. They benefit from the initial reach but are ultimately subject to extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dominant Entity",
+      "comment": "The dominant entity benefits from embracing the open protocol as it allows them to leverage existing community efforts and network effects. They then extend the protocol with proprietary features to create lock-in and extract value from the ecosystem. They have arbitrage options because they control the platform and can dictate its evolution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a civilizational perspective, the embrace, extend, extinguish strategy represents a mixed bag. It can lead to faster innovation and wider adoption in the short term, but it also poses a threat to the long-term viability of open standards and decentralized ecosystems. The net effect is tangled \u2014 coordination followed by extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_threshold",
+      "question": "What level of switching costs makes it infeasible for users and developers to migrate away from the dominant platform?",
+      "resolution_mechanism": "Analysis of user behavior and platform adoption rates; surveys of developers and businesses regarding switching costs",
+      "impact": "If low: Open source alternative has a viable path for survival. If high: Extinguishment is inevitable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Switching cost threshold for platform lock-in"
+    },
+    {
+      "id": "ecosystem_fragmentation",
+      "question": "To what extent do the dominant entity's proprietary extensions fragment the ecosystem and create compatibility issues with the original open standard?",
+      "resolution_mechanism": "Technical analysis of platform APIs and implementation details; measurement of ecosystem diversity and fragmentation",
+      "impact": "If low: Ecosystem remains relatively unified and interoperable. If high: Open standard is effectively abandoned in favor of the dominant platform's proprietary extensions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The extent of ecosystem fragmentation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The \"embrace, extend, extinguish\" strategy describes a scenario where a dominant entity adopts an open protocol, adds proprietary extensions that lock users in, and ultimately makes the original protocol obsolete. This constraint examines the dynamics of this process, focusing on the relationships between the dominant entity, the open source community, and downstream developers.",
+    "key_agents": [
+      "Dominant Entity: Primary beneficiary (institutional/arbitrage) - captures market share and extracts value through proprietary extensions",
+      "Open Source Community: Primary victim (powerless/trapped) - suffers as the dominant entity fragments the ecosystem and renders the original implementation obsolete",
+      "Downstream Developers: Secondary victim (moderate/constrained) - become dependent on the dominant platform and subject to its terms"
+    ],
+    "logic_rationale": "Extractiveness (0.65): The dominant entity captures significant value from the ecosystem through its proprietary extensions and control over the platform. Suppression (0.70): The dominant entity actively suppresses alternatives through lock-in effects, compatibility issues, and aggressive marketing tactics. Theater ratio (0.30): The dominant entity does engage in some genuine coordination efforts, such as providing developer tools and hosting community events, but these activities are largely performative and serve to mask the underlying extraction.",
+    "perspectival_gap": "The open source community views the situation as a snare, as they are trapped in a system where their original contributions are co-opted and exploited. Downstream developers experience a tangled rope, as they benefit from the platform's reach but are also subject to its control. The dominant entity, of course, sees the situation as a rope, as they are able to coordinate the ecosystem and extract value from it. The analytical observer recognizes the mixed nature of the situation.",
+    "directionality_logic": "Directionality is determined by the structural position of each agent. The dominant entity has arbitrage options and benefits from the ecosystem, so it experiences low or negative effective extraction. The open source community is trapped and bears the full cost of the dominant entity's actions, so it experiences maximum extraction. Downstream developers are constrained and experience a mixed bag, so they experience moderate extraction.",
+    "mandatrophy_analysis": "This scenario resolves the mandatrophy by highlighting the different perspectives of the various actors involved. The dominant entity may genuinely believe that it is coordinating the ecosystem and providing value to users, but the open source community and downstream developers experience the situation as a form of extraction. The analytical observer recognizes the conflicting perspectives and the mixed nature of the situation. The proper classification is the presheaf over all observation sites, not any single type."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "semiconductor_mission_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sem"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Indian Semiconductor Mission 2.0",
+    "topic_domain": "economic/industrial_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_semiconductor_manufacturers",
+      "government_industrial_policy_agencies"
+    ],
+    "victims": [
+      "competing_global_semiconductor_suppliers",
+      "end_users_via_technology_lock_in"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Indian Electronics Consumers and SMEs",
+      "comment": "PERSPECTIVE 1: INDIAN CONSUMERS & SMEs (SNARE) \u2014 Trapped by protectionist policy that restricts access to globally competitive components. Must source from domestically subsidized suppliers with higher costs and potentially inferior specifications. Cannot exit domestic market without relocating business. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Domestic Semiconductor Manufacturers",
+      "comment": "PERSPECTIVE 2: DOMESTIC SEMICONDUCTOR MANUFACTURERS (ROPE) \u2014 Primary beneficiaries of subsidies, tax breaks, and tariff protection. Can arbitrage between domestic support mechanisms and global supply chains. Experience mission as enabling coordination: access to capital, infrastructure, and preferential procurement. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Semiconductor Supply Chain",
+      "comment": "PERSPECTIVE 3: GLOBAL SEMICONDUCTOR SUPPLIERS (TANGLED ROPE) \u2014 Constrained by Indian tariff barriers and preferential procurement rules, but also benefit from market access and potential partnerships with subsidized Indian manufacturers. Experience mission as both coordination (access to Indian market) and extraction (margin compression due to domestic competition artificially boosted by subsidies). d\u22480.58, f(d)\u22480.73, \u03c3=1.2 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Indian Government Industrial Policy Apparatus",
+      "comment": "PERSPECTIVE 4: GOVERNMENT INDUSTRIAL POLICY (SCAFFOLD) \u2014 Orchestrates the mission as a temporary coordination mechanism to bootstrap domestic capabilities. Explicit goal: reduce dependency on foreign suppliers within 10-15 years via technology transfer and skills development. Sees mission with sunset logic: as domestic industry matures and achieves global competitiveness, protectionist supports can be removed. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Indian Electronics Export Commitments",
+      "comment": "PERSPECTIVE 5: ELECTRONICS EXPORT COMMITMENTS (PITON) \u2014 The mission includes contradictory export targets while maintaining domestic protection. Government commits to exporting semiconductors globally while restricting foreign competition domestically. This creates theater: compliance reporting on export volumes inflates the functional success of the mission, but actual export competitiveness depends on global-scale manufacturing (which the domestic protectionist regime suppresses). theater_ratio=0.61 reflects this performative reporting layer. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer - Technology Learning Curve",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / LEARNING CURVE VIEW (MOUNTAIN) \u2014 From a civilizational perspective, semiconductor manufacturing has a steep learning curve and economies of scale that require sustained capital investment. Any emerging nation attempting to build independent capabilities must solve this structural problem; the mission is reframing a natural constraint of the technology domain. However, structural data (\u03b5=0.52, suppression=0.48) contradicts the mountain classification \u2014 the constraint is contingent on policy choices, not technological immutability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_transfer_efficacy",
+      "question": "Will forced technology transfer agreements in subsidy conditions actually result in domestic technological capability, or will domestic manufacturers remain dependent on foreign IP and supply chain inputs?",
+      "resolution_mechanism": "Longitudinal tracking of patent filings, design autonomy assessments, and supply chain self-sufficiency metrics for subsidized manufacturers over 5-10 year horizon",
+      "impact": "If efficacy is high: mission succeeds as temporary scaffold, classification remains valid. If efficacy is low: mission becomes permanent extractive snare (subsidies fund perpetual dependency rather than independence).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether forced technology transfer produces genuine domestic capability"
+    },
+    {
+      "id": "consumer_cost_externality",
+      "question": "What is the aggregate economic harm to Indian consumers and SMEs from higher component costs and technology lock-in, relative to the industrial development gains?",
+      "resolution_mechanism": "Cost-benefit analysis: cumulative subsidy expenditure vs. consumer surplus loss; comparison to counterfactual scenario of open competition with targeted R&D investment instead of protectionism",
+      "impact": "If harm >> gains: victim classification (snare) is vindicated, mission is regressive wealth transfer. If gains justify harm: tangled_rope classification holds, mission is legitimate industrial policy trade-off.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net economic impact on end users relative to development gains"
+    },
+    {
+      "id": "global_competitiveness_trajectory",
+      "question": "Will subsidized Indian manufacturers achieve global cost and quality parity with established foundries (TSMC, Samsung, Intel), or will they remain niche players dependent on domestic procurement preferences?",
+      "resolution_mechanism": "Track manufacturing cost per wafer, defect rates, process node capabilities, and actual non-preferential export volumes. Compare with TSMC/Samsung benchmarks at equivalent subsidy maturity stages.",
+      "impact": "If trajectory to parity: scaffold sunset is credible (protections can be removed as competitiveness emerges). If stuck at niche: sunset never arrives, permanent tangled rope or snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether subsidized manufacturers can compete globally without protectionism"
+    },
+    {
+      "id": "hidden_extraction_metrics",
+      "question": "Are government agencies using mission performance metrics (capacity targets, export volumes) to justify subsidy continuation even as underlying extraction mechanisms persist?",
+      "resolution_mechanism": "Audit of mission performance reporting vs. actual functional outcomes (technology transfer completeness, manufacturing process autonomy, export competitiveness without preferences). Identify metric gaming in theater_ratio.",
+      "impact": "If significant gaming detected: theater_ratio rises above 0.70 (piton threshold), mission degrades from scaffold to piton. Extraction continues but justification becomes performative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mission metrics are inflated relative to functional outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Indian Semiconductor Mission 2.0 represents a complex industrial policy constraint that combines legitimate coordination (building domestic manufacturing capability) with asymmetric extraction (protectionist restrictions that harm consumers and global competitors). Launched in 2021 and accelerated in 2024-2025, the mission provides subsidies, tax breaks, tariff protection, and preferential procurement to domestic semiconductor manufacturers. The constraint exhibits different classifications from different perspectives: domestic manufacturers see enabling coordination (rope); consumers and SMEs see extraction through restricted access (snare); global suppliers see constrained market access (tangled rope); government policy sees a temporary bootstrap program with sunset logic (scaffold); the export commitment apparatus shows degradation into theater (piton); and the civilizational view risks naturalizing what is a contingent policy choice as inevitable technological necessity (false mountain). The escalating theater_ratio (0.35\u21920.61) reflects increasing performative reporting around export targets and capacity deployment metrics that may not reflect genuine technological independence or global competitiveness. The rising extractiveness (0.28\u21920.52) indicates that protectionist measures are accumulating faster than functional capabilities are being transferred.",
+    "key_agents": [
+      "Domestic Semiconductor Manufacturers (Institutional/Arbitrage): Primary beneficiaries\u2014receive subsidies, tax breaks, tariff protection, preferential procurement; can arbitrage between state support and export markets",
+      "Indian Consumers & SMEs (Powerless/Trapped): Primary victims\u2014trapped in domestic market with higher-cost, lower-capability components; cannot exit without relocating business operations",
+      "Global Semiconductor Suppliers (Organized/Constrained): Secondary victims\u2014face tariff barriers and preferential procurement rules; also constrained by Indian market access opportunities and potential partnership channels",
+      "Government Industrial Policy Agencies (Organized/Constrained): Architects of coordination mechanism; see mission as temporary bootstrap with generational sunset; constrained by fiscal sustainability and technology transfer efficacy",
+      "Export Performance Apparatus (Institutional/Constrained): Responsible for reporting mission success via export volumes; implements performative metrics that may not reflect genuine global competitiveness",
+      "Analytical Observer (Analytical/Analytical): Civilizational perspective that risks naturalizing contingent industrial policy as inherent technology learning curve"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. The mission provides real subsidies (estimated 15-20% cost advantage for domestic manufacturers) and tariff protection (15-20% tariff on imported semiconductors), creating measurable extraction from consumers and global competitors. However, extractiveness is not at snare levels (0.70+) because the mission explicitly targets capability building, not pure rent extraction. The structure is hybrid: subsidies fund R&D and infrastructure, which can generate genuine learning, but also support lower-efficiency producers and suppress competitive pressure that would accelerate improvement. Suppression (0.48): Moderate. Barriers to exit include tariffs, local content requirements, and preferential procurement rules\u2014but these are explicitly policy-codified, not inherent to the technology. Global suppliers can lobby, form joint ventures with domestic partners, or wait for policy changes. Domestic suppliers face lower suppression because they benefit from the rules. Theater ratio (0.61): Moderate-high. The mission is tracked via export volume targets and capacity metrics, but actual global competitiveness remains unproven. Government reports emphasize approved projects and committed capacity, but many projects face delays and technology transfer stalls. The export targets are ambitious relative to manufacturing ramp-up timelines, creating theater: reported progress on capacity deployment may not translate to actual export volumes or technological autonomy.",
+    "perspectival_gap": "The constraint demonstrates conflicting readings from different structural positions. Domestic manufacturers see the mission as pure coordination\u2014it solves the real collective action problem of expensive foundry construction and technology risk. Global suppliers see partial extraction but also market opportunity. The key gap emerges between beneficiaries and victims: Indian consumers see extraction (higher costs, restricted choice), while the government sees temporary coordination with sunset (the subsidies fund capability that will eventually make them unnecessary). The piton perspective reveals that even government agencies may be losing sight of the sunset logic as they accumulate new export commitments and expand subsidy programs\u2014what was intended as temporary support shows signs of becoming permanent institutional apparatus justified by performative metrics. The analytical observer's 'mountain' framing risks legitimizing what is actually a policy choice by calling it 'inherent to semiconductor learning curves.' This is a false summit if the alternative (open competition + targeted R&D) could achieve comparable capability faster.",
+    "directionality_logic": "Domestic manufacturers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; negative effective extraction means they subsidize the system. Indian consumers/SMEs: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit options from domestic market restrictions. Global suppliers: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.73. Significant extraction (tariff barriers, preferential procurement) but not maximal because they retain arbitrage paths (joint ventures, lobbying, waiting for policy change). Government agencies: Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low-to-moderate effective extraction because government is the architect of the constraint and can modify it; experiences the mission as agency-enabling rather than extractive. Export apparatus: Split between beneficiary (institutional, arbitrage for success metrics) and victim (constrained by actual performance requirements); piton classification derives from theater gate, not directionality. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival; the false summit detector should flag this.",
+    "mandatrophy_analysis": "The mandatrophy is NOT fully resolved. The core ambiguity: Is this a legitimate temporary industrial bootstrap (scaffold with sunset) or a permanent protectionist extraction (snare masquerading as policy)? The mandatrophy resolves partially via time horizon: from a 10-15 year generational perspective (government view), the mission is scaffold\u2014the sunset is explicit. From a consumer or global-supplier view at biographical timescale, it is snare\u2014the extraction is immediate and persistent. From the analytical view, the mountain framing is false\u2014semiconductors are not inherently subject to immutable technological constraints that require permanent protection. What IS immutable is the time cost of learning: building manufacturing capability takes years. What IS NOT immutable is the choice to use protectionism vs. open competition + targeted R&D. The escalating theater_ratio and extractiveness suggest that the mission is drifting from scaffold toward piton (performance metrics becoming decoupled from functional outcomes) or toward snare (sunset never arriving). Resolution depends on whether forced technology transfer actually produces autonomous manufacturers or remains perpetually dependent on foreign IP."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "rare_earth_supply_dependency",
+      "semiconductor_trade_war_dynamics",
+      "technology_transfer_coercion"
+    ],
+    "dual_formulation_note": "The Indian Semiconductor Mission 2.0 operates at the nexus of three distinct structural constraints: (1) Rare earth element sourcing and refinement (upstream supply chain), (2) geopolitical semiconductor competition (bilateral trade dynamics), and (3) institutional forced technology transfer (IP extraction via subsidy conditionality). This story focuses on the direct internal constraint (extractiveness via protectionism and preferential procurement). Upstream supply constraints have different \u03b5 values; downstream trade war dynamics are separate stories linked here."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

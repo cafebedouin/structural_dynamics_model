@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "semantic_overload_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "semsat"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.64,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Semantic Saturation Threshold",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domain_specialists",
+      "credential_gatekeepers"
+    ],
+    "victims": [
+      "domain_novices",
+      "cross_domain_collaboration",
+      "epistemic_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Domain Novice",
+      "comment": "PERSPECTIVE 1: DOMAIN NOVICE (SNARE) \u2014 Cannot exit the lexical barriers without years of apprenticeship. Trapped by jargon density that increases faster than learning capacity. Theater ratio reflects that much specialized language serves credentialing rather than precision (e.g., Latin legal terminology). d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.75."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Junior Professional",
+      "comment": "PERSPECTIVE 2: JUNIOR PROFESSIONAL (TANGLED ROPE) \u2014 Constrained by requirement to master jargon for credentialing and collaboration, but also benefits from domain knowledge premium and gatekeeping that reduces competition. The semantic density both excludes competitors and enables precise communication within the field. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Domain Specialist",
+      "comment": "PERSPECTIVE 3: DOMAIN SPECIALIST (ROPE) \u2014 Benefits from precision gains of specialized vocabulary. Experiences the constraint as coordination: dense language enables rapid communication among peers and establishes professional status. Can arbitrage between technical and lay contexts. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Cross-Domain Coalition",
+      "comment": "PERSPECTIVE 4: CROSS-DOMAIN COALITION (SCAFFOLD) \u2014 Interdisciplinary collaboration initiatives, plain-language publishing movements, and open-science communities see semantic saturation as a temporary coordination failure with built-in sunset. Glossaries, translation layers (e.g., ArXiv abstracts for lay readers), and simplified notation systems are creating parallel pathways that bypass dense jargon. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.21. Low effective extraction because agents see alternative pathways forming."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Historical Terminology System",
+      "comment": "PERSPECTIVE 5: HISTORICAL TERMINOLOGY SYSTEM (PITON) \u2014 Vestigial Latin terminology in law, Greek in medicine, and obsolete notation systems persist through institutional inertia despite their low functional necessity. The constraint is maintained because tradition validates authority, not because the language precision justifies the accessibility cost. theater_ratio=0.58 reflects that approximately half the semantic density serves performative credentialing rather than functional precision."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, semantic specialization is inherent to knowledge accumulation: as domains mature, precise language becomes necessary for capturing complex distinctions. This perspective frames jargon as an inescapable cost of technical depth. However, the structural data (\u03b5=0.52, suppression=0.64, beneficiaries/victims explicitly declared, requires_active_enforcement=true) contradicts a mountain classification \u2014 the engine will detect this as a false summit, revealing that institutional gatekeeping (not inherent complexity) drives jargon accumulation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "precision_necessity_threshold",
+      "question": "What fraction of specialized terminology serves functional precision vs credentialing theater?",
+      "resolution_mechanism": "Comparative analysis: identical technical concepts explained in specialized vs plain language; measurement of comprehension loss when jargon is replaced with primitives",
+      "impact": "If precision-functional \u2265 0.70: jargon is justified coordination (Rope/Tangled Rope). If < 0.70: jargon is primarily gatekeeping (Snare/Scaffold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Fraction of jargon serving precision vs credentialing"
+    },
+    {
+      "id": "lexical_growth_rate_ceiling",
+      "question": "Is semantic saturation self-limiting (growth rate slows as domain matures) or accelerating (new subdisciplines create new terminology)?",
+      "resolution_mechanism": "Time-series analysis of new term adoption rates; tracking of terminology adoption cycles in mature vs emerging fields",
+      "impact": "If self-limiting: saturation is temporary (scaffold perspective valid). If accelerating: saturation is structural (snare perspective deepens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether semantic growth is self-limiting or accelerating"
+    },
+    {
+      "id": "cognitive_load_vs_precision_tradeoff",
+      "question": "Does increased jargon density improve precision of domain concepts or merely shift cognitive load to memorization?",
+      "resolution_mechanism": "Controlled studies comparing expert comprehension and communication speed with vs without specialized terminology; error analysis on tasks requiring novel application",
+      "impact": "If precision improved: dense language is functional (justifies tangled rope). If load merely shifted: density is performative (confirms snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether jargon improves precision or merely shifts cognitive burden"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "As specialized domains mature \u2014 from software engineering to medicine to law to theoretical physics \u2014 their professional vocabularies become increasingly dense. This constraint represents the structural tension between precision (specialized language enables exact communication about complex topics) and accessibility (dense jargon excludes newcomers and blocks cross-domain collaboration). The semantic saturation threshold is the point at which jargon density exceeds functional necessity and begins serving primarily as a credentialing barrier. The constraint exhibits tangled rope classification: it coordinates within-domain expertise (genuine precision gains) while extracting from novices, outsiders, and cross-domain collaborators (forced apprenticeship, gatekeeping). Theater ratio (0.58) reflects that approximately 58% of specialized terminology serves performative credentialing rather than functional communication precision. Over the 50-year interval, extractiveness has increased from 0.28 to 0.52, indicating that jargon accumulation has progressively exceeded functional requirements. Theater ratio has risen from 0.35 to 0.58, showing that the proportion of terminological theater has grown as domains mature.",
+    "key_agents": [
+      "Domain Specialists: Primary beneficiary (institutional/arbitrage) \u2014 capture status premium, precision gains, and credential value from specialized vocabulary",
+      "Domain Novices: Primary victim (powerless/trapped) \u2014 must invest years in lexical mastery; face permanent barriers to entry if cognitive load exceeds learning capacity",
+      "Junior Professionals: Secondary victim (moderate/constrained) \u2014 bear costs of credentialing apprenticeship while also benefiting from gatekeeping that reduces competition",
+      "Cross-Domain Collaboration: Victim (moderate/constrained) \u2014 semantic boundaries block integration of insights from adjacent fields; translation layers introduce friction and errors",
+      "Epistemic Accessibility: Abstract victim (powerless/trapped) \u2014 public understanding of specialized domains degrades; expertise becomes opaque to non-specialists",
+      "Cross-Domain Coalition: Organized agents (organized/constrained) \u2014 plain-language publishing, interdisciplinary translation initiatives, and open-science movements building alternative pathways",
+      "Historical Terminology System: Institutional actor (institutional/arbitrage) \u2014 Latin, Greek, and vestigial notation systems persist through tradition and authority rather than functional necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint exhibits genuine coordination benefits (precise technical communication within domains) but increasingly serves gatekeeping that exceeds functional requirements. The rise from 0.28 to 0.52 over the interval reflects accumulation of terminological theater beyond justified precision. Suppression (0.64): High. Barriers to entry include: (a) years of focused study required for fluency, (b) cognitive load that increases faster than domain complexity justifies, (c) publication norms that privilege technical terminology, (d) professional certification tied to vocabulary mastery, (e) absence of affordable translation layers. Suppression is structural but not absolute \u2014 some domains (software, contemporary fields) maintain lower semantic density. Theater ratio (0.58): Moderate-high. Approximately 58% of specialized terminology reflects credentialing theater rather than precision gain. Examples: Latin legal terminology (functionally equivalent to English alternatives), Greek medical terminology (precision no greater than English primitives), subscript notation in physics (convention rather than necessity). Theater has increased with domain maturity, suggesting that as genuine precision gains plateau, additional terminology increasingly serves status signaling.",
+    "perspectival_gap": "This constraint demonstrates sharp disagreement between specialists and novices. The specialist sees coordination (Rope) \u2014 dense language enables rapid, precise communication among trained peers. The novice sees pure extraction (Snare) \u2014 gatekeeping that forces costly apprenticeship. The junior professional experiences hybrid (Tangled Rope) \u2014 the system both requires and rewards lexical mastery. The cross-domain coalition sees a temporary problem with exit paths forming (Scaffold) \u2014 plain-language movements and translation layers are building alternative verification pathways. The vestigial terminology system (Piton) \u2014 Latin legal terms, Greek medical terms, obsolete notation \u2014 persists through institutional inertia despite low marginal precision benefit. The analytical observer risks seeing inherent necessity (Mountain) \u2014 specialized language must increase with domain complexity \u2014 but the rising theater ratio and extraction values reveal this as a false summit. The constraint is contingent on institutional credentialing structures, not inherent to knowledge itself.",
+    "directionality_logic": "Domain specialists: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. Domain novices: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Junior professionals: Victim + constrained, but also have institutional connections \u2192 d\u22480.68, f(d)\u22481.05. High extraction. Cross-domain collaboration: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.08. High extraction. Epistemic accessibility: Victim + trapped (abstract agent) \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Cross-domain coalition: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction; agents see alternative pathways. Historical terminology system: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification comes from theater gate, not from beneficiary status.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that semantic saturation is NOT an inherent feature of knowledge complexity but a contingent institutional arrangement. The false summit (Mountain perspective) naturalizes what is actually a tangled rope. The mandatrophy is resolved by asking: 'Could the same domains function with lower semantic density?' The answer is yes \u2014 many fields (mathematics, computer science, contemporary physics) maintain lower jargon density than older domains (law, medicine, philosophy) despite equal or greater conceptual complexity. This reveals that terminological density is driven by institutional credentialing structures and historical accident, not functional necessity. The rising extractiveness (0.28 \u2192 0.52) and theater ratio (0.35 \u2192 0.58) over the interval confirm that jargon accumulation exceeds precision gains. The constraint is a tangled rope with a real coordination function (precise within-domain communication) and real extraction (novice gatekeeping, cross-domain friction), not a mountain."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "credential_gatekeeping",
+      "interdisciplinary_integration_friction",
+      "knowledge_opacity_to_publics"
+    ],
+    "dual_formulation_note": "Semantic saturation can be decomposed into two structurally distinct constraints: (1) functional precision accumulation (\u03b5\u22480.15, Mountain for mature domains) and (2) credentialing theater accumulation (\u03b5\u22480.45, Tangled Rope). The constraint story treats them as unified (\u03b5=0.52) to model the real institutional experience, where specialists cannot easily distinguish precision gains from status signaling. Network links to credential_gatekeeping (upstream cause) and interdisciplinary_integration_friction (downstream effect)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ]
+}

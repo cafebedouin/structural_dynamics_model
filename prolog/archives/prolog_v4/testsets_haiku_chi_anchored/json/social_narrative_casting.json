@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "social_narrative_casting",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "snc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Social Narrative Casting (Criticism-as-Projection)",
+    "topic_domain": "social/psychological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "critic_narrative_closure",
+      "critic_identity_maintenance"
+    ],
+    "victims": [
+      "subject_autonomy",
+      "social_group_cohesion"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Cast Subject",
+      "comment": "PERSPECTIVE 1: THE CAST SUBJECT (SNARE) \u2014 The person criticized for occupying a role they did not accept, trapped by social visibility and asymmetric narrative control. Cannot exit the criticism without appearing defensive or accepting the assigned role. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.57. High extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Critic (Director)",
+      "comment": "PERSPECTIVE 2: THE CRITIC / DIRECTOR (ROPE) \u2014 Experiences the casting as coordination of their own narrative coherence and identity maintenance. Criticism performs the functional role of organizing their internal story. d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.05. Net beneficiary; sees casting as legitimate meaning-making."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Audience / Witnessing Peer Group",
+      "comment": "PERSPECTIVE 3: AUDIENCE / PEER GROUP (TANGLED ROPE) \u2014 Constrained by social conformity pressure and narrative persuasiveness; benefits from reduced social ambiguity (the casting resolves uncertainty about the subject's role). Also extraction victims if the casting spreads misinformation or social exclusion. d\u22480.60, f(d)\u22480.78, \u03c3=0.8 \u2192 \u03c7\u22480.33. Mixed coordination (clarity) and extraction (suppression of alternative narratives)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Counter-Narrative / Accountability Communities",
+      "comment": "PERSPECTIVE 4: COUNTER-NARRATIVE COMMUNITIES (SCAFFOLD) \u2014 Organized agents (friends, therapists, advocacy groups) who explicitly reject the critic's casting and offer alternative frameworks have a sunset logic: as the subject develops self-advocacy and the counter-narrative spreads, the critic's casting loses social force. d\u22480.45, f(d)\u22480.50, \u03c3=0.9 \u2192 \u03c7\u22480.23. Low effective extraction because organized actors see an exit path (narrative reframing, community building)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Psychological Trait Theory / Essentialist Framing",
+      "comment": "PERSPECTIVE 5: PSYCHOLOGICAL TRAIT ESSENTIALISM (PITON) \u2014 The cultural narrative that criticism reveals 'true character' is largely performative: trait stability is much weaker than folk psychology assumes, and criticism often projects the critic's unresolved conflicts onto the subject. The essentialism persists through institutional inertia (personality psychology, HR evaluations, gossip norms) despite low predictive validity. theater_ratio\u22480.81 satisfies the piton gate (\u22650.70). The performative maintenance of 'this criticism is accurate' masks the actual mechanism (projection and narrative closure)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Projection as Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PROJECTION LAW (MOUNTAIN) \u2014 From a universal/civilizational perspective, humans are narrative-constructing agents who interpret external behavior through internal template-matching (object relations theory, social cognition). This creates an irreducible gap between the critic's internal casting and the subject's actual behavior \u2014 the gap is inherent to human perception, not a choice or policy. However, the structural data (\u03b5=0.52, suppression=0.68, theater=0.81) contradicts the mountain classification. The engine will compute this as a false summit, revealing that while perception always involves interpretation, the degree of coercion and suppression is not inevitable but contingent on social norms that could be changed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "projection_vs_accuracy_threshold",
+      "question": "What proportion of criticism reflects genuine behavioral pattern observation vs. critic's projected narrative need?",
+      "resolution_mechanism": "Multi-rater behavioral coding by independent observers; comparison of critic's description to subject's self-report and actual behavioral evidence; temporal stability of criticism after subject changes behavior",
+      "impact": "If projection > 70%: casting is almost pure extraction (Snare from subject perspective). If projection < 30%: casting contains significant coordination function (Rope from critic perspective is justified). If projection 40-60%: true tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of criticism reflecting projection vs. genuine observation"
+    },
+    {
+      "id": "narrative_closure_necessity",
+      "question": "Does the critic genuinely require this specific casting for identity coherence, or is the casting opportunistic post-hoc rationalization?",
+      "resolution_mechanism": "Longitudinal analysis of critic's narrative consistency; whether the same subject receives different castings in different contexts; whether the critic accepts evidence contradicting the casting or doubles down; existence of alternative narratives that would maintain critic identity",
+      "impact": "If necessary for coherence: extraction is genuine functional extraction (critic extraction as real cost to them of changing narrative). If opportunistic: extraction is pure control and theater with no functional basis.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the casting is necessary for the critic's identity coherence"
+    },
+    {
+      "id": "social_reinforcement_loop_reversibility",
+      "question": "Once established, can the critic's casting be linguistically and socially reversed without the subject performing explicitly opposite behavior?",
+      "resolution_mechanism": "Experimental: public reframing of the narrative by counter-source; measurement of adoption speed; comparison to castings presented without prior narrative anchoring; longitudinal narrative stability after reframing",
+      "impact": "If irreversible (sticky): suppression is high and structural (Snare confirmed). If reversible: suppression is contingent on social context, not inherent (suggests lower suppression value).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether established narrative castings can be reversed without subject behavior change"
+    },
+    {
+      "id": "subject_collusion_detection",
+      "question": "Does the subject sometimes unconsciously or consciously adopt the assigned role to reduce cognitive dissonance or social friction?",
+      "resolution_mechanism": "Analysis of subject's self-narrative before/after public casting; behavioral changes that align with the casting; subject's own investment in the narrative (identity fusion); comparison of subject behavior in presence vs. absence of the critic",
+      "impact": "If significant collusion: constraint becomes consensual (theater increases, extraction decreases). If minimal: constraint remains coercive (suppression remains high).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which subject internalizes and enacts the assigned narrative role"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Social narrative casting occurs when a critic imposes a specific role (villain, victim, fool, obstacle) onto a subject through repeated criticism, positioning the criticism as 'truth-telling' while the mechanism is actually projection of the critic's internal narrative needs. The constraint exhibits a fundamental asymmetry: the critic experiences the casting as a coordination function (organizing their own identity and worldview), while the subject experiences it as extraction (loss of autonomy, forced role occupancy, reputational damage). The constraint is enforced through social visibility \u2014 the casting is not imposed unilaterally but spreads through audience adoption of the critic's narrative frame. The theater ratio rises over time (0.55 \u2192 0.81) as the casting becomes self-fulfilling: the subject's defensive responses are reinterpreted as confirmations of the assigned role, and the critic's original projection becomes invisible beneath accumulated behavioral evidence that actually reflects the subject's reaction to being cast. This is a core mechanism of relational harm in communities, workplaces, and families where narrative authority concentrates in particular speakers.",
+    "key_agents": [
+      "Critic/Director (institutional/arbitrage): Primary beneficiary. Experiences casting as legitimate narrative coherence and identity maintenance. Achieves psychological closure and social authority.",
+      "Cast Subject (powerless/trapped): Primary victim. Cannot exit the public role or deny the casting without appearing defensive. Faces reputational damage, isolation, and identity distortion as social others adopt the critic's frame.",
+      "Audience/Peer Group (moderate/constrained): Secondary actor. Benefits from narrative clarity (reduced social ambiguity) but also victimized if the casting is false or distorts group understanding. Constrained by conformity pressure and narrative persuasiveness.",
+      "Counter-Narrative Communities (organized/constrained): Secondary actor. Therapists, friends, advocates who explicitly reject the casting and offer alternative frameworks. Possess agency and organized resources to reframe the narrative.",
+      "Psychological Essentialism Culture (institutional/arbitrage): Systemic actor. The cultural belief that criticism reveals 'true character' legitimizes the casting and provides theater for the enforcement mechanism.",
+      "Analytical Observer (analytical/analytical): Civilizational perspective that risks naturalizing the constraint as inherent to human perception rather than contingent on social norms."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The critic extracts psychological benefits (narrative closure, identity security, social authority) from the subject's assignment to a role. The subject pays significant costs: reputational harm, loss of autonomy in how they are perceived, and often involuntary behavioral adaptation to the assigned role. However, extractiveness is not maximal (\u22650.66 for snare) because the constraint operates partly through consent and internalization\u2014some subjects internalize the casting, reducing pure coercion. The measurement trajectory (0.32 \u2192 0.52) reflects the self-fulfilling mechanism: initial projection accumulates behavioral evidence, which increases the critic's extraction capacity. Suppression (0.68): High. The mechanisms suppressing alternatives are: (1) narrative authority concentration (the critic's voice carries disproportionate weight), (2) reputational sunk cost (once the casting spreads, the subject faces social friction if they contradict it), (3) confirmation bias (evidence conforming to the casting is remembered and shared; disconfirming evidence is dismissed as the subject 'trying to look good'), and (4) the subject's own psychological defense mechanisms (denial or rage can reinforce the casting as 'unstable behavior'). Theater ratio (0.81): Very high. The performative component has risen substantially as the casting becomes established. The critic now performs narrative authority ('I know who this person really is') rather than grounding criticism in current behavior. The audience performs belief in the narrative even as evidence contradicts it. The subject performs reactions that confirm the assigned role even if those reactions are responses to being cast. The increasing theater reflects that the casting has become decoupled from behavioral observation and now operates as pure social ritual.",
+    "perspectival_gap": "The most profound perspectival gap exists between the critic and the subject. The critic experiences criticism as coordination of meaning and identity (Rope) \u2014 they are solving a genuine epistemic problem (understanding the subject's character, organizing their own narrative). The subject experiences the same speech act as coercive extraction (Snare) \u2014 an imposition of a role they did not accept, enforced through social visibility and reputational damage. The audience occupies a middle position: they benefit from the narrative clarity the casting provides (reduced ambiguity), but they also become extraction victims if the casting is false or distorts their relationships with the subject. The counter-narrative communities see a temporary problem with a sunset (Scaffold) \u2014 as the subject gains external validation or the counter-narrative spreads, the critic's casting loses social force. The essentialism frame that underpins the whole mechanism (Piton) performs the work of naturalizing contingent social norms as psychological truth. The analytical observer risks the false summit (Mountain) by seeing projection as an inherent feature of human perception rather than a contingent institutional arrangement that could be changed through norms of narrative humility, collaborative understanding, and role acceptance consent.",
+    "directionality_logic": "Critic: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Their experience of the constraint is as coordination and identity maintenance. Subject: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction and suppression. They cannot exit without accepting the role or appearing defensive. Audience: Mixed position \u2192 d\u22480.60, f(d)\u22480.78. They are both beneficiaries (narrative clarity) and victims (complicit in potential misinformation). Constrained exit because social conformity pressure makes narrative contradiction costly. Counter-narrative communities: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.50. Lower effective extraction because organization and external resources provide alternative narratives and reduce conformity pressure. Essentialism frame: d\u22480.05 (institutional arbitrage). Theater gate (0.81 \u2265 0.70) triggers piton classification despite low chi. Analytical observer: d\u22480.72, f(d)\u22481.15. False summit risk: the observer naturalizes as inherent what is actually contingent.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by showing that the constraint is genuinely a Tangled Rope \u2014 it contains both a coordination function (the critic's legitimate need for narrative coherence) and an asymmetric extraction function (the subject's loss of autonomy). The critic's Rope perspective is real: the act of organizing one's understanding of another person is a genuine cognitive need, and criticism can be a legitimate way to communicate patterns. However, the subject's Snare perspective is also real: without mechanisms of narrative consent and collaborative sense-making, that same act becomes coercive extraction. The constraint resolves mandatrophy by distinguishing between criticism-as-coordination (where the subject participates in meaning-making) and criticism-as-casting (where the subject is positioned without consent into a role selected to serve the critic's narrative needs). The presence of counter-narrative communities and the reversibility of castings when external support increases suggest the constraint is not purely structural but contingent on social norms that privilege the critic's narrative authority. This is why the scaffold perspective is real \u2014 a world with strong norms of narrative humility and subject consent to characterization would lower both the theater and the suppression significantly, turning the constraint from Tangled Rope toward Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "relational_trauma_accumulation",
+      "identity_diffusion_under_persistent_misrepresentation",
+      "narrative_authority_concentration"
+    ],
+    "dual_formulation_note": "Social narrative casting is downstream of individual psychological projection mechanisms but represents a distinct structural constraint at the group/social level. The upstream constraint (individual projection) reflects cognitive mechanisms; this constraint reflects how those mechanisms become institutionalized through social reinforcement, narrative authority, and conformity pressure. The \u03b5 values differ: individual projection (\u03b5\u22480.25) is a natural cognitive pattern; social casting (\u03b5\u22480.52) adds extraction through social enforcement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ]
+}

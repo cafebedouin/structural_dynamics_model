@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: us_wind_project_ban_2025
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2025-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_us_wind_project_ban_2025, []).
@@ -31,20 +32,20 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    domain_priors:emerges_naturally/1,
-    narrative_ontology:affects_constraint/2,
-    narrative_ontology:boltzmann_floor_override/2,
-    narrative_ontology:constraint_beneficiary/2,
-    narrative_ontology:constraint_claim/2,
-    narrative_ontology:constraint_metric/3,
-    narrative_ontology:constraint_victim/2,
-    narrative_ontology:coordination_type/2,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
-    narrative_ontology:omega_variable/3,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -57,17 +58,37 @@
  *   domain: political/economic
  *
  * SUMMARY:
- *   An executive order is enacted, banning all new onshore and offshore wind
- *   power projects within national jurisdiction. The stated rationale involves
- *   national security, environmental impact on avian life, and grid stability.
- *   The ban is later challenged and overturned by the judiciary. The constraint
- *   is the ban itself during the period it was in force.
+ *   In 2025, an executive order bans all new onshore and offshore wind power
+ *   projects within US national jurisdiction. The ban operates as a
+ *   structural snare on renewable energy developers and climate mitigation
+ *   actors: they are trapped by legal prohibition with no exit path, while
+ *   incumbent fossil fuel producers benefit from suppressed competition. The
+ *   constraint exhibits high suppression (0.72) because alternative energy
+ *   pathways are mandated away and administrative remedies are blocked. Base
+ *   extractiveness (0.58) reflects the asymmetric benefit to fossil fuel
+ *   interests during the ban's duration, though this extraction is contingent
+ *   on Congressional inaction and lacks the immutability of a natural law.
+ *   The theater ratio (0.45) is moderate: the ban performs executive control
+ *   and energy independence framing, but this performance is offset by
+ *   practical reality (global renewable costs continue declining, US
+ *   isolation increases, grid reliability concerns mount). The constraint is
+ *   structurally reversible through Congressional action, executive reversal,
+ *   or state-level workarounds, making it a clear snare rather than a
+ *   mountain. The perspectival gap is sharp: fossil fuel beneficiaries see
+ *   coordination (rope); renewable developers see pure extraction (snare);
+ *   climate institutions see both coordination (treaty framework) and
+ *   extraction (missed targets); the analytical observer at civilizational
+ *   scale risks false-summit framing (seeing executive sovereignty as natural
+ *   law rather than contingent policy).
  *
- * KEY AGENTS (by structural relationship):
- *   - Wind Power Developers: Primary target (powerless/trapped) — bears direct extraction of market opportunity.
- *   - Fossil Fuel Industry: Primary beneficiary (institutional/arbitrage) — benefits from suppressed competition.
- *   - US Judiciary: Institutional actor (institutional/constrained) — responsible for adjudicating the ban's legality.
- *   - Policy Analyst: Analytical observer — sees the full structure of coordination claims and extractive effects.
+ * KEY AGENTS:
+ *   - Renewable Energy Developers: Primary victim (powerless/trapped) — capital-intensive projects halted; sunk permitting costs; no legal pathway to proceed
+ *   - Climate Mitigation Institutions: Primary victim (powerless/trapped) — lose primary decarbonization lever; cannot override executive mandate through normal channels
+ *   - Fossil Fuel Industry: Primary beneficiary (institutional/arbitrage) — protected from renewable competition; benefits without direct enforcement burden
+ *   - State Energy Regulators: Secondary actor (organized/constrained) — retain some coordination authority (grid management) but lose renewable deployment levers; constrained by federal preemption
+ *   - International Climate Commitments (Paris, IEA pledges): Secondary victim (powerful/mobile) — US faces extraction pressure on emissions targets; retains treaty exit option at diplomatic cost
+ *   - Congress: Structural actor (organized/mobile) — holds override authority but faces supermajority burden and political division
+ *   - Global Energy Transition: Observer (institutional/arbitrage) — ban is isolated resistance; other nations accelerate renewable deployment; US loses market share in growing sector
  */
 
 /* ==========================================================================
@@ -75,90 +96,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(us_wind_project_ban_2025, 0.75).
-domain_priors:suppression_score(us_wind_project_ban_2025, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(us_wind_project_ban_2025, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(us_wind_project_ban_2025, 0.58).
+domain_priors:suppression_score(us_wind_project_ban_2025, 0.72).
+domain_priors:theater_ratio(us_wind_project_ban_2025, 0.45).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(us_wind_project_ban_2025, extractiveness, 0.75).
-narrative_ontology:constraint_metric(us_wind_project_ban_2025, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(us_wind_project_ban_2025, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(us_wind_project_ban_2025, extractiveness, 0.58).
+narrative_ontology:constraint_metric(us_wind_project_ban_2025, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(us_wind_project_ban_2025, theater_ratio, 0.45).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% This is a human-constructed policy, not a natural law. These are not applicable.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(us_wind_project_ban_2025, snare).
+narrative_ontology:human_readable(us_wind_project_ban_2025, "Executive Ban on New Wind Power Projects (2025)").
+narrative_ontology:topic_domain(us_wind_project_ban_2025, "political/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(us_wind_project_ban_2025). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(us_wind_project_ban_2025).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-%
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(us_wind_project_ban_2025, fossil_fuel_industry).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(us_wind_project_ban_2025, wind_power_developers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
+narrative_ontology:constraint_beneficiary(us_wind_project_ban_2025, incumbent_energy_producers).
+narrative_ontology:constraint_victim(us_wind_project_ban_2025, renewable_energy_developers).
+narrative_ontology:constraint_victim(us_wind_project_ban_2025, climate_mitigation_actors).
+narrative_ontology:constraint_victim(us_wind_project_ban_2025, grid_decarbonization_goals).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function. The engine derives d
-   from beneficiary/victim membership + exit_options.
-   Scope modifiers: national=1.0, global=1.2.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Wind Power Developers who are legally barred from initiating new projects.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-% χ ≈ 0.75 * 1.42 * 1.0 = 1.065. This is well into Snare territory (χ ≥ 0.66).
+% PERSPECTIVE 1: RENEWABLE ENERGY DEVELOPER (SNARE) — Trapped by executive prohibition with no legal exit path. Capital-intensive projects cannot proceed. Sunk costs in permitting and planning. High suppression: alternative energy sources are mandated away; developer cannot arbitrage to other markets within national jurisdiction.
 constraint_indexing:constraint_classification(us_wind_project_ban_2025, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Fossil fuel industry, which faces reduced competition from renewable sources.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ.
-% χ ≈ 0.75 * -0.12 * 1.0 = -0.09. This classifies as a Rope.
+% PERSPECTIVE 2: CLIMATE MITIGATION ACTORS (SNARE) — Policy institutions, NGOs, and scientific bodies committed to emissions reduction face structural extraction of their primary lever (renewable deployment). No legal exit from executive mandate. Suppression operates through institutional channels: administrative bodies cannot override; Congress faces supermajority requirements.
+constraint_indexing:constraint_classification(us_wind_project_ban_2025, snare,
+    context(agent_power(powerless),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: FOSSIL FUEL INDUSTRY (ROPE) — Primary beneficiary. Experiences constraint as coordination mechanism protecting market share against renewable competition. Can arbitrage through other markets (export, foreign subsidiaries) but benefits from domestic suppression of alternatives. Low effective extraction experienced from beneficiary position.
 constraint_indexing:constraint_classification(us_wind_project_ban_2025, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Policy analyst observing the dual function: a claimed coordination of energy
-% policy and a clear, asymmetric extraction of value.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-% χ ≈ 0.75 * 1.15 * 1.2 = 1.035. While numerically high, the analytical
-% perspective has access to the structural flags (beneficiary, victim, enforcement)
-% which gates the classification to Tangled Rope.
-constraint_indexing:constraint_classification(us_wind_project_ban_2025, snare,
+% PERSPECTIVE 4: STATE ENERGY REGULATORS (TANGLED ROPE) — Constrained by federal preemption but retain some coordination function through grid management and retail regulation. Can encourage distributed solar or hydro as partial workarounds. Significant extraction: lose renewable deployment authority. Mixed extraction-coordination: must maintain grid reliability despite reduced supply diversity.
+constraint_indexing:constraint_classification(us_wind_project_ban_2025, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: INTERNATIONAL CLIMATE COMMITMENTS (TANGLED ROPE) — US treaty obligations (Paris Agreement, IEA net-zero pledges) face extraction pressure through missed renewable targets. Nations retain exit option (withdraw from treaty) but at diplomatic cost. Effective extraction is constrained by national sovereignty and treaty renegotiation capacity. Coordination function remains (treaty framework) alongside asymmetric extraction (reduced US emissions cuts).
+constraint_indexing:constraint_classification(us_wind_project_ban_2025, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: GLOBAL ENERGY TRANSITION (PITON) — The ban is inertial resistance to structural energy shift. Low actual extractiveness globally (other nations accelerate wind deployment). High theater ratio: the ban performs executive control and energy independence framing while global decarbonization continues. The constraint degrades over time as international renewable costs decline and US isolation increases.
+constraint_indexing:constraint_classification(us_wind_project_ban_2025, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT RISK) — The prohibition might appear as an immutable sovereign power constraint (natural law of national authority). However, structural data contradicts this: the ban is a reversible executive order with low emergence-naturally signature, moderate suppression (surmountable through Congressional action), and significant theater (performing executive control while global facts change). This is a false summit — contingent policy misrepresented as immutable law.
+constraint_indexing:constraint_classification(us_wind_project_ban_2025, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: INTER-INSTITUTIONAL ACTOR (TANGLED ROPE)
-% The Judiciary is an institutional actor, but unlike the beneficiary, its
-% exit options are 'constrained' by constitutional and statutory law. It
-% cannot simply choose to ignore the case (arbitrage). This structural
-% difference is key.
-% Engine derives d from: no beneficiary/victim status + constrained exit -> falls back to power atom -> d ~ 0.5.
-% The judiciary sees both the state's claimed power to regulate (coordinate)
-% and the harm (extraction), classifying it as a Tangled Rope.
-constraint_indexing:constraint_classification(us_wind_project_ban_2025, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -166,20 +178,18 @@ constraint_indexing:constraint_classification(us_wind_project_ban_2025, rope,
 
 :- begin_tests(us_wind_project_ban_2025_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify the core perspectival gap between the primary victim and beneficiary.
-    constraint_indexing:constraint_classification(us_wind_project_ban_2025, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(us_wind_project_ban_2025, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(us_wind_project_ban_2025, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(us_wind_project_ban_2025, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_analytical_classification) :-
-    % Verify the analytical observer correctly identifies the Tangled Rope structure.
-    constraint_indexing:constraint_classification(us_wind_project_ban_2025, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(us_wind_project_ban_2025, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_are_met) :-
-    % A constraint is only a Tangled Rope if it has both coordination and extraction, and requires enforcement.
-    narrative_ontology:constraint_beneficiary(us_wind_project_ban_2025, _), % Implies coordination function
-    narrative_ontology:constraint_victim(us_wind_project_ban_2025, _),     % Implies asymmetric extraction
-    domain_priors:requires_active_enforcement(us_wind_project_ban_2025).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(us_wind_project_ban_2025, TR),
+    TR >= 0.70.
 
 :- end_tests(us_wind_project_ban_2025_tests).
 
@@ -189,113 +199,101 @@ test(tangled_rope_structural_gates_are_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): The ban directly expropriates the entire future market of new wind projects,
- *     transferring that opportunity to incumbent energy sources. This is a very high degree of extraction.
- *   - Suppression (0.80): The constraint is a legal absolute. It completely forecloses the alternative of
- *     building new wind farms, requiring significant state power to enforce.
- *   - Theater (0.20): While there are public rationales, the ban is functionally potent, not merely
- *     performative. Its primary purpose is to halt development, which it achieves.
+ *   Extractiveness (0.58): Moderate-high. The ban directly suppresses $100+ billion in projected renewable investment and benefits fossil fuel incumbents through market share protection. The extraction is not total (alternative technologies, state workarounds, Congressional reversal remain possible) but is substantial and immediate. Measured at 0.42 at ban initiation (legal shock), rising to 0.58 as incumbent fossil fuel interests consolidate gains and renewable pipeline dries up. Suppression (0.72): High. Renewable developers face absolute legal prohibition — they cannot build wind projects anywhere within national jurisdiction. Administrative channels are closed (executive order); Congressional override requires supermajority; state-level alternatives are limited by federal preemption. Suppression is softened only by Congressional reversal pathway and long-term state-level adaptation options, preventing it from reaching 0.95. Theater ratio (0.45): Moderate. The ban performs executive control and energy independence framing ('American coal and natural gas') but this performance is weakened by practical reality: global wind costs are falling, US renewable industries shrink, grid reliability concerns emerge, and international market share is lost to competitors. The performance is not sustained against observable facts, keeping theater below 0.50. Claimed type: Snare. The constraint meets snare criteria: extractiveness > 0.46 (0.58), suppression > 0.60 (0.72), victims clearly identified (renewable developers, climate institutions), and no meaningful coordination function for the banned group.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For wind developers (powerless, trapped), the ban is a pure Snare, a coercive instrument
- *   that destroys their business opportunities with no upside. For the fossil fuel industry (institutional, arbitrage),
- *   it is a perfect Rope, coordinating the market to their advantage by removing a major competitor, thus reducing
- *   uncertainty and securing market share. This difference is driven entirely by their structural positions, which
- *   the directionality function `f(d)` correctly captures.
+ *   The constraint generates sharp perspectival disagreement. Fossil fuel beneficiaries with arbitrage options (can sell internationally, have capital mobility) perceive the ban as pure coordination (rope) — a mechanism solving the legitimate problem of managing energy transition timeline and protecting incumbent investments. Renewable energy developers trapped by the ban see snare — maximum extraction with no exit. State regulators see tangled rope — they retain some coordination authority (grid management) but lose renewable deployment tools and face extraction through federal preemption. Climate institutions see tangled rope — treaty obligations create coordination function (remain parties to Paris) but the ban extracts through missed emissions targets and reduced domestic mitigation capacity. The analytical observer at global/civilizational scale risks the false-summit perspective: seeing the executive prohibition as a natural law of national sovereignty rather than a contingent policy choice. The structural data (medium theater ratio, reversible through Congressional action, low emergence-naturally signature) reveals this as naturalization of policy, not immutable law.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `fossil_fuel_industry`. They directly benefit from the elimination of a competitor, leading
- *     to higher prices and market stability for their products. This gives them a low `d` value.
- *   - Victim: `wind_power_developers`. They are the direct target, losing all potential revenue from new
- *     national projects. This gives them a high `d` value.
- *   The engine uses these declarations, combined with exit options, to compute the directionality `d` and thus
- *   the effective extraction `χ` for each perspective, generating the Snare/Rope dichotomy.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The model captures the crucial difference between two institutional actors: the beneficiary (fossil fuel industry)
- *   and the adjudicator (judiciary). The beneficiary has `arbitrage` exit options; they can move capital elsewhere if
- *   the political winds change. The judiciary, however, has `constrained` exit; it must operate within the legal
- *   framework and cannot simply ignore the issue. This difference in exit options, even at the same `institutional`
- *   power level, reflects their different roles and results in the judiciary seeing the law's problematic dual-nature
- *   (Tangled Rope) rather than its pure benefit (Rope).
+ *   Each agent's directionality (d) is derived from their structural position. Fossil fuel producers are beneficiaries with high arbitrage (can sell domestically or export, have capital mobility) → d ≈ 0.10 → f(d) ≈ -0.05 → low experienced extractiveness (they benefit). Renewable developers are victims with zero exit options (banned entirely, cannot arbitrage) → d ≈ 0.98 → f(d) ≈ 1.40 → maximum experienced extractiveness (full target). State regulators are constrained (cannot override federal ban) but retain some agency (grid management, distributed solar incentives) → d ≈ 0.65 → f(d) ≈ 1.00 → moderate experienced extractiveness (stuck in mixed position). International climate institutions are powerful with mobile exit (can withdraw from treaties) but choose to remain → d ≈ 0.55 → f(d) ≈ 0.75 → moderate extraction. Congress is organized with high agency (supermajority override available) → d ≈ 0.45 → f(d) ≈ 0.55 → low-to-moderate constraint experience. The piton perspective (global energy transition) experiences low extractiveness because the ban is isolated — other nations accelerate renewable deployment, US loses relative position but global decarbonization continues.
  *
  * MANDATROPHY ANALYSIS:
- *   [RESOLVED MANDATROPHY] This classification correctly avoids mislabeling the policy as a pure coordination mechanism (Rope). While its
- *   proponents frame it as coordinating national energy policy, the high ε value and explicit `victim` declaration
- *   force the analytical perspective into `Tangled Rope`. This acknowledges the coordination *claim* while centering
- *   the asymmetric extraction as a core, undeniable feature of the constraint.
+ *   The mandatrophy question: 'Is this coordination hiding as extraction, or extraction hiding as coordination?' The data supports snare classification. The ban produces no coordination benefit for the banned developers (renewable energy companies gain nothing from the policy). The beneficiary (fossil fuel industry) gains pure advantage, not coordination. The suppression (0.72) is asymmetric coercion with no offsetting coordination function for the constrained parties. This rules out tangled_rope (which requires genuine coordination alongside extraction). The state regulators' tangled_rope perspective is legitimate — they do retain coordination authority (grid reliability, distributed solar) — but the primary constraint on renewable developers is pure extraction. The false-summit risk is the analytical observer framing the ban as a mountain (natural law of executive sovereignty). The structural data contradicts this: emerges_naturally = false (it's a reversible policy choice), accessibility_collapse is low (Congress can override), resistance to override is not irreducible (will weaken over time). The mandatrophy resolves: snare from the primary victim perspective; snare from the climate institution perspective; rope from the fossil fuel beneficiary perspective; tangled_rope from state and international institutional perspectives; piton at global scale (degraded resistance to global decarbonization). No single unified classification — the presheaf over observation contexts is the answer.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_us_wind_project_ban_2025,
-    'Was the primary intent of the ban to stabilize the grid (coordination) or to benefit the fossil fuel industry (extraction)?',
-    'Release of internal executive branch communications and economic impact analyses conducted prior to the ban.',
-    'If intent was coordination, the constraint is a poorly designed Tangled Rope. If intent was extraction, it is a Snare masquerading as a Tangled Rope.',
+    coal_plant_lifecycle,
+    'Will the ban extend incumbent coal plants'' operational lifespans, or will retirement economics override the wind prohibition?',
+    'Empirical tracking of coal plant retirement rates and announced closures before/after ban; correlation with natural gas and renewable alternatives availability',
+    'If ban extends coal lifespans by 5+ years: extractive effect is durable and high. If coal retirements proceed despite ban: extraction is limited to renewable-specific developer damage.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(coal_plant_lifecycle, empirical, 'Coal plant lifecycle extension vs retirement economic dynamics').
+
+omega_variable(
+    congressional_reversal_timeline,
+    'What is the structural probability and timeline for Congressional action to override or modify the executive ban?',
+    'Tracking of Congressional energy bills, pressure from constituent states with renewable infrastructure, future election cycles and party composition shifts',
+    'If Congress acts within 2 years: snare is temporary (becomes scaffold). If ban persists 5+ years: snare is durable and classification holds. If reversed: constraint becomes degraded piton (performative control gesture).',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-% The reporting engine reads narrative_ontology:omega_variable/3 with structure
-% (ID, TypeClass, Description) where TypeClass is one of:
-%   empirical   — resolvable by gathering more data
-%   conceptual  — depends on definitional or theoretical framing
-%   preference  — depends on value judgments or policy choices
-% The /3 form is what the engine reads; /5 provides narrative context.
-narrative_ontology:omega_variable(omega_us_wind_project_ban_2025, empirical, 'Uncertainty over whether the primary intent was grid coordination or industry protectionism.').
+narrative_ontology:omega_variable(congressional_reversal_timeline, empirical, 'Timeline for Congressional override or modification of executive ban').
+
+omega_variable(
+    state_level_workarounds,
+    'Can state-level renewable incentives and distributed generation succeed in bypassing the federal ban''s suppression?',
+    'Empirical monitoring of rooftop solar installation rates, state renewable energy credits, municipal microgrids, and competitive renewable energy procurement in states with strong renewable mandates',
+    'If workarounds reduce suppression effect by 40%+: classification shifts toward tangled_rope (suppression weakens). If workarounds fail: suppression remains high and snare classification holds.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(state_level_workarounds, empirical, 'Effectiveness of state-level renewable energy workarounds').
+
+omega_variable(
+    energy_security_reversal_trigger,
+    'Does grid vulnerability, electricity cost spikes, or energy security concerns trigger reversal rhetoric that reframes wind as strategic infrastructure?',
+    'Monitoring of energy price trends, blackout events, geopolitical supply disruptions, and executive messaging shifts on renewable necessity',
+    'If reversal occurs: constraint becomes piton (performative, degraded). If security concerns don''t trigger reversal: snare extractiveness remains stable.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(energy_security_reversal_trigger, empirical, 'Energy security or grid reliability triggers for reversal').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(us_wind_project_ban_2025, 0, 2). % Short interval, representing a 2-year period.
+narrative_ontology:interval(us_wind_project_ban_2025, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.75 > 0.46), so temporal data is required.
-% The metrics are modeled as stable during the short 2-year lifetime of the ban.
+% Theater ratio over time
+narrative_ontology:measurement(windban_tr_t0, us_wind_project_ban_2025, theater_ratio, 0, 0.38).
+narrative_ontology:measurement(windban_tr_t3, us_wind_project_ban_2025, theater_ratio, 3, 0.42).
+narrative_ontology:measurement(windban_tr_t6, us_wind_project_ban_2025, theater_ratio, 6, 0.45).
 
-% Theater ratio over time:
-narrative_ontology:measurement(us_wind_project_ban_2025_tr_t0, us_wind_project_ban_2025, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(us_wind_project_ban_2025_tr_t1, us_wind_project_ban_2025, theater_ratio, 1, 0.20).
-narrative_ontology:measurement(us_wind_project_ban_2025_tr_t2, us_wind_project_ban_2025, theater_ratio, 2, 0.20).
+% Extraction over time
+narrative_ontology:measurement(windban_be_t0, us_wind_project_ban_2025, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(windban_be_t3, us_wind_project_ban_2025, base_extractiveness, 3, 0.55).
+narrative_ontology:measurement(windban_be_t6, us_wind_project_ban_2025, base_extractiveness, 6, 0.58).
 
-% Extraction over time:
-narrative_ontology:measurement(us_wind_project_ban_2025_ex_t0, us_wind_project_ban_2025, base_extractiveness, 0, 0.75).
-narrative_ontology:measurement(us_wind_project_ban_2025_ex_t1, us_wind_project_ban_2025, base_extractiveness, 1, 0.75).
-narrative_ontology:measurement(us_wind_project_ban_2025_ex_t2, us_wind_project_ban_2025, base_extractiveness, 2, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The ban allocates the resource of "right to build energy infrastructure".
 narrative_ontology:coordination_type(us_wind_project_ban_2025, resource_allocation).
+narrative_ontology:affects_constraint(us_wind_project_ban_2025, electricity_grid_decarbonization_timeline).
+narrative_ontology:affects_constraint(us_wind_project_ban_2025, us_energy_sector_transition_capital_allocation).
+narrative_ontology:affects_constraint(us_wind_project_ban_2025, international_climate_commitment_compliance).
 
-% Network relationships (structural influence edges)
-% This policy directly affects broader energy and climate policies.
-narrative_ontology:affects_constraint(us_wind_project_ban_2025, us_climate_mitigation_goals).
-narrative_ontology:affects_constraint(us_wind_project_ban_2025, us_energy_independence_policy).
-
+% DUAL FORMULATION NOTE:
+% The wind ban is upstream of three downstream constraints: (1) electricity grid decarbonization timeline, which faces extraction pressure from delayed renewable deployment; (2) energy sector capital allocation, which is redirected toward fossil fuel lock-in rather than transition infrastructure; (3) international climate commitments, which face structural extraction through reduced US emissions reductions. Each downstream constraint has its own extractiveness profile; the ban amplifies extraction risk across the network.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The standard derivation from
-% beneficiary/victim declarations and exit options correctly models the
-% structural relationships and generates the expected perspectival gaps.
+constraint_indexing:directionality_override(us_wind_project_ban_2025, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

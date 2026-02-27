@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "ibm_shield_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IBM SHIELD Program (MDA Contract)",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ibm",
+      "missile_defense_agency"
+    ],
+    "victims": [
+      "civilian_populations",
+      "potential_adversaries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Civilian Populations",
+      "comment": "Civilian populations are trapped within the geopolitical landscape shaped by this defense system, bearing the risk of escalation or miscalculation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Potential Adversaries",
+      "comment": "Potential adversaries are constrained by the system, limiting their strategic options but also potentially incentivizing asymmetric responses."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Missile Defense Agency",
+      "comment": "The MDA experiences the program as a coordination mechanism for national defense, enabling more effective resource allocation and strategic planning. They can arbitrage through other defense contractors."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "IBM",
+      "comment": "IBM benefits directly from the contract and experiences it as a rope, facilitating innovation and market leadership in AI-enabled defense technologies. They have arbitrage given the array of government contract opportunities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the SHIELD program as a Tangled Rope, a hybrid system that coordinates defense efforts while extracting resources and potentially exacerbating geopolitical tensions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "system_efficacy",
+      "question": "How effective is the SHIELD system in accurately identifying and intercepting threats?",
+      "resolution_mechanism": "Independent audits and simulations of the system's performance under various threat scenarios.",
+      "impact": "High efficacy reduces the snare classification from civilian populations and potential adversaries, shifting it towards a rope. Low efficacy increases the extractive risk and the probability of false positives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of the missile defense system"
+    },
+    {
+      "id": "escalation_incentives",
+      "question": "Does the system incentivize adversaries to develop and deploy countermeasures that could escalate conflict?",
+      "resolution_mechanism": "Game-theoretic modeling of strategic interactions between the US and potential adversaries.",
+      "impact": "If the system encourages escalation, the snare classification is reinforced. If it deters conflict without triggering new arms races, the rope classification is strengthened.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Incentives for escalation created by the system"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "IBM's $151B SHIELD contract with the Missile Defense Agency (MDA) operationalizes AI-enabled sensing for national defense. This initiative aims to enhance missile defense capabilities through advanced AI technologies. However, it also raises concerns regarding potential geopolitical tensions and resource allocation.",
+    "key_agents": [
+      "IBM: Primary beneficiary (institutional/arbitrage) - Gains financially and technologically from the contract.",
+      "Missile Defense Agency: Primary beneficiary (institutional/arbitrage) - Aims to enhance national security through advanced defense systems.",
+      "Civilian Populations: Primary victim (powerless/trapped) - Bear the ultimate risk in case of system failure or escalation.",
+      "Potential Adversaries: Secondary victim (moderate/constrained) - Face limitations on their strategic options but are incentivized to develop countermeasures.",
+      "Analytical Observer: Evaluates the overall impact and effectiveness of the program."
+    ],
+    "logic_rationale": "The system has extractiveness due to the massive resource investment and potential global impacts. Active enforcement stems from the system's reliance on AI and its role in deterring attacks. IBM and MDA are beneficiaries through economic gain and national defense capabilities. Civilian populations and potential adversaries are victims as they bear the risk of escalation and potential for miscalculation.",
+    "perspectival_gap": "The MDA and IBM perceive the program as a Rope, facilitating coordination and advancement. Civilian populations view the program as a Snare due to the risk of unintended consequences and lack of exit options. Potential adversaries view the system as a Snare due to limited strategic options. An analytical observer sees it as a Tangled Rope because it involves both coordination (defense) and asymmetric extraction (resource allocation, risk to civilian populations).",
+    "directionality_logic": "Each perspective's directionality is determined by their power, exit options, and relationship to the resource flow and potential risks. Institutional actors with arbitrage options experience low or negative extraction, while trapped populations face maximum risk. The analytical observer mediates between these extremes, recognizing both coordination and asymmetric extraction.",
+    "mandatrophy_analysis": "The MDA and IBM see the system as a rope, but the potential for escalation and the disproportionate risk borne by civilian populations means it is not purely a positive coordination mechanism. It is therefore a tangled rope because of the asymmetry in who bears the risk and the resource burden."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

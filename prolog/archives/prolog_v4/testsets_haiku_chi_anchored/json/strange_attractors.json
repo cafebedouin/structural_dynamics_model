@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "strange_attractors",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sysrisk"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Systemic Risk Amplification via Strange Attractor Dynamics",
+    "topic_domain": "economic/systemic_finance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "retail_investors",
+      "systemically_exposed_institutions",
+      "emerging_market_economies",
+      "financial_system_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Investor in the Liquidity Trap",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTORS (SNARE) \u2014 Trapped within the attractor basin. Cannot exit without realizing catastrophic losses; must hold during cascade events because selling amplifies losses. No visibility into feedback loop cascade or when next shock arrives. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Sized Financial Institution",
+      "comment": "PERSPECTIVE 2: MID-SIZED FINANCIAL INSTITUTIONS (SNARE) \u2014 Constrained exit. Interconnected via repo markets, derivatives, and interbank lending. Exposure is opacity-protected by accounting norms and regulatory forbearance. Contagion risk is structural, not measurable from inside. d\u22480.82, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Systemically Important Bank (Attractor Architect)",
+      "comment": "PERSPECTIVE 3: SYSTEMICALLY IMPORTANT BANKS (SNARE/ARCHITECT) \u2014 Powerful agents with arbitrage exit who nevertheless remain vulnerable to the attractor they helped structure. High leverage, pro-cyclical risk models, and too-interconnected-to-fail status mean they cannot credibly exit. Hedging creates moral hazard. d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.70. Paradox: architect is also trapped."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Central Bank (Forced Rescue)",
+      "comment": "PERSPECTIVE 4: CENTRAL BANK (SNARE/RESCUE) \u2014 Constrained by systemic stability duty. Cannot exit intervention without cascade, but intervention perpetuates moral hazard and deepens the attractor. Rescue operations are themselves extracted value \u2014 transferred risk to monetary system. d\u22480.70, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.77. Theater_ratio escalates as policy theater (forward guidance, QE, emergency protocols) substitutes for structural reform."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Emerging Market Economy (Contagion Victim with Exits)",
+      "comment": "PERSPECTIVE 5: EMERGING MARKET ECONOMIES (TANGLED_ROPE) \u2014 Experience the attractor as a snare (trapped by dollar funding, capital flight dynamics), BUT they have exits through capital controls, reserve management, and regional clearing unions. Some coordination benefit from defensive integration. d\u22480.55, f(d)\u22480.75, \u03c3=1.1 \u2192 \u03c7\u22480.48. Hybrid: pure extraction from attractor + some coordination through defensive alliances."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory System (Performative Oversight)",
+      "comment": "PERSPECTIVE 6: REGULATORY SYSTEM (PITON) \u2014 Macro-prudential oversight, stress testing, and capital adequacy rules are largely performative. Regulatory models assume independence that doesn't exist; feedback loops are ignored; systemic correlations are hidden by model risk. Theater_ratio\u22480.62 (high). Regulatory architecture is maintained through inertia despite documented failures (2008, 2020 volatility spikes). Benefits the regulated (institutions get arbitrage), not society. d\u22480.02, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Chaos Theory View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / CHAOS THEORY (MOUNTAIN?) \u2014 From civilizational timescale, strange attractors are inherent to complex dynamical systems with feedback; risk concentration is a property of phase-space geometry, not policy choice. Suggests the attractor is an irreducible natural law. However, structural data (\u03b5=0.58, suppression=0.62) contradicts mountain classification \u2014 the engine detects this as a false summit, revealing that attractor structure is contingent on leverage norms, interconnectedness design, and regulatory architecture."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attractor_basin_boundary",
+      "question": "Where is the true boundary of the current strange attractor basin? What leverage ratio, interconnectedness threshold, or shock magnitude defines the phase transition?",
+      "resolution_mechanism": "Agent-based modeling of feedback loop cascade; empirical measurement of leverage-to-liquidity correlations; historical shock analysis to identify phase transition points",
+      "impact": "If boundary is known and measurable: constraint moves from snare to tangled_rope (knowable risks enable hedging). If boundary is emergent/unknowable: snare classification holds; tail risks remain invisible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Where is the true boundary of the attractor basin?"
+    },
+    {
+      "id": "feedback_loop_dominance_hierarchy",
+      "question": "Which feedback loops (leverage pro-cyclicality, mark-to-market volatility spiral, liquidity evaporation, collateral chains, fire sales) dominate the attractor dynamics? Can some be decoupled without destabilizing the whole?",
+      "resolution_mechanism": "Stress-test the system removing each loop class; measure cascade magnitude with and without each feedback; identify which loops are load-bearing vs redundant",
+      "impact": "If one loop dominates and is decoupled-able: targeted intervention can shrink attractor basin (scaffold perspective). If all loops are coupled: systemic reform required (snare deepens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Which feedback loops dominate the attractor and are they decoupled-able?"
+    },
+    {
+      "id": "moral_hazard_feedback_closure",
+      "question": "Does central bank rescue intervention actually close the moral hazard feedback loop (institutions reduce leverage and interconnectedness) or does it reinforce it (institutions increase leverage, betting on rescue)?",
+      "resolution_mechanism": "Longitudinal measurement of leverage, interconnectedness, and risk concentration pre- and post-rescue episodes; comparison with counterfactual scenarios (hard reshaping vs soft intervention)",
+      "impact": "If rescue closes loop: intervention is essential containment (snare perspective justified). If rescue reinforces loop: intervention accelerates attractor deepening; cascade becomes inevitable (snare worsens).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Does rescue intervention close or reinforce moral hazard feedback?"
+    },
+    {
+      "id": "alternative_attractor_stability",
+      "question": "Is a lower-leverage, lower-interconnectedness financial system dynamically stable, or does it drift back toward the high-risk attractor through institutional pressure and incentive structures?",
+      "resolution_mechanism": "Historical comparison of regulatory regimes (post-Glass-Steagall vs post-Dodd-Frank); modeling of institutional drift under different interest rate and fee structures; measurement of whether reforms stick",
+      "impact": "If alternative is stable: regulatory reform can transition the system away from snare (structural exit possible). If system drifts back: attractor is institutional, not just mathematical (snare is quasi-permanent).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Is a low-risk equilibrium stable or does the system drift back to high-risk attractor?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Systemic risk in modern financial markets exhibits strange attractor dynamics: interconnected feedback loops (leverage pro-cyclicality, mark-to-market volatility cascades, liquidity evaporation, collateral chains) concentrate risk into self-reinforcing pathways from which individual agents cannot escape without triggering the very cascade they fear. The constraint is a snare because it extracts from retail investors, mid-sized institutions, and even large banks through forced participation in an increasingly unstable equilibrium. The central bank is trapped in a rescue loop: cannot exit without cascade, but rescue perpetuates moral hazard and deepens the attractor. The regulatory system is a piton\u2014macro-prudential oversight and stress-testing are performative theater that masks the structural problem. From a chaos-theory perspective, the attractor appears as a natural law (mountain), but the underlying architecture (leverage norms, interconnectedness design, regulatory architecture) is contingent and policy-driven, making it a false summit. The constraint has deepened since 2008: extractiveness has risen from ~0.35 to 0.58, theater has risen from 0.42 to 0.58 (regulatory protocols proliferate without structural reform), and suppression remains high at 0.62 (opacity in derivatives markets, complexity of interconnectedness, moral hazard disincentives for disclosure).",
+    "key_agents": [
+      "Retail Investors: Primary victims (powerless/trapped) \u2014 forced participation in attractor basin with no exit or visibility; catastrophic losses during cascade events",
+      "Mid-Sized Financial Institutions: Secondary victims (moderate/constrained) \u2014 interconnected via repo/derivatives; constrained exit due to exposure opacity; contagion risk is structural",
+      "Systemically Important Banks: Architect-victims (powerful/arbitrage paradox) \u2014 designed the attractor but remain trapped by too-interconnected-to-fail; hedging creates moral hazard",
+      "Central Bank: Institutional rescuer (institutional/constrained) \u2014 forced intervention perpetuates moral hazard; rescue is extracted value transferred to monetary system",
+      "Emerging Market Economies: Organized contagion victims (organized/mobile) \u2014 trapped by dollar funding but have partial exits through capital controls; defensive coordination possible",
+      "Regulatory System: Institutional piton (institutional/arbitrage) \u2014 performative oversight; theater increases while structural reform stalls; benefits the regulated, not systemic stability",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing attractor as inherent to complex systems rather than contingent institutional design"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High and rising. The constraint extracts through forced participation in an increasingly unstable equilibrium. Retail investors experience direct extraction (volatility, cascade losses). Institutions experience extraction through interconnectedness (contagion, forced liquidations). The central bank experiences extraction through moral hazard (resources deployed to rescues that perpetuate the underlying problem). The rise from 0.35 to 0.58 over 20 years reflects accumulating leverage, rising interconnectedness, and declining regulatory effectiveness. Suppression (0.62): High. Feedback loops are opaque (derivatives complexity, repo market opacity, interconnectedness hidden in regulatory reports). Moral hazard discourages disclosure (institutions hide leverage from each other). Models assume independence that doesn't exist (risk correlations during stress are systematically underestimated). No institutional actor has incentive to map the true attractor basin. Theater ratio (0.58): Moderate-high and rising. Macro-prudential oversight, stress tests, and capital adequacy rules proliferate without structural change. Central bank communication (forward guidance, emergency protocols) creates appearance of control. Regulatory theater masks the structural problem\u2014leverage norms and interconnectedness design are unchanged despite documented failures.",
+    "perspectival_gap": "This constraint demonstrates the snare's structural power: most agents rationally perceive it as pure extraction (snare), yet the system's architects (large banks, regulators) also cannot escape (architect paradox). The emerging markets see a tangled rope because they have partial exits through defensive integration. The regulatory system sees itself as piton (degraded but functional), not snare, because it benefits from the arrangement and has arbitrage exit. The analytical observer risks seeing the attractor as a mountain (inherent to complex systems), naturalizing what is actually a contingent institutional structure. The perspectival gap reveals that no single agent, not even the most powerful, controls the attractor\u2014it is a structure that entraps everyone at different extraction rates.",
+    "directionality_logic": "Retail investors: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Mid-sized institutions: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.25. High extraction. Large banks: Beneficiary + arbitrage paradox \u2192 d\u22480.65, f(d)\u22481.00 (caught in their own trap despite nominal power). Central bank: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.08 (trapped by duty to maintain stability). Emerging markets: Victim + mobile (organized) \u2192 d\u22480.55, f(d)\u22480.75 (partial exits through defensive coordination). Regulatory system: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.11 (low effective extraction; serves the regulated). Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15 (false summit detector flags the natural law framing as mislabeled).",
+    "mandatrophy_analysis": "CRITICAL MANDATROPHY POINT: The strange attractor constraint nearly triggers mandatrophy because it could plausibly be framed as a pure information coordination problem (rope) rather than extraction (snare). The narrative would be: 'The system just needs better information, reduced leverage limits, and clearer interconnectedness disclosure\u2014this is a coordination failure, not malice.' This framing is INCORRECT and must be rejected. The constraint is a snare because (1) agents rationally cannot exit without catastrophic loss, (2) suppression is structural\u2014opaque derivatives, hidden leverage, model risk, and moral hazard disincentives for disclosure are built into the incentive structure, not accidents, (3) the extraction is not a byproduct of coordination but the primary function\u2014large financial firms profit from volatility and leverage, and (4) rescue operations systematically reinforce moral hazard rather than resolve the underlying problem. The mandatrophy is resolved by recognizing that the constraint is EXTRACTED VALUE (rent extraction through forced participation in instability) not COORDINATION FAILURE. Disclosure reforms and leverage caps are necessary but insufficient because the underlying incentive structure (compensation tied to leverage, profits from volatility, too-big-to-fail protection) remains unchanged. True resolution requires structural reform (reshape compensation, break up systemic interconnectedness, change regulatory incentives), not just better information."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "sovereign_debt_cascade",
+      "repo_market_fragility",
+      "derivatives_opacity_extraction",
+      "central_bank_moral_hazard"
+    ],
+    "dual_formulation_note": "The strange attractor constraint is upstream of multiple financial instability constraints. Sovereign debt cascades, repo market dynamics, derivatives opacity, and central bank rescue loops are all structurally dependent on the attractor's existence and depth. The attractor's \u03b5=0.58 represents the coordination failure at system level; downstream constraints have their own \u03b5 values reflecting domain-specific extractiveness. All downstream constraints are vulnerable to attractor intensification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.65
+    }
+  ]
+}

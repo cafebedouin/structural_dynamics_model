@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "colossus_nero_inertia",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.8,
+    "claimed_type": "piton",
+    "human_readable": "The Political and Physical Inertia of the Colossus of Nero",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "roman_state",
+      "tourism_industry"
+    ],
+    "victims": [
+      "historical_accuracy",
+      "modern_taxpayers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "piton",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Trapped Taxpayer",
+      "comment": "PERSPECTIVE 1: TRAPPED TAXPAYER (PITON) - Taxpayers funding the upkeep of the statue bear the cost without any direct benefit, unable to influence its continued maintenance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Roman State",
+      "comment": "PERSPECTIVE 2: ROMAN STATE (PITON) - The Roman state maintains the statue due to its historical and symbolic value, but the original purpose and power are gone. The upkeep represents inertia rather than active benefit. Now more of a theater."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Tourism Industry",
+      "comment": "PERSPECTIVE 3: TOURISM INDUSTRY (ROPE) - The tourism industry benefits from the statue as a tourist attraction, a coordination point for economic activity. They can easily leverage and benefit from this constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (PITON) - From a broad historical view, the statue represents the inertial continuation of past power structures. Maintenance of the statue continues long past Nero's reign due to social and political forces."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "historical_interpretation",
+      "question": "What is the correct interpretation of the statue's historical significance?",
+      "resolution_mechanism": "Scholarly debate and archaeological evidence",
+      "impact": "Alters the perceived value of the statue, influencing the level of support for its maintenance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The statue's historical significance"
+    },
+    {
+      "id": "economic_viability",
+      "question": "Is the economic benefit from tourism sufficient to justify the maintenance costs?",
+      "resolution_mechanism": "Cost-benefit analysis of tourism revenue vs. maintenance expenses",
+      "impact": "Determines whether the statue remains a net economic benefit or becomes a financial burden.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic justification for statue maintenance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "The Colossus of Nero, initially built as a symbol of imperial power, has transitioned into a monument maintained due to inertia. The Roman state and later entities continue to support the statue, though its original significance has faded. The statue remains a tourist attraction providing some economic benefit, but its symbolic and functional purposes have largely atrophied. The cost is borne by taxpayers who have little say in its upkeep, and potentially at the expense of historical accuracy (given modifications over time).",
+    "key_agents": [
+      "Roman State: Institutional beneficiary (institutional/constrained) - maintains statue for historical and symbolic reasons.",
+      "Tourism Industry: Powerful beneficiary (powerful/arbitrage) - benefits from the statue as a tourist attraction.",
+      "Historical Accuracy: Powerless victim (powerless/trapped) - the statue's modifications dilute its original historical significance.",
+      "Modern Taxpayers: Powerless victim (powerless/trapped) - pays for the statue's upkeep without direct benefit."
+    ],
+    "logic_rationale": "Extractiveness (0.60): The statue extracts resources from the taxpayers for its maintenance, which could be used for other purposes. Suppression (0.70): There is little avenue for taxpayers to directly challenge the statue's upkeep. The theater ratio (0.80) is high, indicating the statue primarily serves a symbolic or performative function, rather than a functional one.",
+    "perspectival_gap": "The tourism industry sees the statue as a rope, a coordinating point for economic activity and a source of revenue. The taxpayer sees a burden with limited options to exit. The Roman state, or the modern state apparatus, sees it as something that must be maintained, regardless of its practical value, due to its historical and cultural value. The analytical observer sees primarily institutional inertia. The different exit options and power levels lead to this divergence.",
+    "directionality_logic": "The tourism industry benefits, so d is low and its classification is rope. Taxpayers are powerless victims with no exit, so d is high and their experience is piton. The state is also constrained, viewing the statue as a burden with little agency to escape.",
+    "mandatrophy_analysis": "The classification prevents mislabeling this as a snare by considering the benefits that are derived (albeit minor) by the tourism industry and by the fact that the state is constrained to uphold the statue despite it being a burden. The theater ratio of 0.8 confirms that the primary function of the statue is not extraction, but performative upkeep of a historical artifact."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

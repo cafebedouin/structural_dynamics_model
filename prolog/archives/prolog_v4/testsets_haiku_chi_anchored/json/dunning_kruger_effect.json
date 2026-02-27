@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "dunning_kruger_effect",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dk"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dunning-Kruger Effect (Cognitive Bias of Self-Assessment)",
+    "topic_domain": "social/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_confidence_low_skill_actors",
+      "institutional_gatekeepers_exploiting_asymmetry"
+    ],
+    "victims": [
+      "epistemic_commons",
+      "low_confidence_competent_agents",
+      "organizations_suffering_from_skill_mismatch"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 1: EPISTEMIC COMMONS (SNARE) \u2014 The collective reliability of knowledge production is contaminated by confident incompetents whose overestimation spreads false claims. No exit mechanism; cannot organize. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competent but Underconfident Agent",
+      "comment": "PERSPECTIVE 2: COMPETENT UNDERCONFIDENT AGENT (SNARE) \u2014 Trapped by self-doubt in competitive environments where confidence signals expertise. Career advancement blocked by reluctance to claim expertise they actually possess. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Overconfident Low-Skill Actor",
+      "comment": "PERSPECTIVE 3: OVERCONFIDENT LOW-SKILL ACTOR (TANGLED ROPE) \u2014 Benefits from illusory superiority in the short term (receives opportunities, authority, attention). Coordination function: their confidence attracts followers and creates coalition. But extraction occurs when incompetence materializes. d\u22480.35, f(d)\u22480.30, \u03c3=1.2 \u2192 \u03c7\u22480.14. Net slight beneficiary due to early-stage arbitrage before reality collapse."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Gatekeeper Exploiting Asymmetry",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL GATEKEEPER (ROPE) \u2014 Organizations benefit from Dunning-Kruger effect through selection mechanisms: confident actors self-select into leadership positions they're not qualified for, but their confidence creates the appearance of capability. The constraint operates as coordination mechanism for gatekeepers to extract effort from organizations. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.03. Net beneficiary; sees the effect as useful selection heuristic."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Competence Assessment Movement",
+      "comment": "PERSPECTIVE 5: COMPETENCE ASSESSMENT MOVEMENT (SCAFFOLD) \u2014 Structured skill assessments, 360-degree feedback, and validated competence tests are building alternative pathways that reduce reliance on self-assessment. These mechanisms have sunset logic: as objective assessment tools mature and become institutionalized, the Dunning-Kruger bias loses power. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.25."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Knowledge Production View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (PITON) \u2014 The Dunning-Kruger effect is often invoked as an explanation for failures in knowledge production and organizational dysfunction, but the narrative has become ritualistic and oversimplified. The effect is frequently cited without rigorous validation; post-hoc explanations attribute failures to 'they didn't know what they didn't know' rather than examining structural incentives. theater_ratio=0.65 reflects performative invocation. Researchers debate whether the effect is robust or a statistical artifact. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.57."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dk_effect_robustness",
+      "question": "Is the Dunning-Kruger effect a robust, replicable cognitive bias or a statistical artifact of confidence distributions in low-skill populations?",
+      "resolution_mechanism": "Meta-analysis of replication studies; correlation between confidence and actual performance across skill levels; examination of whether effect persists with alternative measurement methods",
+      "impact": "If robust: constraint classification stands (Tangled Rope with moderate extraction). If artifact: the constraint is primarily institutional (organizations treating it as real even if not empirically grounded), shifting classification toward Piton (performative citation) or Snare (institutions using false belief to justify incompetent selection).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Dunning-Kruger effect is a robust cognitive bias or measurement artifact"
+    },
+    {
+      "id": "confidence_actual_competence_decoupling",
+      "question": "In high-uncertainty domains (politics, business strategy, research frontiers), how much of the confidence-competence decoupling is inherent cognitive bias vs rational response to genuinely unpredictable environments?",
+      "resolution_mechanism": "Comparison of confidence-competence gap in domains with clear feedback (chess, mathematics) vs unclear feedback (strategic decision-making, novel research); analysis of whether overconfidence is adaptive in uncertain domains",
+      "impact": "If cognitive bias dominant: Dunning-Kruger is a constraint on rational self-assessment. If rational response to uncertainty: the 'bias' is partly a feature of navigating inherent unpredictability, and institutional solutions should focus on feedback mechanisms, not individual recalibration.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether confidence-competence gap is bias or rational response to uncertainty"
+    },
+    {
+      "id": "selection_mechanism_feedback_loop",
+      "question": "Does institutional reliance on confidence signals as a proxy for competence create a positive feedback loop that amplifies the Dunning-Kruger effect at the organizational level?",
+      "resolution_mechanism": "Historical analysis of selection outcomes in organizations with high vs low reliance on self-assessment; tracking of promotion rates for overconfident vs appropriately confident actors; measurement of organizational performance variance with selection method",
+      "impact": "If feedback loop confirmed: the constraint is Tangled Rope with institutional enforcement (organizations systematically selecting overconfident actors into positions of power). If no loop: Dunning-Kruger is an individual-level phenomenon with limited organizational leverage.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether institutional selection mechanisms amplify Dunning-Kruger effect"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Dunning-Kruger effect describes a structural tension in knowledge production and organizational selection where people with limited competence systematically overestimate their abilities. This constraint operates as a Tangled Rope: it contains both a genuine coordination function (confidence is a necessary signal for learning and risk-taking) and an extraction mechanism (institutions exploit the confidence-competence gap to select incompetent leaders, contaminating epistemic and organizational systems). The effect is more extractive when organizations treat confidence as a reliable signal of competence and build selection mechanisms around self-assessment. The constraint exhibits different classifications from different perspectives: the epistemic commons sees pure extraction (Snare), competent underconfident agents see extraction (Snare), overconfident actors experience short-term coordination benefits masking long-term competence costs (Tangled Rope), gatekeeping institutions benefit from the asymmetry (Rope), competence assessment movements are building exits (Scaffold), and analytical observers debate whether the effect is real or performatively invoked (Piton). Theater ratio has increased over time as the concept has been popularized in popular psychology and organizational management, with many invocations becoming ritualistic rather than analytically rigorous.",
+    "key_agents": [
+      "Overconfident Low-Skill Actors: Primary beneficiary in short term (powerful/arbitrage) \u2014 receive disproportionate opportunities, authority, and attention due to confidence signaling",
+      "Epistemic Commons: Primary victim (powerless/trapped) \u2014 collective knowledge production contaminated by confident false claims; no exit mechanism",
+      "Competent Underconfident Agents: Secondary victim (moderate/constrained) \u2014 career advancement blocked by reluctance to claim expertise; trapped between self-knowledge and competitive signaling requirements",
+      "Organizations/Institutions: Secondary beneficiary (institutional/arbitrage) \u2014 exploit confidence-competence gap for selection; benefit from asymmetry until incompetence materializes",
+      "Competence Assessment Movement: Organized agent (organized/mobile) \u2014 building objective assessment tools and feedback mechanisms that reduce reliance on self-assessment",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 debates robustness of effect and whether concept has become performatively invoked"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The Dunning-Kruger effect creates asymmetric knowledge about competence, enabling extraction through misallocation of opportunities and authority. However, the extraction is not maximal because: (1) the effect is temporary \u2014 reality eventually reveals incompetence, (2) many organizations are implementing objective assessment tools, (3) feedback mechanisms in high-stakes domains (academic peer review, engineering safety) reduce the effect's power. Theater ratio (0.65): Moderate-high. The concept has become ritualized in organizational literature and pop psychology. Many invocations are post-hoc explanations rather than precise empirical descriptions. Researchers debate whether the original effect (Kruger & Dunning 1999) robustly replicates or is a statistical artifact. The invocation has exceeded the empirical grounding, creating performative theater. Suppression (0.48): Moderate. The constraint suppresses alternatives through: self-doubt creating exit barriers, institutional reliance on confidence signals, organizational cultures that reward assertiveness over accuracy. But suppression is incomplete \u2014 competence assessment tools and objective feedback mechanisms are reducing the effect's hold.",
+    "perspectival_gap": "This constraint exhibits a dramatic perspectival gap centered on the temporal dimension. Overconfident low-skill actors experience immediate benefits and short-term success (arbitrage), making the constraint appear as positive coordination. Competent underconfident agents experience immediate extraction and suppressed opportunity. The epistemic commons experiences accumulating damage (false claims in literature). Organizations experience a J-curve: short-term apparent benefit (confident selection) followed by long-term competence crisis. The Competence Assessment Movement experiences the constraint as a temporary problem with structural solutions. The analytical observer sees performative ritualization of a concept whose empirical status is contested. The perspectival gaps reveal that the constraint operates on different timescales for different agents: immediate beneficiary for the overconfident, immediate victim for the competent underconfident, medium-term victim for organizations, long-term victim for epistemic reliability.",
+    "directionality_logic": "Overconfident low-skill actors: Beneficiary + arbitrage \u2192 d\u22480.35, f(d)\u22480.30. Moderate beneficiary due to early-stage confidence arbitrage before competence failure. Epistemic commons: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Competent underconfident agents: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction due to suppressed opportunity and self-doubt barriers. Institutional gatekeepers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; extract through selection asymmetries. Competence assessment movement: Mobile + organized \u2192 d\u22480.50, f(d)\u22480.65. Symmetric; both costs and benefits as they build alternative pathways. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Piton classification from theater gate.",
+    "mandatrophy_analysis": "The Dunning-Kruger constraint resolves mandatrophy by distinguishing between the coordination function (confidence enables risk-taking and learning in uncertain environments) and the extraction mechanism (institutions exploit confidence signals to make incompetent selections). The Tangled Rope classification captures this hybrid: genuine coordination benefit (confidence creates positive feedback for learning) coupled with asymmetric extraction (institutions and overconfident actors benefit at the expense of competent underconfident agents and epistemic reliability). The scaffold perspective (competence assessment movement) is not aspirational but already structurally present \u2014 360-degree feedback, skill certifications, and objective assessments have sunset logic for the traditional confidence-based selection. The piton perspective reveals that the concept's explanatory power has exceeded its empirical grounding in recent years, becoming a convenient post-hoc narrative rather than a precise diagnostic tool."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "selection_bias_in_hierarchies",
+      "confidence_competence_asymmetry_in_expertise_markets",
+      "institutional_knowledge_gatekeeping"
+    ],
+    "dual_formulation_note": "Dunning-Kruger effect as a cognitive bias (\u03b5\u22480.15, individual-level observation) differs structurally from Dunning-Kruger as an institutional selection mechanism (\u03b5\u22480.38, organizational amplification). This story focuses on the latter \u2014 the constraint as a system-level phenomenon enabled by organizational reliance on confidence signals. The cognitive bias itself (individual miscalibration) is a prerequisite but not sufficient for the constraint; institutional enforcement of confidence-based selection is required for significant extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

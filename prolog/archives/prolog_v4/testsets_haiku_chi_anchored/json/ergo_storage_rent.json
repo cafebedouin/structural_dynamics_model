@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "ergo_storage_rent",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ergsr"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ergo Storage Rent (UTXO Demurrage)",
+    "topic_domain": "technological_economic",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "active_network_participants",
+      "long_term_ecosystem_sustainability"
+    ],
+    "victims": [
+      "dormant_utxo_holders",
+      "legacy_wallet_abandonment"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dormant UTXO Holder",
+      "comment": "PERSPECTIVE 1: DORMANT UTXO HOLDER (SNARE) \u2014 Holder of coins that have not moved in 4+ years faces automatic demurrage extraction with no alternative pathway. Cannot negotiate, transfer without penalty, or exit without loss. Bears full cost of storage rent. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Abandoned Legacy Wallet",
+      "comment": "PERSPECTIVE 2: ABANDONED LEGACY WALLET (SNARE) \u2014 Wallets abandoned due to forgotten keys, lost hardware, or inactive users bear continuous demurrage extraction. No mechanism to opt out, recover, or reclaim value. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Inactive Retail Holder",
+      "comment": "PERSPECTIVE 3: INACTIVE RETAIL HOLDER (TANGLED ROPE) \u2014 Holder who intends to return (but at an uncertain future date) receives some benefit from network security and ecosystem stability paid for by storage rent. But faces extraction penalty for storage. Exit is constrained: moving coins restarts the timer, creating a coordination problem. d\u22480.65, f(d)\u22480.95, \u03c3=0.9 \u2192 \u03c7\u22480.33."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Active Network Node Operator",
+      "comment": "PERSPECTIVE 4: ACTIVE NETWORK NODE OPERATOR (ROPE) \u2014 Operator of a full node benefits from storage rent mechanism as it incentivizes UTXO churn, reducing blockchain state size and validator storage burdens. Experiences constraint as pure coordination: demurrage enforces shared responsibility for state bloat. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.2 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Protocol Developer Coalition",
+      "comment": "PERSPECTIVE 5: PROTOCOL DEVELOPER COALITION (TANGLED ROPE) \u2014 Developers and ecosystem coordinators see storage rent as a hybrid mechanism: it solves the real coordination problem of UTXO accumulation (state bloat) AND extracts from dormant holders to fund state rent rewards. Coalition experiences constraint as necessary but imperfectly enforced. Exit is constrained by need to maintain network consensus. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Long-Term Ecosystem Sustainability Goal",
+      "comment": "PERSPECTIVE 6: LONG-TERM ECOSYSTEM SUSTAINABILITY (SCAFFOLD) \u2014 Storage rent frames itself as a temporary mechanism to solve the UTXO bloat problem during the accumulation phase. As protocol maturity increases and state compression techniques improve, the necessity of demurrage as a coercive measure declines. Scaffold perspective sees sunset: eventually, voluntary incentives or technical solutions may replace punitive storage rent. d\u22480.35, f(d)\u22480.28, \u03c3=1.2 \u2192 \u03c7\u22480.13."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Blockchain State Sustainability Myth",
+      "comment": "PERSPECTIVE 7: BLOCKCHAIN STATE SUSTAINABILITY (PITON) \u2014 Storage rent is partially performative: while it does reduce UTXO bloat, much of the justification ('we must solve state bloat or the network dies') has evolved into institutional theater. Actual state size concerns have been managed through pruning and compression. The demurrage mechanism persists through protocol conservatism and path dependency, not because it is the only or most effective solution. theater_ratio=0.45 (moderate theater) reflects that functional reduction of state size is real but overlaid with narrative inflation about existential necessity. d\u22480.12, f(d)\u22480.02, \u03c3=1.2 \u2192 \u03c7\u22480.01."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Economic Fundamental View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / ECONOMIC FUNDAMENTAL VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some form of rent extraction from persistent storage is inherent to any shared-state ledger system: if value-preservation is free, rational actors will accumulate indefinitely and destroy the commons. This perspective sees demurrage as an immutable economic necessity, not a contingent institutional design choice. However, the structural data (\u03b5=0.38, suppression=0.52, theater=0.45) contradicts a mountain classification \u2014 alternative mechanisms (state fees funded by other sources, voluntary incentives, technical compression) exist and are practiced on other chains. This reveals the false summit: what appears as economic law is actually a design choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "state_bloat_necessity_threshold",
+      "question": "At what point of UTXO accumulation does state bloat become a genuine bottleneck vs. a projected future concern managed by other means?",
+      "resolution_mechanism": "Comparative analysis of blockchain state sizes across chains with and without demurrage; correlation between demurrage rates and actual network performance degradation; measurement of state compression effectiveness",
+      "impact": "If bloat is already acute: demurrage is essential coordination mechanism (Rope dominates). If bloat is projected but manageable: demurrage is extractive institutional choice (Snare dominates).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state bloat is a present bottleneck or manageable future concern"
+    },
+    {
+      "id": "dormancy_detection_accuracy",
+      "question": "How many UTXOs classified as 'dormant' (4+ years inactive) are actually held by living agents with recovery intentions vs. genuinely abandoned coins?",
+      "resolution_mechanism": "On-chain transaction pattern analysis; wallet recovery requests and successful owner re-activation; entropy analysis of dormant key reuse and address clustering",
+      "impact": "If >80% genuinely abandoned: demurrage is fair fee on dead accounts (Rope). If <50% abandoned: demurrage is extraction from inactive-but-living holders (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of dormant UTXOs that are genuinely abandoned vs. recoverable"
+    },
+    {
+      "id": "alternative_state_management_sufficiency",
+      "question": "Do technical solutions (state compression, archival layers, sharding, pruning strategies) provide sufficient UTXO accumulation management without demurrage extraction?",
+      "resolution_mechanism": "Comparative protocol analysis of Ethereum (no demurrage, uses compression), Bitcoin (no demurrage, uses pruning), other UTXO chains with and without storage rent; performance benchmarks and state size projections",
+      "impact": "If alternatives prove sufficient: demurrage is rent extraction masked as necessity (Snare). If alternatives have unacceptable tradeoffs: demurrage is necessary coordination (Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether technical alternatives can manage UTXO bloat without demurrage"
+    },
+    {
+      "id": "extraction_reallocation_transparency",
+      "question": "Are extracted storage rents genuinely returned to network stakeholders through state rent rewards, or do they accumulate in protocol reserves or mining pools?",
+      "resolution_mechanism": "On-chain accounting of storage rent collection, state rent reward distribution, and reserve accumulation; analysis of actual vs. promised fund flows",
+      "impact": "If fully redistributed: demurrage frames as coordination mechanism (Rope/Tangled Rope). If redirected to protocol developers or node operators: demurrage is hidden extraction (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether storage rent extraction is redistributed or accumulated by protocol controllers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Storage rent in Ergo is a demurrage mechanism that charges fees to UTXOs (unspent coins) that have not moved in four years. The constraint creates a structural tension between the legitimate problem of blockchain state accumulation and the punitive extraction from dormant or abandoned coin holders. This mechanism exhibits multiple classification types depending on the observer's structural position: active network participants see it as necessary coordination to maintain network health; dormant coin holders see it as extraction with no exit; the protocol developers see it as a hybrid mechanism that solves a real problem while imposing costs on a powerless constituency. The constraint's theater ratio (0.45, moderate) reflects that while state management is genuinely necessary, some of the urgency narratives and necessity claims are inflated relative to actual state bloat impacts. Ergo Storage Rent serves as a diagnostic case for how economic mechanisms can simultaneously solve real coordination problems and extract from vulnerable constituencies without clear consent mechanisms.",
+    "key_agents": [
+      "Dormant UTXO Holders: Primary victims (powerless/trapped) \u2014 coins locked due to inactivity face automatic extraction; no alternative pathway",
+      "Abandoned Legacy Wallets: Secondary victims (powerless/trapped) \u2014 genuinely lost coins with inaccessible keys bear continuous demurrage",
+      "Inactive Retail Holders: Mixed agents (moderate/constrained) \u2014 intend to return but face extraction penalty and coordination dilemma",
+      "Active Network Node Operators: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from reduced state bloat and lower storage costs",
+      "Protocol Developer Coalition: Institutional actors (organized/constrained) \u2014 maintain the mechanism as necessary but imperfect solution",
+      "Long-Term Ecosystem Sustainability Narrative: Abstract beneficiary \u2014 frames storage rent as temporary measure toward state compression maturity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing a design choice as economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Storage rent does extract from dormant holders, but the extraction rate is not extreme (typically 0.1-0.5 ERG per year per UTXO depending on denomination) and is justified by real state management costs. The value reflects that extraction is real but bounded and partially defensible on coordination grounds. Suppression (0.52): Moderate-high. Dormant holders have significant barriers to exit: moving coins restarts the 4-year timer, creating a dilemma; abandoned wallets have zero exit options; the mechanism is embedded in protocol consensus. Suppression is not total because active holders can choose to move coins or accept the fee. Theater ratio (0.45): Moderate. Storage rent has genuine functional impact on state bloat, but the narratives about existential necessity have inflated over time. Actual state compression and pruning techniques have reduced the urgency compared to early protocol justifications. Theater has grown as alternative solutions have become viable.",
+    "perspectival_gap": "This constraint demonstrates a clear perspectival divide between active and dormant constituencies. Active node operators see pure coordination (Rope) \u2014 they benefit from lighter state and lower storage costs. Dormant holders see pure extraction (Snare) \u2014 they face penalties with no alternatives or compensation. The protocol developers see a hybrid mechanism (Tangled Rope) \u2014 solving a real problem but with significant distributional consequences. The ecosystem sustainability narrative sees a temporary measure with a sunset (Scaffold). The institutional defense of storage rent as inevitable sees a false summit (Mountain), when alternatives exist on other chains. The perspectival gap reveals that storage rent is not a neutral economic law but a design choice that concentrates costs on a powerless constituency (dormant holders, who cannot organize or advocate) and distributes benefits to an organized constituency (network operators, who benefit from lower state bloat).",
+    "directionality_logic": "Dormant UTXO holders: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Nearly maximum extraction \u2014 zero exit options. Abandoned legacy wallets: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 completely immobilized. Inactive retail holders: Victim + constrained \u2192 d\u22480.65, f(d)\u22480.95. Moderate extraction with constrained exit (moving coins restarts timer). Active node operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary through state reduction benefits. Protocol developers: Mixed (benefits from coordination, costs from distributional complexity) + constrained \u2192 d\u22480.50, f(d)\u22480.65. Moderate effective extraction from their constraint perspective. Ecosystem sustainability: Beneficiary with sunset \u2192 d\u22480.35, f(d)\u22480.28. Low effective extraction because the mechanism is framed as temporary.",
+    "mandatrophy_analysis": "Storage rent resolves mandatrophy by revealing the indexical nature of the classification. The constraint is NOT 'which type is it really?' but 'what is the observer's structural relationship to the constraint?' An active node operator genuinely experiences it as coordination (Rope) because they benefit from state reduction. A dormant holder genuinely experiences it as extraction (Snare) because they have no alternatives. The protocol developers genuinely experience it as a hybrid (Tangled Rope) because they must balance coordination benefits against distributional costs. The false summit (Mountain) emerges when the analytical observer naturalizes a contingent design choice ('UTXO bloat is inevitable') \u2014 comparative analysis across blockchains (Ethereum, Bitcoin, other UTXO systems) shows that alternative mechanisms are available. The mandatrophy is resolved by recognizing that the constraint IS legitimately all these types simultaneously, from different structural positions. The normative question ('is storage rent justified?') is distinct from the structural question ('what type of constraint is it?'). The answer to the normative question depends on whether the distributional consequences are acceptable given the coordination benefits \u2014 a question that requires explicit value judgment, not empirical determination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "utxo_state_accumulation",
+      "blockchain_scalability_pruning",
+      "dormant_account_recovery"
+    ],
+    "dual_formulation_note": "Storage rent represents a mechanism for solving UTXO bloat (state management coordination problem) via extraction from dormant holders. This decomposes into two structurally distinct claims: (1) State bloat is a real problem requiring solution (\u03b5\u22480.08, Mountain/coordination); (2) Demurrage extraction is the chosen solution mechanism (\u03b5\u22480.38, Tangled Rope). These are linked: the existence of claim 1 justifies claim 2, but claim 2's necessity depends on claim 1 being unsolvable by other means. Alternative chains use different solutions (compression, pruning, state fees from other sources), suggesting claim 2 is contingent design choice rather than inevitable response to claim 1."
+  },
+  "directionality_overrides": []
+}

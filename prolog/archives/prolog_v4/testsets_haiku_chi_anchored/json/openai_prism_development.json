@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "openai_prism_development",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prism"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Information Asymmetry in Frontier AI Model Development (OpenAI's Prism/GPT-5)",
+    "topic_domain": "technological/artificial_intelligence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "openai_core_development_team"
+    ],
+    "victims": [
+      "ai_safety_research_community",
+      "downstream_capability_assessors",
+      "regulatory_bodies",
+      "competitive_ai_labs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The AI Safety Research Community",
+      "comment": "PERSPECTIVE 1: AI SAFETY RESEARCH COMMUNITY (SNARE) \u2014 Cannot exit the verification crisis; bears full cost of frontier capability without access to model internals, training data, or capability evaluations. No independent verification pathway. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Downstream Capability Assessors",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM CAPABILITY ASSESSORS (SNARE) \u2014 Regulators, academic evaluators, and policy researchers cannot access model weights, training infrastructure, or proprietary evaluations. Forced to trust OpenAI's own capability claims without independent verification. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Competitive AI Laboratories",
+      "comment": "PERSPECTIVE 3: COMPETITIVE AI LABORATORIES (SNARE) \u2014 Constrained by information lag. Cannot access Prism internals to reverse-engineer capabilities or architectural innovations. Must operate with 6-24 month lag on proprietary techniques. Constrained by labor market extraction (OpenAI recruits top talent). d\u22480.82, f(d)\u22481.18, \u03c3=1.2 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Bodies and Governance Coalitions",
+      "comment": "PERSPECTIVE 4: REGULATORY BODIES (SNARE) \u2014 Organized but constrained by lack of technical access and asymmetric expertise. Cannot conduct independent safety audits. Risk mitigation depends on OpenAI's voluntary disclosure. Extraction mechanism: regulation lags capability. d\u22480.68, f(d)\u22480.94, \u03c3=1.2 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "OpenAI Core Development Team",
+      "comment": "PERSPECTIVE 5: OPENAI CORE DEVELOPMENT TEAM (ROPE) \u2014 Beneficiary + arbitrage. Controls information flow; maintains competitive advantage through secrecy. Captures value through API pricing, partnership control, and labor market dominance. Experiences constraint as coordination: internal communication about capabilities enables strategic deployment. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.08. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Frontier AI Secrecy Regime",
+      "comment": "PERSPECTIVE 6: FRONTIER AI SECRECY REGIME (PITON) \u2014 Institutional inertia justifying secrecy through 'safety via obscurity' or 'competitive necessity' rhetoric. Theater ratio=0.58 (borderline): some genuine security concerns (adversarial jailbreaks) but substantial theater around protecting 'trade secrets' that are not core to safety. The regime persists through institutional pressure (NSF/DARPA funding, investor signaling) not through proven functional necessity. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Structural Analysis)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope: the constraint exhibits both genuine coordination (Prism development requires concentrated expertise, proprietary training data) AND asymmetric extraction (information monopoly over frontier capabilities enables monopoly pricing, regulatory capture, labor extraction). The constraint is neither pure coordination nor pure extraction \u2014 it's a hybrid. d\u22480.60, f(d)\u22480.72, \u03c3=1.2 \u2192 \u03c7\u22480.59."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "safety_via_obscurity_sufficiency",
+      "question": "Does the secrecy regime actually prevent adversarial exploitation of frontier capabilities, or does it merely hide exploitation from external oversight?",
+      "resolution_mechanism": "Comparison of incident rates: proprietary models under secrecy vs open models with distributed scrutiny; analysis of zero-day exploits and jailbreak discovery timelines; internal audit data (if disclosed) vs external finding rates",
+      "impact": "If secrecy is functionally necessary: suppression gate (0.82) is justified by genuine safety requirements, and the snare classification may be overstated. If secrecy provides false comfort: suppression is enforced extraction masquerading as safety, confirming snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether information asymmetry is functionally required for AI safety"
+    },
+    {
+      "id": "competitive_moat_necessity",
+      "question": "How much of the information asymmetry is structurally required by R&D pacing vs how much is rent-extraction on already-proven techniques?",
+      "resolution_mechanism": "Historical analysis: timeline from Prism capability breakthrough to architectural reproducibility by other labs; correlation between secrecy duration and competitive advantage; measurement of architectural novelty vs implementation engineering",
+      "impact": "If moat is structurally necessary (12-36 month implementation lag): suppression reflects genuine innovation lead, and tangled_rope classification strengthened. If moat persists despite reproducibility (capability is known but implementation hidden): extraction mechanism confirmed, snare classification strengthened.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent to which information asymmetry reflects genuine innovation lead vs rent extraction"
+    },
+    {
+      "id": "regulatory_capture_threshold",
+      "question": "At what point does information asymmetry enable OpenAI to shape regulation in its own image rather than submit to external oversight?",
+      "resolution_mechanism": "Institutional analysis: OpenAI's influence on AI governance proposals, board composition of regulatory bodies, instances of regulatory bodies deferring to OpenAI technical claims, comparison with other industries (pharma, nuclear) regulatory dynamics",
+      "impact": "If regulatory capture is imminent/underway: extractiveness should be increased toward 0.75+, and snare classification is confirmed with institutional dominance. If independent regulatory capacity is maintained: extractiveness stays at 0.68, and organized victims (regulators) have non-zero agency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether information asymmetry enables regulatory capture"
+    },
+    {
+      "id": "labor_market_extraction_mechanism",
+      "question": "Does OpenAI's information monopoly enable preferential recruitment of top talent, creating a secondary extraction mechanism beyond capability secrecy?",
+      "resolution_mechanism": "Labor market analysis: salary premiums for OpenAI AI researchers vs competitors; turnover rates and post-exit opportunities; analysis of research output attribution (how much Prism innovation is concentrated vs distributed); competitive lab capability gains post-OpenAI-departure talent",
+      "impact": "If labor extraction is significant: suppression gate may be underestimated (should be 0.85+), and the snare classification is overdetermined across multiple victim groups. If talent market is competitive despite asymmetry: suppression reflects only capability secrecy, not labor control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Labor market dynamics and talent concentration driven by information asymmetry"
+    },
+    {
+      "id": "open_source_alternatives_sufficiency",
+      "question": "Are open-source frontier models (Meta's LLaMA family, community fine-tunes) creating genuine competitive pressure that undermines the snare, or are they structurally confined to lower capability tiers?",
+      "resolution_mechanism": "Technical benchmarking: capability parity measurements; cost-of-reproduction analysis for state-of-art models; market analysis of API pricing power when open-source alternatives exist; user migration patterns when capability gaps narrow",
+      "impact": "If open-source achieves parity: snare classification weakens toward tangled_rope, suppression gate should decline toward 0.65-0.70, and exit options for downstream users shift from trapped to arbitrage/mobile. If open-source remains structurally inferior: snare classification is reinforced, and victims remain locked in.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether open-source alternatives provide genuine competitive constraint on proprietary monopoly"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The development of OpenAI's frontier AI model (Prism/GPT-5) operates under extreme information asymmetry \u2014 the core development team possesses detailed knowledge of architecture, training methodology, capability boundaries, safety risks, and failure modes, while all external actors (competitors, regulators, safety researchers, downstream assessors) operate with partial or curated information. This structural asymmetry enables extraction on multiple axes: (1) capability secrecy creates a 6-24 month information lag for competitors, (2) regulatory bodies cannot conduct independent safety audits, (3) academic safety research lacks access to model internals for mechanistic interpretability, (4) pricing power derives from monopolistic information advantage, and (5) labor market dynamics are distorted by informational advantage in recruitment. The constraint exhibits high suppression (0.82) because exit options are severely limited: safety researchers cannot study the system without permission, competitors cannot reverse-engineer proprietary techniques, and regulators lack technical capacity to audit independently. The theater ratio (0.58) reflects that while some secrecy is justified by genuine security concerns (adversarial robustness, jailbreak prevention), substantial theater surrounds 'trade secret' protection that functions primarily as rent extraction. The regime maintains itself through institutional pressure (venture capital signaling, NSF/DARPA funding tied to proprietary performance, investor confidence in 'moat'), not through demonstrated functional necessity. The extractiveness value (0.68) reflects that OpenAI captures substantial rents from the information monopoly, but the constraint stops short of pure extraction (0.66+ snare threshold barely crossed) because genuine coordination benefits exist: frontier capability development does require concentrated expertise and proprietary data, and the secrecy regime does enable faster iteration than would occur under full transparency.",
+    "key_agents": [
+      "OpenAI Core Development Team: Primary beneficiary (institutional/arbitrage) \u2014 controls information flow, captures value through API pricing, partnership control, monopolistic technical advantage",
+      "AI Safety Research Community: Primary victim (powerless/trapped) \u2014 cannot access model internals, training data, or capability evaluations; forced to trust OpenAI claims without independent verification",
+      "Downstream Capability Assessors (regulators, academic evaluators): Victim (powerless/trapped) \u2014 cannot conduct independent safety audits; regulatory effectiveness depends on OpenAI voluntary disclosure",
+      "Competitive AI Laboratories (Meta, Google, Anthropic, others): Victim (moderate/constrained) \u2014 face 6-24 month information lag on proprietary techniques; constrained by labor market extraction",
+      "Regulatory Bodies and Governance Coalitions: Organized victim (organized/constrained) \u2014 has formal authority but lacks technical access and asymmetric expertise to conduct independent oversight",
+      "Frontier AI Secrecy Regime: Institutional actor (institutional/arbitrage) \u2014 persists through inertia and institutional pressure; theater ratio indicates degradation of original safety function",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees tangled rope: genuine coordination need + asymmetric extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The information monopoly on frontier capabilities enables OpenAI to extract value on multiple dimensions: (1) API pricing without competitive constraint, (2) partnership control and licensing terms, (3) labor market advantage through informational asymmetry, (4) regulatory capture potential through asymmetric expertise. The value reflects genuine but not maximal extraction \u2014 some coordination benefits exist (concentrated expertise accelerates research), and the constraint does not prevent all outside progress (open-source alternatives, though inferior, exist). Suppression (0.82): Very high. Exit options are severely constrained: safety researchers cannot study without permission, competitors cannot reverse-engineer, regulators lack audit capacity, and pricing mechanisms prevent downstream actors from developing independent capabilities. The suppression reflects structural locking, not just coercive threat. Theater ratio (0.58): Moderate-high. The secrecy regime justifies itself through 'safety via obscurity' and 'trade secret protection' rhetoric. Some genuine security rationale exists (adversarial robustness testing is sensitive), but substantial theater surrounds protecting engineering details that are not core to safety. The ratio increased from 0.35 to 0.58 over the interval as the justifications became more performative (initial rationale was technical innovation lead; later rationale shifted to competitive necessity and safety).",
+    "perspectival_gap": "This constraint reveals a sharp perspectival split between the beneficiary and the victims. OpenAI's development team experiences the constraint as coordination (Rope) \u2014 the secrecy regime enables focused R&D and competitive advantage, both of which they interpret as necessary for safety leadership. Safety researchers and regulators experience the constraint as pure extraction (Snare) \u2014 they bear full cost of frontier capability without access to verify safety claims. Competitive labs experience extraction with some constrained opportunity (Snare approaching Tangled Rope) \u2014 they can develop inferior alternatives but face genuine information lag. The analytical observer (Tangled Rope) sees both genuine coordination (concentrated expertise does accelerate capability development) AND asymmetric extraction (information monopoly enables rent extraction and regulatory asymmetry). The critical gap is that the beneficiary's 'coordination' experience depends entirely on the suppression of victims' alternatives \u2014 if safety researchers could access the model, if competitors could reverse-engineer, if regulators could audit independently, the coordination function would degrade. The regime's stability depends on maintaining powerlessness.",
+    "directionality_logic": "OpenAI core development team: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Experiences constraint as enabling coordination. AI safety researchers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction from safety research perspective. Cannot exit, cannot verify, cannot contribute structurally. Downstream assessors: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Regulators cannot audit independently; effectiveness depends entirely on OpenAI disclosure. Competitive labs: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.18. Can develop alternative models but face genuine technical lag and labor market disadvantage. Regulatory bodies: Organized + constrained \u2192 d\u22480.68, f(d)\u22480.94. Has formal authority but lacks technical capacity; can push back but cannot force disclosure. Secrecy regime: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Maintains itself through institutional inertia and pressure. Analytical observer: analytical \u2192 d\u22480.60, f(d)\u22480.72. Sees balanced extraction and coordination; tangled rope classification.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy through structural heterogeneity of perspectives. The primary beneficiary (OpenAI) genuinely experiences coordination value: frontier capability development does concentrate expertise efficiently, and the secrecy regime does enable faster iteration. The victims experience genuine extraction: their access is constrained, their verification is impossible, their alternatives are inferior. These are not contradictory \u2014 they're both structurally true. The snare classification (from victims' perspectives) coexists with rope classification (from beneficiary's perspective) because the victims' powerlessness is a prerequisite for the beneficiary's coordination function. If victims had access, the coordination would degrade into messy distributed development (lower pace, higher costs). The mandatrophy is resolved by recognizing that the constraint IS extractive (snare from victim position) AND that the extraction relies on genuine coordination benefits (rope from beneficiary position). The ethical tension is not a classification problem \u2014 it's a distributional problem: who should bear the costs of concentration? The analytical perspective (tangled_rope) captures this directly: the regime has both functions, and the question is not whether extraction occurs but whether it's justified by the coordination benefits. This is fundamentally a question for governance, not for classification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_capability_evaluation_access",
+      "frontier_ai_labor_market_dynamics",
+      "regulatory_capture_in_ai_governance"
+    ],
+    "dual_formulation_note": "The information asymmetry in Prism development decomposes into three structurally distinct constraints: (1) information_asymmetry_capability_access (\u03b5\u22480.65, snare) \u2014 inability to verify frontier capabilities independently, (2) information_asymmetry_labor_market (\u03b5\u22480.52, tangled_rope) \u2014 talent concentration enabled by informational advantage, (3) information_asymmetry_regulatory (\u03b5\u22480.58, tangled_rope) \u2014 regulators lack technical capacity for independent audit. These three stories share the root information asymmetry but have different victim groups, different temporal scales, and different resolution paths. The present story (openai_prism_development) is the overarching structural constraint; the three decomposed stories capture specific victim-domain dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ]
+}

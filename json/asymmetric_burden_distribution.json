@@ -2,25 +2,30 @@
   "header": {
     "constraint_id": "asymmetric_burden_distribution",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "abd"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "The Externalization Lever",
     "topic_domain": "economic/social/logistical",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "global_consumers",
-      "corporate_shareholders"
+      "urban_convenience_consumers",
+      "logistics_platform_operators",
+      "goods_distribution_networks"
     ],
     "victims": [
-      "peripheral_communities",
-      "gig_economy_workers"
-    ]
+      "peripheral_warehouse_workers",
+      "port_communities",
+      "traffic_affected_neighborhoods",
+      "environmental_receptor_populations"
+    ],
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
@@ -29,8 +34,26 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Peripheral Community",
-      "comment": "PERSPECTIVE 1: PERIPHERAL COMMUNITY (SNARE) — Trapped by economic circumstance and zoning, this group bears the full cost of noise, pollution, and stress with no recourse or proportional benefit. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.74. This high effective extraction, combined with high suppression, meets the Snare classification."
+      "label": "The Warehouse Worker",
+      "comment": "PERSPECTIVE 1: WAREHOUSE WORKER (SNARE) \u2014 Trapped in proximity to sorting facilities, delivery hubs, and logistics nodes. Bears full operational burden: noise pollution, air quality degradation, vehicular hazard, occupational stress, and compressed scheduling. No realistic exit without loss of livelihood. Maximum experienced extraction. The constraint's coercive structure leaves no meaningful alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Port-Adjacent Residential Community",
+      "comment": "PERSPECTIVE 2: PORT-ADJACENT RESIDENTIAL COMMUNITY (SNARE) \u2014 Trapped by residential ownership or rental immobility. Bears continuous exposure to container truck noise, diesel exhaust, light pollution from 24-hour operations, and chronic stress. Housing market discrimination makes relocation economically inaccessible. Suppression operates through real estate lock-in: exit costs are prohibitive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Affected Municipal Government",
+      "comment": "PERSPECTIVE 3: AFFECTED MUNICIPAL GOVERNMENT (TANGLED ROPE) \u2014 Constrained exit. Municipality benefits from logistics tax base and employment claims, but bears infrastructure maintenance costs (road degradation, emergency response for accidents) and political pressure from residents. Enforcement of noise ordinances is unevenly applied; companies have resources to litigate or lobby for exemptions. Mixed coordination-extraction: the system provides regional economic benefit (genuine coordination) while extracting local governance capacity and resident welfare."
     },
     {
       "classification_type": "rope",
@@ -38,105 +61,114 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Global Consumer",
-      "comment": "PERSPECTIVE 2: GLOBAL CONSUMER (ROPE) — Experiences the system as pure coordination for convenience and low prices. Can switch between providers at will (arbitrage exit). As a primary beneficiary, directionality is low. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative extraction indicates a net subsidy."
+      "label": "The E-Commerce Platform and Logistics Operator",
+      "comment": "PERSPECTIVE 4: E-COMMERCE PLATFORM AND LOGISTICS OPERATOR (ROPE) \u2014 Full arbitrage. Can relocate operations to jurisdictions with lower enforcement, outsource externality costs, or exploit regulatory arbitrage between local and national standards. Experiences the constraint as pure coordination: creating logistics networks that move goods efficiently. The platform has maximum flexibility and exit options; constraint functions as enabling infrastructure for their business model."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "analytical",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Environmental Justice Coalition",
+      "comment": "PERSPECTIVE 5: ENVIRONMENTAL JUSTICE COALITION (TANGLED ROPE) \u2014 Organized actors with constrained exit. Coalition benefits from growing awareness of externalization and policy momentum toward burden-shifting accountability (emissions standards, community benefits agreements, worker protections). But enforcement remains uneven and companies can shift operations across jurisdictions. Active enforcement required: litigation, regulation, worker organizing. Mixed benefit (raises awareness, creates legal precedent) and constraint (limited resources, political capture by logistics lobby)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
       "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (efficient supply chains) and the severe, asymmetric extraction it imposes. This balanced view recognizes the hybrid nature of the constraint. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90. This high χ value falls within the Tangled Rope range."
+      "label": "The Regulatory Framework (National Level)",
+      "comment": "PERSPECTIVE 6: REGULATORY FRAMEWORK - NATIONAL LEVEL (PITON) \u2014 Formal environmental and labor regulations exist (Clean Air Act provisions, occupational safety standards, noise ordinances), but enforcement is degraded and theatrical. Regulatory capture by logistics industry has created exemptions, delayed implementation timelines, and measurement methodologies that underestimate exposure. Theater ratio is high: compliance is documented but externalization continues through loopholes. The regulatory apparatus persists through institutional inertia despite low functional constraint on the extraction mechanism."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Urban Planner / Regulator",
-      "comment": "PERSPECTIVE 4: URBAN PLANNER (SCAFFOLD) — Views the current system of externalized costs as a temporary, undesirable state to be superseded by better policy (e.g., green zones, fair wage laws). This implies a sunset clause on the current arrangement. d≈0.40, f(d)≈0.40, σ=0.9 → χ≈0.23. Low effective extraction meets the Scaffold gate (χ ≤ 0.30)."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Corporate Sustainability Office",
-      "comment": "PERSPECTIVE 5: CORPORATE SUSTAINABILITY OFFICE (PITON) — Engages in performative mitigation (CSR reports, greenwashing) that has little functional impact on the core extractive model. The high theater_ratio (0.75) and low effective extraction for a beneficiary (χ≈-0.09) satisfy the Piton classification gates. The function is inertial, maintained for appearances."
+      "spatial_scope": "global",
+      "label": "The Extended Producer Responsibility Movement",
+      "comment": "PERSPECTIVE 7: EXTENDED PRODUCER RESPONSIBILITY MOVEMENT (SCAFFOLD) \u2014 Organized agents (EU waste directives, corporate sustainability commitments, shareholder pressure) are building temporary mechanisms to internalize externality costs. Extended producer responsibility (EPR) frameworks create penalties for burden-shifting. Sunset logic applies: as EPR norms mature and international agreements tighten, companies will face genuine cost pressure to relocate externalities back into their operational budgets rather than peripheral communities. Theater is moderate; enforcement gaps exist but trajectory is toward actual cost internalization. Estimated sunset: 15-25 years for full EPR implementation across supply chains."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerful",
+      "agent_power": "analytical",
       "time_horizon": "civilizational",
-      "exit_options": "mobile",
+      "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Market Fundamentalist",
-      "comment": "PERSPECTIVE 6: MARKET FUNDAMENTALIST (MOUNTAIN) — Frames externalities as the unavoidable, natural 'price of progress' or an efficient outcome of market forces. This perspective naturalizes a contingent social arrangement. The engine will identify this as a false summit, as the base properties (ε=0.65, suppression=0.75) fail the Mountain gates."
+      "label": "The Analytical Observer (Thermodynamic View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some externalization appears irreducible: entropy production in logistics systems must be dissipated somewhere. The core claim: externalization is inherent to complex supply chains \u2014 you cannot have centralized benefit without peripheral burden dissipation. However, this perspective risks naturalizing what is actually a contingent institutional arrangement. The engine's false summit detector will reveal that thermodynamic necessity is not the driver; organizational choice and regulatory arbitrage are."
     }
   ],
   "omegas": [
     {
-      "id": "cost_quantification",
-      "question": "How can the non-monetary costs (health impacts, stress, environmental decay) be accurately quantified and compared to the monetary benefits of the system?",
-      "resolution_mechanism": "Development of comprehensive social and environmental accounting metrics; longitudinal public health studies in affected vs. unaffected communities.",
-      "impact": "Accurate quantification could shift the analytical classification from Tangled Rope to Snare by revealing a higher true extractiveness, or justify regulatory intervention (Scaffold).",
+      "id": "total_burden_quantification",
+      "question": "What is the total health and environmental burden imposed on peripheral populations, and how does it compare to the central benefit captured by logistics operators?",
+      "resolution_mechanism": "Health impact assessment: chronic disease prevalence, respiratory morbidity, noise-induced sleep disruption, occupational injury rates in logistics hubs vs control populations. Environmental sampling: air quality, particulate matter, soil/water contamination. Cost-benefit analysis comparing capitalized health burden to logistics operator profit and consumer surplus.",
+      "impact": "If total burden >> total benefit: extraction mechanism is severe (Snare classification strengthened, mandatrophy triggered). If benefits roughly equal burden distributed fairly: reclassification toward Rope or Scaffold feasible.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Quantification of non-monetary externalities"
+      "description": "Quantified health and environmental burden versus central benefit"
     },
     {
-      "id": "causal_attribution",
-      "question": "Are the negative externalities a direct result of deliberate corporate policy (a Snare) or an unavoidable emergent property of complex logistical systems (a Mountain)?",
-      "resolution_mechanism": "Comparative analysis of firms with different externality-management policies; internal corporate document review; agent-based modeling of supply chains.",
-      "impact": "Resolving this determines whether the solution is policy enforcement against specific actors or a fundamental redesign of the system.",
+      "id": "exit_option_availability",
+      "question": "What proportion of burden-bearing populations have realistic economic exit options? Is residential relocation or job switching genuinely available?",
+      "resolution_mechanism": "Labor market analysis: wage differentials between warehouse/port jobs and accessible alternatives; job mobility rates. Housing market analysis: price gradients, ownership barriers, tenant protection laws, discriminatory practices in peripheral vs central areas. Longitudinal tracking of residential and occupational mobility.",
+      "impact": "If < 20% have realistic exit: trapped classification confirmed across multiple perspectives. If > 60% have exit: constrained reclassification may be appropriate; this would lower derived directionality.",
       "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Distinguishing deliberate policy from emergent properties"
+      "type_class": "empirical",
+      "description": "Realistic exit options for burden-bearing populations"
     },
     {
-      "id": "regulatory_effectiveness",
-      "question": "Are regulatory bodies genuinely attempting to mitigate harm (Scaffold perspective) or are their efforts largely performative due to regulatory capture (Piton perspective)?",
-      "resolution_mechanism": "Analysis of enforcement actions versus policy statements; tracking lobbying expenditures and their correlation with weakened regulations.",
-      "impact": "Determines whether the 'Scaffold' view held by regulators is structurally sound or merely aspirational, collapsing into a Piton.",
+      "id": "regulatory_arbitrage_scope",
+      "question": "How much of the externalization mechanism relies on regulatory arbitrage versus inherent operational necessity? Can operators internalize costs if penalties are sufficiently high?",
+      "resolution_mechanism": "Comparative analysis: jurisdiction-by-jurisdiction enforcement patterns, cost pass-through analysis when regulations tighten. Case studies of companies relocating operations in response to environmental regulations (spatial externalization) versus companies absorbing costs through operational redesign (functional internalization).",
+      "impact": "If arbitrage is primary driver: Snare/Tangled Rope confirmed; regulatory capture (piton perspective) is accurate. If operational necessity is primary: Mountain perspective gains credibility; thermodynamic argument for irreducibility strengthens.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Effectiveness and intent of regulatory bodies"
+      "description": "Role of regulatory arbitrage versus operational necessity"
+    },
+    {
+      "id": "epr_implementation_feasibility",
+      "question": "Can extended producer responsibility mechanisms actually internalize externality costs at scale, or will companies find new jurisdictions and loopholes?",
+      "resolution_mechanism": "Longitudinal study of EPR policy implementation: monitoring whether burden-shifting migrates to non-compliant jurisdictions or whether genuine internalization occurs. Analysis of policy escape routes: outsourcing to developing economies, subsidiary structure exploitation, regulatory forum shopping.",
+      "impact": "If EPR successfully internalizes costs: Scaffold sunset is real; constraint will transition to Rope as burden distribution becomes coordinated function rather than extraction. If companies evade EPR: Scaffold is aspirational; constraint may intensify (Snare reclassification) as burden concentrates further in EPR-compliant jurisdictions.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Extended producer responsibility implementation effectiveness"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.55
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.65
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.6
+      "value": 0.53
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.75
+      "value": 0.64
     }
   ],
   "interval": {
@@ -144,28 +176,40 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "The 'Externalization Lever' is a structural pattern where the benefits of a system (e.g., global logistics, digital platforms, urban economies) are concentrated among a core group, while the operational costs (pollution, noise, stress, precarious labor) are systematically displaced onto a peripheral population. This creates a fundamental asymmetry in who benefits and who pays. The constraint is not merely an unfortunate byproduct but an active mechanism that enhances the efficiency and profitability of the core system by treating the periphery's environment and well-being as a free or low-cost resource.",
+    "narrative_context": "The externalization lever describes a structural mechanism in modern logistics and consumer convenience systems where systemic benefits (low-cost goods delivery, urban density, e-commerce speed) are captured by central beneficiaries while operational burdens (pollution, noise, occupational stress, traffic risk) are systematically imposed on peripheral populations with minimal exit options. This constraint exhibits multiple DR types depending on observer position: powerless warehouse workers and port-adjacent residents experience it as a snare with no exit; municipal governments face tangled extraction-coordination (economic benefits offset by infrastructure costs and resident welfare losses); logistics platforms experience pure coordination (building efficient networks); organized environmental justice coalitions see a temporary coordination failure with emerging remediation mechanisms (scaffold); regulatory agencies maintain degraded compliance theater (piton); thermodynamic arguments risk naturalizing what is contingent institutional choice (false mountain). The constraint's theater ratio (0.64) reflects that formal regulations and compliance documentation exist but are weakly enforced; companies can meet rules on paper while externalities continue through loopholes and regulatory arbitrage. Base extractiveness has risen from 0.32 to 0.58 over the 20-year interval as e-commerce scale has concentrated benefits and as regulatory capture has deepened, allowing companies to avoid internalization of costs despite growing environmental awareness.",
     "key_agents": [
-      "Peripheral Communities: Primary victims (powerless/trapped) — Residents near ports, warehouses, and freeways who bear health and quality-of-life costs.",
-      "Gig Economy Workers: Secondary victims (powerless/trapped) — Bear the costs of vehicle maintenance, lack of benefits, and algorithmic precarity.",
-      "Global Consumers: Primary beneficiaries (institutional/arbitrage) — Receive the benefits of low prices and fast delivery without directly experiencing the externalized costs.",
-      "Corporate Shareholders: Primary beneficiaries (institutional/arbitrage) — Profit from business models that minimize operational costs by externalizing them.",
-      "Regulators / Planners: Organized agents (organized/constrained) — Attempt to mitigate the harms through policy, viewing the current state as a temporary problem to be solved.",
-      "Corporate PR/Sustainability Offices: Institutional actors (institutional/arbitrage) — Manage the public perception of externalities, often through performative actions."
+      "Urban Convenience Consumers: Primary beneficiary (institutional/arbitrage) \u2014 capture low-cost goods, fast delivery, environmental anonymity. Can exit burden entirely through residential choice.",
+      "Logistics Platform Operators (Amazon, DHL, UPS, etc.): Primary beneficiary (institutional/arbitrage) \u2014 capture profit from volume scaling, regulatory arbitrage, operational flexibility. Maximum exit options; can relocate hubs or outsource operations.",
+      "Goods Distribution Networks: Beneficiary (institutional/arbitrage) \u2014 enable global supply chains; capture efficiency gains and network effects.",
+      "Warehouse Workers: Primary victim (powerless/trapped) \u2014 concentrated in logistics hubs; bear occupational stress, injury risk, scheduling pressure. Limited exit due to wage dependence and skill specificity.",
+      "Port-Adjacent Residential Communities: Primary victim (powerless/trapped) \u2014 geographic immobility (housing ownership, rental stigma, economic constraints); continuous exposure to noise, pollution, traffic hazard. Suppression through real estate lock-in.",
+      "Traffic-Affected Neighborhoods: Secondary victim (powerless/constrained) \u2014 bear collision risk and air quality degradation; limited exit without major relocation.",
+      "Environmental Receptor Populations: Victim (powerless/trapped) \u2014 peripheral regions absorbing manufacturing and extraction operations; abstract collective good with no organized voice.",
+      "Municipal Governments: Secondary actor (moderate/constrained) \u2014 benefit from tax base and employment claims; bear infrastructure maintenance costs and political pressure. Constrained exit through jurisdictional boundaries and tax competition.",
+      "Environmental Justice Coalition: Organized actor (organized/constrained) \u2014 growing political force pushing cost internalization; constrained by resource limits and regulatory capture.",
+      "Regulatory Agencies: Institutional actor (institutional/constrained) \u2014 maintain formal standards but weak enforcement; captured by logistics lobby. Constrained by budget, political pressure, and jurisdictional limits.",
+      "Extended Producer Responsibility Movement: Organized actor (organized/constrained) \u2014 building international norms for cost internalization; constrained by coordination barriers and corporate resistance."
     ],
-    "logic_rationale": "Extractiveness (ε=0.65) is high, reflecting the severe, uncompensated health, environmental, and social costs imposed on victims. Suppression (0.75) is high because victims are structurally trapped; they lack the economic mobility to move away from infrastructure hubs or the political power to change zoning and labor laws. Theater Ratio (0.75) is high, representing the significant corporate and political effort spent on 'greenwashing' and CSR initiatives that perform concern without altering the fundamental extractive logic of the business model.",
-    "perspectival_gap": "This constraint is a diagnostic exemplar, producing all six classifications from a single set of metrics. For the trapped victim, it is a Snare. For the consumer who only sees the benefits, it is a Rope. For the analyst who sees both sides, it is a Tangled Rope. For the regulator aiming for future improvements, it is a Scaffold. For the corporate PR department managing appearances, it is a Piton. For the ideologue who sees this as a natural law of economics, it is a Mountain. The gap is total, revealing that the 'type' of a constraint is a function of the observer's structural relationship to it.",
-    "directionality_logic": "Beneficiaries (consumers, shareholders) have arbitrage exit options, leading to a low directionality (d) and negative effective extraction (χ), making the system appear as a pure coordination 'Rope'. Victims (peripheral communities, gig workers) are trapped, leading to a high directionality (d) and extremely high effective extraction (χ), making the system a coercive 'Snare'. The analytical observer's position results in a high χ that correctly identifies the mixed coordination/extraction nature of a 'Tangled Rope'.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating its premise: a single structural reality can be correctly perceived as multiple constraint types. The error is not in any single classification but in the attempt to assign one exclusive type to the entire system. The Deferential Realism framework's purpose is to hold all these valid, indexed perspectives simultaneously, with the analytical 'Tangled Rope' classification serving as the system's overall claim while acknowledging the legitimacy of the other views."
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting significant asymmetry in burden distribution. The central beneficiaries capture the full value of logistics efficiency while peripheral populations absorb operational costs without proportional compensation. The extractiveness is not maximal (< 0.66 Snare threshold) because some operational burden is inherent to supply chain physics, not pure extraction \u2014 legitimate coordination value exists alongside extraction. The 20-year trajectory (0.32 \u2192 0.58) shows increasing extraction as e-commerce scale amplifies volume and as regulatory capture deepens, allowing companies to avoid cost internalization. Suppression (0.68): High. Barrier mechanisms include: (1) residential/occupational immobility enforced through housing markets and wage structure; (2) information asymmetry \u2014 consumers don't perceive burden being imposed elsewhere; (3) regulatory capture \u2014 weak enforcement of environmental and labor standards; (4) geographic distance \u2014 burden bearers are not political constituencies for benefiting platforms; (5) collective action barriers \u2014 dispersed peripheral populations lack organizing power. Theater ratio (0.64): Moderate-high. Formal compliance exists: environmental impact statements, noise ordinances, labor regulations, corporate sustainability commitments. But enforcement is weak and measurement methodologies systematically underestimate exposure. Compliance documentation creates appearance of constraint without functional impact on extraction mechanism.",
+    "perspectival_gap": "The gap between snare and rope perspectives is not measurement ambiguity but genuine structural difference in position. The worker bears material costs (noise exposure, occupational stress, health impacts) that are invariant across observational methods. The platform captures material benefits (profit, operational efficiency, market dominance) that are equally invariant. The disagreement is not empirical \u2014 it's structural: the same constraint feels like pure extraction to one agent and pure coordination to another because they occupy opposite ends of a benefit flow. The tangled rope perspectives (municipal government, environmental coalition) occupy intermediate positions where genuine coordination function coexists with asymmetric extraction. The piton and mountain perspectives reflect institutional inertia and naturalization respectively \u2014 they are not alternative measurements of the same thing, but incorrect framings that the engine's classifier should flag.",
+    "directionality_logic": "Directionality derivation flows from beneficiary/victim status plus exit options through the sigmoid function f(d). Warehouse workers (victim + trapped) \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 maximum experienced extractiveness. Port-adjacent residents (victim + trapped) \u2192 same high d and f(d). Municipal governments (mixed: benefit from tax base but victim to infrastructure costs + constrained exit) \u2192 d \u2248 0.65 \u2192 f(d) \u2248 1.00 \u2192 moderate experienced extraction. E-commerce platforms (beneficiary + arbitrage exit) \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.01 \u2192 negative experienced extractiveness (they experience coordination, not constraint). Environmental justice coalition (beneficiary of policy momentum + constrained exit) \u2192 d \u2248 0.45 \u2192 f(d) \u2248 0.45 \u2192 low-moderate extraction. Regulatory agencies (institutional actor with formal authority but captured + constrained by budget and politics) \u2192 d \u2248 0.55 \u2192 f(d) \u2248 0.75 \u2192 moderate extraction. The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) scales effective extraction by scope: local warehouses (\u03c3=0.8) show lower \u03c7 than global supply chains (\u03c3=1.2), but base extraction \u03b5 stays constant at 0.58 \u2014 what changes is observability and verification difficulty at scale.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint exhibits mandatrophy because it combines genuine coordination function (efficient logistics networks do solve real distribution problems) with severe asymmetric extraction (burden is systematically imposed on powerless populations). The classification as Tangled Rope (not Snare) is justified by: (1) Beneficiaries clearly identified (consumers, platforms, distribution networks) \u2014 genuine coordination function exists; (2) Victims clearly identified (workers, communities, environmental receptors) \u2014 asymmetric extraction is structural, not incidental; (3) Active enforcement required (EPR, regulations, worker organizing) \u2014 the system persists only through institutional maintenance, not market equilibrium; (4) \u03c7 = 0.58 \u00d7 f(d_beneficiary)\u00d7\u03c3(global) \u2248 0.58 \u00d7 (-0.01) \u00d7 1.2 \u2248 -0.01 for beneficiaries, but \u03c7 = 0.58 \u00d7 f(d_victim)\u00d7\u03c3(local) \u2248 0.58 \u00d7 1.42 \u00d7 0.8 \u2248 0.66 for victims \u2014 the perspectival gap is real and reflects actual structural difference, not measurement error. The false mountain perspective (thermodynamic inevitability) is correctly identified as naturalization: supply chain externalities are not laws of physics but contingent outcomes of how we've chosen to organize logistics and pricing. Cost internalization is technically feasible; regulatory and institutional barriers are the constraint, not entropy. The scaffold perspective (EPR sunset) is the key to mandatrophy resolution: if producer responsibility norms mature and international enforcement strengthens, the externalization lever will gradually transition from Snare/Tangled Rope (for peripheral populations) toward Rope (coordinated burden distribution) or toward Scaffold completion (if norms fully internalize costs). The high extractiveness (0.58) and theater ratio (0.64) justify the mandatory mandatrophy flag: this is a high-extraction system where the coordination function (logistics efficiency) is real but does not justify the burden distribution, and where institutional inertia (regulatory capture, diffuse victim populations) masks the extraction mechanism behind compliance theater."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "fast_fashion_labor_practices",
-      "amazon_warehouse_conditions",
-      "urban_food_deserts"
-    ]
-  }
+      "regulatory_capture_logistics_sector",
+      "environmental_justice_infrastructure_disparity",
+      "occupational_injury_externalization"
+    ],
+    "dual_formulation_note": "The externalization lever decomposes into three downstream constraints: (1) regulatory_capture_logistics_sector (\u03b5 \u2248 0.45) \u2014 the institutional mechanism that prevents enforcement of standards; (2) environmental_justice_infrastructure_disparity (\u03b5 \u2248 0.52) \u2014 the housing/location asymmetry that creates residential trapping; (3) occupational_injury_externalization (\u03b5 \u2248 0.48) \u2014 the labor market mechanism that makes warehouse work the default option for burden-bearing populations. These three constraints are upstream dependencies for the parent externalization lever \u2014 removing any one would reduce \u03b5 significantly. The parent constraint can be modeled either as their intersection (most severe manifestation) or as a summary constraint capturing the coordinated effect of all three mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
 }

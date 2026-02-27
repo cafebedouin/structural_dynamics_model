@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "ice_safe_departure",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ice_sd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ICE Safe Departure Program",
+    "topic_domain": "political/immigration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ice_agency_resource_optimization",
+      "deporting_nation_state"
+    ],
+    "victims": [
+      "undocumented_immigrants",
+      "family_units_separated"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Undocumented Immigrant",
+      "comment": "PERSPECTIVE 1: UNDOCUMENTED IMMIGRANT (SNARE) \u2014 Final deportation order with no meaningful exit alternatives. Program offers 'voluntary departure' with financial incentive, but departure means permanent separation from family, employment, and established community. Choice is illusory: deportation is mandatory; 'safe departure' merely packages expulsion as consent. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Family Units Left Behind",
+      "comment": "PERSPECTIVE 2: FAMILY UNITS LEFT BEHIND (TANGLED ROPE) \u2014 Separated from deporting member; coordination function (program enables some managed transitions rather than sudden detention), but extraction dominates: family faces financial burden, lost income, social/legal status degradation, long-term separation. d\u22480.78, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "ICE Administrative Apparatus",
+      "comment": "PERSPECTIVE 3: ICE ADMINISTRATIVE APPARATUS (ROPE) \u2014 Program provides pure coordination benefit: voluntary departure reduces detention costs, accelerates case processing, reduces courtroom burden, minimizes deportation resistance. Agency captures resource optimization without coercion expenditure on resistant subjects. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; low suppression cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Deportation Legal Framework",
+      "comment": "PERSPECTIVE 4: THE DEPORTATION LEGAL FRAMEWORK (PITON) \u2014 The Safe Departure Program is a performative modification to mandatory deportation law. Theater_ratio=0.62: program language frames coercive expulsion as 'safe,' 'voluntary,' and 'dignified' departure, creating appearance of humanitarian process while the underlying extraction mechanism (final deportation orders, no meaningful legal remedy) remains unchanged. The framing ritual persists despite minimal functional change to actual enforcement outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Immigration Advocacy Organizations",
+      "comment": "PERSPECTIVE 5: IMMIGRATION ADVOCACY ORGANIZATIONS (TANGLED ROPE) \u2014 Coordination function: negotiating program terms to reduce deportation trauma and preserve some family continuity. But extraction from system: program is used as policy cover ('see, ICE offers humane options') to legitimize underlying deportation apparatus and reduce public pressure for broader reform. Advocates benefit from program negotiation leverage; public benefits from slightly humaner process. But the constraint's existence enables more aggressive deportation elsewhere. d\u22480.45, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.24."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Society Coalition for Deportation Alternatives",
+      "comment": "PERSPECTIVE 6: CIVIL SOCIETY COALITION (SCAFFOLD) \u2014 Sees Safe Departure as temporary scaffolding toward broader immigration reform: voluntary departure incentives could transition into earned legalization pathways, family unity provisions, and ultimate sunset of deportation-first enforcement. Organized coalition (legal advocates, immigrant organizations, religious groups) uses program as concrete institution around which to build alternative framework. Theater_ratio potentially declining as legal alternatives gain legitimacy. d\u22480.38, f(d)\u22480.38, \u03c3=1.0 \u2192 \u03c7\u22480.22."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Institutional Extraction with Coordination Framing)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Structured as tangled rope from civilizational scale: the program coordinates between state deportation authority and undocumented population, lowering mutual enforcement costs while extracting from the powerless via coercive expulsion. The 'safe' framing is essential to the extraction mechanism \u2014 it converts mandatory deportation into apparent individual choice, reducing resistance and legitimacy costs. Suppression (0.68) reflects that alternatives (immigration reform, legalization pathways, family unity provisions) are actively suppressed; the program's existence enables their suppression by appearing responsive. d\u22480.58, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.43."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntary_departure_coercion_threshold",
+      "question": "At what point does a 'voluntary' departure incentive become functionally coercive given the alternative is indefinite detention?",
+      "resolution_mechanism": "Comparative analysis of immigrant decision-making: survey of program participants on perceived alternatives and choice quality; comparison with genuine voluntary migration vs deportation-adjacent incentives",
+      "impact": "If financial incentive is perceived as genuine choice: program is primarily coordination (Rope dominant). If perceived as coercion: program is primarily extraction (Snare dominant).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold between voluntary incentive and functional coercion"
+    },
+    {
+      "id": "family_separation_permanence",
+      "question": "Does the Safe Departure incentive structure actually reduce family separation permanence compared to contested deportation, or does it merely accelerate separation?",
+      "resolution_mechanism": "Longitudinal tracking of family reunification rates post-departure; comparison of program participants vs non-participants on ability to petition for family sponsorship or maintain contact",
+      "impact": "If reunification rates are higher: program has genuine coordination function. If equivalent or lower: program is extraction masked by coordination framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether program reduces long-term family separation vs merely accelerating it"
+    },
+    {
+      "id": "policy_spillover_legitimacy",
+      "question": "Does the existence of Safe Departure Program provide political cover for more aggressive deportation enforcement elsewhere in the system?",
+      "resolution_mechanism": "Policy analysis of enforcement priorities pre- and post-program; analysis of rhetorical use of program by agency and Congress; comparison of total deportation rates and enforcement intensity",
+      "impact": "If enforcement intensity increases post-program while program participation is highlighted publicly: program is suppressing alternatives and enabling increased overall extraction. If enforcement is unchanged or decreases: program is not providing legitimacy cover.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether program legitimacy spillover enables increased enforcement elsewhere"
+    },
+    {
+      "id": "reform_pathway_viability",
+      "question": "Is the Safe Departure Program a genuine stepping stone toward earned legalization/family unity frameworks, or a terminal endpoint that forecloses broader reform?",
+      "resolution_mechanism": "Historical institutional analysis of similar programs; legislative trajectory post-program; stakeholder interviews on reform prospects; comparison with countries that use departure incentives as transition mechanisms vs endpoints",
+      "impact": "If stepping stone: scaffold perspective is structural. If terminal: program is snare disguised as temporary, and suppression is higher than measured.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether program is stepping stone to reform or terminal endpoint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The ICE Safe Departure Program creates a structural tension between humanitarian framing and coercive extraction. Immigrants with final deportation orders are offered financial incentives ($500-$1,500) to depart 'voluntarily' rather than face mandatory deportation after contested legal proceedings. The program reduces ICE's enforcement costs and accelerates case closure while using humanitarian language ('safe departure,' 'dignity,' 'choice') to convert mandatory expulsion into apparent individual decision-making. This transformation is functionally essential: reframing extraction as voluntary reduces political resistance, legitimacy costs, and the level of overt suppression required. The constraint exhibits tangled rope structure: genuine coordination benefit (reduced family trauma, faster closure, lower detention costs) is inseparable from asymmetric extraction (permanent separation, foregone income, foreclosed legal remedies). The theater ratio (0.62) reflects that the program's primary function is rhetorical \u2014 it changes how deportation is named and experienced, not fundamentally how it operates. Base extractiveness has risen over the measurement interval (0.45 \u2192 0.58) as the program's rhetoric has matured and been integrated into official enforcement strategy, indicating that the naming change has successfully normalized what was previously contested.",
+    "key_agents": [
+      "Undocumented Immigrants: Primary victims (powerless/trapped) \u2014 face final deportation orders with no meaningful legal remedy; program offers illusory choice between mandatory expulsion or 'voluntary' expulsion with financial incentive",
+      "ICE Administrative Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 captures cost reduction (detention, courtroom time, resistance management) without enforcement expenditure; rebrands extraction as coordination",
+      "Family Units Left Behind: Secondary victims (moderate/constrained) \u2014 separated from deporting members; lose income, face social/legal status degradation; some limited benefits from managed vs contested departure",
+      "Immigration Advocacy Organizations: Secondary beneficiary (powerful/arbitrage) \u2014 gain negotiation leverage over program terms; benefit from case-by-case humanitarian improvements; also used to legitimize underlying deportation apparatus",
+      "Civil Society Coalition: Organized actors (organized/constrained) \u2014 see program as potential stepping stone toward earned legalization and family unity frameworks; constrained by lack of political power to force broader reform",
+      "Deportation Legal Framework: Institutional actor (institutional/arbitrage) \u2014 maintains performative modification to mandatory deportation law; final orders remain legally uncontested; program exists within unchanged legal structure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The program extracts permanent separation, foregone legal remedies, and implicit coercion (choice between two forms of mandatory expulsion). The extraction is not total \u2014 some immigrants genuinely prefer faster departure to prolonged detention, and the financial incentive provides real (if modest) material benefit. The increase from 0.45 to 0.58 over the interval reflects that the program's rhetorical maturity has normalized the extraction mechanism. Suppression (0.68): High. Significant barriers to alternatives include: final deportation orders provide no legal escape route; financial incentive is coercive relative to detained alternative; immigrant legal status makes resistance risky; civil society alternatives (earned legalization, family unity) are actively suppressed by enforcement-first policy; no independent verification of 'voluntary' participation occurs. Theater ratio (0.62): Moderate-high. The program is substantially performative: the naming change ('safe,' 'voluntary,' 'dignified') does real political work in legitimizing the underlying coercive extraction, but minimal functional change to enforcement outcomes occurs. The framing ritual (bureaucratic efficiency language, humanitarian rhetoric) persists and has increased over the interval.",
+    "perspectival_gap": "This constraint shows stark perspectival divergence. The powerless immigrant sees pure extraction (Snare) \u2014 final deportation order with illusory choice. The institutional beneficiary (ICE) sees pure coordination (Rope) \u2014 resource optimization without coercion. The moderate victim (separated family) sees mixed extraction and coordination (Tangled Rope) \u2014 some benefits from managed process, but extraction dominates. The advocacy organization sees opportunity for leverage (Tangled Rope) \u2014 negotiating program terms within a constrained landscape. The civil society coalition sees a scaffold (Temporary Support) \u2014 a concrete institution that could transition toward broader reform. The analytical observer, from civilizational scope, sees tangled rope with suppression of alternatives \u2014 the program's extraction mechanism is inseparable from its coordination framing, and the coordination benefit is partly achieved by suppressing alternative pathways (earned legalization, family unity). The false summit risk: one could naturalize this constraint as an 'inherent tradeoff' between deportation and humane process, missing that the apparent tradeoff is socially constructed \u2014 family unity provisions and earned legalization are structurally possible, but actively suppressed.",
+    "directionality_logic": "Undocumented immigrants: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Final deportation order with no exit; 'voluntary' incentive is coercive relative to detained alternative. Maximum structural extraction. ICE apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; low suppression cost due to voluntary framing reducing resistance. Family units: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. Separated by deportation; some limited benefits from managed process (reduced detention trauma), but extraction dominates (lost income, permanent separation). Advocacy organizations: Mixed beneficiary/victim + arbitrage \u2192 d\u22480.45, f(d)\u22480.42. Benefit from increased leverage in negotiating program terms; also used to legitimize underlying system. Civil society coalition: Organized + constrained \u2192 d\u22480.38, f(d)\u22480.38. Have agency through coalition; see exit path (reform trajectory); constrained by enforcement-first policy framework. Analytical observer: Derived from structural analysis \u2192 d\u22480.58, f(d)\u22480.75. Sees suppression of alternatives; tangled rope reflects inseparability of coordination and extraction.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing the program's stated function (coordination/humanitarian) from its structural function (extraction with coordination framing). The program is legitimately tangled rope, not pure rope, because: (1) genuine coordination benefit exists (reduced family trauma vs contested deportation, faster closure), (2) asymmetric extraction is inseparable (permanent separation, foregone legal remedies, implicit coercion), (3) active enforcement of the framing is required (rhetoric must maintain 'voluntary' appearance). The false summit (natural law mountain: 'deportation inherently requires some trauma') is correctly identified because alternatives exist: family unity provisions, earned legalization pathways, and deportation defense mechanisms could reduce extraction without eliminating coordination. The program's extraction persists not because it's inevitable, but because suppression of alternatives is structurally enforced. Theater ratio (0.62) captures that the program's primary work is rhetorical \u2014 converting mandatory expulsion into apparent choice \u2014 rather than functional (changing the actual enforcement outcome). The piton perspective (degraded ritual) reflects that the underlying deportation legal framework maintains its coercive structure while the program's ritual modification sustains it through inertia and rhetorical legitimacy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "deportation_finality_doctrine",
+      "family_separation_enforcement",
+      "undocumented_labor_extraction"
+    ],
+    "dual_formulation_note": "The Safe Departure Program exists in a constraint family with the underlying deportation authority structure. This program's \u03b5=0.58 reflects the specific extraction mechanism of 'voluntary' incentives; the parent constraint (deportation authority itself) has \u03b5\u22480.65 reflecting the foundational coercive structure. The program is downstream of the deportation finality doctrine (final orders can only be challenged through limited appellate routes) and affects family separation enforcement (program becomes the mechanism through which families are separated)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

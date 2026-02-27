@@ -1,0 +1,162 @@
+{
+  "header": {
+    "constraint_id": "capital_rotation_ai_narrative",
+    "version": "1.0",
+    "generated_date": "2026-02-19",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Narrative: US AI Stock Unsustainability",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_sellers",
+      "active_fund_managers",
+      "non_ai_sectors",
+      "financial_media_outlets"
+    ],
+    "victims": [
+      "retail_investors_long_ai",
+      "ai_companies_needing_capital",
+      "employees_with_stock_options"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Retail Investor",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) — Trapped by the narrative, often buying high and selling low. Lacks the tools for sophisticated hedging or timely exit, bearing the full cost of the capital rotation. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Short-Selling Hedge Fund",
+      "comment": "PERSPECTIVE 2: SHORT-SELLER (ROPE) — Benefits directly from the narrative, which acts as a coordination mechanism to drive prices down. Can enter and exit positions freely to maximize profit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative effective extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The AI Company Executive",
+      "comment": "PERSPECTIVE 3: AI COMPANY EXECUTIVE (TANGLED ROPE) — Experiences the market as both a source of capital (coordination) and a hostile force driven by the narrative (extraction). Constrained from exiting and must manage company strategy in response to the narrative's pressure. d≈0.60, f(d)≈0.88, σ=1.2 → χ≈0.69."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Non-AI Sector (e.g., Industrials)",
+      "comment": "PERSPECTIVE 4: NON-AI SECTOR (ROPE) — A primary beneficiary of the capital rotation. The narrative acts as a pure coordination signal to reallocate capital towards their sector, boosting valuations. Experiences no meaningful extraction. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the legitimate price-discovery function of the market narrative (coordination) and the severe, asymmetric wealth transfer it facilitates (extraction). The system is a hybrid, actively enforced by media and influential investors. This is the basis for the constraint's claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "narrative_vs_fundamental",
+      "question": "Is the market correction driven primarily by the self-fulfilling narrative, or by a genuine reassessment of AI's fundamental economic impact?",
+      "resolution_mechanism": "Time-series analysis comparing productivity data, corporate earnings, and capital expenditure against market sentiment indicators and media coverage.",
+      "impact": "If driven by fundamentals, the constraint is closer to a Rope (efficient market). If primarily narrative-driven, it confirms the Snare/Tangled Rope classification (wealth transfer via information control).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing between a narrative-driven correction and a fundamental-based repricing."
+    },
+    {
+      "id": "circular_investment_exposure",
+      "question": "To what extent are AI valuations propped up by circular investments between major tech firms and the AI startups they fund?",
+      "resolution_mechanism": "Forensic accounting and network analysis of investment flows between large cap tech companies and the AI ecosystem.",
+      "impact": "High exposure would indicate the underlying valuations are fragile, making the 'unsustainability' narrative a more accurate reflection of reality and increasing the system's intrinsic extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the impact of circular investments on AI market valuations."
+    },
+    {
+      "id": "regulatory_intervention_timing",
+      "question": "Will financial regulators intervene to curb speculative behavior or address market concentration, and if so, when?",
+      "resolution_mechanism": "Monitoring of policy proposals, regulatory body statements (e.g., SEC, Fed), and legislative action.",
+      "impact": "Significant intervention could transform the constraint into a Scaffold by imposing temporary limits, while inaction allows the Tangled Rope/Snare dynamics to persist.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The uncertainty of regulatory action to mitigate market volatility."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A dominant market narrative emerged in 2025-2026 positing the unsustainability of the US AI stock market rally. This narrative, fueled by concerns over valuation, circular investments, and unrealized productivity gains, acts as a powerful constraint on market behavior. It coordinates a massive rotation of capital from AI-focused tech stocks to other sectors. This process is not neutral; it creates clear winners (short-sellers, active managers, non-AI sectors) and losers (retail investors holding AI stocks, AI companies seeking capital). The constraint is the narrative itself, which functions as both a price-discovery mechanism and an engine of wealth transfer.",
+    "key_agents": [
+      "Retail Investors (long AI): Primary victims (powerless/trapped) — often the last to react to the narrative shift, incurring significant losses.",
+      "Short-Selling Hedge Funds: Primary beneficiaries (institutional/arbitrage) — profit directly from the price declines coordinated by the narrative.",
+      "AI Companies: Secondary victims (powerful/constrained) — face increased cost of capital and pressure on their valuations.",
+      "Non-AI Sectors: Secondary beneficiaries (powerful/mobile) — receive the inflow of rotated capital.",
+      "Financial Media: Institutional enforcers/beneficiaries (institutional/arbitrage) — amplify and sustain the narrative, benefiting from increased engagement."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65) is high because the narrative directly facilitates a large-scale wealth transfer from one group of investors to another. It is not merely informational; it is causally effective in moving prices and creating losses for the unprepared. Suppression (0.70) is high because once a market narrative of this magnitude takes hold, it is reinforced by herd behavior, media cycles, and analyst reports, making counter-narratives difficult to sustain. Theater (0.40) is moderate; while based on some fundamental concerns, the narrative is amplified by performative analysis and media hype designed to capture attention.",
+    "perspectival_gap": "The gap is stark. For a hedge fund with arbitrage capability, the narrative is a pure Rope—a tool for coordinating a profitable trade. For a retail investor who bought into the AI hype and is now trapped in losing positions, it is a Snare—an inescapable trap that extracts their wealth. For an AI executive, it is a Tangled Rope—the very market that funds their innovation (coordination) is now actively working against their valuation (extraction). This demonstrates how the same economic phenomenon is classified differently based on an agent's structural ability to profit from or be harmed by the information flow.",
+    "directionality_logic": "Beneficiaries like short-sellers have arbitrage exit options, leading to a low derived directionality (d) and negative effective extraction (χ), classifying the constraint as a Rope from their view. Victims like retail investors are trapped, leading to a high d and a high χ, classifying it as a Snare. The analytical perspective acknowledges both the coordination and extraction functions, resulting in the Tangled Rope classification.",
+    "mandatrophy_analysis": "This constraint story resolves the mandatrophy of labeling complex market dynamics. It avoids simplistic labels like 'efficient market' (a false Rope) or 'outright manipulation' (a simple Snare). By using indexical classification, it correctly models the phenomenon as a Tangled Rope from an analytical viewpoint: a system with a genuine coordination function (price discovery, capital reallocation) that is deeply intertwined with a severe, asymmetric extractive function (wealth transfer). The 'correct' classification depends entirely on the observer's structural position within the capital flow."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain_stability"
+    ]
+  }
+}

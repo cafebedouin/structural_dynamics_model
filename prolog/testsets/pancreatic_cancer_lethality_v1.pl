@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: pancreatic_cancer_lethality_v1
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_pancreatic_cancer_lethality_v1, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,21 +55,29 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: pancreatic_cancer_lethality_v1
  *   human_readable: Biological Lethality of Pancreatic Adenocarcinoma
- *   domain: technological
+ *   domain: technological/medical/oncology
  *
  * SUMMARY:
- *   Pancreatic cancer is one of the deadliest malignancies, with a 5-year
- *   survival rate below 10%. This constraint represents the fundamental
- *   biological reality of the disease's resistance to conventional therapies.
- *   Recent research, such as a triple-drug therapy showing success in mice,
- *   represents attempts to overcome this natural barrier, but the constraint
- *   itself remains a Mountain of biology.
+ *   Pancreatic adenocarcinoma's biological lethality represents a natural law
+ *   constraint in the Deferential Realism framework. The 5-year survival rate
+ *   below 10% is not the product of institutional failure, coordination
+ *   breakdown, or policy misallocation — it is an emergent property of
+ *   irreducible biological, anatomical, and temporal constraints. The
+ *   pancreas's retroperitoneal location limits surgical resection margins;
+ *   the cancer's intrinsic chemotherapy resistance defeats pharmaceutical
+ *   intervention; the disease's aggressive dissemination and late-stage
+ *   presentation at diagnosis eliminate curative options. This constraint is
+ *   invariant across all technological approaches and persists despite
+ *   decades of research investment, clinical trial infrastructure, and
+ *   molecular profiling advances. The lethality manifests identically whether
+ *   evaluated through early detection metrics, therapeutic response rates, or
+ *   survival curves — it is a mountain: unchangeable and fixed.
  *
- * KEY AGENTS (by structural relationship):
- *   - Patients with Pancreatic Cancer: Primary target (powerless/trapped) — experiences the constraint as an absolute biological limit.
- *   - Medical Researchers / Oncologists: Analytical agents (analytical/analytical) — study the structure of the constraint to identify weaknesses.
- *   - Pharmaceutical Companies: Institutional agents (institutional/arbitrage) — view the constraint as a market opportunity for developing novel therapies.
- *   - Analytical Observer: Sees the full biological and statistical reality of the disease.
+ * KEY AGENTS:
+ *   - Afflicted Patient: Primary constraint-bearer (powerless/trapped/biographical) — confronts biological lethality with no exit option
+ *   - Oncologist: Clinical translator (moderate/analytical/generational) — observes constraints as irreducible biological realities, not policy failures
+ *   - Research Community: Institutional investigator (organized/analytical/civilizational) — documents plateau in survival despite optimized therapeutics
+ *   - Analytical Observer: Theoretical perspective (institutional/analytical/civilizational) — identifies constraint as structural property of pancreatic anatomy and cancer biology
  */
 
 /* ==========================================================================
@@ -77,85 +85,61 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(pancreatic_cancer_lethality_v1, 0.05).
-domain_priors:suppression_score(pancreatic_cancer_lethality_v1, 0.02).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(pancreatic_cancer_lethality_v1, 0.01).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(pancreatic_cancer_lethality_v1, 0.08).
+domain_priors:suppression_score(pancreatic_cancer_lethality_v1, 0.02).
+domain_priors:theater_ratio(pancreatic_cancer_lethality_v1, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, extractiveness, 0.05).
+narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, extractiveness, 0.08).
 narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, suppression_requirement, 0.02).
-narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. These values ensure the constraint passes the
-% mountain metric gate.
-narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, accessibility_collapse, 0.98).
-narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, resistance, 0.10).
+narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(pancreatic_cancer_lethality_v1, mountain).
 narrative_ontology:human_readable(pancreatic_cancer_lethality_v1, "Biological Lethality of Pancreatic Adenocarcinoma").
-narrative_ontology:topic_domain(pancreatic_cancer_lethality_v1, "technological").
+narrative_ontology:topic_domain(pancreatic_cancer_lethality_v1, "technological/medical/oncology").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(pancreatic_cancer_lethality_v1).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(pancreatic_cancer_lethality_v1). % Required for Tangled Rope
-
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint is a product of biology, not human design. This flag
-% is required for the mountain metric gate to fire.
 domain_priors:emerges_naturally(pancreatic_cancer_lethality_v1).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a Mountain, this constraint has no designed beneficiaries or victims.
-% The concept is incoherent for a natural law. Declarations are omitted.
-%
-% narrative_ontology:constraint_beneficiary(pancreatic_cancer_lethality_v1, ...).
-% narrative_ontology:constraint_victim(pancreatic_cancer_lethality_v1, ...).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT: This is a Mountain from all perspectives.
-% The classification is invariant across all indices because it reflects a
-% fundamental limit of nature. The perspectival minimum is relaxed.
-
-% PERSPECTIVE 1: THE PATIENT
-% Experiences the constraint as an absolute, inescapable biological fact.
+% PERSPECTIVE 1: THE AFFLICTED PATIENT (MOUNTAIN) — No exit option exists. Pancreatic cancer's biological lethality is a constraint imposed by cellular and systemic biology that transcends institutional or political solutions. The patient confronts an immutable natural limit: the cancer's aggressive phenotype, late detection biology, and limited organ tolerance. From this perspective, the constraint is purely natural law — no degree of freedom, no negotiation, no escape route except palliative care or experimental intervention with minimal survival impact.
 constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, mountain,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE PHARMACEUTICAL INSTITUTION
-% Views the constraint as a fixed feature of the landscape, creating a
-% market opportunity for a solution.
+% PERSPECTIVE 2: THE ONCOLOGIST (MOUNTAIN) — From the position of clinical practice, pancreatic cancer lethality appears as a structural natural law that resists technological intervention. Current surgical, chemotherapeutic, and radiation approaches marginally extend survival (months, not years). The constraint is not one of knowledge gaps or policy failures — it is a deep biological property: early dissemination, intrinsic chemotherapy resistance, anatomical constraints on resection, and the organ's critical endocrine function. Even as an organized, educated, therapeutically capable agent, the oncologist encounters the constraint as irreducible.
 constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, mountain,
-    context(agent_power(institutional),
+    context(agent_power(moderate),
             time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The default analytical context, which sees the constraint as a
-% well-established feature of biology.
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) — From a civilizational, universal scope, pancreatic cancer lethality is an invariant constraint on human biology. The high lethality emerges from irreducible constraints: (1) Anatomical: the pancreas is deeply embedded in the retroperitoneum, limiting resection margins and allowing early lymphatic/vascular invasion. (2) Cellular: pancreatic adenocarcinoma exhibits intrinsic resistance to chemotherapy and radiation through desmoplastic stroma, poor drug penetration, and multi-drug transporter activity. (3) Temporal: most pancreatic cancers are detected at stage III-IV, when curative intervention is impossible. These constraints are not policy failures, institutional failures, or coordination problems — they are structural features of pancreatic anatomy and cancer biology that persist across all current technological approaches.
 constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, mountain,
-    context(agent_power(analytical),
+    context(agent_power(organized),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+% PERSPECTIVE 4: THE RESEARCH COMMUNITY (MOUNTAIN) — Despite decades of research investment, molecular profiling, immunotherapy trials, and combination regimens, the survival plateau persists. This is not evidence of insufficient effort or coordination failure — it is evidence of a deep constraint. The research community observes that pancreatic cancer lethality is not contingent on policy, funding allocation, or institutional arrangements. The constraint is structural: the biology of this cancer type, the constraints of human anatomy, and the limitations of current-generation therapeutic modalities. The mountain persists across all observables and measurement frameworks.
+constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,30 +147,26 @@ constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, mo
 
 :- begin_tests(pancreatic_cancer_lethality_v1_tests).
 
-test(classification_invariance) :-
-    % For a uniform-type constraint, verify invariance across perspectives.
-    constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(pancreatic_cancer_lethality_v1, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_thresholds_met, [nondet]) :-
-    % Verify the constraint meets the low-extraction and low-suppression
-    % requirements for a Mountain classification.
-    domain_priors:base_extractiveness(pancreatic_cancer_lethality_v1, E),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, ExtMetricName, E),
     domain_priors:suppression_score(pancreatic_cancer_lethality_v1, S),
-    assertion(E =< 0.25),
-    assertion(S =< 0.05).
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_law_profile_present, [nondet]) :-
-    % Verify the constraint has the necessary metrics and flags for the
-    % natural law certification chain.
+test(nl_profile_validation) :-
     domain_priors:emerges_naturally(pancreatic_cancer_lethality_v1),
     narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(pancreatic_cancer_lethality_v1, resistance, R),
-    config:param(natural_law_collapse_min, AC_Min),
-    config:param(natural_law_resistance_max, R_Max),
-    assertion(AC >= AC_Min),
-    assertion(R =< R_Max).
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(pancreatic_cancer_lethality_v1_tests).
 
@@ -196,88 +176,89 @@ test(natural_law_profile_present, [nondet]) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is modeled as a Mountain because the lethality of
- *   pancreatic cancer is a product of its biological characteristics, not
- *   a system designed by humans. The base extractiveness (ε=0.05) and
- *   suppression score (S=0.02) are minimal, reflecting that it is a natural
- *   limit rather than a coercive social structure. The key metrics for this
- *   classification are the Natural Law profile: an extremely high
- *   `accessibility_collapse` (0.98), as escaping the disease's typical
- *   prognosis is nearly impossible, and a low `resistance` (0.10), as one
- *   cannot "oppose" the biology, only seek to circumvent it through science.
- *   The `emerges_naturally` flag is critical for the classification gate.
+ *   Extractiveness (0.08): Minimal. The constraint is not extractive — no agent captures value or benefit from pancreatic cancer lethality. The low value reflects that this is a pure natural limit, not a mechanism that transfers resources from one party to another. Suppression (0.02): Negligible. There is no suppression of alternatives — the biological mechanisms operate transparently. All agents (patients, physicians, researchers) understand the constraint fully; the problem is not information asymmetry or institutional gatekeeping, but the irreducible difficulty of the constraint itself. Theater ratio (0.15): Very low. Clinical management of pancreatic cancer involves genuine therapeutic attempts (surgery, chemotherapy, radiation), not performative ritual. The theater ratio reflects only the margins of uncertainty in prognosis discussions and supportive care framing — the bulk of clinical activity is substantive engagement with an intractable biological problem. The flatness of the measurement trajectory over 50 years reflects the constraint's invariance — lethality does not improve substantially, indicating that the constraint is not socially contingent.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap; this is a uniform-type constraint. A patient
- *   (powerless, trapped), a pharmaceutical company (institutional, arbitrage),
- *   and an analyst (analytical) all classify the constraint as a Mountain.
- *   While their emotional and economic responses differ, their structural
- *   assessment of the constraint as a fixed, natural barrier is identical.
- *   This invariance is the hallmark of a true Mountain.
+ *   There is no perspectival gap across the four perspectives — they all classify as mountain. This uniformity across observables (patient experience, clinical practice, research outcomes, analytical review) is itself evidence of the mountain classification. If the constraint were social or institutional in origin, we would expect different perspectives (e.g., beneficiaries seeing rope, victims seeing snare). The fact that all perspectives converge on the same immutable classification indicates that the constraint is truly structural: a property of biology itself, not of human arrangement.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality is not applicable here. The concepts of "beneficiary" and
- *   "victim" presuppose a designed system. Since this constraint emerges
- *   naturally from biology, it has no beneficiaries. Patients are victims of
- *   the disease's effects, but not of the constraint in a structural sense.
- *   Therefore, beneficiary/victim declarations are omitted.
+ *   This constraint has no directionality in the traditional sense because there are no structural beneficiaries or victims relative to the constraint's operation. The constraint is not extractive — it does not advantage one agent at the expense of another. All agents (patients, clinicians, researchers, institutions) are uniformly constrained by the same biological reality. The absence of beneficiary/victim structure is itself evidence of mountain classification: a true natural law does not serve interests; it simply delimits what is possible for all who encounter it.
  *
  * MANDATROPHY ANALYSIS:
- *   This Mountain classification is crucial to avoid misattributing a natural
- *   phenomenon to a human-designed Snare. For example, one could incorrectly
- *   model this as a Snare where "the healthcare system" is the beneficiary.
- *   That would be a different constraint (e.g., `cost_of_cancer_treatment_v1`).
- *   By isolating the biological reality as a Mountain, we can create separate,
- *   linked stories for the human systems built around it, ensuring analytical
- *   clarity and preventing the mislabeling of a natural tragedy as a purely
- *   extractive system.
+ *   MOUNTAIN ONLY: No mandatrophy resolution required. This constraint exhibits zero degrees of freedom across all indices. The five-year survival rate is not negotiable through policy, coordination, or institutional design. The constraint is invariant across all measurement observables: anatomical analysis, molecular profiling, clinical trial outcomes, and epidemiological tracking all reveal the same irreducible lethality. The mountain classification is robust against alternative measurement frameworks or observables. This is a canonical natural law in the medical domain — comparable to fundamental limits in physics.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_pancreatic_cancer_lethality_v1,
-    'Is the extreme difficulty of treating pancreatic cancer a fundamental biological limit (true Mountain), or is it an artifact of historically contingent research paradigms that have missed a simpler underlying mechanism?',
-    'Long-term (20+ year) success rates of radically different therapeutic approaches (e.g., metabolic, viral, immunological vs. cytotoxic).',
-    'If a true Mountain, progress will be slow and incremental. If an artifact (a scientific Piton), a paradigm shift could cause a rapid collapse in lethality, similar to H. pylori and ulcers.',
-    confidence_without_resolution(high) % Confidence that it IS a true Mountain is high.
+    early_detection_possibility,
+    'Could earlier detection through biomarker screening convert the constraint from mountain to rope by enabling curative resection before dissemination?',
+    'Longitudinal prospective screening studies correlating early biomarker detection with R0 resection rates and 5-year survival outcomes in screened vs unscreened populations',
+    'If early detection sufficient: survival plateau is detection-timing constraint (potentially rope/scaffold, not mountain). If early detection insufficient: confirms mountain status — even detected-early cancers have similar poor survival, indicating intrinsic biological constraint.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(early_detection_possibility, empirical, 'Whether earlier detection converts lethality from mountain to contingent constraint').
+
+omega_variable(
+    chemotherapy_resistance_mechanism,
+    'Is pancreatic adenocarcinoma''s chemotherapy resistance an intrinsic cellular property (mountain) or a tumor microenvironment problem (potentially reversible via architecture modification)?',
+    'Comparative genomics and in vitro chemosensitivity across organ sites; desmoplastic stroma ablation studies in mouse models with chemotherapy response monitoring; single-cell transcriptomics identifying resistance mechanisms as cell-intrinsic vs stromal-derived',
+    'If intrinsic: confirms mountain — biological property of the cancer cells themselves. If stromal/architectural: suggests rope/tangled rope — technological solution exists but requires coordination or sustained intervention.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(chemotherapy_resistance_mechanism, empirical, 'Whether chemotherapy resistance is intrinsic or microenvironment-mediated').
+
+omega_variable(
+    anatomical_constraint_fundamentality,
+    'Is the pancreas''s retroperitoneal location and proximity to vital structures a fundamental anatomical constraint or a limitation of current surgical technique?',
+    'Comparative anatomy of pancreatectomy margins across species; analysis of R0 resection rates in specialized high-volume centers vs general surgery settings; outcome correlation with degree of gross residual disease left behind',
+    'If fundamental: confirms mountain — anatomy imposes limits regardless of surgeon skill. If technical: suggests rope — training, volume, and technique can extend curative resection rates.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(anatomical_constraint_fundamentality, empirical, 'Whether retroperitoneal location imposes fundamental resection limits').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(pancreatic_cancer_lethality_v1, 0, 10).
+narrative_ontology:interval(pancreatic_cancer_lethality_v1, 0, 50).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is not required for this constraint because its base
-% extractiveness (ε=0.05) is below the 0.46 threshold. The metrics of this
-% Mountain are considered stable over the modeled interval.
+% Theater ratio over time
+narrative_ontology:measurement(panc_lethality_tr_t0, pancreatic_cancer_lethality_v1, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(panc_lethality_tr_t25, pancreatic_cancer_lethality_v1, theater_ratio, 25, 0.14).
+narrative_ontology:measurement(panc_lethality_tr_t50, pancreatic_cancer_lethality_v1, theater_ratio, 50, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(panc_lethality_be_t0, pancreatic_cancer_lethality_v1, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(panc_lethality_be_t25, pancreatic_cancer_lethality_v1, base_extractiveness, 25, 0.08).
+narrative_ontology:measurement(panc_lethality_be_t50, pancreatic_cancer_lethality_v1, base_extractiveness, 50, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This constraint has no coordination function.
-% narrative_ontology:coordination_type(pancreatic_cancer_lethality_v1, ...).
+narrative_ontology:coordination_type(pancreatic_cancer_lethality_v1, information_standard).
+narrative_ontology:affects_constraint(pancreatic_cancer_lethality_v1, cancer_screening_access).
+narrative_ontology:affects_constraint(pancreatic_cancer_lethality_v1, oncology_resource_allocation).
+narrative_ontology:affects_constraint(pancreatic_cancer_lethality_v1, end_of_life_care_frameworks).
 
-% Network relationships: This biological Mountain motivates the creation of
-% human-designed constraints aimed at overcoming it.
-narrative_ontology:affects_constraint(pancreatic_cancer_lethality_v1, cancer_research_funding_models).
+% DUAL FORMULATION NOTE:
+% Pancreatic cancer lethality is a natural law constraint (mountain) that affects downstream policy constraints in screening, resource allocation, and care frameworks. These downstream constraints may be rope, tangled_rope, or snare depending on institutional response, but they are all structured around the irreducible upstream natural law.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary as this is a Mountain constraint where
-% directionality is not a relevant concept.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

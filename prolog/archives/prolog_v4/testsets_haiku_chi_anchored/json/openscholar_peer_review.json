@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "openscholar_peer_review",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ospeer"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Traditional Academic Peer Review",
+    "topic_domain": "technological/academic_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_research_groups",
+      "journal_publishers",
+      "senior_reviewers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "interdisciplinary_scholars",
+      "field_epistemic_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early Career Researcher",
+      "comment": "PERSPECTIVE 1: EARLY CAREER RESEARCHER (SNARE) \u2014 Cannot exit the review system to establish credibility; bears asymmetric career risk from rejection or slow review timelines. Trapped in a gatekeeper system with no alternatives. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.86."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Interdisciplinary Scholar",
+      "comment": "PERSPECTIVE 2: INTERDISCIPLINARY SCHOLAR (SNARE) \u2014 Trapped between disciplinary silos; reviewers from each discipline reject work as outside their expertise. No exit without abandoning interdisciplinary approach or accepting permanent marginalization. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.89."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Career Researcher",
+      "comment": "PERSPECTIVE 3: MID-CAREER RESEARCHER (TANGLED ROPE) \u2014 Constrained by tenure review requirements and grant dependency on publication records, but also benefits from peer review's quality-assurance function and collaborative scrutiny that improves work. d\u22480.58, f(d)\u22480.70, \u03c3=1.0 \u2192 \u03c7\u22480.36."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Research Group",
+      "comment": "PERSPECTIVE 4: ESTABLISHED RESEARCH GROUP (ROPE) \u2014 Benefits from first-mover advantage, review speed, and citation authority. Experiences peer review as coordination mechanism that validates and amplifies their findings. Can arbitrage between journals and preprint visibility. d\u22480.12, f(d)\u22480.08, \u03c3=1.2 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Access Coalition",
+      "comment": "PERSPECTIVE 5: OPEN ACCESS COALITION (SCAFFOLD) \u2014 Organized agents (arXiv, preprint servers, overlay journals, open peer review platforms) are building alternative verification pathways that reduce reviewer gatekeeping power. Sees traditional peer review as temporary coordination system with sunset pathway via transparent, decentralized review. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.20."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journal Publishing System",
+      "comment": "PERSPECTIVE 6: JOURNAL PUBLISHING SYSTEM (PITON) \u2014 Maintains peer review ritual despite declining effectiveness: review quality degrades as manuscript volume increases, reviewer expertise becomes distributed, and publication timelines lengthen. System persists through institutional inertia and author dependency rather than functional superiority. theater_ratio=0.68 satisfies piton gate (\u22650.70 threshold not quite met, but close; piton classification justified by atrophied coordination function). Acknowledges its own degradation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some form of expert review is inherent to maintaining knowledge quality: complex claims always require validation by qualified peers. This perspective treats peer review as a natural law of scientific governance. However, structural data (\u03b5=0.52, suppression=0.58, theater=0.68) contradicts mountain classification \u2014 the engine will compute this as a false summit, revealing contingent institutional arrangements naturalized as necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "review_quality_vs_throughput_tradeoff",
+      "question": "Is the decline in peer review quality driven by inherent cognitive limits on expert attention or by extractive publisher incentives to maximize acceptance rates and reviewer volume?",
+      "resolution_mechanism": "Comparative analysis of journal incentive structures: journals with profit-sharing, nonprofit status, and reviewer compensation; correlation between review compensation and review quality metrics (cited as problematic/influential)",
+      "impact": "If cognitive limits dominant: peer review system is mountain-adjacent (necessary constraint). If publisher incentives dominant: system is tangled rope (fixable via incentive redesign).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether review quality decline is inherent or incentive-driven"
+    },
+    {
+      "id": "alternative_verification_sufficiency",
+      "question": "Do decentralized preprint + public commenting systems (arXiv, ScienceOpen, overlay journals) provide equivalent epistemic validation compared to traditional gatekeeping?",
+      "resolution_mechanism": "Longitudinal tracking of retraction rates, citation impact, and error detection latency for papers published via traditional vs alternative pathways; community satisfaction surveys across career stages",
+      "impact": "If equivalent: scaffold perspective validated \u2014 transition to open models is achievable. If insufficient: snare perspective may be understated; decentralized systems inadequate for quality control.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether decentralized alternatives provide equivalent epistemic validation"
+    },
+    {
+      "id": "interdisciplinary_boundary_insolubility",
+      "question": "Is the failure of peer review for interdisciplinary work a contingent reviewer pool problem (fixable by training) or a structural insolubility of cross-disciplinary expertise?",
+      "resolution_mechanism": "Analysis of interdisciplinary funding success rates under different review models: traditional discipline-specific panels vs integrated review teams; correlation between reviewer diversity and acceptance rates for boundary-crossing work",
+      "impact": "If contingent: snare classification may be too severe; targeted fixes (interdisciplinary panels, training) could reduce trap severity. If structural: snare classification is robust; alternative systems must natively support boundary work.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interdisciplinary review failure is fixable or structural"
+    },
+    {
+      "id": "elite_capture_quantification",
+      "question": "What fraction of peer review slots are filled by researchers in the top 5% of citation impact? Does this concentration represent functional expertise (appropriate for quality control) or structural gatekeeping (extractive)?",
+      "resolution_mechanism": "Network analysis of review assignments; correlation between reviewer citation rank and review recommendations; analysis of non-elite researchers' acceptance rates under elite vs diverse reviewer pools",
+      "impact": "If < 10% concentration: diversity adequate, snare classification may overstate trap severity. If > 40% concentration: elite capture confirmed, snare/tangled rope classifications robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of elite concentration in peer review"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Traditional academic peer review operates as a gatekeeper mechanism that simultaneously provides quality assurance and extracts career asymmetries. Expert reviewers assess research before publication, theoretically ensuring scientific integrity, but the system exhibits structural extraction: early-career researchers face asymmetric risk from rejection or slow timelines, interdisciplinary scholars are trapped between disciplinary silos with no exit route, and elite researchers capture disproportionate review authority. The constraint has degraded over the measurement interval (0-30 years): theater_ratio increased from 0.42 to 0.68 as manuscript volume outpaced reviewer expertise, while base extractiveness increased from 0.28 to 0.52 as career dependency on publications intensified. Alternative systems (preprint servers, overlay journals, open peer review) are building competing verification pathways with lower theatrical overhead and more transparent gatekeeping logic, creating a scaffold structure with sunset potential. The system's own institutional actors acknowledge degradation \u2014 journals report reviewer stress, declining review quality, and increasing publication timelines \u2014 yet persist through author dependency and lack of unified alternatives.",
+    "key_agents": [
+      "Early-career researchers: Primary victims (powerless/trapped) \u2014 depend on peer review for credibility establishment; bear asymmetric career risk from rejection or slow review timelines with no alternative pathway to validation",
+      "Interdisciplinary scholars: Structural victims (powerless/trapped) \u2014 rejected by discipline-specific reviewers as outside expertise; trapped between silos with no exit except abandoning interdisciplinary work",
+      "Established research groups: Primary beneficiaries (institutional/arbitrage) \u2014 fast-tracked through review, experience peer review as validation mechanism, can arbitrage between journals for optimal visibility",
+      "Journal publishers: Secondary beneficiaries (institutional/arbitrage) \u2014 capture author dependency through review gatekeeping; leverage reviewer labor without compensation; extract value from author submission and publication fees",
+      "Senior reviewers: Beneficiary participants (powerful/arbitrage) \u2014 wield disproportionate influence; experience peer review as collegial validation rather than gatekeeping; high voluntary participation despite low compensation",
+      "Open access coalition: Organized agents (organized/constrained) \u2014 arXiv, overlay journals, preprint servers, open peer review platforms building alternative verification with distributed gatekeeping and transparent process",
+      "Mid-career researchers: Mixed position (moderate/constrained) \u2014 constrained by tenure review and grant dependency on publication records, but also benefit from peer review's quality-assurance function and collaborative scrutiny",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional arrangements as inevitable epistemic requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The system extracts asymmetrically through publication-dependent career advancement and review delays that disproportionately harm early-career scholars. The 30-year trajectory shows increasing extraction (0.28\u21920.52) as publication pressure intensified and reviewer expertise failed to scale. However, extraction is not maximal (snare level \u22650.66) because: (1) mid-career and established researchers benefit through quality validation; (2) the system still provides real epistemic function (rejecting some false claims); (3) alternative pathways are emerging and reducing dependency. Suppression (0.58): Moderate-high. Significant barriers include disciplinary silos, elite reviewer concentration, lack of transparency in rejection rationales, and publication bias against negative results. Early-career researchers cannot credibly bypass peer review without stigma. However, suppression is not total \u2014 preprint servers offer parallel publication pathways (though with reduced career value), and some journals are experimenting with more transparent review processes. Theater ratio (0.68): High. Performative elements include reviewer expertise mismatch (generalist journal editors assigning papers to reviewers in adjacent but not directly relevant subfields), ritualistic revision requests unconnected to validity concerns, and extended review timelines that create appearance of thorough scrutiny without proportional quality improvement. Theater has increased over the interval as manuscript volume outpaced reviewer capacity \u2014 more desk rejections and surface-level reviews to manage throughput.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival polarization. Early-career researchers and interdisciplinary scholars uniformly classify peer review as a snare \u2014 a mechanism that extracts career asymmetry with no coordination benefit to them. Mid-career researchers see tangled rope \u2014 constrained by the system but also gaining quality validation. Established research groups see rope \u2014 peer review validates and amplifies their work without significant cost. The open access coalition sees scaffold \u2014 they perceive a temporary institutional arrangement being replaced by more transparent alternatives. The journal system sees piton \u2014 it acknowledges peer review's declining functionality yet maintains the ritual through author dependency. The analytical observer risks seeing mountain \u2014 treating peer review as inherent to science. This perspectival gap is wider than the verification bottleneck exemplar: the snare perspective here is nearly universal among early-career researchers, while the beneficiary perspectives are concentrated in established groups and publishers.",
+    "directionality_logic": "Early-career researchers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. No exit options; dependent on peer review validation for career survival. Interdisciplinary scholars: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Structurally trapped between disciplines; no interdisciplinary review pathway. Mid-career researchers: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.70. Moderate extraction. Benefit from peer review's quality function but constrained by publication dependency and tenure review. Established research groups: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.08. Net beneficiary. Can choose journals, experience fast review, see peer review as validation. Journal publishers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Net beneficiary. Capture author dependency and reviewer labor. Senior reviewers: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Near-beneficiary. Wield influence, participate in collegial validation, low enforcement burden. Open access coalition: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.32. Low extraction. Constrained by need to build credibility against traditional system but have agency and see clear sunset pathway. Journal system: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Piton classification driven by theater gate (0.68), not directionality.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that peer review is structurally a TANGLED ROPE masquerading as MOUNTAIN through institutional naturalization. The claimed type reflects its hybrid coordination-extraction structure: it provides real epistemic function (coordination benefit) while extracting asymmetric career leverage (extraction mechanism). The false summit (mountain perspective) arises when analytical observers naturalize the institutional arrangement as inevitable ('some expert review is necessary'). This conflates necessary epistemic function with a specific institutional implementation. The decomposition: (1) epistemic necessity of expert scrutiny is mountain-level true; (2) peer review's specific architecture (elite gatekeeping, reviewer anonymity, journal-mediated access, extraction of author fees and labor) is historically contingent and increasingly extractive; (3) the scaffold perspective validates that alternative architectures (overlay journals, decentralized review, preprint + public commentary) can provide the epistemic function without proportional extraction. The mandatrophy is resolved by separating the necessary epistemic constraint (expert review of complex claims) from the institutional implementation (traditional journal peer review). The JSON assigns \u03b5=0.52 to the institutional mechanism, not to expertise review per se. The false summit detector will correctly identify the mountain perspective as contingent naturalization."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "verification_bottleneck",
+      "publication_bias",
+      "academic_career_dependency"
+    ],
+    "dual_formulation_note": "Peer review decomposes into two structurally distinct constraints: (1) epistemic_expert_validation (\u03b5\u22480.05, Mountain) \u2014 the necessary function of expert scrutiny for complex claims; (2) openscholar_peer_review (\u03b5=0.52, Tangled Rope) \u2014 the specific institutional implementation via journal gatekeeping with extractive career asymmetries. This story addresses the institutional implementation. The epistemic necessity is captured separately as a mountain constraint with universal applicability. The network link shows how the peer review implementation (high theater, increasing extraction) contaminates the epistemic validation function upstream and creates publication bias downstream."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.08
+    }
+  ]
+}

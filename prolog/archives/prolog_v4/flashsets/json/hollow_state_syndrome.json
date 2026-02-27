@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "hollow_state_syndrome",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Shell Governance Mirage",
+    "topic_domain": "political/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "private_contractors",
+      "incumbent_politicians"
+    ],
+    "victims": [
+      "taxpayers",
+      "civil_servants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Taxpayers",
+      "comment": "The taxpayers are trapped within the system, bearing the costs of reduced accountability and potential corruption without easy means of exit or redress."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Servants",
+      "comment": "Civil servants experience the erosion of their roles and responsibilities, constrained by the outsourcing arrangements and maintaining the appearance of governance, thus seeing the piton-like nature of the system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Private Contractors",
+      "comment": "Private contractors benefit from the arrangement, acquiring contracts and influence, and perceive the system as a form of coordination (rope) that facilitates their operations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Politicians",
+      "comment": "Incumbent politicians benefit from reduced direct responsibility and potential for patronage, but are also constrained by the system's inherent opacity and accountability issues."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer sees a mixed system (tangled rope) where hollow state mechanisms extract from the public while also providing some functions (often at inflated cost or reduced accountability)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "accountability_threshold",
+      "question": "At what level of outsourcing does the state lose effective control and accountability?",
+      "resolution_mechanism": "Comparative analysis of governance outcomes in states with varying degrees of outsourcing.",
+      "impact": "Determines the point at which the 'shell' becomes dominant over the 'governance'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for accountability loss due to outsourcing."
+    },
+    {
+      "id": "service_quality_tradeoff",
+      "question": "What is the tradeoff between cost savings and service quality in outsourced functions?",
+      "resolution_mechanism": "Cost-benefit analysis of outsourced vs. in-house service provision.",
+      "impact": "Informs whether the system primarily serves private interests or public needs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tradeoff between cost savings and service quality in outsourcing."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 'Hollow State Syndrome' describes a scenario where a state maintains the formal appearance and legal authority of governance while having outsourced its core functions to private contractors or non-state actors. This leads to reduced accountability, potential corruption, and erosion of public services. The syndrome is characterized by an increase in 'theater' as performative governance substitutes for functional control.",
+    "key_agents": [
+      "Taxpayers: Primary target (powerless/trapped) - bears costs of reduced accountability and service quality.",
+      "Private Contractors: Primary beneficiary (institutional/arbitrage) - benefits from acquired contracts and influence.",
+      "Incumbent Politicians: Secondary beneficiary (powerful/constrained) - benefits from reduced direct responsibility but is also constrained by accountability issues.",
+      "Civil Servants: Affected party (moderate/constrained) - experiences erosion of roles and responsibilities.",
+      "Analytical Observer: Independent analyst (analytical/analytical) - sees mixed coordination and extraction."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Outsourcing extracts resources from the public sector and transfers them to private contractors, often at inflated costs or with reduced service quality. Suppression (0.70): High. The system suppresses alternative governance models and reduces public participation in decision-making. Theater ratio (0.80): High. A significant portion of state activity becomes performative, focused on maintaining the appearance of governance rather than ensuring effective control.",
+    "perspectival_gap": "The taxpayers perceive the system as a snare, bearing the costs of reduced accountability. Civil servants perceive a piton, as their roles degrade and are replaced. Private contractors perceive a rope, benefiting from the arrangement. Incumbent politicians experience the system as a tangled rope, benefiting from reduced responsibility but also facing accountability issues. The analytical observer sees a mixed system (tangled rope).",
+    "directionality_logic": "Directionality is determined by the structural position of each agent within the system. Private contractors benefit (low d), while the taxpayers bear the costs (high d). The high theater ratio reflects the performative nature of governance. The analytical observer provides a balanced view of the system."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "revolving_door_influence"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: confidential_ai_whatsapp
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-25
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_confidential_ai_whatsapp, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,7 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    constraint_indexing:constraint_classification/3.
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -48,31 +54,36 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: confidential_ai_whatsapp
- *   human_readable: Use of Confidential Computing for AI in WhatsApp
- *   domain: technological
+ *   human_readable: Confidential Computing for AI in WhatsApp
+ *   domain: technological/platform_governance
  *
  * SUMMARY:
- *   Meta is deploying AI features in WhatsApp that run on NVIDIA's H100 GPUs
- *   using a "confidential computing" framework. This framework aims to create
- *   a secure enclave where user data can be processed by AI models without
- *   being visible to the infrastructure provider (Meta/NVIDIA). The constraint
- *   is the mandatory use of this specific technological stack to access
- *   advanced AI features, presented as a privacy-preserving coordination
- *   mechanism that also creates technological dependency and extracts value
- *   from user interactions.
+ *   Meta's deployment of AI features in WhatsApp using NVIDIA H100 GPUs with
+ *   confidential computing creates a structural constraint that combines
+ *   genuine coordination benefits (preventing data breaches during AI
+ *   processing) with asymmetric information control (making external
+ *   verification of AI behavior cryptographically impossible). The constraint
+ *   exhibits the full mandatrophy problem: the same technical architecture
+ *   appears as essential security infrastructure (Rope from Meta's
+ *   perspective), regulatory capture through technical means (Snare from
+ *   regulators' perspective), competitive asymmetry (Tangled Rope from
+ *   researchers' perspective), and potentially a natural limit of information
+ *   physics (false Mountain from the analytical perspective). The
+ *   extractiveness score (0.52) reflects that the constraint extracts
+ *   competitive advantage and regulatory authority while providing genuine
+ *   security coordination benefits. The theater ratio (0.68) indicates that
+ *   regulatory compliance processes (DPIAs, algorithmic impact assessments,
+ *   audit responses) continue but have reduced functional verification
+ *   capacity—auditors receive attestations rather than inspections.
  *
- * KEY AGENTS (by structural relationship):
- *   - WhatsApp Users: Primary target (powerless/trapped) — Their data is the
- *     resource being processed, and they have high switching costs to leave
- *     the platform. They bear the risk of the system's potential failures.
- *   - Meta (Platform Operator): Primary beneficiary (institutional/arbitrage) —
- *     Gains the ability to deploy powerful AI, increasing engagement, while
- *     mitigating privacy-related regulatory and reputational risk.
- *   - NVIDIA (Tech Provider): Primary beneficiary (institutional/arbitrage) —
- *     Sells high-value hardware and software, creating a new market and
- *     deepening technological dependency on its ecosystem.
- *   - Privacy Auditors / Regulators: Analytical observer — Seeks to verify the
- *     technical claims and understand the systemic risks.
+ * KEY AGENTS:
+ *   - Meta Platform: Primary beneficiary (institutional/arbitrage) — extracts competitive advantage and regulatory authority through opacity; has exit options (alternative architectures, public commitment to transparency)
+ *   - NVIDIA Hardware Vendors: Secondary beneficiary (institutional/arbitrage) — benefits from locked-in hardware dependencies; has arbitrage options with other cloud providers
+ *   - User Privacy Commons: Primary victim (powerless/trapped) — cannot audit AI decision-making; high social friction for platform exit; bears cost of reduced transparency
+ *   - Regulatory Oversight Bodies: Secondary victim (powerless/trapped) — cannot verify compliance; formal authority undermined by technical impossibility of inspection
+ *   - Competitive AI Researchers: Secondary victim (moderate/constrained) — cannot replicate Meta's models; face asymmetric research capacity; also benefit from Meta's infrastructure if permitted
+ *   - Privacy Advocacy Organizations: Organized mediator (organized/constrained) — advocate for transparency while participating in standards work; can propose alternatives but cannot force adoption
+ *   - Transparency Ritual Custodians: Institutional performer (institutional/arbitrage) — compliance officers and auditors maintain transparency processes despite knowing reduced verification capacity
  */
 
 /* ==========================================================================
@@ -80,87 +91,88 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(confidential_ai_whatsapp, 0.48).
-domain_priors:suppression_score(confidential_ai_whatsapp, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(confidential_ai_whatsapp, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(confidential_ai_whatsapp, 0.52).
+domain_priors:suppression_score(confidential_ai_whatsapp, 0.65).
+domain_priors:theater_ratio(confidential_ai_whatsapp, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(confidential_ai_whatsapp, extractiveness, 0.48).
+narrative_ontology:constraint_metric(confidential_ai_whatsapp, extractiveness, 0.52).
 narrative_ontology:constraint_metric(confidential_ai_whatsapp, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(confidential_ai_whatsapp, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(confidential_ai_whatsapp, theater_ratio, 0.68).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(confidential_ai_whatsapp, tangled_rope).
+narrative_ontology:human_readable(confidential_ai_whatsapp, "Confidential Computing for AI in WhatsApp").
+narrative_ontology:topic_domain(confidential_ai_whatsapp, "technological/platform_governance").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(confidential_ai_whatsapp). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(confidential_ai_whatsapp).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(confidential_ai_whatsapp, meta_platform).
-narrative_ontology:constraint_beneficiary(confidential_ai_whatsapp, nvidia_corp).
-
-% Who bears disproportionate cost or risk?
-narrative_ontology:constraint_victim(confidential_ai_whatsapp, whatsapp_users).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are met)
+narrative_ontology:constraint_beneficiary(confidential_ai_whatsapp, nvidia_hardware_vendors).
+narrative_ontology:constraint_victim(confidential_ai_whatsapp, user_privacy_commons).
+narrative_ontology:constraint_victim(confidential_ai_whatsapp, competitive_ai_researchers).
+narrative_ontology:constraint_victim(confidential_ai_whatsapp, regulatory_oversight_capacity).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (WHATSAPP USERS)
-% Users are trapped by network effects and face an opaque, mandatory system.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42
-% High χ = 0.48 * 1.42 * 1.2 (global) ≈ 0.82, which is well into Snare territory (>=0.66).
-constraint_indexing:constraint_classification(confidential_ai_whatsapp, tangled_rope,
+% PERSPECTIVE 1: USER PRIVACY COMMONS (SNARE) — The collective interest in transparent AI decision-making bears full cost of black-box AI systems. Users cannot audit what the AI does with their data, cannot exit the platform without massive social friction, and face asymmetric information about the AI's behavior. The confidential computing framework makes technical scrutiny impossible — by design. Maximum extraction from this agent.
+constraint_indexing:constraint_classification(confidential_ai_whatsapp, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (META)
-% Meta sees a tool to solve a coordination problem (features vs. privacy).
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12
-% Negative χ = 0.48 * -0.12 * 1.2 (global) ≈ -0.07, classifying it as a Rope.
-constraint_indexing:constraint_classification(confidential_ai_whatsapp, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: REGULATORY OVERSIGHT CAPACITY (SNARE) — Governments and oversight bodies cannot inspect AI behavior within confidential enclaves. The constraint is structural: the hardware itself is designed to prevent inspection. Regulators have no exit option and no way to verify compliance with data protection law. Extraction mechanism: Meta extracts regulatory authority by making verification technically impossible.
+constraint_indexing:constraint_classification(confidential_ai_whatsapp, snare,
+    context(agent_power(powerless),
             time_horizon(generational),
-            exit_options(arbitrage),
+            exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE TECHNOLOGY PROVIDER (NVIDIA)
-% As an institutional beneficiary with high exit, NVIDIA also sees a Rope.
-% Its position is structurally identical to Meta's in this context.
-constraint_indexing:constraint_classification(confidential_ai_whatsapp, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% This view reconciles the coordination function with the asymmetric extraction.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-% χ = 0.48 * 1.15 * 1.2 (global) ≈ 0.66. This hits the threshold for Snare, but
-% because a genuine coordination function exists (declared via `constraint_beneficiary`)
-% and enforcement is required, the system classifies it as a Tangled Rope.
+% PERSPECTIVE 3: COMPETITIVE AI RESEARCHERS (TANGLED ROPE) — Academic and independent researchers cannot inspect or replicate Meta's AI models running in confidential enclaves. This creates asymmetric research capacity: Meta can iterate privately; competitors must publish everything. The constraint extracts competitive advantage through opacity. But researchers also benefit from access to Meta's infrastructure for their own work (if permitted) and from coordination around emerging AI safety standards. Mixed: extraction plus coordination dependency.
 constraint_indexing:constraint_classification(confidential_ai_whatsapp, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: META PLATFORM (ROPE) — Experiences the constraint as pure coordination: confidential computing enables Meta to deploy AI features that users demand (spam filtering, content moderation, recommendation) while managing liability for data exposure. The constraint solves a coordination problem—how to offer AI services at scale without data breaches—and Meta has arbitrage options (could use alternative architectures, alternative hardware vendors). For Meta, this is functional coordination infrastructure.
+constraint_indexing:constraint_classification(confidential_ai_whatsapp, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: NVIDIA HARDWARE VENDORS (ROPE) — Benefits from the confidential computing standard as a coordination mechanism that locks hardware dependencies into platform ecosystems. NVIDIA has arbitrage options (could work with other cloud providers, other AI platforms) and sees the constraint as a beneficial coordination standard that increases demand for H100 GPUs with Trusted Execution Environment (TEE) capabilities. Low suppression; high autonomy.
+constraint_indexing:constraint_classification(confidential_ai_whatsapp, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: PRIVACY ADVOCACY AND STANDARDS BODIES (TANGLED ROPE) — Organized actors (civil society, standards organizations like OpenAI, industry consortia) see both coordination benefit and extraction. The benefit: confidential computing prevents data leaks more effectively than cleartext processing. The extraction: the framework reduces transparency and external accountability. These organizations have constrained exit—they can propose alternative standards but cannot force adoption—yet they benefit from the research infrastructure and standardization work. Mixed classification reflects dual role as both advocates and captive participants.
+constraint_indexing:constraint_classification(confidential_ai_whatsapp, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: TRANSPARENCY THEATER IN COMPLIANCE (PITON) — Traditional regulatory transparency requirements (data protection impact assessments, audits, algorithmic impact statements) become performative when the underlying technology is intentionally designed to prevent inspection. Regulators check boxes by receiving Meta's attestations about what the AI does, but the actual computation is cryptographically hidden. The compliance ritual persists through institutional inertia (regulators continue to request DPIAs) despite knowing the theatrical nature. Theater ratio (0.68) reflects this: compliance processes continue but have low functional verification capacity.
+constraint_indexing:constraint_classification(confidential_ai_whatsapp, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 8: ANALYTICAL OBSERVER / INFORMATION PHYSICS VIEW (MOUNTAIN) — From a civilizational perspective, confidential computing enforces an inherent trade-off in information security: you cannot simultaneously (a) process data, (b) guarantee confidentiality during processing, and (c) allow external inspection of processing. This appears as a natural law of cryptography and systems architecture. However, the structural data reveals this as a false summit: the trade-off is real, but the framing naturalizes Meta's choice to prioritize confidentiality for the company's data over transparency for users' data. The mountain classification conflates physical constraint with institutional design choice.
+constraint_indexing:constraint_classification(confidential_ai_whatsapp, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -168,20 +180,18 @@ constraint_indexing:constraint_classification(confidential_ai_whatsapp, tangled_
 
 :- begin_tests(confidential_ai_whatsapp_tests).
 
-test(perspectival_gap_user_vs_platform, [nondet]) :-
-    % Verify that the user (target) and platform (beneficiary) see different classifications.
-    constraint_indexing:constraint_classification(confidential_ai_whatsapp, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(confidential_ai_whatsapp, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(confidential_ai_whatsapp, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(confidential_ai_whatsapp, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(confidential_ai_whatsapp, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(confidential_ai_whatsapp, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_pass) :-
-    % A constraint is only a Tangled Rope if it has both beneficiaries and victims, and requires enforcement.
-    narrative_ontology:constraint_beneficiary(confidential_ai_whatsapp, _),
-    narrative_ontology:constraint_victim(confidential_ai_whatsapp, _),
-    domain_priors:requires_active_enforcement(confidential_ai_whatsapp).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(confidential_ai_whatsapp, TR),
+    TR >= 0.70.
 
 :- end_tests(confidential_ai_whatsapp_tests).
 
@@ -191,22 +201,16 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): This score reflects the significant, albeit indirect, value extracted. The extraction is not a direct fee, but the value derived from processing user interactions to power and refine AI models, coupled with the strategic value of creating technological lock-in around the NVIDIA/Meta stack.
- *   - Suppression Score (0.65): High due to the combination of WhatsApp's network effects and the technical difficulty of providing a viable alternative. Users cannot easily access equivalent AI features in a similarly integrated, mass-market encrypted messenger without accepting this specific implementation.
- *   - The combination of a genuine coordination function (balancing features with privacy) and high, asymmetric extraction and suppression makes this a canonical Tangled Rope.
+ *   Extractiveness (0.52): Moderate-high, rising over time. At deployment (0.28), confidential computing appeared primarily as a security coordination mechanism. As Meta integrated AI deeper into core features (content moderation, recommendations, spam filtering), the opacity became increasingly extractive—users and regulators realized they could not verify the AI's decision rules. The trajectory shows Goodhart drift: as the AI's impact on users increased, the framework's extractiveness rose. Suppression (0.65): High. Multiple barriers prevent exit or inspection: (1) Technical: TEE architecture makes cryptographic inspection impossible by design. (2) Legal: Meta controls the terms of service unilaterally. (3) Social: WhatsApp's network effects make exit costly (signal loss, coordination burden). (4) Epistemic: regulators lack capacity to understand what confidential AI does. Theater ratio (0.68): High and rising. Compliance processes (DPIAs, impact assessments, audit reports) continue but have low functional content—auditors receive attestations rather than conducting independent verification. The theater increased as Meta demonstrated that attestations are sufficient to satisfy regulators without actual transparency.
  *
  * PERSPECTIVAL GAP:
- *   - For a user ('powerless', 'trapped'), the system is an opaque, non-negotiable black box. The high switching costs and lack of visibility into the security guarantees make it feel coercive, hence the Snare classification.
- *   - For Meta and NVIDIA ('institutional', 'arbitrage'), the constraint is a brilliant solution (a Rope) to a business problem: how to deploy data-hungry AI without triggering a massive privacy backlash. It unlocks new product capabilities and markets.
- *   - The analytical view sees both sides: a system that does coordinate competing interests but does so in a way that disproportionately benefits its architects while locking in its users.
+ *   Meta's Rope classification reflects genuine coordination benefit: confidential computing truly does prevent data breaches during processing. The User Privacy Commons' Snare classification reflects genuine extraction: users cannot exit and cannot inspect. Regulators' Snare classification reflects technical capture: they retain formal authority but lose practical verification capacity. Researchers' Tangled Rope reflects mixed experience: they face competitive disadvantage (extraction) but benefit from standards work and infrastructure access (coordination). Advocates' Tangled Rope reflects the dual role: advocating for transparency while participating in the technical standards that enable confidential computing. The compliance theater (Piton) reflects the observation that regulators continue demanding audits and impact assessments despite knowing the audit trail is opaque—the ritual persists through inertia. The false Mountain (analytical observer) reflects the risk of naturalizing Meta's design choice as an inherent law of cryptography, when alternatives exist.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `meta_platform` and `nvidia_corp` are explicitly named beneficiaries. They gain revenue, market position, and risk mitigation.
- *   - Victims: `whatsapp_users` are the victims. Their data and interactions are the raw material, they bear the privacy risk if the technology fails, and they are subject to the lock-in.
- *   - The engine correctly uses these declarations, combined with the 'trapped' vs 'arbitrage' exit options, to derive the directionality 'd' that drives the large perspectival gap in effective extraction (χ).
+ *   Each agent's directionality value (d) reflects their structural relationship to the extraction flow. Meta, as the beneficiary with arbitrage options (could use alternative architectures), derives low d (~0.10-0.20), producing negative or near-zero χ—the constraint subsidizes Meta. Users, as trapped agents with no platform exit option, derive high d (~0.90), producing maximum χ (via sigmoid f(d) ≈ 1.40)—users experience the constraint as pure extraction. Regulators, trapped but not victims of the AI itself (they regulate it), occupy a different position: they are victims of the opacity (cannot verify compliance) but not of the AI's decisions directly. Their d is ~0.85-0.90, producing high χ. Researchers, as moderate agents with some exit options (could work with other platforms or use open models) but facing suppression (cannot access Meta's proprietary models), derive d ~0.60-0.70, producing moderate χ. The piton perspective (compliance theater) derives from the theater ratio gate, not from directionality—the compliance ritual persists through institutional inertia despite knowing its low functional value.
  *
  * MANDATROPHY ANALYSIS:
- *   This framework correctly identifies the dual nature of the constraint. A simpler analysis might label it a pure Rope (focusing only on the stated privacy benefits) or a pure Snare (focusing only on the data extraction). The Tangled Rope classification acknowledges that both are happening simultaneously: it is a tool for coordination that is also a tool for extraction. This prevents the mislabeling of extractive infrastructure as pure public good.
+ *   CLASSIFICATION RESOLUTION: The constraint is legitimately Tangled Rope at the base level because it combines (1) genuine coordination function (prevents data breaches; enables AI deployment with user trust), (2) asymmetric extraction (Meta extracts competitive advantage and regulatory authority via opacity), and (3) active enforcement (the TEE architecture actively prevents inspection). The mandatrophy—the risk of mislabeling—is resolved by observing that different agents experience different balances of coordination and extraction. From Meta's perspective, coordination dominates (Rope). From users' perspective, extraction dominates (Snare). From advocates' perspective, both are present in mixed measure (Tangled Rope). The false Mountain from the analytical perspective is a critical failure mode to watch: if the security research community frames confidential computing as an inherent law of information physics rather than as a contingent institutional choice, the extractive elements become naturalized and harder to reform. The system's job is to flag this false summit, making visible that alternative designs (federated auditing, differential privacy commitments, open-source model inspection with differential privacy) could reduce extraction while preserving security coordination.
  */
 
 /* ==========================================================================
@@ -214,47 +218,84 @@ test(tangled_rope_structural_gates_pass) :-
    ========================================================================== */
 
 omega_variable(
-    omega_confidential_ai_whatsapp,
-    'Is the confidential computing layer cryptographically and operationally robust against side-channel attacks and implementation flaws by the infrastructure providers (Meta/NVIDIA)?',
-    'Sustained, independent, third-party audits with full system access, including source code and hardware-level inspection.',
-    'If robust (True), the extraction is limited to metadata and interaction patterns, and the constraint is a legitimate, if sharp, Tangled Rope. If compromised (False), it functions as a pure Snare under the guise of privacy, with extraction being total.',
-    confidence_without_resolution(low)
+    attestation_integrity,
+    'Can Meta''s attestations about confidential AI behavior be independently verified, or does the confidential computing framework make independent verification impossible by design?',
+    'Develop cryptographic protocols for privacy-preserving model audits (e.g., differential privacy-based attestation); establish third-party verification standards that work within confidential enclave constraints; empirical testing of attestation reliability via side-channel analysis',
+    'If attestations can be verified: constraint shifts from Snare toward Tangled Rope (oversight becomes possible). If attestations cannot be verified: Snare classification confirmed, regulatory capture is structural.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(attestation_integrity, empirical, 'Whether Meta''s confidential computing attestations can be independently verified').
+
+omega_variable(
+    enclave_escape_feasibility,
+    'How robust are NVIDIA H100 TEE architectures against side-channel attacks, coercion, or insider threats that could expose AI behavior despite confidential computing protections?',
+    'Academic cryptanalysis of TEE side-channel vulnerabilities; penetration testing by security researchers; historical analysis of TEE escapes in production systems; threat modeling under adversarial assumptions',
+    'If TEE is vulnerable: confidential computing offers false security (theater ratio rises toward 0.85). If TEE is robust: extraction mechanism shifts from ''transparency prevents oversight'' to ''asymmetric computational capacity prevents oversight''.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(enclave_escape_feasibility, empirical, 'Robustness of NVIDIA H100 TEE against side-channel attacks and insider threats').
+
+omega_variable(
+    regulatory_capture_mechanism,
+    'Does confidential computing enable regulatory capture by making it technically impossible for regulators to verify compliance, rather than legally impossible to demand verification?',
+    'Comparative analysis of regulatory responses: jurisdictions that mandate decryptable AI audit logs vs. those that accept confidential computing attestations; legal analysis of regulator liability when AI harms occur in opaque systems; empirical tracking of enforcement actions against platforms using confidential computing',
+    'If capture is technical rather than legal: regulators retain formal authority but lose practical oversight capacity (Snare confirmed). If capture is legal: regulatory framework itself must change to resolve constraint.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_capture_mechanism, conceptual, 'Whether confidential computing enables technical (rather than legal) regulatory capture').
+
+omega_variable(
+    user_agency_in_ai_opting_out,
+    'Do users have meaningful exit options from AI-enhanced features, or is the opt-out friction itself a suppression mechanism?',
+    'Empirical measurement: what percentage of users actually opt out of AI features? How easy is opt-out in the UI? Do opt-out users face service degradation (e.g., slower response times, reduced personalization)? Analysis of WhatsApp''s UI design decisions around AI feature visibility.',
+    'If exit is easy and many users use it: suppression overestimated, constraint shifts toward Scaffold or Rope. If exit is hidden or creates service degradation: suppression confirmed, Snare classification strengthened.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(user_agency_in_ai_opting_out, empirical, 'Whether users have meaningful exit options from AI-enhanced WhatsApp features').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(confidential_ai_whatsapp, 0, 10).
+narrative_ontology:interval(confidential_ai_whatsapp, 0, 8).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.48 > 0.46), so temporal data is required.
-% This models the constraint's evolution from an initial, function-focused
-% rollout to a mature system with normalized extraction.
+% Theater ratio over time
+narrative_ontology:measurement(conf_ai_wa_tr_t0, confidential_ai_whatsapp, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(conf_ai_wa_tr_t4, confidential_ai_whatsapp, theater_ratio, 4, 0.58).
+narrative_ontology:measurement(conf_ai_wa_tr_t8, confidential_ai_whatsapp, theater_ratio, 8, 0.68).
 
-% Theater ratio over time (metric_substitution detection):
-narrative_ontology:measurement(confai_tr_t0, confidential_ai_whatsapp, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(confai_tr_t5, confidential_ai_whatsapp, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(confai_tr_t10, confidential_ai_whatsapp, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(conf_ai_wa_be_t0, confidential_ai_whatsapp, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(conf_ai_wa_be_t4, confidential_ai_whatsapp, base_extractiveness, 4, 0.4).
+narrative_ontology:measurement(conf_ai_wa_be_t8, confidential_ai_whatsapp, base_extractiveness, 8, 0.52).
 
-% Extraction over time (extraction_accumulation detection):
-narrative_ontology:measurement(confai_ex_t0, confidential_ai_whatsapp, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(confai_ex_t5, confidential_ai_whatsapp, base_extractiveness, 5, 0.42).
-narrative_ontology:measurement(confai_ex_t10, confidential_ai_whatsapp, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: It enforces a privacy protocol, making it an enforcement mechanism.
 narrative_ontology:coordination_type(confidential_ai_whatsapp, enforcement_mechanism).
+narrative_ontology:affects_constraint(confidential_ai_whatsapp, platform_algorithmic_opacity).
+narrative_ontology:affects_constraint(confidential_ai_whatsapp, regulatory_capacity_asymmetry).
+narrative_ontology:affects_constraint(confidential_ai_whatsapp, ai_safety_verification).
 
-% Network relationships: This technology choice directly impacts model transparency and auditability.
-narrative_ontology:affects_constraint(confidential_ai_whatsapp, ai_model_auditing).
+% DUAL FORMULATION NOTE:
+% Confidential computing for AI in WhatsApp decomposes into two related constraints: (1) platform_algorithmic_opacity (ε~0.40) — the institutional choice to make AI decision rules opaque, which has extractive characteristics but also legitimately protects proprietary models. (2) confidential_ai_whatsapp (ε~0.52) — the technical choice to use TEE architecture specifically to prevent even trusted auditors from inspecting AI behavior during processing. The latter constraint creates asymmetry: Meta can access and iterate on the model in plaintext; users and regulators cannot. Both constraints affect ai_safety_verification (the broader constraint that AI safety requires model transparency for external validation).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(confidential_ai_whatsapp, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

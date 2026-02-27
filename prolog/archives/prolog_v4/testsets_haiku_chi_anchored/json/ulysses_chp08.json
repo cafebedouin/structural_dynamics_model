@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp08",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lestry"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Lestrygonian Food Chain (Lunchtime Dublin)",
+    "topic_domain": "social/economic/biological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietors_restaurateurs",
+      "food_merchants"
+    ],
+    "victims": [
+      "laboring_poor",
+      "homeless_destitute"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Hungry Beggar Outside the Restaurant",
+      "comment": "PERSPECTIVE 1: LABORING POOR / DESTITUTE (SNARE) \u2014 Physically present in the city but excluded from food. No purchasing power, no escape from hunger, no alternative. d\u22480.93, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.52. Pure extraction: constraint extracts the dignity of presence without access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Leopold Bloom (The Middle-Class Consumer)",
+      "comment": "PERSPECTIVE 2: BLOOM / MIDDLE-CLASS CONSUMER (TANGLED ROPE) \u2014 Benefits from food availability and social coordination (restaurants, markets, eating customs). But constrained by money, social class, digestive concerns, moral unease about predation. The constraint coordinates food distribution AND extracts surplus value through artificial scarcity. d\u22480.65, f(d)\u22480.95, \u03c3=0.8 \u2192 \u03c7\u22480.29. Mixed experience: coordination mechanism for some, extraction for consciousness of inequality."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Proprietors and Food Merchants",
+      "comment": "PERSPECTIVE 3: RESTAURATEURS / FOOD MERCHANTS (ROPE) \u2014 Primary beneficiary. The constraint (food scarcity, class-based access, hunger as enforcement mechanism) coordinates food distribution across Dublin AND provides profit margins. Sees it as pure coordination: customers get fed, businesses thrive. d\u22480.08, f(d)\u2248-0.11, \u03c3=0.9 \u2192 \u03c7\u2248-0.04. Negative effective extraction = net beneficiary perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Poor Law Administrators / Charity Organizations",
+      "comment": "PERSPECTIVE 4: POOR LAW / CHARITY SYSTEM (TANGLED ROPE) \u2014 Organized institutional response to hunger that both coordinates survival (soup kitchens, workhouses, charity) AND enforces class discipline. The system has coordination function (prevents mass starvation) but also extraction (forces labor, denies dignity, maintains inequality). Requires active enforcement of eligibility criteria. d\u22480.52, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.26. Mixed: coordination mechanism with asymmetric extraction embedded."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Labor Movement and Socialist Critique",
+      "comment": "PERSPECTIVE 5: LABOR / SOCIALIST MOVEMENT (SCAFFOLD) \u2014 Sees food distribution system as temporary and replaceable by rational allocation. The constraint's extraction mechanism (artificial scarcity, class-based access) has a sunset: socialist redistribution or labor-organized supply chains. d\u22480.45, f(d)\u22480.45, \u03c3=1.0 \u2192 \u03c7\u22480.20. Low effective extraction because this agent sees an organized exit path and a future without the constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Victorian Food Culture / Predatory Nature Metaphor",
+      "comment": "PERSPECTIVE 6: VICTORIAN NATURALISM / EVOLUTIONARY METAPHOR (PITON) \u2014 The constraint is cloaked in biological inevitability: 'nature is predatory, food chains are natural law, survival of the fittest.' This theatrical naturalization (theater_ratio=0.55) maintains the system through intellectual inertia \u2014 naturalizing social inequality as immutable law. The metaphor is degraded \u2014 its actual descriptive power is weak (social distribution is not governed by Darwinian selection) \u2014 but persists for legitimation. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Thermodynamic Limit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL / NATURAL LAW VIEW (MOUNTAIN?) \u2014 From a civilizational perspective, food scarcity, energy limitations, and metabolic requirements are natural constraints. Some form of food distribution allocation is inevitable. But the specific form \u2014 class-based access, artificial scarcity, moral theater around predation \u2014 is contingent. The engine will flag this as a false summit: \u03b5=0.38, suppression=0.48, theater=0.55 do not match the mountain signature (would require \u03b5\u22640.25, suppression\u22640.05, accessibility_collapse\u22650.85). The natural law reading misattributes social contingency to physical necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "predation_metaphor_causality",
+      "question": "Does Victorian naturalistic predation metaphor (food chains, survival of the fittest) legitimize the extraction, or does the extraction exist independently and the metaphor merely describe it?",
+      "resolution_mechanism": "Historical comparison: food distribution systems in societies without Darwinian rhetoric vs those with it. If rhetoric is causally inert, systems should be structurally similar; if rhetoric sustains extraction, societies without it should show lower suppression and higher mobility.",
+      "impact": "If metaphor is causal: the constraint is partly discursive (can be delegitimized by changing narrative). If metaphor is post-hoc: the constraint is purely structural (requires material intervention).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether predation metaphor legitimizes or merely describes the extraction"
+    },
+    {
+      "id": "scarcity_authenticity",
+      "question": "Is Dublin's food scarcity (1904) genuine (insufficient food production) or artificial (artificial hoarding, profit maximization)?",
+      "resolution_mechanism": "Agricultural production data; price markups above cost; comparison to food supply in less stratified societies of equal production capacity.",
+      "impact": "If genuine scarcity: extraction is coordination failure, constraint closer to Rope. If artificial: extraction is predatory, constraint closer to Snare. This determines mandatrophy resolution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether food scarcity in Dublin 1904 is genuine or artificially maintained"
+    },
+    {
+      "id": "bloom_moral_consciousness_function",
+      "question": "Does Bloom's moral discomfort with predation serve as a pressure valve (releasing tension without changing system) or as incipient resistance (seed of future change)?",
+      "resolution_mechanism": "Textual analysis of whether Bloom's consciousness produces any material action; historical follow-up on whether middle-class moral unease correlates with later food system reforms.",
+      "impact": "If pressure valve: consciousness is theaterized (piton element strengthened). If resistance seed: consciousness enables scaffold perspective (organized change becomes possible).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether middle-class moral consciousness enables or merely decorates the extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "On lunchtime in Dublin (June 16, 1904), Leopold Bloom moves through the city observing food\u2014consumption, hunger, the predatory nature of existence. The constraint is the system of food distribution that coordinates supply across the city while simultaneously extracting maximum surplus from those with the least, naturalizing this arrangement as inevitable (predatory nature, food chains, survival of the fittest). Bloom experiences the constraint acutely: aware of his own consumption privileges, unsettled by the hunger of beggars, morally conscious of the violence embedded in appetite. The Lestrygonian episode (Chapter 8 of Ulysses) presents this constraint from multiple structural positions: the beggar sees only exclusion (snare); Bloom sees mixed coordination and discomfort (tangled rope); restaurateurs see profitable supply (rope); charitable institutions see a humanitarian problem requiring discipline (tangled rope); labor organizers see a temporary system awaiting overthrow (scaffold); the cultural narrative of predatory nature sees inevitable law (piton, with theater masking contingency); the analytical observer risks naturalizing social inequality as immutable thermodynamic fact (false mountain). The constraint's extractiveness (0.38) and suppression (0.48) mark it as a genuine tangled rope: it does solve a real coordination problem (food must be distributed somehow) but does so by concentrating access and enforcing inequality. The rising theater ratio (0.35 \u2192 0.55 over the interval) reflects increasing naturalization \u2014 as Darwin's ideas diffuse through Victorian culture, the social mechanisms of food stratification become cloaked in biological inevitability.",
+    "key_agents": [
+      "Leopold Bloom: Middle-class consumer (moderate/constrained) \u2014 benefits from food access but morally troubled by inequality; structurally between beneficiaries and victims",
+      "Hungry Beggar / Laboring Poor: Excluded from food despite physical proximity (powerless/trapped) \u2014 primary victims bearing full cost of artificial scarcity",
+      "Restaurateurs and Food Merchants: Proprietors (institutional/arbitrage) \u2014 primary beneficiaries; coordinate food distribution AND extract surplus through scarcity",
+      "Poor Law Administrators and Charity Organizations: Organized institutional response (organized/constrained) \u2014 coordinate survival while enforcing class discipline and dignity loss",
+      "Labor Movement and Socialist Critique: Organized political force (organized/mobile) \u2014 see food distribution as temporary and replaceable",
+      "Victorian Naturalistic Culture: Intellectual discourse (institutional/arbitrage) \u2014 naturalizes predation as inevitable law, providing legitimation theater",
+      "The Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks seeing food distribution constraints as natural laws rather than social contingencies"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The food distribution system in 1904 Dublin coordinates genuine supply needs but does so by creating artificial scarcity and class-based access. Not maximal extraction (suppression is high but not total \u2014 some mobility exists for working-class people, some charity operates, labor organizing is possible). The value reflects that the system solves a real problem (food must reach consumers) while simultaneously extracting through inequality. Suppression (0.48): Moderate-high. Significant barriers: hunger itself is a suppression mechanism (it constrains behavior, drives desperation), class barriers to restaurants and markets, lack of purchasing power, Poor Law eligibility restrictions, social shame around destitution. But suppression is not totalizing \u2014 charity exists, underground food economies operate, labor organizing suggests alternatives. Theater ratio (0.55): Moderate. The predatory-nature metaphor is substantially theatrical (it performs legitimation work without descriptive accuracy \u2014 actual food distribution is not governed by Darwinian selection). But it's not pure theater (people genuinely believe the metaphor, it shapes policy). The ratio reflects that theater has increased over time as naturalistic rhetoric diffuses.",
+    "perspectival_gap": "This constraint demonstrates radical perspectival divergence. The beggar sees pure extraction (snare): excluded by class, hunger enforced, no alternatives. Bloom sees coordination with moral cost (tangled rope): the system works to feed the city, but at the price of inequality and dignity. Restaurateurs see pure coordination (rope): market mechanism, supply and demand, profit incentive aligns with service. The charity system sees mixed coordination and paternalistic extraction (tangled rope): prevents starvation but enforces workhouse discipline. The labor movement sees temporary extraction awaiting replacement (scaffold): the system is contingent, not inevitable. The naturalistic culture sees immutable law (piton, theatrical): evolution, nature, predation \u2014 biologizes social arrangements. The analytical observer risks seeing thermodynamic necessity (false mountain): energy constraints are real, but the specific distribution mechanism is contingent. The engine's false summit detector catches this: \u03b5=0.38 (too high for mountain), theater=0.55 (below piton gate), no natural law signature.",
+    "directionality_logic": "Laboring poor / destitute: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction \u2014 cannot escape hunger, no purchasing power, no mobility. Bloom: Both beneficiary (can eat) and victim (morally conscious of cost) + constrained exit \u2192 d\u22480.65, f(d)\u22480.95. Mixed position; experiences extraction through consciousness. Restaurateurs: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary \u2014 constraint rewards them. Poor Law system: Both beneficiary (extracts labor discipline) and victim (constrained to humanitarian mission) + constrained \u2192 d\u22480.52, f(d)\u22480.68. Mixed institutional position. Labor movement: Victim (constrained by system) + mobile (can organize alternative) \u2192 d\u22480.45, f(d)\u22480.45. Low effective extraction because exit path exists. Victorian naturalism: Beneficiary (legitimates inequality) + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Piton classification driven by theater, not directionality. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Risk of false naturalization.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The tangled rope classification resolves the apparent mandatrophy by decomposing the system into coordination and extraction. The food distribution system in Dublin 1904 is NOT pure coordination (rope) because it extracts through artificial scarcity and class-based access. It is NOT pure extraction (snare) because it genuinely coordinates food supply across a complex city and solves a real allocation problem. It is tangled rope because BOTH functions are present: coordination (restaurants, markets, supply chains) AND asymmetric extraction (hunger enforcement, artificial scarcity, class barriers). The rising theater ratio over the interval (0.35 \u2192 0.55) indicates increasing naturalization through Darwinian rhetoric \u2014 the coordination function is genuine, but it is being cloaked in pseudo-biological inevitability, which strengthens the extraction by delegitimizing alternatives. Bloom's moral consciousness is the key diagnostic: he can see both functions simultaneously, which is precisely the tangled rope perspective. A pure rope observer would see only coordination benefit; a pure snare observer would see only extraction. Bloom's discomfort reveals the hybrid. The mandatrophy is resolved: this is legitimately a tangled rope, not a false natural law (mountain) naturalizing social contingency."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "dublin_labor_market_1904",
+      "poor_law_workhouse_system"
+    ],
+    "dual_formulation_note": "The Lestrygonian food chain is downstream of broader economic inequality and upstream of labor mobilization. The constraint family includes the Dublin labor market (showing why workers are hungry despite producing food) and the Poor Law system (showing how institutional response both mitigates and reinforces extraction)."
+  },
+  "directionality_overrides": []
+}

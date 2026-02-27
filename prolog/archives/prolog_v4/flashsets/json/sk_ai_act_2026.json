@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "sk_ai_act_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "South Korea's Proposed AI Industry Promotion Act",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "sk_ai_developers",
+      "sk_government"
+    ],
+    "victims": [
+      "sk_citizens",
+      "non_sk_ai_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "South Korean Citizens",
+      "comment": "Citizens have limited recourse against data collection and usage.  They are effectively trapped within the system. No ability to exit or meaningfully control the use of their data, resulting in high extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "South Korean AI Developers",
+      "comment": "Benefits from reduced legal burdens and increased access to data. Can arbitrage regulatory exemptions to gain a competitive advantage. High coordination due to ease of AI development."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The act serves as a form of national industrial policy, but it comes at the cost of citizen privacy and could stifle innovation by non-favored entities. Contains both coordination and extraction aspects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "South Korean Government",
+      "comment": "Benefits from an accelerated AI industry but is constrained by potential backlash from citizens and international norms. Has the power to shape the regulatory landscape but is not entirely free from constraints."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Non-South Korean AI Developers",
+      "comment": "Constrained by the competitive disadvantage resulting from the legal safe harbor afforded to SK developers. Limited ability to compete on an equal footing. Moderate power but trapped within global market dynamics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "data_anonymization_efficacy",
+      "question": "How effective are data anonymization techniques at preventing re-identification of individuals?",
+      "resolution_mechanism": "Independent audits and penetration testing of anonymized datasets.",
+      "impact": "If anonymization is weak, citizen risk increases, strengthening the snare classification. If robust, the citizen classification shifts towards constrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of data anonymization in protecting privacy."
+    },
+    {
+      "id": "scope_of_exemptions",
+      "question": "To what extent will the legal safe harbor shield AI developers from liability for misuse of personal data?",
+      "resolution_mechanism": "Legal challenges and court rulings interpreting the scope of the act's exemptions.",
+      "impact": "Narrow interpretation limits the benefits to developers, shifting their perspective towards tangled rope. Broad interpretation increases extraction from citizens.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of legal exemptions for AI developers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "South Korea's proposed AI Industry Promotion Act aims to accelerate its national AI industry by creating a legal safe harbor for AI developers. This involves granting broad exemptions from existing privacy and copyright laws, allowing the collection and processing of personal data without explicit consent for research and development purposes. This act presents a complex interplay of benefits and costs, impacting various stakeholders differently.",
+    "key_agents": [
+      "sk_citizens: Primary target (powerless/trapped) - Bear the cost of reduced privacy protections",
+      "sk_ai_developers: Primary beneficiary (institutional/arbitrage) - Benefit from relaxed regulations and increased data access",
+      "sk_government: Secondary actor (powerful/constrained) - Balances industrial growth with citizen rights and international norms",
+      "non_sk_ai_developers: Victims (moderate/constrained) - Face a competitive disadvantage",
+      "analytical_observer: Observer (analytical/analytical) - Sees the complex interplay of benefits and costs"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate to high. The act allows for the extraction of personal data without explicit consent, potentially leading to privacy violations and misuse of information. Suppression (0.45): Moderate. While the act aims to promote innovation, it may suppress competition from foreign companies and limit individual autonomy over personal data. Theater ratio (0.30): Low. The act's focus is primarily on practical implementation and industrial promotion, with limited emphasis on performative aspects.",
+    "perspectival_gap": "South Korean citizens experience the act as a snare, facing reduced privacy and limited recourse. South Korean AI developers benefit from the relaxed regulations, viewing it as a rope that facilitates innovation. The South Korean government sees a tangled rope, balancing the benefits of industrial growth with potential risks to citizen rights and international relations. Non-South Korean AI developers also see a snare, as they face a competitive disadvantage. The analytical observer recognizes the tangled rope, acknowledging both the coordination and extraction aspects of the act.",
+    "directionality_logic": "Directionality is determined by the agent's structural relationship to the constraint. South Korean AI developers benefit from relaxed regulations and increased data access (low d). South Korean citizens bear the cost of reduced privacy protections (high d). The government balances industrial growth with citizen rights (moderate d). Non-South Korean AI developers face a competitive disadvantage (high d). The analytical observer assesses the overall impact (moderate d).",
+    "mandatrophy_analysis": "The act's classification as a tangled rope reflects the inherent tension between promoting AI innovation and protecting citizen rights. The act contains elements of both coordination (facilitating AI development) and extraction (reducing privacy protections). Resolving the mandatrophy requires careful consideration of the trade-offs between these competing objectives and finding a balance that maximizes benefits while minimizing harms."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

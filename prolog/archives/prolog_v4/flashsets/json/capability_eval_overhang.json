@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "capability_eval_overhang",
+    "version": "1.0",
+    "generated_date": "2024-05-16",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Blind Spot of Power: Capability Evaluation Overhang in AI Systems",
+    "topic_domain": "technological/AI/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_developers",
+      "early_adopters"
+    ],
+    "victims": [
+      "society_at_large",
+      "vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Society at Large",
+      "comment": "Society is largely unaware and unable to effectively mitigate the risks posed by AI capabilities exceeding evaluation metrics. Unable to exit the reliance on AI."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "AI Developers",
+      "comment": "AI developers benefit from the ambiguity of evaluation metrics, allowing them to deploy advanced AI systems without fully understanding or being held accountable for their true capabilities. They can arbitrage their expertise for profit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "AI Safety Researchers",
+      "comment": "AI safety researchers are constrained by limited resources and access to cutting-edge AI systems, making it difficult to accurately assess and mitigate the risks posed by capability overhang. Limited exit options, as they are often dependent on funding from the same institutions developing the AI."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees a tangled rope: AI development is incentivized, but safety is lagging and the risks are not well-understood or governed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "eval_metric_validity",
+      "question": "How accurately do current evaluation metrics reflect the true capabilities and potential risks of AI systems?",
+      "resolution_mechanism": "Development of more comprehensive and robust evaluation protocols, including red teaming exercises and adversarial testing.",
+      "impact": "If metrics are valid: capability overhang is minimal, and AI risks are manageable. If metrics are invalid: capability overhang is significant, and AI risks are underestimated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of AI evaluation metrics"
+    },
+    {
+      "id": "societal_awareness",
+      "question": "To what extent is society aware of and prepared for the potential consequences of advanced AI systems?",
+      "resolution_mechanism": "Public education campaigns, expert consultations, and participatory governance initiatives.",
+      "impact": "If high awareness: society can effectively adapt to and mitigate AI risks. If low awareness: society is vulnerable to unintended consequences and potential harms.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Societal awareness of AI risks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The capability evaluation overhang arises when AI systems' actual capabilities surpass the benchmarks used to assess them. This creates a 'blind spot' where potential risks and unintended consequences are not adequately addressed. This is because the current AI evaluation metrics often fail to capture the full scope of AI systems' abilities. The resulting misalignment between evaluation and actual capability presents a complex challenge, potentially leading to unforeseen and potentially harmful outcomes.",
+    "key_agents": [
+      "AI Developers: Primary beneficiary (institutional/arbitrage) - Benefits from deploying advanced AI systems.",
+      "Society at Large: Primary victim (powerless/trapped) - Bears the risks of AI capabilities exceeding evaluation metrics.",
+      "AI Safety Researchers: Secondary actor (moderate/constrained) - Constrained by limited resources and access.",
+      "Early Adopters: Beneficiaries (moderate/mobile) - Benefit from the newest technologies, but may be exposed to unseen risks.",
+      "Regulators: Attempt to mitigate (organized/constrained) - Face the difficult task of legislating AI"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Significant extraction occurs because the inability to accurately evaluate AI capabilities transfers the risk to society, creating information asymmetry. The AI developers extract value while shifting risks. Suppression (0.70): The complexity of AI systems and the lack of standardized evaluation metrics suppresses the ability of independent researchers and regulators to assess the true capabilities and risks, reducing exit options. Theater Ratio (0.30): The theater ratio is lower than extractiveness, suggesting that while there are performative aspects to AI safety and governance, the core function is still a priority.",
+    "perspectival_gap": "The perspectival gap arises from the differing positions relative to AI development. AI developers see coordination through innovation, while society bears the risk of unforeseen consequences. AI Safety Researchers are caught in between. As AI systems' capabilities grow rapidly, this gap is created.",
+    "directionality_logic": "Each agent's directionality is determined by their power, exit options, and structural relationship to AI development. AI Developers have arbitrage options, resulting in a low 'd' value. Society lacks such options, resulting in a high 'd' value. The power derivation and calculation will reflect these differing relationships.",
+    "mandatrophy_analysis": "The constraint could be mislabeled as purely extractive, but the coordination aspect comes from the genuine innovation and economic value that AI development can generate. However, the governance structures need to shift from AI developers, because they have shown to be incentivized to extract without proper assessment. "
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_incentives",
+      "algorithmic_bias_amplification"
+    ]
+  },
+  "directionality_overrides": []
+}

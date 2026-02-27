@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "drc_rwanda_peace_deal_2024",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "drc_rwa"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US-Brokered DRC-Rwanda De-escalation Framework (2024)",
+    "topic_domain": "geopolitical/regional_conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "united_states_diplomatic_interests",
+      "rwanda_mineral_access",
+      "drc_conflict_reduction_apparatus"
+    ],
+    "victims": [
+      "eastern_drc_civilian_population",
+      "armed_group_militias",
+      "m23_insurgency",
+      "artisanal_mining_communities"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Eastern DRC Civilian Population",
+      "comment": "PERSPECTIVE 1: EASTERN DRC CIVILIANS (SNARE) \u2014 Trapped in conflict zone with no exit options. The de-escalation framework imposes movement restrictions, curfews, and displacement protocols with no meaningful civilian input. Cannot exit the territory; must comply with armed group and state enforcement. d\u22480.92, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Armed Group Militias and M23",
+      "comment": "PERSPECTIVE 2: ARMED GROUP MILITIAS (TANGLED ROPE) \u2014 Constrained by framework's military demobilization requirements and weapons collection protocols, but benefit from diplomatic legitimacy and negotiating power. The framework coordinates territorial control agreements (coordination function) while extracting compliance through threat of sanctions (enforcement). d\u22480.68, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.51."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "DRC Government and FARDC",
+      "comment": "PERSPECTIVE 3: DRC GOVERNMENT / FARDC (ROPE) \u2014 Benefits from framework as coordination mechanism for military operations, international support, and state consolidation narrative. Constrained by compliance monitoring and regional force requirements, but gains diplomatic legitimacy and foreign military aid. d\u22480.45, f(d)\u22480.50, \u03c3=0.9 \u2192 \u03c7\u22480.23."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "United States Diplomatic Apparatus",
+      "comment": "PERSPECTIVE 4: UNITED STATES DIPLOMATIC INTERESTS (ROPE) \u2014 Primary beneficiary. Captures coordination function: stabilizing strategic region, preventing Chinese mineral monopoly, maintaining hegemonic positioning in African geopolitics. Can exit framework easily (arbitrage to other African priorities). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Net beneficiary from coordination without bearing costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Rwanda Government and Military",
+      "comment": "PERSPECTIVE 5: RWANDA GOVERNMENT (TANGLED ROPE) \u2014 Powerful actor with dual relationship. Benefits from framework's recognition of security concerns (coordination) and mineral trade access (extraction via supply chain control). Can exit through continued M23 support or cross-border operations (mobile exit). d\u22480.35, f(d)\u22480.35, \u03c3=0.9 \u2192 \u03c7\u22480.27. Asymmetric: framework restricts Rwandan cross-border operations while legitimizing mineral extraction pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Community and Regional Organizations",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL COMMUNITY (PITON) \u2014 SADC, AU, UN maintain performative compliance monitoring role with minimal enforcement capacity. Framework persists through institutional ritual (diplomatic summits, compliance reports) despite limited functional verification of demobilization or weapons collection. theater_ratio=0.64 indicates substantial performative activity. d\u22480.15, f(d)\u22480.08, \u03c3=1.0 \u2192 \u03c7\u22480.03."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Artisanal Mining Communities",
+      "comment": "PERSPECTIVE 7: ARTISANAL MINING COMMUNITIES (SNARE) \u2014 Trapped between formal and informal mineral supply chains. Framework formalizes trade routes, reducing informal revenue; creates conflict minerals certification barriers that block artisanal miners from market access. Cannot exit (livelihoods depend on mining); cannot organize (informal sector status). d\u22480.95, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.60."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "label": "Analytical Observer with Sunset Perspective",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 Views framework as temporary coordination mechanism with uncertain sunset. De-escalation requires sustained enforcement (generational timeline), but success conditions are ambiguous. If enforced: coordination (Rope). If enforcement decays: reverts to Snare. theater_ratio suggests 36% genuine coordination (demobilization monitoring) and 64% performative ritual (diplomatic theater). Sunset contingent on: mineral supply stability, regional power balance shift, or hegemonic disinterest."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_credibility",
+      "question": "Will the United States and international community sustain enforcement pressure if Rwanda or M23 violate the framework?",
+      "resolution_mechanism": "Behavioral tracking: sanctions enforcement, military presence continuation, financial incentive alignment over 2-5 year horizon",
+      "impact": "If sustained enforcement: Tangled Rope classification persists (extraction with coordination). If enforcement decays: collapses to Snare or pure Piton (theater without function).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether enforcement mechanisms have credible backing"
+    },
+    {
+      "id": "mineral_extraction_pathway_legitimacy",
+      "question": "Does the framework legitimize existing mineral extraction patterns (Rwanda's supply chain control) or genuinely reshape supply governance toward inclusive formalization?",
+      "resolution_mechanism": "Supply chain analysis: tracking of formal vs informal mineral exports; cost/access changes for artisanal miners; labor standards in formalized chains",
+      "impact": "If legitimizes existing patterns: extraction mechanism (Snare victims expand to include artisanal miners). If reshapes toward inclusion: coordination mechanism (Rope classification strengthens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mineral supply chain is genuinely reformed or extraction legitimized"
+    },
+    {
+      "id": "m23_reintegration_sincerity",
+      "question": "Is M23 demobilization and reintegration into FARDC genuine power-sharing coordination, or a cover for Rwandan-backed militia consolidation?",
+      "resolution_mechanism": "Institutional analysis: FARDC command structure changes, M23 officer placement, operational independence; cross-border troop movements; mineral revenue allocation",
+      "impact": "If genuine: classification shifts toward Rope/Scaffold (coordination with real sunset). If cover for consolidation: Snare classification confirmed (armed group victims suffer extraction masked as de-escalation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether M23 reintegration represents genuine power-sharing"
+    },
+    {
+      "id": "us_geopolitical_exit_scenario",
+      "question": "Under what conditions would the United States withdraw diplomatic and financial enforcement pressure?",
+      "resolution_mechanism": "Geopolitical modeling: US Africa strategy shifts, China-Africa relations evolution, competing regional interventions, cost-benefit analysis of continued engagement",
+      "impact": "If exit conditions unclear: framework remains unstable (high mandatrophy). If exit conditions identified: scaffold sunset becomes concrete (transition to Piton or Snare upon exit).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Conditions for US disengagement and framework abandonment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The 2024 US-brokered DRC-Rwanda de-escalation framework represents a geopolitical constraint that simultaneously functions as conflict coordination mechanism, extractive apparatus, and diplomatic theater. The United States positions the framework as a solution to regional instability driven by Rwandan support for M23 insurgency in eastern DRC, promising stabilization, civilian protection, and inclusive governance. Structurally, the framework creates asymmetric burdens: eastern DRC civilians face movement restrictions and displacement; armed groups face demobilization pressures; Rwanda gains recognition of security concerns and mineral trade formalization; the United States gains regional hegemonic positioning without proportional costs. The constraint exhibits classic Tangled Rope properties: it solves a coordination problem (de-escalation requires monitored military agreements and territorial frameworks) while simultaneously extracting compliance from those with fewest exit options (eastern DRC civilians, artisanal miners, powerless armed group members). Theater ratio has increased from 0.38 (genuine demobilization monitoring) to 0.64 (ritual diplomatic summits outweigh enforcement) over the twelve-month interval, indicating Goodhart drift\u2014performative compliance replacing real de-escalation function.",
+    "key_agents": [
+      "Eastern DRC Civilian Population: Primary victim (powerless/trapped) \u2014 faces movement restrictions, displacement, and armed group control with no exit option",
+      "United States Diplomatic Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 gains regional hegemonic positioning and mineral supply chain influence without proportional enforcement burden",
+      "Rwanda Government and Military: Secondary beneficiary/victim hybrid (powerful/mobile) \u2014 gains legitimacy for mineral trade and security concerns but constrained by framework restrictions; maintains exit option via continued M23 support",
+      "DRC Government / FARDC: Secondary beneficiary (organized/constrained) \u2014 gains international military support and state consolidation narrative; constrained by monitoring and force requirements",
+      "M23 Insurgency and Armed Militias: Secondary victim/beneficiary (moderate/constrained) \u2014 face demobilization pressure but gain diplomatic recognition and negotiating legitimacy",
+      "Artisanal Mining Communities: Victim (powerless/trapped) \u2014 loses informal market access through conflict minerals certification and supply chain formalization",
+      "International Community (SADC, AU, UN): Performative monitor (institutional/arbitrage) \u2014 maintains ritual compliance role with minimal enforcement capacity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The framework extracts compliance from eastern DRC civilians (movement restrictions, curfews, displacement protocols) and artisanal miners (market access barriers) without meaningful compensation or input. Extraction is not total because Rwanda and M23 also face real demobilization constraints, and the DRC government gains military support. However, the asymmetry is substantial: powerless actors bear costs without benefits. Suppression (0.68): High. Movement restrictions, armed group control, lack of alternative livelihood pathways, and limited civilian participation in negotiation structures all constrain alternatives. Civilian grievance mechanisms are absent; exit from the conflict zone is militarily dangerous. Theater ratio (0.64): Moderate-high and rising. Initial framework (T=0) included genuine demobilization monitoring and weapons collection targets. By T=12 months, international summits and compliance reports have become increasingly performative\u2014verification mechanisms lack capacity, enforcement is selective, and diplomatic theater (press statements, summit declarations) substitutes for ground-level verification. The rise from 0.38 to 0.64 indicates Goodhart drift: organizational activity (diplomatic events) replacing functional outcomes (actual demobilization).",
+    "perspectival_gap": "This constraint demonstrates how the same framework produces radically different classifications depending on observer position. The United States sees coordination (Rope)\u2014they frame the agreement as solving the regional conflict problem through diplomatic mechanisms. Rwanda sees mixed benefits and constraints (Tangled Rope)\u2014they gain security legitimacy and mineral trade formalization while constrained by cross-border operation restrictions. The DRC government sees coordination with support (Rope)\u2014military aid, international backing, and state consolidation. But eastern DRC civilians see extraction and control (Snare)\u2014they are subjected to movement restrictions, displacement, and armed group enforcement with no exit and no voice. Artisanal miners see supply chain extraction (Snare)\u2014formalization requirements block informal market access. Armed militias see constrained negotiation (Tangled Rope)\u2014demobilization pressure coupled with diplomatic legitimacy. The international community sees ritual compliance (Piton)\u2014summits, reports, monitoring frameworks persist despite limited enforcement capacity. The perspectival gap reveals that the framework's 'de-escalation' framing naturalizes what is structurally an extraction mechanism for powerless actors, legitimized through coordination language.",
+    "directionality_logic": "Eastern DRC civilians: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40, \u03c3=0.8 \u2192 high extraction. No exit options; all movement constraints imposed externally. Artisanal miners: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42, \u03c3=0.8 \u2192 maximum extraction. Supply chain formalization blocks informal access; no alternative livelihoods; cannot organize. United States: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 net beneficiary. Gains geopolitical positioning; can exit to other African priorities; no enforcement cost. Rwanda: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.35, \u03c3=0.9 \u2192 moderate extraction despite powerful status. Gains legitimacy and mineral trade access; can exit via continued M23 support; constrained by monitoring. DRC Government: Mixed beneficiary + constrained \u2192 d\u22480.45, f(d)\u22480.50, \u03c3=0.9 \u2192 low-moderate extraction. Gains military support; constrained by force requirements and compliance monitoring; cannot easily exit (depends on US support). M23/Armed groups: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05, \u03c3=0.9 \u2192 moderate-high extraction. Face demobilization pressure; gain diplomatic legitimacy; constrained exit (reintegration vs alternative operations). International community: Observer/monitor + arbitrage \u2192 d\u22480.15, f(d)\u22480.08, \u03c3=1.0 \u2192 minimal extraction; institutional theater substitutes for enforcement.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY AT \u03b5=0.52: The constraint exhibits genuine Tangled Rope properties (beneficiaries + victims + asymmetric enforcement + coordination function), but mandatrophy remains unresolved because the boundary between coordination and extraction is unstable. PRIMARY MANDATROPHY: Is this framework's primary function de-escalation and conflict resolution (Rope/Scaffold), or geopolitical mineral supply chain stabilization (extraction/Snare)? The rising theater_ratio (0.38\u21920.64) suggests degradation from genuine coordination toward performative cover for extraction. SECONDARY MANDATROPHY: Do eastern DRC civilians benefit from de-escalation (coordination) despite movement restrictions, or do they experience the restrictions as primary constraint (extraction)? The framework's civilian protection rhetoric conflicts with ground-level enforcement patterns. RESOLUTION CRITERIA: Mandatrophy resolves if (a) enforcement mechanisms demonstrate sustained credibility over 24+ months, showing genuine demobilization and civilian protection gains, shifting classification toward Scaffold/Rope, OR (b) theater_ratio stabilizes and enforcement decays, revealing framework as performative Piton masking underlying Snare dynamics. Current status (12 months, \u03b5=0.52, theater=0.64): Framework has crossed the Goodhart threshold\u2014ritual activity now equals or exceeds functional outcomes\u2014but enforcement mechanisms remain sufficiently visible to prevent classification collapse. Without intervention, trajectory points toward Piton (degraded theater) or Snare (extraction mask). Declared as ACTIVE UNRESOLVED because mandate ambiguity persists and the framework's sunset conditions are undefined."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "rwandan_m23_proxy_control",
+      "drc_mineral_supply_chain",
+      "east_african_regional_stability",
+      "conflict_minerals_certification"
+    ],
+    "dual_formulation_note": "The DRC-Rwanda peace deal is downstream of existing minerals competition (drc_mineral_supply_chain) and Rwandan strategic interests (rwandan_m23_proxy_control), but represents a distinct constraint with its own \u03b5 reflecting de-escalation framework's asymmetric burden distribution. The framework functionally integrates mineral supply governance, requiring analysis of downstream constraints (conflict_minerals_certification) to capture full extraction pathway."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

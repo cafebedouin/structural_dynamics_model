@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "roman_colosseum_games",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "colosseum"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.8,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Spectacle of the Roman Colosseum",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "imperial_administration",
+      "aristocratic_elite",
+      "military_apparatus"
+    ],
+    "victims": [
+      "enslaved_populations",
+      "political_stability_commons",
+      "resource_allocation_system"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Gladiator and Condemned Prisoner",
+      "comment": "PERSPECTIVE 1: GLADIATOR AND CONDEMNED (SNARE) \u2014 Enslaved combatants and condemned criminals have zero exit options. They are extracted toward certain death in exchange for fleeting glory or terror avoidance. The constraint operates via coercion: they cannot refuse participation; suppression is near-total. No coordination benefit to this agent \u2014 pure extraction toward maximum experienced extractiveness."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Urban Plebeian Population",
+      "comment": "PERSPECTIVE 2: URBAN PLEBEIANS (SNARE) \u2014 Free urban populace experiences high-extraction constraint disguised as benefit. Exit options are constrained: refusing spectacle attendance signals disloyalty; political participation is channeled exclusively through crowd acclamation in the arena. The games consume resources (grain allocations, labor, military capacity) that could fund basic services. The spectacle extracts political agency and redirects it toward regime legitimation. Suppression is high \u2014 bread supply is conditional on circuses."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Military Officer Corps",
+      "comment": "PERSPECTIVE 3: MILITARY OFFICERS (TANGLED ROPE) \u2014 Officer corps experiences mixed extraction and coordination. The games serve genuine security function: managing surplus military capacity (gladiatorial training doubles as combat conditioning), channeling violent capacity away from civil conflict, and consolidating unit cohesion through shared spectacle attendance. Officers also extract prestige and promotion opportunities through sponsorship and patronage of games. Suppression is high (officers face career penalties for questioning spectacle expenditures), but coordination benefits are real \u2014 the games solve a collective action problem of violence management."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Imperial Administration",
+      "comment": "PERSPECTIVE 4: IMPERIAL ADMINISTRATION (ROPE) \u2014 From the perspective of the imperial apparatus, the Colosseum games function as pure coordination mechanism: distributing political legitimacy, managing social stability, concentrating attention, and channeling dissent into controlled venues. The administration benefits from first-mover advantage in spectacle production (monopoly on gladiatorial supply, animal imports, venue access). The games solve genuine coordination problems: how to maintain consent in a militarized autocracy, how to aggregate urban factions into a unified crowd, how to prevent rival power centers from organizing. Theater is high but serves coordination function. This perspective sees low effective extraction \u2014 the games are subsidized as public goods, not revenue sources."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Residual Spectacle Institution",
+      "comment": "PERSPECTIVE 5: RESIDUAL SPECTACLE INSTITUTION (PITON) \u2014 Over the interval (100 BCE to 400 CE), the games gradually transitioned from genuine military and political coordination mechanism to pure theater maintained by institutional inertia. By the late empire, gladiatorial training had detached from military utility, animal spectacles had become exotic consumer goods rather than civic infrastructure, and the arena's political function had devolved to faction managing (Blue vs Green riots). The theater ratio climbed from 0.50 (early empire: real coordination) to 0.85 (late empire: pure performance). The institution persisted through imperial sponsorship even after its functional justification eroded \u2014 classical piton signature. The final constraint's extractiveness value (0.58) represents the intermediate state; late-empire instantiation would be higher (0.75+)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Naturalization)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE NATURALIZATION (MOUNTAIN) \u2014 A naive analytical perspective might classify the games as natural law: 'Autocratic regimes naturally maintain control through spectacle; crowd management is an unchangeable feature of mass society.' This naturalizes what are contingent institutional choices (choice to fund spectacles, choice to concentrate dissent, choice to embed military training in entertainment). The framework detects this as a false summit: accessibility_collapse is 0.45 (many exit paths exist for alternative governance structures), resistance is 0.38 (the constraint is regularly challenged by reform movements), and it does NOT emerge naturally (it requires active enforcement and resource commitment). The mountain classification is a failure of analytical framing, not a property of the constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_vs_legitimacy_boundary",
+      "question": "At what threshold does spectacle spending shift from legitimate political coordination to pure extraction disguised as public good?",
+      "resolution_mechanism": "Historical analysis of spectacle expenditure as percentage of imperial budget correlated with civil unrest, military readiness, and political satisfaction metrics from period sources",
+      "impact": "If threshold < 5% budget: early Rome classified as rope from administrative perspective. If threshold > 15%: extractive intent becomes undeniable even in administrative framing. Current assessment uses 8-12% as ambiguity zone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Spectacle spending threshold distinguishing coordination from extraction"
+    },
+    {
+      "id": "plebeian_agency_in_games",
+      "question": "Did urban plebeians experience the games as coerced entertainment (snare) or as genuine political participation vehicle with real power to influence outcomes (rope)?",
+      "resolution_mechanism": "Analysis of period texts (Suetonius, Cassius Dio, amphitheater inscriptions) for evidence of crowd-directed outcomes, imperial concessions to crowd demands, and subjective framing of attendance",
+      "impact": "If genuine participation: plebeian perspective shifts from snare to tangled_rope. If purely performative: snare classification confirmed, and suppression value increases to 0.78+.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether plebeian crowd participation was genuine political agency or pure theater"
+    },
+    {
+      "id": "military_utility_attestation",
+      "question": "Did gladiatorial training and spectacle attendance genuinely serve military conditioning and unit cohesion functions, or was this a post-hoc rationalization for entertainment expenditure?",
+      "resolution_mechanism": "Comparative analysis of military readiness metrics (campaign success rates, unit cohesion in civil crises) for regimes with high vs low spectacle spending; correlation with officer training methodologies",
+      "impact": "If genuine utility: military perspective tangled_rope classification confirmed. If purely rationalized: military perspective shifts to rope or even piton, and overall constraint extractiveness increases (loses mixed-benefit defense).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether gladiatorial spectacle served genuine military functions"
+    },
+    {
+      "id": "institutional_inertia_timeline",
+      "question": "When did the Colosseum games transition from functional coordination mechanism to inertial theater maintained by tradition and imperial patronage?",
+      "resolution_mechanism": "Periodization of functional shift: analyzing evolution of gladiatorial training detachment from military curriculum, shift from utility animals (war elephants, lions) to exotic spectacle animals, and rise of faction-based crowd management",
+      "impact": "Early transition (1st-2nd cent): piton classification applies to most of late empire. Late transition (3rd cent+): tangled_rope persists longer. Affects assessment of whether constraint was inherently extractive or became extractive through degradation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline of transition from functional coordination to institutional theater"
+    },
+    {
+      "id": "alternative_legitimation_pathways",
+      "question": "Could the imperial regime have maintained comparable political stability without gladiatorial spectacles, using alternative coordination mechanisms (Senate engagement, provincial devolution, military reforms)?",
+      "resolution_mechanism": "Comparative analysis of non-spectacle regimes (Hellenistic monarchies, later Byzantine system, Islamic caliphates) and their stability metrics relative to Rome",
+      "impact": "If viable alternatives exist: games are extractive choice, not coordination necessity. If games were uniquely efficient: coordination framing strengthened, extractiveness reduced. Current assessment assumes viable alternatives, supporting tangled_rope classification.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether alternatives to spectacle-based legitimation were viable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Roman Colosseum games (panis et circenses, 'bread and circuses') exemplify a constraint system that oscillates between genuine coordination and pure extraction. The games functioned simultaneously as military training mechanism, political legitimation apparatus, crowd management tool, and economic extraction engine. From the imperial perspective, spectacles solved genuine collective action problems: how to bind a militarized autocracy's diverse populations into a shared polity, how to channel violent impulses and surplus military capacity into controlled venues, how to distribute legitimacy to a regime lacking electoral consent. From the enslaved and condemned perspective, the games were pure snare \u2014 extraction toward death with zero exit options. From the plebeian perspective, the games appeared as participation (cheering crowd, imperial responsiveness to applause) but operated as suppressed extraction (resource redirection, political agency channeling, loyalty enforcement). Over the 400-year interval from early imperial expansion (roughly 50 BCE) to late empire fragmentation (350 CE), the constraint's functional content degraded while its theater increased: military training detached from martial utility, animal spectacles shifted from strategic resource management to exotic consumption, and crowd management devolved from political negotiation to faction control. By the late empire, the games were maintained primarily through institutional inertia \u2014 the residual spectacle institution persisting because alternative legitimation pathways had not yet crystallized. This progression from tangled_rope (mixed coordination-extraction) toward piton (degraded theater) is the constraint's primary temporal feature.",
+    "key_agents": [
+      "Imperial Administration: Primary beneficiary (institutional/arbitrage) \u2014 captures legitimacy monopoly, crowd consolidation, and political power concentration through spectacle sponsorship",
+      "Gladiators and Condemned Prisoners: Primary victim (powerless/trapped) \u2014 extracted toward certain death; zero exit options; no coordination benefit",
+      "Urban Plebeian Population: Secondary victim (moderate/constrained) \u2014 subjected to resource extraction (spectacle funding), political agency channeling (crowd acclamation), and loyalty enforcement; constrained exit options",
+      "Military Officer Corps: Mixed (organized/constrained) \u2014 benefits from military training utility and career advancement through patronage; also bears suppression costs (career penalties for questioning expenditures)",
+      "Aristocratic Elite: Secondary beneficiary (powerful/arbitrage) \u2014 can sponsor spectacles for prestige and political advancement; have superior exit options compared to plebeians",
+      "Residual Spectacle Institution: Institutional actor (institutional/arbitrage) \u2014 late-empire piton perspective; maintains games through inertia after functional justification erodes"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The games extract resources (grain allocations, military labor, craftspeople) that could be redirected to productive infrastructure or administration. They extract political agency by channeling participation into controlled crowd reactions. They extract competitive reputation by monopolizing the venue for public spectacle. However, extractiveness is not maximal (0.75+) because the games do solve genuine coordination problems: the imperial regime genuinely needs to manage military capacity, distribute legitimacy, and bind urban populations into a stable hierarchy. The extractiveness value reflects the mixed nature \u2014 significant extraction layered on real coordination function. Suppression (0.68): High. The constraint operates through severe barriers to refusal: attendance at spectacles is effectively mandatory for plebeians (absence signals disloyalty); gladiatorial participation is coerced (enslaved and condemned status); and alternative forms of political participation are suppressed (Senate is ceremonial; provincial councils lack real power). However, suppression is not absolute (0.85+) because some exit channels exist (provincial relocation for the wealthy, individual refusal for those accepting social cost, military service as alternative identity). Theater ratio (0.80): High and increasing over the interval. Traditional understanding treats spectacles as entertainment; analytical treatment reveals they are mechanisms for attention control and political aggregation. The theater increased over time as the genuine functional content (military training, emergency animal management) detached from the spectacles and entertainment function became primary.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The gladiator sees pure snare (snare classification, d \u2248 0.95). The plebeian sees snare disguised as participation (snare classification, d \u2248 0.85). The military officer sees mixed function (tangled_rope classification, d \u2248 0.55). The imperial administration sees coordination mechanism (rope classification, d \u2248 0.15). The late-empire spectacle institution sees its own degradation (piton classification, d \u2248 0.20, theater dominant). The naive analytical observer risks seeing natural law (false mountain, which the structural data rebuts). This perspectival gap reflects genuine structural differentiation in exit options and benefit distribution \u2014 the games really do function differently for enslaved combatants (no exit, pure extraction) versus imperial administrators (monopoly exit, coordination benefits) versus declining institutions (inertial theater). The gap is not observational or framing-dependent; it reflects real asymmetries in structural position.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status combined with exit options. Enslaved gladiators: victims + trapped \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 maximum experienced extraction. Plebeians: victims + constrained \u2192 d \u2248 0.80 \u2192 f(d) \u2248 1.20 \u2192 high extraction. Military officers: mixed (beneficiary from patronage, victim from suppression) + constrained \u2192 d \u2248 0.55 \u2192 f(d) \u2248 0.75 \u2192 moderate extraction. Imperial administration: beneficiaries + arbitrage \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.08 \u2192 negative extraction (they experience the games as subsidized public goods, not costs). The scope modifier \u03c3(S) scales extractiveness by spatial scope: local scope (0.8) dampens, national scope (1.0) neutral, global scope (1.2) amplifies. The games operate at regional-to-national scope (arena in Rome, impact on empire-wide legitimation), so \u03c3(S) \u2248 1.0. The beneficiary and victim structure maps clearly: imperial administration, aristocratic elite, military apparatus as beneficiaries; enslaved populations, plebeians, and the abstract political-stability commons as victims.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint is classified as tangled_rope at base (\u03b5=0.58, suppression=0.68, genuine coordination function + asymmetric extraction), and mandatrophy is resolved by showing that the perspectival gap is legitimate structural differentiation, not misclassification. The imperial perspective (rope) and the gladiator perspective (snare) are NOT contradictory; they reflect genuinely different structural positions. The games really do provide coordination benefits to the regime (solving the 'how do we aggregate diverse subjects into stable hierarchy?' problem) and real extraction to enslaved combatants (captured toward death with no exit). Both are true. The tangled_rope classification captures this: it requires both a genuine coordination function (the games solve the empire's aggregation problem) AND asymmetric extraction (the solution is built on the backs of the enslaved and suppressed plebeian agency). The mandatrophy is further resolved by the temporal degradation: the games transition from 'mixed coordination-extraction' (early empire, 0.38 extractiveness) toward 'degraded theater' (late empire, 0.58 extractiveness, theater rising to 0.80). As the functional coordination content erodes and the institutional inertia dominates, the constraint approaches piton. The progression is observable, measurable, and theoretically coherent: tangled_rope \u2192 [degradation over 400 years] \u2192 piton. This is exactly the lifecycle the framework predicts for constraints that lose their coordination function while remaining institutionalized."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_military_capacity_management",
+      "plebeian_political_participation_systems",
+      "imperial_legitimacy_apparatus"
+    ],
+    "dual_formulation_note": "The Colosseum games constraint can be decomposed into three structural claims: (1) Military training and capacity management (genuine coordination, lower \u03b5), (2) Crowd aggregation and political legitimacy distribution (mixed coordination-extraction, moderate \u03b5 \u2248 0.50), and (3) Entertainment consumption and institutional theater (pure performance, higher \u03b5 \u2248 0.70). This story models the integrated constraint at the intermediate level (\u03b5=0.58, claimed_type=tangled_rope) capturing all three functions. Decomposition into separate constraint stories would separate the military function (rope), the political-legitimacy function (tangled_rope), and the residual-theater function (piton), but the integrated system operates through coupling of all three."
+  },
+  "directionality_overrides": []
+}

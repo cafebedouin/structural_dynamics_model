@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "ergo_storage_rent_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "esr"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ergo Storage Rent (Demurrage) Mechanism",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "network_security_validators",
+      "long_term_ecosystem_sustainability"
+    ],
+    "victims": [
+      "dormant_utxo_holders",
+      "legacy_application_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dormant UTXO Holder",
+      "comment": "PERSPECTIVE 1: DORMANT UTXO HOLDER (SNARE) \u2014 An agent who accumulated ERG tokens years ago and held them passively experiences erosion of their holdings through storage rent deductions. Exit options are constrained: abandoning the holdings forfeits them entirely; moving them requires activity (spending) that triggers the rent deduction anyway; hodling incurs continuous extraction. The agent experiences maximum effective extraction because the constraint is inescapable from their passive strategy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy dApp Developer",
+      "comment": "PERSPECTIVE 2: LEGACY DAPP DEVELOPER (TANGLED ROPE) \u2014 Developers who built applications that store state on-chain (account histories, governance records, contract state) face rising operational costs as their application footprint ages. They benefit from the coordination mechanism: storage rent prevents state bloat and ensures network performance remains bounded. But they bear asymmetric extraction: maintaining their dApp requires periodic state compaction or rent-bearing storage expansion. Mobile exit exists (migrate to rollup or L2) but is costly. Extraction is real but coupled with genuine coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Network Security Validators",
+      "comment": "PERSPECTIVE 3: NETWORK SECURITY VALIDATORS (ROPE) \u2014 Validators benefit from storage rent through two coordination mechanisms: (1) it incentivizes miners to maintain the chain efficiently by burning rent into the mining fee pool, creating alignment between storage overhead and validator rewards; (2) it prevents state bloat, which would otherwise increase computational burden on validators. This is pure coordination: rent collection aligns validator incentives with network health. Validators have arbitrage exit: they can shift computational resources between blockchains. Storage rent appears to them as a coordination instrument, not extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Ecosystem Transition Coalition",
+      "comment": "PERSPECTIVE 4: ECOSYSTEM TRANSITION COALITION (SCAFFOLD) \u2014 Layer 2 solution developers, application migration services, and storage optimization tooling vendors see storage rent as a temporary coordination problem with a sunset: as scaling solutions mature (rollups, sidechains, off-chain state), the on-chain state footprint will naturally decrease, reducing rent pressure. The constraint is temporary by design \u2014 it incentivizes migration to more efficient architectures. Sunset mechanism: as the ecosystem scales horizontally, on-chain state density drops, rent extraction force declines. High suppression initially, but declining over time."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Governance System",
+      "comment": "PERSPECTIVE 5: PROTOCOL GOVERNANCE SYSTEM (PITON) \u2014 Storage rent in Ergo was designed as an elegant economic coordination mechanism, but its primary function (preventing state bloat) is largely performative after 5 years. The network state footprint growth rate has remained modest through natural user behavior (accounts paying rent or migrating away), not through aggressive rent enforcement. The governance system maintains storage rent as a theoretical guard rail more than an active extraction mechanism. Theater ratio is relatively low (0.35) because the mechanism does function as designed, but much of its operational effect is inertial \u2014 it persists because it was enshrined in the protocol at launch, not because it's the primary solution to state bloat (L2 scaling is)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Economic Necessity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ECONOMIC NECESSITY (MOUNTAIN) \u2014 From a universal/civilizational perspective, storage rent is an immutable constraint of resource-bounded systems: any ledger with finite computational capacity must price storage access, or face tragedy-of-the-commons bloat. This is not unique to Ergo \u2014 every persistent computational system (SQL databases, filesystems, blockchains) must solve the same problem. Storage costs are a fact of physics and economics. However, this perspective risks false naturalization: Ergo's specific implementation (demurrage rate, minimum rent threshold, exception rules) is contingent, not natural. The false summit detector should flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "state_bloat_severity_threshold",
+      "question": "What on-chain state footprint growth rate constitutes an actual protocol crisis vs. manageable overhead?",
+      "resolution_mechanism": "Empirical measurement of storage requirements vs. validator hardware capacity over 10-year horizon; identification of critical inflection points where validation becomes economically infeasible",
+      "impact": "If actual growth < 5% annually: storage rent is unnecessary coercion, classify as pure Snare. If growth > 15% annually: rent is insufficient coordination, classify as failed Rope. Current evidence suggests ~3-5%, implying rent is over-provisioned.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual on-chain state bloat rate vs. protocol capacity"
+    },
+    {
+      "id": "rent_rate_vs_incentive_effectiveness",
+      "question": "Does the current storage rent rate (4 Ergs per byte per 4 years) effectively incentivize state cleanup, or do users simply accept it as a minor tax?",
+      "resolution_mechanism": "Analysis of state compaction behavior; correlation between rent rate changes and user account consolidation patterns; survey of dormant account lifecycle",
+      "impact": "If users actively respond to rent incentives: rent is functional coordination (Rope from user perspective). If users ignore rent below psychological threshold: rent is ineffective extraction (Snare/Piton from user perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether storage rent rate achieves intended incentive effect"
+    },
+    {
+      "id": "l2_scaling_timeline_substitution",
+      "question": "Will L2 rollup solutions (or sidechains) become the primary scaling mechanism within 5 years, making on-chain storage rent functionally obsolete?",
+      "resolution_mechanism": "Tracking adoption of Ergo sidechains and rollup systems; measurement of on-chain transaction volume reduction; survey of developer migration to L2 solutions",
+      "impact": "If L2 adoption occurs: scaffold sunset is real, confirm Perspective 4. If L2 adoption stalls: on-chain storage remains primary, rent becomes permanent (classify as Piton or Tangled Rope depending on adoption speed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether L2 solutions will make on-chain storage rent obsolete"
+    },
+    {
+      "id": "exception_rule_scope_creep",
+      "question": "Do protocol-level exceptions to storage rent (e.g., special treatment for governance contracts, treasury UTXOs) constitute targeted coordination or scope creep that undermines the universal rule?",
+      "resolution_mechanism": "Enumeration of all rent exceptions in the protocol; analysis of whether exceptions serve demonstrated coordination needs or represent captured exemptions; comparison with other UTXO chains",
+      "impact": "If exceptions are minimal and justified: rent mechanism maintains integrity (Rope). If exceptions proliferate: rent becomes selective extraction (Tangled Rope or Snare depending on exception distribution).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether protocol exceptions to storage rent are justified or represent scope creep"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Ergo Storage Rent (Demurrage) mechanism imposes a fee on dormant UTXO data stored on the blockchain, with the stated goal of preventing state bloat and incentivizing efficient resource usage. Introduced at mainnet launch (2019), storage rent represents a hybrid constraint: it is genuinely a coordination mechanism that aligns network participant incentives with computational efficiency, but it also functions as asymmetric extraction from passive token holders and legacy application developers. The constraint exhibits a classic tangled rope structure: a real coordination function (bounding state growth) coupled with coercive extraction (penalizing inactivity) that depends on continued suppression of alternatives. The core tension is that storage rent is both a theoretical necessity (ledgers must price scarce resources) and a contingent policy choice (the specific rate, exceptions, and enforcement pattern are protocol-specific, not universal).",
+    "key_agents": [
+      "Dormant UTXO Holders: Primary victims (powerless/trapped) \u2014 bear erosion of holdings through mandatory rent deductions with no escape path",
+      "Legacy dApp Developers: Secondary victims (moderate/constrained) \u2014 face rising operational costs for on-chain state management; can migrate but at high switching cost",
+      "Network Security Validators: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from state bloat prevention and alignment of mining incentives with network health",
+      "Ecosystem Transition Coalition: Organized agents (organized/constrained) \u2014 developers of L2 solutions and state optimization tools; see rent as temporary incentive for migration",
+      "Protocol Governance System: Institutional maintainer (institutional/arbitrage) \u2014 preserves rent mechanism through protocol inertia; governance system has arbitrage options (can change rent rate)",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing contingent policy (storage must be priced) as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Storage rent does extract value from dormant holders, but the extraction is coupled with genuine coordination benefit (preventing state bloat that would harm all network users). The mechanism is not as severe as a pure Snare (\u03b5 \u2264 0.66) because it operates on a predictable schedule and users retain escape options (activity, migration to L2). The extractiveness value reflects that the coordination function is real but the asymmetry is substantial \u2014 passive users bear costs without proportional benefit. Suppression (0.48): Moderate. Users can suppress rent effects through periodic spending or state compaction, but these actions require effort and may incur transaction costs. L2 migration is theoretically available but practically constrained by liquidity and tool maturity. Suppression is not total (users have some options) but significant (default passive holding incurs rent). Theater ratio (0.35): Low-moderate. Storage rent functions largely as designed: it does reduce state bloat incentives and aligns validator interests. But theater is non-zero because the mechanism operates partially through psychological deterrent (the threat of erosion) rather than through active state cleanup \u2014 users rarely explicitly consolidate state in response to rent pressure; they more often simply accept incremental losses or migrate away entirely.",
+    "perspectival_gap": "The primary perspectival gap lies between the dormant UTXO holder (Snare) and the validator (Rope). The same mechanism appears as pure extraction to the passive holder (they experience continuous deduction with no coordination benefit) and as pure coordination to the validator (they experience incentive alignment without extraction). This gap is central to the tangled rope classification: the constraint genuinely serves a coordination function, but that coordination function is asymmetrically distributed. Secondary gap: the legacy dApp developer (Tangled Rope) sees both the coordination benefit (lower state bloat prevents network slowdown affecting their applications) and the extraction cost (maintaining state becomes more expensive over time). The scaffold perspective (Ecosystem Transition Coalition) sees a temporary constraint with a natural sunset, but this sunset depends on the empirical success of L2 scaling \u2014 if L2 adoption stalls, the scaffold becomes a permanent Tangled Rope or Snare.",
+    "directionality_logic": "Directionality (d) for each agent is derived from their structural position relative to the rent extraction flow. Dormant UTXO holders (powerless/trapped) occupy d \u2248 0.95 \u2014 maximum target position, no escape paths, full exposure to extraction. Network validators (institutional/arbitrage) occupy d \u2248 0.05 \u2014 beneficiary position with arbitrage exit options, experiencing negative effective extraction (they benefit from the constraint). Legacy dApp developers (moderate/constrained) occupy d \u2248 0.65 \u2014 partial victim position (they bear costs but also benefit from state efficiency) with constrained exit (can migrate but at cost). The analytical observer (analytical/analytical) occupies d \u2248 0.72 \u2014 observer position with full visibility but no structural stake. Each d value feeds into f(d), which produces the agent's experienced extractiveness chi. The perspectival gap emerges because different agents have radically different d values despite occupying the same constraint.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The tangled rope classification resolves potential mandatrophy (false conflation of coordination and extraction) by explicitly documenting both the coordination function (state bloat prevention, validator incentive alignment) and the asymmetric extraction (erosion of dormant holdings, rising dApp costs). The mechanism is neither pure coordination (Rope, which would require suppression \u2264 0.05) nor pure extraction (Snare, which would require \u03b5 \u2265 0.66). Instead, it is a hybrid where the coordination function is genuine but the extraction is asymmetrically distributed and coercively enforced. The mandatrophy is resolved by showing that both aspects are structural: removing the coordination function would cause state bloat (real cost), but removing the extraction would eliminate the incentive asymmetry (real benefit for dormant holders). The mechanism cannot be simplified to either pole without losing explanatory power. The false summit alert on Perspective 6 (Mountain/Economic Necessity) flags the naturalization risk: storage pricing IS a universal necessity, but the Ergo implementation is contingent \u2014 other blockchains solve the same problem differently (Cardano with UTxO density controls, Ethereum with gas fees rather than demurrage). The constraint's type is not inherent to ledger economics; it is a design choice."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ergo_utxo_state_bloat_accumulation",
+      "ergo_dapp_operational_cost_barrier"
+    ],
+    "dual_formulation_note": "Storage rent is downstream of the fundamental problem (bounded ledger capacity) but represents a distinct mechanism family separate from scaling solutions. The upstream constraint is capacity scarcity itself; storage rent is one policy response. L2 scaling solutions represent an alternative response. These constraints form a family because rent's extractiveness depends on the adoption rate of alternatives \u2014 if L2 scaling succeeds, rent becomes vestigial (Piton); if L2 scaling stalls, rent becomes permanent extraction (Tangled Rope or Snare)."
+  },
+  "directionality_overrides": []
+}

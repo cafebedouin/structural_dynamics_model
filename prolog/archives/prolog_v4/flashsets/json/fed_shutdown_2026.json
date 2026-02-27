@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "fed_shutdown_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 2026 DHS/ICE Funding Standoff",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hardline_political_factions",
+      "private_prison_industry"
+    ],
+    "victims": [
+      "dhs_employees",
+      "immigrant_communities",
+      "broader_economy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "DHS Employees",
+      "comment": "Perspective of DHS employees facing furloughs and financial insecurity due to the shutdown. Limited exit options and high vulnerability."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Immigrant Communities",
+      "comment": "Perspective of immigrant communities facing increased fear and vulnerability due to reduced oversight of ICE and potential for heightened enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Broader U.S. Economy",
+      "comment": "Perspective of the U.S. economy experiencing negative impacts due to the shutdown, but also potentially benefiting from reduced government spending (a contested claim)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Hardline Political Factions",
+      "comment": "Perspective of hardline political factions who benefit from the shutdown by furthering their political agendas and rallying their base. They have arbitrage opportunities via fundraising and media attention."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Private Prison Industry",
+      "comment": "Perspective of the private prison industry potentially benefiting from increased ICE enforcement, although this is contingent on the specific shutdown outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer perspective, recognizing the mixed coordination and extraction aspects of the political standoff. Sees the long-term implications for governance and social stability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ice_oversight_effectiveness",
+      "question": "How effectively does oversight of ICE practices prevent abuses and protect human rights?",
+      "resolution_mechanism": "Independent audits, legal challenges, and investigations into ICE practices under different oversight regimes.",
+      "impact": "If oversight is effective, reduced oversight leads to increased abuses (snare). If oversight is ineffective, the impact of the shutdown is primarily economic (rope/scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of ICE oversight"
+    },
+    {
+      "id": "political_polarization_severity",
+      "question": "How severely is political polarization impacting the ability to reach compromises on budget and policy issues?",
+      "resolution_mechanism": "Analysis of voting patterns, public opinion surveys, and discourse analysis of political rhetoric.",
+      "impact": "High polarization makes shutdowns more likely and intractable (snare). Lower polarization allows for negotiated solutions (rope/scaffold).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Severity of political polarization"
+    },
+    {
+      "id": "economic_impact_magnitude",
+      "question": "What is the true magnitude of the economic impact of government shutdowns?",
+      "resolution_mechanism": "Economic modeling, analysis of historical shutdown data, and comparisons with control groups.",
+      "impact": "High economic impact makes the shutdown more damaging (snare). Low economic impact makes the political gains/losses more salient (rope/scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of economic impact"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The 2026 DHS/ICE funding standoff leading to a federal government shutdown highlights the tension between political agendas, immigration policy, and the functioning of government. This constraint story examines the different perspectives on the shutdown, identifying who benefits and who bears the costs. Hardline political factions exploit the crisis for political gain, while DHS employees and immigrant communities suffer the most. The broader economy experiences mixed effects. The standoff reveals the challenges of balancing security concerns with human rights and economic stability.",
+    "key_agents": [
+      "DHS Employees: Primary target (powerless/trapped) - face furloughs and financial insecurity.",
+      "Immigrant Communities: Secondary target (powerless/trapped) - experience increased fear and vulnerability.",
+      "Broader Economy: Mixed impact (moderate/constrained) - suffers from disruption but may gain from reduced spending.",
+      "Hardline Political Factions: Primary beneficiary (institutional/arbitrage) - exploit the crisis for political gain.",
+      "Private Prison Industry: Potential beneficiary (institutional/arbitrage) - may benefit from increased ICE enforcement.",
+      "Analytical Observer: Analytical perspective (analytical/analytical) - assesses the long-term implications."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The shutdown extracts value from DHS employees, immigrant communities, and the economy. Hardline factions benefit politically. Suppression (0.70): High. The political climate and lack of compromise suppress alternative solutions. Theater ratio (0.40): Moderate. While there is political theater, the shutdown also has real consequences.",
+    "perspectival_gap": "DHS employees and immigrant communities experience the shutdown as a snare, with limited options and significant harm. Hardline political factions see it as a rope, enabling them to advance their agenda. The broader economy faces a tangled rope, with both positive and negative consequences. The analytical observer sees the tangled rope of competing interests and long-term instability.",
+    "directionality_logic": "The directionality values are derived from the beneficiary/victim status and the agent's exit options. Powerless agents with trapped exit options have high directionality values, experiencing the constraint as extractive. Institutional agents with arbitrage opportunities have low directionality values, benefiting from the constraint.",
+    "mandatrophy_analysis": "The shutdown could be misconstrued as pure extraction, but the political benefits to some factions indicate a degree of coordination. The tangled rope classification captures the mixed nature of the constraint, with both coordination and extraction occurring."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "immigration_policy_effectiveness",
+      "border_security_funding"
+    ]
+  },
+  "directionality_overrides": []
+}

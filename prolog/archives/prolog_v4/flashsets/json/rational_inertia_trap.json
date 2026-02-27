@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "rational_inertia_trap",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Legacy Protocol Lock-in",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_protocol_vendors",
+      "early_adopters_legacy_protocol"
+    ],
+    "victims": [
+      "potential_new_protocol_adopters",
+      "overall_system_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Potential New Protocol Adopter",
+      "comment": "Perspective 1: Potential New Protocol Adopter (Snare) - Feels the immediate cost of switching but cannot realize the collective benefit alone. Trapped by network effects and switching costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Protocol Vendors",
+      "comment": "Perspective 2: Legacy Protocol Vendors (Rope) - Benefit from continued lock-in; their products and services are already integrated and widely used. They can charge rents and influence standards."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 3: Analytical Observer (Tangled Rope) - Sees both the coordination and extraction aspects of the lock-in. Acknowledges both the benefits to vendors and early adopters, and the cost to the overall system."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Early Adopters of the Legacy Protocol",
+      "comment": "Perspective 4: Early Adopters of the Legacy Protocol (Piton) - Already invested in the legacy system, so they're constrained to stay due to switching costs and established networks, even if a superior protocol is available. Their prior investment acts as a form of lock-in. They may perform rituals of maintaining the old system despite its inefficiency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effect_strength",
+      "question": "How strong are the network effects that reinforce the legacy protocol?",
+      "resolution_mechanism": "Empirical analysis of adoption rates and switching costs",
+      "impact": "Stronger network effects make the lock-in more severe, shifting the classification toward snare. Weaker network effects allow for easier transitions to new protocols, shifting towards scaffold or rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The strength of network effects affects lock-in severity."
+    },
+    {
+      "id": "switching_cost_assessment",
+      "question": "What is the true cost of switching to the superior protocol, including both direct and indirect expenses?",
+      "resolution_mechanism": "Cost-benefit analysis of implementing the new protocol, considering all relevant factors.",
+      "impact": "Higher switching costs make the lock-in more entrenched, increasing the extraction. Lower switching costs create opportunities for escape.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining true cost of switching to the new protocol."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The legacy protocol lock-in describes a scenario where a technologically or socially superior protocol exists, but individual agents find it rational to remain in the inferior legacy system. This occurs because the local cost of switching exceeds the immediate, local benefit, even though the collective or long-term gain from switching would be massive. This is a classic collective action problem exacerbated by network effects, path dependency, and switching costs.",
+    "key_agents": [
+      "Potential New Protocol Adopters: Primary target (powerless/trapped) - Bear the cost of the extraction.",
+      "Legacy Protocol Vendors: Primary beneficiary (institutional/arbitrage) - Benefit from continued lock-in and vendor loyalty.",
+      "Early Adopters of Legacy Protocol: Moderate adopters (moderate/constrained) - Initially benefited but now are constrained by their prior investments.",
+      "Overall System Efficiency: Affected (powerless/trapped) - Abstract victim representing the overall system performance."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate to High. Reflects the cost imposed on the potential adopters of the superior protocol as they are forced to use the inferior legacy system. Suppression (0.65): Moderate to High. The network effects and switching costs suppress alternatives. The early adopters are also constrained by their past decisions. The theater ratio is now high, reflecting some actual continued functional usage alongside performative maintenance.",
+    "perspectival_gap": "The potential new adopters experience a snare, feeling trapped by the costs of switching. Legacy vendors experience a rope because the network effects coordinate action to maintain their profits. Early adopters experience something akin to a piton because they're constrained into a path-dependent outcome with a theater that keeps them bound to the old ways. Analytical observers see the tangled rope because there is a coordination failure with an exploitative extraction.",
+    "directionality_logic": "The directionality is derived from the relationship between each agent and the protocol adoption. Potential adopters are victims and constrained, yielding a high directionality value. Legacy vendors are beneficiaries and can arbitrage new developments, which drives a low directionality value. Early adopters are more constrained than the vendors, and benefit less than the new protocol adopters would, yielding a moderate directionality value. Analytical observers view the whole scenario, which yields a balanced extraction level."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

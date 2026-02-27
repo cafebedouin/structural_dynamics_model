@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "collective_stupidity_2026",
+    "version": "1.1",
+    "generated_date": "2024-03-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cipolla-Galloway Stupidity Snare",
+    "topic_domain": "social/behavioral",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "perpetrators"
+    ],
+    "victims": [
+      "affected_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Affected Individual",
+      "comment": "The individual bears the cost of collective stupidity and is often powerless to change it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Community Leaders",
+      "comment": "Community leaders are constrained by the potential for reputational damage if they challenge the stupid behavior. They may, however, derive some benefit from maintaining the status quo."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Researchers",
+      "comment": "Academics who study collective action failure are often constrained by access to funding and professional reputational concerns if they push back too hard."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Perpetrator",
+      "comment": "The perpetrator may be constrained by norms and culture, but actively benefits through indifference and is often not penalized."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analytical observers can see the stupidity, but lack any power to change it. In effect, they are only observers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Government Agencies",
+      "comment": "Government agencies may benefit from the status quo of collective stupidity if it allows them to maintain power or control."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "stupidity_definition",
+      "question": "Is causing damage to others without deriving personal gain the correct definition of stupidity?",
+      "resolution_mechanism": "Sociological and psychological study to determine common understanding of stupidity.",
+      "impact": "If the definition is incorrect, the model will not be relevant.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition of Stupidity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Stupidity, defined as causing damage to others without deriving personal gain, can create a tangled rope for communities. This tangled rope occurs when individuals or groups engage in behaviors that harm others, while not personally benefiting from those actions. This creates a collective action problem where the community as a whole suffers, but no individual has the incentive to stop the behavior. The enforcement of norms against stupidity is often weak or non-existent, contributing to the persistence of the problem.",
+    "key_agents": [
+      "Affected Communities: Primary victim (powerless/trapped) \u2014 bears the costs of stupid behavior",
+      "Community Leaders: Secondary victim (moderate/constrained) \u2014 constrained by reputational damage if they challenge the stupid behavior, but may derive benefit by maintaining the status quo",
+      "Researchers: Secondary victim (organized/constrained) \u2014 constrained by access to funding and professional reputational concerns if they push back too hard.",
+      "The Perpetrator: Primary Beneficiary (powerful/constrained) \u2014 may be constrained by norms, but is not usually penalized. Actively benefits through indifference.",
+      "Analytical Observer: Civilizational View (analytical/analytical) \u2014 no power to change behavior, only observe",
+      "Government Agencies: Institutional actor (institutional/mobile) \u2014 may benefit from the status quo if it allows them to maintain power or control."
+    ],
+    "logic_rationale": "The base extractiveness is 0.6 because the stupid behavior causes significant harm to others. The suppression is 0.7 because stupid behavior is difficult to combat due to social norms and lack of enforcement. The theater_ratio is low because little effort is expended to combat the behavior, or the efforts are performative rather than effective. The constraint requires active enforcement because without it, the stupid behavior persists.",
+    "perspectival_gap": "The affected individual sees a snare. The community leader sees a tangled rope, and has an economic interest to perpetuate the problem. The analytical observer sees that a problem exists, but has no power to stop it. Government agencies may see a rope, where the stupidity allows them to maintain control.",
+    "directionality_logic": "The directionality value (d) is determined by the agent's structural position \u2014 their power level, exit options, and relationship to the extraction flow. The pipeline computes d from these context parameters and applies the sigmoid f(d) to produce experienced extractiveness chi. Trapped agents with no exit bear maximal extraction. Perpetrators benefit through indifference, resulting in a lower d value. Government agencies benefit from the status quo, resulting in a low d value."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

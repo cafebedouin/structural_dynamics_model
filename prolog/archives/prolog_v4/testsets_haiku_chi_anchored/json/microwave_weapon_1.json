@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "microwave_weapon_1",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mw"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Chinese Anti-Satellite Microwave Weapon",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": false,
+    "victims": [
+      "space_dependent_economies",
+      "non_chinese_satellite_operators",
+      "global_communication_infrastructure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-Chinese Satellite Operators",
+      "comment": "PERSPECTIVE 1: NON-CHINESE SATELLITE OPERATORS (SNARE) \u2014 Cannot exit orbital infrastructure; vulnerable to weapon deployment with no defensive recourse except hardening (costly, delayed). Face extraction via capability asymmetry and coercion through existential threat to assets. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Space-Dependent Global Economy",
+      "comment": "PERSPECTIVE 2: SPACE-DEPENDENT GLOBAL ECONOMY (SNARE) \u2014 Trapped by dependence on satellite infrastructure for communications, GPS, weather, finance, agriculture. Constrained ability to migrate to ground-based alternatives in short timeframe. Faces coercion through threat of cascading infrastructure failure. d\u22480.88, f(d)\u22481.35, \u03c3=1.2 \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Chinese Military/Space Command",
+      "comment": "PERSPECTIVE 3: CHINESE MILITARY/SPACE COMMAND (ROPE) \u2014 Benefits from coordination benefit: weapon development solves a real military coordination problem (asymmetric space denial), demonstrates technological capability, deters adversary space operations. Experiences constraint as enabling coordination, not extraction. d\u22480.15, f(d)\u22480.02, \u03c3=0.9 \u2192 \u03c7\u22480.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "United States Space Deterrence Architecture",
+      "comment": "PERSPECTIVE 4: US SPACE DETERRENCE ARCHITECTURE (TANGLED ROPE) \u2014 Both benefits (justifies space control spending, accelerates space superiority initiatives) and bears extraction (faces credible threat to strategic assets, forced to harden infrastructure, locked into costly space race). Mobile exit option (orbital defense systems, distributed constellation) but within-system mobility is expensive. d\u22480.52, f(d)\u22480.68, \u03c3=1.2 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Orbital Commons/Space Sustainability",
+      "comment": "PERSPECTIVE 5: ORBITAL COMMONS/SPACE SUSTAINABILITY (SNARE) \u2014 Abstract collective good (stable orbital environment, debris mitigation, sustainable space access) faces extraction via weapon deployment. No agency, no exit. Weapon use creates debris cascades that degrade orbital commons for centuries. d\u22480.98, f(d)\u22481.43, \u03c3=1.0 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Space Law Regime",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL SPACE LAW REGIME (PITON) \u2014 Outer Space Treaty formally prohibits weapons of mass destruction in orbit but is silent on directed energy weapons against specific satellites. The regime persists through institutional inertia (ratified by 115 parties) but functional verification and enforcement is degraded: no inspection mechanism, no verification protocol for compliance, no enforcement against great-power treaty violation. theater_ratio\u22480.65 (high ceremonial adherence, low actual constraint on state action). Regime is maintained through symbolic compliance and diplomatic rhetoric rather than functional deterrence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a first-principles analysis, directed energy weapons in space represent an inevitable consequence of dual-use electromagnetic physics: radio frequency systems exist for telecommunications; scaling and focusing RF energy for damage is a straightforward engineering application. The physics of RF propagation in vacuum imposes no prohibition on weaponization. This perspective risks naturalizing contingent military technology choices as immutable laws of physics. The structural data (\u03b5=0.68, suppression=0.78) indicates this is NOT a mountain \u2014 the weapon is a political-military choice, not a natural law. Perspective represents a false summit: confusing 'technically inevitable' with 'naturally inevitable'."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "weapon_deployment_threshold",
+      "question": "What event or condition triggers actual deployment of the microwave weapon? Is the extraction mechanism dependent on deployment threat (deterrence) or actual use (kinetic)?",
+      "resolution_mechanism": "Analysis of Chinese military doctrine, wargame scenarios, crisis simulation data; comparison of coercive pressure under 'threat known' vs 'deployment imminent' vs 'post-use debris' scenarios",
+      "impact": "If threat-dependent: extraction is behavioral (fear-driven), and defensive hardening reduces \u03c7 significantly. If use-dependent: extraction is structural (infrastructure destruction), and deterrence cannot reduce \u03c7. If deterrence fails: immediate shift to civilizational snare (orbital commons irreversibly degraded).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extraction is threat-based or deployment-based"
+    },
+    {
+      "id": "chinese_strategic_escalation_logic",
+      "question": "Does the weapon serve deterrence (preventing US space operations) or coercion (forcing policy concessions), or both? Under what political conditions would China deploy?",
+      "resolution_mechanism": "PLA strategy documents, military exercise data, crisis simulation outcomes; analysis of signaling consistency and commitment credibility; historical precedent for space weapons use by great powers",
+      "impact": "If pure deterrence: constraint is stabilizing (mutually acknowledged vulnerability \u2192 negotiation). If coercion: constraint is destabilizing (China can impose costs on non-compliant actors). If both: classification remains snare but severity depends on Chinese political objectives at time of crisis.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Chinese strategic intent: deterrence vs coercion"
+    },
+    {
+      "id": "defense_feasibility_and_timeline",
+      "question": "Can non-Chinese actors achieve credible defense (hardening, redundancy, distributed constellation, ground-based alternatives) before political crisis makes deployment likely?",
+      "resolution_mechanism": "Technical assessment of hardening timelines (years to harden critical satellites); economic analysis of constellation redundancy costs; analysis of ground-based alternative deployment schedules; correlation with geopolitical tension indicators and military exercise frequency",
+      "impact": "If defense achievable before crisis: non-Chinese actors transition from snare (trapped) to tangled_rope (constrained but with mobile exit). If defense impossible in timeframe: snare persists, and escalation risk grows. Orbital commons remains at civilizational snare risk regardless.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for achieving defensive capability vs crisis probability"
+    },
+    {
+      "id": "debris_cascade_irreversibility",
+      "question": "If weapon is deployed and creates debris, does the resulting cascade render entire orbital regions unusable for decades, or are cleanup/mitigation options viable?",
+      "resolution_mechanism": "Orbital mechanics modeling of cascade scenarios; assessment of debris removal technology feasibility and cost; historical debris evolution data from previous fragmentation events",
+      "impact": "If cascade is irreversible on human timescale: orbital commons shifts from snare to catastrophic externality (all actors eventually trapped in degraded orbital environment). If mitigation viable: snare remains bounded. Either way, space-dependent economy's effective exit options degrade over time.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether debris cascade causes reversible or irreversible orbital degradation"
+    },
+    {
+      "id": "international_response_coordination",
+      "question": "Can non-Chinese space-dependent actors coordinate a unified response (sanctions, reciprocal weapon development, coalition deterrence) or do they remain fragmented?",
+      "resolution_mechanism": "Institutional analysis of NATO space coordination, Five Eyes space agreement coverage, commercial satellite operator consortium cohesion; game-theoretic assessment of coalition stability under threat",
+      "impact": "If coordination succeeds: non-Chinese actors transition from isolated snare (powerless) to organized coalition (organized/constrained), potentially increasing f(d) but also enabling collective response. If fragmented: snare persists, and China's extraction via divide-and-conquer logic increases.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether non-Chinese actors can coordinate collective defense"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Chinese anti-satellite microwave weapon represents a structural extraction constraint operating across multiple levels: technological (RF physics weaponization), military (asymmetric space denial), geopolitical (coercive deterrence), and environmental (orbital commons degradation). The weapon creates a snare constraint for non-Chinese satellite operators and space-dependent economies: they are trapped in dependence on orbital infrastructure while facing an existential threat they cannot effectively defend against in the short term and cannot exit. The constraint exhibits different character from different structural positions: for Chinese military command, it is a coordination benefit (solving the space denial problem); for the US space architecture, it is tangled rope (forced into costly defensive competition); for the international space law regime, it is a degraded institutional framework (piton) maintained through symbolic compliance while functionally circumvented; for the orbital commons and sustainability advocates, it is a civilizational snare with potential for cascading, irreversible damage. The theater ratio is low (0.35) compared to the example constraint because the weapon's function is direct and concrete (electromagnetic damage to satellites) rather than performative. The extractiveness has increased over the interval (0.35\u21920.68) as the weapon technology matured and deployment credibility increased. The suppression is high (0.78) because alternative exit routes (technical hardening, constellation redundancy, ground alternatives) all require years to decades of investment and international coordination, while the weapon's deployment could occur within months.",
+    "key_agents": [
+      "Chinese Military/Space Command: Primary beneficiary (organized/arbitrage) \u2014 develops and controls weapon; gains space denial capability and strategic asymmetry",
+      "Non-Chinese Satellite Operators: Primary victim (powerless/trapped) \u2014 operate commercial/civil satellites; face existential threat with no immediate defense or exit",
+      "Space-Dependent Global Economy: Primary victim (moderate/constrained) \u2014 finance, communications, agriculture, disaster response depend on satellite infrastructure; trapped by dependency and constrained by defense timelines",
+      "US Space Deterrence Architecture: Secondary actor (powerful/mobile) \u2014 perceives both deterrence benefit (justifies space spending) and extraction cost (forced into costly competition); has greatest mobility but highest vulnerability",
+      "Orbital Commons/Space Sustainability: Abstract victim (powerless/trapped) \u2014 stable orbital environment and long-term space access for all actors; faces irreversible degradation from debris cascades",
+      "International Space Law Regime: Institutional actor (institutional/constrained) \u2014 Outer Space Treaty signatories; maintains ceremonial compliance while lacking enforcement capability; functionally degraded (piton)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing military technology choices as inevitable physics outcomes"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, reflecting the weapon's capacity to extract significant value from non-Chinese satellite operators through coercive asymmetry. The base rate is not maximal (0.90+) because the weapon's deployment is probabilistic (not certain) and some actors have non-zero defense options within the interval. However, the certainty of the weapon's existence and the difficulty of defending against it justify the high score. The trajectory shows increasing extractiveness (0.35\u21920.68) as the weapon matured from prototype to operational capability. Suppression (0.78): High. Non-Chinese actors face severe constraints: (1) Technical barriers to rapid hardening (engineering cycles, testing, qualification take years), (2) Economic barriers (defensive constellation redundancy costs billions), (3) Coordination barriers (multinational actors cannot quickly unify response), (4) Institutional barriers (no enforcement mechanism for international space law). The suppression reflects genuine structural inability to exit quickly, not mere cost. Theater ratio (0.35): Low. The microwave weapon's function is direct electromagnetic damage, not performative. This contrasts with military posturing or ceremonial arms race dynamics. The weapon either works or it doesn't; the constraint is functional rather than theatrical. Claimed type (snare): Fits the canonical profile \u2014 high extractiveness (0.68 \u2265 0.46), high suppression (0.78 \u2265 0.60), effective extraction \u03c7 ranges from 0.71-0.97 across victim perspectives (\u22650.66 snare threshold).",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The Chinese military sees rope/coordination (solving space denial). The US sees tangled rope (forced competition but with some agency). Non-Chinese satellite operators see pure snare (trapped, powerless, no agency). The orbital commons sees catastrophic snare (civilizational-scale irreversible harm). The international space law regime sees piton (ceremonial framework with degraded enforcement). The analytical observer risks seeing mountain (naturalizing military technology as physical inevitability), but the structural data reveals this as false summit \u2014 the constraint is a contingent geopolitical choice, not a law of physics. The perspectival gaps widen under crisis conditions: if deployment threat becomes imminent, all non-Chinese perspectives shift toward snare; if deployment occurs, the orbital commons perspective becomes catastrophic.",
+    "directionality_logic": "Non-Chinese satellite operators: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Near-maximum extraction due to trapped exit and zero arbitrage options. Space-dependent economy: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.35. High extraction due to constrained exit (defense timelines exceed crisis probability). Chinese military: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.02. Net beneficiary; weapon solves a strategic coordination problem. US space architecture: Both victim and beneficiary, mobile exit \u2192 d\u22480.52, f(d)\u22480.68. Moderate extraction due to mobile exit option (orbital defense, constellation redundancy) and offsetting deterrence benefits. Orbital commons: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.43. Near-maximum extraction; abstract collective with zero agency. International space law regime: Institutional + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate-high extraction reflecting institutional capture by great powers and degraded enforcement capacity.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves mandatrophy by showing that the weapon is NOT a coordination mechanism (rope) for the global space ecosystem \u2014 it is a pure extraction mechanism (snare) from the perspective of actors who cannot deploy it or defend against it. The Chinese military's coordination benefit (solving space denial) does NOT extend to non-Chinese actors. The constraint is a clear zero-sum game: Chinese gain (space denial capability, strategic asymmetry) = non-Chinese loss (satellite vulnerability, coercive exposure). The temptation to mislabel this as 'coordination' (everyone gets space superiority aspirations) is false \u2014 only the possessor gains; everyone else bears extraction. The orbitalcommons perspective is maximally snare because the weapon creates irreversible negative externalities (debris) that cannot be compensated through coordination mechanisms. No amount of treaties or agreements restores the orbital environment once cascades begin. This is a clean mandatrophy resolution: the constraint is a snare, not rope, not tangled rope, because its function is pure asymmetric extraction with irreversible environmental harm. The piton perspective (international space law regime) is degraded because the regime lacks enforcement mechanisms \u2014 it persists through symbolic participation, not actual constraint on great-power behavior. The false mountain perspective (naturalizing the weapon as inevitable physics) is identified and rejected: the constraint is a political-military choice, not a law of nature."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_space_deterrence_architecture",
+      "orbital_debris_cascade",
+      "outer_space_treaty_enforcement",
+      "satellite_hardening_investment"
+    ],
+    "dual_formulation_note": "The microwave weapon constraint decomposes into multiple structural constraints: (1) the weapon's technical capacity (physics of RF damage, \u03b5\u22480.08, mountain from engineering perspective), (2) the weapon's coercive capacity (geopolitical threat, \u03b5\u22480.68, snare from operator perspective), and (3) the weapon's environmental consequences (debris cascades, \u03b5\u22480.85, civilizational snare for orbital commons). This story focuses on the coercive-geopolitical constraint (\u03b5=0.68). The technical physics constraint (\u03b5\u22480.08) is a separate upstream story that affects this one \u2014 the weapon's political impact depends on the solved engineering problem."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

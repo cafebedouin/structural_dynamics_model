@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "permissive_software_licensing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.25,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Permissive Software Licensing (MIT, Apache, BSD)",
+    "topic_domain": "technological/legal/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "closed_source_commercial_users",
+      "dominant_platform_vendors",
+      "early_adopter_firms"
+    ],
+    "victims": [
+      "open_source_maintainers",
+      "derivative_project_developers",
+      "commons_sustainability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Open Source Maintainer",
+      "comment": "PERSPECTIVE 1: OPEN SOURCE MAINTAINER (SNARE) \u2014 Trapped in a structural dynamic where their unpaid labor is extracted via license permissiveness. The maintainer cannot prevent commercial appropriation, has minimal exit (forking requires reputational cost and abandons the primary codebase), and bears the full cost of maintenance while gains accrue to commercial users. High suppression: no legally enforceable claim to derivative value; social norms against forking; reliance on commercial ecosystem for adoption signals."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Downstream Open Source Project",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM OPEN SOURCE PROJECT (SNARE) \u2014 A derivative project that builds on permissive-licensed code faces asymmetric extraction. Upstream libraries capture value through dependency relationships without obligation to support downstream. Exit options are constrained: rewriting is expensive; the permissive license creates expectation of free availability; switching to proprietary tools risks community backlash. The constraint enforces unpaid labor propagation through the open-source supply chain."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Commercial Vendor",
+      "comment": "PERSPECTIVE 3: COMMERCIAL VENDOR (ROPE) \u2014 Experiences permissive licensing as pure coordination with benefit. The vendor can freely integrate, modify, and redistribute without attribution or sharing obligations. Exit options are abundant: use the library, use a competitor library, build proprietary equivalents. The constraint solves real coordination problems: enabling rapid software assembly without licensing friction. No suppression experienced \u2014 the vendor has full agency and maximum extraction benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Large Platform Operator",
+      "comment": "PERSPECTIVE 4: LARGE PLATFORM OPERATOR (TANGLED ROPE) \u2014 Simultaneously benefits from permissive code (enabling rapid development, reduced licensing costs) and contributes to open source (Azure, AWS services, Google Cloud maintain significant open-source projects). But the relationship is extractive: platforms use permissive-licensed code to build proprietary lock-in services, then gatekeep their own open-source projects through cloud infrastructure dependencies. Active enforcement required: maintaining the veneer of open-source contribution while capturing value through platform effects. Moderate suppression through cloud vendor lock-in and subtle API changes that disadvantage local deployment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Ecosystem as a Collective",
+      "comment": "PERSPECTIVE 5: OPEN SOURCE ECOSYSTEM COLLECTIVE (ROPE) \u2014 When viewed as an organized movement, the permissive licensing regime enables massive coordination: Linux, Git, PostgreSQL, Apache, NumPy, and thousands of projects coexist and interoperate with minimal licensing friction. The ecosystem solves genuine coordination problems: avoiding license incompatibility, enabling rapid innovation, reducing transaction costs. Theater is low \u2014 the mechanism is genuinely functional. Suppression emerges only when the collective tries to enforce reciprocity (GPL), which it cannot do within the permissive framework."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Academic Software Maintenance Model",
+      "comment": "PERSPECTIVE 6: ACADEMIC SOFTWARE MAINTENANCE (PITON) \u2014 University-developed research software (scientific computing, ML frameworks) is increasingly released under permissive licenses as a degraded form of the academic knowledge-sharing ethos. The performative function is 'advancing science through open code'; the structural reality is that maintainers have limited career incentives beyond publication, and commercial companies capture value without reciprocal contribution. Theater ratio is high (0.65+): academic conferences celebrate 'open science,' but the maintenance burden is unsustainable and is transferring to commercial vendors. Exit options exist (researchers can switch to closed source or seek commercial support), but institutional inertia maintains the permissive open-source norm as a theater of academic virtue."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN) \u2014 The analytical view at civilizational scale risks naturalizing the permissive licensing regime as an inevitable feature of software economics ('code wants to be free,' 'information has zero marginal cost'). This framing treats the current equilibrium as a law of nature rather than as a contingent institutional arrangement sustained by specific power asymmetries and career incentive structures. The engine's false summit detector identifies this: the 'inevitability' framing naturalizes what is actually a contestable choice enforced through social and economic mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "free_rider_tipping_point",
+      "question": "What level of commercial extraction from open-source causes maintainers to collectively switch from permissive to reciprocal licensing (or proprietary models)?",
+      "resolution_mechanism": "Historical analysis of GPL adoption rates vs commercial value extracted from permissive code; survey data on maintainer decisions post-acquisition or platform monetization",
+      "impact": "If tipping point is real and approaching: permissive regime is unstable and will degrade to GPL or proprietary licensing. If maintainers accept extraction indefinitely: regime is stable (though unfair).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "At what extraction threshold do maintainers abandon permissive licensing"
+    },
+    {
+      "id": "corporate_contribution_counterfactual",
+      "question": "Would commercial vendors contribute to open source at current rates if permissive licensing required attribution or reciprocal benefit-sharing?",
+      "resolution_mechanism": "Comparative analysis of GPL project contributions vs MIT/Apache contributions by corporate donors; counterfactual modeling of licensing friction impact on corporate participation",
+      "impact": "If corporations contribute primarily for permissive-license benefits: extraction mechanism is confirmed; if contributions are robust to licensing terms: extraction is secondary to business logic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Corporate open-source participation under stricter licensing terms"
+    },
+    {
+      "id": "derivative_value_capture_asymmetry",
+      "question": "Can downstream open-source projects sustain long-term development under permissive licensing, or does value accumulation in commercial vendors doom them to resource starvation?",
+      "resolution_mechanism": "Longitudinal tracking of derivative project health metrics (commit frequency, contributor diversity, maintenance backlog) vs upstream resource capture; case studies of successful vs failed downstream projects",
+      "impact": "If derivative projects systematically degrade: extractive mechanism is confirmed structurally. If many thrive: permissive licensing supports vibrant ecosystem despite extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Long-term viability of downstream open-source projects"
+    },
+    {
+      "id": "coordination_vs_extraction_primacy",
+      "question": "Is permissive licensing primarily a coordination mechanism (enabling integration, reducing friction) or primarily an extraction mechanism (enabling value capture by commercial vendors)?",
+      "resolution_mechanism": "Counterfactual comparison: measure ecosystem health, innovation rate, and code quality under permissive vs reciprocal (GPL) licensing regimes; analyze whether friction-reduction or value-capture is the binding constraint on ecosystem growth",
+      "impact": "If coordination primacy: classification is Rope (or Rope-dominant Tangled Rope). If extraction primacy: classification is Snare-dominant Tangled Rope. This resolves the core mandatrophy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether permissive licensing is coordination or extraction mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Permissive software licenses (MIT, Apache 2.0, BSD) emerged in the 1980s as a mechanism to reduce licensing friction in software development. They enable users to freely copy, modify, and redistribute code with minimal restrictions\u2014often only requiring attribution. The constraint structure exhibits a fundamental tension between coordination function (enabling rapid integration and innovation) and extraction mechanism (enabling commercial vendors to capture value from unpaid open-source labor). This tension is not inherent to software economics but is produced by specific structural asymmetries: the lack of enforceable reciprocity, the inability of maintainers to claim derivative value, and the concentration of platform power in commercial vendors. The permissive licensing regime has become the dominant model globally, creating a global commons whose value is systematically extracted by organized commercial actors while maintenance burden concentrates on volunteer maintainers and downstream developers. The constraint is neither purely extractive (it does solve real coordination problems) nor purely coordinative (it enables significant asymmetric extraction). The theater ratio (0.35 at present, rising over time) reflects the increasing gap between the stated coordination function ('open source enables rapid innovation') and the structural reality ('permissive licensing enables value capture by commercial vendors from volunteer labor'). The academic software maintenance perspective reveals piton degradation: the open-source norm persists through institutional inertia and virtue signaling rather than through genuine sustainability of the maintenance model.",
+    "key_agents": [
+      "Open Source Maintainers: Trapped victims (powerless/trapped) \u2014 bear unpaid labor burden while gains accrue to commercial users; cannot prevent appropriation",
+      "Downstream Open Source Projects: Constrained victims (moderate/constrained) \u2014 face resource starvation as value accumulates in commercial vendors; exit options are expensive or reputation-damaging",
+      "Commercial Vendors: Institutional beneficiaries (institutional/arbitrage) \u2014 extract value from permissive code without reciprocal obligation; have abundant exit options and no suppression",
+      "Large Platform Operators: Organized extractors (organized/constrained) \u2014 simultaneously benefit from permissive code and gatekeep value through platform lock-in; require active enforcement of veneer of open-source contribution",
+      "Open Source Ecosystem Collective: Organized coordinators (organized/constrained) \u2014 achieve genuine coordination benefits through permissive licensing ecosystem; exhibit rope-like properties when viewed as collective",
+      "Academic Software Researchers: Institutional degraders (institutional/mobile) \u2014 maintain piton-like open-source publication norm through institutional inertia despite unsustainable maintenance burden",
+      "Analytical Observer: Civilizational naturalizer (analytical/analytical) \u2014 risks framing the extraction regime as an inevitable law of software economics rather than as a contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The permissive licensing regime enables significant value extraction\u2014commercial vendors build proprietary services on permissive code without reciprocal obligation\u2014but it is not extreme because the licensing mechanism itself is non-coercive. No vendor is forced to use permissive code; the extraction occurs through incentive structure rather than prohibition. The rising trajectory (0.15 \u2192 0.38 over 30 years) reflects increasing platform concentration: as commercial vendors grow larger and more dependent on open-source code, the asymmetry between their market power and maintainers' bargaining power has increased. Suppression (0.25): Low-moderate. Maintainers are not legally prevented from forking, using reciprocal licensing, or seeking commercial support. However, social norms (celebrating 'pure open source'), network effects (established projects create high switching costs), and institutional factors (academic career incentives for open publication) all suppress alternatives. The suppression is weaker than in snares (where legal or physical barriers dominate) but stronger than in ropes (where all parties experience low friction). Theater ratio (0.35, rising to 0.35 at T=30): Moderate. The functional mechanism is real\u2014permissive licensing does reduce friction and enable integration\u2014but an increasing share of the ecosystem's activity is performative: corporate open-source initiatives that create the appearance of contribution while extracting value, academic open-source software that signals virtue while degrading unsustainably, and the rhetoric of 'open source as inevitable' that naturalizes extraction asymmetries. The theater trajectory shows increasing divergence between stated function ('enabling rapid innovation') and structural reality ('concentrating value in commercial vendors').",
+    "directionality_logic": "Directionality computation follows from structural position. Maintainers (powerless/trapped) derive maximum d \u2248 0.95, corresponding to high f(d) and high experienced extraction. Downstream projects (moderate/constrained) derive d \u2248 0.65-0.75, intermediate extraction. Commercial vendors (institutional/arbitrage) derive d \u2248 0.05-0.15 (beneficiary with exit options), producing negative or near-zero f(d) and subsidized effective extraction (they pay via the formula, not the maintainers). Platform operators (organized/constrained) derive d \u2248 0.40-0.50, reflecting their hybrid position: they benefit from permissive upstream code but are constrained by ecosystem reputation. The analytical observer (analytical/analytical) derives d \u2248 0.70, the canonical fallback for analytical agents, reflecting their abstract position. No directionality overrides are needed\u2014the derivation chain produces the correct structural relationships from beneficiary/victim declarations and exit options.",
+    "perspectival_gap": "The perspectival gap is wide and reveals the constraint as tangled rope. The commercial vendor perceives pure coordination (Rope)\u2014the license removes friction and enables rapid development. The platform operator perceives a complex hybrid (Tangled Rope)\u2014they benefit from upstream permissive code but must maintain the appearance of open-source contribution to preserve ecosystem access and reputation. The open-source maintainer perceives pure extraction (Snare)\u2014they provide unpaid labor and cannot prevent its appropriation. The downstream project perceives mixed coordination and extraction (Tangled Rope)\u2014permissive licensing enables integration but also enables value to flow away from them toward commercial vendors. The ecosystem collective perceives coordination (Rope) because the permissive regime does enable massive integration and innovation. The academic software perspective perceives degradation (Piton)\u2014the norm persists through institutional inertia despite unsustainability. The civilizational analytical observer risks perceiving a natural law (Mountain) but this is a false summit: the regime is a contingent institutional choice, not an inevitable feature of software economics. The perspectival gaps drive the mandatrophy resolution: the constraint is neither simply extractive nor simply coordinative, but both simultaneously, experienced asymmetrically across structural positions.",
+    "mandatrophy_analysis": "MANDATROPHY: Is permissive licensing a coordination mechanism (solving a genuine collective action problem, justifying some extractive overhead as the cost of coordination) or a pure extraction mechanism (enabling value capture under the guise of coordination rhetoric)? RESOLUTION: The constraint is genuinely hybrid\u2014it solves real coordination problems (reducing license friction, enabling rapid assembly) AND enables significant extraction (concentrating value in organized commercial actors). The mandatrophy is resolved by recognizing that BOTH functions are structural, not contextual. Permissive licensing provides genuine coordination benefit that Rope alone cannot explain (reducing transaction costs for integration). It simultaneously enables extraction asymmetry that Rope cannot explain (commercial vendors capture value without reciprocal obligation). The Tangled Rope classification unifies both: the regime is an active-enforcement hybrid where the coordination function (integration, friction reduction) is genuine but the extraction function (value concentration, uncompensated labor) is also genuine. The architectural feature that produces both: the absence of reciprocity requirements. This creates coordination (no attribution requirement simplifies integration) and enables extraction (no obligation to support downstream or share derivative improvements). The theater ratio (0.35) indicates that the 'open source as inevitable' rhetoric has become increasingly performative as the extraction asymmetry has grown visible. The regime persists not because reciprocity is impossible in software (GPL proves it is possible) but because organized commercial actors benefit from permissive licensing and can sustain the norm through market power, institutional inertia, and the strategic deployment of open-source contributions to maintain ecosystem access."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "open_source_sustainability",
+      "software_license_lock_in",
+      "corporate_open_source_performativity"
+    ],
+    "dual_formulation_note": "Permissive licensing is decomposed from the broader 'open source licensing regime' into a specific constraint focused on the coordination-extraction hybrid produced by the absence of reciprocity requirements. Upstream constraint: the institutional choice to privilege integration friction reduction over downstream sustainability. Downstream constraints: the effects on maintainer labor markets, on derivative project sustainability, and on the visibility of corporate value extraction through license terms."
+  },
+  "directionality_overrides": []
+}

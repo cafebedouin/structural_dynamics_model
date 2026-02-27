@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "emotional_cycles_of_change",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Kelley-Connor Cycle of Change",
+    "topic_domain": "psychology/behavioral_science",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "change_management_consultants",
+      "system_vendors"
+    ],
+    "victims": [
+      "employees_undergoing_change",
+      "organizations_adopting_new_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Employees Undergoing Change",
+      "comment": "Employees often feel trapped during organizational changes, experiencing increased workload, uncertainty, and stress. They may lack the power to influence the process or exit the situation without significant personal cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Organizations Adopting New Systems",
+      "comment": "Organizations benefit from adopting new systems but bear the cost of implementation, training, and potential disruption. They are constrained by budget, time, and the need to maintain operations during the transition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Change Management Consultants",
+      "comment": "Change management consultants benefit from the demand for their services during organizational transitions, providing expertise and guidance. They arbitrage their knowledge across multiple organizations, reducing the personal extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "System Vendors",
+      "comment": "System vendors benefit from adoption of their systems; after the initial implementation, their role may become primarily theatrical; providing maintenance with diminishing returns, high theater ratio"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The cycle represents a mix of coordination (new systems can improve efficiency) and extraction (emotional cost to employees). The cycle is actively reinforced by change management strategies that may not fully address the emotional impact on employees."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "individual_variability",
+      "question": "To what extent does individual personality and coping style affect the experience of the change cycle?",
+      "resolution_mechanism": "Longitudinal studies tracking emotional responses to change across different personality types",
+      "impact": "High variability would weaken the predictive power of the model; low variability would strengthen it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of individual differences on emotional response to change."
+    },
+    {
+      "id": "intervention_effectiveness",
+      "question": "How effectively can interventions mitigate the negative emotional stages of the cycle?",
+      "resolution_mechanism": "Controlled trials comparing the emotional trajectories of groups receiving different interventions",
+      "impact": "Highly effective interventions would reduce extractiveness; ineffective interventions would maintain or increase it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The potential for interventions to reduce negative emotional impact."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Kelley-Connor Cycle of Change describes the emotional cost of adopting new systems or habits, progressing through stages of Uninformed Optimism, Informed Pessimism, Valley of Despair, Informed Optimism, and Success/Completion. This constraint highlights the inherent tension between the potential benefits of change and the emotional challenges faced by individuals undergoing it.",
+    "key_agents": [
+      "Employees Undergoing Change: Primary target (powerless/trapped) - experience stress and uncertainty.",
+      "Organizations Adopting New Systems: Secondary target (moderate/constrained) - bear implementation costs and disruption.",
+      "Change Management Consultants: Primary beneficiary (institutional/arbitrage) - profit from assisting organizations with change.",
+      "System Vendors: Beneficiary - profit from adoption of their systems"
+    ],
+    "logic_rationale": "Extractiveness (0.50): Change initiatives extract emotional energy and time from employees, even if they ultimately improve efficiency. Suppression (0.60): Organizations often suppress resistance to change, discouraging open discussion of concerns. Theater Ratio (0.75): The focus is mainly on functional change, with less emphasis on performative aspects. Requires Active Enforcement: the active enforcement comes from internal pressure to adopt new systems and practices.",
+    "perspectival_gap": "Employees experience the change as a snare, where they have limited options and are subject to the process. Organizations see a more balanced picture, where they can at least influence the change process, and consultants see a rope, where they are benefiting from the transitions. The cycle describes a series of emotions that employees 'must' go through. Resistance is futile",
+    "directionality_logic": "Change management consultants and system vendors benefit from the implementation of new systems, with multiple clients to leverage their expertise. The employees are subject to emotional upheaval with limited or no recourse"
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

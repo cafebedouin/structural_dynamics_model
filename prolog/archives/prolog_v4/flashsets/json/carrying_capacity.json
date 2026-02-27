@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "carrying_capacity",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Management of Ecological Carrying Capacity (K)",
+    "topic_domain": "economic/technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "resource_extraction_industries",
+      "short_term_economic_growth"
+    ],
+    "victims": [
+      "long_term_environmental_sustainability",
+      "future_generations",
+      "vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "Future generations bear the long-term consequences of exceeding carrying capacity, with limited ability to influence current practices or escape the resulting environmental degradation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "National Governments",
+      "comment": "Governments are constrained by competing interests: short-term economic gains vs. long-term sustainability. They benefit from economic activity within their borders, but also bear the costs of environmental degradation and resource depletion. They can enact some regulations, but are also subject to lobbying and international pressures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Resource Extraction Industries",
+      "comment": "Industries that extract resources benefit from exceeding carrying capacity in the short term. They can arbitrage regulations by moving to countries with weaker environmental protections. Their primary concern is profit maximization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the management of carrying capacity represents a complex interplay of economic, social, and environmental factors. Exceeding carrying capacity provides short-term benefits for some, but leads to long-term consequences for all. Mitigation requires global cooperation and sustainable practices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "k_measurement_uncertainty",
+      "question": "How accurately can ecological carrying capacity be measured, given complex interactions and feedback loops?",
+      "resolution_mechanism": "Improved modeling techniques, long-term ecological monitoring, and cross-disciplinary research",
+      "impact": "Underestimation of K leads to premature resource depletion. Overestimation leads to ecological collapse.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty in measuring carrying capacity"
+    },
+    {
+      "id": "discount_rate",
+      "question": "How should future environmental damage be discounted relative to present economic benefits?",
+      "resolution_mechanism": "Ethical and economic debates on intergenerational equity, incorporating non-monetary values",
+      "impact": "High discount rates prioritize short-term gains, leading to unsustainable practices. Low discount rates prioritize long-term sustainability, potentially hindering economic growth.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Value of future ecological damage vs present economic benefits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The management of ecological carrying capacity (K) is a critical challenge that involves balancing human needs with the ability of the environment to sustain them. This constraint highlights the tensions between short-term economic growth, long-term environmental sustainability, and intergenerational equity. The exploitation of resources beyond sustainable levels can lead to environmental degradation, resource depletion, and social instability.",
+    "key_agents": [
+      "Resource Extraction Industries: Primary beneficiaries (institutional/arbitrage) - profit from exceeding K in the short term.",
+      "Long-Term Environmental Sustainability: Primary victim (powerless/trapped) - cannot organize or exit and bears the long-term costs.",
+      "National Governments: Moderate position (moderate/constrained) - balance economic development with environmental protection.",
+      "Future Generations: Victims (powerless/trapped) - inherit degraded environment.",
+      "Vulnerable Populations: Victims (powerless/trapped) - disproportionately affected by environmental degradation.",
+      "Analytical Observer: Analytical (analytical/analytical) - attempts to understand the overall system."
+    ],
+    "logic_rationale": "Extractiveness (0.6): The extraction from the environment is significant, as resources are depleted beyond the rate of regeneration. Suppression (0.7): Efforts to implement sustainable practices are often suppressed by short-term economic interests and political pressures. Theater ratio (0.3): There is some effort put into sustainability projects, but these often have limited impact compared to the scale of resource extraction.",
+    "perspectival_gap": "Different actors experience this constraint differently. Resource extraction industries benefit in the short term, while future generations bear the long-term consequences. National governments face pressure to balance economic growth with environmental protection. An analytical observer can see the overall system and the inherent risks of exceeding carrying capacity.",
+    "directionality_logic": "The beneficiaries (resource extraction industries) have the power and ability to arbitrage regulations and prioritize short term economic gains. Victims (future generations, long term sustainability) are often powerless, trapped, and unable to effectively mitigate the harm caused by over extraction.",
+    "mandatrophy_analysis": "The classification prevents mislabeling the management of carrying capacity as simply 'good' or 'bad'. While exceeding K can provide short-term economic benefits, it ultimately leads to unsustainable practices and long-term negative consequences. The 'tangled rope' classification captures the complex interplay of coordination and extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_change",
+      "resource_depletion",
+      "biodiversity_loss"
+    ]
+  },
+  "directionality_overrides": []
+}

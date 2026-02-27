@@ -1,0 +1,131 @@
+{
+  "header": {
+    "constraint_id": "broke_vs_poor_grocery_math",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cognitive Load of Poverty (Grocery Math)",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "retailers_and_food_producers"
+    ],
+    "victims": [
+      "individuals_experiencing_poverty"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Individual Experiencing Poverty",
+      "comment": "Perspective of an individual experiencing poverty: The constant mental calculations and trade-offs necessary to avoid overspending at the grocery store create a significant cognitive burden. The individual is trapped by their financial circumstances, limiting their options for affordable and nutritious food choices. They bear the full burden of the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Local Community Support Organizations",
+      "comment": "Perspective of community support organizations: These organizations attempt to alleviate the cognitive load by providing resources like food banks or budgeting assistance, but they are themselves constrained by funding limitations and can only offer partial solutions. They experience a tangled rope: coordination to provide aid, but constrained exit options and limited resources."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Retailers and Food Producers",
+      "comment": "Perspective of retailers and food producers: They benefit from the consistent consumption driven by necessity, even amidst poverty. While individual purchases may be small due to careful budgeting, the overall demand is stable. They can arbitrage by offering lower-priced options to those with limited budgets, creating profit within the constraint. From their point of view, this appears as a helpful coordination of supply to meet demand. There is also extraction insofar as they capture some of the surplus relative to higher income consumers who don't bother with price comparison."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer: The observer recognizes the complex interplay of economic forces, social policies, and individual choices. They see how the cognitive load of poverty is both a consequence of and a contributor to ongoing inequality. From a global perspective, this is a tangled rope, requiring both coordination and significant redistribution to address."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_cognitive_impact",
+      "question": "What is the long-term impact of chronic 'grocery math' stress on cognitive function and decision-making?",
+      "resolution_mechanism": "Longitudinal studies comparing cognitive performance of individuals experiencing different levels of financial stress.",
+      "impact": "Determines the severity of the snare and informs policies aimed at mitigating cognitive load.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessment of long-term impact of financial stress."
+    },
+    {
+      "id": "effectiveness_of_intervention_strategies",
+      "question": "How effective are different intervention strategies (e.g., SNAP benefits, financial literacy programs) in reducing the cognitive load of poverty?",
+      "resolution_mechanism": "Comparative analysis of outcomes for individuals participating in different intervention programs.",
+      "impact": "Identifies the most promising avenues for policy intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluation of intervention strategy effectiveness."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the cognitive load imposed by poverty, exemplified by \"grocery math\"\u2014the mandatory mental tallying of every item's cost to avoid exceeding available funds at checkout. This constant calculation and trade-off creates a significant cognitive burden, limiting attention available for other areas of life. While retailers may see this as serving a segment of consumers and community organizations try to alleviate the burden, the individual experiencing poverty is trapped by financial circumstances, and the analytical observer sees how this contributes to ongoing inequality.",
+    "key_agents": [
+      "Individuals Experiencing Poverty: Primary victim (powerless/trapped) - bears the burden of constant mental calculation.",
+      "Retailers and Food Producers: Primary beneficiary (institutional/arbitrage) - benefits from stable demand even in poverty.",
+      "Local Community Support Organizations: Moderate/Constrained. Attempt to alleviate but are themselves constrained.",
+      "Analytical Observer: Analytical/Analytical - Understands the complexity and interplay."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The cognitive effort exerted by the individual benefits retailers and food producers by ensuring consistent consumption. It also extracts mental resources that could be used for other beneficial purposes, like job searching or education. Suppression (0.70): High. Limited financial resources suppress access to affordable and nutritious food choices, making 'grocery math' a necessary survival skill. Lack of financial literacy, access to information, and time also contribute to this suppression. Theater Ratio (0.20): Low. There is little performative content.",
+    "perspectival_gap": "The individual sees a snare, trapped in a cycle of poverty. Retailers, from a distance, may see it as a rope\u2014a market segment they serve. Support organizations attempt to mediate but are constrained. The analytical observer sees a tangled rope, recognizing the need for both coordination (e.g. food banks) and redistribution (e.g. policy changes).",
+    "directionality_logic": "The individual experiencing poverty (powerless/trapped) has high directionality as the primary target. Retailers (institutional/arbitrage) have low directionality as they benefit. Community Organizations are moderate/constrained and have a directionality closer to neutral."
+  },
+  "network": {},
+  "directionality_overrides": []
+}

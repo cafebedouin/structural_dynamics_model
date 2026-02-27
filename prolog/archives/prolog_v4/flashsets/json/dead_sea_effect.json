@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "dead_sea_effect",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Dead Sea Effect (Talent Evaporation)",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "remaining_organization",
+      "competing_organizations"
+    ],
+    "victims": [
+      "departing_talent",
+      "organization_productivity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Low-Mobility Employee",
+      "comment": "Low-mobility employees experience a Snare because their limited exit options force them to remain in a deteriorating work environment. They are essentially trapped, bearing the full cost of the organization's decline."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Competing Organization",
+      "comment": "Competing organizations that attract talent experience the effect as a Rope, benefiting from the influx of skilled workers and improved competitiveness. They actively arbitrage talent from other organizations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "High-Talent Employee",
+      "comment": "High-talent employees with mobility experience a Tangled Rope. They benefit from their ability to exit a declining organization, but they also bear costs associated with job searching, relocation, and potential career disruption. There is both extraction (cost of change) and coordination (better opportunity)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Macro View)",
+      "comment": "An analytical observer examining the situation from a generational and global perspective sees a Tangled Rope, as the phenomenon represents a mixed bag of coordination and extraction. Talent is allocated across the market (coordination) but individual organizations face costs (extraction)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mobility_threshold",
+      "question": "What level of mobility is necessary to escape the 'Dead Sea' and experience the upside of talent allocation?",
+      "resolution_mechanism": "Correlation of job mobility with career satisfaction and salary growth.",
+      "impact": "High threshold: More employees experience the effect as a Snare. Low threshold: More employees experience the effect as a Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mobility threshold for escaping the Dead Sea"
+    },
+    {
+      "id": "organization_adaptation",
+      "question": "How effectively can organizations adapt to the loss of talent and prevent a downward spiral?",
+      "resolution_mechanism": "Case studies of organizations that have successfully navigated the Dead Sea Effect.",
+      "impact": "High adaptation: the constraint may resolve into a transient scaffold. Low adaptation: the extraction persists or worsens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Organizational adaptation to talent loss."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Dead Sea Effect occurs in organizations when highly talented and mobile individuals \"evaporate\" (leave) because they have the best exit options, while less talented or mobile individuals stay behind. This leads to a decline in overall organizational performance and creates a negative feedback loop that accelerates talent loss. The beneficiaries are competing organizations that attract this talent. The main victim is the organization itself, followed by the low-mobility employees that are trapped.",
+    "key_agents": [
+      "Departing Talent: Mobile employee who leaves the organization (moderate/mobile)",
+      "Remaining Organization: The organization experiencing talent loss (institutional/constrained)",
+      "Low-Mobility Employee: Employee unable to easily leave the organization (powerless/trapped)",
+      "Competing Organization: Organization that attracts talent from the affected one (institutional/arbitrage)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.55) because the effect significantly degrades the affected organization over time. Suppression is moderate (0.40) because while highly talented employees generally have better exit options, various factors (e.g., non-compete agreements, personal circumstances) can limit their mobility. The theater ratio is low (0.20) because the effect is more about real talent loss than performative metrics.",
+    "perspectival_gap": "High-talent employees with mobility see a Tangled Rope (better opportunity elsewhere, but costs to leaving). Competing firms and the organization itself both gain and lose during the process (depending on whether they're the origin or destination of talent). The low mobility employee sees a snare, as they're essentially stuck within an increasingly unproductive organization.",
+    "directionality_logic": "The departing talent bears the cost of job change but also secures better opportunities (mobile). The organization benefits initially from any work contributed by the employee prior to departure, then bears the cost of their loss (constrained). The trapped employee sees only the costs of a declining organization. The competing organization receives a disproportionate share of the benefits (arbitrage)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

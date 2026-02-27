@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "meta_nda",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "meta_nda"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Meta's Non-Disclosure Agreements for Undercover Testers",
+    "topic_domain": "economic/platform_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "meta_corporation"
+    ],
+    "victims": [
+      "undercover_testers",
+      "public_epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Undercover Tester",
+      "comment": "PERSPECTIVE 1: UNDERCOVER TESTER (SNARE) \u2014 Contractually bound to silence about platform flaws, manipulative testing protocols, and safety gaps discovered during simulated attack scenarios. Cannot disclose to researchers, journalists, regulators, or the public without legal liability. Trapped by employment dependence and legal contract; no viable exit option. Bears full cost of enforced silence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Public Epistemic Commons",
+      "comment": "PERSPECTIVE 2: PUBLIC EPISTEMIC COMMONS (SNARE) \u2014 Cannot access critical information about platform safety vulnerabilities, testing methodologies, or failure modes discovered by Meta's internal testers. Information asymmetry is structurally enforced. No organized constituency; no exit option. Bears full cost of suppressed knowledge."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Meta Corporation",
+      "comment": "PERSPECTIVE 3: META CORPORATION (ROPE) \u2014 Experiences the NDA regime as coordination: protecting proprietary testing methodologies, preventing competitive disclosure, managing reputational risk during platform iteration. Has maximum exit options (can modify, terminate, or renegotiate agreements). Extraction runs toward this agent \u2014 they are the beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Bodies and Legislators",
+      "comment": "PERSPECTIVE 4: REGULATORY BODIES AND LEGISLATORS (TANGLED ROPE) \u2014 Have organizational power to demand disclosure and subpoena information, but constrained by: (1) jurisdiction limits on Meta's global operations, (2) technical expertise gaps in assessing platform vulnerabilities, (3) slow legislative/regulatory cycles vs. rapid platform iteration. Experience both extraction (suppressed evidence during investigations) and coordination function (NDAs do prevent competitive espionage and ensure quality of internal testing)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Corporate Legal NDA Framework",
+      "comment": "PERSPECTIVE 5: CORPORATE LEGAL NDA FRAMEWORK (PITON) \u2014 The broader system of NDAs in corporate environments is largely performative: it prevents public disclosure but does not prevent regulators from subpoenaing information, does not prevent internal whistleblowers, and increasingly does not prevent researchers from reverse-engineering platform behavior. The ritual of confidentiality persists through institutional inertia, but its actual functional capacity to suppress information has degraded. Theater ratio reflects that the legal mechanism maintains a performative barrier while alternative disclosure pathways (regulatory subpoena, research papers, media investigation) increasingly bypass it."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Emerging Disclosure Standards and Regulatory Requirements",
+      "comment": "PERSPECTIVE 6: EMERGING DISCLOSURE STANDARDS (SCAFFOLD) \u2014 Digital Services Act (EU), upcoming U.S. platform regulation, and investor disclosure requirements are creating structural mechanisms that will force platform safety information to be disclosed to regulators, researchers, and potentially the public. These regulatory frameworks have a genuine sunset trajectory: as they mature, Meta's unilateral NDA regime loses enforceability. Low effective extraction because the sunset is already embedded in regulatory timelines (5-10 years for full DSA/U.S. compliance)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "nda_legal_enforceability",
+      "question": "Do Meta's NDAs with testers remain legally enforceable against regulatory subpoena, whistleblower disclosure, or government investigation?",
+      "resolution_mechanism": "Precedent from regulatory investigations (FTC, Senate Commerce Committee, EU regulators); litigation outcomes when testers or regulators challenge NDA scope",
+      "impact": "If enforceable: snare classification confirmed across all non-regulatory perspectives. If unenforceable against subpoena: extraction shifts from suppression to reputational damage management \u2014 snare becomes tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Legal enforceability of NDAs against regulatory disclosure"
+    },
+    {
+      "id": "tester_substitute_discovery",
+      "question": "Can external researchers, journalists, or activists discover the same platform vulnerabilities through independent testing without being contractually bound to silence?",
+      "resolution_mechanism": "Comparative analysis of independently discovered platform flaws vs. those disclosed by insiders; timeline comparison of public discovery vs. internal testing discovery",
+      "impact": "If external discovery is rapid and complete: NDA extraction mechanism is degraded (piton). If external discovery is slow/incomplete: NDA suppression is more effective (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of external discovery vs. internal testing"
+    },
+    {
+      "id": "regulatory_override_trajectory",
+      "question": "Will emerging regulatory frameworks (DSA, proposed U.S. platform legislation) legally override corporate NDAs for safety-critical information disclosure?",
+      "resolution_mechanism": "Legislative text analysis; EU implementation guidance on DSA transparency requirements; U.S. Congressional testimony on regulatory authority over platform disclosures",
+      "impact": "If override occurs: scaffold sunset is real \u2014 NDAs become unenforceable within 5-10 years. If no override: extraction mechanism persists indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regulatory override of corporate NDAs in future legislation"
+    },
+    {
+      "id": "tester_whistleblower_rates",
+      "question": "What fraction of Meta's undercover testers ultimately disclose information to regulators, media, or researchers despite NDAs?",
+      "resolution_mechanism": "Tracking of documented whistleblower disclosures; analysis of investigation reports citing internal tester testimony; surveys of former testers",
+      "impact": "If whistleblower rate exceeds 20%: suppression is degraded (effective extraction reduces). If under 5%: suppression is highly effective (snare confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Actual disclosure rate among undercover testers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Meta employs undercover testers to evaluate platform safety in simulated scenarios (simulated terrorist attacks, simulated school shootings) designed to identify vulnerabilities in content moderation, recommendation systems, and coordinated inauthentic behavior detection. These testers sign Non-Disclosure Agreements that prevent them from disclosing information about platform flaws, testing methodologies, or manipulative tactics discovered during testing. The NDA regime functions as a suppression mechanism: it prevents testers from warning researchers, policymakers, or the public about safety vulnerabilities or exploitable gaps. This constraint exhibits core snare characteristics: high suppression (legal liability for disclosure), high extractiveness (testers bear reputational and career costs of silence while Meta captures reputation-management benefits), and a power asymmetry (corporate legal enforcement vs. individual contract liability). However, the constraint is degrading: regulatory investigations increasingly override NDAs, external researchers discover similar vulnerabilities through independent testing, and emerging legislation (Digital Services Act, proposed U.S. platform transparency rules) will likely make safety-critical disclosures legally mandatory, establishing a scaffold sunset trajectory. The theater_ratio reflects that the NDA mechanism is partly performative \u2014 it prevents casual disclosure but does not prevent determined regulators, journalists, or whistleblowers from obtaining the same information.",
+    "key_agents": [
+      "Undercover Testers: Primary victims (powerless/trapped) \u2014 contractually bound to silence; bear legal and career liability for disclosure",
+      "Meta Corporation: Primary beneficiary (institutional/arbitrage) \u2014 captures information asymmetry advantage; controls disclosure timing and framing",
+      "Public Epistemic Commons: Secondary victim (powerless/trapped) \u2014 cannot access safety-critical information about platform vulnerabilities",
+      "Regulatory Bodies (FTC, EU regulators, legislators): Organized stakeholders (organized/constrained) \u2014 have authority to demand disclosure but face jurisdictional and technical barriers",
+      "External Researchers and Journalists: Organized agents (organized/mobile) \u2014 can independently discover vulnerabilities; bypass NDA regime through external research",
+      "Emerging Regulatory Frameworks (DSA, proposed U.S. legislation): Structural sunset mechanism (organized/mobile) \u2014 building requirements for mandatory safety disclosure that will override NDAs"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Meta captures significant benefits from the NDA regime: suppressed knowledge of platform flaws prevents competitive reverse-engineering, delays public criticism during vulnerability remediation, and maintains negotiating advantage with regulators who lack independent verification of safety gaps. However, extractiveness is not extreme (would be 0.75+) because: (1) regulators can subpoena information despite NDAs, (2) external researchers independently discover vulnerabilities, (3) whistleblower disclosures occur despite legal liability, (4) the regime is increasingly recognized as unjust, creating reputational costs to Meta. Suppression (0.72): High. Legal enforcement mechanism is strong (contracts are binding, violations carry legal liability). Alternatives for testers are limited (cannot disclose without liability; cannot maintain employment and criticize Meta publicly). However, suppression is not total (0.85+) because regulatory subpoena power and determined whistleblowers can overcome it. Theater ratio (0.45): Moderate-low. The NDA mechanism functions substantively (prevents casual disclosure, manages information flow timing) but increasingly performs its own limitation (external discovery paths exist, regulatory override is coming). The theater has been rising over the interval as regulatory pressure increases and the gap between public knowledge (from regulatory investigations) and NDA-bound knowledge (from testers) becomes visible.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position relative to the extraction flow. Undercover testers: d \u2248 0.95 (trapped victim with no exit, full target of extraction). Meta: d \u2248 0.05 (institutional beneficiary with arbitrage options, full beneficiary). Public epistemic commons: d \u2248 0.98 (powerless, unable to organize, bears cost of suppression, no exit). Regulators: d \u2248 0.60 (organized agents with subpoena power but constrained by jurisdictional limits and technical expertise gaps \u2014 mixed experience of extraction and coordination). External researchers: d \u2248 0.30 (can bypass NDA through independent research, so experience reduced extraction; benefit from Meta's public platform while avoiding NDA liability). The sigmoid f(d) transforms these structural positions into experienced extractiveness chi. High d values (victims) produce high f(d) \u2248 1.4, amplifying experienced extraction. Low d values (beneficiaries) produce f(d) \u2248 -0.12, converting chi negative (net benefit to agent). Meta's global scope \u03c3(S)=1.2 amplifies their effective extraction chi = 0.58 \u00d7 f(d=0.05) \u00d7 1.2 \u2248 -0.08 (net benefit); testers experience \u03c7 = 0.58 \u00d7 f(d=0.95) \u00d7 1.2 \u2248 0.98 (high extraction).",
+    "perspectival_gap": "The constraint exhibits a dramatic perspectival gap between Meta (who sees coordination and reputation management) and testers (who see pure extraction and legal liability). Meta's rope classification reflects their structural position: NDAs solve a real coordination problem (preventing competitive espionage, ensuring testing rigor). Testers' snare classification reflects theirs: they are trapped by legal liability with no exit and no benefit. Regulators see tangled_rope because they have some power (subpoena authority) but constrained exit (jurisdictional limits, expertise gaps). External researchers see a mostly-degraded constraint (piton) because they can bypass NDAs through independent testing, making the legal mechanism increasingly theatrical. The analytical observer at the regulatory/generational level sees an emerging scaffold because DSA and U.S. legislation will make the NDA unenforceable for safety-critical information within 5-10 years. This perspectival range (snare to rope to tangled_rope to piton to scaffold) demonstrates how the same structural mechanism appears differently depending on the observer's power, exit options, and time horizon.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids the mandatrophy (false labeling of snare as rope or vice versa) by recognizing that Meta genuinely benefits from NDA-enforced coordination (preventing competitive espionage, managing disclosure timing) while simultaneously extracting from testers who have no viable exit. The snare classification is correct for the tester perspective because their power is powerless and exit is trapped \u2014 they experience pure extraction with coercion. The rope classification is correct for Meta's perspective because they genuinely coordinate testing rigor and prevent information leakage that would harm their competitive position. The tangled_rope classification for regulators is correct because they have both coordination function (investigating platform safety) and extraction (suppressed evidence during investigations). The mandatrophy is resolved by recognizing that 'coordination' and 'extraction' are not properties of the constraint itself but properties of the structural relationship between the constraint and the observer. Meta coordinates and extracts simultaneously from different perspectives. The engine's perspectival approach correctly models this: no single type is 'the true' classification; rather, the presheaf of perspectives reveals the full structural content."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "facebook_content_moderation_opacity",
+      "platform_safety_disclosure_asymmetry"
+    ],
+    "dual_formulation_note": "Meta's NDA regime is downstream of broader platform governance and information asymmetry dynamics. It represents a specific institutional mechanism for suppressing safety information that is part of a larger constraint family involving platform opacity, regulatory capture, and epistemic asymmetry."
+  },
+  "directionality_overrides": []
+}

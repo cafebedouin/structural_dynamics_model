@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "eu_renewable_energy_mandate",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Renewable Energy Directive and Support Schemes",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "renewable_energy_companies",
+      "eu_bureaucracy"
+    ],
+    "victims": [
+      "fossil_fuel_industry",
+      "energy_intensive_industries",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Energy Intensive Industries Perspective",
+      "comment": "Energy intensive industries face higher energy costs due to the mandate, limiting their competitiveness and threatening jobs. They are often trapped due to the high capital costs of relocating or adapting production."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Renewable Energy Companies Perspective",
+      "comment": "Renewable energy companies benefit from guaranteed prices and market access, allowing them to expand rapidly and attract investment. They can arbitrage different national support schemes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer Perspective",
+      "comment": "An analytical observer sees the mandate as a complex system of incentives and regulations with both positive effects (reduced emissions, technological innovation) and negative effects (increased costs, market distortions)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "EU Bureaucracy Perspective",
+      "comment": "EU bureaucracy benefits from increased power and control over energy policy, but faces challenges in coordinating national policies and addressing unintended consequences. Their exit is constrained by political commitments."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Taxpayers Perspective",
+      "comment": "Taxpayers bear the costs of subsidies and higher energy prices. Their ability to exit is constrained by national policies. Some taxpayers may be locked in as voters."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "carbon_leakage_extent",
+      "question": "To what extent does the policy lead to carbon leakage (relocation of energy-intensive industries to countries with less stringent regulations)?",
+      "resolution_mechanism": "Empirical studies analyzing industry relocation patterns and trade flows.",
+      "impact": "High carbon leakage would undermine the environmental benefits of the policy and increase its economic costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifies the degree to which the policy causes carbon leakage."
+    },
+    {
+      "id": "technological_lock_in",
+      "question": "Does the policy create a technological lock-in by favoring specific renewable energy technologies over others?",
+      "resolution_mechanism": "Analysis of innovation patterns and investment flows.",
+      "impact": "Technological lock-in would hinder the development of more efficient and cost-effective renewable energy technologies in the future.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Determines whether the policy favors specific renewable energy technologies over others."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The EU Renewable Energy Directive and associated national support schemes represent a complex effort to transition towards renewable energy sources. This constraint involves multiple stakeholders with differing perspectives and experiences. The policy aims to reduce carbon emissions and promote technological innovation in the renewable energy sector, but also leads to increased energy costs and market distortions.",
+    "key_agents": [
+      "Renewable Energy Companies: Primary beneficiary (institutional/arbitrage) - benefits from subsidies and guaranteed market access.",
+      "Fossil Fuel Industry: Primary victim (powerful/constrained) - faces declining market share and increased competition.",
+      "Energy Intensive Industries: Secondary victim (powerless/trapped) - face higher energy costs and reduced competitiveness.",
+      "Taxpayers: Secondary victim (moderate/constrained) - bear the cost of subsidies and higher energy prices.",
+      "EU Bureaucracy: Enforcer and Beneficiary (institutional/constrained) - gains control over energy policy but faces coordination challenges."
+    ],
+    "logic_rationale": "The extractiveness is relatively high (0.55) due to the significant costs imposed on fossil fuel industries, energy-intensive industries, and taxpayers. Suppression is moderate (0.45) as the policy restricts the development and use of fossil fuels and favors renewable energy sources. The theater ratio is relatively low (0.30) as the policy has a substantial impact on energy production and consumption, but there is some performative aspect in terms of demonstrating commitment to climate goals.",
+    "perspectival_gap": "The perspectives differ significantly depending on the stakeholders involved. Renewable energy companies see the policy as a positive driver of growth and innovation, while energy-intensive industries and taxpayers see it as a burden. The EU bureaucracy sees it as a necessary step towards achieving climate goals, while acknowledging the challenges of implementation and coordination.",
+    "directionality_logic": "The directionality values reflect the structural relationships between the stakeholders and the policy. Renewable energy companies benefit from the policy, resulting in a low directionality value. Fossil fuel industries, energy-intensive industries, and taxpayers bear the costs of the policy, resulting in high directionality values. The EU bureaucracy has a more complex relationship, benefiting from increased control but facing challenges in implementation, resulting in a moderate directionality value.",
+    "mandatrophy_analysis": "The tangled rope classification reflects the complex mix of coordination (incentivizing renewable energy production) and extraction (imposing costs on various actors). It prevents mislabeling the policy as pure extraction by acknowledging the genuine benefits of reduced emissions and technological innovation. It also prevents mislabeling it as pure coordination by recognizing the significant costs and market distortions involved."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "national_grid_infrastructure",
+      "carbon_pricing_mechanisms"
+    ]
+  },
+  "directionality_overrides": []
+}

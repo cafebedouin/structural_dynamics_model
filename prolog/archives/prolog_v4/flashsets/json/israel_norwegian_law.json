@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "israel_norwegian_law",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Norwegian Law (Amendment to Article 42c)",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coalition_parties",
+      "sitting_ministers"
+    ],
+    "victims": [
+      "opposition_parties",
+      "smaller_parties",
+      "public_trust"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Opposition Parties",
+      "comment": "Opposition parties have limited ability to influence the law's application and are negatively impacted by the increased power of the ruling coalition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Smaller Coalition Parties",
+      "comment": "Smaller parties within the coalition may benefit from increased representation but are also constrained by the dominant power of larger parties."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Coalition Parties",
+      "comment": "Coalition parties benefit from the law by solidifying their power and control over the government."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Public",
+      "comment": "The public may perceive the law as a cynical power grab, eroding trust in the political system, while also potentially leading to more effective governance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Sitting Ministers",
+      "comment": "Sitting ministers benefit from focusing on their executive duties, but the law is also used as a tool for political maneuvering which is less effective over the long-term."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "public_trust_erosion",
+      "question": "To what extent does the law erode public trust in the political system?",
+      "resolution_mechanism": "Polling data and surveys measuring public opinion of government institutions.",
+      "impact": "High erosion could lead to political instability and decreased civic engagement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of the law on public trust in the political system."
+    },
+    {
+      "id": "governance_effectiveness",
+      "question": "Does the law lead to more effective governance?",
+      "resolution_mechanism": "Analysis of policy outcomes and government performance metrics.",
+      "impact": "Increased effectiveness could justify the law despite concerns about power concentration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of the law on the effectiveness of governance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Norwegian Law in Israel allows ministers to resign from the Knesset to focus on executive duties, with their seats filled by the next person on their party's list. This mechanism concentrates power within the ruling coalition and affects different political actors differently. While proponents argue it improves governance by allowing ministers to dedicate their full attention to their portfolios, critics contend it undermines the separation of powers and can be used for political maneuvering.",
+    "key_agents": [
+      "Coalition Parties: Primary beneficiary (institutional/arbitrage) - benefit from increased control and stability.",
+      "Opposition Parties: Primary target (powerless/trapped) - negatively impacted by the strengthened ruling coalition.",
+      "Smaller Parties: Secondary target (moderate/constrained) - face challenges to their influence within the coalition.",
+      "Sitting Ministers: Beneficiary, but at a cost (powerful/constrained)",
+      "Public Trust: Affected party (analytical/analytical) - public opinion and trust in the political process"
+    ],
+    "logic_rationale": "Extractiveness (0.55): The law extracts power and influence from opposition parties and smaller parties, concentrating it within the ruling coalition. Suppression (0.40): The law limits the ability of opposition parties to effectively challenge the government. Theater Ratio (0.75): The law is presented as a means to improve governance, but it also serves political purposes. The increased theater ratio indicates a performative element.",
+    "perspectival_gap": "The opposition parties view the law as a snare, trapping them in a position of weakness. Smaller coalition parties see it as a tangled rope, offering some benefits but also imposing constraints. The coalition parties perceive it as a rope, facilitating their governance efforts. The public sees a piton, with potential positive or negative impact.",
+    "directionality_logic": "Beneficiaries are the coalition parties, as this legislation strengthens their grip on power. Victims are the opposition parties who find their ability to influence governance further reduced. The directionality aligns with the increase in the ruling coalition's power at the expense of those outside it.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by understanding the perspectives. While the coalition may claim it is a rope to improve governance, opposition parties see it as a snare. The reality is a tangled rope where some benefit at the expense of others, with the potential for the system to devolve into an empty piton."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

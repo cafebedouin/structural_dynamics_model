@@ -2,64 +2,67 @@
   "header": {
     "constraint_id": "civilizational_lifecycle_solara",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "solara"
   },
   "base_properties": {
-    "extractiveness": 0.72,
-    "suppression": 0.65,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "The Lifecycle of Solaran Civilization",
     "topic_domain": "social/political",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "imperial_elite",
-      "warrior_caste"
+      "administrative_elite",
+      "resource_concentrators"
     ],
     "victims": [
-      "early_peasant_caste",
-      "subjugated_species",
-      "late_empire_citizenry"
+      "peripheral_populations",
+      "future_generations",
+      "ecological_commons"
     ],
-    "mandatrophy_resolved": true
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Peripheral Population",
+      "comment": "PERSPECTIVE 1: PERIPHERAL POPULATIONS (SNARE) \u2014 Subsistence populations bear extraction costs through labor obligations, resource restrictions, and ecological degradation without meaningful political voice or exit options. Trapped within territorial boundaries and dependent on central authority for infrastructure access. Maximum experienced extraction with no visible coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Subjugated Species",
-      "comment": "PERSPECTIVE 1: SUBJUGATED SPECIES (SNARE) — For a conquered world or the early peasant caste, the Solaran system is pure coercive extraction. They are trapped, with resources and labor systematically removed to benefit the imperial core. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.92."
+      "label": "The Regional Trading Communities",
+      "comment": "PERSPECTIVE 2: REGIONAL TRADING COMMUNITIES (TANGLED ROPE) \u2014 Benefit from centralized infrastructure (roads, security, standardized weights/measures) that enables commerce, but also subject to taxation, tariffs, and quota systems. Have limited exit options due to infrastructure dependence and social ties, yet possess some negotiating capacity through collective action and trade network alternatives."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Unifying Founder (Solem)",
-      "comment": "PERSPECTIVE 2: THE FOUNDER (ROPE) — From the perspective of the unifier Solem, the imperial structure is a pure coordination mechanism to end planetary wars, enable interstellar expansion, and ensure stability. The costs are seen as necessary investments for collective benefit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. A net subsidy."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Imperial Administrator",
-      "comment": "PERSPECTIVE 3: IMPERIAL ADMINISTRATOR (TANGLED ROPE) — A high-level official during the empire's zenith perceives both the genuine coordination function (managing a galactic empire) and the necessary, asymmetric extraction (taxes, conscription) required to maintain it. d≈0.48, f(d)≈0.60, σ=1.2 → χ≈0.52."
+      "spatial_scope": "national",
+      "label": "The Administrative Elite",
+      "comment": "PERSPECTIVE 3: ADMINISTRATIVE ELITE (ROPE) \u2014 Primary beneficiary experiencing the lifecycle constraint as a coordination mechanism. Central bureaucracy solves collective action problems: standardizes law, organizes defense, maintains hydraulic infrastructure. Has high exit capacity (can relocate, access alternative networks, reposition politically). Net beneficiary experiencing effective negative extraction."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Constitutional Reformer",
-      "comment": "PERSPECTIVE 4: CONSTITUTIONAL REFORMER (SCAFFOLD) — The agents who abolished the original caste system viewed that rigid hierarchy as a temporary scaffold. Their constitution acts as a sunset clause, intended to transition the civilization to a more equitable state. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.54. The classification is scaffold due to the sunset clause, despite high chi."
+      "spatial_scope": "continental",
+      "label": "The Reform Movements",
+      "comment": "PERSPECTIVE 4: REFORM MOVEMENTS (SCAFFOLD) \u2014 Organized coalitions (merchant guilds, religious orders, intellectual networks) perceive the lifecycle's peak-phase extraction as temporary, advocating for institutional reforms, resource redistribution, and governance restructuring. See a sunset pathway through constitutional limitation, bureaucratic rotation, and decentralization. Low effective extraction because these agents maintain exit options (exit via network relocation, institutional reconfiguration) and have agency in reform trajectory."
     },
     {
       "classification_type": "piton",
@@ -67,8 +70,8 @@
       "time_horizon": "civilizational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Late-Empire Bureaucrat",
-      "comment": "PERSPECTIVE 5: LATE-EMPIRE BUREAUCRAT (PITON) — In the civilization's decline, a bureaucrat sees the grand rituals of the sacred monarchy and state functions as largely performative. The original function has atrophied, but the theater persists due to institutional inertia. theater_ratio=0.75 satisfies the piton gate (≥0.70)."
+      "label": "The Legacy Institutional Framework",
+      "comment": "PERSPECTIVE 5: LEGACY INSTITUTIONAL FRAMEWORK (PITON) \u2014 Older forms of social organization (kinship networks, local autonomy, hereditary authority) persist through institutional inertia despite functional atrophy in an integrated civilization. Theater ratio reflects performative maintenance of traditional authority forms that no longer govern resource allocation effectively. High theater, low functional coordination."
     },
     {
       "classification_type": "mountain",
@@ -76,82 +79,114 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Galactic Historian",
-      "comment": "PERSPECTIVE 6: GALACTIC HISTORIAN (MOUNTAIN) — An external, long-term observer may view the entire lifecycle as an inevitable, quasi-natural law of civilizational dynamics. From this distance, the rise and fall appears as an unchangeable pattern, a mountain of social physics. The engine will flag this as a false summit."
+      "label": "The Analytical Observer (Natural Lifecycle View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LIFECYCLE VIEW (MOUNTAIN) \u2014 From a long-scale perspective, all civilizations follow universal patterns: growth, peak, decline, collapse. The Solaran lifecycle appears as an immutable law of complex societies \u2014 extractiveness and suppression are inherent to scale, not contingent institutional choices. However, this naturalization risks missing the structural contingencies (administrative design choices, resource distribution policies, technological alternatives) that shape actual historical trajectories."
     }
   ],
   "omegas": [
     {
-      "id": "collapse_driver",
-      "question": "Was the primary driver of Solaran decline internal decay (e.g., elite overproduction, institutional sclerosis) or external pressure (e.g., insurmountable threats, resource depletion)?",
-      "resolution_mechanism": "Analysis of late-empire records, focusing on resource allocation, military deployments, and internal political stability metrics.",
-      "impact": "Internal decay points to the system being a Snare that consumed itself. External pressure suggests the system was a Rope that was simply overcome by a Mountain of external reality.",
+      "id": "sustainability_threshold",
+      "question": "What resource extraction rate and environmental degradation threshold determines the transition from growth to decline in the Solaran lifecycle?",
+      "resolution_mechanism": "Paleoclimatic reconstruction of soil depletion, forest cover change, water table decline; archaeological evidence of settlement abandonment patterns; demographic collapse timing relative to environmental proxy records",
+      "impact": "If threshold is crossed early (narrow margin): lifecycle is tightly constrained by ecology, extraction cannot proceed beyond ~50 years. If threshold is remote (~150+ years): extraction can accumulate substantially, enabling longer peak-phase asymmetry and larger eventual collapse.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing between internal vs. external drivers of civilizational collapse."
+      "description": "Environmental sustainability threshold for civilizational decline"
     },
     {
-      "id": "constitutional_effectiveness",
-      "question": "Did the constitutional reforms genuinely dismantle the extractive caste system or merely provide a new theatrical justification for it?",
-      "resolution_mechanism": "Comparative analysis of wealth and power distribution pre- and post-constitution.",
-      "impact": "If effective, the Scaffold perspective is validated. If ineffective, the reform was merely a shift in the Piton's theatrical script, and the underlying Snare remained.",
-      "confidence": "high",
+      "id": "elite_coordination_capacity",
+      "question": "What institutional innovations (bureaucratic record-keeping, standardized law, rotation systems) sufficiently distribute elite power to prevent predatory extraction and enable sustainable equilibrium?",
+      "resolution_mechanism": "Comparative analysis of institutional features in civilizations with extended stable phases vs. those with rapid decline; correlation between bureaucratic formalization and extraction rate stability; examination of succession mechanisms and power concentration patterns",
+      "impact": "If innovations are sufficient: some civilizations achieve low-extraction rope states and avoid collapse. If innovations consistently fail: all complex societies eventually degrade to high-extraction snare states, making collapse universal.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Assessing the real-world impact of the constitutional reforms on social stratification."
+      "description": "Whether elite coordination systems can prevent extraction-driven decline"
+    },
+    {
+      "id": "legitimacy_decay_timeline",
+      "question": "How rapidly does perceived legitimacy of central authority erode when peripheral populations experience extraction without visible coordination benefits?",
+      "resolution_mechanism": "Analysis of oral history, administrative records, and archaeological evidence of resistance patterns; correlation between taxation intensity and rebellion frequency; timing of institutional reform proposals relative to extraction rate changes",
+      "impact": "If decay is rapid (~20-30 years of visible extraction produces major resistance): early reform becomes necessary, constraining elite extraction. If decay is slow (~60+ years): extraction can accumulate invisibly, leading to sudden catastrophic institutional failure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of legitimacy erosion under visible extraction"
+    },
+    {
+      "id": "collapse_inevitability",
+      "question": "Is civilizational collapse driven by structural constraints (ecological, administrative) or by contingent choices (leadership, institutional design)?",
+      "resolution_mechanism": "Identification of causal bottlenecks in collapse narratives; comparison of civilizations with similar structural constraints but different outcomes; analysis of counterfactual reform scenarios; examination of whether early institutional interventions could alter trajectory",
+      "impact": "If structural: lifecycle is mountain-like, collapse is inevitable regardless of elite choices. If contingent: lifecycle is snare/tangled_rope, collapse is a result of specific institutional failures and could be prevented through reform.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether collapse is structurally inevitable or contingently chosen"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 500,
-      "value": 0.6
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1000,
-      "value": 0.72
-    },
-    {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 500,
-      "value": 0.5
+      "time_point": 50,
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1000,
-      "value": 0.75
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
     }
   ],
   "interval": {
     "start": 0,
-    "end": 1000
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "This constraint models the emergent 'iron law' governing the complete lifecycle of the Solaran civilization, from unification and expansion to zenith and eventual decline. The constraint is not a single policy but the entire socio-political operating system, including its path dependencies, cultural norms, and structural incentives. This story serves as a diagnostic exemplar, demonstrating how a single complex system with fixed base properties can be classified as all six constraint types depending on the observer's structural position and temporal location within the lifecycle.",
+    "narrative_context": "The Solaran civilization exhibits a complete lifecycle arc spanning approximately one century from integration to peak-phase extraction to incipient decline. The constraint models how institutional coordination mechanisms (bureaucratic standardization, centralized infrastructure, legal frameworks) that enable growth in early phases gradually transform into extraction mechanisms in peak phases as administrative elites concentrate resources and peripheral populations bear costs without visible coordination benefits. Theater ratio increases from 0.35 to 0.58 as traditional authority forms (kinship networks, local autonomy) persist performatively while actual resource allocation is controlled by bureaucratic hierarchy. Extractiveness increases from 0.18 to 0.38 as the initial coordination surplus declines and administrative overhead accumulates. The constraint demonstrates how the same institutional apparatus \u2014 central administration \u2014 functions as rope (coordination) from the beneficiary's perspective, tangled_rope (mixed benefit and cost) from moderate populations, and snare (pure extraction) from powerless peripheral groups. The perspectival gap is maximal: the elite see their own necessity and coordination contribution; peripheral populations see only loss of autonomy and resource depletion. Reform movements see a temporary governance failure with potential for restructuring; legacy institutions see their functional erosion masked by ritual performance. The analytical observer risks naturalizing this trajectory as an immutable civilizational law, when it reflects specific institutional design choices and elite incentive structures.",
     "key_agents": [
-      "The Unifying Founder (Solem): Primary beneficiary (institutional/arbitrage) - Experiences the system as pure coordination (Rope).",
-      "The Imperial Elite/Warrior Caste: Beneficiaries (powerful/constrained) - Experience a mix of coordination and extraction that benefits them (Tangled Rope).",
-      "Subjugated Species/Early Peasantry: Primary victims (powerless/trapped) - Experience the system as pure coercive extraction (Snare).",
-      "Constitutional Reformers: Change agents (organized/mobile) - View the old system as a temporary, coercive structure to be replaced (Scaffold).",
-      "Late-Empire Bureaucracy: Inertial actors (institutional/constrained) - Maintain the rituals of a system whose function has decayed (Piton).",
-      "The Galactic Historian: Analytical observer (analytical/analytical) - Risks naturalizing the contingent lifecycle as an inevitable law (Mountain)."
+      "Administrative Elite: Primary beneficiary (institutional/arbitrage) \u2014 captures resource concentration benefits, controls infrastructure, experiences constraint as coordination necessity",
+      "Peripheral Populations: Primary victim (powerless/trapped) \u2014 subsistence communities dependent on central authority, subject to taxation and labor obligations, cannot exit territorial system",
+      "Regional Trading Communities: Secondary beneficiary/victim (moderate/constrained) \u2014 benefit from standardized infrastructure and security, but bear taxation and quota restrictions; limited exit capacity",
+      "Reform Movements: Organized agents (organized/mobile) \u2014 merchant guilds, intellectual networks, religious orders proposing institutional restructuring; perceive temporary governance failure with reform pathway",
+      "Legacy Institutional Structures: Inertial agents (institutional/constrained) \u2014 kinship authority, local autonomy forms persist through ritual despite functional obsolescence",
+      "Ecological Commons: Tertiary victim (powerless/trapped) \u2014 subject to extraction without agency; degradation accelerates as extractive pressure increases"
     ],
-    "logic_rationale": "Extractiveness (0.72) is high, reflecting the system's ultimate reliance on resource and labor extraction from subjugated populations and lower classes to fuel its expansion and maintain the elite. Suppression (0.65) is high due to the initial caste system and the military enforcement required for galactic conquest. Theater Ratio (0.75) is high, reflecting the 'sacred monarchy' and the tendency for institutions to become performative and inertial in the civilization's later stages. The temporal measurements show both extractiveness and theater increasing as the civilization matures and then declines, a classic sign of lifecycle drift.",
-    "perspectival_gap": "The gap is maximal. The same system is a Rope to its founder, a Snare to its victims, a Tangled Rope to its managers, a Scaffold to its reformers, a Piton to its late-stage inhabitants, and a Mountain to the distant observer. This demonstrates that the constraint's 'type' is not an intrinsic property but an emergent feature of the interaction between the system's structure and the observer's indexical position (P,T,E,S).",
-    "directionality_logic": "Directionality is derived from the explicit beneficiary/victim declarations. The Imperial Elite (beneficiary, arbitrage/constrained exit) experience low or negative effective extraction. The Subjugated Species (victim, trapped exit) experience maximally amplified extraction, pushing chi into the Snare category. The reformers (organized, mobile exit) have enough agency to perceive a path to change, classifying the system as a temporary Scaffold. The analytical historian has no stake, but their universal scope and civilizational timeline predisposes them to see an immutable pattern.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by embracing it. The question 'Which type is the Solaran lifecycle really?' is ill-posed. The system IS the presheaf of all its perspectival classifications. The mandatrophy is resolved not by picking one 'correct' type, but by understanding that the system's complexity is captured by the full set of indexed observations. The high base extractiveness (0.72) forces this analysis, preventing a simplistic classification and revealing the deep structural conflicts within the civilization's lifecycle."
+    "logic_rationale": "Extractiveness (0.38): Moderate. The Solaran system achieves substantial early-phase coordination benefits (infrastructure, security, standardized law) that reduce friction costs below what fragmented local systems require. However, extractive overlay increases as elites consolidate control. The value reflects the accumulated asymmetry: initial extraction is justified as coordination overhead, but by peak-phase it represents pure rent-seeking. Theater ratio (0.58): Moderate-high. Traditional authority rituals (coronations, councils, legal proceedings) maintain symbolic legitimacy while actual resource allocation happens through bureaucratic channels. As the gap widens between ritual form and bureaucratic reality, theater increases. Suppression (0.48): Moderate. Peripheral populations face significant barriers to exit (territorial dependency, infrastructure lock-in, social ties) and to organization (dispersed populations, information constraints), but not absolute bars. Some exit occurs through migration to frontier zones or joining reform networks; some organization occurs through religious movements and guild participation.",
+    "directionality_logic": "Directionality values are determined by each agent's structural position within the extraction-coordination apparatus. Administrative elites receive low d (beneficiaries with arbitrage options) \u2014 they can reposition politically, access alternative networks, control information flow. Regional traders receive moderate d (beneficiaries-with-costs, constrained exit) \u2014 they benefit from infrastructure but bear taxation and depend on central approval. Peripheral populations receive high d (victims, trapped) \u2014 they have no exit options, face information asymmetry, bear costs without compensation. Reform movements receive moderate-low d (organized agents with mobile options) \u2014 they can exit via network relocation and have agency through institutional influence. The analytical observer receives neutral d (0.5, observational position) \u2014 observes the system from outside without structural interest. The piton institution receives moderate d (degraded but still enforcing) \u2014 continues to extract ritual legitimacy while losing functional role.",
+    "perspectival_gap": "Maximum perspectival divergence emerges between the administrative elite (rope perspective) and peripheral populations (snare perspective). The elite genuinely experience the constraint as coordination \u2014 they solved the collective action problem of integrating fragmented communities and maintain essential infrastructure that requires central coordination. Peripheral populations genuinely experience the constraint as extraction \u2014 they see taxation without reciprocal services, resource restrictions without participation in decisions, labor obligations without consent. Regional traders see tangled_rope \u2014 they benefit from infrastructure and security but bear taxation; they have some negotiating power but cannot exit entirely. Reform movements see scaffold \u2014 they perceive the extraction as a temporary governance failure correctable through institutional innovation and see real pathways (bureaucratic rotation, resource redistribution, decentralization) toward lower-extraction equilibrium. Legacy institutions see piton \u2014 they maintain ritual forms (councils, hereditary authority) that no longer control resource allocation, performing legitimacy that has eroded. The analytical observer risks mountain \u2014 sees civilizational lifecycle as inevitable law of complex systems \u2014 but the structural data shows contingency: elite choices about distribution mechanisms, institutional design, and legitimation strategies actively shape the extraction trajectory.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that early-phase coordination and later-phase extraction are not competing descriptions of the same mechanism but sequential functional states of the same institutional apparatus. The administrative hierarchy that solves coordination problems in early phases (achieving 0.18 extractiveness with genuinely lower costs than alternatives) gradually becomes a rent-extraction vehicle in peak phases (accumulating overhead and elite captures). This is neither false labeling (rope mislabeled as snare) nor confusion of perspectives \u2014 it reflects actual structural transformation of the elite's incentives as they consolidate power and face declining marginal returns on coordination investment. The scaffold perspective (reform movements) identifies the critical intervention point: institutional design innovations (bureaucratic rotation, term limits, audit mechanisms, resource redistribution mandates) can arrest the extractiveness trajectory before collapse. The piton perspective documents how older authority forms persist through theater after losing functional role, suggesting that decay has already begun. The snare perspective from peripheral populations indicates that extraction has reached structural dominance by the measurement interval. The constraint is tangled_rope because coordination and extraction are genuinely coupled: the same infrastructure that enables trade and security is the mechanism through which elite extraction occurs, and dismantling the extraction mechanism would require partial dismantling of coordination benefits. This coupling is not a measurement error but a real structural feature of how centralized civilization works."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
-  }
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ecological_carrying_capacity",
+      "elite_legitimacy_erosion",
+      "institutional_reform_capacity"
+    ],
+    "dual_formulation_note": "The Solaran lifecycle constraint is downstream of specific resource depletion patterns (ecological carrying capacity) and elite coordination failures (institutional reform capacity). Each upstream constraint has its own extractiveness reflecting empirical measurement of environmental thresholds and institutional capacity; the lifecycle constraint aggregates these into a compound constraint showing how the system state evolves over time."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
 }

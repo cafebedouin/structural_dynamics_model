@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "nero_imperial_expropriation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nero"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "Nero's Imperial Legitimacy via Expropriation and Spectacle",
+    "topic_domain": "political/economic/ancient_rome",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nero_imperial_household"
+    ],
+    "victims": [
+      "roman_aristocracy",
+      "wealthy_provincial_merchants",
+      "plebeian_subsistence_populations"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Propertied Aristocrat (Senatorial Class)",
+      "comment": "PERSPECTIVE 1: PROPERTIED ARISTOCRAT (SNARE) \u2014 Faces arbitrary expropriation under legal pretext (treason charges, estate confiscation). Exit requires fleeing the empire or death. d\u22480.92, f(d)\u22481.39, \u03c3=1.1 \u2192 \u03c7\u22480.69. High extraction with no legitimate appeal."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Provincial Merchant (Wealthy Non-Senatorial)",
+      "comment": "PERSPECTIVE 2: PROVINCIAL MERCHANT (SNARE) \u2014 Vulnerable to special taxation, forced loans, and seizure under imperial diktat. Flight risks loss of all property; compliance yields extraction through legal confiscation. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.62. Extraction without protection."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Urban Plebeian Population",
+      "comment": "PERSPECTIVE 3: URBAN PLEBEIAN POPULATION (SNARE) \u2014 Compressed by grain price inflation (resources redirected to spectacle/military). No exit: cannot leave Rome; cannot organize collective resistance. Subsistence erosion is slow extraction. d\u22480.94, f(d)\u22481.41, \u03c3=0.8 \u2192 \u03c7\u22480.60. Maximum powerlessness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Praetorian Guard (Organized Military)",
+      "comment": "PERSPECTIVE 4: PRAETORIAN GUARD (TANGLED ROPE) \u2014 Benefits from increased pay, preferential grain allocation, and imperial spectacle (gladiator shows as morale tool). Also coerced into enforcement role; loyalty is uncertain and extracted through privilege management. d\u22480.45, f(d)\u22480.45, \u03c3=1.1 \u2192 \u03c7\u22480.29. Mixed: coordination (shared interest in imperial stability) + extraction (coerced enforcement)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Imperial Household (Nero and Inner Circle)",
+      "comment": "PERSPECTIVE 5: IMPERIAL HOUSEHOLD (ROPE) \u2014 Coordinates consent through spectacle (games, building projects). Experiences constraint as a coordination mechanism: expropriation + spectacle = legitimacy. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.1 \u2192 \u03c7\u2248-0.06. Net beneficiary; sees system as mutually reinforcing coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Republican Constitutional Fiction",
+      "comment": "PERSPECTIVE 6: REPUBLICAN CONSTITUTIONAL FICTION (PITON) \u2014 The formal Roman Republic and its property law persist as fiction while expropriation operates outside legal bounds. Theater_ratio=0.81 reflects that the law's performative role (legitimating seizure via treason trial) exceeds its functional constraint on imperial power. d\u22480.05, f(d)\u2248-0.10, \u03c3=1.1 \u2192 \u03c7\u2248-0.09. The constitutional fiction enables extraction while pretending to constrain it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, imperial expropriation might appear as an immutable feature of monarchy: unchecked executive power always extracts. However, base data (\u03b5=0.68, suppression=0.72, theater=0.81) contradicts mountain classification. This is not a natural law but a contingent institutional pathology: other emperors (Augustus, Titus) achieved legitimacy without systematic expropriation. The 'inherent in monarchy' framing naturalizes what is Nero-specific extraction governance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "senatorial_conspiracy_authenticity",
+      "question": "How many treason accusations against Nero's senatorial victims were genuine conspiracies versus fabricated pretexts for expropriation?",
+      "resolution_mechanism": "Cross-source historical analysis (Tacitus, Suetonius, Cassius Dio) of alleged conspiracies; correlation between treason charges and property seizures; investigation of whether specific accusers benefited financially",
+      "impact": "If conspiracies were real: constraint shifts toward legitimate enforcement of law (Tangled Rope). If mostly fabricated: pure expropriation mechanism confirmed (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether senatorial treason accusations were genuine or pretexts"
+    },
+    {
+      "id": "spectacle_legitimacy_efficacy",
+      "question": "Did imperial spectacle (games, architecture, performances) actually generate genuine political support among the plebeian population, or was it purely coercive theater masking resource extraction?",
+      "resolution_mechanism": "Analysis of plebeian riot patterns relative to spectacle timing; investigation of whether plebeian grain subsidy reductions triggered unrest; comparison with control cases (provincial populations receiving less spectacle)",
+      "impact": "If spectacle generated real support: constraint includes coordination function (Tangled Rope/Rope from plebeian perspective). If purely theater: pure extraction (Snare) confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether spectacle generated genuine political legitimacy or was coercive theater"
+    },
+    {
+      "id": "exit_velocity_alternative_paths",
+      "question": "For wealthy victims with advance warning, what proportion successfully escaped the empire (to Parthia, Egypt, or provinces beyond imperial reach) versus were trapped?",
+      "resolution_mechanism": "Historical documentation of escapes and flight cases; investigation of Parthian and Egyptian refuge records for Roman exiles; analysis of assets seized post-escape",
+      "impact": "If escape rate > 30%: exit options may be 'constrained' rather than 'trapped' for organized victims. If escape rate < 5%: truly trapped confirmation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of wealthy victims able to escape imperial reach"
+    },
+    {
+      "id": "agricultural_productivity_consequence",
+      "question": "Did resource extraction for spectacle directly reduce agricultural productivity and supply chains, or did the economy compensate through other mechanisms (slave labor reallocation, increased provincial output)?",
+      "resolution_mechanism": "Analysis of grain price trends, provincial tax records, and agricultural productivity measurements across Nero's reign; comparison with pre-Nero baseline and post-Nero recovery",
+      "impact": "If productivity dropped sharply: extraction mechanisms confirmed as economically destructive (true Snare). If economy adapted: extraction was redistributive rather than destructive (Tangled Rope from economist perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether resource extraction degraded agricultural productivity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.81
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Nero's imperial expropriation system (c. 54-68 CE) represents a canonical snare constraint: the coupling of arbitrary wealth seizure with spectacle-driven legitimacy. The system operated through trumped-up treason accusations (formal pretext), mass confiscations (mechanism), and resource redirection to games, architecture, and performances (legitimation theater). The constraint exhibits high extractiveness (\u03b5=0.68: ~30-40% of senatorial wealth seized over the reign), high suppression (\u03c3=0.72: victims have no legal recourse, no organized resistance capacity, no exit option), and extremely high theater (\u03c4=0.81: the performative apparatus \u2014 public trials, constitutional fictions, spectacle \u2014 exceeds the functional constraint on actual power). Base extraction rose from \u22480.32 in the early reign (moderate 'normal' imperial taxation) to 0.68 by the final years (systematic predation), while theater rose correspondingly from 0.55 to 0.81, indicating that legitimacy maintenance required increasingly performative effort as the extraction mechanism became obvious. This is the inverse of a degrading piton: a snare that becomes MORE theatrical as its predatory nature becomes undeniable.",
+    "key_agents": [
+      "Nero Imperial Household: Primary beneficiary (institutional/arbitrage) \u2014 captures expropriated wealth and directs resource allocation; experiences system as coordination of imperial stability",
+      "Roman Senatorial Aristocracy: Primary victim (powerless/trapped) \u2014 subject to arbitrary confiscation under legal pretext; no appeal mechanism or safe exit",
+      "Provincial Merchants/Wealthy Non-Senators: Secondary victim (moderate/trapped) \u2014 vulnerable to special taxation and seizure; less protected than senators by custom, but economically important",
+      "Plebeian Urban Populations: Tertiary victim (powerless/trapped) \u2014 compressed by grain price inflation and subsistence erosion as resources diverted to spectacle; cannot exit; cannot organize",
+      "Praetorian Guard: Organized co-beneficiary/enforcer (organized/constrained) \u2014 benefits from increased pay and preferential allocation; constrained into enforcement role",
+      "Republican Constitutional System: Institutional fiction (institutional/arbitrage) \u2014 formal law persists while expropriation operates outside legal bounds; theater ratio indicates law's performative role exceeds functional constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High but not absolute. Nero seized perhaps 30-40% of senatorial wealth over his reign through confiscation, but not 100% of all property \u2014 some victims were merely impoverished rather than eliminated. Extraction was systematic and severe but left sufficient wealth in-place to avoid economic collapse. This is not universal expropriation but targeted predation. Suppression (0.72): Very high. Victims had minimal legitimate appeal; treason trials were show trials; attempted flight meant forfeiting property; military force backed seizures. However, suppression was not absolute \u2014 some victims escaped, some bribed their way to survival \u2014 hence 0.72 rather than 0.95. Theater ratio (0.81): Extremely high and increasing. Nero's expropriation machinery was wrapped in legal formalism (treason trials with witnesses), constitutional pretense (senate votes on confiscations), and spectacle (games funded by seized wealth, elaborate architecture projects). The theatrical apparatus \u2014 public trials, proclamations, games \u2014 served no functional constraint on power but rather legitimated it. As extraction became more obvious and aristocratic resentment grew, theater had to intensify to maintain the fiction of legal process.",
+    "perspectival_gap": "This constraint demonstrates a clean separability between beneficiary and victim perspectives with zero overlap. The imperial household sees coordination and mutual benefit (spectacle maintains plebeian loyalty; expropriation finances spectacle; legitimacy props up imperial rule). Senatorial victims see pure predation (arbitrary seizure, show trials, no recourse). Plebeian populations see indirect extraction (grain becomes scarce/expensive as resources redirect to games). The praetorian guard occupies a liminal position: beneficiary of increased pay and spectacle (coordination), but also enforcer of expropriation (coercion). The republican constitutional fiction operates as theater masking raw power \u2014 it is not a mechanism of coordination or justice, but a legitimation apparatus. This is the opposite of a scaffold (temporary coordinating measure) \u2014 it is a piton that thinks it is rope: degraded law persisting through inertia and theatrical maintenance. The analytical observer risks naturalizing Nero-specific pathology as inherent to monarchy, but other emperors (Augustus, Titus, Marcus Aurelius) achieved legitimacy without systematic expropriation, proving the constraint is contingent, not immutable.",
+    "directionality_logic": "Nero Imperial Household: Beneficiary + arbitrage exit \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary (negative effective extraction). Senatorial Aristocracy: Victim + trapped exit \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction directionality. Provincial Merchants: Victim + trapped exit \u2192 d\u22480.88, f(d)\u22481.32. High extraction but slightly less than senatorial class (less protected by custom, but also less systematically targeted). Plebeian Populations: Victim + trapped exit \u2192 d\u22480.94, f(d)\u22481.41. Maximum extraction but mediated through indirect mechanisms (inflation, subsistence compression). Praetorian Guard: Mixed beneficiary/enforcer + constrained exit \u2192 d\u22480.45, f(d)\u22480.45. Moderate directionality reflecting both benefits (pay, spectacle) and coercion (enforcement, loyalty extraction). Republican Constitutional System: Beneficiary of legitimacy theater + arbitrage exit (for imperial power) \u2192 d\u22480.05, f(d)\u2248-0.10. Negative effective extraction; the fiction enables extraction while appearing to constrain it.",
+    "mandatrophy_analysis": "MANDATE RESOLUTION: This constraint is classified as pure Snare across nearly all victim perspectives, with only the Praetorian Guard perspective showing Tangled Rope (mixed coordination + extraction). The mandatrophy is resolved by recognizing that the constraint serves NO legitimate coordination function from the victims' perspective \u2014 there is no collective action problem being solved by expropriation, no beneficial commons being maintained, no asymmetric but mutually beneficial trade. Expropriation appears as Rope (from the imperial beneficiary view) only because the beneficiary experiences it as coordinating imperial legitimacy with spectacle. But this coordination is entirely internal to the imperial household; it provides no coordination benefit to senatorial class, provincial merchants, or plebeians. For them, it is pure extraction. The high theater ratio (0.81) reflects that legitimacy maintenance required increasingly elaborate performative apparatus \u2014 treason trials, constitutional votes, spectacular games \u2014 not because these mechanisms were functional but because they were necessary to mask the predatory nature of the system as it became more obvious. The mandatrophy is NOT resolved by claiming 'maybe the victims benefit in ways we don't see' \u2014 the empirical record shows declining senatorial participation in governance, declining trust, increasing assassinations of Nero's inner circle, and ultimate regime collapse. No legitimate coordination function is evidenced. The constraint is a Snare, mandatrophy resolved."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.55
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_grain_supply_crisis",
+      "senatorial_power_decline",
+      "praetorian_guard_mutation",
+      "imperial_legitimacy_crisis"
+    ],
+    "dual_formulation_note": "This constraint is downstream of structural imperial politics but represents a distinct economic-coercive mechanism. Related constraints include grain supply disruption (upstream: resource allocation consequence), senatorial power degradation (downstream: political consequence), praetorian professionalization (collateral: enforcer evolution), and broader imperial legitimacy crisis (overarching: regime failure)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.48
+    }
+  ]
+}

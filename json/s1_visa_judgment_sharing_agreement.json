@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "s1_visa_judgment_sharing_agreement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "visa_jsa"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Visa Judgment Sharing Agreement (AMEX Antitrust Case)",
+    "topic_domain": "legal/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "visa_mastercard_duopoly",
+      "settlement_administrators"
+    ],
+    "victims": [
+      "american_express",
+      "merchant_ecosystems",
+      "consumer_payment_choice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Merchant Ecosystem",
+      "comment": "PERSPECTIVE 1: MERCHANT ECOSYSTEM (SNARE) \u2014 Small and mid-sized merchants cannot exit Visa/Mastercard network participation without losing customer reach. The judgment sharing agreement locks merchants into continued extraction via interchange fees while settlement proceeds are distributed to prior claimants, not current fee-bearers. Trapped exit; maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "American Express (Constrained Victim)",
+      "comment": "PERSPECTIVE 2: AMERICAN EXPRESS (SNARE) \u2014 Despite the judgment in AMEX's favor, the judgment sharing agreement prevents AMEX from capturing its full remedy. Visa and Mastercard internalize settlement costs while AMEX bears litigation burden and receives restricted compensation. Exit options constrained by network effects and processing infrastructure dependencies. Significant extraction despite litigation victory."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Visa/Mastercard Duopoly",
+      "comment": "PERSPECTIVE 3: VISA/MASTERCARD DUOPOLY (TANGLED ROPE) \u2014 Primary beneficiary. The judgment sharing agreement coordinates settlement distribution while preserving pricing power and network control. Duopoly experiences this as coordination (avoiding repeated antitrust exposure) combined with extraction (maintaining fee structure despite judgment). Arbitrage exit options via rate adjustments and settlement administration control."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Settlement Administrators and Legal Infrastructure",
+      "comment": "PERSPECTIVE 4: SETTLEMENT ADMINISTRATORS (ROPE) \u2014 Third-party settlement administrators operate under court mandate with constrained exit (cannot refuse administration). But the mechanism solves a real coordination problem: distributing $100M+ to millions of class members and prior claimants. Low extractiveness because administration operates under judicial supervision and transparency requirements. Pure coordination from this institutional perspective."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Judicial Remedies Theater",
+      "comment": "PERSPECTIVE 5: JUDICIAL REMEDIES THEATER (PITON) \u2014 The judgment sharing agreement maintains the appearance of legal remedy and consumer protection while preserving the underlying antitrust harm (duopoly pricing). Courts enforce the settlement framework, but the settlement's functional capacity to remedy the constraint is degraded \u2014 merchants still pay interchange, AMEX still bears costs, duopoly still controls networks. Theater ratio high because settlement structure emphasizes distribution procedure over price correction. Institutional inertia: the remedial mechanism persists because no alternative enforcement infrastructure has matured."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/analytical perspective, the judgment sharing agreement is a hybrid coordination-extraction mechanism that solves the settlement distribution problem (genuine coordination function) while locking the duopoly's market power into place (structural extraction). Bifurcation: remedy for past violations is coordinated; prevention of future violations is partially extracted. The agreement bridges past (settlement) and future (continued fees) with asymmetric burden."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "settlement_remedy_adequacy",
+      "question": "Does the judgment sharing agreement adequately remedy competitive harm, or does it merely distribute past damages while leaving the antitrust violation's economic structure intact?",
+      "resolution_mechanism": "Comparative analysis: post-settlement merchant fee levels vs. counterfactual competitive pricing; AMEX competitive position before/after settlement; network adoption patterns for alternative payment systems",
+      "impact": "If adequate: settlement is primarily coordination (Rope). If inadequate: settlement is primarily extraction (Snare from merchant perspective). Classification depends on remedial sufficiency.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether settlement adequately remedies antitrust violation or preserves pricing structure"
+    },
+    {
+      "id": "prior_claimant_distribution_fairness",
+      "question": "Is the distribution of settlement proceeds to prior litigation participants fair relative to current merchant victims, or does it create path-dependent lock-in favoring earlier claimants?",
+      "resolution_mechanism": "Historical analysis of claimant composition across litigation waves; comparison of per-merchant compensation across claim cohorts; market impact analysis on merchant retention post-settlement",
+      "impact": "If fair: settlement is legitimate coordination. If unfair: settlement perpetuates historical extraction patterns under judicial cover. Theater ratio interpretation shifts accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fairness of settlement distribution across claim cohorts"
+    },
+    {
+      "id": "duopoly_pricing_power_post_settlement",
+      "question": "Does the judgment sharing agreement preserve Visa/Mastercard pricing power post-settlement, or do competitive dynamics from the judgment enable price correction?",
+      "resolution_mechanism": "Longitudinal tracking of interchange fee levels, network pricing, and merchant switching costs pre/post settlement; analysis of new market entrant activity (digital wallets, fintech payment systems) in settlement period",
+      "impact": "If pricing power preserved: duopoly has successfully extracted while appearing to submit to remedy (Snare with legal theater). If pricing power reduced: settlement represents genuine coordination outcome (Rope or Scaffold). Extractiveness rating depends on outcome.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether settlement preserves or reduces duopoly pricing power"
+    },
+    {
+      "id": "judicial_enforcement_credibility",
+      "question": "Is the judgment sharing agreement enforced by courts with sufficient rigor to prevent defection and collusion reformation, or is judicial enforcement itself becoming a piton (performative ritual)?",
+      "resolution_mechanism": "Longitudinal analysis of judicial enforcement records; rate of settlement modification requests; evidence of Visa/Mastercard collusive behavior post-judgment; merchant complaint rates and judicial response patterns",
+      "impact": "If credible: enforcement is real coordination. If rituals: agreement becomes piton (false remedy theater). Theater ratio and classification shift accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Credibility of judicial enforcement of settlement terms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Visa Judgment Sharing Agreement (AMEX antitrust case) represents a structural hybrid between legal remedy coordination and economic extraction lock-in. In 2012-2015, American Express litigated antitrust claims against Visa and Mastercard for anticompetitive network rules and fee structures. The judgment ruled in AMEX's favor on key monopolization claims. However, rather than enforcing direct price correction, the settlement created a judgment sharing agreement: monetary compensation to prior claimants and current merchants, with settlement administrators distributing funds while the underlying pricing power of the Visa/Mastercard duopoly remained intact. The constraint exhibits all characteristics of tangled rope: genuine coordination function (distributing $100M+ to millions of claimants requires administrative infrastructure), asymmetric extraction (benefiting the duopoly by preventing subsequent litigation and rate adjustment), and active enforcement (court-supervised settlement administration). The theater ratio reflects that the judgment distribution emphasizes procedural fairness (settlement administration transparency, claim validation) while leaving the structural antitrust harm (duopoly pricing on merchants) unresolved. The extractiveness trajectory shows initial high values (immediate post-judgment period when duopoly faced existential pricing pressure) declining as the settlement locked the fee structure in place and made subsequent challenges more difficult.",
+    "key_agents": [
+      "Visa and Mastercard Duopoly: Primary beneficiary (institutional/arbitrage) \u2014 converts antitrust judgment into settlement framework that preserves pricing power and prevents future rate-correction litigation",
+      "American Express: Victim despite judgment victory (moderate/constrained) \u2014 wins antitrust case but receives restricted compensation; cannot capture full remedy; bears litigation costs; constrained by network infrastructure dependencies",
+      "Merchant Ecosystems: Primary victim (powerless/trapped) \u2014 continue paying extracted interchange fees; settlement distribution does not reach current merchants; cannot exit network without losing customer reach",
+      "Prior Litigation Claimants: Mixed beneficiary (moderate/constrained) \u2014 receive settlement compensation but may be disadvantaged relative to new claimants; locked into historical distribution formulas",
+      "Settlement Administrators: Organized agents (organized/constrained) \u2014 operate under court mandate; solve real coordination problem (claims distribution) but cannot exit administrative role; constrained by judicial supervision",
+      "Consumer Payment Choice: Structural victim (powerless/trapped) \u2014 duopoly continues to control network access and pricing; settlement does not enable competitive alternatives; trapped in duopoly infrastructure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The settlement initially appeared to be a clear victory for AMEX and merchants, triggering potential duopoly price correction. However, the judgment sharing agreement preserved the duopoly's pricing power while satisfying legal remedy requirements through monetary compensation. Current merchants bear continued interchange extraction but receive no direct compensation \u2014 only prior claimants do. The extractiveness trajectory declines from 0.72 (pre-settlement when duopoly faced real pricing pressure) to 0.58 (post-settlement when fees are locked in by agreement) because the duopoly successfully converted the existential threat into a manageable monetary obligation. Suppression (0.62): Moderate-high. Merchants cannot exit the Visa/Mastercard network without losing customer reach (network effects). AMEX cannot fully exploit its judgment victory because settlement structures prevent unilateral rate increases that would trigger relitigation and further settlements. The agreement suppresses alternative remedies: direct price regulation, break-up, or conduct injunctions are all off the table once settlement binds. Theater ratio (0.48): Moderate-low. The settlement administration is substantive \u2014 distribution actually occurs, claims are validated, funds flow. But the theater has increased over time because the functional remedy (price correction) has not materialized. The agreement emphasizes settlement procedure over antitrust outcome, creating theater drift as the gap widens between 'remedy was distributed' and 'duopoly pricing persists.'",
+    "directionality_logic": "The Visa/Mastercard duopoly derives low directionality (d \u2248 0.20-0.30) from beneficiary status (arbitrage exit) \u2014 the agreement benefits them by converting an existential threat into a managed obligation. American Express derives high directionality (d \u2248 0.70) from victim status (constrained exit) \u2014 it won the judgment but cannot fully capitalize on it; the settlement constrains its remedial options. Merchants derive maximum directionality (d \u2248 0.95) from powerless/trapped positioning \u2014 no exit options and continued extraction despite judgment. Settlement administrators derive moderate directionality (d \u2248 0.50) from organized/constrained positioning \u2014 they benefit from the settlement's existence (administration mandate, operational budget) but are constrained by judicial oversight and cannot modify terms. The analytical observer derives moderate-high directionality (d \u2248 0.65) because structural analysis reveals the coordination function is real but partially instrumentalized toward extraction preservation.",
+    "perspectival_gap": "The perspectival gap between merchant experience (Snare) and duopoly experience (Tangled Rope) is the diagnostic heart of this constraint. Merchants see pure extraction because settlement compensation flows to prior claimants, not current fee-payers, while extraction (interchange fees) continues indefinitely. The duopoly sees coordination because the settlement solves a critical problem: it prevents unlimited relitigation and establishes a predictable cost structure. American Express occupies an intermediate position: it sees the agreement as extraction (restricts its remedial options) but also coordinates (prevents further legal uncertainty). The analytical observer sees Tangled Rope because both functions are real \u2014 the agreement does coordinate settlement distribution AND does preserve extraction. The piton perspective identifies that judicial oversight creates theater: the remedy appears legitimate because courts supervise it, but the underlying antitrust harm is unresolved. This is judicial inertia \u2014 the settlement persists because it satisfies legal form requirements while courts retain authority to enforce, even though the settlement's substantive remedial capacity is degraded.",
+    "mandatrophy_analysis": "The judgment sharing agreement resolves mandatrophy by decomposing remedy into two dimensions: past (settlement distribution) and future (pricing structure). PAST REMEDY: The agreement is genuine coordination \u2014 distributing $100M+ to claimants across millions of transactions requires administrative infrastructure that is not extraction. Settlement administration is Rope from the administrative perspective. FUTURE REMEDY: The agreement preserves the extraction structure \u2014 merchants continue to bear interchange, the duopoly maintains pricing power, competitive alternatives remain suppressed. Future antitrust harm is Snare from merchant and consumer perspectives. The constraint is Tangled Rope precisely because it accomplishes both simultaneously: it coordinates the settlement while extracting through fee structure preservation. The mandatrophy is resolved by observing that the classification changes based on time horizon \u2014 immediate/biographical perspectives see Snare (current extraction); institutional/generational perspectives see Tangled Rope (mixed coordination and structure locking). The agreement prevents misclassification as pure Rope (which would hide the fee preservation) or pure Snare (which would hide the settlement's genuine coordination function). The theater ratio evolution (0.35 \u2192 0.48) tracks the growing gap between settlement procedure (increasingly transparent and coordinated) and remedy outcome (increasingly theatrical as fees persist). This is the classic piton signature: the mechanism becomes more theatrical as its function degrades."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "visa_mastercard_interchange_extraction",
+      "payment_network_market_concentration"
+    ],
+    "dual_formulation_note": "The judgment sharing agreement decomposes into two structurally distinct constraints: (1) settlement distribution coordination (low \u03b5, Rope) for administering prior claims; (2) duopoly pricing structure preservation (high \u03b5, Snare) for merchant fee extraction. The tangled rope classification arises from their simultaneous operation within a single legal mechanism. The network links indicate that the judgment sharing agreement structurally preserves the upstream extraction constraint (visa_mastercard_interchange_extraction) by converting an existential threat into a bounded obligation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

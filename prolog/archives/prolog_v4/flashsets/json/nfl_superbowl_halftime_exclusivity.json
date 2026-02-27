@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "nfl_superbowl_halftime_exclusivity",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NFL Super Bowl Halftime Show Exclusivity Agreements",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nfl",
+      "super_bowl_advertisers"
+    ],
+    "victims": [
+      "halftime_performers",
+      "competing_performance_venues"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Halftime Performers",
+      "comment": "Perspective 1: Halftime Performers (Snare) - Performers often feel pressured to accept stringent exclusivity terms to secure this career-defining opportunity. Limited bargaining power and trapped within the agreement once committed. The perceived career benefit is extremely high so they accept terms that are heavily in favor of the NFL."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Competing Performance Venues",
+      "comment": "Perspective 2: Competing Performance Venues (Tangled Rope) - Venues that might host similar performances around the Super Bowl timeframe are constrained by the NFL's exclusivity agreements. Some benefit still accrues from the increased publicity for the genre. Constrained as they could potentially host similar events but are actively suppressed to ensure viewership of the Super Bowl Halftime Show."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The NFL",
+      "comment": "Perspective 3: The NFL (Rope) - The NFL benefits from these agreements through increased advertising revenue and viewership, which is presented as pure coordination. The exclusivity agreements are framed as necessary to protect the NFL's investment and maintain the Super Bowl's unique appeal. These agreements allow the NFL to secure optimal advertising deals and maximize revenue."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Super Bowl Advertisers",
+      "comment": "Perspective 4: Super Bowl Advertisers (Rope) - Advertisers who invest heavily in Super Bowl commercials benefit from the guaranteed exclusivity and undivided attention of the halftime show audience. These advertisers have secured arbitrage positions by knowing that only the Super Bowl will guarantee them maximum viewership during this timeframe."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 5: Analytical Observer (Tangled Rope) - An analytical observer sees the agreements as a mixed bag: some coordination to generate revenue and spectacle, but also extraction from performers and competing venues. The agreements reflect a power imbalance in the entertainment industry. Both are structurally required for the overall event to take place. Analytical observers can easily exit the agreements and perform analysis."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "true_value_of_exposure",
+      "question": "How accurately can the long-term financial value of Super Bowl exposure be quantified for performers?",
+      "resolution_mechanism": "Econometric analysis of performer revenue streams before and after Super Bowl appearances.",
+      "impact": "If exposure benefits are significantly overstated, performer exploitation is higher. If exposure benefits are accurately measured, agreements are more balanced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the exposure benefits the performers as much as the NFL claims"
+    },
+    {
+      "id": "alternative_performance_avenues",
+      "question": "To what extent do alternative performance opportunities exist for artists during the Super Bowl timeframe?",
+      "resolution_mechanism": "Survey of available venues and potential revenue streams for alternative performances.",
+      "impact": "Fewer alternative venues mean greater reliance on the Super Bowl and more performer vulnerability. More alternative venues increase exit options and bargaining power for performers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How many options do performers have outside the Super Bowl"
+    },
+    {
+      "id": "legal_definition_of_monopoly",
+      "question": "Does the NFL's dominance in American football meet the legal threshold for monopolistic behavior regarding these agreements?",
+      "resolution_mechanism": "Expert legal analysis under antitrust statutes.",
+      "impact": "If behavior is monopolistic, agreements could be challenged in court. If behavior is not monopolistic, agreements are considered fair business practice.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legal risk to the NFL of monopolistic behavior"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The NFL (National Football League) leverages its market dominance to negotiate exclusivity agreements with performers selected for the Super Bowl Halftime Show. These agreements often prevent performers from appearing in competing events or advertising campaigns for a specified period before and after the Super Bowl. This constraint story examines the structure of these agreements and their impact on various stakeholders.",
+    "key_agents": [
+      "NFL: Institutional beneficiary (institutional/arbitrage) - Gains increased revenue and viewership.",
+      "Halftime Performers: Primary victim (powerless/trapped) - Limited bargaining power, constrained by exclusivity clauses.",
+      "Competing Performance Venues: Secondary victim (moderate/constrained) - Suppressed from hosting competing events.",
+      "Super Bowl Advertisers: Institutional beneficiary (institutional/arbitrage) - Benefits from undivided audience attention.",
+      "Analytical Observer: Analytical perspective (analytical/analytical) - Analyzes the agreements' structural impacts."
+    ],
+    "logic_rationale": "The extractiveness (0.55) is moderate, reflecting that while the NFL gains significant revenue, performers also derive career benefits. Suppression (0.60) is also moderate, indicating the agreements limit competing venues but do not entirely eliminate alternative performance opportunities. The theater ratio (0.40) acknowledges the agreements' functional role in revenue generation, but also highlights the performative aspect of maintaining the Super Bowl's perceived exclusivity.",
+    "perspectival_gap": "The NFL and advertisers see the agreements as coordination to ensure a successful event. Performers experience extraction due to limited bargaining power. Competing venues see mixed coordination and extraction. The analytical observer recognizes the complex power dynamics and revenue streams.",
+    "directionality_logic": "The NFL (beneficiary with arbitrage) has a low/negative directionality. Performers (victims with trapped exit) have a high directionality. Competing venues (victims with constrained exit) have a moderate directionality. Advertisers (beneficiaries with arbitrage) have a low/negative directionality.",
+    "mandatrophy_analysis": "The constraint story resolves the mandatrophy by showing that each perspective offers a legitimate view of the same structure. It avoids mislabeling coordination as pure extraction or vice versa by considering the structural positions of each stakeholder, exit options, and power level."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

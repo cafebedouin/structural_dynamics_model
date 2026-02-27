@@ -1,0 +1,83 @@
+{
+  "header": {
+    "constraint_id": "french_local_elections_march_2026",
+    "version": "1.0",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.3,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "claimed_type": "scaffold",
+    "human_readable": "March 2026 French Municipal Elections",
+    "topic_domain": "political",
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "french_citizens",
+      "local_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "National Political Parties",
+      "comment": "Political parties view the elections as a coordination mechanism (rope) to gain local power and influence national politics. They have arbitrage due to their ability to shift strategies and resources."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Local Candidates",
+      "comment": "Local candidates see the elections as a temporary structure (scaffold) to gain representation and address local issues. Their exit options are somewhat mobile, as they can choose not to run or to run independently."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "French Citizens",
+      "comment": "French citizens see the elections as a coordination mechanism (rope) to elect their representatives and participate in local governance. They are generally mobile, as they can choose whether or not to vote."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Political Scientists",
+      "comment": "Political scientists view the elections as a temporary structure (scaffold) which provides data and shapes future political discourse. They have analytical exit."
+    }
+  ],
+  "interval": {
+    "start": 2026,
+    "end": 2026
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "The March 15 and 22, 2026, municipal elections serve as a temporary structural \"Scaffold\", enabling citizens to elect local representatives and participate in local governance. The elections also act as a coordination mechanism, allowing political parties to gain local power and influence national politics. Local candidates utilize the elections as a temporary structure to address local issues and gain representation.",
+    "key_agents": [
+      "French Citizens: Primary beneficiary (powerless/mobile) - elect local representatives",
+      "Local Candidates: Beneficiary (moderate/mobile) - seek representation",
+      "National Political Parties: Beneficiary (institutional/arbitrage) - gain local power",
+      "Local Communities: Beneficiary - Enables local self-determination."
+    ],
+    "logic_rationale": "Extractiveness (0.3): The elections involve some extraction from candidates (time, resources), but also provide a significant coordination benefit in enabling local governance. Suppression (0.2): There is some suppression of alternative political voices, but the elections are generally free and fair. Theater ratio (0.1): The elections are largely functional, with minimal performative activity.",
+    "perspectival_gap": "National political parties see the elections as a means to exert influence and gain local power, while local candidates view them as a temporary structure to address local issues. French citizens see the elections as a coordination mechanism to elect their representatives and participate in local governance.",
+    "directionality_logic": "Beneficiaries are those who participate in the elections. Costs are distributed among those competing, but the overall effect is one of coordination towards self-governance.",
+    "mandatrophy_analysis": "The scaffold classification avoids mislabeling the elections as pure extraction (snare) or pure coordination (rope) by acknowledging the temporary nature and coordination benefits of the electoral process."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "non_compete_agreements",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "noncompete"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Non-Compete Agreements (Post-Employment Restraint)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_employer",
+      "capital_holders"
+    ],
+    "victims": [
+      "departing_employee",
+      "job_market_entrants",
+      "competitive_innovation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Departing Employee",
+      "comment": "PERSPECTIVE 1: DEPARTING EMPLOYEE (SNARE) \u2014 Trapped by geographic and temporal restrictions that limit job opportunities within their specialization. Limited exit options: either relocate to outside the restriction zone (high personal cost), wait out the restriction period (foregone income), or accept reduced-wage employment outside their expertise. The constraint extracts career mobility and future earning potential. High suppression because legal enforcement with financial penalties and damages creates coercive atmosphere."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Job Market Entrant",
+      "comment": "PERSPECTIVE 2: JOB MARKET ENTRANT (SNARE) \u2014 Entry-level and early-career workers in competitive fields (software, pharmaceuticals, finance) face restricted hiring pools because departing employees cannot enter. This reduces competition for positions, raises wages for incumbent workers, but limits total opportunity creation. Constrained exit: can still enter but with fewer employers recruiting them; must accept geographic mobility or career pivots."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Employer",
+      "comment": "PERSPECTIVE 3: INCUMBENT EMPLOYER (ROPE) \u2014 Experiences non-competes as a coordination mechanism: protecting trade secrets, customer relationships, and confidential processes. Benefits from reduced poaching of key personnel and customer defection. Arbitrage exit: can choose not to enforce or negotiate terms. Net beneficiary of the constraint structure \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Competitive Market (Organized Labor/New Entrants)",
+      "comment": "PERSPECTIVE 4: COMPETITIVE MARKET COALITION (TANGLED ROPE) \u2014 Labor advocates, startup ecosystems, and competitive employers organizing to oppose non-competes see genuine coordination function (trade secret protection) but also recognize asymmetric extraction: the mechanism privileges incumbents over market entrants and labor mobility. Mobile exit: workers and new competitors can advocate for regulation, relocate to non-compete-hostile jurisdictions, or build alternative ecosystems. This perspective sees both real coordination (IP protection) and real extraction (labor immobility)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legal/Regulatory System",
+      "comment": "PERSPECTIVE 5: LEGAL/REGULATORY SYSTEM (PITON) \u2014 Enforces non-competes through injunctions and damages, maintaining the constraint through institutional machinery. But the system sees itself as degraded: enforcement is erratic, courts increasingly skeptical of overbroad restrictions, and legislative push in multiple U.S. states to ban or restrict non-competes signals loss of functional consensus. Theater ratio high (0.38 is lower than many pitons, but the legal theater of 'reasonableness' standards, scope negotiations, and confidentiality claims surrounds a core that is performative). Maintained through inertia and contract law doctrine rather than genuine function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Movement",
+      "comment": "PERSPECTIVE 6: REGULATORY REFORM MOVEMENT (SCAFFOLD) \u2014 State-level policy changes (California ban, recent FTC proposal) represent organized agents building temporary enforcement coordination with clear sunset: transition from universal enforceability to targeted restrictions on trade-secret-adjacent roles. This perspective sees the constraint as a temporary coordination mechanism being deliberately dismantled. Sunset rationale: as transparent hiring practices and employment law modernize, the need for restrictive covenants diminishes. Estimated sunset: 10-15 years as state-by-state bans normalize."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalizing View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZATION VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some post-employment restraint is inherent to any employment relationship: employers cannot prevent hiring patterns forever, but some temporary protection of confidential information appears structurally necessary. This perspective risks naturalizing what is actually a contingent legal doctrine (English common law, imported to U.S. with variable adoption). The engine's false summit detector will flag this: non-competes are not immutable laws of nature, but negotiated legal institutions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "trade_secret_necessity",
+      "question": "What percentage of non-compete enforcement actually protects genuine trade secrets vs. general competitive advantage or employee relationships?",
+      "resolution_mechanism": "Case law analysis: review injunction decisions and damage awards, categorize by claimed injury (trade secret, customer list, general competition); survey employer data on actual harm from departing employees",
+      "impact": "If >70% involve genuine trade secrets: coordination function is real, classification shifts toward Tangled Rope across more perspectives. If <40%: mechanism is primarily extraction with thin justification, classification shifts toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of non-compete enforcement protecting genuine trade secrets"
+    },
+    {
+      "id": "labor_mobility_elasticity",
+      "question": "What percentage of job transitions are prevented or delayed by non-compete restrictions, and how much does this reduce wage growth and innovation?",
+      "resolution_mechanism": "Longitudinal tracking of post-employment outcomes across state jurisdictions with different non-compete enforceability; analysis of wage trajectories and startup formation rates pre/post restrictive covenant laws",
+      "impact": "If mobility reduction < 5%: suppression is overstated, extractiveness should be lower. If > 25%: suppression and extractiveness values confirmed, Snare classification strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Percentage of job transitions prevented by non-compete restrictions"
+    },
+    {
+      "id": "geographic_scope_variation",
+      "question": "Do narrow geographic restrictions (city-level, office location) function legitimately to protect trade secrets, while broad restrictions (statewide, national) are primarily extractive?",
+      "resolution_mechanism": "Meta-analysis of injunction outcomes by restriction scope; comparison of trade secret disclosure incidents between narrow and broad restriction groups",
+      "impact": "If true: non-competes should decompose into two constraints \u2014 narrow-scope (Rope-leaning) and broad-scope (Snare-pure). Current story averages; decomposition required.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether geographic scope differentiates coordination from extraction"
+    },
+    {
+      "id": "state_regulatory_convergence",
+      "question": "Will state-level non-compete restrictions converge toward a national standard, or will jurisdictional arbitrage (employee relocation, employer recruitment) sustain divergence?",
+      "resolution_mechanism": "10-year forward tracking of state law adoption and amendment rates; employer location decisions in response to non-compete bans; cross-border mobility of restricted employees",
+      "impact": "If convergence toward bans: Scaffold sunset becomes real and imminent (5-7 years). If sustained divergence: Scaffold classification is aspirational; constraint persists in low-restriction jurisdictions (Snare indefinitely).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether state-level regulation will converge toward uniform standards"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Non-compete agreements represent a contractual constraint on post-employment competition that extracts labor mobility from departing employees while providing legitimate trade-secret protection for incumbent employers. The constraint sits at the boundary between genuine coordination (protecting confidential information) and pure extraction (restricting job market entry and wage competition). Over the past decade, extractiveness has increased (0.42 to 0.58) as employers have expanded restriction scopes beyond trade secrets to general competitive positions. Theater ratio has remained relatively low (0.32-0.38) because the mechanism operates through explicit legal contracts and injunctions rather than performative ritual \u2014 when enforcement fails, it fails transparently. The regulatory landscape is shifting: multiple U.S. states have banned or restricted non-competes, and the FTC proposed a nationwide ban in 2023, signaling a collapse of institutional consensus on the constraint's legitimacy. This creates a Scaffold-like temporal structure where the constraint is being deliberately dismantled by organized regulatory actors.",
+    "key_agents": [
+      "Departing Employee: Primary victim (powerless/trapped) \u2014 bears full restriction cost with limited geographic/temporal exit",
+      "Job Market Entrants: Secondary victim (moderate/constrained) \u2014 face reduced hiring pools and competition, constrained but not trapped",
+      "Incumbent Employer: Primary beneficiary (institutional/arbitrage) \u2014 captures trade-secret protection and employee retention; can choose enforcement level",
+      "Competitive Market Coalition: Organized actor (organized/mobile) \u2014 labor advocates, startup ecosystems, new competitors organizing to dismantle constraint; mobile and can lobby for regulatory change",
+      "Legal/Regulatory System: Institutional enforcer (institutional/arbitrage) \u2014 maintains through injunction machinery but increasingly skeptical; sees own role as degraded",
+      "Regulatory Reform Movement: Organized reformer (organized/mobile) \u2014 state legislatures and FTC building alternative employment relationship norms with sunset logic",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing legal doctrine as economic necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Non-competes extract significant value: departed employees lose earning potential (5-20% wage discount over restriction period in studies), job market entrants face restricted hiring pools, and labor mobility is reduced. However, the extraction is not maximal because it is contractually explicit and geographically scoped (not universal). Base extractiveness has risen from 0.42 to 0.58 over the interval as employers have expanded restriction durations and geographic scope. Suppression (0.72): High. Multiple enforcement mechanisms create coercive atmosphere: legal liability for breach (damages + injunctive relief), career signaling effects (departing employees labeled as violators), and collective knowledge that courts will enforce. Alternatives are costly: relocation outside restriction zone, career delay during restriction period, or career pivoting to outside specialty. Theater ratio (0.38): Low-moderate. The constraint operates through explicit contractual language and adjudication rather than performative ritual. When courts reject non-competes as overbroad, they do so transparently. The theater component includes 'reasonableness' standards that vary by jurisdiction and the claim that restrictions protect trade secrets (which ranges from legitimate to pretext depending on scope). Theater has increased slightly (0.32 to 0.38) as legal uncertainty has grown and more restrictions are challenged in court.",
+    "perspectival_gap": "The constraint produces maximum perspectival divergence across power levels. The beneficiary (incumbent employer) sees coordination \u2014 legitimate trade-secret protection and relationship stability. The powerless victim (departing employee) sees pure extraction \u2014 job mobility loss with no offsetting benefit. The organized coalitions (labor advocates, startup ecosystems) see both: genuine coordination function for narrow restrictions but systematic extraction through scope creep. The legal system sees degradation (Piton) \u2014 it enforces non-competes but increasingly doubts their legitimacy. The regulatory reform movement sees a temporary problem with a sunset (Scaffold) \u2014 state bans and FTC action are deliberately dismantling the constraint. The analytical observer risks seeing an economic necessity (Mountain) but the structural data reveals this as naturalization of a contingent legal doctrine. The perspectival gap reflects deep disagreement about whether post-employment restraints are economically essential or primarily extractive.",
+    "directionality_logic": "Directionality values (d) are derived from structural position: power level, exit options, and beneficiary/victim status. Departing employees are victims with trapped exit \u2192 high d (~0.90) \u2192 high f(d) (~1.35) \u2192 high experienced extraction. Job market entrants are victims with constrained exit \u2192 high-moderate d (~0.75) \u2192 moderate f(d) (~1.10) \u2192 moderate experienced extraction. Incumbent employers are beneficiaries with arbitrage exit \u2192 low d (~0.20) \u2192 low/negative f(d) (~0.10) \u2192 low effective extraction for beneficiary. Organized coalitions are mobile \u2192 d around 0.55 \u2192 moderate f(d) (~0.75) \u2192 moderate experienced extraction, but their mobility and organization allow exit and advocacy. The pipeline correctly classifies disparate agent experiences from unified base metrics by varying (P,T,E,S) tuples: same constraint, different power atoms, different exit options, different structural positions \u2192 different classifications.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that non-competes are legitimately Tangled Rope at moderate scope (narrow geographic, trade-secret-focused) but degrade into Snare as scope expands (broad geographic, general competitive position, extended duration). The coordination function (protecting confidential information) is real but increasingly subsumed by extraction (restricting labor mobility without legitimate IP justification). The constraint resolves mandatrophy by showing that the type depends critically on enforcement scope: a narrow non-compete with enforceable trade-secret provisions is closer to Rope; a broad non-compete with generic competitive restrictions is closer to Snare. The current extractiveness estimate (0.58) reflects averaging across diverse non-competes \u2014 some legitimately Rope-adjacent, others clearly Snare. As regulatory reform narrows permitted scopes, the average will shift back toward Tangled Rope or Rope. The Piton perspective (legal system sees degradation) is key: the system is enforcing a constraint it no longer believes in, sustained by doctrinal inertia rather than functional consensus."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_monopsony_power",
+      "knowledge_worker_wage_suppression",
+      "startup_ecosystem_accessibility"
+    ],
+    "dual_formulation_note": "Non-compete agreements have broader systemic effects through reduced labor mobility. Three downstream constraints capture: (1) monopsony power enabled by geographic labor market restriction, (2) wage suppression from reduced job-switching competition, (3) startup ecosystem effects from talent immobility. Each downstream constraint has its own extractiveness reflecting the secondary effects; the non-compete itself has extractiveness reflecting the direct restriction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

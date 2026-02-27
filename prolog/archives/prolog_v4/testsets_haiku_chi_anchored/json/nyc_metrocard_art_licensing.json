@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "nyc_metrocard_art_licensing",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mta_art"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NYC MetroCard Art Licensing Agreement",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mta_transit_authority"
+    ],
+    "victims": [
+      "visual_artists",
+      "artist_compensation_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Artist (No Negotiation Power)",
+      "comment": "PERSPECTIVE 1: VISUAL ARTIST (SNARE) \u2014 Individual artists have minimal negotiating power against the MTA, a large institutional buyer. Once artwork is licensed, the artist cannot control its use, distribution scope, or secondary revenue streams. Career visibility may create a false sense of benefit while actual compensation remains fixed and low. Exit from the agreement requires forfeiting visibility or legal action neither artist can afford. d\u22480.92, f(d)\u22481.39, \u03c3=0.8 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The MTA (Institutional Beneficiary)",
+      "comment": "PERSPECTIVE 2: MTA TRANSIT AUTHORITY (ROPE) \u2014 The MTA experiences this as pure coordination: acquire visual interest for MetroCards to enhance ridership psychology and brand perception, pay artists a flat fee that is below market rate but creates legitimacy through artist participation. Exit options abundant: can switch artists, cancel the program, or develop in-house design. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary through arbitrage of artist desperation against public good framing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Artist Collective (Organized Resistance)",
+      "comment": "PERSPECTIVE 3: ARTIST COLLECTIVE / LABOR ORGANIZING (TANGLED ROPE) \u2014 When organized, artists see both coordination function (shared marketing platform for visual work) and asymmetric extraction (MTA captures secondary revenue, controls licensing scope, sets compensation unilaterally). Organized artists have some leverage (withhold participation, public campaigns) but constrained by need for visibility and cultural prestige. Enforcement is active \u2014 MTA uses contract terms to prevent collective renegotiation. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Artist Rights Reform Movement",
+      "comment": "PERSPECTIVE 4: ARTIST RIGHTS REFORM MOVEMENT (SCAFFOLD) \u2014 Policy advocates and reformed-thinking institutional actors see this as a temporary extraction mechanism that can be restructured through sunset legislation: percentage-of-revenue sharing, artist approval rights, secondary licensing caps, and renegotiation windows. The coordination function (platform for visual work) is real; the extraction layer (flat-fee expropriation) is removable. d\u22480.30, f(d)\u22480.20, \u03c3=1.0 \u2192 \u03c7\u22480.10. Low effective extraction because reform movement has institutional allies and legislative pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Legacy Licensing Framework",
+      "comment": "PERSPECTIVE 5: LEGACY LICENSING FRAMEWORK (PITON) \u2014 The agreement persists through institutional inertia: MTA contracts officers follow precedent, artists accept low compensation because alternatives (self-promotion, gallery sales) are more precarious. The original coordination logic (cost-effective visual interest) has been superseded by digital alternatives and social media, yet the licensing framework remains. theater_ratio=0.45 is below piton threshold (0.70), but the framework is inertial: maintained not because it works well but because changing it requires effort and creates friction with incumbent vendors. Treating as piton because the functional coordination has been hollowed by decades of digitalization."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Market-Law Framing)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / MARKET-LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, this looks like a natural economic law: labor-abundant visual artists must discount their work to reach audiences; transit authorities capture value through scale; information asymmetry between individuals and institutions is immutable. However, structural data (\u03b5=0.52, suppression=0.58, theater=0.45) contradicts mountain classification. The engine identifies this as a false summit: the constraint is contingent institutional practice (contract terms, licensing scope, compensation formulas), not a law of markets or nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "secondary_revenue_attribution",
+      "question": "Does the MetroCard licensing agreement include revenue-sharing for collectible card sales, secondary markets, or commemorative editions featuring the licensed artwork?",
+      "resolution_mechanism": "Audit of MTA licensing contracts; comparison with artists' royalty statements; analysis of MetroCard sales data and artist compensation records",
+      "impact": "If revenue-sharing exists: compensation may be higher than currently perceived (reduces extraction). If absent: artists receive no compensation from appreciating collectible value, increasing extraction to \u03b5\u22480.65.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether secondary revenue from collectible MetroCards is shared with artists"
+    },
+    {
+      "id": "artist_portfolio_value_impact",
+      "question": "Does MetroCard licensing meaningfully increase an artist's market value (gallery sales, commissions, employment) or is the visibility benefit illusory?",
+      "resolution_mechanism": "Longitudinal tracking of artists' career outcomes post-licensing; comparison of gallery sales, commission frequency, and earning growth for licensed vs unlicensed artists; qualitative interviews about perceived career impact",
+      "impact": "If meaningful: licensing functions as partial compensation in visibility and career advancement (reduces net extraction). If illusory: visibility is non-monetizable and operates as extraction mechanism (increases \u03b5).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether MetroCard licensing provides measurable career or financial benefit"
+    },
+    {
+      "id": "contract_negotiation_asymmetry",
+      "question": "Are MTA licensing terms fixed-offer-only, or do artists have genuine negotiation authority over compensation, licensing scope, and usage restrictions?",
+      "resolution_mechanism": "Analysis of contract variation across artists and time; interviews with artists about negotiation opportunities; comparison with industry-standard licensing terms for transit or public-sector visual licensing",
+      "impact": "If fixed-offer-only: suppression is high (\u22650.65), snare classification confirmed for individual artists. If genuine negotiation exists: suppression drops to \u22640.45, enabling rope classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of artist negotiation power over licensing terms"
+    },
+    {
+      "id": "alternative_visibility_pathways",
+      "question": "How accessible are alternative platforms for visual artists to reach transit audiences at comparable cost-benefit ratios (Instagram, TikTok, digital ads, independent print)?",
+      "resolution_mechanism": "Cost-benefit analysis of MetroCard licensing vs digital marketing; reach metrics comparison; artist survey on alternative options perceived as available",
+      "impact": "If alternatives are accessible and comparable: artists have genuine exit options (reduces d for individual perspective). If MetroCard is quasi-monopoly visibility channel: exit options are trapped (increases d).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of comparable alternative visibility platforms for artists"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "mta_art_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48,
+      "id_override": "mta_art_extract_t15"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52,
+      "id_override": "mta_art_extract_t30"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3,
+      "id_override": "mta_art_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4,
+      "id_override": "mta_art_theater_t15"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45,
+      "id_override": "mta_art_theater_t30"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The NYC MetroCard art licensing agreement represents a structural constraint between a large institutional buyer (MTA) and individual creative workers (visual artists). The MTA benefits from below-market artwork acquisition that enhances passenger experience and reduces design costs, while artists receive fixed, low compensation in exchange for public visibility. The constraint operates as a hybrid coordination-extraction mechanism: there is genuine coordination (providing artists with a platform and predictable income, providing transit passengers with visual interest), but the coordination is paired with asymmetric extraction (the MTA captures all secondary revenue, controls usage scope and duration, and uses informational advantage to set compensation unilaterally). Over the 30-year interval, extractiveness has increased as MTA profitability has grown while artist compensation has remained stagnant, and theater ratio has increased as the 'promotional platform' narrative has become decoupled from actual market value. The constraint exhibits all six classification types depending on observer position: the individual artist sees extraction (Snare), the MTA sees coordination (Rope), the organized artist collective sees mixed coordination and enforcement (Tangled Rope), reform advocates see a removable layer (Scaffold), institutional licensing practices see inertia (Piton), and the analytical observer risks naturalizing institutional power asymmetry as market law (false Mountain).",
+    "key_agents": [
+      "Visual Artists: Primary victims (powerless/trapped) \u2014 individual creators with minimal negotiation power, no exit from agreement without forfeiting visibility",
+      "MTA Transit Authority: Primary beneficiary (institutional/arbitrage) \u2014 acquires artwork below market rate, captures all secondary revenue, maintains unilateral control",
+      "Artist Collective/Labor Organizations: Secondary actor (organized/constrained) \u2014 can organize resistance and negotiate collectively but constrained by need for platform visibility",
+      "Artist Rights Reform Advocates: Secondary actor (powerful/arbitrage) \u2014 institutional reformers proposing revenue-sharing and renegotiation windows",
+      "Transit Passengers: Incidental beneficiary (moderate/mobile) \u2014 benefit from visual interest but not directly party to constraint",
+      "Analytical Observer: Neutral observer (analytical/analytical) \u2014 risks naturalizing power asymmetry as immutable market mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The MTA captures below-market compensation differential, all secondary revenue, and controls licensing scope unilaterally. Individual artists typically receive flat fees ($500-$3000 per design) while the MTA prints millions of cards generating revenue through transit operations. However, the extraction is not maximal (not \u22650.66 snare-level) because: (1) artists voluntarily participate seeking visibility, (2) the visibility may generate some spillover value through portfolio effects, and (3) the coordination function is real (the MTA does provide a platform that artists could not access individually). The trajectory from 0.35 to 0.52 reflects increasing MTA profitability while artist compensation remained flat. Suppression (0.58): Moderate-high. Significant barriers to artist resistance include: (1) individual artists have no negotiating power against large institutional buyer, (2) alternatives for public visibility are less accessible or costlier, (3) participation is presented as an honor/opportunity rather than employment (suppressing demands for market-rate compensation), (4) contract terms are non-negotiable (take-it-or-leave-it). But suppression is not maximal (not \u22650.60 snare-level) because: artists can refuse participation without legal penalty, and some collective organizing power exists. Theater ratio (0.45): Moderate. The 'artistic platform' narrative provides some performative legitimacy, but the core function is cost-effective acquisition of visual content. Theater increased from 0.30 to 0.45 as digital alternatives have made the 'promotional value' claim weaker \u2014 the MTA now emphasizes 'cultural partnership' and 'artist support' more heavily as the material justification (visibility leads to commissions) has eroded.",
+    "perspectival_gap": "This constraint shows maximal perspectival divergence: the individual artist sees pure extraction (Snare: trapped, powerless, biographical), while the MTA sees pure coordination (Rope: institutional, immediate, arbitrage). The organized artist collective occupies the middle ground (Tangled Rope: organized, generational, constrained) where they can identify both the coordination function and the extraction layer. Reform advocates see a structural design flaw that can be corrected (Scaffold: powerful, generational, arbitrage) \u2014 the sunset is legislative revision of contract terms to include revenue-sharing. The legacy licensing framework appears as degraded institutional practice (Piton) \u2014 maintained through inertia rather than function. The analytical observer risks committing the naturalization fallacy (false Mountain) by framing power asymmetry as inevitable market law rather than contingent institutional design. The perspectival gap reveals that 'fair platform for artists' (MTA framing) and 'exploitative expropriation' (artist framing) are both structurally correct \u2014 the question is which observer position you occupy.",
+    "directionality_logic": "Individual Artist: Victim + trapped + powerless \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction in personal temporal horizon. Cannot exit without career cost; compensation is below market; MTA controls all downstream revenue. Artist Collective: Victim + constrained + organized \u2192 d\u22480.65, f(d)\u22481.00. Significant but not maximal extraction. Organized artists have some leverage (withhold, collective action) and constrained (not trapped) because they can walk away as a group. MTA: Beneficiary + arbitrage + institutional \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. Has abundant exit options, sets compensation unilaterally, captures all secondary value. Reform Advocates: Observer + arbitrage + powerful \u2192 d\u22480.30, f(d)\u22480.20. Moderate position with institutional authority to propose sunset (legislative change). Can exit current system through policy, not trapped. The directionality spread (0.08 to 0.92) across agent perspectives reveals the constraint's core asymmetry.",
+    "mandatrophy_analysis": "TANGLED ROPE CLASSIFICATION: This constraint resolves the mandatrophy by declaring THREE structural requirements simultaneously: (1) coordination function \u2014 the MTA does provide a platform that artists could not access individually, and passengers do benefit from visual interest; (2) asymmetric extraction \u2014 the MTA captures below-market compensation and all secondary revenue using informational advantage; (3) active enforcement \u2014 the MTA uses contract terms (non-negotiable offer, no artist approval rights, usage control) to prevent collective renegotiation and lock in the extraction mechanism. All three are necessary and present. Without the coordination function, this would be pure Snare. Without the extraction layer, this would be pure Rope. Without the enforcement, artists could exit and renegotiate. The mandatrophy is resolved: this is legitimately a hybrid, not a mislabeling of pure extraction as coordination or vice versa. The fact that the individual artist (Snare perspective) disagrees is perspectival \u2014 they lack the information and power to see the coordination function that the organized collective can access."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_artist_compensation",
+      "cultural_institution_extraction"
+    ],
+    "dual_formulation_note": "The MetroCard licensing agreement is a specific instantiation of a broader constraint family around platform-mediated artist labor. The platform (MTA transit system) uses informational advantage and scale asymmetry to extract below-market compensation. This story decomposes from the broader 'platform_artist_compensation' constraint, which operates similarly across digital platforms (Spotify, Instagram, TikTok), commercial galleries, and public institutions. The \u03b5=0.52 reflects the specific MTA agreement; other platforms may score higher (e.g., Spotify at \u03b5\u22480.68) or lower (e.g., government art grants at \u03b5\u22480.25). Each story captures the institution-specific extraction mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ]
+}

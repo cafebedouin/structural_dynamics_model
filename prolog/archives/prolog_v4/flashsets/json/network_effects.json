@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "network_effects",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.3,
+    "theater_ratio": 0.1,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Network Effects (Demand-Side Economies of Scale)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_owners",
+      "early_adopters"
+    ],
+    "victims": [
+      "late_adopters",
+      "users_of_competing_networks"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Users Trapped in Declining Network",
+      "comment": "Perspective 1: Users trapped in a declining network (Snare). Users who are late adopters or unable to switch due to high switching costs or lack of alternatives may find themselves trapped in a declining network, extracting value from their continued usage despite the declining utility. High extractiveness, low power, trapped exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Owners",
+      "comment": "Perspective 2: Platform Owners (Rope). Platform owners benefit from the increasing value of their network as more users join, which can translate into higher revenue, market share, and competitive advantage. Low extractiveness, high power, arbitrage exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Typical User",
+      "comment": "Perspective 3: Typical User (Tangled Rope). Users benefit from increased utility as more people join the network, but also bear costs related to potential lock-in, data privacy concerns, and the risk of the network declining in value. Medium extractiveness, medium power, mobile exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 4: Analytical Observer (Tangled Rope). From a broad, long-term perspective, network effects create both coordination benefits (increased utility, standardization) and extraction risks (monopolies, lock-in, data exploitation). The overall impact on society is a mix of rope and snare, hence Tangled Rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tipping_point_stability",
+      "question": "How stable is the tipping point in a network effect? Can a seemingly dominant network be rapidly displaced by a new entrant?",
+      "resolution_mechanism": "Historical analysis of network dominance and displacement across various industries and technologies.",
+      "impact": "If tipping points are easily reversed, the extraction is less severe. If tipping points are highly stable, the extraction becomes more entrenched.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of tipping points in network effects."
+    },
+    {
+      "id": "switching_cost_impact",
+      "question": "How significantly do switching costs affect users' ability to leave a network?",
+      "resolution_mechanism": "Surveys and economic modeling of switching behavior in different network contexts.",
+      "impact": "High switching costs exacerbate the snare effect. Low switching costs reduce the snare effect and increase user power.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The impact of switching costs on user behavior."
+    },
+    {
+      "id": "data_privacy_valuation",
+      "question": "How do users value their data privacy in relation to the benefits of network participation?",
+      "resolution_mechanism": "User surveys and experiments to elicit willingness-to-pay for data privacy.",
+      "impact": "Higher valuation of privacy increases the perceived extraction from networks that exploit user data. Lower valuation reduces the perceived extraction.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "User valuation of data privacy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Network effects, where a product or service becomes more valuable as more people use it, create a complex interplay of coordination and extraction. While users benefit from increased utility and standardization, they also face potential lock-in, data privacy risks, and the possibility of the network declining in value. Platform owners are the primary beneficiaries, while late adopters and users of competing networks may experience extraction.",
+    "key_agents": [
+      "Platform Owners: Primary beneficiary (institutional/arbitrage) - benefit from increasing network value.",
+      "Early Adopters: Secondary beneficiary (powerful/mobile) - gain early access and influence.",
+      "Late Adopters: Primary victim (powerless/trapped) - potentially trapped in declining or less valuable networks.",
+      "Users of Competing Networks: Secondary victim (moderate/constrained) - face potential lock-in to a single network."
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. While network effects provide significant benefits, they can also lead to lock-in, data exploitation, and the suppression of alternatives. The extractiveness score reflects this tension. Suppression (0.30): Moderate. Network effects create barriers to entry for competing networks and can limit user choice. The suppression score reflects the reduced ability of users to switch to alternative platforms. Theater Ratio (0.10): Low. The coordination aspect is generally not theatrical, but there can be theater related to claiming network effects before the network is big enough to provide real value.",
+    "perspectival_gap": "The perspectival gap arises from the different positions of users and platform owners. Platform owners see network effects as a rope, enabling coordination and growth. Users see a more complex picture, with benefits and risks, leading to a tangled rope classification. Users trapped in declining networks perceive a snare.",
+    "directionality_logic": "The directionality logic follows the structural positions of the agents. Platform owners (institutional/arbitrage) have a low 'd' value, experiencing network effects as a coordination mechanism. Trapped users (powerless/trapped) have a high 'd' value, experiencing network effects as a snare. Typical users (moderate/mobile) have a medium 'd' value, experiencing both benefits and risks.",
+    "mandatrophy_analysis": "The constraint is classified as Tangled Rope at the analytical level to reflect the combination of coordination and extraction. Classifying it solely as Rope would ignore the potential for lock-in and data exploitation. Classifying it solely as Snare would ignore the significant benefits that network effects can provide."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

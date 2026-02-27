@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "taiwan_strait_hegemony_shift",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "twsh"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "The Taiwan Strait Energy & Logistics Chokepoint",
+    "topic_domain": "political_economy/geopolitics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hegemon_controlling_strait"
+    ],
+    "victims": [
+      "dependent_shipping_states",
+      "global_energy_importers",
+      "non_hegemon_regional_actors"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Dependent Shipping States & Energy Importers",
+      "comment": "PERSPECTIVE 1: DEPENDENT SHIPPING STATES (SNARE) \u2014 Japan, South Korea, and global LNG importers have no viable alternative to Taiwan Strait transit. Rerouting via Lombok Strait adds 3-5 weeks and significant cost. Geographic constraint is absolute. Suppression \u22650.72: military interdiction, toll extraction, and route denial are all credible coercive mechanisms. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 (global scope) \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Regional Powers (ASEAN, India)",
+      "comment": "PERSPECTIVE 2: REGIONAL POWERS (TANGLED ROPE) \u2014 ASEAN nations and India benefit from strait stability and freedom of navigation (coordination function), but also bear cost of dependence and risk of power shifts. Organized actors see both coordination gains and asymmetric extraction. Hegemonic control disrupts the multilateral coordination equilibrium. d\u22480.62, f(d)\u22480.90, \u03c3=1.1 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Non-Hegemon Great Power",
+      "comment": "PERSPECTIVE 3: NON-HEGEMON GREAT POWER (SNARE) \u2014 If China gains hegemonic control, the US faces strategic chokehold and cannot easily reverse it through military means without catastrophic war. Constrained exit: military options are existential-risk escalatory; diplomatic options are forfeited once hegemony is established. Trapped in reactive posture. d\u22480.85, f(d)\u22481.28, \u03c3=1.2 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Hegemon Controlling Strait",
+      "comment": "PERSPECTIVE 4: HEGEMON CONTROLLING STRAIT (ROPE) \u2014 From the hegemonic power's view, the strait represents a coordination mechanism: enforcing safe passage at scale generates legitimate revenue, geopolitical leverage, and network control benefits. The hegemonic power sees the constraint as fundamentally cooperative infrastructure with asymmetric benefits. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.08. Net beneficiary; negative effective extraction because the hegemonic power sees itself as providing a service."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Supply Chain Decoupling Coalition",
+      "comment": "PERSPECTIVE 5: SUPPLY CHAIN DECOUPLING COALITION (SCAFFOLD) \u2014 States and corporations investing in alternative supply chains, renewable energy, and nearshoring see the strait constraint as temporary. Diversified energy sourcing (LNG terminals in Europe, Middle East, Africa) and rail/pipeline alternatives reduce chokepoint leverage over time. Sunset mechanism: 15-25 year horizon for alternative infrastructure maturity. d\u22480.48, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.31. Mobile exit and visible sunset clause enable scaffold classification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Geographic Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / GEOGRAPHIC INEVITABILITY (MOUNTAIN) \u2014 From a civilizational timescale, geographic chokepoints are immutable features of global trade topology. The Taiwan Strait is one of ~12 critical maritime passages (Suez, Panama, Hormuz, Malacca) that will constrain geopolitics indefinitely. This perspective risks naturalizing what is actually a contingent hegemonic configuration. Structural data (\u03b5=0.68, suppression=0.72, theater=0.38, requires_active_enforcement=true) contradicts mountain classification \u2014 the engine will compute false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hegemonic_stability_durability",
+      "question": "If China or another power achieves hegemonic control of Taiwan, how durable is the coercive capability? Can it be maintained against sustained coalition resistance or will it degrade within 20-30 years?",
+      "resolution_mechanism": "Historical analysis of chokepoint hegemonies: British Suez control (1882-1956), Japanese Strait control (1938-1945), Soviet Bosphorus leverage (1945-1991). Comparative analysis of how long coercive maritime control persists against organized resistance.",
+      "impact": "If durable (>30 years): snare classification holds; no realistic exit path except coalition war. If degradable (<20 years): reclassifies as scaffold; exit mechanisms become visible and reachable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of hegemonic chokepoint control against coalition resistance"
+    },
+    {
+      "id": "alternative_route_feasibility",
+      "question": "Are Lombok Strait, Sunda Strait, and Malacca Strait alternatives actually viable at scale, or do geographic/political constraints make them equally vulnerable to interdiction?",
+      "resolution_mechanism": "Engineering analysis of reroute costs, transit times, and throughput limits. Geopolitical analysis of Indonesia's and Malaysia's exposure to pressure (ASEAN is internally divided; Indonesia faces economic dependency). Scenario modeling of simultaneous strait closures.",
+      "impact": "If alternatives are viable: dependent states have constrained but real exit options; classification shifts from snare toward tangled_rope or scaffold. If alternatives are equally vulnerable: trap is more complete; snare classification strengthens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of alternative maritime routes as genuine exit options"
+    },
+    {
+      "id": "energy_transition_chokepoint_obsolescence",
+      "question": "As global energy transitions to renewables and nuclear, does the strategic value of LNG chokepoints decline faster than coal/oil dependencies did?",
+      "resolution_mechanism": "Forecast modeling of energy demand by fuel type through 2050 (IEA, IRENA scenarios). Correlation analysis of historical chokepoint leverage with commodity dependency. Sensitivity analysis to renewable transition acceleration.",
+      "impact": "If transition is rapid (\u226415 years to 40% renewable baseload): scaffold sunset becomes real and reachable; hegemon's extraction capability decays predictably. If transition stalls (>30 years): energy chokepoint remains potent; snare properties persist longer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Energy transition pace and its impact on chokepoint extraction durability"
+    },
+    {
+      "id": "coalition_coordination_threshold",
+      "question": "At what cost level (% of GDP for trade disruption, military mobilization requirements) does a coalition of dependent states overcome coordination problems and mount joint resistance?",
+      "resolution_mechanism": "Game-theoretic analysis of coalition payoffs under different toll regimes. Historical case studies: NATO burden-sharing, OPEC countermeasures to sanctions, submarine cable interdiction response. Threshold estimation from political economy models.",
+      "impact": "If threshold is low (<2% GDP cost to coalition): organized resistance becomes likely within 5-10 years; snare degrades to tangled_rope. If threshold is high (>5% GDP): hegemon can extract for decades; snare properties harden.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coalition mobilization threshold for joint resistance to chokepoint extraction"
+    },
+    {
+      "id": "us_military_capacity_for_denial",
+      "question": "If the US commits to strait denormalization (SLOC interdiction of hegemon's traffic), can it enforce a counter-embargo, and for how long before mutual exhaustion or escalation?",
+      "resolution_mechanism": "Military capability analysis: carrier fleet rotation rates, submarine logistics, air sortie sustainability over 2+ year campaigns. Cost-benefit analysis of mutual SLOC denial (both sides suffer ~$1-2T annual trade loss). Escalation pathway analysis to nuclear brink.",
+      "impact": "If US capacity is credible and sustainable: hegemon knows chokepoint leverage is reversible; changes snare to tangled_rope (enforcer always has exit option). If US capacity is limited: hegemon dominance is nearly irrevocable; snare hardens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "US military capacity to contest hegemonic strait control through counter-interdiction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Taiwan Strait represents one of the world's most critical maritime chokepoints: 30% of global maritime trade (~$5 trillion annually) and ~80% of global LNG shipments transit its waters. A hegemonic power controlling Taiwan would gain the capacity to extract significant economic rent, enforce political concessions, and weaponize shipping access. This constraint models the structural lock created by geographic dependency. It exhibits snare properties (high extraction, high suppression, constrained exit for dependent states) from multiple perspectives, but also contains shadow mechanisms of resistance: alternative routes, energy transition, coalition dynamics, and great-power deterrence. The theater ratio (0.38) is low because the extraction mechanism is primarily military/physical (blockade credibility) rather than institutional theater; the coercive capacity is real and observable. The constraint's extractiveness has grown from 0.35 (pre-hegemonic equilibrium) to 0.68 (post-hegemonic assumption), reflecting both increased capability and increased willingness to use it once established. The suppression level (0.72) reflects the irreversibility of hegemonic position once achieved and the military barriers to coalitional reversal.",
+    "key_agents": [
+      "Hegemon Controlling Strait (institutional/arbitrage): Primary beneficiary \u2014 gains $500B+ annual extraction capacity, geopolitical leverage, veto power over regional development",
+      "Dependent Shipping States: Japan, South Korea, Taiwan, Philippines (powerless/trapped) \u2014 primary victims; face toll extraction, strategic vulnerability, forced political alignment",
+      "Global Energy Importers: EU, India, East Asia (powerless/trapped) \u2014 secondary victims; dependent on 80% of LNG traffic; face supply disruption risk and cost inflation",
+      "Non-Hegemon Great Power (US, if China hegemon): powerful/constrained \u2014 faces strategic chokehold; military options are escalatory; diplomacy is forfeited",
+      "Regional Powers (ASEAN, India): organized/constrained \u2014 benefit from freedom of navigation (coordination function) but pay costs of hegemonic control; constrained exit",
+      "Supply Chain Decoupling Coalition: powerful/mobile \u2014 states and corporations investing in alternatives; sees chokepoint as temporary; sunset horizon 15-25 years",
+      "Analytical Observer: analytical/analytical \u2014 risks naturalizing contingent hegemonic configuration as geographic inevitability"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. A hegemonic power controlling Taiwan can impose shipping tolls, selective access denial, currency manipulation, and strategic concessions. The 30% of global trade figure is not hyperbolic \u2014 it represents real chokepoint leverage. However, the extraction is not as absolute as pure monopoly (\u03b5=0.90) because alternative routes exist (expensive but viable) and energy transition is underway. The measurement trajectory (0.35 \u2192 0.68 over 10 years) reflects the ramp-up of hegemonic enforcement capacity as the controlling power consolidates position and dependent states realize alternatives are limited. Suppression (0.72): High. Once a hegemonic power controls Taiwan, military interdiction, blockade, and denial are credible coercive mechanisms. The suppression level is not maximal (0.90+) because large coalitions can theoretically challenge the hegemon (US Navy, QUAD alliance, NATO logistics), but the suppression is sufficient to prevent unilateral exit by any single dependent state. Theater ratio (0.38): Low. The extraction mechanism is primarily physical (military/naval control) rather than institutional theater. Chokepoint enforcement is not performative \u2014 blockade threats are real and visible. However, some theater persists in the political-diplomatic framing (freedom of navigation narratives, legitimacy claims) and in the institutional mechanisms of toll collection.",
+    "perspectival_gap": "This constraint exhibits a profound perspectival gap between the hegemon and the trapped. The hegemon sees the strait as coordinated infrastructure (Rope) \u2014 enforcing safe passage, collecting tolls, providing security services. Dependent states see pure extraction (Snare) \u2014 they have no meaningful exit and cannot refuse the hegemon's terms. The non-hegemon great power sees a strategic trap (Snare) \u2014 constrained by the reality that reversing hegemony requires war. The supply-chain coalition sees a temporary problem (Scaffold) \u2014 renewable energy and nearshoring will reduce chokepoint leverage over 15-25 years. Regional powers see mixed coordination and extraction (Tangled Rope) \u2014 they benefit from stability but pay the hegemon's rent. The analytical observer risks seeing a natural law (Mountain) \u2014 geographic chokepoints are eternal constraints \u2014 but the structural data (high suppression, active enforcement, beneficiary/victim asymmetry) reveals this as a false summit: the chokepoint lock is contingent on a specific hegemonic configuration, not on physics or geography alone.",
+    "directionality_logic": "Dependent shipping states (Japan, South Korea): Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40, \u03c3=1.2 (global scope) \u2192 \u03c7\u22480.71. Nearly maximal extraction because these states cannot avoid the strait and have no credible military capacity to challenge the hegemon. Global energy importers: Victim + trapped \u2192 similar d\u22480.92. Non-hegemon great power (US if China hegemon): Victim + constrained (not trapped, because military options exist, but escalatory) \u2192 d\u22480.85, f(d)\u22481.28, \u03c3=1.2 \u2192 \u03c7\u22480.61. Powerful but constrained because reversing hegemony requires unacceptable war risk. Regional powers (ASEAN, India): Mixed (partial victims, partial beneficiaries of stability) + constrained \u2192 d\u22480.62, f(d)\u22480.90, \u03c3=1.1 \u2192 \u03c7\u22480.55. Tangled rope classification reflects dual status. Supply chain coalition: Partial victims (near-term) + mobile (can build alternatives) \u2192 d\u22480.48, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.31. Low effective extraction because coalition has agency and visible exit path (energy transition, nearshoring). Hegemon: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.08. Net beneficiary; sees itself as providing secure infrastructure service.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint's high extractiveness (0.68 > 0.70 gate not triggered, but close) is legitimate and reflects the structural reality that a hegemonic power controlling a critical chokepoint can extract significant value while still providing coordination services (safe passage, rule predictability, regional stability). The mandatrophy is resolved by noting that this is a true Snare (not mislabeled Rope or Mountain), and the beneficiary/victim asymmetry is real and structural. The hegemon genuinely benefits from providing coordination services (Rope aspect), but the distribution of benefits is so skewed that the constraint functions primarily as extraction (Snare aspect). This is not a conceptual error but a real feature of chokepoint politics: the person who controls the gate both coordinates traffic AND extracts rents. The framework's resolution: measure both the coordination function (is safe passage provided? yes) and the extraction asymmetry (is the hegemon's benefit 100x larger than dependent states' benefit? yes). Both are true, and Snare is the appropriate type when extraction overwhelmingly dominates coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain",
+      "east_asian_power_balance",
+      "global_energy_security",
+      "us_alliance_credibility"
+    ],
+    "dual_formulation_note": "The Taiwan Strait chokepoint is downstream of the Taiwan political status question (independent vs PRC control) and upstream of regional power balance, energy security, and semiconductor supply. The constraint's \u03b5 value (0.68) reflects a hegemonic configuration; alternative \u03b5 values could be estimated for different political outcomes (US-Japan maintenance of status quo: \u03b5\u22480.25 (Rope), PRC blockade scenario: \u03b5\u22480.85 (pure Snare)). This story models the hegemonic-shift scenario; sibling stories would model status-quo maintenance and blockade escalation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.75
+    }
+  ]
+}

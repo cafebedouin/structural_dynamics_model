@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "monetary_regime_transition",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "monet"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sovereign Fiat Currency Regime",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "monetary_authority",
+      "first_issuers",
+      "debt_holders"
+    ],
+    "victims": [
+      "wage_earners",
+      "savers",
+      "inflation_displaced"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wage Earner",
+      "comment": "PERSPECTIVE 1: WAGE EARNER (SNARE) \u2014 Trapped in national currency; cannot exit without expatriation or expatriate assets. Fiat regime extracts through inflation erosion of nominal wages and savings. Suppression of alternatives (capital controls, alternative currencies) is high. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Saver",
+      "comment": "PERSPECTIVE 2: SAVER (SNARE) \u2014 Trapped in nominal currency assets; inflation erodes purchasing power systematically. Cannot opt into commodity-backed alternatives or hard currencies without regulatory arbitrage. The regime extracts real value through monetary expansion. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.54."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Debtor Class",
+      "comment": "PERSPECTIVE 3: DEBTOR CLASS (TANGLED ROPE) \u2014 Constrained exit (mobile but with debt obligations). Fiat regime creates coordination benefit: nominal debt is inflated away, reducing real repayment burden. But also extraction: originating lenders capture the benefits of debt-financed growth before inflation erodes terms. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.29. Mixed extraction with genuine coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Monetary Authority",
+      "comment": "PERSPECTIVE 4: MONETARY AUTHORITY (ROPE) \u2014 Benefits from fiat issuance; controls seigniorage and inflation tax. Experiences the constraint as coordination: fiat currency enables policy flexibility, deficit financing, and countercyclical intervention. Can arbitrage between monetary and fiscal domains. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The First Issuers",
+      "comment": "PERSPECTIVE 5: FIRST ISSUERS (ROPE) \u2014 Banks and governments that issue debt early benefit from low real borrowing costs before inflation sets in. Fiat regime creates coordination benefit: easy credit enables investment and growth. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Organized Creditor Class",
+      "comment": "PERSPECTIVE 6: ORGANIZED CREDITOR CLASS (TANGLED ROPE) \u2014 Large institutions (pension funds, insurers, central banks) have mobile options: commodity hedges, foreign currency holdings, derivative strategies. Benefit from fiat coordination (credit expansion) but also extract through financial engineering and inflation-premium pricing. d\u22480.40, f(d)\u22480.40, \u03c3=1.0 \u2192 \u03c7\u22480.15. Low effective extraction; sophisticated agents can arbitrage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Gold Standard Legacy",
+      "comment": "PERSPECTIVE 7: GOLD STANDARD LEGACY (PITON) \u2014 Fiat regime includes vestigial gold commitments (historical anchors, reserve requirements, 'sound money' rhetoric) that are largely performative. Central banks hold gold reserves not because of genuine commodity backing but because inertia and theater maintain the appearance of constraint. theater_ratio=0.58 reflects that much monetary policy communication invokes stability/prudence rhetoric while actual policy is unconstrained fiat creation. d\u22480.12, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.02."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Digital Currency Reformers",
+      "comment": "PERSPECTIVE 8: DIGITAL CURRENCY REFORMERS (SCAFFOLD) \u2014 Organized agents (crypto advocates, CBDC researchers, alternative money systems) view fiat regime as a temporary coordination failure with emerging alternatives (blockchain, stablecoins, decentralized finance). See the constraint as having a sunset: programmable digital currencies and decentralized settlement could replace centralized fiat issuance. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.16. Low extraction because reformers see an exit path and are building alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, fiat currency regimes may appear as an immutable feature of modern monetary systems: governments must issue currency, markets require a medium of exchange, inflation is inherent to economic growth. This perspective naturalizes the fiat regime as a law of modern economics. However, the structural data (\u03b5=0.38, suppression=0.65, theater=0.58) contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that the fiat regime is a contingent institutional arrangement, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inflation_incidence_threshold",
+      "question": "What inflation rate threshold transforms fiat currency from a coordination mechanism into pure extraction?",
+      "resolution_mechanism": "Empirical tracking of real wage growth, savers' purchasing power erosion, and debtor benefit across inflation ranges; correlation between inflation trajectory and distributional outcomes",
+      "impact": "If threshold < 3% annually: fiat regime appears as pure extraction (Snare from all victim perspectives). If threshold > 8% annually: high inflation normalized as coordination cost. Threshold defines the boundary between regime legitimacy and predation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Inflation threshold distinguishing coordination from extraction"
+    },
+    {
+      "id": "central_bank_independence",
+      "question": "Is central bank independence a genuine constraint on monetary expansion or a theatrical ritual masking fiscal dominance?",
+      "resolution_mechanism": "Analysis of de facto monetary policy targeting vs de jure mandates; tracking correlation between fiscal deficits and monetary accommodation; cross-national comparison of inflation outcomes between nominally independent and fiscally dominated central banks",
+      "impact": "If independence is genuine: suppression gate should be lower (~0.45), reclassifying some perspectives as Rope. If independence is theater: suppression remains high (~0.70), confirming Snare classification for trapped agents.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether central bank independence constrains monetary expansion"
+    },
+    {
+      "id": "alternative_monetary_viability",
+      "question": "Can decentralized or commodity-backed alternatives genuinely replace fiat currency regimes at scale, or does the network effect lock in fiat dominance?",
+      "resolution_mechanism": "Empirical testing of alternative monetary systems (Bitcoin, CBDC prototypes, commodity-backed stablecoins); analysis of transaction costs, volatility, adoption barriers, and regulatory capture across alternative systems",
+      "impact": "If alternatives are viable: scaffold perspective is structurally grounded \u2014 sunset is real and testable. If alternatives fail: scaffold is aspirational theater, and fiat regime persists through structural lock-in, not legitimacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether viable alternatives to fiat currency exist"
+    },
+    {
+      "id": "distributional_inevitability",
+      "question": "Are the distributional asymmetries of fiat currency (early-issuer advantage, inflation tax on savers) inherent to any monetary regime or contingent on specific policy choices?",
+      "resolution_mechanism": "Comparative institutional analysis of monetary regimes with explicit redistribution mechanisms (negative inflation, universal income offsetting inflation tax, debt jubilees); historical analysis of commodity-backed systems' distributional outcomes",
+      "impact": "If asymmetries are inevitable: fiat regime approaches a Mountain classification despite high extraction \u2014 the regime is extractive by necessity, not design. If asymmetries are contingent: fiat regime is a Tangled Rope made worse by policy choices that could be reversed.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether fiat regime distributional asymmetries are inevitable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The sovereign fiat currency regime emerged in the 1970s following the collapse of the Bretton Woods system and represents a structural transition from commodity-backed to trust-based monetary systems. This constraint exhibits the full range of DR classifications from different perspectives, making it diagnostic for understanding how distributional asymmetries are embedded in seemingly neutral monetary institutions. The same structural phenomenon \u2014 the power of a government to issue currency without commodity backing \u2014 appears as a legitimate coordination mechanism (Rope) from the perspective of monetary authorities and debtors, as pure extraction (Snare) from the perspective of wage earners and savers, as a mixed coordination-extraction hybrid (Tangled Rope) from the perspective of organized creditors, as a degraded ritual (Piton) from the historical perspective of gold standard advocates, as a temporary problem being solved (Scaffold) from the perspective of digital currency reformers, and as an immutable natural law (Mountain) from the civilizational analytical perspective. The constraint's theater_ratio (0.58) reflects that central bank communication emphasizes stability, prudence, and rule-based policy while actual monetary creation is largely discretionary and responsive to political pressure. The extractiveness value (0.38) represents moderate extraction through seigniorage, inflation tax on nominal savings, and first-issuer advantage, offset partially by genuine coordination benefits of fiat currency for credit expansion and countercyclical policy.",
+    "key_agents": [
+      "Wage Earners: Primary victims (powerless/trapped) \u2014 wages erode in real terms as inflation advances; cannot exit national currency without expatriation",
+      "Savers: Primary victims (powerless/trapped) \u2014 nominal savings lose purchasing power systematically through inflation; alternative stores of value (foreign currency, commodities) are suppressed by capital controls and regulatory barriers",
+      "Monetary Authority (Central Bank): Primary beneficiary (institutional/arbitrage) \u2014 captures seigniorage and inflation tax; controls policy levers for countercyclical intervention",
+      "First Issuers (Governments, Banks): Secondary beneficiary (institutional/arbitrage) \u2014 issue debt at low real rates before inflation sets in; benefit from credit expansion enabled by fiat",
+      "Debtor Class: Secondary victim/beneficiary (moderate/constrained) \u2014 nominal debt is inflated away (benefit) but originating lenders captured early benefits (extraction); constrained by debt obligations",
+      "Organized Creditor Class (Pension Funds, Insurers): Moderate beneficiary (organized/mobile) \u2014 can hedge inflation through derivatives and foreign currency strategies; extract through financial engineering while enjoying coordination benefits",
+      "Gold Standard Legacy: Vestigial perspective (institutional/arbitrage) \u2014 historical artifacts (gold reserves, sound money rhetoric) maintained through institutional inertia despite lack of functional role",
+      "Digital Currency Reformers: Organized agents (organized/constrained) \u2014 view fiat regime as temporary failure being solved by blockchain, CBDC, and decentralized finance; building alternative payment infrastructure"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The fiat regime extracts real value through seigniorage (central bank profits from money creation), inflation tax (savers' purchasing power erosion), and first-issuer advantage (early borrowers benefit from low real rates before inflation). However, extraction is not as severe as historical commodity-based extraction systems \u2014 fiat currency enables genuine coordination benefits (credit expansion, countercyclical policy, deficit financing for public investment). The moderate value reflects the mixed nature of the regime. Suppression (0.65): Moderate-high. Significant barriers to exit from fiat currency include capital controls (suppressing foreign currency holdings), regulatory restrictions on alternative currencies (cryptocurrency restrictions, commodity restrictions), financial repression (negative real interest rates), and narrative dominance (fiat presented as natural, not contingent). But suppression is not absolute \u2014 wealthy agents can access foreign currencies, crypto, and commodity hedges; organized actors can use derivatives for inflation hedging. Theater ratio (0.58): Moderate. Central bank communication emphasizes rule-based policy, inflation targets, and prudent management, creating theatrical appearance of constraint. But the reality is discretionary policy responsive to fiscal pressure and political cycles. The theater has increased over time as central banks have adopted increasingly elaborate communication frameworks (forward guidance, macroprudential tools) that create appearance of complexity and constraint while maintaining discretionary authority.",
+    "perspectival_gap": "This constraint demonstrates remarkable perspectival divergence. Wage earners and savers see pure Snare \u2014 trapped, extractive, with no exit option and declining real value. The monetary authority sees pure Rope \u2014 a coordination mechanism enabling flexible policy and growth. Debtors see Tangled Rope \u2014 inflation reduces their real burden (benefit) but lenders captured early advantages (extraction). The organized creditor class sees low-extraction Tangled Rope \u2014 they have hedging tools and can arbitrage. Gold standard adherents see Piton \u2014 vestigial commitments (reserve requirements, rhetoric) maintained through inertia despite loss of function. Digital currency reformers see Scaffold \u2014 a temporary coordination failure being replaced by programmable alternatives. The analytical observer risks seeing Mountain \u2014 fiat currency as an inherent feature of modern economies \u2014 but the structural data reveals this as a false summit. The perspectival gap is driven by differential exit options: trapped agents see Snare; mobile agents see Rope or Tangled Rope; organized agents see Scaffold.",
+    "directionality_logic": "Wage earners: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Savers: Victims + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Monetary authority: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary. First issuers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary. Debtor class: Mixed (beneficiary of inflation reduction of nominal debt, victim of originating lender advantage) + constrained \u2192 d\u22480.55, f(d)\u22480.75. Mixed extraction. Organized creditor class: Partial beneficiary (profit from financial engineering) + mobile \u2192 d\u22480.40, f(d)\u22480.40. Low effective extraction due to hedging capacity. Digital reformers: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction; coalition has agency. The directionality chain reveals how the fiat regime's distributional characteristics follow from the differential exit options of trapped vs mobile agents.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The fiat currency regime is classified as Tangled Rope at the base level (\u03b5=0.38, suppression=0.65, requires_active_enforcement=true, beneficiaries=[monetary_authority, first_issuers, debt_holders], victims=[wage_earners, savers, inflation_displaced]), meaning it combines genuine coordination benefits (credit expansion, policy flexibility, countercyclical intervention) WITH asymmetric extraction (seigniorage, inflation tax, first-issuer advantage). The mandatrophy is resolved by recognizing that fiat currency serves two structural functions simultaneously: (1) enabling credit-based growth and monetary policy coordination, which is genuinely beneficial for collective investment and macroeconomic stabilization; and (2) concentrating distributional gains among issuers and early borrowers while imposing costs on savers and wage earners. These are not contradictory \u2014 the regime is both coordination AND extraction. The perspectival divergence (victims see Snare; beneficiaries see Rope) arises from different structural positions, not from measurement error. Mandatrophy is resolved by showing that the regime's legitimacy depends on whether the coordination benefits exceed the extraction costs \u2014 an empirical question about growth, employment, and investment outcomes relative to alternative monetary systems, not a classification question."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "inflation_expectations",
+      "debt_overhang",
+      "financial_repression",
+      "currency_hierarchy"
+    ],
+    "dual_formulation_note": "The sovereign fiat currency regime decomposes into multiple downstream constraints: (1) inflation expectations formation (coordination problem in belief alignment), (2) debt overhang (extraction through nominal creditor advantage), (3) financial repression (suppression of real returns to savers), (4) currency hierarchy (global reserve currency dominance by fiat regimes). The base constraint (monetary_regime_transition) models the structural properties of the regime itself; the downstream constraints model specific mechanisms through which extraction occurs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

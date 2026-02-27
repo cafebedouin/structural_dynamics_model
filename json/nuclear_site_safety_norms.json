@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "nuclear_site_safety_norms",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nssn"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "International Nuclear Site Non-Proliferation and Safety Norms",
+    "topic_domain": "geopolitical/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_operator_states",
+      "civilian_populations_near_plants"
+    ],
+    "victims": [
+      "militarily_weaker_states",
+      "non_nuclear_threshold_states"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-Nuclear Threshold State Under Hegemonic Pressure",
+      "comment": "PERSPECTIVE 1: NON-NUCLEAR THRESHOLD STATE (SNARE) \u2014 A militarily weaker state adjacent to a nuclear-armed neighbor faces maximum extraction under the norm. It cannot build nuclear deterrent (violates international pressure), cannot attack nuclear sites (universal norm suppression), and cannot exit the asymmetric military relationship. The constraint enforces structural vulnerability. Full experienced extraction \u2014 trapped in asymmetric power relationship with zero alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Operator State with Regional Nuclear Assets",
+      "comment": "PERSPECTIVE 2: OPERATOR STATE WITH REGIONAL NUCLEAR ASSETS (TANGLED ROPE) \u2014 A state with nuclear plants experiences mixed extraction and coordination. The norm protects its plants from attack (genuine coordination benefit: mutual security), but also constrains its military options and reduces deterrent credibility in regional conflicts. Constrained exit \u2014 state can pursue limited conventional deterrence but not nuclear escalation. Significant but not total extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "IAEA and International Monitoring Regime",
+      "comment": "PERSPECTIVE 3: IAEA AND INTERNATIONAL MONITORING REGIME (ROPE) \u2014 The institutional enforcement apparatus experiences the norm as pure coordination: IAEA inspections, Non-Proliferation Treaty, and verification protocols solve the collective action problem of verifying compliance without enforcement wars. Institutional actors with arbitrage options (inspectors, diplomats, verification specialists) benefit from the norm's coordination function. Low or negative effective extraction \u2014 the regime captures institutional authority and legitimacy through norm maintenance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Anti-Nuclear Civil Society Movement",
+      "comment": "PERSPECTIVE 4: ANTI-NUCLEAR CIVIL SOCIETY (SCAFFOLD) \u2014 Organized anti-nuclear movements (Greenpeace, International Physicians for Prevention of Nuclear War, etc.) see the norm as temporary protection while underlying nuclear dependence is phased out. The constraint has a sunset: decarbonization via renewables would eliminate nuclear sites and the attack-surface entirely. Theater ratio is moderate-high (performative arms-control rhetoric masks continuing nuclear expansion); sunset clause is genuine (energetic transition pathways exist). Organized agents have constrained exit via policy advocacy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Cold War Verification Apparatus",
+      "comment": "PERSPECTIVE 5: COLD WAR VERIFICATION APPARATUS (PITON) \u2014 The institutional machinery that emerged from Cold War arms control (on-site inspection protocols, mutual assured destruction verification, technical confidence-building measures) persists substantially through inertia. Many inspection protocols and treaty structures remain performative theater \u2014 they provide political reassurance rather than genuine verification capability. Theater ratio is high because modern verification increasingly relies on commercial satellite data rather than treaty-mandated inspections. The apparatus is degraded but maintained because alternatives (unilateral security, coalition verification) haven't fully replaced it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physics and Consequence View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICS AND CONSEQUENCE VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, the constraint might appear as a natural law: nuclear weapons make nuclear sites inherently vulnerable military targets, and the only stable outcome is a norm against attacking them (prisoner's dilemma equilibrium). However, the structural data reveals this as a false summit \u2014 the norm is enforced through geopolitical hierarchy and military imbalance, not through physics. If states had equal nuclear capability, the strategic logic changes entirely. The 'immutable necessity' framing naturalizes a contingent power structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "norm_vs_power_asymmetry",
+      "question": "Is the nuclear site safety norm a genuine coordination mechanism that benefits all parties, or does it primarily lock in military asymmetry favoring nuclear-armed states?",
+      "resolution_mechanism": "Comparative analysis of: (a) security gains for non-nuclear states from norm stability vs. deterrence losses from inability to threaten nuclear infrastructure; (b) strategic doctrine evolution in threshold states post-norm; (c) conflict outcome analysis comparing norm-compliant and norm-violating scenarios",
+      "impact": "If genuine coordination: all perspectives should converge toward Rope at some context parameters. If power-locking: non-nuclear and weak-state perspectives remain Snare even at institutional/organized levels.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether norm provides mutual security coordination or locks in military hierarchy"
+    },
+    {
+      "id": "iaea_verification_sufficiency",
+      "question": "Does IAEA inspection regime provide genuine verification of non-military use of nuclear materials, or is the inspection process substantially performative (theater) given limited access and technical constraints?",
+      "resolution_mechanism": "Historical analysis of IAEA catches vs. undetected military programs (Iran pre-2015, North Korea timeline); assessment of inspection frequency vs. detection capability; comparison of IAEA findings to subsequent declassified intelligence on actual non-compliance",
+      "impact": "If verification is genuine: theater_ratio should be lower (~0.35). If substantially performative: theater_ratio justified at 0.58+.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether IAEA inspections provide genuine verification capability"
+    },
+    {
+      "id": "retaliation_threshold_clarity",
+      "question": "What defines 'attack on nuclear site'? Is the norm about kinetic strikes on reactors, or does it extend to cyberattacks, sabotage, and infrastructure disruption? Ambiguity in the threshold affects enforcement credibility.",
+      "resolution_mechanism": "Legal analysis of treaty language; review of UN General Assembly resolutions on nuclear site protection; case study analysis of incidents (Stuxnet, Syrian reactor strike) and international response patterns",
+      "impact": "If threshold is clear and narrow (kinetic only): norm is easier to enforce, suppression higher, extractiveness lower. If threshold is vague: ambiguity increases military temptation, suppression lower, extractiveness higher.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definitional clarity of what constitutes prohibited attack on nuclear site"
+    },
+    {
+      "id": "nuclear_phase_out_timeline",
+      "question": "How credible is the energetic transition away from nuclear power? If renewable energy and storage costs continue declining, will nuclear dependency actually decline, enabling the Scaffold sunset clause?",
+      "resolution_mechanism": "Techno-economic analysis of renewable + storage LCOE trajectory; policy commitments from major nuclear operators (France, Germany, Japan) and threshold states; sensitivity analysis on capital cost learning curves",
+      "impact": "If transition is credible (post-2050): Scaffold perspective has structural validity; norm is genuinely temporary. If transition stalls: Scaffold is aspirational rather than structural; constraint calcifies at current extraction levels.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Credibility of nuclear phase-out enabling norm sunset"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The international norm against military attacks on nuclear power sites represents a geopolitical constraint operating simultaneously as coordination mechanism and power-locking extraction system. The norm emerged from the mutually recognized danger of nuclear accidents and the shared interest in predictable coexistence (coordination logic: 'we won't attack your plants if you won't attack ours'). However, the norm's enforcement mechanisms and structural consequences reveal significant asymmetry: nuclear-armed states benefit from a rule prohibiting attacks on their critical infrastructure, while non-nuclear states are prevented from using nuclear facilities as military leverage and locked into conventional military inferiority. The constraint exhibits the six DR types across different observational contexts, making it a diagnostic case for how geopolitical rules embed power relationships. The theater_ratio increase from 0.42 to 0.58 reflects the growing performative character of IAEA verification as inspection access has become more restricted and cyberattacks have created attack vectors beyond traditional kinetic monitoring. The extractiveness increase from 0.38 to 0.52 tracks the accumulating asymmetry as more states approach nuclear capability while remaining norm-bound.",
+    "key_agents": [
+      "Non-Nuclear Threshold States: Primary victims (powerless/trapped) \u2014 cannot build deterrent, cannot threaten nuclear infrastructure, face asymmetric vulnerability",
+      "Nuclear Operator States: Primary beneficiary (moderate/constrained) \u2014 gain protection for civilian and military nuclear infrastructure; experience constrained military options",
+      "IAEA and International Monitoring Regime: Institutional beneficiary (institutional/arbitrage) \u2014 captures verification authority and norm-maintenance legitimacy; inspectors and diplomats gain professional roles",
+      "Nuclear-Armed States (P5 + Others): Secondary beneficiary (powerful/arbitrage) \u2014 benefit from norm preventing attacks on military nuclear sites; maintain deterrent credibility",
+      "Anti-Nuclear Civil Society: Organized agent (organized/constrained) \u2014 view norm as temporary protection during transition to renewables; advocate for sunset clause via policy change",
+      "Cold War Verification Apparatus: Institutional actor (institutional/arbitrage) \u2014 persists through inertia; increasingly performative as cyberattacks and satellite surveillance change technical landscape",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing geopolitical hierarchy as immutable consequence of physics"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting the dual nature of the constraint. For nuclear operator states, extractiveness is lower (~0.30) because they genuinely benefit from mutual site protection. For non-nuclear threshold states, extractiveness is very high (~0.75) because the norm prevents them from using nuclear infrastructure as deterrent while offering no security gain. The aggregate value (0.52) reflects the population-weighted average: many nuclear operator states exist, but the structural asymmetry for threshold states drives the mean upward. The trend toward higher extractiveness (0.38\u21920.52) reflects the increasing number of states approaching nuclear threshold without the ability to break the norm. Suppression (0.68): High. Multiple mechanisms suppress alternatives: (1) international law (Non-Proliferation Treaty, UN General Assembly resolutions); (2) economic sanctions targeting nuclear-capable states; (3) military coercion (threat of preventive strikes on nuclear programs); (4) technical barriers (monitoring and export controls); (5) reputational cost (diplomatic isolation). But suppression is not total (~0.80) because some states have pursued covert programs and some explicit challenges to the norm exist. Theater ratio (0.58): Moderate-high. IAEA inspections provide genuine verification in many cases, but access restrictions, technical limitations, and reliance on commercial satellite imagery (rather than treaty-mandated on-site inspection) have increased performative content. The theater increased from 0.42 to 0.58 as cyber-attack vectors emerged (Stuxnet 2009, ICS compromises) that inspection protocols don't detect.",
+    "directionality_logic": "Directionality values (d) reflect each agent's structural position relative to the extraction flow. Non-nuclear threshold states have d \u2248 0.90 (full targets): they face maximum suppression, zero arbitrage options, trapped exit \u2014 the sigmoid f(d) produces high experienced extractiveness. Nuclear operator states have d \u2248 0.45 (near-symmetric): they both benefit (site protection) and bear costs (military constraints), mobile exit options via treaty withdrawal, organized power \u2014 produces moderate experienced extractiveness. The IAEA and monitoring regime have d \u2248 0.15 (beneficiary): they capture institutional authority, have arbitrage options (inspection contracts, technical expertise), and experience negative effective extraction (they are subsidized by the norm). The Cold War apparatus has d \u2248 0.20 (slight beneficiary): persistence through inertia suggests some constituency benefits; but degradation (piton status) indicates the beneficiary groups are themselves weakening. Anti-nuclear civil society has d \u2248 0.55 (slightly victimized): they lack exit options (policy change requires international consensus) but also lack full trapment (they can advocate, protest, and build alternative movements). The directionality derivation shows why the constraint classifies as Tangled Rope rather than pure Snare: multiple agent types experience it differently, ranging from pure coordination (IAEA) to pure extraction (threshold states), with net asymmetric extraction requiring active enforcement.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The IAEA and monitoring institutions see Rope (pure coordination solving collective verification problems). Nuclear operator states see mixed Tangled Rope (protection + constraint). Non-nuclear threshold states see Snare (pure extraction with no exit). Anti-nuclear movements see Scaffold (temporary constraint with a sunset via energetic transition). The Cold War apparatus sees itself as degraded Piton (performative rather than functional). The civilizational analytical observer risks seeing Mountain (naturalized physics of nuclear deterrence requiring site protection) when the structural data reveals contingent geopolitical hierarchy. The perspectival gap arises from the radically different exit options and structural positions: agents with arbitrage options (institutions, powerful states) experience coordination; agents with trapped exits experience extraction.",
+    "mandatrophy_analysis": "The mandatrophy question for this constraint is: 'Does the norm primarily solve a collective action problem (pure coordination that all parties benefit from) or does it primarily lock in geopolitical hierarchy (extraction masked as coordination)?' The constraint resolves this by explicitly declaring beneficiaries (nuclear operator states, IAEA) and victims (non-nuclear threshold states, militarily weaker neighbors). The presence of both genuine coordination (IAEA verification, mutual site protection) and asymmetric extraction (preventing threshold states from using nuclear leverage) classifies it as Tangled Rope, not as pure Rope or pure Snare. The mandatrophy is avoided by recognizing that the indexical context matters: from the IAEA's perspective, it's Rope; from a threshold state's perspective, it's Snare. The constraint doesn't collapse to a single type because the structural data supports multiple readings. The classification 'Tangled Rope at the institutional/global context' represents the meta-level fact that the norm serves both coordination and extraction simultaneously, with the balance depending on observer position."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nuclear_weapons_proliferation_prevention",
+      "uranium_export_controls",
+      "international_iaea_authority"
+    ],
+    "dual_formulation_note": "The nuclear site safety norm decomposes into three structurally distinct constraints: (1) prevention of military attacks on civilian/military reactors (this story, \u03b5\u22480.52); (2) prevention of nuclear weapons proliferation via access to fissile material (\u03b5\u22480.65, higher extraction); (3) IAEA institutional authority and verification regime (\u03b5\u22480.35, lower extraction). These share enforcement mechanisms but have different beneficiaries and victims. The proliferation prevention constraint has higher extractiveness because it prevents threshold states from accessing technology; the site safety norm has moderate extractiveness because it offers genuine mutual protection."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium-high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "uranium_export_controls",
+      "nuclear_weapons_proliferation_prevention"
+    ]
+  }
+}

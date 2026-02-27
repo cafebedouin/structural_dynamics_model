@@ -1,0 +1,225 @@
+{
+  "header": {
+    "constraint_id": "oral_glp1_market_access",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Patent-Protected Market for Oral GLP-1 Agonists",
+    "topic_domain": "economic/technological/healthcare",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_patent_holder",
+      "prescribing_physicians",
+      "patients_with_coverage"
+    ],
+    "victims": [
+      "cost_bearing_patients",
+      "healthcare_payers",
+      "generic_manufacturers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uninsured Patient",
+      "comment": "PERSPECTIVE 1: UNINSURED PATIENT (SNARE) \u2014 Faces list prices of $1,000-1,500/month with no coverage pathway. Cannot access the effective treatment, cannot negotiate, cannot exit. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. Pure extraction: trapped paying customer facing maximum extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Insured Patient",
+      "comment": "PERSPECTIVE 2: INSURED PATIENT (TANGLED ROPE) \u2014 Benefits from access to effective treatment; coordination function exists (insurance risk-pooling enables treatment). But constrained by formulary restrictions, prior authorization, high copays. d\u22480.62, f(d)\u22480.82, \u03c3=1.0 \u2192 \u03c7\u22480.48. Mixed: genuine coordination benefit offset by extraction via cost-sharing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Patent protection enables price-setting, but also solves genuine coordination problem: funding R&D for rare/difficult diseases requires margin capture. Experiences constraint as coordination mechanism and legitimate property right. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary through arbitrage exit (can divest, license, sell to other manufacturers)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Healthcare Payers (Insurance Systems)",
+      "comment": "PERSPECTIVE 4: HEALTHCARE PAYERS (TANGLED ROPE) \u2014 Organized agents (Medicare, Medicaid, commercial insurers) benefit from formulary leverage negotiation but are constrained by patent enforcement and public demand for access. d\u22480.58, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.44. Hybrid: genuine negotiation coordination offset by extraction through brand premium pricing."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Generic Manufacturers",
+      "comment": "PERSPECTIVE 5: GENERIC MANUFACTURERS (SNARE) \u2014 Patent exclusivity (typically 20 years from filing) prevents market entry despite capability to produce identical drug at 10-20% of brand price. Trapped by legal barrier; extraction mechanism is foreclosure. d\u22480.87, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.73. Strong snare: economic capability exists but market access is prohibited."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Generic Regulatory Pathway Coalition",
+      "comment": "PERSPECTIVE 6: GENERIC PATHWAY COALITION (SCAFFOLD) \u2014 Organized actors (FDA generic division, international generic manufacturers, health equity advocates) are building parallel pathways: biosimilar approvals, patent challenge mechanisms (Paragraph IV), international generic access in non-patent-enforcing jurisdictions. These pathways have sunset logic \u2014 they will erode patent value after exclusivity expires or via legal challenge. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.12. Low effective extraction; coalition has clear agency and structural exit path."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Prescribing Physicians",
+      "comment": "PERSPECTIVE 7: PRESCRIBING PHYSICIANS (ROPE) \u2014 Benefit from effective therapeutic tool and manufacturer-funded education; coordinate treatment access. Powerful + mobile: can recommend alternative treatments, can discuss costs, can prescribe generics when available. d\u22480.25, f(d)\u22480.18, \u03c3=1.0 \u2192 \u03c7\u22480.10. Low extraction: genuine coordination benefit with real exit options."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Patent System Institutional Structure",
+      "comment": "PERSPECTIVE 8: PATENT SYSTEM (PITON) \u2014 Patent protection persists through institutional inertia despite degraded primary function (incentivizing innovation is real; excluding generics after peak development cost recovery is rent extraction, not innovation incentive). theater_ratio=0.55 (moderate). The patent exclusivity ritual is maintained but increasingly challenged by price controls, parallel imports, and compulsory licensing in developing countries. d\u22480.10, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.03. Piton because theatrical component (term length) exceeds functional component."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Innovation vs Access Trade-off)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Civilizational view reveals genuine tension: patent protection does fund pharmaceutical R&D (coordination function), but pricing power extracts from patients (asymmetric extraction). \u03b5=0.58 reflects this hybrid nature. Neither pure coordination (rope) nor pure extraction (snare) captures the structural duality. d\u22480.70, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.75. Analytical classification confirms tangled_rope as the primary type."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "innovation_incentive_threshold",
+      "question": "What patent term length and margin level is necessary to fund breakthrough pharmaceutical R&D vs what level constitutes rent extraction unrelated to innovation incentives?",
+      "resolution_mechanism": "Comparative analysis of R&D pipeline economics; correlation between patent term/margin and R&D spend by therapeutic area; case studies of drugs developed under different incentive regimes",
+      "impact": "If necessary margin is <30% above generic production cost: current pricing is rent extraction (snare from all perspectives). If necessary margin is >50%: current pricing may be justified (rope from analyst perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "R&D funding threshold for innovation incentives"
+    },
+    {
+      "id": "global_price_arbitrage_sustainability",
+      "question": "Can international price discrimination (low-income countries pay 10-15% of US price) be sustained indefinitely or does it erode patent value through re-importation and gray markets?",
+      "resolution_mechanism": "Market analysis of parallel import flows; tracking of generic penetration in high-price vs low-price regions; assessment of manufacturer enforcement costs",
+      "impact": "If unsustainable: patent protection is structurally weakening (scaffold sunset logic confirmed). If sustainable: price discrimination mitigates extraction harm globally (snare perspective weakened).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sustainability of global price arbitrage under patent protection"
+    },
+    {
+      "id": "biosimilar_pathway_efficacy",
+      "question": "Will FDA/EMA biosimilar approval pathways for GLP-1 agonists create genuine price competition before patent expiration or do regulatory barriers maintain effective monopoly?",
+      "resolution_mechanism": "Tracking biosimilar approvals; price measurement post-approval; market share analysis; manufacturing capacity assessment",
+      "impact": "If biosimilars achieve >20% market share pre-expiration: scaffold pathway is functioning, generic manufacturer snare is partially escaped. If <5% market share: regulatory barriers maintain snare structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Efficacy of biosimilar pathway in creating price competition"
+    },
+    {
+      "id": "public_manufacturing_feasibility",
+      "question": "Could government-operated or nonprofit manufacturing facilities produce oral GLP-1 agonists at 20-30% of current prices while maintaining sufficient quality and supply?",
+      "resolution_mechanism": "Cost analysis of manufacturing facilities; production capacity modeling; quality control benchmarking; case studies of existing public/nonprofit drug manufacturing",
+      "impact": "If feasible: structural alternative exists (institutional-level snare escape pathway). If not feasible: extraction mechanism is tied to genuine production complexity (snare is more defensible).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of public pharmaceutical manufacturing as snare escape"
+    },
+    {
+      "id": "patent_challenge_success_rates",
+      "question": "What is the empirical success rate of Paragraph IV patent challenges for pharmaceutical patents, and how much do successful challenges accelerate generic entry?",
+      "resolution_mechanism": "FDA/PTAB case law analysis; timeline from challenge filing to generic approval; market share post-generic-entry; cost of litigation",
+      "impact": "If success rate >40% and generic entry <3 years post-challenge: scaffold pathway is real and accessible. If <20% success rate or >5 years to entry: pathway is theoretical, not structural.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Patent challenge pathway efficacy and timeline"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The patent-protected market for oral GLP-1 agonists (exemplified by oral semaglutide) represents a complex structural constraint combining genuine pharmaceutical innovation coordination with significant patient-level extraction. The underlying drug discovery (GLP-1 receptor agonism for weight loss) is real and valuable \u2014 decades of academic research plus substantial private R&D investment enabled the oral formulation. However, patent protection enables pricing that ranges from justified innovation incentive to rent extraction depending on the observer's structural position. This constraint exhibits the full range of DR types: uninsured patients experience pure snare (trapped, no access); insured patients experience tangled rope (coordination benefit offset by cost-sharing and access restrictions); the manufacturer experiences rope (legitimate innovation reward); generic manufacturers experience snare (legal foreclosure); healthcare payers experience tangled rope (negotiation leverage constrained by patent enforcement); organized generic/biosimilar pathways experience scaffold (sunset logic via patent expiration); physicians experience rope (effective therapeutic tool); the patent system itself exhibits piton characteristics (institutional inertia maintaining exclusivity beyond optimal innovation incentive). The theater ratio is low (0.42) \u2014 this constraint relies primarily on legal enforcement (patent law) rather than performative legitimacy, distinguishing it from constraints like peer review or traditional banking secrecy. Extractiveness has risen from 0.35 to 0.58 over 8 years as the drug gained market dominance and insurance coverage expanded, revealing that extraction intensity correlates with market penetration and public demand rather than production complexity.",
+    "key_agents": [
+      "Pharmaceutical Manufacturer: Primary beneficiary (institutional/arbitrage) \u2014 captures pricing power during patent term; coordinates drug development and distribution",
+      "Uninsured Patients: Primary victim (powerless/trapped) \u2014 face list prices of $1,000-1,500/month with no coverage or negotiation pathway",
+      "Insured Patients: Secondary victim (moderate/constrained) \u2014 benefit from treatment access but constrained by formulary restrictions and cost-sharing",
+      "Healthcare Payers: Organized beneficiary and victim (organized/constrained) \u2014 negotiate discounts but constrained by patent enforcement and public demand",
+      "Generic Manufacturers: Victim through foreclosure (moderate/trapped) \u2014 have technical capability to produce identical drug but are legally barred by patent protection",
+      "Prescribing Physicians: Beneficiary through therapeutic access (powerful/mobile) \u2014 coordinate treatment decisions with minimal extraction burden",
+      "Patent System: Institutional mediator (institutional/arbitrage) \u2014 enforces exclusivity; exhibits piton characteristics (maintenance through inertia)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high, rising over interval. The baseline extraction (0.35) reflects legitimate R&D cost recovery \u2014 oral formulation development required substantial investment. The rise to 0.58 reflects that pricing power now exceeds what innovation incentive justifies: the drug has passed peak development cost recovery (typically 5-7 years post-launch), yet prices remain elevated due to market dominance and insurance coverage expansion. The extractiveness is not as high as a pure rent-extraction constraint (which would be 0.70+) because some margin still funds legitimate R&D for follow-on indications and next-generation formulations. Suppression (0.68): Moderately high. Barriers to alternative treatment access include patent protection (legal suppression), high cost (economic suppression), insurance formulary restrictions (bureaucratic suppression), and physician prescribing inertia. However, suppression is not maximal because generic pathway alternatives exist (Paragraph IV challenges, biosimilar approvals, patent expiration in 8-12 years). Theater ratio (0.42): Low. Patent enforcement is primarily legal/structural, not performative. The constraint does not require theatrical legitimacy \u2014 it operates through property law, not through cultural narrative or ritual. The modest theater component reflects marketing/education activities by the manufacturer but these are secondary to the patent enforcement mechanism.",
+    "perspectival_gap": "This constraint produces the full spectrum of types because the structural extraction is asymmetric across power levels. The powerless uninsured patient sees snare: trapped by cost and legal barriers with no exit. The moderate insured patient sees tangled rope: genuine coordination benefit (insurance risk-pooling enables access) offset by extraction (cost-sharing, access restrictions). The institutional manufacturer sees rope: legitimate property right and innovation reward; coordination function is real (patent incentivizes drug development). The organized healthcare payers see tangled rope: negotiation leverage constrained by patent enforcement; some patients benefit, others are excluded. Generic manufacturers see snare: pure legal foreclosure despite technical capability. The analytical observer sees tangled rope: genuine innovation coordination tension with patient access extraction. The perspectival gap is driven by power differences (institutional actors can exit or arbitrage; powerless actors cannot) and structural position (beneficiary vs victim of patent enforcement). No perspective produces rope + rope or snare + snare \u2014 the structural asymmetry forces distributed classification across the type spectrum.",
+    "directionality_logic": "Uninsured patient: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. Insured patient: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.82. Significant extraction but not trapped (can switch to generics, alternative therapies if available). Manufacturer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; can divest, license, or face price controls without collapse. Healthcare payers: Victim + constrained + beneficiary (dual role) \u2192 d\u22480.58, f(d)\u22480.75. Can negotiate discounts but constrained by patent enforcement and public demand. Generic manufacturers: Victim + trapped \u2192 d\u22480.87, f(d)\u22481.25. Legal barrier is more durable than economic barrier. Physicians: Beneficiary + mobile \u2192 d\u22480.25, f(d)\u22480.18. Real therapeutic benefit; can recommend alternatives, discuss costs. Patent system: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Piton classification (degraded function) rather than snare because the institutional structure has agency (Congress could reform patent terms; courts could restrict pharmaceutical patents).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by separating innovation coordination (rope function) from patient access extraction (snare function). The manufacturer's rope perspective is legitimate: patent protection does fund R&D, and the innovation-incentive mechanism is real. The uninsured patient's snare perspective is also legitimate: pricing power at current levels exceeds what innovation justifies, and cost barriers prevent access despite technical feasibility of supply. The constraint is NOT mislabeled as pure extraction (which would erase the innovation coordination function), nor is it pure coordination (which would erase the patient-level extraction). The tangled_rope classification at the analytical level captures both: the constraint has genuine coordination function (pharmaceutical innovation) AND asymmetric extraction (patient access barriers). The mandatrophy is resolved by recognizing that both are structurally true: the same mechanism (patent protection) enables both innovation coordination AND patient extraction. The task for policy is not to choose which is 'real' but to calibrate the mechanism to maximize the coordination function while minimizing the extraction \u2014 e.g., via shorter patent terms for secondary indications, price controls in certain jurisdictions, or mandatory licensing triggers. The current level (\u03b5=0.58) suggests the extraction is growing beyond the innovation-incentive justification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "pharmaceutical_pricing_power",
+      "generic_drug_market_entry",
+      "healthcare_insurance_formulary_control"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    }
+  ]
+}

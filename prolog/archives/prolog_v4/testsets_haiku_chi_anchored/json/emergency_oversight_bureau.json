@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "emergency_oversight_bureau",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eob"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.45,
+    "theater_ratio": 0.6,
+    "claimed_type": "scaffold",
+    "human_readable": "The Crisis Scaffold: Emergency Oversight Bureau",
+    "topic_domain": "political/crisis_administration",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "affected_population",
+      "coordinating_agencies"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Affected Population",
+      "comment": "PERSPECTIVE 1: AFFECTED POPULATION (SCAFFOLD) \u2014 Constrained by dependency on emergency services during crisis phase. Experiences bureau as temporary coordination mechanism with explicit sunset. Theater ratio declines as crisis subsides and normal governance returns. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.21. Suppression high during acute phase but declining toward zero as recovery progresses."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Coordinating Agencies Network",
+      "comment": "PERSPECTIVE 2: COORDINATING AGENCIES (SCAFFOLD) \u2014 Organized actors (FEMA, state emergency management, local authorities) see bureau as legitimate temporary coordination mechanism. Suppression arises from resource concentration and command hierarchy during crisis but designed to decrease as crisis resolves. Theater ratio starts high (emergency protocols are performative) but declines. d\u22480.45, f(d)\u22480.55, \u03c3=1.0 \u2192 \u03c7\u22480.15. Sunset clause ensures agencies regain normal jurisdictional autonomy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Bureau Leadership (Executive Authority)",
+      "comment": "PERSPECTIVE 3: BUREAU LEADERSHIP (TANGLED ROPE) \u2014 Powerful institutional actors (director, deputy coordinators) experience coordination benefits (unified command, resource pooling) but also extraction benefits (expanded authority, emergency powers, operational independence from normal oversight). High theater ratio (0.60) reflects that emergency protocols mix genuine coordination with performative emergency procedure. d\u22480.20, f(d)\u22480.10, \u03c3=1.0 \u2192 \u03c7\u22480.03. Net beneficiary but extraction component visible."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Parent Government Structure",
+      "comment": "PERSPECTIVE 4: PARENT GOVERNMENT (ROPE) \u2014 Benefits from crisis offloading (delegated authority reduces political friction). Experiences bureau as pure coordination mechanism that centralizes decision-making to accelerate response. Sunset clause protects normal governance structure from permanent authority migration. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary through arbitrage (creates crisis response without restructuring permanent institutions)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Marginalized Subpopulations",
+      "comment": "PERSPECTIVE 5: MARGINALIZED SUBPOPULATIONS (SNARE) \u2014 Trapped populations (homeless, undocumented, institutionalized) have no exit from emergency systems. Bureau consolidates control over vital resources (shelter, food, medical access) without accountability to this population. Theater ratio high (humanitarian framing of emergency procedures). No sunset clause guarantees return of services to normal community structures. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.39. Hidden extraction: emergency authority used to restrict movement, deny due process, or enforce compliance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 Sees emergency bureaus as legitimate temporary administrative structures IF three conditions hold: (1) explicit sunset clause in founding legislation, (2) theater_ratio declining over interval (emergency performance yields to functional governance), (3) suppression explicitly designed to decrease toward normal baseline. This constraint satisfies all three. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.32. Classification depends entirely on sunset gate compliance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sunset_enforcement_mechanism",
+      "question": "What institutional mechanisms actually enforce sunset clause execution when political actors benefit from extended emergency authority?",
+      "resolution_mechanism": "Historical analysis of emergency bureau dissolutions; comparison of actual sunset dates with statutory dates; identification of extension mechanisms and their frequency",
+      "impact": "If enforcement weak: sunset is performative and constraint degrades to Snare or Tangled Rope. If enforcement strong: scaffold classification holds and theater_ratio decline is real.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether statutory sunset clauses are actually enforced against political pressure to extend"
+    },
+    {
+      "id": "suppression_baseline_recovery",
+      "question": "How much suppression (of normal rights, due process, movement) is inherent to crisis response versus what fraction can decline during recovery phase?",
+      "resolution_mechanism": "Measurement of emergency powers used during acute vs recovery phases; timeline analysis of rights restoration; comparative case studies of bureaus with similar crisis types",
+      "impact": "If > 80% of suppression reversible: scaffold classification holds. If < 50% reversible: suppression becomes structural and constraint shifts toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of emergency suppression that can be reversed as recovery proceeds"
+    },
+    {
+      "id": "coordination_benefit_distribution",
+      "question": "Do the coordination benefits of centralized emergency authority distribute equitably to all affected populations, or do marginalized groups experience pure extraction?",
+      "resolution_mechanism": "Analysis of resource allocation by demographic group; measurement of service quality disparities; tracking of coercive actions (detention, forced relocation, denial of due process) by population subgroup",
+      "impact": "If equitable: beneficiaries list includes all populations and constraint is true Scaffold for most perspectives. If inequitable: extraction concentrates on powerless and constraint is Snare from those perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether emergency coordination benefits distribute equitably across populations"
+    },
+    {
+      "id": "scope_boundary_mission_creep",
+      "question": "Do emergency bureau authorities remain scoped to the identified crisis or does mission creep expand scope beyond original justification?",
+      "resolution_mechanism": "Comparison of founding charter scope vs actual operations; tracking of authority expansion through executive directive vs legislative amendment; analysis of resource allocation to crisis-unrelated functions",
+      "impact": "If scope strictly maintained: scaffold classification stable. If mission creep occurs: extractiveness increases and theater_ratio remains high (emergency framing persists despite expanded mission).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether emergency bureau authorities expand beyond original crisis scope"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Emergency oversight bureaus exemplify the scaffold constraint type: temporary administrative bodies created to coordinate crisis response with explicit sunset clauses designed to restore normal governance. The constraint operates across six distinct institutional positions with fundamentally different structural relationships. For coordinating agencies and the affected population, the bureau represents legitimate temporary coordination that solves acute collective action problems (distributing emergency resources, unified command structure, rapid decision-making) while suppression and theater are designed to decline as the crisis subsides. For marginalized populations, however, the same bureau consolidates extractive power: emergency procedures restrict movement, deny due process, and concentrate control over vital services without accountability mechanisms. The parent government structure benefits from crisis offloading while avoiding permanent authority restructuring. Bureau leadership captures coordination benefits alongside expanded emergency authority that may persist beyond functional necessity. The critical gate for scaffold classification is the sunset clause: without explicit legislative sunset with enforcement mechanisms, the structure degrades toward a snare (extractive) or tangled rope (mixed coordination-extraction) constraint. Theater ratio serves as the key drift metric: declining theater_ratio toward normal governance baseline indicates genuine recovery; persistent or rising theater_ratio indicates mission creep or extraction normalization.",
+    "key_agents": [
+      "Affected Population: Primary beneficiary (moderate/constrained) \u2014 depends on emergency services; experiences constraint as temporary coordination with explicit endpoint",
+      "Coordinating Agencies: Organized beneficiary (organized/constrained) \u2014 benefit from centralized command structure; see bureau as legitimate temporary mechanism with sunset",
+      "Bureau Leadership: Institutional actor with dual role (powerful/mobile) \u2014 gains expanded authority and operational independence; benefits from coordination function but also from emergency powers extraction",
+      "Parent Government Structure: Institutional beneficiary (institutional/arbitrage) \u2014 offloads crisis management without permanent restructuring; maintains normal governance parallel track",
+      "Marginalized Subpopulations: Primary victim (powerless/trapped) \u2014 no exit from emergency systems; experience extraction disguised as humanitarian response; no guaranteed service restoration",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees constraint as legitimate IF sunset is enforced, theater declines, and suppression truly designed to decrease"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Moderate-low. Emergency bureaus have legitimate coordination functions (unified resource distribution, rapid decision-making, crisis communication) that justify some temporary authority concentration. The base extractiveness reflects that coordination benefits outweigh extraction in most scenarios, but latent extraction potential exists (emergency powers can be used coercively). Theater ratio (0.60): Moderate-high. Emergency protocols are substantially performative during acute crisis (sirens, briefings, emergency declarations create confidence) but decline as crisis subsides and routine governance replaces emergency procedure. Initial theater_ratio (0.75) declines toward 0.50 as recovery proceeds. Suppression (0.45): Moderate. Emergency authority necessarily restricts normal freedoms (movement restrictions, quarantine, curfews, commandeered resources) but suppression is designed to be temporary and crisis-scoped. The scaffold gate requires suppression to decline measurably over the recovery interval. Sunset clause (true): Mandatory gate requirement. Without explicit legislative sunset, the constraint degrades to snare (permanent extraction under emergency authority). Theater ratio declining over interval (true): Indicates genuine recovery rather than authority normalization. If theater persists above 0.65 past crisis resolution, mission creep is occurring.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival gap across power levels. Coordinating agencies and the general affected population see legitimate temporary coordination (Scaffold) with explicit sunset. Bureau leadership sees coordination benefits mixed with expanded authority (Tangled Rope). Parent government sees pure arbitrage benefit without permanent restructuring (Rope). Marginalized populations see extraction without access to coordination benefits (Snare) \u2014 emergency authority concentrates control over vital services without accountability. The analytical observer sees a true scaffold IF and ONLY IF sunset enforcement is credible, theater declines, and suppression truly decreases toward baseline. This gap is not perspectival disagreement but structural reality: the same bureau structure delivers different constraint types to different populations depending on their exit options and structural position.",
+    "directionality_logic": "Affected population: Benefits from coordination + constrained exit \u2192 d\u22480.55, f(d)\u22480.75. Experiences constraint as legitimate temporary support with sunset. Coordinating agencies: Beneficiary + constrained \u2192 d\u22480.45, f(d)\u22480.55. Organized actors see coordination function clearly and accept temporary authority concentration. Bureau leadership: Beneficiary + mobile \u2192 d\u22480.20, f(d)\u22480.10. High power and mobile exit create low d; net beneficiary through arbitrage of normal authority. Marginalized populations: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction potential; no exit from emergency systems; dependent on bureau-controlled resources. Analytical observer: neutral \u2192 d\u22480.72, f(d)\u22481.15. Classification depends on constraint properties (sunset enforcement, theater decline, suppression reversibility), not observer position. Overrides: none necessary. Structural derivation captures directionality accurately.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by the sunset clause gate: the constraint CANNOT be classified as scaffold without explicit statutory sunset with enforcement mechanisms. This prevents the false positive of misclassifying an indefinite extractive emergency authority as temporary coordination. The theater_ratio metric serves as the drift detection gate: if theater_ratio persists above 0.65 beyond the crisis recovery window, mission creep is indicated and the constraint transitions toward snare or tangled rope. The suppression metric must be designed to decline toward normal governance baseline; if suppression remains elevated during recovery phase, extraction normalization has occurred and the scaffold classification fails. The marginalized subpopulation snare perspective is NOT a mandatrophy failure \u2014 it reflects genuine structural reality that the same bureau delivers different constraint types to different populations. This is perspectival legitimacy, not constraint ambiguity. The true mandatrophy resolution is: (1) sunset clause is statutorily binding, (2) theater_ratio measurably declines, (3) suppression designed to decrease, and (4) coordination benefits distribute to all affected populations. If any gate fails, the constraint is not a true scaffold."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "emergency_authority_expansion",
+      "temporary_rights_suspension"
+    ],
+    "dual_formulation_note": "Emergency oversight bureaus may decompose into distinct constraints: (1) the coordination function (resource distribution, unified command) maps to pure rope or scaffold; (2) the extraction potential (emergency authority, suppression mechanisms, coercive control) maps to snare or tangled rope. This story unifies both dimensions. If decomposing, the coordination story would have \u03b5\u22480.15 (rope/scaffold), while the extraction story would have \u03b5\u22480.45+ (tangled rope/snare). The present story at \u03b5=0.28 reflects mixed coordination-extraction equilibrium."
+  },
+  "directionality_overrides": []
+}

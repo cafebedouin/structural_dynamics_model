@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "us_visa_lottery",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Diversity Visa Lottery",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "successful_visa_applicants",
+      "us_economy"
+    ],
+    "victims": [
+      "unsuccessful_applicants",
+      "potential_immigrants_from_other_countries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Unsuccessful Visa Applicants",
+      "comment": "Unsuccessful applicants, especially those with limited resources, face significant costs (application fees, opportunity costs) with no guarantee of success. Their options are limited and they are essentially trapped in a lottery system with a high chance of failure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Economy",
+      "comment": "The US economy benefits from the inflow of diverse talent and labor, contributing to economic growth and innovation. From this perspective, the lottery acts as a relatively efficient mechanism for attracting immigrants."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Successful Visa Applicants",
+      "comment": "Successful applicants benefit significantly, but are also constrained by the requirements of immigration and integration into a new society. The lottery provides opportunity, but also imposes obligations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the lottery combines coordination (attracting needed immigrants) with extraction (creating a system where many applicants lose time and money, while some win big). It represents a calculated balancing act."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_economic_impact",
+      "question": "What is the long-term economic impact of the diversity visa lottery on the US economy?",
+      "resolution_mechanism": "Economic modeling and longitudinal studies tracking the contributions of diversity visa recipients",
+      "impact": "If the long-term impact is significantly positive, the perspective shifts towards 'rope'. If neutral or negative, the perspective shifts towards 'snare'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the overall economic contribution of lottery immigrants"
+    },
+    {
+      "id": "fairness_of_selection",
+      "question": "Is the lottery selection process truly random and unbiased?",
+      "resolution_mechanism": "Independent audits and statistical analysis of the selection process.",
+      "impact": "If the process is biased, the perspective shifts towards 'snare' for those disadvantaged. If fair, the perspective remains 'tangled_rope'.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Evaluates the integrity of the randomization process"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The US Diversity Visa (DV) lottery offers 50,000 immigrant visas annually, drawn randomly from countries with historically low rates of immigration to the US. The program aims to diversify the immigrant population in the United States. However, the lottery system creates a situation where a large number of applicants face significant costs (application fees, document preparation, opportunity costs) with only a small chance of success. This creates a tension between the purported benefits of increased diversity and the extractive nature of a lottery system.",
+    "key_agents": [
+      "Successful Visa Applicants: Moderate benefits, constrained by immigration requirements",
+      "Unsuccessful Applicants: Powerless, trapped in a lottery system",
+      "US Economy: Institutional beneficiary of diverse talent",
+      "Potential Immigrants from Other Countries: Limited opportunities compared to DV countries"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The program extracts resources (application fees, preparation costs) from a large pool of applicants, most of whom are unsuccessful. The benefit concentrates among the successful applicants and the US economy. Suppression (0.70): High. The program restricts eligibility based on nationality, suppressing opportunities for individuals from countries with higher immigration rates to the US. Theater Ratio (0.30): Low. The actual selection process is relatively transparent and involves minimal performative elements.",
+    "perspectival_gap": "Unsuccessful applicants perceive the lottery as a snare due to the costs and low probability of success. The US economy perceives it as a rope because it efficiently attracts immigrants. Successful applicants view it as tangled rope because while they gain significant benefits, they are also constrained by the requirements of immigration. An analytical observer sees the complexity involved in a system with both extractive and coordinative elements.",
+    "directionality_logic": "Directionality reflects the relationship between each agent and the constraint. Unsuccessful applicants have a high 'd' value because they bear most of the costs. The US economy has a low 'd' value because it receives the benefits. Successful applicants have a moderate 'd' value because they experience both benefits and constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

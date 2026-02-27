@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "lula_hemisphere_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lula"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "The Monroe Doctrine Revival (Unilateral US Hegemony)",
+    "topic_domain": "political/international_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "united_states_security_establishment"
+    ],
+    "victims": [
+      "latin_american_sovereignty",
+      "global_multilateral_order",
+      "non_aligned_states"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Latin American Sovereignty (Trapped)",
+      "comment": "PERSPECTIVE 1: LATIN AMERICAN SOVEREIGNTY (SNARE) \u2014 Regional states face unilateral military intervention threat without credible exit or resistance. Suppression is total: no coalition of regional states can credibly deter US intervention; OAS mechanisms are captured; non-aligned alternatives (ALBA, CELAC) lack enforcement power. d\u22480.96, f(d)\u22481.43, \u03c3=0.9 \u2192 \u03c7\u22480.88. This is pure extraction with maximal coercion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Brazil (Regional Power with Constrained Exit)",
+      "comment": "PERSPECTIVE 2: BRAZIL (MODERATE/CONSTRAINED) \u2014 Brazil has greater power than smaller states but faces constrained exit: military intervention costs deter direct resistance, but economic retaliation and diplomatic isolation are credible threats. Lula's articulation of the Monroe Doctrine constraint signals this perception: Brazil sees the constraint but recognizes that confrontation carries unacceptable costs. d\u22480.78, f(d)\u22481.12, \u03c3=0.9 \u2192 \u03c7\u22480.61. High effective extraction via threat of escalation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Security Establishment (Primary Beneficiary)",
+      "comment": "PERSPECTIVE 3: US SECURITY ESTABLISHMENT (ROPE) \u2014 From the US perspective, the Monroe Doctrine serves coordination: it establishes the hegemon's sphere of influence, clarifies intervention thresholds, and prevents other powers from establishing competing spheres. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.08. Negative effective extraction: the constraint subsidizes US power by establishing unilateral dominance as normal and unchallengeable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Rising Powers (India, Indonesia, Nigeria)",
+      "comment": "PERSPECTIVE 4: RISING POWERS (TANGLED ROPE) \u2014 India, Indonesia, Nigeria and other powers see the Monroe Doctrine as a template for US-style hegemonic exclusion. The constraint coordinates their response (strengthening multipolarity, building alternative institutions) while extracting costs: the doctrine signals that established hegemons will not permit challengers in their regions. d\u22480.52, f(d)\u22480.68, \u03c3=1.2 \u2192 \u03c7\u22480.55. Mixed coordination (unifying opposition) and extraction (establishing precedent for unilateral spheres)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Law & Multilateralism (Degraded)",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL LAW & MULTILATERALISM (PITON) \u2014 The revival of the Monroe Doctrine reveals multilateralism as a degraded Rope. UN Charter principles (sovereign equality, non-intervention) remain the formal framework, but enforcement is purely theatrical: no mechanism exists to constrain a permanent Security Council member's military actions. The constraint persists through institutional inertia (remaining legalistic discourse, continued invocation of multilateral forums) despite manifest non-enforcement. theater_ratio=0.58 reflects this: formal legal language masks unilateral power. d\u22480.12, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03. Low effective extraction because institutional actors can arbitrage between the formal multilateral order and the underlying hegemonic reality."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Structural Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN?) \u2014 From a civilizational/universal perspective, one might argue that the Monroe Doctrine is an immutable consequence of power asymmetry: any hegemon naturally seeks to exclude competitors from its region; this is inherent to hegemonic stability theory, not a contingent choice. However, the structural data (\u03b5=0.68, suppression=0.72, theater=0.58) contradicts mountain classification. The engine will compute this as a false summit, revealing that the 'hegemony is natural' framing naturalizes what are actually contingent institutional arrangements (US military presence, CIA operations, economic coercion) and political choices (Trump administration's explicit Monroe Doctrine revival). A true natural law would require \u03b5 \u2264 0.25 and resistance \u2264 0.15."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coalition_formation_threshold",
+      "question": "At what regional coordination level can Latin American states credibly deter or resist unilateral US intervention?",
+      "resolution_mechanism": "Historical analysis of regional coalition-building (CELAC, ALBA, PROSUR); assessment of Venezuelan crisis response; credibility of joint defense commitments; military capability aggregation",
+      "impact": "If threshold < 3 states: regional opposition remains too fragmented to deter intervention (snare persists). If threshold > 5 states: coalition power becomes credible, shifting Latin American exit from trapped to constrained, potentially reclassifying as tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regional coalition threshold for credible deterrence"
+    },
+    {
+      "id": "us_strategic_pivot_commitment",
+      "question": "Is the US Monroe Doctrine revival a durable strategic commitment or a rhetorical artifact of particular administrations?",
+      "resolution_mechanism": "Longitudinal analysis of US military presence in Latin America across administrations; frequency and escalation of interventionist rhetoric; allocation of military resources to Southern Command; congressional authorization patterns for regional operations",
+      "impact": "If durable commitment: snare classification confirmed, suppression remains high. If rhetorical: suppression is overstated; constraint functions more as intimidation (lower actual enforcement), potentially reclassifying to tangled rope or scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of US strategic commitment to hegemonic enforcement"
+    },
+    {
+      "id": "china_russia_containment_credibility",
+      "question": "Can China and Russia provide sufficient countervailing security guarantees to Latin American states to make the Monroe Doctrine extractively unsustainable?",
+      "resolution_mechanism": "Assessment of Chinese military presence, Russian operational capacity in hemisphere, credibility of defense treaties, economic incentive structures; game-theoretic analysis of escalation costs vs hegemonic benefits",
+      "impact": "If countervailing power becomes credible: suppression drops significantly, exit options shift from trapped to constrained or mobile, extraction becomes unsustainable, constraint reclassifies to tangled rope or rope. If countervailing power remains limited: snare classification persists, suppression remains high.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Credibility of countervailing security guarantees"
+    },
+    {
+      "id": "global_multipolarity_threshold",
+      "question": "What level of multipolarity or regional autonomy makes unilateral hegemonic spheres structurally untenable?",
+      "resolution_mechanism": "Measurement of power distribution indices (Herfindahl, Polarity indices); assessment of regional organization effectiveness; analysis of precedent-setting effects (if Brazil successfully resists, do other regions follow?)",
+      "impact": "If threshold approaching: constraint begins degrading toward piton or scaffold (enforcement costs rising, theater rising as gap between stated rules and enforcement widens). If threshold distant: snare persists indefinitely.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Structural threshold at which hegemonic spheres become untenable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Monroe Doctrine revival represents the reassertion of explicit unilateral hegemonic control over the Western Hemisphere by the United States, embodied in the Trump administration's 2021 National Security Strategy and signaled through military posturing around Venezuela. Lula's 2026 articulation of this constraint in response to threats of US military intervention reveals the structural extraction mechanism: Latin American states face pressure to accept US dominance of their region, constrain their foreign policy alignment (blocking Chinese or Russian investment/security partnerships), and subordinate their preferences to US strategic interests. The constraint exhibits high suppression (military capability asymmetry, CIA operational history, economic coercion capacity) and moderate-to-high theater (maintained through diplomatic language about 'partnership' while unilateral military intervention remains the enforcement mechanism). The theater ratio has increased from 0.42 to 0.58 over six years as US rhetoric emphasizes 'defending democracy' while enforcement mechanisms remain unilateral military power. This constraint demonstrates the taxonomy's capacity to distinguish pure extraction (snare) from coordination (rope) from degraded coordination (piton) from inevitable natural limits (mountain), even when examining the same hegemonic system from different structural positions.",
+    "key_agents": [
+      "US Security Establishment: Primary beneficiary (institutional/arbitrage) \u2014 maintains unilateral sphere of influence, excludes rival powers, extracts alignment costs from regional states",
+      "Latin American Sovereignty: Primary victim (powerless/trapped) \u2014 faces threat of military intervention with no credible exit; forced to constrain foreign policy choices to avoid confrontation",
+      "Brazil (Regional Power): Secondary victim (powerful/constrained) \u2014 Lula articulates constraint; has greater agency than smaller states but faces escalation costs that constrain genuine resistance",
+      "Rising Powers (China, Russia, India): Secondary beneficiaries of constraint violation but trapped by countervailing deterrence (tangled rope perspective)",
+      "International Multilateral Order: Institutional actor (institutional/arbitrage) \u2014 formal structure (UN, OAS) becomes degraded piton; multilateralism becomes performative while hegemony operates underneath",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing hegemonic extraction as inevitable structural necessity rather than contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts significant costs from Latin American states: they must limit foreign policy autonomy (blocking security partnerships with China/Russia), accept US-led regional governance (OAS mechanisms), and bear the risk and disruption of military intervention threats. The extraction is not total (some regional policy space remains) but is substantial and rising as US hegemonic rhetoric hardens. Theater ratio (0.58): Moderate-to-high and rising. The constraint is partially maintained through performative mechanisms: diplomatic language about 'partnership' and 'defending democracy,' invocation of OAS consensus (which is actually US-orchestrated), framing military intervention as 'humanitarian' or 'counter-narcotics.' But the underlying enforcement is raw military capability, making the theater ratio moderate rather than high. Suppression (0.72): High. Latin American states face severe barriers to exit: military capability asymmetry (the US spends more on defense than all Latin American states combined), CIA operational capacity and history of coups, economic retaliation tools (sanctions, trade mechanisms, debt manipulation), and lack of credible countervailing power (Chinese/Russian presence is growing but not yet sufficient for credible deterrence). The suppression has increased as US rhetoric explicitly reasserts the Monroe Doctrine (vs. earlier 'equal partnership' language under Obama administration).",
+    "perspectival_gap": "The Monroe Doctrine constraint exhibits a stark perspectival gap between US beneficiaries and Latin American victims. The US security establishment sees this as a coordination mechanism (Rope) \u2014 establishing clear rules about spheres of influence and preventing other powers from gaining regional access. Latin American states see it as pure extraction (Snare) \u2014 coercive pressure with no genuine negotiating power. Brazil, as a regional power with some agency, occupies an intermediate position (constrained Tangled Rope) \u2014 it can articulate the constraint and seek countervailing partnerships but faces escalation costs. Rising powers see the constraint as a template for the future threat to their own regions (Tangled Rope) \u2014 it coordinates their opposition to US hegemony while extracting from them the cost of accepting current US dominance. The international multilateral order (UN, OAS) functions as a degraded piton: the formal structure still invokes multilateral principles, but enforcement is purely theatrical; the real constraint operates through unilateral power. The analytical observer risks naturalizing this as an inevitable consequence of power distribution (Mountain), but the structural data reveals it as a contingent institutional arrangement maintained through active enforcement and theatrical legitimacy.",
+    "directionality_logic": "US Security Establishment: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. The constraint subsidizes US power by establishing unilateral dominance as normal and unchallengeable. Latin American states: Victims + trapped \u2192 d\u22480.96, f(d)\u22481.43. Maximum extraction. No credible exit; forced to accept subordinate position. Brazil: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. High extraction with partial agency. Can articulate the constraint and seek alternatives, but escalation costs are prohibitive. Rising powers: Mixed position (beneficiary of constraint violation, victim of enforcement threat) \u2192 d\u22480.52, f(d)\u22480.68. Moderate extraction with some agency. Multilateral Order: Institutional + arbitrage (can leverage formal rules while being bypassed by unilateral power) \u2192 d\u22480.12, f(d)\u22480.05. Low effective extraction in piton classification. Analytical observer: d\u22480.72, f(d)\u22481.15. Mountain classification would be incorrect; the engine's false summit detector prevents naturalizing contingent institutional arrangements.",
+    "mandatrophy_analysis": "The Monroe Doctrine constraint resolves the mandatrophy by distinguishing extraction from coordination through structural position. From the US perspective, it functions as coordination: establishing clear rules (no non-allied powers in Western Hemisphere), enabling predictability, and preventing conflicts with other great powers. From the Latin American perspective, it functions as pure extraction: coercive pressure without genuine negotiating power or benefits. The constraint is NOT simultaneously both rope and snare in an undecidable way \u2014 it is a snare that appears as rope from the beneficiary's position. The mandatrophy is resolved by recognizing that the 'coordination' benefit (clear rules, predictability) accrues exclusively to the hegemon, while costs (reduced autonomy, intervention risk) fall on subordinate states. This is the defining characteristic of a snare: a constraint that combines coercion (suppression=0.72) with extraction (\u03b5=0.68) and provides asymmetric benefits (only to enforcer). A genuine rope would produce benefits for both parties; the Monroe Doctrine produces benefits only for the US and costs only for Latin American states. The rising powers' perspective (Tangled Rope) reflects the constraint's dual function as both a precedent for hegemonic spheres (extraction) and a coordination mechanism for opposing US dominance (coordination) \u2014 but this is a secondary effect, not the primary structural function."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_china_strategic_competition",
+      "regional_autonomy_latin_america",
+      "multilateral_order_degradation"
+    ],
+    "dual_formulation_note": "The Monroe Doctrine revival is downstream of broader US-China strategic competition and hegemonic rivalry. It represents the enforcement mechanism by which US hegemony is maintained in one region; parallel constraints exist for other hegemons (Russian sphere of influence in post-Soviet space, Chinese sphere in Indo-Pacific). These constraints are structurally similar (hegemonic spheres enforced through military and economic coercion) but have distinct \u03b5 values reflecting different regional power distributions and enforcement costs."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

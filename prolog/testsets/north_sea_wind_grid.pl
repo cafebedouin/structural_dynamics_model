@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: north_sea_wind_grid
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_north_sea_wind_grid, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,23 +55,36 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: north_sea_wind_grid
  *   human_readable: The North Sea 100GW Multinational Wind Power Grid Initiative
- *   domain: geopolitical/economic
+ *   domain: geopolitical/energy/infrastructure
  *
  * SUMMARY:
- *   A coalition of 10 North Sea countries agrees to a massive infrastructure
- *   project to build a shared 100GW offshore wind power grid. This constraint
- *   represents the set of treaties, regulations, and public-private funding
- *   mechanisms that coordinate the project. While it solves a major coordination
- *   problem for energy security and decarbonization, it also involves significant
- *   asymmetric extraction, directing public funds to private energy firms and
- *   actively suppressing the fossil fuel industry.
+ *   The North Sea 100GW wind grid initiative is a geopolitical-economic
+ *   constraint system involving ten sovereign states (Germany, Denmark,
+ *   Netherlands, Belgium, France, UK, Norway, Sweden, Poland, and Lithuania)
+ *   committing to shared offshore infrastructure. The constraint exhibits
+ *   tension between genuine coordination gains (load balancing across 500+
+ *   km, risk pooling, renewable integration efficiency) and asymmetric
+ *   extraction (unequal financing burden, dispatch authority concentration in
+ *   major states, externalized fossil transition costs). The same structural
+ *   phenomenon appears variously as immutable physics (Mountain), pure
+ *   coordination (Rope), mixed coordination-extraction (Tangled Rope),
+ *   temporary solution with sunset (Scaffold), degraded regulatory ritual
+ *   (Piton), and pure extraction (Snare), depending on the observer's
+ *   structural position. The constraint's evolution shows increasing
+ *   extractiveness (0.28 → 0.52) as operational complexity reveals
+ *   asymmetries in dispatch authority and cost allocation, while theater
+ *   ratio remains moderate (0.42 → 0.55) reflecting both substantial
+ *   technical requirements and genuine coordination function rather than pure
+ *   performance.
  *
- * KEY AGENTS (by structural relationship):
- *   - Renewable Energy Consortiums: Primary beneficiary (institutional/arbitrage) — receive massive state-backed contracts and a guaranteed market.
- *   - Participating Governments: Primary beneficiary (institutional/constrained) — achieve climate targets and energy security goals.
- *   - Fossil Fuel Industry: Primary target (organized/constrained) — face accelerated market suppression and loss of political influence.
- *   - Taxpayers of Member States: Secondary target (powerless/trapped) — bear the initial cost of public investment.
- *   - Analytical Observer: Sees both the coordination function and the asymmetric extraction.
+ * KEY AGENTS:
+ *   - Integrated Grid Operators: Primary beneficiary (institutional/arbitrage) — capture coordination value and operational efficiency gains; can redirect capital if terms worsen
+ *   - Major Participating Nations (Germany, Netherlands, Denmark): Primary beneficiary (organized/constrained) — gain energy security and climate credentials; face regulatory constraints but have exit options
+ *   - Low-Capacity States (Poland, Lithuania, Belgium): Secondary victim (organized/constrained) — dependent on technology access and financing; locked into interconnection standards favoring high-capacity states
+ *   - Coastal Communities: Tertiary victim (powerless/trapped) — bear environmental costs (noise, habitat disruption, fishing exclusion) with minimal negotiation power
+ *   - Fossil Fuel Producers (Norway oil industry, coal regions): Mixed victim-beneficiary (moderate/constrained) — face market displacement but gain grid export value and geopolitical influence
+ *   - National Energy Regulators: Institutional intermediary (institutional/arbitrage) — maintain performative approval/oversight role despite limited functional control
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent infrastructure choices as immutable physics of renewable integration
  */
 
 /* ==========================================================================
@@ -79,103 +92,82 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(north_sea_wind_grid, 0.45). % Represents the portion of public investment captured as private profit/rent.
-domain_priors:suppression_score(north_sea_wind_grid, 0.75).   % Actively suppresses the fossil fuel industry alternative. High structural barrier.
-domain_priors:theater_ratio(north_sea_wind_grid, 0.15).       % Highly functional project; low performative activity.
+domain_priors:base_extractiveness(north_sea_wind_grid, 0.52).
+domain_priors:suppression_score(north_sea_wind_grid, 0.48).
+domain_priors:theater_ratio(north_sea_wind_grid, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(north_sea_wind_grid, extractiveness, 0.45).
-narrative_ontology:constraint_metric(north_sea_wind_grid, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(north_sea_wind_grid, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(north_sea_wind_grid, extractiveness, 0.52).
+narrative_ontology:constraint_metric(north_sea_wind_grid, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(north_sea_wind_grid, theater_ratio, 0.55).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(north_sea_wind_grid, tangled_rope).
 narrative_ontology:human_readable(north_sea_wind_grid, "The North Sea 100GW Multinational Wind Power Grid Initiative").
-narrative_ontology:topic_domain(north_sea_wind_grid, "geopolitical/economic").
+narrative_ontology:topic_domain(north_sea_wind_grid, "geopolitical/energy/infrastructure").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(north_sea_wind_grid). % Requires international treaties, funding laws, and regulatory oversight.
+domain_priors:requires_active_enforcement(north_sea_wind_grid).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(north_sea_wind_grid, renewable_energy_consortiums).
-narrative_ontology:constraint_beneficiary(north_sea_wind_grid, participating_governments).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(north_sea_wind_grid, fossil_fuel_industry).
-narrative_ontology:constraint_victim(north_sea_wind_grid, taxpayers_of_member_states).
-narrative_ontology:constraint_victim(north_sea_wind_grid, north_sea_fishing_industry).
-%
-% Gate requirements check for Tangled Rope:
-%   - beneficiary: YES (renewable_energy_consortiums, participating_governments)
-%   - victim: YES (fossil_fuel_industry, taxpayers...)
-%   - requires_active_enforcement: YES
-% All conditions met for Tangled Rope.
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(north_sea_wind_grid, participating_nations).
+narrative_ontology:constraint_beneficiary(north_sea_wind_grid, renewable_energy_developers).
+narrative_ontology:constraint_beneficiary(north_sea_wind_grid, integrated_grid_operators).
+narrative_ontology:constraint_victim(north_sea_wind_grid, fossil_fuel_producers).
+narrative_ontology:constraint_victim(north_sea_wind_grid, low_capacity_states).
+narrative_ontology:constraint_victim(north_sea_wind_grid, coastal_communities).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE FOSSIL FUEL INDUSTRY (PRIMARY TARGET)
-% The constraint is designed to extract their market share. They see it as pure
-% coercion with no coordinating benefit for them.
-% d is derived high (victim + constrained exit). High χ → Snare.
+% PERSPECTIVE 1: COASTAL COMMUNITIES (SNARE) — Cannot exit marine spatial planning decisions; bear full cost of offshore wind infrastructure (noise, habitat disruption, fishing exclusion zones) with minimal negotiation power. No mechanism for independent verification of environmental claims or compensation adequacy. Maximum extraction experienced by structurally trapped agents.
 constraint_indexing:constraint_classification(north_sea_wind_grid, snare,
-    context(agent_power(organized),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(continental))).
-
-% PERSPECTIVE 2: TAXPAYERS OF MEMBER STATES (SECONDARY TARGET)
-% They bear the initial financial burden and are structurally powerless.
-% d is derived highest (victim + trapped exit). High χ → Snare.
-constraint_indexing:constraint_classification(north_sea_wind_grid, tangled_rope,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(regional))).
 
-% PERSPECTIVE 3: THE RENEWABLE ENERGY CONSORTIUM (PRIMARY BENEFICIARY)
-% The constraint creates a subsidized, protected market. For them, it is a
-% perfect coordination mechanism.
-% d is derived lowest (beneficiary + arbitrage exit). Negative χ → Rope.
-constraint_indexing:constraint_classification(north_sea_wind_grid, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(continental))).
-
-% PERSPECTIVE 4: PARTICIPATING GOVERNMENTS (INTER-INSTITUTIONAL BENEFICIARY)
-% They also benefit, but are constrained by political commitments and public
-% accountability, unlike the corporate actors.
-% d is derived low, but higher than corporate beneficiary (beneficiary + constrained exit). Low χ → Rope.
-constraint_indexing:constraint_classification(north_sea_wind_grid, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: LOW-CAPACITY STATES (TANGLED ROPE) — Constrained by technology access, financing requirements, and regulatory asymmetry. Grid participation requires infrastructure investment these nations cannot fund independently, creating dependency on major participants. Yet participation also provides clean energy access and climate commitment credentials. Active enforcement mechanisms (interconnection standards, grid dispatch rules) create asymmetric extraction favoring high-capacity states, while coordination benefits are genuine but unevenly distributed.
+constraint_indexing:constraint_classification(north_sea_wind_grid, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
-            spatial_scope(continental))).
+            spatial_scope(regional))).
 
-% PERSPECTIVE 5: THE ANALYTICAL OBSERVER
-% Sees both the genuine coordination function (energy security, climate goals)
-% and the asymmetric extraction (public-to-private wealth transfer, suppression).
-% This synthesis reveals the Tangled Rope structure.
+% PERSPECTIVE 3: INTEGRATED GRID OPERATORS (ROPE) — Experiences grid as pure coordination mechanism: shared infrastructure enables real-time dispatch optimization, load balancing across borders, and risk pooling. Net beneficiary with immediate exit options (can shift capital to other markets). Extraction runs toward these actors. The constraint solves their collective action problem of managing variable renewable output across jurisdictions. Low coercion experienced — participation is voluntary exit.
+constraint_indexing:constraint_classification(north_sea_wind_grid, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: MAJOR PARTICIPATING NATIONS (SCAFFOLD) — Organized state actors with high capacity see this as temporary coordination framework with built-in sunset: grid is designed for 30-40 year operational life, with explicit decommissioning clauses and technology transition triggers. High suppression (regulatory requirements, interconnection standards, dispute resolution procedures) is tolerated because it declines as decentralized generation and storage technologies mature. EU Green Deal and net-zero commitments provide exit rationale.
+constraint_indexing:constraint_classification(north_sea_wind_grid, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 5: NATIONAL ENERGY REGULATORS (PITON) — Regulatory approval and oversight bodies have largely performative function: they certify environmental reviews and grid safety but lack real enforcement power over multinational infrastructure. Theater ratio (0.55) reflects extensive permitting theater while core technical decisions are made by grid operators and major state investors. The regulatory architecture persists through institutional inertia despite limited functional control — alternative governance models (private operator consortia) could deliver grid coordination with less regulatory overhead.
+constraint_indexing:constraint_classification(north_sea_wind_grid, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: FOSSIL FUEL PRODUCERS (TANGLED ROPE) — Face extraction via grid integration that undermines coal and natural gas markets, yet also benefit from export infrastructure (Norway as electricity exporter, Denmark's grid role enhancing technical credibility). Constrained exit: cannot fully exit North Sea governance without losing geopolitical influence. Active enforcement mechanisms lock in fossil displacement trajectory. Mixed experience: both victim (declining fuel demand) and beneficiary (grid export value).
 constraint_indexing:constraint_classification(north_sea_wind_grid, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a systems physics perspective, integrating high-proportion variable renewables across load centers separated by 500+ km requires real-time demand-response coordination that appears immutable: the constraint is the speed-of-light limit on information propagation, battery discharge rates, and electromechanical generator dynamics. However, this naturalization masks contingent choices: storage deployment, demand management, and interconnection investment are policy variables, not laws of physics. The engine's false summit detector should flag this perspective as naturalization.
+constraint_indexing:constraint_classification(north_sea_wind_grid, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -183,28 +175,18 @@ constraint_indexing:constraint_classification(north_sea_wind_grid, tangled_rope,
 
 :- begin_tests(north_sea_wind_grid_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify perspectival gap between the primary target and primary beneficiary.
-    constraint_indexing:constraint_classification(north_sea_wind_grid, snare, context(agent_power(organized), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(north_sea_wind_grid, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    format('Passed: Perspectival gap exists (Snare vs Rope).~n').
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(north_sea_wind_grid, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(north_sea_wind_grid, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(north_sea_wind_grid, tangled_rope, context(agent_power(analytical), _, _, _)),
-    format('Passed: Analytical perspective correctly identifies Tangled Rope.~n').
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(north_sea_wind_grid, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_pass) :-
-    narrative_ontology:constraint_beneficiary(north_sea_wind_grid, _),
-    narrative_ontology:constraint_victim(north_sea_wind_grid, _),
-    domain_priors:requires_active_enforcement(north_sea_wind_grid),
-    format('Passed: All three structural requirements for Tangled Rope are declared.~n').
-
-test(inter_institutional_nuance_captured, [nondet]) :-
-    % Verify that the two institutional beneficiaries get different classifications or at least different χ values
-    % due to their different exit options. The engine test harness would check χ values. Here we just check perspectives.
-    constraint_indexing:constraint_classification(north_sea_wind_grid, _, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(north_sea_wind_grid, _, context(agent_power(institutional), _, exit_options(constrained), _)),
-    format('Passed: Separate perspectives for institutional actors with different exit options are declared.~n').
+test(piton_threshold) :-
+    domain_priors:theater_ratio(north_sea_wind_grid, TR),
+    TR >= 0.70.
 
 :- end_tests(north_sea_wind_grid_tests).
 
@@ -214,78 +196,101 @@ test(inter_institutional_nuance_captured, [nondet]) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.45): Set to a high value to reflect the significant transfer of public funds to private corporations. While a public good is produced, a substantial portion of the value is captured as private profit, constituting extraction from the taxpayer base.
- *   - Suppression (0.75): The project is not neutral; its existence is predicated on displacing and suppressing the fossil fuel industry. This is a core function, not a side effect, justifying a high score.
- *   - The combination of a necessary coordination function (beneficiary declaration) with high asymmetric extraction (victim declaration) and active enforcement makes this a canonical Tangled Rope.
+ *   Extractiveness (0.52): Moderately-high. The grid initiative requires €100B+ investment, with unequal burden distribution across participating nations. Major states (Germany, Netherlands) shoulder greater financial burden but receive greater dispatch authority and grid operator benefits. Low-capacity states depend on imported technology and financing, creating leverage asymmetry. However, this is not pure extraction: genuine coordination gains exist (15-25% efficiency improvement from load pooling, risk reduction from geographic diversity). The intermediate extractiveness reflects this hybrid: extraction component exists but coordination component is substantial. Theater ratio (0.55): Moderate. Extensive environmental assessment, regulatory certification, and multinational coordination procedures reflect genuine complexity and legitimate governance requirements, not pure theatrical compliance. However, core technical decisions (grid architecture, dispatch protocols) are made by grid operators and major-state representatives with limited participatory input from smaller states or affected communities. Suppression (0.48): Moderate. Regulatory requirements, interconnection standards, and dispute resolution procedures create barriers to exit or modification, but these are not absolute: states can theoretically exit framework, albeit at significant cost. The constraint requires active enforcement through multinational agreements and regulatory harmonization.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme. For renewable energy firms (beneficiaries with arbitrage exit), it's a perfect Rope that creates a new, low-risk market. For the fossil fuel industry (victims with constrained exit), it's a perfect Snare designed to destroy their business model. Taxpayers (victims with trapped exit) also see a Snare in the form of costs imposed without their direct consent for diffuse, long-term benefits.
+ *   This constraint demonstrates how infrastructure projects create perspectival chasms across power asymmetries. The same 100GW grid is a rational coordination solution (major-state perspective: Rope/Scaffold), a financing trap (low-capacity-state perspective: Tangled Rope/Snare), a displacement mechanism (fossil-producer perspective: Tangled Rope), an externality absorption site (coastal-community perspective: Snare), and naturalized physics (civilizational-analytical perspective: Mountain). No single type is 'correct' — each is the genuine structural reality of a different agent class. The mandatrophy resolves by showing that the presheaf of classifications IS the constraint's true structure: the coordination gains are real, AND the extraction is real, AND the cost externalization is real. They are not contradictory but simultaneous.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality derivation chain correctly models this complex landscape.
- *   - Beneficiaries: `renewable_energy_consortiums` and `participating_governments` receive low `d` values, resulting in low or negative effective extraction (χ).
- *   - Victims: `fossil_fuel_industry` and `taxpayers_of_member_states` receive high `d` values, resulting in high χ.
- *   The system correctly distinguishes between the two institutional beneficiaries: the corporations with `arbitrage` exit have a more favorable position (lower derived `d`) than the governments with `constrained` exit.
+ *   The constraint's directionality values are determined by structural position and exit capacity. Grid operators and major institutional participants (Germany, Netherlands) are beneficiaries with arbitrage exit → low d → low/negative χ. Low-capacity states (Poland, Lithuania) are forced participants with constrained exit → mid-to-high d → moderate χ. Coastal communities and fishing interests are trapped victims → maximum d → maximum χ. Fossil producers are complex: simultaneous victims (fuel displacement) and beneficiaries (grid export opportunity) → mid d → mid χ. These derivations flow from the beneficiary/victim declarations and exit_options assigned to each perspective. The engine computes d from these structural parameters and applies the sigmoid f(d) to produce experienced extractiveness. No override is needed — the base structural data (who benefits, who exits, what power level) produces accurate directionality automatically.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two potential errors. It is not a pure Rope, because that would ignore the massive public-to-private wealth transfer and the coercive suppression of an entire industry. It is not a pure Snare, because that would ignore the genuine, large-scale public good it produces (energy security, decarbonization). The Tangled Rope classification correctly identifies that it is BOTH a coordination mechanism AND an extractive one, preventing the mislabeling that often accompanies large public works.
+ *   DIAGNOSTIC FRAMEWORK: The North Sea wind grid demonstrates mandatrophy resolution through perspectival decomposition. The question 'Is this coordination or extraction?' has no single answer — it is both, differentially distributed across agents. Major states legitimately solve a coordination problem (load balancing, renewable integration, climate commitments). Low-capacity states experience extraction (financing burden asymmetry, dispatch authority concentration). Coastal communities bear externalized costs. Fossil regions face displacement without transition support. The constraint is simultaneously Rope (for operators), Tangled Rope (for low-capacity states and fossil regions), Snare (for coastal communities), and Scaffold (for major states viewing it as temporary). The presheaf over the observation space is the true structure. Any attempt to force a single classification either naturalizes the coordination gains (falsely calling it Mountain or pure Rope) or oversimplifies the coordination function (falsely calling it pure Snare). The framework's power is to hold all perspectives simultaneously: the constraint is internally contradictory from a monolithic viewpoint, but coherent from a perspectival one.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_north_sea_wind_grid,
-    'Will the long-term public benefits (climate mitigation, energy price stability) outweigh the short-term extraction (public cost, private profit capture)?',
-    'Longitudinal studies (20-30 years) comparing electricity prices, carbon emissions, and total project ROI against initial projections.',
-    'If benefits are high, the constraint is a highly effective Tangled Rope. If benefits are low or fail to materialize, the constraint degrades towards a Snare from the public perspective.',
-    confidence_without_resolution(low)
+    financing_burden_asymmetry,
+    'Does the €100B+ total project cost create extraction through unequal financing burden, or does it represent fair risk-sharing for legitimate coordination gains?',
+    'Comparative analysis of financing contribution vs energy received vs long-term cost recovery; audits of subsidy distribution across participating nations; modeling of capacity utilization patterns by country over 30-year operational life',
+    'If burden asymmetric: constraint shifts from Tangled Rope toward Snare for low-capacity states. If fairly distributed: Tangled Rope classification holds; extraction component is legitimate coordination tax.',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(financing_burden_asymmetry, empirical, 'Whether project financing burden creates asymmetric extraction').
+
+omega_variable(
+    grid_dispatch_control_locus,
+    'Does grid dispatch authority genuinely belong to multinational operator consensus, or do major states retain veto power that converts coordination into extraction?',
+    'Analysis of grid dispatch protocols and voting structures; case studies of load-sharing conflicts; review of dispute resolution outcomes favoring/disfavoring low-capacity states',
+    'If consensus-driven: Rope classification is valid. If major states retain veto: constraint is Tangled Rope or Snare from low-capacity perspective. Critical for assessing suppression component.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(grid_dispatch_control_locus, empirical, 'Locus of grid dispatch authority and decision-making power').
+
+omega_variable(
+    stranded_fossil_asset_externality,
+    'Are grid integration benefits fairly distributed, or does rapid fossil displacement externalize closure costs onto coal-dependent regions without compensation or transition support?',
+    'Tracking of regional unemployment, infrastructure investment, and just-transition spending in coal-dependent areas; comparison of energy prices pre/post grid integration by region; equity analysis of grid revenue distribution',
+    'If transition externalized: constraint is Snare for affected regions despite global climate benefit. If transition supported: constraint is Scaffold with genuine sunset clauses and compensation mechanisms. Affects classification from regional vs global perspectives.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(stranded_fossil_asset_externality, empirical, 'Whether fossil phase-out costs are externalized or managed through transition support').
+
+omega_variable(
+    technical_lock_in_duration,
+    'Is the 30-40 year operational horizon a genuine sunset clause enabling technology transition, or does grid infrastructure create path dependency that extends extraction beyond the stated decommissioning timeline?',
+    'Technology roadmap analysis for grid replacement; modeling of economics for alternative architectures (distributed storage, local generation) post-2055; analysis of asset retirement practices in similar multinational infrastructure projects',
+    'If genuine sunset: Scaffold classification holds. If lock-in extends beyond timeline: constraint degrades from Scaffold to Piton (performative transition rhetoric with actual inertia).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(technical_lock_in_duration, empirical, 'Whether grid infrastructure creates genuine technology transition opportunity or path lock-in').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(north_sea_wind_grid, 0, 10).
+narrative_ontology:interval(north_sea_wind_grid, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. Since ε=0.45, this is a high-extraction
-% constraint. We model a slight increase in both metrics over time, reflecting
-% potential for cost overruns (increasing extraction) and political grandstanding
-% (increasing theater) as the project matures.
-%
-% Theater ratio over time:
-narrative_ontology:measurement(nswg_tr_t0, north_sea_wind_grid, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(nswg_tr_t5, north_sea_wind_grid, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(nswg_tr_t10, north_sea_wind_grid, theater_ratio, 10, 0.15).
+% Theater ratio over time
+narrative_ontology:measurement(nswind_tr_t0, north_sea_wind_grid, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(nswind_tr_t10, north_sea_wind_grid, theater_ratio, 10, 0.52).
+narrative_ontology:measurement(nswind_tr_t20, north_sea_wind_grid, theater_ratio, 20, 0.55).
 
-% Extraction over time:
-narrative_ontology:measurement(nswg_ex_t0, north_sea_wind_grid, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(nswg_ex_t5, north_sea_wind_grid, base_extractiveness, 5, 0.43).
-narrative_ontology:measurement(nswg_ex_t10, north_sea_wind_grid, base_extractiveness, 10, 0.45).
+% Extraction over time
+narrative_ontology:measurement(nswind_be_t0, north_sea_wind_grid, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(nswind_be_t10, north_sea_wind_grid, base_extractiveness, 10, 0.48).
+narrative_ontology:measurement(nswind_be_t20, north_sea_wind_grid, base_extractiveness, 20, 0.52).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This project is a massive undertaking in shared infrastructure.
 narrative_ontology:coordination_type(north_sea_wind_grid, global_infrastructure).
+narrative_ontology:affects_constraint(north_sea_wind_grid, eu_energy_security_transition).
+narrative_ontology:affects_constraint(north_sea_wind_grid, north_sea_maritime_sovereignty).
+narrative_ontology:affects_constraint(north_sea_wind_grid, fossil_fuel_economic_transition).
+
+% DUAL FORMULATION NOTE:
+% The North Sea wind grid can be decomposed into three structurally distinct constraints: (1) the renewable integration coordination problem (ε≈0.25, pure Rope), (2) the financing and dispatch authority asymmetry (ε≈0.52, Tangled Rope), and (3) the environmental externality burden (ε≈0.65, Snare). This story treats the grid as a unified constraint with ε=0.52 capturing the hybrid nature. Alternative decomposition: separate stories for grid-as-coordination vs grid-as-extraction-mechanism, linked via network.affects_constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The structural declarations
-% of beneficiary/victim combined with the distinct exit_options for each agent
-% allow the derivation engine to compute accurate and nuanced directionality
-% values for all key perspectives.
+constraint_indexing:directionality_override(north_sea_wind_grid, organized, 0.58).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

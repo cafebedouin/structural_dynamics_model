@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "brazil_2026_general_elections",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "2026 Brazilian General Election Structure",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_political_parties",
+      "electoral_justice_system"
+    ],
+    "victims": [
+      "challenger_political_movements",
+      "disenfranchised_voters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Disenfranchised Voters",
+      "comment": "Perspective of voters facing systematic barriers to participation, feeling trapped by the existing system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Challenger Political Movements",
+      "comment": "Perspective of new or smaller political movements trying to gain traction within the existing system, facing constraints but with some agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Established Political Parties",
+      "comment": "Perspective of established political parties benefiting from the current electoral structure and having the resources to navigate it effectively."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Electoral Justice System",
+      "comment": "Perspective of the electoral justice system, ostensibly impartial but possibly degraded by political influence or institutional inertia, maintaining the status quo."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees a tangled rope due to the mixed coordination and extraction within the Brazilian electoral system. It coordinates power transition, yet extracts from certain groups."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voter_access_inequality",
+      "question": "How significantly do geographical and socioeconomic factors affect voter access and participation?",
+      "resolution_mechanism": "Statistical analysis of voter turnout data across different regions and demographic groups.",
+      "impact": "If high inequality: reinforces snare perspective and highlights systemic disenfranchisement. If low inequality: suggests the system is more equitable than perceived.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which access inequality suppresses voter participation."
+    },
+    {
+      "id": "electoral_system_reform_viability",
+      "question": "What is the likelihood and potential impact of significant electoral system reforms before 2026?",
+      "resolution_mechanism": "Political analysis of legislative proposals and public opinion regarding electoral reform.",
+      "impact": "If high viability: could shift the system towards rope or scaffold. If low viability: reinforces the current tangled rope or snare classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The probability and effect of electoral reform measures."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The 2026 Brazilian General Election operates as a complex political structure characterized by the ongoing tension between established political forces and emerging challenger movements, set against a backdrop of socioeconomic disparities and historical political polarization. The electoral system, while designed to ensure democratic transitions, also presents challenges in terms of voter access and equitable representation, leading to a dynamic interplay of coordination and extraction.",
+    "key_agents": [
+      "Established Political Parties: Beneficiaries with resources and established networks.",
+      "Challenger Political Movements: Victims facing barriers to entry and unequal access to resources.",
+      "Disenfranchised Voters: Victims facing systemic barriers to participation.",
+      "Electoral Justice System: Institutional actor with a role in maintaining the system, for better or worse."
+    ],
+    "logic_rationale": "Extractiveness (0.55): The system extracts from challenger movements and disenfranchised voters due to unequal access to resources and barriers to participation. Suppression (0.65): High barriers for new political actors, combined with voter suppression tactics, create a significant suppression level. Theater ratio (0.75): High level of performative elements due to the highly polarized political climate.",
+    "perspectival_gap": "The established parties view the system as a rope enabling their continued influence. Challenger movements perceive it as a tangled rope, offering some opportunity but also imposing constraints. Disenfranchised voters experience it as a snare, trapping them in a cycle of political exclusion. The electoral justice system maintains the system, for better or for worse.",
+    "directionality_logic": "The directionality is derived from the structural positions of the agents within the electoral system. Established parties, as beneficiaries, have a low 'd' value. Challenger movements have a moderate 'd' value due to the constraints they face. Disenfranchised voters have a high 'd' value, reflecting their experience of being targeted by the system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

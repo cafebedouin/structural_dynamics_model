@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "subscription_economy_model",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "subsec"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Subscription Economy Model",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "software_platform_operators",
+      "digital_service_providers"
+    ],
+    "victims": [
+      "individual_consumers",
+      "small_business_users",
+      "consumer_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual Consumer",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL CONSUMER (SNARE) \u2014 Trapped in perpetual payment cycle. No ownership of software; continuous billing prevents exit. Suppressed alternatives: perpetual licenses discontinued, cracked/open-source variants have high switching costs. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business User",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS USER (TANGLED ROPE) \u2014 Partially constrained by dependency on platform ecosystem; coordination benefits (cloud sync, automatic updates, feature stability) exist alongside extraction (rising costs, forced upgrades). Has exit options (open-source, legacy software) but switching has operational costs. Mixed experience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Software Platform Operator",
+      "comment": "PERSPECTIVE 3: SOFTWARE PLATFORM OPERATOR (ROPE) \u2014 Primary beneficiary (institutional/arbitrage). Experiences subscription model as coordination solution: recurring revenue enables continuous development, cloud infrastructure maintenance, and feature updates. Sees constraint as solving legitimate coordination problem of funding sustainable software. Net positive extraction flow toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Coalition",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE COALITION (SCAFFOLD) \u2014 Organized alternative pathways (Linux, LibreOffice, Blender, Kubernetes) are building parallel ecosystems with sunset logic for proprietary subscription lock-in. Low effective extraction because coalition agents have documented exit path and are actively devaluing the subscription model through functional alternatives. Sunset: as open-source tools mature, subscription revenue model loses exclusive value."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Enterprise Customer",
+      "comment": "PERSPECTIVE 5: ENTERPRISE CUSTOMER (PITON) \u2014 Large organizations can negotiate volume discounts, self-host alternatives, or maintain legacy perpetual licenses for mission-critical systems. High mobility; perceived extraction is low. Yet institutional inertia keeps many enterprises locked into subscription billing despite negotiating power. Theater ratio high: contractual 'flexibility' performative while consolidation strategies reduce real alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Technological Lock-In)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 Risks naturalizing subscription extraction as inevitable technological necessity ('cloud computing requires recurring payments'; 'continuous updates demand subscription models'). Structural data contradicts: open-source alternatives (LibreOffice, Nextcloud, self-hosted solutions) provide feature parity without recurring fees. Lock-in is institutional choice, not physical law. Engine detects as false mountain through extractiveness (0.52) and suppression (0.58) exceeding natural law thresholds."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_elasticity",
+      "question": "At what subscription cost threshold do individual consumers actually migrate to open-source or legacy alternatives rather than accept perpetual billing?",
+      "resolution_mechanism": "Cross-sectional analysis of churn rates by price tier; panel studies tracking consumer switching behavior when subscription fees increase; correlation between alternative tool adoption and pricing events",
+      "impact": "If threshold < $100/year: extraction is significantly suppressed by elastic demand, extractiveness should be revised downward to 0.35. If threshold > $500/year: suppression is severe, and extraction is largely uncontested, extractiveness confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost elasticity threshold for consumer exit to alternatives"
+    },
+    {
+      "id": "data_portability_sufficiency",
+      "question": "Do existing data export formats and cross-platform APIs constitute genuine exit options or merely performative interoperability?",
+      "resolution_mechanism": "Usability testing of data migration workflows; measurement of data loss and format conversion failure rates; time-cost analysis of switching to competing platform with equivalent feature set",
+      "impact": "If portable: exit_options upgrade from 'trapped' to 'constrained' for consumers, reducing snare classification strength. If non-portable: snare classification is robust; exit is genuinely suppressed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether data portability enables meaningful exit"
+    },
+    {
+      "id": "open_source_feature_parity_timeline",
+      "question": "How far behind proprietary subscription tools are open-source alternatives in core feature sets, and what is the estimated timeline to parity?",
+      "resolution_mechanism": "Feature-by-feature benchmarking matrices; temporal analysis of open-source capability maturation; user satisfaction surveys comparing open-source to proprietary across feature domains",
+      "impact": "If parity achieved < 5 years: scaffold sunset is empirically grounded, constraints on proprietary models accelerate. If parity > 10 years: open source remains marginal, sunset is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline to open-source feature parity with proprietary tools"
+    },
+    {
+      "id": "cloud_infrastructure_cost_pass_through",
+      "question": "What fraction of subscription fee increases are genuine infrastructure cost increases vs. profit margin expansion?",
+      "resolution_mechanism": "Time-series decomposition of subscription price changes and cloud infrastructure costs (AWS, Azure, GCP pricing history); comparative analysis of on-premise vs. cloud deployment cost structures; regression analysis of margin expansion independent of input costs",
+      "impact": "If > 70% margin expansion: coordination benefit claim is weakened; constraint classifies as pure extraction. If < 30% margin expansion: coordination function is real; tangled rope classification is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which price increases are rent-seeking vs. cost-driven"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The subscription economy represents a structural shift from permanent product ownership to continuous access licensing. Over the past 15 years, software vendors have systematically migrated from perpetual licenses (buy once, use forever) to recurring subscription models, with similar patterns emerging in hardware (Adobe Creative Suite \u2192 Creative Cloud), productivity tools (Microsoft Office \u2192 Office 365), entertainment (Netflix, Spotify), and infrastructure (AWS, Azure). This constraint exhibits genuine coordination benefits (sustainable funding for feature development, automatic updates, cloud infrastructure) alongside significant extraction mechanisms (rising costs without ownership, forced obsolescence of older versions, data lock-in). Individual consumers experience this primarily as trap; platform operators experience it as legitimate coordination; open-source coalitions see a sunset trajectory; large enterprises retain negotiating power that reduces snare severity. The theater ratio (0.65) reflects that vendor marketing ('access instead of ownership', 'continuous innovation') frames extraction as benefit, with genuine benefits underneath the rhetoric. Extractiveness has risen from 0.28 (when subscription was marginal, 2014-ish) to 0.52 (current, 2024-ish) as subscriptions became dominant and prices accumulated across toolsets.",
+    "key_agents": [
+      "Individual Consumers: Primary victims (powerless/trapped) \u2014 no ownership, perpetual billing, high switching costs",
+      "Small Business Users: Secondary victims (moderate/constrained) \u2014 depend on platform ecosystems; face rising costs but have some exit options",
+      "Software Platform Operators: Primary beneficiaries (institutional/arbitrage) \u2014 recurring revenue enables sustainable development; capture benefit stream",
+      "Open Source Coalition: Organized alternative (organized/constrained) \u2014 Linux, LibreOffice, Blender, Nextcloud providing functional alternatives with sunset logic",
+      "Enterprise Customers: Negotiators (powerful/mobile) \u2014 have bargaining power, can maintain legacy systems or self-host alternatives",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional choice as technological necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting the genuine coordination function (sustainable development, cloud maintenance, feature continuity) combined with real extraction mechanisms (rising costs, forced upgrades, data lock-in). The value has increased from 0.28 to 0.52 over the interval as subscription adoption consolidated and price accumulation across multiple tools became structural. Not a pure snare (0.66+) because users do receive ongoing value; not pure coordination (0.35 or below) because extraction is significant and suppression of alternatives is active. Suppression (0.58): Moderate-high. Perpetual licenses have been discontinued for most major platforms. Open-source and legacy alternatives exist but require technical knowledge and have switching costs. Data portability is often performative rather than functional. Consumers are not physically prevented from exiting but face substantial operational and learning barriers. Theater ratio (0.65): Moderately high. Vendor messaging emphasizes 'continuous innovation' and 'modern access models' while downplaying the loss of ownership and rising lifetime costs. Legitimate benefits exist (automatic updates do reduce security burden) but are intertwined with extraction benefits that accrue to vendors. Enterprise negotiations are performatively flexible while consolidation strategies (feature deprecation, API lock-in) reduce real alternatives.",
+    "perspectival_gap": "The constraint demonstrates a classic perspectival gap between extractors and extracted. Platform operators (institutional/arbitrage) see legitimate coordination: subscriptions fund R&D, cloud infrastructure, and security. Individual consumers (powerless/trapped) see extraction: they lose ownership, face perpetual billing, and cannot easily exit. Small businesses (moderate/constrained) experience both: they benefit from cloud features but suffer from rising costs and vendor-imposed feature changes. Open-source coalitions (organized/constrained) see a temporary constraint being solved: LibreOffice, Blender, and Nextcloud are demonstrating that sophisticated software can operate on community-supported models with lower theater. Enterprises (powerful/mobile) see a negotiable constraint: their scale gives them leverage to maintain legacy systems or negotiate custom arrangements. The analytical observer risks the false mountain: naturalizing subscription extraction as necessary for modern cloud software, when structural data shows that open-source models sustain complex software without recurring per-user extraction.",
+    "directionality_logic": "Directionality values are derived from the structural position of each agent. Platform operators are beneficiaries with arbitrage options (low d \u2248 0.10-0.20), experiencing negative or minimal effective extraction (chi dampened by their power and mobility). Individual consumers are victims with trapped status (high d \u2248 0.85-0.95), experiencing maximum extraction. Small businesses are partially captured victims with some constrained exit (moderate d \u2248 0.55-0.65), experiencing moderate extraction. Open-source coalition agents have organized power and documented exit paths (moderate d \u2248 0.40-0.50), reducing effective extraction through coalition strength. Enterprise customers have powerful institutional status with mobile options (d \u2248 0.35-0.45), able to negotiate down chi. The scope modifier \u03c3(S) amplifies extractiveness at global scale (\u03c3 \u2248 1.2 for subscription model's global reach), since verification of alternatives is difficult across jurisdictions and network effects concentrate power.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint satisfies all three tangled rope gates: (1) genuine coordination function \u2014 subscription revenue does fund sustainable feature development, automatic updates, and cloud infrastructure maintenance; (2) asymmetric extraction \u2014 platform operators capture net benefit stream, users experience rising costs without ownership; (3) requires active enforcement \u2014 data portability barriers, API lock-in, and feature deprecation schedules are actively maintained by vendors to suppress exit. The mandatrophy is resolved by showing that the coordination function is real but systematically asymmetric: the same subscription model that benefits operators genuinely burdens consumers. This is not pure extraction (snare) hiding behind coordination rhetoric, nor is it pure coordination (rope) with incidental asymmetry. The coordination is genuine and necessary, but its asymmetric implementation creates extraction. The snare perspective (individual consumer/trapped) and scaffold perspective (open-source/sunset) are both empirically grounded: consumers are genuinely trapped (snare), and open-source alternatives are genuinely emerging (scaffold). The tangled rope classification holds the tension between both truths."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_vendor_consolidation",
+      "digital_ownership_erosion",
+      "cloud_infrastructure_lock_in"
+    ],
+    "dual_formulation_note": "The subscription economy model decomposes into three structurally related but distinct constraints: (1) subscription_economy_model (this file) \u2014 the general business model shift and its extraction mechanisms; (2) software_vendor_consolidation \u2014 market concentration enabling subscription imposition; (3) digital_ownership_erosion \u2014 the loss of user control over digital assets. Each has distinct empirical profiles and extraction vectors. The subscription model constrains more broadly but is enabled by consolidation and realized through ownership erosion."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

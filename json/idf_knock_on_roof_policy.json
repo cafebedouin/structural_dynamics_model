@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "idf_knock_on_roof_policy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "knor"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "IDF 'Knock on the Roof' Warning Policy",
+    "topic_domain": "political/military/humanitarian",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "idf_operational_command",
+      "israeli_government_legal_justification"
+    ],
+    "victims": [
+      "palestinian_civilians_in_gaza",
+      "building_occupants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Building Occupants Under Strike",
+      "comment": "PERSPECTIVE 1: BUILDING OCCUPANTS (SNARE) \u2014 Receive minimal warning (10-15 minutes) before airstrike. Unable to evacuate safely due to blocked roads, disabled vehicles, lack of transportation, or inability to identify safe destinations. Maximum extraction: survival depends on IDF discretion. No genuine exit option exists despite nominal warning."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Palestinian Civilians in Gaza",
+      "comment": "PERSPECTIVE 2: PALESTINIAN CIVILIANS (SNARE) \u2014 Warning system creates illusion of consent to evacuation ('safe passage') while actual exit routes are blocked, incomplete, or lead to equally dangerous areas. Suppression is nearly total: no genuine alternative to remaining in Gaza, no safe destination, no protection beyond the knock-and-wait mechanism. High extractiveness from suppression of alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "IDF Operational Command",
+      "comment": "PERSPECTIVE 3: IDF OPERATIONAL COMMAND (ROPE) \u2014 Experiences the policy as a coordination mechanism solving the military objective of target elimination while (nominally) minimizing civilian harm. Benefits from the policy: provides legal/humanitarian cover for operations, enables operational tempo, demonstrates 'proportionality' claim in international law. Low experienced extraction because the constraint subsidizes military objectives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Israeli Government Legal Apparatus",
+      "comment": "PERSPECTIVE 4: ISRAELI GOVERNMENT LEGAL APPARATUS (TANGLED ROPE) \u2014 Benefits from policy as legal justification for strikes (demonstrates 'warning' as proportionality defense). Also constrained by international humanitarian law requirements to minimize civilian harm. Experiences mixed coordination (legal requirement to warn) and extraction (ability to conduct strikes despite incomplete evacuation). Active enforcement required to maintain the legal framing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "International Humanitarian Law Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL HUMANITARIAN LAW FRAMEWORK (PITON) \u2014 The warning requirement (per IHL) is maintained as a performative gesture despite systemic inability of civilians to evacuate. Theater ratio is high: the warning ritual persists as institutional practice even though its functional purpose (enabling safe exit) is systematically frustrated by suppression of evacuation routes. The mechanism degrades over time as the framework's core assumption (warnings enable escape) is contradicted by operational reality."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Monitoring and Accountability Mechanisms",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL MONITORING AND ACCOUNTABILITY MECHANISMS (SCAFFOLD) \u2014 Organized actors (UN, ICC, human rights organizations) view the policy as a temporary institutional arrangement that could be replaced by alternative protective mechanisms (certified safe corridors, pre-evacuation agreements, targeted operations without area strikes). The policy has a potential sunset as accountability pressure and international legal proceedings mature. Suppression is high but constrained by organized scrutiny."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "evacuation_feasibility_threshold",
+      "question": "What warning duration and available evacuation capacity would constitute genuinely enabling escape versus performative warning theater?",
+      "resolution_mechanism": "Comparative analysis of successful vs failed evacuations; mapping of road access, vehicle availability, and destination safety against warning duration; longitudinal tracking of evacuation times vs strike delays",
+      "impact": "If threshold < 30 minutes with confirmed routes: current policy approaches functional coordination. If threshold > 2 hours or requires external assistance: policy is pure extraction theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility threshold for warning-enabled evacuation"
+    },
+    {
+      "id": "suppression_mechanism_intent",
+      "question": "Is the blocking of evacuation routes an independent operational constraint or a deliberate suppression mechanism to amplify extraction?",
+      "resolution_mechanism": "Analysis of documented blockades; comparison of strike timing with road closure timing; examination of alternative strike methodologies that would permit evacuation",
+      "impact": "If independent constraint: classification shifts toward tangled rope (unavoidable coordination problem). If deliberate: classification reinforces snare (designed extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether evacuation blocking is independent constraint or deliberate suppression"
+    },
+    {
+      "id": "humanitarian_law_enforcement_viability",
+      "question": "Can international accountability mechanisms effectively enforce IHL warning requirements in ways that force genuine evacuation capability rather than nominal notification?",
+      "resolution_mechanism": "Tracking of ICC investigations, national court proceedings, and documented changes to operational protocols; analysis of whether accountability pressure alters warning-evacuation feasibility",
+      "impact": "If enforcement effective: scaffold sunset is credible (10-15 years toward genuine protective mechanisms). If ineffective: the policy persists as institutionalized theater (piton).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether international law enforcement can viabilize genuine evacuation mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 'Knock on the Roof' policy represents a structural constraint between military operational objectives, international humanitarian law requirements, and civilian survival in armed conflict. The IDF conducts a small strike (or loud warning signal) on a building's roof prior to larger airstrikes, nominally to provide occupants time to evacuate. The policy creates a complex extraction mechanism: it functions simultaneously as a coordination attempt (alerting occupants), a legal justification (demonstrating proportionality compliance), and an enforcement tool (suppressing alternatives by making the strike inevitable if evacuation is not completed). The constraint exhibits tangled coordination-extraction dynamics because the warning requirement is genuine (derived from IHL), but the operational context systematically prevents the coordination function from working: evacuation routes are blocked, safe destinations are unavailable, and the warning duration is insufficient for meaningful escape. This creates the essential tangled rope signature: active enforcement of the warning requirement (coordination) combined with systematic suppression of evacuation capacity (extraction).",
+    "key_agents": [
+      "Building Occupants: Primary victims (powerless/trapped) \u2014 receive warnings but lack exit capacity; bear full extraction cost",
+      "Palestinian Civilians in Gaza: Primary victims (moderate/trapped) \u2014 nominally offered safe passage but encounter systematic blockades; high suppression of alternatives",
+      "IDF Operational Command: Primary beneficiary (institutional/arbitrage) \u2014 benefits from policy as operational cover and legal justification; experiences constraint as enabling coordination",
+      "Israeli Government Legal Apparatus: Secondary beneficiary (institutional/constrained) \u2014 benefits from proportionality justification but constrained by IHL and accountability mechanisms",
+      "International Humanitarian Law Framework: Institutional observer (analytical/analytical) \u2014 warning requirement is maintained performatively despite systemic failure of functional purpose",
+      "International Monitoring Organizations: Organized oversight (organized/constrained) \u2014 view policy as temporary institutional arrangement with potential accountability sunset"
+    ],
+    "logic_rationale": "Base extractiveness (0.58): High-moderate. The policy extracts civilian cooperation with their own evacuation or death \u2014 the warning creates a binary choice (flee or be struck) with the evacuation option systematically constrained. This is more extractive than pure coordination (which would enable meaningful choice) but somewhat less than pure snare (which would eliminate the choice entirely). The extraction increases as evacuation capacity is suppressed. Suppression (0.72): Very high. The operational context provides almost no genuine alternative to either evacuation or casualty: blocked roads, absent safe destinations, insufficient warning duration, lack of transportation, and the subsequent inevitable strike create a near-total suppression landscape. Theater ratio (0.68): High. The warning ritual is substantially performative \u2014 it satisfies the formal requirement of IHL notification while the functional purpose (enabling escape) is systematically frustrated. The theater has increased over the operational period as the gap between nominal warning and actual evacuation capacity has widened.",
+    "directionality_logic": "The IDF operational command and Israeli legal apparatus occupy beneficiary positions with arbitrage exit options (they can choose when and where to apply the policy, can modify protocols, have institutional flexibility). They experience low or subsidizing chi because the constraint enables their objectives. Building occupants and Palestinian civilians occupy victim positions with trapped exit options (cannot leave Gaza, cannot access roads, cannot refuse to be in buildings). They experience high chi because all alternatives are suppressed. International frameworks and accountability mechanisms occupy moderate positions with constrained exit options (they can investigate and document but cannot unilaterally enforce compliance). The perspectival gap reflects the structural asymmetry: beneficiaries see a coordination mechanism that respects humanitarian requirements; victims see an extraction mechanism that creates the appearance of choice while eliminating actual alternatives.",
+    "perspectival_gap": "The most significant gap lies between the IDF's perspective (the policy enables proportional operations while respecting IHL) and the building occupants' perspective (the warning is theater masking inevitable casualty). The Israeli legal apparatus attempts to bridge this gap by claiming the warning satisfies proportionality requirements \u2014 but this argument presupposes that evacuation is genuinely feasible. The international humanitarian law framework maintains the warning requirement on paper while operational reality demonstrates its dysfunction (piton perspective). The scaffold perspective (international accountability creating eventual change) conflicts with the piton perspective (institutional persistence despite degradation). These gaps reveal that the constraint's classification depends entirely on whether evacuation capacity can be meaningfully achieved \u2014 a structural question masked by the nominal warning ritual.",
+    "mandatrophy_analysis": "The policy resolves potential mandatrophy by distinguishing between the coordination component (warning requirement per IHL) and the extraction component (systematic suppression of evacuation capacity). The coordination requirement is genuine and enforced; the extraction emerges from operational context that prevents the coordination from functioning. This is the canonical tangled rope signature: both coordination and extraction are structurally real, not competing frames. The piton perspective reveals the degradation mechanism: as the gap between nominal warning (coordination ritual) and actual evacuation capacity (extraction reality) widened, the institutional justification persists through theater \u2014 the warning ritual continues not because it works but because it satisfies legal/political requirements. The scaffold perspective identifies the potential sunset: alternative mechanisms (certified safe corridors, pre-coordinated evacuations, accountability enforcement) could replace the current tangled arrangement with either pure coordination or explicit extraction, but would require institutional changes with generational timescales."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gaza_evacuation_route_accessibility",
+      "ihl_proportionality_justification",
+      "civilian_targeting_accountability"
+    ],
+    "dual_formulation_note": "The knock-on-roof policy decomposes into three related constraints: (1) the formal warning requirement (coordination), (2) the operational suppression of evacuation routes (extraction), and (3) the legal proportionality justification (institutional performance). The policy as a unified phenomenon exhibits tangled rope structure; its components could be analyzed separately with different extractiveness values. The warning requirement alone would be rope (pure coordination); the evacuation blockade alone would be snare (pure extraction); the legal framing alone would be piton (theater). The integrated policy is tangled because all three components operate simultaneously."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

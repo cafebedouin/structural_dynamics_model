@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "financialization_drag",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fin_drag"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "The Financialization Gravity Well",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "financial_sector_capital_allocators",
+      "high_frequency_trading_platforms",
+      "derivative_issuers"
+    ],
+    "victims": [
+      "productive_manufacturing_sector",
+      "real_wage_workers",
+      "small_to_medium_enterprises",
+      "technological_innovation_capacity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Manufacturing Worker",
+      "comment": "PERSPECTIVE 1: MANUFACTURING WORKER (SNARE) \u2014 Trapped in declining productive sectors as capital flows to financial arbitrage. No exit option without complete relocation and skill retraining. Wages stagnant despite productivity gains captured by financial sector. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Manufacturing Firm",
+      "comment": "PERSPECTIVE 2: SMALL TO MEDIUM ENTERPRISE (SNARE) \u2014 Constrained by inability to compete with financial engineering returns on capital. Banks prioritize lending to financial firms over productive investment. Cost of capital rises; access deteriorates. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Financial Sector Capital Allocator",
+      "comment": "PERSPECTIVE 3: FINANCIAL SECTOR CAPITAL ALLOCATOR (ROPE) \u2014 Experiences financialization as pure coordination: efficient price discovery, risk management through derivatives, optimal capital reallocation. Arbitrage opportunities between markets are the legitimate function of the constraint. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Mega-Corp Multi-National",
+      "comment": "PERSPECTIVE 4: MEGA-CORP MULTI-NATIONAL (TANGLED ROPE) \u2014 Powerful actors benefit from financialization (access to capital markets, leverage for acquisitions, financial engineering for shareholder returns) but also constrained by needing productive capacity and skilled labor. Mobile exit (can relocate operations, offshore profits) but also dependent on real supply chains. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.31. Hybrid experience: coordination for capital access + extraction from labor/supply chains."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Central Bank Regulator",
+      "comment": "PERSPECTIVE 5: CENTRAL BANK REGULATOR (PITON) \u2014 Maintains financial stability theater: stress tests, capital adequacy ratios, macroprudential oversight. Performative regulation that preserves the appearance of control while the fundamental gravity well persists. Theater_ratio=0.58 borderline; regulations maintain institutional legitimacy without addressing structural incentive misalignment. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational distance, financialization solves a genuine coordination problem (efficient capital allocation) while creating systematic extraction (capital diverted from productive investment toward financial returns). The gravity well is neither a natural law nor pure illusion: it is a structural consequence of incentive alignment in financial markets. Regulation attempts coordination but encounters enforcement costs that enable persistent extraction. d\u22480.68, f(d)\u22481.05, \u03c3=1.2 \u2192 \u03c7\u22480.66."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "productive_vs_financial_returns_threshold",
+      "question": "At what rate differential do productive investments become rationally subordinate to financial engineering from a capital allocator's perspective?",
+      "resolution_mechanism": "Historical comparison of real productive returns (manufacturing ROI, R&D yield) vs financial returns (equity arbitrage, derivatives yield) across decades; identification of inflection point where financial returns exceed productive returns",
+      "impact": "If productive returns structurally exceed financial returns: financialization is regulatory failure (snare from all perspectives). If financial returns structurally exceed productive returns: financialization is rational coordination (rope from powerful perspectives justified).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Rate differential between productive and financial investment returns"
+    },
+    {
+      "id": "skilled_labor_substitution_reversibility",
+      "question": "Once capital and human expertise flee productive sectors into finance, can they be re-allocated back to manufacturing without degrading financial system stability?",
+      "resolution_mechanism": "Analysis of skill transferability, institutional lock-in, regulatory dependencies; historical examination of de-financialization attempts (post-2008 regulatory efforts); measurement of friction costs for labor/capital reallocation",
+      "impact": "If reversible with moderate friction: workers have constrained (not trapped) exit. If irreversible due to institutional lock-in: workers are trapped; classification shifts firmly to snare from all victim perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of productive sector divestment"
+    },
+    {
+      "id": "innovation_velocity_causality",
+      "question": "Does the financialization gravity well causally reduce innovation velocity in productive sectors, or do declining sectors lose financial support because they exhibit declining innovation independently?",
+      "resolution_mechanism": "Causal analysis controlling for sectoral innovation: time-series correlation between capital flight and R&D productivity; identification of sectors with high innovation that retain capital despite low immediate returns; analysis of financing patterns pre/post financialization shift (1980-2000 transition)",
+      "impact": "If causally destructive: financialization is extractive (snare). If correlation without causation: financialization is coordination responding to existing sector decline (rope-compatible explanation).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Causal relationship between financialization and innovation decline"
+    },
+    {
+      "id": "regulatory_capture_completeness",
+      "question": "To what degree have financial sector regulators been captured by the finance industry versus maintaining genuine independence in macroprudential policy?",
+      "resolution_mechanism": "Analysis of revolving door (regulators \u2192 finance; finance \u2192 regulators); institutional funding sources for regulatory agencies; regulatory failure rate on major financial crises; comparative analysis of regulatory stringency across jurisdictions with different capture levels",
+      "impact": "If fully captured: regulation is theater (piton validated). If substantially independent: regulation creates genuine friction (tangled rope from regulator perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture in financial sector oversight"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The financialization gravity well describes a structural shift in resource allocation mechanisms: capital, regulatory favor, and skilled labor progressively concentrate in financial engineering rather than productive sector investment. Over 1980-2020, the financial sector's share of GDP grew from ~2.5% to ~8%; financial sector compensation captured an increasing fraction of total wages; and manufacturing as a share of US productive capacity declined from ~25% to ~11%. This constraint exhibits high extractiveness (0.62) and suppression (0.68) because the mechanism operates through incentive alignment rather than explicit coercion. Capital allocators rationally pursue financial returns when they exceed productive returns; workers cannot credibly relocate into sectors that are themselves capital-starved; and regulatory oversight is partly captured by the industry it oversees. The theater ratio (0.58) reflects that financial regulation creates procedural legitimacy (stress tests, capital adequacy) while the underlying gravity well persists: the incentive structure that drives capital toward financial arbitrage remains unaltered. Unlike a pure snare with single victim, financialization victimizes multiple structural agents simultaneously \u2014 manufacturing workers, small firms, technological innovation capacity, and long-term economic resilience. The mega-corp perspective (tangled rope) reveals that not all powerful actors are beneficiaries: large multinational corporations benefit from financialization's capital access but depend on the real productive capacity that financialization starves.",
+    "key_agents": [
+      "Manufacturing Workers: Primary victim (powerless/trapped) \u2014 wages stagnate as capital diverts to financial returns",
+      "Small-to-Medium Enterprises: Primary victim (moderate/constrained) \u2014 cannot compete for capital; face rising cost of credit",
+      "Financial Sector Capital Allocators: Primary beneficiary (institutional/arbitrage) \u2014 capture returns from price discovery, risk management, leverage",
+      "High-Frequency Trading Platforms: Primary beneficiary (institutional/arbitrage) \u2014 extract value from speed-based arbitrage; fuel financialization acceleration",
+      "Mega-Corp Multi-Nationals: Secondary/ambivalent (powerful/mobile) \u2014 benefit from capital access but constrained by dependence on real supply chains",
+      "Central Bank Regulators: Theater maintainers (institutional/constrained) \u2014 manage stability appearance; constrained by political economy of financial capture",
+      "Technological Innovation Capacity: Victim (abstract/trapped) \u2014 capital diverted from R&D; institutional knowledge lost as sectors shrink"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High. The constraint extracts value from productive sectors and redirects it to financial returns. The trajectory (0.28\u21920.62 over 40 years) shows systematic acceleration as financial engineering techniques proliferate and capital concentration increases. This is not a fixed property but an accumulating mechanism: each cycle of financialization enables more sophisticated financial instruments, which attract more capital, which increases the extraction gradient. Suppression (0.68): High-moderate. The mechanism operates through incentive alignment, not explicit coercion, but suppression comes from: (1) regulatory asymmetry (financial sector lobbies effectively; productive sectors lobby weakly), (2) information asymmetry (financial complexity hides extraction mechanisms from public view), (3) institutional lock-in (once capital and expertise concentrate in finance, exit costs become prohibitive). Theater ratio (0.58): Moderate-high. Financial regulation creates substantial performative activity (stress tests, capital adequacy ratios, resolution authority structures) that maintains institutional legitimacy while the underlying gravity well persists. The theater increased over time as regulations were layered in response to crises but without addressing the fundamental incentive structure. Claimed type (Snare) is justified by: \u03c7 \u2265 0.66 threshold (0.62 \u00d7 1.05 \u00d7 1.2 \u2248 0.78 from analytical perspective; 0.62 \u00d7 1.40 \u00d7 1.2 \u2248 1.04 from manufacturing worker perspective). High suppression (0.68 \u2265 0.60 gate). Multiple victims with no effective exit.",
+    "perspectival_gap": "The manufacturing worker and small firm perspectives (snare) diverge sharply from the financial sector allocator perspective (rope). The beneficiary genuinely experiences the constraint as pure coordination: efficient price discovery, optimal capital allocation, legitimate risk management. The victim experiences systematic exclusion and wage stagnation with no exit option. The mega-corp (tangled rope) occupies an intermediate position: it benefits from access to financial capital (rope function) but is also constrained by dependency on the real productive capacity that the gravity well is starving (snare-like constraint). The central bank regulator (piton) maintains the procedural legitimacy of oversight while the fundamental extraction mechanism persists. The analytical observer (tangled rope) recognizes both functions: the gravity well solves a coordination problem (capital to high-return opportunities) while simultaneously creating systematic extraction (capital diverted from productive investment). This perspectival gap is not resolvable by changing how we measure the constraint \u2014 it reflects genuinely different structural positions within the same system.",
+    "directionality_logic": "Financial sector allocators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; negative effective extraction. Manufacturing workers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction pressure. Small firms: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction; some limited exit via relocation/sector transition but with severe costs. Mega-corp multinational: Both beneficiary (capital access) and victim (labor scarcity, supply chain pressure) + mobile \u2192 d\u22480.45, f(d)\u22480.50. Mixed experience. Central bank regulator: Constrained actor experiencing coordination function + theater maintenance \u2192 d\u22480.50, f(d)\u22480.65. Moderate effective extraction from institutional perspective. Analytical observer: Sees both coordination and extraction simultaneously \u2192 d\u22480.68, f(d)\u22481.05. Confirms tangled rope classification.",
+    "mandatrophy_analysis": "EXTRACTIVENESS > 0.70 THRESHOLD: Mandatrophy is resolved by recognizing the dual function. The financialization gravity well is NOT pure extraction misrepresented as coordination. It IS coordination (capital to high-return opportunities) that generates systematic extraction as a byproduct. The mandatrophy would emerge if we claimed the constraint was either (a) pure rope (only coordination, no extraction) or (b) pure snare (only extraction, no coordination function). The tangled rope classification resolves this by insisting that both functions are real and structural: (1) Coordination function: Financial markets do allocate capital to high-productivity uses and manage risk efficiently within their scope. (2) Extraction function: This efficient allocation to financial returns creates systematic under-investment in productive sectors, worker wage stagnation, and innovation capacity loss. The constraint cannot be justified purely as coordination, nor can it be condemned purely as extraction. The mandatrophy resolution comes from measuring both: beneficiaries genuinely benefit from coordination, victims genuinely suffer from extraction, and the two are inseparable consequences of the same mechanism. Policy responses must address the extraction without destroying the coordination function \u2014 this is the genuine dilemma, not a question of labeling."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "manufacturing_decline_lock_in",
+      "wage_stagnation_structural",
+      "research_funding_scarcity"
+    ],
+    "dual_formulation_note": "Financialization gravity well is upstream of multiple sectoral decline constraints. The wage stagnation and manufacturing decline are downstream consequences of the capital reallocation mechanism. These constraints are structurally linked: addressing financialization requires simultaneous management of all three to avoid regulatory whack-a-mole (reducing financial returns without addressing productive sector competitiveness simply accelerates structural decline)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

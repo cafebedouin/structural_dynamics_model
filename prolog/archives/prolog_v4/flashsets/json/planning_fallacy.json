@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "planning_fallacy",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Planning Fallacy",
+    "topic_domain": "economic/social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "project_promoters",
+      "initial_stakeholders"
+    ],
+    "victims": [
+      "end_users",
+      "future_stakeholders",
+      "overall_system_performance"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "End Users",
+      "comment": "End users are often trapped as they rely on the completion of the project but have no control over its timeline. They bear the cost of delays and unmet expectations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Project Managers",
+      "comment": "Project managers are constrained by the need to deliver projects on time and within budget, but also benefit from career advancement when projects are perceived as successful (even if the timeline was unrealistic). They experience both coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Project Promoters",
+      "comment": "Project promoters (e.g., politicians, CEOs) benefit from the initial positive publicity and perceived progress, regardless of whether the project is ultimately completed on time. They can often arbitrage their position to other opportunities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the planning fallacy as a systemic issue that combines coordination (initial alignment on goals) and extraction (underestimation of costs borne by end users and future stakeholders)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "complexity_assessment",
+      "question": "How accurately can the complexity of a project be assessed at the outset?",
+      "resolution_mechanism": "Statistical analysis of similar projects, expert consultations, scenario planning.",
+      "impact": "If complexity is accurately assessed, the planning fallacy's impact is reduced. If complexity is underestimated, the fallacy becomes more pronounced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of initial project complexity assessment."
+    },
+    {
+      "id": "incentive_alignment",
+      "question": "To what extent are incentives aligned between project promoters and end users?",
+      "resolution_mechanism": "Analysis of contractual agreements, stakeholder engagement, and feedback mechanisms.",
+      "impact": "If incentives are aligned, the planning fallacy's extractive effect is reduced. If incentives are misaligned, the fallacy exacerbates negative consequences for end users.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Alignment of incentives between project promoters and end users."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The planning fallacy is a cognitive bias where predictions about the time needed to complete a task exhibit an optimism bias, underestimating the actual time required. This can lead to cost overruns, delays, and unmet expectations. Project promoters benefit from the initial enthusiasm, while end-users and future stakeholders often bear the costs of these miscalculations.",
+    "key_agents": [
+      "Project Promoters: Primary beneficiary (institutional/arbitrage) - benefit from initial publicity and perceived progress.",
+      "End Users: Primary victim (powerless/trapped) - bear the costs of delays and unmet expectations.",
+      "Project Managers: Moderate actor (moderate/constrained) - constrained by deadlines but benefit from project success.",
+      "Future Stakeholders: Secondary victim (moderate/constrained) - bear costs due to potentially degraded system performance.",
+      "Initial Stakeholders: Secondary beneficiary (moderate/mobile) - may benefit from initial stages of project implementation."
+    ],
+    "logic_rationale": "Extractiveness (0.50): Moderate. The planning fallacy extracts resources (time, money, opportunity cost) from end-users and future stakeholders due to inaccurate planning.  Suppression (0.60): Moderate-High. There is often limited recourse for end-users once a project is underway, leading to a suppression of alternatives. Theater ratio (0.30): Low. There is some performative element in showcasing initial progress, but the core function of completing the project remains paramount.",
+    "perspectival_gap": "The perspectival gap arises because project promoters, who are in a position to arbitrage their benefits, experience the fallacy as a coordinating mechanism to get a project off the ground. End-users, who are trapped with the consequences, experience it as extraction. Project managers experience both, as they are constrained by the imposed timeline but gain from perceived success. An analytical observer sees both the coordinating function of getting projects started and the extractive consequences for end-users and the system's overall performance.",
+    "directionality_logic": "Project promoters benefit from initial enthusiasm (low d), while end-users bear the costs of delays (high d). Project managers are constrained by deadlines but also benefit from successful projects (moderate d). This leads to different classifications based on each agent's perspective."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

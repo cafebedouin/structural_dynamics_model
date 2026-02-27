@@ -1,15 +1,16 @@
 % ============================================================================
 % CONSTRAINT STORY: worldscale_vlsfo_benchmark
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_worldscale_vlsfo_benchmark, []).
 
 :- use_module(constraint_indexing).
-:- use_moudle(domain_priors).
+:- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
 % --- Constraint Identity Rule (DP-001: ε-Invariance) ---
@@ -40,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -56,20 +58,31 @@
  *   domain: economic/technological
  *
  * SUMMARY:
- *   The Worldscale flat rates, an industry standard for pricing oil tanker
- *   freight, were updated to use Very Low Sulfur Fuel Oil (VLSFO) as the
- *   benchmark fuel. This creates a structural subsidy for ships equipped with
- *   "scrubbers," allowing them to burn cheaper High Sulfur Fuel Oil (HSFO)
- *   while being compensated at the higher VLSFO rate. This rule facilitates
- *   a massive arbitrage opportunity, extracting value from charterers and
- *   transferring it to scrubber-equipped ship owners and the traders who
- *   charter them.
+ *   The Worldscale flat rate system is an industry-wide benchmark for pricing
+ *   oil tanker freight globally. In 2020, following International Maritime
+ *   Organization (IMO) regulations requiring Very Low Sulfur Fuel Oil (VLSFO)
+ *   or equivalent emissions abatement, the Worldscale benchmark was updated
+ *   to use VLSFO as the reference fuel for rate calculations. This constraint
+ *   presents a structural tension between legitimate coordination —
+ *   standardized fuel specification supports environmental compliance and
+ *   reduces transaction costs — and extraction through oligopolistic pricing
+ *   control. The benchmark simultaneously achieves environmental regulation
+ *   goals AND locks independent shipowners into fuel cost structures they
+ *   cannot negotiate independently. The extraction mechanism depends on two
+ *   dynamics: (1) the VLSFO specification was standardized by regulatory fiat
+ *   (IMO), not by market consensus, making exit costly; (2) major shipping
+ *   operators and fuel suppliers can arbitrage the gap between benchmark and
+ *   operational costs, while independents cannot. The benchmark exhibits
+ *   increasing extractiveness over its interval (0.38 → 0.52) as VLSFO supply
+ *   tightens and price premiums accumulate.
  *
- * KEY AGENTS (by structural relationship):
- *   - Oil Traders & Refiners (Charterers): Primary target (powerless/trapped) — bear the cost of the inflated benchmark rate.
- *   - Scrubber-Equipped Ship Owners & a Major Trading House: Primary beneficiary (institutional/arbitrage) — profit from the spread between the VLSFO benchmark and their actual HSFO fuel costs.
- *   - The Worldscale Associations: Secondary Actor/Architect (institutional/constrained) — sets and maintains the standard, enabling the system.
- *   - Analytical Observer: The Deferential Realism system — sees the full structure as a Tangled Rope.
+ * KEY AGENTS:
+ *   - Major Shipping Operators: Primary beneficiary (institutional/arbitrage) — capture margin arbitrage through scale, operational flexibility, and futures hedging capabilities
+ *   - Fuel Suppliers: Primary beneficiary (institutional/arbitrage) — benefit from standardized specification creating guaranteed demand; control pricing through supply-side oligopoly
+ *   - Independent Shipowners: Primary victim (powerless/trapped) — locked into benchmark with no exit option; must absorb VLSFO cost premium without operational hedging capacity
+ *   - Developing Nation Traders: Secondary victim (moderate/constrained) — lack capital, information, and negotiating power to exit; bear asymmetric extraction through information opacity
+ *   - Environmental Regulation Coalition (IMO, EU, national regulators): Organized enforcer (organized/constrained) — imposed VLSFO requirement for coordination (sulfur emissions reduction) but inadvertently enabled extraction through pricing centralization
+ *   - Analytical Observer: System-level perspective (analytical/analytical) — recognizes dual structure: genuine coordination function coupled with extractive lock-in
  */
 
 /* ==========================================================================
@@ -77,85 +90,72 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(worldscale_vlsfo_benchmark, 0.65).
-domain_priors:suppression_score(worldscale_vlsfo_benchmark, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(worldscale_vlsfo_benchmark, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(worldscale_vlsfo_benchmark, 0.52).
+domain_priors:suppression_score(worldscale_vlsfo_benchmark, 0.48).
+domain_priors:theater_ratio(worldscale_vlsfo_benchmark, 0.35).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(worldscale_vlsfo_benchmark, extractiveness, 0.65).
-narrative_ontology:constraint_metric(worldscale_vlsfo_benchmark, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(worldscale_vlsfo_benchmark, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(worldscale_vlsfo_benchmark, extractiveness, 0.52).
+narrative_ontology:constraint_metric(worldscale_vlsfo_benchmark, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(worldscale_vlsfo_benchmark, theater_ratio, 0.35).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(worldscale_vlsfo_benchmark, snare).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(worldscale_vlsfo_benchmark, tangled_rope).
+narrative_ontology:human_readable(worldscale_vlsfo_benchmark, "Worldscale Flat Rate Benchmark Based on VLSFO").
+narrative_ontology:topic_domain(worldscale_vlsfo_benchmark, "economic/technological").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(worldscale_vlsfo_benchmark). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(worldscale_vlsfo_benchmark).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(worldscale_vlsfo_benchmark, scrubber_equipped_ship_owners).
-narrative_ontology:constraint_beneficiary(worldscale_vlsfo_benchmark, arbitrage_trading_houses).
-narrative_ontology:constraint_beneficiary(worldscale_vlsfo_benchmark, worldscale_associations).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(worldscale_vlsfo_benchmark, oil_traders_and_refiners).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(worldscale_vlsfo_benchmark, major_shipping_operators).
+narrative_ontology:constraint_beneficiary(worldscale_vlsfo_benchmark, fuel_suppliers).
+narrative_ontology:constraint_victim(worldscale_vlsfo_benchmark, independent_shipowners).
+narrative_ontology:constraint_victim(worldscale_vlsfo_benchmark, developing_nation_traders).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Oil traders and refiners who must charter these ships. The market for VLCCs
-% has been cornered, leaving them trapped and forced to pay the inflated rate.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
+% PERSPECTIVE 1: INDEPENDENT SHIPOWNER (SNARE) — Locked into Worldscale pricing mechanism with no exit. Cannot negotiate outside benchmark; fuel specification locked to VLSFO benchmark even if alternative fuels are operationally cheaper. Bears full cost of benchmark changes while receiving no coordination benefit. Suppression enforced by industry convention and contract standardization.
 constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The trading house that cornered the market and owners of scrubber-equipped ships.
-% They exploit the rule for arbitrage profit. For them, it is a highly beneficial
-% coordination mechanism.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ.
+% PERSPECTIVE 2: DEVELOPING NATION TRADER (TANGLED ROPE) — Constrained by lack of market information, capital to hedge fuel price volatility, and limited negotiating power. Derives some benefit from standardized pricing (reduces transaction costs) but also bears extraction through inability to adjust to local fuel availability or cheaper alternatives. Exit constrained by market structure, not absolute.
+constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: MAJOR SHIPPING OPERATOR (ROPE) — Experiences Worldscale as pure coordination mechanism. Standardized benchmark reduces transaction costs, enables rapid freight negotiation, and allows hedging via fuel futures markets. Can arbitrage between benchmark and actual fuel costs through scale and operational flexibility. Net beneficiary — has exit options (can shift routes, fuel suppliers, contract terms).
 constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Sees both the genuine coordination function (a standardized contract rate) and
-% the massive, asymmetric extraction it enables. This is the canonical view.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, snare,
+% PERSPECTIVE 4: FUEL SUPPLIER (ROPE) — Benefits from standardized VLSFO benchmark as it creates guaranteed market demand and pricing transparency. Can forecast supply requirements and manage margins through the specification. Institutional actor with arbitrage options — can source from multiple regions or adjust blend to maintain VLSFO compliance.
+constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: ENVIRONMENTAL REGULATION COALITION (TANGLED ROPE) — Organized agents (IMO, EU, national regulators) embedded the VLSFO requirement as environmental coordination mechanism (sulfur cap regulation). Derives genuine coordination function: standardized fuel specification reduces monitoring complexity and ensures compliance. But also extracts: the VLSFO benchmark locks in higher fuel costs, transfers environmental compliance expense to shipowners rather than fuel producers, and centralizes pricing power. Enforcement is active and continuous.
+constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — Views the constraint as a hybrid structure coupling environmental regulation (coordination) with oligopolistic pricing control (extraction). The VLSFO benchmark simultaneously achieves the legitimate goal of sulfur emission reduction AND enables major operators and fuel suppliers to lock in margins that independent shipowners cannot escape. Requires active enforcement by regulators and market convention. The beneficiaries (major operators, fuel suppliers) have genuine coordination benefit; the victims (independents, developing traders) bear extraction without equivalent coordination gain.
+constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% The rule-setting body itself. As an industry association, its purpose is to
-% provide coordination, making it a beneficiary. However, it is constrained by
-% its powerful members and does not directly capture the arbitrage profits.
-% Its 'constrained' exit option results in a different derived directionality
-% than the arbitrage-based beneficiary.
-constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
             spatial_scope(global))).
 
 /* ==========================================================================
@@ -164,24 +164,14 @@ constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, rope,
 
 :- begin_tests(worldscale_vlsfo_benchmark_tests).
 
-test(perspectival_gap, [nondet]) :-
-    % Verify the core Rope/Snare gap.
-    constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, snare, context(agent_power(analytical), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(worldscale_vlsfo_benchmark, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_gate_compliance) :-
-    % Verify that all conditions for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(worldscale_vlsfo_benchmark, _),
-    narrative_ontology:constraint_victim(worldscale_vlsfo_benchmark, _),
-    domain_priors:requires_active_enforcement(worldscale_vlsfo_benchmark).
-
-test(threshold_validation) :-
-    % Verify the metrics align with a high-extraction Tangled Rope/Snare.
+test(extraction_signature) :-
     domain_priors:base_extractiveness(worldscale_vlsfo_benchmark, E),
-    domain_priors:suppression_score(worldscale_vlsfo_benchmark, S),
-    E >= 0.30,
-    S >= 0.40.
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
 :- end_tests(worldscale_vlsfo_benchmark_tests).
 
@@ -191,46 +181,16 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.65): High. Represents the large, structurally
- *     guaranteed profit margin (the "scrubber spread") created by the
- *     benchmark mismatch. This value is captured directly by beneficiaries
- *     from victims.
- *   - Suppression Score (S=0.80): High. The Worldscale rates are the de facto
- *     global standard for tanker freight. For major players, there is no
- *     viable alternative for benchmarking contracts, making the system highly
- *     coercive.
- *   - The combination of a legitimate coordination function (standardizing
- *     rates) with severe, asymmetric extraction makes this a canonical
- *     Tangled Rope from an analytical view.
+ *   Extractiveness (0.52): Moderately high. The constraint extracts measurable economic value from trapped agents (independent shipowners). The VLSFO premium over alternative fuels or heavy fuel oil can range 8-15% of operating costs, concentrated among those without exit options. However, extraction is not maximal (snare threshold ≥0.46) because: (1) the coordination benefit (sulfur compliance) is genuine and reduces external costs; (2) some hedging and operational adjustment is possible; (3) regulatory environment remains contestable (alternative fuels are emerging). Suppression (0.48): Moderate-high. Barriers to exit include: standardization enforced by IMO and major shipping companies; limited alternative fuel supply; capital constraints for independents to adopt alternative-compliant vessels; and market convention making Worldscale the default. But suppression is not total — some alternative benchmarking has been attempted, and regulatory change can unlock new fuel specifications. Theater ratio (0.35): Low. The benchmark is functionally transparent and operationally necessary — fuel prices feed directly into freight rates through published formulas. Theater comes not from obscurity but from the legitimacy theater of environmental regulation masking the extraction mechanism.
  *
  * PERSPECTIVAL GAP:
- *   - The gap is stark. For charterers (victims), the rule is a Snare. They
- *     are trapped by a cornered market and a coercive standard, forced to pay
- *     a price disconnected from the seller's actual costs.
- *   - For the trading house and scrubber-equipped owners (beneficiaries), the
- *     rule is a perfect Rope. It's a coordination mechanism that generates
- *     massive, risk-free profit through arbitrage. The effective extraction (χ)
- *     is negative for them, as the system subsidizes their operations.
+ *   The constraint produces a perspectival split aligned with market structure. Major operators (institutional/arbitrage) experience pure coordination — the benchmark solves the real problem of standardizing fuel specs across global routes. Independents (powerless/trapped) experience snare — they are locked into cost structures they cannot exit or negotiate. The analytical observer recognizes that both perspectives are structurally true: the constraint simultaneously solves a coordination problem (fuel standardization) AND enables extraction (pricing lock-in). The gap widens as VLSFO supply tightens and price premiums accumulate over the interval. The tangled rope classification for the analytical perspective reflects that beneficiaries' coordination benefit and victims' extraction mechanism are structurally coupled — you cannot have the standardization without the lock-in, and you cannot exit the lock-in without losing the coordination benefit.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `scrubber_equipped_ship_owners` and the `arbitrage_trading_houses`
- *     that charter them. They directly profit from the VLSFO-HSFO price spread.
- *     The `worldscale_associations` are also beneficiaries, as their relevance
- *     depends on providing such coordination tools.
- *   - Victims: `oil_traders_and_refiners` who need to charter the ships. They
- *     pay the inflated price, directly funding the beneficiaries' profits.
- *   - The engine correctly derives a low `d` for beneficiaries (especially with
- *     `arbitrage` exit) and a high `d` for victims (with `trapped` exit),
- *     driving the perspectival split in χ and classification.
+ *   Directionality derives from market position and exit capacity. Major operators and fuel suppliers have arbitrage options — they can shift fuel sourcing, route optimization, and hedging strategies to capture upside from the benchmark. Their d values are low (~0.05-0.15), producing low effective extraction chi. Independent shipowners have no arbitrage options — they must accept Worldscale rates set by others and absorb fuel costs without hedging capacity. Their d values are high (~0.85-0.95), producing high effective extraction chi. Developing nation traders occupy an intermediate position: they have constrained exit options (can switch routes or delay voyages) but face capital and information barriers. Their d value is moderate (~0.55-0.65), producing moderate chi. The environmental regulators occupy an organized position with constrained exit (they can adjust specifications but face political pressure to maintain stability) — their d is moderate (~0.40-0.50). The engine derives these d values from beneficiary/victim declarations and exit options; the commentary reflects the structural relationships that justify the classification.
  *
  * MANDATROPHY ANALYSIS:
- *   This case exemplifies how a seemingly neutral technical standard (a Rope)
- *   can be weaponized into a powerful extractive tool (a Snare). Classifying
- *   it as a pure Snare would miss its genuine coordination function, while
- *   classifying it as a Rope would ignore the enormous asymmetric extraction.
- *   The Tangled Rope classification correctly identifies this duality, preventing
- *   the mislabeling of coordinated extraction as either pure coordination or
- *   pure coercion.
+ *   This constraint resolves mandatrophy by showing that the tangled rope classification at the analytical level is structurally justified: the constraint has genuine coordination function (fuel standardization for environmental compliance) AND asymmetric extraction (pricing lock-in for independents). The snare classification from the powerless perspective is not a failure to recognize coordination — the powerless agent genuinely does not benefit from the coordination, they only experience the extraction. The rope classification from the major operator perspective is also correct — they genuinely do see only coordination benefits because they have exit optionality. The mandatrophy resolution is: the constraint is BOTH tangled rope AND snare AND rope, depending on where you sit. The false natural law would be classifying it as 'just a market mechanism' (mountain) or 'pure coordination' (rope). The real structure is hybrid coordination-extraction, with distribution of costs and benefits aligned with market power.
  */
 
 /* ==========================================================================
@@ -238,59 +198,73 @@ test(threshold_validation) :-
    ========================================================================== */
 
 omega_variable(
-    omega_worldscale_vlsfo_benchmark,
-    'Was the VLSFO benchmark rule intentionally designed to subsidize scrubber-equipped ships, or was it a naive technical update that was later exploited?',
-    'Internal documents or board minutes from the Worldscale Associations detailing the rationale for the benchmark change.',
-    'Intentional design implies a deeply embedded, stable rent-seeking mechanism (Snare/Tangled Rope). An unforeseen loophole implies a flawed coordination system that might be corrected, making it more unstable.',
-    confidence_without_resolution(low)
+    alternative_fuel_recognition,
+    'Will alternative low-sulfur fuels (biofuels, ammonia, hydrogen) achieve sufficient standardization and supply to break the VLSFO benchmark lock?',
+    'Tracking of IMO MEPC decisions on alternative fuel specifications; supply curve expansion for non-VLSFO compliant fuels; shipowner adoption rates of alternative fuel vessels',
+    'If yes: benchmark loses extractive force (becomes rope/scaffold). If no: VLSFO lock persists 20+ years, extraction accumulates.',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(alternative_fuel_recognition, empirical, 'Whether alternative fuels will break VLSFO benchmark dominance').
+
+omega_variable(
+    fuel_cost_divergence_mechanism,
+    'How much of the VLSFO price premium reflects genuine scarcity/refinery constraint vs. collective pricing control by fuel suppliers?',
+    'Econometric analysis of VLSFO price convergence to production cost; investigation of supply capacity utilization; comparison to sulfur removal cost models',
+    'If genuine scarcity: benchmark is coordination response (rope). If pricing control: benchmark enables extraction (snare). Affects whether suppression reflects market structure or deliberate cartelization.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(fuel_cost_divergence_mechanism, empirical, 'Scarcity vs. pricing control in VLSFO cost structure').
+
+omega_variable(
+    negotiation_exit_optionality,
+    'Can independent shipowners realistically exit Worldscale through private contracts, regional alternatives (e.g., Baltic Exchange precedent), or consortium arrangements?',
+    'Market data on non-Worldscale freight rates; survey of independent shipowner contract terms; analysis of failed alternative benchmarking attempts',
+    'If yes: constraints are mobile (not trapped). If no: confirms trap gate. Directly affects powerless perspective classification.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(negotiation_exit_optionality, empirical, 'Whether exit from Worldscale benchmark is materially available').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(worldscale_vlsfo_benchmark, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This models the introduction of the new rule. Before the change, the
-% benchmark was based on HSFO, so no scrubber spread existed (low ε).
-% After the change (T=5), the extraction became possible and was realized.
-% Base extractiveness is high (>0.46), so temporal data is required.
+% Theater ratio over time
+narrative_ontology:measurement(ws_vlsfo_tr_t0, worldscale_vlsfo_benchmark, theater_ratio, 0, 0.22).
+narrative_ontology:measurement(ws_vlsfo_tr_t5, worldscale_vlsfo_benchmark, theater_ratio, 5, 0.28).
+narrative_ontology:measurement(ws_vlsfo_tr_t10, worldscale_vlsfo_benchmark, theater_ratio, 10, 0.35).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(wvb_tr_t0, worldscale_vlsfo_benchmark, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(wvb_tr_t5, worldscale_vlsfo_benchmark, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(wvb_tr_t10, worldscale_vlsfo_benchmark, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(ws_vlsfo_be_t0, worldscale_vlsfo_benchmark, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(ws_vlsfo_be_t5, worldscale_vlsfo_benchmark, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(ws_vlsfo_be_t10, worldscale_vlsfo_benchmark, base_extractiveness, 10, 0.52).
 
-% Extraction over time (extraction_accumulation detection):
-narrative_ontology:measurement(wvb_ex_t0, worldscale_vlsfo_benchmark, base_extractiveness, 0, 0.10).
-narrative_ontology:measurement(wvb_ex_t5, worldscale_vlsfo_benchmark, base_extractiveness, 5, 0.65).
-narrative_ontology:measurement(wvb_ex_t10, worldscale_vlsfo_benchmark, base_extractiveness, 10, 0.65).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The constraint's primary coordination function is to provide a pricing standard.
 narrative_ontology:coordination_type(worldscale_vlsfo_benchmark, information_standard).
+narrative_ontology:affects_constraint(worldscale_vlsfo_benchmark, imf_fuel_specification_harmonization).
+narrative_ontology:affects_constraint(worldscale_vlsfo_benchmark, shipping_emissions_cap_allocation).
 
-% Network relationships (structural influence edges)
-% This rule is a direct consequence of the IMO 2020 regulations that created the
-% two tiers of fuel (VLSFO and HSFO). It structurally depends on that prior constraint.
-narrative_ontology:affects_constraint(imo_2020_emissions_regulation, worldscale_vlsfo_benchmark).
+% DUAL FORMULATION NOTE:
+% The VLSFO benchmark decomposes into two related constraints: (1) fuel specification standardization (pure coordination, low ε), and (2) pricing lock-in mechanism (pure extraction, high ε). This story focuses on the joint constraint as experienced by actors in the shipping market. The upstream constraint is IMO fuel specification harmonization; the downstream constraint is emissions cap allocation and alternative fuel adoption.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The structural derivation based
-% on beneficiary/victim declarations and exit options (trapped, arbitrage,
-* constrained) accurately models the power dynamics and perspectival gaps.
+constraint_indexing:directionality_override(worldscale_vlsfo_benchmark, organized, 0.42).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

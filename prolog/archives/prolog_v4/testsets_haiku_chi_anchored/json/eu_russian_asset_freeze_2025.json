@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "eu_russian_asset_freeze_2025",
+    "version": "1.0",
+    "generated_date": "2025-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "euraf"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Indefinite Freeze of Russian State Assets by the EU",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eu_member_states",
+      "ukraine_support_coalition"
+    ],
+    "victims": [
+      "russian_federation",
+      "russian_central_bank",
+      "russian_state_enterprises"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Russian Federation and State Assets",
+      "comment": "PERSPECTIVE 1: RUSSIAN FEDERATION (SNARE) \u2014 Cannot exit the constraint without capitulation or military withdrawal from Ukraine. The seized assets represent ~$300+ billion in frozen reserves, effectively held hostage. No negotiation pathway exists except regime change or territorial concession. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.92. Trapped extraction at maximum intensity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "EU Member States and Ukraine Coalition",
+      "comment": "PERSPECTIVE 2: EU MEMBER STATES / UKRAINE COALITION (ROPE) \u2014 Primary beneficiaries. Experience the freeze as legitimate coordination for collective defense and deterrence. Can arbitrage by modulating sanctions pressure. The mechanism solves the collective action problem of punishing aggression without requiring military escalation. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.09. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Neutral Third Parties and Financial Intermediaries",
+      "comment": "PERSPECTIVE 3: NEUTRAL THIRD PARTIES / FINANCIAL INTERMEDIARIES (TANGLED ROPE) \u2014 Constrained by extraterritorial reach of EU sanctions (SWIFT exclusion, correspondent banking). Experience both coordination benefit (unified sanctions regime prevents capital flight) and extraction cost (compliance burden, loss of transaction fees, legal liability). d\u22480.65, f(d)\u22480.95, \u03c3=0.9 \u2192 \u03c7\u22480.58. Mixed coordination-extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Russian Citizens and Non-State Actors",
+      "comment": "PERSPECTIVE 4: RUSSIAN CITIZENS / PRIVATE SECTOR (SNARE) \u2014 Constrained by capital controls and economic isolation. Cannot exit without violating sanctions compliance. Suffer collateral damage from state asset freeze (currency devaluation, credit contraction, inflation). No exit option except emigration or circumvention. d\u22480.82, f(d)\u22481.24, \u03c3=1.0 \u2192 \u03c7\u22480.84. Partial extraction with significant collateral."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Formal International Legal Regime",
+      "comment": "PERSPECTIVE 5: FORMAL INTERNATIONAL LEGAL REGIME (PITON) \u2014 The freeze is technically justified under UN Security Council authority and EU treaty powers, but the legal scaffolding is performative: the constraint persists through political will and enforcement capacity, not through inherent legal force. theater_ratio=0.48 reflects moderate performative content \u2014 legal framing is significant but not total. If political will shifts, the legal justification can be reframed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Geopolitical Coordination Function)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the freeze serves a dual function: (1) coordination mechanism for the rules-based international order (deterring future invasions through asset seizure), and (2) extraction mechanism against the target state (permanent asset confiscation, financial leverage). Both are simultaneously true. The constraint cannot collapse to pure coordination (asset seizure is real extraction) nor pure punishment (the coordination signal is real). d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.78. Hybrid classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "normalization_timeline",
+      "question": "What conditions would trigger asset unfreezing, and would they be satisfied within a decade or become permanent?",
+      "resolution_mechanism": "Analysis of EU/US policy statements, Ukraine settlement scenarios, Russian political trajectory; comparison with historical sanctions precedents (Iran, North Korea, Cuba)",
+      "impact": "If temporary (10-15 year horizon): constraint is Scaffold with sunset logic. If effectively permanent: constraint remains Snare. This is the primary mandatrophy risk.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether the asset freeze is temporary or permanent policy"
+    },
+    {
+      "id": "alternative_financial_infrastructure",
+      "question": "Do alternative payment systems (SPFS, digital currencies, non-SWIFT channels) enable Russia to effectively bypass the freeze, converting it from extraction to constraint?",
+      "resolution_mechanism": "Monitoring of SPFS transaction volumes, BRICS payment system adoption, Bitcoin/crypto flows; empirical assessment of transaction cost increases and liquidity losses",
+      "impact": "If alternatives mature: snare classification degrades to constrained-exit (moderate extraction). If alternatives remain marginal: snare classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative financial systems bypass the asset freeze"
+    },
+    {
+      "id": "legitimacy_erosion",
+      "question": "Do repeated cycles of sanctions against different states delegitimize asset seizure as a tool, creating precedent risk that EU's own reserves become vulnerable to retaliation?",
+      "resolution_mechanism": "Tracking of emerging-market and adversarial-state policy statements; analysis of reserve asset composition changes; monitoring of alternative reserve currencies (yuan, gold) accumulation",
+      "impact": "If legitimacy erodes: EU faces symmetrical extraction risk (own assets at future risk in alternative regimes). This could force unwinding of the freeze or acceptance of mutual vulnerability.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether asset seizure precedent creates symmetrical retaliation risk"
+    },
+    {
+      "id": "civilian_harm_threshold",
+      "question": "At what level of economic collateral damage to Russian civilians does the constraint breach humanitarian boundaries that trigger international legal challenge?",
+      "resolution_mechanism": "Monitoring of Russian economic indicators (poverty rates, life expectancy, medical access); international court filings; diplomatic protests from neutral states",
+      "impact": "If threshold breached: constraint faces legal challenge and potential unwinding. If threshold remains below actual harm: extraction continues without legal limit.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Humanitarian threshold for collateral civilian damage"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The EU's indefinite freeze of Russian state assets following the 2022 invasion of Ukraine represents a structural constraint that oscillates between Rope (coordination mechanism) and Snare (extraction mechanism) depending on observer position. From the EU's perspective, the freeze solves a collective defense problem: it coordinates deterrence, pools punishment capacity, and removes economic incentives for future aggression. From Russia's perspective, it is pure extraction \u2014 a $300+ billion hostage seizure with no exit condition except military capitulation. The constraint exhibits high suppression (0.72) due to comprehensive SWIFT exclusion and secondary sanctions against non-compliant intermediaries, but moderate theater (0.48) because the extraction mechanism is economically real, not performative: the seized reserves generate no return for Russia, and alternative financial infrastructure remains marginal. The extractiveness (0.68) reflects that the freeze extracts geopolitical leverage as well as financial assets \u2014 Russia's capacity to negotiate or trade is constrained by the threat of permanent asset confiscation. The mandatrophy here resolves through careful indexing: the constraint is legitimately a Rope from the EU perspective (solving collective action) and legitimately a Snare from Russia's perspective (maximum trapped extraction). The mandatrophy resolves not by choosing a single type but by recognizing that the constraint's apparent contradiction reflects genuine structural difference in positions, not analytical confusion.",
+    "key_agents": [
+      "European Union member states: Primary beneficiary (institutional/arbitrage) \u2014 coordinates sanctions enforcement, gains deterrence signal, controls escalation ladder",
+      "Russian Federation: Primary victim (powerless/trapped) \u2014 bears full extraction cost; no exit except capitulation or regime change",
+      "Ukrainian state and coalition: Secondary beneficiary (organized/constrained) \u2014 benefits from EU coordination and financial leverage against Russia, but remains dependent on sustained EU commitment",
+      "Russian citizens and private sector: Collateral victim (moderate/constrained) \u2014 suffer capital controls, currency devaluation, economic isolation despite non-involvement in invasion decision",
+      "Financial intermediaries and neutral states: Constrained actors (moderate/constrained) \u2014 experience coordination benefit (unified regime) and extraction cost (compliance burden, transaction restrictions)",
+      "International legal regime: Institutional observer (institutional/arbitrage) \u2014 maintains justificatory framing but experiences legitimacy erosion risk from precedent"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High-moderate. The freeze extracts geopolitical leverage and financial assets simultaneously. Russia loses liquidity access, borrowing capacity, and negotiating room. But the extraction is not maximal (0.90+) because the mechanism is transparent and the EU's stated conditions for unfreezing provide theoretical exit pathways. The extractiveness increased from 0.52 to 0.68 over the interval as secondary sanctions tightened and alternative financial infrastructure remained marginal. Suppression (0.72): High. The freeze is enforced through comprehensive SWIFT exclusion, correspondent banking restrictions, secondary sanctions against intermediaries, and capital controls. Suppression is not total (0.90+) because some alternatives (SPFS, cash, gold, crypto) exist, but they incur massive friction costs. Theater ratio (0.48): Moderate-low. The freeze is not highly performative because the economic extraction is real \u2014 seized reserves generate no return, and Russia faces actual credit constraints. The theater reflects legal justification and diplomatic messaging, but the underlying mechanism is substantive. The theater ratio decreased slightly over the interval as initial political theater (speeches, resolutions) yielded to boring technical enforcement.",
+    "perspectival_gap": "The critical perspectival gap is between the EU/coalition view (Rope \u2014 coordination mechanism that solves collective defense) and the Russian view (Snare \u2014 pure extraction with no exit). This is not measurement uncertainty; it reflects genuine structural position asymmetry. The EU experiences the freeze as enabling collective action against aggression (low d, negative \u03c7). Russia experiences it as maximum trapped extraction (high d, maximum f(d), high \u03c7). The Tangled Rope perspective (analytical observer and financial intermediaries) reveals that the constraint simultaneously serves coordination (unified sanctions prevent capital flight, establish enforcement credibility) and extraction (assets are seized, negotiating leverage is extracted). The Piton perspective on the formal legal regime reveals that the constraint persists through political will and enforcement capacity; if the coalition fragments, the legal justification can be reframed quickly.",
+    "directionality_logic": "EU member states: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; negative effective extraction. They experience the constraint as enabling rather than constraining. Russian Federation: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction; no exit without regime change or capitulation. Ukrainian coalition: Organized beneficiary + constrained \u2192 d\u22480.25, f(d)\u22480.15. Moderate beneficiary; constrained by EU commitment duration. Financial intermediaries: Neither + constrained \u2192 d\u22480.65, f(d)\u22480.95. Moderate extraction cost; coordination benefit partially offsets. Analytical observer: Observer role \u2192 d\u22480.72, f(d)\u22481.15. Observes both coordination (deterrence signal, unified regime) and extraction (asset seizure, leverage).",
+    "mandatrophy_analysis": "The mandatrophy resolves as follows: The constraint is legitimately classified as Snare (\u03b5=0.68, suppression=0.72, \u03c7\u22650.66 from target perspective) because from Russia's position it exhibits all snare properties: high extraction with minimal coordination benefit, reliance on suppression (capital controls, SWIFT exclusion), and existence that depends on maintaining alternatives' marginality. Simultaneously, it is legitimately classified as Rope from the EU perspective because it solves the collective action problem of deterrence without internal coercion \u2014 EU members voluntarily coordinate on asset freezes to establish credible threat to future aggression. The mandatrophy resolves by recognizing that this is not a classification failure but a perspectival reflection of genuine position asymmetry. The constraint is BOTH Snare (from target) AND Rope (from coalition) \u2014 not because classification is relative or arbitrary, but because the target and coalition occupy genuinely different structural positions relative to the constraint. The analytical observer's Tangled Rope classification captures this duality: the constraint has a real coordination function AND real extraction, making it hybridity legitimate rather than contradictory. The Piton perspective on the legal regime adds a third layer: the formal justification is partly performative (theater=0.48), and the constraint's permanence depends on political will, not legal inevitability. If the coalition dissolves or global norms shift, the legal framing can be rapidly rewritten. This resolves the mandatrophy without collapsing the classification to a false 'true type' \u2014 the constraint exhibits multiple legitimate types simultaneously from legitimate structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "swift_exclusion_mechanism",
+      "secondary_sanctions_architecture",
+      "russian_capital_controls"
+    ],
+    "dual_formulation_note": "The asset freeze is upstream of specific enforcement mechanisms (SWIFT exclusion, secondary sanctions) but represents a distinct structural constraint. The freeze's extractiveness (0.68) reflects the geopolitical leverage extraction; downstream constraints decompose this into technical implementation (SWIFT has \u03b5\u22480.40, enforcement bottleneck; secondary sanctions has \u03b5\u22480.55, implementation complexity)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: fda_component_efficacy_standard
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-22
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_fda_component_efficacy_standard, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,22 +54,33 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: fda_component_efficacy_standard
  *   human_readable: FDA's Component-Level Efficacy Standard for Combination Vaccines
- *   domain: technological/political
+ *   domain: regulatory/pharmaceutical
  *
  * SUMMARY:
- *   The U.S. Food and Drug Administration (FDA) requires that for a combination
- *   vaccine (e.g., a single shot for COVID, flu, and RSV), manufacturers must
- *   demonstrate the efficacy of each individual component. This is a higher
- *   evidentiary bar than simply showing the combination shot prevents a general
- *   "respiratory illness" clinical endpoint. This constraint imposes significant
- *   additional trial complexity, cost, and time on developers, but ensures that
- *   no ineffective component is "carried" by the others.
+ *   The FDA's requirement that combination vaccines demonstrate
+ *   component-level efficacy creates a structural tension between regulatory
+ *   safety assurance and innovation incentives. The standard emerged in the
+ *   1980s when combination vaccines were additive (e.g., DPT: diphtheria,
+ *   pertussis, tetanus as independent threats). As vaccine technology evolved
+ *   toward synergistic combinations (immune-enhancing adjuvants,
+ *   cross-reactive epitopes, temporal sequencing effects), the
+ *   component-level requirement became increasingly disconnected from how
+ *   combination vaccines actually work. This constraint exhibits the core
+ *   mandatrophy: it simultaneously solves a genuine coordination problem
+ *   (ensuring component safety through rigorous testing) and extracts from
+ *   potential innovators (by raising regulatory cost of novel combinations).
+ *   The extractiveness has grown over 20 years as the gap between regulatory
+ *   testing model and biological reality widened, reflected in rising
+ *   theater_ratio as developers spend more effort demonstrating independent
+ *   component performance in formats that do not reflect real-world use.
  *
- * KEY AGENTS (by structural relationship):
- *   - Combination Vaccine Developers (e.g., Moderna): Primary target (institutional/constrained) — bears the high cost of complex trials.
- *   - US Public Health System (represented by FDA): Primary beneficiary (institutional/arbitrage) — benefits from higher, more reliable evidence standards.
- *   - Small Biotech Startups: Secondary target (powerless/trapped) — may be completely blocked from the market by the high R&D costs.
- *   - Analytical Observer: Sees the trade-off between innovation speed and evidentiary rigor.
+ * KEY AGENTS:
+ *   - Novel Vaccine Developers: Primary victims (powerless/trapped) — biotech startups and academic labs pursuing innovative combinations face prohibitive regulatory costs and cannot exit the FDA approval pathway
+ *   - Incumbent Manufacturers: Primary beneficiaries (institutional/arbitrage) — Merck, Pfizer, GSK benefit from barrier to entry; have pre-existing component data and distributed compliance infrastructure
+ *   - FDA's Regulatory Division: Secondary beneficiary (institutional/arbitrage) — maintains standard as institutional practice; benefits from clear approval criteria and reduced decision variance
+ *   - Public Health Agencies (CDC, State Health): Secondary victims (organized/constrained) — benefit from predictable efficacy profiles but constrained in ability to innovate toward emerging threats or request rapid novel combinations
+ *   - International Development Organizations (WHO, GAVI): Constrained but with exit path (organized/constrained) — subject to FDA standard de facto but building alternative approval pathways (WHO EUL, regional prequalification) with sunset logic
+ *   - FDA's Own Evaluation Process: Institutional maintainer (institutional/arbitrage) — perpetuates component-level standard through inertia despite recognition that synergy is the operative mechanism
  */
 
 /* ==========================================================================
@@ -78,93 +88,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(fda_component_efficacy_standard, 0.55). % High cost in time, money, and trial complexity.
-domain_priors:suppression_score(fda_component_efficacy_standard, 0.75).   % Strongly suppresses simpler/faster trial designs. FDA approval is a hard gate.
-domain_priors:theater_ratio(fda_component_efficacy_standard, 0.10).       % A genuine scientific/evidentiary requirement, not performative.
+domain_priors:base_extractiveness(fda_component_efficacy_standard, 0.38).
+domain_priors:suppression_score(fda_component_efficacy_standard, 0.52).
+domain_priors:theater_ratio(fda_component_efficacy_standard, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(fda_component_efficacy_standard, extractiveness, 0.55).
-narrative_ontology:constraint_metric(fda_component_efficacy_standard, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(fda_component_efficacy_standard, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(fda_component_efficacy_standard, extractiveness, 0.38).
+narrative_ontology:constraint_metric(fda_component_efficacy_standard, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(fda_component_efficacy_standard, theater_ratio, 0.65).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A. This is a constructed, not natural, constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(fda_component_efficacy_standard, tangled_rope).
 narrative_ontology:human_readable(fda_component_efficacy_standard, "FDA's Component-Level Efficacy Standard for Combination Vaccines").
-narrative_ontology:topic_domain(fda_component_efficacy_standard, "technological/political").
+narrative_ontology:topic_domain(fda_component_efficacy_standard, "regulatory/pharmaceutical").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(fda_component_efficacy_standard). % Required for Tangled Rope. Enforced by FDA review process.
+domain_priors:requires_active_enforcement(fda_component_efficacy_standard).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(fda_component_efficacy_standard, us_public_health_system).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(fda_component_efficacy_standard, combination_vaccine_developers).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(fda_component_efficacy_standard, incumbent_vaccine_manufacturers).
+narrative_ontology:constraint_beneficiary(fda_component_efficacy_standard, fda_regulatory_capacity).
+narrative_ontology:constraint_victim(fda_component_efficacy_standard, vaccine_innovation_pipeline).
+narrative_ontology:constraint_victim(fda_component_efficacy_standard, public_health_flexibility).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SMALL STARTUP)
-% A small, powerless developer with one product is trapped. The high cost of
-% trials is an existential threat. The engine derives a high d (~0.95), leading
-% to very high effective extraction (χ), classifying this as a Snare.
-constraint_indexing:constraint_classification(fda_component_efficacy_standard, tangled_rope,
+% PERSPECTIVE 1: NOVEL VACCINE DEVELOPERS (SNARE) — Small biotech firms and academic developers pursuing innovative combination vaccines face prohibitive regulatory costs and approval timelines. Each component must demonstrate independent efficacy even when the clinical benefit derives from synergy. Cannot exit: FDA approval is mandatory for market access. Bears full cost of the standard without benefit of incumbency or distributed compliance infrastructure.
+constraint_indexing:constraint_classification(fda_component_efficacy_standard, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (FDA / PUBLIC HEALTH)
-% The FDA acts as an institutional beneficiary with policy arbitrage. The engine
-% derives a very low d (~0.05), leading to negative effective extraction (χ).
-% From this view, the standard is a pure coordination mechanism (Rope) that
-% generates public good.
+% PERSPECTIVE 2: INCUMBENT MANUFACTURERS (ROPE) — Large pharmaceutical firms with established combination vaccines benefit from the standard as a barrier to entry. They have pre-existing efficacy data for individual components, distributed compliance infrastructure, and regulatory relationships. The standard functions as coordination: it clarifies approval pathways and validates their existing portfolio. Effective arbitrage through regulatory precedent.
 constraint_indexing:constraint_classification(fda_component_efficacy_standard, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Sees both the valid coordination function (ensuring vaccine quality) and the
-% heavy asymmetric extraction (high costs on developers). The high ε and
-% suppression, combined with the presence of both beneficiaries and victims,
-% lead to a Tangled Rope classification.
-constraint_indexing:constraint_classification(fda_component_efficacy_standard, snare,
+% PERSPECTIVE 3: PUBLIC HEALTH AGENCIES (TANGLED ROPE) — CDC and state health departments benefit from predictable vaccine efficacy profiles (coordination function) but are constrained by inability to approve vaccines faster than FDA allows or to pressure innovation toward novel combinations addressing emerging threats. The standard both enables disease surveillance consistency and prevents rapid response to outbreak-specific needs. Mixed: genuine coordination function with asymmetric extraction.
+constraint_indexing:constraint_classification(fda_component_efficacy_standard, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: INTERNATIONAL DEVELOPMENT ORGS (SCAFFOLD) — WHO, GAVI, and development agencies face the FDA standard as a temporary constraint with a sunset. Alternative pathways (WHO Emergency Use Listing, prequalification procedures) are maturing as independent verification systems. The standard's extraction power is declining as decentralized efficacy evaluation capabilities build in middle-income countries. Constrained exit in the short term; genuine exit emerging over 10-15 years.
+constraint_indexing:constraint_classification(fda_component_efficacy_standard, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: FDA EVALUATION PROCESS (PITON) — The component-level standard is substantially performative: it requires generating efficacy data for components that may never be tested independently in clinical practice. The agency maintains this ritual through institutional inertia (it is how efficacy has always been demonstrated) despite growing recognition that combination efficacy depends on synergy, not isolated component performance. Theater ratio 0.65 reflects that much of the approval discussion concerns regulatory format compliance rather than clinical benefit assessment.
+constraint_indexing:constraint_classification(fda_component_efficacy_standard, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilization-scale view, the standard solves a genuine coordination problem (ensuring vaccine safety through rigorous component testing) while extracting from innovation (by raising the regulatory cost of novel combinations). The constraint is neither pure coordination nor pure extraction, but a hybrid. The beneficiaries (incumbent firms, FDA capacity) and victims (novel developers, public health flexibility) are clearly distinguished by structural position.
+constraint_indexing:constraint_classification(fda_component_efficacy_standard, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% This captures the dynamic between the regulator and a large, regulated firm
-% like Moderna. Both are institutional, but have different structural relationships.
-
-% PERSPECTIVE 4: THE REGULATED INSTITUTION (MODERNA)
-% As a victim with institutional power but constrained exit options (they cannot
-% sell in the US without approval), the engine derives a moderately high d.
-% The resulting χ is high enough to be extractive, but not a pure snare,
-% recognizing both the coordination and extraction elements. A classic Tangled Rope.
-constraint_indexing:constraint_classification(fda_component_efficacy_standard, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -172,22 +162,14 @@ constraint_indexing:constraint_classification(fda_component_efficacy_standard, r
 
 :- begin_tests(fda_component_efficacy_standard_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify perspectival gap between a trapped target and the beneficiary.
-    constraint_indexing:constraint_classification(fda_component_efficacy_standard, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(fda_component_efficacy_standard, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    true.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(fda_component_efficacy_standard, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fda_component_efficacy_standard, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    % The analytical view must identify the hybrid nature of the constraint.
-    constraint_indexing:constraint_classification(fda_component_efficacy_standard, snare, context(agent_power(analytical), _, _, _)).
-
-test(inter_institutional_gap) :-
-    % Verify the gap between two institutional actors with different exit options.
-    constraint_indexing:constraint_classification(fda_component_efficacy_standard, TypeRegulator, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    constraint_indexing:constraint_classification(fda_component_efficacy_standard, TypeRegulated, context(agent_power(institutional), _, exit_options(constrained), _)),
-    TypeRegulator = rope,
-    TypeRegulated = tangled_rope.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(fda_component_efficacy_standard, TR),
+    TR >= 0.70.
 
 :- end_tests(fda_component_efficacy_standard_tests).
 
@@ -197,50 +179,16 @@ test(inter_institutional_gap) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): Set high to reflect the immense cost, time,
- *     and complexity of running separate efficacy analyses for each component
- *     of a combination vaccine. This isn't a paperwork hurdle; it's a
- *     fundamental driver of R&D strategy and cost.
- *   - Suppression (0.75): The FDA's authority is nearly absolute for market
- *     access in the US. This standard effectively suppresses alternative,
- *     faster trial methodologies based on broader clinical endpoints.
- *   - The combination of a clear beneficiary (public health), a clear victim
- *     (developers), and active enforcement makes this a textbook Tangled Rope.
+ *   Base extractiveness (0.38): Moderate. The standard creates measurable barriers to market entry (increased clinical trial costs, extended timelines) but does not prevent novel combinations entirely — developers with sufficient capital can meet requirements. The extractiveness is higher than pure coordination (0.15) because the burden falls disproportionately on smaller firms and academic researchers, but lower than Snare territory (0.46+) because large incumbents have pathways through existing component data. Suppression (0.52): Moderate. Significant barriers to exit include: (1) FDA approval is mandatory for US market access, (2) no alternative US regulatory pathway for vaccine combinations, (3) clinical trial costs prohibitive for non-capital-backed researchers, (4) publication bias against negative efficacy trials. However, suppression is not total — international pathways exist (WHO EUL, European approval), allowing partial exit. Theater ratio (0.65): High and increasing. Over 20 years, the theater ratio rose from 0.45 to 0.65 as complexity of combination vaccines grew beyond the regulatory testing model. Developers increasingly conduct component-level trials that do not reflect real-world use, generating performative efficacy data required for approval but not informative for clinical practice.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For the public health system (via the FDA), this is
- *   a Rope—a pure coordination rule that creates certainty and trust. For a
- *   small startup, it's a Snare—an impossibly high barrier to entry that can
- *   kill the company. This huge gap stems from who bears the cost of generating
- *   certainty. The constraint socializes the benefit (safer, more reliable
- *   vaccines) while privatizing the cost (on the developer).
+ *   The constraint exhibits a clean beneficiary/victim split aligned with firm incumbency. Incumbent firms see coordination (Rope); novel developers see extraction (Snare). The gap arises from asymmetric access to compliance infrastructure, not from disagreement about the standard's function. The standard's function is genuinely to coordinate safety testing (true coordination benefit). But the distribution of compliance cost is asymmetric: those with pre-existing component data and regulatory relationships experience low cost; those without face prohibitive barriers. This is the core mandatrophy pattern: a legitimate coordination mechanism layered with extractive asymmetry.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `us_public_health_system`. The rule coordinates the market
- *     towards a higher standard of evidence, benefiting public trust and safety.
- *   - Victim: `combination_vaccine_developers`. They directly bear the financial
- *     and temporal costs of the higher evidentiary bar.
- *   The directionality derivation engine correctly assigns low `d` to the
- *   beneficiary and high `d` to the victims, driving the perspectival split.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The FDA-Moderna dynamic is key. Both are `institutional` actors, but their
- *   `exit_options` differ critically. The FDA has `arbitrage` (it sets the
- *   rules), while Moderna is `constrained` (it must follow the rules to
- *   access the market). This structural difference is why the FDA sees a Rope,
- *   while even a powerful company like Moderna experiences it as a Tangled
- *   Rope, acknowledging the coordination function but feeling the direct sting
- *   of the extraction. No directionality override is needed because the
- *   structural data (victim + constrained exit) is sufficient for the engine.
+ *   Directionality (d) values: Incumbent manufacturers (beneficiary + arbitrage) derive low d (~0.15) → negative f(d) → negative contribution to χ (they experience the constraint as enabling). Novel developers (victim + trapped) derive high d (~0.95) → high f(d) (~1.42) → maximum contribution to χ (they experience maximum extractiveness). Public Health Agencies (victim + constrained) derive intermediate d (~0.60-0.75) → moderate f(d) (~0.85-1.10) → moderate χ. The analytical perspective (d ~0.72, f(d) ~1.15) sees the full structure: coordination function for safety testing + asymmetric distribution of compliance costs. The directionality derivation makes manifest what narrative alone obscures: the standard extracts from those outside the incumbent coalition.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the dual nature of the regulation.
- *   A simplistic analysis might call it a Snare (focusing only on Moderna's
- *   costs) or a Rope (focusing only on the public good). Deferential Realism,
- *   by indexing to perspective and identifying the structure as a Tangled Rope,
- *   shows that it is simultaneously a valid coordination mechanism AND a highly
- *   extractive one. The core policy debate is not *if* it extracts, but whether
- *   the *amount* of extraction is justified by the coordination benefit.
+ *   RESOLVED: The constraint is correctly classified as Tangled Rope because it satisfies both gates: (1) genuine coordination function — the standard ensures component safety through rigorous testing, reducing epistemic uncertainty about combination vaccine safety profiles; (2) asymmetric extraction — the compliance cost is borne disproportionately by novel developers while benefits (clear regulatory pathway, competitive advantage through incumbency) flow to large manufacturers. The beneficiary/victim declarations are structurally precise: 'incumbent_vaccine_manufacturers' benefit from barrier to entry; 'vaccine_innovation_pipeline' and 'public_health_flexibility' bear costs. The theater ratio (0.65) is high but not dominant (piton threshold is 0.70), reflecting that while developers conduct performative component trials, the underlying regulatory process does involve genuine efficacy assessment. The constraint avoids false classification as pure Snare (which would require suppression ≥0.60 and victims with no beneficiary element) and as pure Rope (which would require low suppression and symmetric burden distribution). Tangled Rope captures the hybrid: coordination function (safety) + extraction mechanism (barrier to entry).
  */
 
 /* ==========================================================================
@@ -248,60 +196,81 @@ test(inter_institutional_gap) :-
    ========================================================================== */
 
 omega_variable(
-    omega_fda_component_efficacy_standard,
-    'Is the component-level efficacy standard the minimum necessary for safety, or an overly burdensome requirement that stifles innovation?',
-    'Comparative analysis of clinical outcomes and innovation rates in jurisdictions with different standards (e.g., US FDA vs. Europe EMA) over a 10-year period.',
-    'If necessary -> Tangled Rope (as classified). If overly burdensome -> A more extractive Tangled Rope, bordering on a Snare from an analytical perspective.',
+    synergy_versus_component_equivalence,
+    'Does vaccine efficacy depend primarily on individual component performance or on synergistic interactions between components?',
+    'Comparative immunogenicity studies: vaccines with identical components in different configurations; mechanistic studies of epitope mapping and immune response sequencing; post-market surveillance correlation between predicted and observed efficacy',
+    'If component-dominant: FDA standard is justified and extractiveness is overstated (~0.25). If synergy-dominant: the standard is substantially theater and extractiveness is understated (~0.55).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(synergy_versus_component_equivalence, empirical, 'Whether vaccine efficacy depends on component performance or synergy').
+
+omega_variable(
+    regulatory_cost_barrier_magnitude,
+    'How much additional development cost and timeline delay does the component-level standard impose on novel combination vaccines compared to single-component vaccines or to WHO EUL pathway?',
+    'Historical cost analysis of approved vaccines; developer surveys; comparative timeline analysis (FDA vs WHO EUL); phase timing analysis for component-level approval vs integrated efficacy trials',
+    'If marginal cost <$5M and <1 year: suppression is overstated. If cost >$50M and >3 years for novel developers: suppression coefficient and extractiveness confirmed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(regulatory_cost_barrier_magnitude, empirical, 'Cost and timeline barrier imposed by component-level standard').
+
+omega_variable(
+    innovation_pipeline_deflection,
+    'Are novel vaccine combinations being abandoned or redirected to non-US markets due to FDA component-level requirements?',
+    'Patent analysis: novel combination vaccines filed but abandoned in US jurisdiction; developer interviews; market launch geography analysis (which vaccines were launched in EU/WHO approval first); development pipeline stage-out analysis',
+    'If significant deflection (>20% of novel combinations): victim group ''vaccine innovation pipeline'' is verified as structurally constrained. If minimal deflection: the standard is less extractive than assessed.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(innovation_pipeline_deflection, empirical, 'Whether novel vaccine combinations are being abandoned due to FDA requirements').
+
+omega_variable(
+    public_health_response_cost,
+    'What is the measurable cost to outbreak response capacity when FDA approval timeline prevents rapid deployment of novel combination vaccines matched to emerging pathogen profiles?',
+    'Retrospective analysis of outbreak response scenarios; modeling of counterfactual vaccine availability; case studies (COVID-era variant boosters, mpox response timing); expert panel assessment of scenario costs',
+    'If costs are substantial and measurable: public health agencies'' victim status is confirmed. If costs are negligible or outweighed by safety benefits: the standard''s extraction from public health is overstated.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(public_health_response_cost, empirical, 'Cost to public health response from FDA approval timeline constraints').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(fda_component_efficacy_standard, 0, 10).
+narrative_ontology:interval(fda_component_efficacy_standard, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This models the standard evolving from a guideline to a strictly enforced
-% rule, especially with the advent of complex mRNA combination vaccines.
-% Base extraction increases as the rule becomes more rigid and costly to meet.
-% Theater remains low throughout, as it's always been a technical requirement.
+% Theater ratio over time
+narrative_ontology:measurement(fda_vax_tr_t0, fda_component_efficacy_standard, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(fda_vax_tr_t10, fda_component_efficacy_standard, theater_ratio, 10, 0.58).
+narrative_ontology:measurement(fda_vax_tr_t20, fda_component_efficacy_standard, theater_ratio, 20, 0.65).
 
-% Theater ratio over time (stable):
-narrative_ontology:measurement(fces_tr_t0, fda_component_efficacy_standard, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(fces_tr_t5, fda_component_efficacy_standard, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(fces_tr_t10, fda_component_efficacy_standard, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(fda_vax_be_t0, fda_component_efficacy_standard, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(fda_vax_be_t10, fda_component_efficacy_standard, base_extractiveness, 10, 0.3).
+narrative_ontology:measurement(fda_vax_be_t20, fda_component_efficacy_standard, base_extractiveness, 20, 0.38).
 
-% Extraction over time (increasing):
-narrative_ontology:measurement(fces_ex_t0, fda_component_efficacy_standard, base_extractiveness, 0, 0.35). % Initial state as a guideline.
-narrative_ontology:measurement(fces_ex_t5, fda_component_efficacy_standard, base_extractiveness, 5, 0.45). % Codified as a formal policy.
-narrative_ontology:measurement(fces_ex_t10, fda_component_efficacy_standard, base_extractiveness, 10, 0.55).% Strictly applied to new platforms.
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The constraint's primary function is to create a reliable
-% standard for scientific information.
-narrative_ontology:coordination_type(fda_component_efficacy_standard, information_standard).
+narrative_ontology:coordination_type(fda_component_efficacy_standard, enforcement_mechanism).
+narrative_ontology:affects_constraint(fda_component_efficacy_standard, combination_vaccine_innovation_incentive).
+narrative_ontology:affects_constraint(fda_component_efficacy_standard, pandemic_rapid_response_capability).
 
-% Network relationships: This standard directly impacts the timeline and cost
-% of vaccine development, which in turn affects other areas of the healthcare system.
-narrative_ontology:affects_constraint(fda_component_efficacy_standard, vaccine_development_timeline).
-narrative_ontology:affects_constraint(fda_component_efficacy_standard, pharmaceutical_rd_investment_models).
+% DUAL FORMULATION NOTE:
+% The component-level efficacy standard is structurally upstream of constraints on rapid pandemic response and vaccine innovation pipeline. The standard's extractiveness directly constrains downstream actors' ability to innovate or respond rapidly. Each downstream constraint has its own extractiveness value reflecting its specific structural position; this constraint provides the regulatory enforcement mechanism for both.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this constraint. The structural derivation chain
-% (using beneficiary/victim declarations and exit options) accurately models
-% the different directionalities experienced by the FDA (beneficiary, arbitrage)
-% and Moderna (victim, constrained), producing the correct perspectival gap
-% between the two institutional actors.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "fda_component_efficacy_standard",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fda_vax"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FDA's Component-Level Efficacy Standard for Combination Vaccines",
+    "topic_domain": "regulatory/pharmaceutical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_vaccine_manufacturers",
+      "fda_regulatory_capacity"
+    ],
+    "victims": [
+      "vaccine_innovation_pipeline",
+      "public_health_flexibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Novel Vaccine Developers",
+      "comment": "PERSPECTIVE 1: NOVEL VACCINE DEVELOPERS (SNARE) \u2014 Small biotech firms and academic developers pursuing innovative combination vaccines face prohibitive regulatory costs and approval timelines. Each component must demonstrate independent efficacy even when the clinical benefit derives from synergy. Cannot exit: FDA approval is mandatory for market access. Bears full cost of the standard without benefit of incumbency or distributed compliance infrastructure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Manufacturers",
+      "comment": "PERSPECTIVE 2: INCUMBENT MANUFACTURERS (ROPE) \u2014 Large pharmaceutical firms with established combination vaccines benefit from the standard as a barrier to entry. They have pre-existing efficacy data for individual components, distributed compliance infrastructure, and regulatory relationships. The standard functions as coordination: it clarifies approval pathways and validates their existing portfolio. Effective arbitrage through regulatory precedent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Agencies",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH AGENCIES (TANGLED ROPE) \u2014 CDC and state health departments benefit from predictable vaccine efficacy profiles (coordination function) but are constrained by inability to approve vaccines faster than FDA allows or to pressure innovation toward novel combinations addressing emerging threats. The standard both enables disease surveillance consistency and prevents rapid response to outbreak-specific needs. Mixed: genuine coordination function with asymmetric extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Development Organizations",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL DEVELOPMENT ORGS (SCAFFOLD) \u2014 WHO, GAVI, and development agencies face the FDA standard as a temporary constraint with a sunset. Alternative pathways (WHO Emergency Use Listing, prequalification procedures) are maturing as independent verification systems. The standard's extraction power is declining as decentralized efficacy evaluation capabilities build in middle-income countries. Constrained exit in the short term; genuine exit emerging over 10-15 years."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "FDA's Own Evaluation Process",
+      "comment": "PERSPECTIVE 5: FDA EVALUATION PROCESS (PITON) \u2014 The component-level standard is substantially performative: it requires generating efficacy data for components that may never be tested independently in clinical practice. The agency maintains this ritual through institutional inertia (it is how efficacy has always been demonstrated) despite growing recognition that combination efficacy depends on synergy, not isolated component performance. Theater ratio 0.65 reflects that much of the approval discussion concerns regulatory format compliance rather than clinical benefit assessment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilization-scale view, the standard solves a genuine coordination problem (ensuring vaccine safety through rigorous component testing) while extracting from innovation (by raising the regulatory cost of novel combinations). The constraint is neither pure coordination nor pure extraction, but a hybrid. The beneficiaries (incumbent firms, FDA capacity) and victims (novel developers, public health flexibility) are clearly distinguished by structural position."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "synergy_versus_component_equivalence",
+      "question": "Does vaccine efficacy depend primarily on individual component performance or on synergistic interactions between components?",
+      "resolution_mechanism": "Comparative immunogenicity studies: vaccines with identical components in different configurations; mechanistic studies of epitope mapping and immune response sequencing; post-market surveillance correlation between predicted and observed efficacy",
+      "impact": "If component-dominant: FDA standard is justified and extractiveness is overstated (~0.25). If synergy-dominant: the standard is substantially theater and extractiveness is understated (~0.55).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vaccine efficacy depends on component performance or synergy"
+    },
+    {
+      "id": "regulatory_cost_barrier_magnitude",
+      "question": "How much additional development cost and timeline delay does the component-level standard impose on novel combination vaccines compared to single-component vaccines or to WHO EUL pathway?",
+      "resolution_mechanism": "Historical cost analysis of approved vaccines; developer surveys; comparative timeline analysis (FDA vs WHO EUL); phase timing analysis for component-level approval vs integrated efficacy trials",
+      "impact": "If marginal cost <$5M and <1 year: suppression is overstated. If cost >$50M and >3 years for novel developers: suppression coefficient and extractiveness confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost and timeline barrier imposed by component-level standard"
+    },
+    {
+      "id": "innovation_pipeline_deflection",
+      "question": "Are novel vaccine combinations being abandoned or redirected to non-US markets due to FDA component-level requirements?",
+      "resolution_mechanism": "Patent analysis: novel combination vaccines filed but abandoned in US jurisdiction; developer interviews; market launch geography analysis (which vaccines were launched in EU/WHO approval first); development pipeline stage-out analysis",
+      "impact": "If significant deflection (>20% of novel combinations): victim group 'vaccine innovation pipeline' is verified as structurally constrained. If minimal deflection: the standard is less extractive than assessed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether novel vaccine combinations are being abandoned due to FDA requirements"
+    },
+    {
+      "id": "public_health_response_cost",
+      "question": "What is the measurable cost to outbreak response capacity when FDA approval timeline prevents rapid deployment of novel combination vaccines matched to emerging pathogen profiles?",
+      "resolution_mechanism": "Retrospective analysis of outbreak response scenarios; modeling of counterfactual vaccine availability; case studies (COVID-era variant boosters, mpox response timing); expert panel assessment of scenario costs",
+      "impact": "If costs are substantial and measurable: public health agencies' victim status is confirmed. If costs are negligible or outweighed by safety benefits: the standard's extraction from public health is overstated.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Cost to public health response from FDA approval timeline constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The FDA's requirement that combination vaccines demonstrate component-level efficacy creates a structural tension between regulatory safety assurance and innovation incentives. The standard emerged in the 1980s when combination vaccines were additive (e.g., DPT: diphtheria, pertussis, tetanus as independent threats). As vaccine technology evolved toward synergistic combinations (immune-enhancing adjuvants, cross-reactive epitopes, temporal sequencing effects), the component-level requirement became increasingly disconnected from how combination vaccines actually work. This constraint exhibits the core mandatrophy: it simultaneously solves a genuine coordination problem (ensuring component safety through rigorous testing) and extracts from potential innovators (by raising regulatory cost of novel combinations). The extractiveness has grown over 20 years as the gap between regulatory testing model and biological reality widened, reflected in rising theater_ratio as developers spend more effort demonstrating independent component performance in formats that do not reflect real-world use.",
+    "key_agents": [
+      "Novel Vaccine Developers: Primary victims (powerless/trapped) \u2014 biotech startups and academic labs pursuing innovative combinations face prohibitive regulatory costs and cannot exit the FDA approval pathway",
+      "Incumbent Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 Merck, Pfizer, GSK benefit from barrier to entry; have pre-existing component data and distributed compliance infrastructure",
+      "FDA's Regulatory Division: Secondary beneficiary (institutional/arbitrage) \u2014 maintains standard as institutional practice; benefits from clear approval criteria and reduced decision variance",
+      "Public Health Agencies (CDC, State Health): Secondary victims (organized/constrained) \u2014 benefit from predictable efficacy profiles but constrained in ability to innovate toward emerging threats or request rapid novel combinations",
+      "International Development Organizations (WHO, GAVI): Constrained but with exit path (organized/constrained) \u2014 subject to FDA standard de facto but building alternative approval pathways (WHO EUL, regional prequalification) with sunset logic",
+      "FDA's Own Evaluation Process: Institutional maintainer (institutional/arbitrage) \u2014 perpetuates component-level standard through inertia despite recognition that synergy is the operative mechanism"
+    ],
+    "logic_rationale": "Base extractiveness (0.38): Moderate. The standard creates measurable barriers to market entry (increased clinical trial costs, extended timelines) but does not prevent novel combinations entirely \u2014 developers with sufficient capital can meet requirements. The extractiveness is higher than pure coordination (0.15) because the burden falls disproportionately on smaller firms and academic researchers, but lower than Snare territory (0.46+) because large incumbents have pathways through existing component data. Suppression (0.52): Moderate. Significant barriers to exit include: (1) FDA approval is mandatory for US market access, (2) no alternative US regulatory pathway for vaccine combinations, (3) clinical trial costs prohibitive for non-capital-backed researchers, (4) publication bias against negative efficacy trials. However, suppression is not total \u2014 international pathways exist (WHO EUL, European approval), allowing partial exit. Theater ratio (0.65): High and increasing. Over 20 years, the theater ratio rose from 0.45 to 0.65 as complexity of combination vaccines grew beyond the regulatory testing model. Developers increasingly conduct component-level trials that do not reflect real-world use, generating performative efficacy data required for approval but not informative for clinical practice.",
+    "perspectival_gap": "The constraint exhibits a clean beneficiary/victim split aligned with firm incumbency. Incumbent firms see coordination (Rope); novel developers see extraction (Snare). The gap arises from asymmetric access to compliance infrastructure, not from disagreement about the standard's function. The standard's function is genuinely to coordinate safety testing (true coordination benefit). But the distribution of compliance cost is asymmetric: those with pre-existing component data and regulatory relationships experience low cost; those without face prohibitive barriers. This is the core mandatrophy pattern: a legitimate coordination mechanism layered with extractive asymmetry.",
+    "directionality_logic": "Directionality (d) values: Incumbent manufacturers (beneficiary + arbitrage) derive low d (~0.15) \u2192 negative f(d) \u2192 negative contribution to \u03c7 (they experience the constraint as enabling). Novel developers (victim + trapped) derive high d (~0.95) \u2192 high f(d) (~1.42) \u2192 maximum contribution to \u03c7 (they experience maximum extractiveness). Public Health Agencies (victim + constrained) derive intermediate d (~0.60-0.75) \u2192 moderate f(d) (~0.85-1.10) \u2192 moderate \u03c7. The analytical perspective (d ~0.72, f(d) ~1.15) sees the full structure: coordination function for safety testing + asymmetric distribution of compliance costs. The directionality derivation makes manifest what narrative alone obscures: the standard extracts from those outside the incumbent coalition.",
+    "mandatrophy_analysis": "RESOLVED: The constraint is correctly classified as Tangled Rope because it satisfies both gates: (1) genuine coordination function \u2014 the standard ensures component safety through rigorous testing, reducing epistemic uncertainty about combination vaccine safety profiles; (2) asymmetric extraction \u2014 the compliance cost is borne disproportionately by novel developers while benefits (clear regulatory pathway, competitive advantage through incumbency) flow to large manufacturers. The beneficiary/victim declarations are structurally precise: 'incumbent_vaccine_manufacturers' benefit from barrier to entry; 'vaccine_innovation_pipeline' and 'public_health_flexibility' bear costs. The theater ratio (0.65) is high but not dominant (piton threshold is 0.70), reflecting that while developers conduct performative component trials, the underlying regulatory process does involve genuine efficacy assessment. The constraint avoids false classification as pure Snare (which would require suppression \u22650.60 and victims with no beneficiary element) and as pure Rope (which would require low suppression and symmetric burden distribution). Tangled Rope captures the hybrid: coordination function (safety) + extraction mechanism (barrier to entry)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "combination_vaccine_innovation_incentive",
+      "pandemic_rapid_response_capability"
+    ],
+    "dual_formulation_note": "The component-level efficacy standard is structurally upstream of constraints on rapid pandemic response and vaccine innovation pipeline. The standard's extractiveness directly constrains downstream actors' ability to innovate or respond rapidly. Each downstream constraint has its own extractiveness value reflecting its specific structural position; this constraint provides the regulatory enforcement mechanism for both."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "pla_aerial_carrier_doctrine",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "China's Development of an Aerial Drone Carrier Doctrine",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pla",
+      "chinese_government"
+    ],
+    "victims": [
+      "potential_adversaries",
+      "regional_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Potential Adversaries (Trapped)",
+      "comment": "Potential adversaries, particularly smaller nations or non-state actors, find themselves trapped by the PLA's enhanced surveillance and strike capabilities. They lack the resources to effectively counter this asymmetric threat and must adapt their strategies under constant pressure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Powers (Constrained)",
+      "comment": "Regional powers may see both benefits and costs. They gain access to advanced drone technology through cooperation with China, but are simultaneously constrained by China's increased influence and potential for coercion. Their exit options are limited by economic and geopolitical realities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "PLA (Arbitrage)",
+      "comment": "The PLA benefits significantly from this doctrine, enhancing its power projection, surveillance capabilities, and strategic flexibility. They can leverage this technology for territorial claims and regional influence. Their exit option is arbitrage as they control the application of the technology."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer assesses the technology as a tangled rope due to the combination of coordination for power projection, and asymmetric extraction of freedom of action from potential adversaries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "doctrine_adoption_speed",
+      "question": "How quickly will the PLA integrate this technology into its operational doctrine?",
+      "resolution_mechanism": "Monitoring PLA training exercises, official publications, and deployment patterns.",
+      "impact": "Faster adoption increases the perceived threat and accelerates regional arms races. Slower adoption gives potential adversaries more time to develop countermeasures.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Speed of PLA's aerial drone carrier doctrine adoption."
+    },
+    {
+      "id": "countermeasure_effectiveness",
+      "question": "How effective will countermeasures be in neutralizing the threat posed by these aerial drone carriers?",
+      "resolution_mechanism": "Testing and evaluation of anti-drone technologies, electronic warfare capabilities, and strategic deception techniques.",
+      "impact": "Highly effective countermeasures reduce the extraction and shift the balance of power. Ineffective countermeasures exacerbate the security dilemma.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of countermeasures against PLA drone carriers."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Based on reports of China developing a large, unmanned aerial vehicle (UAV) capable of launching and recovering smaller drones, this constraint models the strategic doctrine this capability enables. It examines the implications of this technology for regional stability, power projection, and the strategic balance between China and its potential adversaries.",
+    "key_agents": [
+      "PLA: Primary beneficiary (institutional/arbitrage) - Gains enhanced power projection and surveillance capabilities.",
+      "Chinese Government: Secondary beneficiary (institutional/constrained) - Enhances geopolitical influence and territorial claims.",
+      "Potential Adversaries: Primary victim (powerless/trapped) - Face increased surveillance and strike capabilities with limited counter-options.",
+      "Regional Stability: Secondary victim (moderate/constrained) - Faces increased risk of conflict and arms races."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The technology allows China to exert influence and control over disputed territories, but the effectiveness of this extraction depends on the countermeasures developed by other nations. Suppression (0.60): Moderate-High. Potential adversaries face significant barriers to countering this technology. Theater Ratio (0.30): Low. The technology is currently under development and primarily functional; the theater is low but may increase over time."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

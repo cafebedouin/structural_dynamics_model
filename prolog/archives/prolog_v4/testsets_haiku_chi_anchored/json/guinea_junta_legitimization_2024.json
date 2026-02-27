@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "guinea_junta_legitimization_2024",
+    "version": "1.0",
+    "generated_date": "2024-02-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gujl"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.78,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Legitimization of Guinea's 2021 Military Coup",
+    "topic_domain": "political/state_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "military_junta",
+      "coup_aligned_business_interests"
+    ],
+    "victims": [
+      "civilian_political_actors",
+      "opposition_movements",
+      "electoral_democratic_process"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Deposed Civilian Government and Opposition",
+      "comment": "PERSPECTIVE 1: DEPOSED CIVILIAN ACTORS (SNARE) \u2014 Cannot exit the constraint through legal channels. Imprisoned or exiled leaders, banned political parties, suppressed media. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22481.00. Maximum extraction from those who built pre-coup legitimacy."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "General Population and Civil Society",
+      "comment": "PERSPECTIVE 2: GENERAL POPULATION (SNARE) \u2014 Constrained by security apparatus and information control. Cannot effectively challenge legitimization narrative. Suppressed freedom of assembly, arrested activists. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.95. Extraction through loss of political voice and security risk."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Regional Hegemon (France/ECOWAS Conditional)",
+      "comment": "PERSPECTIVE 3: REGIONAL ACTORS (ROPE) \u2014 Benefits from transitional legitimacy framework. ECOWAS negotiates junta compliance with timeframes; France gains predictable bilateral relations. Can arbitrage by withholding recognition/aid. d\u22480.20, f(d)\u22480.08, \u03c3=0.9 \u2192 \u03c7\u22480.06. Low effective extraction; regional actors can exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Military Institution (as Organizational Structure)",
+      "comment": "PERSPECTIVE 4: MILITARY INSTITUTION (TANGLED ROPE) \u2014 Organizes both the extraction apparatus (maintains coercive control) AND a coordination mechanism (stabilizes governance, prevents state collapse). The junta justifies itself as steward against chaos. Constrained by international pressure and coup-fatigue. d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.36. Hybrid: enforces legitimization (extraction) while claiming to prevent state failure (coordination)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Coup-Aligned Business and Mining Interests",
+      "comment": "PERSPECTIVE 5: COUP-ALIGNED BUSINESS (TANGLED ROPE) \u2014 Benefits from junta legitimacy through mining concessions, state contracts, and reduced accountability. Also contributes to coordination by stabilizing business environment. Active enforcement required: junta enforces contract monopolies. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.09. Net beneficiary but dependent on junta survival."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Legal Framework (UN/AU Recognition)",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL LEGAL SYSTEM (PITON) \u2014 Maintains performative legitimacy recognition despite junta hold. Theater_ratio=0.65: junta performs elections/constitutional processes; international system accepts performance as legitimacy. Credentials not challenged at UN. Functionally, international legal authority has atrophied (junta violates charter). d\u22480.15, f(d)\u2248-0.00, \u03c3=1.2 \u2192 \u03c7\u2248-0.00. Institutional inertia maintains recognition despite degraded function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law Framing)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (FALSE SUMMIT) \u2014 Risks naturalizing junta rule as inevitable state failure management. 'Guinea needed stability; coups are inherent to weak states.' But \u03b5=0.72, suppression=0.78, theater=0.65 contradicts mountain signature (\u03b5\u22640.25, suppression\u22640.05). Engine flags this as false summit. Junta legitimization is a contingent institutional choice, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "international_legitimacy_floor",
+      "question": "What threshold of international recognition (UN seat, AU membership, bilateral aid) constitutes sufficient legitimacy for junta rule to persist indefinitely?",
+      "resolution_mechanism": "Longitudinal tracking of sanction escalation vs junta resilience; comparison with historical coup durability in similar international contexts; modeling of aid-withdrawal tipping points",
+      "impact": "If threshold is low (current trajectory): junta can maintain rule through limited compliance theater (elections, constitutional promises). If threshold requires genuine democratic transition: international pressure becomes extinction mechanism for snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "International legitimacy threshold for junta persistence"
+    },
+    {
+      "id": "elite_cohesion_duration",
+      "question": "How long can the junta maintain internal military unity without power-sharing or institutionalized succession?",
+      "resolution_mechanism": "Analysis of coup leader positioning, factional tensions, statements on transition timeline; comparison with historical patterns of military rule duration in West Africa",
+      "impact": "If internal cohesion lasts <5 years: constraint collapses into internal coup (snare becomes briefly higher \u03c7 then transitions). If >10 years: organizational structure hardens (piton consolidates). If institutionalized (military council, rotation): tangled rope becomes permanent feature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Military elite internal cohesion duration"
+    },
+    {
+      "id": "civil_society_organizational_capacity",
+      "question": "Can civil society resistance movements reconstitute underground networks despite suppression, creating conditions for mass defection from junta consent?",
+      "resolution_mechanism": "Tracking of protest frequency and participation despite repression; emergence of coordinated boycotts, strikes, or leaks from state apparatus; international funding of opposition nodes",
+      "impact": "If civil society capacity grows: snare classification confirmed at broader scales, exit becomes 'constrained' rather than 'trapped', enabling collective mobilization. If permanently suppressed: trap persists indefinitely, \u03c7 remains maximal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether civil society can organize resistance despite suppression"
+    },
+    {
+      "id": "resource_extraction_economic_model",
+      "question": "Does junta legitimacy depend critically on mining revenue flows, or can junta sustain rule through coercion alone if mining contracts degrade?",
+      "resolution_mechanism": "Modeling of state revenue from mining vs military-security spending; analysis of IMF/World Bank loan conditionality impact; tracking of international investment climate for Guinea",
+      "impact": "If mining-dependent: economic sanctions become deletion mechanism (snare collapses when revenue stops). If coercion-self-sustaining: junta can endure resource depletion (snare becomes orthogonal to economics).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mining revenue dependency for junta legitimacy maintenance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 36,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 36,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 36
+  },
+  "commentary": {
+    "narrative_context": "Guinea's 2021 military coup, led by Colonel Mamady Doumbouya, formally overthrew the civilian government of Alpha Cond\u00e9. The junta established the National Rally for Development (CNRD) as the governing body and has progressively formalized its rule through constitutional processes and institutional theater. This constraint represents the political-coercive framework by which the junta legitimizes its authority: elections promised but delayed, constitutional conventions held, international engagement performed, while simultaneously suppressing opposition, controlling media, and extracting resources through aligned business interests. The constraint exhibits signature snare properties: high suppression (0.78) through security apparatus control; high extractiveness (0.72) through political imprisonment, asset seizure, and mining monopoly; rising theater ratio (0.35\u21920.65) as junta performs democratic processes to satisfy international legitimacy demands. The core asymmetry: the junta benefits from indefinite rule stability and resource monopoly, while civilian political actors and the general population are trapped with no exit path through law, elections, or international intervention.",
+    "key_agents": [
+      "Military Junta (CNRD): Primary beneficiary (institutional/arbitrage) \u2014 controls state apparatus, consolidates coercive authority, gains access to mining wealth and international legitimacy negotiations",
+      "Deposed Civilian Government (Alpha Cond\u00e9 faction): Primary victim (powerless/trapped) \u2014 imprisoned leaders, asset seizures, exile, complete exclusion from political process",
+      "Opposition Movements and Political Parties: Victim (moderate/constrained) \u2014 banned from organizing, leadership detained, suppressed media access",
+      "General Population and Civil Society: Victim (moderate/constrained) \u2014 loss of political voice, security risk from state apparatus, restricted assembly and speech",
+      "Coup-Aligned Mining and Business Interests: Secondary beneficiary (institutional/arbitrage) \u2014 protected concessions, state contracts, reduced accountability",
+      "Military Institution (as organizational structure): Hybrid actor (organized/constrained) \u2014 enforces extraction while justifying as stability mechanism",
+      "Regional Powers (ECOWAS, France, AU): Conditional beneficiary (institutional/arbitrage) \u2014 can arbitrage recognition for compliance with transition timeline",
+      "International Legal System: Institutional observer (institutional/arbitrage) \u2014 performs legitimacy recognition despite charter violation, maintains piton function through inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.72): High and rising. The junta's extraction occurs through multiple mechanisms: political imprisonment (removes competitors), asset seizure (confiscates opposition wealth), mining monopoly (redirects wealth to junta-aligned firms), and international aid capture (state resources flow to security apparatus). The trajectory from 0.45\u21920.72 reflects consolidation: initially the junta justified coup as temporary correction; by 2024 the junta is extracting through normalized institutions (promised elections, constitutional conventions). The increase is not from rising coercion (that was immediate) but from formalizing extraction into permanent institutional structures. Suppression (0.78): High and structural. Security apparatus (military, national guard, intelligence) suppress opposition through detention, torture allegations, media blackouts, and assembly restrictions. International human rights reports document systematic suppression. Suppression is high because the junta cannot tolerate organized political competition \u2014 its legitimacy depends on monopoly control. Theater ratio (0.65): Rising from 0.35. Initial theater was minimal (immediate coup, visible authoritarianism). By 2024, theater has increased substantially: junta performs constitutional processes, promises elections (repeatedly delayed), engages international negotiations, claims transition timeline. Theater serves two functions: satisfies international legitimacy demands and obscures extraction mechanisms. The increase reflects that coercion alone cannot sustain indefinite rule \u2014 the junta must perform democratic process to maintain regional acceptance and international recognition. Mandatrophy (resolved): At \u03b5=0.72, the constraint must distinguish between pure extraction (snare) and hybrid coordination-extraction (tangled rope). The junta claims coordination function: 'we stabilize the state, prevent collapse, enable mining investment.' The base_properties declare victims (political actors, civil society) and no genuine beneficiaries outside the junta-business alliance, confirming snare classification. The junta's 'coordination' claim (state stabilization) is instrumentally secondary to extraction \u2014 the junta has no interest in including opposition actors in stability arrangements. Pure extraction, not hybrid.",
+    "perspectival_gap": "This constraint exhibits stark perspectival divergence. The deposed civilian actors see a pure snare (trap, no exit, maximal extraction). The general population sees snare with constrained escape (suppressed but not imprisoned; can consider emigration, but at high cost). The military institution sees itself as performing tangled rope (coercive stabilization as coordination function). Coup-aligned business sees rope or even faint coordination benefit (property rights protection). Regional powers see a managed compliance problem (junta performs transition, can be negotiated with). International legal system sees piton (legitimacy recognition persists through institutional inertia despite functional degradation). The analytical observer risks mountain framing ('Guinea needs strong leadership; coups are inevitable in weak states') \u2014 but the structural data (extraction rising, suppression high, theater increasing) contradicts this naturalization. The gap reflects that no agent outside the junta-business alliance experiences legitimacy as anything but constraint.",
+    "directionality_logic": "Deposed civilian actors: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. Imprisoned leaders cannot exit through law or politics; junta specifically targets former power-holders for asset seizure and exclusion. General population: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction but not maximal \u2014 civil society has some evasion options (emigration at cost, underground organizing at risk). Opposition leaders: Victim + constrained \u2192 d\u22480.90, f(d)\u22481.36. Nearly maximal; detention or exile removes most exit options. Military junta: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Can arbitrage by threatening transition reversal or external military action. Coup-aligned business: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Dependent on junta survival but can arbitrage by investing in junta legitimacy or threatening capital flight. Regional powers (ECOWAS/France): Beneficiary + arbitrage \u2192 d\u22480.25, f(d)\u22480.18. Can arbitrage by adjusting aid, recognition, or mediation pressure. International legal system: Institutional + arbitrage \u2192 d\u22480.12, f(d)\u22480.02. Piton classification from theater gate, not directionality.",
+    "mandatrophy_analysis": "The mandatrophy at \u03b5=0.72 concerns whether the junta's claimed 'stability and state protection' function qualifies as coordination that would elevate the classification to tangled rope. Analysis: The junta does provide a narrow coordination function \u2014 it prevents immediate state collapse through institutional continuity and resource capture to fund security apparatus. However, this coordination is asymmetrically distributed: it benefits only the junta and its aligned interests. Genuine coordination requires that all parties gain at least some benefit or perceive mutual problem-solving. The junta's 'state protection' is protection against a threat the junta itself created (instability from coup-induced uncertainty). This is not a public good but a private stabilization of the junta's own legitimacy. Furthermore, the junta explicitly excludes opposition actors from any coordination arrangement \u2014 there is no institutional mechanism for political competition, coalition-building, or shared governance. Therefore, the constraint is properly classified as snare (pure extraction with coercive monopoly), not tangled rope (mixed coordination-extraction with both beneficiaries and victims sharing some coordination benefit). The mining extraction and international engagement are coordination mechanisms the junta uses instrumentally; they are not coordination with the victims of the constraint. Mandatrophy resolved: Snare confirmed."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "west_african_coup_contagion",
+      "guinea_mining_extraction_monopoly",
+      "ecowas_enforcement_credibility"
+    ],
+    "dual_formulation_note": "Junta legitimization is downstream of the 2021 coup event but represents a distinct structural constraint. The coup itself is an instantaneous break; legitimization is the ongoing institutional framework that perpetuates junta rule. Network dependencies: (1) Coup contagion cluster (Mali, Burkina Faso coups in same period) shares junta legitimization strategies, suggesting common regional constraint pattern. (2) Mining extraction monopoly is instrumentally dependent on junta legitimization \u2014 international firms need recognized state authority to formalize concessions. (3) ECOWAS enforcement credibility is affected because regional organization's inability to enforce sanctions or transition timelines degrades its own legitimacy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

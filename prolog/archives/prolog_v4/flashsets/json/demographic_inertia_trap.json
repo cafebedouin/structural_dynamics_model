@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "demographic_inertia_trap",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "The Generational Wealth Siphon",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "older_generations",
+      "incumbent_politicians"
+    ],
+    "victims": [
+      "younger_generations",
+      "future_innovation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Younger Generations",
+      "comment": "Younger generations are trapped in a system that extracts wealth to support older generations, with limited exit options due to legal and social structures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Older Generations",
+      "comment": "Older generations benefit from the system through pensions, healthcare, and other social programs, but are also constrained by the system's dependency on a shrinking youth base."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Politicians",
+      "comment": "Politicians benefit from the system by maintaining power and appealing to the dominant demographic, but are constrained by the need to balance the demands of different generations."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Future Innovation",
+      "comment": "Innovation suffers from wealth extraction due to lower investment. Society continues the system due to institutional inertia, resulting in a degraded but stable process. Some innovation may shift to other countries"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the system as a tangled rope, with both coordination (social security) and extraction (wealth transfer) elements, enforced by demographic inertia."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demographic_transition_rate",
+      "question": "How quickly will demographic trends shift, and what impact will this have on the system's stability?",
+      "resolution_mechanism": "Demographic projections and analysis of birth rates, mortality rates, and migration patterns.",
+      "impact": "Faster demographic shifts could exacerbate the system's imbalances and lead to social and economic instability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The rate of demographic transition and its impact on system stability."
+    },
+    {
+      "id": "political_responsiveness",
+      "question": "To what extent are political systems responsive to the needs and concerns of younger generations?",
+      "resolution_mechanism": "Analysis of political representation, policy outcomes, and public opinion data.",
+      "impact": "Greater political responsiveness could lead to reforms that mitigate the system's extractive effects.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The responsiveness of political systems to younger generations."
+    },
+    {
+      "id": "technological_productivity_growth",
+      "question": "Will productivity gains offset the wealth extraction, enabling the economy to support both older and younger generations?",
+      "resolution_mechanism": "Economic modeling and analysis of technological trends and their impact on productivity.",
+      "impact": "Higher productivity growth could alleviate the burden on younger generations, while slower growth could exacerbate it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of technological productivity growth on the economy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Generational Wealth Siphon describes a scenario where a large, aging demographic exerts political control to enforce economic transfers (pensions, healthcare, zoning) from a shrinking youth minority. This creates a structural disadvantage for younger generations, limiting their economic opportunities and stifling innovation. The constraint reflects the power dynamics between generations and the challenges of balancing competing needs in an aging society.",
+    "key_agents": [
+      "Younger Generations: Primary target (powerless/trapped) - Bear the brunt of wealth extraction and have limited exit options.",
+      "Older Generations: Primary beneficiary (institutional/constrained) - Benefit from the system but are also dependent on it.",
+      "Incumbent Politicians: Secondary beneficiary (powerful/constrained) - Maintain power by appealing to the dominant demographic.",
+      "Future Innovation: Victim (moderate/mobile) - Suffers from wealth extraction, which reduces investment opportunities. Some innovation may be offshored",
+      "Analytical Observer: Sees full structure (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. A significant portion of wealth is extracted from younger generations to support older generations. Suppression (0.75): High. Younger generations have limited exit options and are suppressed by the political power of older generations. Theater ratio (0.75): High. The system has real consequences and is primarily performative, with politicians making symbolic gestures to appease different generations while maintaining the status quo.",
+    "perspectival_gap": "Younger generations experience the system as a snare, with limited exit options and significant wealth extraction. Older generations benefit from the system, but are also constrained by its dependency on a shrinking youth base. Incumbent politicians benefit from the system by maintaining power, but are constrained by the need to balance competing demands. The analytical observer sees the system as a tangled rope, with both coordination and extraction elements.",
+    "directionality_logic": "Directionality is determined by the flow of wealth and political power. Older generations and incumbent politicians benefit from the system, while younger generations bear the costs. The analytical observer sees both coordination (social security) and extraction elements. Exit options constrain this analysis.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing between the coordination function of social security and the wealth transfer from younger to older generations. The system has a legitimate coordination function (providing retirement income), but also extracts wealth from younger generations to support older generations, resulting in a snare classification for the powerless."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "social_security_funding_crisis",
+      "youth_economic_mobility_barriers"
+    ]
+  },
+  "directionality_overrides": []
+}

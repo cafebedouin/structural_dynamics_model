@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "optimization_fragility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "optfrag"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Efficiency-Resilience Tradeoff in Just-in-Time Systems",
+    "topic_domain": "economic/technological/infrastructural",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cost_minimizers",
+      "shareholders"
+    ],
+    "victims": [
+      "system_users",
+      "supply_chain_workers",
+      "aggregate_resilience"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Consumer",
+      "comment": "PERSPECTIVE 1: DEPENDENT CONSUMER (SNARE) \u2014 Trapped in an optimized system with no buffer capacity. When disruption occurs (supply shock, natural disaster, geopolitical event), the powerless consumer bears immediate cost: supply interruptions, price spikes, unavailable goods. No alternative supply chains. Exit is not an option. Maximum experienced extraction through vulnerability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Supply Chain Worker",
+      "comment": "PERSPECTIVE 2: SUPPLY CHAIN WORKER (TANGLED ROPE) \u2014 Experiences both coordination benefits (JIT efficiency creates employment and optimization problems) and extraction (zero slack means zero forgiveness for errors or personal circumstance; wage stagnation from competitive pressure). Constrained exit due to geographic and skill specificity. The worker benefits from the system existing but bears the cost of its rigidity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cost-Minimizing Corporation",
+      "comment": "PERSPECTIVE 3: COST-MINIMIZING CORPORATION (ROPE) \u2014 Sees JIT optimization as pure coordination problem solved: eliminated inventory costs, accelerated capital turnover, reduced warehousing. Experiences the constraint as a beneficial coordination mechanism. Can arbitrage between suppliers; has exit option (shift supply chains, off-shore). Extraction flows toward this agent as profit. Benefits from the discipline imposed on others."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Supply Chain Ecosystem",
+      "comment": "PERSPECTIVE 4: SUPPLY CHAIN ECOSYSTEM (TANGLED ROPE) \u2014 Organized agents (logistics firms, component manufacturers, just-in-time coordinators) derive income from optimization enforcement but also bear the structural risk. When cascading failures occur, the ecosystem faces systemic collapse. Sees the constraint as hybrid: genuine coordination function (JIT logistics is real technical achievement) combined with asymmetric extraction (firms profit on normal operation, collapse on disruption, costs externalized)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Framework",
+      "comment": "PERSPECTIVE 5: REGULATORY FRAMEWORK (PITON) \u2014 National and international trade rules mandate efficiency and penalize 'wasteful' inventory holding through tax policy, tariff structure, and regulatory reporting. This enforcement mechanism persists through institutional inertia: rules designed for mid-20th-century manufacturing conditions still govern 21st-century supply chains. The framework is substantially performative \u2014 compliance is theater (annual audits, efficiency reporting) with little real resilience improvement. Theater ratio high because regulators celebrate optimization metrics while supply chains grow fragile."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (System Limits View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SYSTEM LIMITS (FALSE SUMMIT) \u2014 The civilizational observer risks classifying the efficiency-resilience tradeoff as an immutable law of complex systems: that optimization must sacrifice resilience, that you cannot have both speed and slack. This naturalizes what is actually a policy choice. The engine's false summit detector will identify this as naturalization of a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "buffer_adequacy_threshold",
+      "question": "What inventory/capacity buffer level constitutes resilience without wasting efficiency gains?",
+      "resolution_mechanism": "Comparative analysis of systems with 5%, 15%, and 30% buffer capacity across disruption types (supply shock, demand spike, component failure); measurement of actual recovery time and system survival",
+      "impact": "If buffer threshold low (5%): current systems already resilient (snare classification weakens). If threshold high (30%): current optimization is severe extraction (snare classification strengthens, tangled_rope requires active renegotiation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal buffer level balancing efficiency and resilience"
+    },
+    {
+      "id": "cascading_failure_predictability",
+      "question": "Can supply chain cascade failures be predicted before they propagate, enabling preemptive slack allocation?",
+      "resolution_mechanism": "Development and testing of early-warning systems (network pressure monitoring, supplier stress indicators); comparison of actual failure cascade duration with predicted cascade duration in optimized vs buffered systems",
+      "impact": "If predictable: slack can be deployed dynamically (reduces snare extraction, enables scaffold dynamics). If unpredictable: slack must be static (maintains snare extraction, validates current optimization trap).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Predictability of supply chain cascade failures"
+    },
+    {
+      "id": "extraction_beneficiary_identity",
+      "question": "Do cost savings from JIT optimization flow primarily to shareholders, consumers, or intermediate agents?",
+      "resolution_mechanism": "Financial analysis of supply chain pricing, margin compression, and profit distribution across supply tiers; time-series comparison of input cost reduction vs end-price reduction vs operator profit changes",
+      "impact": "If primarily to shareholders: tangled_rope with asymmetric extraction toward capital (current story). If primarily to consumers: rope with genuine coordination (reclassifies). If distributed: snare classification weakens as no single beneficiary emerges.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of JIT efficiency gains across supply chain actors"
+    },
+    {
+      "id": "system_boundary_definitions",
+      "question": "Are supply chain failures truly 'systemic' or are they bounded to specific sectors, enabling partial unraveling?",
+      "resolution_mechanism": "Analysis of actual disruption events (semiconductor shortage 2021-2023, COVID-19 supply chain impacts, port congestion 2021-2022); measurement of failure propagation speed and sector isolation effectiveness",
+      "impact": "If failures propagate globally: snare classification is robust (optimization trap is comprehensive). If failures remain sectoral: snare weakens to tangled_rope or rope (agents can selectively buffer specific supply chains).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scope and propagation of supply chain failures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Just-in-Time (JIT) manufacturing and logistics represent a historically successful coordination technology that has been progressively optimized to remove buffer capacity and slack. Over the past 20 years, this optimization has created structural fragility: the same system that efficiently moves goods during normal operation becomes a cascading failure mechanism during disruption. The constraint exhibits all six DR types depending on observer position. Cost-minimizing corporations experience JIT as pure coordination (Rope). Supply chain workers experience it as mixed coordination and extraction (Tangled Rope). Dependent consumers with no alternative supply sources experience it as pure extraction (Snare). Regulatory frameworks enforce optimization metrics through institutions designed for a different era (Piton). Open supply chain ecosystems see the coordination function plus systemic risk (Tangled Rope). The civilizational analyst risks naturalizing the efficiency-resilience tradeoff as an immutable law rather than a policy choice (false Mountain). The theater ratio has increased over the measurement interval as regulatory compliance, efficiency auditing, and optimization reporting have become performative \u2014 firms celebrate inventory turns without measuring resilience, masking the growing structural fragility. The extraction value (0.58) reflects that cost savings flow asymmetrically to capital while disruption costs flow asymmetrically to labor and consumers.",
+    "key_agents": [
+      "Cost-Minimizing Corporation: Primary beneficiary (institutional/arbitrage) \u2014 captures profit from inventory elimination and accelerated capital turnover; can shift suppliers when disruption threatens",
+      "Dependent Consumer: Primary victim (powerless/trapped) \u2014 bears full cost of supply disruptions with no alternative sourcing; no buffer means no forgiveness for system failures",
+      "Supply Chain Worker: Secondary victim (moderate/constrained) \u2014 benefits from JIT employment creation but constrained by zero-slack work conditions and wage pressure from competitive optimization",
+      "Supply Chain Ecosystem: Organized agent (organized/constrained) \u2014 logistics firms and component manufacturers solve genuine coordination problems but face systemic collapse risk when cascades begin",
+      "Regulatory Framework: Institutional actor (institutional/arbitrage) \u2014 tax policy and trade rules enforce efficiency metrics; maintains performative compliance theater while missing resilience degradation",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing the efficiency-resilience tradeoff as immutable rather than a contingent policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. JIT optimization has systematically removed buffer capacity, creating rents for cost minimizers and vulnerability for everyone else. The extraction is not maximal (0.90+) because genuine coordination function exists \u2014 JIT is a real technical achievement, not purely parasitic. But the asymmetry has grown as firms have optimized beyond the point where resilience remains. Suppression (0.68): Significant. Alternatives to JIT (strategic inventory, redundant suppliers, geographic diversification) are suppressed by financial incentive structures that penalize holding costs, by tax policy that discourages capital-intensive inventory, and by competitive pressure that forces margin compression. A firm that chooses to maintain resilient buffers faces cost disadvantage against optimized competitors. The suppression is real and structural, not absolute \u2014 some firms maintain higher buffers, but at competitive cost. Theater ratio (0.55): Moderate. JIT systems produce extensive efficiency metrics, optimization reports, and compliance documentation. Much of this theater is performative \u2014 it celebrates inventory turns and throughput without measuring resilience or failure recovery time. However, JIT also has genuine technical content (real scheduling, real logistics optimization), so theater does not dominate as it would in pure Piton. The measurement trajectory shows increasing theater as firms add more regulatory reporting and efficiency auditing while actual resilience degrades.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon produces radically different classifications depending on structural position. From the firm's viewpoint, JIT is a rope (coordination problem solved). From the consumer's viewpoint during disruption, it is a snare (trapped in unavailable supply). From the worker's viewpoint, it is tangled rope (coordination benefits mixed with extraction pressure). From the ecosystem viewpoint, it is also tangled rope but with different risk profile. The regulatory viewpoint is piton (enforcement theater). The civilizational observer risks mountain (immutable law). None of these is wrong \u2014 they are accurate descriptions of different structural relationships to the same constraint. The perspectival gap reveals that optimization fragility is not a technical problem with a single answer but a distribution problem with multiple legitimate stakes.",
+    "directionality_logic": "The constraint's directionality depends critically on whether the observer benefits from optimization or bears its fragility costs. Cost-minimizing corporations benefit directly from JIT (d \u2248 0.0 in beneficiary frame, arbitrage exit \u2192 negative chi). Supply chain workers experience both benefits and costs (d \u2248 0.55, moderate power + constrained exit \u2192 moderate chi). Dependent consumers bear all fragility costs with no optimization benefits (d \u2248 0.95, powerless + trapped exit \u2192 maximum chi approaching snare). Regulatory frameworks maintain low extraction through institutional arbitrage (d \u2248 0.10, institution + arbitrage \u2192 low chi). The supply chain ecosystem sits between beneficiary and victim: it profits from normal operation but risks collapse (d \u2248 0.65, organized power + constrained exit \u2192 moderate-high chi). The engine's derivation chain computes these from beneficiary/victim declarations and exit options.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that both coordination and extraction elements are structurally present. JIT solves a genuine coordination problem (how to move goods without excessive inventory cost), so pure Snare classification is incomplete. But JIT also creates asymmetric extraction (cost minimizers capture gains; disruption victims bear costs), so pure Rope classification is also incomplete. Tangled Rope classification is justified because: (1) JIT provides genuine coordination function (real technical achievement in logistics), (2) extraction is significant and asymmetric (cost savings flow to capital, disruption costs to labor and consumers), (3) enforcement is active (tax policy, competitive pressure, regulatory framework). The mandatrophy is resolved by recognizing that JIT is legitimately both: a coordination mechanism that solved a real problem AND an extraction mechanism that has been pushed beyond resilience through competitive optimization. The false summit risk (Mountain) is critical: the constraint naturalizes the efficiency-resilience tradeoff as immutable law when it is actually a policy choice. Societies could require resilience buffers, mandate inventory holding, tax financial velocity that enables JIT, or enforce supply chain redundancy \u2014 these are policy moves, not natural laws."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_concentration",
+      "pharmaceutical_manufacturing_consolidation",
+      "agricultural_monoculture_fragility"
+    ],
+    "dual_formulation_note": "Optimization fragility is upstream of specific sector supply constraints (semiconductors, pharmaceuticals, agriculture). Each downstream constraint has its own extractiveness reflecting domain-specific factors. The upstream optimization_fragility constraint represents the general structural logic that appears across multiple domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ]
+}

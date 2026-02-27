@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "clt_convergence_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "clt"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "The Central Limit Theorem",
+    "topic_domain": "mathematical/statistical",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.03,
+    "beneficiaries": [],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Practitioner Subject to CLT",
+      "comment": "PERSPECTIVE 1: PRACTITIONER (MOUNTAIN) \u2014 Applied statisticians, engineers, and data scientists operate within CLT constraints universally. The theorem's reach governs their inference capacity regardless of context or resources. No escape: the convergence rate depends on underlying distribution, not on desire to escape. d\u22481.0, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.11. Even at maximum d, effective extraction remains minimal because \u03b5 is intrinsically low (0.08)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Analyst",
+      "comment": "PERSPECTIVE 2: ANALYST (MOUNTAIN) \u2014 From the perspective of rigorous mathematical investigation, CLT is a tautology derivable from measure theory and probability axioms. Its necessity follows from the definition of convergence in distribution. The constraint is not contingent or negotiable \u2014 it is the logical consequence of the axioms themselves. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09. The analyst sees this as a natural law of pure mathematics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Statistical Authority",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL AUTHORITY (MOUNTAIN) \u2014 Central banks, regulatory bodies, and scientific consensus treat CLT as an invariant foundation for inference methodology. Even institutional actors with substantial power cannot negotiate CLT's domain boundaries. They can choose measurement statistics, but they cannot change the convergence regime. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Institutional arbitrage (choosing domains where CLT applies) does not constitute effective extraction \u2014 it is choosing to work within the natural constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Research Community",
+      "comment": "PERSPECTIVE 4: RESEARCH COMMUNITY (MOUNTAIN) \u2014 Across generations, the mathematical community has consistently validated CLT through diverse proof techniques (Lindeberg-Feller, characteristic functions, stable laws) and empirical observations across domains. The theorem's universality is reinforced by collective investigation, not weakened. Organized agents cannot vote CLT away. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.05. The constraint remains mountain across organizational scale."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tail_behavior_boundary",
+      "question": "At what point do finite-variance assumptions fail sufficiently that CLT applicability becomes questionable rather than merely slow-converging?",
+      "resolution_mechanism": "Empirical analysis of convergence rates for distributions with heavy tails (Pareto, Zipf); comparison of theoretical normal approximation vs observed sample distributions in high-variance regimes",
+      "impact": "If boundary is sharp: CLT has a well-defined domain with clear exclusions, strengthening mountain classification. If boundary is fuzzy: gray zone emerges where CLT is technically correct but practically useless, suggesting latent extraction (false summit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary conditions for CLT applicability in heavy-tailed regimes"
+    },
+    {
+      "id": "independence_requirement_strictness",
+      "question": "How strictly must independence hold for CLT convergence to remain reliable? What degree of weak dependence preserves the theorem?",
+      "resolution_mechanism": "Theoretical extension to mixing processes; empirical testing of CLT approximation quality for weakly dependent sequences (AR(1) models, moving averages, spatially correlated data)",
+      "impact": "If independence is truly necessary: CLT has limited real-world scope (most natural processes show some correlation). If weak dependence suffices: CLT domain is broader than formal statement suggests.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strictness of independence requirement for CLT validity"
+    },
+    {
+      "id": "convergence_rate_measurability",
+      "question": "Is the Berry-Esseen bound (quantifying convergence rate) tight for practical sample sizes, or does it overestimate error for typical distributions?",
+      "resolution_mechanism": "Comparison of Berry-Esseen bound predictions vs actual empirical convergence for sample distributions; analysis of constants in the inequality across distribution families",
+      "impact": "If tight: practitioners can reliably use CLT guidance for sample size selection. If loose: institutional reliance on CLT for legal/regulatory confidence intervals may be falsely calibrated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Tightness of Berry-Esseen convergence rate bounds in practice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "The Central Limit Theorem is a foundational mathematical principle establishing that under specified conditions \u2014 independent random variables with finite variance \u2014 the distribution of their normalized sum converges to a standard normal distribution as the sample size approaches infinity. This theorem operates as a pure mathematical constraint: its force is not coercive or institutional but logical. No agent benefits from CLT's existence relative to others; no agent is extracted from. All practitioners \u2014 from quantum physicists to economists \u2014 operate within its boundaries equally. The theorem's scope is universal across domains, its necessity is absolute across observers, and its mode of operation is through mathematical inevitability rather than power asymmetry. CLT represents the archetype of a natural law within the Deferential Realism framework: zero extraction (\u03b5=0.08), minimal suppression (0.02), negligible theater (0.05), and invariant classification across all structural perspectives.",
+    "key_agents": [
+      "Applied Practitioners: All users of statistical inference (powerless/trapped) \u2014 subject to CLT's convergence regime regardless of resources or desire",
+      "Mathematical Researchers: Theoretical community (analytical/analytical) \u2014 rigorously prove and extend CLT across domains; see it as logical necessity",
+      "Institutional Authorities: Central banks, regulators, scientific standards bodies (institutional/arbitrage) \u2014 leverage CLT to justify inference methodologies; cannot negotiate the theorem's boundaries",
+      "Research Community at Scale: Generations of mathematicians and statisticians (organized/analytical) \u2014 continuously validate CLT through diverse proof methods; collective investigation reinforces rather than challenges the constraint"
+    ],
+    "logic_rationale": "Base Extractiveness (0.08): The CLT imposes a convergence rate requirement \u2014 practitioners must collect adequate sample sizes to achieve normal approximation \u2014 but this is not extraction because the 'cost' (sampling effort) is not asymmetrically borne. All agents face the same convergence requirement. The small value (0.08) reflects that CLT is entirely about mathematical inevitability, not about redistribution. Suppression (0.02): Minimal. Practitioners have full visibility into CLT's conditions, proof, and applicability boundaries. No information is hidden. The small nonzero value (0.02) accounts only for the intrinsic difficulty of understanding measure-theoretic probability for non-specialists \u2014 this is a learning barrier, not an intentional suppression mechanism. Theater Ratio (0.05): Negligible. The theorem is invoked as a technical statement in inference, not as a performative ritual. Statistical practice may include ceremonial invocation ('by CLT...'), but the core principle is entirely functional. Claimed Type: Mountain. All four structural criteria are satisfied: (1) Emerges naturally from axioms of probability theory. (2) Accessibility collapse (0.92) is exceptionally high \u2014 once finite variance is assumed, normal convergence is mathematically inevitable, leaving no degrees of freedom. (3) Resistance (0.03) is minimal \u2014 no countervailing principle challenges CLT within its domain. (4) Both extractiveness (0.08) and suppression (0.02) fall well below mountain thresholds.",
+    "perspectival_gap": "Unlike most constraints, CLT shows NO perspectival gap. All observers \u2014 powerless practitioners, analytical mathematicians, institutional authorities, organized research communities \u2014 classify it identically as mountain. This uniformity is the signature of a true natural law. The powerless practitioner's effective extraction (\u03c7\u22480.11) and the analyst's effective extraction (\u03c7\u22480.09) differ slightly due to f(d) variations, but both lead to mountain classification. The absence of perspectival disagreement validates that CLT is not a socially constructed constraint or an institutional arrangement, but a mathematical law.",
+    "directionality_logic": "Powerless practitioner: trapped exit + no victim status \u2192 d\u22481.0, f(d)\u22481.42. Even at maximum d, the intrinsically low \u03b5 (0.08) keeps \u03c7 low. Analyst: analytical observer \u2192 d\u22480.72, f(d)\u22481.15. Institutional authority: beneficiary of arbitrage ability to choose domains \u2192 d\u22480.05, f(d)\u2248-0.12. Organized community: analytical perspective \u2192 d\u22480.50, f(d)\u22480.65. The range of d values (0.05 to 1.0) would normally produce significant perspectival variation. That it does not reflects CLT's invariance: the theorem holds regardless of the observer's position, resources, or strategic interest. This is the defining property of a mountain constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "law_of_large_numbers",
+      "normal_approximation_inference",
+      "bootstrap_resampling_validity"
+    ],
+    "dual_formulation_note": "CLT is the foundational constraint upstream of all normal-approximation-based inference. Three related constraints depend on it: law_of_large_numbers (LLN) establishes convergence to expectation; CLT specifies the distribution of that convergence; normal_approximation_inference applies CLT to confidence intervals and hypothesis testing. A fourth derivative constraint, bootstrap_resampling_validity, relies on CLT for theoretical justification of bootstrap confidence intervals."
+  },
+  "directionality_overrides": []
+}

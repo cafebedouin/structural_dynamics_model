@@ -1,0 +1,86 @@
+{
+  "header": {
+    "constraint_id": "emrgency_medicine_clinical_guidelines",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.3,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Emergency Medicine Clinical Guidelines",
+    "topic_domain": "medical/legal/institutional",
+    "beneficiaries": [
+      "patients",
+      "hospitals",
+      "physicians"
+    ],
+    "victims": [
+      "physician_autonomy"
+    ],
+    "requires_active_enforcement": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Hospital Administration",
+      "comment": "Hospitals benefit from standardized care, reduced liability, and potentially lower costs. They can analyze and adapt the guidelines over time."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Emergency Medicine Physician",
+      "comment": "Physicians benefit from decision support and a framework for justifying their actions, though their autonomy is somewhat constrained. There is some mobility as they can practice outside institutions that require strict adherence to the guidelines."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Patient",
+      "comment": "Patients benefit from more consistent and appropriate care, and can seek care elsewhere if they disagree with the recommended approach. They have power to move to another hospital."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Medical Research Community",
+      "comment": "Researchers can evaluate guideline effectiveness and identify areas for improvement, but may be constrained by funding and data access. The analytical viewpoint reveals a combination of coordination and potential extraction, i.e., Tangled Rope classification. By observing over generations, research can fine tune the guidelines, but individual cases may be extracted to prove that guidelines fail"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "Clinical guidelines (e.g., PECARN for pediatric head trauma or Ottawa Ankle Rules) are introduced as decision-support tools to standardize care and reduce unnecessary testing. These guidelines aim to improve patient outcomes, reduce medical errors, and lower healthcare costs. The adoption and adherence to these guidelines, however, can be complex, involving a variety of perspectives and potential tensions.",
+    "key_agents": [
+      "Patients: Beneficiaries of consistent and appropriate care (powerless/mobile)",
+      "Emergency Medicine Physicians: Users of the guidelines, with some autonomy (moderate/constrained)",
+      "Hospital Administration: Implementers and enforcers of the guidelines (institutional/analytical)",
+      "Medical Research Community: Evaluators and improvers of the guidelines (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Low to moderate. Guidelines extract some autonomy from physicians, but this is balanced by the benefits of decision support and reduced liability. Suppression (0.30): Low. Physicians retain the ability to deviate from guidelines in specific cases, but this may require justification. Theater ratio (0.15): Low. The primary function of guidelines is to improve patient care, with minimal performative elements.",
+    "perspectival_gap": "The primary perspectival gap exists between hospital administration, which views the guidelines as a tool for standardization and cost control, and physicians, who may perceive them as a constraint on their clinical judgment. Patients generally benefit from the guidelines, but may experience frustration if they feel their individual needs are not being adequately addressed.",
+    "directionality_logic": "Hospitals and patients benefit from the consistency, reduced testing, and cost savings that the guidelines provide. Physicians may experience a slight loss of autonomy (d > 0.5), however, this is often offset by the reduced liability and improved decision support. The medical research community's d value is about 0.5 since they have to work within the confines of the current guidelines when forming research questions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

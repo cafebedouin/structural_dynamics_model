@@ -2,28 +2,27 @@
   "header": {
     "constraint_id": "board_of_peace_2026",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bop"
   },
   "base_properties": {
-    "extractiveness": 0.75,
-    "suppression": 0.8,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "The 2026 'Board of Peace' Initiative",
-    "topic_domain": "political",
+    "topic_domain": "political/international_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "us_administration_chair",
-      "aligned_member_states",
-      "private_military_contractors"
+      "us_administration",
+      "board_institutional_actors"
     ],
     "victims": [
-      "un_multilateral_system",
-      "non_aligned_conflict_states",
-      "global_public_good_of_peace"
-    ],
-    "mandatrophy_resolved": true
+      "excluded_nations",
+      "sovereignty_constrained_states",
+      "global_south_participation"
+    ]
   },
   "perspectives": [
     {
@@ -31,18 +30,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "regional",
-      "label": "The Non-Aligned Conflict State",
-      "comment": "PERSPECTIVE 1: NON-ALIGNED CONFLICT STATE (SNARE) — Subject to intervention by a 20,000-strong force controlled by a body they have no say in, outside the UN framework where they might have had a voice or allies. They are trapped by the new geopolitical reality. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.96."
+      "spatial_scope": "global",
+      "label": "Excluded Nations",
+      "comment": "PERSPECTIVE 1: EXCLUDED NATIONS (SNARE) \u2014 Nations excluded from Board membership face binding decisions made in forums where they have no voice. Exit options are severely constrained: compliance is enforced through economic, diplomatic, and security pressure. Bears extraction without recourse or meaningful alternative."
     },
     {
-      "classification_type": "snare",
-      "agent_power": "institutional",
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The UN Multilateral System",
-      "comment": "PERSPECTIVE 2: THE UN SYSTEM (SNARE) — Experiences the Board as a direct assault on its mandate, legitimacy, and function. It is an extractive mechanism pulling power, funding, and legitimacy away from the established multilateral order. As an institution, it is constrained in its ability to counter a superpower's initiative. d≈0.85, f(d)≈1.15, σ=1.2 → χ≈1.04."
+      "spatial_scope": "national",
+      "label": "Sovereignty-Constrained States",
+      "comment": "PERSPECTIVE 2: SOVEREIGNTY-CONSTRAINED STATES (TANGLED ROPE) \u2014 Middle-tier states experience mixed coordination and extraction. They benefit from Board participation rules and dispute resolution frameworks but are constrained by enforcement mechanisms. Significant extraction overhead but also genuine coordination benefits through institutional access."
     },
     {
       "classification_type": "rope",
@@ -50,121 +49,158 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The US Administration (Chair)",
-      "comment": "PERSPECTIVE 3: THE US ADMINISTRATION (ROPE) — As the creator and chair, the administration sees the Board as a pure coordination tool to align allies and project power efficiently, bypassing the perceived bureaucracy of the UN. They benefit directly from the concentration of power. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.11. Negative effective extraction indicates a net subsidy."
+      "label": "US Administration",
+      "comment": "PERSPECTIVE 3: US ADMINISTRATION (ROPE) \u2014 Primary architect and beneficiary. Experiences the Board as a coordination mechanism for aligning international policy with US strategic interests. Arbitrage capacity is high: can shape agendas, define membership criteria, and shift alliance patterns. Net beneficiary with low experienced extraction."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Participating Member State",
-      "comment": "PERSPECTIVE 4: PARTICIPATING MEMBER STATE (TANGLED ROPE) — Gains a seat at a US-led table (coordination benefit) but must contribute $1B and cede significant decision-making authority to the Chair (extraction). They have exit options, but at a high diplomatic cost. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.56."
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Allied Institutional Actors",
+      "comment": "PERSPECTIVE 4: ALLIED INSTITUTIONAL ACTORS (TANGLED ROPE) \u2014 Board members from allied nations experience coordination benefits (unified policy, security guarantees) but are constrained by alignment requirements. Enforcement includes social pressure, resource allocation, and threat of expulsion. Both real coordination and real extraction present."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Governance Theater",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL GOVERNANCE THEATER (PITON) \u2014 The Board's procedural legitimacy rituals (voting, consultation, consensus-building language) are largely performative. Real decisions have been made via bilateral US-ally negotiations before Board forums convene. The governance apparatus persists through institutional inertia and soft-power maintenance rather than functional decision-making. Theater ratio reflects symbolic legitimacy provision for predetermined outcomes."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Declining Western Ally",
-      "comment": "PERSPECTIVE 5: DECLINING WESTERN ALLY (PITON) — Nations like France and Germany, who declined to join, see the Board as a performative rejection of established multilateral norms. Its function is secondary to its theatrical role as a parallel power structure. The high theater_ratio (0.75) and their ability to exit (by not joining) leads to a Piton classification. The constraint is inertial and degraded from their viewpoint."
+      "label": "Counter-Hegemonic Coalition",
+      "comment": "PERSPECTIVE 6: COUNTER-HEGEMONIC COALITION (SCAFFOLD) \u2014 Alternative power blocs (BRICS+, Shanghai Cooperation Organization, Global South networks) see the Board as temporary US-centric coordination with a structural sunset. Their exit option is clear: build parallel institutions with different decision-making rules. The extraction window is compressed by the coalition's capacity to create alternatives. Theater and suppression high but time-limited."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The observer sees the dual structure: a genuine (though skewed) coordination mechanism for its members, inextricably coupled with a severe, asymmetric extraction of sovereignty, funds, and legitimacy from non-members and the global system. This matches the claimed_type. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.04."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Civilizational-scope analysis reveals hybrid structure: genuine coordination function (information sharing, dispute prevention) exists alongside extractive asymmetry (agenda-setting power, enforcement mechanisms favor the US pole). The constraint persists because both functions are necessary and entangled \u2014 dismantling it for one purpose breaks the other."
     }
   ],
   "omegas": [
     {
-      "id": "operational_effectiveness",
-      "question": "Will the Board's International Stabilization Force prove more effective at conflict resolution than existing UN peacekeeping, or will it primarily serve the geopolitical interests of its chair?",
-      "resolution_mechanism": "Comparative analysis of mission outcomes, casualty rates, and long-term stability in regions of intervention versus UN-led missions over a 5-10 year period.",
-      "impact": "If highly effective, its classification could shift towards Scaffold or Rope for more observers. If ineffective or destabilizing, it confirms the Snare classification.",
+      "id": "legitimacy_vs_enforcement_asymmetry",
+      "question": "Does the Board's procedural legitimacy (voting, consensus framing) create sufficient soft-power legitimacy to sustain enforcement, or is enforcement dependent on hard power coercion?",
+      "resolution_mechanism": "Historical comparison with failed legitimacy-dependent institutions (League of Nations, Durban Group); analysis of compliance rates correlated with exclusion from Board benefits vs direct coercion",
+      "impact": "If soft power sufficient: classification moves toward Rope (more consensual). If hard power required: classification strengthens toward Snare for excluded nations (more coercive).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the Board is an effective peacekeeper or a tool for power projection"
+      "description": "Whether Board legitimacy or hard power drives compliance"
     },
     {
-      "id": "member_state_cohesion",
-      "question": "Will the coalition of member states remain cohesive when faced with the $1 billion renewal fee and potentially controversial unilateral decisions by the Chair?",
-      "resolution_mechanism": "Tracking member state retention rates after the initial three-year period and analyzing voting alignment on contentious resolutions.",
-      "impact": "If cohesion fails, the constraint collapses into a Piton. If it holds, the Tangled Rope/Snare nature is confirmed as stable.",
+      "id": "us_pole_sustainability",
+      "question": "Can the US maintain hegemonic agenda-setting within the Board as economic and military parity shifts toward multipolar distribution?",
+      "resolution_mechanism": "Measurement of US voting weight erosion; tracking of Board agenda items controlled by non-US actors over time; analysis of US veto power persistence",
+      "impact": "If US pole sustains: constraint remains Tangled Rope with high extraction asymmetry (0.52 \u03b5 holds). If US influence erodes: constraint evolves toward Rope-Scaffold hybrid (lower \u03b5, higher theater as legitimacy rituals substitute for control).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Cohesion of member states under financial and political pressure"
+      "description": "Sustainability of US hegemonic control within the Board"
     },
     {
-      "id": "us_political_continuity",
-      "question": "Is the Board of Peace a transient policy tied to a specific US administration, or will it become an institutionalized part of US foreign policy?",
-      "resolution_mechanism": "Observing the policy position of the subsequent US administration regarding the Board's funding, leadership, and mandate.",
-      "impact": "If transient, the constraint is a de facto Scaffold. If institutionalized, it represents a permanent structural shift in global governance, solidifying its Snare/Tangled Rope classification.",
+      "id": "alternative_institution_viability",
+      "question": "Are BRICS+, SCO, and Global South alternatives genuine functional substitutes for Board coordination, or do they face collective-action barriers that give the Board residual monopoly?",
+      "resolution_mechanism": "Comparative analysis of decision-making speed, enforcement capacity, and member compliance across competing institutions; measurement of issue migration to alternative forums",
+      "impact": "If alternatives viable: scaffold sunset is real, extraction window is compressed, constraint approaches fixed termination. If alternatives face barriers: excluded nations remain trapped, Snare classification strengthens.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether the Board will outlast its founding administration"
+      "type_class": "empirical",
+      "description": "Viability of alternative institutions as functional substitutes"
+    },
+    {
+      "id": "coordination_benefit_distribution",
+      "question": "Do excluded nations experience any net coordination benefits (security, economic stability, conflict prevention) from Board existence despite exclusion, or is extraction pure?",
+      "resolution_mechanism": "Measurement of conflict rate reduction, trade stability, and security guarantees in excluded vs Board-member regions; analysis of excluded nations' revealed preferences for Board access",
+      "impact": "If benefits exist: Snare classification softens toward Tangled Rope even for excluded agents. If pure extraction: Snare classification confirmed, no hidden coordination function for victims.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether excluded nations derive coordination benefits from Board existence"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.85
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1,
-      "value": 0.8
+      "time_point": 6,
+      "value": 0.64
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.75
+      "time_point": 12,
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.65
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1,
-      "value": 0.7
+      "time_point": 6,
+      "value": 0.46
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.75
+      "time_point": 12,
+      "value": 0.52
     }
   ],
   "interval": {
     "start": 0,
-    "end": 3
+    "end": 12
   },
   "commentary": {
-    "narrative_context": "The 2026 'Board of Peace' is a hypothetical international body established by a US administration to operate outside the UN framework. While its stated purpose is global peacekeeping, its structure concentrates decision-making power in its Chair, requires significant financial contributions from members, and was launched concurrently with the US withdrawing from numerous UN bodies. This creates a structural conflict between its performative name ('Board of Peace') and its function as a vehicle for unilateral foreign policy, funded by allies.",
+    "narrative_context": "The 2026 'Board of Peace' Initiative represents a newly established international governance body created by the US administration to coordinate policy among allied and partner states on peace, security, and international order. The Board combines genuine coordination functions\u2014shared information, conflict prevention, policy alignment\u2014with asymmetric extraction mechanisms that concentrate agenda-setting power in the US and exclude non-allied nations from decision-making. This constraint exhibits the tension between legitimacy-based soft power (procedural rules, voting, consensus language) and enforcement-based hard power (selective benefits, expulsion threats, economic pressure). The theater ratio has risen from 0.55 to 0.68 as the Board's institutional rituals (formal voting procedures, consensus-building language, legitimacy framing) have expanded relative to actual decision-making power, which remains concentrated. Extractiveness has increased from 0.38 to 0.52 as enforcement mechanisms have tightened and excluded nations face higher costs from non-compliance. The constraint's classification depends entirely on observational perspective: the US administration sees coordination; excluded nations see pure extraction; allied moderates see hybrid dynamics; alternative power blocs see a temporary phenomenon with a structural sunset.",
     "key_agents": [
-      "US Administration (Chair): Primary beneficiary (institutional/arbitrage) - gains a powerful foreign policy tool that bypasses multilateral constraints.",
-      "Participating Member States: Secondary beneficiaries/victims (organized/mobile) - gain alignment with the US but pay a high price in funds and sovereignty.",
-      "UN Multilateral System: Primary victim (institutional/constrained) - its role, legitimacy, and mandate are directly suppressed and usurped.",
-      "Non-Aligned Conflict States: Primary victims (powerless/trapped) - face intervention from a new power bloc with no recourse to established international law.",
-      "Declining Western Allies: Observers (institutional/mobile) - perceive the initiative as a degradation of international norms and choose not to participate."
+      "US Administration: Primary beneficiary (institutional/arbitrage) \u2014 architect of Board, captures agenda-setting power, high exit capacity relative to constraint",
+      "Allied Member States: Secondary beneficiary (organized/constrained) \u2014 gain coordination benefits and security guarantees but constrained by alignment requirements and enforcement mechanisms",
+      "Excluded Nations: Primary victim (powerless/trapped) \u2014 face binding Board decisions with no voice, limited exit options due to economic and diplomatic pressure",
+      "Sovereignty-Constrained States: Mixed actor (moderate/constrained) \u2014 participate but with reduced autonomy, experience both coordination benefits and extraction costs",
+      "Global South Participation Coalitions: Organized victim (organized/mobile) \u2014 excluded but building alternative institutions, have exit capacity through counterhegemonic institution-building",
+      "International Governance Theater: Institutional performance system (institutional/arbitrage) \u2014 procedural legitimacy apparatus that ritualizes predetermined decisions",
+      "Analytical Observer: Civilizational perspective \u2014 sees entangled coordination and extraction, classifies as Tangled Rope rather than pure coordination or pure extraction"
     ],
-    "logic_rationale": "Extractiveness (0.75) is high due to the mandatory $1B renewal fee and the transfer of sovereign decision-making power to the Board's Chair. Suppression (0.80) is severe, evidenced by the US's simultaneous withdrawal from 66 international organizations, actively dismantling alternatives. Theater Ratio (0.75) is high, as the benevolent name and stated mission of 'peace' stand in stark contrast to the structure of centralized power projection; it meets the Piton threshold (>=0.70).",
-    "perspectival_gap": "The gap is profound. The US administration sees a legitimate coordination tool (Rope). A paying member state sees a mixed-motive alliance with costs (Tangled Rope). The UN and states targeted by the Board see a coercive, illegitimate power grab that extracts resources and sovereignty (Snare). Allies who refuse to join see a performative, degraded institution that exists for show (Piton). The classification depends entirely on whether an agent is wielding the tool, paying for it, being targeted by it, or watching from the sidelines.",
-    "directionality_logic": "Beneficiaries (US Admin) have arbitrage exit and see negative extraction (Rope). Victims (UN, non-aligned states) are trapped or constrained, leading to high directionality (d) values and thus extremely high effective extraction (χ), classifying the constraint as a Snare from their view. Participating members have some agency (mobile exit) but are still subject to extraction, placing them in the middle (Tangled Rope). The directionality derivation correctly maps these structural positions to the wide range of classifications.",
-    "mandatrophy_analysis": "This constraint is a canonical example of mandatrophy. It is presented as a global good and a coordination mechanism ('peace'), but its structure is primarily extractive. The Deferential Realism framework resolves this by refusing to assign a single label. It validates the beneficiary's 'Rope' perspective while simultaneously validating the victim's 'Snare' perspective. The analytical classification of 'Tangled Rope' acknowledges the existence of both functions, while the high base metrics (ε=0.75, suppression=0.80) clearly signal that the extractive component is dominant."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and increasing. The Board extracts through multiple mechanisms: (1) agenda-setting asymmetry favoring US interests, (2) enforcement via selective benefits and threat of expulsion, (3) compliance costs borne by excluded nations despite having no voice. The initial level (0.38) reflected uncertainty about whether enforcement would take hold; the rise to 0.52 reflects demonstrated enforcement capacity. Suppression (0.58): Moderate-high. Barriers to exit include economic interdependence, security dependence on allied states, diplomatic isolation costs for non-compliance, and credible threats from Board-coordinated enforcement. However, suppression is not total \u2014 excluded nations retain some autonomous capacity (some defection, some alternative-institution building, some negotiation capacity). Theater ratio (0.68): High and increasing. The Board's procedural apparatus (voting rules, consensus language, legitimacy framing) obscures the concentration of actual decision-making power. As institutional rituals have expanded, the gap between formal legitimacy and substantive decision-making has widened. Real decisions are made via bilateral US-ally negotiations; Board forums then ratify and legitimize those decisions. The theater serves to provide procedural cover for predetermined outcomes.",
+    "perspectival_gap": "The gap between perspectives is primarily a function of power position and exit capacity. The US administration and allies experience low effective extraction (they set agendas and benefit from coordination) and see the Board as legitimate governance. Excluded nations experience high effective extraction (they face binding decisions with no voice) and see the Board as hegemonic coercion. The counter-hegemonic coalition sees the Board as temporary and perceives an exit path through alternative institution-building, which colors their classification toward Scaffold rather than Snare. The analytical observer from a civilizational/universal perspective sees that the coordination function is real (preventing certain conflicts, enabling certain economic arrangements) but inseparably entangled with extraction mechanisms (asymmetric power, selective membership, enforcement asymmetry). This entanglement is the core dynamic: the coordination benefits are extracted at the cost of excluding nations that lack arbitrage capacity.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural position. The US administration is a beneficiary with arbitrage exit capacity (can reshape alliances, define membership criteria, walk away from Board if it no longer serves interests) \u2014 d is very low (~0.05-0.15), yielding negative to minimal effective extraction f(d) \u2248 -0.10. Allied states are beneficiaries with constrained exit (gain security and coordination benefits but cannot easily defect without losing alliance status) \u2014 d is moderate (~0.35-0.45), yielding moderate effective extraction f(d) \u2248 0.50. Excluded nations are victims with trapped exit (no voice in Board, cannot exit without severe economic and diplomatic costs) \u2014 d is very high (~0.85-0.95), yielding high effective extraction f(d) \u2248 1.15-1.42. The counter-hegemonic coalition is a victim-with-exit (excluded but building alternatives, higher d ~0.60-0.70) yielding moderate-high effective extraction f(d) \u2248 0.75-0.95. These derivations explain why the same constraint classifies as Rope for the US, Tangled Rope for allies, Snare for excluded powerless nations, and Scaffold for organized counter-hegemons.",
+    "mandatrophy_analysis": "Mandatrophy resolution: The constraint does NOT collapse into false Rope (pure coordination) because the structural data clearly shows asymmetric extraction (excluded nations, victim group, suppression \u2265 0.58). The constraint does NOT collapse into false Snare (pure extraction) because the coordination function is genuine (information-sharing, conflict prevention, policy alignment) and some agents (allies, US) truly benefit from coordination without pure extraction. The Tangled Rope classification (claimed_type: tangled_rope) captures the genuine entanglement: the Board provides coordination services that all nations would benefit from participating in, but the extraction mechanism (US hegemonic control, selective membership, enforcement asymmetry) is inseparable from the coordination mechanism. Dismantling the extraction to create pure coordination (a truly pluralistic Board) would likely destroy the coordination function (the coordination is valuable precisely because it aligns everyone with the US, which excludes the non-aligned). The constraint persists because both functions are necessary and structurally coupled. This resolves mandatrophy: the engine confirms Tangled Rope by validating that (1) beneficiaries exist (US, allies), (2) victims exist (excluded nations), (3) active enforcement is required (diplomatic pressure, compliance mechanisms), and (4) both coordination and extraction components are structural, not incidental."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": []
+    "affects_constraints": [
+      "us_hegemonic_order",
+      "alternative_institution_clustering",
+      "global_south_coalitional_power"
+    ],
+    "dual_formulation_note": "The Board of Peace is part of a constraint family involving competing international governance structures. It is downstream of the US hegemonic order (which enables the Board's creation and maintenance) and shares structural dynamics with alternative institutions built by counter-hegemonic coalitions. Each constraint in the family has distinct \u03b5 values: the US hegemonic order has high \u03b5 (~0.60+, Snare from Global South perspective); the Board has moderate \u03b5 (0.52, Tangled Rope); alternative institutions have lower \u03b5 (~0.20-0.35, Rope or Scaffold). Decomposition reflects that 'international governance' is not a single constraint but a contested field where multiple mechanisms with different extraction properties operate in tension."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "us_hegemonic_order"
+    ]
+  }
 }

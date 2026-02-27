@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "institutional_mutation_domestication",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Jedi Bureaucratic Capture",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "galactic_republic_executive",
+      "jedi_order_hierarchy"
+    ],
+    "victims": [
+      "jedi_operational_autonomy",
+      "republic_checks_and_balances"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Field Jedi",
+      "comment": "PERSPECTIVE 1: FIELD JEDI (SNARE) \u2014 Individual Jedi deployed across the galaxy operate under mandate from the Republic, bearing operational risk and ethical burden while institutional benefits accrue to Order leadership and executive hierarchy. Cannot exit deployment without violating Jedi Code or career. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.86."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Jedi Council",
+      "comment": "PERSPECTIVE 2: JEDI COUNCIL (TANGLED ROPE) \u2014 Organized leadership derives coordination benefit (legitimacy, funding, access to Republic resources) while maintaining nominal independence. However, constrained exit and increasing enforcement obligations create asymmetric extraction: the Republic shapes mission parameters and political alignment. d\u22480.58, f(d)\u22480.72, \u03c3=1.2 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Republic Executive",
+      "comment": "PERSPECTIVE 3: REPUBLIC EXECUTIVE (ROPE) \u2014 Solves coordination problem: Jedi provide force projection, conflict resolution, and legitimacy for Republic governance without direct institutional control costs. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary; experiences constraint as pure coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Constitutional Order",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL ORDER (PITON) \u2014 Separation of civilian and military power \u2014 embodied in Jedi independence from direct political command \u2014 is a core structural principle. However, the constraint operates as degraded inertia: Jedi are functionally subordinate to political priorities while nominally independent. theater_ratio=0.68 reflects performative constitutional integrity (Jedi Council approves missions) masking political subordination. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Outer Rim Separatists",
+      "comment": "PERSPECTIVE 5: OUTER RIM SEPARATISTS (TANGLED ROPE) \u2014 Experience Jedi deployment as extraction mechanism enforcing Republic hegemony. However, Separatists also benefit from some coordination function (Jedi mediation reduces random violence). Mobile exit (secession) remains theoretically available but expensive. d\u22480.70, f(d)\u22481.05, \u03c3=1.2 \u2192 \u03c7\u22480.66."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (NATURAL LAW ATTEMPT) \u2014 Risk of false summit: interpreting bureaucratic domestication as a law of institutional physics ('all power eventually corrupts,' 'hierarchies inevitably constrain mutations'). Structural data (\u03b5=0.52, suppression=0.65) contradicts mountain claim. The engine flags this as false natural law \u2014 the constraint is contingent institutional design, not inherent to governance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "jedi_autonomy_threshold",
+      "question": "At what level of political integration does Jedi operational autonomy cease to be meaningful?",
+      "resolution_mechanism": "Historical analysis of Jedi Council decision independence; correlation between Council votes and executive preferences; tracking of mission refusal rates",
+      "impact": "If threshold already crossed: Jedi are fully captured, classify as Snare from Council perspective. If threshold not yet crossed: tangled_rope analysis holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold where Jedi autonomy becomes nominal"
+    },
+    {
+      "id": "republic_structural_dependence",
+      "question": "Does the Galactic Republic's political legitimacy actually depend on Jedi independence, or has capture already delegitimized both institutions?",
+      "resolution_mechanism": "Public perception analysis; correlation between Jedi scandal and Republic institutional trust; examination of separatist recruitment rhetoric",
+      "impact": "If republic depends on Jedi independence: capture is actively destabilizing (structural decay). If republic has already abandoned legitimacy-via-independence: constraint is pure extraction (Snare from all perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Republic legitimacy depends on Jedi independence"
+    },
+    {
+      "id": "mutation_domestication_reversibility",
+      "question": "Is institutional domestication of high-agency mutations reversible, or does integration necessarily entail absorption?",
+      "resolution_mechanism": "Comparative institutional analysis; case studies of power factions integrated into state hierarchies; examination of exit mechanisms available to captured actors",
+      "impact": "If reversible: scaffold sunset perspective is plausible. If irreversible: mutation is permanently degraded to piton/snare status.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Reversibility of bureaucratic capture of high-agency actors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "The Jedi Order represents a high-agency mutation \u2014 a concentrattion of power, knowledge, and ethical autonomy that exists outside normal bureaucratic structures. When integrated into the Galactic Republic, this mutation becomes subject to domestication: gradual institutional capture that preserves nominal independence while subordinating actual decision-making to political priorities. The constraint exhibits the core structure of tangled rope: genuine coordination function (Jedi provide stability and legitimacy) coupled with asymmetric extraction (political control over mission selection, deployment, and strategic alignment). The theater ratio (0.68) reflects the performative aspects of Jedi Council 'approval' of missions \u2014 the Council maintains formal independence while operating under de facto political constraint. The suppression (0.65) captures the barriers to resistance: withdrawal risks being labeled a faction; internal dissent risks Jedi conflict; individual refusal risks expulsion and mission reassignment to a compliant peer.",
+    "key_agents": [
+      "Galactic Republic Executive: Primary beneficiary (institutional/arbitrage) \u2014 gains force projection, legitimacy, and conflict resolution without direct military command structure",
+      "Jedi Council: Primary organized actor (organized/constrained) \u2014 derives legitimacy and resources from Republic affiliation while facing increasing political constraint on operational independence",
+      "Field Jedi: Primary victim (powerless/trapped) \u2014 deployed on politically-driven missions, bearing ethical and operational risk while benefiting from Order hierarchy and institutional support",
+      "Jedi Operational Autonomy: Structural victim (abstract) \u2014 the constraint degrades the independence that made Jedi valuable as coordination mechanism",
+      "Republic Constitutional Order: Secondary actor (institutional/arbitrage) \u2014 nominally protected (Jedi independence) while functionally eroded by capture",
+      "Outer Rim Separatists: Secondary victim (powerful/mobile) \u2014 experience Jedi as enforcement mechanism of Republic hegemony, though some coordination benefits exist"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The Republic captures significant political value (force projection, legitimacy, mediation capacity) without granting Jedi veto power. However, extraction is not maximal because Jedi retain real agenda-setting capacity within boundaries and genuine coordination benefits flow to all parties. Suppression (0.65): Moderate-high. Barriers include: (1) institutional inertia \u2014 the Jedi Code binds individual choice; (2) career risk \u2014 expulsion is professional death; (3) ideological capture \u2014 Jedi believe in service; (4) resource dependence \u2014 Jedi need Republic logistics. Theater ratio (0.68): High. The Jedi Council's formal 'approval' process creates performative deliberation. Actual mission parameters are set by political actors, with Council assent presented as independent judgment. The theater has increased over the interval as political pressure has grown while formal independence has been maintained for legitimacy.",
+    "perspectival_gap": "The Republic Executive sees Rope (pure coordination solution to governance). The Jedi Council sees Tangled Rope (coordination with constraints). Field Jedi see Snare (deployed with no exit). The constitutional order sees Piton (its own degradation). Separatists see Tangled Rope (enforcement with some coordination). The analytical observer risks seeing Mountain (bureaucratic capture as law of power) but this is a false summit \u2014 the constraint is contingent institutional design. The perspectival gap reveals that the same structural phenomenon \u2014 Jedi integration into Republic governance \u2014 produces radically different classifications based on structural position.",
+    "directionality_logic": "Republic Executive: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; low effective extraction. Jedi Council: Beneficiary + constrained (ambivalent: resources + autonomy loss) + organized \u2192 d\u22480.58, f(d)\u22480.72. Mixed; constrained exit dominates despite beneficiary status. Field Jedi: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Constitutional Order: Beneficiary status nominal + arbitrage, but constrained by political override \u2192 d\u22480.50, f(d)\u22480.65. Piton gate triggered by theater_ratio. Separatists: Victim + mobile \u2192 d\u22480.70, f(d)\u22481.05. Significant extraction but with exit option.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by clearly declaring both coordination and extraction. Beneficiaries (Republic executive, Jedi order hierarchy) are explicitly distinguished from victims (field Jedi, Jedi operational autonomy, separatists). The tangled rope classification preserves both the genuine coordination function (Jedi legitimacy is valuable to Republic) and the asymmetric extraction (political control). The piton perspective (constitutional order degradation) and snare perspective (field Jedi) show that while the order-level classification is tangled rope, individual Jedi and structural principles experience capture as snare. The false summit (mountain perspective) is deliberately included to demonstrate how analytical observers risk naturalizing contingent institutional arrangements. Mandatrophy is resolved by showing that the constraint is neither pure coordination nor pure extraction but a hybrid whose classification depends on the structural position of the evaluator."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "republic_democratic_accountability",
+      "separatist_military_asymmetry",
+      "jedi_code_institutional_conflict"
+    ],
+    "dual_formulation_note": "Institutional mutation domestication is a constraint family member alongside constraints on democratic accountability (how Republic executive avoids checks) and military asymmetry (how Jedi deployment shapes sectional conflicts). The upstream constraint on democratic accountability creates structural pressure for bureaucratic solutions; this constraint is a downstream response. All three are linked by institutional dynamics: the Republic escapes democratic constraint via Jedi autonomy myth, which then creates pressure on Jedi autonomy itself."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "emergency_deployment_scaffold",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ebridg"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "scaffold",
+    "human_readable": "The Tactical Crossing: Emergency Bridge Infrastructure as Temporary Coordination",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "civilian_population_transit",
+      "military_logistics_command",
+      "regional_reconstruction_authority"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Logistics Commander",
+      "comment": "PERSPECTIVE 1: MILITARY LOGISTICS COMMAND (ROPE) \u2014 Pure coordination benefit. The bridge solves the collective action problem of maintaining supply lines and troop mobility without imposing extraction costs. Exit options are mobile (can reroute if necessary). d\u22480.48, f(d)\u22480.60, \u03c3=0.8 \u2192 \u03c7\u22480.13. Low effective extraction; coordination mechanism is transparent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Civilian Population",
+      "comment": "PERSPECTIVE 2: CIVILIAN POPULATION (SCAFFOLD) \u2014 Constrained by lack of alternative crossing mechanisms but benefits from restored connectivity. The bridge is understood as temporary emergency measure with explicit sunset horizon (12-24 months for permanent replacement). Exit options are constrained (cannot bypass crossing without extreme cost). d\u22480.65, f(d)\u22481.00, \u03c3=0.8 \u2192 \u03c7\u22480.22. Moderate extraction justified by emergency coordination necessity; sunset clause legitimizes temporary asymmetry."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Reconstruction Authority",
+      "comment": "PERSPECTIVE 3: REGIONAL RECONSTRUCTION AUTHORITY (SCAFFOLD) \u2014 Institutional actor managing transition from emergency to permanent infrastructure. Coordinates bridge deployment while engineering permanent replacement. Exit options are constrained by infrastructure dependencies but agency is high (controls the sunset timeline). d\u22480.50, f(d)\u22480.65, \u03c3=0.9 \u2192 \u03c7\u22480.16. Low-moderate effective extraction; institutional perspective owns the sunset mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Legacy Infrastructure Regime",
+      "comment": "PERSPECTIVE 4: LEGACY INFRASTRUCTURE REGIME (PITON) \u2014 The collapsed bridge represents a degraded piton that once coordinated regional mobility. The old regime persists through regulatory inertia (permits, land rights, maintenance contracts) even though structural failure has eliminated functional capacity. theater_ratio \u2248 0.65 (performative maintenance of defunct system). The emergency scaffold temporarily replaces lost function while the institutional inertia that maintained the piton dissipates. d\u22480.05, f(d)\u2248-0.12, \u03c3=0.9 \u2192 \u03c7\u2248-0.02. The piton perspective sees the scaffold as its own replacement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical/Logistical Necessity)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, the crossing problem is structurally immutable: geography requires bridging. The bridge itself is a contingent solution, but the necessity of traversing the obstacle is a law-like constraint. However, the structural data (\u03b5=0.28, suppression=0.42, theater=0.55) contradicts full mountain classification \u2014 the constraint exhibits contingent institutional choices (deployment speed, temporary vs permanent, cost allocation), revealing this as a false summit. The true constraint is temporary scaffolding, not inherent law."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Civil Society Coalition",
+      "comment": "PERSPECTIVE 6: CIVIL SOCIETY COALITION (ROPE) \u2014 Organized groups (civic associations, merchant guilds, humanitarian organizations) benefit from bridge as pure coordination good. High exit mobility (can advocate for alternative solutions, can mobilize public opinion). Theater ratio from this perspective is low (0.35) \u2014 civil society evaluates bridge on functional merit (does it work?) rather than performative criteria. d\u22480.40, f(d)\u22480.40, \u03c3=0.8 \u2192 \u03c7\u22480.11. Rope classification reflects genuine coordination without meaningful extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "permanent_replacement_timeline",
+      "question": "What constitutes a credible commitment to the sunset clause? Does the reconstruction authority have enforceable timelines for permanent bridge completion?",
+      "resolution_mechanism": "Contractual review of reconstruction contracts; tracking of milestone achievement rates; comparison to historical infrastructure project timelines in the region",
+      "impact": "If timeline is credible and enforced: scaffold classification holds, suppression remains moderate. If timeline is indefinitely extended: constraint degrades to piton (emergency measures become permanent through institutional inertia).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Credibility and enforceability of permanent bridge sunset clause"
+    },
+    {
+      "id": "beneficiary_extraction_asymmetry",
+      "question": "Are military logistics and civilian transit extracting differential value from the emergency bridge, with military logistics capturing disproportionate benefit relative to cost contribution?",
+      "resolution_mechanism": "Comparative analysis of traffic volume (military vs civilian), maintenance cost allocation, tolls/fees (if any), and resource commitment to bridge integrity",
+      "impact": "If asymmetric military benefit: scaffold degrades toward tangled_rope (military extraction disguised as temporary coordination). If symmetric: pure scaffold coordination holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether military logistics extracts disproportionate value from emergency bridge"
+    },
+    {
+      "id": "legacy_piton_causality",
+      "question": "Was the bridge collapse itself driven by institutional degradation (piton maintenance failure) or by exogenous shock (flood, attack, natural disaster)? Does the cause affect whether the emergency scaffold is truly temporary?",
+      "resolution_mechanism": "Forensic engineering analysis of collapse cause; historical maintenance records of the collapsed bridge; comparison to regional infrastructure maintenance funding patterns",
+      "impact": "If collapse caused by piton degradation: permanent replacement is strongly incentivized, scaffold sunset is credible. If exogenous shock: permanent bridge could be indefinitely delayed if temporary solution works adequately, risking indefinite scaffold-to-piton drift.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether bridge collapse resulted from institutional piton degradation or exogenous shock"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The tactical crossing represents the deployment of emergency military-grade bridge infrastructure following the structural failure of a legacy crossing mechanism. The constraint exhibits textbook scaffold properties: temporary coordination solution with explicit sunset clause and declining theater ratio as institutional confidence in the permanent replacement builds. The bridge solves a genuine collective action problem (geography requires crossing) while remaining explicitly temporary. The challenge is distinguishing true scaffold \u2014 where the sunset is credible and enforced \u2014 from hidden piton, where the emergency measure persists indefinitely through institutional inertia. The constraint's theater_ratio (0.55 at endpoint) reflects that emergency deployment has lower performative content than traditional infrastructure projects: decisions are made on speed and functional adequacy, not ceremony. As time advances and permanent replacement approaches, theater should decline further (approaching 0.35 baseline). If theater remains elevated or increases, the constraint is degrading toward piton classification.",
+    "key_agents": [
+      "Military Logistics Command: Powerful institutional actor (powerful/mobile) \u2014 primary beneficiary; coordinates rapid deployment; has high exit mobility (can reroute)",
+      "Civilian Population: Moderate organizational level (moderate/constrained) \u2014 primary beneficiary; trapped by geography; constrained by lack of alternatives; benefits from restored connectivity",
+      "Regional Reconstruction Authority: Institutional actor (institutional/constrained) \u2014 manages temporary deployment AND controls permanent replacement timeline; owns the sunset mechanism",
+      "Legacy Bridge Regime: Institutional failure (institutional/arbitrage) \u2014 degraded piton that has structurally failed; represents the constraint this scaffold is replacing",
+      "Civil Society Coalition: Organized actors (organized/mobile) \u2014 merchants, civic groups, humanitarian organizations; high exit mobility; evaluate bridge on functional grounds",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing temporary measure as immutable; must recognize contingency of the crossing problem's solution"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The emergency bridge imposes modest extraction relative to coordination benefit. Civilian population must accept temporary solution with uncertain timeline, but benefits from restored mobility. Military logistics gains coordination benefit with minimal extraction cost. The extractiveness is justified by emergency necessity and legitimized by explicit sunset clause. Theater ratio (0.55): Moderate-low. Emergency infrastructure deployment has lower performative content than traditional procurement (decisions based on speed and functionality rather than ceremony, permits, and ritual approval). Theater increases slightly over the interval as institutional processes normalize and permanent replacement planning generates procedural overhead, but remains below levels typical of peacetime infrastructure projects. Suppression (0.42): Moderate. Civilian population has constrained exit options (cannot bypass the crossing without extreme cost or danger) but is not trapped. Alternative routes exist (longer, more expensive, riskier). Suppression is justified by emergency conditions and explicitly understood as temporary. Claimed type: SCAFFOLD. Requires `requires_active_enforcement: true` (bridge maintenance requires active command) and `has_sunset_clause: true` (permanent replacement committed with target timeline).",
+    "perspectival_gap": "The key perspectival gap is between the organizational levels and their relationship to the sunset clause. Military logistics (powerful/mobile) sees pure coordination (Rope) with low extraction. Civilian population (moderate/constrained) sees the same structure as Scaffold \u2014 temporary coordination with a time limit that constrains their exit but justifies suppression. Reconstruction authority (institutional) owns the sunset mechanism and experiences it as legitimate temporary deployment. The legacy piton perspective reveals the constraint's role: replacing a degraded coordination mechanism that failed. The analytical observer risks seeing the crossing as an immutable natural law (Mountain) \u2014 but the bridge's very existence demonstrates contingency. The civil society coalition sees Rope because they have exit mobility (can advocate, organize, pressure for alternative solutions). The perspectival gap measures the asymmetry in exit options and time horizons.",
+    "directionality_logic": "Military logistics: Beneficiary + mobile \u2192 d\u22480.48, f(d)\u22480.60. Net beneficiary with genuine exit mobility. Civilian population: Beneficiary + constrained \u2192 d\u22480.65, f(d)\u22481.00. Constrained beneficiary; moderate extraction justified by emergency and sunset. Reconstruction authority: Institutional + constrained \u2192 d\u22480.50, f(d)\u22480.65. Institutional beneficiary with agency (controls sunset). Legacy piton: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Degraded predecessor; no longer extracting value. Civil society: Organized + mobile \u2192 d\u22480.40, f(d)\u22480.40. Organized beneficiaries with high exit mobility. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. The mountain classification is false \u2014 the bridge is contingent, not immutable.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy because the scaffold classification is justified by explicit structural features: (1) genuine coordination function (bridge solves crossing problem), (2) temporary deployment with credible sunset clause (permanent replacement commitment), (3) moderate extraction justified by emergency necessity and time-limited status, (4) declining theater ratio as institutional confidence builds. The constraint is at risk of mandatrophy drift if: (a) the sunset clause becomes indefinitely extended (indicating degradation to piton), (b) the civilian population begins experiencing the bridge as purely extractive rather than necessary coordination (would require reclassification to tangled_rope or snare), or (c) the permanent replacement becomes impossible, forcing indefinite dependency. The omega variables flag these risks. The analytical observer's mountain perspective is explicitly a false summit \u2014 the constraint is not immutable but contingent on institutional choices about permanent infrastructure investment."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "legacy_bridge_piton",
+      "permanent_infrastructure_replacement",
+      "regional_logistics_network"
+    ],
+    "dual_formulation_note": "The emergency bridge scaffold is downstream of the legacy bridge piton (degraded predecessor) and upstream of the permanent infrastructure replacement. The legacy bridge represents institutional inertia maintaining a failed system; the emergency scaffold is the transition mechanism; the permanent bridge will be the new coordination constraint. These three form a constraint family spanning degradation, emergency response, and institutional renewal."
+  },
+  "directionality_overrides": []
+}

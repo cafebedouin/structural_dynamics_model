@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "cholesterol_pill_cost",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "chol"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Cost of Patented Cholesterol Medication",
+    "topic_domain": "economic/healthcare",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturer"
+    ],
+    "victims": [
+      "uninsured_patients",
+      "insurance_copay_burden",
+      "healthcare_system_cost_pressure"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Uninsured Cardiac Patient",
+      "comment": "PERSPECTIVE 1: UNINSURED CARDIAC PATIENT (SNARE) \u2014 Cannot exit the constraint. Faces binary choice: pay monopoly price for life-saving medication or forgo treatment. No substitute exists due to patent protection. The patient bears full extraction with zero negotiating power. Maximum suppression through absence of alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Insured Patient with High Copay",
+      "comment": "PERSPECTIVE 2: INSURED PATIENT WITH HIGH COPAY (SNARE) \u2014 Nominally has insurance but manufacturer pricing forces prohibitive copay tiers. Exit options are severely constrained: switch to inferior drug (generic competitor), risk health deterioration, or exhaust financial resources. Extraction persists despite ostensible coverage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Insurance Companies and Healthcare Systems",
+      "comment": "PERSPECTIVE 3: INSURANCE COMPANIES / HEALTHCARE SYSTEMS (TANGLED ROPE) \u2014 Experience mixed dynamics. Coordination function: the medication prevents more costly downstream interventions (cardiac events, hospitalizations). Extraction function: manufacturer uses patent leverage and prior exclusivity to extract monopoly rent through pricing power. Insurers can negotiate but face collective action problem \u2014 refusing coverage loses market share to competitors who do cover. Constrained exit (must offer competitive coverage) but real organizational power."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL MANUFACTURER (ROPE) \u2014 Experiences the constraint as pure coordination: patent protection enables recouping R&D investment and funding future drug discovery. From the manufacturer's perspective, the pricing reflects the value of the innovation and the coordination function (funding a pipeline of cardiac medications). Exit option is arbitrage: can reallocate capital to other therapeutic areas if pricing becomes untenable. Primary beneficiary with full organizational power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Government Healthcare Authority",
+      "comment": "PERSPECTIVE 5: GOVERNMENT HEALTHCARE AUTHORITY (TANGLED ROPE) \u2014 Faces genuine hybrid constraint. Coordination function: patent system incentivizes drug discovery. Extraction function: pricing power creates fiscal pressure on public healthcare budgets, forcing rationing decisions or cost-shifting to patients. Government has some exit options (price regulation, compulsory licensing, international sourcing) but deploying them risks future innovation disincentives. Mobile but strategically constrained by longer-term system effects."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Intellectual Property System",
+      "comment": "PERSPECTIVE 6: INTELLECTUAL PROPERTY SYSTEM (PITON) \u2014 The patent system persists as an enforcement mechanism despite evidence that fixed-term monopoly pricing creates severe access barriers. Originally designed to coordinate innovation incentives, the system now operates with high theater: patent extension negotiations, pay-for-delay agreements, and regulatory capture substitute for genuine R&D differentiation. The system maintains itself through institutional inertia and legal complexity rather than functional performance. Theater ratio reflects the performative legal architecture surrounding drug pricing."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Economic Efficiency View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / ECONOMIC EFFICIENCY VIEW (FALSE SUMMIT) \u2014 Risks naturalizing the constraint as an inevitable law of pharmaceutical economics: innovation requires incentives, incentives require pricing power, pricing power necessarily creates access barriers. However, this perspective fails the natural law gate \u2014 the structural data shows the constraint is contingent on policy choices (patent term, licensing rules, regulatory discretion), not immutable economic law. Alternative systems (prize funds, public manufacturing, tiered pricing) demonstrate the arrangement is malleable. False summit classification reveals naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "innovation_rent_insufficiency",
+      "question": "What share of pharmaceutical profits derives from genuine innovation vs. regulatory capture (patent extension, pay-for-delay, FDA exclusivity)?",
+      "resolution_mechanism": "Comparative analysis of drug efficacy improvements vs. pricing increases over 10-year periods; patent litigation and regulatory outcome data; international pricing variation for identical molecules",
+      "impact": "If genuine innovation dominates: patent system functions as coordination mechanism (Rope). If capture dominates: system functions as extraction (Snare/Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Share of profit from innovation vs. regulatory capture"
+    },
+    {
+      "id": "alternative_funding_viability",
+      "question": "Could public funding, prize systems, or tiered pricing models sustain equivalent innovation rates in cholesterol therapeutics?",
+      "resolution_mechanism": "Comparative analysis of government-funded drug development timelines and outcomes; international case studies (India, Australia, Canada public manufacturing programs); economic modeling of alternative incentive structures",
+      "impact": "If viable: patent monopoly is revealed as contingent policy choice (constraint reclassifies as Tangled Rope/Scaffold with sunset). If non-viable: innovation argument strengthens (Rope classification holds).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Viability of non-patent funding for drug development"
+    },
+    {
+      "id": "access_barrier_necessity",
+      "question": "Is high domestic pricing in wealthy markets necessary to fund development, or does global patent enforcement and international price differentiation already enable lower domestic pricing without loss of incentive?",
+      "resolution_mechanism": "Economic analysis of R&D cost models; comparison with tiered international pricing strategies already in use (European reference pricing, Indian generic markets); pharmaceutical company financial disclosures on cost allocation",
+      "impact": "If differentiation is viable: domestic monopoly pricing is unjustified (constraint reclassifies as pure Snare for wealthy markets). If global pricing must be uniform: extraction is inherent to the coordination model.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Necessity of high domestic pricing for innovation funding"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The patented cholesterol medication constraint exemplifies the structural tension between pharmaceutical innovation incentives and healthcare access. The drug demonstrates genuine clinical efficacy in reducing cardiovascular risk, but patent protection enables monopoly pricing that renders treatment unaffordable for uninsured and underinsured populations. The constraint operates across multiple institutional levels: individual patients face binary choice (pay or forgo), insurance companies face negotiating pressure from both manufacturers and members, healthcare systems face fiscal pressure, and governments face policy choices between innovation incentives and access mandates. The extractiveness has increased over the measurement interval (0.35 \u2192 0.58) as the manufacturer consolidates market position and pricing power \u2014 initial post-launch pricing was more competitive due to alternative treatments, but as clinical superiority became established, pricing escalated. Theater ratio increased more modestly (0.32 \u2192 0.48) as the justificatory discourse shifted from 'innovation funding' to 'market value of superior efficacy,' creating more performative economic framing.",
+    "key_agents": [
+      "Uninsured Cardiac Patients: Primary victim (powerless/trapped) \u2014 bear full cost with zero negotiating power; face binary choice of payment or health risk",
+      "Insured Patients with High Copays: Secondary victim (moderate/constrained) \u2014 nominal coverage negated by manufacturer pricing; exit to alternatives is constrained",
+      "Insurance Companies and Healthcare Systems: Intermediate actor (organized/constrained) \u2014 benefit from preventive efficacy (coordination) but extracted from via pricing power; constrained by competitive coverage pressure",
+      "Pharmaceutical Manufacturer: Primary beneficiary (institutional/arbitrage) \u2014 captures monopoly rent through patent protection; experiences constraint as innovation funding mechanism",
+      "Government Healthcare Authorities: Powerful actor (powerful/mobile) \u2014 have regulatory tools but constrained by concerns about innovation disincentives; must balance access and incentives",
+      "IP System: Institutional infrastructure (institutional/arbitrage) \u2014 maintains patent enforcement through legal architecture; benefits from licensing and litigation activity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The manufacturer captures monopoly pricing during the patent period, extracting consumer surplus from patients and healthcare systems. This is not total extraction (0.70+) because the medication provides genuine health value and the patent is time-limited \u2014 the constraint is designed to eventually terminate. The 0.58 value reflects that this is asymmetric capture of legitimate innovation returns, not predatory extraction with zero coordination function. Suppression (0.68): Moderate-high. Patients face severe barriers to alternatives \u2014 the drug is clinically superior, alternatives either inferior or expensive, and switching requires physician authorization. Patent enforcement prevents generic competition during the monopoly period. However, suppression is not total (>0.80) because international price variation and eventual patent expiration create off-ramps. Theater ratio (0.48): Moderate. The economic justification for pricing contains real elements (R&D cost recovery, innovation incentive) but also performative elements (regulatory capture, extension strategies, pay-for-delay agreements). The 0.48 reflects that the coordination narrative is substantive but increasingly mixed with rent-seeking theater.",
+    "directionality_logic": "The constraint's directionality varies sharply by agent due to their different structural positions. Uninsured patients experience d \u2248 0.95 (full target, trapped exit) \u2192 maximum f(d) \u2248 1.42 \u2192 experience high \u03c7 despite moderate base extractiveness. Insured patients experience d \u2248 0.75 (primarily target, constrained exit) \u2192 f(d) \u2248 1.15 \u2192 moderate-high \u03c7. Insurance companies experience d \u2248 0.45 (mixed beneficiary/target, organized exit) \u2192 f(d) \u2248 0.50 \u2192 \u03c7 scales down significantly. Manufacturer experiences d \u2248 0.05 (beneficiary, arbitrage exit) \u2192 f(d) \u2248 -0.12 \u2192 negative \u03c7 (they perceive subsidy, not extraction). Government authorities experience d \u2248 0.50 (balanced, mobile exit) \u2192 f(d) \u2248 0.65 \u2192 moderate \u03c7. The scope modifier \u03c3(S)=1.0 (national scope) applies uniformly. This derivation chain explains why the same constraint classifies as snare (trappped victims), tangled_rope (organized intermediate actors), and rope (beneficiary manufacturer).",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Uninsured patients see pure extraction with no coordination benefit (Snare). Manufacturers see innovation funding mechanism with zero extraction (Rope). Insurance companies see genuine mix: the medication prevents downstream costs (coordination benefit) but arrives at prohibitive price (extraction force) \u2014 hence Tangled Rope. Governments see longer-term structural constraint: patent incentivizes innovation today but creates access barriers that may harm tomorrow's health system efficiency \u2014 hence also Tangled Rope but with different causal emphasis. The IP system sees its own degraded function (Piton): patent enforcement persists but increasingly via pay-for-delay and regulatory extension rather than genuine R&D competition. The analytical observer risks seeing this as an inevitable trade-off (Mountain: access always trades against innovation) but the structural data reveals this as false summit \u2014 policy choices (patent term, compulsory licensing authority, prize fund alternatives) are contingent, not natural law.",
+    "mandatrophy_analysis": "CONSTRAINT TYPE CLASSIFICATION INSTABILITY: The pharmaceutical constraint demonstrates why extractiveness thresholds matter. At \u03b5=0.58, this qualifies as a Snare (\u03b5 \u2265 0.46, suppression \u2265 0.60). But the classification is structurally unstable if any of three factors change: (1) If generic competition timeline moves forward (patent expiration accelerates), extractiveness declines below 0.46 \u2192 reclassifies as Tangled Rope. (2) If manufacturer price concessions or tiered pricing expands (suppression drops below 0.60), classification shifts to Rope despite high \u03b5. (3) If innovation rate slows without pricing increase (theater rises further as justification decays), classification might shift toward Piton despite nominally high extraction. The Snare classification is accurate at the current measurement point, but the constraint's identity is not stable across time or counterfactual scenarios. This instability is informative: it suggests the underlying structural relationship is genuinely contested \u2014 whether this 'should' be pure innovation incentive (Rope) or pure monopoly exploitation (Snare) depends on empirical claims about alternatives and necessity that omega variables make explicit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "insulin_pricing_cliff",
+      "generic_drug_market_entry",
+      "healthcare_financing_rationing"
+    ],
+    "dual_formulation_note": "The cholesterol medication constraint is downstream of broader pharmaceutical patent policy but upstream of specific healthcare access outcomes. The network reflects that pricing power in one drug class creates systemic pressure on insurance pools, which affect subsequent rationing decisions in other therapeutic areas."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

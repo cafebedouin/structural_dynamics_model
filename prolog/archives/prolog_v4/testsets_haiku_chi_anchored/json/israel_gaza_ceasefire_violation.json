@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "israel_gaza_ceasefire_violation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "igcv"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Israel-Gaza Ceasefire Violation Escalation Trap",
+    "topic_domain": "geopolitical/conflict_resolution",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hardline_political_factions_israel",
+      "hardline_political_factions_gaza"
+    ],
+    "victims": [
+      "civilian_population_gaza",
+      "civilian_population_israel",
+      "ceasefire_mechanism",
+      "regional_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Civilian Population Under Fire",
+      "comment": "PERSPECTIVE 1: CIVILIAN POPULATION (SNARE) \u2014 Trapped in escalation cycle with no exit option. Bears full cost of retaliatory strikes. No capacity to enforce ceasefire or prevent violations. d\u22480.95, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.77. Pure extraction with maximum coercion and zero alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Mediating Powers",
+      "comment": "PERSPECTIVE 2: REGIONAL MEDIATORS (TANGLED ROPE) \u2014 Egypt, Qatar, UAE experience mixed coordination and extraction. Must maintain ceasefire for regional stability (coordination function) but face extraction from both parties' violations and manipulation. Constrained exit: cannot simply withdraw mediation without regional destabilization. d\u22480.68, f(d)\u22480.95, \u03c3=0.9 \u2192 \u03c7\u22480.63. Asymmetric extraction masks underlying coordination role."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Hardline Factions (Both Sides)",
+      "comment": "PERSPECTIVE 3: HARDLINE FACTIONS / SPOILERS (SNARE) \u2014 Both Hamas hardliners and Israeli right-wing factions benefit from ceasefire violations. Use rockets/strikes to sabotage diplomatic resolution and consolidate political power. Constrained exit: cannot openly advocate for war resumption without political cost. Classify as snare from the perspective of moderates who become trapped by factional escalation. d\u22480.75, f(d)\u22481.10, \u03c3=0.8 \u2192 \u03c7\u22480.59. Effective extractors who suppress moderate alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Security Apparatus (Dual Perspective)",
+      "comment": "PERSPECTIVE 4: ISRAEL STATE SECURITY APPARATUS (TANGLED ROPE) \u2014 Must maintain deterrence credibility (coordination function) through proportional response to violations. But extraction occurs: security establishment consolidates institutional power, justifies military budgets, suppresses civilian dissent on grounds of security. d\u22480.45, f(d)\u22480.40, \u03c3=1.0 \u2192 \u03c7\u22480.27. Hybrid: real coordination role shadowed by institutional extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Gaza Authority / Hamas Governance",
+      "comment": "PERSPECTIVE 5: HAMAS/GAZA AUTHORITY (TANGLED ROPE) \u2014 Must maintain ceasefire credibility for governance (coordination function). But extraction occurs: factions extract control from moderate leadership, use violations to consolidate power against Fatah/Palestinian Authority, suppress civilian opposition to militancy. d\u22480.50, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.35. Dual extraction: inter-Palestinian factional and external deterrence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Legal/UN Framework",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL LEGAL FRAMEWORK (PITON) \u2014 Formal ceasefire mechanisms, UN resolutions, international humanitarian law provide performative legitimacy (theater_ratio=0.65). Actual enforcement capacity is near-zero: no mechanism to prevent violations or compel de-escalation. Persists through institutional inertia and diplomatic theater despite demonstrated ineffectiveness. Theater exceeds function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Civil Society / Peace Movement",
+      "comment": "PERSPECTIVE 7: INTERNATIONAL PEACE ACTORS (SCAFFOLD) \u2014 NGOs, peace-building organizations, Track 2 diplomacy actors see escalation as a temporary failure with sunset potential. Access to both sides enables shuttle diplomacy and confidence-building. Mobile exit: can redirect funding/effort to neighboring conflicts if this one degrades beyond repair. \u03c7\u22640.30, theater\u22640.70. Temporary support with genuine sunset logic: 'if we don't stabilize in X years, we pivot to Syria or Yemen.' Has_sunset_clause rationale: international peace fatigue sets renewal deadlines for major funding cycles every 3-5 years."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / REALIST VIEW (MOUNTAIN?) \u2014 Risk of misclassification as natural law. Realist IR scholars argue that ceasefire violations are inevitable structural products of anarchy (no enforcer), mutual distrust, and security dilemmas \u2014 immutable features of interstate/non-state conflict. \u03b5=0.68, suppression=0.78 contradict mountain gates; false summit. The constraint is contingent on factional politics and weak enforcement institutions, not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "violation_attribution_ambiguity",
+      "question": "When a rocket is fired from Gaza, is it attributable to Hamas central command, local Hamas factions, Palestinian Islamic Jihad, or rogue actors claiming Hamas affiliation?",
+      "resolution_mechanism": "Forensic analysis of weaponry, launch patterns, claimed responsibility statements; comparison with Hamas military wing (Izz ad-Din al-Qassam Brigades) direct communications; cellular network analysis of command networks during incident",
+      "impact": "If attribution to central command: ceasefire holder (Hamas leadership) is violator. If attribution to rogue/other factions: Hamas can disclaim and negotiate enforcement mechanisms. Changes whether tangled_rope moderates can contain hardliners or are captured by them.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rocket violations can be attributed to ceasefire-signatory authority vs rogue factions"
+    },
+    {
+      "id": "proportionality_measurement_asymmetry",
+      "question": "What metric constitutes 'proportional response'? Casualty equivalence? Infrastructure damage equivalence? Time window for response? Civilian protection standards?",
+      "resolution_mechanism": "Ex-post analysis of response patterns: ratio of casualties to initiating act; timing of response relative to violation; civilian protection measures deployed; comparison to prior historical cycles",
+      "impact": "If response metrics are ambiguous: both sides claim violations while defending as proportional. Allows extraction to persist unchecked under coordination theater. If metrics are clarified: enforcement becomes possible, snare can be converted to tangled_rope with enforceable limits.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "How proportionality is measured in escalation response"
+    },
+    {
+      "id": "factional_moderation_capacity",
+      "question": "Can moderate leadership in Hamas and Israeli government suppress hardline factions' capacity to violate ceasefire unilaterally?",
+      "resolution_mechanism": "Historical analysis of factional control: how many prior violations were prevented by central command enforcement? Security force loyalty patterns. Comparison with other multi-faction armed groups (Hezbollah, PKK) where central authority has successfully disciplined splinters.",
+      "impact": "If moderation capacity exists: tangled_rope classification valid \u2014 coordination role is real, extraction is institutional capture. If moderation capacity is illusory: snare classification dominates \u2014 hardliners structurally control both sides, civilians have no exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether moderate factional leadership can enforce discipline on hardline splinters"
+    },
+    {
+      "id": "international_enforcement_credibility",
+      "question": "Can international mediators (Egypt, Qatar, US, UN) credibly threaten sanctions, aid withdrawal, or military intervention to enforce ceasefire compliance?",
+      "resolution_mechanism": "Prior enforcement success rates; leverage analysis of economic aid, military support, diplomatic isolation; comparison to enforcement in Cyprus, Dayton (Bosnia), or other sustained ceasefires",
+      "impact": "If enforcement credibility is high: piton classification is wrong, scaffold or tangled_rope becomes operative. If enforcement is theatrical (aid leverage exists but won't be used): piton confirmed \u2014 performative international framework.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether international mediators have credible enforcement leverage"
+    },
+    {
+      "id": "ceasefire_legitimacy_asymmetry",
+      "question": "Do both parties accept the ceasefire agreement's legitimacy, or does one side view it as externally imposed, temporary truce while maintaining war aims?",
+      "resolution_mechanism": "Discourse analysis of leadership statements; comparison of public vs private acceptance; survey data on civilian/militia acceptance; analysis of military doctrine during ceasefire period",
+      "impact": "If legitimacy is symmetric: coordination problem is real, mediation can work. If asymmetric: one side uses ceasefire to rearm while claiming compliance \u2014 extraction masks as coordination, hardline sabotage is structural feature not deviation.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether ceasefire is viewed as legitimate agreement vs temporary truce by both parties"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The Israel-Gaza ceasefire violation escalation trap is a structurally complex constraint that exhibits snare characteristics for civilian populations while showing tangled-rope and piton features at institutional levels. Following a ceasefire agreement (often brokered by regional mediators like Egypt and Qatar), hardline factions on both sides\u2014whether Hamas military wings seeking to prevent Palestinian Authority consolidation or Israeli far-right constituencies opposing territorial concessions\u2014deliberately violate terms to trigger retaliatory cycles. Each violation generates a proportional (or disproportional) response that re-traumatizes civilian populations, undermines moderate leadership, and perpetuates a cycle of extraction where hardline factions consolidate political control through sabotage of diplomacy. The constraint's extractiveness (0.68) reflects systematic asymmetry: hardliners benefit from resumed conflict (political consolidation, security budgets, factional dominance), while civilians bear costs (displacement, death, infrastructure destruction). Suppression (0.78) is severe: civilians cannot exit the geographic theater, cannot prevent violations by factions they don't support, and cannot enforce ceasefire terms without international backing that is often performative. The theater_ratio (0.65) indicates substantial performance: international legal frameworks and UN resolutions provide legitimacy theater while enforcement mechanisms remain ineffective. This constraint demonstrates how a coordination problem (maintaining ceasefire) gets captured by extraction (hardline factions using violations to consolidate power and suppress moderate alternatives).",
+    "key_agents": [
+      "Civilian Population (Gaza and Israel): Primary victim (powerless/trapped) \u2014 bears full cost of escalation cycles; no capacity to prevent violations or enforce ceasefire",
+      "Hardline Factions (Hamas military wings, Israeli far-right): Primary beneficiary (organized/constrained) \u2014 consolidate political control through sabotage; suppress moderate leadership by showing diplomacy fails",
+      "State Security Apparatus (Israeli military, Gaza armed groups): Secondary beneficiary (institutional/constrained) \u2014 justify budgets, expand institutional power, suppress civilian dissent under security pretext",
+      "Regional Mediators (Egypt, Qatar, UAE): Secondary victim (institutional/constrained) \u2014 must maintain ceasefire for regional stability but face extraction from both parties' manipulation",
+      "International Legal Framework (UN, ICC, humanitarian organizations): Institutional actor (institutional/arbitrage) \u2014 provides performative legitimacy; actual enforcement capacity near-zero",
+      "Moderate Leadership (Palestinian Authority, Israeli center-left): Secondary victim (moderate/constrained) \u2014 undermined by hardline sabotage; must either capitulate to hardliners or lose credibility",
+      "International Peace Movement: Organized actor (organized/mobile) \u2014 attempts temporary support with sunset logic; reallocates effort if stabilization fails"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Hardline factions extract political control, institutional power, and security budgets from the civilian population by systematically sabotaging ceasefire agreements. The extraction is not accidental or incidental \u2014 it is the primary function for spoiler factions. Initial value (0.42) reflects the ceasefire period itself: violations are sporadic, extraction is latent but present. Final value (0.68) reflects sustained escalation cycle where violations become normalized and institutional extraction (military budgets, security apparatus expansion) reaches steady state. Suppression (0.78): Very high. Civilians cannot exit the geographic theater; cannot prevent violations by factions; cannot enforce international law without state capacity; cannot publicly oppose military action without security accusations. Armed groups control information and restrict freedom of movement. Media coverage is heavily politicized. Moderate voices are suppressed by hardline intimidation. Theater ratio (0.65): Moderate-high. International legal frameworks (UN resolutions, humanitarian law) provide legitimacy theater but minimal enforcement. Ceasefire negotiations are performed repeatedly without structural conditions changing. Peace negotiations generate media theater without behavioral change. Some genuine coordination function exists (mediators do occasionally negotiate localized ceasefires), but it is overwhelmed by hardline sabotage and institutional extraction.",
+    "perspectival_gap": "This constraint exhibits maximal perspectival gap: civilians see pure snare (extraction with no exit); hardliners see snare for moderates but rope for themselves (coordination of factional control); institutional security sees tangled_rope (coordination function shadowed by extraction); mediators see tangled_rope with asymmetric extraction from both sides; international legal framework sees itself as providing scaffolding (sunset logic) but actually provides piton (performative theater); peace movement sees scaffold with sunset potential; analytical observer risks mountain classification (mutual distrust is structural, ceasefires always fail) but this is false summit \u2014 contingent on weak enforcement institutions and factional incentives, not immutable anarchy.",
+    "directionality_logic": "Civilian population: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 no exit options. Hardline factions: Beneficiary (from resumed conflict) + constrained \u2192 d\u22480.35, f(d)\u22480.25. Low effective extraction from hardlines' perspective because they benefit from the constraint despite nominal constraint status. State security apparatus (Israel): Beneficiary (budget expansion, institutional power) + constrained \u2192 d\u22480.40, f(d)\u22480.40. Institutional extraction through security theater. Gaza armed groups: Complex \u2014 some benefit from anti-occupation narrative, some are extracted by Hamas control \u2192 d\u22480.55, f(d)\u22480.75. Regional mediators: Victim + constrained \u2192 d\u22480.68, f(d)\u22480.95. Extraction from manipulation by both sides. International framework: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Piton classification comes from theater gate, not directionality; the framework's primary function (coordination) has atrophied relative to performance.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing how a coordination problem (maintaining ceasefire) becomes captured by extraction (hardline factions sabotaging to consolidate power). The resolution is perspectival: from the civilian view, this is pure snare. From the hardline factional view, it is rope (their coordination of power consolidation). From the institutional view, it is tangled_rope (real coordination function shadowed by extraction). From the mediator view, it is snare for their role (being manipulated by both sides). The mandatrophy is resolved by the engine's perspectival decomposition: each perspective produces its classification, and the presheaf over observation sites is the complete answer. The false summit risk (realist 'anarchy makes ceasefires impossible') is caught by the engine's empirical gates: if extractiveness and suppression are contingent on weak institutions and factional choices (not immutable anarchy), the mountain classification fails."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "palestinian_authority_delegitimation",
+      "regional_proxy_warfare_escalation",
+      "humanitarian_access_blockade",
+      "international_law_enforcement_credibility"
+    ],
+    "dual_formulation_note": "The ceasefire violation constraint is downstream of factional political incentives (Hamas internal competition with Palestinian Authority, Israeli right-wing opposition to territorial concessions) but represents a distinct structural constraint on civilian populations and mediating powers. Each upstream constraint has its own \u03b5 reflecting the political economy of factional competition; the ceasefire violation constraint has \u03b5=0.68 reflecting the extraction mechanism operating through escalation cycles."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

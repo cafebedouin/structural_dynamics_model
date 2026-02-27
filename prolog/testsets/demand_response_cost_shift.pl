@@ -1,19 +1,17 @@
 % ============================================================================
 % CONSTRAINT STORY: demand_response_cost_shift
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-22
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_demand_response_cost_shift, []).
 
-:- use_module(library(plunit)).
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
-:- use_module(utility(config)).
-
 
 % --- Constraint Identity Rule (DP-001: ε-Invariance) ---
 % Each constraint story must have a single, stable base extractiveness (ε).
@@ -43,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -56,22 +55,36 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: demand_response_cost_shift
  *   human_readable: Smart Grid Demand Response Rate Structure
- *   domain: economic/technological
+ *   domain: economic/technological/energy
  *
  * SUMMARY:
- *   "Demand Response" (DR) programs are designed to stabilize electrical grids
- *   by incentivizing users to reduce consumption during peak hours. However,
- *   the costs of infrastructure and rebates are socialized across all
- *   ratepayers, while the benefits (rebates) are disproportionately captured
- *   by higher-income households with smart appliances and flexible schedules.
- *   This creates a structural transfer of wealth from low-income to high-income
- *   households under the guise of a grid coordination mechanism.
+ *   Demand response programs were initially designed as pure coordination
+ *   mechanisms: incentivize users to reduce electricity consumption during
+ *   peak hours, thereby avoiding the need to build expensive generation and
+ *   transmission capacity while enabling higher renewable energy penetration.
+ *   However, the policy implementation creates asymmetric cost burdens.
+ *   Utilities implement time-of-use rates and critical peak pricing that
+ *   penalize households and small businesses lacking capital to invest in
+ *   smart devices, battery storage, or load-shifting infrastructure.
+ *   Meanwhile, large industrial users and facilities with sophisticated load
+ *   management benefit from rebates and favorable rate structures. The result
+ *   is a hybrid constraint: genuine grid stabilization function
+ *   (coordination) coupled with systematic cost shifting from
+ *   price-sensitive, less-mobile consumers to grid operators and capital-rich
+ *   industrial users (extraction). The constraint operates through rate
+ *   structure design and regulatory mandate, not through deception.
+ *   Households know the peak hour rates. But the trapped position of
+ *   price-sensitive consumers creates asymmetric vulnerability: they cannot
+ *   exit the grid, cannot afford demand response technology, and face binary
+ *   choices between consumption curtailment and financial burden.
  *
- * KEY AGENTS (by structural relationship):
- *   - Low-income households: Primary target (powerless/trapped) — bear extraction via higher rates without access to benefits.
- *   - High-income households: Primary beneficiary (powerful/arbitrage) — receive rebates and grid stability funded by the wider rate base.
- *   - Utility companies: Institutional beneficiary (institutional/arbitrage) — achieve grid stability at lower capital cost than building new capacity.
- *   - Energy researchers: Analytical observer — identifies both the coordination function and the asymmetric extraction.
+ * KEY AGENTS:
+ *   - Price-Sensitive Households: Primary victim (powerless/trapped) — no flexibility, no technology access, no exit option; bear disproportionate cost of grid stabilization
+ *   - Small Businesses: Secondary victim (moderate/constrained) — limited capital for smart load management, regulatory participation mandates, constrained flexibility relative to industrial users
+ *   - Grid Operators & Utilities: Primary beneficiary (institutional/arbitrage) — avoid expensive capacity investments, reduce operational costs, gain flexibility; arbitrage exit options
+ *   - Peak-Load Industrial Users: Secondary beneficiary (powerful/arbitrage) — flexible production, capital for smart technology, derive rebate benefits; mobile across rate structures and locations
+ *   - Renewable Integration Coalition: Transitional actor (organized/constrained) — view demand response as temporary necessity for high renewable penetration; building alternatives (storage, distributed generation)
+ *   - Legacy Regulatory Framework: Institutional actor (institutional/arbitrage) — maintains rate structure through regulatory inertia; theater-heavy because actual peak reduction effectiveness is modest relative to monitoring/compliance costs
  */
 
 /* ==========================================================================
@@ -79,94 +92,82 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(demand_response_cost_shift, 0.48).
-domain_priors:suppression_score(demand_response_cost_shift, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(demand_response_cost_shift, 0.15).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(demand_response_cost_shift, 0.52).
+domain_priors:suppression_score(demand_response_cost_shift, 0.58).
+domain_priors:theater_ratio(demand_response_cost_shift, 0.61).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(demand_response_cost_shift, extractiveness, 0.48).
-narrative_ontology:constraint_metric(demand_response_cost_shift, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(demand_response_cost_shift, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(demand_response_cost_shift, extractiveness, 0.52).
+narrative_ontology:constraint_metric(demand_response_cost_shift, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(demand_response_cost_shift, theater_ratio, 0.61).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(demand_response_cost_shift, tangled_rope).
+narrative_ontology:human_readable(demand_response_cost_shift, "Smart Grid Demand Response Rate Structure").
+narrative_ontology:topic_domain(demand_response_cost_shift, "economic/technological/energy").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(demand_response_cost_shift). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(demand_response_cost_shift).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(demand_response_cost_shift, high_income_households).
-narrative_ontology:constraint_beneficiary(demand_response_cost_shift, utility_companies).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(demand_response_cost_shift, low_income_households).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three met)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(demand_response_cost_shift, grid_operators).
+narrative_ontology:constraint_beneficiary(demand_response_cost_shift, peak_load_industrial_users).
+narrative_ontology:constraint_beneficiary(demand_response_cost_shift, utility_shareholders).
+narrative_ontology:constraint_victim(demand_response_cost_shift, price_sensitive_households).
+narrative_ontology:constraint_victim(demand_response_cost_shift, small_businesses).
+narrative_ontology:constraint_victim(demand_response_cost_shift, grid_reliability_equity).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (LOW-INCOME HOUSEHOLDS)
-% They experience only the rate increases funding the program, without the
-% means to access the benefits. Their trapped status and victimhood derive a
-% high directionality (d ≈ 0.95), making effective extraction χ very high.
-% From this perspective, the constraint is a pure Snare.
-constraint_indexing:constraint_classification(demand_response_cost_shift, tangled_rope,
+% PERSPECTIVE 1: PRICE-SENSITIVE HOUSEHOLD (SNARE) — Cannot exit the grid. Faces binary choice: curtail discretionary consumption during peak hours or pay peak rates. No real flexibility for essential loads (heating/cooling, refrigeration). No arbitrage option — trapped into the rate structure with zero degrees of freedom. Experiences maximum extractiveness.
+constraint_indexing:constraint_classification(demand_response_cost_shift, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (UTILITY COMPANIES)
-% They benefit from a highly effective grid coordination mechanism that reduces
-% capital expenditure. Their institutional power and arbitrage exit derive a
-% low directionality (d ≈ 0.05), making effective extraction χ negative.
-% From this perspective, the constraint is a pure Rope.
+% PERSPECTIVE 2: SMALL BUSINESS (TANGLED ROPE) — Constrained by regulatory participation mandates and limited capital for load-shifting investments (battery storage, HVAC scheduling). Benefits from grid stability that enables their operations. But extraction is real: demand response programs often shift costs to smaller firms that lack sophisticated load management. Moderate power, constrained exit.
+constraint_indexing:constraint_classification(demand_response_cost_shift, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: GRID OPERATORS & UTILITIES (ROPE) — Experience demand response as pure coordination mechanism: stabilize peak loads without building expensive generation or transmission capacity. Benefits from lower capital requirements and operational flexibility. Arbitrage exit option (can adjust rate structure, expand demand response, or build capacity if needed). Net beneficiary, but classify as rope because the primary function is genuine coordination, not pure extraction.
 constraint_indexing:constraint_classification(demand_response_cost_shift, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ENERGY RESEARCHERS)
-% The analytical observer can see both the genuine coordination function (grid
-% stability) and the asymmetric extractive flow. This dual nature, combined
-% with the high suppression and active enforcement, is the classic signature
-% of a Tangled Rope.
+% PERSPECTIVE 4: PEAK-LOAD INDUSTRIAL USERS (ROPE) — Large manufacturers with flexible production schedules and capital to invest in demand response technology (automated load shifting, on-site generation). Derive significant economic benefit from peak hour rebates. Have arbitrage options: relocate production, invest in generation, adjust schedules. Coordinate with grid operators to mutual benefit.
+constraint_indexing:constraint_classification(demand_response_cost_shift, rope,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: RENEWABLE INTEGRATION COALITION (SCAFFOLD) — Organized agents (environmental regulators, renewable operators, grid modernization advocates) view demand response as a temporary coordination mechanism with a sunset clause. As distributed solar, battery storage, and grid-scale storage mature, demand response's coordination function becomes less critical. Low theater — actual grid stability function is real. But temporary: within 15-20 years, storage and microgrids reduce dependence on curtailment-based demand response. Constrained because investment in demand response infrastructure is now required for transition.
+constraint_indexing:constraint_classification(demand_response_cost_shift, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 6: LEGACY REGULATORY FRAMEWORK (PITON) — The rate-structure theater of demand response: the existing framework (time-of-use rates, critical peak pricing, etc.) persists through regulatory inertia. The framework was innovative 15 years ago but is increasingly performative as it fails to address deeper problems (grid stability, equity, decarbonization). Maintained because alternatives haven't fully replaced it, not because it functions optimally. Theater ratio high because compliance and measurement activity dominates actual demand shifting effectiveness.
+constraint_indexing:constraint_classification(demand_response_cost_shift, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — Demand response exhibits genuine coordination function (reducing peak loads, enabling renewable integration) AND asymmetric cost shifting (to price-sensitive households, small businesses, communities without capital for smart devices). Active enforcement through regulatory mandates and tariff structures confirms the tangled nature. This is not a mountain (immutable law) nor a pure rope (coordination without extraction). The structure is contingent on rate design choices that could be reformed to reduce the victim burden.
 constraint_indexing:constraint_classification(demand_response_cost_shift, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: SECONDARY BENEFICIARY (HIGH-INCOME HOUSEHOLDS)
-% As beneficiaries with flexible consumption and access to smart technology,
-% they can arbitrage the system for rebates. Like the utility, they perceive
-% the program as a beneficial coordination mechanism (Rope). Their power is
-% less than institutional but their exit is still high.
-constraint_indexing:constraint_classification(demand_response_cost_shift, rope,
-    context(agent_power(powerful),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -174,23 +175,18 @@ constraint_indexing:constraint_classification(demand_response_cost_shift, rope,
 
 :- begin_tests(demand_response_cost_shift_tests).
 
-test(perspectival_gap, [nondet]) :-
-    % Verify the core perspectival gap: Rope for beneficiaries, Snare for targets.
-    constraint_indexing:constraint_classification(demand_response_cost_shift, snare,
-        context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(demand_response_cost_shift, rope,
-        context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(demand_response_cost_shift, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(demand_response_cost_shift, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope, [nondet]) :-
-    % The system's final judgment should recognize the hybrid nature.
-    constraint_indexing:constraint_classification(demand_response_cost_shift, tangled_rope,
-        context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(demand_response_cost_shift, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_requirements_met) :-
-    % Verify that the structural data supports Tangled Rope classification.
-    narrative_ontology:constraint_beneficiary(demand_response_cost_shift, _),
-    narrative_ontology:constraint_victim(demand_response_cost_shift, _),
-    domain_priors:requires_active_enforcement(demand_response_cost_shift).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(demand_response_cost_shift, TR),
+    TR >= 0.70.
 
 :- end_tests(demand_response_cost_shift_tests).
 
@@ -200,89 +196,101 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): Represents the significant, non-trivial transfer of wealth via socialized rate increases that fund rebates for a subset of users. It's high enough to cause harm but not totalizing.
- *   - Suppression Score (S=0.75): Low-income households have very few alternatives. They are typically served by a single utility monopoly and lack the capital for off-grid solutions, making their exit options 'trapped'. Suppression is a structural property and is not scaled.
- *   - Theater Ratio (T=0.15): The program is highly functional. It genuinely solves the problem of peak load on the grid. Its extractive nature is a consequence of its implementation, not a failure of its primary function.
+ *   Extractiveness (0.52): Moderate-high. The primary extraction is the systematic cost shift from price-sensitive households to utilities and industrial users. The measurement tracks this increase over the interval: as demand response programs mature, utilities layer additional complexity (critical peak pricing, behavioral demand response, real-time pricing) that increases the coordination function but also the administrative overhead and cost shifting. From the trapped household perspective, extractiveness is near 1.0. From the industrial beneficiary perspective, it approaches 0.0. The average of 0.52 reflects that significant populations experience genuine extraction while others experience genuine coordination benefit. Suppression (0.58): Moderate-high. The suppression operates through regulatory mandate (participation required in many jurisdictions), technological barriers (smart devices, real-time pricing capability), and informational asymmetry (households often unclear on actual peak hours or peak rate magnitude). Crucially, suppression is not coercive violence but structural: trapped position in grid + no arbitrage technology + rate structure design. Theater ratio (0.61): Moderate-high. Significant performative content: demand response effectiveness is often overestimated because it measures voluntary curtailment during called events (typically <40 hours/year) rather than actual peak reduction. Utilities report demand response 'capacity' in their marketing but actual delivered response varies widely. Regulatory compliance reporting creates theater—sophisticated metering and monitoring infrastructure is deployed to measure curtailment, but the actual grid benefit is modest relative to the infrastructure cost. As smart grid technology matures, theater should decrease (automated response, real-time data), but regulatory inertia keeps it high.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound and a classic feature of Tangled Ropes.
- *   - Beneficiaries (utilities, high-income users) see a 'Rope'. They experience a clever coordination mechanism that creates value (grid stability, rebates) with minimal apparent downside *to them*. Their directionality `d` is low, so the system's extractiveness is invisible or even appears as a subsidy.
- *   - Victims (low-income users) see a 'Snare'. They experience only the punitive side: rate increases without any access to the offsetting benefits. Their directionality `d` is high, so the system's extractiveness is magnified into a purely coercive mechanism.
- *   - The Analytical perspective correctly identifies it as a 'Tangled Rope' because it acknowledges the validity of both claims: the coordination is real, and the extraction is real.
+ *   This constraint demonstrates perspectival divergence driven by exit options and structural position. The powerless household trapped in the grid and the institutional utility with arbitrage options experience fundamentally different constraints—snare vs. rope—from the same rate structure. The gap is not due to measurement ambiguity or subjective framing but to structural asymmetry in exit capacity. A household cannot exit electricity; a utility can adjust rates or capacity strategy. Small businesses occupy the middle ground (constrained exit) and thus the middle classification (tangled rope). The renewable integration coalition adds a temporal dimension: they see the constraint as temporary (scaffold) because storage and distributed generation create a sunset clause that will make demand response less critical. The legacy regulatory framework appears as piton to the civilizational observer because it's maintaining a ritual (rate structure, monitoring, compliance) whose original function (avoiding expensive generation) is being superceded by cheaper alternatives. The analytical observer's tangled rope classification is the 'view from nowhere': both coordination function and extraction are real, both are necessary given current technology, but both are contingent on policy choices.
  *
  * DIRECTIONALITY LOGIC:
- *   The `constraint_beneficiary` and `constraint_victim` declarations directly model the structure described in the source material.
- *   - `low_income_households` are victims because the rate structure extracts from them to fund the system.
- *   - `high_income_households` and `utility_companies` are beneficiaries because they capture the financial rewards (rebates) and functional benefits (grid stability) of the system.
- *   The engine uses these declarations, combined with the `trapped` vs. `arbitrage` exit options, to derive the starkly different directionality values (`d`) that drive the perspectival gap in `χ`.
+ *   Directionality is determined by the agent's position in the extraction flow. Grid operators and utilities are beneficiaries with arbitrage options (they can adjust rate structures, build generation, or exit demand response programs): d ≈ 0.05-0.15, derived from beneficiary status + arbitrage exit → low d → low/negative f(d) → low experienced chi. Price-sensitive households are victims with trapped exit (they cannot leave the grid, cannot afford alternative supply, cannot shift essential loads): d ≈ 0.90-0.95, derived from victim status + trapped exit → high d → high f(d) → high experienced chi. Small businesses are victims with constrained exit (they can adjust operations but face capital and regulatory barriers): d ≈ 0.65-0.75. Peak-load industrial users are beneficiaries with mobile exit options (they can relocate production or invest in generation): d ≈ 0.20-0.30. The analytical observer's directionality is derived from their structural position as a neutral analyst (d ≈ 0.72-0.73 canonical), which places them outside the extraction flow but able to observe it completely. The engine computes these automatically from beneficiary/victim declarations and exit options.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two common errors.
- *   1. It is not a pure Snare, because that would ignore the program's legitimate and valuable grid coordination function. Calling it a Snare would be an oversimplification that misses *why* the constraint is so stable and popular among powerful actors.
- *   2. It is not a pure Rope, because that would ignore the regressive, extractive wealth transfer at its core. Calling it a Rope would be to adopt the beneficiary's perspective uncritically and erase the harm done to the victims.
- *   The Tangled Rope classification captures this duality, identifying it as a system where a valid coordination goal has been instrumented to create an asymmetric extractive flow.
- *   Furthermore, the "Dynamic Coalition" extension suggests that if low-income households were to organize (e.g., via a ratepayers union), their power could shift from `powerless` to `organized`, potentially forcing a renegotiation of the constraint's terms.
+ *   MANDATROPHY RESOLUTION: Demand response cost shift resolves the false positive trap by distinguishing genuine coordination (grid stabilization, renewable integration) from asymmetric extraction (cost shifting to immobile consumers) within a single structure. The constraint is NOT a snare disguised as coordination (false negative); it is BOTH coordination AND extraction simultaneously, which is the definition of tangled rope. The mandatrophy appears when asking: 'Is demand response good policy (pure rope) or exploitative (snare)?' The answer is both. The analytical perspective correctly identifies tangled rope because (1) demand response has a genuine coordination function—it stabilizes grids and enables renewables, which is not fictional or theater; (2) demand response has asymmetric extraction—cost and burden are systematically shifted to those least able to absorb them; (3) the constraint requires active enforcement through regulatory mandate and rate structure design, confirming that it is not a natural coordination outcome. The mandatrophy is resolved by recognizing that coordination and extraction are not opposites but can be co-present. The policy question is not 'Is this coordination or extraction?' but 'How should we redesign the rate structure to preserve coordination function while reducing extraction?' This requires changing the beneficiary/victim relationship, not declaring the constraint misclassified.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_dr_intent,
-    'Is the regressive cost-shift an intentional feature designed to subsidize affluent users, or an unintentional (but structurally convenient) side-effect of optimizing for grid efficiency above all else?',
-    'Analysis of internal regulatory filings and utility planning documents to determine if equity impacts were modeled and ignored, or never considered.',
-    'If intentional, the base extractiveness (ε) might be higher, and the constraint is more stable. If unintentional, it represents a policy failure that could be corrected, making it more like a flawed Scaffold.',
+    flexibility_distribution_threshold,
+    'What percentage of total addressable load must be shiftable without harm to cross the threshold from extraction-dominant (Snare) to coordination-dominant (Rope)?',
+    'Empirical measurement of actual load flexibility by household type, sector, and climate zone; identification of non-shiftable loads (heating/cooling, medical, refrigeration); sensitivity analysis on rate structure design',
+    'If threshold < 30%: current demand response inherently extracts from immobile load-holders. If threshold > 60%: demand response could be redesigned as net-neutral coordination.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(flexibility_distribution_threshold, empirical, 'Load flexibility threshold for coordination-dominant classification').
+
+omega_variable(
+    cost_shift_magnitude,
+    'How much of the grid cost savings from demand response is genuinely accrued to the system vs. shifted to price-sensitive households through higher base rates?',
+    'Decomposition of utility cost structures; tracking of savings from avoided peak generation, transmission, and capacity investment vs. changes in base rates and fixed charges; comparison across utilities with different DR program designs',
+    'If shift > 70%: primary function is extraction disguised as coordination. If shift < 30%: legitimate coordination with minimal victim burden.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(cost_shift_magnitude, empirical, 'Proportion of cost savings shifted to captive consumers').
+
+omega_variable(
+    technology_equity_timeline,
+    'How long until smart demand response technology (connected devices, automated control, real-time pricing) diffuses to >80% of households at costs <$500?',
+    'Tracking of device adoption, cost curves, and government subsidy programs; projections from renewable energy system cost learning curves; historical technology diffusion models',
+    'If < 10 years: extraction is temporary (scaffold classification strengthened). If > 30 years: extraction persists long-term for significant population (snare classification strengthened).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(technology_equity_timeline, empirical, 'Timeline for cost-effective demand response technology access').
+
+omega_variable(
+    renewable_storage_substitutability,
+    'Can grid-scale battery storage and distributed solar + storage fully replace demand response for grid stabilization within the projected energy transition?',
+    'Comparative techno-economic modeling of different grid stabilization strategies; cost curves for batteries, solar, and grid modernization; analysis of demand response irreplaceability under high renewable penetration scenarios',
+    'If fully substitutable: demand response is purely temporary (scaffold). If partially required: some tangled rope persists even post-transition.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(renewable_storage_substitutability, empirical, 'Whether storage technology can eliminate demand response necessity').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(demand_response_cost_shift, 0, 10).
+narrative_ontology:interval(demand_response_cost_shift, 0, 16).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. This constraint is high-extraction
-% (ε > 0.46), so measurements are required. The trajectory shows how the
-% extractive nature of the program intensified over time as it scaled from a
-% pilot to a mature system, a classic example of extraction_accumulation.
+% Theater ratio over time
+narrative_ontology:measurement(drcs_tr_t0, demand_response_cost_shift, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(drcs_tr_t8, demand_response_cost_shift, theater_ratio, 8, 0.48).
+narrative_ontology:measurement(drcs_tr_t16, demand_response_cost_shift, theater_ratio, 16, 0.61).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(dr_tr_t0, demand_response_cost_shift, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(dr_tr_t5, demand_response_cost_shift, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(dr_tr_t10, demand_response_cost_shift, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(drcs_be_t0, demand_response_cost_shift, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(drcs_be_t8, demand_response_cost_shift, base_extractiveness, 8, 0.4).
+narrative_ontology:measurement(drcs_be_t16, demand_response_cost_shift, base_extractiveness, 16, 0.52).
 
-% Extraction over time (shows accumulation):
-narrative_ontology:measurement(dr_ex_t0, demand_response_cost_shift, base_extractiveness, 0, 0.20).
-narrative_ontology:measurement(dr_ex_t5, demand_response_cost_shift, base_extractiveness, 5, 0.35).
-narrative_ontology:measurement(dr_ex_t10, demand_response_cost_shift, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This program is a mechanism for allocating a scarce resource (peak grid capacity).
 narrative_ontology:coordination_type(demand_response_cost_shift, resource_allocation).
+narrative_ontology:affects_constraint(demand_response_cost_shift, electricity_grid_reliability).
+narrative_ontology:affects_constraint(demand_response_cost_shift, renewable_energy_integration).
+narrative_ontology:affects_constraint(demand_response_cost_shift, utility_cost_recovery).
 
-% Network relationships (structural influence edges)
-% The need for DR programs is driven by the challenge of integrating
-% intermittent renewable energy sources into the grid.
-narrative_ontology:affects_constraint(renewable_energy_intermittency, demand_response_cost_shift).
+% DUAL FORMULATION NOTE:
+% Demand response cost shift is downstream of the renewable energy integration constraint and the grid reliability constraint. These upstream constraints create demand for demand response as a coordination mechanism; the cost shift constraint represents the policy implementation choices that transform that demand into asymmetric extraction. The three constraints form a family where demand response is the bridge between grid technical requirements and their distributional consequences.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The standard derivation from
-% beneficiary/victim declarations and exit options accurately models the
-% structural relationships.
+constraint_indexing:directionality_override(demand_response_cost_shift, institutional, 0.12).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

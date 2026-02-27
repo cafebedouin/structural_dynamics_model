@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "viral_transmission_rates",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Socio-Political Response to Viral Transmission",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_institutions",
+      "pharmaceutical_companies"
+    ],
+    "victims": [
+      "individual_liberties",
+      "small_businesses",
+      "vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Individual Liberties",
+      "comment": "Individual liberties are significantly curtailed by mandates and restrictions, with limited ability to exit the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Businesses",
+      "comment": "Small businesses are constrained by lockdowns and reduced consumer activity, but may also benefit from government assistance and reduced competition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Public Health Institutions",
+      "comment": "Public health institutions benefit from increased funding and authority, and view the restrictions as necessary for public safety."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Companies",
+      "comment": "Pharmaceutical companies benefit from vaccine development and distribution contracts."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective observing the overall structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effectiveness_of_non_pharmaceutical_interventions",
+      "question": "How effective are non-pharmaceutical interventions (NPIs) in reducing viral transmission?",
+      "resolution_mechanism": "Meta-analysis of studies on NPI effectiveness",
+      "impact": "Determines the degree to which restrictions are justified and whether they are a net benefit or detriment to society.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of NPIs"
+    },
+    {
+      "id": "tradeoffs_between_health_and_economy",
+      "question": "What are the acceptable tradeoffs between public health and economic activity?",
+      "resolution_mechanism": "Cost-benefit analysis of different intervention strategies",
+      "impact": "Informs policy decisions on the level and duration of restrictions.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Tradeoffs between health and economy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the socio-political system of mandates, lockdowns, and behavioral controls enacted in response to a biological reality (viral transmission). The perspective varies based on power, exit options, and scope.",
+    "key_agents": [
+      "Public Health Institutions: Primary beneficiary (institutional/arbitrage)",
+      "Pharmaceutical Companies: Secondary beneficiary (institutional/arbitrage)",
+      "Individual Liberties: Primary victim (powerless/trapped)",
+      "Small Businesses: Secondary victim (moderate/constrained)"
+    ],
+    "logic_rationale": "The system extracts from individual liberties and economic activity to benefit public health institutions and pharmaceutical companies. The extractiveness is due to restrictions on movement, assembly, and economic activity. Suppression reflects limited exit options from the system.",
+    "perspectival_gap": "Individuals see a snare as their freedoms are curtailed. Small businesses see a tangled rope as they are both helped and hindered. Public health sees a rope as they are empowered to save lives.",
+    "directionality_logic": "Beneficiaries have low d values, and victims have high d values."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

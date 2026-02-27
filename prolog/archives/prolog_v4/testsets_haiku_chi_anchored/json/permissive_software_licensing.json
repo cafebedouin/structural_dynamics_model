@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "permissive_software_licensing",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "perm"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Permissive Software Licenses (MIT, Apache, BSD)",
+    "topic_domain": "technological/legal/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_proprietary_software_companies",
+      "large_technology_corporations",
+      "downstream_integrators"
+    ],
+    "victims": [
+      "open_source_ecosystem_sustainability",
+      "original_author_attribution",
+      "commons_preservation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Original Open Source Author",
+      "comment": "PERSPECTIVE 1: ORIGINAL AUTHOR (SNARE) \u2014 Author releases code under permissive license intending to contribute to commons, but experiences gradual loss of control over attribution, derivative work visibility, and community participation. No contractual recourse when commercial entities strip attribution or monetize contributions. Trapped in initial choice; exit would require litigation against dominant players. d\u22480.90, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Open Source Community and Smaller Contributors",
+      "comment": "PERSPECTIVE 2: OSS COMMUNITY (TANGLED ROPE) \u2014 Benefits from permissive licenses enabling rapid ecosystem growth, code reuse, and collaborative development. Simultaneously constrained by inability to prevent commercial extraction of community work, lack of funding mechanisms for maintenance, and visibility loss when code is embedded in proprietary products. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Commercial Software Companies (Extractors)",
+      "comment": "PERSPECTIVE 3: COMMERCIAL INTEGRATORS (ROPE) \u2014 Permissive licenses solve coordination problem: companies can integrate high-quality code without negotiation, licensing fees, or reciprocal obligations. Constraint operates as pure coordination for this actor: access to free, production-grade components enables rapid development. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Negative extraction = net subsidy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Large Technology Corporations (Patent/IP-Backed)",
+      "comment": "PERSPECTIVE 4: LARGE TECH CORPORATIONS (ROPE) \u2014 Established companies use permissive licenses as coordination mechanism: contributes to ecosystem legitimacy, attracts engineer talent ('we support open source'), and reduces licensing friction in supply chains. Also leverage complementary proprietary IP (patents, platforms, data) to extract value beyond software itself. d\u22480.12, f(d)\u2248-0.02, \u03c3=1.2 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Foundation-Backed Open Source Governance",
+      "comment": "PERSPECTIVE 5: OSS FOUNDATIONS & GOVERNANCE (SCAFFOLD) \u2014 Organized actors (Linux Foundation, Apache Software Foundation, CNCF) are building alternative coordination structures with sunset logic: trademark enforcement, maintainer support programs, tiered contribution models, and reciprocal licensing frameworks (GPL variants) are creating pathways to reduce extraction. Constraint seen as temporary institutional gap being filled. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.15."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Legal/IP Framework (Degraded)",
+      "comment": "PERSPECTIVE 6: IP LEGAL FRAMEWORK (PITON) \u2014 Copyright law, attribution requirements, and patent frameworks persist largely as performative scaffolding. Enforcement is expensive, rare, and ineffective against actors with resources. Theater emerges from the gap between stated attribution rights and actual enforcement capacity. theater_ratio\u22480.68. The legal infrastructure sees itself as degraded: designed for copy scarcity, poorly adapted to digital abundance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational scale, permissive licensing is sometimes framed as reflecting an immutable property: 'information wants to be free' or 'digital goods are non-rivalrous, so restricting access is inherently costly.' This perspective naturalizes the constraint as an irreducible feature of digital economics. However, structural data (\u03b5=0.38, suppression=0.42, theater=0.35) contradicts mountain classification\u2014the constraint is contingent on specific IP law frameworks, cultural norms around attribution, and market power asymmetries, not inherent to digital goods themselves."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attribution_enforcement_viability",
+      "question": "Can permissive license attribution requirements be effectively enforced against commercial extraction without expensive litigation?",
+      "resolution_mechanism": "Audit studies of proprietary software codebases for unattributed permissive-licensed components; tracking of successful DMCA, GPL, or attribution enforcement actions; cost-benefit analysis of enforcement vs damage to industry relationships",
+      "impact": "If enforceable: attribution becomes real constraint on extraction, shifting commercial perspective toward Snare or Tangled Rope. If unenforceable: attribution is performative legal theater, confirming Piton classification for legal framework.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether attribution requirements can be enforced against commercial misappropriation"
+    },
+    {
+      "id": "commons_sustainability_mechanism",
+      "question": "What sustainable funding model prevents the collapse of widely-used permissive-licensed projects as maintenance burdens outpace volunteer capacity?",
+      "resolution_mechanism": "Longitudinal tracking of project abandonment rates; correlation with funding models (corporate sponsorship, foundation support, dual licensing); emergence of new institutional forms (maintainer collectives, DAO structures, platform cooperation models)",
+      "impact": "If commons-preserving mechanism emerges: scaffold perspective confirmed; permissive licensing becomes temporary coordination gap. If mechanism fails: victims perspective confirmed; extraction of value from community labor is structurally irreversible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of sustainable funding for open source commons"
+    },
+    {
+      "id": "reciprocal_licensing_adoption_threshold",
+      "question": "At what critical mass does adoption of reciprocal licenses (GPL-style) or tiered contribution models (Contributor License Agreements) shift the equilibrium away from pure extraction?",
+      "resolution_mechanism": "Analysis of GPL adoption trends; comparison of ecosystem health and contributor retention between permissive and reciprocal projects; measurement of commercial participation in GPL-licensed ecosystems",
+      "impact": "If reciprocal licenses achieve critical mass: structural alternative exists, permissive licensing becomes niche choice (Rope/Scaffold). If permissive remains dominant: extraction mechanism proves robust against licensing alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether reciprocal licensing can achieve structural parity with permissive models"
+    },
+    {
+      "id": "platform_dependence_asymmetry",
+      "question": "Does commercial extraction of permissive-licensed code intensify when the extracting firm controls essential digital infrastructure (app stores, cloud platforms, distribution channels)?",
+      "resolution_mechanism": "Comparative analysis of extraction rates for permissive code in open platforms vs closed platforms; tracking of code appropriation and attribution-stripping in app ecosystems; measurement of commercial visibility advantage accruing to code owners with platform control",
+      "impact": "If platform control amplifies extraction: suppression increases, commercial players shift toward Snare perspective. If extraction remains independent of platform control: suppression is structural, not dependent on market dominance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How platform control amplifies extraction from permissive-licensed code"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Permissive software licenses (MIT, Apache 2.0, BSD) create a structural tension in digital economies: they enable rapid ecosystem coordination by removing licensing friction, but simultaneously allow commercial firms to extract value from community-contributed code without obligation to contribute back, maintain attribution, or share derivative improvements. The constraint exhibits a classic Tangled Rope pattern\u2014it combines genuine coordination benefits (enabling widespread code reuse, rapid innovation, ecosystem growth) with asymmetric extraction (commercial appropriation of community labor, suppression of alternative business models, invisibility of open source contributors in proprietary products). The base extractiveness (0.38) reflects moderate but growing value capture by commercial firms. Suppression (0.42) emerges from market concentration (dominant platforms like Apple, Google, Microsoft control distribution channels), intellectual property frameworks that prioritize commercial ownership over attribution, and organizational asymmetries (corporate legal/licensing departments vs. individual volunteers). Theater ratio (0.35) is relatively low\u2014the constraint operates with minimal performative overlay; the extraction is straightforward and acknowledged by all parties.",
+    "key_agents": [
+      "Original Open Source Authors: Primary victims (powerless/trapped) \u2014 release code intending commons contribution but experience loss of control, attribution erasure, and lack of compensation when commercial firms integrate and redistribute work",
+      "Open Source Community and Smaller Maintainers: Secondary victims (moderate/constrained) \u2014 benefit from ecosystem growth but constrained by inability to fund maintenance, loss of visibility when code is embedded in proprietary products, and extraction of labor value",
+      "Commercial Software Companies (Non-Platform): Primary beneficiaries (institutional/arbitrage) \u2014 experience permissive licensing as pure coordination: access to high-quality, production-grade code without licensing fees, negotiation, or reciprocal obligations",
+      "Large Technology Corporations (Platform-Owners): Enhanced beneficiaries (institutional/arbitrage) \u2014 leverage permissive code plus complementary proprietary infrastructure (platforms, data, patents) to create extraction multipliers; control distribution channels that amplify their advantage",
+      "Open Source Foundations (Linux Foundation, Apache Software Foundation, CNCF): Organized reformers (organized/constrained) \u2014 building alternative governance structures (trademark protection, maintainer funding, tiered contribution models) with sunset logic",
+      "Legal/IP Framework: Institutional actor (institutional/constrained) \u2014 copyright law and attribution requirements persist but are largely unenforceable against resource-rich defendants; framework sees itself as degraded",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (copyright law, market concentration, volunteer participation) as immutable features of digital economics"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate, rising. Initial permissive licensing (1980s-1990s) was genuinely coordinative\u2014small communities sharing code, minimal commercial interest. As software became economically central (2000s-present), commercial firms discovered that permissive licensing enabled free integration of community code into proprietary products. The extraction has grown as platform firms achieved dominance: they can now embed open source components into closed ecosystems (app stores, cloud platforms) where original authors have no visibility or control. The metric reflects the growing value asymmetry without reaching snare-level suppression because alternatives (reciprocal licensing, foundation governance) exist and some commercial actors voluntarily contribute back. Suppression (0.42): Moderate-high. Significant barriers to author recourse include expensive litigation against well-resourced corporations, intellectual property law favoring commercial ownership over attribution, concentration of distribution channels in platform firms' hands, and cultural norms treating open source as 'free labor.' However, suppression is not total\u2014some mechanisms exist (trademark enforcement, GPL enforcement, foundation support programs) and are slowly improving. Theater ratio (0.35): Low. The constraint operates with minimal performative content. Commercial integration and redistribution are transparent; attribution stripping is acknowledged and debated; licensing compliance is measurable. The theater that does exist comes from the legal framework's performative aspects\u2014copyright law and attribution requirements persist but are rarely enforced, creating an illusion of protection without substance.",
+    "perspectival_gap": "The original author and open source community see pure extraction or constrained tangled rope\u2014they contribute code and lose control. Commercial integrators and platform firms see rope or even pure subsidy\u2014they access production-grade code without negotiation or obligation, solving coordination problems at massive scale. The legal framework sees itself as degraded (piton)\u2014designed for copy scarcity, poorly adapted to digital abundance, enforcement-light. The analytical observer risks naturalizing this as immutable ('information wants to be free') when in fact it is contingent on specific institutional arrangements: IP law, market concentration, volunteer norms. Foundations see a temporary gap (scaffold) being filled by alternative governance and sustainability mechanisms. The perspectival gap reveals that 'permissiveness' is not neutral\u2014it is a structural choice that advantages actors with distribution power and disadvantages individual contributors.",
+    "directionality_logic": "Original authors: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.38. Maximum extraction. Cannot exit the choice to open-source or claw back control once code is widely distributed. Commercial integrators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net subsidy. Can freely integrate and redistribute; exit option (not using permissive code) is costless but value-destroying. Platform corporations: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.02. Net subsidy, with additional advantage from platform control. Open source community: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction but not maximal; community can organize (foundations) and has some alternatives (reciprocal licensing). Foundations: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction due to agency and visible exit paths. Legal framework: Institutional + constrained \u2192 d\u22480.55, f(d)\u22480.72. Moderate extraction reflected in piton classification (theater gate) rather than snare (enforcement gap).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that permissive licensing is genuinely coordinative (enabling ecosystem growth, solving distribution friction, enabling rapid innovation) AND genuinely extractive (from individual authors to commercial firms, from community to platform owners, from maintenance labor to shareholder value). The Tangled Rope classification captures this hybrid: \u03c7\u22480.40 reflects both coordination benefits and asymmetric extraction. The false mountain temptation ('information wants to be free') naturalizes what is actually a contingent institutional choice\u2014copyright law + market concentration + volunteer norms = extraction. If we changed the institutional context (e.g., mandatory contribution-back clauses, platform neutrality, formalized maintainer compensation), the extraction would decline without eliminating coordination. The constraint is not immutable; it is institution-dependent. The scaffold perspective (foundations building alternatives) and the piton perspective (legal framework recognizing its own degradation) both suggest that the current equilibrium is unstable. Over a 20-30 year horizon, permissive licensing may shift toward reciprocal or tiered models as the commons sustainability problem becomes acute."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "open_source_commons_sustainability",
+      "software_supply_chain_security",
+      "platform_gatekeeper_power"
+    ],
+    "dual_formulation_note": "Permissive licensing is downstream of copyright law and platform concentration but represents a distinct structural choice about how to allocate control over digital intellectual goods. The upstream constraints (copyright law, platform gatekeeping) enable the extraction mechanism; permissive licensing is the specific institutional form through which extraction occurs. These constraints are linked: platform control amplifies permissive licensing extraction; copyright law enables the asymmetry between author and integrator."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

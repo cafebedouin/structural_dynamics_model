@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "adaptive_lag_trap",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Velocity Mismatch Anchor",
+    "topic_domain": "economic/technological/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_incumbents"
+    ],
+    "victims": [
+      "innovative_entrants",
+      "end_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Innovative Entrants",
+      "comment": "Innovative entrants are trapped by outdated regulations or standards. They cannot compete effectively, limiting their growth and potential impact."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "End Users",
+      "comment": "End users are trapped because they are forced to use outdated technologies or services due to the slow pace of regulatory adaptation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legacy Incumbents",
+      "comment": "Legacy incumbents benefit from the velocity mismatch because it protects their market share and reduces competition from innovative entrants."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees the velocity mismatch as a tangled rope because it involves both coordination (maintaining stability) and extraction (favoring incumbents)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regulatory_capture",
+      "question": "Is the regulatory lag due to genuine complexity or regulatory capture by incumbent firms?",
+      "resolution_mechanism": "Analysis of lobbying efforts and campaign contributions by incumbent firms; investigation of regulatory processes and decision-making.",
+      "impact": "If regulatory capture: the constraint is primarily a snare. If genuine complexity: the constraint is a tangled rope or a piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determine the extent of regulatory capture."
+    },
+    {
+      "id": "technological_disruption",
+      "question": "How disruptive is the new technology or service?",
+      "resolution_mechanism": "Assess the potential impact of the new technology on existing markets and industries; analyze the extent to which it challenges existing business models.",
+      "impact": "If highly disruptive: the velocity mismatch is more significant. If incremental: the impact of the mismatch is less pronounced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Assess the extent of the technological disruption."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The velocity mismatch anchor describes a situation where institutional regulations or technical standards fail to evolve at the speed of the environment they govern. This lag creates a constraint that favors legacy incumbents, who are already adapted to the existing rules, while hindering innovative entrants and ultimately harming end users.",
+    "key_agents": [
+      "Legacy Incumbents: Benefit from the rigidity (institutional/arbitrage)",
+      "Innovative Entrants: Suffer from the rigidity (powerless/trapped)",
+      "End Users: Ultimately bear the cost of outdated technology (powerless/trapped)",
+      "Regulatory Agencies: Struggle to keep pace (moderate/constrained)"
+    ],
+    "logic_rationale": "The extractiveness is moderate-high (0.60) because the regulatory lag significantly hinders innovation and competition. Suppression is high (0.70) because innovative entrants have limited alternatives and are often forced to comply with outdated standards. The theater ratio is moderate (0.40) because while there might be efforts to update the regulations, they often fail to address the root cause of the velocity mismatch.",
+    "perspectival_gap": "Incumbents view the existing regulations as a rope providing stability and order. Innovative entrants and end-users see it as a snare, trapping them in outdated systems. The analytical observer recognizes the mixed nature of the constraint, a tangled rope that provides some coordination but also enables extraction.",
+    "directionality_logic": "Legacy incumbents benefit from the mismatch, as it creates barriers to entry for competitors. Innovative entrants and end users are harmed by the mismatch, as they are forced to use outdated technologies or services. Regulators, who should be adapting to changes, are often constrained by bureaucratic inertia or political pressures."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_constraint"
+    ]
+  },
+  "directionality_overrides": []
+}

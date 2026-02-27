@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp12",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_ulysses_cyclops_1904"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "The Cyclopean Snare (Barney Kiernan's Pub)",
+    "topic_domain": "social/political/nationalist",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nationalist_in_group",
+      "the_citizen"
+    ],
+    "victims": [
+      "leopold_bloom",
+      "cosmopolitan_outsiders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Leopold Bloom (The Outsider)",
+      "comment": "PERSPECTIVE 1: LEOPOLD BLOOM (SNARE) \u2014 Trapped in the pub by social obligation (buying drinks, maintaining civility). Cannot exit without triggering explosive confrontation. Faces sustained verbal assault, mockery of his religion, ancestry, and financial precarity. No alternatives available within the social context. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Nationalist In-Group (Coordinated)",
+      "comment": "PERSPECTIVE 2: THE NATIONALIST IN-GROUP (ROPE) \u2014 'True men' of Ireland coordinate around shared nationalist ideology, linguistic performance, and ritual mockery of outsiders. The pub functions as coordination mechanism: shared language, shared enemies, shared performative masculine nationalist identity. Exit available (leave the pub, pursue other social circles) but the coordination benefits (belonging, shared purpose, status within the group) create strong incentive to maintain participation. d\u22480.18, f(d)\u22480.02, \u03c3=0.8 \u2192 \u03c7\u22480.01. Minimal effective extraction because this group experiences the constraint as pure coordination."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Martin Cunningham (Moderate Participant)",
+      "comment": "PERSPECTIVE 3: MARTIN CUNNINGHAM / MODERATE PARTICIPANT (SNARE) \u2014 Constrained participant: knows Bloom personally, sympathetic to his plight, but cannot openly oppose the in-group without losing standing. Experiences the constraint as coercive normalization of xenophobia \u2014 forced choice between loyalty to fellow nationalist Irishmen and empathy for the outsider/Jew. d\u22480.70, f(d)\u22481.07, \u03c3=0.8 \u2192 \u03c7\u22480.49. Moderate extraction because the social constraint prevents him from exercising moral agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Citizen (Hybrid Enforcer)",
+      "comment": "PERSPECTIVE 4: THE CITIZEN (TANGLED ROPE) \u2014 Primary beneficiary and enforcer. Derives status, audience, and rhetorical dominance from nationalist coordination (rope function) while simultaneously extracting social submission and humiliation from the outsider (snare function). Mobile exit option (could leave Dublin, could abandon nationalist politics) but chooses to remain, indicating benefit from current arrangement. Requires active enforcement (verbal assault, threat of violence, eventual physical violence with biscuit tin). d\u22480.25, f(d)\u22480.12, \u03c3=0.8 \u2192 \u03c7\u22480.08. Low effective extraction for the beneficiary because he experiences the constraint as power, not constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Dublin Pub Institution",
+      "comment": "PERSPECTIVE 5: DUBLIN PUB INSTITUTION (PITON) \u2014 The pub as social institution maintains nationalist performance theater: drinks, banter, rhetorical excess. Much of the activity is performative (the exaggerated speeches, the stylized mockery) rather than functionally directed toward actual political change. The pub persists as a site of nationalist performance through institutional inertia and social habit. theater_ratio=0.58 is moderate; the piton classification emerges from the observation that the functional coordination (sharing political views, organizing action) is minimal relative to the performative content (rhetoric, mockery, ritual assertion of identity). d\u22480.35, f(d)\u22480.31, \u03c3=1.0 \u2192 \u03c7\u22480.09. Constrained exit because the pub institution is embedded in Dublin's social fabric but could be abandoned."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN RISK) \u2014 Observer might be tempted to naturalize the constraint as an immutable feature of tribal/nationalist human behavior: 'In-group/out-group conflict is inevitable; scapegoating of outsiders is a universal law.' This perspective risks reifying contingent historical arrangements (post-colonial Irish nationalism, Bloom's precarious position as a Jew in Dublin) as natural laws. The structural data (\u03b5=0.68, suppression=0.72, theater=0.58) contradicts a mountain classification. The engine will flag this as a false summit: the constraint is a social/political arrangement, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bloom_exit_feasibility",
+      "question": "Could Bloom have exited the pub earlier without severe social or economic consequences?",
+      "resolution_mechanism": "Textual analysis of exit points and counterfactual social consequences; historical research on Jewish-Irish social dynamics in 1904 Dublin; economic precarity of Bloom's position",
+      "impact": "If exit feasible at multiple points: classification shifts toward tangled_rope (constrained exit, mixed experience). If exit genuinely impossible without severe reputational/economic harm: snare classification confirmed (trapped exit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Bloom had genuine exit options from the pub"
+    },
+    {
+      "id": "citizen_nationalist_authenticity",
+      "question": "Does The Citizen's nationalist fervor represent authentic political conviction or performative in-group status-seeking?",
+      "resolution_mechanism": "Textual examination of Citizen's rhetorical consistency, historical positioning of Dublin nationalist pub culture, comparison with political actors of the period",
+      "impact": "If authentic: the coordination (rope) function is genuine; the snare emerges from xenophobic asymmetry. If performative: the entire constraint is extraction theater (piton rising to snare), and the rope function is illusory.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether nationalist ideology is authentic conviction or performance"
+    },
+    {
+      "id": "jewish_outsider_status_contingency",
+      "question": "Is Bloom's victimization a necessary consequence of being Jewish in 1904 Dublin, or contingent on specific historical/political factors that could have been otherwise?",
+      "resolution_mechanism": "Historical research on Jewish-Irish relations, comparative analysis with Jewish integration in other Irish cities or time periods, counterfactual analysis of alternative colonial/nationalist contexts",
+      "impact": "If necessary: the snare approaches mountain status (inherent to the social structure). If contingent: the snare is a political/institutional arrangement that could be dismantled, and the extraction is not inevitable.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Jewish outsider status is contingent or necessary to the constraint"
+    },
+    {
+      "id": "physical_violence_threshold",
+      "question": "What transforms the verbal snare into literal violence (the biscuit tin assault)? Is this escalation structural or contingent on Bloom's final provocation (the blessing)?",
+      "resolution_mechanism": "Textual analysis of Bloom's final statement ('And the Saviour of the world ... blessing'); comparison with other pub encounters; historical research on nationalist violence triggers in early 1900s Dublin",
+      "impact": "If structural: the constraint contains latent violence; suppression (0.72) underestimates the physical threat. If contingent: Bloom's final act crosses a negotiated line, and the constraint has a (fragile) boundary of acceptable behavior.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether violence is structural or triggered by Bloom's provocation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "ulysses_cyclops_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "id_override": "ulysses_cyclops_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "ulysses_cyclops_extract_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "ulysses_cyclops_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51,
+      "id_override": "ulysses_cyclops_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "ulysses_cyclops_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Chapter 12 of James Joyce's Ulysses (the 'Cyclops' episode) depicts Leopold Bloom's encounter with militant Irish nationalism in Barney Kiernan's pub in Dublin. The constraint operates as a dual mechanism: (1) Rope of coordination for the nationalist in-group (organized around shared anti-English sentiment, Irish identity, linguistic performance), and (2) Snare of xenophobic extraction targeting Bloom, a Jewish outsider and resident alien. The pub environment progressively constructs an inescapable social space where Bloom's outsider status is ritualized, mocked, and ultimately violently enforced. The Citizen, the primary enforcer, executes nationalist performance theater while simultaneously extracting humiliation and submission from Bloom. The constraint's evolution from verbal snare to physical violence (the biscuit tin assault following Bloom's blessing invocation) reveals the suppressed violent core of the nationalist coordination mechanism. The constraint is structurally a Snare: high extractiveness (0.68), high suppression (0.72), and high enough theater (0.58) to indicate that much of the activity is performative status-assertion rather than functionally directed political organization. The measurement trajectory shows extraction increasing from 0.35 to 0.68 across the encounter, indicating escalating coercion as Bloom's position becomes more untenable.",
+    "key_agents": [
+      "Leopold Bloom: Primary victim (powerless/trapped) \u2014 outsider, Jew, cosmopolitan, unable to exit without provoking escalation; bears sustained verbal assault and eventual physical violence",
+      "The Citizen: Primary beneficiary and enforcer (powerful/mobile) \u2014 nationalist in-group leader; derives status, dominance, and rhetorical authority from the xenophobic constraint; enforces through verbal assault and threat",
+      "Nationalist In-Group ('True Men'): Beneficiary collective (organized/mobile) \u2014 coordinates around shared nationalist ideology; experiences constraint as pure coordination (Rope) within group, as snare against outsider",
+      "Martin Cunningham: Moderate participant (moderate/constrained) \u2014 knows Bloom, sympathetic, but constrained by in-group loyalty; trapped between moral conviction and social pressure",
+      "Dublin Pub Institution: Institutional setting (institutional/constrained) \u2014 maintains nationalist performance theater; embeds the constraint in social ritual and habitat",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing nationalist xenophobia as inevitable human tribalism rather than contingent political arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High-moderate. The Citizen and nationalist in-group extract substantial value from Bloom: his humiliation provides audience for their rhetoric, his outsider status validates their in-group identity, his precarious economic position makes him vulnerable to social exclusion. The extraction is not maximal (0.70+) because Bloom retains basic human dignity and the possibility of walking out; but the extraction is severe and sustained. The measurement trajectory (0.35 \u2192 0.68) reflects escalating coercion as the encounter progresses: initial verbal posturing gives way to focused mockery of Bloom's religion, ancestry, financial situation, and identity. Suppression (0.72): High. Multiple barriers to Bloom's exit and resistance: (1) Social obligation to remain and maintain civility in order to preserve employment and reputation, (2) Nationalist in-group has numerical superiority and social legitimacy within Dublin's post-colonial context, (3) Bloom's precarious position (Jewish, foreign-origin, modest income) makes him vulnerable to economic/social retaliation, (4) No institutional protection or alternative venue available, (5) Escalating threat of physical violence. Theater ratio (0.58): Moderate. The pub's nationalist performance is genuinely rhetorical (long speeches, stylized mockery, linguistic excess) and partly authentic political conviction. However, the functional coordination \u2014 actual political action, actual resistance to English rule \u2014 is minimal. Much of the activity is performative assertion of nationalist identity and in-group status. As the constraint escalates toward violence, the performative content (speeches, mockery) gives way to the underlying enforcement mechanism (threat, assault).",
+    "perspectival_gap": "The constraint demonstrates radical perspectival divergence. The nationalist in-group sees pure coordination (Rope) \u2014 shared language, shared enemies, shared purpose, positive group identity. The Citizen sees power and status (Tangled Rope with low effective extraction for him). Martin Cunningham sees coercive normalization (Snare with moderate extraction for moderate agents). Bloom sees pure extraction and entrapment (Snare with high extraction). The Dublin pub institution sees performative ritual (Piton \u2014 theater is doing the work, function is degraded). The analytical observer risks seeing immutable human nature (Mountain \u2014 tribalism is inevitable) but the structural data reveals this as a false summit: the constraint is a contingent post-colonial Irish political arrangement, not a law of nature. The perspectival gaps are large and antagonistic: what the in-group experiences as beneficial coordination, Bloom experiences as violent extraction.",
+    "directionality_logic": "Bloom: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.64. Maximum extraction because Bloom has no exit. The Citizen: Beneficiary + mobile \u2192 d\u22480.25, f(d)\u22480.12, \u03c3=0.8 \u2192 \u03c7\u22480.08. Low effective extraction for the primary enforcer because he experiences the constraint as power, not as coercive burden. Nationalist in-group: Mixed beneficiary/moderately mobile \u2192 d\u22480.20, f(d)\u22480.05, \u03c3=0.8 \u2192 \u03c7\u22480.03. Minimal extraction because the group's exit options are genuine (could leave the pub, pursue other social circles) but the coordination benefits are substantial. Martin Cunningham: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.07, \u03c3=0.8 \u2192 \u03c7\u22480.49. Moderate extraction because Cunningham is trapped between moral conviction and social pressure; he cannot openly oppose without losing standing. The dual directionality structure (beneficiaries have low d, victims have high d) confirms Snare classification: the constraint's effectiveness derives from asymmetric extraction, not from symmetric coordination. The progression from beneficiary d-values (0.05-0.25) to victim d-values (0.70-0.92) reveals the structural inequality.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by maintaining clear distinction between coordination (Rope) and extraction (Snare). The nationalist in-group genuinely coordinates around shared ideology and identity \u2014 this is not illusory, and the Rope perspective is accurate for that collective. However, the constraint's PRIMARY function (from the system-wide perspective) is extractive: it creates value for the in-group BY extracting humiliation, exclusion, and submission from the outsider. The constraint cannot be classified as pure Rope because the coordination is purchased through and dependent upon the exclusion/extraction. It is a Snare because the extraction is primary and the coordination is achieved through reinforcing the snare's victims. The tangled rope perspective (The Citizen) shows the hybrid nature: one agent simultaneously benefits from coordination and exercises extraction. The piton perspective shows that the constraint is increasingly theatrical \u2014 performative nationalism is substituting for functional political organization. The false summit risk (analytical mountain) is caught by the structural data: high extractiveness and suppression indicate this is not a natural law of human nature, but a political arrangement that could be otherwise. The constraint's legitimacy derives entirely from nationalist post-colonial ideology; it is contingent, not necessary."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "dublin_colonial_identity",
+      "jewish_diaspora_integration"
+    ],
+    "dual_formulation_note": "The Cyclopean Snare downstream of Dublin's post-colonial nationalist identity crisis and Jewish diaspora vulnerability. Upstream constraint (dublin_colonial_identity) establishes the nationalist coordination structure; the Snare shows how this coordination is enforced through xenophobic extraction. Lateral relationship with jewish_diaspora_integration: the snare mechanism depends on Bloom's outsider status and limited integration options."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ]
+}

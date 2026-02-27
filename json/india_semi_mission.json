@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "india_semi_mission",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "india_semi"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.45,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "India Semiconductor Mission 2.0",
+    "topic_domain": "economic/industrial_policy",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "domestic_semiconductor_manufacturers",
+      "state_governments",
+      "technology_transfer_entities"
+    ],
+    "victims": [
+      "foreign_semiconductor_companies",
+      "import_dependent_manufacturers",
+      "competing_nations_fabs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Import-Dependent Electronics Manufacturers",
+      "comment": "PERSPECTIVE 1: IMPORT-DEPENDENT MANUFACTURERS (SNARE) \u2014 Trapped by subsidy structure that favors integrated semiconductor producers over systems manufacturers. Cannot access incentives without vertical integration; switching costs to alternative supply chains are prohibitive. Bears extraction through input cost inflation as domesticated chip production commands price premiums over global alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Domestic Semiconductor Manufacturers",
+      "comment": "PERSPECTIVE 2: DOMESTIC SEMICONDUCTOR MANUFACTURERS (ROPE) \u2014 Primary beneficiary with arbitrage exit (can relocate fabs, seek export markets, or access global capital). Experiences constraint as pure coordination: subsidies solve the capex problem, tax incentives enable global competitiveness, and infrastructure bundling reduces market entry friction. Net benefit substantially outweighs cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Governments (Industrial Policy Layer)",
+      "comment": "PERSPECTIVE 3: STATE GOVERNMENTS / INDUSTRIAL POLICY (TANGLED ROPE) \u2014 Organized actors with constrained exit (cannot abandon FDI competition without losing development narrative). Experience both coordination benefit (industrial hubs, skill clusters, export ecosystems) and extraction cost (capital lock-in, stranded assets if fabs relocate, political risk of industrial closure). Active enforcement required: state governments must commit supporting infrastructure, environmental clearances, and regulatory predictability."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "ASEAN Semiconductor Ecosystem",
+      "comment": "PERSPECTIVE 4: ASEAN SEMICONDUCTOR ECOSYSTEM (SCAFFOLD) \u2014 Organized regional competitors (Vietnam, Thailand, Taiwan IP clusters) face temporary constraint: India's subsidies create FDI fragmentation as multinational fabs evaluate India vs ASEAN comparatively. This constraint has an implicit sunset: if India's fab builds stabilize production within 7-10 years, comparative advantage shifts to operational efficiency, not subsidies. Sunset timing depends on execution risk and geopolitical supply-chain decoupling timelines."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "WTO Dispute Resolution Framework",
+      "comment": "PERSPECTIVE 5: WTO DISPUTE RESOLUTION FRAMEWORK (PITON) \u2014 International trade rules technically constrain subsidies (ASCM Agreement), but enforcement is performative: dispute resolution takes 5-10 years, remedies are trade-retaliation based (not structural), and larger trading blocs (US, EU) use their own industrial policy exemptions. The WTO framework persists through institutional inertia despite minimal functional verification of subsidy legality. Theater ratio reflects the gap between formal constraints and actual enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Multinational Semiconductor Corporations",
+      "comment": "PERSPECTIVE 6: MULTINATIONAL SEMICONDUCTOR CORPORATIONS (TANGLED ROPE) \u2014 Powerful actors with high mobility (can invest in India or rival jurisdictions). Experience both extraction and coordination. Extraction: Indian government captures tech transfer commitments, local content requirements, and capex subsidies effectively shift some fab profitability to the state. Coordination: standardized incentive packages, clear regulatory pathways, and FDI clustering reduce project discovery costs. High mobility means chi is moderate \u2014 they can exit, but subsidies make India competitive against alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a global supply-chain physics perspective, some form of state intervention in semiconductor localization is inevitable given the strategic criticality of chips and the technological gap between established fabs and emerging producers. Capital intensity and learning curves create structural barriers that market mechanisms alone cannot overcome in developing economies. However, this naturalization risks obscuring the contingent policy choices (subsidy levels, enforcement mechanisms, sunset clauses) that actually determine whether the constraint functions as coordination or extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fab_operational_viability",
+      "question": "Will subsidized Indian fabs achieve operational efficiency parity with TSMC/Samsung within the subsidy window, or will they require indefinite support?",
+      "resolution_mechanism": "Production cost benchmarking; comparison of yield rates, cycle times, and unit economics for 5nm/3nm nodes across Indian vs Taiwan/Korea fabs post-2028",
+      "impact": "If viability achieved: constraint transitions to Rope (coordination without extraction). If viability fails: constraint becomes permanent Snare (subsidies become extraction mechanism from taxpayers to stranded assets).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Indian fabs reach operational efficiency parity"
+    },
+    {
+      "id": "geopolitical_supply_chain_decoupling",
+      "question": "Will Taiwan Strait tensions or US-China decoupling accelerate semiconductor reshoring faster than planned, collapsing the comparative-subsidy arbitrage that justifies India's mission?",
+      "resolution_mechanism": "Geopolitical risk indices; timeline of ITAR/EAR restrictions on chip exports; multinational FAB location announcements relative to India mission milestones",
+      "impact": "If decoupling accelerates dramatically: India's constraint becomes less extractive (fabs build regardless of subsidy efficiency). If decoupling stalls: India faces subsidy-dependent competition requiring deeper extraction to sustain.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Pace of geopolitical supply-chain decoupling"
+    },
+    {
+      "id": "tech_transfer_enforceability",
+      "question": "Can India actually enforce IP and process tech transfer commitments from multinational fabs, or will subsidiaries maintain proprietary control through legal subsidiaries and parent-company licensing?",
+      "resolution_mechanism": "Audit of tech transfer clause enforcement in signed FAB MOUs; patent filing rates from Indian entities using transferred technology; Indian government litigation records against FAB operators for IP violations",
+      "impact": "If enforced: coordination benefit to Indian ecosystem is real (Rope/Tangled Rope stronger). If unenforceable: transfer becomes performative, constraint becomes pure extraction from state to multinational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability of tech transfer commitments"
+    },
+    {
+      "id": "subsidy_exit_timeline",
+      "question": "What is the implicit or explicit sunset clause for direct subsidies \u2014 will they taper post-2030/2035 or persist indefinitely?",
+      "resolution_mechanism": "Government policy announcements; budget allocation trends; comparative analysis with US CHIPS Act sunset provisions and Taiwan subsidy phase-out timelines",
+      "impact": "If sunset clause exists and is credible: constraint is Scaffold (temporary support with known exit). If open-ended: constraint is structural Tangled Rope or Snare depending on enforcement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Existence and credibility of subsidy sunset timeline"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "India Semiconductor Mission 2.0 represents a state-coordinated push to build domestic advanced chip fabrication capacity through subsidies (\u20b976,000 crore incentive structure), infrastructure development (semiconductor fabs, chip design clusters), and skill training. The constraint exhibits Tangled Rope structure: it provides genuine coordination (solving the capex and knowledge barriers to entry) while simultaneously extracting through locked capital, technology transfer requirements, and subsidy dependency. Different agents perceive it differently: multinational fabs see arbitrage opportunity (Rope); Indian manufacturers see coordination and market access (Rope); state governments see industrial transformation with stranded asset risk (Tangled Rope); import-dependent manufacturers see input cost inflation (Snare); ASEAN competitors see temporary competitive pressure with an implicit sunset (Scaffold); the WTO framework sees violations enforced performatively (Piton); the analytical observer risks naturalizing as inevitable what is actually a policy choice (Mountain).",
+    "key_agents": [
+      "Domestic Semiconductor Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture subsidies, tech transfer, and market protection; can relocate or seek export markets",
+      "Import-Dependent Electronics OEMs: Primary victim (powerless/trapped) \u2014 forced to pay premiums for domesticated chips or invest in vertical integration; high switching costs",
+      "State Governments: Secondary beneficiary/victim (organized/constrained) \u2014 gain industrial hubs and development narrative but face capex lock-in and stranded asset risk if fabs relocate",
+      "Multinational Semiconductor Corporations: Powerful beneficiary with mobility (powerful/mobile) \u2014 arbitrage subsidies and market access but constrained by tech transfer commitments",
+      "ASEAN Competitors: Regional victim (organized/constrained) \u2014 face FDI fragmentation and temporary subsidy-driven competition; exit path depends on India execution risk",
+      "Indian Government / Mission Authority: Institutional beneficiary/enforcer (institutional/arbitrage) \u2014 drives extraction through subsidy conditionality and tech transfer requirements",
+      "WTO Dispute Resolution System: Institutional observer (institutional/arbitrage) \u2014 maintains rule-based facade despite limited actual enforcement of subsidy constraints"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The mission combines genuine coordination (capex financing, knowledge infrastructure) with rent-seeking (tech transfer requirements, subsidy conditionality, market protection). The 0.38 value reflects that roughly 40% of the incentive structure is pure transfer payment (extraction) while 60% is productivity-enhancing coordination. The intermediate value captures the hybrid structure. Suppression (0.45): Moderate. Entry barriers remain high (capex requirements, technical expertise, IP access) but the mission explicitly lowers suppression through infrastructure bundling and skills training. Some suppression persists (regulatory complexity, vendor lock-in, foreign ownership restrictions). Theater ratio (0.58): Moderate-high. The constraint exhibits performative elements: subsidy effectiveness is measured by FAB announcements (input metric) rather than operational efficiency (outcome metric); tech transfer commitments are announced but enforcement is unclear; skill training is counted by enrollment rather than employability; infrastructure hubs are measured by land allocation rather than operational capacity. These are characteristic of early-phase industrial policy theater. The ratio increases over the interval as initial announcements generate media coverage and political visibility independent of actual production.",
+    "perspectival_gap": "Import-dependent manufacturers (powerless/trapped) experience the constraint as Snare because they cannot exit: integrating upstream into chip manufacturing requires capex they don't have, and importing alternatives face tariff/policy barriers. Domestic manufacturers (institutional/arbitrage) experience Rope because they can access subsidies while maintaining global options. Multinational fabs (powerful/mobile) experience Tangled Rope because subsidies are attractive but tech transfer and local content requirements create friction \u2014 they can walk away, making chi moderate. ASEAN competitors (organized/constrained) experience Scaffold because India's subsidy advantage has an implicit sunset: if fabs mature to profitability within 10 years, the subsidy incentive collapses and comparative advantage shifts to operational efficiency and supply chain proximity, where ASEAN has advantages. State governments (organized/constrained) experience Tangled Rope because they capture development benefits but risk stranded assets if fab operators relocate post-subsidy. The WTO framework (institutional/arbitrage) experiences Piton because formal subsidy rules exist but enforcement is performative \u2014 dispute cases take years, remedies are retaliation-based, and larger trading blocs use exemptions. The analytical/civilizational observer risks Mountain by naturalizing state intervention as inevitable response to chip criticality, obscuring the contingent policy choices.",
+    "directionality_logic": "Directionality values for each agent derive from their structural relationship to the extraction flow. Domestic manufacturers are beneficiaries with arbitrage exit (can access global capital, relocate fabs) \u2192 low d \u2192 negative chi from their perspective. Import-dependent manufacturers are victims with trapped exit (high switching costs, tariff barriers) \u2192 high d \u2192 high chi. State governments are semi-beneficiaries with constrained exit (cannot abandon industrial development narrative) \u2192 moderate-high d \u2192 moderate chi. Multinational fabs are beneficiaries with mobile exit (can invest elsewhere) \u2192 low-moderate d \u2192 low chi. ASEAN competitors are victims with constrained exit (face FDI diversion) \u2192 moderate-high d \u2192 moderate chi. The engine derives these values from beneficiary/victim declarations and exit options, producing the perspectival gap where the same constraint appears as Rope to some agents and Snare to others.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing genuine coordination (infrastructure enabling, capex financing, knowledge transfer) from rent-seeking extraction (subsidy conditionality, tech transfer requirements, market protection, input tariffs). The Tangled Rope classification is justified by the simultaneous presence of coordination (it truly lowers barriers) and extraction (it distributes costs asymmetrically). The perspectival gap (Rope vs Snare vs Scaffold vs Piton depending on observer) is the correct reading \u2014 there is no single 'true' type. The constraint is not being mislabeled coordination as extraction or vice versa; it genuinely has both functions, and different agents experience the ratio differently based on their structural position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "taiwan_semiconductor_oligopoly",
+      "us_chips_act_subsidy_race",
+      "asean_fdi_competition"
+    ],
+    "dual_formulation_note": "India Semiconductor Mission 2.0 is downstream of global supply-chain decoupling (Taiwan Strait risks, US-China tech bifurcation) but represents a distinct structural constraint. The mission's extractiveness and coordination function depend on geopolitical acceleration timelines that are exogenous to the mission's internal design. Faster decoupling makes the mission less extractive (fabs build regardless); slower decoupling requires deeper subsidy dependence."
+  },
+  "directionality_overrides": []
+}

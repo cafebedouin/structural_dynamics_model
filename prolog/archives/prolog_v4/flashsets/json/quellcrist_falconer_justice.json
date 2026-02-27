@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "quellcrist_falconer_justice",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "The Machinery of Justice (Quellist)",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "governing_elite",
+      "judicial_system"
+    ],
+    "victims": [
+      "accused_individuals",
+      "dissenting_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Accused Individual",
+      "comment": "The accused individual, lacking power and trapped within the system, experiences the justice system as a snare. Limited exit options and high suppression lead to significant extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Judicial System",
+      "comment": "The judicial system benefits from maintaining order and upholding laws, but is also constrained by the very rules it enforces, resulting in a Tangled Rope classification. High extraction but also a coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Governing Elite",
+      "comment": "The governing elite, while nominally benefiting, find the 'justice' system has calcified and no longer serves its stated function of ensuring justice. High theater ratio."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Dissenting Population",
+      "comment": "A population who dissents to the existing system. They are moderately constrained by the system, but also benefit from the existing order. High extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a broad analytical perspective, the justice system presents a complex interplay of coordination and extraction. The system aims to maintain order and enforce laws (coordination), but also extracts resources and suppresses dissent (extraction). High extraction and suppression with some coordination benefit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_threshold",
+      "question": "What level of perceived fairness would shift the classification from snare to rope?",
+      "resolution_mechanism": "Sociological surveys and historical analysis of public trust in the judicial system.",
+      "impact": "Higher legitimacy leads to rope; lower legitimacy confirms snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimacy threshold determines system classification."
+    },
+    {
+      "id": "suppression_alternatives",
+      "question": "Are there viable alternative means of conflict resolution available outside the formal system?",
+      "resolution_mechanism": "Comparative legal studies and analysis of informal justice systems.",
+      "impact": "More alternatives reduce suppression, potentially shifting from snare to tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Alternatives reduce the system's suppression."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Machinery of Justice, as envisioned in the Quellist philosophy, is a system that ostensibly aims to maintain order and resolve disputes. However, it can become a tool of oppression, extracting resources and suppressing dissent. The system's effectiveness and perceived fairness dictate its classification on the DR index, ranging from a functional coordination mechanism (Rope) to a coercive snare. This story analyzes the inherent tensions and potential for abuse within such a system.",
+    "key_agents": [
+      "Accused Individuals: The primary targets, bearing the cost of the system's enforcement.",
+      "Dissenting Population: Groups that challenge the system, often facing suppression.",
+      "Governing Elite: The beneficiaries who control and utilize the system.",
+      "Judicial System: The institution that executes the 'justice,' experiencing constraints and benefits.",
+      "Analytical Observer: A perspective to evaluate the system objectively."
+    ],
+    "logic_rationale": "The base extractiveness score reflects the system's capacity to extract resources from individuals and groups, including legal fees, fines, and the suppression of economic opportunities. The suppression score indicates the system's ability to limit alternatives and maintain control, suppressing dissent and limiting personal freedoms. The theater ratio captures the extent to which the system's actions are performative, driven by political considerations rather than genuine justice.",
+    "perspectival_gap": "The accused individual views the system as a snare, while the governing elite might perceive it as a necessary tool for maintaining order. The analytical observer recognizes the system's inherent contradictions, acknowledging both its coordination and extraction functions.",
+    "directionality_logic": "Directionality is determined by each agent's position within the system. Accused individuals and dissenting populations experience high directionality, as they are subject to the system's power. The governing elite and judicial system benefit from the system's stability and control, thus their d value is low. The exact position on the scale is influenced by factors such as individual agency, access to resources, and the ability to exit the system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

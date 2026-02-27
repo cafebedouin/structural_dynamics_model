@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "india_nuclear_liability_act_2010",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "India's Civil Liability for Nuclear Damage Act of 2010",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_plant_operators",
+      "foreign_suppliers"
+    ],
+    "victims": [
+      "accident_victims",
+      "local_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Accident Victims and Local Communities",
+      "comment": "Perspective of accident victims: Limited recourse and compensation due to liability caps and legal complexities. Trapped due to displacement and health impacts."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Nuclear Plant Operators",
+      "comment": "Perspective of nuclear plant operators: Benefits from limited liability and risk transfer to the government and insurance pools, enabling investment and operation. Arbitrage due to risk-mitigation mechanisms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Indian Government",
+      "comment": "The government is constrained by the need to ensure nuclear safety while also fostering energy security and international collaboration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The act represents a complex balance between promoting nuclear energy and protecting citizens, with inherent risks and uncertainties."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extent_of_supplier_liability",
+      "question": "To what extent can foreign suppliers be held liable for defects or negligence?",
+      "resolution_mechanism": "Legal interpretation and precedent setting through court cases.",
+      "impact": "Greater supplier liability would shift the constraint towards a rope for victims and a snare for suppliers. Limited liability favors operators and disfavors victims.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The scope of liability for foreign suppliers remains a contested issue."
+    },
+    {
+      "id": "adequacy_of_compensation",
+      "question": "Is the compensation provided under the act adequate to cover the long-term impacts of a nuclear accident?",
+      "resolution_mechanism": "Socio-economic impact assessments and comparisons with international standards.",
+      "impact": "If compensation is inadequate, the constraint remains a snare for victims. If adequate, it shifts towards a tangled rope with a more balanced distribution of costs and benefits.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The adequacy of compensation for victims is a critical uncertainty."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "India's Civil Liability for Nuclear Damage Act of 2010 establishes the legal framework for compensating victims in the event of a nuclear accident. The act balances the need for nuclear energy development with the protection of citizens, but its provisions on supplier liability and compensation caps have been controversial.",
+    "key_agents": [
+      "Accident Victims and Local Communities: Primary targets (powerless/trapped) - bear the brunt of a nuclear accident with limited exit options.",
+      "Nuclear Plant Operators: Primary beneficiaries (institutional/arbitrage) - benefit from liability limitations and risk transfer.",
+      "Foreign Suppliers: (institutional/constrained) - are partially shielded from direct liability.",
+      "The Indian Government: regulator (institutional/constrained)",
+      "Analytical Observer: Evaluates the Act's overall impact and effectiveness (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate to high. The act limits the liability of nuclear operators and suppliers, transferring some of the risk to the government and the public. Suppression (0.45): Moderate. The Act's legal complexities and compensation caps limit the ability of victims to obtain full redress. Theater Ratio (0.30): Low. The act is primarily functional, with some element of demonstrating commitment to international norms.",
+    "perspectival_gap": "Accident victims experience the act as a snare due to limited compensation and legal recourse. Nuclear plant operators view it as a rope, enabling investment and operation with reduced risk. The government is constrained by the need to balance energy security and public safety. The analytical observer sees a tangled rope with inherent risks and uncertainties.",
+    "directionality_logic": "Victims are trapped and bear the costs (high directionality). Operators benefit from limited liability (low directionality). The government's directionality is intermediate due to its dual role as regulator and promoter of nuclear energy. The act requires active enforcement to maintain this balance.",
+    "mandatrophy_analysis": "The act is classified as a tangled rope to reflect its dual nature: facilitating nuclear energy development while also providing a framework for victim compensation. Misclassifying it as a pure snare would ignore the benefits of nuclear energy and the compensation mechanisms in place. Misclassifying it as a pure rope would ignore the limitations on liability and the potential for inadequate compensation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

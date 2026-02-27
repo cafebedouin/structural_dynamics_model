@@ -1,0 +1,144 @@
+{
+  "header": {
+    "constraint_id": "columbia_2026_elections",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "2026 Colombian Presidential Election Structure",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "emerging_political_factions",
+      "traditional_political_parties"
+    ],
+    "victims": [
+      "incumbent_administration"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Incumbent Administration",
+      "comment": "The incumbent administration is structurally disadvantaged by the one-term limit, essentially trapped within a system that necessitates transition. They are the primary target of this constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Traditional Political Parties",
+      "comment": "Traditional political parties are constrained by the changing political landscape but also benefit from the election structure as a means to regain power. They can participate in the election, but they are also somewhat limited by new emerging factions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Emerging Political Factions",
+      "comment": "Emerging political factions benefit from the opportunity to challenge established powers. The election structure provides an arbitrage opportunity for them to gain influence and power. The constitutionally mandated transition provides a chance for these parties to gain power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the election structure is a complex interplay of coordination and extraction. It serves to maintain democratic transitions, but also creates opportunities for power struggles and potential instability. The time horizon is civilizational because the electoral system is intended to persist indefinitely."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral System",
+      "comment": "The electoral system itself, as an institution, experiences the constraint as a rope. It is designed to coordinate the transfer of power and maintain democratic stability, although it is also constrained by the political dynamics and potential for instability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "influence_of_organized_crime",
+      "question": "To what extent will organized crime influence the elections?",
+      "resolution_mechanism": "Monitoring and reporting by international observers and investigative journalism.",
+      "impact": "High influence could undermine democratic legitimacy and increase the risk of violence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The level of interference and influence of criminal organizations will influence the outcome and legitimacy of the elections."
+    },
+    {
+      "id": "peace_process_stability",
+      "question": "Will the ongoing peace process hold?",
+      "resolution_mechanism": "Negotiation outcomes and compliance monitoring by peace accords.",
+      "impact": "Instability could lead to a resurgence of violence and displacement.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The success of the peace process with rebel groups could destabilize elections, or give more parties the opportunity to participate in elections."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The 2026 Colombian presidential election presents a structural constraint due to the constitutional one-term limit, forcing a transition and opening opportunities for new political actors. This dynamic interplay results in a complex scenario where different actors experience the election structure in varied ways. The incumbent administration is at a disadvantage, while traditional and emerging parties vie for power, each facing their own constraints and opportunities. The process will be a test of democratic stability in a country with a history of political violence.",
+    "key_agents": [
+      "Incumbent Administration: Primary target (powerless/trapped)",
+      "Traditional Political Parties: Secondary actor (moderate/constrained)",
+      "Emerging Political Factions: Primary beneficiary (powerful/arbitrage)"
+    ],
+    "logic_rationale": "The election is a tangled rope because it provides a coordination mechanism (transfer of power) but also allows for extraction (power struggles and corruption). Extractiveness: 0.5. Suppression: 0.4. Theater Ratio: 0.3.",
+    "perspectival_gap": "The incumbent administration sees the one-term limit as a snare, preventing them from consolidating power. Traditional parties see a tangled rope, constrained by new actors but also presented with an opportunity. Emerging factions see a rope, facilitating their rise to power.",
+    "directionality_logic": "Beneficiaries (emerging and some traditional parties) gain influence and potentially power through the election process (low directionality value). Victims (incumbent administration) are structurally disadvantaged by the term limit, leading to a higher directionality value.",
+    "mandatrophy_analysis": "The Tangled Rope is appropriate since it provides a mechanism for coordination, but also provides incentives for power struggles and corrupt activities that prevent equal access to power for all participants. The mandate of a single-term ensures that power is somewhat balanced but also allows for potential chaos as new leaders emerge."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

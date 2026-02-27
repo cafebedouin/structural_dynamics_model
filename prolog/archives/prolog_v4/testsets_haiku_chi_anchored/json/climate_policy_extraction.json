@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "climate_policy_extraction",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "The Decarbonization Snare (Climate-Identity Collision)",
+    "topic_domain": "environmental/political",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "renewable_energy_sector",
+      "climate_policy_advocates"
+    ],
+    "victims": [
+      "hydrocarbon_workers",
+      "regional_hydrocarbon_economy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Hydrocarbon Workers",
+      "comment": "Hydrocarbon workers face job losses and economic hardship due to decarbonization policies. Their skills are not easily transferable to the renewable energy sector, leaving them trapped. d=0.95, f(d)\u22481.42, \u03c3=0.9, \u03c7 \u2248 0.83"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Hydrocarbon Economy",
+      "comment": "The regional hydrocarbon economy experiences extraction as its traditional industries decline but may also benefit from some diversification and transition funding. Constrained exit options as they are tied to existing infrastructure. d=0.75, f(d)\u22481.10, \u03c3=0.9, \u03c7 \u2248 0.64"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Renewable Energy Sector",
+      "comment": "The renewable energy sector benefits from increased investment and policy support, leading to growth and expansion. Arbitrage opportunities in new markets. d=0.05, f(d)\u2248-0.12, \u03c3=1.2, \u03c7 \u2248 -0.05"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Climate Policy Advocates",
+      "comment": "Climate policy advocates benefit from the success of decarbonization policies in advancing their goals and agendas. Mobile in terms of policy focus and strategies. d=0.15, f(d)\u2248-0.01, \u03c3=1.2, \u03c7 \u2248 -0.01"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective sees both coordination (global climate goals) and extraction (regional economic impacts) components. d=0.72, f(d)\u22481.15, \u03c3=1.2, \u03c7 \u2248 0.54"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "job_transition_feasibility",
+      "question": "How feasible is it for hydrocarbon workers to transition to jobs in the renewable energy sector?",
+      "resolution_mechanism": "Skills gap analysis, retraining program effectiveness, and labor market demand forecasts.",
+      "impact": "High feasibility: reduces the 'trapped' classification for workers. Low feasibility: reinforces the snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of job transition for hydrocarbon workers"
+    },
+    {
+      "id": "regional_diversification_potential",
+      "question": "What is the potential for regional economic diversification beyond the hydrocarbon industry?",
+      "resolution_mechanism": "Industry analysis, investment climate assessments, and regional development plans.",
+      "impact": "High potential: lessens the extraction on the regional economy. Low potential: strengthens the snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Potential for regional economic diversification"
+    },
+    {
+      "id": "policy_design_equity",
+      "question": "To what extent are decarbonization policies designed to mitigate negative impacts on affected communities?",
+      "resolution_mechanism": "Policy impact assessments, stakeholder engagement, and equity audits.",
+      "impact": "High equity: reduces the suppression and extraction. Low equity: exacerbates the snare classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Equity in decarbonization policy design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "As federal and international climate policies intensify, a regional hydrocarbon-based economy interprets decarbonization as a direct threat to its wealth and identity. This creates a 'decarbonization snare' where policies intended to benefit the global climate have extractive and suppressive effects on specific regions and communities. This extraction is compounded by the difficulty hydrocarbon workers face in transitioning to new roles and the limited potential for regional economic diversification.",
+    "key_agents": [
+      "Hydrocarbon Workers: Primary victim (powerless/trapped) - face job losses and economic hardship.",
+      "Regional Hydrocarbon Economy: Secondary victim (moderate/constrained) - experiences decline in traditional industries.",
+      "Renewable Energy Sector: Primary beneficiary (institutional/arbitrage) - benefits from policy support and investment.",
+      "Climate Policy Advocates: Beneficiary (organized/mobile) -advancing goals and agendas."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The policies extract significant economic value from the hydrocarbon-dependent regions. Suppression (0.70): High. Limited alternative options and high barriers to entry in new sectors. Theater Ratio (0.30): Low. The transition programs are implemented, but their effectiveness and impact are limited. Focus is on tangible policy changes, not performative action.",
+    "perspectival_gap": "The hydrocarbon workers view the policies as a snare, trapping them in a declining industry. The renewable energy sector sees them as a rope, facilitating growth and development. The analytical perspective recognizes both the coordination (global climate goals) and extraction (regional economic impacts) components.",
+    "directionality_logic": "Hydrocarbon workers: Victim + trapped -> d=0.95 -> Snare. Regional Hydrocarbon economy: Victim + constrained -> Tangled Rope. Renewable energy: Beneficiary + arbitrage -> d=0.05 -> Rope. Climate Policy Advocates: Beneficiary + mobile -> d=0.15 -> Rope.",
+    "mandatrophy_analysis": "This constraint is classified as a snare due to the high extractiveness and suppression experienced by hydrocarbon workers and the regional economy. It prevents mislabeling as a pure coordination problem (rope) by recognizing the real and significant negative impacts on specific communities."
+  },
+  "network": {
+    "affects_constraints": [
+      "global_carbon_pricing",
+      "fossil_fuel_subsidies"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "us_venezuela_blockade",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "usvb"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Proposed US Naval Blockade of Venezuelan Oil Tankers",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_strategic_interests",
+      "competing_oil_producers"
+    ],
+    "victims": [
+      "venezuela_oil_sector",
+      "global_energy_consumers",
+      "shipping_industry"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Venezuelan Oil Sector and Economy",
+      "comment": "PERSPECTIVE 1: VENEZUELAN OIL SECTOR (SNARE) \u2014 Cannot exit the constraint; oil export is the primary revenue source for state operations and humanitarian imports. Blockade forces choice between compliance (economic collapse) or attempted circumvention (military escalation). d\u22480.96, f(d)\u22481.41, \u03c3=1.2 \u2192 \u03c7\u22480.76. Pure extraction with maximum coercion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Caribbean and Latin American States",
+      "comment": "PERSPECTIVE 2: CARIBBEAN AND LATIN AMERICAN STATES (SNARE) \u2014 Constrained by geographic proximity to US power projection, economic dependence on US trade, and inability to counter naval blockade. Face pressure to enforce sanctions or restrict Venezuelan shipping through territorial waters. d\u22480.82, f(d)\u22481.18, \u03c3=0.9 \u2192 \u03c7\u22480.63. High extraction with coercive pressure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Strategic Establishment",
+      "comment": "PERSPECTIVE 3: US STRATEGIC ESTABLISHMENT (TANGLED ROPE) \u2014 Benefits from demonstrated power projection, energy market control, and geopolitical leverage. Blockade enforces coordination (dollar dominance in energy markets, US-led liberal order enforcement) but requires sustained military presence and faces international legal challenges. d\u22480.35, f(d)\u22480.28, \u03c3=1.2 \u2192 \u03c7\u22480.23. Net beneficiary with mixed coordination-extraction hybrid."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Oil Producers and OPEC",
+      "comment": "PERSPECTIVE 4: GLOBAL OIL PRODUCERS AND OPEC (ROPE) \u2014 Benefits from supply reduction that supports higher oil prices. Blockade solves collective action problem of keeping Venezuelan oil off global market without explicit cartel coordination. d\u22480.20, f(d)\u22480.06, \u03c3=1.2 \u2192 \u03c7\u22480.05. Low effective extraction; primarily coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Energy Consumers and Shipping Industry",
+      "comment": "PERSPECTIVE 5: GLOBAL ENERGY CONSUMERS AND SHIPPING INDUSTRY (SNARE) \u2014 Face higher energy prices, constrained supply, and legal/insurance barriers to Venezuelan oil transport. Shipping companies cannot insure Venezuelan tankers without US compliance risk. d\u22480.78, f(d)\u22481.14, \u03c3=1.2 \u2192 \u03c7\u22480.71. High extraction through coercive supply control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Maritime and Trade System",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL MARITIME AND TRADE SYSTEM (TANGLED ROPE) \u2014 Experiences blockade as both coordination mechanism (US-enforced rules-based order) and extraction mechanism (precedent for unilateral naval enforcement erodes international law norms). d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.62. Significant tension between stated coordination function (orderly markets) and actual extraction (coercive power projection)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Legal Framework",
+      "comment": "PERSPECTIVE 7: INTERNATIONAL LEGAL FRAMEWORK (PITON) \u2014 Blockade persists despite contradicting UN Convention on the Law of the Sea and international commerce norms. Framework maintains performative legitimacy (security exception clauses, US veto power in enforcement) but functional authority is degraded. theater_ratio\u22480.35 does NOT satisfy piton gate (theater must be \u22650.70). Engine reclassifies as Tangled Rope: legal framework provides enough normative coordination function to justify active enforcement, but extraction via law-breaking is the actual mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Systemic Hegemony View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational scale, blockade represents structural enforcement mechanism of US monetary/military hegemony over global energy markets. Extraction is systemic: any state seeking energy independence or non-dollar trade faces blockade threat. d\u22480.74, f(d)\u22481.13, \u03c3=1.2 \u2192 \u03c7\u22480.73. This perspective reveals blockade as instantiation of larger snare architecture."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legal_authority_ambiguity",
+      "question": "Does US have legitimate legal authority under international law to enforce unilateral blockade of Venezuelan oil exports, or is this a precedent-setting violation of UN Convention on Law of the Sea?",
+      "resolution_mechanism": "International court opinions; UN General Assembly resolutions; state responses and countermeasures; enforcement of precedent in subsequent blockade scenarios",
+      "impact": "If legitimate: blockade is Rope-leaning (coordination of rules-based order enforcement). If violation: blockade is pure Snare (coercive power without legal wrapper).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether blockade has legitimate international legal authority"
+    },
+    {
+      "id": "sanction_effectiveness_threshold",
+      "question": "What degree of economic pressure on Venezuela constitutes 'coercion' vs 'legitimate economic incentive'? At what poverty/mortality threshold does constraint shift from Snare to Tangled Rope?",
+      "resolution_mechanism": "Humanitarian impact assessments; mortality data; comparative analysis with other blockades (Cuba, Iraq, North Korea); Venezuelan government response strategies",
+      "impact": "If threshold high (near state collapse): constraint remains pure Snare from victim perspective throughout enforcement window. If threshold moderate: constraint may shift to Tangled Rope if humanitarian costs trigger coalition pressure for negotiation.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Threshold at which economic pressure becomes coercive extraction"
+    },
+    {
+      "id": "circumvention_route_persistence",
+      "question": "Can Venezuelan oil reach markets through alternative routes (ship-to-ship transfers, transshipment via third countries, alternative payment systems), thereby converting constrained exit to mobile exit?",
+      "resolution_mechanism": "Empirical tracking of oil transport routes; sanctions evasion analysis; third-country compliance with secondary sanctions; alternative payment system adoption",
+      "impact": "If routes remain open: victims shift from trapped to mobile exit, reclassifying from Snare to Tangled Rope from victim perspective. If blockade closes routes: Snare classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether circumvention routes allow Venezuelan oil to reach markets"
+    },
+    {
+      "id": "coalition_formation_velocity",
+      "question": "Do non-aligned states (China, India, Russia) form a counter-coalition to challenge blockade and establish alternative shipping/payment systems fast enough to create organized opposition before constraint hardens?",
+      "resolution_mechanism": "Emergence of explicit counter-sanctions; alternative shipping protocols; BRICS+ energy trade agreements; sanctions-busting ship registries",
+      "impact": "If coalition forms rapidly: constraint shifts to Tangled Rope for counter-coalition members (organized/mobile exit). If coalition slow: blockade remains pure Snare for all victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Speed of counter-coalition formation to challenge blockade"
+    },
+    {
+      "id": "humanitarian_exception_triggers",
+      "question": "Does blockade include carve-outs for humanitarian imports (food, medicine, electricity generation), and if so, how binding are they in practice?",
+      "resolution_mechanism": "Monitoring of humanitarian exemption requests and approval rates; death rates among vulnerable populations; comparison with other blockade humanitarian protocols",
+      "impact": "If exemptions are robust: constraint is Tangled Rope (coordination function for emergency access plus extraction through rationing). If exemptions become dead-letter: constraint is pure Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforceability of humanitarian exceptions in blockade implementation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The proposed US naval blockade of Venezuelan oil tankers represents a geopolitical constraint combining energy market control, enforcement of hemispheric hegemony, and coercive economic statecraft. The constraint exhibits high extractiveness (0.68) and suppression (0.78) with relatively low theater (0.35), indicating that the coercive mechanism is direct and functional rather than performative. The blockade benefits a coalition of US strategic interests and competing oil producers while imposing severe costs on Venezuela, global energy consumers, and international maritime norms. Unlike many contemporary sanctions regimes, the blockade does not hide behind financial deception or secondary market mechanisms \u2014 it is a visible, kinetic demonstration of naval power projection. The theater ratio is low because the mechanism is structural enforcement, not ritual compliance. The blockade threatens international law norms but is justified by security exception clauses and demonstrated US naval capacity. The constraint's classification as Snare from the victim perspective is unambiguous: Venezuela cannot exit without state reorganization; the cost of blockade compliance is humanitarian collapse; suppression is enforced through naval presence and legal/insurance barriers to circumvention. From the beneficiary perspective (US strategic interests), the constraint exhibits Tangled Rope characteristics: it coordinates global energy markets and enforces dollar hegemony (coordination function) while simultaneously extracting market rents and political deference (extraction function). The constraint is downstream of broader energy geopolitics and upstream of humanitarian crisis and potential military escalation.",
+    "key_agents": [
+      "Venezuelan Government and Oil Sector: Primary victim (powerless/trapped) \u2014 bears full cost of blockade through export collapse, humanitarian import constraint, and inability to exit sovereign territorial waters without military confrontation",
+      "Global Energy Consumers: Secondary victim (moderate/constrained) \u2014 face higher oil prices and constrained supply; cannot source Venezuelan oil due to US sanctions and insurance barriers",
+      "Caribbean and Latin American States: Secondary victim (moderate/constrained) \u2014 face pressure to enforce sanctions through territorial waters; constrained by geographic proximity to US power projection",
+      "Shipping Industry and Insurance Markets: Secondary victim (moderate/constrained) \u2014 cannot underwrite Venezuelan oil transport without US legal/financial penalties; exit options are constrained by liability exposure",
+      "US Strategic Establishment: Primary beneficiary (powerful/arbitrage) \u2014 captures geopolitical leverage, energy market control, and demonstration of hegemonic power; can exit from blockade commitment at low cost through policy change",
+      "OPEC and Competing Oil Producers: Beneficiary (organized/mobile) \u2014 benefit from supply reduction and higher prices; experienced blockers who can adapt to altered market conditions",
+      "International Maritime and Trade System: Institutional actor (institutional/constrained) \u2014 sustains performative commitment to rules-based order while experiencing functional degradation of legal authority; constrained by US enforcement capacity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 assesses blockade as instantiation of hegemonic snare architecture constraining state energy sovereignty globally"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The blockade extracts significant economic rents (higher global oil prices benefiting non-Venezuelan producers), geopolitical deference (other states enforce secondary sanctions), and market control (constrains global energy trading). The extraction grows over time as circumvention routes are closed and alternatives are foreclosed. Initial extractiveness (t=0) lower (0.42) due to transshipment and alternative route availability; as blockade hardens over 12 months, extraction increases (t=12: 0.68) as third-country enforcement becomes normalized. Suppression (0.78): Very high. Victims face multiple suppression mechanisms: (1) naval interdiction of tankers, (2) US financial sanctions on companies trading Venezuelan oil, (3) insurance market denial (Lloyd's, major brokers avoid Venezuelan business), (4) secondary sanctions on countries that circumvent, (5) legal barriers under US law. Escape routes require ship-to-ship transfers in international waters, alternative payment systems, and third-country complicity \u2014 all high-risk, high-cost operations. Theater ratio (0.35): Low. The blockade is not performative \u2014 it is kinetic enforcement. Unlike financial sanctions regimes that hide their extraction behind market mechanisms, the blockade is visible enforcement of power. The 35% theater reflects the minimal normative framing (security exceptions, counter-narcotics justification) relative to the direct coercive mechanism. Theater declines from t=0 (0.50) to t=12 (0.35) as the initial justification apparatus (counter-narcotics framing) becomes less credible and the pure power projection becomes undeniable.",
+    "perspectival_gap": "MAXIMAL PERSPECTIVAL DIVERGENCE. Venezuelan oil sector sees pure Snare: no exit, total extraction, maximum coercion. US strategic establishment sees Tangled Rope: coordination of energy markets plus extraction of rents. Global oil producers see Rope: coordination of supply reduction without explicit cartel. Caribbean states see Snare from their position (constrained, threatened by US enforcement). International maritime system sees Tangled Rope: coordination function (orderly energy markets) versus extraction function (precedent for unilateral naval enforcement). Shipping industry sees pure Snare: cannot operate Venezuelan routes. Energy consumers see Snare: constrained supply, higher prices. This perspectival gap reflects fundamental conflict between the beneficiary's ordering logic (hegemonic stability through US power projection) and the victim's structural reality (coercive exclusion from global energy markets). The gap is not epistemological \u2014 the structural relationships are objectively different. The beneficiary genuinely experiences coordination benefits; the victim genuinely experiences extraction with no alternative.",
+    "directionality_logic": "Venezuelan oil sector: Victim + trapped \u2192 d\u22480.96. Maximum directionality. No exit capacity; all adjustment burden on Venezuela. f(d)\u22481.41, \u03c3=1.2 \u2192 \u03c7\u22480.76. Highest effective extraction. Global energy consumers: Victim + constrained \u2192 d\u22480.78. Can substitute other energy sources or accept higher prices, but with significant cost. f(d)\u22481.14, \u03c3=1.2 \u2192 \u03c7\u22480.71. High extraction. Caribbean states: Victim + constrained \u2192 d\u22480.82. Can theoretically refuse to enforce sanctions, but face secondary sanctions threat. f(d)\u22481.18, \u03c3=0.9 \u2192 \u03c7\u22480.63. Extraction medium-high. US strategic establishment: Beneficiary + arbitrage \u2192 d\u22480.35. Can terminate blockade at no cost; experiences constraint as voluntary coordination mechanism. f(d)\u22480.28, \u03c3=1.2 \u2192 \u03c7\u22480.23. Net beneficiary. OPEC producers: Beneficiary + mobile \u2192 d\u22480.20. Can adjust production or exit cartel; benefits are automatic (price support). f(d)\u22480.06, \u03c3=1.2 \u2192 \u03c7\u22480.05. Minimal extraction. International maritime system: Institutional + constrained \u2192 d\u22480.55. Cannot exit enforcement regime without challenging US naval dominance. f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.62. Tangled Rope zone.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The blockade classifies as Snare at \u03b5=0.68 with suppression=0.78 and \u03c7\u22650.66 from the victim perspective, satisfying all three gates for Snare classification. The mandatrophy (is this really extraction, or is it coordination?) is resolved by the perspectival method: from the beneficiary perspective (US), the constraint does exhibit coordination function (energy market stability, hegemonic order enforcement) \u2014 hence Tangled Rope from that view. From the victim perspective (Venezuela), there is zero coordination function \u2014 the constraint is pure extraction. The engine's perspectival gap measurement reveals the mandatrophy: the beneficiary's Tangled Rope and the victim's Snare are not different empirical observations of the same constraint, but rather different structural experiences of the same power relationship. The constraint IS a Snare if the victim's structural position is taken as primary (no exit, no coordination benefit); it IS a Tangled Rope if the beneficiary's justification (energy market coordination, rules-based order) is taken as primary. The resolution is to declare BOTH classifications as valid perspectival truths and measure the gap: a perspectival gap of 3+ types (Tangled Rope vs Snare) indicates a constraint whose legitimacy is fundamentally disputed. The mandatrophy is resolved not by choosing one type, but by recognizing that the constraint's function is radically different depending on structural position \u2014 which is itself a diagnosis of extraction without coordination consensus."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "opec_production_coordination",
+      "usd_energy_dominance",
+      "international_maritime_law_erosion"
+    ],
+    "dual_formulation_note": "The blockade is downstream of broader US energy hegemony strategy (constraining alternative suppliers globally) and upstream of humanitarian crisis and military escalation risk. Decomposition: (1) Naval enforcement mechanism (constraint_id: us_venezuela_blockade, \u03b5\u22480.68, Snare) \u2014 the kinetic blockade itself. (2) Market extraction mechanism (constraint_id: usd_energy_dominance, \u03b5\u22480.52, Tangled Rope) \u2014 the broader system of using dollar dominance to control energy trading. The blockade is a concrete enforcement instance of the abstract extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "p_vs_np",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pvsnp"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The P versus NP Problem",
+    "topic_domain": "technological/mathematics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cryptography_industry",
+      "mathematical_logic_researchers"
+    ],
+    "victims": [
+      "optimization_dependent_sectors",
+      "computational_verification_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Optimization-Dependent Sector",
+      "comment": "PERSPECTIVE 1: OPTIMIZATION-DEPENDENT SECTOR (SNARE) \u2014 Industries relying on NP-hard problem solutions (logistics, manufacturing, drug discovery, circuit design) cannot exit the constraint that efficient solutions may not exist. If P \u2260 NP, they are permanently trapped in exponential-time computation, bearing the full cost of the unsolved problem. No verification pathway, no escape route, no institutional arbitrage available."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Computational Verification Infrastructure",
+      "comment": "PERSPECTIVE 2: COMPUTATIONAL VERIFICATION INFRASTRUCTURE (TANGLED ROPE) \u2014 Must operate under the assumption that verification (NP) is fundamentally faster than solving (P), yet cannot prove this asymmetry. This constraint both enables the infrastructure (fast verification is useful) and constrains it (fast solving would break cryptography). Genuine coordination function coupled with asymmetric cost distribution \u2014 those who depend on hardness-as-security suffer if P=NP, while verification-focused systems are stable either way."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cryptography Industry",
+      "comment": "PERSPECTIVE 3: CRYPTOGRAPHY INDUSTRY (ROPE) \u2014 Benefits from the P \u2260 NP assumption as a foundation for security protocols. The unresolved problem is treated as a coordination mechanism: all parties agree to assume hardness exists. This is pure coordination with minimal coercive overhead \u2014 no enforcement needed beyond academic consensus and engineering practice. Net beneficiary position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Post-Quantum Cryptography Coalition",
+      "comment": "PERSPECTIVE 4: POST-QUANTUM CRYPTOGRAPHY COALITION (SCAFFOLD) \u2014 Organized actors (NIST, security researchers, industry consortia) recognize that P=NP or quantum algorithms breaking RSA would invalidate current cryptographic assumptions. They are actively building alternative cryptographic pathways (lattice-based, hash-based, multivariate) with explicit sunset logic: if P=NP or quantum computing reaches practical scale, transition protocols are pre-architected. Suppression (transition difficulty) is high, but the coalition has agency and exit visibility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mathematical Logic Establishment",
+      "comment": "PERSPECTIVE 5: MATHEMATICAL LOGIC ESTABLISHMENT (PITON) \u2014 The P vs NP problem is treated as an iconic open problem, generating prestige and research funding. Much of the institutional activity (conferences, journals, prize announcements) is performative: the establishment maintains the problem's iconic status independent of progress toward resolution. Theater ratio is high \u2014 most activity is descriptive (exploring equivalent formulations) rather than functional (solving the problem). The research institution persists through inertia and status maintenance, not because resolution is imminent."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Logical Limit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / LOGICAL LIMIT VIEW (MOUNTAIN) \u2014 From a universal analytical perspective, the P vs NP question may represent an irreducible limit on computational expressiveness: a fundamental asymmetry between checking and solving that is inherent to logic itself, not contingent on current algorithms or computing technology. Accessibility to proof or disproof may have an absolute floor due to the structure of formal systems. However, this perspective risks naturalizing what could be a contingent historical fact (current lack of polynomial-time solvers) as an immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "p_equals_np_solvability",
+      "question": "Is there a polynomial-time algorithm for NP-complete problems, or is P \u2260 NP a fundamental computational law?",
+      "resolution_mechanism": "Proof of P=NP (constructive algorithm) or proof of P \u2260 NP (separation argument from formal complexity theory). Alternatively, resolution via automated theorem proving or meta-mathematical arguments about G\u00f6del incompleteness in ZFC.",
+      "impact": "If P=NP: cryptography breaks, optimization becomes practical, industries dependent on NP-hardness face disruption. If P \u2260 NP: current cryptographic assumptions are validated, optimization barriers persist, computational hierarchy is confirmed. If undecidable in ZFC: the problem may have no mathematical resolution.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether P equals NP or they are distinct complexity classes"
+    },
+    {
+      "id": "cryptographic_hardness_sufficiency",
+      "question": "Even if P \u2260 NP is proven, do polynomial-time worst-case lower bounds guarantee security in practice (average-case cryptographic hardness)?",
+      "resolution_mechanism": "Analysis of gap between worst-case P \u2260 NP and average-case hardness assumptions used in cryptography. Study of potential subexponential algorithms exploiting structure in real cryptographic problems.",
+      "impact": "If worst-case hardness doesn't imply cryptographic security: even with P \u2260 NP proven, RSA and similar systems could break. If gap exists but is bridgeable: post-quantum migration may be more urgent than mathematical proof suggests.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether worst-case P \u2260 NP guarantees practical cryptographic hardness"
+    },
+    {
+      "id": "quantum_polynomial_time_disruption",
+      "question": "Can quantum algorithms solve NP-hard problems in polynomial time, effectively making P=NP in the quantum computational model?",
+      "resolution_mechanism": "Quantum complexity theory analysis (BQP vs NP relationships). Empirical demonstration of quantum advantage on specific NP-hard problems as quantum computers scale. Theoretical proof of quantum polynomial-time solutions or fundamental barriers.",
+      "impact": "If quantum P=NP: the cryptographic protection from classical P \u2260 NP is illusory in a quantum-enabled world. Post-quantum migration becomes urgent independent of classical P vs NP resolution. If quantum cannot solve NP-hard problems: quantum advantage is limited to specific problem classes, and classical cryptography remains robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quantum computing enables polynomial-time NP-hard problem solving"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 1971,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The P versus NP problem is a constraint that operates simultaneously as a mathematical open question, a cryptographic foundation, an economic bottleneck, and an institutional status symbol. The constraint exhibits properties of both coordination (shared cryptographic assumptions) and extraction (those dependent on NP-hardness bear permanent costs). The unresolved status is itself the constraint: neither proof nor disproof is available, leaving optimization-dependent industries in a state of permanent uncertainty, while the cryptography industry builds its security infrastructure on an unvalidated assumption. The problem's theater ratio has increased over 55 years as the problem remains unsolved despite being worth a $1 million Millennium Prize \u2014 much institutional activity is now descriptive (exploring reformulations) rather than functional (advancing toward solution). Simultaneously, post-quantum cryptography research has begun architecting an exit pathway with explicit sunset logic: if the constraint's assumptions (P \u2260 NP) prove false or quantum computing breaks classical crypto, migration protocols are pre-designed.",
+    "key_agents": [
+      "Cryptography Industry: Primary beneficiary (institutional/arbitrage) \u2014 builds security models on assumption that P \u2260 NP; captures trust value and pricing premium",
+      "Optimization-Dependent Sectors: Primary victim (powerless/trapped) \u2014 logistics, manufacturing, drug discovery, circuit design unable to exit exponential-time computation barriers; trapped by unresolved theoretical question",
+      "Computational Verification Infrastructure: Secondary actor (moderate/constrained) \u2014 must assume verification (NP) is faster than solving (P) without proof; enables verification-dependent systems but constrains by cryptographic security requirements",
+      "Post-Quantum Cryptography Coalition: Organized agents (organized/constrained) \u2014 NIST, security researchers, industry consortia building transition pathways with sunset logic if classical cryptography fails",
+      "Mathematical Logic Establishment: Institutional actor (institutional/arbitrage) \u2014 maintains P vs NP as iconic unsolved problem; generates prestige and research funding independent of resolution progress",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 questions whether P \u2260 NP is a logical/physical law or contingent computational fact"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts from optimization-dependent industries who cannot efficiently solve their NP-hard problems, but the extraction is not severe because (1) approximation algorithms and heuristics provide partial solutions, (2) specialized hardware and quantum research offer alternative pathways, (3) the problem is intellectually transparent \u2014 no hidden mechanism obscures the cost structure. The extractiveness value reflects sustained but not total subordination to the constraint. Suppression (0.42): Moderate. High barriers include the intrinsic difficulty of NP-hardness (not artificially imposed), but suppression is not extreme because alternative problem-solving methods (approximation, metaheuristics, quantum exploration) reduce exit barriers. The constraint suppresses direct optimization but not all approaches to useful computation. Theater ratio (0.58): Moderate-high. Much of the institutional response to P vs NP is now performative: conferences explore equivalent formulations, journals publish surveys, but new progress toward resolution is infrequent. Theater has risen from 0.42 (1971, early exploration phase) to 0.58 (2026, iconic open problem phase) as the problem's status as unsolvable has crystallized. However, this is not a piton-level theater (\u22650.70) because the underlying mathematical question remains genuinely open and consequential.",
+    "directionality_logic": "Cryptography industry benefits from the P \u2260 NP assumption and has low exit cost (arbitrage: they could switch cryptographic paradigms if assumptions change). Engine derives low d, making their chi negative (they experience the constraint as enabling, not extractive). Optimization-dependent sectors are victims with no exit (trapped) \u2014 they experience high d and high f(d), making chi strongly positive (maximal extraction). Post-quantum coalition has constrained exit (migration is possible but requires infrastructure investment) and moderate power (organized actors) \u2014 they experience mid-range d with moderate chi. The mathematical logic establishment benefits from the problem's unsolved status (arbitrage: they could study other problems) but maintains it through institutional inertia. The computational verification infrastructure is locked into the P \u2260 NP assumption for cryptographic security (constrained exit) and cannot easily escape the constraint.",
+    "perspectival_gap": "The gap between perspectives is stark. The beneficiary (cryptography industry) sees pure coordination (Rope) \u2014 parties agreeing to assume hardness is sufficient. The victim (optimization-dependent sectors) sees pure extraction (Snare) \u2014 trapped by an unresolved theoretical question with no escape. The organized coalition sees a temporary problem with a designed exit (Scaffold) \u2014 post-quantum migration protocols are pre-architected. The mathematical establishment sees a degraded iconic problem (Piton) \u2014 maintained through prestige and funding allocation, not active solution attempts. The infrastructure sees mixed coordination and extraction (Tangled Rope) \u2014 verification is faster than solving (useful) but this asymmetry is unproven and could fail if P=NP or quantum computing breaks it. The analytical observer risks seeing an immutable law (Mountain) \u2014 computational limits inherent to logic itself \u2014 but this naturalizes what is an open empirical question in complexity theory.",
+    "mandatrophy_analysis": "MANDATROPHY EXPOSURE: The constraint resolves the mandatrophy by showing that the P vs NP problem exhibits genuine coordination (shared cryptographic assumptions, global security infrastructure) coupled with asymmetric extraction (optimization sectors remain stuck in exponential time while crypto industry builds on unvalidated assumptions). This is not pure extraction disguised as coordination \u2014 both elements are structurally necessary. However, the mandatrophy risk emerges if the problem remains unresolved for another 50+ years: the coordination function (shared assumption of P \u2260 NP) may calcify into a piton (institutional maintenance without functional resolution). The theater ratio trajectory (0.42 \u2192 0.58) shows early piton drift, indicating that the institutional response is slowly shifting from problem-solving orientation to iconic problem maintenance. The post-quantum coalition's exit pathway (Scaffold perspective) represents active mandatrophy mitigation: by pre-designing alternatives to current cryptographic assumptions, the coalition prevents the constraint from degrading into pure institutional theater. If post-quantum migration succeeds before P vs NP is resolved, the tangled rope converts to a scaffold with an executed sunset clause, preventing mandatrophy lock-in."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "cryptographic_assumption_validation",
+      "quantum_supremacy_ntru_lattice",
+      "optimization_approximation_floors"
+    ],
+    "dual_formulation_note": "The P vs NP problem decomposes into two structurally distinct constraints: (1) The mathematical open question (P=NP? decidable within formal complexity theory), which is a pure mountain from some perspectives and a genuine open problem from others; (2) The cryptographic hardness assumption (P \u2260 NP as a security foundation), which is a tangled rope of coordination + extraction. These are linked because the cryptographic assumption depends on the mathematical resolution, but they have different \u03b5 values and different structural properties. The cryptographic story is about institutional reliance on an unvalidated assumption (\u03b5 \u2248 0.38). The mathematical story might be about irreducible undecidability (potentially \u03b5 \u2264 0.25 if proven to be undecidable in ZFC, making it a logical mountain)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

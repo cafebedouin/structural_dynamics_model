@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "bor_tax_exemption_nl",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dutch Business Succession Scheme (BOR)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "family_business_owners",
+      "estate_planning_industry"
+    ],
+    "victims": [
+      "general_taxpayers",
+      "government_budget"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Family Business Owners",
+      "comment": "Family business owners benefit from reduced tax burden, facilitating smoother generational transitions. They can 'arbitrage' by structuring their business to maximize BOR benefits."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "General Taxpayers",
+      "comment": "General taxpayers bear the burden of foregone tax revenue due to the exemption. They are 'trapped' as they have no direct influence on the policy and must compensate for the lost revenue."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the BOR as a mixed system: it coordinates succession planning but also extracts from the general tax base. The global scope reflects the awareness of similar schemes in other countries and their effects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Estate Planning Industry",
+      "comment": "The estate planning industry benefits from advising families on how to structure their business to maximize the BOR benefits but are 'constrained' by the specific regulations. They also depend on the BOR's continued existence for their business model."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_impact_assessment",
+      "question": "What is the true economic impact of the BOR on job creation and retention?",
+      "resolution_mechanism": "Conducting a thorough cost-benefit analysis that accounts for both direct and indirect effects, including displacement effects.",
+      "impact": "If the BOR stimulates significant job creation and retention, it is a rope. If it primarily benefits wealthy families with minimal economic impact, it is a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantify the true economic impact of BOR on job creation and retention."
+    },
+    {
+      "id": "tax_fairness_perception",
+      "question": "How do general taxpayers perceive the fairness of the BOR?",
+      "resolution_mechanism": "Conducting public opinion surveys to gauge the perception of fairness and equity of the tax exemption.",
+      "impact": "If perceived as fair, it is a rope. If perceived as unfair and primarily benefiting the wealthy, it is a snare.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Assess general taxpayers perception of the BOR's fairness."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Dutch Business Succession Scheme (BOR) is a tax regulation designed to facilitate the transfer of family businesses to the next generation by providing substantial exemptions on inheritance and gift tax. While intended to preserve family businesses and promote economic stability, the scheme also faces scrutiny regarding its fairness and potential budgetary implications. This constraint presents a mix of coordination and extraction, benefiting specific groups while imposing costs on others.",
+    "key_agents": [
+      "Family Business Owners: Primary beneficiaries (institutional/arbitrage) \u2013 gain tax advantages.",
+      "General Taxpayers: Primary victims (powerless/trapped) \u2013 bear the cost of foregone tax revenue.",
+      "Estate Planning Industry: Secondary beneficiaries (powerful/constrained) \u2013 benefit from advising on BOR compliance.",
+      "Government Budget: Secondary victim (institutional/constrained) \u2013 potential reduction in tax revenue.",
+      "Analytical Observer: Neutral observer (analytical/analytical) \u2013 assesses the overall economic and social impacts."
+    ],
+    "logic_rationale": "Extractiveness (0.55): The BOR extracts from the general tax base to provide benefits to family businesses. The exemption reduces government revenue. Suppression (0.40): The general public has limited means to influence this policy and must accept the tax burden. Theater Ratio (0.30): The BOR is mostly functional in its intended goal, but there's a theatrical aspect where some businesses may structure operations specifically to qualify, which may not be the most efficient economic activity.",
+    "perspectival_gap": "Family business owners see the BOR as a positive tool for succession planning (rope). General taxpayers perceive it as an unfair tax break (snare). The estate planning industry recognizes the opportunities and constraints (tangled rope). The analytical observer sees a system with both coordination and extractive elements (tangled rope).",
+    "directionality_logic": "Family business owners, with their ability to strategically utilize the BOR, experience it as a rope. General taxpayers, lacking a direct means to influence the policy, perceive it as a snare. Estate planning entities benefit from their expertise in navigating BOR regulations, leading to their classification as tangled rope, as they are both benefitted and constrained. The neutral observer analyses the economic consequences of the BOR and sees it as a mix of coordination and extraction, leading to the tangled rope classification.",
+    "mandatrophy_analysis": "The BOR resolves the mandatrophy because it is a classic example of a tangled rope: it has a coordination function (facilitating business succession) but also involves extraction (transferring wealth with reduced taxation). The question is not which of these two functions dominates, but how to calibrate them to balance the benefits of preserving family businesses against the costs of reduced tax revenue and potential inequalities."
+  },
+  "network": {
+    "affects_constraints": [
+      "inheritance_tax_nl",
+      "corporate_tax_nl"
+    ]
+  },
+  "directionality_overrides": []
+}

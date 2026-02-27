@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "us_sanctions_moex_2024",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "moex_sanc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "U.S. Sanctions on Moscow Exchange (MOEX) 2024",
+    "topic_domain": "geopolitical/financial_sanctions",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_treasury_dept",
+      "alternative_trading_venues"
+    ],
+    "victims": [
+      "russian_equity_traders",
+      "moex_institutional_participants",
+      "settlement_infrastructure_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Sanctioned Russian Retail Trader",
+      "comment": "PERSPECTIVE 1: SANCTIONED RUSSIAN RETAIL TRADER (SNARE) \u2014 Complete loss of access to MOEX and U.S.-linked settlement systems. No exit option except offshore brokers with severe degradation in liquidity, clearing speed, and regulatory protection. Trapped by geography and asset location. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.75. High extractiveness because coercive barriers replace all exit options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Russian Fund Manager",
+      "comment": "PERSPECTIVE 2: RUSSIAN FUND MANAGER (SNARE) \u2014 Can theoretically move to SPYF (sanctions-compliant MOEX proxy) or Singapore exchanges, but liquidity is catastrophically reduced (~10% of pre-sanction volumes). Constrained exit \u2014 nominally available but economically crippling. Experiences extraction because capital flight costs dwarf any benefit. d\u22480.78, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "U.S. Treasury Department (OFAC)",
+      "comment": "PERSPECTIVE 3: U.S. TREASURY / OFAC (ROPE) \u2014 Sanctions are experienced as coordination mechanism: enforces capital controls, prevents capital flight, reduces Russian Central Bank access to hard currency. Treasury benefits from arbitrage authority \u2014 can adjust sanction scope, license exceptions, target designations. Sees sanction architecture as enabling other policy objectives (defense aid, sanctions evasion detection). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Negative extraction because benefits (policy leverage) exceed costs (enforcement overhead)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Alternative Trading Infrastructure (SPYF, Shanghai, Singapore Exchanges)",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE TRADING INFRASTRUCTURE (TANGLED ROPE) \u2014 Benefits from sanction-driven migration of Russian equity flows (liquidity capture, market share growth in SPYF and Singapore venues). Also constrained by need to avoid secondary U.S. sanctions for 'facilitating Russian circumvention' \u2014 must enforce compliance screening, maintain separation from MOEX settlement. d\u22480.35, f(d)\u22480.36, \u03c3=1.1 \u2192 \u03c7\u22480.27. Hybrid: benefits from displaced flows (coordination) but operates under active suppression (secondary sanctions risk and compliance burden)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Multilateral De-Dollarization Coalition",
+      "comment": "PERSPECTIVE 5: MULTILATERAL DE-DOLLARIZATION COALITION (SCAFFOLD) \u2014 China, Russia, India, Brazil invest in alternatives (CIPS, Rupee settlements, direct bilateral trade) to reduce U.S. sanction leverage. Coalition has exit option (transact outside dollar system). Sees sanctions as temporary coordination problem with explicit sunset: as BRICS+ settlement infrastructure matures (estimated 5-10 year horizon), dollar-based sanction enforcement loses mechanism. d\u22480.45, f(d)\u22480.50, \u03c3=1.1 \u2192 \u03c7\u22480.27. Moderate extraction now; declining as infrastructure sunset approaches."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Settlement Standards (SWIFT, CHIPS, Correspondent Banking)",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL SETTLEMENT STANDARDS (PITON) \u2014 Sanctions enforcement depends on SWIFT messaging, CHIPS clearing participation, and correspondent banking networks. These systems nominally operate on technical/commercial logic (settlement efficiency, liquidity provision). But de facto they have become geopolitical enforcement tools \u2014 the technical standards are now substantially performative. SWIFT's 'neutral messaging' while enabling sanctions targeting; correspondent banking's 'commercial relationships' while enforcing political exclusion. theater_ratio=0.58 suggests modest performative content; but civilizational view reveals SWIFT-as-impartial-technical-standard is substantially inertial theater masking political function. d\u22480.10, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.03. Piton classification comes from inertial framing of technical systems as value-neutral."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Global Financial Interoperability",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / GLOBAL FINANCIAL INTEROPERABILITY (SNARE) \u2014 From a universal perspective, MOEX sanctions represent a fundamental constraint on the global financial system's theoretical property of 'open access to capital markets.' The constraint is that access is always gated by political authority (U.S. Treasury, sanctions lists, OFAC designations). No observer can exit this political gating. The analytical observer sees the snare structure as civilizationally real: financial 'openness' exists only within permitted political boundaries. d\u22480.70, f(d)\u22481.05, \u03c3=1.2 \u2192 \u03c7\u22480.57. This perspective confirms rather than naturalizes the snare \u2014 it is not a law of nature but a persistent structural fact of geopolitical organization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "secondary_sanctions_enforcement_threshold",
+      "question": "How aggressively will the U.S. pursue secondary sanctions against third-country intermediaries (SPYF, Singapore venues, CIPS settlement partners) that facilitate Russian equity trading?",
+      "resolution_mechanism": "Analysis of OFAC enforcement patterns; tracking of Treasury warnings; measuring effective scope of 'facilitating Russian evasion' designations",
+      "impact": "If aggressive (secondary sanctions on Asian venues): alternative trading infrastructure loses benefit, collapses back to snare for organizers. If permissive (OFAC tolerates SPYF): scaffold perspective confirmed \u2014 alternatives gain sustained institutional legitimacy.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "U.S. enforcement intensity on third-country facilitators of Russian equity trading"
+    },
+    {
+      "id": "dollar_system_structural_resilience",
+      "question": "How quickly can BRICS+ de-dollarization infrastructure (CIPS, rupee settlements, direct clearing networks) achieve liquidity and settlement reliability sufficient to reduce U.S. sanction mechanism dependence?",
+      "resolution_mechanism": "Empirical tracking of settlement volumes through CIPS vs SWIFT; measurement of liquidity spreads and clearing times in alternative systems; correlation of geopolitical tension with capital flight to alternatives",
+      "impact": "If rapid (2-3 years): scaffold sunset accelerates; alternative infrastructure gains irreversible institutional mass. If slow (10+ years): MOEX sanctions remain structurally binding; snare classification persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Speed of de-dollarization infrastructure maturation"
+    },
+    {
+      "id": "russian_equity_market_relocation",
+      "question": "Does sustained MOEX sanction pressure cause structural relocation of Russian equity trading to non-U.S.-linked venues (SPYF, Shanghai, Singapore) with permanent migration of listed companies, or temporary avoidance with expectation of eventual U.S. market access restoration?",
+      "resolution_mechanism": "Tracking of secondary listings, delistings from MOEX alternatives, and company statements about trading venue permanence; measurement of capital allocation decisions in light of sanction continuity expectations",
+      "impact": "If permanent: Russian financial system decouples from U.S. market discipline; snare transitions to piton (theater of MOEX as primary Russian venue persists while real trading migrates). If temporary: snare persists as agents expect eventual restoration.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether MOEX sanction effects are structural or temporary"
+    },
+    {
+      "id": "moex_as_regime_legitimacy_theater",
+      "question": "Does MOEX continue functioning as a showcase of 'normal market operations' despite sanctions-driven liquidity collapse, maintaining theater of institutional legitimacy?",
+      "resolution_mechanism": "Measurement of MOEX trading volumes relative to pre-sanction baselines; analysis of regulatory rhetoric vs. actual market microstructure; tracking of blue-chip company primary issuances vs. secondary trading ratios",
+      "impact": "If high theater: piton classification is correct \u2014 MOEX becomes inert symbol. If low theater: MOEX sanctions represent genuine market seizure, confirming snare for all victim classes.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree to which MOEX functions as performative legitimacy vs. operational market"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The U.S. sanctions on the Moscow Exchange (MOEX) implemented in 2024 represent a structural constraint on Russian financial market access and capital allocation. The sanction regime creates extraction from sanctioned Russian traders and institutional participants through coercive barriers to market access, while benefiting U.S. Treasury policy leverage and alternative trading infrastructure operators. The constraint exhibits high suppression (75%) \u2014 no exit option exists within the legal framework \u2014 and significant extractiveness (68%) through capital flight costs, liquidity degradation, and forced migration to inferior venues. Theater ratio (58%) reflects partial performative content: MOEX continues operations nominally as a functioning exchange, but its liquidity and scope are drastically reduced by sanction-driven migration of trading activity. The six perspectives reveal the constraint as primarily a snare for sanctioned Russian actors (trapped with no exit), coordinative for U.S. policymakers (achieving geopolitical objectives), hybrid for alternative trading infrastructure (benefiting from displacement but constrained by secondary sanctions risk), temporary for de-dollarization coalitions (seeing a sunset as BRICS+ alternatives mature), inert for international settlement standards (piton theater masking geopolitical function), and structurally real from the analytical observer's civilizational view (confirming political gating of financial access as a persistent constraint).",
+    "key_agents": [
+      "Russian Retail Traders: Primary victims (powerless/trapped) \u2014 lose direct MOEX access; forced to offshore brokers with degraded execution",
+      "Russian Fund Managers: Secondary victims (moderate/constrained) \u2014 can access alternatives (SPYF, Singapore) but face liquidity collapse and settlement delays",
+      "U.S. Treasury / OFAC: Primary beneficiary (institutional/arbitrage) \u2014 gains policy leverage and capital control mechanisms; can adjust designations and scopes",
+      "Alternative Trading Venues (SPYF, Shanghai, Singapore Exchanges): Secondary beneficiary (organized/constrained) \u2014 capture liquidity migration but operate under secondary sanctions threat",
+      "De-Dollarization Coalition (China, Russia, India, Brazil): Organized actor (powerful/mobile) \u2014 benefits from sanction pressure to accelerate CIPS, rupee settlement alternatives with explicit sunset to sanctions mechanism",
+      "International Settlement Standards (SWIFT, CHIPS, Correspondent Banking): Institutional theater (institutional/arbitrage) \u2014 nominally neutral technical infrastructure but de facto geopolitical enforcement mechanism",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees political gating of financial access as permanent structural feature, not law of nature"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The sanction regime creates significant extraction through multiple mechanisms: (1) capital flight costs (liquidity migration to inferior venues with 50-80% execution degradation), (2) asset freezing (trapped equity positions), (3) settlement delays (circumventing SWIFT creates 2-3 day clearing lags), (4) regulatory uncertainty (sanctions scope expands unpredictably, creating risk premium on Russian assets). The measure reflects that extraction is both intentional (policy objective) and structural (system design). Suppression (0.75): High. Exit options are almost entirely eliminated: direct MOEX access is sanctioned; U.S. market access is blocked; European clearing is unavailable; SWIFT alternatives are nascent and monitored. The only remaining exit (offshore brokers with alternative settlement) involves massive execution degradation, making it economically crippling rather than genuine exit. Suppression is codified in law (Executive Order) and enforced through correspondent banking blockade. Theater ratio (0.58): Moderate. MOEX continues to publish trading data, operate clearing houses, and maintain regulatory facade of a functioning exchange. But the theater is less than complete \u2014 actual trading volumes are public and demonstrably collapsed, making the performance of 'normalcy' partially transparent. The 58% value reflects that MOEX's operational facade persists while its functional substance (liquidity, capital allocation) has migrated elsewhere.",
+    "perspectival_gap": "The constraint exhibits a stark perspectival gap between victim and beneficiary perspectives. Russian traders (powerless/trapped) experience the constraint as a snare with no exit: d\u22480.92 drives \u03c7=0.75. U.S. Treasury (institutional/arbitrage) experiences it as coordination enabling policy leverage: d\u22480.08 drives \u03c7\u2248-0.04. The beneficiary sees coordination; the victim sees extraction. Alternative trading infrastructure (organized/constrained) experiences a tangled rope: d\u22480.35 drives \u03c7\u22480.27 \u2014 they gain liquidity but operate under secondary sanctions suppression. De-dollarization coalitions (powerful/mobile) experience a scaffold: d\u22480.45 drives \u03c7\u22480.27, declining as BRICS+ alternatives mature. The piton perspective (SWIFT as neutral technical standard) naturalizes what is actually a geopolitical enforcement mechanism \u2014 theater_ratio=0.58 masks the reality that SWIFT's 'commercial neutrality' is performative. The analytical observer's snare perspective confirms that political gating of financial access is the actual structural constraint, not laws of economics or nature.",
+    "directionality_logic": "Russian retail traders: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction coefficient because no exit option exists within legal framework. Capital flight to offshore alternatives represents economic devastation, not genuine exit. Russian fund managers: Victims + constrained \u2192 d\u22480.78, f(d)\u22481.08. High extraction because alternatives (SPYF, Singapore) provide only 10-20% of pre-sanction liquidity \u2014 constrained exit is barely superior to trapped exit. U.S. Treasury: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Negative extraction coefficient because Treasury benefits from policy authority to designate, adjust, and enforce. Sanctions are a net gain to institutional power. Alternative infrastructure: Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.36. Moderate extraction because secondary sanctions threat constrains how much they can benefit from liquidity migration. De-dollarization coalition: Beneficiary/victim mix with mobile/constrained \u2192 d\u22480.45, f(d)\u22480.50. Benefits from geopolitical pressure to build alternatives; constrained by current SWIFT/dollar dependence. SWIFT/Settlement: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Beneficiary in appearance (conducts transactions) but see piton perspective \u2014 operates under inertial theater. Analytical observer: analytical \u2192 d\u22480.70, f(d)\u22481.05. Confirms snare structure at civilizational level.",
+    "mandatrophy_analysis": "Mandatrophy resolved: The constraint avoids collapsing into mislabeled 'coordination' by clearly identifying extraction (capital flight costs, settlement delays, regulatory uncertainty) as distinct from coordination (policy objectives, capital controls). The snare classification is primary (\u03c7=0.75 for trapped traders, suppression=0.75) and is NOT mislabeled as rope. The beneficiary perspective (U.S. Treasury) legitimately experiences coordination (d\u22480.08, \u03c7\u2248-0.04) because the sanction mechanism DOES solve a policy coordination problem for Treasury \u2014 it aggregates enforcement power and creates deterrence. But this coordination is asymmetric: it coordinates extractors, not coordinators-and-extractees together. The tangled rope perspective (alternative infrastructure) correctly identifies both coordination (liquidity capture) and asymmetric extraction (secondary sanctions suppression). The piton perspective identifies the SWIFT inertial theater without mislabeling it as coordination. The analytical observer's snare perspective confirms that the constraint's fundamental structure is extraction (political gating of financial access), not a misunderstood coordination mechanism. Mandatrophy is resolved because every victim perspective correctly identifies extraction, every beneficiary perspective correctly identifies asymmetric gains, and the hybrid perspectives correctly decompose into coordination + suppression components."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "cips_ruble_settlement_infrastructure",
+      "secondary_sanctions_surveillance",
+      "brics_currency_swap_agreements"
+    ],
+    "dual_formulation_note": "MOEX sanctions decompose into structural constraint (political gating of financial access) and temporal constraint (sunset via de-dollarization infrastructure maturation). The network upstream includes geopolitical coordination mechanisms (BRICS+ de-dollarization); the network downstream includes settlement infrastructure alternatives (CIPS, rupee clearing) that create exit pathways. Do not conflate MOEX sanctions with broader U.S. sanctions regime \u2014 this story focuses on financial market access constraint, not asset freezing or export control constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.7
+    }
+  ]
+}

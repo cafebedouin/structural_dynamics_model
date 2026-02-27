@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "public_domain_commons",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pubdom"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Public Domain as a Cultural Commons",
+    "topic_domain": "legal/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cultural_creators",
+      "public_access_stakeholders",
+      "derivative_work_producers"
+    ],
+    "victims": [
+      "public_domain_integrity",
+      "downstream_creators",
+      "cultural_memory_institutions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Public Domain Itself",
+      "comment": "PERSPECTIVE 1: PUBLIC DOMAIN INTEGRITY (SNARE) \u2014 The public domain as an abstract commons cannot advocate for itself. It bears the cost of expansionist IP law (term extension, technological restriction, orphan works capture) with no exit mechanism. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.77. Pure extraction dressed as cultural stewardship."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Downstream Creators (Small/Independent)",
+      "comment": "PERSPECTIVE 2: DOWNSTREAM CREATORS (SNARE) \u2014 Emerging artists, educators, and small cultural institutions lack resources to navigate orphan works, digitization barriers, and legal uncertainty around public domain reuse. Trapped by access costs and legal risk despite theoretical free use. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Memory Institutions (Libraries, Archives)",
+      "comment": "PERSPECTIVE 3: CULTURAL MEMORY INSTITUTIONS (TANGLED ROPE) \u2014 Libraries and archives benefit from the public domain (enabling their preservation mission) while being constrained by digital rights management, term extension, and resource scarcity for digitization. d\u22480.70, f(d)\u22481.06, \u03c3=1.0 \u2192 \u03c7\u22480.55. Mixed: coordination function (preservation) + extraction (cost barriers)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Publishing & Distribution Intermediaries",
+      "comment": "PERSPECTIVE 4: PUBLISHING & DISTRIBUTION INTERMEDIARIES (ROPE) \u2014 Large publishers and platforms benefit from low-friction access to public domain content for digitization, indexing, and repackaging. The constraint enables their coordination function (distributing cultural goods). d\u22480.10, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.03. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "IP-Dependent Corporations (Copyright Maximalists)",
+      "comment": "PERSPECTIVE 5: IP-DEPENDENT CORPORATIONS (SNARE) \u2014 Large entertainment, pharmaceutical, and tech corporations extract value by expanding IP terms, restricting public domain access through technological means (DRM, API restrictions), and controlling derivative works. Organized powerful agents using suppression (legal complexity, technological barriers) to reduce the public domain's functional size. d\u22480.20, f(d)\u22480.15, \u03c3=1.2 \u2192 \u03c7\u22480.36. But their mobility and power means they are not trapped \u2014 they CHOOSE extraction because it's profitable. Snare with voluntary participation from extractors."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Culture Movement & Reformers",
+      "comment": "PERSPECTIVE 6: OPEN CULTURE MOVEMENT (SCAFFOLD) \u2014 Creative Commons, Wikipedia, open-access advocates, and copyright reformers see the public domain bottleneck as temporary, solvable through licensing, policy reform, and decentralized access infrastructure. has_sunset_clause: true (estimated 15-30 year horizon for full reform). d\u22480.45, f(d)\u22480.48, \u03c3=1.2 \u2192 \u03c7\u22480.30. Low extraction because organized agents have agency and see a path forward."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Copyright Regime Apparatus",
+      "comment": "PERSPECTIVE 7: COPYRIGHT REGIME (PITON) \u2014 Patent offices, copyright registries, and enforcement bureaucracies persist largely as performative theater. Most enforcement is by private actors (corporations), not state machinery. The regime's nominal function (protecting authors) has been degraded by capture to serve corporate interests. theater_ratio\u22480.65 (ritualized registration, ceremony without function for marginal creators). d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Scarcity Constraint View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / SCARCITY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the public domain is subject to an irreducible scarcity of human attention, capital, and institutional capacity for stewardship. Some works will degrade, some will be lost, some will be locked behind paywalls simply because no one has bandwidth to preserve them. This perspective risks naturalizing what is actually policy failure as an immutable law of cultural memory. \u03b5=0.52, suppression=0.65, theater=0.58 contradicts this framing \u2014 institutional decisions (term extension, DRM legalization, funding cutbacks) are not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "orphan_works_boundary",
+      "question": "What proportion of public domain works are functionally inaccessible due to orphan status (authors untraceable), and does this constitute a failure of the public domain constraint itself?",
+      "resolution_mechanism": "Empirical survey: systematic sampling of pre-1930 published works; tracking digitization rates and access availability; correlation between copyright status and actual user access",
+      "impact": "If >60% functionally orphaned: public domain is nominal (Piton from memory institution view). If <20%: public domain is functionally accessible (Rope or Scaffold from reformer view).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "What fraction of public domain works are functionally inaccessible due to orphan status"
+    },
+    {
+      "id": "term_extension_escape_velocity",
+      "question": "Has copyright term extension reached a point where the public domain is shrinking in absolute terms (new works entering faster than old works pass into public domain)?",
+      "resolution_mechanism": "Historical analysis of copyright law changes; modeling of effective copyright duration across jurisdictions; projection of entry-into-public-domain rates under current law",
+      "impact": "If escape velocity reached: public domain is trapped in secular decline (Snare from institutional view). If not: reform still has time (Scaffold realistic).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Has copyright term extension created irreversible public domain shrinkage"
+    },
+    {
+      "id": "digital_preservation_sufficiency",
+      "question": "Can decentralized digital preservation (Wikipedia Commons, Internet Archive, institutional repositories) functionally replace state-mandated public domain enforcement, or does the constraint require centralized legal backing?",
+      "resolution_mechanism": "Empirical analysis of digital preservation sustainability: funding models, redundancy, legal risks; comparison of preservation outcomes under decentralized vs state-backed models",
+      "impact": "If decentralized sufficient: scaffold sunset is realistic, open-culture path viable. If not: constraint remains snare-like absent legal reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized digital preservation can sustain public domain without state enforcement"
+    },
+    {
+      "id": "technological_restriction_scope",
+      "question": "Do technological restrictions (DRM, API walls, terms of service) on public domain content constitute a legal circumvention of the public domain, or are they merely market friction?",
+      "resolution_mechanism": "Analysis of case law (DMCA circumvention, API ToS disputes); empirical measurement of practical access rates with and without restrictions; assessment of legal enforceability of restrictions on public domain material",
+      "impact": "If restrictions are enforceable: public domain is hollow (Snare from creator view). If not enforceable: restrictions are theater (Piton observation confirmed).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether technological restrictions effectively override legal public domain status"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "pubdom_extract_1923"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.42,
+      "id_override": "pubdom_extract_1973"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.52,
+      "id_override": "pubdom_extract_2023"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "pubdom_theater_1923"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48,
+      "id_override": "pubdom_theater_1973"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.58,
+      "id_override": "pubdom_theater_2023"
+    }
+  ],
+  "interval": {
+    "start": 1923,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "The public domain constraint is the legal-structural mechanism defining which creative works belong to no one and everyone. This constraint exhibits a critical tension: it is simultaneously the foundation of cultural commons, a victim of institutional capture, and an object of systematic extraction through term extension, technological restriction, and complexity. From 1923 to 2023, the effective size and accessibility of the public domain has degraded through multiple mechanisms: (1) Copyright Term Extension Acts (Sonny Bono, EU harmonization) moved the entry threshold forward; (2) Digital Rights Management and API walls restrict access to public domain works; (3) Orphan works and digitization barriers make nominally free works practically inaccessible; (4) Corporate consolidation of publishing and distribution concentrates control over public domain access. The constraint demonstrates all six types from different structural positions: pure extraction (Snare for powerless creators), mixed coordination-extraction (Tangled Rope for memory institutions), net benefit (Rope for publishers), temporary problem with reform path (Scaffold for open-culture movement), degraded ritual (Piton for copyright apparatus), and false naturalization (Mountain for civilizational scarcity view). The theater_ratio has risen from 0.35 (1923) to 0.58 (2023), indicating increasing performative content in copyright administration \u2014 the regime maintains ceremonial registration and enforcement while actual control flows through corporate technological and contractual mechanisms outside the legal system.",
+    "key_agents": [
+      "The Public Domain Itself: Victim (powerless/trapped) \u2014 abstract collective good bearing costs of term extension and access barriers",
+      "Downstream Creators (Small & Independent): Victims (powerless/trapped) \u2014 face legal uncertainty, access costs, and resource barriers despite theoretical free use",
+      "Cultural Memory Institutions: Mixed (moderate/constrained) \u2014 benefit from preservation function but constrained by costs and legal complexity",
+      "Publishing & Distribution Intermediaries: Beneficiaries (institutional/arbitrage) \u2014 profit from low-cost access to public domain content for digitization and repackaging",
+      "IP-Dependent Corporations: Primary extractors (powerful/mobile) \u2014 actively restrict public domain through term extension, DRM, and control of distribution channels",
+      "Open Culture Movement: Organized reformers (organized/constrained) \u2014 see constraint as temporary, building alternative pathways (Creative Commons, Wikipedia, open-access infrastructure)",
+      "Copyright Regime Apparatus: Institutional inertia (institutional/arbitrage) \u2014 maintains performative enforcement ritual while losing functional control to private actors",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy failure as scarcity law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The public domain faces systematic extraction through multiple vectors: (1) term extension that moves entry threshold forward; (2) DRM legalization that restricts access to nominally free works; (3) orphan works capture through deliberate resource starvation; (4) corporate consolidation that gatekeeps distribution. The extraction is not absolute (many works are accessible, digitization is progressing), but the trajectory is toward shrinkage and consolidation. Suppression (0.65): High. Significant barriers to public domain function include: legal complexity (orphan works, rights-holder traceability), technological restrictions (DRM, API walls), institutional barriers (digitization costs, preservation capacity), and active legal obstruction (DMCA circumvention rules, term extension). The constraint has been deliberately complicated to make free use expensive. Theater ratio (0.58): Moderate-high. The copyright regime combines real function (some author protection, some legitimate rights management) with substantial theater: ceremonial registration processes, enforcement rituals largely delegated to private actors, and performative appeals to author welfare that mask corporate capture. The rise from 0.35 (1923) to 0.58 (2023) reflects increasing corporate control through technological and contractual means outside the ceremonial legal system.",
+    "perspectival_gap": "This constraint demonstrates fundamental disagreement on classification across structural positions. The public domain itself (powerless) sees pure extraction (Snare) \u2014 no defense mechanism, no exit. Downstream creators (powerless but organized) see snare-like conditions (trapped by cost and legal uncertainty). Memory institutions (moderate) see mixed function and constraint (Tangled Rope) \u2014 they benefit from the commons but are squeezed by digitization costs and legal complexity. Publishers (institutional) see coordination benefit (Rope) \u2014 low-cost access to materials for repackaging and distribution. Corporations (powerful) see snare-like conditions in reverse \u2014 they extract by restricting the commons. The open-culture movement (organized) sees a temporary problem with a reform path (Scaffold) \u2014 current restrictions are real but solvable through licensing, policy, and decentralized infrastructure. The copyright apparatus itself (institutional) sees degraded function (Piton) \u2014 nominally controlling access but actually dominated by corporate private ordering. The analytical observer risks seeing immutable scarcity (Mountain) \u2014 'cultural memory is inherently scarce, some works will be lost' \u2014 but the base properties reveal this as naturalization of policy choices, not law of nature.",
+    "directionality_logic": "Public domain itself: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction for an agent that cannot exit. Downstream creators: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. High extraction for those bearing costs without exit. Memory institutions: Victim + constrained + beneficiary of commons \u2192 d\u22480.70, f(d)\u22481.06. Mixed because they have some agency (digitization initiatives, institutional partnerships) but constrained by resources and legal complexity. Publishers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Net beneficiary; can arbitrage access. IP corporations: Powerful + mobile but choosing extraction \u2192 d\u22480.20, f(d)\u22480.15. Moderate extraction because they have power to exit (they could compete on innovation instead of restriction) but choose not to. Copyright apparatus: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification from theater gate, not from high chi. Open-culture movement: Organized + constrained but with agency \u2192 d\u22480.45, f(d)\u22480.48. Low extraction because they see a path forward. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival and false.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the public domain is a structural constraint that produces genuinely different classifications from different positions. The mandate (to maintain a vibrant public domain) is neither uniformly achievable nor uniformly thwarted. For powerless agents (the public domain itself, small creators), the constraint classifies as Snare: pure extraction with no exit. For institutional beneficiaries (publishers), it classifies as Rope: coordination with mutual benefit. For reformers (open-culture movement), it classifies as Scaffold: a temporary problem being solved. For the apparatus itself, it classifies as Piton: degraded ritual maintained by inertia. The constraint is NOT misclassified as pure coordination (Rope) \u2014 the multiple victim declarations (public_domain_integrity, downstream_creators, cultural_memory_institutions) ensure that asymmetric extraction is captured. The constraint is NOT misclassified as pure extraction (Snare) \u2014 the beneficiary declarations (cultural_creators, public_access_stakeholders, derivative_work_producers) ensure that coordination function is captured. The Tangled Rope classification at the analytical level correctly models that the constraint simultaneously enables creation (coordination function) and constrains creators (extraction mechanism). The mandatrophy is thus resolved: all six types are locally valid from different positions; Tangled Rope is the global classification because the constraint simultaneously serves coordination and extraction functions, with the asymmetry (benefiting publishers and IP corporations at the expense of creators and memory institutions) being structural rather than accidental."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyright_term_extension",
+      "orphan_works_capture",
+      "digital_rights_management",
+      "knowledge_commons_fragmentation"
+    ],
+    "dual_formulation_note": "The public domain constraint forms a family with four related constraints: (1) copyright_term_extension (\u03b5\u22480.42, Snare) \u2014 the specific legal mechanism for shrinking the public domain; (2) orphan_works_capture (\u03b5\u22480.48, Tangled Rope) \u2014 the specific mechanism through which nominally free works become functionally inaccessible; (3) digital_rights_management (\u03b5\u22480.55, Snare) \u2014 the specific technological mechanism for restricting access to public domain materials; (4) knowledge_commons_fragmentation (\u03b5\u22480.38, Tangled Rope) \u2014 the broader structural consequence when public domain access becomes fragmented across proprietary platforms. The public_domain_commons constraint is upstream of all four \u2014 these are implementation mechanisms. \u03b5 values differ because each constraint has different observable (legal term length, orphan status tracking, DRM technical specificity, commons fragmentation measure) but all depend on the underlying public domain constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    }
+  ]
+}

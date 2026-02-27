@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "civilizational_maintenance_debt",
+    "version": "1.0",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Crumbling Foundation: Civilizational Maintenance Debt",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_term_economic_actors",
+      "incumbent_industries"
+    ],
+    "victims": [
+      "future_generations",
+      "critical_infrastructure"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "Future generations inherit the decaying infrastructure and bear the consequences of deferred maintenance, with limited ability to influence present decisions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Critical Infrastructure Operators",
+      "comment": "Operators are constrained by limited budgets and regulatory frameworks, but also benefit from government contracts and subsidies. They experience both the coordination and extraction aspects of the maintenance debt."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Short-Term Economic Actors",
+      "comment": "These actors (e.g., politicians focused on election cycles, corporations focused on quarterly profits) benefit from deferring maintenance as it frees up resources for more immediate gains. They can 'arbitrage' the system by prioritizing short-term gains over long-term sustainability."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Industries",
+      "comment": "Incumbent industries (e.g., those profiting from existing infrastructure) may resist innovation and maintenance upgrades to protect their market share, but are also constrained by existing regulations and customer expectations. Their power has atrophied, as nimbler competitors enter the space. The performative aspect is that they make symbolic gestures towards maintenance without actually addressing the underlying issues."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the analytical observer sees the tension between short-term gains and long-term sustainability as a tangled rope: some coordination is needed to maintain basic functionality, but significant extraction occurs from future generations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "discount_rate_justification",
+      "question": "What is the appropriate discount rate for valuing future infrastructure needs relative to present economic benefits?",
+      "resolution_mechanism": "Economic modeling that incorporates environmental and social costs of infrastructure failure; intergenerational equity frameworks",
+      "impact": "High discount rate justifies deferring maintenance, leading to snare classification. Low discount rate prioritizes long-term sustainability, enabling a scaffold or rope classification.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Appropriate discount rate for valuing future infrastructure needs"
+    },
+    {
+      "id": "technical_substitution_viability",
+      "question": "To what extent can new technologies substitute for existing infrastructure, mitigating the impact of maintenance debt?",
+      "resolution_mechanism": "Technological forecasting and engineering assessments of the potential for disruptive innovations (e.g., decentralized energy, autonomous vehicles) to reduce reliance on aging infrastructure.",
+      "impact": "High substitution viability reduces extractiveness, potentially shifting classification to scaffold. Low viability exacerbates the snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Potential for new technologies to substitute for existing infrastructure"
+    },
+    {
+      "id": "political_horizon_threshold",
+      "question": "What event or trigger is needed to shorten the political horizon beyond short-term economic considerations?",
+      "resolution_mechanism": "Historical analysis of transformative changes that are correlated to infrastructure investment.",
+      "impact": "A shift in the political horizon from election cycle to long-term planning would prioritize funding maintenance, pushing this constraint towards a rope or scaffold.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Required changes to shorten the political horizon"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The civilizational maintenance debt refers to the growing gap between the infrastructure required to sustain modern living standards and the actual resources allocated to maintain them. This manifests as deferred maintenance, underinvestment in upgrades, and a general decline in the quality and reliability of essential services. This constraint creates a tension between short-term economic gains and long-term civilizational sustainability, with significant consequences for future generations.",
+    "key_agents": [
+      "Short-Term Economic Actors: Primary beneficiary (institutional/arbitrage) - Benefit from deferring maintenance to free up resources for short-term gains.",
+      "Future Generations: Primary victim (powerless/trapped) - Inherit the decaying infrastructure and bear the consequences.",
+      "Critical Infrastructure: Primary victim (powerless/trapped) - Experiences neglect and decay.",
+      "Critical Infrastructure Operators: Moderate actors (moderate/constrained) - Constrained by limited budgets but benefit from subsidies.",
+      "Incumbent Industries: Degraded institutions (institutional/constrained) - Resist upgrades to existing infrastructure in order to maintain market dominance."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The extraction comes from future generations who bear the burden of decaying infrastructure. Short-term economic actors extract value by deferring maintenance. Suppression (0.70): High. The lack of effective political mechanisms for prioritizing long-term infrastructure needs suppresses alternatives. Theater Ratio (0.75): High. Some efforts are made to address maintenance needs, but these are often insufficient to prevent further decline. Incumbent industries make symbolic gestures towards maintenance without actually addressing the underlying issues.",
+    "perspectival_gap": "Future generations experience this as a snare, as they are trapped with the decaying infrastructure. Short-term economic actors see it as a rope, a way to free up resources for immediate gains. Critical Infrastructure Operators experience a tangled rope, constrained by budgets but benefiting from contracts. Incumbent industries see a piton as the rules around maintenance are vestiges of a system in decay, with symbolic gestures being made to address the issue.",
+    "directionality_logic": "Short term economic actors are beneficiaries because they gain by deferring maintenance. Future generations are the victims because they must bear the cost of deferred maintenance. Incumbent industries, although benefitting from the current system, also have constraints in existing structure making them constrained. Critical Infrastructure Operators are constrained as it becomes difficult to perform maintenance.",
+    "mandatrophy_analysis": "The classification prevents mislabeling as the benefits are realized by a small group in the present, while the costs are spread across a large group over a prolonged period of time. The focus on extraction onto future generations prevents misclassification. The high theater ratio and extractiveness necessitate the mandatrophy resolution."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

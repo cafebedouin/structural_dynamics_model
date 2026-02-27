@@ -1,0 +1,166 @@
+{
+  "header": {
+    "constraint_id": "ergo_sig_usd_protocol",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "SigUSD Stability Mechanism",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ergo_miners",
+      "ergo_holders_early_adopters"
+    ],
+    "victims": [
+      "sigusd_holders_late_adopters",
+      "systemic_stability_of_ergo"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "SigUSD Holders (Late Adopters)",
+      "comment": "Perspective 1: SigUSD holders who bought in near a peak and are now underwater (powerless/trapped). They are trapped because exiting would realize losses and they may believe in a recovery. They bear the cost of any instability in the system. High extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "SigUSD Stabilizers (ERGO Holders)",
+      "comment": "Perspective 2: Ergo holders who participate in stabilizing the SigUSD price through arbitrage and providing liquidity (moderate/constrained). They have some ability to exit, but doing so impacts their returns. They both benefit from the stability mechanism and bear some risk. Medium extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Ergo Miners",
+      "comment": "Perspective 3: Ergo miners who earn transaction fees and block rewards related to SigUSD transactions (institutional/arbitrage). They are beneficiaries because the stablecoin increases demand for Ergo and its blockchain. Low extraction, primarily coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Ergo Holders (Early Adopters)",
+      "comment": "Perspective 4: Ergo holders who adopted Ergo early on and benefit from the increased value and stability brought by SigUSD. They have the power to influence the system's governance and development. They benefit significantly but also risk reputational damage if the system fails. This is why they are considered powerful and mobile. Low extraction from their perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Systemic Stability of Ergo",
+      "comment": "Perspective 5: The systemic stability of the Ergo blockchain itself (powerless/trapped). If SigUSD fails catastrophically, it could damage the entire Ergo ecosystem's reputation and long-term viability. This is a trapped situation because the blockchain cannot simply exit or reorganize. High extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 6: Analytical observer analyzing the long-term economic impact of the SigUSD protocol (analytical/analytical). The observer sees the mixed benefits and risks to various participants and the broader Ergo ecosystem. The observer also accounts for the possible network effects to make the type tangled_rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oracle_manipulation_risk",
+      "question": "How vulnerable are the price oracles used by the protocol to manipulation?",
+      "resolution_mechanism": "Rigorous security audits of the oracle implementations, stress testing under various market conditions, and diversification of oracle sources.",
+      "impact": "High vulnerability: potential for catastrophic depegging and loss of funds. Low vulnerability: increased confidence in system stability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Risk of price oracle manipulation"
+    },
+    {
+      "id": "black_swan_resilience",
+      "question": "How well does the protocol handle extreme market volatility ('black swan' events)?",
+      "resolution_mechanism": "Simulations using historical market data, analysis of the protocol's bonding curve mechanics, and emergency shutdown procedures.",
+      "impact": "Low resilience: potential for runaway inflation or collapse of the stablecoin. High resilience: increased confidence in long-term viability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Resilience to extreme market events"
+    },
+    {
+      "id": "bonding_curve_parameters",
+      "question": "Are the parameters of the bonding curve (used for minting and redeeming SigUSD) optimally tuned?",
+      "resolution_mechanism": "Economic modeling and simulations to determine the optimal parameters for different market conditions.",
+      "impact": "Suboptimal parameters: potential for inefficient capital utilization or instability. Optimal parameters: improved stability and capital efficiency.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Optimization of bonding curve parameters"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "SigUSD is an algorithmic stablecoin on the Ergo blockchain, designed to maintain a value of $1 USD through a reserve-backed system. Ergo holders can provide ERG to the reserve in exchange for SigUSD, and vice versa. The system relies on oracles to determine the ERG/USD exchange rate. If the reserve ratio falls below a certain threshold, minting of new SigUSD is halted, and arbitrageurs are incentivized to restore the balance by providing ERG or redeeming SigUSD. This protocol has multiple impacts on different agents within the Ergo ecosystem. The potential for oracle manipulation is a central risk.",
+    "key_agents": [
+      "SigUSD Holders (Late Adopters): Powerless/Trapped - Those who bought SigUSD at high prices and could suffer significant losses during a depeg.",
+      "SigUSD Stabilizers (ERGO Holders): Moderate/Constrained - Those who arbitrage SigUSD to maintain peg.",
+      "Ergo Miners: Institutional/Arbitrage - Miners benefit from the increased activity on Ergo blockchain.",
+      "Ergo Holders (Early Adopters): Powerful/Mobile - Early adopters who are more resilient to price fluctuations.",
+      "Systemic Stability of Ergo: Powerless/Trapped - The Ergo ecosystem could be compromised with a SigUSD catastrophic failure.",
+      "The Analytical Observer: Analytical/Analytical - Can see and analyze the full structural properties of the protocol."
+    ],
+    "logic_rationale": "Extractiveness (0.55): The system extracts value from SigUSD holders if it fails to maintain its peg. Late adopters are especially vulnerable. Suppression (0.45): Users face some barriers to exit during extreme market conditions due to slippage and potential network congestion. However, arbitrageurs are incentivized to maintain the peg, mitigating some of the suppression. Theater Ratio (0.30): The bonding curve mechanism and oracle reliance introduce a degree of performative action, but it is primarily functional. The protocol has seen usage, but there have been volatility events.",
+    "perspectival_gap": "Different participants experience the SigUSD protocol differently. Late adopters may perceive it as a snare, while early adopters see it as a rope. The analytical observer recognizes the tangled rope nature due to the coordination mechanism and potential extractive properties. These are legitimate perspectives on the complex system.",
+    "directionality_logic": "SigUSD holders bear the cost of instability (high directionality), while Ergo miners benefit from increased transaction volume (low directionality). Early adopters benefit from increased adoption. The core stability mechanism extracts value from late adopters and provides stability benefits to miners.",
+    "mandatrophy_analysis": "The protocol's classification as Tangled Rope resolves the Mandatrophy problem by recognizing the coordination aspect (providing a stablecoin) and the potential extractive element if the system depegs. It's not a pure coordination mechanism (Rope) or pure extraction (Snare), but a hybrid that depends on the participants position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

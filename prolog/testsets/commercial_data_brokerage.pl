@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: commercial_data_brokerage
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_commercial_data_brokerage, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,8 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
     narrative_ontology:omega_variable/3,
-    constraint_indexing:constraint_classification/3.
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,25 +58,32 @@
  *   domain: technological/economic
  *
  * SUMMARY:
- *   The modern data brokerage industry systematically collects, aggregates,
- *   and sells vast quantities of personal information about individuals, often
- *   without their meaningful knowledge or consent. This information is sourced
- *   from apps, web tracking, public records, and purchase histories, creating
- *   detailed profiles that are sold to other companies for marketing, risk
- *   assessment, and other purposes. The constraint is the existence of this
- *   extractive market, which operates largely outside the control of the
- *   individuals whose data constitutes the product.
+ *   The commercial data brokerage ecosystem represents one of the largest
+ *   systematic extractions of value from unwitting individuals in the modern
+ *   economy. Data brokers aggregate information from hundreds of sources —
+ *   public records, purchase histories, browsing behavior, location tracking,
+ *   financial data, health information — and sell profiles to advertisers,
+ *   financial firms, insurance companies, employers, and law enforcement. The
+ *   extraction mechanism is structural: individuals cannot meaningfully
+ *   consent because they lack information about what is collected, how it is
+ *   aggregated, or who accesses it. The suppression is extreme because
+ *   collection occurs without their knowledge, opt-out mechanisms are
+ *   deliberately obscured, and enforcement against brokers has been minimal.
+ *   Over the past 20 years, the ecosystem has evolved from fragmented
+ *   regional brokers to global data giants (Experian, Equifax, TransUnion,
+ *   Acxiom, Oracle Data Cloud) with near-universal coverage and automated
+ *   real-time data flows. Theater has increased as privacy policies and
+ *   regulatory compliance theater have proliferated without meaningfully
+ *   constraining extraction.
  *
- * KEY AGENTS (by structural relationship):
- *   - digital_service_users: Primary target (powerless/trapped) — their data is the raw
- *     material extracted, and meaningful opt-out is structurally suppressed.
- *   - data_brokers_and_clients: Primary beneficiary (institutional/arbitrage) —
- *     they profit directly from the sale and use of the aggregated data.
- *   - app_developers_and_platforms: Inter-institutional beneficiary
- *     (institutional/constrained) — they benefit by selling user data to
- *     brokers but are also dependent on this ecosystem for revenue.
- *   - analytical_observer: Analytical observer — sees the full extractive
- *     structure and its coordination functions.
+ * KEY AGENTS:
+ *   - Data Subjects (individuals): Primary victims (powerless/trapped) — cannot exit data collection; extraction occurs without knowledge or meaningful consent
+ *   - Data Brokers (corporate): Primary beneficiaries (institutional/arbitrage) — monetize aggregated profiles; have full agency to shift business models if pressured
+ *   - Advertising Platforms (Google, Meta, etc.): Secondary beneficiaries (institutional/arbitrage) — consume brokered data to improve targeting; benefit from suppressed competition
+ *   - Financial Services Firms (lenders, insurers, employers): Secondary beneficiaries (institutional/arbitrage) — use brokered data for risk assessment and targeting
+ *   - Regulated Consumers (GDPR/CCPA jurisdictions): Secondary victims (moderate/mobile) — have formal exit options (opt-out, data access) but friction remains high
+ *   - Privacy Regulation Coalition (regulators, advocates, privacy engineers): Organized agents (organized/constrained) — building alternative architectures (privacy-by-design, federated learning, data cooperatives) with sunset logic
+ *   - Analytical Observer: Civilizational context (analytical/analytical) — recognizes brokerage as contingent institutional choice, not natural law of information systems
  */
 
 /* ==========================================================================
@@ -79,86 +91,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(commercial_data_brokerage, 0.75).
-domain_priors:suppression_score(commercial_data_brokerage, 0.85).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(commercial_data_brokerage, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(commercial_data_brokerage, 0.58).
+domain_priors:suppression_score(commercial_data_brokerage, 0.72).
+domain_priors:theater_ratio(commercial_data_brokerage, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(commercial_data_brokerage, extractiveness, 0.75).
-narrative_ontology:constraint_metric(commercial_data_brokerage, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(commercial_data_brokerage, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(commercial_data_brokerage, extractiveness, 0.58).
+narrative_ontology:constraint_metric(commercial_data_brokerage, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(commercial_data_brokerage, theater_ratio, 0.68).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(commercial_data_brokerage, snare).
+narrative_ontology:human_readable(commercial_data_brokerage, "The Commercial Data Brokerage Ecosystem").
+narrative_ontology:topic_domain(commercial_data_brokerage, "technological/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(commercial_data_brokerage). % Tech (SDKs) and legal (ToS)
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(commercial_data_brokerage, data_brokers_and_clients).
-narrative_ontology:constraint_beneficiary(commercial_data_brokerage, app_developers_and_platforms).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(commercial_data_brokerage, digital_service_users).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(commercial_data_brokerage, data_brokers).
+narrative_ontology:constraint_beneficiary(commercial_data_brokerage, advertising_platforms).
+narrative_ontology:constraint_beneficiary(commercial_data_brokerage, financial_services_firms).
+narrative_ontology:constraint_victim(commercial_data_brokerage, data_subjects).
+narrative_ontology:constraint_victim(commercial_data_brokerage, privacy_expectations).
+narrative_ontology:constraint_victim(commercial_data_brokerage, individual_autonomy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (DIGITAL SERVICE USERS)
-% Agent whose data is extracted. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if privacy movements or class-action lawsuits
-% reach a critical mass, potentially changing the classification.
+% PERSPECTIVE 1: DATA SUBJECT (SNARE) — Individuals cannot realistically exit data collection. Even with privacy settings and opt-out requests, data is already aggregated and sold. No meaningful alternative paths exist; suppression is near-total because collection occurs without knowledge and consent is not genuinely voluntary. Maximum extraction experienced.
 constraint_indexing:constraint_classification(commercial_data_brokerage, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (DATA BROKERS)
-% Agent who profits directly. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+% PERSPECTIVE 2: DATA BROKER (ROPE) — Experiences the ecosystem as coordination: aggregating fragmented data sources into marketable profiles solves the buyer's information problem. Benefits substantially from the constraint through recurring revenue. Suppression is low for this agent; they have full agency and can exit if regulatory pressure mounts. For them, this is not extraction but coordination benefit.
 constraint_indexing:constraint_classification(commercial_data_brokerage, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: REGULATED CONSUMER (TANGLED ROPE) — In jurisdictions with privacy law (GDPR, CCPA), consumers have formal exit options: opt-out requests, data access rights. These are mobile rather than trapped, but friction remains high. Consumers benefit from some data-driven services (targeted ads, credit scoring) while bearing extraction costs through privacy loss. Moderate extraction and moderate coordination.
+constraint_indexing:constraint_classification(commercial_data_brokerage, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: PRIVACY REGULATION COALITION (SCAFFOLD) — Organized agents (regulators, advocacy groups, privacy engineers) see the brokerage ecosystem as a temporary coordination failure with structural sunset. Privacy-by-design mandates, federated learning, differential privacy, and decentralized data models represent alternative pathways that bypass centralized brokerage. Sunset clause: as technical architectures mature and enforcement strengthens, the data brokerage model loses extractive force. Theater remains moderate because regulations produce performative compliance while brokers shift to shadow brokerage.
+constraint_indexing:constraint_classification(commercial_data_brokerage, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: LEGACY PRIVACY THEATER (PITON) — Privacy policies, opt-out mechanisms, and 'transparent' data practices are substantially performative. Most users cannot or do not read privacy policies; opt-out requests disappear into administrative black holes; transparency statements obscure rather than clarify. The theater persists through institutional inertia — companies maintain privacy rituals while collecting aggressively. Theater ratio 0.68 reflects that much of the compliance infrastructure is ritual without functional constraint.
+constraint_indexing:constraint_classification(commercial_data_brokerage, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% The engine's derived d ≈ 0.72 → f(d) ≈ 1.15 produces a high χ,
-% correctly identifying the overall structure as a Snare.
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) — From a civilizational/universal view, the structural reality is that data brokerage systematically extracts information asymmetry from powerless agents. No amount of 'transparency' changes this: knowing you are surveilled does not restore autonomy. The constraint is snare, not mountain — it is not an immutable law of information systems but a contingent institutional choice to centralize and commercialize personal data. Alternative architectures (federated, decentralized, data cooperatives) demonstrate that this is not natural or necessary.
 constraint_indexing:constraint_classification(commercial_data_brokerage, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% Platforms are beneficiaries but are more constrained than pure brokers,
-% as their business models depend heavily on this ecosystem.
-% The engine differentiates via directionality: the 'constrained' exit
-% produces a higher d value than the 'arbitrage' exit of the pure brokers.
-constraint_indexing:constraint_classification(commercial_data_brokerage, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(global))).
-
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -166,30 +165,18 @@ constraint_indexing:constraint_classification(commercial_data_brokerage, rope,
 
 :- begin_tests(commercial_data_brokerage_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify the core perspectival gap: Snare for the user, Rope for the broker.
-    constraint_indexing:constraint_classification(commercial_data_brokerage, snare,
-        context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(commercial_data_brokerage, rope,
-        context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(commercial_data_brokerage, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(commercial_data_brokerage, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(inter_institutional_view) :-
-    % Verify that the constrained institutional actor (platforms) still
-    % perceives the constraint as a Rope, distinct from the powerless target.
-    constraint_indexing:constraint_classification(commercial_data_brokerage, rope,
-        context(agent_power(institutional), _, exit_options(constrained), _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(commercial_data_brokerage, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_view_matches_claim) :-
-    % The analytical perspective should match the declared claim.
-    narrative_ontology:constraint_claim(commercial_data_brokerage, Claim),
-    constraint_indexing:constraint_classification(commercial_data_brokerage, Claim,
-        context(agent_power(analytical), _, _, _)).
-
-test(threshold_validation_high_extraction) :-
-    narrative_ontology:constraint_metric(commercial_data_brokerage, extractiveness, E),
-    narrative_ontology:constraint_metric(commercial_data_brokerage, suppression_requirement, S),
-    E >= 0.46,  % Snare-level extraction
-    S >= 0.60.  % Snare-level suppression
+test(piton_threshold) :-
+    domain_priors:theater_ratio(commercial_data_brokerage, TR),
+    TR >= 0.70.
 
 :- end_tests(commercial_data_brokerage_tests).
 
@@ -199,113 +186,101 @@ test(threshold_validation_high_extraction) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): The entire multi-billion dollar data brokerage
- *     industry is built on extracting the value of personal data from individuals,
- *     who receive no direct compensation. This represents a very high degree of
- *     value extraction.
- *   - Suppression Score (S=0.85): Alternatives are structurally suppressed.
- *     Participating in the modern digital economy almost requires submission to
- *     this data collection. Opt-out mechanisms are intentionally complex,
- *     incomplete, or ineffective, and there is significant industry lobbying
- *     against meaningful privacy regulation.
+ *   Extractiveness (0.58): High-moderate. Data brokers extract substantial value from data subjects: profiles are sold repeatedly, generating recurring revenue. The extraction is sustained because individuals cannot exit or negotiate. Extractiveness has increased from 0.32 to 0.58 over the interval as data brokers have expanded coverage (from 100M to 500M+ profiles), integrated new data sources (location, behavioral, health), and automated aggregation. However, extractiveness is not maximal (0.70+) because regulatory friction (GDPR, CCPA) has created some friction, and privacy-conscious segments have some exit options through VPNs, data brokers, and privacy-by-design services. Suppression (0.72): Very high. Structural suppression is near-total: data collection occurs without knowledge, consent mechanisms are deliberately obscured through dark patterns in privacy policies, and brokers have no incentive to surface alternatives. Regulatory suppression is lower — enforcement against brokers exists but is slow and inconsistent. Theater ratio (0.68): Moderate-high. Privacy policies proliferate but are unreadable (average 73,000 words per year per person). Opt-out mechanisms exist but are administratively burdensome and often ineffective. GDPR/CCPA enforcement produces theater of compliance without preventing aggregation or resale. Data deletion requests disappear into opaque processes. The theater has increased from 0.42 to 0.68 as regulatory requirements have created compliance infrastructure that obscures rather than constrains extraction.
  *
  * PERSPECTIVAL GAP:
- *   - From the perspective of a `digital_service_user` (powerless, trapped), the system is a
- *     Snare. Their data is taken, they have no control, and no viable alternative
- *     exists. The effective extraction (χ) is extremely high.
- *   - From the perspective of a `data_broker` (institutional, arbitrage), the
- *     system is a Rope. It's a highly efficient coordination mechanism for matching
- *     data supply with demand, creating a valuable market. For them, effective
- *     extraction is negative, as the system subsidizes their business model.
+ *   This constraint exhibits a profound perspectival gap between trapped and arbitrage-positioned agents. The data subject sees snare: no exit, no knowledge, maximum suppression. The data broker sees rope: solving a coordination problem (matching buyers with profiles), enjoying arbitrage benefits, experiencing zero suppression. A regulated consumer in GDPR jurisdiction sees tangled_rope: formal exit options but significant friction, mixed benefits from data-driven services, moderate suppression. The privacy coalition sees scaffold: technical alternatives exist and are maturing; sunset is real if adoption accelerates. The institutional observer sees piton: privacy mechanisms are performative rituals that don't actually constrain the core extraction. The analytical observer sees snare: information asymmetry is fundamental — knowing you are profiled does not restore autonomy. The perspectival gap reveals that the same constraint is snare/rope/tangled_rope/scaffold/piton/snare depending on the observer's structural position and exit capacity.
  *
  * DIRECTIONALITY LOGIC:
- *   - The direction of extraction is unambiguous. Value flows from `digital_service_users`
- *     (the declared victims) to the `data_brokers_and_clients` and `app_developers`
- *     (the declared beneficiaries). This structural relationship is the primary
- *     input to the directionality `d` derivation, which correctly models the
- *     asymmetric nature of the constraint.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The model distinguishes between pure-play data brokers (arbitrage exit) and
- *   platforms/app developers (constrained exit). While both are institutional
- *   beneficiaries, the platforms are more deeply embedded in the ecosystem. Their
- *   business models depend on it, giving them less freedom to exit or change
- *   terms. The directionality engine reflects this with a slightly higher `d`
- *   for the constrained actor, but the classification remains Rope for both, as
- *   they are on the benefiting side of the extractive divide.
+ *   Directionality (d) for each perspective is determined by structural position. Data subjects are victims with trapped exits: their d approaches 1.0, maximizing experienced extraction chi. Data brokers are beneficiaries with arbitrage options: their d is near 0.0, creating negative chi (extraction runs toward them, not away). Regulated consumers have mobile exits (opt-out, VPN, privacy-conscious alternatives) and are both beneficiaries (data-driven services) and victims (privacy loss): their d is moderate (~0.50-0.65), classifying them as tangled_rope. Privacy regulation coalition has organized power and constrained (not trapped) exits: their d is moderate (~0.55), with exit pathways visible through technical alternatives. The piton perspective reflects institutional inertia: privacy theater persists not because it constrains extraction but because regulatory requirements mandate it; the theater itself becomes the mechanism of false legitimation.
  *
  * MANDATROPHY ANALYSIS:
- *   [RESOLVED MANDATROPHY] This classification avoids the common mandatrophy error
- *   of labeling any market-like mechanism a "Rope." By indexing to the powerless
- *   agent, the framework correctly identifies the coercive, extractive nature of
- *   the system. The fact that it provides a coordination benefit to the
- *   institutional players does not negate the Snare experienced by its targets;
- *   it explains why the Snare is so robustly defended by its beneficiaries.
+ *   MANDATROPHY RESOLVED: This constraint avoids conflating coordination with extraction. The snare classification (which dominates from the data subject's perspective) does not depend on arguing that all data aggregation is inherently extractive. Rather, it depends on the structural facts: (1) subjects cannot exit, (2) suppression is extreme (no meaningful knowledge or consent), (3) value asymmetry is large (brokers extract 100+ times the individual subject's share), (4) coordination benefits are minimal for subjects and not distributed. If data brokerage were a genuine coordination mechanism, we would expect to see beneficiaries paying for the coordination benefit, exit options being real, and suppression being low. Instead, we observe the opposite. The tangled_rope perspective (regulated consumers with exit options) is legitimate in GDPR/CCPA jurisdictions where subjects have formal rights, but even there, friction prevents many from exercising them. The rope perspective (data brokers) is accurate from their structural position but does not dominate globally — it is the view from the extracted-to position, not from the extracted-from position. The scaffold perspective is real but aspirational: privacy-by-design and data cooperatives are possible futures, not current structures. The piton perspective reveals that privacy theater (policies, opt-outs, transparency statements) performs regulatory legitimacy while the core extraction mechanism continues unchanged.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_commercial_data_brokerage,
-    'Is the non-consensual nature of data collection a fundamental, structural feature of the industry''s business model, or a correctable market failure?',
-    'Passage of comprehensive privacy legislation (e.g., GDPR with fewer loopholes and stronger enforcement) and observation of industry adaptation or collapse.',
-    'If fundamental, the system remains a Snare and attempts at reform will be resisted or routed around. If correctable, it could transition to a Tangled Rope where individuals gain some agency and compensation.',
+    consent_validity_threshold,
+    'At what level of friction and information asymmetry does ''consent'' cease to be meaningful in data collection agreements?',
+    'Behavioral studies comparing actual vs stated understanding of data practices; correlation between consent rates and policy readability metrics; analysis of regulatory enforcement outcomes',
+    'If threshold is high (current ~95% click-through rates): consent framework is largely fiction. If threshold is lower (e.g., active opt-in with 20%+ read-through): consent becomes operational gatekeeper. Changes classification from snare to tangled_rope.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(consent_validity_threshold, empirical, 'Threshold for meaningful consent in data brokerage').
+
+omega_variable(
+    shadow_brokerage_scale,
+    'How much of the data brokerage value flows through shadow markets (unregulated brokers, illicit data sales, internal company flows) vs regulated brokers?',
+    'Forensic tracing of data flows; purchase pattern analysis from regulatory filings; undercover acquisition testing; dark web market monitoring',
+    'If shadow markets > 30% of value: regulation impacts only a portion of extraction. Snare persistence despite regulation. If < 10%: regulation concentrates brokerage and may enable monitoring. Scaffold timeline shifts.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(
-    omega_commercial_data_brokerage,
-    empirical,
-    'Whether the industry can adapt to a consent-based model or if its structure is fundamentally extractive.'
+narrative_ontology:omega_variable(shadow_brokerage_scale, empirical, 'Proportion of data brokerage through shadow markets').
+
+omega_variable(
+    individual_data_cooperative_viability,
+    'Can decentralized data cooperatives (individuals pooling data as collective bargaining units) achieve sufficient scale to reduce extraction relative to centralized brokers?',
+    'Case studies of existing cooperatives (Swapcard, Solid, DATUM); adoption curves; comparative revenue analysis; exit rates relative to brokerage firms',
+    'If viable: scaffold sunset is real and timeline is 10-15 years. If unviable at scale: centralized brokerage is structurally necessary and snare persists. Affects mandatrophy resolution.',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(individual_data_cooperative_viability, empirical, 'Technical and economic viability of data cooperatives').
+
+omega_variable(
+    extraction_asymmetry_measurability,
+    'Can the actual value extracted from individual data subjects be measured and compared to payments received by brokers?',
+    'Regression analysis of data value: model correlations between data attributes and broker margins; consumer surplus calculation for data-driven services; audit of data valuation methodologies',
+    'If ratio > 100:1 (brokers capture 100x value of individual subject): snare classification confirmed. If < 10:1: possible rope or tangled_rope reframing. Affects directionality and chi computation.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(extraction_asymmetry_measurability, empirical, 'Measurability of value extraction asymmetry').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(commercial_data_brokerage, 0, 10).
+narrative_ontology:interval(commercial_data_brokerage, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.75 > 0.46), so temporal
-% data is required to model its evolution from the early internet to the
-% current era of ubiquitous tracking.
-%
-% T=0: Early internet (ca. 2000)
-% T=5: Post-social media & smartphone boom (ca. 2012)
-% T=10: Current mature mobile/IoT ecosystem (ca. 2024)
+% Theater ratio over time
+narrative_ontology:measurement(cdb_tr_t0, commercial_data_brokerage, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(cdb_tr_t10, commercial_data_brokerage, theater_ratio, 10, 0.58).
+narrative_ontology:measurement(cdb_tr_t20, commercial_data_brokerage, theater_ratio, 20, 0.68).
 
-% Theater ratio over time (privacy policies became more prominent but not more effective):
-narrative_ontology:measurement(cdb_tr_t0, commercial_data_brokerage, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(cdb_tr_t5, commercial_data_brokerage, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(cdb_tr_t10, commercial_data_brokerage, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(cdb_be_t0, commercial_data_brokerage, base_extractiveness, 0, 0.32).
+narrative_ontology:measurement(cdb_be_t10, commercial_data_brokerage, base_extractiveness, 10, 0.45).
+narrative_ontology:measurement(cdb_be_t20, commercial_data_brokerage, base_extractiveness, 20, 0.58).
 
-% Extraction over time (sophistication and scope of data collection has increased dramatically):
-narrative_ontology:measurement(cdb_ex_t0, commercial_data_brokerage, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(cdb_ex_t5, commercial_data_brokerage, base_extractiveness, 5, 0.65).
-narrative_ontology:measurement(cdb_ex_t10, commercial_data_brokerage, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The system coordinates the allocation of resources (attention, credit,
-% insurance) based on the brokered information profiles.
-narrative_ontology:coordination_type(commercial_data_brokerage, resource_allocation).
+narrative_ontology:coordination_type(commercial_data_brokerage, information_standard).
+narrative_ontology:affects_constraint(commercial_data_brokerage, digital_advertising_surveillance).
+narrative_ontology:affects_constraint(commercial_data_brokerage, financial_scoring_systems).
+narrative_ontology:affects_constraint(commercial_data_brokerage, employment_data_extraction).
 
-% Network relationships (structural influence edges)
-% The outputs of data brokerage are inputs to other algorithmic systems.
-narrative_ontology:affects_constraint(commercial_data_brokerage, algorithmic_credit_scoring).
-narrative_ontology:affects_constraint(commercial_data_brokerage, political_microtargeting).
+% DUAL FORMULATION NOTE:
+% Commercial data brokerage is downstream of data collection and aggregation technology but represents a distinct structural constraint: the systemic monetization of personal information. Upstream constraints (tracking technology, platform data collection) enable brokerage but have their own extractiveness values. Downstream constraints (credit scoring, insurance pricing, targeted hiring) consume brokered data and have their own extraction mechanisms.
 
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(commercial_data_brokerage, moderate, 0.62).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

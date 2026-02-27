@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "dutch_minority_govt_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dutch_min"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dutch Minority Government External Support Agreement (2026)",
+    "topic_domain": "political/parliamentary_governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "pvv_governing_coalition",
+      "supporting_parliamentary_groups"
+    ],
+    "victims": [
+      "parliamentary_minority_protections",
+      "policy_coherence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Supporting Minority Party",
+      "comment": "PERSPECTIVE 1: SUPPORTING MINORITY PARTY (SNARE) \u2014 Trapped into perpetual support role. Without external support, government collapses and fresh elections follow, carrying existential risk to the supporting party. Cannot credibly threaten withdrawal on specific policies without triggering government failure. Maximum extraction: support party must concede core positions while receiving minimal policy implementation, held hostage by the threat of electoral reset."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The PVV-Led Governing Coalition",
+      "comment": "PERSPECTIVE 2: PVV-LED GOVERNING COALITION (ROPE) \u2014 Experiences the support agreement as coordination mechanism: external support solves the collective action problem of fragmented parliament while allowing the coalition to pursue its agenda. Exit option available (can force elections if support withdrawn) and can shop between potential supporters. Benefits from the agreement's efficiency; sees support as transactional coordination, not subordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legislative Opposition Bloc",
+      "comment": "PERSPECTIVE 3: LEGISLATIVE OPPOSITION BLOC (TANGLED ROPE) \u2014 Experiences mixed coordination and extraction. The support agreement creates a stable legislative counting frame (which opposition party has effective leverage), enabling opposition coordination. But the same agreement removes leverage points: if opposition credibly threatens no-confidence, they trigger elections they may lose worse. Constrained exit: opposition can organize around shared platform but cannot execute threats without accepting electoral risk."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral/Parliamentary Reform Movement",
+      "comment": "PERSPECTIVE 4: ELECTORAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized agents (reform coalitions, civil society bodies, constitutional law experts) see the support agreement as revealing a temporary pathology in the electoral system. Fragmentation producing ungovernable parliaments is the diagnosed problem; electoral reform (toward higher thresholds, mixed-member proportionality, or constructive no-confidence rules) is the sunset mechanism. The support agreement itself becomes leverage for reform: 'this gridlock proves we need better rules.' Theater low because the reform constituency openly frames this as systemic dysfunction requiring architectural change, not as normal governance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Parliamentary Norms Enforcement System",
+      "comment": "PERSPECTIVE 5: PARLIAMENTARY NORMS ENFORCEMENT SYSTEM (PITON) \u2014 Traditional norms governing coalition formation and support arrangements (informal expectations of transparency, reciprocity, procedural fairness) are maintained performatively while being structurally bypassed. The 'support agreement' is a formal artifact meant to legitimize what would have been considered illegitimate (contingent governance) under previous constitutional conventions. The norm-enforcement apparatus (parliament's internal procedures, media scrutiny of coalition fairness, civil society accountability mechanisms) persists but with attenuated force \u2014 maintained by institutional inertia while the actual governing logic has shifted. Theater high because extensive procedural performance substitutes for substantive fairness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE MOUNTAIN CLAIM) \u2014 From a civilizational perspective, parliamentary fragmentation producing minority government requiring external support is sometimes framed as an immutable law of proportional representation: 'proportional systems inherently produce fragmentation, fragmentation produces minority governments, minority governments require external support.' This perspective naturalizes the constraint. However, the structural data contradicts the mountain classification: this is a contingent outcome of specific electoral rules (threshold, district magnification, party strategy), not an irreducible limit of representation itself. Other proportional systems (Germany, Denmark) produce coalitions without external support arrangements. The 'natural law' framing masks a policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "support_agreement_credibility",
+      "question": "Will the supporting party(ies) actually execute threats to withdraw support, or is the threat fully non-credible (making extraction one-way)?",
+      "resolution_mechanism": "Empirical observation of support party behavior under policy disagreement; willingness to risk government collapse on specific legislative votes; rate of actual defection or conditional support",
+      "impact": "If threats are credible: extractiveness drops to 0.35-0.40, tangled rope from multiple perspectives. If threats are non-credible: extractiveness rises to 0.65+, snare classification from support party perspective hardens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether supporting party can credibly threaten to withdraw support"
+    },
+    {
+      "id": "electoral_reset_risk_assessment",
+      "question": "If government collapses and elections are called, will the supporting party lose seat share relative to current parliament, or gain?",
+      "resolution_mechanism": "Pre-election polling trends; comparative advantage analysis (which parties benefit from electoral reset); historical precedent from 2012-2017 cycles",
+      "impact": "If supporting party gains in reset: exit option becomes mobile, extraction drops, classification shifts toward Rope from support perspective. If supporting party loses: exit remains trapped, extraction stays high, Snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Electoral outcomes if government collapses"
+    },
+    {
+      "id": "opposition_defection_likelihood",
+      "question": "Can the governing coalition credibly break opposition unity by offering enough opposition members high-confidence escape routes (judicial appointments, committee positions, policy concessions) to produce an alternative majority?",
+      "resolution_mechanism": "Tracking of defection offers and rates; comparison with historical Dutch coalition-switching patterns; strength of opposition party discipline",
+      "impact": "If defection is high-risk and unlikely: opposition maintains cohesion, support agreement becomes necessary for stability, extraction sustained. If defection is likely: support agreement becomes optional, extraction decreases, government gains arbitrage options.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opposition defection can replace external support"
+    },
+    {
+      "id": "reform_timeline_credibility",
+      "question": "Will electoral reform actually occur within the current government's term, or is the reform sunset purely aspirational?",
+      "resolution_mechanism": "Tracking of reform proposal advancement through parliament; calendar timeline for constitutional amendment process; government commitment (legislative scheduling, coalition member positions)",
+      "impact": "If reform is scheduled and achievable: Scaffold classification confirmed, sunset clause is structural. If reform is deferred beyond this government or contingent on future coalitions: Scaffold becomes aspirational (should be Tangled Rope or Snare), theater increases.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether electoral reform will actually occur"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Following fragmented 2025 Dutch elections, the PVV (far-right, largest single party) cannot form a majority coalition due to widespread cordon sanitaire \u2014 most other parties refuse formal coalition partnership with the PVV. The structural solution is an external support agreement: opposition or satellite parties agree to support the PVV-led government on confidence votes and critical legislation in exchange for policy concessions and procedural influence, without formally joining the coalition. This creates a hybrid constraint: it solves the immediate collective action problem (allowing government formation when coalition is impossible), but it embeds extraction mechanisms (the supporting parties must perpetually trade concessions for continued support) and asymmetric institutional power (the government can threaten electoral reset). The constraint exhibits all six DR types from different perspectives, making it diagnostic of how external support agreements function as selective coordination-plus-extraction hybrids.",
+    "key_agents": [
+      "PVV-Led Governing Coalition: Primary beneficiary (institutional/arbitrage) \u2014 benefits from external support that enables government formation and policy implementation; can threaten electoral reset if support withdrawn",
+      "Supporting Minority Party (likely one or two mid-sized parties): Primary victim (powerless/trapped) \u2014 trapped into perpetual support role; withdrawal risks electoral reset; constrained to perpetual concessions",
+      "Opposition Bloc: Secondary actor (moderate/constrained) \u2014 maintains legislative power to block government but cannot credibly use it without risking worse electoral outcome; gain some leverage through support party behavior",
+      "Electoral/Parliamentary Reform Coalition: Organized actors (organized/constrained) \u2014 civil society, reform parties, constitutional law experts; frame the support agreement as revealing electoral system pathology requiring reform",
+      "Parliamentary Norms Enforcement Apparatus: Institutional maintenance (institutional/arbitrage) \u2014 traditional conventions governing fair coalition formation persist performatively while being structurally bypassed",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent electoral outcomes as immutable properties of proportional representation"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The governing coalition captures significant benefits (agenda control, legislative priority, ability to shape policy outcome space) while the supporting party bears costs (perpetual pressure to support government positions on critical votes despite preference disagreement, inability to signal independence or build alternative coalitions). The supporting party can extract some concessions (committee positions, policy promises, procedural influence) but lacks credible threat capacity sufficient to equalize the relationship. If the supporting party had high confidence it could win seats in an electoral reset, extractiveness would drop to 0.35-0.40 (moving toward pure Rope). Current Dutch polling suggests supporting parties lose in reset scenarios, trapping them in high-extraction positions. Suppression (0.65): High. The supporting parties face severe suppression of alternatives: formal coalition is impossible due to cordon sanitaire; direct opposition is suicidal (triggers electoral reset); media narrative frames support as either patriotic necessity or complicity in extremism, constraining their narrative space. No institutional mechanisms exist for supporting parties to credibly execute exit threats. Theater ratio (0.58): Moderate. The support agreement is partially performative (extensive procedural justification, norms-language about 'supporting democracy') and partially functional (the agreement genuinely enables government operation that could not otherwise exist). The theater has increased over the initial period as procedural complexity and normative justification accumulate around what is fundamentally a power-asymmetry arrangement.",
+    "perspectival_gap": "The PVV's Rope classification (pure coordination, efficient solution) directly contradicts the supporting party's Snare classification (pure extraction, forced compliance). This gap is not measurement disagreement but structural: the two perspectives occupy opposite positions relative to the extraction flow. The same external support agreement appears as beneficial coordination to the beneficiary and coercive extraction to the victim. The opposition's Tangled Rope classification sits between these: the opposition faces both the coordination problem (parliament is fragmented) and extraction (their leverage is constrained). The reform movement's Scaffold classification introduces a time dimension absent from the other perspectives: external support is legitimate only as a temporary pathology revealing the need for electoral reform. The piton classification of traditional parliamentary norms reflects that fairness procedures persist even as fairness itself has degraded \u2014 the apparatus maintains itself through institutional inertia. The false mountain classification at the civilizational level shows how proportional representation systems are sometimes blamed for outcomes that are actually contingent policy choices: the cordon sanitaire (refusal to work with the PVV) is a political choice, not a logical consequence of proportional voting.",
+    "directionality_logic": "Directionality for each perspective derives from structural position within the constraint. The governing coalition (beneficiary, institutional power, arbitrage exit) has low d (~0.20): they benefit from the arrangement and can exit via electoral reset if needed. The supporting party (victim, powerless or moderate power, trapped or constrained exit) has high d (~0.85-0.95): they bear asymmetric costs and lack credible exit options. The opposition (moderate power, constrained exit, neither pure beneficiary nor victim) has mid-range d (~0.60-0.70): they maintain some leverage through support party behavior but cannot directly execute threats. The reform coalition (organized power, constrained exit, long-term perspective) has moderate d (~0.50): they see both the dysfunction (victim-like) and the opportunity for systemic change (beneficiary-like). The analytical observer (analytical power, analytical exit, civilizational scope) has mid-high d (~0.72): the frame can either naturalize (benefiting elites) or reveal (benefiting reform), depending on which narrative dominates.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The support agreement is classified as Tangled Rope because it simultaneously exhibits coordination function (solves the governance problem) and asymmetric extraction (concentrates power in the governing coalition, extracts compliance from supporting parties). The mandatrophy arises from the question: 'Is this coordination with fairness constraints (Rope) or coordination with embedded extraction (Tangled Rope)?' The classification resolves mandatrophy by declaring both: coordination (genuine, benefits all parties relative to no-government baseline) and extraction (genuine, benefits governing coalition more than supporting parties, uses government collapse threat as enforcement mechanism). The Tangled Rope classification requires three elements: (1) genuine coordination function \u2014 external support does solve the parliamentary fragmentation problem (\u2713 beneficiaries declared as 'pvv_governing_coalition' and 'supporting_parliamentary_groups'); (2) asymmetric extraction \u2014 supporting parties bear disproportionate costs (\u2713 victims declared as 'parliamentary_minority_protections' and 'policy_coherence'); (3) active enforcement \u2014 the threat of electoral reset enforces support party compliance (\u2713 requires_active_enforcement: true). The Scaffold perspective (with sunset clause) suggests a potential resolution path: if electoral reform occurs, the support agreement becomes unnecessary and the extraction mechanism loses structural force. The false mountain at civilizational level reveals how systems theorists sometimes naturalize contingent policy outcomes (electoral thresholds, cordon sanitaire norms, coalition expectations) as immutable properties of proportional representation, when they are actually choices that could be unmade."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "dutch_electoral_fragmentation",
+      "european_far_right_legitimation"
+    ],
+    "dual_formulation_note": "The support agreement is downstream of electoral fragmentation (itself downstream of voting rules and party strategy) but represents a distinct constraint on parliamentary governance. Electoral fragmentation produces the condition requiring external support; the support agreement is the institutional response that creates extraction mechanisms. They are linked but structurally distinct: fragmentation has \u03b5=0.25 (a property of the electoral system itself, relatively immutable); support agreements have \u03b5=0.52 (a contingent governance choice with higher degrees of freedom)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "guinea_worm_eradication",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gworm"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Global Guinea Worm Eradication Program",
+    "topic_domain": "public_health/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "endemic_populations",
+      "global_health_community"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Endemic Community Member",
+      "comment": "PERSPECTIVE 1: ENDEMIC COMMUNITY MEMBER (ROPE) \u2014 Access to safe water and health education are coordinated public goods with minimal coercive overhead. Community participation is voluntary; the constraint enforces collective water access, not extraction from individuals. Beneficiary experiences the program as coordination enabling health improvement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Carter Center and Global Health Institutions",
+      "comment": "PERSPECTIVE 2: THE CARTER CENTER & GLOBAL HEALTH INSTITUTIONS (ROPE) \u2014 Pure coordination mechanism. Carter Center and partner organizations coordinate technical expertise, funding, and local implementation. No extraction from partner health systems \u2014 all parties benefit from disease elimination. Coordination function is primary; coercive capacity is minimal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "National Health Ministries",
+      "comment": "PERSPECTIVE 3: NATIONAL HEALTH MINISTRIES (ROPE) \u2014 Organized actors integrating Guinea worm surveillance into existing health systems. Cooperation is structured but voluntary. Ministries benefit from disease elimination and international partnership. No asymmetric extraction \u2014 mutual gain in surveillance capacity and public health infrastructure."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Eradication Trajectory)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / ERADICATION TRAJECTORY (SCAFFOLD) \u2014 From a civilizational view, the eradication program is a temporary coordination structure with a genuine sunset clause: elimination of the parasite eliminates the need for the program. As of 2024, only 13 cases reported globally (down from millions in 1986). The constraint transforms from active coordination (rope) to vestigial surveillance as case count approaches zero. Theater content increases as verification shifts from active case-finding to confirming absence \u2014 the final phase emphasizes proof of eradication."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "zoonotic_transmission_risk",
+      "question": "Can Guinea worm transmission persist or re-emerge via animal reservoirs (dogs, other mammals) despite human eradication protocols?",
+      "resolution_mechanism": "Long-term epidemiological surveillance post-eradication; genetic analysis of parasite strains in animal populations; monitoring of infection pathways in regions where human transmission has been eliminated",
+      "impact": "If animal reservoir confirmed: eradication may be impossible; constraint becomes permanent (Rope \u2192 Piton). If animal transmission ruled out: true eradication is achievable; scaffold sunset is real.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Guinea worm can persist in animal reservoirs"
+    },
+    {
+      "id": "sustained_water_infrastructure",
+      "question": "Will safe water infrastructure installed by the eradication program be maintained after Carter Center support ends?",
+      "resolution_mechanism": "Post-program monitoring of well functionality and maintenance in target regions; assessment of local funding and governance capacity; tracking of water-borne disease resurgence in regions where infrastructure decays",
+      "impact": "If infrastructure maintained: scaffold sunset is real and benefits persist. If infrastructure fails: the constraint becomes cyclic \u2014 periodic re-emergence requiring repeated intervention cycles. Program effectiveness degraded to theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of water infrastructure post-program"
+    },
+    {
+      "id": "case_verification_bias",
+      "question": "As case counts approach zero, does increased emphasis on detecting final cases create reporting incentives that inflate official case counts or misclassify similar diseases as Guinea worm?",
+      "resolution_mechanism": "Independent verification of suspected cases; genetic testing of parasite samples; comparison of reported vs confirmed case counts; analysis of case detection incentives in surveillance protocols",
+      "impact": "If verification bias present: final eradication threshold becomes ambiguous; constraint persists as theater-heavy surveillance. If verification robust: sunset timing is clear and schedule-driven.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether case verification exhibits reporting or incentive bias near eradication"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The Global Guinea Worm Eradication Program, initiated by The Carter Center in 1986, represents a large-scale public health coordination mechanism with minimal coercive overhead and a genuine sunset clause. The program provides safe drinking water sources, health education, and disease surveillance to eliminate Guinea worm infection from endemic regions across Africa and South Asia. Unlike extraction-based constraints, the eradication program creates coordinated public goods from which all participants benefit directly. As case counts have declined from millions annually (1986) to 13 cases globally (2024), the program exhibits the characteristic trajectory of a successful scaffold: active coordination infrastructure gradually transitions to verification-only surveillance, with theater ratio increasing as the coordination function winds down.",
+    "key_agents": [
+      "Endemic Population: Primary beneficiary (powerless/mobile) \u2014 direct health benefit from safe water access and disease elimination",
+      "The Carter Center & Partners: Coordinator (institutional/arbitrage) \u2014 organizes technical expertise, funding, and implementation across regions",
+      "National Health Ministries: Organized partners (organized/mobile) \u2014 integrate surveillance into health systems; benefit from disease elimination and capacity building",
+      "Global Health Community: Institutional beneficiary (institutional/arbitrage) \u2014 gains from proof-of-concept eradication and methodological knowledge",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 tracks sunset trajectory as parasite elimination approaches"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low, declining over time. The program creates coordinated public goods (safe water, health education) from which endemic populations benefit directly. Carter Center and partners extract minimal value \u2014 all parties benefit from disease elimination. The program funds water infrastructure and local health worker training, both of which benefit communities beyond the eradication goal. Suppression (0.08): Very low. Community participation is voluntary; health education is accessible; safe water is provided at no cost to end users. Coercive capacity is minimal \u2014 the program succeeds through persuasion and infrastructure provision, not enforcement. Theater ratio (0.25): Low, increasing toward end of interval. Early phases focus on active case detection and water source improvement \u2014 high functional content. As cases decline, verification and proof of absence increase; theater rises as surveillance becomes the primary activity relative to actual disease elimination. Claimed type (Rope): Pure coordination with no asymmetric extraction.",
+    "perspectival_gap": "The perspectival gap here is minimal \u2014 all observers classify this as rope or scaffold (coordination-dominant). Endemic communities experience it as rope (pure coordination enabling health). Global institutions experience it as rope (coordination producing shared benefit). Health ministries experience it as rope (integration of coordinated surveillance). The analytical observer sees it as scaffold (temporary coordination with sunset). No perspective produces a snare or tangled rope classification because the extraction mechanism is absent \u2014 Carter Center and partners do not extract from communities or from health systems. The constraint is structurally egalitarian: it solves a coordination problem without creating asymmetric extraction.",
+    "directionality_logic": "Directionality values for all perspectives are low (0.0\u20130.30 range), reflecting that this is a beneficiary-dominant structure with minimal or zero victims. Endemic populations are direct beneficiaries with high exit (mobile \u2014 can choose to use safe water or not); d \u2248 0.20. Carter Center and partners are beneficiaries with arbitrage exits (can reallocate resources); d \u2248 0.05. Health ministries are beneficiary-partners with mobile exits (can integrate or disengage from surveillance); d \u2248 0.25. All perspectives derive from beneficiary status combined with access to alternatives. There is no victim group \u2014 no agent bears concentrated costs while others extract. The constraint is Pareto-improving: it reduces human suffering without creating winners and losers.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that pure coordination without extraction is possible and empirically sustainable. The threat of false mandatrophy would arise if an observer tried to classify the program as a snare (extraction mechanism) on the basis of Carter Center's institutional power and funding control. However, the structural test is clear: Carter Center does not extract value from endemic populations; it transfers resources to them. The program's sunset clause is genuine \u2014 eradication of the parasite eliminates the need for the program. As case counts approach zero, the constraint transitions from active coordination (rope) to verification-only surveillance (scaffold with rising theater). The mandatrophy is resolved by noting that coordination is primary and extraction is absent, so no tension between claimed type and structural data exists."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "safe_water_access",
+      "health_surveillance_infrastructure"
+    ],
+    "dual_formulation_note": "Guinea worm eradication is downstream of safe water access infrastructure (which has independent constraints and extractiveness values) and feeds into health surveillance capabilities (which persists post-eradication). The family decomposition treats eradication as a coordination mechanism enabling deployment of the upstream constraint (water infrastructure) and creating capacity for downstream constraint (surveillance systems)."
+  },
+  "directionality_overrides": []
+}

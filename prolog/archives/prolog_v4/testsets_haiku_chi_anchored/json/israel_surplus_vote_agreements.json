@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "israel_surplus_vote_agreements",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "surp"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Surplus-Vote Agreements (Bader-Ofer Method)",
+    "topic_domain": "political/electoral",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "smaller_coalition_parties",
+      "coalition_forming_majorities"
+    ],
+    "victims": [
+      "marginal_voters",
+      "excluded_parties",
+      "proportional_representation_principle"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginal Voter",
+      "comment": "PERSPECTIVE 1: MARGINAL VOTER (SNARE) \u2014 A voter casting a ballot for a small party that fails to meet the threshold or whose votes are absorbed into a coalition agreement has no exit option. The surplus-vote agreement functions as a trap: the voter cannot recover their representation once committed. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.52. High extraction from voters whose party was used as a stepping stone."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Coalition Party",
+      "comment": "PERSPECTIVE 2: SMALL COALITION PARTY (TANGLED ROPE) \u2014 Experiences the agreement as coordination (pooling votes to cross the threshold) but also as extraction (subordination to larger partner, loss of negotiating power post-election, potential absorption into government without cabinet seats). Constrained exit: leaving the agreement risks failing to enter Knesset. d\u22480.62, f(d)\u22480.88, \u03c3=1.0 \u2192 \u03c7\u22480.33. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Coalition-Forming Majority",
+      "comment": "PERSPECTIVE 3: COALITION-FORMING MAJORITY (ROPE) \u2014 Larger parties entering surplus agreements experience coordination: efficiently consolidating bloc votes, securing predictable post-election allies, and guaranteeing coalition numerics. Arbitrage available: can form agreements with multiple partners, shop for optimal terms. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Electoral Reform Coalition",
+      "comment": "PERSPECTIVE 4: ELECTORAL REFORM COALITION (SCAFFOLD) \u2014 Organized civil society groups and reformers see the surplus-vote agreement as a temporary workaround \u2014 a coordination mechanism that addresses fragmentation but with a built-in sunset as electoral reform (threshold adjustment, open-list systems, or direct proportionality) matures. d\u22480.35, f(d)\u22480.33, \u03c3=1.0 \u2192 \u03c7\u22480.13. Low effective extraction because reformers have agency and see an alternative pathway."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Commission",
+      "comment": "PERSPECTIVE 5: ELECTORAL COMMISSION (PITON) \u2014 The electoral machinery (Israel's Central Elections Committee) maintains the surplus-vote mechanism largely through institutional inertia. Functionally, the mechanism solves fragmentation, but the commission's role is increasingly performative: administering rules that parties circumvent (through informal understandings, post-election defections, or alliance reshuffling). theater_ratio=0.58 reflects moderate performative content. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.28."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From a civilizational view, surplus agreements might appear as an immutable response to the inherent tension between proportional representation and coalition formation. But the structural data (\u03b5=0.38, suppression=0.52) contradicts the mountain gate. The constraint is not a law of nature \u2014 it is a contingent institutional design choice. The false summit reveals that 'inevitable fragmentation' naturalizes what is actually extractive coalition engineering."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voter_intent_capture",
+      "question": "Does a surplus-vote agreement represent voter intent (voting as a bloc for coalition purposes) or voter capture (voting for a small party believing it retains autonomy)?",
+      "resolution_mechanism": "Post-election survey data on voter awareness of surplus agreements; comparison of stated coalition preferences vs actual agreement terms; analysis of party messaging during campaign",
+      "impact": "If voter intent: agreement is coordination (rope-like). If voter capture: agreement is extraction (snare-like). Changes victim classification from 'excluded_parties' to 'voters_denied_proportional_outcome'.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether surplus agreements represent voter intent or voter capture"
+    },
+    {
+      "id": "post_election_defection_rate",
+      "question": "How frequently do coalition partners defect from post-election arrangements negotiated via surplus agreements?",
+      "resolution_mechanism": "Historical analysis of coalition governments: parties that signed surplus agreements, their negotiating position post-election, rate of cabinet-seat allocation, and defection to opposition during government term",
+      "impact": "High defection rate (>30%): agreement extraction is enforceable only by threat/surprise, raising suppression. Low defection rate (<10%): agreement functions as genuine coordination, lowering effective extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of post-election defection from surplus-vote coalition arrangements"
+    },
+    {
+      "id": "threshold_pressure_mechanism",
+      "question": "Does the 3.25% electoral threshold (or prior variants) function as a natural filtering mechanism or as an extractive tool that surplus agreements circumvent?",
+      "resolution_mechanism": "Comparison of election outcomes under different threshold levels; analysis of surplus agreements as threshold-bypass mechanism; demographic analysis of voters whose votes are 'lost' to threshold failures",
+      "impact": "If threshold is natural filter: surplus agreements coordinate to cross it legitimately. If threshold is artificial barrier: surplus agreements are extraction workaround. Changes \u03b5 valuation and suppression assessment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether electoral threshold is natural or extractive mechanism"
+    },
+    {
+      "id": "transparency_enforcement_gap",
+      "question": "Are surplus-vote agreements disclosed to voters in sufficient detail before the election, and what enforcement mechanisms ensure agreement terms are honored post-election?",
+      "resolution_mechanism": "Audit of party websites, media disclosures, and legal filings for agreement terms; analysis of Central Elections Committee enforcement capacity; case studies of disputed or violated agreements",
+      "impact": "High transparency + enforcement: suppression and theater_ratio lower (more like rope). Low transparency + weak enforcement: suppression and theater_ratio higher (more like snare). Directly affects classification confidence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Transparency and enforcement of surplus-vote agreement terms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Bader-Ofer surplus-vote agreement system in Israeli elections exemplifies a hybrid constraint that combines genuine coordination (helping small parties cross the threshold) with extractive outcomes (capturing marginal votes, disadvantaging excluded competitors, concentrating coalition-forming power). Two parties sign a pre-election agreement to pool surplus votes and allocate them as a single list if either fails to clear the electoral threshold independently. Structurally, the agreement solves the fragmentation problem inherent in proportional representation: small parties can guarantee Knesset seats by aligning with larger partners. But it also functions as an extraction mechanism: voter votes can be absorbed into coalition negotiations, marginal parties lose autonomy, and the coalition-forming majority gains leverage. The constraint has intensified over decades as Israeli politics has become more fragmented and coalition-building more dominant (theater_ratio rising from 0.35 to 0.58). The suppression reflects real barriers: a small party cannot withdraw from an agreement without risking failure to enter the Knesset; voters cannot recover their representation once absorbed into a coalition bloc.",
+    "key_agents": [
+      "Marginal Voters: Victims (powerless/trapped) \u2014 cast ballots for small parties unaware of or unable to prevent surplus-vote absorption; no exit option once vote is cast",
+      "Small Coalition Parties: Mixed (moderate/constrained) \u2014 benefit from agreement (guaranteed Knesset seats) but lose negotiating power and autonomy; constrained exit (withdrawal risks threshold failure)",
+      "Coalition-Forming Majority: Primary beneficiary (institutional/arbitrage) \u2014 gains predictable post-election allies, efficient vote pooling, coalition numerics guarantees; arbitrage available (can negotiate with multiple partners)",
+      "Excluded Parties: Victims (moderate/mobile) \u2014 parties not in surplus agreements are disadvantaged when larger competitors pool votes; some mobility (can form rival coalitions or campaign for threshold-crossing legitimacy)",
+      "Electoral Reform Coalition: Organized reformers (organized/mobile) \u2014 civil society, think tanks, and reform-minded politicians see surplus agreements as a workaround to be phased out through systemic reform (threshold adjustment, open lists); exit path available",
+      "Central Elections Committee: Institutional administrator (institutional/constrained) \u2014 maintains mechanism through legal framework; constrained by path dependency (changing electoral system requires legislation); piton perspective",
+      "Analytical Observer: Sees false natural law (analytical/analytical) \u2014 risks naturalizing coalition fragmentation as inherent rather than contingent institutional outcome"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The surplus-vote agreement system extracts value from marginal voters by absorbing their votes into coalition blocs. The extraction is not total (it is legal, disclosed, and parties benefit from guaranteed Knesset seats) but significant. Small parties gain Knesset representation they could not achieve alone, but lose autonomy and negotiating power \u2014 a trade-off that resembles extraction. Over the interval, extractiveness has risen from 0.22 to 0.38 as Israeli politics became more fragmented, making agreements more frequent and coalition leverage greater. Suppression (0.52): Moderate-high. Barriers to escaping the system include: (1) small parties cannot viably compete without agreements due to fragmentation, (2) voters cannot withdraw votes after casting them, (3) transparency and enforcement of agreement terms is limited, (4) post-election defection from agreements is possible but costly. Theater ratio (0.58): Moderate-high. The electoral process preserves performative legitimacy: parties publicly campaign as independent entities while secretly negotiating surplus agreements; voters are told they are choosing a party while their votes are being pooled into blocs; the electoral commission administers a system that parties circumvent through informal understandings. Theater has increased over time as coalition engineering has become more sophisticated and less transparent.",
+    "perspectival_gap": "The marginal voter sees a snare (trapped, no exit, extraction). The small coalition party sees tangled rope (coordination benefit offset by extraction cost). The majority sees rope (pure coordination). The reformer sees a temporary scaffold with a sunset. The electoral commission sees a piton (degraded mechanism sustained by inertia). The civilizational observer risks seeing a natural law of proportional systems but is corrected by the structural data: the system's extractiveness (0.38) and suppression (0.52) reveal contingent design choices, not immutable laws. The perspectival gap is primarily between the beneficiary (majority) and the victim (marginal voter), mediated by the small coalition party's ambiguous position.",
+    "directionality_logic": "Marginal Voters: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.52. Maximum extraction. Votes are absorbed without consent or recovery mechanism. Small Coalition Parties: Beneficiary + constrained \u2192 d\u22480.62, f(d)\u22480.88, \u03c3=1.0 \u2192 \u03c7\u22480.33. Mixed because they benefit (guaranteed Knesset seats) but are constrained (cannot exit without losing seats). Coalition-Forming Majority: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary with negative effective extraction \u2014 they experience coordination. Excluded Parties: Victim + mobile \u2192 d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40. Harmed by competitors' agreements but mobile enough to form rival coalitions. Electoral Reform Coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.33, \u03c3=1.0 \u2192 \u03c7\u22480.13. Low effective extraction; reformers have agency. Electoral Commission: Institutional + constrained \u2192 d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.22. Piton classification comes from theater_ratio gate (\u22650.70 not met, but performative content is notable).",
+    "mandatrophy_analysis": "The Bader-Ofer system resolves mandatrophy by clarifying what is coordination and what is extraction. The coordination function is genuine: small parties that would fail the threshold independently do benefit from pooling votes to reach the Knesset, and larger parties efficiently consolidate support. But this coordination is contaminated by extraction: marginal voters are not informed of vote pooling, post-election defections from agreements undermine negotiating commitments, and coalition-forming majorities use agreements as leverage rather than principled partnerships. The tangled rope classification confirms both are present. The false summit (mountain perspective) is ruled out: the constraint is not a law of fragmentation but a design choice that could be reformed (lower threshold, open lists, proportional adjustments) to reduce extraction while maintaining coordination. The theater ratio increasing from 0.35 to 0.58 indicates growing performative content \u2014 Goodhart drift where the electoral process's legitimating function (appearing democratic and transparent) has been decoupled from its coordination function (actually allocating seats fairly). Reform scenarios (lower threshold, mandatory transparency, pre-election voter notification) would reduce theater and extractiveness together."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "israeli_coalition_fragmentation",
+      "electoral_threshold_mechanism",
+      "proportional_representation_fidelity"
+    ],
+    "dual_formulation_note": "The Bader-Ofer surplus-vote agreement is downstream of two structural constraints: (1) electoral fragmentation (multiple parties competing for representation), and (2) the need for coalition formation to reach government. Upstream, the 3.25% threshold mechanism filters parties, and upstream of that, the proportional representation principle ideally allocates seats by vote share. The surplus-vote agreement exists in the gap between fragmentation and coalition necessity. If the upstream constraint is 'fragmentation is unavoidable in Israeli politics' (\u03b5 could be high), the surplus-vote system inherits that pressure. Each upstream constraint has its own structural status; the agreement is a secondary manifestation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

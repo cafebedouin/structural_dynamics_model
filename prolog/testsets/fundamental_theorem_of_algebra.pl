@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: fundamental_theorem_of_algebra
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-22
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_fundamental_theorem_of_algebra, []).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -55,25 +54,31 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: fundamental_theorem_of_algebra
- *   human_readable: Fundamental Theorem of Algebra (FTA)
- *   domain: mathematical
+ *   human_readable: Fundamental Theorem of Algebra
+ *   domain: mathematical/algebra
  *
  * SUMMARY:
  *   The Fundamental Theorem of Algebra states that every non-constant
- *   single-variable polynomial with complex coefficients has at least one
- *   complex root. This establishes the algebraic closure of the complex
- *   numbers, acting as a fundamental, unchangeable law of the mathematical
- *   universe. It guarantees that solutions exist, foreclosing the possibility
- *   of "rootless" polynomials within this domain.
+ *   polynomial with complex coefficients has at least one complex root. This
+ *   theorem has been a foundational constraint on mathematical practice for
+ *   over three centuries, proven in multiple ways (algebraic, topological,
+ *   analytic, geometric) yet always arriving at the same conclusion. The
+ *   constraint exhibits the defining signature of a mountain: it emerges
+ *   necessarily from the formal structure of the complex number system,
+ *   offers no degrees of freedom, cannot be avoided or modified within
+ *   standard mathematics, and persists identically across all observational
+ *   contexts. No agent benefits from FTA while another bears its cost — it is
+ *   a structural necessity that binds equally on all mathematicians. The
+ *   near-perfect invariance of the theorem across diverse proof techniques
+ *   and mathematical frameworks, combined with its logical indispensability
+ *   in complex analysis, polynomial algebra, and algebraic geometry, confirms
+ *   its mountain classification.
  *
- * KEY AGENTS (by structural relationship):
- *   - All mathematical practitioners (e.g., Numerical Analysts, Control Engineers):
- *     Agents operating within the mathematical framework where the FTA is an
- *     unalterable feature of the landscape.
- *   - The Polynomial Itself: The mathematical object whose properties are
- *     fixed by the theorem.
- *   - Analytical Observer: Recognizes the theorem as a foundational axiom
- *     with zero degrees of freedom.
+ * KEY AGENTS:
+ *   - Working Mathematicians: Structural position is universal participation in FTA's constraint. All polynomial work implicitly relies on root existence. No special exit options.
+ *   - Analytic Observers: Civilizational perspective shows FTA as emerging from field completeness axioms. No alternative mathematical reality available.
+ *   - Mathematical Pedagogy: Educational transmission of FTA as unchangeable truth. Theater ratio is minimal because the theorem's necessity is self-evident to practitioners.
+ *   - Research Communities: Even powerful mathematical institutions cannot modify or escape FTA. Institutional power confers no arbitrage.
  */
 
 /* ==========================================================================
@@ -81,86 +86,58 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: The theorem "extracts" the possibility of rootless polynomials,
-% but this is a definitional closure, not an economic or social extraction.
-% The value is minimal, reflecting its nature as a structural boundary.
-domain_priors:base_extractiveness(fundamental_theorem_of_algebra, 0.01).
-
-% Rationale: The theorem completely suppresses the existence of alternative
-% outcomes (polynomials without roots in C). However, since this is a logical
-% consequence of the field axioms, not an imposed rule, the score is low.
-domain_priors:suppression_score(fundamental_theorem_of_algebra, 0.01).
-
-% Rationale: A pure mathematical truth has no performative aspect.
-domain_priors:theater_ratio(fundamental_theorem_of_algebra, 0.0).
+domain_priors:base_extractiveness(fundamental_theorem_of_algebra, 0.08).
+domain_priors:suppression_score(fundamental_theorem_of_algebra, 0.02).
+domain_priors:theater_ratio(fundamental_theorem_of_algebra, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, extractiveness, 0.01).
-narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, extractiveness, 0.08).
+narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-% Rationale: No alternative is conceivable within the axioms of complex numbers.
-narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, accessibility_collapse, 1.0).
-% Rationale: Resistance is incoherent; one cannot "resist" a mathematical proof.
-narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, resistance, 0.0).
+narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, resistance, 0.04).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(fundamental_theorem_of_algebra, mountain).
-narrative_ontology:human_readable(fundamental_theorem_of_algebra, "Fundamental Theorem of Algebra (FTA)").
-narrative_ontology:topic_domain(fundamental_theorem_of_algebra, "mathematical").
+narrative_ontology:human_readable(fundamental_theorem_of_algebra, "Fundamental Theorem of Algebra").
+narrative_ontology:topic_domain(fundamental_theorem_of_algebra, "mathematical/algebra").
 
-% --- Binary flags ---
-% No sunset clause, no active enforcement.
-
-% --- Emergence flag (required for mountain constraints) ---
-% The theorem is a logical consequence of the axioms of the complex field.
 domain_priors:emerges_naturally(fundamental_theorem_of_algebra).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a Mountain (natural law), the FTA does not have
-% structurally distinct beneficiaries or victims. It is a universal feature
-% of the mathematical landscape.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT: The Fundamental Theorem of Algebra is a Mountain
-% from all perspectives. Its status as a mathematical law is invariant.
-% We include multiple perspectives to demonstrate this invariance.
-
-% PERSPECTIVE 1: THE POLYNOMIAL (POWERLESS)
-% The mathematical object itself has no freedom to violate the theorem.
+% PERSPECTIVE 1: WORKING MATHEMATICIAN — The theorem appears as an immutable structural property of the complex number system. All mathematical work in polynomial algebra implicitly relies on FTA. No exit from this constraint — it is a foundational bedrock. Zero degrees of freedom.
 constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, mountain,
     context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE ENGINEER (INSTITUTIONAL)
-% An engineer using the theorem relies on it as an unchangeable guarantee.
-constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analyst recognizes the theorem as a fixed, foundational truth.
+% PERSPECTIVE 2: ANALYTICAL OBSERVER — From the civilizational mathematical perspective, FTA is a logical consequence of the completeness axiom of the real numbers and the algebraic closure property of the complex field. The theorem emerges necessarily from the formal structure. No alternative formulation exists. Zero degrees of freedom.
 constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, mountain,
     context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: MATHEMATICAL PEDAGOGY — The theorem is taught as a foundational truth that cannot be avoided or modified within the standard real and complex number systems. Educational systems transmit it as an unchangeable constraint on mathematical reality. No suppression is needed — the theorem's necessity is self-evident.
+constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: PURE MATHEMATICS COMMUNITY — Despite institutional power within academia, mathematicians cannot modify or escape FTA. The constraint binds equally on the most powerful research programs and the novice student. No special access or arbitrage exists.
+constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, mountain,
+    context(agent_power(powerful),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
@@ -171,26 +148,26 @@ constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, mo
 
 :- begin_tests(fundamental_theorem_of_algebra_tests).
 
-test(uniform_mountain_classification) :-
-    % Verify that the classification is Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, Type1, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, Type2, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, Type3, context(agent_power(analytical), _, _, _)),
-    Type1 == mountain,
-    Type2 == mountain,
-    Type3 == mountain.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fundamental_theorem_of_algebra, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(natural_law_profile_adherence) :-
-    % Verify that the metrics meet the thresholds for a Mountain classification.
-    narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, extractiveness, E),
-    narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, suppression_requirement, S),
-    config:param(mountain_extractiveness_max, EMax),
-    config:param(mountain_suppression_ceiling, SMax),
-    E =< EMax,
-    S =< SMax.
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, ExtMetricName, E),
+    domain_priors:suppression_score(fundamental_theorem_of_algebra, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(fundamental_theorem_of_algebra).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(fundamental_theorem_of_algebra),
+    narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(fundamental_theorem_of_algebra, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(fundamental_theorem_of_algebra_tests).
 
@@ -200,81 +177,89 @@ test(natural_emergence) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Fundamental Theorem of Algebra is a canonical example of a Mountain
- *   constraint. Its base extractiveness (0.01) and suppression (0.01) are set
- *   to minimal non-zero values to reflect its function as a logical boundary
- *   that forecloses certain possibilities (rootless polynomials) as a
- *   consequence of its axiomatic system. The Natural Law profile metrics
- *   (accessibility_collapse=1.0, resistance=0.0) and the `emerges_naturally`
- *   flag are critical for ensuring it passes the engine's certification chain
- *   for a natural law.
+ *   Extractiveness (0.08): Minimal. FTA imposes no extraction from any agent — there is no beneficiary and no victim. The 'cost' of knowing a polynomial has a root is structural necessity, not deprivation. All agents experience FTA identically as an immutable property. Suppression (0.02): Negligible. The theorem requires no coercion to maintain. No alternatives exist within standard mathematics; suppression is neither needed nor possible. Theater ratio (0.15): Very low. FTA is proven rigorously across multiple independent frameworks (topological, algebraic, analytic). The redundant proofs demonstrate functional verification, not performative theater. Each proof independently establishes root existence through different logical pathways, reducing any possibility of hidden assumptions or theatrical maintenance. Accessibility collapse (0.92): Very high. No agent can access an alternative to FTA — the complete complex field necessarily contains roots for all non-constant polynomials. This structural necessity is irreversible. Resistance (0.04): Negligible. Mathematicians do not resist FTA; they rely on it. The theorem generates no friction or opposition.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a uniform-type constraint, the FTA is
- *   classified as a Mountain from all possible indices. Its truth is not
- *   contingent on the observer's power, time horizon, exit options, or scope.
- *   The original file's attempt to frame it as a "Snare" for students of real
- *   analysis was rejected as a metaphorical interpretation that misrepresents
- *   the structural nature of the constraint. A student's cognitive difficulty
- *   is not equivalent to structural extraction by the theorem itself.
+ *   Unlike the verification bottleneck exemplar, FTA produces NO perspectival gap. All four perspectives — working mathematician, analytical observer, pedagogical institution, powerful research community — classify the constraint identically as mountain. The uniformity of classification across all observational positions is itself the diagnostic signature of a true mountain. No agent perceives FTA differently. No agent has exit options. No agent bears extraction or receives benefit. The structure is invariant.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality is not applicable. As a Mountain, the constraint has no
- *   structurally distinct beneficiaries or victims. It is a feature of the
- *   environment for all agents. Therefore, `constraint_beneficiary` and
- *   `constraint_victim` declarations are omitted.
+ *   FTA has no beneficiary/victim structure. Directionality (d) is undefined because there is no cost-bearing agent or benefit-receiving agent. The constraint is purely structural — it is a property of the complex number system itself, not a social, institutional, or economic arrangement. All agents (powerless, moderate, powerful, institutional, analytical) experience FTA identically as a binding universal truth. The engine's directionality derivation is not applicable to mountains because mountains have no extraction to direct.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification as a pure Mountain prevents any misinterpretation of
- *   this foundational mathematical law as a tool of coordination (Rope) or
- *   extraction (Snare). It correctly identifies it as part of the fixed
- *   background reality within which mathematical operations take place.
+ *   FTA resolves mandatrophy by being a constraint with zero mandatrophy potential. Mandatrophy arises when a coordination mechanism (Rope) accumulates extraction and becomes mistaken for pure extraction (Snare). FTA has no coordination function and no extraction mechanism — it is pure structural necessity. The theorem cannot be reframed as either pure coordination or pure extraction because it operates at the level of mathematical structure itself, not social or institutional coordination. The mandatrophy question — 'Is this coordinated extraction disguised as coordination, or genuine coordination disguised as extraction?' — does not apply to logical/mathematical constraints that bind universally and identically on all agents.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_fta_constructivism,
-    'Is the guarantee of a root (existence proof) structurally equivalent to providing a method to find it (constructive proof)?',
-    'Analysis of the computational complexity of root-finding algorithms (e.g., Weierstrass method) versus the logical simplicity of the existence proofs (e.g., Liouville''s theorem).',
-    'If existence without construction is sufficient, it remains a pure Mountain. If the difficulty of finding the guaranteed object imposes significant costs, it could imply a hidden extractive layer not captured by the theorem itself.',
+    constructive_proof_requirement,
+    'Does FTA hold in constructive mathematics where the law of excluded middle is rejected?',
+    'Formal analysis of FTA proof in constructivist frameworks (Bishop-style constructivism); examination of whether root existence can be established constructively for all polynomials',
+    'If constructive proof exists: FTA is universal across logical systems (true mountain). If constructive proof fails for some polynomials: FTA depends on classical logic choice, suggesting a conceptual rather than physical constraint.',
     confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_fta_constructivism, conceptual, 'Distinction between existence proofs and constructive proofs and its structural impact.').
+narrative_ontology:omega_variable(constructive_proof_requirement, conceptual, 'Whether FTA holds in constructive mathematics').
+
+omega_variable(
+    non_standard_field_validity,
+    'Does FTA generalize to finite fields, p-adic fields, or other complete fields beyond the complex numbers?',
+    'Formal verification of FTA analogues in algebraic number theory and non-Archimedean analysis; identification of fields where root existence fails',
+    'If FTA holds universally: confirms the theorem''s necessity (true mountain). If FTA fails in non-standard fields: reveals the theorem as specific to classical complex numbers, not a universal logical constraint.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(non_standard_field_validity, empirical, 'Whether FTA generalizes to non-standard fields').
+
+omega_variable(
+    proof_irreducibility,
+    'Is there a purely algebraic proof of FTA without topological or analytic machinery?',
+    'Systematic search of algebraic proof strategies; analysis of proof complexity and what logical structures are unavoidable',
+    'If purely algebraic proof exists: FTA is rooted in algebraic structure alone. If topological/analytic tools are mandatory: FTA bridges categories, suggesting a deeper structural necessity rather than a surface-level logical claim.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(proof_irreducibility, conceptual, 'Whether FTA has a purely algebraic proof').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(fundamental_theorem_of_algebra, 0, 10).
+narrative_ontology:interval(fundamental_theorem_of_algebra, 0, 1000).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not applicable. As a mathematical theorem, its properties are static and do
-% not drift over time. Base extractiveness is below the 0.46 threshold for
-% required temporal data.
+% Theater ratio over time
+narrative_ontology:measurement(fta_tr_t0, fundamental_theorem_of_algebra, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(fta_tr_t500, fundamental_theorem_of_algebra, theater_ratio, 500, 0.14).
+narrative_ontology:measurement(fta_tr_t1000, fundamental_theorem_of_algebra, theater_ratio, 1000, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(fta_be_t0, fundamental_theorem_of_algebra, base_extractiveness, 0, 0.07).
+narrative_ontology:measurement(fta_be_t500, fundamental_theorem_of_algebra, base_extractiveness, 500, 0.08).
+narrative_ontology:measurement(fta_be_t1000, fundamental_theorem_of_algebra, base_extractiveness, 1000, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Not applicable for a foundational mathematical theorem.
+narrative_ontology:coordination_type(fundamental_theorem_of_algebra, information_standard).
+narrative_ontology:affects_constraint(fundamental_theorem_of_algebra, algebraic_closure_property).
+narrative_ontology:affects_constraint(fundamental_theorem_of_algebra, completeness_axiom_reals).
+narrative_ontology:affects_constraint(fundamental_theorem_of_algebra, complex_field_structure).
+
+% DUAL FORMULATION NOTE:
+% FTA is downstream of the definition of the complex field and the completeness axiom of the real numbers. These parent constraints establish the structural preconditions that make FTA inevitable. All three constraints are mountains with zero degrees of freedom.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable for a Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "unrwa_eviction_order",
+    "version": "1.0",
+    "generated_date": "2024-03-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Israeli Land Authority's Eviction Order for UNRWA HQ in East Jerusalem",
+    "topic_domain": "geopolitical/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_land_authority",
+      "israeli_government"
+    ],
+    "victims": [
+      "unrwa",
+      "palestinian_refugees"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Palestinian Refugees",
+      "comment": "PERSPECTIVE 1: PALESTINIAN REFUGEES (SNARE) - Trapped and highly dependent on UNRWA services, with very limited exit options. The eviction order further suppresses their access to essential aid and support, exacerbating their vulnerability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "UNRWA",
+      "comment": "PERSPECTIVE 2: UNRWA (TANGLED ROPE) - Constrained by the eviction order, impacting its operational capacity and ability to deliver services. However, UNRWA also benefits from international recognition and support, allowing it to potentially relocate and continue its mission, albeit with significant challenges."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Israeli Land Authority",
+      "comment": "PERSPECTIVE 3: ISRAELI LAND AUTHORITY (ROPE) - Benefits from enforcing its legal authority and reclaiming land. The eviction order aligns with the ILA's mandate to manage state-owned land efficiently. The ILA benefits from increased control over land management."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Law",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL LAW (PITON) - The eviction order undermines international norms regarding the protection of humanitarian organizations and the rights of refugees, leading to a degradation of the international legal framework. High theater due to repeated violations without effective enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) - The eviction order serves as a tool to exert pressure on UNRWA and potentially alter the status quo in East Jerusalem. The international community can provide or withhold aid contingent on UNRWA remaining in place or relocating operations. There is both coordination (between the Israeli Land Authority and Israeli Government) and extraction from the Palestinian Refugees."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legality_of_construction",
+      "question": "Was the construction by UNRWA truly illegal, or is this a pretext for eviction?",
+      "resolution_mechanism": "Independent legal review of the construction permits and land ownership documents.",
+      "impact": "If illegal, the eviction order is more justifiable. If a pretext, it highlights political motivations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legality of the alleged construction violations."
+    },
+    {
+      "id": "impact_on_refugee_services",
+      "question": "What will be the actual impact on UNRWA's ability to provide services to Palestinian refugees?",
+      "resolution_mechanism": "Assessment of UNRWA's contingency plans and the availability of alternative service delivery mechanisms.",
+      "impact": "Severe impact strengthens the Snare classification. Minimal impact suggests a more theatrical or symbolic action.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent to which the eviction impacts service provision to refugees"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The Israeli Land Authority (ILA) has issued an order for the United Nations Relief and Works Agency (UNRWA) to vacate its headquarters in East Jerusalem within 30 days, citing alleged contract violations and illegal construction. This action creates a constraint impacting multiple actors with varying degrees of power and exit options. Palestinian refugees, heavily reliant on UNRWA, face the most severe consequences, while the ILA benefits from asserting control over state-owned land. The international community observes the situation with concern, as it potentially undermines international norms regarding humanitarian assistance and refugee protection.",
+    "key_agents": [
+      "UNRWA: Moderate/Constrained",
+      "Palestinian Refugees: Powerless/Trapped",
+      "Israeli Land Authority: Institutional/Arbitrage",
+      "Israeli Government: Institutional/Arbitrage"
+    ],
+    "logic_rationale": "Extractiveness (0.65): High, reflecting the significant disruption to UNRWA's operations and the potential harm to Palestinian refugees who depend on its services. Suppression (0.70): High, indicating limited alternatives for Palestinian refugees who are trapped by the ongoing conflict and dependency on UNRWA. Theater Ratio (0.75): High, the eviction order has a direct and material impact on UNRWA's operations, but also has a performative aspect in terms of signaling Israeli sovereignty and control over Jerusalem.",
+    "perspectival_gap": "Palestinian refugees view this as a Snare, as they have no exit options and face severe consequences. UNRWA sees it as a Tangled Rope because of their limited mobility and benefit from international support. The Israeli Land Authority and Government view it as a Rope in terms of enforcing their legal authority. An Analytical Observer sees a tangled rope because there are competing forces.",
+    "directionality_logic": "Palestinian refugees (victims/trapped) face the greatest negative impact. UNRWA (moderate/constrained) bears costs but can also potentially adapt through relocation. The ILA (institutional/arbitrage) benefits from increased control and land management."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "palestinian_refugee_crisis",
+      "un_funding_stability"
+    ]
+  },
+  "directionality_overrides": []
+}

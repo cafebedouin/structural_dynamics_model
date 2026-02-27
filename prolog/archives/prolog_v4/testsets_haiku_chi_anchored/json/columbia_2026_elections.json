@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "columbia_2026_elections",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "col26"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "2026 Colombian Presidential Election Structure",
+    "topic_domain": "political/electoral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "political_establishment",
+      "centrist_coalition"
+    ],
+    "victims": [
+      "outsider_candidates",
+      "regional_autonomy",
+      "democratic_renewal"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Regional Outsider Candidate",
+      "comment": "PERSPECTIVE 1: REGIONAL OUTSIDER CANDIDATE (SNARE) \u2014 Faces structural barriers to competitive entry: limited funding access, media gatekeeping, establishment coalition dominance. Must compete within rules designed to preserve incumbent party advantage. No viable exit from participation; inability to exit produces high extraction cost. d\u22480.90, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Autonomy Movement",
+      "comment": "PERSPECTIVE 2: REGIONAL AUTONOMY MOVEMENT (TANGLED ROPE) \u2014 Benefits from electoral participation as coordination mechanism (aggregates regional voice) but bears extraction through centralized authority structures that ignore regional mandates. Constrained exit \u2014 regions cannot secede but can reduce participation. d\u22480.72, f(d)\u22481.12, \u03c3=0.9 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Political Establishment Coalition",
+      "comment": "PERSPECTIVE 3: POLITICAL ESTABLISHMENT COALITION (ROPE) \u2014 Experiences constitutional one-term limit as coordination mechanism that preserves legitimacy through mandatory transition while maintaining party continuity. Arbitrage exit available \u2014 can field successor candidates aligned with establishment interests. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Democratic Reform Coalition",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC REFORM COALITION (SCAFFOLD) \u2014 Organized actors (civil society, transparency NGOs, youth movements) see electoral architecture as temporary institutional problem with a sunset: campaign finance reform, media access rules, and redistricting could reduce extraction mechanisms. Currently constrained by establishment resistance, but structural pathways to reform exist (constitutional amendment). d\u22480.48, f(d)\u22480.58, \u03c3=1.0 \u2192 \u03c7\u22480.22. Low effective extraction because coalition has institutional agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Administration Apparatus",
+      "comment": "PERSPECTIVE 5: ELECTORAL ADMINISTRATION APPARATUS (PITON) \u2014 Constitutional framework for elections is largely performative in enforcing fairness: campaign finance rules lack enforcement mechanisms, media regulation is absent, ballot access barriers persist despite legal neutrality. Electoral authority maintains the ritual of neutral administration while knowing structural inequalities persist. theater_ratio=0.65 reflects performative compliance (counting votes fairly while ignoring pre-election distortions). Institutional inertia sustains the apparatus despite degraded fairness function. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Constitutional Realist (Natural Law View)",
+      "comment": "PERSPECTIVE 6: CONSTITUTIONAL REALIST / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, the one-term limit is an immutable constitutional law of Colombian politics \u2014 no incumbent can circumvent it. This perspective risks naturalizing what is actually a contingent institutional design (single-term limits exist in some democracies but not others; Colombia's is a political choice, not a law of nature). The structural data (\u03b5=0.38, suppression=0.52, theater=0.65) reveals this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coalition_inclusivity_threshold",
+      "question": "What level of establishment coalition inclusivity constitutes genuine democratic participation vs tokenistic incorporation of outsiders?",
+      "resolution_mechanism": "Analysis of coalition composition pre- and post-election; tracking of outsider candidate platform incorporation into winning candidate's agenda; post-election policy alignment with outsider constituencies",
+      "impact": "If threshold low (token inclusion acceptable): extraction is moderate, scaffold sunset more plausible. If threshold high (substantive incorporation required): extraction is higher, reform coalition must achieve deeper structural change.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Threshold for genuine vs tokenistic coalition inclusivity"
+    },
+    {
+      "id": "media_gatekeeping_mechanism",
+      "question": "Is media coverage concentration in Colombia a structural constraint on ballot access or a contingent policy outcome that can be reformed independently of electoral system?",
+      "resolution_mechanism": "Comparative analysis of media ownership concentration vs ballot access in countries with similar constitutional frameworks; measurement of coverage disparity between establishment and outsider candidates; assessment of feasibility and political will for media regulation reform",
+      "impact": "If structural (independent of reform): extraction persists regardless of electoral changes. If contingent: campaign finance and media transparency reforms could reduce extraction, strengthening scaffold perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether media gatekeeping is structural or policy-contingent"
+    },
+    {
+      "id": "regional_franchise_enforcement",
+      "question": "Can regions enforce meaningful policy mandates on a centralized executive, or is regional electoral participation purely performative?",
+      "resolution_mechanism": "Longitudinal tracking of elected executive compliance with regional electoral mandates; measurement of regional authority over budget allocation and service delivery; comparison of resource distribution to regional electoral support",
+      "impact": "If regions can enforce: tangled rope classification confirmed, regional coordination function is real. If purely performative: snare perspective grows stronger, regional participation is extraction by central authority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regions can enforce policy mandates on centralized executive"
+    },
+    {
+      "id": "successor_candidate_independence",
+      "question": "Do establishment-backed successor candidates represent genuine party ideology or are they instruments of continuity that extract legitimacy from electoral process while maintaining power concentration?",
+      "resolution_mechanism": "Comparison of successor candidate platform to incumbent administration policies; measurement of policy continuity vs ideological shift; tracking of successor accountability to party base vs establishment faction interests; post-election analysis of rival within party",
+      "impact": "If independent: rope classification valid, electoral mechanism genuinely coordinates succession. If instrumental: establishment extraction mechanism is higher, rope perspective is beneficiary's self-serving narrative.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether successor candidates are independent or establishment instruments"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The 2026 Colombian presidential election operates within a constitutional framework that mandates executive transition through a one-term limit (2022-2026), creating a structural constraint that shapes candidate emergence, coalition formation, and democratic renewal capacity. The constraint exhibits genuine coordination (the mandatory transition preserves legitimacy through power rotation) alongside significant extraction mechanisms (establishment control of candidate selection, media gatekeeping, regional disempowerment). The one-term limit is often framed as a natural safeguard against authoritarianism, yet it functions equally as a mechanism through which incumbent coalitions select successors and outsider candidates face systematic barriers to competitive entry. The constraint's theater ratio (0.65) reflects that electoral forms (universal suffrage, secret ballot, multiparty competition) mask pre-electoral distortions (media concentration, campaign finance asymmetries, establishment coalition gatekeeping). For the political establishment, the election is legitimate coordination: mandatory succession prevents autocratic drift while preserving party continuity through institutional succession. For regional autonomy movements and outsider candidates, the same election is extraction: they participate in a framework whose rules they did not design and cannot exit, bearing costs of exclusion while validating a system that reproduces their marginalization. The analytical observer risks naturalizing this as an immutable constitutional law when it is actually a design choice specific to Colombia's post-1991 institutional settlement.",
+    "key_agents": [
+      "Political Establishment Coalition: Primary beneficiary (institutional/arbitrage) \u2014 designs electoral architecture, controls successor candidate selection, benefits from mandatory transition without losing power concentration",
+      "Regional Autonomy Movements: Primary victim (moderate/constrained) \u2014 participate in election aggregating regional voice but face central authority that ignores regional mandates; cannot exit participation",
+      "Outsider Candidates: Secondary victim (powerless/trapped) \u2014 compete within rules designed to preserve incumbent advantage; limited funding, media gatekeeping, establishment coalition unity make competitive entry structurally difficult",
+      "Democratic Reform Coalition: Organized agent (organized/mobile) \u2014 civil society, transparency NGOs, youth movements building alternative institutional pathways (campaign finance reform, media access, redistricting); see election as temporary problem with sunset",
+      "Electoral Administration: Institutional actor (institutional/arbitrage) \u2014 maintains performative neutrality while operating within framework that pre-determines unequal competition; theater_ratio=0.65 reflects fairness rituals masking structural inequalities",
+      "Constitutional Framework: Analytical viewpoint (analytical/analytical) \u2014 one-term limit appears as immutable natural law but is contingent institutional design; risks naturalizing extraction as inevitability"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The establishment benefits from electoral participation that confers legitimacy while maintaining power concentration through successor selection. The extraction is real but constrained \u2014 regional voters still aggregate voice, outsiders can still compete despite barriers, and succession does prevent indefinite incumbent control. The reduced value (vs earlier 0.52 assessment) reflects that the constraint combines genuine coordination (mandatory transition) with extraction mechanisms (gatekeeping). Suppression (0.52): Moderate-high. Significant barriers to outsider entry include: limited campaign finance access (media advertising costs concentrate among well-funded candidates), media concentration in establishment-aligned outlets, establishment coalition unity that fragments outsider opposition, and regional/provincial political structures biased toward established parties. But suppression is not total \u2014 outsiders have run competitive campaigns (2022 elected Petro, an outsider), and social movements can mobilize. Theater ratio (0.65): Moderate-high. Electoral processes are substantially performative: ballot is cast fairly, votes are counted accurately (technical neutrality), but pre-electoral distortions (media access, campaign finance, coalition gatekeeping) determine viable candidate set before voting begins. The theater has increased as establishment strategies focus on pre-electoral advantage rather than post-electoral legitimacy contestation. Theater progression from 0.48\u21920.65 reflects rising performance burden as establishments invest in facade maintenance.",
+    "perspectival_gap": "This constraint demonstrates major perspectival divergence around a single electoral event. The political establishment sees legitimate coordination (mandatory succession prevents authoritarianism while preserving institutional continuity) and experiences the election as rope \u2014 they participate in and benefit from a mechanism that ensures power rotation within their coalition. Regional movements and outsiders see the same election as snare and tangled rope \u2014 they are trapped in a framework they did not design, compete under unequal conditions, and bear costs of exclusion while the process claims legitimacy from their participation. The democratic reform coalition sees a temporary problem with a sunset \u2014 electoral architecture can be reformed (campaign finance, media access, redistricting) within the constitutional framework, and structural pathways to reform exist despite establishment resistance. The electoral administration sees its own ritual as degraded (piton) \u2014 procedures are followed but the fairness they promise is undermined by pre-electoral distortions that administers cannot and will not address. The constitutional realist risks seeing an immutable natural law (mountain) \u2014 the one-term limit appears as an untouchable safeguard \u2014 but this naturalizes a design choice specific to Colombia's 1991 constitutional settlement, not a law of nature.",
+    "directionality_logic": "Political establishment: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Can arbitrage by fielding successor candidates aligned with establishment interests. Outsider candidates: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.38. Maximum extraction. Cannot exit participation without surrendering political viability; compete within rules designed to preserve incumbent advantage. Regional movements: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.12. Significant extraction. Participate to aggregate regional voice (coordination function) but face central authority that ignores regional mandates; can reduce participation (abstention) but cannot exit meaningfully. Democratic reform coalition: Organized + mobile \u2192 d\u22480.48, f(d)\u22480.58. Moderate effective extraction. Have agency through institutional pathways (constitutional amendment, regulation), retain mobility through alternative organizing (parallel civic engagement). Electoral administration: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Piton classification comes from theater gate (\u22650.70 not met, but 0.65 approaches it), not from high chi. Can arbitrage by maintaining appearance of fairness while operating within pre-designed framework. Constitutional framework: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival (analyst naturalizes constraint); the engine's false summit detector catches this based on structural data (\u03b5=0.38, suppression=0.52, theater=0.65 indicating contingency, not physical law)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "colombian_campaign_finance_system",
+      "regional_autonomy_framework",
+      "media_concentration_colombia"
+    ],
+    "dual_formulation_note": "The 2026 election is a downstream constraint in the Colombian institutional family. Upstream constraints (campaign finance inequality, media concentration, regional disempowerment) have their own \u03b5 values reflecting the severity of structural barriers; the election constraint (\u03b5=0.38) captures the synthesis of these barriers as they manifest in candidate competition and voter choice within a single electoral cycle. Decomposition: campaign_finance_inequality (\u03b5\u22480.45, snare for outsiders) + media_concentration (\u03b5\u22480.42, snare for regional voice) + regional_disempowerment (\u03b5\u22480.36, tangled rope) converge to produce the election constraint (\u03b5=0.38, tangled rope). The election is not separable from these upstream constraints; it is their structural manifestation at the political decision point."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

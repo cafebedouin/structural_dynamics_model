@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "eu_ev_tariff_wall",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eu_ev"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Tariffs and Trade Barriers on Chinese Electric Vehicles",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "eu_incumbent_automakers",
+      "eu_battery_manufacturers"
+    ],
+    "victims": [
+      "chinese_ev_exporters",
+      "eu_consumers",
+      "global_ev_transition"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Chinese EV Exporters Under Investigation",
+      "comment": "PERSPECTIVE 1: CHINESE EV EXPORTERS (SNARE) \u2014 Trapped by EU anti-subsidy investigations and tariff barriers (17.4-38.1% added tariffs). No exit option without abandoning EU market. d\u22480.92, f(d)\u22481.39, \u03c3=1.2 \u2192 \u03c7\u22480.97. Pure extraction: exporters bear full cost, bear full suppression, have no alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "EU Consumers",
+      "comment": "PERSPECTIVE 2: EU CONSUMERS (SNARE) \u2014 Constrained choice. EV affordability deteriorates as tariffs raise prices. Limited domestic alternatives; must either pay premium or delay transition. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67. High extraction: consumers pay tariff-inflated prices with constrained alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "EU Incumbent Automakers",
+      "comment": "PERSPECTIVE 3: EU INCUMBENT AUTOMAKERS (ROPE) \u2014 Beneficiaries via tariff protection. Experiences constraint as coordination: domestic market protection enables investment in EV transition without price competition. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary; protection subsidizes transition costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "EU Battery Manufacturers and Supply Chain",
+      "comment": "PERSPECTIVE 4: EU BATTERY MANUFACTURERS (TANGLED ROPE) \u2014 Both beneficiary and victim. Tariffs protect EU battery supply chain from Chinese competition (coordination function); simultaneously, tariffs increase costs for EU EV manufacturers who source globally (extraction function). d\u22480.48, f(d)\u22480.60, \u03c3=1.1 \u2192 \u03c7\u22480.38. Mixed: protection enables investment but constrains competitive sourcing."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Climate and Trade Advocates (Organized Coalition)",
+      "comment": "PERSPECTIVE 5: CLIMATE/TRADE ADVOCATES (SCAFFOLD) \u2014 Organized actors (environmental NGOs, trade unions, development advocates) see tariffs as temporary measures with sunset logic. Tariffs are justified as transition protection: allowing EU supply chains to mature while maintaining climate ambitions. Exit path: as EU battery capacity and EV production scale, tariff dependency declines (estimated 5-10 year sunset). d\u22480.42, f(d)\u22480.42, \u03c3=1.2 \u2192 \u03c7\u22480.32. Theater moderate (0.64): scientific justification (carbon footprint claims) mixed with protectionist framing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "WTO-Based Trade Governance System",
+      "comment": "PERSPECTIVE 6: WTO TRADE GOVERNANCE (PITON) \u2014 The tariff regime invokes WTO rules (anti-subsidy investigations, safeguard clauses) but the application is substantially performative. WTO dispute mechanisms move at decadal timescales; investigations (anti-subsidy claims against Chinese state support) are theatrical assertions difficult to falsify or resolve. d\u22480.10, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Piton gate: theater_ratio=0.64 (legal procedures maintained but lack functional constraint on actual tariff deployment). WTO persists through institutional inertia; real leverage is political/economic, not adjudicative."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Global EV Transition (Analytical View)",
+      "comment": "PERSPECTIVE 7: GLOBAL EV TRANSITION (SNARE) \u2014 From a civilizational perspective, the global EV transition (goal: decarbonization) is victimized by tariff fragmentation. Tariffs slow technology diffusion, preserve cost structures, and fragment supply chains that would scale faster under integrated global competition. The transition is trapped in a zero-sum protection game despite shared climate objective. d\u22480.88, f(d)\u22481.28, \u03c3=1.2 \u2192 \u03c7\u22480.88. High extraction: transition goal bears full cost of protectionist barriers; no exit without political realignment."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "chinese_subsidy_empiricism",
+      "question": "Do Chinese subsidies to EV manufacturers constitute actionable unfair advantage or legitimate industrial policy equivalent to EU development incentives?",
+      "resolution_mechanism": "Comparative analysis of subsidy structures (R&D, capital access, land, labor) across EU and Chinese EV sectors; WTO dispute findings; economic modeling of subsidy pass-through to consumer prices",
+      "impact": "If actionable: tariffs are justified coordination enforcement (tangled rope remains valid). If legitimate policy: tariffs are pure protectionism misframed as enforcement (constraint should reclassify to snare from EU institutional perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Chinese subsidies constitute unfair advantage vs. legitimate policy equivalence"
+    },
+    {
+      "id": "eu_supply_chain_viability",
+      "question": "Can EU battery and EV manufacturing scale to meet European demand within 5-10 years without tariff protection, or is protection structurally necessary?",
+      "resolution_mechanism": "Capacity buildout tracking; cost curve analysis (EU vs. Chinese manufacturing costs); capital investment commitments; supply chain bottleneck identification",
+      "impact": "If viable without protection: scaffold sunset is real; tariffs should terminate as commitment. If structural necessity: tariffs are permanent protection; constraint should reclassify to snare or tangled rope with indefinite extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether EU supply chain can scale without tariff protection within sunset window"
+    },
+    {
+      "id": "consumer_price_elasticity_harm",
+      "question": "What is the net climate impact of EV price inflation caused by tariffs (fewer consumers can afford EV transition) vs. supply chain localization benefits (reduced shipping carbon)?",
+      "resolution_mechanism": "Modeling of demand elasticity across income bands; carbon accounting for tariff-induced price increases; lifecycle analysis of domestic vs. imported EV supply chains",
+      "impact": "If price harm > supply localization benefit: tariffs slow decarbonization; constraint victimizes the global transition (snare classification from analytical view confirmed). If benefits outweigh harm: tangled rope classification sustained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net climate impact of tariff-induced price inflation vs. supply chain localization"
+    },
+    {
+      "id": "chinese_retaliation_dynamics",
+      "question": "Will Chinese retaliatory tariffs on EU goods (agriculture, machinery, auto parts) neutralize the protective benefit to EU automakers or create a new equilibrium extraction?",
+      "resolution_mechanism": "Monitoring of Chinese tariff announcements and implementation; modeling of tariff revenue flows; assessment of sector-by-sector impact on EU manufacturing",
+      "impact": "If retaliation severe: EU incumbent automakers become victims rather than beneficiaries (constraint shifts from tangled rope to snare for incumbents). If retaliation limited: benefits to EU automakers preserved.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scale and impact of Chinese retaliatory tariffs on EU sectors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The EU tariff wall on Chinese electric vehicles represents a structural tension between legitimate industrial protection and protectionist extraction. Beginning in 2023 with anti-subsidy investigations and culminating in 2024 with tariffs of 17.4-38.1% on Chinese EV imports, the constraint combines a genuine coordination function (protecting EU automakers and battery manufacturers during EV transition) with significant asymmetric extraction (harming Chinese exporters, constraining EU consumers, and slowing global decarbonization). The constraint exhibits different character from different structural positions: EU incumbents experience it as enabling coordination for transition investment; Chinese exporters experience it as a tariff-wall trap; EU consumers experience price inflation with constrained alternatives; organized climate advocates see it as temporary protection with a sunset (EU supply chains maturing); the WTO system sees it as a performative legal framework applied post-hoc to justify political decisions. The theater ratio (0.64) reflects that anti-subsidy investigations are substantially procedural \u2014 the actual drivers are political economy (incumbent lobbying, industrial policy competition with China) but framed as scientific determinations of unfair subsidy.",
+    "key_agents": [
+      "EU Incumbent Automakers (VW, BMW, Mercedes, Stellantis): Institutional beneficiaries (powerful/arbitrage) \u2014 capture market protection and gain transition time without price competition",
+      "Chinese EV Exporters (BYD, NIO, XPeng, Li Auto, SAIC): Primary victims (powerless/trapped) \u2014 face 17.4-38.1% tariffs with no exit option except market abandonment",
+      "EU Consumers: Secondary victims (moderate/constrained) \u2014 face EV price inflation; limited domestic alternatives; delayed transition access",
+      "EU Battery Manufacturers (CATL EU operations, Northvolt, ACC): Mixed beneficiary-victim (powerful/mobile) \u2014 protected from Chinese competition but constrained by tariff cost cascades",
+      "Climate and Trade Advocates: Organized coalition (organized/constrained) \u2014 see sunset logic; justify protection as temporary during EU supply chain maturation",
+      "WTO Trade System: Institutional actor (institutional/arbitrage) \u2014 maintains procedural legitimacy through anti-subsidy investigations; lacks real enforcement leverage; persists through inertia",
+      "Global EV Transition: Abstract victim (analytical/trapped) \u2014 slowed by tariff fragmentation despite shared climate objective"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts from Chinese exporters (tariff barriers trap them) and EU consumers (price inflation), but extraction is not total because the beneficiaries (EU incumbents) genuinely experience coordination benefit for their transition. The measurement trajectory from 0.32 to 0.58 reflects accumulating tariff burden \u2014 initially (2023) investigations were preliminary; by 2024-2025 implementation was firm. Suppression (0.68): High. Multiple barriers: tariff walls (direct), anti-subsidy investigations (procedural), supply chain localization incentives, and political messaging against Chinese competition all reduce alternatives for Chinese exporters. EU consumers have suppressed alternatives \u2014 limited domestic EV capacity at low cost. Theater ratio (0.64): Moderate-high. Anti-subsidy investigations provide scientific legitimacy narrative (carbon footprint claims, state subsidy calculations) but the actual driver is industrial protection and geopolitical competition. The investigations move slowly; tariff deployment is political. Theater has increased over the interval as investigative procedures became more elaborate while real constraint (tariff implementation) accelerated. Claimed type (Tangled Rope): Confirmed. The constraint has BOTH a genuine coordination function (enabling EU transition investment) AND asymmetric extraction (harming exporters and consumers). Requires active enforcement (true): tariff regimes require continuous customs administration, investigation procedures, and political support.",
+    "perspectival_gap": "This constraint reveals a maximal perspectival gap. EU incumbent automakers see Rope (coordination enabling their transition). Chinese exporters see Snare (trapped by tariff wall). EU consumers see Snare (price inflation, constrained alternatives). EU battery manufacturers see Tangled Rope (both protected and constrained). Organized climate advocates see Scaffold (temporary protection with sunset as EU capacity matures). WTO system sees Piton (performative legal framework maintaining institutional legitimacy without enforcement). Global climate transition (analytical view) sees Snare (slowed by tariff fragmentation despite shared objective). The perspectival gap does NOT resolve into consensus type \u2014 instead it reveals that different stakeholders have incommensurable structural interests. The 'correct' classification depends on whose transition goal and whose market position you prioritize.",
+    "directionality_logic": "Chinese EV Exporters: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction. EU Consumers: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction (price inflation). EU Incumbent Automakers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary (protection subsidy). EU Battery Manufacturers: Both beneficiary (protection) + victim (cost cascades) + mobile \u2192 d\u22480.48, f(d)\u22480.60. Moderate mixed. Climate advocates: Organized + constrained \u2192 d\u22480.42, f(d)\u22480.42. Organized agents see exit path (sunset). WTO System: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Piton classification comes from theater gate, not from directionality. Global Transition: Analytical + trapped (no political exit) \u2192 d\u22480.88, f(d)\u22481.28. High extraction \u2014 climate goal trapped by protectionist zero-sum.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by distinguishing the coordination function from the extraction overlay. Tangled Rope (claimed type) is correct: the constraint enables genuine EU transition coordination (beneficiary incumbents invest in EV capacity with protected market time) while simultaneously extracting from victims (trapped exporters, constrained consumers, slowed global transition). The mandatrophy question is: 'Is this protection legitimate industrial policy or protectionist extraction mislabeled as enforcement?' The resolution requires distinguishing authentic subsidy unfairness (if Chinese subsidies are structurally asymmetric) from political protection. The three omegas (subsidy empiricism, EU supply chain viability, consumer price elasticity) directly address this. If Chinese subsidies are equivalent to EU incentives AND EU supply chains can scale without protection AND tariff price harm exceeds localization benefits, then the constraint should reclassify toward pure Snare (protection mislabeled as fair-trade enforcement). If the inverse holds (asymmetric subsidies + structural protection necessity + net climate benefit), then Tangled Rope is correct and the scaffold sunset is real."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "chinese_battery_supply_dependency",
+      "global_ev_supply_chain_fragmentation",
+      "eu_green_transition_financing"
+    ],
+    "dual_formulation_note": "The tariff wall decomposes into two structurally distinct claims: (1) protection as legitimate coordination (EU supply chain maturation) with a real sunset window (5-10 years to scale capacity), and (2) protection as extraction (political economy of incumbent lobbying, geopolitical competition framed as enforcement). These are not the same constraint viewed from different angles \u2014 they have different \u03b5 values and different resolution mechanisms. The coordination-function view (\u03b5\u22480.30, Tangled Rope) and the pure-extraction view (\u03b5\u22480.68, Snare) differ by a factor of 2.3 in base extractiveness. The empirical resolution depends on whether the sunset is genuine (supply chain can scale) or aspirational (protection is permanent)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

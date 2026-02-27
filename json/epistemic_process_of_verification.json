@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "epistemic_process_of_verification",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "epist_verif"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Epistemic Process of Scientific Verification",
+    "topic_domain": "scientific/epistemology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "epistemic_commons",
+      "future_researchers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Individual Researcher",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL RESEARCHER (ROPE) \u2014 Individual researchers are bound by the verification requirement but also benefit from it: they gain credibility when their work passes replication, and they rely on others' verified results. Constrained by the need to replicate others' work before building on it, but this constraint solves the collective action problem of preventing false cascades. Low experienced extraction because the researcher gains legitimacy through the same process."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Scientific Institution",
+      "comment": "PERSPECTIVE 2: SCIENTIFIC INSTITUTION (ROPE) \u2014 Universities, funding agencies, and research institutions benefit from the verification norm: it protects their reputation and provides a filtering mechanism for allocating resources. They have arbitrage options (can establish alternative standards, can fund high-risk research without verification) but the verification norm is their best coordination solution. The constraint is experienced as enabling, not extractive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational perspective, independent replication is the core coordination mechanism that transforms individual claims into shared knowledge. The verification process solves the problem of distinguishing signal from noise in a distributed epistemic system. No external extraction; the constraint is structurally pure coordination. This perspective sees the mechanism functioning as designed."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Research Community",
+      "comment": "PERSPECTIVE 4: RESEARCH COMMUNITY (ROPE) \u2014 Organized research communities (societies, consortia, collaborative networks) enforce and benefit from verification norms. They are constrained by the requirement to maintain standards but also gain coordination power through collective enforcement. The mechanism enables collective action that individuals alone could not achieve."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "replication_sufficiency_threshold",
+      "question": "How many successful independent replications constitute sufficient verification for acceptance into canonical knowledge?",
+      "resolution_mechanism": "Meta-analysis of replication datasets; comparison of retraction rates vs empirical success thresholds across disciplines",
+      "impact": "If threshold is too low: false positives contaminate knowledge. If threshold is too high: legitimate discoveries are delayed indefinitely. The ambiguity affects classification from snare (if threshold is weaponized to delay) vs rope (if threshold is functionally optimal).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical threshold for sufficient replication count"
+    },
+    {
+      "id": "replication_fidelity_asymmetry",
+      "question": "Does the verification process actually detect systematic errors or primarily confirm procedural conformity?",
+      "resolution_mechanism": "Analysis of replication failure modes; examination of whether negative replications catch substantive errors or merely procedural variations",
+      "impact": "If verification detects true errors: rope classification holds. If verification is performative (confirms procedure, misses substance): classification shifts toward piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether replication detects substantive errors or procedural conformity"
+    },
+    {
+      "id": "verification_resource_equity",
+      "question": "Are verification requirements enforced equally across research domains, institutions, and researcher demographics, or do resource asymmetries create de facto exemptions?",
+      "resolution_mechanism": "Comparative analysis of retraction rates, replication requirements, and verification timelines across domains; demographic analysis of verification burden",
+      "impact": "If enforced equally: rope. If resource asymmetries create extraction (well-funded labs skip verification; under-resourced labs bear full burden): tangled rope or snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Equity of verification enforcement across institutions and demographics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The epistemic process of scientific verification \u2014 the requirement that novel claims be independently replicated and corroborated before acceptance \u2014 is a foundational coordination mechanism in science. It solves the collective action problem of distinguishing genuine discoveries from noise, fraud, or luck. From the analytical perspective, this constraint is pure coordination: all agents benefit from living in a world where false claims are filtered out. Individual researchers benefit because their work gains credibility through replication. Institutions benefit because verification protects their reputation and provides an allocation mechanism. The research community benefits because shared verification norms enable collective knowledge-building. The constraint exhibits low extractiveness (0.32) and low suppression (0.28) because it genuinely serves all participants \u2014 the costs of replication are real but proportional, and exit options exist but are not attractive (unverified claims lose legitimacy). The theater ratio (0.35) reflects that verification has developed some performative elements (citation counts, publication speed) but remains functionally grounded in actual replication work. This constraint represents the ideal-type Rope: pure coordination with minimal coercion.",
+    "key_agents": [
+      "Individual Researchers: Constrained participant (powerless/constrained) \u2014 must replicate others' work, must submit to verification; benefit from credibility conferred by replication",
+      "Research Institutions: Beneficiary with arbitrage (institutional/arbitrage) \u2014 protect reputation through verification standards; can set alternative standards but choose not to",
+      "Research Communities: Organized enforcers (organized/constrained) \u2014 collectively enforce verification norms; benefit from collective coordination power",
+      "Epistemic Commons: Collective beneficiary (analytical) \u2014 shared knowledge base protected by verification requirement",
+      "Analytical Observer: Meta-perspective (analytical/analytical) \u2014 sees verification as structural solution to signal/noise problem in distributed epistemic system"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate-low. The verification requirement does impose costs: researchers must spend time on replication, must risk negative results, must submit to peer scrutiny. However, these costs are proportional to benefits and are incurred symmetrically \u2014 all participants bear them and all gain from them. The constraint does not extract from one group to benefit another; it extracts value from everyone in order to preserve the commons. Suppression (0.28): Moderate-low. Alternative epistemic standards exist (preregistration, open data, citizen science) and researchers can pursue them. The suppression reflects primarily the friction of coordination itself \u2014 the need to achieve consensus on standards \u2014 rather than coercive power. Theater ratio (0.35): Low-moderate. Verification involves some performative elements: citation metrics, publication prestige, priority racing. But the core function (actual replication work) remains substantive. The measurement trajectory shows slight increase over 50 years, reflecting gradual drift toward more performative metrics, but the constraint remains functionally grounded.",
+    "directionality_logic": "All perspectives derive d from the same structural principle: the verification requirement benefits and constrains symmetrically. Individual researchers experience d \u2248 0.50 (both constrained and beneficiary). Institutions experience d \u2248 0.15 (primarily beneficiary; they have arbitrage options). The research community experiences d \u2248 0.45 (mixed: constrained by need to maintain standards, beneficiary through coordination power). The analytical observer experiences d \u2248 0.72 (analytical position seeing the epistemic necessity without direct participation). None of these values produce high f(d) because none correspond to asymmetric extraction. The derived chi values are all in the 0.20-0.35 range, consistent with pure coordination.",
+    "perspectival_gap": "The perspectival gap in this constraint is minimal \u2014 all agents perceive it as Rope. This is characteristic of successful pure coordination mechanisms. The individual researcher sees coordination, the institution sees coordination, the community sees coordination, and the analytical observer sees coordination. The absence of a large perspectival gap is not a weakness but a diagnostic feature: it indicates that the constraint is genuinely solving a collective action problem rather than masking extraction. If one perspective were Snare while others were Rope, the constraint would be tangled_rope or would be experiencing mandatrophy. The uniform Rope classification across perspectives suggests the constraint is functioning as designed.",
+    "mandatrophy_analysis": "NO MANDATROPHY. This constraint exhibits no confusion between coordination and extraction. All perspectives converge on Rope because the empirical structure is genuinely coordinative: the costs and benefits are symmetrical, the extraction flows are balanced, and no agent experiences asymmetric burden. The verification process is not a coordination mechanism masking extraction; it is coordination. The slight increase in theater_ratio over time (0.25 \u2192 0.35) is worth monitoring \u2014 if this trend continues and exceeds 0.70, the constraint would degrade toward Piton. Currently, the functional core remains intact."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "verification_bottleneck",
+      "publication_bias_replication"
+    ],
+    "dual_formulation_note": "This constraint is the upstream structural mechanism that enables all discipline-specific verification processes. Verification_bottleneck and publication_bias_replication are downstream manifestations where institutional frictions create extraction on top of the coordinative base. All three constraints share the same base epistemic mechanism but differ in whether institutional layers convert it to Tangled Rope or Snare."
+  },
+  "directionality_overrides": []
+}

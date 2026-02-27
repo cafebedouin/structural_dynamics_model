@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "taiwan_university_application_system",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tw_uni_app"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Taiwan's Application-Based University Admission System",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elite_preparation_industry",
+      "wealthy_families",
+      "university_admissions_offices"
+    ],
+    "victims": [
+      "rural_low_income_students",
+      "educational_equity",
+      "standardized_test_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Rural Low-Income Student",
+      "comment": "PERSPECTIVE 1: RURAL LOW-INCOME STUDENT (SNARE) \u2014 Trapped by lack of access to application coaching, portfolio development resources, and cultural capital signaling required by holistic review. Cannot exit: standardized test was transparent metric; application-based system requires expensive preparation services concentrated in urban centers. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "University Admissions Office",
+      "comment": "PERSPECTIVE 2: UNIVERSITY ADMISSIONS OFFICE (ROPE) \u2014 Benefits from discretion: application-based system justifies selective recruitment of students with demonstrable 'fit' and potential for institutional reputation. Experiences constraint as coordination mechanism enabling nuanced student matching. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Elite Preparation Industry",
+      "comment": "PERSPECTIVE 3: ELITE PREPARATION INDUSTRY (ROPE) \u2014 Organized actors (cram schools, portfolio coaching services, essay mentors) benefit from conversion of standardized test preparation into application-coaching services. Experiences constraint as coordination function that creates market demand for expertise they supply. d\u22480.10, f(d)\u2248-0.09, \u03c3=0.9 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Middle-Class Urban Student",
+      "comment": "PERSPECTIVE 4: MIDDLE-CLASS URBAN STUDENT (TANGLED ROPE) \u2014 Mobile: can access preparation services and has social capital for application, but effectiveness varies. Benefits from elimination of pure test-score ranking (may overcome poor exam performance via portfolio narrative). Also constrained by subjective evaluation criteria and preparation cost (\u20b9200K\u2013500K for comprehensive coaching). d\u22480.48, f(d)\u22480.61, \u03c3=1.0 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Educational Equity Observer",
+      "comment": "PERSPECTIVE 5: EDUCATIONAL EQUITY OBSERVER (TANGLED ROPE) \u2014 Sees coordination function (holistic assessment more robust than test-only) but also sees extraction mechanism: system converts transparent inequality (test scores) into opaque inequality (access to application coaching and cultural capital signaling). Theater_ratio=0.68 reflects performative diversity narratives masking rising credential inflation and stratification. d\u22480.70, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.56."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Standardized Test Authority (College Entrance Exam Board)",
+      "comment": "PERSPECTIVE 6: STANDARDIZED TEST AUTHORITY (PITON) \u2014 Traditional College Entrance Exam (CEEC) persists through institutional inertia despite reduced formal role. Maintains theater through parallel testing system (many students still take exam as 'backup'). Sees own function as degraded: once gatekeeper, now optional supplementary option. theater_ratio=0.68 reflects maintenance of testing infrastructure despite reduced legitimacy. d\u22480.45, f(d)\u22480.43, \u03c3=1.0 \u2192 \u03c7\u22480.30."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subjective_evaluation_bias",
+      "question": "Does holistic review genuinely reduce bias or merely displace test-taking bias into demographic signaling (family background, geographic origin, parental occupation coded via essays and portfolios)?",
+      "resolution_mechanism": "Longitudinal analysis of admitted cohort demographics pre/post-reform; evaluation of whether portfolio-based selection shows correlation with parental income/education stronger or weaker than test-score correlation",
+      "impact": "If bias displaced (not reduced): application system is pure extraction mechanism disguised as equity reform. If bias actually reduced: system is genuine tangled rope (coordination + asymmetric extraction trade-off).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether holistic review reduces bias or displaces it to demographic signaling"
+    },
+    {
+      "id": "portfolio_access_inequality",
+      "question": "What proportion of admitted students through application pathway had access to paid coaching services vs. self-directed application preparation?",
+      "resolution_mechanism": "Survey of admitted cohort; cost-tracking of application preparation services (cram schools, private mentors, professional essay writers); regional analysis of service availability",
+      "impact": "If >70% of admitted students used paid services: suppression gate confirmed (0.65+), system is highly extractive. If <40%: suppression overstated, system has genuine mobility.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of students with access to paid application coaching"
+    },
+    {
+      "id": "authenticity_of_portfolio_content",
+      "question": "Are student portfolios (essays, project descriptions, extracurricular narratives) genuine student work or substantially ghost-written by professional coaching services?",
+      "resolution_mechanism": "Linguistic analysis of portfolio submissions; surveys of students regarding coaching service involvement; comparison of portfolio quality distribution vs. standardized writing samples from same students",
+      "impact": "If portfolio content is substantially inauthentic: theater_ratio should be higher (0.75+), revealing more performative system. If authentic: theater_ratio justified at 0.68.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether student portfolios are authentic or ghost-written"
+    },
+    {
+      "id": "admissions_criteria_transparency",
+      "question": "How transparent are university weighting systems for application components (essay, portfolios, test scores, extracurriculars)? Are weighting formulas published and stable across years?",
+      "resolution_mechanism": "Analysis of published weighting criteria by institution; comparison of stated criteria with reconstructed criteria from admitted cohort; year-to-year variance in criteria",
+      "impact": "If criteria are opaque or unstable: extractiveness and suppression should be higher (\u22650.60). If transparent and stable: system behaves more like rope than snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Transparency and stability of university weighting criteria"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Taiwan's application-based university admission system (\u500b\u4eba\u7533\u8acb, Individual Application pathway) was introduced as a reform to move beyond pure standardized test ranking and enable holistic evaluation of student potential. However, the system has evolved into a mechanism that benefits wealthy urban families and a commercial preparation industry while creating new barriers for rural and low-income students. The constraint exhibits hybrid coordination-extraction properties: the holistic evaluation function is real (universities genuinely benefit from assessing student potential beyond test scores), but the extraction mechanism is equally real (rural students bear disproportionate costs of portfolio development and application coaching services concentrated in urban centers). The theater_ratio (0.68) reflects performative diversity narratives and merit-based framing that masks the underlying credential inflation and class-based stratification being reinforced by the system. The extractiveness trajectory (0.32\u21920.52 over the interval) shows how the system has drifted from its original coordination intent toward asymmetric extraction as the preparation industry professionalized and coaching services became prerequisite for competitive applications.",
+    "key_agents": [
+      "Rural Low-Income Students: Primary victims (powerless/trapped) \u2014 lack access to application coaching, cultural capital signaling, and portfolio development resources concentrated in urban centers",
+      "Wealthy Urban Families: Primary beneficiaries (powerful/arbitrage) \u2014 can afford comprehensive application coaching, have cultural capital for portfolio signaling, leverage family networks for extracurricular opportunities",
+      "University Admissions Offices: Institutional beneficiaries (institutional/arbitrage) \u2014 gain discretion to shape student cohorts, justify selective recruitment via 'fit' and 'potential' metrics, increase institutional reputation",
+      "Elite Preparation Industry: Organized beneficiaries (organized/arbitrage) \u2014 cram schools, portfolio coaching services, essay mentors capture commercial market created by application-based system; revenue grows as system matures",
+      "Educational Equity Advocates: Analytical observers (analytical/analytical) \u2014 see both genuine coordination function (holistic assessment) and extraction mechanism (conversion of transparent inequality into opaque inequality)",
+      "Standardized Test Authority (CEEC): Institutional actor facing degradation (institutional/constrained) \u2014 maintains testing infrastructure through institutional inertia despite reduced formal gatekeeper role; sees own function decline"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The system creates asymmetric benefits for wealthy families and the preparation industry while imposing costs on rural/low-income students. However, extractiveness is not maximal because the holistic evaluation function is genuine \u2014 universities do benefit from assessing factors beyond test scores, and some students without coaching access do gain admission. The 0.52 value reflects that this is not pure rent-seeking but a real mixed mechanism. Suppression (0.65): Moderate-high. Barriers to alternative pathways include: (1) standardized test is still used but no longer primary route (students feel pressure to do both); (2) portfolio development services are professionally gatekept and concentrated geographically; (3) cultural capital required for effective self-presentation is distributed by class; (4) coaching service industry actively markets itself as essential, creating perception of necessity. Theater ratio (0.68): Moderate-high. Universities deploy merit-based and diversity rhetoric around application-based selection. However, admissions criteria are often opaque, weighting of components varies by institution and year, and portfolio authenticity is frequently achieved through paid ghost-writing. The gap between stated holistic assessment ideal and actual opaque criteria-shifting reflects substantial performative content.",
+    "perspectival_gap": "The constraint demonstrates acute perspectival divergence. Rural low-income students see pure extraction (snare): they are trapped by lack of access to coaching and cultural capital, which are now prerequisites. University admissions offices see coordination (rope): they experience the system as solving the problem of matching students to institutional fit. The elite preparation industry sees coordination (rope): they experience expansion of market demand for their services. Middle-class urban students see mixed coordination-extraction (tangled rope): they benefit from non-test pathways but also face rising preparation costs. Educational equity observers see genuine hybrid (tangled rope) but note the theater: the system claims to increase equity while actually increasing hidden stratification by moving from transparent inequality (test scores) to opaque inequality (portfolio access and cultural signaling). The standardized test authority sees its own degradation (piton): the testing infrastructure persists through inertia but has lost functional centrality \u2014 the agency maintains testing capacity even though fewer students rely on it as primary pathway.",
+    "directionality_logic": "Rural low-income students: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. No exit options; bear full cost of system complexity. Wealthy families: Beneficiaries + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Can exit (test-based backup exists, or emigration); primary beneficiaries. University admissions: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Gain discretion and soft benefits (institutional reputation); can modify criteria at will. Preparation industry: Organized + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.09. Highly mobile; captures commercial market directly. Middle-class students: Mixed victim+beneficiary + mobile \u2192 d\u22480.48, f(d)\u22480.61. Can access coaching (though expensive), benefit from holistic assessment, but constrained by rising credential inflation. Educational equity observers: Analytical position \u2192 d\u22480.70, f(d)\u22481.08. See full extraction structure; bears abstract cost of system inequality. Test authority: Institutional + constrained (cannot exit completely but lost primacy) \u2192 d\u22480.45, f(d)\u22480.43. Degraded position but maintains infrastructure.",
+    "mandatrophy_analysis": "The mandatrophy resolution for this constraint requires distinguishing between: (A) the coordination function (holistic assessment is genuinely better at identifying student potential than pure test ranking), and (B) the extraction mechanism (the system has displaced transparent inequality with opaque inequality, and created a class-stratified preparation industry). The constraint is NOT pure coordination (rope) because rural students cannot benefit from the holistic assessment pathway \u2014 they are priced out by coaching services and culturally excluded from portfolio signaling. The constraint is NOT pure extraction (snare) because universities and admissions offices genuinely value holistic information and the system does enable some non-test-advantaged students to gain admission. The mandatrophy is resolved by classifying this as tangled rope: the system provides genuine coordination value (better student-institution matching) AND requires active enforcement (universities must invest in holistic review) AND benefits identifiable groups (wealthy families, preparation industry, universities) AND harms identifiable groups (rural low-income students, educational equity). The theater_ratio of 0.68 reflects that performative rhetoric around equity and merit masks the actual class stratification being reinforced."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "taiwan_standardized_test_system",
+      "cram_school_market_expansion",
+      "educational_inequality_urban_rural"
+    ],
+    "dual_formulation_note": "The application-based admission system decomposes into three structurally distinct constraints: (1) the holistic evaluation mechanism itself (genuine coordination, low \u03b5), (2) the preparation industry gatekeeping effect (high \u03b5 extraction), and (3) the displacement of transparent test-based inequality with opaque portfolio-based inequality (moderate \u03b5 mixed). This story focuses on the integrated system effect; upstream constraints include the standardized test system (which application-based system was meant to replace/supplement) and downstream includes cram school market expansion and widening urban-rural educational gaps."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

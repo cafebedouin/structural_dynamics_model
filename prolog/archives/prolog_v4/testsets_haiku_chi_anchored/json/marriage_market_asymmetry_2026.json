@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "marriage_market_asymmetry_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mmas"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.44,
+    "claimed_type": "snare",
+    "human_readable": "The Asymmetric Information Snare (Women Asking Out)",
+    "topic_domain": "social/psychological/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "male_high_value_selectors"
+    ],
+    "victims": [
+      "female_initiators",
+      "relationship_matching_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Female Initiator",
+      "comment": "PERSPECTIVE 1: FEMALE INITIATOR (SNARE) \u2014 Women who attempt to initiate dating face reputational cost, rejection asymmetry, and social feedback loops that penalize deviation from passive selection norms. Cannot credibly signal interest without bearing disproportionate social cost. Trapped by signaling constraints, asymmetric rejection burden, and internalized norms. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "High-Value Male Selectors",
+      "comment": "PERSPECTIVE 2: HIGH-VALUE MALE SELECTORS (ROPE) \u2014 Men with high mate value benefit from the asymmetric initiation norm: they receive signals passively while avoiding rejection risk and social cost. The constraint solves a coordination problem (revealing mutual interest without mutual vulnerability). They experience this as enabling, not extractive. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Lower-Value Male Competitors",
+      "comment": "PERSPECTIVE 3: LOWER-VALUE MALE COMPETITORS (SNARE) \u2014 Men below the local status threshold face an amplified problem: they cannot credibly initiate (high rejection cost) and do not receive passive signals (low visibility in the selection pool). The female passivity norm is actually a secondary extraction mechanism targeting them. d\u22480.85, f(d)\u22481.20, \u03c3=0.9 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Matching Efficiency Function",
+      "comment": "PERSPECTIVE 4: MATCHING EFFICIENCY (TANGLED ROPE) \u2014 From a civilizational/system perspective, asymmetric initiation norms reduce overall matching efficiency: mutual interest that would be revealed through symmetric signaling remains hidden. The constraint has a real coordination function (mutual vulnerability reduction) but achieves it at the cost of misallocated matches. It requires active enforcement through social feedback. \u03b5\u22480.58, \u03c7 computed from mixed beneficiary (coordination) and victim (efficiency loss) status. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Female Career-Oriented Cohorts",
+      "comment": "PERSPECTIVE 5: CAREER-ORIENTED WOMEN (SNARE) \u2014 Women prioritizing career development over signaling availability face a compound extraction: norms expect them to remain passive while competing with women whose primary signaling is availability. Cannot exit without bearing reputational cost (appearing 'aggressive' or 'desperate'). Theater ratio (0.44) is relatively low here \u2014 the snare operates through direct social pressure, not performative ritual. d\u22480.88, f(d)\u22481.32, \u03c3=1.2 \u2192 \u03c7\u22480.85."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Feminist Norm-Setting Coalitions",
+      "comment": "PERSPECTIVE 6: FEMINIST COALITIONS (ROPE) \u2014 Organized groups promoting symmetric initiation norms experience this as a coordination problem solvable by norm change. They have demonstrated exit options (creating alternative dating spaces, online platforms, subcultures where female initiation is normative) and organized agency. See this constraint as Rope because it solves the mutual-vulnerability problem without extraction \u2014 the alternative is messier but more efficient. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.22."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rejection_symmetry_counterfactual",
+      "question": "If initiation norms were symmetric, would rejection rates and divorce rates change? Or is the passive-norm a stable equilibrium irrespective of norms?",
+      "resolution_mechanism": "Natural experiments in subcultures/online platforms with norm reversal; longitudinal comparison of match quality and relationship stability between symmetric and asymmetric initiation populations",
+      "impact": "If rejection/stability improves with symmetry: constraint is pure extraction (Snare confirmed). If they remain unchanged: constraint is neutral coordination (Rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether symmetric initiation norms affect rejection rates and stability"
+    },
+    {
+      "id": "male_initiation_cost_internalization",
+      "question": "Do high-value males actually experience lower rejection cost, or have they internalized the norm such that they perceive equal cost but with lower frequency?",
+      "resolution_mechanism": "Comparative rejection data controlling for match quality; psychological measures of rejection sensitivity across initiation-frequency groups; field experiments in norm-reversed environments",
+      "impact": "If actual cost is lower: the asymmetry is real and extraction is structural. If cost is equal but frequency is lower: extraction is psychological (norm-induced), not structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether male rejection cost is materially lower or norm-internalized"
+    },
+    {
+      "id": "norm_erosion_rate_technological",
+      "question": "Will online dating platforms and decoupled-from-reputation contexts (anonymity, geographic mobility) erode the asymmetric initiation norm faster than generational replacement?",
+      "resolution_mechanism": "Comparative initiation rates online vs offline; generational cohort analysis; adoption rates of norm-reversal in new dating technologies",
+      "impact": "If erosion is fast: constraint moves toward Scaffold (temporary, sunset) classification. If slow: Snare classification persists across generations.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Rate of norm erosion in decoupled technological contexts"
+    },
+    {
+      "id": "female_selection_quality_under_passivity",
+      "question": "Do passive selection norms actually grant women higher-quality matches (by their own assessment) or do they select for high male visibility (status signaling) at the cost of compatibility?",
+      "resolution_mechanism": "Relationship satisfaction surveys across initiation patterns; match quality metrics (compatibility scores, outcome stability); analysis of correlation between male initiation rate and partner satisfaction",
+      "impact": "If quality is higher: constraint provides genuine coordination benefit (Rope/Tangled Rope). If quality is lower: passivity is a pure extraction mechanism targeting women's matching efficiency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether passive selection norms improve match quality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The asymmetric information snare in romantic partner selection reflects a structural constraint where social norms enforce passive selection for women and active selection for men, creating a mechanism by which high-value males extract decision-making advantage from female initiators. The Gale-Shapley theorem models optimal matching when both sides have full information and can initiate. In reality, informational asymmetry is actively maintained through social cost: women who initiate face reputational penalties (perceived as 'desperate,' 'aggressive,' or 'forward') that men do not face. This constraint is NOT a natural law of mate selection\u2014it is a contingent institutional arrangement enforced through social feedback and internalized norms. The extraction operates at multiple levels: high-value males receive passive signals while avoiding rejection risk; lower-value males face compounded barriers (cannot initiate credibly, receive no passive signals); women optimize for signaling availability rather than compatibility; and overall matching efficiency is reduced because mutual interest remains hidden. The theater ratio (0.44, relatively low) indicates that unlike some constraints, the snare operates through direct social pressure rather than elaborate performative rituals\u2014the enforcement mechanism is raw norm violation cost, not theater.",
+    "key_agents": [
+      "Female Initiators: Primary victims (powerless/trapped) \u2014 bear reputational cost, rejection asymmetry, internalized norms preventing credible signaling",
+      "High-Value Male Selectors: Primary beneficiaries (institutional/arbitrage) \u2014 receive passive signals, avoid rejection risk, benefit from constrained female option set",
+      "Lower-Value Male Competitors: Secondary victims (moderate/constrained) \u2014 face amplified extraction: cannot initiate credibly AND receive no passive signals",
+      "Career-Oriented Women: Secondary victims (powerless/trapped) \u2014 face compound extraction: norms expect passivity while competing with women whose primary signal is availability",
+      "Feminist Coalitions: Organized challengers (organized/mobile) \u2014 have demonstrated exit options and promote norm change; see constraint as solvable coordination problem",
+      "Matching Efficiency Function: System-level victim (analytical/analytical) \u2014 overall match quality is reduced; mutual interest remains hidden"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant decision-making advantage for high-value males and creates substantial costs for female initiators (psychological, reputational, opportunity). However, the extraction is not total\u2014women retain ultimate veto power and can initiate, paying a cost. The measured value reflects that initiation norms have partially eroded in some populations (particularly online contexts) but remain strong in others. Suppression (0.68): High. Social cost of norm violation is substantial: women face reputational damage, social feedback, and psychological internalization of 'appropriate' feminine passivity. Suppression operates through social learning (observing costs for violators) and institutional reinforcement (media, parental guidance, peer pressure). But suppression is not total\u2014exits exist (subcultures, online contexts, norm-shifted friend groups). Theater ratio (0.44): Moderate-low. Unlike some constraints, this one does not require elaborate performative ritual. The enforcement is direct social pressure and internalized norm\u2014women learn not to initiate through feedback, not through complex theatrical structures. The theater_ratio reflects that norms are maintained through simple social cost, not performance complexity.",
+    "perspectival_gap": "This constraint demonstrates a stark perspectival gap rooted in structural position. High-value males see a coordination mechanism (Rope) that solves the mutual-vulnerability problem elegantly\u2014they receive signals without risking rejection. Female initiators see pure extraction (Snare)\u2014they bear all the signaling cost and face rejection asymmetry. Lower-value males see a compounded snare where the female passivity norm actually increases their extraction burden. The organized feminist coalitions see a solvable coordination problem (Rope) because they have agency and exit options\u2014they can create norm-reversed spaces and have demonstrated that alternative norms produce better outcomes. The matching efficiency function (analytical perspective) sees that overall system performance is degraded\u2014the constraint solves the wrong problem (protecting high-value male selection) at the cost of matching quality. This perspectival gap is NOT an artifact of measurement choice or observer bias\u2014it reflects genuine structural differences in how the constraint distributes costs and benefits.",
+    "directionality_logic": "Female Initiators: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximal extraction. Cannot exit without bearing significant reputational and psychological cost. Career-oriented women face compound extraction: d\u22480.88, f(d)\u22481.32. High-Value Male Selectors: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiaries. Receive signals while avoiding rejection risk. Lower-Value Males: Victims + constrained \u2192 d\u22480.85, f(d)\u22481.20. High extraction. Can initiate but face high rejection cost; do not receive passive signals. Feminist Coalitions: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction. Have agency and demonstrated exit options. Matching Efficiency: Analytical victim status \u2192 d\u22480.50, f(d)\u22480.65. Symmetric treatment reflects that the function has coordination aspect (mutual vulnerability reduction) and extraction aspect (efficiency loss) in balance.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is NOT a natural law of mate selection but a contingent institutional arrangement. The false summit is the claim that 'women prefer passive selection because it gives them higher-quality matches'\u2014this naturalizes what is actually a norm-enforced outcome. The evidence for a snare classification is: (1) extractiveness (0.58) is well above coordination threshold (0.35); (2) suppression (0.68) is characteristic of snares; (3) beneficiaries (high-value males) and victims (female initiators, lower-value males) are clearly identified; (4) the constraint requires active enforcement through social cost\u2014it does not emerge naturally; (5) alternative norms (symmetric initiation) have been implemented in subcultures and online contexts with improved matching efficiency. The Tangled Rope perspective for matching efficiency is correct\u2014the constraint does have a coordination function (mutual vulnerability reduction) but achieves it asymmetrically through extraction. The overall classification is Snare because the extraction function dominates the coordination function in the structural data. Feminist coalitions demonstrating alternative norms with better outcomes is evidence that the extraction mechanism is not inevitable\u2014it is a choice embedded in institutional enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "gender_based_social_feedback_cost",
+      "male_rejection_frequency_asymmetry"
+    ],
+    "dual_formulation_note": "The asymmetric information snare decomposes into two structurally distinct claims: (1) Gender-based social feedback cost for initiation (\u03b5\u22480.52, Snare) \u2014 women bear reputational penalty men do not. (2) Male rejection frequency asymmetry (\u03b5\u22480.38, Tangled Rope) \u2014 high-value males face lower rejection frequency due to selectivity, creating coordination problem. These are linked but separate constraints; the snare emerges from their combination."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

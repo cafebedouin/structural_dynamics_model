@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "institutional_mutation_without_selection",
+    "version": "1.0",
+    "generated_date": "2024-01-03",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.8,
+    "claimed_type": "piton",
+    "human_readable": "The Zombie Bureaucracy Drift",
+    "topic_domain": "organizational/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "internal_bureaucratic_actors"
+    ],
+    "victims": [
+      "external_stakeholders",
+      "organizational_mission"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "External Stakeholders",
+      "comment": "Stakeholders are trapped due to lack of alternatives or political power, bearing the costs of bureaucratic drift."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Zombie Bureaucracy",
+      "comment": "The institution persists in a degraded state, with theatrical performance masking the loss of original function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Internal Bureaucratic Actors",
+      "comment": "Internal actors benefit from the stability and predictability of the institution, but are also constrained by its inertia and misaligned goals. Some may exit, but others remain."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Views the long-term degradation of the institution, the increasing theater, and the loss of its original mission as a piton-like structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "selection_pressure_strength",
+      "question": "How strong are the external selection pressures (market competition, democratic accountability) on the institution?",
+      "resolution_mechanism": "Quantitative analysis of market share, public opinion polls, or election results.",
+      "impact": "Strong selection pressure implies less drift. Weak selection pressure implies more drift and a higher likelihood of piton classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strength of external selection pressure"
+    },
+    {
+      "id": "internal_accountability_effectiveness",
+      "question": "How effective are the internal accountability mechanisms within the institution?",
+      "resolution_mechanism": "Qualitative assessment of internal audit reports, whistleblower protections, and employee surveys.",
+      "impact": "Effective internal accountability can mitigate drift. Ineffective internal accountability exacerbates drift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of internal accountability mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This scenario describes how an institution's internal rules and goals mutate over time, while being shielded from any external 'selection' or accountability mechanism (e.g., market failure, democratic removal).  Over time, the institution's purpose drifts from its original mission, and it becomes primarily focused on self-preservation and internal power struggles.",
+    "key_agents": [
+      "External Stakeholders: Primary target (powerless/trapped) - Bear the cost of the institution's inefficiency and misaligned goals.",
+      "Internal Bureaucratic Actors: Primary beneficiary (moderate/mobile) - Benefit from the stability and predictability of the institution, but may also be constrained by it.",
+      "Organizational Mission: Secondary victim (powerless/trapped) - The original purpose of the institution is lost over time."
+    ],
+    "logic_rationale": "Extractiveness (0.60): The institution extracts resources from its environment and stakeholders without delivering proportional value. Suppression (0.70): External actors are suppressed from changing the institution's behavior due to lack of power or access. Theater Ratio (0.80): The institution focuses more on appearances and internal processes than on achieving its original goals.",
+    "perspectival_gap": "External stakeholders see the institution as a snare, extracting resources without delivering value. Internal actors see it as a tangled rope, providing stability but also imposing constraints. The analytical observer sees the overall degradation as a piton.",
+    "directionality_logic": "Internal actors benefit from the stability and predictability of the institution, giving them a lower directionality value. External stakeholders bear the costs of the institution's inefficiency and misaligned goals, giving them a higher directionality value.",
+    "mandatrophy_analysis": "The classification prevents mislabeling coordination as pure extraction by considering the benefits that internal actors receive, even as external stakeholders are harmed. This ensures that the constraint is not simply a snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "mission_creep"
+    ]
+  },
+  "directionality_overrides": []
+}

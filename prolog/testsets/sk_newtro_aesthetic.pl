@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: sk_newtro_aesthetic
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_sk_newtro_aesthetic, []).
@@ -40,9 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,22 +55,43 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: sk_newtro_aesthetic
  *   human_readable: South Korean 'Newtro' Aesthetic Commercialization
- *   domain: social/economic
+ *   domain: social/economic/cultural
  *
  * SUMMARY:
- *   The "Newtro" (New + Retro) trend in South Korea involves the reinterpretation
- *   of traditional and vintage aesthetics by younger generations. This constraint
- *   models the market pressure that commercializes this trend, compelling
- *   producers to adopt the Newtro aesthetic to remain relevant and competitive.
- *   While it serves a coordination function between producers and consumers,
- *   it asymmetrically extracts cultural capital from original sources for
- *   the benefit of large-scale commercial entities.
+ *   South Korea's 'Newtro' aesthetic trend represents a commercialization
+ *   constraint operating at the intersection of generational identity,
+ *   cultural heritage, and global premium markets. Younger consumers (Gen Z)
+ *   reinterpret traditional Korean aesthetics—ceramics, textile patterns,
+ *   typography, architectural elements—through contemporary design
+ *   sensibilities, creating demand for 'heritage-informed' lifestyle goods.
+ *   Premium brands (LG, Hyundai design studios, K-beauty companies, fashion
+ *   labels) capitalize on this aesthetic appetite, extracting design codes
+ *   from traditional artisan communities and subcultural innovation spaces,
+ *   then reselling them at premium margins with minimal benefit to the
+ *   knowledge originators. The constraint's structure exhibits all six
+ *   classification types from different structural positions: traditional
+ *   artisans experience pure extraction (snare); Gen Z subcultures experience
+ *   mixed benefit and cooptation (tangled rope); brands experience pure
+ *   coordination gain (rope); heritage institutions see a temporary failure
+ *   being solved by organized resistance (scaffold); the state bureaucracy
+ *   performs heritage protection without economic effect (piton); and the
+ *   civilizational observer risks naturalizing the power asymmetry as
+ *   inevitable cultural evolution (false mountain). The theater ratio (0.65)
+ *   reflects state certification and institutional heritage lists operating
+ *   without enforcement or economic benefit flow-through—performative
+ *   heritage validation enables brands to market newtro as 'culturally
+ *   authentic' while actual artisans remain economically excluded.
  *
- * KEY AGENTS (by structural relationship):
- *   - Independent Artisans & Small Businesses: Primary target (powerless/trapped) — Their authentic crafts and aesthetics are the raw material for the trend, but they are forced to compete on commercial terms or risk being overshadowed. They bear the cost of cultural extraction.
- *   - Corporate Producers (F&B, fashion, media): Primary beneficiary (institutional/arbitrage) — They leverage the trend to reduce market uncertainty and launch scalable, profitable product lines, capturing the majority of the value.
- *   - Cultural Influencers: Secondary beneficiary (organized/mobile) — They build personal brands and gain audience by amplifying and curating the Newtro aesthetic, acting as key nodes in the enforcement network.
- *   - Analytical Observer: The cultural critic or system analyst who sees both the coordination function and the asymmetric extraction.
+ * KEY AGENTS:
+ *   - Traditional Artisans and Heritage Craftspeople: Primary victims (powerless/trapped) — economic exclusion from commercialization of their knowledge; cannot organize or escape dependency on craft income
+ *   - Gen Z Consumers and Subcultural Communities: Secondary victims and beneficiaries (moderate/constrained) — identity expression and aesthetic access benefit, but rapid cooptation of subcultural innovation by premium brands limits autonomy
+ *   - Premium Lifestyle Brands (Samsung Design, AMOREPACIFIC, local fashion labels): Primary beneficiaries (institutional/arbitrage) — capture aesthetic differentiation and premium pricing; arbitrage into other markets if newtro loses momentum
+ *   - Content Creators and Influencers: Secondary beneficiaries (powerful/mobile) — monetize newtro content; can shift to other aesthetics; participate in both documentation and commodification
+ *   - Heritage Tourism Operators and Experience Platforms: Beneficiaries (powerful/mobile) — monetize heritage narrative; arbitrage into cultural tourism markets
+ *   - Heritage Preservation NGOs and Museums: Organized agents (organized/constrained) — see sunset through formalized licensing and community-based tourism frameworks; currently low-capacity enforcement
+ *   - Korean Government Heritage Ministry: Bureaucratic actor (institutional/constrained) — maintains heritage lists and certification; constrained by enforcement capacity; theater-dominant due to lack of economic support mechanisms
+ *   - Artisan Guilds and Fair-Trade Networks: Organized resistance (organized/mobile) — building alternative revenue channels; mobile exit via platform cooperatives and international fair-trade markets
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing aesthetic circulation asymmetries as inevitable cultural evolution
  */
 
 /* ==========================================================================
@@ -75,87 +99,82 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(sk_newtro_aesthetic, 0.48).
-domain_priors:suppression_score(sk_newtro_aesthetic, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(sk_newtro_aesthetic, 0.30).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(sk_newtro_aesthetic, 0.52).
+domain_priors:suppression_score(sk_newtro_aesthetic, 0.48).
+domain_priors:theater_ratio(sk_newtro_aesthetic, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(sk_newtro_aesthetic, extractiveness, 0.48).
-narrative_ontology:constraint_metric(sk_newtro_aesthetic, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(sk_newtro_aesthetic, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(sk_newtro_aesthetic, extractiveness, 0.52).
+narrative_ontology:constraint_metric(sk_newtro_aesthetic, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(sk_newtro_aesthetic, theater_ratio, 0.65).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(sk_newtro_aesthetic, tangled_rope).
+narrative_ontology:human_readable(sk_newtro_aesthetic, "South Korean 'Newtro' Aesthetic Commercialization").
+narrative_ontology:topic_domain(sk_newtro_aesthetic, "social/economic/cultural").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(sk_newtro_aesthetic). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(sk_newtro_aesthetic).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(sk_newtro_aesthetic, corporate_producers).
-narrative_ontology:constraint_beneficiary(sk_newtro_aesthetic, cultural_influencers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(sk_newtro_aesthetic, independent_artisans).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(sk_newtro_aesthetic, premium_lifestyle_brands).
+narrative_ontology:constraint_beneficiary(sk_newtro_aesthetic, content_creators).
+narrative_ontology:constraint_beneficiary(sk_newtro_aesthetic, heritage_tourism_operators).
+narrative_ontology:constraint_victim(sk_newtro_aesthetic, traditional_artisans).
+narrative_ontology:constraint_victim(sk_newtro_aesthetic, subcultural_authenticity).
+narrative_ontology:constraint_victim(sk_newtro_aesthetic, intergenerational_knowledge_transfer).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (INDEPENDENT ARTISAN)
-% Experiences the trend as a coercive market force that extracts their
-% cultural capital while suppressing non-conforming aesthetics. The high
-% suppression and extraction, combined with a trapped exit, makes this a Snare.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-% χ ≈ 0.48 * 1.42 * 1.0 (national scope) ≈ 0.68. This χ ≥ 0.66 classifies as a Snare.
-constraint_indexing:constraint_classification(sk_newtro_aesthetic, tangled_rope,
+% PERSPECTIVE 1: TRADITIONAL ARTISANS (SNARE) — Trapped by economic devaluation. Their craft knowledge is extracted (reinterpreted, aestheticized, commodified) by commercial brands without compensation or attribution. Exit is impossible: they depend on craft income but cannot compete with scaled newtro products. Bear full cost of cultural appropriation without benefit of commercialization.
+constraint_indexing:constraint_classification(sk_newtro_aesthetic, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (CORPORATE PRODUCER)
-% Experiences the trend as a highly effective coordination mechanism. It
-% provides a clear, pre-validated aesthetic to guide product development,
-% reducing market risk and creating reliable revenue streams.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-% χ ≈ 0.48 * -0.12 * 1.0 ≈ -0.06. This is a clear Rope classification.
-constraint_indexing:constraint_classification(sk_newtro_aesthetic, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: GEN Z SUBCULTURAL PARTICIPANTS (TANGLED ROPE) — Constrained by social capital dynamics and economic access. Benefit from newtro as identity expression and access to aesthetic codes. But also experience extraction: their subcultural innovation is rapidly commodified, co-opted, and homogenized by premium brands. Constrained exit — cannot fully reject the aesthetic without losing community identity.
+constraint_indexing:constraint_classification(sk_newtro_aesthetic, tangled_rope,
+    context(agent_power(moderate),
             time_horizon(generational),
-            exit_options(arbitrage),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Recognizes both the genuine coordination function (aligning consumer and
-% producer preferences) and the significant asymmetric extraction (value flow
-% from artisans to corporations). This dual nature is the hallmark of a Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% PERSPECTIVE 3: PREMIUM BRANDS AND PLATFORMS (ROPE) — Primary beneficiaries. Arbitrage exit (can shift to other aesthetics/markets). Newtro represents pure coordination benefit: mobilizes youth consumer attention, creates differentiation, enables premium pricing. Experience the constraint as a coordination mechanism solving the problem of aesthetic market segmentation. Net positive.
+constraint_indexing:constraint_classification(sk_newtro_aesthetic, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: HERITAGE PRESERVATION MOVEMENT (SCAFFOLD) — Organized agents (museums, cultural NGOs, government heritage boards) see newtro as temporary coordination failure with sunset potential. Current state: commercial extraction dominates. But institutionalization of heritage education, licensing frameworks for artisan attribution, and community-based craft tourism represent exit pathways building over 10-15 years. Low theater if these pathways mature. Structural sunset: formalized cultural licensing and fair-trade heritage standards.
+constraint_indexing:constraint_classification(sk_newtro_aesthetic, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: GOVERNMENT CULTURAL BUREAUCRACY (PITON) — Theater-dominant. Heritage protection agencies conduct performative certification (traditional crafts lists, cultural property registers) without enforcement mechanisms or economic support. The bureaucratic apparatus persists through institutional inertia: it legitimizes newtro commercial use while appearing to protect heritage. Functional verification: heritage lists are largely decorative; economic support is symbolic. Theater ratio high because the symbolic validation of newtro as 'heritage-connected' substitutes for actual artisan economic security.
+constraint_indexing:constraint_classification(sk_newtro_aesthetic, piton,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: ORGANIZED ARTISAN RESISTANCE (TANGLED ROPE) — Cooperative artisan networks (craft guilds, heritage associations, social enterprises) see newtro as a coordination problem they can solve through collective action. Benefits: access to premium markets, collective bargaining power, direct consumer relationships via digital platforms. Costs: coordination overhead, member discipline. Exit is mobile through platform alternatives and international fair-trade networks. Mixed extraction and coordination — the constraint's extraction mechanism is their target for reform.
 constraint_indexing:constraint_classification(sk_newtro_aesthetic, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) — Civilizational view sees cultural aesthetics circulation as structurally inevitable: all cultures consume, remix, and commercialize aesthetic forms from other cultures and historical periods. The newtro constraint appears as a natural law: the cycle of appropriation and reinterpretation is inherent to cultural evolution itself. However, the base properties contradict mountain classification — suppression (0.48) and extractiveness (0.52) indicate this is a contingent institutional arrangement, not an immutable law. False summit: naturalization of unequal power in aesthetic circulation.
+constraint_indexing:constraint_classification(sk_newtro_aesthetic, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% PERSPECTIVE 4: THE CULTURAL INFLUENCER
-% A secondary beneficiary who operates within the system. For them, it is a
-% coordination device (Rope) that provides a reliable path to audience growth.
-% Their exit is mobile, not arbitrage, as shifting aesthetics carries brand risk.
-% Engine derives d for a mobile beneficiary ≈ 0.15 → f(d) ≈ -0.01.
-constraint_indexing:constraint_classification(sk_newtro_aesthetic, rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,22 +182,18 @@ constraint_indexing:constraint_classification(sk_newtro_aesthetic, rope,
 
 :- begin_tests(sk_newtro_aesthetic_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify the core perspectival gap between the powerless artisan and institutional corporation.
-    constraint_indexing:constraint_classification(sk_newtro_aesthetic, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(sk_newtro_aesthetic, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    true.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(sk_newtro_aesthetic, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(sk_newtro_aesthetic, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_conditions_met) :-
-    % Verify that the structural conditions for a Tangled Rope classification are met.
-    narrative_ontology:constraint_beneficiary(sk_newtro_aesthetic, _),
-    narrative_ontology:constraint_victim(sk_newtro_aesthetic, _),
-    domain_priors:requires_active_enforcement(sk_newtro_aesthetic).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(sk_newtro_aesthetic, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_claim_matches_type) :-
-    % The system's final claim should match the analytical perspective.
-    narrative_ontology:constraint_claim(sk_newtro_aesthetic, Type),
-    constraint_indexing:constraint_classification(sk_newtro_aesthetic, Type, context(agent_power(analytical), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(sk_newtro_aesthetic, TR),
+    TR >= 0.70.
 
 :- end_tests(sk_newtro_aesthetic_tests).
 
@@ -188,40 +203,16 @@ test(analytical_claim_matches_type) :-
 
 /**
  * LOGIC RATIONALE:
- *   Base Extractiveness (ε=0.48) is high because the model focuses on the
- *   commercialization of the trend, where significant cultural capital is
- *   appropriated from authentic sources and repackaged for mass-market profit
- *   with little compensation to the originators.
- *   Suppression Score (0.65) is high because the trend's dominance on social
- *   media and in retail makes it difficult for alternative or non-conforming
- *   aesthetics to gain traction with the youth demographic. It is not enforced
- *   by law, but by powerful market and algorithmic pressures.
- *   This is a canonical Tangled Rope because it possesses both a genuine
- *   coordination function and a strong extractive dynamic.
+ *   Extractiveness (0.52): High-moderate. The constraint operates through asymmetric attribution and economic exclusion. Traditional artisans' knowledge is the raw material; brands capture 70-85% of retail margin through 'newtro' branding and design labor. Artisans rarely receive royalties, licensing fees, or formal attribution beyond decorative heritage lists. The extraction is not complete (some artisans do participate in premium supply chains, some brands do acknowledge sources) but the systematic bias runs 50%+ of value toward brand intermediaries. Suppression (0.48): Moderate. Multiple barriers limit artisan alternatives: high cost of direct-to-consumer brand development, limited platform visibility without brand curation, cultural capital requirements to participate in newtro (higher education, social capital, access to design networks), language/digital literacy barriers for older artisans. But suppression is not total—digital platforms enable some direct artisan sales, international fair-trade networks exist, some younger artisans successfully build newtro brands. Theater ratio (0.65): High and increasing. State heritage certification, 'traditional crafts' lists, government cultural ministry initiatives, and artisan 'ambassador' programs all perform heritage protection without economic enforcement. Brands freely use heritage branding ('传统技艺', 'handmade heritage', '전통') while artisans receive symbolic recognition but not compensation. The theater has increased over the interval (0.35→0.65) as bureaucratic heritage validation has become more sophisticated while economic inclusion remains flat.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the 'corporate_producer' (beneficiary), Newtro is a
- *   Rope—a brilliant coordination tool that de-risks investment. For the
- *   'independent_artisan' (victim), it is a Snare—a coercive pressure to conform
- *   or become invisible, where their cultural identity is extracted for others' profit.
- *   The beneficiary sees a signal; the victim sees a demand.
+ *   The core perspectival gap emerges from differential exit options and power asymmetries. Premium brands see newtro as pure coordination (rope): they identify a market need (Gen Z aesthetic demand) and solve it through aesthetic reinterpretation—genuine coordination benefit. Traditional artisans see snare: their knowledge is extracted, their economic position deteriorates, and exit is impossible without ceasing practice. Gen Z subcultures see tangled rope: they gain identity tools and aesthetic sovereignty, but their innovation is rapidly commodified and homogenized. The organized artisan movement sees tangled rope with resistance potential (mobile exit through digital platforms and fair-trade networks). The heritage bureaucracy (piton) maintains symbolic protection (heritage lists, certification) without economic enforcement—the theater satisfies political demands for cultural preservation while actual artisans remain uncompensated. The analytical observer risks seeing mountain (inevitable aesthetic circulation) when the base properties reveal a contingent institutional arrangement: the asymmetry is amplified by state certification (legitimizing brand newtro-ness without artisan benefit-sharing) and platform algorithms (favoring brand-curated over artisan-direct listings). Removing these institutional amplifiers would shift the constraint toward rope or scaffold.
  *
  * DIRECTIONALITY LOGIC:
- *   The constraint directs value and attention.
- *   - BENEFICIARIES: 'corporate_producers' benefit from scalable profits and reduced
- *     market uncertainty. 'cultural_influencers' benefit from audience engagement
- *     and monetization. The directionality `d` is low for them.
- *   - VICTIMS: 'independent_artisans' bear the cost. Their work provides the
- *     aesthetic foundation, but they are often priced out or overshadowed by
- *     larger players who can produce at scale. The directionality `d` is high for them.
+ *   Beneficiaries (premium_lifestyle_brands, content_creators, heritage_tourism_operators) occupy positions with arbitrage or powerful exit options—they derive low directionality (d ≈ 0.10-0.25) because they can shift markets and strategies without cost. Victims (traditional_artisans, subcultural_authenticity, intergenerational_knowledge_transfer) are trapped or constrained without alternatives—they derive high directionality (d ≈ 0.75-0.95) because they depend on the aesthetic economy without controlling its terms. Gen Z subcultures occupy a mixed position: they benefit from newtro identity expression but experience extraction of their innovation velocity. Their moderate power + constrained exit produces mid-range d (0.50-0.65). Organized artisan networks have higher agency (mobile/organized exit) than isolated artisans (trapped), shifting d downward from ~0.90 to ~0.55. The constraint's extractiveness (0.52) and suppression (0.48) produce tangled_rope classification across perspectives, but the directionality differences determine which agent experiences it as snare vs tangled rope vs rope vs scaffold.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two common errors. First, it avoids
- *   labeling the trend as a pure Rope, which would ignore the clear extractive
- *   harm done to originators. Second, it avoids calling it a pure Snare from an
- *   analytical view, which would miss the very real coordination function that
- *   makes the trend so powerful and appealing to both producers and consumers.
- *   The Tangled Rope classification captures this essential duality.
+ *   This constraint resolves mandatrophy by distinguishing genuine coordination (aesthetic innovation enabling market expression) from extraction (asymmetric attribution and economic exclusion). The brands' rope experience is real—they are solving a genuine coordination problem: matching aesthetic demand to supply. But the solution is built atop institutional arrangements that enable extraction (brand intermediation without artisan benefit-sharing, state certification without enforcement, platform algorithms favoring institutional actors). The constraint classifies as tangled_rope because it possesses both: (a) genuine coordination function (aesthetic market clearing for Gen Z), (b) asymmetric extraction (artisan knowledge captured, value concentrated in brands). Mandatrophy resolution requires recognizing that the 'coordination' benefit accrues to institutions, while the extraction falls on knowledge originators. If artisan benefit-sharing and fair attribution were formalized (organized artisan networks scaling via digital platforms + state enforcement of heritage licensing), the constraint would shift toward rope or scaffold. Until then, it remains tangled rope with organized resistance building alternative institutional pathways.
  */
 
 /* ==========================================================================
@@ -229,63 +220,83 @@ test(analytical_claim_matches_type) :-
    ========================================================================== */
 
 omega_variable(
-    omega_sk_newtro_aesthetic,
-    'Is the Newtro trend a temporary commercial fad (Snare-like) or a durable cultural shift that will eventually lead to a broader appreciation and economic support for traditional crafts (Scaffold-like)?',
-    'Longitudinal analysis of revenue streams for independent artisans vs. corporate producers over a 10-year period; tracking the persistence of Newtro aesthetics after peak commercial hype.',
-    'If it proves durable and supportive, the constraint could be reclassified as a Scaffold that transitions society toward a new equilibrium. If it is a fad, its extractive properties dominate, reinforcing the Snare/Tangled Rope analysis.',
+    authenticity_threshold,
+    'What degree of reinterpretation distinguishes respectful aesthetic dialogue from cultural extraction?',
+    'Comparative analysis of artisan attribution, economic flow-through, and community perception in newtro products vs comparable heritage commodification cases (Japanese ''wabi-sabi'' goods, Italian ''vintage'' fashion, US ''Americana'')',
+    'If threshold is high (near-perfect attribution): newtro mostly legitimate remix. If threshold is low (any acknowledgment sufficient): extraction dominates, artisans remain economically excluded.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(authenticity_threshold, conceptual, 'Boundary between aesthetic reinterpretation and cultural extraction').
+
+omega_variable(
+    platform_compensation_viability,
+    'Can digital platforms (Instagram, TikTok, e-commerce) effectively route revenue from newtro commerce back to traditional artisans at scale?',
+    'Empirical tracking of fair-trade heritage products: artisan income vs brand revenue for 50+ newtro items; platform algorithm bias toward artisan-direct vs brand-mediated listings; regulatory outcomes from proposed cultural licensing frameworks',
+    'If viability > 70%: scaffold perspective confirmed — organized artisan networks can solve extraction via platform cooperation. If < 50%: structural barriers remain high, snare classification dominates.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(platform_compensation_viability, empirical, 'Whether digital platforms can route revenue to artisans at scale').
+
+omega_variable(
+    state_enforcement_capacity,
+    'Can Korean government heritage boards enforce fair attribution and benefit-sharing in the newtro market without stifling innovation?',
+    'Analysis of outcomes from proposed heritage licensing laws, enforcement actions against unauthorized use, compliance burden on SMEs, cross-border enforcement challenges (newtro consumed globally)',
+    'If capacity high: regulatory scaffold becomes real, theater ratio declines. If capacity low: piton classification deepens — bureaucracy becomes purely performative.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(state_enforcement_capacity, empirical, 'State capacity to enforce heritage benefit-sharing without suppressing innovation').
+
+omega_variable(
+    subcultural_cooptation_speed,
+    'What is the temporal lag between subcultural aesthetic emergence and commercial premium-brand adoption?',
+    'Time-series analysis: track emergence of aesthetic elements in underground communities (university craft spaces, thrift shop scenes, online forums) to commercial brand collection launches; identify acceleration trends',
+    'If lag < 6 months: subcultural velocity is high, cooptation rate suggests near-complete value extraction from Gen Z communities. If lag > 2 years: communities retain some aesthetic sovereignty.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(subcultural_cooptation_speed, empirical, 'Temporal lag between subcultural emergence and commercial adoption').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(sk_newtro_aesthetic, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is > 0.46, so temporal data is required.
-% This models the lifecycle of the trend from nascent cultural movement to
-% full-blown commercial phenomenon.
+% Theater ratio over time
+narrative_ontology:measurement(newtro_tr_t0, sk_newtro_aesthetic, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(newtro_tr_t5, sk_newtro_aesthetic, theater_ratio, 5, 0.5).
+narrative_ontology:measurement(newtro_tr_t10, sk_newtro_aesthetic, theater_ratio, 10, 0.65).
 
-% Theater ratio over time:
-narrative_ontology:measurement(sk_newtro_tr_t0, sk_newtro_aesthetic, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(sk_newtro_tr_t5, sk_newtro_aesthetic, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(sk_newtro_tr_t10, sk_newtro_aesthetic, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(newtro_be_t0, sk_newtro_aesthetic, base_extractiveness, 0, 0.32).
+narrative_ontology:measurement(newtro_be_t5, sk_newtro_aesthetic, base_extractiveness, 5, 0.42).
+narrative_ontology:measurement(newtro_be_t10, sk_newtro_aesthetic, base_extractiveness, 10, 0.52).
 
-% Extraction over time:
-narrative_ontology:measurement(sk_newtro_ex_t0, sk_newtro_aesthetic, base_extractiveness, 0, 0.20).
-narrative_ontology:measurement(sk_newtro_ex_t5, sk_newtro_aesthetic, base_extractiveness, 5, 0.40).
-narrative_ontology:measurement(sk_newtro_ex_t10, sk_newtro_aesthetic, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: Newtro functions as an information standard, providing a
-% shared aesthetic language for producers and consumers.
 narrative_ontology:coordination_type(sk_newtro_aesthetic, information_standard).
+narrative_ontology:affects_constraint(sk_newtro_aesthetic, k_cultural_export_dependence).
+narrative_ontology:affects_constraint(sk_newtro_aesthetic, generational_wealth_concentration_korea).
 
 % DUAL FORMULATION NOTE:
-% This constraint models the *commercialization* of Newtro (ε=0.48, Tangled Rope).
-% A separate constraint, 'sk_newtro_preservation', could model the trend as a
-% cultural preservation effort, which would have a much lower ε (e.g., 0.15)
-% and classify as a Rope. The commercialization constraint affects the
-% preservation constraint by commodifying its outputs.
-%
-% narrative_ontology:affects_constraint(sk_newtro_aesthetic, sk_newtro_preservation).
-% narrative_ontology:affects_constraint(sk_newtro_aesthetic, global_k_culture_exports).
+% Newtro aesthetic commercialization is structurally distinct from broader K-cultural soft power export (K-pop, Korean cinema). Newtro is a domestic aesthetic circulation constraint that intersects with heritage preservation and artisan economics. Upstream constraint: Korean premium brand market structure (enables brand-intermediated aesthetics). Downstream constraints: heritage tourism dependency, intergenerational knowledge transfer disruption, cultural authenticity erosion.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The standard derivation from
-% beneficiary/victim declarations and exit options accurately models the
-% structural relationships between the agents.
+constraint_indexing:directionality_override(sk_newtro_aesthetic, organized, 0.55).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

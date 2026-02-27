@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "civilizational_lifecycle_solara",
+    "version": "1.0",
+    "generated_date": "2024-07-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.65,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Lifecycle of Solaran Civilization",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "imperial_elite",
+      "warrior_caste"
+    ],
+    "victims": [
+      "early_peasant_caste",
+      "subjugated_species",
+      "late_empire_citizenry"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Subjugated Species",
+      "comment": "PERSPECTIVE 1: SUBJUGATED SPECIES (SNARE) — For a conquered world or the early peasant caste, the Solaran system is pure coercive extraction. They are trapped, with resources and labor systematically removed to benefit the imperial core. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.92."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Unifying Founder (Solem)",
+      "comment": "PERSPECTIVE 2: THE FOUNDER (ROPE) — From the perspective of the unifier Solem, the imperial structure is a pure coordination mechanism to end planetary wars, enable interstellar expansion, and ensure stability. The costs are seen as necessary investments for collective benefit. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. A net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Imperial Administrator",
+      "comment": "PERSPECTIVE 3: IMPERIAL ADMINISTRATOR (TANGLED ROPE) — A high-level official during the empire's zenith perceives both the genuine coordination function (managing a galactic empire) and the necessary, asymmetric extraction (taxes, conscription) required to maintain it. d≈0.48, f(d)≈0.60, σ=1.2 → χ≈0.52."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Constitutional Reformer",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL REFORMER (SCAFFOLD) — The agents who abolished the original caste system viewed that rigid hierarchy as a temporary scaffold. Their constitution acts as a sunset clause, intended to transition the civilization to a more equitable state. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.54. The classification is scaffold due to the sunset clause, despite high chi."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Late-Empire Bureaucrat",
+      "comment": "PERSPECTIVE 5: LATE-EMPIRE BUREAUCRAT (PITON) — In the civilization's decline, a bureaucrat sees the grand rituals of the sacred monarchy and state functions as largely performative. The original function has atrophied, but the theater persists due to institutional inertia. theater_ratio=0.75 satisfies the piton gate (≥0.70)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Galactic Historian",
+      "comment": "PERSPECTIVE 6: GALACTIC HISTORIAN (MOUNTAIN) — An external, long-term observer may view the entire lifecycle as an inevitable, quasi-natural law of civilizational dynamics. From this distance, the rise and fall appears as an unchangeable pattern, a mountain of social physics. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "collapse_driver",
+      "question": "Was the primary driver of Solaran decline internal decay (e.g., elite overproduction, institutional sclerosis) or external pressure (e.g., insurmountable threats, resource depletion)?",
+      "resolution_mechanism": "Analysis of late-empire records, focusing on resource allocation, military deployments, and internal political stability metrics.",
+      "impact": "Internal decay points to the system being a Snare that consumed itself. External pressure suggests the system was a Rope that was simply overcome by a Mountain of external reality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between internal vs. external drivers of civilizational collapse."
+    },
+    {
+      "id": "constitutional_effectiveness",
+      "question": "Did the constitutional reforms genuinely dismantle the extractive caste system or merely provide a new theatrical justification for it?",
+      "resolution_mechanism": "Comparative analysis of wealth and power distribution pre- and post-constitution.",
+      "impact": "If effective, the Scaffold perspective is validated. If ineffective, the reform was merely a shift in the Piton's theatrical script, and the underlying Snare remained.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Assessing the real-world impact of the constitutional reforms on social stratification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the emergent 'iron law' governing the complete lifecycle of the Solaran civilization, from unification and expansion to zenith and eventual decline. The constraint is not a single policy but the entire socio-political operating system, including its path dependencies, cultural norms, and structural incentives. This story serves as a diagnostic exemplar, demonstrating how a single complex system with fixed base properties can be classified as all six constraint types depending on the observer's structural position and temporal location within the lifecycle.",
+    "key_agents": [
+      "The Unifying Founder (Solem): Primary beneficiary (institutional/arbitrage) - Experiences the system as pure coordination (Rope).",
+      "The Imperial Elite/Warrior Caste: Beneficiaries (powerful/constrained) - Experience a mix of coordination and extraction that benefits them (Tangled Rope).",
+      "Subjugated Species/Early Peasantry: Primary victims (powerless/trapped) - Experience the system as pure coercive extraction (Snare).",
+      "Constitutional Reformers: Change agents (organized/mobile) - View the old system as a temporary, coercive structure to be replaced (Scaffold).",
+      "Late-Empire Bureaucracy: Inertial actors (institutional/constrained) - Maintain the rituals of a system whose function has decayed (Piton).",
+      "The Galactic Historian: Analytical observer (analytical/analytical) - Risks naturalizing the contingent lifecycle as an inevitable law (Mountain)."
+    ],
+    "logic_rationale": "Extractiveness (0.72) is high, reflecting the system's ultimate reliance on resource and labor extraction from subjugated populations and lower classes to fuel its expansion and maintain the elite. Suppression (0.65) is high due to the initial caste system and the military enforcement required for galactic conquest. Theater Ratio (0.75) is high, reflecting the 'sacred monarchy' and the tendency for institutions to become performative and inertial in the civilization's later stages. The temporal measurements show both extractiveness and theater increasing as the civilization matures and then declines, a classic sign of lifecycle drift.",
+    "perspectival_gap": "The gap is maximal. The same system is a Rope to its founder, a Snare to its victims, a Tangled Rope to its managers, a Scaffold to its reformers, a Piton to its late-stage inhabitants, and a Mountain to the distant observer. This demonstrates that the constraint's 'type' is not an intrinsic property but an emergent feature of the interaction between the system's structure and the observer's indexical position (P,T,E,S).",
+    "directionality_logic": "Directionality is derived from the explicit beneficiary/victim declarations. The Imperial Elite (beneficiary, arbitrage/constrained exit) experience low or negative effective extraction. The Subjugated Species (victim, trapped exit) experience maximally amplified extraction, pushing chi into the Snare category. The reformers (organized, mobile exit) have enough agency to perceive a path to change, classifying the system as a temporary Scaffold. The analytical historian has no stake, but their universal scope and civilizational timeline predisposes them to see an immutable pattern.",
+    "mandatrophy_analysis": "This story resolves the mandatrophy by embracing it. The question 'Which type is the Solaran lifecycle really?' is ill-posed. The system IS the presheaf of all its perspectival classifications. The mandatrophy is resolved not by picking one 'correct' type, but by understanding that the system's complexity is captured by the full set of indexed observations. The high base extractiveness (0.72) forces this analysis, preventing a simplistic classification and revealing the deep structural conflicts within the civilization's lifecycle."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  }
+}

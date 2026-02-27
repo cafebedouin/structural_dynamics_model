@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "second_order_unintended_consequences",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cobra"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cobra Effect Trap",
+    "topic_domain": "social/economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "primary_problem_solver",
+      "metric_optimization_agent"
+    ],
+    "victims": [
+      "systemic_state",
+      "unintended_consequence_bearers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The System Bearing Unintended Consequences",
+      "comment": "PERSPECTIVE 1: UNINTENDED CONSEQUENCE BEARERS (SNARE) \u2014 Actors who experience the secondary effects (worsened systemic state) have no exit option. They did not consent to the original coordination mechanism. They bear concentrated costs while benefits are diffuse. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Primary Problem Solver",
+      "comment": "PERSPECTIVE 2: PRIMARY PROBLEM SOLVER (ROPE) \u2014 Institution that designed the coordination mechanism to solve the primary problem experiences it as pure coordination. Captures immediate success metrics and credit for problem-solving. The secondary effects are externalized. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Adaptation Cohort",
+      "comment": "PERSPECTIVE 3: ADAPTATION COHORT (TANGLED ROPE) \u2014 Secondary agents who initially benefit from the coordination mechanism but gradually face worsening systemic effects. They see both the coordination function (solving primary problem) and the extraction (bearing unintended consequences). d\u22480.62, f(d)\u22480.90, \u03c3=1.0 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Problem Definition Institution",
+      "comment": "PERSPECTIVE 4: PROBLEM DEFINITION INSTITUTION (PITON) \u2014 Regulatory or governance bodies that continue to maintain the coordination mechanism despite recognized secondary effects. Theater ratio reflects performative monitoring and incremental adjustments that preserve the mechanism's form without addressing causal structure. theater_ratio=0.64 reflects that oversight has become largely procedural. d\u22480.10, f(d)\u2248-0.09, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Organized agents (NGOs, research networks, policy advocates) working to replace or sunset the coordination mechanism with an alternative that preserves the primary benefit while mitigating secondary effects. See the constraint as temporary, with a defined exit path. d\u22480.45, f(d)\u22480.48, \u03c3=1.1 \u2192 \u03c7\u22480.27."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the cobra effect reveals a structural pattern: incentive systems designed to solve first-order problems have an inherent tendency to generate second-order effects that worsen the state. The coordination (solving the primary problem) and the extraction (unintended consequences) are structurally inseparable in the current design. d\u22480.70, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.58."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "primary_benefit_measurement",
+      "question": "How much of the original primary problem was actually solved by the coordination mechanism, versus how much was solved by exogenous factors or displacement to secondary forms?",
+      "resolution_mechanism": "Counterfactual analysis comparing problem trajectory with/without the mechanism; decomposition of solution sources (mechanism vs exogenous vs displacement)",
+      "impact": "If mechanism solved <30% of primary problem: it was extraction disguised as coordination. If >70%: the coordination benefit is real and the mechanism justified despite secondary effects. If 30-70%: true tangled rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of primary problem solved by mechanism vs exogenous factors"
+    },
+    {
+      "id": "secondary_effect_inevitability",
+      "question": "Are the secondary effects inherent to the incentive structure, or were they contingent choices that could have been anticipated and prevented?",
+      "resolution_mechanism": "Historical reconstruction of design process; identification of ignored warnings or alternative designs that were proposed but rejected; causal pathway analysis from incentive to secondary effect",
+      "impact": "If inherent: the mechanism requires fundamental redesign. If contingent: the mechanism was negligent design. If mixed: partial redesign is sufficient.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether secondary effects were inherent or contingent design outcomes"
+    },
+    {
+      "id": "systemic_state_degradation_threshold",
+      "question": "At what point does the cumulative cost of secondary effects exceed the benefit of solving the primary problem?",
+      "resolution_mechanism": "Cost-benefit analysis over time; identification of inflection point where unintended consequences outweigh primary benefit; stakeholder impact accounting",
+      "impact": "If threshold already crossed: mechanism should be sunsetted immediately. If threshold approaching: urgent redesign needed. If threshold distant: mechanism retains temporary validity.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Threshold where unintended consequences exceed primary benefit"
+    },
+    {
+      "id": "alternative_mechanism_existence",
+      "question": "Do alternative coordination mechanisms exist that solve the primary problem with lower secondary-effect risk?",
+      "resolution_mechanism": "Systematic search of design space; pilot testing of alternatives; causal analysis of why alternatives were not adopted originally",
+      "impact": "If viable alternatives exist: scaffold perspective confirmed \u2014 sunset is feasible. If no alternatives: mechanism may be locally optimal despite costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Existence and viability of alternative coordination mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Cobra Effect Trap describes a structural pathology in incentive design where a coordination mechanism created to solve a primary problem generates unexpected secondary effects that worsen the overall systemic state. The archetype is the colonial Indian cobra bounty: British administrators offered payment for dead cobras to reduce cobra attacks. The incentive structure (reward = dead cobra) coordinated cobra hunting but generated an unintended secondary effect: bounty hunters began breeding cobras in captivity to earn the reward, dramatically increasing the cobra population. When the program was abandoned, the captive-bred cobra population was released, leaving the systemic state worse than before. The constraint exhibits the signature of a tangled rope: it has a genuine coordination function (solving the primary problem) AND asymmetric extraction (unintended consequences fall on those not party to the original coordination mechanism). The primary problem solver captures the benefit of solving the primary problem. The systemic state (and actors bearing secondary effects) captures the cost of the unintended consequences. The extraction emerges from the mechanism's blindness to second-order effects \u2014 the designer's success metric (primary problem metric) is independent of the mechanism's actual systemic impact. Over time, theater ratio increases as oversight focuses on procedural compliance with the mechanism rather than on whether the mechanism achieves its intended effect. Adaptation cohorts see both the benefit and the harm, creating a perspectival gap between the mechanism's designer and those who experience its secondary effects.",
+    "key_agents": [
+      "Primary Problem Solver: Institutional beneficiary (institutional/arbitrage) \u2014 captures credit and success metrics for solving primary problem; externalizes secondary effects",
+      "Systemic State & Secondary Effect Bearers: Powerless victims (powerless/trapped) \u2014 did not consent to coordination mechanism; experience worsened state with no exit option",
+      "Adaptation Cohort: Moderate agents (moderate/constrained) \u2014 initially benefit from primary solution but face accumulating secondary effects over biographical timescale",
+      "Problem Definition Institution: Regulatory body (institutional/arbitrage) \u2014 maintains mechanism through procedural oversight; theater ratio reflects performative compliance",
+      "Reform Coalition: Organized advocates (organized/mobile) \u2014 work to redesign mechanism to preserve primary benefit while mitigating secondary effects; see sunset pathway",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 recognizes cobra effect as structural pattern in incentive design; sees tangled rope as inevitable unless mechanism fundamentally redesigned"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, and rising. Initial extractiveness (0.18) reflects the mechanism's early success in solving the primary problem with minimal visible secondary effects. Over the interval, extractiveness increases as secondary effects accumulate and become apparent. By time=6, extractiveness has reached 0.52 because the mechanism continues to be deployed despite recognized secondary effects. The escalation reflects that the problem solver has optimized for the primary metric (cobra deaths, or whatever the target was) rather than for systemic impact. Suppression (0.58): Moderate-high. Significant barriers to exiting the mechanism include: (1) the primary problem is still unsolved if the mechanism is withdrawn; (2) institutional inertia in governance structures that maintain the mechanism; (3) narrative suppression \u2014 the mechanism's success is celebrated; its secondary effects are framed as unrelated or inevitable. Suppression is not total because reform coalitions can and do mobilize. Theater ratio (0.64): High and increasing (0.32 \u2192 0.64). Initial theater reflects that the mechanism looks like a legitimate coordination solution (transparent reward structure, clear success metric). Over time, theater increases because oversight becomes procedural \u2014 monitoring compliance with the mechanism rather than outcomes. Adjustments to the mechanism become performative: tightening eligibility rules, claiming to address specific secondary effects, while leaving the causal structure intact.",
+    "perspectival_gap": "The primary problem solver and problem definition institution see the mechanism as legitimate coordination (Rope/Piton) with occasional unintended consequences treated as correctable failures. The analytical observer at the civilizational level recognizes the pattern as structural (Tangled Rope) \u2014 the secondary effects are inherent to the incentive structure, not contingent failures. The systemic state and secondary effect bearers see pure extraction (Snare) \u2014 they experience only costs with no coordination benefit. The adaptation cohort sees both (Tangled Rope) \u2014 they initially benefit from solving the primary problem but gradually bear increasing secondary effects. The reform coalition sees a temporary problem with a redesign pathway (Scaffold) \u2014 if the primary problem can be solved through alternative mechanisms, the current one can be sunsetted. The perspectival gap reflects who was included in the original coordination problem and who bears the secondary effects.",
+    "directionality_logic": "Primary problem solver: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Captures benefit of solving primary problem; has exit option (can walk away from mechanism responsibility). Secondary effect bearers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Did not consent to mechanism; experience only costs; cannot exit. Adaptation cohort: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.90. Initially aligned with primary solution but face accumulating costs; constrained exit because primary problem remains unsolved without mechanism. Reform coalition: Organized + mobile \u2192 d\u22480.45, f(d)\u22480.48. See alternative pathways and have organizational capacity to mobilize; d is moderate because they have agency but face institutional resistance. Problem definition institution: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.09. Maintains mechanism for policy continuity; can shift policy if political consensus changes. Analytical observer: analytical \u2192 d\u22480.70, f(d)\u22481.12. Sees the structural pattern but has limited power to change institutions; high d reflects that civilizational-level analysis must bear the cognitive burden of recognizing the pattern.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by establishing that the cobra effect is a genuine tangled rope, not a rope-gone-wrong or a snare disguised as rope. The coordination function (solving the primary problem) is real and valuable. The extraction (unintended consequences) is also real and structural. The constraint is 'both' not 'neither.' The mandatrophy would resolve to snare if the primary problem was never actually solved, or to rope if the secondary effects were negligible. But in the canonical cobra effect, both the coordination and the extraction are substantial and inseparable in the current mechanism design. The reform coalition perspective (scaffold) offers an exit path: redesign the mechanism to preserve the coordination function while eliminating the incentive for secondary effects. The analytical observer confirms this is possible in principle but notes that institutional inertia typically prevents the redesign until the secondary effects become catastrophic. The mandatrophy resolves by confirming the tangled rope classification as stable and by identifying the design flaw (success metric divorced from systemic outcome) as the structural source."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "goodhart_metric_substitution",
+      "perverse_incentive_cascade"
+    ],
+    "dual_formulation_note": "The cobra effect trap is upstream of specific perverse incentive failures. It establishes the general structural pattern: any resource allocation mechanism that creates a success metric independent of systemic outcome is vulnerable to generating secondary effects that worsen the state. Goodhart's Law (metric substitution) and perverse incentive cascades are downstream instantiations of this pattern."
+  },
+  "directionality_overrides": []
+}

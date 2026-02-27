@@ -1,0 +1,167 @@
+{
+  "header": {
+    "constraint_id": "pele_microreactor_deployment",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Pele Mobile Micro-Reactor Deployment Protocol",
+    "topic_domain": "technological/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "forward_military_bases",
+      "us_military_industrial_complex"
+    ],
+    "victims": [
+      "local_populations_near_deployment_sites",
+      "potential_adversaries",
+      "environmental_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Local Populations Near Deployment Sites",
+      "comment": "Local populations bear the risk of accidents and environmental contamination, with limited recourse or exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Potential Adversaries",
+      "comment": "Adversaries are constrained by the need to react to the deployment, but can also benefit from the distraction and potential to exploit vulnerabilities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Military Industrial Complex",
+      "comment": "The US military industrial complex benefits from the expansion of capabilities and increased contracts."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Environmental Integrity",
+      "comment": "Environmental advocacy groups can organize and protest, but are constrained by the political and security interests at stake, and the technical difficulties of monitoring. Exit options are to lobby for stronger environmental safeguards or to highlight environmental incidents when they occur. "
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Forward Military Bases",
+      "comment": "Forward military bases benefit from reliable power supply, enabling increased operational capabilities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the deployment as a mixed blessing, with both benefits and risks for various stakeholders."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "accident_probability",
+      "question": "What is the probability of a major accident during transportation or operation?",
+      "resolution_mechanism": "Monte Carlo simulations, stress testing, historical data from similar deployments",
+      "impact": "High probability: Snare classification reinforced. Low probability: Tangled Rope classification reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Probability of major accident"
+    },
+    {
+      "id": "proliferation_risk",
+      "question": "What is the risk of proliferation of nuclear materials or technology?",
+      "resolution_mechanism": "Security analysis, safeguards implementation, international agreements",
+      "impact": "High risk: Snare classification reinforced. Low risk: Tangled Rope classification reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Risk of nuclear proliferation"
+    },
+    {
+      "id": "environmental_impact",
+      "question": "What is the long-term environmental impact of the deployment?",
+      "resolution_mechanism": "Environmental impact assessments, long-term monitoring, lifecycle analysis",
+      "impact": "High impact: Snare classification reinforced. Low impact: Tangled Rope classification reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term environmental impact"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The constraint is the system of rules, security protocols, and political agreements governing the deployment of a transportable nuclear reactor (Project Pele) to power forward military bases. This deployment aims to provide reliable energy to remote military locations, but also presents significant risks to local populations, potential adversaries, and environmental integrity. The deployment is a complex issue with varied perspectives.",
+    "key_agents": [
+      "Forward Military Bases: Primary beneficiary (institutional/arbitrage)",
+      "Local Populations Near Deployment Sites: Primary victim (powerless/trapped)",
+      "Potential Adversaries: Secondary victim (moderate/constrained)",
+      "Environmental Integrity: Organized victim (organized/mobile)",
+      "US Military Industrial Complex: Beneficiary (institutional/arbitrage)",
+      "Analytical Observer: Assesses the geopolitical implications (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The local populations and environment bear a substantial portion of the risk in this deployment. Suppression (0.45): Moderate. The US military will need to overcome international and local resistance to successfully deploy this technology. Theater ratio (0.30): Low. The security protocols and actual implementation of the deployment are more important than mere public perception.",
+    "perspectival_gap": "The deployment is viewed differently by various stakeholders. Local populations view the deployment with great trepidation, due to the potential risks. Potential adversaries view the deployment as a provocation, but also potentially a vulnerability. The US military views the deployment as a necessary step to maintain global power projection. An analytical observer would see a complex problem with significant trade-offs.",
+    "directionality_logic": "The directionality values are based on each agent's relationship to the extraction flow. The local populations are the primary target, and bear the greatest risk. The US military benefits from the deployment, and are thus the primary beneficiary.",
+    "mandatrophy_analysis": "The classification prevents mislabeling a pure coordination mechanism by acknowledging the asymmetric distribution of risks and benefits. While the US Military's intent may be coordination (reliable power), the actual implementation extracts from other stakeholders. The Tangled Rope type appropriately balances these two factors."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

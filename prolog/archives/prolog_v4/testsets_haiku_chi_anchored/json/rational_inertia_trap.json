@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "rational_inertia_trap",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rit"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Legacy Protocol Lock-in",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_protocol_stewards",
+      "switching_cost_arbitrageurs"
+    ],
+    "victims": [
+      "adopter_pool",
+      "system_efficiency_gains"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Trapped Adopter",
+      "comment": "PERSPECTIVE 1: TRAPPED ADOPTER (SNARE) \u2014 Individual users face switching costs (retraining, data migration, infrastructure reinvestment, coordination friction) that exceed their personal benefit horizon. Trapped by network effects: leaving the legacy system means losing access to the majority who remain. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.77."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Mid-Tier Institutional Actor",
+      "comment": "PERSPECTIVE 2: MID-TIER INSTITUTIONAL ACTOR (TANGLED ROPE) \u2014 Organizations benefit from legacy protocol familiarity (training ecosystem, tool maturity, talent pool fluent in legacy system) while bearing the cost of perpetual technical debt and compatibility workarounds. Switching is possible but requires massive coordination with peers. d\u22480.68, f(d)\u22481.05, \u03c3=1.2 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Steward Institution",
+      "comment": "PERSPECTIVE 3: PROTOCOL STEWARD INSTITUTION (ROPE) \u2014 Legacy protocol maintainers and standard-setters benefit from network inertia: their status as custodians, control over version updates, and ability to extract licensing/certification rents are all secured by lock-in. They experience the constraint as pure coordination: keeping the legacy alive coordinates expectations. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Migration Coalition",
+      "comment": "PERSPECTIVE 4: MIGRATION COALITION (TANGLED ROPE) \u2014 Organized agents (open-source projects, standards bodies, large cloud providers) push for protocol migration and create migration tooling. They provide genuine coordination infrastructure (bridges, translators, phased adoption plans) but also extract value by positioning themselves as migration authorities or capturing new protocol governance. d\u22480.45, f(d)\u22480.42, \u03c3=1.2 \u2192 \u03c7\u22480.26."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Governance Apparatus",
+      "comment": "PERSPECTIVE 5: LEGACY GOVERNANCE APPARATUS (PITON) \u2014 Standards organizations, regulatory bodies, and educational institutions built around the legacy protocol are substantially performative. Certification programs, compliance audits, and regulatory approval processes exist to maintain the apparatus's status, not to deliver system function. theater_ratio=0.58 reflects that governance rituals persist despite diminishing functional value. The apparatus sees itself as degraded \u2014 necessary for transition management but no longer a genuine steering mechanism. d\u22480.15, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.04."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Defector Coalition (Alternative Protocol Promoters)",
+      "comment": "PERSPECTIVE 6: DEFECTOR COALITION (SCAFFOLD) \u2014 Large, capable institutions (tech leaders, wealthy jurisdictions) can absorb switching costs and migrate to superior protocols. They experience the constraint as temporary coordination failure with a clear sunset: as critical mass of defectors builds, the coordination problem flips (staying in legacy becomes irrational). d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.20. Low effective extraction because defectors have agency and see a critical-mass threshold."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Coordination Game View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a game-theoretic view, the lock-in appears to be an invariant property of coordination problems: the payoff structure (high individual switching cost, high benefit of coordination on ANY protocol) creates a stable equilibrium regardless of absolute efficiency. No escape without external shock or coordinated defection. However, structural data (\u03b5=0.52, suppression=0.65, theater=0.58) contradicts mountain classification \u2014 the constraint is contingent on switching-cost and network-effect mechanisms, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_threshold",
+      "question": "What is the precise threshold of switching cost relative to user lifetime value at which individual rationality flips from 'stay' to 'switch'?",
+      "resolution_mechanism": "Empirical study of actual migration adoption curves; correlation between switching cost estimates and adoption timelines across multiple protocol transitions (IPv4\u2192IPv6, HTTP/1.1\u2192HTTP/2, SMTP\u2192successor standards)",
+      "impact": "If threshold is lower than current estimates: lock-in is weaker than believed, and defection will accelerate faster. If threshold is higher: lock-in is stronger, and migration requires external mandate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Precise switching cost threshold for individual migration rationality"
+    },
+    {
+      "id": "critical_mass_dynamics",
+      "question": "What network size constitutes critical mass such that joining the new protocol becomes rational even for actors with high switching costs?",
+      "resolution_mechanism": "Historical analysis of actual protocol transitions; S-curve fitting to adoption curves; identification of inflection points where growth accelerates",
+      "impact": "If critical mass is lower: migration is latent and can tip suddenly. If higher: migration remains slow indefinitely without intervention. Direct implication for scaffold sunset estimate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for protocol migration acceleration"
+    },
+    {
+      "id": "external_mandate_effectiveness",
+      "question": "Can regulatory or institutional mandate force protocol migration faster than organic incentive structures, or does mandate create new lock-ins (regulatory avoidance workarounds)?",
+      "resolution_mechanism": "Comparative analysis of mandated vs voluntary migrations; tracking of post-mandate workarounds and compliance theater; cost data on enforcement overhead",
+      "impact": "If mandate is effective: policy intervention can break lock-in. If mandate creates new lock-ins: the constraint transmutes but persists. Direct consequence for policy intervention strategies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether external mandate can break lock-in or merely displaces it"
+    },
+    {
+      "id": "bridging_technology_viability",
+      "question": "Can intermediate bridging technologies (protocol translators, dual-stack implementations) reduce switching costs enough to unlock organic migration without full flag-day cutover?",
+      "resolution_mechanism": "Technical feasibility analysis of bridging; cost modeling of long-term dual-stack maintenance vs single migration cost; empirical observation of migration velocity with vs without bridges in place",
+      "impact": "If bridges are viable: migration becomes incremental (scaffold with extended sunset). If maintenance burden of bridges exceeds single migration: bridges are a false exit, prolonging the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bridging technologies enable incremental migration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Legacy Protocol Lock-in is a structural constraint where a technologically superior alternative protocol exists, but individual and organizational actors remain in an inferior legacy system because the cost of switching locally exceeds the local immediate benefit, even though the system-wide gain from migration would be massive. This is not a technical problem \u2014 engineers can always build better protocols. It is a coordination problem disguised as a technical problem: the payoff structure of the decision (stay or switch) creates a stable equilibrium that persists indefinitely unless disrupted by critical mass, regulatory mandate, or external catastrophe. The constraint exhibits a clear perspectival presheaf: the trapped individual user sees a snare (no escape), the institutional steward sees rope (their status depends on lock-in), the organized migration coalition sees tangled rope (they provide coordination but also extract governance rents), the defector sees scaffold (critical mass will flip the game), and the game theorist risks seeing a mountain (an invariant property of coordination itself). The extractiveness score (0.52) reflects that the lock-in extracts from adopters via delayed access to superior protocols, but the extraction is enabled by voluntary network participation \u2014 suppression is high (0.65) because adopters face switching costs and coordination friction, not because force is applied. Theater ratio (0.58) reflects that governance structures and standards bodies devoted to the legacy protocol increasingly perform ceremonial functions as technical justifications weaken.",
+    "key_agents": [
+      "Individual Users/Small Organizations (powerless/trapped): Primary victims \u2014 absorb full switching cost individually while benefiting individually only at critical mass",
+      "Incumbent Protocol Stewards (institutional/arbitrage): Primary beneficiaries \u2014 extract status and governance rents from lock-in; control standard-setting",
+      "Mid-Tier Institutions (moderate/constrained): Secondary victims \u2014 bear organizational technical debt and coordination burden; cannot defect alone",
+      "Migration Coalition (organized/constrained): Secondary beneficiary/victim \u2014 provide genuine coordination infrastructure but extract governance authority in new protocol",
+      "Large Defectors (powerful/mobile): Tertiary actor \u2014 can absorb switching costs; defection by critical mass of defectors triggers phase transition",
+      "Legacy Governance Apparatus (institutional/arbitrage): Performs ceremony \u2014 standards bodies, regulatory bodies, educational institutions maintaining legitimacy of legacy system",
+      "Analytical Observer (analytical/analytical): Risk naturalizing contingent structural arrangement as invariant game-theoretic law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over interval. At t=0 (early lock-in), \u03b5=0.28 reflects that the legacy protocol was genuinely optimal, and network effects are nascent \u2014 users benefit from coordination on any protocol, legacy or new. As the interval progresses and superior alternatives emerge, \u03b5 increases to 0.52 as adopters bear increasing technical debt. The extraction is not malicious \u2014 it emerges from the rational incentive structure. Each individual user, facing switching cost S and personal benefit of switching B per year, rationally stays locked in if S > B \u00d7 (lifetime remaining). But S is sticky (includes retraining, data migration, infrastructure reinvestment, loss of accumulated tool expertise) while B grows as the technology gap widens. The paradox: the system-wide benefit (aggregate of all B's, minus switching costs paid only once) far exceeds the system-wide cost, yet no individual has incentive to initiate. Suppression (0.65): High and increasing. Network effects create powerful suppression: leaving the legacy protocol means losing access to 95%+ of potential collaborators and data sources. This is not coercive force but structural constraint harder to escape than force \u2014 it is voluntary participation in a system that punishes exit. Theater ratio (0.58): Increasing from 0.35 to 0.58. As the technical gap widens, governance structures (standards bodies, certification programs, regulatory compliance schemes) increasingly perform ceremonial functions. Early certification justified technical competence; later certification justifies legitimacy of a degraded system. Educational institutions continue teaching legacy protocols partly due to inertia in curriculum and partly because trained personnel become a constituency defending legacy investment.",
+    "perspectival_gap": "The perspectival gap in this constraint is the full range from snare to rope. The trapped individual user sees no escape (snare): they are locked in by network effects and switching costs, with no alternative path. The incumbent steward sees pure coordination (rope): maintaining the legacy protocol is their institutional function, and lock-in is simply the fact that coordination has already occurred. The analytical game theorist risks seeing a mountain (natural law of coordination): the payoff structure that creates lock-in is universal to any coordination problem, so lock-in appears inevitable. But the empirical structural data contradicts this: extractiveness is not at mountain levels (\u03b5=0.52, not \u22640.25), and suppression is contingent on network size and switching-cost mechanisms, not a law of physics. The defectors see scaffold: they have the resources to absorb switching costs and can trigger a phase transition where lock-in reverses (staying in legacy becomes irrational). The migration coalition sees tangled rope: they provide genuine migration infrastructure and coordination, but also extract governance authority in the new protocol. This perspectival spread is diagnostic: if all perspectives yielded snare, the constraint would be inescapable; if all yielded rope, coordination would be seamless. The spread indicates a real structural instability \u2014 lock-in is neither absolute (mountain) nor voluntary (rope) but contingent on critical mass.",
+    "directionality_logic": "Trapped adopters: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction: adopters have no exit and bear full switching cost. Mid-tier institutions: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. High extraction but not maximal because institutions can theoretically coordinate to migrate (constrained but not trapped). Protocol stewards: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiaries with maximal exit freedom; they benefit from lock-in and have easiest path to maintain it. Migration coalition: Mixed \u2192 d\u22480.45, f(d)\u22480.42. Moderate extraction because they provide genuine coordination but also position themselves as authorities in the new protocol. Large defectors: Beneficiary (of protocol superiority after migration) + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction because they have both mobility and resources; their defection is an exit, not a cost.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by revealing that lock-in is neither pure coordination (rope) nor pure extraction (snare), but a tangled hybrid where the functional part (coordination around a common protocol) is genuine, and the extractive part (keeping the protocol inferior to available alternatives) is real. The beneficiary-steward (institutional/arbitrage, rope perspective) benefits from coordination on ANY protocol \u2014 but their specific interest is coordination on the legacy protocol, which delays migration to superior alternatives. The victim-adopter (powerless/trapped, snare perspective) bears the cost of this delay. The constraint is not a natural-law lock-in (mountain) but a contingent institutional arrangement where switching-cost and network-effect mechanisms create stable equilibrium. Mandatrophy is resolved by recognizing that defection at critical mass destabilizes the equilibrium: once sufficient actors have switched, the network-effect suppression flips direction (majority effect), and staying in legacy becomes irrational. The empirical question (omega_critical_mass_dynamics) determines whether the critical mass is reachable without external mandate. If yes, the constraint is self-resolving scaffold. If no, external mandate is necessary to break the equilibrium. The tangled rope classification stands in both cases \u2014 the coordination function (people rationally stay on the same protocol) is real, and the extraction (stewards benefit from delay) is real."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effect_threshold",
+      "switching_cost_aggregation",
+      "protocol_defection_cascade"
+    ],
+    "dual_formulation_note": "The Legacy Protocol Lock-in constrains adoption of any superior alternative. It is distinct from and downstream of the specific technical merits of candidate protocols (network_effect_threshold) and upstream of the coordination dynamics that trigger defection cascades (protocol_defection_cascade). The constraint family models the full lifecycle: technical superiority alone does not guarantee migration; migration requires critical mass; critical mass is contingent on switching cost and network effects. Each story in the family has a different \u03b5 reflecting different structural aspects."
+  },
+  "directionality_overrides": []
+}

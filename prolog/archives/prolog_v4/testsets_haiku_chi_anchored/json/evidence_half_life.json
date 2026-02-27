@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "evidence_half_life",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ehl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Epistemic Decay Constant",
+    "topic_domain": "technological/scientific/legal",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "truth_seeking_institutions",
+      "defendants_and_accused",
+      "scientific_record"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Accused or Defendant",
+      "comment": "PERSPECTIVE 1: ACCUSED/DEFENDANT (SNARE) \u2014 Cannot exit the constraint that evidence degrades faster than verification can occur. Trapped by time itself. Evidence that would exonerate must survive digital alteration detection, chain-of-custody verification, and technical authentication within a window narrower than the evidence's natural decay half-life. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.95."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Scientific Integrity and Record",
+      "comment": "PERSPECTIVE 2: SCIENTIFIC RECORD (SNARE) \u2014 The epistemic commons faces systemic degradation. Publications, datasets, and experimental records decay (bit rot, server obsolescence, format incompatibility) faster than peer review can validate them. Replication requires evidence that no longer exists in verifiable form. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.99."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legal and Scientific Verification Institutions",
+      "comment": "PERSPECTIVE 3: VERIFICATION INSTITUTIONS (TANGLED ROPE) \u2014 Courts, journals, and forensic labs benefit from the decay constant: it creates demand for their verification services and justifies procedural complexity. But they are also constrained by the same decay \u2014 they must perform verification within shrinking windows or declare evidence inadmissible. Coordination function: establishing standards for evidence preservation and authentication. Extraction: monopolizing the right to declare what counts as 'verified.' d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Digital Preservation and Cryptographic Authentication Coalition",
+      "comment": "PERSPECTIVE 4: DIGITAL PRESERVATION COALITION (ROPE) \u2014 Open-source forensics, blockchain-based timestamping, standardized data formats, and distributed archival systems see the decay constant as a pure coordination problem. Building consensus on preservation protocols, authentication standards, and interoperable evidence formats. Arbitrage: coalition members can migrate between competing preservation ecosystems. d\u22480.25, f(d)\u22480.15, \u03c3=1.2 \u2192 \u03c7\u22480.10."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Evidence Validation Bureaucracy",
+      "comment": "PERSPECTIVE 5: TRADITIONAL VALIDATION BUREAUCRACY (PITON) \u2014 Chain-of-custody procedures, forensic standards, and court rules of evidence persist through institutional inertia despite being designed for physical, not digital, media. Theater ratio=0.68: the elaborate procedures (sealing evidence, witness testimony, expert cross-examination) are largely performative for digital artifacts \u2014 an altered hard drive image cannot be detected by courtroom ritual. The functional verification capacity has atrophied while the theatrical procedures persist. d\u22480.10, f(d)\u2248-0.02, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Theory View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, information decay (data corruption, format obsolescence, loss of context) is an immutable feature of physical reality and computational systems: entropy always increases, media always degrade, and no archive lasts forever. This perspective sees the half-life decay as a natural limit on evidence persistence, not an institutional problem. However, the structural data (\u03b5=0.58, suppression=0.65, theater=0.68) contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that much of the 'decay' is contingent on choices about preservation infrastructure and authentication protocols, not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "half_life_vs_verification_window",
+      "question": "What is the actual median half-life of digital evidence (photographic, video, audio, data) and how does it compare to the median time required for judicial or scientific verification?",
+      "resolution_mechanism": "Longitudinal analysis of evidence repositories; tracking of successful vs failed authentication attempts over time; correlation between evidence age and verification success rates",
+      "impact": "If half-life > verification window: constraint is coordination (Rope). If half-life < verification window by >2x: constraint is pure extraction (Snare). If approximately equal: constraint is high-extraction coordination (Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparison of evidence decay half-life to verification time requirements"
+    },
+    {
+      "id": "intentional_vs_natural_decay",
+      "question": "What fraction of evidence decay is due to intentional destruction/alteration (extraction mechanism) vs natural degradation (immutable limit)?",
+      "resolution_mechanism": "Forensic analysis of decay patterns; detection of anomalous (intentional) vs natural degradation signatures; comparison of decay rates for protected vs unprotected archives",
+      "impact": "If >80% intentional: constraint is pure snare (extraction through destruction). If >60% natural: constraint approaches mountain (immutable limit). If mixed: tangled rope (both coordination problem and extraction mechanism).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of evidence decay attributable to intentional destruction vs natural causes"
+    },
+    {
+      "id": "cryptographic_anchor_sufficiency",
+      "question": "Can cryptographic timestamping and distributed verification (blockchain-style, but not necessarily blockchain) actually extend the functional half-life of digital evidence to exceed verification timescales?",
+      "resolution_mechanism": "Pilot deployment of cryptographic anchoring in legal and scientific contexts; measurement of authentication success rates and cost per verified artifact",
+      "impact": "If successful: rope perspective confirmed \u2014 problem is coordination, solvable by standard adoption. If unsuccessful: snare persists because attackers can compromise the verification infrastructure itself.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cryptographic solutions can extend evidence half-life beyond verification requirements"
+    },
+    {
+      "id": "institutional_incentive_structure",
+      "question": "Do legal and scientific institutions have structural incentives to delay or obstruct the deployment of preservation technology that would reduce the decay constant?",
+      "resolution_mechanism": "Historical analysis of technology adoption; comparison of jurisdictions with strong preservation mandates vs those without; analysis of institutional resistance to open-source forensics and standard-based evidence handling",
+      "impact": "If true: constraint is snare (institutions actively maintaining decay to preserve power). If false: constraint is coordination problem (institutions want better verification but lack coordination mechanism).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether institutions benefit from and resist solutions to evidence decay"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The epistemic decay constant creates a structural trap where the speed of information turnover and the ease of digital alteration cause the functional half-life of evidence to fall below the time required for judicial or scientific verification. In legal contexts, evidence must survive authentication and chain-of-custody verification before trial \u2014 a process measured in months to years. In scientific contexts, evidence must survive peer review, replication attempts, and archival preservation \u2014 a process measured in years to decades. Meanwhile, digital artifacts degrade through bit rot, format obsolescence, server failure, and deliberate alteration at timescales measured in months to years. This creates a fundamental asymmetry: the evidence needed to prove a claim disappears before verification can occur. The constraint extracts from defendants, accused persons, and the scientific record, while being experienced as a coordination problem by institutions tasked with verification. The theater ratio has risen over two decades as digital complexity has outpaced institutional capacity \u2014 the elaborate procedures of chain-of-custody and expert testimony have become increasingly performative for artifacts that cannot be verified by courtroom ritual.",
+    "key_agents": [
+      "Accused/Defendant: Primary victim (powerless/trapped) \u2014 must provide evidence that has already decayed or been altered; cannot exit the temporal constraint",
+      "Scientific Record and Epistemic Commons: Primary victim (powerless/trapped) \u2014 publications and datasets decay faster than peer review can validate them; bear the cost of degraded knowledge base",
+      "Legal and Scientific Institutions: Mixed actor (institutional/constrained) \u2014 both benefit from the decay (preserves their verification monopoly) and are constrained by it (cannot verify what has decayed); main extractors",
+      "Digital Preservation Coalition: Secondary actor (organized/arbitrage) \u2014 arXiv, DataCite, blockchain-based timestamping, open-source forensics; can exit by deploying standards",
+      "Traditional Forensic/Peer Review Bureaucracy: Institutional actor maintaining piton (institutional/arbitrage) \u2014 chain-of-custody procedures and expert testimony persist as theater",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent infrastructure choices as immutable laws of information"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The decay constant extracts from the accused (who cannot produce evidence that has decayed) and from the scientific record (which cannot validate claims against evidence that no longer exists in verifiable form). The extraction is not as severe as classical snares because preservation infrastructure CAN be built \u2014 it is not inherently impossible. However, the default institutional path (do nothing, let decay happen) systematically favors those who benefit from unverifiable claims and those with power to destroy or alter evidence. The value reflects that extraction is substantial and structural but not absolute. Suppression (0.65): High. Multiple barriers prevent escape from the decay constant: no individual can unilaterally preserve evidence (requires institutional infrastructure), replication requires artifacts that no longer exist, and challenging evidence authenticity requires forensic expertise that few possess. Format lock-in (proprietary file formats that cannot be read without proprietary software), media obsolescence (floppy disks, optical media), and server failure create high exit costs. Theater ratio (0.68): High. This reflects the gap between the performative procedures (chain-of-custody, expert testimony, peer review checklist) and their actual verification capacity. A cryptographically altered digital image cannot be detected by cross-examining a witness. A dataset with corrupted metadata cannot be validated by reading a peer review checklist. The elaborate institutional procedures have become theater as the artifacts they govern have become digital.",
+    "perspectival_gap": "This constraint shows maximal perspectival divergence. The accused sees pure snare \u2014 evidence disappears and they cannot prove innocence. The scientific record sees pure snare \u2014 evidence decays and claims cannot be replicated or verified. The verification institutions see tangled rope \u2014 they coordinate the definition of acceptable evidence but also maintain barriers to alternative verification methods. The digital preservation coalition sees rope \u2014 a pure coordination problem solvable by standards and open-source tools. The traditional bureaucracy sees piton \u2014 their procedures persist as theater. The analytical observer risks seeing mountain \u2014 but the structural data reveals this is a false summit. The gap between the accused's snare and the institution's tangled rope reflects the asymmetry: institutions have resources to preserve some evidence (selectively) and can arbitrage between preservation standards, while the accused has no such capacity.",
+    "directionality_logic": "Accused/Defendant: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction. Cannot preserve evidence, cannot prove innocence with degraded evidence. Scientific record: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximal extraction. Abstract collective cannot organize, cannot exit, cannot verify claims. Legal/scientific institutions: Beneficiary + constrained \u2192 d\u22480.55, f(d)\u22480.75. The constraint serves them (creates demand for their services, justifies their gatekeeping role) but also constrains them (they must verify within shrinking windows). Digital preservation coalition: Organized + arbitrage \u2192 d\u22480.25, f(d)\u22480.15. Coalition can exit by standardizing preservation; low effective extraction because they have agency. Traditional bureaucracy: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.02. Piton classification from theater ratio, not directionality. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain perspective is a false summit because much decay is contingent on infrastructure choices.",
+    "mandatrophy_analysis": "The mandatrophy here concerns whether the decay constant is an immutable feature of information (mountain) or a contingent institutional failure (snare). The false summit detector flags the mountain perspective: if the constraint were truly immutable (like entropy or the speed of light), then preservation infrastructure should not matter. But the structural data show that extractiveness (0.58) is heavily contingent on whether preservation standards exist, whether institutions are incentivized to maintain them, and whether the accused/researchers have access to cryptographic anchoring and distributed verification. This reveals that much of the decay is not natural but engineered \u2014 the constraint persists because institutions maintain the decay-friendly infrastructure (proprietary formats, centralized archives, short retention policies) and resist alternatives. The snare perspective (accused cannot prove innocence because evidence decayed) and the rope perspective (digital preservation coalition can solve this with standards) cannot both be fully true unless the institutions have incentives to maintain decay. The mandatrophy resolves by acknowledging: (1) some decay is natural (immutable), (2) some decay is institutional policy (extractive), and (3) the current ratio is heavily weighted toward institutional maintenance of decay. The decay constant is not a mountain \u2014 it is a snare that naturalizes itself by claiming to be."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_format_obsolescence",
+      "institutional_archive_concentration",
+      "forensic_authentication_bottleneck"
+    ],
+    "dual_formulation_note": "The epistemic decay constant is downstream of three distinct constraints: format obsolescence (technical degradation), archive concentration (institutional chokepoint), and forensic bottleneck (verification capacity). Each has its own \u03b5 value. This story captures the composite effect \u2014 how all three together create the half-life asymmetry."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

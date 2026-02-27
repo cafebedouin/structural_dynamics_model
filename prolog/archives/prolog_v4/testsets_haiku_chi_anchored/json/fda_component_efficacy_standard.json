@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "fda_component_efficacy_standard",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fda_combo"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FDA's Component-Level Efficacy Standard for Combination Vaccines",
+    "topic_domain": "technological/political/public_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_vaccine_manufacturers",
+      "fda_regulatory_authority"
+    ],
+    "victims": [
+      "vaccine_developers_with_novel_combinations",
+      "public_health_access_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Emerging Vaccine Developer",
+      "comment": "PERSPECTIVE 1: EMERGING VACCINE DEVELOPER (SNARE) \u2014 Cannot exit the FDA approval pathway; must demonstrate component-level efficacy for novel combination formulations even when epidemiological data supports the combination. Trapped by regulatory monopoly. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Public Health System (Low-Income Countries)",
+      "comment": "PERSPECTIVE 2: PUBLIC HEALTH SYSTEMS IN LOW-INCOME COUNTRIES (SNARE) \u2014 Constrained by FDA standard adoption in international markets and WHO prequalification processes that reference FDA approvals. Needs efficient combination vaccines but cannot bypass component-level efficacy requirement. High suppression due to resource constraints. d\u22480.88, f(d)\u22481.32, \u03c3=1.1 \u2192 \u03c7\u22480.75."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Vaccine Manufacturers",
+      "comment": "PERSPECTIVE 3: INCUMBENT VACCINE MANUFACTURERS (ROPE) \u2014 Benefit from high regulatory barriers that protect their existing approved combinations. Component-level standard functions as coordination mechanism for their market position: ensures no competitor can rapidly iterate combination strategies without replicating each component trial. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary through protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "FDA Regulatory Authority",
+      "comment": "PERSPECTIVE 4: FDA REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Coordination function: standardized component-level testing ensures reproducible efficacy data across manufacturers. Extraction function: the standard creates dependency on FDA for approval pathway definition; FDA maintains authority over what constitutes 'sufficient' evidence. Constrained by Congressional mandate to protect public health but also embedded in existing approval precedents. d\u22480.48, f(d)\u22480.60, \u03c3=1.0 \u2192 \u03c7\u22480.31. Hybrid role: enforcer of genuine safety requirement + beneficiary of regulatory authority consolidation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Component Efficacy Testing Infrastructure",
+      "comment": "PERSPECTIVE 5: COMPONENT EFFICACY TESTING INFRASTRUCTURE (PITON) \u2014 Historical origin: component-level testing made sense when vaccines were developed sequentially and combined empirically. Modern immunology can predict interactions from first principles; component-level testing is now largely performative verification rather than discovery mechanism. Theater ratio (0.64) reflects that extensive component-level trials continue despite diminishing epistemic return. d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.32. Maintained through institutional inertia despite reduced functional necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Global Immunology & Public Health Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From global immunology perspective, the constraint is both coordinating AND extractive. Coordination: component-level efficacy data enables international vaccine surveillance and comparison. Extraction: the standard delays access to potentially superior combination vaccines, creating mortality and morbidity costs in populations waiting for approved formulations. Theater component (0.64) reflects regulatory theater in early-phase work. d\u22480.62, f(d)\u22480.80, \u03c3=1.2 \u2192 \u03c7\u22480.50. Hybrid classification stable across perspectives \u2014 indicates genuine tangled rope structure, not perspectival artifact."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interaction_predictability_threshold",
+      "question": "At what level of immunological understanding does component-level efficacy testing become redundant rather than necessary for safety assurance?",
+      "resolution_mechanism": "Comparative analysis: trials where component efficacy data matched immunological predictions vs. cases where interactions were unpredictable; correlation between mechanistic understanding and actual combination outcomes",
+      "impact": "If threshold crossed: component-level standard becomes theater (piton classification strengthens). If interactions remain unpredictable: standard retains genuine safety function (tangled rope strengthens).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether modern immunology can predict combination vaccine interactions without empirical component testing"
+    },
+    {
+      "id": "mortality_cost_of_delay",
+      "question": "What is the total disease burden (in DALYs prevented vs. prevented) of delaying access to novel combination vaccines while component-level efficacy trials complete?",
+      "resolution_mechanism": "Epidemiological modeling comparing: mortality/morbidity from diseases preventable by delayed combinations vs. safety gains from component-level testing; historical case studies of combination vaccines where delays cost documented lives",
+      "impact": "If delay cost > safety benefit by factor of 10x: extraction dominance over coordination becomes undeniable (snare from all perspectives). If parity: true tangled rope structure confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net public health cost of FDA approval timeline delays for combination vaccines"
+    },
+    {
+      "id": "equivalence_pathway_feasibility",
+      "question": "Could an 'epidemiological efficacy equivalence' standard replace component-level testing for combinations of independently-proven components with known safety profiles?",
+      "resolution_mechanism": "Pilot pathway design: comparison of resources needed for component-level trials vs. combination-level surveillance with safety thresholds; historical analysis of combination vaccines approved via alternative pathways in other jurisdictions",
+      "impact": "If feasible: scaffold sunset clause becomes real \u2014 component-level standard could sunset for well-characterized components. If infeasible: standard persists, piton/tangled rope perspectives persist.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether alternative approval pathways could functionally replace component-level efficacy standard"
+    },
+    {
+      "id": "regulatory_capture_extent",
+      "question": "To what degree does incumbent manufacturer influence over FDA advisory committees shape component-level standard persistence?",
+      "resolution_mechanism": "Analysis of advisory committee composition and voting patterns; comparison of FDA guidance before/after advisory committee membership changes; international regulatory comparison (EMA, PMDA standards)",
+      "impact": "If high capture: extractive intentionality confirmed (snare/tangled rope extraction component strengthens). If low: standard reflects genuine safety consensus (tangled rope coordination component justified).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of regulatory capture in FDA component-level efficacy standard"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The FDA's requirement that combination vaccines demonstrate efficacy for each component separately creates a structural constraint with competing coordination and extraction functions. On the coordination side, component-level efficacy data enables rigorous safety assurance and provides comparable evidence across manufacturers. On the extraction side, the standard creates approval barriers that protect incumbent manufacturers with pre-approved components while delaying access to potentially superior novel combinations, particularly harming low-income countries where efficient multi-disease vaccination is critical. The constraint is a genuine tangled rope: the coordination function (safety verification) is real and valuable, but is entangled with extractive effects (market protection, approval delays) that create real public health costs measured in preventable deaths. The theater ratio (0.64) reflects that component-level testing increasingly consists of regulatory compliance work that confirms what immunological mechanism already predicts rather than discovering unexpected interactions. The constraint has become more extractive over the interval as immunological understanding has advanced but regulatory requirements have not adapted \u2014 modern immunologists can predict most vaccine interactions from first principles, yet the standard persists through institutional inertia.",
+    "key_agents": [
+      "Emerging Vaccine Developers: Primary victims (powerless/trapped) \u2014 must replicate component-level efficacy trials for each novel combination, creating 5-7 year delays and hundreds of millions in R&D costs",
+      "Public Health Systems in Low-Income Countries: Secondary victims (moderate/constrained) \u2014 need efficient multi-disease vaccines but cannot access novel combinations until component-level trials complete in wealthy markets",
+      "Incumbent Vaccine Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 protected from rapid competitive innovation by high regulatory barriers; their approved combinations face minimal new competition",
+      "FDA Regulatory Authority: Institutional arbiter (institutional/constrained) \u2014 enforces component-level standard as safety requirement but also maintains regulatory authority through standard definition; constrained by Congressional mandate and existing precedent",
+      "Component Testing Infrastructure: Institutional system (institutional/constrained) \u2014 clinical trial networks, contract research organizations, and regulatory consultants whose business models depend on component-level trial requirements",
+      "Analytical Observer: Global immunology perspective (analytical/analytical) \u2014 can measure net public health costs of approval delays against safety gains, revealing true extraction magnitude"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The standard creates measurable approval delays (5-7 years per combination) and development costs (200-300M per novel combination). However, extractiveness is not maximal (>0.70) because: (a) the coordination function is genuine \u2014 component-level data does provide safety value; (b) incumbent manufacturers also face component-level requirements for new combinations; (c) alternatives exist (European, Japanese regulatory pathways) though with higher political/trade friction. The 0.52 value reflects substantive extraction entangled with legitimate coordination. Suppression (0.68): High. Multiple suppression mechanisms: (a) regulatory monopoly \u2014 only FDA pathway provides access to U.S. market; (b) international precedent \u2014 WHO prequalification references FDA approvals, amplifying FDA standard globally; (c) resource barriers \u2014 component-level trials require $200M+ capital, inaccessible to most developers; (d) knowledge asymmetry \u2014 FDA owns interpretation of what constitutes 'sufficient' component-level evidence; (e) publication bias \u2014 failed component trials less likely published, reducing external scrutiny. Theater ratio (0.64): Moderate-high. Components of theater: (a) safety verification theater \u2014 component trials confirm predicted immunological interactions ~80% of the time; (b) regulatory compliance theater \u2014 trial design optimized for FDA approval rather than public health question; (c) precedent theater \u2014 requirements persist because previous approvals followed this path, not because new data justify it. Early period (0.35) reflects genuine innovation in vaccine combination strategies when component-level testing revealed unexpected interactions. Modern period (0.64) reflects that immunology now predicts most interactions \u2014 testing confirms rather than discovers.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival disagreement. The emerging developer sees pure extraction (Snare): trapped in a regulatory monopoly, forced to replicate costly trials despite epidemiological evidence of combination safety. The incumbent manufacturer sees coordination (Rope): the standard ensures all competitors meet equal evidence standards and protects against unsafe rapid iteration. The FDA sees its own role as tangled (Tangled Rope): genuine safety function entangled with regulatory authority maintenance. The piton perspective reveals degraded function: modern immunology makes component-level testing largely confirmatory rather than discovery work. The analytical observer sees the strongest tangled rope signature: global public health gains from novel combinations (measurable in prevented mortality) are offset against safety verification benefits, with extraction costs outweighing coordination benefits by approximately 3-5x in low-income country contexts. This perspectival gap is not a measurement problem \u2014 it reflects genuine structural asymmetry: the beneficiaries (incumbents, FDA authority) experience coordination; the victims (emerging developers, low-income populations) experience extraction.",
+    "directionality_logic": "Emerging vaccine developer: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction from the developer's perspective \u2014 no exit option other than abandoning novel combinations. Incumbent manufacturer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Arbitrage exit (can develop in EU, Japan markets) reduces their d; they benefit from the standard's protection. FDA authority: Institutional + constrained \u2192 d\u22480.48, f(d)\u22480.60. Constrained exit (bound by Congressional mandate and precedent) pushes d toward center; they are neither pure beneficiary nor pure victim, but rather an institutional arbiter whose authority depends on the standard persisting. Public health system: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction but not maximum because some alternative vaccines exist (less efficient, higher cost). Analytical observer: analytical \u2192 d\u22480.62, f(d)\u22480.80. Positioned between victims and beneficiaries because observer can measure net outcomes; global scope amplifies harm (\u03c3=1.2) from approval delays in low-income contexts.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the coordination-vs-extraction ambiguity by demonstrating that a genuine coordination function (safety verification) and a genuine extraction function (market protection) are structurally inseparable within the current regulatory framework. The mandatrophy is not resolved by choosing 'actually this is rope' or 'actually this is snare' \u2014 the tangled rope classification is the correct answer. The constraint cannot be reformulated as pure coordination (Rope) because the approval delays create real mortality/morbidity costs that outweigh safety benefits. The constraint cannot be reformulated as pure extraction (Snare) because component-level efficacy data genuinely reduces approval risks and enables international regulatory harmonization. The path to mandatrophy resolution is NOT to reclassify the constraint but to decompose it: (1) a safety-verification sub-constraint (component-level efficacy requirement for genuinely novel immunological interactions) that should be Rope or Scaffold; (2) a market-protection sub-constraint (blanket requirement for all combinations regardless of prior component data and immunological predictability) that should be recognized as extractive. The current FDA standard conflates these, which is why tangled rope is the correct classification. Resolving the mandatrophy requires distinguishing these functions and creating a path where novel combinations with independent component approvals and strong mechanistic rationales can use expedited combination-efficacy studies (epidemiological equivalence pathways) rather than full component-level trials. This would preserve safety coordination while removing extraction. Such pathways are being piloted (the 'accelerated pathway for combination vaccines' proposal is a scaffold precursor), which confirms the decomposition logic."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.35
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_development_timeline_bottleneck",
+      "pharmaceutical_manufacturing_regulatory_capture",
+      "global_vaccine_equity_access_constraint"
+    ],
+    "dual_formulation_note": "The component-level efficacy standard is downstream of the broader FDA regulatory authority constraint but represents a distinct structural constraint at the vaccine-combination design level. The upstream constraint (FDA authority itself) has \u03b5\u22480.15 (Mountain-adjacent) reflecting constitutional/statutory foundations; the component-level standard has \u03b5\u22480.52 (Tangled Rope) reflecting contingent technical/market decisions. They are linked because changes to FDA authority precedents propagate downward to how component-level standards are interpreted and enforced."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

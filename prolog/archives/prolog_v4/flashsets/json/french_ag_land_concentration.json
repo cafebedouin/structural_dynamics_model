@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "french_ag_land_concentration",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "French Agricultural Land Concentration",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_agricultural_corporations",
+      "agribusiness_sector"
+    ],
+    "victims": [
+      "small_farmers",
+      "rural_communities",
+      "agricultural_biodiversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Small Farmers",
+      "comment": "Perspective of small farmers who are increasingly trapped due to rising land prices, economies of scale favoring large farms, and limited access to capital."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Large Agricultural Corporations",
+      "comment": "Perspective of large agricultural corporations that benefit from economies of scale, access to capital, and government subsidies, enabling them to acquire more land and increase productivity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the land concentration represents a tangled rope due to its complex and contradictory effects. There are benefits such as increased agricultural output and efficiency, but also costs such as displacement of small farmers and environmental degradation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Rural Communities",
+      "comment": "Perspective of rural communities that are constrained by the economic and social changes associated with agricultural land concentration. While some benefit from new jobs created by larger farms, others suffer from the loss of small farms and the decline of rural economies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_vs_social_efficiency",
+      "question": "What is the relative importance of economic efficiency versus social equity in assessing agricultural land concentration?",
+      "resolution_mechanism": "Cost-benefit analysis that considers both economic and social impacts of agricultural land concentration.",
+      "impact": "Different policy interventions are needed depending on the relative importance of economic efficiency versus social equity.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Relative importance of economic versus social factors"
+    },
+    {
+      "id": "environmental_impact_assessment",
+      "question": "What is the long-term environmental impact of agricultural land concentration?",
+      "resolution_mechanism": "Environmental impact assessment that considers factors such as soil degradation, water pollution, and biodiversity loss.",
+      "impact": "Different policy interventions are needed depending on the severity of the environmental impact.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Environmental impact assessment"
+    },
+    {
+      "id": "policy_intervention_effectiveness",
+      "question": "What policy interventions are most effective in mitigating the negative impacts of agricultural land concentration?",
+      "resolution_mechanism": "Comparative analysis of different policy interventions implemented in France and other countries.",
+      "impact": "Selection of appropriate policy interventions to address the negative impacts of agricultural land concentration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Policy intervention effectiveness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Based on INSEE data, this constraint models the decades-long trend of agricultural land consolidation in France. It captures the shift of land ownership from small farmers to larger agricultural corporations, and its impacts on rural communities, agricultural practices, and biodiversity.",
+    "key_agents": [
+      "Small Farmers: Primary target (powerless/trapped) - experience displacement and loss of livelihood.",
+      "Large Agricultural Corporations: Primary beneficiary (institutional/arbitrage) - accumulate land and increase profits.",
+      "Rural Communities: Secondary target (moderate/constrained) - face economic and social changes due to land concentration.",
+      "Agribusiness Sector: Secondary beneficiary (powerful/arbitrage) - benefits from increased scale of production and efficiency.",
+      "Agricultural Biodiversity: Primary target (powerless/trapped) - affected by monoculture practices and loss of traditional farming methods."
+    ],
+    "logic_rationale": "The extractiveness score is based on the transfer of wealth and control from small farmers to large corporations. Suppression relates to the limited options available to small farmers, who face economic pressures and regulatory constraints. Theater ratio reflects that some government policies aimed at supporting small farmers have limited effectiveness, acting as performative measures.",
+    "perspectival_gap": "Small farmers perceive this as a snare, trapped by rising land prices and competition. Large corporations see it as a rope, facilitating efficient production. Rural communities experience it as a tangled rope, with mixed benefits and drawbacks. The analytical observer recognizes the inherent trade-offs and potential for negative externalities.",
+    "directionality_logic": "Large agricultural corporations and agribusiness are beneficiaries, given access to capital and arbitrage options, their directionality is low. Small farmers are victims, constrained and trapped, their directionality is high. Rural communities are moderately affected. The analytical observer takes a neutral stance."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "european_agricultural_policy",
+      "global_food_prices"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: mexican_airline_merger
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_mexican_airline_merger, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,16 +55,36 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: mexican_airline_merger
  *   human_readable: Mexican Airline Merger Antitrust Exemption
- *   domain: economic
+ *   domain: economic/competition_policy
  *
  * SUMMARY:
- *   The Mexican government's encouragement of an airline merger, ostensibly to bolster Mexicana de Aviación, creates an antitrust exemption that allows for potential price fixing and reduced service quality for passengers. This policy creates a system where the government intervention distorts the market, potentially harming consumers while benefiting the favored airline.
+ *   The Mexican airline merger antitrust exemption represents a structural
+ *   tension between national economic policy (consolidation of fragmented
+ *   domestic carriers into a competitive international actor) and consumer
+ *   welfare protection (antitrust enforcement against market concentration).
+ *   The Mexican government initiated or encouraged merger of domestic
+ *   carriers with stated objectives of creating a 'national champion' capable
+ *   of competing internationally and serving remote/underserved routes. This
+ *   policy required an antitrust exemption from Mexico's Federal Economic
+ *   Competition Commission (COFECE). The constraint exhibits a hybrid
+ *   coordination-extraction structure: it solves a real coordination problem
+ *   (network fragmentation, international competitiveness) while enabling
+ *   extraction (price increases, service reduction for captive passengers).
+ *   Passengers on domestic Mexican routes experience this as a snare —
+ *   trapped by reduced competition. The government and consolidated carrier
+ *   experience it as coordination and benefit. The constraint's theater ratio
+ *   reflects that regulatory review processes are largely performative —
+ *   COFECE conducts formal analysis but within predetermined policy
+ *   parameters set by the executive branch, reducing substantive contestation
+ *   of merger terms.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mexican Passengers: Primary target (powerless/trapped) — bears extraction
- *   - Mexicana de Aviación: Primary beneficiary (institutional/arbitrage) — benefits from constraint
- *   - Mexican Government: Secondary actor (institutional/constrained)
- *   - Analytical observer: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Mexican Government / Ministry of Transportation: Primary policy initiator (institutional/arbitrage) — benefits from national consolidation narrative and tax optimization; can arbitrage by renegotiating exemption terms
+ *   - Mexicana de Aviación / Consolidated Carrier: Primary direct beneficiary (powerful/arbitrage) — captures margin expansion, reduced competitive pressure, international alliance capability
+ *   - Mexican Airline Passengers: Primary victim (powerless/trapped) — face higher fares and reduced service quality with no exit options within domestic market
+ *   - Competing Regional Carriers: Secondary victim (moderate/constrained) — face reduced market share, constrained by regulatory barriers to expansion
+ *   - COFECE (Federal Economic Competition Commission): Institutional regulator (institutional/constrained) — maintains review function but constrained by political pressure; theater ratio high
+ *   - USMCA Trade Framework / International Regulators: Organized observers (organized/constrained) — face competing mandates between competition principles and national sovereignty; constrained in enforcement action
  */
 
 /* ==========================================================================
@@ -72,127 +92,82 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(mexican_airline_merger, 0.55).
-domain_priors:suppression_score(mexican_airline_merger, 0.70).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(mexican_airline_merger, 0.30).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(mexican_airline_merger, 0.52).
+domain_priors:suppression_score(mexican_airline_merger, 0.58).
+domain_priors:theater_ratio(mexican_airline_merger, 0.64).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(mexican_airline_merger, extractiveness, 0.55).
-narrative_ontology:constraint_metric(mexican_airline_merger, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(mexican_airline_merger, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(mexican_airline_merger, extractiveness, 0.52).
+narrative_ontology:constraint_metric(mexican_airline_merger, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(mexican_airline_merger, theater_ratio, 0.64).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-% narrative_ontology:constraint_metric(mexican_airline_merger, accessibility_collapse, [0.85-1.0]).
-% narrative_ontology:constraint_metric(mexican_airline_merger, resistance, [0.0-0.15]).
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(mexican_airline_merger, tangled_rope).
 narrative_ontology:human_readable(mexican_airline_merger, "Mexican Airline Merger Antitrust Exemption").
-narrative_ontology:topic_domain(mexican_airline_merger, "economic").
+narrative_ontology:topic_domain(mexican_airline_merger, "economic/competition_policy").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(mexican_airline_merger).      % Mandatory if Scaffold
-domain_priors:requires_active_enforcement(mexican_airline_merger). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(mexican_airline_merger).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-% domain_priors:emerges_naturally(mexican_airline_merger).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mexican_airline_merger, mexicana_de_aviacion).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(mexican_airline_merger, mexican_passengers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+narrative_ontology:constraint_beneficiary(mexican_airline_merger, consolidated_carrier).
+narrative_ontology:constraint_beneficiary(mexican_airline_merger, mexican_government).
+narrative_ontology:constraint_victim(mexican_airline_merger, airline_passengers).
+narrative_ontology:constraint_victim(mexican_airline_merger, competing_carriers).
+narrative_ontology:constraint_victim(mexican_airline_merger, consumer_welfare).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(mexican_airline_merger, tangled_rope,
+% PERSPECTIVE 1: AIRLINE PASSENGER (SNARE) — Trapped within Mexican domestic air market with limited exit options. Cannot exit the constraint through switching to alternative carriers (reduced competition post-merger) or substitutes (geographic coverage, travel time make ground alternatives impractical). Faces maximum extraction through higher fares and reduced service quality. No alternative mobility.
+constraint_indexing:constraint_classification(mexican_airline_merger, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+% PERSPECTIVE 2: COMPETING REGIONAL CARRIER (TANGLED ROPE) — Constrained by regulatory environment and capacity limitations. Benefits from exemption if able to access consolidated entity's assets or form strategic alliances; bears extraction through reduced market share and pricing pressure. Mixed coordination (alliance possibilities) and extraction (market dominance). Exit is costly but not impossible — shift to international markets or specialized routes.
+constraint_indexing:constraint_classification(mexican_airline_merger, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: MEXICAN GOVERNMENT / AVIATION AUTHORITY (ROPE) — Primary beneficiary with high arbitrage options. Frames merger as coordination solution for national carrier fragmentation and international competitiveness. Extracts political capital through consolidation narrative and tax revenue optimization. Experiences constraint as coordination mechanism enabling national champion strategy. Can arbitrage by suspending exemption or modifying terms.
 constraint_indexing:constraint_classification(mexican_airline_merger, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(mexican_airline_merger, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES (declare when applicable) ---
-% When a constraint operates between institutional actors with different
-% structural relationships, declare separate perspectives for each.
-% The engine differentiates via directionality: different exit_options
-% produce different d values even for the same power atom.
-%
-% Perspective 4A: The Mexican Government (institutional, constrained)
+% PERSPECTIVE 4: MEXICANA DE AVIACION / CONSOLIDATED CARRIER (ROPE) — Primary direct beneficiary. Experiences exemption as enabling coordination (route network consolidation, fleet optimization, international alliance building). High arbitrage options through contract renegotiation, regulatory exit, or service expansion. Extraction flow runs toward this agent. Net beneficiary from reduced competitive pressure and margin expansion.
 constraint_indexing:constraint_classification(mexican_airline_merger, rope,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 5: USMCA TRADE FRAMEWORK / INTERNATIONAL REGULATORS (TANGLED ROPE) — Organized institutional observers facing conflicting mandates: maintain competitive market principles (USMCA Chapter 21 competition provisions) while accommodating national government priority on carrier consolidation. Constrained by sovereignty doctrine; limited exit through legal challenge or trade retaliation. Benefits from stability in North American air market coordination; bears extraction risk through reduced consumer welfare and antitrust precedent spillover. Mixed: policy coordination function + asymmetric harm.
+constraint_indexing:constraint_classification(mexican_airline_merger, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 6: MEXICAN ANTITRUST AUTHORITY (COFECE) (PITON) — Institutional actor with nominal enforcement mandate but constrained capacity and political pressure. Theater ratio high: formal review processes occur but outcomes predetermined by government policy priority. Original function (competitive market protection) has atrophied; current role is performative legitimation of merger exemption. Maintains institutional structure and review protocols despite reduced real enforcement. Constrained exit — cannot openly defy government policy without institutional reprisal.
+constraint_indexing:constraint_classification(mexican_airline_merger, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 5: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, χ ≤ 0.30, theater ≤ 0.70.
-% constraint_indexing:constraint_classification(mexican_airline_merger, scaffold,
-%     context(agent_power(organized),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(continental))) :-
-%     narrative_ontology:has_sunset_clause(mexican_airline_merger).
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / GLOBAL COMPETITION PRINCIPLE (MOUNTAIN) — From universal competition law perspective, antitrust exemptions for carrier consolidation reflect an immutable tension: concentrated markets reduce competitive pressure, and this effect is structurally inherent regardless of policy framework. However, this naturalizes what is actually a contingent policy choice. The framework reveals this as a false summit: exemptions are not natural laws but institutional artifacts dependent on government enforcement discretion.
+constraint_indexing:constraint_classification(mexican_airline_merger, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -201,15 +176,17 @@ constraint_indexing:constraint_classification(mexican_airline_merger, rope,
 :- begin_tests(mexican_airline_merger_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(mexican_airline_merger, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(mexican_airline_merger, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(mexican_airline_merger, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(mexican_airline_merger, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(mexican_airline_merger, ExtMetricName, E),
-    (E =< 0.25 -> true ; E >= 0.46). % Mountain or high-extraction Snare/Tangled.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(mexican_airline_merger, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(mexican_airline_merger, TR),
+    TR >= 0.70.
 
 :- end_tests(mexican_airline_merger_tests).
 
@@ -219,113 +196,101 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   I assigned a base extractiveness of 0.55 because while the merger provides some stability for the national airline, it also allows for potential exploitation of consumers through higher prices and reduced service choices. The suppression score is set to 0.70 because the government intervention significantly restricts market competition. The theater ratio is relatively low at 0.30 because while there is some political posturing, the primary function of the merger appears to be economic.
+ *   Extractiveness (0.52): Moderate-high. The consolidated carrier captures increased margins through reduced competition and can extract through higher fares and reduced service frequency on non-competitive routes. However, extractiveness is not extreme (snare level) because: (1) International carriers provide some external competitive pressure, particularly on leisure and international hub routes; (2) Mexican passengers have partial substitutes (ground transportation, travel avoidance) for non-essential trips; (3) Geographic coverage expansion may benefit some passenger segments. The measurement trajectory (0.35→0.52 over 6 years) reflects gradual consolidation of market power post-merger as the carrier realizes pricing power and service reduction opportunities. Suppression (0.58): Moderate-high. Significant structural barriers include limited domestic airline entry capacity (high capital, airport slot scarcity in Mexico City), regulatory licensing delays, and incumbent advantage post-consolidation. Passengers have no meaningful exit options within domestic market. However, suppression is not extreme because international carriers and ground transportation provide partial alternatives for some journey types. Theater ratio (0.64): High. Regulatory review processes by COFECE appear substantive (formal competitive impact analysis, public comments, conditions attached) but occur within predetermined policy parameters set by the Mexican government's national champion strategy. The exemption was effectively decided at the policy level; COFECE's review was legitimation rather than genuine contestation. Theater ratio increases over the measurement interval (0.45→0.64) as the performance monitoring and condition enforcement become increasingly perfunctory.
  *
  * PERSPECTIVAL GAP:
- *   The passengers see this as a snare because they have limited alternatives and face potentially higher prices or lower service quality (trapped exit). Mexicana de Aviación views it as a rope because it stabilizes their business and provides arbitrage opportunities through government backing (arbitrage exit).
+ *   The passenger (powerless/trapped) sees Snare: high extraction, no exit. The government (institutional/arbitrage) sees Rope: coordination benefits, high exit optionality. The carrier (powerful/arbitrage) sees Rope: benefits from merger coordination, arbitrage options for renegotiation. COFECE (institutional/constrained) sees Tangled Rope: coordination function (regulatory legitimacy) mixed with extraction (compromised mandate). International observers (organized/constrained) see Tangled Rope: policy coordination (national sovereignty) mixed with trade rule asymmetry (competition principles overridden). The piton perspective reveals that regulatory review processes maintain institutional theater despite reduced functional enforcement. The mountain perspective risks naturalizing this as inherent to airline markets—but the structural data shows it's contingent on policy choice.
  *
  * DIRECTIONALITY LOGIC:
- *   Mexicana de Aviación benefits from the reduced competition and receives implicit subsidies. Mexican passengers bear the cost of potentially higher prices and diminished service. The Mexican government's role is complex, as they aim to support a national airline, but this intervention creates distortions in the market that extract from consumers.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   The Mexican government, while an institutional actor, is constrained by its political objectives. Its exit option is constrained because it must balance consumer interests with the desire to support a national airline. The airline itself has more arbitrage, as they can manipulate the system to get guaranteed survival and profits. This difference in exit options leads to the different perspectives.
+ *   Each agent's directionality (d) is derived from their structural position relative to extraction flow. Mexicana de Aviación as primary beneficiary with arbitrage options (can exit by renegotiating terms, expanding internationally, or shifting focus) derives d≈0.15 (full beneficiary), producing low/negative effective extraction chi—they experience the constraint as enabling, not constraining. Mexican government as policy initiator with institutional power derives d≈0.10 (institutional beneficiary), experiencing the constraint as a coordination tool. Passengers derive d≈0.92 (trapped victims with no exit), producing maximum experienced extraction chi through the sigmoid function—trapped exit + victim status = high f(d). COFECE derives d≈0.55 (symmetric institutional constraint) despite nominal regulatory authority, because constrained exit (political pressure) and mixed victim/beneficiary status (must legitimize policy while maintaining nominal competitive mandate) produce symmetric cost-benefit. The derivation reveals why COFECE classifies as Tangled Rope from an international perspective: it benefits from stability (coordination) but bears extraction through compromised mandate (asymmetric harm).
  *
  * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling coordination as pure extraction by acknowledging that the merger does provide some coordination benefits in terms of stabilizing the airline, but the asymmetrical extraction from the consumer is evident. Without the beneficiary declaration, we might mistake this for pure rent-seeking. Conversely, without the victim declaration we might mistake this as pure coordination.
+ *   CRITICAL DISTINCTION: This constraint resolves mandatrophy by separating the beneficiary's genuine coordination function (network consolidation, international alliance capability) from the victim's genuine extraction experience (captive market, higher fares). The constraint is truthfully Tangled Rope because BOTH are structurally real: (1) The coordination problem is genuine—fragmented domestic Mexican carriers cannot compete internationally or serve remote routes efficiently; (2) The asymmetric extraction is genuine—passengers on concentrated routes face reduced competition and higher prices. The mandatrophy is avoided by refusing to collapse this to 'really a Rope' (beneficiary framing) or 'really a Snare' (victim framing). Both are partially true. The policy choice is whether the coordination benefits justify the extraction costs—a value question, not a classification question. The analytical perspective's false summit (naturalizing this as inherent) is unmasked by the structural data: the exemption is contingent, not inevitable. If the Mexican government prioritized consumer welfare over international competitiveness, this could be regulated to Rope (coordination without extraction) through price controls, service obligations, and entry barriers reduction. The fact that it remains Tangled Rope reveals a policy choice, not a natural law.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_mexican_airline_merger,
-    'Will the Mexican government prioritize consumer welfare over national airline stability?',
-    'Future policy decisions and antitrust enforcement actions will reveal the answer.',
-    'If the government prioritizes consumer welfare (False), the constraint may weaken or dissolve. If the government prioritizes national airline stability (True), the constraint will solidify, potentially leading to more extraction.',
+    merger_efficiency_gains_realization,
+    'Do claimed merger efficiencies (network consolidation, international alliance capability, cost reduction) materialize as consumer benefits or are they captured entirely as producer surplus?',
+    'Comparative analysis of fares, service frequency, and consumer complaint rates pre- vs post-merger; international route expansion data; fuel cost pass-through analysis',
+    'If consumer benefits emerge: constraint reclassifies toward Rope (coordination function realized). If entirely captured: constraint remains Tangled Rope or shifts toward Snare (pure extraction).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(merger_efficiency_gains_realization, empirical, 'Whether merger efficiency gains benefit consumers or are captured as producer surplus').
+
+omega_variable(
+    international_competitive_pressure_sufficiency,
+    'Do international carriers and cross-border competition from U.S./Latin American airlines provide sufficient external constraint on consolidated Mexican carrier pricing and service quality?',
+    'Cross-border passenger diversion analysis; international carrier pricing relative to Mexican domestic routes; market share trends for international vs domestic routes; elasticity of demand for international substitutes',
+    'If international pressure is sufficient: effective extraction is lower than base assessment; constraint reclassifies toward weaker type. If insufficient: Mexican passengers face true captive market; extraction intensifies.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(international_competitive_pressure_sufficiency, empirical, 'Whether international competition constrains consolidated carrier pricing').
+
+omega_variable(
+    regulatory_oversight_credibility,
+    'Is the antitrust exemption truly time-limited with performance conditions, or is it effectively permanent with performative review processes?',
+    'Review of exemption terms, performance metrics, and compliance monitoring; historical record of other Mexican antitrust exemptions (revocation rate, condition enforcement); COFECE institutional independence assessment',
+    'If credibly time-limited with enforcement: constraint is Scaffold with real sunset. If permanent/performative: constraint is Piton (theatrical review masking institutional inertia) or escalates toward Snare.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_oversight_credibility, empirical, 'Whether antitrust exemption is genuinely time-limited or effectively permanent').
+
+omega_variable(
+    domestic_carrier_entry_barriers,
+    'What are the structural barriers (capital, slots, regulatory licensing) preventing new domestic carrier entry or expansion by existing carriers post-merger?',
+    'Capital requirement analysis for domestic airline entry; Mexico City airport slot allocation data; licensing approval timelines and criteria; competitor investment decisions',
+    'If barriers are low: market contestability constrains consolidated carrier; extraction limited. If barriers are high: consolidated carrier has durable monopoly; extraction can intensify.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(domestic_carrier_entry_barriers, empirical, 'Structural barriers to domestic airline entry or expansion').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(mexican_airline_merger, 0, 10).
+narrative_ontology:interval(mexican_airline_merger, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(mexican_airline_merger_tr_t0, mexican_airline_merger, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(mexican_airline_merger_tr_t5, mexican_airline_merger, theater_ratio, 5, 0.25).
-narrative_ontology:measurement(mexican_airline_merger_tr_t10, mexican_airline_merger, theater_ratio, 10, 0.30).
+% Theater ratio over time
+narrative_ontology:measurement(mxam_tr_t0, mexican_airline_merger, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(mxam_tr_t3, mexican_airline_merger, theater_ratio, 3, 0.55).
+narrative_ontology:measurement(mxam_tr_t6, mexican_airline_merger, theater_ratio, 6, 0.64).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(mexican_airline_merger_ex_t0, mexican_airline_merger, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(mexican_airline_merger_ex_t5, mexican_airline_merger, base_extractiveness, 5, 0.52).
-narrative_ontology:measurement(mexican_airline_merger_ex_t10, mexican_airline_merger, base_extractiveness, 10, 0.55).
+% Extraction over time
+narrative_ontology:measurement(mxam_be_t0, mexican_airline_merger, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(mxam_be_t3, mexican_airline_merger, base_extractiveness, 3, 0.45).
+narrative_ontology:measurement(mxam_be_t6, mexican_airline_merger, base_extractiveness, 6, 0.52).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
 narrative_ontology:coordination_type(mexican_airline_merger, resource_allocation).
+narrative_ontology:affects_constraint(mexican_airline_merger, mexican_airport_slot_allocation).
+narrative_ontology:affects_constraint(mexican_airline_merger, nafta_competition_framework).
+narrative_ontology:affects_constraint(mexican_airline_merger, regional_airline_consolidation_pressure).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(mexican_airline_merger, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(mexican_airline_merger, [other_constraint_id]).
-
-% --- Network Decomposition (Constraint Families) ---
-% When a natural-language label covers multiple constraints with different ε
-% values, each gets its own file. Link family members with affects_constraint:
-%
 % DUAL FORMULATION NOTE:
-% This constraint is one of [N] stories decomposed from [colloquial label].
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - [sibling_constraint_1] (ε=[value], [Type])
-%   - [sibling_constraint_2] (ε=[value], [Type])
-%
-% narrative_ontology:affects_constraint(mexican_airline_merger, [sibling_constraint_id]).
+% This constraint is a specific instantiation of the broader tension between national economic policy (industrial consolidation) and regional trade frameworks (competition principles). Upstream: Mexican economic policy drivers and NAFTA/USMCA conflict. Downstream: impacts on regional airline competition and passenger welfare. Network links represent institutional coupling—changes in one constraint cascade through the others.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(mexican_airline_merger, institutional, 0.30).
+constraint_indexing:directionality_override(mexican_airline_merger, institutional, 0.55).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

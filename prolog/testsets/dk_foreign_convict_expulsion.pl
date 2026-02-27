@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: dk_foreign_convict_expulsion
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_dk_foreign_convict_expulsion, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -58,17 +58,32 @@
  *   domain: political/social
  *
  * SUMMARY:
- *   A Danish government policy mandating the expulsion of any foreign national
- *   sentenced to at least one year in prison. The law is framed as a measure
- *   to protect the country and its citizens by removing criminal elements,
- *   but it imposes extreme costs on the individuals affected, who lose their
- *   residency, social connections, and accumulated life capital in Denmark.
+ *   Denmark's foreign convict expulsion law mandates the automatic expulsion
+ *   of any non-citizen sentenced to at least one year in prison. The policy
+ *   operationalizes a stark principle: criminal conviction of a foreign
+ *   national results in immediate loss of residency and deportation, with
+ *   minimal discretion for judicial override, family reunification claims, or
+ *   humanitarian exceptions. The constraint exhibits classic snare
+ *   characteristics: high suppression (criminal conviction eliminates
+ *   bargaining power), significant extraction (deportation and family
+ *   separation), and theater (framing expulsion as crime prevention rather
+ *   than political messaging on immigration control). Over the past decade,
+ *   extractiveness has risen as the government has tightened enforcement and
+ *   enforcement messaging has become more prominent in political campaigns,
+ *   suggesting the policy functions partly as extraction (political capital
+ *   from visibility) alongside crime control (genuine coordination). Theater
+ *   ratio has also increased as the law has become a symbol of tough
+ *   immigration stance rather than a quiet administrative procedure,
+ *   indicating degradation from coordination mechanism toward political
+ *   theater.
  *
- * KEY AGENTS (by structural relationship):
- *   - Convicted Foreign Nationals: Primary target (powerless/trapped) — bear the full extractive cost of expulsion.
- *   - Danish State / Nationalist Bloc: Primary beneficiary (institutional/arbitrage) — gains political capital and fulfills a populist mandate for security.
- *   - General Danish Public: Secondary beneficiary (organized/mobile) — promised increased safety and social order.
- *   - Analytical Observer: Sees the full structure, including both the coordination claims and the extractive reality.
+ * KEY AGENTS:
+ *   - Convicted foreign nationals: Primary victims (powerless/trapped) — face automatic expulsion with minimal appeal mechanisms; experience separation from family, employment, and legal status
+ *   - Immigrant communities: Secondary victims (moderate/constrained) — experience stigmatization, family disruption, and uncertainty about legal future; can exit but at high family/economic cost
+ *   - Danish political establishment: Primary beneficiaries (institutional/arbitrage) — gain electoral capital, crime prevention narrative, and enforcement visibility; can modify or repeal law
+ *   - Danish native citizens: Mixed experience (moderate/constrained) — benefit from crime prevention coordination but bear costs of increased surveillance and integration disruption
+ *   - International human rights norms: Degraded observer (institutional/arbitrage) — monitors violations but enforcement is weak and Denmark has arbitrage options
+ *   - Analytical observer: Risk of naturalization (analytical/analytical) — may view expulsion authority as inherent to sovereignty rather than contingent policy choice
  */
 
 /* ==========================================================================
@@ -76,88 +91,74 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(dk_foreign_convict_expulsion, 0.75).
-domain_priors:suppression_score(dk_foreign_convict_expulsion, 0.95).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(dk_foreign_convict_expulsion, 0.40).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(dk_foreign_convict_expulsion, 0.58).
+domain_priors:suppression_score(dk_foreign_convict_expulsion, 0.68).
+domain_priors:theater_ratio(dk_foreign_convict_expulsion, 0.62).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(dk_foreign_convict_expulsion, extractiveness, 0.75).
-narrative_ontology:constraint_metric(dk_foreign_convict_expulsion, suppression_requirement, 0.95).
-narrative_ontology:constraint_metric(dk_foreign_convict_expulsion, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(dk_foreign_convict_expulsion, extractiveness, 0.58).
+narrative_ontology:constraint_metric(dk_foreign_convict_expulsion, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(dk_foreign_convict_expulsion, theater_ratio, 0.62).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(dk_foreign_convict_expulsion, snare).
 narrative_ontology:human_readable(dk_foreign_convict_expulsion, "Denmark's Foreign Convict Expulsion Law").
 narrative_ontology:topic_domain(dk_foreign_convict_expulsion, "political/social").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(dk_foreign_convict_expulsion). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(dk_foreign_convict_expulsion).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(dk_foreign_convict_expulsion, danish_state_nationalist_bloc).
-narrative_ontology:constraint_beneficiary(dk_foreign_convict_expulsion, general_danish_public).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(dk_foreign_convict_expulsion, convicted_foreign_nationals).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(dk_foreign_convict_expulsion, danish_native_citizens).
+narrative_ontology:constraint_beneficiary(dk_foreign_convict_expulsion, political_establishment).
+narrative_ontology:constraint_victim(dk_foreign_convict_expulsion, foreign_nationals_in_denmark).
+narrative_ontology:constraint_victim(dk_foreign_convict_expulsion, immigrant_communities).
+narrative_ontology:constraint_victim(dk_foreign_convict_expulsion, family_reunification_principle).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% The convicted foreign national experiences this as pure, inescapable coercion.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ.
-% χ = 0.75 * 1.42 * 1.0 (national scope) ≈ 1.065.
-% High ε (0.75), high suppression (0.95), and high χ (1.065) make this a clear Snare.
+% PERSPECTIVE 1: CONVICTED FOREIGN NATIONAL (SNARE) — Sentenced criminal faces automatic expulsion with minimal discretion; cannot appeal on family reunification grounds or humanitarian basis. Exit is permanent separation from family, employment, and legal residency. Suppression is maximal: the criminal conviction itself eliminates bargaining power, and the mandatory nature prevents negotiation. This agent experiences pure extraction — loss of residence, family separation, deportation — with no coordination benefit.
 constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The Danish state views this as a tool for social management and security.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ.
-% χ = 0.75 * -0.12 * 1.0 (national scope) ≈ -0.09.
-% Negative effective extraction means this is a subsidy from this perspective,
-% classifying it as a Rope—a mechanism for achieving a coordination goal.
+% PERSPECTIVE 2: IMMIGRANT COMMUNITIES & FAMILY MEMBERS (SNARE) — Extended family networks experience the constraint through loss of relatives and legal uncertainty about their own status. Communities face stigmatization and increased surveillance risk. Constrained rather than trapped: some can leave Denmark, but family bonds and economic integration create high exit costs. Extraction manifests as community destabilization and fear.
+constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: DANISH POLITICAL ESTABLISHMENT (ROPE) — Government benefits from law enforcement coordination and public satisfaction. Experiences the constraint as a coordination mechanism: removing criminals prevents repeat victimization, satisfies constituent demands for law enforcement, and operationalizes border sovereignty. Has arbitrage options (can modify or repeal law). Net beneficiary — extraction flows toward this agent in the form of political capital and electoral support.
 constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The analytical view sees both the coordination function and the asymmetric extraction.
-% Engine derives d ≈ 0.73 → f(d) ≈ 1.15. Global scope amplifies χ.
-% χ = 0.75 * 1.15 * 1.2 (global scope) ≈ 1.035.
-% Because it possesses a genuine coordination function (beneficiary is declared),
-% asymmetric extraction (victim is declared), and requires enforcement, the structure
-% is a Tangled Rope, despite the very high extraction.
-constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, snare,
+% PERSPECTIVE 4: DANISH NATIVE CITIZENS (TANGLED ROPE) — Coordination benefit: law addresses crime prevention and public safety concerns. But also experience extraction through increased police resources, higher surveillance, and potential chilling effects on immigrant integration and reporting of crimes to authorities. Exit is constrained — cannot easily withdraw from the national security framework. Mixed experience: real coordination gain alongside coercive mechanism.
+constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: INTERNATIONAL HUMAN RIGHTS NORMS (PITON) — The law violates the principle of proportionality in punishment and family reunification rights enshrined in international law (ECHR, ICCPR). Yet enforcement of these norms against Denmark is weak — the nation has arbitrage options (selective compliance, withdrawal threats). International human rights monitoring continues performatively, but actual enforcement is degraded. Theater ratio high: human rights reports are generated but sanctions are minimal.
+constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (SOVEREIGNTY VIEW) — From a universal perspective, national sovereignty over border control and criminal expulsion is viewed as an immutable feature of the state system. The constraint appears as a natural law of nation-state organization. However, this classification is likely a false summit: the mandatory nature (as opposed to discretionary expulsion) is a contingent policy choice, not inherent to sovereignty itself. The engine's false summit detector should flag this as naturalization.
+constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -165,19 +166,18 @@ constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, snar
 
 :- begin_tests(dk_foreign_convict_expulsion_tests).
 
-test(perspectival_gap_is_snare_vs_rope) :-
-    constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(dk_foreign_convict_expulsion, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(dk_foreign_convict_expulsion, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_pass) :-
-    % A constraint is a Tangled Rope only if it has a beneficiary (coordination),
-    % a victim (asymmetric extraction), and requires active enforcement.
-    narrative_ontology:constraint_beneficiary(dk_foreign_convict_expulsion, _),
-    narrative_ontology:constraint_victim(dk_foreign_convict_expulsion, _),
-    domain_priors:requires_active_enforcement(dk_foreign_convict_expulsion).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(dk_foreign_convict_expulsion, TR),
+    TR >= 0.70.
 
 :- end_tests(dk_foreign_convict_expulsion_tests).
 
@@ -187,38 +187,16 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): Extremely high, representing the complete
- *     removal of a person's life, social network, and economic standing within
- *     a country. This is a maximal form of social extraction short of execution.
- *   - Suppression (0.95): For the target, the constraint is absolute. Once the
- *     legal threshold is met, there are no alternatives to avoid expulsion.
- *   - Theater (0.40): The policy is functional, but its framing ("protect our
- *     country, not criminals") is highly theatrical and aimed at a domestic
- *     political audience, justifying its coercive nature.
+ *   Extractiveness (0.58): Moderate-high. The policy extracts residency and family relationships from convicted foreign nationals in exchange for crime control coordination. The extraction is genuine (deportation is irreversible) and significant (affects community networks), but not maximal because some convicted individuals are retried/resentenced and the policy has limits (applies only to ≥1 year sentences). The measurement trajectory from 0.35 to 0.58 reflects increasing enforcement and political visibility over the interval, suggesting the extraction mechanism has been activated more aggressively. Suppression (0.68): High. Criminal conviction itself is a suppression mechanism — once sentenced, the foreign national has minimal legal recourse. The mandatory nature eliminates judicial discretion to weigh proportionality or family impact. Media and political messaging suppress alternative framings (e.g., rehabilitation, integration investment). Theater ratio (0.62): Moderate-high. The law generates political messaging and media visibility disproportionate to its actual crime prevention effect. The 1-year threshold is arbitrary (why not 6 months or 3 years?) and the expulsion mechanism is more symbolic than effective for crime prevention (deported individuals may commit crimes elsewhere; integration disruption may increase recidivism). The government gains political capital from the perception of toughness more than from measurable public safety outcomes.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme. For the `convicted_foreign_national` (powerless, trapped),
- *   the policy is an inescapable Snare that destroys their life. For the
- *   `danish_state` (institutional, arbitrage), it is a Rope—a simple, effective
- *   coordination tool for enforcing social norms and delivering on political promises
- *   of security. The state does not experience the extraction; it orchestrates it.
+ *   The constraint displays a stark perspectival gap between the beneficiary view (rope/coordination) and the victim view (snare/extraction). The Danish political establishment and native citizens see the law as coordination against crime — a mechanism for solving the collective action problem of criminal deterrence. The convicted foreign national sees pure extraction: loss of residence, family separation, and legal status, with no coordination benefit to them. The intermediate view (immigrant communities, moderate exit constraints) classifies as tangled rope — experiencing both the coordination mechanism (crime reduction) and the extraction (community destabilization). The international human rights observer sees degraded enforcement (piton), and the civilizational sovereignty view risks a false summit (naturalizing a contingent policy choice as inherent sovereignty). The perspectival gap between beneficiary and victim is maximal, indicating genuine snare structure rather than pure coordination.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is unambiguous. The constraint is explicitly designed to
- *   benefit the `danish_state_nationalist_bloc` and the `general_danish_public`
- *   by extracting `convicted_foreign_nationals`. The beneficiary/victim
- *   declarations directly map to this clear structural relationship. The system's
- *   ability to derive directionality from these declarations is key to producing
- *   the correct perspectival classifications.
+ *   Beneficiaries (Danish political establishment, native citizens) experience low or negative effective extractiveness — the law creates coordination benefits (crime prevention, security assurance) that exceed the costs to them. Their directionality d values are low (0.1-0.3), mapping to negative or near-zero χ after applying f(d). Victims (convicted foreign nationals) experience maximum directionality — they are the target of the extraction mechanism (deportation), have no exit options (mandatory law), and are powerless to negotiate. Their d values are high (0.90-1.0), mapping to maximum χ via f(d). The mandatory nature (requires_active_enforcement: true) and victim declaration (victims: [foreign_nationals_in_denmark, immigrant_communities]) drive the snare classification from the victim perspective.
  *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- *   This classification correctly avoids two potential errors. A naive "pro-state"
- *   analysis might label this a Rope, ignoring the severe, asymmetric extraction.
- *   A naive "pro-victim" analysis might label it a pure Snare, ignoring the genuine
- *   (from the state's perspective) coordination function it serves. The analytical
- *   classification of Tangled Rope correctly captures this dual nature: it is a
- *   mechanism of social ordering that is achieved through highly coercive and
- *   asymmetric extraction.
+ * MANDATROPHY ANALYSIS:
+ *   The mandatrophy is resolved by recognizing that the constraint exhibits genuine coordination (crime prevention) ALONGSIDE genuine extraction (political capital from deportation visibility). The snare classification is appropriate for victims; the rope classification is appropriate for beneficiaries. The question 'is this coordination or extraction?' has a perspectival answer: for the political establishment, it is primarily coordination (with extraction as a secondary benefit); for the convicted foreign national, it is pure extraction (with no coordination benefit). The piton perspective reveals that theater has increased over time, suggesting the coordination function may be degrading and the extraction/political messaging function may be growing. The false summit risk in the sovereignty perspective highlights that the mandatory nature is a policy choice, not an inherent feature of border control. The mandatrophy is fully resolved by the perspectival architecture: all six types are legitimate readings of the same constraint from different structural positions.
  */
 
 /* ==========================================================================
@@ -226,59 +204,83 @@ test(tangled_rope_structural_gates_pass) :-
    ========================================================================== */
 
 omega_variable(
-    omega_dk_expulsion,
-    'Does the expulsion policy produce a net increase in public safety, or is its primary function political theater and nationalist signaling?',
-    'Comparative criminological studies analyzing crime rates before and after the policy, controlling for other variables, versus polling data on voter sentiment and political capital gained by its proponents.',
-    'If True (it increases safety), the coordination function is robust, solidifying the Tangled Rope classification. If False (it is primarily theater), the constraint is closer to a pure Snare, with the coordination claim being a pretense.',
+    mandatory_vs_discretionary_distinction,
+    'Is the mandatory nature of expulsion a feature of sovereignty itself, or a contingent policy choice that other democracies handle with discretion?',
+    'Comparative analysis of expulsion regimes across democracies (Canada, UK, Germany, France) examining discretionary vs mandatory structures; documentation of judicial override mechanisms in other countries',
+    'If mandatory is inherent: Mountain classification confirmed. If discretionary regimes exist: mandatory regime is Snare (policy extraction), not natural law.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(mandatory_vs_discretionary_distinction, empirical, 'Whether mandatory expulsion is inherent to sovereignty').
+
+omega_variable(
+    integration_vs_public_safety_extraction,
+    'Does the law represent genuine crime prevention (coordination) or is it extracting integration-related costs from foreign communities as political benefit?',
+    'Empirical analysis: crime rates pre/post law implementation; reoffending rates of deported vs non-deported cohorts; correlation between expulsions and political campaign messaging on immigration; investigation of whether expulsion reduces victimization or merely exports crime/deportees',
+    'If crime reduction is substantial: Rope classification stronger. If marginal or negative (deportees reoffend elsewhere, integration costs increase): Snare classification confirmed.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(integration_vs_public_safety_extraction, empirical, 'Whether expulsion achieves crime prevention or extracts costs').
+
+omega_variable(
+    family_reunification_right_status,
+    'Is the right to family reunification a natural constraint on immigration policy, or is it a negotiable principle that can be overridden by security interests?',
+    'Legal interpretation of ECHR Article 8 (family life) and its application in case law; analysis of proportionality tests in other democracies; identification of alternative expulsion thresholds that preserve family units while maintaining security',
+    'If family reunification is inviolable: law is unconstitutional extraction. If negotiable: theater ratio increases (framing as security theater rather than justice).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(family_reunification_right_status, conceptual, 'Status of family reunification as a constraint on expulsion').
+
+omega_variable(
+    conversion_rate_to_actual_extraction,
+    'What fraction of foreign nationals sentenced to 1+ year prison actually face enforcement of expulsion, and how does political context affect enforcement rates?',
+    'Tracking of expulsion enforcement statistics by government agency; correlation between enforcement rates and political election cycles; analysis of judicial discretion in sentencing that avoids the 1-year threshold',
+    'If enforcement is inconsistent: suppression metric decreases (alternatives exist in practice). If enforcement is near-total: suppression and extractiveness both confirmed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(conversion_rate_to_actual_extraction, empirical, 'Enforcement rate of expulsion for eligible convicts').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(dk_foreign_convict_expulsion, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has high base extraction (0.75 > 0.46), so temporal data is
-% required. We model a scenario where the policy was introduced with a higher
-% conviction threshold and less theatrical rhetoric, then intensified over time.
+% Theater ratio over time
+narrative_ontology:measurement(dkfce_tr_t0, dk_foreign_convict_expulsion, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(dkfce_tr_t5, dk_foreign_convict_expulsion, theater_ratio, 5, 0.54).
+narrative_ontology:measurement(dkfce_tr_t10, dk_foreign_convict_expulsion, theater_ratio, 10, 0.62).
 
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(dk_expulsion_tr_t0, dk_foreign_convict_expulsion, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(dk_expulsion_tr_t5, dk_foreign_convict_expulsion, theater_ratio, 5, 0.30).
-narrative_ontology:measurement(dk_expulsion_tr_t10, dk_foreign_convict_expulsion, theater_ratio, 10, 0.40).
+% Extraction over time
+narrative_ontology:measurement(dkfce_be_t0, dk_foreign_convict_expulsion, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(dkfce_be_t5, dk_foreign_convict_expulsion, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(dkfce_be_t10, dk_foreign_convict_expulsion, base_extractiveness, 10, 0.58).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(dk_expulsion_ex_t0, dk_foreign_convict_expulsion, base_extractiveness, 0, 0.60).
-narrative_ontology:measurement(dk_expulsion_ex_t5, dk_foreign_convict_expulsion, base_extractiveness, 5, 0.70).
-narrative_ontology:measurement(dk_expulsion_ex_t10, dk_foreign_convict_expulsion, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This constraint's coordination function is clearly about enforcing state-defined norms.
 narrative_ontology:coordination_type(dk_foreign_convict_expulsion, enforcement_mechanism).
+narrative_ontology:affects_constraint(dk_foreign_convict_expulsion, eu_free_movement_directive).
+narrative_ontology:affects_constraint(dk_foreign_convict_expulsion, danish_immigration_policy).
 
-% This policy structurally affects and is affected by broader legal frameworks
-% governing human rights and citizenship within the European context.
-narrative_ontology:affects_constraint(dk_foreign_convict_expulsion, eu_human_rights_charter).
-narrative_ontology:affects_constraint(dk_foreign_convict_expulsion, eu_freedom_of_movement).
-narrative_ontology:affects_constraint(dk_citizenship_pathways, dk_foreign_convict_expulsion).
-
+% DUAL FORMULATION NOTE:
+% The foreign convict expulsion law decomposes into two structurally distinct claims: (1) the principle that nations can expel criminals (low-extractiveness coordination for sovereignty), and (2) the mandatory nature and political use of the law (high-extractiveness extraction mechanism). This story focuses on claim (2) — the actual policy implementation. The sovereignty principle is a separate constraint (appropriate to model as Rope or Mountain depending on perspective). The decomposition explains why extractiveness rises over time: the underlying policy (expulsion authority) is stable, but its use as political messaging (theater) increases, raising the experienced extraction.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The automatic derivation chain,
-% using the explicit beneficiary/victim declarations and the agents' exit options,
-% accurately computes the directionality (d) for each perspective.
+constraint_indexing:directionality_override(dk_foreign_convict_expulsion, institutional, 0.15).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

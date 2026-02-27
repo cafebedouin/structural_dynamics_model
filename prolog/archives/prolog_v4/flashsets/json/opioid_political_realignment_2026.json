@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "opioid_political_realignment_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.65,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Opioid-Induced Political Capture",
+    "topic_domain": "political/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_companies",
+      "political_campaigns_accepting_pharma_money"
+    ],
+    "victims": [
+      "communities_affected_by_opioids",
+      "public_health_infrastructure",
+      "trust_in_government"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Affected Communities",
+      "comment": "Communities devastated by the opioid crisis, lacking resources to lobby or influence policy, see a snare. Trapped by addiction and economic hardship, they bear the brunt of the extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Public Health Agencies",
+      "comment": "State agencies tasked with combating the crisis are constrained by limited funding and political pressure. They benefit from some federal resources but also face significant extraction due to lobbying and political interference."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Pharmaceutical Companies",
+      "comment": "Pharmaceutical companies benefit from regulatory capture, seeing the political landscape as a coordination mechanism to protect their profits. They can arbitrage the system by shifting resources and lobbying efforts."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Regulatory Agencies",
+      "comment": "Federal agencies like the FDA, initially designed to prevent harm, become pitons due to regulatory capture, institutional inertia, and revolving-door employment. They still perform some oversight, but their effectiveness is greatly diminished."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the entanglement: Pharmaceutical companies benefit from the opioid market and political influence, while communities and public health suffer. Requires active enforcement to maintain the status quo."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_health_impact",
+      "question": "What are the full long-term health and social costs of the opioid epidemic?",
+      "resolution_mechanism": "Longitudinal studies tracking health outcomes, economic productivity, and social well-being in affected communities.",
+      "impact": "Higher costs reinforce the snare classification for affected communities. Lower costs might suggest the political realignment is less impactful.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The full long-term health and social costs of the opioid epidemic."
+    },
+    {
+      "id": "political_influence_threshold",
+      "question": "At what level of political spending does pharmaceutical influence become regulatory capture?",
+      "resolution_mechanism": "Correlation analysis between pharmaceutical lobbying spending and regulatory outcomes, controlling for other factors.",
+      "impact": "Determines whether the political influence is a rope (legitimate lobbying) or a tangled rope (regulatory capture).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The level of political spending at which influence becomes capture."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint tracks the causal link between pharmaceutical extraction (opioid marketing) and subsequent political realignment in the United States. Opioid manufacturers profited immensely by aggressively marketing opioid painkillers, contributing to widespread addiction and a public health crisis. These profits were then used to lobby politicians, fund campaigns, and influence policy, leading to a political realignment that favors the pharmaceutical industry at the expense of public health and affected communities.",
+    "key_agents": [
+      "Pharmaceutical Companies: Primary beneficiary (institutional/arbitrage) - benefit from opioid sales and regulatory capture.",
+      "Communities Affected by Opioids: Primary victim (powerless/trapped) - bear the costs of addiction, overdose, and social disruption.",
+      "Public Health Infrastructure: Secondary victim (moderate/constrained) - faces strain and limited resources to combat the crisis.",
+      "Political Campaigns Accepting Pharma Money: Beneficiary (institutional/arbitrage) - gains financial support, but risks public backlash.",
+      "Trust in Government: Victim (powerless/trapped) - erodes due to perceived corruption and lack of effective regulation."
+    ],
+    "logic_rationale": "Extractiveness (0.75): High. Pharmaceutical companies extract significant value from opioid sales, while communities bear devastating costs. Suppression (0.65): High. Lobbying and campaign contributions suppress regulatory efforts and alternative solutions. Theater Ratio (0.40): Moderate. While there are public awareness campaigns and some regulatory actions, they are often insufficient to address the scale of the crisis. Mandatrophy resolved: The categorization of political influence as regulatory capture is justified given the disproportionate benefits received by the pharmaceutical industry and the harm inflicted on communities.",
+    "perspectival_gap": "Affected communities experience this as a snare, trapped by addiction and economic hardship. Public health agencies, constrained by funding and political interference, see a tangled rope. Pharmaceutical companies, benefiting from regulatory capture, perceive the landscape as a coordination mechanism (rope). Regulatory agencies become pitons, their effectiveness diminished by capture and inertia. An analytical observer sees the entanglement: Pharmaceutical benefits vs public health costs.",
+    "directionality_logic": "Directionality is determined by the flow of benefits and costs. Pharmaceutical companies are beneficiaries with arbitrage options, experiencing low extraction. Affected communities are victims with no exit, bearing maximal extraction. Public health agencies are constrained, experiencing significant extraction. Regulatory agencies designed to oversee, become pitons due to reduced extractiveness"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "pharmaceutical_marketing_practices"
+    ]
+  },
+  "directionality_overrides": []
+}

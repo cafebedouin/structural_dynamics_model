@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "student_loan_interest_accrual",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sloan"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Student Loan Interest Accrual",
+    "topic_domain": "economic/financial_regulation",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "loan_servicers",
+      "federal_education_department"
+    ],
+    "victims": [
+      "student_borrowers",
+      "low_income_households"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Student Borrower",
+      "comment": "PERSPECTIVE 1: STUDENT BORROWER (SNARE) \u2014 Trapped by education credential requirement and income constraints. Cannot exit the loan system; accrual continues during deferment/forbearance even when borrower has zero income. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Low-Income Household",
+      "comment": "PERSPECTIVE 2: LOW-INCOME HOUSEHOLD (SNARE) \u2014 Constrained exit via income-driven repayment, but accrual burden remains heavy; cannot afford higher payments during periods of economic stress. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Loan Servicers and Department of Education",
+      "comment": "PERSPECTIVE 3: LOAN SERVICERS / FEDERAL EDUCATION DEPARTMENT (ROPE) \u2014 Institutional beneficiary. Interest accrual is presented as a coordination mechanism: servicers argue accrual funds loan operations and compensates for default risk. Government claims accrual ensures fiscal sustainability of the federal student loan program. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Student Debt Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: STUDENT DEBT ADVOCACY COALITION (TANGLED ROPE) \u2014 Organized agents (progressive legislatures, borrower unions, debt relief organizations) perceive both genuine coordination need (risk pooling, program sustainability) AND asymmetric extraction (accrual mechanisms benefit servicers over borrowers). Sees income-driven repayment as partial solution with residual extraction. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legislative Status Quo",
+      "comment": "PERSPECTIVE 5: LEGISLATIVE STATUS QUO (PITON) \u2014 The accrual mechanism persists through institutional inertia despite documented hardship. Congress has periodically suspended accrual (COVID-19, 2020-2023) yet always allows restart. theater_ratio=0.48 reflects moderate performative content: legislative debate about accrual occurs regularly but produces minimal structural change. Accrual system maintained by vested interest persistence, not functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Market Logic View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / MARKET LOGIC VIEW \u2014 From a civilization-scale perspective, interest accrual on deferred debt may appear as an immutable law of lending markets: capital always charges for time value and default risk. However, the structural data (\u03b5=0.58, suppression=0.62, no natural emergence property) contradicts the mountain classification. This is a false summit: accrual is a policy choice, not a market law. Income-driven repayment plans, partial accrual forgiveness, and zero-accrual alternatives (Germany, Norway) demonstrate contingency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "unsubsidized_accrual_necessity",
+      "question": "Is interest accrual on unsubsidized loans during deferment economically necessary to maintain federal loan program sustainability, or does it reflect excessive servicer profit-taking?",
+      "resolution_mechanism": "Comparative financial analysis: loan servicer profit margins vs administrative costs; comparison with international student loan systems (UK, Germany, Australia); modeling of alternative accrual schedules on program solvency",
+      "impact": "If necessary: accrual is a coordination mechanism (Rope). If excessive: accrual is pure extraction (Snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether accrual is economically necessary or excess profit-taking"
+    },
+    {
+      "id": "income_driven_repayment_sufficiency",
+      "question": "Do income-driven repayment plans (SAVE, IBR, PAY-AS-YOU-EARN) adequately protect low-income borrowers from accrual burden, or is residual accrual during forbearance a material harm mechanism?",
+      "resolution_mechanism": "Longitudinal tracking of borrower outcomes under SAVE vs traditional repayment; analysis of borrowers entering forbearance (medical, economic hardship); comparison of total loan amounts paid vs principal borrowed across income quartiles",
+      "impact": "If protective: perceived extraction is largely mitigated (Rope from 'moderate' power perspective). If insufficient: the snare classification holds (Snare remains for low-income cohort).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether income-driven repayment sufficiently protects borrowers from accrual harm"
+    },
+    {
+      "id": "default_risk_accrual_proportion",
+      "question": "What fraction of accrual rates actually reflects compensation for loan default risk vs. servicer profit extraction vs. administrative costs?",
+      "resolution_mechanism": "Decomposition of federal student loan interest rates: default loss reserves vs servicer fees vs cost-of-capital. Comparison to unsecured personal loan markets with similar default rates.",
+      "impact": "If default risk > 60% of accrual: stronger case for accrual as coordination/risk mechanism. If < 20%: stronger case for accrual as pure extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of accrual that reflects actual default risk compensation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Student loan interest accrual during deferment and forbearance creates a structural trap for borrowers unable to make full payments. The constraint operates at the intersection of education access (public policy goal), financial sustainability (institutional justification), and individual hardship (borrower experience). From the borrower's perspective, particularly low-income households, accrual during periods of zero income and institutionally-permitted non-payment functions as pure extraction: the borrower bears the cost while having no income to service the growing debt. From the servicer and Department of Education perspective, accrual functions as a coordination mechanism compensating for default risk and administrative costs. The constraint exhibits the full typology depending on observer position: powerless borrowers see a Snare, institutional beneficiaries see a Rope, organized advocates see a Tangled Rope with persistent extraction despite partial protections, and the analytical observer risks naturalizing a policy choice as an economic law. Theater ratio (0.48) reflects moderate performative content: congressional debate about accrual occurs regularly (interest rate cap discussions, temporary suspensions during COVID-19), but structural changes to accrual mechanisms remain limited, suggesting the performative energy exceeds the actual functional reform.",
+    "key_agents": [
+      "Student Borrowers: Primary victims (powerless/trapped) \u2014 cannot exit credential requirement; accrual continues even during approved deferment/forbearance with zero income",
+      "Low-Income Households: Secondary victims (moderate/constrained) \u2014 income-driven repayment provides constrained exit but residual accrual burden remains heavy during economic stress",
+      "Loan Servicers: Primary beneficiaries (institutional/arbitrage) \u2014 profit from accrual; fees increase with loan balance; minimal pressure to reduce accrual rates",
+      "Federal Department of Education: Primary beneficiary (institutional/arbitrage) \u2014 claims accrual funds program sustainability and compensates for default risk",
+      "Student Debt Advocacy Coalition: Organized challengers (organized/constrained) \u2014 perceive both coordination need and asymmetric extraction; push for accrual reform through income-driven repayment modifications",
+      "Congressional Status Quo: Institutional inertia (institutional/arbitrage) \u2014 maintains accrual through periodic reauthorization despite documented hardship; occasional temporary suspensions (COVID-19 pause 2020-2023) reveal contingency"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Interest accrual transfers wealth from borrowers (particularly low-income, longer repayment timeline) to servicers and federal government. The extractiveness is not maximal (0.66+) because income-driven repayment plans and periodic forbearance provide partial relief, and some accrual genuinely reflects administrative costs and default risk. The 20-year trajectory (0.35\u21920.58) reflects increasing accrual rates, growing loan balances, and reduced regulatory pressure on servicers post-2015 (when origination shifted from private to federal servicers). Suppression (0.62): Moderate-high. Borrowers face significant barriers to exiting the system: education credential requirement, limited alternative financing, stigma of default, and information asymmetry about accrual mechanisms. The mandatory nature of federal student loans (primary source for low-income borrowers) amplifies suppression. Theater ratio (0.48): Moderate. Congressional debate about interest rates, temporary accrual suspensions, and income-driven repayment modifications create a performative appearance of reform. The actual structural mechanism \u2014 accrual during deferment \u2014 persists unchanged despite decades of debate. The recent (2023) expansion of income-driven repayment may increase theater ratio by creating perception of reform while maintaining underlying accrual logic.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. The powerless borrower sees a Snare (extraction without exit); the low-income household sees a Snare with partial mitigation (constrained exit via income-driven repayment); the institutional beneficiary sees a Rope (coordination mechanism and risk compensation); the organized advocates see a Tangled Rope (genuine coordination need AND extractive asymmetry); the legislative status quo sees a Piton (performative debate, minimal functional change); and the analytical observer risks seeing a Mountain (natural law of lending markets) until the structural contingency becomes apparent. This is a diagnostic exemplar of how indexical classification reveals that the same mechanism \u2014 accrual during non-payment \u2014 is simultaneously a coordinated risk management tool (from the lender's perspective) and a pure extraction mechanism (from the powerless borrower's perspective).",
+    "directionality_logic": "Student borrower: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction targeting. Low-income household: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction targeting with partial exit relief. Loan servicers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; arbitrage exit means they can exit or modify the constraint without penalty. Federal Education Department: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Institutional beneficiary; claims deficit-neutral operation. Student debt advocacy coalition: Organized + constrained \u2192 d\u22480.55, f(d)\u22480.75. Significant extraction relative to their power, but organized status and constrained (not trapped) exit enable collective action. Legislative status quo: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification comes from theater gate, not from directionality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_driven_repayment_plan_inadequacy",
+      "student_loan_forgiveness_policy_instability",
+      "federal_student_loan_servicer_monopoly"
+    ],
+    "dual_formulation_note": "Student loan interest accrual is a distinct structural constraint from the broader student debt trap. Accrual operates as the compound mechanism that transforms education access into lifetime extraction for low-income households. It is downstream of education financing policy but represents a specific mechanical constraint about interest calculation during deferment/forbearance. Related constraints (income-driven repayment inadequacy, servicer monopoly, forgiveness policy instability) all operate through the accrual mechanism as their enforcement tool."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

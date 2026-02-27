@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "us_china_chip_tariffs_v2",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tariff"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Tariffs on Chinese High-Tech Goods (2024)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_domestic_semiconductor_manufacturers",
+      "us_government_revenue",
+      "us_labor_in_chipmaking"
+    ],
+    "victims": [
+      "us_consumers",
+      "us_tech_companies_importing_chips",
+      "chinese_chipmakers",
+      "global_chip_supply_chain"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "US Consumer",
+      "comment": "PERSPECTIVE 1: US CONSUMER (SNARE) \u2014 Trapped by tariff pass-through; cannot exit domestic market for cheaper alternatives. Absorbs price increases on electronics, computing hardware, and downstream consumer goods. No effective arbitrage. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US Tech Company (Importing Chips)",
+      "comment": "PERSPECTIVE 2: US TECH COMPANY IMPORTING CHIPS (SNARE) \u2014 Bears direct tariff costs; options constrained (reshoring is capital-intensive and slow; offshoring risks US market access; lobbying is ineffective against tariff momentum). Strategic vulnerability creates extraction: companies must either absorb costs, raise prices, or reduce margins. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Domestic Chipmaker",
+      "comment": "PERSPECTIVE 3: US DOMESTIC CHIPMAKER (ROPE) \u2014 Primary beneficiary. Tariffs reduce competition, support reshoring subsidies (CHIPS Act), and create protected market share. Experiences tariff regime as coordination: government policy coordinates market access for domestic producers. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Government (Strategic Intent)",
+      "comment": "PERSPECTIVE 4: US GOVERNMENT STRATEGIC INTENT (ROPE) \u2014 Tariffs coordinate industrial policy: decoupling supply chains from China, building domestic capacity, and strengthening national security. Government views tariff as solving collective action problem (individual firms lack incentive to build expensive fabs domestically without protection). d\u22480.10, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.02. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Chinese Chipmaker",
+      "comment": "PERSPECTIVE 5: CHINESE CHIPMAKER (TANGLED ROPE) \u2014 Suffers direct extraction (blocked market access); but also benefits from protected domestic market as US tariffs redirect trade to China-friendly suppliers and create incentive for Chinese companies to capture non-US markets. Mixed: loses US market, gains protected Asian/emerging market share. d\u22480.60, f(d)\u22480.80, \u03c3=1.2 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Chip Supply Chain",
+      "comment": "PERSPECTIVE 6: GLOBAL CHIP SUPPLY CHAIN (TANGLED ROPE) \u2014 Experiences both extraction (forced decoupling, inefficiency from geography-driven design) and coordination benefit (tariff creates incentive for supply-chain diversification and risk mitigation). Organized actors (TSMC, Samsung, Intel) can shift production; smaller companies are trapped. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Tariff Bureaucracy",
+      "comment": "PERSPECTIVE 7: TARIFF BUREAUCRACY (PITON) \u2014 Maintains tariff classification and enforcement system (HTS codes, country-of-origin rules, waiver processes). Theater_ratio=0.58 reflects that enforcement is substantial but also contains performative elements: exemption waiver processes create appearance of flexibility while actual flow remains blocked. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US Domestic Chip Reshoring Initiative",
+      "comment": "PERSPECTIVE 8: US DOMESTIC CHIP RESHORING INITIATIVE (SCAFFOLD) \u2014 Temporary coordination with sunset logic: tariffs + CHIPS Act subsidies drive fab construction, but as US capacity matures and supply-chain redundancy is achieved, tariff necessity decreases. Estimated sunset: 10-15 years (by ~2035-2040 when US domestic capacity reaches 25-30% of consumption). d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.26."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Comparative Advantage)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / COMPARATIVE ADVANTAGE VIEW (MOUNTAIN) \u2014 From a civilizational economic perspective, tariffs on high-tech goods violate comparative advantage logic, creating irreversible efficiency losses (deadweight loss, resource misallocation). This perspective sees tariffs as fighting immutable law. However, the structural data (\u03b5=0.52, suppression=0.68) contradicts pure mountainness. The engine identifies this as a false summit: the 'law' is a descriptive economic principle, not a natural law; tariffs demonstrate that political power can override comparative advantage deliberately."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "actual_reshoring_velocity",
+      "question": "Will US domestic fab capacity actually scale to offset Chinese competitive advantage before tariff sunset?",
+      "resolution_mechanism": "Tracking fab construction timelines (fabs take 5-7 years to build), yield maturation curves, cost-per-unit convergence with Taiwan/South Korea production. Measurement of actual CapEx deployed under CHIPS Act.",
+      "impact": "If reshoring succeeds: tariff has real sunset and is legitimate scaffold (temporary). If reshoring fails: tariff becomes permanent extraction (Snare), and mandatrophy is unresolved.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether US fab reshoring reaches cost-competitive maturity within 15 years"
+    },
+    {
+      "id": "china_retaliatory_capacity",
+      "question": "Can China effectively retaliate against US tariffs through counter-tariffs, export controls on rare earths, or supply-chain weaponization?",
+      "resolution_mechanism": "Monitoring Chinese retaliatory tariffs on US agricultural/industrial goods; tracking rare earth export restrictions; analyzing supply-chain vulnerability indices for critical US industries dependent on China.",
+      "impact": "If retaliation is effective: US consumers and tech companies face escalating extraction (\u03c7 rises). If retaliation is limited: US can maintain tariff regime with lower cost to US importers.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of Chinese counter-tariffs and supply-chain retaliation"
+    },
+    {
+      "id": "allied_decoupling_momentum",
+      "question": "Do US allies (EU, Japan, South Korea, Taiwan) voluntarily decouple from Chinese chips, or do they maintain dual-sourcing to preserve cost advantages?",
+      "resolution_mechanism": "Trade flow analysis showing whether allies increase US chip purchases or maintain Chinese sourcing; interviews with procurement officers; analysis of diversification strategies in ally supply chains.",
+      "impact": "If allies decouple: tariff benefits extend globally, offsetting extraction on US importers. If allies keep Chinese options: US tariff extracts from US companies while allies capture cost savings, making US consumers/companies bear disproportionate cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether US allies voluntarily decouple or maintain dual-sourcing"
+    },
+    {
+      "id": "strategic_purity_vs_extraction_hybrid",
+      "question": "Is the tariff regime genuinely a strategic industrial policy (Rope/Scaffold coordination), or has it become a rent-seeking extraction mechanism?",
+      "resolution_mechanism": "Analysis of tariff revenue allocation: if revenues fund broad reshoring/R&D, it's coordination. If revenues accrue to incumbent chipmakers without spurring new capacity, it's extraction. Measurement of policy goal articulation vs. actual implementation.",
+      "impact": "If strategic: classification as Tangled Rope with real sunset is correct. If extraction: classification should shift toward Snare from more perspectives; mandatrophy would require resolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether tariff is strategic policy or rent-seeking extraction hybrid"
+    },
+    {
+      "id": "consumer_price_passthrough_rate",
+      "question": "What proportion of tariff costs are passed through to US consumers vs. absorbed by companies or suppliers?",
+      "resolution_mechanism": "Price index tracking for consumer electronics; regression analysis of price changes against tariff schedules; survey of corporate margin compression.",
+      "impact": "If passthrough is high (>75%): consumers bear full extraction cost (Snare classification from consumer perspective is correct). If passthrough is low (<50%): companies absorb costs and extraction is mitigated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Tariff cost passthrough to consumer prices"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The 2024 US tariffs on Chinese high-tech goods (including a 50% tariff on semiconductors by 2025) represent a strategic industrial policy intervention that simultaneously coordinates supply-chain decoupling and extracts from US consumers and importers. The constraint exhibits a high perspectival gap: domestic chipmakers see protection (Rope), the US government sees strategic coordination (Rope), consumers see pure extraction (Snare), tech companies see constrained victimhood (Snare/Tangled Rope), Chinese makers see market loss with compensatory protected growth (Tangled Rope), and the global supply chain faces forced geographic reorganization (Tangled Rope). The theater ratio (0.58) reflects that tariff justifications invoke strategic security necessity, but the policy also serves incumbent industry rent-seeking and political signaling. The extractiveness (0.52) captures the genuine cost transfer: tariffs shift producer surplus from Chinese and US importers to US domestic semiconductor producers and government revenue. Mandatrophy is resolved by recognizing that the tariff is a legitimate Tangled Rope (coordination + extraction) with a real sunset horizon (as US capacity scales, protection necessity declines), not a pure Snare masquerading as strategy.",
+    "key_agents": [
+      "US Domestic Semiconductor Manufacturers (Intel, Micron): Primary beneficiary (institutional/arbitrage) \u2014 gain market protection, access to CHIPS Act subsidies, and reduced competition from Chinese imports",
+      "US Consumers: Primary victim (powerless/trapped) \u2014 absorb tariff pass-through on electronics, computing, and downstream goods; no exit mechanism",
+      "US Tech Companies (Apple, Google, Meta, etc.): Secondary victim (moderate/constrained) \u2014 face tariff costs on inputs; constrained exit options (reshoring is slow, offshoring risks US market access)",
+      "US Government: Coordinating beneficiary (powerful/arbitrage) \u2014 pursues strategic industrial policy (decoupling, reshoring, supply-chain security); captures tariff revenue",
+      "Chinese Chipmakers: Asymmetric victim-beneficiary (moderate/constrained) \u2014 lose US market access but gain protected Asian/emerging market growth as trade redirects",
+      "Global Chip Supply Chain (TSMC, Samsung): Organized actors (organized/mobile) \u2014 face efficiency costs from forced decoupling but can leverage supply-chain diversification for new markets",
+      "Tariff Bureaucracy: Institutional maintainer (institutional/constrained) \u2014 enforces HTS classification and exemption waivers; maintains performative flexibility",
+      "US Domestic Fab Reshoring Initiative: Organized coalition (organized/constrained) \u2014 builds new capacity with sunset logic; expects tariff necessity to decline as capacity matures"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The tariff transfers substantial surplus from importers and consumers to domestic producers and government. The extraction is real but not total \u2014 the policy has genuine strategic rationale (supply-chain security, technological sovereignty), not pure rent-seeking. Over the interval (0-4 years), extractiveness rose from 0.28 to 0.52 as tariff rates escalated and implementation became comprehensive. Suppression (0.68): High. Alternatives are suppressed: negotiated deals with Taiwan/South Korea are politically infeasible (bipartisan protectionism); market-driven reshoring is too slow; consumer exit is blocked by national borders. Tariff enforcement is robust, with limited exemption pathways. Theater ratio (0.58): Moderate. Policy rhetoric emphasizes strategic security (genuine component), but also contains performative elements: tariff exclusion processes create appearance of flexibility while blocking most trade; 'friend-shoring' language masks protectionism; CHIPS Act branding inflates reshoring expectations. Theater has increased over interval as implementation has revealed performative elements.",
+    "perspectival_gap": "This constraint shows a large perspectival gap driven by directionality and exit options. Domestic chipmakers experience protection (Rope/beneficiary perspective). Consumers experience extraction with no exit (Snare/victim perspective). Tech importers experience mixed effects: they lose market efficiency but some gain from protected downstream markets (Tangled Rope/moderate perspective). Chinese makers experience asymmetric loss-gain (Tangled Rope/constrained perspective). The global supply chain sees efficiency loss but also supply-chain risk mitigation (Tangled Rope/organized perspective). The comparative advantage mountain perspective (tariffs violate economic law) is revealed as a false summit by the actual structural data: tariffs are a deliberate political choice that overrides efficiency, not an inevitable outcome of natural law.",
+    "directionality_logic": "US Consumers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit options. US Tech Importers: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction; reshoring and offshoring are both blocked. US Domestic Chipmakers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; high exit capacity (can leverage protection or invest globally). US Government: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Net beneficiary; policy is deliberately chosen. Chinese Makers: Mixed (asymmetric victim-beneficiary) + constrained \u2192 d\u22480.60, f(d)\u22480.80. Lose US market but gain protected alternatives. Global Supply Chain: Victim (efficiency) + mobile (organized actors can shift) \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction for smaller players, lower for multinational corporations.",
+    "mandatrophy_analysis": "Mandatrophy is RESOLVED by temporal measurement and omega variables. The key omega is 'actual_reshoring_velocity': if US fab capacity scales to cost-competitive maturity within 10-15 years (by ~2035-2040), the tariff has a real sunset and is a legitimate Scaffold. The measurement data shows extractiveness rising from 0.28 to 0.52 over 4 years, but the Tangled Rope classification (not Snare) is justified because (1) the constraint has demonstrable coordination function (supply-chain security, industrial policy), (2) beneficiaries are named (domestic chipmakers, government), (3) victims are identified (consumers, importers), and (4) enforcement is active. If reshoring fails and tariff persists after 2035 with extractiveness \u22650.66, the constraint should be reclassified as Snare. Currently, mandatrophy is resolved by treating the tariff as a high-extraction Tangled Rope with a generational sunset, not as a masked Snare with indefinite extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain_fragmentation",
+      "us_china_geopolitical_decoupling",
+      "chips_act_subsidy_effectiveness"
+    ],
+    "dual_formulation_note": "The US tariff regime is downstream of broader US-China geopolitical decoupling (higher-level constraint) and affects semiconductor supply-chain fragmentation (sister constraint with shared victims/beneficiaries). The tariff also shares institutional overlap with CHIPS Act subsidies (dual implementation of same strategic intent)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

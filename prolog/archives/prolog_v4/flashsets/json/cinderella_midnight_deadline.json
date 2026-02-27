@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "cinderella_midnight_deadline",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Fairy Godmother's Midnight Deadline",
+    "topic_domain": "magical/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "the_prince",
+      "the_kingdom"
+    ],
+    "victims": [
+      "cinderella"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Cinderella",
+      "comment": "Cinderella experiences the constraint as a snare because she is trapped by the deadline. If she fails to meet it, she reverts to her former state. She has no agency to extend the deadline."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Fairy Godmother",
+      "comment": "The Fairy Godmother experiences the constraint as a rope because it's a coordination mechanism to ensure Cinderella's proper behavior and maintains the magical agreement. She benefits from ensuring the magic is used responsibly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Prince",
+      "comment": "The prince benefits from the introduction of a suitable partner but is constrained by the need for a proper courtship within the defined social structure. He experiences a mix of coordination and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From an analytical perspective, the deadline is a tangled rope: it provides a temporary opportunity but also enforces social norms and expectations, creating a mix of benefits and constraints. The time constraint is an active enforcement of a social rule."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "magic_source",
+      "question": "Is the Fairy Godmother's magic source limited or unlimited?",
+      "resolution_mechanism": "Detailed account of Fairy Godmother's power usage and possible depletion over long periods.",
+      "impact": "If magic is limited, the constraint becomes more about efficient resource allocation. If unlimited, the constraint may be about maintaining social order and limiting chaos.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Determine whether fairy godmother magic is a scarce resource"
+    },
+    {
+      "id": "deadline_negotiability",
+      "question": "Can the midnight deadline be negotiated or extended under certain circumstances?",
+      "resolution_mechanism": "Analysis of other fairy tales to find precedence for altering spell conditions.",
+      "impact": "If negotiable, it weakens the constraint toward a scaffold. If unchangeable, it strengthens the snare aspects.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Understand whether deadline is hard or flexible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "A Fairy Godmother grants Cinderella a temporary, high-status transformation (coach, gown, etc.) to attend a royal ball. A strict midnight deadline is imposed, after which all magic reverts. This constraint governs Cinderella's actions and relationships during the ball.",
+    "key_agents": [
+      "Cinderella: Primary target (powerless/trapped) - Undergoes transformation but faces reversion.",
+      "The Fairy Godmother: Primary beneficiary (institutional/arbitrage) - Enforces magical rules and expectations.",
+      "The Prince: Secondary actor (institutional/constrained) - Benefits from meeting Cinderella, but his courtship is also constrained by social norms.",
+      "The Kingdom: Benefits from the potential union with a suitable partner.",
+      "Analytical Observer: Analyzes from a civilizational perspective the impact of the magical gift."
+    ],
+    "logic_rationale": "Extractiveness (0.6): High, due to the significant risk of reversion and potential social cost if discovered. Suppression (0.7): High, given the limited control Cinderella has over the duration and conditions of the magic. Theater Ratio (0.4): Moderate. Some performative elements are involved, such as maintaining the illusion of status, but genuine opportunity exists for connection.",
+    "perspectival_gap": "Cinderella experiences the deadline as a high-stakes limitation (Snare), while the Fairy Godmother sees it as a necessary condition for responsible magic use (Rope). The Prince experiences a mix (Tangled Rope) due to the blending of potential benefits and social expectations. The kingdom benefits from Cinderella and the Prince potentially being together.",
+    "directionality_logic": "Cinderella bears the cost of possible reversion and loss of the new identity, having no exit from the deadline. The Fairy Godmother benefits as enforcer of magic with the arbitrage exit option of removing the magic. The Prince benefits from the magical introduction of a suitable partner, thus benefiting but also being under social constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

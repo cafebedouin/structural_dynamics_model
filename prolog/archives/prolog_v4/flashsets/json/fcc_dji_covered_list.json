@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "fcc_dji_covered_list",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FCC 'Covered List' Ban on DJI Drones",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_drone_manufacturers",
+      "cybersecurity_firms"
+    ],
+    "victims": [
+      "dji",
+      "us_consumers",
+      "local_law_enforcement"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "US Consumers",
+      "comment": "US Consumers face higher prices and fewer options, with limited ability to influence policy or switch to alternative drone solutions that meet their needs at the same price point. Trapped by the ban."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Local Law Enforcement",
+      "comment": "Local Law Enforcement agencies are constrained by the ban, as DJI drones were often the most cost-effective and feature-rich options for surveillance and emergency response. They benefit from increased cybersecurity but are limited in options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Drone Manufacturers",
+      "comment": "US Drone Manufacturers benefit from the ban by gaining market share and reduced competition from DJI. They can arbitrage the situation by filling the demand previously met by DJI. This is a coordination mechanism where the ban protects their market."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Cybersecurity Firms",
+      "comment": "Cybersecurity firms benefit from increased demand for their services to assess and secure drone systems, although they may be constrained by the need to navigate complex regulatory landscapes and adapt to evolving threats."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "DJI",
+      "comment": "DJI is a victim of the ban, losing market access in the US. While a powerful company, its exit options are limited due to the specific nature of the ban targeting its products in the US market."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the ban as a tangled rope: a protectionist measure disguised as a security imperative. It benefits domestic manufacturers and cybersecurity firms while extracting value from consumers and limiting technology options."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cybersecurity_threat_validation",
+      "question": "Is the cybersecurity threat posed by DJI drones a validated, significant risk, or primarily a justification for protectionist measures?",
+      "resolution_mechanism": "Independent cybersecurity audits and penetration testing of DJI drones, coupled with analysis of real-world incidents involving DJI drones.",
+      "impact": "If validated threat: Justifies the ban and strengthens the 'rope' perspective. If primarily protectionist: Undermines the ban and shifts perspectives towards 'snare'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of the cybersecurity threat posed by DJI drones"
+    },
+    {
+      "id": "economic_impact_assessment",
+      "question": "What is the actual economic impact of the ban on US consumers, local law enforcement, and other stakeholders?",
+      "resolution_mechanism": "Comprehensive economic analysis, including price comparisons, availability of alternatives, and impacts on public services.",
+      "impact": "High negative impact: Strengthens the 'snare' perspective for consumers and law enforcement. Limited impact: Weakens the 'snare' perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic impact of the ban"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The FCC's ban on DJI drones, citing national security concerns, represents a complex interplay of technological, economic, and political factors. The ban aims to protect US national security interests and promote domestic drone manufacturing but also restricts consumer choice and potentially hinders innovation. The ban's effectiveness and long-term consequences are subject to ongoing debate.",
+    "key_agents": [
+      "US Consumers: Primary victims (powerless/trapped) - face higher prices and fewer options.",
+      "DJI: Victim (powerful/mobile) - loses market access in the US.",
+      "US Drone Manufacturers: Beneficiary (institutional/arbitrage) - gain market share and reduced competition.",
+      "Cybersecurity Firms: Beneficiary (institutional/constrained) - increased demand for services.",
+      "Local Law Enforcement: Moderate victim (moderate/constrained) - limited in drone technology options.",
+      "Analytical Observer: (analytical/analytical) - Protectionist measure with potential drawbacks."
+    ],
+    "logic_rationale": "The extractiveness is rated at 0.6 because the ban does extract significant value from consumers through increased prices and limited options and from DJI through loss of market share. Suppression is rated at 0.7 due to the active enforcement of the ban and limited alternatives for consumers and law enforcement. Theater ratio is 0.3, because although security concerns are cited, the ban's practical effectiveness is debated, suggesting the performative component is not dominant.",
+    "perspectival_gap": "The perspective of US consumers is a Snare, as they are trapped with limited options. US drone manufacturers see the ban as a Rope, as it coordinates market share towards them. Law enforcement agencies see the ban as a Tangled Rope as they can only use other drones. DJI is harmed, although powerful, but can only shift production elsewhere. The analytical observer sees a protectionist bent, suggesting that there is a Tangled Rope.",
+    "directionality_logic": "US Drone Manufacturers and Cybersecurity Firms benefit, indicated by a low directionality, while US Consumers, Local Law Enforcement, and DJI bear the costs, indicated by a high directionality. The power and exit options influence the exact impact on each agent.",
+    "mandatrophy_analysis": "The classification prevents mislabeling coordination as extraction by identifying the intended benefits for US drone manufacturers as a form of coordination. However, the higher extractiveness reflects the constraints on consumers and law enforcement, resulting in a tangled rope classification. The debate about the true cybersecurity threat and consumer choice allows for better clarification of the ban. It isn't a pure Snare because local firms are assisted by the action."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

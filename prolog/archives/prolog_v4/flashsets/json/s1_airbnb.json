@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "s1_airbnb",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Short-Term Rental (STR) Regulatory Framework",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "municipal_governments",
+      "hotel_industry"
+    ],
+    "victims": [
+      "short_term_rental_hosts",
+      "tourists"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "STR Host (Compliance Burden)",
+      "comment": "The individual STR host faces a complex and evolving web of local regulations, often with limited capacity to exit or arbitrage the system. The regulatory burden extracts significant time and resources, with limited coordination benefits viewed from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Hotel Industry (Regulatory Capture)",
+      "comment": "Established hotel chains benefit from STR regulations that limit competition and increase demand for traditional lodging. They have the resources and influence to lobby for favorable regulations and arbitrage the system to their advantage. This is viewed as a coordination mechanism to protect market share."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a global, long-term perspective, the STR regulatory framework represents a tangled rope, balancing the needs of various stakeholders but also creating opportunities for extraction and regulatory capture. The balance shifts over time as new business models emerge and regulatory frameworks adapt."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Tourist (Constrained Choices)",
+      "comment": "Tourists can be victims of STR regulations by facing fewer lodging options and higher prices. They are moderately affected, and while they may be mobile, their choices are constrained within a given region due to the regulations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Municipal Governments (Revenue & Housing)",
+      "comment": "Municipal governments extract revenue through taxes and fees on STRs. However, they are constrained by needing to balance revenue generation with addressing affordable housing concerns and managing community disruption."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optimal_regulation_level",
+      "question": "What level of regulation strikes the right balance between protecting housing affordability, managing community disruption, and enabling economic activity?",
+      "resolution_mechanism": "Comparative studies of different regulatory approaches, analysis of housing market data, community surveys, and economic impact assessments.",
+      "impact": "Higher regulation could lead to fewer STRs and increased housing affordability but reduced tourism revenue. Lower regulation could boost tourism but exacerbate housing shortages and community disruption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining the optimal level of STR regulation"
+    },
+    {
+      "id": "enforcement_effectiveness",
+      "question": "How effectively are STR regulations enforced, and what are the costs and benefits of different enforcement strategies?",
+      "resolution_mechanism": "Audits of STR listings, analysis of complaint data, assessments of enforcement personnel resources, and cost-benefit analyses of different enforcement technologies.",
+      "impact": "Weak enforcement could lead to widespread non-compliance and undermine the intended benefits of the regulations. Overly aggressive enforcement could stifle innovation and harm legitimate STR hosts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the effectiveness of STR regulation enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A global patchwork of municipal laws, zoning restrictions, and tax requirements that govern home-sharing. These regulations represent a complex interplay of economic, political, and social factors, balancing the interests of homeowners, tourists, local residents, and the hotel industry. The framework seeks to manage the externalities associated with STRs, such as noise, traffic, and housing affordability, while also capturing economic benefits through tourism and tax revenue. The effectiveness of these regulations varies widely depending on local context, enforcement capacity, and stakeholder engagement.",
+    "key_agents": [
+      "Short-Term Rental Hosts: Primary target (powerless/trapped) - bears the brunt of compliance costs and restrictions.",
+      "Municipal Governments: Primary beneficiary (institutional/constrained) - extracts revenue and manages externalities, but constrained by community concerns.",
+      "Hotel Industry: Secondary beneficiary (institutional/arbitrage) - benefits from reduced competition and increased demand for traditional lodging.",
+      "Tourists: Secondary actor (moderate/mobile) - face constrained choices and potentially higher prices due to regulations.",
+      "Local Residents: Stakeholder (moderate/constrained) - impacted by both the positive and negative externalities of STRs, and whose voice influences regulatory outcomes."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. STR regulations extract value from hosts through taxes, fees, and compliance costs. They also limit the supply of STRs, potentially increasing prices for tourists. However, some of the regulations also provide benefits to the community, such as mitigating noise and traffic. Suppression (0.45): Moderate. STR regulations suppress the supply of STRs, limiting competition and potentially increasing prices for tourists. However, they do not completely eliminate STRs, and hosts still have some flexibility in how they operate. Theater Ratio (0.30): Low. While there may be some performative aspects to STR regulations, they are primarily focused on achieving real-world outcomes, such as protecting housing affordability and managing community disruption.",
+    "perspectival_gap": "The different perspectives on STR regulations reflect the diverse interests and experiences of the stakeholders involved. Hosts tend to view the regulations as burdensome and restrictive, while municipal governments see them as a way to manage externalities and generate revenue. The hotel industry sees the regulations as a way to protect their market share, while tourists may experience them as a constraint on their lodging options. An analytical observer recognizes the complex interplay of these factors and the need for a balanced approach.",
+    "directionality_logic": "Each perspective's directionality value (d) is determined by the agent's structural position - their power level, exit options, and relationship to the extraction flow. The pipeline computes d from these context parameters and applies the sigmoid f(d) to produce experienced extractiveness chi. Beneficiaries with arbitrage options experience low or negative effective extraction; trapped agents with no exit bear maximum extraction; organized agents with exit paths experience moderate extraction.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by recognizing that STR regulations serve multiple functions simultaneously. They extract value from hosts and tourists, but they also provide benefits to the community by mitigating externalities and generating revenue. They suppress the supply of STRs, but they also enable a more sustainable and equitable tourism ecosystem. The key challenge is to design regulations that strike the right balance between these competing goals."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "housing_affordability_policies",
+      "tourism_development_strategies"
+    ]
+  },
+  "directionality_overrides": []
+}

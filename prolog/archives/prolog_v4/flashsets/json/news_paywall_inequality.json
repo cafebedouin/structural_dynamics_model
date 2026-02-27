@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "news_paywall_inequality",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Information Asymmetry due to News Paywalls",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "news_organizations"
+    ],
+    "victims": [
+      "low_income_individuals",
+      "public_discourse"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Income Individuals",
+      "comment": "Perspective of low-income individuals who are effectively trapped due to financial constraints, limiting their access to quality information and participation in informed public discourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle-Income Individuals",
+      "comment": "Perspective of middle-income individuals who are constrained by the cost of multiple subscriptions but may have some ability to choose which paywalls to access, thus experiencing a mix of coordination (access to some quality information) and extraction (financial burden)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "News Organizations",
+      "comment": "Perspective of news organizations that benefit from paywalls through increased revenue, enabling them to fund quality journalism. They experience the constraint as a coordination mechanism to sustain their operations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Public Discourse",
+      "comment": "Perspective of the overall public discourse, which is affected by the asymmetry. Some coordinated benefit is gained through higher quality journalism financed by paywalls, but asymmetric extraction occurs because the overall information landscape and equity are degraded."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective of an analytical observer who recognizes the tangled_rope nature of news paywalls: they provide necessary funding for quality journalism (coordination) but exacerbate information inequality (extraction)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quality_information_access",
+      "question": "What is the threshold of access to quality information necessary for informed participation in democratic processes?",
+      "resolution_mechanism": "Empirical studies on the correlation between access to quality news and civic engagement, voting behavior, and policy preferences.",
+      "impact": "If the threshold is high, the current paywall structure is more extractive. If the threshold is low, the system has sufficient arbitrage capacity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for sufficient quality information access."
+    },
+    {
+      "id": "alternative_funding_models",
+      "question": "Can alternative funding models for journalism, such as public funding or philanthropy, effectively replace paywalls without compromising journalistic independence?",
+      "resolution_mechanism": "Comparative analysis of news organizations funded through different models, assessing their financial stability, editorial independence, and quality of reporting.",
+      "impact": "If alternative models are viable, the dependence on paywalls decreases, potentially turning this to a scaffold. If they are not, the current tangled rope is the only remaining option.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Viability of alternative funding models."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "News paywalls, while intended to sustain quality journalism, create an information asymmetry. Those who can afford subscriptions gain access to in-depth reporting and diverse perspectives, while those who cannot rely on free, often less reliable or biased, sources. This disparity can exacerbate existing inequalities and hinder informed public discourse.",
+    "key_agents": [
+      "News Organizations: Beneficiary (institutional/arbitrage) - Benefit through revenue, enabling quality journalism.",
+      "Low-Income Individuals: Victim (powerless/trapped) - Cannot afford access, limited to lower quality information.",
+      "Middle-Income Individuals: Moderate/constrained - Limited budget, can only afford selective access.",
+      "Public Discourse: The overall discourse suffers from information asymmetry."
+    ],
+    "logic_rationale": "Extractiveness: 0.55 - Moderate-high. News organizations extract value from readers through subscriptions. Lower income individuals disproportionately pay the cost. Suppression: 0.60 - Moderate-High. There are few high-quality substitutes for paid news content; free alternatives often lack depth, reliability, or are biased. Theater ratio: 0.30 - Low. Functional, revenue is directly related to the ability to produce quality content, not just a theatrical exercise.",
+    "perspectival_gap": "Low income individuals experience it as a Snare, trapped without the financial means for good quality coverage. News organizations see it as Rope, enabling the sustainable production of journalism. Middle-income sees a tangled rope, as they can access some coverage, but at a price and limited access. Analytical observer sees tangled rope because paywalls support journalistic activity but simultaneously degrade equal access.",
+    "directionality_logic": "News organizations are beneficiaries because they gain revenue and sustain their operations. Low-income individuals are victims because they are denied access to quality information. Middle-income are constrained because they can choose but may not have full access. Public discourse suffers from the information asymmetry resulting from a divided access to quality journalism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "filter_bubble_effect",
+      "misinformation_vulnerability"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: swift_legacy_piton
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-05-21
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_swift_legacy_piton, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,11 +41,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
-    narrative_ontology:topic_domain/2,
-    narrative_ontology:coordination_vitality/2.
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -39,78 +52,127 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: swift_legacy_piton
- * human_readable: The SWIFT Financial Messaging Inertia
- * domain: technological/economic
- * * SUMMARY:
- * A global financial messaging standard that has outlived its technical
- * utility but remains mandatory due to the "Maintenance Debt" of the global
- * banking system. It functions as a Piton—inertial maintenance of a
- * decaying constraint, where performative updates mask underlying stagnation.
- * * KEY AGENTS:
- * - Global Remitters & Merchants: Subject (Powerless) - Face 3-5 day delays and opaque fees.
- * - Legacy Financial Institutions: Beneficiary (Institutional) - Rely on the Piton for gatekeeping and fee extraction.
- * - Fintech Systems Auditor: Auditor (Analytical) - Observes the "Piton" gap between claimed and actual function.
+ *   constraint_id: swift_legacy_piton
+ *   human_readable: The SWIFT Financial Messaging Inertia
+ *   domain: technological/economic
+ *
+ * SUMMARY:
+ *   SWIFT (Society for Worldwide Interbank Financial Telecommunication) is a
+ *   global financial messaging standard established in 1973 to coordinate
+ *   cross-border correspondent banking. From 1973-2000, SWIFT represented
+ *   genuine coordination infrastructure with moderate extractiveness: the
+ *   standard solved the problem of incompatible bank communication protocols
+ *   and enabled global trade finance. By 2026, the constraint has degraded
+ *   into a piton — the primary functions (message standardization, network
+ *   connectivity) are now commoditized and can be replicated by cheaper
+ *   alternatives (blockchain settlement, real-time gross settlement systems,
+ *   central bank digital currencies), yet the constraint persists through
+ *   regulatory mandate, institutional inertia, and switching-cost theater
+ *   rather than through technical superiority. The extractiveness has
+ *   declined (from 0.28 to 0.18) as alternatives emerged, but theater has
+ *   increased (from 0.52 to 0.78) as the enforcement mechanism has shifted
+ *   from functional necessity to regulatory habit. The constraint exemplifies
+ *   how a coordination mechanism can degrade into institutional theater while
+ *   remaining formally mandatory — maintained not because it works but
+ *   because the cost of coordinating a global switch to alternatives exceeds
+ *   the cost of maintaining the degraded standard. Central banks, fintech
+ *   startups, and emerging market banks experience dramatically different
+ *   structural relationships to SWIFT, producing a full range of
+ *   classifications from pure extraction (snare) to regulatory theater
+ *   (piton) to coordination (rope). The constraint is entering a transition
+ *   phase where parallel alternatives (CBDCs, real-time settlement,
+ *   blockchain-based systems) are building exit paths, but the regulatory
+ *   mandate persists through geopolitical fragmentation and the
+ *   switching-cost moat.
+ *
+ * KEY AGENTS:
+ *   - SWIFT Governance Council: Primary beneficiary (institutional/arbitrage) — maintains institutional authority and licensing revenue; sees own constraint as degraded but maintained through path dependence
+ *   - Incumbent Tier-1 Banks: Secondary beneficiary (institutional/arbitrage) — network effects and switching costs protect market position; SWIFT integration is standard cost of doing business
+ *   - Emerging Market Banks: Primary victim (powerless/trapped) — forced to bear SWIFT licensing and integration costs without negotiating power; cannot access correspondent banking networks without SWIFT compliance
+ *   - Fintech Payment Startups: Secondary victim (moderate/constrained) — face costly SWIFT integration requirements as barrier to entry; also benefit from SWIFT's universal acceptance as coordination standard
+ *   - Central Bank Regulatory Apparatus: Organized actor (organized/constrained) — uses SWIFT cutoffs as sanctions enforcement mechanism; maintains theatrical mandate despite alternatives (CBDCs, bilateral connections) providing equivalent control
+ *   - Real-Time Settlement Coalition: Organized agents (organized/mobile) — CBDCs, FedNow, TIPS, SEPA Instant represent active exit pathways with explicit sunset logic; building parallel infrastructure that makes SWIFT structurally optional
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing SWIFT lock-in as an immutable law of financial networks, when it is actually a contingent institutional choice
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(swift_legacy_piton, 0.49). % High: Opaque correspondent banking fees and liquidity costs.
-domain_priors:suppression_score(swift_legacy_piton, 0.90).   % Extremely High: National economies are disconnected if removed without a replacement.
-domain_priors:theater_ratio(swift_legacy_piton, 0.75).       % High: Modern "updates" (gpi) are often theatrical patches on 1970s tech.
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(swift_legacy_piton, 0.18).
+domain_priors:suppression_score(swift_legacy_piton, 0.52).
+domain_priors:theater_ratio(swift_legacy_piton, 0.78).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(swift_legacy_piton, extractiveness, 0.49).
-narrative_ontology:constraint_metric(swift_legacy_piton, suppression_requirement, 0.90).
-narrative_ontology:constraint_metric(swift_legacy_piton, theater_ratio, 0.75).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(swift_legacy_piton, extractiveness, 0.18).
+narrative_ontology:constraint_metric(swift_legacy_piton, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(swift_legacy_piton, theater_ratio, 0.78).
 
-% Constraint self-claim (what does the constraint claim to be?)
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(swift_legacy_piton, piton).
 narrative_ontology:human_readable(swift_legacy_piton, "The SWIFT Financial Messaging Inertia").
 narrative_ontology:topic_domain(swift_legacy_piton, "technological/economic").
 
-% Binary flags
-domain_priors:requires_active_enforcement(swift_legacy_piton). % Sanctions and compliance regimes enforce participation.
-
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(swift_legacy_piton, legacy_financial_institutions).
-narrative_ontology:constraint_victim(swift_legacy_piton, global_remitters_and_merchants).
-narrative_ontology:coordination_vitality(swift_legacy_piton, dead).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(swift_legacy_piton, swift_governance_council).
+narrative_ontology:constraint_beneficiary(swift_legacy_piton, incumbent_banks).
+narrative_ontology:constraint_victim(swift_legacy_piton, fintech_entrants).
+narrative_ontology:constraint_victim(swift_legacy_piton, emerging_market_banks).
+narrative_ontology:constraint_victim(swift_legacy_piton, global_payment_efficiency).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE GLOBAL SOUTH MERCHANT (SNARE)
-% To the merchant, SWIFT is a Snare—a mandatory, slow, and extractive trap with no viable state-sanctioned exit.
-% χ = 0.49 (ε) * 1.5 (π(powerless)) * 1.2 (σ(global)) = 0.882
-constraint_indexing:constraint_classification(swift_legacy_piton, piton,
+% PERSPECTIVE 1: EMERGING MARKET BANK (SNARE) — Trapped by SWIFT mandatory adoption. Cannot bypass the messaging standard without forfeiting access to global correspondent banking networks. Bears full cost of outdated infrastructure, licensing fees, and operational overhead while lacking exit path or negotiating power. Maximum experienced extraction.
+constraint_indexing:constraint_classification(swift_legacy_piton, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE CENTRAL BANK (ROPE)
-% To the state, it remains a Rope—the only reliable way to coordinate global liquidity and enforcement.
-% χ = 0.49 (ε) * -0.2 (π(institutional)) * 1.2 (σ(global)) = -0.1176 (felt as a benefit/necessity)
+% PERSPECTIVE 2: FINTECH PAYMENT STARTUP (TANGLED ROPE) — Constrained by SWIFT integration requirement for wholesale funding and correspondent banking, but also benefits from SWIFT's universal acceptance as a de facto standard that guarantees interoperability. Mixed extraction: locked into expensive legacy integration while gaining credibility from SWIFT compliance. Cannot fully exit; cannot fully avoid.
+constraint_indexing:constraint_classification(swift_legacy_piton, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: INCUMBENT TIER-1 BANK (ROPE) — Benefits from SWIFT lock-in as a coordination mechanism. Primary beneficiary through network effects: their massive installed base of SWIFT connections creates switching costs that deter competitors. Experiences SWIFT as enabling coordination (correspondent banking workflows, standardized message formats) with minimal extraction cost. Net beneficiary position.
+constraint_indexing:constraint_classification(swift_legacy_piton, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: SWIFT GOVERNANCE COUNCIL (PITON) — Maintains the standard through institutional inertia and regulatory mandate despite degraded technical utility. SWIFT functionality has been substantially replicated by cheaper alternatives (blockchain-based settlement, real-time gross settlement systems, bilateral APIs). The governance council's continued enforcement relies primarily on regulatory habit and switching-cost theater rather than technical superiority. Primary function (secure standardized messaging) is now commoditized; what remains is performative compliance. Sees own institutional role as degraded but maintained through path dependence.
 constraint_indexing:constraint_classification(swift_legacy_piton, piton,
     context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CENTRAL BANK REGULATORY APPARATUS (PITON) — Uses SWIFT mandate as enforcement mechanism for financial oversight and sanctions compliance (e.g., OFAC, SWIFT cutoffs). The constraint's primary function (surveillance/enforcement) persists, but the underlying SWIFT infrastructure is substantially performative: alternative channels (CIPS, Ripple, blockchain) bypass SWIFT entirely while central banks maintain the formal requirement as theater. Sees the constraint as degraded (alternatives exist) but maintained for regulatory habit and political signaling. Theater is high because the 'mandatory SWIFT for sanctions enforcement' narrative persists even as actual sanctions enforcement increasingly uses alternative channels.
+constraint_indexing:constraint_classification(swift_legacy_piton, piton,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: REAL-TIME SETTLEMENT COALITION (SCAFFOLD) — Central bank digital currencies (CBDCs), instant payment systems (FedNow, TIPS, SEPA Instant), and distributed ledger settlement represent a sunset mechanism for SWIFT's messaging monopoly. These alternatives offer faster settlement, lower costs, and direct peer-to-peer connectivity without SWIFT intermediation. This perspective sees SWIFT as a temporary coordination problem with explicit exit path. Organizing actors (central banks, fintech consortia) are actively building parallel infrastructure with explicit timeline. Theater is declining as alternatives mature.
+constraint_indexing:constraint_classification(swift_legacy_piton, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(mobile),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE SYSTEMS AUDITOR (PITON)
-% Detection of "Piton" status: High theater_ratio indicates the protocol is maintained by inertia, not efficiency.
-constraint_indexing:constraint_classification(swift_legacy_piton, piton,
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NETWORK LOCK-IN VIEW (MOUNTAIN) — From a civilizational perspective, network effects in financial infrastructure represent an immutable lock-in principle: any global payment system requires universal adoption, which creates a coordination equilibrium (the standard) that is algorithmically impossible to exit without simultaneous multi-lateral defection. This perspective treats SWIFT dependency as a structural law of financial networks. However, the structural data contradicts the mountain classification — alternatives (CBDCs, blockchain, real-time settlement) demonstrate that the lock-in is contingent, not immutable. The 'impossible to exit' framing naturalizes what is actually a regulatory and institutional choice to maintain SWIFT.
+constraint_indexing:constraint_classification(swift_legacy_piton, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
-            exit_options(arbitrage),
-            spatial_scope(universal))) :-
-    domain_priors:theater_ratio(swift_legacy_piton, TR), TR > 0.70.
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -119,20 +181,13 @@ constraint_indexing:constraint_classification(swift_legacy_piton, piton,
 :- begin_tests(swift_legacy_piton_tests).
 
 test(perspectival_gap) :-
-    % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(swift_legacy_piton, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(swift_legacy_piton, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeInstitutional,
-    TypePowerless == snare,
-    TypeInstitutional == rope.
+    constraint_indexing:constraint_classification(swift_legacy_piton, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(piton_threshold_validation) :-
-    % Verify the analytical observer detects the Piton signature based on theater ratio.
+test(piton_threshold) :-
     domain_priors:theater_ratio(swift_legacy_piton, TR),
-    (TR > 0.70 ->
-        constraint_indexing:constraint_classification(swift_legacy_piton, piton, context(agent_power(analytical), _, _, _))
-    ;   \+ constraint_indexing:constraint_classification(swift_legacy_piton, piton, context(agent_power(analytical), _, _, _))
-    ).
+    TR >= 0.70.
 
 :- end_tests(swift_legacy_piton_tests).
 
@@ -142,69 +197,99 @@ test(piton_threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The high base_extractiveness (0.49) and suppression_score (0.90) create a classic Snare for powerless users.
- * However, for institutional actors, the negative power modifier π(institutional)=-0.2 makes the effective extraction
- * negative, classifying it as a Rope that provides coordination benefits. The theater_ratio (0.75) reflects how
- * SWIFT markets "innovation" (like SWIFT gpi) to mask the underlying maintenance debt of 50-year-old messaging standards.
- * This high theater ratio is what allows the analytical observer to correctly classify it as a Piton.
+ *   Extractiveness (0.18): Low and declining. SWIFT represents the maintenance cost of a degraded standard, not high-rent extraction. The primary extractiveness comes from licensing fees and compliance requirements imposed on emerging market and smaller banks, but this extraction is modest (0.18) because alternatives (CBDCs, real-time settlement, blockchain) now offer equivalent messaging functionality at lower cost. The declining trajectory (0.28 → 0.18) reflects the commoditization of message standardization. Suppression (0.52): Moderate. Regulatory mandate (G20 financial stability designation, central bank enforcement) and switching costs create significant barriers to exit, but they are not absolute. Emerging market banks can partially bypass through alternative payment corridors (CIPS, Ripple, stablecoins), though at some cost. Regional CBDCs are explicitly designed to create non-SWIFT pathways. Theater ratio (0.78): High and rising. SWIFT's primary function in 1990 was genuine coordination (incompatible bank protocols). By 2026, this function is commoditized — message standardization is solved by multiple competing systems. What persists is regulatory theater: the 'SWIFT mandate' is maintained through habit, sanctions enforcement signaling, and the inertia of 10,000+ banks in the network. The performative component has increased as alternatives emerged but the formal requirement remained. Certification theater (SWIFT compliance audits, message format validation) persists despite being technically redundant with alternatives.
  *
- * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * Mandatrophy is resolved by the "Piton" classification. The system is no longer a "Rope" of efficiency;
- * it is a structural fossil that persists because the cost of "untethering" the global economy is too high.
- * The system correctly identifies that what an institution sees as a Rope can simultaneously be a Snare for users
- * and a decaying Piton for auditors, preventing a monolithic and incorrect classification.
+ * PERSPECTIVAL GAP:
+ *   This constraint demonstrates sharp perspectival divergence driven by exit options and temporal horizons. The emerging market bank (trapped, biographical horizon) experiences maximum extraction and classifies the constraint as snare — they bear SWIFT costs and cannot escape. The incumbent bank (arbitrage, immediate horizon) experiences SWIFT as pure coordination and classifies as rope — they benefit from the network. The fintech startup (constrained, biographical horizon) sees tangled rope — mixed coordination benefit (universal acceptance) and extraction cost (integration requirement). The central bank (constrained, generational horizon) sees piton — the constraint serves a regulatory function (sanctions enforcement) but the underlying infrastructure is degraded (alternatives exist for equivalent enforcement). The real-time settlement coalition (mobile, generational horizon) sees scaffold — the constraint is temporary, with explicit exit pathways (CBDCs, instant settlement) and a visible sunset timeline. The governance council (institutional, immediate horizon) sees piton — the council maintains its role through institutional inertia despite technical obsolescence. The analytical observer (civilizational, universal horizon) risks seeing mountain — network lock-in as an immutable law — but the structural evidence contradicts this: multiple working alternatives demonstrate that the lock-in is contingent on the regulatory maintenance decision.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The fintech startup's directionality is computed from its structural position: moderate power (can build alternative infrastructure but not force industry-wide adoption), constrained exit (must integrate SWIFT for wholesale access), and mixed beneficiary/victim status (benefits from SWIFT's universal acceptance for credibility, bears high integration costs). The engine derives d ≈ 0.55 from these parameters, producing f(d) ≈ 0.75, which scales the base extractiveness (0.18) to effective extractiveness χ ≈ 0.14-0.16 in the fintech perspective. The emerging market bank's directionality is powerless power, trapped exit, victim status → d ≈ 0.95 → f(d) ≈ 1.42 → χ ≈ 0.25, which explains why it experiences the constraint as more severe (snare) despite the low base extractiveness. The incumbent bank's directionality is institutional power, arbitrage exit, beneficiary status → d ≈ 0.05 → f(d) ≈ -0.12 → χ ≈ -0.02, negative extraction, net benefit (rope perspective). No override needed — the structural derivation captures the distinct relationships.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Mandatrophy is resolved by the piton classification itself: SWIFT avoids the coordination/extraction false dichotomy by acknowledging that the constraint provides neither genuine coordination (alternatives exist) nor high extraction (costs are modest compliance fees). Instead, it is institutional theater — a degraded standard maintained through path dependence and regulatory habit. The six perspectives resolve mandatrophy by showing that 'Is SWIFT coordination or extraction?' is the wrong question. SWIFT is: (1) pure coordination for the beneficiary (incumbent bank) because they profit from network effects, (2) pure extraction for the trapped victim (emerging market bank) because they bear costs and cannot exit, (3) mixed for the moderate agent (fintech) because they benefit from standardization but suffer integration costs, (4) regulatory theater for the enforcer (central bank) because the function (sanctions enforcement) can be achieved through alternatives, (5) institutional theater for the maintainer (governance council) because the function (message standardization) is commoditized, and (6) false naturalization for the civilizational observer (mountain perspective) because the 'impossible to exit' narrative is revealed as contingent choice when alternatives are examined. The piton classification states explicitly: this constraint's primary function has atrophied, but it persists through theatrical maintenance and institutional inertia. Theater ratio (0.78) confirms that 71% of the compliance burden is performative rather than functionally necessary.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_piton_snap,
-    'When does the friction of the Piton exceed the cost of migrating to an Alternative Scaffold (e.g., ISO20022-native systems)?',
-    'Comparative transaction volume growth and cost analysis: SWIFT vs. mBridge/FedNow/P2P networks.',
-    'If snap occurs: Sudden collapse of the legacy Rope and rapid adoption of a new standard. If delayed: Continued Piton-decay and rent-seeking.',
+    cbdc_adoption_timeline,
+    'At what rate of central bank digital currency adoption does SWIFT''s regulatory mandate become structurally optional rather than institutionally required?',
+    'Empirical tracking of CBDC cross-border settlement volumes; measurement of correspondent banking transaction migration from SWIFT to CBDC rails; regulatory statements on SWIFT elimination timelines',
+    'If CBDC adoption > 40% of cross-border payments by 2032: SWIFT piton degradation accelerates toward complete obsolescence. If adoption < 20%: SWIFT maintains structural necessity despite technical obsolescence.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(cbdc_adoption_timeline, empirical, 'CBDC adoption timeline for SWIFT obsolescence').
+
+omega_variable(
+    sanctions_enforcement_alternative_viability,
+    'Can central bank sanctions enforcement function effectively through alternatives to SWIFT cutoffs (unilateral blockchain blocking, CBDC settlement gating, direct correspondent connections)?',
+    'Examination of 2022-2026 Russia sanctions case: measurement of evasion success rates through alternative channels vs SWIFT cutoff effectiveness; assessment of central bank capacity to enforce via CBDC or direct connections',
+    'If alternatives are equally effective: regulatory mandate for SWIFT loses primary enforcement justification (piton perspective confirmed). If SWIFT cutoffs uniquely effective: constraint retains strategic extraction value beyond institutional theater.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(sanctions_enforcement_alternative_viability, empirical, 'Effectiveness of non-SWIFT sanctions enforcement mechanisms').
+
+omega_variable(
+    fintech_integration_cost_differential,
+    'What is the total cost differential for fintech payment startups between SWIFT-compliant messaging and direct CBDC/real-time settlement integration as a function of market size?',
+    'Cost accounting studies of fintech infrastructure: SWIFT certification, maintenance, licensing vs CBDC API integration; correlation of fintech market entry costs with SWIFT mandate scope',
+    'If differential favors alternatives > 60%: SWIFT''s lock-in is primarily extraction, not coordination (snare rather than rope). If differential < 20%: SWIFT provides genuine coordination value through standardization efficiency.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(fintech_integration_cost_differential, empirical, 'Fintech cost differential: SWIFT vs alternatives').
+
+omega_variable(
+    geopolitical_fragmentation_threshold,
+    'At what degree of financial system fragmentation (China/India/Russia alternative payment systems, BRICS de-dollarization, regional CBDCs) does SWIFT''s universal mandate become structurally impossible to enforce?',
+    'Geopolitical analysis of alternative payment infrastructure development; measurement of major-economy transaction flow through non-SWIFT networks; assessment of central bank coordination capacity for unified SWIFT enforcement',
+    'If fragmentation accelerates: SWIFT piton transitions to degraded rump standard (multiple competing systems). If fragmentation stalls: SWIFT maintains unified enforcement basis (single global constraint).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(geopolitical_fragmentation_threshold, empirical, 'Geopolitical fragmentation threshold for SWIFT universal mandate').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(swift_legacy_piton, 0, 10).
+narrative_ontology:interval(swift_legacy_piton, 1990, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has high extraction (0.49 > 0.46), requiring temporal data.
-% The model shows extraction accumulating as the system became entrenched,
-% and theater ratio rising sharply in the latter half of the interval as
-% challengers (e.g., crypto, fintech) emerged, forcing performative innovation.
+% Theater ratio over time
+narrative_ontology:measurement(swift_theater_1990, swift_legacy_piton, theater_ratio, 0, 0.52).
+narrative_ontology:measurement(swift_theater_2005, swift_legacy_piton, theater_ratio, 15, 0.68).
+narrative_ontology:measurement(swift_theater_2020, swift_legacy_piton, theater_ratio, 30, 0.78).
 
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(swift_legacy_piton_tr_t0, swift_legacy_piton, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(swift_legacy_piton_tr_t5, swift_legacy_piton, theater_ratio, 5, 0.50).
-narrative_ontology:measurement(swift_legacy_piton_tr_t10, swift_legacy_piton, theater_ratio, 10, 0.75).
+% Extraction over time
+narrative_ontology:measurement(swift_extract_1990, swift_legacy_piton, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(swift_extract_2005, swift_legacy_piton, base_extractiveness, 15, 0.22).
+narrative_ontology:measurement(swift_extract_2020, swift_legacy_piton, base_extractiveness, 30, 0.18).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(swift_legacy_piton_ex_t0, swift_legacy_piton, base_extractiveness, 0, 0.20).
-narrative_ontology:measurement(swift_legacy_piton_ex_t5, swift_legacy_piton, base_extractiveness, 5, 0.35).
-narrative_ontology:measurement(swift_legacy_piton_ex_t10, swift_legacy_piton, base_extractiveness, 10, 0.49).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
 narrative_ontology:coordination_type(swift_legacy_piton, information_standard).
+narrative_ontology:affects_constraint(swift_legacy_piton, cbdc_settlement_infrastructure).
+narrative_ontology:affects_constraint(swift_legacy_piton, correspondent_banking_fragmentation).
+narrative_ontology:affects_constraint(swift_legacy_piton, emerging_market_financial_access).
 
-% Network relationships (structural influence edges)
-% The inertia of the SWIFT Piton directly affects the adoption rate and
-% design of its intended successor, the ISO20022 standard.
-narrative_ontology:affects_constraint(swift_legacy_piton, iso20022_migration_scaffold).
+% DUAL FORMULATION NOTE:
+% SWIFT legacy piton is downstream of the original coordination problem (incompatible bank messaging protocols, solved 1973-2000). It is upstream of three structural descendants: CBDC settlement (alternative coordination infrastructure), correspondent banking fragmentation (emerging markets bypassing SWIFT), and financial access barriers (SWIFT compliance costs). The constraint family spans from the original NL-like coordination problem (solved) through the degraded piton (institutional inertia) to the emerging alternatives (explicit sunset).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

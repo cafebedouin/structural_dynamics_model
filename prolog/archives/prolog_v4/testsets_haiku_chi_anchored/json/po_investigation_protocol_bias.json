@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "po_investigation_protocol_bias",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "poipb"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.82,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Post Office Investigation Protocol Bias (Presumption of Guilt)",
+    "topic_domain": "legal/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "post_office_management",
+      "post_office_institution"
+    ],
+    "victims": [
+      "subpostmasters",
+      "subpostmaster_employees",
+      "field_justice_system"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subpostmaster",
+      "comment": "PERSPECTIVE 1: SUBPOSTMASTER (SNARE) \u2014 Trapped in investigative process with presumed guilt; financial liability regardless of innocence; exit via resignation means loss of livelihood and business. No alternative recourse within the institution. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.93."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subpostmaster Employee",
+      "comment": "PERSPECTIVE 2: SUBPOSTMASTER EMPLOYEE (SNARE) \u2014 Trapped by employment relationship; faces criminal prosecution based on presumed guilt within investigation; no independent legal representation or appeal mechanism within the process. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Field Justice System",
+      "comment": "PERSPECTIVE 3: FIELD JUSTICE SYSTEM (SNARE) \u2014 Courts receive presumed-guilty findings from Post Office investigators; judicial process legitimizes flawed investigation without independent verification of evidence; system becomes mechanism for extracting convictions rather than truth-finding. d\u22480.80, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.85."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Post Office Management",
+      "comment": "PERSPECTIVE 4: POST OFFICE MANAGEMENT (ROPE) \u2014 Benefits from coordination mechanism that resolves financial accountability through rapid closure of investigation; sees the protocol as efficient asset recovery and risk mitigation. Experiences constraint as functional procedure rather than coercive extraction. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Post Office Institution",
+      "comment": "PERSPECTIVE 5: POST OFFICE INSTITUTION (PITON) \u2014 Investigation protocol persists through bureaucratic inertia despite known failures in evidence quality and justification logic; the performative aspect (appearance of investigation) exceeds the functional aspect (actual truth-finding). theater_ratio=0.65 reflects that investigation ritual maintained institutional credibility while avoiding genuine inquiry. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From universal perspective, the protocol violates core principles of investigative justice: presumption of innocence, burden of proof on accuser, independent evidence verification. The constraint extracts convictions through systematic bias rather than fact-finding. \u03b5=0.68 reflects that institutional power converted financial accountability obligations into persecution mechanism. d\u22480.75, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.75."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_of_bias",
+      "question": "Was the presumption-of-guilt protocol a deliberate institutional design to extract liability from subpostmasters, or an evolving bureaucratic practice that ossified into systematic bias?",
+      "resolution_mechanism": "Documentary analysis of investigative procedure evolution; interviews with investigators and management; comparison to equivalent investigative protocols in other UK institutions",
+      "impact": "If deliberate design: Snare classification is confirmed with institutional malfeasance. If emergent inertia: Classification remains Snare but with different accountability implications (negligence vs conspiracy).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether presumption-of-guilt protocol was deliberate institutional design or emergent bias"
+    },
+    {
+      "id": "evidence_admissibility_knowledge",
+      "question": "Did Post Office investigators knowingly present inadmissible or unreliable evidence (Horizon system failures, accounting errors) as conclusive proof, or did they operate within genuine epistemic limitations of their time?",
+      "resolution_mechanism": "Forensic analysis of Horizon IT system failures by independent experts; timeline of when failures were documented internally vs when investigations proceeded; comparison with contemporaneous IT industry knowledge",
+      "impact": "If knowing: Extraction mechanism is fraud (intentional deception). If epistemic limitation: Extraction mechanism is institutional capture by faulty systems (negligent reliance).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether investigators knowingly presented unreliable evidence"
+    },
+    {
+      "id": "subpostmaster_coalition_capacity",
+      "question": "Could subpostmasters have organized coalition resistance to the investigation protocol, or were structural barriers (economic dependence, isolation, fear of legal retaliation) too severe?",
+      "resolution_mechanism": "Historical analysis of attempted organizing; comparison with other post office unions and professional associations; assessment of economic vulnerability factors",
+      "impact": "If coalition possible: Powerless classification might be upgraded to Organized at certain scales. If barriers total: Powerless/trapped classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subpostmasters could have mounted coalition resistance"
+    },
+    {
+      "id": "judicial_system_complicity",
+      "question": "To what extent did the judicial system exercise independent scrutiny of Post Office investigative findings, versus accepting presumed-guilt framing without adequate verification?",
+      "resolution_mechanism": "Analysis of court records; comparison of judicial questioning patterns in PO-referred cases vs other white-collar investigations; interviews with judges and prosecutors",
+      "impact": "If independent scrutiny: Field justice system escapes Snare classification (sees moderate rather than severe extraction). If systemic deference: Snare classification confirmed; field justice system is co-opted mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of judicial independence in evaluating Post Office investigative findings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The Post Office investigation protocol bias represents a structural constraint that systematically presumed guilt and directed investigators to find evidence of crime in cases of financial shortfalls, rather than conducting impartial inquiry. The protocol operated within the UK Post Office institutional framework from approximately 2000-2015, affecting hundreds of subpostmasters and their employees. The constraint functioned as a Snare: extraction of liability and criminal prosecution from those trapped within the system, with suppression of alternative investigative pathways and alternative explanations (Horizon IT system failures, accounting errors, legitimate operational variance). The protocol combined institutional authority (Post Office as accuser, investigator, and primary witness) with procedural bias (presumption of guilt rather than innocence), creating compounded extraction from the most powerless actors (individual subpostmasters) who lacked independent legal representation or internal appeals mechanisms. The theater ratio (0.65) reflects that the investigation process maintained the appearance of systematic inquiry and due process while systematically excluding exculpatory evidence and alternative hypotheses. The constraint became institutionalized through bureaucratic inertia \u2014 investigators internalized the presumption-of-guilt framework as standard practice, courts accepted Post Office investigative findings with insufficient independent verification, and the system persisted despite documented failures in evidence quality and investigative logic.",
+    "key_agents": [
+      "Subpostmasters: Primary victims (powerless/trapped) \u2014 financially liable for system errors; lack independent legal representation during investigation; face prosecution based on presumed guilt",
+      "Subpostmaster Employees: Primary victims (powerless/trapped) \u2014 face criminal prosecution based on presumed guilt within investigation; employment vulnerability compounds legal vulnerability",
+      "Post Office Management: Primary beneficiaries (institutional/arbitrage) \u2014 extracts liability from subpostmasters; resolves financial accountability through rapid closure of investigation; experiences constraint as efficient procedure",
+      "Post Office Institution: Institutional actor (institutional/arbitrage) \u2014 benefits from reputation of rigorous investigation while actually conducting biased inquiry; theater ratio shows performative aspects exceed functional truth-finding",
+      "Field Justice System: Secondary victim (moderate/constrained) \u2014 courts receive presumed-guilty findings without independent verification; judicial process becomes mechanism for legitimizing flawed investigation",
+      "Analytical Observer: Sees the constraint as violation of investigative justice principles \u2014 systematic bias extracting convictions rather than truth"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The protocol systematically extracts liability, financial penalties, and criminal convictions from subpostmasters based on procedural bias rather than evidence. The extraction is severe but not maximum (0.95+) because some subpostmasters eventually obtained legal representation and appeals that partially mitigated the extraction. The trajectory from 0.38 to 0.68 reflects escalating institutional commitment to the biased protocol and increasing normalization of presumption-of-guilt framing. Suppression (0.82): Very high. Multiple layers suppress alternative pathways: (1) investigative protocol itself presumes guilt and excludes exculpatory evidence, (2) absence of independent legal representation for investigated subjects, (3) no internal appeals mechanism within the institution, (4) institutional authority consolidates accuser, investigator, and primary witness roles, (5) judicial system accepts Post Office findings without independent verification. Theater ratio (0.65): Moderate-high. The investigation process performs the ritual of systematic inquiry (interviews, evidence gathering, formal procedure) while systematically excluding alternative hypotheses and exculpatory evidence. The appearance of investigation legitimizes what is actually a predetermined liability extraction. The trajectory from 0.42 to 0.65 reflects increasing formalization of the procedure \u2014 more elaborate theater as the system encounters resistance and must justify its conclusions more thoroughly.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. Post Office management sees a functional coordination mechanism (Rope) \u2014 the protocol efficiently resolves financial accountability and protects institutional assets. The Post Office institution sees a degraded ritual (Piton) \u2014 the performative investigation maintains credibility while avoiding genuine fact-finding. Both powerless agents (subpostmasters and employees) see pure extraction (Snare) \u2014 trapped in a system that presumes guilt and extracts convictions regardless of evidence. The field justice system sees constrained extraction (Snare) \u2014 courts become mechanisms for legitimizing flawed investigation when they should be independent arbiters. The analytical observer sees the deepest extraction (Snare) \u2014 systematic violation of investigative justice principles. The perspectival gap reveals that the 'coordination' the institution perceives (efficient liability resolution) is experienced as persecution by the powerless agents; this gap indicates the constraint is genuinely extractive rather than coordinative.",
+    "directionality_logic": "Subpostmasters: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction from those with zero exit options. Subpostmaster employees: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Slightly higher d than subpostmasters due to employment vulnerability. Field justice system: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.25. Constrained because courts retain formal independence but in practice accept Post Office framing. Post Office management: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary with complete freedom to exit (as institution policy). Post Office institution: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Similar to management; institutional-level beneficiary status. Analytical observer: d\u22480.75, f(d)\u22481.10. Sees the constraint as extractive mechanism violating justice principles.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that Post Office management's perception of the protocol as functional coordination (Rope) is precisely the mechanism by which the Snare operates. The protocol is NOT genuinely coordinative \u2014 it does not solve a collective action problem where all parties benefit from the solution. Rather, management's framing of the protocol as 'efficient liability resolution' naturalizes extraction. The mandatrophy resolution identifies: (1) The protocol lacks genuine coordination benefit \u2014 subpostmasters and field justice system both bear costs with no compensating benefits. (2) Suppression is extreme (0.82), excluding alternative investigative pathways and alternative evidence, which is incompatible with true coordination. (3) Theater is high (0.65), indicating the performative aspects (appearance of investigation) exceed functional aspects (actual truth-finding), which is the signature of a degraded institution using ritual to maintain legitimacy. The constraint's classification as Snare is confirmed by: (a) Extractiveness 0.68 exceeds Rope threshold (0.45), (b) Suppression 0.82 exceeds Rope threshold (minimal coercion), and (c) The perspectival gap shows institutional management and powerless agents perceive fundamentally different constraints, with the institutional perception revealing self-interested framing rather than genuine coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "judicial_system_evidentiary_standards",
+      "institutional_accountability_mechanisms"
+    ],
+    "dual_formulation_note": "The Post Office investigation protocol bias is downstream of institutional accountability structures that require resolution of financial shortfalls, but represents a distinct constraint in how that accountability is executed. The upstream constraints (institutional accountability obligation) are genuine coordination problems; this constraint represents the extractive mechanism created by biased implementation of the accountability framework."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

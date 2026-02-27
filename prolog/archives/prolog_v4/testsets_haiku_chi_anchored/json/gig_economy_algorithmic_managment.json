@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "gig_economy_algorithmic_managment",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gig_algo"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Algorithmic Management in the Gig Economy",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "platform_operators"
+    ],
+    "victims": [
+      "gig_workers",
+      "consumer_information_asymmetry",
+      "labor_market_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Gig Worker",
+      "comment": "PERSPECTIVE 1: GIG WORKER (SNARE) \u2014 Worker has no visibility into task assignment algorithms, pricing mechanisms, or performance evaluation criteria. No meaningful exit: dependency on platform wages, no collective bargaining power, algorithmic deactivation prevents retaliation. d\u22480.92, f(d)\u22481.39, \u03c3=1.2 \u2192 \u03c7\u22480.94."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Unaware Consumer",
+      "comment": "PERSPECTIVE 2: UNAWARE CONSUMER (SNARE) \u2014 Consumer bears true cost of platform extraction through hidden markups, while believing they are receiving competitive pricing. Exit mechanism (switching platforms) is illusory when algorithms collude or coordinate. d\u22480.88, f(d)\u22481.33, \u03c3=0.9 \u2192 \u03c7\u22480.85."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Organizing Movements",
+      "comment": "PERSPECTIVE 3: LABOR ORGANIZING MOVEMENTS (TANGLED ROPE) \u2014 Organizations see both coordination (portable ratings, skill matching) and extraction (wage suppression, algorithmic surveillance). Have agency to contest, build counter-institutions, and demand transparency. d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operators",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATORS (ROPE) \u2014 Experience constraint as pure coordination: algorithm efficiency, matching, and scale. Extraction is secondary to their core interest in network effects and control. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 5: REGULATORY AGENCIES (TANGLED ROPE) \u2014 Agencies have mandate to protect labor and consumer welfare (coordination function) but face technical limitations in auditing algorithms and institutional capture by platforms (extraction function). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Traditional Labor Law Framework",
+      "comment": "PERSPECTIVE 6: TRADITIONAL LABOR LAW (PITON) \u2014 Legal categories (independent contractor vs employee) persist through institutional inertia despite degraded functionality. Platform classification as independent contractor enables extraction while theater (arbitration clauses, terms of service) masks the relationship's true coercive character. theater_ratio=0.68 satisfies piton gate. d\u22480.70, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational view, algorithmic management exhibits all structural properties of pure extraction: high suppression (opaque algorithms), high extractiveness (wage/price manipulation), victims unable to exit or perceive structure, beneficiary in control of all informational levers. No coordination value reaches workers. d\u22480.85, f(d)\u22481.24, \u03c3=1.2 \u2192 \u03c7\u22480.85."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithm_opacity_necessity",
+      "question": "Is algorithmic opacity inherent to efficient matching, or is it contingent protection of platform profit margins?",
+      "resolution_mechanism": "Comparative analysis of fully-transparent matching systems vs proprietary platforms; economic modeling of transparency cost vs efficiency loss; jurisdictions with mandatory algorithm disclosure (EU AI Act) vs unrestricted markets",
+      "impact": "If opacity is necessary: constraint may be mountain (technical limit). If contingent: constraint is pure extraction (snare) and transparency mandates would expose extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether algorithmic opacity is structural necessity or contingent protection"
+    },
+    {
+      "id": "worker_skill_mobility",
+      "question": "Can gig workers build portable, algorithm-independent skill reputation that transfers across platforms?",
+      "resolution_mechanism": "Tracking workers who exit one platform for another; measuring reputation portability; comparison with unionized or skilled craft markets with portable credentials",
+      "impact": "If portable: workers have exit option (mobile), classification shifts from snare to tangled_rope. If platform-dependent: lock-in is structural, snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Portability of worker reputation across platforms"
+    },
+    {
+      "id": "algorithmic_collusion_feasibility",
+      "question": "Are market-wide wage and price suppression coordinated via algorithmic collusion, or is it emergent from independent platform incentives?",
+      "resolution_mechanism": "Economic data on wage convergence across platforms; technical analysis of algorithm similarity; correlation of wage/price changes within and between platforms; antitrust investigation data",
+      "impact": "If coordinated: snare classification confirmed + antitrust implications. If emergent: multiple snares (one per platform) rather than single systemic snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage suppression is coordinated or emergent from platform competition"
+    },
+    {
+      "id": "consumer_price_awareness",
+      "question": "What fraction of consumers perceive hidden platform markups vs algorithmic price discrimination?",
+      "resolution_mechanism": "Consumer surveys on price transparency; comparison of consumer price expectations vs actual cost structures; analysis of information asymmetry feedback loops",
+      "impact": "If high awareness: consumer is co-beneficiary (victim classification wrong). If low awareness: consumer extraction is coercive (snare confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Fraction of consumers aware of hidden pricing mechanisms"
+    },
+    {
+      "id": "alternative_governance_models",
+      "question": "Do cooperative, worker-owned, or democratic-algorithmic platforms achieve equivalent efficiency with lower extraction?",
+      "resolution_mechanism": "Performance metrics (speed, reliability, cost) from cooperative platforms vs Uber/DoorDash; worker retention and wage data; long-term viability analysis",
+      "impact": "If equivalent: snare classification confirmed \u2014 extraction is not necessary for coordination. If cooperative models fail: extraction may be payment for efficiency coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative governance models achieve equivalent coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Algorithmic management in the gig economy creates a structural extraction mechanism where platforms control task assignment, pricing, performance metrics, and worker access through opaque computational systems. Workers cannot inspect, contest, or predict the algorithms that govern their livelihoods. This constraint exhibits snare characteristics from multiple perspectives: workers are trapped by economic dependency and information asymmetry; consumers are unknowingly subsidizing platform extraction through hidden markups; regulatory agencies lack technical capacity to audit algorithms; and traditional labor law categories (independent contractor) have degraded to theater masking coercive control. The extractiveness score (0.58) reflects that platforms extract both from workers (suppressed wages, unpredictable earnings) and from consumers (algorithmic price discrimination). Theater ratio (0.68) reflects that the platform framing (convenience, flexibility, market pricing) obscures the true mechanism (centralized algorithmic control, information asymmetry, absence of meaningful exit). The constraint has intensified over the interval as platforms accumulated data, refined pricing algorithms, and normalized surveillance of worker behavior.",
+    "key_agents": [
+      "Gig Workers: Primary victim (powerless/trapped) \u2014 economically dependent, no visibility into task/pricing algorithms, subject to algorithmic deactivation, no collective bargaining capacity",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 control information flows, data, algorithm design, pricing power; capture network effects and scale benefits",
+      "Consumers: Secondary victim (powerless/trapped or unaware/mobile) \u2014 pay hidden markups through algorithmic price discrimination, lack transparency on true cost structure",
+      "Labor Organizing Movements: Secondary actor (organized/constrained) \u2014 have agency to contest constraint but face technical and legal barriers to algorithm disclosure and worker organizing",
+      "Regulatory Agencies: Institutional actor (institutional/constrained) \u2014 mandated to protect labor/consumer welfare but lack technical capacity and political power to audit algorithms, risk regulatory capture",
+      "Traditional Labor Law System: Institutional artifact (institutional/constrained) \u2014 independent contractor classification persists through inertia despite degraded functionality in algorithmic context"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Platforms extract through multiple channels: wage suppression (algorithmic task allocation favors speed over fair compensation), consumer price discrimination (surge pricing, location-based markups), and control rent (workers cannot arbitrage platform pricing or build reputation independently). The trajectory from 0.28 to 0.58 reflects increasing sophistication of extraction mechanisms as platforms accumulated user data and computational resources. Not as high as pure monopolistic rent (0.70+) because gig work markets remain contestable at the consumer level (workers can use multiple platforms simultaneously) and new entrants can still enter labor supply. Suppression (0.72): High. Structural barriers prevent meaningful exit: economic desperation drives workers into platforms where algorithmic deactivation creates permanent exclusion threat; consumers cannot easily observe true pricing; regulators lack audit capacity. Information asymmetry is weaponized \u2014 workers and consumers operate under false information (belief in flexibility, competitive pricing) while platforms have complete data on system state. Theater ratio (0.68): High. Performative elements include: platform narrative of 'independent contractor flexibility' masking algorithmic control; framing of 'market-based pricing' masking algorithmic collusion potential; arbitration clauses and terms of service theater preventing transparency. The theater has increased as platforms invested more in brand/narrative while extractive mechanisms became more sophisticated.",
+    "perspectival_gap": "Gig workers and powerless consumers perceive pure extraction (snare) with no coordination benefit \u2014 they gain efficiency and convenience at the cost of permanent information disadvantage and wage/price suppression. Organized labor sees tangled rope \u2014 platforms do provide genuine coordination (matching, scale, portability of basic skills) alongside extraction (surveillance, wage suppression). Regulatory agencies see tangled rope \u2014 mandate to protect workers and consumers (coordination) but captured by platform power (extraction). Platform operators see rope \u2014 their primary experience is coordination: algorithm matching, network effects, scale efficiency. Extraction is incidental to their model. Piton perspective reveals degraded legal categories: independent contractor status was functional in traditional temp labor (low surveillance, portable skills) but has degraded to pure theater in algorithmic context where platforms exercise complete control over worker schedule and output. Analytical observer sees snare: the system exhibits no genuine coordination benefit that couldn't be achieved through transparent pricing and democratic algorithm design. The coordination function is claimed but not delivered to workers.",
+    "directionality_logic": "Gig workers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction minus epsilon for platform's claim of providing work opportunity. Consumers (unaware): Victim + trapped \u2192 d\u22480.88, f(d)\u22481.33. High extraction through price discrimination and hidden costs. Platform operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; can exit any single market while maintaining platform value. Labor organizations: Victim + constrained \u2192 d\u22480.65, f(d)\u22480.95. Have agency to contest but face structural barriers (scale, capital, legal complexity). Regulatory agencies: Mixed (victim of capture + constrained) \u2192 d\u22480.55, f(d)\u22480.75. Mandated to protect but insufficient technical/political power. Traditional labor law: Beneficiary status (enables platform business model) but constrained exit from legal category \u2192 d\u22480.70, f(d)\u22481.08. Piton classification emerges from theater ratio, not from chi value.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying what counts as coordination: platform narrative claims efficiency and flexibility as coordination benefits, but structural analysis reveals these are delivered asymmetrically. Workers gain flexibility to multiple-task but lose predictability of earnings; consumers gain convenience but lose price transparency; platforms gain complete information and control. The 'coordination' is unidirectional (from workers/consumers to platform) rather than reciprocal. True coordination would require algorithm transparency, worker input on task design, or consumer visibility into pricing. Without these, the snare classification is confirmed: extraction dressed in coordination language. The analytical observer perspective is identical to worker perspective (both see snare) because algorithmic management exhibits no coordination value that reaches the workers themselves \u2014 only claims about coordination directed at consumers and regulators. If platform-claimed coordination (matching efficiency, scale benefits) existed and benefited workers proportionally, the worker perspective would shift toward tangled rope. The fact that it remains snare reveals the coordination claim is theater."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_fragmentation_gig_sectors",
+      "platform_regulatory_capture",
+      "algorithmic_unemployment"
+    ],
+    "dual_formulation_note": "Algorithmic management is downstream of platform business model incentives but represents a distinct structural constraint. Upstream constraints include: basic platform concentration (which creates information asymmetry), venture capital ROI expectations (which drive extraction maximization), and legal classification gaps (which allow circumvention of labor law). This story focuses on the algorithmic mechanism itself; upstream stories address business incentives and regulatory failures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.75
+    }
+  ]
+}

@@ -2,25 +2,28 @@
   "header": {
     "constraint_id": "attention_market_cannibalization",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "attn"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
     "human_readable": "The Cognitive Exhaustion Loop",
     "topic_domain": "economic/psychological/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "platform_operators",
-      "advertisers"
+      "attention_arbitrageurs"
     ],
     "victims": [
-      "individual_users"
+      "cognitive_commons",
+      "primary_life_function_maintenance",
+      "attention_users"
     ],
-    "mandatrophy_resolved": false
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
@@ -29,8 +32,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Individual User",
-      "comment": "PERSPECTIVE 1: INDIVIDUAL USER (SNARE) — Trapped by network effects and addictive design. Experiences the system as pure extraction of cognitive resources, leading to burnout and diminished agency. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11."
+      "label": "The Attention Subject",
+      "comment": "PERSPECTIVE 1: THE ATTENTION SUBJECT (SNARE) \u2014 Individual user facing algorithmic extraction with no meaningful exit. Trapped by social necessity (work collaboration, family contact, cultural participation all migrate to platforms), physiological reward hijacking (dopamine/notification loops), and competitive pressure from peers. Bears full cost of attention cannibalization while receiving only deteriorating primary-life-function maintenance. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Cognitive Commons",
+      "comment": "PERSPECTIVE 2: THE COGNITIVE COMMONS (SNARE) \u2014 Collective epistemic capacity (population-level ability to coordinate on factual matters, maintain shared reality, sustain attention for complex problems). Trapped by network effects \u2014 individual exit is impossible when institutions and social coordination require platform participation. Cannot organize because its 'members' (cognitive actors) are individually overwhelmed. Bears cost of fragmentation, epistemic degradation, and collective action paralysis."
     },
     {
       "classification_type": "rope",
@@ -39,131 +51,142 @@
       "exit_options": "arbitrage",
       "spatial_scope": "global",
       "label": "The Platform Operator",
-      "comment": "PERSPECTIVE 2: PLATFORM OPERATOR (ROPE) — Experiences the system as a pure coordination mechanism, connecting users, content creators, and advertisers. Extraction is framed as the price of service. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09."
+      "comment": "PERSPECTIVE 3: THE PLATFORM OPERATOR (ROPE) \u2014 Sees attention extraction as coordination: connecting users, facilitating information flow, enabling commerce. Net beneficiary with arbitrage options (can exit engagement optimization without shutting down platform, but chooses not to; can shift to subscription or other models). Experiences the constraint as pure coordination \u2014 the extraction mechanism is invisible to this agent because they designed it."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function and the severe, asymmetric extraction of attentional resources. This is the canonical classification. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
-    },
-    {
-      "classification_type": "scaffold",
       "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
       "spatial_scope": "national",
-      "label": "The Digital Wellness Advocate",
-      "comment": "PERSPECTIVE 4: DIGITAL WELLNESS ADVOCATE (SCAFFOLD) — Views the current system as a temporary, harmful state. Works to build alternatives through regulation and ethical design, creating a sunset clause for the extractive model. d≈0.40, f(d)≈0.40, σ=1.0 → χ≈0.26."
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: THE REGULATORY COALITION (TANGLED ROPE) \u2014 States, consumer protection agencies, and organized civil society perceive both coordination value (platforms enable economic activity, communication, information access) and extraction (cognitive manipulation, undermining of human agency, public health externalities). Has exit options (regulation, taxation, interoperability mandates) but constrained by regulatory capture and complexity of digital markets. Benefits from platform tax revenue; bears cost of public mental health degradation and political polarization."
     },
     {
       "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Legacy Media Institution",
-      "comment": "PERSPECTIVE 5: LEGACY MEDIA INSTITUTION (PITON) — Forced to participate in the attention market, adopting clickbait tactics that degrade its core mission. Its engagement strategies are largely performative, chasing metrics while its original function atrophies. The high theater_ratio (0.75) triggers the Piton classification."
+      "spatial_scope": "global",
+      "label": "The Attention Wellness Ritual",
+      "comment": "PERSPECTIVE 5: THE ATTENTION WELLNESS RITUAL (PITON) \u2014 Digital detox movements, 'screen time' monitoring apps, meditation practices, and wellness narratives. High theater_ratio (0.61): most effort is performative \u2014 temporary abstinence, app-mediated limitation, personal guilt management \u2014 with minimal functional impact on the underlying extraction mechanism. The wellness ritual persists through institutional inertia: apps that gamify time limits, meditation apps that compete for attention while claiming to reduce it, wellness programs sponsored by platform operators. Primary function (preventing cognitive exhaustion) has atrophied; theatrical maintenance (the appearance of personal control) remains."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Libertarian Technologist",
-      "comment": "PERSPECTIVE 6: LIBERTARIAN TECHNOLOGIST (MOUNTAIN) — Frames the attention economy as an immutable, emergent law of free information exchange. Any attempt at regulation is seen as futile. The engine will flag this as a 'false summit' as the base properties (high ε, high suppression) contradict a Mountain classification."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / FALSE NATURAL LAW (MOUNTAIN) \u2014 From a civilizational vantage, cognitive exhaustion appears as an immutable property of human neurobiology: attention is finite, reward systems are exploitable, and competition for attention is inevitable. The narrative naturalizes: 'engagement optimization is just economics' or 'dopamine-driven behavior is just human nature.' However, the structural data contradicts mountain classification \u2014 the extractiveness (0.58), suppression (0.68), and video game aesthetics of algorithmic feeds are contingent design choices, not natural laws. The engine identifies this as false natural law / naturalized extraction."
     }
   ],
   "omegas": [
     {
-      "id": "design_vs_necessity",
-      "question": "Is cognitive exhaustion an inevitable consequence of information abundance (a Mountain), or a direct result of specific, profit-driven design choices (a Snare)?",
-      "resolution_mechanism": "Comparative analysis of platforms with non-extractive business models (e.g., subscription-based, public-funded) versus ad-based models.",
-      "impact": "If exhaustion persists even with ethical design, the constraint is more Mountain-like. If it abates, the Snare/Tangled Rope classification is confirmed.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Distinguishing between inherent information overload and engineered addiction."
-    },
-    {
-      "id": "regulatory_effectiveness",
-      "question": "Can top-down regulation (e.g., a fiduciary duty for platforms to protect user attention) effectively curb extraction without destroying the coordination benefits?",
-      "resolution_mechanism": "Policy experiments and analysis of jurisdictions implementing digital wellness regulations (e.g., EU's Digital Services Act).",
-      "impact": "Effective regulation would confirm the Scaffold perspective, providing a viable sunset clause. Ineffective regulation would reinforce the Snare/Tangled Rope view.",
+      "id": "voluntary_vs_coerced_engagement",
+      "question": "Is the attention extraction purely voluntary (users choosing to engage) or structurally coerced (social/economic necessity masquerading as choice)?",
+      "resolution_mechanism": "Measurement of switching costs: cost of exit (social isolation, work friction, information deprivation) vs perceived utility gain from continued engagement. Comparison of engagement curves before/after algorithmic darkening (when platforms accidentally reduce extraction) vs intentional user choice to reduce.",
+      "impact": "If predominantly voluntary: classification shifts toward Rope (coordination benefit retained). If predominantly coerced: validates Snare from user perspective (no genuine exit despite perceived choice).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Assessing the viability of regulatory solutions to attention extraction."
+      "description": "Whether engagement is truly voluntary or structurally coerced"
     },
     {
-      "id": "collapse_threshold",
-      "question": "At what point does the cannibalization of cognitive resources lead to a systemic collapse in user productivity and engagement, making the system unprofitable?",
-      "resolution_mechanism": "Longitudinal economic modeling correlating population-level mental health and productivity metrics with platform revenue.",
-      "impact": "Identifying a threshold would imply a natural limit to extraction, potentially a self-correcting mechanism. The absence of one suggests the system can remain a stable Snare.",
-      "confidence": "low",
+      "id": "primary_life_function_maintenance_threshold",
+      "question": "What quantitative threshold of attentional bandwidth allocation preserves primary life-function maintenance? Below what percentage for work/health/relationship investment does systemic degradation occur?",
+      "resolution_mechanism": "Longitudinal cohort studies: cognitive load allocation, performance metrics in primary functions, health outcomes, relationship stability, economic productivity, correlated with platform engagement time. Identify inflection point where increasing engagement causes decreasing life-function performance.",
+      "impact": "If threshold exists at ~60% non-platform time (40% platform): current extraction exceeds system capacity. If threshold is lower: extraction is sustainable. Affects classification of 'cannibalization' claim \u2014 determines if extraction is consuming capacity needed for non-extractive functions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cognitive bandwidth threshold for maintaining primary life functions"
+    },
+    {
+      "id": "platform_competitive_necessity",
+      "question": "Do platforms compete on engagement metrics (race to the bottom in cognitive extraction) or could they compete on other dimensions (functionality, privacy, user autonomy) without losing market share?",
+      "resolution_mechanism": "Economic analysis of platform revenue models, user switching costs, and feature competition. Natural experiments: platforms that reduce engagement optimization (e.g., Twitter rebranding, TikTok time limits in EU). Market share impact and revenue consequences. Cross-platform comparison of engagement-optimization intensity vs market success.",
+      "impact": "If competition structurally requires engagement extraction: Snare classification validated (no exit for beneficiaries without losing market position). If competition could occur on other dimensions: extraction is strategic choice, not necessity \u2014 validates tangled_rope from platform perspective (they benefit from extraction but aren't forced to extract).",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Determining the systemic failure point of the attention economy."
+      "description": "Whether platform competition requires engagement extraction or enables alternatives"
+    },
+    {
+      "id": "collective_action_capacity_floor",
+      "question": "At what level of cognitive exhaustion does collective action capacity (ability of users to organize, advocate, regulate) drop below the threshold needed to resist further extraction?",
+      "resolution_mechanism": "Time-series analysis: cognitive commons fragmentation metrics (epistemic polarization, news avoidance, political disengagement) against user cognitive load. Measure collective action outcomes (regulatory success, platform concessions) correlated with population-level attention allocation. Identify feedback loop: higher extraction \u2192 lower cognitive capacity for collective resistance \u2192 extraction accelerates.",
+      "impact": "If collective action capacity reaches floor before extraction reaches equilibrium: trap is irreversible (regulatory or user-resistance solutions become impossible). If floor hasn't been reached: intervention window still open. Determines if Snare is temporary (users can still organize) or permanent.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Cognitive load threshold below which collective action capacity collapses"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2010,
-      "value": 0.3
+      "time_point": 0,
+      "value": 0.22
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2017,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.65
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2010,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2017,
+      "time_point": 5,
       "value": 0.4
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.75
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
     }
   ],
   "interval": {
-    "start": 2010,
-    "end": 2024
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The Cognitive Exhaustion Loop describes a systemic process where digital platforms, competing in a finite attention market, progressively 'cannibalize' the cognitive resources of their users. This is driven by business models that equate engagement with revenue. The result is a negative feedback loop: as users become more cognitively depleted, their ability to self-regulate diminishes, making them more susceptible to the platforms' engagement tactics, thus deepening the exhaustion. This constraint story models the structural reality of this loop, which manifests as all six constraint types depending on the observer's position.",
+    "narrative_context": "The cognitive exhaustion loop represents a structural form of attention extraction where competing digital platforms optimize engagement metrics (time-on-app, interactions, watch duration) in ways that cannibalize the attentional bandwidth users require for primary life functions (work, health, relationships, civic participation). Unlike traditional monopoly or labor extraction, this constraint operates through algorithmic optimization, physiological reward hijacking (notification loops, infinite scroll, algorithmic relevance), and network effects that make exit economically and socially impossible despite being individually 'voluntary.' The constraint exhibits Snare characteristics because suppression is structural: users cannot exit without significant life-function costs (professional isolation, information deprivation, social disconnection); platform operators have no competitive incentive to reduce extraction; and alternative coordination mechanisms (regulation, user coalitions, interoperable platforms) face coordination problems and regulatory capture. However, the constraint also exhibits tangled_rope characteristics from the regulatory perspective because extraction is bundled with genuine coordination benefits (connection, information access, economic opportunity), making pure suppression impossible without destroying the coordination function. The temporal measurement shows progressive increase in extractiveness (from 0.22 to 0.58) driven by algorithmic improvements in engagement prediction, competitive platform proliferation, and migration of institutional functions (work, education, healthcare) onto platforms. Theater_ratio increases from 0.15 to 0.61, indicating that wellness interventions (screen time monitoring, digital detox narratives) have become increasingly performative and have not reduced underlying extraction.",
     "key_agents": [
-      "Individual Users: Primary victims (powerless/trapped) — their finite attention is the resource being extracted.",
-      "Platform Operators: Primary beneficiaries (institutional/arbitrage) — design and control the system to maximize engagement and revenue.",
-      "Advertisers: Secondary beneficiaries (organized/mobile) — purchase access to the extracted attention.",
-      "Digital Wellness Advocates: Organized resistance (organized/constrained) — attempt to create exit ramps through regulation and ethical design advocacy.",
-      "Legacy Media Institutions: Constrained participants (institutional/constrained) — forced to adopt the system's extractive logic to survive, degrading their original function.",
-      "Analytical Observer: The systemic view (analytical/analytical) — recognizes both the coordination and extraction functions."
+      "Attention Subject (Individual User): Primary victim (powerless/trapped) \u2014 faces algorithmic extraction with no meaningful exit due to social/economic necessity of platform participation",
+      "Cognitive Commons: Collective victim (powerless/trapped) \u2014 population-level epistemic capacity degraded by fragmentation and exhaustion; cannot organize due to attentional overwhelm",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture attention surplus via engagement optimization; benefit from advertising revenue and data extraction",
+      "Attention Arbitrageurs: Secondary beneficiary (powerful/arbitrage) \u2014 advertisers, data brokers, attention-trading markets that profit from the extracted and commodified attention",
+      "Regulatory Coalition: Mixed agent (organized/mobile) \u2014 states, consumer protection agencies, civil society organizations with both interest in coordination value (economic activity) and extraction costs (public health)",
+      "Attention Wellness Industry: Theatrical maintainer (organized/constrained) \u2014 digital detox apps, meditation platforms, wellness programs that perform attention-control without functional impact",
+      "Analytical Observer: Civilian vantage (analytical/analytical) \u2014 risks naturalizing contingent engineering choices as inevitable biological or economic laws"
     ],
-    "logic_rationale": "Extractiveness (0.65): High. Represents the quantified cost of lost productivity, increased mental health burdens (anxiety, depression, ADHD-like symptoms), and degraded decision-making capacity imposed on users. Suppression (0.75): High. Network effects, social pressures, and intentionally addictive design patterns (e.g., infinite scroll, variable rewards) make opting out extremely costly. Theater Ratio (0.75): High. Reflects the rise of performative 'digital well-being' features (e.g., screen time reports) that signal concern without altering the core extractive business model. These features serve as public relations theater rather than functional solutions.",
-    "perspectival_gap": "This constraint is a diagnostic exemplar, showing how a single set of metrics produces all six classifications. For the user, it's a Snare. For the platform that built it, it's a Rope for coordinating advertisers and users. For advocates, it's a temporary Scaffold to be dismantled by regulation. For legacy media caught in the loop, it's a Piton—a degraded version of their original purpose. For a technologist who sees it as inevitable, it's a Mountain. The analytical observer, seeing all parts, classifies it as a Tangled Rope. The 'truth' of the constraint is the complete set of these perspectives.",
-    "directionality_logic": "The directionality is starkly asymmetric. Beneficiaries (platform_operators, advertisers) have arbitrage and mobility, leading to low or negative effective extraction (χ). They experience the system as coordination. The primary victims (individual_users) are trapped, leading to a maximally amplified extraction factor (d≈0.95, f(d)≈1.42), classifying their experience as a Snare. Organized agents (advocates) have more agency, which lowers their effective extraction and allows for a Scaffold classification, as they are actively building an exit.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that the conflict between 'is it coordination?' (Rope) and 'is it extraction?' (Snare) is not a contradiction but a perspectival gap. The system is structurally both. Mandatrophy arises when one perspective (typically the beneficiary's Rope) is used to describe the entire system, erasing the victim's experience of it as a Snare. The Deferential Realism framework makes this gap explicit and measurable, showing that the full characterization of the constraint requires acknowledging all valid perspectives."
+    "logic_rationale": "Extractiveness (0.58): High but not maximal. Platforms extract significant cognitive bandwidth through algorithmic optimization, but the extraction is not 100% of available attention \u2014 users maintain minimal work and relationship functioning (extractiveness would be 0.90+ if primary functions completely failed). The measurement trajectory from 0.22 to 0.58 over 10 time units reflects acceleration driven by three factors: (1) algorithmic improvements in engagement prediction (machine learning models trained on billions of engagement events now optimize reward loops with precision); (2) competitive platform proliferation (users juggle multiple feeds, each optimized for engagement); (3) institutional migration onto platforms (work coordination, education delivery, healthcare information, civic participation). Suppression (0.68): High. Structural barriers prevent meaningful exit: social necessity (peer networks, professional requirements, family coordination), physiological barriers (reward system hijacking through dopamine-contingent notifications), and network effects (individual exit is ineffective if institutional partners remain). Alternatives require collective action, but collective cognitive capacity is degraded by exhaustion itself. Theater_ratio (0.61): High and increasing. Wellness rituals (screen time app limits, digital detox, meditation) are performative \u2014 they require effort, create appearance of control, but do not disrupt the underlying extraction mechanism. Apps that gamify time limits compete for attention while claiming to reduce it. Wellness programs sponsored by platform operators embed extraction even in the 'resistance' layer. The ratio would be lower if interventions actually disrupted engagement optimization.",
+    "directionality_logic": "Each perspective's directionality is computed from power level, exit options, and beneficiary/victim status. The attention subject (powerless/trapped/victim) derives high d \u2248 0.95 \u2192 maximum f(d) \u2248 1.42 \u2192 high \u03c7 even at moderate \u03b5. The cognitive commons (powerless/trapped/victim) similarly derives high d despite being an abstract collective. The platform operator (institutional/arbitrage/beneficiary) derives low d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 negative \u03c7 (they experience the constraint as beneficial coordination, not extraction). The regulatory coalition (organized/mobile/mixed) derives d \u2248 0.50-0.55 from mixed beneficiary/victim status and mobile exit options \u2192 f(d) \u2248 0.65-0.75 \u2192 moderate \u03c7. The analytical observer (analytical/analytical/observer) derives d \u2248 0.72 from observer position. The directionality structure reveals why the beneficiary (platform) sees Rope while the victim sees Snare \u2014 their d values differ by nearly an order of magnitude despite operating within the same constraint.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival gap. The platform operator perceives pure coordination (Rope) \u2014 users voluntarily exchange personal data and attention time for access to network effects and information. The user perceives pure extraction (Snare) \u2014 algorithmic optimization is invisible and compulsive, choice is simulated, exit is impossible. The regulatory coalition perceives tangled_rope \u2014 they must preserve the coordination benefits (connection, commerce, information access) while reducing extraction, a structurally impossible task given current platform architectures. The wellness industry perceives piton \u2014 they maintain performative interventions that create the appearance of user control without disrupting the underlying mechanism. The analytical observer risks perceiving natural law (mountain) \u2014 'attention economics are inevitable, dopamine is immutable, competition requires engagement optimization' \u2014 but these are contingent institutional arrangements. The gap arises because the beneficiary designed the constraint to be invisible to users while maximizing extraction. Platform operators do not experience the constraint because they built it to extract from others.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint clarifies how to avoid conflating coordination mechanisms with extraction mechanisms. The platform operator's Rope classification is their honest experience of what they built: a coordination tool that connects people. The snare classification from the user perspective is also honest: they are trapped by algorithmic optimization despite perceiving choice. The mandatrophy is resolved by recognizing that the same structural object carries both genuine coordination value AND structural extraction. Neither classification is 'the right one' \u2014 both are partial truths about the indexed positions. The tangled_rope classification from the regulatory perspective captures this: genuine coordination function (connection, information, commerce) PLUS asymmetric extraction (attention surplus, behavioral data, cognitive manipulation). The resolution prevents false naturalizing (mountain perspective claims extraction is inevitable) and false optimization rhetoric (platform claims there is no extraction, only coordination). The measurement data shows temporal progression: early platforms (extractiveness 0.22) were genuinely closer to pure coordination; contemporary platforms (extractiveness 0.58) have added extraction mechanisms on top of coordination. The theater_ratio increase indicates that resistance mechanisms are themselves being colonized and rendered performative. Mandatrophy is finally resolved because all six types appear in the perspectival presheaf: the object is intrinsically multivalent, and no single classification can be correct from all vantages simultaneously."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.35
   },
   "network": {
     "affects_constraints": [
-      "public_discourse_integrity"
-    ]
-  }
+      "platform_algorithmic_capture",
+      "digital_advertising_extraction",
+      "epistemic_commons_fragmentation"
+    ],
+    "dual_formulation_note": "The cognitive exhaustion loop is downstream of individual platform design decisions (algorithmic ranking, notification scheduling, recommendation feed optimization) but represents a distinct constraint on the cognitive commons as a whole. Upstream constraints operate at the single-platform level; this constraint aggregates across multiple platforms and their competitive dynamics. The loop's extractiveness exceeds the sum of individual platform extractions because platform proliferation creates multiplicative attention demand (users juggle multiple feeds) and collective action problems (no individual platform can exit the race to engagement optimization without losing market share)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
 }

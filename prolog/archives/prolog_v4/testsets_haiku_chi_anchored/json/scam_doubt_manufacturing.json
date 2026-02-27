@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "scam_doubt_manufacturing",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scam"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "The Playbook for Manufacturing Scientific Doubt (SCAM)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "industry_defendants",
+      "regulatory_capture_beneficiaries"
+    ],
+    "victims": [
+      "public_health",
+      "scientific_integrity",
+      "policymaking_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exposed Population",
+      "comment": "PERSPECTIVE 1: EXPOSED POPULATION (SNARE) \u2014 Individuals exposed to harmful products cannot opt out without migration. They are trapped by economic necessity, geography, or product ubiquity (tobacco, asbestos, lead additives, fossil fuels). Information asymmetry ensures they don't know the true risk until harm manifests. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Scientific Integrity (Collective Good)",
+      "comment": "PERSPECTIVE 2: SCIENTIFIC INTEGRITY COMMONS (SNARE) \u2014 The epistemic commons has no advocate and no exit. Systematic doubt manufacturing corrodes trust in science across domains, creating civilizational-scale coordination failure. Abstract collective cannot defend itself or sue. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies and Policymakers",
+      "comment": "PERSPECTIVE 3: REGULATORY AGENCIES (TANGLED ROPE) \u2014 Capture victims and beneficiaries simultaneously. They benefit from industry cooperation and captured expertise (funding, revolving-door careers) but are constrained by public health mandate and political accountability. Active enforcement of doubt manufacturing playbook is required to maintain the extraction. d\u22480.58, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.46."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Industry Defendants (Primary Beneficiary)",
+      "comment": "PERSPECTIVE 4: INDUSTRY DEFENDANTS (ROPE) \u2014 Experiences the constraint as coordination: manufacturing doubt delays costly regulation, litigation, product reformulation. The playbook solves a collective action problem for competing firms: all benefit from coordinated epistemic disruption without any single firm bearing the full reputational cost. Arbitrage exit via lobbying, public relations, strategic science funding. d\u22480.02, f(d)\u2248-0.19, \u03c3=1.2 \u2192 \u03c7\u2248-0.10. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Academic Institutions and Science Funding",
+      "comment": "PERSPECTIVE 5: ACADEMIC INSTITUTIONS (PITON) \u2014 Universities and research institutes increasingly depend on industry funding. The doubt manufacturing playbook creates performative academic autonomy: scientists can be funded to produce 'research' that appears independent but is selected for desired conclusions. Theater persists through institutional inertia and financial dependency. theater_ratio=0.65 reflects partial degradation \u2014 some legitimate research continues alongside captured work. d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.21."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Independent Scientists (Constrained Truth-Tellers)",
+      "comment": "PERSPECTIVE 6: INDEPENDENT SCIENTISTS (SNARE) \u2014 Scientists producing evidence of harm face coordinated attack: funding defunding, publication suppression via journal gatekeeping, ad hominem campaigns, legal threats. Constrained exit \u2014 they can leave the field or recant, but not walk away from their previous findings. d\u22480.78, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.56."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZATION RISK (MOUNTAIN) \u2014 From civilizational scope, an observer might see scientific uncertainty as inherent: 'All empirical claims face challenges. Industry-funded research is part of the normal scientific process.' This naturalizes what is actually a coordinated snare. However, base properties (\u03b5=0.68, suppression=0.72) violate mountain thresholds. The false summit detector fires: this is not a law of nature but an institutional arrangement. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.78, contradicting mountain claim."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "funding_independence_threshold",
+      "question": "At what level of industry funding does academic independence cease to be a meaningful concept? Is there a bright line or a continuous degradation?",
+      "resolution_mechanism": "Comparative analysis of research conclusions vs funding source across studies in the same domain; meta-analysis of effect sizes for industry-funded vs independent research; tracking of researcher career outcomes after contrarian findings",
+      "impact": "If bright line exists (e.g., >30% industry funding = captured): clearer detection mechanism. If continuous: piton classification becomes more difficult to distinguish from rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which industry funding compromises academic independence"
+    },
+    {
+      "id": "coordinated_vs_emergent_doubt",
+      "question": "Is doubt manufacturing a coordinated cartel strategy or an emergent equilibrium outcome of rational industry incentives?",
+      "resolution_mechanism": "Historical documentation of internal communications (discovered in litigation); tracking of PR consulting contracts; comparison of doubt-manufacturing timing across industries; analysis of whether isolated firms reduce doubt manufacturing when cartel coordination breaks down",
+      "impact": "If coordinated: conspiracy law applies, snare classification is robust. If emergent equilibrium: each firm acts rationally, snare persists even without explicit conspiracy.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether doubt manufacturing is coordinated strategy or emergent equilibrium"
+    },
+    {
+      "id": "epistemic_commons_recovery_capacity",
+      "question": "Can scientific integrity be recovered once doubt manufacturing playbook has been deployed at scale? Is there a tipping point of institutional damage beyond which recovery becomes analytically impossible?",
+      "resolution_mechanism": "Historical case studies (tobacco, asbestos, climate): timeline for recovery of public trust, regulator independence, researcher autonomy; measurement of persistent skepticism even after evidence becomes overwhelming",
+      "impact": "If recovery is possible: snare has an exit path via institutional reform (potential scaffold). If not: permanent structural damage, snare transitions toward mountain (irreversible harm).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether scientific integrity can recover from large-scale doubt manufacturing"
+    },
+    {
+      "id": "regulatory_capture_reversibility",
+      "question": "Is the tangled rope experienced by regulatory agencies reversible, or does captured regulation become a piton through institutional inertia?",
+      "resolution_mechanism": "Analysis of regulatory agency performance pre- and post-capture; measurement of enforcement action changes; tracking of regulator budget and independence over time; historical timing of capture vs piton degradation",
+      "impact": "If reversible: tangled rope classification holds. If irreversible: agencies transition to piton, and the snare becomes more entrenched because the formal regulatory exit is blocked.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory capture is reversible or becomes institutional piton"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The SCAM playbook (Systematic, Coordinated, Across-industries Messaging for doubt manufacturing) represents one of the most durable snares in modern political economy. Industries facing scientific evidence linking their products to public harm deploy coordinated strategies to manufacture uncertainty: funding industry-friendly research, attacking independent scientists, infiltrating regulatory agencies, and creating sophisticated disinformation narratives. Unlike crude denial, the playbook is epistemically sophisticated \u2014 it doesn't claim the evidence is false but argues it is contested, preliminary, or overstated. This strategy is particularly effective because it exploits real properties of science (uncertainty is inherent, replication takes time) to manufacture artificial uncertainty about settled questions. The constraint exhibits multiple institutional perspectives because different actors experience the extraction through different lenses. The exposed population is in a pure snare with no exit. Scientific integrity is an abstract collective good with no advocate. Independent scientists face targeted suppression. Regulatory agencies experience mixed coordination (industry cooperation) and extraction (capture). Industry defendants experience it as pure coordination. Academic institutions show degradation toward piton through funding dependency. The analytical observer risks naturalizing this as inherent scientific contestation rather than institutional corruption.",
+    "key_agents": [
+      "Exposed Population: Primary victim (powerless/trapped) \u2014 individuals harmed by products continue exposure due to information asymmetry, economic necessity, or ubiquity",
+      "Scientific Integrity Commons: Primary victim (powerless/trapped) \u2014 abstract collective good that cannot organize or exit; erosion of epistemic trust across domains",
+      "Industry Defendants: Primary beneficiary (institutional/arbitrage) \u2014 tobacco, fossil fuels, chemicals, pharmaceuticals that benefit from regulatory delay and litigation obstruction",
+      "Independent Scientists: Secondary victim (moderate/constrained) \u2014 face funding cuts, publication suppression, career threats when publishing contrary evidence",
+      "Regulatory Agencies: Tertiary victim/beneficiary (moderate/constrained) \u2014 captured by industry expertise and revolving doors but mandated to protect public health",
+      "Academic Institutions: Secondary beneficiary (institutional/arbitrage) \u2014 depend on industry funding; incentivized to produce publishable research regardless of conclusions",
+      "Public Relations and Science Consulting Industry: Tertiary beneficiary (powerful/arbitrage) \u2014 profitable services selling doubt manufacturing expertise",
+      "Analytical Observer: Risk of false naturalization (analytical/analytical) \u2014 perspectives that see scientific uncertainty as inherent rather than manufactured"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts in multiple currencies: delayed regulation (economic benefit to industry), suppressed litigation (legal benefit), degraded public health (cost to exposed population), erosion of scientific trust (epistemic cost to commons). The 0.68 reflects moderate-to-high extraction \u2014 the playbook is effective at delay and obstruction but not absolute prevention. Eventually evidence usually prevails (tobacco, asbestos, lead). Suppression (0.72): High. Coordinated strategy explicitly aims to suppress truth-telling: funding gatekeeping (control which research gets funded), publication suppression (control which findings get published), career threats (suppress researchers), disinformation campaigns (suppress public understanding). The suppression is active and systematic. Theater ratio (0.65): Moderate-high. The playbook is sophisticated theater: it frames itself as 'scientific debate' or 'healthy skepticism' when the intent is obstruction. Performative academic research funded to produce predetermined conclusions. The theater has increased over the 50-year interval as the playbook has become professionalized (consulting firms, sophisticated media strategies).",
+    "perspectival_gap": "This constraint demonstrates how the same structural extraction appears as coordination to the extractor (industry), as mixed effects to captured institutions (regulators), and as pure snare to victims. Industry defendants genuinely experience the doubt manufacturing playbook as solving a collective action problem \u2014 all firms benefit from uncertainty delay, none wants to bear the full reputational cost of a contrarian campaign. From their perspective, it's rope. Regulatory agencies experience tangled rope because they benefit from industry cooperation (funding, expertise, revolving-door careers) while being constrained by public health mandate. They actively enforce the extraction (slowing responses to evidence) but are themselves partially captured. Independent scientists see snare with constrained exit \u2014 they can recant or leave the field but cannot undo their findings. The exposed population and scientific integrity commons see pure snare with no exit. The analytical observer faces strong temptation to naturalize this as inherent scientific uncertainty, which the false summit detector should flag.",
+    "directionality_logic": "Exposed population: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit due to economic necessity or ubiquity. Scientific integrity: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Absolute extraction; abstract collective cannot exit. Industry defendants: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.19. Net beneficiary through coordinated strategy. Regulatory agencies: Victim + constrained (captured) \u2192 d\u22480.58, f(d)\u22480.68. Mixed because they are both targets (capture victims) and enforcers (extraction participants). Independent scientists: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.08. Significant extraction; can exit field but not prior findings. Academic institutions: Beneficiary + arbitrage (funding dependent) \u2192 d\u22480.35, f(d)\u22480.32. Partial beneficiary through industry dependency. Piton classification comes from theater gate and institutional inertia, not high directionality extraction.",
+    "mandatrophy_analysis": "SNARE DOMINANCE WITH INSTITUTIONAL COMPLICATIONS: The constraint resolves the mandatrophy by showing that the snare classification dominates from the perspective of those bearing costs (exposed population, scientific commons, independent scientists), while beneficiaries experience it as coordination (rope) or even beneficial structure. The tangled rope experienced by captured regulators represents the institutional failure point \u2014 when nominally independent agencies become extraction participants. The piton classification of academic institutions shows how coordination-dependent institutions (dependent on industry funding) transition toward theater when their primary function (independent research) is compromised. The snare is NOT false \u2014 it is the primary structural reality. The rope and piton perspectives reveal institutional corruption and capture, not legitimate coordination. The analytical observer's temptation to see mountain (inherent scientific uncertainty) is precisely the false naturalization that the snare exploits. The playbook's success depends on this naturalization."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "scientific_publication_gatekeeping",
+      "epistemic_commons_erosion",
+      "litigation_obstruction"
+    ],
+    "dual_formulation_note": "SCAM doubt manufacturing is the meta-constraint that enables or sustains several downstream constraints. Its primary structural function is to manufacture uncertainty about causal links (product harm), which prevents regulatory action and litigation. Related constraints (regulatory_capture, publication_gatekeeping, epistemic_commons_erosion) are specific instantiations or consequences of the SCAM playbook. The network captures this dependency: SCAM is upstream; specific-domain corruption follows downstream."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

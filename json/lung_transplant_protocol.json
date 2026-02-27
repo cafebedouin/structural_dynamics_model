@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "lung_transplant_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ltp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Lung Transplant Allocation Protocol",
+    "topic_domain": "healthcare/organ_allocation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "transplant_centers",
+      "patients_on_allocation_list"
+    ],
+    "victims": [
+      "excluded_patients",
+      "rural_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Patient",
+      "comment": "PERSPECTIVE 1: EXCLUDED PATIENT (SNARE) \u2014 Patients not listed or delisted due to comorbidities, geographic distance, or resource limitations face extraction with no exit. Cannot exit the constraint (medical need is non-negotiable); cannot challenge allocation decisions; bears full cost of scarcity rationing. Extraction is maximal and suppression is high."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Listed Patient",
+      "comment": "PERSPECTIVE 2: LISTED PATIENT (TANGLED ROPE) \u2014 Patients on the transplant list experience mixed extraction and coordination. The allocation protocol coordinates organ matching (genuine benefit) but also extracts time, medical burden, and waiting costs. Some exit options exist (delisting, moving to different region) but at high cost. Constrained rather than trapped; moderate agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Transplant Center",
+      "comment": "PERSPECTIVE 3: TRANSPLANT CENTER (ROPE) \u2014 Hospitals operating transplant programs benefit from allocation priority and institutional recognition. The protocol enables them to coordinate organ arrival, surgical scheduling, and recipient matching efficiently. Net beneficiary of the constraint; exit options exist (decline participation, transfer program) but are rarely exercised. Experience extraction flowing toward the institution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The National Regulatory Authority",
+      "comment": "PERSPECTIVE 4: NATIONAL REGULATORY AUTHORITY (TANGLED ROPE) \u2014 UNOS (United Network for Organ Sharing) and CMS govern the allocation protocol. They coordinate national organ distribution (genuine coordination function) but also extract legitimacy and authority from managing life-and-death decisions. Regulatory authority has high exit options (restructure policy) and powerful position but also faces pushback from transplant centers and patient advocates. Active enforcement required; genuine coordination benefit present alongside extraction of regulatory power."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Transplant List Waitlist Theater",
+      "comment": "PERSPECTIVE 5: WAITLIST THEATER (PITON) \u2014 The numerical ranking system and waiting-time scores are substantially performative. The protocol produces elaborate rankings and scores that signal fairness and objectivity while masking that allocation fundamentally reflects transplant center capacity, geographic access, and medical urgency factors that the scoring system cannot fully capture. Theater ratio is high (>0.60) because much of the protocol is documentation and justification rather than functional allocation. The waitlist persists through institutional inertia \u2014 alternative allocation mechanisms (continuous organ sharing, regional priority) exist but haven't fully replaced the legacy list-based approach."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global health perspective, the U.S. transplant protocol coordinates organ distribution within a high-resource setting while extracting outcomes from lower-resource populations through brain drain of transplant surgeons and by concentrating life-saving technology in wealthy regions. The protocol has genuine coordination function domestically but exhibits asymmetric extraction internationally. Universalized scope reveals the implicit asymmetry: the beneficiaries are primarily U.S. citizens; the victims are global populations without access to the coordination benefit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "geographic_justice_threshold",
+      "question": "What geographic distance threshold distinguishes legitimate regional coordination from extractive exclusion of rural and remote patients?",
+      "resolution_mechanism": "Analysis of waitlist composition by geography; comparison of transplant access rates in rural vs urban regions; longitudinal tracking of outcome disparities",
+      "impact": "If distance effect is primarily logistical (unavoidable): geographic variation is coordination necessary. If distance effect is primarily institutional (policy choices): geographic variation is extractive exclusion. Classification shifts from Rope toward Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Geographic distance as legitimate coordination vs extractive exclusion"
+    },
+    {
+      "id": "comorbidity_objective_threshold",
+      "question": "How much of the comorbidity-based exclusion reflects genuine surgical risk vs institutional gatekeeping to improve center outcome statistics?",
+      "resolution_mechanism": "Comparative risk analysis of excluded vs included patients; audits of comorbidity thresholds across transplant centers; correlation between center outcome rankings and patient selection stringency",
+      "impact": "If risk-driven: exclusion is medical necessity (coordination). If outcome-driven: exclusion is extraction of patient selection to manipulate performance metrics. Classification shifts from Rope toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comorbidity exclusion as medical necessity vs institutional gatekeeping"
+    },
+    {
+      "id": "allocation_optimization_sufficiency",
+      "question": "Does the current allocation protocol optimize actual transplant outcomes or primarily optimize fairness signaling and administrative tractability?",
+      "resolution_mechanism": "Comparison of outcomes under current allocation vs alternative algorithms (e.g., continuous sharing, center-specific waiting lists); measure mortality reduction from allocation improvements vs from surgical technique and immunosuppression",
+      "impact": "If current allocation is nearly optimal: protocol is functional coordination. If alternatives yield significantly better outcomes: protocol is extractive theater masking suboptimal allocation. Theater ratio increases; classification shifts toward Piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether allocation protocol optimizes outcomes vs signals fairness"
+    },
+    {
+      "id": "international_outcome_causality",
+      "question": "What portion of disparities in transplant access between U.S. and low-resource countries is attributable to the U.S. protocol extracting surgeon talent and resources vs other factors (policy, infrastructure, wealth)?",
+      "resolution_mechanism": "Longitudinal analysis of surgeon migration patterns; comparison of transplant capacity changes in donor countries before/after surgeon emigration; resource allocation studies tracking transplant infrastructure investment",
+      "impact": "If U.S. protocol is major driver: international perspective confirms global extraction. If minor factor: protocol is primarily coordinating domestic allocation; international disparities reflect broader health system factors. Affects whether global-scope perspective classified as extraction.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether U.S. protocol drives international transplant disparity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The lung transplant allocation protocol in the United States (administered by UNOS) governs the distribution of a scarce, non-renewable medical resource \u2014 donor lungs \u2014 to patients with end-stage lung disease. The protocol ostensibly coordinates organ matching, transport, and surgical scheduling to maximize transplant access and equity. However, the constraint exhibits significant asymmetries: transplant centers that participate in the allocation network benefit from patient access, regulatory legitimacy, and outcome recognition; patients who meet listing criteria experience mixed coordination (organ matching) and extraction (waiting time, medical burden, geographic barriers); patients excluded from listing experience pure extraction (denial of access with no exit option); and geographically remote and economically disadvantaged populations systematically receive lower transplant access, a structural feature that the allocation protocol enables rather than corrects. The theater ratio (0.48) reflects that much of the protocol is administrative signaling (ranking systems, scoring algorithms, fairness documentation) rather than direct allocation function. The extractiveness (0.52) indicates that the coordination function is meaningful but asymmetric: beneficiaries (transplant centers, high-access patients) gain substantially; victims (excluded patients, rural populations) lose substantially. The constraint is best classified as Tangled Rope: it has genuine coordination value (organ matching, surgical readiness) and genuine extraction (power asymmetry, geographic exclusion).",
+    "key_agents": [
+      "Transplant Centers: Primary beneficiary (institutional/arbitrage) \u2014 benefit from patient access, outcome recognition, regulatory authority",
+      "Listed Patients: Mixed victim-beneficiary (moderate/constrained) \u2014 benefit from allocation coordination but bear waiting costs and medical burden",
+      "Excluded Patients: Primary victim (powerless/trapped) \u2014 denied access with no appeal mechanism; cannot exit medical need",
+      "Rural and Economically Disadvantaged Populations: Structural victim (powerless/constrained) \u2014 systematically lower access due to geographic and resource barriers",
+      "UNOS (Regulatory Authority): Institutional beneficiary (powerful/arbitrage) \u2014 extracts legitimacy and authority from managing allocation",
+      "Organ Procurement Organizations: Secondary beneficiary (organized/mobile) \u2014 benefit from protocol structure and coordination function",
+      "Analytical Observer: Global perspective (analytical/analytical) \u2014 sees protocol as extracting transplant capacity and surgeon talent from lower-resource regions"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The protocol extracts from excluded and disadvantaged patients through systematic exclusion and geographic barriers, but the extraction is not total (some patients do receive transplants; some centers do serve remote areas). The value reflects that extraction is structural rather than intentional, but measurable in outcome disparities. Suppression (0.65): Moderate-high. Barriers to challenging the protocol include: limited patient appeals processes, medical complexity that restricts challenge legitimacy, institutional power concentration in UNOS and transplant centers, and scarcity itself (even optimal allocation leaves many patients untransplanted). Theater ratio (0.48): Moderate. Allocation algorithms, ranking systems, and fairness documentation represent significant administrative content, but the core coordination function (matching organs to compatible recipients, coordinating surgery logistics) is functionally necessary. Theater has increased over the 20-year interval as algorithms have become more complex and outcome metrics more elaborate.",
+    "perspectival_gap": "Transplant centers experience the protocol as cooperative coordination \u2014 UNOS enables them to access organs regionally and nationally, reducing coordination costs. Listed patients experience mixed value \u2014 the protocol matches them with compatible organs (benefit) but also imposes waiting costs and medical burden (extraction). Excluded patients experience pure extraction \u2014 they are denied access with no functional appeal mechanism. Rural and economically disadvantaged populations experience systematic exclusion structured into geographic priority and center capacity allocation. The global analytical observer sees international extraction: the U.S. protocol concentrates life-saving technology in wealthy regions while extracting transplant surgeon talent from lower-resource countries. The gap between the transplant center's experience (coordination, legitimacy) and the excluded patient's experience (extraction, powerlessness) is maximal.",
+    "directionality_logic": "Directionality is determined by each agent's structural position within the extraction flow. Transplant centers are beneficiaries with arbitrage options (they can decline participation or operate independently) \u2014 they derive low d, experience coordination. Listed patients are partial beneficiaries with constrained exit (they benefit from organ matching but cannot easily exit the waiting list or change regions) \u2014 they derive moderate d, experience mixed value. Excluded patients are victims with trapped exit (medical need cannot be negotiated; exclusion is non-negotiable) \u2014 they derive maximum d, experience pure extraction. Rural populations are victims with constrained exit (geographic barriers are structural; some mobility possible but costly) \u2014 they derive high d, experience systematic extraction. UNOS derives moderate d as an institutional actor \u2014 they coordinate the system (beneficiary function) but also monopolize allocation authority (extraction of power). The global analytical observer derives analytical d, seeing the protocol's international effects.",
+    "mandatrophy_analysis": "The protocol resolves the mandatrophy by distinguishing coordination from extraction through beneficiary/victim analysis. The protocol HAS a genuine coordination function: it solves the non-trivial problem of matching organs to recipients, coordinating surgical logistics, and distributing access information nationally. This is real coordination. However, the protocol ALSO extracts from certain populations: excluded patients, rural populations, and economically disadvantaged patients systematically receive lower access due to protocol design choices (geographic prioritization, center capacity constraints, comorbidity exclusion). The mandatrophy resolves by recognizing that both are true. The protocol is Tangled Rope because it simultaneously coordinates and extracts. From the transplant center perspective, it is Rope (pure coordination). From the excluded patient perspective, it is Snare (pure extraction). From the listed patient perspective, it is Tangled Rope (mixed). No single classification is 'correct' \u2014 the presheaf across perspectives reveals the structural asymmetry: the protocol enables coordination for those admitted to it and enforces exclusion for those denied entry."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "organ_scarcity_moral_rationing",
+      "transplant_center_outcome_gaming"
+    ],
+    "dual_formulation_note": "The lung transplant protocol is downstream of the fundamental scarcity constraint (there are fewer organs than patients) and upstream of institutional gaming constraints (centers may exclude marginal patients to protect outcome statistics). These three constraints form a family linked by causal dependence: scarcity motivates the allocation protocol; the allocation protocol creates incentives for outcome gaming."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

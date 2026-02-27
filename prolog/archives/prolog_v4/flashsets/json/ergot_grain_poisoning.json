@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "ergot_grain_poisoning",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Ergot/Famine Dilemma",
+    "topic_domain": "social/technological/biological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hoarders"
+    ],
+    "victims": [
+      "grain_consumers",
+      "untreated_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Starving Peasant",
+      "comment": "PERSPECTIVE 1: STARVING PEASANT (SNARE) - With no other food source available, the peasant is trapped and forced to consume the contaminated grain, suffering the consequences of ergot poisoning. This perspective represents pure extraction, as the peasant receives no benefit and bears the full cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Village Elder",
+      "comment": "PERSPECTIVE 2: VILLAGE ELDER (TANGLED ROPE) - The village elder faces the dilemma of whether to distribute the contaminated grain to prevent starvation or to withhold it and risk immediate death. They are constrained by limited options, but also have some power to decide. They experience a mix of extraction (the burden of decision and the consequences) and coordination (managing the distribution, weighing risks)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Historical Record",
+      "comment": "PERSPECTIVE 3: THE HISTORICAL RECORD (PITON) - Ergot poisoning outbreaks have been linked to historical events like the Salem Witch Trials. With improved detection and food safety, the societal fear is less salient. However, lack of awareness in some communities can lead to a delayed recognition of the problem, leading to prolonged suffering until proper diagnosis and treatment. The theater is the continued fear despite rarity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) - The observer sees the complex interplay between the biological constraint (ergot), the social constraint (famine), and the technological constraint (food safety measures). The analytical observer identifies the dilemma as a tangled rope, where actions to mitigate one problem can exacerbate another. Modern agricultural practices can minimize ergot contamination, but in situations where food security is extremely compromised or awareness is very low, it still poses a deadly risk."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "famine_severity_threshold",
+      "question": "At what point does the risk of starvation outweigh the risk of ergot poisoning?",
+      "resolution_mechanism": "Empirical data on mortality rates from starvation vs. ergotism in past outbreaks.",
+      "impact": "Determines whether the dilemma is primarily a coordination problem (managing risks) or a pure extraction snare (forced choice).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The threshold at which famine risk outweighs ergot poisoning risk."
+    },
+    {
+      "id": "detection_technology_availability",
+      "question": "How readily available and effectively deployed are ergot detection technologies in famine-stricken regions?",
+      "resolution_mechanism": "Assessment of existing infrastructure and resource allocation for food safety.",
+      "impact": "High availability shifts classification toward a coordination problem (rope). Low availability reinforces the snare dynamic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of ergot detection technologies."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Ergot (Claviceps purpurea) is a fungal parasite of grains\u2014primarily rye\u2014that causes hallucinations, convulsions, and gangrenous death (St. Anthony's Fire). In times of famine, contaminated grain may be the only available food source, creating a tragic dilemma: consume the ergot and risk poisoning, or starve. This situation exemplifies a tangled rope constraint, where individuals are trapped between two undesirable outcomes, but some benefit from hoarding the grain. Improved food safety practices and awareness have decreased its prevalence in modern times, but it remains a threat in famine-stricken regions or areas with limited resources.",
+    "key_agents": [
+      "Grain Consumers: Primary victim (powerless/trapped) - Forced to choose between starvation and poisoning.",
+      "Village Elder: Secondary actor (moderate/constrained) - Must decide whether to distribute the grain, balancing the risks.",
+      "Untreated Populations: Victims of outbreaks due to lack of modern medicine and knowledge.",
+      "Hoarders: Beneficiaries who extract value by controlling access to the limited resource."
+    ],
+    "logic_rationale": "Extractiveness (0.6): High. The consumption of ergot-contaminated grain leads to severe health consequences and potentially death. The benefits are limited to mere survival in the short term for consumers, and control for hoarders. Suppression (0.7): High. The lack of alternative food sources and effective treatments leaves individuals with little to no agency. The choices are very constrained. Theater Ratio (0.75): High. The historical record shows a continued fear of ergot poisoning despite its relative rarity in modern times, representing a performative aspect of societal concern.",
+    "perspectival_gap": "The starving peasant experiences the constraint as a pure snare, with no viable exit option. The village elder faces a tangled rope, with the burden of decision-making and the consequences of either choice. The analytical observer frames this a problem where different perspectives each have a component of the 'true' experience, whether that be death, starvation, or the weight of a difficult decision.",
+    "directionality_logic": "Directionality is determined by the agent's power and exit options. The peasant is trapped and powerless, bearing the full cost (high d). The village elder has some agency, leading to a lower but still significant experienced extractiveness. Hoarders benefit by controlling access to the limited resource, giving them a low d."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

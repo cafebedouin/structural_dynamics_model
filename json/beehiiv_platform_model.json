@@ -2,98 +2,198 @@
   "header": {
     "constraint_id": "beehiiv_platform_model",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "beehiiv"
   },
   "base_properties": {
-    "extractiveness": 0.38,
-    "suppression": 0.5,
-    "theater_ratio": 0.15,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.61,
     "claimed_type": "tangled_rope",
     "human_readable": "The Beehiiv Newsletter Platform Business Model",
     "topic_domain": "technological/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "beehiiv_the_company",
-      "successful_creators",
-      "advertisers"
+      "beehiiv_company",
+      "platform_early_adopters",
+      "high_performing_creators"
     ],
     "victims": [
-      "new_creators",
-      "migrating_creators"
+      "creator_autonomy",
+      "subscriber_data_commons",
+      "nascent_creator_competition"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
-      "agent_power": "moderate",
-      "time_horizon": "immediate",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Migrating Creator",
-      "comment": "PERSPECTIVE 1: MIGRATING CREATOR (SNARE) — A creator attempting to leave the platform experiences the full cost of lock-in. The process of exporting data, subscribers, and web archives, while redirecting domains and losing platform-specific SEO, is costly and complex. At this moment, the platform feels like a trap. d≈0.95 (as victim+trapped), f(d)≈1.42, σ=0.8 → χ≈0.43. While this χ doesn't meet the Snare threshold, the subjective experience of high coercion and suppressed alternatives aligns with the Snare classification from this specific, temporary viewpoint."
+      "spatial_scope": "global",
+      "label": "The Creator Locked Into Growth Incentives",
+      "comment": "PERSPECTIVE 1: CREATOR (TRAPPED) \u2014 Small creators pursuing audience growth become dependent on Beehiiv's algorithmic recommendation system, audience insights, and monetization features. Once invested (followers, archive, payment infrastructure), switching platforms incurs high switching costs. The platform's growth tools create lock-in: the more a creator uses recommendations and audience data, the higher the extraction cost of departure. This creator experiences the constraint as pure extraction with no viable exit."
     },
     {
-      "classification_type": "rope",
-      "agent_power": "powerful",
+      "classification_type": "snare",
+      "agent_power": "powerless",
       "time_horizon": "biographical",
-      "exit_options": "arbitrage",
+      "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Successful Creator",
-      "comment": "PERSPECTIVE 2: SUCCESSFUL CREATOR (ROPE) — A creator with a large, monetized audience on a paid plan experiences the platform as a pure coordination tool. The flat monthly fee is negligible compared to the 10% cut taken by competitors like Substack. This creator is engaging in arbitrage, selecting the most efficient tool. d≈0.15 (as beneficiary+mobile), f(d)≈-0.01, σ=1.2 → χ≈-0.004. The negative effective extraction signifies a net subsidy relative to the market alternative."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The New Creator",
-      "comment": "PERSPECTIVE 3: NEW CREATOR (SCAFFOLD) — A new writer on the free plan sees the platform as a temporary support structure. It provides powerful tools at no cost, enabling initial growth. The 2,500 subscriber limit acts as a sunset clause for the free tier, forcing a decision to upgrade or migrate. The platform is scaffolding their entry into the creator economy. d≈0.85 (as victim+mobile), f(d)≈1.15, σ=1.2 → χ≈0.53. The classification is Scaffold due to the explicit sunset logic of the free tier, not the χ value."
+      "label": "The Subscriber Data Pool",
+      "comment": "PERSPECTIVE 2: SUBSCRIBER DATA (TRAPPED COLLECTIVE) \u2014 Subscribers unknowingly participate in data aggregation: Beehiiv collects reading behavior, engagement patterns, and email metadata across all newsletters on the platform. Subscribers have no opt-out for data collection (only creator-controlled disclosure) and no direct exit from the data commons once they engage with any newsletter on the platform. The constraint extracts behavioral data with minimal transparency. Data becomes a public good Beehiiv privately captures."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The analyst sees both the genuine coordination function (providing tools, not taking a revenue cut) and the asymmetric extraction (monthly fees, data lock-in, value capture from the ad network). The model is a hybrid, coordinating creator activity while extracting platform fees. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.53. This meets the Tangled Rope criteria."
+      "label": "The Established Creator with Audience Portability",
+      "comment": "PERSPECTIVE 3: ESTABLISHED CREATOR (MOBILE) \u2014 High-performing creators with large followings experience the platform as mixed coordination and extraction. Beehiiv's tools (growth loops, subscriber insights, sponsorship matching) genuinely enable their success. But the platform also extracts via revenue share (affiliate commissions on sponsorships, Beehiiv's fee structure), terms-of-service enforcement, and feature gatekeeping. These creators have partial exit: their audience is portable, but migration costs are real. They negotiate rather than accept; they have leverage. They experience both benefit and extraction."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Beehiiv, The Company",
-      "comment": "PERSPECTIVE 5: BEEHIIV, THE COMPANY (ROPE) — From the platform's institutional perspective, its business model is a pure coordination service. It provides infrastructure for a flat fee, a model it considers fairer and more aligned with creator success than revenue-sharing. d≈0.05 (as beneficiary+arbitrage), f(d)≈-0.12, σ=1.2 → χ≈-0.05. The platform sees itself as subsidizing creator growth."
+      "label": "The Beehiiv Company (Beneficiary)",
+      "comment": "PERSPECTIVE 4: BEEHIIV COMPANY (BENEFICIARY) \u2014 The platform benefits from network effects and switching costs. Early creators establish network value; later creators find existing audience pools; Beehiiv captures value through fees, data, and platform lockage. From Beehiiv's perspective, the constraint is coordination: they are solving the legitimate problem of newsletter distribution and creator monetization. The extraction mechanisms (data collection, revenue share, feature gatekeeping) appear as fair value capture for infrastructure. This institutional actor experiences the constraint as rope \u2014 low-extraction coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Creator Coalition and Open Protocols Movement",
+      "comment": "PERSPECTIVE 5: OPEN CREATOR COALITION (CONSTRAINED) \u2014 Organized creators and indie hackers see the Beehiiv model as a coordination failure fixable via open protocols (ActivityPub-style decentralized email newsletters, open subscriber directories, interoperable audience data). This coalition views the platform lock-in and data extraction as temporary \u2014 sunset logic applies if creators adopt open-source alternatives (Ghost, Substack open-source derivatives). They experience extraction but see an exit path via protocol migration. Sunset estimated at 5-10 years as interoperable platforms mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Email Newsletter Ecosystem",
+      "comment": "PERSPECTIVE 6: LEGACY EMAIL NEWSLETTER INFRASTRUCTURE (PITON) \u2014 From a civilizational view, Beehiiv's constraint operates atop (and partially replaces) the legacy email newsletter ecosystem: flat email list providers (Mailchimp), RSS feeds, and creator-owned domain-based subscriptions. This legacy system persists through institutional inertia despite reduced functionality. Beehiiv's performative features (engagement tracking, growth loops) add theater \u2014 creators measure success by platform metrics rather than subscriber relationship quality. The old ecosystem sees its own degradation as Beehiiv captures the growth incentive layer. Piton classification derives from high theater (0.61) and the replacement of functional (direct email) with platform-mediated (algorithmic recommendation) verification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Conditional Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (UNIVERSAL FRAME) \u2014 From a universal/analytical perspective, there is a natural structural limit to decentralized creator economies: audience discovery requires intermediation. Without a platform or algorithm matching creators to subscribers, discovery becomes a broadcast problem solvable only via existing social graphs or paid advertising. The 'natural law' claim is that some intermediary must capture value to fund discovery. However, this perspective risks false summitry \u2014 it naturalizes Beehiiv's specific rent-extraction model as inevitable, when alternative discovery mechanisms (creator collectives, curated directories, subscriber-driven recommendations) exist and require less extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "discovery_mechanism_necessity",
+      "question": "Is algorithmic audience discovery a natural bottleneck (requiring platform intermediation) or a contingent design choice?",
+      "resolution_mechanism": "Comparative analysis of discovery mechanisms: algorithmic recommendation vs creator directories, subscriber-driven discovery, editorial curation, community-based matching. Measurement of creator growth rates and audience reach under each mechanism.",
+      "impact": "If algorithmic discovery is necessary: Beehiiv's extraction is justified coordination overhead (shifts toward Rope). If contingent: alternative mechanisms exist with lower extraction (shifts toward Snare/Tangled Rope clarification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic discovery is inherent or contingent"
+    },
+    {
+      "id": "data_portability_feasibility",
+      "question": "Can subscriber data and engagement metrics be truly ported to competing platforms without loss of functionality or creator relationship continuity?",
+      "resolution_mechanism": "Technical audit of Beehiiv export formats vs. open standards. User study tracking creator migration friction and subscriber churn during platform transitions.",
+      "impact": "If portable: switching costs are lower than perceived, exit_options upgrade from trapped to constrained/mobile for established creators (changes perspectival gap). If non-portable: lock-in is real, extraction is higher.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether subscriber data can be ported across platforms"
+    },
+    {
+      "id": "open_protocol_viability_timeline",
+      "question": "What is the realistic adoption timeline for open-source newsletter platforms (Ghost, interoperable ActivityPub email systems) as direct Beehiiv competitors?",
+      "resolution_mechanism": "Tracking creator adoption of self-hosted and open-source alternatives. Analysis of feature parity and total cost of ownership vs. Beehiiv. Community funding and development velocity for open-source projects.",
+      "impact": "If timeline < 5 years: scaffold sunset logic is structural, not aspirational. If timeline > 15 years: open coalition perspective is optimistic, extraction persists longer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adoption timeline for open-protocol alternatives"
+    },
+    {
+      "id": "subscriber_consent_interpretation",
+      "question": "Does creator-disclosed data collection constitute genuine subscriber consent or obfuscated platform data harvesting?",
+      "resolution_mechanism": "Analysis of disclosure frequency and comprehensibility in creator communication. Survey of subscribers' understanding of data collection scope. Comparison of disclosed vs. actual data fields collected.",
+      "impact": "If genuine consent: data extraction is coordinated harm reduction (shifts toward Rope). If obfuscated: data extraction is non-consensual (shifts toward Snare confirmation).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether subscriber data collection constitutes genuine consent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.61
     }
   ],
   "interval": {
-    "start": 2021,
-    "end": 2026
+    "start": 0,
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "Beehiiv is a newsletter platform offering creators tools for publishing, growth, and monetization. Its business model is based on a tiered subscription service (including a free tier) rather than taking a percentage of creator revenue, positioning it as a direct competitor to platforms like Substack. This structural choice creates significant perspectival gaps. The constraint is the platform's terms, feature gates, and pricing structure, which mediate the relationship between creators and their audiences.",
+    "narrative_context": "Beehiiv's platform model combines genuine coordination (solving newsletter distribution and monetization for creators) with significant asymmetric extraction (data collection, feature gatekeeping, revenue sharing, platform lock-in). The constraint exhibits a classic tangled rope structure: creators benefit from tools and audience discovery, but Beehiiv captures disproportionate value through lock-in mechanisms, behavioral data aggregation, and control of the sponsorship marketplace. The theater ratio (0.61) reflects performative features: engagement metrics, growth loops, and algorithmic recommendation that create the appearance of meritocratic discovery while actually concentrating visibility and income to high-performing early adopters. Extractiveness has risen from 0.28 (early platform, genuine coordination) to 0.52 (mature platform, rent-seeking via data and lock-in) over six years as the company transitioned from creator service to data-driven intermediary. The perspectival gap is wide: small creators experience pure extraction (snare), established creators experience mixed coordination-extraction (tangled rope), Beehiiv experiences coordination (rope), and the analytical observer risks naturalizing platform mediation as inherent to creator economics.",
     "key_agents": [
-      "Successful Creators: Primary beneficiaries (powerful/arbitrage) - Benefit from the flat-fee model, avoiding the percentage cuts of rival platforms.",
-      "Beehiiv (The Company): Primary beneficiary (institutional/arbitrage) - Captures revenue through monthly subscription fees from scaled creators.",
-      "New Creators: Secondary victims (moderate/constrained) - Benefit from the free tier but are subject to limits and upselling, making them the target of the platform's growth model.",
-      "Migrating Creators: Primary victims (moderate/trapped) - Bear the high friction costs of platform lock-in when attempting to leave.",
-      "Advertisers: Secondary beneficiaries - Gain access to aggregated, targeted audiences via the Beehiiv Ad Network."
+      "Beehiiv Company: Primary beneficiary (institutional/arbitrage) \u2014 captures value via platform fees, data monetization, and lock-in effects; experiences constraint as coordination",
+      "Small Creators: Primary victims (powerless/trapped) \u2014 depend on platform for audience growth; locked in by switching costs; experience extraction without meaningful exit",
+      "Subscriber Base: Secondary victims (powerless/trapped) \u2014 provide behavioral data through platform collection; no opt-out or meaningful consent",
+      "Established Creators: Mixed position (powerful/mobile) \u2014 large audiences provide exit options; experience both benefit and extraction; can negotiate terms",
+      "Open Protocol Coalition: Organized challengers (organized/constrained) \u2014 building alternative decentralized platforms; see extraction as temporary with sunset via protocol migration",
+      "Legacy Email Systems: Institutional degradation (institutional/arbitrage) \u2014 replaced by platform intermediation; their discovery role atrophied; persist through inertia only"
     ],
-    "logic_rationale": "Extractiveness (ε=0.38): Moderate. The model is less extractive than percentage-based competitors for successful creators, but still extracts value through monthly fees and platform lock-in. The value is not zero. Suppression (ε=0.50): Moderate. While alternatives exist, migrating a large newsletter with its archive, domain, and integrations is a significant undertaking, creating a 'sticky' ecosystem that suppresses exit. Theater Ratio (ε=0.15): Low. The platform's value proposition is based on functional tools for editing, analytics, and monetization. The service is primarily functional, not performative.",
-    "perspectival_gap": "The Beehiiv model is a clear example of a perspectival spread. A successful creator, arbitraging against Substack's 10% fee, sees a pure coordination Rope. A new creator on the free plan sees a supportive Scaffold with a clear sunset clause (the subscriber limit). A creator actively trying to leave experiences the high friction of lock-in as a Snare. The platform itself views its model as a superior Rope. The analytical observer, weighing the coordination benefits against the lock-in and fee structure, classifies it as a Tangled Rope.",
-    "directionality_logic": "The directionality, and thus the final classification, is determined by the agent's structural position. The successful creator is a beneficiary with arbitrage exit options, leading to a negative χ (Rope). The new creator is a victim but with mobile/constrained options, seeing a Scaffold. The migrating creator is a victim who is temporarily trapped, leading to a high χ and the perception of a Snare. Beehiiv, as the institutional beneficiary, naturally sees a Rope. This demonstrates how a single set of base properties can generate multiple valid classifications.",
-    "mandatrophy_analysis": "This case resolves the mandatrophy by showing that a platform is not monolithically 'good' or 'bad'. Describing Beehiiv as just a 'tool' (Rope) or just a 'trap' (Snare) would be inaccurate. The system correctly identifies that the platform's structure functions as a Rope for its target power users, a Scaffold for new users, and a Snare for those trying to exit. The analytical Tangled Rope classification correctly synthesizes these conflicting but valid perspectives into a single, coherent structural description."
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. Beehiiv extracts through multiple mechanisms: platform fee (10% of subscription revenue for paid tiers), data collection and algorithmic control of audience discovery, and gatekeeping of premium features (sponsorship matching, advanced analytics). The extraction is not total (creators retain subscriber relationships and can theoretically migrate) but substantial (switching costs are high, algorithmic reach creates dependency). The value of Beehiiv's coordination (solving discovery and monetization) justifies some extraction, but the ratio has skewed toward rent-seeking as the platform matured. Early Beehiiv (\u03b5=0.28) genuinely solved creator infrastructure gaps; current Beehiiv (\u03b5=0.52) prioritizes network lock-in and data monetization. Suppression (0.58): Moderate-high. Significant barriers to creator exit include switching costs (migrating subscriber list, rebuilding growth metrics, learning new platform), algorithmic dependency (recommendation system drives disproportionate audience growth for platform users), and feature asymmetry (Beehiiv's sponsorship matching is unavailable on alternatives). Data extraction suppresses subscriber exit via opaque collection and lack of portability. Theater ratio (0.61): Moderate-high. Engagement metrics and growth loops serve dual purposes: genuine creator feedback (functional) and gamification encouraging platform investment (performative). Algorithmic recommendations appear meritocratic but actually concentrate visibility on high-performing early adopters and Beehiiv-promoted creators. Sponsored content matching algorithm is opaque to creators \u2014 they see recommended sponsorships but not the ranking logic. Premium analytics create theater: creators obsess over platform-specific metrics rather than sustainable audience relationships.",
+    "perspectival_gap": "The constraint demonstrates perspectival divergence across power and exit dimensions. The small creator (powerless/trapped) sees a snare: extraction without alternatives, platform dependency, and opaque algorithmic control. The established creator (powerful/mobile) sees tangled rope: genuine coordination (audience discovery, monetization tools) mixed with extraction (revenue share, feature gatekeeping), but with leverage to negotiate. Beehiiv (institutional/arbitrage) sees rope: solving the legitimate creator infrastructure problem, with value capture as fair compensation. The open coalition (organized/constrained) sees tangled rope with sunset: extraction is real but alternative protocols are emerging, timeline estimated 5-10 years. The legacy email system sees piton: its functional role (email delivery) is intact, but Beehiiv's intermediary layer has captured audience discovery and monetization, leaving the legacy system as degraded infrastructure persisting through institutional inertia. The analytical observer risks mountain: 'creators always need discovery intermediaries; Beehiiv's extraction is therefore inevitable.' This false summit naturalizes a contingent institutional choice (algorithmic platform mediation) as natural law.",
+    "directionality_logic": "Directionality values derive from structural position and exit options. Beehiiv benefits from lock-in and data capture (d \u2248 0.05, full beneficiary, negative effective extraction); small creators bear costs of dependency without exit (d \u2248 0.95, full target, high effective extraction); established creators have partial exit and partial benefit (d \u2248 0.55, symmetric, moderate effective extraction). Subscribers are trapped in data collection with no direct choice (d \u2248 0.90, high extraction target). The open coalition has clear exit mechanisms emerging (d \u2248 0.40, victim but with organizational capacity and alternative pathways). The engine derives these d values from beneficiary/victim declarations and exit_options tuples, producing the perspectival gap observed above.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint resolves the mandatrophy by showing that 'is Beehiiv extraction or coordination?' is the wrong question \u2014 it is structurally BOTH. The platform genuinely solved a creator infrastructure gap (coordination function) AND extracted asymmetric value via lock-in and data capture (extraction mechanism). The mandatrophy is resolved by: (1) Declaring beneficiaries (Beehiiv, early adopters, high performers) \u2014 these are the coordination beneficiaries. (2) Declaring victims (creator autonomy, subscriber privacy, nascent competition) \u2014 these are the extraction targets. (3) Setting requires_active_enforcement=true \u2014 the lock-in and algorithmic control require continuous platform enforcement to maintain. (4) Measuring the perspectival gap \u2014 snare vs rope vs tangled rope vs piton across different agents confirms the hybrid nature. The open coalition's scaffold perspective confirms that the extraction is not inherent: alternative mechanisms (open protocols, community discovery, subscriber-driven curation) exist with lower extraction ratios, and their adoption would sunset Beehiiv's current model. This means the extraction was contingent on platform dominance, not natural. The false summit risk (analytical mountain perspective) is flagged: 'creators need discovery intermediaries' is true, but 'those intermediaries must extract via lock-in and opaque data collection' is false \u2014 viable alternatives exist with lower extraction."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "substack_platform_model"
-    ]
-  }
+      "email_deliverability_bottleneck",
+      "creator_income_concentration",
+      "newsletter_subscriber_privacy"
+    ],
+    "dual_formulation_note": "The Beehiiv platform model decomposes into three structurally distinct constraints: (1) Resource allocation coordination (who gets discovery and monetization infrastructure) \u2014 drives the tangled rope classification. (2) Email deliverability as a natural bottleneck (spam filtering, ISP throttling) \u2014 constrains all newsletter platforms equally. (3) Subscriber data extraction and privacy (behavioral tracking, profile aggregation) \u2014 a separate extractive mechanism. The current story (beehiiv_platform_model) captures the resource allocation hybrid. The email deliverability bottleneck is a separate mountain/rope constraint. The subscriber privacy extraction is a separate snare constraint. These three stories are linked via affects_constraints because Beehiiv's resource allocation model depends on email deliverability infrastructure and exploits the privacy bottleneck."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
 }

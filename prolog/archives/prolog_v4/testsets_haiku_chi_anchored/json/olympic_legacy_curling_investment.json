@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "olympic_legacy_curling_investment",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "olycurl"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Olympic Games Legacy Investment in Curling Clubs",
+    "topic_domain": "economic/sports_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elite_curling_athletes",
+      "host_city_sports_infrastructure",
+      "olympic_organizing_committees"
+    ],
+    "victims": [
+      "grassroots_curling_participation",
+      "non_olympic_winter_sports",
+      "local_club_sustainability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Grassroots Curler",
+      "comment": "PERSPECTIVE 1: GRASSROOTS CURLER (SNARE) \u2014 Local club members are trapped by infrastructure and funding concentration. Post-Olympic investment flows to elite training centers and high-visibility facilities, while small neighborhood clubs lose capacity and membership. Cannot exit; forced to travel to elite venues or abandon the sport. d\u22480.92, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Olympic Organizing Committee",
+      "comment": "PERSPECTIVE 2: OLYMPIC ORGANIZING COMMITTEE (ROPE) \u2014 Benefits from legacy narrative and political capital. Post-Olympic investment appears as pure coordination: funding curling creates measurable sport participation metrics and justifies Olympic spending to taxpayers. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Net beneficiary through political arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "National Curling Federation",
+      "comment": "PERSPECTIVE 3: NATIONAL CURLING FEDERATION (TANGLED ROPE) \u2014 Organized but constrained. Benefits from increased elite athlete funding and training infrastructure (coordination function), but trapped in enforcement of Olympic prioritization criteria that disadvantage non-elite pathways. Must maintain governance structure supporting post-Olympic investment streams. d\u22480.52, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.25."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Regional Sports Councils",
+      "comment": "PERSPECTIVE 4: REGIONAL SPORTS COUNCILS (SCAFFOLD) \u2014 Powerful actors with capacity to redirect legacy funds toward broader participation. See post-Olympic investment as temporary boost with a sunset: dedicated Olympic funding has explicit time windows (typically 4-8 years post-Games). Can leverage this window strategically to build sustainable grassroots infrastructure before funding contracts. d\u22480.35, f(d)\u22480.28, \u03c3=1.0 \u2192 \u03c7\u22480.11."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Sport Development Bureaucracy",
+      "comment": "PERSPECTIVE 5: LEGACY SPORT DEVELOPMENT BUREAUCRACY (PITON) \u2014 Maintains post-Olympic curling investment apparatus through institutional inertia. The legacy funding infrastructure persists long after the Games despite marginal effectiveness in increasing grassroots participation. theater_ratio=0.58 reflects substantial performative activity: progress reports, legacy committee meetings, and participation statistics mask the reality that funding concentration has degraded accessibility. The system continues because bureaucratic structures self-perpetuate, not because it optimally serves curlers."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational economic perspective, post-Olympic investment concentration may appear as an inevitable consequence of capital allocation toward visible, media-relevant infrastructure. The 'sports follow Olympic glory' pattern appears universal across Games. However, structural data (\u03b5=0.38, suppression=0.42, theater=0.58) contradicts mountain classification \u2014 this is a contingent policy choice, not an immutable law. The false summit reveals the naturalization of a specific investment model."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "elite_versus_participation_tradeoff",
+      "question": "Is post-Olympic elite investment in curling a necessary tradeoff for building competitive national teams, or does it represent misaligned incentives that could be restructured to support both elite and grassroots pathways?",
+      "resolution_mechanism": "Comparative analysis of post-Olympic funding distributions across Winter Games cohorts; correlation between elite investment and grassroots participation growth; case studies of Games that mandated dual-pathway funding",
+      "impact": "If tradeoff is necessary: constraint is unavoidable (mountain/rope from more perspectives). If misaligned: constraint is extractive policy choice (snare/tangled rope from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether elite investment is necessary tradeoff or policy misalignment"
+    },
+    {
+      "id": "infrastructure_reallocation_capacity",
+      "question": "Can Olympic-built curling facilities be effectively repurposed for grassroots participation post-Olympics, or are they structurally designed (cost, scheduling, location) for elite training only?",
+      "resolution_mechanism": "Audit of facility design specifications and cost structures; tracking of facility utilization rates pre- and post-Olympics; accessibility analysis (geographic distribution, membership fees, scheduling for casual players)",
+      "impact": "If repurposable: legacy investment is coordination problem (Scaffold gate confirmed). If structurally elite-only: investment is extractive by design (Snare/Tangled Rope confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Olympic facilities can be repurposed for grassroots participation"
+    },
+    {
+      "id": "counterfactual_baseline_investment",
+      "question": "Would equivalent capital investment in non-Olympic-year curling infrastructure (grassroots clubs, regional training centers, accessibility programs) produce greater long-term participation and competitive depth than post-Olympic legacy spending patterns?",
+      "resolution_mechanism": "Historical comparison of baseline grassroots participation trends vs post-Olympic surges; econometric analysis of participation elasticity with respect to investment type (elite vs grassroots); longitudinal tracking of athlete pipeline from both investment models",
+      "impact": "If grassroots-focused investment is superior: legacy constraint represents misallocation (Snare perspective confirmed). If Olympic-focused model is superior: constraint reflects legitimate strategic prioritization (Rope perspective confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether grassroots-focused investment would produce better long-term outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "Post-Olympic legacy investment in curling creates a structural tension between elite athlete development and grassroots sport participation. Following a Winter Olympics, host nations typically receive dedicated funding streams for featured sports like curling, creating a 5-8 year window of elevated investment. This constraint operates as both a coordination mechanism (enabling elite competitive development and infrastructure modernization) and an extraction mechanism (concentrating funding in elite pathways, reducing accessibility for grassroots players, and creating unsustainable facility cost structures that disadvantage non-Olympic communities). The constraint exhibits a classic tangled rope structure: it solves a real coordination problem (how to build world-competitive curling teams) while simultaneously extracting from grassroots participation by directing capital and governance attention toward elite pathways. The theater ratio (0.58) reflects that post-Olympic legacy reporting is substantially performative \u2014 participation statistics and facility metrics are highlighted, but the concentration of investment in elite centers and the decline in grassroots club accessibility are downplayed or absent from official legacy narratives.",
+    "key_agents": [
+      "Grassroots Curlers: Primary victims (powerless/trapped) \u2014 local club players face reduced facility access, higher costs, and community club closures as funding concentrates in elite centers",
+      "Elite Curling Athletes: Primary beneficiaries (organized/arbitrage) \u2014 receive enhanced training infrastructure, coaching, and pathway support during post-Olympic window",
+      "Olympic Organizing Committees: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from legacy narrative and measurable sport development metrics justifying Olympic spending",
+      "National Curling Federation: Organized coordinator (organized/constrained) \u2014 enforces Olympic investment prioritization; constrained by governance requirements tied to funding",
+      "Regional Sports Councils: Powerful secondary actors (powerful/mobile) \u2014 can redirect legacy funds or advocate for dual-pathway investment; can exit legacy constraints if political will materializes",
+      "Local Curling Clubs: Victim organizations (powerless/trapped) \u2014 face facility closures, membership migration to elite centers, and funding reallocation"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Post-Olympic investment provides real elite athlete benefits and infrastructure modernization (coordination component), but systematically disadvantages grassroots pathways by concentrating capital in high-visibility, high-cost facilities designed for elite training. The extraction is not coercive (no mechanism directly prevents grassroots participation) but structural \u2014 funding prioritization and facility design implicitly favor elite pathways. Suppression (0.42): Moderate. Barriers to grassroots alternatives include: (1) facility location concentration in elite centers rather than distributed grassroots clubs, (2) cost structures designed for elite training rather than casual participation, (3) governance structures that enforce Olympic prioritization, and (4) migration of experienced coaches and players to elite programs. But suppression is incomplete \u2014 grassroots curling persists outside legacy frameworks. Theater ratio (0.58): Moderate-high. Legacy reporting emphasizes participation growth statistics and facility modernization while obscuring the concentration of those gains in elite pathways and the decline in small-club accessibility. Official legacy narratives present investment as broadly beneficial sport development; actual distribution is bifurcated.",
+    "perspectival_gap": "This constraint demonstrates the perspectival range from elite beneficiaries to grassroots victims. The elite athlete sees a Rope (coordination enabling competitive development). The organizing committee sees a Rope (political and metrics justification). The grassroots curler sees a Snare (trapped in degraded access). The regional council sees a Scaffold (temporary funding window that can be strategically leveraged). The legacy bureaucracy sees a Piton (institutional structure persisting through inertia). The civilizational observer risks seeing a Mountain (inevitable Olympic concentration pattern) \u2014 but the structural data reveals this as a false summit: the investment model is a contingent policy choice, not an immutable law.",
+    "directionality_logic": "Elite athletes: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; can exit to other nations if investment conditions change. Grassroots curlers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction; local clubs cannot exit if elite concentration removes funding and membership pathways. National federation: Enforcer + constrained \u2192 d\u22480.52, f(d)\u22480.65. Moderate extraction; must maintain Olympic governance but constrained by federation membership needs. Regional councils: Powerful + mobile \u2192 d\u22480.35, f(d)\u22480.28. Low extraction; can redirect or reframe legacy investment toward grassroots if political conditions permit. Olympic committees: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary through political capital and narrative legitimation.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that post-Olympic curling investment IS a genuine tangled rope: it genuinely coordinates elite athlete development (Rope component) while simultaneously extracting from grassroots participation (Snare component). The resolution is NOT to deny the coordination function or to treat the constraint as pure extraction. Rather, it is to observe that a single policy mechanism (post-Olympic funding concentration) serves both functions asymmetrically \u2014 benefiting organized elites while harming dispersed grassroots communities. The false summit (mountain perspective) naturalizes this as inevitable Olympic concentration; the analytical corrective reveals it as a policy choice with restructurable components. A dual-pathway post-Olympic investment model (mandating percentage allocation to grassroots accessibility alongside elite development) would reduce the extractiveness component while preserving the coordination function \u2014 moving the constraint toward a lower-\u03c7 Scaffold or Rope rather than the current higher-\u03c7 Tangled Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "olympic_host_city_debt_accumulation",
+      "winter_sport_equipment_accessibility"
+    ],
+    "dual_formulation_note": "Post-Olympic curling investment is downstream of broader Olympic legacy policy frameworks. The upstream constraint (Olympic host city resource allocation) determines the overall capital available; post-Olympic curling investment represents a specific instantiation of that constraint with different \u03b5 (0.38) reflecting the sport-specific pathway concentration effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "social_loafing",
+    "version": "1.0",
+    "generated_date": "2024-08-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.3,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Social Loafing (The Ringelmann Effect)",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "social_loafers"
+    ],
+    "victims": [
+      "diligent_group_members",
+      "group_productivity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Diligent Group Member",
+      "comment": "Perspective of a diligent group member who is trapped in a group project and must compensate for the reduced effort of others. They cannot easily exit the group or reduce their effort without risking the project's success or their reputation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Social Loafer",
+      "comment": "Perspective of an individual who benefits from social loafing. They exert less effort while still sharing in the group's rewards. They have the arbitrage option to continue loafing as long as the group's overall productivity remains acceptable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, social loafing is a tangled rope. It represents a coordination failure where individual incentives are misaligned with group goals, leading to reduced overall productivity. There's both extraction (reduced individual effort) and coordination (group project completion)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Project Manager",
+      "comment": "Perspective of a project manager who implements strategies to mitigate social loafing, such as clear task assignments and individual accountability. They benefit from the overall group productivity and have the ability to adjust team dynamics and resource allocation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "group_size_threshold",
+      "question": "What group size threshold exacerbates social loafing?",
+      "resolution_mechanism": "Empirical studies varying group sizes and measuring individual effort levels.",
+      "impact": "Determines the point at which interventions are most effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Group size threshold for social loafing"
+    },
+    {
+      "id": "task_visibility",
+      "question": "How does the visibility of individual contributions affect social loafing?",
+      "resolution_mechanism": "Experimental manipulations of task visibility and measurement of individual effort.",
+      "impact": "Informs the design of tasks and evaluation methods.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Impact of individual contribution visibility on social loafing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Social loafing, also known as the Ringelmann effect, describes the tendency of individuals to exert less effort when working in a group than when working alone. This phenomenon arises from a diffusion of responsibility, where individuals feel less accountable for the group's output. This can lead to reduced overall productivity and create an imbalance within the group, where some members contribute more than others.",
+    "key_agents": [
+      "Social Loafers: Individuals who reduce their effort in group settings.",
+      "Diligent Group Members: Individuals who maintain a high level of effort regardless of the group setting.",
+      "Group Productivity: The overall output and effectiveness of the group.",
+      "Project Manager: Individuals responsible for managing the group and mitigating social loafing."
+    ],
+    "logic_rationale": "Extractiveness: The extractiveness score reflects the reduction in effort by social loafers, which extracts from the overall group productivity and the efforts of diligent members. Suppression: The suppression score represents the factors that prevent diligent members from effectively addressing the loafing behavior, such as social pressure, fear of conflict, or lack of clear individual accountability. Theater Ratio: The theater ratio is relatively low, as there is not a significant performative aspect associated with social loafing itself. It's more about a reduction in actual effort than a display of effort.",
+    "perspectival_gap": "The perspectival gap arises from the different experiences and incentives of group members. Social loafers benefit from reduced effort, while diligent members bear the cost of compensating for the loafing. From an analytical perspective, the phenomenon represents a coordination failure where individual incentives detract from the collective good. The project manager perspective aims to bridge this gap by implementing strategies to align individual and group incentives.",
+    "directionality_logic": "The directionality is determined by who benefits and who bears the costs. Social loafers are the beneficiaries, as they exert less effort. Diligent group members and overall group productivity are the victims, as they suffer from the reduced effort. Project managers benefit from the overall group productivity and have the ability to adjust team dynamics and resource allocation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "groupthink",
+      "bystander_effect"
+    ]
+  },
+  "directionality_overrides": []
+}

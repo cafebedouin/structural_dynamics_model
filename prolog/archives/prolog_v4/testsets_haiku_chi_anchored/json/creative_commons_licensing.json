@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "creative_commons_licensing",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cc_lic"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.32,
+    "theater_ratio": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Creative Commons Licensing Framework",
+    "topic_domain": "legal/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "content_creators",
+      "downstream_users",
+      "open_knowledge_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Individual Creator",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL CREATOR (ROPE) \u2014 Creator without legal resources (powerless, mobile through CC adoption, biographical horizon). Experiences CC as pure coordination mechanism: express intent to share without hiring lawyers. No extraction perceived \u2014 creator gains attribution, potential attribution value, and community participation. d\u22480.35, f(d)\u22480.25, \u03c3=1.2 \u2192 \u03c7\u22480.09. Low effective extraction; beneficiary of standardized coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The CC Organization",
+      "comment": "PERSPECTIVE 2: CC ORGANIZATION (ROPE) \u2014 Institution that maintains and evolves the licensing standard (institutional, arbitrage exit through alternative licensing systems, immediate horizon focused on license adoption). Experiences CC as coordination function they coordinate. Benefits from network effects: more adopters = higher standard utility = institutional influence. Perceives no extraction from creators \u2014 relationship is cooperative. d\u22480.10, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.02. Net beneficiary through coordination provision."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Platform Ecosystem",
+      "comment": "PERSPECTIVE 3: PLATFORM ECOSYSTEM (TANGLED ROPE) \u2014 Large content platforms (YouTube, Flickr, Wikimedia) with organized coordination but constrained exit from licensing compliance. Perceives both coordination benefits (legal clarity for content use) and extraction (mandatory compliance overhead, license attribution burden, integration complexity). Must implement CC compliance regardless of profitability. d\u22480.60, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.25. Moderate extraction masked as coordination infrastructure burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Large Rights Holders",
+      "comment": "PERSPECTIVE 4: LARGE RIGHTS HOLDERS (ROPE) \u2014 Established media companies, academic publishers, entertainment studios with powerful negotiating position (powerful, mobile exit through proprietary licensing). CC appears as optional standard for strategic brand signaling (e.g., BBC, major universities). No suppression \u2014 exit costless. Pure coordination for strategic purposes. d\u22480.40, f(d)\u22480.40, \u03c3=1.2 \u2192 \u03c7\u22480.15. Low extraction; voluntary adoption for coordination benefits."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Knowledge Movement",
+      "comment": "PERSPECTIVE 5: OPEN KNOWLEDGE MOVEMENT (SCAFFOLD) \u2014 Coalition of librarians, educators, open-source communities with organized power and constrained exit (cultural commitment to openness). Views CC as transitional coordination infrastructure: a bridge from All Rights Reserved to automated, machine-readable permissions. Sees sunset: eventual emergence of decentralized metadata standards (JSON-LD, RDFA, blockchain provenance) that make CC's centralized license taxonomy obsolete. Suppression low (can exit to alternative metadata). d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.17. Temporary coordination with visible sunset path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Copyright Institutions",
+      "comment": "PERSPECTIVE 6: LEGACY COPYRIGHT INSTITUTIONS (PITON) \u2014 Copyright agencies, collecting societies, legal institutes that formally endorse CC but maintain primary identity through All Rights Reserved licensing (institutional, arbitrage exit to proprietary licenses, civilizational horizon). Theater ratio high (0.58): CC compliance is performative for these institutions \u2014 they celebrate open licensing while driving revenue through rights management and licensing fees. Legacy systems persist through inertia despite CC's structural superiority for open coordination."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Information Structure View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN perspective) \u2014 From civilizational/universal horizon, CC's core function (expressing permissions as machine-readable standardized metadata) reflects an immutable structure: any system for decentralized coordination at scale requires standardized permission expression. The underlying constraint is informational \u2014 how to communicate intent across heterogeneous legal systems and technical platforms. However, \u03b5=0.28 and suppression=0.32 contradict mountain thresholds. This is a FALSE SUMMIT: the analytical perspective risks naturalizing a contingent institutional choice (CC's specific license taxonomy) as inherent to permission expression itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "semantic_vs_technical_interoperability",
+      "question": "Is CC's primary function semantic coordination (human-readable permission expression) or technical coordination (machine-readable license metadata)?",
+      "resolution_mechanism": "Analysis of actual license usage: percentage of CC works where downstream users consult license text vs automated detection; adoption rates of CC RDFa/JSON-LD metadata embedding vs human-only licensing",
+      "impact": "If semantic: CC succeeds through human understanding and norm-setting. If technical: CC's value depends on platform integration \u2014 extraction potential from platforms that mediate technical discovery increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Semantic vs technical primacy in CC coordination"
+    },
+    {
+      "id": "attribution_enforcement_capacity",
+      "question": "Can CC's attribution requirements (CC-BY) be enforced at scale without centralized monitoring, or does enforcement depend on platform cooperation that creates extraction points?",
+      "resolution_mechanism": "Empirical study of CC-BY violation rates; investigation of whether platforms enforce attribution vs creators voluntarily maintain it; comparison to systems with embedded cryptographic attribution (blockchain provenance)",
+      "impact": "If decentralized enforcement possible: CC remains pure coordination (Rope). If platform-dependent: platforms extract from creators through selective enforcement, making CC a Tangled Rope from creator perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of decentralized vs platform-mediated attribution enforcement"
+    },
+    {
+      "id": "commercial_remix_boundary",
+      "question": "Does CC's NonCommercial (NC) clause represent genuine restriction or artificial scarcity designed to preserve commercial licensing value?",
+      "resolution_mechanism": "Legal analysis of NC interpretation disputes; survey of creator intent in NC vs non-NC choice; measurement of whether NC adoption correlates with actual commercial exploitation prevention vs signaling of openness while retaining commercial control",
+      "impact": "If genuine restriction: CC-NC is a legitimate coordination mechanism for creators with mixed commercial/noncommercial intent. If artificial scarcity: CC-NC is extraction masked as openness \u2014 creator gets attribution signaling without actual openness burden.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether NonCommercial clause represents genuine restriction or artificial openness signaling"
+    },
+    {
+      "id": "legal_system_convergence",
+      "question": "Has CC's existence and adoption actually converged copyright law across jurisdictions toward standardized permission models, or does CC operate as a parallel system that leaves underlying copyright fragmentation intact?",
+      "resolution_mechanism": "Comparative law analysis of copyright statutes pre- and post-CC; measurement of whether CC adoption correlates with legal harmonization; investigation of whether CC's success in certain jurisdictions depends on idiosyncratic copyright statutes that CC cannot change",
+      "impact": "If convergence: CC is pure coordination solving genuine legal heterogeneity problem. If parallel system: CC creates illusion of solved coordination while underlying legal fragmentation persists \u2014 potential Snare from perspective of downstream users who must navigate both CC and local copyright law.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which CC promotes actual legal convergence vs operates as parallel system"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "The Creative Commons licensing framework emerged in the early 2000s to solve a coordination problem: copyright law defaults to maximum restriction (All Rights Reserved) but many creators want to authorize specific reuses without hiring lawyers or negotiating individually. CC provides standardized machine-readable and human-readable licenses (BY, BY-SA, BY-NC, BY-ND and their combinations) that creators can adopt to signal permission. The framework operates across jurisdictions through legal porting \u2014 translating core principles into local copyright law. CC is primarily a Rope (pure coordination mechanism) from most perspectives, but exhibits secondary extraction and performativity characteristics that make it a Tangled Rope from the platform ecosystem's view and a Piton from legacy copyright institutions. The constraint's extractiveness has increased over its interval (0.18\u21920.28) as platforms have incorporated CC as mandatory compliance infrastructure and legacy institutions have adopted CC symbolically while maintaining proprietary licensing dominance. Theater ratio has increased (0.35\u21920.55) as CC licenses have become increasingly used for institutional signaling rather than genuine permission expression \u2014 creators adopt CC-BY but upload to centralized platforms that control downstream use anyway.",
+    "key_agents": [
+      "Individual Creators: Primary beneficiary (powerless/mobile) \u2014 escape legal complexity, gain attribution, participate in commons",
+      "Creative Commons Organization: Primary coordinator (institutional/arbitrage) \u2014 maintain and evolve licensing standard, drive adoption",
+      "Platform Ecosystem: Dual agent (organized/constrained) \u2014 experience coordination benefits but bear compliance burden; constrained to integrate CC in user interfaces",
+      "Open Knowledge Movement: Organized beneficiary (organized/constrained) \u2014 view CC as transitional bridge to decentralized metadata; see sunset in emerging standards",
+      "Large Rights Holders: Secondary participants (powerful/mobile) \u2014 adopt CC strategically for brand signaling, maintain proprietary licensing for commercial works",
+      "Legacy Copyright Institutions: Institutional performers (institutional/arbitrage) \u2014 formally endorse CC while driving revenue through traditional rights management",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing CC's specific taxonomy as inherent to permission expression"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. CC primarily solves a coordination problem \u2014 creators can express nuanced permissions without legal overhead. However, extractiveness is non-zero because: (1) CC depends on platform integration for discoverability, creating latent extraction points; (2) CC-NC clause creates artificial scarcity that serves creator commercial interests while appearing open; (3) platform compliance burden falls on aggregators, not creators, creating asymmetric distribution of coordination costs. The increase from 0.18\u21920.28 reflects platforms' maturation: early CC adoption was genuinely optional for platforms, but current compliance is mandatory in many jurisdictions (e.g., GDPR derivative data sharing), making CC infrastructure an extraction point. Suppression (0.32): Moderate-low. Creators can freely adopt CC (no barriers). Downstream users can freely adopt CC-licensed work within license terms (low suppression). However, suppression is non-zero because: (1) attribution requirement for CC-BY creates friction; (2) legal heterogeneity means CC-licensed work may still face copyright liability in non-porting jurisdictions; (3) platforms mediate actual access to CC works, creating de facto suppression. Theater ratio (0.55): Moderate-high. Increasing performativity: institutions adopt CC licenses for open-access signaling while uploading to restricted platforms (YouTube, Flickr require account creation). Large publishers use CC-BY for certain journals while maintaining proprietary paywalls for others. The gap between CC signaling and actual open distribution has widened.",
+    "perspectival_gap": "Individual creators see pure Rope \u2014 CC solves their coordination problem without cost. Open knowledge movement sees Scaffold \u2014 CC is a temporary bridge with visible sunset as decentralized metadata (RDF, JSON-LD, blockchain provenance) mature. Platforms see Tangled Rope \u2014 coordination benefits mixed with mandatory compliance burden. Large rights holders see optional Rope \u2014 strategic signaling without constraint. Legacy copyright institutions see Piton \u2014 formally adopt CC while maintaining primary identity through proprietary licensing (high theater). The analytical observer risks seeing Mountain (immutable permission expression structure) but the structural data contradicts this \u2014 CC's specific six-license taxonomy is contingent, not necessary.",
+    "directionality_logic": "Individual creators: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.25. Low extraction; high benefit from legal simplification. CC Organization: Coordinator + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Negative extraction; pure beneficiary of ecosystem they coordinate. Platform Ecosystem: Victim + constrained \u2192 d\u22480.60, f(d)\u22480.75. Moderate extraction; constrained by regulatory compliance and platform norms to integrate CC, creating burden. Open Knowledge Movement: Beneficiary + constrained \u2192 d\u22480.45, f(d)\u22480.50. Low extraction; constrained by cultural commitment but benefits from CC as transition pathway. Large Rights Holders: Beneficiary + mobile \u2192 d\u22480.40, f(d)\u22480.40. Low extraction; voluntary adoption for signaling benefits. Legacy Institutions: Ambiguous + arbitrage \u2192 d\u22480.15, f(d)\u22480.05. Piton classification derives from theater (0.58), not from high chi; institutions can exit to proprietary systems.",
+    "mandatrophy_analysis": "CC resolves mandatrophy by demonstrating a pure Rope classification from the majority of perspectives. The individual creator, CC organization, open knowledge movement, and large rights holders all see genuine coordination with minimal extraction. The Tangled Rope from platforms and Piton from legacy institutions are secondary \u2014 they represent institutional inertia and selective adoption rather than the core constraint. The analytical observer's Mountain is definitively false: \u03b5=0.28 and suppression=0.32 fail every mountain gate (\u03b5 \u2264 0.25, suppression \u2264 0.05). The false summit reveals that 'standardized permission expression' is not an immutable feature of decentralized coordination \u2014 it is a contingent institutional choice by CC. Alternative approaches (blockchain provenance, cryptographic attestation, jurisdictional harmonization) could solve the same coordination problem with different structural properties."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "open_source_software_licensing",
+      "digital_copyright_law_harmonization",
+      "platform_content_moderation"
+    ],
+    "dual_formulation_note": "CC licensing is downstream of digital copyright law fragmentation (affects_constraints in reverse) and upstream of platform content policy implementation. The three-constraint family: (1) digital_copyright_law_harmonization (\u03b5\u22480.45, Tangled Rope) \u2014 legal heterogeneity creates extraction for creators and platforms; (2) creative_commons_licensing (\u03b5=0.28, Rope) \u2014 CC coordinates around legal heterogeneity without solving it; (3) platform_content_moderation (\u03b5\u22480.52, Snare) \u2014 platforms extract from creators through selective CC enforcement and attribution mediation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

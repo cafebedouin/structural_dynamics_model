@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "protocol_drift_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "protdrift"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Entropic Standard Decay",
+    "topic_domain": "technological/standards_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_implementers",
+      "proprietary_vendors"
+    ],
+    "victims": [
+      "interoperability_commons",
+      "resource_constrained_implementers",
+      "downstream_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Interoperability Commons",
+      "comment": "PERSPECTIVE 1: INTEROPERABILITY COMMONS (SNARE) \u2014 The abstract collective good of standard compatibility cannot organize or exit. Small implementers, users, and dependent systems bear the full cost of protocol fragmentation. No individual actor can force convergence; exit means abandoning the ecosystem entirely."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Resource-Constrained Implementers",
+      "comment": "PERSPECTIVE 2: RESOURCE-CONSTRAINED IMPLEMENTERS (SNARE) \u2014 Small teams, embedded systems, developing-world projects cannot absorb the cost of chasing moving targets. Each drift iteration requires re-implementation; bundled proprietary extensions create lock-in. Suppression operates through the impossibility of keeping current without dedicated resources."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Market Implementers",
+      "comment": "PERSPECTIVE 3: MID-MARKET IMPLEMENTERS (TANGLED ROPE) \u2014 Medium-sized vendors benefit from some coordination (standards reduce development risk) but face extraction: dominant vendors' proprietary extensions become de facto requirements; certification overhead increases; interop testing becomes costly. Some exit capacity through forking or alternative standards, but constrained by network effects."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Vendors",
+      "comment": "PERSPECTIVE 4: DOMINANT VENDORS (ROPE) \u2014 Large, well-capitalized vendors experience the drift as pure coordination benefit. They drive de facto extensions ('embrace and extend'), capture market share, and extract rents through incompatibility. High exit capacity: can fork the standard, create proprietary variants, or set new de facto standards. Suppression is minimal \u2014 they are doing the suppressing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Standards Development Organizations (SDOs)",
+      "comment": "PERSPECTIVE 5: STANDARDS DEVELOPMENT ORGANIZATIONS (PITON) \u2014 The SDO (W3C, IETF, ISO working groups) maintains the fiction of a unified standard through formal versioning and governance rituals, but the functional standard has fragmented years prior. Consensus processes, change control boards, and RFC procedures are largely theatrical \u2014 they lag behind deployed reality by 3-5 years. SDO persists through institutional inertia, not because its governance actually preserves standard coherence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Source Ecosystem",
+      "comment": "PERSPECTIVE 6: OPEN SOURCE ECOSYSTEM (TANGLED ROPE) \u2014 Organized open-source projects experience both coordination benefit (code reuse, shared testing infrastructure) and extraction (dominant vendors drive proprietary extensions into reference implementations; unfunded maintainers absorb the cost of supporting multiple variants). Exit options exist (fork, new standard) but are costly due to network effects. Active enforcement required: maintainers must decide whether to support 'standard' vs 'market reality.'"
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer / Sustainability View",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SUSTAINABILITY VIEW (SCAFFOLD) \u2014 From a long-term perspective, protocol drift represents a temporary coordination failure with structural sunset conditions. As tooling matures (linters, validators, conformance testing frameworks), as governance models evolve (living standards, community-driven versioning), and as stakeholder incentives align (regulatory pressure for interop, open-source investment), the extraction mechanism loses force. The drift is not inherent to standards \u2014 it is a failure mode of outdated governance models that will be replaced. Theater ratio (0.68) reflects that current SDO process is substantially performative, but the performance is gradually being displaced by functional mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_boundary",
+      "question": "Where is the boundary between legitimate performance optimization (justified divergence) and extractive lock-in (intentional incompatibility)? Are dominant vendors' proprietary extensions truly incompatible, or do they implement the standard plus additional features?",
+      "resolution_mechanism": "Source code analysis of reference implementations; specification compliance testing; vendor capability documentation. Track whether dominant vendor extensions can be disabled to achieve standard compliance, or whether compliance requires accepting vendor-specific behaviors.",
+      "impact": "If boundary is clear: extractive vendors can be identified and regulated. If boundary is blurred: hard to distinguish coordination from extraction, and the constraint may be misclassified as pure snare when victims have limited agency to conform.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary between legitimate optimization and extractive lock-in"
+    },
+    {
+      "id": "convergence_possibility",
+      "question": "Is the drift fundamentally convergent (implementers eventually synchronize around dominant-vendor reality) or divergent (incompatibilities multiply without bound)? Does the constraint have a natural equilibrium?",
+      "resolution_mechanism": "Time-series analysis of implementation variance: measure the number of distinct protocol variants, the pairwise interoperability matrix density, and the rate of new incompatibilities appearing. Track whether variance is stabilizing, growing, or oscillating.",
+      "impact": "If convergent: drift is a temporary coordination problem (Scaffold framing is structural). If divergent: drift is extractive and self-reinforcing, and the snare classification dominates. If oscillating: constraint cycles between coordination and extraction phases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether protocol drift is convergent, divergent, or oscillating"
+    },
+    {
+      "id": "governance_model_effectiveness",
+      "question": "Do newer governance models (RFC process with early reference implementations, living standards, community-driven versioning) actually reduce the rate of undocumented drift, or do they merely shift the venue where drift occurs (from proprietary extensions to de facto standard tweaks)?",
+      "resolution_mechanism": "Comparative analysis: measure drift accumulation under traditional SDO governance (W3C, ISO) vs. community-driven governance (WHATWG, Python Enhancement Proposals, Node.js LTS). Track time-lag between specification change and deployment reality; measure conformance test failure rates.",
+      "impact": "If newer models work: sunset mechanism is real, and the constraint has a structural decay path. If they don't work: governance model choice is cosmetic, and the constraint is a persistent structural feature of decentralized protocol evolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether newer governance models reduce drift rate"
+    },
+    {
+      "id": "incentive_asymmetry_source",
+      "question": "Is the extraction mechanism primarily driven by vendor incentives (embrace-and-extend lock-in strategy) or by user-driven feature pressure (implementers adding functionality users demand, creating de facto extensions)? Or both equally?",
+      "resolution_mechanism": "Survey of dominant vendor strategy documents and patent filings; analysis of feature request patterns in issue trackers and user forums; timeline correlation between user demand spikes and implementation divergence events.",
+      "impact": "If vendor-driven: snare classification is correct; regulation could target proprietary extensions. If user-driven: the constraint is partly coordination failure, and solutions require collective standardization of user-demanded features. If equally both: constraint is a deeper structural feature of decentralized ecosystems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether drift is vendor-driven or user-driven"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Protocol drift accumulation is a structural constraint that emerges when a foundational standard (initially a pure coordination mechanism) undergoes incremental, undocumented modifications across different implementations. Over time, the 'standard' fragments into multiple incompatible variants. Dominant vendors drive proprietary extensions; small implementers cannot absorb the cost of chasing moving targets; users and downstream systems face unpredictable interoperability failures. The constraint begins as Rope (genuine coordination value) but accumulates extraction as divergence increases. The extractiveness (0.52) and suppression (0.58) reflect that the constraint is now a hybrid: there remains genuine coordination benefit in having a shared baseline, but dominant vendors extract rents through incompatible extensions, and small actors are locked in with limited exit options. The theater ratio (0.68) shows that formal standards governance has become substantially performative \u2014 SDOs publish versioned specifications and manage change control, but the functional standard has already fragmented into deployed reality. The constraint exhibits all perspectives except uniform-type uniformity: different actors experience radically different classifications depending on their position in the vendor/implementation hierarchy and their resource constraints.",
+    "key_agents": [
+      "Dominant Vendors: Primary beneficiaries (institutional/arbitrage) \u2014 drive proprietary extensions, capture market share through lock-in, have full exit capacity",
+      "Resource-Constrained Implementers: Primary victims (powerless/trapped) \u2014 cannot absorb cost of chasing moving targets; locked in by network effects; embedded systems face permanent obsolescence",
+      "Interoperability Commons: Secondary victim (powerless/trapped) \u2014 abstract collective good that cannot organize; bears fragmentation cost across entire ecosystem",
+      "Mid-Market Implementers: Mixed position (moderate/constrained) \u2014 benefit from coordination but face extraction through vendor lock-in; some exit capacity through forking or alternatives",
+      "Open Source Ecosystem: Organized victims (organized/mobile) \u2014 absorb compatibility cost in reference implementations; maintain multiple code paths to support divergent implementations",
+      "Standards Development Organizations: Institutional actors (organized/constrained) \u2014 maintain formal governance rituals that are increasingly theatrical; lag 3-5 years behind deployed reality",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 identifies constraint as temporary failure of governance models that will be replaced with more functional mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint started as low-extraction coordination (\u03b5 \u2248 0.05) but has accumulated extraction as divergence increased. The current value (0.52) reflects that dominant vendors extract rents through incompatible extensions, but the extraction is not total because the base standard still provides genuine coordination value. The growth trajectory from 0.28 to 0.52 shows Goodhart drift \u2014 as the metric (market share of compatible implementations) became the target, gaming increased and real coordination decreased. Suppression (0.58): Moderate-high. Resource-constrained implementers cannot exit the standard ecosystem without abandoning users; network effects prevent forking; compliance testing is costly. But suppression is not total because some documentation exists, reference implementations are available, and exit is theoretically possible (though practically prohibitive). Theater ratio (0.68): High and increasing. The formal standards process (RFC procedures, working group consensus, change control boards) is increasingly disconnected from market reality. Dominant vendors implement features before SDO approval; smaller implementers chase deployed variants rather than published specifications; users encounter undocumented behaviors that are not reflected in official docs. The theater has grown as the gap between specification and deployment has widened.",
+    "directionality_logic": "Directionality derives from structural position relative to the extraction flow. Dominant vendors (beneficiaries with arbitrage exit) experience negative effective extraction \u2014 the constraint subsidizes them through lock-in rent. Resource-constrained implementers (victims with trapped exit) experience maximum effective extraction \u2014 they absorb all costs with no alternatives. Mid-market implementers (moderate power, constrained exit) experience mid-range extraction \u2014 they benefit from coordination but cannot escape proprietary extension lock-in. The open-source ecosystem (organized, mobile exit) has the capacity to fork or create alternatives, so experienced extraction is moderate even though they bear high implementation costs. SDOs (organized, constrained exit) experience the constraint as degraded inertia \u2014 they maintain governance procedures that no longer shape deployment reality, persisting through institutional momentum rather than functional necessity. The analytical observer sees the constraint as temporary \u2014 governance models will evolve, tooling will improve, and the extraction mechanism will decay as communities demand and enforce interop testing.",
+    "perspectival_gap": "The perspectival gap is stark. Dominant vendors (Rope) see pure coordination benefit \u2014 the standard legitimizes their implementations and enables market expansion. Resource-constrained implementers (Snare) see pure extraction \u2014 they are locked into an incompatible, moving target that they cannot escape. The open-source ecosystem (Tangled Rope) sees both \u2014 genuine code reuse and shared tooling (coordination) alongside the burden of maintaining multiple code paths to support proprietary variants (extraction). SDOs (Piton) see their own degraded process \u2014 they perform governance rituals that have decoupled from functional standardization. The analytical observer (Scaffold) sees the constraint as a transitional failure state that will be resolved as governance evolves and community mechanisms (issue tracking, conformance testing, living standards) replace formal SDO procedures. The gap arises because the constraint's extractiveness depends entirely on the actor's ability to absorb the cost of divergence \u2014 resource asymmetry creates asymmetric classification.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that the initial Rope classification (pure coordination) was accurate at inception but has degraded over time as dominant vendors extracted rents through incompatible extensions. The progression (Rope \u2192 Tangled Rope \u2192 possible future Snare) shows that the constraint is not fundamentally either coordination or extraction \u2014 it is a hybrid that has shifted along the spectrum as extraction accumulated. The Piton perspective reveals that formal SDO governance has become theatrical \u2014 the rituals persist through inertia while functional standardization happens elsewhere (in deployed code, issue trackers, community forums). The Scaffold perspective identifies the exit path: as tooling (linters, validators, conformance testing), governance (living standards, community-driven versioning), and incentives (regulatory pressure for interop) improve, the extraction mechanism will decay. No mandatrophy remains: the constraint exhibits genuine coordination value (still), genuine extraction (currently), and a plausible sunset mechanism (emerging)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "html_compatibility_matrix",
+      "tls_version_fragmentation",
+      "javascript_engine_variance"
+    ],
+    "dual_formulation_note": "Protocol drift accumulation is a meta-constraint that affects multiple domain-specific standards. Each affected constraint (HTML compatibility, TLS version support, JavaScript semantics) has its own extractiveness value reflecting the specific technical domain; this story captures the generic structural pattern of how coordination standards decay into extraction over time. The network links identify constraint families where the same drift mechanism operates."
+  },
+  "directionality_overrides": []
+}

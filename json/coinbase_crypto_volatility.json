@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "coinbase_crypto_volatility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cbvol"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Centralized Exchange Market Structure on Volatile Assets",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "exchange_operators",
+      "high_frequency_traders",
+      "market_makers"
+    ],
+    "victims": [
+      "retail_traders",
+      "long_term_holders",
+      "market_price_discovery"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Retail Trader",
+      "comment": "PERSPECTIVE 1: RETAIL TRADER (SNARE) \u2014 Trapped in the exchange structure with no meaningful exit. Experiences maximum extraction through liquidity spreads, order slippage, forced settlement within high-volatility windows, and exposure to algorithmic front-running. No ability to negotiate terms or access alternative market infrastructure. Cannot exit without abandoning position, which incurs precisely the extraction costs they seek to avoid."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Long-Term Holder",
+      "comment": "PERSPECTIVE 2: LONG-TERM HOLDER (TANGLED ROPE) \u2014 Constrained by network effects (liquidity available only on centralized exchanges) but also benefits from price discovery and settlement speed that the exchange provides. Experiences extraction through custody risk, price impact on large trades, and forced participation in volatile market microstructure during entry/exit. But the coordination function (24/7 market access, transparent orderbook) is genuinely valuable for medium-term position management."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Maker",
+      "comment": "PERSPECTIVE 3: MARKET MAKER (ROPE) \u2014 Experiences the constraint as pure coordination: the volatility creates liquidity opportunities, settlement speed enables profit, and the exchange's infrastructure (order matching, risk controls) is their primary enabling mechanism. Net beneficiary. Can arbitrage across venues and withdraw capital with minimal friction. Views the constraint as a coordination solution to the collective action problem of maintaining distributed market liquidity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exchange Operator",
+      "comment": "PERSPECTIVE 4: EXCHANGE OPERATOR (ROPE) \u2014 Benefits from network effects and transaction volume that volatility generates. The constraint's core function is coordination: providing a centralized, standardized settlement mechanism that enables traders with heterogeneous risk tolerances to interact. The exchange's extractive capacity (spread capture, fee structure) is a necessary incentive to maintain the coordination platform. High exit options (can rebalance fee structure, redirect to derivative products, or integrate new assets)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Decentralized Finance (DeFi) Coalition",
+      "comment": "PERSPECTIVE 5: DECENTRALIZED FINANCE COALITION (TANGLED ROPE) \u2014 Organized agents building alternative market structures (liquidity pools, automated market makers, peer-to-peer settlement) that compete with centralized exchanges. Constrained by smart contract limitations, validator coordination, and liquidity fragmentation. But also benefits from the exchange's discovery of price information and volatility signals. Sees the centralized structure as both oppressive (extraction via custody risk, regulatory risk concentration) and temporarily necessary (until decentralized coordination matures). The sunset implicit in DeFi growth."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Price Discovery Mechanism",
+      "comment": "PERSPECTIVE 6: PRICE DISCOVERY MECHANISM (SNARE) \u2014 The abstract function of determining fair asset prices is trapped within a structure that incentivizes volatility over stability. The exchange's fee structure rewards high-frequency trading, which distorts price discovery. Information asymmetries between retail and institutional traders prevent price signals from reflecting true fundamental value. The market mechanism itself becomes a victim of extraction: prices reflect order flow manipulation and liquidity-seeking rather than underlying asset value."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/analytical perspective, some market volatility is inherent to price discovery in decentralized assets. Any mechanism that aggregates heterogeneous price expectations will exhibit volatility proportional to information dispersion. This perspective risks naturalizing what is actually institutional design: the volatility observed on Coinbase reflects not only fundamental asset properties but also fee structures, order types offered, trading hours, and margin requirements \u2014 all contingent choices. The engine's false summit detector should flag this as naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "volatility_fundamental_vs_institutional",
+      "question": "How much of crypto asset price volatility is inherent to decentralized assets versus produced by centralized exchange market microstructure?",
+      "resolution_mechanism": "Comparative volatility analysis: on-chain transaction patterns vs exchange orderbook activity; volatility on decentralized vs centralized exchanges for identical assets; historical volatility pre/post-exchange adoption",
+      "impact": "If institutional (>60% exchange-generated): extractiveness should be higher (0.62+), classification remains Tangled Rope. If fundamental (<40% exchange-generated): extractiveness should be lower (0.38), may degrade to Rope-dominated perspectives. If mixed: validates current \u03b5=0.52.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of volatility to fundamental vs institutional factors"
+    },
+    {
+      "id": "retail_exit_feasibility",
+      "question": "Do retail traders have genuine exit options to decentralized exchanges, peer-to-peer settlement, or self-custody without prohibitive cost or skill barriers?",
+      "resolution_mechanism": "User adoption rates for DeFi platforms by retail cohort; transaction cost comparison (centralized vs decentralized); survey of barriers cited by retail traders attempting decentralized settlement",
+      "impact": "If exit costs are prohibitive (gas fees, UI complexity, smart contract risk): retail perspective confirmed as Snare. If exits become accessible (layer-2 solutions mature, UX improves): retail perspective shifts toward Tangled Rope or Rope, extractiveness declines.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether retail traders have feasible alternative market structures"
+    },
+    {
+      "id": "fee_extraction_vs_coordination_cost",
+      "question": "What fraction of exchange fees represents true operational and infrastructure cost versus rent extraction from volatility-induced trading activity?",
+      "resolution_mechanism": "Detailed cost accounting by exchange; comparison of fee structure to marginal cost of execution; analysis of fee changes during low-volatility versus high-volatility periods",
+      "impact": "If fees exceed operational costs by >30%: Snare classification strengthened for victim perspectives. If fees approach marginal cost: classification downgrades toward pure Rope. Determines whether exchange is pricing coordination or extracting rents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of exchange fees to operational infrastructure costs"
+    },
+    {
+      "id": "custody_centralization_necessity",
+      "question": "Is centralized custody a necessary technical requirement for efficient settlement, or a chosen institutional arrangement that concentrates extraction risk?",
+      "resolution_mechanism": "Technical analysis of settlement protocols; adoption rate of non-custodial trading interfaces; comparison to traditional securities markets' custody models",
+      "impact": "If necessary: justifies Rope perspectives (coordination requirement). If chosen: strengthens Snare perspectives (unnecessary centralization enables extraction). May reveal architectural alternatives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether centralized custody is technical requirement or institutional choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Centralized crypto exchanges like Coinbase create a market structure that simultaneously solves a genuine coordination problem (aggregating liquidity across dispersed participants) and extracts rents from the volatility this aggregation produces. The constraint is neither pure coordination nor pure extraction, but a hybrid that depends entirely on the observer's structural position. For retail traders, the exchange is a snare: they are trapped by network effects and must pay for market access through spreads, slippage, and forced settlement during high-volatility windows. For market makers and exchange operators, it is coordination: the infrastructure enables profitable arbitrage and reduces counterparty risk. For the DeFi coalition, it is a temporary structure facing sunset as layer-2 protocols and decentralized order books mature. The theater ratio (0.48) reflects that exchange operations are substantially functional (real settlement, real price discovery) but include performative elements (regulatory theater, compliance optics). The volatility itself is both a fundamental property of crypto assets and an institutional artifact: decentralized price discovery creates inherent variance, but exchange fee structures and order type design amplify it by rewarding high-frequency trading over long-term holding.",
+    "key_agents": [
+      "Exchange Operators (Coinbase, Kraken, etc.): Primary beneficiary (institutional/arbitrage) \u2014 capture transaction fees, spread revenue, and network effects from concentration of order flow",
+      "Retail Traders: Primary victim (powerless/trapped) \u2014 forced to absorb spreads, slippage, and volatility-driven settlement costs; no meaningful exit options",
+      "Market Makers and HFT Firms: Secondary beneficiary (institutional/arbitrage) \u2014 profit from volatility signals and liquidity provision incentives; can arbitrage across venues",
+      "Long-Term Holders: Secondary victim (moderate/constrained) \u2014 benefit from liquidity and settlement speed but exposed to custody risk and forced participation in volatile market microstructure",
+      "DeFi Coalition: Organized competitor (organized/constrained) \u2014 building alternative structures but constrained by technical immaturity and liquidity fragmentation; benefits indirectly from exchange price discovery",
+      "Price Discovery Mechanism: Abstract victim (powerless/trapped) \u2014 market signals distorted by order flow manipulation and high-frequency noise; cannot exit distortion"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The exchange captures economic surplus through two mechanisms: (1) transactional extraction via spreads and fees that exceed marginal settlement cost, and (2) volatility capture via fee structures that reward high-frequency trading over long-term holding. The value reflects that genuine coordination value is provided (settlement, liquidity aggregation), but the fee structure extracts beyond coordination cost. Suppression (0.58): Moderate-high. Barriers to exit include network effects (liquidity only available on centralized exchanges), regulatory risk concentration (alternative platforms face compliance uncertainty), technical barriers (retail users cannot efficiently run self-custody or DeFi protocols), and information asymmetries (retail traders lack access to order flow data that institutional traders use). Custody centralization adds risk concentration that suppresses individual exit options. Theater ratio (0.48): Moderate. Exchange operations are substantially functional (real-time settlement, transparent pricing, risk management) but include performative components (regulatory compliance optics, UI signaling of legitimacy, marketing of stability assurances). The ratio is rising because increased regulatory scrutiny has increased compliance theater while core settlement infrastructure remains unchanged.",
+    "perspectival_gap": "The retail trader (powerless/trapped) experiences pure extraction (Snare) \u2014 they cannot exit and absorb all costs. The market maker (institutional/arbitrage) experiences pure coordination (Rope) \u2014 volatility is their profit source and the exchange provides enabling infrastructure. The exchange operator sees Rope from their position \u2014 they are solving the coordination problem of distributed liquidity. The DeFi coalition sees a structure with sunset (Tangled Rope degrading toward Scaffold) \u2014 the centralized constraint is temporary pending protocol maturation. The long-term holder occupies a middle ground (Tangled Rope) \u2014 they benefit from liquidity but are extracted from through forced participation in volatile market microstructure. The abstract price discovery mechanism is a victim (Snare) \u2014 information signals are distorted by extraction incentives. The analytical observer risks a false summit (Mountain) by naturalizing volatility as an inherent property of crypto assets when much is institutional choice (fee structures, order types, leverage availability). The gap between retail and institutional perspectives is maximal \u2014 they experience fundamentally different constraints from identical market infrastructure.",
+    "directionality_logic": "Directionality for each agent is derived from their structural position relative to extraction flow: (1) Beneficiaries with arbitrage options (market makers, exchange operators) experience low d \u2192 negative or near-zero effective extraction \u03c7. They see the constraint as coordination. (2) Victims with trapped exit (retail traders) experience high d \u2192 high \u03c7. They see maximum extraction. (3) Agents with constrained exit (long-term holders, DeFi coalition) occupy middle ground (d \u2248 0.55-0.65). (4) Abstract victims (price discovery) have no agency and trapped exit \u2192 d \u2248 1.0, perceiving pure extraction. The engine's derivation chain computes d from beneficiary/victim declarations and exit options. The powerless retail trader gets high d because they are labeled a victim with trapped exit. The institutional market maker gets low d because they are labeled a beneficiary with arbitrage options. The organized DeFi coalition gets moderate d because they are labeled a victim with constrained (not trapped) exit \u2014 they have exit paths through protocol development but face near-term constraints.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy (Rope vs Snare confusion) by showing that both are correct from different structural positions. The key discriminator is exit options: institutional agents with arbitrage capacity (market makers, exchange operators) genuinely experience the constraint as coordination (Rope) \u2014 they choose to participate and can withdraw. Powerless agents with trapped exits (retail traders) experience it as extraction (Snare) \u2014 they cannot exit without prohibitive cost. The tangled rope classification at the moderate/constrained level captures the middle case where coordination value is real but extraction is significant. The mandatrophy resolution reveals that 'Is this a market or a trap?' depends on 'Can you walk away?' For retail traders the answer is no; for institutions it is yes. The exchange is simultaneously solving a real coordination problem and extracting rents by controlling the only solution. No single type is correct \u2014 the presheaf of perspectives over the market structure is the complete answer."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cryptographic_custody_risk",
+      "blockchain_scalability_trilemma",
+      "regulatory_arbitrage_crypto_jurisdictions"
+    ],
+    "dual_formulation_note": "The centralized exchange constraint is downstream of blockchain scalability limits (which make decentralized exchange less feasible) and custody technology immaturity. It also enables regulatory arbitrage by concentrating rule enforcement at exchange layer. Each upstream constraint has its own extractiveness; the exchange constraint represents the institutional response to upstream structural limitations."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "fiscal_dominance_trap",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fiscal"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "The Debt-Monetary Bind",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": false,
+    "victims": [
+      "inflation_control_capacity",
+      "currency_creditors",
+      "working_age_population"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Currency Creditor",
+      "comment": "PERSPECTIVE 1: CURRENCY CREDITOR (SNARE) \u2014 Holds government debt denominated in local currency. Cannot exit without realizing losses. Central bank rate increases devalue their holdings through inflation or capital loss; rate decreases erode real returns. Trapped between monetary tightening (insolvency risk) and loose money (debasement). d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Working-Age Population",
+      "comment": "PERSPECTIVE 2: WORKING-AGE POPULATION (SNARE) \u2014 Wage earners cannot exit the constraint. Caught between: (a) loose monetary policy erodes real wages through inflation, (b) tight monetary policy triggers unemployment. No exit option. Trapped through employment dependence and currency-local savings. d\u22480.90, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Central Bank",
+      "comment": "PERSPECTIVE 3: CENTRAL BANK (TANGLED ROPE) \u2014 Nominally independent but structurally constrained. Coordination function: monetary policy stabilization. But enforcement is constrained by fiscal dominance \u2014 raising rates to fight inflation risks triggering sovereign debt crisis. Benefits from: maintained monetary authority narrative, technical credibility in benign fiscal regimes. Costs: actual power eroded, forced choice between mandate failure (inflation) or solvency crisis (debt spiral). d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fiscal Authority (Government)",
+      "comment": "PERSPECTIVE 4: FISCAL AUTHORITY / GOVERNMENT (ROPE) \u2014 Primary beneficiary. Fiscal dominance allows government to run primary deficits without immediate market discipline. Central bank monetization (implicit or explicit) provides backstop. Experiences constraint as coordination mechanism: monetary accommodation enables fiscal transfers. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary through arbitrage exit (can shift costs to central bank, currency debtors)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Financial Stability Regulator",
+      "comment": "PERSPECTIVE 5: FINANCIAL STABILITY REGULATOR (PITON) \u2014 Maintains performative stress-testing and macroprudential regulation, but actual function is diminished. Regulation persists through institutional ritual (Basel III, stress tests, capital requirements) even though systemic risk is now driven by fiscal dominance, not bank leverage. Theater ratio = 0.55 reflects that roughly half of regulatory output is response to fiscal constraint rather than actual financial-sector risk management. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.41."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Monetary Community",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL MONETARY COMMUNITY (SCAFFOLD) \u2014 Organized actors (IMF, multilateral development banks, peer central banks) can temporarily mitigate fiscal dominance through: (a) emergency financing, (b) capacity-building for fiscal reform, (c) coordination of debt restructuring expectations. But the fundamental exit (fiscal consolidation or debt haircut) remains. Sunset logic: fiscal consolidation or external discipline eventually breaks the trap. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.15. Moderate suppression by external monitoring; organized actors have exit pathways (conditionality, multilateral governance)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risks naturalization: 'Fiscal dominance is an inherent feature of monetary systems where sovereign debt is substantial.' But the structural data (\u03b5=0.58, suppression=0.72, theater=0.55) contradicts the mountain classification. Fiscal dominance is contingent on: (a) debt-to-GDP ratios, (b) maturity structure, (c) exchange rate regime, (d) inflation expectations \u2014 all policy-dependent variables. A low-debt state experiences no fiscal dominance trap. The mountain perspective is a false summit revealing how much contingent institutional arrangement naturalizes as 'law of economics.'"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fiscal_consolidation_feasibility",
+      "question": "Is fiscal consolidation (reducing primary deficits) politically feasible before the fiscal dominance trap becomes self-reinforcing through currency debasement and capital flight?",
+      "resolution_mechanism": "Historical comparison of fiscal consolidation attempts in similar fiscal dominance regimes; measurement of political party consensus on deficit reduction; polling on citizen willingness to accept austerity vs inflation",
+      "impact": "If feasible (<2 years to credible consolidation plan): trap is temporary (scaffold). If infeasible (>5 years): trap becomes permanent structural feature requiring debt restructuring or high inflation equilibrium (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political feasibility window for fiscal consolidation before self-reinforcement"
+    },
+    {
+      "id": "central_bank_monetary_transmission",
+      "question": "At what level of fiscal dominance does central bank monetary policy transmission mechanism break entirely (rate changes no longer affect inflation or employment)?",
+      "resolution_mechanism": "Empirical monetary policy event study: compare inflation response and employment response to policy rate shocks before vs during fiscal dominance regime; measure credibility of forward guidance",
+      "impact": "If transmission breaks before fiscal crisis (\u03b5\u21920.75): central bank is neutered faster than commonly assumed. If transmission persists through crisis (\u03b5 stays ~0.58): central bank retains some indirect control through expectations management.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "At what fiscal dominance level does monetary transmission break"
+    },
+    {
+      "id": "debt_sustainability_threshold",
+      "question": "What debt-to-GDP ratio or debt service cost threshold triggers market confidence collapse and forces immediate fiscal adjustment or debt restructuring?",
+      "resolution_mechanism": "Cross-country analysis of debt crises; measurement of CDS spreads, currency volatility, and capital flight timing relative to debt metrics; identification of discontinuities in market behavior",
+      "impact": "If threshold is high (>150% debt-to-GDP): fiscal dominance trap can persist longer, increasing entrapment severity. If threshold is low (<80%): trap triggers sooner, enabling earlier structural adjustment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Debt threshold triggering market confidence collapse"
+    },
+    {
+      "id": "inflation_expectations_anchoring",
+      "question": "Can central bank maintain inflation expectations anchoring through communication alone once fiscal dominance becomes widely recognized, or does credibility erode inevitably?",
+      "resolution_mechanism": "Time-series analysis of inflation swap rates, survey-based inflation expectations, and central bank communication tone; measurement of divergence between forward-guidance and market pricing",
+      "impact": "If anchoring persists (expectations remain <3% despite fiscal dominance): constraint severity is overstated; central bank retains credibility tool. If anchoring fails (expectations drift >4%): fiscal dominance becomes visible to market, accelerating capital flight.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether inflation expectations remain anchored under fiscal dominance recognition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The fiscal dominance trap is a structural bind where a central bank loses monetary independence because its primary policy tool \u2014 raising interest rates to control inflation \u2014 would trigger government debt insolvency. This occurs when government debt is large relative to GDP and maturity structure is short, making interest rate increases immediately explosive for debt servicing costs. The constraint is active when: (1) debt-to-GDP exceeds ~90%, (2) primary deficit is structurally large (cannot be closed by growth alone), (3) central bank holds significant government debt (either explicitly or through financial system stability concerns). The trap creates a dilemma: loose monetary policy causes inflation and currency debasement (harming savers and wage-earners), while tight monetary policy triggers sovereign debt crisis (harming everyone through financial instability). Neither option exits the constraint; both are forms of extraction. The constraint is not inherent to any monetary system \u2014 it is contingent on debt accumulation and fiscal structure. Low-debt economies (e.g., Germany <60% debt-to-GDP) experience no fiscal dominance trap. The theater ratio (0.55) reflects that central banks maintain inflation-targeting frameworks and independence narratives even when those frameworks are operationally constrained by fiscal dominance. Regulatory stress tests and macroprudential regulation persist as performative activity once fiscal dominance becomes the binding constraint \u2014 the theater is the communication of central bank control that no longer exists.",
+    "key_agents": [
+      "Central Bank: Institutional actor with constrained exit (institutional/constrained) \u2014 nominally independent but structurally dominated by fiscal authority",
+      "Fiscal Authority (Government): Primary beneficiary (institutional/arbitrage) \u2014 captures benefits of monetary accommodation; can run deficits without immediate discipline",
+      "Currency Creditors: Primary victims (powerless/trapped) \u2014 hold government debt; unable to exit without losses; trapped between rate risk and inflation risk",
+      "Working-Age Population: Secondary victims (powerless/trapped) \u2014 wage-earners trapped between inflation and unemployment",
+      "Financial Stability Regulator: Institutional actor (institutional/constrained) \u2014 maintains performative regulation; actual function degraded",
+      "International Monetary Community: Organized actors (organized/constrained) \u2014 can provide temporary scaffolding through multilateral financing and coordination"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from savers and wage-earners through the forced choice between inflation and unemployment. Extraction increases over time as debt accumulates (initial \u03b5=0.32 \u2192 final \u03b5=0.58) because the range of policy options narrows. The original fiscal authority captures benefits of monetary accommodation at the cost of creditor and worker welfare. Suppression (0.72): High. Exits are severely constrained: (a) creditors cannot exit debt holdings without realizing losses; (b) workers cannot exit employment or currency dependence; (c) central bank cannot raise rates without triggering fiscal crisis. The only exit is emigration (arbitrage for high-skill workers) or debt restructuring (coercive). Suppression reflects that alternatives to accepting the bind are politically difficult or expensive. Theater ratio (0.55): Moderate. Central banks maintain inflation-targeting frameworks, independence narratives, stress-testing programs, and forward guidance. Roughly half of this activity is genuine coordination (managing expectations, technical credibility) and half is performative \u2014 the framework persists even though the constraint is now driven by fiscal fundamentals, not monetary technique. The theater increases slightly over the interval (0.35\u21920.55) as the gap between stated mandate and operational capacity widens.",
+    "perspectival_gap": "The fiscal dominance trap produces a sharp perspectival gap between beneficiaries and victims. The fiscal authority (government) sees Rope \u2014 monetary accommodation as a coordination mechanism enabling fiscal transfers. They experience low extraction (d\u22480.08) and benefit from the arbitrage of shifting costs to savers and monetary authorities. The central bank sees Tangled Rope \u2014 they have a genuine coordination function (monetary stability) but cannot execute it without triggering fiscal crisis. Their d rises to 0.68 because the structural constraint now extracts their autonomy. Currency creditors and workers see Snare \u2014 they experience maximal extraction (d\u22480.90+) with no exit option. The international community sees Scaffold \u2014 they can provide temporary mitigation through multilateral financing, but the fundamental problem (fiscal consolidation or debt restructuring) remains. The analytical observer risks a Mountain perspective (naturalizing 'inherent fiscal constraint') but the structural data reveals this as a false summit: the trap depends entirely on debt-to-GDP and primary deficit ratios, both of which are policy-contingent.",
+    "directionality_logic": "Fiscal Authority: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Monetary accommodation allows continued deficits. Central Bank: Victim (of fiscal dominance) + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction of autonomy. Cannot raise rates without triggering crisis. Cannot lower rates without ignoring inflation mandate. Currency Creditors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. No exit from debt holdings. Rate increases devalue holdings; rate decreases debase currency. Workers: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. Maximum extraction. No exit from employment or currency dependence. Trapped between inflation and unemployment. Financial Regulator: Victim (of fiscal constraint) + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction. Original prudential function is constrained; regulation becomes performative. International Community: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction; organized actors have exit pathways and can provide temporary scaffolding.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The snare classification resolves the mandatrophy by showing that fiscal dominance is NOT a natural law (false mountain) and NOT a coordination mechanism (false rope). It is pure extraction: the constraint forces a choice between two bad outcomes (inflation or unemployment), both of which harm the victims. The coordination function \u2014 monetary stability \u2014 is genuine in benign fiscal regimes but is completely dominated by fiscal dynamics once debt-to-GDP is high. The central bank's mandate becomes incompatible with government solvency. This is NOT a temporary or beneficial constraint (rope/scaffold) that should be maintained. It is an extractive trap (snare) that reflects fiscal irresponsibility, not monetary necessity. The difference between this and a true coordination problem (e.g., inflation targeting with low debt, where rate increases protect savers and workers by maintaining currency value) is precisely the fiscal dominance: when debt is sustainable, monetary tightening is a coordination good. When debt is unsustainable, the same monetary tightening becomes extraction. The extractiveness (0.58) and suppression (0.72) scores confirm snare classification: high extraction, severe suppression of alternatives, no genuine coordination function once fiscal solvency is at risk."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "currency_credibility",
+      "sovereign_debt_sustainability",
+      "inflation_expectations_formation"
+    ],
+    "dual_formulation_note": "Fiscal dominance is downstream of government debt accumulation and primary deficit structure. These upstream constraints have their own \u03b5 values reflecting fiscal sustainability; fiscal dominance represents the specific coupling mechanism between monetary independence and fiscal solvency. Decomposition: (1) sovereign_debt_sustainability (\u03b5=0.35, structural debt dynamics), (2) fiscal_dominance_trap (\u03b5=0.58, monetary-fiscal coupling), (3) inflation_expectations_formation (\u03b5=0.42, belief cascade from fiscal dominance recognition)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.68
+    }
+  ]
+}

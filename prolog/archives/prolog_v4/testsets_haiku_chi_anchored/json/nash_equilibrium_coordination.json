@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "nash_equilibrium_coordination",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nash"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Nash Equilibrium as Coordination Mechanism",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "rational_agents",
+      "game_structure_designers"
+    ],
+    "victims": [],
+    "accessibility_collapse": 0.88,
+    "resistance": 0.12
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Individual Rational Agent",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL RATIONAL AGENT (ROPE) \u2014 Agents within a Nash equilibrium experience it as pure coordination. No agent benefits from unilateral deviation; each agent's strategy is optimal given others' strategies. d\u22480.50, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.17. Low extraction because the agent is already optimized relative to available moves."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Analyst",
+      "comment": "PERSPECTIVE 2: MATHEMATICAL ANALYST (MOUNTAIN) \u2014 Nash equilibrium is a mathematical inevitability for finite games with rational agents. The theorem (Nash 1950) proves existence for mixed-strategy equilibria in all finite non-cooperative games. \u03b5\u22480.08, emergence is mathematical necessity, not contingent institutional arrangement. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09. This is a true mountain: the constraint emerges from logical structure of preference and rationality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Strategic Game Designer",
+      "comment": "PERSPECTIVE 3: STRATEGIC GAME DESIGNER (TANGLED ROPE) \u2014 Designers of economic or institutional games (market structure, voting rules, auction mechanisms, organizational incentives) use Nash equilibrium to engineer specific outcomes. They benefit from equilibria that extract rent or consolidate power while maintaining the appearance of rational coordination. d\u22480.35, f(d)\u22480.30, \u03c3=0.9 \u2192 \u03c7\u22480.09. The equilibrium provides both genuine coordination (agents remain in place) and hidden asymmetry (designer chose which equilibrium to instantiate among multiple possible ones)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Trapped Participant in Suboptimal Equilibrium",
+      "comment": "PERSPECTIVE 4: TRAPPED IN SUBOPTIMAL EQUILIBRIUM (SNARE) \u2014 Many games have multiple Nash equilibria, and agents can be trapped in Pareto-inferior equilibria (e.g., arms races, pollution commons, wage races). Each agent is locally optimal (no unilateral deviation improves their payoff) but collectively worse off. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.37. High extraction because agents cannot escape the Pareto-inferior trap without coordinated simultaneous deviation (which non-cooperative games forbid)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Coalition Building Cooperative Alternative",
+      "comment": "PERSPECTIVE 5: COALITION SEEKING COOPERATIVE ESCAPE (SCAFFOLD) \u2014 Organized agents (unions, trade associations, regulatory coalitions) attempt to coordinate deviations from suboptimal Nash equilibria by binding themselves to higher-payoff correlated equilibria or cooperative solutions (e.g., cartel agreements, labor contracts, regulatory standards). \u03c7\u22640.30 if the coalition has real enforcement power; theater\u22640.70 if the solution is functionally durable. d\u22480.45, f(d)\u22480.45, \u03c3=1.0 \u2192 \u03c7\u22480.14. The constraint (suboptimal equilibrium trap) has a sunset: binding commitment mechanisms can shift the game structure itself."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Vestigial Equilibrium Concept",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL VESTIGIAL USE (PITON) \u2014 In complex social systems (geopolitics, organizational hierarchies, financial markets), the Nash equilibrium concept persists as explanatory framework even where the preconditions (finite games, rational agents, common knowledge of payoffs) are severely violated. The concept is maintained through academic inertia and provides theater for explaining what are actually path-dependent institutional arrangements. theater_ratio\u22480.75, \u03b5\u22480.12. d\u22480.20, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.01. The constraint is mostly drained of explanatory power."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "multiple_equilibria_selection",
+      "question": "When multiple Nash equilibria exist, what mechanism selects which equilibrium will be played?",
+      "resolution_mechanism": "Empirical game experiments; study of focal points (Schelling points), historical precedent, communication pre-play; analysis of refinements (perfect equilibrium, proper equilibrium) in real strategic situations",
+      "impact": "If selection is exogenous (designer chooses): Nash equilibrium is a tool for extraction engineering (Tangled Rope or Snare from designer's perspective). If selection is endogenous (agents coordinate on focal point): Nash equilibrium is pure coordination (Rope). If selection is path-dependent and opaque: Nash equilibrium is a piton (post-hoc rationalization).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mechanism for selecting among multiple equilibria"
+    },
+    {
+      "id": "rationality_assumption_validity",
+      "question": "Do actual agents in economic/social systems satisfy the rationality assumptions (expected utility maximization, belief formation, perfect foresight) required for Nash equilibrium prediction?",
+      "resolution_mechanism": "Behavioral game experiments; systematic deviation studies; cognitive load analysis; comparison of predicted vs observed play in diverse strategic settings",
+      "impact": "If rationality holds: Nash equilibrium is a valid mountain (mathematical inevitability of rational play). If rationality fails systematically: Nash equilibrium concept is a false summit (naturalized contingent behavior). Deviations become the primary phenomenon, and Nash equilibrium is post-hoc narrative.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether actual agents exhibit required rationality"
+    },
+    {
+      "id": "common_knowledge_requirement",
+      "question": "Is common knowledge of the game structure, payoffs, and rationality achievable or sustainable in real strategic situations?",
+      "resolution_mechanism": "Information asymmetry studies; incomplete information game analysis; learning dynamics in repeated games; misaligned expectations studies",
+      "impact": "If common knowledge is typical: Nash equilibrium is robust mountain. If common knowledge is rare or breaks under learning: Nash equilibrium concept is aspirational (Scaffold or Piton). The constraint becomes 'agents trying to coordinate despite uncertainty' rather than 'inevitable equilibrium outcome.'",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Achievability of common knowledge in real strategic settings"
+    },
+    {
+      "id": "pareto_efficiency_alignment",
+      "question": "In how many real strategic contexts do Nash equilibria coincide with Pareto-efficient outcomes? How frequently is the constraint Pareto-inferior?",
+      "resolution_mechanism": "Systematic survey of Nash equilibria across market types, organizational games, and geopolitical scenarios; calculation of efficiency gaps; correlation with extractive outcomes",
+      "impact": "If alignment is frequent: Nash equilibrium is benign (Rope). If misalignment is frequent: Nash equilibrium is often a trap mechanism (Snare or Tangled Rope). The answer determines whether the constraint is coordination or extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Frequency of Pareto efficiency in Nash equilibria"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Nash equilibrium is a coordinate system for understanding strategic interaction where no agent can improve their outcome by unilateral strategy change, given the strategies of others. The constraint operates across multiple levels: as a mathematical inevitability (mountain from the analyst's view), as a pure coordination mechanism (rope for individual agents optimizing within constraints), as a tool for institutional design (tangled rope for powerful game designers), as a trap mechanism (snare for agents locked in Pareto-inferior equilibria), as a target for collective escape (scaffold for organized coalitions), and as a vestigial concept (piton in complex real-world systems where the assumptions break down). The core analytical challenge is that 'Nash equilibrium' is not a single constraint but a family of structurally distinct phenomena depending on which properties are foregrounded: the existence theorem (mountain), the coordination function (rope), the designer's tool (tangled rope), the Pareto-inferior trap (snare), or the post-hoc rationalization (piton). The measurable trend over 100 years since Nash's 1950 theorem shows theater ratio increasing (0.20 \u2192 0.40) as applications to complex systems with violated assumptions have proliferated, while base extractiveness remains moderate (0.25 \u2192 0.32) because the concept serves both coordination and extraction functions.",
+    "key_agents": [
+      "Rational Individual Agents: Primary beneficiary (powerless/mobile) \u2014 experience Nash equilibrium as coordinating mechanism that solves their strategic problem optimally given others' moves",
+      "Mathematical Community: Primary beneficiary (institutional/arbitrage) \u2014 established theorems, proof techniques, academic field around equilibrium concept; benefits from explanatory authority",
+      "Game Designers: Secondary beneficiary/architect (powerful/arbitrage) \u2014 market designers, mechanism designers, organizational architects who use equilibrium concept to engineer specific outcomes",
+      "Trapped Agents in Suboptimal Equilibria: Primary victim (moderate/trapped) \u2014 locked in Pareto-inferior equilibria (arms races, commons tragedies, wage races) with no unilateral escape",
+      "Organized Coalitions: Secondary victim attempting escape (organized/constrained) \u2014 unions, trade associations, regulatory coalitions seeking binding coordination to shift equilibrium selection",
+      "Applied Analysts: Institutional observer (institutional/mobile) \u2014 economists, strategists, policy makers who invoke Nash equilibrium as post-hoc explanation in complex systems where assumptions fail"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate. The Nash equilibrium concept functions primarily as a coordination mechanism \u2014 agents are already optimizing given others' strategies, so effective extraction from the mechanism itself is low. However, when multiple equilibria exist, designers can extract by choosing which equilibrium to instantiate. The moderate value reflects that some extraction is possible through equilibrium selection, but most contexts exhibit pure coordination. Suppression (0.28): Low-moderate. Rational agents in well-defined games are not suppressed \u2014 they are solving their optimization problem. Suppression arises only in Pareto-inferior equilibria where agents cannot unilaterally deviate. Theater ratio (0.35): Moderate. In finite, well-defined games with common knowledge (rare in reality), Nash equilibrium is a genuine mathematical tool, not theater. In complex systems with violated assumptions, invoking Nash equilibrium functions as theoretical theater \u2014 post-hoc rationalization of institutional arrangements. The trend toward higher theater (0.20 \u2192 0.40) reflects application domain expansion into complexity where the model assumptions fail.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival heterogeneity. From the individual agent's perspective (mobile, powerless), Nash equilibrium is pure coordination \u2014 they are optimized and cannot improve unilaterally (Rope). From the mathematician's perspective (analytical, universal), Nash equilibrium is a mathematical mountain \u2014 existence is proven for all finite games, emergence is logical necessity, not contingent. From the game designer's perspective (powerful, arbitrage), Nash equilibrium is a tool (Tangled Rope) \u2014 they benefit from selecting which equilibrium is played while maintaining the fiction of natural coordination. From the Pareto-inferior trapped agent's perspective (moderate, trapped), Nash equilibrium is a snare \u2014 they are locally optimal but globally worse off, unable to escape without coordinated deviation. From the organized coalition's perspective (organized, constrained), Nash equilibrium is a target structure that can be escaped through binding commitment (Scaffold). From the institutional observer's perspective (institutional, mobile), Nash equilibrium in complex real systems is largely post-hoc theater (Piton) \u2014 the mathematical assumptions are violated but the concept persists through academic inertia. No single perspective is false; each reveals a genuine structural property of the equilibrium concept.",
+    "directionality_logic": "Individual rational agents: Beneficiary + mobile \u2192 d\u22480.50, f(d)\u22480.65. Symmetric \u2014 agents benefit from being in equilibrium (no profitable deviation) but are not targeted. Mathematical analyst: Analytical \u2192 d\u22480.72, canonical fallback (mountain). Game designer: Beneficiary + arbitrage \u2192 d\u22480.35, derived from powerful/arbitrage selection capability. Low d because designer benefits from equilibrium concept (can extract through selection); moderate because designer does not face direct coercion. Trapped agent: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. High d because agent is locked in and cannot improve unilaterally; benefits flow upward to designer/institutional structure. Organized coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.45. Moderate because coalition has real agency but faces constraints (coordination difficulty, enforcement fragility). Applied analyst: Institutional + mobile \u2192 d\u22480.20, derived from institutional power and mobile exit (can change analytical framework). Low d because analyst has authority and flexibility; not directly targeted by the concept.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that Nash equilibrium is not primarily extractive but coordinative, with extraction emerging only through equilibrium selection when multiple equilibria exist. The primary function is coordination (agents optimizing given others' strategies), which explains why the constraint classifies as Rope for individual agents and Mountain for the analyst. Extraction (Snare perspective, Tangled Rope designer perspective) arises contingently when (1) multiple equilibria exist and (2) a powerful designer selects among them. The Scaffold perspective (organized escape) confirms that the Pareto-inferior trap is escapable through collective binding \u2014 the constraint is not immutable. The Piton perspective warns against false naturalization: invoking Nash equilibrium in complex systems where rationality and common knowledge fail is institutional theater, not genuine application of the theorem. The mandatrophy is fully resolved: Nash equilibrium IS a coordination mechanism (mountain + rope perspectives are valid), but deployment of the concept to extract or rationalize extraction is contingent on institutional context (designer power, equilibrium multiplicity, assumption violations)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "game_theory_foundations",
+      "equilibrium_selection_problem",
+      "mechanism_design_rent_extraction",
+      "commons_tragedy_coordination"
+    ],
+    "dual_formulation_note": "Nash equilibrium as a mathematical theorem (mountain, \u03b5\u22480.08) is distinct from Nash equilibrium as an applied explanatory concept in complex systems (piton, \u03b5\u22480.35). The theorem is downstream \u2014 it establishes the existence claim. Applications in market design, organizational behavior, and geopolitics are downstream of the theorem but operate with violated assumptions, shifting the constraint into tangled rope / snare territory. This story focuses on the applied concept (\u03b5=0.32, Rope); separate constraint stories could decompose the pure mathematical claim and specific application contexts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "nonstandard_arithmetic_models",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nonstd_arith"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Existence of Nonstandard Models of Arithmetic",
+    "topic_domain": "mathematical_logic",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Logician",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL LOGICIAN (MOUNTAIN) \u2014 From the perspective of formal logic, the L\u00f6wenheim-Skolem theorem and the compactness theorem establish that any first-order theory with infinite models has models of every infinite cardinality. This is a mathematical fact independent of convention or perspective. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Working Mathematician",
+      "comment": "PERSPECTIVE 2: WORKING MATHEMATICIAN (MOUNTAIN) \u2014 The existence of nonstandard models is an immutable consequence of the incompleteness of first-order logic relative to intended semantic domains. Mathematicians cannot 'work around' this \u2014 they must accept that PA does not pin down the standard model uniquely. This is a structural fact about formal systems, not a policy choice. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Model Theorist",
+      "comment": "PERSPECTIVE 3: MODEL THEORIST (MOUNTAIN) \u2014 Model-theoretic analysis shows that nonstandard models are not artifacts of weak axiom systems but natural objects in the lattice of models satisfying first-order constraints. Their existence follows necessarily from completeness and compactness. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Proof Theorist",
+      "comment": "PERSPECTIVE 4: PROOF THEORIST (MOUNTAIN) \u2014 From proof-theoretic perspective, any consistent extension of PA admits models (by G\u00f6del's completeness theorem). The nonstandard models are inevitable consequences of the soundness and completeness of first-order logic. No agent or institution can eliminate them by policy or invention. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "standard_model_definability",
+      "question": "Is the standard model of arithmetic definable within PA itself, or is standardness a property external to PA's first-order language?",
+      "resolution_mechanism": "Formal analysis within second-order logic or type theory; comparison of definitional resources across logical frameworks",
+      "impact": "If definable: standardness is captured by first-order means (undermines mountain classification slightly). If external: nonstandard models are unavoidable consequences of first-order incompleteness (confirms mountain).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the standard model is definable in first-order PA"
+    },
+    {
+      "id": "intended_interpretation_necessity",
+      "question": "Is the 'intended interpretation' (standard naturals) a necessary target of PA, or merely a conventional choice among valid models?",
+      "resolution_mechanism": "Philosophical analysis of the role of intended interpretation in mathematical semantics; examination of whether PA was designed to pin down a unique structure",
+      "impact": "If necessary: nonstandard models are genuine failures of PA to capture its intent (reduces mountain classification). If conventional: nonstandard models are legitimate alternative models, no failure involved (confirms mountain).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether standardness is a necessary requirement for PA"
+    },
+    {
+      "id": "second_order_elimination",
+      "question": "Does second-order Peano arithmetic (with standard semantics) uniquely characterize the natural numbers, thereby 'eliminating' nonstandard models from the higher-order setting?",
+      "resolution_mechanism": "Formal analysis of second-order PA; comparison of model-theoretic properties with first-order PA",
+      "impact": "If yes: nonstandard models are peculiar to first-order logic (mountain holds for first-order, but constraint is logic-relative). If no: nonstandard models persist even in stronger logical systems (mountain holds across frameworks).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether second-order PA uniquely determines the standard model"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The existence of nonstandard models of Peano Arithmetic is a mathematical fact established by the L\u00f6wenheim-Skolem theorem and the compactness theorem of first-order logic. Any first-order theory with an infinite model has models of every infinite cardinality, and PA\u2014formulated in first-order logic\u2014cannot uniquely specify the standard natural numbers. Nonstandard models satisfy all first-order axioms of PA but contain 'infinite' elements (from the perspective of standard arithmetic) and differ in their structure from the intended model. This constraint exemplifies a natural law: the incompleteness of first-order logic relative to its semantic intentions is a logical necessity, not a contingent feature that could be removed by institutional choice, definitional refinement, or empirical discovery. The constraint classifies identically as Mountain from all perspectives because no observer\u2014mathematician, logician, or analyst\u2014can escape the consequence that first-order PA underdetermines its semantics. There are no beneficiaries or victims; there is no extraction or coordination mechanism. The constraint simply is: a logical structure with zero degrees of freedom across all observation positions.",
+    "key_agents": [
+      "Mathematical logicians: Analytical observers (analytical/civilizational/analytical) \u2014 study the structure of models and the completeness theorem; see nonstandard models as natural inhabitants of the model-theoretic landscape",
+      "Working mathematicians: Institutional users (institutional/civilizational/arbitrage) \u2014 employ PA as a foundation for arithmetic reasoning; must accept that PA does not uniquely pin down intended semantics",
+      "Model theorists: Analytical specialists (analytical/civilizational/analytical) \u2014 characterize properties of all models of PA, standard and nonstandard",
+      "Proof theorists: Analytical specialists (analytical/civilizational/analytical) \u2014 analyze the logical strength and limitations of PA relative to completeness and soundness",
+      "Philosophers of mathematics: Analytical observers (analytical/civilizational/analytical) \u2014 debate the nature of the 'intended interpretation' and whether standardness is a semantic given or a conventional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The constraint is not extractive\u2014no agent benefits from nonstandard models existing, and no agent is forced to bear a cost. The existence of nonstandard models is an abstract logical fact. The small nonzero value reflects minimal conceptual overhead: some mathematical effort is required to understand and work with nonstandard models, but this is learning cost, not extraction. Suppression (0.03): Minimal. Nonstandard models are not suppressed by any institutional mechanism. They are openly discussed in mathematical logic texts, and their existence is freely acknowledged in the mathematical community. The small value reflects only that building nonstandard models requires specialized technical knowledge (a natural barrier, not institutional suppression). Theater ratio (0.15): Very low. There is minimal performative activity around nonstandard models. The mathematics is transparent: the L\u00f6wenheim-Skolem theorem directly establishes the existence of nonstandard models. No ritual or theater is required to maintain the constraint\u2014it is self-evident from the proof.",
+    "perspectival_gap": "There is no perspectival gap. All four perspectives classify the constraint identically as Mountain. This is the signature of a true natural law: the constraint appears immutable and unchangeable from every observation position. Mathematical logicians see it as a theorem. Working mathematicians see it as a structural limit on first-order axiomatization. Model theorists see it as a consequence of the semantics of first-order logic. Proof theorists see it as a corollary of completeness and compactness. The uniformity of classification across power levels, time horizons, exit options, and scopes is not a failure of the indexical framework\u2014it is a diagnostic success: it correctly identifies constraints that are truly invariant across all perspectives.",
+    "directionality_logic": "No directionality logic applies to this constraint. It is a Mountain-type constraint with no beneficiaries or victims. The L\u00f6wenheim-Skolem theorem applies equally to all agents. No one benefits from nonstandard models existing, and no one is victimized by them. The existence of nonstandard models is a structural property of first-order logic, independent of who observes it or what position they occupy relative to it.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy trivially: there is no mandatrophy to resolve. Mandatrophy arises when a constraint's classification might swing between rope (coordination benefit) and snare (pure extraction) depending on whether one emphasizes the beneficiary's view or the victim's view. But nonstandard models have neither beneficiaries nor victims\u2014they are abstract mathematical objects. The constraint is a pure natural law with no extraction mechanism, no coordination function, and no institutional enforcement. The mandatrophy framework does not apply because the constraint does not involve agents with conflicting interests. All agents (mathematicians, logicians, computers) are symmetrically affected: they must all accept that first-order PA does not uniquely determine the standard model. This is a constraint on the formal system itself, not a constraint between agents."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "godel_incompleteness_first_order",
+      "lowenheim_skolem_cardinality",
+      "compactness_theorem_first_order"
+    ],
+    "dual_formulation_note": "Nonstandard models of arithmetic form a logical family with G\u00f6del's incompleteness theorems and the L\u00f6wenheim-Skolem/compactness theorems. G\u00f6del incompleteness (\u03b5\u22480.08, Mountain) establishes that first-order PA cannot prove all truths about the standard naturals. L\u00f6wenheim-Skolem (\u03b5\u22480.08, Mountain) establishes that first-order theories have models of all infinite cardinalities. Nonstandard models (\u03b5\u22480.12, Mountain) are the direct model-theoretic consequence of L\u00f6wenheim-Skolem applied to PA. Second-order PA (\u03b5\u22480.35, Rope/Tangled Rope) uniquely characterizes the standard naturals but requires non-standard (Henkin) semantics to preserve model existence. Each story in this family has distinct \u03b5 because they represent structurally different claims about the capacity of logical systems. All are Mountains, but the logical dependencies form a DAG reflecting how the theorems build on one another."
+  }
+}

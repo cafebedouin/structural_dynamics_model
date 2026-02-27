@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "publishing_embargo",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Academic Publishing Embargo",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "journal_publishers",
+      "senior_researchers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "knowledge_seekers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Early Career Researchers",
+      "comment": "Early career researchers are often trapped by the need to publish in high-impact journals to advance their careers, making them vulnerable to the embargo. They bear the cost of delayed dissemination of their work."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Senior Researchers",
+      "comment": "Senior researchers benefit from the embargo system as it allows them to maintain control over the dissemination of their research findings, enhancing their reputation and influence. However, they are also constrained by the system, as they must adhere to the embargo rules."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Journal Publishers",
+      "comment": "Journal publishers benefit from the embargo system as it allows them to maintain exclusivity over the research findings, which drives subscriptions and advertising revenue. They have arbitrage options through alternative publishing models."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Knowledge Seekers",
+      "comment": "Knowledge seekers (students, independent researchers, the informed public) are often unaware of and cannot avoid the effects of publication embargoes, especially in fields like medicine where important research is delayed from reaching them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analytical observers may see the embargo as a tangled rope, serving some coordination function for quality control and revenue generation while simultaneously extracting from researchers and the public by delaying access to information."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "open_access_mandates_impact",
+      "question": "To what extent will open access mandates diminish the power of publishing embargoes?",
+      "resolution_mechanism": "Track the adoption rates of open access policies and their impact on journal subscriptions and research dissemination timelines.",
+      "impact": "If open access prevails, embargoes may weaken, shifting the system towards a rope or scaffold. If not, the tangled rope/snare persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of open access mandates on publishing embargoes."
+    },
+    {
+      "id": "peer_review_alternatives",
+      "question": "Are there viable alternative peer review models that do not rely on embargoes for quality control and exclusivity?",
+      "resolution_mechanism": "Evaluate the effectiveness of pre-print servers and post-publication peer review systems.",
+      "impact": "Successful alternatives could transform the embargo from a tangled rope/snare into a piton or scaffold.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Viability of alternative peer review models."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Academic publishing embargoes restrict researchers from publicly sharing their findings before the official publication date in a peer-reviewed journal. This system has both benefits and drawbacks, creating a tangled rope constraint. It aims to incentivize high-quality research and provide a period of exclusivity for journal publishers, but it also delays the dissemination of knowledge and can disadvantage early-career researchers.",
+    "key_agents": [
+      "Journal Publishers: Beneficiaries of the exclusivity period for subscription revenue.",
+      "Senior Researchers: Beneficiaries who control timing and prestige of publications.",
+      "Early Career Researchers: Victims who need to publish to advance careers.",
+      "Knowledge Seekers: Victims of delayed information access."
+    ],
+    "logic_rationale": "Extractiveness is moderate because while the embargo does extract from the public and researchers by delaying access, it also serves to incentivize publication and quality control. Suppression is high because there are limited alternatives for researchers to share findings quickly without jeopardizing publication.",
+    "perspectival_gap": "The perspectival gap exists because journal publishers and some senior researchers benefit from the embargo, which drives subscriptions and prestige. However, early-career researchers and the public are harmed by the delay in access to information.",
+    "directionality_logic": "Journal publishers are beneficiaries and have arbitrage exit options through different business models. Senior researchers are beneficiaries and are constrained by norms. Early career researchers are victims trapped by career requirements. Knowledge seekers are victims trapped by lack of direct access."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "peer_review_process",
+      "research_funding_allocation"
+    ]
+  },
+  "directionality_overrides": []
+}

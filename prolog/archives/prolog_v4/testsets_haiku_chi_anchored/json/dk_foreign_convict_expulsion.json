@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "dk_foreign_convict_expulsion",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dk_expulsion"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Denmark's Foreign Convict Expulsion Law",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "danish_native_citizens",
+      "political_governing_coalition"
+    ],
+    "victims": [
+      "foreign_national_residents",
+      "family_unity_holders",
+      "long_term_residents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Foreign Convict Subject",
+      "comment": "PERSPECTIVE 1: FOREIGN CONVICT (SNARE) \u2014 Trapped within Danish jurisdiction with no exit option once sentence is imposed. Criminal sanction plus expulsion removes both freedom and domicile simultaneously. No appeal pathway; no discretion in magistracy. d\u22480.96, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.96. Pure extraction: penalty is dual (incarceration + displacement)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Long-Term Foreign Resident Families",
+      "comment": "PERSPECTIVE 2: LONG-TERM RESIDENT FAMILIES (SNARE) \u2014 Constrained by family ties, economic roots, and decades of residence (often children born in Denmark, Danish-educated, Danish-language fluent). Expulsion of breadwinner or parent severs family unit and economic security. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.90. High extraction: family structure weaponized."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Danish Governing Coalition",
+      "comment": "PERSPECTIVE 3: DANISH GOVERNING COALITION (ROPE) \u2014 Experiences the expulsion law as coordination mechanism: establishes bright-line rule for public safety, eliminates discretion debates, creates predictable immigration consequence. Benefits from political salience and voter satisfaction (law-and-order coalition building). d\u22480.10, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.01. Net beneficiary: low effective extraction from their perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "EU/International Human Rights Framework",
+      "comment": "PERSPECTIVE 4: EU/INTERNATIONAL HUMAN RIGHTS BODIES (TANGLED ROPE) \u2014 Recognize coordination function (expulsion rule is transparent, predictable, applied uniformly) BUT identify asymmetric extraction: law violates right to family unity (EU Charter Art. 7), proportionality principle (all crimes \u22651 year trigger same outcome), and integration incentives (no pathway to become Danish despite decades of residence). Active enforcement required. d\u22480.52, f(d)\u22480.68, \u03c3=1.1 \u2192 \u03c7\u22480.51. Hybrid: coordination + extraction both present."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Danish Public Opinion / Media Theater",
+      "comment": "PERSPECTIVE 5: DANISH PUBLIC OPINION & MEDIA (PITON) \u2014 Law persists as political theater more than functional policy. Theater elements: dramatic expulsion announcements, performative 'zero-tolerance' branding, media coverage amplifies each case. Functional content: actual expulsions are modest in number (~200-300 annually from ~5.8M population), impact on crime rates unmeasured, family separation consequences downplayed. theater_ratio=0.58 reflects moderate performative content. d\u22480.45, f(d)\u22480.52, \u03c3=1.0 \u2192 \u03c7\u22480.35. Piton gate (theater \u22650.70) narrowly missed; classified as piton due to declining political coherence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT RISK) \u2014 Risk of naturalizing the expulsion law as immutable state sovereignty: 'Nations have inherent right to expel non-citizens.' This appears as a mountain (state sovereignty as fundamental principle). However, structural data (\u03b5=0.68, suppression=0.72, beneficiaries + victims declared) contradicts mountain gates. Emerges_naturally=false, accessibility_collapse undefined, resistance undefined. Engine will flag as false summit. The constraint is politically contingent, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proportionality_threshold",
+      "question": "Is the 1-year sentence threshold proportional to the expulsion consequence, or does it conflate minor and major crimes?",
+      "resolution_mechanism": "Comparative analysis: expulsion rates by offense category (drug trafficking vs. assault vs. fraud); recidivism data for expelled vs. retained convicts; public safety impact per offense class",
+      "impact": "If threshold is proportional: law is coordination (bright-line rule). If threshold is disproportionate: law is extraction (one-size-fits-all extraction mechanism weaponizes minor offenses).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportionality of 1-year threshold to expulsion consequence"
+    },
+    {
+      "id": "family_unity_alternatives",
+      "question": "Does the law provide meaningful discretion to preserve family unity for residents with Danish-born children or decades of residence?",
+      "resolution_mechanism": "Audit of judicial decisions: percentage of cases where discretion was exercised; comparison with other EU jurisdictions' discretionary frameworks; documented hardship cases",
+      "impact": "If discretion exists and is used: classification shifts toward Tangled Rope (some beneficiaries, targeted victims). If no discretion: pure Snare (weaponized expulsion mechanism).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether judicial discretion preserves family unity"
+    },
+    {
+      "id": "public_safety_attribution",
+      "question": "Does the expulsion law reduce crime rates, or is claimed public safety benefit attributable to other enforcement changes?",
+      "resolution_mechanism": "Time-series analysis of crime rates before/after law enactment (2019); comparison with control jurisdictions; isolation of expulsion effect from concurrent police funding increases",
+      "impact": "If expulsion reduces crime: law's coordination function is empirically validated. If no measurable effect: law is pure theater (Piton classification confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Public safety attribution of expulsion policy"
+    },
+    {
+      "id": "integration_incentive_destruction",
+      "question": "Does automatic expulsion destroy incentives for long-term foreign residents to integrate (learn Danish, invest in community, seek naturalization)?",
+      "resolution_mechanism": "Longitudinal tracking of naturalization applications pre/post-law; immigrant community survey data on perceived security; labor market integration metrics for foreign nationals",
+      "impact": "If incentives destroyed: law creates extractive mechanism (removes integration pathway). If incentives preserved: law is Rope (clear rule, not targeted extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether law destroys integration incentives for residents"
+    },
+    {
+      "id": "state_sovereignty_naturalization",
+      "question": "Is state sovereignty to expel non-citizens a natural law or a politically contingent power?",
+      "resolution_mechanism": "Historical analysis of expulsion law variation across time; constitutional analysis of sovereignty vs. human rights hierarchy; case law from ECJ and ECHR on expulsion proportionality",
+      "impact": "If sovereignty is natural law: mountain classification justified. If sovereignty is contingent on proportionality/family unity constraints: false summit confirmed.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether state expulsion sovereignty is natural law or contingent power"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Denmark's Foreign Convict Expulsion Law (enacted 2019, implemented 2021) mandates expulsion of any foreign national sentenced to at least one year in prison. The constraint operates as a dual-penalty mechanism combining criminal sanction (incarceration) with administrative consequence (expulsion). From the victim's perspective (foreign national with Danish roots, family, employment), the law functions as pure extraction: a single criminal act triggers simultaneous loss of liberty and domicile, with no discretion, appeal, or family unity exception. From the governing coalition's perspective, the law functions as coordination: a bright-line rule eliminates discretion debates and creates predictable consequence. From the EU/international human rights framework, the law exhibits both coordination (transparency, uniformity) and extraction (violation of family unity, disproportionality across offense classes, elimination of integration pathway). The constraint demonstrates how a single policy mechanism can be classified into six different types depending on structural position. Theater ratio increased from 0.42 (initial policy announcement) to 0.58 (current enforcement) as political salience increased but actual enforcement remained modest (~200-300 expulsions annually from 5.8M population). Extractiveness increased from 0.55 to 0.68 as hardship cases accumulated and the integration-incentive-destruction mechanism became evident.",
+    "key_agents": [
+      "Foreign national convicts: Primary victims (powerless/trapped) \u2014 subject to dual penalty with no exit or discretion",
+      "Long-term foreign residents and families: Secondary victims (moderate/constrained) \u2014 family structures weaponized; decades of residence offer no protection",
+      "Danish governing coalition: Primary beneficiary (institutional/arbitrage) \u2014 experiences law as coordination mechanism; gains political salience and voter satisfaction",
+      "EU/International human rights framework: Institutional observer (powerful/mobile) \u2014 recognizes both coordination and extraction; has leverage to challenge proportionality",
+      "Danish public opinion and media: Theater amplifier (institutional/constrained) \u2014 performs law-and-order narrative; actual enforcement numbers modest",
+      "Analytical observer: Risk of false summit (analytical/analytical) \u2014 temptation to naturalize state sovereignty as natural law obscures political contingency"
+    ],
+    "logic_rationale": "Base extractiveness (0.68): High. The law creates a dual-penalty structure that is asymmetric and coercive. A single criminal conviction triggers both incarceration AND expulsion \u2014 the extraction mechanism is the automatic expulsion, not the criminal sentence itself. For long-term residents (30+ years), deportation to a country they may not speak the language of constitutes severe extraction. Suppression (0.72): High. Foreign nationals have minimal recourse: no discretion available to judges, no appeal pathway, no family unity exception, no pathway to remain through further integration. The mechanism is legally airtight \u2014 once the 1-year threshold is crossed, expulsion is mandatory. Theater ratio (0.58): Moderate. The law is politically performative \u2014 announcements of 'zero tolerance,' media coverage of expulsion cases \u2014 but the functional content is modest (200-300 expulsions annually, unmeasured crime reduction, downplayed family consequences). Theater has increased over the interval as political salience rose. The constraint does not meet the piton gate (theater \u22650.70) but is trending toward it. Claimed type (Snare): Confirmed by metrics (\u03b5=0.68 \u2265 0.46, suppression=0.72 \u2265 0.60, \u03c7 \u2265 0.66 in victim perspective).",
+    "perspectival_gap": "The foreign convict experiences automatic extraction (Snare): committed an offense, received sentence, now stripped of domicile with no discretion. The governing coalition experiences coordination (Rope): rule is transparent, predictable, applied uniformly, eliminates discretion debates. The EU/international observer experiences hybrid extraction+coordination (Tangled Rope): recognizes the rule's clarity AND its violation of family unity and proportionality principles. The Danish public experiences theater (Piton): political salience is high, but enforcement impact is modest and consequences are downplayed. The analytical observer risks false summit (Mountain): naturalization of state sovereignty as immutable law obscures the political contingency of the mechanism. The perspectival gap is maximal: the same law is experienced as pure extraction, pure coordination, hybrid extraction+coordination, theater, and false natural law depending on structural position.",
+    "directionality_logic": "Foreign national convicts: Victim + trapped \u2192 d\u22480.96, f(d)\u22481.42. Maximum extraction. No exit, no discretion, no mitigation. Long-term residents: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction. Constrained by family ties and economic roots; expulsion severs both. Danish governing coalition: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Net beneficiary. Can exit the law's consequences through policy change; benefits from political salience. EU/international human rights: Powerful + mobile \u2192 d\u22480.52, f(d)\u22480.68. Hybrid directionality. Has leverage to challenge the law; not fully trapped but also not fully benefiting. Danish public/media: Institutional + constrained \u2192 d\u22480.45, f(d)\u22480.52. Constrained by political incentives to perform law-and-order; benefits from theater. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. Risk of naturalization; sees constraint as inevitable rather than contingent.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that the law's classification depends entirely on structural position. From a powerless/trapped perspective (the expulsion target), it is unambiguously Snare: high extraction, high suppression, no coordination benefit. From an institutional/arbitrage perspective (the governing coalition), it appears as Rope: coordination mechanism, bright-line rule, no extraction cost to them. The mandatrophy is not 'which type is correct?' but 'which structural position are you measuring from?' The false summit risk (Analytical Observer perspective) is critical: the analyst who naturalizes the law as inherent state sovereignty obscures its political contingency and misses the extraction mechanism entirely. The EU/international framework (Tangled Rope) resolves the mandatrophy by insisting that coordination (bright-line rule) and extraction (family unity violation, disproportionality) are both real and structural. The law cannot be reframed as 'just coordination' \u2014 the extraction is real to those who experience it. Nor can it be reframed as 'just extraction' \u2014 the coordination function (bright-line rule, voter satisfaction, policy predictability) is real to the beneficiary. The Tangled Rope classification captures both."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_family_unity_directive",
+      "integration_incentive_structures",
+      "judicial_discretion_frameworks"
+    ],
+    "dual_formulation_note": "The Foreign Convict Expulsion Law decomposes into multiple structural constraints: (1) the mandatory expulsion mechanism itself (\u03b5=0.68, this story), (2) the underlying 1-year sentence threshold (proportionality question, separate story), and (3) the family unity exception mechanism (doctrinal question, separate story). These are linked: the expulsion law's extractiveness depends critically on whether discretion and family unity exceptions exist. Current story assumes they do not; if they do exist but are unused, extractiveness should be lower (~0.50-0.55, moving toward Tangled Rope from Snare). Stories should be linked via affects_constraints to show how upstream proportionality and discretion constraints influence the downsteam expulsion mechanism's classification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.52
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": []
+  }
+}

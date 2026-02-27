@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "fiscal_equalization_friction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fiscal_eq"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Equalization Conflict (Net Transfer Friction)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "receiving_provinces"
+    ],
+    "victims": [
+      "contributing_provinces",
+      "federal_fiscal_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Taxpayer in Equalization-Paying Province",
+      "comment": "PERSPECTIVE 1: EQUALIZATION-PAYING PROVINCE TAXPAYER (SNARE) \u2014 Cannot exit without relocating. Bears extraction through provincial revenue loss and federal tax burden. No meaningful exit option beyond personal migration. Maximum experienced extraction relative to coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Contributing Province (Organized Political Entity)",
+      "comment": "PERSPECTIVE 2: CONTRIBUTING PROVINCE (TANGLED ROPE) \u2014 Benefits from national federation and market integration (rope function) but extracted from via equalization mechanism (asymmetric cost). Political power enables exit via constitutional renegotiation and tax competition, but such exit is costly. Experiences both coordination benefit and extraction cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Government",
+      "comment": "PERSPECTIVE 3: FEDERAL GOVERNMENT (ROPE) \u2014 Administers equalization as coordination mechanism enabling national market and fiscal coherence. Has arbitrage exit: can adjust federal transfers, modify revenue sharing, or restructure equalization formula. Experiences constraint as coordination problem solved by redistribution infrastructure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Receiving Province (Organized Political Entity)",
+      "comment": "PERSPECTIVE 4: RECEIVING PROVINCE (ROPE) \u2014 Benefits directly from equalization transfers. Has political power and arbitrage exit via renegotiation or reduced resource development dependence. Experiences constraint primarily as coordination benefit: access to federal revenue-sharing enables public service delivery in lower-capacity provinces."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Fiscal Federalism Reform Coalition",
+      "comment": "PERSPECTIVE 5: FISCAL FEDERALISM REFORM COALITION (SCAFFOLD) \u2014 Organized academic, policy, and provincial actors proposing structural reforms: adjusted formula, sunset triggers, efficiency incentives. See equalization as temporary institutional design with improvable mechanisms. View current friction as solvable by recalibrating parameters and transparency. Constrained exit via political process; organized engagement with sunset-compatible reforms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Equalization Formula Machinery",
+      "comment": "PERSPECTIVE 6: EQUALIZATION FORMULA MACHINERY (PITON) \u2014 The technical formula and administrative apparatus (revenue per capita calculations, five-province standard, cap mechanisms) persist through institutional inertia despite chronic contestation. The mechanism is substantially performative: debate over 'fairness' of the formula dominates political discussion while the actual redistributive function remains unchanged. Theater ratio reflects that much activity is formula-tweaking rather than structural reform."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational scale, equalization represents a genuine coordination function (enabling national market and fiscal coherence) layered with asymmetric extraction (net transfer friction creates persistent resentment and constitutional instability). The constraint is hybrid: coordination mechanism generating extraction side-effects that destabilize the original function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_resource_volatility_coupling",
+      "question": "Does equalization's dependence on provincial resource wealth represent a legitimate coordination need or an artificial extractive coupling?",
+      "resolution_mechanism": "Comparative analysis of resource-rich vs resource-poor federal systems (US, Australia, Germany); modeling of equalization without resource dependency; historical analysis of equalization design choices",
+      "impact": "If legitimate: equalization is fundamental coordination mechanism. If artificial: current design could be reformed to decouple extraction from resource volatility, reducing friction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether resource wealth coupling is structural necessity or design choice"
+    },
+    {
+      "id": "interprovincial_mobility_counterfactual",
+      "question": "Would interprovincial labor mobility increase significantly if equalization were eliminated or restructured?",
+      "resolution_mechanism": "Analysis of internal migration patterns relative to equalization phase-in; comparison of interprovincial movement rates across different equalization regimes; survey of migration decision factors",
+      "impact": "If mobility increases substantially: equalization is functionally necessary coordination. If mobility unchanged: equalization extraction is pure transfer with minimal coordination justification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual mobility impact of equalization absence"
+    },
+    {
+      "id": "provincial_exit_credibility",
+      "question": "Is the threat of constitutional renegotiation or province-wide tax resistance a credible exit mechanism, or rhetorical theater?",
+      "resolution_mechanism": "Historical analysis of equalization disputes in constitutional negotiations (Meech Lake, Charlottetown, modern disputes); institutional modeling of constitutional amendment feasibility; political economy of provincial coalition formation",
+      "impact": "If credible exit: contributing provinces experience tangled_rope (not snare). If theater: extraction is closer to snare, suppression higher.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Credibility of provincial constitutional exit threat"
+    },
+    {
+      "id": "formula_optimization_frontier",
+      "question": "Is the current equalization formula near an optimized balance between redistribution and efficiency incentives, or substantially suboptimal?",
+      "resolution_mechanism": "Economic modeling comparing current formula performance against alternative designs (partial equalization, efficiency incentives, dynamic adjustment); longitudinal tracking of provincial fiscal capacity trends under current formula",
+      "impact": "If near-optimal: friction is inherent to redistribution. If suboptimal: friction represents policy failure correctable by design reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimality of current equalization formula design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Canada's equalization program represents a fiscal federalism coordination mechanism designed to enable all provinces to deliver comparable public services despite unequal tax bases. The program transfers federal revenue to lower-capacity provinces, funding education, healthcare, and infrastructure. However, the mechanism generates persistent friction: contributing provinces (Ontario, Alberta, British Columbia) experience net extraction; receiving provinces benefit from transfers; the federal government administers the redistribution; and the equalization formula itself has become a site of chronic political contestation. The constraint exhibits the classic tangled_rope signature: genuine coordination function (enabling national market coherence and territorial equity) layered with asymmetric extraction (net transfer friction creates political resentment and constitutional instability). The theater ratio has increased over four decades as debate shifted from 'should we have equalization' to 'what formula is fair' \u2014 the performative dimension of formula disputes now dominates political discourse while the actual redistributive function remains unchanged.",
+    "key_agents": [
+      "Receiving Provinces: Primary beneficiary (powerful/arbitrage) \u2014 Quebec, Manitoba, Saskatchewan, Atlantic provinces receive net transfers; benefit from public service capacity",
+      "Contributing Provinces: Primary victim (powerful/mobile) \u2014 Ontario, Alberta, British Columbia bear net transfer burden; experience extraction but retain political power to negotiate",
+      "Federal Government: Administrator (institutional/arbitrage) \u2014 controls transfer mechanism; can adjust formula, modify revenue-sharing, restructure equalization entirely",
+      "Low-Income Taxpayers in Contributing Provinces: Secondary victim (powerless/trapped) \u2014 bear tax burden with limited exit options; cannot relocate without significant cost",
+      "Fiscal Federalism Reform Coalition: Organized reformers (organized/constrained) \u2014 academics, policy institutes, provincial governments proposing improved formula designs with sunset/adjustment mechanisms",
+      "Equalization Formula Apparatus: Performative infrastructure (institutional/constrained) \u2014 technical calculation system, administrative machinery, political debate framework; persists through inertia despite chronic contestation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 assesses whether equalization is fundamentally necessary coordination or institutional artifact that could be restructured"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The equalization program does represent genuine coordination function (enabling national market, reducing fiscal disparities), but extraction is significant. Contributing provinces lose tax capacity relative to federal/provincial revenue splits; receiving provinces gain capacity. The extraction is neither minimal (like a pure coordination mechanism such as a technical standard) nor severe (like predatory debt): it reflects a deliberate redistributive choice layered onto coordination infrastructure. Theater ratio (0.62): Moderately high. Political debate over equalization is substantially performative. The core redistributive function \u2014 moving resources from high-capacity to low-capacity provinces \u2014 is invariant to formula adjustments within observed bounds. Yet decades of political attention focus on 'fairness' of calculation (five-province standard, cap mechanisms, per-capita adjustments) rather than structural redesign. The performance has increased over time as technical formula disputes displaced fundamental design questions. Suppression (0.48): Moderate. Barriers to exit include constitutional complexity, political coalition requirements, market integration benefits of federation, and unequal information between provinces on true tax bases and fiscal needs. Contributing provinces have higher political power and genuine exit paths (constitutional renegotiation, aggressive tax competition), reducing suppression below what a 'powerless' population would experience. The mechanism is not maximally coercive because powerful actors retain meaningful voice.",
+    "directionality_logic": "Directionality is derived from structural position relative to extraction flow. Contributing provinces occupy d ~0.55-0.65 (powerful agents bearing costs, but with mobile exit options and political leverage): they derive negative f(d) but moderate suppression limits effective extraction. Receiving provinces occupy d ~0.15-0.25 (institutional beneficiaries with arbitrage options): they derive positive f(d) and coordination benefit. Low-income taxpayers in contributing provinces occupy d ~0.85-0.95 (powerless victims with trapped exit): they derive maximum f(d) and maximum experienced extraction. Federal government occupies d ~0.05-0.15 (institutional beneficiary administering the mechanism): derives negative f(d) and sees constraint as coordination tool. The perspectival gap emerges from this directionality variance: beneficiaries see rope, administrators see rope, but victims see snare and contributors see tangled_rope.",
+    "perspectival_gap": "The constraint produces a three-way perspectival gap: (1) Receiving provinces and federal administrators see equalization as legitimate coordination enabling national fiscal coherence (Rope). (2) Contributing provinces experience mixed coordination and extraction \u2014 they benefit from federation but bear net transfer burden (Tangled Rope). (3) Low-income taxpayers in contributing provinces experience pure extraction with no meaningful exit (Snare). The analytical observer must integrate these perspectives and recognize that equalization is structurally a tangled_rope: it solves a genuine coordination problem (enabling comparable public services across provinces) while simultaneously extracting from contributing provinces (creating fiscal resentment and constitutional friction). The piton observation \u2014 that formula disputes dominate while core redistributive function remains unchanged \u2014 reflects the constraint's drift toward performative activity as the original coordination function has become institutionalized.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing equalization as genuinely hybrid: (1) Coordination function is real and substantial \u2014 federalism without equalization would fragment fiscal capacity and destabilize the common market. (2) Extraction is real and substantial \u2014 net transfer friction creates persistent constitutional tension and resentment in paying provinces. The constraint cannot be cleanly classified as either pure coordination (Rope) or pure extraction (Snare) because both functions are integral to its structure. The tangled_rope classification prevents mislabeling equalization as 'just coordination for mutual benefit' (which ignores redistribution) or 'just extraction by low-capacity provinces' (which ignores genuine public goods coordination). The theater ratio increase over time suggests some drift toward performative activity \u2014 the formula disputes have become decoupled from fundamental design choices \u2014 but the underlying coordination function persists. The constraint is not degrading into a Piton; the theater increase reflects political contestation of the mechanism, not atrophy of its coordination function."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "interprovincial_trade_friction",
+      "provincial_constitutional_stability"
+    ],
+    "dual_formulation_note": "Equalization friction is downstream of the federalism constraint but represents a distinct structural coordination-extraction hybrid. Upstream constraint is the federalism constitutional design; equalization is a specific mechanism within that design. The fiscal transfer mechanism itself generates secondary constraints (trade friction from tax rate competition, constitutional instability from redistribution disputes)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.6
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

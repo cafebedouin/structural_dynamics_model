@@ -1,0 +1,176 @@
+{
+  "header": {
+    "constraint_id": "nvidia_cuda_ecosystem_lockin",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cuda"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Nvidia CUDA Ecosystem Lock-in",
+    "topic_domain": "technological/software_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nvidia_corporation",
+      "cuda_developer_base"
+    ],
+    "victims": [
+      "alternative_gpu_vendors",
+      "downstream_ai_researchers",
+      "hardware_portability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In AI Researcher",
+      "comment": "PERSPECTIVE 1: AI RESEARCHER (SNARE) \u2014 Once deeply invested in CUDA-optimized code, switching architectures means rewriting entire ML pipelines. Career advancement depends on access to CUDA-capable hardware. No practical exit. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.86."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Enterprise AI Deployment Team",
+      "comment": "PERSPECTIVE 2: ENTERPRISE DEPLOYMENT (SNARE) \u2014 Organizational investment in CUDA training, library selection, and hardware procurement creates switching costs. Exit is theoretically possible but economically punitive. d\u22480.78, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Model Training Lab",
+      "comment": "PERSPECTIVE 3: LARGE MODEL LAB (TANGLED_ROPE) \u2014 Benefits from CUDA performance leadership and ecosystem maturity (coordination function). Also locked in: benefits depend on continuous Nvidia innovation and lack of viable alternatives. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Nvidia Corporation",
+      "comment": "PERSPECTIVE 4: NVIDIA (ROPE) \u2014 Experiences the constraint as pure coordination: CUDA unifies software development across heterogeneous GPU generations, enabling ecosystem network effects. Benefits massively from lock-in but frames it as solving a real technical problem. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Alternative GPU Vendor",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE VENDOR (PITON) \u2014 AMD (ROCm), Intel (oneAPI), and others have functionally equivalent architectures and interoperable software stacks, but cannot compete because the CUDA ecosystem's lock-in has become self-reinforcing through network effects and institutional inertia. The 'alternative' is technically viable but institutionally extinct. theater_ratio=0.62 (vendor messaging about openness and compatibility is largely performative; actual adoption remains marginal)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Long-term Portability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED_ROPE) \u2014 From civilizational timescale, the constraint exhibits both coordination (CUDA genuinely solved a heterogeneous compiler problem) and extraction (lock-in is maintained through ecosystem advantages, not technical necessity). Emerging standards (SYCL, OpenCL, JAX backends, PyTorch multi-backend) are alternative coordination mechanisms that could decouple software from hardware. d\u22480.65, f(d)\u22480.95, \u03c3=1.2 \u2192 \u03c7\u22480.59."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cuda_necessity_vs_contingency",
+      "question": "Is CUDA's dominance a necessary consequence of technical superiority or a contingent outcome of ecosystem network effects and switching costs?",
+      "resolution_mechanism": "Comparative performance analysis of ROCm, oneAPI, and CUDA on identical workloads controlling for library maturity; survey of adoption decisions to isolate technical vs institutional factors; measurement of switching costs across different AI workload categories",
+      "impact": "If necessary: constraint is closer to Mountain (immutable technical limit). If contingent: constraint is firmly Snare/Tangled Rope (extractive lock-in maintaining artificial dominance).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether CUDA dominance reflects technical necessity or contingent network effects"
+    },
+    {
+      "id": "alternative_ecosystem_tipping_point",
+      "question": "What adoption threshold for alternative backends (PyTorch multi-backend, JAX XLA, Modular Mojo) would trigger irreversible migration away from CUDA lock-in?",
+      "resolution_mechanism": "Historical precedent analysis (GPU vs TPU, CUDA vs HIP timing); measurement of threshold effects in developer tool adoption; modeling of network effect decay rates as alternatives mature",
+      "impact": "If threshold is low (< 10% market share): ecosystem is fragile and lock-in could break quickly. If threshold is high (> 40%): Nvidia can maintain dominance even with viable alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adoption threshold for triggering irreversible migration from CUDA"
+    },
+    {
+      "id": "government_intervention_feasibility",
+      "question": "Could antitrust enforcement or government-mandated interoperability standards effectively reduce CUDA lock-in, or does the technical complexity of compiler optimization make such mandates impractical?",
+      "resolution_mechanism": "Legal analysis of precedent (Microsoft/IE antitrust, Apple/App Store), technical analysis of interop standards feasibility (comparing SYCL vs CUDA API burden), policy scenario modeling",
+      "impact": "If feasible: lock-in becomes regulatory risk, shortening effective extraction window. If infeasible: lock-in is structurally protected and extraction can continue indefinitely.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Feasibility of antitrust or interoperability-based intervention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Nvidia's CUDA ecosystem represents one of the most consequential platform lock-ins in contemporary technology. CUDA solved a genuine technical problem: GPUs have heterogeneous architectures, and writing high-performance code for them required either vendor-specific low-level programming or complex compiler infrastructure. CUDA provided a unified, relatively portable abstraction layer that enabled the explosion of GPU-accelerated machine learning. However, over the past 15 years, this coordination mechanism has calcified into an extractive lock-in. Developers have invested millions of person-hours in CUDA code. Research institutions have built their entire ML stacks around CUDA libraries (cuDNN, TensorRT, NCCL). Cloud providers have optimized their infrastructure for CUDA workloads. The switching costs are now so high that even when technically superior or more economical alternatives emerge (AMD ROCm, Intel oneAPI), adoption remains marginal. Nvidia maintains its dominance not primarily through technical superiority \u2014 other architectures can match CUDA's performance on many workloads \u2014 but through ecosystem lock-in: the gravitational pull of the existing developer base, libraries, and best practices. This constraint exhibits a stable tangled_rope character: it provides genuine coordination value (unified GPU programming) while simultaneously enabling asymmetric extraction (Nvidia captures monopoly rents from a locked-in base that has no practical exit). The theater_ratio is relatively low (0.35) because the coordination function is real and the lock-in mechanism is structural rather than performative. Unlike theatrical pitons that persist through ritual maintenance, CUDA's lock-in is maintained through genuine economic barriers to switching.",
+    "key_agents": [
+      "Nvidia Corporation: Primary beneficiary (institutional/arbitrage) \u2014 captures dominant market position, software licensing leverage, and ecosystem network effects. Controls both hardware and software layers, enabling vertical lock-in.",
+      "AI Researchers and ML Engineers: Primary victims (powerless/trapped at individual level, moderate/constrained at enterprise level) \u2014 deeply invested in CUDA training and code; switching costs are prohibitive. Career advancement path locked to CUDA expertise.",
+      "Alternative GPU Vendors (AMD, Intel, others): Secondary victims (powerful/mobile theoretically, but piton in practice) \u2014 have technically viable architectures and interoperable software, but cannot achieve critical mass adoption due to network effects and institutional switching costs. Stuck in inertial equilibrium.",
+      "Cloud Infrastructure Providers: Mixed beneficiary/victim (institutional/constrained) \u2014 benefit from CUDA ecosystem maturity and customer demand for CUDA-compatible services. Locked in: investing in alternative backends risks fragmentation and customer alienation.",
+      "Downstream AI Researchers: Victims (moderate/constrained) \u2014 depend on CUDA-optimized libraries and hardware access; innovation constrained by Nvidia's release cycles and pricing.",
+      "Hardware Portability Principle: Abstract victim (powerless/trapped) \u2014 the technical goal of write-once-run-anywhere is degraded by CUDA lock-in; hardware independence is sacrificed for lock-in.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both the genuine coordination problem (GPU heterogeneity) and the extractive lock-in mechanism (ecosystem network effects); emerging alternatives (JAX multi-backend, PyTorch abstraction layers) represent genuine escapes from CUDA dependency."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Nvidia captures substantial monopoly rents from locked-in developers and enterprises. The effective extraction is not maximal because alternatives do exist (switching is economically painful, not technically impossible) and the ecosystem continues to deliver genuine technical value. However, the extractiveness has grown over time (0.22 \u2192 0.52 over the measurement interval) as lock-in has deepened and Nvidia's market power has consolidated. Suppression (0.68): High. Multiple barriers prevent exit: (1) switching costs are enormous (rewriting ML pipelines, retraining teams); (2) the alternative ecosystem (ROCm, oneAPI) remains immature relative to CUDA; (3) network effects (developer base, library maturity, cloud provider support) create a positive feedback loop favoring CUDA; (4) Nvidia's first-mover advantage means the company controls the highest-performance implementation. Theater ratio (0.35): Low-moderate. The coordination function is largely real \u2014 CUDA genuinely solved the GPU compiler heterogeneity problem. The lock-in is not maintained through theatrical performance but through structural economic barriers (switching costs, network effects). This distinguishes CUDA from pitons, which persist through ritual maintenance rather than real function.",
+    "perspectival_gap": "The constraint generates a substantial perspectival gap between the beneficiary and victims. Nvidia sees pure coordination (Rope) \u2014 they experience CUDA as solving a real technical problem and enabling ecosystem growth. Large model labs see mixed benefits (Tangled Rope) \u2014 they benefit from CUDA's maturity but are locked in to Nvidia's release cycles. Researchers see extraction (Snare) \u2014 their code investments and career paths are locked in with no practical exit. Alternative vendors see an inert degraded competitor (Piton) \u2014 they have technically viable alternatives but cannot break the lock-in cycle. The analytical observer sees the constraint as a tangled rope that is transitioning toward piton status: as emerging alternatives (JAX multi-backend, PyTorch abstraction) mature, CUDA's dominance becomes increasingly dependent on institutional inertia rather than genuine technical necessity. This perspectival diversity is a signature of tangled ropes: the constraint is real (not a false natural law) and it provides genuine benefits, but the benefits are systematically asymmetric and enable extraction.",
+    "directionality_logic": "Nvidia: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Strong net beneficiary. AI researchers: Victim + trapped (individually) \u2192 d\u22480.92, f(d)\u22481.38; Victim + constrained (enterprise) \u2192 d\u22480.75, f(d)\u22481.10. High extraction. Large model labs: Mixed (beneficiary at high-tech frontier, victim from lock-in) + arbitrage \u2192 d\u22480.45, f(d)\u22480.50. Moderate extraction with benefits. Alternative vendors: Potential beneficiary (if they captured market) but actually victims of network effects + mobile \u2192 d\u22480.55, f(d)\u22480.75. Piton classification comes from high theater_ratio if we measured from the vendor's performative messaging angle; measured structurally (market position), it's a victim of lock-in. Analytical observer: analytical \u2192 d\u22480.65, f(d)\u22480.95. Sees the constraint from outside, recognizing both coordination and extraction mechanisms.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint's tangled_rope classification resolves the mandatrophy by showing that lock-in is a hybrid of coordination and extraction. The coordination function is real: CUDA genuinely unified GPU programming across heterogeneous architectures. The extraction is also real: Nvidia captures monopoly rents from locked-in users who cannot practically exit. Neither reading (pure coordination, pure extraction) is wrong; they describe different aspects of the same structural reality. The constraint appears as tangled_rope from the analytical perspective because: (1) beneficiaries (Nvidia, CUDA dev base) and victims (researchers, alternative vendors) are clearly identified; (2) both coordination and extraction functions are active (not just one); (3) enforcement is ongoing (Nvidia invests in ecosystem maturity to maintain lock-in). The mandatrophy is resolved by measuring the perspectival gap: beneficiaries experience Rope (low d, high network benefits); victims experience Snare (high d, constrained exit). The constraint is neither purely coordination nor purely extraction \u2014 it is a hybrid that can only be understood through multiple indexed perspectives. Emerging alternatives (PyTorch multi-backend, JAX XLA compilation across different backends, Modular Mojo as a hardware-agnostic language) may transition this toward Scaffold (temporary coordination with a sunset as portability improves), but as of 2026, the lock-in remains structural."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_model_training_infrastructure",
+      "gpu_supply_chain_concentration",
+      "ml_framework_standardization"
+    ],
+    "dual_formulation_note": "The CUDA lock-in constraint is upstream of multiple downstream constraints: it creates dependencies in AI training infrastructure (models optimized for CUDA), GPU supply chain decisions (cloud providers locked into Nvidia), and ML framework design (libraries optimized for CUDA performance). The constraint family should include separate analyses of the GPU supply concentration (hardware) and ML framework lock-in (software) as distinct but coupled constraints."
+  },
+  "directionality_overrides": []
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: gale_shapley
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-22
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_gale_shapley, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,8 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,79 +53,99 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: gale_shapley
- * human_readable: Gale-Shapley Stable Matching Algorithm (as applied in markets)
- * domain: economic/technological
- * * SUMMARY:
- * The Gale-Shapley algorithm is used to produce a "stable matching" between two sets of agents,
- * most famously in the National Resident Matching Program (NRMP) for doctors. While it solves
- * the coordination problem of "market unraveling," it does so by centralizing the process and
- * extracting significant agency from one side of the market (the applicants), who cannot
- * negotiate terms or engage in side-bargaining.
- * * KEY AGENTS:
- * - Medical Applicants: Subject (Powerless)
- * - Hospital Systems / NRMP: Beneficiary (Institutional)
- * - Market Design Economist: Auditor (Analytical)
+ *   constraint_id: gale_shapley
+ *   human_readable: Gale-Shapley Stable Matching Algorithm (as applied in markets)
+ *   domain: economic/technological
+ *
+ * SUMMARY:
+ *   The Gale-Shapley stable matching algorithm, developed in 1962, solves the
+ *   two-sided matching problem: pairing members of two groups (e.g., medical
+ *   residents and teaching hospitals) such that no unmatched pair would both
+ *   prefer each other to their assigned partners. The algorithm is elegant,
+ *   computable in polynomial time, and mathematically proven to produce a
+ *   stable matching. However, the algorithm's construction — proposers
+ *   initiate offers, accepters respond — encodes a systematic advantage for
+ *   the proposing side. The proposers are guaranteed to receive a match at
+ *   least as good as any other stable matching; accepters are guaranteed a
+ *   match no worse than any other stable matching. This asymmetry is not a
+ *   mathematical necessity of stability; it is a design choice. The
+ *   constraint exhibits Tangled Rope characteristics: it coordinates the
+ *   market (eliminating chaotic cycling and unraveling) while simultaneously
+ *   extracting value from one side of the market. The theater ratio reflects
+ *   the increasing disconnect between the mechanism's theoretical elegance
+ *   and its practical equity implications — institutions use the algorithm
+ *   because it is mathematically proven stable and computationally simple,
+ *   not because empirical outcomes are fair.
+ *
+ * KEY AGENTS:
+ *   - Accepting-Side Agents (e.g., medical applicants): Primary victims (powerless/trapped) — bear the cost of the structural asymmetry with no ability to initiate or strategically navigate the process
+ *   - Proposing-Side Agents (e.g., residency programs): Primary beneficiaries (institutional/arbitrage) — structurally advantaged by the algorithm design; can explore alternative mechanisms if unsatisfied
+ *   - NRMP / Coordinating Institution: Secondary beneficiary and enforcer (institutional/constrained) — benefits from monopoly authority and institutional lock-in; actively maintains the mechanism
+ *   - Market Collective (equilibrium quality, allocative efficiency): Victim (powerless/trapped) — the overall market may achieve suboptimal efficiency due to the asymmetry, but has no mechanism to self-correct
+ *   - Analytical Observer: Neutral (analytical/analytical) — sees both the genuine coordination function and the embedded extraction
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(gale_shapley, 0.80). % High extraction of individual agency and negotiation power.
-domain_priors:suppression_score(gale_shapley, 0.80).   % Alternatives (side deals, direct negotiation) are strictly prohibited and punished.
-domain_priors:theater_ratio(gale_shapley, 0.10).       % The mechanism is highly functional, not theatrical.
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(gale_shapley, 0.38).
+domain_priors:suppression_score(gale_shapley, 0.45).
+domain_priors:theater_ratio(gale_shapley, 0.52).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(gale_shapley, extractiveness, 0.80).
-narrative_ontology:constraint_metric(gale_shapley, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(gale_shapley, theater_ratio, 0.10).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(gale_shapley, extractiveness, 0.38).
+narrative_ontology:constraint_metric(gale_shapley, suppression_requirement, 0.45).
+narrative_ontology:constraint_metric(gale_shapley, theater_ratio, 0.52).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Proponents frame it as a pure, fair coordination mechanism to prevent chaos.
-narrative_ontology:constraint_claim(gale_shapley, snare).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(gale_shapley, tangled_rope).
 narrative_ontology:human_readable(gale_shapley, "Gale-Shapley Stable Matching Algorithm (as applied in markets)").
 narrative_ontology:topic_domain(gale_shapley, "economic/technological").
 
-% Binary flags
-domain_priors:requires_active_enforcement(gale_shapley). % The NRMP actively enforces its rules.
+domain_priors:requires_active_enforcement(gale_shapley).
 
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(gale_shapley, hospital_systems).
-narrative_ontology:constraint_victim(gale_shapley, medical_applicants).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(gale_shapley, proposing_side_agents).
+narrative_ontology:constraint_beneficiary(gale_shapley, algorithm_administering_institutions).
+narrative_ontology:constraint_victim(gale_shapley, accepting_side_agents).
+narrative_ontology:constraint_victim(gale_shapley, market_efficiency_collective).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE)
-% For an applicant, especially one with non-standard preferences (e.g., needing
-% to be in a specific city for family reasons), the system is a trap. It removes
-% their ability to signal these needs or negotiate, forcing them into a ranked lottery.
+% PERSPECTIVE 1: ACCEPTING-SIDE AGENT (SNARE) — Trapped in a mechanism designed to advantage the proposing side. Has no ability to initiate or strategically navigate the process; can only reject or accept proposals in a reactive sequence. Bears the full cost of the structural asymmetry with no exit option. Maximum experienced extraction.
 constraint_indexing:constraint_classification(gale_shapley, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% For the hospital system, the algorithm is a pure coordination mechanism (Rope).
-% It provides a predictable, stable, and orderly supply of labor, preventing
-% chaotic poaching wars and ensuring positions are filled efficiently.
+% PERSPECTIVE 2: PROPOSING-SIDE AGENT (ROPE) — Benefits from first-mover advantage encoded in the algorithm. Can strategically rank preferences and initiate proposals; experiences the mechanism as a coordination solution that happens to work in their favor. Net beneficiary with arbitrage options (can explore alternative matching markets).
 constraint_indexing:constraint_classification(gale_shapley, rope,
     context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: MEDICAL RESIDENCY APPLICANT / PROGRAM (TANGLED ROPE) — In the NRMP, both applicants and programs participate, but the algorithm favors one side. Some applicants perceive the system as coordination (stability is genuinely valuable compared to chaotic matching), but also experience extraction (limited ability to influence outcomes relative to programs). Receives both genuine coordination benefit and asymmetric disadvantage; constrained exit because alternatives are weaker or nonexistent.
+constraint_indexing:constraint_classification(gale_shapley, tangled_rope,
+    context(agent_power(moderate),
             time_horizon(generational),
-            exit_options(mobile),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The analyst sees both the coordination function and the asymmetric extraction.
-% It solves a real coordination problem but does so by concentrating power and
-% extracting agency. It requires active enforcement and has clear winners and
-% losers, making it a canonical Tangled Rope.
-constraint_indexing:constraint_classification(gale_shapley, snare,
+% PERSPECTIVE 4: COORDINATING BODY / NRMP (TANGLED ROPE) — The institution administering the matching mechanism benefits from network effects and monopoly authority (cannot be easily replaced), while enforcing a rule set that systematically favors one market side. Experiences the constraint as coordination function (solving a hard matching problem) combined with extraction mechanism (capacity to impose rules that advantage some participants). Active enforcement required to maintain the asymmetry.
+constraint_indexing:constraint_classification(gale_shapley, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The algorithm solves a genuine coordination problem (stability prevents chaotic cycling), but simultaneously encodes an asymmetric advantage for proposers. From an economic perspective, this is a hybrid: it coordinates the market AND extracts value from one side. The mechanism is neither pure coordination nor pure extraction. The 'theoretical stability' masks an empirical distribution asymmetry.
+constraint_indexing:constraint_classification(gale_shapley, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -124,17 +159,8 @@ constraint_indexing:constraint_classification(gale_shapley, snare,
 
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(gale_shapley, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(gale_shapley, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless == snare,
-    TypeInstitutional == rope,
-    TypePowerless \= TypeInstitutional.
-
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(gale_shapley, snare, context(agent_power(analytical), _, _, _)).
-
-test(high_extraction_threshold) :-
-    narrative_ontology:constraint_metric(gale_shapley, extractiveness, E),
-    E >= 0.46.
+    constraint_indexing:constraint_classification(gale_shapley, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
 :- end_tests(gale_shapley_tests).
 
@@ -144,69 +170,100 @@ test(high_extraction_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- * The scores reflect the dual nature of the Gale-Shapley application. The high
- * extraction (0.8) and suppression (0.8) represent the total loss of bargaining
- * power for applicants and the strict prohibition of alternative matching channels.
- * The Perspectival Gap is stark: for institutions, it's a perfect coordination
- * Rope that solves a chaotic market problem. For applicants, it's a Snare that
- * removes their agency. The analytical view must therefore be Tangled Rope, as
- * the system possesses both a genuine coordination function (beneficiary exists)
- * and severe asymmetric extraction (victim exists), and requires active enforcement.
+ *   Extractiveness (0.38): Moderate. The proposing-side advantage is real and measurable — applicants in residency matching systematically report worse satisfaction outcomes than programs, and programs retain negotiating power even after matching. However, the extraction is not as severe as a pure Snare would suggest (ε ≥ 0.46), because: (1) the mechanism does solve a genuine coordination problem that benefits everyone relative to chaotic markets, (2) some accepting-side agents strategically navigate the system and achieve acceptable outcomes, and (3) the asymmetry is publicly known and discussed (low theater would indicate hidden extraction). The trajectory shows extractiveness increasing from 0.25 to 0.38 as institutions have become more aware of the asymmetry and have shifted practices to exploit it more deliberately (e.g., programs increasingly use multiple interviews to refine rankings, leveraging superior information). Suppression (0.45): Moderate. Accepting-side agents are blocked from initiating proposals and have limited information about other agents' preferences, but they are not completely powerless. The mechanism is transparent, mathematically proven, and there are no outright lies or coercive tactics. Suppression is not low because exit alternatives are genuinely weak (NRMP effectively monopolizes large-scale medical residency matching in the US), and the rules are not negotiable for individual participants. Theater ratio (0.52): Moderate. The algorithm is celebrated for mathematical elegance and theoretical purity, and this legitimacy narrative obscures the practical asymmetry. However, the theater is not overwhelming — the mechanism actually does produce stable matchings as advertised, the process is transparent, and the asymmetry is increasingly discussed in the literature. Theater has increased over time as the gap between theoretical prestige and empirical equity implications has widened.
  *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * This is a severe Mandatrophic constraint (E=0.8). The system avoids being
- * misclassified as a pure Snare by acknowledging its genuine coordination role.
- * The Tangled Rope classification correctly identifies that the stability provided
- * to the market (the Rope function) is paid for by the agency extracted from
- * applicants (the Snare function). The resolution is in seeing that the two
- * functions are inseparable parts of the same mechanism.
+ * PERSPECTIVAL GAP:
+ *   The proposing-side agent (institutional perspective) sees Rope: the mechanism coordinates the market while giving them legitimate first-mover advantage. The accepting-side agent (powerless perspective) sees Snare: they are trapped in a reactive process that systematically disadvantages them. The analytical observer sees Tangled Rope: genuine coordination function combined with asymmetric extraction. The NRMP administering institution sees Tangled Rope: it coordinates the market and extracts monopoly authority. The critical gap is between the algorithm's theoretical beauty (Rope-level coordination) and its practical asymmetry (Snare-level extraction from the accepting side). This gap is not due to measurement ambiguity — it is due to the algorithm's actual design choice to favor proposers.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directional asymmetry is encoded in the algorithm's structure. Proposers have d ≈ 0.15 (beneficiaries with arbitrage options) because they initiate proposals, can strategically rank preferences, and can explore alternative markets. Accepters have d ≈ 0.80 (trapped victims) because they can only respond, have less information, and cannot easily exit the mechanism. The algorithm's mathematical proof guarantees that proposers cannot be worse off by truthfully revealing preferences, but accepters might be. This asymmetry is fundamental to the design, not a bug or pathological case. The institutional coordinating body has d ≈ 0.20 (beneficiary with constrained exit), because it maintains monopoly authority and benefits from network effects, but its exit is constrained by the need to maintain the dominant institution's trust.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   RESOLVING MANDATROPHY: The constraint is legitimately Tangled Rope, not Snare-disguised-as-Rope. It genuinely solves the two-sided matching coordination problem (Rope function), but it simultaneously encodes an asymmetric advantage for proposers (extraction function). The mandatrophy resolution requires recognizing that both functions are real and structural. The proposing-side perspective sees pure Rope (0.35 extractiveness, institutional benefits). The accepting-side perspective sees near-Snare (0.80+ experienced χ due to powerlessness and trappedness). The algorithm does NOT hide the asymmetry under mathematical mystification — stability theory is transparent about the proposer/accepter difference. The mandatrophy is not 'is this Rope or Snare?' but 'this is a genuine hybrid that coordinates while extracting, and the asymmetry is mathematically proven, not hidden.' The theater ratio (0.52) reflects the growing awareness that theoretical elegance does not imply practical fairness. Institutions continue using Gale-Shapley not because they believe it is fair, but because it is the only stable-matching algorithm deployed at scale. The extraction mechanism persists through institutional lock-in, not through deception.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_gale_shapley,
-    'Does the market stability benefit applicants enough to offset their loss of agency?',
-    'Longitudinal studies comparing career satisfaction and outcomes for participants in matched markets vs. those in markets with decentralized negotiation.',
-    'If stability benefit > agency loss, the system leans more towards Rope. If agency loss > stability benefit, it leans more towards Snare for all but the most powerful.',
+    preference_revelation_truthfulness,
+    'Do accepting-side agents truthfully reveal their preferences, or do they strategically misrepresent to counter the algorithm''s bias?',
+    'Comparison of revealed preferences against post-match satisfaction surveys and ex-post choice data. Detection of systematic strategic misrepresentation (e.g., inflated rankings to improve negotiating position).',
+    'If truthful: algorithm is stable as designed, but extraction mechanism remains structurally intact. If strategic: the accepting-side agents are deploying countermeasures that partially neutralize the proposer advantage, reducing effective extraction to ~0.25-0.30 (converting classification toward Rope or Scaffold).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(preference_revelation_truthfulness, empirical, 'Whether accepting-side agents truthfully reveal preferences').
+
+omega_variable(
+    alternative_matching_mechanisms_viability,
+    'Are alternative stable matching algorithms (e.g., proposer-neutral, applicant-proposer symmetric) economically viable as replacements?',
+    'Computational complexity comparison; empirical testing of alternative mechanisms on real market data; survey of institutional willingness to switch mechanisms.',
+    'If viable alternatives exist and are known: suppression is lower (~0.30), because exit is more real. If alternatives are theoretically possible but computationally infeasible or politically blocked: suppression remains high (~0.50+), because the ''choice'' to use Gale-Shapley is coercive.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(alternative_matching_mechanisms_viability, empirical, 'Whether alternative matching mechanisms are viable').
+
+omega_variable(
+    institutional_lock_in_vs_equilibrium_selection,
+    'Does the NRMP''s market dominance reflect genuine equilibrium coordination (network effects make it truly superior) or institutional path dependence (it was first, so it persists regardless of quality)?',
+    'Historical counterfactual analysis; comparison of matching quality metrics across institutions that use different algorithms; study of failed attempts to introduce alternative mechanisms.',
+    'If equilibrium: the extraction is embedded in an efficient coordination mechanism (classification confirmed as Tangled Rope). If path dependence: the mechanism is partially a Piton or Snare maintained by incumbent institutional power rather than by genuine functional superiority.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(institutional_lock_in_vs_equilibrium_selection, conceptual, 'Whether NRMP dominance reflects efficiency or path dependence').
+
+omega_variable(
+    asymmetry_necessity_vs_contingency,
+    'Is the proposer-side advantage a necessary mathematical property of stable matching, or is it a design choice embedded in Gale-Shapley''s specific formulation?',
+    'Formal proof that all stable matchings exhibit some asymmetry in favor of proposers, or construction of an alternative stability concept that is neutral.',
+    'If necessary: the constraint is a Mountain (inherent to the stable matching problem itself). If contingent: the constraint is Tangled Rope or Snare (the algorithm choice, not the problem, is extractive).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(asymmetry_necessity_vs_contingency, conceptual, 'Whether proposer advantage is mathematically necessary or a design choice').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(gale_shapley, 0, 10).
+narrative_ontology:interval(gale_shapley, 0, 30).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This models the matching market becoming more entrenched and totalizing over time,
-% increasing its extractive power as alternatives fade from memory and institutional
-% reliance grows.
-%
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(gale_shapley_tr_t0, gale_shapley, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(gale_shapley_tr_t5, gale_shapley, theater_ratio, 5, 0.08).
-narrative_ontology:measurement(gale_shapley_tr_t10, gale_shapley, theater_ratio, 10, 0.10).
+% Theater ratio over time
+narrative_ontology:measurement(gs_tr_t0, gale_shapley, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(gs_tr_t15, gale_shapley, theater_ratio, 15, 0.48).
+narrative_ontology:measurement(gs_tr_t30, gale_shapley, theater_ratio, 30, 0.52).
 
-% Extraction over time (increases as mechanism becomes mandatory):
-narrative_ontology:measurement(gale_shapley_ex_t0, gale_shapley, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(gale_shapley_ex_t5, gale_shapley, base_extractiveness, 5, 0.70).
-narrative_ontology:measurement(gale_shapley_ex_t10, gale_shapley, base_extractiveness, 10, 0.80).
+% Extraction over time
+narrative_ontology:measurement(gs_be_t0, gale_shapley, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(gs_be_t15, gale_shapley, base_extractiveness, 15, 0.35).
+narrative_ontology:measurement(gs_be_t30, gale_shapley, base_extractiveness, 30, 0.38).
+
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This is a classic resource allocation problem: matching workers to positions.
 narrative_ontology:coordination_type(gale_shapley, resource_allocation).
+narrative_ontology:affects_constraint(gale_shapley, two_sided_market_power_asymmetry).
+narrative_ontology:affects_constraint(gale_shapley, algorithm_selection_in_institutional_design).
+
+% DUAL FORMULATION NOTE:
+% Gale-Shapley as applied in the NRMP represents a single constraint story with indexical variation across perspectives. The algorithm's proposer-side advantage is mathematically proven and not disputed; it is not decomposable into separate ε values. The constraint family includes the abstract stable matching problem (more general, potentially Mountain-adjacent for the mathematical properties) and specific instantiations (NRMP, market applications) where the asymmetry becomes institutionally salient.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(gale_shapley, institutional, 0.2).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

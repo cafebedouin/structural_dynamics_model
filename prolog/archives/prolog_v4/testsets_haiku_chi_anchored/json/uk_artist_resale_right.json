@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "uk_artist_resale_right",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arr"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK Artist's Resale Right (ARR) Legislation",
+    "topic_domain": "economic/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "original_artists",
+      "artist_estates"
+    ],
+    "victims": [
+      "art_market_professionals",
+      "secondary_market_liquidity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Living Artist (Post-Sale)",
+      "comment": "PERSPECTIVE 1: LIVING ARTIST POST-SALE (SNARE) \u2014 Trapped by illiquidity of their own work. Cannot exit the constraint; extractive mechanism (inability to participate in resales) persists across their lifetime. Artist has no capacity to renegotiate terms or recover value. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.54. The ARR appears as compensation, but the constraint's suppression (0.48) reflects that even with ARR, artists lack agency in how their work appreciates and have no control over resale prices."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Art Market Professional (Auction House/Dealer)",
+      "comment": "PERSPECTIVE 2: ART MARKET PROFESSIONAL (TANGLED ROPE) \u2014 Constrained by mandatory ARR collection/remittance but also benefits from the legitimacy and market confidence that ARR enforcement provides (reduced litigation risk, market transparency). Professional must collect and remit but gains coordination benefit (standardized, legally clear resale mechanism). d\u22480.62, f(d)\u22480.87, \u03c3=1.0 \u2192 \u03c7\u22480.33. Tangled rope because the mechanism both extracts (compliance cost, royalty remittance) and coordinates (stable legal framework for resales)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The UK Art Market Ecosystem",
+      "comment": "PERSPECTIVE 3: UK ART MARKET ECOSYSTEM (ROPE) \u2014 Institutional view sees ARR as a coordination mechanism that stabilizes the market by protecting artists' interests and reducing legal uncertainty around resales. Market professionals accept the royalty as a cost of doing business in a regulated ecosystem. The ecosystem benefits from ARR's legitimacy even though individual transactions bear the cost. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.00. Net beneficiary from coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Artist Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: ARTIST ADVOCACY COALITION (PITON) \u2014 Organized advocacy (artist unions, professional associations) initially achieved ARR as a major policy victory (post-2006). However, the implementation has become largely performative: artists rarely receive meaningful income from ARR (most eligible works fall below the 0.5\u20131.0% threshold; high-value resales are often handled privately to avoid ARR triggers). Theater_ratio=0.55 reflects that ARR collection and remittance occur, but actual artist benefit is theatrical relative to the administrative burden. d\u22480.35, f(d)\u22480.28, \u03c3=1.0 \u2192 \u03c7\u22480.15. Low effective extraction because the organized coalition has achieved formal policy victory but sees its mechanism as degraded in practice."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The International Art Dealer (Post-Brexit Dynamics)",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL ART DEALER (SNARE with mobile exit) \u2014 Dealers based in EU/non-UK jurisdictions can exit the ARR constraint by conducting resales outside UK legal jurisdiction, but only at the cost of losing access to UK market liquidity. This creates a genuine mobile exit (dealers can move transactions to London competitors or EU platforms), but the cost is high enough (market access) that many remain trapped. d\u22480.72, f(d)\u22481.15, \u03c3=1.1 \u2192 \u03c7\u22480.48. Snare classification because exit is theoretically available but practically constrained by market geography."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The EU Artist Resale Right Framework (Comparative Perspective)",
+      "comment": "PERSPECTIVE 6: EU ARR FRAMEWORK (SCAFFOLD with built-in sunset logic) \u2014 EU Directive 2006/115/EC (the basis for UK ARR) includes a 'droit de suite' framework that the UK adopted then adapted post-Brexit. This perspective sees ARR as a temporary coordination mechanism with an implicit sunset: EU and UK frameworks are diverging post-Brexit, creating pressure for mutual recognition treaties or harmonization. If UK aligns with EU or creates reciprocal frameworks, the extractive friction disappears and ARR becomes pure coordination (Rope). If divergence continues, ARR becomes increasingly extractive (Snare). d\u22480.45, f(d)\u22480.48, \u03c3=1.1 \u2192 \u03c7\u22480.25. Low effective extraction because organized actors (international galleries, auction houses) have sufficient agency to negotiate framework harmonization."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 This perspective risks framing ARR as an immutable law of art markets: 'artists must be compensated for resales because their labor is exploited by secondary market markup.' However, the structural data (\u03b5=0.38, suppression=0.48, theater=0.55) contradicts a mountain classification. ARR is a contingent legal construct, not a natural law. The false summit reveals that the 'fairness argument' naturalizes what is actually a hybrid coordination-extraction mechanism whose costs and benefits are unevenly distributed by market geography and artist prominence."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_enforcement_effect",
+      "question": "Does the 0.5% royalty threshold (or lower thresholds in some EU jurisdictions) effectively protect artists, or does it exclude most resales from the mechanism?",
+      "resolution_mechanism": "Analysis of ARR payment distribution: percentage of eligible resales actually triggering payment, average royalty per artist, correlation between artist prominence and ARR income",
+      "impact": "If threshold is too high: ARR is largely theatrical (piton). If threshold is appropriate: ARR has genuine coordination function (tangled rope with meaningful transfer).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ARR thresholds result in meaningful artist compensation"
+    },
+    {
+      "id": "private_sale_evasion_scope",
+      "question": "What fraction of eligible resales are conducted privately (avoiding ARR) versus through registered art market professionals?",
+      "resolution_mechanism": "Market research comparing private vs professional resales; correlation with artwork value and jurisdiction; tracking of off-market transactions",
+      "impact": "If evasion is widespread (>30%): ARR enforcement is weak (suppression lower than 0.48). If evasion is rare (<10%): ARR suppression is structural and genuine.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scale of private-sale evasion of ARR"
+    },
+    {
+      "id": "market_liquidity_drag",
+      "question": "Does ARR reduce the secondary market liquidity for mid-range artworks by making resales more costly and uncertain?",
+      "resolution_mechanism": "Econometric analysis of resale volumes, transaction velocity, and price recovery pre/post-ARR implementation; comparison with non-ARR jurisdictions; survey of dealer behavior changes",
+      "impact": "If ARR reduces liquidity significantly: extractiveness understated (should be >0.45). If liquidity drag is minimal: tangled rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of ARR on secondary market liquidity"
+    },
+    {
+      "id": "post_brexit_divergence_timeline",
+      "question": "Will post-Brexit UK/EU ARR divergence lead to reciprocal treaties, harmonization, or regulatory fragmentation?",
+      "resolution_mechanism": "Monitoring of trade negotiations, UK/EU regulatory alignment initiatives, international auction house strategy shifts, and dealer jurisdictional choices",
+      "impact": "If harmonization occurs: scaffold sunset is real, extraction declines. If fragmentation persists: international dealers face increasing compliance costs and may exit UK market.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "UK/EU post-Brexit ARR regulatory alignment trajectory"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "arr_theater_2006"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.48,
+      "id_override": "arr_theater_2015"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 18,
+      "value": 0.55,
+      "id_override": "arr_theater_2024"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "arr_extract_2006"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.33,
+      "id_override": "arr_extract_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 18,
+      "value": 0.38,
+      "id_override": "arr_extract_2024"
+    }
+  ],
+  "interval": {
+    "start": 2006,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The UK Artist's Resale Right (ARR), enacted in 2006 as part of EU Directive 2006/115/EC implementation, mandates that original artists (or their heirs) receive a royalty payment when their artwork is resold by an art market professional. The royalty rate is typically 0.5\u20134% of the resale price, with a cap on total royalties per transaction. ARR exemplifies a hybrid coordination-extraction mechanism: it protects artists' interests (coordination function) while imposing compliance costs on art dealers and potentially reducing market liquidity (extraction effect). The constraint exhibits different classification profiles from different perspectives: artists see pure extraction (inability to control resale value); dealers see mixed coordination-extraction (legal clarity balanced against royalty remittance); the market ecosystem sees coordination (legitimacy and reduced litigation); advocacy coalitions see degraded implementation (theater); international dealers see either snare (constrained exit) or scaffold (with potential sunset via post-Brexit harmonization). Theater has increased over time (2006\u21922024) as the implementation gap widens: ARR is collected and remitted as a formal mechanism, but actual artist benefit is often negligible (most eligible works fall below payment thresholds, and high-value sales migrate to private channels to avoid triggers). The post-Brexit regulatory divergence between UK and EU frameworks adds pressure for either convergence (scaffold logic) or fragmentation (snare intensification).",
+    "key_agents": [
+      "Original Artists & Artist Estates: Primary beneficiaries (institutional/powerless depending on sales history) \u2014 entitled to ARR royalties but have no control over resale decisions or prices",
+      "Art Market Professionals (Auction Houses, Dealers, Galleries): Institutional compliance agents (moderate/constrained) \u2014 required to identify eligible artworks, calculate royalties, collect and remit payments",
+      "Secondary Market Liquidity: Abstract victim (powerless/trapped) \u2014 reduced transaction velocity and deal flow due to ARR compliance costs and price transparency",
+      "Artist Advocacy Coalition (Artist Unions, Professional Associations): Organized beneficiary (organized/constrained) \u2014 achieved ARR policy victory post-2006 but sees implementation degraded by threshold effects and evasion",
+      "International Art Dealers (EU/Non-UK based): Secondary actors (moderate/mobile) \u2014 can exit ARR constraint by conducting transactions outside UK jurisdiction, but at market access cost",
+      "UK Art Market Ecosystem: Institutional framework (institutional/arbitrage) \u2014 benefits from ARR's legitimacy and legal clarity despite royalty remittance costs",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing ARR as inherent protection when it is contingent legal construct with significant implementation gaps"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. ARR does extract real costs from dealers (royalty collection/remittance, compliance, reduced transaction certainty), but the extraction is not as severe as a pure snare (0.66+) because: (1) dealers can price ARR costs into their sales; (2) the royalty is meant to flow to artists (beneficiaries), not to a third-party extractor; (3) organized dealers have collective bargaining power over implementation thresholds. The 0.38 reflects that the mechanism extracts from the market but with genuine coordination benefit (legal certainty). Suppression (0.48): Moderate. Art market professionals cannot fully exit ARR (UK jurisdiction applies to all registered resales), but suppression is not severe (0.60+) because: (1) international dealers retain the option of relocating transactions; (2) high-value sales migrate to private channels, reducing effective ARR impact; (3) thresholds create legitimate carve-outs for lower-value works. Suppression captures the real constraints (legal obligation, market friction) without claiming total closure. Theater ratio (0.55): Moderate-high. ARR is implemented as a formal mechanism (royalties are calculated and collected), but the function is increasingly theatrical: most artists receive negligible income from ARR (threshold effects exclude majority of eligible works), high-value resales evade ARR through private sales, and the administrative overhead (compliance, tracking, remittance) exceeds actual artist benefit for many works. Theater has risen from ~0.35 (2006, when ARR was novel and genuinely protective) to 0.55 (2024, as evasion strategies matured and threshold insufficiencies became apparent). The theater ratio indicates Goodhart drift: the formal mechanism (royalty remittance) persists, but the real function (protecting artist interests) has been partially substituted by evasion.",
+    "perspectival_gap": "ARR demonstrates sharp perspectival divergence across power levels and exit options. Artists and estates (powerless/trapped) see a snare: they cannot participate in their own work's value appreciation and the constraint persists across their lifetime. Dealers (moderate/constrained) see tangled rope: they must comply but also benefit from legal clarity. The UK art market (institutional/arbitrage) sees rope: legitimacy from artist protection is a coordination benefit worth the royalty cost. International dealers (moderate/mobile) see snare with exit: they are constrained by UK jurisdiction but can relocate transactions. Advocacy coalitions (organized/constrained) see piton: they achieved policy victory but see the mechanism as degraded in practice. The analytical observer risks seeing a natural law (mountain) that artists must be compensated, but the structural data reveals this as a false summit: ARR is contingent, unevenly protective, and partially evaded. The perspectival gaps reveal that ARR's extraction burden is borne by the market (dealers, liquidity) while its benefits accrue unevenly to artists (high-value creators benefit; low-value creators receive negligible income). The mechanism is not unjust coordination or pure extraction, but a hybrid constrained by enforcement gaps and evasion strategies.",
+    "directionality_logic": "Original artists/estates: Beneficiary + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction in formal structure (they cannot exit), but actual benefit is partial (theater_ratio=0.55 indicates meaningful leakage). Art market professionals: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.87. They bear compliance costs and royalty remittance but also benefit from market legitimacy. Exit is theoretically available (relocate to non-ARR jurisdiction) but practically costly (market access loss). Secondary market liquidity: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.38. Cannot exit; bears transaction friction costs. International dealers: Victim + mobile \u2192 d\u22480.72, f(d)\u22481.15. Significant exit option (relocate transactions), but cost is high (market access). Artist advocacy coalition: Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.28. Policy victory achieved (beneficiary status), but cannot implement fully (constrained by threshold effects and evasion). UK art market ecosystem: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Institutional beneficiary (legitimacy, legal clarity) with arbitrage exit (can adapt compliance costs into pricing). Analytical observer: Analytical \u2192 d\u22480.73, f(d)\u22481.15. Risks naturalizing contingent mechanism as inherent law.",
+    "mandatrophy_analysis": "Mandatrophy is avoided by clear tangled rope classification. ARR exhibits genuine coordination function (legal clarity, market legitimacy, artist protection intent) AND genuine extraction (compliance costs, reduced liquidity, compliance burden on dealers, theater ratio indicating implementation gap). The mechanism is not pure extraction (a snare would have \u03b5\u22650.46, suppression\u22650.60, \u03c7\u22650.66; ARR has lower metrics because coordination genuinely reduces uncertainty). It is not pure coordination (a rope would have \u03b5\u22640.45, suppression low; ARR's suppression=0.48 and extraction=0.38 reflect real market friction). The tangled rope classification correctly captures that ARR solves a coordination problem (how to compensate artists for resale value) while imposing asymmetric extraction (dealers bear compliance costs; artists' actual benefit is partial and unequal by prominence). The theater ratio drift (0.35\u21920.55) indicates that the coordination function is being eroded over time\u2014the formal mechanism persists, but its actual protective effect is declining due to evasion and threshold effects. This is classic piton degradation (formal maintenance without real function), but ARR remains primarily tangled rope because the enforcement is still active and the coordination benefit is still meaningful (especially for high-value artists). The constraint does not resolve to pure snare because dealers retain (albeit costly) exit options and because the legitimacy/legal clarity function is genuine."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "art_market_price_discovery",
+      "artist_income_inequality"
+    ],
+    "dual_formulation_note": "ARR is a single structural constraint with multiple perspectival readings. It is not decomposed into separate constraints because the base \u03b5 (0.38) is stable across different observables (calculating ARR on transaction value vs. compliance cost vs. artist income all yield consistent structural metrics). The network links acknowledge that ARR influences both upstream (price discovery mechanisms in secondary markets) and downstream (artist income distribution) constraints, but these are separate structural problems, not alternative measurements of ARR itself."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "indo_german_defense_pact",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "India-Germany Defense Industrial Partnership",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "german_defense_firms",
+      "indian_military"
+    ],
+    "victims": [
+      "domestic_indian_defense_industry",
+      "german_taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Domestic Indian Defense Industry",
+      "comment": "Perspective of domestic Indian defense firms: faces suppression due to increased competition and technology dependency; trapped due to lack of scale and political influence"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "German Defense Firms",
+      "comment": "Perspective of German defense firms: benefits from increased market access and co-production opportunities; can arbitrage partnerships with other nations; long term gains"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Indian Military",
+      "comment": "Perspective of the Indian Military: benefits from access to advanced German technology but also constrained by dependency and geopolitical alignment requirements; a mixed role"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer perspective, showing extraction and coordination elements"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_transfer_effectiveness",
+      "question": "How effective is the actual transfer of technology and know-how from Germany to India?",
+      "resolution_mechanism": "Audits of Indian defense production facilities; surveys of Indian engineers; comparison of independently produced systems.",
+      "impact": "If low: primarily a commercial arrangement (rope for German firms, snare for Indian industry). If high: genuine capability enhancement (scaffold with sunset for dependency).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of technology transfer determines whether the partnership increases long-term Indian capabilities."
+    },
+    {
+      "id": "geopolitical_alignment_costs",
+      "question": "To what extent does the partnership constrain India's foreign policy autonomy?",
+      "resolution_mechanism": "Analysis of India's voting patterns in international forums; interviews with Indian diplomats; comparison to India's relations with other arms suppliers.",
+      "impact": "If significant: the partnership becomes a tangled rope (Indian autonomy is extracted). If minimal: primarily a commercial and technological arrangement (rope with limited geopolitical implications).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Geopolitical alignment determines constraints on India's foreign policy autonomy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The strategic partnership between India and Germany aims to deepen defense industry collaboration through co-development, co-production, and technology transfer. This collaboration is expected to modernize the Indian military while providing market access for German defense firms. Potential tensions exist between the goals of promoting domestic Indian defense production and relying on foreign technology.",
+    "key_agents": [
+      "German Defense Firms: Primary beneficiary (institutional/arbitrage)",
+      "Indian Military: Mixed beneficiary/victim (institutional/constrained)",
+      "Domestic Indian Defense Industry: Primary victim (powerless/trapped)",
+      "German Taxpayers: Secondary Victim (moderate/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Reflects the extraction from domestic Indian firms and potential overpayment by Indian and German governments. Suppression (0.40): Reflects the suppression of domestic competition. Theater Ratio (0.30): Some performative elements but mostly functional.",
+    "perspectival_gap": "German defense firms see a rope (market access), domestic Indian firms see a snare (competition), and the Indian military sees a tangled rope (advanced tech but dependency).",
+    "directionality_logic": "German firms benefit with arbitrage; Indian military benefits, but is constrained. Indian domestic firms are victims with no exit. German taxpayers are a secondary victim.",
+    "mandatrophy_analysis": "Prevents mislabeling coordination as pure extraction by recognizing mutual gains (technology transfer) but also potential asymmetric benefits and costs (domestic competition)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "make_in_india_initiative"
+    ]
+  },
+  "directionality_overrides": []
+}

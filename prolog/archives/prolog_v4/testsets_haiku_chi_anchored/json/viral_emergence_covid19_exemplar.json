@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "viral_emergence_covid19_exemplar",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "covid"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Societal Response to SARS-CoV-2 Emergence",
+    "topic_domain": "social/political/health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_emergency_powers",
+      "pharmaceutical_manufacturers",
+      "digital_surveillance_infrastructure"
+    ],
+    "victims": [
+      "low_income_workers",
+      "supply_chain_resilience",
+      "mental_health_populations",
+      "small_business_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Frontline Essential Worker",
+      "comment": "PERSPECTIVE 1: FRONTLINE ESSENTIAL WORKER (SNARE) \u2014 Trapped between economic survival and infection risk. Lacks negotiating power, cannot work remotely, cannot exit labor market without destitution. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.98. Pure extraction with no exit option."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Business Owner",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS OWNER (SNARE) \u2014 Faces mandated closures or capacity restrictions. Cannot relocate business, locked into lease obligations, constrained by supply chain disruption. Larger competitors benefit from consolidation. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.77."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Large Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 3: LARGE PHARMACEUTICAL MANUFACTURER (TANGLED ROPE) \u2014 Experiences genuine coordination function (vaccine development, supply-chain stabilization) AND asymmetric extraction (patent protection, liability shields, government purchase guarantees, monopoly pricing latitude). d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.17. Low effective extraction because of mobile exit options, but structural extraction is real."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Public Health Authority",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH AUTHORITY (ROPE) \u2014 Experiences the constraint as coordination problem: communicating risk, distributing resources, standardizing protocols. Benefits from emergency powers that expand agency. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary through institutional arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Mental Health and Social Services Sector",
+      "comment": "PERSPECTIVE 5: MENTAL HEALTH AND SOCIAL SERVICES SECTOR (TANGLED ROPE) \u2014 Experiences both coordination (integrated crisis response, resource pooling) AND extraction (reduced funding during emergency, staff redeployment, increased demand but constrained capacity). d\u22480.62, f(d)\u22480.90, \u03c3=1.2 \u2192 \u03c7\u22480.52. Moderate extraction within a coordination framework."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Emergency Governance Theater",
+      "comment": "PERSPECTIVE 6: EMERGENCY GOVERNANCE THEATER (PITON) \u2014 Emergency declarations and pandemic protocols persist through institutional inertia long after evidence-base justifies them. theater_ratio=0.64 captures the gap between proclaimed epidemiological rationale and actual operational variance. Mask mandates, isolation protocols, and capacity restrictions become performative displays of governmental action. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.08."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Pandemic Preparedness Infrastructure",
+      "comment": "PERSPECTIVE 7: PANDEMIC PREPAREDNESS INFRASTRUCTURE (SCAFFOLD) \u2014 Temporary emergency public health architecture (vaccination campaigns, supply chains, surveillance systems) with explicit sunset logic: as immunity spreads and variants emerge at lower severity, the constraint decays. d\u22480.45, f(d)\u22480.48, \u03c3=1.2 \u2192 \u03c7\u22480.35. Moderate extraction that declines as population immunity matures."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Biological Constraints on Pathogen Control",
+      "comment": "PERSPECTIVE 8: BIOLOGICAL NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, viral emergence is an immutable feature of zoonotic ecology: novel respiratory pathogens will continue to emerge from animal reservoirs. No society can eliminate this constraint entirely. However, the structural data (\u03b5=0.58, suppression=0.68) contradicts pure mountain classification. The engine will identify this as a false summit: the institutional choices (centralized governance, economic shutdowns, surveillance expansion) are not inherent to pathogen control."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "asymmetric_harm_quantification",
+      "question": "What measurement framework captures the total harm distribution across job loss, supply disruption, mental health decline, and lives saved by intervention?",
+      "resolution_mechanism": "Longitudinal cohort analysis tracking employment, income, mental health, and excess mortality across populations stratified by economic class and occupation",
+      "impact": "If benefits concentrate in high-income populations and harms in low-income: classification shifts toward pure snare. If harms are genuinely distributed: classification remains tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether intervention benefits justify costs across populations"
+    },
+    {
+      "id": "enforcement_necessity_boundary",
+      "question": "At what threshold of population compliance does enforcement shift from coordination mechanism (rope) to coercive extraction (snare)?",
+      "resolution_mechanism": "Cross-national comparative analysis of voluntary adoption rates vs mandated compliance; identification of threshold populations where voluntary uptake was sufficient",
+      "impact": "If most populations exceeded voluntary threshold: constraint was coordination with optional enforcement (rope). If enforcement was essential: constraint was extraction (snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether enforcement was necessary or voluntariness would have sufficed"
+    },
+    {
+      "id": "institutional_inertia_decay",
+      "question": "Will emergency powers and protocols persist indefinitely (piton degradation) or sunset as intended (scaffold maturation)?",
+      "resolution_mechanism": "Longitudinal tracking of emergency declarations, surveillance systems, and supply-chain controls through post-endemic phase; measurement of policy rollback rates",
+      "impact": "If sunset occurs within 5 years: scaffold classification confirmed. If powers persist >10 years: piton classification confirmed \u2014 theater has become the primary function.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether emergency governance persists as institutional theater"
+    },
+    {
+      "id": "supply_chain_concentration_permanence",
+      "question": "Did the constraint permanently shift supply chains toward concentration in fewer manufacturing hubs, or did geographic diversification occur post-disruption?",
+      "resolution_mechanism": "Network analysis of manufacturing hubs, supplier concentration ratios, and supply-chain complexity before, during, and 5+ years post-peak",
+      "impact": "If concentration increased: constraint enabled permanent rent extraction by consolidated manufacturers. If diversification occurred: short-term snare became temporary scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supply disruption enabled permanent market consolidation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The societal response to SARS-CoV-2 emergence represents a constraint exhibiting extraction, coordination, and governance theater across multiple populations and time horizons. The nominal objective \u2014 limiting pathogen transmission and preventing healthcare collapse \u2014 is genuine coordination work. However, the implementation created asymmetric costs and benefits: emergency powers concentrated in state/institutional actors; pharmaceutical manufacturers gained monopoly pricing latitude and liability shields; essential workers faced impossible tradeoffs between infection risk and economic survival; small businesses faced mandated closures while larger competitors consolidated market share. The constraint evolved over time from a legitimate crisis response (immediate coordination need) toward institutional inertia (emergency declarations persisting beyond their epidemiological rationale). The theater ratio increased as government protocols became performative displays disconnected from actual epidemiological conditions. This exemplar demonstrates how a single structural phenomenon \u2014 novel pathogen emergence \u2014 classifies differently depending on observer position: powerless workers experience pure extraction (snare); institutional beneficiaries experience coordination with embedded extraction (tangled rope); public health authorities experience coordination (rope); preparedness infrastructure experiences a temporary constraint with sunset logic (scaffold); and the civilizational view risks naturalizing what is partly a contingent governance choice (mountain false summit). The core mandatrophy question: Is this outbreak response coordination that necessarily requires some asymmetric extraction, or is it extraction legitimized through coordination framing?",
+    "key_agents": [
+      "Frontline Essential Workers: Primary victim (powerless/trapped) \u2014 forced to expose themselves to infection to maintain economic survival, no exit options, no political power to negotiate terms",
+      "Low-Income Service Sector: Primary victim (moderate/constrained) \u2014 face job loss through closures, reduced hours, or health-driven unemployment; constrained exit options due to lack of remote work capacity",
+      "Small Business Owners: Secondary victim (powerful/constrained) \u2014 face mandated closures or capacity restrictions; cannot escape supply-chain disruptions; see large competitors consolidate market share",
+      "State Emergency Power Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 expands surveillance, emergency declarations, and executive authority with legal cover; can exit emergency state at will through policy decision",
+      "Pharmaceutical Manufacturers: Secondary beneficiary (powerful/mobile) \u2014 access to government purchase guarantees, liability shields, patent protections, and monopoly pricing latitude; can arbitrage between markets",
+      "Digital Surveillance Infrastructure: Beneficiary (institutional/arbitrage) \u2014 contact tracing systems, vaccine passports, and health data collection expand institutional capacity permanently",
+      "Public Health Authority: Tertiary beneficiary (institutional/arbitrage) \u2014 gains resources, political salience, and expanded enforcement authority during emergency",
+      "Mental Health and Social Services: Mixed victim/participant (organized/constrained) \u2014 experiences both coordination (integrated crisis response) and extraction (reduced funding, staff redeployment, constrained capacity)",
+      "Analytical Observer: Neutral observer (analytical/analytical) \u2014 sees the constraint as both biological inevitability and institutional choice; must avoid naturalizing governance structures as natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from essential workers and small businesses through emergency powers and supply disruption, but the extraction is not maximal because: (1) large portions of high-income populations received income support or remote work flexibility, (2) vaccination campaigns distributed doses widely rather than hoarding, (3) no single actor captured all extraction benefits. The 0.58 value reflects that the constraint enables significant asymmetric harm but does not achieve total extraction. Suppression (0.68): High. Substantial barriers to exit and alternatives include: government-mandated closures, labor-market collapse in non-essential sectors, international travel restrictions, supply-chain fragmentation, and social enforcement of isolation norms. Individuals and businesses cannot exit the constraint without accepting severe costs. Theater ratio (0.64): Moderate-high. The ratio captures several performative elements: (1) capacity restrictions that vary arbitrarily by business type, (2) mask mandates that persist after evidence-base weakens, (3) isolation protocols that continue in absence of active transmission, (4) daily case counts as ritual status reports rather than epidemiological drivers of policy. However, theater is not dominant (\u22650.70) because genuine coordination work (vaccine distribution, hospital surge capacity) remains functionally important throughout the interval. The increasing theater ratio (0.35\u21920.64 over 12 months) reflects the progression from crisis response to ritualized governance.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival variation across the eight perspectives. The frontline worker experiences pure extraction with no escape (snare); the institutional authority experiences coordination with embedded benefits (rope/tangled rope); the small business owner experiences extraction with constrained exit (snare); the pharmaceutical manufacturer experiences coordination with highly favorable terms (tangled rope); the mental health sector experiences mixed coordination and extraction (tangled rope); the governance theater perspective reveals institutional inertia (piton); the scaffold perspective sees a genuine sunset (pandemic immunity) that will decay the constraint; and the civilizational view risks seeing immutable biology (mountain false summit) when the extraction mechanisms are institutional choices. No single perspective captures the full structure \u2014 the presheaf of all perspectives together reveals that the constraint is simultaneously coordination, extraction, theater, and temporary scaffolding.",
+    "directionality_logic": "Frontline essential workers: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Small business: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction. State emergency powers: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary. Pharmaceutical manufacturers: Beneficiary + mobile but constrained \u2192 d\u22480.35, f(d)\u22480.30. Low effective extraction despite absolute benefits, because they retain mobile exit options. Mental health sector: Victim + constrained but organized \u2192 d\u22480.62, f(d)\u22480.90. Moderate extraction within coordination. Digital surveillance: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary through infrastructure expansion. Public health authority: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary through authority expansion. Analytical observer: d\u22480.72, f(d)\u22481.15. Moderate-high effective extraction because observation position is constrained by dependence on institutional data.",
+    "mandatrophy_analysis": "RESOLUTION MECHANISM: The mandatrophy resolves through disaggregation by population. The constraint is simultaneously genuine coordination (preventing healthcare collapse, distributing vaccines) AND genuine extraction (enforcing unequal sacrifice, enabling market consolidation). The false dichotomy is 'pure coordination' vs 'pure extraction.' The tangled_rope classification captures both: the beneficiaries (state, pharmaceutical, surveillance infrastructure) experience coordination that enables their own expansion; the victims (essential workers, small business) experience extraction; the scaffolding (pandemic preparedness) is temporary but the institutional expansion (digital surveillance, emergency powers) may persist as piton. The mandatrophy prevents conflation by requiring explicit beneficiary/victim/enforcement declaration. Without the beneficiaries declaration, the constraint appears to be pure emergency response (coordination). Without the victims declaration, it appears to be successful public health (rope). The tangled_rope classification forces the uncomfortable truth: the response is BOTH coordination AND extraction, with different populations experiencing different aspects of the same structure. The theater ratio (0.64, increasing over time) indicates growing performative content \u2014 protocols persist beyond their epidemiological rationale, suggesting institutional inertia (piton degradation risk) rather than pure temporary scaffolding."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_distribution_equity",
+      "supply_chain_concentration_covid",
+      "digital_surveillance_permanence",
+      "emergency_power_persistence"
+    ],
+    "dual_formulation_note": "The viral emergence constraint decomposes into downstream constraints: vaccine equity (how coordination benefits distribute), supply concentration (how market consolidation persists), surveillance permanence (whether temporary systems become piton), and emergency power persistence (whether emergency governance outlives the emergency). Each downstream constraint has its own \u03b5 reflecting the specific extraction or coordination mechanism. The parent constraint (viral_emergence_covid19_exemplar) operates at the level of societal response; the children operate at the level of specific governance and economic mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

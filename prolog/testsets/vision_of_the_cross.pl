@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: vision_of_the_cross
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_vision_of_the_cross, []).
@@ -40,11 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,23 +54,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: vision_of_the_cross
- *   human_readable: "In Hoc Signo Vinces" Mandate
+ *   human_readable: In Hoc Signo Vinces Mandate
  *   domain: religious/political
  *
  * SUMMARY:
- *   On the eve of the Battle of the Milvian Bridge in 312 CE, Constantine
- *   reportedly had a vision of a Christian symbol in the sky with the words
- *   "In hoc signo vinces" ("in this sign you will conquer"). This divine
- *   mandate constrained his military and political strategy, compelling him
- *   to adopt the symbol and, by extension, favor the Christian faith. This act
- *   radically reconfigured the religious and political landscape of the Roman
- *   Empire, initiating the process of its Christianization.
+ *   The 'In Hoc Signo Vinces' mandate represents a foundational hybrid
+ *   constraint that fused religious authority, state legitimacy, and social
+ *   coercion into a single institutional apparatus. Constantine's reported
+ *   vision of the Christian symbol in the sky became the narrative
+ *   justification for state-enforced Christian identity across the Roman
+ *   empire. The constraint exhibits Tangled Rope structure at base: the
+ *   mandate genuinely coordinates imperial identity and consolidates state
+ *   authority (rope function), while simultaneously extracting compliance
+ *   from non-Christian populations and suppressing doctrinal dissent (snare
+ *   function). The theater ratio (0.85) reflects the increasing gap between
+ *   the elaborated theological and ceremonial apparatus and actual functional
+ *   necessity — by the 5th century, invocations of Constantine's vision are
+ *   largely performative ritual maintaining institutional inertia. The
+ *   extractiveness value (0.58) captures the moderate but sustained
+ *   asymmetry: beneficiaries (imperial state, institutional clergy)
+ *   experience genuine organizational benefit, while victims (pagans,
+ *   doctrinal minorities) bear costs of restricted religious practice and
+ *   forced assimilation.
  *
- * KEY AGENTS (by structural relationship):
- *   - Roman Polytheistic Priesthoods: Primary target (powerless/trapped) — bore the costs of imperial patronage shifting to a rival religion, leading to their eventual suppression and dispossession.
- *   - Christian Clergy and Adherents: Primary beneficiary (institutional/arbitrage) — shifted from a persecuted minority to the favored religion of the empire, gaining immense resources, power, and status.
- *   - Emperor Constantine: Institutional enforcer (institutional/constrained) — used the constraint to unify his army and consolidate political power, but was constrained by the choice to break with centuries of Roman tradition.
- *   - Analytical Observer: A historian viewing the event as a pivotal moment of both political coordination and religious extraction.
+ * KEY AGENTS:
+ *   - Constantine: Original beneficiary (institutional/arbitrage) — vision narrative provides legitimacy for political consolidation and religious centralization
+ *   - Imperial State Apparatus: Primary beneficiary (institutional/arbitrage) — Christian mandate solves fragmentation problem through sacralized authority
+ *   - Institutional Christian Clergy: Primary beneficiary (organized/arbitrage) — state enforcement of orthodoxy and property protection provide massive organizational consolidation
+ *   - Pagan Subject Populations: Primary victim (powerless/trapped) — religious practice restrictions, property seizures, social degradation accumulate over generations
+ *   - Doctrinal Minority Christians: Secondary victim (powerless/trapped) — Arian, Nestorian, and heterodox communities targeted by orthodoxy enforcement
+ *   - Non-Christian Merchant Class: Secondary victim (moderate/constrained) — religious tax differentials and property restrictions constrain economic activity but some arbitrage through conversion or migration
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional arrangement as immutable religious-political law
  */
 
 /* ==========================================================================
@@ -77,85 +92,80 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(vision_of_the_cross, 0.75).
-domain_priors:suppression_score(vision_of_the_cross, 0.85).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(vision_of_the_cross, 0.15).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(vision_of_the_cross, 0.58).
+domain_priors:suppression_score(vision_of_the_cross, 0.72).
+domain_priors:theater_ratio(vision_of_the_cross, 0.85).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(vision_of_the_cross, extractiveness, 0.75).
-narrative_ontology:constraint_metric(vision_of_the_cross, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(vision_of_the_cross, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(vision_of_the_cross, extractiveness, 0.58).
+narrative_ontology:constraint_metric(vision_of_the_cross, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(vision_of_the_cross, theater_ratio, 0.85).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% This constraint is not a mountain; it is a human-enforced political/religious mandate.
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(vision_of_the_cross, tangled_rope).
+narrative_ontology:human_readable(vision_of_the_cross, "In Hoc Signo Vinces Mandate").
+narrative_ontology:topic_domain(vision_of_the_cross, "religious/political").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(vision_of_the_cross, snare).
+domain_priors:requires_active_enforcement(vision_of_the_cross).
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(vision_of_the_cross). % Required for Tangled Rope
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(vision_of_the_cross, christian_clergy_and_adherents).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(vision_of_the_cross, roman_polytheistic_priesthoods).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(vision_of_the_cross, constantinopolitan_state).
+narrative_ontology:constraint_beneficiary(vision_of_the_cross, christian_institutional_clergy).
+narrative_ontology:constraint_victim(vision_of_the_cross, non_christian_populations).
+narrative_ontology:constraint_victim(vision_of_the_cross, doctrinal_minorities).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Roman polytheistic priesthoods who lost imperial funding, status, and
-% eventually their right to practice.
-% Engine derives d from victim status + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
-% χ = 0.75 * 1.42 * 1.0 (national) = 1.065, a clear Snare (χ >= 0.66).
+% PERSPECTIVE 1: PAGAN SUBJECT POPULATION (SNARE) — Powerless populations with no exit from the expanding Christian state apparatus. Religious practice restrictions, property seizures, and social degradation accumulate over generations. Cannot organize resistance or escape imperial jurisdiction. Experiences maximum extraction under increasingly coercive enforcement.
 constraint_indexing:constraint_classification(vision_of_the_cross, snare,
     context(agent_power(powerless),
             time_horizon(generational),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(continental))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The Christian community, elevated from persecuted minority to imperial favorite.
-% Engine derives d from beneficiary status + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12.
-% χ = 0.75 * -0.12 * 1.0 (national) = -0.09, a clear Rope (negative extraction).
+% PERSPECTIVE 2: DOCTRINAL MINORITY CHRISTIANS (SNARE) — Arian, Nestorian, and other heterodox Christian communities experience the state's Christian mandate as extractive coercion, not coordination. Trapped within Christian identity but targeted by orthodox enforcement apparatus. Suppressed alternatives and heresy restrictions create maximum extraction for theological dissenters.
+constraint_indexing:constraint_classification(vision_of_the_cross, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 3: IMPERIAL STATE APPARATUS (ROPE) — Constantine and successor rulers see the Christian mandate as pure coordination: unifying religious identity under state authority solves the problem of social cohesion in a fragmenting empire. The vision narrative provides legitimacy and voluntary compliance through sacralization of political authority. Net beneficiary experiencing low extraction through arbitrage (can maintain or shift religious policy if political calculus changes).
 constraint_indexing:constraint_classification(vision_of_the_cross, rope,
     context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: INSTITUTIONAL CHRISTIAN CLERGY (ROPE) — Orthodox clergy experience the mandate as coordination enabling institutional power consolidation. State protection of church property, enforcement of doctrinal orthodoxy, and tithing guarantees provide massive organizational benefit. Organized actors with arbitrage options (can align with or resist particular emperors) see this as coordination solving the problem of maintaining religious authority across the empire.
+constraint_indexing:constraint_classification(vision_of_the_cross, rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(arbitrage),
-            spatial_scope(national))).
+            spatial_scope(continental))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% A historian who sees both the coordination function (unifying the empire)
-% and the severe asymmetric extraction (dispossessing paganism).
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-% χ = 0.75 * 1.15 * 1.2 (global) = 1.035. This result classifies as Snare.
-% To capture the 'Tangled Rope' intuition that coordination was present,
-% we use a directionality override to model an analytical view that weighs
-% the coordination function more heavily.
-constraint_indexing:directionality_override(vision_of_the_cross, analytical, 0.60).
-% With override: d=0.60, f(d)≈0.88. χ = 0.75 * 0.88 * 1.2 = 0.792.
-% This χ is in the Tangled Rope range [0.40, 0.90]. ε=0.75, suppression=0.85
-% also satisfy Tangled Rope criteria (ε≥0.30, supp≥0.40).
-constraint_indexing:constraint_classification(vision_of_the_cross, snare,
+% PERSPECTIVE 5: NON-CHRISTIAN MERCHANT CLASS (TANGLED ROPE) — Constrained exit (cannot fully abandon economic participation in Christian-majority cities and trade networks) but also genuine coordination benefits from stable imperial administration and standardized law. Extraction occurs through property restrictions and religious tax differentials, but merchants retain some arbitrage through conversion, strategic religious performance, or migration to outer provinces. Mixed experience: some extraction, some genuine benefit from order.
+constraint_indexing:constraint_classification(vision_of_the_cross, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 6: IMPERIAL RELIGIOUS PROPAGANDA SYSTEM (PITON) — The vision narrative itself becomes the degraded mechanism. By the 5th-6th centuries, the vision is invoked ceremonially and theatrically but its legitimating power has atrophied — emperors maintain the Christian mandate through habit and institutional momentum rather than genuine belief in the narrative's truth. Theater ratio (0.85) reflects that the elaborate ceremony and theological elaboration vastly exceed the actual verification or functional necessity of Constantine's original vision claim.
+constraint_indexing:constraint_classification(vision_of_the_cross, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT ALERT) — From a universal analytical view, the mandate appears to be an immutable natural law: religious identification and state power are inherently entangled, and any state must sacralize its authority. However, the structural data contradicts this. The vision narrative is contingent, the enforcement is coercive, and alternative organizational forms exist. The analytical 'mountain' perspective risks naturalizing what is actually a hybrid coordination-extraction mechanism deployed by institutional beneficiaries.
+constraint_indexing:constraint_classification(vision_of_the_cross, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -163,19 +173,18 @@ constraint_indexing:constraint_classification(vision_of_the_cross, snare,
 
 :- begin_tests(vision_of_the_cross_tests).
 
-test(perspectival_gap_is_total) :-
-    % Verify the massive gap between victim (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(vision_of_the_cross, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(vision_of_the_cross, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(vision_of_the_cross, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(vision_of_the_cross, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_conditions_met_analytically) :-
-    % Verify that the analytical perspective correctly identifies a Tangled Rope.
-    domain_priors:base_extractiveness(vision_of_the_cross, E), E >= 0.30,
-    domain_priors:suppression_score(vision_of_the_cross, S), S >= 0.40,
-    domain_priors:requires_active_enforcement(vision_of_the_cross),
-    narrative_ontology:constraint_beneficiary(vision_of_the_cross, _),
-    narrative_ontology:constraint_victim(vision_of_the_cross, _),
-    constraint_indexing:constraint_classification(vision_of_the_cross, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(vision_of_the_cross, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(vision_of_the_cross, TR),
+    TR >= 0.70.
 
 :- end_tests(vision_of_the_cross_tests).
 
@@ -185,119 +194,101 @@ test(tangled_rope_conditions_met_analytically) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): Extremely high. This constraint initiated a
- *     multi-generational, empire-wide transfer of wealth, property (temples,
- *     land), and social capital from polytheistic institutions to the Christian church.
- *   - Suppression Score (0.85): Extremely high. The adoption of Christianity as
- *     the favored religion led directly to the suppression and eventual
- *     prohibition of traditional Roman religious practices. Alternatives
- *     were actively eliminated.
- *   - Theater Ratio (0.15): Low. The initial constraint was brutally functional:
- *     a mandate for military victory. While Christian ritual became highly
- *     theatrical later, the origin of the constraint was practical and coercive.
+ *   Extractiveness (0.58): Moderate-high. The Christian mandate transfers authority over religious practice from individual choice to state control, generating clear asymmetric benefit: the imperial state and orthodox clergy gain institutional power consolidation and enforcement mechanism for compliance; non-Christian populations lose autonomy over religious practice and face property seizures/restrictions. However, extractiveness is not extreme (not 0.75+) because: (1) the coordination function is genuine — the mandate does solve a real imperial fragmentation problem; (2) voluntary conversion operates as a genuine exit option reducing effective extraction for some populations; (3) enforceability depends on continuing state investment rather than occurring passively. The measurement trajectory shows increasing extractiveness as coercive capacity matures (0.35→0.50→0.58 over 100 years), indicating that initial coordination benefits become layered with increasing extraction as enforcement apparatus hardens. Suppression (0.72): High. Severe barriers to exit include: religious identity restrictions (cannot freely practice non-Christian religions in public), property seizures targeting non-Christian institutions, legal penalties for doctrinal dissent, social degradation of apostate status. Suppression is high but not maximal (0.90+) because some populations can exit through conversion or migration to less-enforced peripheries. Theater ratio (0.85): Very high and increasing over the interval. Constantine's original vision claim is relatively straightforward — a narrative legitimating religious-political consolidation. By the 5th-6th centuries, the apparatus has evolved into elaborate theological structures (Nicene Councils, Christological disputes, liturgical hierarchy) where the performative and ceremonial content vastly exceeds the functional necessity. The vision narrative itself is invoked ceremonially but its legitimating power has atrophied — emperors maintain the Christian mandate through habit and institutional momentum.
  *
  * PERSPECTIVAL GAP:
- *   The gap is absolute. For the Roman polytheistic priesthoods, it was a
- *   Snare that destroyed their world, expropriated their resources, and
- *   criminalized their beliefs. For the Christian community, it was a Rope of
- *   divine deliverance that offered salvation, imperial protection, and
- *   unprecedented power. The two groups experienced completely different,
- *   mutually exclusive realities derived from the same event.
+ *   This constraint exemplifies how structural position determines classification entirely independently of the underlying constraint mechanics. The same extraction of religious autonomy is experienced as beneficial coordination by the state (who sees itself consolidating fragmented authority), as pure predation by powerless pagan populations (who have no exit), as mixed coordination and extraction by merchants (who retain some arbitrage), and as degraded ritual by the institutional apparatus itself (which maintains it through inertia). The mandatrophy is resolved not by asking 'what is the constraint really?' but by recognizing that all six types are structural truths from different positions. The false summit (analytical mountain) reveals that the constraint is contingent, not immutable — alternative imperial structures (pluralistic, non-Christian, decentralized) could have achieved stability without extractive religious coercion.
  *
  * DIRECTIONALITY LOGIC:
- *   The beneficiary/victim declarations are unambiguous. The Christian clergy
- *   and their followers were the direct, intended beneficiaries. The established
- *   polytheistic priesthoods and their adherents were the direct, structural
- *   victims whose loss was the necessary counterpart to the Christians' gain.
- *   The directionality derivation chain correctly models this by assigning a
- *   low `d` to the beneficiaries and a high `d` to the victims, generating the
- *   Rope/Snare classification gap. The override for the analytical perspective
- *   reflects the historical judgment that a genuine and powerful coordination
- *   function coexisted with the brutal extraction, making it a canonical Tangled Rope.
+ *   Directionality (d) for each perspective is derived from the agent's structural position relative to the extraction flow. Institutional beneficiaries (imperial state, orthodox clergy) with arbitrage options (can shift policy, maintain or reduce religious enforcement) derive low d values (0.10-0.20), producing negative or minimal χ. They experience the constraint as coordination. Powerless trapped agents (pagan populations, doctrinal minorities) with no exit options derive high d values (0.90-0.95), producing maximum χ. They experience the constraint as pure extraction. Moderate constrained agents (merchant class) with some but limited exit (conversion, migration at cost) derive mid-range d values (0.50-0.65), producing moderate χ. They experience mixed coordination and extraction. The imperial state's ability to unilaterally set the mandate's terms and exempt itself from restrictions places it at d≈0.05 (full beneficiary); pagan populations' inability to escape religious restrictions places them at d≈0.95 (full target). The piton and false-summit mountain perspectives reflect that the constraint's functional necessity has atrophied even as its performance intensifies — this is captured in the theater ratio (0.85) indicating heavy performative content relative to actual verification or functional requirement.
  *
  * MANDATROPHY ANALYSIS:
- *   This story is a powerful example of why the Tangled Rope category is
- *   essential. A simpler model might be forced to classify this event as
- *   *either* pure coordination (a Rope for unifying the Empire) or pure
- *   extraction (a Snare for persecuting pagans). Both are incomplete. The
- *   Deferential Realism framework, by using an analytical perspective that can
- *   see both functions simultaneously, correctly identifies it as a Tangled
- *   Rope: a system that performed a genuine coordination function (stabilizing
- *   and unifying a vast empire under a new ideology) *through* a mechanism of
- *   asymmetric extraction (the dispossession of a previously dominant group).
- *   [RESOLVED MANDATROPHY] The framework's ability to classify this as a
- *   Tangled Rope, acknowledging both coordination and extraction, resolves the
- *   mandatrophy by preventing a misclassification as a pure Snare.
+ *   CONSTRAINT FAMILY: Vision of the Cross is a decomposable phenomenon. The historical event (Constantine's vision) is separable from the institutional mandate that used it as justification. The mandate itself exhibits Tangled Rope structure (genuine coordination for state power consolidation + asymmetric extraction from non-Christian populations). The vision narrative becomes increasingly theatrical over time (theater_ratio 0.40→0.85), indicating that by the late imperial period, invocations of Constantine's vision are performative justification for institutional arrangements that no longer depend on the narrative's truth. The mandatrophy is resolved by recognizing that beneficiaries experience the constraint as coordination (rope) while victims experience it as pure extraction (snare), and this gap is not a classification error but a structural feature of the constraint's hybrid nature. The false summit perspective (mountain) attempts to naturalize contingent institutional arrangements as immutable religious-political law, but the structural data reveals that alternative coordination mechanisms were available. The vision mandate is neither pure extraction (snare) nor pure coordination (rope), but a hybrid where the coordination benefit accrues primarily to the state and clergy while the extraction costs fall primarily on non-Christian populations and doctrinal minorities.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_vision_of_the_cross,
-    'Was the Vision of the Cross a genuine divine revelation, a politically motivated fabrication, or a psychological phenomenon?',
-    'This is historically and empirically irresolvable. It is a matter of faith versus materialist interpretation.',
-    'If a true divine revelation, the constraint would be a Mountain. If a political fabrication, it is a human-constructed Tangled Rope. The framework models the structural consequences of the ACT of enforcement, which align with a Tangled Rope, regardless of the ultimate origin.',
-    confidence_without_resolution(low)
+    constantine_vision_historicity,
+    'Did Constantine actually experience a vision, or was the narrative constructed post-hoc for legitimacy?',
+    'Textual analysis of Eusebius vs Constantine''s Oratio; archaeological investigation of Constantine''s documented religiosity in pre-312 period; comparison with other reported visions by imperial figures',
+    'If genuine: vision is contingent psychological event that shaped policy (constraint remains contingent). If constructed: narrative is pure theater (theater_ratio moves toward 1.0, piton classification strengthens). Either way, not a natural law justifying extraction.',
+    confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_vision_of_the_cross, conceptual, 'Whether the vision was a divine revelation (Mountain) or a political fabrication (Tangled Rope).').
+narrative_ontology:omega_variable(constantine_vision_historicity, empirical, 'Whether Constantine''s vision was historical or constructed post-hoc').
+
+omega_variable(
+    extraction_necessity_thesis,
+    'Was Christian institutional coercion necessary for imperial stability, or could non-Christian or pluralistic authority structures have achieved equivalent coordination?',
+    'Comparative analysis with other empires managing religious diversity (Sassanid, Abbasid, Ottoman); counterfactual historical modeling of non-Christian centralization scenarios; examination of why pagan emperors (Maxentius, Galerius) failed in competition with Constantine',
+    'If necessary: some extraction is legitimate coordination cost (tangled_rope classification holds). If contingent: extraction could have been avoided through alternative structures (snare classification strengthens for victims).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extraction_necessity_thesis, conceptual, 'Whether Christian coercion was structurally necessary for imperial stability').
+
+omega_variable(
+    doctrinal_enforcement_mechanism,
+    'Why did Constantine and successors enforce doctrinal orthodoxy against Arian and other heterodox Christian communities, rather than permitting internal Christian pluralism?',
+    'Analysis of the Council of Nicaea and successor councils; comparison of enforcement patterns under Constantine vs later emperors; examination of whether doctrinal uniformity strengthened or weakened imperial authority',
+    'If doctrinal uniformity strengthened state control: pure extraction against minorities (snare). If theological disagreement threatened imperial unity: tangled rope (coordination + extraction). Mechanism determines whether doctrinal victims are seen as targets of pure coercion or as obstacles to legitimate coordination.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(doctrinal_enforcement_mechanism, conceptual, 'Mechanism underlying doctrinal orthodoxy enforcement').
+
+omega_variable(
+    voluntary_compliance_vs_coercion_ratio,
+    'What fraction of the Christian mandate''s effectiveness derives from genuine voluntary adoption by populations versus coercive enforcement?',
+    'Comparative analysis of conversion rates in high-enforcement zones (Roman heartland) vs low-enforcement peripheries; study of apostate rates during persecution reversals; examination of whether Christian populations maintained faith in isolation from state enforcement (monastic communities, diaspora communities)',
+    'If predominantly voluntary: coordination (rope) classification strengthens across populations. If predominantly coercive: extraction (snare) strengthens. Ratio determines whether extractiveness value of 0.58 is too low or too high.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(voluntary_compliance_vs_coercion_ratio, empirical, 'Ratio of voluntary adoption to coercive enforcement in Christian mandate').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(vision_of_the_cross, 312, 380). % From Milvian Bridge to Edict of Thessalonica
+narrative_ontology:interval(vision_of_the_cross, 312, 412).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data tracks the intensification of the constraint over time.
-% The interval covers the period from Constantine's vision (312 CE) to
-% Christianity becoming the official state religion (380 CE).
+% Theater ratio over time
+narrative_ontology:measurement(voc_tr_t0, vision_of_the_cross, theater_ratio, 0, 0.4).
+narrative_ontology:measurement(voc_tr_t50, vision_of_the_cross, theater_ratio, 50, 0.65).
+narrative_ontology:measurement(voc_tr_t100, vision_of_the_cross, theater_ratio, 100, 0.85).
 
-% Theater ratio over time:
-narrative_ontology:measurement(vision_tr_t312, vision_of_the_cross, theater_ratio, 312, 0.10).
-narrative_ontology:measurement(vision_tr_t325, vision_of_the_cross, theater_ratio, 325, 0.30).
-narrative_ontology:measurement(vision_tr_t380, vision_of_the_cross, theater_ratio, 380, 0.15). % Re-normalized back to final
+% Extraction over time
+narrative_ontology:measurement(voc_be_t0, vision_of_the_cross, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(voc_be_t50, vision_of_the_cross, base_extractiveness, 50, 0.5).
+narrative_ontology:measurement(voc_be_t100, vision_of_the_cross, base_extractiveness, 100, 0.58).
 
-% Extraction over time:
-narrative_ontology:measurement(vision_ex_t312, vision_of_the_cross, base_extractiveness, 312, 0.60).
-narrative_ontology:measurement(vision_ex_t325, vision_of_the_cross, base_extractiveness, 325, 0.70).
-narrative_ontology:measurement(vision_ex_t380, vision_of_the_cross, base_extractiveness, 380, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This constraint enforced a new basis for imperial identity and loyalty.
 narrative_ontology:coordination_type(vision_of_the_cross, enforcement_mechanism).
+narrative_ontology:affects_constraint(vision_of_the_cross, nicene_orthodoxy_enforcement).
+narrative_ontology:affects_constraint(vision_of_the_cross, imperial_religious_property_seizure).
 
-% Network relationships (structural influence edges)
-% This constraint laid the foundation for the medieval concept of the divine
-% right of kings, which yoked secular authority to religious sanction.
-narrative_ontology:affects_constraint(vision_of_the_cross, divine_right_of_kings).
+% DUAL FORMULATION NOTE:
+% The vision narrative is separable from the mandate apparatus. The vision claim (historical event or constructed narrative) has ε≈0.15 (mountain or piton depending on authenticity). The mandate apparatus (institutional coercion + religious consolidation) has ε≈0.58 (tangled rope). Both use the vision as legitimating reference, but they are structurally distinct constraints with different extractiveness profiles. This story tracks the mandate apparatus; a separate story would track the vision claim's historical status.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% An override is used for the analytical perspective. The default derivation
-% for 'analytical' (d=0.72) combined with the extremely high base extractiveness
-% classifies the constraint as a pure Snare, even from a global view.
-% This misses the significant, historically undeniable coordination function
-% the new state religion played in unifying the late Roman Empire. The override
-% (d=0.60) adjusts the perspective to one that gives more weight to the
-% coordination function, correctly classifying it as a Tangled Rope without
-% altering the base metrics of the constraint itself.
-constraint_indexing:directionality_override(vision_of_the_cross, analytical, 0.60).
-
+constraint_indexing:directionality_override(vision_of_the_cross, institutional, 0.08).
+constraint_indexing:directionality_override(vision_of_the_cross, organized, 0.12).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

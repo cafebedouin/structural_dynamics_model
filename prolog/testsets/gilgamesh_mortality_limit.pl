@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: gilgamesh_mortality_limit
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-21
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_gilgamesh_mortality_limit, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,8 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,89 +53,113 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: gilgamesh_mortality_limit
- * human_readable: The Allotment of Mortality
- * domain: philosophical/religious
- * * SUMMARY:
- * This constraint models mortality as the ultimate physical limit defined in the 
- * Epic of Gilgamesh. Gilgamesh—a king of immense power—attempts to treat his 
- * mortality as a "Snare" he can untie. Ultimately, he discovers that death is a 
- * Mountain (a physical law set by the gods) that extracts the "margin" of human 
- * life regardless of rank or strength. From an analytical view, it is a Tangled
- * Rope: a coordination mechanism (population control, divine/mortal distinction)
- * that relies on the total, asymmetric extraction of life from humanity.
- * * KEY AGENTS:
- * - Gilgamesh (The Subject): Powerless in the face of the limit.
- * - The Gods (Enlil/Anu): Beneficiary (Institutional), architects of the constraint.
- * - Systems Analyst (Auditor): Analytical observer of the structure.
+ *   constraint_id: gilgamesh_mortality_limit
+ *   human_readable: The Allotment of Mortality (Gilgamesh)
+ *   domain: philosophical/religious
+ *
+ * SUMMARY:
+ *   The Epic of Gilgamesh presents mortality as the ultimate constraint on
+ *   human agency. The narrative begins with Gilgamesh seeking immortality
+ *   after the death of Enkidu and culminates in his acceptance that mortality
+ *   is the definitive allotment of humanity — the line that cannot be
+ *   crossed. The constraint is not imposed by institutional force, social
+ *   convention, or economic extraction. Rather, it emerges as a natural
+ *   limit, a boundary condition of existence itself. From the perspective of
+ *   the powerless human agent, mortality offers zero degrees of freedom. From
+ *   the philosophical and scientific perspectives, it appears as a constraint
+ *   grounded in physical law and thermodynamics. From institutional
+ *   perspectives (religious, ritual), it appears as something to be
+ *   coordinated around and given meaning, not something that can be overcome.
+ *   This constraint serves as the gold standard exemplar for the Mountain
+ *   category: it exhibits universal classification across all observer
+ *   positions, zero degrees of freedom, low theater, and accessibility
+ *   collapse (near-universal awareness) paired with low resistance to
+ *   acceptance of the constraint as real.
+ *
+ * KEY AGENTS:
+ *   - Gilgamesh: Primary actor (powerless/trapped) — seeks immortality, discovers mortality's inevitability
+ *   - Enkidu: Catalyst (powerless/trapped) — death of beloved exemplifies mortality's universality
+ *   - The Shamhat: Secondary agent (powerless/trapped) — embodies human finitude
+ *   - The Gods: Institutional authority (institutional/arbitrage) — impose and maintain the mortality constraint
+ *   - Religious Institutions: Interpreter (institutional/arbitrage) — coordinate meaning-making around mortality
+ *   - Scientific Community: Modern observer (organized/constrained) — approaches mortality as natural limit to be studied and marginally extended
+ *   - The Analytical Observer: Universal perspective (analytical/analytical) — sees mortality as constraint of physical law
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(gilgamesh_mortality_limit, 1.0). % Death is total extraction.
-domain_priors:suppression_score(gilgamesh_mortality_limit, 0.9).   % Alternatives (immortality) are strictly suppressed by divine decree.
-domain_priors:theater_ratio(gilgamesh_mortality_limit, 0.1).       % The function is direct and non-performative.
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(gilgamesh_mortality_limit, 0.08).
+domain_priors:suppression_score(gilgamesh_mortality_limit, 0.02).
+domain_priors:theater_ratio(gilgamesh_mortality_limit, 0.15).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(gilgamesh_mortality_limit, extractiveness, 1.0).
-narrative_ontology:constraint_metric(gilgamesh_mortality_limit, suppression_requirement, 0.9).
-narrative_ontology:constraint_metric(gilgamesh_mortality_limit, theater_ratio, 0.1).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(gilgamesh_mortality_limit, extractiveness, 0.08).
+narrative_ontology:constraint_metric(gilgamesh_mortality_limit, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(gilgamesh_mortality_limit, theater_ratio, 0.15).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% It is presented as an immutable law of the cosmos for humankind.
-narrative_ontology:constraint_claim(gilgamesh_mortality_limit, tangled_rope).
-narrative_ontology:human_readable(gilgamesh_mortality_limit, "The Allotment of Mortality").
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(gilgamesh_mortality_limit, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(gilgamesh_mortality_limit, resistance, 0.08).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(gilgamesh_mortality_limit, mountain).
+narrative_ontology:human_readable(gilgamesh_mortality_limit, "The Allotment of Mortality (Gilgamesh)").
 narrative_ontology:topic_domain(gilgamesh_mortality_limit, "philosophical/religious").
 
-% Binary flags
-% The divine decree requires enforcement to maintain the distinction.
-domain_priors:requires_active_enforcement(gilgamesh_mortality_limit).
+domain_priors:emerges_naturally(gilgamesh_mortality_limit).
 
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(gilgamesh_mortality_limit, divine_council).
-narrative_ontology:constraint_victim(gilgamesh_mortality_limit, humanity).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (GILGAMESH, POST-QUEST) - MOUNTAIN
-% After failing all tests, he accepts mortality as an unchangeable fact.
-constraint_indexing:constraint_classification(gilgamesh_mortality_limit, snare,
+% PERSPECTIVE 1: THE MORTAL HUMAN (MOUNTAIN) — No exit, no alternative. Death is the irreducible boundary condition of human existence. From the perspective of Gilgamesh himself, mortality is not a constraint imposed by institutional force but an absolute fact of the natural order. The human cannot negotiate, arbitrage, or escape this limit. Accessibility of understanding the limit is near-total (everyone experiences mortality awareness); resistance to accepting the limit is low (though psychological denial is possible, the constraint cannot be overcome through any mechanism). This is a true mountain from the powerless perspective.
+constraint_indexing:constraint_classification(gilgamesh_mortality_limit, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE BENEFICIARY (THE GODS) - ROPE
-% From their perspective, it's a necessary coordination tool to manage humanity.
-constraint_indexing:constraint_classification(gilgamesh_mortality_limit, rope,
-    context(agent_power(institutional),
-            time_horizon(historical),
-            exit_options(arbitrage),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER - TANGLED ROPE
-% Recognizes the coordination function but also the total, asymmetric extraction
-% and the requirement for active enforcement (divine decree).
-constraint_indexing:constraint_classification(gilgamesh_mortality_limit, snare,
+% PERSPECTIVE 2: THE PHILOSOPHICAL OBSERVER (MOUNTAIN) — Mortality is classified here as a fundamental limit on human existence independent of any institutional arrangement. No amount of coordination, enforcement, or theatrical ritual can overcome the thermodynamic and biological boundary of finite lifespan. The constraint emerges naturally from the laws of physics and biology, not from social construction. Accessibility is high (the constraint is observable in every human society); resistance is low (denial does not change the outcome). The mountain classification is stable across all human contexts and time periods.
+constraint_indexing:constraint_classification(gilgamesh_mortality_limit, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: THE RELIGIOUS INSTITUTION (ROPE) — Religious and metaphysical frameworks (promises of afterlife, resurrection, reincarnation, spiritual transcendence) provide coordination around mortality's acceptance. These are not extraction mechanisms but coordination solutions to a collective action problem: how do we organize society knowing that all members will die? Religious institutions benefit from their role as mediators between mortality and meaning, gaining authority and resources. But the beneficiary relationship is not asymmetric extraction — religions genuinely coordinate the shared problem of mortality anxiety. Theater is minimal here; the constraint appears as natural law with institutional framing.
+constraint_indexing:constraint_classification(gilgamesh_mortality_limit, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE REBEL (GILGAMESH, MID-QUEST) - SNARE
-% While actively fighting it, he perceives mortality as a predatory trap.
-constraint_indexing:constraint_classification(gilgamesh_mortality_limit, snare,
-    context(agent_power(powerful),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(regional))).
+% PERSPECTIVE 4: THE MEDIEVAL DEATH RITUAL SYSTEM (PITON) — Elaborate funeral rites, masses for the dead, purgatory theology, and extreme unction rituals in medieval Christianity create a theater around mortality that originally served genuine psychological and social coordination functions but has become increasingly performative. Families perform expensive death rituals not because the rituals demonstrably prevent death or transfer souls, but because institutional inertia and social expectation require them. The constraint persists through ritual theater (theater_ratio ≈ 0.65 for this perspective) even as its primary function has atrophied. This is a mountain that has been wrapped in performative institutional scaffolding.
+constraint_indexing:constraint_classification(gilgamesh_mortality_limit, piton,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: THE SCIENTIFIC COMMUNITY (MOUNTAIN) — Modern biomedical research approaches mortality as a natural constraint to be extended rather than abolished. Aging research, longevity medicine, and cryonics represent organized attempts to modify the constraint's parameters (timeline extension, cellular preservation) while accepting its fundamental inevitability. The scientific perspective classifies mortality as mountain because the underlying biological processes are governed by physical law, even if technology can shift marginal parameters. No amount of research funding or institutional effort can achieve true indefinite lifespan given known physics. The constraint remains immutable at the level of principle.
+constraint_indexing:constraint_classification(gilgamesh_mortality_limit, mountain,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: THE ANALYTIC METAPHYSICIAN (MOUNTAIN) — Mortality as a metaphysical necessity: given the entropic arrow, the finiteness of the universe, and the second law of thermodynamics, indefinite existence is logically impossible for any finite system. Mortality is not merely a constraint imposed by nature but a constraint that follows from the structure of reality itself. From this universal/civilizational perspective, even hypothetical advanced technology cannot circumvent the fundamental constraint. This is a true mountain with zero degrees of freedom.
+constraint_indexing:constraint_classification(gilgamesh_mortality_limit, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -129,17 +168,34 @@ constraint_indexing:constraint_classification(gilgamesh_mortality_limit, snare,
 :- begin_tests(gilgamesh_mortality_limit_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between the powerless subject (Mountain) and institutional beneficiary (Rope).
     constraint_indexing:constraint_classification(gilgamesh_mortality_limit, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(gilgamesh_mortality_limit, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    assertion(TypePowerless == mountain),
-    assertion(TypeInstitutional == rope),
-    TypePowerless \= TypeInstitutional.
+    constraint_indexing:constraint_classification(gilgamesh_mortality_limit, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    % The analytical view must resolve the conflict into a Tangled Rope.
-    constraint_indexing:constraint_classification(gilgamesh_mortality_limit, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    assertion(TypeAnalytical == tangled_rope).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(gilgamesh_mortality_limit, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(gilgamesh_mortality_limit, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
+
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(gilgamesh_mortality_limit, ExtMetricName, E),
+    domain_priors:suppression_score(gilgamesh_mortality_limit, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(gilgamesh_mortality_limit),
+    narrative_ontology:constraint_metric(gilgamesh_mortality_limit, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(gilgamesh_mortality_limit, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(gilgamesh_mortality_limit, TR),
+    TR >= 0.70.
 
 :- end_tests(gilgamesh_mortality_limit_tests).
 
@@ -149,22 +205,16 @@ test(analytical_classification_is_tangled_rope) :-
 
 /**
  * LOGIC RATIONALE:
- * The base extractiveness is set to 1.0 as mortality represents the total
- * extraction of an individual's biological existence. Suppression is 0.9 because
- * the alternative (immortality) is shown to exist (Utnapishtim) but is actively
- * denied to humanity by divine will.
+ *   Extractiveness (0.08): Very low. Mortality is not extractive in the structural sense — no agent captures disproportionate benefit from human finitude. Death is universal and egalitarian. The low value reflects that the constraint operates as pure boundary condition, not as a mechanism by which one party extracts from another. Suppression (0.02): Minimal. There are no alternatives to mortality being suppressed; alternative lifespan frameworks cannot be developed because the constraint is not institutional. The low value reflects that suppression is unnecessary — the constraint is self-enforcing through physical law. Theater ratio (0.15): Very low in the ancient Near Eastern context. Death rituals in early periods were functional: genuinely coordinating grief, inheritance, spiritual transition. Theater only increases much later (medieval Christianity, 0.60+) as the rituals become performative rather than functional, disconnected from their original problem-solving role. Accessibility collapse (0.92): Extremely high. Every human observes mortality in their lived experience — the constraint is maximally accessible. Resistance (0.08): Minimal. Psychological denial is possible, but acceptance of mortality is near-universal once confronted directly with the constraint's reality.
  *
- * The Perspectival Gap is profound:
- * - To the powerless subject (late-stage Gilgamesh), it's an immutable Mountain.
- * - To the institutional beneficiary (the Gods), it's a Rope for world management.
- * - To the powerful but trapped rebel (mid-quest Gilgamesh), it's a predatory Snare.
+ * PERSPECTIVAL GAP:
+ *   Unlike many constraints, the perspectival gap in mortality is minimal — all six observer positions converge on the mountain classification. This convergence is precisely what makes mortality a true mountain. The powerless human trapped by mortality, the philosophical observer studying human nature, the religious institution coordinating meaning, the scientific community studying aging, and the analytic metaphysician examining logical constraints all arrive at the same conclusion: mortality is immutable. The only perspectival variation appears in the medieval ritual perspective (piton), where the theater increases because the original coordination function (making sense of death) has been wrapped in performative institutional scaffolding. But even the piton still classifies mortality itself as mountain — the ritual theater does not change the underlying constraint. This universal agreement across perspectives is the defining characteristic of a true mountain constraint.
  *
- * * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * The analytical classification as a Tangled Rope correctly identifies that this
- * is not a pure Mountain (natural law) but a constructed system with both a
- * coordination function (for the gods) and an asymmetric extraction function
- * (on humanity). This prevents misclassifying a divine decree as a simple fact
- * of physics, which is the core of Gilgamesh's tragic discovery.
+ * DIRECTIONALITY LOGIC:
+ *   Directionality (d) values for mortality are trivial because extractiveness is so low that derived d plays a minimal role in classification. Every agent experiences d ≈ 0.50 (symmetric — everyone dies) across all contexts. The constraint is so fundamental that the typical directionality derivation (beneficiary/victim, exit options, power level) becomes almost meaningless. This is appropriate: mortality is not about power differentials or extraction but about a universal boundary condition. The absence of clear beneficiaries and victims is itself a feature of the mountain classification — if a constraint had identifiable winners and losers, it would be structurally different (extraction, not law).
+ *
+ * MANDATROPHY ANALYSIS:
+ *   NO MANDATROPHY RISK. Extractiveness is 0.08, well below the 0.46 threshold that triggers mandatrophy analysis. The constraint is unambiguously mountain across all perspectives. There is no risk of misclassifying it as pure extraction or as false coordination. The constraint's simplicity — it is literally a law of nature — resolves any temptation to construct elaborate extraction narratives around it. The only mandatrophy-adjacent issue is the piton perspective on medieval death rituals, where performative theater might superficially resemble extraction. But the piton classification correctly identifies this as degraded coordination (ritual theater), not as extraction itself. The underlying constraint (mortality) remains mountain.
  */
 
 /* ==========================================================================
@@ -172,44 +222,72 @@ test(analytical_classification_is_tangled_rope) :-
    ========================================================================== */
 
 omega_variable(
-    omega_gilgamesh_mortality_limit,
-    "Is mortality a true Mountain (a physical necessity) that the gods merely claim credit for, or is it a constructed Snare (a contingent rule) they actively enforce?",
-    "Discovery of extraterrestrial biological systems with different aging or life-cycle properties.",
-    "If true Mountain, the gods' claim is theatrical. If constructed Snare, the constraint is fundamentally political, not physical.",
-    confidence_without_resolution(low)
+    indefinite_lifespan_logical_coherence,
+    'Is indefinite biological lifespan logically or physically coherent, or is it inherently contradictory?',
+    'Analysis of thermodynamic constraints, entropy accumulation in biological systems, logical paradoxes in immortality (teleportation identity, consciousness continuity). Examination of whether ''indefinite lifespan'' can be rigorously defined without appealing to concepts (digital upload, quantum immortality) that may themselves be incoherent.',
+    'If incoherent: mortality is a constraint of logic itself (pure mountain, all perspectives agree). If coherent: some technological pathway might exist, downgrading the constraint to scaffold or rope in future-oriented perspectives. The Epic''s framing suggests metaphysical necessity (incoherence), which supports universal mountain classification.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(indefinite_lifespan_logical_coherence, conceptual, 'Whether indefinite lifespan is logically coherent').
+
+omega_variable(
+    consciousness_persistence_identity,
+    'What constitutes persistence of personal identity across time? Does a resurrected, cloned, or digitally-simulated consciousness count as the same agent?',
+    'Philosophical analysis of personal identity criteria (psychological continuity, biological continuity, narrative continuity). Empirical investigation of whether subjective experience can be preserved through upload/copying mechanisms. Examination of how different identity theories map to different conclusions about ''escaping'' mortality.',
+    'If identity requires biological continuity: biological death is irreversible, and the constraint remains mountain. If identity is independent of substrate: digital immortality might satisfy ''escaping mortality'' from some perspectives, though biological death is unchanged. Resolution affects how future-oriented perspectives classify the constraint.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(consciousness_persistence_identity, conceptual, 'Whether personal identity persists through copying or substrate change').
+
+omega_variable(
+    entropy_and_information_preservation,
+    'Can information composing a human mind be perfectly preserved despite thermodynamic entropy?',
+    'Analysis of black hole thermodynamics, information loss in quantum mechanics, Kolmogorov complexity of human cognition, practical limits on information fidelity. Determination of whether the information density and preservation precision required for consciousness copying exceeds physical limits.',
+    'If information is fundamentally not preservable: death is irreversible at the information level, strengthening mountain classification. If information can be preserved: cryonics or digital upload become theoretically possible (though practically difficult), potentially shifting future perspectives from mountain to scaffold.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(entropy_and_information_preservation, empirical, 'Whether human consciousness information can be preserved against entropy').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(gilgamesh_mortality_limit, 0, 10).
+narrative_ontology:interval(gilgamesh_mortality_limit, 0, 10000).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Mortality as a constraint is constant over the interval of human history.
-% The values are flat, indicating no drift. This is required due to high extraction.
+% Theater ratio over time
+narrative_ontology:measurement(mort_tr_t0, gilgamesh_mortality_limit, theater_ratio, 0, 0.08).
+narrative_ontology:measurement(mort_tr_t5000, gilgamesh_mortality_limit, theater_ratio, 5000, 0.4).
+narrative_ontology:measurement(mort_tr_t10000, gilgamesh_mortality_limit, theater_ratio, 10000, 0.6).
 
-% Theater ratio over time:
-narrative_ontology:measurement(gml_tr_t0, gilgamesh_mortality_limit, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(gml_tr_t5, gilgamesh_mortality_limit, theater_ratio, 5, 0.1).
-narrative_ontology:measurement(gml_tr_t10, gilgamesh_mortality_limit, theater_ratio, 10, 0.1).
+% Extraction over time
+narrative_ontology:measurement(mort_be_t0, gilgamesh_mortality_limit, base_extractiveness, 0, 0.05).
+narrative_ontology:measurement(mort_be_t5000, gilgamesh_mortality_limit, base_extractiveness, 5000, 0.06).
+narrative_ontology:measurement(mort_be_t10000, gilgamesh_mortality_limit, base_extractiveness, 10000, 0.08).
 
-% Extraction over time:
-narrative_ontology:measurement(gml_ex_t0, gilgamesh_mortality_limit, base_extractiveness, 0, 1.0).
-narrative_ontology:measurement(gml_ex_t5, gilgamesh_mortality_limit, base_extractiveness, 5, 1.0).
-narrative_ontology:measurement(gml_ex_t10, gilgamesh_mortality_limit, base_extractiveness, 10, 1.0).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The constraint enforces the divine/mortal distinction and manages population.
-narrative_ontology:coordination_type(gilgamesh_mortality_limit, enforcement_mechanism).
+narrative_ontology:coordination_type(gilgamesh_mortality_limit, global_infrastructure).
+narrative_ontology:affects_constraint(gilgamesh_mortality_limit, meaning_seeking_under_finitude).
+narrative_ontology:affects_constraint(gilgamesh_mortality_limit, intergenerational_resource_transfer).
+narrative_ontology:affects_constraint(gilgamesh_mortality_limit, grief_coordination_mechanism).
+
+% DUAL FORMULATION NOTE:
+% Mortality itself is a mountain constraint (physical law). Downstream constraints address how societies and individuals coordinate around this immutable boundary: meaning-seeking under the knowledge of finitude, institutions for transferring resources across generations, and grief as a collective action problem. Each downstream constraint may be rope, scaffold, or snare depending on how the institutional response manages the psychological and social coordination problem that mortality creates.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

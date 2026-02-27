@@ -1,0 +1,131 @@
+{
+  "header": {
+    "constraint_id": "boiled_pineapple_trend_2026",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.2,
+    "theater_ratio": 0.95,
+    "claimed_type": "piton",
+    "human_readable": "The Bromelain Denaturing Piton (Viral Pineapple Tea)",
+    "topic_domain": "social/wellness/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "wellness_influencers",
+      "content_platforms"
+    ],
+    "victims": [
+      "trend_followers",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Biochemist / Analytical Observer",
+      "comment": "PERSPECTIVE 1: ANALYTICAL (PITON) — The core claimed function (active bromelain) is destroyed by the preparation method (boiling). The ritual persists due to social inertia and misinformation, detached from its original purpose. theater_ratio=0.95 >> 0.70, triggering the Piton classification. This is the ground-truth perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Trend Follower",
+      "comment": "PERSPECTIVE 2: TREND FOLLOWER (ROPE) — Experiences the trend as a low-cost, beneficial coordination activity for health. They are unaware of the denaturation, so from their view, there is no theater. As a victim with trapped exit (in the info-bubble), d is high (≈0.95), but base ε is so low (0.15) that effective extraction χ remains below the Rope threshold (χ ≈ 0.26)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Wellness Influencer",
+      "comment": "PERSPECTIVE 3: WELLNESS INFLUENCER (ROPE) — Experiences the trend as a pure coordination mechanism to generate engagement and ad revenue. As a beneficiary with arbitrage exit (can pivot to the next trend instantly), d is very low (≈0.15), resulting in negative effective extraction (net benefit)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Content Platform",
+      "comment": "PERSPECTIVE 4: CONTENT PLATFORM (ROPE) — Structurally indifferent to the content's validity, the platform sees a pure coordination signal that drives user engagement. The trend is a low-cost mechanism for capturing attention. As an institutional beneficiary, its effective extraction is negative."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "placebo_effect_magnitude",
+      "question": "Does the ritual of preparing and consuming the tea provide a significant placebo effect, thus creating a non-biochemical function?",
+      "resolution_mechanism": "A randomized controlled trial comparing boiled pineapple tea against a similarly prepared placebo beverage and a no-intervention group, measuring self-reported wellness outcomes.",
+      "impact": "A strong placebo effect would mean the constraint provides a genuine (though misattributed) coordination benefit, potentially shifting the analytical classification from Piton to a low-extraction Rope, as the 'function' would no longer be zero.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the placebo effect of the pineapple tea ritual"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.95
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "This constraint analyzes the viral wellness trend of boiling pineapple peels and cores to create a 'tea' purported to have anti-inflammatory benefits from the enzyme bromelain. However, bromelain is a protein that is denatured (structurally destroyed and rendered inactive) by boiling. The constraint is therefore a classic Piton: a practice whose claimed primary function has been nullified by its own process, but which persists due to social proof, ritual, and misinformation. The activity is almost entirely performative (theater), with negligible biochemical function.",
+    "key_agents": [
+      "Trend Followers: Primary victims (powerless/trapped) — invest time and belief for a biochemically nullified benefit.",
+      "Wellness Influencers: Primary beneficiaries (powerful/arbitrage) — gain engagement, followers, and revenue by promoting the trend.",
+      "Content Platforms: Institutional beneficiaries (institutional/arbitrage) — profit from the viral engagement loop, regardless of content validity.",
+      "Analytical Observers (e.g., scientists, debunkers): Identify the functional degradation and classify the constraint as a Piton."
+    ],
+    "logic_rationale": "Extractiveness (0.15) is very low; the primary cost to victims is wasted time and pineapple scraps, not significant financial loss. Suppression (0.20) is also low; alternatives are readily available, but are suppressed by the social proof of the viral trend. The defining metric is the Theater Ratio (0.95), which is extremely high because the claimed benefit is entirely negated by the preparation method. The activity's persistence is purely a function of social performance and belief, not biochemical efficacy. This high theater ratio is the key signal for the Piton classification.",
+    "perspectival_gap": "The gap is stark. From the analytical perspective of a biochemist, the constraint is a Piton—a hollowed-out ritual with no function. From the perspective of a trend follower or influencer, it is a Rope—a beneficial coordination game. They are either unaware of or indifferent to the denaturation of bromelain, and thus perceive the activity's function as intact. The disagreement is not about the cost (which all agree is low), but about the existence of the function itself.",
+    "directionality_logic": "Beneficiaries (influencers, platforms) have arbitrage exit and benefit from the engagement, leading to a low 'd' value and negative effective extraction (they see a pure coordination good). Victims (trend followers) are trapped in an information bubble and bear the opportunity cost, leading to a high 'd' value. However, because base extractiveness (ε) is so low, even for victims the effective extraction (χ) does not cross the threshold into Tangled Rope or Snare territory, hence their Rope classification.",
+    "mandatrophy_analysis": "This case correctly uses the Piton classification to identify a low-harm, high-theater phenomenon. A naive analysis might misclassify it as a Snare based on the misinformation aspect, but the low extraction and suppression metrics prevent this. It could also be misclassified as a simple Rope if one ignores the scientific reality and only looks at the social coordination function. The Piton type precisely captures the critical feature: the decoupling of a ritual from its original, now-degraded, function."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "wellness_misinformation_ecosystem"
+    ]
+  }
+}

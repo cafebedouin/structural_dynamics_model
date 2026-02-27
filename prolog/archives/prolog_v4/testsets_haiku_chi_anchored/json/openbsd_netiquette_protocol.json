@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "openbsd_netiquette_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "obsd"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "OpenBSD Mailing List Netiquette Protocol",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "core_openbsd_developers",
+      "mailing_list_quality"
+    ],
+    "victims": [
+      "new_contributors",
+      "casual_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Newcomer",
+      "comment": "PERSPECTIVE 1: NEWCOMER (SNARE) \u2014 First-time contributors encounter an unwritten but strictly enforced code of communication standards. Posts failing to meet implicit expectations (proper threading, minimal quoting, correct subscript headers, code formatting) are met with public rebuke. No learning resources exist; the standards are only revealed through violation. Exit is available only through conformity or silence. d\u22480.92, f(d)\u22481.39, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Active Community Member",
+      "comment": "PERSPECTIVE 2: ACTIVE COMMUNITY MEMBER (TANGLED ROPE) \u2014 Moderate power agents (long-term contributors not on core team) benefit from the list's high signal-to-noise ratio and participate in technical problem-solving, but are also constrained by strict enforcement norms and risk public correction for minor infractions. They experience both the coordination function (efficient technical discussion) and extraction (asymmetric enforcement against edge cases). d\u22480.68, f(d)\u22481.05, \u03c3=1.2 \u2192 \u03c7\u22480.48."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Core OpenBSD Team",
+      "comment": "PERSPECTIVE 3: CORE OPENBSD TEAM (ROPE) \u2014 Institutional actors (core developers, maintainers) experience the netiquette protocol as pure coordination: enforcing standards reduces their own overhead for parsing low-quality posts, ensures technically correct discussion, and protects the mailing list archives as a permanent technical reference. They can arbitrage the standard across venues (conferences, documentation, upstream projects). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Moderation Apparatus",
+      "comment": "PERSPECTIVE 4: MODERATION APPARATUS (PITON) \u2014 The enforcement ritual (public correction, list moderation) is partly performative. Many infractions go unremarked; enforcement is inconsistent. The public shaming serves theatrical purposes (norm signaling, community identity assertion) beyond actual problem-solving. theater_ratio=0.55 indicates moderate theatrical content. The apparatus persists because it still produces functional output (reduced noise) but is increasingly maintained by institutional inertia as alternative platforms (GitHub issues, Discord) absorb real technical collaboration. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Communication Infrastructure",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE COMMUNICATION INFRASTRUCTURE (SCAFFOLD) \u2014 Distributed organized agents (GitHub discussions, issue trackers, modern mailing list software with built-in formatting) are building parallel communication pathways that reduce dependence on strict netiquette enforcement. These alternatives provide coordination without asymmetric suppression. The scaffold has a sunset: as projects migrate to tools with better UX and format handling, the strict netiquette constraint's functional role diminishes. d\u22480.45, f(d)\u22480.45, \u03c3=1.2 \u2192 \u03c7\u22480.25."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 A naturalized interpretation frames strict netiquette as an immutable law of technical communication: 'high-signal lists require harsh filters; softer moderation inevitably degrades quality.' The structural data (\u03b5=0.38, suppression=0.62) contradicts this. The constraint is contingent on (a) specific tooling choices (plain-text email), (b) specific enforcement culture (OpenBSD's curated identity), and (c) specific historical moment (pre-GitHub). The mountain classification is a false summit revealing how institutional practices become naturalized."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_consistency_criterion",
+      "question": "Is enforcement of netiquette standards applied consistently across contributors, or does it vary by social status (core developers exempt, newcomers harshly corrected)?",
+      "resolution_mechanism": "Longitudinal analysis of mailing list corrections: track enforcement rate by contributor tenure, power level, and infraction type. Compare correction frequency for same violation type across different contributor classes.",
+      "impact": "If consistently enforced: constraint is genuine coordination mechanism (Rope from core perspective). If inconsistent: constraint is selective extraction mechanism (Snare/Tangled Rope from disenfranchised perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether netiquette enforcement is applied consistently or varies by social status"
+    },
+    {
+      "id": "quality_degradation_counterfactual",
+      "question": "Would technical discussion quality on OpenBSD lists noticeably degrade if netiquette enforcement were relaxed, or is the high quality primarily driven by contributor self-selection and technical expertise?",
+      "resolution_mechanism": "Comparative analysis of mailing lists with similar expert populations but different moderation norms (e.g., Python-dev vs OpenBSD-tech). Measure signal-to-noise ratio, technical accuracy, and actionability of responses across platforms.",
+      "impact": "If quality degrades significantly: netiquette enforcement is functionally necessary (Rope justified). If quality remains high: netiquette is primarily performative norm-signaling (Piton/Snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether relaxed netiquette enforcement would degrade technical discussion quality"
+    },
+    {
+      "id": "barrier_to_contribution_magnitude",
+      "question": "How many potential contributors are excluded by strict netiquette standards vs how many are actually filtered out by the coordination benefit (removing low-signal posts)?",
+      "resolution_mechanism": "Survey data from OpenBSD community members (especially those who contributed once then stopped). Track archive of bounced posts and analysis of reasons for non-response to newcomer posts.",
+      "impact": "If barrier is large relative to coordination benefit: constraint is extractive (Snare). If barrier is small: constraint is legitimate coordination mechanism (Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative magnitude of newcomer exclusion vs signal-to-noise filtering benefit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The OpenBSD mailing list netiquette protocol represents a hybrid coordination-extraction constraint operating at the intersection of technical communication standards and social gatekeeping. The constraint prioritizes content clarity, proper email formatting, and technical preparation over accessibility and user-friendliness. It exhibits a genuine coordination function (reducing noise, maintaining technical signal, creating searchable archives) while simultaneously extracting conformity costs from newcomers and casual participants. The constraint's power lies in its enforcement mechanism: violations are met with public correction, and implicitly-known standards are only revealed through breach. Over the interval measured (0-10 years), the theater ratio has increased (0.35 \u2192 0.55), reflecting that the strict enforcement ritual increasingly serves norm-signaling and community identity functions as alternative communication tools (GitHub, modern mailing list software) absorb much of the actual technical collaboration. This divergence between performative enforcement and functional necessity marks the constraint's transition from pure coordination toward piton-like degradation.",
+    "key_agents": [
+      "New Contributors: Primary victim (powerless/trapped) \u2014 encounter opaque standards, face public correction for violations, exit only through conformity or silence",
+      "Casual Participants: Secondary victim (powerless/constrained) \u2014 intimidated by strict norms, self-censor or avoid participation",
+      "Core OpenBSD Developers: Primary beneficiary (institutional/arbitrage) \u2014 experience constraint as low-overhead coordination, can leverage standards across projects",
+      "Active Community Members: Mixed agent (moderate/constrained) \u2014 benefit from high-signal list but risk correction for edge cases",
+      "Moderation Culture: Institutional enforcement system (institutional/arbitrage) \u2014 maintains public correction ritual; sees enforcement as norm signaling",
+      "Alternative Platforms: Organized replacement infrastructure (organized/mobile) \u2014 GitHub, modern tools, Discord providing parallel communication channels with different norms",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent technical-social choice as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint does extract conformity costs from newcomers (time to learn implicit standards, risk of public correction), but the extraction is not as severe as pure snares (\u03b5 \u2265 0.46) because alternatives exist and experienced contributors can navigate the standards with minimal friction. The value has increased over time (0.22 \u2192 0.38) as the implicit standards have accumulated and newer contributors face a steeper learning curve. Suppression (0.62): Moderate-high. Significant barriers to participation include: (1) opaque standards revealed only through violation, (2) public correction creating reputational risk, (3) high formatting/threading expectations unfamiliar to email clients outside technical communities, (4) archive searchability pressure creating bias against quick questions. However, suppression is not absolute \u2014 information exists in community documentation, and experienced users do answer questions from newcomers. Theater ratio (0.55): Moderate. The public correction ritual serves multiple functions: (1) genuine signal preservation (enforcing clarity improves list quality), but also (2) norm signaling (demonstrating community membership by participating in enforcement), (3) identity assertion (OpenBSD's 'curated' self-image). The theater ratio has increased from 0.35 to 0.55, reflecting that as alternative tools absorb functional collaboration, enforcement increasingly serves theatrical purposes.",
+    "perspectival_gap": "The constraint manifests radically differently across perspectives. The core team sees efficient coordination (Rope) \u2014 the standards solve their problem of parsing low-quality posts. Active community members see mixed coordination and extraction (Tangled Rope) \u2014 the standards benefit them but they also enforce them asymmetrically. Newcomers see pure extraction (Snare) \u2014 implicit rules, public shaming, no exit except through conformity. The moderation apparatus sees degrading function masked by persistent ritual (Piton) \u2014 theater_ratio=0.55 reflects this balance. Alternative platforms see a solvable temporal problem (Scaffold) \u2014 GitHub's built-in formatting and threading eliminate most reasons for strict netiquette. The analytical observer risks naturalizing this as immutable law (false mountain) \u2014 framing harsh standards as necessary for technical communication, when the standards are actually contingent on email-based tools and a specific enforcement culture.",
+    "directionality_logic": "Core OpenBSD developers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiaries. The constraint solves their problem efficiently. New contributors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction. They cannot exit the list without conforming to opaque standards. Active community members: Mixed victim/beneficiary + constrained \u2192 d\u22480.68, f(d)\u22481.05. They experience both the signal-preservation benefit and the enforcement burden. Moderation apparatus: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Piton classification comes from theater_ratio gate, not from high chi. Alternative platforms: Organized + mobile \u2192 d\u22480.45, f(d)\u22480.45. Low effective extraction because these actors have genuine alternatives and exit capacity.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely a Tangled Rope at the system level: it provides a real coordination function (reducing noise, preserving technical signal) while simultaneously extracting conformity costs asymmetrically from those with less power (newcomers, casual participants). The false mountain summit (naturalizing strict standards as inherent to technical communication) is revealed by the structural data and perspectival analysis. The constraint can be reformed without losing coordination benefits \u2014 this is demonstrated by the scaffold perspective: GitHub issues and modern mailing list software provide coordination without asymmetric suppression. The theater ratio of 0.55 indicates that roughly half the enforcement activity is performative norm signaling rather than functional signal preservation. As alternative tools mature, the theater ratio will rise and the extractiveness will decline, transitioning the constraint toward piton-like degradation. The mandatrophy is fully resolved: Tangled Rope at the system level, with false mountain threats from naturalization, and a real sunset path via alternative communication infrastructure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "open_source_gatekeeping_norms",
+      "email_based_collaboration_limits"
+    ],
+    "dual_formulation_note": "This constraint represents the intersection of tool affordances (email limitations) and enforcement culture (OpenBSD's curated identity). The constraint family includes separate stories for email-based collaboration limits (structural feature of the tool) and open-source gatekeeping norms (strategic social choice). The netiquette protocol is downstream of both: it emerges from the interaction between email constraints and gatekeeping culture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ]
+}

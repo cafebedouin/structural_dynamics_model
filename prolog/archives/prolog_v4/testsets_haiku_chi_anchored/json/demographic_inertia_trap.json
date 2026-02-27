@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "demographic_inertia_trap",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "demog"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "The Generational Wealth Siphon",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "retired_majority",
+      "pension_fund_administrators"
+    ],
+    "victims": [
+      "working_youth",
+      "future_generations",
+      "fiscal_commons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Working Youth Cohort",
+      "comment": "PERSPECTIVE 1: WORKING YOUTH (SNARE) \u2014 Trapped by immobile labor markets, student debt, and political powerlessness. Cannot exit national tax/pension systems. Bears extraction through inflated payroll taxes, suppressed wages, and deferred homeownership. d\u22480.92, f(d)\u22481.39, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Pension Fund Administrators",
+      "comment": "PERSPECTIVE 2: PENSION FUND ADMINISTRATORS (ROPE) \u2014 Institutional beneficiaries managing intergenerational transfers as routine coordination. See the constraint as legitimate stewardship of earned benefits. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; experiences coordination function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Elderly Political Majority",
+      "comment": "PERSPECTIVE 3: ELDERLY POLITICAL MAJORITY (SNARE) \u2014 Although individually powerful and mobile, the collective acts as a snare when wielding majority electoral control to enforce transfers. Voters aged 65+ determine national elections; their bloc solidarity on pension/healthcare issues ensures extraction. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Paradox: individually beneficiary (d\u22480.0), but the institutional constraint mechanism itself (majority rule without demographic adjustment) becomes extractive from younger cohorts' perspective. Engine resolves this as powerful/mobile/beneficiary in isolation (Rope), but the snare classification reflects that the elderly voting block collectively enforces extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Employed Middle Generation",
+      "comment": "PERSPECTIVE 4: EMPLOYED MIDDLE GENERATION (TANGLED ROPE) \u2014 Ages 40-60 with some retirement savings and political influence, but still paying peak taxes. See constraint as mixed: (1) they will eventually benefit from pensions they fund, (2) they extract from youth cohort below them, (3) they are constrained by electoral dynamics they cannot escape. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.44. Genuine coordination function (intergenerational support) mixed with asymmetric extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Youth Coalition Reformers",
+      "comment": "PERSPECTIVE 5: YOUTH COALITION REFORMERS (SCAFFOLD) \u2014 Organized advocates pushing for parametric reform (means-testing, retirement age adjustment, contribution diversification). See constraint as temporary institutional artifact that can be sunset through democratic reform. \u03c7 \u2264 0.30; theater \u2264 0.70. Sunset clause emerges from: (1) demographic shift (elderly cohort naturally shrinks), (2) fiscal pressure forcing reform, (3) growing youth political mobilization. Estimated sunset: 15-25 years as demographics rebalance and electoral incentives shift."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Social Compact Narrative",
+      "comment": "PERSPECTIVE 6: SOCIAL COMPACT NARRATIVE (PITON) \u2014 The constraint is maintained through theater: invocation of 'social contract,' 'earned benefits,' 'intergenerational reciprocity.' These narratives frame extraction as mutual obligation and legitimate reward. theater_ratio=0.45 suggests moderate performative content \u2014 some genuine coordination function remains, but much energy goes to justifying why current transfers cannot be questioned. The piton classification acknowledges that without narrative maintenance, the constraint would collapse."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit Test)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (ATTEMPTED MOUNTAIN) \u2014 Risk of false summit: 'Intergenerational wealth transfer is inherent to human societies' or 'demographic majority rule is an immutable political law.' The base properties (\u03b5=0.58, suppression=0.68) contradict mountain thresholds (\u03b5\u22640.25, suppression\u22640.05). This perspective tests whether the constraint is natural law or contingent institutional design. The engine's false summit detector will flag this \u2014 the constraint is not a law of nature but a policy choice subject to reform."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demographic_transition_timeline",
+      "question": "How quickly will demographic rebalancing reduce the electoral power of the elderly cohort, and will fiscal pressure force reform before or after this natural rebalancing?",
+      "resolution_mechanism": "Demographic projections for voting-age population by cohort; comparison of fiscal sustainability timelines with electoral transition timelines; historical cases of demographic-driven policy reform",
+      "impact": "If rebalancing occurs before fiscal crisis: constraint softens naturally through shrinking beneficiary bloc. If fiscal crisis forces reform first: structured political conflict likely.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Demographic timeline for electoral power shift"
+    },
+    {
+      "id": "means_testing_political_feasibility",
+      "question": "Can means-testing or progressive restructuring of pensions pass democratic majorities before the elderly cohort becomes small enough to lose electoral control?",
+      "resolution_mechanism": "Polling on means-testing support by age cohort; historical precedent from countries that implemented parametric reform; scenario modeling of coalition-building under different demographic compositions",
+      "impact": "If feasible: scaffold sunset becomes real, constraint transforms to temporary institutional arrangement. If infeasible: constraint persists until demographic natural decline forces it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of democratic reform before demographic shift"
+    },
+    {
+      "id": "intergenerational_reciprocity_actual_vs_promised",
+      "question": "Will the youth cohort actually receive equivalent pension benefits when they retire, given projection of fiscal unsustainability, or is the promised reciprocity illusory?",
+      "resolution_mechanism": "Actuarial analysis of benefit payouts under current contribution rates; modeling of pension solvency if no reforms implemented; comparison of promised vs projected benefits by cohort",
+      "impact": "If promised benefits are deliverable: constraint is genuine coordination (Rope from longer time horizon). If illusory: constraint is pure extraction with false reciprocity narrative (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether promised intergenerational reciprocity is fiscally viable"
+    },
+    {
+      "id": "youth_coalition_critical_mass",
+      "question": "At what population share and political mobilization threshold does the youth cohort gain sufficient electoral power to break the elderly majority's blocking coalition?",
+      "resolution_mechanism": "Voting bloc analysis by age; turnout rates by age cohort; coalition modeling; comparison with historical examples of demographic-driven political realignment",
+      "impact": "Critical mass may arrive before demographic rebalancing due to differential turnout changes; determines whether scaffold sunset is reactive (forced by youth power) or passive (elderly decline).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Youth coalition critical mass for electoral power shift"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The generational wealth siphon emerges when demographic imbalance grants persistent electoral control to a numerically large but temporally finite cohort. Elderly voters (65+) comprise 18-20% of the population in developed economies but vote at 60%+ turnout rates, giving them 22-25% of actual electoral power. This plurality is sufficient to determine outcomes in close elections and to block reforms threatening their benefits (pensions, subsidized healthcare, zoning restrictions that protect housing wealth). The constraint operates through democratic mechanisms: budget allocations, tax policy, entitlement structures, and monetary policy preferences all flow from electoral incentives favoring current retirees over working youth. The key asymmetry is temporal: elderly voters will not live long enough to experience the full fiscal consequences of unsustainable transfers, while youth must live with the debt-service burden and deferred opportunity costs (reduced public investment, suppressed wages, delayed homeownership). The theater component (0.45) reflects that the transfer is justified through narratives of 'earned benefits' and 'intergenerational reciprocity,' even when demographic and fiscal analysis shows the reciprocity is increasingly illusory. The constraint is not immutable: demographic decline of the elderly cohort, fiscal pressure forcing parametric reform, or youth mobilization breaking the elderly voting bloc could all sunset this arrangement. But within the next 15-25 years, absent major policy shifts, the extraction mechanism operates at high efficiency: suppression through political powerlessness and constrained exit options; extractiveness driven by the aging majority's ability to impose transfers through electoral lock-in.",
+    "key_agents": [
+      "Retired Majority (65+): Primary beneficiary (powerful/mobile/arbitrage) \u2014 controls electoral plurality; captures pension, healthcare, and wealth-protection policies; exits constraint through death (temporal bound)",
+      "Working Youth (18-40): Primary victim (powerless/trapped/immediate) \u2014 trapped in national tax/pension systems; immobile labor markets; powerless in electoral block; bear extraction through payroll taxes and suppressed opportunity",
+      "Employed Middle Generation (40-65): Secondary actor (moderate/constrained/generational) \u2014 both extractor (toward youth) and victim-in-waiting (toward elderly); faces conflicting incentives",
+      "Pension Fund Administrators: Institutional beneficiary (institutional/arbitrage) \u2014 manage transfers as routine; experience constraint as legitimate coordination",
+      "Youth Coalition Reformers: Organized actors (organized/constrained) \u2014 advocates for parametric reform; see sunset as achievable through democratic pressure",
+      "Fiscal Commons: Victim (powerless/trapped) \u2014 abstract collective good (fiscal sustainability, public investment, intergenerational equity) that cannot exit or organize",
+      "Future Generations: Ultimate victim (powerless/trapped/civilizational) \u2014 will inherit debt burden and degraded public investment; cannot participate in current electoral decisions"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The elderly majority captures explicit transfers (pensions, healthcare subsidies) averaging 12-15% of GDP in developed economies, with additional implicit transfers through zoning protection (housing wealth extraction) and monetary policy preference (inflation tolerance to reduce real debt burden). The extraction is not absolute (0.75+) because some genuine coordination remains \u2014 current workers do expect future pension benefits, and current retirees did contribute during their working years. However, the extraction is severe because the contribution-to-benefit ratio has deteriorated with demographic shifts; today's youth will likely receive <70% of real benefits relative to contributions, while elderly receive >120%. The trajectory from \u03b5=0.32 to 0.58 reflects accelerating extraction as the elderly cohort ages and becomes numerically dominant relative to working-age population. Suppression (0.68): High. The mechanism suppresses alternatives through: (1) electoral lock-in \u2014 elderly bloc voting prevents reform, (2) political framing \u2014 'earned benefits' narrative delegitimizes discussion of means-testing or reduction, (3) institutional stickiness \u2014 pension structures have high path dependency, (4) fiscal constraints \u2014 reforming entitlements requires unpopular tax increases or benefit cuts on someone, (5) demographic immobility \u2014 youth cannot easily relocate to avoid payroll taxes. Suppression is not maximal (0.80+) because some alternatives exist: geographic migration, informal economy participation, political mobilization. Theater ratio (0.45): Moderate. The constraint maintains significant theatrical justification \u2014 'social contract,' 'earned benefits,' 'insurance principle' \u2014 but these narratives have weakened as demographic realities have become transparent. The trajectory from 0.38 to 0.45 reflects increasing reliance on theater as the fiscal gap grows; if the constraint were purely functional coordination, theater would remain flat. The modest theater ratio means the constraint has real coordination content (unlike pitons), but the growth trajectory signals degradation toward piton status if reforms are not implemented.",
+    "perspectival_gap": "The elderly majority sees a rope: legitimate coordination where current transfers are reciprocal (they earned their pensions through decades of contribution) and young workers will eventually benefit from the same system. The pension administrators see a rope: routine stewardship of intergenerational obligation. The working youth see a snare: they are locked into a system that extracts 12-15% of their income, constrains their mobility, and promises illusory reciprocal benefits they may never receive. The employed middle generation sees tangled rope: they are both beneficiary (will receive pensions) and extractor (receive higher pensions relative to youth contribution rates) and victim (currently over-taxed relative to distant benefits). The youth coalition reformers see a scaffold: the constraint is real but temporary, subject to democratic reform and demographic sunset. The fiscal commons sees snare: an abstract collective good being extracted by the visible elderly bloc with no voice in the decision. The false summit perspective risks naturalizing this as an immutable law of aging societies \u2014 'all democracies transfer to elderly cohorts' \u2014 when the structural data shows this is a contingent policy choice subject to reform.",
+    "directionality_logic": "Retired majority: Powerful + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. But as an electoral bloc enforcing transfers, d\u21920.2-0.3 (beneficiary with institutional power). Pension administrators: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Working youth: Powerless + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction. Employed middle generation: Moderate + constrained \u2192 d\u22480.55, f(d)\u22480.75. Mixed position \u2014 both within and outside extraction. Youth coalition: Organized + constrained \u2192 d\u22480.40, f(d)\u22480.40. Agency despite constraints. Fiscal commons: Powerless + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction (cannot participate in redistribution decision). Future generations: Powerless + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction (not yet existent to object).",
+    "mandatrophy_analysis": "Mandatrophy is resolved by the perspectival structure itself. The constraint is NOT mislabeled as rope when it should be snare, nor vice versa. Instead, it IS BOTH, depending on structural position. (1) For the elderly majority and pension managers, it genuinely functions as coordination (rope) \u2014 the system transfers benefits to those who contributed, and most participants expect eventual reciprocity. (2) For youth, it functions as snare \u2014 they have no exit, suppressed alternatives, and extraction without credible reciprocal benefit. (3) For the fiscal commons and future generations, it is pure snare \u2014 abstract collectives bearing costs without voice. The snare classification in base_properties reflects the empirical reality that the extraction mechanism can be sustained even when reciprocity is illusory; the multiple perspectives show why different agents disagree. The mandatrophy is resolved by recognizing that what appears as 'earned benefits' from the elderly perspective is actually 'deferred extraction' from the youth perspective \u2014 the same policy structure, same transfers, but opposite classification depending on whether you are the current beneficiary or the future bearer. This is not ambiguity; it is accurate structural mapping. The constraint becomes more clearly snare (not rope) as demographics deteriorate and promised reciprocity becomes impossible to deliver \u2014 at that point, elderly voters will still have electoral power to maintain transfers, but the fairness/reciprocity justification will collapse, leaving only naked extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "housing_wealth_concentration",
+      "fiscal_sustainability_commons",
+      "youth_labor_mobility_constraint"
+    ],
+    "dual_formulation_note": "The generational wealth siphon is downstream of housing wealth concentration (elderly cohort controls zoning and property supply, enabling housing wealth extraction) and upstream of fiscal sustainability commons (pension obligations degrade public investment and accumulate sovereign debt). Youth labor mobility is constrained by both the payroll tax burden and geographic inability to escape national entitlement systems. These constraints form a cluster where the elderly asset position (housing, pension claims, electoral control) enables extraction across multiple domains."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    }
+  ]
+}

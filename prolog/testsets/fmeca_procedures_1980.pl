@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: fmeca_procedures_1980
 % ============================================================================
-% Generated: 2026-01-19
-% Model: Gemini 2.0 Flash
-% Source: MIL-STD-1629A - Failure Mode, Effects, and Criticality Analysis (1980)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_fmeca_procedures_1980, []).
@@ -12,15 +13,37 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
-% --- Namespace Hooks ---
-:- multifile 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -30,208 +53,152 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: fmeca_procedures_1980
- * human_readable: MIL-STD-1629A (FMECA Procedures)
- * domain: technological/military/legal
- * temporal_scope: 1980 - Present
- * spatial_scope: United States (DoD acquisition environment)
- * * SUMMARY:
- * This constraint establishes the mandatory procedures for performing a Failure 
- * [cite_start]Mode, Effects, and Criticality Analysis (FMECA) for DoD systems[cite: 64, 68]. 
- * It functions as a rigid documentation and analysis framework intended to 
- * systematically identify catastrophic and critical failure possibilities 
- * [cite_start]early in the design phase[cite: 31, 41, 65].
- * * KEY AGENTS:
- * - Junior Design Engineer: The individual who must complete the worksheets; 
- * often views the requirement as a bureaucratic hurdle.
- * - DoD Program Manager: The institutional agent who mandates the standard 
- * [cite_start]to ensure "peace, justice and progress" through system reliability[cite: 1, 25].
- * - System Safety Analyst: The observer who views FMECA as a logical 
- * necessity for managing the inherent "natural law" of mechanical failure.
- * * NARRATIVE ARC:
- * [cite_start]The FMECA starts as an "essential function" [cite: 31] intended to be a 
- * flexible "Rope" for coordination. However, due to "untimeliness" and "isolated 
- * [cite_start]performance"[cite: 39, 40], it often hardens into a "Snare" for contractors 
- * [cite_start]who must fulfill rigid worksheet requirements [cite: 182] after design 
- * decisions are already finalized.
+ *   constraint_id: fmeca_procedures_1980
+ *   human_readable: MIL-STD-1629A (FMECA Procedures)
+ *   domain: technological/military/legal
+ *
+ * SUMMARY:
+ *   MIL-STD-1629A established mandatory Failure Mode, Effects, and
+ *   Criticality Analysis (FMECA) procedures for U.S. Department of Defense
+ *   systems acquisition in 1980. The standard represents a hybrid constraint:
+ *   a genuine coordination mechanism for enforcing risk discipline across
+ *   thousands of defense contractors, combined with procedural extraction
+ *   that benefits the DoD acquisition bureaucracy and creates overhead rents
+ *   for the consulting industry. The constraint exhibits all six
+ *   classification types from different structural positions. For large
+ *   contractors with diverse portfolios, FMECA is coordination (Rope) — they
+ *   have arbitrage power and genuinely integrate failure analysis into
+ *   design. For small suppliers, FMECA is extraction (Snare) — trapped by
+ *   contractual requirement, bearing overhead without negotiating power. For
+ *   program management offices, it is hybrid (Tangled Rope) — they enforce a
+ *   genuine discipline while deferring risk accountability to the procedure.
+ *   For the consulting industry, it is degraded ritual (Piton) — maintaining
+ *   itself through institutional inertia despite alternative methods being
+ *   available. For reform-minded industry coalitions, it is a temporary
+ *   problem being solved (Scaffold) — modern software testing and agile risk
+ *   methods create pathways around traditional FMECA. The analytical observer
+ *   risks naturalizing the standard as an immutable law (Mountain) — the
+ *   necessity for failure analysis is real, but the 1980-era procedure itself
+ *   is contingent and declining in functionality.
+ *
+ * KEY AGENTS:
+ *   - DoD Acquisition Bureaucracy: Primary beneficiary (institutional/arbitrage) — imposes standardized requirements, controls supplier behavior, delegates risk accountability
+ *   - Defense Contractors (Large): Secondary beneficiary (powerful/arbitrage) — can negotiate FMECA scope, integrate with own risk processes, use compliance as market differentiation
+ *   - Small Defense Suppliers: Primary victim (powerless/trapped) — cannot exit contracts, absorb overhead regardless of system complexity, no negotiating power on scope
+ *   - Program Management Offices: Moderate actor (moderate/constrained) — benefit from structured risk discipline but constrained by requirement to impose procedure; use FMECA as risk proxy
+ *   - FMECA Consulting Industry: Institutional actor (institutional/arbitrage) — maintains procedure through contractual demand; maintains itself through inertia despite declining functional necessity
+ *   - Commercial Defense Industry Reform Coalition: Organized agents (organized/constrained) — developing alternative verification pathways (agile risk, continuous integration); constrained by regulatory requirement but building exit path
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangement as inherent to failure analysis necessity
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Required for DR-Audit Suite
-narrative_ontology:interval(fmeca_standard_era, 1980, 2026).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(fmeca_procedures_1980, 0.38).
+domain_priors:suppression_score(fmeca_procedures_1980, 0.52).
+domain_priors:theater_ratio(fmeca_procedures_1980, 0.65).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(fmeca_procedures_1980, extractiveness, 0.38).
+narrative_ontology:constraint_metric(fmeca_procedures_1980, suppression_requirement, 0.52).
+narrative_ontology:constraint_metric(fmeca_procedures_1980, theater_ratio, 0.65).
+
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(fmeca_procedures_1980, tangled_rope).
 narrative_ontology:human_readable(fmeca_procedures_1980, "MIL-STD-1629A (FMECA Procedures)").
 narrative_ontology:topic_domain(fmeca_procedures_1980, "technological/military/legal").
 
-% Base extractiveness score (0.0-1.0)
-% Rationale: Moderate (0.4). While it aims for safety, it "extracts" significant 
-% labor and time from contractors to satisfy procuring activity data requirements 
-% [cite: 33, 45, 1056].
-domain_priors:base_extractiveness(fmeca_procedures_1980, 0.4).
-
-% Suppression score (0.0-1.0)
-% Rationale: Moderate (0.5). It strictly mandates specific coding systems 
-% (MIL-STD-780) [cite: 198] [cite_start]and worksheet formats[cite: 182], punishing 
-% alternative risk-management styles through contract non-compliance.
-domain_priors:suppression_score(fmeca_procedures_1980, 0.5).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(fmeca_procedures_1980, extractiveness, 0.4).
-narrative_ontology:constraint_metric(fmeca_procedures_1980, suppression_requirement, 0.5).
-
-% Enforcement: Requires active maintenance by the procuring activity and 
-% contracting officers[cite: 109, 169].
 domain_priors:requires_active_enforcement(fmeca_procedures_1980).
 
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(fmeca_procedures_1980, department_of_defense).
-narrative_ontology:constraint_beneficiary(fmeca_procedures_1980, system_safety).
-narrative_ontology:constraint_victim(fmeca_procedures_1980, contractors).
-narrative_ontology:constraint_victim(fmeca_procedures_1980, innovative_design_flexibility).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(fmeca_procedures_1980, defense_contractors).
+narrative_ontology:constraint_beneficiary(fmeca_procedures_1980, military_procurement_bureaucracy).
+narrative_ontology:constraint_beneficiary(fmeca_procedures_1980, risk_management_certification_industry).
+narrative_ontology:constraint_victim(fmeca_procedures_1980, program_cost_containment).
+narrative_ontology:constraint_victim(fmeca_procedures_1980, system_design_agility).
+narrative_ontology:constraint_victim(fmeca_procedures_1980, small_defense_suppliers).
 
-% Metrics for Section 1 of the Executive Summary
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: JUNIOR DESIGN ENGINEER - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless - Must complete the work without shaping the standard.
-   WHEN: immediate - Focused on meeting the current project deadline.
-   [cite_start]WHERE: trapped - Bound by the "Ordering Data" in the specific contract[cite: 109, 541].
-   [cite_start]SCOPE: local - Focused on a single component or assembly level[cite: 154].
-   
-   WHY THIS CLASSIFICATION:
-   The engineer sees FMECA as a coercive "Snare" of paperwork. The "chief causes" 
-   [cite_start]of criticism are its "untimeliness" [cite: 39]—it feels like a post-facto 
-   [cite_start]requirement that "extracts" time without improving the design[cite: 38].
-   
-   NARRATIVE EVIDENCE:
-   "Probably the greatest criticism of the FMECA has been its limited use 
-   [cite_start]in improving designs... chief causes for this have been untimeliness"[cite: 38, 39].
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: SMALL SUPPLIER (SNARE) — Trapped in compliance burden. Cannot exit DoD contract work without abandoning that revenue stream. Must absorb FMECA overhead regardless of system complexity or risk profile. No flexibility in methodology or scope. Bears extraction cost without meaningful exit path.
+constraint_indexing:constraint_classification(fmeca_procedures_1980, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
 
-constraint_indexing:constraint_classification(
-    fmeca_procedures_1980,
-    tangled_rope,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :- !.
+% PERSPECTIVE 2: PROGRAM MANAGEMENT OFFICE (TANGLED ROPE) — Constrained by regulatory requirement to mandate FMECA, but also genuinely benefits from structured failure analysis discipline. The procedure enforces risk discipline and creates institutional accountability. However, extraction occurs through procedural overhead: PMOs can defer to FMECA compliance as risk justification without conducting independent analysis. Coordination benefit (structured risk thinking) plus extractive benefit (procedural liability transfer).
+constraint_indexing:constraint_classification(fmeca_procedures_1980, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: DOD PROGRAM MANAGER - Rope
-   --------------------------------------------------------------------------
-   
-   [cite_start]WHO: institutional - Has the power to "tailor the requirements"[cite: 34, 1012].
-   WHEN: biographical - Spanning the acquisition lifecycle (years to decades).
-   [cite_start]WHERE: mobile - Can select which tasks (101-105) to impose[cite: 1028].
-   [cite_start]SCOPE: national - Applies to "all designated DoD systems"[cite: 68].
-   
-   WHY THIS CLASSIFICATION:
-   For the manager, FMECA is a "Rope" for functional coordination. It's a 
-   [cite_start]tool to "tailor" [cite: 34, 1043] and ensure that various reliability 
-   [cite_start]tasks are coordinated to prevent "duplication of efforts"[cite: 45].
-   
-   NARRATIVE EVIDENCE:
-   "The FMECA must contribute meaningfully to program decision... invaluable 
-   [cite_start]to those who are responsible for making program decisions"[cite: 35, 36].
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 3: DoD ACQUISITION BUREAUCRACY (ROPE) — Primary beneficiary. FMECA procedures establish institutional power: procurement offices can impose standardized requirements, contractors must comply, and compliance is delegated to external contractors/consultants. The constraint solves a genuine coordination problem (how to enforce risk discipline across thousands of suppliers) while creating extractive rents (consulting fees, contractor overhead). Can arbitrage between competing contractors; can modify FMECA scope and interpretation to favor preferred suppliers.
+constraint_indexing:constraint_classification(fmeca_procedures_1980, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
 
-constraint_indexing:constraint_classification(
-    fmeca_procedures_1980,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(national)
-    )
-) :- !.
+% PERSPECTIVE 4: COMMERCIAL INDUSTRY REFORM (SCAFFOLD) — Organized agents (industry consortia, government efficiency advocates, software-centric defense firms) see FMECA as a temporary procedural constraint with a sunset. Modern software testing practices, agile risk management, and continuous integration/deployment create alternative verification pathways that bypass traditional FMECA's static analysis model. The constraint persists due to institutional inertia but is being superseded by adaptive methods. Theater ratio declining as practices shift.
+constraint_indexing:constraint_classification(fmeca_procedures_1980, scaffold,
+    context(agent_power(organized),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: SAFETY ANALYST - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical - Observer of universal failure patterns.
-   [cite_start]WHEN: historical - Based on decades of engineering experience[cite: 1091, 1134].
-   [cite_start]WHERE: analytical - Sees failure as an inherent property of all "items"[cite: 194, 231].
-   [cite_start]SCOPE: global - Applies to the "nature of the design process itself"[cite: 32].
-   
-   WHY THIS CLASSIFICATION:
-   The analyst sees the "potential for failure" as an unchangeable "Mountain" 
-   of reality. Systematic analysis is not an option but a "logical necessity" 
-   [cite_start]dictated by the laws of physics and probability[cite: 124, 150].
-   
-   NARRATIVE EVIDENCE:
-   "FMECA is an essential function in design... [it] must be iterative to 
-   [cite_start]correspond with the nature of the design process itself"[cite: 31, 32].
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 5: FMECA CONSULTING ESTABLISHMENT (PITON) — Institutional actor maintaining the procedural ritual despite degraded functionality. FMECA analysis is often performed as compliance theater: contractors hire certified FMECA consultants, generate required documentation, present findings to PMO, then design and operate systems using alternative risk methods (design reviews, failure prediction, reliability growth testing). The procedure persists through contractual requirement and institutional inertia, not because it's the primary mechanism by which risk discipline is actually enforced.
+constraint_indexing:constraint_classification(fmeca_procedures_1980, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
 
-
-constraint_indexing:constraint_classification(
-    fmeca_procedures_1980,
-    mountain,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-) :- !.
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, structured failure analysis is a fundamental requirement of complex system design: you cannot responsibly operate safety-critical systems without systematically identifying and analyzing failure modes. FMECA codifies this necessity. However, the mountain classification is vulnerable to false summit detection: the necessity is for failure analysis, not for the specific 1980-era procedure and its theater elements. The procedure itself is contingent institutional arrangement, not a law of nature.
+constraint_indexing:constraint_classification(fmeca_procedures_1980, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(fmeca_procedures_1980_tests).
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(fmeca_procedures_1980, Type1, context(powerless, immediate, trapped, local)),
-    constraint_indexing:constraint_classification(fmeca_procedures_1980, Type2, context(institutional, biographical, mobile, national)),
-    Type1 = snare,
-    Type2 = rope.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(fmeca_procedures_1980, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fmeca_procedures_1980, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(power_extractiveness_scaling) :-
-    ContextPowerless = context(powerless, immediate, trapped, local),
-    ContextPowerful = context(institutional, biographical, mobile, national),
-    constraint_indexing:extractiveness_for_agent(fmeca_procedures_1980, ContextPowerless, Score1),
-    constraint_indexing:extractiveness_for_agent(fmeca_procedures_1980, ContextPowerful, Score2),
-    Score1 > Score2.
-
-test(tailoring_as_rope_flexibility) :-
-    % Tailoring (mobile exit option) allows institutional power to view it as a Rope.
-    constraint_indexing:constraint_classification(fmeca_procedures_1980, rope, context(institutional, _, mobile, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(fmeca_procedures_1980, TR),
+    TR >= 0.70.
 
 :- end_tests(fmeca_procedures_1980_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * * Model: Gemini 2.0 Flash
- * * KEY DECISIONS:
- * * 1. BASE EXTRACTIVENESS (0.4): Chosen because while FMECA is safety-critical, 
- * [cite_start]the standard admits it is often seen as a burden[cite: 38]. It extracts 
- * [cite_start]"valuable resources" [cite: 1056] in exchange for theoretical safety.
- * * 2. SUPPRESSION SCORE (0.5): The standard enforces a very specific way of 
- * [cite_start]thinking (severity categories, coding)[cite: 267, 707]. Other methods 
- * exist but are functionally "suppressed" by the acquisition contract.
- * * 3. PERSPECTIVE SELECTION: Chose the Engineer (victim of untimeliness), 
- * Manager (agent of tailoring), and Analyst (observer of failure's nature).
- * * 4. AMBIGUITIES: Resolved the "standard vs tailoring" tension by assigning 
- * "Rope" status to those with the power to tailor and "Snare" status to 
- * those forced to comply with the untailored defaults.
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.38): Moderate-high. The constraint transfers significant overhead cost to contractors, particularly small suppliers. FMECA documentation, analysis, and revision cycles consume engineering resources and calendar time. However, extraction is not maximal (0.66+) because some of the overhead serves genuine risk discipline — failure analysis is real work, not pure waste. The extraction occurs through procedural overkill: requiring the same analysis depth and documentation rigor regardless of system complexity or risk profile. Suppression (0.52): Moderate-high. Contractors cannot negotiate FMECA scope or depth; the procedure is mandated in contract terms. Suppliers cannot avoid the cost without exiting defense contracts. However, suppression is not total (0.60+) because alternatives exist (though they are not currently accepted in DoD contracts). There is institutional flexibility to modify the standard, but doing so requires government-level action. Theater ratio (0.65): Moderate-high. A significant fraction of FMECA activity is compliance documentation rather than generative analysis. Consultants are hired to produce FMECA reports that satisfy contractual requirements; the actual failure analysis discipline often occurs through parallel engineering processes (design reviews, testing, reliability modeling). The theater ratio has increased over the interval (from 0.42 to 0.65) as the standard has aged and alternative methods have become available, making the procedure's necessity less obvious.
+ *
+ * PERSPECTIVAL GAP:
+ *   The primary perspectival gap is between the DoD acquisition bureaucracy's experience (Rope: coordination mechanism with net benefit to the imposed standard) and small suppliers' experience (Snare: pure extraction with trapped exit). Large contractors occupy an intermediate position (Rope to Tangled Rope depending on negotiating power). The PMO's Tangled Rope perspective arises because the requirement benefits PMOs (structured risk discipline) while extracting from them (accountability deferral to procedure). The consulting industry's Piton perspective reflects that the procedure persists despite declining functional necessity — the ritual is maintained through contractual requirement and institutional inertia, not because FMECA is the primary mechanism by which risk is actually managed in modern defense programs. The commercial reform coalition's Scaffold perspective reflects genuine structural change: agile methods, continuous integration, and property-based testing provide alternative verification pathways that bypass traditional FMECA's static analysis model. The analytical observer's Mountain perspective risks false summit — the necessity for failure analysis is real, but the 1980-era procedure is contingent and increasingly obsolescent.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality values are derived from structural position within the extraction flow. The DoD bureaucracy benefits from imposed standard + arbitrage options → low d → negative/low χ (experienced as Rope). Large contractors benefit + have some negotiating power + mobile/arbitrage → low-moderate d → moderate χ (experienced as Rope). Small suppliers bear full cost + trapped exit + no negotiating power → high d → high χ (experienced as Snare). PMOs enforce requirement + benefit from discipline + constrained by requirement → moderate d → moderate χ (experienced as Tangled Rope). The consulting industry benefits from ongoing contract requirement + arbitrage → low-moderate d → moderate χ (experienced as Piton due to high theater ratio rather than high extractiveness). Reform coalition is organized + constrained + sees exit path → moderate d → moderate χ (experienced as Scaffold due to sunset clause perception). The analytical observer sits at universal scope + civilizational time horizon → d=0.72 (canonical analytical) → high f(d) → would suggest Snare, but the false summit detection gate identifies the mountain claim as naturalization.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   DIAGNOSTIC EXEMPLAR OF MANDATROPHY RESOLUTION: This constraint demonstrates how the mandatrophy is resolved by distinguishing between the necessity of the functional requirement (failure analysis) and the contingency of the institutional procedure (MIL-STD-1629A). The false summit detector identifies the analytical observer's mountain classification as naturalizing a contingent procedure as an immutable law. The true necessity (failure analysis of complex systems) is real and immutable; the institutional procedure is not. The constraint resolves mandatrophy by decomposing: (1) the underlying functional requirement (necessity — mountain-class), and (2) the 1980-era standard and its procedural overhead (contingent institutional arrangement — tangled_rope/scaffold/piton depending on perspective and time horizon). The standard itself exhibits theater ratio drift (0.42 → 0.65 over 20 years) indicating that the procedure's functional necessity is declining relative to its performative content. This suggests the constraint is transitioning from Tangled Rope (genuine coordination + extraction) toward Piton (degraded ritual) and toward its sunset as alternative methods mature (Scaffold perspective). The extraction is real and quantifiable (overhead cost), but it is separable from the underlying necessity for risk discipline.
  */
 
 /* ==========================================================================
@@ -239,62 +206,85 @@ test(tailoring_as_rope_flexibility) :-
    ========================================================================== */
 
 omega_variable(
-    fmeca_actual_impact,
-    'Does FMECA actually improve design, or is its criticism as \'limited use\' inherently true?',
-    resolution_mechanism('Longitudinal study of failure rates in FMECA-compliant vs non-compliant complex systems'),
-    impact('If Mountain (physics-driven): safety increases. If Snare (bureaucracy-driven): only paperwork increases.'),
+    fmeca_necessity_vs_procedure,
+    'Is the mandatory extraction cost attributable to FMECA''s intrinsic necessity, or to the specific 1980-era standard''s procedural overhead?',
+    'Comparative analysis: cost/schedule impact of FMECA-compliant programs vs. modern risk-engineering practices (continuous integration, property-based testing, formal verification); correlation between FMECA procedural scope and risk reduction achieved',
+    'If intrinsic necessity: constraint classification remains tangled_rope across all contexts. If procedural overhead: classification shifts to scaffold/piton, indicating the specific standard is degraded and can be replaced.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(fmeca_necessity_vs_procedure, empirical, 'Whether extraction cost is inherent to failure analysis or to the 1980 standard''s design').
+
+omega_variable(
+    small_supplier_exit_cost,
+    'What proportion of small DoD suppliers would exit the contracting pool if FMECA compliance were discretionary rather than mandatory?',
+    'Industry survey of compliance cost as percentage of contract value; analysis of margin pressure on different supplier segments; historical analysis of supplier concentration trends before/after MIL-STD-1629A adoption',
+    'If >30% would exit: suppression is high (trapped exit is real). If <10% would exit: suppression is moderate (some suppliers have option value in defense work).',
     confidence_without_resolution(medium)
 ).
 
+narrative_ontology:omega_variable(small_supplier_exit_cost, empirical, 'Proportion of small suppliers with economically-forced participation').
+
 omega_variable(
-    tailoring_competence,
-    'Is the procuring activity competent to \'tailor\' requirements appropriately, or does it default to maximum suppression?',
-    resolution_mechanism('Audit of tailoring decisions across diverse DoD programs'),
-    impact('If tailored: Rope. If default: Snare for all contractors.'),
-    confidence_without_resolution(low)
+    pmoa_independent_analysis,
+    'What fraction of Program Management Office risk decisions are made independent of FMECA findings, vs. deferring to FMECA as proxy?',
+    'PMO decision log analysis: compare programs with and without FMECA requirements; measure correlation between FMECA risk ratings and actual design decisions; assess PMO risk capacity vs. FMECA complexity',
+    'If >60% defer: extraction mechanism confirmed (PMO uses FMECA as liability shield). If <30% defer: coordination benefit is primary (PMO uses FMECA as input to independent analysis).',
+    confidence_without_resolution(medium)
 ).
 
-/* ==========================================================================
-   7. ALTERNATIVE ANALYSIS
-   ========================================================================== */
+narrative_ontology:omega_variable(pmoa_independent_analysis, empirical, 'Whether PMO conducts independent risk analysis or defers to FMECA').
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Informal Designer Intuition
- * Viability: Historically how many machines were built before formal FMEA.
- * [cite_start]Suppression: Banned by Paragraph 4.1 requiring "planned and performed" analysis[cite: 169].
- * * ALTERNATIVE 2: Purely Qualitative "Brainstorming"
- * Viability: Faster, lower "extractiveness" of labor.
- * [cite_start]Suppression: Rejected by requirements for "quantitative" criticality numbers (Cm)[cite: 853, 1090].
- * * CONCLUSION:
- * The active rejection of informal/qualitative alternatives in favor of 
- * specific worksheet formats shifts the classification from a coordination 
- * Rope to an enforced Snare for those doing the work.
- */
+omega_variable(
+    alternative_method_effectiveness,
+    'Do agile risk methods (continuous failure tracking, automated testing, design review integration) achieve equivalent or superior risk discipline compared to FMECA''s static upfront analysis?',
+    'Comparative failure rate analysis: FMECA-mandated programs vs. modern risk-engineered programs; time-to-detection of critical failure modes; rework rates; correlation between method used and post-delivery reliability growth',
+    'If superior/equivalent: scaffold perspective confirmed — alternative methods can replace FMECA, establishing sunset path. If inferior: FMECA remains necessary despite procedural overhead.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_method_effectiveness, empirical, 'Relative effectiveness of agile risk methods vs. FMECA').
+
 
 /* ==========================================================================
-   8. INTEGRATION HOOKS
+   7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Load: ?- [fmeca_procedures_1980].
-% Run tests: ?- run_tests(fmeca_procedures_1980_tests).
+narrative_ontology:interval(fmeca_procedures_1980, 0, 20).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(fmeca_tr_t0, fmeca_procedures_1980, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(fmeca_tr_t10, fmeca_procedures_1980, theater_ratio, 10, 0.55).
+narrative_ontology:measurement(fmeca_tr_t20, fmeca_procedures_1980, theater_ratio, 20, 0.65).
+
+% Extraction over time
+narrative_ontology:measurement(fmeca_be_t0, fmeca_procedures_1980, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(fmeca_be_t10, fmeca_procedures_1980, base_extractiveness, 10, 0.33).
+narrative_ontology:measurement(fmeca_be_t20, fmeca_procedures_1980, base_extractiveness, 20, 0.38).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(fmeca_procedures_1980, enforcement_mechanism).
+narrative_ontology:affects_constraint(fmeca_procedures_1980, defense_acquisition_cost_escalation).
+narrative_ontology:affects_constraint(fmeca_procedures_1980, supplier_consolidation_barrier).
+narrative_ontology:affects_constraint(fmeca_procedures_1980, military_technology_agility).
+
+% DUAL FORMULATION NOTE:
+% MIL-STD-1629A is a specific institutional instantiation of the more general constraint that complex systems require failure analysis. The underlying functional requirement (failure analysis necessity) is a mountain-class constraint; the 1980-era procedure with its modern overhead is a tangled_rope/scaffold/piton hybrid. These are decomposed into separate logical constraints in the network: the functional necessity is invariant; the procedural form is path-dependent and declining in functionality as alternative methods mature.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(fmeca_procedures_1980, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Functional coordination mechanism — primarily substantive
-domain_priors:theater_ratio(fmeca_procedures_1980, 0.12).
-narrative_ontology:constraint_metric(fmeca_procedures_1980, theater_ratio, 0.12).

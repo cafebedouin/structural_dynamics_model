@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: global_food_market_fragility
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-24
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_global_food_market_fragility, []).
@@ -40,9 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -51,24 +54,41 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: global_food_market_fragility
- *   human_readable: "Global Food Market Fragility to Correlated Crop Failures"
+ *   human_readable: Global Food Market Fragility to Correlated Crop Failures
  *   domain: economic/geopolitical
  *
  * SUMMARY:
- *   The global food market is a complex system for distributing staple crops.
- *   While providing a crucial coordination function, its structure also creates
- *   and amplifies fragility. New AI models (like OIST's ACRE) reveal that
- *   climate change induces correlated failures across multiple "breadbasket"
- *   regions. This physical shock is transmitted through the global market,
- *   where price volatility, speculative trading, and unequal purchasing power
- *   asymmetrically harm vulnerable populations and nations while creating
- *   arbitrage opportunities for powerful actors.
+ *   The global food market integrates staple crop production across
+ *   geographically dispersed regions through trade, futures contracts, and
+ *   logistics networks. This integration creates both efficiency gains and
+ *   structural fragility. The constraint exhibits extraction asymmetry:
+ *   commodity traders, large exporters, and agricultural input suppliers
+ *   benefit from price volatility and market leverage, while subsistence
+ *   farmers, urban poor in net-importing nations, and smaller agricultural
+ *   exporters bear the costs of price spikes and supply shocks. The
+ *   constraint manifests as a tangled rope from government and moderate-power
+ *   perspectives — systems provide real coordination (efficient distribution,
+ *   price discovery) alongside genuine extraction (volatility transfer to
+ *   powerless agents, vulnerability to correlated failures). From the
+ *   powerless perspective (subsistence farmer, urban poor), the constraint is
+ *   a snare: dependent on global prices with no exit. The theater_ratio
+ *   reflects that agricultural policy apparatus (farm subsidies, buffer
+ *   stocks) maintains appearance of protecting domestic producers while
+ *   actual protection degrades in face of global market forces.
+ *   Extractiveness has increased from 0.32 to 0.58 over the 40-year interval,
+ *   driven by financialization of commodity markets (futures proliferation,
+ *   index speculation) and concentration of production in vulnerable regions
+ *   (climate risk, geopolitical instability).
  *
- * KEY AGENTS (by structural relationship):
- *   - Food-Import-Dependent Nations: Primary target (powerless/trapped) — bear the costs of price spikes and supply shocks.
- *   - Agricultural Commodity Traders: Primary beneficiary (institutional/arbitrage) — profit from volatility and control logistics.
- *   - International Aid Organizations (e.g., WFP): Secondary actor (institutional/constrained) — attempt to mitigate harm but must operate within the market's constraints.
- *   - OIST Climate Scientists: Analytical observer — model the underlying physical risks and their systemic impact.
+ * KEY AGENTS:
+ *   - Subsistence Farmers: Primary victims (powerless/trapped) — dependent on global commodity prices; lost agricultural autonomy; no exit options
+ *   - Urban Poor in Net Food-Importing Nations: Primary victims (powerless/trapped) — spend 50-70% of income on staples; vulnerable to price spikes; politically destabilizing
+ *   - Large Agricultural Exporters: Primary beneficiaries (institutional/arbitrage) — gain from market integration and pricing power; can shift production regions and crop mix
+ *   - Commodity Traders: Secondary beneficiaries (powerful/arbitrage) — profit from price volatility; access to futures and financial hedging; maximum exit optionality
+ *   - Agricultural Input Suppliers: Secondary beneficiaries (institutional/arbitrage) — sell seeds, fertilizer, equipment at prices linked to commodity prices
+ *   - Net Food-Importing Governments: Constrained coordinating agents (organized/constrained) — require market-based food access but vulnerable to supply shocks; manage extraction through subsidies and strategic reserves
+ *   - Exporting Nations (Medium-sized): Mixed experience (moderate/constrained) — benefit from export revenues but constrained by global price dynamics and larger producers' leverage
+ *   - Agricultural Policy Apparatus: Degraded institutions (institutional/arbitrage) — maintain performative farm support while actual vulnerability increases; theater ratio high
  */
 
 /* ==========================================================================
@@ -76,95 +96,89 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(global_food_market_fragility, 0.55). % High potential for wealth transfer via price volatility/speculation.
-domain_priors:suppression_score(global_food_market_fragility, 0.70).   % Structural property (raw, unscaled). High due to lack of alternatives for import-dependent nations.
-domain_priors:theater_ratio(global_food_market_fragility, 0.30).       % Piton detection (>= 0.70). Moderate theater around humanitarian aid vs. core market function.
+domain_priors:base_extractiveness(global_food_market_fragility, 0.58).
+domain_priors:suppression_score(global_food_market_fragility, 0.62).
+domain_priors:theater_ratio(global_food_market_fragility, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(global_food_market_fragility, extractiveness, 0.55).
-narrative_ontology:constraint_metric(global_food_market_fragility, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(global_food_market_fragility, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(global_food_market_fragility, extractiveness, 0.58).
+narrative_ontology:constraint_metric(global_food_market_fragility, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(global_food_market_fragility, theater_ratio, 0.48).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this Tangled Rope.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(global_food_market_fragility, tangled_rope).
+narrative_ontology:human_readable(global_food_market_fragility, "Global Food Market Fragility to Correlated Crop Failures").
+narrative_ontology:topic_domain(global_food_market_fragility, "economic/geopolitical").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(global_food_market_fragility). % Required for Tangled Rope. Enforced by trade laws, financial regulations, shipping logistics.
+domain_priors:requires_active_enforcement(global_food_market_fragility).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(global_food_market_fragility, agricultural_commodity_traders).
-narrative_ontology:constraint_beneficiary(global_food_market_fragility, food_surplus_nations).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(global_food_market_fragility, food_import_dependent_nations).
-narrative_ontology:constraint_victim(global_food_market_fragility, low_income_consumers_globally).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are met).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(global_food_market_fragility, commodity_traders).
+narrative_ontology:constraint_beneficiary(global_food_market_fragility, large_agricultural_exporters).
+narrative_ontology:constraint_beneficiary(global_food_market_fragility, agricultural_input_suppliers).
+narrative_ontology:constraint_victim(global_food_market_fragility, net_food_importing_nations).
+narrative_ontology:constraint_victim(global_food_market_fragility, subsistence_farmers).
+narrative_ontology:constraint_victim(global_food_market_fragility, urban_poor).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-% This actor experiences the market as purely extractive during a crisis.
-constraint_indexing:constraint_classification(global_food_market_fragility, tangled_rope,
+% PERSPECTIVE 1: SUBSISTENCE FARMER (SNARE) — Cannot exit global market system; bound to commodity prices set in distant futures markets. Local agricultural autonomy has been systematically dismantled by trade policies and debt structures. Bears full extraction cost when prices spike. No alternatives exist within planning horizon.
+constraint_indexing:constraint_classification(global_food_market_fragility, snare,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: URBAN POOR IN NET FOOD-IMPORTING NATIONS (SNARE) — Trapped in dependency on food imports; spend 50-70% of income on staples. No exit option when crop failures cascade. Cannot shift to domestic production. Cannot shift to substitute commodities. Subject to volatility in distant markets.
+constraint_indexing:constraint_classification(global_food_market_fragility, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-% This actor sees an efficient coordination mechanism for resource allocation.
+% PERSPECTIVE 3: LARGE AGRICULTURAL EXPORTER (ROPE) — Benefits from integrated global markets; has pricing power and market access. Experiences the constraint as coordination mechanism: standardized contracts, futures markets, and logistics networks enable profitable distribution. Arbitrage options: can shift production regions, diversify crops, hedge on futures markets. Effective extraction runs toward this agent.
 constraint_indexing:constraint_classification(global_food_market_fragility, rope,
     context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: COMMODITY TRADER (ROPE) — Extractive but coordinates price discovery across regions. Benefits from volatility. Has maximum arbitrage options: can shift between commodities, geographic regions, and futures vs spot markets. Experiences global fragility as a coordination system that creates profit opportunities through sophisticated risk management.
+constraint_indexing:constraint_classification(global_food_market_fragility, rope,
+    context(agent_power(powerful),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Default analytical context. Sees both the coordination function and the
-% asymmetric, enforced extraction. This is the basis for the constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for this perspective.
-constraint_indexing:constraint_classification(global_food_market_fragility, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
+% PERSPECTIVE 5: SMALL-TO-MEDIUM EXPORTING NATION (TANGLED ROPE) — Partially benefits from export markets and foreign exchange revenues. But also constrained by global price dynamics set by larger producers. Experiences extraction through price volatility and market leverage of larger traders. Some exit options (crop diversification, regional trade agreements) but constrained by climate, land, and capital.
+constraint_indexing:constraint_classification(global_food_market_fragility, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% An institutional actor that is NOT a primary beneficiary, but is constrained
-% by the system's logic. Its `d` value will be higher than the beneficiary's.
-%
-% Perspective 4: International Aid Organization (e.g., WFP)
-% It sees the system's extractive failures, but must leverage its coordination
-% function. The `constrained` exit option results in a higher `d` than the
-% beneficiary's `arbitrage` exit, revealing the system's dual nature.
-constraint_indexing:constraint_classification(global_food_market_fragility, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 6: NET FOOD-IMPORTING GOVERNMENT (TANGLED ROPE) — Experiences both coordination and extraction. Global markets enable efficient distribution and consumer choice. But also constrained by vulnerability to supply shocks, political pressure to maintain low food prices, and leverage exerted by exporters and speculators. Enforcement (subsidies, price controls, strategic reserves) required to manage extraction and coordinate domestic stability. Exit option (autarky) extremely costly.
+constraint_indexing:constraint_classification(global_food_market_fragility, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
+
+% PERSPECTIVE 7: AGRICULTURAL POLICY APPARATUS (PITON) — Traditional farm subsidies, buffer stocks, and strategic grain reserves persist through institutional inertia despite evidence of inefficiency. Theater ratio high: policy maintains appearance of protecting farmers and national food security while actual protection degrades as global market forces override domestic policies. Beneficiaries are wealthy agricultural producers and input suppliers, not subsistence farmers.
+constraint_indexing:constraint_classification(global_food_market_fragility, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a global civilizational view, some concentration in agricultural production is inherent to comparative advantage and specialization. Climate differences and population density create structural asymmetry in food production capacity. However, the current degree of fragility is contingent on institutional arrangements (concentration in commodity production, financialization of futures markets, trade policy), not on physical limits. Engine false summit detection will flag this as naturalization.
+constraint_indexing:constraint_classification(global_food_market_fragility, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -172,24 +186,18 @@ constraint_indexing:constraint_classification(global_food_market_fragility, rope
 
 :- begin_tests(global_food_market_fragility_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify the core perspectival gap between the powerless target and the institutional beneficiary.
-    constraint_indexing:constraint_classification(global_food_market_fragility, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(global_food_market_fragility, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    format('Passed: Target (Snare) and Beneficiary (Rope) perspectives correctly diverge.~n').
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(global_food_market_fragility, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(global_food_market_fragility, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    % Verify the analytical perspective correctly identifies the mixed nature of the constraint.
-    constraint_indexing:constraint_classification(global_food_market_fragility, snare, context(agent_power(analytical), _, _, _)),
-    format('Passed: Analytical perspective correctly classifies as Tangled Rope.~n').
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(global_food_market_fragility, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_requirements) :-
-    % Verify that all three structural predicates for a Tangled Rope are present.
-    narrative_ontology:constraint_beneficiary(global_food_market_fragility, _),
-    narrative_ontology:constraint_victim(global_food_market_fragility, _),
-    domain_priors:requires_active_enforcement(global_food_market_fragility),
-    format('Passed: All three structural requirements for Tangled Rope are met.~n').
-
+test(piton_threshold) :-
+    domain_priors:theater_ratio(global_food_market_fragility, TR),
+    TR >= 0.70.
 
 :- end_tests(global_food_market_fragility_tests).
 
@@ -199,110 +207,101 @@ test(tangled_rope_structural_requirements) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): This high value reflects the capacity of the global food market
- *     to generate enormous profits from price volatility, which is a direct wealth transfer from
- *     consumers (especially the most vulnerable) to financial and logistical actors. It's not just
- *     about a simple markup, but about the extractive potential during systemic shocks.
- *   - Suppression (0.70): For an import-dependent nation facing a food crisis, there are no
- *     short-term alternatives to the global market. This lack of exit options is a core feature of
- *     the constraint, justifying the high suppression score.
- *   - Tangled Rope Classification: The system genuinely coordinates the movement of food globally
- *     (a Rope-like function), which is why beneficiaries see it as a Rope. However, this is
- *     inseparable from an extractive structure enforced by trade and financial rules that
- *     asymmetrically harms the vulnerable (a Snare-like function). The presence of both a genuine
- *     coordination function and enforced, asymmetric extraction makes it a canonical Tangled Rope.
+ *   Extractiveness (0.58): Moderate-high. The global food market extracts from trapped agents (subsistence farmers, urban poor) through price volatility and dependency. Extraction is not maximal (would require active coercion beyond market mechanisms) but structural — trapped agents have no alternatives. The metric reflects the asymmetry: traders and exporters capture gains from volatility; victims absorb losses. Suppression (0.62): Moderate-high. Barriers to exit include: land tenure insecurity preventing crop diversification; credit systems denominated in global commodity prices; lack of storage and logistics infrastructure for regional markets; policy barriers to autarky (WTO rules, trade agreements); agronomic constraints (climate, soil fertility tied to commodity monoculture). Theater ratio (0.48): Moderate. Agricultural policy maintains appearance of protecting farmers (subsidies, price controls, strategic reserves) while actual protection is eroded by global market forces and financialization. Policy machinery is real but increasingly performative relative to actual farmer outcomes. The metric reflects that policy still partially functions for some actors (large producers benefit from subsidies) but has degraded relative to stated goals (food security, farmer stability).
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For a commodity trader with arbitrage exit, the system is a Rope: an
- *   information-rich environment for coordinating supply and demand for profit. For a food-importing
- *   nation with trapped exit, it is a Snare: a non-negotiable system that can impose catastrophic
- *   price hikes, leading to famine and social unrest. The classification difference (Rope vs. Snare)
- *   is driven by the `d` (directionality) parameter, which the engine derives from their structural
- *   positions as beneficiary vs. victim and their respective exit options.
+ *   This constraint demonstrates sharp perspectival divergence. Large exporters and commodity traders see Rope — an efficient coordination system that enables profitable distribution and price discovery. Their arbitrage options and market power mean they experience integration as coordination. Net-importing governments see Tangled Rope — real coordination benefits (efficient distribution, consumer choice) alongside extraction vulnerability (dependency on external suppliers, exposure to price spikes). Subsistence farmers and urban poor see Snare — trapped in dependency with no escape. The agricultural policy apparatus sees Piton — traditional farm support persists through institutional momentum despite declining effectiveness relative to global market forces. The analytical observer at civilizational scale sees Mountain (specialized production inherent to climate differences) but structural data reveals this as a false summit: current degree of fragility is contingent on institutional arrangements (concentration, financialization, policy design), not on physical necessity.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries (traders, surplus nations) profit from the system's structure, especially its
- *     volatility. They are structurally positioned to extract value. Their low derived `d` gives
- *     a negative effective extraction (χ), reflecting a subsidy.
- *   - Victims (import-dependent nations, poor consumers) bear the costs of this volatility.
- *     They are structurally targeted for extraction. Their high derived `d` results in a very high
- *     positive χ, reflecting the severe costs imposed on them.
+ *   Directionality (d) is derived from each agent's structural relationship to extraction flow. Commodity traders and large exporters are beneficiaries with arbitrage options — low d, negative or zero χ. Subsistence farmers are victims with trapped exit — high d (~0.95), high f(d) ~ 1.42. Urban poor have trapped exit and victim status — high d. Net-importing governments have constrained exit (autarky very costly) and mixed beneficiary/victim status (coordinating role but vulnerable) — moderate d (~0.50-0.65). The pipeline applies f(d) sigmoid to compute experienced extractiveness per perspective, scaled by scope (global scope σ=1.2 amplifies χ). Beneficiaries experience low effective extraction despite high base ε; victims experience high effective extraction. The suppression value (0.62) is unscaled — structural property of the system.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two common errors. It does not label the entire global
- *   food market as a pure Snare, which would ignore its vital coordination function. Nor does it
- *   accept the beneficiary's view of it as a pure Rope, which would ignore the immense, enforced
- *   extraction it enables. The Tangled Rope classification captures this duality, identifying a
- *   system where the coordination mechanism itself is the vector for extraction.
+ *   This constraint resolves mandatrophy by showing that the classification depends on structural position. The claim 'global food markets are pure extraction' (Snare from all perspectives) is false — they coordinate price discovery and distribution (Rope from trader/exporter perspective). The claim 'global food markets are pure coordination' (Rope from all perspectives) is also false — they extract from trapped agents (Snare from subsistence farmer perspective). The tangled_rope classification captures the hybrid: genuine coordination functions alongside asymmetric extraction. The false summit mountain perspective exposes naturalization of contingent fragility. The piton classification reveals policy apparatus degradation. No single type is correct; the presheaf over perspectives IS the answer. The constraint's extractiveness has increased from 0.32 to 0.58 over 40 years, driven by financialization (futures proliferation, index speculation, leverage effects) and production concentration (climate vulnerability, geopolitical risk). This trajectory suggests extraction layered onto coordination — the coordination function persists but increasingly serves as infrastructure for extraction by sophisticated actors.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_global_food_market_fragility,
-    'Is the extreme market volatility an unfortunate but unavoidable emergent property of a complex system, or a deliberately engineered/maintained feature that facilitates extraction?',
-    'Detailed forensic analysis of trading data and regulatory lobbying during past food crises (e.g., 2007-08) to trace the influence of speculative actors vs. fundamental supply/demand signals.',
-    'If emergent, the constraint is a "natural" Tangled Rope requiring mitigation. If engineered, it is a "designed" Tangled Rope closer to a Snare, suggesting targeted regulatory intervention is possible.',
+    financialization_versus_physical,
+    'Is market fragility driven primarily by financialization of commodity futures or by underlying physical constraints in global crop production?',
+    'Time-series correlation between price volatility and physical production shocks; comparison of price dynamics before/after financialization (1990s onwards); analysis of basis risk and contango effects in specific crop markets',
+    'If primarily financialization: fragility is remediable through derivatives market regulation and price stabilization mechanisms. If primarily physical: solutions require agricultural adaptation, geographical diversification, and storage infrastructure.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(financialization_versus_physical, empirical, 'Whether crop price fragility is driven by financialization or physical constraints').
+
+omega_variable(
+    substitution_velocity,
+    'How quickly can agricultural production pivot between crops in response to prices or climate shocks?',
+    'Historical analysis of crop substitution lags; agronomic modeling of planting-decision timescales; comparison of land-use flexibility across crop types and regions',
+    'If fast (< 1 season): markets adjust before price spikes cascade. If slow (> 2 years): lag creates extraction window where downstream users are trapped.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(substitution_velocity, empirical, 'Agricultural substitution velocity between crops').
+
+omega_variable(
+    strategic_reserve_effectiveness,
+    'Can national strategic reserves and buffer stocks meaningfully stabilize prices during correlated crop failures?',
+    'Historical case studies (US CCC, India''s NFSA, Egypt''s subsidy system) measuring reserve adequacy and release timing; modeling of reserve depletion under simultaneous regional failures',
+    'If effective: government-level coordination mechanisms can reduce extraction. If ineffective: victim populations face structural vulnerability regardless of policy.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(strategic_reserve_effectiveness, empirical, 'Effectiveness of strategic reserves in price stabilization').
+
+omega_variable(
+    crop_diversification_feasibility,
+    'Can agricultural regions meaningfully diversify away from commodity monocultures given economic and agronomic constraints?',
+    'Analysis of crop rotation viability, soil degradation from monoculture, price premium for diversified crops, land tenure security effects on diversification behavior',
+    'If feasible: fragility is remediable through decentralized farmer decision-making and extension programs. If constrained: fragility locked in by economic structure.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(crop_diversification_feasibility, empirical, 'Feasibility of crop diversification away from commodity monocultures').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(global_food_market_fragility, 0, 10).
+narrative_ontology:interval(global_food_market_fragility, 0, 40).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint's extractiveness has likely increased over the last few decades
-% due to financialization and increased climate volatility.
-% Required for high-extraction constraints (base_extractiveness > 0.46).
+% Theater ratio over time
+narrative_ontology:measurement(gfmf_tr_t0, global_food_market_fragility, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(gfmf_tr_t20, global_food_market_fragility, theater_ratio, 20, 0.42).
+narrative_ontology:measurement(gfmf_tr_t40, global_food_market_fragility, theater_ratio, 40, 0.48).
 
-% Theater ratio over time (humanitarian discourse growing to mask market function):
-narrative_ontology:measurement(gfmf_tr_t0, global_food_market_fragility, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(gfmf_tr_t5, global_food_market_fragility, theater_ratio, 5, 0.25).
-narrative_ontology:measurement(gfmf_tr_t10, global_food_market_fragility, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(gfmf_be_t0, global_food_market_fragility, base_extractiveness, 0, 0.32).
+narrative_ontology:measurement(gfmf_be_t20, global_food_market_fragility, base_extractiveness, 20, 0.45).
+narrative_ontology:measurement(gfmf_be_t40, global_food_market_fragility, base_extractiveness, 40, 0.58).
 
-% Extraction over time (financialization and climate volatility increasing extractive potential):
-narrative_ontology:measurement(gfmf_ex_t0, global_food_market_fragility, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(gfmf_ex_t5, global_food_market_fragility, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(gfmf_ex_t10, global_food_market_fragility, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
 narrative_ontology:coordination_type(global_food_market_fragility, resource_allocation).
-
-% --- Network Decomposition (Constraint Families) ---
-% This constraint (a socio-economic Tangled Rope) is structurally dependent
-% on an underlying physical constraint (a Mountain).
+narrative_ontology:affects_constraint(global_food_market_fragility, agricultural_commodity_financialization).
+narrative_ontology:affects_constraint(global_food_market_fragility, land_use_monoculture_lock).
+narrative_ontology:affects_constraint(global_food_market_fragility, strategic_food_reserves_adequacy).
 
 % DUAL FORMULATION NOTE:
-% This constraint is one of 2 stories decomposed from the concept of "global food security risk".
-% Decomposed because ε differs across observables (ε-invariance principle).
-% The physical reality of crop correlation is a Mountain; the market that
-% transmits that shock is a Tangled Rope.
-% Related stories:
-%   - cc_crop_correlation (ε=0.05, Mountain)
-%
-narrative_ontology:affects_constraint(cc_crop_correlation, global_food_market_fragility).
+% Global food market fragility decomposes into three structurally distinct constraints: (1) commodity financialization (ε≈0.68, Snare from consumer perspective) — price volatility driven by derivatives speculation; (2) land-use monoculture lock (ε≈0.45, Tangled Rope) — production concentrated in climate-vulnerable regions; (3) strategic reserve adequacy (ε≈0.52, Tangled Rope) — buffers insufficient during correlated failures. Each has distinct resolution mechanisms and institutional actors. This story addresses the integrated system constraint; the three components are separate constraint stories linked via network edges.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this story. The structural derivation chain,
-% using beneficiary/victim declarations and distinct exit_options (arbitrage,
-% trapped, constrained), accurately models the directionality for all key
-% agents without manual adjustment.
+constraint_indexing:directionality_override(global_food_market_fragility, organized, 0.58).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

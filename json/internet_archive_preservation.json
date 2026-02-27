@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "internet_archive_preservation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ia_pres"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Internet Archive Preservation-Copyright Conflict",
+    "topic_domain": "technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_scholarship_access",
+      "cultural_preservation",
+      "internet_archive_operational_sustainability"
+    ],
+    "victims": [
+      "copyright_holder_exclusive_rights",
+      "author_economic_control"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Copyright Holder Under Archival Extraction",
+      "comment": "PERSPECTIVE 1: COPYRIGHT HOLDER (SNARE) \u2014 Trapped by the scope of IA's archival ambitions. Copyright holders cannot prevent archival without legal action (high suppression), and litigation is resource-intensive. The IA's Controlled Digital Lending (CDL) model extracts value from copyright holders' exclusive rights without compensation. Holders bear full cost; exit options are constrained to expensive litigation or passive acceptance. Maximal experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Publishing Industry",
+      "comment": "PERSPECTIVE 2: PUBLISHING INDUSTRY (TANGLED ROPE) \u2014 Mixed coordination and extraction. Publishers benefit from the IA as a backup archival mechanism (coordination function), ensuring cultural continuity and reducing their own preservation burden. Simultaneously, CDL enables lending of in-print books, undermining sales and exclusive distribution rights (extraction function). Active enforcement through trade group litigation (Authors Guild, Publishers Association lawsuits) is required to maintain copyright boundaries. Exit options are constrained \u2014 legal action is expensive and outcomes uncertain."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Internet Archive",
+      "comment": "PERSPECTIVE 3: INTERNET ARCHIVE (ROPE) \u2014 Experiences the constraint as a coordination mechanism: standardizing digital preservation reduces duplication across memory institutions (coordination benefit). The IA's exemptions from copyright law (fair use doctrine, Library of Congress Section 108 exemptions) provide arbitrage exit options \u2014 the organization navigates legal ambiguity to sustain operations. The IA benefits from cultural legitimacy and institutional partnerships. Effective extraction runs toward the IA; they are the primary beneficiary of the coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Access and Digital Commons Movement",
+      "comment": "PERSPECTIVE 4: OPEN ACCESS MOVEMENT (SCAFFOLD) \u2014 Organized agents (creative commons proponents, open-source advocates, library systems) see the preservation conflict as a temporary institutional failure. Alternative models (public-domain works, open-access mandates, author-approved archival) are building parallel preservation pathways. The sunset clause is embedded: as copyright terms shorten (Australia, UK movement toward life+50 or life+60), as open-access mandates mature, and as decentralized archival (IPFS, blockchain) scales, the friction between copyright law and digital preservation reduces. Suppression is high (legal barriers remain), but the organized coalition has agency and sees an exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Copyright Law (Civilizational View)",
+      "comment": "PERSPECTIVE 5: COPYRIGHT LAW (PITON) \u2014 From a civilizational scope, copyright law is a degraded coordination mechanism. Its original function (incentivizing creation) persists, but theater has accumulated: licensing regimes, DMCA enforcement, and Digital Rights Management (DRM) consume resources without enabling the primary function. The law persists through institutional inertia (international treaties, publishing industry lobbying) despite mounting evidence that alternative incentives (patronage, reputation, open licensing) sustain creation. The constraint is maintained performatively \u2014 courts cite creative incentives while extended copyright terms primarily benefit estates of deceased authors. Theater ratio approaching 0.70 marks the piton threshold."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some tension between creator control and cultural memory is inherent to any system of intellectual property. Perfect preservation requires complete access; complete author control prevents access. The gap is a structural feature, not a contingent institutional failure. However, this perspective naturalizes what is actually a legal and policy choice. The engine's false summit detector identifies this as potential naturalization \u2014 copyright duration, fair use scope, and exemption mechanisms are all contingent policy parameters, not immutable laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fair_use_scope_boundary",
+      "question": "Does institutional archival (IA's CDL model) constitute fair use, or does it exceed the transformative use threshold?",
+      "resolution_mechanism": "Appellate court ruling on Sony v. Reimerdes (DMCA circumvention) or Authors Guild v. Google (Books) precedent applications; legal clarification of institutional archival scope under 17 U.S.C. \u00a7 107",
+      "impact": "If fair use upheld: CDL is legal coordination mechanism (Rope from all perspectives). If fair use rejected: CDL is extraction mechanism (Snare from copyright holders, Tangled Rope from publishers). Classification shifts 2-3 types depending on ruling.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether institutional archival meets fair use standards"
+    },
+    {
+      "id": "copyright_duration_policy_window",
+      "question": "Will copyright term reduction (life+50 vs life+70) or public-domain expansion policies materialize within the next 10-30 years?",
+      "resolution_mechanism": "Legislative developments (EU Copyright Directive revisions, US Term Extension Act challenges); adoption of life+50 or shorter in major jurisdictions",
+      "impact": "If policies mature: scaffold perspective confirmed \u2014 open-access exit path is real. If policies stall: scaffold is aspirational, constraint persists as Snare/Tangled Rope indefinitely.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether copyright term reduction will enable preservation alternatives"
+    },
+    {
+      "id": "decentralized_archival_viability",
+      "question": "Can decentralized archival systems (IPFS, blockchain-based preservation) achieve institutional-grade reliability and accessibility without central authority coordination?",
+      "resolution_mechanism": "Technical assessment of IPFS retention rates, Filecoin incentive sustainability; comparison of decentralized vs centralized archival uptime and access speeds for scholarly use",
+      "impact": "If viable: constraint becomes coordination problem (Rope) rather than extraction conflict \u2014 distributed archival eliminates copyright holder leverage. If nonviable: IA's centralized role remains essential, compression increases, constraint tightens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether decentralized archival can replace institutional preservation"
+    },
+    {
+      "id": "legal_exemption_expansion",
+      "question": "Will Library of Congress Section 108 exemptions expand to explicitly cover institutional digital lending, or will they remain narrowly construed?",
+      "resolution_mechanism": "Copyright Office rulemaking under DMCA \u00a7 1201(a)(1)(B); Section 108 legislative amendment or court precedent expansion",
+      "impact": "If expanded: IA gains legal cover (compression reduces, classification softens to Rope). If narrowly construed: IA operates in legal gray zone (tension remains, constraint stays Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether legal exemptions will clarify digital archival rights"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Internet Archive's mission to preserve global digital culture collides structurally with copyright law's grant of exclusive distribution rights to authors and publishers. This constraint exhibits the core tension between two legitimate public goods: universal cultural preservation (coordination benefit) and creator economic control (extraction mechanism). The IA operates in persistent legal ambiguity \u2014 claiming fair use for institutional archival and relying on Library of Congress exemptions while publishers and authors launch recurring lawsuits to constrain the archive's lending operations. The constraint's extractiveness (0.58) reflects that the IA's Controlled Digital Lending (CDL) model selectively extracts value from copyright holders' exclusive distribution rights without direct compensation, yet the constraint also provides genuine coordination benefits (backup preservation, access to out-of-print works, cultural continuity). The suppression (0.72) is high: copyright holders cannot prevent archival without expensive litigation, and they lack alternative mechanisms to enforce exclusive rights against a well-funded institution with international scope and public legitimacy. The theater ratio (0.48, rising to 0.72 at the civilizational scope) reflects that copyright enforcement is increasingly performative \u2014 Digital Rights Management, licensing complexity, and DMCA anti-circumvention provisions consume enforcement resources without fundamentally enabling the law's stated purpose (incentivizing creation). This constraint is a gold-standard exemplar of tangled rope: the IA provides genuine coordination (centralized preservation reduces duplication), requires active enforcement (copyright litigation is continuous), and extracts asymmetrically (digital lending undermines in-print sales).",
+    "key_agents": [
+      "Internet Archive: Primary beneficiary (institutional/arbitrage) \u2014 gains operational legitimacy, cultural status, funding, and exemption from copyright restrictions through fair use and section 108 claims",
+      "Copyright Holders (Authors/Publishers): Primary victim (powerless/trapped for authors; moderate/constrained for publishers) \u2014 bear extraction of exclusive rights; litigation is expensive and outcomes uncertain",
+      "Publishing Industry: Secondary actor (moderate/constrained) \u2014 benefits from IA backup archival (coordination), simultaneously undermined by CDL lending (extraction); maintains legal action through trade groups",
+      "Public Scholarship and Access Communities: Beneficiary (moderate/mobile) \u2014 gain access to preserved materials, out-of-print works, and cultural heritage; but benefit is contingent on IA's legal survival",
+      "Open Access and Digital Commons Movement: Organized coalition (organized/constrained) \u2014 building alternative preservation pathways (public-domain works, open-access mandates, decentralized archival); sees constraint as temporary institutional failure with sunset clause",
+      "Copyright Law (Institutional System): Analytical actor \u2014 degraded coordination mechanism (piton from civilizational view); theater increasing as licensing complexity and DRM enforcement accumulate without enabling primary function"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The IA's CDL model extracts value from copyright holders' exclusive distribution rights. In-print lending by the IA creates a direct substitute for authorized sales, particularly for academic and research materials where the IA has deep collections. However, extraction is not maximal (snare-level 0.66+) because: (1) out-of-print lending does not compete with sales, (2) the IA is selective in lending practices, and (3) cultural preservation provides a public good that partly justifies the extraction. The value increases over time (0.42\u21920.58) as the IA's collection grows and CDL lending volume rises. Suppression (0.72): High. Copyright holders face substantial barriers to enforcement: (a) the IA is large and international, making jurisdiction challenging, (b) fair use claims create legal uncertainty, (c) the IA has institutional legitimacy and library partnerships that complicate direct action, (d) authors lack resources for individual litigation. The Authors Guild has mounted recurring suits (Authors Guild v. Google Books, Authors Guild v. HathiTrust), but legal outcomes remain uncertain. Suppression reflects not total prevention but high cost of exit \u2014 copyright holders must sue rather than prevent archival through contractual mechanisms. Theater ratio (0.48, increasing to 0.72 at civilizational scope): Moderate and rising. At the operational level (immediate/institutional scope), theater is moderate \u2014 CDL has genuine coordination and preservation functions. At the civilizational level, theater increases: copyright law enforcement increasingly relies on performative mechanisms (DMCA notices, licensing regimes) without enabling the law's stated purpose. The theater accumulation reflects Goodhart drift: as copyright enforcement technology (DRM, automated takedown notices) scales, the theater-to-function ratio rises. Claimed type: Tangled Rope \u2014 justified by: (1) genuine coordination function (centralized preservation reduces duplication across memory institutions), (2) asymmetric extraction (CDL lending undermines copyright holder sales), (3) active enforcement requirement (continuous litigation and legal strategy from publishers/authors). The constraint cannot classify as pure coordination (Rope) because extraction is significant; cannot classify as pure extraction (Snare) because coordination benefits are real and institutional partnerships depend on preservation function.",
+    "perspectival_gap": "The six perspectives reveal the constraint as a genuinely contested space where legitimate institutional logics collide. The copyright holder's Snare (extraction with no exit) is structurally real \u2014 they cannot prevent archival without litigation. The publisher's Tangled Rope (mixed coordination and extraction) is equally real \u2014 publishers do benefit from archival backup, but CDL undermines sales. The IA's Rope (coordination mechanism with arbitrage exit) reflects their actual legal position (fair use claims, section 108 exemptions). The open-access coalition's Scaffold (temporary institutional failure with policy sunset) is real \u2014 copyright policy IS changing, and decentralized archival alternatives ARE maturing. The Piton classification of copyright law itself is real \u2014 enforcement theater has grown (DRM, licensing complexity) without enabling the original purpose. The mountain classification is a false summit \u2014 the analytical observer risks naturalizing a contingent legal framework as immutable law of intellectual property. These are not measurement artifacts or perspective tricks. They reflect genuine disagreement about what the constraint IS: extraction mechanism, coordination problem, temporary institutional failure, or natural law. The disagreement is resolvable only by tracking which institutional actors have power to change the constraint (publishers, legislators, courts) and which do not (authors, public scholarship communities, the IA itself operates in legal gray zone). The structural power to change the constraint currently rests with publishers and courts; the organizational power to build alternatives rests with the open-access movement and library systems. This is the perspectival gap at the deepest level: disagreement not just on classification but on who has agency to resolve the conflict.",
+    "directionality_logic": "Directionality values (d) are derived from structural position \u2014 specifically, who benefits from the constraint and who bears costs, combined with exit options. Copyright holders are victims with no exit (high d, trapped \u2192 high f(d) \u2192 high experienced extraction). The IA is a beneficiary with arbitrage exit options (low d, arbitrage \u2192 low/negative f(d) \u2192 low experienced extraction). Publishers occupy a middle position: victims of CDL (high d for extraction component) but also beneficiaries of backup preservation (low d for coordination component) \u2014 this mixture justifies the Tangled Rope classification at moderate power level. The open-access movement has constrained exit but organized power, which moderates their experienced extraction compared to powerless authors. The constraint's effective extractiveness (\u03c7) varies by perspective because directionality varies: from the copyright holder's view, \u03c7 approaches snare levels (high d \u00d7 moderate f(d) \u00d7 scope modifier); from the IA's view, \u03c7 is low (low d \u00d7 negative f(d) \u00d7 scope modifier); from the analyst's view, \u03c7 is framed differently depending on whether the observer naturalizes copyright as immutable law or recognizes it as contingent policy.",
+    "mandatrophy_analysis": "MANDATROPHY STATUS: UNRESOLVED. Extractiveness (0.58) is below the 0.70 threshold requiring mandatrophy resolution, but the constraint is sensitive to the mandatrophy confusion because different perspectives disagree on the fundamental classification. The copyright holder perspective (Snare) would demand mandatrophy resolution if extractiveness rose above 0.66 \u2014 at that point, the constraint would risk mislabeling pure extraction (enforcement of copyright monopoly) as mixed coordination-extraction (Tangled Rope). The IA perspective (Rope) would contest any classification above Rope, arguing that the coordination function is primary and extraction is secondary. The mandate-preservation distinction is critical here: ARE copyright enforcement and archival preservation in actual tension (separate institutional mandates pulling in opposite directions), or is copyright enforcement parasitic on the preservation mandate (extraction disguised as law enforcement)? The mandatrophy confusion arises because the constraint conflates two separate institutional logics: (1) the mandate to preserve cultural heritage (IA's primary function), and (2) the mandate to enforce copyright (publishers' and authors' institutional logic). These mandates are not simply in tension \u2014 they are pulling toward different constraint configurations. If the cultural preservation mandate dominates (open-access movement perspective), the constraint softens toward Rope or Scaffold (coordination, temporary institutional failure). If the copyright enforcement mandate dominates (publisher perspective), the constraint hardens toward Snare or Tangled Rope (extraction, asymmetric enforcement). The resolution mechanism is political, not analytical: whichever institutional mandate gains regulatory or legislative dominance will determine whether the constraint classifies as coordination or extraction in future iterations. The engine cannot resolve this mandatrophy automatically \u2014 it requires explicit policy choice. For now, the constraint is classified as Tangled Rope, reflecting the genuine presence of both mandates and their ongoing collision. As policy evolves (copyright term reduction, open-access mandates mature, decentralized archival scales), the constraint's classification will shift. Tracking that shift is the corpus's job."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyright_term_length",
+      "fair_use_scope_expansion",
+      "open_access_mandate_diffusion",
+      "decentralized_preservation_scalability"
+    ],
+    "dual_formulation_note": "The preservation-copyright conflict decomposes into multiple downstream constraints: copyright term length (policy choice affecting public domain growth), fair use scope (legal question affecting IA's operational legality), open-access mandate diffusion (policy question affecting alternative preservation pathways), and decentralized archival scalability (technical question affecting IA's competitive position). The IA constraint is upstream \u2014 its classification as Tangled Rope depends on all downstream constraints remaining contested. If copyright terms shorten (public domain expansion), or if fair use expands (IA gains legal cover), or if open-access mandates mature (alternative pathways eliminate extraction mechanism), or if decentralized archival scales (IA loses monopoly position on archival), the IA constraint classification shifts toward Rope or Scaffold."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "copyright_law_institutional_evolution"
+    ]
+  }
+}

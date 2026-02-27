@@ -2,24 +2,26 @@
   "header": {
     "constraint_id": "artificial_scarcity_scaffold",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "artsc"
   },
   "base_properties": {
-    "extractiveness": 0.35,
-    "suppression": 0.65,
-    "theater_ratio": 0.2,
+    "extractiveness": 0.28,
+    "suppression": 0.45,
+    "theater_ratio": 0.58,
     "claimed_type": "scaffold",
     "human_readable": "The Resource-Migration Scaffold",
     "topic_domain": "technological/economic",
     "requires_active_enforcement": true,
     "has_sunset_clause": true,
     "beneficiaries": [
-      "platform_owner",
-      "new_resource_provider"
+      "new_resource_adopters",
+      "transition_market_validators",
+      "technology_infrastructure_builders"
     ],
     "victims": [
-      "legacy_users",
+      "legacy_resource_dependent_users",
       "late_adopters"
     ]
   },
@@ -30,26 +32,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Late Adopter",
-      "comment": "PERSPECTIVE 1: LATE ADOPTER (SNARE) — Trapped after the legacy system is fully deprecated. Faces exorbitant migration costs or complete loss of function with no viable alternatives. Experiences the constraint as pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.60."
+      "label": "The Legacy-Locked User",
+      "comment": "PERSPECTIVE 1: LEGACY-LOCKED USER (SNARE) \u2014 Dependent on legacy resource with no immediate substitute. Artificial scarcity drives up costs without providing accessible alternative. Trapped by infrastructure investment, sunk knowledge, and supply constraints. Maximum experienced extraction during transition window."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Technology Transition Infrastructure Provider",
+      "comment": "PERSPECTIVE 2: TECHNOLOGY TRANSITION INFRASTRUCTURE PROVIDER (ROPE) \u2014 Benefits from coordinating the migration pathway. Artificial scarcity creates urgency and funding for new infrastructure. Solves collective coordination problem: without the scarcity signal, adoption is slow and uncoordinated. Net beneficiary with genuine coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Adopter Coalition",
+      "comment": "PERSPECTIVE 3: ORGANIZED ADOPTER COALITION (SCAFFOLD) \u2014 Coalition of early adopters and industry groups with capacity to transition. Experiences artificial scarcity as temporary coordination mechanism with clear sunset: as new resource infrastructure matures and becomes cheaper than legacy alternative, the scarcity enforcement naturally declines. Constrained by transition costs but with agency in adoption timing."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Legacy User",
-      "comment": "PERSPECTIVE 2: LEGACY USER (TANGLED ROPE) — Experiences both the coordination benefit of an industry-wide standard shift and the extractive cost of a forced migration. Their exit is constrained by switching costs and dependencies on the legacy system. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.40."
+      "spatial_scope": "regional",
+      "label": "The Mid-Market Transition Participant",
+      "comment": "PERSPECTIVE 4: MID-MARKET TRANSITION PARTICIPANT (TANGLED ROPE) \u2014 Medium-sized actors with resources to transition but significant switching costs. Experience both the coordination benefit (clear migration incentive, infrastructure investment) and the extraction cost (elevated legacy resource prices during transition window). Have some agency but constrained by capital requirements and operational disruption."
     },
     {
-      "classification_type": "scaffold",
+      "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "immediate",
+      "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Platform Owner",
-      "comment": "PERSPECTIVE 3: PLATFORM OWNER (SCAFFOLD) — The architect of the transition. Sees the artificial scarcity as a necessary, temporary support structure to achieve a desirable end-state (universal adoption of the new resource). As the primary beneficiary with full control, they experience no extraction. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.05."
+      "label": "The Legacy Resource Administrator",
+      "comment": "PERSPECTIVE 5: LEGACY RESOURCE ADMINISTRATOR (PITON) \u2014 Maintains enforcement of artificial scarcity through rationing, export controls, or production caps. The constraint persists through institutional inertia and regulatory theater even when the scarcity is no longer economically necessary. May have lost its coordination function but remains enforced due to path dependency and bureaucratic structure."
     },
     {
       "classification_type": "scaffold",
@@ -58,94 +78,99 @@
       "exit_options": "analytical",
       "spatial_scope": "global",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (SCAFFOLD) — Recognizes the temporary nature ('has_sunset_clause') and the coordination function of the constraint. The classification holds because the coercive elements are time-bound and serve a stated transitional purpose, fitting the definition of a scaffold. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.48, but the sunset clause gate makes it a scaffold."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Future Userbase",
-      "comment": "PERSPECTIVE 5: FUTURE USERBASE (ROPE) — From a future standpoint, the turmoil of the transition is invisible. This group only experiences the new, superior, and standardized resource. The constraint appears as a pure coordination mechanism that established the beneficial status quo. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.004."
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 From civilizational horizon, the artificial scarcity is a deliberately temporary mechanism with built-in sunset. The constraint succeeds when it becomes unnecessary \u2014 when new resource abundance and infrastructure maturity eliminate the scarcity signal's necessity. Constraint lifecycle is measured in decades, not centuries. Classification depends on verifying the actual sunset mechanism."
     }
   ],
   "omegas": [
     {
-      "id": "scaffold_necessity",
-      "question": "Is the enforced scarcity truly a necessary mechanism for the migration, or is it a pretext for rent-seeking on the legacy platform before its obsolescence?",
-      "resolution_mechanism": "Comparative analysis of similar technological transitions, contrasting outcomes of voluntary vs. forced migration paths. Economic modeling of platform revenue streams during the transition period.",
-      "impact": "If the scarcity is proven unnecessary for a successful transition, the constraint's primary classification shifts from Scaffold to Tangled Rope or Snare, as the 'coordination' claim becomes theatrical.",
+      "id": "sunset_enforcement_credibility",
+      "question": "Is the declared sunset clause actually enforceable, or does the scarcity mechanism persist due to regulatory capture or path dependency?",
+      "resolution_mechanism": "Monitor actual policy changes as new resource reaches cost parity with legacy resource. Track whether rationing, export controls, or production caps are actually relaxed when sunset conditions are met.",
+      "impact": "If sunset is enforced: constraint is genuine scaffold, classification stable. If sunset is not enforced: constraint degrades to piton (theater) or snare (extraction), extractiveness rises, mandatrophy emerges.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the artificial scarcity is a necessary tool or a rent-seeking pretext."
+      "description": "Whether sunset enforcement mechanisms are credible and will be executed"
     },
     {
-      "id": "benefit_distribution",
-      "question": "Do the long-term benefits of the new resource equitably compensate for the short-term costs imposed on legacy users?",
-      "resolution_mechanism": "Longitudinal cost-benefit analysis tracking total cost of ownership for migrated users versus the quantified benefits of the new platform over a 5-10 year horizon.",
-      "impact": "If migration costs systematically outweigh the realized benefits for a significant user segment, the constraint functions as a Snare for that segment, even if it is a Scaffold for others.",
-      "confidence": "low",
+      "id": "new_resource_infrastructure_timeline",
+      "question": "Will new resource infrastructure reach sufficient deployment density to enable full substitution within the declared transition window?",
+      "resolution_mechanism": "Track infrastructure deployment rates, capital investment levels, regulatory approval timelines. Compare against historical transition speeds for similar technology migrations.",
+      "impact": "If infrastructure matures on schedule: scaffold timeline is realistic, constraint can sunset. If delayed: legacy users remain trapped longer, extractiveness increases, snare classification may persist longer than expected.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether long-term benefits outweigh the imposed short-term migration costs."
+      "description": "Whether new resource infrastructure will support full substitution in time"
+    },
+    {
+      "id": "transition_equity_distribution",
+      "question": "Are transition costs and benefits distributed equitably across user classes, or do late adopters and legacy-locked populations bear disproportionate cost?",
+      "resolution_mechanism": "Cost-benefit analysis by user class over transition window. Track whether lower-income or less-resourced users have accessible transition pathways or remain locked in high-cost legacy resource dependency.",
+      "impact": "If distributed equitably: scaffold maintains coordination function. If inequitable: scaffold conceals regressive extraction, tangled rope for disadvantaged groups escalates toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether transition costs and benefits are equitably distributed across user populations"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.25
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.4
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.35
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.25
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.2
+      "value": 0.58
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 5
   },
   "commentary": {
-    "narrative_context": "This constraint models a planned, temporary period of artificial scarcity designed to compel users to migrate from a legacy technology or resource to a new one. The 'scaffold' is the set of policies (e.g., ending support, raising prices, limiting availability) that makes staying on the old system untenable, thereby supporting the construction of a new, universal standard. Examples include forcing users from on-premise software to cloud subscriptions, or phasing out leaded gasoline. The core tension is between the stated goal of beneficial progress and the coercive, extractive nature of the mechanism used to achieve it.",
+    "narrative_context": "The artificial scarcity scaffold is a temporary economic constraint designed to incentivize and fund a transition from a legacy resource to a new, more abundant alternative. The constraint operates by deliberately restricting supply or raising prices on the legacy resource, creating urgency for market actors to adopt new technology or resource sources. The mechanism is coordination-based rather than purely extractive: the scarcity signal solves the collective action problem of simultaneous infrastructure investment by multiple actors. However, the constraint also creates a transition window during which legacy-dependent users face elevated costs with limited alternatives. The constraint's legitimacy depends entirely on whether the sunset mechanism is enforced \u2014 whether artificial scarcity is actually relaxed when new resource infrastructure reaches maturity and cost parity. If enforcement fails, the constraint degrades from scaffold to piton (theater-based inertia) or snare (pure extraction masquerading as necessary scarcity).",
     "key_agents": [
-      "Platform Owner: Primary beneficiary (institutional/arbitrage) — orchestrates the migration to consolidate their market on the new platform.",
-      "Legacy Users: Primary victims (moderate/constrained) — bear the financial and operational costs of the forced migration.",
-      "Late Adopters: Secondary victims (powerless/trapped) — face the highest costs and risk being left with a non-functional system.",
-      "Future Userbase: Indirect beneficiary (organized/mobile) — inherits the benefits of the new standard without experiencing the transition costs."
+      "New Resource Adopters: Early-moving actors (institutional/arbitrage) \u2014 benefit from coordination signal and infrastructure investment; capture first-mover advantages",
+      "Legacy-Locked Users: Dependent populations (powerless/trapped) \u2014 face elevated legacy resource costs without viable alternatives; experience maximum extraction during transition window",
+      "Transition Infrastructure Builders: Technology and infrastructure providers (institutional/arbitrage) \u2014 benefit from urgent funding and market signals; solve coordination problem",
+      "Organized Adopter Coalition: Mid-to-large firms with transition capacity (organized/constrained) \u2014 have agency in adoption timing; experience both coordination benefits and transition costs",
+      "Mid-Market Participants: Medium-sized actors (moderate/constrained) \u2014 balance transition costs against benefits; constrained by capital and operational disruption",
+      "Legacy Resource Administrator: Regulatory body or incumbent (institutional/arbitrage) \u2014 maintains artificial scarcity enforcement; risks piton degradation if constraint persists beyond sunset"
     ],
-    "logic_rationale": "Extractiveness (ε=0.35): Moderate. The constraint imposes real costs (financial, time, labor) on users forced to migrate. It's not pure coordination; value is extracted during the transition. Suppression (0.65): High. The mechanism works by actively suppressing the alternative of staying with the legacy system, making it prohibitively expensive or non-functional. Theater Ratio (0.20): Low. While there is marketing rhetoric, the primary function—forcing migration—is direct and non-performative. The `has_sunset_clause` is true by definition, as the scarcity is designed to end once migration is complete.",
-    "perspectival_gap": "The gap is stark. The Platform Owner sees a necessary, temporary 'Scaffold' to build a better future for everyone. The Legacy User, bearing the costs, sees a 'Tangled Rope'—a mix of coercive extraction and a potential coordination benefit. The Late Adopter, with no options left, sees a pure 'Snare'. This perspectival divergence is characteristic of constraints where benefits and costs are asymmetrically distributed over time and across populations.",
-    "directionality_logic": "Beneficiaries (Platform Owner) have arbitrage exit and control the terms, leading to a low/negative effective extraction (χ), classifying the constraint as a Scaffold from their view. Victims (Legacy Users, Late Adopters) have constrained or trapped exit options, leading to a high derived directionality (d) and thus a high χ. This pushes their classification towards Tangled Rope and Snare, accurately reflecting their experience of being targeted by the constraint.",
-    "mandatrophy_analysis": "This case prevents mandatrophy by correctly using the 'Scaffold' classification. A naive analysis might label it a 'Snare' due to the high suppression and coercive nature. However, the explicit and credible 'has_sunset_clause' is a critical structural feature. The DR system correctly identifies it as a Scaffold from the analytical and beneficiary perspectives, while still acknowledging the Snare-like experience of the victims. It distinguishes a temporary, goal-oriented coercive measure from a permanent system of pure extraction."
+    "logic_rationale": "Extractiveness (0.28): Low-to-moderate. The artificial scarcity creates real costs for legacy-dependent users, but the mechanism is justified by coordination necessity during the transition window. The extraction is not permanent \u2014 it declines as new infrastructure matures. Measured at the midpoint of the transition period (time 5), extractiveness reflects the designed escalation: low at start (when alternatives are being built), peaking during the critical infrastructure investment window, declining toward zero as sunset approaches. Suppression (0.45): Moderate. Users have some alternatives and can invest in transition, but switching costs, regulatory barriers, and information asymmetry create significant friction. Legacy users cannot exit instantly; new resource infrastructure takes time to deploy. Theater ratio (0.58): Moderate-high and rising. Initial rationing may be genuine necessity-based scarcity; by midpoint, some performative elements emerge (maintaining supply restrictions even as alternatives become available, regulatory theater around transition milestones). Sunset mechanism credibility determines whether theater declines or persists.",
+    "perspectival_gap": "The constraint exhibits a clear perspectival gap between extractors and targets. The institutional technology provider sees rope \u2014 genuine coordination function, solving collective action problem. The legacy-locked user sees snare \u2014 artificially elevated costs, no exit, no alternatives. The organized adopter coalition sees scaffold \u2014 temporary coordination mechanism with clear sunset. The analytical observer must distinguish genuine coordination necessity from extractive theater masquerading as necessary scarcity. The perspectival gap widens if sunset enforcement credibility declines \u2014 if the artificial scarcity persists beyond its justified window, the constraint morphs from scaffold (temporary) to piton (inertia-based) or snare (extraction-based) from the legacy user's perspective.",
+    "directionality_logic": "Directionality (d) is determined by the agent's position relative to the extraction flow. Early adopters and infrastructure providers (beneficiaries with arbitrage exit) derive low or negative d \u2014 they capture coordination benefits and have exit optionality. Legacy-locked users (victims with trapped exit) derive high d near 1.0 \u2014 they bear artificial scarcity costs with no alternatives. Mid-market participants occupy intermediate d (0.4-0.6): they are both constrained victims and partial beneficiaries of the coordination mechanism. The sigmoid f(d) applies to derive experienced extractiveness chi from base extractiveness epsilon. As new infrastructure matures, trapped agents shift toward constrained exit (d decreases, f(d) decreases), and experienced extraction chi declines naturally \u2014 this is the intended sunset mechanism.",
+    "mandatrophy_analysis": "The artificial scarcity scaffold resolves the mandatrophy by explicitly declaring its sunset clause and justifying extraction through coordination necessity. The constraint succeeds (remains scaffold classification) if and only if: (1) the new resource infrastructure reaches sufficient maturity and cost parity to eliminate the scarcity rationale, (2) the artificial scarcity enforcement is actually relaxed when sunset conditions are met, and (3) the transition is timed to prevent permanent lock-in of legacy-dependent populations. If sunset enforcement fails or is indefinitely delayed, the constraint degrades to piton (theater-based persistence) or snare (permanent extraction). The theater ratio trajectory is diagnostic: if theater ratio peaks and declines toward zero as sunset approaches, the constraint remains scaffold. If theater ratio plateaus or rises, the constraint has degraded. The measurements section shows the designed trajectory: base_extractiveness rises during the critical infrastructure investment window (0-2 years), plateaus (2-5 years), and is expected to decline sharply after year 5 as new resource reaches cost parity. Theater ratio follows a similar pattern: initially low (genuine scarcity needs), rising during enforcement emphasis, and expected to collapse as sunset enforcement begins."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "legacy_system_interoperability",
-      "new_platform_lock_in"
-    ]
-  }
+      "legacy_resource_infrastructure_lock_in",
+      "new_technology_adoption_coordination",
+      "transition_equity_access"
+    ],
+    "dual_formulation_note": "The artificial scarcity scaffold is upstream of three dependent constraints: (1) the lock-in of existing infrastructure and business models around the legacy resource, (2) the coordination problem of simultaneous new technology adoption across many actors, and (3) the equity problem of ensuring late adopters and low-income users have accessible transition pathways. The scaffold's success or failure in meeting its sunset clause directly impacts whether these downstream constraints remain manageable or become permanent snares."
+  },
+  "directionality_overrides": []
 }

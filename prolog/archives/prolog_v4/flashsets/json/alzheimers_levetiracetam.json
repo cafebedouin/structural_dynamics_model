@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "alzheimers_levetiracetam",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Levetiracetam as Alzheimer's preventative",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_companies",
+      "neurologists",
+      "caregivers"
+    ],
+    "victims": [
+      "alzheimers_patients",
+      "healthcare_system"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Alzheimer's Patients",
+      "comment": "Patients, often elderly and vulnerable, are trapped with limited exit options. The hope for a cure, even if based on weak evidence, can lead to exploitation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "General Practitioners",
+      "comment": "General practitioners are constrained by limited knowledge about Alzheimer's and the pressure to provide treatment, even if off-label. They benefit from having another option to offer patients, but also bear the cost of potential side effects and liability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Companies",
+      "comment": "Pharmaceutical companies benefit from increased sales of levetiracetam, even if off-label. They have arbitrage opportunities by marketing the drug for other conditions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the situation presents a tangled rope. There's a potential benefit in using an existing drug for a devastating disease, but also the risk of harm, wasted resources, and delayed development of more effective treatments. The active enforcement comes from medical practice and patient demand."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficacy_levetiracetam",
+      "question": "What is the true efficacy of levetiracetam as an Alzheimer's preventative or treatment?",
+      "resolution_mechanism": "Large-scale, randomized, placebo-controlled clinical trials.",
+      "impact": "If efficacious: justifies off-label use. If not efficacious: represents a misallocation of resources and potential harm to patients.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Determine if the drug is actually effective for Alzheimer's."
+    },
+    {
+      "id": "side_effects_profile",
+      "question": "What are the long-term side effects of levetiracetam use in elderly patients?",
+      "resolution_mechanism": "Longitudinal studies tracking adverse events in elderly patients taking levetiracetam.",
+      "impact": "If side effects are minimal: supports off-label use with appropriate monitoring. If side effects are significant: weighs against off-label use.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determine the side effect profile for the target demographic."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The off-label use of levetiracetam, a common anti-seizure drug, to prevent or treat Alzheimer's is proposed. This creates a complex situation with potential benefits and risks. The potential benefits accrue to pharmaceutical companies and neurologists, while the risks are borne by patients and the healthcare system. The lack of strong evidence and the potential for side effects make this a controversial approach.",
+    "key_agents": [
+      "Patients: Primary target (powerless/trapped)",
+      "Pharmaceutical Companies: Primary beneficiary (institutional/arbitrage)",
+      "Neurologists: Beneficiary (moderate/constrained)",
+      "Caregivers: Beneficiary (moderate/constrained)",
+      "Healthcare System: Victim (organized/constrained)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.55) because the intervention is not definitively harmful, but offers limited proven benefit. Suppression is moderate (0.40) because access to alternative treatments is available, but the allure of a 'simple' preventative affects adoption rates. The theater ratio is relatively low (0.30) because the medical community is generally cautious about off-label prescriptions without evidence.",
+    "perspectival_gap": "The perspectives differ because the actors occupy different structural positions. Pharmaceutical companies and some neurologists see a potential benefit, while patients are more vulnerable to exploitation. The analytical perspective highlights the overall uncertainty and potential for harm.",
+    "directionality_logic": "Directionality is determined by who benefits and who bears costs. Pharmaceutical companies are primary beneficiaries, patients are primary targets. Neurologists and caregivers are mixed, as they may benefit from having another option to offer, but also bear the cost of potential liability."
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

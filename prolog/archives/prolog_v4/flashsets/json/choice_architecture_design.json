@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "choice_architecture_design",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.35,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Libertarian Paternalist Nudges",
+    "topic_domain": "psychological/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "choice_architects",
+      "society_at_large"
+    ],
+    "victims": [
+      "individuals_lacking_awareness",
+      "autonomy_of_choice"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Individuals Lacking Awareness",
+      "comment": "Perspective 1: Individuals who are unaware of the nudge and its influence on their choices. They are trapped in the choice architecture and bear the costs of potentially sub-optimal decisions without fully understanding the manipulation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Choice Architects",
+      "comment": "Perspective 2: The designers of the choice architecture (e.g., government agencies, corporations). They benefit from the successful implementation of nudges, achieving desired policy outcomes or increased profits. They have arbitrage options as they can adjust the choice architecture based on feedback and results."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Society at Large",
+      "comment": "Perspective 3: Society as a whole benefits from nudges that lead to positive outcomes (e.g., improved public health, higher retirement savings). However, society is also constrained by the potential for unintended consequences and the erosion of individual autonomy. Benefits from the coordination effects but suffers from the extraction cost of decreased choice awareness."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Erosion of Autonomy of Choice",
+      "comment": "Perspective 4: The autonomy of choice slowly degrades as nudges become more prevalent and sophisticated. This represents a piton because while the initial intention might have been benevolent, the long-term effect is a slow and subtle erosion of individual decision-making power, maintained through inertia and habit. The theater ratio is high because the stated goal of preserving choice becomes performative as nudges become more pervasive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 5: An analytical observer sees the choice architecture as a Tangled Rope. There is a coordination function - aligning individual choices with societal good. However there is also asymmetric extraction as individuals have their choices influenced without necessarily being aware."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "awareness_threshold",
+      "question": "What level of awareness is required for a nudge to be considered ethically acceptable?",
+      "resolution_mechanism": "Empirical studies measuring the impact of different levels of transparency on individual choice and perceived autonomy.",
+      "impact": "If high awareness is required, many current nudges would be deemed unethical. If low awareness is sufficient, there is a greater risk of manipulation.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Level of awareness for ethical nudge implementation"
+    },
+    {
+      "id": "unintended_consequences",
+      "question": "What are the potential unintended consequences of widespread nudge implementation?",
+      "resolution_mechanism": "Longitudinal studies tracking the impact of nudges on various aspects of individual and societal well-being.",
+      "impact": "Unforeseen negative consequences could outweigh the intended benefits, leading to a re-evaluation of nudge-based policies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Potential unintended consequences of nudges"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Libertarian paternalism, or 'nudging,' involves designing choice architectures to influence people's decisions in a predictable way without limiting their freedom of choice. This constraint models the tension between promoting beneficial outcomes and respecting individual autonomy. Nudges can range from subtle changes in default options to more overt framing effects.",
+    "key_agents": [
+      "Choice Architects: The designers of the choice architecture. (institutional/arbitrage)",
+      "Individuals Lacking Awareness: Those subject to the nudges without full understanding. (powerless/trapped)",
+      "Society at Large: The beneficiary of positive outcomes resulting from successful nudges. (moderate/constrained)",
+      "Autonomy of Choice: Slowly eroded abstract concept due to ubiquitous subtle manipulations (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.45): Moderate. Nudges subtly guide choices, extracting autonomy and decision-making power, especially from those unaware of the manipulation. Suppression (0.35): Low-Moderate. While individuals retain the freedom to choose, the design of the choice architecture can suppress certain options and influence their perceived attractiveness. Theater ratio (0.75): High. The stated goal of preserving choice becomes performative as nudges become more pervasive, with the actual impact being a subtle but significant influence on individual behavior.",
+    "perspectival_gap": "The perspectival gap arises from the differing experiences and power dynamics. Choice architects view nudges as a tool for promoting societal well-being, while individuals lacking awareness may perceive them as manipulative and autonomy-reducing. Society at large experiences a mixed bag of benefits and costs, depending on the effectiveness and ethical implications of the specific nudges. The analytic perspective highlights the potential for long-term erosion of autonomy, even with benevolent intentions.",
+    "directionality_logic": "Choice architects benefit from nudge implementation (low d value). Individuals lacking awareness bear the cost of potentially suboptimal decisions (high d value). Society at large experiences a mixed benefit and cost (moderate d value). The victims are those whose awareness is low, and whose autonomy is undermined. Beneficiaries are those who benefit from the intended behavioral changes. ",
+    "mandatrophy_analysis": "This constraint requires careful consideration to avoid misclassifying benevolent interventions as pure extraction. The coordination function\u2014aligning individual choices with societal good\u2014must be weighed against the asymmetric extraction, the manipulation of individual choices without necessarily informed consent. If the intent is genuinely to promote well-being and the nudge is transparent, it leans towards coordination. If the intent is manipulative and the nudge is opaque, it leans towards extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

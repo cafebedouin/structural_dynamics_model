@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "traveling_salesperson_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tsp"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Applied Logistics Optimization (based on TSP)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "logistics_platform_operators",
+      "algorithm_licensing_firms"
+    ],
+    "victims": [
+      "delivery_workforce",
+      "small_carrier_operators",
+      "route_optimization_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Delivery Driver",
+      "comment": "PERSPECTIVE 1: DELIVERY DRIVER (SNARE) \u2014 Locked into algorithmically optimized routes they cannot modify or fully understand. Exit options (employment) are tied to platform compliance. High suppression: no transparent cost allocation, no ability to negotiate route efficiency or safety trade-offs. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Independent Carrier",
+      "comment": "PERSPECTIVE 2: INDEPENDENT CARRIER (SNARE) \u2014 Small logistics operators cannot compete with platform-optimized networks. Forced to either adopt proprietary algorithms (paying licensing fees) or exit the market. Suppression is high: switching costs are large, alternatives are limited. d\u22480.80, f(d)\u22481.20, \u03c3=0.9 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Shipper",
+      "comment": "PERSPECTIVE 3: SMALL SHIPPER (TANGLED ROPE) \u2014 Benefits from optimized routing (lower shipping costs) and reaches organized logistics networks; simultaneously constrained by platform-set pricing and no voice in optimization criteria. Mixed experience: genuine coordination benefit (access to efficiency) + asymmetric extraction (pricing power, black-box algorithms). d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Logistics Platform Operator",
+      "comment": "PERSPECTIVE 4: LOGISTICS PLATFORM OPERATOR (ROPE) \u2014 Experiences TSP optimization as pure coordination: solving the vehicle routing problem enables scale, network effects, and customer satisfaction. Benefits from algorithmic efficiency without bearing extraction costs (passed to workforce and independent operators). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithm Licensing Firm",
+      "comment": "PERSPECTIVE 5: ALGORITHM LICENSING FIRM (ROPE) \u2014 Sees TSP solutions as enabling standardized, scalable coordination across clients. Captures licensing revenue; experiences the constraint as a coordination infrastructure that generates mutual benefit (logistics firms get efficient routing, licensing firm gets revenue). d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Workforce Coalition",
+      "comment": "PERSPECTIVE 6: WORKFORCE COALITION (TANGLED ROPE) \u2014 Organized labor sees TSP optimization as providing genuine coordination benefits (reduced accident rates from AI-optimized routes, lower fuel costs enabling higher wages) alongside systematic extraction (algorithmic speed-up, precision route timing, reduced worker autonomy). Coalition is building alternative frameworks (transparent algorithm auditing, worker-input optimization). d\u22480.65, f(d)\u22480.98, \u03c3=1.0 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Movement",
+      "comment": "PERSPECTIVE 7: REGULATORY REFORM MOVEMENT (SCAFFOLD) \u2014 Sees current TSP application as a temporary institutional arrangement with a clear sunset. Algorithm transparency mandates, worker algorithm audits, and open-source routing solutions are building alternative pathways. The constraint is structured as coordination with extraction overlay; reform aims to remove extraction while retaining coordination. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Research Establishment",
+      "comment": "PERSPECTIVE 8: ACADEMIC RESEARCH ESTABLISHMENT (PITON) \u2014 TSP is intellectually iconic in computer science education and optimization research. University courses, textbooks, and research programs are built around TSP solutions. The actual logistics application (what this constraint describes) is secondary to the cultural/institutional investment in TSP as canonical problem. Theater ratio \u2248 0.60: significant effort spent on pedagogical and theoretical TSP work while practical deployment challenges remain unaddressed. d\u22480.12, f(d)\u2248-0.06, \u03c3=1.2 \u2192 \u03c7\u2248-0.02."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a computational theory standpoint, TSP is NP-hard: finding optimal solutions is computationally intractable for large instances. From this framing, the constraint appears as an immutable property of the computational landscape. However, the structural data (\u03b5=0.38, suppression=0.42, theater=0.35) contradicts a mountain classification. The 'intractability' is a mathematical property of the decision problem; the extractiveness arises from how industrial applications of TSP solutions distribute costs and benefits\u2014a contingent institutional arrangement, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_transparency_sufficiency",
+      "question": "Does algorithmic transparency (opening optimization criteria, cost functions, trade-off parameters) fundamentally change the extraction mechanism, or do drivers/workers remain trapped by economic necessity despite understanding the algorithm?",
+      "resolution_mechanism": "Pilot programs in unionized logistics; measurement of worker autonomy and exit rates post-transparency; comparison of working conditions under transparent vs opaque algorithms",
+      "impact": "If transparency enables exit/negotiation: constraint downgrades from Snare to Tangled Rope. If transparency is performative: constraint remains Snare (workers understand their trap but cannot escape it).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic transparency reduces extraction or remains performative"
+    },
+    {
+      "id": "open_source_routing_viability",
+      "question": "Can open-source TSP solvers (e.g., VROOM, OR-Tools) actually compete with proprietary platform algorithms in real-world logistics, or do network effects and training data advantages lock in proprietary solutions?",
+      "resolution_mechanism": "Comparative deployment analysis: open-source routing quality vs proprietary; cost of adoption and maintenance; market share trends",
+      "impact": "If open-source is viable: scaffold perspective confirmed\u2014sunset pathway exists. If proprietary lock-in persists: scaffold is aspirational, constraint persists as Tangled Rope or Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether open-source routing solutions can break proprietary lock-in"
+    },
+    {
+      "id": "extraction_vs_efficiency_decomposition",
+      "question": "How much of the measurable wage suppression / driver strain in optimized logistics is inherent to the efficiency gains (unavoidable cost of better routing) vs how much is rent extraction by platforms (avoidable, contingent institutional choice)?",
+      "resolution_mechanism": "Comparison of wage/working-condition trends in unionized vs non-unionized logistics; analysis of platform profit margins; counterfactual modeling of wage-sharing scenarios with same algorithmic efficiency",
+      "impact": "If decomposition shows 70%+ efficiency / 30% extraction: constraint is closer to Rope (mixed benefit). If 30% efficiency / 70% extraction: constraint is closer to Snare (pure predation).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Decomposition of wage suppression into efficiency-driven vs rent-extraction components"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Traveling Salesperson Problem, a canonical NP-hard optimization problem in computer science, has been industrialized into logistics platforms (Uber Freight, Amazon Logistics, DHL Route Optimizer) that use TSP-derived algorithms to route delivery vehicles. This constraint examines the structural relationship between the computational optimization mechanism and the distribution of costs/benefits across delivery drivers, independent carriers, platform operators, and shippers. The application exhibits the full range of DR classification from different perspectives: pure coordination (platform operator view), pure extraction (delivery driver view), mixed coordination-extraction (small shipper view), temporary with a sunset pathway (regulatory reform view), and potentially immutable natural law (computational theory view). The constraint's extraction increases over time as platforms refine algorithmic efficiency, capture greater market share, and pass cost reductions selectively rather than uniformly across stakeholders.",
+    "key_agents": [
+      "Delivery Driver: Primary victim (powerless/trapped) \u2014 locked into algorithmically optimized routes, unable to negotiate efficiency-safety trade-offs",
+      "Independent Carrier: Secondary victim (moderate/constrained) \u2014 small operators forced to adopt proprietary algorithms or exit market",
+      "Small Shipper: Mixed beneficiary-victim (moderate/constrained) \u2014 benefits from optimization but has no control over routing criteria or pricing",
+      "Logistics Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures network effects and scale benefits from TSP-derived routing",
+      "Algorithm Licensing Firm: Secondary beneficiary (organized/arbitrage) \u2014 monetizes TSP solutions across client base",
+      "Workforce Coalition: Organized victim (organized/constrained) \u2014 building alternative frameworks for transparent algorithm auditing",
+      "Regulatory Reform Movement: Organized agent (organized/constrained) \u2014 pursuing algorithm transparency mandates and open-source alternatives",
+      "Academic Research Establishment: Institutional observer (institutional/arbitrage) \u2014 maintains TSP as canonical problem despite secondary relevance to practical deployment",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as computational necessities"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. TSP optimization in logistics does produce genuine efficiency gains (lower fuel consumption, faster delivery, fewer vehicles needed), which are real coordination benefits. However, platforms capture disproportionate share of gains through opacity in route design, speed-up expectations, and pricing power. The extraction is not maximal (0.46+) because some benefits genuinely flow to shippers and users. But it is substantial because drivers bear costs (algorithmic intensity, route micro-management, safety trade-offs) without transparent benefit sharing. Suppression (0.42): Moderate-high. Workers are suppressed by: algorithmic opacity (they cannot understand or challenge routing logic), employment lock-in (refusal to follow routes means termination), and information asymmetry (platforms have complete routing data, workers have none). However, suppression is not absolute\u2014open-source alternatives exist, workforce organizing is active, and regulatory pressure is mounting. Theater ratio (0.35): Low-moderate. TSP application is relatively functional\u2014the algorithms actually optimize routes and produce measurable efficiency gains. However, some theater emerges in: academic framing of TSP as the 'real problem' when actual logistics deployment challenges are secondary; marketing narratives about 'algorithmic fairness' that obscure actual power asymmetries; and regulatory theater ('algorithm auditing' that doesn't actually affect routing decisions).",
+    "perspectival_gap": "This constraint demonstrates how the same computational optimization mechanism appears as pure coordination from the platform's perspective (Rope: solving a genuine technical problem), as pure extraction from the driver's perspective (Snare: locked routes, algorithmic intensification), and as mixed coordination-extraction from multiple intermediate perspectives. The independent carrier sees Snare (forced into adopting proprietary algorithms). The small shipper sees Tangled Rope (genuine access benefits + pricing oppression). The workforce coalition sees Tangled Rope (efficiency gains + autonomy loss, with potential for organized negotiation). The regulatory movement sees Scaffold (temporary institutional arrangement with a viable sunset through transparency mandates and open-source alternatives). The academic establishment maintains Piton (TSP remains intellectually central to computer science, but practical logistics challenges are treated as applications of a solved problem). The analytical observer risks Mountain classification (TSP is NP-hard, so optimization under constraints is 'natural'), but this naturalizes what is actually a contingent choice: whether platforms share optimization gains and whether workers participate in routing decisions.",
+    "directionality_logic": "Delivery driver: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Cannot exit employment or route decisions. Independent carrier: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.20. High extraction; significant exit barriers (switching costs, training, market concentration). Small shipper: Mixed (benefits from efficiency + victimized by pricing) + constrained \u2192 d\u22480.68, f(d)\u22481.05. Moderate extraction; genuinely benefits from optimization but has no agency in pricing/routing. Platform operator: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Negative effective extraction; net beneficiary. Algorithm licensing firm: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Negative effective extraction; monetizes coordination. Workforce coalition: Mixed (beneficiary from route safety improvements + victim of speed-up) + constrained \u2192 d\u22480.65, f(d)\u22480.98. Moderate extraction but with organized agency to negotiate. Regulatory movement: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Low effective extraction; coalition has agency and sees viable path forward (transparency mandates, open-source adoption). Academic establishment: Institutional + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.06. Piton classification comes from theater_ratio \u2265 0.70 and inertial maintenance, not from high chi. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival (observer naturalizes constraint); the engine's false summit detector catches this.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint satisfies all three tangled rope gates: (1) requires_active_enforcement=true \u2014 platforms actively enforce route compliance, algorithmic opacity, and pricing constraints; (2) beneficiaries present \u2014 logistics platforms, shippers benefit from optimization; (3) victims present \u2014 delivery drivers, independent carriers bear costs of optimization and extraction. The mandatrophy resolves because the constraint exhibits GENUINE COORDINATION FUNCTION (TSP actually does reduce logistics costs and improve service) alongside ASYMMETRIC EXTRACTION (platforms capture disproportionate gains, workers bear intensity costs without transparent benefit sharing). This is not a Snare masquerading as coordination or a Rope masquerading as extraction. Both functions are real. The solution is not to eliminate TSP application (which would eliminate coordination benefits) but to redistribute extraction through transparency mandates, algorithmic auditing, and worker participation in route design. The workforce coalition and regulatory movement perspectives show that the constraint's extraction mechanism is contingent\u2014not inherent to the optimization problem itself, but to how platforms choose to implement and monetize it."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "last_mile_delivery_labor",
+      "algorithmic_wage_setting",
+      "platform_information_asymmetry"
+    ],
+    "dual_formulation_note": "The TSP application constraint (this story) describes the structural effects of deploying TSP-derived algorithms in real logistics. It is upstream of platform-specific constraints (last_mile_delivery_labor, algorithmic_wage_setting) that model sector-specific labor extraction. The TSP constraint's \u03b5=0.38 reflects the mixed coordination-extraction at the algorithmic level; downstream constraints model how specific industries (gig delivery, parcel logistics) apply these algorithms with higher extraction (\u03b5\u22650.50)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

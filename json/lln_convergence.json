@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "lln_convergence",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Law of Large Numbers (LLN)",
+    "topic_domain": "mathematical/probability_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Empiricist: Sampling Reality",
+      "comment": "Any agent attempting to estimate a population parameter through sampling confronts the LLN as an immutable structural limit. No amount of institutional power, coordination, or coercion can make finite samples converge faster than the theorem permits. The constraint is irrespective of the observer's objectives \u2014 it operates at the level of mathematical necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Statistician: Asymptotic Behavior",
+      "comment": "Even highly organized statistical institutions (research consortia, regulatory bodies, central banks) cannot circumvent the LLN's convergence guarantee. The theorem binds all perspectives equally. Organizations can only optimize sampling design or reduce variance through better experimental control, but the fundamental convergence rate is non-negotiable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Policy Maker: Large-Scale Aggregation",
+      "comment": "Large institutional actors (governments, corporations, central banks) rely on aggregate data to make decisions. The LLN guarantees that sufficiently large samples will stabilize their estimates. This is not a benefit they can extract or a cost they can externalize \u2014 it is a law that applies uniformly to all observers of large-scale phenomena."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematician: Logical Necessity",
+      "comment": "From the perspective of formal mathematics, the LLN is a theorem derived from axioms of probability theory. It has zero degrees of freedom \u2014 it is not a constraint that can be negotiated, evaded, or strategically managed. The convergence is a logical consequence of the probability measure and the independence assumption."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "independence_assumption_validity",
+      "question": "Are the trials truly independent in the real-world system being sampled?",
+      "resolution_mechanism": "Empirical testing for autocorrelation, measurement bias, or causal coupling between trials. Statistical diagnostics (Ljung-Box test, cross-correlation analysis).",
+      "impact": "If independence is violated: convergence slows or fails entirely. The mathematical constraint applies only if premises hold. A Snare may emerge if dependence is hidden (extractive suppression of correlation data).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether trial independence assumption holds in practice"
+    },
+    {
+      "id": "identically_distributed_condition",
+      "question": "Do all trials follow the same probability distribution, or does the distribution drift over time?",
+      "resolution_mechanism": "Time-series analysis of distributional parameters; testing for regime shifts, concept drift, or non-stationary processes.",
+      "impact": "If distributions are non-identical: LLN does not apply. Convergence may fail. A Tangled Rope may emerge if drift is gradual and hidden (agents extracting value through informational asymmetry about regime change).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether distributions remain identical across trials"
+    },
+    {
+      "id": "finite_variance_premise",
+      "question": "Does the underlying distribution have finite variance?",
+      "resolution_mechanism": "Analysis of tail behavior, moment existence, and empirical distributions with extreme outliers or fat tails. Diagnostic: Pareto index estimation.",
+      "impact": "If variance is infinite (e.g., Cauchy distribution): LLN does not apply in its standard form. Convergence fails. The mountain is conditional on mathematical premises that may not hold empirically.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the distribution has finite variance"
+    },
+    {
+      "id": "computational_feasibility_of_limit",
+      "question": "For practical finite samples, how close is the constraint to its asymptotic form?",
+      "resolution_mechanism": "Rate-of-convergence analysis (Berry-Esseen bounds, empirical convergence speed); comparison of theoretical asymptotic behavior vs finite-sample behavior.",
+      "impact": "If convergence is extremely slow: the mountain appears empirically as a constraint with high theater (agents may fake convergence, use data-massaging, or exploit the slow approach to the limit). This is conceptual rather than changing the mathematical classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of convergence to the limit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Law of Large Numbers is a fundamental theorem in probability theory and mathematical statistics stating that the average of results obtained from a large number of independent, identically distributed trials converges to the expected value. This constraint is a mathematical natural law: it emerges from the axioms of probability theory and applies universally across all observational contexts. No agent \u2014 individual, institutional, or analytical \u2014 can circumvent, extract from, or suppress the LLN's convergence guarantee. The constraint operates at the level of logical necessity. All perspectives converge on the mountain classification because the LLN has zero degrees of freedom: given independent, identically distributed trials with finite variance, convergence is guaranteed by theorem, not by institutional design or power relationship.",
+    "key_agents": [
+      "Empiricists: Any agent conducting sampling or estimation \u2014 they confront the LLN as an immutable structural limit on convergence rates",
+      "Statisticians: Organized specialists who design experiments and interpret data; they optimize within the LLN's bounds but cannot exceed them",
+      "Policy Makers: Institutional actors relying on aggregate data \u2014 the LLN's guarantee applies uniformly regardless of their power or objectives",
+      "Mathematicians: Analysts of the formal system \u2014 the theorem is a logical consequence of probability axioms"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The LLN does not extract resources, reduce agency, or benefit specific agents. It is a constraint on the convergence behavior of averages, applicable equally to all observers. The small non-zero value reflects that any mathematical statement has minimal epistemic cost to state and verify \u2014 the 'extraction' is the intellectual labor of understanding the proof. Suppression (0.02): Negligible. No agent can suppress or hide the LLN's operation. It is transparent, universally applicable, and mathematically proven. The tiny residual reflects only the historical fact that the theorem was not fully formalized until the 19th century \u2014 once known, it cannot be unknown. Theater ratio (0.05): Negligible. The LLN has no performative dimension. Its operation is automatic and independent of any observer's intentions or institutional structures. The minimal value reflects only the inevitable gap between the theorem's statement and its infinite number of applications.",
+    "perspectival_gap": "All perspectives converge on mountain classification. This is the characteristic signature of a true natural law. The empiricist, statistician, policy maker, and mathematician all observe the same immutable constraint. There is no perspectival disagreement, no institutional variation, no power-dependent exit option. The LLN applies identically to the richest institutional actor and the most powerless individual conducting a simple coin-flip experiment. The absence of perspectival gap is itself the proof of mountain status: a constraint that would yield different classifications from different power levels is not a natural law.",
+    "directionality_logic": "Directionality derivation is not applicable to this constraint. Mountains have no beneficiaries or victims \u2014 the constraint applies symmetrically to all observers. There is no extraction flow, no asymmetric cost-benefit structure, and no power-dependent variation in how agents experience the constraint. All agents (powerless and institutional alike) experience identical convergence guarantees and identical rate limitations. The absence of directional asymmetry is a defining feature of the mountain type.",
+    "mandatrophy_analysis": "This constraint does not face mandatrophy because it is a uniform-type mountain (natural law only). All perspectives yield the same classification. The mandatrophy would arise only if we tried to argue that the LLN was a coordination mechanism (rope), an institutional extraction device (snare), or a temporary support structure (scaffold) from some perspective \u2014 these framings would be category errors because the LLN has no institutional, power-dependent, or temporal aspect. The theorem applies as long as its premises (independence, identical distribution, finite variance) hold, regardless of any institutional context. The risk is not mandatrophy but the omega uncertainties: if the premises fail in a real-world system (e.g., trials are correlated, or variance is infinite), the mountain classification is overturned by mathematical fact, not by perspectival reframing."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "central_limit_theorem",
+      "statistical_consistency_estimators",
+      "weak_law_large_numbers"
+    ],
+    "dual_formulation_note": "The Law of Large Numbers is the foundational constraint for all statistical inference. Downstream constraints (Central Limit Theorem, consistency of estimators) depend on the LLN's convergence guarantee. The LLN itself depends on the mathematical premises: independence, identical distribution, and finite variance. Each premise is a separate empirical uncertainty (captured in omegas) that can cause real-world systems to violate the mountain classification, but the mathematical theorem itself is irrevocable."
+  }
+}

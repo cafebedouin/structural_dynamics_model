@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "nash_equilibrium_coordination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nash"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.3,
+    "theater_ratio": 0.45,
+    "claimed_type": "rope",
+    "human_readable": "Nash Equilibrium as Coordination Mechanism",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "equilibrium_achieving_agents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Rational Individual Player",
+      "comment": "PERSPECTIVE 1: RATIONAL INDIVIDUAL PLAYER (ROPE) \u2014 Each player can unilaterally shift strategies if motivated, but finds no incentive to do so given others' choices. The constraint is experienced as stable coordination without coercion. Exit options exist (players can experiment with alternative strategies) but prove unprofitable. Pure coordination benefit with minimal overhead."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Trapped Player in Suboptimal Equilibrium",
+      "comment": "PERSPECTIVE 2: TRAPPED PLAYER IN SUBOPTIMAL EQUILIBRIUM (TANGLED ROPE) \u2014 When the Nash equilibrium is Pareto-inefficient (prisoner's dilemma, tragedy of the commons), individual players are locked into outcomes worse than coordination-at-a-different-point would achieve. Players experience this as both coordination (equilibrium is self-enforcing) and extraction (they cannot escape without collective action). Suppression arises from the inability to commit to joint deviations."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Victim of Coordination Failure",
+      "comment": "PERSPECTIVE 3: VICTIM OF COORDINATION FAILURE (SNARE) \u2014 In hawk-dove, arms races, or races-to-the-bottom, the Nash equilibrium itself is a trap. Individual incentives push toward outcomes (aggression, overspending, quality degradation) that harm all participants. No unilateral deviation helps; collective escape requires commitment devices none possess. High suppression, minimal coordination benefit, pure extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Game Designer or Market Architect",
+      "comment": "PERSPECTIVE 4: GAME DESIGNER/MARKET ARCHITECT (ROPE) \u2014 Institutional actors (platforms, regulators, market designers) benefit from establishing equilibria that serve their objectives. They see the Nash equilibrium as a pure coordination tool: it simplifies their landscape by making agent behavior predictable and self-stabilizing. Low extraction because the architecture solves their problem elegantly."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Framework",
+      "comment": "PERSPECTIVE 5: THEORETICAL FRAMEWORK (PITON) \u2014 Game theory itself treats Nash equilibrium as foundational, but empirical play often deviates: agents use bounded rationality, apply heuristics, learn slowly, or fail to reach equilibrium. The concept persists as a standard despite frequent non-convergence to its predictions. Theater ratio reflects that Nash equilibrium is often invoked as an explanatory device for outcomes it does not actually predict in practice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Necessity View",
+      "comment": "PERSPECTIVE 6: MATHEMATICAL NECESSITY (MOUNTAIN) \u2014 From pure game-theoretic logic, every finite game has at least one Nash equilibrium (mixed or pure). This is a mathematical theorem, not a contingent empirical fact. No agent can violate the structure: if players follow their incentives, an equilibrium-like configuration must exist. However, this perspective confuses mathematical existence with empirical realization. Most real coordination does NOT reach Nash equilibrium. The mountain classification is a false summit masking institutional and cognitive factors that prevent convergence."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "equilibrium_efficiency_gap",
+      "question": "When do agents rationally prefer the outcome of a suboptimal Nash equilibrium over the Pareto-superior alternative, and when are they trapped by inability to coordinate commitment?",
+      "resolution_mechanism": "Experimental and empirical analysis of repeated game play, communication effects, and institutional mechanisms (contracts, governance, reputation) that enable or prevent coordination on superior equilibria",
+      "impact": "If agents prefer the Nash equilibrium due to credible commitment problems: classification is Rope for all perspectives. If agents trapped by inability to communicate: classification becomes Tangled Rope or Snare depending on power level.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing rational preference for equilibrium from coordination failure"
+    },
+    {
+      "id": "convergence_mechanism",
+      "question": "What determines whether agents actually converge to a Nash equilibrium, and is mathematical existence sufficient to explain empirical equilibration?",
+      "resolution_mechanism": "Historical case analysis of economic/social coordination (markets, protocols, norms); behavioral economics experiments on equilibrium convergence; identification of learning mechanisms and information structures required for convergence",
+      "impact": "If convergence depends critically on institutional support (communication, monitoring, punishment): Nash equilibrium is Rope only for well-designed systems; becomes Piton when institutional support degrades. If no convergence occurs: Piton classification dominates empirically.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether game-theoretic equilibrium predicts actual coordination outcomes"
+    },
+    {
+      "id": "multiple_equilibrium_selection",
+      "question": "When multiple Nash equilibria exist (coordination games, battle-of-the-sexes), what mechanism selects which equilibrium is realized, and can this selection itself be exploited for extraction?",
+      "resolution_mechanism": "Institutional analysis of equilibrium-selection rules; behavioral experiments on focal points and default options; economic analysis of who benefits when a particular equilibrium is selected vs alternatives",
+      "impact": "If selection is costless and symmetric: multiple equilibria are coordination games (Rope). If selection mechanism favors one agent over another: coordination becomes Tangled Rope or Snare depending on bargaining power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Equilibrium selection mechanisms and asymmetric benefit allocation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Nash equilibrium is a mathematical concept that describes a state in which no player can unilaterally improve their outcome given the strategies of others. However, Nash equilibrium simultaneously functions as a coordination mechanism (pure Rope), an explanatory framework of limited predictive power (Piton), and in certain structures, a trap that locks rational agents into collectively suboptimal outcomes (Snare or Tangled Rope). The constraint's classification depends critically on whether the equilibrium being studied is Pareto-efficient, whether agents can communicate, whether institutional mechanisms enable commitment to alternative equilibria, and whether agents actually converge to the mathematical prediction. The theater ratio has risen from 0.35 to 0.45 over the interval as game theory has become increasingly applied to real-world coordination problems while simultaneously documented to fail in practice, creating a gap between theoretical prediction and empirical realization.",
+    "key_agents": [
+      "Individual Rational Players: Primary beneficiaries (moderate/mobile) \u2014 experience Nash equilibrium as self-enforcing coordination with no need for external enforcement",
+      "Players Trapped in Suboptimal Equilibrium: Secondary victims (powerless/constrained) \u2014 experience the equilibrium as coordination that is simultaneously extractive due to inability to commit to joint deviations",
+      "Institutional Architects: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from predictability and stability provided by Nash equilibrium framework",
+      "Behavioral Agents: Primary victims in the trapped frame (powerless/immediate) \u2014 face immediate pressure toward equilibrium strategies regardless of long-term efficiency",
+      "Game Theorists: Analytical framework maintainers (analytical/analytical) \u2014 maintain the theory despite empirical failures to predict convergence"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The Nash equilibrium is primarily a coordination mechanism \u2014 it enables equilibration without requiring an external enforcer. However, extractiveness is non-zero because (1) in suboptimal equilibria (prisoner's dilemma, arms races), the equilibrium itself is a trap that extracts welfare from all players relative to feasible alternatives, and (2) institutional designers can exploit equilibrium-selection problems to steer outcomes in their favor. Suppression (0.30): Moderate. The suppression arises from inability to commit to joint deviations when multiple equilibria exist, and from the difficulty of coordinating on alternative equilibria when the current Nash point is self-enforcing. However, suppression is not high because (a) in efficient equilibria, no alternative is preferable anyway, and (b) communication and institutional mechanisms can partially overcome commitment barriers. Theater ratio (0.45): Moderate. Game theory's Nash concept is increasingly applied to real systems, but empirical convergence to equilibrium is slower and more uncertain than the mathematical theorem suggests. The theory is intellectually coherent but partially performative in application \u2014 it explains post-hoc why an outcome occurred, less often predicts which outcome will occur.",
+    "perspectival_gap": "The trapped player in a suboptimal equilibrium experiences the maximum perspectival gap. From their individual-rational perspective, they cannot unilaterally deviate profitably \u2014 the constraint appears unbreakable, making it experientially equivalent to a snare. From the collective-rational perspective (if all players could commit jointly), the equilibrium is inefficient and escape is desirable. From the institutional architect's perspective, the suboptimal equilibrium may still be valuable because it is predictable and stable, making it appear as Rope. The game theorist's mountain perspective ('mathematically guaranteed to exist') misses that the real constraint is behavioral: agents don't converge to equilibrium because they are boundedly rational, lack information, or face commitment barriers. The false summit occurs when mathematical necessity is confused with behavioral inevitability.",
+    "directionality_logic": "Directionality varies sharply by equilibrium type. In efficient coordination games (e.g., driving conventions), the equilibrium is genuinely beneficial for all players \u2014 beneficiaries and victims collapse into a single group, and d is intermediate (symmetric benefit). In suboptimal equilibria (prisoner's dilemma, arms races), players experience extraction toward the equilibrium despite preferring alternatives \u2014 d is high for trapped players (they bear full cost relative to feasible alternatives). For institutional architects selecting which equilibrium is realized when multiple exist, d is low (they benefit from the equilibrium selection). The engine derives d from beneficiary/victim declarations: in efficient equilibrium contexts, minimal declarations are needed; in suboptimal equilibrium contexts, all agents are victims of the trap.",
+    "mandatrophy_analysis": "Nash equilibrium resolves the mandatrophy by decomposing the single concept into six structurally distinct perspectives. In efficient coordination games (e.g., currency standards, driving conventions), the constraint is pure Rope from all perspectives. In suboptimal equilibria (prisoner's dilemma), it is Snare from the individual-player perspective and Rope from the institutional-architect perspective \u2014 revealing that the same mathematical structure serves different functions for different agents. The piton perspective detects that game theory's explanatory power in predicting actual convergence is degraded: the theory explains why behavior is rational ex-post, but does not reliably predict ex-ante which equilibrium will be selected or when convergence occurs. The mountain perspective is a false summit: mathematical existence of equilibrium is guaranteed, but behavioral convergence is contingent on cognitive, informational, and institutional factors. The mandatrophy resolution lies in recognizing that 'the Nash equilibrium' is not a single constraint but a family of structurally distinct constraints indexed by equilibrium efficiency and player access to commitment mechanisms."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "prisoner_dilemma_trap",
+      "tragedy_of_commons_mechanism",
+      "equilibrium_selection_problem",
+      "coordination_game_standard"
+    ],
+    "dual_formulation_note": "Nash equilibrium as a single concept decomposes into two structurally distinct constraints: (1) efficient_coordination_equilibrium (\u03b5 \u2264 0.15, Rope for all perspectives), representing cases where the Nash equilibrium is Pareto-optimal and serves pure coordination; (2) suboptimal_equilibrium_trap (\u03b5 \u2265 0.40, Snare for powerless agents, Tangled Rope for moderate agents), representing prisoner's dilemma and arms-race structures where the equilibrium is self-enforcing but collectively suboptimal. These are not the same constraint viewed from different angles; their \u03b5 values differ by a factor of 3. The efficient equilibrium is genuinely a coordination rope. The suboptimal equilibrium is genuinely a trap. The game-theoretic framework applies to both, but the structural logic differs. Stories should be decomposed unless the specific game structure being analyzed is explicitly mixed (e.g., coordination game where players disagree on which efficient equilibrium to select, creating both coordination and extraction layers)."
+  },
+  "directionality_overrides": []
+}

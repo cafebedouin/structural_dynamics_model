@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "ergo_lets_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ergo_lets"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Ergo Local Exchange Trading System (LETS) Protocol",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "protocol_participants",
+      "local_exchange_communities"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Participant in a LETS Community",
+      "comment": "PERSPECTIVE 1: LOCAL PARTICIPANT (ROPE) \u2014 Individual traders in a LETS community experience the constraint as pure coordination. The zero-sum balance rule creates mutual credit without intermediary extraction. Participants can exit by stopping trades or joining other networks. The constraint solves the collective action problem of trust and credit availability in local exchange without coercive overhead."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Regional LETS Operator/Steward",
+      "comment": "PERSPECTIVE 2: REGIONAL LETS OPERATOR (ROPE) \u2014 Operators managing LETS nodes or communities experience the constraint as a coordination mechanism enabling network effects. The protocol's zero-sum property prevents their extraction while guaranteeing network stability. Operators benefit from network growth without rent-extraction \u2014 their power derives from stewardship, not dominance. Mobile exit (choosing which networks to operate) prevents lock-in."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Maintainers/Ergo Core",
+      "comment": "PERSPECTIVE 3: PROTOCOL MAINTAINERS (ROPE) \u2014 The Ergo development community and protocol maintainers experience LETS as a coordination infrastructure. The zero-sum balance constraint ensures the system remains trustless and verifiable. Maintainers benefit from adoption and ecosystem growth without the constraint creating extraction rents. They have arbitrage options: maintaining alternative protocols, pivoting to other projects."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Inactive or Marginal Participant",
+      "comment": "PERSPECTIVE 4: INACTIVE PARTICIPANT (PITON) \u2014 Participants who join but trade infrequently experience LETS as theater \u2014 the coordination structure persists (they remain in the network record) but with minimal functional activity. Their balance may remain static, theater ratio is high (presence without function), but they can exit by stopping participation. Constrained exit (some social cost to leaving) maintains the appearance of participation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Accounting Identity)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational/universal perspective, the zero-sum balance constraint is a mathematical/accounting identity, not a social policy choice. For any mutual credit system without external subsidy, the sum of all participant balances must equal zero. This is an immutable property of double-entry accounting, not a contingent institutional arrangement. The constraint emerges naturally from the logical structure of accounting itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credit_fungibility_assumption",
+      "question": "Does the zero-sum balance rule presume that all credit units within a LETS community are equally fungible and acceptable, or do differential trust levels create de facto hierarchies?",
+      "resolution_mechanism": "Empirical observation of LETS transaction patterns; analysis of whether participants segregate balances by counterparty reputation or accept all credit units equally",
+      "impact": "If credit is truly fungible: pure coordination rope. If trust hierarchies emerge: the system becomes tangled rope with asymmetric credit availability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credit units are treated as fungible or hierarchically valued by trust"
+    },
+    {
+      "id": "network_critical_mass",
+      "question": "What population density and trade frequency threshold is required for a LETS community to sustain coordination benefits versus collapsing into theater (inactive records)?",
+      "resolution_mechanism": "Comparative analysis of successful vs failed LETS communities; correlation between network size, transaction volume, and perceived value",
+      "impact": "If critical mass is low: LETS can operate at small scale as rope. If critical mass is high: many communities degrade to piton (theatrical presence). System extractiveness may vary by context.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum viable population and activity threshold for sustained LETS function"
+    },
+    {
+      "id": "protocol_vs_governance_extraction",
+      "question": "Does the technical protocol enforce zero-sum balances trustlessly, or do community governance decisions create extraction opportunities (e.g., write-offs, credit resets, exclusion)?",
+      "resolution_mechanism": "Analysis of governance structures in operational LETS systems; comparison of protocol-enforced constraints vs community-adjudicated exceptions",
+      "impact": "If protocol enforces trustlessly: pure rope. If governance can override: system becomes tangled rope with potential for extraction by governing body.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether zero-sum is enforced by code or by governance discretion"
+    },
+    {
+      "id": "scalability_versus_trust",
+      "question": "As a LETS network grows beyond local trust circles, does the zero-sum constraint create inefficiencies (hoarding, credit unavailability) that extract value from growth-seeking participants?",
+      "resolution_mechanism": "Analysis of LETS performance metrics (velocity, coverage, failed trades) across different network sizes; identification of scaling thresholds where extraction dynamics emerge",
+      "impact": "If scaling preserves rope: system coordinates efficiently at all scales. If scaling introduces friction: system may become snare for growth-stage participants (high demand, constrained credit supply).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether zero-sum creates inefficiencies as network grows beyond local trust"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Ergo LETS is a trustless mutual credit system implemented as a protocol on the Ergo blockchain where the sum of all participant balances must always equal zero. This mathematical constraint \u2014 that credit issued by one participant is credit owed by another, with no external subsidy or fractional reserve \u2014 creates a pure coordination mechanism. The system solves the collective action problem of enabling exchange without intermediary institutions (banks, clearinghouses) while maintaining cryptographic accountability. The zero-sum rule is enforced by the protocol logic itself, not by governance discretion, making it technically immutable. The constraint classifies as Rope from all meaningful perspectives because it enables coordination without extraction: participants voluntarily join, can exit costlessly, and benefit equally from network liquidity. The analytical perspective reveals that the zero-sum property is not contingent but a logical necessity of double-entry accounting applied to a closed system.",
+    "key_agents": [
+      "Protocol Participants: Individual traders (moderate/mobile) \u2014 primary agents executing mutual credit exchanges; experience constraint as coordination enabling lower-friction trade",
+      "LETS Community Stewards: Regional operators (powerful/mobile) \u2014 manage network nodes and participant onboarding; benefit from network effects without extraction rents",
+      "Ergo Protocol Maintainers: Core developers (institutional/arbitrage) \u2014 maintain protocol infrastructure; experience constraint as enabling trustless coordination",
+      "Inactive Participants: Network members with minimal activity (moderate/constrained) \u2014 presence creates theatrical records without functional exchange; constrained exit due to social embedding",
+      "Analytical Observer: Civilizational auditor (analytical/analytical) \u2014 recognizes zero-sum balance as accounting identity, not institutional policy"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The zero-sum balance constraint prevents any participant or operator from extracting surplus value. Every unit of credit extended by one agent is a liability for another; no netting, subsidies, or external creation of value is possible. The modest non-zero extractiveness reflects only minor asymmetries: protocol maintainers derive modest network effects value, stewards gain reputation benefits, early adopters capture initial liquidity advantage. But these are coordination benefits, not extraction. Suppression (0.12): Low. Participants face minimal coercive barriers. Exit costs are low (stopping participation costs little), alternatives are available (other exchange systems, barter, fiat currency), and entry is open (no gatekeeping by design). Suppression reflects only minor friction: learning curve, initial lack of trading partners, psychological adjustment to no-interest credit. Theater ratio (0.25): Low. The protocol maintains high functional content: balances are tracked with cryptographic verification, every transaction affects the network state, inactive records accumulate theater but remain minority. Theater increases modestly over the interval as some participants join communities without sustained trading, creating statistical presence without active coordination.",
+    "perspectival_gap": "LETS presents unusual perspectival alignment: most agents experience the same constraint as pure coordination (Rope). The gap is not between beneficiary and victim, but between active and inactive participants. Active traders see coordination; inactive members see theater (their accounts persist but their economic function vanishes). The analytical perspective reveals that the zero-sum property is a mathematical fact, not a contingent institutional choice \u2014 this classification as Mountain at the universal scale is not a false summit but a genuine recognition that the constraint is immutable by definition. The small gap reflects that LETS solves a genuine coordination problem (credit availability, trust establishment) without introducing the extraction hierarchies that plague banking and fiat systems.",
+    "directionality_logic": "Directionality in LETS is nearly symmetric (d \u2248 0.50 for most participants) because the zero-sum structure prevents sustained advantage accumulation. A participant cannot be a pure beneficiary (extracting permanently) without counterparties accepting permanent deficit status \u2014 which they would not do voluntarily. Similarly, victims cannot be permanently victimized because the protocol ensures balanced obligation. Active traders experience d \u2248 0.45 (slight beneficiary status from network effects), operators experience d \u2248 0.40 (institutional benefit from stewardship), inactive participants experience d \u2248 0.55 (slight victim status from theatrical presence without function). These are all near-symmetric because the structural mechanism prevents the asymmetries that would produce extreme d values. The derived f(d) values therefore produce moderate \u03c7 across all perspectives, consistent with the Rope classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_settlement_finality",
+      "mutual_credit_trust_bootstrap"
+    ],
+    "dual_formulation_note": "Ergo LETS is downstream of blockchain scalability and settlement constraints (upstream) but represents a distinct layer: the protocol enforces the zero-sum rule, but the practical emergence of trust and liquidity depends on network effects. The present story focuses on the mathematical/protocol constraint; related stories analyze trust bootstrapping and settlement dynamics separately."
+  },
+  "directionality_overrides": []
+}

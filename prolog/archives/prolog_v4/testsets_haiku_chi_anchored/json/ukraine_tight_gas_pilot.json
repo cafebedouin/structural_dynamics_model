@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "ukraine_tight_gas_pilot",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "utg"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ukraine Tight Gas Pilot Project Framework",
+    "topic_domain": "economic/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "naftogaz_leadership",
+      "expert_petroleum_corp",
+      "ukrainian_government_energy_ministry"
+    ],
+    "victims": [
+      "competing_gas_companies",
+      "ukrainian_domestic_consumers",
+      "regional_environmental_stakeholders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Ukrainian Domestic Consumers",
+      "comment": "PERSPECTIVE 1: UKRAINIAN DOMESTIC CONSUMERS (SNARE) \u2014 Trapped by energy dependence and limited consumer choice. Exclusivity framework prevents competitive pricing; costs of pilot passed to consumers via tariff structures. No viable exit; dependent on state gas supply. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Regional Environmental Stakeholders",
+      "comment": "PERSPECTIVE 2: REGIONAL ENVIRONMENTAL STAKEHOLDERS (SNARE) \u2014 Bear costs of tight gas extraction (water contamination risk, induced seismicity, land access) with no participation in decision-making. No exit option; regulatory capture limits accountability. d\u22480.94, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.82."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Competing Ukrainian Gas Companies",
+      "comment": "PERSPECTIVE 3: COMPETING UKRAINIAN GAS COMPANIES (SNARE) \u2014 Locked out of tight gas pilot by exclusivity clauses. Organized but constrained by state preference for Naftogaz partnership. Can operate in non-pilot fields but face resource disadvantage. d\u22480.85, f(d)\u22481.22, \u03c3=1.0 \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Expert Petroleum Corporation",
+      "comment": "PERSPECTIVE 4: EXPERT PETROLEUM CORP (TANGLED ROPE) \u2014 Gains exclusive technical access and knowledge transfer; coordinates supply expertise with state actor. But also experiences constraints: Ukrainian regulatory uncertainty, geopolitical risk, limited arbitrage options if political situation shifts. Benefits from coordination role (knows unique reserve geology, technologies); pays costs of political exposure. d\u22480.52, f(d)\u22480.70, \u03c3=1.2 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Naftogaz Leadership and Energy Ministry",
+      "comment": "PERSPECTIVE 5: NAFTOGAZ LEADERSHIP & ENERGY MINISTRY (ROPE) \u2014 Primary beneficiary. Gains exclusive control over tight gas development, avoids competitive bidding, secures energy independence narrative, and positions as energy exporter. Experiences framework as coordination: organizing state resources, partnering with technical expert, solving technical problem. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Geopolitical Analyst",
+      "comment": "PERSPECTIVE 6: GEOPOLITICAL ANALYST (TANGLED ROPE) \u2014 Sees both coordination function (Ukraine genuinely needs technical expertise for complex reserves, partnership solves real technical problem) AND asymmetric extraction (exclusive framework creates rents, locks out competitors, shifts costs to consumers and environment). The coordination benefit (technical knowledge transfer, reserve development) is real; the extraction asymmetry (captured regulatory process, consumer cost-shifting) is also real. This is a genuine hybrid. d\u22480.70, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.74."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technical_necessity_vs_political_capture",
+      "question": "Is the exclusive partnership framework technically necessary (tight gas truly requires focused expertise and long-term commitment) or primarily a political capture mechanism (could open bidding access similar expertise)?",
+      "resolution_mechanism": "Comparative analysis: tight gas development outcomes in other countries (Poland, Romania) with competitive vs exclusive frameworks; technical assessments of whether knowledge transfer model requires single-partner exclusivity vs open competitive bidding.",
+      "impact": "If technically necessary: classification remains Tangled Rope (genuine coordination + extraction hybrid). If primarily political: all perspectives shift toward Snare (extraction mechanism masquerading as technical necessity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exclusivity is technically necessary or politically motivated"
+    },
+    {
+      "id": "environmental_cost_externalization",
+      "question": "Are environmental costs (water table contamination, induced seismicity, land use conflict) being accurately priced into pilot economics, or systematically externalized to uncompensated regional actors?",
+      "resolution_mechanism": "Independent environmental impact assessment; comparison of stated vs actual remediation costs in tight gas pilots elsewhere; analysis of compensation mechanisms (if any) available to affected communities.",
+      "impact": "If costs externalized: suppression metric should increase to 0.75+, elevating regional actors from Snare toward Snare-with-No-Recourse. If costs internalized: suppression decreases to 0.45-0.50, classification approaches Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether environmental costs are externalized or internalized"
+    },
+    {
+      "id": "geopolitical_constraint_collapse",
+      "question": "If Ukraine's geopolitical risk profile shifts (peace treaty, EU/NATO integration completion, or conversely, territorial loss), how would the exclusive partnership framework respond? Is the constraint robust to geopolitical shock?",
+      "resolution_mechanism": "Scenario analysis of partnership continuity under: (a) formal peace with Russia, (b) full NATO integration, (c) continued contested territory. Review of contract terms regarding force majeure, sovereignty triggers, and renegotiation clauses.",
+      "impact": "If framework collapses under geopolitical shift: structure is contingent (Scaffold with political sunset). If robust: structure is more entrenched (moves toward Snare permanence).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Robustness of partnership framework to geopolitical shifts"
+    },
+    {
+      "id": "consumer_tariff_pass_through",
+      "question": "What proportion of tight gas pilot costs are being passed to domestic consumers via tariff adjustments vs. absorbed by state budget or foreign investment?",
+      "resolution_mechanism": "Analysis of tariff change timeline vs pilot cost milestones; breakdown of pilot financing (state budget, international loans, corporate reinvestment); comparison of Ukrainian consumer tariffs vs regional peers.",
+      "impact": "If >60% passed to consumers: suppression increases to 0.70+, strengthens Snare classification for domestic consumers. If <20% passed: consumers see lower effective extraction, classification might move toward Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of pilot costs passed to consumers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "Ukraine's tight gas pilot project framework represents a partnership between Naftogaz (state-backed national gas company) and Expert Petroleum (foreign technical expert) to develop tight gas reserves previously considered inaccessible without advanced extraction technology. The framework exhibits a hybrid coordination-extraction structure: it solves a genuine technical problem (tight gas requires specialized knowledge and equipment), but it does so through an exclusionary mechanism that prevents competitive bidding, locks out domestic competitors, and shifts economic costs to domestic consumers and environmental stakeholders. The constraint is sustained by state preference for Naftogaz monopoly control, geopolitical urgency (energy independence narrative post-Russia relations), and regulatory capture of environmental oversight. This creates a Tangled Rope classification at the analytical level: the coordination function (transferring tight gas extraction expertise) is real and valuable; the asymmetric extraction (exclusive rents, consumer cost-shifting, environmental externality) is also real. From the perspective of domestic consumers and competing companies, the framework appears as a Snare \u2014 pure extraction with no offsetting coordination benefit.",
+    "key_agents": [
+      "Naftogaz Leadership & Ukrainian Energy Ministry: Primary beneficiary (institutional/arbitrage) \u2014 gains exclusive control, energy independence positioning, state revenue from exports",
+      "Expert Petroleum Corporation: Secondary beneficiary & coordinator (institutional/arbitrage) \u2014 gains exclusive technical access, knowledge transfer, regulatory predictability despite geopolitical risk",
+      "Ukrainian Domestic Consumers: Primary victim (powerless/trapped) \u2014 bear tariff costs, energy dependency, cannot exit or choose alternative suppliers",
+      "Competing Ukrainian Gas Companies: Secondary victim (organized/constrained) \u2014 locked out by exclusivity, resource-disadvantaged, can organize but face state preference",
+      "Regional Environmental Stakeholders: Tertiary victim (powerless/trapped) \u2014 bear extraction costs (water contamination, seismicity, land use conflict), no regulatory recourse, cannot exit",
+      "Geopolitical Analyst: Observer (analytical/analytical) \u2014 sees both genuine coordination function and asymmetric extraction; recognizes hybrid structure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated from initial assessment (0.38) as pilot operationalization reveals actual cost structures. The framework creates exclusive rents through regulatory capture and competitive exclusion. Tariffs are rising to fund pilot infrastructure, and competing companies face genuine resource disadvantage. However, the extractiveness is moderated from a pure Snare level (0.75+) because the coordination function is real \u2014 tight gas genuinely requires specialized technology and long-term commitment, and the partnership does transfer that expertise. The measure reflects both benefits (technical knowledge) and costs (exclusivity rents) weighted toward beneficiaries. Suppression (0.62): Significant. Multiple mechanisms suppress alternatives: (1) regulatory preference for Naftogaz exclusivity prevents competitive bidding, (2) environmental oversight is captured by energy ministry (weak independent regulation), (3) consumer choice is eliminated by monopoly structure, (4) competing companies face state barriers. But suppression is not maximal (0.80+) because some regulatory appeals exist (EU integration pressure, international environmental standards) and the pilot has sunset logic implicitly (if successful, may transition to normal operations; if failed, may be abandoned). Theater ratio (0.65): Moderate-high. Significant performative content includes: energy independence narrative framing (masks state rent-capture); environmental 'due diligence' processes (weak oversight); technical necessity justification (overstates exclusivity requirement). But actual technical coordination is occurring (not pure theater); thus 0.65 rather than 0.80+.",
+    "perspectival_gap": "This constraint shows maximum perspectival gap. Naftogaz leadership sees Rope (coordination benefit of technical expertise). Expert Petroleum sees Tangled Rope (genuine technical partnership mixed with geopolitical risk). Competing companies see Snare (locked out, disadvantaged, no compensation). Domestic consumers see Snare (tariff costs, no alternative supplier, no exit). Environmental stakeholders see Snare-with-No-Recourse (externalized costs, regulatory capture, no voice in decision-making). The analytical observer sees Tangled Rope (real coordination function, real asymmetric extraction, both structural features). The gap exists because the exclusivity mechanism creates a radially asymmetric distribution of benefits and costs \u2014 beneficiaries experience genuine coordination value; victims experience pure extraction cost-shifting.",
+    "directionality_logic": "Naftogaz & Ministry: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Positive arbitrage (can exit by renegotiating or terminating partnership, maintains state control option). Net beneficiary. Expert Petroleum: Mixed beneficiary + constrained arbitrage \u2192 d\u22480.52, f(d)\u22480.70. Gains exclusive access but faces geopolitical risk that narrows arbitrage options. Partial beneficiary with extraction cost. Competing companies: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.22. Locked out of pilot, face state barriers, organized but cannot exit nationally. Significant extraction relative to organized status. Domestic consumers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Bear tariff costs with no alternative supplier choice. Maximum extraction for powerless status. Environmental stakeholders: Victim + trapped \u2192 d\u22480.94, f(d)\u22481.40. Bear externalized costs with no participation in decision-making. Maximum extraction; less organized than consumers.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The tangled_rope classification at the analytical level resolves the mandatrophy by acknowledging that the framework has a real coordination function (tight gas expertise transfer) AND real asymmetric extraction (exclusive rents, cost-shifting to consumers and environment). This is not a false summit or a mislabeled Snare \u2014 the coordination is genuine, as evidenced by the technical complexity requiring expert input and the knowledge transfer occurring through the partnership. The extraction is also genuine, as evidenced by competitive exclusion, tariff increases, and environmental externalization. The mandatrophy is resolved by recognizing that Tangled Rope is the correct classification when both elements are structurally present. The beneficiary and victim perspectives differ because they measure the constraint from structurally different positions: beneficiaries see the coordination benefit clearly (they designed it to capture that benefit); victims see the extraction asymmetry clearly (they bear the costs). Both perspectives are correct; the tangled_rope classification unifies them by acknowledging that the constraint is genuinely hybrid, not mislabeled."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "russian_gas_leverage",
+      "european_energy_market_integration",
+      "ukrainian_energy_security"
+    ],
+    "dual_formulation_note": "The tight gas pilot framework is downstream of broader energy independence strategy but represents a distinct structural constraint. The coordination function (technical expertise transfer) is genuine; the extraction asymmetry (exclusive rents) is also genuine. Alternative formulations that emphasize only coordination (pure Rope) or only extraction (pure Snare) fail to capture the hybrid structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    }
+  ]
+}

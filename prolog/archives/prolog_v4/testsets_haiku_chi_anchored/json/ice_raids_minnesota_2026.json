@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "ice_raids_minnesota_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ice_raids"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "Large-Scale Pre-Announced ICE Raids as a Deportation Mechanism",
+    "topic_domain": "political/social/immigration_enforcement",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ice_institutional_apparatus",
+      "anti_immigration_constituencies"
+    ],
+    "victims": [
+      "undocumented_immigrants",
+      "mixed_status_families",
+      "immigrant_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Undocumented Immigrant",
+      "comment": "PERSPECTIVE 1: UNDOCUMENTED IMMIGRANT (SNARE) \u2014 Zero exit options. Pre-announcement creates coordinated trap: communities cannot leave (family ties, economic dependency, geographic constraint), cannot hide (raids target workplaces and residences systematically), cannot appeal (legal process is designed to accelerate deportation). d\u22480.98, f(d)\u22481.47, \u03c3=1.0 \u2192 \u03c7\u22481.00. Maximum extraction from the most vulnerable agent."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mixed-Status Family",
+      "comment": "PERSPECTIVE 2: MIXED-STATUS FAMILY (SNARE) \u2014 Constrained exit: some family members have legal status, some do not. Pre-announcement forces impossible choices (separate voluntarily or be separated by force). Financial dependence on undocumented wage-earner creates vulnerability. Constrained mobility due to childcare, property, employment. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.90. Severe extraction with element of false choice (appear voluntary)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Immigrant Advocacy Coalition",
+      "comment": "PERSPECTIVE 3: IMMIGRANT ADVOCACY COALITION (TANGLED ROPE) \u2014 Organized agents (legal organizations, community groups, churches) experience hybrid constraint. Coordination function: provides bail assistance, legal support, family reunification services. Extraction function: raided communities become dependent on advocacy infrastructure; organizations gain legitimacy and fundraising power from crisis response. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.51. Mixed extraction and coordination; beneficiaries from organizing victims."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The ICE Institutional Apparatus",
+      "comment": "PERSPECTIVE 4: ICE INSTITUTIONAL APPARATUS (ROPE) \u2014 Benefits from pre-announcement mechanism: coordinated operations enable efficient detention capacity planning, media attention, enforcement metrics reporting. Experiences constraint as coordination mechanism for deploying resources (raids must be synchronized with detention capacity, legal processing, transportation). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary; negative extraction indicates structural advantage."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Immigrant Community (Aggregate)",
+      "comment": "PERSPECTIVE 5: IMMIGRANT COMMUNITY AGGREGATE (SNARE) \u2014 Collective agent experiences terror mechanism: pre-announcement paralyzes entire communities; workplace absenteeism spikes; children don't attend school; healthcare access collapses (fear of encountering authorities); community economic function degrades. Suppression through psychological extraction (fear of arrest without committing crime). d\u22480.96, f(d)\u22481.45, \u03c3=0.9 \u2192 \u03c7\u22480.93. Extraction not through formal process but through ambient threat environment."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Immigration Enforcement Legal Framework",
+      "comment": "PERSPECTIVE 6: IMMIGRATION ENFORCEMENT LEGAL FRAMEWORK (PITON) \u2014 Pre-announcement raids persist as degraded mechanism. Original function: target criminal aliens (asylum/felony distinction). Current function: mass extraction of civil immigration violators (employer-based visa overstays, family reunification queue wait times). Theater ratio (0.64) reflects performative elements: public announcements serve messaging rather than operational efficiency (surprise would be operationally superior); detention queue theater (processing theaters for rapid adjudication); deportation ceremony theater (staged to demonstrate enforcement commitment). Mechanism persists through institutional inertia despite questioned effectiveness at criminal targeting."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Sovereign Authority View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SOVEREIGN AUTHORITY VIEW (MOUNTAIN) \u2014 Observes pre-announcement raids as immutable expression of state sovereignty over borders. From civilizational/universal perspective, some mechanism of immigration enforcement is inherent to nation-state structure itself. This perspective risks naturalizing what is actually a contingent policy choice (pre-announcement timing, raid intensity, family separation protocols are policy parameters, not laws of nature). Engine will compute false summit based on structural data: \u03b5=0.68, suppression=0.78 contradict mountain classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deterrent_vs_extraction_threshold",
+      "question": "At what point does the threat environment from pre-announcement raids transition from deterrent (making deportation risk salient) to pure extraction (terrorizing entire communities regardless of legal status)?",
+      "resolution_mechanism": "Epidemiological data on health outcomes, school attendance, emergency room visits, suicide ideation in target communities; qualitative interviews with mixed-status households; comparison with low-announcement enforcement regions",
+      "impact": "If threshold < 6 months post-announcement: raids are extraction mechanism (Snare classification confirmed). If threshold > 18 months: deterrent logic has real effect and classification might shift toward Tangled Rope (coordination + extraction). If no threshold exists: psychological extraction is baseline, not threshold-dependent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transition point between deterrent effect and pure psychological extraction"
+    },
+    {
+      "id": "pre_announcement_operational_necessity",
+      "question": "Is pre-announcement operationally necessary for ICE enforcement capacity (detention capacity planning, legal processing, transportation coordination) or is it primarily a messaging mechanism?",
+      "resolution_mechanism": "Operational data: comparison of detention facility utilization rates in pre-announced vs unannounced raids; processing time per detainee; deportation completion rates; fugitive apprehension rates (do announced raids catch more targets or fewer?).",
+      "impact": "If necessary: pre-announcement serves coordination function (Rope). If not necessary: pre-announcement is performative signaling (Piton degradation). If operationally harmful: pre-announcement is pure suppression theater (Snare element amplified).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether pre-announcement serves operational necessity or is purely performative"
+    },
+    {
+      "id": "family_separation_scope_measurement",
+      "question": "How many U.S. citizen children are separated from deported parents per enforcement cycle, and how does this compare to stated policy intent of targeting criminal aliens?",
+      "resolution_mechanism": "Census data on children in deportee households; family structure tracking post-raid; longitudinal outcomes (school performance, foster system entry); comparison with policy statements about targeting criminal aliens",
+      "impact": "If separation rate > 40% of raids: mechanism has shifted from criminal targeting (Mountain/Rope) to family extraction (Snare). Indicates institutional mission creep where enforcement apparatus is capturing beyond stated legal mandate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scope of family separation relative to stated policy intent"
+    },
+    {
+      "id": "alternative_enforcement_effectiveness",
+      "question": "Would targeted, unannounced enforcement focused on specific criminal deportation priorities be more effective at immigration control than mass pre-announced raids affecting entire communities?",
+      "resolution_mechanism": "Comparison jurisdictions with different enforcement strategies; deportation rates per law enforcement hour; recidivism rates; criminal alien removal effectiveness; community cooperation rates with law enforcement",
+      "impact": "If targeted approach is more effective: pre-announcement is pure theater/extraction (Piton/Snare). If comparable effectiveness: pre-announcement may be policy choice for messaging. If less effective: pre-announcement is necessary for stated goal but still serves extraction function (ambiguous, supports Tangled Rope classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness comparison between announced mass raids and targeted enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Large-scale, pre-announced ICE raids create a structural constraint that operates simultaneously as immigration enforcement policy and as a mechanism of psychological and economic extraction from immigrant communities. The constraint combines elements of coercive state authority (legitimate immigration enforcement mandate), institutional performance (media announcements, detention metrics), and community terror (affecting mixed-status families and entire neighborhoods regardless of legal status). The pre-announcement mechanism creates a temporal window for community panic before enforcement, distinguishing this constraint from unannounced enforcement. Undocumented immigrants and mixed-status families experience maximum extraction with zero exit options; advocacy coalitions experience hybrid coordination-extraction relationships; the ICE institutional apparatus experiences a coordination mechanism that enables resource planning; and the legal framework risks naturalizing what are policy choices as immutable sovereign authority. The theater ratio has increased over the measurement interval as enforcement has become increasingly symbolic and media-coordinated. Base extractiveness has increased as raids have expanded beyond stated criminal alien targeting to broader economic deportations, capturing workers and family members rather than criminals.",
+    "key_agents": [
+      "Undocumented Immigrants: Primary victim (powerless/trapped) \u2014 zero exit options, maximum extraction, directly targeted by raid mechanism",
+      "Mixed-Status Families: Secondary victim (moderate/constrained) \u2014 forced choice between family separation or voluntary departure; economically dependent on undocumented members",
+      "Immigrant Communities (Aggregate): Tertiary victim (moderate/trapped) \u2014 collective paralysis from threat environment; economic function disruption beyond directly targeted individuals",
+      "ICE Institutional Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 coordinates enforcement operations; benefits from detention capacity utilization and enforcement metrics",
+      "Anti-Immigration Constituencies: Secondary beneficiary (moderate/mobile) \u2014 gain political satisfaction from enforcement visibility and media attention; can exit/engage flexibly",
+      "Immigrant Advocacy Coalition: Institutional actor (organized/mobile) \u2014 provides coordination services (bail, legal support) and gains legitimacy/fundraising from crisis response; hybrid beneficiary-victim position",
+      "Immigration Enforcement Legal Framework: Institutional actor (institutional/arbitrage) \u2014 maintains pre-announcement mechanism through institutional inertia; sees degraded targeting (original criminal alien focus vs. civil immigration violations)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy choices as inherent sovereign authority"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The mechanism extracts in multiple dimensions: (1) direct extraction through deportation (removal of earning member from household; disruption of family structure); (2) economic extraction through workplace fear (wage suppression, voluntary departure at depressed wages, job loss from workplace raids); (3) psychological extraction through terror environment (community paralysis, health impacts, school avoidance); (4) institutional extraction (detention fees, legal processing, forced recruitment of advocacy infrastructure). The value of 0.68 reflects that extraction is severe but not total \u2014 many undocumented immigrants remain after raids, some receive legal protection, some evade enforcement. Suppression (0.78): High. Multiple suppression mechanisms: (1) no legal status = no immigration court access for asylum/protection claims in many cases; (2) pre-announcement creates coordinated trap (cannot flee, cannot hide, cannot legally appeal in meaningful timeframe); (3) workplace raids specifically suppress labor organizing and wage negotiation (workers cannot report labor violations without deportation risk); (4) knowledge of raid threat suppresses healthcare access, school attendance, community reporting to police. Suppression is not absolute (underground economy continues, some migrate to sanctuary jurisdictions) but is severe. Theater ratio (0.64): Moderate-high. Pre-announcement mechanism contains significant performative elements: (1) media announcements serve political messaging rather than operational surprise; (2) detention processing includes ceremonial adjudication (rapid removal theater); (3) public deportation ceremonies serve symbolic function of enforcement commitment; (4) enforcement metrics reporting emphasizes numbers removed rather than criminal targeting effectiveness. However, enforcement process also has real legal and operational components (detention, processing, deportation are functional, not purely performative), preventing theater ratio from reaching piton threshold (\u22650.70). The upward trajectory over the measurement interval indicates increasing performative content as policy has become more politically salient.",
+    "perspectival_gap": "This constraint demonstrates a severe perspectival divergence across the power spectrum. Undocumented immigrants and mixed-status families see pure extraction (Snare) \u2014 they have no agency in the process and no legitimate alternative. Advocacy coalitions see mixed coordination-extraction (Tangled Rope) \u2014 they benefit from crisis response but also enable continued community vulnerability. The ICE apparatus sees coordination (Rope) \u2014 the enforcement mechanism enables efficient resource deployment and operational planning. Anti-immigration constituencies see enforcement (Rope or Mountain depending on whether they naturalize it) \u2014 the public announcements coordinate political messaging and satisfy symbolic enforcement demand. The aggregate immigrant community experiences collective Snare \u2014 not from individual targeting but from ambient threat environment that affects everyone regardless of legal status. The legal framework sees institutional persistence through inertia (Piton) \u2014 original criminal alien mandate has shifted to civil immigration enforcement, and pre-announcement mechanism persists because it satisfies political constituencies rather than operational necessity. The analytical observer risks seeing Mountain (immutable sovereign authority) but the structural data reveals this as false naturalization of policy choices.",
+    "directionality_logic": "Undocumented immigrants: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.47. Maximum extraction. Mixed-status families: Victim + constrained \u2192 d\u22480.92, f(d)\u22481.38. Severe extraction with false choice. Immigrant advocacy coalitions: Both beneficiary (from crisis response) and victim (enabling continued vulnerability) + mobile \u2192 d\u22480.55, f(d)\u22480.75. Hybrid position reflects organized capacity to act despite being partially captured by extraction mechanism. ICE institutional apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; pre-announcement mechanism coordinates enforcement operations. Anti-immigration constituencies: Beneficiary + mobile \u2192 d\u22480.20, f(d)\u22480.05. Low effective extraction; constituencies can engage or disengage flexibly, benefit from political messaging. Immigrant communities aggregate: Victim + trapped \u2192 d\u22480.96, f(d)\u22481.45. Nearly maximum extraction through ambient threat environment affecting entire communities. Immigration enforcement legal framework: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Piton classification comes from theater ratio gate (0.64) and institutional inertia, not from high chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival false summit.",
+    "mandatrophy_analysis": "RESOLUTION THROUGH INSTITUTIONAL MISSION CREEP: The mandatrophy in this constraint centers on whether pre-announcement raids represent legitimate enforcement coordination or pure extraction theater. The resolution lies in empirical measurement of the constraint's stated vs. actual function. Stated function (from policy documents and enforcement rhetoric): target criminal aliens subject to deportation due to serious crimes. Actual function (from outcome data): capture and deport civil immigration violators (overstayed visas, family reunification queue delays) who are economically productive and legally non-criminal. The shift from stated to actual function indicates institutional mission creep \u2014 the pre-announcement mechanism was justified as enabling efficient targeting of criminal deportation priorities, but has become a mass extraction mechanism capturing far beyond the original mandate. This resolution moves the classification away from legitimate enforcement (Rope/Scaffold) and toward pure extraction (Snare). The theater ratio increase over the measurement interval (0.38\u21920.64) reflects increasing performative content as political messaging has overtaken operational efficiency as the primary function of pre-announcement. The baseline extractiveness increase (0.48\u21920.68) reflects widening capture scope beyond stated criminal alien target. Combined, these indicate that the constraint is accurately classified as Snare from victim perspectives and Piton from institutional perspective \u2014 the mechanism persists through political performance and institutional inertia, not through legitimate enforcement necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "workplace_deportation_vulnerability",
+      "mixed_status_family_structure",
+      "immigrant_community_health_outcomes"
+    ],
+    "dual_formulation_note": "Pre-announced raids represent a distinct constraint from immigration enforcement generally. Unannounced, targeted enforcement focused on criminal deportation priorities would have substantially different \u03b5 values (lower extractiveness, lower suppression, higher theater ratio due to reduced performative messaging). The pre-announcement mechanism is the specific constraint generating severe extraction from immigrant communities; the underlying immigration enforcement authority is the upstream constraint with different structural properties."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.72
+    }
+  ]
+}

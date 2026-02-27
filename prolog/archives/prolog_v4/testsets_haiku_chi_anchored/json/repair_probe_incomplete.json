@@ -1,0 +1,132 @@
+{
+  "header": {
+    "constraint_id": "repair_probe_incomplete",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "repair"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Data Repair Bridge Probe (Deliberately Incomplete)",
+    "topic_domain": "investigation/testing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "testing_framework"
+    ],
+    "victims": [
+      "data_integrity_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Data Integrity Commons",
+      "comment": "PERSPECTIVE 1: DATA INTEGRITY COMMONS (SNARE) \u2014 Cannot exit incomplete probe states; bears full cost of bridge path failures. No self-correction mechanism. d\u22480.95, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.51."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Testing Framework",
+      "comment": "PERSPECTIVE 2: TESTING FRAMEWORK (ROPE) \u2014 Experiences incomplete probe as coordination mechanism for isolating bridge path behavior. Benefits from diagnostic capability. d\u22480.10, f(d)\u22480.02, \u03c3=0.8 \u2192 \u03c7\u22480.003. Effective arbitrage position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees both the intentional incompleteness (coordination function: diagnostic isolation) and the extraction cost (data_repair.pl bridge paths remain unvalidated). d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.53."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bridge_path_completeness",
+      "question": "Does the deliberately incomplete probe state expose all necessary bridge path behavior, or do hidden branches remain untested?",
+      "resolution_mechanism": "Code coverage analysis of data_repair.pl bridge clauses; execution trace comparison against complete state specifications",
+      "impact": "If complete: diagnostic isolation works as intended (Rope). If incomplete: critical failure paths remain untested (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incomplete probe state covers all bridge paths"
+    },
+    {
+      "id": "intentional_degradation_scope",
+      "question": "Is the incompleteness truly intentional (for diagnostic isolation) or accidental (unfinished implementation)?",
+      "resolution_mechanism": "Code review, commit history, design documentation; comparison with test plan coverage matrix",
+      "impact": "If intentional: classification is Tangled Rope (coordination + enforcement). If accidental: classification degrades to Snare (pure extraction without coordination value).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether incompleteness is intentional diagnostic strategy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Data Repair Bridge Probe is a deliberately incomplete testset designed to trigger data_repair.pl bridge paths and validate their behavior under partial state specifications. The constraint exhibits tension between the diagnostic value of incomplete probe states (isolating specific bridge behavior) and the epistemic risk of leaving untested paths. The incompleteness is intentional \u2014 designed to force the data_repair system to handle gaps and interpolate missing state data \u2014 but this intentionality masks an extraction cost: unvalidated bridge paths remain untested, and the data integrity commons bears the cost of potential failures. The constraint's theater_ratio (0.55) reflects moderate performativity in the diagnostic process \u2014 the probe state looks like a complete test but is deliberately crippled, creating a gap between testing appearance and actual coverage.",
+    "key_agents": [
+      "Testing Framework: Primary beneficiary (institutional/arbitrage) \u2014 gains diagnostic capability and bridge path isolation without maintaining complete state specifications",
+      "Data Integrity Commons: Primary victim (powerless/trapped) \u2014 bears cost of untested bridge paths and incomplete probe coverage",
+      "Analytical Observer: Observes structure (analytical/analytical) \u2014 assesses whether incomplete probe is intentional coordination or accidental extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The incompleteness is partly intentional (diagnostic value) but creates unvalidated paths. The testing framework benefits from simplified probe states while the integrity commons bears hidden risks. Suppression (0.42): Moderate. No explicit prohibition against complete probes, but resource constraints and intentional design choices suppress comprehensive testing. Theater ratio (0.55): Moderate-high. Incomplete probes appear to be valid tests but deliberately omit coverage, creating performative testing appearance.",
+    "perspectival_gap": "The testing framework sees coordination \u2014 a mechanism for isolating bridge behavior. The data integrity commons sees extraction \u2014 untested paths that could fail. The analytical observer sees both: intentional incompleteness is coordination if it successfully isolates critical behavior; it is extraction if it leaves critical paths unvalidated.",
+    "directionality_logic": "Testing framework: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Net beneficiary. Data integrity commons: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Observes both coordination and extraction functions.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing intentional diagnostic incompleteness (coordination/tangled rope) from accidental coverage gaps (extraction/snare). The key discriminant is whether the incompleteness was designed to isolate bridge behavior or merely failed to complete implementation. If intentional, the constraint is Tangled Rope (coordination function + enforcement requirements). If accidental, it degrades to Snare (pure extraction without coordination value). The omegas capture this distinction: resolution of omega_intentional_degradation_scope determines final classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "data_repair_bridge_execution",
+      "incomplete_state_specification"
+    ],
+    "dual_formulation_note": "This probe is a deliberate testset component, not an independent constraint. It represents the interaction between incomplete state specifications and data_repair bridge path execution. The upstream constraints are the bridge clauses themselves; this probe tests their behavior under partial state conditions."
+  },
+  "directionality_overrides": []
+}

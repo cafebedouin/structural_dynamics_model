@@ -1,0 +1,170 @@
+{
+  "header": {
+    "constraint_id": "rent_seeking_equilibrium",
+    "version": "1.1",
+    "generated_date": "2024-01-09",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Toll-Bridge Stagnation",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rent_seeking_firms",
+      "captured_regulators"
+    ],
+    "victims": [
+      "consumers",
+      "innovative_startups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Consumers",
+      "comment": "The consumers are trapped within the system, bearing the costs of reduced innovation and higher prices due to rent-seeking. They lack the power and resources to effectively challenge the established rent-seeking equilibrium."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Captured Regulators",
+      "comment": "Captured regulators benefit from the system through career advancement, lobbying connections, and revolving door opportunities. However, they are also constrained by their official duties and the need to maintain a semblance of public interest. This perspective reflects a tangled rope, where there is a mix of benefit and constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legal System",
+      "comment": "The legal system may be initially designed to protect property rights and promote competition. Over time, however, loopholes and regulatory capture lead to it becoming a tool for rent-seeking. The system persists, but its original function is degraded."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Rent-Seeking Firms",
+      "comment": "Rent-seeking firms actively engage in lobbying and regulatory capture to secure preferential treatment and extract rents. They are powerful actors with the ability to influence policy and regulations. They benefit from the system while also facing constraints due to competition from other rent-seekers."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Innovative Startups",
+      "comment": "Innovative startups face significant barriers to entry due to the rent-seeking equilibrium. They are constrained by regulations that favor incumbents and lack the resources to compete effectively. They are victims of the system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees a tangled rope: some coordination is required to maintain the rules of the game, but there is asymmetric extraction by powerful firms at the expense of the general public and innovative startups."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regulatory_capture_degree",
+      "question": "To what extent are regulators captured by the industries they regulate?",
+      "resolution_mechanism": "Analysis of lobbying expenditures, revolving door appointments, and regulatory outcomes.",
+      "impact": "If regulatory capture is high, the rent-seeking equilibrium is more entrenched. If low, there is greater potential for reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of regulatory capture"
+    },
+    {
+      "id": "political_influence_channels",
+      "question": "What are the primary channels through which rent-seekers exert political influence?",
+      "resolution_mechanism": "Network analysis of political donations, lobbying contacts, and legislative voting patterns.",
+      "impact": "Understanding the channels of influence allows for targeted interventions to reduce rent-seeking.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Channels of political influence"
+    },
+    {
+      "id": "policy_reform_feasibility",
+      "question": "What is the feasibility of policy reforms to reduce rent-seeking?",
+      "resolution_mechanism": "Political feasibility analysis, considering the interests of various stakeholders and potential opposition.",
+      "impact": "Assesses the potential for breaking the rent-seeking equilibrium through policy change.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Feasibility of policy reform"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Toll-Bridge Stagnation describes a scenario where economic agents invest more resources in capturing existing wealth through political or legal influence (rent-seeking) than in creating new value. This can lead to reduced innovation, higher prices, and slower economic growth. Established firms often benefit from regulations that create barriers to entry, while the general public and innovative startups bear the costs.",
+    "key_agents": [
+      "Consumers: Primary victim (powerless/trapped) - bears the costs of reduced innovation and higher prices.",
+      "Rent-Seeking Firms: Primary beneficiary (powerful/arbitrage) - benefits from preferential treatment and extracted rents.",
+      "Captured Regulators: Secondary beneficiary (institutional/constrained) - benefits from career advancement and revolving door opportunities.",
+      "Innovative Startups: Secondary victim (moderate/constrained) - face barriers to entry and lack resources to compete effectively.",
+      "Legal System: Degraded enforcer (institutional/constrained) - original function degraded by regulatory capture.",
+      "Analytical Observer: Neutral observer (analytical/analytical) - sees the structural dynamics of rent-seeking."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High, reflecting significant wealth transfer from the consumers and startups to rent-seeking firms. Suppression (0.70): High, indicating significant barriers to entry and limited competition. Theater Ratio (0.75): High, suggesting increased performative activity masking the underlying extraction. The system extracts real economic value and delivers it to the beneficiaries of the rent-seeking.",
+    "perspectival_gap": "The consumers experience a snare, bearing the costs of the system with limited power to change it. Rent-seeking firms see a tangled rope, benefiting from their activities while also facing competition from other rent-seekers. Captured regulators experience a tangled rope, benefiting from the system while constrained by their public duties. Innovative startups face a snare, encountering barriers to entry and limited opportunities to compete. The analytical observer sees the mixed coordination (establishing rules) and asymmetric extraction (benefit concentrated on a few) which is a defining characteristic of a tangled rope.",
+    "directionality_logic": "Beneficiaries (rent-seeking firms and captured regulators) gain advantages and capture resources. Victims (consumers and innovative startups) bear the cost of the system and are disadvantaged by it. The directionality flows towards those who invest in rent-seeking and away from those who contribute to value creation. The relatively high theater ratio indicates the system is actively enforced, but the enforcement is largely performative."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "lobbying_influence"
+    ]
+  },
+  "directionality_overrides": []
+}

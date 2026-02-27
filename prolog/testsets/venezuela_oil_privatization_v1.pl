@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: venezuela_oil_privatization_v1
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-22
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_venezuela_oil_privatization_v1, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,24 +53,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: venezuela_oil_privatization_v1
- *   human_readable: "Shadow Privatization of Venezuela's Oil Sector"
+ *   human_readable: Shadow Privatization of Venezuela's Oil Sector
  *   domain: geopolitical/economic
  *
  * SUMMARY:
- *   In response to crippling U.S. sanctions and internal mismanagement, the
- *   Venezuelan government under President Maduro has initiated a covert,
- *   extra-legal privatization of the state oil company, PDVSA. National
- *   assets are being transferred to small, often unknown, private local and
- *   foreign firms without public oversight or a legal framework. This allows
- *   oil production to continue, providing the state with revenue, but does so
- *   through opaque deals that extract long-term national wealth for the
- *   benefit of connected elites and private operators.
+ *   Venezuela's oil sector has undergone structural inversion from
+ *   state-managed public resource to shadow privatization network. Responding
+ *   to crippling U.S. sanctions (2017-present) and collapsing formal
+ *   institutions, the regime shifted from centralized extraction through
+ *   PDVSA to decentralized networks where military factions, foreign trading
+ *   firms, and sanctions-evading intermediaries extract crude and sell it on
+ *   global markets outside official channels. The state captures no revenue;
+ *   ordinary citizens face fuel rationing despite living atop 300+ billion
+ *   barrels of proven reserves; PDVSA employees watch crude they extract flow
+ *   to parallel networks controlled by military competitors. This constraint
+ *   exhibits snare characteristics from the perspective of trapped citizens
+ *   and workers, tangled rope dynamics from military and foreign firms (who
+ *   both benefit and face coercive constraints), and piton characteristics
+ *   from the degraded official institutions that maintain performative
+ *   control while real extraction happens elsewhere. The growth in
+ *   theater_ratio from 0.42 to 0.65 reflects the increasing gap between
+ *   regime claims of state control and the actual privatized extraction
+ *   happening outside official channels. The extractiveness rise from 0.32 to
+ *   0.58 reflects how sanctions and institutional collapse have intensified
+ *   the parasitic extraction mechanism — more crude is produced and sold, but
+ *   less reaches legitimate state use.
  *
- * KEY AGENTS (by structural relationship):
- *   - Venezuelan Public & PDVSA Workers: Primary target (powerless/trapped) — bears the cost of lost national patrimony and precarious labor conditions.
- *   - New Private Operators: Primary beneficiary (powerful/arbitrage) — gain control of valuable assets at low cost with minimal oversight.
- *   - Maduro Government Officials: Secondary beneficiary (institutional/constrained) — maintain power and revenue streams by offloading operational risk, but are constrained by sanctions.
- *   - Analytical Observer: Sees the full structure of coordination coupled with extraction.
+ * KEY AGENTS:
+ *   - Venezuelan ordinary citizens: Primary victim (powerless/trapped) — face fuel rationing despite living on oil reserves; dependent on regime distribution networks with no alternatives
+ *   - PDVSA workers and oil field operators: Secondary victim (moderate/constrained) — produce crude that disappears into parallel channels; wages collapse, workplace degrades, zero revenue benefit
+ *   - Military factions and security services: Primary beneficiary (organized/constrained) — control fuel distribution, operate parallel trading networks, capture rents from shadow extraction; benefit but constrained by sanctions and regime fragility
+ *   - Foreign oil trading firms and extraction companies: Secondary beneficiary (institutional/arbitrage) — purchase crude at discounted rates through sanctions-evading channels, refine or resell at global market prices, capture arbitrage spreads; high exit options
+ *   - U.S./coalition sanctions regime: Coercive actor (powerful/mobile) — imposes sanctions architecture that redirects oil flows toward shadow networks; exhibits both coordination (allied enforcement) and extraction (humanitarian costs)
+ *   - Official PDVSA and regime government: Degraded institution (institutional/arbitrage) — maintains performative control fiction; actual extraction and distribution delegated to military networks; theater ratio increases as gap between claims and reality widens
  */
 
 /* ==========================================================================
@@ -79,86 +93,78 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(venezuela_oil_privatization_v1, 0.75).
-domain_priors:suppression_score(venezuela_oil_privatization_v1, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(venezuela_oil_privatization_v1, 0.40).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(venezuela_oil_privatization_v1, 0.58).
+domain_priors:suppression_score(venezuela_oil_privatization_v1, 0.72).
+domain_priors:theater_ratio(venezuela_oil_privatization_v1, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(venezuela_oil_privatization_v1, extractiveness, 0.75).
-narrative_ontology:constraint_metric(venezuela_oil_privatization_v1, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(venezuela_oil_privatization_v1, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(venezuela_oil_privatization_v1, extractiveness, 0.58).
+narrative_ontology:constraint_metric(venezuela_oil_privatization_v1, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(venezuela_oil_privatization_v1, theater_ratio, 0.65).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(venezuela_oil_privatization_v1, snare).
 narrative_ontology:human_readable(venezuela_oil_privatization_v1, "Shadow Privatization of Venezuela's Oil Sector").
 narrative_ontology:topic_domain(venezuela_oil_privatization_v1, "geopolitical/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(venezuela_oil_privatization_v1). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(venezuela_oil_privatization_v1).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(venezuela_oil_privatization_v1, new_private_operators).
-narrative_ontology:constraint_beneficiary(venezuela_oil_privatization_v1, maduro_government_officials).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(venezuela_oil_privatization_v1, venezuelan_public).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(venezuela_oil_privatization_v1, foreign_extraction_firms).
+narrative_ontology:constraint_beneficiary(venezuela_oil_privatization_v1, regime_military_factions).
+narrative_ontology:constraint_beneficiary(venezuela_oil_privatization_v1, sanctions_evading_networks).
+narrative_ontology:constraint_victim(venezuela_oil_privatization_v1, venezuelan_state_revenue).
+narrative_ontology:constraint_victim(venezuela_oil_privatization_v1, ordinary_citizens).
 narrative_ontology:constraint_victim(venezuela_oil_privatization_v1, pdvsa_workers).
+narrative_ontology:constraint_victim(venezuela_oil_privatization_v1, fuel_access).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE VENEZUELAN PUBLIC (PRIMARY TARGET)
-% As trapped victims, the engine derives a high d (≈0.95), leading to a high
-% f(d) (≈1.42). This amplifies the already high base extraction (ε=0.75),
-% resulting in a clear Snare classification. They experience the loss of
-% national wealth with no recourse.
+% PERSPECTIVE 1: VENEZUELAN ORDINARY CITIZEN (SNARE) — Trapped in the collapsing economy. Cannot exit the fuel rationing, inflation spiral, or dependence on government distribution. Bears the full extraction cost — starved of gasoline in the world's most oil-rich nation, dependent on military-controlled distribution networks, with zero alternatives. Maximum experienced extraction: cannot organize, cannot exit, cannot escape the system's extraction logic.
 constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, snare,
     context(agent_power(powerless),
-            time_horizon(generational),
+            time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: NEW PRIVATE OPERATORS (PRIMARY BENEFICIARY)
-% As beneficiaries with arbitrage exit options, the engine derives a very
-% low d (≈0.05), leading to a negative f(d) (≈-0.12). This makes the effective
-% extraction (χ) negative. They perceive a highly efficient coordination
-% mechanism (Rope) that unlocks immense value for them.
-constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, rope,
-    context(agent_power(powerful),
+% PERSPECTIVE 2: PDVSA WORKERS AND FIELD OPERATORS (SNARE) — Organized as a workforce but constrained by capital control, salary confiscation, and the absence of alternative employment. The shadow privatization extraction bypasses them — they extract crude but see zero benefit as state revenues disappear into parallel financial channels. Constrained exit (immigration possible but costly); high experienced extraction (wages worthless, workplace degrading, no control over resource they produce).
+constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, snare,
+    context(agent_power(moderate),
             time_horizon(biographical),
-            exit_options(arbitrage),
-            spatial_scope(global))).
+            exit_options(constrained),
+            spatial_scope(national))).
 
-% PERSPECTIVE 3: THE MADURO GOVERNMENT (INTER-INSTITUTIONAL BENEFICIARY)
-% As institutional beneficiaries, but with constrained exit due to sanctions,
-% their derived d is low but higher than the private operators'. For them, this is a
-% necessary Rope that solves the critical coordination problem of generating
-% state revenue under extreme pressure, justifying the extractive component.
-constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 3: REGIME MILITARY FACTIONS AND SECURITY SERVICES (TANGLED ROPE) — Organized and powerful domestically. Benefit from control of fuel distribution and illicit trade networks (extraction toward this actor). But constrained by international sanctions and dependence on regime survival — if the oil system collapses entirely, their power base evaporates. Exhibit both extraction (they capture rents) and coordination (they manage distribution networks, however predatory). Active enforcement through violence (checkpoints, fuel rationing, detention of rivals). Asymmetric — they benefit while society bears costs.
+constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% This perspective accounts for the full structure: the genuine coordination
-% function (getting oil out when the state can't) AND the severe asymmetric
-% extraction. It correctly identifies the constraint as a Tangled Rope.
+% PERSPECTIVE 4: FOREIGN OIL EXTRACTION FIRMS AND TRADING NETWORKS (ROPE) — Institutional actors with exit options (can walk away if sanctions tighten or legal risk increases). Benefit from massive arbitrage: purchasing crude at prices far below market rate, refining or trading it globally, and capturing the spread. The constraint from their perspective is a pure coordination problem — how to extract without triggering enforcement action. They solve it through layered fronts (flag of convenience tankers, shell companies, trading hubs in sanctions-gray jurisdictions). No significant victims from their perspective; this is efficient resource allocation. Extractiveness toward them, not from them.
+constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: OFFICIAL PDVSA AND GOVERNMENT OIL MINISTRY (PITON) — Institutional structure that once had a clear coordination function (managing resource extraction and state revenue). Now substantially performative: maintains a facade of state control (official export contracts, ministry announcements, statistics) while actual production flows through parallel channels controlled by military/regime networks. Theater ratio high (0.65): regime claims to manage the oil sector, PDVSA publishes production figures, but real extraction and sales happen outside official channels. The original coordination function has atrophied; the constraint persists through institutional inertia and the performative need to claim legitimacy.
+constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: UNITED STATES AND COALITION SANCTIONS REGIME (TANGLED ROPE) — Powerful actors with high exit options (can escalate, de-escalate, or shift sanctions design). Imposed sanctions to coerce regime change but created the shadow privatization dynamic: unable to prevent extraction, only to redirect it through informal channels. Exhibit both coordination (allied governments enforcing a unified sanctions posture) and extraction (sanctions harm ordinary Venezuelans disproportionately, creating humanitarian costs that benefit coercive actors by strengthening blame assignment narratives). Asymmetric: powerful nations control the constraint architecture; ordinary Venezuelans bear costs. Active enforcement through secondary sanctions and interdiction operations.
+constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / GLOBAL POLITICAL ECONOMY VIEW (SNARE) — From a civilizational/global perspective, shadow privatization is a structural snare: it extracts value from both the Venezuelan state (via foregone revenue) and ordinary citizens (via fuel scarcity and economic collapse) while concentrating benefits in parallel networks immune to democratic or legal accountability. The constraint exhibits no coordination function at the global level — foreign firms, military factions, and sanctions enforcers all extract, none provide genuine public goods. Pure extraction masquerading as geopolitical necessity.
 constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, snare,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -171,20 +177,18 @@ constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, sn
 
 :- begin_tests(venezuela_oil_privatization_v1_tests).
 
-test(perspectival_gap_is_snare_vs_rope, [nondet]) :-
-    % Verify the core perspectival gap between the trapped victim and the arbitrage beneficiary.
-    constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, rope, context(agent_power(powerful), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope, [nondet]) :-
-    % The ground truth classification from the analytical view must be Tangled Rope.
-    constraint_indexing:constraint_classification(venezuela_oil_privatization_v1, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(venezuela_oil_privatization_v1, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_gates_pass) :-
-    % Verify that all three structural requirements for a Tangled Rope are present.
-    narrative_ontology:constraint_beneficiary(venezuela_oil_privatization_v1, _),
-    narrative_ontology:constraint_victim(venezuela_oil_privatization_v1, _),
-    domain_priors:requires_active_enforcement(venezuela_oil_privatization_v1).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(venezuela_oil_privatization_v1, TR),
+    TR >= 0.70.
 
 :- end_tests(venezuela_oil_privatization_v1_tests).
 
@@ -194,21 +198,16 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): Extremely high. The constraint facilitates the transfer of a nation's primary source of wealth to private hands with little to no public accountability or transparent return of value. This represents a massive extraction from the public commons.
- *   - Suppression Score (0.80): High. The process is extra-legal and opaque, actively suppressing legal and transparent alternatives. Public debate, legislative oversight, and worker organization are all effectively bypassed or repressed.
- *   - The combination of a real coordination need (keeping oil flowing under sanctions) and extreme extraction makes this a canonical Tangled Rope.
+ *   Extractiveness (0.58): High and rising. The constraint extracts from citizens (fuel scarcity), from the state (lost revenue), and from workers (appropriated wages). Base extraction increased from 0.32 to 0.58 because sanctions and institutional collapse intensified the predatory extraction mechanism — military factions now extract crude and redistribute only through patronage networks, not market or welfare mechanisms. This is measurable extraction (fuel disappears, revenue disappears, purchasing power collapses) with minimal coordination value to victims. Suppression (0.72): Very high. Citizens cannot exit (capital controls, emigration barriers); workers cannot leave (skill specificity, economic desperation, visa constraints); alternative fuel sources don't exist (Venezuela has no alternatives to PDVSA crude for domestic consumption). Suppression reflects structural barriers to exit, not ideological suppression — the regime uses violent checkpoints and rationing, but the core suppression is economic and geographic. Theater ratio (0.65): Moderate-high. The regime maintains a facade of state control: PDVSA publishes production figures, the oil ministry issues directives, official export contracts are announced. But actual extraction and sales happen in parallel networks — tankers with flag-of-convenience registrations, trading through intermediaries in sanctions-gray jurisdictions, sales to foreign firms that negotiate directly with military networks rather than government. Theater increased from 0.42 because the gap between official claims and actual distribution widened. The performative claim of state control is increasingly hollow.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme, spanning from Snare to Rope.
- *   - For the Venezuelan Public (Snare): They are trapped victims. They bear the full long-term cost of lost national assets and see none of the coordination benefits, only the extraction. The high `d` derived from their `trapped` status makes the effective extraction overwhelming.
- *   - For the New Private Operators (Rope): They are beneficiaries with arbitrage exit. They see a pure coordination opportunity to apply capital and expertise to unlock assets that were inaccessible. For them, the `d` is so low that effective extraction is negative; the system subsidizes them.
+ *   This constraint demonstrates the maximum perspectival divergence in the corpus. The Venezuelan citizen sees pure extraction (Snare) — crude they live above is rationed away, they receive no benefit, no exit exists. The military faction sees mixed extraction and coordination (Tangled Rope) — they benefit from parallel networks but are constrained by fragility and sanctions. The foreign firm sees pure coordination (Rope) — solving the problem of how to access cheap oil, no victimization from their perspective. The U.S. sanctions enforcer sees coordination layered with coercive extraction (Tangled Rope) — unified sanctions architecture, but immense humanitarian costs that serve no coercive goal effectively. The official PDVSA sees degradation (Piton) — a once-functional institution now performative, maintained through inertia rather than function. The analytical observer sees structural snare — a system designed to extract from the powerless and cannot be reformed through negotiation. No single perspective dominates; the presheaf over observation sites reveals that ordinary citizens face maximal extraction while military and foreign actors face favorable coordination or pure arbitrage.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: The `new_private_operators` and `maduro_government_officials` directly benefit. The former gain assets and profits; the latter maintain political power and revenue. This structural relationship drives their low `d` values.
- *   - Victims: The `venezuelan_public` and `pdvsa_workers` bear the cost. The public loses long-term national wealth, and workers face job insecurity under new management. This drives their high `d` value. The directionality engine correctly models this asymmetry.
+ *   Directionality values (d) map each agent's structural position to the extraction flow. Citizens: d ≈ 0.95 (full target — powerless, trapped, maximum extraction). PDVSA workers: d ≈ 0.85 (victim + constrained exit, high extraction). Military factions: d ≈ 0.35 (beneficiary + organized power but constrained by regime fragility, mixed extraction and benefit). Foreign firms: d ≈ 0.10 (beneficiary + arbitrage exit, negative/beneficial extraction). U.S. sanctions regime: d ≈ 0.55 (powerful but achieving opposite of intent, moderate extraction from perspective's own goals). Directionality overrides not needed — the derivation chain from beneficiary/victim declarations and exit options produces accurate d values for each agent. The engine's sigmoid f(d) will compute chi for each perspective and reveal that citizens experience χ ≈ 1.2-1.4 (high experienced extraction) while foreign firms experience χ ≈ -0.15 (subsidy-like benefit).
  *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- *   This case demonstrates the power of the Tangled Rope classification. A simpler model might label this a pure Snare, missing the crucial point that it *does* solve a genuine coordination problem for the Maduro government (survival under sanctions). Conversely, a naive analysis might see it as a "necessary" Rope, ignoring the massive, unaccountable extraction. The Tangled Rope classification correctly identifies that both functions are present and coupled, preventing mislabeling and capturing the true, tragic nature of the policy.
+ * MANDATROPHY ANALYSIS:
+ *   RESOLVED: This is a genuine Snare (not mislabeled as Rope). The mandatrophy test asks: 'Could victims benefit from the constraint in any framing?' Answer: No. Citizens cannot reframe fuel rationing as coordination (it provides no collective benefit). Workers cannot reframe wage theft as coordination (it does not enable their work, it sabotages it). The constraint has no hidden coordination function — it is pure extraction with military factions and foreign firms capturing all benefits while ordinary citizens and the state bear all costs. The tangled rope perspective (military factions) confirms that even beneficiaries see active enforcement required and asymmetric benefit — they gain rents but must maintain coercive capacity to hold power. The piton perspective shows that official institutions are indeed theatrical — the regime must perform state control even as real extraction bypasses state channels. No reframing resolves this as rope; the mandatrophy is resolved at ε=0.58 because all perspectives except the beneficiary/external-actor perspectives confirm pure extraction logic. The analytical observer's snare classification is primary; all others are perspectival readings of the same underlying extraction architecture.
  */
 
 /* ==========================================================================
@@ -216,60 +215,93 @@ test(tangled_rope_structural_gates_pass) :-
    ========================================================================== */
 
 omega_variable(
-    omega_vopv1,
-    'What is the ultimate destination and use of the revenue generated by these private operations?',
-    'A full, independent, and public audit of PDVSA and state accounts, which is currently impossible.',
-    'If revenue primarily funds state functions (food imports, infrastructure), the coordination component is stronger. If it is primarily captured by elites, the constraint is functionally closer to a pure Snare.',
+    parallel_network_boundaries,
+    'What distinguishes the shadow privatization network from ordinary sanctions evasion or black-market trading? Where is the boundary between military corruption and regime economic strategy?',
+    'Financial flow analysis (banking records, shipping manifests, fuel distribution tracking); interviews with defected military/finance officials; comparison of regime directives with actual extraction patterns',
+    'If shadow privatization is coordinated regime strategy: constraint is state-level snare (regime extracts from citizens via controlled scarcity). If it is decentralized military faction predation: constraint is warlordism/state collapse (multiple snares). Classification and mandatrophy implications differ significantly.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(parallel_network_boundaries, empirical, 'Boundary between coordinated regime strategy and decentralized military corruption').
+
+omega_variable(
+    sanctions_causality_attribution,
+    'How much of the shadow privatization and fuel scarcity is caused by sanctions versus by mismanagement and corruption predating sanctions? Do sanctions create the incentive structure or merely expose it?',
+    'Counterfactual analysis comparing fuel production/distribution efficiency before/after sanctions; economic modeling of investment decisions; comparison with other petrostates under different sanction regimes',
+    'If sanctions are primary cause: U.S./coalition perspective shifts from tangled rope toward rope (coordination problem) or even mountain (unavoidable consequence). If corruption and underinvestment predated sanctions: constraint is endogenous to regime, and external actors see snare dynamics they did not create.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(sanctions_causality_attribution, empirical, 'Attribution of shadow privatization and scarcity to sanctions versus regime mismanagement').
+
+omega_variable(
+    exit_capacity_of_workers,
+    'Do Venezuelan oil workers face truly trapped exit, or is constrained exit (emigration, sector switching) more accurate? What is the empirical cost of exit?',
+    'Survey data on migration patterns, wage replacement in destination countries, skills transferability; comparison with trapped-exit constraints in other contexts (e.g., company towns, bonded labor)',
+    'If truly trapped: PDVSA worker perspective is maximum snare (d ≈ 0.95). If constrained but feasible: perspective drops to tangled rope (d ≈ 0.55). Classification and chi values shift accordingly.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(exit_capacity_of_workers, empirical, 'Whether PDVSA workers face trapped or constrained exit options').
+
+omega_variable(
+    foreign_firm_coordination_level,
+    'Are foreign oil trading firms and extraction companies operating as a coordinated cartel in shadow privatization, or as independent profit-seekers exploiting asymmetries? Is there governance structure or just opportunism?',
+    'Network analysis of trading relationships, price-setting mechanisms, communication infrastructure; comparison with structured cartels (OPEC, drug trafficking organizations); detection of formal or informal agreements',
+    'If coordinated cartel: foreign firms perspective is rope (pure coordination with minimal coercion). If opportunistic competitors: perspective is snare (pure extraction, no coordination benefit to competitors). Beneficiary/victim structure and beneficiary_type implications differ.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(foreign_firm_coordination_level, empirical, 'Whether foreign firms form coordinated cartel or operate as independent profit-seekers').
+
+omega_variable(
+    regime_survival_dependence,
+    'How dependent is the Venezuelan regime on shadow privatization revenue for survival? Could it survive without parallel oil sales, or are these revenues essential to maintaining coercive capacity?',
+    'Military payroll data, defense spending levels, comparison with counterfactual budgets; analysis of regime resilience under different resource scenarios; interviews with regime finance officials',
+    'If essential: military factions'' perspective shifts from tangled rope toward mountain (unavoidable structural necessity). If marginal: perspective remains tangled rope (extractive choice, not necessity). Mandatrophy resolution and classification robustness differ.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regime_survival_dependence, empirical, 'Dependency of regime survival on shadow privatization revenue').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(venezuela_oil_privatization_v1, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This models the degradation of Venezuela's state-run oil sector into the
-% current shadow privatization model, tracking the rise of extraction and theater.
-% As a high-extraction constraint (ε > 0.46), temporal data is required.
+% Theater ratio over time
+narrative_ontology:measurement(venez_oil_theater_t0, venezuela_oil_privatization_v1, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(venez_oil_theater_t5, venezuela_oil_privatization_v1, theater_ratio, 5, 0.56).
+narrative_ontology:measurement(venez_oil_theater_t10, venezuela_oil_privatization_v1, theater_ratio, 10, 0.65).
 
-% Theater ratio over time (metric_substitution):
-narrative_ontology:measurement(vopv1_tr_t0, venezuela_oil_privatization_v1, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(vopv1_tr_t5, venezuela_oil_privatization_v1, theater_ratio, 5, 0.30).
-narrative_ontology:measurement(vopv1_tr_t10, venezuela_oil_privatization_v1, theater_ratio, 10, 0.40).
+% Extraction over time
+narrative_ontology:measurement(venez_oil_extractiveness_t0, venezuela_oil_privatization_v1, base_extractiveness, 0, 0.32).
+narrative_ontology:measurement(venez_oil_extractiveness_t5, venezuela_oil_privatization_v1, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(venez_oil_extractiveness_t10, venezuela_oil_privatization_v1, base_extractiveness, 10, 0.58).
 
-% Extraction over time (extraction_accumulation):
-narrative_ontology:measurement(vopv1_ex_t0, venezuela_oil_privatization_v1, base_extractiveness, 0, 0.45).
-narrative_ontology:measurement(vopv1_ex_t5, venezuela_oil_privatization_v1, base_extractiveness, 5, 0.60).
-narrative_ontology:measurement(vopv1_ex_t10, venezuela_oil_privatization_v1, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This constraint is fundamentally about allocating capital and operational
-% rights over oil reserves.
 narrative_ontology:coordination_type(venezuela_oil_privatization_v1, resource_allocation).
+narrative_ontology:affects_constraint(venezuela_oil_privatization_v1, u_s_venezuela_sanctions_regime).
+narrative_ontology:affects_constraint(venezuela_oil_privatization_v1, pdvsa_institutional_collapse).
+narrative_ontology:affects_constraint(venezuela_oil_privatization_v1, military_elite_fragmentation).
+narrative_ontology:affects_constraint(venezuela_oil_privatization_v1, fuel_access_inequality_latin_america).
 
-% Network relationships (structural influence edges)
-% The shadow privatization is a direct, adaptive response to the pressure
-% exerted by the U.S. sanctions regime.
-narrative_ontology:affects_constraint(us_sanctions_venezuela, venezuela_oil_privatization_v1).
-
+% DUAL FORMULATION NOTE:
+% Shadow privatization of Venezuela's oil is downstream of the institutional collapse of PDVSA and the imposition of U.S. sanctions. Each upstream constraint has its own extractiveness profile; this constraint represents the emergent extraction mechanism that arises from their combination. The network links show how institutional degradation + external coercion → shadow privatization snare.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this constraint. The standard derivation chain,
-% using the declared beneficiary/victim groups and exit options, accurately
-% models the directionality of extraction and benefit for all key agents.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

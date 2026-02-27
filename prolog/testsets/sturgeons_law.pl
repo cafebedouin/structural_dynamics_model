@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: sturgeons_law
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_sturgeons_law, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,10 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -54,27 +53,31 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: sturgeons_law
- *   human_readable: Sturgeon's Law ("90% of everything is crap")
+ *   human_readable: Sturgeon's Law (90% of everything is crap)
  *   domain: sociological/artistic
  *
  * SUMMARY:
- *   Formulated by sci-fi writer Theodore Sturgeon, the law states that "ninety
- *   percent of everything is crud." It functions as an observation about the
- *   statistical distribution of quality in any creative or productive field.
- *   It posits that a low signal-to-noise ratio is a fundamental, emergent
- *   property of open systems, not a flaw unique to any specific domain. This
- *   constraint story models the law itself as a natural law (Mountain), while
- *   acknowledging that its *exploitation* by other actors (e.g., platform
- *   algorithms) constitutes a separate, downstream constraint.
+ *   Sturgeon's Law — the claim that '90% of everything is crap' — functions
+ *   as a coordination mechanism for quality judgments and a suppression
+ *   mechanism against amateur creation. From the perspective of powerless
+ *   creators and niche communities, the law serves as justification for
+ *   institutional gatekeeping that restricts distribution channels and
+ *   visibility. From the perspective of curators and critics, it validates
+ *   their expertise and authority. The constraint's theater ratio (0.65)
+ *   reflects that the gatekeeping institutions have increasingly become
+ *   performative: critical reviews rarely determine commercial success, and
+ *   algorithmic platforms have begun displacing human curatorial judgment.
+ *   The constraint exhibits all six types from different observation points,
+ *   making it a diagnostic exemplar for how allegedly universal statistical
+ *   laws can actually encode institutional power asymmetries.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Consumer (powerless/trapped): Experiences the law as an immutable
- *     environmental fact, requiring effort to navigate a sea of mediocrity.
- *   - The Creator (moderate/mobile): Uses the law as a rhetorical defense
- *     against critics who dismiss an entire genre based on its worst examples.
- *   - The Platform (institutional/arbitrage): Observes the law as a statistical
- *     reality that informs the design of curation and filtering systems.
- *   - The Analytical Observer: Sees the law as a universal statistical baseline.
+ * KEY AGENTS:
+ *   - Amateur Creators: Primary victim (powerless/trapped) — bear suppression cost of discouragement and platform exclusion; no exit from 90% categorization
+ *   - Quality Gatekeepers: Primary beneficiary (institutional/arbitrage) — capture authority to define 'the 10%'; benefit from scarcity of attention they manage
+ *   - Critical Establishment: Secondary beneficiary (institutional/arbitrage) — maintain cultural authority through the law; now degraded (piton perspective)
+ *   - Niche Communities: Secondary victim (moderate/constrained) — benefit from the filter but also constrained by gatekeeper definitions of 'quality'
+ *   - Algorithmic Platforms: Organized agent (organized/constrained) — building alternatives to human curation; represent sunset mechanism for traditional gatekeeping
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent gatekeeping effects as statistical law
  */
 
 /* ==========================================================================
@@ -82,83 +85,69 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% The law itself is an observation; it does not extract value.
-domain_priors:base_extractiveness(sturgeons_law, 0.10).
-% The law does not actively suppress alternatives; it is a description of their
-% statistical rarity. This is a key feature of a Mountain.
-domain_priors:suppression_score(sturgeons_law, 0.05).
-% The law is a direct observation with very little performative aspect.
-domain_priors:theater_ratio(sturgeons_law, 0.11).
+domain_priors:base_extractiveness(sturgeons_law, 0.32).
+domain_priors:suppression_score(sturgeons_law, 0.48).
+domain_priors:theater_ratio(sturgeons_law, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(sturgeons_law, extractiveness, 0.10).
-narrative_ontology:constraint_metric(sturgeons_law, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(sturgeons_law, theater_ratio, 0.11).
+narrative_ontology:constraint_metric(sturgeons_law, extractiveness, 0.32).
+narrative_ontology:constraint_metric(sturgeons_law, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(sturgeons_law, theater_ratio, 0.65).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-% The law describes a state where high-quality alternatives are rare and
-% structurally difficult to produce, collapsing accessibility.
-narrative_ontology:constraint_metric(sturgeons_law, accessibility_collapse, 0.95).
-% There is no meaningful resistance to a statistical distribution.
-narrative_ontology:constraint_metric(sturgeons_law, resistance, 0.05).
-
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(sturgeons_law, mountain).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(sturgeons_law, tangled_rope).
+narrative_ontology:human_readable(sturgeons_law, "Sturgeon's Law (90% of everything is crap)").
 narrative_ontology:topic_domain(sturgeons_law, "sociological/artistic").
-narrative_ontology:human_readable(sturgeons_law, "Sturgeon's Law (\"90% of everything is crap\")").
 
-% --- Binary flags ---
-% No active enforcement is needed for a statistical reality.
+domain_priors:requires_active_enforcement(sturgeons_law).
 
-% --- Emergence flag (required for mountain constraints) ---
-% The 90/10 distribution emerges naturally from the statistics of creative
-% and productive processes without centralized design or enforcement.
-domain_priors:emerges_naturally(sturgeons_law).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a Mountain (natural law), this constraint does not
-% have structurally defined beneficiaries or victims. Its effects are universal
-% and symmetric, though different agents may react to it differently.
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(sturgeons_law, quality_gatekeepers).
+narrative_ontology:constraint_beneficiary(sturgeons_law, critical_establishment).
+narrative_ontology:constraint_victim(sturgeons_law, amateur_creators).
+narrative_ontology:constraint_victim(sturgeons_law, niche_audiences).
+narrative_ontology:constraint_victim(sturgeons_law, emerging_talent).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE CONSUMER (MOUNTAIN)
-% To the consumer, the 90% is an immovable fact of the environment. They must
-% climb through stacks of "crud" to find something of value. They have no
-% power over the distribution; they can only endure it.
-constraint_indexing:constraint_classification(sturgeons_law, mountain,
+% PERSPECTIVE 1: AMATEUR CREATOR (SNARE) — Powerless creator with no exit from the 90% categorization. The law functions as a suppression mechanism: discourages unpaid creative effort, justifies gatekeeping of publication platforms, and creates psychological barriers to sharing work. No alternative distribution channels exist with comparable reach to traditional media. Maximum experienced extraction — the creator internalizes the law as natural law and self-censors.
+constraint_indexing:constraint_classification(sturgeons_law, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(biographical),
             exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: NICHE COMMUNITY (TANGLED ROPE) — Communities organized around specific interests (fanfiction, indie music, indie games) benefit from coordination provided by the 90% filter — it validates their focused consumption and identity. But they also bear costs: gatekeepers determine what counts as 'the 10%'; access requires navigating institutional approval. Partial exit via fan platforms (AO3, Bandcamp, itch.io) but these depend on the same cultural logic that the 10% deserves attention.
+constraint_indexing:constraint_classification(sturgeons_law, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PLATFORM GATEKEEPER (MOUNTAIN)
-% For an institutional actor like a publisher or streaming service, the law is
-% also a Mountain. It is a fundamental environmental condition that their
-% business model must account for (e.g., through curation, filtering, and
-% recommendation algorithms). The law itself is immutable.
-constraint_indexing:constraint_classification(sturgeons_law, mountain,
+% PERSPECTIVE 3: QUALITY GATEKEEPER (ROPE) — Publishers, editors, curators, critics experience Sturgeon's Law as a coordination mechanism: it justifies their existence and expertise. The law solves a real problem — information overload — by providing a shared standard for 'what matters.' Gatekeepers benefit from the authority to distinguish 10% from 90%. Full exit available (can stop curating) with high opportunity cost. Net beneficiary.
+constraint_indexing:constraint_classification(sturgeons_law, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% From a detached, civilizational perspective, the law is a classic Mountain:
-% an apparently fixed, unchangeable feature of information ecosystems.
+% PERSPECTIVE 4: ALGORITHMIC PLATFORM (SCAFFOLD) — Platforms (Spotify, Netflix, YouTube, TikTok) are building algorithmic alternatives to human curation that bypass the 90% suppression. Recommendation algorithms claim to surface quality without gatekeepers' institutional bias. This represents a sunset clause: as algorithmic discovery matures, the gatekeeper monopoly on 'the 10%' weakens. But platforms have their own extraction logic (engagement metrics, data capture), so the constraint morphs rather than disappears. Moderate suppression because platforms have agency and exit pathways.
+constraint_indexing:constraint_classification(sturgeons_law, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CRITICAL ESTABLISHMENT (PITON) — Literary criticism, music reviews, film criticism maintained the 90% framing for decades, but their institutional function has atrophied as amateur/algorithmic alternatives reduce their cultural authority. The critical apparatus persists through inertia — awards, canon, prestige institutions — but its actual verification function has degraded. Theater ratio high: much critical activity is now performative positioning rather than gatekeeping with functional consequence.
+constraint_indexing:constraint_classification(sturgeons_law, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational view, Sturgeon's Law might reflect a statistical inevitability: any distribution of quality across producers will have a long tail. The law appears as mathematical necessity. However, the structural data reveals this as false naturalization: the 90/10 ratio is contingent on institutional gatekeeping that concentrates visibility. Without gatekeepers, the distribution becomes observable rather than fixed.
 constraint_indexing:constraint_classification(sturgeons_law, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -171,20 +160,14 @@ constraint_indexing:constraint_classification(sturgeons_law, mountain,
 
 :- begin_tests(sturgeons_law_tests).
 
-test(perspectival_invariance) :-
-    % Verify that as a natural law, the classification is Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(sturgeons_law, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(sturgeons_law, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(sturgeons_law, mountain, context(agent_power(analytical), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(sturgeons_law, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(sturgeons_law, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(mountain_metric_adherence) :-
-    % Verify the constraint's metrics fall within the thresholds for Mountain classification.
-    narrative_ontology:constraint_metric(sturgeons_law, extractiveness, E),
-    narrative_ontology:constraint_metric(sturgeons_law, suppression_requirement, S),
-    config:param(mountain_extractiveness_max, EMax),
-    config:param(mountain_suppression_ceiling, SMax),
-    E =< EMax,
-    S =< SMax.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(sturgeons_law, TR),
+    TR >= 0.70.
 
 :- end_tests(sturgeons_law_tests).
 
@@ -194,91 +177,98 @@ test(mountain_metric_adherence) :-
 
 /**
  * LOGIC RATIONALE:
- *   The original file was inconsistent, declaring `emerges_naturally` while also
- *   showing perspectival variance (Rope, Scaffold, Snare) and having a
- *   suppression score (0.4) too high for a natural law. This regeneration
- *   resolves the contradiction by classifying the law *itself* as a Mountain.
- *   The metrics have been adjusted to be consistent with this classification
- *   (ε=0.10, S=0.05). The required Natural Law profile metrics
- *   (`accessibility_collapse`, `resistance`) have been added to pass the
- *   structural linter and the engine's certification chain.
+ *   Extractiveness (0.32): Moderate. The constraint extracts from creators through suppression of distribution channels and psychological discouragement, but the extraction is not maximal because alternative distribution has become available (internet platforms, self-publishing). The traditional gatekeeping extraction was higher when physical scarcity (printing costs, airtime) made gatekeeper approval necessary for any visibility. Suppression (0.48): Moderate-high. Significant barriers include platform gatekeeping (requires submission, editorial approval), visibility barriers (algorithms favor gatekept content), and psychological internalization (creators self-censor assuming the law is true). But not total suppression — self-publishing, fan platforms, and direct-to-audience channels exist. Theater ratio (0.65): Moderate-high. Gatekeeping institutions increasingly perform their quality-judgment function without functional consequence. Critics assess merit; audiences ignore reviews and follow algorithmic recommendations. Awards ceremonies celebrate 'the 10%' but do not determine which 10% survives culturally. The theater has increased over the interval as institutional critics lost authority.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a Mountain, the classification is
- *   invariant across all indices. The different reactions of agents (a creator
- *   using it as a defense, a platform using it to justify filtering) are
- *   responses *to* the Mountain, not changes in the nature of the constraint
- *   itself.
+ *   This constraint demonstrates how the same statistical claim can encode radically different power relationships depending on perspective. For amateur creators, the law legitimizes their exclusion from visibility (snare). For niche communities, it validates their selective consumption and identity (tangled rope). For gatekeepers, it justifies their existence and authority (rope). For algorithmic platforms, it represents an old gatekeeping model being displaced by algorithmic curation (scaffold). For critics, it represents degraded institutional authority maintained through inertia (piton). For the civilizational observer, it risks appearing as a universal statistical law (false mountain) when the actual mechanism is institutional gatekeeping of visibility and distribution.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain, the constraint has no defined beneficiaries or victims. Its
- *   effects are symmetric and universal, like gravity. Directionality is not
- *   a relevant factor.
+ *   Each perspective's directionality is determined by the agent's structural position relative to the extraction flow. Powerless creators have no exit (d ≈ 0.95) and bear full suppression cost. Institutional gatekeepers have high exit options (arbitrage) and benefit from the law (d ≈ 0.05). Moderate niche communities have partial exit through fan platforms but depend on the same gatekeeping logic (d ≈ 0.55). Organized platforms have agency and exit paths via algorithmic alternatives (d ≈ 0.40-0.45). The piton perspective derives from the high theater ratio rather than from suppression or extraction intensity. The mountain perspective at the analytical/civilizational level is a false summit: the law naturalizes what is actually a contingent arrangement of institutional visibility control.
  *
  * MANDATROPHY ANALYSIS:
- *   This reframing prevents a category error. The original file conflated the
- *   law (a statistical observation, Mountain) with the systems built to
- *   exploit it (e.g., platform algorithms that might be Snares or Tangled
- *   Ropes). By classifying the law itself as a Mountain and linking it to a
- *   downstream constraint via `affects_constraint`, the analysis becomes more
- *   precise and avoids mislabeling a natural feature of a system as a form of
- *   designed extraction.
+ *   DIAGNOSTIC EXEMPLAR: Sturgeon's Law resolves mandatrophy by demonstrating that the constraint is fundamentally about visibility gatekeeping masquerading as universal quality distribution. The law claims to describe a statistical property of all created work ('90% is crap'); the structural analysis reveals it describes only a statistical property of visible, gatekept work. The mandatrophy is resolved by recognizing that perspectives from ungated platforms (algorithmic recommendation, self-publishing, fan communities) produce different classifications because they operate under different visibility constraints. The scaffold perspective confirms the sunset mechanism: as algorithmic discovery matures and direct-to-audience platforms reduce gatekeeping dependency, the extracted value from traditional gatekeeping declines. The piton perspective confirms institutional degradation: critical gatekeeping persists through inertia and awards infrastructure despite losing functional authority. The mountain perspective is exposed as false naturalization: the 90/10 ratio is contingent on gatekeeping, not universal to creative production.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_sturgeons_law,
-    'Is the 90/10 ratio a fundamental limit of information theory and human creativity (Mountain), or is it an artifact of specific economic systems (e.g., capitalism) that prioritize quantity over quality (Tangled Rope)?',
-    'Comparative analysis of quality distributions in non-market or highly curated creative ecosystems (e.g., monastic traditions, state-sponsored art).',
-    'If Mountain, efforts to "fix" the ratio are futile. If Tangled Rope, the ratio is a policy choice that can be altered.',
+    quality_metric_definition,
+    'What constitutes ''quality'' for the purpose of Sturgeon''s Law — aesthetic merit, cultural impact, technical skill, or audience satisfaction?',
+    'Cross-domain analysis of what different communities measure as quality; correlation between expert judgment and audience preference metrics',
+    'If quality = expert aesthetic judgment: law justifies institutional gatekeeping (supports snare classification). If quality = audience satisfaction: law mischaracterizes the distribution (most people enjoy most things they consume, contradicting 90% waste premise).',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_sturgeons_law, empirical, 'Is the 90/10 quality distribution a natural law or a product of specific economic incentives?').
+narrative_ontology:omega_variable(quality_metric_definition, conceptual, 'Definition and measurability of quality across domains').
+
+omega_variable(
+    visibility_bias_confound,
+    'Does the 90% observation reflect the actual quality distribution of all created work, or the quality distribution of visible/discoverable work after gatekeeping has already filtered?',
+    'Comparison of gatekept media distribution (bookstores, radio, theaters) vs ungated distribution (self-published archives, complete YouTube database, all fanfiction); empirical quality measurement across both populations',
+    'If gatekeeping dominates the sample: 90% figure is circular (gatekeepers report that 90% of what wasn''t gatekept is low quality). True distribution might be flatter. Changes classification from snare/tangled_rope to rope/scaffold at most perspectives.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(visibility_bias_confound, empirical, 'Whether the 90% observation is an artifact of gatekeeping visibility').
+
+omega_variable(
+    algorithmic_discovery_effectiveness,
+    'Do algorithmic recommendation systems actually surface quality more effectively than human gatekeeping, or do they merely optimize for engagement while mimicking the distribution?',
+    'Longitudinal tracking of recommendation success vs gatekeeper success; measurement of algorithmic bias toward high-engagement low-quality content; comparison of algorithmic ''discovery'' recommendations with expert retrospective quality judgments',
+    'If algorithms are effective: scaffold sunset is real, and suppression mechanisms will degrade over time. If algorithms replicate gatekeeping bias: constraint persists in new form (snare with new beneficiary). If algorithms prefer engagement over quality: new extraction mechanism emerges.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(algorithmic_discovery_effectiveness, empirical, 'Whether algorithmic discovery bypasses or replicates gatekeeper quality filtering').
+
+omega_variable(
+    community_quality_production_rate,
+    'Do communities with low gatekeeping barriers (fanfiction, indie game development, open-source software) actually produce the same 90/10 quality distribution, or do they produce different distributions?',
+    'Comparative quality metrics across gated (traditional publishing) and ungated (fan communities, open-source) populations; statistical analysis of quality distribution shape',
+    'If distributions match: Sturgeon''s Law is mathematical inevitability (mountain true). If ungated communities have flatter or different distributions: law reflects institutional gatekeeping effects rather than universal property (constraint is rope/tangled_rope, not mountain).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(community_quality_production_rate, empirical, 'Whether 90/10 distribution is universal or gatekeeping-dependent').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(sturgeons_law, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% As a Mountain with low extraction (ε=0.10), temporal measurements for drift
-% detection are not required. The constraint is considered stable over its
-% interval.
+% Theater ratio over time
+narrative_ontology:measurement(sturgeon_tr_t0, sturgeons_law, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(sturgeon_tr_t5, sturgeons_law, theater_ratio, 5, 0.55).
+narrative_ontology:measurement(sturgeon_tr_t10, sturgeons_law, theater_ratio, 10, 0.65).
+
+% Extraction over time
+narrative_ontology:measurement(sturgeon_be_t0, sturgeons_law, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(sturgeon_be_t5, sturgeons_law, base_extractiveness, 5, 0.25).
+narrative_ontology:measurement(sturgeon_be_t10, sturgeons_law, base_extractiveness, 10, 0.32).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% --- Network Decomposition (Constraint Families) ---
-% The exploitation of Sturgeon's Law by platform gatekeepers is a separate
-% constraint, structurally influenced by the statistical reality of the law.
-%
+narrative_ontology:coordination_type(sturgeons_law, information_standard).
+narrative_ontology:affects_constraint(sturgeons_law, taste_formation_monopoly).
+narrative_ontology:affects_constraint(sturgeons_law, cultural_legitimacy_gatekeeping).
+
 % DUAL FORMULATION NOTE:
-% This constraint (the statistical law) is the upstream component. A separate
-% story should model the downstream effects.
-% Related stories:
-%   - platform_curation_algorithms (ε≈0.55, Tangled Rope)
-%
-narrative_ontology:affects_constraint(sturgeons_law, platform_curation_algorithms).
+% Sturgeon's Law decomposes into two structurally distinct claims: (1) the statistical claim that quality distributions are right-skewed (high proportion of low-quality production), and (2) the institutional claim that gatekeepers have authority to define which work falls into the 10% worth consuming. The statistical claim has low extractiveness if true universally (rope); the institutional claim has high extractiveness if it controls visibility (tangled rope/snare). This story focuses on the institutional constraint. The statistical claim would be a separate story with different ε.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary. As a Mountain, directionality is not a factor.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

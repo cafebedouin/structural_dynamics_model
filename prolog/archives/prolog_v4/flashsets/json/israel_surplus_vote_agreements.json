@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "israel_surplus_vote_agreements",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Surplus-Vote Agreements (Bader-Ofer Method) in Israeli Elections",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "partner_party_a",
+      "partner_party_b"
+    ],
+    "victims": [
+      "smaller_parties",
+      "voters_of_partner_parties"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Smaller Parties",
+      "comment": "PERSPECTIVE 1: SMALLER PARTIES (SNARE) - Smaller parties are often excluded or disadvantaged by surplus vote agreements between larger parties, limiting their ability to gain representation in the Knesset. They are trapped because they lack the size or influence to form such agreements themselves, bearing the full negative impact."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Voters of Partner Parties",
+      "comment": "PERSPECTIVE 2: VOTERS OF PARTNER PARTIES (TANGLED ROPE) - Voters of parties entering surplus vote agreements may find their vote indirectly supporting a different party than they intended, creating a tension between their individual preferences and the strategic advantage gained by the agreement. They are constrained because their vote contributes to the agreement as a whole, whether they approve of the specific partner party or not."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Partner Party A",
+      "comment": "PERSPECTIVE 3: PARTNER PARTY A (ROPE) - Parties entering surplus vote agreements benefit by increasing their chances of obtaining surplus seats, even if they do not win enough votes independently. They can arbitrage between different political partnerships to maximize their gains, seeing the agreement as pure coordination to achieve a shared goal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Partner Party B",
+      "comment": "PERSPECTIVE 4: PARTNER PARTY B (ROPE) - Similar to Party A, Party B benefits from the increased likelihood of obtaining surplus seats through the agreement. The arrangement is viewed as a coordinated strategy to overcome electoral thresholds."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) - From a broader perspective, surplus vote agreements represent a mixed system of coordination and extraction. They facilitate coalition building and stability but can also distort representation and disadvantage smaller parties. The observer sees the active enforcement through electoral rules and strategic party behavior."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "electoral_threshold_effect",
+      "question": "How does the electoral threshold influence the strategic value and impact of surplus-vote agreements?",
+      "resolution_mechanism": "Comparative analysis of electoral outcomes with and without agreements, considering different threshold levels.",
+      "impact": "Higher thresholds amplify the benefits for participating parties but also increase the disadvantages for smaller parties, making the constraint more extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of electoral threshold on agreement value."
+    },
+    {
+      "id": "coalition_formation_impact",
+      "question": "To what extent do surplus-vote agreements affect the overall stability and composition of governing coalitions?",
+      "resolution_mechanism": "Analysis of historical coalition formations and the role of parties entering surplus-vote agreements.",
+      "impact": "Increased coalition stability would classify the agreement as more of a rope. Distorted or limited coalition options would classify it as more of a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Influence on coalition stability."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Surplus-vote agreements in Israeli elections, also known as the Bader-Ofer method, allow two parties to pool their surplus votes to increase their chances of obtaining extra seats in the Knesset. This system creates a complex interplay between coordination among parties and extraction from smaller parties and voters whose preferences may be indirectly represented. The agreements serve as a strategic tool for parties to overcome electoral thresholds, but can also distort representation and disadvantage those excluded from the arrangements.",
+    "key_agents": [
+      "Partner Party A: Primary beneficiary (institutional/arbitrage) - Benefits from increased seat allocation.",
+      "Partner Party B: Secondary beneficiary (institutional/arbitrage) - Shares in the benefit of increased seat allocation.",
+      "Smaller Parties: Primary target (powerless/trapped) - Disadvantaged by exclusion from agreements.",
+      "Voters of Partner Parties: Secondary target (moderate/constrained) - Votes may indirectly support a different party."
+    ],
+    "logic_rationale": "Extractiveness: 0.55 - Moderate to high. Surplus vote agreements primarily benefit the participating parties, increasing their representation at the expense of smaller parties and potentially misrepresenting the preferences of some voters. Suppression: 0.45 - Moderate. Smaller parties are often excluded from forming such agreements due to their size, which limits their ability to compete effectively. The agreements also suppress the direct expression of voter preferences. Theater ratio: 0.30 - Low. The agreements are largely functional in achieving their intended goal of increasing seat allocation and are not primarily performative.",
+    "perspectival_gap": "The perspectival gap arises from the differing experiences and interests of the agents involved. Partner parties view the agreement as a purely beneficial coordination mechanism, whereas smaller parties experience it as a system that suppresses their representation. Voters of partner parties face a mixed experience, as their votes contribute to the overall success of the agreement, but may not directly align with their individual preferences. The analytical observer recognizes both the coordination and extraction aspects of the system, leading to a tangled rope classification.",
+    "directionality_logic": "The directionality is determined by the structural relationships of the agents to the constraint. Partner parties are the beneficiaries, as they actively gain seats through the agreements (d close to 0). Smaller parties are the victims, as they are disadvantaged by the system (d close to 1). Voters are indirectly affected (d closer to 0.5). The analytical observer views the entire system with a balanced perspective.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the same agreement can be viewed as both beneficial coordination (for partner parties) and extractive suppression (for smaller parties). The classification as a tangled rope captures the mixed nature of the system, reflecting the coordination and extraction aspects observed from different perspectives. It's not solely a rope or a snare but a hybrid that combines elements of both."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

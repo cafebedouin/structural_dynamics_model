@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "rare_earth_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ree"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Strategic Rare Earth Element Dependency",
+    "topic_domain": "economic/geopolitical",
+    "requires_active_enforcement": false,
+    "victims": [
+      "dependent_nation_manufacturing_sector",
+      "dependent_nation_defense_capabilities",
+      "downstream_technology_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dependent Manufacturing Sector",
+      "comment": "PERSPECTIVE 1: DEPENDENT NATION MANUFACTURING (SNARE) \u2014 Industrial producers in import-dependent nations cannot exit the supply chain without massive capital reallocation and technological reconstruction. Trapped by sunk infrastructure, long lead times for alternative sourcing, and no domestic REE reserves. Suppression is structural: switching costs exceed switching benefits. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.94."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Defense & Technology Supply Chain",
+      "comment": "PERSPECTIVE 2: DEFENSE AND TECHNOLOGY SUPPLY CHAIN (SNARE) \u2014 Military procurement, semiconductor fabrication, and advanced electronics all require REE-heavy components. Nations cannot substitute or source alternatives without compromising defense posture or surrendering technological leadership. Exit options are constrained by strategic necessity and geopolitical risk. d\u22480.85, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.94."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The REE Exporting Monopolist",
+      "comment": "PERSPECTIVE 3: REE EXPORTING MONOPOLIST (ROPE) \u2014 For the dominant exporter (historically China with ~70% global production), the supply constraint is experienced as coordination: managing extraction requires stable supply relationships, pricing mechanisms, and predictable demand. The exporter benefits from dependency but must maintain it through reliable supply; too much coercion causes switching investment. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.08. Net beneficiary through informational arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Alternative Sourcing Coalition",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE SOURCING COALITION (TANGLED ROPE) \u2014 Organized actors (allied nations, investment consortia, mining companies in non-monopolist regions) see REE dependency as both a coordination problem (building alternative supply chains) and an extraction problem (supply-side cartel effects). They have higher exit options (can invest in new deposits, recycling, substitution research) but face capital and geopolitical barriers. d\u22480.48, f(d)\u22480.58, \u03c3=1.1 \u2192 \u03c7\u22480.43. Mixed coordination and asymmetric extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Trade Regime and Strategic Supply Doctrine",
+      "comment": "PERSPECTIVE 5: TRADE REGIME & STRATEGIC SUPPLY DOCTRINE (PITON) \u2014 International institutions (WTO, trade agreements) and strategic supply doctrines treat REE dependency as a temporary feature to be managed through market mechanisms and alliance structures, but the actual function (fair pricing, diversified supply, risk management) has degraded. Theater persists: long-term contracts, strategic reserves, and trade negotiations are performed but fail to prevent supply shocks or weaponization. theater_ratio=0.38 is on the piton boundary; suggests some functional content remains. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Geological Constraint View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / GEOLOGICAL CONSTRAINT VIEW (MOUNTAIN) \u2014 From a 500-year geological and technological perspective, REE dependency appears as a natural resource constraint: certain elements (dysprosium, neodymium, terbium) have uneven geographic distribution; no nation has all deposits; thermodynamic extraction costs favor concentration. This reads as immutable natural law. However, the structural data (\u03b5=0.68, suppression=0.72) contradicts the mountain classification \u2014 the engine will compute false summit, revealing that dependency is a contingent geopolitical arrangement, not a law of geology."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "recycling_technology_threshold",
+      "question": "At what recycling efficiency percentage does REE dependency transition from extractive cartel to fair-priced coordination mechanism?",
+      "resolution_mechanism": "Longitudinal tracking of closed-loop REE recycling adoption rates; correlation between recycling availability and supply-chain pricing power; simulation of supply elasticity under different recycling scenarios",
+      "impact": "If threshold \u2264 40% current tech: many dependent nations can achieve autonomy within 15-20 years. If threshold > 70%: recycling alone insufficient; new mining and substitution essential. Classification changes from Snare to Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Recycling efficiency threshold for supply chain independence"
+    },
+    {
+      "id": "substitution_feasibility_scope",
+      "question": "For which critical applications (semiconductors, permanent magnets, battery technology, laser systems) can REE substitution or synthetic alternatives be achieved within the next 20 years without unacceptable performance loss?",
+      "resolution_mechanism": "Materials science R&D tracking; prototype performance data; cost-benefit analysis of substitutes vs. REE-dependent designs; patent landscape analysis",
+      "impact": "If > 60% of current applications: dependency becomes partial and negotiated (Tangled Rope). If < 30%: fundamental REE dependence locked in for generation (persistent Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scope of feasible REE substitution in critical applications"
+    },
+    {
+      "id": "monopolist_supply_credibility",
+      "question": "Will the dominant REE exporter maintain reliable supply relationships, or will geopolitical conflict force supply weaponization?",
+      "resolution_mechanism": "Historical analysis of past supply interruptions and their triggers; structural analysis of exporter's domestic demand and export revenue dependence; game-theoretic modeling of incentive alignment",
+      "impact": "If credibility remains high: dependency becomes stable coordination (Rope perspective strengthens). If credibility collapses: dependency becomes weaponized extraction and trigger for security conflict (Snare/Tangled Rope intensify).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether monopolist maintains supply reliability or weaponizes dependency"
+    },
+    {
+      "id": "geopolitical_bifurcation_permanence",
+      "question": "Is the current bifurcation into supply-aligned blocs (China-Russia-Iran vs. US-EU-Japan) a temporary geopolitical state or a structural shift toward competing REE supply ecosystems?",
+      "resolution_mechanism": "Tracking investment flows in mining and processing capacity across aligned vs. non-aligned states; long-term trade agreement structures; diplomatic statements regarding strategic autonomy and industrial policy",
+      "impact": "If temporary: dependency may ease as competition increases (multiple suppliers). If structural: each bloc faces isolated dependency within its own ecosystem, and inter-bloc access becomes weaponizable leverage.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether bifurcation of supply into geopolitical blocs is permanent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Strategic rare earth element (REE) dependency creates a structural extraction mechanism whereby nations reliant on imports from concentrated suppliers (historically 60-80% from China and Myanmar) experience both economic vulnerability and security blackmail risk. The constraint is not inherent to geology\u2014uneven geographic distribution is real\u2014but the extraction mechanism is institutional: high switching costs, long supply-chain lead times, concentrated refining capacity, and geopolitical leverage create a situation where dependent nations cannot credibly threaten exit. Unlike commodity markets with substitutes (oil/gas/coal), REE dependency lacks viable alternatives for many advanced applications, making it uniquely extractive. The theater ratio (0.38) indicates that institutional mechanisms\u2014long-term contracts, strategic reserves, trade negotiations\u2014still retain some functional content; they are not yet fully performative. However, the rising extractiveness (0.42 \u2192 0.68 over 30 years) reflects that geopolitical instrumentalization of REE supply has intensified, particularly after 2020 supply restrictions. The constraint demonstrates all six DR types from different perspectives: a snare for dependent manufacturers and defense sectors; rope for the dominant exporter; tangled rope for alternative-sourcing coalitions; piton for trade regimes that claim to manage it; and a false-summit mountain for civilizational observers who naturalize geopolitical dependence as geological law.",
+    "key_agents": [
+      "Dependent Nation Manufacturing Sector: Primary victim (powerless/trapped) \u2014 industrial producers cannot exit without capital-intensive restructuring; faces suppression via switching costs and long lead times",
+      "Defense and Technology Supply Chain: Primary victim (moderate/constrained) \u2014 military and semiconductor sectors strategically trapped; cannot compromise on supply reliability without national security risk",
+      "REE Exporting Monopolist (China, Myanmar, Russia): Primary beneficiary (institutional/arbitrage) \u2014 exercises monopoly pricing and supply-control leverage; benefits from extraction with managed relationship stability",
+      "Alternative Sourcing Coalition: Secondary actor (organized/mobile) \u2014 allied nations, mining consortia, recycling R&D invest in alternatives; constrained by capital requirements and geopolitical alignment barriers",
+      "Trade Regime and Strategic Doctrine: Institutional actor (institutional/constrained) \u2014 WTO, bilateral trade agreements, strategic reserves attempt to manage dependency; faces theater degradation as mechanisms prove ineffective against weaponization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional geopolitics as immutable geological law"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and rising. The dominant exporter captures monopoly rents by controlling 70-80% of global refining capacity, not primary mining (supply is more dispersed). The extraction mechanism operates through: (1) supply restrictions (2010 export quota episode, 2023 export controls), (2) pricing power (REE prices track exporter preferences), (3) long procurement lead times (18-36 months for specialized materials), (4) geopolitical leverage (conditioning supply on political alignment). The rising trajectory (0.42 \u2192 0.68) reflects increased weaponization post-2020. Suppression (0.72): Very high. Dependent nations face: (a) switching costs \u2014 $50-500M per refinery or manufacturing retooling, (b) tacit knowledge concentration \u2014 refining processes developed over decades, difficult to relocate, (c) lead times \u2014 new supply cannot be created in < 5 years, (d) strategic necessity \u2014 no substitutes for many defense applications, (e) geopolitical alignment costs \u2014 alternative suppliers are often geopolitically costly allies. Theater ratio (0.38): Moderate, declining. Strategic reserves, long-term contracts, and trade negotiations still perform functional work (they do sometimes stabilize supply), but their effectiveness has declined as geopolitical conflict has intensified. The declining trajectory (0.52 \u2192 0.38) suggests that institutions are shedding theater and becoming more nakedly extractive.",
+    "perspectival_gap": "This constraint demonstrates extreme perspectival divergence. The dependent manufacturing sector experiences pure extraction (Snare): no coordination benefit, only cost absorption. The defense sector experiences strategic trap (Snare with civilizational time horizon): cannot exit even at extreme cost without surrendering security. The exporter experiences profitable coordination (Rope): managing a stable supply relationship is valuable, and some reliability is needed to maintain the relationship. The alternative-sourcing coalition experiences hybrid (Tangled Rope): building new supply chains coordinates around shared interest in breaking monopoly dependence, but asymmetric extraction persists in the form of capital requirements and geopolitical access barriers. The trade regime sees itself as managing risk (Piton on the boundary): strategic reserves and long-term contracts are institutions that claim functional necessity but increasingly perform theater. The civilizational observer risks seeing immutable geology (Mountain) when actually observing contingent geopolitics \u2014 the false summit detector flags this. The perspectival gap reveals that 'dependency' is not a neutral technical fact but a structure with winners (exporter, trade regime) and losers (dependent nations), and the classification divergence is the key diagnostic.",
+    "directionality_logic": "Dependent Nation Manufacturing: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximal extraction. Cannot switch, cannot negotiate, cannot exit. Trapped is the operative constraint \u2014 even powerful nations become powerless once trapped in REE dependency. Defense Sector: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction with slightly more agency than manufacturing (can invest in strategic reserves, substitution R&D), but strategic necessity prevents true exit. REE Monopolist: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; experiences constraint as profitable coordination. Alternative Sourcing Coalition: Mixed + mobile \u2192 d\u22480.48, f(d)\u22480.58. Moderate extraction because coalition has capital and can invest, but geopolitical barriers and capital concentration create asymmetry. Trade Regime: Institutional + constrained \u2192 d\u22480.65, f(d)\u22481.00. Moderate-high extraction; institutions that claim to manage dependency are themselves partly captured by exporter preferences. Analytical Observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain-seeking perspective that naturalizes dependency.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the extraction-vs-coordination ambiguity by demonstrating that REE dependency combines both: (1) genuine coordination problem (uneven geology requires international trade, supply integration), (2) genuine extraction mechanism (monopoly refining, supply weaponization, captured institutions). The mandatrophy is resolved by showing that the ratio shifts over time. In the 1990s-2010 period (\u03b5\u22480.35-0.42), the constraint was more coordination-heavy: REE supply was integrated into a global value chain with multiple participants and pricing discovery. Post-2020 (\u03b5\u22480.65-0.68), it shifted toward extraction-heavy: supply weaponization, trade blocs, geopolitical conditioning. The rising extractiveness trajectory (0.42 \u2192 0.68) shows the transition from coordination to extraction. Neither snare nor rope alone captures this; the snare classification reflects the current state (\u03b5 > 0.66, suppression > 0.60), but the historical rope classification would be accurate for the earlier period. The alternative-sourcing coalition's tangled-rope perspective captures the future state if investments succeed: a genuinely mixed mechanism with reduced monopoly power. The mandatrophy is thus resolved by indexing to time horizon and observational depth \u2014 the constraint is extractive from the immediate/biographical perspective of dependent nations, but mixed from the generational perspective of alternative sourcing."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain",
+      "renewable_energy_manufacturing",
+      "defense_industrial_base",
+      "technological_sovereignty"
+    ],
+    "dual_formulation_note": "REE dependency decomposes into three distinct constraint stories by observable: (1) geological constraint (\u03b5\u22480.08, Mountain) \u2014 uneven element distribution is immutable, (2) refining bottleneck (\u03b5\u22480.42, Tangled Rope) \u2014 concentrated refining capacity is contingent and addressable, (3) geopolitical weaponization (\u03b5\u22480.68, Snare) \u2014 supply restriction as political leverage. This story addresses the third decomposition. The first (geology) is the upstream constraint; the second (refining) is intermediate; the third (weaponization) is downstream and most extractive. All three must be linked for complete constraint family analysis."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

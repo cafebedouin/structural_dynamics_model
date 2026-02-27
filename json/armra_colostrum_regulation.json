@@ -2,24 +2,25 @@
   "header": {
     "constraint_id": "armra_colostrum_regulation",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "armra"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.71,
-    "claimed_type": "snare",
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
     "human_readable": "Regulatory Oversight of ARMRA Colostrum Supplement Claims",
-    "topic_domain": "economic",
+    "topic_domain": "economic/regulatory/health",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "armra_corporation",
-      "supplement_industry_lobby"
+      "supplement_manufacturer",
+      "regulatory_agencies"
     ],
     "victims": [
-      "health_seeking_consumers",
-      "evidence_based_medicine_advocates"
+      "consumer_health_protection",
+      "medical_verification_standards"
     ]
   },
   "perspectives": [
@@ -29,8 +30,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Health-Seeking Consumer",
-      "comment": "PERSPECTIVE 1: CONSUMER (SNARE) — Trapped by information asymmetry and sophisticated marketing. The consumer pays a premium for benefits that are not rigorously substantiated by clinical evidence, bearing the full cost of the product and the risk of inefficacy. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.97."
+      "label": "The Vulnerable Consumer",
+      "comment": "PERSPECTIVE 1: VULNERABLE CONSUMER (SNARE) \u2014 Cannot easily distinguish legitimate supplement benefits from unverified marketing claims. Lacks resources to conduct independent verification. Bears full cost of purchasing ineffective products or experiencing harm from unsubstantiated health claims. No meaningful exit option \u2014 consumers must choose within the regulatory framework as it exists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Medical Community",
+      "comment": "PERSPECTIVE 2: MEDICAL COMMUNITY (TANGLED ROPE) \u2014 Experiences both coordination benefit (supplement regulation enables consumer health monitoring) and extraction (regulatory gaps allow unverified claims to undermine evidence-based medicine). Constrained by regulatory frameworks but also invested in maintaining professional authority. Moderate power but restricted exit options due to licensing/liability constraints."
     },
     {
       "classification_type": "rope",
@@ -38,87 +48,114 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "ARMRA Corporation",
-      "comment": "PERSPECTIVE 2: ARMRA (ROPE) — The company experiences the regulatory framework (DSHEA) as a pure coordination mechanism. It provides clear, albeit lax, rules for market entry and marketing claims, allowing them to operate profitably with minimal pre-market friction. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08."
+      "label": "The Supplement Manufacturer",
+      "comment": "PERSPECTIVE 3: SUPPLEMENT MANUFACTURER (ROPE) \u2014 Experiences regulatory oversight primarily as coordination mechanism enabling market access. ARMRA benefits from FDA oversight that legitimizes supplement category, creates consumer confidence, and establishes market structure. Can arbitrage regulatory ambiguity (DSHEA loopholes) while maintaining institutional legitimacy through selective compliance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Movement",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized actors (consumer advocacy, independent researchers, progressive regulators) see supplement regulation as a temporary coordination failure with sunset potential. Proposed reforms (strengthened pre-market testing, claims substantiation requirements, post-market surveillance) represent sunset mechanisms. Constraint structure shows declining theater as verification standards tighten. Sunset horizon: 10-15 years for stricter pre-market evidence requirements."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Regulatory Agency (FDA/FTC)",
-      "comment": "PERSPECTIVE 3: REGULATOR (PITON) — The DSHEA framework is a legacy constraint. Its primary consumer-facing feature, the disclaimer, is largely performative. Enforcement is post-market and resource-limited, making the system's function of ensuring efficacy atrophied. The theater_ratio of 0.71 meets the Piton gate (≥0.70)."
+      "label": "The Dietary Supplement Health and Education Act Framework",
+      "comment": "PERSPECTIVE 5: DSHEA REGULATORY FRAMEWORK (PITON) \u2014 The 1994 Dietary Supplement Health and Education Act created a regulatory regime that appears functional but is substantially performative. Supplements are regulated under weaker standards than drugs despite similar health claims. The framework persists through institutional inertia and industry lobbying despite acknowledged gaps in verification (manufacturer burden of proof is minimal). Theater ratio reflects performative compliance rituals (structure-function claims, disclaimer labels) that create appearance of regulation without robust verification."
     },
     {
-      "classification_type": "snare",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL (SNARE) — The observer sees a system where the coordination function is trivial compared to the extraction. The legal framework actively enables the transfer of wealth from hopeful consumers to producers based on scientifically weak claims. The high suppression and extraction values classify it as a Snare. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.94."
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 6: REGULATORY AGENCY (TANGLED ROPE) \u2014 The FDA (and related agencies) experiences both coordination benefit (establishing supplement category rules enables market and consumer choice) and extraction (underfunded enforcement, industry capture risk, liability exposure from inadequate oversight). Institutional power but constrained by budget limits, political pressure from supplement industry, and legal frameworks favoring manufacturer claims. Active enforcement required but imperfectly implemented."
     }
   ],
   "omegas": [
     {
-      "id": "clinical_efficacy",
-      "question": "What is the actual clinical efficacy of this specific bovine colostrum product for the broad health claims being made?",
-      "resolution_mechanism": "Large-scale, independent, double-blind, placebo-controlled randomized clinical trials (RCTs) targeting the specific claims.",
-      "impact": "If efficacy is high and broad, base extractiveness (ε) would plummet, and the constraint would re-classify as a Rope. If efficacy is low or non-existent, the Snare classification is strongly confirmed.",
+      "id": "efficacy_standard_definition",
+      "question": "Should colostrum supplement claims be verified to the same standard as pharmaceutical drugs, or do weaker nutritional supplement standards appropriately reflect different risk profiles?",
+      "resolution_mechanism": "Comparative analysis of actual adverse event rates, health outcome data, and clinical verification costs for colostrum-specific claims versus comparable pharmaceutical interventions",
+      "impact": "If pharmaceutical standard required: ARMRA and similar manufacturers face significantly higher verification costs, reducing extractiveness. If current standard appropriate: current regulatory structure validated. Likely shifts classification across multiple perspectives.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Uncertainty over the product's true clinical efficacy vs. marketed claims."
+      "type_class": "conceptual",
+      "description": "Appropriate evidence standard for supplement health claims"
     },
     {
-      "id": "disclaimer_influence",
-      "question": "To what extent does the mandatory FDA disclaimer ('This statement has not been evaluated...') actually influence consumer purchasing behavior?",
-      "resolution_mechanism": "Consumer behavior studies, A/B testing of marketing materials with and without the disclaimer, and market surveys.",
-      "impact": "If the disclaimer significantly deters purchases, the theater_ratio is lower than estimated. If it has no effect or a backfire 'legitimacy' effect, the theater_ratio is confirmed or even higher.",
+      "id": "manufacturer_capture_extent",
+      "question": "To what degree does the supplement industry's political influence over regulatory agencies (FDA, FTC) prevent enforcement of existing rules against unsubstantiated claims?",
+      "resolution_mechanism": "Analysis of FTC enforcement patterns against supplement manufacturers; investigation of agency budget allocation; examination of regulatory comment processes and industry participation rates; case studies of enforcement gaps relative to documented violations",
+      "impact": "If capture is extensive: suppression value should increase (0.65 \u2192 0.75+), manufacturing perspective shifts from Rope toward Snare disguised as Rope. If limited: suppression overestimated and current institutional framework functional.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The actual behavioral impact of the performative regulatory disclaimer."
+      "description": "Degree of regulatory capture by supplement industry"
     },
     {
-      "id": "dshea_intent",
-      "question": "Was the lack of pre-market efficacy testing in DSHEA an unavoidable political compromise or a deliberate feature to protect industry interests?",
-      "resolution_mechanism": "Historical and political analysis of the legislative record and lobbying efforts surrounding the passage of DSHEA in 1994.",
-      "impact": "Resolving this clarifies the constraint's origin story: a deliberate Snare designed for extraction vs. a Tangled Rope that degraded into a Snare over time.",
+      "id": "consumer_verification_accessibility",
+      "question": "Can ordinary consumers access reliable information distinguishing verified colostrum benefits from marketing claims, or is the information asymmetry structural and unavoidable within current frameworks?",
+      "resolution_mechanism": "User testing of FDA labeling, independent verification sources (Cochrane reviews, ConsumerLabs), and cost/time required for a median consumer to validate a single claim",
+      "impact": "If accessible: consumer powerlessness partially exaggerated; classify toward Tangled Rope. If structural: validates Snare perspective for vulnerable consumers; suppression estimate confirmed or increased.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Consumer accessibility to claim verification"
+    },
+    {
+      "id": "colostrum_specific_evidence_base",
+      "question": "What is the actual clinical evidence base for specific health claims made by ARMRA (immune support, gut health, athletic recovery)? Does evidence exist, and if so, is it being suppressed in marketing, or is marketing claims outpacing evidence?",
+      "resolution_mechanism": "Systematic review of peer-reviewed literature on colostrum supplementation; comparison of published evidence to marketing claims; identification of claimed benefits lacking published evidence",
+      "impact": "If evidence supports most claims: extractiveness should decrease (0.52 \u2192 0.35-0.40), multiple perspectives shift toward Rope. If evidence sparse: extractiveness confirmed or increased, Snare classification for consumers strengthened.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Clinical evidence base for ARMRA colostrum claims"
+    },
+    {
+      "id": "sunset_reform_credibility",
+      "question": "Are proposed regulatory reforms (pre-market substantiation, strengthened post-market surveillance) realistic within 10-15 years, or is the DSHEA framework institutionally entrenched and unlikely to be substantially tightened?",
+      "resolution_mechanism": "Legislative tracking, congressional reform proposals, agency budget trends, comparative analysis of recent supplement regulation changes in other jurisdictions (EU, Canada)",
+      "impact": "If realistic: Scaffold perspective validated, constraint has genuine sunset structure. If entrenched: Scaffold is aspirational rather than structural; piton perspective dominates; constraint persistence extends beyond sunset horizon.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "The original legislative intent behind the regulatory framework's structure."
+      "type_class": "preference",
+      "description": "Credibility of regulatory reform sunset mechanisms"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.5
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.6
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.71
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.55
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
       "time_point": 30,
-      "value": 0.68
+      "value": 0.52
     }
   ],
   "interval": {
@@ -126,19 +163,34 @@
     "end": 30
   },
   "commentary": {
-    "narrative_context": "This constraint models the regulatory environment for dietary supplements in the United States, as established by the Dietary Supplement Health and Education Act of 1994 (DSHEA), with a specific focus on the marketing claims of ARMRA, a high-end colostrum supplement. DSHEA allows companies to make 'structure/function' claims without prior FDA approval for efficacy, creating a significant gap between marketing and scientifically validated benefits. This creates a system where consumers bear the financial and health risks based on persuasive advertising, while the company benefits from high-margin sales under a permissive legal framework.",
+    "narrative_context": "ARMRA and similar colostrum supplement companies operate within a regulatory landscape that exhibits hybrid coordination-extraction characteristics. The constraint arises from the tension between the legitimate market for nutritional supplements (a coordination function\u2014establishing category rules, enabling consumer choice, reducing information chaos) and the systematic gaps in verification standards that allow manufacturers to make health claims with minimal substantiation. This creates asymmetric extraction: the manufacturer benefits from regulatory ambiguity while consumers and medical standards bear the cost of unverified claims. The 1994 Dietary Supplement Health and Education Act (DSHEA) created a regulatory regime that appears to coordinate the supplement market but actually permits manufacturers to claim health benefits with far weaker evidence than would be required for pharmaceuticals. ARMRA's colostrum supplements exploit this gap\u2014marketing immune-system benefits, gut-health improvements, and athletic recovery claims that, while plausibly supported by some research, are presented with greater certainty than the evidence base justifies. The regulatory constraint combines genuine coordination (the supplement category exists, is legally defined, and enables consumer access to products) with substantial extraction (manufacturers capture value through weak verification standards; consumers bear information asymmetry costs; medical systems bear reputational costs when unverified claims undermine evidence-based medicine). Theater has increased over the interval as marketing sophistication has outpaced regulatory oversight capacity, and as manufacturers have learned to craft claims that technically comply with labeling rules while conveying stronger efficacy implications than substantiated.",
     "key_agents": [
-      "ARMRA Corporation: Primary beneficiary (institutional/arbitrage) - Leverages the lax regulatory environment to market aggressively and capture revenue.",
-      "Health-Seeking Consumers: Primary victim (powerless/trapped) - Subject to information asymmetry, paying high prices for products with uncertain benefits.",
-      "Regulatory Agencies (FDA/FTC): Institutional enforcer (institutional/constrained) - Operates under a legal mandate (DSHEA) that limits its ability to regulate efficacy, resulting in a largely performative role.",
-      "Scientific/Medical Community: Analytical observer (analytical/analytical) - Evaluates the gap between marketing claims and clinical evidence."
+      "ARMRA (Supplement Manufacturer): Primary beneficiary (institutional/arbitrage) \u2014 captures market value through DSHEA regulatory gaps; can make health claims with minimal pre-market verification",
+      "Vulnerable Consumers: Primary victim (powerless/trapped) \u2014 unable to distinguish verified benefits from marketing; bear information asymmetry cost; no practical exit option within current framework",
+      "Medical Community: Secondary victim (moderate/constrained) \u2014 experiences extraction through regulatory gaps that allow unverified claims to undermine evidence-based practice; constrained by professional accountability standards",
+      "FDA/FTC Regulatory Agencies: Institutional actor (institutional/constrained) \u2014 experience both coordination benefit (establish supplement market rules) and extraction (underfunded enforcement, political pressure, industry capture risk)",
+      "Consumer Advocacy / Reform Coalition: Organized actor (organized/constrained) \u2014 pushing for stricter pre-market evidence requirements and sunset mechanisms; see current framework as temporary failure awaiting reform",
+      "DSHEA Regulatory Framework: Institutional structure (institutional/arbitrage) \u2014 maintains performative compliance ritual (disclaimer labels, structure-function claims) that creates appearance of regulation without robust verification; persists through inertia"
     ],
-    "logic_rationale": "Extractiveness (0.68) is high, reflecting the premium price of the product relative to the uncertain and often narrowly-supported scientific evidence for its broad claims. Suppression (0.75) is high due to powerful, direct-to-consumer marketing that bypasses medical professionals and creates a strong narrative that is difficult for individuals to counter-research. Theater Ratio (0.71) is high because the primary regulatory mechanism visible to consumers—the FDA disclaimer—is a performative ritual that does little to curb marketing influence, while substantive enforcement is slow and reactive.",
-    "perspectival_gap": "The gap is stark. The beneficiary (ARMRA) sees a legitimate Rope, a set of rules for doing business. The victim (consumer) experiences a Snare, trapped by marketing and paying for hope. The regulator, constrained by its own rules, sees a Piton—a system that persists through inertia despite its functional decay in ensuring product efficacy. The analytical observer concurs with the victim, classifying the system as a Snare where the extraction function dominates any pretense of coordination.",
-    "directionality_logic": "Directionality is derived from structural positions. ARMRA, as a beneficiary with arbitrage exit, has a low 'd' value, resulting in negative effective extraction (χ < 0), hence a Rope classification. The consumer, as a victim with trapped exit, has a high 'd' value, leading to maximally amplified extraction (χ > 0.9), a clear Snare. The regulator's Piton classification is driven by the high theater_ratio, not extraction. The analytical observer's high 'd' value reflects a clear view of the extractive dynamics.",
-    "mandatrophy_analysis": "This case resolves a common mandatrophy: mistaking any form of government regulation for a legitimate coordination mechanism (Rope or Tangled Rope). The indexical analysis demonstrates that a regulatory framework can function as a pure Snare from the perspective of its target. By focusing on the structural realities of information asymmetry, enforcement limitations, and financial extraction, the system correctly identifies the constraint's primary function as extractive, despite its legalistic, coordinated appearance."
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. ARMRA and similar manufacturers systematically extract value through regulatory arbitrage\u2014they can make health claims that would be prohibited for pharmaceuticals. This is not accidental; it is enabled by DSHEA's weaker standard for supplements. However, the extraction is not absolute (0.70+) because: (1) some consumer value is genuine\u2014colostrum does have some documented nutritional properties; (2) the manufacturer does bear some verification burden and liability risk; (3) regulatory agencies do occasionally enforce against clearly false claims. The 0.52 value reflects sustained extraction with meaningful but limited verification friction. Suppression (0.65): High but not maximal. Information asymmetry is substantial\u2014most consumers cannot conduct independent verification of health claims. Barriers to exit include: (1) low cost of misleading claims (manufacturer risk is minimal under DSHEA); (2) difficulty distinguishing legitimate from inflated claims; (3) marketing sophistication that operates within legal bounds while implying stronger efficacy than substantiated. However, suppression is not complete (0.85+) because: (1) some independent verification sources exist (Cochrane reviews, ConsumerLabs); (2) medical professionals can and do educate consumers about claim verification; (3) social media enables distributed scrutiny and negative feedback. Theater ratio (0.68): High. The regulatory compliance ritual is substantially performative. ARMRA can post disclaimer labels ('These statements have not been evaluated by the FDA...') that technically satisfy DSHEA while allowing marketing that conveys health benefits. Regulatory review is performative\u2014agencies lack resources to verify claims pre-market; post-market surveillance relies primarily on adverse event reporting, which misses inefficacy. The 0.68 value and rising trajectory reflect increasing gap between regulatory appearance (rules exist, labels are posted) and regulatory function (manufacturers systematically operate at the boundary of permissible claims).",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence across structural positions. ARMRA's institutional perspective is Rope\u2014they experience regulatory oversight as coordination that enables their market and provides arbitrage opportunities (they can make claims competitors cannot under different regulatory regimes). The vulnerable consumer's perspective is Snare\u2014they experience pure extraction with no exit option and no ability to distinguish marketing from verification. The medical community experiences Tangled Rope\u2014they benefit from a defined supplement category (coordination) but suffer reputational cost when unverified claims undermine evidence standards (extraction). The regulatory agency also experiences Tangled Rope\u2014they coordinate the supplement market but are simultaneously captured and underfunded, constraining their enforcement capacity. The reform coalition experiences Scaffold\u2014they see the current framework as temporary coordination failure with sunset potential (stricter evidence standards). The DSHEA framework itself appears as Piton\u2014the regulatory regime is largely performative (high theater), persists through institutional inertia and industry lobbying, and its core function (ensuring supplement safety and efficacy) has atrophied relative to its size and claimed authority. The perspectival gap widens with power: beneficiaries (ARMRA, regulatory agencies) see coordination; victims (consumers, medical standards) see extraction; organized reformers see a temporary failure with repair mechanisms.",
+    "directionality_logic": "Directionality is structured by structural position relative to the extraction flow. ARMRA benefits from regulatory arbitrage\u2014they are the primary extractor. Their institutional power and arbitrage options (they can operate in less-regulated jurisdictions, can reformulate claims slightly to maintain compliance) give them low directionality (d \u2248 0.15-0.25). Vulnerable consumers are the primary victims\u2014trapped (no practical alternative supplement sources), powerless (cannot verify claims), they experience maximum directionality (d \u2248 0.90-0.95). The regulatory agency sits between: they are technically beneficiaries (industry stakeholders provide funding/political support) but also victims (they are blamed for inadequate oversight, bear political pressure from reformers). Their constrained exit (they cannot easily ignore pressure from either industry or advocates) and institutional power produce moderate directionality (d \u2248 0.50-0.60). The medical community is victims in the extraction chain (unverified claims undermine their authority) but moderate power and constrained (not trapped) exit produce moderate-high directionality (d \u2248 0.65-0.75). Reform advocates are organized with constrained exit, giving them moderate directionality (d \u2248 0.50-0.60) but with lower experienced extraction because their power is collective and growing.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint demonstrates the critical distinction between Tangled Rope (hybrid coordination-extraction) and Snare (pure extraction disguised as coordination). The core mandatrophy question is: 'Does DSHEA create a genuine coordination mechanism for supplements, or does it primarily enable extraction while claiming coordination?' The empirical answer is structured by perspective. From ARMRA's view, DSHEA genuinely coordinates the market\u2014it establishes legal framework, reduces transaction costs, and creates consumer confidence in a product category. This is a real coordination benefit. From the consumer's view, DSHEA is a Snare\u2014it creates appearance of regulatory protection (the disclaimer label) while permitting the extraction (unverified claims). From the medical community's view, it is Tangled Rope\u2014it solves the real problem of defining supplement category (coordination) but enables harm to evidence-based medicine (extraction). The resolution is that the mandatrophy is genuine and not resolvable to a single type: DSHEA IS a hybrid. It genuinely coordinates the supplement market AND systematically extracts from consumers through information asymmetry. The framework works as designed by its architects (coordination for manufacturers, lighter touch than pharma) but this design choice creates systematic extraction from those with weaker bargaining power (consumers, medical standards). The Tangled Rope classification at the regulatory agency perspective captures this hybrid: the agency experiences both coordination function and extraction pressure. The Snare classification at the consumer perspective is legitimate\u2014they experience pure extraction. No single type describes all perspectives because the constraint itself is a hybrid that benefits some parties through coordination and extracts from others through verification gaps."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "supplement_marketing_claims_verification",
+      "fda_enforcement_capacity_bottleneck"
+    ],
+    "dual_formulation_note": "The ARMRA colostrum constraint is downstream of DSHEA regulatory framework (constraint_dietary_supplement_regulation) and upstream of specific claim verification mechanisms. DSHEA establishes the weak verification standard; ARMRA exploits that standard; verification bottlenecks prevent enforcement. These three constraints form a family with distinct epsilon values reflecting different structural positions: DSHEA framework (\u03b5 \u2248 0.45, organizational/institutional), ARMRA implementation (\u03b5 \u2248 0.52, manufacturer perspective), and enforcement gaps (\u03b5 \u2248 0.60, victim/reformer perspective)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
 }

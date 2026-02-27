@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "oscar_campaign_spending",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oscar"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Oscar Campaign Spending Limits",
+    "topic_domain": "social/entertainment_industry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industry_insiders",
+      "established_studios"
+    ],
+    "victims": [
+      "independent_producers",
+      "emerging_artists",
+      "award_system_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Emerging Independent Producer",
+      "comment": "PERSPECTIVE 1: EMERGING INDEPENDENT PRODUCER (SNARE) \u2014 Trapped by resource constraints. Cannot afford competitive campaign spending to achieve visibility. Industry norms establish an unwritten spending floor that determines eligibility. No realistic exit from the system without abandoning awards recognition. Full extraction: the constraint forces choice between competing on financiers' terms or accepting obscurity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Studio",
+      "comment": "PERSPECTIVE 2: MID-TIER STUDIO (TANGLED ROPE) \u2014 Constrained by both coordination needs (must participate in industry award system for prestige) and extraction costs (spending floors limit profitability). Benefits from participation in the award ecosystem through marketing and talent credibility; costs from campaign spending requirements. Mixed experience: genuine coordination function with asymmetric extraction imposed on those with fewer resources."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Major Studio",
+      "comment": "PERSPECTIVE 3: MAJOR STUDIO (ROPE) \u2014 Institutional actor with arbitrage capacity. Campaign spending is a budgeted line item; the constraint appears as pure coordination (communicating film excellence to voters). Net beneficiary through prestige capture and talent recruitment. Can exit into direct-to-consumer streaming if awards system becomes uneconomical. Experiences the spending limit as a coordination mechanism rather than extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Academy Reform Coalition",
+      "comment": "PERSPECTIVE 4: ACADEMY REFORM COALITION (SCAFFOLD) \u2014 Organized actors (critics, guild members, diversity advocates) pushing spending transparency and campaign limits. See the current constraint as a temporary failure mode being actively reformed. Reform initiatives (campaign spending caps, voting accessibility, blind screening) represent structured exit paths. Sunset logic: as transparency norms mature and voting accessibility increases, the spending-driven advantage decays. Estimated sunset: 5-10 years as digital screening and decentralized voting become standard."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Academy Award Institution",
+      "comment": "PERSPECTIVE 5: ACADEMY AWARD INSTITUTION (PITON) \u2014 The ceremonial prestige function persists through institutional inertia despite degraded legitimacy. Academy maintains award credibility through theatrical voting procedures and honor rituals, but the core selection mechanism (campaign spending as proxy for worthiness) is substantially performative. Theater ratio 0.65 reflects: ceremonial voting broadcasts, strategic screening events, and publicized voting processes that maintain the appearance of merit-based selection while material resources drive outcomes. The institution sees its own process as declining in function but maintains it through tradition."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (NATURAL LAW VIEW) \u2014 From a civilizational/global perspective, some correlation between resource allocation and prestige distribution appears inherent to human social hierarchies: scarcity of status and visibility rewards those who can command resources. This perspective naturalizes spending-based winnowing as immutable. However, structural data contradicts the mountain classification \u2014 the engine identifies this as a false summit. The spending-prestige correlation is contingent on specific institutional arrangements (closed voting, limited media pathways, concentration of resources), not on natural law. Alternative social technologies exist that decouple prestige from spending."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "spending_floor_threshold",
+      "question": "What campaign spending level constitutes a binding floor below which competitive viability collapses?",
+      "resolution_mechanism": "Historical analysis of nomination outcomes correlated with campaign spending by tier; threshold identification through logistic regression of spend-to-nomination probability",
+      "impact": "If threshold < $500k: many worthy films filtered out. If threshold > $2M: spending becomes pure theater. Determines whether constraint is extraction (trapped agents cannot reach floor) or coordination (floor reflects legitimate communication costs).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Campaign spending floor for competitive viability"
+    },
+    {
+      "id": "voter_spending_awareness",
+      "question": "To what degree do Academy voters actually condition their votes on knowledge of campaign spending vs. on perceived film quality?",
+      "resolution_mechanism": "Exit polling, voter surveys, blind comparison screening (same films presented with and without campaign metadata); correlation analysis between spend and votes controlling for film characteristics",
+      "impact": "If voters ignore spending: constraint is informational (spending communicates but doesn't determine). If voters heavily weight spending: constraint is extractive (spending dominates merit signals). Determines classification gap between major studios (who see coordination) and independents (who see extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Voter responsiveness to campaign spending signals"
+    },
+    {
+      "id": "alternative_distribution_viability",
+      "question": "Can emerging films achieve award visibility through mechanisms other than traditional campaign spending (festival circuits, digital discovery, guild outreach)?",
+      "resolution_mechanism": "Comparative outcome analysis: films nominated via traditional campaigns vs. festival-to-nomination pathway vs. digital/grassroots discovery; cost-effectiveness analysis of alternative visibility mechanisms",
+      "impact": "If alternatives viable: spending constraint is contingent institutional arrangement (potential scaffold exit path exists). If traditional pathway monopolizes visibility: spending is structural bottleneck (snare from emerging producer perspective). Determines whether sunset clause is realistic or aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of non-spending-dependent award pathways"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The informal spending limit in Oscar campaigns represents a structural constraint where the absence of explicit rules creates extractive behavioral patterns. Industry custom establishes an unwritten floor ($500k\u2013$2M range) below which competitive visibility becomes impossible, yet no ceiling exists; films with production budgets exceeding $100M can spend indefinitely on campaigns. This creates asymmetric pressure: established studios with profit margins can absorb campaign costs as a line item; independent producers face zero-sum resource allocation between production quality and campaign visibility. The constraint exhibits all six DR types from different perspectives. For major studios, the spending norm is pure coordination\u2014it enables prestige signaling and talent recruitment. For independent producers, it is pure extraction\u2014spending becomes mandatory rent paid to the visibility gatekeepers. For the Academy institution itself, the spending-based winnowing is increasingly performative (theater_ratio 0.65): ceremonial voting processes maintain the appearance of merit-based selection while campaign resources drive material outcomes. The reform coalition sees a temporary failure mode with clear sunset paths (transparency, accessibility, blind screening). The analytical observer risks naturalizing what is contingent: spending-prestige correlation is not inherent to film quality or cultural value, but to specific institutional bottlenecks.",
+    "key_agents": [
+      "Major Studios: Primary beneficiaries (institutional/arbitrage) \u2014 absorb campaign costs as operational expenses; capture prestige and talent recruitment benefits; can exit into streaming if awards become uneconomical",
+      "Independent Producers: Primary victims (powerless/trapped) \u2014 cannot afford competitive spending floors; accept obscurity or external financing; no exit from the system without abandoning award recognition",
+      "Mid-Tier Studios: Secondary actors (moderate/constrained) \u2014 constrained by both participation incentives (prestige value) and extraction costs (spending floors); experience mixed coordination and asymmetric extraction",
+      "Academy Institution: Institutional degradation (institutional/arbitrage) \u2014 maintains award credibility through ceremonial procedures while material spending drives outcomes; sees own process as declining in legitimacy (piton classification)",
+      "Academy Reform Coalition: Organized resistance (organized/constrained) \u2014 pushing spending transparency, campaign limits, blind screening, voting accessibility; building alternative pathways; represents structured sunset mechanism",
+      "Film Critics and Awards Observers: Analytical perspective (analytical/analytical) \u2014 document the spending-outcome correlation; risk naturalizing contingent institutional arrangements as inherent properties of merit recognition"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The spending constraint functions as extraction for agents without resource liquidity (independent producers) and as coordination for institutional actors (major studios). The base value reflects that spending is neither optional (communication costs are real) nor uniformly devastating (some films succeed with limited campaigns). The value has risen from 0.35 over the 20-year interval as: (a) campaign costs have inflated faster than production budgets for mid-tier films, (b) digital marketing options have proliferated (increasing the floor), and (c) industry consolidation has reduced the number of viable alternative distribution pathways. Suppression (0.48): Moderate. Barriers to independent entry include: (a) limited access to campaign financing, (b) concentrated media buying power favoring established studios, (c) social proof effects (films with visible campaigns get presumed credibility), (d) institutional bias in voting pools. However, suppression is not total\u2014some independent films do succeed without major budgets (approximately 15-20% of nominations), and digital discovery mechanisms are creating new visibility pathways. Theater ratio (0.65): Moderate-high. The constraint operates substantially through performative mechanisms: ceremonial voting broadcasts, strategic press events, publicized 'campaign moments' that serve to legitimize outcomes rather than determine them. The theater has increased from 0.45 as: (a) campaigns have become more cinematic and event-focused (less substance, more spectacle), (b) voting procedures have become more ceremonial (to counter perceived bias), and (c) the correlation between campaign visibility and actual voter preference has weakened (suggesting the campaign is increasingly decorative rather than determinative).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Major studios see Rope\u2014pure coordination enabling prestige signaling. The Academy sees Piton\u2014a degraded institution maintaining form while substance erodes. Independent producers see Snare\u2014mandatory rent extraction with no exit. The reform coalition sees Scaffold\u2014a temporary problem being actively solved through transparency and accessibility reforms. Mid-tier studios see Tangled Rope\u2014mixed benefits (prestige access) and costs (mandatory spending). The civilizational analytical observer risks seeing Mountain (spending-prestige correlation as natural), but the structural data reveals this as a false summit. The perspectival gap between major studios and independent producers is 4-5 classification steps (Rope \u2192 Tangled Rope \u2192 Snare), reflecting complete inversion of whether the spending limit is beneficial (coordination) or harmful (extraction).",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position: (1) Major studios as beneficiaries with arbitrage capacity \u2192 low d (~0.15) \u2192 low/negative \u03c7 \u2192 experience Rope. (2) Independent producers as victims with trapped exit \u2192 high d (~0.90) \u2192 high \u03c7 \u2192 experience Snare. (3) Mid-tier studios as mixed (partial beneficiary, partial victim) with constrained exit \u2192 moderate d (~0.55) \u2192 moderate \u03c7 \u2192 experience Tangled Rope. (4) Reform coalition as organized actors building exit pathways \u2192 constrained exit with agency \u2192 moderate d (~0.45) \u2192 moderate \u03c7 \u2192 experience Scaffold (with sunset via reforms). (5) Academy institution as degraded beneficiary maintaining form \u2192 d (~0.20) \u2192 low \u03c7 but high theater \u2192 experience Piton (functional decay, institutional inertia). (6) Analytical observer has no structural position in the extraction flow \u2192 d (~0.72) \u2192 high analytical \u03c7 \u2192 analytical perspective that risks naturalizing contingent arrangements as natural law. The directionality derivation explains why identical base metrics (extractiveness, suppression) produce divergent classifications: the observer's structural relationship to the constraint determines how they experience it."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "film_festival_prestige_hierarchy",
+      "entertainment_industry_access_inequality",
+      "award_system_voter_diversity"
+    ],
+    "dual_formulation_note": "The Oscar spending constraint is upstream of festival prestige hierarchies and downstream of broader entertainment industry inequality. The constraint decomposes into two structural claims: (1) Campaign Spending Floor (\u03b5~0.30, Rope from industry view, Scaffold from reform view) \u2014 legitimate communication costs for visibility. (2) Spending-Outcome Correlation (\u03b5~0.68, Snare from outsider view, Piton from institution view) \u2014 the material coupling of spending to nominations, driven by concentrated media buying and social proof effects. These are distinct \u03b5 values reflecting different structural mechanisms. Both are captured in the unified story via perspectival variance in experienced \u03c7."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

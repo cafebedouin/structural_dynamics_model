@@ -2,25 +2,26 @@
   "header": {
     "constraint_id": "bureaucratic_legibility_collapse",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bleq"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.8,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.81,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Administrative Whiteout",
+    "human_readable": "The Administrative Whiteout: Legibility Collapse in Bureaucratic Systems",
     "topic_domain": "political/organizational/informational",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "central_planning_bureaucracy",
-      "metric_auditing_firms"
+      "administrative_apparatus",
+      "metric_designers"
     ],
     "victims": [
-      "managed_population",
-      "front_line_implementers",
-      "ecological_systems"
+      "field_practitioners",
+      "intended_beneficiaries",
+      "system_accountability"
     ]
   },
   "perspectives": [
@@ -30,8 +31,35 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Managed Population",
-      "comment": "PERSPECTIVE 1: MANAGED POPULATION (SNARE) — Experiences the direct, negative consequences of policies based on flawed metrics. They are trapped in a system whose actions are arbitrary and harmful, with no recourse or ability to correct the institutional map. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.97."
+      "label": "The Street-Level Worker",
+      "comment": "PERSPECTIVE 1: STREET-LEVEL WORKER (SNARE) \u2014 Teachers, social workers, nurses, frontline staff are trapped between contradictory directives: gaming metrics to satisfy auditors while actual work demands deviate from measured performance. No exit option without losing livelihood. Bears extraction through emotional labor, ethical compromise, and career suppression. Maximum experienced extractiveness."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Intended Beneficiaries",
+      "comment": "PERSPECTIVE 2: INTENDED BENEFICIARIES (SNARE) \u2014 Citizens, patients, students who the system claims to serve experience degraded service quality as frontline staff redirect effort to metric optimization. Cannot exit the system (compulsory education, healthcare dependency, civic participation). Bear extraction in form of worse-than-intended outcomes masked by statistical improvement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Measurement Bureaucracy",
+      "comment": "PERSPECTIVE 3: MEASUREMENT BUREAUCRACY (TANGLED ROPE) \u2014 Auditors, inspectors, metric designers benefit from the legitimacy their measurements confer (career advancement, institutional indispensability, budget justification). Also genuinely coordinate by creating common performance language. But extraction mechanism is hidden: perverse incentives harm the system they purport to improve. Constrained exit \u2014 auditors cannot admit metrics are counterproductive without dismantling their own authority."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Accountability Theater",
+      "comment": "PERSPECTIVE 4: ACCOUNTABILITY THEATER (PITON) \u2014 Modern governance rituals of transparency and measurement have largely become performative. The metrics persist because removing them appears to abandon accountability (reputational cost), not because they produce accountability. Theater ratio is elevated: audit processes, performance reviews, compliance documentation continue despite widespread recognition of perversity. Institutional inertia maintains the ritual."
     },
     {
       "classification_type": "rope",
@@ -39,105 +67,96 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Central Planners",
-      "comment": "PERSPECTIVE 2: CENTRAL PLANNERS (ROPE) — Perceive the system as a necessary coordination tool. The metrics provide a simplified, legible view that enables decision-making at scale. Negative feedback is filtered or dismissed as local noise. They benefit from the illusion of control. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08."
+      "label": "The Senior Administration",
+      "comment": "PERSPECTIVE 5: SENIOR ADMINISTRATION (ROPE) \u2014 Benefits from metrics as coordination solution: aggregated data enables central control, budget allocation appears rational, performance standards create common language across decentralized units. Extraction mechanism is invisible to this perspective \u2014 they see coordination benefits without experiencing frontline perversity. Arbitrage exit: can dismiss problems as poor implementation rather than system design."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Front-Line Implementer",
-      "comment": "PERSPECTIVE 3: FRONT-LINE IMPLEMENTER (TANGLED ROPE) — Caught between the official metrics and ground truth. They must enforce policies they know are counterproductive to meet performance targets, making them both agents of the system's extraction and victims of its dysfunction. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.62."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Veteran Bureaucrat",
-      "comment": "PERSPECTIVE 4: VETERAN BUREAUCRAT (PITON) — Remembers when the metrics were more closely aligned with reality. Sees the current system as a degraded, inertial version of its former self, where performative compliance has replaced functional purpose. The theater_ratio of 0.80 triggers the piton classification."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
       "spatial_scope": "national",
       "label": "The Reform Coalition",
-      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) — A group of auditors, journalists, and activists working to introduce alternative metrics and accountability. They see the current system as a temporary, failing structure that must be dismantled and replaced, viewing their own efforts as the sunset clause. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.51."
+      "comment": "PERSPECTIVE 6: REFORM COALITION (TANGLED ROPE) \u2014 Advocates for evidence-based reform, system improvement, metric modernization benefit from legitimacy of 'better measurement' framing. Also genuinely attempt to reduce perverse incentives. But constrained by political feasibility: cannot fully escape measurement discourse without losing credibility. Mixed benefit/extraction: they advance some improvements while reinforcing the measurement paradigm itself."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) — Sees the full structure: a high-extraction, high-suppression system where a coordination claim masks a reality-inverting machine. The combination of ε=0.68, suppression=0.75, and high theater (0.80) classifies it as a severe snare, where the primary extraction is reality itself. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.94."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / GOODHART'S LAW (MOUNTAIN) \u2014 From a universal/civilizational perspective, some decoupling between measure and reality is inherent to measurement itself: any metric good enough to use as a target becomes subject to manipulation. This perspective sees the bottleneck as an immutable mathematical truth \u2014 a constraint on governance systems. However, the structural data reveals this as potential false summit: the severity of decoupling (theater ratio 0.81, extraction 0.58) is contingent on institutional design choices, not inevitable."
     }
   ],
   "omegas": [
     {
-      "id": "intent_vs_drift",
-      "question": "Was the legibility collapse an intentional outcome designed to obscure failure and extract resources, or an emergent property of bureaucratic drift and complexity?",
-      "resolution_mechanism": "Archival analysis of the system's design principles and initial metric selection criteria, compared with longitudinal data on performance and resource allocation.",
-      "impact": "If intentional, the system is a pure Snare from its inception. If emergent drift, it began as a Rope or Scaffold and degraded into a Piton/Snare, which has different implications for reform.",
+      "id": "measure_reality_decoupling_threshold",
+      "question": "At what degree of metric-reality decoupling does a measurement system transition from 'imperfect coordination' to 'pure extraction theater'?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions with different audit intensities; correlation between metric compliance and actual outcome improvement; longitudinal tracking of metric predictive validity",
+      "impact": "If threshold is low (decoupling occurs quickly): measurement systems are inherently destabilizing. If threshold is high (systems maintain validity under pressure): measurement is viable coordination tool and extraction mechanism is policy choice, not invariant.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Distinguishing between intentional design and emergent bureaucratic drift"
+      "type_class": "empirical",
+      "description": "Threshold at which metric-reality decoupling becomes severe"
     },
     {
-      "id": "reversibility_threshold",
-      "question": "Is there a point of metric-reality decoupling beyond which an institution cannot recover its ability to see accurately?",
-      "resolution_mechanism": "Comparative case studies of institutional reform efforts, correlating the degree of theater/extraction with the success or failure of interventions.",
-      "impact": "If a threshold exists, reform efforts past that point are futile, and the only solution is dissolution (a true sunset clause). If not, even deeply degraded systems are salvageable.",
+      "id": "frontline_metric_gaming_necessity",
+      "question": "Is metric gaming by frontline workers a rational response to contradictory demands, or a sign of moral failure in implementation?",
+      "resolution_mechanism": "Ethnographic analysis of metric-setting decisions vs frontline operational constraints; comparison of gaming rates under different incentive structures; identification of whether gaming is mathematically necessary to satisfy conflicting targets",
+      "impact": "If necessary: system design is the extraction mechanism. If optional: workers bear moral responsibility and extraction claim weakens. Determines whether victims classification is justified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether metric gaming is forced by system design or chosen by workers"
+    },
+    {
+      "id": "alternative_coordination_feasibility",
+      "question": "Can complex multi-unit bureaucracies function without quantified performance metrics, or are metrics a necessary condition for governance above a certain scale?",
+      "resolution_mechanism": "Historical comparison of pre-metric bureaucratic coordination mechanisms; study of organizations that have eliminated metrics; analysis of whether coordination can be maintained through narrative, reputation, or distributed decision-making",
+      "impact": "If feasible: measurement systems are not invariant (Mountain classification fails). Alternative coordination is possible and extraction mechanism is policy choice. If infeasible: measurement is structural necessity and perversity is unavoidable consequence \u2014 shifts classification toward Mountain.",
       "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether institutional decoupling from reality is reversible"
+      "type_class": "conceptual",
+      "description": "Whether bureaucratic coordination without metrics is feasible"
     },
     {
-      "id": "local_knowledge_viability",
-      "question": "Can complex, 'illegible' local knowledge be integrated into a large-scale administrative system without being destructively simplified?",
-      "resolution_mechanism": "Pilot programs testing federated or polycentric governance models against centralized, standardized ones.",
-      "impact": "If viable, it provides a structural alternative (Rope). If not, it suggests a hard limit on institutional scale, making some form of legibility collapse a Mountain-like constraint for large systems.",
+      "id": "metric_designer_awareness",
+      "question": "Do metric designers understand the perverse incentives their systems create, or are they genuinely surprised by real-world gaming and outcome inversion?",
+      "resolution_mechanism": "Analysis of metric design literature; interviews with designers about anticipated gaming; comparison of predicted vs actual perverse outcomes; institutional memory of past metric failures",
+      "impact": "If designers knew: extraction classification is stronger (intentional). If genuinely surprised: extraction mechanism is organizational blindness rather than designed capture. Affects directionality of measurement bureaucracy perspective.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Scalability of local knowledge vs. standardized metrics"
+      "description": "Degree of metric designer awareness of perverse incentives"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.65
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.8
+      "value": 0.81
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.68
+      "value": 0.58
     }
   ],
   "interval": {
@@ -145,25 +164,34 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "This constraint models the 'Administrative Whiteout,' a phenomenon where an institution's metrics for understanding and managing a domain become pathologically decoupled from reality. Inspired by James C. Scott's 'Seeing Like a State,' it describes a system where simplified, legible abstractions (statistics, targets, KPIs) supplant complex ground truth. The institution then acts upon this false map, leading to actions that are counterproductive or destructive in the real world, while appearing successful on paper. The system's primary function shifts from achieving its stated goals to maintaining the fiction of the metrics, creating a high-theater, high-extraction environment.",
+    "narrative_context": "Bureaucratic legibility collapse occurs when an institution's measurement and control systems become so decoupled from ground reality that the institution's corrective actions produce perverse outcomes \u2014 counterintuitively worsening the conditions they claim to address. This constraint represents a hybrid coordination-extraction mechanism: the measurement bureaucracy genuinely solves the coordination problem of aggregating information across large, decentralized organizations (coordination function) while simultaneously creating systematic incentives for frontline staff to optimize metrics rather than intended outcomes (extraction function). The constraint exhibits signatures across all six classification types, depending on observational position. Street-level workers experience it as a snare: trapped between contradictory directives (satisfy metrics vs serve actual needs), they game the system and experience extraction through ethical compromise. Intended beneficiaries experience it as a snare: service quality degrades as staff redirect effort to metric optimization, producing measured improvement alongside actual deterioration. The measurement bureaucracy experiences it as tangled rope: they coordinate information aggregation while extracting legitimacy from metrics they know are perverse. Senior administration experiences it as rope: they see pure coordination without experiencing frontline perversity. The analytical observer risks seeing this as an immutable natural law (Goodhart's Law: any metric good enough to target becomes gamed). However, the extractiveness value (0.58) and theater ratio (0.81) reveal this as a contingent institutional arrangement, not a mathematical inevitability. The constraint has intensified over the interval (theater rising from 0.52 to 0.81, extractiveness from 0.32 to 0.58) as audit regimes have proliferated and measurement proliferation has outpaced frontline capacity to simultaneously satisfy all targets.",
     "key_agents": [
-      "Central Planning Bureaucracy: Primary beneficiary (institutional/arbitrage) — benefits from the illusion of control and simplified reporting.",
-      "Managed Population: Primary victim (powerless/trapped) — suffers the real-world consequences of misguided policies.",
-      "Front-Line Implementers: Secondary victims (moderate/constrained) — forced to enforce rules they know are dysfunctional.",
-      "Reform Coalition: Organized agents (organized/mobile) — attempting to introduce accountability and better metrics.",
-      "Analytical Observer: Systems theorist (analytical/analytical) — sees the full, self-perpetuating structure of the collapse."
+      "Street-Level Workers (Teachers, Nurses, Social Workers): Primary victims (powerless/trapped) \u2014 compressed between metric targets and actual operational needs; no exit without losing livelihood",
+      "Intended Beneficiaries (Citizens, Patients, Students): Primary victims (powerless/trapped) \u2014 experience degraded service quality as providers redirect effort to metrics; compulsory system participation",
+      "Measurement Bureaucracy (Auditors, Inspectors, Metric Designers): Primary beneficiaries (organized/constrained) \u2014 gain career legitimacy and institutional indispensability from metrics; constrained exit because admitting perversity would undermine authority",
+      "Senior Administration (Institutional Leadership): Secondary beneficiary (institutional/arbitrage) \u2014 benefits from aggregated metrics enabling central control; arbitrage exit allows dismissal of problems as implementation failure",
+      "Reform Coalition (Metric Modernizers, Evidence Advocates): Mixed (moderate/constrained) \u2014 advance genuine improvements while reinforcing measurement paradigm; constrained by political feasibility of alternatives",
+      "System Accountability (Abstract Public Good): Victim (powerless/trapped) \u2014 measurement theater masks failures; no mechanism to signal that metrics have inverted from accountability tools to extraction theater"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The system extracts well-being, resources, and ecological health from the managed domain and converts it into 'successful' data points that fuel the bureaucracy. Suppression (0.75): High. The official metrics are enforced as the sole source of truth. Local, anecdotal, or contradictory knowledge is actively dismissed, delegitimized, or punished. Theater Ratio (0.80): Very High. The core activity of the institution becomes performative — generating reports, meeting targets, and conducting audits that validate the flawed map, rather than achieving real-world outcomes. This high theater score is crucial for the Piton perspective.",
-    "perspectival_gap": "The gap is profound. Central planners see a functional coordination mechanism (Rope) because the numbers on their dashboards add up. The managed population experiences an arbitrary, inescapable, and destructive force (Snare). Front-line workers are caught in a hybrid system of coercion and coordination (Tangled Rope). Veteran insiders see a degraded version of a once-functional system (Piton). This highlights how a single, dysfunctional structure can generate the full spectrum of classifications depending on the observer's position relative to the flow of information and consequences.",
-    "directionality_logic": "Beneficiaries (planners) have arbitrage exit — they can always change the metric or the narrative, leading to a low 'd' value and a Rope classification. Victims (population) are trapped, leading to a high 'd' value and a Snare classification. The analytical observer's classification as a Snare is driven by the objective high values of ε and suppression, which override any claims of coordination.",
-    "mandatrophy_analysis": "This case is a powerful resolver of mandatrophy. An external observer might mistake the institution's stated purpose ('coordination', 'management') for its actual function. The Deferential Realism framework, by centering the perspective of the powerless ('trapped' exit), correctly identifies the system's snare-like nature. The bureaucracy's claim to be a Rope is revealed as a perspectival illusion maintained by its structural position, not an objective description of the constraint."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The measurement bureaucracy extracts institutional legitimacy, career advancement, and autonomy from their role as arbiter of organizational performance. Street-level workers extract negative value through enforced metric gaming. The extraction is not total because some coordination benefits persist (aggregated data does enable some rational allocation) and some metric improvements do reflect genuine work. The trajectory from 0.32 to 0.58 reflects metric proliferation outpacing capacity \u2014 as audit regimes expand, gaming becomes more necessary and perversity more severe. Suppression (0.62): Moderate-high. Multiple barriers prevent recognition and reform: (1) metric designers face career incentive to defend existing systems; (2) senior administration benefits from metrics and lacks ground-level visibility into perversity; (3) public accountability logic makes admitting metric failure politically costly; (4) reform advocates are captured by measurement paradigm language (can only propose 'better metrics,' not non-metric governance). Theater ratio (0.81): High. Contemporary governance audit processes have become substantially performative. Performance reviews, compliance documentation, audit trails, and measurement rituals continue despite widespread informal recognition that metrics have inverted from accountability tools to accountability theater. The theater persists because removing it appears to abandon accountability itself.",
+    "directionality_logic": "Directionality derivation: (1) Street-level workers: powerless + trapped + victim \u2192 high d \u2192 high f(d) \u2192 high \u03c7. They experience maximum extraction because they have no exit and no benefit from the system. (2) Intended beneficiaries: powerless + trapped + victim \u2192 high d. They bear costs (degraded service) without benefits. (3) Measurement bureaucracy: organized + constrained + beneficiary \u2192 moderate d. They benefit from metric legitimacy (low d from beneficiary status) but face constrained exit (can't admit perversity without losing authority). Derivation produces moderate d \u2248 0.40, intermediate f(d). (4) Senior administration: institutional + arbitrage + beneficiary \u2192 very low d (\u22480.15). They experience benefits without experiencing victim costs; arbitrage exit allows them to reframe problems. (5) Reform coalition: moderate + constrained + mixed \u2192 d \u2248 0.50. They advance some improvements while reinforcing measurement language. (6) Analytical observer: analytical + analytical \u2192 d \u2248 0.72. They see the full structure but risk naturalizing it as inevitable.",
+    "perspectival_gap": "This constraint reveals maximum perspectival divergence because the same institutional measurement system appears beneficent to senior administration and extractive to street-level workers. Senior administration (Rope perspective) sees pure coordination: metrics enable aggregation, control, and rational resource allocation \u2014 this is their genuine experience because they do not see perverse incentives. Street-level workers (Snare perspective) see pure extraction: they are forced to optimize metrics at the cost of actual work quality \u2014 this is their genuine experience because they live the contradictions. The measurement bureaucracy (Tangled Rope) genuinely coordinates while extracting legitimacy. Intended beneficiaries (Snare) experience the outcome inversion: measured improvement masks actual quality decline. The reform coalition (Tangled Rope) attempts to reduce perversity while reinforcing the measurement paradigm. The analytical observer (Mountain risk) risks naturalizing this as inevitable law-of-nature rather than contingent design choice. The perspectival gap exists because the constraint's extraction mechanism is invisible from the beneficiary's height of hierarchy and maximally visible from the victim's frontline position.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint's classification as Tangled Rope (not Snare, not Rope) is justified by both coordination and extraction mechanisms being structurally necessary. The measurement bureaucracy simultaneously (1) solves a genuine coordination problem (enabling aggregation and communication across decentralized units) AND (2) creates systematic extraction incentives (gaming by frontline staff, outcome inversion, ethical compromise). The classification would fail the mandatrophy if the coordination function were merely performative or if it could be eliminated without degrading administration. But evidence suggests: (1) removing metrics entirely would degrade coordination across large bureaucracies; (2) the coordination and extraction mechanisms are structurally coupled through the same institutional apparatus; (3) reforming metrics without recognizing the extraction function leads to metric proliferation and intensified gaming (the measured trajectory from 0.32 to 0.58). The Tangled Rope classification stands because no subset of the structure reduces to pure coordination or pure extraction. Any resolution requires simultaneously acknowledging coordination benefits and extraction costs \u2014 the constraint cannot be solved by privileging either logic over the other."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "public_trust_in_institutions"
-    ]
-  }
+      "goodharts_law_metric_targeting",
+      "organizational_accountability_capture"
+    ],
+    "dual_formulation_note": "The administrative whiteout is a family of related constraints. Goodhart's Law (upstream, \u03b5\u22480.08, Mountain) represents the mathematical principle that any metric good enough to target becomes gamed. Organizational accountability capture (downstream, \u03b5\u22480.65, Snare) represents the institutional outcome where measurement systems completely invert to serve auditor interests. The bureaucratic legibility collapse (this story, \u03b5=0.58, Tangled Rope) represents the hybrid stage where coordination and extraction are still structurally coupled but decomposable through institutional redesign. All three share the measurement theme but have different extractiveness values reflecting different observational foci."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    }
+  ]
 }

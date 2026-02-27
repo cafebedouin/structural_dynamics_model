@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "help_to_buy_uk",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "htb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK 'Help to Buy' Equity Loan Scheme (2013-2023)",
+    "topic_domain": "economic/housing/fiscal_policy",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "property_developers",
+      "mortgage_lenders",
+      "government_fiscal_short_term"
+    ],
+    "victims": [
+      "future_homebuyers_priced_out",
+      "rental_market_affordability",
+      "public_fiscal_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Locked-Out Renter (Post-Scheme)",
+      "comment": "PERSPECTIVE 1: LOCKED-OUT RENTER POST-SCHEME (SNARE) \u2014 First-time buyers excluded from HTB face a housing ladder where prices have been artificially elevated by the scheme's demand stimulus. Bears the extraction (higher entry prices) with no coordination benefit. No arbitrage \u2014 locked out entirely from homeownership tier. Experiences maximum suppression: structural barriers to exit housing precarity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The HTB-Eligible First-Time Buyer",
+      "comment": "PERSPECTIVE 2: HTB-ELIGIBLE FIRST-TIME BUYER (TANGLED ROPE) \u2014 Receives genuine coordination benefit (access to homeownership that would otherwise be delayed or impossible). Also bears extraction: higher purchase prices than counterfactual market, equity loan structured as debt with negative equity risk, and participation locks buyer into specific property types/price bands. Mobile exit options (can decline scheme, seek rental, move regions) but real costs to exercising exit. Mixed experience: coordination benefit + asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Property Developers and Mortgage Lenders",
+      "comment": "PERSPECTIVE 3: DEVELOPERS AND LENDERS (ROPE) \u2014 Primary beneficiaries. HTB stimulates demand, justifies higher pricing, expands mortgage origination volume. Experience the constraint as pure coordination mechanism: scheme de-risks their market (government guarantees demand), reduces inventory overhang, enables higher margins through price capture. Arbitrage options: can ignore scheme and serve non-HTB buyers, but scheme makes their preferred market segment much more profitable. Extraction runs toward these agents."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Fiscal Stabilization Coalition",
+      "comment": "PERSPECTIVE 4: FISCAL STABILIZATION COALITION (SCAFFOLD) \u2014 Government bodies, housing charities, and policy reformers viewing HTB as temporary demand-support mechanism with explicit sunset (scheme ended 2023). See the scheme as a transitional coordination failure: inflated prices are temporary theater; real solution is supply-side reform (build more houses). Sunset clause is genuine \u2014 scheme was always intended to bridge a temporary affordability gap while supply caught up. Low effective extraction from this perspective because the coalition has agency and sees the exit path (supply expansion, scheme termination)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Housing Supply System",
+      "comment": "PERSPECTIVE 5: HOUSING SUPPLY SYSTEM (PITON) \u2014 The scheme's primary function was demand stimulus, but it operated in a housing market where supply constraints (planning restrictions, construction capacity, land availability) were immutable over the scheme's 10-year horizon. The constraint became increasingly performative: HTB's demand-side stimulus could not increase supply, so it inflated prices instead. Theater ratio increased over time as the gap widened between scheme intent (improve first-time buyer access) and actual effect (price capture). The supply system sees HTB as an inertial policy: maintained because alternatives weren't ready, but degraded in function relative to its stated purpose."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Fiscal Authority",
+      "comment": "PERSPECTIVE 6: PUBLIC FISCAL AUTHORITY (TANGLED ROPE) \u2014 Government as both enforcer and victim. Received coordination benefit: HTB subsidized demand during fiscal contraction (post-2008), supported construction employment, maintained housing market confidence. Also bore extraction: \u00a319.5 billion net government spend, negative equity risk on equity loans, opportunity cost (capital not available for supply-side investment or other programs). Constrained exit (politically committed to the scheme once launched; ending it was controversial) combined with both benefits and costs. Active enforcement required (loan administration, subsidy processing, default management)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Housing Economics View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a long-horizon universal perspective, demand-side subsidies without supply expansion are inherently self-defeating: they stimulate prices, not access. This is treated as an immutable property of housing economics. However, the structural data contradicts the mountain classification \u2014 the scheme had real coordination benefits (for eligible buyers, for developers, for fiscal stability), and was explicitly sunset. The 'immutable natural law' framing naturalizes what is actually a reversible policy choice and a real (if temporary and limited) coordination mechanism. Engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "counterfactual_household_formation",
+      "question": "How many additional households formed as a direct result of HTB access vs. would have formed through alternative financing or delayed purchase?",
+      "resolution_mechanism": "Longitudinal household formation data pre/post-HTB; comparison with regions/cohorts excluded from scheme; hazard analysis of time-to-purchase for eligible vs. ineligible buyers",
+      "impact": "If high contribution: HTB was genuine coordination mechanism (Rope/TangledRope justified). If low: demand simply substituted for other financing; scheme was primarily price-capture mechanism (Snare justified).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal impact of HTB on household formation rates"
+    },
+    {
+      "id": "housing_supply_elasticity_threshold",
+      "question": "At what supply elasticity would HTB have improved access rather than inflated prices? Was UK supply elasticity ever in that range?",
+      "resolution_mechanism": "Econometric analysis of regional price responses to HTB takeup vs. regional supply growth; estimation of supply elasticity by region and period",
+      "impact": "If UK elasticity was always low: scheme was structurally extractive from first-time buyers from inception (Snare). If elasticity varied by region/period: scheme was coordinating in some contexts, extractive in others (Tangled Rope justified).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Supply elasticity threshold for HTB effectiveness"
+    },
+    {
+      "id": "fiscal_opportunity_cost_alternative_uses",
+      "question": "What housing outcomes would \u00a319.5 billion have produced if deployed as supply-side subsidy (land purchase, planning reform, construction support) rather than demand-side subsidy?",
+      "resolution_mechanism": "Comparative housing policy analysis; cost-per-unit analysis of supply vs. demand-side interventions; modeling of counterfactual programs",
+      "impact": "If supply-side deployment would have been dramatically more effective: HTB was a fiscal trap (Snare from public perspective). If roughly equivalent: HTB's temporal urgency during fiscal contraction was justified (Scaffold/Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Alternative uses of HTB fiscal allocation"
+    },
+    {
+      "id": "negative_equity_crystallization_rate",
+      "question": "What fraction of HTB loans entered negative equity (property value < loan + mortgage) by scheme end? What is the actual or projected default and recovery rate?",
+      "resolution_mechanism": "Government housing agency data on HTB loan performance; property price changes by cohort and region; actual default and recovery rates; projections based on post-2023 market dynamics",
+      "impact": "If high crystallization and poor recovery: government bore massive extraction cost; fiscal impact was worse than declared (strengthens Snare classification from fiscal perspective). If low: risk was manageable; scheme was actually contained extraction (strengthens Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Negative equity crystallization and recovery rates"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK's Help to Buy scheme (2013-2023) exemplifies a policy constraint that combines genuine coordination benefits with asymmetric extraction, obscured by increasing performativity over time. Launched in response to post-2008 fiscal contraction and weak first-time buyer demand, the scheme offered government equity loans (up to 20% of purchase price for new homes, 15% for existing) to reduce required mortgage deposits. It was explicitly temporary \u2014 a demand-support bridge while housing supply expanded. In practice, HTB triggered a decade of price inflation that locked out excluded buyers, captured value for developers and lenders, and left government with \u00a319.5 billion in subsidy and significant negative equity exposure. The constraint exhibits all six classifications depending on perspective: snare for those excluded from the scheme who faced higher entry prices; tangled rope for eligible buyers who received access but bore price inflation and debt risk; rope for developers and lenders who captured coordinated demand stimulus; scaffold from policy reformers who see a temporary support structure with sunset logic; piton from the housing supply system which experienced performative demand stimulus without supply expansion; tangled rope from government as both enforcer and victim; and (falsely) mountain from analysts who naturalize demand-side subsidy failures as immutable economic law.",
+    "key_agents": [
+      "Eligible First-Time Buyers: Primary intended beneficiaries (moderate/mobile) \u2014 gained homeownership access but at higher entry prices; bore equity loan risk",
+      "Property Developers: Primary structural beneficiaries (institutional/arbitrage) \u2014 captured price increases, de-risked market, increased origination volume",
+      "Mortgage Lenders: Primary structural beneficiaries (institutional/arbitrage) \u2014 expanded loan origination, reduced default risk through equity cushion, captured margin increase",
+      "Locked-Out Renters (Post-Scheme): Primary victims (powerless/trapped) \u2014 faced higher entry prices without scheme access; delayed or impossible homeownership",
+      "Rental Market Affordability: Diffuse victim (powerless/trapped) \u2014 scheme stimulated purchase demand, reducing rental supply and increasing rents for those excluded from purchase",
+      "Government/Public Fiscal Authority: Organized actor (organized/constrained) \u2014 enforcer with dual benefit/cost: fiscal stimulus and employment support offset by \u00a319.5 billion subsidy and negative equity risk",
+      "Housing Supply System: Institutional actor (institutional/arbitrage) \u2014 experienced scheme as performative theater: demand stimulus without capacity to respond, resulting in price capture rather than access improvement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing over time. Base extractiveness starts at 0.35 (scheme genuinely improves access for eligible buyers, provides fiscal stimulus) but rises to 0.58 by end as: (1) price inflation captures most scheme subsidy, reducing real access gain; (2) excluded buyers face permanently higher prices; (3) government negative equity exposure crystallizes. The trajectory reflects Goodhart drift \u2014 as the scheme persists, its stated purpose (first-time buyer access) decouples from its actual effect (price inflation capture). Suppression (0.65): Moderate-high and structural. Significant barriers to exit extraction: eligible buyers cannot reject scheme subsidy and face lower deposit requirements without incurring opportunity cost; developers cannot ignore scheme demand stimulus; lenders cannot forego expanded origination; government faces political cost of scheme termination. Planning restrictions, land scarcity, and construction constraints prevent supply-side response. But suppression is not maximal \u2014 buyers have some mobility (can rent, move regions, use alternative financing), developers can serve non-HTB segments, and government did end the scheme. Theater ratio (0.68): High and increasing. Scheme's stated purpose was to 'help' first-time buyers access homeownership. Actual effect was to stimulate demand-side demand while supply constraints converted subsidy into price capture. By 2023, theater had increased substantially as the gap widened between 'help' narrative and price-inflation reality. Scheme persistence despite degraded function (Piton perspective) contributed to theater ratio rise.",
+    "directionality_logic": "Directionality values (d) flow from structural position in the extraction flow. Eligible buyers (moderate power, mobile exit) derive low d from beneficiary status + exit options, but d is raised by victim status (price inflation, equity loan risk) and constrained exit (scheme participation locks buyer into specific property types). Developers and lenders (institutional power, arbitrage options) derive very low d (close to 0.0) from beneficiary status + arbitrage exit \u2014 they experience the constraint as pure coordination gain. Locked-out buyers (powerless, trapped exit) derive high d (close to 1.0) from victim status + no exit \u2014 they bear full extraction cost. Government (organized power, constrained exit) derives moderate d from dual benefit/victim status: fiscal stimulus and employment support (low d) are offset by subsidy costs and negative equity risk (high d). The housing supply system (institutional, arbitrage) derives low d from beneficiary perspective (demand stimulus is beneficial in shortage) but faces degradation of this benefit as theater increases and supply remains constrained.",
+    "perspectival_gap": "This constraint produces sharp perspectival divergence. The eligible buyer sees mixed benefit-and-cost (Tangled Rope) \u2014 genuine access gain but at higher prices. The developer sees pure coordination (Rope) \u2014 scheme solves their demand problem. The locked-out renter sees extraction with no coordination benefit (Snare) \u2014 higher prices, no access. The fiscal authority sees mixed coordination-and-cost (Tangled Rope) \u2014 demand stimulus and employment offset by subsidy and risk. The supply system sees performative theater (Piton) \u2014 scheme stimulates demand it cannot fulfill, creating price inflation instead of access. Policy reformers see temporary support with sunset logic (Scaffold) \u2014 real problem (supply shortage) requires supply-side solutions, scheme bridges the gap. The analytical observer risks seeing immutable economic law (Mountain) \u2014 demand subsidies without supply expansion must inflate prices \u2014 but this naturalizes a contingent policy design choice. The perspectival gaps derive from different structural positions (beneficiary vs victim) combined with different exit options and time horizons.",
+    "mandatrophy_analysis": "HTB resolves the mandatrophy by demonstrating that tangled rope classification is correct: the scheme genuinely coordinates demand (first-time buyers get access, developers get market stimulus, lenders get origination volume) AND simultaneously extracts through price capture (eligible buyers bear inflation, locked-out buyers bear pricing out, government bears fiscal cost). The coordination function is real but limited \u2014 HTB does enable homeownership for eligible cohorts that would otherwise have delayed or been denied access. The extraction is also real \u2014 price inflation captures most of the subsidy value, transferring it to property owners and lenders. Neither pure coordination (Rope) nor pure extraction (Snare) describes the full constraint. The mandatrophy is resolved by the explicit sunset clause (scheme was always intended to end, indicating temporary structure rather than permanent extraction mechanism) combined with the temporal measurements showing rising extractiveness and rising theater \u2014 these are the signatures of a Tangled Rope degrading toward Piton (performative theater without functional coordination). The analytical observer's mountain classification is a false summit: 'demand subsidies inflate prices' is true within institutional constraints (planning restrictions, supply inelasticity) but those constraints are not immutable \u2014 supply-side interventions or planning reform could make demand stimulus productive. Naturalizing the constraint as immutable law obscures the policy choices embedded in it."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_housing_supply_constraint",
+      "mortgage_market_concentration",
+      "developer_market_power"
+    ],
+    "dual_formulation_note": "HTB is downstream of the fundamental UK housing supply shortage (planning restrictions, land scarcity, construction capacity limits). The scheme's extractiveness depends critically on supply elasticity: in a supply-elastic market, HTB would be pure coordination (Rope); in a supply-inelastic market, it becomes extraction mechanism (Snare/Tangled Rope). The three network-affected constraints capture the upstream structural conditions that convert demand stimulus into price capture rather than access improvement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

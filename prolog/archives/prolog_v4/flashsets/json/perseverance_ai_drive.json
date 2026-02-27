@@ -1,0 +1,89 @@
+{
+  "header": {
+    "constraint_id": "perseverance_ai_drive",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "AI-Driven Martian Rover Autonomy",
+    "topic_domain": "technological",
+    "beneficiaries": [
+      "nasa_mission_team",
+      "scientific_community"
+    ],
+    "victims": [
+      "manual_navigation_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "NASA Mission Team",
+      "comment": "Perspective 1: NASA Mission Team (Rope) - Benefits from increased efficiency and reduced workload, enabling more focused scientific investigations. They have arbitrage options because they can always revert to manual control if the AI system fails or does not meet requirements."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Scientific Community",
+      "comment": "Perspective 2: Scientific Community (Rope) - Gains access to more data and discoveries due to faster and more efficient rover operations. Analytical perspective allows assessment of long-term impact on scientific knowledge."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Rover Engineering Team",
+      "comment": "Perspective 3: Rover Engineering Team (Scaffold) - Initially experience increased workload during the AI system development and integration phase. This is a temporary burden that decreases over time as the AI system becomes more reliable and requires less maintenance. Exit options are constrained as their primary responsibility is rover operation, but they gain new skills through the project."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Manual Navigation Efficiency",
+      "comment": "Perspective 4: Manual Navigation Efficiency (Snare) - The potential loss of efficiency in manual navigation due to reliance on AI. Trapped because reverting to manual control is less efficient after AI integration."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "NASA's Perseverance rover successfully completed its first AI-planned drive on Mars, autonomously navigating a 200-foot (61-meter) path. This represents a significant step forward in rover autonomy, enabling more efficient exploration and scientific discovery. The constraint is characterized by the balance between the benefits of AI-driven navigation and the potential risks and limitations of relying on autonomous systems.",
+    "key_agents": [
+      "NASA Mission Team: Primary beneficiary (institutional/arbitrage) - Gains efficiency and reduces workload.",
+      "Scientific Community: Secondary beneficiary (analytical/analytical) - Accesses more data and discoveries.",
+      "Rover Engineering Team: Supporting role (powerful/constrained) - Involved in development and maintenance.",
+      "Manual Navigation Efficiency: Victim (powerless/trapped) - Suffers from reduced efficiency due to AI reliance."
+    ],
+    "logic_rationale": "Extractiveness (0.35): Low to moderate. The AI system requires development and maintenance efforts, but the long-term benefits outweigh the initial costs. The extractiveness is primarily related to the resources required for the AI system development. Suppression (0.20): Low. The AI system does not significantly suppress alternative navigation methods. Manual control remains an option, and other autonomous navigation techniques can be explored. Theater ratio (0.10): Very low. The primary focus is on the functional performance of the AI system, with minimal emphasis on performative aspects.",
+    "perspectival_gap": "The primary perspectival gap exists between the NASA Mission Team and the Scientific Community, who benefit, and the potential loss of efficiency in manual navigation. The mission team directly experiences the increased efficiency and reduced workload, while the scientific community benefits from the increased data and discoveries. The rover engineering team experiences a scaffold effect during the initial development phases.",
+    "directionality_logic": "NASA benefits from increased efficiency. The scientific community benefits from more data. The engineering team contributes to the effort. Manual navigation suffers a loss in efficiency.",
+    "mandatrophy_analysis": "The classification prevents mislabeling coordination as pure extraction because the AI-driven autonomy demonstrably improves rover efficiency and data collection, benefiting both the mission team and the scientific community, while the impact on manual navigation efficiency is relatively small."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "mars_sample_return_mission"
+    ]
+  },
+  "directionality_overrides": []
+}

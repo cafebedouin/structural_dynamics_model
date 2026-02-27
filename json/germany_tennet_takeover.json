@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "germany_tennet_takeover",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tennet"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "German Government Stake in TenneT Germany",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "german_government",
+      "grid_stability_mandate"
+    ],
+    "victims": [
+      "private_shareholders",
+      "market_liberalization_norm"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Private TenneT Shareholders",
+      "comment": "PERSPECTIVE 1: PRIVATE SHAREHOLDERS (SNARE) \u2014 Original equity holders face forced dilution and potential loss of dividends during the state acquisition phase. They cannot exit the constraint \u2014 selling would realize losses; holding means absorption into state-controlled entity with altered governance and dividend policies. Maximum extraction: state controls pricing of acquisition, timing, and terms. Shareholders bear full cost with no alternative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "European Electricity Market Liberalization Norm",
+      "comment": "PERSPECTIVE 2: MARKET LIBERALIZATION NORM (TANGLED ROPE) \u2014 EU energy market rules presume private operation and competitive ownership structures. State takeover of critical infrastructure violates the coordination function (competitive grid operation) while extracting regulatory exception and sovereignty claim. Liberalization regime cannot exit \u2014 the rule is structural to EU law \u2014 but is partially suspended for this actor. Mixed extraction and coordination: state justifies action as stabilizing the grid (genuine coordination benefit), but the mechanism is exceptionalism that weakens liberalization norms for all member states."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "German Federal Government (Energy Sovereignty Actor)",
+      "comment": "PERSPECTIVE 3: GERMAN FEDERAL GOVERNMENT (ROPE) \u2014 State benefits from control over grid operations, ensuring renewable energy integration and preventing foreign strategic vulnerability during the Energiewende (green energy transition). Exit is available through privatization; the constraint is reversible if security threat decreases. Government experiences this as pure coordination \u2014 solving the collective action problem of energy security. Low extraction cost to government; high benefit (strategic control). Asymmetric but framed as necessary public good."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "German Green Energy Transition Goals",
+      "comment": "PERSPECTIVE 4: GREEN ENERGY TRANSITION INFRASTRUCTURE REQUIREMENT (SCAFFOLD) \u2014 Grid stability during renewable buildout is a temporary bottleneck. State ownership provides short-term coordination (integrating distributed renewables) with explicit or implicit sunset: as battery storage, smart grids, and cross-border interconnections mature (10-20 year horizon), centralized state control becomes less necessary. The constraint has built-in termination condition \u2014 market liberalization can resume once technical transition is complete. Theater remains moderate (0.55) because actual grid integration work is ongoing, not purely performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "State Infrastructure Ownership Legacy",
+      "comment": "PERSPECTIVE 5: STATE INFRASTRUCTURE OWNERSHIP LEGACY (PITON) \u2014 The takeover activates historical narratives of state monopoly on critical infrastructure (Deutsche Telekom, Deutsche Post, Deutsche Bahn precedents). The institutional memory of public utility ownership persists despite 30+ years of EU liberalization. Much of the political logic is theatrical \u2014 references to 'strategic sovereignty' and 'foreign takeover risk' perform sovereignty concerns more than they solve technical grid problems. The constraint is partly inertial: state ownership of utilities is how Germany 'naturally' solved infrastructure before 1990; the Energiewende crisis revives this pattern despite available market alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Non-German EU Investors",
+      "comment": "PERSPECTIVE 6: NON-GERMAN EU INVESTORS (TANGLED ROPE) \u2014 Foreign equity holders and institutional investors (pension funds, utilities in other states) benefit from EU market liberalization norms but face extraction when Germany nationalizes a major grid asset. They cannot fully exit (EU law constrains capital controls) but are constrained by the blocking of their ownership claims. Mixed experience: some coordination benefit (grid stability supports their renewable investments in Germany), but asymmetric extraction through seizure of property rights and exclusion from governance. Suppression is moderate \u2014 legal processes occur, compensation is offered, but alternatives are removed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Thermodynamic Grid Constraint View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 At the civilizational level, some degree of centralized grid authority is inherent to managing complex electrical systems: load balancing, frequency stability, and fault propagation are collective action problems with no purely decentralized solution. From this perspective, the state role emerges naturally from the physics of coupled-oscillator networks. However, this naturalizes a contingent institutional choice (public vs private operator) as a law of nature. The engine's false summit detector should flag this \u2014 the thermodynamic substrate does not require state ownership, only some coordination authority."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "foreign_takeover_threat_reality",
+      "question": "Is the risk of hostile foreign takeover of TenneT actually materially higher than for other European grid operators, or is it primarily a domestic political narrative?",
+      "resolution_mechanism": "Comparative analysis of foreign investment attempts in grid operators across EU member states; risk assessment from grid security experts vs political rhetoric; identification of specific acquisition proposals that triggered state action",
+      "impact": "If real and specific: justifies state intervention as temporally bounded response to concrete threat (scaffold timeline becomes credible). If primarily narrative: reveals extraction dressed as security, shifting classification toward snare and away from scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether foreign takeover threat is material or primarily narrative"
+    },
+    {
+      "id": "renewable_integration_dependency_on_ownership",
+      "question": "Does grid stability during renewable integration actually require state ownership, or could private operators with regulatory mandates achieve equivalent coordination outcomes?",
+      "resolution_mechanism": "Comparative study of renewable-heavy grids under private vs public ownership (Denmark, Ireland, Spain vs Germany); technical analysis of grid balance requirements vs management structure; identification of which integration functions are structure-dependent vs ownership-dependent",
+      "impact": "If structure-dependent: state ownership is extracting on top of a genuine coordination need \u2014 classification remains tangled_rope. If ownership-independent: the coordination could occur under private management with regulation, revealing the takeover as pure political extraction \u2014 shifts classification toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ownership structure is necessary for renewable grid integration"
+    },
+    {
+      "id": "market_liberalization_credibility_postdatum",
+      "question": "If state ownership resolves the energy transition, will Germany actually re-privatize TenneT, or will public ownership become permanent despite sunset clause language?",
+      "resolution_mechanism": "Historical analysis of prior EU infrastructure re-privatizations post-crisis; examination of government commitments in legislation vs actual divestiture timelines; tracking of changing political rhetoric around TenneT ownership over 5-10 year horizon",
+      "impact": "If re-privatization occurs on schedule: scaffold classification confirmed \u2014 sunset is genuine, constraint has built-in termination. If ownership becomes permanent: scaffold collapses to snare/tangled_rope \u2014 the extraction mechanism persists indefinitely, theater increases as sunset narrative becomes decoupled from action.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Credibility of planned re-privatization after energy transition"
+    },
+    {
+      "id": "eu_reciprocal_takeover_precedent",
+      "question": "Will other EU member states cite Germany's TenneT takeover as precedent for their own nationalizations of critical infrastructure, triggering a cascade of state acquisitions?",
+      "resolution_mechanism": "Tracking of legislative proposals and actual takeovers in other EU states citing German precedent; analysis of EU competition law challenges to the German action; monitoring of investor confidence indices in European critical infrastructure",
+      "impact": "If cascade occurs: Germany's takeover creates institutional contagion \u2014 the coordination function (energy security) is preserved but the suppression mechanism (state control norm) spreads. If isolated: Germany achieves exception status, suggesting the takeover is politically rather than structurally justified.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether TenneT takeover triggers cascade of EU state infrastructure nationalizations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The German government's acquisition of a controlling stake in TenneT Germany represents a hybrid constraint combining genuine coordination (grid stability during renewable energy transition) with extractive mechanisms (shareholder dilution, regulatory exception-granting, precedent-setting for state control of critical infrastructure). The constraint operates across three distinct structural levels: (1) at the firm level, private shareholders face forced absorption into state control; (2) at the EU level, the takeover violates the liberalization norm that has governed European electricity markets for three decades; (3) at the member-state level, Germany asserts energy sovereignty against perceived foreign strategic vulnerability. The constraint's extractiveness has increased over time as initial 'temporary emergency measure' framing has become embedded in longer-term grid governance, and theater has increased as political justification narratives (foreign takeover risk, energy independence) have become decoupled from actual technical grid challenges. The constraint is a diagnostic exemplar of how economic nationalism and energy transition can be legitimately distinguished from each other \u2014 one is coordination and integration, the other is extraction and sovereignty performance.",
+    "key_agents": [
+      "German Federal Government: Primary beneficiary (institutional/arbitrage) \u2014 gains control over critical infrastructure, energy policy leverage, and strategic sovereignty during transition",
+      "Private TenneT Shareholders: Primary victim (powerless/trapped) \u2014 face forced dilution, loss of property rights, absorption into state entity; cannot exit",
+      "EU Market Liberalization Regime: Structural victim (institutional/constrained) \u2014 takeover violates competitive grid operation norm; cannot exit the rule structure but is suspended for this actor",
+      "Renewable Energy Integration Process: Primary beneficiary and coordinator (organized/constrained) \u2014 state ownership enables technical grid stability during high renewable penetration; actual coordination function",
+      "Non-German EU Investors: Secondary victim (organized/constrained) \u2014 excluded from ownership governance; property rights circumscribed by national sovereignty assertion",
+      "State Infrastructure Ownership Legacy: Institutional memory actor (powerful/mobile) \u2014 takeover activates pre-liberalization German tradition of public utility monopolies; brings organizational inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The government captures significant benefit (control, strategic positioning, policy leverage) while shareholders bear direct cost (forced dilution, governance loss). However, the extraction is not maximal (0.46+) because: (1) the technical coordination function (renewable grid integration) is genuine and non-extractive; (2) compensation is provided to shareholders, though below market value; (3) the state's cost (financial outlay, regulatory exposure) is substantial. The value reflects that the takeover hybridizes extraction with coordination \u2014 not pure either. Suppression (0.48): Moderate. Multiple barriers exist to alternative solutions: (1) EU sovereignty norms prevent full foreign ownership in critical infrastructure (structural); (2) private operators face regulatory uncertainty during energy transition (policy); (3) shareholder exit is expensive/disadvantageous (market barrier). However, suppression is not high (0.60+) because: (1) EU law permits the takeover if framed as public utility; (2) private grid operators exist elsewhere in Europe (alternatives exist); (3) shareholder compensation is offered, not expropriation without payment. Theater ratio (0.55): Moderate-high. The state's political rhetoric ('energy security', 'foreign takeover prevention', 'sovereignty') plays a significant performative role, but the actual technical grid stabilization work is real \u2014 not pure theater. The ratio reflects that legitimation narratives are inflated relative to actual technical necessity.",
+    "perspectival_gap": "The constraint demonstrates how the same structural phenomenon (state acquisition of grid operator) appears differently across positions. From the government's view, this is solving a coordination problem (Rope). From shareholders' view, it is extraction (Snare). From the EU liberalization regime's view, it is a precedent-setting exception (Tangled Rope mixing coordination and extraction). From the renewable integration requirement's view, it is legitimate technical coordination (Rope to Scaffold). From the piton historical view, it is inertial reactivation of pre-liberalization state monopoly patterns. From the foreign investor view, it is property right expropriation (Snare). The perspectival gaps are not measurement ambiguities but real structural differences in how each agent experiences the constraint.",
+    "directionality_logic": "Directionality values (d) derive from structural position. The government (beneficiary + arbitrage exit) receives low d (\u22480.10-0.15), producing negative or minimal effective extraction \u2014 their experience is coordination, not extraction. Shareholders (victim + trapped exit) receive high d (\u22480.85-0.95), producing high effective extraction \u2014 they cannot escape and bear full dilution cost. The EU regime (victim + constrained exit) receives moderate-high d (\u22480.60-0.70) \u2014 can theoretically challenge the takeover via competition law but is constrained by member-state sovereignty norms. Renewable integration (beneficiary + constrained exit) receives low-moderate d (\u22480.35-0.45) \u2014 benefits from state coordination but is constrained by whatever ownership structure emerges. Non-German investors (victim + constrained exit) receive moderate-high d (\u22480.55-0.65) \u2014 property claims are blocked but not entirely eliminated (EU residuals remain). The piton perspective derives from high theater (0.55) relative to extractiveness (0.38) \u2014 the performance-to-function ratio indicates institutional inertia activating historical patterns.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy between 'is this coordination or extraction?' by showing it is both \u2014 the tangled_rope classification captures the genuine coordination function (grid stability during renewable transition) alongside the genuine extraction mechanism (shareholder dilution, regulatory exception, precedent creation). The mandatrophy is avoided by maintaining \u03b5=0.38 (not claiming pure coordination \u03b5\u22640.05 or pure extraction \u03b5\u22650.46) and including both beneficiaries and victims. The theater ratio (0.55) indicates that political legitimation narratives inflate the necessity of state ownership beyond its actual technical requirement \u2014 but does not eliminate the technical requirement entirely. The scaffold perspective shows that if the takeover is indeed temporary (energy transition complete in 10-20 years), the constraint transitions from snare to rope as the exceptional ownership model becomes normalized infrastructure. The piton perspective reveals how institutional memory of pre-liberalization state monopolies provides social script for current action \u2014 reducing novelty and increasing performance. No single type is 'correct' \u2014 the presheaf over the observation site (government, shareholders, EU regime, technical integration, historical memory, foreign investors) is the complete description."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_energy_market_liberalization",
+      "german_energy_transition_infrastructure",
+      "eu_critical_infrastructure_sovereignty"
+    ],
+    "dual_formulation_note": "The TenneT takeover is downstream of two structurally distinct constraints: (1) EU energy market liberalization (the norm being violated) has its own extractiveness reflecting the coordination benefits of competitive grids; (2) German energy transition infrastructure (the technical requirement) has its own extractiveness reflecting renewable integration challenges. The takeover story represents their intersection \u2014 where liberalization norms collide with transition requirements. Each upstream constraint has different \u03b5 values; this story synthesizes their interaction."
+  },
+  "directionality_overrides": []
+}

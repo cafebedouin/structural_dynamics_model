@@ -2,26 +2,26 @@
   "header": {
     "constraint_id": "burden_of_proof_engineering_safety",
     "version": "1.0",
-    "generated_date": "2024-05-21",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bpproof"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
-    "human_readable": "Reversal of the Engineering Burden of Proof",
-    "topic_domain": "technological/safety_engineering",
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Reversal of the Engineering Burden of Proof in Safety Certification",
+    "topic_domain": "technological/aviation_safety/regulatory",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "corporate_management",
-      "shareholders"
+      "aircraft_manufacturers",
+      "certification_authorities_capturing_rents"
     ],
     "victims": [
-      "end_users",
-      "flight_crews",
-      "dissenting_engineers",
-      "engineering_epistemic_integrity"
+      "flying_public",
+      "independent_safety_engineers",
+      "regulatory_integrity"
     ]
   },
   "perspectives": [
@@ -31,35 +31,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The End-User (e.g., Passenger)",
-      "comment": "PERSPECTIVE 1: END-USER (SNARE) — The end-user is unaware of the reversed burden of proof and has no ability to exit the system or assess the increased risk. They bear the full, uncompensated cost of a failure. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.24. This is extreme extraction."
+      "label": "The Flying Public",
+      "comment": "PERSPECTIVE 1: THE FLYING PUBLIC (SNARE) \u2014 Passive participants in aviation system with zero control over certification criteria. Cannot exit (flying is economically necessary for modern life). Bears full cost if safety verification fails: catastrophic loss. No appeal mechanism; no visibility into certification process. Maximum structural extraction \u2014 beneficiaries capture rents, victims are trapped."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Safety Engineers",
+      "comment": "PERSPECTIVE 2: INDEPENDENT SAFETY ENGINEERS (SNARE) \u2014 Can exit aviation sector but at high career cost. Face suppression: must work within manufacturer-approved frameworks or be excluded from certification processes. Cannot publish independent safety assessments without manufacturer approval (NDA barriers). Constrained exit + high suppression \u2192 snare classification. Career extraction mechanism operates through gatekeeping."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "Corporate Management",
-      "comment": "PERSPECTIVE 2: CORPORATE MANAGEMENT (ROPE) — From this perspective, the constraint is a coordination mechanism to overcome 'excessive' engineering caution, meet deadlines, and deliver shareholder value. It aligns the organization toward market goals. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08. A net subsidy."
+      "spatial_scope": "global",
+      "label": "Aircraft Manufacturers",
+      "comment": "PERSPECTIVE 3: AIRCRAFT MANUFACTURERS (ROPE) \u2014 Primary beneficiary. Experience the burden-of-proof reversal as pure coordination: once certification criteria favor manufacturers, the certification process becomes a collaborative relationship. Arbitrage exit available (can relocate to favorable jurisdictions, influence regulatory standards through lobbying). Experiences effective extraction as negative (subsidy). Net benefit from the reversed burden."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Dissenting Engineer",
-      "comment": "PERSPECTIVE 3: DISSENTING ENGINEER (TANGLED ROPE) — This agent understands both the coordination function (shipping a product) and the severe extraction of safety margins. They are constrained by career risk and organizational pressure, unable to easily exit or reverse the policy. d≈0.85, f(d)≈1.32, σ=1.0 → χ≈0.86."
+      "spatial_scope": "global",
+      "label": "Regulatory Authority (FAA/EASA)",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Captured institution experiencing mixed signals. Formally has mandate to protect public safety (beneficiary function); functionally dependent on manufacturer cooperation and industry self-certification (victim to extraction pressure). Cannot exit without jurisdictional loss. Constrained by resource limitations and political pressure from manufacturers. Requires active enforcement (FAA Authorized Representatives system maintains performative oversight). Both extraction (manufacturer capture) and coordination (safety standards) functions present simultaneously."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Captured Regulator",
-      "comment": "PERSPECTIVE 4: CAPTURED REGULATOR (PITON) — The regulatory body maintains the rituals of safety certification, but its function has atrophied due to industry pressure or resource starvation. The process is performative, not functional. The high theater_ratio (0.75) satisfies the piton gate."
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Certification Theater System",
+      "comment": "PERSPECTIVE 5: CERTIFICATION THEATER SYSTEM (PITON) \u2014 The formal institutional structure (design review boards, hazard analyses, certification documents) persists as ritual despite degraded function. Theater ratio 0.68 reflects that much of the approval process is now performative: manufacturer-led self-certification, FAA stamp-of-approval after manufacturer design approval, regulatory bodies reviewing manufacturer submissions they lack resources to independently verify. The structure remains maintained through institutional inertia (international harmonization, legacy agreements, bureaucratic lock-in) despite its primary safety-verification function having atrophied."
     },
     {
       "classification_type": "tangled_rope",
@@ -68,85 +77,113 @@
       "exit_options": "analytical",
       "spatial_scope": "global",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's objective classification. It recognizes the genuine (if perverse) coordination function of aligning the company to a goal, but also the severe, asymmetric extraction of safety from victims. This is the canonical definition of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Recognizes the burden-of-proof reversal as a hybrid institutional arrangement combining genuine coordination (the need to establish baseline safety criteria) with systematic extraction (the reversal that shifts proof burden from manufacturers to regulators, privatizing certification gains while socializing failure costs). Not a mountain (no natural law) \u2014 the reversal is a deliberate institutional choice. Not pure rope (genuine asymmetric extraction is present). The constraint exhibits both coordination function (safety standards) and extraction mechanism (rents captured through reversed burden)."
     }
   ],
-  "interval": {
-    "start": 1990,
-    "end": 2020
-  },
   "omegas": [
     {
-      "id": "intent_vs_emergence",
-      "question": "Was the reversal of the burden of proof a deliberate, conscious decision by management for profit, or an emergent cultural property born from market pressures and organizational complexity?",
-      "resolution_mechanism": "Internal communications, whistleblower testimony, and board-level meeting minutes.",
-      "impact": "If deliberate, the constraint is closer to a pure Snare. If emergent, it is more accurately a Tangled Rope, where the coordination function is a genuine (though misguided) aspect of the system's behavior.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Distinguishing between deliberate extraction and emergent institutional failure."
+      "id": "certification_standard_independence",
+      "question": "Are the certification standards established through genuine engineering consensus or through manufacturer-influenced regulatory capture?",
+      "resolution_mechanism": "Historical analysis of rulemaking processes; comparison of manufacturer-advocated standards vs. independent engineer assessments; tracing of regulatory personnel movement to/from industry",
+      "impact": "If captured: burden reversal is fully structural snare. If independent: reversal is a legitimate temporary design choice with oversight mechanisms in place.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether certification standards reflect genuine engineering consensus or manufacturer influence"
     },
     {
-      "id": "restoration_pathway",
-      "question": "Can external events (e.g., a catastrophic failure, new legislation) successfully and permanently restore the original 'prove it is safe' burden of proof?",
-      "resolution_mechanism": "Longitudinal study of organizational behavior and safety metrics following a major incident and regulatory intervention.",
-      "impact": "If restoration is possible, the constraint can be dismantled. If the culture is permanently altered, the constraint becomes a persistent Piton, with safety processes remaining theatrical despite reforms.",
-      "confidence": "low",
+      "id": "safe_to_fly_verification_gap",
+      "question": "What specific verification gap exists between what manufacturers claim is safe and what independent analysis would require as proof?",
+      "resolution_mechanism": "Comparative analysis of manufacturer safety cases vs. independent accident investigation findings; longitudinal tracking of design assumptions validated vs. invalidated post-certification",
+      "impact": "If gap < 5%: reversal may be efficient (asymmetric information is minimal). If gap > 15%: reversal creates systematic undetected failure modes.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Feasibility of reversing the cultural shift in engineering safety standards."
+      "description": "Magnitude of verification gap between manufacturer and independent safety standards"
+    },
+    {
+      "id": "regulatory_resource_adequacy",
+      "question": "Could regulatory authorities adequately verify safety claims if given sufficient resources, or is the reversal a structural necessity given real resource constraints?",
+      "resolution_mechanism": "Modeling of verification resource requirements vs. actual/potential funding levels; international comparison of regulatory capacity across jurisdictions with different burden-of-proof approaches",
+      "impact": "If adequacy is achievable: burden reversal is policy choice, not technical necessity (snare classification strengthened). If truly constrained: may justify temporary scaffold-like approach with sunset clause.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory authorities could adequately verify safety with sufficient resources"
+    },
+    {
+      "id": "manufacturer_safety_incentive_alignment",
+      "question": "Are manufacturer liability and reputational incentives sufficient to align private certification with public safety objectives, or are they structurally misaligned?",
+      "resolution_mechanism": "Analysis of liability regimes across jurisdictions; study of manufacturer behavior under different liability structures; historical examination of safety-cutting corners vs. liability exposure",
+      "impact": "If aligned: burden reversal may be efficient coordination. If misaligned: reversal creates systematic incentive for cost-cutting that harms safety.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether manufacturer incentives align with public safety objectives"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.2
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.65
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.25
+      "time_point": 25,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.5
+      "time_point": 50,
+      "value": 0.68
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.75
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
     }
   ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
   "commentary": {
-    "narrative_context": "This constraint models the institutional and cultural shift within high-stakes engineering organizations where the burden of proof for safety is reversed. Instead of engineers being required to prove a system is safe to operate, a culture emerges where managers and marketers demand that engineers prove a system is definitively unsafe to delay or stop its launch. This transfers immense, often hidden, risk from the organization to its end-users. The Boeing 737 MAX crashes are a canonical example of this dynamic, where internal pressure to compete with Airbus led to the suppression of engineering concerns and a reversal of the normal safety validation process.",
+    "narrative_context": "The reversal of the engineering burden of proof in aviation safety represents a critical institutional failure where regulatory frameworks shifted from requiring manufacturers to prove safety (defensible under precautionary principle) to requiring regulators to prove unsafety (defending the status quo). This constraint exhibits characteristics of a snare: beneficiaries (manufacturers) capture rents through reduced certification costs and expedited approval, while victims (flying public, independent safety engineers) bear suppressed voice and trapped exit. The constraint emerged gradually through regulatory capture, cost-pressures on certification authorities, and the normalization of manufacturer-led self-certification. Theater ratio increased from 0.35 to 0.68 over the interval as the formal certification process became increasingly performative: manufacturer designs reviewed by FAA Authorized Representatives (often employed by manufacturers), design approval grants authority to certify their own designs, regulatory oversight becomes a rubber-stamp process rather than independent verification. The extraction mechanism operates through asymmetric information (manufacturers know design details; regulators do not) and asymmetric liability (manufacturers distribute risk across insurance markets; public bears concentrated catastrophic risk). The constraint is not a natural law or temporary coordination challenge \u2014 it is a deliberate institutional choice that can be reversed by shifting the burden back to manufacturers.",
     "key_agents": [
-      "Corporate Management: Primary beneficiary (institutional/arbitrage) - Benefits from faster time-to-market and lower development costs.",
-      "End-Users (Passengers, Operators): Primary victim (powerless/trapped) - Bear the ultimate physical risk without knowledge or consent.",
-      "Dissenting Engineers: Secondary victim (moderate/constrained) - Face career risk for upholding traditional engineering ethics.",
-      "Captured Regulators: Institutional actor (institutional/constrained) - Maintain the performance of oversight while lacking the resources or independence to enforce standards, becoming a Piton.",
-      "Engineering Epistemic Integrity: Abstract victim (powerless/trapped) - The professional standard itself is degraded."
+      "Aircraft Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture regulatory rents through reduced certification burden; can influence standards through lobbying",
+      "Flying Public: Primary victim (powerless/trapped) \u2014 passive participants with no control over certification criteria; cannot exit aviation without significant cost",
+      "Independent Safety Engineers: Secondary victim (moderate/constrained) \u2014 gatekept from certification processes; face career suppression for publishing independent assessments",
+      "Regulatory Authority (FAA/EASA): Captured institution (institutional/constrained) \u2014 formally mandated to protect safety but functionally dependent on manufacturer cooperation; resource-constrained",
+      "Certification Theater System: Institutional actor (institutional/arbitrage) \u2014 maintains performative approval processes; survives through inertia despite degraded function",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes the reversal as a structural choice, not a natural law or technical necessity"
     ],
-    "logic_rationale": "Extractiveness (0.65) is high because the value being extracted is the safety margin, a critical component of product value, which is transferred as risk to users. Suppression (0.75) is high, reflecting the organizational mechanisms used to silence dissent, ignore negative data, and push projects forward against the warnings of technical experts. Theater Ratio (0.75) is high because the formal safety review processes are maintained for legal and regulatory compliance, but their actual function of ensuring safety is hollowed out, becoming a box-checking exercise.",
-    "perspectival_gap": "The gap is stark. Management perceives a necessary coordination tool (Rope) for achieving business objectives. The powerless end-user, if they knew the facts, would perceive a deadly trap (Snare). The engineer caught in the system sees the conflict clearly: a system that coordinates action (the 'rope' part) but does so by extracting a critical good—safety (the 'tangled' part). The regulator's perspective as a Piton shows institutional decay, where form persists long after function has ceased.",
-    "directionality_logic": "Beneficiaries (management) have arbitrage exit options and an immediate time horizon, leading to a low 'd' value and a Rope classification. Victims (end-users) are trapped with no exit, leading to a high 'd' value and a Snare classification. The dissenting engineer is constrained, not fully trapped, placing them in the Tangled Rope category. This distribution of directionality based on structural position is what allows a single set of base metrics to generate multiple, valid classifications.",
-    "mandatrophy_analysis": "This constraint is a prime example of resolving mandatrophy. A naive analysis might label the corporation's actions as purely evil (Snare) or the process as simply 'how business is done' (Rope). Deferential Realism shows that both are structurally correct perspectives. The system *is* a Snare to the passenger and *is* a Rope to the executive. The analytical classification of Tangled Rope correctly identifies the core structure: a mechanism that combines a genuine coordination function with a severe, asymmetric extraction of value."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The burden reversal creates measurable rents for manufacturers through reduced certification costs, accelerated timelines, and reduced design constraints. However, the extraction is not total because: (1) manufacturers still face some regulatory oversight (theater-based rather than substantive), (2) liability and reputational incentives provide partial safety alignment, (3) international coordination creates some competitive pressure. The value reflects that extraction is real but constrained by imperfect liability regimes and remaining regulatory friction. Suppression (0.72): High. Multiple barriers suppress independent verification: NDAs on design information, regulatory authority gatekeeping, resource constraints on independent safety assessment, professional suppression (engineers cannot publish critical findings without manufacturer approval), structural dependence on manufacturer cooperation for data access. These are not soft social pressures \u2014 they are hard institutional barriers. Theater ratio (0.68): High-moderate. The certification process maintains formal appearance of rigorous safety review (design review boards, hazard analyses, certification documents, FAA stamp of approval) while the actual safety verification mechanism has degraded. Manufacturer-led self-certification with FAA review of manufacturer submissions means regulators are verifying manufacturers' verification rather than independently assessing safety. The theater persists because the alternative (full re-evaluation by regulators) is politically infeasible and resource-prohibitive.",
+    "perspectival_gap": "The constraint exhibits a stark perspectival gap between beneficiaries and victims. Manufacturers experience the burden reversal as pure coordination (Rope): a efficient allocation where designers with full information handle safety assessment, regulated by clear criteria. Victims experience it as a snare: the flying public is trapped in a system where proof burden favors the beneficiary. Independent engineers experience it as extraction through gatekeeping (also Snare): they cannot participate in certification without manufacturer approval. The regulatory authority experiences it as tangled rope: formally mandated for safety (coordination function) but captured by manufacturer pressure (extraction mechanism). The certification theater experiences it as piton: the formal structure persists (design reviews, hazard analyses) but its function has atrophied (manufacturers verify themselves). The analytical observer recognizes this as tangled rope with high extractiveness: genuine coordination function exists (baseline safety standards are necessary) but is entangled with systematic extraction (burden reversal favors beneficiaries, socializes failure costs). The perspectival gap reflects that the same institutional arrangement delivers genuine goods (coordination of safety standards) bundled with real harms (extraction of rents, suppression of independent verification).",
+    "directionality_logic": "Directionality values (d) are derived from structural position and exit options. Manufacturers have arbitrage exit (can relocate to favorable jurisdictions, influence standards through lobbying) and beneficiary status \u2192 low d \u2192 negative f(d) \u2192 they experience effective extraction as subsidy. Flying public has trapped exit (cannot exit aviation) and victim status \u2192 high d \u2192 high f(d) \u2192 they experience maximum extraction. Independent engineers have constrained exit (can leave sector but at career cost) and victim status \u2192 high d but moderated by moderate power \u2192 they experience significant extraction through gatekeeping. Regulatory authority has constrained exit (losing jurisdiction is politically unacceptable) but mixed beneficiary/victim status (formal mandate for safety, functional dependence on manufacturers) \u2192 moderate d \u2192 mixed extraction experience. The reversal mechanism itself operates by shifting d: it changes what counts as evidence (manufacturer assertion instead of independent verification) such that victim d increases (burden falls on those challenging the claim) while beneficiary d decreases (burden removed from those making the claim).",
+    "mandatrophy_analysis": "RESOLUTION MECHANISM: The mandatrophy (the apparent paradox that a coordination mechanism appears extractive) is resolved by recognizing that the burden reversal decouples the coordination function from the extraction mechanism. The genuine coordination function (establishing baseline safety criteria through engineering consensus) is necessary and coordination-like. However, the institutional reversal (shifting proof burden from manufacturers to regulators) layers systematic extraction onto this function by: (1) privatizing the gains (manufacturers avoid certification costs), (2) socializing the losses (public bears concentrated catastrophic risk), (3) suppressing alternatives (independent verification gatekept), (4) asymmetricizing information (manufacturers know design details, regulators do not). The constraint is Snare (pure extraction dominant) rather than Tangled Rope because the extraction mechanism (burden reversal) is not necessary for the coordination function (safety standards can be established with manufacturer-proves-safety framework). The reversal is a deliberate institutional choice, not a constraint inherent to the coordination problem. This is falsifiable: if the burden-of-proof were reversed back to 'manufacturer must prove safety,' the coordination function would remain intact while the extraction mechanism would be eliminated, proving that the reversal is not technically necessary."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "regulatory_capture"
-    ]
-  }
+      "manufacturer_self_certification_authority",
+      "regulatory_capture_in_aviation",
+      "information_asymmetry_certification"
+    ],
+    "dual_formulation_note": "The burden-of-proof reversal is the institutional mechanism through which regulatory capture operates in aviation. It represents a shift in the epistemic burden from manufacturers (who must prove safety) to regulators (who must prove unsafety). This is distinct from but structurally upstream of specific manufacturer misconduct stories \u2014 it is the institutional framework that enables such misconduct by placing proof burden on those least resourced to meet it."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
 }

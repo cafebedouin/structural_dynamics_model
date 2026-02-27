@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "network_effects",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "neteff"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Network Effects (Demand-Side Economies of Scale)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_adopters",
+      "platform_owner"
+    ],
+    "victims": [
+      "competing_platforms",
+      "late_adopters",
+      "locked_in_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Late Adopter",
+      "comment": "PERSPECTIVE 1: LATE ADOPTER (SNARE) \u2014 Faces a trap: must use the dominant platform to participate in the network, despite potentially superior alternatives. Switching costs are prohibitive; the network density creates structural lock-in. No meaningful exit option; extraction operates through mandatory participation in an inferior equilibrium."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Competing Platform Operator",
+      "comment": "PERSPECTIVE 2: COMPETING PLATFORM OPERATOR (TANGLED ROPE) \u2014 Organized actors (alternative platforms, open-source projects) can invest in features and interoperability to coordinate users, but face suppression through network density and winner-take-most dynamics. Both extraction (users preferring dominant network) and coordination (building alternative ecosystems) are present; enforcement requires sustained technical and marketing investment against a formidable incumbent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Early Adopter / First-Mover",
+      "comment": "PERSPECTIVE 3: EARLY ADOPTER (ROPE) \u2014 Primary beneficiary. Gains disproportionate value from network growth; coordinates with peers to establish the network's value proposition. Low experienced extraction because this agent benefits from the constraint's operation and can arbitrage to other networks if necessary. Pure coordination function from this perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Owner / Monopolist",
+      "comment": "PERSPECTIVE 4: PLATFORM OWNER (SNARE) \u2014 Appears as beneficiary with arbitrage (can pivot to new platforms), but the perspective shifts from beneficiary to extractor. The platform owner actively suppresses exit options for late adopters through lock-in mechanisms (data portability barriers, API restrictions, incompatible formats). Extraction is embedded in the platform's technical architecture; enforcement is passive (structural) rather than active coercion. High suppression; beneficiary status inverts to reveal extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "SME User Ecosystem",
+      "comment": "PERSPECTIVE 5: SME USER ECOSYSTEM (TANGLED ROPE) \u2014 Small and medium enterprises using the platform experience mixed effects: coordination benefits (access to large customer base, vendor ecosystem, integration tools) but also extraction through platform fees, algorithmic visibility controls, and terms-of-service changes that can disadvantage specific seller classes. Suppression operates through switching costs and platform lock-in; enforcement requires ongoing compliance with platform policies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Economist's Null Model",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NULL MODEL (PITON) \u2014 From first principles, network effects are presented as a natural economic phenomenon \u2014 'more users create more value.' But empirical observation reveals substantial theater in how network effects are invoked: they are used to justify monopoly pricing, to rationalize switching cost barriers, and to explain away competitive failures as 'inevitable network dynamics.' The theater_ratio (0.48) reflects that approximately half the activation energy behind network-driven lock-in comes from actual value creation; the other half derives from suppression of alternatives and coordination of user expectations. The constraint persists partly through its own explanatory power \u2014 the narrative 'network effects are natural' operates as institutional inertia."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "substitutability_threshold",
+      "question": "At what feature/UX gap do network effects cease to bind users to an inferior platform?",
+      "resolution_mechanism": "Comparative analysis of platform migrations (MySpace\u2192Facebook, Vine\u2192TikTok, Twitter\u2192Bluesky); identification of feature advantage thresholds that overcome switching costs",
+      "impact": "If threshold is low (small feature gap): network effects are coordination-dominated (Rope). If threshold is high (large feature gap required): network effects are extraction-dominated (Snare). Determines whether the constraint is fundamentally a coordination problem or a lock-in mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feature gap required to overcome network-driven switching costs"
+    },
+    {
+      "id": "interoperability_sufficiency",
+      "question": "Can open protocols and data portability standards effectively neutralize network-driven lock-in without fragmenting the network?",
+      "resolution_mechanism": "Analysis of federated systems (ActivityPub, email protocols); measurement of adoption rates and feature parity for interoperable alternatives; assessment of fragmentation costs vs lock-in prevention benefits",
+      "impact": "If interoperability works: constraint reclassifies toward Scaffold (sunset via technical standards). If fragmentation outweighs benefits: constraint remains Tangled Rope or Snare (lock-in is structural).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interoperability standards can neutralize network lock-in"
+    },
+    {
+      "id": "value_creation_attribution",
+      "question": "How much of the platform's value derives from the network itself vs. the platform owner's innovation?",
+      "resolution_mechanism": "Counterfactual analysis: platforms with similar network size but different feature sets; measurement of user surplus vs platform operator profit; historical comparison of value distribution in early vs mature phases",
+      "impact": "If value creation is mostly network: constraint is Rope (coordination rent-sharing). If value creation is mostly platform: constraint is Snare (extraction via monopoly). Directs whether network effects should be treated as natural coordination or engineered lock-in.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Attribution of value creation to network effects vs platform innovation"
+    },
+    {
+      "id": "intergeneration_lock_in",
+      "question": "Do network effects create lock-in across generations, or do generational cohorts reset network dynamics?",
+      "resolution_mechanism": "Longitudinal analysis of platform adoption by age cohort; measurement of switching rates across generational boundaries; study of whether Gen Z adoption of new platforms represents lock-in escape or parallel network growth",
+      "impact": "If generational reset occurs: lock-in is biographical, not civilizational (Snare reclassifies to Scaffold with shorter sunset). If lock-in persists across generations: constraint is civilizational extraction (Snare confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether network lock-in persists across generational cohorts"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Network effects represent a structural phenomenon where the value of a product or service increases as more people use it. This constraint occupies a critical position in understanding digital platforms, telecommunications, and two-sided markets. The paradox: network effects appear as a natural coordination mechanism (early users benefit from each other's participation) but also create extractive lock-in once a dominant network emerges. Late adopters face a trap \u2014 the platform they must join is often technically inferior to alternatives but dominates by network density alone. The constraint exhibits all six DR types from different perspectives, revealing that 'network effects' names a family of structurally distinct economic dynamics rather than a single phenomenon. The theater_ratio (0.48) reflects that narratives about inevitable network dominance operate partly as truthful descriptions of coordination benefits and partly as justifications for suppression of switching. The extractiveness trajectory (0.15\u21920.52 over the interval) captures the constraint's evolution: in early phases, network effects primarily coordinate users and create genuine mutual benefit; in mature phases, network effects primarily lock in late adopters and extract through monopoly power. The platform owner's perspective reveals that suppression is embedded in technical architecture (data portability barriers, API restrictions, incompatible formats) rather than through active coercion, making the constraint a tangled rope with passive enforcement.",
+    "key_agents": [
+      "Early Adopters / First-Movers: Primary beneficiaries (institutional/arbitrage) \u2014 capture disproportionate network value; can pivot to new platforms if necessary; experience constraint as coordination mechanism",
+      "Platform Owner / Monopolist: Secondary beneficiary (institutional/arbitrage) \u2014 captures rents from network density; actively suppresses exit options; profits from lock-in; perspective inverts from beneficiary to extractor",
+      "Late Adopters: Primary victims (powerless/trapped) \u2014 forced to use dominant platform despite superior alternatives; face prohibitive switching costs; no exit option; experience maximum extraction",
+      "Competing Platform Operators: Secondary victims (organized/constrained) \u2014 organized actors investing in alternatives but suppressed by network density and winner-take-most dynamics; can partially exit but face formidable incumbent advantages",
+      "SME User Ecosystem: Tertiary victims (moderate/constrained) \u2014 experience mixed coordination (access to customer base) and extraction (platform fees, algorithmic control, terms-of-service changes); constrained by switching costs and ecosystem dependencies",
+      "Analytical Observer: Civilization-scale view (analytical/analytical) \u2014 risks naturalizing contingent institutional lock-in as inevitable economic law; false summit alert on piton classification"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint exhibits meaningful extraction, but not as severe as pure monopoly because network-driven value creation is real \u2014 users do benefit from larger networks. However, the extraction grows over time as the network matures: initial value derives from genuine coordination benefits; later value derives from lock-in and suppression of alternatives. The 0.52 figure reflects the mature phase where extraction mechanisms are embedded. Suppression (0.65): Moderate-high. Significant barriers to exit include switching costs (data migration, account relocation, rebuilding social/economic connections), switching risk (fear of missing network activities during transition), technical barriers (incompatible formats, API restrictions), and coordination failure (critical mass required to make alternative viable). Suppression is not absolute \u2014 some users do switch, and emerging alternatives attract young cohorts \u2014 but substantially dampens exit. Theater ratio (0.48): Moderate. Approximately half of the activation energy behind network-driven dynamics comes from actual value creation (genuine coordination benefits); the other half derives from narrative justification of lock-in, marketing of network effects as inevitable, and rationalization of monopoly pricing as natural ecosystem dynamics. The theater has been declining as antitrust scrutiny increases, but the frame 'network effects are inevitable' still operates at institutional inertia levels.",
+    "directionality_logic": "Each perspective's directionality (d) is determined by structural position within the extraction/coordination flow. Early adopters and platform owners occupy beneficiary positions (low d, negative f(d), receive subsidy from the constraint). Their exit options are arbitrage \u2014 they can pivot to new platforms and maintain opportunities. Late adopters occupy full-target positions (high d, high f(d), maximum extraction experience) with no exit \u2014 they must participate in the dominant network. Competing platform operators occupy partial-target positions (moderate d) \u2014 organized but constrained by network density. SME users occupy mixed positions (moderate d) \u2014 they receive coordination benefits but also face extraction through platform control mechanisms. The piton perspective derives from high theater_ratio (0.48) indicating that the constraint's operation relies substantially on narrative and institutional inertia rather than active enforcement mechanisms.",
+    "perspectival_gap": "This constraint demonstrates significant perspectival divergence. The early adopter sees pure coordination (Rope) \u2014 they genuinely benefit from network growth and experience the platform as solving a shared problem. The platform owner sees extraction opportunities (Snare or Tangled Rope depending on perspective) \u2014 they actively engineer lock-in while claiming to serve users. Competing operators see suppression (Tangled Rope) \u2014 they can invest in alternatives but face formidable incumbent advantages. Late adopters see pure extraction (Snare) \u2014 trapped by network density with no viable exit. SME users see mixed effects (Tangled Rope) \u2014 coordination benefits from network access but extraction through platform control. The analytical observer risks seeing inevitable economic law (Piton or false Mountain) \u2014 the narrative 'network effects are natural' can naturalize what is actually contingent institutional lock-in created through suppression of interoperability and data portability. The perspectival gap is largest between the beneficiary (early adopter) and the victim (late adopter) \u2014 they experience structurally opposite dynamics from the same network.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids mislabeling by distinguishing the early-phase coordination function (genuine mutual benefit from network growth) from the late-phase extraction function (lock-in of late adopters). Network effects in early phases are legitimately Rope \u2014 they solve a real coordination problem and create shared value. Network effects in late phases are legitimately Tangled Rope or Snare \u2014 they combine genuine residual coordination benefits with substantial lock-in extraction. The mandatrophy is resolved by treating network effects as a dual-phase phenomenon: phase 1 (growth) emphasizes coordination; phase 2 (maturity) emphasizes extraction. The measurement trajectory (extractiveness 0.15\u21920.52) captures this phase transition empirically. The constraint avoids false Rope by acknowledging suppression mechanisms (switching costs, API restrictions, data portability barriers) that are engineered, not emergent. It avoids false Mountain by recognizing that network dominance is contingent on these suppression mechanisms, not inevitable. The piton perspective correctly identifies that 'network effects are inevitable' operates as institutional theater \u2014 a narrative maintained through repeated invocation despite its partial falsehood."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_platform_monopoly",
+      "data_portability_barriers",
+      "switching_costs_technology"
+    ],
+    "dual_formulation_note": "Network effects decompose into two structurally distinct claims: (1) coordination-driven growth (early phase, genuine mutual benefit, Rope classification), (2) extraction-driven lock-in (late phase, monopoly rent-seeking, Snare/Tangled Rope classification). These are not the same constraint viewed from different angles \u2014 their \u03b5 values and suppression mechanisms differ substantially. Story treats the constraint as a time-indexed family with a phase transition. The upstream constraints (digital_platform_monopoly, switching_costs_technology) are downstream effects of network effects operating in extraction phase. Network effects in coordination phase would not create those downstream constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ]
+}

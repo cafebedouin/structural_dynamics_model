@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "russian_war_cannibalization",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rwc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Russian Military Cannibalization of Civilian Infrastructure",
+    "topic_domain": "political_economy/state_capacity",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "military_industrial_complex",
+      "defense_contractors",
+      "state_security_apparatus"
+    ],
+    "victims": [
+      "civilian_consumer_economy",
+      "civilian_population_livelihood",
+      "regional_economic_development",
+      "pensioners_and_fixed_income_earners"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Civilian Household",
+      "comment": "PERSPECTIVE 1: CIVILIAN HOUSEHOLD (SNARE) \u2014 Citizens cannot exit the constraint. War-driven inflation, import restrictions, and production redirects eliminate consumer goods availability and purchasing power. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.66."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Regional Light Manufacturing Sector",
+      "comment": "PERSPECTIVE 2: REGIONAL LIGHT MANUFACTURING (SNARE) \u2014 Small factories producing appliances, textiles, consumer goods face mandatory resource redirection: electricity rationing favors military production, component supplies diverted to defense contractors, labor conscription removes workers. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Pensioner and Fixed-Income Population",
+      "comment": "PERSPECTIVE 3: PENSIONER POPULATION (TANGLED ROPE) \u2014 State pension system technically coordinated with welfare apparatus (ruble purchasing power is the coordination) but experiences asymmetric extraction: pensions fail to match inflation, social services cut for defense spending, yet elderly remain dependent on state system. d\u22480.80, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.60. Mixed: coordination of dependency + extraction through inflation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Military-Industrial Complex",
+      "comment": "PERSPECTIVE 4: MILITARY-INDUSTRIAL COMPLEX (ROPE) \u2014 Defense contractors experience the constraint as pure coordination: state mandate to prioritize military production solves the collective action problem of private firms underinvesting in war economy goods. Guaranteed contracts, preferential electricity, labor priority, and supply chain protection are coordination mechanisms. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Russian State Security Apparatus",
+      "comment": "PERSPECTIVE 5: STATE SECURITY APPARATUS (TANGLED ROPE) \u2014 The state sees itself as executing its core mandate (defense) through coordinated resource allocation, but also relies on suppressing alternatives (price controls, import restrictions, labor controls) to maintain the constraint. Active enforcement required. d\u22480.15, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.02. The state benefits from coordination of the war economy but also incurs the costs of suppression and management, creating a tangled relationship to the constraint itself."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Soviet-Era Industrial Legacy System",
+      "comment": "PERSPECTIVE 6: SOVIET INDUSTRIAL LEGACY (PITON) \u2014 The Russian defense-industrial complex is a degraded residue of the Soviet command economy. Its structure (vertical integration, state ownership, hard-wired supply chains) persists through institutional inertia rather than functional efficiency. Much of the 'cannibalization' is performative: mobilizing Soviet-era factories, restoring mothballed plants, maintaining sprawling defense bureaucracy. theater_ratio=0.58 approaches piton threshold but extraction remains high. This is a constraint where the mechanism (Soviet planning methods) is degraded but still forcibly activated. d\u22480.20, f(d)\u22480.08, \u03c3=1.1 \u2192 \u03c7\u22480.06."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE from systemic view) \u2014 From a civilizational perspective, the constraint exhibits pure extraction without coordination: the war mobilization produces no net benefit to Russian civilian society, only destruction of economic capacity and diversion of human capital to unproductive military spending. This is extraction divorced from coordination. d\u22480.88, f(d)\u22481.35, \u03c3=1.1 \u2192 \u03c7\u22480.64."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "civilian_economy_collapse_irreversibility",
+      "question": "Is the cannibalization of civilian infrastructure reversible (temporary war mobilization) or irreversible (permanent destruction of civilian productive capacity)?",
+      "resolution_mechanism": "Post-conflict reconstruction assessment; analysis of capital stock destruction, human capital losses (emigration, conscription), technological degradation, and supply chain fragmentation. Comparison with post-WWII Soviet recovery vs post-Soviet 1990s contraction.",
+      "impact": "If reversible: constraint frames as Scaffold with a sunset clause (temporary mobilization with eventual return to civilian economy). If irreversible: constraint is Snare with generational timescale (permanent extraction of value from civilian sector, with no recovery path).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether civilian economic cannibalization is reversible or permanent"
+    },
+    {
+      "id": "state_mandate_authenticity",
+      "question": "Does the Russian state genuinely execute a mandate to defend the state and prosecute the war, or does it use the war as cover for elite extraction (corruption, embezzlement, dispossession)?",
+      "resolution_mechanism": "Analysis of defense spending allocation: proportion to actual military operations vs. contractor profiteering, ghost factories, inflated bids, and disappeared supplies. Investigation of defense minister and contract officer personal enrichment. Cross-correlation with patterns from prior Russian military mobilizations.",
+      "impact": "If mandate is authentic: constraint is Snare (pure extraction for a stated purpose). If mandate is cover for elite extraction: constraint is Snare but with an additional layer of mandatrophy (the stated war purpose masks internal corruption, making the constraint even more opaque to victims).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether state mandate to defend is genuine or cover for elite extraction"
+    },
+    {
+      "id": "civilian_suppression_mechanism_sustainability",
+      "question": "Can price controls, import restrictions, and labor conscription be maintained indefinitely without triggering black markets, emigration, or internal collapse?",
+      "resolution_mechanism": "Tracking of emigration rates, wage dynamics, black market premium ratios, food security metrics, and internal unrest indicators. Comparison with Soviet-era suppression sustainability periods (WWII, 1960s-1980s stagnation).",
+      "impact": "If sustainable: suppression value (0.75) is stable and the Snare classification holds. If unsustainable: suppression index will degrade, classification may shift to Piton (degraded enforcement) or Scaffold (forced sunset as enforcement collapses).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression mechanisms can be sustained long-term"
+    },
+    {
+      "id": "hidden_mandatrophy_detection",
+      "question": "Is the constraint experiencing hidden mandatrophy: the state's stated mandate (defend Russia/win the war) is failing, forcing escalating resource extraction from civilians with no corresponding strategic benefit?",
+      "resolution_mechanism": "Assessment of military-strategic outcomes vs. economic cost. Analysis of whether additional civilian resource extraction produces proportional military capacity increases or merely compensates for losses. Tracking of state rhetoric vs. objective military position changes.",
+      "impact": "If mandatrophy is occurring: the constraint transitions from a legitimate (if brutal) Snare executing a state mandate to a degraded Snare/Piton where the state maintains the extraction theater even as its purpose fails. This would explain why the theater_ratio is rising despite the constraint's core function remaining, indicating Goodhart drift (measuring military mobilization success by resource extraction volume rather than military outcomes).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether hidden mandatrophy is occurring in state resource extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The Russian state's mobilization for the Ukraine war represents a structural constraint that cannibilizes civilian infrastructure and diverts economic output from consumer production to military-industrial use. This constraint exhibits the 'Invisible Mandatrophy' pattern: the state maintains a formal mandate (defend the nation, achieve military objectives) but increasing evidence suggests the mandate is failing, causing the state to escalate civilian resource extraction not to achieve the stated purpose more effectively but to compensate for losses and maintain the appearance of mobilization. The constraint operates through a combination of price controls, import restrictions, electricity rationing, labor conscription, and production quota reallocation. Civilian light manufacturing, agriculture supply chains, and consumer goods sectors are systematically defunded in favor of defense contractors. The theater ratio (rising from 0.35 to 0.58) indicates that resource mobilization is increasingly performative: the state announces production targets and allocates resources by bureaucratic fiat, but actual military outputs may not scale proportionally with the economic inputs consumed. The suppression index (0.75) reflects comprehensive state control over markets, labor, and capital allocation \u2014 civilian agents have virtually no alternatives and cannot exit the constraint.",
+    "key_agents": [
+      "Civilian Households: Primary victims (powerless/trapped) \u2014 face inflation, shortages, and declining purchasing power with no exit option",
+      "Regional Light Manufacturing Sector: Primary victims (powerless/trapped) \u2014 factory closures, resource redirection, labor conscription eliminate competitive production",
+      "Pensioner and Fixed-Income Population: Secondary victims (moderate/constrained) \u2014 dependent on state pensions that fail to track inflation; social services cut",
+      "Military-Industrial Complex: Primary beneficiary (institutional/arbitrage) \u2014 guaranteed contracts, preferential access to resources, state protection",
+      "Defense Contractors: Primary beneficiary (institutional/arbitrage) \u2014 rent extraction through inflated contracts and supply monopolies",
+      "Russian State Security Apparatus: Enforcer (organized/constrained) \u2014 executes the constraint through price controls, rationing, and conscription, but also bears costs of suppression management",
+      "Soviet-Era Industrial Legacy: Residual institutional structure (institutional/constrained) \u2014 degraded mechanism for implementing command-economy methods",
+      "Analytical Observer: Civilian systemic view (analytical/analytical) \u2014 sees the constraint as extraction without proportional military benefit"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The war mobilization extracts approximately 15-20% of Russian GDP for military purposes (historically extreme, comparable to WWII Soviet levels). This is far above normal peacetime defense spending (3-4% of GDP pre-2022). The extraction is sustained through state power, not consent, and creates severe opportunity costs for the civilian economy. The metric has risen from 0.42 to 0.68 over 24 months, indicating accelerating cannibalization. Suppression (0.75): Very high. The Russian state suppresses alternatives through: (1) price controls preventing market signals; (2) import restrictions eliminating consumer goods; (3) labor conscription removing workers from civilian sectors; (4) production quotas mandating factory redirection; (5) capital controls preventing capital flight. Suppression is comprehensive and active. Theater ratio (0.58): Moderate-high. The mobilization narrative emphasizes production targets, factory restoration, and mobilization scale, but actual military outputs relative to resource inputs are questioned by military analysts. The increasing theater ratio from 0.35 to 0.58 suggests Goodhart drift: measuring success by resources mobilized rather than military outcomes achieved. This is characteristic of hidden mandatrophy \u2014 escalating resource claims despite degrading strategic position. Claimed type: SNARE. The constraint meets all snare thresholds: extractiveness \u2265 0.46 (actual 0.68), suppression \u2265 0.60 (actual 0.75), \u03c7 \u2265 0.66 (derived). The constraint's existence depends entirely on suppressing alternatives \u2014 without state power over markets, labor, and capital, civilians would shift production and consumption away from military inputs.",
+    "perspectival_gap": "The civilian household sees a pure extraction system with no coordination benefit (Snare) \u2014 resources are taken but no reciprocal service is delivered (security is not experienced as improved, purchasing power collapses). The military-industrial complex sees coordination (Rope) \u2014 the state mandate solves their collective action problem by guaranteeing demand and priority access. The state apparatus sees itself as executing both coordination (defense) and extraction (resource mobilization), creating a tangled relationship. The Soviet-era industrial legacy is a Piton \u2014 the mechanism for implementing the constraint (command-economy methods) is degraded and maintained through inertia rather than function. The analytical observer, seeing the constraint from a civilizational perspective, perceives that the extraction produces minimal net benefit and may be negatively correlated with the state's stated military objectives \u2014 suggesting hidden mandatrophy. This gap is wide: victim and observer agree on Snare; beneficiary and state apparatus see coordination or enforcement; the historical-institutional lens sees degradation (Piton).",
+    "directionality_logic": "Civilian households: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction directionality. Reallocation of production away from consumer goods directly harms household purchasing power and consumption. Regional light manufacturers: Victims + trapped \u2192 d\u22480.95, f(d)\u22481.42. Highest extraction directionality. Factories cannot exit; must comply with production quotas and resource allocation mandates. Pensioners: Victims + constrained \u2192 d\u22480.80, f(d)\u22481.25. High extraction but slightly less than maximum because elderly are at least included in state system (pensions exist, even if inadequate). Military-industrial complex: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Large negative extraction directionality (net benefit). State contracts are de facto guaranteed; no exit risk. Russian state apparatus: Mixed + constrained \u2192 d\u22480.15, f(d)\u22480.05. The state benefits from executing its mandated function but also incurs the costs of enforcing suppression and managing dissent. Soviet legacy system: Institutional + constrained \u2192 d\u22480.20, f(d)\u22480.08. Low extraction directionality because the system itself is inert \u2014 it does not benefit but is merely the mechanism through which others extract.",
+    "mandatrophy_analysis": "CRITICAL MANDATROPHY DETECTION: The Russian war cannibalization constraint exhibits the signature pattern of hidden or escalating mandatrophy. The state's stated mandate is to defend Russia and achieve military objectives in Ukraine. However, the extractiveness has risen from 0.42 (early war, 2022) to 0.68 (2024), a 62% increase. If the mandate were being achieved efficiently, extractiveness should stabilize or decline as initial mobilization costs are absorbed. Instead, escalating extraction despite uncertain military outcomes indicates the state is compensating for mandate failure by increasing civilian resource claims. The theater ratio rising from 0.35 to 0.58 further confirms mandatrophy: the state increasingly emphasizes resource mobilization volume and factory production statistics while downplaying military outcome specificity. This is classic Goodhart drift \u2014 measuring success by the input (resources extracted) rather than the output (military objectives achieved). The mandatrophy resolution requires acknowledging that the constraint transitions from a (brutal) execution of a legitimate state mandate to an increasingly performative extraction system maintained to preserve the appearance of mobilization. This classification as SNARE with mandatrophy_resolved=true means the framework recognizes that the constraint cannot transition to Rope (no genuine coordination benefit) or Scaffold (no sunset clause despite expectations). It is locked in Snare classification with the additional property that the mandate it purports to serve is failing."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "russian_capital_flight_controls",
+      "sanctions_induced_supply_substitution",
+      "demographic_conscription_trap"
+    ],
+    "dual_formulation_note": "This constraint is structurally dependent on three upstream constraints: capital flight controls (which prevent civilians from protecting wealth), sanctions-induced supply substitution (which eliminates consumer goods imports), and conscription (which removes male labor from civilian economy). The cannibalization constraint integrates these three mechanisms into a unified extraction system. The upstream constraints have lower extractiveness individually; the downstream constraint exhibits higher extractiveness due to their interaction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

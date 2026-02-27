@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "epistemic_overload_collapse",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "The Signal-Drowning Vortex",
+    "topic_domain": "cognitive/informational/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "information_aggregators",
+      "attention_economy_platforms"
+    ],
+    "victims": [
+      "individual_sensemaking_capacity",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Overwhelmed Individual",
+      "comment": "The individual, bombarded with information, lacks the cognitive resources to effectively filter or verify claims. Trapped within the information flow, their sensemaking collapses. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Information Aggregator",
+      "comment": "Platforms benefit from increased engagement driven by the constant influx of new information (Rope aspect). However, they are also constrained by the need to manage misinformation and maintain user trust. Experiences mixed coordination and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Epistemic Community",
+      "comment": "Organized groups attempting to provide structured information and verification mechanisms are constrained by the scale of the problem and the speed of information dissemination. They provide a coordination service, but also face extraction as their efforts are often undermined by bad actors."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Traditional Media Institutions",
+      "comment": "Traditional media, once gatekeepers of information, find their role diminished in the face of decentralized online content. Their existing verification processes are often too slow to keep pace, and their brand reputation is eroded by the spread of misinformation. They still maintain a sense of authority, but their function is diminished."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a broad, long-term perspective, the information environment can be seen as a complex system with both beneficial and detrimental aspects. The observer can analyze the flows of information, identify vulnerabilities, and propose interventions, but is also part of the system they are observing."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cognitive_capacity_limits",
+      "question": "What is the actual upper bound on individual cognitive capacity for processing complex information streams?",
+      "resolution_mechanism": "Cognitive science research on attention span, working memory, and information processing speed; correlation between information load and decision-making quality.",
+      "impact": "If capacity is lower than assumed: overload effects are more pervasive and damaging. If capacity is higher: resilience strategies can be more effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Understanding the limits of individual cognitive capacity."
+    },
+    {
+      "id": "misinformation_detection_effectiveness",
+      "question": "How effective are current techniques for detecting and combating misinformation at scale?",
+      "resolution_mechanism": "Analysis of fact-checking accuracy, the speed of misinformation spread vs. corrective information, and the impact of labeling and algorithmic interventions.",
+      "impact": "If detection is highly effective: the severity of the overload effect is mitigated. If detection is weak: misinformation compounds the problem.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluating the effectiveness of misinformation detection techniques."
+    },
+    {
+      "id": "platform_incentive_alignment",
+      "question": "Can platforms be effectively incentivized to prioritize information quality over engagement metrics?",
+      "resolution_mechanism": "Policy experiments with algorithmic transparency requirements, liability rules, and alternative funding models for content moderation.",
+      "impact": "If incentives can be aligned: platforms can play a positive role in mitigating overload. If not: their inherent business model exacerbates the problem.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Assessing the potential for aligning platform incentives with information quality."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Signal-Drowning Vortex describes the phenomenon where the sheer volume and velocity of information exceed an individual's capacity to process it, leading to cognitive overload and impaired decision-making. This is exacerbated by contradictory and often misleading information sources. The rise of social media and the attention economy have accelerated this process. Traditional media's role in filtering information has been undermined by alternative sources.",
+    "key_agents": [
+      "Individual Sensemaking Capacity: Primary victim (powerless/trapped) - lacks the resources to filter or verify information effectively.",
+      "Information Aggregators: Beneficiary (moderate/constrained) - benefits from increased engagement, but constrained by the need to manage misinformation.",
+      "Epistemic Commons: Secondary victim (powerless/trapped) - the collective understanding of the world is degraded by the spread of misinformation.",
+      "Traditional Media Institutions: Degraded gatekeepers (institutional/constrained) - find their role diminished.",
+      "Attention Economy Platforms: Primary beneficiary (institutional/arbitrage) - benefits from increased engagement even with degraded content"
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The information environment extracts cognitive resources from individuals. Suppression (0.70): High. Individuals lack the ability to effectively filter or verify information, resulting in them being suppressed by noise. Theater ratio (0.75): High. There is some effort towards filtering, but the scale of the problem is vast, and much of the effort is performative.",
+    "perspectival_gap": "The individual experiences a snare, trapped by the overwhelming information. Information aggregators see a tangled rope as they benefit from the influx of information, but are constrained by the need to manage misinformation. Traditional media sees a piton as their role as gatekeepers is eroded.",
+    "directionality_logic": "The individual is a trapped target, experiencing significant extraction. Information aggregators benefit from increased engagement, giving them lower directionality. The analytical observer can step back and assess the overall dynamics."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "filter_bubble_dynamics",
+      "algorithmic_bias_amplification"
+    ]
+  },
+  "directionality_overrides": []
+}

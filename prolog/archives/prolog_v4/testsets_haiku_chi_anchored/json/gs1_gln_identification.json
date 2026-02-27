@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "gs1_gln_identification",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gln"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Global Location Number (GLN) Standard",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gs1_organization",
+      "large_logistics_operators",
+      "healthcare_systems"
+    ],
+    "victims": [
+      "small_retailers",
+      "independent_suppliers",
+      "developing_market_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Small Retailer",
+      "comment": "PERSPECTIVE 1: SMALL RETAILER (SNARE) \u2014 Trapped by supply chain requirements. Major distributors and retailers mandate GLN assignment for all suppliers. No alternative identification exists for supply chain integration. Lacks resources to absorb GLN licensing costs or navigate GS1 bureaucracy. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Independent Supplier",
+      "comment": "PERSPECTIVE 2: INDEPENDENT SUPPLIER (TANGLED ROPE) \u2014 Constrained by dual coordination/extraction: benefits from access to standardized supply chains (coordination function), but extraction occurs through licensing fees, mandatory renewal cycles, and data collection requirements. Cannot exit without losing market access. d\u22480.72, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.41."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Logistics Operator",
+      "comment": "PERSPECTIVE 3: LARGE LOGISTICS OPERATOR (ROPE) \u2014 Experiences GLN as pure coordination mechanism. Benefits from standardized identification enabling interoperability across global supply chains, automated warehouse management, and reduced transaction costs. Has scale to absorb licensing costs and leverage data insights. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.03. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Healthcare System",
+      "comment": "PERSPECTIVE 4: HEALTHCARE SYSTEM (ROPE) \u2014 Large healthcare networks benefit from GLN for facility identification and pharmaceutical tracking, enabling inventory optimization and regulatory compliance with minimal friction. Can negotiate volume pricing and leverage GS1 data services. d\u22480.10, f(d)\u2248-0.07, \u03c3=1.2 \u2192 \u03c7\u2248-0.03. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Supply Chain Coordination Coalition",
+      "comment": "PERSPECTIVE 5: SUPPLY CHAIN COORDINATION COALITION (TANGLED ROPE) \u2014 Organized retailers, distributors, and regulators see GLN as enabling critical coordination infrastructure (interoperability, regulatory compliance, data sharing). However, coalition members also experience extraction through GS1's monopoly position: licensing mandatory, data collection mandatory, governance non-transparent. d\u22480.48, f(d)\u22480.62, \u03c3=1.2 \u2192 \u03c7\u22480.29."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The GS1 Organization",
+      "comment": "PERSPECTIVE 6: GS1 ORGANIZATION (PITON) \u2014 Maintains dominant position through institutional inertia and switching costs rather than functional necessity. Alternative identification schemes exist (EPC, direct serialization) but lack critical mass adoption. Theater manifests in mandatory certification processes, complex renewal bureaucracy, and data collection justifications that serve organizational sustenance more than functional coordination. theater_ratio=0.48 appears low, but GS1's governance structure \u2014 non-transparent standard-setting, self-dealing licensing fees, data monopoly without proportional ecosystem benefit \u2014 reflects degradation of the original coordination function. d\u22480.12, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.02."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational scope, GLN represents a hybrid: genuine coordination (interoperability solved), but with locked-in extraction (monopoly licensing, mandatory participation, data collection). The standard's path-dependent adoption creates switching costs that sustain extraction even as alternatives become technically viable. Decentralized identification (blockchain-based) could replace GLN's coordination function at lower extraction cost, but GS1's institutional position prevents migration. d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_necessity_threshold",
+      "question": "How much of GLN's adoption is driven by genuine coordination necessity versus lock-in and switching costs?",
+      "resolution_mechanism": "Comparative analysis of supply chain efficiency gains from standardization vs. gains from alternative identification schemes (EPC, direct serialization); measuring switching cost barriers vs. functional efficiency delta",
+      "impact": "If coordination necessity > 70%: GLN is Rope from most perspectives. If < 50%: GLN is Snare with coordination theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What portion of GLN adoption reflects coordination necessity versus lock-in"
+    },
+    {
+      "id": "data_collection_extraction_magnitude",
+      "question": "What proportion of GS1's revenue and value extraction derives from GLN licensing versus data monetization and analytics services?",
+      "resolution_mechanism": "Financial analysis of GS1 revenue streams; tracking of data product pricing and adoption rates; comparative analysis of licensing fees versus data services value captured",
+      "impact": "If data extraction > 40% of revenue: extraction component dominates, shifting classification toward pure Snare. If < 20%: licensing is primarily cost recovery, supporting Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of GS1 extraction from data versus licensing"
+    },
+    {
+      "id": "alternative_standard_viability",
+      "question": "Could decentralized or open-source identification standards (blockchain-based GLN equivalents, open serialization protocols) provide equivalent coordination at lower extraction cost?",
+      "resolution_mechanism": "Technical feasibility assessment of alternative standards; cost-benefit analysis of switching from GLN to alternatives; pilot deployments and interoperability testing",
+      "impact": "If alternatives viable: suppression becomes voluntary (exit becomes mobile), shifting GLN toward Tangled Rope with sunset logic. If not viable: suppression is structural, supporting Snare classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative identification standards could replace GLN"
+    },
+    {
+      "id": "developing_market_coercion_degree",
+      "question": "In developing markets (Africa, Southeast Asia, South America), is GLN adoption driven by genuine supply chain participation or by coercive market gatekeeping by developed-market retailers?",
+      "resolution_mechanism": "Survey of supplier adoption pathways in developing markets; analysis of barriers faced by suppliers without GLN; comparison of adoption rates driven by competitive necessity vs. regulatory requirement",
+      "impact": "If coercive gatekeeping > 60%: GLN functions as neocolonial extraction mechanism (pure Snare for developing market participants). If < 40%: adoption is voluntary coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of coercive gatekeeping in developing market GLN adoption"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 1974,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The Global Location Number (GLN) standard, established by GS1 (formerly EAN International) in 1974, represents a globally dominant identification system for physical locations and legal entities. It solves a genuine coordination problem: standardized identification enables interoperability across supply chains, reduces data entry errors, and allows automated inventory management across jurisdictions. However, the standard has evolved into a hybrid coordination-extraction mechanism. GS1 maintains monopoly control over the standard's governance, sets licensing fees unilaterally, mandates data collection for regulatory compliance, and captures value from supply chain data without proportional benefit to suppliers. Small retailers, independent suppliers, and developing market participants face mandatory adoption with limited exit options. Large logistics operators and healthcare systems benefit from the coordination function at scale and can absorb licensing costs. The constraint exhibits all three hybrid phases: (1) genuine coordination problem solving (1974-1995), (2) layered extraction through licensing and data collection (1995-2015), and (3) institutional degradation where governance theater (complex renewal bureaucracy, non-transparent standard-setting) increasingly sustains the system despite viable alternatives (blockchain-based identification, open serialization).",
+    "key_agents": [
+      "GS1 Organization: Primary beneficiary (institutional/arbitrage) \u2014 maintains monopoly control, sets licensing fees, captures supply chain data value",
+      "Large Logistics Operators: Beneficiary (institutional/arbitrage) \u2014 achieve scale economies from standardization, absorb licensing costs, leverage data insights",
+      "Healthcare Systems: Beneficiary (institutional/arbitrage) \u2014 optimize inventory management, ensure regulatory compliance, minimal friction from licensing",
+      "Small Retailers: Primary victim (powerless/trapped) \u2014 mandatory adoption, cannot absorb licensing costs, no meaningful exit option",
+      "Independent Suppliers: Secondary victim (moderate/constrained) \u2014 trapped by supply chain requirements, extract value constraints through repeated licensing",
+      "Supply Chain Coalition: Organized actors (organized/constrained) \u2014 see coordination benefit but also experience extraction through GS1 monopoly",
+      "Developing Market Participants: Victims (powerless/constrained) \u2014 face gatekeeping by developed-market retailers demanding GLN compliance",
+      "Analytical Observer: Sees path-dependent lock-in (analytical/analytical) \u2014 recognizes alternative standards could provide coordination at lower extraction cost"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The GLN standard genuinely solves coordination problems (interoperability, data standardization, regulatory integration), which justifies some licensing cost. However, GS1's monopoly position enables extraction beyond cost recovery: mandatory data collection, unilateral fee-setting, and non-transparent governance. The extractiveness reflects that small suppliers bear disproportionate costs (licensing fees as percentage of transaction volume) while GS1 captures data value. The metric increased from 0.15 (1974-1990s) to 0.38 (2020s) as data monetization became GS1's primary revenue strategy. Suppression (0.52): Moderate-high. Suppliers cannot exit GLN without losing market access. Alternative identification schemes exist but lack critical-mass adoption due to path dependency. Switching costs are prohibitively high for supply chains with millions of locations already in the GLN database. For developing market suppliers, coercive gatekeeping by developed-market retailers functions as effective suppression. Theater ratio (0.48): Moderate. GS1's governance structure includes substantial performative elements: complex renewal procedures, elaborate certification processes, and data-collection justifications that serve organizational sustenance more than functional coordination. However, the core technical standard remains functional (legitimate reduction in data errors, genuine interoperability gains), so theater is not dominant.",
+    "perspectival_gap": "The constraint exhibits stark perspectival divergence. Large logistics operators and healthcare systems see Rope: pure coordination enabling interoperability and data standardization with manageable licensing costs. Small retailers see Snare: mandatory participation without coordination benefit (they do not benefit from supply chain data insights), trapped by supply chain requirements. The supply chain coalition sees Tangled Rope: genuine coordination value but also extraction through monopoly licensing and data collection. GS1 organization itself sees Piton: its original coordination function persists through institutional momentum, but alternatives (decentralized identification, blockchain serialization) could provide equivalent coordination with lower overhead. The analytical observer sees path-dependent lock-in: the standard solved a real problem in 1974, but switching costs now sustain extraction even as technical alternatives emerge. This perspectival gap is not measurement-dependent (same \u03b5 for all observers); it reflects real structural differences in how agents experience the constraint.",
+    "directionality_logic": "GS1 Organization: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Institutional actor with exit freedom (can set standards unilaterally, capture data value). Net beneficiary. Large Logistics: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Scale economies enable absorption of licensing costs, data insights valuable. Net beneficiary. Small Retailers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. No exit option, extraction through mandatory licensing and data collection. Maximum extraction directionality. Independent Suppliers: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.08. Mandatory participation but potential to negotiate volume pricing (slightly more mobile than powerless retailers). Significant extraction but not maximal. Supply Chain Coalition: Organized + constrained \u2192 d\u22480.48, f(d)\u22480.62. Coalition has agency (can lobby for standard changes) but constrained by path dependency (cannot exit without massive coordination failure). Moderate extraction. Healthcare Systems: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.07. Large systems can negotiate pricing and leverage regulatory compliance alignment. Net beneficiary.",
+    "mandatrophy_analysis": "RESOLVED: The constraint resolves mandatrophy by differentiating coordination function from extraction mechanism. The genuine coordination problem (1974-1995) was Rope: interoperability, data standardization, transaction cost reduction. As GS1 accumulated monopoly position, extraction layered onto coordination: mandatory data collection (1995-2010), unilateral fee increases (2010-present), and non-transparent governance (2015-present). The constraint became Tangled Rope as soon as extraction exceeded cost recovery. For powerless agents (small retailers, developing market suppliers), it functions as Snare: mandatory participation without coordination benefit. For large institutional agents, it remains Rope: they capture value from the coordination function. The mandatrophy is resolved by observing that GS1 is NOT a pure coordination mechanism \u2014 it exhibits all the characteristics of asymmetric extraction (high suppression=0.52, unequal benefit distribution, monopoly governance) layered onto a real coordination function. The theater ratio (0.48) reflects that GS1's governance theater has grown as the coordination function degraded relative to data extraction (theater increased from 0.32 to 0.48 over 50 years). This is a textbook Tangled Rope: coordination function genuine but now secondary to extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_transparency_audit",
+      "barcode_standardization_gatekeeping",
+      "data_monetization_asymmetry"
+    ],
+    "dual_formulation_note": "The GLN standard is downstream of the original supply chain coordination problem (standardized identification) but should be distinguished from the broader GS1 ecosystem (which includes barcodes, RFID, and data services). A separate constraint story could address GS1's data collection and monetization practices as a structurally distinct extraction mechanism (\u03b5\u22480.55) layered onto the GLN identification function. The current story focuses on the identification standard itself (\u03b5=0.38) as a hybrid coordination-extraction system."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
+}

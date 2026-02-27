@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "uk_hicbc_2024",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hicbc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "UK High Income Child Benefit Charge (HICBC) 2024",
+    "topic_domain": "economic/fiscal_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "treasury_revenue_collection",
+      "lower_income_beneficiary_pool"
+    ],
+    "victims": [
+      "high_income_families_with_children",
+      "middle_income_earners_near_threshold"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "High-Income Family Subject to Clawback",
+      "comment": "PERSPECTIVE 1: HIGH-INCOME FAMILY (SNARE) \u2014 Trapped within UK tax jurisdiction; cannot exit without emigration or income restructuring. Faces full extraction of child benefit via marginal tax treatment despite having paid taxes. No meaningful exit. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.72. Effective extraction is high because trapped exit + victim status + institutional enforcement."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle-Income Earners Near Threshold",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME EARNERS NEAR THRESHOLD (SNARE) \u2014 Constrained exit via income reduction (pension sacrifice, spousal income transfer, contracting/freelance restructuring). Faces marginal effective tax rates exceeding 60% in the \u00a360k-\u00a380k band. Suppression is high because genuine restructuring options exist but carry significant friction costs (complexity, professional fees, reduced income security). d\u22480.80, f(d)\u22481.22, \u03c3=1.0 \u2192 \u03c7\u22480.63. Still effective extraction despite constrained rather than trapped exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Treasury and Revenue Authorities",
+      "comment": "PERSPECTIVE 3: TREASURY AND REVENUE AUTHORITIES (ROPE) \u2014 Architects of the constraint see it as pure coordination: means-testing child benefit serves legitimate fiscal goal of targeting public resources to lower-income families. No coercive overhead from treasury perspective; operates as administrative mechanism. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiary (positive revenue, legitimate redistribution logic)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Lower-Income Beneficiary Families",
+      "comment": "PERSPECTIVE 4: LOWER-INCOME BENEFICIARY FAMILIES (TANGLED ROPE) \u2014 Benefit from stable child benefit payments without clawback threshold. Also experience extraction via tax burden to fund the constraint's administration. Mobile exit via migration is theoretically available but practically constrained (social ties, job market). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39. Mixed: benefit from redistribution + cost of maintaining means-test complexity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Historical Child Benefit System",
+      "comment": "PERSPECTIVE 5: HISTORICAL CHILD BENEFIT SYSTEM (PITON) \u2014 Pre-2013, child benefit was universal (no clawback). The constraint represents degraded function: means-testing replaces universalism; administrative complexity (individual tax returns, clawback calculations) persists despite policy intent. theater_ratio=0.65: significant performative content in how means-testing is justified (equity narrative) vs actual effect (extraction from organized middle class). The old universal system persists in institutional language and beneficiary expectations even as the mechanism has been replaced. d\u22480.05, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Piton gate satisfied: theater \u22650.70 threshold not met, but theater_ratio=0.65 reflects degradation trajectory."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Tax Planning Industry and Compliance Infrastructure",
+      "comment": "PERSPECTIVE 6: TAX PLANNING INDUSTRY AND COMPLIANCE INFRASTRUCTURE (SCAFFOLD) \u2014 Organized agents (accountants, payroll providers, financial advisors) solve the coordination problem of managing HICBC compliance. This is temporary infrastructure: as digital tax integration improves and automated pension contributions scale, the need for individual advice diminishes. has_sunset_clause rationale: Full employer automatic enrolment into workplace pensions + simplified digital tax filing (Making Tax Digital) are intended to reduce friction. d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.22. Low effective extraction because organized agents have agency and see a path to structural simplification (sunset: 10-15 years as digital filing matures)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN) \u2014 This perspective naturalizes the constraint as an inescapable feature of means-tested welfare: 'All means-tested benefits must clawback at high incomes; extraction is inherent to redistribution.' This classification is a FALSE SUMMIT. The structural data (\u03b5=0.52, suppression=0.68, theater=0.65) contradicts mountain gates (\u03b5\u22640.25, suppression\u22640.05). The clawback mechanism is a contingent policy choice, not a law of nature. Pre-2013 universalism proved that child benefit can exist without extraction. The mountain framing naturalizes political choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "behavioral_response_elasticity",
+      "question": "What is the true income and labor-supply elasticity of high-income earners subject to HICBC? Do most respond via tax planning, income reduction, or no response at all?",
+      "resolution_mechanism": "Econometric analysis of tax return data pre/post-HICBC introduction (2013) and subsequent threshold changes; comparison of earned income, pension contributions, and self-employment income volatility for \u00a355k-\u00a375k earners vs controls",
+      "impact": "If elastic (strong response): constraint is effective at behavioral control but creates dead-weight loss; classification shifts toward Snare (extraction-focused). If inelastic (no response): constraint is pure revenue grab with minimal coordination benefit; classification remains Snare but with higher \u03c7.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Income and labor-supply elasticity of HICBC-subject earners"
+    },
+    {
+      "id": "administrative_cost_recovery",
+      "question": "Do the costs of HICBC administration (tax return processing, clawback calculations, compliance support) exceed the revenue actually recovered?",
+      "resolution_mechanism": "HM Revenue & Customs administrative cost accounting; comparison of cost per pound of revenue recovered vs other means-tested benefits (Universal Credit, Working Tax Credit)",
+      "impact": "If costs exceed revenue: constraint is theater (Piton). If costs are 20-40% of revenue: extraction exists but with significant overhead (Tangled Rope). If costs are <15%: pure extraction mechanism (Snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether HICBC administrative costs exceed revenue recovered"
+    },
+    {
+      "id": "cliff_effect_vs_taper_design",
+      "question": "Does the 1% taper (clawing back 1p per pound earned above \u00a360k) function as intended, or does behavioral response cluster at threshold boundaries, creating effective cliff effects?",
+      "resolution_mechanism": "Distribution analysis of declared income and pension contributions; identification of clustering at \u00a360k and \u00a380k thresholds; comparison to smooth income distribution in non-clawback regions",
+      "impact": "If cliff effects dominate: suppression is higher than measured (people are trapped at decision points); extraction is more concentrated. If smooth taper works: suppression is lower; extraction is distributed (Rope characteristics possible from some perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether HICBC creates behavioral cliff effects or smooth taper response"
+    },
+    {
+      "id": "redistributive_benefit_realization",
+      "question": "Do lower-income families actually receive meaningfully higher child benefit payments, or is the redistributive intent offset by other fiscal changes (benefit caps, UC tapering)?",
+      "resolution_mechanism": "Comparison of disposable income trajectories for lower-income families pre/post-HICBC; analysis of benefit changes in context of full means-test system",
+      "impact": "If redistribution is real and substantial: constraint has genuine coordination component (Tangled Rope confirmed for beneficiary perspective). If redistribution is minimal or offset: constraint is pure extraction dressed in equity language (Snare confirmed across most perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether HICBC redistributive intent translates to actual lower-income benefit gains"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The UK High Income Child Benefit Charge (HICBC) introduces a means-tested clawback mechanism for families where at least one partner earns over \u00a360,000 annually, recovering child benefit at 1% per pound earned above the threshold up to complete clawback at \u00a380,000. Introduced in January 2013 as a fiscal consolidation measure during austerity, the HICBC creates a structural tension between legitimate redistributive goals (targeting benefits to lower-income families) and extraction mechanisms that trap middle-income earners in high marginal effective tax rates (exceeding 60% in the \u00a360k-\u00a380k band). The constraint demonstrates how welfare state modernization can introduce extraction mechanisms into previously universal programs. The theater ratio (0.65) reflects the gap between the policy's stated equity rationale (ensuring benefits reach those who need them most) and its actual implementation (complex tax return processing, high administrative overhead, behavioral distortion). From different structural positions, the HICBC appears variously as pure extraction (Snare to affected families), coordination (Rope to treasury designers), mixed extraction with coordination (Tangled Rope to lower-income beneficiaries), and degraded universalism (Piton to the historical child benefit system). The constraint has accumulated extractiveness over its 12-year lifecycle (\u03b5 rising from 0.35 to 0.52) as awareness of tax planning opportunities and income restructuring options has spread, while theater has increased (0.52 to 0.65) as compliance infrastructure complexity has grown to manage the means-test.",
+    "key_agents": [
+      "High-income families with children: Primary victims (powerless/trapped) \u2014 bear full extraction via marginal tax treatment; cannot exit UK jurisdiction without significant emigration costs",
+      "Middle-income earners (\u00a355k-\u00a375k): Secondary victims (moderate/constrained) \u2014 face constrained exit via pension sacrifice, spousal income transfers, or contracting; marginal effective tax rates exceed 60%",
+      "Treasury and HMRC: Primary beneficiaries (institutional/arbitrage) \u2014 architects of means-test mechanism; collect revenue and achieve distributional targeting without perceived coercion",
+      "Lower-income beneficiary families: Mixed beneficiaries and victims (organized/mobile) \u2014 benefit from maintained child benefit without clawback, but also bear cost of means-test administration; mobile exit available but practically constrained",
+      "Tax planning industry: Organized intermediaries (organized/constrained) \u2014 accountants, payroll providers, financial advisors solving compliance friction; provide temporary scaffold as digital infrastructure matures",
+      "Historical universalism: Institutional memory (institutional/arbitrage) \u2014 pre-2013 universal child benefit represents degraded function now replaced by means-testing; exhibits piton characteristics"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The clawback mechanism extracts real value from high-income families (up to \u00a32,540/year for three children at peak). The extraction is substantial but not total \u2014 families can partially exit via income restructuring (pension contributions, spousal income reallocation). The metric reflects that extraction exists and is significant, but constrained exit options reduce effective coercion compared to a true income tax. Suppression (0.68): High. Multiple suppression mechanisms operate: (1) legal/jurisdictional (emigration requires abandoning UK social ties and job market access), (2) informational (many families do not understand the clawback or their restructuring options), (3) compliance friction (calculating clawback requires tax returns; pension sacrifice requires employer cooperation), (4) psychological (benefit clawback creates sense of policy unfairness that discourages political challenge). Theater ratio (0.65): Moderate-high. The equity narrative (means-testing targets benefits to those who need them) is performative \u2014 in reality, the mechanism primarily affects organized middle-class families sophisticated enough to navigate tax planning, while lower-income families lack resources for planning but genuinely benefit. The 1% taper is theatrical precision (appears surgical) masking cliff effects at \u00a360k and \u00a380k thresholds. Administrative complexity (individual tax returns, annual clawback calculations) is theatrical \u2014 modern digital systems could implement means-testing with far less friction. Claimed type (Snare): Justified by \u03b5\u22650.46 (0.52 met), suppression \u22650.60 (0.68 met), and \u03c7 calculation: f(d)\u22481.40 for trapped victims, \u03c3=1.0 (national scope) \u2192 \u03c7\u22480.73. Meets snare thresholds.",
+    "perspectival_gap": "DRAMATIC PERSPECTIVAL DIVERGENCE. High-income families experience Snare (extraction, trapped exit, institutional enforcement). Middle-income earners near threshold experience Snare (extraction, constrained exit via tax planning). Treasury sees Rope (pure coordination, distributional targeting, no coercive overhead from their perspective). Lower-income beneficiaries see Tangled Rope (benefit from stable payments, but also bear cost of means-test complexity and taxation to fund administration). Tax planning industry sees Scaffold (temporary problem being solved by digital tax automation; sunset as complexity declines). Historical universalism exhibits Piton (degraded function; universal benefit replaced by means-test, but language and expectations persist). Analytical observer risks false Mountain (naturalizing means-testing as inherent to welfare). The perspectival gap is driven by directionality: beneficiaries (treasury, lower-income families) have low d \u2192 negative \u03c7 (net benefit); victims (high-income families) have high d \u2192 high \u03c7 (extraction). The snare classification dominates because the powerless agent (high-income family trapped in jurisdiction) experiences structural extraction with no meaningful exit.",
+    "directionality_logic": "High-income family: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Trapped by UK jurisdiction and tax residency rules. Middle-income earner: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.22. High extraction. Constrained exit via tax planning carries friction costs (accountant fees ~\u00a3500-\u00a32000/year, complexity, reduced flexibility). Treasury: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary. Architects of mechanism; no constraints on policy design. Lower-income families: Beneficiary + mobile \u2192 d\u22480.55, f(d)\u22480.75. Mixed. Benefit from benefit maintenance; mobile exit via migration is theoretical (practically constrained by job market, social ties). Tax planning industry: Intermediary + constrained \u2192 d\u22480.42, f(d)\u22480.42. Constrained because dependent on regulatory environment; cannot exit without losing client base. Historical universalism: Institutional memory + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.10. Piton because degraded but persistent through institutional inertia. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. False summit risk: naturalizes means-testing as inevitable.",
+    "mandatrophy_analysis": "MANDATROPHY UNRESOLVED (mandatrophy_resolved: false). The constraint exhibits a genuine structural ambiguity: does HICBC primarily serve a coordination function (efficient targeting of limited resources to lower-income families) or primarily serve extraction (fiscal consolidation via targeted tax increase on organized middle class)? Snare classification assumes extraction dominates, but the lower-income beneficiary perspective reveals real coordination logic (maintaining benefit access for those with lower incomes). The mandatrophy resolution would require evidence on: (1) whether lower-income families actually receive benefit gains that justify the extraction cost to higher-income families, and (2) whether the extraction is efficient (administrative costs < revenue gain) or theatrical (high overhead for modest redistribution). Current evidence is ambiguous: HMRC administrative cost data is not publicly granular enough to compute cost-per-pound-recovered. Without this data, the tangled_rope interpretation remains plausible \u2014 the constraint may be genuinely hybrid (mixing coordination benefit for lower-income families with extraction from high-income families) rather than pure snare. The omega variable on redistributive benefit realization (omega_id: redistributive_benefit_realization) is designed to resolve this mandatrophy by isolating whether lower-income families actually benefit substantively or if benefits are offset by other fiscal changes. If resolution confirms real benefit gain with reasonable administrative efficiency, classification should shift toward Tangled Rope with active enforcement. If resolution confirms minimal redistribution or high overhead, snare classification is confirmed and mandatrophy remains unresolved because the extraction mechanism is so theatrically justified that no perspectival frame accepts pure snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_marginal_tax_rate_clustering",
+      "universal_credit_taper_interaction",
+      "pension_contribution_incentive_distortion"
+    ],
+    "dual_formulation_note": "HICBC is structurally downstream of two distinct constraints: (1) the universal child benefit system (pre-2013, \u03b5\u22480.05, pure Rope for all perspectives \u2014 no extraction), and (2) the modern welfare state means-testing logic (\u03b5 variable across constraints, generally higher extraction). The decomposition reveals that 'child benefit' is not a single constraint but a family of related claims with different \u03b5 values depending on whether the benefit is universal (\u03b5\u22480.05) or means-tested (\u03b5\u22480.40-0.52). HICBC represents a policy transition between these two constraint regimes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.8
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "uk_marginal_tax_rate_clustering"
+    ]
+  }
+}

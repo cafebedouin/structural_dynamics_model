@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "treaty_land_entrenchment",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "treaty"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.04,
+    "theater_ratio": 0.08,
+    "claimed_type": "mountain",
+    "human_readable": "Treaty Sovereignty (The Crown-Indigenous Mountain)",
+    "topic_domain": "legal/political",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Constitutional Analyst",
+      "comment": "PERSPECTIVE 1: CONSTITUTIONAL ANALYST (MOUNTAIN) \u2014 From a universal, civilizational view, treaty entrenchment is a structural feature of constitutional law itself. Once a treaty is constitutionally entrenched (as Treaties 6, 7, and 8 are in Canadian law via the Constitution Act 1982, Section 35), the constraint on subsequent legislation becomes an immutable legal fact. No Crown actor at any power level can unilaterally override it without destroying the constitutional foundation itself. \u03b5\u22480.18, accessibility_collapse=0.92, resistance=0.08 establish the mountain classification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Federal Crown",
+      "comment": "PERSPECTIVE 2: FEDERAL CROWN (MOUNTAIN) \u2014 Even the institutional sovereign (the Crown) experiences treaty entrenchment as an immutable constraint. The Crown cannot exit or arbitrage away the constitutional obligation. The constraint is embedded in the constitutional text itself (Section 35). Exit would require constitutional amendment (requiring provincial/territorial consent), which is nearly impossible given the political lock-in. From the Crown's perspective, treaty land rights are a non-negotiable constitutional ceiling."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Provincial Government (Alberta)",
+      "comment": "PERSPECTIVE 3: PROVINCIAL GOVERNMENT (MOUNTAIN) \u2014 Even powerful provincial actors (Alberta government) experience treaty entrenchment as a binding constraint. While Alberta has some regulatory authority within provinces, it cannot unilaterally extinguish or override treaty rights. Any attempt to do so would violate Section 35 of the Constitution Act 1982, which is beyond provincial jurisdiction to amend. The constraint is enforced through federal courts and the constitutional hierarchy."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Indigenous Peoples (Treaty 6, 7, 8 Nations)",
+      "comment": "PERSPECTIVE 4: INDIGENOUS PEOPLES (MOUNTAIN) \u2014 From the perspective of Indigenous peoples holding treaty rights, entrenchment is a mountain \u2014 a structural protection that cannot be removed by ordinary legislation. The rights themselves are anchored in constitutional law, creating an immutable legal fact. However, the constraint operates differently here: it is experienced as a protective floor, not an extraction. The mountain prevents degradation, not limitation. d\u22480.05 (beneficiary of the entrenchment), f(d)\u2248-0.12, \u03c7\u2248-0.02. Negative effective extraction indicates net protection rather than imposition."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Jurisprudential Observer",
+      "comment": "PERSPECTIVE 5: JURISPRUDENTIAL OBSERVER (MOUNTAIN) \u2014 Legal doctrine on treaty rights (established in cases like Sparrow, Gladstone, Delgamuukw, Haida Nation) establishes that Aboriginal and treaty rights are inherent, not granted by the Crown. Once recognized and entrenched constitutionally, they create binding legal facts that no actor can unilaterally dissolve. The extraction coefficient reflects the constraint's role as a structural feature of the legal system itself, not as a coercive mechanism."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Non-Indigenous Settlers and Corporations",
+      "comment": "PERSPECTIVE 6: NON-INDIGENOUS ACTORS (MOUNTAIN) \u2014 From the perspective of settler society and resource extraction corporations operating on treaty lands, the entrenchment appears as a structural constraint on their freedom to exploit land and resources without consultation or consent. They cannot exit this constraint through ordinary market mechanisms or provincial regulation. However, this is not extraction in the DR sense \u2014 it is a constraint that limits their actions, not a mechanism that extracts value from them to benefit a specific actor. The constraint is distributional (it allocates rights, not wealth), not extractive."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "title_vs_rights_distinction",
+      "question": "Does treaty entrenchment establish absolute Aboriginal title or use-and-harvesting rights, and does this distinction affect the constraint's structural nature?",
+      "resolution_mechanism": "Analysis of Supreme Court jurisprudence (Delgamuukw, Tsilqot'in) distinguishing title, harvesting rights, and consultation rights; examination of specific treaty language and its judicial interpretation over time",
+      "impact": "If entrenchment secures absolute title: constraint is mountain (immutable ownership fact). If entrenchment secures consultation rights only: constraint might degrade to tangled_rope (coordination + extraction) as Crown actors seek ways to limit consultation scope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether entrenchment establishes title or limited use rights"
+    },
+    {
+      "id": "amendment_lock_robustness",
+      "question": "Can Section 35 be effectively amended through creative constitutional interpretation or political-legal work-arounds without formal amendment?",
+      "resolution_mechanism": "Longitudinal analysis of court decisions on Section 35; examination of Crown attempts to narrow or reinterpret treaty obligations; assessment of whether political majorities could pressure courts to dilute protections",
+      "impact": "If amendment lock is robust: mountain classification holds indefinitely. If courts or political actors find interpretive pathways to narrow Section 35: constraint degrades to tangled_rope or snare as entrenchment becomes theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Section 35 entrenchment is truly amendment-proof"
+    },
+    {
+      "id": "implementation_gap",
+      "question": "Does the distinction between legal entrenchment and practical implementation create a hidden extraction mechanism where Indigenous peoples hold formal rights but cannot enforce them without enormous legal cost?",
+      "resolution_mechanism": "Analysis of litigation patterns, settlement rates, and cost-shifting in Section 35 cases; comparison of litigation costs borne by Indigenous claimants vs. the Crown; examination of whether de facto implementation lags behind de jure entrenchment",
+      "impact": "If implementation gap is large: mountain classification applies only to the formal legal structure; actual constraint might be tangled_rope (formal rights + informal extraction via litigation costs). If gap is small: mountain classification holds for both law and practice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether legal entrenchment translates to practical enforceability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Treaty entrenchment under the Canadian Constitution (Section 35, Constitution Act 1982) represents a structural constraint that operates as an immutable legal ceiling on state power. Treaties 6, 7, and 8, which govern Alberta territory, are constitutionally protected agreements between the Crown and Indigenous nations. Once entrenched in constitutional text, these agreements create binding legal obligations that no Crown actor \u2014 federal, provincial, or territorial \u2014 can unilaterally override without destroying the constitutional foundation itself. This constraint exhibits the defining characteristics of a mountain: it emerges from the logical structure of constitutional law (if a provision is entrenched, it cannot be changed by ordinary legislation), it has zero degrees of freedom for all agents, and its existence is verified through jurisprudence spanning decades (Sparrow 1990, Gladstone 1996, Delgamuukw 1997, Haida Nation 2004, Tsilqot'in 2014). The constraint's extractiveness is low (0.18) because it is not a mechanism for extracting value from one group to benefit another \u2014 it is a distributional constraint allocating rights. Suppression is minimal (0.04) because the constraint operates through transparent constitutional law, not through coercion or denial of alternatives. Theater is negligible (0.08) because the constraint's function is entirely non-performative: constitutional entrenchment works through legal facts, not through ritual or pretense.",
+    "key_agents": [
+      "Indigenous Peoples (Treaty 6, 7, 8 Nations): Primary beneficiary (powerless/trapped \u2192 protected by entrenchment floor) \u2014 hold constitutional rights that cannot be unilaterally extinguished",
+      "Federal Crown: Institutional actor (institutional/arbitrage \u2192 bound by constitutional ceiling) \u2014 cannot override treaties without amending Constitution Act 1982",
+      "Alberta Provincial Government: Powerful actor (powerful/mobile \u2192 constrained by constitutional hierarchy) \u2014 cannot unilaterally extinguish or override treaty rights within provincial jurisdiction",
+      "Non-Indigenous Settlers and Corporations: Powerful actors (powerful/mobile \u2192 limited by allocation of land/resource rights to Indigenous peoples) \u2014 cannot freely access treaty lands without consultation or consent",
+      "Canadian Courts: Institutional enforcer (institutional/arbitrage) \u2014 interpret and enforce Section 35 protections; serve as the mechanism through which the constraint is made binding",
+      "Constitutional Analyst: Analytical observer (analytical/analytical) \u2014 sees entrenchment as a structural feature of constitutional law itself"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The constraint is not extractive in the DR sense because it does not transfer value from one actor to another \u2014 it allocates rights. The 0.18 value reflects the minimal structural imposition on the Crown: it cannot act on treaty lands unilaterally, which limits its freedom but does not extract resources. If the constraint were analyzed as pure extraction, the score would be inflated; the mountain classification corrects for this by treating the constraint as a distributional floor, not a wealth-transfer mechanism. Suppression (0.04): Minimal. The constraint operates through transparent constitutional law. No agent is denied knowledge of the constraint or alternatives. The only suppression is the legal fact itself: alternatives (unilateral Crown action) are not available, but this is not coercive suppression \u2014 it is structural constraint. Theater ratio (0.08): Near-zero. Constitutional entrenchment has no performative component. It either binds through legal fact or it does not. The slight non-zero value reflects marginal ritual in court proceedings and constitutional interpretation, but the core mechanism (amendment lock + judicial enforcement) is purely functional.",
+    "perspectival_gap": "All six perspectives converge on the mountain classification, which indicates a uniform-type constraint. This is theoretically sound: constitutional entrenchment creates a legal fact that binds all agents, regardless of their power level or exit options. The Crown, provinces, Indigenous peoples, and settler society all experience the same structural constraint \u2014 treaty rights cannot be unilaterally dissolved by ordinary legislation. The gap that does exist is not perspectival (different classification types) but experiential: Indigenous peoples experience the constraint as a protective floor; the Crown experiences it as a ceiling on its power; settlers and corporations experience it as a limitation on their access to land/resources. However, all parties classify it the same way structurally: it is a mountain \u2014 an immutable legal fact. The uniformity across perspectives is evidence of the constraint's robustness.",
+    "directionality_logic": "The traditional directionality derivation (beneficiary/victim + exit options) does not apply to pure mountains in the same way it applies to other constraint types. Mountains have \u03b5 and f(d) = immutable; no agent can negotiate or arbitrage the constraint away. However, we can still identify who benefits and who bears costs: Indigenous peoples benefit from the entrenchment (they are protected); the Crown and settler society bear the cost of constrained freedom. In directionality terms: Indigenous peoples as beneficiaries \u2192 d\u22480.05, f(d)\u2248-0.12 (they are protected, not extracted from). The Crown as institutional actor \u2192 d\u22480.00 (canonical fallback for institutional power in a constraint that limits institutional freedom). Settler society as victims of allocation \u2192 d\u22480.85 (they are constrained from accessing treaty lands), but this is not extraction \u2014 it is rights allocation. The key insight: a mountain can protect one group and constrain another without being an extraction mechanism. The constraint redistributes rights, not wealth.",
+    "mandatrophy_analysis": "MOUNTAIN (NO MANDATROPHY): Treaty entrenchment resolves any mandatrophy by its uniform classification across all perspectives. The constraint is not vulnerable to the mandatrophy error (mislabeling coordination as extraction, or vice versa) because it operates through constitutional law, not through coordination mechanisms or extraction mechanisms. The constraint's function is pure: it creates a legal ceiling that no actor can cross. There is no hidden coordination function that could be mislabeled as extraction, and no extraction mechanism that could be mislabeled as coordination. The accessibility_collapse metric (0.92) indicates that the constraint is nearly perfectly accessible \u2014 everyone can verify that treaties are entrenched in the Constitution Act 1982, and no one disputes the fact. The resistance metric (0.08) indicates that the constraint is nearly universally accepted as legitimate, even by those constrained by it. This high accessibility and low resistance are characteristic of mountains: they command assent not through coercion but through the transparency of their logical structure."
+  }
+}

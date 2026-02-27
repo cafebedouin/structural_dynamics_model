@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "sts86_ascent_checklist",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sts86"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Space Shuttle Ascent/Abort Procedural Matrix",
+    "topic_domain": "technological/institutional",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Flight Crew",
+      "comment": "PERSPECTIVE 1: FLIGHT CREW (MOUNTAIN) \u2014 Pilots and mission specialists are bound by physics and thermodynamic reality. The checklist encodes non-negotiable constraints: Mach envelope, structural loads, fuel consumption law, engine ignition sequencing, main engine cutoff timing. No exit option exists within the flight envelope. The crew cannot override the constraint without violating the laws of orbital mechanics. d\u22480.85, f(d)\u22481.15, \u03c3=0.8 \u2192 \u03c7\u22480.09 (low effective extraction because the constraint is impersonal natural law, not institutional asymmetry)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mission Control / Flight Dynamics",
+      "comment": "PERSPECTIVE 2: MISSION CONTROL / FLIGHT DYNAMICS (MOUNTAIN) \u2014 The ascent profile is constrained by physics: gravity losses, aerodynamic heating, structural design limits, fuel management, abort mode boundaries. These are not institutional choices but natural law. Mission Control has constrained exit \u2014 they can modify the ascent profile only within narrow bounds defined by vehicle design and atmospheric properties. The checklist records these boundaries. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.06."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NASA / Flight Safety Authority",
+      "comment": "PERSPECTIVE 3: NASA / FLIGHT SAFETY (MOUNTAIN) \u2014 The checklist (JSC-48005) codifies irreducible physical constraints discovered through design iteration, testing, and flight history. NASA has design choice (arbitrage) \u2014 they could build a different vehicle with different constraints \u2014 but for THIS vehicle, the checklist constraints are immutable. The authority sees the checklist as a record of natural law, not a policy lever. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.01 (institutional beneficiary perspective; the constraint enables their authority)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer / Orbital Mechanics",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / ORBITAL MECHANICS (MOUNTAIN) \u2014 From the perspective of orbital mechanics and thermodynamics, the ascent profile is governed by Kepler's laws, rocket equation, atmospheric density model, vehicle design load limits, and fuel consumption. These are mathematical and physical necessities, not institutional choices. The checklist is a phenomenological summary of these laws applied to a specific vehicle. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "procedural_vs_physical_boundary",
+      "question": "Where does the checklist's authority transition from encoding physical law to encoding institutional procedure?",
+      "resolution_mechanism": "Forensic analysis of each checklist item: separation into physical constraints (main engine cutoff velocity, dynamic pressure limits, structural load envelopes) vs procedural choices (call-out sequences, abort decision timing, crew workload scheduling). Items without physical justification are institutional, not natural law.",
+      "impact": "If 80%+ of items are physical law: Mountain classification is robust. If 40%+ are procedural/institutional: the constraint is a Tangled Rope (coordination via checklist + institutional pressure) misclassified as Mountain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of checklist items that are physical law vs institutional procedure"
+    },
+    {
+      "id": "abort_mode_optimality",
+      "question": "Are the defined abort modes (RTLS, TAL, AOA) physical necessities or policy choices?",
+      "resolution_mechanism": "Comparison of Space Shuttle abort boundaries with other launch vehicles (Soyuz, Falcon 9, SLS). Analysis of whether different abort strategies are physically possible for STS but chosen not to be implemented.",
+      "impact": "If abort modes are universal physical limits: Mountain confirmed. If other vehicles use different abort strategies for equivalent physics: the constraint is partly institutional (Tangled Rope, not Mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether abort modes are physical necessities or institutional choices"
+    },
+    {
+      "id": "crew_discretion_within_bounds",
+      "question": "How much discretion do pilots have to deviate from the checklist within the physically-safe envelope?",
+      "resolution_mechanism": "Review of JSC-48005 authority structure, procedure for in-flight deviations, analysis of historical cases where crews modified checklist execution. Comparison with cockpit authority in military or commercial aviation.",
+      "impact": "If crews have significant discretion: constraint has institutional overlay (Tangled Rope). If checklist compliance is absolute: constraint approaches pure natural law (Mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of crew discretion to modify checklist execution within safe bounds"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "The Space Shuttle ascent checklist (JSC-48005) represents the ultimate procedural constraint in human spaceflight: a set of mandatory decision points, abort criteria, and system checks that bind crew, mission control, and vehicle into a single executable sequence. The constraint appears to be purely institutional \u2014 NASA's procedure, codified by engineers, enforced by training and authority. Yet structural analysis reveals that the checklist is fundamentally a transcription of natural law. The ascent profile is constrained by gravity, atmospheric density, structural load limits, fuel consumption law, and orbital mechanics. The checklist records where these physical constraints intersect with human decision-making: the points at which ignoring the procedure would violate physics, kill the crew, or waste the vehicle. The checklist's authority is neither arbitrary nor merely institutional \u2014 it is the authority of nature expressed through procedural language.",
+    "key_agents": [
+      "Flight Crew (Pilot, Mission Specialists): Powerless/trapped within immediate flight envelope \u2014 must execute checklist without physically-safe alternatives",
+      "Mission Control / Flight Dynamics: Organized actors with constrained exit \u2014 can modify ascent profile only within physics-defined bounds",
+      "NASA / Flight Safety Authority: Institutional actor with design arbitrage \u2014 could build different vehicle but for STS, checklist constraints are immutable",
+      "Analytical Observer: Civilizational perspective recognizing orbital mechanics as foundation \u2014 sees checklist as phenomenological record of natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The checklist does not extract value from crew or mission control. It constrains both equally, applying force from natural law rather than institutional asymmetry. The constraint is impersonal \u2014 it does not redistribute resources, privilege one agent over another, or create asymmetric burden. Suppression (0.02): Minimal. Alternatives to following the checklist do exist (crash, explode, fail to reach orbit) but they are not suppressed by institutional power \u2014 they are physically catastrophic. The crew's exit options are not suppressed by NASA; they are eliminated by physics. Theater ratio (0.15): Low. The checklist has functional content throughout. Call-outs and system checks have direct safety function \u2014 they catch failures before they cascade. Abort decision points encode real physical boundaries, not performative ritual. The small theater component (0.15) reflects that some procedural elements are workload management or communication ritual, but the bulk is functional verification. Accessibility collapse (0.92): Very high. The constraint is a mathematical and physical necessity. No amount of institutional power, technological development within the current vehicle design, or creative interpretation can escape the rocket equation, gravity, atmospheric density, or structural limits. Resistance (0.08): Very low. No organized resistance exists to the constraint \u2014 crew, mission control, and NASA all accept it as natural law. Unlike institutional constraints that may face pushback, the ascent checklist faces zero resistance because its authority comes from physics, not politics.",
+    "perspectival_gap": "All four perspectives converge on Mountain classification, confirming that the constraint is uniform across observables. The flight crew, mission control, NASA, and the analytical observer all see the same fundamental reality: the checklist records irreducible physical constraints. There is no perspectival gap (no disagreement about type) because the constraint is not institutional \u2014 it is natural law. The absence of perspectival conflict is itself diagnostic: Mountain constraints should show uniformity across all reasonable observables. The crew cannot reframe the ascent profile as coordination (Rope) because the boundaries are physics-determined, not consensus-based. Mission control cannot see it as temporary (Scaffold) because the structural limits do not sunset. NASA cannot experience extraction (Snare) because the constraint does not privilege institutional power over physical reality.",
+    "directionality_logic": "Flight Crew: d\u22480.85 (high). Powerless within the immediate flight envelope; no arbitrage, no exit. But d is not derived from institutional targeting \u2014 it is structural position relative to immutable natural law. All agents occupy similarly constrained positions; the crew is not uniquely victimized. Mission Control: d\u22480.55 (symmetric). Constrained exit; can modify ascent profile only within physics bounds. The constraint is impersonal \u2014 affects mission control and crew symmetrically. NASA: d\u22480.05 (institutional beneficiary position). NASA has design arbitrage at the vehicle level. For the STS vehicle, they accept the constraints as natural law. The authority to manage the checklist is an institutional function (beneficiary position), but this does not create extraction because the constraint itself is not extractive. Analytical Observer: d\u22480.72 (analytical perspective on structural reality). Views the constraint as mathematical necessity \u2014 no beneficiary or victim, only lawful structure.",
+    "mandatrophy_analysis": "This constraint is Mountain-only and thus avoids mandatrophy entirely. The base metrics (\u03b5=0.08, suppression=0.02) are well below the Snare threshold (\u03b5\u22650.46, suppression\u22650.60). The constraint does not create extractive asymmetry that could be mislabeled as coordination. There is no beneficiary/victim asymmetry to resolve \u2014 the constraint applies impersonal natural law to all agents equally. The checklist is pure coordination in service of safety, not coordination masking extraction. The unified Mountain classification across all perspectives confirms that no mislabeling risk exists. The small theater component (0.15) reflects procedural workload management but does not rise to the level where Piton gates would activate (theater \u2265 0.70). The constraint is a Mountain without controversy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "challenger_thermal_protection_failure",
+      "sts_main_engine_cutoff_precision"
+    ],
+    "dual_formulation_note": "The ascent checklist is upstream of specific technical constraints (main engine performance, thermal protection design) that determine abort boundaries. Those constraints have their own \u03b5 values reflecting empirical uncertainties; the checklist has \u03b5=0.08 reflecting that it encodes immutable physical law without extractive institutional overlay."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "taliban_slavery_law_2024",
+    "version": "1.0",
+    "generated_date": "2024-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tsl"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.85,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Taliban Criminal Code Re-legalizing Slavery",
+    "topic_domain": "political/legal/human_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "taliban_state_apparatus",
+      "wealthy_landowners",
+      "military_commanders"
+    ],
+    "victims": [
+      "enslaved_populations",
+      "hazara_minorities",
+      "tajik_minorities",
+      "women_trafficked_populations",
+      "child_laborers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Enslaved and Trafficked Populations",
+      "comment": "PERSPECTIVE 1: ENSLAVED POPULATIONS (SNARE) \u2014 No legal recourse, no exit mechanism, complete vulnerability to coercive labor extraction. Hazara minorities, trafficked women, child laborers face systematic dehumanization encoded in law. d\u22480.98, f(d)\u22481.45, \u03c3=1.0 \u2192 \u03c7\u22481.13."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Afghan Civilian Population",
+      "comment": "PERSPECTIVE 2: CIVILIAN POPULATION (SNARE) \u2014 Constrained by Taliban total control; cannot organize collective resistance; subject to arbitrary enforcement. Potential victims of slavery expansion; face coercive confiscation of property and labor. d\u22480.88, f(d)\u22481.28, \u03c3=1.0 \u2192 \u03c7\u22480.99."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Taliban State Apparatus",
+      "comment": "PERSPECTIVE 3: TALIBAN STATE (ROPE) \u2014 Frames slavery legalization as restoring religious law and social order; extracts labor and resources through legal mechanism; experiences the constraint as coordination of territorial control and resource mobilization. d\u22480.02, f(d)\u2248-0.18, \u03c3=1.0 \u2192 \u03c7\u2248-0.14. Net beneficiary; effective extraction is negative from their perspective because they see only the coordination function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Community and Diaspora",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL OBSERVERS (SNARE) \u2014 Powerful but effectively trapped by geopolitical constraints and lack of enforcement mechanism. Can see and measure the extraction clearly but cannot exit the system without escalation. d\u22480.45, f(d)\u22480.48, \u03c3=1.2 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Legal and Moral Framework)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (SNARE) \u2014 From universal legal and moral frameworks (UN conventions, international humanitarian law), this is unambiguously a snare: systematic, legal, state-enforced extraction of labor without compensation, with no legal exit. \u03b5 and structure are invariant across observation methodologies. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22481.08."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "definitional_scope_slavery",
+      "question": "How does the Taliban code define 'slavery' vs. 'debt bondage' vs. 'forced labor'? Does the legal text explicitly legalize chattel slavery or use de facto mechanisms?",
+      "resolution_mechanism": "Detailed textual analysis of the Taliban criminal code; comparison with Ottoman-era and pre-2001 Taliban codes; case documentation of enforcement patterns",
+      "impact": "If explicit chattel slavery: unambiguous snare classification sustained. If de facto through debt bondage and forced labor provisions: still snare but with lower \u03b5 (\u22480.65) and different suppression mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legal definition of slavery vs. debt bondage in Taliban criminal code"
+    },
+    {
+      "id": "enforcement_capacity_scale",
+      "question": "What fraction of Afghanistan's population is actually subject to active enslavement under this law? Is the law's extractive power limited by Taliban enforcement capacity or by population size?",
+      "resolution_mechanism": "Population surveys of enslaved/trafficked populations; documentation of active enforcement; comparison with Taliban administrative reach in different regions",
+      "impact": "If enforcement is <20% of population: suppression may be lower (Taliban cannot reach all territories). If enforcement is >50% where Taliban controls: suppression is maximal and extractiveness approaches 0.85 baseline.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of population under active enslavement"
+    },
+    {
+      "id": "coalition_resistance_formation",
+      "question": "Can enslaved populations or international actors form sufficient coordination to create alternative exit pathways (underground networks, refugee flows, insurgent coalitions)?",
+      "resolution_mechanism": "Tracking of refugee flows, underground resistance networks, Taliban defection rates; documentation of autonomous region attempts",
+      "impact": "If strong coalitions emerge: exit_options upgrade from trapped to constrained; powerless becomes organized; snare may degrade to tangled rope with lower \u03c7. If coalitions are suppressed: snare classification hardens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Possibility of organized resistance coalition formation"
+    },
+    {
+      "id": "international_intervention_threshold",
+      "question": "At what scale of enforcement or severity does the international community escalate from sanctions to direct intervention, creating an actual exit mechanism for victims?",
+      "resolution_mechanism": "Precedent analysis (Rwanda, Syria, Darfur); stated intervention thresholds from UN, NATO, regional powers; monitoring of escalation signals",
+      "impact": "If intervention becomes likely: international perspective's exit_options upgrade from mobile to arbitrage; powerful actors' d drops; global scope \u03c7 decreases. If intervention remains unlikely: snare classification hardens globally.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Likelihood of international military intervention"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Taliban's 2024 criminal code re-legalizes slavery and slave-like practices following their return to power in Afghanistan in August 2021. The constraint represents a systematic, state-enforced extraction of labor from populations classified as legitimate slaves under Taliban interpretation of Islamic law and Pashtun customary practice. Primary victims include Hazara minorities (historically enslaved under Taliban rule), Tajik and other ethnic minorities, women and girls trafficked into forced marriage and domestic servitude, and children forced into labor and military service. The constraint exhibits extremely high extractiveness (0.78) because the extraction mechanism is (a) legal and state-enforced with no alternative remedy, (b) sustained by near-total suppression (0.85) through Taliban monopoly on violence and information control, and (c) low in theater (0.35) because the regime makes no pretense that this is voluntary or temporary \u2014 the slavery is openly legal and permanent. The theater ratio is low because the Taliban frames slavery as authentic Islamic law and social order, not as an emergency measure or coordination mechanism requiring narrative justification. This distinguishes the constraint from snares that maintain extractive mechanisms through performative rhetoric (e.g., predatory lending systems using 'financial inclusion' language, or labor trafficking using 'employment' framing). The Taliban slavery law is a clean snare: brutal extraction with minimal narrative camouflage.",
+    "key_agents": [
+      "Taliban State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 extracts labor, property, and control; frames constraint as restoration of law and order",
+      "Enslaved Populations: Primary victims (powerless/trapped) \u2014 Hazara minorities, trafficked women, child laborers; no legal exit or recourse",
+      "Wealthy Landowners and Military Commanders: Secondary beneficiary (powerful/mobile) \u2014 benefit from Taliban-sanctioned enslavement of labor force; have mobility to flee if Taliban falls",
+      "Afghan Civilian Population: Secondary victim (moderate/constrained) \u2014 subject to arbitrary enforcement; potential targets for enslavement expansion; cannot organize collective resistance",
+      "International Community: Powerful observer (powerful/mobile) \u2014 can measure and condemn but lacks enforcement mechanism within Afghanistan; trapped by geopolitical constraints",
+      "Analytical Observer: Universal legal/moral framework (analytical/analytical) \u2014 sees snare from UN conventions, international humanitarian law, universal human rights standards"
+    ],
+    "logic_rationale": "Extractiveness (0.78): Extremely high. The Taliban slavery law is designed to extract maximum labor and resources from enslaved populations with zero compensation and zero legal recourse. The extraction is not hidden or softened by pretense \u2014 it is explicitly legal and permanent. Extractiveness has increased from 0.52 at initial legalization to 0.78 at full enforcement because the Taliban has moved from code on paper to systematic implementation across controlled territories. Suppression (0.85): Near-total. The Taliban monopolizes violence and information; enslaved populations have no legal appeals, no collective organizing capacity, no access to external help, and face extreme penalties for resistance or flight. Suppression is limited only by Taliban administrative reach in remote areas and by underground resistance networks. Theater ratio (0.35): Low. Unlike many extractive systems that maintain legitimacy through performative narrative (financial regulation using 'consumer protection' language, labor systems using 'development' rhetoric, taxation systems using 'public goods' framing), the Taliban slavery law is openly brutal. The regime claims Islamic law authenticity and social restoration, but makes no pretense that slavery is temporary, voluntary, or reciprocal. Low theater reflects that the regime's legitimacy claim is based on religious authority and force, not on narrative justification of the extraction mechanism itself.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is maximal and irreducible. The Taliban state sees the slavery law as a coordination mechanism (Rope from their perspective) \u2014 they are organizing labor, territorial control, and social order according to their interpretation of Islamic law. From the Taliban's power position (institutional/arbitrage), the constraint appears functional: it solves the 'problem' of how to mobilize labor and resources for state consolidation. From the enslaved population's position (powerless/trapped), the same structure is a snare with no exit and no coordination benefit \u2014 extraction is pure and one-directional. The international observer sees snare clearly because universal legal frameworks define the structure as systematic labor extraction, but lacks the enforcement mechanism to create an exit pathway for victims. This is one of the clearest examples of how indexical classification reveals structural asymmetry: the two sides experience the same law fundamentally differently because their power positions, exit options, and time horizons are incommensurable.",
+    "directionality_logic": "Enslaved populations: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.45. Maximum extraction target. No exit, no choice, complete vulnerability. Taliban state: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.18. Net beneficiary from their own perspective; can exit (flee) if system destabilizes. Afghan civilians: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.28. High extraction target but with some residual constraint options (migration, black market, underground networks). International community: Powerful but trapped \u2192 d\u22480.45, f(d)\u22480.48. Powerful agents (states, NGOs) can measure and document the constraint but face geopolitical costs for intervention; effective exit is constrained despite nominal power. Analytical observer: d\u22480.72, f(d)\u22481.15. Observer sees the structure clearly through universal legal frameworks; classification is snare from all methodologies."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "afghanistan_minority_persecution",
+      "trafficking_networks_central_asia",
+      "forced_recruitment_taliban_military"
+    ],
+    "dual_formulation_note": "The Taliban slavery law is a primary constraint affecting downstream problems of minority persecution, trafficking networks, and forced recruitment. The upstream context is Taliban territorial consolidation and legitimacy-seeking through religious law implementation. Decomposition: this story (slavery law as mechanism) should be linked to stories about specific slave populations (Hazara enslavement, women trafficking, child soldier recruitment) which have their own \u03b5 values reflecting the particular demographic and institutional circumstances of each population."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.02
+    }
+  ]
+}

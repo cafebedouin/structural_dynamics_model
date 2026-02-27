@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "genetic_algorithms_evolution",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ga_evol"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.08,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Genetic Algorithms (Search by Selection)",
+    "topic_domain": "technological/computational",
+    "requires_active_enforcement": false,
+    "emerges_naturally": true,
+    "beneficiaries": [
+      "optimization_practitioners",
+      "engineering_communities"
+    ],
+    "accessibility_collapse": 0.92,
+    "resistance": 0.06
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computational Mathematician",
+      "comment": "PERSPECTIVE 1: COMPUTATIONAL MATHEMATICIAN (MOUNTAIN) \u2014 From a civilizational mathematical perspective, genetic algorithms instantiate fundamental evolutionary dynamics reducible to selection pressure acting on variation. The convergence properties, fitness landscape traversal, and no-free-lunch theorems are structural invariants of any search process operating under selection constraints. The constraint emerges from logical necessity, not institutional arrangement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Optimization Practitioner",
+      "comment": "PERSPECTIVE 2: OPTIMIZATION PRACTITIONER (ROPE) \u2014 Views genetic algorithms as a coordination solution to the problem of searching high-dimensional solution spaces when traditional calculus-based methods fail. The practitioner benefits from access to a general-purpose heuristic; the constraint is a coordination mechanism that enables solving otherwise intractable problems. Extraction is minimal; suppression is low."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Engineering Community",
+      "comment": "PERSPECTIVE 3: ENGINEERING COMMUNITY (ROPE) \u2014 Organized practitioners see genetic algorithms as a shared coordination standard for solving combinatorial optimization problems (circuit design, aerodynamic optimization, supply chain routing). The constraint provides collective benefit through a proven, openly documented heuristic. Exit options are constrained by the need to interoperate with existing simulation frameworks, but the coordination benefit is substantial."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Problem-Specific Optimizer",
+      "comment": "PERSPECTIVE 4: PROBLEM-SPECIFIC OPTIMIZER (SCAFFOLD) \u2014 For an individual solving a unique problem (aircraft wing design, neural network hyperparameter tuning), genetic algorithms are temporary scaffolding. The algorithm provides reasonable solutions until domain-specific methods mature. Low theater (the algorithm does what it claims), and a realistic exit path: custom solvers, learned surrogates, or problem-specific heuristics eventually replace GAs for mature domains. The sunset is real \u2014 GA usage declines as domains mature and better-adapted tools emerge."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy Codebase Maintainer",
+      "comment": "PERSPECTIVE 5: LEGACY CODEBASE MAINTAINER (PITON) \u2014 In mature organizations (automotive, aerospace), genetic algorithms may persist in production systems long after better alternatives have emerged. The constraint is maintained through institutional inertia: replacing a GA component that 'works' with an unfamiliar modern method carries organizational risk, retraining costs, and validation burden. Theater ratio (0.65+) reflects that the GA is no longer solving the core problem efficiently but persists because alternatives are costly to integrate. The function has atrophied relative to available options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theoretical Computer Scientist",
+      "comment": "PERSPECTIVE 6: THEORETICAL COMPUTER SCIENTIST (ROPE) \u2014 From a theoretical standpoint, genetic algorithms are a coordination mechanism solving the fundamental problem of search on unknown fitness landscapes. The no-free-lunch theorem proves that no algorithm outperforms all others on all problems \u2014 GAs are therefore a coordination solution to a necessary uncertainty, not an extraction mechanism. Pure coordination; no beneficiary captures disproportionate value."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "landscape_class_sufficiency",
+      "question": "For which classes of optimization problems do genetic algorithms provide genuinely superior convergence guarantees compared to random search, and is this class empirically identifiable?",
+      "resolution_mechanism": "Comparative convergence analysis across problem categories; identification of landscape properties (multimodality, epistasis, separability) that predict GA advantage",
+      "impact": "If GA advantage is rare/problem-class-specific: constraint is less coordination, more theater (Piton likelihood increases). If advantage is broad/reliable: constraint is robust coordination (Rope confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether GA superiority is reliably identifiable and domain-independent"
+    },
+    {
+      "id": "representation_neutrality",
+      "question": "To what extent does the constraint depend on the choice of genetic representation (binary, real-valued, tree-structured), and is this dependence a feature or a bug?",
+      "resolution_mechanism": "Empirical comparison of GA performance across representation schemes for the same problem; theoretical analysis of representation neutrality",
+      "impact": "If representation-dependent: practitioners bear hidden extraction cost (learning representation design). If representation-neutral: pure coordination mechanism (Rope stronger).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether genetic algorithm performance depends critically on representation choice"
+    },
+    {
+      "id": "parameter_sensitivity",
+      "question": "Do genetic algorithm convergence guarantees hold for realistic parameter settings, or do they require parameter tuning that itself becomes a search problem?",
+      "resolution_mechanism": "Robustness analysis of GA performance under parameter variation; comparison of tuning effort to performance gains",
+      "impact": "If tuning effort dominates: GA trades one search problem for another (theater/Piton). If robust: pure coordination (Rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether GA convergence is robust to parameter choices or requires extensive tuning"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Genetic algorithms represent a fundamental coordination mechanism for optimization under uncertainty. The constraint emerges from the structure of search in high-dimensional spaces where traditional calculus-based methods fail (gradient information unavailable, solution space discontinuous, multimodal landscape). Rather than extracting value from practitioners, genetic algorithms enable practitioners to solve problems they could not otherwise address. The mathematical structure of selection pressure on variation is invariant across applications \u2014 this is the mountain view. However, the practical deployment of GAs in mature engineering domains exhibits different characteristics: as domain-specific optimization methods mature, GA usage often persists through institutional inertia (piton view). The constraint operates at multiple timescales: immediate (solving a specific design problem), biographical (practitioner career development), and civilizational (fundamental understanding of search dynamics).",
+    "key_agents": [
+      "Optimization Practitioners: Primary beneficiary (institutional/arbitrage) \u2014 gain access to general-purpose heuristic for otherwise intractable problems",
+      "Engineering Communities: Secondary beneficiary (organized/constrained) \u2014 benefit from shared coordination standard and proven methodology",
+      "Problem-Specific Optimizers: Moderate actors (moderate/mobile) \u2014 use GAs as temporary scaffolding until domain-specific methods emerge",
+      "Legacy System Maintainers: Organizational actors (powerful/constrained) \u2014 maintain GA implementations through institutional inertia",
+      "Theoretical Computer Science: Analytical observers (analytical/analytical) \u2014 study GAs as coordination solutions to fundamental search problems",
+      "Mathematical Physics / Computational Theory: Analytical observers (analytical/analytical) \u2014 see GA dynamics as instances of universal evolutionary principles"
+    ],
+    "logic_rationale": "Extractiveness (0.15): Very low. Genetic algorithms impose minimal extraction overhead \u2014 they solve a coordination problem (enabling search on intractable landscapes) with minimal coercive mechanism. The algorithm is open-source, transparent, and does not require intermediation. Suppression (0.08): Very low. Practitioners maintain full exit options: they can choose alternative methods (simulated annealing, particle swarm, evolutionary strategies, neural network surrogates), apply domain-specific heuristics, or use commercial solvers. No suppression of alternatives. Theater ratio (0.25): Low. GAs do what they claim: they perform stochastic search by simulating selection pressure. The algorithm is honest about its probabilistic nature and convergence properties. Theater has remained stable over the 30-year interval \u2014 the constraint has not degraded into pure theater.",
+    "directionality_logic": "Genetic algorithms present a rare case where directionality is uniformly low across all perspectives. Beneficiaries (optimization practitioners, engineering communities) gain genuine access to solution methods, not asymmetric extraction. The constraint imposes no substantial cost on practitioners beyond the computational resources required (which are transparent and proportional to the problem solved). The piton perspective (legacy maintainers) does experience extraction cost through institutional inertia, but this is orthogonal to the GA constraint itself \u2014 it reflects the organizational cost of system replacement, not intrinsic GA extractiveness. The analytical observer sees pure coordination (no beneficiary capture, universal benefit). Even the problem-specific optimizer, who must eventually migrate to domain-specific methods, experiences fair scaffolding, not extraction. The engine derives low d values across all agents, producing low chi across all contexts.",
+    "perspectival_gap": "The primary perspectival gap is temporal: in the short term (biographical), GAs enable practitioners to solve specific problems and maintain career flexibility. In the medium term (generational), domain-specific methods eventually emerge, and GA usage declines or specializes. In the long term (civilizational), GAs are understood as a fundamental instantiation of selection dynamics \u2014 theoretically permanent, empirically declining in relative importance. The piton perspective reveals that institutional inertia can convert a pure coordination mechanism into performative theater (in legacy systems), but this is an organizational failure, not an intrinsic feature of the constraint. The theoretical perspective (mountain and rope from analytical observers) is stable \u2014 GAs remain a valid coordination mechanism even as their practical deployment shifts.",
+    "mandatrophy_analysis": "Genetic algorithms resolve the mandatrophy by demonstrating a coordination mechanism that persists across all perspectives without being misclassified as extraction. The constraint does not suffer from the risk of being labelled as pure extraction (Snare) when it is actually coordination (Rope) \u2014 the metrics consistently reflect low extraction, low suppression, and genuine benefit to practitioners. The piton perspective (legacy systems) might suggest degradation, but the piton classification there reflects organizational inertia rather than GA degradation. The mountain perspective is appropriate: GAs instantiate universal evolutionary dynamics that are mathematically invariant. No collapse of perspectives into false summits occurs. The constraint is informationally pure (low theater), structurally open (no suppression), and genuinely beneficial (low extraction). This is a diagnostic exemplar of pure coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "optimization_under_uncertainty",
+      "evolutionary_computation_landscape"
+    ]
+  },
+  "directionality_overrides": []
+}

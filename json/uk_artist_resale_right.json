@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "uk_artist_resale_right",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arr"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK Artist's Resale Right (ARR) Legislation",
+    "topic_domain": "economic/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "artists_and_estates",
+      "copyright_holders"
+    ],
+    "victims": [
+      "art_dealers_and_galleries",
+      "auction_houses",
+      "secondary_market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Emerging Artist (Post-Mortem)",
+      "comment": "PERSPECTIVE 1: EMERGING ARTIST ESTATE (SNARE) \u2014 Cannot exit the secondary market verification requirement. The artist's estate has no control over resales and cannot avoid the administrative burden of claiming royalties or the cost of enforcing rights. Trapped in a system where proving authorship and tracking sales requires substantial institutional capacity. Maximum experienced extraction through administrative friction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Living Precarious Artist",
+      "comment": "PERSPECTIVE 2: PRECARIOUS LIVING ARTIST (SNARE) \u2014 Can theoretically benefit from ARR but faces severe barriers: poor market tracking, inability to afford enforcement, weak bargaining power against dealers who control access to buyers. The constraint extracts through enforced participation in a registration and claims system they cannot effectively navigate. Constrained exit \u2014 cannot ignore resales but cannot meaningfully claim royalties."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Art Dealer/Gallery (Market Integration)",
+      "comment": "PERSPECTIVE 3: INTEGRATED ART DEALER (ROPE) \u2014 Benefits from coordination function: ARR creates transparent pricing signal, reduced fraud (forged authorship claims), and standardized terms for resales. Institutional actors with established dealer networks can arbitrage across borders \u2014 EU dealers face ARR as coordination mechanism; UK dealers post-ARR see it as normalized market infrastructure. Net beneficiary through efficiency gains."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Major Auction House",
+      "comment": "PERSPECTIVE 4: MAJOR AUCTION HOUSE (TANGLED ROPE) \u2014 Experiences ARR as hybrid coordination-extraction. Coordination function: standardized royalty tables reduce dispute resolution costs and create transparent secondary market valuation. Extraction mechanism: ARR compliance creates administrative overhead and reduces margins on lower-value sales, shifting auction houses toward higher-value pieces where ARR impact is smaller proportionally. Organized enforcement allows arbitrage across EU/UK border to minimize exposure. Powerful agent with mobile exit options (shift business to non-ARR jurisdictions or focus on pre-1945 works)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Artist Advocacy Organization",
+      "comment": "PERSPECTIVE 5: ARTIST ADVOCACY ORG (TANGLED ROPE) \u2014 Benefits from ARR as legitimizing mechanism for artist rights discourse; gains power through coordinated artist representation. But advocacy org is constrained by dependency on institutional funding and political will \u2014 cannot exit if political support for ARR collapses. Enforcement mechanism extracts through administrative burden on advocacy org (tracking resales, processing claims on behalf of members). Mixed: genuine coordination benefit (collective voice) + extraction through institutional dependency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The EU Droit de Suite Framework",
+      "comment": "PERSPECTIVE 6: EU RESALE RIGHT DIRECTIVE (PITON) \u2014 The UK ARR was originally transposed from EU Directive 2001/84/EC. Post-Brexit, the UK ARR persists through institutional inertia, maintaining the form of the EU directive despite no longer being bound by it. Theater ratio high (0.65): compliance reporting remains performative \u2014 many small dealers operate without systematic tracking, and enforcement is episodic rather than continuous. The constraint maintains itself through residual institutional legitimacy (EU origins) and weak enforcement capacity rather than active functional necessity. Negotiating UK/EU art market convergence creates theatrical compliance performance."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Digital Art Market (Future Exit)",
+      "comment": "PERSPECTIVE 7: DIGITAL ART MARKET (SCAFFOLD) \u2014 Blockchain-based art provenance systems and NFT smart contracts embed resale royalties directly into the transaction layer, creating automatic ARR-equivalent enforcement without regulatory overhead. This is a genuinely emerging exit pathway with sunset logic: as digital art markets mature and smart-contract-mediated resales scale, the regulatory ARR framework becomes redundant infrastructure maintained only for physical art. Current theater_ratio is high (performative compliance), but sunset is real \u2014 programmable royalties eliminate the administrative fiction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational/universal perspective, resale rights are inherent to intellectual property law itself. Once an artist creates a work, the economic benefit of all subsequent transfers naturally follows from the work's authorship. The constraint appears immutable: property law universally attaches rights to creators. However, this is a false summit. ARR is a contingent policy choice (many countries with strong property law have no resale rights). The appearance of natural necessity reflects ideological naturalization of a distributional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dealer_compliance_cost_threshold",
+      "question": "What compliance cost threshold determines whether dealers systematize ARR tracking versus operate in shadow market or exit UK altogether?",
+      "resolution_mechanism": "Empirical cost accounting for dealer compliance infrastructure (registration, provenance tracking, royalty calculation, payment processing); correlation with dealer exit rates and shadow-market indicators",
+      "impact": "If threshold < \u00a3500/sale: dealers systematically comply; ARR functions as intended. If threshold > \u00a32000/sale: widespread non-compliance and exit; ARR enforcement becomes theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost threshold determining dealer compliance versus exit"
+    },
+    {
+      "id": "artist_claim_rate_disparity",
+      "question": "What explains the persistent gap between eligible artists and those actively claiming ARR royalties \u2014 institutional neglect, information asymmetry, or rational non-participation?",
+      "resolution_mechanism": "Survey of artist awareness and claims rates; statistical analysis of claim patterns by artist power level, market price tier, and time since sale",
+      "impact": "If disparity < 20%: ARR works as designed \u2014 most artists aware and claiming. If disparity > 60%: ARR primarily benefits organized/estate actors; precarious artists see extraction without benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Gap between eligible artists and active claimants"
+    },
+    {
+      "id": "uk_eu_market_fragmentation_irreversibility",
+      "question": "Is post-Brexit divergence in resale rights treatment between UK and EU creating permanent market bifurcation or temporary regulatory fragmentation?",
+      "resolution_mechanism": "Trade flow analysis (UK art exports to EU, EU art sales in UK) over 5-10 years post-Brexit; correlation with dealer relocation and auction house regional specialization",
+      "impact": "If fragmentation persists > 5 years: distinct UK/EU art markets with different compliance regimes; ARR becomes locked-in constraint. If convergence occurs: regulatory harmonization or UK ARR reform; constraint becomes negotiable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether UK-EU art market bifurcation is permanent or temporary"
+    },
+    {
+      "id": "smart_contract_royalty_legal_equivalence",
+      "question": "Will blockchain-embedded resale royalties (programmable royalties in NFT smart contracts) satisfy UK ARR legal requirements or require parallel statutory compliance?",
+      "resolution_mechanism": "UK court decisions on smart-contract royalty enforceability; statutory amendment or regulatory guidance clarifying legal equivalence",
+      "impact": "If legal equivalence granted: smart contracts become viable ARR alternative; scaffold sunset is real. If legal equivalence denied: dual-track compliance required; constraint persists through regulatory ossification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether smart-contract royalties count as ARR compliance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK Artist's Resale Right (ARR), enacted in 2006 and transposed from EU Directive 2001/84/EC, mandates that art market professionals remit a percentage of resale proceeds to the original artist or their estate. The constraint operates at the intersection of intellectual property law, market infrastructure, and artist welfare. ARR exhibits a stark perspectival gap: artists and estates experience it as either a rope (coordination enabling royalty claims) or a snare (administrative burden extracting more in compliance costs than in recovered royalties); dealers and auction houses experience it as tangled rope (mixed coordination and cost extraction); organized artist advocacy experiences it as legitimizing coordination with institutional overhead; digital art markets experience it as a temporary constraint being obsoleted by programmable smart-contract royalties. The constraint's extractiveness (0.38) reflects moderate administrative friction and dealer margin compression, partially offset by coordination benefits for institutional actors. Theater ratio (0.48) indicates that compliance remains substantially performative \u2014 many small dealers operate without systematic tracking, and enforcement is sporadic. Post-Brexit, the UK ARR persists through institutional inertia despite no longer being mandated by EU law, creating a piton dynamic where the original functional rationale (harmonization with EU markets) has been decoupled from the constraint's continued existence.",
+    "key_agents": [
+      "Artists and Estates: Primary beneficiary (powerless/trapped) \u2014 legally entitled to royalties but face administrative barriers; trapped in system they cannot opt out of",
+      "Living Precarious Artists: Primary victim (moderate/constrained) \u2014 theoretically benefit from ARR but cannot effectively claim royalties; constrained exit from enforcement participation",
+      "Art Dealers and Galleries: Secondary beneficiary (institutional/arbitrage) \u2014 experience coordination benefits from transparent pricing and reduced fraud; arbitrage across borders to minimize ARR exposure",
+      "Auction Houses (Major): Secondary actor (powerful/arbitrage) \u2014 organized enforcement allows selective market focus (high-value pieces less impacted proportionally); mobile exit options",
+      "Artist Advocacy Organizations: Organized advocates (organized/constrained) \u2014 benefit from ARR as legitimizing institutional support but constrained by dependency on political will",
+      "UK Government/IPO: Enforcement institution (institutional/constrained) \u2014 maintains ARR framework through EU transposition legacy; constrained by limited enforcement resources",
+      "EU Regulatory Framework: Institutional ancestor (institutional/constrained) \u2014 original ARR source; post-Brexit decoupling creates inertial maintenance",
+      "Digital Art Market Platforms: Emerging alternative (organized/mobile) \u2014 programmable royalties create genuine exit pathway with sunset logic"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. ARR creates real costs for dealers (administrative tracking, royalty calculation, compliance verification) but the extraction is not severe because: (1) institutional dealers can systematize compliance, (2) artist royalty rates are fixed percentages (0.5%-4% depending on price tier), (3) auction houses and major galleries can pass costs forward through price adjustments. The extractiveness has increased slightly over the interval (0.28 \u2192 0.38) as digital tracking has made non-compliance more detectable and enforcement more consistent. Suppression (0.52): Moderate-high. Dealers and galleries face significant barriers to opting out \u2014 statutory obligation applies to all professional resales. However, suppression is not total because: (1) private sales are exempt, (2) artists themselves are exempt when they resell directly, (3) works with unknown provenance can claim orphan status. The barrier is real but porous. Theater ratio (0.48): Moderate. ARR compliance is partially performative \u2014 many small dealers operate without systematic tracking, royalty remittance relies on self-reporting with sporadic audits, and enforcement by UK IPO is episodic. However, theater is not high because institutional actors (auction houses, major galleries) have systematized compliance and created transparent pricing signals that reduce ambiguity. The increase over the interval (0.35 \u2192 0.48) reflects post-Brexit divergence where UK dealers maintain compliance performance without underlying EU harmonization mandate, creating residual institutional theater.",
+    "directionality_logic": "Each perspective's experienced extractiveness derives from the agent's structural position relative to ARR's enforcement mechanism and royalty flow. Artists and estates occupy the beneficiary position but face high d (directionality toward extraction) because they lack exit options (trapped) and must participate in compliance infrastructure. Precarious artists experience moderate d because they are theoretically beneficiaries but functionally unable to claim (constrained exit). Institutional dealers and auction houses experience low d (beneficiary-to-neutral) because they have arbitrage options (shift to non-ARR markets, focus on pre-1945 exempt works, increase private sales). The artist advocacy organization experiences moderate-to-high d because it is structurally dependent on the ARR framework for institutional legitimacy (constrained exit). The EU directive perspective experiences moderate-high d (inertial maintenance post-Brexit). The digital art market platform experiences low d because smart-contract royalties offer a genuine exit pathway (mobile) with functional equivalence to ARR, making the statutory constraint increasingly optional.",
+    "perspectival_gap": "This constraint demonstrates the critical importance of power level and exit options in determining experience. The same legal requirement produces opposite classifications depending on the agent's structural position. A precarious artist with no market visibility (powerless/trapped) sees ARR as administrative extraction \u2014 compliance costs exceed expected royalties, and they cannot afford enforcement. A major auction house (powerful/arbitrage) sees ARR as coordination \u2014 it standardizes market practices and reduces fraud, costs are manageable at scale, and they can arbitrage across markets. An artist advocacy organization (organized/constrained) sees ARR as mixed \u2014 it provides institutional legitimacy and coordinating power but constrains the organization through dependency on political will. The piton perspective (EU directive) reveals how institutional frameworks persist after their functional rationale decouples \u2014 the UK maintained ARR post-Brexit despite no longer being bound by it, creating theatrical compliance divorced from the original harmonization purpose. The scaffold perspective (digital art markets) identifies the genuine exit pathway being built through programmable royalties, suggesting a real sunset for the statutory framework.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The ARR constraint resolves the mandatrophy by clarifying that the classification varies legitimately by agent position, not because the constraint is mislabeled. The tangled_rope classification is correct: ARR exhibits genuine coordination function (transparent resale pricing, reduced fraud, institutional legitimacy) AND asymmetric extraction (administrative burden on dealers, barriers to artist claims, market margin compression). The constraint is neither pure coordination (rope) nor pure extraction (snare) \u2014 it is a hybrid requiring active enforcement. The mandatrophy arises from conflating the legal intent (artist benefit) with the structural reality (mixed extraction and coordination). Precarious artists see snare (extraction dominates their experience); institutional dealers see rope (coordination dominates); organized advocacy sees tangled rope (mixed); digital platforms see scaffold (temporary). All classifications are correct from their respective structural positions. The constraint is not misidentified; rather, it is legitimately experienced as different types depending on the agent's power level and exit options. The piton perspective flags institutional inertia (EU transposition legacy) as reducing the constraint's functional necessity. The scaffold perspective identifies the real sunset pathway (programmable royalties in blockchain systems). Resolution: tangled_rope is the canonical classification; perspectival variation is structural, not error."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_directive_2001_84_ec",
+      "uk_copyright_law_framework",
+      "blockchain_royalty_standards"
+    ],
+    "dual_formulation_note": "ARR is downstream of the EU Directive 2001/84/EC (which it implements) and relates structurally to broader UK copyright law. Post-Brexit, ARR persists through institutional inertia despite decoupling from its original EU mandate. The blockchain royalty standards represent an emerging alternative constraint that would make ARR redundant if legal equivalence is granted to smart-contract-embedded royalties."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

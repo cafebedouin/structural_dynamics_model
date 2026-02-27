@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "un_high_seas_treaty_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bbnj"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UN High Seas Treaty for Marine Biodiversity (BBNJ)",
+    "topic_domain": "geopolitical/environmental_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coastal_developing_nations",
+      "marine_conservation_ngos",
+      "environmental_scientists"
+    ],
+    "victims": [
+      "industrial_fishing_fleets",
+      "pharmaceutical_prospecting_companies",
+      "high_seas_mineral_exploration_interests"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Small Island Developing States (SIDS)",
+      "comment": "PERSPECTIVE 1: SIDS (SNARE) \u2014 Trapped by dependence on high seas fish stocks; no alternative food security or economic pathways; must accept treaty terms without leverage. Economic interests (fishing, tourism) are constrained by conservation rules they did not design. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.86."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Fishing Industry and Coastal Processors",
+      "comment": "PERSPECTIVE 2: FISHING INDUSTRY (TANGLED ROPE) \u2014 Constrained by conservation rules and access restrictions but also benefits from stock recovery and market stabilization through MSC certification and reduced overfishing. Benefits from coordination on sustainable yields. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Coastal Developed Nations and Marine Conservation Actors",
+      "comment": "PERSPECTIVE 3: CONSERVATION COALITION (ROPE) \u2014 Beneficiary group (developed coastal states, conservation NGOs, research institutions). Benefits from coordination on marine protected areas (MPAs), genetic resource benefit-sharing, and institutional capacity building. Arbitrage exit: can pursue unilateral conservation within EEZ if treaty fails. d\u22480.18, f(d)\u22480.08, \u03c3=1.2 \u2192 \u03c7\u22480.05. Near-zero extraction; net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Treaty Secretariat and Implementation Institutions",
+      "comment": "PERSPECTIVE 4: TREATY INSTITUTIONS (SCAFFOLD) \u2014 Organized agents (BBNJ Secretariat, Conference of the Parties, Capacity Building Committee) see the treaty as temporary coordination layer with sunset logic: goal is to internalize marine governance into national legal frameworks and regional agreements, making centralized treaty enforcement unnecessary within 20-30 years. d\u22480.45, f(d)\u22480.48, \u03c3=1.2 \u2192 \u03c7\u22480.28. Low effective extraction because institutions have agency and see explicit pathway to transition."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional High Seas Governance Void",
+      "comment": "PERSPECTIVE 5: LEGACY VOID (PITON) \u2014 Pre-BBNJ high seas governance (flag state control, UNCLOS Part V) persists through institutional inertia despite acknowledged failure to prevent overfishing, genetic resource extraction, and pollution. theater_ratio=0.58 reflects that much international ocean coordination (Regional Fisheries Management Organizations, Area-based management tools) is performatively coordinated while enforcement remains weak. The treaty initially maintains this theater while gradually replacing it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physical Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN RISK) \u2014 Civilizational view risks naturalizing the treaty as reflecting immutable constraints of ocean governance: 'beyond national jurisdiction means ungovernable,' 'tragedy of commons is inevitable at scale.' Structural data (\u03b5=0.52, suppression=0.48, theater=0.58) contradicts this \u2014 the constraint is a contingent institutional arrangement (UNCLOS Article 116 flag state exemption, lack of enforcement capacity, benefit-sharing disputes), not a natural law. Engine will flag this as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_capacity_threshold",
+      "question": "Can the treaty's enforcement mechanisms (compliance committees, port state controls, observer programs) actually constrain industrial-scale high seas extraction, or does enforcement capacity remain theater?",
+      "resolution_mechanism": "Longitudinal tracking of port state detention rates, observer coverage in high-extraction zones, compliance committee penalties, and correlation with fishing fleet behavior changes",
+      "impact": "If enforcement scales to >70% effective coverage: tangled rope classification holds. If coverage remains <40%: constraint degrades to piton (theater without function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether treaty enforcement mechanisms achieve meaningful constraint on extraction"
+    },
+    {
+      "id": "genetic_resource_benefit_sharing_realization",
+      "question": "Does the Digital Sequence Information (DSI) benefit-sharing mechanism actually transfer value to developing nations, or does it become a capture mechanism where pharmaceutical companies navigate DSI rules at lower cost than traditional ABS?",
+      "resolution_mechanism": "Analysis of pharmaceutical product pipelines sourced from high seas organisms; tracking of benefit-sharing fund contributions vs. research commercialization value; developing nation capacity to claim rights",
+      "impact": "If benefit-sharing realizes >30% of genetic value: treaty creates genuine coordination for developing nations (rope from beneficiary view). If <5%: DSI becomes regulatory theater (piton), and pharmaceutical prospecting remains pure extraction (snare from island nation view).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether DSI benefit-sharing transfers actual value or becomes capture mechanism"
+    },
+    {
+      "id": "capacity_building_absorption",
+      "question": "Can island developing states and small coastal nations actually absorb the technical and institutional capacity for high seas monitoring, research, and access negotiation that the treaty requires?",
+      "resolution_mechanism": "Survey of SIDS capacity in marine science, policy implementation, legal expertise; correlation between capacity support funding and actual institutional capability gains; tracking of SIDS participation in MPA and DSI negotiations",
+      "impact": "If absorption >60%: SIDS agency increases, exit options shift from trapped to constrained (reduces d, reduces extraction). If absorption <30%: SIDS remain trapped despite treaty, constraint remains snare from their perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether developing nations can absorb treaty implementation capacity"
+    },
+    {
+      "id": "marine_protected_area_implementation_sincerity",
+      "question": "Are MPAs created under BBNJ genuine conservation tools with enforcement, or do they become jurisdictional placeholders that permit continued extraction under alternative frameworks?",
+      "resolution_mechanism": "Assessment of MPA design (size, connectivity, no-take vs. restricted-use), enforcement presence and detention data, species recovery rates, cross-comparison with terrestrial PAs and pre-treaty high seas closures",
+      "impact": "If genuine: coordination function is real (rope/tangled rope from conservation view). If placeholders: constraint is theater (piton/snare from victim view).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether MPAs function as genuine conservation tools or placeholders"
+    },
+    {
+      "id": "flag_state_defection_risk",
+      "question": "Can flag states (Panama, Liberia, Marshall Islands) credibly be compelled to enforce BBNJ rules on their vessels, or does the treaty create incentive structures that reward defection or flag-switching?",
+      "resolution_mechanism": "Tracking of IUU (illegal, unreported, unregulated) fishing registration shifts; analysis of flag state implementation gaps; examination of open registries' participation in BBNJ compliance mechanisms",
+      "impact": "If defection risk low (<20% fleet drift): constraint enforcement is credible (tangled rope holds). If high (>40% fleet drift): constraint becomes aspirational theater (piton), extraction persists (snare from island nation view).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether flag state incentives align with BBNJ enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The UN High Seas Treaty (BBNJ \u2014 Biological Biodiversity Beyond National Jurisdiction), which entered into force in June 2024 and is operational by 2026, establishes the first comprehensive legal framework for governing marine biodiversity in areas beyond national jurisdiction (ABNJ). These areas cover 54% of the ocean and are home to 95% of marine biomass by volume. The treaty creates mechanisms for marine protected areas (MPAs), genetic resource benefit-sharing, environmental impact assessment, and capacity building. However, the constraint exhibits a structural tension between coordination mechanisms (establishing common rules, benefit-sharing, MPA networks) and asymmetric extraction (conservation costs imposed on fishing-dependent economies, benefit-sharing mechanisms potentially captured by pharmaceutical interests, enforcement capacity concentrated in developed states). The treaty's theater ratio (0.58) reflects that much of its governance is performative: Regional Fisheries Management Organizations (RFMOs) have coordinated quotas for decades with limited enforcement, and the treaty initially layers international coordination atop this existing theater rather than replacing it. The extraction value (0.52) reflects that the treaty imposes real constraints on industrial fishing and genetic prospecting while providing genuine conservation benefits to some stakeholders but genuine costs to others.",
+    "key_agents": [
+      "Small Island Developing States (SIDS): Primary victims (powerless/trapped) \u2014 dependent on high seas fish stocks with no alternative economic pathways; constrained by conservation rules they did not design",
+      "Industrial Fishing Fleets: Primary victims (moderate/constrained) \u2014 face access restrictions and conservation rules; constrained but also benefit from stock recovery and market stabilization",
+      "Coastal Developed Nations + Conservation NGOs: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from coordination on MPAs, genetic resource governance, institutional capacity building; can exit via unilateral EEZ protection",
+      "Pharmaceutical and Biotechnology Companies: Secondary victims (moderate/arbitrage) \u2014 face new restrictions and benefit-sharing obligations on genetic resource prospecting; can arbitrage between treaty and national frameworks",
+      "Treaty Secretariat and BBNJ Institutions: Organized coordinators (organized/constrained) \u2014 view treaty as temporary coordination layer with sunset; goal is internalization into national and regional frameworks within 20-30 years",
+      "Traditional High Seas Governance (UNCLOS, RFMOs): Institutional inertia (institutional/arbitrage) \u2014 legacy flag state control and RFMO coordination persist through inertia; theater ratio maintained until treaty enforcement replaces it"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The treaty imposes significant constraints on fishing fleets and genetic prospecting (real extraction) while providing coordination benefits (marine stock recovery, benefit-sharing mechanisms, capacity building). The net extraction reflects that costs are concentrated on extractive industries and fishing-dependent economies while benefits are distributed to conservation actors and some developing nations. The value is not as high as pre-treaty high seas governance (0.62 at t=0) because the treaty creates actual mechanisms for benefit-sharing and conservation \u2014 not pure extraction. Suppression (0.48): Moderate. Significant barriers to enforcing the treaty include flag state compliance problems, limited monitoring capacity in many regions, incentive structures that reward defection (open registries, IUU fishing), and benefit-sharing mechanisms that can be navigated by sophisticated actors. But suppression is not total \u2014 port state controls, observer programs, and compliance committees do function. Theater ratio (0.58): Moderate-high. International ocean coordination (RFMOs, area-based management tools) is substantially performative \u2014 enforcement remains weak relative to stated rules. The treaty initially maintains this theater while building enforcement capacity; the trajectory is downward (0.72\u21920.58 over 6 years) as actual enforcement mechanisms mature. Claimed type (tangled rope): The treaty has both genuine coordination functions (MPA networks, benefit-sharing, capacity building) and asymmetric extraction (costs imposed on fishing-dependent economies, enforcement concentrated in developed states). This fits the tangled rope gate: beneficiaries present (conservation actors), victims present (fishing industry, island nations), active enforcement required (compliance committees, port state controls).",
+    "perspectival_gap": "The perspectival gap between victim and beneficiary is stark. SIDS see the treaty as a snare \u2014 they are trapped by dependence on high seas fish stocks, constrained by conservation rules they did not design, and have minimal leverage in negotiations. The fishing industry sees tangled rope \u2014 real constraints on access but also benefits from stock recovery and market coordination. Conservation actors see rope \u2014 the treaty solves a genuine coordination problem (tragedy of commons at scale) with minimal coercive overhead relative to the benefit. The treaty institutions see scaffold \u2014 they view their role as temporary, building toward a future where marine governance is internalized into national and regional frameworks. The legacy high seas governance void (flag state control, RFMO quotas) sees piton \u2014 traditional mechanisms persist through institutional inertia despite acknowledged failure. The analytical observer risks seeing a mountain (ocean governance is inherently difficult, coordination is inherent to maritime law), but the structural data reveals this as a false summit: the constraint is a contingent institutional arrangement reflecting specific power distributions and benefit-sharing disputes, not a natural law.",
+    "directionality_logic": "SIDS: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. No alternative food security or economic pathways; must accept treaty terms without leverage. Fishing industry: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. High extraction but not maximal. Can exit via evasion (IUU fishing) or regulatory arbitrage (flag-switching) but faces significant costs. Conservation coalition: Beneficiary + arbitrage \u2192 d\u22480.18, f(d)\u22480.08. Net beneficiary with exit option (unilateral EEZ protection). Treaty institutions: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Low effective extraction; institutions have agency and explicit sunset logic. Pharmaceutical companies: Victim + arbitrage \u2192 d\u22480.35, f(d)\u22480.30. Constrained by DSI benefit-sharing but can navigate rules and arbitrage between treaty and non-signatory frameworks. Legacy governance void: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification comes from theater gate, not directionality.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the treaty is genuinely hybrid: it creates real coordination functions (MPA networks, benefit-sharing, capacity building, compliance mechanisms) AND imposes asymmetric extraction (costs on fishing-dependent economies, enforcement advantages to developed states, benefit-sharing mechanisms with capture risk). This is not a case of mislabeling pure coordination as extraction or vice versa. The tangled rope classification holds across all perspectives that perceive both functions. SIDS and fishing industry perceive higher extraction (snare, tangled rope) because exit options are constrained and costs are immediate. Conservation actors perceive lower extraction (rope) because they benefit and have exit options. Treaty institutions perceive sunset logic (scaffold) because they explicitly aim to make their coordination role temporary. The constraint exhibits all six types from different perspectives, but the primary classification (tangled rope, \u03b5=0.52) reflects the true structural balance: coordination with asymmetric costs. The theater ratio (0.58) shows gradual reduction over time as enforcement mechanisms mature \u2014 evidence that the constraint is shifting from pure theater (legacy governance) toward genuine functional coordination (treaty implementation). If theater_ratio plateaus above 0.65 or extraction increases beyond 0.60, the constraint is degrading toward piton (theater without function) or snare (extraction without coordination benefit)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "regional_fisheries_management_organizations",
+      "marine_genetic_resource_prospecting",
+      "exclusive_economic_zone_boundary_disputes"
+    ],
+    "dual_formulation_note": "The BBNJ treaty is downstream of pre-existing high seas governance failures (flag state control, UNCLOS Part V limitations, RFMO weakness) and upstream of implementation mechanisms (port state controls, MPA enforcement, DSI benefit-sharing realization). The \u03b5=0.52 reflects the treaty's hybrid coordination-extraction structure. Alternative decomposition: BBNJ_governance_framework (\u03b5=0.45, rope \u2014 the coordination mechanism itself) and BBNJ_enforcement_gap (\u03b5=0.68, snare \u2014 the gap between stated rules and actual enforcement). This story aggregates both."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    }
+  ]
+}

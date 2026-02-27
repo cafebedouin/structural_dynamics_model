@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "scurvy_maritime_extraction",
+    "version": "1.0",
+    "generated_date": "2024-01-05",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Scurvy/Empire Trade-off",
+    "topic_domain": "biological/political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "maritime_empires"
+    ],
+    "victims": [
+      "sailors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Ill-Fated Sailor",
+      "comment": "PERSPECTIVE 1: ILL-FATED SAILOR (SNARE) - Enlisted sailors were essentially trapped on long voyages with limited or no access to Vitamin C, experiencing the full, often fatal, impact of scurvy. Limited exit options due to naval discipline and the practicalities of seafaring. High extraction, low coordination benefit from their perspective. Death is the ultimate trapped exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Naval Physician",
+      "comment": "PERSPECTIVE 2: NAVAL PHYSICIAN (TANGLED ROPE) - Attempted to mitigate the effects of scurvy with limited knowledge and resources. Constrained by prevailing medical theories and the difficulty of procuring fresh provisions. Benefits indirectly through career advancement and prestige, but also bears the burden of witnessing and attempting to treat the disease. The extraction comes from the limited efficacy of the cures, but the coordination benefit is the attempt to address the problem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Maritime Empires",
+      "comment": "PERSPECTIVE 3: MARITIME EMPIRES (ROPE) - Gained significant economic and strategic advantage from long-distance voyages despite the high cost in human lives. Scurvy was a constraint they actively managed, accepting a certain level of loss as the price of empire. They could 'arbitrage' by replacing lost crew and continuing voyages. From their perspective, the trade-off was a necessary evil to enable exploration, trade, and naval power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Historian",
+      "comment": "PERSPECTIVE 4: ANALYTICAL HISTORIAN (TANGLED ROPE) - Analyzes the historical trade-offs, recognizing the extraction from sailors but also the coordination in enabling empire and globalization. Understands both the benefits and the costs of the scurvy/empire trade-off over the long term."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "vitamin_c_understanding",
+      "question": "How long would it have taken to discover/accept the Vitamin C deficiency model?",
+      "resolution_mechanism": "Counterfactual analysis of medical knowledge progression, examining alternative paths of research and experimentation.",
+      "impact": "Earlier acceptance would shift the constraint towards rope/scaffold with active mitigation. Delayed acceptance sustains extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Counterfactual on the timing of Vitamin C understanding"
+    },
+    {
+      "id": "provisioning_feasibility",
+      "question": "How feasible was consistent provisioning of Vitamin C sources on long voyages?",
+      "resolution_mechanism": "Logistical modeling of supply chains, preservation techniques, and resource availability at various ports.",
+      "impact": "High feasibility makes the continued extraction deliberate choice (snare). Low feasibility suggests unavoidable limit (mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Logistical feasibility of Vitamin C provisioning."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1650,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1800,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1650,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1800,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 1500,
+    "end": 1800
+  },
+  "commentary": {
+    "narrative_context": "During the Age of Sail (15th-18th centuries), scurvy (Vitamin C deficiency) was a primary biological constraint on long-distance sea voyages. This constraint story analyzes scurvy not merely as a disease, but as a structural component of maritime empires, creating a trade-off between imperial expansion and the health and well-being of sailors. The classification varies significantly depending on the perspective, highlighting the indexical nature of this framework.",
+    "key_agents": [
+      "Sailors: Primary victims (powerless/trapped) - Experienced the deadly effects of scurvy with little agency to mitigate the risk.",
+      "Maritime Empires: Primary beneficiaries (institutional/arbitrage) - Gained significant strategic and economic advantages from voyages despite the human cost.",
+      "Naval Physicians: Moderate influence (moderate/constrained) - Attempted to treat scurvy with limited knowledge and resources, constrained by prevailing theories.",
+      "Analytical Historian: Observer (analytical/analytical) - Analyzes the long-term historical trade-offs from a distanced perspective."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Scurvy led to significant loss of life and debilitating illness among sailors, a direct extraction of health and well-being. Suppression (0.70): High. Limited alternatives available to sailors during long voyages, limited knowledge and resources to combat scurvy. Theater Ratio (0.3): Relatively low. While ineffective, efforts to combat scurvy were genuine (e.g. lemons). There wasn't much 'show' to the 'care'.",
+    "perspectival_gap": "The sailor experiences a snare - a deadly trap with no escape. The empire views it as a rope - a manageable coordination problem in pursuit of empire. The physician experiences it as a tangled rope - a mix of genuinely trying to improve things, but extracting effort nonetheless.",
+    "directionality_logic": "Sailors (victims, trapped) have high directionality, experiencing the full impact of the extraction. Empires (beneficiaries, arbitrage) have negative directionality, benefiting from the extraction even at the cost of lives. Physicians (moderate, constrained) have intermediate directionality, experiencing both costs and benefits. The directionality drives the classification differences between snare, rope, and tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

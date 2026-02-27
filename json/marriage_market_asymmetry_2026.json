@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "marriage_market_asymmetry_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mma"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "The Asymmetric Information Snare (Women Asking Out)",
+    "topic_domain": "social/psychological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "male_proposer_gatekeepers"
+    ],
+    "victims": [
+      "female_proposer_targets",
+      "relationship_market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Female Proposer",
+      "comment": "PERSPECTIVE 1: FEMALE PROPOSER (SNARE) \u2014 Trapped by reputational risk, social stigma, and asymmetric rejection costs. Cannot exit without bearing substantial social penalty. Maximum experienced extraction through suppression of alternative strategies. The constraint extracts psychological cost (shame, humiliation risk) and opportunity cost (foregone relationship possibilities)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Male Gatekeeper",
+      "comment": "PERSPECTIVE 2: MALE GATEKEEPER (TANGLED ROPE) \u2014 Derives benefit from the informational advantage (he can observe female interest without reciprocal commitment cost). Also coordinates through the mechanism: male proposal clarity enables female selection. But experiences constraints on his own female targeting through reciprocal asymmetry. Constrained exit through cultural norm internalization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dating App Intermediary",
+      "comment": "PERSPECTIVE 3: DATING APP INTERMEDIARY (ROPE) \u2014 Benefits from constraint asymmetry (algorithm matches but cannot force reciprocal signaling norms). Experiences the constraint as pure coordination: standardizing 'who can initiate' reduces matching friction. High arbitrage options through algorithm design and norm-setting."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Feminist Organizing Movement",
+      "comment": "PERSPECTIVE 4: FEMINIST ORGANIZING MOVEMENT (SCAFFOLD) \u2014 Sees the constraint as a temporary institutional failure with clear sunset. Norms around female initiation are actively being reset through social organizing, media representation, and institutional (dating app) rule changes. Mobile agents with explicit exit path. Theater is moderate because the sunset is programmatic, not random."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Marriage Ritual System",
+      "comment": "PERSPECTIVE 5: TRADITIONAL MARRIAGE RITUAL SYSTEM (PITON) \u2014 The 'man proposes' ritual is increasingly performative. Actual relationships often form through mutual initiation, dating apps with explicit mutual interest, or ambiguous sequential signaling. The ritual persists through institutional inertia and theatrical performance (proposal as public ceremony) despite low functional necessity. The system acknowledges its own degradation through meta-performance (elaborate surprise proposals, social media staging)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / EVOLUTIONARY PSYCHOLOGY VIEW (MOUNTAIN) \u2014 Tempting but false naturalizing frame: 'male proposal is rooted in biological investment asymmetry, parental uncertainty, and evolutionary mating psychology.' This perspective risks misclassifying a contingent institutional arrangement (20th-century Western dating norms) as an immutable constraint. The engine's false summit detector should identify this: the structural data shows suppression is cultural/informational, not biological."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reputation_cost_measurement",
+      "question": "How much of the suppression magnitude derives from actual relationship rejection cost versus reputational/social penalty independent of relationship outcome?",
+      "resolution_mechanism": "Longitudinal study comparing: (a) female initiation in anonymous contexts vs signed contexts, (b) outcomes of female-initiated relationships vs male-initiated (controlling for selection effects), (c) self-reported shame cost vs actual relationship formation rates",
+      "impact": "If reputational cost > 50% of total suppression: the constraint is primarily a coordination signal problem (potentially Rope). If reputational cost < 30%: the constraint is primarily about rejection asymmetry (solidly Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of reputation-based suppression versus outcome-based suppression"
+    },
+    {
+      "id": "norm_shift_irreversibility",
+      "question": "Is the norm shift toward female initiation parity irreversible once cultural inversion occurs, or do communities regress to male-propose-only asymmetry?",
+      "resolution_mechanism": "Comparative analysis across cultures/communities with different acceptance rates for female initiation; time series of acceptance norms in cohorts; qualitative study of male gatekeeper response to norm inversion",
+      "impact": "If shift is irreversible: Scaffold classification confirmed, sunset is structural. If communities regress: Scaffold is aspirational; the Snare reconsolidates under pressure.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether cultural norm inversion toward female initiation is permanent"
+    },
+    {
+      "id": "information_asymmetry_necessity",
+      "question": "Does the male-gatekeeper role actually solve an information problem (distinguishing genuine interest from casual signal), or is it a mechanism for extracting commitment signals under asymmetric risk?",
+      "resolution_mechanism": "Comparison of relationship stability, honesty of initial mutual interest, and match quality in contexts with symmetric vs asymmetric initiation norms; analysis of how information asymmetry affects negotiation of relationship terms (commitment, timeline, fidelity)",
+      "impact": "If gatekeeper role genuinely solves information problem: the constraint is Tangled Rope (mixed coordination/extraction). If it primarily extracts commitment signals: the constraint is Snare with coordination rationalization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether male gatekeeper role serves genuine information function or pure extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The marriage market constraint on female initiation operates through asymmetric information and reputational suppression. Women who propose to men face both rejection risk and social penalty (framed as 'unladylike,' 'desperate,' 'aggressive'), while men who propose face status enhancement ('decisive,' 'romantic,' 'masculine'). This asymmetry is not biological but institutional \u2014 it derives from 20th-century Western dating norms that have become naturalized as evolutionary truth. The constraint extracts female agency by making female initiation costlier (in reputation, psychological safety, and relationship option value) than male initiation. It benefits male gatekeepers by concentrating information control and enabling screening without reciprocal commitment cost. The market is inefficient: many potential partnerships never form because the female party bears too much rejection cost to signal interest, while the male party waits for unmistakable female signals that don't arrive. The constraint exhibits all six classification types from different perspectives, making it a diagnostic case for how institutional arrangements masquerade as natural law.",
+    "key_agents": [
+      "Female Proposer: Primary victim (powerless/trapped) \u2014 bears full reputational and psychological cost of initiation; has no exit option without social penalty",
+      "Male Gatekeeper: Primary beneficiary (moderate/constrained) \u2014 controls information and commitment signaling; benefits from female hesitation; constrained by reciprocal asymmetry when targeting women",
+      "Dating App Intermediary: Secondary beneficiary (institutional/arbitrage) \u2014 profits from constraint asymmetry; can arbitrage by designing algorithms that reduce initiation friction or redistribute signaling norms",
+      "Feminist Organizing Movement: Counter-beneficiary (organized/mobile) \u2014 actively building alternative norms and institutional rules (e.g., mutual swiping with explicit interest signals); has exit path and agency",
+      "Traditional Marriage Ritual System: Inertial holder (powerful/arbitrage) \u2014 maintains performative proposal ritual; acknowledges its degradation through meta-performance (elaborate surprise proposals)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks false naturalization of institutional norms as evolutionary constraints"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts female agency through the reputational and psychological cost of initiation. Over the 50-year interval, extractiveness has increased (0.42 \u2192 0.58) as awareness of the norm has sharpened while compliance pressure has tightened \u2014 the constraint becomes more visible precisely as it becomes more contested. Suppression (0.68): High. Multiple suppression mechanisms: (a) reputational cost (social judgment as 'unladylike'), (b) psychological cost (rejection risk asymmetry), (c) institutional enforcement (dating norms, media representation, peer pressure), (d) economic reinforcement (female employment/independence lagging creates exit barriers). Theater ratio (0.55): Moderate. Dating rhetoric emphasizes 'natural' gendered initiation roles, but actual relationship formation increasingly involves mutual signaling. The theater has increased over the interval as norms have become more visible and contested \u2014 the ritual must work harder to maintain legitimacy as its artificiality becomes apparent.",
+    "directionality_logic": "Female proposers have high d (0.85-0.95) because they are both victims of the constraint (bear suppression costs) and trapped with minimal exit options (social penalty makes exit costly). Male gatekeepers have moderate d (0.50-0.60) because they benefit from the constraint asymmetry but are also constrained by reciprocal expectations when they pursue female targets. Dating app intermediaries have low d (0.10-0.20) because they can arbitrage by changing algorithm rules \u2014 they experience the constraint as a coordination opportunity, not an extraction mechanism. The feminist organizing movement has low d (0.20-0.30) despite being constrained because their agency and explicit exit path (norm-setting, institutional reform) reduce their effective extraction experience. The traditional marriage ritual system has negative d (approaching 0.0) because it is a beneficiary of the constraint maintained through inertia. The analytical observer's d is high (0.70-0.75) because the analytical perspective bears the cost of false naturalization (misattributing institutional effects to biological law).",
+    "perspectival_gap": "The perspectival gap is extreme across the observation site. The female proposer experiences a Snare (maximum extraction, no exit). The male gatekeeper experiences a Tangled Rope (benefits from coordination + information control, but also experiences reciprocal constraints). The dating app intermediary experiences a Rope (pure coordination opportunity). The feminist movement experiences a Scaffold (temporary problem with explicit sunset). The traditional ritual system experiences a Piton (degraded functionality maintained through theater). The civilizational analytical view risks Mountain (false naturalization). The first-person experiences are maximally divergent because the constraint operates through distributed enforcement: each agent sees the constraint from their structural position and rationalizes it through their local incentives. The female proposer sees suppression. The male gatekeeper sees coordination. The app intermediary sees an arbitrage opportunity. The movement sees a temporary institutional failure. The ritual system sees its own performance. The analyst risks seeing a law of nature. No single perspective is 'the' constraint \u2014 the presheaf IS the constraint.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This is the core exemplar of mandatrophy in social constraints. The temptation is to classify as Mountain ('rooted in biology / investment asymmetry / parental uncertainty') or as pure Rope ('elegant matching mechanism that allocates who-proposes signal efficiently'). The snare classification resolves the mandatrophy by demonstrating that the constraint is NOT rooted in biological law and DOES asymmetrically extract female agency. The empirical test: if the constraint were biological (Mountain), removing it should be impossible or harmful. If it were a pure coordination mechanism (Rope), norm-shifting should have no cost. Instead, we observe: (a) communities successfully invert the norm without biological consequences, (b) the constraint creates net inefficiency (many potential partnerships don't form due to female initiation cost), (c) the beneficiary (male gatekeepers) actively maintain the constraint despite its inefficiency, (d) the victim (female proposers) experience measurable psychological and opportunity costs that persist even when logically they 'should' disappear (rational choice theory predicts norm-shift, but emotional suppression persists). This pattern is diagnostic of a Snare: an extraction mechanism masquerading as coordination or natural law. The theater ratio (0.55 and rising) reflects the increasing performativity required to maintain the norm as its artificiality becomes visible."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "courtship_signaling_asymmetry",
+      "female_labor_market_bargaining_power"
+    ],
+    "dual_formulation_note": "The marriage market asymmetry decomposes into two structurally distinct constraints: (1) signaling asymmetry (who can initiate without reputational cost) \u2014 \u03b5=0.58, Snare; (2) female economic dependency during courtship phase \u2014 \u03b5=0.62, Tangled Rope. The signaling asymmetry is the more direct form of the constraint analyzed here. The economic dependency operates as a reinforcing mechanism, making female initiation more costly because female agency is economically constrained. Together they form an extractive system, but the signaling asymmetry is the immediate mechanism of suppression."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

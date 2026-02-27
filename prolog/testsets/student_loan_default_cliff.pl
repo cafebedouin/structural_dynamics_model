@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: student_loan_default_cliff
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_student_loan_default_cliff, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,16 +55,37 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: student_loan_default_cliff
  *   human_readable: Student Loan Default Cliff
- *   domain: economic
+ *   domain: economic/debt_policy
  *
  * SUMMARY:
- *   The expiration of student loan forbearance programs creates a "default cliff" where borrowers, particularly those with low incomes, face immediate repayment obligations, risking widespread defaults and financial instability. This story examines the structural forces behind this phenomenon.
+ *   The student loan default cliff emerges from the structural tension
+ *   between forbearance (temporary relief from repayment obligations) and
+ *   eventual enforcement (resumption of full debt service). When forbearance
+ *   expires, borrowers—particularly those with low incomes, dependent care
+ *   responsibilities, or employment in high-cost regions—face immediate
+ *   repayment obligations without intermediate adjustment periods. This
+ *   creates a cliff rather than a gradient: the day forbearance ends, payment
+ *   obligations jump from $0 to the full amortized amount, often exceeding
+ *   borrower capacity. The constraint exhibits hybrid coordination and
+ *   extraction: the loan servicers and federal education system benefit from
+ *   the cliff (it forces repayment and concentrates collection efforts),
+ *   while borrowers bear the costs. The constraint is actively enforced
+ *   through collection mechanisms (wage garnishment, tax intercept, credit
+ *   reporting) and perpetuated through theatrical political narratives
+ *   (forbearance extensions framed as compassion, cliff deadlines framed as
+ *   fiscal discipline). The core structural question is whether forbearance
+ *   is emergency policy requiring reform or a proxy for permanent
+ *   income-based repayment that Congress refuses to formalize.
  *
- * KEY AGENTS (by structural relationship):
- *   - Low-income borrowers: Primary target (powerless/trapped) — bears extraction
- *   - Student loan servicers: Primary beneficiary (institutional/arbitrage) — benefits from constraint
- *   - Department of Education: Secondary actor (institutional/constrained)
- *   - Analytical observer: Analytical observer — sees full structure
+ * KEY AGENTS:
+ *   - Low-Income Borrowers: Primary victims (powerless/trapped) — no refinancing options, no wage flexibility to absorb cliff; face full extraction through late fees, interest capitalization, and collection activities
+ *   - Middle-Income Borrowers: Secondary victims (moderate/constrained) — can access income-driven plans but face extended repayment timelines and increased total interest paid
+ *   - Loan Servicers: Primary beneficiaries (organized/arbitrage) — capture servicing fees, late fees, and collection revenues when cliff triggers; have high agency in collection practices
+ *   - Federal Department of Education: Secondary beneficiary (institutional/arbitrage) — controls forbearance duration, repayment rules, and enforcement mechanisms; benefits from cliff as policy lever
+ *   - Higher Education Institutions: Tertiary actor (powerful/mobile) — face enrollment pressure from cliff-induced debt aversion but benefit from forbearance-enabled enrollment stability
+ *   - Congress: Political performer (institutional/constrained) — constrained by political costs of either forgiving debt or engineering large-scale defaults; uses forbearance cycles for electoral signaling
+ *   - Debt Relief Advocacy: Organized alternative (organized/mobile) — building policy infrastructure for structural reform (broad forgiveness, income-share agreements); offers genuine exit pathway with political sunset
+ *   - Analytical Observer: Civilizational context (analytical/analytical) — risks naturalizing the cliff as inevitable feature of debt systems rather than recognizing it as engineered policy choice
  */
 
 /* ==========================================================================
@@ -72,118 +93,88 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(student_loan_default_cliff, 0.55).
-domain_priors:suppression_score(student_loan_default_cliff, 0.70).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(student_loan_default_cliff, 0.30).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(student_loan_default_cliff, 0.62).
+domain_priors:suppression_score(student_loan_default_cliff, 0.68).
+domain_priors:theater_ratio(student_loan_default_cliff, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(student_loan_default_cliff, extractiveness, 0.55).
-narrative_ontology:constraint_metric(student_loan_default_cliff, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(student_loan_default_cliff, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(student_loan_default_cliff, extractiveness, 0.62).
+narrative_ontology:constraint_metric(student_loan_default_cliff, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(student_loan_default_cliff, theater_ratio, 0.55).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-% narrative_ontology:constraint_metric(student_loan_default_cliff, accessibility_collapse, [0.85-1.0]).
-% narrative_ontology:constraint_metric(student_loan_default_cliff, resistance, [0.0-0.15]).
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(student_loan_default_cliff, tangled_rope).
 narrative_ontology:human_readable(student_loan_default_cliff, "Student Loan Default Cliff").
-narrative_ontology:topic_domain(student_loan_default_cliff, "economic").
+narrative_ontology:topic_domain(student_loan_default_cliff, "economic/debt_policy").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(student_loan_default_cliff).      % Mandatory if Scaffold
-domain_priors:requires_active_enforcement(student_loan_default_cliff). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(student_loan_default_cliff).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-% domain_priors:emerges_naturally(student_loan_default_cliff).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(student_loan_default_cliff, student_loan_servicers).
-%
-% Who bears disproportionate cost?
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(student_loan_default_cliff, loan_servicers).
+narrative_ontology:constraint_beneficiary(student_loan_default_cliff, federal_education_department).
 narrative_ontology:constraint_victim(student_loan_default_cliff, low_income_borrowers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+narrative_ontology:constraint_victim(student_loan_default_cliff, borrowers_with_dependent_care).
+narrative_ontology:constraint_victim(student_loan_default_cliff, borrowers_in_high_cost_regions).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(student_loan_default_cliff, tangled_rope,
+% PERSPECTIVE 1: LOW-INCOME BORROWER (SNARE) — Trapped between forbearance expiration and income insufficiency. No exit option: cannot refinance (credit too damaged), cannot default without severe penalties, cannot negotiate payment terms. Bears full extraction from servicing fees, accrued interest, and wage garnishment threat. High suppression: no alternatives to repayment system.
+constraint_indexing:constraint_classification(student_loan_default_cliff, snare,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(immediate),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+% PERSPECTIVE 2: MIDDLE-INCOME BORROWER (TANGLED ROPE) — Can service debt but only through income-driven repayment plans that extend timeline and increase total interest paid. Constrained exit: forgiveness pathways exist (PSLF, IDR forgiveness) but require sustained employment and documented compliance. Benefits from forbearance window (built financial resilience), but extraction mechanism (capitalized interest, extended repayment) is real. Mixed experience: coordination (access to repayment plans) AND extraction (debt structure tilts toward lenders).
+constraint_indexing:constraint_classification(student_loan_default_cliff, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: FEDERAL EDUCATION DEPARTMENT (ROPE) — Experiences the forbearance-to-repayment transition as a coordination mechanism: managing the system's restart, redistributing risk through income-driven plans, preventing cascade defaults that would destabilize the program. Arbitrage options available (can adjust rules, extend forbearance, modify repayment structures). Net beneficiary of the constraint: the cliff creates urgency and political leverage for policy action. Low experienced extraction.
 constraint_indexing:constraint_classification(student_loan_default_cliff, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(student_loan_default_cliff, snare,
+% PERSPECTIVE 4: LOAN SERVICERS (ROPE) — Primary beneficiaries. The cliff creates a coordination problem they can solve: restarting payment systems, recapturing dormant accounts, capturing late fees and collection activities. High arbitrage options (can modify servicing practices, adjust collection tactics). Experience the constraint as beneficial coordination that captures value. Low theoretical suppression (borrowers can't organize servicers out of existence), but servicer-perceived suppression is minimal because their interests align with enforcement.
+constraint_indexing:constraint_classification(student_loan_default_cliff, rope,
+    context(agent_power(organized),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: HIGHER EDUCATION INSTITUTIONS (TANGLED ROPE) — Experience mixed effects. Coordination benefit: forbearance reduces student complaints and enables enrollment stability. Extraction exposure: default cliff threatens enrollment (students defer education due to debt burden) and reduces institutional revenue. Mobile exit options (can reduce tuition, increase aid, shift to online models). Experience both coordination (stable debt system enables enrollment) and extraction (cliff threatens institutional enrollments and prestige metrics tied to student outcomes).
+constraint_indexing:constraint_classification(student_loan_default_cliff, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: CONGRESSIONAL POLITICS (PITON) — Forbearance extensions and cliff deadlines serve primarily as political theater rather than functional policy. Each extension creates electoral talking points ('I fought for working families'); each cliff deadline creates urgency narratives. The functional goal (managing repayment system) is decoupled from the performative goal (demonstrating compassion vs. fiscal discipline). Theater ratio high: repeated extensions and deferrals signal that the underlying system is not being reformed. Constrained exit: Congress cannot easily exit the forbearance cycle without either forgiving debt or engineering mass defaults, both politically costly.
+constraint_indexing:constraint_classification(student_loan_default_cliff, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal perspective, the default cliff could appear as an immutable feature of any debt system: borrowers who cannot pay will default; lenders must eventually enforce; the cliff is a structural inevitability of repayment mechanics. However, the structural data contradicts this — the cliff is engineered through policy choices (forbearance duration, repayment rules, collection practices), not discovered as a law of nature. This perspective risks naturalizing what is actually a contingent institutional arrangement. Engine classification: false summit.
+constraint_indexing:constraint_classification(student_loan_default_cliff, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES (declare when applicable) ---
-% When a constraint operates between institutional actors with different
-% structural relationships, declare separate perspectives for each.
-% The engine differentiates via directionality: different exit_options
-% produce different d values even for the same power atom.
-%
-% Perspective 4: The Department of Education (institutional, constrained)
-% They are institutional but have a constrained exit as they are politically mandated to handle student loans
-constraint_indexing:constraint_classification(student_loan_default_cliff, rope,
-     context(agent_power(institutional),
-             time_horizon(generational),
-             exit_options(constrained),
-             spatial_scope(national))).
+% PERSPECTIVE 8: DEBT RELIEF ADVOCACY (SCAFFOLD) — Organized agents (debt activists, progressive policy advocates) see the cliff as a temporary structural failure with a policy sunset: broad-based forgiveness, free public college, or income-share agreements would replace the debt-cliff system. High agency and clear exit pathway (policy reform). Experience low effective extraction because they have concrete alternatives and escalating political voice. Theater ratio moderate: advocacy performs moral urgency while building alternative policy infrastructure.
+constraint_indexing:constraint_classification(student_loan_default_cliff, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -192,15 +183,17 @@ constraint_indexing:constraint_classification(student_loan_default_cliff, rope,
 :- begin_tests(student_loan_default_cliff_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(student_loan_default_cliff, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(student_loan_default_cliff, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(student_loan_default_cliff, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(student_loan_default_cliff, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(student_loan_default_cliff, ExtMetricName, E),
-    (E =< 0.25 -> true ; E >= 0.46). % Mountain or high-extraction Snare/Tangled.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(student_loan_default_cliff, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(student_loan_default_cliff, TR),
+    TR >= 0.70.
 
 :- end_tests(student_loan_default_cliff_tests).
 
@@ -210,113 +203,101 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Student Loan Default Cliff is scored with a base extractiveness of 0.55, reflecting the significant financial burden placed on borrowers. The suppression score is 0.70, indicating limited alternative options for borrowers facing repayment. The theater ratio is 0.30, suggesting a low degree of performative compliance relative to actual function.
+ *   Extractiveness (0.62): The base rate reflects substantial asymmetry in costs and benefits. Borrowers at the cliff face immediate, non-negotiable extraction: capitalized interest, servicing fees, collection costs, wage garnishment threat, and credit damage. The extraction is not total (income-driven plans exist, some forgiveness pathways available) but it is severe and immediate. Over the interval, extractiveness has increased as forbearance has extended and then begun contracting—the cliff's height has grown as the debt has accrued unpaid interest. Suppression (0.68): Multiple barriers prevent escape: limited refinancing options for low-income or default-history borrowers, income constraints preventing reallocation to repayment, weak organizing capacity among atomized borrower population, collateral enforcement mechanisms (wage garnishment, tax intercept, credit freezing), and policy uncertainty (Congress repeatedly delays cliff deadlines, keeping borrowers in limbo). Theater ratio (0.55): Moderate, increasing. Congressional forbearance extensions are primarily performative—they signal compassion without reforming the underlying system. Each extension and cliff deadline serve electoral purposes more than functional debt management. The actual repayment system (income-driven plans, forgiveness pathways) performs its coordination function, but the cliff itself is theatrical: it exists as a deadline threat rather than as a functional enforcement mechanism.
  *
  * PERSPECTIVAL GAP:
- *   Low-income borrowers perceive the situation as a Snare, due to their limited exit options (trapped) and the high extraction they face. In contrast, student loan servicers classify it as a Rope, as they benefit from the repayment stream and have arbitrage opportunities. The Department of Education sees it as a Rope too, hoping for coordination to have most people pay, even though their power to enforce is limited (constrained exit). The analytical observer perceives it as a Tangled Rope, recognizing the coordination function of loan repayment alongside the asymmetric extraction from vulnerable borrowers.
+ *   The gap between Low-Income Borrower (Snare) and Loan Servicer (Rope) is maximal: one experiences pure extraction with no alternatives, the other experiences coordinated revenue management. The gap between Middle-Income Borrower (Tangled Rope) and Department of Education (Rope) reflects different exit capacities: the DoE can modify the system, the borrower is constrained within it. The gap between Debt Relief Advocacy (Scaffold) and Congressional Theater (Piton) reflects different theories of change: one sees policy reform as imminent and designed, the other sees endless deferral through theatrical extensions.
  *
  * DIRECTIONALITY LOGIC:
- *   Low-income borrowers are victims, bearing the cost of loan repayment with limited ability to escape the debt cycle. Student loan servicers are beneficiaries, as they profit from loan servicing and repayment, aligning incentives to maintain the system. The Department of Education tries to manage the system, but their role is constrained as the administrator (trying to be beneficiary and victim at the same time), having limited means to truly change the system.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   The Department of Education, as the administrator of the loan system, experiences the constraint differently from student loan servicers. The DoE aims to facilitate repayment while managing default risk, leading to a more constrained perspective compared to the servicers who directly benefit from repayment.
+ *   Directionality is determined by structural position in the repayment flow. Beneficiaries (servicers, DoE) with arbitrage options (can modify rules, extend forbearance, adjust enforcement) experience low d → negative χ. Victims (low-income borrowers) with trapped exit experience high d → high χ. Middle-income borrowers with constrained exit experience moderate d → moderate χ. Congress with constrained political exit experiences moderate-high d (structurally positioned to enforce, but politically unable to avoid costs). Higher education with mobile options experiences lower d despite secondary victim status. The Tangled Rope classification emerges because the constraint has genuine coordination function (income-driven plans do solve collective action problem of matching repayment to ability) AND asymmetric extraction (beneficiaries capture more than victims regain). The Piton classification for Congress reflects that political theater has become the primary function, decoupled from debt management.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification prevents mislabeling coordination as pure extraction by recognizing the coordination function of student loans in financing higher education. However, the asymmetric extraction from low-income borrowers and the high suppression score highlight the risks of a system that can easily become a Snare for vulnerable populations. The Tangled Rope classification from an analytical perspective acknowledges both aspects.
+ *   This constraint resolves mandatrophy by clarifying that the Tangled Rope classification (not pure Snare) is correct at the system level, but Snare is correct for the low-income subpopulation specifically. The constraint exhibits both real coordination function (income-driven repayment plans do solve the problem of matching obligation to ability) AND real extraction (beneficiaries systematically capture more than victims regain, through interest capitalization, extended timelines, and collection mechanisms). The mandatrophy resolution distinguishes between: (1) the system's nominal function (coordination of repayment), which is real but unevenly experienced, and (2) the system's extractive layer (fees, interest, enforcement), which is also real and systematically asymmetric. The Snare classification from the low-income perspective is not an alternative classification of the same constraint—it's a different constraint (the default cliff for those trapped by income insufficiency) that is downstream of the Tangled Rope (the overall student loan system as a policy coordination mechanism with extraction layer). The false Mountain (natural law view) is rejected because the cliff is engineered through policy choices about forbearance duration, repayment rules, and enforcement mechanisms. If different policy choices (broader forgiveness, income-share agreements, free public college) were made, the cliff would disappear or reshape entirely. It is not a law of nature.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_student_loan_default_cliff,
-    'Will policy changes alleviate the burden on low-income borrowers?',
-    'Monitoring legislative and regulatory actions related to student loan forgiveness and repayment options.',
-    'If True: Reduced default rates and improved financial stability for borrowers. If False: Continued high default rates and financial hardship for vulnerable populations.',
+    forbearance_permanence,
+    'Is forbearance a temporary emergency measure or a permanent feature of the student loan system?',
+    'Congressional voting patterns on extensions; policy analysis of whether forbearance is being designed for permanence or phased expiration',
+    'If temporary: cliff is genuine default crisis requiring policy response. If permanent: cliff disappears as a constraint (forbearance becomes the system). If indefinite stalling: classification shifts from Snare to Piton (theater-driven).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(forbearance_permanence, preference, 'Whether forbearance is temporary or permanent policy').
+
+omega_variable(
+    income_driven_repayment_sufficiency,
+    'Do income-driven repayment plans actually allow borrowers to service debt without hardship, or do they primarily defer insolvency?',
+    'Longitudinal tracking of borrower outcomes under IDR: debt-to-income ratios at forgiveness, default rates, financial stress indicators, comparison to borrowers without IDR access',
+    'If sufficient: cliff is negotiable through plan access (Tangled Rope for middle-income). If inadequate: cliff is irreducible extraction even with IDR (Snare). If plan enrollment is low: suppression mechanism (lack of information/access) is higher than assumed.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(income_driven_repayment_sufficiency, empirical, 'Whether income-driven repayment plans prevent hardship').
+
+omega_variable(
+    default_cascade_mechanism,
+    'Does individual default trigger systemic cascades (institution defaults, servicer insolvency, program collapse) or do defaults remain isolated?',
+    'Historical analysis of previous forbearance expiration cycles; servicer financial stress tests; modeling of large-scale default scenarios',
+    'If cascade risk is real: federal government has high enforcement pressure (suppression increases). If isolated: suppression is lower and borrower alternatives expand. If cascade is catastrophic: Snare classification confirmed across all non-beneficiary perspectives.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(default_cascade_mechanism, empirical, 'Whether defaults cascade systemically').
+
+omega_variable(
+    political_will_for_reform,
+    'Will Congress enact structural reform (broad forgiveness, policy reset, new system) before the next forbearance expiration?',
+    'Legislative activity tracking, polling on reform support, political feasibility assessment',
+    'If reform likely: Scaffold perspective strengthens, sunset clause is real. If reform unlikely: cycles repeat, theater-ratio increases (Piton classification strengthens). If reform is 50-year horizon: current cliff is de facto permanent extraction.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(political_will_for_reform, preference, 'Political likelihood of structural reform').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(student_loan_default_cliff, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(student_loan_default_cliff_tr_t0, student_loan_default_cliff, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(student_loan_default_cliff_tr_t5, student_loan_default_cliff, theater_ratio, 5, 0.30).
-narrative_ontology:measurement(student_loan_default_cliff_tr_t10, student_loan_default_cliff, theater_ratio, 10, 0.30).
+% Theater ratio over time
+narrative_ontology:measurement(sldc_tr_t0, student_loan_default_cliff, theater_ratio, 0, 0.3).
+narrative_ontology:measurement(sldc_tr_t5, student_loan_default_cliff, theater_ratio, 5, 0.45).
+narrative_ontology:measurement(sldc_tr_t10, student_loan_default_cliff, theater_ratio, 10, 0.55).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(student_loan_default_cliff_ex_t0, student_loan_default_cliff, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(student_loan_default_cliff_ex_t5, student_loan_default_cliff, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(student_loan_default_cliff_ex_t10, student_loan_default_cliff, base_extractiveness, 10, 0.55).
+% Extraction over time
+narrative_ontology:measurement(sldc_be_t0, student_loan_default_cliff, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(sldc_be_t5, student_loan_default_cliff, base_extractiveness, 5, 0.48).
+narrative_ontology:measurement(sldc_be_t10, student_loan_default_cliff, base_extractiveness, 10, 0.62).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
 narrative_ontology:coordination_type(student_loan_default_cliff, resource_allocation).
+narrative_ontology:affects_constraint(student_loan_default_cliff, higher_education_enrollment_access).
+narrative_ontology:affects_constraint(student_loan_default_cliff, wealth_inequality_accumulation).
+narrative_ontology:affects_constraint(student_loan_default_cliff, intergenerational_debt_transmission).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(student_loan_default_cliff, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(student_loan_default_cliff, [other_constraint_id]).
-
-% --- Network Decomposition (Constraint Families) ---
-% When a natural-language label covers multiple constraints with different ε
-% values, each gets its own file. Link family members with affects_constraint:
-%
 % DUAL FORMULATION NOTE:
-% This constraint is one of [N] stories decomposed from [colloquial label].
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - [sibling_constraint_1] (ε=[value], [Type])
-%   - [sibling_constraint_2] (ε=[value], [Type])
-%
-% narrative_ontology:affects_constraint(student_loan_default_cliff, [sibling_constraint_id]).
+% The student loan default cliff can be decomposed into two distinct constraints: (1) the overall student loan system as a resource allocation mechanism (moderate ε, genuine coordination function, Tangled Rope), and (2) the forbearance-to-repayment cliff as a temporal enforcement shock (higher ε, pure extraction for trapped borrowers, Snare). This story treats the cliff as a temporal feature of the larger system. Upstream constraints (higher education financing structure, wage stagnation) explain why the cliff is catastrophic; downstream constraints (debt collection, wage garnishment mechanisms) are the enforcement layer. Network links show how cliff-triggered defaults propagate to institutional solvency, college enrollment decisions, and intergenerational wealth transmission.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(student_loan_default_cliff, institutional, 0.30).
+constraint_indexing:directionality_override(student_loan_default_cliff, powerful, 0.55).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

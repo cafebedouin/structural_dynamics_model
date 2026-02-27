@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "riot_incentive_loop_2026",
+    "version": "1.0",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Riot-Incentive Loop (State-Managed Chaos)",
+    "topic_domain": "political/social/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_security_apparatus",
+      "private_security_contractors"
+    ],
+    "victims": [
+      "protestors",
+      "civil_liberties",
+      "community_trust"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Protester",
+      "comment": "The protester, subjected to tear gas and other chemical agents, is trapped in a cycle of escalation. They lack the power to effectively resist or exit the situation immediately."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Community Leaders",
+      "comment": "Community leaders are constrained by the state's actions but also benefit from limited dialogue, making this a form of rope with extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Security Apparatus",
+      "comment": "The state security apparatus benefits from the escalated conflict by justifying increased budgets and powers, experiencing it as a coordinating mechanism to maintain control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Theorist of State Violence",
+      "comment": "Analytical perspective, recognizing that the loop creates both a control mechanism for the state and potential harm to civil society."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effectiveness_tear_gas",
+      "question": "What is the threshold at which chemical agents like tear gas cease to be a deterrent and become an incitement to riot?",
+      "resolution_mechanism": "Empirical study of protest events, correlating chemical agent use with protest escalation and de-escalation.",
+      "impact": "Determines whether the tactic is net coordination or net extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of tear gas at controlling or inciting riots."
+    },
+    {
+      "id": "transparency_accountability",
+      "question": "To what degree are state agencies accountable for the use of chemical agents during protests?",
+      "resolution_mechanism": "Legal analysis of oversight mechanisms, independent investigations of riot control tactics.",
+      "impact": "Determines the extent of the snare (pure extraction) component of the loop.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Accountability of state agencies."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the feedback loop where state agencies deploy non-lethal chemical agents (tear gas) to incite panic and aggression, creating a self-fulfilling prophecy of riotous behavior. The initial intervention (deployment of chemical agents) is often framed as a necessary measure to maintain order, but it can inadvertently escalate tensions and lead to more extreme forms of protest. The cycle reinforces the need for more aggressive tactics, thus benefiting the state security apparatus at the expense of protestors and civil liberties.",
+    "key_agents": [
+      "Protestors: Primary target (powerless/trapped) \u2014 bears costs of state violence and suppression of dissent.",
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 benefits from increased budgets, powers, and social control justified by escalating conflict.",
+      "Community Leaders: Secondary actor (moderate/constrained) \u2014 constrained by state actions but also benefit from limited dialogue.",
+      "Civil Liberties Organizations: Monitor, report, and attempt to legally challenge state actions. Analytical observer."
+    ],
+    "logic_rationale": "Extractiveness (0.6): High. The state extracts social order at the cost of civil liberties and individual well-being. The suppression factor (0.7) reflects the state's monopoly on the legitimate use of force and its ability to control narratives and suppress dissent. Theater ratio (0.3): Relatively low, since much of what happens on the ground is action rather than spectacle. Claimed type: Tangled rope, as state security is meant to provide coordination for its citizens, yet it leads to extraction via violent means.",
+    "perspectival_gap": "The perspectives diverge based on power and agency. The protester experiences a snare, while the state benefits, seeing it as a rope. The analytical observer views the tangled rope, acknowledging both the coordination and extraction effects.",
+    "directionality_logic": "The State Security Apparatus experiences the constraint as a coordination mechanism. The protesters experience the constraint as pure extraction. The analytical observer sees a hybrid.",
+    "mandatrophy_analysis": "Without understanding the perspectives, the state could assume its actions are fully justified. By labeling this as a Tangled Rope, it forces us to view both the intended coordination and potential extraction mechanisms."
+  },
+  "network": {},
+  "directionality_overrides": []
+}

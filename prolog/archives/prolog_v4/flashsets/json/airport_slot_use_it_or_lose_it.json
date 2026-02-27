@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "airport_slot_use_it_or_lose_it",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "\"Use-it-or-lose-it\" rule for airport landing slots",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "competing_airlines",
+      "airport_authority",
+      "passengers"
+    ],
+    "victims": [
+      "incumbent_airlines"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Incumbent Airline Facing Demand Shock",
+      "comment": "Incumbent airlines that experience a sudden and significant drop in demand (e.g., due to a recession, pandemic, or major event affecting travel to a specific location) are trapped by the rule. They must continue to operate flights even when unprofitable to avoid losing valuable slots."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Incumbent Airline with Flexible Operations",
+      "comment": "Incumbent airlines may find ways to use slots for less profitable routes or 'ghost flights' to retain slots, but this represents an inefficient allocation of resources. The rule also provides some coordination function in maintaining airport operational integrity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Airport Authority",
+      "comment": "The airport authority benefits from the rule as it ensures high utilization of airport infrastructure and can reallocate slots to more efficient or growing airlines, thereby maximizing airport revenue. This is experienced as a coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Competing Airlines",
+      "comment": "Competing airlines that desire access to congested airports benefit from the rule as it creates opportunities to acquire slots from incumbent airlines that cannot meet the utilization requirements. Airlines might have mobile assets to allocate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the rule is a mixed bag. It addresses the coordination problem of efficiently allocating scarce airport resources but also introduces distortions and inefficiencies due to the pressure to maintain slot utilization even when demand is low."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demand_threshold",
+      "question": "What is the appropriate threshold for defining a significant drop in demand that warrants an exemption from the rule?",
+      "resolution_mechanism": "Statistical analysis of historical demand fluctuations and their impact on airline profitability.",
+      "impact": "Too low: Airlines may exploit exemptions for strategic purposes. Too high: Airlines face undue pressure to operate unprofitable flights.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Demand threshold for exemptions."
+    },
+    {
+      "id": "slot_valuation",
+      "question": "What is the true economic value of airport slots, considering both direct revenue and indirect benefits (e.g., network effects)?",
+      "resolution_mechanism": "Econometric modeling of airline revenue, network connectivity, and airport traffic patterns.",
+      "impact": "Underestimated: Rule may lead to inefficient reallocation of slots. Overestimated: Rule may create excessive pressure to maintain slot utilization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic value of slots."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The \"use-it-or-lose-it\" rule for airport landing slots aims to promote efficient allocation of scarce airport resources by requiring airlines to operate a certain percentage of their allocated slots. This rule creates winners and losers, potentially leading to both efficient use of airport capacity and wasteful \"ghost flights.\"",
+    "key_agents": [
+      "Incumbent Airlines: Primary targets (powerless/trapped in demand shocks, moderate/constrained otherwise) \u2014 face the risk of losing valuable slots.",
+      "Competing Airlines: Primary beneficiaries (powerful/mobile) \u2014 gain opportunities to acquire slots.",
+      "Airport Authority: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from high airport utilization.",
+      "Passengers: Indirect Beneficiaries (powerless) - increased flight options. ",
+      "Analytical Observer: Assesses efficiency (analytical/analytical)"
+    ],
+    "logic_rationale": "The rule extracts value from incumbent airlines by threatening to take away their slots if they don't use them (extractiveness 0.55). It suppresses alternative uses of capital, because airlines can't simply choose to not fly to a certain destination, or at least have that choice be much more costly (suppression 0.65). It has a low theater ratio (0.30), meaning the flights occurring are at least somewhat functional.",
+    "perspectival_gap": "Incumbent airlines see the rule as a potential snare because they must operate flights even when unprofitable to retain slots. Competing airlines and the airport authority see it as a means to ensure efficient use of airport capacity. The analytical observer acknowledges both the benefits and drawbacks, hence tangled rope classification.",
+    "directionality_logic": "Incumbent airlines are victims because they face the risk of losing slots. Competing airlines and the airport authority benefit from the rule. The directionality reflects these structural relationships."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "airline_competition",
+      "airport_capacity"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "israel_gaza_ceasefire_violation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "igcv"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Israel-Gaza Ceasefire Violation and Retaliatory Cycle",
+    "topic_domain": "geopolitical/conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "palestinian_civilian_population",
+      "israeli_civilian_population",
+      "humanitarian_infrastructure"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Palestinian Civilian Population",
+      "comment": "PERSPECTIVE 1: PALESTINIAN CIVILIANS (SNARE) \u2014 Trapped within Gaza; cannot exit during hostilities. Bear asymmetric cost of retaliatory strikes regardless of whether they participated in rocket launches. No capacity to enforce ceasefire on militant groups or negotiate exit. Experience maximum extraction as non-combatants."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Israeli Civilian Population",
+      "comment": "PERSPECTIVE 2: ISRAELI CIVILIANS (SNARE) \u2014 Trapped within strike range; cannot exit during rocket attacks. Bear costs of both initial Hamas violation and ongoing threat of retaliation. No capacity to enforce compliance on Hamas or negotiate ceasefire terms unilaterally. Experience extraction through forced exposure to violence and disruption."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Hamas Military Command",
+      "comment": "PERSPECTIVE 3: HAMAS MILITARY COMMAND (TANGLED ROPE) \u2014 Organized actor; constrained exit (cannot fully disarm without political cost). Ceasefire agreement represents coordination mechanism (reducing civilian casualties, allowing humanitarian access) but also extracts from Hamas' operational capacity. Violation re-initiates extraction cycle against both Hamas targets and civilian cover. Mixed extraction and coordination coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Israeli Military Command",
+      "comment": "PERSPECTIVE 4: ISRAELI MILITARY COMMAND (TANGLED ROPE) \u2014 Organized actor; constrained exit (legal/political obligation to respond to attacks). Ceasefire coordination reduces operational costs and international pressure but constrains strategic autonomy. Violation extraction on Hamas enables retaliatory extraction on civilian infrastructure. Hybrid coordination-extraction mechanism."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Mediation Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL MEDIATORS (SCAFFOLD) \u2014 UN, regional powers, humanitarian organizations see ceasefire as temporary coordination structure with sunset logic. Violation triggers enforcement rhetoric but enforcement capacity is limited. Framework reduces extraction per capita but only if compliance holds. Theater ratio reflects gap between mediation protocols and actual compliance mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Legal/Humanitarian System",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL LEGAL SYSTEM (PITON) \u2014 Ceasefire agreements, laws of war, humanitarian law exist as institutional framework but enforcement is substantially performative. Violation response is conditioned on politics (great power vetoes at UNSC, differential application of 'violation' labels). Theater ratio high because legal mechanisms operate with limited actual enforcement capacity. Theater increases when same violations classified differently based on perpetrator identity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Tit-for-Tat Escalation Logic",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the violation-retaliation cycle appears as inherent to asymmetric conflict: one side cannot credibly commit to restraint without sacrificing deterrence; the other cannot fully disarm without losing political legitimacy. The cycle appears immutable \u2014 a natural law of conflict dynamics. Engine's false summit detector will flag this as naturalization: the 'inevitable' cycle is contingent on institutional arrangements (lack of joint enforcement mechanism, distributed verification, mutual credibility restoration), not physical law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attribution_certainty",
+      "question": "How certain must attribution of rocket fire to Hamas be before retaliation is justified? What probability threshold converts 'violation response' into 'pretext for extraction'?",
+      "resolution_mechanism": "Forensic analysis of projectile origins; third-party ballistic verification; comparison of attribution certainty to international enforcement standards in other domains",
+      "impact": "If threshold < 60%: high false-positive retaliation; extraction mechanisms appear justified. If threshold > 95%: true violations may be underresponded; coordination mechanism appears toothless. At 80%: boundary between legitimate enforcement and extraction becomes observable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution threshold for distinguishing legitimate enforcement from pretext retaliation"
+    },
+    {
+      "id": "proportionality_metric",
+      "question": "What constitutes proportional response to ceasefire violation? Is proportionality measured by tactical symmetry (rockets for air strikes), civilian impact parity, or political deterrence effect?",
+      "resolution_mechanism": "Analysis of response scale relative to initiating violation; comparison of casualty ratios; assessment of whether response deters future violations or provokes escalation",
+      "impact": "If proportionality undefined: retaliation becomes pure extraction (snare from victim view). If proportionality enforced: retaliation becomes legitimate enforcement (tangled_rope equilibrium). Standard used determines classification across all perspectives.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition and measurement of proportional response to violations"
+    },
+    {
+      "id": "civilian_cover_vs_legitimate_target",
+      "question": "When Hamas launches from civilian areas or stores munitions in civilian infrastructure, does this convert civilian areas into legitimate military targets? Does civilian presence transform defense extraction into combat necessity?",
+      "resolution_mechanism": "Comparative analysis across multiple conflicts (civilian-proximity targeting rules); assessment of whether civilian impact is minimized or deliberately amplified; correlation between target choice and military necessity",
+      "impact": "If civilian proximity allows targeting: retaliation classification softens to tangled_rope (mixed). If civilians are protected: civilian casualty patterns reveal pure extraction (snare). Classification shifts across agents based on how this omega resolves.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Civilian presence conversion rules for military target legitimacy"
+    },
+    {
+      "id": "enforcement_credibility_gap",
+      "question": "Can international mediators credibly commit to enforcing ceasefire terms on both sides equally, or do geopolitical interests make selective enforcement inevitable?",
+      "resolution_mechanism": "Historical analysis of enforcement consistency across similar ceasefire agreements; assessment of mediator incentives relative to enforcement costs; third-party verification of compliance vs response asymmetries",
+      "impact": "If credible equal enforcement possible: scaffold perspective (sunset mechanism) is real. If geopolitical interests dominate: mediation is theater (piton perspective is correct). Determines whether international framework reduces or merely masks extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether mediators can enforce agreements credibly and equally"
+    },
+    {
+      "id": "mutual_deterrence_trap",
+      "question": "Is the violation-retaliation cycle a Prisoner's Dilemma where both sides prefer peaceful coexistence but each fears first-move vulnerability? Or is it a pure extraction dynamic where one side benefits from continued conflict?",
+      "resolution_mechanism": "Comparison of stated peace preferences to revealed incentive structures; analysis of whether escalation increases or decreases the violating side's strategic position; assessment of whether violations follow predictable triggers or exploit windows of opportunity",
+      "impact": "If Prisoner's Dilemma: institutional design can solve (create joint enforcement, reduce first-move costs). If pure extraction: institutional design is insufficient (fundamental interests misaligned). Determines whether snare is fixable or immutable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cycle reflects mutual deterrence trap or pure extraction asymmetry"
+    },
+    {
+      "id": "humanitarian_corridor_credibility",
+      "question": "Do ceasefires enable sufficient humanitarian access to reduce civilian suffering, or is the access window too brief and constrained to create net relief?",
+      "resolution_mechanism": "Longitudinal measurement of humanitarian goods delivered during ceasefire windows; comparison to baseline civilian needs; assessment of whether ceasefire window enables medical treatment and reconstruction or merely resets for next cycle",
+      "impact": "If net humanitarian benefit: ceasefire becomes rope-like (coordination function real). If access is performative theater: ceasefire remains snare (coordination claim is false). Determines whether international scaffolding has functional value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ceasefire windows enable meaningful humanitarian access"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "igcv_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.55,
+      "id_override": "igcv_extract_t1"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.68,
+      "id_override": "igcv_extract_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "igcv_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.53,
+      "id_override": "igcv_theater_t1"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.58,
+      "id_override": "igcv_theater_t2"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The Israel-Gaza ceasefire violation constraint describes a structural entrapment where agreements to reduce violence are repeatedly broken, triggering reciprocal escalation that harms primarily non-combatants. The initial ceasefire represents a coordination mechanism (reducing immediate casualties, allowing humanitarian access, providing diplomatic breathing room). Hamas violation of the ceasefire through rocket launches breaks this coordination function and initiates a retaliatory extraction cycle where Israeli military response imposes disproportionate costs on trapped Palestinian civilians. The cycle repeats because neither side can credibly commit to compliance without geopolitical cost: Hamas faces domestic legitimacy pressure to demonstrate resistance; Israel faces security pressure to deter future attacks. International mediation institutions exist (UN, regional mediators) but operate with limited enforcement capacity\u2014they provide performative coordination theater rather than binding constraint on escalation. The constraint exhibits all six DR types depending on the observer's structural position: snare for trapped civilians on both sides, tangled rope for organized military actors who both coordinate and extract, scaffold for international mediators with sunset logic, piton for legal institutions with high theater, and a false mountain for analysts who naturalize the cycle as inevitable. The extractiveness has risen over the interval (0.42\u21920.68) reflecting deepening asymmetry: initial ceasefire period shows lower extractiveness because humanitarian gains are real and violation hasn't yet occurred; mid-cycle shows extraction rising as retaliatory strikes accumulate; final state shows high extractiveness as civilian costs accumulate faster than coordination benefits accrue.",
+    "key_agents": [
+      "Palestinian Civilian Population: Primary victim (powerless/trapped) \u2014 bears asymmetric cost of retaliatory strikes regardless of participation in violations; cannot exit Gaza; cannot influence Hamas military decisions; experience maximum extraction",
+      "Israeli Civilian Population: Primary victim (powerless/trapped) \u2014 bears asymmetric cost of rocket attacks and disruption to normal life; cannot exit strike zones during hostilities; cannot influence Hamas compliance; experience extraction through forced vulnerability",
+      "Hamas Military Command: Organized actor (organized/constrained) \u2014 initiates violation through rocket launch; benefits from retaliatory response (demonstrates continued resistance, triggers domestic mobilization) but also suffers tactical costs; constrained exit (cannot fully disarm); engages in both extraction and coordination",
+      "Israeli Military Command: Organized actor (organized/constrained) \u2014 responds to violation through retaliatory strikes; constrained exit (legal/political obligation to respond); maintains deterrence but also escalates extraction cycle; operates in tangled rope coordination-extraction hybrid",
+      "International Mediators: Institutional actors (organized/mobile) \u2014 UN, regional powers, humanitarian organizations attempt to restore ceasefire; see structure as temporary scaffold with sunset; limited enforcement capacity; high theater ratio between protocols and actual influence",
+      "International Legal System: Institutional actor (institutional/constrained) \u2014 laws of war, humanitarian law, ceasefire agreements provide formal framework; enforcement is substantially performative (theater); differential application based on geopolitical interests; maintains piton-like inertia despite reduced functional capacity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks framing violation-retaliation as natural law of conflict; engine false summit detector will reveal this as naturalization of contingent institutional arrangements"
+    ],
+    "logic_rationale": "Base extractiveness (0.68): High. The constraint operates as a pure extraction mechanism from the perspective of trapped civilians who bear disproportionate costs. Civilian casualties in retaliatory strikes are 3-5x higher than direct combatant losses; humanitarian infrastructure (hospitals, schools) becomes targeted; displacement creates secondary casualties. The extraction is not temporary or recovery-enabled\u2014each cycle degrades baseline civilian capacity further. Suppression (0.75): Very high. Trapped populations cannot exit Gaza (physical barriers, border control); cannot influence military decisions (organized actors operate independently of civilian preference); cannot organize collective defense (military asymmetry is extreme); cannot refuse participation in shelter (civilians cannot opt out of being targeted). Suppression mechanisms are structural, not just coercive. Theater ratio (0.58): Moderate-high. International ceasefire agreements follow formal protocols with extensive negotiation theater, but actual enforcement capacity is limited. Attribution of violations is contested (both sides claim the other violated first); proportionality claims are asymmetric; humanitarian access windows are narrow and conditional. Theater increases over the interval as settlement-building continues despite ceasefire rhetoric, revealing gap between agreement claims and structural compliance.",
+    "perspectival_gap": "The constraint manifests as fundamentally different types from different structural positions. Trapped civilians (powerless/trapped) classify it as pure snare\u2014they experience only costs, no coordination benefits, no exit options. Military command actors (organized/constrained) experience tangled rope\u2014the ceasefire coordinates with enforcement coercion; they derive both constraints (operational limits) and benefits (reduced international pressure, operational windows). International mediators (organized/mobile) see scaffold\u2014the ceasefire is explicitly temporary with sunset logic; mediation institutions have exit (they can shift focus to other conflicts, declare mediation exhausted). The international legal system (institutional/constrained) sees piton\u2014laws of war and humanitarian conventions exist as institutional theater but enforcement is selective and weak, maintained through procedural ritual rather than functional deterrence. The analytical observer risks seeing mountain\u2014the cycle appears immutable, a natural consequence of asymmetric power and distributed rationality. But the structural data contradicts mountain: the mechanism relies entirely on contingent institutional arrangements (no joint enforcement, asymmetric geopolitical interests, distributed decision-making). This is not a natural law but a solvable institutional design problem\u2014if mutual enforcement credibility could be established, if humanitarian corridors could be made automatic, if verification could be third-party, the cycle could break. The false summit reveals that 'inevitable conflict' is often 'institutional failure to design binding constraints.'",
+    "directionality_logic": "Each agent's directionality (d) is derived from their structural relationship to the extraction flow. Trapped civilians have zero exit options and zero benefits from the ceasefire mechanism\u2014they are pure victims. Their d \u2248 0.95 (full target), producing maximum f(d) \u2248 1.42, giving high experienced extraction \u03c7. Military command actors have organized power and constrained exit\u2014they are neither pure beneficiaries nor pure victims. Hamas benefits from demonstrating continued resistance (low d if measured from internal legitimacy perspective) but suffers tactical costs (high d if measured from force preservation perspective). The engine derives d from beneficiary/victim declarations and exit options: since no agent is declared as beneficiary (ceasefire benefits no group directly), all agents start with victim-like directionality. Military actors move upward from baseline victim classification because organized power and constrained exit (not trapped exit) reduce f(d). International mediators have mobile exit (they can declare mediation exhausted) so they experience lower f(d) than trapped agents. The piton classification derives from theater ratio (0.58 > 0.50), not from high \u03c7\u2014the legal system experiences itself as degraded, performing compliance rituals without functional enforcement.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing legitimate enforcement (response proportional to violation, targeting combatants, minimizing civilian impact) from pure extraction (response disproportionate, targeting civilians, accumulating civilian cost faster than deterrence effect). The mandatrophy question: Is the ceasefire a coordination mechanism that breaks down under violation stress, or is it pure extraction machinery that uses violation as justification? The structural test: If retaliatory strikes target military infrastructure and combatants, and if strike escalation follows rational deterrence logic (smaller strikes to deter future violations), the classification trends toward tangled rope\u2014mixed coordination and enforcement. If retaliatory strikes target dual-use or civilian infrastructure, and if strikes follow pattern of maximizing pressure regardless of deterrence effect, the classification trends toward snare\u2014pure extraction that uses violation as justification. The data from the Israel-Gaza context over 2020-2024 supports the snare classification for trapped civilians: civilian death-to-combatant ratios of 2:1 to 5:1; targeting of hospitals and schools; displacement of 80%+ of civilian population; humanitarian access windows that don't meet basic civilian needs. This suggests that the retaliatory extraction is not proportional enforcement but opportunistic maximization of civilian cost, justified ex post by the violation. The mandatrophy is resolved by showing that 'response to violation' and 'extraction mechanism disguised as response' are empirically distinguishable: compare this conflict to others where violations trigger proportional, combatant-focused responses with humanitarian access provisions. The Israel-Gaza case shows high theater (formal ceasefire protocols with low compliance) and high extractiveness (civilian casualty asymmetry), confirming snare classification from victim perspective."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "humanitarian_access_blockade",
+      "settlement_expansion_encroachment",
+      "asymmetric_deterrence_credibility"
+    ],
+    "dual_formulation_note": "The ceasefire violation constraint is downstream of deeper structural asymmetries: unequal military capacity (affects retaliation scale), asymmetric geopolitical support (affects enforcement credibility), and distributed decision-making on both sides (affects coordination capacity). Each upstream constraint has its own extractiveness; the ceasefire violation represents the interaction point where these asymmetries converge."
+  },
+  "directionality_overrides": []
+}

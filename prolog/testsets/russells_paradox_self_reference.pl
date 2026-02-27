@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: russells_paradox_self_reference
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-15
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-27
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_russells_paradox_self_reference, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -26,9 +40,9 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,81 +52,90 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: russells_paradox_self_reference
- * human_readable: Russell's Paradox (Naive Set Theory Collapse)
- * domain: mathematical/logical
- * * SUMMARY:
- * Russell's Paradox arises from considering the set of all sets that do not contain themselves.
- * The paradox is that such a set must contain itself if and only if it does not, a logical contradiction.
- * This discovery invalidated the intuitive foundations of naive set theory (specifically Frege's Basic Law V) and forced the development of more rigorous axiomatic systems like ZFC and Type Theory to avoid such self-references.
- * * KEY AGENTS:
- * - The Naive Set Theorist (e.g., Gottlob Frege): Subject (Powerless/Moderate) whose foundational work is invalidated.
- * - The Axiomatic Architect (e.g., Zermelo, Russell): Beneficiary (Institutional) who uses the paradox to coordinate the development of new, consistent foundations.
- * - The Analytical Logician: Auditor (Analytical) observing the structural properties of formal systems.
+ *   constraint_id: russells_paradox_self_reference
+ *   human_readable: Russell's Paradox (Naive Set Theory Collapse)
+ *   domain: mathematical/logical
+ *
+ * SUMMARY:
+ *   Russell's Paradox is a logical impossibility that arises from naive set
+ *   comprehension: if R = {x | x ∉ x} is a valid set, then R ∈ R if and only
+ *   if R ∉ R, a contradiction. This constraint operates at the level of
+ *   logical space itself, not at the level of social policy or institutional
+ *   arrangement. It is a theorem in metamathematics — a proof that certain
+ *   axiom systems are inconsistent. No agent, no institution, no coalition of
+ *   mathematicians can evade or negotiate around the paradox. It is a
+ *   necessity, not a choice. The constraint classifies as Mountain from every
+ *   perspective because it represents an irreducible logical limit: any
+ *   formal system must restrict set formation to avoid the contradiction, and
+ *   this restriction is not optional.
+ *
+ * KEY AGENTS:
+ *   - Naive set theorists: Experience the constraint as an absolute logical barrier — reasoning within unrestricted comprehension leads to immediate contradiction
+ *   - Formalist mathematicians: Organized response to the constraint — select axioms (ZFC, NBG) that exclude naive comprehension; the constraint persists as the requirement that these restrictions exist
+ *   - Mathematical institution: Collective beneficiary of the constraint's resolution — unified axiom systems provide consistency and enable proof theory
+ *   - Analytical observer: Sees the constraint as a theorem about logical space itself — a proof that certain structures are impossible
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-% Rationale: 0.7. The paradox is highly extractive. It "takes" the consistency of any naive system, forcing a massive reinvestment in complex, less intuitive axioms to regain logical "solvency." The cost of avoiding the paradox is the loss of simplicity.
-domain_priors:base_extractiveness(russells_paradox_self_reference, 0.7).
-% Rationale: 0.4. It suppresses "unrestricted comprehension," the idea that any property can define a set. This intuitive approach is rendered unusable in formal logic.
-domain_priors:suppression_score(russells_paradox_self_reference, 0.4).
-% Rationale: 0.0. The paradox is a pure, functional, logical constraint with no performative or theatrical component.
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(russells_paradox_self_reference, 0.08).
+domain_priors:suppression_score(russells_paradox_self_reference, 0.02).
 domain_priors:theater_ratio(russells_paradox_self_reference, 0.0).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(russells_paradox_self_reference, extractiveness, 0.7).
-narrative_ontology:constraint_metric(russells_paradox_self_reference, suppression_requirement, 0.4).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(russells_paradox_self_reference, extractiveness, 0.08).
+narrative_ontology:constraint_metric(russells_paradox_self_reference, suppression_requirement, 0.02).
 narrative_ontology:constraint_metric(russells_paradox_self_reference, theater_ratio, 0.0).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% The paradox doesn't "claim" anything, but its discovery reveals a fundamental, unchangeable feature of logic.
-narrative_ontology:constraint_claim(russells_paradox_self_reference, tangled_rope).
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(russells_paradox_self_reference, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(russells_paradox_self_reference, resistance, 0.03).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(russells_paradox_self_reference, mountain).
 narrative_ontology:human_readable(russells_paradox_self_reference, "Russell's Paradox (Naive Set Theory Collapse)").
 narrative_ontology:topic_domain(russells_paradox_self_reference, "mathematical/logical").
 
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(russells_paradox_self_reference, axiomatic_set_theorists).
-narrative_ontology:constraint_victim(russells_paradox_self_reference, naive_set_theory_proponents).
-narrative_ontology:constraint_victim(russells_paradox_self_reference, gottlob_frege).
+domain_priors:emerges_naturally(russells_paradox_self_reference).
+
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE)
-% The naive set theorist (like Frege) whose system is destroyed by the paradox.
-% χ = 0.7 (ε) * 1.5 (powerless) * 1.2 (global) = 1.26. This is a definitive Snare.
-constraint_indexing:constraint_classification(russells_paradox_self_reference, snare,
+% PERSPECTIVE 1: THE NAIVE SET THEORIST (MOUNTAIN) — Any agent reasoning within naive set theory axioms faces an absolute logical barrier. The contradiction 'R ∈ R ↔ R ∉ R' is inescapable once the set R = {x | x ∉ x} is constructed. No exit exists; no appeal, no modification, no workaround within the framework. The constraint is experienced as a hard logical limit.
+constraint_indexing:constraint_classification(russells_paradox_self_reference, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% The axiomatic architect who uses the paradox to justify and coordinate the adoption of new, more robust foundations for mathematics.
-% χ = 0.7 (ε) * -0.2 (institutional) * 1.2 (global) = -0.168. This is a pure coordination tool with negative perceived extraction.
-constraint_indexing:constraint_classification(russells_paradox_self_reference, scaffold,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile),
-            spatial_scope(global))).
+% PERSPECTIVE 2: THE FORMALIST MATHEMATICIAN (MOUNTAIN) — Even organized mathematicians with sophisticated axiom systems (ZFC, NBG) cannot evade the constraint: they must select axioms that exclude naive set comprehension. The constraint persists as an iron requirement: any formal system attempting to avoid Russell's Paradox must restrict set formation. The restriction is not optional; it is a necessary condition for consistency. This is still a mountain — the constraint is that some axioms must be rejected, and no axiom system can include naive comprehension without contradiction.
+constraint_indexing:constraint_classification(russells_paradox_self_reference, mountain,
+    context(agent_power(organized),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SNARE)
-% The default analytical context. The analysis reveals a high-extraction constraint that traps naive systems, classifying it as a Snare.
-% χ = 0.7 (ε) * 1.15 (analytical) * 1.2 (global) = 0.966.
-constraint_indexing:constraint_classification(russells_paradox_self_reference, snare,
+% PERSPECTIVE 3: THE ANALYTICAL OBSERVER / LOGICAL SPACE (MOUNTAIN) — From a civilizational and universal scope, Russell's Paradox is a theorem about the structure of logical space itself. It proves that naive comprehension is not an axiom any consistent system can adopt. The constraint is the impossibility result, not a social arrangement. Zero degrees of freedom: any system must be designed to avoid the paradox or accept contradiction. This is classification as natural law.
+constraint_indexing:constraint_classification(russells_paradox_self_reference, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: THE MATHEMATICAL INSTITUTION (MOUNTAIN) — Even the collective institution of mathematics cannot negotiate around Russell's Paradox. It cannot lobby for an exception, cannot claim special status, cannot argue that naive comprehension is useful enough to override consistency. The paradox is a mathematical constraint, not a policy constraint. Institutions benefit from the restriction (clear axioms, consistency proofs) but experience the constraint as an inescapable boundary condition, not as a choice.
+constraint_indexing:constraint_classification(russells_paradox_self_reference, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -120,18 +143,26 @@ constraint_indexing:constraint_classification(russells_paradox_self_reference, s
 
 :- begin_tests(russells_paradox_self_reference_tests).
 
-test(perspectival_gap) :-
-    % Verify there is a perspectival gap between the powerless victim and the institutional beneficiary.
-    constraint_indexing:constraint_classification(russells_paradox_self_reference, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(russells_paradox_self_reference, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    assertion(TypePowerless == snare),
-    assertion(TypeInstitutional == rope),
-    TypePowerless \= TypeInstitutional.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(russells_paradox_self_reference, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(russells_paradox_self_reference, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    % Verify the base extractiveness is high enough to trigger Snare/Tangled Rope classifications.
-    narrative_ontology:constraint_metric(russells_paradox_self_reference, extractiveness, E),
-    assertion(E >= 0.46).
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(russells_paradox_self_reference, ExtMetricName, E),
+    domain_priors:suppression_score(russells_paradox_self_reference, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(russells_paradox_self_reference),
+    narrative_ontology:constraint_metric(russells_paradox_self_reference, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(russells_paradox_self_reference, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(russells_paradox_self_reference_tests).
 
@@ -141,63 +172,78 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- * The original file incorrectly classified the paradox as a Mountain from the powerless perspective.
- * A Mountain must have base extraction <= 0.15. With an extraction of 0.7, the paradox is fundamentally extractive—it destroys the value (consistency) of naive systems.
- * Therefore, for any agent trapped by it (like Frege or a naive set), it functions as a Snare.
- * The perspectival gap is stark: for those whose work is invalidated, it's a destructive trap (Snare). For those building the next generation of logic, it's an essential coordination point that justifies their work and rallies the community (Rope).
+ *   Extractiveness (0.08): Minimal. Russell's Paradox extracts nothing from any agent — it is not a rent-seeking mechanism or a mechanism for asymmetric advantage. It is a logical ceiling, not a drain. The small non-zero value reflects that the constraint does impose costs on formal systems (the cost of restricting comprehension axioms), but this cost is structural, not extractive. Suppression (0.02): Negligible. There are no suppressed alternatives because the alternative — permitting the contradiction — is not actually viable. Suppression measures coercion, and there is no coercion here, only logical necessity. Theater ratio (0.0): Zero. Russell's Paradox is not performative. It is not a ritual, a display, or a theatrical arrangement. It is a pure logical constraint with zero functional slack. The paradox is what it claims to be — a proof of inconsistency — with no hidden function or pretense.
  *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- * This constraint demonstrates how a single phenomenon can be both a Snare and a Rope.
- * Mandatrophy would occur if the system only saw the Snare aspect (the destruction of Frege's system) and missed the massive coordination benefit (the creation of ZFC).
- * By indexing the classification, the system correctly identifies that for the beneficiaries (the community of mathematicians), the paradox functions as a Rope, coordinating the move to safer foundations. This prevents the system from mislabeling a foundational discovery as purely destructive.
+ * PERSPECTIVAL GAP:
+ *   Paradoxically, Russell's Paradox exhibits zero perspectival gap — all four perspectives classify identically as Mountain. This is the defining signature of a true natural law constraint: it is observable-independent and perspective-invariant. A naive set theorist, a formalist mathematician, an organized institution, and an analytical observer all see the same constraint: an impossibility result that applies universally. There is no disagreement on classification because there is no room for disagreement. The paradox is a theorem, not a policy, and theorems are not negotiable.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Mountain constraints have zero directionality differentiation because they bind all agents equally. The self-reference constraint applies universally — there is no beneficiary and no victim, only agents constrained by logical necessity. The paradox does not flow from one agent to another; it is a fixed point in logical space. Directionality derivation is bypassed for mountains; the constraint classifies identically regardless of agent power, exit options, or time horizon.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   MOUNTAIN EXEMPLAR: Russell's Paradox demonstrates the mandatrophy resolution for Mountain constraints. The constraint cannot be mislabeled as Rope (there is no coordination function), Snare (there is no extraction or suppression), Scaffold (there is no sunset), or Piton (there is no theater). The classification is rock-solid because the underlying metric signature (extractiveness ≤ 0.08, suppression ≤ 0.02, theater_ratio = 0.0) uniquely determines Mountain from all perspectives. The constraint is a mathematical theorem, not a social structure, and theorems are invariant across all indexical contexts.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_russells_paradox_self_reference,
-    "Is there a unique 'True' universe of sets (a Mountain), or is mathematics a pluralism of consistent but arbitrary axiomatic systems (a collection of Scaffolds)?",
-    "Further investigation into whether large cardinal axioms eventually settle undecidable statements like the Continuum Hypothesis.",
-    "If a true Mountain exists, logic is discovered. If only Scaffolds exist, logic is invented and coordinated.",
-    confidence_without_resolution(medium)
+    type_theory_vs_zfc_equivalence,
+    'Are type-theoretic and ZFC-based resolutions of Russell''s Paradox merely notational variants of the same logical constraint, or do they represent genuinely distinct logical structures with different metaphysical implications?',
+    'Proof-theoretic comparison: demonstrate whether every model of type theory has a ZFC model and vice versa; compare consistency proofs across frameworks',
+    'If equivalent: Russell''s Paradox is a single logical constraint with multiple formalisations (mountain classification robust). If distinct: the paradox may decompose into multiple constraints depending on which logical framework is adopted (mountain becomes context-dependent).',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(type_theory_vs_zfc_equivalence, conceptual, 'Whether different formal resolutions are notational or structurally distinct').
+
+omega_variable(
+    self_reference_necessity,
+    'Is the self-referential structure (the set asking whether it contains itself) an essential feature of the logical constraint, or merely an artifact of the naive comprehension axiom?',
+    'Proof that self-reference emerges unavoidably from any unrestricted comprehension scheme; analysis of whether restricting self-reference directly (rather than comprehension) avoids the paradox',
+    'If self-reference is essential: Russell''s Paradox captures a deep truth about reflexivity in logical systems (stronger mountain classification). If it is an artifact: the constraint is more narrowly about comprehension axioms than about self-reference (mountain becomes narrower in scope).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(self_reference_necessity, conceptual, 'Whether self-reference is essential to the paradox or incidental').
+
+omega_variable(
+    paraconsistent_logic_escape,
+    'Do paraconsistent logics that permit true contradictions genuinely escape Russell''s Paradox, or do they merely relocate the constraint to a different logical property?',
+    'Formal analysis of whether paraconsistent set theories (e.g., GLB, NF with rejection rules) truly satisfy naive comprehension without contradiction or achieve contradiction-tolerance through semantic reinterpretation',
+    'If paraconsistent escape is genuine: Russell''s Paradox is specific to classical logic (mountain narrows to classical systems). If it relocates the constraint: the mountain is broader than classical logic (applies to all consistent formal systems).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(paraconsistent_logic_escape, empirical, 'Whether paraconsistent logics genuinely avoid or merely tolerate Russell''s Paradox').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(russells_paradox_self_reference, 0, 10).
+narrative_ontology:interval(russells_paradox_self_reference, 0, 1).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data for a timeless logical paradox is static. The paradox's properties do not change.
-% This is required because base_extractiveness > 0.46.
-
-% Theater ratio over time (is always zero):
-narrative_ontology:measurement(russells_paradox_self_reference_tr_t0, russells_paradox_self_reference, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(russells_paradox_self_reference_tr_t5, russells_paradox_self_reference, theater_ratio, 5, 0.0).
-narrative_ontology:measurement(russells_paradox_self_reference_tr_t10, russells_paradox_self_reference, theater_ratio, 10, 0.0).
-
-% Extraction over time (is always constant):
-narrative_ontology:measurement(russells_paradox_self_reference_ex_t0, russells_paradox_self_reference, base_extractiveness, 0, 0.7).
-narrative_ontology:measurement(russells_paradox_self_reference_ex_t5, russells_paradox_self_reference, base_extractiveness, 5, 0.7).
-narrative_ontology:measurement(russells_paradox_self_reference_ex_t10, russells_paradox_self_reference, base_extractiveness, 10, 0.7).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% The paradox functions as a coordination tool by enforcing a standard of consistency.
-narrative_ontology:coordination_type(russells_paradox_self_reference, enforcement_mechanism).
+narrative_ontology:affects_constraint(russells_paradox_self_reference, godel_incompleteness_first_theorem).
+narrative_ontology:affects_constraint(russells_paradox_self_reference, halting_problem_undecidability).
+narrative_ontology:affects_constraint(russells_paradox_self_reference, cantor_diagonal_argument).
 
-% Network relationships: Russell's Paradox is part of the "foundational crisis" in early 20th-century mathematics, which is structurally linked to Gödel's later work.
-narrative_ontology:affects_constraint(russells_paradox_self_reference, goedels_incompleteness).
+% DUAL FORMULATION NOTE:
+% Russell's Paradox is a foundational constraint that influences other impossibility results in mathematical logic. The paradox itself does not decompose into multiple constraints — it is a single logical threshold. However, its resolutions (type theory, ZFC restrictions, paraconsistent logics) may be understood as separate constraint stories if they are treated as alternative formal frameworks rather than as solutions to Russell's Paradox. For this story, the constraint is the paradox itself: the irreducibility of naive comprehension and the necessity of axiom restrictions.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

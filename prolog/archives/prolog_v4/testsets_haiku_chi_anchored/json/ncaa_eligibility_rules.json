@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "ncaa_eligibility_rules",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ncaa"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NCAA Eligibility Rules for Student Athletes",
+    "topic_domain": "economic/labor_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "universities_athletic_departments",
+      "ncaa_administrative_apparatus",
+      "wealthy_student_athletes_with_alternatives"
+    ],
+    "victims": [
+      "low_income_student_athletes",
+      "international_student_athletes",
+      "athletes_without_family_wealth"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Student Athlete",
+      "comment": "PERSPECTIVE 1: LOW-INCOME STUDENT ATHLETE (SNARE) \u2014 Trapped between amateurism rules and economic necessity. Cannot monetize athletic ability, cannot work sufficient hours to offset scholarship gaps, no viable exit from the constraint. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Athlete",
+      "comment": "PERSPECTIVE 2: MID-TIER ATHLETE (TANGLED ROPE) \u2014 Benefits from scholarships and athletic infrastructure but constrained by amateurism rules. Can exit through reduced athletic participation but at significant career cost. Coordination function (infrastructure, coaching, access) is real; extraction is also real (revenue capture, contract restrictions). d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.59."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Elite Recruit with Professional Prospects",
+      "comment": "PERSPECTIVE 3: ELITE RECRUIT WITH PROFESSIONAL PROSPECTS (ROPE) \u2014 Can arbitrage into professional leagues, portal transfers, or endorsement markets. Experiences eligibility rules as coordinating mechanism for athletic development. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The University Athletic Department",
+      "comment": "PERSPECTIVE 4: UNIVERSITY ATHLETIC DEPARTMENT (TANGLED ROPE) \u2014 Beneficiary of amateurism rules (labor cost suppression, revenue concentration). Also coordinates legitimate athletic development and educational integration. Active enforcement through compliance offices. Experiences rules as enabling coordination while extracting labor value. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; classification as tangled rope reflects the coordination function present alongside extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Athletes' Coalition and Labor Movement",
+      "comment": "PERSPECTIVE 5: ATHLETES' COALITION / LABOR MOVEMENT (SNARE) \u2014 Organized actors attempting to exit see the eligibility rules as pure extraction mechanism designed to prevent collective action. Unionization efforts, legal challenges (O'Bannon, Alston), and transfer portal reform are constrained exits \u2014 each challenge faces enforcement costs. d\u22480.78, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The NCAA Regulatory Apparatus",
+      "comment": "PERSPECTIVE 6: NCAA REGULATORY APPARATUS (PITON) \u2014 The enforcement machinery itself exhibits high theater: compliance offices, eligibility committees, and appellate processes perform regulatory legitimacy while actual enforcement is inconsistent across schools and sports. Enforcement depends on institutional inertia; alternatives (free-market athlete compensation, union recognition) would collapse the apparatus. theater_ratio\u22480.65. The NCAA sees its own rules as increasingly indefensible but maintains them through procedural theater."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, the eligibility rules coordinate a complex system (recruitment, development, education integration) while extracting significant value from a specific demographic (low-income athletes of color). The constraint is not immutable natural law but a contingent institutional arrangement that serves coordination functions alongside extraction. d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.70."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scholarship_value_measurement",
+      "question": "What is the true economic value of a scholarship relative to the market value of the athlete's labor?",
+      "resolution_mechanism": "Comparative analysis of scholarship stipends vs professional league minimum wages; cost-of-living adjustment for athlete expenses; athlete survey data on scholarship adequacy",
+      "impact": "If scholarships cover 100%+ of costs: extraction mechanism is weaker (closer to Rope). If scholarships cover <70%: extraction mechanism is severe (closer to pure Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "True economic value of scholarship relative to athlete labor"
+    },
+    {
+      "id": "coordination_function_necessity",
+      "question": "Is the amateurism eligibility rule necessary for the coordination functions it serves (recruitment, competitive balance, education integration), or could those functions operate under alternative regimes (salary caps, athlete unions, free agency)?",
+      "resolution_mechanism": "Comparative institutional analysis of collegiate athletic systems with different eligibility structures (some international models); controlled experiments with transfer portal reforms; historical analysis of professionalization trends in other sports",
+      "impact": "If coordination functions require amateurism: Tangled Rope is correct classification. If coordination functions would survive professionalization: classification shifts toward pure Snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether amateurism rule is necessary for coordination functions"
+    },
+    {
+      "id": "demographic_targeting",
+      "question": "Are eligibility rules deliberately designed to concentrate extraction on low-income and international athletes, or is this demographic incidence a side effect of neutral rules?",
+      "resolution_mechanism": "Historical analysis of rule design (legislative intent); correlation analysis of rule changes with demographic impact; comparative study of eligibility rules in different NCAA divisions and how they differentially impact populations",
+      "impact": "If deliberate: extraction mechanism is targeted predatory (pure Snare). If incidental: extraction is structural but not deliberately discriminatory (Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether eligibility rules deliberately target low-income athletes"
+    },
+    {
+      "id": "enforcement_consistency",
+      "question": "Are NCAA eligibility rules enforced consistently across institutions, sports, and demographic groups, or does enforcement variance indicate that the rule system serves theater rather than actual regulation?",
+      "resolution_mechanism": "Audit study of enforcement outcomes (who gets sanctioned for violations, severity distribution); comparative analysis of violations detected in high-profile vs marginal programs; statistical analysis of enforcement disparities by school wealth and athletic program revenue",
+      "impact": "If enforcement is consistent: rules are functional (Tangled Rope). If enforcement is inconsistent: rules are theater, enabling selective extraction (Piton or Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Consistency of NCAA eligibility rule enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2010
+  },
+  "commentary": {
+    "narrative_context": "The NCAA eligibility rules governing student-athlete compensation create a structural constraint that bundles legitimate coordination functions (recruiting, athletic development, education integration) with extraction mechanisms (labor cost suppression, revenue concentration). The constraint generates approximately $14 billion annually in college sports revenue while restricting student-athletes' ability to monetize their labor. The extractiveness has increased from ~0.35 (1980: limited commercial sports media, regional recruitment) to ~0.58 (2010: national media contracts, international recruitment, expanded athletic programs). Theater ratio has risen from ~0.50 to ~0.65 as compliance offices proliferated and enforcement procedures became more elaborate while actual rule consistency degraded. The constraint appears as pure extraction (Snare) to low-income athletes trapped without exit options, as mixed coordination-extraction (Tangled Rope) to mid-tier athletes with constrained mobility, as coordination mechanism (Rope) to elite athletes with professional alternatives, and as theatrical regulatory apparatus (Piton) to the NCAA itself.",
+    "key_agents": [
+      "Low-income student athletes: Primary victim (powerless/trapped) \u2014 cannot monetize athletic ability, face scholarship gaps, lack family wealth to offset restrictions",
+      "International student athletes: Primary victim (powerless/trapped) \u2014 face additional restrictions on work authorization and eligibility, often dependent on scholarship for access",
+      "Mid-tier athletes: Secondary victim (moderate/constrained) \u2014 benefit from scholarships but constrained from earning independent income, can exit only through reduced athletic participation",
+      "Elite recruits with professional prospects: Beneficiary-adjacent (powerful/arbitrage) \u2014 can arbitrage into professional leagues or endorsement markets, experience rules as coordination framework",
+      "Universities and athletic departments: Primary beneficiary (institutional/arbitrage) \u2014 capture labor cost savings through amateurism rules, concentrate revenue from student-athlete performance",
+      "NCAA administrative apparatus: Primary beneficiary (institutional/arbitrage) \u2014 regulates rules to maintain league structure and revenue concentration, benefits from institutional complexity",
+      "Athletes' unions and labor movements: Organized victim (organized/constrained) \u2014 attempt to exit through unionization, legal challenges, and transfer portal reform; face enforcement costs and legal barriers",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 sees the constraint as contingent institutional arrangement serving both coordination and extraction simultaneously"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The NCAA rules extract significant economic value from student-athletes through prohibition on monetization while universities capture $14B+ annually in related revenue. However, the extraction is not absolute (0.70+) because legitimate coordination functions are present (scholarships do provide value, athletic infrastructure is real, educational integration has value). The baseline extractiveness has risen over 30 years as media valuations increased without corresponding athlete compensation, indicating accumulation of extraction. Suppression (0.68): High. Multiple barriers prevent exit or alternatives: amateurism rules prohibit direct compensation, work-hour restrictions limit employment income, international students face visa work restrictions, athletes face retaliation for attempting collective action (NCAA sanctions on athletes involved in litigation), and the power asymmetry (individual athlete vs institution) prevents negotiation. Theater ratio (0.65): Moderate-high. NCAA compliance procedures, eligibility committees, and appellate processes perform legitimacy while enforcement is inconsistent and often selective. The theatrical element has increased as the rule system becomes harder to defend on substantive grounds, requiring more elaborate procedural theater.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival divergence. Low-income athletes classify it as Snare (pure extraction with no coordination benefit for them personally). Mid-tier athletes see Tangled Rope (legitimate coordination alongside extraction). Elite athletes see Rope (primarily coordination mechanism enabling athletic development). Universities see it as beneficial Rope (coordination enabling recruitment and competition). The NCAA sees it as Piton (deteriorating rule system maintained through institutional inertia and theater). Athletes' coalitions see it as Snare (extraction mechanism designed to prevent collective action). The analytical observer sees Tangled Rope (real coordination bundled with real extraction). This gap is not measurement error \u2014 it reflects genuine structural asymmetry. The same rule produces different objective outcomes for different demographic groups.",
+    "directionality_logic": "Low-income athletes: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction target. Cannot exit, cannot negotiate. International students: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Visa work restrictions add to amateurism rules. Mid-tier athletes: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.02. Can exit through reduced participation but at career cost. Elite athletes: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Can arbitrage into professional markets. Universities: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net labor cost savings. NCAA: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.09. Revenue concentration mechanism. Athletes' coalitions: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. Organized but exit is costly (legal, enforcement, reputational).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the tangled_rope classification is correct at the systemic level (real coordination + real extraction) while snare classification is correct for low-income athlete subpopulation. The constraint is not mislabeled as coordination when it is extraction \u2014 the presence of both functions is genuine. The rope classification for elite athletes is also genuine (they experience primarily coordination benefits). The perspectival gap is not an error in classification logic but a reflection of structural asymmetry. The system provides coordination services (coaching, facilities, competition, education integration) that have real value (~$30-50k annually), but captures value extraction (~$50-150k annually in direct revenue minus scholarship costs, depending on sport) from a specific demographic without compensation. The mandatrophy resolves by showing that this constraint is structurally both coordination and extraction simultaneously, with differential incidence across demographic groups. The constraint does not reduce to either type; both descriptions are accurate from different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "student_debt_accumulation",
+      "athletic_labor_market_segmentation",
+      "university_endowment_extraction"
+    ],
+    "dual_formulation_note": "The NCAA eligibility rules decompose into multiple constraint stories depending on observable: (1) amateurism_labor_prohibition (pure extraction mechanism, \u03b5\u22480.75, Snare), (2) athletic_infrastructure_provision (coordination mechanism, \u03b5\u22480.15, Rope), (3) competitive_balance_regulation (mixed, \u03b5\u22480.42, Tangled Rope). These are linked via network.affects_constraints because the labor prohibition (1) prevents the infrastructure provision (2) from functioning as pure coordination, and the competitive balance goal (3) depends on suppression of market signals."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.78
+    }
+  ]
+}

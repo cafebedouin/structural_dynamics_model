@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: kolmogorov_complexity
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-08
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_kolmogorov_complexity, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,19 +55,29 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: kolmogorov_complexity
  *   human_readable: Kolmogorov Complexity Limit
- *   domain: technological
+ *   domain: computational_mathematics/information_theory
  *
  * SUMMARY:
- *   Kolmogorov Complexity defines the length of the shortest possible description
- *   of an object (e.g., a string of data). This implies an absolute limit on
- *   data compression: a string is incompressible if its shortest description
- *   is the string itself. This creates a fundamental floor for information
- *   storage and transmission costs and is a key limit in computability theory.
+ *   Kolmogorov Complexity (KC) is the length of the shortest possible program
+ *   that can generate a given object (e.g., a string, image, or dataset) on a
+ *   universal Turing machine. It represents an intrinsic property of
+ *   information: no matter which compression algorithm is applied, no string
+ *   can be compressed below its KC without loss of information. Unlike
+ *   Shannon entropy (which measures statistical redundancy), KC measures the
+ *   absolute minimum description length independent of the probability
+ *   distribution. The constraint is uncomputable — no algorithm can determine
+ *   the KC of an arbitrary string in finite time — yet mathematically proven
+ *   to exist. This makes KC the canonical example of a natural law in
+ *   information theory: it cannot be circumvented by choosing a better
+ *   algorithm, changing the computational model, or applying more resources.
+ *   Every observer (mathematician, engineer, industry) experiences it as a
+ *   non-negotiable ceiling.
  *
- * KEY AGENTS (by structural relationship):
- *   - All Computational Systems: Subject to the constraint (universal/trapped) — cannot bypass this limit.
- *   - Data Scientists & Engineers: Must design systems within this limit (moderate/mobile).
- *   - Theoretical Computer Scientists: Use the limit as a foundational concept (analytical/analytical).
+ * KEY AGENTS:
+ *   - The Mathematical Community: Analytical observers (civilizational/universal) — establish and prove the fundamental theorems defining KC as an invariant property of information
+ *   - The Computer Science Community: Analytical observers (generational/global) — develop the theory and practical understanding of compression near the KC bound
+ *   - Data Compression Engineers: Powerful actors (immediate/regional) — design algorithms and systems constrained by the KC bound; experience it as a hard resource ceiling
+ *   - Technology Industry: Institutional beneficiaries (biographical/national) — capture value through algorithm efficiency within the KC bound; KC defines the asymptotic frontier of the market
  */
 
 /* ==========================================================================
@@ -75,74 +85,61 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(kolmogorov_complexity, 0.15).
-domain_priors:suppression_score(kolmogorov_complexity, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(kolmogorov_complexity, 0.01).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(kolmogorov_complexity, 0.12).
+domain_priors:suppression_score(kolmogorov_complexity, 0.03).
+domain_priors:theater_ratio(kolmogorov_complexity, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(kolmogorov_complexity, extractiveness, 0.15).
-narrative_ontology:constraint_metric(kolmogorov_complexity, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(kolmogorov_complexity, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(kolmogorov_complexity, extractiveness, 0.12).
+narrative_ontology:constraint_metric(kolmogorov_complexity, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(kolmogorov_complexity, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-narrative_ontology:constraint_metric(kolmogorov_complexity, accessibility_collapse, 0.98).
-narrative_ontology:constraint_metric(kolmogorov_complexity, resistance, 0.01).
+narrative_ontology:constraint_metric(kolmogorov_complexity, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(kolmogorov_complexity, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(kolmogorov_complexity, mountain).
 narrative_ontology:human_readable(kolmogorov_complexity, "Kolmogorov Complexity Limit").
-narrative_ontology:topic_domain(kolmogorov_complexity, "technological").
+narrative_ontology:topic_domain(kolmogorov_complexity, "computational_mathematics/information_theory").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
 domain_priors:emerges_naturally(kolmogorov_complexity).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed: Mountain constraint (natural law) is non-directional.
-% It applies universally without specific beneficiaries or victims.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE DATA PROCESSOR (POWERLESS)
-% A system attempting to compress random data. It is powerless against this
-% mathematical limit and trapped by it.
-constraint_indexing:constraint_classification(kolmogorov_complexity, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE INSTITUTION (e.g., A LARGE DATA CENTER)
-% An institution managing vast amounts of data. While it can organize resources,
-% it cannot bypass the fundamental compression limit.
-constraint_indexing:constraint_classification(kolmogorov_complexity, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% A theoretical computer scientist viewing the constraint as a foundational
-% principle of information theory.
+% PERSPECTIVE 1: THE MATHEMATICIAN (MOUNTAIN) — Kolmogorov Complexity is a fundamental limit on description length. It is uncomputable in the Turing sense and represents an irreducible property of information itself. No observer can circumvent the limit by choosing a different measurement basis or compression scheme. The bound exists independent of computational substrate, encoding choice, or observer perspective. Zero degrees of freedom.
 constraint_indexing:constraint_classification(kolmogorov_complexity, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+% PERSPECTIVE 2: THE COMPUTER SCIENTIST (MOUNTAIN) — Practical compression algorithms (zlib, LZMA, arithmetic coding) approach but cannot exceed the Kolmogorov bound. The constraint manifests as an asymptotic ceiling: no finite algorithm can reliably determine if a string is truly incompressible or merely lacks the right compression method. The undecidability is structural, not epistemic. The limit persists across all computational models and all time horizons.
+constraint_indexing:constraint_classification(kolmogorov_complexity, mountain,
+    context(agent_power(analytical),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE DATA COMPRESSION ENGINEER (MOUNTAIN) — Engineers designing compression systems for storage and transmission confront Kolmogorov Complexity as an absolute wall. Strings with high KC cannot be compressed further; the engineer's resource budget (storage, bandwidth, compute time) hits the fundamental limit. No institutional workaround or market solution changes the mathematical fact. The constraint is inescapable even for well-resourced actors.
+constraint_indexing:constraint_classification(kolmogorov_complexity, mountain,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: THE TECHNOLOGY INDUSTRY (MOUNTAIN) — Compression markets (cloud storage, streaming media, data centers) operate within the Kolmogorov bound as a hard constraint on achievable efficiency. The industry captures value through algorithm proximity to the bound, but cannot transcend it. The constraint defines the asymptotic frontier of the market, not an exploitable inefficiency. From a profit-maximization perspective, KC is a natural law limiting arbitrage.
+constraint_indexing:constraint_classification(kolmogorov_complexity, mountain,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -150,26 +147,26 @@ constraint_indexing:constraint_classification(kolmogorov_complexity, mountain,
 
 :- begin_tests(kolmogorov_complexity_tests).
 
-test(perspectival_invariance, [nondet]) :-
-    % Verify that all declared classifications are Mountain, indicating a uniform-type
-    % natural law constraint with no perspectival gap.
-    forall(
-        constraint_indexing:constraint_classification(kolmogorov_complexity, Type, _),
-        Type == mountain
-    ).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(kolmogorov_complexity, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(kolmogorov_complexity, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    narrative_ontology:constraint_metric(kolmogorov_complexity, extractiveness, E),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(kolmogorov_complexity, ExtMetricName, E),
+    domain_priors:suppression_score(kolmogorov_complexity, S),
     E =< 0.25,
-    narrative_ontology:constraint_metric(kolmogorov_complexity, suppression_requirement, S),
     S =< 0.05.
 
-test(natural_law_profile_validation) :-
-    narrative_ontology:constraint_metric(kolmogorov_complexity, accessibility_collapse, A),
-    A >= 0.85,
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(kolmogorov_complexity),
+    narrative_ontology:constraint_metric(kolmogorov_complexity, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(kolmogorov_complexity, resistance, R),
-    R =< 0.15,
-    domain_priors:emerges_naturally(kolmogorov_complexity).
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(kolmogorov_complexity_tests).
 
@@ -179,88 +176,79 @@ test(natural_law_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   Kolmogorov Complexity is a fundamental, mathematical limit on computation
- *   and information, making it a canonical example of a Mountain constraint.
- *   The base extractiveness (0.15) represents the unavoidable "cost" or
- *   work imposed by this limit (e.g., storage for incompressible data), but
- *   it is not an engineered extraction. The suppression score (0.05) is minimal,
- *   as there are no viable alternatives to bypass this logical boundary. The
- *   Natural Law Profile metrics are high for accessibility collapse (0.98) and
- *   low for resistance (0.01), as one cannot meaningfully "resist" a mathematical
- *   theorem.
+ *   Extractiveness (0.12): Minimal. Kolmogorov Complexity does not extract resources or value from any agent. It simply exists as a mathematical fact. The compressibility ceiling is a property of information itself, not a mechanism of coercion or advantage-taking. No institutional actor benefits disproportionately from KC's existence — all face the same limit. Suppression (0.03): Minimal. The constraint suppresses no alternatives because alternatives do not exist. There is no competing theory of description length that could replace KC. The mathematical proof is so robust that suppression is vacuous — alternatives are not suppressed; they are incoherent. Theater ratio (0.15): Low. While KC is sometimes invoked rhetorically in technology marketing ('quantum computing offers exponential speedup'), the technical content is minimal theater. The constraint's expression is direct and non-performative. The slight theater (0.15 vs 0.0) reflects popular misconceptions about quantum shortcuts around KC, but the professional and mathematical literature treats KC with clarity.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a universal mathematical limit, it is
- *   classified as a Mountain from all possible perspectives, from a powerless
- *   computational process to an institutional data manager to an analytical
- *   observer. Its character does not change based on the observer's power,
- *   scope, or exit options.
+ *   No perspectival gap exists. All observers — regardless of power level, time horizon, exit options, or spatial scope — experience and classify Kolmogorov Complexity identically as Mountain. This invariance across observables is the defining feature of natural law constraints. The constraint is not socially constructed, not amenable to institutional workaround, and not subject to perspectival reframing.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain-type natural law, this constraint is non-directional. It does
- *   not have beneficiaries or victims in the structural sense required for
- *   directionality calculation. It is a universal boundary condition that
- *   applies equally to all computational processes. Therefore, no
- *   beneficiary/victim declarations are made.
+ *   Directionality is not applicable to mountain constraints in the classical sense. KC does not create beneficiaries and victims because it does not transfer resources or apply coercion to any agent. All agents (regardless of power, exit options, or position) face the same limit. The derivation chain produces d ≈ 0.5 (symmetric, no differential impact) for all agents, which maps to f(d) ≈ 0.65. However, this is a canonical baseline indicating 'not applicable' rather than a real structural asymmetry. Mountains are invariant across the directionality tuple.
  *
  * MANDATROPHY ANALYSIS:
- *   The Mountain classification correctly identifies this as an immutable
- *   feature of the logical landscape, not a system of coordination or
- *   extraction. This prevents mischaracterizing a fundamental limit as, for
- *   example, a Snare imposed by hardware manufacturers to sell more storage.
+ *   NO MANDATROPHY. Kolmogorov Complexity resolves the coordination-vs-extraction question decisively: it is neither. It is a mathematical fact about the structure of information that applies universally. The constraint cannot be decomposed into a hidden coordination mechanism (it has no beneficiaries to coordinate) nor into hidden extraction (it targets no specific agent). It simply is. The mandatrophy framework does not apply to natural law constraints, which by definition are invariant across all observation contexts.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_kolmogorov,
-    'Could a new computing paradigm (e.g., hypercomputation) render Kolmogorov Complexity computable or provide a practical bypass?',
-    'Theoretical breakthroughs in non-Turing models of computation and their physical realization.',
-    'If true, would fundamentally alter information theory and data science. If false, reinforces the Turing machine model as the ultimate limit on computation.',
-    confidence_without_resolution(low)
+    uncomputability_vs_realizability,
+    'Does the uncomputability of Kolmogorov Complexity imply that the bound is not a physical constraint on real systems, only a mathematical limit on theoretical description?',
+    'Analysis of whether KC limits apply to physical information processing (e.g., quantum systems, biological entropy) or only to abstract Turing machines. Comparison of information-theoretic bounds (Shannon entropy, algorithmic information theory) with thermodynamic limits.',
+    'If KC applies to physical systems: the constraint is truly universal. If KC is only about mathematical description: the constraint may have technological gaps (quantum shortcuts, biological encoding). Classification remains mountain either way, but the scope interpretation shifts.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(uncomputability_vs_realizability, conceptual, 'Whether KC is a physical law or a mathematical limit on description').
+
+omega_variable(
+    alternate_representation_basis,
+    'Can alternative encoding schemes (e.g., non-string representations, quantum superposition, analog representation) evade the Kolmogorov bound for specific objects?',
+    'Formal proof that KC is invariant across all Turing-complete representations; empirical testing of quantum and analog systems for information density exceeding KC predictions.',
+    'If KC is invariant: classification confirmed as mountain across all observables. If representational evasion exists: KC becomes perspectival (different for different encodings), potentially Rope or Tangled Rope.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(alternate_representation_basis, empirical, 'Whether alternative representations can evade the Kolmogorov bound').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(kolmogorov_complexity, 0, 10).
+narrative_ontology:interval(kolmogorov_complexity, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% For a Mountain constraint, temporal measurements should show stability over
-% the entire interval, as a natural law does not drift.
-%
-% Theater ratio over time (verifies stability):
-narrative_ontology:measurement(kolmogorov_tr_t0, kolmogorov_complexity, theater_ratio, 0, 0.01).
-narrative_ontology:measurement(kolmogorov_tr_t5, kolmogorov_complexity, theater_ratio, 5, 0.01).
-narrative_ontology:measurement(kolmogorov_tr_t10, kolmogorov_complexity, theater_ratio, 10, 0.01).
+% Theater ratio over time
+narrative_ontology:measurement(kc_tr_t0, kolmogorov_complexity, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(kc_tr_t50, kolmogorov_complexity, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(kc_tr_t100, kolmogorov_complexity, theater_ratio, 100, 0.15).
 
-% Extraction over time (verifies stability):
-narrative_ontology:measurement(kolmogorov_ex_t0, kolmogorov_complexity, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(kolmogorov_ex_t5, kolmogorov_complexity, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(kolmogorov_ex_t10, kolmogorov_complexity, base_extractiveness, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(kc_be_t0, kolmogorov_complexity, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(kc_be_t50, kolmogorov_complexity, base_extractiveness, 50, 0.12).
+narrative_ontology:measurement(kc_be_t100, kolmogorov_complexity, base_extractiveness, 100, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Network relationships: Kolmogorov Complexity is a foundational limit that
-% affects other constraints in computability and information theory, such as
-% the Halting Problem.
-narrative_ontology:affects_constraint(kolmogorov_complexity, halting_problem).
+narrative_ontology:coordination_type(kolmogorov_complexity, information_standard).
+narrative_ontology:affects_constraint(kolmogorov_complexity, shannon_entropy_limit).
+narrative_ontology:affects_constraint(kolmogorov_complexity, turing_halting_problem).
+narrative_ontology:affects_constraint(kolmogorov_complexity, algorithmic_randomness).
+
+% DUAL FORMULATION NOTE:
+% Kolmogorov Complexity is upstream of several constraints in computational theory. Shannon entropy (which measures statistical redundancy) is a lower bound on expected compression but differs from KC (which measures absolute minimum). The Halting Problem (which is also uncomputable) and Algorithmic Randomness are structural kin to KC, sharing the property of undecidability. These form a constraint family in computational mathematics.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable for a non-directional Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

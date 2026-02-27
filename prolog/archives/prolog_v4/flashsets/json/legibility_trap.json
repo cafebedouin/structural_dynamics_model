@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "legibility_trap",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Grid-Map Displacement",
+    "topic_domain": "political/social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_administrators",
+      "central_planners"
+    ],
+    "victims": [
+      "local_communities",
+      "informal_economies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Local Communities",
+      "comment": "Local communities experience the imposition of standardized metrics as a snare, as it destroys their existing informal safety nets and high-resolution local knowledge, leaving them trapped and vulnerable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Administrators",
+      "comment": "State administrators initially perceive the increased legibility as a 'rope', facilitating better coordination and resource allocation. However, they are constrained by the system they created and may not fully recognize the downsides for local communities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the situation as a 'tangled rope,' recognizing the benefits of improved coordination for the state but also the negative consequences for local communities and the loss of valuable local knowledge and resilience."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Central Planners",
+      "comment": "As the initial benefits of legibility fade and the negative consequences become more apparent, central planners may find themselves stuck with a system that is difficult to change, effectively becoming a 'piton' due to institutional inertia. The theater ratio is high because the planners are now mostly performing rituals of data collection and reporting without achieving meaningful improvements in outcomes."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "knowledge_quantification_error",
+      "question": "To what extent can the standardized metrics accurately capture the complex reality of local knowledge and informal economies?",
+      "resolution_mechanism": "Ethnographic studies and quantitative analysis comparing outcomes under the standardized system vs. the previous informal systems.",
+      "impact": "If the error is high, the benefits of legibility are outweighed by the loss of valuable local knowledge, shifting the classification more towards a 'snare'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which standardized metrics fail to capture local knowledge."
+    },
+    {
+      "id": "community_resilience_capacity",
+      "question": "How much resilience is lost within local communities as their informal safety nets are replaced with formal systems?",
+      "resolution_mechanism": "Analysis of community responses to crises under both systems, measuring factors like resourcefulness and mutual aid.",
+      "impact": "If resilience significantly decreases, the negative impact on local communities is higher, reinforcing the 'snare' classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which community resilience is eroded."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Grid-Map Displacement describes the scenario where a state or institution, seeking to improve governability, imposes simplified and standardized metrics (legibility) onto a complex and organic social system. While intended as a 'rope' for administrative coordination and resource allocation, this act of simplification often destroys high-resolution local knowledge and informal safety nets, effectively trapping the communities affected and becoming a 'snare'. This constraint is an example of how well-intentioned efforts to improve governance can have unintended negative consequences, particularly for vulnerable populations. The theater_ratio increases over time as the system becomes more about performative data collection than actual improvement.",
+    "key_agents": [
+      "Local Communities: Primary victims (powerless/trapped) - lose informal safety nets and local knowledge.",
+      "State Administrators: Primary beneficiaries (institutional/constrained) - gain improved coordination but are constrained by the system.",
+      "Central Planners: Secondary beneficiaries (institutional/constrained) - implement and maintain the standardized metrics.",
+      "Analytical Observer: External observer (analytical/analytical) - analyzes the overall impact of the system."
+    ],
+    "logic_rationale": "Extractiveness (0.55): The imposition of standardized metrics extracts value from local communities by undermining their existing informal systems and knowledge. Suppression (0.70): The standardized metrics actively suppress alternative forms of knowledge and organization. Theater Ratio (0.75): The theater ratio is high because the planners are now mostly performing rituals of data collection and reporting without achieving meaningful improvements in outcomes.",
+    "perspectival_gap": "The perspectival gap arises from the different structural positions of the agents involved. State administrators, focused on national-level coordination, may not fully recognize the costs imposed on local communities. Local communities, trapped within the system, experience the loss of their informal safety nets directly. The analytical observer sees the overall trade-off between national coordination and local disruption.",
+    "directionality_logic": "The directionality is determined by the agent's relationship to the extraction flow. Local communities are victims, bearing the costs of the system. State administrators and central planners are beneficiaries, gaining improved coordination. The analytical observer has a neutral perspective, analyzing the overall system dynamics.",
+    "mandatrophy_analysis": "The classification prevents mislabeling coordination as pure extraction by recognizing the initial benefits of legibility for state administrators and central planners. However, it also highlights the unintended negative consequences for local communities, preventing the system from being classified solely as a 'rope'."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

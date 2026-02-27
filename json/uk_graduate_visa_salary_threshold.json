@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "uk_graduate_visa_salary_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ugvst"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "UK Graduate Visa Minimum Salary Threshold",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_domestic_workers",
+      "uk_treasury"
+    ],
+    "victims": [
+      "international_graduates",
+      "uk_employers_skill_dependent_sectors",
+      "uk_higher_education_revenue"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The International Graduate",
+      "comment": "PERSPECTIVE 1: INTERNATIONAL GRADUATE (SNARE) \u2014 Trapped by visa status dependence. After investing \u00a315,000-30,000 in UK tuition, the graduate faces a two-year work visa that can only be extended if salary reaches \u00a338,000+ threshold (2024 rate, indexed annually). Cannot negotiate salary downward to secure employment; cannot easily exit to other countries without losing UK credential value. Maximum suppression of alternatives \u2014 either meet threshold or return home. Experiences pure extraction: visa constraints extract value (foregone wages during visa hunt, restricted job mobility, employer leverage)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Domestic Workers and Treasury",
+      "comment": "PERSPECTIVE 2: UK DOMESTIC WORKERS / TREASURY (ROPE) \u2014 Benefits from coordination function: salary threshold protects domestic labor market by pricing out low-wage competition and redirects graduates toward high-skill roles. Treasury benefits from reduced long-term visa processing costs and net fiscal burden reduction. The constraint appears as coordination: 'we are solving a collective action problem (brain drain, wage depression) together.' Arbitrage exit allows these agents to adjust threshold politically if fiscal calculation changes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Employers (Skill-Dependent Sectors)",
+      "comment": "PERSPECTIVE 3: UK EMPLOYERS IN SKILL-DEPENDENT SECTORS (TANGLED ROPE) \u2014 Mixed experience. Benefit from coordination: visa rules protect against low-wage undercutting in retail/hospitality. But suffer extraction: tech, science, healthcare sectors face genuine talent shortage when graduates cannot secure visa extension. Cannot easily exit (relocation costs, regulatory burden in other countries), so constrained by the threshold. Benefits from some roles (wage pressure relief) while extracted from others (talent constraint). Suppression of alternatives is high \u2014 graduate must stay employed or leave UK entirely."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Higher Education Institutions",
+      "comment": "PERSPECTIVE 4: UK HIGHER EDUCATION INSTITUTIONS (PITON) \u2014 Theater ratio elevated. Universities lobby politicians for graduate visa access (claiming talent and revenue benefits) but have diminished functional capacity to guarantee employment for graduates at threshold salary. The constraint persists through institutional inertia: universities maintain recruitment campaigns targeting international students despite knowing many cannot extend visas. Performative advocacy for 'international competitiveness' masks declining functional influence on graduate outcomes. Suppression is moderate (institutions can invest in career services, employers can hire) but theater is high (institutional theater of addressing 'graduate employment' without changing fundamental constraints)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Talent Arbitrage Networks",
+      "comment": "PERSPECTIVE 5: GLOBAL TALENT ARBITRAGE NETWORKS (SCAFFOLD) \u2014 Graduate visa threshold creates temporary coordination problem with visible sunset: competing countries (Canada, Australia, UAE, post-Brexit EU expansion) are building alternative pathways. UK graduates increasingly arbitrage: study in UK at lower cost than US but work in Canada or Germany at higher salary without UK threshold constraint. The scaffold sees the UK threshold as temporary friction, not immutable extraction. Exit path is explicit: 'move to country with better graduate visa terms.' This perspective sees the constraint as a self-limiting policy mechanism that will decay as rival nations offer better terms. Sunset clause is implicit \u2014 5-10 years before threshold becomes ineffective due to talent drain."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 Risk of naturalizing: 'visa sovereignty is immutable; states must protect labor markets; this is inherent to nation-state power.' But the structural data contradicts the mountain classification: extractiveness (0.58), suppression (0.68), and theater (0.45) place this squarely in Snare/Tangled Rope territory. The constraint is contingent (salary threshold is a policy choice, not a law of physics), reversible (threshold can be lowered or abolished), and subject to external pressure (rival countries' competing policies). The false summit reveals that 'border control is natural law' is naturalization of a political extraction mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_wage_inflation_spiral",
+      "question": "Does the salary threshold itself drive wage inflation in UK tech/science sectors, creating a self-reinforcing extraction mechanism?",
+      "resolution_mechanism": "Comparison of wage growth rates in high-threshold sectors (tech: \u00a338k+) vs low-threshold sectors (retail/hospitality: no threshold for short-term work visa); cross-national analysis of wage levels in equivalent sectors in countries with lower graduate visa thresholds",
+      "impact": "If yes: threshold becomes a rent-seeking mechanism for UK employers and domestic workers (extraction amplified). If no: threshold operates as labor market protection without distortion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether salary threshold drives wage inflation in target sectors"
+    },
+    {
+      "id": "brain_drain_counterfactual",
+      "question": "What fraction of UK-educated graduates would remain in UK labor market at salary \u2265\u00a338k if visa constraints were removed?",
+      "resolution_mechanism": "Survey data from recent graduates; comparison with historical pre-threshold visa policies; analysis of graduate destination data before/after threshold changes",
+      "impact": "If retention rate is >80%: threshold is extractive (removes genuine opportunities without achieving stated labor market protection). If <40%: threshold is necessity (many graduates leave regardless).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual retention rate without salary threshold"
+    },
+    {
+      "id": "employer_bargaining_position_capture",
+      "question": "Do UK employers leverage visa dependency to suppress graduate salaries below market clearing rates for international graduates?",
+      "resolution_mechanism": "Comparison of starting salaries for international vs domestic graduates in same role/field; analysis of employer statements in grad recruitment; exit interviews revealing visa pressure in salary negotiations",
+      "impact": "If evidence of bargaining position capture: suppression mechanism (0.68) is confirmed. If market salaries align: suppression is overstated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Employer leverage over international graduate salaries due to visa dependency"
+    },
+    {
+      "id": "alternative_visa_route_sufficiency",
+      "question": "Are Skilled Worker Visa routes (Tier 2 successor) providing sufficient alternative pathways for graduates, or are skill-level misclassifications creating barriers?",
+      "resolution_mechanism": "Data on Skilled Worker visa grant rates for graduate-level roles; comparison of time-to-visa approval between Graduate Visa and Skilled Worker routes; employer data on visa sponsorship burden",
+      "impact": "If alternatives insufficient: Graduate Visa extraction is unchecked (Snare confirmed). If alternatives viable: extraction is partial (Tangled Rope more accurate).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sufficiency of alternative visa routes for graduate-level work"
+    },
+    {
+      "id": "global_talent_flow_redirect",
+      "question": "Are top-quartile UK-educated graduates now redirecting to Canada/Australia/UAE on visa completion, rather than extending UK work visas?",
+      "resolution_mechanism": "Tracking data from UK alumni networks; visa grant statistics for competing countries; survey of recent UK graduates on post-study work destination choice",
+      "impact": "If strong redirect: scaffold sunset perspective confirmed (constraint self-limiting). If minimal redirect: constraint persists despite rival competition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Redirect of UK-educated graduates to higher-paying visa jurisdictions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The UK Graduate Visa minimum salary threshold (\u00a338,000 in 2024, indexed to Average Weekly Earnings) creates a structural extraction mechanism wrapped in the language of labor market protection. International graduates invest \u00a315,000-30,000 in UK tuition, obtain a two-year post-study work visa, and then face a binary constraint: secure employment above the indexed threshold within two years or return home. The constraint exhibits all six DR types depending on observer position. Domestic workers and the Treasury see coordination (protecting labor market). Employers in talent-dependent sectors see mixed extraction and coordination. Graduates see pure extraction (trapped by visa dependency and salary floors). Universities see a degraded institutional ritual (theater). Global talent networks see a temporary self-limiting constraint as competing countries offer better terms. The analytical observer risks naturalizing visa sovereignty as immutable law when the structural mechanics are contingent policy choices. The theater ratio (0.45) reflects moderate performance: government rhetoric emphasizes 'attracting global talent' and 'protecting UK competitiveness' while the actual mechanism constrains both \u2014 extracting value from graduates through visa dependency and limiting employer access to talent.",
+    "key_agents": [
+      "International Graduates: Primary victim (powerless/trapped) \u2014 invest in UK education, then face binary salary constraint with no renegotiation capacity",
+      "UK Domestic Workers: Primary beneficiary (institutional/arbitrage) \u2014 protected from low-wage competition; can exit politically if threshold proves economically damaging",
+      "UK Treasury: Primary beneficiary (institutional/arbitrage) \u2014 reduces long-term visa processing costs and net fiscal burden of graduate visa holders",
+      "UK Employers (Tech/Science/Healthcare): Secondary victim (moderate/constrained) \u2014 face talent shortage when graduates cannot extend visas; cannot easily exit regulatory framework",
+      "UK Higher Education Institutions: Institutional actor (organized/constrained) \u2014 rely on international tuition revenue; maintain theater of 'graduate employment support' without changing constraints",
+      "Global Talent Arbitrage Networks: Powerful actors (powerful/mobile) \u2014 arbitrage visa differences; exit path is relocation to competing countries with better graduate visa terms",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing visa sovereignty as immutable when constraints are contingent policy choices"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The salary threshold extracts value from graduates through: (1) visa dependency leverage enabling employer wage suppression, (2) foregone earnings during visa-eligible job search, (3) restricted job mobility (must maintain threshold salary or lose visa), (4) opportunity cost of returning home. The extractiveness has increased over the interval as the threshold has been tightened (from \u00a320,800 in 2016 to \u00a338,000 by 2024), reflecting deliberate policy ratcheting. Suppression (0.68): High. International graduates face severe suppression of alternatives: cannot negotiate salary downward without losing visa extension, cannot easily exit to other countries (credential value concentration in UK), cannot appeal to visa authority (threshold is immutable by design), limited information about threshold trajectory before enrolling in UK institution. The visa dependency creates asymmetric bargaining power favoring employers. Theater ratio (0.45): Moderate-low. The constraint has less performative content than most extractive mechanisms because the salary floor is transparent and monitored. However, government rhetoric ('attracting global talent,' 'world-leading universities') creates theater around the stated purpose \u2014 protecting competitiveness \u2014 when the mechanism actively constrains both graduate opportunity and employer talent access.",
+    "perspectival_gap": "The perspectival gap is extreme. Beneficiaries experience minimal or negative extraction (coordination benefit); victims experience maximum extraction (trapped without alternatives). The gap reveals the constraint's structural asymmetry: the beneficiaries' 'collective action problem solution' is the victims' structural entrapment. This is the hallmark of a pure Snare \u2014 one group's benefit is extracted directly from another group with no reciprocal benefit. The Tangled Rope and Rope perspectives exist but are contextual (employer mix of benefit/extraction, university institutional ritual). The scaffold perspective is aspirational \u2014 it represents the constraint's structural vulnerability (competing countries' superior terms create sunset logic) rather than current lived experience. The analytical observer's false summit is diagnostic of naturalization: once you see the constraint as contingent policy rather than immutable law, the entire perspectival structure collapses toward Snare/Tangled Rope.",
+    "directionality_logic": "International graduates' directionality (d) is derived from: victim status (yes \u2014 salary constraint extraction), exit options (trapped \u2014 credential value is UK-specific, relocation costs are high), power level (powerless \u2014 no negotiating capacity). Structural derivation yields d \u22480.95, f(d) \u2248 1.42, experienced \u03c7 \u2248 0.82 (before scope adjustment). Domestic workers' directionality is derived from: beneficiary status (yes \u2014 wage protection), exit options (arbitrage \u2014 can politically lobby), power level (institutional). Structural derivation yields d \u22480.15, f(d) \u2248 -0.01, experienced \u03c7 \u2248 0 or negative (compensation flow toward this group). Employers' directionality is mixed: some benefit (wage suppression in low-skill roles), some extracted (talent shortage in high-skill roles). Average d \u22480.55, f(d) \u2248 0.75, moderate \u03c7. No directionality overrides are needed \u2014 the structural derivation captures the real dynamics. The beneficiary/victim declarations drive the automatic pipeline: graduates are victims (high d), domestic workers are beneficiaries (low d), employers are mixed (intermediate d).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (\u03b5 = 0.58 > 0.46): This constraint requires mandatrophy analysis to prevent mislabeling as 'unfortunate but necessary labor market policy' when it is a pure extraction mechanism. The question is: 'Does the salary threshold solve a genuine coordination problem or simply extract value under the guise of one?' Analysis reveals: (1) Coordination function is real but weak \u2014 some wage suppression occurs and some domestic workers benefit. (2) Extraction function is severe and direct \u2014 graduates face binary constraint that is orthogonal to actual skill level or labor market need (many \u00a335k graduates are genuinely needed by UK employers). (3) Asymmetry is structural \u2014 beneficiaries can exit politically (arbitrage), victims cannot exit at all (trapped). This is not a Rope hiding in Snare clothing; it is a Snare with a genuine but secondary coordination component. The Tangled Rope classification for moderate agents (employers) is correct because they experience both coordination (wage protection) and extraction (talent constraint) in substantial measures. The overall constraint is a Snare with Tangled Rope effects for specific sectors. Mandatrophy resolution confirms that the 'labor market protection' framing is not false but is a partial truth that obscures the primary extraction mechanism targeting international graduates."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_higher_education_international_enrollment",
+      "uk_talent_drain_to_competing_jurisdictions"
+    ],
+    "dual_formulation_note": "The UK graduate visa salary threshold is part of a constraint family centered on UK post-study work policy. The threshold itself (this story) operates at \u03b5=0.58 (Snare/Tangled Rope boundary); it is upstream of two related constraints: (1) international enrollment demand (affected by known visa restrictions, \u03b5 \u2248 0.45, Tangled Rope), (2) talent drain to Canada/Australia/UAE (affected by threshold-driven relative disadvantage, \u03b5 \u2248 0.50, Tangled Rope). The family exhibits lifecycle dynamics: as threshold tightens, enrollment demand declines (negative feedback), talent drain accelerates (positive feedback), and competitive advantage shift occurs toward rival jurisdictions. Network decomposition prevents conflating 'the visa policy' (multiple constraints with different \u03b5 values, different beneficiary/victim sets, different failure modes)."
+  },
+  "directionality_overrides": []
+}

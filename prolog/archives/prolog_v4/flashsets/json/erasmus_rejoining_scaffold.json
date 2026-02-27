@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "erasmus_rejoining_scaffold",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.75,
+    "claimed_type": "scaffold",
+    "human_readable": "UK's potential re-entry into the EU Erasmus+ student exchange program",
+    "topic_domain": "political",
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "uk_students",
+      "uk_universities",
+      "eu_universities"
+    ],
+    "victims": [
+      "taxpayers_uk",
+      "short_term_domestic_alternatives"
+    ],
+    "requires_active_enforcement": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "UK Taxpayers",
+      "comment": "UK taxpayers may see this as a snare if they feel they are disproportionately funding a program with limited direct benefits for them and they have no say in the matter."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "EU Universities",
+      "comment": "EU universities benefit from the influx of UK students and the associated funding/prestige. They can also participate in exchanges with other countries, but the UK's participation strengthens the network."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "UK Government (pro-rejoin)",
+      "comment": "The UK government (assuming a pro-rejoin stance) views this as a scaffold - a temporary measure to enhance international collaboration and student mobility while developing long-term domestic alternatives. The government can adjust its position and funding over time."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Students",
+      "comment": "UK students benefit from the exchange opportunities, but are also constrained by application processes, living costs in other countries, and potential disruption to their studies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Post-Brexit)",
+      "comment": "From a civilizational perspective, the program's effectiveness may degrade over time, becoming more about political signaling than actual student enrichment if the UK develops successful, independent programs (or if the EU shifts its own priorities). Rejoining maintains relationships, but if the UK builds its own rival it becomes a theatrical exercise."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Universities",
+      "comment": "UK universities benefit from the program by attracting more students. However, they may be constrained by the administrative burden of managing exchanges, ensuring quality standards, and balancing international and domestic opportunities."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "domestic_alternative_viability",
+      "question": "Will the UK be able to develop a viable domestic alternative to Erasmus+?",
+      "resolution_mechanism": "Analysis of funding allocations, participation rates, and student satisfaction with domestic exchange programs.",
+      "impact": "If a viable alternative emerges, the rejoining becomes a short term scaffold. If not, then rejoining can shift to a longer term rope or entangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of UK domestic alternative to Erasmus+"
+    },
+    {
+      "id": "political_stability_eu_uk",
+      "question": "Will political relations between the UK and the EU remain stable enough to support long-term participation?",
+      "resolution_mechanism": "Monitoring of trade agreements, diplomatic engagements, and public opinion polls in both regions.",
+      "impact": "If political relations deteriorate, then rejoining could become a political piton (performative activity).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Stability of UK-EU political relations"
+    },
+    {
+      "id": "funding_sustainability",
+      "question": "Can sustainable funding be secured from the UK government for the rejoin into the Erasmus+ program, and what would that look like?",
+      "resolution_mechanism": "Monitoring the UK government spending and public opinions.",
+      "impact": "If the funding for the program dwindles, then rejoining becomes a political piton (performative activity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of funding the rejoin into the Erasmus+ program"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Following its exit from the EU and the Erasmus+ program, the UK is considering rejoining. This scenario presents a complex interplay of political, economic, and social factors, leading to varied perspectives on the potential benefits and drawbacks. Rejoining serves as a temporary measure to enhance international collaboration and student mobility, a coordinated scaffold.",
+    "key_agents": [
+      "UK Government: Primary driver of the decision (powerful/mobile)",
+      "UK Students: Beneficiaries of exchange opportunities (moderate/constrained)",
+      "UK Universities: Institutions managing exchanges (institutional/constrained)",
+      "EU Universities: Partners in the exchange program (institutional/arbitrage)",
+      "UK Taxpayers: Potentially bearing the financial burden (powerless/trapped)",
+      "Short Term Domestic Alternatives: A domestic alternative (organized/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate extraction reflects the financial costs to UK taxpayers and the potential administrative burden on universities. Suppression (0.20): Some suppression of domestic alternatives as rejoining favors EU cooperation. Theater ratio (0.75): Moderate as the focus is on academic experience and benefits.",
+    "perspectival_gap": "The perspectives differ based on the actors' power, exit options, and benefits from the exchange. Taxpayers see it as a snare due to financial burden and minimal control. EU universities view it as rope and positive with benefits, while the government perceives it as a scaffold to coordinate efforts.",
+    "directionality_logic": "Beneficiaries like UK students and EU Universities will have low directionality, while victims such as the taxpayers have a high directionality rating. The UK government\u2019s d value is determined by its exit options and perceived advantages.",
+    "mandatrophy_analysis": "The analysis highlights the scaffold nature of rejoining. The program may become a piton, if independent programs gain strength, and a rope, if cooperation increases."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_eu_relations",
+      "uk_higher_education_funding"
+    ]
+  },
+  "directionality_overrides": []
+}

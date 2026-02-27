@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "cn_tech_decoupling_security_software",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cntds"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandate for Chinese SOEs to replace US security software",
+    "topic_domain": "technological/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_domestic_security_vendors",
+      "state_regulatory_apparatus"
+    ],
+    "victims": [
+      "chinese_soe_operational_efficiency",
+      "us_software_vendors",
+      "global_cybersecurity_supply_chain"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Compliant SOE",
+      "comment": "PERSPECTIVE 1: COMPLIANT SOE (SNARE) \u2014 Chinese SOEs cannot refuse mandate compliance without risking state penalties, funding withdrawal, or administrative sanctions. Trapped exit: replacement is mandatory, non-compliance is not tolerated. Bears full cost of transition: software license sunk costs, retraining expenses, operational disruption during migration, and persistent performance gaps if domestic alternatives are immature. No exit mechanism; maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Domestic Software Vendor",
+      "comment": "PERSPECTIVE 2: DOMESTIC SECURITY VENDOR (TANGLED ROPE) \u2014 Benefits from guaranteed market capture and state purchase mandates. Also constrained by pressure to match foreign software maturity within compressed timelines, quality expectations from SOE deployments, and reliance on state specification compliance. Experiences both coordination (solving domestic supply dependency) and extraction (forced to develop at state-directed pace with guaranteed but limited margins). Constrained exit: vendor is locked into domestic market; international expansion requires CCP approval."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Regulatory Apparatus",
+      "comment": "PERSPECTIVE 3: STATE REGULATORY APPARATUS (ROPE) \u2014 Primary beneficiary. Mandate achieves coordination objective (reduce foreign software dependency, control critical infrastructure security stack) while capturing significant extraction rent: vendor consolidation under state auspices, technology transfer obligations, surveillance capability integration into domestic software. Experiences constraint as coordination mechanism with net benefit flow toward the state. Arbitrage exit: state can modulate mandate stringency, timeline, exceptions."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The US Software Vendor",
+      "comment": "PERSPECTIVE 4: US SOFTWARE VENDOR (SNARE) \u2014 Excluded from Chinese SOE market through mandate. Loses installed base, revenue streams, and future upgrade contracts. Constrained exit: cannot appeal mandate through commercial channels; Chinese market access requires state permission. Cannot shift to alternative markets without losing the largest single customer base in Asia. Extraction via forced exit from market; suppression via regulatory prohibition on alternatives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Global Cybersecurity Supply Chain",
+      "comment": "PERSPECTIVE 5: GLOBAL CYBERSECURITY SUPPLY CHAIN (PITON) \u2014 Mandate fragments what was a unified global supply chain into regional silos (Chinese domestic, US-allied, others). The fragmentation is theatrically justified as security but operationally creates supply chain vulnerabilities through reduced interoperability, knowledge sharing bottlenecks, and reduced incentives for coordinated vulnerability disclosure. Theater ratio high: the security rationale (defense against foreign espionage backdoors) coexists with extraction logic (market capture, vendor lock-in). The performative aspect: replacing foreign software does not intrinsically improve security unless domestic alternatives are genuinely superior \u2014 often they are not initially. Piton because the fragmentation itself becomes institutionally persistent even as technical superiority arguments weaken."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The International Regulatory Coalition",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL REGULATORY COALITION (TANGLED ROPE) \u2014 Governments and vendors in US-allied ecosystems experience the mandate as both coordination challenge and extraction threat. Coordinated response (export controls, reciprocal mandates, standards-setting) generates cooperation benefits but also locks in tit-for-tat extraction: US mandates domestic alternatives, EU mandates vendor diversity, others follow. Mobile exit exists for large vendors and states (develop parallel stacks, invest in alternatives), but full decoupling is expensive. Mixed coordination (solving fragmentation through standards) and extraction (each player capturing regional rents)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "domestic_software_maturity_gap",
+      "question": "What is the actual technical maturity gap between Chinese domestic security software and US equivalents at mandate start, and how quickly does it close?",
+      "resolution_mechanism": "Independent security audits, vulnerability disclosure rates, penetration test results comparing Chinese domestic alternatives to US baselines over 3-5 year windows",
+      "impact": "If gap is large and slow-closing: mandate imposes genuine operational cost (extractive). If gap is small or closing rapidly: mandate is primarily a coordination mechanism with real security benefits (rope-ish). If gap is artificial (marketing): reveals pure extraction dressed as security.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical maturity gap between Chinese domestic and US security software"
+    },
+    {
+      "id": "espionage_baseline_risk",
+      "question": "What is the empirical risk of backdoored foreign security software serving as espionage vector, versus domestic software?",
+      "resolution_mechanism": "Analysis of documented supply chain attacks, vendor relationship with foreign intelligence, capabilities of Chinese domestic vendors to resist state pressure versus US vendors, historical data on backdoor prevalence",
+      "impact": "If foreign risk is substantially higher: mandate is legitimate coordination (Rope). If risks are symmetric: mandate is pure protection theater (Piton/Snare). If domestic risk is higher: mandate is counter-productive (false summit).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Comparative espionage risk: foreign vs domestic software"
+    },
+    {
+      "id": "vendor_lock_in_persistence",
+      "question": "Does the domestic vendor market consolidate into durable lock-in, or does competition remain sufficient to keep vendors disciplined?",
+      "resolution_mechanism": "Market structure analysis: number of competitors, pricing trends, switching costs for SOEs, government procurement flexibility over 10-year horizon",
+      "impact": "If lock-in is durable: extraction mechanism persists (high-extraction Snare or Tangled Rope). If competition survives: coordination function dominates (Rope-like). If lock-in breaks down and SOEs revert to foreign software: mandate fails structurally.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of vendor lock-in in Chinese domestic market"
+    },
+    {
+      "id": "supply_chain_fragmentation_cost",
+      "question": "What is the total economic cost of global cybersecurity supply chain fragmentation relative to unified supply chain efficiency?",
+      "resolution_mechanism": "Input-output analysis of security software costs, integration expenses, vulnerability disclosure delays, duplicate R&D investment across regional stacks",
+      "impact": "If fragmentation cost is moderate: constraint is primarily distributional (Tangled Rope). If fragmentation cost is very high: reveals constraint as net-negative for all parties including beneficiaries (false classification), suggesting mandate persistence is purely political theater (Piton).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Economic cost of global cybersecurity supply chain fragmentation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "China's mandate for state-owned enterprises to replace US-origin network security software with domestic alternatives represents a constraint that combines coordination objectives (reducing critical infrastructure dependency on foreign vendors) with significant extraction mechanisms (vendor lock-in, operational disruption costs, supply chain fragmentation). The constraint exhibits conflicting classifications across perspectives: beneficiaries (state apparatus, domestic vendors) experience coordination benefits; victims (SOEs, US vendors, global supply chain efficiency) experience pure extraction or forced transition costs; organized international coalitions experience both coordinated standard-setting and tit-for-tat rent-seeking. The theater ratio (0.55) reflects that security justifications coexist with economic protectionism \u2014 the security improvements are real but modest relative to the extraction costs, suggesting theater is significant but not dominant. The extractiveness trajectory (0.35\u21920.62 over six years) reveals how mandate implementation accumulates both switching costs and vendor consolidation rents, pushing the constraint toward higher-extraction classification over time.",
+    "key_agents": [
+      "Chinese State Regulatory Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 achieves critical infrastructure control, vendor consolidation, technology transfer leverage",
+      "Chinese SOEs: Primary victim (powerless/trapped) \u2014 mandatory compliance, sunk license costs, transition disruption, performance gaps during maturation period",
+      "Domestic Chinese Security Vendors: Secondary beneficiary (moderate/constrained) \u2014 guaranteed market capture, state purchase mandates, but locked into state-directed development pace",
+      "US Software Vendors: Secondary victim (moderate/constrained) \u2014 forced exit from largest Asian customer base, revenue loss, cannot appeal through commercial channels",
+      "Global Cybersecurity Supply Chain: Tertiary victim (analytical/analytical) \u2014 fragmentation reduces interoperability, increases duplicate R&D, slows vulnerability coordination",
+      "International Regulatory Coalition: Organized responder (organized/mobile) \u2014 governments develop reciprocal mandates, standards, export controls; experiences both coordination and tit-for-tat extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting significant forced transition costs for SOEs, vendor lock-in mechanisms, and supply chain fragmentation, but not maximal because legitimate security coordination benefits exist. Initial extractiveness (0.35) reflects primarily coordination framing; trajectory to 0.62 by year 6 captures the accumulation of switching costs and vendor consolidation as implementation deepens. Suppression (0.72): High. SOEs cannot refuse compliance without state sanctions (regulatory, financial). Domestic vendors face compressed timelines and state-specified feature requirements (not voluntary specifications). US vendors cannot appeal mandate or access market. Global supply chain has no negotiating power over fragmentation. Suppression reflects coercive enforcement and lack of alternatives. Theater ratio (0.55): Moderate. The security rationale (defense against backdoors in foreign software) is partially genuine \u2014 foreign vendors do pose espionage risks. But the ratio of security improvement to economic cost is unclear, and the extraction mechanism (vendor consolidation, market capture) is substantial. Theater increases slightly over time as mandate becomes routine rather than justified by crisis.",
+    "perspectival_gap": "This constraint shows strong perspectival fragmentation. The state regulator sees Rope (coordination + manageable benefit flow). Chinese domestic vendors see Tangled Rope (guaranteed market but constrained autonomy). SOEs see Snare (no exit, full cost). US vendors see Snare (forced exit). The global supply chain sees Piton (fragmentation justified by security but increasingly performative). The international regulatory coalition sees Tangled Rope (coordination needs but tit-for-tat extraction). No single type captures the full structure \u2014 the constraint is genuinely hybrid, with coordination benefits (reduced foreign dependency) coexisting with significant extraction (vendor lock-in, SOE costs, supply chain fragmentation).",
+    "directionality_logic": "Directionality values (d) map structural position to extraction experience. State apparatus: d \u2248 0.05 (full beneficiary), derives low/negative chi. SOEs: d \u2248 0.95 (trapped victims), derives high chi. Domestic vendors: d \u2248 0.55 (constrained beneficiaries with modest extraction overhead), derives moderate chi. US vendors: d \u2248 0.85 (constrained targets), derives high chi. Global supply chain: d \u2248 0.70 (analytical observer bearing costs), derives high chi. International coalition: d \u2248 0.60 (organized responders with exit options), derives moderate-high chi. The engine derives d from beneficiary/victim declarations (state is beneficiary, SOEs and US vendors are victims) and exit options (state has arbitrage, SOEs trapped, international coalition mobile). The Tangled Rope classification emerges from the synthesis: active enforcement required, beneficiaries exist, victims exist, but coordination function (reducing foreign dependency) is genuine alongside extraction (vendor lock-in).",
+    "mandatrophy_analysis": "The mandate resolves mandatrophy by admitting genuine coordination function alongside extraction. The temptation is to classify as pure Snare (state extracts from SOEs and US vendors). But the beneficiary analysis reveals: the state genuinely solves a coordination problem (critical infrastructure vendor diversification), not merely rent-seeking. Domestic vendors are not passive recipients of state favor \u2014 they have real technical development obligations. The international regulatory response is not pure retaliation but coordination around fragmented supply chain realities. The Tangled Rope classification prevents false naturalization of extraction as inevitable law-of-supply-chains, while also preventing false idealization of the mandate as pure coordination. Theater ratio (0.55) reflects the hybrid: security framing is real but imperfect. The constraint is authentically mixed \u2014 coordination benefits are genuine but modest; extraction is real but not maximal; suppression is high but not total (domestic vendors have some autonomy within state direction). The mandatrophy is resolved by accepting the hybrid structure rather than forcing it into a pure category."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain_resilience",
+      "us_china_tech_export_controls",
+      "domestic_cloud_infrastructure_mandate"
+    ],
+    "dual_formulation_note": "This constraint is part of a broader technology decoupling cluster. Upstream constraints (export controls, semiconductor supply chain) establish the security/geopolitical rationale. This constraint represents the operational implementation phase. Downstream constraints (domestic cloud, domestic payment systems) extend the same logic to other critical infrastructure layers. Each constraint in the family has distinct \u03b5 values and beneficiary/victim structures but shares the coordination-vs-extraction tension."
+  },
+  "directionality_overrides": []
+}

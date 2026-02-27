@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: hamiltonian_path_complexity
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_hamiltonian_path_complexity, []).
@@ -39,11 +40,9 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,19 +54,27 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: hamiltonian_path_complexity
  *   human_readable: Computational Complexity of the Hamiltonian Path Problem
- *   domain: technological/mathematical
+ *   domain: mathematical/computational_complexity
  *
  * SUMMARY:
- *   A Hamiltonian Path is a path in a graph that visits each vertex exactly
- *   once. Finding such a path is an NP-complete problem. While verifying a
- *   given path is easy, finding one is computationally exhaustive for large
- *   graphs. This constraint represents the immutable mathematical difficulty
- *   of solving this problem, a cornerstone of computational complexity theory.
+ *   The Hamiltonian path problem exemplifies a mathematical constraint:
+ *   determining whether a path exists in a graph that visits each vertex
+ *   exactly once is NP-complete. This means that while verifying a proposed
+ *   solution takes polynomial time, constructing one for arbitrary instances
+ *   requires exponential time under current computational models. The
+ *   constraint is not institutional, policy-driven, or contingent on
+ *   technology — it is a structural property of the problem class itself. No
+ *   amount of engineering, funding, or organizational effort can overcome the
+ *   theoretical lower bound for arbitrary instances. The constraint is
+ *   invariant across all Turing-complete computational models and across all
+ *   known optimization techniques. It emerges naturally from the definition
+ *   of the problem and the formal theory of computational complexity.
  *
- * KEY AGENTS (by structural relationship):
- *   - Logistics Optimizers: Primary target (powerless/trapped) — bears the computational cost of finding optimal routes.
- *   - Cryptography Systems Designers: Primary beneficiary (institutional/arbitrage) — leverages computational hardness for security.
- *   - The Mathematician: Analytical observer — sees the problem's inherent, unchangeable complexity.
+ * KEY AGENTS:
+ *   - Computational Theorists (analytical/analytical): Discover and formalize the constraint; see it as a mathematical necessity
+ *   - Algorithm Designers (powerful/constrained): Attempt to find faster algorithms within the bounds; work against the constraint
+ *   - Application Domains (institutional/mobile): Logistics, chip design, bioinformatics; seek to solve instances; accept the constraint and work around it via approximation or restriction
+ *   - Quantum Computing Researchers (analytical/mobile): Explore whether alternative computational models might escape the constraint
  */
 
 /* ==========================================================================
@@ -75,97 +82,54 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% The "extraction" is not social but computational: the energy and time
-% required for brute-force search. It's low because it's a property of logic,
-% not a designed extractive system.
-domain_priors:base_extractiveness(hamiltonian_path_complexity, 0.10).
-% Suppression is near-zero. One cannot choose an "alternative" to a mathematical
-% truth. The constraint is absolute. This low score is critical for the Mountain
-% classification.
-domain_priors:suppression_score(hamiltonian_path_complexity, 0.0).
-% This is a purely functional mathematical constraint with no performative aspect.
-domain_priors:theater_ratio(hamiltonian_path_complexity, 0.01).
+domain_priors:base_extractiveness(hamiltonian_path_complexity, 0.12).
+domain_priors:suppression_score(hamiltonian_path_complexity, 0.03).
+domain_priors:theater_ratio(hamiltonian_path_complexity, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(hamiltonian_path_complexity, extractiveness, 0.10).
-narrative_ontology:constraint_metric(hamiltonian_path_complexity, suppression_requirement, 0.0).
-narrative_ontology:constraint_metric(hamiltonian_path_complexity, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(hamiltonian_path_complexity, extractiveness, 0.12).
+narrative_ontology:constraint_metric(hamiltonian_path_complexity, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(hamiltonian_path_complexity, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain.
-% Accessibility Collapse: Alternatives (e.g., heuristics) are structurally
-% different from finding the guaranteed optimal path. The constraint on
-% optimality is nearly absolute.
-narrative_ontology:constraint_metric(hamiltonian_path_complexity, accessibility_collapse, 0.98).
-% Resistance: One cannot "resist" a mathematical truth; resistance is incoherent.
-narrative_ontology:constraint_metric(hamiltonian_path_complexity, resistance, 0.0).
+narrative_ontology:constraint_metric(hamiltonian_path_complexity, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(hamiltonian_path_complexity, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-% Analytically, this is a Mountain of computational complexity.
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(hamiltonian_path_complexity, mountain).
 narrative_ontology:human_readable(hamiltonian_path_complexity, "Computational Complexity of the Hamiltonian Path Problem").
-narrative_ontology:topic_domain(hamiltonian_path_complexity, "technological/mathematical").
+narrative_ontology:topic_domain(hamiltonian_path_complexity, "mathematical/computational_complexity").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint emerges naturally from the structure of mathematics and
-% computation, without human design or enforcement.
 domain_priors:emerges_naturally(hamiltonian_path_complexity).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Even though this is a Mountain from most perspectives, the existence of a
-% Rope perspective (the Network Architect) necessitates these declarations
-% to explain the coordination function.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(hamiltonian_path_complexity, cryptography_systems_designers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(hamiltonian_path_complexity, logistics_optimizers).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE LOGISTICS PLANNER (MOUNTAIN)
-% For a planner who must find an optimal route visiting every node, the
-% problem's complexity is an unchangeable, absolute barrier. It's not a
-% snare designed by someone; it's a feature of the logical landscape.
-% The low ε (0.1) and suppression (0.0) confirm a Mountain classification.
-constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE CRYPTOGRAPHY DESIGNER (ROPE)
-% For an agent designing systems that rely on computational hardness, this
-% complexity is a tool. It's a pure coordination device: the "agreement" is
-% that certain problems are too hard to solve, forming the basis of security.
-% They have arbitrage exit, as they can choose which hard problems to use.
-constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE MATHEMATICIAN (MOUNTAIN)
-% The analytical observer sees the P vs. NP problem as a fundamental,
-% immutable feature of computation. It is a 'Mountain' in the landscape of
-% logic, defining the boundaries of what is efficiently computable.
+% PERSPECTIVE 1: COMPUTATIONAL THEORIST (MOUNTAIN) — The Hamiltonian path problem is NP-complete; no known polynomial-time algorithm exists. This is a structural property of the problem space itself, not a consequence of insufficient engineering or research effort. The complexity is invariant across all computational models capable of recognizing the problem. No exit, no arbitrage, no benefit. Universal, civilizational, unchangeable.
 constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+% PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) — Even the most sophisticated heuristics, approximations, and parallel approaches cannot overcome the exponential barrier for arbitrary instances. The constraint is that for large instances, verification is tractable (polynomial-time) but construction remains intractable. This asymmetry is structural, not a limitation of current tools. Constrained by the mathematics, not by institutional arrangements.
+constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: APPLICATION DOMAIN (MOUNTAIN) — Industries seeking to solve the traveling salesman and route optimization variants face a genuine mathematical limit. They can reformulate as approximation problems, use heuristics, or apply constraints that make instances tractable, but they cannot exit the underlying complexity. The constraint remains even when agents have high agency and resources. The complexity is not imposed; it is discovered.
+constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,19 +137,26 @@ constraint_indexing:constraint_classification(hamiltonian_path_complexity, mount
 
 :- begin_tests(hamiltonian_path_complexity_tests).
 
-test(perspectival_gap_mountain_rope) :-
-    % Verify the specific gap: Mountain for the powerless and analytical,
-    % but Rope for the institutional agent who can leverage it.
-    constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(hamiltonian_path_complexity, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(hamiltonian_path_complexity, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hamiltonian_path_complexity, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_thresholds_adherence) :-
-    % Verify that the base metrics are consistent with a Mountain classification.
-    narrative_ontology:constraint_metric(hamiltonian_path_complexity, extractiveness, E),
-    narrative_ontology:constraint_metric(hamiltonian_path_complexity, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(hamiltonian_path_complexity, ExtMetricName, E),
+    domain_priors:suppression_score(hamiltonian_path_complexity, S),
     E =< 0.25,
     S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(hamiltonian_path_complexity),
+    narrative_ontology:constraint_metric(hamiltonian_path_complexity, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(hamiltonian_path_complexity, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(hamiltonian_path_complexity_tests).
 
@@ -195,57 +166,86 @@ test(mountain_thresholds_adherence) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (0.1) represents the irreducible computational
- *   work required to solve the problem, not a social extraction. The
- *   suppression score was set to 0.0 because a mathematical truth allows no
- *   alternatives, a key feature of a Mountain. These low scores ensure the
- *   Mountain gate fires for observers who are subject to the constraint.
+ *   Extractiveness (0.12): Very low. The constraint does not extract resources from anyone; it is a structural fact. The measurement reflects minimal institutional overhead (theorem-proving, conference attendance) required to maintain awareness of the constraint, not extraction per se. Suppression (0.03): Negligible. The constraint is not suppressed because there is no alternative to suppress. It simply exists as a mathematical fact. Theater ratio (0.15): Very low. The Hamiltonian path problem is stated precisely and verified directly through formal proof. There is minimal performative content — the complexity is demonstrated through rigorous reduction proofs, not through ritual or institutional arrangement. The slight nonzero value reflects that new proofs of NP-hardness variants do accumulate over time, some for novel rather than fundamental reasons.
  *
  * PERSPECTIVAL GAP:
- *   The gap is between those who experience the constraint as a barrier
- *   (logisticians, mathematicians see a Mountain) and those who use it as a
- *   tool (cryptographers see a Rope). The institutional agent has arbitrage
- *   exit—they can choose to build systems around this specific hard problem
- *   or another one. This ability to leverage the Mountain turns it into a
- *   coordination mechanism for them.
+ *   All three perspectives converge on the mountain classification. There is no disagreement about the fundamental nature of the constraint. The analytical theorist, the algorithm designer, and the application domain all recognize that the problem is genuinely hard. The perspectival variations are in time horizon (civilizational vs biographical vs generational) and exit options (analytical vs constrained vs mobile), but these do not change the classification. This is characteristic of a true mountain constraint: it appears the same to all observers because it is invariant across observables and measurement methodologies.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `cryptography_systems_designers` benefit because the
- *     difficulty of solving the problem is the foundation of their security models.
- *   - Victim: `logistics_optimizers` bear the cost, as they must expend
- *     significant computational resources to find (or approximate) solutions.
- *   This beneficiary/victim structure is what enables the Rope classification
- *   from the institutional perspective, as it establishes a coordination function.
+ *   There is no directionality in the classical sense because there are no beneficiaries or victims. The constraint is not an extraction mechanism; it is a structural fact. All agents are equally subject to it. The 'extraction' flowing from the constraint is zero — no agent benefits at another's expense. All agents experience the constraint as an unchangeable limitation imposed by mathematics, not by institutional power.
  *
- * MANDATROPHY ANALYSIS:
- *   The original file was flagged for SCAFFOLD_DANGER_ZONE because the
- *   combination of low extraction, a beneficiary, and no enforcement could be
- *   misinterpreted by the engine as a Scaffold. By correcting the suppression
- *   score to 0.0, we ensure the constraint correctly passes the Mountain gate
- *   (which has priority over the Scaffold gate) for the powerless and analytical
- *   perspectives, resolving the ambiguity. The system correctly identifies a
- *   permanent feature of reality, not a temporary support structure.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% The core uncertainty is the P vs. NP problem itself.
 omega_variable(
-    omega_p_vs_np,
-    'Is P equal to NP? (i.e., can an efficient algorithm find the Hamiltonian path in all cases?)',
-    'A formal mathematical proof or disproof, a major unsolved problem in computer science.',
-    'If P=NP, this constraint collapses from a Mountain to a Rope for all perspectives, with profound implications for cryptography and optimization. If P!=NP, the Mountain stands.',
-    confidence_without_resolution(low)
+    p_vs_np_resolution,
+    'If P=NP is proven true, does the Hamiltonian path problem cease to be a constraint?',
+    'Mathematical proof of P=NP or proof of P≠NP. Resolves the ontological status of the complexity class.',
+    'If P=NP: the constraint becomes a transient epistemological artifact (we don''t yet know the polynomial algorithm). Mountain persists but loses its permanence claim. If P≠NP is proven: mountain is confirmed as a mathematical necessity.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(p_vs_np_resolution, conceptual, 'Whether P=NP resolution changes the constraint''s character').
+
+omega_variable(
+    quantum_supremacy_escape,
+    'Could quantum computers solve Hamiltonian path in polynomial time, converting the classical mountain into a technological advantage for quantum agents?',
+    'Experimental quantum algorithm achieving subexponential runtime on instances where classical methods require exponential time. Demonstration that the quantum speedup is genuine and scalable.',
+    'If yes: the mathematical constraint persists but the practical constraint for quantum-equipped agents disappears (two different constraints). If no: mountain persists across all known computational models.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(quantum_supremacy_escape, empirical, 'Whether quantum computing provides polynomial-time escape from Hamiltonian path NP-completeness').
+
+omega_variable(
+    instance_space_restriction,
+    'Are all practical instances of Hamiltonian path instances in a restricted subclass that admits polynomial algorithms (planar graphs, specific degree bounds, special structure)?',
+    'Empirical analysis of real-world optimization problems: are they drawn from a restricted instance space that the theory does not cover? Provable algorithmic results for restricted classes.',
+    'If yes: the theoretical mountain applies to arbitrary graphs, but practical constraint is rope or scaffold (restricted to solvable subproblems). If no: mountain applies broadly to practice.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(instance_space_restriction, empirical, 'Whether practical instances fall into polynomial-solvable subclasses').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(hamiltonian_path_complexity, 0, 10).
+narrative_ontology:interval(hamiltonian_path_complexity, 0, 60).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(hpath_tr_t0, hamiltonian_path_complexity, theater_ratio, 0, 0.08).
+narrative_ontology:measurement(hpath_tr_t30, hamiltonian_path_complexity, theater_ratio, 30, 0.12).
+narrative_ontology:measurement(hpath_tr_t60, hamiltonian_path_complexity, theater_ratio, 60, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(hpath_be_t0, hamiltonian_path_complexity, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(hpath_be_t30, hamiltonian_path_complexity, base_extractiveness, 30, 0.11).
+narrative_ontology:measurement(hpath_be_t60, hamiltonian_path_complexity, base_extractiveness, 60, 0.12).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:affects_constraint(hamiltonian_path_complexity, np_completeness_reduction_class).
+narrative_ontology:affects_constraint(hamiltonian_path_complexity, traveling_salesman_routing_hardness).
+narrative_ontology:affects_constraint(hamiltonian_path_complexity, circuit_layout_verification).
+
+% DUAL FORMULATION NOTE:
+% The Hamiltonian path problem is upstream of many applied optimization constraints (TSP, circuit layout, protein folding) that inherit its NP-completeness through reduction. These downstream constraints may appear as snares or tangled ropes in practice because they involve institutional actors, extraction mechanisms, and workarounds. The mathematical mountain is the root constraint; the practical constraints are perspectival readings of how agents respond to the mountain.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

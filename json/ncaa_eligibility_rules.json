@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "ncaa_eligibility_rules",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ncaa"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "NCAA Eligibility Rules for Student Athletes",
+    "topic_domain": "economic/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ncaa_organization",
+      "university_athletic_departments",
+      "media_broadcasters"
+    ],
+    "victims": [
+      "student_athletes",
+      "non_elite_athletes",
+      "athlete_earning_potential"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Student Athlete (Trapped)",
+      "comment": "PERSPECTIVE 1: STUDENT ATHLETE (SNARE) \u2014 Structurally trapped. Cannot receive direct compensation for athletic performance, endorsements, or name/image/likeness (historically; partially relaxed post-2021). Cannot transfer schools without penalty or sitting out seasons. Cannot negotiate terms of participation. Bears full cost of amateurism fiction while universities and NCAA extract billions in revenue. Zero degrees of freedom \u2014 exit options are foreclosed by NCAA enforcement and institutional gatekeeping."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "University Athletic Department",
+      "comment": "PERSPECTIVE 2: UNIVERSITY ATHLETIC DEPARTMENT (ROPE) \u2014 Experiences constraint as coordination mechanism. Eligibility rules standardize competition, enabling predictable scheduling, media contracts, and conference alignment. Benefits from amateurism fiction (reduces compensation costs) while capturing revenue from ticket sales, merchandise, and media rights. Net beneficiary with high exit capacity \u2014 can lobby NCAA for rule changes, negotiate media deals, adjust recruiting strategies. Effective extraction runs toward this actor."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NCAA Organization",
+      "comment": "PERSPECTIVE 3: NCAA ORGANIZATION (ROPE) \u2014 Primary beneficiary and rule-setter. Eligibility rules serve a genuine coordination function: standardize competition, prevent cost-spiraling arms races, maintain amateurism fiction that legitimizes the enterprise. Also the primary extractor: NCAA captures ~$1B+ annually in tournament media rights (March Madness, bowl games) that flow from the eligibility restriction. High exit capacity \u2014 maintains rules through governance authority. Net beneficiary with maximal agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Non-Elite Athletes",
+      "comment": "PERSPECTIVE 4: NON-ELITE ATHLETES (SNARE) \u2014 Majority of student-athletes. Receive scholarship benefits (tuition, housing) but are barred from earning endorsement income, participating in professional leagues concurrently, or monetizing their own athletic performance. Constrained exits: can leave sports entirely (end scholarship), transfer (NCAA penalties), or attempt professional path (forfeit college eligibility). Unlike elite athletes with endorsement opportunities (post-2021), non-elite athletes have no alternative income pathway. Moderate power through collective organization (athlete unions emerging post-2023), but current enforcement heavily asymmetric."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Athlete Advocacy Coalition",
+      "comment": "PERSPECTIVE 5: ATHLETE ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (athlete unions, legal advocates, state legislatures) are dismantling the amateurism constraint through sunset mechanisms: NIL rights (Name/Image/Likeness, post-2021), transfer portal reforms (2023+), and compensation law changes (California Fair Pay to Play Act, state-level legislation). These mechanisms are creating alternative pathways that bypass NCAA gatekeeping. Theater ratio declining as formal compensation replaces amateurism fiction. Constraint retains enforcement power but is being systematically undermined by organized pressure. Sunset logic applies: reform maturity estimated 5-10 years as state legislation harmonizes and athlete power consolidates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Amateur Athletics Ideology",
+      "comment": "PERSPECTIVE 6: AMATEUR ATHLETICS IDEOLOGY (PITON) \u2014 The philosophical principle that college athletics should remain 'amateur' \u2014 driven by 19th-century Oxbridge amateurism tradition and 20th-century class anxiety (distinguishing amateur from professional). Largely performative: professional infrastructure pervades college sports (coaching salaries $5M+, training facilities, media apparatus), yet the amateurism label persists through institutional inertia. Athletes are not 'amateurs' \u2014 they are unpaid professionals. The ideology maintains itself through rhetorical repetition (NCAA repeatedly affirms commitment to amateurism while revenue grows) rather than functional necessity. Theater ratio 0.65 reflects this performative gap: the constraint's stated purpose (preserve amateur character) contradicts its structural reality (professional extraction)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a generational/global perspective, NCAA eligibility rules exhibit both genuine coordination (standardized competition enabling media markets) and significant asymmetric extraction (student-athletes barred from earning market value while universities/NCAA profit). The constraint requires active enforcement (NCAA rules compliance offices, transfer restrictions, eligibility certification). Beneficiaries (NCAA, universities) benefit from coordination; victims (athletes) bear extraction. Suppression is high (legal barriers, contract enforcement) but not absolute (NIL reform is reducing it). Classification: Tangled Rope \u2014 hybrid coordination-extraction with organized counterforce reducing suppression over time."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "college_education_value_fungibility",
+      "question": "Is the scholarship benefit (tuition + housing) a genuine coordination value or a concealment mechanism for extraction?",
+      "resolution_mechanism": "Compare athlete lifetime earnings (with vs without scholarship) to market wages for similarly skilled workers; calculate opportunity cost of training time vs educational attainment; survey athlete perception of value equivalence",
+      "impact": "If genuine value: constraint is partial extraction with offsetting benefit (lower base \u03b5). If concealment: constraint is pure extraction with theater (higher \u03b5, higher theater ratio). Current evidence suggests partial offset \u2014 elite athletes at revenue-generating sports see net extraction; non-elite athletes with genuine educational access see partial benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether scholarship benefits offset extraction of labor value"
+    },
+    {
+      "id": "market_rate_discrepancy_magnitude",
+      "question": "What is the true market wage for student-athlete labor (forgone NIL rights, training time, public performance value)?",
+      "resolution_mechanism": "Comparative analysis: comparable professional athletes in minor leagues, international student-athlete markets (European club systems), or hypothetical athlete labor market if NCAA restrictions removed",
+      "impact": "If market gap > 70% of revenue: extraction is near-maximal (supports \u03b5 > 0.65). If gap < 40%: extraction is moderate (supports \u03b5 \u2248 0.40). Current estimates suggest gap of 50-80% for revenue-generating sports.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "True market wage for student-athlete labor vs NCAA compensation"
+    },
+    {
+      "id": "reform_sustainability_threshold",
+      "question": "At what level of NIL legalization and state compensation law does NCAA amateurism enforcement collapse?",
+      "resolution_mechanism": "Track adoption rates of state NIL/compensation laws, athlete use of alternative income pathways (post-2021), NCAA rule compliance decline, institutional defection from NCAA governance",
+      "impact": "If collapse occurs before 2030: scaffold sunset is real, constraint transitions to rope/piton by 2035. If NIL remains marketable but NCAA rules persist: hybrid state emerges (partial extraction, high theater). Current trajectory suggests partial sunset \u2014 elite athlete exceptions expanding, non-elite athletes still constrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for NCAA amateurism enforcement collapse"
+    },
+    {
+      "id": "non_revenue_sport_constraint_justification",
+      "question": "Do eligibility rules serve a coordination function for non-revenue sports (swimming, volleyball, wrestling) distinct from their extraction role in revenue sports?",
+      "resolution_mechanism": "Comparative analysis of non-revenue vs revenue sport athlete experience; survey whether non-revenue athletes perceive constraint as coordination vs extraction; assess whether eligibility rules could be relaxed for non-revenue sports without compromising competitive integrity",
+      "impact": "If coordination function significant for non-revenue: constraint is partially justified as rope for those athletes. If extractive everywhere: constraint is snare across all sports with no legitimate coordination cover. Evidence suggests mixed: non-revenue athletes see minor coordination benefit but still face suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-revenue sports justify amateurism rules"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "NCAA eligibility rules create a structural constraint on student-athlete economic participation: athletes are barred from earning compensation (salary, endorsements, direct payments) in exchange for participating in college sports, while universities and the NCAA capture billions in revenue from media rights, ticket sales, and merchandise. The constraint exhibits the full spectrum of Deferential Realism classifications depending on observer position. For trapped athletes with no alternative income pathways, eligibility rules function as pure extraction (Snare) \u2014 they are unpaid labor generators with no exit options. For universities and the NCAA, the same rules function as coordination (Rope) \u2014 they standardize competition, prevent cost spiraling, and create predictable media markets. For the broader amateur athletics ideology, the constraint functions as degraded theater (Piton) \u2014 the amateurism principle persists through institutional inertia despite empirical irrelevance (professional infrastructure pervades college sports). The constraint is undergoing systematic reform through organized pressure (athlete unions, state legislation, NIL legalization post-2021), creating a Scaffold dynamic: sunset mechanisms are built in through generational transition. The extractiveness score (0.58) reflects moderate-high extraction: athletes lose significant earning potential (estimated 50-80% of market wage in revenue sports) but receive offsetting scholarship benefits that provide partial value, especially for non-elite athletes. The suppression score (0.72) reflects high barriers to exit: athletes cannot transfer without penalty, cannot earn endorsements (historically), and face legal/contractual enforcement of eligibility rules. Theater ratio (0.65) reflects that amateurism justification is increasingly performative \u2014 professional structures are pervasive, yet the amateur label persists.",
+    "key_agents": [
+      "Student Athletes (Revenue-Generating Sports): Primary victims (powerless/trapped) \u2014 bear full extraction via labor value suppression; highest extractiveness experience",
+      "Non-Elite Student Athletes: Secondary victims (moderate/constrained) \u2014 constrained exits via scholarship dependency; moderate extraction offset by educational access",
+      "NCAA Organization: Primary beneficiary (institutional/arbitrage) \u2014 rule-setter and revenue capture point; $1B+ annual extraction from media rights",
+      "University Athletic Departments: Secondary beneficiaries (institutional/arbitrage) \u2014 capture ticket sales, merchandise, and training infrastructure value; extract via athlete labor suppression",
+      "Media Broadcasters: Tertiary beneficiaries (institutional/arbitrage) \u2014 profit from athlete performance without direct compensation to performers",
+      "Athlete Advocacy Coalition: Organized counterforce (organized/constrained) \u2014 dismantling constraint through state legislation, NIL rights, transfer portal reforms; scaffold logic applies",
+      "Amateur Athletics Ideology: Institutional fiction (institutional/arbitrage) \u2014 maintains amateurism framing despite professional reality; piton classification derives from theater persistence"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Student-athletes in revenue-generating sports (football, basketball) generate estimated $1B+ in value (broadcast media rights, ticket sales, merchandise) while receiving $15K-50K annual compensation via scholarship. The market wage for comparable labor (professional minor leagues, international systems) suggests 50-80% of revenue flows to athletes in market systems. Under NCAA restrictions, athletes capture 0-10% of their generated value. However, extractiveness is not at snare maximum (0.70+) because scholarship benefits provide genuine offset value, especially for non-elite athletes without alternative income sources. Non-revenue sport athletes receive less extraction (educational access is their primary benefit). Average \u03b5 = 0.58 reflects the constraint's mixed severity. Suppression (0.72): High. NCAA enforcement mechanisms are substantial: eligibility certification offices, transfer portal restrictions, loss of eligibility for rule violations, legal contracts binding athletes. Alternative pathways have been systematically foreclosed: NIL restrictions (until 2021), agent contact restrictions, concurrent professional league participation restrictions. However, suppression is not absolute (0.85+) because athlete unions and state legislation are creating new pathways. Current trajectory shows suppression declining (post-2021 NIL legalization, transfer portal loosening) but still substantially enforced. Theater ratio (0.65): Moderate-high. The amateurism justification is performative: NCAA budgets $1B+, coaches earn $5M+, training facilities rival professional standards, media apparatus is professional-grade. Yet the amateurism label persists through repeated rhetorical affirmation despite structural irrelevance. Theater has declined over the measurement interval (from 0.78 to 0.65) as NIL legalization and state compensation law have made the amateurism fiction harder to maintain. Continued decline expected as reform matures.",
+    "perspectival_gap": "Trapped student-athletes in revenue sports see extraction (Snare): they are prevented from monetizing their own performance while universities profit. NCAA and universities see coordination (Rope): eligibility rules serve genuine functions (standardize competition, enable media markets, prevent cost spiraling). Non-elite athletes see mixed effects (Tangled Rope): they benefit from educational access but face substantial labor suppression. Athlete advocacy coalition sees temporary constraint (Scaffold): reform is underway through state legislation and NIL legalization, with a sunset arc of 5-10 years. Amateur athletics ideology sees only its own fiction (Piton): the amateurism principle persists through institutional momentum despite having lost functional relevance. Analytical observer sees hybrid coordination-extraction (Tangled Rope): genuine coordination function (standardized competition enabling media) combined with asymmetric extraction (athlete labor suppression), with organized counterforce degrading suppression over time. The perspectival gap is driven by differential exit options: beneficiaries (NCAA, universities) have high exit capacity (can modify rules, adjust revenue models); victims (athletes, especially non-elite) have low exit capacity (cannot leave without losing scholarships, cannot monetize performance).",
+    "directionality_logic": "Directionality (d) is derived from agent position in the extraction flow. Student-athletes are victims with trapped exits (high d \u2192 high f(d) \u2192 high experienced extractiveness). Non-elite athletes are victims with constrained exits (moderate d \u2192 moderate f(d) \u2192 moderate experienced extractiveness). NCAA and universities are beneficiaries with arbitrage exits (low d \u2192 low/negative f(d) \u2192 negative experienced extractiveness, i.e., they benefit). Athlete advocacy coalition has organized status with constrained exits (moderate d \u2192 moderate f(d), but their organizing activity is shifting the constraint toward Scaffold, reducing effective suppression). The analytical observer (analytical power, analytical exits) occupies a neutral structural position from which they can assess the asymmetry without bearing it themselves (d \u2248 0.72, moderate experience of the constraint as structural observation). The engine derives d automatically from beneficiary/victim declarations and exit options \u2014 student-athletes are marked as victims (trapped), NCAA/universities as beneficiaries (arbitrage), and the mathematics produces the differential \u03c7 values that correspond to each perspective's classification.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint does not exhibit mandatrophy because the analytical observer correctly identifies it as Tangled Rope (hybrid coordination-extraction), not as pure extraction (Snare) being labeled coordination, nor as coordination (Rope) being mislabeled extraction. The coordination function is real: eligibility rules do standardize competition and enable the media business model. The extraction is also real: athletes bear suppressed labor value. The tangled_rope classification is mandatrophy-resolved because it accounts for both functions explicitly. The constraint requires active enforcement (NCAA eligibility offices, transfer restrictions, legal contracts), beneficiaries are present (NCAA, universities, media), victims are present (student-athletes), and the hybrid nature is structural, not observational. The Scaffold perspective is not a mandatrophy escape \u2014 it is a legitimate perspectival reading from the vantage of organized counterforce (athlete unions, state legislation) that is dismantling the constraint through sunset mechanisms. No false natural law is being invoked (unlike the amateur athletics ideology, which is piton, not mountain). The classification hierarchy is: Snare (trapped athletes), Tangled Rope (analytical view), Rope (beneficiary view), Scaffold (organized counterforce view), Piton (amateurism ideology view). This hierarchy is coherent and non-mandatrophic."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "college_athlete_transfer_restrictions",
+      "nil_endorsement_gatekeeping"
+    ],
+    "dual_formulation_note": "NCAA eligibility rules form a constraint cluster with two downstream constraints: (1) transfer restrictions (student-athlete mobility suppression), (2) NIL endorsement gatekeeping (pre-2021 historical, now partially reformed). All three share the same beneficiary (NCAA/universities) but operate through different suppression mechanisms. Transfer restrictions suppress athlete bargaining power; NIL gatekeeping suppresses income pathways; eligibility rules suppress market entry entirely. Decomposition necessary because each has distinct reform trajectories and \u03b5 values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

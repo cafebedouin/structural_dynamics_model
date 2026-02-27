@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "israel_norwegian_law",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "norw"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Norwegian Law (Amendment to Article 42c) \u2014 Israeli Legislative Exit",
+    "topic_domain": "political/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_ministers",
+      "coalition_stability_mechanism"
+    ],
+    "victims": [
+      "parliamentary_accountability",
+      "backbench_legislators",
+      "electoral_representation_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Backbench Legislator",
+      "comment": "PERSPECTIVE 1: BACKBENCH LEGISLATOR (SNARE) \u2014 Trapped in a system where ministerial advancement depends on legislative obedience; lacks mechanisms to challenge or exit the constraint. A legislator on a coalition party list has no choice: if a minister ahead leaves the Knesset, the next person on the list is automatically promoted, regardless of readiness or preference. The constraint extractiveness is fully experienced \u2014 parliamentary autonomy is sacrificed for coalition stability that benefits others."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Coalition Partner Party",
+      "comment": "PERSPECTIVE 2: SMALL COALITION PARTNER PARTY (SNARE) \u2014 Constrained by coalition arithmetic. A small party benefits from the mechanism when it provides ministerial slots, but is extracted from when those slots are vacated and 'replaced' by the next list member without negotiation. The party cannot renegotiate or veto \u2014 it is subject to the constraint even as it nominally agrees to coalition terms. Moderate power but no real exit: leaving the coalition triggers government collapse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Executive Ministry (Beneficiary)",
+      "comment": "PERSPECTIVE 3: EXECUTIVE MINISTRY (TANGLED ROPE) \u2014 Benefits from the coordination function: ministers can resign to focus on executive duties without triggering government collapse or forcing coalition renegotiation. The mechanism also enables extraction \u2014 the ministry can bypass legislature constraints and maintain executive stability. The ministry has arbitrage: it can use the mechanism when convenient, or negotiate alternatives if needed. Mixed coordination (solves coalition instability) and extraction (enables executive dominance)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Coalition Leadership (Coordinating Beneficiary)",
+      "comment": "PERSPECTIVE 4: COALITION LEADERSHIP (ROPE) \u2014 Coalition leaders benefit from the mechanism as a pure coordination device: automatic succession prevents empty ministerial portfolios and stabilizes the governing coalition without forcing renegotiation with each resignation. The mechanism is largely functional for this agent \u2014 it solves a genuine collective action problem (how to handle ministerial vacancies without crisis). Extraction is minimal; the constraint is experienced as legitimate coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Reform-Minded Opposition Coalition",
+      "comment": "PERSPECTIVE 5: REFORM-MINDED OPPOSITION COALITION (SCAFFOLD) \u2014 Organized groups calling for sunset provisions or repeal see the Norwegian Law as a temporary arrangement under pressure. Proposals for enhanced parliamentary oversight, direct appointment (rather than automatic succession), or sunset clauses after one generation represent a structural sunset: the mechanism is increasingly challenged and may be revised or replaced by more democratic alternatives. The opposition has some power but is constrained by current coalition math \u2014 they frame the law as a transitional compromise."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Comparative Constitutional View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPARATIVE CONSTITUTIONAL VIEW (PITON) \u2014 From a comparative democracy perspective, the Norwegian Law represents an increasingly performative artifact: other democracies have eliminated similar legislative-executive coupling without government collapse (e.g., parliamentary ministers in many systems maintain dual roles or resign cleanly without automatic succession rules). The mechanism persists through institutional inertia \u2014 Israeli coalition politics has normalized it, but its functional value declines as oversight demands and transparency norms increase. Theater ratio is high because the law is often invoked rhetorically to justify executive decisions while the actual succession process is administratively routine."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coalition_stability_necessity",
+      "question": "Is the Norwegian Law actually necessary for coalition stability, or do other parliamentary democracies maintain stable governments without automatic ministerial succession rules?",
+      "resolution_mechanism": "Comparative analysis of parliamentary systems (UK, Germany, Australia) with dual legislative-executive roles; correlation of ministerial vacancy timelines with government collapse rates; coalition durability data from systems with and without automatic succession",
+      "impact": "If unnecessary: the law is revealed as extraction disguised as coordination, and extractiveness increases to snare range (\u03b5 \u2265 0.55). If necessary: coordination benefit is confirmed, and the law remains tangled rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the Norwegian Law is structurally necessary for coalition stability"
+    },
+    {
+      "id": "automatic_succession_representation_impact",
+      "question": "Does automatic succession (replacement by next list member) meaningfully undermine electoral representation and party list accountability, or is it a standard feature of party list systems?",
+      "resolution_mechanism": "Empirical study of party list systems across democracies; measurement of voter expectations vs actual outcomes when list members advance; analysis of backbench legislator political efficacy before/after next-list-member advancement; cross-national norms for ministerial advancement in proportional representation systems",
+      "impact": "If significant harm to representation: victims' classification strengthens (higher d values); suppression score increases. If standard feature: the law is less extractive, and supplants pure coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of automatic succession on electoral representation and party list integrity"
+    },
+    {
+      "id": "executive_accountability_mechanism",
+      "question": "Do ministerial resignations under the Norwegian Law actually reduce executive accountability, or are resigned ministers still accountable through other mechanisms (party discipline, future electoral consequences, personal reputation)?",
+      "resolution_mechanism": "Case study analysis of ministerial resignations and subsequent accountability: party punishment, electoral consequences, career impacts; comparison of accountability mechanisms for resigned ministers vs those who remain in parliament; longitudinal tracking of public perception of executive constraints",
+      "impact": "If accountability is effectively maintained: extraction is lower, suppression is lower, the law is closer to rope. If accountability is reduced: extraction increases, suppression increases, the law moves toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ministerial resignations reduce executive accountability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The Norwegian Law (Amendment to Article 42c of the Israeli Basic Law) permits ministers to resign from the Knesset and be replaced automatically by the next member of their party's list. The constraint simultaneously solves a coordination problem (how to handle ministerial vacancies in a coalition without government collapse) and enables extraction (executive ministers can reduce parliamentary accountability while maintaining executive power). The mechanism exhibits a perspectival split: coalition leadership and executive ministries experience it as pure coordination or beneficial hybrid; backbench legislators and small coalition partners experience it as extraction. The constraint's theater ratio (0.65) reflects that the mechanism is invoked rhetorically as a necessary constitutional feature while operating administratively as a routinized succession process. Over the observation interval (30 years), both theater and extractiveness have increased as the mechanism has been used more frequently and as parliamentary oversight norms have intensified, making the constraint appear increasingly performative rather than functionally necessary.",
+    "key_agents": [
+      "Executive Ministers: Primary beneficiaries (institutional/arbitrage) \u2014 can resign from Knesset to focus on executive duties without triggering coalition renegotiation; reduce parliamentary constraints",
+      "Coalition Leadership: Coordinating beneficiaries (institutional/arbitrage) \u2014 benefit from automatic succession preventing ministerial vacancies and government instability",
+      "Backbench Legislators: Primary victims (powerless/trapped) \u2014 advancement to ministerial position is automatic when they advance on party list; lack autonomy in accepting or refusing promotion",
+      "Small Coalition Partner Parties: Secondary victims (moderate/constrained) \u2014 lose control over ministerial slots when resignations trigger automatic succession; constrained by coalition arithmetic",
+      "Parliamentary Oversight Institutions: Structural victims (institutional/constrained) \u2014 reduced capacity to hold ministers accountable for parliamentary votes/positions they no longer hold",
+      "Reform-Minded Opposition: Organized pressure (organized/constrained) \u2014 advocate for sunset clauses or repeal; have some structural power but are limited by current coalition control",
+      "Analytical Observer: Constitutional comparatist \u2014 can assess the law from a civilizational/global perspective on parliamentary democracy"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint provides genuine coordination benefit (prevents coalition collapse from ministerial vacancies) but also enables executive extraction (ministers bypass parliamentary accountability). The extractiveness is not as high as a pure snare (0.55+) because the mechanism does solve a real problem \u2014 but it's higher than pure coordination (\u03b5 \u2264 0.35) because it systematically privileges executive over legislative interests. The value reflects the hybrid nature. Suppression (0.48): Moderate. Backbench legislators cannot refuse automatic advancement; small coalition partners cannot renegotiate ministerial allocations; parliamentary oversight institutions have reduced visibility into ministerial decision-making. But suppression is not total (0.60+) because the constraint operates transparently within a formal legal framework, and alternative political arrangements are theoretically available (repeal, constitutional amendment, coalition renegotiation). Theater ratio (0.65): High and increasing. The mechanism is invoked as a necessary constitutional feature, but its actual functionality is debatable \u2014 other democracies maintain stable governments without it. The performative component (rhetorical justification) has increased as the law has been used more frequently and as its necessity has been more openly questioned. The law persists partly through institutional inertia and partly because it genuinely serves the coalition equilibrium.",
+    "directionality_logic": "Beneficiary d-values are low because executive ministers and coalition leaders have high exit options (arbitrage) \u2014 they could theoretically dissolve the coalition, renegotiate, or operate under alternative rules. Their power is institutional, so they can shape the rules themselves. Victim d-values are high because backbench legislators are trapped (automatic advancement with no choice) and small coalition partners are constrained (cannot renegotiate). The analytical observer at civilizational scope derives a piton classification because the comparative evidence (other democracies without this law) suggests the constraint persists through theater rather than necessity. The coalition leadership's institutional/arbitrage perspective produces rope because they genuinely experience the law as solving their coordination problem (ministerial vacancies) without significant constraint on their agency.",
+    "perspectival_gap": "The primary gap is between coalition leaders/executive ministers (who see rope or tangled rope with low extraction) and backbench legislators/small partners (who see snare with high extraction). This gap arises from power asymmetry: beneficiaries have institutional power and arbitrage options, while victims are trapped or constrained. The secondary gap is between the executive's experience of necessary coordination and the analytical observer's assessment of unnecessary performance \u2014 the reform opposition occupies this middle ground, seeing the mechanism as a temporary scaffold that could be replaced by better alternatives. The theater ratio reveals the gap: the law is invoked as necessary (beneficial coordination narrative) while operating as optional routine (performative succession process).",
+    "mandatrophy_analysis": "TANGLED ROPE GATE RESOLUTION: The constraint successfully gates as tangled rope because it has (1) genuine beneficiary groups (executive ministers, coalition leadership) who experience coordination benefit, (2) genuine victim groups (backbench legislators, small coalition partners, parliamentary oversight institutions) who experience extraction, and (3) active enforcement (the law requires ministerial resignations to trigger succession; the mechanism is maintained through constitutional amendment and coalition agreements). The mandatrophy is resolved by showing that the mechanism solves a real problem (coalition instability from ministerial vacancies) while creating an extraction advantage for executives. The perspectival gap (rope vs snare vs scaffold) reflects different structural positions, not a confusion about the constraint's type. The piton perspective reveals the law as increasingly performative as comparative evidence (other stable democracies without it) mounts, but the constraint remains tangled rope at the primary classification level because the coordination function is real even as its necessity is questioned."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "coalition_government_stability",
+      "legislative_oversight_capacity",
+      "ministerial_accountability"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ]
+}

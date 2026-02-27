@@ -1,0 +1,175 @@
+{
+  "header": {
+    "constraint_id": "harlequin_historical_line_discontinuation",
+    "version": "1.0",
+    "generated_date": "2025-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "harlequin_hist"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Harlequin's Discontinuation of its Dedicated Historical Romance Imprint",
+    "topic_domain": "economic/publishing",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "harlequin_corporate_parent",
+      "contemporary_romance_division"
+    ],
+    "victims": [
+      "historical_romance_authors",
+      "historical_romance_readers",
+      "publishing_diversity_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Discontined Historical Romance Authors",
+      "comment": "PERSPECTIVE 1: DISCONTINED HISTORICAL ROMANCE AUTHORS (SNARE) \u2014 Mid-list authors dependent on Harlequin's historical line have no equivalent publisher ecosystem for historical romance at scale. Trapped by publishing infrastructure concentration and reader distribution networks. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.96. Maximum extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Historical Romance Reader Community",
+      "comment": "PERSPECTIVE 2: HISTORICAL ROMANCE READERS (SNARE) \u2014 Loss of dedicated imprint signals narrowing of genre diversity; readers face higher friction finding historical romance in consolidated market. Cannot exit existing author relationships easily. d\u22480.88, f(d)\u22481.35, \u03c3=1.2 \u2192 \u03c7\u22480.92."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "HarperCollins / Harlequin Corporate Leadership",
+      "comment": "PERSPECTIVE 3: HARLEQUIN CORPORATE LEADERSHIP (ROPE) \u2014 Discontinuation is justified as rational portfolio consolidation. Publishers benefit from simplified operational overhead and concentrated marketing spend on higher-margin contemporary romance. Experiences constraint as efficient resource allocation. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent and Small-Press Historical Romance Publishers",
+      "comment": "PERSPECTIVE 4: INDEPENDENT / SMALL-PRESS HISTORICAL ROMANCE PUBLISHERS (TANGLED ROPE) \u2014 Benefit from reduced competition for reader attention and displaced author pipelines; also face spillover from Harlequin's network effects and distribution advantages. Constrained by limited marketing budgets. d\u22480.50, f(d)\u22480.65, \u03c3=0.9 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consolidated Publishing Industry Norm",
+      "comment": "PERSPECTIVE 5: CONSOLIDATED PUBLISHING NORM (PITON) \u2014 Industry rationalization (fewer, larger imprints; concentration of reader acquisition spend) is performatively justified as 'market efficiency' but masks extraction of margin from specialist genres. theater_ratio=0.48 indicates moderate performative overlay. The consolidation narrative naturalizes extraction as inevitable industry evolution."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Genre Diversity and Publishing Accessibility (Analytical Observer)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER \u2014 GENRE DIVERSITY COST (SNARE) \u2014 The discontinuation extracts from the public good of genre diversity and reader/author ecosystem resilience. Over time, imprint consolidation reduces the diversity of publishing pathways available to authors and readers. d\u22480.90, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.94."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "author_displacement_magnitude",
+      "question": "How many mid-list Harlequin Historical authors lack viable alternative publishing pathways post-discontinuation?",
+      "resolution_mechanism": "Author career tracking; comparison of publishing output and income for authors before/after 2025 discontinuation announcement; survey of affected authors regarding alternative imprint acceptance rates",
+      "impact": "If >60% of affected authors fail to place subsequent works: extraction is severe and sustained. If <20% face significant displacement: extraction is moderate and partially absorbed by industry reallocation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of author displacement from Harlequin Historical discontinuation"
+    },
+    {
+      "id": "reader_retention_to_contemporary",
+      "question": "Do historical romance readers transition to contemporary romance imprints, or do they exit the Harlequin ecosystem entirely?",
+      "resolution_mechanism": "Tracking of reader purchasing behavior post-discontinuation; Goodreads/online community analysis of reader sentiment; comparison of contemporary romance sales uplift to historical romance sales loss",
+      "impact": "If readers transition to contemporary: corporate extraction is real but reader harm is partial. If readers exit Harlequin entirely: extraction is severe and creates gaps in reader satisfaction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reader retention pattern post-discontinuation"
+    },
+    {
+      "id": "competitive_ecosystem_absorption",
+      "question": "Do small-press historical romance publishers have sufficient capital and distribution reach to absorb the displaced author/reader demand, or does consolidation reduce overall market diversity?",
+      "resolution_mechanism": "Market share analysis of small-press historical romance publishers pre/post 2025; entry/exit rates for historical romance indies; reader accessibility metrics (discoverability, pricing, availability)",
+      "impact": "If small-press absorption is >80% effective: snare extracts market dominance but diversity persists. If <40% effective: snare extracts author/reader choice and reinforces publishing consolidation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Capacity of alternative publishers to absorb displaced historical romance ecosystem"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Harlequin's 2025 discontinuation of its dedicated Historical romance imprint represents a consolidation extraction that masks economic efficiency rhetoric with structural harm to genre diversity, author pathways, and reader ecosystem resilience. The discontinuation affects mid-list authors who built careers within Harlequin's historical infrastructure, readers who rely on the imprint's curation and distribution, and the broader publishing ecosystem's ability to sustain specialist genres. The constraint exhibits snare characteristics: high suppression (concentration of reader acquisition and distribution networks), high extractiveness (authors and readers have limited alternatives), and increasing theater (justification framing consolidation as 'market rationality'). The corporate beneficiary (HarperCollins/Harlequin leadership) experiences the discontinuation as rational portfolio optimization; the displaced authors and readers experience it as extraction with no recourse. Independent publishers benefit modestly from reduced competition but lack the distribution scale to fully absorb displaced demand.",
+    "key_agents": [
+      "Mid-list Historical Romance Authors: Primary victim (powerless/trapped) \u2014 built careers within Harlequin infrastructure; face barrier to establishing presence at other imprints; dependent on platform distribution",
+      "Historical Romance Readers: Primary victim (powerless/constrained) \u2014 face reduced curation and discovery friction; may exit romance category if alternative sources are insufficient",
+      "Harlequin/HarperCollins Corporate Leadership: Primary beneficiary (institutional/arbitrage) \u2014 reduce operational overhead and consolidate marketing spend; capture margin from portfolio simplification",
+      "Contemporary Romance Division: Secondary beneficiary (institutional/arbitrage) \u2014 recapture reader attention and author bandwidth previously devoted to historical subgenre",
+      "Independent Historical Romance Publishers: Secondary actor (moderate/constrained) \u2014 benefit from reduced competition and displaced author supply but lack distribution scale of major publisher",
+      "Publishing Diversity Ecosystem: Analytical victim \u2014 abstract collective good; sustained by multiple imprints competing for genre niches; loses resilience with consolidation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The discontinuation extracts real economic value from authors (reduced royalty opportunities, reputational cost of imprint closure, transition friction) and readers (reduced genre diversity, higher search costs). However, the extraction is not maximal (0.70+) because some displaced authors and readers can migrate to independent publishers or self-publishing, and the consolidation rationale (lower operational overhead) reflects genuine cost pressure rather than pure rent-seeking. The trajectory from 0.35 to 0.58 reflects increasing extraction over 4 years as corporate strategic clarity solidifies and authors face harder choices. Suppression (0.65): High. The consolidation of publishing infrastructure concentrates reader discovery and author placement in fewer hands. Barriers to alternative publishing include: (1) diminished visibility for independent publishers (no bookstore shelf space equivalent to Harlequin's retail footprint), (2) tacit knowledge sunk in Harlequin systems (cover design, marketing templates, reader expectations), (3) career risk for mid-list authors of pivoting to smaller presses with unproven sales channels. Theater ratio (0.48): Moderate. The discontinuation is partially justified through legitimate efficiency arguments (operational consolidation, portfolio rationalization) but also masks extractive motives (consolidate reader attention, simplify marketing). The theater has increased from 0.32 to 0.48 as corporate communications shifted from neutral portfolio management to efficiency framing.",
+    "perspectival_gap": "The beneficiary perspective (Harlequin leadership) sees rational consolidation \u2014 eliminating a lower-margin imprint allows concentrated investment in high-performing contemporary romance lines. The victim perspectives (authors, readers) see extraction \u2014 loss of viable publishing pathway and reader access to preferred genre. Independent publishers occupy a middle position: they benefit from reduced competition but cannot fully absorb displaced demand due to distribution disadvantages. The analytical observer perspective captures the long-term systemic cost: each imprint discontinuation reduces the diversity of publishing pathways, concentrating author and reader choice in fewer mega-publishers. The snare classification reflects that authors and readers cannot easily exit the constraint \u2014 the publishing infrastructure is not a free market but a concentrated oligopoly where Harlequin's scale and distribution network are difficult to replicate.",
+    "directionality_logic": "Harlequin/HarperCollins leadership: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary through portfolio consolidation and margin capture. Mid-list historical authors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction \u2014 authors lack alternative infrastructure at scale and face reputational cost of imprint discontinuation. Historical romance readers: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.35. High extraction \u2014 readers can migrate to other publishers but face friction and potential genre abandonment if quality alternatives are insufficient. Independent publishers: Mixed beneficiary/victim \u2192 d\u22480.50, f(d)\u22480.65. Benefit from reduced competition but constrained by limited distribution reach. Publishing diversity ecosystem: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.38. Abstract collective good that cannot organize or exit; each imprint closure reduces ecosystem resilience.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the snare is institutional rather than natural. The corporate justification ('market efficiency') risks naturalizing what is a contingent choice to consolidate rather than invest in underperforming imprints. A true mountain would be an immutable law of economics; the snare is a structure of incentives shaped by capital concentration and corporate ownership. The beneficiary perspective (efficiency) is legitimate within corporate accounting logic; the victim perspectives (loss of publishing diversity) are legitimate within ecosystem and author-resilience logic. The constraint's extractiveness arises not from physics or mathematics but from market structure \u2014 concentrated publishing firms can enforce extraction (discontinuation) because alternative pathways are scarce. Resolution would require either: (1) sustained investment in historical romance despite lower margins (cultural/mission-driven choice), or (2) ecosystem restructuring that enables independent publishers to compete for author/reader attention. The snare persists because neither condition currently obtains."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "publishing_market_consolidation",
+      "genre_diversity_erosion",
+      "author_career_fragility"
+    ],
+    "dual_formulation_note": "Harlequin Historical discontinuation is downstream of broader publishing consolidation (HarperCollins acquiring Penguin Random House competing imprints, Amazon's distribution control). The specific constraint has \u03b5=0.58 reflecting the extractive impact on historical romance ecosystem; upstream consolidation constraints have different \u03b5 values reflecting their broader market scope."
+  },
+  "directionality_overrides": []
+}

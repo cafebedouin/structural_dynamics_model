@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "college_admissions_market",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cadm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The US Elite College Admissions Market",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elite_institutions",
+      "wealthy_families",
+      "test_prep_industry"
+    ],
+    "victims": [
+      "lower_income_applicants",
+      "public_education_system",
+      "school_counselor_workforce"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Lower-Income Applicant",
+      "comment": "PERSPECTIVE 1: LOWER-INCOME APPLICANT (SNARE) \u2014 Trapped within a system where test prep costs $2,000-5,000, college counselors charge $5,000-15,000, essay coaching services $1,500-3,000, and application fees total $150-300. No realistic exit without accepting severe educational opportunity cost. The constraint extracts through gatekeeping: access to elite credentials is conditioned on financial capacity to pay for signals rather than merit alone. Maximum experienced extraction due to trapped exit and powerless position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public School Counselor",
+      "comment": "PERSPECTIVE 2: PUBLIC SCHOOL COUNSELOR (TANGLED ROPE) \u2014 Constrained by rising student-to-counselor ratios (national average 482:1), mandated college-reporting requirements, and underfunded guidance departments. Benefits from the constraint through professional legitimacy and institutional expectations (schools must provide college guidance), but extraction runs through mandatory reporting labor, credential standardization, and competitive pressure to demonstrate college placement rates. Neither fully beneficiary nor fully victim \u2014 the system both employs and constrains them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Elite Institution",
+      "comment": "PERSPECTIVE 3: ELITE INSTITUTION (ROPE) \u2014 Benefits from the market structure: standardized test scores enable fast filtering, applicant volume validates institutional prestige, tuition leverage through selective admission and yield management, and ability to arbitrage between full-pay and need-blind admissions. Experiences constraint as coordination mechanism for prestige competition. Can arbitrage by adjusting test requirements, creating early decision tracks, or modifying financial aid policies \u2014 has real exit options through institutional strategy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Test Prep and Counseling Industry",
+      "comment": "PERSPECTIVE 4: TEST PREP & COUNSELING INDUSTRY (ROPE) \u2014 Net beneficiary. Extraction flows toward this sector through tutoring fees, coaching services, SAT/ACT test administration revenue, essay coaching, and application management platforms. High arbitrage capacity: can pivot to test-optional markets, offer scholarship programs for visibility, or rebrand services as 'holistic admissions support.' Power and arbitrage options position this as a pure coordinator that benefits from high-stakes uncertainty."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Test-Optional Reform Coalition",
+      "comment": "PERSPECTIVE 5: TEST-OPTIONAL REFORM COALITION (SCAFFOLD) \u2014 Organized advocates (FairTest, Common Application, nonprofit counseling networks, social mobility organizations) are building structural alternatives to high-stakes testing: test-optional policies, free application fee waivers, holistic review guidelines, and direct institutional aid for low-income recruitment. Low effective extraction because the coalition has agency and sees a sunset: as test-optional norms spread and direct financial aid becomes more transparent, the traditional SAT/ACT gating mechanism loses mechanical force. Sunset horizon: 15-25 years for norms to mature across all tiers."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legacy Admissions Ritual",
+      "comment": "PERSPECTIVE 6: LEGACY ADMISSIONS (PITON) \u2014 Performative gatekeeping with attenuated function. Originally served coordination function (alumni network reinforcement, institutional identity), but primary effect now is inertial extraction: legacy preference correlates with parental wealth and whiteness, concentrating seats without explicit merit justification. Institutions maintain legacy policies through tradition despite mounting reputational cost and declining functional benefit. Theater ratio high: the ritual persists as institutional theater (alumni relations, development office justification) rather than coordination. Some institutions have eliminated legacy policies, revealing it as degraded rather than immutable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some form of college matching via selective admission is inherent to a system where institutional capacity is limited and demand exceeds supply. Scarce seats require some gatekeeping mechanism; the specific mechanism (test scores, essays, extracurriculars) is contingent, but the need for filtering is structural. However, the base properties contradict this \u2014 the extractiveness (0.58), suppression (0.68), and active enforcement requirement indicate this is not a natural law but rather a contingent institutional arrangement. Engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "socioeconomic_signal_validity",
+      "question": "Do standardized test scores and essay quality genuinely correlate with college success metrics (graduation, GPA, earnings), or do they primarily signal family resources and test-taking preparation access?",
+      "resolution_mechanism": "Regression analysis controlling for family income: correlation of test score with college success vs. income with college success; comparison of predictive power within socioeconomic strata",
+      "impact": "If genuine merit signal: admissions system is coordination (lower snare classification). If primarily resource signal: system is extraction (higher snare/tangled rope classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether test scores predict success independent of family resources"
+    },
+    {
+      "id": "elite_institutional_necessity",
+      "question": "What fraction of lower-income students' lifetime earnings advantage from elite college attendance would persist under alternative admissions methods (GPA-only, lottery from qualified applicants, test-optional with holistic review)?",
+      "resolution_mechanism": "Quasi-experimental studies comparing earnings outcomes across admissions policy changes; regression discontinuity at admissions cutoffs; longitudinal tracking of test-optional vs test-required cohorts",
+      "impact": "If advantage persists (>80%): the extractive gatekeeping is real, not artifact of selection. If advantage minimal (<20%): much of the gatekeeping is performative theater, not genuine opportunity creation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal contribution of elite institution attendance to earnings"
+    },
+    {
+      "id": "counselor_labor_substitution",
+      "question": "Could public school college guidance be effectively replaced or supplemented by low-cost digital platforms and peer mentoring without increasing educational inequality?",
+      "resolution_mechanism": "Pilot programs comparing outcomes of digital guidance, peer mentoring, and traditional counseling for equivalent applicant cohorts; cost-per-placement analysis; equity outcome measures",
+      "impact": "If effective substitutes exist: counselor constraint is primarily labor extraction (victims classification strengthened). If substitutes fail for certain populations: counselor labor is essential coordination (victims classification weakens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether digital/peer alternatives to counselor labor are effective"
+    },
+    {
+      "id": "prestige_signal_replaceability",
+      "question": "If institutions adopted transparent, low-cost admissions (GPA, test-optional, financial-aid-first), would employers and graduate programs still use elite institution attendance as a screening signal, or would the signal lose value?",
+      "resolution_mechanism": "Employer hiring preference studies pre/post admissions policy changes; graduate program admission criterion analysis; market signaling studies",
+      "impact": "If prestige signal persists: elite institutions can arbitrage indefinitely (rope perspective confirmed). If signal degrades: prestige competition becomes zero-sum (scaffold sunset accelerates).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether prestige signal remains after low-cost admissions adoption"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The US elite college admissions market is a high-stakes, many-to-one matching mechanism where institutional scarcity (limited seats at prestigious institutions) meets unlimited demand (all students seeking admission). The constraint functions simultaneously as a coordination mechanism (matching qualified students with appropriate institutions) and an extraction apparatus (concentrating educational opportunity and credential value among those with financial capacity for test prep, counseling, and application signaling). The system exhibits a perspectival cascade: lower-income applicants experience it as a snare (trapped by cost barriers); public school counselors experience it as tangled rope (mandated labor with constrained resources); elite institutions experience it as rope (prestige competition that benefits them); the test prep industry experiences it as rope (pure benefit through fees); reform advocates see it as scaffold (temporary, with sunset as alternatives mature); legacy admissions persist as piton (performative ritual); and the analytical observer risks naturalizing it as a mountain (inevitable scarcity sorting) when it is actually contingent institutional design. The theater ratio (0.65) reflects substantial performative content: the holistic review process, while framed as individualized assessment, operates within constraints that privilege resource-signaling capacity. Essays, extracurriculars, and demonstrated interest require time, money, and cultural capital to perform convincingly. The extractiveness (0.58) reflects that much of the system's function\u2014filtering applicants efficiently\u2014is genuine coordination, but the mechanism redistributes educational opportunity in ways that correlate with family wealth rather than merit, constituting extraction layered onto coordination.",
+    "key_agents": [
+      "Lower-Income Applicants: Primary victim (powerless/trapped) \u2014 face cost barriers to test prep ($2,000-5,000), counseling ($5,000-15,000), coaching ($1,500-3,000), and application fees ($150-300); lack access to institutional knowledge about admissions processes",
+      "Elite Institutions (Harvard, Yale, Stanford, etc.): Primary beneficiary (institutional/arbitrage) \u2014 benefit from large applicant pools enabling yield management, prestige metrics, and tuition leverage; can adjust test requirements and financial aid policies strategically",
+      "Test Prep and Counseling Industry: Secondary beneficiary (powerful/arbitrage) \u2014 captures $20+ billion annual market revenue through tutoring, test administration, essay coaching, and application management platforms",
+      "Public School Counselors: Secondary victim (moderate/constrained) \u2014 bound by mandated college reporting, high student-to-counselor ratios (482:1), underfunded departments; expected to provide guidance without resources",
+      "Wealthy Families: Primary beneficiary (powerful/arbitrage) \u2014 afford full-service admissions consulting ($10,000-50,000+), test prep, and multiple application attempts; capture disproportionate share of elite seats",
+      "Test-Optional Reform Coalition: Organized advocate (organized/constrained) \u2014 FairTest, Common Application, nonprofit counseling networks building alternative pathways; constrained by institutional resistance but seeing sunset horizon",
+      "Lower Public and Regional Universities: Secondary actor (institutional/constrained) \u2014 lose potential students and tuition revenue to prestige competition; constrained by need to compete using same ranking metrics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The system does perform genuine coordination (matching students with institutions, signaling academic preparation), but significant extraction occurs through: (1) information asymmetry (wealthy families access expensive counselors; poor families do not), (2) cost gatekeeping (test prep and application services are priced beyond lower-income reach), (3) signal-cost mismatch (essays require writing skills and time that correlate with family resources, not merit alone), (4) prestige extraction (elite institutions capture credential value without proportional quality differential). The extractiveness increased from 0.35 to 0.58 over the measurement interval as test prep costs rose, counselor-to-student ratios declined, and the system added more costly signals (demonstrated interest, optional essays, video responses). Suppression (0.68): High. Multiple barriers prevent exit or alternative pathways: (1) elite credentials are narrowly concentrated (top 50 institutions hold 70% of prestige value), (2) employers and graduate programs screen by institution, (3) student debt burden makes any college attendance path sticky, (4) public school counselors are mandated to guide students toward four-year institutions, (5) test-optional policies are recent and incomplete (most competitive institutions still heavily weight standardized tests). Theater ratio (0.65): High and increasing. Substantial performative content: holistic review is framed as individualized but operates within resource-constrained institutions using formulaic scoring; essays assess writing quality (correlated with tutoring access), not merit; extracurricular engagement correlates with family ability to fund activities; legacy admissions is pure performance (no merit link); demonstrated interest theater favors students whose families can afford travel and campus visits; the Common Application and its 650-word personal statement are performance artifacts, not merit signals. The theater ratio increased from 0.40 to 0.65 as institutions added more optional-but-expected signals (videos, supplements, demonstrated interest).",
+    "directionality_logic": "Each perspective derives d from the agent's structural position relative to the extraction flow. Lower-income applicants are trapped victims (d \u2248 0.95) \u2014 high power of f(d), maximum experienced extraction. Public school counselors are constrained extractees who also benefit from institutional expectations (d \u2248 0.55) \u2014 moderate f(d), mixed experienced extraction. Elite institutions are arbitrage beneficiaries (d \u2248 0.10) \u2014 low/negative f(d), negative experienced extraction (system subsidizes them). Test prep industry is arbitrage beneficiaries (d \u2248 0.05) \u2014 very low/negative f(d), negative experienced extraction (pure benefit). Wealthy families are arbitrage beneficiaries (d \u2248 0.08) \u2014 negative f(d). Reform coalition is constrained organizers with exit options (d \u2248 0.40) \u2014 moderate f(d), but low effective extraction because organized agents have leverage. The directionality derivation confirms the tangled_rope classification: multiple beneficiaries (institutions, industry, wealthy), multiple victims (lower-income, counselors, public system), active enforcement (institutional test requirements, application processes), and both coordination function (matching) and asymmetric extraction (resource gatekeeping).",
+    "perspectival_gap": "The constraint exhibits a maximum perspectival gap. Lower-income applicants see a snare (trapped, no exit, pure extraction). Counselors see tangled rope (mandated work with constrained resources, but professional legitimacy). Institutions see rope (beneficial coordination enabling prestige competition). Industry sees rope (pure benefit stream). Reform coalition sees scaffold with sunset (alternative pathways being built). Legacy system sees piton (performative theater without functional merit). Analytical observer risks seeing mountain (inevitable scarcity matching) but structural data shows this is false naturalization. The gap exists because the same mechanism (selective admission via high-cost signals) functions as fair filtering for resource-rich agents, as entrapment for resource-poor agents, and as performance ritual for institutional legitimacy. No single classification captures all experiences \u2014 the presheaf over the observation site is the complete answer.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy through perspectival composition. The temptation is to classify this as pure extraction (snare) \u2014 the system clearly extracts through gatekeeping and cost barriers. But this collapses the coordination function: the system does match students with institutions, does provide signals of academic preparation, does create incentives for achievement, and does enable genuine opportunity creation for some. Similarly, classifying as pure coordination (rope) collapses the extraction function: the prestige gatekeeping is real, the cost barriers are real, and the resource-correlation is real. The tangled_rope classification resolves this by insisting both functions exist simultaneously: the system is a genuine coordination mechanism for the market (matching) AND a genuine extraction mechanism for the opportunity structure (prestige gatekeeping, cost redistribution). This forces the analytical framework to hold both truths: (1) the system solves a real matching problem (coordination), and (2) the system solves it through mechanisms that disproportionately benefit the wealthy and powerful (extraction). The test-optional scaffold perspective shows that the extraction function is not immutable \u2014 alternative mechanisms (GPA, application fee waivers, holistic review without test scores) can solve the matching problem with lower extraction, but institutions resist because they benefit from the current high-extraction design. This confirms that the extraction is structural choice, not natural necessity. Mandatrophy is resolved by the perspectival cascade: no single type is correct; the system is correctly classified as tangled_rope when analyzed holistically, but that classification only makes sense when paired with the snare experience of trapped victims, the piton degradation of legacy systems, and the scaffold possibility of reform alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "student_debt_accumulation",
+      "intergenerational_wealth_transfer",
+      "k12_school_funding_inequality"
+    ],
+    "dual_formulation_note": "The college admissions market decomposes into multiple structurally distinct constraints: (1) the matching problem (how to allocate scarce elite seats among qualified applicants) \u2014 could be solved with low extractiveness via lottery or GPA-only, suggesting this is contingent institutional design, not natural law; (2) the prestige signaling market (whether elite institution attendance causally produces earnings advantage or merely signals pre-existing family resources) \u2014 this is upstream and empirically contested; (3) the test prep cost barrier (whether high-cost signals are necessary for admissions gatekeeping) \u2014 downstream from the matching problem, generates most of the extractive burden on lower-income applicants. The current story treats the full system as tangled_rope (0.58 extractiveness). A decomposition story focusing on prestige-signal validity would have much higher extractiveness (0.70+, snare) if earnings advantage is purely signaling. A decomposition story focusing on GPA-only matching would have extractiveness near 0.05 (rope). The current story unifies these by treating the institutional design as a choice that bundles coordination with extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

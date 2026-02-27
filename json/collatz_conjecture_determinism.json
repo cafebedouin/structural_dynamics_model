@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "collatz_conjecture_determinism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "collatz"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The Collatz Conjecture (3n + 1) Determinism",
+    "topic_domain": "mathematical/logical",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.03
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Empiricist (Computational Verification)",
+      "comment": "PERSPECTIVE 1: EMPIRICIST \u2014 Has verified the conjecture for billions of starting values without finding a counterexample. Trapped within the computational horizon: cannot exhaustively verify all positive integers. No escape from the logical constraint \u2014 every integer either satisfies the property or provides a counterexample. The conjecture's logical necessity is inescapable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Analyst (Logical Structure)",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER \u2014 The conjecture describes a structural property of the iteration function on positive integers. Logical necessity bounds the space of possibilities. The iteration either terminates at 1 or enters a cycle or diverges \u2014 no fourth option exists. The constraint emerges from the axioms of arithmetic, not from enforcement or coordination choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Research Community (Proof-Seeking Coalition)",
+      "comment": "PERSPECTIVE 3: RESEARCH COMMUNITY \u2014 Despite 80+ years of effort and the engagement of thousands of mathematicians, no proof exists. The research community is collectively trapped by the logical architecture of the problem itself. Even with unlimited resources and coordination, the underlying constraint (logical depth of the proof structure) cannot be bypassed. The constraint's immutability is the reason the problem remains open."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proof_existence_logical_depth",
+      "question": "Is the Collatz conjecture provable within standard Peano arithmetic, or is it (like Goodstein's theorem) logically independent of PA even though computationally verifiable?",
+      "resolution_mechanism": "Formal independence proof (via G\u00f6del-class methods); demonstration of PA unprovability while maintaining computational decidability",
+      "impact": "If independent: the conjecture is logically contingent on axiom choice (mountain property depends on formal system). If provable in PA: the conjecture is a true mountain \u2014 logically determined by arithmetic's foundational structure.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Collatz is provable in standard arithmetic or logically independent"
+    },
+    {
+      "id": "computational_universality_barrier",
+      "question": "Does the Collatz sequence exhibit uncomputable properties (e.g., the halting behavior being non-primitive-recursive or Turing-hard) that create a fundamental epistemological ceiling even if the conjecture is true?",
+      "resolution_mechanism": "Complexity-theoretic analysis of the iteration trajectory; proof of lower bounds on the stopping time function's computational class",
+      "impact": "If Turing-hard: even a valid proof may not provide constructive bounds on halting times for arbitrary starting values \u2014 the constraint is mountain-like in impossibility but with a computability flavor. If primitive-recursive: the stopping time is bounded and computable, reducing the logical depth barrier.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Collatz sequence dynamics exhibit uncomputable properties"
+    },
+    {
+      "id": "axiom_system_contingency",
+      "question": "If the conjecture is independent of ZFC or other standard axiom systems, is it still a 'mountain' or does axiom-dependence downgrade it to a 'rope' (coordination on which axioms to accept)?",
+      "resolution_mechanism": "Independence proof in multiple formal systems (PA, ZFC, ZFC+GCH); mapping of which axioms are required for the proof",
+      "impact": "If independent: the conjecture's classification shifts \u2014 it is a mountain only within chosen axiom system, making it partially contingent on coordination (axiom choice) rather than universal logical necessity. If provable in all systems: mountain status is robust.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Collatz independence is system-relative or universal"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "commentary": {
+    "narrative_context": "The Collatz conjecture presents a mathematical claim about the deterministic behavior of a simple iterative function: starting from any positive integer, apply the rule (if even, divide by 2; if odd, multiply by 3 and add 1) repeatedly. The conjecture asserts that every starting value eventually reaches 1. Despite 80+ years of computational verification across billions of test cases and the engagement of thousands of mathematicians, no proof or counterexample has been found. This constraint exemplifies a mountain \u2014 a logical/mathematical limit that is truly immutable across all perspectives. The base extractiveness (0.08) reflects the absolute theoretical barrier: no agent can escape the logical structure of the problem through strategic action, resource allocation, or institutional choice. The constraint emerges from the axioms of arithmetic, not from enforcement or coordination, satisfying the natural law signature.",
+    "key_agents": [
+      "Empiricist community: Computational verifiers (powerless/trapped) \u2014 can test but never exhaustively prove; trapped by the finiteness of verification against infinite cases",
+      "Mathematical research community: Organized effort (organized/constrained) \u2014 thousands of mathematicians seeking proof over 80+ years; constrained by the logical depth of the problem itself, not by resources",
+      "Formal systems (PA, ZFC, etc.): Axiom base (analytical/analytical) \u2014 the conjecture's truth-status depends on which axioms are accepted; analytical perspective reveals the axiom-dependency question",
+      "Individual mathematician: Single agent seeking proof (moderate/mobile) \u2014 can choose research direction but cannot escape the logical constraint once engaged"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The constraint does not extract resources or asymmetrically redistribute power \u2014 it is a logical property. The small non-zero value reflects the epistemological cost: verifying the conjecture requires computational effort and human insight, but these are not 'extracted' from anyone; they are freely contributed by researchers choosing to engage. No agent bears a cost imposed by another agent via this constraint. Suppression (0.02): Negligible. There are no alternatives being suppressed \u2014 the logical structure of the iteration is what it is. Researchers are free to abandon the problem, pursue alternative approaches, or accept independent solutions. Theater ratio (0.15): Low. Mathematical proofs are not performative \u2014 either a proof is valid or it is not. The small theater value reflects only the academic presentation overhead (papers, conferences) necessary to communicate results, not any substantive falsity in the mathematical claim itself. The ratio's slight increase over 80 years (0.08 \u2192 0.15) reflects growing computational complexity and the need for more sophisticated presentation methods, not increasing falsity.",
+    "perspectival_gap": "All three perspectives classify the constraint as mountain, revealing the true invariance of the logical property. The empiricist cannot escape the finiteness barrier; the analytical observer sees the logical necessity; the organized research community is constrained by the problem's inherent depth, not by external enforcement. Unlike the verification bottleneck exemplar, which showed perspectival divergence, the Collatz constraint demonstrates perspectival invariance \u2014 a gold-standard natural law property. No agent experiences the constraint as extraction, coordination, or temporary scaffolding. All experience it as an immutable logical boundary.",
+    "directionality_logic": "Directionality does not apply to mountains. No agent is beneficiary or victim \u2014 the constraint is a property of the mathematical structure itself, not a relationship between agents. The base extraction value (0.08) is constraint-inherent, not derived from power differential, exit options, or structural positioning. All agents face the same logical wall regardless of their power level or exit capacity.",
+    "mandatrophy_analysis": "GOLD-STANDARD MOUNTAIN: The Collatz conjecture resolves mandatrophy trivially \u2014 there is no extraction, no coordination, and no institutional arrangement to mask as natural law. The constraint is a genuine mathematical property, emerging directly from the axioms of arithmetic and the definition of the iteration function. The accessibility collapse (0.92) reflects that the problem is logically inaccessible to current mathematics \u2014 the techniques available are structurally incapable of reaching the proof, not because verification is hidden behind institutional barriers, but because the logical depth of the problem exceeds current mathematical tools. The resistance (0.03) reflects negligible alternative framings \u2014 the conjecture is what it is, independent of how one phrases it. This constraint is a true mountain, not a false summit."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "godel_incompleteness_first",
+      "halting_problem_undecidability"
+    ],
+    "dual_formulation_note": "The Collatz conjecture is part of a constraint family with other mathematical undecidability and independence results. G\u00f6del's first incompleteness theorem and the halting problem represent similar logical barriers. The Collatz conjecture is downstream of these more foundational results \u2014 its difficulty reflects deeper limitations on formal proof systems and computational decidability."
+  },
+  "directionality_overrides": []
+}

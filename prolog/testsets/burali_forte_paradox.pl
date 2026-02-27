@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: burali_forti_paradox
+% CONSTRAINT STORY: burali_forte_paradox
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_burali_forti_paradox, []).
+:- module(constraint_burali_forte_paradox, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -30,7 +31,8 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
-    domain_priors:emerges_naturally/1,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,9 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -52,22 +53,31 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: burali_forti_paradox
+ *   constraint_id: burali_forte_paradox
  *   human_readable: Burali-Forti Paradox
- *   domain: technological/mathematics
+ *   domain: mathematical_logic/set_theory
  *
  * SUMMARY:
- *   The Burali-Forti paradox demonstrates that the collection of all ordinal
- *   numbers cannot itself be a set. If it were, it would have an ordinal
- *   number greater than every ordinal in the collection, leading to a logical
- *   contradiction. It represents a fundamental limit on "totalities" in
- *   naive set theory, forcing the development of more constrained axiomatic
- *   systems like ZFC.
+ *   The Burali-Forti paradox reveals a fundamental limit of formal systems:
+ *   any consistent mathematical framework must distinguish between the
+ *   collection of all ordinal numbers and legitimate sets. If the collection
+ *   of all ordinals were itself a set, it would have an ordinal rank greater
+ *   than any ordinal in it — a logical contradiction. This constraint emerged
+ *   in 1897 when Cesare Burali-Forti recognized that Cantor's informal
+ *   ordinal theory encountered a self-referential barrier. The paradox is not
+ *   a bug in a particular axiomatization but a deep structural feature: every
+ *   formal system that permits transfinite arithmetic encounters this same
+ *   boundary. The constraint exhibits zero degrees of freedom across all
+ *   mathematical foundations. All major responses (ZFC's Separation and
+ *   Replacement axioms, NBG's proper class distinction, category-theoretic
+ *   approaches) accept the constraint as immutable and work within its
+ *   bounds.
  *
- * KEY AGENTS (by structural relationship):
- *   - Naive comprehension proponents: Primary target (powerless/trapped) — their foundational system is collapsed by the paradox.
- *   - Axiomatic set theorists: Primary beneficiary (institutional/arbitrage) — use the paradox to justify and enforce distinctions (e.g., sets vs. proper classes) that ensure consistency.
- *   - Analytical observer: Sees the paradox as a fundamental, unchangeable feature of logic.
+ * KEY AGENTS:
+ *   - Mathematical Logic Community: Institutional observer (institutional/arbitrage) — treats the paradox as a law of reasoning, not contingent on human choices
+ *   - Formal System Designers: Institutional architects (institutional/arbitrage) — design axiomatizations that respect the constraint rather than escape it
+ *   - Students and Practitioners: End users (powerless/trapped) — encounter the constraint as an immovable barrier to naive intuition
+ *   - Philosophers of Mathematics: Analytical observers (analytical/analytical) — debate whether the constraint reflects world-structure or formal-system structure
  */
 
 /* ==========================================================================
@@ -75,107 +85,83 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(burali_forti_paradox, 0.20).
-domain_priors:suppression_score(burali_forti_paradox, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(burali_forti_paradox, 0.02).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(burali_forte_paradox, 0.12).
+domain_priors:suppression_score(burali_forte_paradox, 0.03).
+domain_priors:theater_ratio(burali_forte_paradox, 0.08).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(burali_forti_paradox, extractiveness, 0.20).
-narrative_ontology:constraint_metric(burali_forti_paradox, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(burali_forti_paradox, theater_ratio, 0.02).
+narrative_ontology:constraint_metric(burali_forte_paradox, extractiveness, 0.12).
+narrative_ontology:constraint_metric(burali_forte_paradox, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(burali_forte_paradox, theater_ratio, 0.08).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-narrative_ontology:constraint_metric(burali_forti_paradox, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(burali_forti_paradox, resistance, 0.0).
+narrative_ontology:constraint_metric(burali_forte_paradox, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(burali_forte_paradox, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(burali_forti_paradox, scaffold).
-narrative_ontology:human_readable(burali_forti_paradox, "Burali-Forti Paradox").
-narrative_ontology:topic_domain(burali_forti_paradox, "technological/mathematics").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(burali_forte_paradox, mountain).
+narrative_ontology:human_readable(burali_forte_paradox, "Burali-Forti Paradox").
+narrative_ontology:topic_domain(burali_forte_paradox, "mathematical_logic/set_theory").
 
-% --- Emergence flag (required for mountain constraints) ---
-% The paradox emerges naturally from the definitions of ordinals and well-ordering.
-domain_priors:emerges_naturally(burali_forti_paradox).
+domain_priors:emerges_naturally(burali_forte_paradox).
 
-% --- Structural relationships (REQUIRED for non-mountain perspectives) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(burali_forti_paradox, axiomatic_set_theorists).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(burali_forti_paradox, naive_comprehension_proponents).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE NAIVE MATHEMATICIAN (SNARE)
-% Agent attempting to use unrestricted comprehension. The paradox acts as a
-% trap that collapses their foundational system into contradiction.
-constraint_indexing:constraint_classification(burali_forti_paradox, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE AXIOMATIC SYSTEM (ZFC) (ROPE)
-% For a formal system like ZFC, the paradox is a coordination mechanism. It
-% forces the distinction between "Sets" and "Proper Classes," a functional
-% tool that prevents the system from collapsing.
-constraint_indexing:constraint_classification(burali_forti_paradox, scaffold,
-    context(agent_power(institutional),
-            time_horizon(historical),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% To the logician or set theorist, the paradox is an unchangeable feature of
-% the mathematical landscape. It is a fundamental limit that cannot be
-% altered, only navigated around.
-constraint_indexing:constraint_classification(burali_forti_paradox, mountain,
+% PERSPECTIVE 1: MATHEMATICAL LOGICIAN (MOUNTAIN) — The paradox is an irreducible logical limit: any formal system that permits unrestricted set formation must distinguish between the 'collection of all ordinals' (which cannot be a set without contradiction) and legitimate sets. This constraint is a natural law of mathematical ontology, not a contingent institutional arrangement. Zero degrees of freedom.
+constraint_indexing:constraint_classification(burali_forte_paradox, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: SET THEORY COMMUNITY (MOUNTAIN) — Institutional mathematics accepts the constraint as immutable. All major formal systems (ZF, ZFC, NBG, MK) respond by restricting set formation (Separation, Replacement axioms) or distinguishing proper classes from sets. The constraint is inescapable — any alternative foundation encounters the same barrier under a different name. No arbitrage possible.
+constraint_indexing:constraint_classification(burali_forte_paradox, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: NOVICE MATHEMATICIAN (MOUNTAIN) — First encountering the paradox, the student discovers an immutable fact: intuitive naïve set theory (the assumption that any property defines a set) is incoherent. No amount of cleverness or institutional work can restore the naïve approach. The paradox is a hard barrier to understanding.
+constraint_indexing:constraint_classification(burali_forte_paradox, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
             exit_options(trapped),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(burali_forti_paradox_tests).
+:- begin_tests(burali_forte_paradox_tests).
 
-test(perspectival_gap) :-
-    % Verify the classification changes across key perspectives.
-    constraint_indexing:constraint_classification(burali_forti_paradox, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(burali_forti_paradox, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(burali_forti_paradox, TypePowerless, context(agent_power(powerless), _, _, _)),
-    TypeAnalytical == mountain,
-    TypeInstitutional == rope,
-    TypePowerless == snare,
-    TypeAnalytical \= TypeInstitutional,
-    TypeInstitutional \= TypePowerless.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(burali_forte_paradox, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(burali_forte_paradox, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(analytical_is_mountain) :-
-    constraint_indexing:constraint_classification(burali_forti_paradox, mountain, context(agent_power(analytical), _, _, _)).
-
-test(mountain_thresholds_adherence) :-
-    % Verify the base metrics align with the Mountain classification.
-    narrative_ontology:constraint_metric(burali_forti_paradox, extractiveness, E),
-    narrative_ontology:constraint_metric(burali_forti_paradox, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(burali_forte_paradox, ExtMetricName, E),
+    domain_priors:suppression_score(burali_forte_paradox, S),
     E =< 0.25,
     S =< 0.05.
 
-:- end_tests(burali_forti_paradox_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(burali_forte_paradox),
+    narrative_ontology:constraint_metric(burali_forte_paradox, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(burali_forte_paradox, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(burali_forte_paradox_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -183,81 +169,87 @@ test(mountain_thresholds_adherence) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (0.20) is low, as the "extraction" is purely
- *   semantic: the loss of unrestricted comprehension. It does not extract
- *   material resources. The suppression score (0.05) is very low because
- *   while alternative axiomatic systems (like NF) exist, they do not
- *   "suppress" the paradox itself; they are merely different ways of avoiding
- *   it. The paradox is a feature of logic, not a policy choice. The NL
- *   profile metrics (collapse=1.0, resistance=0.0) reflect its status as an
- *   absolute logical limit.
+ *   Extractiveness (0.12): The paradox extracts almost no cost from any agent — it is purely revelatory, not extractive. The constraint identifies what cannot be done (form a set of all ordinals), but this identification requires no coercion or institutional enforcement. The modest extractiveness reflects the cost of re-education when students discover naive set theory is incoherent. Suppression (0.03): Minimal. The paradox cannot be suppressed — once discovered, it is logically transparent. Every agent in mathematics acknowledges it. No alternatives exist that bypass the constraint. Theater ratio (0.08): Extremely low. The paradox presents as pure logic with no performative content. The formal proof is straightforward and noncontroversial. No institutional ritual or theatrical activity is required to maintain the constraint. The slight elevation above zero reflects minor variations in pedagogical framing across textbooks.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For a naive actor, the paradox is a Snare that destroys
- *   their system. For an institutional system (ZFC), it's a Rope used to
- *   coordinate behavior (distinguishing sets from classes). For the analytical
- *   observer, it is a Mountain—an immutable law of formal systems. This
- *   Mountain -> Rope -> Snare transition is a classic signature of a
- *   fundamental limit being managed by an institutional framework.
+ *   UNIFORM MOUNTAIN: All three perspectives classify the Burali-Forti paradox identically as Mountain. There is no perspectival gap. This is the canonical case of a uniform-type constraint where the classification is invariant across all observer positions. The paradox is neither more nor less extractive depending on the observer's power level or exit options. This uniformity demonstrates that the constraint is a genuine natural law of logic, not a social arrangement that different actors experience differently. The consensus across perspectives (logician, institutional community, novice) is the hallmark of Mountain classification.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `axiomatic_set_theorists` who build and maintain consistent
- *     formal systems. The paradox provides the justification for the rules
- *     (like the Axiom of Regularity) that give their systems power and stability.
- *   - Victims: `naive_comprehension_proponents` who believe any describable
- *     collection can form a set. The paradox directly targets and invalidates
- *     this belief.
+ *   MOUNTAIN CONSTRAINT — BENEFICIARY/VICTIM ANALYSIS NOT APPLICABLE: Mountains are natural laws. No agent benefits or bears cost from the Burali-Forti paradox in the structural sense required for directionality computation. The paradox is not extracted from anyone; it is discovered by everyone. There is no beneficiary asymmetry — no group that profits while others pay. The mathematical community collectively benefits from knowing the constraint (it prevents false theorems), but this is not extraction in the DR sense. There is no victim group. Directionality derivation is not performed for mountains, and no beneficiary/victim declarations are provided.
  *
- * MANDATROPHY ANALYSIS:
- *   The classification correctly identifies the core constraint as a Mountain
- *   of logic. The Rope and Snare classifications are emergent properties of
- *   how different agents interact with this Mountain. An analysis that only
- *   saw the Snare (the contradiction) or the Rope (the ZFC rules) would miss
- *   the underlying, unchangeable reality that necessitates them.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_burali_forti_paradox,
-    "Are 'Proper Classes' a real mathematical landscape (Mountain) or merely a linguistic scaffold (Rope) to avoid the Snare?",
-    "Development of a grand unified theory of categories vs sets.",
-    "If Mountain: The hierarchy of size is a fundamental limit. If Rope: It's a bug in our current notation.",
+    ontological_commitment,
+    'Is the paradox a constraint on the world''s actual structure, or a constraint on human formal systems for describing the world?',
+    'Metaphysical analysis of whether ordinals are discovered or constructed; comparison of ontological costs across alternative formal systems',
+    'If world-structure: the constraint is noumenal (true independently). If formal-system: the constraint is epistemic (an artifact of our axioms). Classification remains Mountain either way, but interpretation differs.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(ontological_commitment, conceptual, 'Ontological status of the paradox constraint').
+
+omega_variable(
+    type_hierarchy_necessity,
+    'Could a type-theoretic alternative (where objects have hierarchical types) eliminate the paradox-structure, or does the paradox re-emerge under different names in type systems?',
+    'Formal investigation of whether type hierarchies truly avoid self-application or merely defer the constraint to a metalevel; proof-theoretic comparison of consistency strength',
+    'If type systems avoid it: the constraint is specific to naive set theory (suggests decomposition). If it re-emerges: the constraint is universal to any recursively enumerable formal system (confirms Mountain).',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_burali_forti_paradox, conceptual, "Are 'Proper Classes' a real feature of mathematics or a notational patch?").
+narrative_ontology:omega_variable(type_hierarchy_necessity, empirical, 'Whether alternative formal systems escape the paradox structure').
+
+omega_variable(
+    intuitionistic_alternatives,
+    'Do constructivist or intuitionistic approaches that reject the Law of Excluded Middle experience a weaker or structurally different version of the Burali-Forti constraint?',
+    'Formal analysis of constructive set theory (CZF, IZF); comparison of what can and cannot be constructed in intuitionistic logic; proof that the paradox still emerges',
+    'If constructivism weakens the constraint: suggests the paradox depends on classical logic assumptions. If constraint persists: strengthens Mountain classification by showing universality across constructive foundations.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(intuitionistic_alternatives, empirical, 'Whether constructivist logic avoids the paradox').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(burali_forti_paradox, 0, 10).
+narrative_ontology:interval(burali_forte_paradox, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is < 0.46, so temporal measurements are not required.
+% Theater ratio over time
+narrative_ontology:measurement(bfp_tr_t0, burali_forte_paradox, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(bfp_tr_t50, burali_forte_paradox, theater_ratio, 50, 0.08).
+narrative_ontology:measurement(bfp_tr_t100, burali_forte_paradox, theater_ratio, 100, 0.08).
+
+% Extraction over time
+narrative_ontology:measurement(bfp_be_t0, burali_forte_paradox, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(bfp_be_t50, burali_forte_paradox, base_extractiveness, 50, 0.12).
+narrative_ontology:measurement(bfp_be_t100, burali_forte_paradox, base_extractiveness, 100, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This is a fundamental logical constraint, not a designed coordination
-% mechanism, so Boltzmann/Network data is not applicable.
+narrative_ontology:coordination_type(burali_forte_paradox, information_standard).
+narrative_ontology:affects_constraint(burali_forte_paradox, cantor_diagonal_argument).
+narrative_ontology:affects_constraint(burali_forte_paradox, russell_paradox).
+narrative_ontology:affects_constraint(burali_forte_paradox, limitation_theorem_hierarchy).
+
+% DUAL FORMULATION NOTE:
+% The Burali-Forti paradox is structurally upstream of the Russell paradox and the Gödel limitation hierarchy. All three are mountain constraints in mathematical logic, but they reveal different aspects of the same phenomenon: unrestricted self-reference in formal systems is incoherent. The network linkage shows how this constraint family establishes the universal bounds on what formal mathematics can express.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% The standard derivation from beneficiary/victim status and exit options
-% accurately models the directionality for all agents. No overrides needed.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

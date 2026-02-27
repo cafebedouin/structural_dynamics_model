@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: hilbert_hotel_infinite_capacity
+% CONSTRAINT STORY: hilberts_hotel
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-01-02
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_hilbert_hotel_infinite_capacity, []).
+:- module(constraint_hilberts_hotel, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -38,12 +39,10 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,20 +52,27 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: hilbert_hotel_infinite_capacity
+ *   constraint_id: hilberts_hotel
  *   human_readable: Hilbert's Hotel Infinite Capacity Accommodation
- *   domain: technological
+ *   domain: mathematical_logic/theoretical_physics
  *
  * SUMMARY:
- *   Hilbert's Hotel demonstrates the seemingly paradoxical properties of infinity,
- *   showing that a fully occupied hotel with an infinite number of rooms can still
- *   accommodate additional guests. This is a conceptual constraint showing the limit
- *   of finite intuition when dealing with infinite sets.
+ *   Hilbert's Hotel is a mathematical thought experiment demonstrating the
+ *   paradoxical properties of infinity. A hotel with infinitely many rooms,
+ *   each occupied by a guest, can still accommodate any finite number of
+ *   additional guests through a simple reassignment procedure: move the guest
+ *   in room n to room 2n, creating an infinity of vacant odd-numbered rooms.
+ *   The constraint exemplifies a natural law of pure mathematics — it emerges
+ *   from the axiomatic structure of set theory and is invariant across all
+ *   interpretations and observers. There are no beneficiaries or victims in
+ *   the sense of Deferential Realism: the constraint is non-extractive,
+ *   non-suppressive, and non-coercive. It is a logical necessity, not an
+ *   institutional arrangement or power relation.
  *
- * KEY AGENTS (by structural relationship):
- *   - Guests: Occupants of the hotel (powerless/trapped) — benefit from accommodation, potentially displaced by new arrivals.
- *   - Manager: Organizer of the hotel (institutional/arbitrage) — Facilitates accommodation by re-allocating rooms.
- *   - Mathematicians: Analytical observers (analytical/analytical) — Understand the underlying set theory principles.
+ * KEY AGENTS:
+ *   - Guest Seeking Accommodation: Occupant (powerless/analytical) — subject to the constraint but not its victim; the constraint enables their accommodation
+ *   - Hotel Manager: Administrative actor (institutional/analytical) — executes the reassignment but cannot escape or negotiate the underlying mathematical structure
+ *   - Mathematical Analyst: Observer (analytical/analytical) — perceives the constraint as a structural property of infinite cardinality
  */
 
 /* ==========================================================================
@@ -74,121 +80,83 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(hilbert_hotel_infinite_capacity, 0.01). % Very low extraction - more about coordination.
-domain_priors:suppression_score(hilbert_hotel_infinite_capacity, 0.01).   % Very low suppression - no real alternatives are blocked.
-domain_priors:theater_ratio(hilbert_hotel_infinite_capacity, 0.01).       % No performative aspect
+domain_priors:base_extractiveness(hilberts_hotel, 0.08).
+domain_priors:suppression_score(hilberts_hotel, 0.02).
+domain_priors:theater_ratio(hilberts_hotel, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(hilbert_hotel_infinite_capacity, extractiveness, 0.01).
-narrative_ontology:constraint_metric(hilbert_hotel_infinite_capacity, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(hilbert_hotel_infinite_capacity, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(hilberts_hotel, extractiveness, 0.08).
+narrative_ontology:constraint_metric(hilberts_hotel, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(hilberts_hotel, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
+narrative_ontology:constraint_metric(hilberts_hotel, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(hilberts_hotel, resistance, 0.08).
 
-narrative_ontology:constraint_metric(hilbert_hotel_infinite_capacity, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(hilbert_hotel_infinite_capacity, resistance, 0.01).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(hilberts_hotel, mountain).
+narrative_ontology:human_readable(hilberts_hotel, "Hilbert's Hotel Infinite Capacity Accommodation").
+narrative_ontology:topic_domain(hilberts_hotel, "mathematical_logic/theoretical_physics").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(hilbert_hotel_infinite_capacity, mountain).
-narrative_ontology:human_readable(hilbert_hotel_infinite_capacity, "Hilbert's Hotel Infinite Capacity Accommodation").
-narrative_ontology:topic_domain(hilbert_hotel_infinite_capacity, "technological").
+domain_priors:emerges_naturally(hilberts_hotel).
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(hilbert_hotel_infinite_capacity).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(hilbert_hotel_infinite_capacity). % Required for Tangled Rope
-
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-
-domain_priors:emerges_naturally(hilbert_hotel_infinite_capacity).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(hilbert_hotel_infinite_capacity, hotel_management).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(hilbert_hotel_infinite_capacity, hotel_guests).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(hilbert_hotel_infinite_capacity, mountain,
+% PERSPECTIVE 1: GUEST SEEKING ACCOMMODATION (MOUNTAIN) — No matter how many guests are accommodated, the infinite cardinality of available rooms is an irreducible mathematical fact. The guest cannot negotiate, resist, or exit this constraint — it is a property of the mathematical structure itself. Zero degrees of freedom.
+constraint_indexing:constraint_classification(hilberts_hotel, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(hilbert_hotel_infinite_capacity, mountain,
+% PERSPECTIVE 2: HOTEL MANAGER (MOUNTAIN) — The manager's ability to accommodate additional guests is not a consequence of policy, incentive, or enforcement. It follows necessarily from the mathematical structure of infinite cardinality and the bijection operation that reassigns guests. The constraint is a logical necessity, not an institutional arrangement.
+constraint_indexing:constraint_classification(hilberts_hotel, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(hilbert_hotel_infinite_capacity, mountain,
+% PERSPECTIVE 3: MATHEMATICAL ANALYST (MOUNTAIN) — Hilbert's Hotel exemplifies the counterintuitive but necessary properties of infinite sets. The constraint emerges from axiomatic set theory and is invariant across all interpretations. It is not subject to negotiation, measurement variation, or alternative formulations. The proof is the structure.
+constraint_indexing:constraint_classification(hilberts_hotel, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(hilbert_hotel_infinite_capacity_tests).
+:- begin_tests(hilberts_hotel_tests).
 
-test(perspectival_agreement) :-
-    % Verify perspectival agreement: All agents see it as a Mountain.
-    constraint_indexing:constraint_classification(hilbert_hotel_infinite_capacity, mountain, context(_, _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(hilberts_hotel, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(hilberts_hotel, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(hilbert_hotel_infinite_capacity, ExtMetricName, E),
-    E =< 0.25. % Mountain: extractiveness <= 0.25
+    narrative_ontology:constraint_metric(hilberts_hotel, ExtMetricName, E),
+    domain_priors:suppression_score(hilberts_hotel, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(hilbert_hotel_infinite_capacity_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(hilberts_hotel),
+    narrative_ontology:constraint_metric(hilberts_hotel, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(hilberts_hotel, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(hilberts_hotel_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -196,75 +164,86 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   This is a Mountain constraint because it reflects a mathematical property
- *   of infinite sets, specifically that an infinite set can have new elements
- *   added without increasing its cardinality.
+ *   Extractiveness (0.08): Minimal. The reassignment mechanism imposes no asymmetric cost on guests — they are moved but their room assignments are fair (guest n gets room 2n). The low value reflects that this is a thought experiment without physical costs. The small non-zero value accounts for the theoretical abstraction that even rearrangement has a cost in terms of model complexity. Suppression (0.02): Negligible. No agent is coerced or denied alternatives. The constraint operates at the logical level, not the social level. Resistance (0.08): Minimal. The mathematical structure admits no resistance or circumvention — it is a consequence of axioms, not enforcement. Theater ratio (0.15): Low. The constraint performs no theatrical function; it is purely logical. The small non-zero value reflects that the thought experiment itself is a pedagogical performance illustrating a mathematical principle.
  *
  * PERSPECTIVAL GAP:
- *   There is no significant perspectival gap, as all agents, regardless of their
- *   role, recognize the inherent mathematical truth.
+ *   Unlike typical constraints that differ by observer perspective, Hilbert's Hotel classifies identically from all structural positions. The guest, manager, and analyst all perceive the same mountain constraint because the underlying mathematical structure is observer-independent. This uniformity is a defining characteristic of true natural law constraints. The constraint does not become a snare for guests, a rope for managers, or a scaffold for analysts — it remains an immutable logical necessity regardless of structural position. This invariance is the hallmark of mountain classification in the DR framework.
  *
  * DIRECTIONALITY LOGIC:
- *   Hotel Management benefits from understanding and utilizing the principle to
- *   accommodate guests. Guests may perceive a minor extraction in the form of
- *   being moved rooms, but this is negligible compared to the benefit of
- *   accommodation. The mathematician benefits from the consistency of logic.
+ *   Directionality is not applicable to Hilbert's Hotel in the standard sense because the constraint is non-extractive and non-relational. No agent benefits at the expense of others; no power differential drives the constraint. The mathematical structure applies equally to all participants. The engine would derive d = 0.5 (symmetric) for all observers, producing f(d) ≈ 0.65 (powerful context), but the low base extractiveness (0.08) combined with minimal suppression (0.02) ensures that χ remains negligible regardless of directionality scaling. This is the signature of a genuine mountain: the classification is robust to changes in the observation context.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification prevents mislabeling as pure extraction because the
- *   extraction is minimal. The primary function is the coordination of
- *   accommodation, which is facilitated by the properties of infinity.
+ *   PURE NATURAL LAW: Hilbert's Hotel requires no mandatrophy resolution because it exhibits zero perspectival gap and zero structural asymmetry. It is a mathematical constant — true in all contexts, independent of institutional framing, and invariant across all time horizons. The constraint does not risk being mislabeled as coordination masking extraction (the mandatrophy problem) because there is no extraction present. No agent exercises power; no asymmetric costs exist. The constraint is the opposite of mandatrophy: a case where the mathematical framing is transparent and complete.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_hilbert_hotel,
-    'Does the idealized nature of Hilbert's Hotel accurately reflect real-world resource allocation challenges involving finite constraints?',
-    'Empirical studies comparing idealized models with real-world resource management practices.',
-    'If True: Hilbert's Hotel offers valuable insights. If False: It serves as a purely theoretical construct.',
+    physical_realizability,
+    'Does Hilbert''s Hotel constraint apply to physically realizable systems or only to abstract mathematical structures?',
+    'Examination of quantum field theory limits on state space cardinality; exploration of whether the physical universe instantiates infinite cardinality or only very-large-finite cardinality at Planck scales',
+    'If physical: constraint may be mountain in mathematical domain but degraded to rope/tangled_rope in physical systems. If abstract-only: constraint remains mountain universally, but its applicability to technological systems is merely analogical.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(physical_realizability, empirical, 'Whether the constraint applies to physical systems or only abstract mathematics').
+
+omega_variable(
+    cardinality_formalism_dependence,
+    'Is the constraint dependent on the choice of set-theoretic axioms (ZFC vs alternative foundations)?',
+    'Analysis of Hilbert''s Hotel construction in intuitionistic logic, constructive set theory, and type-theoretic foundations; demonstration of whether the counterintuitive properties persist or collapse under alternative formalisms',
+    'If formalism-dependent: mountain classification is conditional on foundational choice. If invariant: true mountain across all consistent mathematical frameworks.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(cardinality_formalism_dependence, conceptual, 'Whether the constraint depends on specific set-theoretic axioms').
+
+omega_variable(
+    extraction_in_abstract_space,
+    'Can the reassignment mechanism be interpreted as extraction in the sense of Deferential Realism, or is the constraint genuinely non-extractive?',
+    'Formal analysis of whether the bijection operation imposes asymmetric costs/benefits on guests; examination of whether the reordering constitutes a form of coercion or is purely neutral rearrangement',
+    'If extractive: classification may degrade to rope or tangled_rope. If non-extractive: mountain classification is confirmed with zero suppression.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(extraction_in_abstract_space, conceptual, 'Whether the reassignment mechanism constitutes extraction').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(hilbert_hotel_infinite_capacity, 0, 10).
+narrative_ontology:interval(hilberts_hotel, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% No Temporal Data required as extractiveness is very low.
+% Theater ratio over time
+narrative_ontology:measurement(hilbert_tr_t0, hilberts_hotel, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(hilbert_tr_t5, hilberts_hotel, theater_ratio, 5, 0.15).
+narrative_ontology:measurement(hilbert_tr_t10, hilberts_hotel, theater_ratio, 10, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(hilbert_be_t0, hilberts_hotel, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(hilbert_be_t5, hilberts_hotel, base_extractiveness, 5, 0.08).
+narrative_ontology:measurement(hilbert_be_t10, hilberts_hotel, base_extractiveness, 10, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-narrative_ontology:coordination_type(hilbert_hotel_infinite_capacity, information_standard).
+narrative_ontology:coordination_type(hilberts_hotel, information_standard).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(hilbert_hotel_infinite_capacity, 0.01).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(hilbert_hotel_infinite_capacity, [other_constraint_id]).
+% DUAL FORMULATION NOTE:
+% Hilbert's Hotel is a single, unified mathematical constraint with no decomposition needed. Unlike complex natural-language concepts that decompose into multiple constraints (e.g., the BGS conjecture), Hilbert's Hotel has a single, well-defined mathematical formulation with one invariant epsilon value. No alternative observable or measurement basis would yield a different structural classification.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not needed for this constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "biological_specification",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.5,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Biological Specification (Real vs. Instrumental)",
+    "topic_domain": "general",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "research_institutions",
+      "funding_agencies"
+    ],
+    "victims": [
+      "scientific_integrity",
+      "public_trust"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Scientific Integrity",
+      "comment": "Perspective 1: The pursuit of specific, predetermined outcomes can compromise scientific integrity, as researchers may be pressured to manipulate data or selectively report results to align with desired specifications. This perspective highlights the potential for specification to act as a snare, trapping the scientific community in a cycle of biased research."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Research Institutions",
+      "comment": "Perspective 2: Research institutions often benefit from the specification of biological research, as it allows them to secure funding, attract talent, and enhance their reputation by aligning with current scientific trends and societal priorities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 3: From a broad analytical perspective, biological specification represents a tangled rope, with elements of both coordination and extraction. Specification can help to focus research efforts and accelerate progress in specific areas, but it also carries the risk of narrowing the scope of inquiry and overlooking potentially important discoveries."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Specific Research Communities",
+      "comment": "Perspective 4: Certain research communities may benefit from specific biological specifications, particularly if their area of expertise aligns with the specified targets. However, they may also face challenges if their research interests diverge from the dominant specifications, as this may limit their access to funding and other resources."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "specification_breadth",
+      "question": "How narrowly or broadly should biological research be specified to maximize scientific progress while minimizing the risk of bias and missed opportunities?",
+      "resolution_mechanism": "Comparative analysis of research outcomes under different specification regimes, including both quantitative metrics (e.g., publication rates, citation counts) and qualitative assessments of scientific impact and innovation.",
+      "impact": "If specification is too narrow, research may become overly focused on a limited set of problems, leading to diminishing returns and a lack of innovation. If specification is too broad, research efforts may become unfocused and inefficient, resulting in slower progress and a waste of resources.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The appropriate breadth of biological research specifications."
+    },
+    {
+      "id": "funding_influence",
+      "question": "To what extent do funding agencies influence the direction of biological research through their specification of research priorities and funding criteria?",
+      "resolution_mechanism": "Analysis of funding patterns and research trends over time, as well as interviews with researchers and funding agency representatives. Examination of the relationship between funding priorities and research outputs.",
+      "impact": "If funding agencies exert too much influence, research may become overly driven by short-term funding cycles and political considerations, rather than by long-term scientific goals. If funding agencies exert too little influence, research may become fragmented and inefficient, leading to slower progress and a lack of coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent of funding agencies' influence on biological research direction."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The specification of biological research, while intended to focus efforts and accelerate progress, can create a structural tension between the instrumental value of achieving predetermined outcomes and the intrinsic value of pursuing scientific truth. This tension manifests differently depending on the stakeholder, leading to a complex interplay of coordination and extraction.",
+    "key_agents": [
+      "Research Institutions: Benefit from aligning with specifications (institutional/arbitrage)",
+      "Scientific Integrity: Suffers when specifications are too rigid (powerless/trapped)",
+      "Funding Agencies: Drive specification through funding criteria (institutional/constrained)",
+      "Specific Research Communities: May benefit or suffer depending on alignment (organized/constrained)"
+    ],
+    "logic_rationale": "The base extractiveness (0.6) reflects the pressure to conform to specifications in order to secure funding and recognition, which can lead to compromised scientific integrity. Suppression (0.5) represents the limited scope of research inquiry when specifications are too narrow. The theater ratio (0.3) is relatively low, indicating that the focus is primarily on achieving genuine scientific progress, rather than performative compliance.",
+    "perspectival_gap": "The perspectival gap arises from the differing relationships of various agents to the specification process. Research institutions see coordination (rope), benefiting from focused research efforts. Scientific integrity sees extraction (snare), as the pressure to conform can compromise objectivity. The analytical observer sees a complex mix of coordination and extraction (tangled rope), reflecting the inherent tradeoffs involved.",
+    "directionality_logic": "The directionality values are determined by the agent's power, exit options, and relationship to the extraction flow. Institutional beneficiaries with arbitrage options experience lower effective extraction, while powerless victims with no exit bear the full cost of specification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

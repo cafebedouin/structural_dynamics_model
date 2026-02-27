@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "peter_principle",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "peter"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Peter Principle (Promotion to Incompetence)",
+    "topic_domain": "organizational/labor/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "organizational_incumbents"
+    ],
+    "victims": [
+      "competent_subordinates",
+      "organizational_productivity",
+      "customer_outcomes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Competent Subordinate",
+      "comment": "PERSPECTIVE 1: COMPETENT SUBORDINATE (SNARE) \u2014 Trapped in a hierarchical structure that promotes incompetent managers above them. Cannot exit without career penalty; must bear the burden of remedying managerial failures. Has no authority to halt their own demotion via incompetent supervisor. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competent Mid-Manager",
+      "comment": "PERSPECTIVE 2: COMPETENT MID-MANAGER (SNARE) \u2014 Faces extraction from above (incompetent seniors) and below (must compensate for own subordinate's escalation). Exit is costly (credential penalty, severance loss) but theoretically possible. d\u22480.78, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Organizational Elite",
+      "comment": "PERSPECTIVE 3: INCUMBENT ORGANIZATIONAL ELITE (TANGLED ROPE) \u2014 Beneficiaries of the promotion mechanism. Incompetent manager can arbitrage (move to another firm; lateral transfer). The Peter Principle coordination function: clear promotion pathway reduces uncertainty about career progression and keeps ambitious middle managers striving. But extraction mechanism is also real: incompetent incumbents prevent capable lower-level managers from advancing. d\u22480.15, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.01. Net beneficiary; relatively low effective extraction because they have exit via arbitrage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Promotion Ritual",
+      "comment": "PERSPECTIVE 4: PROMOTION RITUAL (PITON) \u2014 Formal promotion procedures (performance reviews, merit evaluation, succession planning) are substantially performative. The theater: organizations conduct objective-sounding evaluations and promotion criteria, but actual promotion often reflects tenure, political skill, conformity, and luck rather than evidence that the candidate will perform in the higher role. theater_ratio=0.68 reflects that the ritual persists despite poor predictive validity. Firms maintain promotion theater because alternatives (transparent incompetence firing, lottery promotion, external hire) carry higher explicit costs or political resistance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Organizational Efficiency)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (SNARE FROM EFFICIENCY VIEW) \u2014 From a civilizational perspective tracking organizational productivity, the Peter Principle is a pure extraction mechanism: talent is systematically mismatch with roles in a way that degrades performance. The constraint is that hierarchies structurally promote based on success in lower roles, not fit for higher roles, creating a self-reinforcing cycle of incompetence at senior levels. \u03b5=0.52, suppression=0.58 show this is neither law of nature nor pure coordination. d\u22480.90, f(d)\u22481.30, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Organizational Reform Coalition",
+      "comment": "PERSPECTIVE 6: ORGANIZATIONAL REFORM COALITION (ROPE) \u2014 Organized groups (management consultants, HR departments, employee unions, organizational psychologists) see the Peter Principle as a coordination problem with a solvable structure. Solutions: 360 reviews, 360-degree feedback, competency modeling, lateral moves, IC/specialist tracks that reward mastery without requiring management, probationary promotions with clear failure conditions. These reforms reduce extraction by creating alternative career pathways. d\u22480.35, f(d)\u22480.33, \u03c3=0.9 \u2192 \u03c7\u22480.15. Low effective extraction; coordination mechanism dominates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "measurement_validity_incompetence",
+      "question": "Can performance in a lower role validly predict performance in the next higher role, or are the skills entirely orthogonal?",
+      "resolution_mechanism": "Longitudinal studies tracking promotion outcomes by prior role performance; meta-analysis of pre/post-promotion manager effectiveness data; role-specific competency frameworks showing skill transfer",
+      "impact": "If orthogonal skills: Peter Principle is a structural law of hierarchies (Mountain from efficiency view). If partial transfer: conditional promotion based on assessed target-role competency becomes viable (Rope from reform view).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether lower-role performance predicts higher-role competence"
+    },
+    {
+      "id": "exit_cost_reality",
+      "question": "How constraining are actual exit costs for incompetent managers or their subordinates? Can they realistically leave?",
+      "resolution_mechanism": "Labor market analysis: turnover rates of mid-managers reporting to incompetent seniors vs baseline; wage penalty for lateral moves; time-to-reemployment for managers exiting hierarchies",
+      "impact": "If high exit costs: snare classification confirmed. If low costs: constraint operates through status/identity rather than true coercion (scaffold with cultural sunset).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual exit costs and reemployment feasibility for trapped subordinates"
+    },
+    {
+      "id": "alternative_promotion_models_viability",
+      "question": "Can alternative promotion mechanisms (lateral specialist tracks, IC (Individual Contributor) ladders, external hire, competency-based transfer) actually scale to replace traditional hierarchical promotion without creating other extraction mechanisms?",
+      "resolution_mechanism": "Comparative org study: firms with alternative promotion models vs traditional hierarchies; measurement of promotion fairness perceptions, retention of competent middle managers, senior role performance variance",
+      "impact": "If viable at scale: Peter Principle is a contingent institutional choice (Snare now, Rope after reform). If not: it is deeply structural to hierarchy (approaches Mountain).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether alternative promotion systems can viably replace traditional hierarchy"
+    },
+    {
+      "id": "competence_assessment_bias",
+      "question": "Are current promotion assessment mechanisms biased toward visible domain-specific competence (which doesn't transfer) rather than latent managerial/leadership competence (which might)?",
+      "resolution_mechanism": "Analysis of promotion criteria vs manager success outcomes; psychometric validation of assessment instruments; blind review vs identified review of promotion candidates",
+      "impact": "If structural bias: Peter Principle is partly an artifact of poor measurement (Snare maintainable through better assessment). If assessments are valid: competence orthogonality is real (Peter Principle is deep structural).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether promotion assessments conflate domain performance with managerial readiness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Peter Principle describes a structural mechanism embedded in hierarchical organizations where promotion decisions are based on demonstrated competence in the current role rather than predicted competence in the next role. This creates a system where competent performers are systematically promoted until they reach a level where they are incompetent and remain there, permanently mismatch. The principle operates as a self-reinforcing snare: subordinates of incompetent managers must compensate for managerial failure, preventing their own advancement; the promotion ritual masks this extraction through objective-sounding evaluation criteria that do not actually predict role-fit; and incompetent incumbents have low exit costs (via lateral moves or other firms), while capable subordinates have high exit costs (career penalties, credential devaluation). The theater_ratio (0.68) reflects that formal promotion processes appear meritocratic and evidence-based but in practice correlate weakly with subsequent performance, especially when assessing fit for fundamentally different role requirements. The extractiveness (0.52) is moderate: not as severe as intentional wage theft, but sustained misallocation of human capital and organizational resources driven by structural incentives rather than competence.",
+    "key_agents": [
+      "Competent Subordinates: Primary victims (powerless/trapped) \u2014 must remediate managerial failures; promotion blocked by incumbent incompetence; exit costly",
+      "Competent Mid-Managers: Secondary victims (moderate/constrained) \u2014 caught between incompetent seniors and need to mask/compensate; constrained exit",
+      "Incumbent Incompetent Managers: Primary beneficiaries (institutional/arbitrage) \u2014 retain salary, status, and authority despite incompetence; low exit cost if removed (lateral moves, severance)",
+      "Organizational Productivity/Customer Outcomes: Victim (powerless/trapped) \u2014 abstract collective good; bears full cost of misalignment; no self-correction mechanism",
+      "Promotion Ritual (Formal Performance Review System): Institutional actor (institutional/arbitrage) \u2014 maintains theater; appears objective while mispredicting role-fit",
+      "Organizational Reform Coalition (HR, OD consultants, unions, IC track advocates): Organized agents (organized/arbitrage) \u2014 see rope structure; alternative career pathways (lateral moves, specialist tracks, external hire) as viable coordination solutions"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The Peter Principle extracts value from competent subordinates (time spent managing upward, career stagnation, turnover) and organizational productivity (misaligned role fit, reduced output). However, it is not maximal extraction because: (a) some firms do implement alternative promotion mechanisms (IC tracks, lateral specialist roles) that reduce extraction; (b) the mechanism operates partly through structural misalignment rather than intentional coercion; (c) exit is constrained but not impossible for subordinates, and removal of incompetent managers is theoretically possible (though politically costly). Suppression (0.58): Significant barriers to resolution include: organizational politics (incompetent incumbents resist demotion), career identity (people define self-worth by title/level, making lateral moves psychologically costly), institutional inertia (promotion ritual is normalized), and information asymmetry (incompetent managers control information flow and can misrepresent their subordinates' contributions). But suppression is not total \u2014 exit paths exist, reform coalitions have successfully implemented alternative models in some firms, and external pressures (talent competition, firm performance) create incentives to fix the system. Theater (0.68): Promotion processes use objective language (merit evaluation, performance criteria, competency models) but do not actually predict fit for higher roles. The theater has increased over time as organizations have formalized evaluation procedures without improving their predictive validity. Measurement substitution (Goodhart drift): organizations that optimize for the evaluation metric (past role performance) degrade the actual outcome (future role competence). The measurement drift reflects that visible domain expertise (which is easy to assess) substitutes for latent managerial competence (which is hard to assess).",
+    "perspectival_gap": "This constraint shows stark perspectival divergence. Incompetent managers see promotion as deserved reward and coordination mechanism (clear career pathway reduces uncertainty). Their subordinates see the same system as pure extraction (Snare). Reform-minded organizations see the constraint as coordination problem with known solutions (Rope). The promotion ritual sees itself as meritocratic (Piton \u2014 performative rather than functional). Organizational efficiency views it as a structural mismatch problem (Snare from civilizational scale). The key divergence is between those who benefit from the current mechanism (incumbents, beneficiaries of status quo) and those who bear its costs (subordinates, organizational productivity). The incompetent manager's perspective is not captured fully by the institutional/arbitrage tuple alone because arbitrage exit is asymmetric: easy for the beneficiary (move sideways, switch firms) but costly for the victim (career penalty).",
+    "directionality_logic": "Competent Subordinates: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. Competent Mid-Managers: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. High extraction but theoretically escapable. Incumbent Incompetent Managers: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.02. Net beneficiary; low effective extraction due to exit ease. Organizational Productivity: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.30. Abstract collective cannot exit. Promotion Ritual: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification from theater gate, not from high chi. Organizational Reform Coalition: Organized + arbitrage \u2192 d\u22480.35, f(d)\u22480.33. Low effective extraction; coalition has agency and sees path to rope classification through alternative career structures.",
+    "mandatrophy_analysis": "The Peter Principle resolves mandatrophy by showing that the snare classification (claimed_type) is structurally sound despite the presence of a rope-like coordination function (clear promotion pathway). The coordination exists but is asymmetric: it benefits incumbents (clear path to status) while extracting from subordinates (clear ceiling on their advancement once incumbents are in place). This is precisely the mandatrophy definition: a structure that appears to be pure coordination (everyone gets a clear pathway) but operates asymmetrically to extract from those with fewer alternatives. The reform coalition's perspective (Rope) is not a contradiction of the snare classification but a perspectival alternative: if alternative promotion mechanisms were adopted (lateral specialist tracks, IC ladders, external hire thresholds), the constraint would shift toward Rope. The snare classification holds at the baseline (organizational status quo in most large firms). The organizational reform coalition's perspective shows that mandatrophy can be resolved through structural change, not just through frame-switching."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "middle_management_burnout",
+      "talent_pipeline_bottleneck",
+      "organizational_performance_plateau"
+    ],
+    "dual_formulation_note": "The Peter Principle is a constraint family decomposable into (1) the promotion mechanism itself (this story: \u03b5=0.52, institutional + structural incentive misalignment), (2) the talent pipeline effect (downstream: competent mid-managers trapped, burnout acceleration), and (3) performance degradation (downstream: organizational output capped by senior-level incompetence). Each has distinct \u03b5 values and resolution pathways, but they are linked: fixing the promotion mechanism cascades to reduce burnout and improve performance."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

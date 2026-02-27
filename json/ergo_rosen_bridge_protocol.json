@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "ergo_rosen_bridge_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rosen"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rosen Bridge Cross-Chain Mechanism",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ergo_ecosystem",
+      "bridge_liquidity_providers",
+      "ergo_token_holders"
+    ],
+    "victims": [
+      "external_chain_users",
+      "bridge_fee_structure",
+      "liquidity_fragmentation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "External Chain User (Trapped Counterparty)",
+      "comment": "PERSPECTIVE 1: EXTERNAL CHAIN USER (SNARE) \u2014 Users on non-Ergo chains seeking cross-chain liquidity are trapped by the bridge's asymmetric fee structure and custody requirements. Exit requires absorbing bridge fees or abandoning the cross-chain transaction entirely. No alternative low-friction bridge for Ergo assets creates effective monopoly on the transfer corridor. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Liquidity Provider (Constrained Arbiter)",
+      "comment": "PERSPECTIVE 2: LIQUIDITY PROVIDER (TANGLED ROPE) \u2014 LPs benefit from bridge fee income and arbitrage spreads across chains, but are constrained by smart contract risk, custody exposure, and capital lockup requirements. Coordination function exists (enabling cross-chain swaps), but extraction mechanism is built in through fee capture and rebalancing inefficiencies. Constrained exit \u2014 pulling liquidity requires coordination with counterparties and incurs opportunity cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Ergo Ecosystem (Primary Beneficiary)",
+      "comment": "PERSPECTIVE 3: ERGO ECOSYSTEM (ROPE) \u2014 Ergo benefits from inbound liquidity, increased trading volume, and network effects from cross-chain access. The bridge solves a genuine coordination problem: enabling trustless asset movement without deploying smart contracts on external chains reduces friction. Ergo holders experience the constraint as access mechanism, not extraction. Arbitrage option exists \u2014 Ergo can upgrade bridge design or support alternative bridges."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Cross-Chain Protocol Coalition (Organized Actors)",
+      "comment": "PERSPECTIVE 4: CROSS-CHAIN PROTOCOL COALITION (SCAFFOLD) \u2014 Organized actors (IBC, Cosmos bridges, LayerZero, Wormhole) view the bridge as temporary coordination infrastructure with an architectural sunset. As interoperability standards mature and chain-agnostic smart contracts proliferate, the need for purpose-built custodial bridges declines. Low effective extraction because the coalition has agency and sees an exit: standardized message protocols and liquidity aggregation platforms will abstract away chain-specific bridges."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Custodial Multi-Sig Bridge Pattern (Degraded Institution)",
+      "comment": "PERSPECTIVE 5: CUSTODIAL MULTI-SIG PATTERN (PITON) \u2014 The bridge's reliance on multi-signature custody for externally-held reserves is increasingly performative. Institutional actors (validators, bridge operators) maintain the custody ritual despite known attack vectors (validator collusion, social engineering key compromise). The pattern persists through institutional inertia \u2014 alternatives (zero-knowledge proofs, optimistic verification) exist but haven't fully replaced it. Theater ratio high due to apparent security (multi-sig ritual) masking true risk profile (concentrated operator knowledge, key management fragility)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some asynchrony is inherent to cross-chain operations: distinct consensus systems cannot achieve atomic settlement without external coordination. The bridge's extraction mechanism might be naturalized as 'inherent to blockchain heterogeneity.' However, the structural data contradicts this \u2014 the extraction is contingent on fee design and custody architecture, not on physical law. The engine's false summit detector will flag this as naturalization of institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "custodial_trust_sufficiency",
+      "question": "What minimum custody threshold (by validator reputation, bond size, insurance coverage) constitutes adequate security against bridge operator collusion?",
+      "resolution_mechanism": "Historical analysis of bridge compromises (Ronin, Poly Network, Nomad); correlation between custody parameters and actual breach events; game-theoretic modeling of collusion incentives under various fee regimes",
+      "impact": "If threshold is achievable: bridge risk is manageable Tangled Rope. If threshold requires unrealistic validator trust: bridge is structurally Snare with hidden counterparty risk.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Adequacy of custodial trust for bridge security"
+    },
+    {
+      "id": "fee_structure_fairness",
+      "question": "Are bridge fees pricing custody/liquidity risk accurately, or do they extract excess rent from information asymmetry between chains?",
+      "resolution_mechanism": "Comparative analysis of bridge fees vs actual smart contract interaction costs on Ergo; measurement of spread between in-bridge liquidity rates and external DEX rates; longitudinal tracking of fee revenue vs custody insurance costs",
+      "impact": "If fees are risk-adjusted: constraint is Rope/Tangled Rope with legitimate coordination premium. If fees exceed risk: constraint is Snare with hidden extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bridge fees reflect true custody costs or extract excess rent"
+    },
+    {
+      "id": "protocol_upgrade_credibility",
+      "question": "Can Rosen Bridge upgrade from custodial multi-sig to zero-knowledge or optimistic verification without breaking backward compatibility and liquidity pools?",
+      "resolution_mechanism": "Technical feasibility study of light client architecture; measurement of transition costs (liquidity migration, validator coordination, state reconstruction); empirical success of other bridges' protocol upgrades",
+      "impact": "If upgrade is credible: scaffold sunset is real, and current custodial design is temporary. If upgrade is infeasible: bridge is locked into custodial pattern \u2014 sunset becomes a false promise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of non-custodial protocol upgrade pathway"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Rosen Bridge represents a cross-chain mechanism enabling asset transfers between Ergo and external blockchains without deploying smart contracts on destination chains. The constraint arises from the structural tension between the bridge's genuine coordination function (solving the multi-chain liquidity problem) and its extraction mechanism (custodial fee structure, liquidity fragmentation, and custody risk concentration). External chain users experience high friction entering the Ergo ecosystem through the bridge; Ergo ecosystem participants benefit from inbound liquidity; liquidity providers occupy the middle position, capturing arbitrage but bearing custody and rebalancing risk. The bridge's custodial multi-signature pattern creates performative security theater \u2014 the multi-sig ritual satisfies institutional expectations but obscures true risk (validator collusion incentives, key management fragility). Theater ratio has increased from 0.38 to 0.55 as the protocol's security assumptions (reputation-based validator trust, stationary fee structure) have been challenged by real-world bridge exploits. The constraint exhibits all six DR types from different perspectives, making it a diagnostic case for how institutional design choices appear differently to differently-positioned actors.",
+    "key_agents": [
+      "Ergo Ecosystem: Primary beneficiary (institutional/arbitrage) \u2014 gains cross-chain liquidity and network effects; can adjust bridge design or support alternatives",
+      "External Chain Users: Primary victim (powerless/trapped) \u2014 face asymmetric fee structure and custody risk; no alternative low-friction Ergo bridge creates effective capture",
+      "Liquidity Providers: Secondary victim/beneficiary (moderate/constrained) \u2014 gain arbitrage income but bear smart contract risk and custody exposure; constrained exit due to capital lockup and coordination requirements",
+      "Cross-Chain Protocol Coalition: Organized actors (organized/constrained) \u2014 view custodial bridges as temporary; see sunset in standardized interoperability protocols (IBC, LayerZero maturing)",
+      "Bridge Validators/Operators: Institutional actors (institutional/arbitrage) \u2014 maintain custodial multi-sig pattern; benefit from operator fees and reputation; have arbitrage options for protocol upgrades",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent custody architecture as inherent to blockchain heterogeneity"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The bridge extracts through custody fees and liquidity fragmentation but not maximally \u2014 external chain users have alternative (higher-friction) paths to Ergo assets via DEX arbitrage or alternative bridges (if they exist), and the extraction is partly justified by real custody costs. The initial value (0.22) reflects lower fee intensity in early deployment; current value (0.38) reflects fee structure maturation and increasing bridge usage concentrating liquidity capture. Suppression (0.48): Moderate-high. External chain users face barriers to entry: bridge-specific fee schedules, custody risk disclosure (if transparent), smart contract interaction costs on source chain, and opportunity cost of bridge waiting time. But suppression is not total \u2014 information about fees is generally available, and alternatives (wrapped tokens, alternative bridges, DEX paths) do exist. Theater ratio (0.55): Moderate-high. Custodial multi-sig security is substantially performative. The multi-signature ritual (validator announcements, key ceremony theater) satisfies institutional expectations but obscures true risk: validator collusion incentives are real, key management is fragile, and insurance coverage may be illusory. Theater has increased from 0.38 to 0.55 as bridge exploits (Ronin, Poly Network, Nomad) have revealed gaps between multi-sig appearance and real security.",
+    "directionality_logic": "Rosen Bridge's directionality values map to the structural flow of extraction and coordination benefit. Ergo ecosystem benefits from the bridge as access mechanism (low d \u2192 beneficiary direction); external chain users are trapped by the bridge's custody mechanism and fee structure (high d \u2192 victim direction). Liquidity providers occupy the middle: they benefit from fee income and arbitrage spreads (low d component) but are constrained by custody risk and rebalancing requirements (high d component), resulting in d \u2248 0.50-0.55 (moderate agent experiencing mixed extraction and benefit). The bridge's effective extraction \u03c7 is scaled by scope (global \u03c3=1.2) and by directionality f(d): for trapped users, \u03c7 is amplified by high f(d) from their trapped exit status; for Ergo beneficiaries, \u03c7 is dampened by low d. For organized cross-chain protocol actors, d is intermediate because they have exit options (supporting alternative bridges, upgrading protocols) and they benefit from the ecosystem effects \u2014 they experience the bridge as Scaffold, not Snare.",
+    "perspectival_gap": "The Rosen Bridge demonstrates how institutional design choices create perspectival divergence. Ergo ecosystem sees coordination mechanism (Rope) \u2014 solving genuine multi-chain liquidity problem. External chain users see extraction (Snare) \u2014 facing asymmetric fees and custody requirements. Liquidity providers see hybrid (Tangled Rope) \u2014 both enabling and constraining their arbitrage. Cross-chain protocol coalition sees temporary solution (Scaffold) \u2014 architectural sunset as interoperability standards mature. Bridge validators see degraded ritual (Piton) \u2014 multi-sig custody persisting through inertia despite alternatives. Analytical observer risks naturalizing institutional choice as physical necessity (Mountain) \u2014 but the structural data reveals this as a false summit: the extraction and theater are contingent on fee design and custody architecture, not on blockchain properties.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The tangled_rope classification resolves the mandatrophy by demonstrating that the bridge is simultaneously a genuine coordination mechanism (enabling cross-chain assets without external smart contracts) and an extraction device (capturing user value through fees and custody risk concentration). The beneficiaries (Ergo ecosystem, liquidity providers) experience coordination function; the victims (external chain users, liquidity fragmentation) experience extraction. The constraint avoids misclassification as pure coordination (Rope) by explicitly declaring victims and active enforcement; avoids misclassification as pure extraction (Snare) by explicitly declaring beneficiaries and coordination function. The Scaffold perspective (organized actors seeing sunset) and Piton perspective (custodial pattern as degraded ritual) provide additional validation: if the constraint were pure Rope or pure Snare, these perspectives would not be credible. The perspectival diversity itself confirms the tangled classification \u2014 multiple institutional actors experience the same constraint as different types, which is diagnostic of hybrid extraction+coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cross_chain_liquidity_fragmentation",
+      "custodial_bridge_security_risk",
+      "interoperability_protocol_standards"
+    ],
+    "dual_formulation_note": "The Rosen Bridge constraint family includes three structurally distinct mechanisms: (1) custodial_bridge_security_risk (\u03b5\u22480.52, Snare) \u2014 the multi-sig custody architecture and collusion risk; (2) cross_chain_liquidity_fragmentation (\u03b5\u22480.35, Tangled Rope) \u2014 the coordination benefit of multi-chain access vs extraction through fee capture; (3) interoperability_protocol_standards (\u03b5\u22480.15, Rope/Scaffold) \u2014 the emerging standards-based alternative with lower extraction. The Rosen Bridge story focuses on the integrated constraint (\u03b5=0.38) modeling the current state; upstream stories detail the custody mechanism; downstream stories model the protocol upgrade pathway."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.32
+    }
+  ]
+}

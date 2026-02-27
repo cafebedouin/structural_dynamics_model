@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "genie_ip_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "genie"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Google's Project Genie IP Concerns",
+    "topic_domain": "technological/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "google_development_team",
+      "users_with_generative_tools"
+    ],
+    "victims": [
+      "original_game_developers",
+      "ip_rights_holders",
+      "creative_industry_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Original Game Developers",
+      "comment": "PERSPECTIVE 1: ORIGINAL GAME DEVELOPERS (SNARE) \u2014 Small indie developers and IP rights holders cannot exit the constraint. Project Genie's generative models trained on existing games create derivative works without licensing or compensation mechanisms. Trapped with no alternatives; bear full extraction cost. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Game Publishing Industry",
+      "comment": "PERSPECTIVE 2: GAME PUBLISHING INDUSTRY (TANGLED ROPE) \u2014 Major publishers constrained by IP enforcement costs and litigation risk, but also benefit from potential Genie licensing partnerships and integration opportunities. Mixed extraction and coordination: enforcing IP rights is expensive; participating in Genie ecosystem offers market access but on Google's terms. d\u22480.72, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Google Development Team",
+      "comment": "PERSPECTIVE 3: GOOGLE DEVELOPMENT TEAM (ROPE) \u2014 Benefits from access to vast training datasets and first-mover advantage in generative game creation. Experiences the constraint as coordination: training on existing games enables tool functionality; licensing frameworks are negotiated (albeit on Google's terms). d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary through arbitrage position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open-Source Game Development Community",
+      "comment": "PERSPECTIVE 4: OPEN-SOURCE GAME DEVELOPMENT COMMUNITY (SCAFFOLD) \u2014 Open-source frameworks (Godot, Unity Community) can build alternative generative tools with transparent licensing and community governance. See Genie as temporary extraction mechanism; distributed development and ethical licensing create sunset pathway. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.20. Coalition has agency and migration path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Existing Copyright/IP Legal Framework",
+      "comment": "PERSPECTIVE 5: EXISTING COPYRIGHT/IP LEGAL FRAMEWORK (PITON) \u2014 Copyright law governing derivative works and training data use is degraded: designed for 20th-century publication scarcity, not 21st-century neural network training. Theater ratio=0.58: regulatory rhetoric about 'fair use' and 'transformative works' masks that enforcement is theater\u2014copyright holders lack practical remedies for large-scale model training. Persists through institutional inertia despite functional failure. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Game Users and Content Creators",
+      "comment": "PERSPECTIVE 6: GAME USERS AND CONTENT CREATORS (TANGLED ROPE) \u2014 Users gain access to game creation tools (coordination benefit), but Google captures and owns derivative content generated through Genie. Terms of service create asymmetric extraction: users contribute generative labor; Google owns outputs. Mobile exit available (other tools, proprietary engines) but switching costs are real. d\u22480.58, f(d)\u22480.78, \u03c3=1.2 \u2192 \u03c7\u22480.48."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Information Theory View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / INFORMATION THEORY VIEW (MOUNTAIN) \u2014 From a universal perspective, the constraint appears as an inherent property of generative systems: information encoded in training data becomes inseparable from model function. Derivative content generation is mathematically unavoidable if models are trained on any corpus. However, this perspective naturalizes what is actually a contingent choice about training data sourcing and licensing\u2014the engine's false summit detector will flag this as naturalization of policy."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fair_use_generative_training",
+      "question": "Does training generative models on copyrighted game assets constitute fair use or infringing derivative creation?",
+      "resolution_mechanism": "Judicial precedent from major IP litigation (Authors Guild v Google analog for generative AI); regulatory clarification from USPTO or EU on AI training rights; international treaty harmonization on training data licensing",
+      "impact": "If fair use: Genie reclassifies from Snare/Tangled Rope to Rope for most perspectives. If infringement: Genie remains Snare for IP holders; legal liability and licensing frameworks become primary structural feature.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether generative model training on copyrighted assets constitutes fair use"
+    },
+    {
+      "id": "training_data_detectability",
+      "question": "Can original game assets be identified or separated from model outputs by developers or forensic analysis?",
+      "resolution_mechanism": "Technical analysis of model internals (activation pattern analysis, training data recovery); fingerprinting studies of synthetic outputs vs originals; reverse-engineering of Genie model weights",
+      "impact": "If fully recoverable: enables proof of infringement and supports IP holder claims (strengthens Snare classification). If undetectable: suppression increases; extraction becomes nearly perfect and unverifiable (worse Snare/Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether original game assets can be forensically detected in Genie outputs"
+    },
+    {
+      "id": "open_source_viability_timeline",
+      "question": "What is the realistic timeline for open-source game generation tools (Godot extensions, community forks) to match Genie capability and accessibility?",
+      "resolution_mechanism": "Tracking development progress of open-source generative game tools; benchmark comparison (quality, speed, usability); adoption metrics for alternatives; funding availability for community projects",
+      "impact": "If timeline < 3 years: Scaffold sunset is credible, extraction window narrows. If timeline > 10 years: Genie's institutional lock-in deepens; coalition perspective is aspirational rather than structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for open-source game generation tools to reach parity with Genie"
+    },
+    {
+      "id": "licensing_partnership_uptake",
+      "question": "What percentage of indie developers and IP holders will accept licensing partnerships on Google's standard terms vs demanding alternative models?",
+      "resolution_mechanism": "Survey of developer communities; analysis of licensing agreements Genie negotiates; comparison with publisher acceptance rates for similar frameworks (Unity Asset Store, Unreal Marketplace)",
+      "impact": "If partnership uptake > 60%: extraction moves from coercive (Snare) to negotiated (Rope/Tangled Rope). If < 20%: suppression evidence strengthens; licensing becomes performative theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Percentage of developers accepting Google's Genie licensing partnerships"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Project Genie exemplifies a structural constraint arising from asymmetric access to training data and generative capability. Google's system is trained on decades of game design, art, mechanics, and narrative from indie developers, publishers, and user-generated content. The constraint arises from the gap between who contributes to the training corpus (dispersed global creators, many powerless to negotiate) and who controls the generative tool (Google's institutional position). The extractiveness is moderate (0.52) rather than maximal because legitimate coordination benefits exist: Genie enables game creation for users lacking skills, capital, or studio access. However, suppression is high (0.68) because alternatives are limited, licensing frameworks lack transparency, and individual creators have minimal negotiating power. The theater ratio (0.58) reflects Google's framing of Genie as a democratizing tool while the actual mechanism concentrates IP ownership\u2014public messaging emphasizes accessibility; structural reality emphasizes control.",
+    "key_agents": [
+      "Original Game Developers: Primary victims (powerless/trapped) \u2014 indie creators whose work trained models without licensing or compensation; cannot exit or negotiate",
+      "IP Rights Holders: Primary victims (powerful/constrained) \u2014 major publishers and studios with leverage but facing litigation costs and terms-of-service lock-in",
+      "Google Development Team: Primary beneficiary (institutional/arbitrage) \u2014 captures first-mover advantage; controls training data access and licensing terms",
+      "Game Users/Content Creators: Secondary victims (powerful/mobile) \u2014 gain tool access but lose IP ownership of generated content; can migrate to alternatives at switching cost",
+      "Open-Source Community: Organized agent (organized/mobile) \u2014 building alternative frameworks with transparent licensing; represents sunset pathway",
+      "Existing IP/Copyright Framework: Institutional actor (institutional/arbitrage) \u2014 legal infrastructure is degraded (piton); designed for publication scarcity, not neural network training",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing extraction as inherent to generative systems rather than contingent to training data sourcing"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Google captures asymmetric value: the tool provides genuine coordination benefit (enabling creation), but IP ownership flows to Google, not creators. Over the interval, extractiveness has increased (0.38\u21920.52) as the tool's capability improved and adoption grew\u2014more powerful models extract more value from training data. Suppression (0.68): High. Individual creators lack practical remedies (litigation costs exceed typical game revenue), licensing frameworks are opaque, and alternatives are nascent. But suppression is not total\u2014open-source alternatives exist and legal frameworks (copyright, fair use, emerging AI training regulations) provide some formal channels, albeit ineffective. Theater ratio (0.58): Moderate. Google's public positioning emphasizes democratization and accessibility (coordination narrative); the actual mechanism is IP consolidation and asymmetric extraction. The gap has widened over the interval (0.35\u21920.58) as Genie's real capability and actual terms of service became clearer to developers.",
+    "perspectival_gap": "Original developers see extraction (Snare): no compensation, no alternatives, no control over outputs. Publishers see mixed extraction and coordination (Tangled Rope): licensing partnerships offer upside but only on Google's terms; enforcing IP rights is expensive. Users see mixed extraction and coordination (Tangled Rope): tool access is real benefit; IP ownership loss is structural cost. Google sees coordination (Rope): training data enables the tool; licensing is negotiated. Open-source coalition sees temporary problem with sunset (Scaffold): alternative frameworks can be built with transparent licensing. IP/copyright framework sees its own degradation (Piton): copyright law's rhetoric about fair use masks that enforcement is theater; frameworks designed for copying, not model training. Analytical observer risks false summit (Mountain): naturalizes extraction as inherent to generative systems rather than contingent policy. The perspectival gap reveals that 'democratization' and 'extraction' are describing the same mechanism from different structural positions.",
+    "directionality_logic": "Original developers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. Publishers: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.12. High extraction but not maximal; litigation options provide some constrained exit. Google: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; controls training data access and licensing terms. Users: Victim + mobile \u2192 d\u22480.58, f(d)\u22480.78. Moderate extraction; can migrate to alternatives. Open-source coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction; coalition has agency. IP framework: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification from theater gate. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. False summit risk\u2014naturalizes extraction.",
+    "mandatrophy_analysis": "RESOLVED: The mandatrophy is resolved by recognizing that 'democratization' (Rope perspective) and 'extraction' (Snare perspective) are both accurate descriptions of the same mechanism, viewed from different structural positions. Google's framing emphasizes coordination (tool access), which is real. The structural reality for IP holders emphasizes extraction (asymmetric value capture), which is also real. The Tangled Rope classification captures this hybrid: Genie has a genuine coordination function (enables creation), active enforcement mechanism (terms of service, data licensing), and asymmetric extraction (IP flows to Google). The mandatrophy resolution is that both narratives are structurally valid\u2014there is no single 'correct' type. The analytical observer risks false summit by naturalizing the extraction as inherent to generative systems. The real constraint is the contingent policy: training data sourcing without licensing, output IP allocation to Google, and terms-of-service lock-in. Alternative policies (transparent licensing, user IP ownership, open training data) would reclassify this as Rope or Scaffold."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_training_data_licensing",
+      "creative_worker_income_concentration",
+      "generative_tool_market_structure"
+    ],
+    "dual_formulation_note": "Project Genie's IP constraint is downstream of broader AI training data licensing frameworks and upstream of specific creative industry labor impacts. The structural constraint identified here (asymmetric IP capture) has \u03b5=0.52; upstream constraints (training data sourcing regimes) may have different \u03b5 values; downstream constraints (individual creator income losses) have their own structural properties."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.62
+    }
+  ]
+}

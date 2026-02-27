@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "iss_ped_ban",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iss_ped"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NASA's historical ban on personal electronic devices on the ISS",
+    "topic_domain": "technological/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_control",
+      "crew_safety_protocols",
+      "bandwidth_allocation"
+    ],
+    "victims": [
+      "astronaut_autonomy",
+      "crew_morale_and_mental_health",
+      "scientific_communication"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Isolated Astronaut",
+      "comment": "PERSPECTIVE 1: THE ISOLATED ASTRONAUT (SNARE) \u2014 Six-month missions with no personal communication device. Trapped by contractual obligations and orbital mechanics; cannot exit. Full extraction of autonomy and connection to family. Maximum suppression: alternatives are zero. The astronaut bears the psychological cost of isolation while the institution captures control over all communication flows."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Crew Cohort",
+      "comment": "PERSPECTIVE 2: THE CREW COHORT (TANGLED ROPE) \u2014 Constrained by mission assignment but benefits from collective morale-building mechanisms (shared recreation time, Earth communication protocols). The ban coordinates crew focus but extracts individual autonomy. Mixed experience: some genuine coordination benefit (crew bonding) paired with substantial extraction (communication control)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mission Control (NASA)",
+      "comment": "PERSPECTIVE 3: MISSION CONTROL (ROPE) \u2014 Experiences the ban as pure coordination: unified communication protocols, bandwidth management, emergency response time. No personal devices means predictable, monitorable information flows. Zero extraction experienced \u2014 the institution designed the constraint to benefit itself and genuinely solves collective action problems (who communicates what, when, through which channel). Net beneficiary with exit optionality via regulatory authority."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Communications Movement",
+      "comment": "PERSPECTIVE 4: OPEN COMMUNICATIONS MOVEMENT (SCAFFOLD) \u2014 Organized advocates (crew unions, mental health researchers, commercial spaceflight operators) see the ban as a temporary institutional limitation with a sunset. SpaceX's Crew Dragon era and international partnerships are normalizing personal communications for crew morale and family connection. The constraint has an exit path: policy change is achievable within a decade as alternative protocols mature. Suppression is declining as norms shift."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Security Protocols Apparatus",
+      "comment": "PERSPECTIVE 5: SECURITY PROTOCOLS APPARATUS (PITON) \u2014 The rationale for the ban (preventing espionage, ensuring operational security) is increasingly performative. Modern cybersecurity, encryption, and monitored networks enable personal devices within a secure envelope. The original justification \u2014 'personal devices compromise operational security' \u2014 is no longer structurally compelling but persists through institutional inertia. Security reviews are conducted; the findings are documented; the ban is maintained anyway. Theater ratio is high because the functional security benefit has degraded while the ritual persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a pure communications theory perspective, the ISS is a closed system with finite bandwidth and limited power resources. Any personal device competes for these resources; at scale, personal communications would genuinely degrade mission-critical traffic. This constraint appears immutable \u2014 a consequence of orbital physics, not policy. However, the actual implementation (near-total ban rather than managed allocation) reveals this as naturalization of a policy choice, not a physical law. The engine's false summit detector will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bandwidth_sufficiency",
+      "question": "How much crew communication bandwidth is genuinely consumed by mission-critical operations vs protocol overhead and redundancy?",
+      "resolution_mechanism": "Engineering analysis of actual ISS communication logs; comparison of bandwidth utilization patterns; assessment of whether monitored personal devices could coexist within current allocation",
+      "impact": "If mission-critical traffic < 60% of available bandwidth: the ban is policy choice, not technical necessity. If > 80%: the constraint may be structurally justified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual bandwidth requirements for mission-critical vs overhead operations"
+    },
+    {
+      "id": "psychological_vs_security_tradeoff",
+      "question": "Does the psychological cost of isolation (crew morale, family connection, mental health) outweigh the security risk of monitored personal devices?",
+      "resolution_mechanism": "Longitudinal crew mental health assessments; comparison with commercial space missions permitting personal communication; expert psychological/security panel review",
+      "impact": "If psychological cost > security benefit: the ban is extractive (prioritizes control over crew welfare). If security risk > psychological cost: the ban is justified coordination.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Comparative cost of crew isolation vs security risk of personal devices"
+    },
+    {
+      "id": "commercial_viability_evidence",
+      "question": "Have commercial spaceflight operators (SpaceX, Axiom, Blue Origin) successfully implemented personal device policies with equivalent or superior security outcomes?",
+      "resolution_mechanism": "Review of SpaceX Crew Dragon, Axiom Space Station, and private mission security protocols; incident reports; cybersecurity audits",
+      "impact": "If yes with equivalent security: the ban is definitively a policy choice, not necessity. If no significant evidence: the ban may reflect genuine technical constraints NASA has solved differently than commercial operators.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether commercial operators have solved the personal device + security problem"
+    },
+    {
+      "id": "extraction_vs_coordination_intention",
+      "question": "Was the original ban motivated primarily by security/coordination (genuine collective benefit) or by control/extraction (institutional oversight preferences)?",
+      "resolution_mechanism": "Historical documentation review; archived NASA memos, rationales, meeting minutes; expert analysis of temporal alignment with genuine security threats vs institutional culture",
+      "impact": "If coordination-motivated: the tangled rope classification is accurate. If control-motivated: the snare/piton classification is more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Original institutional motivation for the ban"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "NASA's ban on personal electronic devices on the ISS spans over two decades of crewed missions, reflecting an institutional approach to information control that combines genuine coordination needs with institutional extraction of astronaut autonomy. The constraint exhibits the full spectrum of indexical classification depending on the observer's structural position. For astronauts, the ban is a snare: they are trapped by contractual obligation with no exit option, bearing the full psychological cost of isolation while mission control captures all communication. For mission control, the ban is rope: it solves genuine coordination problems (unified communication protocols, bandwidth management, emergency response). For the open communications movement (crew unions, mental health advocates), the ban is a scaffold with a sunset \u2014 commercial spaceflight is proving that personal devices can coexist with operational security, creating an exit path within a generational timeframe. For the security protocols apparatus, the ban is a piton: the original justification (preventing espionage, ensuring operational security) is increasingly performative as cybersecurity capabilities have evolved, yet the ban persists through institutional inertia. The theater ratio has risen from 0.42 to 0.58 over twenty years as the functional security argument has weakened but the policy ritual has persisted. This constraint is a diagnostic exemplar of how institutional control mechanisms can be simultaneously genuine coordination (from the institution's perspective) and genuine extraction (from the isolated agent's perspective).",
+    "key_agents": [
+      "Astronauts/Crew: Primary victims (powerless/trapped) \u2014 bear full psychological cost of isolation and communication control",
+      "Mission Control (NASA): Primary beneficiary (institutional/arbitrage) \u2014 benefits from unified communication protocols and information control authority",
+      "Crew unions and mental health advocates: Organized reformers (organized/constrained) \u2014 pushing for policy change with realistic sunset horizon",
+      "Security protocols division: Institutional maintainer (institutional/arbitrage) \u2014 preserves the ban through ritual compliance despite weakened functional justification",
+      "Commercial spaceflight operators: Competitive alternative (institutional/arbitrage) \u2014 demonstrating viable personal device policies, creating policy pressure",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing a contingent policy as an immutable constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The ban extracts astronaut autonomy and family connection, but the extraction is not as severe as pure control mechanisms (\u03b5 > 0.60) because mission control genuinely solves coordination problems. The extraction is blended with real operational coordination benefits. Suppression (0.65): Moderate-high. Astronauts have zero alternatives \u2014 they cannot exit without abandoning their career and mission. The suppression is structural: orbital mechanics and contractual obligation eliminate exit options. However, at the policy level, NASA does face pressure from crew advocates and commercial operators, creating some institutional escape routes (though high cost). Theater ratio (0.58): Moderate. The security justification has become increasingly performative as cybersecurity has matured, yet security reviews continue to be conducted and the ban is maintained. The rising trend (0.42 \u2192 0.58) reflects increasing gap between stated rationale and functional justification. The constraint is maintained through ritual more than through genuine security necessity, but it is not yet pure theater (which would require theater_ratio > 0.70).",
+    "perspectival_gap": "This constraint exhibits a severe perspectival gap between the isolated astronaut and mission control. Astronauts perceive a snare (trapped, extractive, no exit). Mission control perceives a rope (coordinating, beneficial, low extraction). The gap arises because the astronaut's experience is purely cost (isolation, control) while mission control's experience is purely benefit (unified communication, authority, predictability). The open communications movement and security apparatus occupy intermediate positions: they see the ban as degrading (scaffold and piton) because they perceive the original justification as increasingly hollow. The analytical observer's mountain classification is a false summit \u2014 it naturalizes a policy choice as a physical law, obscuring the contingent institutional arrangement beneath.",
+    "directionality_logic": "Astronauts: Full victim status (d \u2248 0.95) because they bear costs without agency. Trapped exit options compound the extraction \u2014 no alternative employment within the same role. Mission control: Full beneficiary status (d \u2248 0.05) because they capture all coordination benefits. Arbitrage exit options (regulatory authority, capability to revise policy) make the constraint optional for them. Open communications movement: d \u2248 0.45 (moderate victim) because they advocate for crew but have organizational agency. Constrained exit (policy change is possible but costly) reflects their mixed position. Security apparatus: d \u2248 0.20 (moderate beneficiary) because they benefit from control but increasingly perceive the benefit as performative. Arbitrage exit is theoretically available (they could recommend policy change) but organizationally constrained by institutional culture.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint demonstrates the mandatrophy by showing that labeling it as pure 'coordination' (rope) would naturalize extraction (snare), while labeling it as pure 'extraction' (snare) would obscure genuine coordination benefits. The tangled rope classification captures both: the ban solves real coordination problems (unified communication, bandwidth management, emergency response) while simultaneously extracting astronaut autonomy and family connection. The extraction is not incidental to coordination \u2014 it is the mechanism through which coordination is achieved. Mission control could implement monitored personal devices (as commercial operators do) and maintain coordination, but the current arrangement gives NASA greater control. The psychological cost to astronauts is not a tragedy of the coordination mechanism \u2014 it is the extracted value that makes the mechanism attractive to the institution. Recognizing this as tangled rope (not rope, not snare) enables policy analysis: the question becomes 'how much coordination benefit genuinely requires suppressing astronaut autonomy?' rather than 'is this coordination or extraction?' The answer, from commercial spaceflight experience, is 'less than the current ban achieves.' This resolves mandatrophy by converting it to a design question: what is the optimal balance point between coordination and autonomy, and does the current institutional arrangement achieve it or exceed the minimum necessary suppression?"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "crew_mental_health_degradation",
+      "family_communication_deprivation"
+    ],
+    "dual_formulation_note": "The ISS personal device ban is a coordination mechanism (mission control's perspective) upstream of crew morale constraints (astronaut's perspective). These are not the same constraint viewed differently \u2014 they are distinct constraints with causal dependency. The ban affects the crew's capacity to maintain family connections, which in turn affects psychological resilience in isolation. The upstream constraint (the ban as coordination/extraction) has lower \u03b5 (0.38) reflecting blended coordination; the downstream constraints (morale degradation, communication deprivation) have higher \u03b5 reflecting pure extraction of psychological well-being."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

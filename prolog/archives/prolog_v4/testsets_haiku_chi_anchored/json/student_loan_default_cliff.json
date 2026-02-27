@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "student_loan_default_cliff",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sldc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Student Loan Default Cliff: Forbearance Expiration and Repayment Shock",
+    "topic_domain": "economic/financial_regulation",
+    "requires_active_enforcement": false,
+    "victims": [
+      "low_income_borrowers",
+      "nontraditional_students",
+      "public_service_workers",
+      "borrowers_in_deferment"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Borrower",
+      "comment": "PERSPECTIVE 1: LOW-INCOME BORROWER (SNARE) \u2014 Forbearance expires with no viable exit. Income-driven repayment plans exist in theory but require annual certification and offer only modest payment reduction ($0\u2013$200/month for many). Default becomes the only option for those with no discretionary income. Trapped exit + victim status \u2192 d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. Maximum extraction: borrower bears full cost of the cliff with no escape."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Nontraditional Student",
+      "comment": "PERSPECTIVE 2: NONTRADITIONAL STUDENT (SNARE) \u2014 Older borrowers, career-switchers, and part-time students borrowed at life stages when forgiveness timelines (20\u201325 years) exceed their remaining work-life horizon. Forbearance masked this structural trap. Default or perpetual debt are the only outcomes. d\u22480.90, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Income Borrower",
+      "comment": "PERSPECTIVE 3: MIDDLE-INCOME BORROWER (TANGLED ROPE) \u2014 Income-driven repayment is genuinely available; monthly payments might be $300\u2013$600 instead of $1200+. Extraction is real but mediated. Also benefits from debt forgiveness after 20\u201325 years (though this date recedes as payments are deferred). d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55. Moderate extraction with some institutional safety valve."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Federal Government (Collector)",
+      "comment": "PERSPECTIVE 4: FEDERAL GOVERNMENT / DEBT COLLECTOR (ROPE) \u2014 The cliff is a coordination mechanism: it forces borrowers into formal repayment, population-level revenue recovery, and regulatory compliance. The government can arbitrage: collect from those who can pay, defer those who can't, or forgive strategically. No systemic cost \u2014 the government absorbs default losses through budget adjustments. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.07. Net beneficiary; experiences constraint as revenue mechanism, not burden."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Debt Relief and Advocacy Coalition",
+      "comment": "PERSPECTIVE 5: DEBT RELIEF COALITION (SCAFFOLD) \u2014 Organized actors (student debt forgiveness advocates, legal aid, progressive legislators) view the cliff as a temporary coordination failure solvable by policy reform: income-driven repayment improvements, limited forgiveness programs (e.g., Public Service Loan Forgiveness), or debt cancellation. These actors are building an exit path with a sunset: permanent policy solutions replace the forbearance band-aid. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.20. Low effective extraction because the coalition has agency and sees a legislative path forward. The sunset is policy reform, estimated 5\u201310 years."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Loan Servicer System",
+      "comment": "PERSPECTIVE 6: LOAN SERVICER SYSTEM (PITON) \u2014 The servicer infrastructure (Navient, Mohela, etc.) has atrophied functionally over the forbearance period. Borrower communication systems, income verification workflows, and payment processing are degraded and theatrical. The servicer persists through regulatory lock-in and contractor relationships, not functional necessity. theater_ratio=0.68 reflects that much servicer activity is compliance ritual with minimal value-add. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.07. Piton classification from theater gate; institutional arbitrage exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the default cliff represents a structural asymmetry: wage growth stagnation + loan debt inflation + income-driven forgiveness that never actually forgives (25 years of payments exceed principal + interest). The system coordinates debt collection while extracting from those with no real exit. The constraint is neither pure coordination (beneficiaries exist: government, educated workers with income) nor pure extraction (victims have some recourse). The observer sees the tangled hybrid: coordination function (market testing of repayment capacity) + persistent extraction (long-term debt servitude for the trapped). d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "idr_plan_sufficiency",
+      "question": "Do income-driven repayment plans actually provide affordable access to repayment, or do they merely extend the debt timeline indefinitely?",
+      "resolution_mechanism": "Longitudinal analysis of borrowers on income-driven plans: comparison of lifetime payments vs. principal + interest; tracking of forgiveness completion rates (borrowers reaching 20\u201325 year mark with debt actually forgiven)",
+      "impact": "If sufficient: constraint is tangled rope (extraction mediated by coordination). If insufficient: constraint is closer to snare (IDR is theatrical relief with no real exit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether income-driven repayment plans provide genuine affordability or extend indefinite servitude"
+    },
+    {
+      "id": "forgiveness_implementation_deadline",
+      "question": "What policy timeline for genuine debt relief (forgiveness, restructuring, or income-linked repayment) would convert this snare into a scaffold with a real sunset?",
+      "resolution_mechanism": "Policy scorecard: track enactment of forgiveness programs, income-linked repayment legislation, and sunset deadlines; measure reduction in default cliff severity over 5\u201310 year period",
+      "impact": "If < 3 years: scaffold perspective is realistic. If > 15 years: scaffold is aspirational rather than structural; constraint remains snare.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Political timeline for policy reform converting snare to sunset scaffold"
+    },
+    {
+      "id": "wage_growth_recalibration",
+      "question": "Can nominal wage growth exceed student debt service obligations at the population level, creating a structural escape valve?",
+      "resolution_mechanism": "Cohort analysis: median wage growth vs. median monthly student loan payment for borrowers entering repayment in 2023\u20132026; projection of payment-to-income ratios over 10-year period",
+      "impact": "If wage growth > 3% annually: constraint softens over time (Rope or Scaffold). If wage growth < 1.5%: constraint hardens (Snare persists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage growth can structurally outpace debt service obligations"
+    },
+    {
+      "id": "default_contagion_threshold",
+      "question": "At what default rate does the student loan system trigger cascade failure (servicer insolvency, government bailout, credit market freezing)?",
+      "resolution_mechanism": "Financial stability analysis: servicer balance sheets; stress testing of cascading default scenarios; measurement of systemically important thresholds",
+      "impact": "If threshold < 15% default rate: cliff induces immediate systemic crisis (government forced to extend forbearance or cancel). If > 25%: cliff can be absorbed within existing institutional capacity.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Default rate threshold for triggering systemic financial crisis"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The student loan default cliff emerges when forbearance programs (payment suspension, interest freeze) expire and borrowers face immediate repayment obligations on federal loans totaling ~$1.7 trillion (2024). Extractiveness surged from 0.15 (forbearance period) to 0.58 (post-expiration) as the policy shock converts a temporary relief mechanism into a structural repayment crisis. The constraint exhibits classic snare properties: high suppression (limited exit options), asymmetric power (borrowers vs. government collectors), and coercive mechanism (wage garnishment, credit destruction, social exclusion). However, the constraint also contains organizational fissures: income-driven repayment plans theoretically soften the cliff for moderate-income borrowers (tangled rope perspective), debt relief advocates have organized a political coalition with plausible policy wins (scaffold perspective), and the government itself faces political costs from mass defaults (which incentivizes forbearance renewal, suggesting the constraint is self-limiting). The theater ratio (0.38) is lower than expected for a snare, reflecting that the default mechanism is functionally enforced (garnishment, credit reporting) rather than performative, unlike the loan servicer infrastructure itself (which remains highly theatrical despite low functional value). The constraint's lifecycle shows rapid extraction escalation as forbearance ends, then potential policy intervention (declining theater) if political pressure succeeds in restructuring repayment terms.",
+    "key_agents": [
+      "Low-Income Borrowers: Primary victims (powerless/trapped) \u2014 no capacity to service debt; face default, wage garnishment, credit destruction",
+      "Nontraditional Students: Secondary victims (powerless/trapped) \u2014 borrowed at life stages when 20\u201325 year forgiveness exceeds work-life horizon; trapped by temporal asymmetry",
+      "Middle-Income Borrowers: Moderate victims (moderate/constrained) \u2014 income-driven repayment provides partial relief; some capacity to pay; benefit from long-term forgiveness structures",
+      "Federal Government: Primary beneficiary (institutional/arbitrage) \u2014 collects from those who can pay; absorbs defaults through budget; can arbitrage policy reforms",
+      "Debt Relief Coalition: Organized actors (organized/constrained) \u2014 advocates, legal aid, progressive legislators; building scaffold (policy reform path) with sunset clause",
+      "Loan Servicers: Institutional actors (institutional/arbitrage) \u2014 degraded infrastructure maintained by regulatory lock-in; theatrical compliance role with minimal functional value",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees tangled rope structure: coordination function (market testing repayment capacity) + persistent extraction (indefinite servitude for trapped borrowers)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting asymmetric coercion post-forbearance. Base extraction is 58% because the government enforces repayment through garnishment and credit destruction for defaulters, while borrowers have limited escape routes. The value reflects that extraction occurs, but not absolutely (income-driven repayment and forgiveness programs exist as partial relief valves). Suppression (0.72): High. Borrowers face severe barriers to exit: (a) most cannot refinance federal loans in private markets (credit constraints), (b) private student loans cannot be discharged in bankruptcy, (c) income-driven repayment requires annual recertification and offers minimal payment reduction for low-income borrowers, (d) forbearance is temporary, not permanent. The only real exit is default, which carries severe social costs (credit destruction, wage garnishment, professional license loss). Theater ratio (0.38): Moderate. The default mechanism is functionally enforced (not theatrical), but the loan servicer infrastructure is highly theatrical. Borrower communication, income verification, and payment processing are ritualistic and degraded. The constraint's core function (debt collection) is real; the servicing layer is performative. Mandatrophy resolution: The constraint exhibits genuine extraction (\u03c7 \u2248 0.81 for trapped borrowers, computed from d\u22480.92, f(d)\u22481.40, \u03c3=1.0) without mislabeling coordination as pure extraction. The government's coordination function (market testing via income-driven repayment) is real but subordinate to extraction. The snare classification is justified by suppression (0.72), \u03b5 (0.58), and high \u03c7 from powerless victims' perspective.",
+    "perspectival_gap": "The constraint produces dramatically different classifications across perspectives. Low-income borrowers see pure extraction (Snare, \u03c7\u22480.81) with no exit. Middle-income borrowers see mixed coordination-extraction (Tangled Rope, \u03c7\u22480.55) with partial relief available. The federal government sees pure coordination (Rope, \u03c7\u2248-0.07) \u2014 debt collection is a normal governmental function, and defaults are absorbed within budget. The debt relief coalition sees a temporary problem (Scaffold) with a sunset measured in policy reform cycles (5\u201310 years). The loan servicer system sees its own degraded ritual (Piton, theater=0.68) maintained by contractual lock-in rather than functional necessity. The analytical observer from a civilizational perspective sees tangled rope (\u03c7\u22480.67) \u2014 the system coordinates borrowers into debt servitude while extracting long-term value. The gap reflects genuine structural asymmetries: borrowers experience different constraints based on income, organizational capacity, and exit options. No single type describes the full reality.",
+    "directionality_logic": "Low-income borrowers: Victim + trapped exit \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Zero discretionary income means default is the only outcome; no institutional relief mechanism functions. Nontraditional students: Victim + trapped exit + biographical horizon \u2192 d\u22480.90, f(d)\u22481.38. Nearly maximum extraction; temporal mismatch (forgiveness timeline >> remaining work-life) creates structural impossibility. Middle-income borrowers: Victim + constrained exit \u2192 d\u22480.65, f(d)\u22480.95. Moderate extraction; income-driven repayment and forgiveness programs provide partial institutional relief. Federal government: Beneficiary + arbitrage exit \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary; government can arbitrage between collection, deferment, and political forgiveness. Debt relief coalition: Organized + constrained exit \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction; coalition has agency and sees legislative path forward (scaffold sunset). Loan servicers: Institutional + arbitrage exit \u2192 d\u22480.05, f(d)\u2248-0.12. Beneficiaries through contractual relationships; can exit if contracts expire. Analytical observer: analytical exit \u2192 d\u22480.72, f(d)\u22481.15. Sees the constraint as structurally embedded hybrid.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing extraction (\u03b5=0.58, \u03c7 peaks at 0.81 from trapped borrowers' perspective) from coordination (income-driven repayment plans exist, forgiveness after 20\u201325 years is offered). The snare classification correctly identifies this as a constraint where coercion dominates coordination: yes, there are formal relief mechanisms, but they require organizational capacity (annual income verification), they extend timelines indefinitely (25-year forgiveness never actually completes because payments accumulate), and they are accessible only to those with stable income (not low-income workers with variable earnings). The mandatrophy is resolved by recognizing that mandatrophy-failing constraints exhibit high \u03c7 with low suppression (appearing as coordination when the underlying mechanism is coercive). This constraint has high suppression (0.72), which rules out that inversion. The extraction is real and suppression is structural. The constraint classifies as snare with high confidence (\u03c7\u22480.81 from primary victim perspective). The scaffold perspective (policy reform with sunset) is analytically distinct \u2014 it represents a potential future state, not the current structural reality. Current reality is snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_driven_repayment_sustainability",
+      "public_service_loan_forgiveness",
+      "consumer_financial_protection_bureau"
+    ],
+    "dual_formulation_note": "The default cliff decomposes into three structurally distinct constraints: (1) The cliff itself as a temporary shock (this story, \u03b5=0.58, snare), (2) The long-term sustainability of income-driven repayment plans (\u03b5\u22480.45, tangled rope \u2014 coordination mechanism with extraction overlay), (3) The public service forgiveness program (\u03b5\u22480.35, scaffold \u2014 genuinely temporary relief with sunset). Each has different temporal dynamics and policy solutions. This story focuses on the immediate cliff; downstream stories address institutional sustainment."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "eu_renewable_energy_mandate",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eurem"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Renewable Energy Directive and Support Schemes",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "renewable_energy_producers",
+      "grid_infrastructure_operators",
+      "eu_climate_objectives"
+    ],
+    "victims": [
+      "fossil_fuel_industries",
+      "end_consumers_electricity_bills",
+      "grid_stability_burden"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Residential Electricity Consumer",
+      "comment": "PERSPECTIVE 1: RESIDENTIAL ELECTRICITY CONSUMER (SNARE) \u2014 Trapped by mandatory connection to grid and inability to opt out of the subsidy system. Experiences rising electricity bills to fund renewable support without meaningful exit option or negotiating power. Bears extraction through feed-in tariff costs and grid stabilization fees passed through to consumers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Grid Operator",
+      "comment": "PERSPECTIVE 2: REGIONAL GRID OPERATOR (TANGLED ROPE) \u2014 Constrained by mandatory grid integration obligations and variable renewable intermittency. Benefits from infrastructure investment funding and operational fee revenues. Mixed extraction: forced to absorb balancing costs (victim) while capturing guaranteed service revenue (beneficiary). Exit options severely constrained by infrastructure ownership."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Renewable Energy Producer",
+      "comment": "PERSPECTIVE 3: RENEWABLE ENERGY PRODUCER (ROPE) \u2014 Primary beneficiary with access to feed-in tariffs, contracts for difference, and investment subsidies. Experiences the constraint as coordination mechanism solving the investment certainty problem. High exit mobility through location arbitrage (building in highest-subsidy jurisdictions). Net beneficiary with organized agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Fossil Fuel Industry",
+      "comment": "PERSPECTIVE 4: FOSSIL FUEL INDUSTRY (TANGLED ROPE) \u2014 Constrained by mandatory renewable penetration targets and carbon pricing. Suffers extraction through reduced market share and stranded asset risk. Also benefits from infrastructure coordination (grid stability payments, capacity mechanism revenues). Organized agent with constrained but real exit options (geographic relocation, portfolio diversification into renewables)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The EU Climate Policy Coalition",
+      "comment": "PERSPECTIVE 5: EU CLIMATE POLICY COALITION (SCAFFOLD) \u2014 Organized agents (EU Commission, member state climate authorities, climate-aligned NGOs) see renewable mandates as temporary support structures with explicit sunset logic: as renewable economics improve and grid technology matures, subsidies should decline (legally scheduled phase-out of feed-in tariffs in 2030+). Theatre exists but is declining as market mechanisms replace mandates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Legacy Coal Power Authority",
+      "comment": "PERSPECTIVE 6: LEGACY COAL POWER AUTHORITY (PITON) \u2014 Institutional actor maintaining coal generation through political advocacy and protection despite structural redundancy. Theater ratio high: compliance messaging about 'just transition' and 'stranded worker protection' persists while the actual economic function (baseload power provision) is being replaced by gas and renewables. Extraction mechanism degraded but inertially maintained through political coalition."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, renewable energy transitions are inherent to physics and thermodynamics: fossil fuels are finite, solar/wind are inexhaustible, and economics inevitably favor renewables at scale. This perspective risks naturalizing the EU policy apparatus as an immutable law of energy economics. However, base properties contradict mountain classification \u2014 the supportiveness, theater, and beneficiary/victim structure reveal contingent political choices, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsidy_sufficiency_threshold",
+      "question": "What level of renewable penetration (%) removes the need for active subsidy enforcement?",
+      "resolution_mechanism": "Cost-benefit analysis: levelized cost of renewable energy (LCOE) vs fossil fuels; grid stability cost curves; economic modeling of merchant power market viability",
+      "impact": "If threshold < 40% penetration: mandates become pure extraction mechanism (Snare dominates). If threshold > 60%: mandates are legitimately temporary (Scaffold dominates). Current EU target is 42.5% by 2030.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Renewable penetration threshold for subsidy-free viability"
+    },
+    {
+      "id": "grid_stability_cost_internalization",
+      "question": "Are the true costs of grid balancing and storage infrastructure properly allocated to renewable integration, or hidden in general transmission costs?",
+      "resolution_mechanism": "System-level cost accounting: comparison of grid balancing costs in high-renewable vs low-renewable jurisdictions; attribution analysis of infrastructure investment drivers",
+      "impact": "If properly allocated: supports tangled rope classification (both extraction and coordination visible). If hidden: renewable producers capture externalized costs \u2192 snare for consumers.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether grid stability costs are properly internalized in renewable subsidy calculations"
+    },
+    {
+      "id": "political_capture_depth",
+      "question": "To what extent have renewable energy subsidies become rent-seeking mechanisms captured by incumbent renewable producers and grid operators?",
+      "resolution_mechanism": "Policy analysis: subsidy design stability vs market evolution; comparison of support intensity vs actual investment barriers; revolving-door analysis of EU/member state energy officials",
+      "impact": "If capture is shallow: scaffold sunset mechanisms remain functional. If capture is deep: subsidies persist indefinitely despite improving economics \u2192 Piton degradation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of political capture in renewable subsidy design"
+    },
+    {
+      "id": "consumer_exit_option_feasibility",
+      "question": "Can residential consumers meaningfully exit the electricity grid or organize collective alternatives (prosumers, microgrids, storage)?",
+      "resolution_mechanism": "Technological analysis: storage cost curves, microgrid economics, distributed generation feasibility; policy analysis: regulatory barriers to consumer exit",
+      "impact": "If exit is infeasible: consumer perspective remains Snare (trapped). If exit becomes feasible: consumers transition to Tangled Rope or escape the constraint entirely \u2192 classification shift.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of consumer exit options from centralized grid subsidy system"
+    },
+    {
+      "id": "fossil_fuel_stranded_asset_timeline",
+      "question": "What is the actual economic lifespan of existing fossil fuel infrastructure before stranded asset losses exceed recoverable returns?",
+      "resolution_mechanism": "Financial analysis: NPV modeling of coal/gas plants vs renewable alternatives; regulatory timeline for plant decommissioning; break-even analysis under EU carbon pricing",
+      "impact": "If timeline < 10 years: fossil fuel industry faces maximal extraction (Snare dominates). If timeline > 20 years: transition period allows portfolio diversification \u2192 Tangled Rope more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic stranded asset timeline for fossil fuel infrastructure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The EU Renewable Energy Directive and national support schemes (feed-in tariffs, contracts for difference, investment grants) represent a complex hybrid constraint combining genuine coordination function (solving renewable investment certainty) with asymmetric extraction (passing integration costs to consumers and fossil fuel industries). The constraint exhibits all primary classification types from different structural positions. From the residential consumer perspective, it functions as a snare: mandatory grid connection and inability to exit creates a trapped population bearing electricity bill increases without negotiation power. From the renewable producer perspective, it functions as rope: access to guaranteed revenues solves the investment-certainty problem and enables rapid scaling. From grid operators, it functions as tangled rope: mandatory integration obligations plus balancing cost burdens, but also fee-based revenue streams. From fossil fuel industries, it functions as tangled rope: extraction via declining market share and stranded assets, but also benefit via capacity payments and grid stability contracts. From EU climate policy coalitions, it functions as scaffold: temporary support structures with explicit sunset logic (subsidy phase-outs scheduled for 2030+) and declining theater as market economics improve. From legacy coal authorities, it functions as piton: political maintenance through 'just transition' rhetoric despite functional degradation. The constraint's extractiveness has increased from 0.28 (2008, policy inception) to 0.52 (2023) as support schemes have expanded and consumer bill impacts have accumulated. Theater ratio has also increased from 0.42 to 0.58 as performative 'just transition' narrative has grown relative to actual grid stability function.",
+    "key_agents": [
+      "Residential Electricity Consumers: Primary victims (powerless/trapped) \u2014 bear escalating electricity bills through support scheme cost pass-through; lack exit options from grid connection",
+      "Renewable Energy Producers: Primary beneficiaries (institutional/arbitrage) \u2014 capture feed-in tariffs, contracts for difference, and investment subsidies; high exit mobility through subsidy arbitrage",
+      "Regional Grid Operators: Secondary beneficiary-victim hybrid (moderate/constrained) \u2014 forced to integrate variable renewables while capturing service fees; constrained by infrastructure ownership",
+      "Fossil Fuel Industries: Secondary victims with partial benefits (organized/constrained) \u2014 face market share extraction and stranded asset risk, but capture capacity payments and grid stability revenues",
+      "EU Climate Policy Coalition: Organized actors (organized/constrained) \u2014 see renewable mandates as temporary support structures declining as market economics improve",
+      "Legacy Coal Power Authorities: Institutional actors (institutional/arbitrage) \u2014 maintain coal generation through political protection despite functional redundancy; high theater ratio",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing policy apparatus as inherent energy economics rather than contingent political choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over interval. The directive extracts from consumers and fossil industries but enables renewable producer benefits. Starting value (0.28 in 2008) reflected policy in early adoption phase with modest support levels. Current value (0.52) reflects accumulated effects: feed-in tariff costs have concentrated (highest in Germany, Denmark), consumer bill impacts now visible (\u20ac10-20/month average), and fossil fuel stranded assets are materializing. Suppression (0.48): Moderate. Significant barriers to consumer exit include regulatory grid monopolies, startup costs for alternative systems (storage, microgrids), and political resistance to prosumer markets. But suppression is not absolute \u2014 Germany's prosumer penetration (15%+) and emerging peer-to-peer energy trading show exit options are not completely closed. Theater ratio (0.58): Moderate-high and increasing. Feed-in tariff design involves genuine technical coordination (grid stability) but also performative elements (environmental messaging divorced from actual carbon accounting, 'just transition' rhetoric for coal regions that receive minimal retraining support). Theater increased from 0.42 to 0.58 as political justification narrative expanded while underlying cost-benefit analysis remained contested.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is maximal here: Renewable producers experience chi \u2248 -0.12 \u00d7 0.52 \u00d7 1.1 \u2248 -0.069 (negative extraction, pure coordination benefit). Residential consumers experience chi \u2248 1.42 \u00d7 0.52 \u00d7 1.1 \u2248 0.814 (severe extraction, maximum snare signature). This gap \u2014 from strong beneficiary to maximal victim \u2014 is precisely what triggers Tangled Rope classification at the meso-level (grid operators, fossil industries, policy coalitions). The constraint is neither pure rope (would require all perspectives to see coordination benefit) nor pure snare (would require all perspectives to see extraction). It is hybrid: real coordination function (solving renewable investment certainty) combined with asymmetric extraction (passing integration costs to consumers and carbon-dependent industries).",
+    "directionality_logic": "Directionality values (d) derive from structural position: power level, exit options, and relationship to extraction flow. Residential consumers (powerless/trapped) derive d \u2248 0.95, experiencing near-maximal extraction via f(d) \u2248 1.42. Renewable producers (institutional/arbitrage) derive d \u2248 0.05, experiencing negative extraction (subsidy flow toward them) via f(d) \u2248 -0.12. Grid operators (moderate/constrained) derive d \u2248 0.55-0.60, experiencing moderate extraction with partial benefit via f(d) \u2248 0.75-0.85. Fossil fuel industries (organized/constrained) derive d \u2248 0.65, experiencing moderate-to-high extraction via f(d) \u2248 1.00-1.15 from market share loss, partially offset by capacity payment benefits. EU climate coalition (organized/constrained with organized agency in policy design) derives d \u2248 0.40-0.50, experiencing moderate extraction mediated by policy control. Coal authorities (institutional/arbitrage in policy, but constrained in market) derive d \u2248 0.45-0.55 depending on whether political protection is viewed as arbitrage (regulatory capture) or constraint (inevitable decline). Each agent's d feeds into chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S), where scope modifiers (\u03c3) reflect that EU-scale coordination (\u03c3=1.1) amplifies extractiveness relative to local mechanisms (\u03c3=0.8).",
+    "mandatrophy_analysis": "The mandatrophy (risk of mislabeling extraction as coordination or vice versa) is partially but not fully resolved here. The RESOLVED claim (mandatrophy_resolved: false) indicates ongoing ambiguity. Core tension: Is the directive a coordination mechanism solving a market failure (renewable investment certainty, grid integration externalities) or an extraction mechanism benefiting renewable producers and grid operators at consumer expense? Resolution requires empirical answer to omega variables. If subsidy sufficiency threshold < 40% penetration, the mandate becomes pure extraction post-threshold. If grid stability costs are properly internalized, the coordination function is visible and tangled rope is correct. If political capture is deep, sunset mechanisms degrade and piton classification emerges. If consumer exit options remain infeasible, snare classification dominates. The JSON declares mandatrophy_resolved: false because the empirical status of these omega variables is contested, and classification could shift with resolution. Current classification (Tangled Rope, claimed_type) reflects that BOTH coordination function AND asymmetric extraction are structurally present, but their relative weights are uncertain."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.35
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_carbon_pricing_mechanism",
+      "fossil_fuel_subsidy_phase_out",
+      "grid_infrastructure_investment_coordination"
+    ],
+    "dual_formulation_note": "The EU renewable mandate comprises two structurally distinct claims: (1) renewable penetration targets as coordination mechanism for technology deployment (\u03b5 \u2248 0.25, Rope-dominant), and (2) support scheme design as extraction mechanism for producer benefit (\u03b5 \u2248 0.65, Snare-dominant). These could be decomposed into separate stories, but current analysis treats them as unified because policy design intentionally combines both functions. Upstream constraints (carbon pricing, fossil fuel subsidies) constrain the support scheme design space. Downstream constraints (grid infrastructure investment) are driven by renewable penetration targets."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

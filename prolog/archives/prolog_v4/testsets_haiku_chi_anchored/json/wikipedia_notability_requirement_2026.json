@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "wikipedia_notability_requirement_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wpnot"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Wikipedia Notability Requirement (2026)",
+    "topic_domain": "social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_publishers",
+      "wikipedia_editorial_gatekeepers",
+      "institutional_subjects"
+    ],
+    "victims": [
+      "emerging_creators",
+      "non_english_communities",
+      "marginalized_subjects",
+      "wikipedia_encyclopedia_completeness"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Emerging Creator",
+      "comment": "PERSPECTIVE 1: EMERGING CREATOR (SNARE) \u2014 Subject to gatekeeping with no meaningful appeal. Cannot exit: the subject either achieves notability through external validation or remains unencyclopedic. No recourse for disputing the evaluation. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-English Communities",
+      "comment": "PERSPECTIVE 2: NON-ENGLISH COMMUNITIES (SNARE) \u2014 Notability criteria privilege English-language sources and Western institutions. Cannot exit: subjects documented only in local languages face structural disadvantage. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Wikipedia Volunteer Reviewer",
+      "comment": "PERSPECTIVE 3: VOLUNTEER REVIEWER (TANGLED ROPE) \u2014 Benefits from encyclopedia quality maintenance (coordination function) but bears burden of enforcing standards with limited guidance and high interpersonal friction. Trapped in role by sense of stewardship; exit costs include loss of community standing. d\u22480.62, f(d)\u22480.90, \u03c3=1.0 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Established Publishers",
+      "comment": "PERSPECTIVE 4: ESTABLISHED PUBLISHERS (ROPE) \u2014 Benefit from notability requirement's citation loop: their publications are used as evidence of notability, creating self-reinforcing access. Can arbitrage: publishing houses have institutional credibility that grants subjects notability via inclusion in their catalogs. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Wikipedia Editorial Authority",
+      "comment": "PERSPECTIVE 5: WIKIPEDIA EDITORIAL AUTHORITY (TANGLED ROPE) \u2014 Enforces notability policy (extraction from subjects) while also managing the encyclopedia as a coordination mechanism (Rope function: curating reliable content). Constrained by community governance and lack of resources to verify subjective 'significance.' Benefits from gatekeeping power; constrained by consensus requirement. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.20."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Notability Policy Framework",
+      "comment": "PERSPECTIVE 6: NOTABILITY POLICY FRAMEWORK (PITON) \u2014 Theater ratio 0.64 reflects heavy performative element: the policy is enforced through ritual (AfD deletion discussions, citation hunts, debate over source quality) rather than clear functional criteria. The underlying question 'is this subject important enough?' remains unanswerable by policy; enforcement persists through institutional inertia despite chronic ambiguity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees both genuine coordination (preventing unreliable content) and genuine extraction (gatekeeping creates access asymmetry favoring established sources). Neither function dominates from a civilizational perspective; Wikipedia simultaneously democratizes knowledge and reproduces status hierarchies. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.71."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "notability_circularity",
+      "question": "Does the notability requirement enforce an empirically resolvable standard or an institutionally circular one?",
+      "resolution_mechanism": "Analysis of overturned AfD decisions: if overturned articles demonstrate alternative source bases that satisfy the same criteria, the standard is empirically coherent. If overturns are reversed again, the standard is circular.",
+      "impact": "If empirically resolvable: Tangled Rope holds with coordination function dominant. If circular: classification shifts toward Snare, as gatekeepers enforce power rather than an objective standard.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether notability criteria are empirically resolvable or institutionally circular"
+    },
+    {
+      "id": "source_hierarchy_bias",
+      "question": "What fraction of notability decisions depend on source prestige (journal, publisher, news outlet) versus subject characteristics?",
+      "resolution_mechanism": "Controlled retrospective study: identical notability claims (same subject, same evidence quantity) presented with varying source tiers (arXiv vs Nature, local blog vs Reuters, self-published vs academic press). Measurement of decision variance attributable to source tier.",
+      "impact": "High variance by source tier (>60%): extraction mechanism dominant, victims are creators without institutional backing. Low variance (<20%): coordinate decision-making, Rope or pure Tangled Rope. Medium variance: current state confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Bias toward established sources in notability decisions"
+    },
+    {
+      "id": "encyclopedia_coverage_completeness",
+      "question": "Does the notability requirement maximize or minimize Wikipedia's utility as a comprehensive reference?",
+      "resolution_mechanism": "Comparison of deletion rate by subject category (scientists, artists, athletes, technical topics, regional subjects, marginalized communities). Correlation with external importance metrics (academic citation counts, impact measures, community size).",
+      "impact": "If notability deletions correlate with low external importance: Rope (coordination working correctly). If deletions correlate with marginalized status despite external importance: Snare (gatekeeping independent of actual importance).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether notability requirement serves encyclopedic completeness"
+    },
+    {
+      "id": "appeal_mechanism_effectiveness",
+      "question": "Can creators realistically challenge notability decisions, or does the policy permit only downstream accommodation?",
+      "resolution_mechanism": "Tracking of AfD overturned rates by appeal type: resubmission after improvement vs. reversal of previous decision vs. policy reinterpretation. Measurement of perceived fairness in appeals process by creators.",
+      "impact": "High overturn rates and creator confidence: exits are genuinely mobile, shift toward Rope or Scaffold. Low overturn rates and creator frustration: exits are constrained or trapped, supporting Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of appeal mechanisms for notability decisions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "Wikipedia's notability requirement is a gatekeeping policy that determines which subjects merit dedicated articles on the encyclopedia. Established in the early 2000s to prevent spam and pseudoscience, the policy has evolved into a hybrid constraint combining genuine coordination (filtering unreliable content) with significant extraction (privileging established sources and Western institutions). The constraint exhibits a perspectival gap: established institutions and publishers see the requirement as legitimate quality control (Rope), while emerging creators and marginalized communities experience it as exclusionary gatekeeping (Snare). Volunteer reviewers experience it as a mixed burden (Tangled Rope), simultaneously maintaining encyclopedia quality and enforcing asymmetric access. The theater ratio (0.64) reflects that notability enforcement relies heavily on ritual discussion (Articles for Deletion debates) rather than coherent criteria \u2014 reviewers spend substantial effort in performative argumentation that rarely produces a principled standard. The extractiveness (0.52) indicates moderate but meaningful asymmetry: the policy benefits established publishers whose work is used as notability evidence, while constraining creators without institutional backing. The suppression (0.68) is high: creators face substantial barriers (obtaining coverage in 'reliable sources,' demonstrating 'independent notability,' navigating policy ambiguity), and alternatives (Wikidata, subject-specific wikis, personal websites) are materially weaker than encyclopedic Wikipedia coverage.",
+    "key_agents": [
+      "Emerging Creators: Primary victim (powerless/trapped) \u2014 subjects without institutional backing must prove notability through external validation but lack pathways to do so",
+      "Non-English Communities: Primary victim (powerless/trapped) \u2014 notability criteria privilege English-language and Western sources, structurally disadvantaging non-English subject documentation",
+      "Established Publishers: Primary beneficiary (institutional/arbitrage) \u2014 their publications are used as evidence of notability, creating self-reinforcing access and citation advantages",
+      "Wikipedia Volunteer Reviewers: Secondary actor (moderate/constrained) \u2014 enforce standards with ambiguous criteria; experience both stewardship reward and interpersonal friction cost",
+      "Wikipedia Editorial Authority: Institutional enforcer (organized/constrained) \u2014 manages gatekeeping while also curating encyclopedic quality; benefits from authority while constrained by consensus governance",
+      "Marginalized Subjects: Structural victim \u2014 entire categories (local historical figures, indigenous knowledge, non-Western achievements) face systematic underrepresentation",
+      "Wikipedia Encyclopedia Completeness: Victim (abstract collective) \u2014 gating mechanism may prevent valuable subjects from being documented",
+      "Analytical Observer: Civilizational perspective \u2014 sees both the genuine need for content quality and the way gatekeeping reproduces status hierarchies"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The policy systematically advantages established publishers (institutional credibility grants subjects notability via inclusion in their catalogs) while disadvantaging creators dependent on primary documentation or non-institutional sources. The extraction is not total because alternative pathways exist (Wikidata, wikis, personal websites) and Wikipedia's notability policy has become more permissive for niche subjects over time. However, the economic value captured by Wikipedia (free, high-rank encyclopedia articles) creates meaningful asymmetry favoring those with established publication infrastructure. Suppression (0.68): High. Barriers include requirement for 'reliable sources' (privilege institutional publishers), difficulty proving 'independent notability' (circular definition), and AfD process itself (time-consuming, adversarial). Appeals exist but are slow and uncertain. Theater ratio (0.64): Moderate-high. Notability policy is enforced through ritual discussion (AfD debates, citation hunts, source quality disputes) that performs decision-making without producing coherent criteria. Editors spend significant effort in performative argumentation; the underlying question 'is this subject important enough?' remains unanswerable by policy. Theater increased from 0.48 to 0.64 over the interval as the volume of AfD discussions expanded while the underlying ambiguity remained constant.",
+    "perspectival_gap": "The constraint generates maximal perspectival disagreement. Established publishers see pure Rope (coordination that maintains quality). Emerging creators see pure Snare (extraction with no escape). Volunteer reviewers experience Tangled Rope (simultaneous stewardship and burden). The policy framework itself is Piton (performative enforcement of degraded standards). The editorial authority sees Tangled Rope (coordination + extraction trade-off). The analytical observer sees Tangled Rope (genuine coordination need co-existing with genuine gatekeeping asymmetry). This is not a failure of the framework \u2014 it reveals that the notability requirement genuinely performs both functions simultaneously. The perspectival gap reflects real structural differences in how agents experience the constraint, not disagreement about the facts.",
+    "directionality_logic": "Emerging creators: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. Non-English communities: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction due to structural language barrier. Established publishers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; low d. Volunteer reviewers: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.90. Significant extraction because exit has cost (community standing, stewardship role). Editorial authority: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.32. Lower extraction despite power; constrained by consensus governance and ambiguous standards. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Sees full structure.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that notability requirement is genuinely a hybrid mechanism. It is not 'coordination mislabeled as extraction' \u2014 it performs real content quality control (Rope function). It is not 'pure extraction mislabeled as coordination' \u2014 that would require no genuine quality problem to solve. The Tangled Rope classification holds because: (1) Beneficiaries exist (quality-focused volunteers, established institutions) and they derive genuine coordination benefit (avoiding spam, organizing reliable knowledge). (2) Victims exist (emerging creators, non-English communities) and extraction is material (asymmetric access to encyclopedic prestige). (3) Active enforcement is required \u2014 the policy must be continually re-justified in AfD discussions because no coherent standard generates automatic compliance. The theater ratio (0.64) indicates degraded Rope function: enforcement relies on ritual rather than clear criteria. This is not a Piton (would require theater \u2265 0.70 and \u03b5 \u2264 0.25; we have \u03b5=0.52). This is Tangled Rope with increasing performative overhead. The resolution is not to eliminate the constraint (quality problems are real) but to reduce theater by developing more coherent notability criteria or explicit source-independence pathways."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "wikipedia_deletion_bias_geographic",
+      "encyclopedia_coverage_completeness"
+    ],
+    "dual_formulation_note": "The notability requirement decomposes into several structurally distinct constraints: (1) content quality assurance (coordination, low \u03b5), (2) source prestige bias (extraction, high \u03b5), (3) language/cultural bias (extraction, high \u03b5), (4) appeal mechanism effectiveness (varies). This story treats notability as the unified gatekeeping policy. Upstream constraints (what defines 'reliable source,' what constitutes 'independent notability') affect this one. Downstream constraints (geographic deletion bias, marginalized subject underrepresentation) are affected by this one."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

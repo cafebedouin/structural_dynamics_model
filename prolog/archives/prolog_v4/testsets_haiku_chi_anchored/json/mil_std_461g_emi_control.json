@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "mil_std_461g_emi_control",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mil461g"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "MIL-STD-461G EMI Control Standard",
+    "topic_domain": "technological/military_standards",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "defense_prime_contractors",
+      "military_procurement_authority"
+    ],
+    "victims": [
+      "small_component_suppliers",
+      "innovation_speed",
+      "cost_sensitive_contractors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Small Component Supplier",
+      "comment": "PERSPECTIVE 1: SMALL COMPONENT SUPPLIER (SNARE) \u2014 Trapped by military procurement: cannot sell subsystems without MIL-STD-461G certification, certification requires expensive test chambers and specialized expertise, no alternative market path exists. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Size Defense Contractor",
+      "comment": "PERSPECTIVE 2: MID-SIZE DEFENSE CONTRACTOR (TANGLED ROPE) \u2014 Constrained by compliance cost but benefits from standardized interface specification: 461G prevents ad-hoc EMI problems in integrated systems. Beneficiary of coordination function; victim of compliance burden. d\u22480.58, f(d)\u22480.70, \u03c3=1.0 \u2192 \u03c7\u22480.27."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Defense Prime Contractor",
+      "comment": "PERSPECTIVE 3: DEFENSE PRIME CONTRACTOR (ROPE) \u2014 Institutional beneficiary with arbitrage exit: can negotiate exemptions, can influence standard revision cycles, can pass compliance costs to subcontractors while capturing integration value. 461G as coordination mechanism: reduces subsystem incompatibility risk. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.2 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Military Procurement Authority",
+      "comment": "PERSPECTIVE 4: MILITARY PROCUREMENT AUTHORITY (ROPE) \u2014 Institutional beneficiary: standardized interface reduces procurement complexity, enables modular system design, reduces integration risk. Coordination function: 461G ensures subsystems work together without ad-hoc workarounds. Can modify standard and enforce exemptions. d\u22480.10, f(d)\u2248-0.07, \u03c3=1.2 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Innovation Engineering Community",
+      "comment": "PERSPECTIVE 5: INNOVATION ENGINEERING COMMUNITY (SCAFFOLD) \u2014 Organized actors (academic labs, startup incubators, agile defense contractors) see 461G as a temporary bottleneck with a sunset: modular simulation tools (digital twins, virtual EMI testing) are creating alternative verification pathways. As computational EMI prediction matures, the empirical test-chamber requirement loses force. d\u22480.42, f(d)\u22480.42, \u03c3=1.1 \u2192 \u03c7\u22480.22. Sunset estimated at 15-25 years as computational methods achieve flight-critical confidence."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standards Body (IEEE/NIST Intersection)",
+      "comment": "PERSPECTIVE 6: STANDARDS BODY / IEEE-NIST INTERSECTION (PITON) \u2014 The standards maintenance process itself is largely performative: 461G revisions (461E\u2192461F\u2192461G) occur every 5-10 years but rarely introduce fundamentally new test methodologies. The standard persists through institutional inertia and procurement bureaucracy, not because its verification methods are optimized for modern electronics. theater_ratio=0.58 reflects substantial performative content: compliance auditing follows checklist logic rather than true EMI risk assessment. The standard works but could be vastly more efficient."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, EMI coupling is a fundamental physical phenomenon: no military system can avoid it entirely, and some form of interface specification is a logical necessity. This view risks naturalizing the *specific* compliance apparatus (test chambers, frequency ranges, measurement procedures) as inevitable when only the *general* need for EMI control is physically constrained. The structural data (\u03b5=0.38, suppression=0.52) contradicts strict mountain classification \u2014 the engine will flag this as a false summit revealing the contingent enforcement mechanism beneath the physical necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "simulation_validation_confidence",
+      "question": "At what computational prediction accuracy does MIL-STD-461G's empirical test-chamber requirement become obsolete?",
+      "resolution_mechanism": "Correlation analysis between simulated EMI predictions and physical test results across diverse subsystem types; error rates and confidence intervals as simulation fidelity improves over time",
+      "impact": "If achievable at <5% error: scaffold sunset timeline accelerates (10-15 years). If asymptotic at >15% error: physical testing remains mandatory indefinitely, killing the sunset hypothesis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Computational EMI prediction accuracy threshold for empirical test obsolescence"
+    },
+    {
+      "id": "supplier_carteling_extraction",
+      "question": "Are defense contractors using 461G compliance requirements to maintain barriers to entry for new suppliers, beyond what the technical standard itself requires?",
+      "resolution_mechanism": "Analysis of EMI test cost variance across identical subsystem types; comparison of supplier entry rates pre-standard vs post-standard; investigation of whether 'approved test labs' restriction creates artificial scarcity",
+      "impact": "If significant carteling detected: constraint is primarily extractive snare (beneficiaries extracting via monopolistic access to compliance infrastructure). If minimal: constraint is primarily coordination with legitimate efficiency costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether 461G is weaponized for supplier exclusion beyond technical necessity"
+    },
+    {
+      "id": "actual_emi_failure_correlation",
+      "question": "What fraction of real EMI failures in deployed military systems would have been caught by MIL-STD-461G testing, vs prevented by other design practices?",
+      "resolution_mechanism": "Post-hoc analysis of EMI-related system failures in the field; correlation with 461G compliance records; identification of failure modes outside the standard's scope",
+      "impact": "If >80% correlation: standard is functionally effective coordination mechanism (rope). If <40% correlation: standard is theater with low actual risk prevention (piton).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Correlation between 461G compliance and prevention of actual fielded EMI failures"
+    },
+    {
+      "id": "cost_multiplication_factor",
+      "question": "What is the actual cost multiplier for bringing a subsystem to 461G compliance vs no standard?",
+      "resolution_mechanism": "Comparative cost analysis: identical subsystems with/without 461G certification path; includes test chamber access, engineering labor, schedule delays, and design iteration cycles",
+      "impact": "If factor <1.5x: compliance burden is modest (tangled rope justified). If factor >3.0x: extraction dominates coordination benefit (snare classification more accurate). If factor >5.0x: small suppliers face genuine exit barrier.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual cost multiplier for MIL-STD-461G compliance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "MIL-STD-461G establishes interface and verification requirements for controlling electromagnetic interference in military subsystems and equipment. The standard creates a bifurcated supplier ecosystem: large defense primes and established contractors can amortize compliance costs across contracts, negotiate exemptions, and influence standard revision; small component suppliers face absolute compliance requirements with limited exit options. The constraint exhibits both genuine coordination function (EMI testing prevents incompatible subsystems from integrating) and asymmetric extraction (compliance cost barrier protects incumbent suppliers from competition). The theater_ratio (0.58) reflects that the standard's verification methodology has become increasingly performative relative to actual EMI risk: checklist compliance testing follows rigid frequency sweeps and coupling scenarios that may not capture dominant failure modes in specific system architectures, yet deviation requires costly test-plan waivers. Over the 20-year interval, theater has increased as electronics complexity has outpaced the standard's revision cycles, while extractiveness has grown through the accumulation of compliance infrastructure costs without fundamental methodology advancement.",
+    "key_agents": [
+      "Small Component Suppliers: Primary victim (powerless/trapped) \u2014 cannot enter military supply chain without 461G certification; lacks resources for expensive test chambers",
+      "Mid-Size Defense Contractors: Secondary victim (moderate/constrained) \u2014 bears compliance burden but benefits from standardized interfaces",
+      "Defense Prime Contractors: Primary beneficiary (institutional/arbitrage) \u2014 can negotiate compliance waivers and exemptions; passes costs to subcontractors",
+      "Military Procurement Authority: Primary beneficiary (institutional/arbitrage) \u2014 standardized interface reduces integration risk and procurement complexity",
+      "Innovation Engineering Community: Organized actors (organized/constrained) \u2014 developing computational EMI prediction as alternative to empirical testing with sunset potential",
+      "Standards Body (IEEE/NIST): Institutional actor maintaining performative revision cycle (institutional/arbitrage) \u2014 benefits from compliance infrastructure market without incentive to accelerate obsolescence"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The compliance burden is substantial and creates genuine barriers to entry for small suppliers (cost multiplier likely 2.5-4.0x). However, extractiveness is not maximal because the underlying EMI control requirement is physically real \u2014 some form of interface specification cannot be avoided. The extraction comes primarily from (a) the specific compliance apparatus chosen (empirical test chambers vs computational alternatives) and (b) the ability of incumbents to maintain closure. Suppression (0.52): Moderate-high. Significant barriers exist: test chambers are expensive, specialized expertise is required, alternative market paths are minimal (military procurement is the primary use case for certified subsystems), and compliance timelines create schedule pressure. However, suppression is not total \u2014 some alternative pathways exist through civilian standards, through direct negotiation of waivers, and through newer companies entering with lower cost models. Theater ratio (0.58): Moderate. The standard's verification methodology is substantially performative: compliance testing follows rigid frequency sweeps and coupling scenarios that may not capture dominant failure modes in specific architectures. However, the theater is not dominant (>0.70) because the empirical testing does prevent some real incompatibilities, and the specification itself solves a genuine coordination problem.",
+    "perspectival_gap": "The constraint shows a sharp perspectival gap between suppliers and beneficiaries. Small suppliers see a snare (trapped, no exit). Mid-size contractors see tangled rope (mixed coordination and extraction). Primes and procurement see pure rope (coordination benefit with minimal cost to them). The innovation community sees a temporary scaffold with a sunset as computational methods mature. The standards body sees a degraded piton (the revision process is inertial, not optimized). The civilizational observer risks seeing a mountain (EMI control as physical necessity) but the structural data reveals this as a false summit \u2014 the specific apparatus is contingent institutional choice, not physical law. The perspectival gap arises because different agents have different exit costs: primes can negotiate exemptions; suppliers cannot; innovation actors see technological paths around the constraint; the standards body has no incentive to accelerate its own obsolescence.",
+    "directionality_logic": "Small component suppliers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximal extraction. Cannot exit without losing military procurement channel entirely. Mid-size contractors: Victim + constrained (but also beneficiary of coordination function) \u2192 d\u22480.58, f(d)\u22480.70. Mixed extraction and benefit. Can negotiate but face real constraints. Defense primes: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary with strong exit options (can negotiate exemptions, can influence standard). Procurement authority: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.07. Net beneficiary, can modify or enforce standards. Innovation community: Organized + constrained \u2192 d\u22480.42, f(d)\u22480.42. Moderate extraction from compliance costs but sees technological escape path (scaffold sunset). Standards body: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification comes from theater gate, not directionality \u2014 standards body maintains the apparatus for institutional continuity, not for extraction (though that is a side effect).",
+    "mandatrophy_analysis": "RESOLVED: This constraint resolves the mandatrophy by distinguishing the *physical necessity* of EMI control (which approaches a mountain) from the *specific institutional apparatus* chosen to enforce it (which is contingent, extractive, and politically constructed). The constraint ID and metrics refer to the apparatus, not the underlying physics. The analytical observer's mountain is a false summit: the engine detects this through the \u03b5=0.38 value (too high for a true mountain) combined with the enforcement flag. The small supplier's snare is real (trapped by market structure). The prime contractor's rope is real (genuine coordination benefit). The innovation community's scaffold is real (computational alternatives approaching maturity). The standards body's piton is real (revision cycle driven by bureaucratic inertia, not technical optimization). All six types are legitimate readings of the constraint from specific structural positions. No single type 'is' MIL-STD-461G \u2014 the presheaf IS the answer. The mandatrophy resolution is: the constraint is a tangled rope (legitimate coordination with asymmetric extraction) that presents as a mountain (physical necessity) to distract from its extraction mechanism. Unmasking this presupposes the organizational perspective (institutional actors benefit and maintain the apparatus) and the supplier perspective (powerless agents trapped by the apparatus). From neither perspective alone is the full structure visible."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "military_procurement_modular_design",
+      "defense_contractor_supply_chain_lock_in",
+      "computational_emi_prediction_viability"
+    ],
+    "dual_formulation_note": "MIL-STD-461G decomposes into two structurally distinct constraints: (1) the physical necessity of EMI control in integrated systems (approaches mountain, \u03b5\u22480.05), and (2) the institutional apparatus used to enforce compliance (tangled rope, \u03b5=0.38). The standard's symbolic authority derives from conflating these two claims. The JSON story tracks the apparatus, not the underlying physics. Related constraint families track the modular design requirement it enables and the supplier lock-in it creates as downstream effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "header": {
+    "constraint_id": "winners_curse",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Winner's Curse in Common Value Auctions",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "auction_sellers",
+      "information_advantaged_bidders"
+    ],
+    "victims": [
+      "winning_bidders",
+      "naive_bidders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Naive Winning Bidder",
+      "comment": "PERSPECTIVE 1: NAIVE WINNING BIDDER (SNARE) \u2014 Unaware of the curse's mechanics, bidder cannot exit the auction process or adjust their estimation once commitment is made. Bears full extraction through systematic overpayment. Maximum experienced extraction \u2014 bidder is trapped by their own lack of understanding and by the irreversibility of the winning bid."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Sophisticated Bidder",
+      "comment": "PERSPECTIVE 2: SOPHISTICATED BIDDER (TANGLED ROPE) \u2014 Understands the curse and can adjust bidding strategy downward (coordination benefit: rational pricing), but faces extraction from the auction structure itself. Can exit if valuation doesn't meet threshold, but bidding protocol constrains strategy. Mixed: benefits from understanding, but still exposed to winner's curse if other bidders also adjust and the curse persists through different mechanisms."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Auction Seller",
+      "comment": "PERSPECTIVE 3: AUCTION SELLER (ROPE) \u2014 Experiences the winner's curse as pure coordination: the curse ensures buyers systematically overpay relative to true value, and the seller captures the surplus. Seller can arbitrage between sealed-bid and open-outcry formats or between common-value and private-value auctions. Net beneficiary \u2014 the mechanism generates revenue through the curse itself."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Auction Designer",
+      "comment": "PERSPECTIVE 4: REGULATORY AUCTION DESIGNER (SCAFFOLD) \u2014 Can restructure auction mechanisms to mitigate the curse: ascending auctions reveal valuations progressively; sealed-bid variants with asymmetric information disclosure; entry fees that filter naive bidders. Sunset mechanism: as market participants learn curse dynamics, the extraction mechanism weakens. Organized actors can design around it or enforce transparency requirements."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Discourse on Winner's Curse",
+      "comment": "PERSPECTIVE 5: ACADEMIC DISCOURSE (PITON) \u2014 The winner's curse was identified empirically in the 1950s-1970s (offshore drilling lease auctions, etc.) and has been extensively studied. Yet the curse persists in real-world auctions despite decades of academic work and its regular rediscovery by practitioners. The knowledge about the curse is performative: it's cited, taught, and intellectually acknowledged but does not consistently change bidding behavior. Theater ratio is high because the theory is well-established but behavioral adoption is weak. Piton classification: the constraint persists through institutional inertia and bounded rationality despite clear understanding of the mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the winner's curse is a structural feature of common-value auctions with incomplete information. It combines coordination (the auction mechanism itself solves the allocation problem) with extraction (the mechanism induces overpayment). The curse is neither purely natural law nor purely institutional design \u2014 it emerges from information asymmetry meeting bidding protocols. The constraint persists because it simultaneously serves the seller's interest (capturing surplus) and the mechanism's function (allocating the asset)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "curse_magnitude_variability",
+      "question": "Does the winner's curse magnitude vary systematically by auction format, or is it an invariant property of common-value auctions?",
+      "resolution_mechanism": "Cross-format empirical comparison: sealed-bid vs ascending auctions, first-price vs second-price, with controls for information symmetry and bidder sophistication",
+      "impact": "If format-invariant: curse is a structural property of common-value inference. If format-dependent: curse is a contingent institutional feature that can be engineered away, shifting classification toward Scaffold from all perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether curse magnitude is invariant across auction formats"
+    },
+    {
+      "id": "learning_dynamics_convergence",
+      "question": "Do bidders learn to account for the curse through repeated auction participation, or does bidding behavior remain stable despite experience?",
+      "resolution_mechanism": "Longitudinal tracking of individual bidders across multiple auctions; analysis of whether price trajectories converge toward theoretical predictions or remain persistently above them",
+      "impact": "If learning occurs: piton classification is correct (theater fades as practice improves). If learning doesn't occur: extraction persists despite knowledge, suggesting behavioral constraint deeper than information asymmetry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bidders learn to account for the curse"
+    },
+    {
+      "id": "information_asymmetry_necessity",
+      "question": "Is the winner's curse a necessary consequence of asymmetric information, or can it be eliminated through disclosure mechanisms while preserving the auction's allocation function?",
+      "resolution_mechanism": "Experimental comparison: auctions with progressive information revelation vs sealed-bid; measurement of price convergence to true value and allocation efficiency",
+      "impact": "If elimination possible: curse is an extraction feature of information design (Tangled Rope confirmed). If curse persists despite symmetry: curse reflects deeper statistical property, shifting toward Mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether asymmetric information is necessary for the curse"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The winner's curse in common value auctions is a structural tension between the coordination function of auctions (allocating assets to interested parties) and the extraction mechanism embedded in the information asymmetry. When the true value of an asset is unknown to bidders but identical across all participants (common value), the winning bidder is statistically the agent whose valuation estimate was highest. Since all estimates are noisy, the highest estimate is biased upward \u2014 the winner has overestimated and overpaid. This phenomenon was empirically documented in offshore oil lease auctions and has since become a canonical case in experimental economics. Yet despite widespread academic knowledge, the curse persists in practice across auctions for mineral rights, acquisitions, and IPOs. The constraint exhibits a crucial characteristic: the curse serves the seller's interest (higher revenues) while harming the winner (negative expected returns). This alignment means the curse is simultaneously a coordination mechanism (allocating to the highest-valuation agent) and an extraction mechanism (capturing bidder surplus through the information asymmetry).",
+    "key_agents": [
+      "Naive Winning Bidders: Primary victims (powerless/trapped) \u2014 systematically overpay due to optimism bias and failure to adjust for the curse; cannot exit once they have won",
+      "Sophisticated Bidders: Secondary actors (moderate/constrained) \u2014 understand the curse and adjust estimates downward, but remain subject to winner's curse through alternative mechanisms",
+      "Auction Sellers: Primary beneficiaries (institutional/arbitrage) \u2014 capture surplus generated by bidder overpayment; can select auction format to maximize the curse effect",
+      "Regulatory Auction Designers: Secondary actors (organized/mobile) \u2014 can mitigate the curse through mechanism design (ascending auctions, information disclosure, entry filters)",
+      "Academic Discourse: Institutional observer (institutional/arbitrage) \u2014 produces and disseminates knowledge about the curse that is cited but not consistently applied",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the curse as an emergent property of information asymmetry and bidding protocols"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The curse induces systematic overpayment by winners, representing a transfer from naive bidders to the seller. The extractiveness is not as severe as pure extraction (Snare) because the auction mechanism also serves a genuine allocation function \u2014 the asset goes to the bidder willing to pay the most. The extraction is parasitic on the coordination, not replacing it. The value reflects that the curse is a design feature of many auctions, not a purely coercive mechanism. Suppression (0.65): Moderate-high. Barriers to avoiding the curse include: (1) bounded rationality \u2014 not all bidders grasp the statistical reasoning, (2) commitment irreversibility \u2014 winning bids are legally binding, (3) information barriers \u2014 bidders cannot perfectly estimate asset values even with sophisticated modeling, (4) competitive pressure \u2014 bidders must bid aggressively to win, creating incentive to ignore the curse. However, suppression is not total because sophisticated bidders can and do adjust strategy. Theater ratio (0.58): Moderate. The academic understanding of the curse is well-established and widely taught, but its behavioral implementation remains inconsistent. The theater reflects the gap between theoretical knowledge (highly formalized) and practical behavior (curse persists). As bidders gain experience and academic knowledge spreads, theater has increased \u2014 the performative acknowledgment of the curse (without changing behavior) has become more explicit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "information_asymmetry_exploitation",
+      "acquisition_overpayment_trap"
+    ],
+    "dual_formulation_note": "The winner's curse decomposes into two related constraints: (1) the statistical curse inherent to common-value auctions (information-asymmetric inference problem, \u03b5 \u2248 0.35, lower extraction), and (2) the behavioral curse in practice (boundedly rational bidders fail to adjust despite knowledge, \u03b5 \u2248 0.52, higher extraction). The first is closer to a natural law of information; the second is a contingent institutional failure. Both stories are included in the network to reflect the decomposition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

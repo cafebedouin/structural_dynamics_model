@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "procedural_legitimacy_decay",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "procleg"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.78,
+    "claimed_type": "piton",
+    "human_readable": "The Hollow Formality Trap",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "bureaucratic_gatekeepers"
+    ],
+    "victims": [
+      "procedure_subjects"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Procedure Subject",
+      "comment": "PERSPECTIVE 1: PROCEDURE SUBJECT (SNARE) \u2014 Trapped within mandatory compliance. No meaningful exit: formal legal requirement enforces participation regardless of perceived legitimacy. Bears full cost of procedural performance while benefiting minimally from stated function. Maximum experienced extraction without access to alternatives or appeal mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Bureaucratic Gatekeeper",
+      "comment": "PERSPECTIVE 2: BUREAUCRATIC GATEKEEPER (PITON) \u2014 Maintains the procedure through institutional inertia despite acknowledging its diminished legitimacy. Benefits from the gate-keeping power and discretionary authority the formal process provides. Theater is performative \u2014 the procedure persists because replacing it would require institutional reformation, not because it functionally achieves its stated goals. Arbitrage exit available: can selectively enforce or suspend procedure application."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Advocacy Coalition",
+      "comment": "PERSPECTIVE 3: ADVOCACY COALITION (TANGLED ROPE) \u2014 Organized actors attempting to reform or eliminate the procedure. Constrained by political obstacles and institutional resistance but possess some collective agency. Benefits from visibility and legitimacy their advocacy generates; bears costs of sustained opposition. Hybrid: contains coordination function (assembling consent for reform) alongside asymmetric extraction (the procedure prevents their preferred alternatives)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Movement",
+      "comment": "PERSPECTIVE 4: REFORM MOVEMENT (SCAFFOLD) \u2014 Sees the hollow procedure as temporary problem with built-in sunset: rising consensus that legitimacy has decayed creates structural opportunity for replacement. Mobile exit through building alternative institutional pathways (legislative reform, regulatory replacement). Low effective extraction because the constraint is perceived as transitional \u2014 the very hollowness that makes it extractive to trapped subjects makes it vulnerable to organized resistance. Sunset mechanism: growing public skepticism systematically erodes the procedure's enforceability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Legitimacy-Preserving Institution",
+      "comment": "PERSPECTIVE 5: LEGITIMACY-PRESERVING INSTITUTION (ROPE) \u2014 Smaller institution or subsidiary whose formal compliance with the procedure enables broader institutional coordination. Net beneficiary through reduced scrutiny and maintained organizational standing. Experiences the procedure as low-cost coordination: participation signals legitimacy without requiring internal reform. Arbitrage exit available but unused \u2014 cost of exit (loss of coordination benefits) exceeds cost of compliance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational view, the hollow procedure is a structural hybrid: still serves coordination function (maintaining institutional cohesion, signaling rule-of-law commitment) while simultaneously extracting from trapped subjects (costs of compliance without corresponding benefit). The procedure persists through dual equilibrium: subjects cannot exit; gatekeepers benefit from gate-keeping; institutions benefit from coordination; reformers lack sufficient power. Classification is tangled_rope because both functions (coordination and extraction) are active, not theatrical performance alone."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_decay_threshold",
+      "question": "At what level of public perception that a procedure is unjust does legal enforceability collapse into unenforceable theater?",
+      "resolution_mechanism": "Historical analysis of procedural compliance rates, enforcement costs, and public resistance levels across procedural collapses; survey data on perceived legitimacy vs. compliance behavior",
+      "impact": "If threshold is high (> 70% public rejection): procedure remains extractive and enforced long after functional hollowing. If threshold is low (< 30%): procedures become unenforceable theaters much earlier, reducing extraction window.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Public perception threshold for procedural legitimacy collapse"
+    },
+    {
+      "id": "gatekeeper_dependency_lock",
+      "question": "Do bureaucratic gatekeepers become dependent on hollow procedures as exclusive basis for their authority, preventing them from recognizing or enabling reform?",
+      "resolution_mechanism": "Analysis of institutional resistance patterns; tracking whether gatekeepers actively obstruct reform proposals that would preserve coordination function while reducing extraction",
+      "impact": "If locked: gatekeepers will maintain procedure indefinitely, converting it fully to snare. If mobile: gatekeepers may tolerate or enable reform that preserves their coordination benefits, shortening extraction window.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether gatekeeper authority dependency prevents procedural reform"
+    },
+    {
+      "id": "alternative_pathway_viability",
+      "question": "Do viable alternative mechanisms exist that could provide the coordination function without the extraction mechanism?",
+      "resolution_mechanism": "Comparative institutional analysis of alternative procedures; cost-benefit analysis of replacement pathways; feasibility assessment of transitional implementation",
+      "impact": "If viable alternatives exist: scaffold sunset is real and procedure is temporary (piton \u2192 scaffold). If no alternatives exist: gatekeepers can indefinitely maintain hollow procedure as least-bad option (piton \u2192 snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether replacement procedures can preserve coordination without extraction"
+    },
+    {
+      "id": "subject_coalition_capacity",
+      "question": "Can procedure subjects organize sufficiently to either exit collectively or demand reform faster than gatekeeper resistance can suppress?",
+      "resolution_mechanism": "Historical analysis of procedural resistance movements; measurement of subject coordination capacity vs. institutional resistance capacity; identification of critical mass thresholds",
+      "impact": "If subjects coordinate effectively: procedures collapse or reform rapidly (snare \u2192 rope or scaffold). If subjects remain fragmented: procedures persist indefinitely regardless of hollowness (snare stabilizes).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether procedure subjects can organize effective resistance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The hollow formality trap represents a bureaucratic procedure that has lost the justifying social consensus underlying its original design but maintains its legal force through institutional inertia and beneficiary gate-keeping. The procedure continues to extract compliance costs from subjects while delivering minimal functional benefit \u2014 the legitimacy on which it rested has decayed, yet the formal requirement persists. This creates a structural tension: the procedure simultaneously serves a residual coordination function (maintaining institutional cohesion, signaling procedural order) and an extraction mechanism (capturing compliance costs without reciprocal benefit). The theater_ratio rising from 0.52 to 0.78 reflects increasing recognition that the procedure's performance is divorced from its function. The extractiveness rising from 0.35 to 0.52 indicates that as legitimacy decays, the constraint shifts from appearing as necessary coordination toward appearing as pure rent extraction. The constraint is a piton rather than a snare because the theatrical character of the procedure itself (the very emptiness that makes it extractive) creates structural vulnerability \u2014 the procedure persists through inertia, not through genuine function or beneficiary strength. Reform movements can target the obvious falseness of the claimed justification.",
+    "key_agents": [
+      "Procedure Subjects: Primary victims (powerless/trapped) \u2014 mandatory compliance with procedure despite loss of legitimacy; no exit; bear full compliance costs",
+      "Bureaucratic Gatekeepers: Primary beneficiaries (institutional/arbitrage) \u2014 maintain authority through control of formal process; benefit from discretion and gate-keeping power; can selectively enforce",
+      "Advocacy Coalition: Organized reformers (organized/constrained) \u2014 attempt to eliminate or replace procedure; constrained by institutional resistance; visible opposition generates legitimacy costs for defenders",
+      "Reform Movement: Powerful agents (powerful/mobile) \u2014 build alternative pathways; see procedure as temporary problem vulnerable to replacement; possess capacity to create sunset mechanisms",
+      "Legitimacy-Preserving Institutions: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from procedure as low-cost coordination signal; use compliance to demonstrate institutional standing",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees dual structure of coordination and extraction; identifies piton as transitional state, not permanent equilibrium"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The procedure extracts compliance costs without reciprocal benefit \u2014 subjects must participate in a process they no longer perceive as legitimate. However, extractiveness is not maximal because the procedure does retain a residual coordination function: institutional actors benefit from reduced scrutiny and maintained standing, and the procedure generates some efficiency (however minimal) in routing cases through established channels. The 0.52 value reflects that the constraint is both extraction and coordination, not pure rent capture. Suppression (0.65): Moderate-high. Significant suppression mechanisms include: formal legal requirement to participate, social stigma for non-compliance, institutional penalties for circumvention, and absence of viable alternative pathways (currently). However, suppression is not total \u2014 organized actors can challenge the procedure's legitimacy; rising public skepticism reduces enforcement effectiveness. Theater ratio (0.78): High and rising. The procedure is substantially performative: it continues because it must continue (institutional inertia), not because anyone believes it functionally achieves its stated purpose. The rising trajectory reflects increasing gap between procedural claim and perceived reality. The procedure's legitimacy decay makes its theatrical character more visible over time.",
+    "directionality_logic": "The primary gatekeeper derives d from institutional power + arbitrage exit (can selectively enforce) + beneficiary status (captures gate-keeping authority). The engine computes low d \u2192 negative or minimal f(d) \u2192 low effective extraction for this actor. Procedure subjects derive d from powerless status + trapped exit (mandatory compliance regardless of perceived legitimacy) + victim status (bear compliance costs without reciprocal benefit). The engine computes high d \u2192 high f(d) \u2192 high experienced extraction for this actor. Organized reformers derive d from organized power + constrained exit (can advocate but face institutional obstacles) + mixed beneficiary/victim status (benefit from visibility; victimized by procedure's persistence). The engine computes moderate d \u2192 moderate f(d) \u2192 moderate experienced extraction. The piton classification derives from high theater_ratio (0.78) and institutional beneficiary (pitons are degraded snares or ropes maintained through theatrical persistence rather than genuine function). The gap between how gatekeepers experience the procedure (low extraction, some coordination benefit, arbitrage mobility) and how trapped subjects experience it (high extraction, no benefit, no exit) is the perspectival core of this constraint.",
+    "perspectival_gap": "The original beneficiary (gatekeeper) sees a low-extraction coordination mechanism that preserves institutional standing through formal compliance. The trap subject sees a snare with no exit and no benefit. The organized reformer sees an extractive procedure that could be replaced with better alternatives. The reform movement sees a temporary problem vulnerable to sunset through consensus shift. The legitimacy-preserving institution sees a low-cost coordination signal. The analytical observer sees a tangled hybrid: the procedure is both extractive (trapping subjects) and coordinative (maintaining institutional cohesion), held together by inertia and beneficiary gate-keeping. The perspectival gap reflects that actors with arbitrage options experience the procedure as coordination, while trapped actors experience it as pure extraction. The piton classification emerges because the procedure's theatrical character \u2014 its obvious emptiness and disconnection from function \u2014 creates its own structural vulnerability. Pitons are maintained by inertia, not strength; they become targets for reform because their falsehood is visible.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves as a hybrid tangled_rope/piton that prevents misclassification as pure snare. The snare classification (from the procedure subject's perspective) is correct about the extraction they experience, but incomplete \u2014 it misses the residual coordination function that the procedure actually serves for institutional actors. The tangled_rope classification (from the analytical view) captures both the extraction and the coordination, showing why the procedure persists despite its hollowness: it provides real benefits to gatekeepers and institutional actors, even though it extracts from subjects. The piton classification (from the gatekeeper's view) is correct about how the procedure functions from within institutional logic \u2014 as an inertial maintenance of authority through formal compliance ritual. The mandatrophy is resolved by recognizing that all three classifications are structurally true from different positions: snare for trapped subjects, tangled_rope from analytical distance, piton from institutional self-perception. The constraint does not collapse into a single type because different actors genuinely experience different structural relationships to it. The framework's role is to show that the hollow procedure is simultaneously extractive (snare for subjects), coordinative (rope for institutions), degraded-but-persistent (piton for gatekeepers), and temporary (scaffold from reformers' view). No single classification is false \u2014 they are perspectival truths from different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_legitimacy_erosion",
+      "procedural_justice_deficit"
+    ],
+    "dual_formulation_note": "The hollow formality trap decomposes into two related constraints: (1) legitimacy_decay (the collapse of public consensus that justifies the procedure), and (2) procedural_persistence (the institutional inertia that maintains the procedure despite decay). The hollow_formality_trap story represents their intersection \u2014 the structural state where decay has occurred but persistence remains. Upstream: legitimacy_decay (\u03b5 \u2248 0.30, Rope) establishes the precondition. This story: procedural_legitimacy_decay (\u03b5 \u2248 0.52, Piton) describes the sustained extraction despite decay. Downstream: procedural_reform_blockade (\u03b5 \u2248 0.65, Snare) would describe gatekeepers actively preventing replacement."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "shannons_source_coding_theorem",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "shannon"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Shannon's Source Coding Theorem (Achievable Compression Limit)",
+    "topic_domain": "technological/information_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Mathematical Formalism",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL FORMALISM (MOUNTAIN) \u2014 Shannon's theorem is a mathematical truth about the relationship between entropy and compression. No escape; no alternatives. The compression limit H(X) bits per symbol is invariant across all compression schemes and all physical instantiations. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09. The theorem holds regardless of whether observed or implemented."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Hardware Engineer",
+      "comment": "PERSPECTIVE 2: HARDWARE ENGINEER (MOUNTAIN) \u2014 For any physical storage or transmission system, the theorem imposes a hard constraint on compression efficiency. No codec design, no algorithm, no hardware acceleration can beat the entropy bound. d\u22480.48, f(d)\u22480.60, \u03c3=1.2 \u2192 \u03c7\u22480.06. Mobile exit options (design other systems, use other technologies) do not change the mathematical reality that THIS system has a fixed compression ceiling."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Data Stream",
+      "comment": "PERSPECTIVE 3: THE DATA STREAM (MOUNTAIN) \u2014 From the perspective of any finite sequence of symbols, the Shannon limit is inexorable. The entropy of the source determines how much it can be compressed. No amount of organizational effort or financial investment can compress a high-entropy source below its Shannon bound. d\u22481.0, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.09. The constraint is equally binding for all data streams."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Information Theory Community",
+      "comment": "PERSPECTIVE 4: INFORMATION THEORY COMMUNITY (MOUNTAIN) \u2014 Decades of research have confirmed the theorem's universality. No alternative theoretical framework has been discovered that permits lossless compression below the entropy bound. The community's collective search for exceptions has defined the limits precisely. d\u22480.40, f(d)\u22480.40, \u03c3=1.2 \u2192 \u03c7\u22480.03. The theorem has become more ironclad, not less, as knowledge has accumulated."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quantum_information_extension",
+      "question": "Does quantum information theory permit compression below the classical Shannon limit for quantum data?",
+      "resolution_mechanism": "Analysis of Schumacher compression; comparison of quantum and classical entropy bounds for mixed states; experimental realization of quantum compression protocols",
+      "impact": "If quantum < classical: Shannon's theorem is not universal across information substrates (reveals domain-specificity). If quantum \u2265 classical: universality is confirmed (mountain stability).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether quantum compression can exceed classical Shannon bound"
+    },
+    {
+      "id": "context_dependent_compression",
+      "question": "Can semantic or task-specific compression schemes achieve lower average rates than Shannon's entropy bound by exploiting task structure rather than statistical structure?",
+      "resolution_mechanism": "Formal analysis of task-specific compression (e.g., 'compress only enough to perform action X'); comparison of task-aware vs distribution-aware lower bounds; empirical testing against synthetic and real data",
+      "impact": "If true: Shannon bound is substrate-specific (applies to distribution-only view). If false: bound is truly universal (mountain is universal).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether task-dependent compression can beat Shannon bound"
+    },
+    {
+      "id": "nonergodic_source_behavior",
+      "question": "For nonergodic information sources (whose statistics are time-dependent or state-dependent in ways not captured by entropy), does the Shannon bound still hold or does it require extension?",
+      "resolution_mechanism": "Theoretical analysis of nonergodic source coding; empirical testing on sources with drift, regime switching, or hidden state; extension theorems for variable-entropy sources",
+      "impact": "If bound holds: mountain is robust to source assumptions. If bound requires extension: mountain splits into specialized versions (different constraints for ergodic vs nonergodic).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Shannon bound extends to nonergodic sources"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 70
+  },
+  "commentary": {
+    "narrative_context": "Shannon's Source Coding Theorem (1948) is a mathematical statement of natural law: the entropy of an information source H(X) defines the minimum average number of bits required to losslessly encode symbols from that source. No compression algorithm, no matter how sophisticated, can achieve a lower average rate than H(X) bits per symbol for arbitrarily long sequences drawn from a fixed distribution. The theorem is among the most robust constraints in mathematics and physics \u2014 it has withstood 75+ years of research, empirical testing across all physical domains (electrical, optical, acoustic, biological), and attempted extensions without modification. It is not a policy, not an institutional arrangement, not a contingent fact about current technology \u2014 it is a structural limit that emerges from the definition of information itself. This makes it a canonical mountain constraint: unchangeable, universally applicable, with zero degrees of freedom for all observer positions.",
+    "key_agents": [
+      "Mathematical Formalism: Pure constraint carrier (analytical/analytical) \u2014 the theorem as stated in information theory textbooks",
+      "Hardware Engineers: Implementers (powerful/mobile) \u2014 design systems subject to the compression limit; cannot escape the bound through engineering",
+      "Data Streams: Passive bearers (powerless/trapped) \u2014 any finite sequence has a fixed, minimum compressible size equal to its entropy",
+      "Information Theory Community: Validators (organized/constrained) \u2014 75 years of research confirming the theorem's universality and its resistance to exceptions",
+      "Quantum Information Theorists: Extension explorers (powerful/analytical) \u2014 investigating whether quantum substrates extend or modify the classical bound"
+    ],
+    "logic_rationale": "Base extractiveness (0.08): Extremely low. The constraint does not extract in any meaningful sense \u2014 it sets a lower bound that all compression schemes approach asymptotically. No agent is enriched at another's expense. The entropy bound is a floor, not a mechanism for redistribution. Theater ratio (0.15): Minimal. The theorem requires virtually no performative activity to enforce itself. No auditing, no verification rituals, no institutional theater. The bound is self-enforcing through mathematical logic. Suppression (0.02): Negligible. While the theorem establishes an absolute limit, it suppresses nothing \u2014 all feasible compression rates remain available. Agents are free to compress at any rate above H(X); the theorem only says they cannot go below it. Accessibility collapse (0.92): Very high. The constraint is maximally irreducible \u2014 it cannot be bypassed by any alternative methodology, technology, or interpretation. Mathematical substitution is impossible. Resistance (0.05): Very low. No force is required to maintain the constraint; it is self-enforcing through logical necessity. The theorem requires no institutional support, no enforcement apparatus, no coercive mechanism.",
+    "perspectival_gap": "All four perspectives classify as Mountain, with only minor variations in derived \u03c7 values due to scope modifiers. The perspectival gap is minimal because the constraint is genuinely universal across observer positions. A hardware engineer, a mathematician, a data stream, and the research community all encounter the same irreducible limit. The theorem's universality across perspectives is itself the diagnostic marker that distinguishes a true mountain from a contingent institutional constraint. Unlike the verification bottleneck (which appears as Rope to the beneficiary and Snare to the victim), Shannon's theorem appears as Mountain to all agents. This invariance is not a weakness of the framework but confirmation of the framework's diagnostic capability.",
+    "directionality_logic": "Directional values are uniform across all perspectives because there is no extraction mechanism. All d values derive from analytical observation of a mathematical fact, not from asymmetric structural positioning. The theorem does not create winners and losers \u2014 it creates a uniform constraint that applies to all compression schemes. The variations in d (0.40 to 1.0) reflect only the observer's structural position (institutional to powerless) but do not affect the classification outcome (all mountain). This is a diagnostic feature: when directionality varies but classification does not, the constraint is a true natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "huffman_coding_optimality",
+      "arithmetic_coding_efficiency",
+      "lz_compression_asymptotic_rate"
+    ],
+    "dual_formulation_note": "Shannon's Source Coding Theorem is the foundational constraint for all lossless compression algorithms. Huffman coding, arithmetic coding, and LZ-family algorithms are all implementations that asymptotically approach but never exceed the Shannon bound. These are separate constraints capturing specific algorithmic achievements; Shannon's theorem is the universal natural law that governs all of them."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "misunderstanding_as_mismatch",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Social Pressure for Worldview Assimilation",
+    "topic_domain": "social/psychological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_group_members"
+    ],
+    "victims": [
+      "worldview_dissidents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Worldview Dissidents",
+      "comment": "Perspective of individuals whose worldviews differ significantly from the dominant group. They face social exclusion and pressure to conform, effectively trapping them within the group's coercive influence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Fence-Sitters",
+      "comment": "Perspective of individuals somewhat aligned with the dominant worldview but retaining independent thought. They derive some benefit from group acceptance but bear extraction costs from the need to suppress dissenting views to fit in."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Dominant Group Members",
+      "comment": "Perspective of those fully assimilated into the dominant worldview. They benefit from the social cohesion and shared understanding facilitated by the constraint, perceiving it as a coordination mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Intellectuals",
+      "comment": "Perspective of intellectuals, those who question and analyze the prevailing worldview. Some benefit through public discussion, but they risk social isolation if they express unpopular views."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Outdated Norms",
+      "comment": "Perspective of norms that once benefited the group by promoting cohesion but are now outdated. Theater is high, as there are attempts to maintain these norms despite losing their utility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective of analytical observers who can see the constraint as a mechanism that provides group cohesion but also suppresses dissenting views. There are extraction and coordination functions in this scenario."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cohesion_vs_conformity",
+      "question": "At what point does the pressure for worldview assimilation stifle individual thought and critical analysis within the group?",
+      "resolution_mechanism": "Sociological studies measuring the diversity of thought within groups and their problem-solving capabilities.",
+      "impact": "If the pressure for assimilation is too high, the constraint becomes primarily extractive. If low, the constraint can shift to a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining when the pressure to conform stifles critical thought."
+    },
+    {
+      "id": "influence_scope",
+      "question": "Does this constraint primarily operate on a local, regional, national, or global scope?",
+      "resolution_mechanism": "Cross-cultural studies comparing worldview assimilation across different societies.",
+      "impact": "The scope modifies the effective extraction based on verification difficulty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining the scope the constraint operates in."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the social pressure for individuals to assimilate into a group's dominant worldview. It involves a complex interplay between social cohesion, group identity, and individual autonomy. Individuals who deviate from the accepted worldview often face social exclusion, ridicule, and other forms of social pressure, leading them to suppress their dissenting views to gain acceptance and avoid conflict.",
+    "key_agents": [
+      "Worldview Dissidents: Primary target (powerless/trapped) - face social exclusion and pressure to conform.",
+      "Dominant Group Members: Primary beneficiary (institutional/arbitrage) - benefit from social cohesion and shared understanding.",
+      "Intellectuals: Secondary actor (powerful/mobile) - may benefit from public discussion but risk social isolation if they express unpopular views.",
+      "Analytical Observer: Sees full structure (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (0.6): Moderate-high. Reflects the social costs imposed on individuals who do not conform to the dominant worldview. Suppression (0.7): High. Signifies the active discouragement and suppression of dissenting views. Theater ratio (0.75): High. There is a high reliance on performative displays to validate or enforce the worldview.",
+    "perspectival_gap": "The classification of this constraint varies greatly depending on the perspective. Worldview dissidents experience it as a snare, as they are trapped and suppressed. Dominant group members see it as a rope, as it facilitates coordination and cohesion. Fence-sitters see it as a tangled rope, balancing benefits of group acceptance with extraction costs. An analytical observer sees it as tangled rope due to extraction of independent thoughts from group members, while offering social benefits.",
+    "directionality_logic": "Directionality is calculated from the structural relationship each actor has. Group members benefit from the cohesion and face social exclusion by non-conformity, while worldview dissidents risk group acceptance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "echo_chamber_effect",
+      "groupthink"
+    ]
+  },
+  "directionality_overrides": []
+}

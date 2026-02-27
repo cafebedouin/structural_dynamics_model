@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "us_arms_transfer_policy",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "usatp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Arms Transfer Policy",
+    "topic_domain": "political/military",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_defense_industrial_base",
+      "us_state_department",
+      "allied_governments"
+    ],
+    "victims": [
+      "recipient_civilian_populations",
+      "regional_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Recipient Civilian Populations",
+      "comment": "PERSPECTIVE 1: RECIPIENT CIVILIAN POPULATIONS (SNARE) \u2014 Cannot exit participation in recipient governments' conflicts enabled by US arms. Suppression high: no voting power in US policy, limited influence over recipient government procurement. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Recipient Nation Government",
+      "comment": "PERSPECTIVE 2: RECIPIENT NATION GOVERNMENT (TANGLED_ROPE) \u2014 Benefits from US arms access and alliance relationship; constrained by US conditionality, Congressional oversight, and end-use monitoring. Suppression moderate: asymmetric relationship with US, limited ability to redirect transfers. d\u22480.55, f(d)\u22480.75, \u03c3=0.9 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Defense Industrial Base",
+      "comment": "PERSPECTIVE 3: US DEFENSE INDUSTRIAL BASE (ROPE) \u2014 Primary beneficiary. Arms transfers secure markets, sustain production capacity, and maintain technological dominance. Experiences constraint as coordination: export control regime enables market access while preventing technology diffusion to competitors. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Congressional Oversight Bodies",
+      "comment": "PERSPECTIVE 4: CONGRESSIONAL OVERSIGHT BODIES (TANGLED_ROPE) \u2014 Organized actors with formal review authority over major transfers. Constrained by time pressure, classified information access, and executive branch expertise. Suppression moderate: ability to block transfers is real but executive can work around via agreements, reprogramming, and emergency provisions. d\u22480.48, f(d)\u22480.62, \u03c3=1.2 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Human Rights Advocates",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL HUMAN RIGHTS ADVOCATES (SCAFFOLD) \u2014 Mobile actors with exit options (advocacy, sanctions, litigation, media pressure). See arms transfer conditionality frameworks as temporary coordination mechanisms with sunset clauses. Theater moderate-high: conditionality certification is partly performative but creates real audit trails and veto points. d\u22480.62, f(d)\u22480.92, \u03c3=1.2 \u2192 \u03c7\u22480.42."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Humanitarian Law Apparatus",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL HUMANITARIAN LAW APPARATUS (PITON) \u2014 Geneva Conventions, ICCPR, Arms Trade Treaty create formal verification claims. Theater ratio high (0.68): certification procedures, end-use monitoring, and weapons-type restrictions are largely performative. Actual enforcement is limited by state sovereignty, resource constraints, and political will. Inertial maintenance: frameworks persist through legitimacy theater rather than functional verification. d\u22480.12, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.04."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Realpolitik View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / REALPOLITIK VIEW (MOUNTAIN) \u2014 From civilizational view, state arms transfers are inherent to international anarchy: states cannot exit self-help logic; arms are tools of deterrence and alliance management, not optional. This perspective sees the policy as an immutable feature of state competition. However, base properties (\u03b5=0.58, suppression=0.62) reveal this as a false summit: extraction and suppression exist precisely because alternatives exist (arms control treaties, weapons restrictions, transparency regimes) and are actively suppressed by beneficiaries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "conditionality_enforcement_efficacy",
+      "question": "Do US end-use monitoring conditions and human rights certifications actually constrain recipient behavior, or are they performative theater that enables transfers without real enforcement?",
+      "resolution_mechanism": "Comparative analysis of certified vs uncertified transfers; longitudinal tracking of human rights violations by certified recipients; audit of monitoring compliance documentation",
+      "impact": "If efficacious: constraint is legitimate tangled rope with real coordination function. If performative: constraint is snare disguised as rope; conditionality is extraction mechanism (certification covers political transfers).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether human rights conditions functionally constrain transfers"
+    },
+    {
+      "id": "alliance_deterrence_necessity",
+      "question": "Are specific arms transfers necessary for alliance security and deterrence, or could comparable security outcomes be achieved with arms control and joint defense without unilateral transfers?",
+      "resolution_mechanism": "Counterfactual analysis: correlation between US transfers and military balance; game-theoretic modeling of deterrence with vs without unilateral access; historical cases of security maintenance without transfers",
+      "impact": "If necessary: transfers are coordination (security public good). If contingent: transfers are rent-seeking extraction dressed in security language (beneficiary preference, not structural necessity).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether transfers are structurally necessary for deterrence"
+    },
+    {
+      "id": "alternative_verification_regime_feasibility",
+      "question": "Could international weapons inspection, transparency registries, and multilateral arms control achieve equivalent or superior verification compared to unilateral US end-use monitoring?",
+      "resolution_mechanism": "Analysis of existing multilateral verification regimes (IAEA, OPCW, ATT); comparison of detection rates and compliance; technical feasibility assessment of international inspection infrastructure",
+      "impact": "If feasible: current regime is extraction mechanism with suppressed alternatives. If infeasible: piton classification (theater masks real coordination problem).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of multilateral verification alternatives"
+    },
+    {
+      "id": "technology_transfer_containment_viability",
+      "question": "Does unilateral US control actually contain military technology diffusion to competitors, or do transfers to allies create secondary proliferation pathways that are equally effective at technology spread?",
+      "resolution_mechanism": "Tracking of weapon system variants and licensed production; forensic analysis of technology flow through allied production; analysis of US technology availability from non-US sources",
+      "impact": "If effective containment: beneficiary's security interest (tech control) is real. If ineffective: transfer policy is pure extraction with false coordination justification (tech will diffuse anyway).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether US unilateral control effectively contains technology diffusion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The US Arms Transfer Policy creates a structural tension between legitimate alliance security coordination and the extraction of market rents, geopolitical leverage, and strategic technology control. The constraint governs weapon sales to foreign governments through three parallel mechanisms: Foreign Military Sales (government-to-government), Direct Commercial Sales (manufacturer-to-buyer), and Military Assistance Programs (grants/loans). These mechanisms involve the US State Department, Defense Department, and Congress as enforcers; US defense contractors as beneficiaries; recipient governments as both beneficiaries and constrained actors; and civilian populations in recipient nations as victims. The policy exhibits classic tangled-rope characteristics: a genuine coordination function (alliance deterrence, burden-sharing) is layered with significant asymmetric extraction (market access, technology control, geopolitical leverage). Over the 50-year interval, extractiveness has increased from 0.38 to 0.58 as conditionality has expanded, theater has increased from 0.42 to 0.68 as certification requirements have become more performative, and the policy has drifted toward snare from multiple perspectives.",
+    "key_agents": [
+      "US Defense Industrial Base: Primary beneficiary (institutional/arbitrage) \u2014 secures markets, maintains production capacity, controls technology diffusion",
+      "US State Department: Institutional enforcer (institutional/arbitrage) \u2014 manages diplomatic leverage and conditionality; benefits from policy flexibility",
+      "US Congress: Organized overseer (organized/constrained) \u2014 formally constrains major transfers but constrained by information asymmetry and executive delegation",
+      "Recipient Nation Governments: Powerful constrained actors (powerful/constrained) \u2014 benefit from alliance and weapons access; constrained by US conditionality and asymmetric leverage",
+      "Recipient Civilian Populations: Primary victims (powerless/trapped) \u2014 bear costs of conflicts enabled by transfers; cannot exit participation in recipient government decisions",
+      "International Human Rights Advocates: Moderate mobile observers (moderate/mobile) \u2014 push conditionality frameworks but have limited enforcement power",
+      "International Humanitarian Law Apparatus: Institutional piton (institutional/arbitrage) \u2014 maintains formal verification theater with limited functional enforcement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint extracts through multiple mechanisms: (1) recipient governments pay above-market prices for weapons, (2) technology sales enrich US contractors, (3) conditionality creates political leverage, (4) donor prestige and alliance dependence benefit US geopolitically. The increase from 0.38 to 0.58 reflects that extraction mechanisms have been layered on top of the coordination function over time \u2014 early transfers (1970s-1980s) focused on deterrence; later transfers (2000s-2020s) increasingly focused on market access and leverage. Suppression (0.62): High and persistent. Recipient governments have limited bargaining power; civilian populations have no voice in procurement; Congressional oversight is constrained by information asymmetry; alternative suppliers (Russia, China) create BATNA pressure but not exit options for many recipients. Theater ratio (0.68): High and rising. Certification procedures (human rights, counter-terrorism, end-use monitoring) are substantially performative \u2014 compliance documentation often follows transfers rather than preceding them, audit trails are limited, enforcement is selective based on geopolitical priorities, and violations rarely result in transfer halts.",
+    "perspectival_gap": "The constraint demonstrates stark perspectival divergence. US defense contractors see pure coordination (Rope, d\u22480.08, \u03c7\u2248-0.05) \u2014 the policy solves a legitimate market access problem. Recipient governments see mixed coordination and extraction (Tangled Rope, d\u22480.55, \u03c7\u22480.39) \u2014 they benefit from deterrence but suffer leverage asymmetry. Congressional overseers see organized but constrained power (Tangled Rope, d\u22480.48, \u03c7\u22480.44) \u2014 they have formal veto authority but lack execution capacity. International human rights advocates see a temporary scaffold (Scaffold, d\u22480.62, \u03c7\u22480.42) \u2014 conditionality is improvable, sunset is possible through arms control. The international humanitarian law apparatus sees a degraded ritual (Piton, d\u22480.12, \u03c7\u22480.04) \u2014 certification theater with minimal functional verification. Recipient civilian populations see pure extraction (Snare, d\u22480.92, \u03c7\u22480.73) \u2014 they bear costs, cannot exit, have no voice. The realpolitik analytical observer risks seeing an immutable natural law (Mountain) \u2014 states must transfer arms to maintain alliances \u2014 but the structural data reveals this as a false summit: the extraction and suppression components exist because alternatives (arms control, multilateral verification, technology sharing) are actively suppressed by beneficiaries.",
+    "directionality_logic": "US defense industrial base: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; policy exists to solve their market access problem. Recipient governments: Victim + constrained \u2192 d\u22480.55, f(d)\u22480.75. Asymmetric relationship; constrained by US conditionality and leverage. Congressional bodies: Organized + constrained \u2192 d\u22480.48, f(d)\u22480.62. Formal authority but constrained by executive information advantage. Human rights advocates: Mobile + moderate \u2192 d\u22480.62, f(d)\u22480.92. Can exit advocacy platforms but face suppression of alternatives. International humanitarian law system: Institutional + arbitrage \u2192 d\u22480.12, f(d)\u22480.05. Piton classification from theater gate; low effective extraction. Recipient civilians: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 cannot exit, no voice, bear full cost. Analytical observer naturalizing as mountain: d\u22480.72, f(d)\u22481.15 \u2014 reveals false summit when checked against base properties showing suppression of alternative regimes.",
+    "mandatrophy_analysis": "RESOLUTION: The policy avoids mandatrophy collapse by legitimately containing a coordination function (alliance deterrence, burden-sharing) within an extraction mechanism (market access, leverage, technology control). The tangled rope classification is NOT a failure to distinguish coordination from extraction \u2014 it is accurate recognition that BOTH are present. The mandatrophy is resolved by measuring the suppression of alternative mechanisms: if recipient governments could freely choose suppliers (international market competition), if civilian populations could vote on transfers (democratic accountability), if multilateral verification could replace unilateral end-use monitoring (transparent enforcement), the policy would appear purely extractive (Snare). The constraint's tangled rope status depends on suppression of these alternatives. As suppression declines (arms control agreements, multilateral verification capacity, recipient diversification), the policy would reclassify toward Rope or Scaffold. The rising theater ratio (0.42\u21920.68) indicates the extraction mechanism is increasingly disguised as verification ritual rather than openly exercised as leverage \u2014 this is Goodhart drift, where certification theater substitutes for functional enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "international_weapons_proliferation",
+      "regional_military_balance",
+      "human_rights_enforcement_regimes"
+    ],
+    "dual_formulation_note": "Arms transfer policy decomposes into separate structural constraints: (1) technology containment via unilateral control (\u03b5\u22480.35, Rope/Tangled Rope), (2) alliance deterrence via burden-sharing (\u03b5\u22480.25, Rope), (3) market extraction via conditionality (\u03b5\u22480.65, Snare/Tangled Rope). Current story treats the unified policy at \u03b5=0.58; decomposition into technical and diplomatic components would refine classification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ]
+}

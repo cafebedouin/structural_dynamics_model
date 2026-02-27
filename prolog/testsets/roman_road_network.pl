@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: roman_road_network
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_roman_road_network, []).
@@ -40,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,22 +54,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: roman_road_network
- *   human_readable: "The Roman Road Network as a Mechanism of Imperial Control and Economic Integration"
- *   domain: technological/political
+ *   human_readable: The Roman Road Network as a Mechanism of Imperial Control and Economic Integration
+ *   domain: technological/political/economic
  *
  * SUMMARY:
- *   The network of roads built by the Roman Empire was a monumental feat of
- *   engineering that enabled military logistics, trade, and communication
- *   across vast territories. While providing a genuine coordination function,
- *   its construction and maintenance relied heavily on coercive extraction
- *   (conscripted labor, land appropriation) and it served as a tool for
- *   military suppression and centralized control.
+ *   The Roman road network, constructed between approximately 300 BCE and 300
+ *   CE, represents a monumental infrastructure project that simultaneously
+ *   enabled economic integration, military logistics, and imperial control.
+ *   From one perspective, roads are a pure coordination mechanism solving the
+ *   collective action problem of connecting dispersed populations to larger
+ *   markets and reducing transaction costs. From another perspective, roads
+ *   are a mechanism of extraction and suppression—enabling Roman armies to
+ *   reach and control peripheral populations, facilitating tax collection,
+ *   and subordinating local trade networks to imperial priorities. The
+ *   constraint exhibits the full range of Deferential Realism types depending
+ *   on the observer's structural position. The extractiveness increased over
+ *   the interval as Rome's administrative capacity and financial demands
+ *   grew, and as the roads' original purpose (military logistics) became
+ *   increasingly entangled with extraction functions (taxation, resource
+ *   requisition). Theater ratio remained relatively low (0.48) because roads
+ *   served genuine functional purposes—transportation infrastructure always
+ *   has concrete use-value—but increased as the performative aspects
+ *   (monumental paving, tollgates, symbolic naming) became more prominent.
  *
- * KEY AGENTS (by structural relationship):
- *   - Roman State & Elites: Primary beneficiary (institutional/arbitrage) — profits from increased trade, tax revenue, and military speed.
- *   - Provincial Laborers & Conquered Peoples: Primary target (powerless/trapped) — provides the uncompensated labor and appropriated land, and is subject to the control the roads enable.
- *   - Long-distance Merchants: Secondary beneficiary (moderate/mobile) — uses the roads for commerce but is subject to Roman taxes and authority.
- *   - Analytical Observer: Historian/systems analyst — sees both the coordination benefits and the extractive costs.
+ * KEY AGENTS:
+ *   - Roman Military: Primary beneficiary (institutional/arbitrage) — roads enable logistical capability and rapid response to provincial threats
+ *   - Imperial Treasury: Primary beneficiary (institutional/arbitrage) — roads enable efficient taxation and resource extraction
+ *   - Provincial Farmers: Primary victim (powerless/trapped) — bear labor costs of road maintenance and vulnerability to military requisition
+ *   - Provincial Merchants: Mixed agent (moderate/constrained) — benefit from trade access but constrained by tariffs and monopolies
+ *   - Provincial Elite: Secondary actor (organized/constrained) — benefit from administrative integration but subordinated to Roman authority
+ *   - Local Regional Networks: Victim (powerless/constrained) — autonomous pre-Roman trade routes suppressed by imperial standardization
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent political choice as engineering necessity
  */
 
 /* ==========================================================================
@@ -75,103 +92,83 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(roman_road_network, 0.55). % High extraction from forced labor and land appropriation.
-domain_priors:suppression_score(roman_road_network, 0.70).   % Structural property (raw, unscaled). The network suppressed local autonomy and alternative routes.
-domain_priors:theater_ratio(roman_road_network, 0.15).       % Highly functional; not theatrical during its prime.
+domain_priors:base_extractiveness(roman_road_network, 0.58).
+domain_priors:suppression_score(roman_road_network, 0.65).
+domain_priors:theater_ratio(roman_road_network, 0.48).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(roman_road_network, extractiveness, 0.55).
-narrative_ontology:constraint_metric(roman_road_network, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(roman_road_network, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(roman_road_network, extractiveness, 0.58).
+narrative_ontology:constraint_metric(roman_road_network, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(roman_road_network, theater_ratio, 0.48).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(roman_road_network, tangled_rope).
+narrative_ontology:human_readable(roman_road_network, "The Roman Road Network as a Mechanism of Imperial Control and Economic Integration").
+narrative_ontology:topic_domain(roman_road_network, "technological/political/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(roman_road_network). % Required for Tangled Rope. Roads were patrolled, and labor was coerced.
+domain_priors:requires_active_enforcement(roman_road_network).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A. This is a human-constructed system.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(roman_road_network, roman_state_and_elites).
-narrative_ontology:constraint_beneficiary(roman_road_network, long_distance_merchants).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(roman_road_network, provincial_laborers).
-narrative_ontology:constraint_victim(roman_road_network, conquered_peoples).
-
-% Gate requirements fulfilled for Tangled Rope:
-%   - constraint_beneficiary/2 declared (coordination function)
-%   - constraint_victim/2 declared (asymmetric extraction)
-%   - requires_active_enforcement/1 declared
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(roman_road_network, roman_military).
+narrative_ontology:constraint_beneficiary(roman_road_network, central_imperial_administration).
+narrative_ontology:constraint_beneficiary(roman_road_network, merchant_traders).
+narrative_ontology:constraint_beneficiary(roman_road_network, roman_aristocracy).
+narrative_ontology:constraint_victim(roman_road_network, provincial_populations).
+narrative_ontology:constraint_victim(roman_road_network, local_autonomy).
+narrative_ontology:constraint_victim(roman_road_network, regional_trade_networks).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% The provincial laborer forced to build the road. They experience pure coercion.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-% χ ≈ 0.55 * 1.42 * 1.0 (national scope) = 0.78. This is a clear Snare.
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
+% PERSPECTIVE 1: PROVINCIAL FARMER (SNARE) — Trapped within the road network's logistical grid. Roads enable Roman tax collectors and military requisitions to reach remote territories. The farmer bears extraction costs (forced labor on road maintenance, resource appropriation for military supply) with minimal benefits. No exit option: the roads themselves eliminate isolation that might have provided protective distance. Maximum directionality toward victimhood.
+constraint_indexing:constraint_classification(roman_road_network, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The Roman State or a well-connected senator. They see a pure coordination good.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-% χ ≈ 0.55 * -0.12 * 1.0 = -0.066. This is a clear Rope.
+% PERSPECTIVE 2: PROVINCIAL MERCHANT (TANGLED ROPE) — Benefits from road access to larger markets and reduced transport costs. Simultaneously constrained by Roman monopolies on certain goods (purple dye, salt), tariff collection at road stations, and the threat of military requisition. Mixed coordination and extraction: roads solve the collective action problem of market access, but asymmetric extraction flows toward Rome. Constrained exit — merchant can operate within the system but cannot easily escape it.
+constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: ROMAN MILITARY LOGISTICS COMMAND (ROPE) — Pure coordination mechanism from this perspective. Roads solve the fundamental problem of moving legions and supplies across vast territories in predictable timeframes. The military experiences the roads as a coordination solution enabling expeditionary capability. Has arbitrage options: can redirect roads or logistics strategy without losing access to the fundamental resource (territorial control). Net beneficiary without significant extraction burden.
 constraint_indexing:constraint_classification(roman_road_network, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The historian who sees both the coordination function and the extractive cost.
-% The metrics (ε=0.55, S=0.70) and the presence of both beneficiary and victim groups
-% lead to the Tangled Rope classification.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-% χ ≈ 0.55 * 1.15 * 1.2 (global scope) = 0.76. Meets Tangled Rope threshold.
-constraint_indexing:constraint_classification(roman_road_network, snare,
+% PERSPECTIVE 4: IMPERIAL TREASURY (ROPE) — Roads enable tax collection efficiency and the monetization of regional differentiation through tariff stations. However, from Rome's central perspective, the roads are primarily a coordination mechanism enabling the extraction of value from the broader empire. Treasury experiences roads as infrastructure solving the logistical coordination problem of resource concentration. Arbitrage exit: taxation can be adjusted without losing road access.
+constraint_indexing:constraint_classification(roman_road_network, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: POST-ROMAN ROAD MAINTENANCE (PITON) — After Roman administrative collapse, roads persisted for centuries through local and regional maintenance efforts. Theater ratio high: maintaining Roman roads became a vestigial activity, often performed for local coordination reasons (connecting market towns, enabling pilgrimage) rather than for the original imperial logistics function. The roads' primary function atrophied, but the infrastructure remained due to path dependence. Medieval communities maintained roads not because the Roman extraction mechanism remained, but because roads were already there and useful for different purposes.
+constraint_indexing:constraint_classification(roman_road_network, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: PROVINCIAL ELITE (TANGLED ROPE) — Local aristocrats benefit from roads through trade access, military appointments, and administrative power delegated by Rome. However, they are simultaneously constrained by the requirement to maintain order and infrastructure, suppression of local autonomy, and subordination to Roman authority. Roads enable their enrichment but also eliminate the autonomy they would possess without Roman integration. Active enforcement required: Rome uses roads to project power against rebellious elites. Mixed coordination (enabling commerce and administration) and extraction (subordination and resource flow to Rome).
+constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, roads represent an engineering solution to the logistical problem of controlling large territories: any empire of Rome's geographic scale faces the irreducible constraint that information and supply movement are limited by transportation speed. Roads are presented as a natural law of imperial necessity. However, this naturalizes what is actually a contingent political choice: smaller empires, federated systems, and tribute networks solved territorial control problems differently. The classification as mountain is a false summit—roads are not a law of nature but a particular institutional solution.
+constraint_indexing:constraint_classification(roman_road_network, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE SECONDARY BENEFICIARY (ROPE)
-% A merchant using the roads for commerce. They benefit greatly from coordination,
-% but are still subject to the state's power (taxes, tolls).
-% Engine derives d from: beneficiary membership + mobile exit → d ≈ 0.15 → f(d) ≈ -0.01 → low χ
-% χ ≈ 0.55 * -0.01 * 1.0 = -0.0055. Still a Rope, but less subsidized than the state's view.
-constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -180,20 +177,17 @@ constraint_indexing:constraint_classification(roman_road_network, tangled_rope,
 :- begin_tests(roman_road_network_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(roman_road_network, tangled_rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(roman_road_network, rope, context(agent_power(institutional), _, _, _)),
-    snare \= rope.
+    constraint_indexing:constraint_classification(roman_road_network, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(roman_road_network, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification) :-
-    % Verify the analytical observer correctly identifies the Tangled Rope.
-    constraint_indexing:constraint_classification(roman_road_network, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(roman_road_network, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_fulfilled) :-
-    % Check that all three conditions for Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(roman_road_network, _),
-    narrative_ontology:constraint_victim(roman_road_network, _),
-    domain_priors:requires_active_enforcement(roman_road_network).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(roman_road_network, TR),
+    TR >= 0.70.
 
 :- end_tests(roman_road_network_tests).
 
@@ -203,105 +197,101 @@ test(tangled_rope_gate_fulfilled) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): This score reflects the significant, non-consensual
- *     extraction of value through forced labor (from soldiers, slaves, and conquered
- *     peoples) and the appropriation of land without compensation. This was the
- *     primary "cost" of the network's construction.
- *   - Suppression Score (S=0.70): The roads were instruments of power. They enabled
- *     rapid legion deployment to crush rebellions, superseding and often erasing
- *     local pathways. This created a centralized, state-controlled logistics network
- *     that suppressed local autonomy and alternative power structures.
+ *   Extractiveness (0.58): Moderate-high. Roads enabled Roman military mobility and tax collection efficiency, creating significant extraction mechanisms for peripheral populations. However, roads also generated genuine trade benefits and economic integration that reduced transaction costs. The value reflects that extraction was substantial but not absolute—roads served mixed coordination and extraction functions. The increase from 0.35 to 0.62 over the interval reflects Rome's expanding financial demands and the progressive entrenchment of road-based extraction systems (tariff stations, military supply requisitions). Suppression (0.65): High. Roads operated within a framework of military threat, legal coercion for labor and supply, and elimination of exit options for local autonomous systems. Provinces could not maintain autonomy if they lacked the infrastructure to resist Roman logistics. Suppression increased as Rome standardized road specifications and intensified enforcement. Theater ratio (0.48): Moderate. Roads served genuine functional purposes—transportation efficiency is real and measurable. However, an increasing portion became performative: monumental construction, symbolic naming, ceremonial processions. The theater ratio increased as roads became symbols of Roman power rather than primarily optimized logistics. By the late imperial period, some roads were maintained more for prestige than efficiency.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For the Roman state (institutional), the network is a pure
- *   coordination good (Rope) that enables the existence of the empire itself. The
- *   extractive costs are externalized and considered a necessary price of civilization.
- *   For the provincial laborer (powerless), the road is a symbol of their subjugation
- *   and a product of their forced labor (Snare). They experience its coercive,
- *   extractive nature directly, with few of the coordination benefits.
+ *   The constraint demonstrates maximal perspectival divergence. The imperial military sees a pure coordination solution (Rope)—roads solve the transportation problem with minimal perceived extraction. The provincial farmer sees pure extraction (Snare)—bearing labor costs and vulnerability with no meaningful benefit. The provincial merchant experiences genuine mixed benefits and constraints (Tangled Rope)—roads enable trade but are exploited for taxation. The provincial elite experience subordination despite enrichment (Tangled Rope)—integration benefits them materially but suppresses autonomy. The post-Roman maintenance perspective (Piton) reveals that once the extraction mechanism (Roman military demand) disappeared, roads persisted through inertia rather than function, maintained for different coordination purposes. The analytical observer risks naturalizing roads as a law of nature ('any large empire needs roads') when they represent a particular political choice. This perspectival gap is not measurement error but genuine structural divergence—different agents truly experience the same infrastructure differently based on their relationship to extraction flows.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is driven by the clear structural asymmetry.
- *   - Beneficiaries (`roman_state_and_elites`): They benefit from the roads' function
- *     (military speed, trade revenue, administrative control) without bearing the
- *     direct labor cost. Their `arbitrage` exit option reflects their ability to
- *     direct resources and control the network for maximum gain. This results in a
- *     low derived `d` value (≈0.05).
- *   - Victims (`provincial_laborers`): They provide the primary input (labor, land)
- *     under duress and are the targets of the military control the roads facilitate.
- *     Their `trapped` status within the imperial system results in a very high
- *     derived `d` value (≈0.95).
+ *   Each perspective's directionality is determined by structural position relative to extraction flows. The military and treasury see roads as enabling coordination (beneficiaries with arbitrage options—they can adjust strategy without losing road access). Directional value d ≈ 0.1-0.2, producing low/negative experienced extraction. Provincial farmers see roads as enabling their subjugation (victims trapped without exit options). Directional value d ≈ 0.85-0.95, producing maximum experienced extraction. Provincial merchants experience mixed positioning: benefiting from trade access but constrained by tariffs and monopolies. Directional value d ≈ 0.55-0.65, producing moderate extraction. Provincial elites experience subordination despite material benefit: constrained exit despite enrichment. Directional value d ≈ 0.50-0.60, producing moderate extraction. The piton perspective derives from theater ratio exceeding 0.70 in late periods: the original function (military logistics) attenuated while the constraint persisted through institutional inertia. The mountain perspective represents a false summit: the analytical view risks naturalizing what is a contingent institutional choice as a law of nature.
  *
  * MANDATROPHY ANALYSIS:
- *   This case is a canonical example of what Mandatrophy analysis is designed to prevent.
- *   A simplistic "public goods" analysis would label the road network a Rope, focusing
- *   only on its coordination function ("All roads lead to Rome," "They brought order").
- *   This framework forces a reckoning with the extractive foundation of that coordination.
- *   By declaring victims and quantifying the extractive cost (ε), the system correctly
- *   identifies the structure as a Tangled Rope from an analytical view, acknowledging
- *   both its function and its coercive underpinnings.
+ *   The Roman road network resolves mandatrophy by demonstrating that roads are genuinely a Tangled Rope—they combine real coordination benefits (trade, economic integration, information flow) with genuine extraction mechanisms (military logistics, taxation, resource requisition, suppression of autonomy). The mandatrophy question 'is this coordination or extraction?' has the answer: both. The roads are not mislabeled as pure coordination (Rope)—they actively enforce asymmetric extraction. They are not mislabeled as pure extraction (Snare)—they generate real economic benefits. The Tangled Rope classification accurately captures the hybrid nature. The perspectival gap demonstrates that different agents experience the hybrid nature differently: beneficiaries (military, treasury) perceive primarily coordination; victims (provincial farmers) perceive primarily extraction. The analytical observer's false summit (mountain) is specifically a mandatrophy failure—naturalizing a particular institutional arrangement as inevitable. Resolution: the roads are a contingent political choice that happened to combine coordination and extraction functions, not a law of nature imposed by transport physics. The network would have evolved differently if Rome had chosen other administrative models (federated tribute, smaller strategic strongholds, local autonomy with trade treaties).
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_roman_road_network,
-    'What was the precise ratio of coerced (slave, provincial) to non-coerced (legionary duty) labor in road construction across different eras and provinces?',
-    'Detailed archaeological and historical analysis of labor records, which are largely unavailable. Isotope analysis of remains near roads could provide clues on worker origins.',
-    'If labor was mostly willing legionaries, ε would decrease (e.g., to 0.40). If almost entirely slave/conscript, ε would increase (e.g., to 0.70). This would solidify the Snare/Tangled Rope classifications.',
+    extraction_vs_coordination_balance,
+    'Did the economic benefits of road-enabled trade outweigh the extraction costs of military logistics and taxation for provincial populations?',
+    'Economic historians'' analysis of price convergence, wage data, and archaeological evidence of consumption patterns in provinces. Comparison of provincial prosperity metrics before and after major road construction.',
+    'If benefits > costs: roads classify as genuine coordination (Rope from provincial perspective). If extraction > benefits: roads classify as extraction mechanism (Snare from provincial perspective). Current evidence suggests regional variation.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(extraction_vs_coordination_balance, empirical, 'Whether road network benefits to provinces exceeded extraction costs').
+
+omega_variable(
+    local_autonomy_tradeoff,
+    'To what extent did regional road networks replace autonomous local trade routes versus extending beyond them?',
+    'Archaeological evidence of pre-Roman trade patterns; comparative analysis of route efficiency and distance. Examination of whether Roman roads primarily followed existing trade corridors or imposed new patterns.',
+    'If roads follow existing patterns: weaker suppression of local autonomy, more Rope classification. If roads impose new patterns: stronger suppression, more Snare/Tangled Rope classification.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(local_autonomy_tradeoff, empirical, 'Whether Roman roads built on or replaced autonomous local trade networks').
+
+omega_variable(
+    provincial_elite_alignment,
+    'Did provincial elites genuinely benefit from road-enabled integration or were they primarily instruments of Roman extraction?',
+    'Prosopographic analysis of provincial elite families'' wealth accumulation, office tenure, and rebellion patterns. Comparison of elites with and without positions in the Roman administrative structure.',
+    'If genuine benefit: provincial elite see Rope or Tangled Rope. If primarily instruments: provincial elite see Snare despite nominal privilege. This determines whether the roads'' integration was consensual or coercive at the elite level.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(provincial_elite_alignment, empirical, 'Whether provincial elite genuinely benefited from road-enabled integration').
+
+omega_variable(
+    voluntary_participation_threshold,
+    'What proportion of road maintenance and logistics support was extracted through coercion versus incentivized through voluntary participation?',
+    'Legal text analysis of road maintenance obligations and labor requisition laws. Archaeological evidence of forced versus market-driven supply chains. Comparison of voluntary participation rates across provinces with different administrative autonomy.',
+    'If >70% coercive: roads are primarily Snare/Tangled Rope. If >50% voluntary: roads approach Rope. Current evidence suggests high regional variation and significant coercion.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(voluntary_participation_threshold, empirical, 'Proportion of road system support that was coerced versus voluntary').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(roman_road_network, 0, 10).
+narrative_ontology:interval(roman_road_network, 0, 200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. As a high-extraction constraint (ε=0.55 > 0.46),
-% this is required. The model shows initial high extraction during conquest, a slight
-% dip as trade becomes a co-equal function, and rising theater in the late empire
-% as maintenance falters but the idea of the roads remains.
+% Theater ratio over time
+narrative_ontology:measurement(rrn_tr_t0, roman_road_network, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(rrn_tr_t100, roman_road_network, theater_ratio, 100, 0.4).
+narrative_ontology:measurement(rrn_tr_t200, roman_road_network, theater_ratio, 200, 0.48).
 
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(rrn_tr_t0, roman_road_network, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(rrn_tr_t5, roman_road_network, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(rrn_tr_t10, roman_road_network, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(rrn_be_t0, roman_road_network, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(rrn_be_t100, roman_road_network, base_extractiveness, 100, 0.58).
+narrative_ontology:measurement(rrn_be_t200, roman_road_network, base_extractiveness, 200, 0.62).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(rrn_ex_t0, roman_road_network, base_extractiveness, 0, 0.60).
-narrative_ontology:measurement(rrn_ex_t5, roman_road_network, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(rrn_ex_t10, roman_road_network, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The road network is a quintessential example of large-scale infrastructure.
-narrative_ontology:coordination_type(roman_road_network, global_infrastructure).
+narrative_ontology:coordination_type(roman_road_network, resource_allocation).
+narrative_ontology:affects_constraint(roman_road_network, provincial_autonomy_suppression).
+narrative_ontology:affects_constraint(roman_road_network, imperial_tax_collection_mechanism).
 
-% Network relationships (structural influence edges)
-% The road network was fundamental to the stability and function of the empire.
-narrative_ontology:affects_constraint(roman_road_network, roman_imperial_stability).
-narrative_ontology:affects_constraint(roman_road_network, roman_grain_supply).
+% DUAL FORMULATION NOTE:
+% The Roman road network should be analyzed as a constraint family with two distinct claims: (1) roads as logistics infrastructure (ε ≈ 0.15, coordination-primary), and (2) roads as extraction mechanism enabling military and fiscal control (ε ≈ 0.65, extraction-primary). This story captures both within the Tangled Rope classification. Decomposition into separate stories is not warranted because the extraction and coordination functions are structurally inseparable—one cannot build Roman roads for logistics without creating tools for control, and one cannot extract as efficiently without roads. The single story with multiple perspectives better models this unity.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The standard derivation from
-% beneficiary/victim declarations and exit options accurately captures the
-% structural relationships between the Roman state, provincial subjects, and
-% merchants.
+constraint_indexing:directionality_override(roman_road_network, institutional, 0.15).
+constraint_indexing:directionality_override(roman_road_network, powerless, 0.88).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

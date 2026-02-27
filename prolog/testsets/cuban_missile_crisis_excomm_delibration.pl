@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: cuban_missile_crisis_excomm_deliberation
+% CONSTRAINT STORY: cuban_missile_crisis_excomm_delibration
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-28
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_cuban_missile_crisis_excomm_deliberation, []).
+:- module(constraint_cuban_missile_crisis_excomm_delibration, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -53,33 +53,41 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: cuban_missile_crisis_excomm_deliberation
+ *   constraint_id: cuban_missile_crisis_excomm_delibration
  *   human_readable: The ExComm Multi-Channel Deliberation Protocol
  *   domain: political/military
  *
  * SUMMARY:
- *   Following the failure of the Bay of Pigs, President Kennedy established
- *   the Executive Committee of the National Security Council (ExComm). This
- *   constraint story models the ExComm protocol itself as a deliberate
- *   "anti-silo" mechanism. It forced decision-makers to weigh multiple
- *   competing options—primarily a naval blockade versus a direct air
- *   strike—under the existential threat of Nuclear Mutually Assured
- *   Destruction (MAD). The protocol functioned to prevent groupthink and
- *   create a path for de-escalation.
+ *   The Cuban Missile Crisis (October 1962) presented an unprecedented
+ *   challenge: nuclear-armed Soviet missiles detected 90 miles from U.S.
+ *   coast, with decision timelines compressed to hours. President Kennedy
+ *   established ExComm — a multi-channel deliberation structure bringing
+ *   together State Department, Defense, Joint Chiefs, CIA, and close advisors
+ *   — to process intelligence, generate options, and recommend courses of
+ *   action. The constraint is not merely the crisis itself, but the
+ *   institutional protocol created to manage it: the structured deliberation
+ *   format that simultaneously enabled coordinated decision-making and
+ *   systematically excluded Congress from war-powers authority. What began as
+ *   emergency necessity in October 1962 (genuine nuclear crisis requiring
+ *   rapid decision-making) persisted as institutional inertia in subsequent
+ *   administrations, accruing extractive properties as the original
+ *   justification atrophied. The protocol exhibits all six constraint types
+ *   depending on observer position: Congress sees exclusion from war powers
+ *   (snare), cabinet sees mixed access-and-subordination (tangled rope),
+ *   presidency sees enabling coordination (rope), military sees civilian
+ *   control with constrained voice (tangled rope), intelligence sees
+ *   temporary emergency role (scaffold), institutional stability sees
+ *   degraded theater (piton), and the civilizational analyst risks
+ *   naturalizing nuclear decision speed as immutable law.
  *
- *   CRITICAL DISTINCTION (ε-Invariance): This story models the *protocol*,
- *   not the background threat of nuclear war. The protocol is a low-extraction
- *   coordination mechanism (ε ≈ 0.20). The threat of MAD is a separate,
- *   high-extraction constraint (likely a Mountain or Snare) that this
- *   protocol was designed to navigate. Conflating the two would violate the
- *   ε-invariance principle.
- *
- * KEY AGENTS (by structural relationship):
- *   - Global Population: Primary beneficiary (powerless/trapped) — benefits from the avoidance of nuclear war.
- *   - The "Doves" (e.g., Robert Kennedy, McNamara): Primary beneficiary (powerful/mobile) — successfully used the protocol to achieve their de-escalation goals.
- *   - The "Hawks" (e.g., JCS, Gen. LeMay): Constrained party (institutional/constrained) — the protocol prevented their preferred military action.
- *   - Castro Regime: Primary victim (organized/trapped) — their national autonomy was a bargaining chip in the resolution.
- *   - Analytical Observer: Sees the full structure of the protocol as a coordination device.
+ * KEY AGENTS:
+ *   - President Kennedy: Primary beneficiary (institutional/arbitrage) — consolidates decision authority, distributes responsibility among multiple advisors, maintains secrecy while appearing consultative
+ *   - Congress: Primary victim (powerless/trapped) — systematically excluded from real-time nuclear decision despite constitutional war powers; cannot exit due to crisis timeline compression
+ *   - State Department/Dean Rusk: Secondary actor (institutional/constrained) — integrated into deliberation but subordinated to presidential prerogative; benefits from access, constrained by civilian control doctrine
+ *   - Joint Chiefs of Staff/Maxwell Taylor: Secondary actor (organized/constrained) — significant military expertise represented but overruled on military options; benefit from deliberation access, extraction toward political authority
+ *   - CIA/John McCone: Secondary actor (institutional/constrained) — essential intelligence role (U-2 photography provides crisis definition) but intelligence interpretation subject to political framing
+ *   - Congress (War Powers Authority): Victim (powerless/trapped) — constitutional authority to declare war is systematically suppressed through secrecy and speed
+ *   - Deliberative Transparency (Democratic Process): Victim (powerless/trapped) — abstract collective good; excluded from real-time crisis management
  */
 
 /* ==========================================================================
@@ -87,104 +95,98 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(cuban_missile_crisis_excomm_deliberation, 0.20).
-domain_priors:suppression_score(cuban_missile_crisis_excomm_deliberation, 0.15).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(cuban_missile_crisis_excomm_deliberation, 0.16).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(cuban_missile_crisis_excomm_delibration, 0.35).
+domain_priors:suppression_score(cuban_missile_crisis_excomm_delibration, 0.42).
+domain_priors:theater_ratio(cuban_missile_crisis_excomm_delibration, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(cuban_missile_crisis_excomm_deliberation, extractiveness, 0.20).
-narrative_ontology:constraint_metric(cuban_missile_crisis_excomm_deliberation, suppression_requirement, 0.15).
-narrative_ontology:constraint_metric(cuban_missile_crisis_excomm_deliberation, theater_ratio, 0.16).
+narrative_ontology:constraint_metric(cuban_missile_crisis_excomm_delibration, extractiveness, 0.35).
+narrative_ontology:constraint_metric(cuban_missile_crisis_excomm_delibration, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(cuban_missile_crisis_excomm_delibration, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(cuban_missile_crisis_excomm_deliberation, rope).
-narrative_ontology:human_readable(cuban_missile_crisis_excomm_deliberation, "The ExComm Multi-Channel Deliberation Protocol").
-narrative_ontology:topic_domain(cuban_missile_crisis_excomm_deliberation, "political/military").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(cuban_missile_crisis_excomm_delibration, tangled_rope).
+narrative_ontology:human_readable(cuban_missile_crisis_excomm_delibration, "The ExComm Multi-Channel Deliberation Protocol").
+narrative_ontology:topic_domain(cuban_missile_crisis_excomm_delibration, "political/military").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(cuban_missile_crisis_excomm_deliberation). % JFK intentionally absent from meetings to encourage dissent.
+domain_priors:requires_active_enforcement(cuban_missile_crisis_excomm_delibration).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(cuban_missile_crisis_excomm_deliberation, global_population).
-narrative_ontology:constraint_beneficiary(cuban_missile_crisis_excomm_deliberation, us_political_leadership).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(cuban_missile_crisis_excomm_deliberation, castro_regime_autonomy).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(cuban_missile_crisis_excomm_delibration, executive_presidency).
+narrative_ontology:constraint_beneficiary(cuban_missile_crisis_excomm_delibration, joint_chiefs_of_staff).
+narrative_ontology:constraint_victim(cuban_missile_crisis_excomm_delibration, congress_war_powers).
+narrative_ontology:constraint_victim(cuban_missile_crisis_excomm_delibration, cabinet_institutional_autonomy).
+narrative_ontology:constraint_victim(cuban_missile_crisis_excomm_delibration, deliberative_transparency).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE GLOBAL CIVILIAN (BENEFICIARY)
-% The protocol is a Rope that coordinates powerful actors to prevent global
-% annihilation. While civilians are trapped by the background threat of MAD,
-% this specific constraint (the protocol) works in their favor.
-constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_deliberation, tangled_rope,
+% PERSPECTIVE 1: CONGRESS (SNARE) — Excluded from real-time deliberation on nuclear war decision. Congressional war powers authority is systematically suppressed through secrecy and speed. Representatives cannot exit: the crisis timeline compresses their ability to assert constitutional authority. Bears full cost of restricted deliberative input while President captures unilateral decision-making.
+constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, snare,
     context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(global))).
-
-% PERSPECTIVE 2: THE "DOVES" (ARCHITECTS/BENEFICIARIES)
-% For RFK and McNamara, the ExComm process was a quintessential Rope—a
-% coordination mechanism to create communication channels and de-escalation
-% options where a binary choice (strike/capitulate) seemed imminent.
-constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_deliberation, rope,
-    context(agent_power(powerful),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE "HAWKS" (CONSTRAINED PARTY)
-% The Joint Chiefs viewed the missiles as a military fact requiring a military
-% solution. The ExComm protocol was a constraint that forced them into a
-% political coordination game, preventing their preferred action. It was a
-% Rope that channeled their behavior away from immediate conflict.
-constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_deliberation, rope,
-    context(agent_power(institutional),
             time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: CABINET DEPARTMENTS (TANGLED ROPE) — State Department, Defense Secretary, CIA directors are integrated into ExComm but with constrained exit. Benefit from access to crisis deliberation and influence on decision, but authority is subordinated to Presidential prerogative. Cannot openly dissent without career risk. Mixed coordination (needs cabinet expertise) and extraction (presidential dominance of outcome).
+constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% From a historical distance, the ExComm protocol is seen as an ideal Rope—a
-% system designed to prevent the Snare of a binary choice (Total Surrender vs.
-% Total War) by creating a middle-path mechanism for de-escalation.
-constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_deliberation, rope,
-    context(agent_power(analytical),
-            time_horizon(historical),
-            exit_options(analytical),
+% PERSPECTIVE 3: EXECUTIVE PRESIDENCY (ROPE) — Primary beneficiary. ExComm solves the coordination problem of rapid, confidential deliberation in nuclear crisis. President experiences the protocol as enabling function: consolidating advice, legitimizing decision through multiple-perspective input, creating plausible deniability through distributed authorship of options. Extracts unilateral authority while distributing responsibility.
+constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
             spatial_scope(global))).
+
+% PERSPECTIVE 4: JOINT CHIEFS (TANGLED ROPE) — Organized military hierarchy with significant institutional power, but constrained by civilian control doctrine and Presidential authority during crisis. ExComm provides coordination function (multiple service perspectives, integrated planning) but also subordinates military judgment to political decision-making. Benefit from access and influence, but cannot override civilian policy choice. Extraction runs toward political authority.
+constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: INTELLIGENCE AGENCIES (SCAFFOLD) — CIA and NSA provide essential reconnaissance (U-2 photography, signals intelligence) that structures the crisis decision space. Intelligence gathering role is genuinely needed; ExComm coordinates fact-finding. However, the constraint has sunset logic: as crisis resolves, intelligence role normalizes to standing operations rather than crisis deliberation. Theater increases during crisis (dramatic briefings, classified handling) but decreases postcrisis. Intelligence organizations see this as temporary emergency protocol.
+constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, scaffold,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: CONSTITUTIONAL INSTITUTIONAL VIEW (PITON) — The ExComm protocol persists as inertial structure even after the Cuban Missile Crisis. The deliberative form — small group of executives, classified proceedings, distributed authority — outlasts the immediate justification (nuclear crisis management). Subsequent administrations use ExComm-like structures for non-crisis decisions. Theater ratio is high: the protocol maintains performative trappings of cabinet consultation while centralizing presidential authority. The coordination function that made it necessary in 1962 (rapid nuclear decision-making) is largely theatrical in routine use.
+constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN CANDIDATE) — From a civilizational perspective, nuclear weapons create an irreducible constraint: decision timelines measured in minutes (ICBM flight time ~30 minutes) are incompatible with full congressional deliberation (~hours minimum). This could be framed as a natural limit on democratic process under nuclear conditions. However, this perspective risks naturalizing what is actually a contingent technological and institutional choice: submarine-based deterrence, negotiation protocols, and arms control treaties are alternatives that could decompress timelines. The false summit detector will reveal whether this is true natural law or naturalized contingency.
+constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(cuban_missile_crisis_excomm_deliberation_tests).
+:- begin_tests(cuban_missile_crisis_excomm_delibration_tests).
 
-test(perspective_agreement) :-
-    % Verify that key perspectives agree on the classification, demonstrating
-    % the uniform-type nature of this pure coordination constraint.
-    constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_deliberation, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_deliberation, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless == rope,
-    TypeInstitutional == rope.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(cuban_missile_crisis_excomm_delibration, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(low_suppression_verification) :-
-    domain_priors:suppression_score(cuban_missile_crisis_excomm_deliberation, S),
-    S < 0.2.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(cuban_missile_crisis_excomm_delibration, TR),
+    TR >= 0.70.
 
-:- end_tests(cuban_missile_crisis_excomm_deliberation_tests).
+:- end_tests(cuban_missile_crisis_excomm_delibration_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -192,98 +194,100 @@ test(low_suppression_verification) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (ε=0.20) and suppression (0.15) are low because
- *   this story models the ExComm deliberation *protocol*, not the overall
- *   crisis. The protocol was explicitly designed to *reduce* suppression of
- *   dissenting views (avoiding Bay of Pigs groupthink) and coordinate a
- *   de-escalatory path that benefited the global population. Its function
- *   was pure coordination.
+ *   Extractiveness (0.35): Moderate. The ExComm protocol does extract congressional war-powers authority and limits cabinet autonomy. However, the extraction is not total: legitimate coordination value exists (multiple expert perspectives improve crisis decision-making), and the constraint is partially justified by genuine nuclear decision-speed requirements. The moderate value reflects that extraction and coordination coexist. Over the interval, extractiveness increases (0.22→0.40) as the constraint persists beyond the immediate crisis, suggesting that the original crisis-necessity justification weakens while the institutional inertia strengthens. Suppression (0.42): Moderate. Congressional authority is suppressed through classified operations and compressed timelines, creating significant barriers to institutional participation. However, suppression is not total — Congress can (and historically does) reassert authority postcrisis through legislation. Cabinet actors face suppression through subordination to presidential prerogative but have organizational capacity to push back. Theater ratio (0.58→0.72): Increases over the interval. During acute crisis (days 0-7), deliberation is mostly functional — genuine uncertainty about Soviet intentions, multiple viable options under serious consideration. Postcrisis (days 7-14), the protocol becomes more theatrical as the crisis resolves but the structure persists: meetings continue with less real deliberative content, decision options narrow to implementation rather than strategy, and the multi-channel format serves mainly to legitimate a largely predetermined course of action.
  *
  * PERSPECTIVAL GAP:
- *   This constraint is a uniform-type Rope, meaning there is no significant
- *   perspectival gap. All actors, whether they are beneficiaries (Doves,
- *   civilians) or constrained by it (Hawks), experience it as a coordination
- *   mechanism. The Hawks are forced to coordinate when they would rather
- *   not, but the mechanism itself is still a Rope. The initial temptation to
- *   classify this as a Snare from the powerless perspective is an error of
- *   misattribution: the powerless are trapped by the background threat of
- *   Mutually Assured Destruction (a separate constraint), not by the ExComm
- *   protocol that was working to save them.
+ *   The perspectival gap is maximal here. Congress (powerless/trapped) sees pure extraction of constitutional authority — they are excluded from a decision about war and bear the costs of potential escalation without deliberative input. The presidency (institutional/arbitrage) sees coordination — ExComm solves the problem of integrating multiple expert perspectives rapidly. Cabinet actors (institutional/constrained) experience ambivalence: they benefit from access and influence on options, but their autonomy is subordinated to presidential prerogative. Military (organized/constrained) sees constrained voice: expert military judgment is heard but overruled on strategic choices. Intelligence (institutional/constrained) sees temporary emergency role, with restoration of standing operations postcrisis. The analytical observer at civilizational scale risks seeing nuclear decision speed as immutable constraint (mountain), but the structural data reveals this as naturalization: alternative command architectures, arms control treaties, and negotiation protocols could decompress timelines, making ExComm an institutional choice rather than a law of nature.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: The 'global_population' and 'us_political_leadership'
- *     benefited from a non-nuclear outcome. The engine assigns them a low
- *     directionality (d), resulting in low effective extraction (χ).
- *   - Victims: The 'castro_regime_autonomy' was sacrificed as part of the
- *     deal (removal of missiles from Turkey and Cuba). They bear the cost of
- *     the coordination, giving them a higher d.
+ *   Each agent's directionality (d) is derived from their structural position within the constraint. Congress is a trapped victim of the compressed timeline and excluded deliberation — derives high d (~0.90) → high f(d) → experiences maximum extraction. Executive presidency is a beneficiary with arbitrage options (can choose different deliberation formats, can invoke emergency authority, can make decisions unilaterally) — derives low d (~0.10) → negative f(d) → experiences coordination benefit. Cabinet actors are mixed: beneficiaries of access (low d on participation dimension), victims of subordination (high d on authority dimension) — split perspective (tangled rope) reflects this duality. Joint Chiefs are organized (higher structural power to resist), constrained (cannot override civilian authority), so derive moderate-high d (~0.55) → moderate f(d). Intelligence agencies are institutional beneficiaries (their expertise is needed, their information structures the decision space) but with temporary role — low d for crisis period (~0.20), reverting to baseline (~0.50) postcrisis as emergency protocols normalize.
  *
  * MANDATROPHY ANALYSIS:
- *   The ε-invariance principle is critical here. By strictly modeling the
- *   protocol (ε=0.20), we avoid mislabeling this Rope as a Snare. An analyst
- *   who conflates the protocol with the background threat of MAD might assign
- *   a high ε, leading to a false Snare classification and the incorrect
- *   conclusion that the deliberation process itself was extractive. This
- *   model correctly identifies the protocol as a coordination solution to an
- *   external high-extraction problem.
+ *   The mandatrophy is resolved by recognizing that ExComm is genuinely a tangled_rope structure: it performs a real coordination function (integrating multiple expert perspectives, processing complex intelligence, generating options) while simultaneously extracting congressional authority and constraining cabinet autonomy. The constraint cannot be reduced to pure coordination (rope) because the extraction of war powers is structural, not incidental. It cannot be reduced to pure extraction (snare) because the coordination function is genuine — the multi-channel deliberation produces better decisions than unilateral presidential choice would. The challenge is that observing from a powerless agent's perspective (Congress) makes it appear pure snare; observing from the presidency makes it appear pure rope. The tangled_rope classification unifies these: yes, there is genuine coordination; yes, there is genuine extraction. The constraint's mandate requires both functions. The theater ratio increasing postcrisis (0.58→0.72) is diagnostic: as the original coordination necessity weakens (crisis resolves), the performative aspect (legitimation of presidential authority) becomes more visible, but does not change the fundamental classification — it confirms that extraction persists even after coordination justification decays.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_cuban_missile_crisis_excomm_deliberation,
-    "Would Khrushchev have actually launched missiles if a 'surgical' US air strike had occurred?",
-    "Cross-referencing declassified Politburo minutes with field-level Soviet operational orders in Cuba.",
-    "If Yes: The ExComm protocol was an indispensable Rope. If No: The Hawks' perception of an inevitable escalation was an illusion, and the crisis was less severe than perceived.",
+    decision_speed_vs_deliberation_tradeoff,
+    'Is the compression of deliberative timeline an inherent physical constraint of nuclear deterrence, or a contingent technological-institutional choice?',
+    'Comparative analysis of alternative nuclear command architectures (submarine-based strategic patrols, launch-on-warning vs launch-on-command, negotiated communication protocols); modeling of decision timelines under different institutional structures',
+    'If inherent constraint: ExComm is structurally necessary (mountain or rope). If contingent: ExComm is an institutional choice that extracts congressional authority (snare or tangled rope).',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_cuban_missile_crisis_excomm_deliberation, empirical, "Uncertainty over Soviet command-and-control and response doctrine during the crisis.").
+narrative_ontology:omega_variable(decision_speed_vs_deliberation_tradeoff, empirical, 'Whether nuclear decision speed is physical constraint or institutional choice').
+
+omega_variable(
+    congressional_participation_feasibility,
+    'Could Congress participate effectively in real-time nuclear crisis decisions without compromising secrecy or extending decision timelines to unsafe durations?',
+    'Historical case studies of Congressional notification in subsequent crises (Cuban Missile Crisis II scenarios, Korean ship seizures, Iranian hostage crisis); technical analysis of secure communication and rapid convening capacity; polling of defense specialists on feasibility',
+    'If feasible: ExComm suppression of congressional authority is extractive choice, not necessity (snare/tangled rope confirmed). If infeasible: ExComm constraints on congress are structural necessity (rope or mountain).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(congressional_participation_feasibility, empirical, 'Whether real-time Congressional participation is technically/politically feasible').
+
+omega_variable(
+    executive_prerogative_vs_constitutional_authority,
+    'Does presidential emergency power during nuclear crisis represent legitimate executive necessity or unconstitutional extraction of legislative war powers?',
+    'Constitutional scholar consensus on emergency power doctrine; longitudinal tracking of Congressional acquiescence vs assertion in crisis scenarios; comparison with international democratic practices (UK, France, Germany) in similar conditions',
+    'If legitimate necessity: ExComm is rope (needed coordination). If unconstitutional: ExComm is snare (extraction of war powers). If mixed: tangled rope confirmed.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(executive_prerogative_vs_constitutional_authority, conceptual, 'Whether executive prerogative in crisis is legitimate or extractive').
+
+omega_variable(
+    deliberative_theater_function,
+    'Does the multi-channel deliberation format (including military, intelligence, diplomatic perspectives) produce better decisions, or is it primarily theater legitimizing a predetermined presidential choice?',
+    'Decision outcome analysis: Cuban Missile Crisis choices vs alternatives considered; counterfactual analysis of what would have happened without ExComm structure; comparison of crisis outcome quality to unilateral executive decisions in other scenarios',
+    'If genuinely improves decisions: rope or tangled rope. If largely theater: piton confirmed.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(deliberative_theater_function, empirical, 'Whether multi-channel deliberation improves crisis decision quality or provides theater').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(cuban_missile_crisis_excomm_deliberation, 0, 13). % The "Thirteen Days"
+narrative_ontology:interval(cuban_missile_crisis_excomm_delibration, 0, 14).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required as base_extractiveness (0.20) is below the 0.46 threshold.
+% Theater ratio over time
+narrative_ontology:measurement(excomm_tr_t0, cuban_missile_crisis_excomm_delibration, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(excomm_tr_t7, cuban_missile_crisis_excomm_delibration, theater_ratio, 7, 0.58).
+narrative_ontology:measurement(excomm_tr_t14, cuban_missile_crisis_excomm_delibration, theater_ratio, 14, 0.72).
+
+% Extraction over time
+narrative_ontology:measurement(excomm_be_t0, cuban_missile_crisis_excomm_delibration, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(excomm_be_t7, cuban_missile_crisis_excomm_delibration, base_extractiveness, 7, 0.35).
+narrative_ontology:measurement(excomm_be_t14, cuban_missile_crisis_excomm_delibration, base_extractiveness, 14, 0.4).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The protocol was an enforcement mechanism for a specific mode of deliberation.
-narrative_ontology:coordination_type(cuban_missile_crisis_excomm_deliberation, enforcement_mechanism).
+narrative_ontology:coordination_type(cuban_missile_crisis_excomm_delibration, enforcement_mechanism).
+narrative_ontology:affects_constraint(cuban_missile_crisis_excomm_delibration, nuclear_command_authority_delegation).
+narrative_ontology:affects_constraint(cuban_missile_crisis_excomm_delibration, presidential_war_powers_usurpation).
 
-% --- Network Decomposition (Constraint Families) ---
-%
 % DUAL FORMULATION NOTE:
-% This constraint is one of two stories decomposed from the colloquial label
-% "The Cuban Missile Crisis". Decomposed because ε differs across observables.
-% This story models the low-ε coordination protocol. A separate story would
-% model the high-ε background threat.
-%
-% Related stories:
-%   - nuclear_mutually_assured_destruction (ε≈0.95, Mountain/Snare)
-%
-% narrative_ontology:affects_constraint(nuclear_mutually_assured_destruction, cuban_missile_crisis_excomm_deliberation).
+% The ExComm protocol is structurally distinct from the underlying nuclear decision-speed constraint and from subsequent institutionalization of executive prerogative. It represents an institutional solution to a coordination problem (how to rapidly process expert advice in crisis) that becomes an extraction mechanism (how to concentrate presidential authority). Decomposition: nuclear_command_authority_delegation (ε=0.12, rope) is the purely technical problem of getting commands to nuclear forces reliably; cuban_missile_crisis_excomm_deliberation (ε=0.35, tangled_rope) adds the political-military deliberation layer; presidential_war_powers_usurpation (ε=0.55, snare) tracks the longer-term extraction of congressional authority across multiple crises.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations accurately models the relationships.
+constraint_indexing:directionality_override(cuban_missile_crisis_excomm_delibration, powerful, 0.48).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

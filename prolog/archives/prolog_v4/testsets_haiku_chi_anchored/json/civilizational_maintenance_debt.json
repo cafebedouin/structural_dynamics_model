@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "civilizational_maintenance_debt",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Crumbling Foundation: Civilizational Maintenance Debt",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_term_political_actors",
+      "current_taxpayers"
+    ],
+    "victims": [
+      "future_generations",
+      "users_of_failing_infrastructure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Future Generations",
+      "comment": "PERSPECTIVE 1: FUTURE GENERATIONS (SNARE) — Trapped in time, they inherit a degraded system and bear the full, compounded cost of deferred maintenance. They had no voice in the decisions but face the consequences. For them, it is pure, inescapable extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.82."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Short-Term Political Actors",
+      "comment": "PERSPECTIVE 2: SHORT-TERM POLITICAL ACTORS (ROPE) — They benefit by diverting funds from low-visibility maintenance to popular new projects or tax cuts, arbitraging short-term political gain against long-term decay they won't be in office to manage. They see infrastructure as a coordination tool to be managed for immediate public approval. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes the dual nature: the infrastructure provides a genuine coordination function, but the funding model creates an asymmetric extraction from the future to benefit the present. The high suppression reflects the difficulty of creating alternative infrastructure. This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.80."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Maintenance Engineer",
+      "comment": "PERSPECTIVE 4: THE MAINTENANCE ENGINEER (PITON) — This agent sees the maintenance allocation process itself as a degraded institution. The engineering rationale for preventative maintenance is ignored in favor of political theater (ribbon cuttings, emergency patches). The function of rational asset management has atrophied, replaced by performative gestures. The high theater_ratio (0.75) confirms this view."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The User of Failing Infrastructure",
+      "comment": "PERSPECTIVE 5: USER OF FAILING INFRASTRUCTURE (TANGLED ROPE) — Experiences both the benefits of the system (when it works) and the direct costs of its failure (boil water advisories, bridge closures). They are constrained, unable to easily switch to an alternative, and bear localized extraction. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.53."
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2030
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.75
+    }
+  ],
+  "omegas": [
+    {
+      "id": "decay_rate_linearity",
+      "question": "Is the rate of infrastructure decay and cost accumulation linear, or does it accelerate non-linearly as systems pass critical failure thresholds?",
+      "resolution_mechanism": "Longitudinal engineering analysis of asset lifecycle data across multiple infrastructure classes (e.g., water, transport, energy).",
+      "impact": "If linear, the problem is a large but manageable debt. If non-linear and accelerating, it points towards a potential cascade failure, making the Snare classification more accurate from more perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether infrastructure decay and cost accumulation is linear or non-linear."
+    },
+    {
+      "id": "political_will_vs_structural_inability",
+      "question": "Is maintenance deferral a correctable failure of political will, or a structural inability of short-term electoral cycles to manage long-term, low-visibility liabilities?",
+      "resolution_mechanism": "Comparative political science analysis of governance systems (e.g., comparing electoral democracies with states having long-term central planning) and their success in managing infrastructure maintenance.",
+      "impact": "If a failure of will, the constraint is a contingent Tangled Rope. If a structural inability, it approaches a Mountain-like feature of certain governance models, suggesting the need for institutional redesign rather than just different political choices.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing between a failure of political will and a structural governance flaw."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models the systemic deferral of maintenance on essential public infrastructure (transport, water, energy grids). While this infrastructure provides a crucial coordination function for society, political and economic incentives favor funding new, visible projects over the less glamorous work of upkeep. This creates a growing 'maintenance debt'—a form of extraction where value is pulled from the future to subsidize the present. The system becomes a hybrid: it still coordinates, but it does so by imposing a massive, un-consented cost on future generations.",
+    "key_agents": [
+      "Future Generations: Primary victim (powerless/trapped) — Inherit the full, compounded cost of decay without having any say in the decisions.",
+      "Short-Term Political Actors: Primary beneficiary (institutional/arbitrage) — Gain political capital by avoiding unpopular taxes and funding popular projects, deferring costs beyond their term in office.",
+      "Current Taxpayers: Secondary beneficiary (moderate/mobile) — Benefit from lower taxes or other public services in the present, at the cost of future liability.",
+      "Users of Failing Infrastructure: Secondary victim (moderate/constrained) — Bear the immediate, localized costs of system failures, such as water main breaks or power outages.",
+      "Maintenance Engineers: Analytical agent (organized/constrained) — Understand the scale of the problem but are constrained by political budget allocation, which they see as a performative, degraded process."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.58): High. Represents the significant value of the deferred maintenance costs, which function as a loan taken from the future. Suppression (0.70): High. Individuals and communities have virtually no ability to create alternatives to large-scale public infrastructure, trapping them within the decaying system. Theater Ratio (0.75): High. Political discourse is dominated by performative announcements of new projects ('Infrastructure Week') while the systemic issue of maintenance is ignored. This high ratio allows for the Piton classification from the engineering perspective, as the process of allocating funds has become decoupled from the functional need.",
+    "perspectival_gap": "The core gap is between the present and the future. Political actors in the present experience the system as a Rope they are skillfully managing for public benefit. Future generations experience it as an inescapable Snare, a debt trap laid by their ancestors. The analytical observer sees the reality: a Tangled Rope, where a vital coordination function has been co-opted for temporal extraction. Meanwhile, the engineer on the ground sees a Piton: a system of rational asset management that has ceased to function, persisting only as a set of rituals.",
+    "directionality_logic": "Beneficiaries (politicians, current taxpayers) have immediate time horizons and arbitrage/mobile exit options, leading to a low 'd' value and a perception of coordination (Rope). Victims (future generations) are trapped with a generational time horizon, leading to a high 'd' value and the perception of pure extraction (Snare). Agents in the middle, like current users or engineers, are constrained and see the mixed nature of the system (Tangled Rope or Piton).",
+    "mandatrophy_analysis": "This case avoids mandatrophy by correctly identifying the constraint as a hybrid. A naive analysis might label it a Snare (focusing only on the victims) or a Rope (focusing only on the beneficiaries and the system's function). The Tangled Rope classification, from the analytical perspective, correctly captures the essential conflict: a system that is simultaneously providing a coordination good and executing a massive, asymmetric extraction. The multiple perspectives show that Snare and Rope are also valid, but incomplete, structural readings."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "economic_productivity",
+      "public_health_outcomes"
+    ]
+  }
+}

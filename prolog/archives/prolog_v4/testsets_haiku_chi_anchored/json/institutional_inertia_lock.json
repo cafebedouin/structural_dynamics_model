@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "institutional_inertia_lock",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "inertia"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Sunk-Cost Regulatory Trap",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_regulated_entities",
+      "regulatory_bureaucracy"
+    ],
+    "victims": [
+      "emerging_market_entrants",
+      "consumer_efficiency_gains",
+      "innovation_potential"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Emerging Market Entrant",
+      "comment": "PERSPECTIVE 1: EMERGING MARKET ENTRANT (SNARE) \u2014 Cannot exit the legacy framework without absorbing full compliance costs designed for incumbents. High barriers to entry, no waiver path, no alternative jurisdiction within market. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Consumer Efficiency Gains (Temporal)",
+      "comment": "PERSPECTIVE 2: CONSUMER EFFICIENCY GAINS / INNOVATION POTENTIAL (SNARE) \u2014 Abstract collective benefit perpetually deferred. No agent advocates for the unrealized efficiency. Trapped indefinitely by sunk costs of legacy framework. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Regulated Entities",
+      "comment": "PERSPECTIVE 3: INCUMBENT REGULATED ENTITIES (TANGLED ROPE) \u2014 Benefit from regulatory moat (coordination function: predictable rules for incumbents). Also extract rent through compliance cost imposition on entrants. Constrained by regulatory dependence but powerful enough to resist change. d\u22480.48, f(d)\u22480.60, \u03c3=1.0 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Bureaucracy",
+      "comment": "PERSPECTIVE 4: REGULATORY BUREAUCRACY (ROPE) \u2014 Benefits from maintaining existing compliance infrastructure, staff allocation, and jurisdictional authority. Experiences framework redesign as coordination problem (can be solved by updating rules). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Negative extraction = net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legislative Intent (Original Statutory Mandate)",
+      "comment": "PERSPECTIVE 5: LEGISLATIVE INTENT / ORIGINAL MANDATE (PITON) \u2014 The framework was designed to achieve specific legislative goals (consumer protection, market stability). Over time, the statute persists through inertia despite achieving only theater\u2014performative compliance audits, rule-following rituals\u2014while the underlying statutory objectives are not met. theater_ratio=0.68 reflects widespread workarounds, shadow markets, and compliance theater. The constraint is maintained through institutional inertia rather than functional necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Comparative Political Economy)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (COMPARATIVE POLITICAL ECONOMY) (TANGLED ROPE) \u2014 Sees both coordination (incumbents need predictability) and extraction (barriers impose deadweight loss). The constraint exhibits classical regulatory capture: initial rule established legitimate coordination function, but sunk costs and incumbent lobbying have locked in extraction mechanism. \u03c7\u22480.52 (moderate extractiveness) reflects hybrid nature. Does not classify as Mountain\u2014the framework is contingent institutional choice, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sunk_cost_threshold",
+      "question": "What reorganization cost threshold would trigger legislative/regulatory reform? At what point does the efficiency gain from redesign exceed the one-time institutional restructuring cost?",
+      "resolution_mechanism": "Cost-benefit analysis of regulatory redesign; comparison with similar framework transitions in adjacent jurisdictions; legislative committee cost estimates for modernization",
+      "impact": "If threshold low (< 2 years of incumbent compliance spending): framework should have been reformed already, indicating political lock (not just cost lock). If threshold high (> 10 years): sunk cost trap is genuinely structural and may persist indefinitely without external shock.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost threshold at which regulatory redesign becomes economically rational"
+    },
+    {
+      "id": "incumbent_exit_capacity",
+      "question": "Can incumbent entities realistically migrate to alternative regulatory frameworks (neighboring jurisdictions, regulatory arbitrage, functional equivalence with lighter regimes)?",
+      "resolution_mechanism": "Analysis of incumbent adaptation to jurisdictional change; cost of relocating compliance infrastructure; measurement of actual defection if framework is liberalized",
+      "impact": "If high exit capacity: incumbents are not truly dependent on the framework; extract through active enforcement, not lock. Classification shifts toward pure Snare. If low exit capacity: incumbents are also partially trapped, changing directionality analysis.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Incumbent capacity to migrate to alternative regulatory regimes"
+    },
+    {
+      "id": "consumer_preference_revelation",
+      "question": "Do consumers value the regulatory framework's purported protections, or would they accept lighter regulation with lower compliance cost pass-through?",
+      "resolution_mechanism": "Revealed preference studies (actual choices when alternative is available); willingness-to-pay surveys; comparison with lightly-regulated competitors in other markets for same services",
+      "impact": "If consumers strongly prefer protections: framework serves real coordination function even if inefficient. If consumers indifferent or prefer cheaper unregulated alternative: framework is pure extraction theater. Determines whether framework is truly Tangled Rope (mixed benefit/cost) or Snare (pure extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Consumer demand for regulatory protections versus lighter-touch regimes"
+    },
+    {
+      "id": "legislative_sunset_mechanism",
+      "question": "Does the regulatory statute include automatic sunset/reauthorization clauses that would force periodic review? Or is the framework permanent by default?",
+      "resolution_mechanism": "Statutory text analysis; legislative history; comparative review of sunset-enabled vs permanent regulatory frameworks",
+      "impact": "If permanent-by-default: sunk cost trap is structurally embedded; framework persists through inertia even if consensus reform exists. If sunset-enabled: trap can be broken by legislative calendar. This is the lynchpin of whether Scaffold perspective is feasible.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether statute includes automatic reauthorization/sunset mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The sunk-cost regulatory trap arises when the institutional cost of dismantling and rebuilding a regulatory framework exceeds the annual friction of maintaining an obsolete one. This is a classical tangled rope: the framework originally served a genuine coordination function (establishing predictability for legitimate market participants), but incumbent firms and the regulatory bureaucracy have jointly developed dependencies that make reform politically infeasible even when the net efficiency loss is enormous. The constraint's theater_ratio of 0.68 reflects that much regulatory activity becomes performative compliance ritual rather than substantive protection. Compliance audits follow the letter of outdated rules; workarounds and shadow markets flourish; innovation adapts around the framework rather than being enabled by it. The extractiveness of 0.52 reflects moderate but real rent extraction through barrier-to-entry effects, though the framework retains some genuine coordination function for incumbents. Over a 20-year interval, both theater and extractiveness increase as technology and consumer preferences diverge from the framework's original design, while sunk costs accumulate, making reform progressively more expensive.",
+    "key_agents": [
+      "Emerging Market Entrants: Primary victims (powerless/trapped) \u2014 face full compliance costs designed for incumbents; cannot exit without abandoning market participation",
+      "Consumer Efficiency Gains (Abstract): Primary victim (powerless/trapped) \u2014 permanently deferred innovation and cost reductions that would benefit consumers but have no political advocate",
+      "Incumbent Regulated Entities: Primary beneficiary (powerful/constrained) \u2014 extract rent through regulatory moat while experiencing coordination benefits; constrained by regulatory dependence, powerful enough to resist change",
+      "Regulatory Bureaucracy: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from maintaining existing compliance infrastructure and staff allocation; can arbitrage by updating rules without fundamental restructuring",
+      "Legislative Intent / Original Statutory Mandate: Institutional actor (institutional/constrained) \u2014 original statute achieved legitimate goals; now persists through inertia despite theater ratio indicating performative compliance",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 can detect hybrid coordination-extraction character and identify sunk cost trap as contingent, not natural"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The framework creates genuine barriers to entry (compliance cost, legal complexity, licensing requirements) that incumbent firms do not face due to grandfathering or established protocols. This is extraction in the form of rent imposed on entrants. However, the extraction is not total (\u03c7 \u2264 0.90) because the framework retains some real coordination function: it does provide predictability and baseline standards for incumbents, which has genuine value. The increasing trajectory from 0.35 to 0.52 reflects that as technology diverges from the framework's original design, the ratio of extraction to coordination increases; the framework becomes less about genuine market coordination and more about protecting incumbent market position. Suppression (0.65): High. Entrants face multiple barriers: (a) regulatory compliance costs proportional to incumbent scale, not startup scale; (b) licensing and approval delays that advantage incumbents with existing relationships; (c) legal/technical complexity that requires regulatory expertise; (d) lack of alternative pathways or waivers. These are not natural scarcity but deliberate structural features. Theater ratio (0.68): Moderately high. Regulatory audits, compliance documentation, and rule-following rituals constitute performative activity that does not substantively achieve the framework's original statutory objectives. Actual enforcement varies; workarounds proliferate; innovation occurs in shadow markets. The rising trajectory from 0.38 to 0.68 reflects that as the framework ages, the gap between the rule-following ritual and the substantive coordination goal widens.",
+    "perspectival_gap": "This constraint exemplifies how the same structural phenomenon appears as pure extraction (Snare) from the entrant perspective, mixed coordination-extraction (Tangled Rope) from the incumbent perspective, and degraded ritual (Piton) from the statutory intent perspective. Emerging entrants see no coordination benefit\u2014they encounter only barriers. Incumbents see both coordination (predictable rules) and extraction (competitive moat). The regulatory bureaucracy sees primarily coordination (maintenance of existing rule structure). Legislative intent observes that the statute's original purposes (consumer protection, market stability) are no longer being served; the framework is theater. The analytical observer sees all four: a hybrid coordination-extraction mechanism with increasing theater as the framework ages. The perspectival gap reveals that 'sunk cost trap' is not a fixed property but a structural relationship between the framework's original purpose, the current institutional dependencies, and the efficiency loss that accumulates over time.",
+    "directionality_logic": "Emerging entrants: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Near-maximum extraction; no exit option except market abandonment. Consumer efficiency: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction; no collective exit option. Incumbent entities: Beneficiary + constrained (regulatory dependence) \u2192 d\u22480.48, f(d)\u22480.60. Moderate extraction burden despite beneficiary status because they are also partially trapped by regulatory dependence. If exit capacity were higher (d\u21920.35, arbitrage exit), they would shift toward pure Rope. Regulatory bureaucracy: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; can implement framework changes without fundamental restructuring. Legislative intent: Constrained institutional perspective \u2192 d\u22480.65, f(d)\u22481.00. Moderate extraction; the original statute's intent is being violated by the constraint's continuation. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Neutral analysis of structural pattern; sees both coordination and extraction components.",
+    "mandatrophy_analysis": "MANDATE CONFLICT ANALYSIS: The sunk-cost regulatory trap demonstrates classic mandatrophy between the original statutory goal (consumer/market protection) and the actual institutional outcome (incumbent protection through compliance cost barriers). The statute mandates the coordination function (predictability, baseline standards); the constraint produces extraction (barrier to entry, innovation suppression). Resolution mechanism: This is Tangled Rope precisely because both coordination and extraction are structurally present. The framework is not a false summit (not a pure extraction Snare masquerading as coordination). The coordination function is real\u2014incumbents genuinely benefit from predictable rules. The extraction is also real\u2014entrants genuinely face barriers. The mandatrophy occurs because the original legislative mandate (consumer protection, market stability) is no longer satisfied by the framework that ostensibly implements it. Theater has increased faster than functionality. The system persists not because it works but because the institutional cost of replacement exceeds the recognized inefficiency cost. Reform is possible through legislative sunset mechanisms or regulatory modernization, but the sunk cost trap makes reform politically disfavored unless external shocks (competitive pressure from unregulated sectors, consumer defection, technological obsolescence) exceed the threshold of incumbent lobbying resistance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "incumbent_rent_seeking",
+      "innovation_suppression_via_compliance"
+    ],
+    "dual_formulation_note": "The sunk-cost regulatory trap is structurally downstream of regulatory capture (which establishes the framework favoring incumbents) but represents a distinct phase: the lock-in via accumulated institutional costs. Separate \u03b5 values distinguish the initial capture mechanism (higher extraction, lower theater) from the long-term inertial lock (lower extraction, higher theater as the framework becomes increasingly performative)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.48
+    }
+  ]
+}

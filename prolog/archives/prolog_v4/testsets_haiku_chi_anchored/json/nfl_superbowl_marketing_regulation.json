@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "nfl_superbowl_marketing_regulation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nfl_sb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NFL Super Bowl Advertising Regulations",
+    "topic_domain": "economic/sports_marketing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nfl_league_office",
+      "nfl_team_owners",
+      "official_broadcasters",
+      "licensed_advertisers"
+    ],
+    "victims": [
+      "non_licensed_competitors",
+      "marginal_advertisers",
+      "consumer_choice_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Competitor",
+      "comment": "PERSPECTIVE 1: EXCLUDED COMPETITOR (SNARE) \u2014 Non-licensed brands cannot access the Super Bowl marketing opportunity regardless of willingness to pay; no legal pathway exists for unauthorized advertising. Trapped exit + victim status \u2192 d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.79. Pure extraction with suppression of alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginal Advertiser",
+      "comment": "PERSPECTIVE 2: MARGINAL ADVERTISER (SNARE) \u2014 Mid-sized firms face binary choice: pay monopoly rate for Super Bowl spot or exit the premium advertising market entirely. Constrained exit + victim status \u2192 d\u22480.78, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.63. High extraction, moderate suppression."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Licensed Advertiser",
+      "comment": "PERSPECTIVE 3: LICENSED ADVERTISER (ROPE) \u2014 Major brands (Pepsi, Apple, etc.) experience the constraint as coordination: the NFL maintains broadcast quality, audience size, and brand prestige that justifies premium rates. Arbitrage exit + beneficiary status \u2192 d\u22480.12, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.01. Near-zero effective extraction; coordination benefit outweighs cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Broadcaster",
+      "comment": "PERSPECTIVE 4: BROADCASTER (TANGLED ROPE) \u2014 CBS/Fox benefits from NFL exclusivity (coordination value: premium content, high ad rates) but also extracts through the constraint by being the sole channel for this audience reach. Arbitrage exit + mixed beneficiary/victim \u2192 d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.19. Moderate extraction embedded in coordination relationship."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Consumers",
+      "comment": "PERSPECTIVE 5: CONSUMERS (TANGLED ROPE) \u2014 Viewers enjoy curated ad experience (coordination: higher-quality creative, premium-brand content) but also face suppressed choice (constraint: cannot access non-licensed competitor ads, premium pricing passed through to goods). Constrained exit + mixed beneficiary/victim \u2192 d\u22480.54, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.39. Mixed: benefits from quality coordination but extraction from suppressed alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The NFL League Office",
+      "comment": "PERSPECTIVE 6: NFL LEAGUE OFFICE (ROPE) \u2014 Sees the constraint as pure coordination mechanism: managing ad inventory, enforcing brand quality standards, and aggregating viewer attention creates value for all parties. Arbitrage exit + beneficiary status \u2192 d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Negative effective extraction; institutional perspective naturalizes extraction as coordination overhead."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, the constraint exhibits both genuine coordination (audience aggregation, brand quality) and structural extraction (rent-seeking through monopoly control, suppression of alternatives). d\u22480.63, f(d)\u22480.92, \u03c3=1.2 \u2192 \u03c7\u22480.63. Clear tangled rope signature: requires_active_enforcement (intellectual property, trademark law, NFL Rules), beneficiaries (league, broadcasters, licensed advertisers), victims (excluded competitors, marginal firms, consumer choice)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "marginal_advertiser_exit_cost",
+      "question": "What percentage of mid-sized advertisers have genuine exit options beyond Super Bowl premium advertising, or is the constraint truly monopolistic for brands seeking national reach?",
+      "resolution_mechanism": "Analysis of alternative marketing channels (streaming, targeted digital, regional campaigns) effectiveness and cost-benefit vs Super Bowl rates; survey of advertiser decision-making",
+      "impact": "If alternatives exist with 80%+ effectiveness at <50% cost: constraint is Rope or Scaffold, not Snare. If no true alternatives: constraint is Snare with near-total extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether marginal advertisers have genuine exit alternatives"
+    },
+    {
+      "id": "brand_prestige_vs_monopoly_rent",
+      "question": "How much of the Super Bowl premium rate reflects genuine coordination benefit (audience reach, prestige, content quality) vs pure monopoly extraction?",
+      "resolution_mechanism": "Advertising ROI analysis: compare cost-per-impression at Super Bowl rates vs alternative premium placements; measure brand lift attribution",
+      "impact": "If 70%+ is genuine coordination value: rope classification dominates. If 50%+ is extraction rent: tangled rope confirmed across more perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Decomposition of premium rate into coordination vs extraction components"
+    },
+    {
+      "id": "unauthorized_advertising_harm",
+      "question": "Does unauthorized advertising during Super Bowl broadcasts actually damage brand prestige or viewer experience, or is the suppression purely protective of NFL revenue?",
+      "resolution_mechanism": "Historical analysis of Super Bowl ad bans; international comparison to markets with less restrictive advertising rules; viewer preference studies",
+      "impact": "If harm is real: suppression is coordination-justified, classification shifts toward Rope. If harm is manufactured: suppression is pure extraction justification, classification shifts toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of unauthorized ads protects real value or extracts pure rent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The NFL Super Bowl advertising regulations represent a structural constraint on marketing competition that combines genuine coordination benefits (audience aggregation, content curation, broadcast quality) with significant extraction mechanisms (monopoly pricing, suppression of non-licensed competitors, rent-seeking through exclusive licensing). The constraint operates through intellectual property law, trademark enforcement, and contractual exclusivity\u2014all officially justified as brand protection and quality control. The core tension is between the NFL's legitimate role as event organizer and audience aggregator (coordination) and its use of monopoly power over the Super Bowl brand and broadcast distribution to extract rents from advertisers and exclude competitors (extraction). The constraint has intensified over 40 years as Super Bowl advertising has become a premium cultural moment, with the NFL systematically increasing advertising rates and tightening control over the advertising ecosystem.",
+    "key_agents": [
+      "NFL League Office: Institutional beneficiary (institutional/arbitrage) \u2014 controls broadcast rights, ad inventory, and licensing; extracts rent through monopoly control",
+      "Team Owners: Institutional beneficiary (institutional/arbitrage) \u2014 receive revenue share from licensing and broadcast fees",
+      "Official Broadcasters (CBS/Fox): Institutional actor (institutional/arbitrage) \u2014 licensed monopoly on broadcast distribution; benefits from ad exclusivity",
+      "Licensed Advertisers (major brands): Institutional victim and beneficiary (institutional/arbitrage) \u2014 pay premium rates but benefit from prestige and audience reach",
+      "Non-Licensed Competitors: Powerless victim (powerless/trapped) \u2014 completely excluded from authorized advertising pathways",
+      "Marginal Advertisers: Moderate victim (moderate/constrained) \u2014 face binary choice: pay monopoly rate or exit premium market",
+      "Consumers/Viewers: Organized agents (organized/constrained) \u2014 benefit from curated, high-quality ads but face suppressed choice and indirect cost pass-through"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The NFL charges advertising rates ($7M+ for 30-second spot as of 2023) that exceed what market-clearing rates would be if the market were truly competitive. The extraction reflects monopoly control over the Super Bowl brand and broadcast distribution. However, some of the premium reflects genuine coordination value (largest audience in US media annually, curated content quality, cultural prestige). The 0.58 value reflects that roughly 50% of the rate premium is coordination-justified; the remaining 50% is extraction rent. Suppression (0.68): High. Non-licensed brands cannot legally advertise during the broadcast; trademark enforcement and broadcast licensing agreements explicitly prohibit unauthorized ads. Marginal advertisers face binary choice (pay or exit) with no legal way to negotiate lower rates or alternative pathways. This is high structural suppression\u2014alternatives are not just expensive but legally foreclosed. Theater ratio (0.42): Moderate-low. The NFL's quality control justification for exclusivity is mostly functional, not performative. Broadcast standards, advertiser vetting, and brand prestige maintenance serve real coordination purposes; there is less pure theater here than in degraded institutions. The ratio is not low (0.20) because much of the exclusivity framing is post-hoc justification for revenue extraction.",
+    "perspectival_gap": "Massive perspectival divergence across this constraint. The NFL league office sees pure coordination (Rope)\u2014they are aggregating the largest audience and providing premium venue. Licensed major advertisers see mostly coordination with moderate rent (Rope); they value the prestige and reach. The broadcaster sees mixed extraction-coordination (Tangled Rope); they benefit from exclusive rights. Consumers see mixed benefits and suppressed choice (Tangled Rope). Marginal advertisers see extraction with no real alternative (Snare). Excluded competitors see pure suppression\u2014they cannot participate at any price (Snare). The analytical observer sees the true structure: the constraint combines real coordination value with systematic extraction that is justified through false natural-law framing ('the Super Bowl is inherently premium'). The perspectival range from Rope (beneficiary) to Snare (excluded competitor) is the full spectrum.",
+    "directionality_logic": "NFL League Office: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; institution experiences constraint as coordination mechanism it controls. Licensed Advertisers: Mixed beneficiary/victim + arbitrage \u2192 d\u22480.30, f(d)\u22480.24. Pay premium but benefit from audience and prestige; exit is available at cost. Marginal Advertisers: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.08. High extraction; alternatives are expensive or non-existent. Excluded Competitors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no legal pathway exists for participation. Consumers: Organized + constrained \u2192 d\u22480.54, f(d)\u22480.68. Mixed experience; benefits from coordination but faces suppressed choice. Broadcaster: Institutional + arbitrage \u2192 d\u22480.35, f(d)\u22480.32. Moderate extraction embedded in coordination relationship (exclusive broadcasting rights).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing how the same institutional mechanism (Super Bowl exclusivity) serves both coordination and extraction purposes. The NFL's Rope perspective (pure coordination) is partially correct\u2014audience aggregation and broadcast curation do create genuine value. But the Snare perspective from excluded competitors is also correct\u2014the constraint completely forecloses their participation regardless of willingness to pay. The Tangled Rope classification at the analytical level captures the full structure: the constraint requires active enforcement (trademark law, broadcast licensing agreements), has clear beneficiaries (NFL, broadcasters, licensed advertisers) and victims (excluded competitors, marginal advertisers), and combines coordination benefit (large audience, quality curation) with asymmetric extraction (monopoly pricing, suppression of alternatives). The mandatrophy is resolved by accepting that institutional actors can simultaneously benefit from and enforce extraction mechanisms\u2014there is no contradiction. The NFL genuinely coordinates audience aggregation AND genuinely extracts monopoly rent. Both perspectives are valid; the indexed classification system simply disambiguates which aspects are seen from which structural position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "broadcast_monopoly_sports_media",
+      "athlete_compensation_asymmetry",
+      "sports_intellectual_property_licensing"
+    ],
+    "dual_formulation_note": "The Super Bowl advertising regulation is downstream of broader broadcast monopoly dynamics in professional sports. The upstream constraint (broadcast_monopoly_sports_media) has \u03b5\u22480.65 and reflects the NFL's structural control over distribution. The advertising regulation (\u03b5\u22480.58) is a specific extraction mechanism enabled by that broader broadcast control. These are distinct constraints linked by structural dependence: the advertising regulation would collapse if broadcast distribution were truly competitive."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

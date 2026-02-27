@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "trajans_bridge_lifecycle",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "trajan"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Trajan's Bridge over the Danube (Lifecycle)",
+    "topic_domain": "technological/military",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "roman_military_command",
+      "imperial_treasury",
+      "roman_frontier_economy"
+    ],
+    "victims": [
+      "dacian_population",
+      "provincial_population_displacement",
+      "frontier_stability"
+    ],
+    "has_sunset_clause": false,
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Conquered Dacian",
+      "comment": "PERSPECTIVE 1: CONQUERED DACIAN POPULATION (SNARE) \u2014 Cannot exit the occupation; forced labor demands, resource extraction, and military coercion are inescapable. Bears full cost of bridge construction and military logistics. Maximum extraction with no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Frontier Border Town",
+      "comment": "PERSPECTIVE 2: FRONTIER PROVINCIAL SETTLEMENT (TANGLED ROPE) \u2014 Constrained by military occupation and tax demands, but also benefits from Roman trade routes, military protection against external threats, and access to imperial markets. Mixed extraction and coordination \u2014 some genuine settlement benefits, but asymmetric extraction via taxation and conscription."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Roman Military Command",
+      "comment": "PERSPECTIVE 3: ROMAN MILITARY COMMAND (ROPE) \u2014 Experiences the bridge as a pure coordination mechanism: solving the logistical problem of crossing the Danube to sustain the Dacian campaign. Benefits from rapid troop deployment, supply chain efficiency, and territorial consolidation. Zero-extraction perspective from a military standpoint \u2014 the bridge is a force multiplier."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Imperial Monument System",
+      "comment": "PERSPECTIVE 4: IMPERIAL MONUMENT SYSTEM (PITON) \u2014 After the Dacian wars conclude (circa 275 AD), the bridge transitions from functional logistics to monumentality. Its primary function becomes performative: displaying Roman engineering prowess, imperial dominion, and civilizational superiority. The bridge persists through institutional inertia and symbolic value long after its original military purpose degrades. Theater ratio rises as maintenance costs exceed functional logistics value."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Provincial Trade Coalition",
+      "comment": "PERSPECTIVE 5: PROVINCIAL TRADE COALITION (SCAFFOLD) \u2014 Merchants, local elites, and transport operators see the bridge as temporary infrastructure enabling post-conquest economic integration. Organized actors perceive a sunset clause: as Danubian provinces stabilize and alternative routes develop (land roads, downstream fords), the bridge's monopoly on cross-river movement declines. Theater ratio moderate because real trade benefits exist alongside symbolic imperial performance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Constraint View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL CONSTRAINT VIEW (MOUNTAIN) \u2014 From a universal analytical perspective, the Danube's width, current, and seasonal flooding represent an immutable physical constraint on riverine crossing. Any civilization requires bridging infrastructure to manage this obstacle. Viewed this way, the constraint appears as a natural law of geography \u2014 no power can exit the requirement for bridge technology. However, the structural data contradicts this classification: the extraction derives from Roman military power and imperial control, not from physics alone. This is a false summit revealing naturalization of imperial dominance as geographic necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "functional_vs_symbolic_transition",
+      "question": "At what point does the bridge's primary function transition from military logistics to symbolic monumentality?",
+      "resolution_mechanism": "Analysis of maintenance expense records, traffic volume, and military deployment schedules relative to time; correlation with imperial policy shifts away from active Dacian conquest",
+      "impact": "If transition is sharp (post-275 AD): supports piton classification as deliberate degradation. If gradual: suggests mixed rope-and-monument character persists longer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timing of functional-to-symbolic transition in bridge's lifecycle"
+    },
+    {
+      "id": "extraction_sustainability",
+      "question": "Could the Dacian conquest and bridge construction have been sustained without coercive extraction exceeding suppression threshold of 0.65?",
+      "resolution_mechanism": "Comparison with voluntary trade-based Roman frontier expansion (e.g., Rhine-Danube limes without conquest); analysis of Dacian gold resources and voluntary tribute alternatives",
+      "impact": "If yes: bridge could have been rope or scaffold with lower suppression. If no: suppression is structurally required for imperial project, supporting tangled_rope/snare classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether extraction levels were minimally required or excess of military strategy"
+    },
+    {
+      "id": "alternative_route_viability",
+      "question": "Did viable alternative Danube crossing routes exist that Roman military deliberately suppressed to monopolize bridge logistics?",
+      "resolution_mechanism": "Geographic survey of Danube narrowings, ford locations, and historical documentation of Roman interdiction policy; comparison with pre-conquest crossing patterns",
+      "impact": "If suppressed alternatives existed: extraction classification strengthens (Snare from victim perspective). If no alternatives: constraint becomes more like Mountain (unavoidable infrastructure requirement).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether viable alternative Danube crossings existed pre-bridge"
+    },
+    {
+      "id": "barbarian_coalition_responsiveness",
+      "question": "Did organized barbarian coalitions (Sarmatians, Germanic tribes) view the bridge as a coordination mechanism for mutual defense or purely as Roman extraction infrastructure?",
+      "resolution_mechanism": "Analysis of post-bridge barbarian military alliances, siege documentation, and treaty negotiations; correlation between bridge threat and confederation formation",
+      "impact": "If perceived as military threat: supports Snare classification for barbarian perspective. If perceived as neutral infrastructure: weakens snare/tangled_rope reading.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Barbarian military perception of bridge as threat vs neutral infrastructure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72,
+      "id_override": "trajan_extraction_conquest_phase"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58,
+      "id_override": "trajan_extraction_midlife"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 170,
+      "value": 0.35,
+      "id_override": "trajan_extraction_decline"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "trajan_theater_conquest_phase"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.45,
+      "id_override": "trajan_theater_midlife"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 170,
+      "value": 0.72,
+      "id_override": "trajan_theater_decline"
+    }
+  ],
+  "interval": {
+    "start": 105,
+    "end": 275
+  },
+  "commentary": {
+    "narrative_context": "Trajan's Bridge over the Danube (completed circa 105 AD) exemplifies a constraint that transforms across its lifecycle from extraction mechanism to performative monument. Built to consolidate the Roman conquest of Dacia, the bridge served initially as military-logistics infrastructure, requiring massive coercive extraction (forced labor, material requisitions, displacements) to construct and maintain. As the Dacian wars concluded and Dacia was integrated into Roman provincial administration (by 275 AD, after repeated barbarian raids and Roman military withdrawal), the bridge's functional military value declined while its symbolic and monumental value increased. The constraint exhibits all six DR types depending on temporal and perspectival positioning: a Snare for the conquered Dacian population bearing forced labor costs; a Tangled Rope for frontier settlements experiencing mixed trade benefits and military taxation; a Rope for Roman military command during the conquest phase; a Piton for the imperial monument system during its degraded phase; a Scaffold for provincial merchants perceiving a sunset as alternative routes matured; and a false Mountain for analytical observers risk of naturalizing Roman imperial dominance as geographic necessity. The constraint's lifecycle trajectory shows base_extractiveness declining from 0.72 (conquest phase, maximum coercion) to 0.35 (decline phase, as functionality eroded) while theater_ratio increased from 0.25 to 0.72 (performative maintenance replacing functional logistics). This measurement pattern is diagnostic of Goodhart drift: as the bridge's original extraction mechanism (military logistics) succeeded and stabilized, the apparatus shifted to maintaining the constraint through symbolic and theatrical performance rather than structural necessity.",
+    "key_agents": [
+      "Roman Military Command: Primary beneficiary (institutional/arbitrage) \u2014 captures military logistics advantage, territorial consolidation, rapid deployment capability",
+      "Imperial Treasury: Secondary beneficiary (institutional/arbitrage) \u2014 extracts tax revenue from provincial Dacia and redirect via monument maintenance",
+      "Dacian Population (conquered): Primary victim (powerless/trapped) \u2014 forced labor for construction, resource extraction, displacement during conquest",
+      "Frontier Provincial Settlements: Mixed agent (moderate/constrained) \u2014 benefits from trade access and military protection; bears taxation and conscription costs",
+      "Provincial Trade Coalition: Organized agent (organized/constrained) \u2014 merchants and local elites perceiving temporary infrastructure with alternative route sunset",
+      "Imperial Monument System: Institutional actor (institutional/arbitrage) \u2014 maintains bridge post-functionally for symbolic dominion display",
+      "Barbarian Confederations (Sarmatians, Germanic tribes): Opposing victim collective (powerless/trapped-to-organized) \u2014 perceive bridge as military asset blocking river mobility"
+    ],
+    "logic_rationale": "Base extractiveness (0.52 at endpoint): Moderate. The bridge begins at 0.72 (conquest phase, maximum coercive extraction for construction and military logistics) and declines to 0.35 (degraded phase, post-functional maintenance). The 0.52 midpoint value reflects the constraint after military value has begun eroding but before the full piton transition to pure theater. Suppression (0.65): Moderate-high. During conquest, suppression is near-total (forced labor, military occupation, no exit for Dacian population). During stability and decline, suppression moderates as the constraint shifts from coercive logistics to symbolic display \u2014 passive compliance replaces active coercion. The 0.65 represents the average across the lifecycle with heavy weight on the early, higher-suppression period. Theater ratio (0.58): Moderate. The bridge begins as functional infrastructure (theater ~0.25: genuine logistics benefit) and transitions to performative monument (theater ~0.72: maintenance exceeds functional value). The 0.58 endpoint reflects the constraint's degraded state where symbolic performance and institutional inertia dominate structural function.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence across time horizons and structural positions. The Roman military command (conquest phase, immediate horizon) sees pure coordination (Rope) \u2014 the bridge solves a genuine logistics problem. The Dacian population (trapped, biographical horizon) sees pure extraction (Snare) \u2014 maximum coercion with no exit. The frontier settlements (constrained, generational horizon) see mixed coordination and extraction (Tangled Rope) \u2014 trade benefits coexist with military taxation. The provincial merchants (organized, generational horizon) see temporary infrastructure (Scaffold) \u2014 perceiving that alternative routes will eventually mature and break the bridge's monopoly. The imperial monument system (institutional, civilizational horizon) sees its own degraded ritual (Piton) \u2014 the bridge persists through symbolic value and institutional inertia despite functional obsolescence. The analytical observer at civilizational/universal scope risks a false Mountain, naturalizng the bridge as a response to immutable geography when it is actually the product of imperial military strategy and dominance. The perspectival gaps widen over time: early in the lifecycle, most actors experience the constraint as tangled_rope (mixed extraction and coordination in military logistics); late in the lifecycle, the victim classes experience snare while the empire experiences piton.",
+    "directionality_logic": "Each perspective's directionality value (d) follows from the agent's structural relationship to the extraction flow. Roman military command and imperial treasury are beneficiaries with arbitrage exit options (can redeploy resources, choose to abandon the province) \u2014 they derive low or negative d values, experiencing the constraint as a force multiplier (Rope classification). Dacian population are victims with trapped exit (no alternative to occupation or coercive labor) \u2014 they derive high d values (0.85\u20130.95), experiencing maximum extraction (Snare classification). Frontier settlements are mixed agents with constrained exit (economically dependent on trade networks the bridge enables, but also taxed and conscripted) \u2014 they derive moderate-to-high d values (0.50\u20130.65), experiencing tangled_rope. Provincial merchants are organized agents with constrained exit (dependent on bridge logistics but can eventually develop alternatives) \u2014 they derive moderate d values (~0.45\u20130.55), experiencing scaffold with sunset logic. The piton perspective (imperial monument system) derives from theater_ratio exceeding 0.70, indicating that performative maintenance dominates structural function \u2014 this is independent of beneficiary/victim status and reflects institutional inertia.",
+    "mandatrophy_analysis": "LIFECYCLE CONSTRAINT EXEMPLAR: This constraint resolves the mandatrophy by showing how the same physical structure (the bridge) transitions across constraint types as its functional basis changes. Early lifecycle (105\u2013180 AD): Tangled Rope \u2014 military coordination (genuine logistics benefit) with asymmetric extraction (forced labor, provincial taxation). The constraint has a real coordination function (moving armies across a 300+ meter river without it is militarily impossible) and real extraction (coercive labor, displacement). Midlife (180\u2013275 AD): Piton + Tangled Rope hybrid \u2014 logistics value diminishes as the Dacian frontier stabilizes; monument value increases. Theater rises as maintenance cost per unit transported declines. The constraint begins to persist through symbolic power rather than functional necessity. Terminal decline (post-275 AD): Piton \u2014 as barbarian pressure intensifies (leading to Roman withdrawal) and alternative crossing routes mature, the bridge's functional value approaches zero while symbolic (imperial monument) value maintains institutional investment. The bridge persists as inertia, not as necessity. No single type is 'correct' \u2014 the constraint's type IS ITS LIFECYCLE. The false summit at the analytical/civilizational perspective reveals the analytical observer's risk of naturalizing contingent Roman imperial strategy as immutable geographic necessity. The actual constraint is not 'the Danube is wide' (Mountain); it is 'the Roman Empire chooses to project power across the Danube via monumental bridge infrastructure' (tangled_rope \u2192 piton)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "danubian_frontier_militarization",
+      "roman_frontier_limes_system"
+    ],
+    "dual_formulation_note": "Trajan's Bridge is downstream of broader Roman frontier strategy (Danube militarization) and upstream of specific Dacian conquest logistics. The bridge instantiates the coordination-extraction hybrid of frontier consolidation: genuine military logistics problem (Danube crossing) paired with asymmetric resource extraction (conquered province labor and tribute). Decomposition into separate stories enables analysis of the bridge's pure-logistics phase vs. degraded-monument phase."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

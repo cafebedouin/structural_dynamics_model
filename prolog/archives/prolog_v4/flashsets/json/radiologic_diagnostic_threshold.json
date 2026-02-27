@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "radiologic_diagnostic_threshold",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Radiologic Diagnostic Threshold",
+    "topic_domain": "medical/technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "radiologists",
+      "hospital_legal_teams"
+    ],
+    "victims": [
+      "patients",
+      "referring_physicians"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Patient",
+      "comment": "PERSPECTIVE 1: PATIENT (SNARE) \u2014 The patient is trapped in the system, bearing the costs of overdiagnosis, anxiety, and unnecessary follow-up procedures stemming from low diagnostic thresholds."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Referring Physician",
+      "comment": "PERSPECTIVE 2: REFERRING PHYSICIAN (TANGLED ROPE) \u2014 Constrained by legal liability and patient expectations, the referring physician benefits from the risk mitigation provided by radiologist interpretations, but bears the burden of communicating potentially alarming findings to patients even if the clinical significance is uncertain."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Radiologist",
+      "comment": "PERSPECTIVE 3: RADIOLOGIST (ROPE) \u2014 Benefits from clear diagnostic protocols and legal protections afforded by erring on the side of caution. The radiologist can arbitrage their position, minimizing legal risk, by classifying ambiguous findings as potentially significant, triggering further investigation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Hospital Legal Team",
+      "comment": "PERSPECTIVE 4: HOSPITAL LEGAL TEAM (PITON) \u2014 While intended to coordinate risk mitigation, defensive medicine and CYA is largely performative. A risk-averse culture creates a degraded function that continues through institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the diagnostic threshold is a complex interplay of technology, legal pressures, and evolving medical understanding. A mixed coordination-extraction constraint with a substantial theater component."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legal_liability_vs_patient_autonomy",
+      "question": "What balance between legal liability and patient autonomy defines the radiologic diagnostic threshold?",
+      "resolution_mechanism": "Comparative legal analysis across jurisdictions; patient surveys on risk tolerance",
+      "impact": "If liability predominates: lower thresholds, increased overdiagnosis. If autonomy is prioritized: higher thresholds, potential for missed diagnoses.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "The balance between legal liability and patient autonomy"
+    },
+    {
+      "id": "technological_artifact_detection_vs_clinical_significance",
+      "question": "To what extent are incidental findings detected due to technological artifacts rather than true clinical significance?",
+      "resolution_mechanism": "Correlation analysis between image resolution, noise levels, and the incidence of incidental findings",
+      "impact": "If artifacts dominate: thresholds should be raised. If true pathology is being detected: thresholds may be appropriate or too high.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of technology on detection of abnormalities"
+    },
+    {
+      "id": "evolving_clinical_knowledge_impact",
+      "question": "How rapidly does clinical knowledge evolve, affecting the interpretation of radiological findings?",
+      "resolution_mechanism": "Bibliometric analysis of relevant medical literature; expert elicitation on changing diagnostic criteria",
+      "impact": "Rapid evolution: frequent recalibration of diagnostic thresholds needed. Slow evolution: stable thresholds are appropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The rate clinical knowledge evolves"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint governs the classification of medical imaging findings into \"benign,\" \"incidental,\" or \"critical.\" It is not a purely biological fact but an indexical classification dependent on the reader's power level, legal exposure, and technological tools. The patient bears the downstream costs of a risk-averse system, while the radiologist benefits from clear diagnostic protocols and legal protections.",
+    "key_agents": [
+      "Patients: Primary target (powerless/trapped) \u2014 bear the costs of overdiagnosis and unnecessary follow-up.",
+      "Referring Physicians: Secondary target (moderate/constrained) \u2014 bear the burden of communicating potentially alarming findings.",
+      "Radiologists: Primary beneficiary (institutional/arbitrage) \u2014 benefit from risk mitigation afforded by diagnostic protocols.",
+      "Hospital Legal Teams: (Institutional/constrained) intended coordination, becomes performative piton"
+    ],
+    "logic_rationale": "Extractiveness (0.50): Moderate. The system extracts resources from patients through unnecessary procedures and from referring physicians through increased workload. Suppression (0.60): High. Patients have limited ability to challenge radiologist interpretations; referring physicians are constrained by the legal and professional norms.",
+    "perspectival_gap": "The patient experiences the system as a snare, bearing the cost of overdiagnosis and unnecessary procedures. The radiologist experiences it as a rope, providing a valuable service and mitigating risk. The referring physician occupies a middle ground, experiencing a tangled rope as they must balance patient well-being with legal concerns. The hospital legal team is the degraded piton. ",
+    "directionality_logic": "The radiologist benefits from the system's risk-averse nature (low d), while the patient bears the costs of overdiagnosis (high d). The referring physician is in a more ambivalent position, constrained by the system but also benefiting from the risk mitigation provided by radiologist interpretations (intermediate d). The legal team perspective reflects the performative maintenance. ",
+    "mandatrophy_analysis": "Mandatrophy is resolved by showing how the same structural data creates different constraint experiences depending on perspective. The radiologist's arbitrage is real from their perspective. The legal team's CYA is often performative. The patient's 'trapped' condition is structural: a high extraction snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

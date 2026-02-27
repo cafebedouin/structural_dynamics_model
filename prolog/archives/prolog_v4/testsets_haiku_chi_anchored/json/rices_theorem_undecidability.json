@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "rices_theorem_undecidability",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rice"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Rice's Theorem (Undecidability of Semantic Properties)",
+    "topic_domain": "technological/mathematical/computability_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Mathematician",
+      "comment": "PERSPECTIVE 1: ANALYTICAL MATHEMATICIAN (MOUNTAIN) \u2014 Rice's Theorem is a provable mathematical limit on what can be computed. For any non-trivial semantic property of programs, no universal decision procedure exists. This is not a policy or institutional choice but a fundamental constraint on computation itself. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14. Classification invariant across all observables and measurement methodologies."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Software Verification Industry",
+      "comment": "PERSPECTIVE 2: SOFTWARE VERIFICATION INDUSTRY (MOUNTAIN) \u2014 Even the most resourced verification teams (theorem provers, static analysis vendors, model checkers) cannot escape Rice's Theorem. They operate in the decidable fragment or with heuristics, accepting incompleteness. The theorem is not a market barrier but a mathematical ceiling. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.10. The constraint permits sophisticated verification tools but guarantees gaps remain."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Embedded Systems Programmer",
+      "comment": "PERSPECTIVE 3: EMBEDDED SYSTEMS PROGRAMMER (MOUNTAIN) \u2014 The programmer cannot verify whether their code will terminate, use bounded memory, avoid buffer overflows, or achieve timing constraints. These are semantic properties undecidable by Rice's Theorem. No tool, no budget, no skill overcomes this. d\u22480.88, f(d)\u22481.30, \u03c3=1.0 \u2192 \u03c7\u22480.16. The constraint is universal and unavoidable, but not extractive (no agent extracts value from the programmer's inability)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Computer Science Discipline",
+      "comment": "PERSPECTIVE 4: COMPUTER SCIENCE DISCIPLINE (MOUNTAIN) \u2014 Rice's Theorem is a foundational axiom of the field. It shapes research directions (formal methods focus on the decidable fragment), establishes the scope of what can be proven, and structures the entire hierarchy of computational complexity classes. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. The discipline benefits from knowing its limits; the theorem is generative of coherent inquiry rather than extractive."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Safety-Critical System Community",
+      "comment": "PERSPECTIVE 5: SAFETY-CRITICAL SYSTEM COMMUNITY (MOUNTAIN) \u2014 Aerospace, nuclear, medical device engineers must work within Rice's Theorem's constraints. They develop restricted formal languages (decidable subsets), bounded model checkers, and domain-specific verification strategies. They cannot exit the theorem, but they have constrained mobility within the decidable fragment. d\u22480.60, f(d)\u22480.90, \u03c3=1.0 \u2192 \u03c7\u22480.11. The constraint is binding but not extractive; it is part of the epistemic structure of their domain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "semantic_property_boundary",
+      "question": "Where precisely is the boundary between syntactic properties (decidable) and semantic properties (undecidable)? Is the boundary sharp or gradual?",
+      "resolution_mechanism": "Formal classification of specific properties (termination, equivalence, type safety) along the syntax-semantics continuum. Historical analysis of properties initially thought decidable that proved undecidable.",
+      "impact": "If boundary is sharp: Rice's Theorem applies with absolute clarity. If gradual: some properties may have partial decidability or approximable verification. The classification of verification tools as Mountain vs Tangled Rope hinges on this.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Precise boundary between decidable and undecidable properties"
+    },
+    {
+      "id": "pragmatic_heuristic_scope",
+      "question": "How much of real-world program verification can be covered by decidable approximations and heuristic methods without violating Rice's Theorem constraints?",
+      "resolution_mechanism": "Empirical analysis of static analysis tool coverage on large codebases; measurement of false positive/negative rates on semantic properties; comparison of heuristic coverage across domains (web, systems, embedded).",
+      "impact": "If coverage is > 90%: Rice's Theorem is theoretically binding but practically manageable, and verification tools approach Rope (coordination) rather than Snare (extraction). If coverage is < 50%: the practical gap between theorem and practice remains severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of practical program verification coverage within Rice's limits"
+    },
+    {
+      "id": "computational_universality_dependency",
+      "question": "Does Rice's Theorem strictly require Turing-complete languages, or does it apply to subsets? Could a restricted computational model (e.g., bounded loops, typed languages) escape the theorem?",
+      "resolution_mechanism": "Formal analysis of Rice's proof and its dependence on Turing completeness. Classification of restricted languages (Datalog, Cobol, domain-specific languages) against Rice's scope.",
+      "impact": "If theorem requires full Turing completeness: languages can be designed to be decidable. If theorem applies more broadly: even restricted languages inherit undecidability. This determines whether language design is a real escape route or an illusion.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Dependency of Rice's Theorem on computational universality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Rice's Theorem is a fundamental result in computability theory established by Henry Gordon Rice in 1953. The theorem states that any non-trivial semantic property of a Turing-recognizable language is undecidable. This means no universal algorithm can determine whether an arbitrary program has any non-syntactic property\u2014termination, correctness, memory safety, equivalence to another program, or any other property dependent on the program's behavior. The theorem emerges as a mathematical law, not from institutional convention or design choice. It applies with equal force to the most resourced software verification teams and the smallest embedded systems programmer. This constraint is foundational to computational theory and shapes the entire landscape of formal methods, testing strategies, and verification tool design.",
+    "key_agents": [
+      "Analytical Mathematician: Observer of the mathematical structure (analytical/analytical) \u2014 recognizes the theorem as provable limit on computation",
+      "Software Verification Industry: Resourced institutional actor (powerful/mobile) \u2014 develops tools and heuristics that work within Rice's constraints",
+      "Embedded Systems Programmer: Individual bearing the constraint (powerless/trapped) \u2014 cannot verify safety properties despite best efforts",
+      "Computer Science Discipline: Institutional knowledge structure (institutional/arbitrage) \u2014 uses Rice's Theorem to structure research and define problem scope",
+      "Safety-Critical System Community: Organized actors with constrained options (organized/constrained) \u2014 develops restricted formal languages and bounded verification methods"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. Rice's Theorem is not extractive in the sense that no agent gains advantage from others' inability to verify. The undecidability of semantic properties is a universal constraint, not an asymmetric extraction mechanism. Suppression (0.03): Negligible. The theorem does not require suppression of alternatives\u2014it rules out the existence of an alternative (a universal decider for semantic properties). There is nothing to suppress because the desired tool cannot logically exist. Theater ratio (0.15): Very low. The theorem is purely functional in its application; there is minimal performative activity around invoking Rice's result. When verification tools claim to 'solve the undecidable problem,' that is not theater\u2014it is either honest restriction to a decidable fragment or honest incompleteness. The small non-zero theater reflects that some tools may present heuristic approximations as more complete than they are, but the dominant practice is candid about Rice's limits. Claimed type: Mountain. All metrics satisfy the mountain gates: \u03b5 \u2264 0.25, suppression \u2264 0.05, accessibility_collapse \u2265 0.85, resistance \u2264 0.15, emerges_naturally = true.",
+    "perspectival_gap": "This constraint exhibits perspectival invariance, not perspectival gap. All five perspectives\u2014mathematician, industry, programmer, discipline, safety-critical community\u2014arrive at Mountain classification. The structural properties (\u03b5=0.12, suppression=0.03, theater=0.15) are invariant across measurement methodologies. A programmer verifying code termination, an engineer building aerospace systems, a logician proving theorems, and a tool vendor building static analyzers all encounter the same mathematical constraint. The absence of a perspectival gap is a feature of natural law constraints: they classify identically from all observables because the undecidability is not relative to an observer's position. This is the key distinction from Tangled Rope constraints (which exhibit perspectival gaps based on beneficiary/victim status) or Snares (which depend on the target's exit options). Rice's Theorem applies universally.",
+    "directionality_logic": "Rice's Theorem produces uniform low directionality across all agent positions because it is non-extractive. There is no beneficiary (no agent benefits from semantic undecidability) and no victim group (all agents are equally constrained by the same mathematical limit). Directionality is derived from the theorem's structure: Analytical observer d\u22480.72 (observing the constraint without inhabiting it), Powerful actors d\u22480.50 (resources cannot overcome the limit), Powerless actors d\u22480.88 (equally constrained as everyone else), Institutional discipline d\u22480.05 (the discipline benefits from knowing its boundaries), Safety-critical community d\u22480.60 (constrained but with agency in working within the constraint). None of these variations produce high effective extraction \u03c7 because the theorem itself has zero asymmetry\u2014it constrains everyone equally. The formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) = 0.12 \u00d7 f(d) \u00d7 1.0 \u2248 0.12 regardless of f(d), because \u03b5 is so low that scope and directionality contribute minimally. This is the signature of a mountain: even with unfavorable d values, \u03c7 remains too small to indicate extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "halting_problem_decidability",
+      "godel_incompleteness_theorem",
+      "turing_completeness_equivalence"
+    ],
+    "dual_formulation_note": "Rice's Theorem is a specialization of the Halting Problem's undecidability to the domain of semantic properties. The Halting Problem (can we decide if a program terminates?) is a specific instance of Rice's Theorem applied to the termination property. G\u00f6del's Incompleteness Theorem is a parallel undecidability result in formal logic with similar structural implications for mathematical knowledge. Turing Completeness Equivalence is a prerequisite fact: Rice's Theorem depends on the language being Turing-complete or universal. These three constraints form a foundational cluster in computability theory, linked by shared undecidability structure."
+  },
+  "directionality_overrides": []
+}

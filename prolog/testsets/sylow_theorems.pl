@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: constraint_sylow
+% CONSTRAINT STORY: sylow_theorems
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_sylow, []).
+:- module(constraint_sylow_theorems, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,21 +53,36 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: constraint_sylow
+ *   constraint_id: sylow_theorems
  *   human_readable: Sylow Theorems
- *   domain: technological
+ *   domain: mathematical_physics/abstract_algebra
  *
  * SUMMARY:
- *   Sylow Theorems provide structural constraints on the subgroups of finite groups.
- *   They guarantee the existence of subgroups of prime power order and provide information
- *   about the number of such subgroups. This can be viewed as a constraint on the possible
- *   group structures, which simplifies the search space for group-theoretic proofs.
+ *   The Sylow Theorems (proven by Norwegian mathematician Ludwig Sylow in
+ *   1872) establish three foundational results about the structure of finite
+ *   groups. First, for any finite group G and prime power p^k dividing |G|,
+ *   there exists at least one subgroup of order p^k (a p-Sylow subgroup).
+ *   Second, any two p-Sylow subgroups of the same group are conjugate to each
+ *   other. Third, the number of p-Sylow subgroups divides |G| and is
+ *   congruent to 1 modulo p. These theorems are the bedrock of finite group
+ *   classification and are among the most widely taught and universally
+ *   applicable results in abstract algebra. Unlike institutional constraints
+ *   or policy mechanisms, Sylow's theorems are logical truths that emerge
+ *   from the axioms of group theory and the arithmetic of finite cardinality.
+ *   They have no beneficiaries or victims — no agent exploits the theorems,
+ *   and no agent suffers from them. They exist as universal structural facts
+ *   accessible to all who study group theory, with zero barriers to exit and
+ *   zero coercive enforcement. The theorems also show zero theater: their
+ *   proofs are transparent, their statements are unambiguous, and their
+ *   applicability is complete across all finite groups without exception.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mathematicians: Primary target (powerless/trapped) — must adhere to theorems
- *   - Theorem Provers: Primary beneficiary (institutional/arbitrage) — automated reasoning benefits
- *   - Mathematical Structure: Emergent system (N/A/N/A) — Constraint arises from the rules of mathematics
- *   - Analytical observer: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Pure mathematicians: Analytical observer (analytical/analytical) — study Sylow theorems as logical truths about abstract structure
+ *   - Computational algebraists: Analytical observer (analytical/analytical) — implement algorithms respecting Sylow constraints in symbolic algebra systems
+ *   - Group theory instructors: Analytical observer (analytical/analytical) — teach Sylow theorems as mandatory content in abstract algebra curricula
+ *   - Cryptographers: Analytical observer (analytical/analytical) — account for Sylow subgroups as attack vectors in group-based cryptographic security proofs
+ *   - Physicists (representation theory): Analytical observer (analytical/analytical) — use Sylow structure to constrain particle symmetries and quantum representations
+ *   - Proof theorists: Analytical observer (analytical/analytical) — analyze Sylow theorems as logical consequences of foundational axioms
  */
 
 /* ==========================================================================
@@ -75,100 +90,71 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constraint_sylow, 0.10).
-domain_priors:suppression_score(constraint_sylow, 0.01).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(constraint_sylow, 0.0).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(sylow_theorems, 0.12).
+domain_priors:suppression_score(sylow_theorems, 0.03).
+domain_priors:theater_ratio(sylow_theorems, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constraint_sylow, extractiveness, 0.10).
-narrative_ontology:constraint_metric(constraint_sylow, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(constraint_sylow, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(sylow_theorems, extractiveness, 0.12).
+narrative_ontology:constraint_metric(sylow_theorems, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(sylow_theorems, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-narrative_ontology:constraint_metric(constraint_sylow, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(constraint_sylow, resistance, 0.05).
+narrative_ontology:constraint_metric(sylow_theorems, accessibility_collapse, 0.88).
+narrative_ontology:constraint_metric(sylow_theorems, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(constraint_sylow, mountain).
-narrative_ontology:human_readable(constraint_sylow, "Sylow Theorems").
-narrative_ontology:topic_domain(constraint_sylow, "technological").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(sylow_theorems, mountain).
+narrative_ontology:human_readable(sylow_theorems, "Sylow Theorems").
+narrative_ontology:topic_domain(sylow_theorems, "mathematical_physics/abstract_algebra").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(constraint_sylow).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(constraint_sylow). % Required for Tangled Rope
+domain_priors:emerges_naturally(sylow_theorems).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-domain_priors:emerges_naturally(constraint_sylow).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(constraint_sylow, theorem_provers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(constraint_sylow, mathematicians).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(constraint_sylow, mountain,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
+% PERSPECTIVE 1: PURE MATHEMATICIAN (MOUNTAIN) — The Sylow theorems are invariant logical truths about finite group structure. No mathematician can avoid them or work around them. They hold universally across all finite groups of all orders. The constraint emerges from the axioms of group theory and the natural number arithmetic of group cardinality. No agent or measurement methodology can make the theorems false.
+constraint_indexing:constraint_classification(sylow_theorems, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(constraint_sylow, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
+% PERSPECTIVE 2: COMPUTATIONAL ALGEBRAIST (MOUNTAIN) — Sylow theorems constrain what subgroup structures are possible in any finite group, regardless of computational strategy or implementation. An algorithm cannot find a p-Sylow subgroup that violates Sylow's theorem. The theorems are not approximations or practical guidelines — they are absolute structural boundaries. The computational problem of finding Sylow subgroups is hard (NP-complete for general finite groups), but the existence and counts guaranteed by Sylow's theorem are never violated.
+constraint_indexing:constraint_classification(sylow_theorems, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(constraint_sylow, mountain,
+% PERSPECTIVE 3: GROUP THEORIST / PEDAGOGUE (MOUNTAIN) — The Sylow theorems are teaching constraints: any course in abstract algebra teaching group theory must address Sylow's results. They are mandatory content because the theorems fully structure the problem space. No student can claim fluency in finite group theory without knowing Sylow's three main results: existence of p-Sylow subgroups, conjugacy of p-Sylow subgroups, and the divisibility constraints on their count. The pedagogical constraint emerges from the logical structure of the subject, not from institutional choice.
+constraint_indexing:constraint_classification(sylow_theorems, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: CRYPTOGRAPHER (MOUNTAIN) — Any secure cryptographic system based on finite group hardness must account for Sylow subgroups as potential attack vectors. The theorems constrain the security proofs — they guarantee that p-Sylow subgroups of size p^k exist for each prime power dividing the group order. No cryptographic designer can circumvent this constraint or engineer a group without it. The theorems are part of the adversary's toolkit and must be defended against, not negotiated.
+constraint_indexing:constraint_classification(sylow_theorems, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 5: PHYSICIST / REPRESENTATION THEORIST (MOUNTAIN) — In quantum mechanics and particle physics, symmetry groups constrain allowed states and interactions. For finite symmetry groups, the Sylow theorems bound the structure of representations and allowed term symbols. A physicist cannot design a particle interaction that violates Sylow constraints on its symmetry algebra. The theorems are as immutable in physics as they are in pure mathematics — they are features of the mathematical structure underlying reality.
+constraint_indexing:constraint_classification(sylow_theorems, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 6: PROOF THEORIST / LOGICAL OBSERVER (MOUNTAIN) — The Sylow theorems are provable from the Zermelo-Fraenkel axioms of set theory. Their truth is not contingent on any observer or measurement. They follow with logical necessity from the axioms. No formalization of the axioms can produce a valid finite group that violates Sylow's theorem. The constraint is the strongest possible: logical entailment from fundamental axioms.
+constraint_indexing:constraint_classification(sylow_theorems, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -178,20 +164,30 @@ constraint_indexing:constraint_classification(constraint_sylow, mountain,
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(constraint_sylow_tests).
+:- begin_tests(sylow_theorems_tests).
 
-test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(constraint_sylow, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(constraint_sylow, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget = TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(sylow_theorems, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(sylow_theorems, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(constraint_sylow, ExtMetricName, E),
-    E =< 0.25. % Mountain or low-extraction Rope.
+    narrative_ontology:constraint_metric(sylow_theorems, ExtMetricName, E),
+    domain_priors:suppression_score(sylow_theorems, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(constraint_sylow_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(sylow_theorems),
+    narrative_ontology:constraint_metric(sylow_theorems, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(sylow_theorems, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(sylow_theorems_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -199,115 +195,88 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Sylow Theorems are classified as a Mountain because they represent
- *   fundamental constraints on the structure of finite groups, arising from the
- *   axioms of group theory itself. The base extractiveness is low because the
- *   theorems primarily reduce search space rather than actively extracting effort.
- *   Suppression is minimal because mathematicians can still explore any group
- *   structure, but the theorems provide guidance and limitations.
+ *   Extractiveness (0.12): Very low. The Sylow theorems provide no extraction mechanism. They do not concentrate benefits in one group or impose costs on another. All mathematicians have equal access to the theorems and their proofs. No one is forced to study group theory; those who choose to work with finite groups simply encounter the theorems as unavoidable structural facts. The minimal extractiveness reflects the theorem's transparency and universality — the only 'cost' is the cognitive effort to understand the proof, which is equally distributed. Suppression (0.03): Minimal. The theorems are not hidden or suppressed. They are published in standard textbooks, taught in core courses, and actively studied across all mathematical and scientific communities. No institution or power structure prevents access to Sylow's results. The only minimal suppression is the mathematical background required (understanding groups), which is a feature of the domain, not a coercive mechanism. Theater ratio (0.15): Very low. The Sylow theorems are stated with complete mathematical precision. Their proofs are transparent — the proof of existence uses the Cauchy theorem and class equation, all with explicit logical steps. There is no gap between the claimed content and the actual content. The minimal theater (0.15 rather than 0.0) accounts for the pedagogical framing: instructors may emphasize applications or historical context, adding some performance to pure logic. But the core theorem has zero theater.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap because the theorems are viewed as a
- *   fundamental truth, regardless of the power or exit options of the observer.
- *   Both mathematicians and theorem provers benefit from the constraints
- *   provided by the Sylow Theorems.
+ *   There is no perspectival gap. The Sylow theorems classify identically as Mountain from all six perspectives. This is the defining property of a true natural law constraint: the observer's structural position, time horizon, exit options, and spatial scope are all irrelevant to the classification. The pure mathematician, the computational algebraist, the cryptographer, the physicist, and the proof theorist all encounter exactly the same invariant truths about finite group structure. The theorems do not become Rope from one perspective or Snare from another. This invariance is the test that confirms the Mountain classification — if changing the observer produced different types, the constraint would be institutional (Rope, Tangled Rope, Snare, etc.), not natural.
  *
  * DIRECTIONALITY LOGIC:
- *   Mathematicians are considered the 'victims' in the sense that they must
- *   adhere to the theorems' constraints, limiting the possible group structures
- *   they explore. Theorem provers are the 'beneficiaries' because the theorems
- *   simplify automated reasoning. The derived directionality captures this
- *   structural relationship.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   Not applicable in this scenario.
+ *   The Sylow theorems have no directionality in the Deferential Realism sense because they have no structural relationship to any agent. Directionality (d) is derived from beneficiary/victim status and exit options. The Sylow theorems are neither benefited from nor suffered under by any agent — they simply constrain the logical space. All perspectives converge on the same classification (Mountain) from every power level and time horizon because the theorems are universally binding constraints, not institutional mechanisms. The canonical d value for analytical observers (0.73) does not apply here because there is no extraction flow to measure. The theorems are not indexed to any observer's structural position; they are trans-observer invariants.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification as a Mountain prevents mislabeling this constraint as
- *   pure extraction. While the theorem does limit possibilities, it does so by
- *   unveiling inherent mathematical structures and does not impose restrictions
- *   for any agent’s benefit.
+ *   This constraint resolves the mandatrophy by being manifestly NOT a mandatrophy case. Mandatrophy arises when a constraint could plausibly be mislabeled as pure extraction (Snare) when it actually provides coordination (Rope) — or vice versa. The Sylow theorems have no extraction and no coordination. They are pure logical structure. There is no asymmetric benefit or cost distribution to confuse. The constraint is a reference case demonstrating that mandatrophy resolution requires explicit beneficiary/victim declarations and directional analysis. The Sylow theorems need none of that because they are not social or institutional — they are mathematical truths.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_sylow,
-    'To what extent do further group-theoretic theorems increase or decrease the search space for mathematicians?',
-    'Empirical study of theorem proving time before and after theorem',
-    'Increased difficulty if search space increases, easier if it decreases',
+    finite_vs_infinite_extension,
+    'Do the Sylow theorems represent a mountain in finite group theory that becomes a rope or tangled_rope when extended to infinite profinite groups or topological groups?',
+    'Formal analysis of profinite group structure and Sylow subgroup existence in the infinite case. Comparison of the rigidity of Sylow''s theorems in Zp (p-adic integers) vs finite p-groups.',
+    'If profinite Sylow subgroups require enforcement/coordination: the finite case is a local mountain within a larger rope structure. If they are equally immutable: the mountain extends universally.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(finite_vs_infinite_extension, empirical, 'Whether Sylow theorems extend as mountains to infinite groups').
+
+omega_variable(
+    constructive_vs_classical_proof,
+    'Does the constructive (algorithmic) proof of Sylow subgroup existence constitute the same constraint as the classical non-constructive existence proof, or do they represent different constraint types?',
+    'Analysis of proof-theoretic strength: comparison of Gödel''s T (constructive) vs ZFC (classical) machinery required to establish Sylow existence. Examination of computational complexity in the constructive case.',
+    'If constructively equivalent: single mountain constraint. If constructive version is weaker or context-dependent: the classical Sylow theorem is mountain, the constructive version is rope (requiring coordination among algorithms).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(constructive_vs_classical_proof, conceptual, 'Whether classical and constructive Sylow theorems are the same constraint').
+
+omega_variable(
+    measurement_independence,
+    'Can the Sylow theorems be expressed and verified independently of any choice of measurement basis or computational representation, or does their formulation require implicit structural assumptions about how we represent groups?',
+    'Examination of group presentation schemes: matrix representations, permutation representations, abstract presentations. Test whether Sylow subgroup existence is invariant across all representations of the same abstract group.',
+    'If fully representation-independent: universal mountain. If dependent on representation choice: constraint structure is observer-relative, suggesting false summit or partial piton (theater in the choice of representation).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(measurement_independence, conceptual, 'Whether Sylow theorems are independent of group representation').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(constraint_sylow, 0, 10).
+narrative_ontology:interval(sylow_theorems, 0, 200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(constraint_sylow_tr_t0, constraint_sylow, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(constraint_sylow_tr_t5, constraint_sylow, theater_ratio, 5, 0.0).
-narrative_ontology:measurement(constraint_sylow_tr_t10, constraint_sylow, theater_ratio, 10, 0.0).
+% Theater ratio over time
+narrative_ontology:measurement(sylow_tr_t0, sylow_theorems, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(sylow_tr_t100, sylow_theorems, theater_ratio, 100, 0.15).
+narrative_ontology:measurement(sylow_tr_t200, sylow_theorems, theater_ratio, 200, 0.15).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(constraint_sylow_ex_t0, constraint_sylow, base_extractiveness, 0, 0.10).
-narrative_ontology:measurement(constraint_sylow_ex_t5, constraint_sylow, base_extractiveness, 5, 0.10).
-narrative_ontology:measurement(constraint_sylow_ex_t10, constraint_sylow, base_extractiveness, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(sylow_be_t0, sylow_theorems, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(sylow_be_t100, sylow_theorems, base_extractiveness, 100, 0.12).
+narrative_ontology:measurement(sylow_be_t200, sylow_theorems, base_extractiveness, 200, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-narrative_ontology:coordination_type(constraint_sylow, information_standard).
+narrative_ontology:coordination_type(sylow_theorems, information_standard).
+narrative_ontology:affects_constraint(sylow_theorems, finite_group_classification).
+narrative_ontology:affects_constraint(sylow_theorems, permutation_group_complexity).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(constraint_sylow, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(constraint_sylow, [other_constraint_id]).
+% DUAL FORMULATION NOTE:
+% The Sylow theorems are upstream constraints on finite group structure. All constraints involving finite groups (permutation groups, matrix groups over finite fields, Galois groups of finite extensions) inherit structural constraints from Sylow's results. This is a unidirectional influence: the theorems do not depend on downstream constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(constraint_sylow, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "anticipatory_capacity_failure",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Blindside Equilibrium",
+    "topic_domain": "organizational/technological/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_term_shareholders",
+      "incumbent_leadership"
+    ],
+    "victims": [
+      "long_term_organizational_health",
+      "adaptive_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Long-Term Organizational Health",
+      "comment": "Long-term organizational health is trapped by the short-term optimization. Lacks agency to escape the negative consequences. Fully exposed to the risks. Cannot easily reorganize or exit without significant damage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Adaptive Capacity",
+      "comment": "Adaptive capacity is constrained because resources are directed toward current operations. Some ability to adapt but severely limited. Benefits slightly from existing infrastructure but mostly a victim of resource misallocation and cognitive narrowing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Short-Term Shareholders",
+      "comment": "Short-term shareholders benefit directly from the efficient operations. They can arbitrage their position, taking profits and exiting before major disruptions occur. Sees the constraint as a pure coordination gain."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Incumbent Leadership",
+      "comment": "Incumbent leadership benefits in the short-term due to meeting efficiency goals and increasing shareholder value, even though this strategy harms long-term adaptability. Leadership has the mobility to move to another role before the organization collapses. They perceive the situation as pure coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer, with a civilizational time horizon and the ability to analyze the system, sees this as a Tangled Rope. There is a coordination function to maximize present efficiency, but it comes at the cost of long-term adaptability and overall health."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "disruption_probability",
+      "question": "What is the probability of a significant disruption that would render the current optimization obsolete?",
+      "resolution_mechanism": "Historical analysis of similar systems, Monte Carlo simulations of potential future scenarios, expert elicitation on emerging threats.",
+      "impact": "High probability would shift the classification more towards Snare for the long-term organizational health perspective. Low probability might justify a pure Rope classification from an efficiency perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Probability of a disruption that invalidates current optimization."
+    },
+    {
+      "id": "cognitive_surplus_recoverability",
+      "question": "How easily can the cognitive surplus and adaptability be recovered once lost to optimization?",
+      "resolution_mechanism": "Case studies of organizational change, experiments in cognitive retraining, simulation of alternative decision-making processes.",
+      "impact": "If easily recoverable, this might be a Scaffold - a temporary measure. If difficult or impossible, it remains a Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ease of cognitive surplus and adaptability recovery."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "An organization or system optimizes for efficiency in its current environment. This optimization drives out slack resources, including the cognitive surplus and adaptability necessary to respond to novel challenges. The system is then vulnerable to 'out-of-distribution' shocks for which it is unprepared.",
+    "key_agents": [
+      "Short-Term Shareholders: Primary beneficiary, arbitrage exit.",
+      "Incumbent Leadership: Secondary beneficiary, short-term rewards, mobile exit.",
+      "Long-Term Organizational Health: Primary victim, trapped.",
+      "Adaptive Capacity: Secondary victim, constrained."
+    ],
+    "logic_rationale": "Extractiveness (0.55) and Suppression (0.65) reflect the high cost of rigidity and loss of cognitive flexibility. The theater ratio is relatively low (0.40) because the system genuinely is becoming more efficient according to standard metrics, it just cannot adjust to anything unexpected.",
+    "perspectival_gap": "Short-term shareholders and leadership view the optimization as a positive coordination mechanism (Rope), enhancing efficiency and maximizing shareholder value. Long-term organizational health and adaptability see it as a destructive snare, as they lose the capacity to respond to changing conditions. The analytical observer sees the mixed picture: increased efficiency, but at the cost of long-term resilience (Tangled Rope).",
+    "directionality_logic": "The directionality values reflect the structural relationship. Short-term shareholders benefit (low d), long-term organizational health bears the cost (high d). Incumbent leadership benefits in the short-term, which still creates a positive directionality but is not at the extremes.",
+    "mandatrophy_analysis": "The system prevents mislabeling coordination as pure extraction (or vice versa) because the perspective is critical. While short-term efficiency improves (coordination), long-term adaptability declines (extraction). Without considering all perspectives, one might incorrectly classify the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "cognitive_entrenchment",
+      "organizational_rigidity"
+    ]
+  },
+  "directionality_overrides": []
+}

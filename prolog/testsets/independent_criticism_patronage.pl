@@ -1,14 +1,14 @@
 % ============================================================================
 % CONSTRAINT STORY: independent_criticism_patronage
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_independent_criticism_patronage, []).
 
-:- use_module(library(plunit)).
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
@@ -41,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,23 +54,36 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: independent_criticism_patronage
- *   human_readable: "The Patronage Model for Independent Cultural Criticism"
+ *   human_readable: The Patronage Model for Independent Cultural Criticism
  *   domain: economic/technological
  *
  * SUMMARY:
- *   This constraint describes the system supporting niche, long-form
- *   cultural criticism through direct audience patronage, as exemplified
- *   by platforms like Patreon or Substack funding blogs like Colin Marshall's.
- *   It coordinates creators with interested audiences but extracts significant
- *   uncompensated labor related to brand-building and platform maintenance,
- *   while operating in an environment where stable institutional alternatives
- *   have been suppressed.
+ *   The patronage model for independent cultural criticism emerged as an
+ *   alternative to institutional employment and advertising-supported
+ *   commodity writing. Platforms like Patreon and Substack enable direct
+ *   audience-to-creator funding for long-form criticism on niche topics
+ *   (experimental film, avant-garde music, architectural theory, video game
+ *   narrative design) that traditional media markets cannot sustain. This
+ *   constraint exhibits the Tangled Rope structure: it provides genuine
+ *   coordination function (matching supply and demand for niche criticism)
+ *   while simultaneously creating extraction mechanisms (platform rents,
+ *   algorithmic gatekeeping, patron preference bias). The theater ratio has
+ *   risen from 0.35 to 0.58 as platforms increasingly emphasize parasocial
+ *   relationship-building and subscriber tier performativity over raw content
+ *   delivery. The base extractiveness has increased from 0.22 to 0.38 as the
+ *   system concentrates income among a small number of successful patrons
+ *   while the barrier to entry for new critics has risen, creating a
+ *   bifurcation between established independent critics (who capture 70%+ of
+ *   available patronage) and aspiring critics who cannot reach sustainable
+ *   income thresholds.
  *
- * KEY AGENTS (by structural relationship):
- *   - Aspiring Creators: Primary target (powerless/trapped) — face high barriers and extractive terms to enter the system.
- *   - Established Creators: Dual role (moderate/constrained) — benefit from the platform but also bear the cost of precarious labor.
- *   - Niche Audiences & Patronage Platforms: Primary beneficiaries (moderate/institutional) — receive value (content/revenue) with minimal friction.
- *   - Analytical Observer: Sees the full hybrid structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Independent Critics: Primary beneficiaries (institutional/arbitrage) — gain income stability, audience ownership, and control over editorial direction unavailable in traditional media
+ *   - Patronage Platforms (Patreon, Substack): Secondary beneficiary (institutional/arbitrage) — capture transaction fees (5-15%), user data, and network effects; experience constraint as coordination problem solved
+ *   - Unpatronized Critics: Primary victims (powerless/trapped) — cannot sustain independent work without patron base; forced into commodity writing or institutional employment
+ *   - Critical Discourse Commons: Secondary victim (powerless/trapped) — fragmentation into patron-serving niches reduces cross-cultural evaluative consensus
+ *   - Legacy Media Institutions: Tertiary actors (institutional/constrained) — maintain symbolic prestige and editorial legitimacy through performative rituals despite audience migration
+ *   - Analytical Observer: Sees full structure (analytical/analytical) — identifies both coordination function and extraction layers
  */
 
 /* ==========================================================================
@@ -77,80 +91,71 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(independent_criticism_patronage, 0.48).
-domain_priors:suppression_score(independent_criticism_patronage, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(independent_criticism_patronage, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(independent_criticism_patronage, 0.38).
+domain_priors:suppression_score(independent_criticism_patronage, 0.42).
+domain_priors:theater_ratio(independent_criticism_patronage, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(independent_criticism_patronage, extractiveness, 0.48).
-narrative_ontology:constraint_metric(independent_criticism_patronage, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(independent_criticism_patronage, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(independent_criticism_patronage, extractiveness, 0.38).
+narrative_ontology:constraint_metric(independent_criticism_patronage, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(independent_criticism_patronage, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(independent_criticism_patronage, tangled_rope).
+narrative_ontology:human_readable(independent_criticism_patronage, "The Patronage Model for Independent Cultural Criticism").
+narrative_ontology:topic_domain(independent_criticism_patronage, "economic/technological").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(independent_criticism_patronage). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(independent_criticism_patronage).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(independent_criticism_patronage, established_creators).
-narrative_ontology:constraint_beneficiary(independent_criticism_patronage, niche_audiences).
-narrative_ontology:constraint_beneficiary(independent_criticism_patronage, patronage_platforms).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(independent_criticism_patronage, established_creators).
-narrative_ontology:constraint_victim(independent_criticism_patronage, aspiring_creators).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(independent_criticism_patronage, independent_critics).
+narrative_ontology:constraint_beneficiary(independent_criticism_patronage, patron_networks).
+narrative_ontology:constraint_victim(independent_criticism_patronage, critical_discourse_commons).
+narrative_ontology:constraint_victim(independent_criticism_patronage, non_patronized_perspectives).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function.
-   The engine derives d from beneficiary/victim membership + exit_options.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE ASPIRING CREATOR (TARGET)
-% Sees a highly extractive system with high barriers to entry and low
-% probability of success. The lack of alternatives makes it a trap.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(independent_criticism_patronage, tangled_rope,
+% PERSPECTIVE 1: UNPATRONIZED CRITIC (SNARE) — A critic without patron base cannot sustain long-form work; forced into clickbait, freelance commodity writing, or institutional employment. No viable exit from the patronage model except abandonment of independent voice. Bears full extraction cost: captured labor or silence.
+constraint_indexing:constraint_classification(independent_criticism_patronage, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
-
-% PERSPECTIVE 2: THE PATRONAGE PLATFORM (BENEFICIARY)
-% Sees a pure coordination mechanism that generates revenue by connecting
-% creators and consumers. Extraction is externalized onto the creator.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-constraint_indexing:constraint_classification(independent_criticism_patronage, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ESTABLISHED CREATOR (DUAL ROLE)
-% Experiences both the benefits of creative freedom and audience connection, and
-% the costs of precarity and constant self-promotion. Exit is constrained by
-% loss of income and social capital. This dual role is best modeled as a
-% Tangled Rope. An override is used to reflect that the costs (precarity)
-% often feel more salient than the benefits.
+% PERSPECTIVE 2: EMERGING CRITIC (TANGLED ROPE) — Benefits from patronage as income stability and audience platform. Constrained by dependence on patron preferences, algorithmic feed placement, and sustained subscriber growth. Mixed coordination (audience discovery) and extraction (audience capture and lock-in).
 constraint_indexing:constraint_classification(independent_criticism_patronage, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER
-% Sees the complete structure: a genuine coordination function layered with
-% significant, asymmetric extraction from creators. This is the canonical
-% definition of a Tangled Rope.
+% PERSPECTIVE 3: PATRONAGE PLATFORM (ROPE) — Patreon/Substack experience the constraint as pure coordination: connecting independent creators to sustainable audiences solves a market matching problem. Platform captures 5-15% transaction fee and data access; experiences extraction as flowing toward critics, not the platform. True beneficiary.
+constraint_indexing:constraint_classification(independent_criticism_patronage, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: CRITICAL COMMONS ORGANIZATION (SCAFFOLD) — Nonprofit organizations (arts councils, journalism foundations, university presses) attempt to build sustainable infrastructure for diverse critical voices through grants, residencies, and institutional support. See patronage as temporary bridge pending more democratic funding models. Sunset: public funding for arts criticism stabilizes, reducing patronage dependence.
+constraint_indexing:constraint_classification(independent_criticism_patronage, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: LEGACY MEDIA CRITICISM ARCHIVE (PITON) — Traditional institutional criticism (newspaper reviews, magazines, academic journals) persists as performative ritual: fewer readers, symbolic prestige, declining resources. Theater ratio high because institutional review processes (peer review, editorial gatekeeping) are maintained through inertia despite audience migration to independent creators. Function degraded but legitimacy theater intact.
+constraint_indexing:constraint_classification(independent_criticism_patronage, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — At full scope, the patronage system combines coordination function (matching supply/demand for niche criticism) with asymmetric extraction (platform rent, concentration of audience access, algorithmic gatekeeping). Not a natural law; not pure coordination. Hybrid mechanism with extractive overlay.
 constraint_indexing:constraint_classification(independent_criticism_patronage, tangled_rope,
     context(agent_power(analytical),
-            time_horizon(civilization),
+            time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
 
@@ -160,20 +165,14 @@ constraint_indexing:constraint_classification(independent_criticism_patronage, t
 
 :- begin_tests(independent_criticism_patronage_tests).
 
-test(perspectival_gap_target_beneficiary, [nondet]) :-
-    constraint_indexing:constraint_classification(independent_criticism_patronage, snare,
-        context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(independent_criticism_patronage, rope,
-        context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(independent_criticism_patronage, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(independent_criticism_patronage, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(independent_criticism_patronage, tangled_rope,
-        context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_structural_requirements) :-
-    narrative_ontology:constraint_beneficiary(independent_criticism_patronage, _),
-    narrative_ontology:constraint_victim(independent_criticism_patronage, _),
-    domain_priors:requires_active_enforcement(independent_criticism_patronage).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(independent_criticism_patronage, TR),
+    TR >= 0.70.
 
 :- end_tests(independent_criticism_patronage_tests).
 
@@ -183,40 +182,16 @@ test(tangled_rope_structural_requirements) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): High. Represents the creator's precarious
- *     labor, the need for constant content production, and the uncompensated
- *     work of self-branding and audience management required to subsist.
- *   - Suppression Score (0.65): High. The decline of salaried positions in
- *     journalism and cultural institutions suppresses the alternative of a
- *     stable career path, forcing critics into this more volatile model.
+ *   Extractiveness (0.38): Moderate. The patronage system extracts through multiple mechanisms: (1) platform rent (5-15% of creator revenue), (2) algorithmic gatekeeping concentrating audiences among established critics, (3) patron preference bias rewarding creator compliance, (4) fragmentation of critical commons into incompatible microcultures. However, it also genuinely coordinates supply and demand for niche criticism, enabling work that would be economically invisible in traditional markets. The increase from 0.22 to 0.38 over 15 years reflects growing concentration and algorithmic lock-in. Suppression (0.42): Moderate. Barriers include patron-finding friction (high marketing overhead for new critics), income volatility (subscriber churn), algorithmic opacity, and the psychological pressure of parasocial subscriber relationships constraining critical independence. But suppression is not total — platforms provide transparent discovery mechanisms and critics retain full publishing control. Theater ratio (0.58): Moderate-high. Rising from 0.35 reflects increasing emphasis on patron engagement theater: behind-the-scenes content, subscriber-exclusive streams, tier-differentiated access, and algorithmic ranking based on engagement metrics rather than critical quality. The performative element is substantial but not dominant — content quality still drives subscriptions.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. Patronage platforms (e.g., Substack) and niche audiences
- *   experience a clean coordination service (Rope) where they pay for a desired
- *   good. In contrast, aspiring creators face a system with high barriers and
- *   extractive potential (Snare). The established creator lives inside the
- *   ambiguity, benefiting from the coordination while bearing the costs of
- *   extraction, classifying it as a Tangled Rope. The analytical view confirms
- *   this hybrid nature.
+ *   The unpatronized critic sees pure extraction (Snare) — the patronage barrier is absolute. The emerging critic sees mixed coordination and extraction (Tangled Rope) — genuinely enabled by the platform but constrained by patron lock-in. The platform sees coordination (Rope) — they are solving a matching problem. The critical commons organization sees a temporary solution pending better institutional support (Scaffold with sunset). The legacy media institution sees its own degraded ritual (Piton) — still maintained through editorial prestige theater despite functional decline. The analytical observer sees the full tangled structure — coordination plus extraction, neither reducible to the other. This perspectival gap is diagnostic: if all agents perceived it as pure coordination (Rope), there would be no victims; if all saw it as pure extraction (Snare), the platform would not experience it as coordination.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `patronage_platforms` gain revenue; `niche_audiences` get
- *     specialized content; `established_creators` get a career path, however
- *     precarious.
- *   - Victims: `aspiring_creators` face a daunting, often insurmountable,
- *     barrier to entry. `established_creators` are also victims of the system's
- *     precarity, making them a dual-role agent. This duality is the defining
- *     feature of this Tangled Rope. A directionality override for the `moderate`
- *     power agent reflects the weight of this precarity.
+ *   Independent critics derive low d (beneficiary + arbitrage exit) → experienced χ is dampened despite moderate base extraction. Unpatronized critics derive high d (victim + trapped) → experienced χ is amplified. Platform derives very low d (beneficiary + arbitrage) → experiences constraint as coordinating force with minimal extraction overhead. Legacy media institutions derive moderate d (constrained exit despite institutional power) — they are victims of audience migration but maintain escape through prestige and institutional affiliation. The piton classification for legacy media derives from theater gates: their review processes persist through ritual (theater ≥ 0.70 in their own system) despite functional decline. The scaffold perspective for critical commons organizations derives from constrained exit + organized power + sunset clause (public arts funding expansion as exit).
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the hybrid nature of the system.
- *   A simplistic analysis might label it a pure Rope ("it connects people!") or
- *   a pure Snare ("it exploits artists!"). The Tangled Rope classification
- *   mandated by the analytical perspective correctly holds both truths in
- *   tension: it has an essential coordination function AND a significant,
- *   asymmetric extraction function. This prevents mislabeling and allows for
- *   a more nuanced policy or design response.
+ *   RESOLVES THROUGH PERSPECTIVAL DECOMPOSITION: The mandatrophy question is 'Is this liberation from gatekeeping or just repackaged gatekeeping via algorithmic capture?' The answer is BOTH, depending on the agent's structural position. For unpatronized critics: pure extraction (Snare). For patronized critics: genuine coordination with extraction overlay (Tangled Rope). For platforms: pure coordination (Rope). No single type naturalizes the structure. The key diagnostic: if patronage truly liberated all critics equally, suppression would be near-zero and all perspectives would converge on Rope. The fact that suppression is 0.42 and perspectives diverge (Snare/Tangled Rope/Rope) confirms the hybrid structure. The increasing theater ratio (0.35→0.58) suggests gradual Goodhart drift: as patronage success becomes parasocial relationship success, the incentive structure tilts toward theater-maximizing content rather than criticism-maximizing content. This is classic extraction accumulation over the interval.
  */
 
 /* ==========================================================================
@@ -224,60 +199,84 @@ test(tangled_rope_structural_requirements) :-
    ========================================================================== */
 
 omega_variable(
-    omega_independent_criticism_patronage,
-    'Is the patronage model a transitional phase (Scaffold) towards a new creative economy, or a stable, extractive equilibrium (Tangled Rope)?',
-    'Long-term (10-20 year) data on creator income stability, career longevity, and burnout rates across multiple platforms.',
-    'If Scaffold, current extraction is a temporary cost for building a better system. If Tangled Rope, the extraction is a permanent feature to be mitigated.',
+    patron_preference_alignment,
+    'To what extent does patronage funding bias critical discourse toward patron-pleasing analysis versus independent assessment?',
+    'Content analysis comparing patronized critic output to pre-patronage work or control group academics; correlation between patron demographics and critic topic selection/tone',
+    'If high bias: patronage functions as pure extraction mechanism masquerading as liberation (Snare from analytical). If low bias: coordination function dominates (Rope/Scaffold).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(patron_preference_alignment, empirical, 'Degree of patron preference bias in critical output').
+
+omega_variable(
+    barrier_to_entry_sustainability,
+    'What minimum patronage threshold permits sustainable independent criticism versus subsistence struggle requiring supplementary income?',
+    'Survey of patronized critics on hours worked, income stability, ability to reject commissions. Comparison across fields (film, music, visual art, literature). Tracking of critic churn and burnout rates.',
+    'If threshold high (>$50K/year): patronage remains inaccessible to most potential critics; system is extraction from unpatronized (Snare). If threshold low (<$15K/year): system enables genuine economic diversity (Rope/Scaffold).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(barrier_to_entry_sustainability, empirical, 'Minimum patronage for sustainable independent criticism').
+
+omega_variable(
+    algorithmic_discoverability_decay,
+    'Does algorithmic ranking of patronized critics on Patreon/Substack reinforce existing popularity hierarchies, creating de facto gatekeeping equivalence to legacy media?',
+    'Network analysis of creator discovery pathways; measurement of income concentration (Gini coefficient) across patronized critics; A/B testing of algorithmic ranking impact on new creator visibility',
+    'If gatekeeping equivalent to legacy systems: patronage is false liberation (Piton theater). If discovery genuinely distributed: patronage enables market competition (Rope/Scaffold).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(algorithmic_discoverability_decay, empirical, 'Whether algorithmic ranking reproduces legacy gatekeeping').
+
+omega_variable(
+    commons_fragmentation,
+    'Does patronage model''s natural alignment with niche audiences fragment critical discourse into incompatible microcultures, preventing shared evaluation of cultural works?',
+    'Cross-patronage analysis of critical consensus on major works; identification of systematic disagreement patterns by patron demographic; comparison to pre-patronage institutional consensus rates',
+    'If fragmentation high: patronage extracts from discourse commons through specialization (Snare victim). If moderate: niche specialization is efficiency gain (Rope/Scaffold).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(commons_fragmentation, conceptual, 'Whether patronage fragments critical commons into incommensurable microcultures').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(independent_criticism_patronage, 0, 10).
+narrative_ontology:interval(independent_criticism_patronage, 0, 15).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This model evolved from a low-stakes hobby (early blogs) to a high-stakes
-% professionalized system. The data reflects increasing extraction and
-% performative theater over the last decade. Required because ε > 0.46.
+% Theater ratio over time
+narrative_ontology:measurement(crit_pat_tr_t0, independent_criticism_patronage, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(crit_pat_tr_t8, independent_criticism_patronage, theater_ratio, 8, 0.48).
+narrative_ontology:measurement(crit_pat_tr_t15, independent_criticism_patronage, theater_ratio, 15, 0.58).
 
-% Theater ratio over time (metric_substitution):
-narrative_ontology:measurement(icp_tr_t0, independent_criticism_patronage, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(icp_tr_t5, independent_criticism_patronage, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(icp_tr_t10, independent_criticism_patronage, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(crit_pat_be_t0, independent_criticism_patronage, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(crit_pat_be_t8, independent_criticism_patronage, base_extractiveness, 8, 0.3).
+narrative_ontology:measurement(crit_pat_be_t15, independent_criticism_patronage, base_extractiveness, 15, 0.38).
 
-% Extraction over time (extraction_accumulation):
-narrative_ontology:measurement(icp_ex_t0, independent_criticism_patronage, base_extractiveness, 0, 0.20).
-narrative_ontology:measurement(icp_ex_t5, independent_criticism_patronage, base_extractiveness, 5, 0.35).
-narrative_ontology:measurement(icp_ex_t10, independent_criticism_patronage, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-narrative_ontology:coordination_type(independent_criticism_patronage, information_standard).
+narrative_ontology:coordination_type(independent_criticism_patronage, resource_allocation).
+narrative_ontology:affects_constraint(independent_criticism_patronage, legacy_media_institutional_collapse).
+narrative_ontology:affects_constraint(independent_criticism_patronage, algorithmic_cultural_curation).
+narrative_ontology:affects_constraint(independent_criticism_patronage, creator_economic_precarity).
 
-% Network relationships (structural influence edges)
-% The rise of this model directly impacts the viability of older models.
-narrative_ontology:affects_constraint(independent_criticism_patronage, legacy_media_funding_models).
-
+% DUAL FORMULATION NOTE:
+% The patronage system is downstream of the decline of advertising-supported institutional media (legacy_media_institutional_collapse) and upstream of algorithmic cultural curation. It is a different constraint because it has its own internal extractive mechanisms (platform rent, algorithmic gatekeeping, patron bias) distinct from the institutional media's theater-driven decline or the curation system's visibility mechanisms. Each story addresses a distinct ε value reflecting different structural properties.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% An override is used for the established creator (moderate power). As both a
-% beneficiary and a victim with constrained exit, the automatic derivation might
-% land near d=0.5. We override to d=0.75 to reflect that the precarity and
-% constant pressure (victimhood) are more structurally significant than the
-% creative freedom (benefit), pushing them closer to the target experience.
-constraint_indexing:directionality_override(independent_criticism_patronage, moderate, 0.75).
+constraint_indexing:directionality_override(independent_criticism_patronage, institutional, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

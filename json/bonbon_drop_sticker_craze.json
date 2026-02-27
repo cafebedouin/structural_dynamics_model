@@ -2,92 +2,111 @@
   "header": {
     "constraint_id": "bonbon_drop_sticker_craze",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bonbon"
   },
   "base_properties": {
-    "extractiveness": 0.55,
+    "extractiveness": 0.52,
     "suppression": 0.65,
-    "theater_ratio": 0.3,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "UHA Mikakuto's \"Bonbon Drop\" Collectible Sticker Promotion",
-    "topic_domain": "economic/social",
+    "human_readable": "UHA Mikakuto's Bonbon Drop Collectible Sticker Promotion",
+    "topic_domain": "economic/consumer_marketing",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "uha_mikakuto",
-      "sticker_manufacturer_qlia",
-      "resellers"
+      "retailers"
     ],
     "victims": [
-      "collectors",
-      "parents_of_collectors"
+      "child_consumers",
+      "parental_budgets",
+      "collection_incompleteness_victims"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
       "label": "The Child Collector",
-      "comment": "From the perspective of a child collector, the system is a snare. Participation is driven by peer dynamics and the desire for specific rare stickers. Exit (quitting) means social exclusion. The 'gacha' mechanic feels coercive and frustrating when desired stickers are not found, extracting allowance money for unwanted candy. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. This just misses the snare threshold of 0.66, but the lived experience is one of being trapped."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Manufacturer (UHA Mikakuto)",
-      "comment": "The manufacturer experiences the system as a pure coordination mechanism (Rope). It coordinates consumer demand, drives sales, and builds brand loyalty. The manufactured scarcity is a feature, not a bug, that increases engagement. As the primary beneficiary with full control, they experience no extraction. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07 (net subsidy)."
+      "comment": "PERSPECTIVE 1: THE CHILD COLLECTOR (SNARE) \u2014 Child consumers experience maximum extraction through psychological completion compulsion. The sticker design and incomplete set create a trap: children cannot opt out of the collection logic once a few stickers are obtained. Suppression is high \u2014 peer pressure, fear of missing out, and the psychology of incomplete collections create powerful coercion. Exit is effectively unavailable (trapped); the child cannot afford to buy enough boxes, cannot earn money to continue purchasing, and cannot rationally stop mid-collection."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Adult 'Heisei Joji' Collector",
-      "comment": "Adult collectors, often driven by nostalgia, see both sides. They enjoy the community, trading, and the thrill of the hunt (coordination), but are also aware of the financial cost and exploitative gacha mechanic (extraction). They have mobile exit options (they can switch hobbies), making the constraint a Tangled Rope rather than a Snare. d≈0.85, f(d)≈1.15, σ=0.9 → χ≈0.57."
+      "label": "The Parent Payer",
+      "comment": "PERSPECTIVE 2: THE PARENT PAYER (TANGLED ROPE) \u2014 Parents experience mixed coordination and extraction. The promotion solves a real coordination problem: children want collectible items, and Bonbon Drop provides them. But parents also bear significant extraction costs \u2014 repeated candy purchases, spending discipline erosion, and managed disappointment when rare stickers don't appear. Parents have limited exit (constrained): they can refuse entirely, but face child disappointment and social isolation from peers. Some coordination benefit exists \u2014 the sticker system provides entertainment value \u2014 but extraction clearly exceeds coordination."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UHA Mikakuto and Retailers",
+      "comment": "PERSPECTIVE 3: UHA MIKAKUTO & RETAILERS (ROPE) \u2014 From the company and retail perspective, the sticker system solves genuine coordination problems: enabling inventory movement, creating repeat purchasing, and building brand loyalty. The extraction runs toward these beneficiaries, but they experience the constraint as pure coordination \u2014 the mechanism works as designed and generates revenue. Arbitrage exit means they can shift to other promotions if this one fails; they have full mobility and benefit asymmetrically."
+    },
+    {
+      "classification_type": "piton",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "The analytical view confirms the Tangled Rope classification. The system possesses a genuine coordination function (creating a collector community) and a clear, asymmetric extraction mechanism (profiting from randomized, scarcity-driven repeat purchases). Both components are essential to its function. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "label": "The Historical Pattern Observer",
+      "comment": "PERSPECTIVE 4: THE HISTORICAL PATTERN OBSERVER (PITON) \u2014 From a civilizational view, collectible sticker promotions are a degraded, heavily theatrical version of earlier trading card and collectible systems (baseball cards, Pokemon cards). The theater_ratio is high because the sticker's functional utility (decoration/entertainment) is minimal; most value is psychological and social. The constraint persists through marketing inertia and proven effectiveness despite its theatrical character. Collectors and companies both maintain the system through institutional habit rather than novel function."
     },
     {
-      "classification_type": "rope",
+      "classification_type": "scaffold",
       "agent_power": "organized",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Reseller/Scalper",
-      "comment": "Resellers are organized beneficiaries. They see the system as a coordination mechanism for profit, coordinating scarce supply with high demand. They are not the primary institutional beneficiary but exploit the system's properties. Their exit is mobile (they can scalp the next popular item), and for them, the system is a pure Rope for generating income. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.005."
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulation & Awareness Movement",
+      "comment": "PERSPECTIVE 5: REGULATION & AWARENESS MOVEMENT (SCAFFOLD) \u2014 Consumer protection organizations and parents' groups view the sticker promotion as a temporary marketing practice with declining social license. Regulations on predatory marketing to children, awareness campaigns about compulsive collection, and shift to digital alternatives are creating exit pathways. The constraint has a sunset: as parental awareness increases and regulatory frameworks tighten, the promotion's extraction mechanism will lose force. Sunset timeline: 5-15 years as regulatory frameworks mature and digital collectibles normalize."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Psychological Invariant View",
+      "comment": "PERSPECTIVE 6: THE PSYCHOLOGICAL INVARIANT VIEW (MOUNTAIN) \u2014 From a deep psychological perspective, incomplete set completion is an immutable feature of human cognition and marketing psychology. The gap between 'have' and 'complete' triggers dopamine-driven purchasing behavior; the incomplete collection is inherently aversive to completion-oriented brains. This perspective risks naturalizing what is actually a contingent marketing choice (deliberately incomplete sets) as if it were a law of psychology. The engine's false summit detector will identify this as naturalization \u2014 incomplete collection design is engineered by the company, not inherent to stickers."
     }
   ],
   "omegas": [
     {
-      "id": "nostalgia_vs_speculation",
-      "question": "Is the market primarily driven by genuine collector nostalgia ('Heisei Joji' culture) or by secondary market speculation and hype?",
-      "resolution_mechanism": "Analysis of secondary market sales volume and price velocity versus social media sentiment and community forum activity focused on collecting itself.",
-      "impact": "If nostalgia-driven, the coordination aspect is stronger (Rope/Tangled Rope). If speculation-driven, the extraction is more severe (Tangled Rope/Snare).",
+      "id": "completion_rate_threshold",
+      "question": "What completion rate (percentage of set obtained) triggers maximum compulsive behavior in child consumers?",
+      "resolution_mechanism": "Behavioral economics studies on goal completion; analysis of purchasing patterns relative to sticker acquisition percentage",
+      "impact": "If completion rate < 60%: many children never enter compulsive buying phase (reduces extraction). If rate > 80%: nearly all collectors experience severe compulsion (increases extraction and snare classification).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing between nostalgia-driven collecting and market speculation"
+      "description": "Threshold completion rate for maximum compulsive behavior"
     },
     {
-      "id": "saturation_point",
-      "question": "At what point does collector burnout or market saturation cause the craze to collapse?",
-      "resolution_mechanism": "Longitudinal tracking of sales data, secondary market prices for common and rare stickers, and social media engagement metrics.",
-      "impact": "Identifies the natural lifecycle of such manufactured-scarcity systems, determining if it's a short-term phenomenon (Scaffold-like) or a durable extractive model (Snare-like).",
+      "id": "peer_pressure_variability",
+      "question": "How much of the purchasing compulsion is genuine collection completion vs. peer pressure to possess specific rare stickers?",
+      "resolution_mechanism": "Qualitative research with child collectors; comparison of purchasing behavior in isolated vs. peer-group contexts",
+      "impact": "If primarily intrinsic completion: constraint is psychological universal (mountain-leaning). If primarily peer-driven: constraint is social/cultural (tangled_rope strengthened by network effects).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "The market saturation and burnout threshold for the sticker craze"
+      "description": "Attribution of compulsion to collection completion vs. peer pressure"
+    },
+    {
+      "id": "alternative_collectible_substitutability",
+      "question": "Are digital collectibles or other sticker systems sufficient substitutes to enable regulatory sunset, or is the physical sticker format structurally irreplaceable?",
+      "resolution_mechanism": "Market analysis of digital collectible adoption in same demographic; regulatory trial programs with alternative collection systems",
+      "impact": "If substitutable: scaffold sunset is credible (5-15 years). If irreplaceable: constraint will persist despite regulation (piton strengthened).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether digital collectibles can replace physical sticker collection"
     }
   ],
   "measurements": [
@@ -98,49 +117,63 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 12,
+      "time_point": 3,
       "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 24,
-      "value": 0.55
+      "time_point": 6,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 12,
-      "value": 0.25
+      "time_point": 3,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 24,
-      "value": 0.3
+      "time_point": 6,
+      "value": 0.58
     }
   ],
   "interval": {
     "start": 0,
-    "end": 24
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The UHA Mikakuto 'Bonbon Drop' sticker promotion is a classic example of a gacha (randomized collectible) mechanic applied to a low-cost consumer good. By bundling collectible, scarce stickers with candy, the system incentivizes repeat purchases far beyond the consumer's desire for the base product. This is amplified by social dynamics, including peer pressure among children and a nostalgia-driven resurgence of 'Heisei Joji' (90s/00s girl) culture among adults. The resulting manufactured scarcity creates a frantic consumer culture ('sticker patrols') and a lucrative secondary market for resellers.",
+    "narrative_context": "UHA Mikakuto's Bonbon Drop sticker promotion represents a structurally hybrid constraint that solves genuine coordination problems while simultaneously extracting significant value from child consumers and parental budgets. The constraint operates through deliberate collection incompleteness: rare stickers are seeded into candy boxes at varying probabilities, creating a psychological gap between 'have' and 'complete' that drives repeat purchasing. This mechanism satisfies coordination needs (children want engaging collectibles; companies want repeat purchasing incentives) but weaponizes psychological completion compulsion against consumers with low exit capacity. The constraint exhibits all six DR types depending on observer position: for the powerless child collector with trapped exit, it appears as pure extraction (Snare); for parents with constrained exit and some coordination benefit, it appears hybrid (Tangled Rope); for the company with arbitrage options, it appears as successful coordination (Rope); for the historical observer, it appears as degraded theater (Piton); for the regulatory movement with agency and sunset pathways, it appears temporary (Scaffold); for the psychological essentialist, it risks appearing as natural law (Mountain\u2014a false summit).",
     "key_agents": [
-      "UHA Mikakuto & Q-LiA: Primary beneficiaries (institutional/arbitrage) - Drive candy sales and brand engagement through manufactured scarcity.",
-      "Collectors (Children & Adults): Primary victims (powerless/trapped to moderate/mobile) - Bear the financial cost of the gacha mechanic.",
-      "Parents of Collectors: Secondary victims (moderate/constrained) - Provide the funding for children's collections under social pressure.",
-      "Resellers: Secondary beneficiaries (organized/mobile) - Exploit the manufactured scarcity for profit on the secondary market.",
-      "Analytical Observer: Sees the full structure of coordination and extraction."
+      "Child Collectors: Primary victims (powerless/trapped) \u2014 experience maximum extraction through completion compulsion; no exit capacity",
+      "Parents/Payers: Secondary victims (moderate/constrained) \u2014 bear financial and emotional costs; limited exit options (social pressure against refusal)",
+      "UHA Mikakuto: Primary beneficiary (institutional/arbitrage) \u2014 captures repeat purchasing revenue; has full mobility and can adjust promotion",
+      "Retailers: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from increased foot traffic and repeat store visits",
+      "Peer Networks: Tertiary extractor (moderate/constrained) \u2014 social pressure to acquire rare stickers amplifies compulsion",
+      "Regulatory/Advocacy Bodies: Organized agent (organized/constrained) \u2014 see constraint as temporary with regulatory sunset pathway"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55): Moderately high. The core extraction is the value paid for unwanted candy to obtain a chance at a desired sticker. While the candy has some value, the purchasing behavior is driven by the randomized reward, indicating a significant portion of the price is pure extraction. Suppression (0.65): High. There is no alternative way to obtain new stickers from the primary source; one must buy the candy. This forces participation in the gacha system or the inflated secondary market. Theater Ratio (0.30): Moderate. While social performance like trading and 'sticker patrols' is part of the craze, the core economic function of selling candy is direct and non-performative.",
-    "perspectival_gap": "The gap is stark. The manufacturer (UHA Mikakuto) sees a brilliant marketing campaign (Rope). The child collector, subject to peer pressure and allowance limits, experiences a coercive and frustrating chase (Snare). The adult collector, with more agency and funds, recognizes the exploitative nature but also derives genuine nostalgic joy and community, landing on a mixed classification (Tangled Rope). This highlights how the same system can be perceived as pure coordination, pure extraction, or a hybrid, depending on the agent's power and exit options.",
-    "directionality_logic": "Beneficiaries are the company and resellers, who profit from the system. Their structural position gives them a low directionality (d). Victims are the collectors and their parents, who bear the financial costs and psychological pressure. Their structural position gives them a high directionality (d). The engine's derivation from these declarations correctly models the flow of value, resulting in negative or low effective extraction (χ) for beneficiaries and high χ for victims.",
-    "mandatrophy_analysis": "This case effectively resolves the mandatrophy. To label the craze as merely a 'fun hobby' (Rope) would ignore the structurally coercive and extractive gacha mechanic at its core. Conversely, to label it a pure 'scam' (Snare) would ignore the genuine coordination function it serves in creating a vibrant collector community and tapping into powerful nostalgic sentiment. The analytical classification of Tangled Rope correctly identifies that both functions are present and structurally essential to the phenomenon's success."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The promotion extracts significant value from child consumers and parents through psychology-based compulsion and incomplete set design. However, extraction is not maximal (\u22650.70) because legitimate coordination benefits exist (children genuinely want collectibles; parents genuinely benefit from entertainment value and purchasing convenience). The company deliberately withholds certain stickers (rare variants) to sustain the completion gap; this is engineered extraction, not mere scarcity. Suppression (0.65): Moderate-high. Significant barriers to exit include peer pressure, FOMO (fear of missing out), psychological aversion to incomplete collections, and limited purchasing power for children to refuse. Parents face social pressure and child disappointment costs if they refuse. But suppression is not total (\u22641.0) \u2014 parents retain choice, children can opt out entirely, and awareness campaigns are reducing social pressure. Theater ratio (0.58): Moderate-high. The sticker's functional utility (decoration) is minimal relative to its psychological and social signaling value. The constraint is increasingly theatrical as awareness grows that the 'rarity' is engineered rather than organic scarcity. The system persists through marketing institutional inertia rather than pure function.",
+    "perspectival_gap": "The constraint demonstrates sharp perspectival divergence because agents occupy fundamentally different exit and power positions. The child collector sees a trap (Snare) \u2014 no purchasing power, no exit, maximum compulsion. The parent sees mixed coordination and extraction (Tangled Rope) \u2014 they chose the purchasing mechanism but experience extraction pressure. The company sees successful coordination (Rope) \u2014 the mechanism solves their problem of repeat purchasing. The regulatory movement sees a temporary problem (Scaffold) \u2014 their organized power enables them to build exit pathways. The historical observer sees degraded theater (Piton) \u2014 the system works through momentum, not novel function. The psychological essentialist risks seeing natural law (Mountain) \u2014 but the structural data reveals this is naturalization of engineering choices. The gap between Snare (child victim, trapped) and Rope (institutional beneficiary, arbitrage) is maximal, making this an exemplary tangled_rope case.",
+    "directionality_logic": "Directionality values are derived from structural position. Children occupy maximum-target position: low purchasing power, trapped by peer pressure and psychological completion need, high experienced extraction (d \u2248 0.95). Parents occupy mixed position: moderate power, constrained exit (can refuse but face costs), moderate experienced extraction (d \u2248 0.60). Companies occupy full-beneficiary position: institutional power, arbitrage exit (can shift promotions), low/negative experienced extraction (d \u2248 0.05). Peer networks operate as secondary extractors (d \u2248 0.70) \u2014 they apply pressure but are not the structural beneficiary. The engine's sigmoid function translates these d values into effective extractiveness chi: children experience high chi (peak experienced extraction); parents experience moderate chi; companies experience near-zero chi (extraction subsidizes them). Regulatory bodies with organized power and constrained exit occupy intermediate position (d \u2248 0.45) \u2014 they see the constraint from outside the compulsion loop but face institutional barriers to regulatory action.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing between genuine coordination (children do benefit from collectible entertainment) and extractive layering (the incomplete set design and artificial rarity are added layers that transform coordination into extraction). The minimum viable coordination mechanism would be: 'candies include random stickers; children collect and trade.' The extractive layer is: 'certain stickers are deliberately made rare; completion is designed to be impossible without massive purchasing; rarity is engineered, not organic.' The tangled_rope classification captures this hybrid: the base mechanism is rope-level coordination (\u03b5 \u2248 0.15 if all stickers were equally common), but the deliberate rarity adds extraction (\u03b5 increases to 0.52). The snare classification from the child perspective is not false\u2014it is the experienced constraint when exit is truly trapped. The rope classification from the company perspective is not false\u2014extraction genuinely runs toward them. The gap reveals the same structural object (the sticker promotion) generates different effective constraints depending on agent power and exit options. The scaffold perspective introduces a temporal resolution: as digital alternatives and regulatory frameworks mature, the extraction mechanism will degrade (sunset), transforming this from tangled_rope back toward rope-only coordination or full regulatory exit."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "pokemon_card_market_volatility",
+      "gacha_game_mechanics"
+    ],
+    "dual_formulation_note": "The sticker promotion is a structural variant of broader collectible-compulsion mechanisms (trading cards, gacha games, loot boxes). The shared extraction principle is: incomplete sets + variable probability = compulsive purchasing. The sticker system has lower \u03b5 than gacha games (0.52 vs. 0.65+) because the sticker has lower functional value (mere decoration vs. gameplay utility) and lower price per unit. Network linkage indicates that understanding the sticker constraint informs analysis of higher-extractiveness collectible systems."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
 }

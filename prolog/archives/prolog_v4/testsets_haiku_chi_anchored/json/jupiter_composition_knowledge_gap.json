@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "jupiter_composition_knowledge_gap",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jckg"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Knowledge Gap in Jupiter's Composition Affecting Planetary Formation Models",
+    "topic_domain": "planetary_science/exoplanet_discovery",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "jupiter_observation_community",
+      "formation_model_developers"
+    ],
+    "victims": [
+      "exoplanet_discovery_accuracy",
+      "comparative_planetology"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exoplanet Survey Community",
+      "comment": "PERSPECTIVE 1: EXOPLANET SURVEY COMMUNITY (SNARE) \u2014 Cannot exit Jupiter composition uncertainty without abandoning planet formation model validation. Trapped by dependence on the knowledge gap. All exoplanet discoveries are filtered through imperfect formation models calibrated on Jupiter's unknown properties. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Comparative Planetology Research Groups",
+      "comment": "PERSPECTIVE 2: COMPARATIVE PLANETOLOGY GROUPS (TANGLED ROPE) \u2014 Constrained by Jupiter composition data limitations but benefit from observational effort focused on Jupiter. The knowledge gap both enables (novel research directions) and constrains (model calibration) their work. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Jupiter Observation Programs",
+      "comment": "PERSPECTIVE 3: JUPITER OBSERVATION PROGRAMS (ROPE) \u2014 Beneficiary from the knowledge gap; maintains funding and research priority for Jupiter-focused missions (Juno, future missions). The gap creates legitimate scientific demand for observation coordination. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Net beneficiary through first-mover advantage in Jupiter science."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Machine Learning Model Ensemble Approach",
+      "comment": "PERSPECTIVE 4: MACHINE LEARNING ENSEMBLE STRATEGIES (SCAFFOLD) \u2014 Organized response building uncertainty quantification frameworks and ensemble model approaches that work around composition knowledge gaps through probabilistic inference. These methods create a temporary coordination mechanism with decreasing reliance on precise Jupiter parameters. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.15."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Classical Piecewise Planet Formation Theory",
+      "comment": "PERSPECTIVE 5: CLASSICAL PIECEWISE FORMATION THEORY (PITON) \u2014 Traditional core accretion + migration models persist despite acknowledged Jupiter composition uncertainty. The models are maintained through institutional inertia: textbooks teach them, funding follows, journal acceptance follows. theater_ratio\u22480.58 reflects that much Jupiter formation literature is refined re-derivation of known models rather than novel constraint application. The theoretical framework sees itself as degraded but continues because alternatives haven't achieved parity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, the composition knowledge gap might appear as an inherent measurement limitation \u2014 Jupiter's deep interior is inaccessible, so uncertainty is a natural law of our observational capacity. However, structural data (\u03b5=0.38, suppression=0.62, theater=0.58) contradicts mountain classification. The constraint is contingent on institutional practices (which missions get funded, which models get refined) rather than immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "core_composition_measurement_feasibility",
+      "question": "Can Jupiter's core composition be measured to within \u00b10.1 Earth masses precision through gravitational moment analysis alone, or does measurement always require interior structure assumptions?",
+      "resolution_mechanism": "Future gravity field measurements from Galileo mission; comparison of moment-based estimates with independent seismic constraints if available",
+      "impact": "If yes: knowledge gap is engineering problem (Scaffold with defined sunset). If no: uncertainty is intrinsic to measurement (Mountain). Current field consensus leans toward no, supporting tangled_rope/snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether core composition can be directly measured or requires model assumptions"
+    },
+    {
+      "id": "model_sensitivity_to_composition_variance",
+      "question": "How much does exoplanet migration distance prediction change when Jupiter composition uncertainty range is propagated through core accretion models?",
+      "resolution_mechanism": "Global sensitivity analysis on formation models; Monte Carlo propagation of composition uncertainty; comparison to observational scatter in exoplanet orbits",
+      "impact": "If sensitivity \u2264 10%: knowledge gap is low-extraction constraint (Rope). If sensitivity \u2265 30%: gap is high-extraction constraint (Snare/Tangled Rope). Current estimates suggest 15-25% sensitivity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Model sensitivity to Jupiter composition uncertainty"
+    },
+    {
+      "id": "alternative_formation_pathway_sufficiency",
+      "question": "Do pebble accretion and streaming instability models constrain Jupiter's formation sufficiently without precise core composition knowledge?",
+      "resolution_mechanism": "Comparative model testing on exoplanet population statistics; test whether alternative formation theory predictions require Jupiter composition input",
+      "impact": "If yes: knowledge gap becomes local to classical models (constraint decomposes). If no: gap is fundamental to all formation frameworks (confirms tangled_rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative formation theories bypass composition knowledge requirements"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The precise composition of Jupiter's core \u2014 particularly the abundance of heavy elements (metals, ices, silicates) relative to the hydrogen-helium envelope \u2014 remains uncertain to within \u00b11-2 Earth masses despite two decades of spacecraft observations and gravitational moment analysis. This knowledge gap creates a structural constraint on planetary formation theory: all models of how giant planets assemble must be calibrated against Jupiter, yet that calibration point is fuzzy. The constraint manifests as a hybrid of coordination (Jupiter-focused missions legitimately require funding) and extraction (researchers dependent on formation models are forced to work with imprecise boundary conditions). The theater_ratio reflects increasing reliance on model refinement and parameter tuning rather than new observational constraints. As alternative formation pathways (pebble accretion, streaming instability) mature, the constraint's enforcement power weakens \u2014 models that need less Jupiter-specific input grow competitive with classical core accretion approaches.",
+    "key_agents": [
+      "Jupiter Observation Community: Primary beneficiary (institutional/arbitrage) \u2014 Juno mission and proposed future probes maintain funding and institutional priority through knowledge gap",
+      "Exoplanet Survey Community: Primary victim (powerless/trapped) \u2014 Cannot validate formation models without Jupiter composition constraints; all discoveries filtered through uncertain calibration",
+      "Comparative Planetology Groups: Secondary victim (moderate/constrained) \u2014 Bear costs of model uncertainty while partially benefiting from coordinated observation effort",
+      "Machine Learning Researchers: Organized responders (organized/mobile) \u2014 Building uncertainty quantification frameworks that create workaround pathways",
+      "Classical Formation Theory Community: Institutional maintainers (institutional/arbitrage) \u2014 Textbook models persist despite acknowledged limitations; maintains research momentum",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 Risks treating measurement uncertainty as natural law rather than contingent institutional constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The knowledge gap extracts constraints on exoplanet model validation, but the extraction is not maximal because: (1) alternative formation theories (pebble accretion) reduce dependence on Jupiter-specific inputs; (2) observational uncertainty is genuine, not manufactured; (3) Juno and future missions show incremental progress. The value increased from 0.22 (10 years ago) as the field's reliance on Jupiter calibration deepened and alternative pathways were slower to mature than expected. Suppression (0.62): Moderate-high. Jupiter's interior is fundamentally difficult to observe; deep interior pressure-temperature regimes cannot be directly probed. Publication bias favors papers that claim progress even when composition remains uncertain. Budget competition makes alternative approaches harder to fund. But suppression is not total \u2014 distributed spectroscopy, magnetic field analysis, and gravity moments have all advanced. Theater ratio (0.58): Moderate-high. Significant portion of formation model literature is parameter refinement rather than new constraint discovery. Classical theory textbooks are taught despite known composition uncertainty. But theater is not dominant \u2014 observational programs (Juno, proposed Galileo mission) conduct genuine scientific work with clear measurement goals.",
+    "perspectival_gap": "This constraint exhibits four distinct DR types reflecting genuine structural conflicts. Jupiter observation programs (Rope) see coordination \u2014 they are legitimately solving the problem of measuring Jupiter properties. The exoplanet community (Snare) sees pure extraction \u2014 they are forced to use imprecise boundary conditions they cannot independently verify. Comparative planetology (Tangled Rope) sees both \u2014 the observation effort enables their work but the uncertainty constrains it. Machine learning approaches (Scaffold) see a temporary problem with a technical solution \u2014 uncertainty quantification and ensemble methods progressively reduce the constraint's bite. Classical theory (Piton) sees its own degradation \u2014 the models persist through momentum, not function. The analytical observer (Mountain) risks naturalizing what is contingent.",
+    "directionality_logic": "Jupiter observation programs: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Knowledge gaps justify continued funding. Exoplanet community: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 cannot exit validation framework. Comparative planetology: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction but some workarounds available (alternative observation strategies). Machine learning approaches: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low extraction; these actors have agency and can develop technical solutions. Classical theory maintainers: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification derives from theater gate (0.58 \u2265 piton floor), not from high chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. False summit detector applies.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that Jupiter composition knowledge gap is genuinely tangled: it has a real coordination function (legitimate scientific value of observing Jupiter) AND real extraction (researchers downstream forced to work with uncertain inputs). The constraint avoids false classification as pure coordination (Rope) because the costs are asymmetric \u2014 those who benefit from Jupiter funding are not the same as those who bear the model validation costs. It avoids false classification as pure extraction (Snare) because Jupiter observation has genuine scientific merit, not manufactured complexity. The four distinct types across perspectives reveal that the extraction is not inherent to physical reality but to institutional structure: alternative formation theories (pebble accretion, streaming instability) progressively reduce extractive force as they mature. The theater increase over the 10-year interval (0.35 \u2192 0.58) indicates that model refinement is increasingly substituting for new observational constraints \u2014 a classic sign of institutional inertia maintaining a constraint past its functional peak."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "exoplanet_migration_model_uncertainty",
+      "giant_planet_formation_parity"
+    ],
+    "dual_formulation_note": "The Jupiter composition knowledge gap decomposes into two structurally distinct constraints: (1) measurement uncertainty in gravitational moment analysis (mountain-like, \u03b5\u22480.12), and (2) institutional dependence on Jupiter calibration (tangled_rope, \u03b5\u22480.38). The composition gap itself is measured; the constraint here is the downstream extraction caused by model calibration dependence. These are linked: progress on measurement reduces the extraction mechanism."
+  },
+  "directionality_overrides": []
+}

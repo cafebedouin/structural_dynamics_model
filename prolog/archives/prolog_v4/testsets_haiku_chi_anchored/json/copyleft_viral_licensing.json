@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "copyleft_viral_licensing",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "copyleft"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Copyleft Viral Licensing (e.g., GPL)",
+    "topic_domain": "technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "free_software_community",
+      "downstream_derivative_authors",
+      "end_users_of_open_source"
+    ],
+    "victims": [
+      "proprietary_software_vendors",
+      "closed_source_derivative_authors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Source Developer",
+      "comment": "PERSPECTIVE 1: OPEN SOURCE DEVELOPER (ROPE) \u2014 Benefits from free access to upstream code and the coordination mechanism of copyleft (forced transparency, community contribution). Can fork or migrate to non-copyleft licenses if desired (mobile exit). d\u22480.35, f(d)\u22480.30, \u03c3=1.2 \u2192 \u03c7\u22480.14. Low effective extraction; pure coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Proprietary Software Vendor",
+      "comment": "PERSPECTIVE 2: PROPRIETARY VENDOR (SNARE) \u2014 Wants to incorporate GPL-licensed code without releasing source. Constrained exit: must either (a) avoid GPL code entirely, (b) release proprietary code under GPL (unacceptable), or (c) risk legal liability. d\u22480.88, f(d)\u22481.20, \u03c3=1.2 \u2192 \u03c7\u22480.55. Moderate-high effective extraction from vendor perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Free Software Foundation / Copyleft Enforcement Coalition",
+      "comment": "PERSPECTIVE 3: FREE SOFTWARE COALITION (TANGLED ROPE) \u2014 Organized agents (FSF, Software Freedom Conservancy, Linux Foundation) enforce and defend copyleft through both coordination (GPL tooling, community norms) and coercive mechanisms (license enforcement, legal threats). d\u22480.42, f(d)\u22480.45, \u03c3=1.2 \u2192 \u03c7\u22480.21. Beneficiaries include the coalition itself; victims include non-compliant vendors."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Permissive License Ecosystem (MIT, Apache 2.0, BSD)",
+      "comment": "PERSPECTIVE 4: PERMISSIVE LICENSE ECOSYSTEM (SCAFFOLD) \u2014 Permissive licenses (MIT, Apache, BSD) offer coordination benefits without enforced reciprocity, creating an alternative pathway to free software. \u03c7\u22640.30. Permissive ecosystems are cannibalizing GPL's functional role, especially for libraries and infrastructure. The GPL's enforcement advantage diminishes as more projects adopt permissive licenses. Sunset mechanism: as open-source norms mature and become industry standard (2010s onward), the need for viral enforcement declines."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User in Supply Chain",
+      "comment": "PERSPECTIVE 5: END USER / SUPPLY CHAIN VICTIM (TANGLED ROPE) \u2014 End users benefit from GPL's guarantee that their software is free (transparency, no vendor lock-in, right to modify). But they are trapped in a paradox: they have no exit option if they wish to use derived products, and they bear the cost of vendor non-compliance and fragmentation. d\u22480.68, f(d)\u22481.02, \u03c3=1.2 \u2192 \u03c7\u22480.47. Mixed: coordination benefit (freedom guarantee) + extraction cost (license complexity, supply chain fragility)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The GPL License Ritual (Institutional View)",
+      "comment": "PERSPECTIVE 6: GPL INSTITUTIONAL RITUAL (PITON) \u2014 The GPL license text is often copied without full understanding. Developers declare GPL compliance performatively ('I'm open source') without enforcement mechanisms or genuine copyleft defense. theater_ratio\u22480.65 reflects that much GPL deployment is institutional theater masking permissive behavior. The license persists through legacy inertia and ideological commitment, not through active enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / COPYRIGHT AS NATURAL LAW (MOUNTAIN) \u2014 From a universal perspective, copyright law itself is treated as an immutable constraint. Copyleft simply inverts copyright's asymmetry. But the structural data (\u03b5=0.38, suppression=0.42, theater=0.35) reveals this as a false summit: copyright is a contingent legal regime, and copyleft is a deliberate strategic deployment of that regime, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "copyright_legal_validity",
+      "question": "What jurisdictions recognize GPL enforcement as legally binding, and do courts actually enforce viral redistribution requirements?",
+      "resolution_mechanism": "Meta-analysis of GPL litigation outcomes; survey of enforcement success rates across jurisdictions; analysis of settlements vs court victories",
+      "impact": "If enforcement is weak (< 30% of violations result in compliance): GPL reverts to Piton (performative). If strong (> 70%): GPL maintains Snare classification for vendors. If mixed by jurisdiction: GPL decomposes into multiple constraint stories.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether GPL is legally enforceable across jurisdictions"
+    },
+    {
+      "id": "permissive_license_substitution",
+      "question": "Are permissive licenses (MIT, Apache 2.0) functionally replacing GPL's coordination role in reducing fragmentation and vendor lock-in?",
+      "resolution_mechanism": "Market share analysis: GPL vs permissive licensing in new projects over time; empirical outcomes for vendor lock-in in permissive vs GPL ecosystems; user freedom metrics (modification capability, auditing access) in each regime",
+      "impact": "If yes: GPL's extraction mechanism loses force as alternatives provide coordination without enforcement. Scaffold sunset becomes real. If no: GPL maintains structural advantage. Classification shifts from Scaffold to pure Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether permissive licenses substitute for GPL's coordination function"
+    },
+    {
+      "id": "collective_action_threshold",
+      "question": "What is the minimum network size of GPL developers required to make the reciprocity constraint binding (i.e., to make non-compliance costly enough to deter)?",
+      "resolution_mechanism": "Historical analysis: GPL's enforcement power before/after critical mass (circa 1998-2010 Linux adoption inflection). Comparison with permissive licenses that lack network effects. Agent-based modeling of coordination failure thresholds.",
+      "impact": "If threshold is high (> 50% market share): GPL must be continually defended through active enforcement (remains Tangled Rope/Snare). If low (< 20%): network effects are weak, and GPL is Piton (theater). If crossed: GPL transitions from weak to strong.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for GPL reciprocity enforcement"
+    },
+    {
+      "id": "software_as_speech_vs_tool",
+      "question": "Is software copyright a legitimate protection mechanism for developer autonomy and freedom, or is it a tool for proprietary extraction?",
+      "resolution_mechanism": "Normative analysis: do GPL developers perceive copyleft as freedom protection or as enforcement mechanism? Comparative analysis with non-copyright-based coordination (technical standards, community norms). Legal/philosophical precedent in copyright doctrine.",
+      "impact": "If freedom protection: GPL is legitimate Rope/Tangled Rope with moral authority. If tool for extraction: GPL is Snare masquerading as justice. This determines mandatrophy resolution.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Normative status of copyright-based enforcement in software"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Copyleft is a legal mechanism that uses copyright law to enforce software freedom. A copyleft license (most famously the GNU General Public License) requires that derivative works and linked software also be released under the same free license. This creates a 'viral' obligation: if proprietary software incorporates GPL code, that proprietary product must itself become free software. Copyleft exhibits hybrid properties: it coordinates free software development through transparency and forced contribution, but it also extracts compliance costs from vendors who wish to incorporate free code without releasing their own. The constraint's extractiveness (0.38) reflects moderate asymmetry \u2014 proprietary vendors bear real costs, but those costs are conditional on choosing to use GPL code. Suppression (0.42) reflects meaningful barriers: legal liability, code auditing requirements, and license incompatibility. Theater ratio (0.35) reflects that the GPL is substantially functional, not performative \u2014 copyleft enforcement has real bite in legal jurisdiction. The constraint decomposes into seven distinct perspectives: free developers see pure coordination (Rope), proprietary vendors see extraction (Snare), enforcement coalitions see hybrid coordination-coercion (Tangled Rope), permissive licenses represent an alternative sunset pathway (Scaffold), end users experience paradoxical freedom with supply chain costs (Tangled Rope), institutional actors use GPL as performative identity (Piton), and civilizational observers risk naturalizing copyright as law.",
+    "key_agents": [
+      "Free Software Community: Primary beneficiary (moderate/mobile) \u2014 gains coordinated development, guaranteed future access, prevented vendor lock-in",
+      "Open Source Developers: Beneficiary + victim (moderate/mobile) \u2014 benefit from free upstream code, constrained by reciprocity requirement",
+      "Proprietary Software Vendors: Primary victim (powerful/constrained) \u2014 face forced-disclosure requirement if incorporating GPL code; cannot use GPL without releasing proprietary software",
+      "Free Software Foundation / Copyleft Coalition: Enforcer (organized/constrained) \u2014 active defense of GPL through litigation threat and community norm enforcement; benefits from expanded free software ecosystem",
+      "End Users: Secondary victim + beneficiary (powerless/trapped) \u2014 guaranteed software freedom but trapped in complex license landscape; cannot migrate between incompatible free licenses",
+      "Permissive License Ecosystem: Alternative pathway (institutional/arbitrage) \u2014 MIT, Apache 2.0, BSD licenses offer coordination without reciprocity, gradually replacing GPL's functional role",
+      "Corporate Adopters (Red Hat, Canonical, Debian): Institutional actors (institutional/arbitrage) \u2014 benefit from GPL's guarantee of source availability for security auditing and customization; navigate copyleft as business model"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The GPL extracts compliance costs from proprietary vendors, but extraction is not severe because it applies only to code actually incorporating GPL software. Vendors can avoid extraction entirely by not using GPL code. The extraction is structural (forced disclosure) but conditional (choice to use code). Unlike a true Snare (inescapable), proprietary vendors have a clear exit: don't use GPL. Suppression (0.42): Moderate. Significant barriers exist: legal liability, code auditing complexity, license incompatibility, and social pressure from the free software community. But suppression is not total \u2014 many vendors successfully navigate copyleft by forking code, using compatibility layers, or choosing permissive alternatives. Theater ratio (0.35): Low-moderate. The GPL is substantially functional: it is actively enforced through litigation and community norms, license text is widely understood by developers, and compliance is a real governance mechanism, not ritual. The theater ratio increases over time (0.20 \u2192 0.35) as GPL becomes more institutionalized and less contentious \u2014 some organizations adopt GPL performatively without deep commitment.",
+    "perspectival_gap": "This constraint exhibits a dramatic perspectival gap. The free software developer sees Rope (coordination) \u2014 copyleft ensures that improvements to shared code benefit the whole community. The proprietary vendor sees Snare (extraction) \u2014 they are forced to choose between incorporating GPL code and maintaining proprietary status. The free software coalition sees Tangled Rope (coordination + enforcement) \u2014 they defend the license through both community practices and legal action. The permissive license ecosystem sees Scaffold (temporary coordination problem being solved) \u2014 alternatives like MIT and Apache provide freedom guarantees without forced reciprocity, gradually making GPL's enforcement mechanism obsolete. The end user sees Tangled Rope (mixed benefit/cost) \u2014 they gain freedom guarantees but are trapped in a complex license landscape. The institutional GPL user sees Piton (performative ritual) \u2014 GPL becomes a badge of respectability without deep engagement with copyleft's enforcement mechanism. The civilizational observer risks seeing Mountain (natural law of software evolution) but the structural data reveals this as false: copyright itself is contingent.",
+    "directionality_logic": "Free software community: Beneficiary + mobile \u2192 d\u22480.25, f(d)\u22480.15. Low effective extraction because beneficiaries can exit if needed. Proprietary vendors: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.20. High extraction because vendors face real costs (legal liability, source disclosure, code auditing) and have limited exit options (don't use the code, or accept GPL). Free software coalition: Enforcer + constrained \u2192 d\u22480.42, f(d)\u22480.45. Moderate extraction; coalition has agency and benefits from enforcement. End users: Beneficiary + victim + trapped \u2192 d\u22480.68, f(d)\u22481.02. Mixed: they benefit from software freedom but are trapped in a paradox (cannot easily migrate between incompatible GPL versions or switch to proprietary if needed). Permissive ecosystem: Alternative pathway, institutional + arbitrage \u2192 d\u22480.15, f(d)\u22480.02. Near-zero effective extraction because permissive licenses don't enforce reciprocity. Corporate adopters: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Negative extraction (net beneficiary) from copyleft's transparency guarantee.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Copyleft resolves the mandatrophy by distinguishing conditional extraction (Tangled Rope) from coercive extraction (Snare). The GPL is not a pure Snare because (1) vendors can avoid it entirely by not using GPL code, and (2) the enforcement mechanism has genuine coordination benefits (forced transparency, community contribution, prevented vendor lock-in). The GPL is not a pure Rope because (3) proprietary vendors bear real extraction costs, and (4) the license is designed specifically to constrain proprietary behavior. Copyleft is therefore definitively Tangled Rope: it provides coordination (free software community, transparency, prevented fragmentation) AND asymmetric extraction (proprietary vendors cannot incorporate without releasing source). The mandatrophy is resolved by recognizing that the fairness of the extraction depends on one's position in the software ecosystem. From the free software community's perspective, copyleft is fair reciprocity (you benefit from free code, so your improvements should be free too). From the proprietary vendor's perspective, copyleft is unjust forced disclosure. Both perspectives are structurally correct \u2014 the constraint IS extraction from the vendor's position, and IS coordination from the free community's position. The analytical question is: is enforced reciprocity a legitimate coordination mechanism, or is it coercive extraction? This is a preference-class omega, not an empirical question."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_patent_regime",
+      "open_source_supply_chain",
+      "proprietary_software_licensing"
+    ],
+    "dual_formulation_note": "Copyleft is downstream of copyright law and patent regimes but represents a distinct structural constraint. The upstream constraint (copyright itself) has different \u03b5 and suppression values reflecting its broader scope; copyleft has \u03b5=0.38 reflecting the conditional extraction specific to software derivation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.88
+    }
+  ]
+}

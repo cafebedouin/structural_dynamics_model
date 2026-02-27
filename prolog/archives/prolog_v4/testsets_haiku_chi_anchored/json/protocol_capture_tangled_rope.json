@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "protocol_capture_tangled_rope",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pceee"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Captured Commons (Embrace, Extend, Extinguish)",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_platform_entity"
+    ],
+    "victims": [
+      "protocol_commons",
+      "independent_implementers",
+      "end_users_locked_in"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Protocol Commons",
+      "comment": "PERSPECTIVE 1: THE PROTOCOL COMMONS (SNARE) \u2014 The open standard itself has no agency. Once proprietary extensions become necessary for functionality, the commons is effectively extinguished. No exit: users must adopt the extended version or lose interoperability. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.98. Pure extraction through institutional inertia."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Independent Protocol Implementers",
+      "comment": "PERSPECTIVE 2: INDEPENDENT IMPLEMENTERS (SNARE) \u2014 Small companies, open-source projects, and academic implementations face a choice: implement proprietary extensions (becoming dependent) or remain compatible with the original standard (becoming incompatible with the dominant platform's user base). d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.95. High suppression: technical lock-in through protocol fragmentation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "End Users",
+      "comment": "PERSPECTIVE 3: END USERS (SNARE) \u2014 Users benefit from the enhanced functionality of proprietary extensions but lose the ability to switch to independent implementations. Trapped: switching costs increase as data, habits, and ecosystem lock-in deepen. d\u22480.85, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.80. Extraction through convenience and network effects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Standards Bodies & Open Source Communities",
+      "comment": "PERSPECTIVE 4: STANDARDS BODIES & OSS COMMUNITIES (TANGLED ROPE) \u2014 These agents see genuine coordination function (defining interoperability) but are also subject to extraction: the dominant platform's control of the de facto standard allows it to redirect how the protocol evolves. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.52. Mixed: coordination is real but asymmetric."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dominant Platform Entity",
+      "comment": "PERSPECTIVE 5: DOMINANT PLATFORM ENTITY (ROPE) \u2014 The dominant entity frames EEE as coordination: embracing open standards, extending them to serve users better, maintaining backward compatibility. From this perspective, the constraint is a legitimate protocol evolution mechanism. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary through strategic control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, this constraint exhibits both genuine coordination (interoperability problem) and structural extraction (asymmetric control of evolution). The metrics confirm: \u03b5=0.58, suppression=0.68, theater=0.64. True tangled rope: coordination benefit is real (users do get enhanced functionality), but extraction mechanism is real (lock-in through proprietary extensions). d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extension_necessity_vs_anticompetitive_design",
+      "question": "Are proprietary extensions functionally necessary for the use case, or are they deliberately designed to be incompatible with independent implementations?",
+      "resolution_mechanism": "Technical analysis of extension specifications; comparison with alternative implementations; historical documentation of design decision rationale; user testing of open-only implementations",
+      "impact": "If necessary: coordination problem (genuine rope from more perspectives). If deliberately anticompetitive: pure extraction (snare from more perspectives, moving toward higher \u03c7)",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether extensions are functionally necessary or anticompetitively designed"
+    },
+    {
+      "id": "interoperability_collapse_timeline",
+      "question": "What timeline threshold defines when the original open protocol becomes effectively extinct in favor of the extended proprietary version?",
+      "resolution_mechanism": "Market share analysis of open vs proprietary implementations; adoption rates of proprietary extensions; survival metrics for independent implementations; user transition timelines",
+      "impact": "If threshold < 3 years: rapid extinction suggests deliberate extinguishment strategy. If threshold > 10 years: slower transition suggests genuine utility advantage. Affects whether classification is stable Snare (rapid) vs metastable Tangled Rope degrading to Snare (slow).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for protocol transition from open to proprietary dominance"
+    },
+    {
+      "id": "licensing_and_patent_transparency",
+      "question": "Does the dominant entity maintain genuine openness around patents and licensing for proprietary extensions, or do patent claims and licensing restrictions create hidden extraction mechanisms?",
+      "resolution_mechanism": "Patent landscape analysis; licensing history and restrictions; litigation patterns; comparison with stated IP policy; third-party implementation success rates",
+      "impact": "If transparent and genuinely available: extraction is primarily through switching costs (moderate suppression). If patents weaponized or licenses restrictive: extraction includes direct IP control (high suppression, moves toward Snare classification)",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether IP licensing enables or restricts independent implementation"
+    },
+    {
+      "id": "coordination_function_degradation",
+      "question": "As proprietary extensions accumulate, does the 'protocol coordination' function degrade into performative compliance (theater), where open implementations are theoretically possible but practically incompatible?",
+      "resolution_mechanism": "Measurement of theater_ratio over time; tracking of specification complexity and proprietary-ness; assessment of actual vs theoretical interoperability; independent implementation survival rates",
+      "impact": "If theater rises above 0.70: constraint degrading to Piton (institutional inertia, not real coordination). If theater remains < 0.50: genuine coordination persists despite extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether protocol coordination becomes primarily performative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Embrace, Extend, Extinguish (EEE) strategy represents a canonical mechanism for converting decentralized commons into captured, proprietarized systems. The dominant platform entity adopts an open protocol, extends it with proprietary features that become essential for user experience, and gradually renders the original open alternative incompatible and obsolete. This constraint exhibits Tangled Rope characteristics: there is genuine coordination function (enabling interoperability across heterogeneous systems), but that coordination is asymmetrically controlled by the dominant entity, which extracts value through lock-in, network effects, and ecosystem control. The constraint's suppression (0.68) reflects multiple barriers: technical switching costs (migration complexity), network effects (value of compatibility), switching costs (data portability), and ecosystem dependency (third-party extensions built on proprietary APIs). Theater ratio (0.64) reflects that the dominant entity maintains nominal commitment to open standards (performative openness) while simultaneously rendering those standards functionally subordinate to proprietary extensions. Independent implementations remain theoretically possible but practically unmaintainable as the proprietary feature set diverges from the open baseline.",
+    "key_agents": [
+      "Dominant Platform Entity: Primary beneficiary (institutional/arbitrage) \u2014 captures monopoly rent through lock-in; controls protocol evolution direction",
+      "Protocol Commons: Primary victim (powerless/trapped) \u2014 abstract collective that cannot exit; gradually rendered extinct as proprietary extensions become essential",
+      "Independent Implementers: Secondary victim (powerless/trapped) \u2014 small companies, open-source projects cannot match proprietary feature velocity; eventually abandoned by users",
+      "End Users: Secondary victim (moderate/constrained) \u2014 benefit from enhanced functionality but lose exit options; trapped by switching costs and network effects",
+      "Standards Bodies & OSS Communities: Mixed (organized/constrained) \u2014 maintain nominal governance of open standard but lack enforcement power against dominant entity's unilateral extensions",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both genuine coordination problem and structural extraction mechanism; prevents false natural law classification"
+    ],
+    "logic_rationale": "Base extractiveness (0.58): Moderate-high. The dominant entity captures substantial value through lock-in and ecosystem control, but the extraction is not total (users do benefit from the enhanced functionality). The value has grown from 0.15 (when open and proprietary implementations were competitive) to 0.58 as proprietary features become essential. Suppression (0.68): High. Multiple barriers prevent exit: technical lock-in (proprietary APIs), network effects (ecosystem concentration), switching costs (data migration, retraining), and ecosystem dependency. The original open protocol is still technically available, but its practical utility degrades as interoperability with the dominant platform's extensions becomes necessary. Theater ratio (0.64): Moderate-high. The dominant entity maintains nominal openness (open-source libraries, published specs for basic protocol) while the actual coordination mechanism is proprietary extensions. This performative openness serves as legitimacy theater \u2014 the entity can claim 'we embrace open standards' while effectively controlling the standard's evolution.",
+    "perspectival_gap": "The perspectival gap reflects the classical EEE extraction asymmetry. The dominant platform entity (institutional/arbitrage) genuinely experiences the constraint as Rope \u2014 they see themselves as coordinating interoperability and improving the ecosystem. Their d is very low (0.08), making effective extraction negative from their perspective. Independent implementers and the protocol commons experience pure Snare (d \u2248 0.92-0.95): they are trapped with no exit. End users experience Snare with moderately constrained exit (d \u2248 0.85): they can theoretically switch but face high costs. Organized standards bodies experience Tangled Rope (d \u2248 0.55): they maintain coordination function but lack enforcement power. The analytical observer correctly identifies this as Tangled Rope: genuine coordination function exists (the problem of enabling heterogeneous systems to interoperate is real and non-trivial), but the coordination is captured and asymmetrically controlled. The perspectival gap is not a disagreement about facts but about structural position \u2014 each agent accurately perceives the constraint from their location in the power hierarchy.",
+    "directionality_logic": "Dominant platform entity: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Strategic position enables them to unilaterally shape protocol evolution while maintaining public commitment to openness. Effective extraction is negative from their perspective (they are net beneficiary). Protocol commons: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Abstract collective good (interoperability, open standards) has no agency or exit. Extraction through institutional inertia \u2014 the original open protocol persists as zombie standard. Independent implementers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Cannot match proprietary feature velocity; face abandonment as users adopt the extended version. End users: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. Can theoretically exit (implement or use alternative) but face high switching costs. As proprietary extensions become essential, constrained exit approaches trapped. Standards bodies/OSS communities: Mixed + constrained \u2192 d\u22480.55, f(d)\u22480.75. Maintain real coordination function but lack asymmetric extraction mechanism. Trapped in coordination role while dominant entity extracts.",
+    "mandatrophy_analysis": "TANGLED ROPE DIAGNOSIS: This constraint avoids mandatrophy through clear structural evidence of BOTH genuine coordination function AND asymmetric extraction. (1) Coordination function is real: the open protocol solves a legitimate problem (heterogeneous system interoperability). Without the coordination mechanism, each platform would be isolated. The protocol commons is a genuine public good. (2) Asymmetric extraction is real: the dominant platform entity captures value by rendering the open baseline subordinate to proprietary extensions, creating lock-in that independent implementers cannot match. The suppression (0.68) reflects real barriers to exit, not just coordination complexity. (3) Active enforcement required: the dominant entity must continuously invest in maintaining the appearance of openness (performative compliance) while extending proprietary features (actual control). This is not self-executing; it requires active institutional effort. The Tangled Rope classification is stable: the constraint exhibits extractive economics (\u03b5=0.58) combined with coordination function (verified by network effects enabling the extraction to work). If the proprietary extensions were purely parasitic (no user value), the lock-in would fail. If the coordination were purely functional with no extraction, independent implementations would remain competitive. The constraint's stability depends on both mechanisms: users benefit from enhanced functionality (coordination works) AND cannot easily escape to alternatives (extraction works)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effect_consolidation",
+      "vendor_lock_in_mechanism",
+      "open_source_ecosystem_capture"
+    ],
+    "dual_formulation_note": "The EEE strategy is upstream of specific vendor lock-in instances (e.g., proprietary Bluetooth extensions, EPUB DRM, WebKit rendering engine divergence). This constraint represents the structural mechanism; downstream constraints document specific empirical instances where EEE has been deployed. The network links capture how domination in one protocol enables extraction in dependent protocols."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

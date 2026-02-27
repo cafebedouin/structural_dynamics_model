@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "cobra_effect",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cobra Effect (Perverse Bounty Incentive)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "individuals_exploiting_incentive"
+    ],
+    "victims": [
+      "policy_goals",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Policy Goals",
+      "comment": "The policy goals are trapped, unable to exit the perverse incentives. They are the primary target of the cobra effect."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Government",
+      "comment": "The government intends the bounty to be a rope, solving a coordination problem. But the actual outcome can be far from it. They have arbitrage in theory, they can change policy, but they are often slow to react."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Incentive Exploiters",
+      "comment": "The individuals who exploit the incentive benefit from it, but their actions undermine the intended policy goals. They are mobile, able to adapt to changing incentives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees the mixed coordination and extraction: The bounty was supposed to coordinate actors to a specific goal, but created perverse incentives that enriched some at the cost of the policy goal."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "incentive_design_robustness",
+      "question": "How robust is the incentive design to unintended consequences and exploitation?",
+      "resolution_mechanism": "Extensive modeling and testing of the incentive under various scenarios and actor behaviors.",
+      "impact": "If robust, the cobra effect is less likely. If fragile, the cobra effect is highly probable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which incentive design considers unintended behaviors."
+    },
+    {
+      "id": "monitoring_and_feedback",
+      "question": "How effectively is the incentive monitored and adjusted based on feedback and observed outcomes?",
+      "resolution_mechanism": "Real-time data collection and analysis, combined with mechanisms for policy adjustment.",
+      "impact": "Effective monitoring can mitigate the cobra effect. Poor monitoring allows the cobra effect to persist and worsen.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The extent to which the incentive's impact is monitored."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Cobra Effect is a classic example of a perverse incentive, where a policy designed to solve a problem inadvertently makes it worse. This constraint story examines the different perspectives on this phenomenon and the factors that contribute to its emergence. The incentive, designed to solve a problem, gets exploited creating a worse problem. ",
+    "key_agents": [
+      "The Government: The institution implementing the incentive (institutional/arbitrage).",
+      "The Policy Goals: The intended beneficiaries of the policy (powerless/trapped).",
+      "Individuals Exploiting Incentive: Those who benefit from the unintended consequences (moderate/mobile).",
+      "Taxpayers: bear the cost of the policy and its unintended consequences (moderate/constrained).",
+      "Analytical Observer: Evaluates the overall impact (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (0.60): The unintended consequences of the incentive create a significant extraction from the policy goals and taxpayers. Suppression (0.70): The perverse incentive is difficult to reverse once it is in place. The incentive creates incentives for further entrenchment. Theater Ratio (0.30): The stated goals are subverted by the actions of the exploiters. The government often finds it hard to react appropriately, leading to policy failures.",
+    "perspectival_gap": "The government (institutional/arbitrage) may initially perceive the bounty as a helpful policy, however, as the policy goals (powerless/trapped) are subverted, it becomes a snare. The exploiter benefits, and so it becomes a tangle rope from his perspective.",
+    "directionality_logic": "The directionality is computed from the structural position of the actors. Victims are taxpayers and those trying to achieve the policy goal. Beneficiaries are those gaming the system."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "goodhart_law"
+    ]
+  },
+  "directionality_overrides": []
+}

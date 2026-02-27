@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: goedels_incompleteness_theorems
+% CONSTRAINT STORY: godels_incompleteness_theorems
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_goedels_incompleteness_theorems, []).
+:- module(constraint_godels_incompleteness_theorems, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -30,19 +31,16 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
-    domain_priors:emerges_naturally/1,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    narrative_ontology:omega_variable/3,
+    domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -52,23 +50,29 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: goedels_incompleteness_theorems
+ *   constraint_id: godels_incompleteness_theorems
  *   human_readable: Gödel's Incompleteness Theorems
  *   domain: mathematical/logical
  *
  * SUMMARY:
- *   Gödel's theorems prove that in any consistent, recursive axiomatic system
- *   capable of expressing basic arithmetic, there are true statements that
- *   cannot be proven within the system. Furthermore, such a system cannot
- *   prove its own consistency. This represents a fundamental, unchangeable
- *   limit on the reach of formal logic, classifying it as a Mountain—a
- *   feature of the logical landscape, not a human-made rule.
+ *   Gödel's Incompleteness Theorems establish that in any consistent,
+ *   recursive axiomatic system capable of expressing basic arithmetic, there
+ *   exist true statements that cannot be proven from the system's axioms.
+ *   This is not a limitation of human knowledge, computational resources, or
+ *   institutional will. It is a logical law: a ceiling on what any formal
+ *   system of that type can achieve. The theorems hold universally across all
+ *   consistent recursive axiomatizations of arithmetic-capable systems. There
+ *   are no beneficiaries or victims in the social sense — no agent exploits
+ *   another's inability to access these unprovable truths. The constraint is
+ *   entirely natural, mathematical, and impersonal. It emerges from the
+ *   structure of formal systems themselves, not from power dynamics,
+ *   institutional arrangements, or coordinated extraction.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Formal System (e.g., Peano Arithmetic): The subject of the constraint, whose properties are limited by it.
- *   - The Logician (Analytical): An observer who studies the limits imposed by the theorem.
- *   - The System Architect (Institutional): An engineer who designs computational systems acknowledging these limits.
- *   - All agents perceive this as a Mountain, as its properties are invariant.
+ * KEY AGENTS:
+ *   - Formal Systems: The subject of the constraint — cannot achieve complete axiomatization of arithmetic
+ *   - Mathematical Community: Observes and works within the constraint; cannot circumvent it through institutional reform
+ *   - Foundational Programs: All attempts to establish a universal formal foundation for mathematics encounter this theorem
+ *   - Analytical Observer: Recognizes the theorem as a structural law of logic, universally binding
  */
 
 /* ==========================================================================
@@ -76,87 +80,57 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: Low extraction. The theorem "extracts" the possibility of a
-% complete and provably consistent formalization of mathematics, a "tax" on
-% the dream of absolute certainty.
-domain_priors:base_extractiveness(goedels_incompleteness_theorems, 0.20).
-
-% Rationale: Near-zero suppression. The theorem does not suppress alternatives;
-% alternatives are logically incoherent within the specified class of systems.
-% It is a description of reality, not a coercive rule.
-domain_priors:suppression_score(goedels_incompleteness_theorems, 0.01).
-
-% Rationale: No performative aspect. The theorem is a statement of logical fact.
-domain_priors:theater_ratio(goedels_incompleteness_theorems, 0.0).
+domain_priors:base_extractiveness(godels_incompleteness_theorems, 0.08).
+domain_priors:suppression_score(godels_incompleteness_theorems, 0.02).
+domain_priors:theater_ratio(godels_incompleteness_theorems, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(goedels_incompleteness_theorems, extractiveness, 0.20).
-narrative_ontology:constraint_metric(goedels_incompleteness_theorems, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(goedels_incompleteness_theorems, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(godels_incompleteness_theorems, extractiveness, 0.08).
+narrative_ontology:constraint_metric(godels_incompleteness_theorems, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(godels_incompleteness_theorems, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-%
-% Rationale: Total collapse. Within a sufficiently strong, consistent formal
-% system, there is no conceivable alternative to incompleteness.
-narrative_ontology:constraint_metric(goedels_incompleteness_theorems, accessibility_collapse, 1.0).
-% Rationale: No resistance. One cannot "resist" a proven mathematical theorem;
-% resistance is incoherent.
-narrative_ontology:constraint_metric(goedels_incompleteness_theorems, resistance, 0.0).
+narrative_ontology:constraint_metric(godels_incompleteness_theorems, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(godels_incompleteness_theorems, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(goedels_incompleteness_theorems, mountain).
-narrative_ontology:human_readable(goedels_incompleteness_theorems, "Gödel's Incompleteness Theorems").
-narrative_ontology:topic_domain(goedels_incompleteness_theorems, "mathematical/logical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(godels_incompleteness_theorems, mountain).
+narrative_ontology:human_readable(godels_incompleteness_theorems, "Gödel's Incompleteness Theorems").
+narrative_ontology:topic_domain(godels_incompleteness_theorems, "mathematical/logical").
 
-% --- Emergence flag (required for mountain constraints) ---
-% The theorem emerges naturally from the properties of formal systems and
-% self-reference; it is discovered, not invented or enforced.
-domain_priors:emerges_naturally(goedels_incompleteness_theorems).
+domain_priors:emerges_naturally(godels_incompleteness_theorems).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a Mountain constraint (a feature of logic), the
-% concepts of beneficiary and victim do not apply in a structural sense.
-% The theorem's effects are universal for all relevant systems.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE FORMAL PROPOSITION
-% A statement within a system, like the Gödel sentence itself. It is powerless
-% and trapped by the logical rules that define it. The theorem is an
-% unchangeable law of its existence.
-constraint_indexing:constraint_classification(goedels_incompleteness_theorems, mountain,
+% PERSPECTIVE 1: FORMAL SYSTEM (MOUNTAIN) — Any consistent recursive axiomatization of arithmetic confronts an immutable limit: Gödel's theorem guarantees true unprovable sentences exist. No escape, no workaround, no institutional fix. This is not a policy constraint or a coordination problem. It is a logical law. Zero degrees of freedom.
+constraint_indexing:constraint_classification(godels_incompleteness_theorems, mountain,
     context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE SYSTEM ARCHITECT
-% An engineer designing a proof assistant or programming language. They cannot
-% change the theorem but must design systems that account for its limits.
-% For them, it is a fixed feature of the landscape.
-constraint_indexing:constraint_classification(goedels_incompleteness_theorems, mountain,
+% PERSPECTIVE 2: MATHEMATICAL COMMUNITY (MOUNTAIN) — Mathematicians cannot prove all true arithmetic statements using any single consistent, recursive, sufficiently-expressive system. This constraint is built into the structure of formal systems themselves, not into social institutions or practices. The community can choose stronger axioms, extend the system, or work in richer formal languages, but they cannot escape the core phenomenon: incompleteness reappears at every level.
+constraint_indexing:constraint_classification(godels_incompleteness_theorems, mountain,
+    context(agent_power(moderate),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: FOUNDATIONAL RESEARCH (MOUNTAIN) — Every foundational program (Hilbert's program, type theory, category theory, homotopy type theory) that seeks a complete formal basis for mathematics encounters incompleteness as a structural limit, not a tactical setback. The constraint is not the target of a program; it is the theorem that characterizes what no program can achieve.
+constraint_indexing:constraint_classification(godels_incompleteness_theorems, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% A logician or philosopher studying the nature of proof and truth. The
-% theorem is a fundamental, unchangeable object of study.
-constraint_indexing:constraint_classification(goedels_incompleteness_theorems, mountain,
+% PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) — From the standpoint of mathematical logic and computability theory, Gödel's theorem is a fixed point: the attempt to formalize all mathematical truth in a recursive system provably cannot succeed. This holds regardless of which formal language, which axioms, which observer is doing the analysis. It is a law.
+constraint_indexing:constraint_classification(godels_incompleteness_theorems, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -166,29 +140,30 @@ constraint_indexing:constraint_classification(goedels_incompleteness_theorems, m
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(goedels_incompleteness_theorems_tests).
+:- begin_tests(godels_incompleteness_theorems_tests).
 
-test(perspective_invariance) :-
-    % Verify that the classification is Mountain from all key perspectives,
-    % demonstrating its status as a natural law.
-    constraint_indexing:constraint_classification(goedels_incompleteness_theorems, Type1, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(goedels_incompleteness_theorems, Type2, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(goedels_incompleteness_theorems, Type3, context(agent_power(analytical), _, _, _)),
-    Type1 == mountain,
-    Type1 == Type2,
-    Type2 == Type3.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(godels_incompleteness_theorems, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(godels_incompleteness_theorems, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(natural_law_metrics) :-
-    % Verify that the metrics conform to the thresholds for a Mountain.
-    narrative_ontology:constraint_metric(goedels_incompleteness_theorems, extractiveness, E),
-    narrative_ontology:constraint_metric(goedels_incompleteness_theorems, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(godels_incompleteness_theorems, ExtMetricName, E),
+    domain_priors:suppression_score(godels_incompleteness_theorems, S),
     E =< 0.25,
     S =< 0.05.
 
-test(natural_emergence) :-
-    domain_priors:emerges_naturally(goedels_incompleteness_theorems).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(godels_incompleteness_theorems),
+    narrative_ontology:constraint_metric(godels_incompleteness_theorems, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(godels_incompleteness_theorems, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
-:- end_tests(goedels_incompleteness_theorems_tests).
+:- end_tests(godels_incompleteness_theorems_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -196,86 +171,40 @@ test(natural_emergence) :-
 
 /**
  * LOGIC RATIONALE:
- *   This constraint is a canonical example of a Mountain. Its properties are
- *   not a matter of policy or enforcement but are a discovered, proven feature
- *   of formal logical systems. The base extractiveness of 0.20 reflects the
- *   "cost" it imposes on the philosophical project of formalism (i.e., the
- *   loss of the dream of a complete, provably consistent theory of everything).
- *   The suppression score is near-zero (0.01) because the theorem does not
- *   "suppress" alternatives; it proves them to be impossible for a given
- *   class of systems.
+ *   Extractiveness (0.08): Minimal. Gödel's theorem does not extract value from one agent to benefit another. It does not concentrate power, restrict mobility, or create asymmetric advantage. It is a purely logical constraint. The theorem states a negative result about completeness; it does not establish a mechanism of advantage. Suppression (0.02): Negligible. There are no alternatives being suppressed. The theorem does not prevent agents from choosing systems, exploring extensions, or working in richer languages. It simply shows that certain goals (complete axiomatization) are impossible. This is not suppression of options; it is identification of an impossible goal. Theater ratio (0.05): Minimal. The proof of Gödel's theorem is mathematically rigorous, constructive, and non-performative. There is no ritual, no institutional maintenance required, no gap between form and function. The theorem stands on its mathematical proof alone. Accessibility collapse (0.92): Very high. Understanding the theorem requires sophisticated mathematical background, but the logical structure is transparently laid out. Those without the background cannot verify it directly, but the barrier is epistemic complexity, not deliberate exclusion. Resistance (0.08): Low. Once understood, the theorem is not resisted. It is accepted as valid across all mathematical schools and traditions. There is no institutional resistance to the theorem's conclusions.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. The theorem's status as a fundamental limit
- *   is invariant across all observers and agents. Whether one is a powerless
- *   proposition within a system or an institutional designer of such systems,
- *   the constraint is an unchangeable feature of reality. This invariance is
- *   the hallmark of a Mountain.
+ *   All four perspectives classify identically as Mountain. This is the defining property of a natural law constraint: it appears the same from every observation point. The powerless agent, the moderate agent, the institutional agent, and the analytical observer all see the same constraint — a structural limit that does not change based on their position or power. There is no gap because there is no asymmetry. This uniform classification across all perspectives is the signature of a true mountain constraint.
  *
  * DIRECTIONALITY LOGIC:
- *   Directionality logic (beneficiary/victim declarations) is not applicable
- *   to this constraint. As a Mountain, it does not have a direction of
- *   extraction relative to different agents; its effects are a universal
- *   consequence of the rules of logic itself.
+ *   No directionality computation is required for mountain constraints. The theorem is not about power relations or beneficiary-victim dynamics. Every agent — regardless of power level, time horizon, exit options, or scope — encounters the same logical constraint: true statements exist that cannot be proven in any sufficiently-rich, consistent, recursive formal system. The constraint is agent-independent and observer-independent. The mathematical law itself is the constraint, not any institutional or social arrangement.
  *
- * MANDATROPHY ANALYSIS:
- *   The classification as a Mountain prevents mislabeling a fundamental
- *   logical limit as a form of social or political control (e.g., a Snare).
- *   While individuals might *feel* trapped by the theorem's implications, the
- *   framework correctly identifies the source of the constraint as the
- *   impersonal structure of logic, not an imposed rule with beneficiaries.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_goedel_intuition,
-    'Does human mathematical intuition operate via non-algorithmic processes that transcend the limits of formal systems described by Gödel?',
-    'Neuroscience and cognitive science research into the physical basis of mathematical reasoning; progress in quantum computing models of consciousness.',
-    'If true, human thought is not fully captured by Turing machines, and a fundamental gap exists between mind and formal logic. If false, human intuition is also ultimately bound by Gödelian limits, even if its heuristics are complex.',
-    confidence_without_resolution(medium)
-).
-
-% /3 form: typed classification for reporting engine (REQUIRED)
-% The reporting engine reads narrative_ontology:omega_variable/3 with structure
-% (ID, TypeClass, Description) where TypeClass is one of:
-%   empirical   — resolvable by gathering more data
-%   conceptual  — depends on definitional or theoretical framing
-%   preference  — depends on value judgments or policy choices
-% The /3 form is what the engine reads; /5 provides narrative context.
-narrative_ontology:omega_variable(omega_goedel_intuition, empirical, 'Whether human mathematical intuition is algorithmic and thus subject to Gödelian limits.').
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(goedels_incompleteness_theorems, 0, 10).
+narrative_ontology:interval(godels_incompleteness_theorems, 1931, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not applicable. As a Mountain (a timeless logical fact), the constraint's
-% properties do not drift over time. No measurement facts are needed.
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Not applicable for this constraint.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. Directionality is irrelevant for a Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

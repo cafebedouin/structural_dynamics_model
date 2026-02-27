@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: galois_theory_symmetry
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_galois_theory_symmetry, []).
@@ -38,11 +39,8 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -59,23 +57,27 @@
  *   domain: mathematical
  *
  * SUMMARY:
- *   Galois Theory provides a fundamental connection between field theory and
- *   group theory. It characterizes the solvability of polynomials by radicals
- *   through the symmetry group of their roots (the Galois group). Most
- *   famously, it proves the structural impossibility of finding a general
- *   formula for the roots of polynomials of degree five or higher in terms
- *   of radicals. This is an unchangeable feature of algebraic structures.
+ *   Galois Theory represents the mathematical correspondence between
+ *   polynomial root structures and their symmetry groups. Formalized by
+ *   Évariste Galois in the early 19th century, the theory provides a complete
+ *   characterization of which polynomial equations can be solved by algebraic
+ *   operations (radicals). The Galois correspondence maps field extensions to
+ *   automorphism groups, establishing that the symmetries of roots determine
+ *   the solvability properties of their defining polynomials. This constraint
+ *   exhibits the defining properties of a Mountain: it emerges as a logical
+ *   necessity from the axioms of field and group theory; it provides an
+ *   accessibility ceiling (unsolvability of quintics) that cannot be
+ *   bypassed; it contains zero degrees of freedom across all perspectives;
+ *   and it imposes no extraction or suppression because it is equally binding
+ *   and transparent to all observers. No agent benefits at another's expense
+ *   — the constraint is a shared discovery of invariant mathematical
+ *   structure.
  *
- * KEY AGENTS (by structural relationship):
- *   - Polynomial Roots (powerless/trapped): The mathematical objects whose
- *     relationships are inescapably governed by their internal symmetry group.
- *   - Abstract Algebraists (institutional/arbitrage): Primary beneficiaries who
- *     use the theory as a powerful coordination tool to navigate and prove
- *     results in complex algebraic structures.
- *   - Mathematics Students (moderate/constrained): Temporary victims of the
- *     theory's high cognitive cost, which can feel like a barrier to entry.
- *   - Analytical Observer: Sees the complete structure as a fundamental,
- *     unchangeable law of mathematics.
+ * KEY AGENTS:
+ *   - Research Mathematician: Institutional/arbitrage — works within Galois structure to discover and prove theorems; benefits from constraint as a source of tractable problems
+ *   - Applied Engineer: Powerful/mobile — encounters the constraint as an accessibility ceiling (quintic unsolvability); cannot negotiate the boundary
+ *   - Student of Algebra: Powerless/trapped — learns the constraint as a fundamental truth; experiences it as a natural law of mathematics
+ *   - Analytical Observer: Analytical/analytical — perceives the constraint as a universal logical structure; examines whether it persists across foundational systems
  */
 
 /* ==========================================================================
@@ -83,104 +85,60 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: Low (0.2). It is a structural truth. However, it "extracts"
-% the possibility of "easy" radical solutions for high-degree equations,
-% demanding significant cognitive labor to understand the underlying group laws.
-domain_priors:base_extractiveness(galois_theory_symmetry, 0.20).
-
-% Rationale: Very low (0.05). It reveals deeper truths rather than hiding them.
-% It suppresses the "naive" hope for a general quintic formula, but this is
-% a foreclosure of an impossible path, not coercion. Meets mountain threshold.
-domain_priors:suppression_score(galois_theory_symmetry, 0.05).
-
-% Rationale: Zero. The theory is pure substance with no performative aspect.
-domain_priors:theater_ratio(galois_theory_symmetry, 0.0).
+domain_priors:base_extractiveness(galois_theory_symmetry, 0.08).
+domain_priors:suppression_score(galois_theory_symmetry, 0.02).
+domain_priors:theater_ratio(galois_theory_symmetry, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(galois_theory_symmetry, extractiveness, 0.20).
-narrative_ontology:constraint_metric(galois_theory_symmetry, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(galois_theory_symmetry, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(galois_theory_symmetry, extractiveness, 0.08).
+narrative_ontology:constraint_metric(galois_theory_symmetry, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(galois_theory_symmetry, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain.
-% Accessibility Collapse: It is impossible to conceive of a valid alternative.
-narrative_ontology:constraint_metric(galois_theory_symmetry, accessibility_collapse, 1.0).
-% Resistance: Meaningful resistance is incoherent. One cannot 'oppose' a theorem.
-narrative_ontology:constraint_metric(galois_theory_symmetry, resistance, 0.0).
+narrative_ontology:constraint_metric(galois_theory_symmetry, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(galois_theory_symmetry, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(galois_theory_symmetry, scaffold).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(galois_theory_symmetry, mountain).
 narrative_ontology:human_readable(galois_theory_symmetry, "Galois Theory (Symmetry of Roots)").
 narrative_ontology:topic_domain(galois_theory_symmetry, "mathematical").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Emerges naturally from the axioms of fields and groups.
 domain_priors:emerges_naturally(galois_theory_symmetry).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Although the claim is Mountain, other perspectives are non-Mountain. These
-% declarations feed the directionality derivation for those perspectives.
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(galois_theory_symmetry, abstract_algebraists).
-narrative_ontology:constraint_beneficiary(galois_theory_symmetry, theoretical_physicists).
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(galois_theory_symmetry, mathematics_students).
-narrative_ontology:constraint_victim(galois_theory_symmetry, naive_mathematicians). % Those hoping for a general formula.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE ROOTS OF THE QUINTIC (MOUNTAIN)
-% For the roots of a polynomial like x^5 - x - 1, the Galois group S_5 is an
-% unchangeable destiny. Because S_5 is not a solvable group, the roots *cannot*
-% be expressed by radicals. This is an algebraic Mountain that no computation
-% can circumvent.
-constraint_indexing:constraint_classification(galois_theory_symmetry, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE PROFESSIONAL MATHEMATICIAN (ROPE)
-% For the expert, Galois Theory is a "Rope"—a pure coordination mechanism. It
-% allows them to "climb" from the low-level data of coefficients to the
-% high-level structure of groups, making intractable problems solvable by
-% switching representations.
-constraint_indexing:constraint_classification(galois_theory_symmetry, scaffold,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The default analytical context sees the constraint for what it is: a
-% fundamental, unchangeable law of algebraic structures.
+% PERSPECTIVE 1: ANALYTICAL OBSERVER (MOUNTAIN) — From the universal analytical standpoint, Galois Theory embodies a mathematical necessity: the correspondence between field extensions and automorphism groups is a logical consequence of set theory and group axioms. The theory is invariant across all mathematical foundations (ZFC, intuitionistic, constructive); the symmetry structure persists regardless of proof method or formalization. Zero degrees of freedom — the constraint is a pure mathematical law.
 constraint_indexing:constraint_classification(galois_theory_symmetry, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 4: THE GRADUATE STUDENT (SNARE)
-% To the student, the Galois Correspondence often feels like a "Snare." It
-% promises a "simple" link between subfields and subgroups, but the path to
-% verifying that link extracts immense cognitive energy and can feel like a
-% coercive barrier to understanding. This is a metaphorical classification
-% reflecting the high cognitive cost imposed on a constrained agent.
-constraint_indexing:constraint_classification(galois_theory_symmetry, scaffold,
-    context(agent_power(moderate),
+% PERSPECTIVE 2: RESEARCH MATHEMATICIAN (MOUNTAIN) — Working within the constraint of Galois symmetry is not extraction; it is discovery of invariant structure. The mathematician cannot bypass the Galois correspondence any more than a physicist can bypass conservation of energy. The constraint defines what is provable about polynomial roots. No coercion; no alternatives suppressed — only the logical landscape revealed.
+constraint_indexing:constraint_classification(galois_theory_symmetry, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: APPLIED ENGINEER (MOUNTAIN) — Galois Theory provides hard limits on what equations can be solved by radicals (fifth-degree polynomials and higher cannot be solved in closed form by algebraic operations). This is not a suppressive constraint imposed from outside; it is an accessibility ceiling built into the logical structure of fields and groups. The engineer cannot extract workarounds — the ceiling is inviolable.
+constraint_indexing:constraint_classification(galois_theory_symmetry, mountain,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: STUDENT OF ALGEBRA (MOUNTAIN) — Even a learner with no mathematical power experiences Galois Theory as a natural law, not as suppression. The theory cannot be negotiated, cajoled, or evaded — it simply IS. No extraction occurs because no asymmetric benefit accrues to any agent. The constraint is equally binding and equally transparent to all observers.
+constraint_indexing:constraint_classification(galois_theory_symmetry, mountain,
+    context(agent_power(powerless),
             time_horizon(biographical),
-            exit_options(constrained),
+            exit_options(trapped),
             spatial_scope(local))).
 
 /* ==========================================================================
@@ -189,25 +147,26 @@ constraint_indexing:constraint_classification(galois_theory_symmetry, scaffold,
 
 :- begin_tests(galois_theory_symmetry_tests).
 
-test(perspectival_gap_mountain_to_rope) :-
-    % Verify the gap between the powerless (roots) and institutional (expert) views.
-    constraint_indexing:constraint_classification(galois_theory_symmetry, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(galois_theory_symmetry, scaffold, context(agent_power(institutional), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(galois_theory_symmetry, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(galois_theory_symmetry, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(student_frustration_snare) :-
-    % A moderate power agent in a constrained/biographical context sees the abstraction as a Snare.
-    constraint_indexing:constraint_classification(galois_theory_symmetry, snare, context(agent_power(moderate), time_horizon(biographical), exit_options(constrained), spatial_scope(local))).
-
-test(analytical_view_is_mountain) :-
-    % The analytical view and claim must be Mountain.
-    narrative_ontology:constraint_claim(galois_theory_symmetry, mountain),
-    constraint_indexing:constraint_classification(galois_theory_symmetry, mountain, context(agent_power(analytical), _, _, _)).
-
-test(mountain_thresholds_met) :-
-    narrative_ontology:constraint_metric(galois_theory_symmetry, extractiveness, E),
-    narrative_ontology:constraint_metric(galois_theory_symmetry, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(galois_theory_symmetry, ExtMetricName, E),
+    domain_priors:suppression_score(galois_theory_symmetry, S),
     E =< 0.25,
     S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(galois_theory_symmetry),
+    narrative_ontology:constraint_metric(galois_theory_symmetry, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(galois_theory_symmetry, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(galois_theory_symmetry_tests).
 
@@ -217,84 +176,86 @@ test(mountain_thresholds_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   The constraint is fundamentally a Mountain, representing a timeless mathematical
- *   truth. The base extractiveness (0.20) is low but non-zero, modeling the
- *   cognitive labor required to understand the theory, which "extracts" the
- *   possibility of simpler solutions. The suppression score (0.05) is set at
- *   the maximum for a Mountain, as it forecloses the search for a general
- *   quintic formula, a path that is structurally impossible. The NL profile
- *   metrics (accessibility_collapse=1.0, resistance=0.0) are maximal/minimal
- *   as appropriate for a mathematical theorem.
+ *   Extractiveness (0.08): Minimal. Galois Theory does not extract value from any agent. The correspondence between field extensions and automorphism groups is a neutral characterization of logical structure — it reveals properties inherent to polynomials and fields, without creating asymmetry. The small non-zero value reflects that some cognitive effort (learning the theory) is required, but this is not extraction in the DR sense (asymmetric cost-bearing). Suppression (0.02): Negligible. The theory does not suppress alternatives — it proves that certain alternatives (radical formulas for quintics) are impossible, which is revelation, not suppression. No agent is forced into servitude or prevented from exit. Theater ratio (0.15): Very low. Galois Theory presentations are transparent about their logical scaffolding. Modern proofs are constructive and rigorous; the pedagogical performance involves minimal theatrical ornamentation. The small non-zero value reflects that some formalization choices and pedagogical sequencing involve convention (e.g., which definition of 'Galois extension' is presented first), but these are minor compared to the logical content.
  *
  * PERSPECTIVAL GAP:
- *   The gap is significant. For the polynomial roots, it is an inescapable
- *   Mountain. For the expert mathematician, it is a Rope—a tool for
- *   coordination and proof. For the student, the high cognitive barrier can
- *   feel like a Snare, extracting effort for passage. This demonstrates how
- *   even a fundamental Mountain can be experienced differently based on an
- *   agent's power, exit options, and relationship to the structure.
+ *   Galois Theory exhibits zero perspectival gap — all observers classify it as a Mountain. The research mathematician, the applied engineer, the powerless student, and the analytical observer all experience the constraint as an immutable logical structure with no asymmetric extraction. This uniformity across (P,T,E,S) tuples is the hallmark of a true Mountain: the structure of the constraint is invariant across all contexts. Unlike the verification bottleneck exemplar (which shows all six types from different perspectives), Galois Theory shows no perspectival variation because there is no structural asymmetry to exploit, no suppression to experience, and no extraction to bear.
  *
  * DIRECTIONALITY LOGIC:
- *   Beneficiaries are algebraists and physicists who leverage symmetry principles.
- *   Victims are students facing the steep learning curve and historical
- *   mathematicians whose search for a general formula was rendered void. These
- *   declarations allow the engine to derive a high directionality (d) for the
- *   student (victim + constrained exit), leading to a high effective
- *   extraction (χ) and a Snare classification, despite the low base
- *   extractiveness (ε).
+ *   Directionality is undefined for this constraint because it is a pure Mountain. The formula d relates an agent's structural position (beneficiary vs victim, power level, exit options) to the constraint. For Galois Theory, no such structural position exists — the constraint is equally binding and equally transparent to all agents. Every agent (mathematical power or not) discovers the same invariant: the correspondence between field extensions and automorphism groups. The absence of directionality is itself diagnostic: it confirms the mountain classification.
  *
  * MANDATROPHY ANALYSIS:
- *   By classifying the analytical perspective as a Mountain, the system correctly
- *   identifies the core nature of the constraint as a structural limit. The
- *   other perspectives (Rope, Snare) are understood as context-dependent
- *   experiences of that fundamental reality, preventing the mislabeling of a
- *   mathematical law as a purely social or coercive construct.
+ *   Galois Theory resolves the mandatrophy trivially by exhibiting zero extractiveness (0.08) and zero suppression (0.02) across all perspectives. There is no ambiguity between 'coordination mechanism' and 'extraction mechanism' because neither exists — the constraint is a pure revelation of logical structure. The theory does not solve a collective action problem (no Rope), does not impose coercive asymmetry (no Snare), does not degrade into theater (no Piton). It simply IS, across all observers, all timescales, all exit options. This is the canonical mountain resolution: the constraint dissolves the mandatrophy by showing no extractive structure at all.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_inverse_galois_problem,
-    'Is every finite group the Galois group of some extension of the rational numbers (Q)?',
-    'Formal proof or counterexample; currently unsolved for many groups.',
-    'If true, the landscape of algebraic structures is perfectly mirrored by group theory. If false, there are group structures that cannot be realized as symmetries of polynomial roots over Q, implying a mismatch between the two domains.',
-    confidence_without_resolution(low)
+    constructive_foundations_invariance,
+    'Does Galois Theory preserve its fundamental structure across all mathematical foundations (classical ZFC, intuitionistic logic, constructive mathematics)?',
+    'Comparative analysis of Galois correspondence proofs in classical, intuitionistic, and constructive settings; identification of any essential axioms that differ by foundation',
+    'If invariant across foundations: mountain classification confirmed at universal scope. If foundational differences emerge: constraint may decompose into multiple stories with different extractiveness per foundation.',
+    confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_inverse_galois_problem, empirical, 'The Inverse Galois Problem: Whether all finite groups can be realized as Galois groups over Q.').
+narrative_ontology:omega_variable(constructive_foundations_invariance, empirical, 'Whether Galois Theory structure persists across mathematical foundations').
+
+omega_variable(
+    algorithmic_decidability_boundary,
+    'Is the boundary between solvable and unsolvable polynomial equations (the fifth-degree radical threshold) a logical necessity or a consequence of computational limitations?',
+    'Theoretical analysis of Abel-Ruffini proof architecture; examination of whether the proof depends on any contingent mathematical assumptions vs purely logical structure',
+    'If purely logical: mountain classification holds. If dependent on computational model: constraint may be reframed as a resource-bounded accessibility ceiling (Scaffold or Tangled Rope).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(algorithmic_decidability_boundary, conceptual, 'Whether unsolvability of quintics is logically necessary or computationally contingent').
+
+omega_variable(
+    pedagogical_naturalization_effect,
+    'Does the presentation of Galois Theory as a ''natural law'' of mathematics risk naturalizing what are actually contingent historical discoveries and proof conventions?',
+    'Historical-pedagogical analysis: comparison of learning outcomes and mathematical intuition when Galois Theory is presented as discovered invariant structure vs when presented as constructed framework',
+    'If naturalization effect is strong: pedagogical theater is higher than measured (0.15), suggesting false summit classification. If minimal: mountain classification is robust.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(pedagogical_naturalization_effect, preference, 'Whether Galois Theory presentation naturalizes contingent historical conventions').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(galois_theory_symmetry, 1832, 2026).
+narrative_ontology:interval(galois_theory_symmetry, 0, 200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not applicable. Base extractiveness is low (0.20 < 0.46) and the constraint
-% is a static mathematical law with no lifecycle drift.
+% Theater ratio over time
+narrative_ontology:measurement(gal_tr_t0, galois_theory_symmetry, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(gal_tr_t100, galois_theory_symmetry, theater_ratio, 100, 0.15).
+narrative_ontology:measurement(gal_tr_t200, galois_theory_symmetry, theater_ratio, 200, 0.18).
+
+% Extraction over time
+narrative_ontology:measurement(gal_be_t0, galois_theory_symmetry, base_extractiveness, 0, 0.06).
+narrative_ontology:measurement(gal_be_t100, galois_theory_symmetry, base_extractiveness, 100, 0.08).
+narrative_ontology:measurement(gal_be_t200, galois_theory_symmetry, base_extractiveness, 200, 0.09).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Not applicable for this constraint.
+narrative_ontology:coordination_type(galois_theory_symmetry, information_standard).
+
+% DUAL FORMULATION NOTE:
+% Galois Theory stands alone as a foundational mathematical constraint. It is not decomposable into multiple stories because it exhibits a single, invariant ε across all observables and measurement methodologies. Whether measured via unsolvability proofs, group-theoretic characterizations, or pedagogical presentation, the underlying extractiveness remains constant at ~0.08. No observable-dependent decomposition is needed.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. The standard derivation from beneficiary/victim status and
-% exit options correctly models the perspectival experiences.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

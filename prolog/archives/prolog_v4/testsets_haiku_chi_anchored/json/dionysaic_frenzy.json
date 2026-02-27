@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "dionysaic_frenzy",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dion"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dionysiac Religious Possession",
+    "topic_domain": "religious/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dionysian_priesthood",
+      "aristocratic_male_audiences"
+    ],
+    "victims": [
+      "possessed_women",
+      "social_hierarchy_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Maenad (Possessed Woman)",
+      "comment": "PERSPECTIVE 1: MAENAD / POSSESSED WOMAN (SNARE) \u2014 Compelled by religious mandate to abandon household, social role, and legal standing. No socially sanctioned exit. Bears full cost of ritual possession: loss of status, vulnerability to violence, social ostracism upon return. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Peripheral Participant (Non-Elite Woman)",
+      "comment": "PERSPECTIVE 2: PERIPHERAL PARTICIPANT (TANGLED ROPE) \u2014 Participates in mountain rites with both genuine religious experience and constrained agency. Experiences coordination function (communal ritual, collective ecstasy) but also extraction: mandatory participation, loss of household time, sexual vulnerability. Constrained exit due to social expectation and religious authority. d\u22480.68, f(d)\u22480.98, \u03c3=0.9 \u2192 \u03c7\u22480.46."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Dionysian Priesthood",
+      "comment": "PERSPECTIVE 3: DIONYSIAN PRIESTHOOD (ROPE) \u2014 Organizes mountain rites as religious coordination mechanism. Benefits from ritual authority, social legitimacy, and regular gatherings that reinforce institutional power. Experiences the constraint as pure coordination: managing the ecstatic collective, channeling religious energy, maintaining ritual structure. d\u22480.08, f(d)\u2248-0.08, \u03c3=0.9 \u2192 \u03c7\u2248-0.04. Net beneficiary through institutional legitimacy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Aristocratic Male Audience",
+      "comment": "PERSPECTIVE 4: ARISTOCRATIC MALE AUDIENCE (ROPE) \u2014 Spectates mountain rites as religious entertainment and demonstration of power. Watches women abandon social constraints at male authority's sanction. Experiences constraint as pure coordination: the ritual provides legitimate channel for social transgression (women outside household control) that reinforces male authority rather than threatening it. d\u22480.10, f(d)\u2248-0.06, \u03c3=0.9 \u2192 \u03c7\u2248-0.03. Net beneficiary through spectacle and reaffirmed control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The City-State Authorities",
+      "comment": "PERSPECTIVE 5: CITY-STATE AUTHORITIES (TANGLED ROPE) \u2014 Recognize both coordination function (channeling disruptive religious energy, integrating women into civic ritual) and extraction risk (loss of household labor, potential for female insurgency, temporary inversion of social hierarchy). Active enforcement required: regulate when rites occur, control spatial boundaries, limit participation duration. Sees tension between legitimizing Dionysian cult (social stability) and constraining female autonomy (power consolidation). d\u22480.45, f(d)\u22480.48, \u03c3=0.9 \u2192 \u03c7\u22480.22."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Ancient Ritual Form",
+      "comment": "PERSPECTIVE 6: ANCIENT RITUAL FORM (PITON) \u2014 Over centuries, Dionysian possession becomes increasingly theatrical and formalized. The initial ecstatic frenzy (where women genuinely experienced alternative consciousness) degrades into ritualized performance: prescribed movements, costume, schedule. Theater ratio rises as the original religious experience becomes institutional theater. Maintained through cultural inertia despite loss of spontaneity. theater_ratio=0.58 is borderline piton (gate at 0.70); trajectory analysis suggests degradation toward full piton by later Hellenistic period. d\u22480.08, f(d)\u2248-0.08, \u03c3=0.9 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized Constraint)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) \u2014 From civilization-spanning perspective, Dionysian possession appears as an immutable property of human consciousness: altered states, ecstatic experience, and periodic transgression of social norms are universal features of religious life. The constraint would seem to be 'inherent to religion itself.' However, the base properties (\u03b5=0.52, suppression=0.68, active enforcement required) contradict true mountain classification. This perspective risks naturalizing a contingent institutional arrangement (male-controlled ritualization of female transgression) as an inevitable feature of human nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genuine_ecstasy_vs_performed",
+      "question": "To what extent did participants experience genuine altered consciousness (divinely induced madness) versus socially sanctioned performance?",
+      "resolution_mechanism": "Ethnographic comparison with modern possession rituals; pharmacological analysis of substances used in rites; textual analysis of ecstatic descriptions vs narrative framings by male observers",
+      "impact": "If mostly genuine: constraint is primarily a coordination mechanism for alternative consciousness (Rope from more perspectives). If mostly performed: constraint is extraction of female labor/visibility under religious cover (Snare from more perspectives).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether Dionysian ecstasy was genuine altered consciousness or performed"
+    },
+    {
+      "id": "female_agency_within_possession",
+      "question": "Did the state of possession provide genuine autonomy and agency to women, or did it create an illusion of autonomy while reinforcing male control?",
+      "resolution_mechanism": "Analysis of women's choices during rites (participation timing, spatial movement, refusal patterns); comparison with women's agency in non-ritual contexts; longitudinal tracking of women's social status post-possession across generations",
+      "impact": "If genuine autonomy: constraint has stronger coordination function (Rope/Scaffold). If illusory: constraint is pure extraction masked by religious framing (Snare/Piton).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether possession provided genuine female agency"
+    },
+    {
+      "id": "necessity_of_suppression",
+      "question": "Was the high suppression level (mandatory participation, social ostracism for refusal, legal vulnerability) necessary to maintain the ritual, or did it reflect male anxiety about autonomous female mobility?",
+      "resolution_mechanism": "Comparative analysis of voluntary versus enforced participation; investigation of punishment for non-participation; archaeological evidence of sanctuary spaces for women; textual analysis of male anxiety about female independence",
+      "impact": "If necessary for function: suppression is intrinsic to coordination (Tangled Rope). If anxiety-driven: suppression is pure extraction overlaid on optional coordination (Snare with coercive augmentation).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether suppression was functionally necessary or anxiety-driven"
+    },
+    {
+      "id": "societal_stability_function",
+      "question": "Did Dionysian possession rituals stabilize the city-state by providing sanctioned outlet for female transgression, or did they destabilize patriarchal order by temporarily inverting gender hierarchy?",
+      "resolution_mechanism": "Correlation analysis between frequency of Dionysian rites and periods of social unrest; investigation of actual riots or property damage during mountain rites; comparison of city-states with strong vs weak Dionysian traditions; study of male anxiety in literature during periods of intense Dionysian practice",
+      "impact": "If stabilizing: constraint is primarily coordination (Rope from authorities' perspective). If destabilizing: constraint is tension between extraction and resistance (Tangled Rope), with risk of constraint breakdown.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Dionysian rites stabilized or destabilized patriarchal order"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Dionysiac religious possession represents a structural constraint on female autonomy masked by the rhetoric of divine ecstasy. Women designated as maenads or bacchae were expected to abandon household duties, city boundaries, and legal protections to participate in mountain rites organized by a Dionysian priesthood and observed by aristocratic male audiences. The constraint combines genuine religious coordination (ecstatic communal experience, alternative consciousness) with extraction of female labor and vulnerability. The base extractiveness (0.52) reflects moderate net extraction \u2014 women gain religious legitimacy and temporary social inversion but lose household status, face sexual vulnerability, and cannot refuse participation without social penalty. Suppression is high (0.68) because exit is socially sanctioned at male discretion: the priesthood and authorities determine when rites occur and how long participants remain obligated. The theater ratio (0.58) indicates that while the initial ecstatic experience may be genuine, the institutional organization increasingly formalizes and ritualizes the phenomenon, converting lived transcendence into prescribed performance over generational timescales. This constraint exemplifies how indexical classification reveals the perspectival structure of an apparently natural phenomenon: what appears to male spectators as pure religious coordination (Rope) appears to the possessed women as extraction with constrained exit (Tangled Rope), and to the truly powerless as a snare with no legitimate escape. The civilization-spanning analytical perspective risks naturalizing the constraint as an inevitable feature of human religious consciousness \u2014 a false summit that obscures the contingent institutional arrangements maintaining it.",
+    "key_agents": [
+      "Maenad / Possessed Woman: Primary victim (powerless/trapped) \u2014 compelled to abandon household and social role; faces sexual vulnerability and social ostracism",
+      "Dionysian Priesthood: Primary beneficiary (institutional/arbitrage) \u2014 commands religious authority, legitimacy, and organizational power through ritual control",
+      "Aristocratic Male Audience: Secondary beneficiary (powerful/arbitrage) \u2014 spectates ritual transgression that reaffirms their authority; witnesses female autonomy only at their sanction",
+      "City-State Authorities: Regulating institutional actor (organized/constrained) \u2014 balance coordination function (channeling religious energy) against extraction risk (female loss of household labor); actively enforce temporal and spatial boundaries",
+      "Peripheral Participants: Secondary victims (moderate/constrained) \u2014 experience both genuine religious coordination and extraction; constrained exit due to social expectations",
+      "Ancient Ritual Form: Institutional process (institutional/arbitrage) \u2014 degrades from genuine ecstatic practice into formalized theater over generational timescales"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting a mix of genuine coordination benefit (ecstatic experience, religious legitimacy) and extraction (loss of household status, labor, legal protection, vulnerability to harm). The constraint extracts more than pure coordination would require, but less than pure predation. Initial extractiveness was lower (~0.28); it increases over the interval as the ritual becomes more institutionalized and formalized. Suppression (0.68): High. The mandatory nature of participation for designated women, the social ostracism for refusal, the legal vulnerability during the rite, and the inability to unilaterally exit once the priesthood declares a possession session all constitute significant suppression. Theater ratio (0.58): Moderate, trending toward high. The initial Dionysian frenzy may have involved genuine ecstatic experience and spontaneous behavior. Over time, as the ritual becomes institutionalized, prescribed movements and ceremonial formalization increase. By the later classical period, the theater ratio approaches 0.70 (piton threshold). The upward trajectory suggests degradation from spontaneous religious experience toward performative ritual maintained through institutional inertia. Active enforcement: True. The priesthood and city-state authorities actively enforce participation, temporal boundaries, and spatial restrictions. Without institutional enforcement, the constraint would collapse \u2014 women would simply not participate.",
+    "perspectival_gap": "This constraint reveals a profound perspectival gap between beneficiaries and victims. The Dionysian priesthood perceives pure coordination (Rope) \u2014 they are solving the legitimate problem of organizing ecstatic collective religious experience and channeling disruptive religious energy in a way that maintains social order. Aristocratic male observers perceive the same constraint as coordination plus spectacle (Rope) \u2014 they see the rite as a perfectly controlled transgression where women's autonomy is demonstrated only at male discretion, reinforcing patriarchal authority. But the possessed women perceive extraction with constrained exit (Tangled Rope or Snare) \u2014 they experience both the genuine religious coordination and the loss of household status, the vulnerability, the legal exposure, and the inability to refuse without severe social penalty. The city-state authorities perceive the mixed character most clearly (Tangled Rope) \u2014 they recognize both the stabilizing coordination function and the extraction risk. The peripheral women (non-elite participants) perceive Tangled Rope: genuine communal religious experience mixed with extraction and constrained exit. From a sufficiently distant analytical perspective, the constraint risks appearing as a natural law of religious consciousness (Mountain) \u2014 an immutable feature of how humans practice ecstatic religion \u2014 but this naturalizing view obscures the contingent institutional enforcement that makes the constraint possible.",
+    "directionality_logic": "Maenad / Possessed Woman: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Woman is compelled to participate, has no legitimate exit option, and bears the costs of possession (status loss, vulnerability, labor loss). Peripheral Participants: Victim + constrained \u2192 d\u22480.68, f(d)\u22480.98. Significant extraction but not maximum. These women can theoretically refuse at cost (social ostracism, religious damnation), so exit is constrained rather than absolutely trapped. Dionysian Priesthood: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary. They command the ritual, benefit from institutional legitimacy and power, and can exit or restructure the constraint at will (they are the ones who control when rites occur). Aristocratic Male Audience: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.06. Net beneficiary. They spectate without obligation, benefit from the reinforcement of patriarchal authority, and have complete exit optionality. City-State Authorities: Mixed + constrained \u2192 d\u22480.45, f(d)\u22480.48. Moderate extraction exposure. Authorities benefit from the stability function but risk loss of household labor and potential female insurgency if the ritual becomes too transgressive. Their constrained exit reflects that they cannot simply ban the Dionysian cult without risking religious backlash, but they can regulate it. No overrides are necessary \u2014 the structural derivation captures the relationships accurately.",
+    "mandatrophy_analysis": "The mandatrophy analysis for Dionysiac possession focuses on whether the constraint is primarily coordination or primarily extraction, and whether the high suppression level is necessary to maintain the function or is anxiety-driven overlay. The base properties (\u03b5=0.52, suppression=0.68, active enforcement required, beneficiaries and victims both present) satisfy the Tangled Rope gates: there IS a coordination function (organizing ecstatic religious experience, channeling collective religious energy, integrating women into civic ritual), and there IS asymmetric extraction (women lose household status, face vulnerability, cannot exit). The mandatrophy is resolved by recognizing that BOTH elements are genuine. The constraint is not mislabeled coordination pretending to be extraction, nor extraction pretending to be coordination \u2014 it is a genuine hybrid where the coordination function and the extraction mechanism are structurally entangled. The city-state cannot maintain the coordination without the suppression, and the suppression cannot be maintained without invoking the coordination function as justification. The puzzle is whether the suppression level (0.68) is intrinsic to the coordination or reflects male anxiety. Omega variables ('necessity_of_suppression', 'female_agency_within_possession') address this directly. If future evidence shows that the ritual could function with much lower suppression (women participate voluntarily), then the classification might shift toward Scaffold (temporary coordination with declining suppression) or pure Rope (low-extraction coordination). For the current state of evidence, Tangled Rope with high suppression is the most accurate classification: both coordination and extraction are structural features, not artifacts of measurement perspective."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "patriarchal_household_control",
+      "religious_authority_legitimacy"
+    ],
+    "dual_formulation_note": "Dionysiac possession decomposes into two structurally distinct claims: (1) the genuine ecstatic religious experience (\u03b5\u22480.15, coordination mechanism, \u03b5-invariant across observers), and (2) the institutional enforcement of mandatory participation with constrained exit (\u03b5\u22480.52, extraction mechanism dependent on male authority structure). These are often conflated in classical sources. The story presented here addresses claim (2): the constraint as an institutional apparatus. A separate story addressing claim (1) would examine the phenomenology of possession across cultures, with much lower extractiveness and no suppression. The two stories are linked because institutional enforcement of claim (2) justifies itself through the religious legitimacy of claim (1)."
+  },
+  "directionality_overrides": []
+}

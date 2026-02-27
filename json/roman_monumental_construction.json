@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "roman_monumental_construction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "romc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Roman State's Monopoly on Opus Caementicium Construction",
+    "topic_domain": "socio_technological/imperial_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "imperial_state",
+      "master_builders",
+      "material_suppliers"
+    ],
+    "victims": [
+      "provincial_municipalities",
+      "private_landowners",
+      "slave_construction_labor"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Provincial Municipality",
+      "comment": "PERSPECTIVE 1: PROVINCIAL MUNICIPALITY (SNARE) \u2014 Trapped by imperial mandate to contribute labor, materials, and funding for monumental projects. No exit option: refusal invites military reprisal or loss of civic status. Bears full extraction costs while benefiting minimally from projects often built to glorify remote emperors rather than serve local needs. Maximum experienced extraction due to trapped status and powerless position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Construction Labor Force",
+      "comment": "PERSPECTIVE 2: CONSTRUCTION LABOR FORCE (TANGLED ROPE) \u2014 Constrained by debt, legal status, and military conscription. Benefits from steady employment and subsistence provisioning during projects; also suffers extraction through labor control, low compensation, and hazardous conditions. Mixed experience: the organization of labor is partly coordination (large-scale project efficiency) and partly coercion (military discipline, slave status, debt bondage). Cannot fully exit but has some mobility across projects and regions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Master Builders Guild",
+      "comment": "PERSPECTIVE 3: MASTER BUILDERS GUILD (ROPE) \u2014 Organized agents (architects, engineers, experienced contractors) who benefit substantially from the monopoly. They have arbitrage options: leverage their specialized knowledge to command high fees, move between provincial projects, or consult across the empire. The constraint is experienced as pure coordination \u2014 they solve a complex technical problem (monumental construction) and capture substantial rents without significant coercion. The guild's organization is enabled by the constraint, not hindered."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Imperial State",
+      "comment": "PERSPECTIVE 4: IMPERIAL STATE (ROPE) \u2014 Pure beneficiary experiencing the constraint as coordination mechanism. The state solves the monumental engineering problem and captures all surplus: prestige, infrastructure for military logistics, public works that legitimize imperial rule. Has complete exit option (arbitrage) \u2014 the state can commission or abandon projects at will. Net extractor \u2014 extraction runs toward the imperial institution, not away. The enforcement machinery (law, military, administrative apparatus) makes the constraint function, but from the state's perspective, this is coordination, not coercion."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Provincial Elite",
+      "comment": "PERSPECTIVE 5: PROVINCIAL ELITE (SCAFFOLD) \u2014 Organized but constrained. Local aristocrats delegate upward while maintaining local authority structures. They experience the constraint as temporary: as the empire consolidates (generational timescale), imperial projects become rationalized into predictable tax schedules rather than ad-hoc demands. Early empire (1st-2nd century) = high suppression, extractive theater. Later empire (3rd-4th century) = degraded theaters, declining project quality, higher costs for weaker returns. Sunset mechanism is the empire's fragmentation and decentralization of authority \u2014 as central power wanes, provincial control over resources reasserts."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Maintenance Bureaucracy",
+      "comment": "PERSPECTIVE 6: MAINTENANCE BUREAUCRACY (PITON) \u2014 By the 3rd century crisis and beyond, the monumental construction constraint degrades into a performative system. Late-empire administrative apparatus maintains the fiction of grand projects (restoration mandates, architectural reports) even as actual construction and maintenance decline due to fiscal exhaustion. Theater ratio high (0.65+): bureaucratic theater persists via inertia while functional capacity atrophies. The system exists because alternatives haven't fully replaced it and because the imperial narrative still requires the appearance of permanent monumentality, not because it effectively delivers projects."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, monumental construction is constrained by sheer physics: coordinating tens of thousands of workers, supplying materials, and maintaining engineering knowledge requires centralized authority. The Roman state is solving an inherent problem of scale \u2014 no way to build aqueducts, roads, coliseums without centralized power. This perspective risks naturalizing what is actually a contingent political-economic arrangement. However, the structural data shows beneficiaries (state, guilds) and victims (municipalities, labor) \u2014 revealing that 'inherent to scale' naturalizes extractive coercion as technological necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "local_voluntary_participation",
+      "question": "What fraction of monumental construction labor was genuinely voluntary (hired market labor) vs. coerced (slave, conscripted, or debt-bonded)?",
+      "resolution_mechanism": "Archaeological and epigraphic analysis of wage records, military conscription documents, and legal codes. Comparison of voluntary vs. coerced worker percentages by project and era.",
+      "impact": "If >50% voluntary: constraint shifts toward Rope (coordination mechanism). If <30% voluntary: constraint solidifies as Snare from labor perspective. Distribution across eras reveals whether empire became more extractive or more consensual over time.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of voluntary to coerced labor in monumental construction"
+    },
+    {
+      "id": "provincial_benefit_realization",
+      "question": "Did provinces genuinely benefit from monumental projects through improved infrastructure (water, transport, defense), or were projects primarily extractive displays of imperial power with minimal local utility?",
+      "resolution_mechanism": "Archaeological data on aqueduct functionality, road maintenance, defensive efficacy, and longevity. Economic analysis of trade flow changes post-construction. Local epigraphic evidence of provincial sentiment and adoption.",
+      "impact": "If high benefit realization: constraint appears more as Tangled Rope from provincial perspective (some coordination benefit mitigates extraction). If low benefit: constraint is pure Snare \u2014 extraction with no return value.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of actual provincial benefit from monumental projects"
+    },
+    {
+      "id": "alternative_funding_mechanisms",
+      "question": "Could monumental construction have been financed through voluntary market mechanisms, or was centralized coercion intrinsic to Roman-era scaling?",
+      "resolution_mechanism": "Comparative analysis: private construction in Late Antique cities vs. imperial era. Economic modeling of voluntary market financing for large projects. Analysis of successful non-state monumental projects (temples, theaters funded by wealthy individuals).",
+      "impact": "If viable alternatives existed: the coercion was contingent, not inherent \u2014 constraint shifts toward Snare/Tangled Rope. If alternatives were infeasible: constraint approaches Mountain (technological necessity).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether non-coercive financing mechanisms were viable"
+    },
+    {
+      "id": "late_empire_degradation_mechanism",
+      "question": "Does the 3rd-4th century shift toward Piton classification represent genuine atrophy (functional capacity declining while theater persists) or recalibration toward smaller, more sustainable projects?",
+      "resolution_mechanism": "Comparison of project scale, completion rates, and maintenance quality (1st-2nd century vs. 3rd-4th century). Analysis of architectural styles, material costs, and labor recruitment methods. Epigraphic evidence of imperial mandates vs. actual construction activity.",
+      "impact": "If genuine atrophy: Piton classification confirmed \u2014 the system persists through narrative momentum as real capacity declines. If recalibration: the constraint evolves toward Scaffold (purposeful downsizing, not degradation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Nature of Late Antique construction system changes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Roman monumental construction system (opus caementicium architecture) represents a hybrid socio-technical constraint that coordinates massive-scale engineering while extracting labor, materials, and wealth from provincial populations. From the 1st-2nd centuries CE through the 3rd-century crisis, the system functioned as a genuine tangled rope: it solved a real coordination problem (how to build aqueducts, roads, forums, fortifications across continental scale) while simultaneously extracting coercive labor, mandated contributions, and political subordination. The constraint exhibits all six DR types from different observational positions: pure extraction (Snare) from the view of conscripted laborers and municipalities; pure coordination (Rope) from the master builders and imperial state; temporary coordination (Scaffold) from provincial elites managing expectations across generational cycles; degraded performance (Piton) from the late-empire administrative bureaucracy maintaining fictional grandeur as actual capacity declined; and apparent natural law (false Mountain) from the analytical perspective that conflates technological necessity with political choice. The theater ratio (0.55, rising to 0.65 by century 3) reflects the constraint's degradation: early imperial projects solved real problems and were genuinely functional; late imperial projects increasingly served as displays of imperial continuity even as execution quality declined and completion rates fell. The extractiveness trajectory (0.38 \u2192 0.52 \u2192 0.58) shows intensification: as economic capacity weakened in the later empire, the same coercive apparatus extracted proportionally more from a shrinking resource base, pushing the constraint toward pure extraction.",
+    "key_agents": [
+      "Imperial State: Primary beneficiary (institutional/arbitrage) \u2014 captures prestige, infrastructure, political legitimacy; commands exit option over all projects",
+      "Master Builders Guild: Secondary beneficiary (organized/arbitrage) \u2014 specialized knowledge monopoly, high fees, cross-empire mobility",
+      "Material Suppliers: Secondary beneficiary (organized/constrained) \u2014 secure contracts, guaranteed demand, but constrained by imperial quality standards and price fixing",
+      "Provincial Municipalities: Primary victim (powerless/trapped) \u2014 mandatory labor contributions, material requisitions, tax obligations with no exit option",
+      "Construction Labor Force: Primary victim (moderate/constrained) \u2014 conscripted, enslaved, or debt-bonded workers; benefit from subsistence provisioning but suffer hazardous conditions and low autonomy",
+      "Provincial Elite: Secondary agent (organized/constrained) \u2014 manage upward extraction and downward control; experience shifts over generational timescale",
+      "Late-Empire Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 maintain performative systems as functional capacity declines; see own process as increasingly theatrical",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing extractive coercion as technological necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts significant resources (labor, materials, wealth) from provincial populations with limited direct return value. However, the value is not as extreme as pure extraction (0.66+) because some local infrastructure benefits are genuine \u2014 aqueducts do supply water, roads do reduce transport costs, though these are secondary to imperial strategic and prestige objectives. Suppression (0.68): High. Significant barriers to refusal include military reprisal, loss of civic status, legal penalties, and monopolization of large-scale construction by the imperial system. Private alternatives are severely constrained by law and imperial authority. Theater ratio (0.55): Moderate-high and rising. Early-empire projects are primarily functional (aqueducts work, roads connect, fortifications defend). By century 3, maintenance and new projects become increasingly performative \u2014 the imperial bureaucracy reports grandeur while actual completion rates and quality decline. Claimed type (Tangled Rope): The constraint exhibits genuine coordination (solving large-scale engineering) and asymmetric extraction (benefiting state/guilds, harming provinces/labor). Both features are required and active.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position: beneficiaries with arbitrage options (imperial state, master builders) experience low d (0.05-0.15), producing negative effective extraction via the sigmoid f(d). Victims with trapped exits (municipalities, conscripted labor) experience high d (0.85-0.95), producing high effective extraction. Moderately constrained agents (construction labor with some project mobility) experience middle d (0.55-0.65), producing moderate f(d) values. The piton perspective derives from high theater ratio and low functional improvement, not from high extraction chi. The false mountain perspective is revealed by the structural beneficiary/victim data: the constraint is contingent political-economic arrangement, not inherent to scale itself.",
+    "perspectival_gap": "This constraint demonstrates perspectival divergence across a six-type spectrum. The imperial state and master builders see a pure coordination solution (Rope) \u2014 they capture the technical problem-solving value. Municipalities and conscripted laborers see pure extraction (Snare) \u2014 they bear costs with no strategic benefit. Organized provincial elites see a temporary arrangement (Scaffold) \u2014 they manage extraction predictably across generational cycles, betting that centralization will eventually stabilize or decline. The late-empire bureaucracy sees its own degraded system (Piton) \u2014 maintaining fictional grandeur as real capacity atrophies. The construction labor force experiences mixed coordination and coercion (Tangled Rope) \u2014 the system both organizes complex work and constrains their agency. The civilizational analytical observer risks seeing technological necessity (Mountain) \u2014 large-scale engineering requires centralized power \u2014 but the structural data reveals this is naturalizing: alternative funding and labor models were available; coercion was political choice, not physical law.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that the six types reflect genuine perspectival differences, not measurement ambiguity. The key resolving observation: beneficiaries and victims are real and distinct (not symmetric actors), enforcement is active (imperial military, legal apparatus), and the constraint exhibits both coordination function (solving engineering problems) and extraction (asymmetric distribution of costs/benefits). This makes Tangled Rope the correct claimed type at the analytical level. The Snare perspective (from powerless municipalities) is valid for those agents. The Rope perspective (from imperial state) is valid for that agent. The Scaffold perspective is valid for organized provincial elites managing across time. The Piton perspective emerges in late empire as the system's functional capacity degrades while administrative theater persists. The false Mountain perspective reveals the error of naturalizing contingent political-economic coercion as inherent technological necessity. The presheaf of perspectives IS the complete answer \u2014 no single type captures the constraint; the indexed family does."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_debt_bondage",
+      "provincial_tax_collection"
+    ],
+    "dual_formulation_note": "Roman monumental construction is downstream of resource extraction mechanisms (taxation, forced labor recruitment) and upstream of infrastructure effects (trade efficiency, defensive capacity, legitimation narratives). This story focuses on the socio-technical constraint of organizing massive-scale opus caementicium projects. Related constraints (debt bondage, provincial taxation) have distinct extractiveness values reflecting their structural dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

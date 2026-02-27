@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "protocol_drift_accumulation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "protodrift"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Entropic Standard Decay",
+    "topic_domain": "technological/standards_implementation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "implementer_vendors",
+      "early_adopters"
+    ],
+    "victims": [
+      "standard_interoperability",
+      "late_adopters",
+      "protocol_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Protocol Ecosystem",
+      "comment": "PERSPECTIVE 1: PROTOCOL ECOSYSTEM (SNARE) \u2014 Systems built on the assumption of standard compliance are locked into successive compatibility crises. No exit from backward-compatibility requirements; each divergent implementation forces cascading patches and workarounds. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.85. Trapped in a deepening extraction mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Standards Coordination Body",
+      "comment": "PERSPECTIVE 2: STANDARDS COORDINATION BODY (ROPE) \u2014 Sees protocol as pure coordination mechanism: defining and publishing standard, enabling interoperability. No active extraction in their model; benefits from network effects and adoption. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Negative effective extraction = net beneficiary through institutional reputation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Late-Adopter Implementation Teams",
+      "comment": "PERSPECTIVE 3: LATE-ADOPTER IMPLEMENTATION TEAMS (SNARE) \u2014 Inherit a protocol that has already drifted across early implementations. Required to test against divergent implementations, absorb compatibility costs, and encode workarounds for nonstandard behaviors that have become de facto standard. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.69. High extraction through specification entropy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Early-Adopter Vendors",
+      "comment": "PERSPECTIVE 4: EARLY-ADOPTER VENDORS (TANGLED_ROPE) \u2014 Benefit from vendor lock-in and de facto standardization (their implementation becomes the reference). Can exit to proprietary variants or subset compatibility. But also constrained by having to maintain multiple protocol versions and face competitive pressure from followers. d\u22480.45, f(d)\u22480.44, \u03c3=1.2 \u2192 \u03c7\u22480.29. Mixed coordination (define the standard in practice) and extraction (lock in followers)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Standards Bureaucracy",
+      "comment": "PERSPECTIVE 5: LEGACY STANDARDS BUREAUCRACY (PITON) \u2014 Formal versioning and update procedures (RFC processes, working groups) persist as performative rituals. The real protocol evolution happens through undocumented vendor implementation choices, not through formal amendment. theater_ratio=0.64 reflects that official processes are decoupled from actual standard drift. The bureaucracy maintains appearance of control over a process that has become inertial."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED_ROPE) \u2014 From civilizational perspective, protocol drift combines genuine coordination function (implementing vendors do solve interoperability problems in practice) with genuine extraction mechanism (early adopters capture vendor lock-in asymmetry). The entropy is not a bug but a feature of decentralized standard adoption. d\u22480.65, f(d)\u22480.95, \u03c3=1.2 \u2192 \u03c7\u22480.59. Mixed perspective reflects mixed structural properties."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "specification_completeness_threshold",
+      "question": "What degree of specification incompleteness is inherent to the protocol design versus contingent on vendor implementation choices?",
+      "resolution_mechanism": "Linguistic analysis of specification language (ambiguous clauses vs unambiguous requirements); controlled implementation exercises by teams given only the spec; correlation between spec ambiguity and observed vendor divergence",
+      "impact": "If high inherent incompleteness: protocol drift is inevitable coordination failure (Rope). If low inherent incompleteness: drift is extracted vendor divergence (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether specification incompleteness is structural or contingent"
+    },
+    {
+      "id": "vendor_lock_in_intentionality",
+      "question": "Do vendors deliberately implement nonstandard behaviors to lock in users, or is drift primarily the unintended consequence of independent implementation in parallel?",
+      "resolution_mechanism": "Analysis of vendor documentation, code comments, implementation timelines; interviews with engineers; comparison of deliberate extension mechanisms (recognized as nonstandard) versus undocumented drift",
+      "impact": "If deliberate: Snare with active extraction. If unintended: Tangled Rope with mixed motivations. Classification sharpens accordingly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether protocol divergence is intentional vendor strategy"
+    },
+    {
+      "id": "backward_compatibility_ceiling",
+      "question": "What is the maximum accumulation of protocol variants that can be sustained through backward-compatibility layering before the ecosystem collapses into incompatibility?",
+      "resolution_mechanism": "Historical analysis of protocol version histories (HTTP, SMTP, DNS, TCP); computational models of compatibility matrix density; empirical measurement of implementation cost as variant count grows",
+      "impact": "If ceiling is low and already approached: extraction mechanisms will accelerate as ecosystem nears bifurcation. If ceiling is high: Rope perspective (sustainable coordination) is stronger.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sustainable limit for protocol variant accumulation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Protocol drift accumulation exemplifies how a pure coordination mechanism (Rope) transforms into a mixed coordination-extraction hybrid (Tangled Rope) through accumulated, undocumented implementation variations. Initially, a standard protocol solves a genuine collective action problem: vendors need a common specification to enable interoperability. But as implementations mature, early adopters gain de facto standardization power by establishing how the protocol 'really works' in practice, independent of the formal specification. Later adopters face a specification that no longer matches reality \u2014 they must implement against multiple vendor interpretations, absorb compatibility testing costs, and encode workarounds for undocumented behaviors. The constraint's extractiveness has grown from 0.15 (initial rope, minimal coordination overhead) to 0.52 (tangled rope, vendor lock-in asymmetry) over the interval. Theater ratio has similarly grown from 0.28 (genuine technical coordination) to 0.64 (formal standards processes increasingly disconnected from real protocol evolution). The constraint manifests as Tangled Rope across analytical and middle-power perspectives: genuine coordination function (vendors do solve interoperability) plus asymmetric extraction (early adopters lock in followers). From the ecosystem perspective, it appears as Snare: trapped in successive compatibility crises with no exit. From the standards body perspective, it appears as Rope: they are performing their coordination function regardless of vendor drift. From the legacy bureaucracy perspective, it appears as Piton: formal version control persists as ritual while the real protocol evolves unofficially.",
+    "key_agents": [
+      "Standards Coordination Body: Institutional beneficiary (institutional/arbitrage) \u2014 publishes specification, derives legitimacy and network effects from adoption",
+      "Early-Adopter Vendors: Primary beneficiary (powerful/mobile) \u2014 implement first, establish de facto standard, capture vendor lock-in asymmetry",
+      "Late-Adopter Implementation Teams: Primary victim (moderate/trapped) \u2014 inherit drifted protocol, absorb compatibility costs and workarounds",
+      "Protocol Ecosystem: Collective victim (powerless/trapped) \u2014 systems built on standard assumption face cascading compatibility failures",
+      "Legacy Standards Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 maintains formal versioning ritual disconnected from actual protocol evolution",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees the constraint as mixed coordination-extraction hybrid"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. Initial extractiveness was low (0.15) because the protocol served genuine coordination. But drift creates asymmetric burden: early adopters set the standard in practice, late adopters pay the cost of compatibility. The 0.52 value reflects that the ecosystem now bears significant costs for maintaining backward compatibility with undocumented vendor behaviors. Suppression (0.58): Moderate-high. Vendors have capacity to diverge (not maximally suppressed), but late adopters face real barriers: lack of specification clarity, vendor-specific documentation, need for multi-implementation testing, and career/resource costs of not joining early. Theater ratio (0.64): Moderate-high. Formal RFC processes and standards working groups continue, but they increasingly describe past vendor decisions rather than guide future ones. The gap between specification and implementation reality has grown as the standard aged.",
+    "perspectival_gap": "The constraint produces sharp perspectival divergence. The standards body (institutional/arbitrage) sees their function as completed \u2014 the coordination problem was solved, they published the spec, vendors implemented it. The early adopters (powerful/mobile) see a successful coordination outcome with de facto lock-in benefits. But late adopters (moderate/trapped) see extraction: they inherit a protocol whose real specification is fragmented across vendor implementations. The ecosystem (powerless/trapped) sees pure extraction: each round of vendor additions deepens the compatibility burden. The legacy bureaucracy (institutional/arbitrage) sees their process as still valid even as the real protocol evolution happens informally outside their purview. The analytical observer sees the full hybrid: coordination function (vendors solve interoperability) + extraction mechanism (early adopters set lock-in terms).",
+    "directionality_logic": "Standards body: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary through institutional reputation. Early-adopter vendors: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.25. Significant extraction but with exit options (can fork or propose new standard). Late-adopter teams: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.32. High extraction \u2014 locked into compatibility with an invisible specification. Protocol ecosystem: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 no exit from backward-compatibility requirements. Legacy bureaucracy: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Piton classification comes from theater gate (0.64 \u2265 0.70 threshold not met, but close), not from high extraction. Analytical observer: Analytical \u2192 d\u22480.65, f(d)\u22480.95. Tangled Rope classification reflects mixed structural properties."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "vendor_lock_in_ecosystem",
+      "specification_maintenance_burden",
+      "backward_compatibility_debt"
+    ],
+    "dual_formulation_note": "Protocol drift accumulation can be decomposed into two related but distinct constraints: (1) Specification incompleteness (\u03b5\u22480.12, Rope) \u2014 the inherent gap between any written spec and implementation reality, a coordination problem. (2) Vendor lock-in through implementation divergence (\u03b5\u22480.68, Snare) \u2014 the deliberate or incidental use of undocumented behaviors to capture users, an extraction mechanism. This story treats them as a hybrid (Tangled Rope, \u03b5=0.52) because the two are historically entangled \u2014 specification gaps enable divergence, divergence incentivizes further specification drift. For precision analysis, the two can be separated into distinct constraints linked via network.affects_constraints."
+  },
+  "directionality_overrides": []
+}

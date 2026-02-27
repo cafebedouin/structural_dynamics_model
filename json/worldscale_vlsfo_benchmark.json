@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "worldscale_vlsfo_benchmark",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ws_vlsfo"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Worldscale Flat Rate Benchmark Based on VLSFO",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_shipping_operators",
+      "fuel_suppliers"
+    ],
+    "victims": [
+      "independent_shipowners",
+      "developing_nation_traders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Shipowner",
+      "comment": "PERSPECTIVE 1: INDEPENDENT SHIPOWNER (SNARE) \u2014 Locked into Worldscale pricing mechanism with no exit. Cannot negotiate outside benchmark; fuel specification locked to VLSFO benchmark even if alternative fuels are operationally cheaper. Bears full cost of benchmark changes while receiving no coordination benefit. Suppression enforced by industry convention and contract standardization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Developing Nation Trader",
+      "comment": "PERSPECTIVE 2: DEVELOPING NATION TRADER (TANGLED ROPE) \u2014 Constrained by lack of market information, capital to hedge fuel price volatility, and limited negotiating power. Derives some benefit from standardized pricing (reduces transaction costs) but also bears extraction through inability to adjust to local fuel availability or cheaper alternatives. Exit constrained by market structure, not absolute."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Major Shipping Operator",
+      "comment": "PERSPECTIVE 3: MAJOR SHIPPING OPERATOR (ROPE) \u2014 Experiences Worldscale as pure coordination mechanism. Standardized benchmark reduces transaction costs, enables rapid freight negotiation, and allows hedging via fuel futures markets. Can arbitrage between benchmark and actual fuel costs through scale and operational flexibility. Net beneficiary \u2014 has exit options (can shift routes, fuel suppliers, contract terms)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Fuel Supplier",
+      "comment": "PERSPECTIVE 4: FUEL SUPPLIER (ROPE) \u2014 Benefits from standardized VLSFO benchmark as it creates guaranteed market demand and pricing transparency. Can forecast supply requirements and manage margins through the specification. Institutional actor with arbitrage options \u2014 can source from multiple regions or adjust blend to maintain VLSFO compliance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Environmental Regulation Coalition",
+      "comment": "PERSPECTIVE 5: ENVIRONMENTAL REGULATION COALITION (TANGLED ROPE) \u2014 Organized agents (IMO, EU, national regulators) embedded the VLSFO requirement as environmental coordination mechanism (sulfur cap regulation). Derives genuine coordination function: standardized fuel specification reduces monitoring complexity and ensures compliance. But also extracts: the VLSFO benchmark locks in higher fuel costs, transfers environmental compliance expense to shipowners rather than fuel producers, and centralizes pricing power. Enforcement is active and continuous."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Views the constraint as a hybrid structure coupling environmental regulation (coordination) with oligopolistic pricing control (extraction). The VLSFO benchmark simultaneously achieves the legitimate goal of sulfur emission reduction AND enables major operators and fuel suppliers to lock in margins that independent shipowners cannot escape. Requires active enforcement by regulators and market convention. The beneficiaries (major operators, fuel suppliers) have genuine coordination benefit; the victims (independents, developing traders) bear extraction without equivalent coordination gain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_fuel_recognition",
+      "question": "Will alternative low-sulfur fuels (biofuels, ammonia, hydrogen) achieve sufficient standardization and supply to break the VLSFO benchmark lock?",
+      "resolution_mechanism": "Tracking of IMO MEPC decisions on alternative fuel specifications; supply curve expansion for non-VLSFO compliant fuels; shipowner adoption rates of alternative fuel vessels",
+      "impact": "If yes: benchmark loses extractive force (becomes rope/scaffold). If no: VLSFO lock persists 20+ years, extraction accumulates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative fuels will break VLSFO benchmark dominance"
+    },
+    {
+      "id": "fuel_cost_divergence_mechanism",
+      "question": "How much of the VLSFO price premium reflects genuine scarcity/refinery constraint vs. collective pricing control by fuel suppliers?",
+      "resolution_mechanism": "Econometric analysis of VLSFO price convergence to production cost; investigation of supply capacity utilization; comparison to sulfur removal cost models",
+      "impact": "If genuine scarcity: benchmark is coordination response (rope). If pricing control: benchmark enables extraction (snare). Affects whether suppression reflects market structure or deliberate cartelization.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scarcity vs. pricing control in VLSFO cost structure"
+    },
+    {
+      "id": "negotiation_exit_optionality",
+      "question": "Can independent shipowners realistically exit Worldscale through private contracts, regional alternatives (e.g., Baltic Exchange precedent), or consortium arrangements?",
+      "resolution_mechanism": "Market data on non-Worldscale freight rates; survey of independent shipowner contract terms; analysis of failed alternative benchmarking attempts",
+      "impact": "If yes: constraints are mobile (not trapped). If no: confirms trap gate. Directly affects powerless perspective classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit from Worldscale benchmark is materially available"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Worldscale flat rate system is an industry-wide benchmark for pricing oil tanker freight globally. In 2020, following International Maritime Organization (IMO) regulations requiring Very Low Sulfur Fuel Oil (VLSFO) or equivalent emissions abatement, the Worldscale benchmark was updated to use VLSFO as the reference fuel for rate calculations. This constraint presents a structural tension between legitimate coordination \u2014 standardized fuel specification supports environmental compliance and reduces transaction costs \u2014 and extraction through oligopolistic pricing control. The benchmark simultaneously achieves environmental regulation goals AND locks independent shipowners into fuel cost structures they cannot negotiate independently. The extraction mechanism depends on two dynamics: (1) the VLSFO specification was standardized by regulatory fiat (IMO), not by market consensus, making exit costly; (2) major shipping operators and fuel suppliers can arbitrage the gap between benchmark and operational costs, while independents cannot. The benchmark exhibits increasing extractiveness over its interval (0.38 \u2192 0.52) as VLSFO supply tightens and price premiums accumulate.",
+    "key_agents": [
+      "Major Shipping Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture margin arbitrage through scale, operational flexibility, and futures hedging capabilities",
+      "Fuel Suppliers: Primary beneficiary (institutional/arbitrage) \u2014 benefit from standardized specification creating guaranteed demand; control pricing through supply-side oligopoly",
+      "Independent Shipowners: Primary victim (powerless/trapped) \u2014 locked into benchmark with no exit option; must absorb VLSFO cost premium without operational hedging capacity",
+      "Developing Nation Traders: Secondary victim (moderate/constrained) \u2014 lack capital, information, and negotiating power to exit; bear asymmetric extraction through information opacity",
+      "Environmental Regulation Coalition (IMO, EU, national regulators): Organized enforcer (organized/constrained) \u2014 imposed VLSFO requirement for coordination (sulfur emissions reduction) but inadvertently enabled extraction through pricing centralization",
+      "Analytical Observer: System-level perspective (analytical/analytical) \u2014 recognizes dual structure: genuine coordination function coupled with extractive lock-in"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderately high. The constraint extracts measurable economic value from trapped agents (independent shipowners). The VLSFO premium over alternative fuels or heavy fuel oil can range 8-15% of operating costs, concentrated among those without exit options. However, extraction is not maximal (snare threshold \u22650.46) because: (1) the coordination benefit (sulfur compliance) is genuine and reduces external costs; (2) some hedging and operational adjustment is possible; (3) regulatory environment remains contestable (alternative fuels are emerging). Suppression (0.48): Moderate-high. Barriers to exit include: standardization enforced by IMO and major shipping companies; limited alternative fuel supply; capital constraints for independents to adopt alternative-compliant vessels; and market convention making Worldscale the default. But suppression is not total \u2014 some alternative benchmarking has been attempted, and regulatory change can unlock new fuel specifications. Theater ratio (0.35): Low. The benchmark is functionally transparent and operationally necessary \u2014 fuel prices feed directly into freight rates through published formulas. Theater comes not from obscurity but from the legitimacy theater of environmental regulation masking the extraction mechanism.",
+    "perspectival_gap": "The constraint produces a perspectival split aligned with market structure. Major operators (institutional/arbitrage) experience pure coordination \u2014 the benchmark solves the real problem of standardizing fuel specs across global routes. Independents (powerless/trapped) experience snare \u2014 they are locked into cost structures they cannot exit or negotiate. The analytical observer recognizes that both perspectives are structurally true: the constraint simultaneously solves a coordination problem (fuel standardization) AND enables extraction (pricing lock-in). The gap widens as VLSFO supply tightens and price premiums accumulate over the interval. The tangled rope classification for the analytical perspective reflects that beneficiaries' coordination benefit and victims' extraction mechanism are structurally coupled \u2014 you cannot have the standardization without the lock-in, and you cannot exit the lock-in without losing the coordination benefit.",
+    "directionality_logic": "Directionality derives from market position and exit capacity. Major operators and fuel suppliers have arbitrage options \u2014 they can shift fuel sourcing, route optimization, and hedging strategies to capture upside from the benchmark. Their d values are low (~0.05-0.15), producing low effective extraction chi. Independent shipowners have no arbitrage options \u2014 they must accept Worldscale rates set by others and absorb fuel costs without hedging capacity. Their d values are high (~0.85-0.95), producing high effective extraction chi. Developing nation traders occupy an intermediate position: they have constrained exit options (can switch routes or delay voyages) but face capital and information barriers. Their d value is moderate (~0.55-0.65), producing moderate chi. The environmental regulators occupy an organized position with constrained exit (they can adjust specifications but face political pressure to maintain stability) \u2014 their d is moderate (~0.40-0.50). The engine derives these d values from beneficiary/victim declarations and exit options; the commentary reflects the structural relationships that justify the classification.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the tangled rope classification at the analytical level is structurally justified: the constraint has genuine coordination function (fuel standardization for environmental compliance) AND asymmetric extraction (pricing lock-in for independents). The snare classification from the powerless perspective is not a failure to recognize coordination \u2014 the powerless agent genuinely does not benefit from the coordination, they only experience the extraction. The rope classification from the major operator perspective is also correct \u2014 they genuinely do see only coordination benefits because they have exit optionality. The mandatrophy resolution is: the constraint is BOTH tangled rope AND snare AND rope, depending on where you sit. The false natural law would be classifying it as 'just a market mechanism' (mountain) or 'pure coordination' (rope). The real structure is hybrid coordination-extraction, with distribution of costs and benefits aligned with market power."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "imf_fuel_specification_harmonization",
+      "shipping_emissions_cap_allocation"
+    ],
+    "dual_formulation_note": "The VLSFO benchmark decomposes into two related constraints: (1) fuel specification standardization (pure coordination, low \u03b5), and (2) pricing lock-in mechanism (pure extraction, high \u03b5). This story focuses on the joint constraint as experienced by actors in the shipping market. The upstream constraint is IMO fuel specification harmonization; the downstream constraint is emissions cap allocation and alternative fuel adoption."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    }
+  ]
+}

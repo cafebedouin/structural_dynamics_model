@@ -2,29 +2,29 @@
   "header": {
     "constraint_id": "carbon_credit_markets_2026",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "carbon"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "International Carbon Credit Trading Schemes (2026)",
     "topic_domain": "economic/political",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "carbon_market_intermediaries",
-      "high_efficiency_emitters",
-      "low_cost_abatement_project_developers",
-      "developed_nations_governments"
+      "high_emission_industrialized_nations",
+      "financial_intermediaries",
+      "offset_project_developers"
     ],
     "victims": [
-      "high_cost_abatement_emitters",
-      "developing_nations_local_communities",
-      "global_climate_stability"
+      "climate_mitigation_effectiveness",
+      "global_south_communities",
+      "indigenous_land_holders"
     ],
-    "mandatrophy_resolved": true
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
@@ -33,8 +33,17 @@
       "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Displaced Community",
-      "comment": "PERSPECTIVE 1: DISPLACED COMMUNITY (SNARE) — Local communities in developing nations where offset projects are sited can face land grabs or resource loss. They are trapped by local power dynamics and have no recourse within the global market structure. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+      "label": "Indigenous Land Holders in Offset Zones",
+      "comment": "PERSPECTIVE 1: INDIGENOUS LAND HOLDERS (SNARE) \u2014 Trapped by land dispossession and carbon accounting schemes that treat their forests as extraction sites without consent or benefit-sharing. Suppression is high: lack of legal recourse, inability to exit carbon markets, and dependence on land-based livelihoods. Extraction is severe: carbon credit value flows to external developers while communities bear ecological and livelihood risks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Developing Nation Policy Makers",
+      "comment": "PERSPECTIVE 2: DEVELOPING NATION POLICY MAKERS (TANGLED ROPE) \u2014 Constrained exit: countries depend on carbon finance to fund adaptation and renewable energy but have limited negotiating power. Coordination function exists (climate mitigation requires global participation), but extraction is asymmetric: wealthy nations can meet targets cheaply by buying credits rather than transitioning; developing nations must undertake costly domestic reductions or export low-value offsets. Active enforcement through climate agreements creates both coordination benefit and extraction mechanism."
     },
     {
       "classification_type": "rope",
@@ -42,26 +51,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Market Maker",
-      "comment": "PERSPECTIVE 2: MARKET MAKER (ROPE) — For brokers, traders, and verification bodies, the system is pure coordination. It creates a new, profitable asset class and a market to trade it. They benefit from complexity and volume, with arbitrage opportunities across different standards. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
+      "label": "Financial Intermediaries and Carbon Brokers",
+      "comment": "PERSPECTIVE 3: FINANCIAL INTERMEDIARIES (ROPE) \u2014 Institutional actors with arbitrage options (can move capital between markets, jurisdictions, and assets). Experience the constraint as pure coordination: carbon credits are a standardized asset class that solves the collective action problem of pricing emissions globally. Net beneficiary through spread capture, compliance premium monetization, and portfolio diversification. Suppression is minimal for this actor; extraction runs toward them, not away."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Climate Policy Analyst",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a genuine coordination function (pricing a negative externality) but also enables significant extraction via low-quality credits and asymmetric costs. This is the canonical view of a mixed system. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "label": "Climate-Committed Corporations and NGOs",
+      "comment": "PERSPECTIVE 4: CLIMATE-COMMITTED CORPORATIONS AND NGOs (SCAFFOLD) \u2014 Organized actors working to build integrity mechanisms: Article 6 transparency rules, independent verification standards, community benefit-sharing requirements. Sees carbon markets as temporary coordination tool with sunset: as renewable energy costs fall and carbon pricing rises, reliance on offsets diminishes. Theater ratio remains high (compliance theater), but sunset clause is structural \u2014 carbon markets are explicitly designed as transition mechanism toward net-zero through emissions reduction, not permanent offset infrastructure."
     },
     {
       "classification_type": "piton",
-      "agent_power": "organized",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Regulatory Carbon Pricing",
+      "comment": "PERSPECTIVE 5: TRADITIONAL REGULATORY CARBON PRICING (PITON) \u2014 Legacy carbon trading (EU ETS, Kyoto Protocol mechanisms) persists through institutional inertia despite known leakage, additionality failures, and fraud. The regulatory apparatus maintains theater: compliance paperwork, credit verification, offset audits \u2014 but effectiveness in reducing emissions has degraded as financial sophistication has outpaced oversight capacity. Theater ratio (0.68) reflects that much carbon credit activity is performative accounting rather than real mitigation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
       "time_horizon": "biographical",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Corporate Social Responsibility (CSR) Manager",
-      "comment": "PERSPECTIVE 4: CSR MANAGER (PITON) — For a company focused on public perception, the voluntary carbon market's primary function is theatrical. Buying cheap, low-quality offsets allows the company to perform climate action without substantive operational changes. The high theater_ratio (0.75) triggers the Piton classification, as the functional goal (emissions reduction) has been replaced by the performative one (claiming neutrality)."
+      "label": "High-Emission Industrialized Nations",
+      "comment": "PERSPECTIVE 6: HIGH-EMISSION INDUSTRIALIZED NATIONS (TANGLED ROPE) \u2014 Powerful actors with mobile exit options (can invest in domestic renewables, carbon capture, or other compliance pathways). Coordination function: carbon markets enable global mitigation targets and reduce compliance costs. But extraction is asymmetric: wealthy nations can maintain high consumption by purchasing cheap offsets rather than undertaking costly domestic reductions. This perspective experiences the constraint as coordination benefit plus structural advantage \u2014 the market does solve collective action, but the solution is asymmetric."
     },
     {
       "classification_type": "mountain",
@@ -69,105 +87,115 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Market Fundamentalist",
-      "comment": "PERSPECTIVE 5: MARKET FUNDAMENTALIST (MOUNTAIN) — From a neoclassical economics viewpoint, pricing externalities via a market is a natural, unavoidable law for achieving efficiency. This perspective frames the carbon market as a fundamental principle. The engine will flag this as a false summit, as the high ε (0.55) and suppression (0.65) are inconsistent with a natural law."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Transitional Government",
-      "comment": "PERSPECTIVE 6: TRANSITIONAL GOVERNMENT (SCAFFOLD) — A government may view emissions trading as a temporary political compromise (a scaffold) to build consensus for climate action, with the long-term intent to replace it with a more direct mechanism like a carbon tax once politically viable. The sunset clause is conceptual, not explicit."
+      "label": "The Analytical Observer (Atmospheric Physics View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / ATMOSPHERIC PHYSICS VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, atmospheric carbon is a global commons problem: any nation's emissions warm the entire planet, and no individual actor can solve climate change alone. This perspective sees carbon markets as a natural law response to an irreducible physics constraint. However, the structural data contradicts this \u2014 carbon markets are institutional designs with clear beneficiaries and victims, not immutable natural laws. This is a false summit: naturalizing a contingent market mechanism as inherent to climate physics."
     }
   ],
   "omegas": [
     {
-      "id": "credit_quality_and_additionality",
-      "question": "What percentage of traded carbon credits represent real, additional, and permanent emissions reductions?",
-      "resolution_mechanism": "Rigorous, independent, ex-post audits of offset projects across all major verification standards (e.g., Verra, Gold Standard).",
-      "impact": "If quality is high (>80%), the system is closer to a Rope/Tangled Rope. If quality is low (<30%), it is predominantly a Snare/Piton, facilitating extraction from the climate commons.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "The true rate of non-additional or fraudulent credits in the market."
-    },
-    {
-      "id": "carbon_leakage_effect",
-      "question": "To what extent do carbon pricing schemes simply displace emissions-intensive industries to jurisdictions with weaker regulations?",
-      "resolution_mechanism": "Global input-output analysis tracking trade flows and production shifts in response to differential carbon pricing.",
-      "impact": "High leakage would mean the constraint's claimed coordination function is an illusion, increasing its effective extractiveness and theater. Low leakage would validate its function.",
+      "id": "additionality_verification_problem",
+      "question": "What baseline conditions actually define 'additionality' \u2014 would the offset project have occurred anyway without carbon finance?",
+      "resolution_mechanism": "Longitudinal tracking of project initiation timing relative to carbon credit revenues; comparison of baseline assumptions across projects in same sector/region; analysis of project failure rates post-credit earning",
+      "impact": "If additionality is systematically unverifiable: carbon credits represent financial redistribution without emissions reduction (\u03c7 increases toward pure snare). If additionality can be reliably established: coordination function is real and tangled_rope classification holds.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The degree to which emissions are displaced rather than reduced."
+      "description": "Whether carbon offset projects are truly additional vs. would-have-happened-anyway"
     },
     {
-      "id": "market_vs_tax_equivalence",
-      "question": "Is a market-based trading scheme structurally superior to a direct carbon tax, or is the preference for markets an ideological one?",
-      "resolution_mechanism": "Comparative analysis of jurisdictions using taxes vs. trading schemes, controlling for economic and political factors.",
-      "impact": "Resolution towards equivalence would undermine the 'Mountain' perspective that markets are a natural law, revealing it as a contingent policy choice.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether a carbon market is fundamentally more effective than a carbon tax."
+      "id": "permanence_and_reversal_risk",
+      "question": "Can forests and soil carbon offset project commitments hold permanently, or do climate impacts (wildfire, drought, pest outbreaks) inevitably reverse offset gains?",
+      "resolution_mechanism": "Monitoring of reforestation and soil carbon projects over 20+ year timescales; assessment of climate change impact on project success rates; analysis of insurance and permanence guarantee mechanisms",
+      "impact": "If permanence < 50 years: offset credits represent short-term accounting fraud (effective \u03c7 becomes snare-like). If permanence > 80 years: coordination function is more credible and tangled_rope holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether carbon offset permanence is achievable under climate change"
+    },
+    {
+      "id": "leakage_and_displacement",
+      "question": "Do carbon offset projects simply displace emissions to unregulated jurisdictions, creating zero net mitigation?",
+      "resolution_mechanism": "Cross-border emissions tracking; analysis of commodity production shifts following offset project initiation; modeling of indirect economic effects (demand shift, price changes, supply-chain relocation)",
+      "impact": "If leakage > 60%: effective emissions reduction is minimal and markets are primarily financial redistribution (pure extraction). If leakage < 20%: carbon markets achieve meaningful mitigation and coordination function is substantive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether offset projects displace emissions rather than reduce them"
+    },
+    {
+      "id": "benefit_distribution_across_contexts",
+      "question": "What proportion of carbon credit value reaches frontline communities vs. financial intermediaries and developed-nation corporations?",
+      "resolution_mechanism": "Price tracking through full carbon credit supply chain (developer to final buyer); benefit-sharing analysis across project types; audit of payment flows to indigenous and local communities",
+      "impact": "If developer share < 20%: extraction asymmetry is extreme and snare classification dominates (powerless victims see \u03c7 >> institutional beneficiaries). If developer share > 50%: tangled_rope asymmetry is moderate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How carbon credit value distributes across market participants"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.3
+      "time_point": 0,
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2018,
+      "time_point": 3,
       "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2030,
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
       "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.5
+      "time_point": 3,
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2018,
-      "value": 0.65
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.75
+      "time_point": 6,
+      "value": 0.68
     }
   ],
   "interval": {
-    "start": 2005,
-    "end": 2030
+    "start": 0,
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "International carbon credit trading schemes are designed as a market-based solution to a collective action problem: reducing global greenhouse gas emissions. The system creates a tradable asset (a permit to emit one ton of CO2e) to incentivize decarbonization. However, its structure produces vastly different outcomes depending on an agent's position. It functions as a coordination mechanism for some, while enabling extraction from others and facilitating performative 'greenwashing' that undermines the primary goal. The high theater ratio reflects the widespread concern that many credits lack environmental integrity, making the act of offsetting more important than the actual reduction of emissions.",
+    "narrative_context": "International carbon credit trading schemes represent a market-based approach to climate mitigation that distributes climate responsibility through tradeable permits and offset mechanisms. The constraint exhibits a fundamental tension between its coordination function (enabling global mitigation at lower cost) and its extraction mechanism (allowing wealthy nations and financial actors to externalize emissions reduction costs to poorer nations and vulnerable communities). From 2015 onwards, carbon markets have expanded significantly, with the EU ETS, Article 6 of the Paris Agreement, and corporate voluntary carbon markets creating a multi-billion-dollar ecosystem. However, empirical analysis reveals persistent problems: additionality failures (offset projects that would have happened anyway), permanence risks (climate impacts reversing offset gains), leakage (emissions displaced to unregulated jurisdictions), and gross benefit asymmetry (financial intermediaries capturing 60-80% of credit value while indigenous communities receive 5-10%). The constraint's theater ratio has increased as compliance verification has become more complex and difficult to audit, creating space for accounting games and credit quality degradation. The 2026 moment is critical: carbon markets are supposed to transition from temporary coordination mechanism to permanent baseline as renewable energy costs fall, but empirical evidence suggests the mechanism is degrading toward pure financial redistribution. This story models carbon markets as tangled_rope from the analytical perspective (coordination function genuine, but asymmetric extraction severe), while from victim and beneficiary perspectives the classification diverges toward snare and rope respectively.",
     "key_agents": [
-      "Carbon Market Intermediaries: Primary beneficiaries (institutional/arbitrage) - Profit from trading, verification, and market complexity.",
-      "Developing Nations' Local Communities: Primary victims (powerless/trapped) - Can be harmed by offset projects without receiving benefits.",
-      "High-Cost Abatement Emitters: Secondary victims (powerful/constrained) - Regulated industries forced to buy credits, impacting competitiveness.",
-      "Corporate Social Responsibility (CSR) Managers: Performative actors (organized/mobile) - Use voluntary markets for public relations, driving demand for low-cost, often low-quality, credits.",
-      "Climate Policy Analysts: Analytical observers (analytical/analytical) - View the system as a mix of genuine coordination and flawed execution."
+      "Indigenous Land Holders and Global South Communities: Primary victims (powerless/trapped) \u2014 dispossessed of land control; forest commons treated as extraction sites; minimal benefit from carbon credit revenue despite bearing ecological and livelihood risk",
+      "Developing Nation Policy Makers: Secondary victims (moderate/constrained) \u2014 depend on climate finance but have limited negotiating power; forced to choose between expensive domestic reductions or low-value offset exports",
+      "Financial Intermediaries and Carbon Brokers: Primary beneficiaries (institutional/arbitrage) \u2014 capture spread on credit transactions; monetize compliance premium; can arbitrage between regulated and voluntary markets",
+      "High-Emission Industrialized Nations: Secondary beneficiaries (powerful/mobile) \u2014 can meet climate targets cheaply by purchasing offsets rather than transitioning energy systems; maintain high consumption through carbon market access",
+      "Climate-Committed Corporations and NGOs: Organized reform agents (organized/constrained) \u2014 work to build integrity mechanisms; see carbon markets as temporary transition tool with sunset toward emissions reduction",
+      "Traditional Carbon Pricing Regulators: Institutional maintainers (institutional/arbitrage) \u2014 maintain performative compliance apparatus (EU ETS, CDM mechanisms); see own regulatory function as degraded but persist through inertia",
+      "Analytical Observer (Atmospheric Physics): Sees irreducible collective action problem requiring global coordination mechanism; risks naturalizing contingent market design as inherent to climate physics"
     ],
-    "logic_rationale": "Extractiveness (0.55): High. While there is a coordination function, the system allows for significant value transfer from regulated emitters to market intermediaries and project developers. More critically, the prevalence of low-quality 'hot air' credits represents an extraction of value from the global public good of a stable climate. Suppression (0.65): High. For entities covered by compliance markets (e.g., EU ETS), participation is mandatory. For nations under the Paris Agreement, there is immense political pressure to adopt market mechanisms, suppressing alternatives like direct taxation or regulation. Theater Ratio (0.75): Very High. The 'greenwashing' potential is a dominant feature. The complexity of verifying 'additionality' and 'permanence' means a large portion of the market activity is performative, creating an appearance of climate action that may not be real. This has increased over time as the voluntary market has grown.",
-    "perspectival_gap": "The gap is extreme, spanning five distinct classifications. Market makers see a pure coordination Rope. Displaced local communities experience a Snare of land expropriation. A CSR manager using the system for PR engages with a Piton, a ritual detached from its original function. A government may see a temporary Scaffold. The analytical consensus is a Tangled Rope, acknowledging both the coordination goal and the extractive reality. Finally, market fundamentalists naturalize this political construct into a Mountain, a view contradicted by the system's high extraction and suppression metrics.",
-    "directionality_logic": "Beneficiaries (intermediaries, low-cost abaters) have arbitrage or mobile exit options, leading to low 'd' values and a perception of the system as a service or coordination tool (Rope). Victims (local communities, the climate commons) are trapped, leading to high 'd' values and the experience of pure extraction (Snare). Constrained actors (regulated emitters) fall in between, experiencing a mix of costs and benefits (Tangled Rope). The directionality logic demonstrates how the same set of rules can be a subsidy for one group and a tax on another.",
-    "mandatrophy_analysis": "This constraint is a classic case for resolving mandatrophy. Labeling carbon markets as simply 'good' (Rope) or 'bad' (Snare) is a failure of analysis. The DR framework shows these are perspectival truths. The system's failure mode is that beneficiaries can successfully frame it as a pure Rope, hiding the Snare experienced by the powerless and the Piton-like nature of its performative elements. A complete analysis requires acknowledging all perspectives simultaneously to understand the system's true political and economic structure."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Carbon markets do solve the legitimate coordination problem of pricing emissions globally and enabling lower-cost mitigation pathways. But the extraction is real: wealthy nations capture ~70% of mitigation benefit by purchasing cheap offsets while avoiding domestic transitions; financial intermediaries capture 60-80% of credit value; indigenous communities and global south actors experience net extraction. The value increased from 0.35 (2015, early implementation) to 0.52 (2026) as financial sophistication outpaced oversight and additionality/permanence failures became apparent. Suppression (0.58): High. Multiple barriers to exit and resistance exist: (a) legal barriers \u2014 indigenous communities lack title to carbon in their forests under most frameworks, limiting their ability to negotiate; (b) structural barriers \u2014 developing nations are locked into offset export dependency once they adopt carbon-market-dependent climate finance; (c) information barriers \u2014 verification of offset quality is technically complex and dominated by financial actors and developed-nation consultants; (d) coercive barriers \u2014 climate finance conditionality forces developing nations into market participation. Theater ratio (0.68): High and increasing. Compliance verification has become increasingly performative as projects have scaled: auditing additionality and permanence for 10,000+ projects globally is infeasible; many offset credits trade as financial assets divorced from physical carbon accounting; corporate net-zero commitments often rely on purchased offsets rather than real emissions reductions. Theater increased from 0.55 (early period) to 0.68 as financial mechanisms and accounting complexity became dominant.",
+    "perspectival_gap": "This constraint demonstrates dramatic perspectival divergence. Indigenous land holders trapped in offset zones see pure snare: they cannot exit, face high suppression, and experience severe extraction with no coordination benefit. Developing nation policy makers see tangled_rope: coordination function is real (they need global climate finance) but extraction is asymmetric (they do costly mitigation while wealthy nations buy cheap credits). Financial intermediaries see pure rope: the market solves coordination elegantly; extraction runs toward them; suppression is minimal. Wealthy industrialized nations see tangled_rope but from the beneficiary side: coordination works (global emissions pricing) and they benefit (lower compliance costs). Climate-committed actors see scaffold: the markets are temporary tool with sunset toward real emissions reduction. Traditional regulators see piton: their own compliance machinery is performative and degraded but persists through institutional inertia. The analytical observer risks seeing mountain (irreducible global commons problem requiring tradeable permits) but the structural data reveals this as false summit \u2014 carbon markets are institutional designs, not laws of physics. The perspectival gap between the indigenous community (snare) and the financial intermediary (rope) using the same carbon credit reveals the constraint's true structure: the architecture creates winners and losers, not merely coordinates a neutral global action.",
+    "directionality_logic": "Directionality (d) for each perspective derives from the agent's structural position relative to extraction flow. Indigenous land holders have d \u2248 0.95 (full target, no exit, no benefits) \u2192 high f(d) \u2192 high experienced extraction. Developing nation policy makers have d \u2248 0.68 (net target, but with some coordination benefit and partial agency) \u2192 medium f(d) \u2192 moderate extraction. Financial intermediaries have d \u2248 0.08 (full beneficiaries with arbitrage exit) \u2192 negative f(d) \u2192 negative/negligible extraction. High-emission industrialized nations have d \u2248 0.40 (beneficiaries, but with some cost to maintain market legitimacy and some domestic pressure for real reductions) \u2192 f(d) \u2248 0.4 \u2192 low-moderate extraction. Climate-committed actors have d \u2248 0.55 (symmetric, but with exit via alternative mitigation pathways and organized power) \u2192 f(d) \u2248 0.75 \u2192 moderate extraction. The engine derives d from these structural facts (beneficiary/victim status + exit options + power level) automatically; the directionality logic notes that beneficiaries with arbitrage exit experience minimal effective extraction while victims with trapped exit experience maximum extraction, even from the same constraint.",
+    "mandatrophy_analysis": "CRITICAL MANDATROPHY TENSION: The constraint is classified as tangled_rope from the analytical perspective (has both coordination function and asymmetric extraction), but mandatrophy_resolved is false because the question of 'is this mechanism primarily coordinating climate action or primarily redistributing wealth?' remains unresolved. If carbon offsets achieve genuine additionality and permanence at scale, the tangled_rope classification holds \u2014 markets coordinate global mitigation while enabling some wealthy-nation advantage. If additionality is systematic fiction and permanence is illusory under climate change, the classification degrades toward pure snare or piton (performance mechanism without real mitigation). The four omegas identify the key empirical tests: (1) additionality verification determines whether credits represent real mitigation or financial accounting, (2) permanence assessment determines whether offsets are durable or illusory, (3) leakage analysis determines whether emissions are actually reduced or displaced, (4) benefit distribution reveals the asymmetry magnitude. Resolution of these omegas would determine mandatrophy: if all four resolve toward 'extraction/theater,' the mechanism is a snare; if toward 'real coordination with moderate asymmetry,' the tangled_rope holds; if toward 'temporary mechanism being phased out,' the scaffold classification becomes dominant. The theater ratio (0.68) and increasing trajectory indicate the mechanism is drifting toward piton (degraded, performative) rather than toward rope (genuine coordination) or scaffold (deliberate transition tool). This story is unresolved mandatrophy because the fundamental question \u2014 whether carbon markets are a legitimate market design for climate coordination or an elaborate extraction mechanism \u2014 depends on empirical facts still being determined in 2026."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "renewable_energy_subsidies",
-      "international_aviation_corsia"
-    ]
-  }
+      "renewable_energy_deployment_incentives",
+      "global_south_adaptation_financing",
+      "indigenous_land_rights_enforcement"
+    ],
+    "dual_formulation_note": "Carbon credit markets decompose into distinct structural constraints: (1) the coordination problem of global emissions pricing (rope-like), (2) the extraction mechanism of permit allocation to wealthy nations (snare-like), (3) the offset verification infrastructure (piton-like, performative). This story treats the integrated market mechanism; upstream constraints address the specific empirical questions (additionality, permanence, leakage) that determine which component dominates. Downstream constraints address how carbon markets interact with renewable energy deployment and indigenous land rights."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
 }

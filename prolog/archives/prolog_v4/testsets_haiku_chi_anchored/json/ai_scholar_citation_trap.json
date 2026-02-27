@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "ai_scholar_citation_trap",
+    "version": "1.0",
+    "generated_date": "2024-07-28",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "AI Scholarly Citation System (OpenScholar)",
+    "topic_domain": "technological/academic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "openschoar_developers",
+      "open_access_authors",
+      "researchers_with_limited_budgets"
+    ],
+    "victims": [
+      "authors_in_paywalled_journals",
+      "paywalled_journal_publishers",
+      "researchers_relying_on_the_tool",
+      "academic_epistemic_commons"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Researcher Trapped by Convenience",
+      "comment": "PERSPECTIVE 1: THE RESEARCHER (SNARE) — Overwhelmed by the volume of literature, the individual researcher is trapped by the need for efficiency. They cannot manually replicate the AI's scope, making them dependent on its biased lens. The tool's limitations (e.g., exclusion of paywalled research) become invisible constraints on their work. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The OpenScholar Developer",
+      "comment": "PERSPECTIVE 2: THE DEVELOPER (ROPE) — From the perspective of its creators, the system is a pure coordination tool. It solves the collective action problem of navigating an impossibly large body of literature, increasing research velocity and access. The extraction is seen as a byproduct of an incomplete dataset, not a feature of the tool. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Paywalled Publisher",
+      "comment": "PERSPECTIVE 3: THE PAYWALLED PUBLISHER (SNARE) — This institutional actor is a victim, constrained from participating in the AI's knowledge base. The system actively suppresses their content, extracting attention and impact and redirecting it to the open-access ecosystem. From their view, it's a coercive tool designed to render their business model obsolete. d≈0.75, f(d)≈1.10, σ=1.2 → χ≈0.86."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Access Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: OPEN ACCESS ADVOCACY (SCAFFOLD) — This organized group sees the tool as a temporary support structure to accelerate the transition to a fully open-access world. The exclusion of paywalled content is a feature, not a bug—a lever to pressure publishers. They perceive a sunset clause: once open access is the norm, the tool's extractive function will wither away. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.01."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Cynical User",
+      "comment": "PERSPECTIVE 5: THE CYNICAL USER (PITON) — This user sees the system as a degraded ritual. The function of a literature review—critical, comprehensive engagement—is replaced by the performative act of generating an AI summary. The tool's output is a theatrical substitute for scholarship, maintained because it's required or expected, not because it's epistemically sound. The high theater_ratio (0.75) satisfies the piton gate."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) — The observer sees a system whose coordination function acts as a lure into a structural trap. The systemic exclusion of paywalled knowledge and the amplification of inherent data biases constitute a severe form of extraction from the epistemic commons. The suppression of alternative viewpoints is high, and the long-term cost to academic integrity outweighs the immediate efficiency gains. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "epistemic_distortion_impact",
+      "question": "What is the measurable impact of excluding paywalled research on the conclusions drawn in AI-generated literature reviews?",
+      "resolution_mechanism": "Comparative analysis of AI summaries vs. human expert summaries that include paywalled sources across multiple fields. Quantify the rate of altered conclusions or missed critical findings.",
+      "impact": "If impact is low, the system is closer to a Tangled Rope (high-functioning coordination with side-effects). If high, the Snare classification is confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Measures the distortion caused by excluding paywalled research."
+    },
+    {
+      "id": "skill_atrophy_risk",
+      "question": "Does long-term reliance on AI synthesis tools lead to a measurable decline in critical thinking and literature evaluation skills among researchers?",
+      "resolution_mechanism": "Longitudinal study tracking cohorts of graduate students, comparing those who use AI synthesis tools extensively versus those who use traditional methods.",
+      "impact": "If skills atrophy, the 'trap' is deeper than just data bias, affecting the human component of the research ecosystem, reinforcing the Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the risk of researcher skill degradation from AI over-reliance."
+    },
+    {
+      "id": "bias_amplification_feedback_loop",
+      "question": "Does the system create a feedback loop where AI-surfaced papers get more citations, which then reinforces their importance in the AI's training data, amplifying initial biases?",
+      "resolution_mechanism": "Network analysis of citation patterns over time, comparing the citation graph of papers surfaced by the AI versus a control set.",
+      "impact": "Confirmation of a strong feedback loop would increase the system's extractiveness score, as it actively manufactures and concentrates academic capital based on arbitrary starting conditions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Investigates if the AI creates a citation-bias feedback loop."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 2023,
+    "end": 2033
+  },
+  "commentary": {
+    "narrative_context": "An AI model, OpenScholar, synthesizes scientific research and provides accurate citations, outperforming general-purpose LLMs. However, its reliance on a corpus of exclusively open-access papers creates a structural trap. While it provides a valuable coordination function for navigating the vast scientific literature, it systematically suppresses paywalled research. This creates a biased lens on the state of knowledge, extracting attention and academic capital from excluded authors and publishers and creating a significant risk of distorting scientific consensus for researchers who become dependent on the tool.",
+    "key_agents": [
+      "Researchers/Students: Primary users, who are both beneficiaries of efficiency and victims of the system's inherent biases (powerless/trapped).",
+      "OpenScholar Developers: Primary beneficiaries, who see their tool as a solution to information overload (institutional/arbitrage).",
+      "Paywalled Publishers/Authors: Primary victims, whose work is structurally excluded and marginalized (institutional/constrained).",
+      "Open Access Advocacy Groups: Secondary beneficiaries, who view the tool as a strategic asset to promote their cause (organized/mobile).",
+      "Academic Epistemic Commons: An abstract victim representing the overall health and integrity of scholarly knowledge."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The system extracts value by systematically marginalizing a significant portion of scholarly work (paywalled research), redirecting citations, attention, and perceived impact toward the open-access corpus it is trained on. Suppression (0.75): High. While researchers can theoretically use other methods, the sheer scale of modern scientific literature makes AI-powered synthesis tools a practical necessity, creating strong pressure for adoption and making it difficult to work outside the system's biased framework. Theater Ratio (0.75): High. As the tool becomes ubiquitous, its use risks becoming a performative substitute for genuine, critical literature review. The act of 'running the AI report' can replace the intellectual labor of synthesis, creating a ritual that mimics scholarship without its epistemic function.",
+    "perspectival_gap": "The gap is profound. Developers see a Rope, a tool for coordinating knowledge. Trapped researchers and excluded publishers see a Snare, a coercive system that limits and distorts their work. Open-access advocates see a temporary Scaffold, a tool to build a better future. Cynical users see a Piton, a hollowed-out ritual. The analytical view sides with the Snare classification, judging that the harm from systemic bias and exclusion outweighs the coordination benefits.",
+    "directionality_logic": "Beneficiaries (developers, OA authors) have low derived 'd' values, leading to Rope/Scaffold classifications with low or negative effective extraction (χ). Victims (researchers, publishers) have high derived 'd' values due to their trapped/constrained exit options, resulting in high χ and Snare classifications. The system's structure cleanly sorts agents into those who benefit from the coordination and those who are harmed by the extraction it enables.",
+    "mandatrophy_analysis": "This case avoids mandatrophy by demonstrating that a tool with a clear, beneficial coordination function can simultaneously be a high-extraction Snare. The 'trap' is not a subjective feeling but a structural property: the systematic exclusion of a class of knowledge. The analytical classification as Snare is a claim that this extractive harm is the dominant feature of the constraint, not merely an unfortunate side effect of an otherwise benign coordination mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_publishing_paywalls",
+      "open_access_mandates"
+    ]
+  }
+}

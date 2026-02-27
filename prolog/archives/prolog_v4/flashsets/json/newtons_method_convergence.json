@@ -1,0 +1,69 @@
+{
+  "header": {
+    "constraint_id": "newtons_method_convergence",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.02,
+    "theater_ratio": 0.01,
+    "claimed_type": "mountain",
+    "human_readable": "Newton's Method Convergence Guarantee",
+    "topic_domain": "mathematics/technological",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Naive Implementer",
+      "comment": "A naive implementer might be 'trapped' by the method's limitations but the convergence guarantee, when it holds, is a fundamental limit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Mathematical Community",
+      "comment": "The mathematical community understands the conditions under which Newton's method converges. This is a well-understood, fundamental property."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "From the perspective of an analytical observer, the convergence guarantee is a mathematical truth, representing a fixed constraint."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Newton's Method is an iterative technique for finding roots of a real-valued function. Under certain conditions (e.g., the function is sufficiently smooth and the initial guess is sufficiently close to the root), the method is guaranteed to converge to a root. This constraint represents the mathematical guarantee of convergence, not the method itself.",
+    "key_agents": [
+      "Naive Implementer: Implements the algorithm without full understanding (powerless/trapped)",
+      "Mathematical Community: Possesses deep understanding of convergence conditions (institutional/analytical)",
+      "Analytical Observer: Represents a perfect understanding of the mathematical truth (analytical/analytical)"
+    ],
+    "logic_rationale": "The extractiveness is low because the method, when convergent, efficiently finds roots. Suppression is also low as alternative root-finding methods exist. The theater ratio is minimal since the guarantee either holds or it doesn't. The high accessibility_collapse (0.95) and low resistance (0.05) reinforce the Mountain classification. Since the 'Newton's Method' label could also apply to cases where the method *fails*, it is important to disambiguate and write a separate constraint story for those cases.",
+    "perspectival_gap": "There is no substantial perspectival gap as the convergence guarantee is a mathematical truth. All perspectives view the constraint as a mountain, although the implementer may encounter cases where the method fails to converge due to a lack of understanding of the assumptions.",
+    "directionality_logic": "Since this represents the ideal, guaranteed convergence case, the 'directionality' is not really applicable here. No agents are truly extracted from by the constraint, as the constraint simply represents a mathematical truth.",
+    "mandatrophy_analysis": "The concept of Newton's Method can be easily misused as a 'snare' when improperly implemented. But here, we are talking about the *guaranteed convergence*, which is a mountain. This prevents the mandatrophy."
+  },
+  "omegas": [],
+  "measurements": [],
+  "boltzmann": {},
+  "network": {},
+  "directionality_overrides": []
+}

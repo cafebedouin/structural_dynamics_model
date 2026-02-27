@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "emrgency_medicine_clinical_guidelines",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "emcg"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Emergency Medicine Clinical Guidelines as Decision-Support Constraint",
+    "topic_domain": "medical/legal/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hospital_administrators",
+      "insurance_payors",
+      "guideline_authors"
+    ],
+    "victims": [
+      "emergency_physicians",
+      "patient_autonomy",
+      "atypical_presentations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Emergency Physician Under Protocol",
+      "comment": "PERSPECTIVE 1: EMERGENCY PHYSICIAN (SNARE) \u2014 Trapped by liability exposure, peer pressure, and institutional enforced compliance. Guideline deviation triggers chart audits, malpractice liability even when deviation improves outcomes, and career consequences. Cannot exit; must follow protocols even when clinical judgment contradicts them. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Atypical Patient",
+      "comment": "PERSPECTIVE 2: ATYPICAL PATIENT (SNARE) \u2014 Clinical presentation falls outside guideline parameters but guideline still applied. Overtesting when guideline triggers without clinical correlation; undertesting when patient doesn't match guideline risk-stratification. Trapped in standardized protocol regardless of individual presentation. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Conscious Guideline User",
+      "comment": "PERSPECTIVE 3: GUIDELINE-AWARE PHYSICIAN (TANGLED ROPE) \u2014 Benefits from decision support: guidelines reduce cognitive load in high-acuity settings, provide legal protection, and coordinate care across institutions. But constrained by inflexible application; experiences tension between guideline compliance and clinical judgment. Can advocate for guideline modification but faces institutional friction. d\u22480.58, f(d)\u22480.72, \u03c3=1.0 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Hospital Risk Management & Compliance",
+      "comment": "PERSPECTIVE 4: HOSPITAL COMPLIANCE SYSTEM (ROPE) \u2014 Genuine coordination function: guidelines standardize care, reduce liability exposure, and enable quality measurement. Experiences the constraint as a benign information system. Can abandon or modify guidelines at will; has full exit capacity. Benefits from reduced malpractice claims and insurer pricing. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Insurance Payors & Reimbursement",
+      "comment": "PERSPECTIVE 5: INSURANCE PAYORS (ROPE) \u2014 Guidelines enable cost control through standardized protocols. Guideline-driven care reduces unnecessary testing and high-cost interventions. Payors have full exit capacity (they can ignore guidelines or refuse reimbursement for guideline deviation). Benefits from protocol standardization. d\u22480.10, f(d)\u2248-0.07, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Guideline Development & Publication",
+      "comment": "PERSPECTIVE 6: GUIDELINE AUTHORSHIP (PITON) \u2014 Once published, guidelines persist through institutional inertia despite degraded predictive value as patient populations evolve. Theater ratio rises: guideline citations become performative (citing authority rather than validating approach), literature emphasizes guideline 'adherence' metrics rather than actual patient outcomes. Author groups have professional incentive to maintain guideline authority. theater_ratio=0.64 shows moderate degradation. d\u22480.25, f(d)\u22480.12, \u03c3=1.2 \u2192 \u03c7\u22480.08."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Standardization vs Heterogeneity",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, guidelines represent a genuine coordination solution (heterogeneous practice \u2192 standardized quality measurement) AND an asymmetric extraction mechanism (standardization \u2192 suppressed clinical judgment and reduced responsiveness to rare presentations). Both functions are structural. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.60."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "guideline_evidence_decay",
+      "question": "At what rate does guideline predictive validity degrade as patient populations drift from the original validation cohort?",
+      "resolution_mechanism": "Longitudinal validation studies comparing guideline performance at 2-year, 5-year, and 10-year intervals post-publication; stratification by demographic/comorbidity drift",
+      "impact": "If decay is rapid (>20% sensitivity loss per 5 years): guidelines become snares rather than ropes; extractiveness rises above 0.70. If decay is slow: guidelines retain coordination function longer; tangled_rope classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of guideline predictive validity decay over time"
+    },
+    {
+      "id": "deviation_liability_correlation",
+      "question": "Does guideline deviation actually increase malpractice liability, or is this perception enforced by risk management theater?",
+      "resolution_mechanism": "Analysis of malpractice claims stratified by guideline adherence vs deviation; comparison of settlement rates and award amounts for guideline-adherent vs guideline-deviating cases",
+      "impact": "If deviation increases liability: suppression gate (0.58) is justified; physicians face genuine trapped exit. If liability is myth: suppression is lower; exit options improve; classification shifts toward rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether guideline deviation increases malpractice liability"
+    },
+    {
+      "id": "atypical_outcome_data",
+      "question": "What proportion of improved or standard outcomes occur in patients presenting outside guideline risk-stratification parameters?",
+      "resolution_mechanism": "Outcomes analysis for guideline-concordant vs guideline-discordant presentations; identification of false-positive and false-negative guideline triggers",
+      "impact": "If high proportion of atypical presentations have good outcomes: guidelines are overextracted; extractiveness rises above 0.60. If atypical presentations have poorer outcomes: guideline adherence protective; extractiveness drops below 0.45.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Outcomes distribution for presentations outside guideline parameters"
+    },
+    {
+      "id": "institutional_modification_capacity",
+      "question": "Can individual hospitals or physician groups meaningfully modify guidelines in response to local data without external authorization?",
+      "resolution_mechanism": "Survey of institutional guideline modification processes; case studies of attempted local guideline changes and institutional responses",
+      "impact": "If modification is easy: exit options improve; moderate agents shift toward mobile/arbitrage; classification becomes more rope-like. If modification is blocked: exit options remain constrained; snare classification strengthens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Institutional capacity for local guideline modification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Emergency medicine clinical guidelines (PECARN for pediatric head trauma, Ottawa Ankle Rules, SIRS criteria, sepsis bundles) are introduced as decision-support tools to standardize care, reduce unnecessary testing, and improve patient safety. They function as a coordination mechanism in high-acuity, resource-constrained settings where rapid triage and evidence-based protocols are essential. However, guidelines exhibit increasing extractive properties as they mature: institutional inertia causes them to persist beyond their evidence base; liability exposure pressures physicians to follow guidelines even when clinical judgment contradicts them; patient populations drift from the original validation cohorts, causing guideline sensitivity to degrade; and performance metrics increasingly emphasize guideline 'adherence' rather than patient outcomes. The constraint exhibits a tangled rope structure: genuine coordination (standardized care, reduced cognitive load) coupled with asymmetric extraction (suppressed clinical judgment, trapped liability exposure, atypical patients forced into standard protocols). The theater ratio has risen from 0.35 to 0.64 over the measurement interval, indicating that guideline citations increasingly serve performative functions (defending care decisions through protocol authority) rather than validating clinical reasoning.",
+    "key_agents": [
+      "Emergency Physicians: Primary victims (powerless/trapped) \u2014 face liability exposure for guideline deviation and institutional enforcement of protocol adherence",
+      "Patients with Atypical Presentations: Primary victims (powerless/trapped) \u2014 classified by guidelines despite clinical presentation falling outside parameters; overtested or undertested as a result",
+      "Hospital Compliance & Risk Management: Primary beneficiaries (institutional/arbitrage) \u2014 genuine coordination benefit from standardized care and liability protection; full exit capacity",
+      "Insurance Payors: Secondary beneficiaries (institutional/arbitrage) \u2014 cost control and standardized reimbursement; full exit capacity",
+      "Conscious Guideline Users: Secondary victims (moderate/constrained) \u2014 benefit from decision support but constrained by inflexible application; can advocate for modification but face friction",
+      "Guideline Development Bodies: Institutional actors (organized/constrained) \u2014 maintain authority over guidelines; theater ratio rises as guideline citations become performative",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees both genuine coordination and asymmetric extraction in the same institutional structure"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The initial extractiveness was low (0.28) when guidelines were true decision-support tools grounded in recent evidence. As time passes, extractiveness increases (0.40 at midpoint, 0.52 at endpoint) because: (1) original evidence bases degrade as patient populations drift, (2) liability exposure pressures guideline adherence beyond evidence warrant, (3) institutional inertia causes guidelines to persist despite outdated evidence. Suppression (0.58): Moderate-high. Significant barriers to guideline deviation include liability exposure, peer pressure, institutional auditing, and career consequences. However, suppression is not total \u2014 some physician groups resist guidelines, and institutional modifications occur. Theater ratio (0.64): Moderate-high. Guidelines increasingly function as performative authority rather than genuine decision-support. Guideline 'adherence' becomes a quality metric independent of patient outcomes; citations emphasize guideline authority rather than validating the specific clinical decision. Theater has risen substantially over the interval as guidelines have aged.",
+    "perspectival_gap": "This constraint demonstrates opposing perspectives from trapped victims (physicians and atypical patients) versus beneficiary institutions (compliance, payors). The trapped physicians see an extractive snare \u2014 they cannot deviate without liability exposure. The atypical patient sees pure extraction \u2014 the guideline imposes a standard protocol regardless of individual presentation. The conscious guideline user sees a tangled rope \u2014 genuine decision support coupled with inflexibility. The institutional beneficiaries (compliance, payors) see only rope \u2014 a benign coordination mechanism that reduces liability and costs. The analytical observer sees tangled rope \u2014 both genuine coordination and extraction are structurally present. The perspectival gap reflects the asymmetry between institutional beneficiaries (who can exit) and physician/patient victims (who cannot).",
+    "directionality_logic": "Emergency physicians: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Atypical patients: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Conscious guideline users: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.72. Significant extraction. Hospital compliance: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary with negative effective extraction (subsidized by protocol authority). Payors: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.07. Net beneficiary. Guideline authors: Institutional + constrained \u2192 d\u22480.25, f(d)\u22480.12. Low extraction; piton classification derives from theater gate rather than high chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Tangled rope from civilizational scope.",
+    "mandatrophy_analysis": "RESOLVES AS TANGLED ROPE WITH DEGRADATION TRAJECTORY: The constraint begins as a genuine rope (pure coordination) but accumulates extraction properties over time as institutional inertia and liability exposure intensify. At T=0 (guideline introduction), extractiveness=0.28, theater=0.35, classification is rope \u2014 genuinely useful decision-support. By T=10, extractiveness=0.52, theater=0.64, classification is tangled rope \u2014 coordination function still present but coupled with extraction. The mandatrophy is resolved by measuring the temporal trajectory: the constraint's extractive component grows as the coordination component degrades. Physicians initially see guidelines as helpful tools; over 10 years, they experience increasing liability pressure and protocol inflexibility, causing the same guidelines to function as constraints. The theater ratio rise (0.35\u21920.64) indicates that guideline adherence increasingly serves performative functions (defending decisions through protocol authority) rather than validating clinical reasoning. This trajectory is characteristic of institutional aging: a genuine coordination solution accumulates extraction properties through inertia, liability pressure, and metric-gaming (optimizing for 'guideline adherence' rather than patient outcomes). The classification holds at tangled rope across the interval because both functions remain present; the degradation manifests as rising extractiveness and theater, not a phase transition to snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "defensive_medicine_liability_cascade",
+      "medical_protocol_standardization_trap"
+    ],
+    "dual_formulation_note": "Emergency medicine guidelines decompose into two structurally distinct constraints: (1) the coordination function (decision-support standardization, \u03b5\u22480.25, rope), which operates in the evidence-validation domain; (2) the extraction mechanism (liability exposure, institutional enforcement, \u03b5\u22480.52, tangled rope), which operates in the institutional/legal domain. The network links these as sequential: guideline introduction (rope) triggers institutional adoption (coordination), which then solidifies into enforced protocol (extraction). The rising theater ratio (0.35\u21920.64) reflects the shift from genuine decision-support toward performative protocol adherence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

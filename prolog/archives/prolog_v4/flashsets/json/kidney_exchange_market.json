@@ -1,0 +1,136 @@
+{
+  "header": {
+    "constraint_id": "kidney_exchange_market",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Kidney Exchange Cycles/Chains",
+    "topic_domain": "social/technological/biological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "transplant_recipients",
+      "organ_donation_networks"
+    ],
+    "victims": [
+      "potential_donors_without_compatible_recipients",
+      "patients_with_rare_blood_types"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Patients with Rare Blood Types",
+      "comment": "Patients with rare blood types may find it harder to find a match, even within the exchange. Their exit options are limited. High extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Organ Donation Networks",
+      "comment": "Organ donation networks benefit from increased efficiency and access to a broader pool of donors and recipients. They can leverage arbitrage by optimizing matching algorithms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Transplant Recipients",
+      "comment": "Transplant recipients benefit from increased access to compatible kidneys, but are constrained by the availability of donors and the complexity of the matching process. Extraction includes the inherent risk and stress associated with transplantation and the exchange process."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The kidney exchange market is a sophisticated allocation system solving a collective action problem, yet with inherent limitations for certain individuals. Viewing from a civilizational perspective, it creates an asymmetric benefit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "matching_algorithm_fairness",
+      "question": "To what extent do matching algorithms prioritize specific groups (e.g., based on blood type or genetic markers), potentially disadvantaging others?",
+      "resolution_mechanism": "Analysis of algorithm design and outcomes, comparing transplant rates across different patient subgroups.",
+      "impact": "If algorithms are biased, the constraint may shift towards a pure snare for disadvantaged groups. Otherwise, it remains a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fairness of matching algorithms"
+    },
+    {
+      "id": "donor_altruism_vs_coercion",
+      "question": "Is the exchange truly altruistic, or are there subtle forms of coercion (social pressure, emotional obligation) that influence donor participation?",
+      "resolution_mechanism": "Surveys and interviews with donors and recipients, exploring their motivations and experiences.",
+      "impact": "If coercion is significant, the constraint may become more extractive for donors. If altruism prevails, it remains a mixed coordination/extraction system.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree of altruism vs. coercion in donor participation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Kidney exchange programs are designed to facilitate transplants when a living donor is incompatible with their intended recipient. The system matches donor/recipient pairs to create cycles or chains, increasing the overall number of successful transplants. However, some patients may be disadvantaged by the exchange. The program aims to alleviate the incompatible donor problem.",
+    "key_agents": [
+      "Transplant Recipients: Beneficiaries (moderate/constrained)",
+      "Organ Donation Networks: Beneficiaries (institutional/arbitrage)",
+      "Potential Donors without Compatible Recipients: Victims (powerless/trapped)",
+      "Patients with Rare Blood Types: Victims (powerless/trapped)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The system extracts from those who might not otherwise receive a transplant opportunity. Suppression (0.40): Moderate. Alternatives include deceased donor lists. Theater ratio (0.20): Low. The primary goal is functional: increasing transplant rates. The extraction is inherent to the allocation of scarce resources. Certain patients may experience extraction due to their blood types.",
+    "perspectival_gap": "The exchange is seen as a rope by the organ donation networks. The transplant recipients experience a tangled rope because it allows for better allocation but may still impose risk to the process. Patients with rare blood types see a snare.",
+    "directionality_logic": "Directionality is determined by whether an agent benefits from the constraints or has limited exit options. Beneficiaries and victims determine directionality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

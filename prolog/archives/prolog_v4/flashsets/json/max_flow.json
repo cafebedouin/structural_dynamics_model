@@ -1,0 +1,114 @@
+{
+  "header": {
+    "constraint_id": "max_flow",
+    "version": "0.1",
+    "generated_date": "2024-01-08",
+    "status": "DRAFT"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Socio-Technical Bottlenecks Governed by Max-Flow Principles",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "bottleneck_controllers"
+    ],
+    "victims": [
+      "downstream_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Downstream Users",
+      "comment": "Downstream users are trapped and fully exposed to the extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Bottleneck Controllers",
+      "comment": "Bottleneck controllers benefit, can arbitrage, and see coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer sees tangled rope with some extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "flow_capacity",
+      "question": "What is the true flow capacity of the system?",
+      "resolution_mechanism": "Empirical measurement of flow under stress.",
+      "impact": "Determines the severity of the bottleneck.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The real-world flow capacity."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the socio-technical application of the Max-Flow Min-Cut theorem, not the mathematical theorem itself. It describes situations where bottlenecks in a system, as defined by the max-flow min-cut theorem, are controlled by certain actors, creating opportunities for extraction from downstream users. The classic example is a toll bridge where an actor extracts rents. Another case is a chokepoint in a network or supply chain.",
+    "key_agents": [
+      "Bottleneck Controllers: Actors who control the bottleneck. (institutional/arbitrage)",
+      "Downstream Users: Those affected by the bottleneck. (powerless/trapped)"
+    ],
+    "logic_rationale": "Extractiveness is 0.5 because the bottleneck allows for extraction. Suppression is 0.6 because downstream users are partially suppressed. Theater is 0.2 because there is relatively little theater.",
+    "perspectival_gap": "Downstream users see a snare, while bottleneck controllers see a rope. The analytical observer sees a tangled rope.",
+    "directionality_logic": "Bottleneck controllers benefit. Downstream users bear cost."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

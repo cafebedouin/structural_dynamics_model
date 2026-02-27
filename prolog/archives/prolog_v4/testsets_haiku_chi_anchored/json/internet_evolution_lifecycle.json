@@ -1,0 +1,214 @@
+{
+  "header": {
+    "constraint_id": "internet_evolution_lifecycle",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "inet"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Lifecycle of the Open Internet",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "content_distribution_platforms",
+      "advertising_networks",
+      "surveillance_infrastructure_operators"
+    ],
+    "victims": [
+      "end_users",
+      "privacy_advocates",
+      "independent_content_creators",
+      "internet_openness_principle"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Ordinary Internet User",
+      "comment": "PERSPECTIVE 1: ORDINARY INTERNET USER (SNARE) \u2014 Trapped in platform ecosystems with no viable exit. Cannot communicate without ceding data to centralized intermediaries. Career, social connection, and commerce all require participation. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Internet Privacy as an Abstract Collective",
+      "comment": "PERSPECTIVE 2: INTERNET PRIVACY COLLECTIVE (SNARE) \u2014 Anonymous victim: no organizing agent, no exit option, no voice in architecture decisions. Surveillance infrastructure extracts behavioral data with zero consent mechanisms. d\u22480.98, f(d)\u22481.50, \u03c3=1.2 \u2192 \u03c7\u22480.93."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Content Creator",
+      "comment": "PERSPECTIVE 3: INDEPENDENT CONTENT CREATOR (TANGLED ROPE) \u2014 Benefits from global distribution platform access; trapped by algorithmic gatekeeping, revenue extraction (30% platform cuts), and suppression of competing distribution models. d\u22480.68, f(d)\u22481.05, \u03c3=1.1 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Content Distribution Platform",
+      "comment": "PERSPECTIVE 4: CONTENT DISTRIBUTION PLATFORM (ROPE) \u2014 Captures coordination function: matches creators to audiences globally, reduces transaction costs, enables scale. Extraction is legitimate first-mover rent. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Internet Governance Coalition",
+      "comment": "PERSPECTIVE 5: INTERNET GOVERNANCE COALITION (TANGLED ROPE) \u2014 ICANN, IETF, open-source communities recognize both coordination function (protocol standards, decentralized architectures) and extraction problem (corporate consolidation, surveillance infrastructure embedded in DNS/IP stack). Constrained by network effects and switching costs. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.46."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Net Neutrality Regulation",
+      "comment": "PERSPECTIVE 6: NET NEUTRALITY REGULATION (PITON) \u2014 Originally functional coordination mechanism (equal treatment of packets); now largely performative theater. Regulatory enforcement inconsistent across jurisdictions; actual data-throttling practices persist despite nominally neutral classification. theater_ratio=0.65 indicates substantial degradation. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Decentralized Internet Movement",
+      "comment": "PERSPECTIVE 7: DECENTRALIZED INTERNET MOVEMENT (SCAFFOLD) \u2014 IPFS, ActivityPub, mesh networks, blockchain-based alternatives represent temporary scaffolding with sunset clause: if network effects reverse toward decentralization, these alternatives become primary. Currently low adoption but architectural sunrise path exists. \u03c7\u22640.30 (low extraction); sunset mechanism: user migration once UX reaches parity. d\u22480.35, f(d)\u22480.35, \u03c3=0.9 \u2192 \u03c7\u22480.11."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Natural Law View",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scale, some centralization appears inevitable: network effects and switching costs create natural monopolies in communication infrastructure. This perspective risks naturalizing contingent economic arrangements as immutable laws. However, structural data (\u03b5=0.52, suppression=0.58) contradicts mountain classification \u2014 this is a false summit revealing how economic power is naturalized as technological necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_effects_reversibility",
+      "question": "Are network effects in centralized platforms reversible? Can users coordinate migration to decentralized alternatives once UX parity is achieved?",
+      "resolution_mechanism": "Historical case studies of platform migrations (early web fragmentation, email federation adoption); empirical testing of decentralized UX parity thresholds; adoption rate analysis of Signal vs WhatsApp, Mastodon vs Twitter",
+      "impact": "If reversible: scaffold perspective is structurally sound and open internet has real sunset path. If irreversible: constraint becomes longer-term tangled rope or even snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network effects trap users irreversibly or permit coordination reversal"
+    },
+    {
+      "id": "surveillance_infrastructure_necessity",
+      "question": "Is behavioral data extraction technically necessary for platform economics or contingent on current business model choices?",
+      "resolution_mechanism": "Comparison of platform revenue models; analysis of subscription-only services (Apple iCloud) vs ad-supported models; technology audit of privacy-preserving alternatives (differential privacy, federated learning)",
+      "impact": "If necessary: extraction is structural, constraint is deeper snare. If contingent: extraction could be eliminated by policy/business model change.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether surveillance infrastructure is technically necessary or model-dependent"
+    },
+    {
+      "id": "interoperability_protocol_feasibility",
+      "question": "Can interoperability standards (ActivityPub-style federation) reach technical maturity and user adoption within a single generation?",
+      "resolution_mechanism": "Technical benchmark of federation protocol completeness; adoption metrics for ActivityPub instances; user experience parity testing vs centralized platforms",
+      "impact": "If achievable: decentralization scaffold timeline is realistic, constraint becomes transitional. If not: open internet remains aspirational, constraint persists as tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interoperability standards can mature within generational timescale"
+    },
+    {
+      "id": "state_surveillance_integration",
+      "question": "To what degree are commercial surveillance systems and state surveillance infrastructure integrated or dependent?",
+      "resolution_mechanism": "Documentation of data-sharing agreements between platforms and government agencies; technical analysis of surveillance API integration; regulatory analysis of data transfer frameworks (GDPR, international agreements)",
+      "impact": "If highly integrated: surveillance extraction becomes doubly constrained (commercial + state), snare classification deepens. If separable: decentralization path becomes viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of integration between commercial and state surveillance infrastructure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The open internet emerged as a coordination mechanism for distributed communication (1990s-early 2000s): TCP/IP, DNS, email protocols solved collective action problems with minimal extraction. Over three decades, this infrastructure has been captured by centralized platforms (Google, Facebook, Amazon, Apple, Microsoft) that extract value through behavioral surveillance, algorithmic gatekeeping, and rent-seeking on creator economics. The constraint exhibits all six DR types depending on structural position. From the user's perspective, it is a snare: trapped in network effects with no viable exit. From the platform's perspective, it is a rope: they genuinely solved the coordination problem of global communication and deserve legitimate rent. From the internet governance coalition's perspective, it is a tangled rope: both coordination and extraction mechanisms are present and require active enforcement to balance. Net neutrality regulation has degraded into piton (performative theater). Decentralized alternatives represent a scaffold with potential sunset logic if UX parity emerges. The natural law perspective (mountain) risks naturalizing economic consolidation as inevitable technological necessity. The constraint is defined by the tension between the open internet's original coordination function and its transformation into an extraction mechanism through platform monopolism and surveillance capitalism.",
+    "key_agents": [
+      "Ordinary Internet User: Primary victim (powerless/trapped) \u2014 data extracted, choices constrained by platform control, no exit option",
+      "Internet Privacy as Collective: Abstract victim (powerless/trapped) \u2014 no voice in architecture, no organizing agent, maximum extraction",
+      "Independent Content Creator: Secondary victim (moderate/constrained) \u2014 benefits from distribution access, harmed by algorithmic gatekeeping and revenue extraction",
+      "Content Distribution Platform (Google, Meta, Amazon, Apple): Primary beneficiary (institutional/arbitrage) \u2014 captures coordination function, extracts surveillance data and creator revenue",
+      "Internet Governance Coalition: Organized actor (organized/constrained) \u2014 ICANN, IETF, open-source communities trying to balance coordination and extraction through standards and decentralized architectures",
+      "Net Neutrality Regulator: Institutional actor (institutional/arbitrage) \u2014 maintains performance of neutrality; enforcement inconsistent, mechanism degraded",
+      "Decentralized Internet Movement: Organized actor (organized/mobile) \u2014 IPFS, ActivityPub, mesh networks building alternative infrastructure with exit potential",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing platform monopolism as inherent to network effects"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The internet has shifted from open coordination (early era, \u03b5\u22480.15) to platform-mediated extraction. Current measurement reflects: behavioral surveillance (ubiquitous data harvesting), algorithmic gatekeeping (suppression of competitor services), creator economy extraction (30% platform cuts + recommendation algorithm control). This is not maximal extraction because decentralized alternatives exist (low adoption, but technically feasible), and users retain some agency (can use multiple platforms, though costly). Suppression (0.58): Moderate-high. Network effects and switching costs create real barriers to exit. Users cannot easily migrate to alternatives without losing social graph and economic opportunity. However, suppression is not complete (technical alternatives exist, migration is possible with coordination, some users successfully use multiple platforms). Theater ratio (0.65): High and rising. Net neutrality regulations perform equality while platforms engage in de facto throttling. Platform recommendation algorithms present themselves as objective discovery mechanisms while actually performing aggressive amplification/suppression. Content moderation policies claim to serve community safety while extracting control over speech. Theater has increased as platforms have grown larger and facing more scrutiny \u2014 more performative legitimacy work required.",
+    "perspectival_gap": "This constraint demonstrates profound perspectival divergence. The ordinary user sees a snare (trapped in network effects). The platform beneficiary sees a rope (legitimate coordination function). The internet privacy collective sees maximal snare (zero agency, zero voice). The independent creator sees tangled rope (both benefits and extraction). The internet governance coalition sees tangled rope with active enforcement requirements (standards, interoperability, decentralization support). Net neutrality regulators perform piton (ritual without function). The decentralized internet movement sees a scaffold with real sunset logic (UX parity could reverse network effects). The civilizational analytical observer risks seeing a mountain (network effects are inevitable, centralization is natural) \u2014 but the structural data reveals this as a false summit. The perspectival gap is not about different facts; it is about different structural relationships to the same extraction mechanism. This is the key diagnostic signature of a tangled rope.",
+    "directionality_logic": "Ordinary internet user: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Nearly maximal extraction. Content distribution platform: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; legitimate rent on coordination function. Internet privacy collective: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.50. Maximal extraction (zero agency, zero exit, zero voice). Independent creator: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction but not total; some agency through content production. Internet governance coalition: Both beneficiary (standards enable coordination) + victim (captured by platforms) + organized + constrained \u2192 d\u22480.55, f(d)\u22480.75. Mixed directionality. Decentralized internet movement: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction because mobility is real (decentralized alternatives exist, though adoption is low). Net neutrality regulator: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Appears as rope, but piton classification comes from theater_ratio gate, not chi.",
+    "mandatrophy_analysis": "MANDATROPHY ANALYSIS \u2014 NOT YET RESOLVED: The constraint is claimed as tangled_rope but mandatrophy_resolved=false because the structural classification is currently contested. The constraint exhibits genuine coordination function (platforms solved real distribution problems that decentralized systems struggled with) AND asymmetric extraction (surveillance, algorithmic control, creator revenue extraction). However, the balance between coordination and extraction is the subject of ongoing debate: (1) Platform advocates argue the extraction is legitimate rent on coordination service and that user agency is overstated (users voluntarily choose to use platforms). (2) Decentralization advocates argue the extraction is increasingly predatory and that alternatives are now technically mature enough to provide coordination without surveillance overhead. (3) Regulators attempt to preserve coordination function while reducing extraction (GDPR, DMA, interoperability mandates). The mandatrophy will be resolved when one of three events occurs: (A) Decentralized alternatives achieve UX parity and adopt sufficiently that network effects reverse toward decentralization (constraint becomes Scaffold with real sunset). (B) Regulation successfully caps extraction while preserving coordination (constraint becomes Rope with governance overlay). (C) Extraction mechanisms become undeniable and irreducible (constraint becomes pure Snare with no coordination justification). Current status: tangled rope with live mandatrophy. The constraint's theater_ratio (0.65) is the leading indicator \u2014 as performative legitimacy work increases, the likelihood of pure snare classification rises."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_gatekeeping",
+      "surveillance_capitalism_extraction",
+      "network_effects_lock_in",
+      "digital_public_square_control"
+    ],
+    "dual_formulation_note": "The open internet lifecycle decomposes into structurally distinct constraints: the original open protocols (TCP/IP, DNS, SMTP) form a Mountain/Rope family with low extraction; the platform monopolies that captured those protocols form a separate Snare/Tangled Rope family with high extraction. This story models the lifecycle as a single constraint to capture the transformation process. For empirical precision, downstream stories should decompose this into (1) open_internet_protocol_architecture (\u03b5\u22480.08, Mountain), (2) platform_surveillance_extraction (\u03b5\u22480.68, Snare), and (3) internet_governance_coordination (\u03b5\u22480.35, Tangled Rope). These stories are linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.6
+    }
+  ]
+}

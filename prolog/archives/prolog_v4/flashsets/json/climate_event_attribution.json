@@ -1,0 +1,159 @@
+{
+  "header": {
+    "constraint_id": "climate_event_attribution",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Scientific methodology for attributing extreme weather to climate change",
+    "topic_domain": "scientific/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "climate_research_community",
+      "policy_makers"
+    ],
+    "victims": [
+      "public_understanding_of_science",
+      "fossil_fuel_industry"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Public Understanding of Science",
+      "comment": "The general public, lacking the scientific expertise to evaluate attribution studies directly, is vulnerable to misinformation and misinterpretation. They are trapped in a situation where they must rely on experts, but face a complex and often politicized landscape. The extraction comes from the potential for flawed studies or biased interpretations to erode trust in climate science."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Climate Research Community",
+      "comment": "Climate scientists both benefit from and are constrained by event attribution methodologies. They gain funding, recognition, and influence, but are also subject to intense scrutiny, potential criticism, and the pressure to produce definitive results. They are constrained by the limitations of current models and data, but can still publish and advance their careers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Policy Makers",
+      "comment": "Policymakers rely on event attribution studies to inform decisions about climate mitigation and adaptation. They are both beneficiaries (having access to scientific evidence) and targets (political pressures related to climate policy). They can also be pressured by the fossil fuel industry."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Fossil Fuel Industry",
+      "comment": "The fossil fuel industry is negatively impacted by event attribution studies that link extreme weather to climate change, as this can lead to increased regulation, public pressure, and legal liability. While the fossil fuel industry can't entirely avoid the impacts of climate event attribution, they have the resources to constrain the impacts through misinformation and lobbying."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From an analytical perspective, the methodology serves as a mixed bag. The methodology can be improved to be more accurate, reliable, and consistent, but it also is already a tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "model_uncertainty",
+      "question": "How accurately can climate models simulate the conditions necessary for attributing extreme events, given limitations in resolution, parameterization, and process understanding?",
+      "resolution_mechanism": "Improve model resolution and parameterizations; quantify uncertainties through ensemble simulations and multi-model comparisons; develop methods for structural uncertainty reduction.",
+      "impact": "If uncertainty is high, attribution statements are unreliable, potentially undermining public trust and policy relevance. If uncertainty is low, attribution statements provide a strong basis for action.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding climate model simulations"
+    },
+    {
+      "id": "counterfactual_definition",
+      "question": "How should the 'counterfactual' (what would have happened without anthropogenic climate change) be defined and estimated, given inherent uncertainties in reconstructing past climate states?",
+      "resolution_mechanism": "Develop alternative counterfactual methodologies; compare results across methods; use paleo-climate data to constrain counterfactual estimates.",
+      "impact": "Different counterfactual definitions can lead to widely varying attribution results, potentially undermining the credibility of the science. Consistent and robust counterfactual methods are crucial.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The best method for defining and estimating the counterfactual"
+    },
+    {
+      "id": "detection_vs_attribution",
+      "question": "To what extent is 'detection' (identifying a trend) sufficient versus 'attribution' (quantifying the specific contribution of anthropogenic forcing) for informing policy and legal decisions?",
+      "resolution_mechanism": "Legal and policy analysis of the requirements for establishing causation; ethical considerations regarding the use of probabilistic evidence in decision-making.",
+      "impact": "If detection is sufficient, weaker attribution statements can still be valuable. If attribution is required, more rigorous methodologies are needed.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "The extent that detection is sufficient"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint concerns the scientific methodology used to attribute specific extreme weather events (heatwaves, floods, droughts) to anthropogenic climate change. The process involves complex climate modeling, statistical analysis, and expert judgment. It has significant implications for climate policy, public understanding, and even legal liability. The extraction comes from using imperfect attribution science to change policy.",
+    "key_agents": [
+      "Climate Research Community: The scientists who conduct attribution studies. (moderate/constrained)",
+      "Policy Makers: Those who use the results of attribution studies to make decisions about climate policy. (powerful/constrained)",
+      "Public Understanding of Science: The general public's comprehension of climate science and the role of human influence. (powerless/trapped)",
+      "Fossil Fuel Industry: The industry that produces and sells fossil fuels, and is potentially liable for climate damages. (institutional/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. Attribution studies can lead to significant consequences for the fossil fuel industry and may result in overzealous or misinformed climate policy. Suppression (0.40): Moderate. The politicized nature of climate science creates a significant suppression. Theater ratio (0.30): Moderate-low. While there is public discourse of science, it is overshadowed by genuine scientific endeavor.",
+    "perspectival_gap": "The research community and policymakers may view the constraint as beneficial, as it provides valuable information for understanding and addressing climate change. However, the fossil fuel industry and members of the public may see it as a snare, as it places blame for extreme events and potentially undermines their interests or understanding. The analytical observer sees a tangled rope, a process with both coordination and extraction elements.",
+    "directionality_logic": "The climate research community benefits from event attribution through funding and prestige. Policy makers benefit through climate policy. The public has no exit, and thus they are trapped with the information. The fossil fuel industry is negatively impacted by event attribution."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_models",
+      "climate_policy"
+    ]
+  },
+  "directionality_overrides": []
+}

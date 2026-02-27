@@ -413,6 +413,70 @@ The corpus needs balanced representation across all six types. When choosing sce
 
 ---
 
+### Perspective Diversity: Structural Position Archetypes
+
+**CRITICAL: The example JSON shows ONE structural position pattern. Your constraint will almost certainly require a DIFFERENT pattern.** The structural positions (power, exit options, and therefore directionality) must be derived from the specific constraint's dynamics, not copied from the example. Below are four common archetypes — most constraints will resemble one of these, but many will combine elements or use configurations not shown here.
+
+**Archetype A — Extraction visible from below (the example pattern):**
+Powerless agents are trapped and see extraction; institutions benefit and see coordination.
+```json
+"perspectives": [
+  {"classification_type": "snare", "agent_power": "powerless", "exit_options": "trapped", ...},
+  {"classification_type": "tangled_rope", "agent_power": "moderate", "exit_options": "constrained", ...},
+  {"classification_type": "rope", "agent_power": "institutional", "exit_options": "arbitrage", ...}
+]
+```
+*Use when: predatory lending, labor exploitation, monopolistic extraction, surveillance. Institutional actors benefit; powerless agents bear costs with no exit.*
+
+**Archetype B — Institution as victim (regulatory capture, unfunded mandates):**
+The institution is trapped or constrained; organized external actors benefit.
+```json
+"perspectives": [
+  {"classification_type": "tangled_rope", "agent_power": "powerless", "exit_options": "constrained", ...},
+  {"classification_type": "snare", "agent_power": "institutional", "exit_options": "trapped", ...},
+  {"classification_type": "rope", "agent_power": "organized", "exit_options": "arbitrage", ...}
+]
+```
+*Use when: regulatory capture where industry captures the regulator, unfunded mandates where institutions bear costs imposed by others, institutional decay where the institution cannot exit its own degraded process. The institution's d-value will be HIGH (victim + trapped), not the low value seen in Archetype A.*
+
+**Archetype C — Uniform coordination (everyone benefits):**
+Low extraction, low suppression. All perspectives agree on rope or mountain.
+```json
+"perspectives": [
+  {"classification_type": "rope", "agent_power": "powerless", "exit_options": "mobile", ...},
+  {"classification_type": "rope", "agent_power": "institutional", "exit_options": "mobile", ...},
+  {"classification_type": "rope", "agent_power": "analytical", "exit_options": "analytical", ...}
+]
+```
+*Use when: technical standards, cooperative protocols, genuine public goods with low overhead. d-values cluster near 0.3–0.5 for all agents because costs and benefits are roughly symmetric. No agent is trapped; no agent has arbitrage.*
+
+**Archetype D — Universal extraction (analytical sees snare too):**
+High extraction is structurally visible from ALL perspectives, including civilizational.
+```json
+"perspectives": [
+  {"classification_type": "snare", "agent_power": "powerless", "exit_options": "trapped", ...},
+  {"classification_type": "snare", "agent_power": "moderate", "exit_options": "constrained", ...},
+  {"classification_type": "tangled_rope", "agent_power": "institutional", "exit_options": "constrained", ...},
+  {"classification_type": "snare", "agent_power": "analytical", "exit_options": "analytical", ...}
+]
+```
+*Use when: systemic extraction so severe that even civilizational analysis cannot naturalize it — debt traps, caste systems, colonial extraction, environmental destruction. The analytical observer does NOT default to mountain; the false summit detector has nothing to detect because nobody is naturalizing the constraint. Institutional actors are constrained, not arbitraging — they participate in the extraction but cannot exit it either.*
+
+**Archetype E — Lateral/same-level extraction:**
+Actors at similar power levels but with asymmetric exit options relative to THIS constraint.
+```json
+"perspectives": [
+  {"classification_type": "rope", "agent_power": "institutional", "exit_options": "arbitrage", ...},
+  {"classification_type": "snare", "agent_power": "institutional", "exit_options": "trapped", ...},
+  {"classification_type": "tangled_rope", "agent_power": "analytical", "exit_options": "analytical", ...}
+]
+```
+*Use when: inter-state dynamics, inter-firm extraction, peer manipulation. Two institutional actors share the same power level but have different exit options. The extractor has arbitrage (can walk away); the target is trapped (cannot). This produces two institutional perspectives with DIFFERENT classifications and DIFFERENT d-values.*
+
+**The key principle: structural positions are constraint-specific, not role-fixed.** An institution can be a beneficiary (Archetype A), a victim (Archetype B), a mutual participant (Archetype C), a constrained co-participant (Archetype D), or either side of a lateral extraction (Archetype E). The same is true for every power level. Derive positions from the actual dynamics of YOUR constraint.
+
+---
+
 ## Ready to Generate
 
 When you receive a scenario, respond with a **complete, valid Prolog file** following this structure. Make it immediately loadable and usable. State assumptions explicitly in your commentary. Declare beneficiaries and victims for every non-mountain constraint — these are the structural data that drive the engine's directionality computation.

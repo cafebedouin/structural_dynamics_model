@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "fptp_electoral_system",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "The \"First-Past-the-Post\" (Plurality) Electoral System",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_political_parties",
+      "incumbent_politicians"
+    ],
+    "victims": [
+      "minority_voters",
+      "third_party_voters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Minority Voters",
+      "comment": "Perspective of minority voters who consistently find their preferred candidates unable to win under FPTP. They are trapped in a system where their votes are often strategically wasted."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Major Political Parties",
+      "comment": "Perspective of major political parties who benefit from the system by consolidating power and limiting the viability of smaller parties. They can arbitrage the system by focusing resources on key districts."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Third-Party Voters",
+      "comment": "Perspective of voters who support third-party candidates. They are constrained by the system's tendency to favor larger parties, but may occasionally influence the outcome or push major parties to adopt certain policies. Their vote has strategic consequences, constraining their options."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Politicians",
+      "comment": "Perspective of incumbent politicians who benefit from the system's tendency to favor established candidates. They see the system as a degraded form of rope that maintains their status through institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective views the system as a tangled rope, providing a coordination function by producing governments, but also extracting from minority interests and suppressing alternative electoral systems."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "electoral_reform_viability",
+      "question": "Is electoral reform politically viable given the entrenched interests of major parties?",
+      "resolution_mechanism": "Analysis of public opinion, political party platforms, and historical attempts at electoral reform.",
+      "impact": "If reform is viable, the system may transition to a scaffold or rope. If not, it remains a snare or piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political viability of electoral reform"
+    },
+    {
+      "id": "strategic_voting_impact",
+      "question": "How significantly does strategic voting distort the representation of voter preferences?",
+      "resolution_mechanism": "Statistical analysis of voting patterns and simulation of alternative electoral systems.",
+      "impact": "If strategic voting is high, the system's extractiveness is amplified. If low, the system is closer to a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of strategic voting on representation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The First-Past-the-Post (FPTP) voting system is a winner-take-all electoral mechanism where the candidate with the most votes in a district wins, regardless of whether they achieve a majority. This system can lead to disproportionate representation, where a party can win a majority of seats with less than a majority of the popular vote. It often disadvantages smaller parties and minority groups, leading to strategic voting and reduced voter turnout in areas where one party dominates.",
+    "key_agents": [
+      "Minority Voters: Primary target (powerless/trapped) - consistently underrepresented",
+      "Major Political Parties: Primary beneficiary (institutional/arbitrage) - consolidates power",
+      "Third-Party Voters: Secondary target (moderate/constrained) - vote may be wasted",
+      "Incumbent Politicians: Benefit from name recognition and existing infrastructure (institutional/constrained)",
+      "Analytical Observer: Examines the system's effects on representation and voter behavior (analytical/analytical)"
+    ],
+    "logic_rationale": "The system extracts from minority voters by suppressing their representation. The beneficiaries are the major parties and incumbent politicians who perpetuate the system for their own benefit. The theater ratio is relatively high because the system does produce governments, but the quality of representation is questionable. Extractiveness is 0.6 because while there is a government forming capability, there is also very high extraction. Suppression is 0.7, because alternatives are actively blocked by those in power.",
+    "perspectival_gap": "The gap exists because major parties benefit from the system's power consolidation, while minority voters are trapped in a cycle of underrepresentation. The analytical observer sees both the coordination and extraction aspects of the system, leading to the tangled rope classification. The incumbent politician finds themself propped up by inertia, but still constrained.",
+    "directionality_logic": "Major political parties are declared beneficiaries because the system consolidates power in their hands. Minority and third-party voters are declared victims because their representation is suppressed. Incumbent politicians benefit from the status quo, but are also somewhat constrained by the system's limitations.",
+    "mandatrophy_analysis": "This is a Snare because of the high levels of extraction from the voters, especially from minorities. Voters would benefit from alternative systems that allow them to have better representation. It prevents mislabeling because it is obvious that the powerful are benefiting at the expense of the powerless in this system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gerrymandering",
+      "voter_suppression"
+    ]
+  },
+  "directionality_overrides": []
+}

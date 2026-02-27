@@ -1,0 +1,158 @@
+{
+  "header": {
+    "constraint_id": "self_enforced_boundary_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sebp"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "The Self-Enforced Boundary Protocol",
+    "topic_domain": "psychological/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "subject_psychological_autonomy",
+      "relational_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Subject (Boundary Keeper)",
+      "comment": "PERSPECTIVE 1: SUBJECT / BOUNDARY KEEPER (ROPE) \u2014 The subject implements the protocol unilaterally. Exit options are fully in their control ('If X, then I do Y'). No coercion of the other party is required. The subject benefits from psychological autonomy and relational clarity. d\u22480.50, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.15. Pure coordination: the subject organizes their own behavior to maintain relational stability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Other Party (Boundary Recipient)",
+      "comment": "PERSPECTIVE 2: OTHER PARTY / BOUNDARY RECIPIENT (ROPE) \u2014 The other party is informed of the protocol but bears no enforcement burden. They can continue their behavior unchanged; the subject will execute their promised response. The other party benefits from clarity and reduced relational ambiguity. Exit options remain open (they can modify their behavior, or accept the subject's response). d\u22480.50, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.15. Coordination without coercion."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Therapeutic/Coaching Community",
+      "comment": "PERSPECTIVE 3: THERAPEUTIC / COACHING COMMUNITY (SCAFFOLD) \u2014 Boundary protocols are taught as temporary scaffolding during relational repair or skill-building phases. The expectation is that as communication improves, explicit 'If X then Y' protocols decline in necessity \u2014 subjects move toward authentic negotiation and mutual adjustment. The boundary protocol is a developmental stage with an implicit sunset. \u03c7 \u2264 0.30 (low extraction during transition), theater \u2264 0.70 (authentic skill-building, not performative)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Institutional Boundary Discourse",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL BOUNDARY DISCOURSE (PITON) \u2014 In mainstream psychotherapy and self-help literature, 'setting boundaries' has become a symbolic virtue with substantial theatrical performance. Many people announce boundaries without executing them ('I'm setting a boundary'), creating a performative ritual detached from actual behavior change. The institutional discourse treats boundary-setting as inherently good, regardless of implementation rigor. theater_ratio \u2265 0.70 reflects that institutional talk about boundaries often exceeds actual protocol enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Logical Necessity)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / LOGICAL NECESSITY (MOUNTAIN) \u2014 From a purely logical standpoint, a self-enforced protocol that requires zero change from the other party is an irreducible feature of autonomy itself. Any relational constraint that preserves unilateral exit options exhibits low base extractiveness (\u03b5 \u2264 0.25) and minimal suppression (\u03c3 \u2264 0.05). The boundary protocol is a mathematical consequence of the definition of autonomy: an action that depends entirely on one's own choices. accessibility_collapse=0.90 (cannot design away the requirement that 'I control my own actions'), resistance=0.05 (no meaningful resistance, only acceptance or rejection of one's own agency)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "protocol_credibility_threshold",
+      "question": "At what execution rate does a stated boundary protocol transition from genuine coordination to theatrical performance?",
+      "resolution_mechanism": "Longitudinal tracking of announced boundaries vs actual implementation; correlation between consistency rates and relational outcomes",
+      "impact": "If threshold low (>50% execution): boundary-setting as practiced is mostly theater (Piton). If threshold high (>90% execution): boundary-setting is mostly Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Execution rate threshold for genuine vs performative boundary-setting"
+    },
+    {
+      "id": "mutual_adaptation_dependency",
+      "question": "Does a self-enforced boundary eliminate interdependence or merely clarify it?",
+      "resolution_mechanism": "Analysis of whether subjects using boundary protocols report increased relational satisfaction or increased isolation; whether the other party adapts or disengages",
+      "impact": "If elimination: boundary protocol is pure autonomy expression (Mountain). If clarification: the other party retains agency to adapt or separate, making it true Rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether boundaries eliminate or clarify mutual interdependence"
+    },
+    {
+      "id": "coaching_sunset_actualization",
+      "question": "Do boundary protocols actually function as transitional scaffolding, or do subjects maintain them indefinitely as permanent relational infrastructure?",
+      "resolution_mechanism": "Longitudinal tracking of subjects taught boundary protocols; measurement of protocol abandon or evolution over 2+ years; comparison with therapeutic theory predictions",
+      "impact": "If sunset achieved: Scaffold classification is structural (protocols naturally fade). If permanent: Scaffold is aspirational; actual constraint is Rope or Piton.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether boundary protocols function as temporary scaffolding or permanent structures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A boundary protocol is a self-enforced action rule: 'If X happens, I will do Y.' It is fundamentally different from a request for the other party to change. The subject unilaterally determines both the trigger (X) and their response (Y), placing the entire locus of control within their own volition. This structural design eliminates coercion of the other party \u2014 they are informed of the protocol but face no enforcement burden or penalty for not complying. The constraint represents a pure coordination mechanism at the dyadic level: the subject organizes their own behavior to maintain psychological autonomy and relational stability. However, the institutional discourse around boundary-setting has increasingly decoupled from actual protocol implementation, creating a therapeutic theater in which announcing a boundary ('I'm setting a boundary') substitutes for executing one. The self-enforced boundary protocol demonstrates how a logically necessary feature of autonomy (the ability to control one's own actions) can be reframed as a contingent social practice, and then gradually institutionalized as performative ritual.",
+    "key_agents": [
+      "Subject / Boundary Keeper (moderate/mobile): Primary implementer \u2014 controls protocol execution entirely; benefits from autonomy and relational clarity",
+      "Other Party / Boundary Recipient (moderate/mobile): Passive participant \u2014 receives notification but bears no enforcement burden; retains full exit options",
+      "Therapeutic / Coaching Community (organized/constrained): Teaches boundary protocols as transitional scaffolding during skill development; expects sunset as relational maturity increases",
+      "Institutional Boundary Discourse (institutional/arbitrage): Maintains institutional authority over 'correct' boundary-setting; benefits from symbolic association with psychological health; theater-heavy implementation",
+      "Analytical Observer (analytical/analytical): Recognizes boundary protocol as a logical necessity of autonomy; identifies false summit when institutional theater naturalizes contingent social practice"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The protocol requires zero change from the other party and zero coercion. The subject bears all implementation burden. However, extractiveness is not zero because: (1) the protocol may reduce the other party's options if they have grown accustomed to the subject's prior accommodation, (2) clarity about boundaries can shift relational dynamics in ways the other party did not choose, (3) institutional coaching creates a market for boundary-setting knowledge that extracts value from relational anxiety. The rise over the interval (0.15 \u2192 0.28) reflects the increasingly extractive framing of boundary-setting in popular psychology: what began as autonomous self-management has been repackaged as a purchasable skill. Suppression (0.42): Moderate. The subject may suppress alternative responses ('I could negotiate more,' 'I could just end the relationship') in favor of the protocol structure. The other party faces suppression of their prior relational assumption ('I can adapt you indefinitely'). Theater ratio (0.35): Low-moderate. In authentic therapeutic contexts, boundary protocols are behavioral (subject executes them), not performative. However, institutional boundary discourse increasingly emphasizes announcement over execution \u2014 'setting a boundary' becomes a speech act rather than an action protocol. The rise in theater (0.20 \u2192 0.35) reflects this institutional drift toward symbolic boundary-setting.",
+    "perspectival_gap": "The subject and other party experience the constraint identically as Rope \u2014 pure coordination with mobile exit options. Both benefit from clarity; neither is coerced. The therapeutic community sees Scaffold \u2014 a temporary structure expected to fade as relational skills mature. The institutional discourse sees Piton \u2014 boundary-setting as a symbolic virtue maintained through theatrical repetition rather than functional necessity. The analytical observer sees Mountain \u2014 the logical necessity that 'I control my own actions' cannot be eliminated, only expressed or suppressed. The perspectival gap is not about disagreement on facts but about the function of the constraint in each context. For the dyad, it is coordination. For the institution, it is theatrical authority. For the analyst, it is logical inevitability.",
+    "directionality_logic": "Subject / Boundary Keeper: Mobile exit (can modify protocol, abandon it, or escalate to relationship termination) + moderate power \u2192 d \u2248 0.50, f(d) \u2248 0.65. Neutral directionality; subject is neither beneficiary nor victim in the extraction sense. They are the implementer. Other Party / Boundary Recipient: Mobile exit (can continue behavior unchanged, adapt, or leave relationship) + moderate power \u2192 d \u2248 0.50, f(d) \u2248 0.65. Neutral directionality; they are informed but not coerced. Therapeutic Community: Constrained (benefits from ongoing demand for boundary-coaching) + organized \u2192 d \u2248 0.40, f(d) \u2248 0.40. Low effective extraction during authentic scaffolding phases. Institutional Discourse: Arbitrage (sells authority and techniques) + institutional \u2192 d \u2248 0.05, f(d) \u2248 -0.12. Net beneficiary through symbolic association with psychological health."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "relational_autonomy_paradox",
+      "therapeutic_theater_inflation"
+    ],
+    "dual_formulation_note": "The self-enforced boundary protocol decomposes into two structurally distinct constraints: (1) the logical structure of autonomy itself (low extractiveness, universal scope) which appears as Mountain, and (2) the institutional practice of boundary-setting discourse (higher theater ratio, extractive coaching market) which appears as Piton. Both are true; they measure different observables."
+  },
+  "directionality_overrides": []
+}

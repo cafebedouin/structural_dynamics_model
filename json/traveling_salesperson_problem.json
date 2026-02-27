@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "traveling_salesperson_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tsp"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Applied Logistics Optimization (based on TSP)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "logistics_optimization_vendors",
+      "large_fleet_operators"
+    ],
+    "victims": [
+      "independent_couriers",
+      "small_parcel_services",
+      "route_worker_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Independent Courier",
+      "comment": "PERSPECTIVE 1: INDEPENDENT COURIER (SNARE) \u2014 Trapped within algorithmic routing systems that extract delivery efficiency gains while imposing zero schedule autonomy. Cannot exit without losing market access. Experiences maximum extraction through algorithmic enforcement of optimization solutions that benefit logistics platforms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Small Parcel Service",
+      "comment": "PERSPECTIVE 2: SMALL PARCEL SERVICE (TANGLED ROPE) \u2014 Constrained by adoption costs and competitive necessity to implement TSP-based routing. Experiences both coordination benefit (access to optimization) and extraction (vendor lock-in, proprietary algorithms, data asymmetry). Limited exit due to market consolidation but some agency through vendor selection."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Logistics Optimization Vendor",
+      "comment": "PERSPECTIVE 3: LOGISTICS OPTIMIZATION VENDOR (ROPE) \u2014 Benefits from coordination problem (TSP is genuinely hard; vendors provide real solution). Experiences the constraint as a standard: communication of routing requirements enables delivery network optimization. Primary beneficiary with arbitrage options (can serve multiple industries, geographies)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Large Fleet Operator",
+      "comment": "PERSPECTIVE 4: LARGE FLEET OPERATOR (ROPE) \u2014 Organized institutional actor with resources to develop proprietary optimization or negotiate favorable vendor terms. Experiences TSP solution as enabling infrastructure. Mobile exit options: can build in-house systems, switch vendors, or negotiate volume discounts."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Source Optimization Movement",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE OPTIMIZATION MOVEMENT (SCAFFOLD) \u2014 Organized advocates (OSRM, VROOM, open routing libraries) are building alternative verification pathways for TSP solutions. Sees vendor lock-in as a temporary coordination failure with a sunset: distributed, auditable, non-proprietary optimization infrastructure is developing. Estimated sunset: 5-10 years for open-source routing to achieve parity with commercial systems for mid-market operators."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic TSP Research Apparatus",
+      "comment": "PERSPECTIVE 6: ACADEMIC TSP RESEARCH APPARATUS (PITON) \u2014 Decades of TSP scholarship (NP-completeness proofs, approximation algorithms, heuristic benchmarks) persist in academic curricula and journals despite diminishing relevance to actual logistics applications. The real-world problem has shifted from 'find the optimal route' to 'optimize under constraints: delivery windows, vehicle capacity, driver labor law, demand variability.' Academic TSP is largely performative: a canonical hard problem that demonstrates algorithmic sophistication but whose optimization results rarely influence deployed systems. The apparatus persists through institutional inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the Traveling Salesperson Problem is a fundamental computational constraint: the combinatorial explosion of possible routes creates an inherent verification gap between claimed optimality and actual system performance. No logistics system can compute the true optimum for large networks. This perspective risks naturalizing a contingent institutional choice (proprietary heuristics + vendor lock-in) as a law of computation. The engine's false summit detector will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_transparency_sufficiency",
+      "question": "Does transparency in routing algorithms (open-source code, auditable heuristics) substantively reduce extraction, or does data asymmetry (proprietary demand forecasts, vehicle fleet data) remain the primary extraction mechanism?",
+      "resolution_mechanism": "Comparative case study: open-source OSRM vs proprietary systems across equivalent logistics networks; measurement of route efficiency gains retained by vendors vs passed to operators; analysis of data ownership and access restrictions",
+      "impact": "If transparency sufficient: scaffold sunset is real and extraction ceiling is lower. If data asymmetry primary: open-source fails to disrupt vendor extraction and extraction remains high despite algorithmic transparency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic transparency or data asymmetry drives extraction"
+    },
+    {
+      "id": "worker_schedule_autonomy_cost",
+      "question": "What portion of logistics cost reduction comes from genuinely optimal routing versus coercive schedule rigidity that extracts worker flexibility without corresponding wage increases?",
+      "resolution_mechanism": "Labor economics analysis: comparison of worker compensation, schedule autonomy indices, and injury rates pre- and post-TSP implementation; cross-sector comparison with less algorithmically managed delivery services; survey data on worker experience of schedule discretion",
+      "impact": "If significant portion from schedule coercion: snare classification for workers is confirmed and suppression score is underestimated. If primarily from routing optimization: tangled_rope classification is more accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Portion of cost reduction from worker schedule rigidity vs routing optimization"
+    },
+    {
+      "id": "small_operator_exit_viability",
+      "question": "Can small parcel services realistically exit from proprietary TSP systems and adopt open-source alternatives, or do network effects and integration lock-in make exit impossible regardless of technical availability?",
+      "resolution_mechanism": "Market analysis: cost and time required for small operators to migrate from proprietary to open-source systems; measurement of network effects (integrations with customer platforms, payment systems, vehicle tracking); case studies of attempted migrations and their success rates",
+      "impact": "If exit viable: constrained exit_options is accurate and tangled_rope classification holds. If exit blocked: exit_options should be trapped and classification should shift toward snare for small operators.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether small operators can realistically exit from proprietary vendor systems"
+    },
+    {
+      "id": "optimization_plateau_point",
+      "question": "Beyond what problem size or complexity does algorithmic routing optimization yield marginal improvement, and at what cost does further optimization extraction exceed coordination benefit?",
+      "resolution_mechanism": "Logistics engineering analysis: cost-benefit curves for heuristic routing at different network scales; measurement of vendor optimization value delivered at different operator sizes; identification of break-even points where open-source solutions achieve equivalent performance",
+      "impact": "If plateau occurs at small network scales: many small operators are in pure extraction regime (snare). If plateau is high: tangled_rope classification broadly holds and coordination benefit is substantial.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Problem size at which routing optimization yields marginal returns"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Applied TSP optimization in logistics creates a hybrid constraint combining genuine coordination value (solving a computationally hard problem) with asymmetric extraction (vendor lock-in, data asymmetry, worker schedule coercion). The coordination problem is real: routing large delivery networks to minimize distance/time is NP-complete, and heuristic solutions provide substantial cost reductions. But the extraction mechanism is equally real: proprietary algorithms become black boxes, vehicle and demand data concentrate in vendor platforms, and algorithmic enforcement imposes schedule rigidity on workers without corresponding wage compensation. This constraint exhibits six distinct classification perspectives, revealing how the same technical optimization problem appears as pure extraction to independent workers, mixed coordination-extraction to small operators, pure coordination to large operators and vendors, a temporary problem being solved by open-source alternatives, degraded academic research, and potentially a natural law of computation. The theater_ratio has risen from 0.35 to 0.58 over the measurement interval, indicating that performative elements (vendor optimization benchmarking, claims of 'AI-driven efficiency,' SaaS dashboard complexity) are increasingly substituting for actual transparency about how optimization value is distributed.",
+    "key_agents": [
+      "Logistics Optimization Vendors: Primary beneficiary (institutional/arbitrage) \u2014 extract value through algorithmic propriety, data asymmetry, and vendor lock-in; can serve multiple industries and geographies",
+      "Large Fleet Operators: Secondary beneficiary (organized/mobile) \u2014 capture optimization benefits; have resources and leverage to develop alternatives or negotiate favorable terms",
+      "Small Parcel Services: Primary victim (moderate/constrained) \u2014 forced to adopt systems under competitive necessity; lack leverage to negotiate or develop alternatives; bear vendor lock-in costs",
+      "Independent Couriers: Primary victim (powerless/trapped) \u2014 subject to algorithmic schedule enforcement with no autonomy or negotiating power; cannot exit without losing market access",
+      "Route Worker Autonomy: Secondary victim (powerless/trapped) \u2014 schedule rigidity increases without wage compensation; drivers bear coercive enforcement of optimization without benefit distribution",
+      "Open-Source Optimization Movement: Organized advocates (organized/constrained) \u2014 building alternative pathways (OSRM, VROOM); see vendor extraction as temporary problem with sunset",
+      "Academic TSP Research: Institutional actor (institutional/arbitrage) \u2014 maintains performative research apparatus on canonical hard problem increasingly disconnected from real logistics constraints"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The constraint generates genuine coordination value (TSP solutions reduce delivery costs measurably), but extraction mechanisms include vendor lock-in, proprietary algorithms, data concentration, and worker schedule coercion. The score reflects that coordination and extraction are genuinely mixed \u2014 this is not pure extraction (which would be 0.66+), but it's also not low extraction (0.05). The rise from 0.22 to 0.38 over the interval reflects increasing vendor market power and consolidation. Suppression (0.42): Moderate. Significant barriers include switching costs, integration lock-in, lack of algorithmic transparency for proprietary systems, and workers' inability to organize against algorithmic control. But suppression is not total \u2014 open-source alternatives exist, some operators have built in-house systems, and labor regulations provide some floor (though weak). Theater ratio (0.58): Moderate-high. Vendors increasingly market 'AI-driven optimization' and 'intelligent routing' as opaque black-box value propositions. Academic conferences celebrate TSP algorithms despite their limited relevance to constrained real-world problems. Dashboard complexity and optimization benchmarking serve performative rather than transparency functions. Open-source alternatives use simpler, auditable heuristics with lower theater.",
+    "directionality_logic": "Each agent's experienced extractiveness (\u03c7) depends on their structural position relative to the constraint. Large operators and vendors have low d values (beneficiaries with exit options) \u2014 they experience low or negative \u03c7; extraction runs toward them. Independent couriers have high d values (trapped victims) \u2014 they experience maximum \u03c7. Small operators have medium-high d values (constrained victims) \u2014 they experience significant but not maximal \u03c7. The open-source movement has lower d than vendors (organized with mobile exit options) \u2014 they experience lower \u03c7 and see the constraint as temporary. The academic apparatus occupies a peculiar position: institutional beneficiary (gets research funding, publications from TSP work) with arbitrage options but increasingly disconnected from real extraction flows. The directionality derives from who benefits from the optimization gap and who bears the costs of proprietary solutions.",
+    "perspectival_gap": "This constraint exhibits profound perspectival gaps. The vendor sees a pure coordination mechanism (Rope) \u2014 they solve a hard problem and enable network optimization. The large operator sees the same thing at their scale (Rope). The open-source movement sees a temporary coordination failure being solved (Scaffold) \u2014 distributed, auditable optimization is maturing. But the small operator sees mixed extraction and coordination (Tangled Rope) \u2014 real benefit but also lock-in. The independent courier sees pure extraction (Snare) \u2014 algorithmic control with no benefit. The academic establishment sees a canonical hard problem (Mountain) \u2014 NP-completeness as a law of computation. The analytical observer recognizes this mountain as a false summit: the 'hardness' of TSP is real (NP-complete), but the extraction lies not in computational complexity but in institutional choices (proprietary algorithms, data asymmetry, worker control).",
+    "mandatrophy_analysis": "HYBRID CLASSIFICATION: This constraint resolves mandatrophy by showing that the same technical optimization problem contains both genuine coordination (TSP is hard; heuristic solutions are valuable) and asymmetric extraction (vendor lock-in, data concentration, worker coercion). The tangled_rope classification captures this duality: the constraint provides real coordination value (lower beneficiaries without this would have dramatically worse logistics costs) while simultaneously enabling asymmetric extraction (vendors and large operators capture optimization gains; workers bear schedule rigidity). The vendor's Rope perspective and the worker's Snare perspective are not measuring different constraints \u2014 they're measuring the same constraint from positions with radically different d values. The scaffold perspective (open-source movement) shows a real structural feature: distributed alternative optimization is maturing and will eventually reduce extraction. The piton perspective reveals that academic TSP research has become performative \u2014 the canonical hard problem persists in curricula and conferences not because it drives logistics innovation but because it's institutionally entrenched. The mountain perspective is exposed as a false summit: it naturalizes the institutional choice (proprietary black-box optimization) as a law of computation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_labor_control",
+      "supply_chain_data_asymmetry",
+      "platform_operator_lock_in"
+    ],
+    "dual_formulation_note": "Applied TSP optimization in logistics decomposes into three structurally distinct constraints: (1) the computational hardness of finding optimal routes (mountain-like, \u03b5~0.08), (2) the economic extraction through vendor lock-in and data concentration (snare-like, \u03b5~0.55 for small operators), and (3) the coercive enforcement of worker schedules (snare-like, \u03b5~0.48 for couriers). This story models the tangled integration of all three. Upstream: computational complexity (inherent, immutable). Downstream: labor control systems and supply chain financialization (contingent, extractive)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

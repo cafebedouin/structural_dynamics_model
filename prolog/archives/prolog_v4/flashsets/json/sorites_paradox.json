@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "sorites_paradox",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Sorites Paradox (Application of Legal Cutoffs)",
+    "topic_domain": "legal/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legal_system",
+      "policy_makers"
+    ],
+    "victims": [
+      "marginalized_individuals",
+      "affected_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Marginalized Individual",
+      "comment": "The individual directly affected by the legal cutoff, often facing significant negative consequences with little recourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Affected Community",
+      "comment": "A community impacted by the application of a legal cutoff, balancing some benefits with the negative consequences of exclusion or unequal treatment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legal System",
+      "comment": "The legal system benefits from the clarity and enforceability provided by the cutoff, even if it creates some injustices, with the ability to modify cutoffs for arbitrage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Policy Makers",
+      "comment": "Policy makers coordinate a response for legal cutoffs to implement legal enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "An outside observer of the law can see both sides of the issue, a coordinated response with active enforcement and affected communities being extracted from by active enforcement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "arbitrary_threshold_justification",
+      "question": "What level of social harm justifies the use of an arbitrary cutoff?",
+      "resolution_mechanism": "Cost-benefit analysis, ethical considerations, public discourse, and legal precedent.",
+      "impact": "Determines whether the cutoff is seen as legitimate or oppressive. A clearer justification leads to reduced social friction.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Defines what amount of public harm is just to justify legal cutoff"
+    },
+    {
+      "id": "definition_vague_predicate",
+      "question": "How do we best define the meaning of vague predicates?",
+      "resolution_mechanism": "Linguistic analysis, empirical studies of language use, and theoretical frameworks in philosophy of language.",
+      "impact": "The more precise the definition of a vague predicate, the less arbitrary cutoffs are required to implement laws.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The ability to improve vague predicates"
+    },
+    {
+      "id": "fairness_impact_measurement",
+      "question": "Can the fairness impacts of legal cutoffs be accurately measured?",
+      "resolution_mechanism": "Statistical methods, social science research, and human rights assessments.",
+      "impact": "The ability to measure the effects of cutoffs allows for a more robust analysis of the total cost of implementation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurement metrics for determining effects of cutoffs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the *application* of arbitrary sharp boundaries (legal cutoffs) to solve the problem of vague predicates (the Sorites Paradox). While cutoffs provide clarity and enforceability, they also create injustices for individuals near the boundary and can exacerbate existing inequalities. This creates a tension between the benefits of the coordination mechanism and the extraction of the snare.",
+    "key_agents": [
+      "Legal System: Institutional beneficiary with arbitrage (institutional/arbitrage) - gains clarity and enforceability.",
+      "Policy Makers: Benefit from the coordination mechanism to enforce laws. (powerful/mobile)",
+      "Marginalized Individuals: Bear the brunt of arbitrary boundaries (powerless/trapped) - subject to the direct negative consequences.",
+      "Affected Communities: Experience both the benefits and burdens of the cutoff. (moderate/constrained)",
+      "Analytical Observer: Can see both sides of the issue (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The cutoff is needed to enforce the law, but the effect will not be equally distributed. Suppression (0.70): High. The enforcement creates an environment for which affected groups have little room for recourse. Theater Ratio (0.30): Low. The legal process may not be as performative."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "directionality_overrides": []
+}

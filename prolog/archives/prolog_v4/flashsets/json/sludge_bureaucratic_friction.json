@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "sludge_bureaucratic_friction",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sludge (Intentional Administrative Friction)",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_service_providers",
+      "administrative_agencies"
+    ],
+    "victims": [
+      "benefit_recipients",
+      "small_businesses"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Benefit Recipient",
+      "comment": "The individual attempting to access benefits faces significant administrative burdens, often with limited resources or knowledge to navigate the system, leading to a sense of being trapped."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Business",
+      "comment": "Small businesses attempting to comply with regulations face administrative hurdles and paperwork, which is burdensome but also provides them with a limited competitive advantage over even smaller entities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Administrative Agencies",
+      "comment": "Administrative agencies benefit from sludge as it reduces demand and simplifies their workload. They have arbitrage in the sense that they can shift burden elsewhere."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Service Providers",
+      "comment": "Incumbent service providers benefit from the reduction in competition caused by sludge. However, the system is not actively maintained as a snare. It is a piton because inertia maintains the friction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a broad perspective, sludge is a tangled rope. It provides some coordination (agencies can more efficiently manage services), but extracts heavily from those who are intended to benefit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "agency_optimization_vs_user_burden",
+      "question": "To what extent is the administrative complexity due to genuine optimization needs versus intentional discouragement of access?",
+      "resolution_mechanism": "Cost-benefit analysis of each administrative step, comparing agency efficiency gains with user burden costs.",
+      "impact": "If mostly optimization: Tangled Rope (lower extractiveness). If mostly discouragement: Snare (higher extractiveness).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Is administrative friction due to optimization or discouragement?"
+    },
+    {
+      "id": "alternative_access_cost",
+      "question": "What are the costs (time, resources) of accessing the benefit/right/service through alternative channels (e.g., private services, legal aid)?",
+      "resolution_mechanism": "Market research and surveys to quantify the cost of alternative access options.",
+      "impact": "High costs: Snare (limited exit). Low costs: Tangled Rope (greater exit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Costs of accessing the benefit through alternative channels"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "\"Sludge\" describes intentional administrative burdens\u2014excessive paperwork, long wait times, complex requirements\u2014that create friction, discouraging access to benefits, rights, or services. This friction acts as a snare for potential recipients, especially those with limited resources. Simultaneously, the sludge benefits administrative agencies by reducing demand and incumbents by reducing competition.",
+    "key_agents": [
+      "Benefit Recipients: Primary victim (powerless/trapped) - bear the brunt of administrative burden.",
+      "Small Businesses: Secondary victim (moderate/constrained) - face administrative hurdles that increase costs but also provide a small competitive advantage.",
+      "Administrative Agencies: Primary beneficiary (institutional/arbitrage) - benefit from reduced demand and streamlined operations.",
+      "Incumbent Service Providers: Secondary beneficiary (institutional/constrained) - benefit from reduced competition due to higher entry barriers.",
+      "Analytical Observer: Assesses overall system (analytical/analytical) - observes mixed coordination and extraction."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The administrative burden extracts significantly from potential benefit recipients, discouraging access and imposing real costs. Suppression (0.70): High. The complexity and difficulty of navigating the system suppress access and alternatives. Theater Ratio (0.75): High. A significant portion of the burden is performative, designed to discourage access without necessarily improving efficiency. The claimed type is Tangled Rope because the primary effect is extraction, but there is also a coordination aspect.",
+    "perspectival_gap": "The perspectival gap is driven by the differing positions in relation to the sludge. Benefit recipients see only the negative extraction, while administrative agencies experience efficiency gains. Small businesses face a mixed outcome, experiencing increased burden but also limited competition. The analytical observer sees both coordination and extraction but is more strongly weighted toward the extraction as victims are trapped.",
+    "directionality_logic": "Directionality is determined by the agent's power, exit options, and relationship to the benefit. Benefit recipients are powerless and trapped, so they experience high directionality and thus high extraction. Agencies have some arbitrage (they can alter rules), so they experience low directionality (negative chi, near rope), and incumbents are benefited by less competition (so also experience a positive directionality, near rope).",
+    "mandatrophy_analysis": "This constraint is classified as a Tangled Rope due to the high extractiveness and suppression, and the presence of both beneficiaries and victims. The mandatrophy resolution involves distinguishing between genuine optimization needs and intentional discouragement. By considering the impact on different agents, we avoid mislabeling a complex system as a pure coordination mechanism or a pure snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "information_asymmetry"
+    ]
+  },
+  "directionality_overrides": []
+}

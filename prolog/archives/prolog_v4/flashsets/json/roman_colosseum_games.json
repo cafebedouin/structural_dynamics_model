@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "roman_colosseum_games",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.85,
+    "claimed_type": "snare",
+    "human_readable": "The Spectacle of the Roman Colosseum",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "roman_elite",
+      "roman_state"
+    ],
+    "victims": [
+      "roman_plebs",
+      "political_dissent"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Roman Plebs",
+      "comment": "The Roman plebs, lacking political power and economic mobility, are trapped within the system and subject to its extractive pressures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Roman Elite",
+      "comment": "The Roman elite benefits from the stability and control afforded by the games, and are able to exploit the system for their own gain."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Roman State",
+      "comment": "The Roman state, while initially benefiting from the games, eventually becomes burdened by the cost and theatrical nature of maintaining the spectacle."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Gladiators",
+      "comment": "Gladiators are both victimized by the games and gain wealth and fame from them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From an analytical perspective, the Colosseum games represent a complex system of social control with both coordinating and extracting functions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "popular_opinion_influence",
+      "question": "To what degree did the games genuinely placate the plebs vs. creating resentment?",
+      "resolution_mechanism": "Historical analysis of plebeian uprisings correlated with periods of game frequency/grandeur.",
+      "impact": "If placating: the games were a rope, facilitating coordination between the state and the people. If resentful: the games were primarily a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which the games influenced popular opinion"
+    },
+    {
+      "id": "true_cost_of_games",
+      "question": "What was the actual cost to the Roman state of providing games?",
+      "resolution_mechanism": "Detailed economic analysis of game costs including animal procurement, gladiator training, and infrastructure maintenance.",
+      "impact": "If low: the games were a rope for the state, providing social control at minimal cost. If high: the games were a piton, becoming a burdensome and unsustainable tradition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The actual cost to the Roman state"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.8
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The state-sponsored games of the Roman Colosseum (\"bread and circuses\") functioned as a system of social and political control. The games provided entertainment for the masses while simultaneously distracting them from political issues and reinforcing the power of the Roman state. The games also served as a means for the Roman elite to display their wealth and status.",
+    "key_agents": [
+      "Roman Plebs: Primary target (powerless/trapped) - subject to social control and distraction.",
+      "Roman Elite: Primary beneficiary (institutional/arbitrage) - benefits from stability and control.",
+      "Roman State: Secondary beneficiary (institutional/constrained) - uses games for political control, but constrained by costs",
+      "Gladiators: Both Victim and Beneficiary (moderate/constrained) - subject to violence, but also gain fame and wealth.",
+      "Political Dissent: Victim (powerless/trapped) - suppressed by the distraction of the games."
+    ],
+    "logic_rationale": "Extractiveness (0.65): The games extracted labor (gladiators, construction), resources (animals, materials), and political capital (suppression of dissent) from the system. Suppression (0.75): The games actively suppressed political dissent by distracting the plebs and reinforcing state power. Theater Ratio (0.85): The games were largely performative, with spectacle taking precedence over genuine social benefit.",
+    "perspectival_gap": "The plebs, trapped and powerless, see the games as a snare. The elite, benefiting from the system, see it as a rope. The state, constrained by costs, sees it as a piton. Gladiators, in a mixed position, see tangled rope.",
+    "directionality_logic": "The plebs have no exit option and bear the cost of the spectacle (violence, distraction). The elite benefit from social control and distraction. The state benefits but is also constrained by the cost of maintaining the games. Gladiators have some agency but are still subject to the violence of the arena.",
+    "mandatrophy_analysis": "The games are properly classified as a snare due to the suppression of political dissent and the lack of genuine benefit to the plebs. While some coordination occurred (social cohesion, distribution of resources), the dominant function was extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

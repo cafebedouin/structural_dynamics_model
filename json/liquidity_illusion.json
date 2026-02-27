@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "liquidity_illusion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "liq"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "The Exit Door Mirage",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "market_makers",
+      "early_exit_beneficiaries"
+    ],
+    "victims": [
+      "late_stage_retail_participants",
+      "illiquidity_trap_victims"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Illiquidity-Trapped Retail Participant",
+      "comment": "PERSPECTIVE 1: ILLIQUIDITY-TRAPPED RETAIL PARTICIPANT (SNARE) \u2014 Enters during period of apparent high liquidity; discovers exit option is illusory when attempting withdrawal during market stress. No exit: all capital locked. Experiences maximum extraction through forced holding during depreciation. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Maker",
+      "comment": "PERSPECTIVE 2: MARKET MAKER (ROPE) \u2014 Sees liquidity mirage as coordination mechanism: maintains bid-ask spreads during normal conditions, capturing spread revenue while distributing price discovery information. Arbitrage option: can exit position at will through matched orders. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Sophisticated Institutional Investor",
+      "comment": "PERSPECTIVE 3: SOPHISTICATED INSTITUTIONAL INVESTOR (TANGLED ROPE) \u2014 Constrained by size and position concentration; benefits from liquidity protocols and market-making infrastructure (coordination), but also participates in the illusion by front-running information about deteriorating liquidity conditions. Mixed extraction: some coordination benefit, but also uses information asymmetry to exit early before liquidity dries up."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Intervention Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY INTERVENTION COALITION (SCAFFOLD) \u2014 Sees liquidity mirage as a temporary coordination failure solvable through circuit breakers, position limits, and stress-testing mandates. Sunset logic: regulations like SEC halts, volume limits, and transparent order book requirements are designed to replace the mirage with genuine market resilience, enabling real exit pathways. Theater declining as real oversight mechanisms mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Liquidity Coverage Ratio Protocol",
+      "comment": "PERSPECTIVE 5: LIQUIDITY COVERAGE RATIO PROTOCOL (PITON) \u2014 Banking regulations (LCR, NSFR) impose stress-test illusion of liquidity control, but the actual verification of true under-stress liquidity is limited. Protocol maintains itself through compliance theater despite questionable functional value during systemic stress. Banks satisfy ratio metrics without genuinely ensuring exit capacity in crisis. Theater ratio high; functional coordination low."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION ASYMMETRY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the liquidity mirage is an irreducible feature of market information: buyers and sellers can never have perfectly synchronized knowledge of true exit availability; information gaps are inherent to exchange mechanisms. This perspective sees the mirage as natural law. However, structural data contradicts mountain classification \u2014 the degree of asymmetry is institutional, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "liquidity_threshold_transition",
+      "question": "What specific price-volume threshold triggers the transition from illusion to revealed illiquidity? Does it depend on market conditions, asset class, or participant composition?",
+      "resolution_mechanism": "Empirical analysis of historical market crashes and flash crashes; identification of consistent volume/spread thresholds before liquidity collapse; stress-test simulations with varying participation profiles",
+      "impact": "If threshold is predictable and consistent: sophisticated participants can hedge against transition. If threshold is dependent on unobservable state: the mirage is deeper and extraction more severe for retail participants.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for liquidity collapse transition"
+    },
+    {
+      "id": "market_maker_inventory_constraints",
+      "question": "Do market makers actively suppress liquidity signals through inventory management to maintain the appearance of liquidity, or is liquidity genuinely available but constrained by inventory risk?",
+      "resolution_mechanism": "Analysis of market maker order placement behavior during stress periods; correlation between inventory positions and quote availability; comparison of quoted vs actual available liquidity",
+      "impact": "If active suppression: extraction mechanism is enforced. If passive constraint: mirage is shared delusion rather than rent extraction by informed actors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether market makers actively suppress liquidity signals"
+    },
+    {
+      "id": "retail_vs_algorithmic_information_gap",
+      "question": "Can algorithmic traders identify the liquidity transition before retail participants due to superior latency and order flow analysis, creating a temporal window for privileged exit?",
+      "resolution_mechanism": "Microsecond-level timestamp analysis of order placement and execution; latency measurements between retail platforms and exchange; identification of consistent algorithmic exit patterns preceding retail-visible liquidity collapse",
+      "impact": "If gap exists and is exploitable: organized extraction mechanism confirmed (snare). If no consistent gap: the mirage affects all participants symmetrically (rope or tangled rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Information gap between algorithmic and retail participants in liquidity detection"
+    },
+    {
+      "id": "regulatory_stress_test_validity",
+      "question": "Do regulatory liquidity stress tests (LCR, NSFR) accurately predict institution ability to exit under actual systemic stress, or do they rely on assumptions about market participant behavior that break down during crisis?",
+      "resolution_mechanism": "Comparison of bank pass rates on stress tests vs actual liquidity need fulfillment in recent financial crises; analysis of test assumptions vs observed market behavior (bid-ask spread expansion, volume drying, counterparty availability)",
+      "impact": "If tests invalid: regulatory theater (piton) confirmed. If tests predictive: regulatory framework is genuine coordination mechanism (scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of regulatory liquidity stress tests"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The liquidity illusion is a structural constraint where financial or digital markets maintain the appearance of high liquidity (easy entry and exit at posted prices) during normal market conditions, but this appearance collapses during stress periods, trapping late-stage retail participants in positions they cannot exit without catastrophic loss. The constraint exhibits the defining snare signature: (1) high base extractiveness (0.58) \u2014 the gap between promised and actual exit capacity creates value extraction for those who exit early, (2) high suppression (0.68) \u2014 barriers to recognizing the illusion during normal conditions include regulatory assurances, positive feedback loops, and information asymmetry, and (3) vulnerability of trapped agents with no exit. The theater ratio (0.65) reflects that liquidity metrics displayed during normal times (bid-ask spreads, trading volume, order book depth) are genuine but systematically underpredict behavior during stress. The constraint operates through a temporal mechanism: early participants and informed actors (market makers, algorithmic traders) exit during the transition period while public metrics still show adequate liquidity; by the time remaining participants recognize the illusion, exit doors have closed. This is extraction via temporal information asymmetry, not via fixed barriers.",
+    "key_agents": [
+      "Late-Stage Retail Participants: Primary victims (powerless/trapped) \u2014 enter during apparent liquidity, discover exit door is mirages; locked in during price decline",
+      "Market Makers: Primary beneficiaries (institutional/arbitrage) \u2014 capture spread revenue during normal periods; exit before liquidity collapses via privileged order flow knowledge",
+      "Sophisticated Institutional Investors: Secondary beneficiaries (organized/constrained) \u2014 benefit from coordination (liquid market infrastructure) while front-running retail exit attempts; constrained by position size but not by information",
+      "Algorithmic Traders: Informed extractors (organized/arbitrage) \u2014 detect liquidity transition microseconds before retail participants; establish advantageous exit positions before spreads widen",
+      "Regulatory Framework (SEC, CFTC, prudential regulators): Oversight actors (organized/mobile) \u2014 design circuit breakers and position limits to replace mirage with genuine resilience; sunset logic embedded in regulatory reform cycles",
+      "Liquidity Coverage Ratio Protocol: Institutional theater (institutional/arbitrage) \u2014 maintains performative verification of bank liquidity without testing true crisis-time exit capacity; degraded piton"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The illusion extracts from late-stage retail participants through temporal information asymmetry. Market makers and algorithmic traders see the transition before retail participants and exit first, capturing a window where spreads are tight but decline is predictable. This is not instantaneous extraction but a systematic temporal flow \u2014 early money exits at good prices while late money is forced to wait for worse prices or cannot exit at all. The base extractiveness reflects that the mirage mechanism itself is structural (it is how modern markets communicate liquidity via posted prices) but that exploitation of the mirage's breakdown is not universal \u2014 it requires information advantage. Suppression (0.68): High. During normal conditions, multiple forces suppress recognition of the illusion: (1) regulatory assurances and stress tests provide false confidence, (2) positive feedback loops reinforce the mirage (more volume \u2192 more liquidity \u2192 more participants \u2192 more volume), (3) information asymmetry means retail participants cannot see order flow that algorithmic traders observe, (4) incentive alignment makes market makers and exchanges promote the appearance of liquidity, and (5) rare-event recognition \u2014 the liquidity collapse is infrequent enough that retail participants do not internalize the risk. Theater Ratio (0.65): Moderate-high and rising. During normal periods, the theater ratio is moderate \u2014 spreads, volume, and order book depth are genuinely informative about liquidity at posted prices. But as time passes and positions concentrate, the theater rises: spreads stay tight while the market's actual ability to absorb large orders declines (a widening gap between micro liquidity and macro liquidity). By the time stress arrives, the theater ratio reaches critical levels \u2014 the posted metrics no longer predict true exit capacity. The rise in theater over the interval reflects Goodhart degradation: as market participants rely on liquidity metrics to guide entry decisions, those metrics become less predictive of actual liquidity, increasing the mirage effect.",
+    "directionality_logic": "Each agent's structural position determines their experienced extractiveness via the directionality pipeline. Retail participants are trapped (d \u2192 0.95 \u2192 high f(d)) with no exit option; they bear full extraction cost. Market makers are institutional beneficiaries with arbitrage options (d \u2192 0.05 \u2192 negative f(d)); they experience the constraint as pure coordination revenue. Sophisticated institutions are organized but constrained by size (d \u2192 0.40 \u2192 moderate f(d)); they benefit from coordination but also participate in the extraction through front-running. Algorithmic traders have perfect arbitrage (d \u2192 0.00 \u2192 minimum f(d)); they experience only coordination benefit. The regulatory framework and piton protocols are institutional arbitrage actors (d \u2192 0.05) but with low functional effectiveness. The critical insight: the same constraint produces radically different experienced extractiveness depending on the agent's information access and exit timing \u2014 this temporal asymmetry is the extraction mechanism itself.",
+    "perspectival_gap": "The liquidity illusion demonstrates how a single structural constraint produces six distinct classifications based on the observer's temporal position and information access. Retail participants see a snare \u2014 they are trapped after the fact. Market makers see coordination (rope) \u2014 they are solving the genuine problem of price discovery and matching orders. Sophisticated institutions see tangled rope \u2014 mixed coordination benefit and extraction opportunity through position exit timing. The regulatory coalition sees a temporary problem with a sunset (scaffold) \u2014 circuit breakers and position limits will replace the mirage with genuine stress resilience. The regulatory protocol itself appears as degraded theater (piton) \u2014 liquidity coverage ratios check compliance without verifying true crisis capacity. The analytical observer risks seeing an immutable natural law (mountain) \u2014 information gaps and temporal asymmetry are inherent to any trading system. But the structural data contradicts the mountain: the degree of asymmetry and the severity of the mirage are institutional choices (market structure, information rules, position limits) not natural laws. The largest perspectival gap is temporal: early observers during normal liquidity conditions see rope; late observers after the mirage collapses see snare. The same agent at different times experiences different constraints.",
+    "mandatrophy_analysis": "DIAGNOSIS: The liquidity illusion resolves mandatrophy by distinguishing between legitimate coordination (market-making that enables price discovery) and extraction (temporal asymmetry in exit capacity). The snare classification prevents misidentifying this as pure coordination by flagging the high suppression (0.68) and the distribution of costs \u2014 trapped agents bear them, informed agents escape them. The tangled rope perspective (sophisticated institutions) reveals that the constraint has a genuine coordination function (liquid markets enable efficient capital allocation) alongside asymmetric extraction (information advantage determines exit quality). The scaffold perspective is critical: it shows that the constraint's extractiveness is not immutable \u2014 regulatory interventions (circuit breakers, position limits, consolidated tape access) can reduce the information asymmetry and temporal advantage that create the mirage. The piton perspective reveals that regulatory theater (LCR protocols) can mimic the appearance of supervision without reducing the mirage's extractiveness. The mandatrophy resolves by showing that the classification depends entirely on whether you measure from before or after the transition: pre-transition, the constraint looks like rope; post-transition, it looks like snare. The true constraint is the temporal information asymmetry that enables the mirage itself \u2014 a snare for those who do not see it, a coordination mechanism for those who do."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "circuit_breaker_theater",
+      "algorithmic_front_running",
+      "regulatory_capital_arbitrage"
+    ],
+    "dual_formulation_note": "The liquidity illusion can be decomposed into two structurally distinct constraints: (1) Market-making coordination (\u03b5 \u2248 0.15, Rope) \u2014 the genuine service of providing narrow spreads and price discovery, and (2) Mirage-dependent extraction (\u03b5 \u2248 0.58, Snare) \u2014 the temporal asymmetry in exit capacity that exploits the illusion's breakdown. These stories are related but structurally distinct; the extraction story is downstream of the coordination story because the illusion depends on the existence of the normal-times liquidity flow to create false expectations. See dual_formulation_note for decomposition rationale."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

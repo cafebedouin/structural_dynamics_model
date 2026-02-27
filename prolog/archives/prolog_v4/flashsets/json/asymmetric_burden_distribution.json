@@ -1,0 +1,126 @@
+{
+  "header": {
+    "constraint_id": "asymmetric_burden_distribution",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Externalization Lever",
+    "topic_domain": "economic/social/logistical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_beneficiaries"
+    ],
+    "victims": [
+      "peripheral_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Peripheral Population",
+      "comment": "Peripheral populations often bear the brunt of the operational burdens without enjoying proportional benefits, and often lack the power or resources to relocate or influence policy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Central Beneficiaries",
+      "comment": "Central beneficiaries, such as corporations or affluent urban residents, gain disproportionately from the system while externalizing costs onto others.  They can easily 'arbitrage' their exposure to negative effects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the intertwined coordination and extraction: the system provides real benefits, but at an unevenly distributed cost. The long-term consequences of this distribution create systemic risk."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "burden_measurement_accuracy",
+      "question": "How accurately can the true burdens (health impacts, environmental degradation, social costs) be measured and attributed to the source?",
+      "resolution_mechanism": "Improved scientific monitoring, comprehensive cost-benefit analysis including externalities, longitudinal studies tracking health and social outcomes.",
+      "impact": "If burdens are underestimated: The system appears more beneficial than it is, perpetuating the asymmetric distribution. If burdens are overestimated: Legitimate benefits may be curtailed due to perceived high cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of burden measurement and attribution."
+    },
+    {
+      "id": "compensatory_mechanism_effectiveness",
+      "question": "How effectively do compensatory mechanisms (taxes, regulations, infrastructure improvements) mitigate the externalized burdens?",
+      "resolution_mechanism": "Comparative analysis of policies in different regions, econometric studies assessing the impact of regulations on pollution and health outcomes, surveys assessing public perception of fairness.",
+      "impact": "If compensation is ineffective: The asymmetric distribution persists, potentially leading to social unrest and system failure. If compensation is effective: The system becomes more sustainable and equitable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of compensatory mechanisms."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This scenario describes the Externalization Lever, where systemic benefits concentrate for some, while operational burdens shift onto others. Examples include global shipping benefiting corporations, while coastal communities suffer pollution; digital convenience for urban residents, burdening logistics workers and e-waste disposal sites.",
+    "key_agents": [
+      "Central Beneficiaries: Institutional actors who gain disproportionately from the system, enjoying the benefits while externalizing costs.",
+      "Peripheral Population: Powerless group that bears the brunt of the operational burdens, lacking adequate access to the benefits.",
+      "Analytical Observer: Assesses the overall system-wide extraction and coordination.",
+      "Regulatory Bodies: (moderate/constrained) Attempt to modulate the extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.6): Reflects the significant transfer of negative externalities onto peripheral populations. Suppression (0.4): Represents the barriers that prevent the peripheral population from effectively challenging or escaping the burden distribution. Theater Ratio (0.3): The performative aspect of addressing the externalities is moderate: there may be some attempts to mitigate, but rarely address the core asymmetric.",
+    "perspectival_gap": "The central beneficiaries see the system as a coordination mechanism (Rope), while the peripheral population experiences pure extraction (Snare). The analytical perspective reveals the hybrid nature of the system (Tangled Rope) where coordination exists, but is coupled to asymmetric burden distribution.",
+    "directionality_logic": "Directionality is determined by the structural position: central beneficiaries gain from the arrangement (low d) and peripheral populations bear the costs (high d).",
+    "mandatrophy_analysis": "The key to resolving the mandatrophy here is to recognize that both coordination and extraction are simultaneously occurring. It prevents misclassifying the coordination as pure extraction, as the benefits ARE real for central agents. Conversely, classifying as pure coordination misses the extraction being imposed. The Tangled Rope classification captures this hybrid nature."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

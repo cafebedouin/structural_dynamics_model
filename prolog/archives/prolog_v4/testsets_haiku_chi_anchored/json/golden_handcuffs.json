@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "golden_handcuffs",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ghc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Golden Handcuffs (Vesting-Based Retention)",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employer_shareholder_interests",
+      "senior_management"
+    ],
+    "victims": [
+      "vested_employee",
+      "labor_mobility"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Vested Employee",
+      "comment": "PERSPECTIVE 1: THE VESTED EMPLOYEE (SNARE) \u2014 Employee is locked into employment relationship by unvested equity. Departure forfeits years of deferred compensation. Exit costs are catastrophic relative to marginal wage. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.64. No alternative paths to retain compensation; suppression is structural."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Career-Constrained Cohort",
+      "comment": "PERSPECTIVE 2: THE CAREER-CONSTRAINED COHORT (SNARE) \u2014 Employees with family obligations, geographic immobility, or limited alternative opportunities experience the vesting constraint as near-total suppression of exit options. Career mobility is theoretically available but practically constrained by economic circumstances. d\u22480.85, f(d)\u22481.15, \u03c3=0.9 \u2192 \u03c7\u22480.56. Effective extraction is severe but slightly lower than trapped cohort due to marginal exit paths."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The High-Demand Technical Specialist",
+      "comment": "PERSPECTIVE 3: THE HIGH-DEMAND TECHNICAL SPECIALIST (TANGLED ROPE) \u2014 Senior engineers, scientists, and executives with strong labor market alternatives experience both the vesting constraint (suppression of full compensation package during tenure) and the genuine coordination benefit (alignment of employee and company interests reduces agency costs, enables long-term project planning). Exit is mobile but costly. d\u22480.48, f(d)\u22480.60, \u03c3=1.1 \u2192 \u03c7\u22480.34. Mixed: coordination function is real (shared upside), but extraction occurs through vesting acceleration and cliff structures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer (Capital Allocation Perspective)",
+      "comment": "PERSPECTIVE 4: THE EMPLOYER / CAPITAL ALLOCATION PERSPECTIVE (ROPE) \u2014 Employer experiences vesting as pure coordination: aligning employee incentives with long-term shareholder value, reducing quit risk during critical projects, and deferring cash outlay. No extraction from the employer's structural position; vesting is a legitimate coordination mechanism that solves hold-up problems. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.1 \u2192 \u03c7\u2248-0.06. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Labor Collective (Union/Worker Organization)",
+      "comment": "PERSPECTIVE 5: THE LABOR COLLECTIVE / UNION PERSPECTIVE (TANGLED ROPE) \u2014 Organized labor sees vesting as both a benefit (deferred compensation structure can improve total compensation packages when negotiated) and a mechanism suppressing collective bargaining power (workers are individually locked in, reducing strike capacity and wage negotiation leverage during vesting periods). d\u22480.62, f(d)\u22480.82, \u03c3=0.9 \u2192 \u03c7\u22480.39. Moderate extraction due to organized exit paths and negotiating capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Equity-as-Narrative Observer",
+      "comment": "PERSPECTIVE 6: THE EQUITY-AS-NARRATIVE OBSERVER (PITON) \u2014 The cultural narrative of 'golden handcuffs' as prestigious compensation is largely performative: it creates the perception of alignment and wealth-building while functioning as a labor lock-in mechanism. The theater ratio reflects this \u2014 vesting ceremonies, equity-grant announcements, and wealth-on-paper displays substitute for actual control over deferred compensation. theater_ratio=0.58 indicates substantial performative content. The equity narrative persists through institutional inertia despite eroding function as stock-based compensation becomes standard market practice. d\u22480.65, f(d)\u22481.00, \u03c3=1.1 \u2192 \u03c7\u22480.58. Piton gate satisfied; underlying function (coordination) has atrophied into theatrical maintenance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "vesting_cliff_equivalence",
+      "question": "Are cliff-vesting and continuous vesting structurally equivalent extraction mechanisms, or does cliff structure fundamentally change the constraint type?",
+      "resolution_mechanism": "Comparative analysis of employee exit behavior at cliff vs. graded vesting schedules; measurement of post-cliff departure rates; assessment of bargaining power shift at cliff milestones",
+      "impact": "If equivalent: constraint remains Tangled Rope across vesting structures. If cliffs are extraction-amplifying: cliff structures should be decomposed into separate constraint (\u03b5\u22480.68, Snare at cliffs, Tangled Rope between cliffs).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cliff-vesting is structurally distinct from continuous vesting"
+    },
+    {
+      "id": "volatility_devaluation_risk",
+      "question": "Does stock price volatility convert vesting from shared upside (Rope) to asymmetric downside (Snare) when employee cannot hedge or diversify?",
+      "resolution_mechanism": "Analysis of volatility-adjusted effective compensation; comparison of vesting value realization vs. grant-date expectations; measurement of employee portfolio concentration and hedging capacity",
+      "impact": "If high volatility + low hedge capacity: constraint becomes Snare (uninsurable risk transfer to employee). If employees can diversify: Rope/Tangled Rope classification stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stock volatility converts shared upside to asymmetric downside"
+    },
+    {
+      "id": "equity_standard_inevitability",
+      "question": "Is stock-based compensation becoming a structural inevitability in certain sectors (tech, biotech) such that rejection of vesting no longer constitutes a viable 'exit' for even mobile employees?",
+      "resolution_mechanism": "Longitudinal tracking of compensation structures across cohorts and sectors; measurement of prevalence of stock-based vs. cash compensation in adjacent firms; qualitative data on job search constraints when candidates reject equity offers",
+      "impact": "If inevitable: constraint becomes Mountain (irreducible structural feature of labor market in affected sectors) for even high-demand workers. If alternatives exist: Tangled Rope/Snare classification persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether equity compensation has become unavoidable in certain labor markets"
+    },
+    {
+      "id": "retention_vs_extraction_balance",
+      "question": "What ratio of vesting-driven retention (genuine coordination) to vesting-driven suppression (extraction) characterizes the true function of the mechanism?",
+      "resolution_mechanism": "Causal analysis of departure rates with vesting vs. without; measurement of project completion rates and continuity in vesting-locked vs. freely-mobile cohorts; assessment of whether departures prevented by vesting are welfare-improving or welfare-reducing for employee",
+      "impact": "If retention benefit > suppression cost: Rope or Scaffold (justified coordination). If extraction > retention benefit: Snare or Tangled Rope (unjustified lock-in).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether vesting's retention function outweighs its lock-in function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Golden handcuffs represent a structural constraint that combines legitimate coordination (aligning employee and employer interests around long-term value creation) with asymmetric extraction (suppressing employee mobility and bargaining power through forfeiture risk). The constraint operates by deferring a portion of compensation and conditioning its receipt on continued employment. From the employer's perspective, vesting solves the canonical hold-up problem: employees would otherwise have incentive to extract rents or depart after critical projects conclude. From the employee's perspective, vesting suppresses exit options and creates path-dependent lock-in, especially for career-constrained workers with limited alternative opportunities. The constraint exhibits a perspectival range spanning all six DR types: it appears as pure extraction (Snare) to powerless employees, as a degraded coordination ritual (Piton) from a civilizational narrative view, as hybrid coordination-extraction (Tangled Rope) to mobile high-skill workers, and as pure coordination (Rope) to capital allocators. The temporal trajectory shows increasing theater ratio (from 0.42 to 0.58) as equity compensation becomes normalized and the performative wealth-narrative dominates over actual control; extractiveness has risen from 0.35 to 0.52 as vesting schedules have extended and cliff structures have tightened.",
+    "key_agents": [
+      "Vested Employee: Primary victim (powerless/trapped) \u2014 bears forfeiture risk; structurally locked into employment relationship",
+      "Career-Constrained Cohort: Secondary victim (moderate/constrained) \u2014 geographic, family, or skill-specific immobility compounds suppression",
+      "High-Demand Technical Specialist: Secondary beneficiary-victim (powerful/mobile) \u2014 experiences genuine coordination but also extraction through vesting acceleration and cliff mechanisms",
+      "Employer / Capital Allocator: Primary beneficiary (institutional/arbitrage) \u2014 solves alignment and hold-up problems; captures sustained labor without full upfront compensation",
+      "Senior Management: Tertiary beneficiary (powerful/arbitrage) \u2014 designs vesting structures that benefit themselves while suppressing cohorts below them",
+      "Labor Collective / Union: Organized secondary actor (organized/constrained) \u2014 can negotiate vesting structures but individual lock-in reduces strike capacity",
+      "Equity Narrative Ecosystem: Institutional observer (institutional/analytical) \u2014 perpetuates performative narratives of wealth-building and prestige"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts between 35-52% of deferred compensation value through forfeiture risk and suppressed exit options. The initial value (0.35) reflects the legitimate coordination function \u2014 vesting does solve real alignment problems. The increase to 0.52 reflects that as vesting schedules have extended (4-6 year cycles replacing older 2-3 year cycles) and cliff structures have tightened, the extraction component has grown relative to the coordination component. Suppression (0.65): High. Employees cannot retain vested compensation if they depart; cliff structures create discontinuities that force stay-or-lose decisions; lack of portable benefits (health insurance, 401k matching that continues vesting-locked), and information asymmetry about vesting mechanics mean many employees do not fully understand their lock-in until deployed. Theater ratio (0.58): Moderate-high and rising. The performative component has grown over the interval as equity compensation has become standard market practice. Vesting grant ceremonies, stock price updates, and 'wealth on paper' narratives substitute for actual control. Early in the constraint's lifecycle (0.42), vesting was more novel and the coordination function was more salient. As equity becomes expected (theater rising to 0.58), the narrative work intensifies to maintain perceived legitimacy of the lock-in.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. The powerless employee (Snare, d\u22480.92) sees pure extraction: their only choice is stay-locked-in or forfeit. The powerful specialist (Tangled Rope, d\u22480.48) sees a genuine trade-off: vesting does align incentives and enables projects they care about, but they also experience suppression of their mobility premium. The employer (Rope, d\u22480.08) sees pure coordination: vesting solves the critical problem of employee hold-up and turnover during projects. The narrativist observer (Piton, d\u22480.65) sees a degraded ritual: vesting persists as performative wealth-building narrative despite atrophied coordination function. This gap is not a classification error \u2014 it reflects genuine structural differences in how different agents experience the same constraint. The gap is widest between powerless and institutional perspectives (d: 0.92 vs 0.08, \u0394=0.84), indicating high classification divergence and potential for conflict.",
+    "directionality_logic": "Vested Employee: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Forfeiture is existential; no marginal exit capacity. Career-Constrained Cohort: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. Economic exits exist but are costly relative to household resources. High-Demand Specialist: Beneficiary (from alignment) + victim (from extraction) + mobile \u2192 d\u22480.48, f(d)\u22480.60. Mixed relationship: the constraint both enables and suppresses their position. Employer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Structural position is net positive; vesting solves coordination problems with zero extraction to employer. Senior Management: Beneficiary + arbitrage, but with control over structure \u2192 d\u22480.05, f(d)\u2248-0.12. Even stronger net beneficiary; can design cliffs and acceleration schedules that favor their cohort. Labor Collective: Organized + constrained \u2192 d\u22480.62, f(d)\u22480.82. Can negotiate but individual lock-in reduces collective leverage. The engine derives d from beneficiary/victim declarations and exit options; the override for Senior Management reflects that institutional actors designing the constraint have lower d than the base employer position.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: The constraint's claimed_type is Tangled Rope, but the perspectival range (Snare \u2192 Rope) and the rising theater ratio (0.42 \u2192 0.58) create ambiguity about whether the constraint is genuinely hybrid or whether the coordination function is atrophying into pure extraction. The mandatrophy cannot be resolved without additional empirical data on: (1) whether vesting-driven retention produces welfare improvements for locked-in employees (e.g., project completion, career development) or merely suppresses exit, and (2) whether the rising theater ratio reflects dilution of coordination function or normalization of equity markets. Three candidate resolutions: (A) If coordination function is real and welfare-improving: constraint remains Tangled Rope, and rising theater ratio reflects market maturation, not function degradation. (B) If coordination function has atrophied but vesting persists through institutional inertia: constraint should reclassify as Piton (theater \u2265 0.70 possible at interval end). (C) If vesting serves pure extraction with no genuine coordination: constraint is Snare from all perspectives, and the beneficiary/employer perspective is self-serving rationalization. The JSON declares mandatrophy_resolved: false to flag this ambiguity for downstream analysis. The Open Science Coalition structure from the verification_bottleneck example shows one resolution path: if vesting alternatives (portable equity, transparent vesting, employee-directed compensation) emerge and mature, the constraint could become Scaffold (sunset logic). This is not the current state \u2014 vesting is entrenching, not declining."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "equity_compensation_standard",
+      "labor_mobility_suppression",
+      "executive_compensation_escalation"
+    ],
+    "dual_formulation_note": "Golden handcuffs is the hybrid (Tangled Rope) formulation combining coordination and extraction. The upstream constraint 'equity_compensation_standard' (\u03b5\u22480.15, Rope) captures the pure coordination logic of aligning incentives. The downstream constraint 'labor_mobility_suppression' (\u03b5\u22480.68, Snare) captures the extraction component in isolation. The constraint family shows how a coordination mechanism (equity alignment) generates an extraction apparatus (vesting lock-in) as a side effect. The extraction component becomes salient and exploitable once the mechanism is established, creating a Mandatrophy state where the label 'coordination' masks the extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

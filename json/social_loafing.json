@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "social_loafing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "loaf"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.45,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Social Loafing (The Ringelmann Effect)",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "free_riders",
+      "organization_leadership"
+    ],
+    "victims": [
+      "high_effort_contributors",
+      "collective_productivity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Reliable Contributor",
+      "comment": "PERSPECTIVE 1: RELIABLE CONTRIBUTOR (SNARE) \u2014 Individual who consistently performs at high capacity discovers that effort is suppressed by free-rider presence. No mechanism to exit without bearing both social cost and performance collapse. Trapped within the group, witnessing their excess effort subsidizing others. Maximum experienced extraction relative to effort investment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Marginal Free Rider",
+      "comment": "PERSPECTIVE 2: MARGINAL FREE RIDER (ROPE) \u2014 Can reduce effort with minimal detection due to group anonymity and effort diffusion. Experiences constraint as pure coordination problem: the group is solving how to distribute collective task without precise individual monitoring. Has option to exit or defect; stays because costs of group membership (social sanction, reputational risk) are manageable. Experiences the constraint as workable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Team Manager",
+      "comment": "PERSPECTIVE 3: TEAM MANAGER (TANGLED ROPE) \u2014 Observes loafing but also benefits from group coordination. Must enforce effort norms to maintain output, which requires monitoring overhead and governance mechanisms. Experiences both coordination function (team achieves outputs together) and asymmetric extraction (must extract effort through enforcement mechanisms, threatening psychological safety). Has arbitrage options: can restructure teams, implement individual accountability, or accept lower output. Genuine hybrid."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Organizational Reform Coalition",
+      "comment": "PERSPECTIVE 4: ORGANIZATIONAL REFORM COALITION (SCAFFOLD) \u2014 Structured effort (team-based performance metrics, transparency tools, task rotation, reputation systems, trust-building practices) creates alternative pathways that reduce loafing without coercion. These interventions have a sunset: as psychological safety and transparent performance tracking mature, intrinsic motivation and social norm internalization can replace external enforcement. Extractiveness declines over implementation period as norms stabilize."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Industrial Efficiency Doctrine",
+      "comment": "PERSPECTIVE 5: INDUSTRIAL EFFICIENCY DOCTRINE (PITON) \u2014 Scientific management and groupwork literature extensively document loafing as unavoidable cost of collective action. The doctrine persists through repeated citation and institutional teaching despite evidence that well-designed teams (transparent metrics, shared goals, psychological safety) largely suppress loafing. The constraint is maintained through narrative inertia \u2014 'social loafing is inevitable' \u2014 more than through actual structural necessity. High theater: the efficiency-doctrine framework treats loafing as natural law when it is actually contingent on team design."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Incentive View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL INCENTIVE VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, individual incentive divergence from collective outcome is an immutable feature of distributed action: when individual effort is not observable, rational agents will defect. This appears as a natural law of behavioral economics. However, the structural data contradicts the mountain classification \u2014 loafing rates vary dramatically (0-90% depending on group design, task saliency, reputation systems, leadership quality), revealing that incentive divergence is institutionally contingent, not a fixed limit. The engine will identify this as false summit: naturalization of a designable problem."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effort_attribution_mechanism",
+      "question": "Can individual effort contributions be made visible without destroying psychological safety or introducing surveillance costs that exceed loafing suppression benefits?",
+      "resolution_mechanism": "Empirical testing of reputation tracking systems, transparent task completion logging, and peer accountability mechanisms across diverse team contexts; measurement of effort attribution accuracy vs psychological safety outcomes",
+      "impact": "If fully resolvable without cost: loafing becomes a design problem, not a constraint (approaches Rope/Scaffold from all perspectives). If surveillance costs exceed benefits: loafing becomes structural extraction mechanism (Snare/Tangled Rope from all perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether effort visibility can be achieved without psychological safety harm"
+    },
+    {
+      "id": "intrinsic_motivation_baseline",
+      "question": "In the absence of monetary incentives, reputation systems, or external enforcement, what fraction of individuals will naturally maintain high effort in anonymous collective tasks?",
+      "resolution_mechanism": "Laboratory and field experiments with truly anonymous conditions, varying task saliency and social connection; cross-cultural comparative studies of collective action without formal monitoring",
+      "impact": "If baseline > 50%: loafing is minority phenomenon, structurally addressable through norm-setting and minor design. If baseline < 20%: loafing is majority condition requiring active enforcement (Snare dominant). If baseline varies >30% with cultural/contextual factors: classification must decompose by context.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Baseline effort maintenance in anonymous collective work"
+    },
+    {
+      "id": "group_size_nonlinearity",
+      "question": "Is the loafing rate monotonically increasing with group size, or does it exhibit phase transitions (e.g., sharp drop in cooperative effort at n>5, then plateau)?",
+      "resolution_mechanism": "Meta-analysis of group size studies; identification of inflection points and threshold effects; modeling of whether thresholds are cognitive limits or institutional design points",
+      "impact": "If monotonic: suggests fundamental coordination problem (Mountain tendency). If threshold-based: suggests design points where small structural changes produce large behavioral shifts (Tangled Rope to Rope possible). If plateaus: suggests saturation where further growth adds no loafing (implication: problem solves itself at scale).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Nonlinearity and phase transitions in loafing with group size"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Social loafing describes the systematic reduction in individual effort when working collectively compared to individual tasks, first documented by Ringelmann (1913) in rope-pulling experiments and formalized by Latan\u00e9 et al. (1979) as a function of group size, task clarity, and identifiability. The constraint reveals a Tangled Rope structure: the collective achieves real coordination benefits (shared workload, complementary skills, social safety), yet simultaneously enables extraction through effort reduction and free-riding. Individual loafers benefit from shared output while reducing personal cost; reliable contributors subsidize the group with excess effort; organizational leadership must enforce norms to maintain productivity. The constraint's extractiveness (0.38) reflects this hybrid: significant enough to matter for group output and individual fairness, but not so severe as to collapse coordination entirely. The theater ratio (0.58) captures the paradox that loafing discourse often treats behavioral defection as inevitable feature of human nature ('social loafing is real') when variation across team contexts (0-90% loafing rates) reveals it is highly contingent on institutional design choices: transparency, reputation systems, task saliency, psychological safety, and leadership quality. The constraint exhibits all six types from different structural positions, making it a diagnostic case for how the same phenomenon can be classified as both a natural feature of incentive misalignment (Mountain from universal view) and a contingent institutional problem (Tangled Rope/Scaffold from organizational redesign view).",
+    "key_agents": [
+      "Reliable Contributors: Primary victims (powerless/trapped) \u2014 maintain high effort despite loafing, bear the subsidy cost, cannot exit without group failure",
+      "Free Riders: Primary beneficiaries (moderate/mobile) \u2014 reduce effort while capturing group output benefits, experience coordination without extraction pressure",
+      "Team Managers/Leaders: Institutional mediators (powerful/arbitrage) \u2014 observe loafing, must enforce norms through monitoring and incentive design, experience both coordination function and enforcement burden",
+      "Organizational Reform Coalition: Structured agents (organized/constrained) \u2014 implement transparency systems, reputation tracking, task rotation, and psychological safety protocols that create sunset for loafing through design rather than coercion",
+      "Industrial Efficiency Doctrine: Institutional narrative (institutional/arbitrage) \u2014 perpetuates 'loafing is inevitable' framing, maintains the constraint through theoretical inertia despite design solutions",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (incentive misalignment, anonymity, low accountability) as immutable features of human motivation"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Empirical loafing studies document 15-65% effort reduction depending on context, with average around 25-35% in unmodified conditions. This is meaningful but not catastrophic \u2014 groups retain 65-85% of potential output even with free-riding present. Suppression (0.45): Moderate. Loafing is partially suppressed by task identifiability, reputation systems, group cohesion, and social norms, but these suppressors are not maximally tight in most organizational contexts. Anonymous conditions remove suppressors entirely (loafing approaches 60%+); identifiable conditions with reputation tracking suppress loafing to 5-15%. Theater ratio (0.58): Elevated. The behavioral science literature on social loafing treats effort reduction as an inevitable consequence of incentive misalignment and diffusion of responsibility. Yet intervention studies show that well-designed teams (transparent metrics, clear task ownership, high psychological safety) achieve >90% of individual-task effort levels. The 'inevitability' framing is partially theatrical \u2014 it reflects the baseline case (anonymous conditions, low accountability, no reputation system) rather than an immutable property. As organizational design has matured (including tools like transparent task tracking, peer recognition systems, and structured accountability), the 'loafing is inevitable' narrative persists more through institutional inertia than structural necessity.",
+    "perspectival_gap": "The gap between free riders and reliable contributors is stark: the former experiences coordination (ability to reduce effort while still benefiting) while the latter experiences extraction (effort subsidy). The manager sees hybrid structure: real coordination benefit (team output often exceeds sum of carefully supervised individuals) plus enforcement burden. The reform coalition sees the constraint as contingent and solvable: team design variables (transparency, psychological safety, reputation systems) can shift the system toward Rope classification. The piton view recognizes that the 'loafing is inevitable' doctrine persists despite evidence that intervention reduces loafing by 50-70%. The natural law view risks claiming that incentive misalignment is immutable when the data show it depends on institutional design choices (anonymity, visibility, accountability, social distance, task saliency, group identity salience). The constraint exemplifies how the same behavioral phenomenon can classify as Mountain (inevitable human nature), Snare (extraction mechanism), Tangled Rope (hybrid coordination/extraction), or Scaffold (temporary problem with institutional solution), depending purely on the observer's structural relationship and time horizon.",
+    "directionality_logic": "Directionality derives from structural position and exit options. Free riders (moderate/mobile) experience low d: they have alternatives (can exit, can reduce effort without detection), benefit from the group, and experience the constraint as enabling rather than coercive. Their f(d) is low, making chi small or negative. Reliable contributors (powerless/trapped) experience high d: they cannot exit without bearing full output collapse, see others defecting, and subsidize group productivity with excess effort. Their f(d) is high, making chi large. Managers (powerful/arbitrage) experience intermediate d: they see the coordination value of teams but also the extraction cost of enforcement. They have options (restructure teams, change accountability mechanisms, implement transparency), so their d is moderate and chi is intermediate. The reform coalition (organized/constrained) experiences moderate d with declining trajectory: as transparency and reputation systems mature, the need for coercive enforcement decreases, so chi declines toward rope-like values. The piton perspective (institutional/arbitrage) experiences low d: the efficiency doctrine benefits from the existing narrative (academic publications citing loafing costs justify their own efficiency frameworks), but this is narrative extraction rather than structural extraction \u2014 hence piton classification despite arbitrage exit options.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint exhibits genuine hybrid structure (Tangled Rope as claimed type) and avoids mandatrophy through three mechanisms: (1) Explicit beneficiary/victim declarations (free riders/loafers as beneficiaries, reliable contributors and collective productivity as victims) establish asymmetric extraction. (2) Real coordination function (teams achieve legitimate output beyond isolated individuals in many domains: innovation, problem-solving, task distribution, knowledge specialization) establishes coordination gate. (3) Active enforcement required: loafing suppression demands monitoring, transparency systems, reputation tracking, or psychological safety investments \u2014 not spontaneous emergence. The constraint is neither pure coordination (Rope) \u2014 reliable contributors are extracted \u2014 nor pure extraction (Snare) \u2014 real coordination benefits exist. The false natural law (Mountain perspective) is explicitly identified as such: the engine's analytical observer marks the 'incentive misalignment is immutable' framing as naturalization of contingent institutional design. The scaffold perspective (reform coalition) provides the mandatrophy path: as team design tools mature, the constraint's extractiveness declines and enforcement burden decreases, creating a genuine sunset where loafing transitions from structural extraction to residual individual choice."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "collective_action_problem",
+      "moral_hazard_in_teams"
+    ],
+    "dual_formulation_note": "Social loafing is downstream of more general free-rider problems in collective action, but represents a distinct constraint focused on effort reduction rather than resource contribution. The empirical extractiveness (0.38) is higher than the pure free-rider/collective action problem (which can approach 0.45-0.60 in unmonitored resource-pooling contexts) because loafing includes both output loss and motivational extraction. Related upstream constraint: incentive misalignment in team contexts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28
+    }
+  ]
+}

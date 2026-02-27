@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "mco_unit_system_discontinuity",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mco"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.42,
+    "theater_ratio": 0.78,
+    "claimed_type": "piton",
+    "human_readable": "Persistence of Imperial Units in a Metric World",
+    "topic_domain": "technological/institutional",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "legacy_aerospace_manufacturers",
+      "us_construction_industry",
+      "established_engineering_practices"
+    ],
+    "victims": [
+      "international_scientific_coordination",
+      "cross_border_standards_adoption"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legacy Aerospace Supplier",
+      "comment": "PERSPECTIVE 1: LEGACY AEROSPACE SUPPLIER (PITON) \u2014 Maintains imperial tooling, CAD systems, and supply chains inherited from 20th-century standardization. The constraint persists through institutional inertia: conversion cost is high, switching would disrupt established practices, and arbitrage opportunity exists in serving a domestic market that still uses imperial specifications. Theater_ratio high because the functional justification (technical necessity) has eroded \u2014 the constraint now persists through sunk costs and habit rather than genuine technical requirement. Extraction is low because this agent benefits from the status quo without active enforcement."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The International Standards Body",
+      "comment": "PERSPECTIVE 2: INTERNATIONAL STANDARDS BODY (SNARE) \u2014 Trapped in a coordination failure: cannot enforce global metric adoption without defecting to unilateral action, cannot abandon metric standardization without betraying SI adoption. Bears cost of maintaining dual-system documentation, dual verification pathways, and reduced verification confidence. No exit option: the body's legitimacy depends on metric standardization, yet cannot compel legacy actors to convert."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Modern Scientific Instrument Manufacturer",
+      "comment": "PERSPECTIVE 3: MODERN SCIENTIFIC INSTRUMENT MANUFACTURER (ROPE) \u2014 Produces instruments natively in metric, benefits from global standardization, has mobile exit options (can serve metric-only markets). Sees imperial persistence as a minor coordination problem requiring translation layers and dual documentation. Low extraction because this agent can arbitrage between markets and has capacity to serve metric-standardized sectors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The US Construction Industry",
+      "comment": "PERSPECTIVE 4: US CONSTRUCTION INDUSTRY (TANGLED_ROPE) \u2014 Organized sector with significant collective power but constrained exit: imperial units are deeply embedded in building codes, supplier networks, and professional standards. Benefits from coordination (unified domestic standards reduce transaction costs). Also bears extraction from reduced international coordination and inability to seamlessly adopt global best practices. Exit is constrained by regulatory lock-in and network effects within domestic market."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Metrication Transition Coalition",
+      "comment": "PERSPECTIVE 5: METRICATION TRANSITION COALITION (SCAFFOLD) \u2014 Organized agents (ISO, BIPM, national standards bodies, multinational manufacturers) actively building conversion pathways: dimensional analysis software, automated translation systems, dual-labeling standards. See the imperial constraint as temporary coordination failure with identifiable sunset: as legacy aerospace suppliers retire and new facilities adopt metric-native CAD systems, functional dependence on imperial units declines. Theater_ratio declining because the coalition has built genuinely functional alternatives that don't rely on performative translation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Historical Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (PITON) \u2014 From a civilizational view, the imperial system's persistence is a museum piece of institutional inertia. Metric adoption succeeded globally despite this constraint; imperial persists only where sunk costs and path dependence create local lock-in. The constraint is theatrical: justified as 'traditional practice' or 'technical necessity' but functionally redundant. No agent is genuinely dependent on imperial units for physical reasons \u2014 all actors could convert at cost. The constraint's persistence is pure institutional momentum."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "conversion_cost_threshold",
+      "question": "At what conversion cost level would legacy aerospace suppliers voluntarily adopt metric-native systems?",
+      "resolution_mechanism": "Cost-benefit analysis of aerospace supply chain conversion; empirical data from companies that have executed full metrication; market studies of conversion ROI timelines",
+      "impact": "If threshold < 5% of annual operating cost: constraint could be resolved with modest incentives. If threshold > 20%: sunk cost lock-in is structural and sunset timeline extends beyond generational horizon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Conversion cost threshold for aerospace suppliers"
+    },
+    {
+      "id": "functional_necessity_residual",
+      "question": "Is any remaining imperial unit usage functionally necessary (physical constraints on measurement) or purely conventional (path-dependent habit)?",
+      "resolution_mechanism": "Technical audit of aerospace specifications; identify which imperial dimensions derive from actual physical constraints vs. historical standardization; evaluate whether metric equivalents would require design changes",
+      "impact": "If purely conventional: constraint is confirmed as piton (theater-driven). If any functional necessity remains: constraint may contain rope elements (legitimate coordination).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether imperial usage has functional vs. conventional necessity"
+    },
+    {
+      "id": "critical_mass_adoption_timing",
+      "question": "What level of dominant-market metric adoption would trigger voluntary cascade conversion among holdout sectors?",
+      "resolution_mechanism": "Network model of supply chain coupling; empirical observation of adoption thresholds in prior metrication waves (automotive 1970s, pharmaceuticals 1990s); tipping point analysis",
+      "impact": "If cascade occurs at > 90% adoption: sunset is steep and rapid (piton dissolves quickly). If adoption plateau emerges at 75-80%: structural lock-in persists indefinitely despite high adoption elsewhere.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Adoption threshold for cascade metrication"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 1960,
+    "end": 1990
+  },
+  "commentary": {
+    "narrative_context": "The persistence of Imperial units in a global scientific and technological community that adopted metric standardization decades ago is a canonical example of a Piton \u2014 a degraded constraint maintained by institutional inertia rather than functional necessity. After the SI (International System of Units) adoption in 1960 and widespread metrication waves in the 1970s-1980s, the continued use of feet, inches, pounds, and other imperial units in aerospace manufacturing, construction, and legacy engineering systems has no physical justification. The constraint persists because conversion costs are high, existing tools and practices are sunk investments, and certain sectors (US aerospace, construction) captured sufficient market power to maintain domestic imperial standardization. The theater_ratio is high (0.78) because the functional justification has largely disappeared \u2014 modern manufacturing can easily work in metric, and dual-unit translation is now automated. The extraction (0.18) is relatively low because the constraint primarily benefits legacy suppliers through reduced switching costs rather than through active enforcement mechanisms. This is a constraint that should have dissolved but persists through path dependence and organizational inertia.",
+    "key_agents": [
+      "Legacy Aerospace Manufacturers: Institutional beneficiary (institutional/arbitrage) \u2014 maintain imperial tooling and CAD systems inherited from 20th-century US standardization; capture arbitrage value from being tied to domestic market",
+      "US Construction Industry: Organized beneficiary (organized/constrained) \u2014 maintains imperial building codes and supplier networks; constrained by regulatory lock-in despite collective power",
+      "International Standards Bodies (ISO, BIPM): Victim/powerless (institutional/trapped) \u2014 cannot enforce metric adoption; trapped in maintaining dual-system verification and documentation",
+      "Modern Scientific Instrument Manufacturers: Mobile beneficiary (powerful/mobile) \u2014 produce metric-native instruments, see imperial as minor coordination problem, benefit from metric standardization globally",
+      "Metrication Transition Coalition: Organized agent (organized/mobile) \u2014 building conversion pathways (software, automated translation, dual-labeling standards); actively working toward sunset",
+      "Analytical Observer: Historical perspective (institutional/analytical) \u2014 sees constraint as museum piece of institutional momentum with no functional justification"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The constraint does not extract significant value through coercive mechanisms. Legacy suppliers benefit from reduced conversion costs and path dependence, but the extraction is passive \u2014 benefiting from status quo rather than actively extracting from others. If the constraint required enforcement (e.g., tariffs against metric imports, mandated imperial usage), extractiveness would be higher. Instead, it persists through inertia. Suppression (0.42): Moderate. There are barriers to metric adoption (conversion costs, regulatory lock-in, network effects in domestic markets), but suppression is not severe \u2014 actors technically can convert, and many sectors have done so. The barrier is economic and institutional, not absolute. Theater_ratio (0.78): High, and increasing over the measurement interval. The functional justification for imperial persistence has eroded sharply since the 1960s SI adoption. Modern manufacturing, CAD systems, and scientific instruments are natively metric. The continued use of imperial is increasingly justified by appeals to 'tradition,' 'established practice,' or 'compatibility with legacy systems' rather than by genuine technical necessity. This is the defining feature of a Piton \u2014 the original functional coordination (imperial units enabled US industrial dominance in the early 20th century) has been replaced by institutional theater: the tools persist because they're expensive to replace, not because they work better.",
+    "perspectival_gap": "Legacy aerospace suppliers see the constraint as a minor inconvenience (Piton) \u2014 their imperial tooling still works, conversion would be costly, and they capture arbitrage value from serving a domestic market locked into imperial. International standards bodies see it as a coordination failure they cannot solve (Snare) \u2014 trapped between maintaining metric standardization and being unable to force legacy sectors to convert. Modern manufacturers see it as a trivial translation problem (Rope) \u2014 they produce metric instruments and let customers handle conversion if needed. The US construction industry sees it as both coordination (unified domestic standards) and extraction (cannot access international best practices) \u2014 Tangled Rope. The metrication coalition sees it as a temporary problem with a clear sunset (Scaffold) \u2014 retirement of legacy supplier base and adoption of metric-native CAD systems will eventually force conversion. The analytical observer sees it as pure institutional theater (Piton) \u2014 persisting despite zero functional necessity. The perspectival gap reveals that different agents experience dramatically different constraint types depending on their structural position and exit options.",
+    "directionality_logic": "Beneficiaries (legacy aerospace, US construction) have low directionality values (d \u2248 0.15-0.25) because they experience the constraint as beneficial (reduced switching costs, coordination within domestic networks) combined with arbitrage options (they can serve only the domestic imperial market if they choose). They do not bear extraction; they benefit from it. Victims (international standards bodies) have high directionality values (d \u2248 0.85-0.95) because they are trapped (constrained exit) and bear the cost of maintaining dual-system verification. However, the low overall extractiveness (0.18) means that even the high-d agents do not experience severe \u03c7 values \u2014 the constraint as a whole does not extract much. The derived d values reflect that this is primarily a coordination failure, not an extraction mechanism. The piton classification derives from the theater_ratio gate (0.78 \u2265 0.70) in combination with low extractiveness, not from high experienced extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "nasa_failure_mode_cascade",
+      "cross_border_manufacturing_coupling"
+    ],
+    "dual_formulation_note": "Imperial persistence is downstream of historical US industrial dominance and upstream of contemporary coordination failures in cross-border manufacturing and space exploration. The Mars Climate Orbiter loss (1999) is a concrete example of how this piton constraint creates failure modes in high-stakes coordination."
+  },
+  "directionality_overrides": []
+}

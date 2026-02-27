@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "carrying_capacity",
+    "version": "1.0",
+    "generated_date": "2024-07-16",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Management of Ecological Carrying Capacity (K)",
+    "topic_domain": "economic/technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "industrialized_economies",
+      "high_consumption_lifestyles"
+    ],
+    "victims": [
+      "future_generations",
+      "non_human_species",
+      "climate_vulnerable_nations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Biosphere and Non-Human Species",
+      "comment": "PERSPECTIVE 1: THE BIOSPHERE (SNARE) — Experiences ecological overshoot as pure, uncompensated extraction. It is trapped and has no agency to resist the depletion of its capital. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.82. This is a clear Snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Industrialized Economy",
+      "comment": "PERSPECTIVE 2: INDUSTRIALIZED ECONOMY (ROPE) — Experiences the constraint as a pure coordination problem: securing resources and externalizing costs. Benefits from technologies that appear to expand K. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07. Negative effective extraction indicates a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Climate-Vulnerable Nation",
+      "comment": "PERSPECTIVE 3: CLIMATE-VULNERABLE NATION (TANGLED ROPE) — Experiences both the coercive extraction of global overshoot (climate impacts, resource depletion) and the coordination benefits of the global economy it cannot easily exit. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.55. This falls squarely in the Tangled Rope range."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Techno-Optimist Coalition",
+      "comment": "PERSPECTIVE 4: TECHNO-OPTIMIST (SCAFFOLD) — Views current ecological limits as temporary engineering problems. The constraint is a scaffold driving innovation (e.g., fusion, carbon capture) that will eventually make the limit obsolete. This perspective assumes a technological sunset clause. d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.23. Low effective extraction, meeting the Scaffold gate."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Governance Bodies",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL GOVERNANCE (PITON) — The function of enforcing ecological limits has atrophied, but the performative aspects (conferences, non-binding treaties, reports) remain. The theater_ratio of 0.75 meets the Piton gate (≥0.70). The institution persists through inertia despite its inability to enforce the constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Malthusian View (False Summit)",
+      "comment": "PERSPECTIVE 6: MALTHUSIAN VIEW (MOUNTAIN) — Frames carrying capacity as an immutable, natural law of population dynamics, ignoring the socio-political structures that mediate it. The engine will flag this as a 'false summit' because the base properties (ε=0.48, suppression=0.75) violate the Mountain classification gates, revealing that this 'natural law' is in fact a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technological_substitutability",
+      "question": "To what extent can technological capital substitute for natural capital?",
+      "resolution_mechanism": "Long-term empirical studies on the efficacy and second-order effects of large-scale geo-engineering, closed-loop recycling, and synthetic biology.",
+      "impact": "High substitutability validates the Scaffold perspective. Low substitutability confirms the Snare perspective for future generations.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether technology can truly replace depleted natural resources and ecosystem services."
+    },
+    {
+      "id": "system_collapse_tipping_point",
+      "question": "Where are the non-linear tipping points in the Earth system beyond which recovery is impossible on human timescales?",
+      "resolution_mechanism": "Improved Earth system modeling and paleo-climatic data analysis.",
+      "impact": "If tipping points are near and irreversible, the constraint is a hard Mountain. If they are distant or reversible, it behaves more like a manageable Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The proximity and reversibility of biophysical tipping points."
+    },
+    {
+      "id": "intergenerational_discount_rate",
+      "question": "What is the ethically appropriate discount rate to apply to the welfare of future generations?",
+      "resolution_mechanism": "Philosophical and ethical consensus-building, not empirical measurement.",
+      "impact": "A near-zero discount rate frames current consumption as extreme extraction (Snare). A high discount rate justifies it as optimal investment (Rope).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The ethical weight assigned to future welfare versus present consumption."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1950,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1950,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Ecological carrying capacity (K) is the maximum population and consumption an environment can sustain. While rooted in biophysical limits, its 'management' is a socio-economic constraint. The current global system operates in 'ecological overshoot,' liquidating natural capital for short-term economic growth. This creates a structural conflict between beneficiaries of this overshoot and victims who bear its long-term costs. This constraint story models this conflict, showing how the same set of facts about ecological limits can be interpreted as all six constraint types depending on the observer's structural position.",
+    "key_agents": [
+      "The Biosphere/Non-Human Species: Primary victim (powerless/trapped) — bears the full cost of habitat destruction and resource depletion.",
+      "Industrialized Economies: Primary beneficiary (institutional/arbitrage) — leverages technology and global markets to exceed local K by importing resources and externalizing waste.",
+      "Climate-Vulnerable Nations: Secondary victim (moderate/constrained) — suffers disproportionately from the consequences of overshoot (e.g., sea-level rise) while being economically constrained.",
+      "The Techno-Optimist Coalition: Organized actors (organized/mobile) — believe technology can indefinitely expand K, viewing limits as temporary problems to be solved.",
+      "International Governance Bodies: Institutional actors (institutional/constrained) — charged with managing the global commons, but lack enforcement power, leading to performative rather than functional regulation.",
+      "The Malthusian Analyst: Analytical observer (analytical/analytical) — frames K as a simple, immutable natural law, ignoring the mediating role of technology, economics, and politics."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.48): Represents the significant, but not total, rate at which natural capital is being converted into economic capital without replenishment. Suppression (0.75): High. The global economic system, predicated on growth, makes it extremely difficult for societies or individuals to adopt steady-state or degrowth models. Alternatives are structurally suppressed. Theater Ratio (0.75): High. International agreements (e.g., Paris Accord) and corporate sustainability initiatives are largely performative, lacking the enforcement mechanisms to alter the trajectory of overshoot, thus satisfying the Piton gate.",
+    "perspectival_gap": "The gap is maximal. For the biosphere, overshoot is a Snare. For the industrialized consumer, it's a Rope (a resource coordination problem). For a vulnerable nation, it's a Tangled Rope (caught between costs and benefits). For the tech sector, it's a Scaffold for future innovation. For international bodies, it's a Piton (a failed, inertial process). For a Malthusian analyst, it's a Mountain (a natural law). The base metrics support all these views, revealing that the 'problem of K' is fundamentally a problem of perspective and structural position.",
+    "directionality_logic": "Beneficiaries (Industrialized Economies) with arbitrage exit see the system as a net benefit (negative χ), classifying it as a Rope. Victims (Biosphere) who are trapped experience maximal extraction (high positive χ), classifying it as a Snare. Agents with mixed roles and constrained exit options (Vulnerable Nations) experience moderate extraction, classifying it as a Tangled Rope. The system's logic correctly maps these structural positions to divergent classifications from a single set of base properties.",
+    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that 'carrying capacity' is not a single type of constraint. Labeling it solely as a Mountain (natural law) is a 'false summit' that obscures the extraction. Labeling it solely as a Snare ignores the genuine coordination functions and perceived benefits that sustain the system. The Deferential Realism framework correctly identifies it as a complex object whose classification is an indexical function of the observer, preventing the collapse into a single, inadequate label."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_food_security",
+      "climate_stability",
+      "geopolitical_conflict"
+    ]
+  }
+}

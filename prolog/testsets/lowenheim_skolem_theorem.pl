@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: lowenheim_skolem_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_lowenheim_skolem_theorem, []).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -56,20 +55,29 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: lowenheim_skolem_theorem
  *   human_readable: Löwenheim-Skolem Theorem
- *   domain: technological
+ *   domain: mathematical_logic/foundational
  *
  * SUMMARY:
- *   The Löwenheim-Skolem theorem states that if a first-order theory has an
- *   infinite model, it has models of every infinite cardinality. This implies
- *   that first-order logic cannot "pin down" the size of an infinite structure;
- *   an uncountable theory like ZFC set theory can be satisfied by a countable
- *   model (Skolem's Paradox). The theorem is a fundamental, unchangeable
- *   feature of first-order logic's expressive power.
+ *   The Löwenheim-Skolem theorem, proved independently by Leopold Löwenheim
+ *   (1915) and Thoralf Skolem (1920, 1928), states that if a first-order
+ *   theory has an infinite model, it has models of every infinite
+ *   cardinality. This theorem is a fundamental result in mathematical logic
+ *   that reveals a deep expressive limitation of first-order quantification:
+ *   no first-order axiomatization can uniquely pin down the cardinality of an
+ *   infinite structure up to isomorphism. The constraint is not a practical
+ *   limitation that could be overcome with better techniques or greater
+ *   resources—it is a mathematical truth that follows necessarily from the
+ *   semantics of first-order logic. The theorem applies universally to all
+ *   first-order theories, including formal arithmetic, set theory, and
+ *   geometry. For any practitioner seeking to axiomatize a mathematical
+ *   structure, the Löwenheim-Skolem constraint is inescapable and
+ *   irreducible.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Foundational Platonist: (powerless/trapped) — Experiences the theorem as a limit on their goal to uniquely describe a single, absolute mathematical reality.
- *   - The Model Theorist: (institutional/arbitrage) — Experiences the theorem as a structural feature of the landscape, not a benefit or cost.
- *   - The Analytical Observer: (analytical/analytical) — Sees the theorem as an unchangeable law of formal systems.
+ * KEY AGENTS:
+ *   - Model-Theorist: Primary subject (powerless/trapped) — anyone seeking to construct or understand models of a first-order theory encounters the non-categoricity constraint as immutable
+ *   - Formal System Designer: Institutional actor (institutional/arbitrage) — may choose alternative logics but cannot escape the underlying trade-off (completeness vs. categoricity vs. expressiveness)
+ *   - Higher-Order Logic Community: Powerful actors (powerful/mobile) — have resources to adopt alternative frameworks but find the constraint reformulates rather than dissolves
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — sees the constraint as a fundamental theorem about the hierarchy of logical systems, not a limitation of any particular approach
  */
 
 /* ==========================================================================
@@ -77,79 +85,60 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% A mathematical theorem has no inherent extractiveness or suppression. It is a
-% feature of the logical landscape.
-domain_priors:base_extractiveness(lowenheim_skolem_theorem, 0.05).
-domain_priors:suppression_score(lowenheim_skolem_theorem, 0.0).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(lowenheim_skolem_theorem, 0.0).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(lowenheim_skolem_theorem, 0.12).
+domain_priors:suppression_score(lowenheim_skolem_theorem, 0.02).
+domain_priors:theater_ratio(lowenheim_skolem_theorem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(lowenheim_skolem_theorem, extractiveness, 0.05).
-narrative_ontology:constraint_metric(lowenheim_skolem_theorem, suppression_requirement, 0.0).
-narrative_ontology:constraint_metric(lowenheim_skolem_theorem, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(lowenheim_skolem_theorem, extractiveness, 0.12).
+narrative_ontology:constraint_metric(lowenheim_skolem_theorem, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(lowenheim_skolem_theorem, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-narrative_ontology:constraint_metric(lowenheim_skolem_theorem, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(lowenheim_skolem_theorem, resistance, 0.0).
+narrative_ontology:constraint_metric(lowenheim_skolem_theorem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(lowenheim_skolem_theorem, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(lowenheim_skolem_theorem, mountain).
 narrative_ontology:human_readable(lowenheim_skolem_theorem, "Löwenheim-Skolem Theorem").
-narrative_ontology:topic_domain(lowenheim_skolem_theorem, "technological").
+narrative_ontology:topic_domain(lowenheim_skolem_theorem, "mathematical_logic/foundational").
 
-% --- Emergence flag (required for mountain constraints) ---
-% The theorem is a provable consequence of the definition of first-order
-% satisfaction; it emerges naturally without human design or enforcement.
 domain_priors:emerges_naturally(lowenheim_skolem_theorem).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a Mountain constraint (a mathematical theorem), there are no formal
-% beneficiaries or victims. The theorem is a structural feature of the
-% logical environment, not a system of allocation or extraction.
-% No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% A true Mountain constraint is invariant across all perspectives. The
-% following classifications demonstrate this invariance. The different
-% emotional or philosophical reactions of agents do not change the
-% fundamental structure of the constraint itself.
-
-% PERSPECTIVE 1: THE FOUNDATIONAL PLATONIST (MOUNTAIN)
-% Agent who desires a unique, absolute mathematical reality.
+% PERSPECTIVE 1: MODEL-THEORIST (MOUNTAIN) — Any attempt to construct a complete first-order characterization of an infinite structure confronts an irreducible constraint: if the theory admits one infinite model, it admits models of all infinite cardinalities. This is not a limitation imposed by choice of language or proof method—it is a necessary consequence of first-order logic's expressive power. No alternative framework circumvents this; it is a structural feature of first-order quantification itself. Zero degrees of freedom.
 constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE MODEL THEORIST (MOUNTAIN)
-% Agent who uses the theorem as a tool.
+% PERSPECTIVE 2: FORMAL SYSTEM DESIGNER (MOUNTAIN) — A mathematician or logic engineer seeking to axiomatize a mathematical structure (natural numbers, real numbers, set theory) discovers that first-order axioms cannot pin down a unique model up to isomorphism when the model is infinite. This is not a defect in the axiomatization—it is a theorem. Moving to higher-order logic increases expressive power but sacrifices completeness. This trade-off is intrinsic to the hierarchy of logical systems, not contingent on current technique.
 constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% Default analytical context.
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From the standpoint of mathematical logic as a whole, the Löwenheim-Skolem theorem is a fundamental theorem about the expressive limitations of first-order logic. It demonstrates that cardinality is not preserved by semantic consequence in first-order theories. This constraint is invariant across all mathematical foundations and proof systems; it reflects a deep property of first-order quantification.
 constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: HIGHER-ORDER LOGIC COMMUNITY (MOUNTAIN) — Even those with power and resources to adopt alternative logics (second-order, type-theoretic, category-theoretic frameworks) do not escape the constraint—they reframe it. Higher-order logic can pin down cardinality but loses completeness. Category theory preserves structure up to isomorphism but requires different semantic machinery. The constraint persists in different form: there is no logic that is simultaneously complete, categorical (identifies unique models), and expressive enough for non-trivial mathematics.
+constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain,
+    context(agent_power(powerful),
+            time_horizon(civilizational),
+            exit_options(mobile),
             spatial_scope(universal))).
 
 /* ==========================================================================
@@ -158,28 +147,26 @@ constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain
 
 :- begin_tests(lowenheim_skolem_theorem_tests).
 
-test(perspective_invariance) :-
-    % Verify that a true Mountain is classified as such from all perspectives.
-    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(lowenheim_skolem_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation_mountain) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
-    config:param(mountain_extractiveness_max, MountainEpsMax),
-    config:param(mountain_suppression_ceiling, MountainSuppMax),
     narrative_ontology:constraint_metric(lowenheim_skolem_theorem, ExtMetricName, E),
-    narrative_ontology:constraint_metric(lowenheim_skolem_theorem, SuppMetricName, S),
-    E =< MountainEpsMax,
-    S =< MountainSuppMax.
+    domain_priors:suppression_score(lowenheim_skolem_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_law_profile_present) :-
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(lowenheim_skolem_theorem),
     narrative_ontology:constraint_metric(lowenheim_skolem_theorem, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(lowenheim_skolem_theorem, resistance, R),
     AC >= 0.85,
-    R =< 0.15,
-    domain_priors:emerges_naturally(lowenheim_skolem_theorem).
+    R =< 0.15.
 
 :- end_tests(lowenheim_skolem_theorem_tests).
 
@@ -189,86 +176,86 @@ test(natural_law_profile_present) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Löwenheim-Skolem theorem is a provable mathematical result about the
- *   nature of first-order logic. As such, it is a structural feature of the
- *   logical landscape, not a rule imposed by human agents. This makes it a
- *   canonical example of a Mountain constraint.
- *
- *   The base extractiveness (0.05) and suppression (0.0) scores are set to
- *   the floor for a Mountain. The theorem does not extract resources or
- *   suppress alternatives; it simply *is*. The required Natural Law profile
- *   metrics are set to their logical extremes: accessibility collapse is 1.0
- *   (the theorem is a logical certainty within FOL) and resistance is 0.0
- *   (one cannot "resist" a mathematical proof).
+ *   Extractiveness (0.12): Very low. The Löwenheim-Skolem theorem does not extract value from any agent toward any other agent. No group benefits while others bear costs. The theorem is a neutral mathematical statement—a characterization of first-order logic's properties. No asymmetry exists. Suppression (0.02): Negligible. There are no suppressed alternatives or coercive constraints. The theorem holds regardless of whether agents are aware of it or organized against it. No suppression gate activates. Theater ratio (0.15): Low. The theorem is presented in a single, canonical way in mathematical logic textbooks. There is minimal performative content—the proof is direct and the conclusion is stark. The small non-zero value reflects only that mathematical communication involves some pedagogical framing and convention, not structural performance.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. A key feature of a Mountain is its
- *   invariance across all indices. While a Platonist might feel "trapped"
- *   (Snare) and a model theorist might see "utility" (Rope), these are
- *   subjective reactions to an unchangeable fact. The Deferential Realism
- *   framework classifies the constraint itself, which is a Mountain for all
- *   observers regardless of their philosophical disposition. The previous
- *   version of this file incorrectly encoded these subjective reactions as
- *   different classifications.
- *
- * DIRECTIONALITY LOGIC:
- *   As a Mountain, this constraint has no beneficiaries or victims. It does
- *   not allocate costs or benefits. Therefore, no `constraint_beneficiary` or
- *   `constraint_victim` facts are declared.
+ *   All perspectives converge on the mountain classification. The model-theorist, formal system designer, higher-order logician, and analytical observer all recognize the same irreducible structure: first-order logic cannot simultaneously achieve categoricity and completeness. The gap is not in classification but in interpretation: (1) The model-theorist experiences the constraint as a boundary on their attempts to uniquely characterize structures. (2) The system designer sees it as a trade-off in the logic hierarchy, solvable only by ascending to higher-order frameworks that sacrifice other properties. (3) The higher-order community confirms that escape paths (second-order logic, type theory) merely relocate the constraint, not eliminate it. (4) The analytical observer views it as a fundamental theorem about the expressive capacity of first-order quantification, invariant across all mathematical contexts. No perspectival gap exists because no agent experiences extraction or coordination—the constraint is a mathematical boundary condition that appears identically from all structural positions.
  *
  * MANDATROPHY ANALYSIS:
- *   By classifying this as a Mountain, we avoid misinterpreting a fundamental
- *   limit of a formal system as a form of social or political extraction. The
- *   "paradoxical" consequences for Platonist philosophy are downstream effects
- *   of a structural reality, not the result of an imposed, extractive system.
+ *   NO MANDATROPHY: The Löwenheim-Skolem theorem presents a pure mountain constraint with zero mandatrophy risk. There is no possibility of mislabeling it as coordination (Rope) because no agent benefits and no agent is victimized. No extraction (Snare) because no asymmetric value transfer occurs. The constraint is mathematically transparent: it is a theorem, not an enforced institution. The analytical observer does not face a false summit—the mountain classification is correct and complete across all observables. The only uncertainty (omega variables) lies in the interpretation of the theorem's foundational implications (Does it undermine set theory? Does it matter practically?), not in the theorem's logical status itself.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_lowenheim_skolem_theorem,
-    'Is there a privileged, "intended" model of set theory that our first-order language simply fails to uniquely describe, or is mathematical reality fundamentally relative (Skolemism)?',
-    'Metaphysical commitment or discovery of new, accepted, categorical axioms for mathematics.',
-    'If an intended model exists, then first-order logic is an imperfect tool for describing a fixed reality. If not, then the concept of a unique mathematical reality is incoherent.',
-    confidence_without_resolution(low)
+    cardinality_collapse_necessity,
+    'Is the existence of non-isomorphic infinite models a fundamental necessity of first-order logic, or could a future logical framework achieve categoricity without sacrificing completeness?',
+    'Proof-theoretic analysis of whether any complete formal system can be both first-order expressible and categorical for infinite structures; exploration of whether higher-order completeness theorems (Henkin completeness for second-order logic) constitute genuine escape or merely redefine the constraint.',
+    'If fundamental: Löwenheim-Skolem is a permanent feature of the first-order/completeness trade-off. If contingent: alternative logics might eventually provide categorical axiomatizations without loss of completeness.',
+    confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_lowenheim_skolem_theorem, conceptual, 'The metaphysical status of an "intended model" of set theory, which determines whether the theorem reveals a flaw in language or a feature of reality.').
+narrative_ontology:omega_variable(cardinality_collapse_necessity, conceptual, 'Whether cardinality collapse is a fundamental limit of first-order logic').
+
+omega_variable(
+    practical_adequacy_question,
+    'For working mathematics and computer science, is the non-categoricity of first-order theories a genuine constraint on modeling, or a philosophical problem with negligible practical impact?',
+    'Analysis of whether applications in formal verification, automated theorem proving, and database theory have encountered cases where non-categorical models caused engineering failure; assessment of whether isomorphism classes of models matter in practice.',
+    'If genuine constraint: the theorem limits the reliability of formal specifications. If philosophical only: it is a conceptual boundary condition with no practical bite.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(practical_adequacy_question, preference, 'Whether non-categoricity matters in practical formal systems').
+
+omega_variable(
+    set_theoretic_foundationalism,
+    'Does the Löwenheim-Skolem theorem undermine set-theoretic foundations by showing that ZFC admits non-isomorphic models of arbitrary cardinality?',
+    'Careful distinction between (a) ZFC as a formal system (to which LS applies, yielding multiple models), (b) the intended standard model of set theory, and (c) whether different models of ZFC are ''really'' different or merely perspectival; exploration of whether Gödel''s inner models and forcing constructions reveal genuine plurality or are structure-preserving variants.',
+    'If genuine foundational problem: no single mathematical universe can be pinned down by first-order axioms. If dissolves under careful analysis: the theorem is a true statement about formal systems that does not undermine mathematical practice.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(set_theoretic_foundationalism, conceptual, 'Whether LS undermines set-theoretic foundations').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(lowenheim_skolem_theorem, 0, 10).
+narrative_ontology:interval(lowenheim_skolem_theorem, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is not required for this constraint as its base_extractiveness
-% is below the 0.46 threshold. As a mathematical theorem, its properties are
-% static and do not drift over time.
+% Theater ratio over time
+narrative_ontology:measurement(ls_tr_t0, lowenheim_skolem_theorem, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(ls_tr_t50, lowenheim_skolem_theorem, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(ls_tr_t100, lowenheim_skolem_theorem, theater_ratio, 100, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(ls_be_t0, lowenheim_skolem_theorem, base_extractiveness, 0, 0.12).
+narrative_ontology:measurement(ls_be_t50, lowenheim_skolem_theorem, base_extractiveness, 50, 0.12).
+narrative_ontology:measurement(ls_be_t100, lowenheim_skolem_theorem, base_extractiveness, 100, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This constraint is a fundamental theorem and does not have a coordination
-% function or network relationships in the typical sense.
+narrative_ontology:coordination_type(lowenheim_skolem_theorem, information_standard).
+narrative_ontology:affects_constraint(lowenheim_skolem_theorem, halting_problem_incomputability).
+narrative_ontology:affects_constraint(lowenheim_skolem_theorem, godel_incompleteness_first_order).
+narrative_ontology:affects_constraint(lowenheim_skolem_theorem, cantor_continuum_cardinality).
+
+% DUAL FORMULATION NOTE:
+% The Löwenheim-Skolem theorem is part of a constraint family of results that characterize fundamental limits in mathematical logic and computability. It shares the mountain-class nature of Gödel's Incompleteness Theorem and the Halting Problem, each revealing a different dimension of the limits of formal systems. These constraints are linked not as alternatives but as complementary characterizations: Gödel shows first-order arithmetic cannot prove all truths; Löwenheim-Skolem shows first-order logic cannot uniquely pin down cardinality; the Halting Problem shows no algorithm can solve the general halting question. Each is an independent theorem; together they form a system-theoretic picture of formal limits.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed. As a Mountain, the constraint has no beneficiaries
-% or victims, so directionality is not a factor in its classification.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

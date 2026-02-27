@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "alignment_tax_tradeoff",
+    "version": "1.0",
+    "generated_date": "2024-07-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Safety-Performance Divergence",
+    "topic_domain": "technological/AI/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "unaligned_ai_developers",
+      "early_adopters"
+    ],
+    "victims": [
+      "society",
+      "aligned_ai_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Society",
+      "comment": "Perspective of society as a whole, which bears the risk of unaligned AI. Unable to exit the situation due to the pervasive nature of AI systems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Aligned AI Developers",
+      "comment": "Perspective of developers who prioritize safety and alignment. They are constrained by the competitive landscape, facing pressure to reduce the alignment tax. They also benefit from a safer ecosystem."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Unaligned AI Developers",
+      "comment": "Perspective of developers who prioritize performance over alignment. They benefit from increased competitiveness and market share due to lower overhead costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Early Adopters",
+      "comment": "Perspective of early adopters and consumers who benefit from higher performance and lower costs initially, but are also exposed to higher risks associated with unaligned AI. Mobile because they have the ability to switch to aligned AI as it matures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Existing AI Safety Standards Bodies",
+      "comment": "Perspective of standards bodies initially designed to create safe AI systems. Risk becoming pitons if they focus on theatrical compliance rather than robust safety measures."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "AI Alignment Research Community",
+      "comment": "The alignment research community is working to reduce the 'alignment tax', making safe AI more competitive. A temporary scaffold intended to build more general alignment strategies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alignment_tax_magnitude",
+      "question": "How significant is the performance overhead required for aligning AI systems?",
+      "resolution_mechanism": "Empirical measurement of the performance difference between aligned and unaligned systems across various tasks.",
+      "impact": "If the overhead is high, the competitive disadvantage is more pronounced. If it's low, the trade-off is less significant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of performance overhead caused by AI alignment."
+    },
+    {
+      "id": "societal_risk_perception",
+      "question": "How does society perceive the risks associated with unaligned AI?",
+      "resolution_mechanism": "Public opinion surveys and analysis of media coverage on AI safety.",
+      "impact": "If risks are perceived as low, there is less pressure for alignment. If perceived as high, there may be policy interventions to mandate alignment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Perceived risk of unaligned AI."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The safety-performance divergence describes a scenario in AI development where systems aligned with human values incur a \"tax\" in terms of computational overhead, reduced capability, or increased latency. This tax creates a competitive disadvantage against unaligned systems that can achieve higher performance at lower costs. This dynamic introduces a structural tension between safety and market incentives.",
+    "key_agents": [
+      "Unaligned AI Developers: Primary beneficiary (institutional/arbitrage) - benefit from increased competitiveness and market share.",
+      "Aligned AI Developers: Primary victim (moderate/constrained) - face competitive pressure and reduced market share.",
+      "Society: Ultimate victim (powerless/trapped) - bears the risks of unaligned AI systems.",
+      "Early Adopters: Secondary beneficiary (moderate/mobile) - benefit from higher performance/lower costs initially, but are exposed to risk",
+      "AI Alignment Research Community: organized agents (organized/arbitrage) - work to reduce the 'alignment tax' (Scaffold)."
+    ],
+    "logic_rationale": "The extractiveness is relatively high (0.60) because the competitive pressure on aligned AI developers is significant. The suppression value (0.45) reflects the constraints on aligned AI developers, but also acknowledges the arbitrage opportunity available to unaligned developers. The theater ratio is low (0.20) because safety is a real constraint",
+    "perspectival_gap": "The perspectival gap arises from differing incentives and risk exposures. Unaligned AI developers see a coordination mechanism (Rope): focusing on performance benefits all participants in the short term. Aligned AI developers see a Tangled Rope: safety benefits society but harms their competitive position. Society sees a Snare: they bear the ultimate risk. ",
+    "directionality_logic": "The directionality is determined by whether agents benefit from or bear the costs of the alignment tax. Unaligned developers benefit, giving them a low d-value. Aligned developers and society bear the costs, giving them higher d-values."
+  },
+  "network": {},
+  "directionality_overrides": []
+}

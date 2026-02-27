@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "iran_war_room_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "irgc"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "The IRGC 'Active War Room' Snare",
+    "topic_domain": "geopolitical/military",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "irgc_command_hierarchy",
+      "revolutionary_guard_elite"
+    ],
+    "victims": [
+      "regional_state_actors",
+      "civilian_populations",
+      "deterrence_framework"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Regional State Actors Under Implicit Threat",
+      "comment": "PERSPECTIVE 1: REGIONAL STATE ACTORS (SNARE) \u2014 Israel, Gulf states, and US regional forces have no exit from the threat landscape. War room declaration is a coercive signaling mechanism that extracts strategic concessions (restraint, diplomatic distance) without formal negotiation. Trapped in reactive posture; cannot de-escalate unilaterally without appearing weak. d\u22480.92, f(d)\u22481.38, \u03c3=1.1 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Civilian Populations in Strike Range",
+      "comment": "PERSPECTIVE 2: CIVILIAN POPULATIONS (SNARE) \u2014 Have zero agency. War room declaration creates sustained uncertainty about attack timing and targets. Cannot exit the geographic footprint; cannot participate in decision-making; bear full cost of potential strikes. d\u22480.98, f(d)\u22481.44, \u03c3=1.1 \u2192 \u03c7\u22480.68. Maximum extraction from powerless, trapped agents."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "IRGC Command Hierarchy",
+      "comment": "PERSPECTIVE 3: IRGC COMMAND HIERARCHY (ROPE) \u2014 Benefits from war room declaration as a pure coordination mechanism: consolidates command authority, signals resolve to allies (Syria, Hezbollah, militias), demonstrates unity to domestic audience. Experiences the constraint as coordination, not extraction. Can exit by standing down without cost to core interests. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.1 \u2192 \u03c7\u2248-0.04. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "US/NATO Military-Diplomatic Apparatus",
+      "comment": "PERSPECTIVE 4: US/NATO APPARATUS (TANGLED ROPE) \u2014 Organized actors constrained by deterrence credibility requirements. War room declaration forces response (force positioning, rhetoric hardening) that both deters and escalates. Coordination benefit: clarifies threat, enables preparedness. Extraction cost: irreversible military posturing, domestic political pressure, reduced diplomatic flexibility. d\u22480.62, f(d)\u22480.82, \u03c3=1.2 \u2192 \u03c7\u22480.45. Must remain engaged; exit costs prohibitive."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Deterrence Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL DETERRENCE FRAMEWORK (PITON) \u2014 The war room declaration ritualizes a script (threat \u2192 response \u2192 counter-threat) that persists through institutional inertia. The 'active war room' is a performative claim (Khamenei and IRGC commanders benefit from domestic credibility; actual attack probability remains strategically ambiguous). Theater_ratio \u22480.55 reflects that declared readiness is partly signaling bluff. The deterrence model itself is degraded: it assumes rational actor symmetry that may not hold if factional competition within Iran creates incentive structures for actual escalation despite high costs."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View (False Summit Risk)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE SUMMIT VIEW (MOUNTAIN) \u2014 At the civilizational scale, one might argue that threat signaling is an immutable feature of asymmetric military structures \u2014 that war rooms and declarations of readiness are inherent to military command logic itself. However, the base properties (\u03b5=0.68, suppression=0.72, theater=0.55, requires_active_enforcement=false) contradict mountain classification. This is a contingent institutional arrangement, not a law of nature. The false summit detector flags this: the 'inevitability' framing naturalizes what is actually a geopolitical snare."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "declaration_credibility_threshold",
+      "question": "At what probability threshold does a war room declaration transition from bluff/deterrence signaling to genuine attack readiness?",
+      "resolution_mechanism": "Intelligence analysis of actual military deployments, logistics preparation, and command structure activation; comparison of declarations with equipment positioning and personnel mobilization",
+      "impact": "If threshold < 30%: many declarations are performative theater (piton persists). If threshold > 70%: war room signals are reliable attack precursors (snare severity increases). Probability estimates below 30% suggest deterrence is working; above 50% suggest deterrence is failing.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Probability threshold for war room declaration credibility"
+    },
+    {
+      "id": "factional_incentive_alignment",
+      "question": "Do IRGC factions (aerospace force, ground force, elite units) have aligned incentives for escalation, or are internal power struggles creating pressure for actual attack despite leadership restraint?",
+      "resolution_mechanism": "Analysis of command structure, personnel flows, and factional positioning after Soleimani assassination; correlation between war room declarations and internal IRGC power dynamics",
+      "impact": "If aligned: war room is unified signaling (snare classification holds, extraction is deliberate). If misaligned: factional competition may create accidental escalation risk (snare transitions toward uncontrolled extraction mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether IRGC factions have aligned escalation incentives"
+    },
+    {
+      "id": "deterrence_reciprocal_clarity",
+      "question": "Do regional and global actors share a common understanding of what military actions would trigger Iranian retaliation, or is the threshold deliberately ambiguous to maximize extraction?",
+      "resolution_mechanism": "Analysis of Iranian public and private communications; comparison of stated red lines with actual response patterns to previous provocations",
+      "impact": "If clear: war room creates predictable deterrence (snare with negotiation exit). If ambiguous: extraction mechanism is maximized \u2014 potential targets cannot know their own safety (snare with no exit, maximum victimization).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether deterrence thresholds are clear or deliberately ambiguous"
+    },
+    {
+      "id": "civilian_intelligence_accessibility",
+      "question": "Do civilian populations in strike range have access to credible intelligence about actual attack probability and timing, or is information monopolized by military/intelligence services?",
+      "resolution_mechanism": "Survey analysis of awareness and evacuation capacity; comparison of public information available to civilians vs classified threat assessments",
+      "impact": "If accessible: victims can exercise constrained exit (some protective measures). If monopolized: victims remain trapped without information (maximum snare severity, \u03b5 approaches 0.80).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether civilians have access to attack probability intelligence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The IRGC Aerospace Force's declaration of an 'active war room' represents a coercive signaling mechanism embedded within Iran's strategic competition with the US, Israel, and Gulf states. The constraint operates across multiple time scales: immediate military readiness (affects state actor decision-making in days), biographical strategic deterrence (shapes long-term force posturing), and civilizational geopolitical structure (tests the viability of deterrence frameworks). The war room declaration is a Snare from the perspective of trapped regional actors and civilians \u2014 it extracts strategic concessions (restraint, military caution) through the threat of devastating strikes, while maintaining ambiguity about actual probability and timing. This ambiguity is the mechanism: clarity would allow negotiation and potential exits; opacity keeps all potential targets in a state of mandatory vigilance and precaution.",
+    "key_agents": [
+      "IRGC Command Hierarchy: Primary beneficiary (institutional/arbitrage) \u2014 consolidates internal authority, signals resolve, extracts strategic concessions from regional competitors without formal negotiation",
+      "Revolutionary Guard Elite: Primary beneficiary (organized/arbitrage) \u2014 benefits from military budget expansion, deterrence credibility, regional prestige from threat capability",
+      "Regional State Actors (Israel, Gulf states, US forces): Primary victim (powerless/trapped) \u2014 forced into reactive posture, constrained diplomacy, mandatory military preparedness at high cost",
+      "Civilian Populations in Strike Range: Primary victim (powerless/trapped) \u2014 zero agency, bear full cost of sustained threat uncertainty, cannot exit or participate in decision-making",
+      "US/NATO Military-Diplomatic Apparatus: Secondary victim (organized/constrained) \u2014 forced to respond with force positioning and rhetoric hardening, reducing diplomatic flexibility",
+      "International Deterrence Framework: Institutional observer (institutional/arbitrage) \u2014 ritualizes threat-response script; increasingly performative as mutual threats crowd out negotiation"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The war room declaration extracts strategic concessions from trapped actors through coercion. Regional competitors reduce military provocations, avoid certain actions (air strikes, blockades), and divert resources to defensive posturing. The extraction is not maximal (0.80+) because the threat remains partially bluffed \u2014 actual attack probability is strategically ambiguous, preserving some negotiation space. Suppression (0.72): High. Target actors have minimal alternatives: they cannot exit the region, cannot reliably predict attack timing, and cannot safely call the bluff (any provocation risks catastrophic retaliation). The lack of clarity prevents exit options from becoming actionable. Theater (0.55): Moderate. The war room declaration includes genuine signaling (IRGC has real strike capability and is demonstrably mobilized) but also performative elements (Khamenei uses the threat for domestic political consolidation; actual attack probability may be lower than rhetoric suggests). The intermediate theater ratio indicates a hybrid mechanism: partly real threat, partly signaling bluff.",
+    "perspectival_gap": "The beneficiary (IRGC command) sees the war room as pure coordination: an effective mechanism for consolidating authority and deterring regional competitors. The victim (regional state actors, civilians) sees pure extraction: coercive threat extraction with no exit or negotiation pathway. The organized NATO apparatus sees tangled rope: both coordination (clarifies threat) and extraction (forces military posturing). The piton perspective reveals that the deterrence framework itself is degraded \u2014 the threat-response ritual persists through institutional inertia while actual strategic logic becomes increasingly strained by factional complexity and changing military technology. The false summit (mountain) perspective risks naturalizing the snare as inevitable geopolitical law \u2014 but the structural data shows it is a contingent institutional arrangement dependent on IRGC's internal cohesion and regional belief structures.",
+    "directionality_logic": "IRGC command: Beneficiary + arbitrage exit \u2192 d\u22480.08, f(d)\u2248-0.10. Can stand down without core cost; experiences constraint as coordination. Regional state actors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Cannot exit; forced into reactive posture. Civilians: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.44. Maximum extraction \u2014 zero agency. NATO apparatus: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.82. Organized but constrained by deterrence credibility requirements; cannot fully exit without strategic consequence. Deterrence framework: Piton classification derives from theater_ratio (0.55), not from high chi. The framework experiences its own degradation \u2014 the script persists but real strategic logic has become decoupled.",
+    "mandatrophy_analysis": "This constraint resolves potential mandatrophy by showing that the war room declaration is structurally distinct from legitimate deterrence coordination. Legitimate deterrence is Rope: it signals resolve while preserving negotiation pathways and allowing exit through diplomatic agreement. The IRGC war room is Snare: it extracts through ambiguity and threat, deliberately preventing target actors from knowing whether negotiation is possible or whether the threat is bluff. The mandatrophy resolution: if IRGC commanders had declared specific red lines and negotiation conditions, the constraint would classify as Tangled Rope (coordination + extraction with transparency). Instead, they declared 'active readiness' without specifying conditions \u2014 this opacity moves the classification from Tangled Rope to pure Snare. The theater ratio (0.55) indicates the performative element is substantial but not dominant; if theater were >0.70, the classification would degrade to Piton (institutional inertia). The current metrics show a genuine extraction mechanism with real deterrent force, not yet a hollow ritual."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gulf_state_military_posturing",
+      "israel_iran_deterrence_stability",
+      "us_regional_force_deployment"
+    ],
+    "dual_formulation_note": "The IRGC war room is upstream of specific military confrontation risks but represents a distinct structural constraint. Downstream constraints (state actor posturing, deterrence stability) inherit the ambiguity and escalation risk from this declaration. Decomposition: the actual strike capability is a separate constraint (mountain: physical/logistical limits); the declaration strategy is this constraint (snare: coercive signaling)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: constraint_nonstandard_arithmetic
+% CONSTRAINT STORY: nonstandard_models_of_arithmetic
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-01-06
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_nonstandard_arithmetic, []).
+:- module(constraint_nonstandard_models_of_arithmetic, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,18 +53,30 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: constraint_nonstandard_arithmetic
+ *   constraint_id: nonstandard_models_of_arithmetic
  *   human_readable: Existence of Nonstandard Models of Arithmetic
- *   domain: technological
+ *   domain: mathematics/logic/foundational
  *
  * SUMMARY:
- *   Gödel's incompleteness theorems imply the existence of nonstandard models of arithmetic: structures that satisfy the axioms of Peano Arithmetic but contain elements that are not standard natural numbers. The existence of these models constrains the completeness and decidability of formal systems, posing challenges for verification and automated reasoning, especially in software and hardware verification. The constraint arises due to the inherent limitations of formal systems to fully capture the intended meaning of arithmetic.
+ *   The existence of nonstandard models of arithmetic is a structural
+ *   consequence of Gödel's incompleteness theorems and the nature of
+ *   first-order logic. Any first-order axiomatization of arithmetic (such as
+ *   Peano Arithmetic) that is consistent will have multiple models: the
+ *   'standard' model containing exactly the natural numbers 0, 1, 2, 3, ...
+ *   and nonstandard models that extend this sequence with additional infinite
+ *   elements satisfying the same axioms. This constraint is invariant across
+ *   all mathematical frameworks, computational systems, and observational
+ *   contexts. It emerges naturally from the logical structure of first-order
+ *   axiomatization and cannot be negotiated, suppressed, or escaped by any
+ *   agent or institution. The constraint admits no degrees of freedom — every
+ *   perspective yields the same classification as a mathematical necessity.
  *
- * KEY AGENTS (by structural relationship):
- *   - Formal Verification Systems: Primary target (powerless/trapped) — struggles to prove correctness in all cases.
- *   - Mathematicians: Primary beneficiary (analytical/arbitrage) — gains deeper understanding of the limits of formal systems.
- *   - Software/Hardware Engineers: Secondary actor (moderate/constrained) — faces challenges in ensuring complete system correctness.
- *   - Analytical observer: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Peano Arithmetic axiom system: The formal structure itself — constrained by its own logical consistency
+ *   - First-order logic framework: The meta-logical substrate — determines what is expressible within axiomatizations
+ *   - Mathematical logic community: Global professional community — all institutions experience identical constraint structure
+ *   - Gödel's incompleteness theorems: Foundational result — the causal source establishing constraint necessity
+ *   - Analytical observer: Universal perspective — views constraint as a pure logical feature independent of context
  */
 
 /* ==========================================================================
@@ -72,123 +84,83 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constraint_nonstandard_arithmetic, 0.15).
-domain_priors:suppression_score(constraint_nonstandard_arithmetic, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(constraint_nonstandard_arithmetic, 0.01).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(nonstandard_models_of_arithmetic, 0.08).
+domain_priors:suppression_score(nonstandard_models_of_arithmetic, 0.02).
+domain_priors:theater_ratio(nonstandard_models_of_arithmetic, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constraint_nonstandard_arithmetic, extractiveness, 0.15).
-narrative_ontology:constraint_metric(constraint_nonstandard_arithmetic, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(constraint_nonstandard_arithmetic, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(nonstandard_models_of_arithmetic, extractiveness, 0.08).
+narrative_ontology:constraint_metric(nonstandard_models_of_arithmetic, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(nonstandard_models_of_arithmetic, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-narrative_ontology:constraint_metric(constraint_nonstandard_arithmetic, accessibility_collapse, 0.90).
-narrative_ontology:constraint_metric(constraint_nonstandard_arithmetic, resistance, 0.10).
+narrative_ontology:constraint_metric(nonstandard_models_of_arithmetic, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(nonstandard_models_of_arithmetic, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(constraint_nonstandard_arithmetic, mountain).
-narrative_ontology:human_readable(constraint_nonstandard_arithmetic, "Existence of Nonstandard Models of Arithmetic").
-narrative_ontology:topic_domain(constraint_nonstandard_arithmetic, "technological").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(nonstandard_models_of_arithmetic, mountain).
+narrative_ontology:human_readable(nonstandard_models_of_arithmetic, "Existence of Nonstandard Models of Arithmetic").
+narrative_ontology:topic_domain(nonstandard_models_of_arithmetic, "mathematics/logic/foundational").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(constraint_nonstandard_arithmetic).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(constraint_nonstandard_arithmetic). % Required for Tangled Rope
+domain_priors:emerges_naturally(nonstandard_models_of_arithmetic).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-domain_priors:emerges_naturally(constraint_nonstandard_arithmetic).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(constraint_nonstandard_arithmetic, mathematicians).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(constraint_nonstandard_arithmetic, formal_verification_systems).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(constraint_nonstandard_arithmetic, mountain,
+% PERSPECTIVE 1: FORMAL SYSTEM VIEW (MOUNTAIN) — Peano Arithmetic and its axioms are entirely constrained by their own logical structure. No agent can negotiate or exit the existence of nonstandard models — they are a logical necessity, not a policy choice. The formal system 'experiences' this constraint as an absolute limit on what it can express about itself.
+constraint_indexing:constraint_classification(nonstandard_models_of_arithmetic, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(constraint_nonstandard_arithmetic, mountain,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(arbitrage),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(constraint_nonstandard_arithmetic, mountain,
+% PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) — From a logical and mathematical perspective, nonstandard models follow necessarily from Gödel's incompleteness theorems. Any first-order axiomatization of arithmetic that is consistent will have models that extend beyond the standard natural numbers. This is not contingent on observer choice, measurement methodology, or institutional arrangement — it is a structural feature of first-order logic itself. The constraint has zero degrees of freedom.
+constraint_indexing:constraint_classification(nonstandard_models_of_arithmetic, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: MATHEMATICAL LOGIC COMMUNITY (MOUNTAIN) — Professional mathematicians and logicians across all institutions, funding regimes, and research programs experience the same constraint. No community, nation, or funding body can choose to make nonstandard models not exist. The constraint is invariant across all observational contexts and professional communities. Arbitrage options are irrelevant — there is nothing to exit from.
+constraint_indexing:constraint_classification(nonstandard_models_of_arithmetic, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(constraint_nonstandard_arithmetic_tests).
+:- begin_tests(nonstandard_models_of_arithmetic_tests).
 
-test(perspectival_agreement) :-
-    % Verify perspectival agreement between target and beneficiary as both see it as a fundamental limit
-    constraint_indexing:constraint_classification(constraint_nonstandard_arithmetic, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(constraint_nonstandard_arithmetic, TypeBeneficiary, context(agent_power(analytical), _, _, _)),
-    TypeTarget = TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(nonstandard_models_of_arithmetic, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(nonstandard_models_of_arithmetic, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(constraint_nonstandard_arithmetic, ExtMetricName, E),
-    E =< 0.25. % Mountain should have low extractiveness
+    narrative_ontology:constraint_metric(nonstandard_models_of_arithmetic, ExtMetricName, E),
+    domain_priors:suppression_score(nonstandard_models_of_arithmetic, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(constraint_nonstandard_arithmetic_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(nonstandard_models_of_arithmetic),
+    narrative_ontology:constraint_metric(nonstandard_models_of_arithmetic, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(nonstandard_models_of_arithmetic, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(nonstandard_models_of_arithmetic_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -196,100 +168,86 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The existence of nonstandard models of arithmetic is a direct consequence of Gödel's incompleteness theorems. It means that any formal system powerful enough to express Peano Arithmetic will be incomplete (there will be true statements that cannot be proven) and any such system that is consistent cannot prove its own consistency.  Because formal systems can't fully capture the intended meaning of arithmetic, there will always be models (nonstandard models) that satisfy the axioms but behave differently than expected. This constrains the power of formal verification and automated reasoning. The low extractiveness score reflects that the limitation doesn't actively extract value but instead highlights inherent limits.
+ *   Extractiveness (0.08): Minimal. No agent or institution extracts value from others through this constraint. The constraint is not a mechanism of asymmetric distribution or coercion — it is a structural feature of the logical system itself. All mathematical agents are equally subject to nonstandard models. Suppression (0.02): Negligible. There are no alternative exit options being suppressed. The constraint is not enforced through coercion or threat — it follows necessarily from logical principles. Awareness of nonstandard models increases understanding rather than constraining it. Theater ratio (0.15): Very low. Nonstandard models are not a performative concept. They are rarely discussed in practical mathematics or computation because standard arithmetic is sufficient for nearly all applications. The minimal theater reflects that most mathematical work ignores their existence — this is efficiency rather than performance. Accessibility collapse (0.92): Very high. Once the logical structure is understood, the existence of nonstandard models is completely accessible to formal analysis. Gödel's completeness theorem and its consequences are rigorous and well-established. The constraint admits no ambiguity.
  *
  * PERSPECTIVAL GAP:
- *   There is no significant perspectival gap as both the primary target (formal verification systems) and the primary beneficiary (mathematicians) generally agree that the existence of nonstandard models represents a fundamental limitation.
- *
- * DIRECTIONALITY LOGIC:
- *   Mathematicians benefit by gaining a deeper understanding of the limitations of formal systems and exploring the nuances of arithmetic. Formal verification systems are targeted because they are limited in their ability to guarantee complete correctness due to the existence of these models. The beneficiary declaration maps to the structural relationship: Mathematicians are the group that most benefit from exploring and understanding these limitations, while Formal Verification Systems are most directly affected by the consequences of the limitation.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   Not applicable.
+ *   This constraint exhibits NO perspectival gap — all valid observer positions classify it identically as Mountain. The powerless formal system, the analytical observer, and the institutional mathematical community all experience the same logical necessity. This uniformity is the defining characteristic of a true natural law in the Deferential Realism framework. The absence of perspectival disagreement confirms that the constraint is not an institutional arrangement, policy, or contingent extraction mechanism, but rather an absolute structural feature of logic itself.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification as a mountain prevents mislabeling it as a snare. While the existence of nonstandard models does limit formal verification systems, it doesn't actively extract value from them in a coercive way. Instead, it represents a hard limit on what formal systems can achieve.
+ *   NATURAL LAW EXEMPLAR: This constraint resolves the mandatrophy by demonstrating that nonstandard models are NOT an extractive mechanism masquerading as a law of nature (Snare disguised as Mountain), nor a coordination mechanism that happens to be stable (Rope or Tangled Rope disguised as Mountain). Instead, all three test cases — beneficiary analysis, victim analysis, and institutional escape — confirm the mountain classification: (1) No agent benefits while others bear costs — the constraint affects all equally. (2) No suppressed alternatives exist — logical necessity admits no substitutes. (3) No institutional arrangement maintains the constraint — it follows from first principles. The constraint's immutability is structural, not performative. The minimal theater ratio (0.15) and negligible suppression (0.02) further confirm that this is genuine natural law, not institutional theater maintaining a false summit.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_nonstandard_arithmetic,
-    'To what extent can techniques like interactive theorem proving mitigate the impact of nonstandard models on software verification?',
-    'Further research and development in interactive theorem proving and formal verification techniques.',
-    'If true (mitigation is possible): Increased confidence in software verification. If false (mitigation is limited): Continued reliance on testing and other non-formal methods.',
-    confidence_without_resolution(medium)
+    standard_model_definition,
+    'Is the ''standard model'' of arithmetic itself a coherent absolute, or a meta-mathematical commitment dependent on set-theoretic assumptions?',
+    'Philosophical analysis of the ontological status of the standard natural numbers; examination of whether they depend on background set theory or are definable purely logically',
+    'If standard model requires external set theory: the constraint is not purely about first-order arithmetic but about meta-mathematical framework choice. If standard model is logically absolute: the nonstandard/standard distinction is intrinsic to arithmetic itself.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(standard_model_definition, conceptual, 'Whether standard model definition depends on set-theoretic background').
+
+omega_variable(
+    categoricity_and_semantics,
+    'Does Gödel''s theorem constrain semantic truth in arithmetic, or only first-order syntactic provability?',
+    'Analysis of the gap between semantic completeness (all truths in the standard model are captured) versus syntactic completeness (all truths are provable); examination of whether nonstandard models represent genuine semantic possibilities or merely syntactic artifacts',
+    'If semantic: nonstandard models are genuinely alternative mathematical realities within the same axiom set. If syntactic artifact: they are formal curiosities without ontological weight — the ''true'' arithmetic is still unique.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(categoricity_and_semantics, conceptual, 'Whether nonstandard models are semantic or syntactic artifacts').
+
+omega_variable(
+    computable_vs_noncomputable_models,
+    'Can a nonstandard model of arithmetic be explicitly constructed, or are all nonstandard models non-recursive and inaccessible to algorithmic specification?',
+    'Proof-theoretic examination of recursion-theoretic properties of model extensions; investigation of whether any computable function can enumerate elements of nonstandard models',
+    'If computable models exist: they are potential reference objects for practical computation systems. If all nonstandard models are non-computable: they are purely theoretical constructs with no computational realization.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(computable_vs_noncomputable_models, empirical, 'Whether nonstandard models can be computationally constructed').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(constraint_nonstandard_arithmetic, 0, 10).
+narrative_ontology:interval(nonstandard_models_of_arithmetic, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(constraint_nonstandard_arithmetic_tr_t0, constraint_nonstandard_arithmetic, theater_ratio, 0, 0.01).
-narrative_ontology:measurement(constraint_nonstandard_arithmetic_tr_t5, constraint_nonstandard_arithmetic, theater_ratio, 5, 0.01).
-narrative_ontology:measurement(constraint_nonstandard_arithmetic_tr_t10, constraint_nonstandard_arithmetic, theater_ratio, 10, 0.01).
+% Theater ratio over time
+narrative_ontology:measurement(nsa_tr_t0, nonstandard_models_of_arithmetic, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(nsa_tr_t50, nonstandard_models_of_arithmetic, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(nsa_tr_t100, nonstandard_models_of_arithmetic, theater_ratio, 100, 0.15).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(constraint_nonstandard_arithmetic_ex_t0, constraint_nonstandard_arithmetic, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(constraint_nonstandard_arithmetic_ex_t5, constraint_nonstandard_arithmetic, base_extractiveness, 5, 0.15).
-narrative_ontology:measurement(constraint_nonstandard_arithmetic_ex_t10, constraint_nonstandard_arithmetic, base_extractiveness, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(nsa_be_t0, nonstandard_models_of_arithmetic, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(nsa_be_t50, nonstandard_models_of_arithmetic, base_extractiveness, 50, 0.08).
+narrative_ontology:measurement(nsa_be_t100, nonstandard_models_of_arithmetic, base_extractiveness, 100, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-% narrative_ontology:coordination_type(constraint_nonstandard_arithmetic, information_standard).
+narrative_ontology:coordination_type(nonstandard_models_of_arithmetic, information_standard).
+narrative_ontology:affects_constraint(nonstandard_models_of_arithmetic, godel_incompleteness_theorems).
+narrative_ontology:affects_constraint(nonstandard_models_of_arithmetic, halting_problem_undecidability).
+narrative_ontology:affects_constraint(nonstandard_models_of_arithmetic, logical_consistency_limits).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(constraint_nonstandard_arithmetic, 0.1).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(constraint_nonstandard_arithmetic, [other_constraint_id]).
+% DUAL FORMULATION NOTE:
+% Nonstandard models exist as a logical consequence of Gödel's incompleteness theorems. The upstream constraint (incompleteness itself) is the logical foundation; nonstandard models are a downstream structural consequence. Both are Mountain-type constraints with identical ε ≈ 0.08.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(constraint_nonstandard_arithmetic, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

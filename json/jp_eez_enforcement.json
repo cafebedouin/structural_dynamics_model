@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "jp_eez_enforcement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jp_eez"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Enforcement of Japan's Claimed Exclusive Economic Zone (EEZ)",
+    "topic_domain": "geopolitical/maritime_sovereignty",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "japanese_state",
+      "japanese_fishing_industry"
+    ],
+    "victims": [
+      "chinese_state",
+      "chinese_fishing_fleet",
+      "international_maritime_freedom"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Chinese Fishing Fleet",
+      "comment": "PERSPECTIVE 1: CHINESE FISHING FLEET (SNARE) \u2014 Small-scale fishers operating in contested waters face maximum extraction and suppression. Exit options are trapped: abandoning traditional fishing grounds means economic collapse; continuing means risk of detention, vessel seizure, and fines. Enforcement creates a coercive extraction mechanism with minimal coordination benefit for this actor."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Chinese State",
+      "comment": "PERSPECTIVE 2: CHINESE STATE (TANGLED ROPE) \u2014 China's central government benefits from asserting sovereignty claims (domestic legitimacy, resource access) while bearing costs of escalation risk and international friction. Exit is constrained: retreating from the dispute damages nationalist credibility; aggressive pushback risks military confrontation. Both coordination and extraction present \u2014 must coordinate with fishing fleets while extracting concessions (abandoning grounds, accepting maritime restrictions) to avoid escalation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Japanese State",
+      "comment": "PERSPECTIVE 3: JAPANESE STATE (ROPE) \u2014 Japan's central government benefits from enforcing EEZ claims (resource control, territorial assertion, alliance credibility with US). Experiences the constraint primarily as coordination: organizing coast guard patrols, communicating sovereignty signals, coordinating with fishing industry. Effective exit via arbitrage \u2014 can modulate enforcement intensity without fundamental loss."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Maritime Law Institutions",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL MARITIME LAW (SCAFFOLD) \u2014 UNCLOS and international arbitration mechanisms represent a temporary coordination framework designed to resolve maritime disputes through adjudication rather than coercion. This perspective sees the EEZ enforcement bottleneck as solvable via dispute resolution with sunset logic: as bilateral or arbitrated agreements clarify boundaries, the enforcement intensity should decline. Theater ratio reflects that much EEZ enforcement is performative signaling rather than resource extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Post-WWII Allied Order Framework",
+      "comment": "PERSPECTIVE 5: POST-WWII ALLIED ORDER (PITON) \u2014 The underlying constraint is maintenance of the San Francisco System: Japan's territorial integrity and EEZ rights rest on the US-Japan alliance and post-war settlement. This framework persists through institutional inertia despite rising challenges from China. The constraint is degraded \u2014 the original function (preventing Japanese military resurgence, integrating Japan into liberal order) has atrophied, but the alliance structure remains maintained through ritual and theater (military exercises, base agreements, coordination statements) rather than core function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The United States as Alliance Guarantor",
+      "comment": "PERSPECTIVE 6: UNITED STATES (TANGLED ROPE) \u2014 The US benefits from EEZ enforcement (maintaining alliance credibility, containing Chinese expansion, strategic positioning in Indo-Pacific). Experiences both coordination (joint patrols, intelligence sharing, alliance theater) and extraction (must expend resources, faces Chinese escalation risk, constrained diplomatic flexibility). Exit is mobile but costly \u2014 could theoretically realign but would lose strategic positioning."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, maritime resource competition and territorial assertion are inherent to state behavior. Great powers competing for EEZ control is a natural feature of international anarchy. However, this naturalizes what is actually a contingent post-war legal framework (UNCLOS) layered onto pre-existing claims. The engine's false summit detector will identify this perspective as naturalization rather than true mountain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "senkaku_sovereignty_status",
+      "question": "Are the Senkaku/Diaoyu Islands factually under Japanese administrative control, or do they represent a contested claim subject to reversion?",
+      "resolution_mechanism": "Historical review of 1972 Okinawa reversion agreement language; examination of whether disputed islands were explicitly included in repatriated territory vs retained by US; legal analysis of Chinese government statements and their relationship to underlying territorial claims",
+      "impact": "If islands are under unambiguous Japanese control: EEZ enforcement is coordination mechanism (Rope from Japan perspective). If sovereignty is genuinely contested and reversible: enforcement is extraction mechanism (Snare from Chinese perspective, Tangled Rope from Chinese state perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Factual status of Senkaku/Diaoyu islands under international law"
+    },
+    {
+      "id": "enforcement_proportionality_threshold",
+      "question": "What enforcement intensity threshold distinguishes legitimate maritime sovereignty assertion from militarized coercion?",
+      "resolution_mechanism": "Comparative analysis of coast guard tactics across EEZ disputes; measurement of escalation rate over time; correlation between enforcement intensity and actual resource extraction or territorial consolidation",
+      "impact": "If threshold is low (current Japanese enforcement is already excessive): constraint classifies as Snare from more perspectives. If threshold is high (enforcement remains within coast guard norms): constraint is Rope/Tangled Rope from more perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold distinguishing legitimate sovereignty from militarized coercion"
+    },
+    {
+      "id": "fishing_fleet_alternative_grounds",
+      "question": "Do realistic alternative fishing grounds exist for Chinese fleets, or are the Senkaku waters irreplaceable for economic survival of fishing communities?",
+      "resolution_mechanism": "Economic analysis of Chinese fishing fleet catch composition; assessment of resource availability in EEZs of other nations accessible to Chinese vessels; survey of fishing community dependence on Senkaku grounds",
+      "impact": "If alternatives exist: Chinese fishing fleets have constrained exit (not trapped), affecting directionality upward and reducing Snare classification strength. If Senkaku grounds are unique: fishing fleets are trapped, strengthening Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of alternative fishing grounds for Chinese fleets"
+    },
+    {
+      "id": "us_alliance_credibility_mechanics",
+      "question": "Does US military presence in the region actually constrain Chinese escalation, or does it primarily signal alliance commitment while Chinese escalation proceeds through non-military coercion?",
+      "resolution_mechanism": "Analysis of Chinese behavior patterns in contested waters during high vs low US military presence; assessment of whether military signaling prevents actual incidents or merely prevents escalation to military engagement",
+      "impact": "If US presence constrains escalation: Japan's exit options expand (arbitrage becomes more viable), reducing Snare classification strength. If signaling is decoupled from actual constraint: Snare classification from Chinese perspective strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether US military presence constrains Chinese escalation or merely signals commitment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Japan's claimed Exclusive Economic Zone (EEZ) around the Senkaku/Diaoyu Islands represents a multi-layered constraint spanning maritime sovereignty assertion, resource competition, and great-power rivalry. The constraint exhibits characteristics of tangled coordination-extraction hybrid: Japan (and its US ally) benefit from asserting sovereign control over resources and maritime boundaries; China's fishing fleets and central government bear extraction costs through restricted access and enforcement pressure; international maritime law institutions attempt coordination through UNCLOS frameworks; and the underlying post-war alliance structure persists through institutional theater despite atrophying original function. The constraint has intensified over the measurement interval as enforcement capability improved and Chinese fishing pressure increased, driving extractiveness from 0.35 to 0.58 while theater ratio rose from 0.48 to 0.61, indicating increasing performative signaling (military exercises, diplomatic statements) relative to actual resource extraction.",
+    "key_agents": [
+      "Japanese State: Primary beneficiary (institutional/arbitrage) \u2014 asserts EEZ sovereignty, controls resource access, enhances alliance credibility",
+      "Japanese Fishing Industry: Secondary beneficiary (powerful/arbitrage) \u2014 gains exclusive access to contested fishing grounds, reduced competition from Chinese fleets",
+      "Chinese Fishing Fleet: Primary victim (powerless/trapped) \u2014 faces vessel seizures, fines, restrictions on access to traditional grounds; no viable alternative",
+      "Chinese State: Secondary victim and strategic competitor (organized/constrained) \u2014 incurs diplomatic costs, escalation risk, must coordinate domestic constraint without losing nationalist credibility",
+      "United States: Alliance beneficiary (powerful/mobile) \u2014 maintains strategic positioning, alliance credibility, regional containment, but expends resources and accepts escalation risk",
+      "International Maritime Law: Institutional framework (organized/mobile) \u2014 UNCLOS and arbitration mechanisms represent coordination pathway with sunset logic if disputes resolved",
+      "Post-WWII Alliance Order: Structural foundation (institutional/arbitrage) \u2014 undergirds Japanese EEZ claims but persists through degraded function (piton status)"
+    ],
+    "logic_rationale": "Base extractiveness (0.58): The constraint exhibits substantial extraction of Chinese fishing fleet access combined with constraints on Chinese state behavior. The value reflects the asymmetric benefit structure: Japan gains exclusive resource access while China loses both fishing grounds and diplomatic flexibility. However, extractiveness is not higher because (a) enforcement is not total \u2014 some Chinese fishing continues despite restrictions \u2014 (b) China retains exit options through diplomatic escalation or international arbitration \u2014 (c) the US ally relationship partially limits Japan's unilateral extraction capacity. Suppression (0.72): High. Chinese actors face significant coercive pressure with limited alternatives: fleet restrictions via coast guard enforcement; diplomatic costs for state assertion; domestic legitimacy pressure against concession. Yet suppression is not total because China can escalate and international mechanisms exist. Theater ratio (0.61): Moderate-high. Enforcement involves substantial performative elements: military exercises, diplomatic statements, sovereignty signaling. But significant extraction is also real: actual vessel seizures, fines, ground restrictions. The ratio has increased from 0.48 because more enforcement occurs through political theater (statements, exercises) rather than direct resource extraction.",
+    "directionality_logic": "Each perspective's directionality derives from power position and exit options relative to this constraint. Chinese fishing fleets (powerless/trapped) experience maximum extraction: high d \u2192 high f(d) \u2192 high \u03c7. Japanese state (institutional/arbitrage) experiences low extraction: low d \u2192 negative f(d) \u2192 negative \u03c7 (benefits from the constraint). Chinese state (organized/constrained) experiences moderate extraction: d \u2248 0.55 \u2192 moderate \u03c7. US ally (powerful/mobile) experiences moderate extraction with mixed signals: d \u2248 0.45 \u2192 mixed f(d). International law institutions (organized/mobile) experience low extraction: d \u2248 0.35 \u2192 low \u03c7 (benefit from coordination function). Analytical observer (analytical/analytical) risks false summit by naturalizing post-war legal framework as natural law.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence: Japanese state sees Rope (legitimate sovereignty coordination), Chinese fleet sees Snare (pure coercive extraction), US sees Tangled Rope (both alliance coordination and resource competition), Chinese state sees Tangled Rope (coordination with fleets vs extraction by Japan/US), international law sees Scaffold (solvable via arbitration with sunset logic), post-war order sees Piton (degraded function maintained through theater), analytical observer risks Mountain (naturalizing post-war law as natural law). The gap reflects fundamentally incompatible structural positions: what Japan experiences as rightful sovereignty enforcement, China experiences as unjust maritime restriction.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing between legitimate coordination (maritime boundaries clarification via UNCLOS) and asymmetric extraction (resource access restriction + diplomatic pressure on China). The Tangled Rope classification captures both: the EEZ framework does provide genuine coordination function (reducing collision risk, clarifying boundaries), but it is layered with extraction (benefiting Japan/US while constraining China). The Snare from the Chinese fishing fleet perspective and Rope from the Japanese perspective are both valid but incompletely describe the structure \u2014 the Tangled Rope from the Chinese state and US perspectives is the more complete structural picture. The piton classification of the post-war order reveals that the underlying constraint is institutional inertia: the alliance persists through alliance theater and military signaling even though the original deterrent function (preventing Japanese militarization) has atrophied."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "south_china_sea_maritime_claims",
+      "us_japan_alliance_security_commitment",
+      "chinese_fishing_fleet_viability",
+      "unclos_dispute_resolution"
+    ],
+    "dual_formulation_note": "Japan's EEZ enforcement can be decomposed into two structurally distinct constraints: (1) legitimate maritime boundary clarification (Rope) \u2014 UNCLOS coordination function; (2) asymmetric resource extraction from Chinese actors (Snare/Tangled Rope) \u2014 great power competition. The current story treats them as unified Tangled Rope, but separate constraint families could distinguish the coordination from the extraction components with different \u03b5 values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

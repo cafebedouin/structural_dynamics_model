@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "portugal_government_stability_ad",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ad_stab"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.52,
+    "theater_ratio": 0.65,
+    "claimed_type": "scaffold",
+    "human_readable": "The AD Minority Government Stability (The \"Presidential\" Scaffold)",
+    "topic_domain": "political/parliamentary_governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "alianca_democratica",
+      "center_right_coalition"
+    ],
+    "victims": [
+      "leftist_parliamentary_opposition",
+      "legislative_agenda_coherence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Socialist and Leftist Opposition",
+      "comment": "PERSPECTIVE 1: LEFTIST OPPOSITION (SNARE) \u2014 Cannot exit the parliamentary arithmetic; constrained to reactive opposition. The PS, Bloco, and Livre have no structural path to overturn AD minority government without coalition defection. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Parliamentary Independents and Regional Parties",
+      "comment": "PERSPECTIVE 2: INDEPENDENTS / REGIONAL PARTIES (TANGLED ROPE) \u2014 Constrained by coalition requirements but also benefit from agenda-setting leverage. These actors (including regional independence parties) can influence legislation but face retaliation risk if they withdraw support. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.29."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Alian\u00e7a Democr\u00e1tica Coalition Leadership",
+      "comment": "PERSPECTIVE 3: AD COALITION LEADERSHIP (ROPE) \u2014 Experiences constraint as coordination problem: minority government requires constant negotiation and coalition discipline. Benefits from first-mover legislative agenda and ministerial appointments. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Presidential Stabilization Mechanism",
+      "comment": "PERSPECTIVE 4: PRESIDENTIAL STABILIZATION (SCAFFOLD) \u2014 The Portuguese presidency (Marcelo Rebelo de Sousa or successor) acts as a sunset provider: presidential intervention to dissolve parliament and call early elections is the structural escape valve. The government's stability is explicitly temporary \u2014 the presidency can reset the board if the minority becomes ungovernable. This is scaffolding with active enforcement and a clear sunset clause: the minority arrangement is intended as a 2-4 year interregnum, not a permanent state. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.13."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legislative Procedure Theater",
+      "comment": "PERSPECTIVE 5: LEGISLATIVE PROCEDURE (PITON) \u2014 Parliamentary procedure in minority government becomes substantially performative: extensive debate, committee hearings, and negotiation sessions occur knowing outcomes are predetermined by coalition arithmetic. Much legislative activity is theater signaling that the minority government respects parliamentary process while maintaining executive power. theater_ratio=0.65 reflects this degradation. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational view, parliamentary arithmetic is an immutable constraint: if no coalition commands a majority, minority government is a structural necessity. The bottleneck appears as a natural law of parliamentary mathematics. However, base properties (\u03b5=0.28, suppression=0.52, theater=0.65) contradict mountain gates \u2014 this is a false summit. The constraint is contingent on electoral results and coalition strategies, not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "presidential_intervention_threshold",
+      "question": "What threshold of government dysfunction triggers presidential dissolution and early elections?",
+      "resolution_mechanism": "Historical precedent analysis of Portuguese presidential dissolutions; interview data from presidential advisors on decision criteria; comparison with other parliamentary democracies (Belgium, Netherlands)",
+      "impact": "If threshold is very high (government near-collapse): scaffold functions as extended minority government (shifts toward piton). If threshold is low (routine dysfunction): scaffold becomes rapid turnover (shifts toward rope/coordination problem).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Presidential dissolution threshold for minority government dysfunction"
+    },
+    {
+      "id": "coalition_defection_dynamics",
+      "question": "Do coalition partners defect in response to extraction (agenda exclusion, legislative defeats), or is coalition discipline stable despite minority status?",
+      "resolution_mechanism": "Voting record analysis of coalition partners on contested legislation; timeline of coalition demands and budget negotiations; comparison of defection rates under minority vs majority conditions",
+      "impact": "If defection is frequent: scaffold fails rapidly (shifts to snare/chaos). If defection is rare: minority arrangement is structurally stable (scaffold is genuine, not contingent on luck).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether coalition partners remain disciplined under minority government conditions"
+    },
+    {
+      "id": "opposition_strategic_calculus",
+      "question": "Do opposition parties use minority government dysfunction to advance their own electoral prospects, or do they cooperate with government on essential legislation?",
+      "resolution_mechanism": "Analysis of opposition voting patterns on EU compliance, budget, and essential legislation; opinion polling on opposition confidence in post-election viability; interview data on strategic intent",
+      "impact": "If opposition cooperates: scaffolding is genuine (broader stabilization). If opposition weaponizes dysfunction: scaffold is unstable (extraction mechanism dominates; shifts toward snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opposition parties cooperate or defect under minority government"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Alian\u00e7a Democr\u00e1tica (AD) minority government in Portugal (formed January 2024 following the October 2023 elections) represents a classic parliamentary scaffold: a temporary governance arrangement with a structural exit mechanism (presidential dissolution and new elections). The AD coalition (CDS-PP, AD proper, and Liberal Initiative) controls 79 seats in a 230-seat parliament, requiring external support from either the center-left Socialist Party (PS) or the centrist Democratic Party or other independents to pass legislation. This creates a fundamentally unstable equilibrium where the government's survival depends on opposition abstention or selective support rather than formal coalition membership. The constraint exhibits tension between the government's need to govern (coordination function) and the opposition's incentive to demonstrate government incompetence (extraction via legislative obstruction). The presidency provides the ultimate escape valve: if the minority arrangement becomes unmanageable, the president can dissolve parliament and reset the game board. This makes the minority government a temporary structure with a predetermined sunset condition.",
+    "key_agents": [
+      "Alian\u00e7a Democr\u00e1tica Coalition (AD/CDS-PP/Liberal Initiative): Primary beneficiary (institutional/arbitrage) \u2014 captures ministerial positions, agenda-setting power, and legislative priority; benefits from parliamentary leadership despite minority status",
+      "Leftist Opposition (Socialist Party, Bloco de Esquerda, Livre, Communists): Primary victim (powerless/trapped) \u2014 excluded from government and coalition despite electoral strength; unable to overturn minority without major defections",
+      "Independent Deputies and Regional Parties (Chega, regional independence parties): Secondary actors (moderate/constrained) \u2014 hold leverage through swing votes; can extract policy concessions or face retaliation through legislative defeats",
+      "Portuguese Presidency: Structural stabilizer (organized/constrained) \u2014 holds dissolution power; serves as sunset mechanism that converts indefinite minority government into time-bounded scaffold",
+      "Parliamentary Opposition Parties (PS particularly): Forced coalition members (moderate/constrained) \u2014 may provide selective support to prevent worse outcomes while preserving ability to challenge government",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing electoral arithmetic as immutable law rather than contingent arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Moderate-low. The AD minority government does extract legislative agenda priority and ministerial control from the 79-seat position, but the extraction is constrained by the requirement for opposition support on contested votes. Unlike a snare, the minority government cannot ignore opposition or repress alternative agendas \u2014 it must negotiate. The value reflects that extraction exists (first-mover advantage, agenda control) but is substantially limited by parliamentary arithmetic. Suppression (0.52): Moderate. The minority status itself acts as suppression: opposition parties have limited capacity to force government agenda changes without toppling the government (risking new elections where outcomes are uncertain). But suppression is not extreme \u2014 opposition can obstruct legislation, force compromises, and use parliamentary procedure to slow government. Theater ratio (0.65): Moderate-high. Parliamentary debate and procedure become partly performative under minority government: much legislative discussion occurs knowing outcomes are predetermined by coalition arithmetic or prior negotiation. However, genuine negotiation and floor dynamics remain possible (unlike pure Piton with theater >0.85). The value reflects that theater has risen from baseline as the minority arithmetic has become visible.",
+    "perspectival_gap": "The perspectival gap in this constraint is stark: the AD leadership sees coordination (Rope) \u2014 they are solving the legitimate problem of governing without a majority. The leftist opposition sees snare-like entrapment (Snare) \u2014 they are excluded despite electoral strength with no structural path to overturn the arrangement. The presidency sees temporary stabilization with a sunset (Scaffold) \u2014 the minority is explicitly intended as a 2-4 year interregnum before new elections reset the board. Parliamentary procedure sees its own degradation (Piton) \u2014 extensive debate happens knowing outcomes are determined by coalition math. Independent deputies see mixed extraction and leverage (Tangled Rope) \u2014 they can extract policy concessions but face retaliation if they defect. The civilizational observer risks seeing parliamentary arithmetic as immutable (Mountain) \u2014 but the structural data reveals this as contingent on electoral results, not immutable.",
+    "directionality_logic": "AD Coalition Leadership: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; negative effective extraction. Leftist Opposition: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. High extraction; no structural exit. Independent Deputies: Victim/Beneficiary hybrid + constrained \u2192 d\u22480.68, f(d)\u22481.05. Can extract concessions but also constrained by coalition dynamics. Presidential Mechanism: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Low effective extraction; coalition has structural exit (dissolution). Analytical Observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification rejected by empirical data.",
+    "mandatrophy_analysis": "SCAFFOLD DIAGNOSIS: The mandatrophy is resolved through the presidential sunset mechanism. This constraint avoids conflation of temporary minority government (which requires coordination and has an exit valve) with permanent extraction (which would require sustained suppression and lack of alternatives). The scaffold is genuine because: (1) beneficiaries (AD coalition) experience coordination pressure, not unconstrained extraction; (2) has_sunset_clause=true and the presidential dissolution power is a real structural escape valve, not merely rhetorical; (3) theater_ratio=0.65 indicates degradation but not complete inertia; (4) extractiveness=0.28 is moderate, not the 0.66+ that would indicate snare. The constraint would degrade into snare if the presidential dissolution power were eliminated or if the opposition's structural trap became permanent. The constraint would upgrade to rope if minority status were irrelevant to stability (i.e., if the AD coalition had sufficient voluntary support). The current classification (scaffold) reflects the genuine time-bounded nature and the real exit mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "portuguese_electoral_system_proportionality",
+      "eu_fiscal_compliance_framework_pt"
+    ],
+    "dual_formulation_note": "The AD minority government stability is downstream of the Portuguese electoral system (which produced no clear majority in 2023) and the institutional structure of the presidency (which retained dissolution power). These upstream constraints have their own \u03b5 values; the minority government scaffold has \u03b5=0.28 reflecting the specific coalition dynamics and parliamentary arithmetic."
+  },
+  "directionality_overrides": []
+}

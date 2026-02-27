@@ -2,70 +2,132 @@
   "header": {
     "constraint_id": "basel_problem_convergence",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "basel"
   },
   "base_properties": {
-    "extractiveness": 0.0,
-    "suppression": 0.0,
-    "theater_ratio": 0.0,
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
     "claimed_type": "mountain",
     "human_readable": "The Basel Problem (Convergence of Sum of Reciprocal Squares)",
-    "topic_domain": "mathematical",
+    "topic_domain": "mathematical_analysis",
+    "requires_active_enforcement": false,
     "emerges_naturally": true,
-    "accessibility_collapse": 0.98,
-    "resistance": 0.02
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05,
+    "mandatrophy_resolved": false
   },
   "perspectives": [
-    {
-      "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The 17th-Century Mathematician",
-      "comment": "PERSPECTIVE 1: THE UNSOLVED PROBLEM — For mathematicians before Euler, the problem was a significant barrier. Their inability to solve it was a constraint on their knowledge. However, the underlying mathematical fact was always a Mountain; the constraint was one of epistemic access, not a property of the series itself."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Modern Student",
-      "comment": "PERSPECTIVE 2: THE TEXTBOOK RESULT — For a modern student of mathematics, the Basel problem is a settled fact and a classic example in analysis. The constraint is the requirement to learn and understand the proof. The result itself is an unchangeable feature of the mathematical landscape."
-    },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Mathematical Fact",
-      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER — From a timeless, structural perspective, the convergence of the series to pi^2/6 is an immutable property of the number system. It has zero degrees of freedom and is independent of any observer, culture, or historical period. This is the canonical view of a mathematical truth as a Mountain."
+      "label": "The Mathematical Analyst (Logical Form)",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL ANALYST \u2014 The convergence of the series \u03a3(1/n\u00b2) to \u03c0\u00b2/6 is a logical necessity following from the axioms of real analysis and the definition of infinite summation. No external constraint or institutional arrangement can change this outcome. The proof is independent of observer, time, or social context. Maximum accessibility collapse (cannot change the result) and minimum resistance (no force can resist a logical necessity)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Pre-Euler Mathematician",
+      "comment": "PERSPECTIVE 2: PRE-EULER MATHEMATICIAN \u2014 Before Euler's 1734 solution, the problem posed an epistemic constraint: the series' convergence value was fixed by mathematical reality, not by belief or effort. The mathematician could not exit or evade this constraint\u2014only discover it. The constraint's existence is independent of whether humans knew it. Logical necessity creates a mountain regardless of epistemic access."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Institutional Mathematical Community",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL MATHEMATICS \u2014 Even institutions with resources, reputation, and alternative methods cannot alter the sum of the series. No amount of institutional power, funding, or coordination can change \u03c0\u00b2/6 to another value. The Basel Problem constraint is fully indifferent to institutional structure, incentives, or enforcement mechanisms. Institutions benefit from discovering the truth but cannot create it or evade it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "axiomatic_foundation_dependency",
+      "question": "Does the convergence value \u03c0\u00b2/6 depend on the specific axioms chosen for real analysis (e.g., ZFC vs constructive mathematics)?",
+      "resolution_mechanism": "Formal analysis of the sum's value under alternative axiom systems; comparison of convergence proofs across constructivist, intuitionist, and classical frameworks",
+      "impact": "If axiom-dependent: the constraint may be Snare (forcing agreement on axioms) rather than Mountain (independent of context). If axiom-invariant: confirms Mountain classification across all mathematical foundations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether \u03c0\u00b2/6 is axiom-dependent or axiom-invariant"
+    },
+    {
+      "id": "numerical_approximation_precision",
+      "question": "Can the Basel sum be computed to arbitrary precision, or are there limits to verification inherent in the mathematics?",
+      "resolution_mechanism": "High-precision numerical computation of partial sums; analysis of computational complexity and convergence rate; comparison with other series' approximation limits",
+      "impact": "If universally approximable: verifiability confirms Mountain (logically accessible). If computational barriers exist: may indicate constraints embedded in the mathematics itself.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Limits to numerical verification of \u03c0\u00b2/6 convergence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.02
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.08
     }
   ],
   "interval": {
     "start": 1644,
-    "end": 1734
+    "end": 1950
   },
   "commentary": {
-    "narrative_context": "The Basel Problem, posed by Pietro Mengoli in 1644, asks for the precise sum of the infinite series of the reciprocals of the squares of the natural numbers. For 90 years, it remained a major unsolved problem in mathematics until Leonhard Euler found the solution to be exactly π²/6 in 1734. This constraint represents the fundamental, unchangeable mathematical truth of this sum. It is not a human convention or a social rule, but a discovered property of the mathematical universe.",
+    "narrative_context": "The Basel Problem is a mathematical constraint of the first order: the infinite series \u03a3(n=1 to \u221e) 1/n\u00b2 converges to exactly \u03c0\u00b2/6 regardless of when humans discover it, what methods they use, or what institutional frameworks they employ to study it. Posed by Pietro Mengoli in 1644 and solved by Leonhard Euler in 1734, the constraint's existence predates both its formulation and its resolution. No observer can change the sum's value, no alternative mathematical framework produces a different result within consistent logic, and no external force can suppress the convergence. This is a canonical natural law: the constraint emerges from the intrinsic structure of the real number system and infinite summation, not from human choice, institutional arrangement, or power asymmetry.",
     "key_agents": [
-      "Pre-Eulerian Mathematicians (e.g., the Bernoulli family): Constrained by the difficulty of finding the closed-form sum (moderate/constrained).",
-      "Leonhard Euler: The discoverer who revealed the structure of the constraint.",
-      "Modern Mathematicians and Students: Observers for whom the result is a foundational piece of established knowledge (moderate/mobile).",
-      "Analytical Observer: The timeless perspective viewing the inherent mathematical structure (analytical/analytical)."
+      "Mathematical Reality: The constraint's source \u2014 the structure of infinite series and real numbers (no agency, no power)",
+      "Pre-Euler Mathematicians: Powerless agents facing an epistemic mystery (trapped by ignorance, not by institutional suppression)",
+      "Euler and Successors: Discoverers and verifiers (institutional/arbitrage) \u2014 benefit from solving the problem but cannot change its answer",
+      "Mathematical Community: Institutional actors (institutional/arbitrage) \u2014 maintain proof standards and verification methods but cannot alter the constraint",
+      "Analytical Observer: Civilizational perspective \u2014 sees the constraint as logically necessary and axiom-independent"
     ],
-    "logic_rationale": "This constraint is classified as a Mountain because it represents a fundamental mathematical truth. Extractiveness (ε=0.0) and Suppression (0.0) are zero because a mathematical fact does not extract value or coerce behavior; it simply is. The NL Profile metrics confirm this: it 'emerges_naturally' from the axioms of arithmetic, has near-total 'accessibility_collapse' (once a proof is understood, the conclusion is inescapable), and near-zero 'resistance' (one cannot logically resist a valid proof).",
-    "perspectival_gap": "There is no perspectival gap. This is a uniform-type constraint, classifying as a Mountain from all possible perspectives. The experience of the constraint may change (e.g., from an unsolved mystery to a textbook example), but its underlying structure and classification remain invariant. This uniformity is a key signature of a true Mountain, representing a fact of natural law rather than a contingent social arrangement.",
-    "directionality_logic": "Directionality is not applicable to this constraint. As a Mountain with zero extraction, there are no beneficiaries or victims. The mathematical truth is symmetric and indifferent to all observers. The d value for all agents is effectively undefined or irrelevant, and the effective extraction χ is always zero.",
-    "mandatrophy_analysis": "This constraint serves as a baseline case, demonstrating a pure Mountain with no potential for mandatrophy. Its zero-valued metrics for extraction, suppression, and theater make it impossible to misclassify as a Snare, Tangled Rope, or Piton. It highlights the system's ability to distinguish between unchangeable structural realities (Mountains) and contingent, human-created systems of coordination and extraction."
+    "logic_rationale": "Extractiveness (0.08): Minimal. The Basel constraint extracts nothing from any agent \u2014 it neither provides benefit nor exacts cost. Mathematical truth does not redistribute resources or create winners and losers. The 0.08 value reflects only that understanding the problem requires effort (a minimal resource cost to learners), not that the mathematical structure itself extracts. Suppression (0.02): Negligible. There is no force or mechanism suppressing access to the series or its sum. The constraint is transparently stated and fully communicable. The 0.02 value reflects only the cognitive barrier to understanding infinite series (a property of human mathematics education, not the constraint itself). Theater ratio (0.05): Minimal. The proof of convergence to \u03c0\u00b2/6 is functional, not performative. Euler's method and subsequent rigorous proofs directly demonstrate the result without ceremony or ritualistic elements. The 0.05 reflects only that mathematics education includes pedagogical scaffolding, not that the constraint itself is theatrical.",
+    "perspectival_gap": "There is no perspectival gap. All observers \u2014 pre-Euler mathematicians, institutional mathematicians, powerless learners, institutional communities, analytical observers \u2014 classify the Basel constraint as Mountain. The convergence value is invariant across all observation contexts. The pre-Euler mathematician could not change the sum by believing differently or working harder. The institutional community cannot alter it through funding or coordination. No alternative framework within consistent mathematics produces a different answer. This uniformity of classification across all power levels, time horizons, exit options, and spatial scopes is the defining signature of a natural law constraint.",
+    "directionality_logic": "Directionality (d) is undefined for mountains. The constraint does not create a flow of extraction from any agent to any other. No beneficiary exists because no one benefits relative to others \u2014 the mathematical truth is equally accessible and immutable for all agents. No victim exists because no one bears disproportionate cost \u2014 the cognitive effort required to understand the series is the same for all participants in mathematical culture. The Basel Problem is an example of zero-directionality constraint: its structure is independent of agent relationships, power asymmetries, or institutional arrangements.",
+    "mandatrophy_analysis": "The Basel Problem resolves the mandatrophy by being a pure natural law with zero degrees of freedom. There is no risk of misclassifying coordination as extraction because no coordination or extraction occurs \u2014 the constraint is a mathematical fact independent of social structure. There is no risk of hidden Snare properties because there are no victims to suppress or alternatives to eliminate. The classification is mandatrophy-safe by virtue of being an uncomplicated Mountain from all perspectives."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "riemann_zeta_function"
+      "riemann_zeta_function_values",
+      "fourier_series_convergence",
+      "euler_product_formula"
     ],
-    "dual_formulation_note": "The solution to the Basel problem is the specific value of the Riemann zeta function at s=2, i.e., ζ(2). The Basel problem can be seen as a specific instance or entry point into the broader structural constraint represented by the Riemann zeta function."
-  }
+    "dual_formulation_note": "The Basel Problem is one instance in the family of zeta function evaluations. The constraint's mathematical structure (convergence of reciprocal-power series) appears in Riemann zeta evaluations at s=2 and generalizes to all even positive integers. These constraints are linked as network members sharing the same underlying mathematical mechanism: the convergence of Dirichlet series and their relationship to analytic continuation. Each member has its own extractiveness value reflecting its epistemic status, but all are Mountains within consistent mathematics."
+  },
+  "directionality_overrides": []
 }

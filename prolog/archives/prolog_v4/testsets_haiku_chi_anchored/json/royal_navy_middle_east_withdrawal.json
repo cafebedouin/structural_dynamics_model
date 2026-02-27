@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "royal_navy_middle_east_withdrawal",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rnmew"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "End of Permanent Royal Navy Presence in the Gulf",
+    "topic_domain": "political/security/maritime",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "uk_central_government",
+      "regional_competitor_states"
+    ],
+    "victims": [
+      "gulf_merchant_shipping",
+      "gulf_allied_states",
+      "uk_naval_personnel",
+      "maritime_commons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Gulf Merchant Shipping",
+      "comment": "PERSPECTIVE 1: GULF MERCHANT SHIPPING (SNARE) \u2014 Dependent on freedom of navigation in critical chokepoint (Strait of Hormuz); cannot exit or relocate shipping routes. Faces escalating protection costs, insurance premiums, and piracy risk without deterrent presence. d\u22480.92, f(d)\u22481.38, \u03c3=1.1 \u2192 \u03c7\u22480.88."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Gulf Allied States (UAE, Bahrain, Saudi Arabia, Oman)",
+      "comment": "PERSPECTIVE 2: GULF ALLIED STATES (SNARE) \u2014 Trapped within regional security architecture dependent on Western naval presence; cannot unilaterally abandon alliance without exposure to Iranian coercion or Chinese/Russian encroachment. Suffer extraction of security dependency and reduced diplomatic autonomy. d\u22480.88, f(d)\u22481.32, \u03c3=1.1 \u2192 \u03c7\u22480.83."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Royal Navy Institutional Structure",
+      "comment": "PERSPECTIVE 3: ROYAL NAVY INSTITUTIONAL STRUCTURE (PITON) \u2014 Permanent Gulf presence was a structural cornerstone of naval identity and doctrine for 46 years; withdrawal is forced by budget constraints, not by functional obsolescence. The institution maintains Cold War-era force posture assumptions while losing the resources to sustain them. Theater ratio = 0.64 reflects that much Gulf deployment rhetoric (freedom of navigation patrols, port visits, exercises) was symbolic assertion of presence rather than core operational necessity. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "UK Central Government (Strategic Actor)",
+      "comment": "PERSPECTIVE 4: UK CENTRAL GOVERNMENT / STRATEGIC ACTOR (TANGLED ROPE) \u2014 Withdrawal is forced by domestic budget pressure but extracts strategic flexibility: UK reorients to Pacific theatre, avoids entanglement in localized Gulf conflicts, reduces sunk costs. Government experiences this as rational reallocation, not extraction. However, the constraint extracts from allies who lose security guarantees while UK retains diplomatic influence. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.24."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Regional Competitor States (Iran, China, Russia)",
+      "comment": "PERSPECTIVE 5: REGIONAL COMPETITOR STATES / INSTITUTIONAL (TANGLED ROPE) \u2014 Withdrawal benefits Iran and Chinese/Russian strategic positioning; these actors gain coordinated benefit (vacuum-filling) but also face extraction through expanded security commitments and escalation risk. d\u22480.42, f(d)\u22480.42, \u03c3=1.1 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Royal Navy Personnel (Junior Officers, Sailors)",
+      "comment": "PERSPECTIVE 6: ROYAL NAVY PERSONNEL (SNARE) \u2014 Junior ranks deployed to Gulf face operational strain without clear strategic justification as presence becomes token. Extraction manifests as risk without proportionate mission clarity; personnel trapped in institutional deployment schedule regardless of strategic coherence. d\u22480.85, f(d)\u22481.25, \u03c3=1.2 \u2192 \u03c7\u22480.82."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Structural Constraint View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN VIEW) \u2014 From civilizational scope, the withdrawal appears inevitable: empires cannot maintain permanent forward military presence after relative economic decline. This is read as a natural law of geopolitics (structural realism). However, base metrics (\u03b5=0.58, suppression=0.68, theater=0.64) contradict mountain classification. The 'natural law' framing naturalizes what is a contingent policy choice (UK domestic austerity, strategic reorientation) rather than an immutable constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gulf_deterrence_necessity",
+      "question": "Is permanent Royal Navy presence in the Gulf functionally necessary for deterring Iranian coercion, or is its primary role symbolic assertion of British status?",
+      "resolution_mechanism": "Comparative security analysis: incidents of Iranian coercion before/after withdrawal; insurance cost trends for Gulf shipping; frequency and severity of maritime incidents in Strait of Hormuz; behavioral response patterns of Iranian Islamic Revolutionary Guard Corps",
+      "impact": "If functionally necessary: withdrawal is extraction from Gulf allies (snare classification confirmed). If primarily symbolic: withdrawal is rationalization of budget constraints, and the 'snare' framing applies mainly to allies' perception, not to objective vulnerability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether permanent presence provides material deterrence or symbolic assertion"
+    },
+    {
+      "id": "allied_state_exit_capacity",
+      "question": "Can Gulf allied states (UAE, Saudi Arabia, Bahrain) develop indigenous naval capacity or form non-Western security partnerships to reduce dependency extraction?",
+      "resolution_mechanism": "Tracking of Gulf naval modernization programs; analysis of China-Gulf military relationships; assessment of Gulf Cooperation Council institutional capacity; monitoring of Saudi/UAE partnerships with France, Italy, India",
+      "impact": "If exit capacity emerges: allied states transition from trapped to constrained or mobile exit option; snare classification weakens to tangled_rope. If capacity remains asymmetric: snare classification persists; Gulf states remain structurally dependent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Gulf allies can develop autonomous security capacity"
+    },
+    {
+      "id": "uk_strategic_reorientation_credibility",
+      "question": "Is UK's stated pivot to Pacific theatre (AUKUS, 'Indo-Pacific Tilt') a genuine strategic reallocation or rhetorical repositioning to rationalize budget cuts?",
+      "resolution_mechanism": "Analysis of UK defense spending allocation trends; tracking of carrier strike group deployment patterns; assessment of UK institutional capacity for Pacific operations; comparison of stated strategy against resource commitments",
+      "impact": "If genuine reorientation: UK is extracting strategic flexibility (tangled_rope beneficiary perspective valid). If rhetorical: UK is abandoning commitments without building alternatives, increasing snare severity for allies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether UK pivot to Pacific represents genuine or rhetorical reorientation"
+    },
+    {
+      "id": "maritime_commons_governance_vacuum",
+      "question": "Will the withdrawal create a functional governance vacuum in maritime security, or will alternative mechanisms (international naval coalitions, flag-state enforcement, commercial security) maintain order without permanent presence?",
+      "resolution_mechanism": "Monitoring of maritime incident rates post-withdrawal; tracking of coalition naval activity in Gulf; assessment of private maritime security market expansion; evaluation of flag-state capacity enforcement",
+      "impact": "If vacuum persists: extraction from maritime commons increases (snare deepens). If alternatives emerge: extraction shifts from UK withdrawal to alternative mechanisms, but snare classification may weaken.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether governance vacuum emerges or alternatives sustain maritime order"
+    },
+    {
+      "id": "institutional_inertia_vs_strategic_choice",
+      "question": "Is the Royal Navy's 46-year Gulf presence a vestigial imperial remnant (piton), a genuine strategic necessity (snare for allies), or a rational forward-deployed deterrent (rope)?",
+      "resolution_mechanism": "Institutional history analysis; archival review of naval planning documents; interviews with strategic planners; tracking of cost-benefit analyses conducted by UK Ministry of Defense; comparison of stated justifications against actual deployment patterns",
+      "impact": "If vestigial (piton): withdrawal confirms long-standing institutional decay; extraction from allies reflects inertia rather than strategy. If strategic necessity: withdrawal harms allies and validates snare classification. If rational deterrent: alternatives must exist to prevent snare deepening.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether presence is vestigial institution or strategic necessity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 1980,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1980,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 1980,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "The withdrawal of the Royal Navy's last permanent ship from the Middle East (2024) ends 46 years of continuous British naval presence in the Gulf \u2014 a cornerstone of post-imperial strategy. The constraint operates as a snare for Gulf merchant shipping and allied states (UAE, Saudi Arabia, Bahrain, Oman), a piton for Royal Navy institutional structure, and a tangled rope for UK central government and regional competitors. The withdrawal is driven by UK budget constraints and strategic reorientation toward the Pacific ('Indo-Pacific Tilt', AUKUS), but extracts security burden from Gulf allies who lose the deterrent presence without gaining compensation. Gulf allied states cannot exit the regional security architecture; they are trapped within structural dependency on Western guarantees while simultaneously losing concrete force presence. The constraint exhibits rising theater ratio (0.35\u21920.64 from 1980-2024), indicating that the operational justification for presence eroded faster than institutional commitment to it. The Royal Navy's institutional identity was constructed around the Gulf presence; withdrawal forces confrontation with its own decline and reorientation.",
+    "key_agents": [
+      "Gulf Merchant Shipping (powerless/trapped): Cannot relocate shipping; dependent on security of Strait of Hormuz; bears rising insurance and protection costs",
+      "Gulf Allied States: UAE, Bahrain, Saudi Arabia, Oman (moderate-to-powerful/trapped): Structurally dependent on Western security guarantees; unable to exit or unilaterally rebalance relationships",
+      "UK Central Government (powerful/mobile): Selectively reallocates strategic priorities; extracts flexibility by reorienting to Pacific while abandoning Gulf commitment",
+      "Royal Navy Institutional Structure (institutional/constrained): Maintains Cold War doctrine while losing budget to sustain it; theatre-heavy presence persists through inertia",
+      "Regional Competitors (institutional/arbitrage): Iran, China, Russia benefit from UK withdrawal and acquire strategic space",
+      "Royal Navy Personnel (powerless/trapped): Deployed personnel face operational strain without strategic clarity; extraction manifests as risk without proportionate mission",
+      "Maritime Commons (abstract victim): Freedom of navigation becomes contingent on alternative security arrangements; extraction occurs through governance vacuum"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The withdrawal extracts from Gulf allies through loss of security guarantee without compensation. UK extracts strategic flexibility (reorientation to Pacific) while externalizing security costs onto allies. The extraction is not maximal (not 0.70+) because alternative mechanisms (coalition patrols, Gulf state capacity building, Chinese/Russian presence) partially mitigate the vacuum. Suppression (0.68): High. Gulf allies are suppressed from articulating alternative arrangements \u2014 strategic dependency on Western relationship constrains their diplomatic freedom. UK suppression of internal budget debates about competing commitments is also high. Maritime commerce faces suppression through reduced visibility of threat environment post-withdrawal. Theater ratio (0.64): Moderately high and rising. The Gulf presence increasingly became symbolic assertion of British status rather than core operational necessity. As UK strategic focus shifted to Pacific, Gulf operations became theater \u2014 port visits, regional exercises, diplomatic presence \u2014 performed to maintain institutional identity. The theater ratio rising from 0.35 (1980, genuine Cold War deterrent) to 0.64 (2024, token presence) reflects Goodhart drift: institutional commitment to 'presence' replaced functional justification for 'deterrence.' Claimed type (Snare): The structural relationship is extractive. UK is extracting from Gulf allies by withdrawing security commitment without building alternatives. Gulf allies are trapped within regional architecture that assumes Western presence. Suppression prevents them from openly demanding compensation or renegotiating relationships.",
+    "perspectival_gap": "The constraint demonstrates three distinct classification patterns across power levels. Powerless agents (merchant shipping, naval personnel, abstract maritime commons) perceive snare: they are trapped and cannot exit. Institutional actors (UK government, Royal Navy, regional competitors) perceive mixed snare-tangled rope or piton: for UK, the extraction is mixed (they gain strategic flexibility while allies lose security). For regional competitors, the constraint is mixed (they gain strategic advantage but face escalation risk). The analytical observer risks perceiving a mountain (inevitable decline of imperial power, natural law of geopolitics) but the base metrics reveal this as a false summit: the withdrawal is a policy choice driven by UK budget austerity and strategic reorientation, not an immutable law. The gap between the snare experience (powerless agents trapped) and the rope-or-mountain experience (powerful agents, analytical observer) reveals how institutional power determines whether a constraint feels extractive or inevitable.",
+    "directionality_logic": "Gulf merchant shipping: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Cannot exit; bears full extraction cost. Gulf allied states: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.32. Structurally dependent; trapped within regional security dependency. UK central government: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.35. Extracts strategic flexibility; can reorient to Pacific. Regional competitors: Beneficiary (strategically) + arbitrage \u2192 d\u22480.42, f(d)\u22480.42. Gain strategic space but face escalation risk. Royal Navy personnel: Victim + trapped \u2192 d\u22480.85, f(d)\u22481.25. Deployed without clear mission; cannot exit deployment schedule. Royal Navy institution: Victim + constrained \u2192 d\u22480.55, f(d)\u22480.75. Institutional identity threatened; cannot unilaterally exit piton state. Maritime commons: Abstract victim + trapped \u2192 d\u22480.90, f(d)\u22481.36. Governance vacuum; no agent advocates for commons.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint avoids mandatrophy through perspectival differentiation. UK central government perceives the withdrawal as rational reallocation (tangled rope: benefits from flexibility while allies bear costs). Gulf allies perceive extraction (snare: trapped, no compensation). Royal Navy institution perceives institutional decline (piton: theater-heavy presence maintained through inertia, not function). The same withdrawal event classifies differently depending on the observer's structural relationship. Mandatrophy would arise if a single 'neutral' perspective tried to classify the withdrawal as uniformly rational (rope/scaffold) or uniformly coercive (snare/mountain). The framework avoids this by requiring perspectival specificity: UK sees rope/tangled rope; Gulf allies see snare; Royal Navy sees piton; analytical observer must acknowledge the perspectival gap rather than claiming a unified classification. The high extractiveness (0.58) and suppression (0.68) confirm snare classification from the perspective of powerless agents (Gulf allies, merchant shipping); the presence of alternative mechanisms (coalition patrols, regional capacity building) prevents pure snare classification from emerging as universal. The mediation is perspectival, not metric."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "strait_of_hormuz_chokepoint",
+      "gulf_cooperation_council_security",
+      "chinese_belt_and_road_maritime_presence",
+      "uk_aukus_commitment"
+    ],
+    "dual_formulation_note": "The withdrawal is a structural shift affecting multiple downstream security constraints. The immediate constraint (loss of Royal Navy presence) operates at \u03b5=0.58; upstream constraints (UK budget austerity, strategic reorientation policy) have different \u03b5 values and should be decomposed into separate stories if analyzed from first principles."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

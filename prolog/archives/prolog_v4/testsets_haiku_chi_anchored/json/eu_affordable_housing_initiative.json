@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "eu_affordable_housing_initiative",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "euah"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Affordable Housing Initiative (2025)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "member_state_governments",
+      "construction_sector"
+    ],
+    "victims": [
+      "low_income_renters",
+      "housing_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Renter",
+      "comment": "PERSPECTIVE 1: LOW-INCOME RENTER (SNARE) \u2014 Trapped in regional housing markets with no exit. Nominally targeted by the initiative but bears the extraction cost: rents stagnate or rise as construction redirects toward incentivized 'affordable' units while true subsidy is captured by developers. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "National Housing Authority",
+      "comment": "PERSPECTIVE 2: NATIONAL HOUSING AUTHORITY (TANGLED ROPE) \u2014 Constrained by EU requirements and national budget limits, but also coordinating legitimate housing provision. Experiences the initiative as mixed: funding enables new construction (coordination benefit) but enforcement mechanisms extract administrative capacity and limits autonomy in site selection. d\u22480.58, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.36."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Real Estate Developer",
+      "comment": "PERSPECTIVE 3: REAL ESTATE DEVELOPER (ROPE) \u2014 Benefits from EU subsidies and tax incentives for 'affordable' development. Experiences the constraint as coordination: EU standards simplify permitting and reduce regulatory variance across member states, enabling cross-border capital deployment. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary through arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Member State Government",
+      "comment": "PERSPECTIVE 4: MEMBER STATE GOVERNMENT (TANGLED ROPE) \u2014 Constrained by EU fiscal rules and political pressure to show housing progress. Benefits from EU co-financing and harmonized standards (coordination function) but also faces extraction via compliance costs and binding commitments that limit domestic policy autonomy. d\u22480.48, f(d)\u22480.63, \u03c3=1.1 \u2192 \u03c7\u22480.33."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "EU Commission Bureaucracy",
+      "comment": "PERSPECTIVE 5: EU COMMISSION BUREAUCRACY (PITON) \u2014 Initiative persists through institutional momentum and reporting requirements despite modest empirical impact on actual affordability. Theater ratio 0.58 reflects: targets are met via statistical redefinition of 'affordable' rather than substantive housing access improvement. Administrative apparatus maintains itself through grant cycles. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.1 \u2192 \u03c7\u2248-0.04. Nominal beneficiary but actual function degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 May view housing access constraints as immutable economic laws (supply/demand inelasticity, urban land scarcity). But base properties (\u03b5=0.48, suppression=0.52, theater=0.58) contradict mountain gates. The 'natural scarcity' framing naturalizes policy choices (zoning, subsidy allocation, regulatory capture) as physical limits. Engine detects false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "affordable_definition_drift",
+      "question": "What constitutes 'affordable' in the EU definition, and how does that definition shift over time to meet political targets rather than actual housing access?",
+      "resolution_mechanism": "Historical comparison of affordability ratios (rent-to-income) for units labeled 'affordable' vs market units; analysis of how member states adjust definitions to meet targets",
+      "impact": "If definition inflates: initiative is primarily performative (theater_ratio\u21920.75, \u03b5\u21920.55). If definitions remain stable and binding: initiative has real coordination function (\u03b5\u21920.25, theater\u21920.35).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Definition drift in affordability criteria to meet political targets"
+    },
+    {
+      "id": "subsidy_capture_mechanism",
+      "question": "What fraction of EU housing subsidies flow to actual end-user affordability (rent/mortgage reduction) vs to developer profit, land speculation, or administrative overhead?",
+      "resolution_mechanism": "Fiscal analysis of disbursed funds; tracking of unit cost per affordable housing produced; comparative cost analysis across member states",
+      "impact": "If <30% reaches end-users: constraint is primarily extractive snare (\u03b5\u21920.65). If >60% reaches end-users: constraint is primarily coordination rope (\u03b5\u21920.18).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Fraction of subsidies reaching actual affordability vs capture"
+    },
+    {
+      "id": "gentrification_acceleration",
+      "question": "Does EU-funded 'affordable' housing development accelerate neighborhood gentrification in adjacent non-targeted areas, displacing the very renters the initiative targets?",
+      "resolution_mechanism": "Longitudinal rent tracking in neighborhoods with EU housing projects; analysis of displacement rates 2-5 years post-development; comparison to control neighborhoods without EU projects",
+      "impact": "If yes: initiative is net extractive for low-income renters (\u03b5\u21920.60, snare confirmed). If no: initiative is net positive coordination (\u03b5\u21920.20, rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether affordable housing triggers gentrification and secondary displacement"
+    },
+    {
+      "id": "member_state_enforcement_variance",
+      "question": "How much do member states vary in actual enforcement of EU affordability requirements, and does variance correlate with political power to negotiate exemptions?",
+      "resolution_mechanism": "Comparative analysis of enforcement rates; correlation between enforcement variance and member state bargaining power (GDP, EU voting weight); study of exemption requests and approval rates",
+      "impact": "If high variance: initiative is primarily a Tangled Rope with strong extraction from smaller states (\u03b5 stable at 0.48, but \u03c7 varies by national power). If low variance: initiative is more uniform rope (\u03b5\u21920.35).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Variance in EU enforcement across member states"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The EU Affordable Housing Initiative (2025) represents an attempt to coordinate housing policy across 27 member states with vastly different housing markets, regulatory regimes, and fiscal capacity. Nominally, the initiative provides EU co-financing and harmonized standards to promote affordable housing production. Structurally, it creates a mixed coordination-extraction hybrid: member states and developers benefit from EU funding and streamlined permitting (coordination), but the funding comes with binding commitments and bureaucratic compliance that extract member state autonomy (extraction). Low-income renters, the nominal beneficiaries, often see rents stagnate or rise as construction redirects toward incentivized units while true subsidy is captured through developer profit, land appreciation, and regulatory capture. The initiative exhibits increasing theater over its first 6 years: targets are nominally met by redefining 'affordable' to include units at 70-80% of median rent, while genuine subsidy to the poorest households stagnates. Member states face pressure to demonstrate housing progress (political theater) while budgets remain constrained, leading to statistical redefinition rather than substantive access improvement.",
+    "key_agents": [
+      "Low-Income Renters: Primary victims (powerless/trapped) \u2014 nominally targeted but often excluded as costs rise and units are captured by higher-income groups",
+      "Real Estate Developers: Primary beneficiaries (institutional/arbitrage) \u2014 capture subsidies and enjoy streamlined EU permitting",
+      "Member State Governments: Mixed (institutional/constrained) \u2014 benefit from EU co-financing but face enforcement costs and autonomy constraints",
+      "National Housing Authorities: Secondary coordinator (organized/constrained) \u2014 coordinate legitimate housing provision but constrained by EU mandates and budgets",
+      "EU Commission: Institutional maintainer (institutional/arbitrage) \u2014 initiative persists through reporting cycles and grant allocation despite modest empirical impact",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing housing scarcity as immutable when policy choices drive outcomes"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The initiative extracts from low-income renters through opportunity cost: EU-subsidized units reduce market pressure for true affordability, while developers and member states capture the coordination gains. The extraction mechanism is subtle \u2014 not direct coercion, but incentive realignment that redirects resources away from those most in need. Suppression (0.52): Moderate. Barriers include: regulatory complexity that favors large developers, fiscal constraints that limit units produced, political pressure to meet targets quickly (driving quality/location tradeoffs), and lack of tenant power to demand affordability. But some mobility exists \u2014 EU citizens can (in theory) relocate to member states with better housing outcomes. Theater ratio (0.58): Moderate-high and rising. Early (t=0) theater at 0.38 reflects genuinely coordinated activity (EU-member state negotiation, permitting streamlining). By t=6, theater rises to 0.58 as statistical redefinition of 'affordable' becomes the primary mechanism for meeting targets \u2014 administrative apparatus persists (reporting, grant cycles) while actual affordability improvement stagnates.",
+    "perspectival_gap": "The core perspectival gap is between the developer/member state view (Rope with coordination benefits) and the low-income renter view (Snare with pure extraction). Developers see the initiative as coordination: EU standards reduce permitting variance, enabling capital efficiency. Member states see mixed coordination-extraction (Tangled Rope): funding enables housing production (coordination) but compliance costs and autonomy loss (extraction) create friction. Low-income renters see snare: the initiative's implementation often excludes them as developers build toward the 'affordable' target (70-80% median rent, not 30% for poorest households) or rely on gentrification-adjacent development that displaces existing residents. The EU Commission sees a piton perspective: the bureaucratic apparatus (reporting, grant cycles, coordination committees) persists because it solves a coordination problem between member states, but the functional impact on actual affordability is degraded \u2014 theater now dominates substantive output. The analytical observer risks seeing a mountain (housing scarcity as immutable), but the structural data reveals this as a false summit: policy choices (zoning, subsidy allocation, permit timelines, affordability definitions) drive outcomes, not inherent scarcity.",
+    "directionality_logic": "Low-income renters: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximal extraction; no exit option. Real estate developer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; can leverage subsidies across markets. National housing authority: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.75. Moderate extraction; constrained by EU mandates but can adapt implementation. Member state government: Both + constrained \u2192 d\u22480.48, f(d)\u22480.63. Mixed; coordination benefit from funding but extraction through autonomy loss. EU Commission: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Piton classification from theater gate, not high extraction. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is false summit; engine detects naturalization of policy-contingent constraints.",
+    "mandatrophy_analysis": "RESOLVED THROUGH PERSPECTIVAL DECOMPOSITION: The mandatrophy (is this coordination or extraction?) is resolved by showing that the initiative contains genuine coordination (EU funding reducing permitting variance, standards harmonization enabling developer capital efficiency) AND genuine extraction (low-income renters excluded, member state autonomy constrained, subsidies captured). The classification is not ambiguous \u2014 it is legitimately Tangled Rope: both coordination function AND asymmetric extraction present simultaneously. The perspectival gap confirms this: developers see primarily coordination (Rope), low-income renters see primarily extraction (Snare), member states see both (Tangled Rope). The rising theater ratio (0.38\u21920.58) indicates degradation over time: the initiative starts as a genuine coordination mechanism but drifts toward performance (meeting targets via definition inflation) rather than function (actual affordability). This drift is captured by omega variable 'affordable_definition_drift', which, if resolved empirically, would shift the classification toward Piton (\u03b5 stable but theater\u21920.75) or confirm Snare (\u03b5\u21920.60 if subsidies are captured)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "member_state_fiscal_autonomy",
+      "urban_land_speculation"
+    ],
+    "dual_formulation_note": "The EU Affordable Housing Initiative is downstream of member state housing markets and upstream of the fiscal autonomy constraint. The initiative attempts to coordinate housing provision across member states but creates new extraction mechanisms (compliance cost, bureaucratic overhead, definition drift). The urban land speculation constraint is affected by the initiative's incentive structure, which can accelerate gentrification in targeted neighborhoods."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

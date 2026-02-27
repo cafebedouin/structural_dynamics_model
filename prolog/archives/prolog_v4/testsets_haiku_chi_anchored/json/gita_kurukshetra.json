@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "gita_kurukshetra",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gita"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Duty of the Kshatriya (Warrior Caste)",
+    "topic_domain": "religious/philosophical/social",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "brahmin_priesthood",
+      "ruling_dynasties",
+      "patriarchal_kinship_order"
+    ],
+    "victims": [
+      "kshatriya_soldiers",
+      "lower_castes",
+      "war_casualties"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Conscripted Kshatriya Soldier",
+      "comment": "PERSPECTIVE 1: KSHATRIYA SOLDIER (SNARE) \u2014 Bound by caste dharma to fight; refusal means ritual pollution, social death, and exclusion from afterlife. No genuine exit option; trapped by religious cosmology and kinship obligation. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.56."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Lower Caste War Casualty",
+      "comment": "PERSPECTIVE 2: LOWER CASTE CASUALTY (SNARE) \u2014 Subject to Kshatriya duty to fight, serving as foot soldiers and support. Bears cost of warfare without agency in its declaration. Trapped by both caste hierarchy and military necessity. d\u22480.98, f(d)\u22481.46, \u03c3=0.9 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Dynasty Ruler",
+      "comment": "PERSPECTIVE 3: DYNASTY RULER (TANGLED ROPE) \u2014 Powerful agent whose authority is legitimized by military duty (dharma) but also constrained by it. Must fight lawful wars to maintain rightful sovereignty; warfare is both privilege and obligation. Experiences mixed extraction and coordination. d\u22480.48, f(d)\u22480.62, \u03c3=0.9 \u2192 \u03c7\u22480.21."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Brahmin Priesthood",
+      "comment": "PERSPECTIVE 4: BRAHMIN PRIESTHOOD (ROPE) \u2014 Coordinates the entire caste-duty system; exempted from fighting themselves via textual interpretation. Benefits from institutional legitimacy and social hierarchy maintained by Kshatriya military function. Sees the constraint as pure coordination: stabilizing social order. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Rival Dynasty (Inter-Institutional)",
+      "comment": "PERSPECTIVE 5: RIVAL DYNASTY (TANGLED ROPE / INTER-INSTITUTIONAL) \u2014 Organized institutional actor with mobile exit options relative to THIS constraint. Can refuse battle (violating dharma codes but facing military/political consequences rather than caste death). The constraint extracts loyalty and obedience while offering legitimacy to lawful rule. Sees both enforcement (active suppression of non-martial outcomes) and coordination (shared rules of lawful warfare). d\u22480.52, f(d)\u22480.69, \u03c3=1.0 \u2192 \u03c7\u22480.26."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Vedic Textual Tradition",
+      "comment": "PERSPECTIVE 6: VEDIC TEXTUAL TRADITION (PITON) \u2014 The Gita encodes dharma rules with high theater: elaborate philosophical justifications for duty (Arjuna's hesitation, Krishna's counters) mask what is fundamentally a social enforcer mechanism. The performative aspect (moral philosophy around duty) has become primary; the actual enforcement (caste-based conscription) persists through textual authority even as direct coercion weakens. theater_ratio=0.61 reflects the substantial philosophical apparatus built around enforcement. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.02."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN RISK) \u2014 From a civilizational view, some theorists argue caste-duty is immutable: role differentiation by heredity reflects natural hierarchy (brahmin reasoning). However, empirical data (\u03b5=0.38, suppression=0.68, theater=0.61) contradicts this naturalization. The constraint is socially constructed, enforced through religious authority, and maintained by suppression of alternative interpretations. This perspective risks false summitry \u2014 treating contingent social arrangements as laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dharma_versus_coercion",
+      "question": "Is the Kshatriya duty experienced primarily as sacred obligation (internalized dharma) or as coercive enforcement by priestly authority?",
+      "resolution_mechanism": "Historical analysis of Vedic texts; ethnographic study of actual warrior caste narratives across centuries; comparison of caste-duty with voluntary martial traditions; linguistic analysis of metaphors for duty (internalization vs external force)",
+      "impact": "If internalized (dharma): constraint appears as Rope from warrior perspective (shared coordination). If coercive: constraint is Snare (pure extraction masked by religious language).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether duty is internalized dharma or enforced coercion"
+    },
+    {
+      "id": "brahmin_agency_in_enforcement",
+      "question": "Do Brahmin priests actively enforce the caste-duty system through religious sanction, or do they merely articulate an emergent social order?",
+      "resolution_mechanism": "Historical reconstruction of priest-king dynamics; textual analysis of priestly claims to authority over caste duties; examination of cases where warrior caste rejected priestly interpretation",
+      "impact": "If active enforcement: Brahmin priesthood is primary beneficiary (high extraction). If articulative: priesthood is secondary coordinator (lower extraction, higher rope classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Brahmin priesthood actively enforces caste-duty system"
+    },
+    {
+      "id": "alternative_duty_interpretations",
+      "question": "Could a Kshatriya satisfy dharma through non-martial roles (administration, commerce, protection) rather than warfare?",
+      "resolution_mechanism": "Textual hermeneutics: careful reading of dharma definitions in Dharma\u015b\u0101stra; identification of counter-examples or minority interpretations; analysis of how alternative roles were actually treated in historical kingdoms",
+      "impact": "If yes: exit options upgrade from trapped to constrained (d decreases, \u03c7 decreases). Constraint shifts from Snare toward Tangled Rope. If no: trap is absolute, Mountain classification risk increases.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether non-martial roles satisfy Kshatriya dharma"
+    },
+    {
+      "id": "afterlife_punishment_mechanism",
+      "question": "How directly does religious doctrine enforce caste duty through promised afterlife punishment (rebirth in lower caste)?",
+      "resolution_mechanism": "Textual analysis of rebirth consequences in Vedic/Classical Hindu texts; comparison with other religions' enforcement mechanisms (heavenly reward, eternal punishment); ethnographic evidence of caste-duty acceptance correlated with afterlife belief strength",
+      "impact": "If strong causal link: suppression increases (cosmological trap); warrior appears more powerless. If weak or culture-dependent: suppression decreases; exit options improve to constrained (from trapped).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strength of afterlife punishment mechanism for duty violation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 500
+  },
+  "commentary": {
+    "narrative_context": "The Kshatriya dharma (sacred duty to fight in lawful warfare) as codified in the Bhagavad Gita and Dharma\u015b\u0101stra texts represents a classic case of constraint hybridization. On its surface, it is a coordination mechanism: establishing rules for rightful warfare, legitimizing sovereign authority, and creating shared codes of honor. The Gita frames Arjuna's duty to fight as a transcendent spiritual obligation that supersedes familial love and individual moral doubt. Yet structurally, it functions as a Tangled Rope extracting military service from the warrior caste while benefiting the Brahmin priesthood (who are exempted from fighting) and ruling dynasties (who gain legitimacy for their wars). The constraint is maintained through religious authority (textual cosmology), social hierarchy (caste immobility), and suppression of alternative interpretations of what constitutes dharma. The theater ratio has increased over the classical period as philosophical elaboration around duty (the Gita itself represents mounting performative justification) has grown, while the direct enforcement mechanism has partially weakened. The constraint is neither a pure natural law (mountain) nor pure coordination (rope) \u2014 it is a hybrid that uses sacred duty language to mobilize military resources and consolidates priestly and ruling-class authority.",
+    "key_agents": [
+      "Kshatriya Soldier: Primary victim (powerless/trapped) \u2014 conscripted by caste birth; forbidden to refuse warfare without spiritual death",
+      "Lower Caste War Casualty: Secondary victim (powerless/trapped) \u2014 subject to Kshatriya military duty; bears casualties without agency",
+      "Brahmin Priesthood: Primary beneficiary (institutional/arbitrage) \u2014 exempted from fighting; gains authority through textual interpretation and religious legitimacy of the entire system",
+      "Dynasty Ruler: Dual role (powerful/constrained) \u2014 benefits from legitimacy of lawful war but is also constrained by duty-based obligation to fight; more powerful but less mobile than beneficiaries",
+      "Rival Dynasty: Inter-institutional actor (organized/mobile) \u2014 can refuse or reinterpret duty; operates at same institutional level as primary dynasty but with differentiated exit options",
+      "Vedic Textual Tradition: Institutional actor maintaining theater (institutional/arbitrage) \u2014 performs abstract philosophical justification; theater increases as direct coercion weakens"
+    ],
+    "logic_rationale": "Extractiveness (0.38): The constraint extracts military service and life risk from the warrior caste while concentrating authority and exemption in the priesthood. However, this is not maximum extraction (\u03b5\u22640.46 for Snare threshold) because the system does provide benefits to Kshatriyas: social status, wealth from military service and rule, and sacred legitimacy that makes them society's honored class. The extraction is asymmetric (not equal return) but not totalizing. Suppression (0.68): High. The warrior caste cannot exit without ritual pollution, loss of caste status, exclusion from favorable rebirth, and social ostracism. Kinship obligation and caste immobility (hereditary membership) make suppression severe. Yet some theoretical flexibility exists in interpreting what 'fighting' means \u2014 hence 0.68 rather than 0.85. Theater ratio (0.61): Moderate-high. The Gita represents substantial performative elaboration: philosophical arguments for duty (Arjuna's dilemma, Krishna's theodicy) mask what is functionally a coercive enforcement mechanism. Over the classical period, as direct coercion of lower castes weakened, philosophical justification intensified \u2014 theater ratio increased from 0.40 to 0.61. Claimed type: Tangled Rope. The constraint exhibits both genuine coordination (shared rules for lawful warfare, honor codes) and asymmetric extraction (warrior caste mobilized for beneficiary dynasties). Active enforcement is required (priestly interpretation + caste sanctions). Beneficiaries are clear (priesthood, dynasties); victims are clear (soldiers, lower castes).",
+    "perspectival_gap": "The constraint produces radically different classifications across perspectives. The Kshatriya soldier sees a Snare: trapped by caste birth, unable to refuse without spiritual death, conscripted into warfare with no genuine exit. The lower caste casualty sees a deeper Snare: trapped both by military conscription and by caste hierarchy. The dynasty ruler sees a Tangled Rope: constrained by duty but also privileged by legitimacy and power \u2014 they are both beneficiary and victim of the obligation they enforce. The Brahmin priesthood sees a Rope: pure coordination and spiritual order \u2014 they are structurally insulated from the duty's costs. The rival dynasty (inter-institutional perspective) sees a more mobile Tangled Rope: they can refuse or reinterpret dharma; their exit options are genuinely constrained but not trapped. The Vedic textual tradition sees its own role as degraded (Piton): the philosophical apparatus around duty has become increasingly performative as the social reality it justified has weakened. The analytical observer risks a false summit (Mountain): treating caste-duty as an immutable law of social order \u2014 but the data show it is a constructed constraint, weakening over time, maintained increasingly by theater rather than force.",
+    "directionality_logic": "Kshatriya soldier: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Bound by caste birth, religious cosmology, kinship obligation. No exit. Lower caste casualty: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.46. Slightly higher d than Kshatriya due to double subordination (caste + military). Dynasty ruler: Beneficiary and victim both; powerful but constrained \u2192 d\u22480.48, f(d)\u22480.62. Mixed position: benefits from legitimacy but cannot escape duty without losing authority. Brahmin priesthood: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Exempted from fighting, gains authority through interpretation. Rival dynasty (inter-institutional): Victim of OTHER's duty but beneficiary of own legitimacy; organized, mobile \u2192 d\u22480.52, f(d)\u22480.69. Can negotiate or refuse reinterpretation; exit is costly but possible.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that Tangled Rope classification is correct DESPITE the strong philosophical (rope-like) justification that surrounds it. The Gita's elaborate moral philosophy (Krishna's arguments) is NOT evidence for Rope classification \u2014 it is evidence for the presence of theater (0.61 ratio). The underlying structure shows: (1) beneficiaries clearly concentrated (priesthood, dynasties), (2) victims clearly identified (soldiers, lower castes), (3) active enforcement required (caste sanctions, afterlife threat, kinship obligation), (4) asymmetric extraction (warriors receive status but not equivalent return for life risk). These satisfy the Tangled Rope gates despite the coordination language. The mandatrophy is resolved by distinguishing the RHETORIC of duty (coordination, sacred order) from the STRUCTURE of benefit distribution (extraction). The philosophical apparatus is part of the enforcement mechanism, not evidence against extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "varna_social_hierarchy",
+      "brahminical_textual_authority",
+      "patriarchal_kinship_obligation"
+    ],
+    "dual_formulation_note": "The Kshatriya dharma constraint decomposes into three related claims: (1) varna_social_hierarchy (\u03b5\u22480.15, Mountain-like natural law claims), (2) brahminical_textual_authority (\u03b5\u22480.35, Tangled Rope coordination + priestly extraction), (3) patriarchal_kinship_obligation (\u03b5\u22480.42, Snare for junior kinship positions). The present story (gita_kurukshetra, \u03b5\u22480.38) represents the battlefield-specific instantiation of these family members. Each has different empirical status and different failure modes. The network represents causal dependency: kinship obligation and textual authority FEED the battlefield duty constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.52
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "brahminical_textual_authority",
+      "varna_social_hierarchy"
+    ]
+  }
+}

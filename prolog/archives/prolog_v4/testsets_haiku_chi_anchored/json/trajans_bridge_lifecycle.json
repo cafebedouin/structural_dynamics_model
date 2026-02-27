@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "trajans_bridge_lifecycle",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "trajan"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Trajan's Bridge over the Danube (Lifecycle)",
+    "topic_domain": "technological/military/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "roman_military_command",
+      "roman_treasury"
+    ],
+    "victims": [
+      "enslaved_construction_labor",
+      "dacian_population",
+      "frontier_stability_commons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Enslaved Bridge Laborers",
+      "comment": "PERSPECTIVE 1: ENSLAVED BRIDGE LABORERS (SNARE) \u2014 Compelled to construct the bridge under military command with no exit option. High mortality (estimated 40-60% during construction), no choice of participation, no negotiation capacity. Trapped extraction. d\u22480.95, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Dacian Population (Post-Conquest)",
+      "comment": "PERSPECTIVE 2: DACIAN POPULATION POST-CONQUEST (SNARE) \u2014 The bridge enables Roman military supply lines that enforce Dacian subjugation. Exit option is death or deportation. The constraint persists across generations: the bridge remains a symbol of Roman dominion. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Roman Military-Engineering Complex",
+      "comment": "PERSPECTIVE 3: ROMAN MILITARY-ENGINEERING COMPLEX (TANGLED ROPE) \u2014 The bridge solves a genuine coordination problem: how to supply military forces across a strategic river during active conquest. The engineering coordination (across 4,000+ workers, 50,000 soldiers) is real; the bridge also enforces extraction from subjugated populations. Mixed coordination + asymmetric extraction. d\u22480.55, f(d)\u22480.75, \u03c3=1.1 \u2192 \u03c7\u22480.48."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Roman State (Military Objective)",
+      "comment": "PERSPECTIVE 4: ROMAN STATE / MILITARY OBJECTIVE (ROPE) \u2014 The bridge is a coordination solution for the state's conquest and governance goals. Massive logistical value: reduces crossing time from days to hours, enables supply line depth, supports permanent garrison deployment. The state experiences this as pure coordination with minimal coercion overhead \u2014 the military structure itself is consensual for Roman citizens. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.1 \u2192 \u03c7\u2248-0.01. Net beneficiary; constraint experienced as coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "continental",
+      "label": "The Frontier Administrative Apparatus (Degraded Support)",
+      "comment": "PERSPECTIVE 5: FRONTIER ADMINISTRATIVE APPARATUS (PITON) \u2014 After Hadrian's withdrawal from Dacia (271 AD), the bridge's primary function (conquest supply) becomes inert. However, the administrative structure supporting the bridge persists through institutional momentum: garrison costs, maintenance rituals, symbolic reporting \u2014 all maintained despite the loss of the original extractive purpose. theater_ratio\u22480.65 reflects that post-Hadrian, most bridge-related activity is performative. The bridge becomes a symbol of Roman reach rather than a functional supply mechanism."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Engineering Limits)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ENGINEERING LIMITS (MOUNTAIN) \u2014 From a purely technical standpoint, the bridge represented an immutable engineering constraint: no earlier Roman bridge crossed a river of comparable width (1,135 meters) under such military pressure. The stone-and-masonry technology had hard limits on span, foundation depth, and construction speed. However, the structural data (\u03b5=0.58, suppression=0.72, theater=0.65) contradicts pure mountain classification. The 'engineering limit' framing naturalizes what was actually a political and extractive choice \u2014 the bridge could have been smaller, temporary, or never built. The analytical observer risks a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "labor_supply_alternative",
+      "question": "Could the bridge have been constructed with voluntary labor at market rates rather than enslavement and coercion?",
+      "resolution_mechanism": "Historical wage data for Roman construction projects; comparative labor costs for bridges built with free vs enslaved labor; analysis of whether the timeline and budget required coercion",
+      "impact": "If market labor was economically viable: the snare classification for laborers becomes a choice (extraction intensified beyond necessity), reducing the constraint's natural-law framing. If market labor was economically infeasible: the snare classification reflects genuine scarcity constraints.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether voluntary labor could have replaced coerced labor"
+    },
+    {
+      "id": "dacian_exit_capacity",
+      "question": "Did Dacian populations have genuine alternatives to subjugation after the bridge was built, or was subjugation inevitable regardless?",
+      "resolution_mechanism": "Analysis of Dacian military capacity pre- and post-bridge; counterfactual: would Roman forces have conquered Dacia without the bridge's logistical advantage?",
+      "impact": "If Dacian exit was viable: the bridge is a snare that eliminated exit (high d). If conquest was inevitable: the bridge merely accelerated subjugation already determined by military imbalance (lower d, constraint becomes more rope-like).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether Dacian military alternatives existed post-bridge"
+    },
+    {
+      "id": "hadrian_withdrawal_causality",
+      "question": "Did Hadrian withdraw from Dacia primarily due to the bridge becoming unsustainable, or for other strategic reasons (Parthian conflict, frontier consolidation)?",
+      "resolution_mechanism": "Historical sources on Hadrian's motivation; analysis of whether the bridge maintenance costs and supply requirements drove the decision",
+      "impact": "If bridge costs drove withdrawal: the piton classification (degraded institutional persistence) is temporary \u2014 the constraint's extinction reflects functional failure. If other factors: the piton classification is more accurate \u2014 the bridge persists as dead institutional weight despite functional redundancy.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causality of Hadrian's withdrawal from Dacia"
+    },
+    {
+      "id": "supply_line_necessity",
+      "question": "How much of the bridge's extractive force depended on its actual supply function versus its symbolic dominion function?",
+      "resolution_mechanism": "Analysis of supply logistics: tonnage capacity, actual supplies delivered, garrison size supported. Comparison with alternative supply routes (river transport, land routes); assessment of redundancy and necessity.",
+      "impact": "If supply function was dominant: the tangled rope classification (coordination + extraction) is accurate. If symbolic function dominated: the constraint is primarily extraction (snare) with a coordination veneer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Balance between supply logistics and symbolic dominion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 170,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 170,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 170
+  },
+  "commentary": {
+    "narrative_context": "Trajan's Bridge over the Danube (completed circa 105 AD) was a monumental Roman engineering achievement: a stone and masonry bridge spanning 1,135 meters, standing 15 meters above water, designed to facilitate the conquest and administration of Dacia. The bridge represents a constraint with deeply asymmetric structural relationships. From the perspective of enslaved construction laborers and conquered Dacian populations, it was pure extraction \u2014 a mechanism of coercive dominion with no exit option and high human cost. From the perspective of the Roman military command and treasury, it was a coordination solution enabling supply line optimization and strategic advantage. From the perspective of frontier administrators, particularly after Hadrian's withdrawal from Dacia (271 AD), it became increasingly performative \u2014 a monument to Roman reach maintained through institutional inertia long after its strategic function had degraded. The constraint's lifecycle shows extraction intensity declining over time (as the military objective was achieved and the technological advantage was superseded) while theater ratio rose (as the bridge shifted from functional to symbolic). This progression traces a classic snare-to-piton degradation: from high-extraction tool of conquest to dead institutional weight.",
+    "key_agents": [
+      "Enslaved Bridge Laborers: Primary victims (powerless/trapped) \u2014 compelled construction workers with 40-60% mortality rate; no exit option",
+      "Dacian Population: Secondary victims (moderate/trapped) \u2014 conquered via the bridge's logistical advantage; confined to subjugation for generations",
+      "Roman Military Command: Primary beneficiary (institutional/arbitrage) \u2014 gains conquest capability and long-term strategic dominion over Dacia",
+      "Roman Treasury: Secondary beneficiary (institutional/arbitrage) \u2014 captures tax revenue and tribute from Dacia after conquest",
+      "Roman Military-Engineering Complex: Organized coordinator (organized/constrained) \u2014 solves genuine logistical problem of river crossing during active campaign",
+      "Frontier Administrative Apparatus: Institutional actor (institutional/analytical) \u2014 maintains bridge infrastructure post-conquest; transitions to performative role after Hadrian's withdrawal",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the bridge as an immutable engineering constraint rather than a political and extractive choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, declining over time. At the bridge's inception (105 AD), extractiveness was very high (\u22480.78) because the primary function was enabling conquest and subjugation \u2014 pure military extraction from Dacian populations. By 170 AD, after Hadrian's withdrawal (131 AD), the extractiveness declined to 0.58 because the bridge's primary extraction function (facilitating conquest) was no longer active. Residual extraction from maintenance burden and symbolic dominion persisted but was less intense. Suppression (0.72): High and sustained. The bridge's construction and maintenance relied on coercive labor supply (enslaved workers initially, then provincial levy) with no legitimate market alternative available at the required scale and speed. Frontier communities bore suppressed exit options from the administrative apparatus the bridge enabled. Theater ratio (0.65): High and rising. Initially (\u22480.25), the bridge was functionally intensive \u2014 actual logistical value was high relative to performative value. By 170 AD, after the bridge's strategic role had been superseded by other frontier controls and Hadrian's retreat, the theater ratio rose to 0.65 as maintenance and garrison administration became largely performative. The bridge persisted through institutional inertia and symbolic significance, not because it was functionally necessary.",
+    "perspectival_gap": "Massive perspectival divergence reflects the fundamental asymmetry of the constraint. Enslaved laborers and Dacian populations perceive the bridge as pure extraction (Snare) with no coordination benefit \u2014 they bear costs and gain nothing. The Roman military command perceives the bridge as pure coordination (Rope) \u2014 a solution to the logistical problem of river crossing with minimal coercion overhead from their perspective (the military structure was consensual for Roman citizens). The organized frontier administration perceives a mixed system (Tangled Rope) that both enables supply chain coordination and enforces extraction. Post-Hadrian withdrawal, the frontier apparatus perceives the bridge as a degraded ritual (Piton) \u2014 persisting through momentum even though its functional purpose is obsolete. The analytical observer risks naturalizing the constraint as an engineering necessity (Mountain) when it was actually a political and extractive choice.",
+    "directionality_logic": "Enslaved laborers: Victims + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. No benefits, maximum coercion. Dacian population: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.40. High extraction; the bridge enables dominion they cannot escape. Roman military command: Beneficiaries + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiaries; they experience the constraint as coordination, not extraction. Frontier apparatus: Institutional + constrained \u2192 d\u22480.50, f(d)\u22480.65 (piton classification comes from theater gate, not chi derivation). Mixed actor, mixed exit capacity. The organizational structure around the bridge constrains innovation (cannot easily replace or remove the bridge) while providing career/status benefits to administrators.",
+    "mandatrophy_analysis": "RESOLUTION VIA LIFECYCLE DECOMPOSITION: The constraint resolves mandatrophy by distinguishing phases. The early phase (105-131 AD) is unambiguously a Snare: high extractiveness (0.78), high suppression (0.72), driven by active conquest and coercive labor. The later phase (after 131 AD withdrawal) shows degradation into Piton: extractiveness drops to 0.58, theater rises to 0.65, the bridge's functional purpose has atrophied. The apparent contradiction between 'pure extraction' (snare interpretation) and 'engineering necessity' (mountain interpretation) resolves by noting that extractiveness itself declined as the extraction function was accomplished. The bridge was a snare during its operational phase (conquest) and a piton after its function was superseded. Neither 'the bridge is an eternal snare' nor 'the bridge is an immutable law' is correct \u2014 both are phase-specific readings. The mandatrophy is resolved by time-indexing the classification: same structure, different extractiveness at different lifecycle stages."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "dacian_military_capacity",
+      "roman_frontier_infrastructure",
+      "enslaved_labor_supply_chain"
+    ],
+    "dual_formulation_note": "The bridge constraint decomposes into two analytically distinct claims: (1) the engineering challenge (immutable physical/mathematical limits on span and foundation), which approaches mountain classification but is orthogonal to the human constraint; (2) the military-extractive system the bridge enabled, which is the actual constraint in the Deferential Realism sense. The latter is what the JSON captures (\u03b5=0.58, snare/piton). The former is not modeled here because it is not a constraint in the DR sense \u2014 it has no beneficiaries or victims, only technical parameters."
+  },
+  "directionality_overrides": []
+}

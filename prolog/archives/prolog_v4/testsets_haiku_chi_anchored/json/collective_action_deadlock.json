@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "collective_action_deadlock",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cad"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Infinite Deliberation Loop",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "status_quo_defenders",
+      "veto_holding_factions"
+    ],
+    "victims": [
+      "collective_action_capacity",
+      "threshold_responsive_groups"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Threshold-Responsive Group",
+      "comment": "PERSPECTIVE 1: THRESHOLD-RESPONSIVE GROUP (SNARE) \u2014 Faces imminent collective action problem (resource scarcity, security threat, ecosystem collapse) but cannot exit the deliberation structure. Veto rules prevent rapid response. Bears full cost of constraint inaction while locked in consensus-seeking. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Veto-Constrained Coalition",
+      "comment": "PERSPECTIVE 2: VETO-CONSTRAINED COALITION (TANGLED ROPE) \u2014 Organized minority factions with legitimate interests in shared resource governance. Benefit from deliberation framework (their voice matters; decisions require their assent). But also bear extraction cost: any single member can paralyze the collective. Veto power is both shield and trap. d\u22480.58, f(d)\u22480.68, \u03c3=0.9 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Status Quo Defender",
+      "comment": "PERSPECTIVE 3: STATUS QUO DEFENDER (ROPE) \u2014 Faction benefiting from current allocation or inaction. Veto power ensures their interests are preserved; consensus requirement blocks unfavorable redistributions. Sees the deadlock as pure coordination: 'We maintain order by requiring unanimity.' d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary through veto privilege."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 4: REFORM COALITION (SCAFFOLD) \u2014 Organized agents (NGOs, international bodies, norm-setters) advocating for decision-rule reform: supermajority rules, issue-specific thresholds, or delegated authority with sunset clauses. See the deadlock as a temporary institutional failure with a clear exit path \u2014 modify the veto rule. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.19."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consensus Ritual",
+      "comment": "PERSPECTIVE 5: CONSENSUS RITUAL (PITON) \u2014 The deliberation structure itself persists through institutional inertia and legitimacy theater. Consensus-based decision-making is performatively associated with democratic inclusivity and legitimacy, but the functional verification (actual responsive collective action) has degraded. Veto rules that once enabled minority protection now enable paralysis. theater_ratio=0.58 reflects moderate performative content: deliberation is staged as inclusive but increasingly produces inaction. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.005."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, Arrow's Impossibility Theorem and Condorcet Voting Paradoxes establish that no decision rule can simultaneously satisfy unanimity, responsiveness, and non-dictatorship. Veto-based consensus is thus framed as an inevitable feature of democratic preference aggregation \u2014 a mathematical law. However, the structural data (\u03b5=0.52, suppression=0.68, theater=0.58) contradicts mountain thresholds. The engine will detect this as a false summit: the impossibility is about abstract preference aggregation, not about THIS constraint's concrete institutional deadlock."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_duration_threshold",
+      "question": "What duration of blockage distinguishes legitimate deliberation from extractive deadlock?",
+      "resolution_mechanism": "Historical case analysis: correlation between veto-blocking duration and (a) quality of eventual decision, (b) social cost of delay, (c) emergence of workaround governance structures.",
+      "impact": "If threshold < 6 months: most vetoes appear extractive. If threshold > 3 years: chronic blockage may be misclassified as mountain. Classification shifts from Snare/Tangled Rope to Piton as duration increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Duration threshold distinguishing deliberation from deadlock extraction"
+    },
+    {
+      "id": "alternative_governance_availability",
+      "question": "Do parallel governance structures (subsidiarity, decentralized decision-making, issue-specific coalitions) genuinely enable response, or do they simply shift the deadlock to a different level?",
+      "resolution_mechanism": "Comparative case study: cases where veto groups blocked centralized action but coalitions succeeded vs cases where deadlock replicated at every governance level.",
+      "impact": "If alternatives work: scaffold perspective is realistic \u2014 reform has a genuine sunset path. If deadlock replicates: scaffold becomes aspirational theater, and the constraint is structurally deeper (possibly mountain-adjacent in some domains).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether parallel governance structures bypass the deadlock or replicate it"
+    },
+    {
+      "id": "veto_actor_incentive_alignment",
+      "question": "Are veto-holders extracting rents (benefiting from blockage) or are they genuinely uncertain about optimal policy and using veto as a hedge against uncertain outcomes?",
+      "resolution_mechanism": "Structural analysis: correlation between veto usage and (a) material benefit to veto-holder, (b) veto-holder's stated preference distribution, (c) counterfactual modeling of payoffs under each decision rule.",
+      "impact": "If primarily extractive: snare classification strengthens for threshold-responsive groups. If primarily uncertainty-driven: tangled rope classification strengthens \u2014 deadlock reflects legitimate coordination problem, not pure extraction.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether veto usage reflects extraction or legitimate uncertainty hedging"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The infinite deliberation loop emerges when collective action requires a response to a critical threshold event (resource scarcity, security threat, ecological tipping point) but internal governance rules grant veto power to any stakeholder. The constraint operates as a hybrid: it serves a genuine coordination function (minority protection, inclusive decision-making) while simultaneously enabling extraction (veto-holders block action to preserve status quo rents or strategic advantage). The deadlock is not inevitable\u2014it reflects a specific institutional choice: requiring unanimity or consensus instead of using supermajority, qualified majority, or delegated decision-making with sunset clauses. The theatrical component has grown over the measurement interval: deliberation is increasingly performed as inclusive and legitimate while actual responsive capacity has degraded. This is the Piton signal: the ritual persists through inertia despite loss of function.",
+    "key_agents": [
+      "Threshold-Responsive Group: Primary victim (powerless/trapped) \u2014 faces imminent collective action problem; cannot exit consensus-seeking structure; bears full cost of blockage",
+      "Veto-Holding Factions: Primary beneficiary (moderate/constrained) \u2014 enjoy voice and protection via veto privilege; also trapped in the structure they use to block others",
+      "Status Quo Defender: Secondary beneficiary (institutional/arbitrage) \u2014 faction profiting from inaction or current allocation; uses veto to preserve position",
+      "Reform Coalition: Organized actors (organized/mobile) \u2014 NGOs, transnational bodies, norm entrepreneurs advocating decision-rule reform with clear exit logic",
+      "Consensus Ritual: Institutional structure (institutional/arbitrage) \u2014 deliberation mechanism maintained through legitimacy theater despite degraded function",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the deadlock as an inevitable consequence of preference aggregation rather than a contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from threshold-responsive groups by preventing timely collective response, creating lag costs, mitigation delays, and forced suboptimal private adaptation. Not maximal (0.70+) because veto-holders are also somewhat constrained \u2014 their veto power gives them influence but not full control of outcomes, and blockage often triggers institutional reform or workaround governance. The extraction is real (threshold groups bear concentr costs) but not total (some actors benefit from deliberation's legitimacy, some escape via parallel structures). Suppression (0.68): High. Alternatives to consensus-based veto are suppressed through: (a) legitimacy framing ('true democracy requires unanimous assent'), (b) institutional path dependence (changing the rule requires consensus to change consensus), (c) fear of setting precedent (veto-holders know reform could turn against them). Threshold-responsive actors have minimal exit options within the formal structure, though they may create parallel governance. Theater ratio (0.58): Moderate. Deliberation is increasingly performed as legitimate and inclusive while functional responsiveness declines. The gap between stated decision-rule values (unanimity = fairness) and outcome (paralysis = injustice) creates performative content. Not as high as a pure ritual (0.80+) because deliberation sometimes produces real decisions, and the constraint is not purely theatrical.",
+    "perspectival_gap": "This constraint generates a full perspectival gap across all six types. Threshold-responsive groups see a snare: they are trapped in a decision structure that cannot respond to their urgent needs. Veto-holding factions see tangled rope: they benefit from voice and protection, but are also constrained by reciprocal veto rights of others. Status quo defenders see rope: pure coordination, unanimity protects everyone's interests. Reform coalitions see scaffold: a temporary institutional failure with a clear path forward (change the decision rule). The consensus ritual persists as piton: performative legitimacy masks degraded function. The analytical observer risks seeing mountain: Arrow's theorem naturalizes the deadlock as inevitable. The engine's false summit detector will flag this: the theorem applies to abstract preference aggregation, not to the concrete institutional choice to require unanimity.",
+    "directionality_logic": "Threshold-responsive group: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction relative. They cannot exit, bear concentr costs, have no veto. Veto-holding factions: Beneficiary + constrained \u2192 d\u22480.58, f(d)\u22480.68. Moderate extraction; they have power (veto) but are also bound by reciprocal veto of others, and blockage eventually triggers reform that may undermine their position. Status quo defender: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; can exit if preferred (exit to status quo continuation or parallel governance). Reform coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction; they have agency and see a clear exit path (institutional reform). Consensus ritual: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Piton classification comes from theater gate (theater=0.58), not from high chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival risk \u2014 observer naturalizes contingent institutional choice as mathematical law.",
+    "mandatrophy_analysis": "MANDATROPHY RISK: The constraint sits at the tangled rope / snare boundary (\u03b5=0.52, near the 0.46 threshold). The natural error is to misclassify it as either (a) pure rope\u2014'unanimous assent is how we maintain coordination'\u2014or (b) pure snare\u2014'this is just veto-holder extraction.' The mandatrophy is resolved by recognizing that both aspects are structurally real: the veto rule does serve a coordination function (minority protection, preventing majoritarian overreach), AND it does enable extraction (blockage, status quo bias, lag costs). The distinction is not about the presence of coordination vs extraction, but about which agents perceive which function and at what cost. Threshold-responsive groups perceive extraction; status quo defenders perceive coordination; veto-holding factions perceive both. The theater ratio (0.58) indicates the legitimacy performance is moderating\u2014not fully sustaining the false-coordination narrative. This measurement data supports the tangled rope classification over piton: the constraint is still performing a real function (voice, minority protection), not yet degraded to pure theater."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "tragedy_of_the_commons",
+      "regulatory_capture_gridlock",
+      "multiparty_coalition_fragmentation"
+    ],
+    "dual_formulation_note": "The collective action deadlock decomposes into two related but structurally distinct constraints: (1) THE VETO MECHANISM itself (this story, \u03b5=0.52) \u2014 the rule structure that enables blockage, (2) THE THRESHOLD MISMATCH (\u03b5=0.68, Snare-only) \u2014 the lag between critical event timing and decision-making capacity. Both are causally upstream of specific failure modes (commons collapse, regulatory capture stabilization, coalition breakdown). The veto mechanism story represents the generic institutional structure; threshold mismatch represents how the structure fails under urgency."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

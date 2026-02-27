@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "genai_mil_platform",
+    "version": "1.0",
+    "generated_date": "2024-07-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandatory Use of the GenAI.mil Platform for Defense Intelligence Analysis",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "genai_mil_platform_contractor",
+      "dod_leadership"
+    ],
+    "victims": [
+      "intelligence_analysts",
+      "independent_verification",
+      "alternative_analysis_methods"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Intelligence Analyst",
+      "comment": "Intelligence analysts are forced to use the GenAI.mil platform, limiting their ability to leverage alternative tools and methods. They are trapped within the system due to the mandate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Verification Teams",
+      "comment": "Verification teams are constrained by the mandated use of GenAI.mil, which limits their access to diverse analytical viewpoints and potentially hinders their ability to conduct truly independent assessments. They benefit from some automation features but are ultimately dependent on a single platform."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The GenAI.mil Platform Contractor",
+      "comment": "The contractor benefits from a guaranteed revenue stream due to the mandatory use of their platform. This is seen as a coordination mechanism from their perspective, providing a stable environment for platform development and maintenance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "DoD Leadership",
+      "comment": "DoD leadership benefits from the centralized platform, as it provides a single point of access for intelligence reports and analysis, increasing visibility and control. This serves as a coordination mechanism to standardize intelligence products."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer recognizes the dual nature of the mandate: it offers coordination benefits through standardization and centralized access, but it also introduces extractive risks by limiting analytical diversity and potentially biasing intelligence assessments."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "data_bias_source",
+      "question": "What sources of data bias are present in the training datasets and algorithms used by the GenAI.mil platform?",
+      "resolution_mechanism": "Regular audits of the training datasets and model outputs to identify and mitigate biases.",
+      "impact": "Reduced analyst trust, skewed risk assessment, and increased probability of erroneous decisions",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Potential sources of data bias are present."
+    },
+    {
+      "id": "cognitive_tunneling_effect",
+      "question": "Does the mandated use of GenAI.mil lead to cognitive tunneling or confirmation bias among intelligence analysts?",
+      "resolution_mechanism": "Experimental studies measuring analysts' openness to alternative hypotheses after using GenAI.mil-generated reports.",
+      "impact": "Reduces analytical diversity and lowers trust in the system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluate whether it leads to tunnel vision."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Department of Defense (DoD) mandate for intelligence analysts to use the GenAI.mil platform presents a complex constraint with both potential benefits and significant risks. The centralized platform aims to standardize intelligence analysis, enhance efficiency, and provide a single source of truth. However, it also raises concerns about limiting analytical diversity, suppressing alternative methods, and potentially introducing biases into intelligence assessments.",
+    "key_agents": [
+      "Intelligence Analysts: Primary target (powerless/trapped) \u2013 forced to use the platform and constrained in their analytical methods.",
+      "GenAI.mil Platform Contractor: Primary beneficiary (institutional/arbitrage) \u2013 benefits from a guaranteed revenue stream.",
+      "DoD Leadership: Beneficiary (institutional/arbitrage) \u2013 benefits from centralized access and control over intelligence products.",
+      "Independent Verification: Victims (moderate/constrained) \u2013 hindered by the limited access to diverse viewpoints.",
+      "Alternative Analysis Methods: Victims (moderate/constrained) \u2013 are undermined and potentially phased out"
+    ],
+    "logic_rationale": "The extractiveness (0.60) reflects the degree to which the mandate restricts the analytical freedom of intelligence analysts. The suppression (0.70) indicates the extent to which alternative methods are suppressed or discouraged. The theater ratio (0.40) is relatively low, suggesting that the platform's functionality is currently prioritized over performative aspects, though this may change over time.",
+    "perspectival_gap": "Intelligence analysts see the mandate as a snare, limiting their ability to leverage diverse tools and methods. The platform contractor and DoD leadership view it as a rope, facilitating coordination and standardization. Independent verification teams experience it as a tangled rope, providing some benefits while also imposing constraints. The analytical observer recognizes the mixed nature of the mandate, seeing both coordination and extraction.",
+    "directionality_logic": "The directionality values are based on the structural relationship of each agent to the constraint. Intelligence analysts, as the primary targets, have a high directionality value due to their limited exit options. The platform contractor and DoD leadership, as beneficiaries, have a low directionality value due to their ability to arbitrage and benefit from the mandate. Independent verification is given a directionality between to the above, as they are constrained by the mandate, but not nearly to the extent the intelligence analysts are."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

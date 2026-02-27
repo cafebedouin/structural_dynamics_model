@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "network_effects",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "neteff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Network Effects (Demand-Side Economies of Scale)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator",
+      "early_adopters",
+      "incumbent_network_participants"
+    ],
+    "victims": [
+      "new_entrant_competitors",
+      "switching_users",
+      "network_excluded_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In User",
+      "comment": "PERSPECTIVE 1: LOCKED-IN USER (SNARE) \u2014 Once embedded in a dominant network (social media, messaging, payment rails), individual users face prohibitive switching costs. Network value is captured by the platform operator; users cannot exit without losing access to their entire social graph and transaction history. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96. Pure extraction from user perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The New Entrant Competitor",
+      "comment": "PERSPECTIVE 2: NEW ENTRANT COMPETITOR (SNARE) \u2014 A startup attempting to compete in a network-effects market faces a structural trap: the incumbent's network is more valuable precisely because it is larger, making it impossible to attract users to the new platform. Even superior technology cannot overcome the coordination barrier. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67. High extraction through network-lock-in."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator (Beneficiary View)",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR / INCUMBENT (ROPE) \u2014 The network operator experiences network effects as pure coordination: their product solves a collective action problem (connecting dispersed users). The coordination function generates genuine value \u2014 a billion-person network is more useful than a hundred-person network. The operator benefits from this coordination surplus. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Net beneficiary; coordination is functional."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Regulators must enforce antitrust constraints, interoperability mandates, and data portability rules while preserving the coordination function that makes the network valuable. The regulation extracts from the platform operator (mandatory interoperability, API access) but also enables coordination (users can port social graphs, switching becomes feasible). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.43. Hybrid: enforcement mechanism + coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Interoperable Alternative Network",
+      "comment": "PERSPECTIVE 5: INTEROPERABLE ALTERNATIVE (TANGLED ROPE) \u2014 A federation protocol (e.g., ActivityPub, Bluesky's AT Protocol) offers both coordination (federated network maintains social graph portability) and extraction resistance (no single operator captures all value). Participants benefit from coordination while maintaining exit options. d\u22480.45, f(d)\u22480.60, \u03c3=1.2 \u2192 \u03c7\u22480.42. Medium effective extraction because federation requires coordination overhead."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Legacy Proprietary Network",
+      "comment": "PERSPECTIVE 6: LEGACY PROPRIETARY NETWORK (PITON) \u2014 Old networks (MySpace, Friendster, Orkut) persist even after user preference shifts because switching costs are high and institutional momentum is strong. The network's value is maintained theatrically through inertia rather than genuine network effects. Users remain passively enrolled even though they access the network rarely. theater_ratio=0.62. The coordination function has atrophied; the extraction persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational perspective, network effects appear as an immutable law: any technology that increases in value with adoption exhibits network economics. This is presented as a physical/economic law \u2014 inevitable, unchangeable, universal. However, the structural data (\u03b5=0.58, suppression=0.65) reveals this as a false natural law. Network effects are contingent on: proprietary lock-in (not inherent), absence of interoperability standards (contingent policy choice), high switching costs (engineered, not natural), and regulatory forbearance (policy choice, not law). The false summit occurs because the analytical observer naturalizes what is actually institutional architecture."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 8: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Movements toward interoperable protocols (ActivityPub for social media, DID for identity, open banking APIs) represent a temporary coordination solution with a sunset clause. As open standards mature and network switching costs decline, the original network-lock-in extraction mechanism loses force. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.25. Low effective extraction because the coalition is building exit pathways. Theater ratio drops as protocol maturity increases."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_lock_in_boundary",
+      "question": "At what point does network effect coordination become lock-in extraction? Where is the boundary between 'value from being in the network' and 'extraction from inability to leave'?",
+      "resolution_mechanism": "Measure user switching costs (data portability, social graph exportability, API access); compare coordination value (network utility) to extraction value (lock-in premium). Boundary occurs where switching cost exceeds network switching benefit.",
+      "impact": "If switching costs \u2264 net benefit of alternative: classification shifts toward Rope. If switching costs >> net benefit: classification is Snare. This determines whether network effects are fundamentally coordination or fundamentally extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary between network coordination and lock-in extraction"
+    },
+    {
+      "id": "interoperability_standard_sufficiency",
+      "question": "Do open interoperability standards (ActivityPub, DID, open banking APIs) actually eliminate network lock-in, or do they merely add a new coordination overhead layer?",
+      "resolution_mechanism": "Longitudinal measurement of user switching rates post-interoperability; comparison of switching costs before/after standard adoption; analysis of whether federation protocols generate their own lock-in (federation vendor lock-in).",
+      "impact": "If interoperability is effective: scaffold sunset is real, network effects become reversible coordination. If interoperability adds overhead: the constraint shifts from platform lock-in to protocol lock-in, perpetuating extraction with a different gatekeeper.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open standards eliminate network lock-in or merely transfer it"
+    },
+    {
+      "id": "natural_law_vs_policy_choice",
+      "question": "Is network effect lock-in an immutable law of economics, or a contingent institutional outcome that depends on policy choices (regulation, interoperability mandates, data portability)?",
+      "resolution_mechanism": "Comparative analysis of network-effect markets under different regulatory regimes; examination of jurisdictions with strong interoperability requirements vs. light-touch regulation; case studies of network-effects constraints that were successfully dissolved through policy.",
+      "impact": "If immutable: network effects are mountains (no policy escape). If contingent: network effects are snares/tangled ropes that can be restructured through regulation, interoperability, and open standards. This determines whether the constraint is a law of economics or a law of specific institutional design.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether network lock-in is a natural law or a policy-contingent outcome"
+    },
+    {
+      "id": "multi_homing_viability",
+      "question": "Can users effectively multi-home (maintain presence on multiple networks) as an escape from lock-in, or do network effects create a dominant-platform equilibrium where multi-homing is theatrically common but functionally ineffective?",
+      "resolution_mechanism": "User behavior analysis: active engagement distribution across platforms; measurement of true switching (primary identity shifts) vs. nominal presence (dormant accounts). Comparison of user effort required for multi-homing vs. single-platform specialization.",
+      "impact": "If multi-homing works: users have genuine mobile options, exit_options shift from trapped/constrained to mobile. If multi-homing is theater: users appear to have choice but functionally remain locked in, perpetuating snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether multi-homing is a viable exit option or theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Network effects represent one of the most significant economic constraints of the digital age, yet they are commonly mischaracterized as immutable laws of economics when they are actually contingent institutional arrangements. A technology gains value as more people adopt it \u2014 this is the positive feedback loop \u2014 but the extraction mechanism depends entirely on whether users can exit. In a world with perfect interoperability (data portability, open standards, federated protocols), network effects are pure coordination: users benefit from a larger network and can switch at low cost. In a world with proprietary platforms and high switching costs, network effects become snares: users are locked in to an incumbent's network despite the existence of superior alternatives. The constraint's extractiveness has increased from 0.15 to 0.58 over the past decade as platforms have: (1) actively engineered switching costs through proprietary APIs and data lock-in, (2) built comprehensive social graphs that become more valuable and costly to replicate, and (3) captured network value for the platform operator rather than distributing it to users. Theater ratio increased from 0.22 to 0.48 as multi-homing became nominally common (users maintain multiple accounts) but functionally ineffective (primary identity remains concentrated on one platform). The constraint is a tangled rope because it serves a genuine coordination function (connecting dispersed users) while simultaneously extracting from those users through lock-in. Regulatory intervention and open standards movements represent structural attempts to lower the theater ratio and restructure the constraint toward pure coordination (Rope) or sunset (Scaffold).",
+    "key_agents": [
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures network value through lock-in; benefits from coordination surplus without bearing lock-in costs",
+      "Locked-In User: Primary victim (powerless/trapped) \u2014 embedded in dominant network; faces prohibitive switching costs; cannot exit despite alternatives",
+      "New Entrant Competitor: Secondary victim (moderate/constrained) \u2014 faces structural impossibility of competing; network's size advantage is insurmountable barrier to entry",
+      "Early Adopter: Secondary beneficiary (powerful/mobile) \u2014 established presence on winning network before lock-in solidified; can arbitrage between networks",
+      "Regulatory Authority: Organized actor (organized/constrained) \u2014 enforces interoperability, data portability, and antitrust constraints; extracts from platform while preserving coordination",
+      "Open Standards Coalition: Organized actors (organized/mobile) \u2014 builds federated protocols and interoperability standards to reduce switching costs; pursues sunset of lock-in constraint",
+      "Legacy Network Participant: Passive victim (moderate/constrained) \u2014 enrolled in deprecated network through sunk switching costs; remains passive despite preference drift",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent lock-in as immutable economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not maximum. Network effects generate genuine coordination value (the network IS more useful with more users), but the platform operator captures a disproportionate share of this value through proprietary lock-in rather than distributing it. The constraint would be lower extractiveness (\u22480.25) if switching costs were low (open standards, data portability); it would be higher (\u22480.72) if switching were literally impossible (no alternatives exist). At 0.58, the extractiveness reflects the current equilibrium: switching is difficult but not impossible; alternatives exist but are at a disadvantage; users are extracted from but not maximally. Suppression (0.65): High. Switching costs are engineered into the platform architecture: proprietary data formats, API restrictions, social graph lock-in, and regulatory barriers to interoperability. These suppress alternatives and reduce user exit options. However, suppression is not absolute (\u22481.0) because regulatory pressure, open standards, and user frustration create cracks. Theater ratio (0.48): Moderate. The network's coordination function is genuine (a larger network is more useful), but the extraction is rationalized as inevitable ('network effects are laws of economics') rather than examined as institutional choice. Multi-homing is theatrically common but functionally rare. The 0.48 value reflects that roughly half the network activity is genuine coordination (users benefit from network size) and half is theater (platforms claiming lock-in as unavoidable while suppressing interoperability options).",
+    "perspectival_gap": "This constraint demonstrates a sharp perspectival gap between beneficiaries and victims. The platform operator sees network effects as pure coordination (Rope) \u2014 they are solving a collective action problem and deserve to capture value from doing so. The locked-in user sees the same constraint as pure extraction (Snare) \u2014 they are trapped by switching costs they did not choose and cannot escape. The new entrant competitor sees it as a structural barrier (Snare) \u2014 the incumbent's size advantage is insurmountable. The regulatory authority sees it as a hybrid (Tangled Rope) \u2014 coordination is valuable but extraction has become excessive, requiring enforcement to restore balance. The open standards coalition sees it as temporary (Scaffold) \u2014 interoperability standards will eventually dissolve lock-in, though the sunset is slow. The legacy network sees it as degraded (Piton) \u2014 the original coordination function has withered but institutional inertia keeps it alive. The analytical observer risks seeing it as a natural law (Mountain) \u2014 network effects are presented as immutable economic law, but this naturalizes policy choices about interoperability and data portability. Each perspective is structurally justified; the gap reveals that the same phenomenon is coordination, extraction, regulation, hope, theater, and false inevitability simultaneously.",
+    "directionality_logic": "Locked-in user: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction directional vector. Cannot exit; bears full cost of lock-in. New entrant: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction; can theoretically start a new network but faces insurmountable coordination barrier. Platform operator: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary with low directional extraction cost. Can exit (sell business, pivot) but benefits from staying. Regulatory authority: Organized + constrained \u2192 d\u22480.55, f(d)\u22480.75. Constrained by legal mandates and political economy; extracted from through compliance costs; benefits from coordination value. Interoperable alternative: Powerful + mobile \u2192 d\u22480.45, f(d)\u22480.60. Can exit toward federation; both constrained by protocol overhead and benefiting from coordination. Legacy network: Moderate + constrained \u2192 d\u22480.65, f(d)\u22481.00. Moderate extraction from sunk switching costs; passive enrollment. Open standards coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction; active exit pathway building. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. Observer-relative directionality; mountain classification is perspectival outcome of naturalizing contingent architecture.",
+    "mandatrophy_analysis": "Network effects resolve the mandatrophy by disambiguating the label. 'Network effects' conflates two structurally distinct claims: (1) the coordination value of larger networks (genuine positive externality: 'A network with N users is more useful than a network with N-1 users'), and (2) the lock-in mechanism that prevents users from exercising exit options (institutional policy choice: 'Users cannot move their data to competitor platforms'). Claim 1 is approximately a Mountain: it is a stable property of any technology that exhibits positive network externalities. Claim 2 is a Snare or Tangled Rope: it is a consequence of proprietary architecture and regulatory choices, not of the network externality itself. The corpus conflates these by using the label 'network effects' to justify lock-in as inevitable. The mandatrophy is resolved by recognizing that the COORDINATION VALUE is real and permanent (mountain-like), but the LOCK-IN MECHANISM is contingent and restructurable (snare/rope-like depending on regulation). A network effects constraint in a world with open standards and data portability is Rope (pure coordination). The same constraint in a proprietary architecture is Snare (extraction). The label 'network effects' does not determine the classification \u2014 institutional architecture does. This story therefore treats network effects as a Tangled Rope: real coordination value + real extraction mechanism, with the mix depending on policy choices about interoperability and data portability. The false natural law (mountain) is explicitly rejected by the analytical perspective's inclusion and commentary on why it fails the natural law gates (\u03b5 and suppression are too high; resistance is too low)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.35
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_gatekeeping",
+      "data_portability",
+      "interoperability_standards",
+      "two_sided_market_tipping"
+    ],
+    "dual_formulation_note": "Network effects decompose into: (1) coordination_value (pure positive externality, mountain-like), and (2) lock_in_mechanism (institutional extraction, snare-like). This story treats the composite phenomenon as Tangled Rope. Upstream: positive_network_externality (constraint_id: positive_externality_economics, \u03b5\u22480.05, Mountain). Downstream: platform_gatekeeping (constraint_id: platform_gatekeeping, \u03b5\u22480.62, Snare), data_portability (constraint_id: data_portability, \u03b5\u22480.48, Tangled Rope), interoperability_standards (constraint_id: interoperability_standards, \u03b5\u22480.35, Scaffold). Network effects as a unified phenomenon has \u03b5\u22480.58 (Tangled Rope) because it combines the coordination value (low \u03b5) with the lock-in infrastructure (high \u03b5)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "header": {
+    "constraint_id": "international_seabed_mining_regime",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "International Seabed Mining Regime",
+    "topic_domain": "geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "isa_member_states",
+      "mining_contractors"
+    ],
+    "victims": [
+      "deep_sea_ecosystems",
+      "future_generations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Deep Sea Ecosystems",
+      "comment": "Perspective 1: Deep Sea Ecosystems (Snare) - Unable to represent themselves or exit the situation. The ecosystems are directly impacted by the mining activities and have no means of recourse. They bear the full cost of the regime."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "ISA Member States",
+      "comment": "Perspective 2: ISA Member States (Tangled Rope) - Benefit from potential revenue sharing and asserted resource management, but are also constrained by the ISA's regulatory framework and reputational risk. They benefit from resource extraction but also bear costs of environmental damage. Exit is constrained due to treaty obligations but member states have influence through representation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Mining Contractors",
+      "comment": "Perspective 3: Mining Contractors (Tangled Rope) - Benefit directly from resource extraction activities authorized by the ISA, but are also subject to the ISA's regulations and potential liabilities. They benefit economically but face regulatory constraints. Mobile due to the potential to shift operations to different jurisdictions or resources."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Law of the Sea",
+      "comment": "Perspective 4: International Law of the Sea (Piton) - The overarching legal framework is in place, but its effectiveness is degraded by the lack of fully defined regulations and enforcement mechanisms for seabed mining. It aims to manage resources but operates with limited functional oversight, resulting in theatrical compliance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 5: Analytical Observer (Tangled Rope) - Sees the entire system as a mix of coordination and extraction. The ISA aims to coordinate resource management, but also enables extraction that causes environmental damage and benefits certain actors more than others. Exit through analysis but no direct influence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "Perspective 6: Future Generations (Snare) - Cannot participate in current decision-making and will bear the long-term environmental consequences of seabed mining. They have no agency and cannot exit the situation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "environmental_impact_threshold",
+      "question": "What level of environmental damage is acceptable in exchange for access to seabed minerals?",
+      "resolution_mechanism": "Scientific research on the long-term effects of seabed mining on deep-sea ecosystems.",
+      "impact": "If the threshold is high, more mining will occur with greater environmental damage. If the threshold is low, less mining will occur but access to needed minerals may be limited.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Acceptable level of environmental damage."
+    },
+    {
+      "id": "enforcement_mechanism_effectiveness",
+      "question": "How effective are the ISA's enforcement mechanisms in ensuring compliance with environmental regulations?",
+      "resolution_mechanism": "Audits and inspections of mining operations, tracking of compliance records, and independent assessments of environmental monitoring data.",
+      "impact": "If enforcement is effective, environmental damage will be minimized. If enforcement is weak, greater environmental damage is likely to occur.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of ISA's enforcement."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The International Seabed Mining Regime, overseen by the International Seabed Authority (ISA), aims to regulate the extraction of mineral resources from the international seabed. This regime attempts to balance the potential economic benefits of mining with the need to protect the fragile deep-sea environment. However, the regime faces challenges related to enforcement, environmental impact assessment, and equitable distribution of benefits.",
+    "key_agents": [
+      "ISA Member States: Institutional actors with mixed incentives (revenue vs. environment)",
+      "Mining Contractors: Direct beneficiaries seeking resource extraction",
+      "Deep Sea Ecosystems: Victims directly impacted by mining activities",
+      "Future Generations: Victims who will bear the long-term environmental consequences"
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The regime enables extraction of seabed minerals, which benefits mining contractors and potentially ISA member states. The deep-sea ecosystems and future generations bear the environmental costs. Suppression (0.40): Moderate. The ISA's regulatory framework and enforcement mechanisms limit mining activities to some extent, but they are not fully effective in preventing environmental damage. The power asymmetry between member states contributes to medium suppression. Theater Ratio (0.75): High. The regime involves performative activities, such as environmental impact assessments and stakeholder consultations, and a substantial focus on the functional aspects of resource extraction. The increase over time reflects the growing awareness of environmental concerns and the need for more visible efforts to address them.",
+    "perspectival_gap": "Different stakeholders perceive the regime differently. Mining contractors see it as a means to access valuable resources, while environmental groups view it as a threat to the fragile deep-sea ecosystem. ISA member states face a balancing act between economic benefits and environmental protection. The analytical observer recognizes the inherent tensions and trade-offs within the regime.",
+    "directionality_logic": "Beneficiaries (mining contractors, ISA member states) experience lower effective extraction because they benefit from the regime. Victims (deep-sea ecosystems, future generations) experience higher effective extraction because they bear the environmental costs. The ISA member states, while benefiting from revenue, are also constrained by the need to comply with the regime's regulations, impacting their d value. The engine computes 'd' from beneficiary/victim + exit options.",
+    "mandatrophy_analysis": "The system is classified as Tangled Rope because it exhibits both coordination and extraction. The ISA aims to coordinate resource management (coordination), but the regime also enables environmental damage and benefits certain actors more than others (extraction). The mandatrophy is resolved by recognizing the mixed nature of the regime and the different perspectives of stakeholders."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "coordination_fatigue",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "coord_fat"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Consensus Exhaustion Loop",
+    "topic_domain": "social/organizational/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coordination_platform_operators",
+      "consensus_gatekeepers"
+    ],
+    "victims": [
+      "knowledge_workers",
+      "creative_output_commons",
+      "organizational_velocity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exhausted Knowledge Worker",
+      "comment": "PERSPECTIVE 1: EXHAUSTED KNOWLEDGE WORKER (SNARE) \u2014 Cannot exit synchronous consensus without being marked uncooperative or missing critical decisions. Faces mandatory participation in endless meeting cycles, Slack threads, and consensus protocols. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.86. High effective extraction masked as collaboration requirement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle Manager",
+      "comment": "PERSPECTIVE 2: MIDDLE MANAGER (TANGLED ROPE) \u2014 Genuinely coordinates interdependent work (real coordination function), but must also police consensus compliance and escalate non-alignment (enforcement mechanism). Constrained by reporting hierarchy and project dependencies. d\u22480.58, f(d)\u22480.72, \u03c3=1.0 \u2192 \u03c7\u22480.37. Mixed: solves real problems AND extracts compliance overhead."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Benefits from lock-in: Slack, Notion, Asana, Microsoft Teams all profit from increased synchronous coordination load. Experiences the constraint as a coordination service (solving the communication problem). Has full exit: could build async-first alternatives. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary through arbitrage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Executive Champion",
+      "comment": "PERSPECTIVE 4: EXECUTIVE CHAMPION (PITON) \u2014 Championed 'radical transparency' and 'continuous alignment' as leadership principles. The ritual persists (all-hands meetings, mandatory standups, consensus decisions) but original function (actually achieving transparency/alignment) has atrophied. theater_ratio=0.68 indicates primarily performative compliance. d\u22480.20, f(d)\u22480.05, \u03c3=0.9 \u2192 \u03c7\u22480.02. Low extraction but high theater."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Remote-First Coalition",
+      "comment": "PERSPECTIVE 5: REMOTE-FIRST COALITION (SCAFFOLD) \u2014 Organized advocates (async-first advocates, deep work researchers, distributed team founders) see consensus exhaustion as a temporary coordination failure with a sunset: async communication protocols (decision records, forum-first architecture), reduced meeting culture, and automation are creating parallel pathways that bypass synchronous consensus theater. d\u22480.35, f(d)\u22480.33, \u03c3=1.2 \u2192 \u03c7\u22480.21. Low extraction because coalition has agency and sees a viable exit path (asynchronous defaults)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Open-Source Community Lead",
+      "comment": "PERSPECTIVE 6: OPEN-SOURCE COMMUNITY LEAD (TANGLED ROPE) \u2014 Coordinates volunteers across time zones and availability constraints (real coordination function). Uses asynchronous decision-making (RFCs, GitHub discussions, time-zone-aware documentation) to distribute consensus load. But also enforces participation norms and 'community values.' d\u22480.45, f(d)\u22480.44, \u03c3=1.0 \u2192 \u03c7\u22480.23. Moderate extraction because the leadership also distributes synchronous overhead through protocol design, not concentration."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN) \u2014 Risk of naturalizing the constraint as 'inevitable coordination cost' or 'inherent to human collaboration at scale.' Some claim consensus overhead is a law of group decision-making (Arrow's Theorem, coordination complexity). However, \u03b5=0.52, suppression=0.65, theater=0.68 contradicts immutability: the constraint is enforced via technological lock-in (synchronous platforms), institutional norms (meeting culture), and extraction incentives (attention capture by platform operators and gatekeepers). The analytical observer risks false summit classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "asynchronous_decision_quality_threshold",
+      "question": "At what organizational scale does asynchronous decision-making produce decisions of comparable quality or better than synchronous consensus?",
+      "resolution_mechanism": "Comparative study: decision quality metrics (reversals, rework, stakeholder satisfaction) for organizations using async-first (GitHub-style RFCs, forum-based governance) vs. synchronous (meeting-heavy, real-time consensus). Correlation analysis of organization size, decision latency, and outcome quality.",
+      "impact": "If async equals or exceeds sync quality above ~50 people: scaffold sunset is real \u2014 distributed protocol adoption makes consensus exhaustion a temporary problem. If async consistently underperforms: consensus exhaustion is structural (legitimately embedded) and only suppression can manage it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether asynchronous decision-making scales to equivalent or better quality than synchronous consensus"
+    },
+    {
+      "id": "synchronous_lock_in_mechanism",
+      "question": "Is the dominance of synchronous coordination platforms (Slack, Zoom, real-time standup culture) due to technological necessity, institutional path-dependence, or deliberate vendor lock-in strategy?",
+      "resolution_mechanism": "Historical analysis of platform adoption curves; interviews with early adopters; comparative analysis of feature sets in sync-first vs. async-first tools; measurement of switching costs and vendor incentives to increase synchronous load.",
+      "impact": "If technological necessity: the constraint is partially immutable (mountain properties). If path-dependent: the constraint is a snare/tangled rope with a plausible scaffold sunset via coordinated platform migration. If vendor lock-in: the constraint is a snare (pure extraction hiding behind efficiency rhetoric).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether synchronous platform dominance reflects necessity, path-dependence, or deliberate lock-in"
+    },
+    {
+      "id": "cognitive_context_switching_floor",
+      "question": "What is the irreducible cognitive cost of context-switching in knowledge work, and can it be separated from the artificial overhead imposed by consensus-obsessed organizational culture?",
+      "resolution_mechanism": "Neuroscience literature review; empirical studies (eye-tracking, fMRI, productivity metrics) comparing deep-work environments vs. high-interruption environments; measurement of actual decision quality loss vs. perceived loss from missed consensus.",
+      "impact": "If irreducible floor is high: some extraction is unavoidable (mountain-like properties, justified suppression). If artificial overlay is large: most consensus exhaustion is removable (snare properties, suggesting strong scaffold sunset).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The irreducible cognitive cost of context-switching vs. artificial overhead from consensus culture"
+    },
+    {
+      "id": "creative_output_measurement_reliability",
+      "question": "How do we reliably measure whether organizations with lower consensus overhead produce higher-quality creative work, or whether perceived creativity loss is driven by selection bias and loss aversion?",
+      "resolution_mechanism": "Controlled comparison: matched cohorts (similar domain, scale, talent pool) with different consensus/async ratios. Blind evaluation of output quality. Longitudinal tracking of innovation metrics (patents, citations, market success) vs. meeting culture intensity.",
+      "impact": "If creative loss is real and measurable: tangled rope classification is confirmed (coordination serves real function, extraction is justified partially). If creative loss is perceptual artifact: snare classification is strengthened (extraction disguises lack of actual coordination need).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether creative output loss from consensus exhaustion is real or measurement artifact"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The consensus exhaustion loop represents a structural trap in hyperconnected organizations where the effort to maintain real-time synchronization, alignment, and consensus exceeds the creative output generated by coordinated work. As organizations scale and adopt synchronous communication platforms (Slack, Zoom, real-time standups), the overhead of keeping everyone in-sync becomes a primary drain on productive time. The constraint exhibits characteristics of both pure extraction (snare perspective from exhausted workers) and genuine coordination (rope/tangled rope from platform operators and managers who solve real communication problems). The critical ambiguity: Is the consensus requirement legitimate (organizational interdependencies genuinely demand tight coupling) or is it an artifact of technological lock-in and institutional theater? The theater ratio (0.68) indicates that much of the consensus ritual is performative \u2014 endless status updates, alignment meetings that rehash decisions, and async-unfriendly processes that force synchronous workarounds. Over the measurement interval (years 0-10), extractiveness increased from 0.28 to 0.52 as remote work and digital-first operations accelerated platform adoption, while theater increased from 0.38 to 0.68 as synchronous coordination became more theatrical and less functional. The remote-first and open-source communities represent a scaffold perspective: they are building alternative protocols (RFC documents, asynchronous forums, decision records) that systematically reduce synchronous overhead. The key structural question is whether their sunset is real \u2014 whether organizations can transition to async-first defaults without losing genuine coordination capacity.",
+    "key_agents": [
+      "Knowledge Workers: Primary victims (powerless/trapped) \u2014 cannot exit synchronous consensus without career penalty; bear full cost of coordination overhead",
+      "Platform Operators (Slack, Microsoft, Asana, Zoom): Primary beneficiaries (institutional/arbitrage) \u2014 profit from lock-in to synchronous-first products; have exit: could build async-first alternatives",
+      "Coordination Gatekeepers (Middle Managers, Project Leaders): Secondary beneficiary (moderate/constrained) \u2014 both enforce consensus (extract compliance) and solve real coordination problems (genuinely coordinate interdependent work)",
+      "Executive Champions: Institutional actors (powerful/mobile) \u2014 championed 'radical transparency' and 'continuous alignment' as leadership principles; maintain the ritual through inertia despite functional atrophy (piton perspective)",
+      "Remote-First Coalition: Organized advocates (organized/constrained) \u2014 distributed team practitioners, async-first thought leaders, deep work researchers building alternative protocols with a sunset clause",
+      "Open-Source Community Leaders: Organized actors (organized/constrained) \u2014 solve the same coordination problem using asynchronous decision-making (RFCs, forums, time-zone-aware documentation) with distributed overhead, not concentration",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing institutional theater as immutable coordination necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The extraction is real but not maximal. Platform operators capture significant value through lock-in and network effects. Coordination gatekeepers extract compliance overhead and attention. But the extraction is partially justified by genuine coordination services \u2014 some of the consensus overhead IS necessary for interdependent work. The elevated value (vs. pure coordination at \u22640.35) reflects that much of the 'necessary consensus' is actually contingent on synchronous-first technology choices. Suppression (0.65): Significant. Knowledge workers face multiple barriers to exit: career risk of being marked 'uncooperative' or 'out of touch,' technological lock-in to synchronous platforms, organizational norms that treat real-time responsiveness as a proxy for commitment, and lack of alternative coordination protocols in mainstream tools. The suppression is not total \u2014 async-first organizations exist and are scaling \u2014 but it is substantial enough to keep most workers trapped in synchronous consensus. Theater ratio (0.68): High and increasing. Status update meetings are theatrical (decisions are already made). Synchronous standups are theater (async standups convey the same information with lower disruption). Consensus-checking on already-decided matters is theater (creates the appearance of buy-in without actual deliberation). The theater ratio increased over time because as the platforms evolved, they optimized for engagement and real-time responsiveness, not for actual coordination efficiency. This is Goodhart's law in action: the metric (real-time responsiveness, consensus frequency) became the target, replacing the actual goal (effective coordination with minimum overhead).",
+    "perspectival_gap": "This constraint demonstrates perspectival collapse where different observers see radically different constraint types from identical structural data. The exhausted knowledge worker sees pure extraction (Snare) \u2014 they are trapped in meetings that serve no function beyond status display. The platform operator sees a legitimate coordination service (Rope) \u2014 they are solving the problem of distributed communication. The middle manager sees both: genuine coordination of interdependent tasks AND enforcement of consensus compliance (Tangled Rope). The executive champion sees a fulfilled vision of 'radical transparency' (Piton) \u2014 the ritual persists via institutional inertia despite original function atrophy. The remote-first coalition sees a temporary problem with a sunset (Scaffold) \u2014 asynchronous protocols are creating alternative pathways that will make the synchronous consensus exhaustion obsolete. The open-source community lead sees a solvable coordination problem with distributed overhead (Tangled Rope, but with compression) \u2014 they coordinate globally with minimal synchronous load by inverting default assumptions (async-first, synchronous as exception). The analytical observer risks seeing an immutable law (Mountain) \u2014 coordination at scale always requires extensive consensus overhead \u2014 but the structural data (increasing theater, documented async-successful organizations, platform vendor incentives for sync-load) contradicts immutability.",
+    "directionality_logic": "Knowledge workers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Cannot exit without penalty; bear full overhead with minimal say in consent. Platform operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Can exit (could build async-first tools); actively incentivized to increase synchronous load. Coordination gatekeepers: Mixed beneficiary-victim + constrained \u2192 d\u22480.58, f(d)\u22480.72. Moderate extraction. Enforce overhead (beneficiary aspect) but also constrained by it themselves (victim aspect). Executive champions: Institutional beneficiary + mobile \u2192 d\u22480.20, f(d)\u22480.05. Low effective extraction; piton classification emerges from high theater, not from high chi. Remote-first coalition: Organized actor + constrained \u2192 d\u22480.35, f(d)\u22480.33. Low extraction. Has agency (organized), sees exit path (async protocols), hence low effective extraction despite constraints. Open-source leader: Organized actor + constrained \u2192 d\u22480.45, f(d)\u22480.44. Moderate extraction. Constrained by global distribution and timezone coordination, but actively manages overhead through protocol design; hence lower d than middle manager with similar constraints.",
+    "mandatrophy_analysis": "RESOLVING THE COORDINATION-EXTRACTION AMBIGUITY: The consensus exhaustion loop resolves the mandatrophy by distinguishing GENUINE coordination requirements from IMPOSED consensus overhead. The tangled rope classification (with \u03b5=0.52) captures the hybrid nature: real coordination function (interdependent work genuinely requires information sharing and decision consistency) PLUS asymmetric extraction (consensus enforcement concentrated in gatekeepers, synchronous-first architecture imposed as default, platform operators capturing value). The scaffold perspective resolves the ambiguity forward in time: organizations that adopt asynchronous-first protocols (RFC-style decision-making, forum-based communication, decision records as source-of-truth) maintain coordination capacity while reducing overhead extraction by ~60-70%. This is evidence that most of the current extraction is contingent on technology choices and institutional norms, not on coordination necessity itself. The snare perspective (from exhausted workers) is correct about the current experience but incorrect about immutability \u2014 the remote-first coalition and open-source communities demonstrate that the same coordination problem can be solved with dramatically lower overhead and less concentrated extraction. The piton perspective (executive ritual with atrophied function) is evidence of Goodhart's law: the synchronous consensus metric became decoupled from actual coordination quality. The false summit (analytical/mountain) is definitively rejected by the existence of high-performing organizations with dramatically lower consensus overhead. The mandatrophy resolves: this is a tangled rope in transition toward scaffold. The rope component (genuine coordination) is real and enduring. The snare component (overhead extraction, platform lock-in, theatrical compliance) is being systematically replaced by more efficient (async-first) protocols. The sunset clause is credible because it is already happening in distributed organizations."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_economy_extraction",
+      "synchronous_work_bias",
+      "platform_lock_in_dependencies"
+    ],
+    "dual_formulation_note": "The consensus exhaustion loop can be decomposed into three distinct structural constraints: (1) attention_economy_extraction (\u03b5\u22480.45): platforms optimizing for engagement and real-time responsiveness create artificial urgency that reduces deep work capacity. (2) synchronous_work_bias (\u03b5\u22480.38): institutional norms treating synchronous responsiveness as proxy for competence/commitment, suppressing async alternatives even when more efficient. (3) platform_lock_in_dependencies (\u03b5\u22480.55): vendor incentives to increase synchronous load, creating switching costs that trap organizations in consensus-heavy architectures. These three constraints are structurally interdependent: each reinforces the others. The consensus exhaustion loop is their emergent effect. The remote-first coalition's scaffold sunset targets all three simultaneously by inverting defaults (async-first, synchronous by exception), reducing lock-in through tool diversity, and decoupling responsiveness from synchronous latency."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.2
+    }
+  ]
+}

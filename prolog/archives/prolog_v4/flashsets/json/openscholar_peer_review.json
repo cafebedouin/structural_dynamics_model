@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "openscholar_peer_review",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Traditional Academic Peer Review",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tenured_faculty",
+      "journal_publishers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "independent_researchers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Early Career Researchers",
+      "comment": "Early career researchers often feel trapped by the peer review system, as publications are essential for career advancement. They may face biases or gatekeeping, limiting their ability to advance without conforming to established norms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Established Academics",
+      "comment": "Established academics benefit from the peer review system's role in validating their work and maintaining standards. However, they are constrained by the time commitment and potential biases within the system, experiencing it as a mix of coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Journal Publishers",
+      "comment": "Journal publishers benefit from the peer review system by using it to curate high-quality content and maintain the reputation of their publications, giving them the power to decide what research is disseminated. They can choose which papers to publish."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, traditional peer review is a tangled rope, combining genuine coordination (quality control) with asymmetric extraction (gatekeeping, bias, suppression of novel ideas). The system's benefits and drawbacks are visible from this broad perspective."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bias_degree",
+      "question": "To what extent does the peer review process reflect biases (e.g., confirmation bias, institutional bias, gender bias)?",
+      "resolution_mechanism": "Statistical analysis of publication rates and citation patterns for different demographics and institutions.",
+      "impact": "High bias would suggest it's more of a snare. Low bias would suggest it's a more effective rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifying the degree of bias within the peer review system."
+    },
+    {
+      "id": "innovation_suppression",
+      "question": "Does the peer review process inadvertently suppress innovative or unconventional research?",
+      "resolution_mechanism": "Case studies of groundbreaking research that initially faced resistance from peer reviewers.",
+      "impact": "If suppression is high, the system is more of a snare. If it's low, then the system is a tangled rope that still allows for innovation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing whether the system suppresses novel research."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Traditional academic peer review, where experts assess research before publication, acts as a quality control mechanism. However, it also creates a system where certain researchers and institutions wield significant power over what knowledge is disseminated. This system can unintentionally suppress novel ideas, create barriers for early-career researchers, and suffer from biases.",
+    "key_agents": [
+      "Tenured Faculty: Benefits by controlling access.",
+      "Journal Publishers: Benefits from curating high-quality content.",
+      "Early Career Researchers: Victimized by gatekeeping and potential biases.",
+      "Independent Researchers: May be victimized as they lack institutional support."
+    ],
+    "logic_rationale": "The peer review system is classified as a tangled rope because it combines coordination (quality control) with asymmetric extraction. Extractiveness: It extracts from early-career and independent researchers by creating barriers to publication. Suppression: It suppresses novel ideas that do not conform to established paradigms. Theater Ratio: The system is partially performative, with reviews often focusing on presentation rather than the underlying validity of the research.",
+    "perspectival_gap": "Early Career Researchers view the system as a snare because it restricts their access to publishing their work. Established Academics see it as a tangled rope because they benefit, but are also constrained by its limitations. Journal Publishers view it as a rope because it enables them to curate high-quality content and maintain their publication's reputation. The analytical observer sees the broader picture: both the good and bad.",
+    "directionality_logic": "Tenured faculty and journal publishers benefit and have exit options (arbitrage) by selecting what is published and maintaining control of what research is valued. Early career researchers and independent researchers are victims as they are judged. The analytical observer sees the net effect."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_publishing_business_model"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "roman_bath_system",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bath"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.38,
+    "claimed_type": "rope",
+    "human_readable": "The Roman System of Public Baths",
+    "topic_domain": "technological/social/infrastructure",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "urban_lower_classes",
+      "enslaved_workforce",
+      "imperial_administration",
+      "merchants_and_craftspeople"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Urban Laborer",
+      "comment": "PERSPECTIVE 1: URBAN LABORER (ROPE) \u2014 Enjoys free or near-free access to bathing, hygiene, and social gathering. Exit options are mobile: can visit any of multiple public baths in most cities; can also use public aqueducts or rivers. Experiences the constraint as pure coordination: shared infrastructure solves the collective hygiene problem without coercion. d\u22480.35, f(d)\u22480.25, \u03c3=0.8 \u2192 \u03c7\u22480.07. Low effective extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Imperial Administration",
+      "comment": "PERSPECTIVE 2: IMPERIAL ADMINISTRATION (ROPE) \u2014 Benefits from bath system as a coordination mechanism: solves urban hygiene collectively, reduces disease, enables labor mobility, and generates civic loyalty through provision of public amenities. Exit options are arbitrage: can withdraw or modify the system at will; can scale up or down based on political needs. Experiences extraction costs as acceptable overhead for social stability. d\u22480.15, f(d)\u22480.01, \u03c3=1.1 \u2192 \u03c7\u22480.00. Net beneficiary; no effective extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Bath Attendant and Water Service Worker",
+      "comment": "PERSPECTIVE 3: BATH ATTENDANT & WATER SERVICE WORKER (ROPE) \u2014 Gains employment from the bath system as maintenance staff, attendants, and water-infrastructure workers. Mobile exit: can seek work in other trades or services, though specialized bath knowledge has value. Experiences the system as coordination with modest extraction for labor: wages are modest but stable employment is provided by the state or contractors. d\u22480.45, f(d)\u22480.55, \u03c3=0.9 \u2192 \u03c7\u22480.17. Modest effective extraction; primarily coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Enslaved Workforce",
+      "comment": "PERSPECTIVE 4: ENSLAVED WORKFORCE (TANGLED ROPE) \u2014 Performs much of the physical labor maintaining the bath system (heating, water pumping, cleaning, repairs) and may have limited access to bathing facilities. Constrained exit: enslaved status reduces mobility options severely. Experiences both coordination benefit (hygiene when allowed access) and extraction (labor coercion). The system actively enforces slavery structures while providing minimal reciprocal benefit. d\u22480.88, f(d)\u22481.30, \u03c3=0.9 \u2192 \u03c7\u22480.41. Significant asymmetric extraction masked by coordination rhetoric."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Wealthy Citizen",
+      "comment": "PERSPECTIVE 5: WEALTHY CITIZEN (ROPE) \u2014 Uses public baths as social venues and civic participation, but often has private bathing facilities at home. Exit options are strong arbitrage: can choose between public and private, can afford alternative hygiene solutions. Experiences public baths as a coordination mechanism enabling mixed-class socialization and civic display. d\u22480.20, f(d)\u22480.05, \u03c3=0.8 \u2192 \u03c7\u22480.01. Minimal extraction; strongly beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE-DOMINANT VIEW) \u2014 The Roman bath system is a genuine coordination mechanism: it solves the collective hygiene problem at scale, enables cross-class social integration, distributes maintenance labor through a stable institutional framework, and generates civic legitimacy. The system exhibits low extractiveness (0.35), low suppression (0.25), and low theater (0.38), consistent with pure coordination. The primary tension is that the system is built partly on enslaved labor extraction, which the rope classification does not fully capture from enslaved perspectives. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.23. Moderate classification from balanced perspective; reveals need for perspectival decomposition."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "slave_labor_degree",
+      "question": "What proportion of bath system maintenance labor came from enslaved versus free/wage workers, and did this ratio change over the imperial period?",
+      "resolution_mechanism": "Epigraphic evidence (inscriptions of bath workers), papyri records, historical census data; comparison across regions and time periods",
+      "impact": "High slave proportion (>50%): tangled_rope classification dominates; system is extraction masked by public coordination narrative. Low slave proportion (<20%): rope classification is robust; extraction component is secondary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of enslaved labor in bath system maintenance"
+    },
+    {
+      "id": "cost_distribution_subsidy",
+      "question": "How were bath operating costs distributed across tax revenue, user fees, and private benefactor funding? Did the distribution reflect true public benefit or hidden extraction?",
+      "resolution_mechanism": "Analysis of municipal tax records, benefactor inscriptions, Roman financial texts (Frontinus, etc.); cost accounting of fuel (wood), water pumping, maintenance; comparison of subsidy levels across cities and time periods",
+      "impact": "If heavily tax-subsidized with low user fees: rope classification confirmed (public coordination). If high user fees on lower classes: tangled_rope (coordination with extraction). If private benefactors absorbed costs: rope with patron-client extraction (secondary).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost distribution and subsidy sources for Roman baths"
+    },
+    {
+      "id": "disease_prevention_efficacy",
+      "question": "How much of Roman urban health improvements in the imperial period were causally attributable to public baths versus improved sanitation, aqueducts, food supply, or other factors?",
+      "resolution_mechanism": "Paleontological and skeletal evidence of disease prevalence; comparative analysis of cities with/without extensive bath systems; epidemiological modeling; historical records of plague, cholera, mortality rates",
+      "impact": "High causal attribution: baths function as critical coordination mechanism; rope classification is robust. Low attribution: baths are partly theater (social/elite function); theater_ratio rises, piton perspective becomes viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal impact of baths on urban public health"
+    },
+    {
+      "id": "access_equity_reality",
+      "question": "Were Roman public baths genuinely accessible to all social classes or were practical barriers (cost, time, gender, ethnic, or class discrimination) substantial?",
+      "resolution_mechanism": "Historical sources on bath admission policies; economic analysis of opportunity cost of time for lower-income workers; gender access restrictions; spatial distribution of baths and population density; comparative access data across cities",
+      "impact": "High genuine access: rope classification robust across all perspectives. High practical barriers: tangled_rope or scaffold (temporary access) from lower-class perspective; reveals snare-like dynamics for excluded groups.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual accessibility of baths to lower classes and marginalized groups"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Roman public bath system (thermae) represents one of history's most extensive state-sponsored infrastructure networks, serving urban populations across the Mediterranean, Britain, and beyond from roughly the 2nd century BCE through the 5th century CE. The system provided bathing, heating, recreation, and social gathering at minimal cost to users, subsidized by imperial taxation and private benefaction. From the primary perspective, this appears as a pure coordination mechanism: it solved the collective hygiene problem at scale, enabled mixed-class civic participation, and distributed maintenance labor through a stable institutional framework. However, the system's foundation in enslaved labor, its construction through extractive taxation, and its increasing theatrical function (social display and elite legitimation) over time reveal it as more complex than a simple rope. The constraint exhibits all characteristics of coordination (low base extractiveness, low suppression, low theater) but is layered with secondary extraction mechanisms that are obscured by the public benefit narrative.",
+    "key_agents": [
+      "Urban lower classes (powerless/mobile): Primary beneficiaries of free/cheap access to hygiene and social spaces; experience constraint as pure coordination; ability to visit multiple baths provides exit options",
+      "Imperial administration (institutional/arbitrage): Designer and enforcer of system; benefits through social stability and civic loyalty; controls subsidy levels and can withdraw at will",
+      "Bath attendants and water workers (moderate/mobile): Gain employment and income from system maintenance; modest extraction through wage suppression; can exit to other trades",
+      "Enslaved workforce (organized/constrained): Performs labor maintaining system; constrained exit options; experiences tangled_rope: forced labor plus minimal access benefit",
+      "Wealthy citizens (powerful/arbitrage): Use baths for social status and networking; can afford private alternatives; experience minimal extraction",
+      "Analytical observer (analytical/analytical): Sees system as primarily coordinative with secondary extraction components; risks naturalizing social stratification as inevitable feature"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The system combines genuine public coordination (hygiene, labor distribution) with subtle extraction mechanisms. The primary extraction is the hidden labor cost: enslaved workers and low-wage service workers subsidize the system through suppressed compensation. Secondary extraction occurs through taxation: all citizens pay into a system whose benefits are distributed unequally (wealthy have private alternatives). The value is moderate rather than low because the benefit distribution is genuinely broad, and the coordination problem solved (urban hygiene at scale) is substantial. Suppression (0.25): Low-moderate. No strong coercion is applied to bath *users* \u2014 participation is voluntary and access is relatively open. Suppression operates primarily on *workers* (enslaved and wage labor) who maintain the system. For users, alternatives exist (rivers, private facilities, aqueducts), so the constraint is not highly suppressive. Theater ratio (0.38): Moderate-low. The bath system has genuine functional content (hygiene, heat distribution, labor organization) but includes significant theatrical elements: elite use of baths for status display, imperial propaganda about public provision, and performative aspects of bathing rituals. Over the imperial period, the theater ratio rises from 0.25 to 0.38 as the system becomes more about civic identity and less about raw hygiene (aqueduct improvements reduce hygiene necessity; elaborate baths become status markers).",
+    "perspectival_gap": "The perspectival gap is substantial and follows extraction axes. The urban laborer sees pure coordination (rope): free access, multiple alternatives, solves a real problem. The imperial administration also sees rope: coordination mechanism for social stability. The analytical observer sees rope-dominant: low extractiveness metrics support this. However, the enslaved workforce sees tangled_rope: forced labor extraction masked by coordination narrative. The wealthy citizen sees rope: they enjoy the social benefit with arbitrage option. The bath worker occupies intermediate position: modest extraction through wage suppression, but genuine employment benefit. The key tension is that 'public benefit' narratives obscure the extraction experienced by laborers (especially enslaved). The system is genuinely coordinative (it solves hygiene), but the coordination is built on and maintained through extraction from workers. This is a classic tangled_rope pattern: genuine coordination function + asymmetric extraction.",
+    "directionality_logic": "Urban lower classes: Primary beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.25. Low directionality; net beneficiary. Imperial administration: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.01. Minimal directionality; strong beneficiary position. Bath workers: Victim of wage suppression + mobile \u2192 d\u22480.45, f(d)\u22480.55. Moderate directionality; extraction through wage suppression, but benefit from stable employment and access. Enslaved workforce: Victim of forced labor + constrained \u2192 d\u22480.88, f(d)\u22481.30. High directionality; forced labor extraction is the primary structure. Wealthy citizens: Beneficiary + arbitrage \u2192 d\u22480.20, f(d)\u22480.05. Very low directionality; strong beneficiary with exit options. Analytical observer: Balanced \u2192 d\u22480.50, f(d)\u22480.65. Moderate directionality; sees both coordination and extraction; perspective captures the system's hybridity.",
+    "mandatrophy_analysis": "The mandatrophy in the Roman bath system is the tension between 'public infrastructure = pure coordination' and 'public infrastructure = extractive apparatus.' The rope classification is correct for users (lower classes, wealthy): the system genuinely solves the collective hygiene problem and distributes benefits broadly. The tangled_rope classification is correct for workers (enslaved and wage laborers): the system requires extraction of labor to function, and that extraction is masked by the coordination narrative. The system is not a false rope (doesn't hide pure extraction) \u2014 the coordination is real. But it is not a pure rope (doesn't lack asymmetric extraction). The tangled_rope classification resolves the mandatrophy by acknowledging that the system simultaneously performs coordination (hygiene) and extraction (labor). The theater_ratio (0.38) is low enough that the system is not primarily theatrical, but high enough to indicate that elite legitimation and status display are significant secondary functions. The system's extractiveness rising from 0.20 to 0.35 over 100 years indicates that as hygiene improvements reduce the functional necessity of baths, the system becomes more about social coordination and status, increasing the ratio of extraction (labor cost) to genuine hygiene benefit. This is consistent with piton dynamics: original function (hygiene) is partly superseded by alternative infrastructure (aqueducts), leaving the system sustained by institutional inertia and elite benefit, with theater rising."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_aqueduct_system",
+      "imperial_taxation_structure",
+      "slavery_institution_rome"
+    ],
+    "dual_formulation_note": "The Roman bath system decomposition: The public access/hygiene coordination function (rope) is structurally distinct from the labor extraction mechanism (tangled_rope/snare from worker perspective). The unified constraint story captures both, but alternative decomposition would separate 'bath hygiene coordination' (\u03b5\u22480.15, rope) from 'bath labor extraction' (\u03b5\u22480.55, snare). The unified story's \u03b5\u22480.35 reflects the hybrid. Network edges: aqueduct system provides upstream water infrastructure (affects baths); taxation structure provides funding mechanism (affects baths); slavery institution provides labor supply (affects baths). Baths affect social stability, disease prevention, and labor mobility downstream."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.88
+    }
+  ]
+}

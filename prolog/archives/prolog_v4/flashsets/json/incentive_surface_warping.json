@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "incentive_surface_warping",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Perverse Optimization Trap (Goodhart's Law)",
+    "topic_domain": "economic/organizational/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "metric_designers",
+      "early_adopters"
+    ],
+    "victims": [
+      "system_integrity",
+      "unintended_targets"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "System Integrity",
+      "comment": "PERSPECTIVE 1: SYSTEM INTEGRITY (SNARE) - The overall system suffers as individuals optimize for the metric rather than the intended outcome. No exit; bears the cost of misaligned incentives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Unintended Targets",
+      "comment": "PERSPECTIVE 2: UNINTENDED TARGETS (TANGLED ROPE) - Individuals or groups negatively affected by the perverse optimization, with limited exit options but some ability to adapt or mitigate the harm. Experiences both coordination benefits and extraction costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Metric Designers",
+      "comment": "PERSPECTIVE 3: METRIC DESIGNERS (ROPE) - The individuals or institutions responsible for creating and implementing the incentive system, initially seeing it as a tool for coordination. Net beneficiary. Experience coordination as they get alignment (at least initially)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Bodies",
+      "comment": "PERSPECTIVE 4: REGULATORY BODIES (PITON) - Regulatory bodies which are slow to adapt to the changing landscape. The original purpose of the regulation may be subverted or degraded. High theater as they try to patch problems. The original intent has atrophied, but the constraint remains due to institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) - A broad, long-term view reveals the mixed coordination/extraction nature of the incentive structure, the inherent difficulties of aligning metrics with complex goals."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "metric_complexity",
+      "question": "How much complexity can a metric absorb before becoming counterproductive?",
+      "resolution_mechanism": "Empirical testing of different metric designs; analysis of historical cases of Goodhart's Law",
+      "impact": "Affects the degree of distortion; determines if it's a rope or a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Complexity thresholds for counterproductive metrics"
+    },
+    {
+      "id": "adaptive_capacity",
+      "question": "Can the system adapt to perverse optimization effectively?",
+      "resolution_mechanism": "Monitoring system responses; analyzing how quickly corrective actions are taken.",
+      "impact": "Determines if the system can revert back to a rope, or degrades into a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "System's capacity to adapt to perverse optimization."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A scenario where a 'Rope' designed to align individual behavior with collective goals (e.g., performance bonuses, metrics-based funding, or algorithmic rewards) inadvertently 'warps' the behavioral landscape. This warping leads to unintended consequences, as individuals optimize for the metric rather than the actual goal, resulting in a 'Tangled Rope' or even 'Snare' for the system's integrity. Goodhart's Law highlights the difficulty of aligning measurable metrics with complex or nuanced goals.",
+    "key_agents": [
+      "Metric Designers: Primary beneficiary (institutional/arbitrage) - responsible for creating and implementing the incentive system.",
+      "Early Adopters: Secondary beneficiary (powerful/mobile) - initially benefits from gaming the system.",
+      "System Integrity: Primary victim (powerless/trapped) - the overall system suffers as individuals optimize for the metric.",
+      "Unintended Targets: Secondary victim (moderate/constrained) - individuals or groups negatively affected by the perverse optimization."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The system extracts value from overall integrity as individuals focus on the metric and neglect other aspects. The extraction is not maximal as some level of coordination is still present. Suppression (0.60): Moderate-High. Suppression refers to the limitations placed on actions outside the defined metric. System integrity is suppressed by optimized metrics. The overall theater ratio increases as the system becomes more 'optimized'. The performance gains are performative only.",
+    "perspectival_gap": "The metric designers see initial coordination (Rope), while the system as a whole suffers (Snare). Those negatively impacted, see a Tangled Rope scenario. The regulators, constrained by their original mandate, see a piton.",
+    "directionality_logic": "Each perspective's directionality value (d) is determined by the agent's structural position within the incentive system. The metric designers experience a low d, as they see the system as a coordination mechanism. Those targeted, experience high d and little agency to change things."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "bay_of_pigs_operational_silo",
+    "version": "1.0",
+    "generated_date": "2024-01-09",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "The CIA-Pentagon Intelligence/Action Silo (Operation Zapata)",
+    "topic_domain": "political/military",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "cia_leadership"
+    ],
+    "victims": [
+      "cuban_exiles",
+      "us_national_security"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Cuban Exiles",
+      "comment": "Cuban exiles were trapped by the operation, unable to exit once the invasion began, and bore the brunt of the failure. They had little to no power to alter the course of events and suffered the most immediate consequences."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US National Security",
+      "comment": "The US national security interests were damaged by the failed operation, facing long-term reputational and strategic costs. While not immediately 'powerless,' the long-term damage constrained future policy options and undermined credibility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Pentagon Planners",
+      "comment": "The Pentagon initially viewed this as a coordination effort to assist an ally, but later found themselves constrained by the CIA's operational control and the limited information sharing. They did not fully benefit as the plan did not originate from the pentagon and were only supporting, and had limited exit due to hierarchy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "CIA Leadership",
+      "comment": "The CIA leadership initially benefitted from the operation by enhancing their power and influence. However, the failure of the Bay of Pigs constrained their future operations and damaged their reputation, turning their benefit into a liability."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Historical Analysis",
+      "comment": "Looking back, the intelligence/action silo appears as a degraded process. The CIA's initial benefit has long since atrophied, and the continued failures to learn from this case suggest the silo persists more as a performance than a functional component of national security strategy. The initial coordination benefits have degraded due to the long term damage."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "information_flow",
+      "question": "To what extent did the extreme 'need to know' prevent critical information and dissenting opinions from reaching key decision-makers?",
+      "resolution_mechanism": "Declassification of internal CIA memos and after-action reports detailing the flow of information and the suppression of dissenting viewpoints.",
+      "impact": "Determines the degree to which the silo functioned as an active suppression mechanism (snare) versus a coordination failure (rope) or a temporary, necessary measure (scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which the 'need to know' suppressed dissenting opinions."
+    },
+    {
+      "id": "success_definition",
+      "question": "How was 'success' defined and measured within the CIA leading up to the operation, and how did this definition influence decision-making?",
+      "resolution_mechanism": "Analysis of internal CIA planning documents and interviews with surviving personnel to determine the criteria used to assess the likelihood of success and the factors considered most important.",
+      "impact": "If success was defined narrowly (e.g., solely on the military aspects of the invasion) it would support the Snare classification. A broader, more realistic definition would suggest a less extractive coordination failure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition of 'success' within the CIA."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "Operation Zapata, the Bay of Pigs invasion, was severely hampered by an extreme 'need to know' operational silo within the CIA and between the CIA and the Pentagon. This silo prevented dissenting opinions and critical information from reaching key decision-makers, ultimately contributing to the operation's failure and significant strategic consequences.",
+    "key_agents": [
+      "CIA Leadership: Primary beneficiary (institutional/constrained) - sought increased power and influence, initially benefitting from the operation's planning.",
+      "Cuban Exiles: Primary victim (powerless/trapped) - bore the brunt of the operation's failure and its immediate consequences.",
+      "US National Security: Secondary victim (moderate/constrained) - suffered long-term reputational and strategic damage from the failed operation.",
+      "Pentagon Planners: Supporting Institution (institutional/constrained) - contributed resources but lacked full operational control and complete information."
+    ],
+    "logic_rationale": "Extractiveness (0.75): High. The 'need to know' silo extracted critical information and alternative perspectives from the decision-making process, leading to a flawed plan and ultimately a strategic failure. Suppression (0.80): High. Active suppression of dissenting opinions and alternative assessments within the CIA and the intentional lack of communication with external agencies led to significant barriers to effective decision-making. Theater Ratio (0.30): Low to moderate. While some performative elements existed, the silo was primarily functional in suppressing information and controlling the operation.",
+    "perspectival_gap": "The Cuban exiles experienced the operation as a snare, trapped and powerless against its unfolding consequences. US National Security suffered long-term damage, feeling the constraints of the failed operation for years to come. The CIA leadership initially benefited, but the ultimate failure constrained their agency and damaged their reputation. The historical analysis views this as a cautionary tale, a degraded process with limited remaining coordination value.",
+    "directionality_logic": "CIA leadership benefits from control. Cuban exiles and US National Security bear the costs of failure. Pentagon is constrained by limited information. The CIA leadership's constrained exit acknowledges the reputational damage, lowering their chi relative to pure beneficiaries."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

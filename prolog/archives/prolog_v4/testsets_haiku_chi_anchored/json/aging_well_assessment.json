@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "aging_well_assessment",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Commercialized Functional Aging Assessment System",
+    "topic_domain": "health/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "assessment_companies",
+      "specialized_clinics",
+      "health_insurers"
+    ],
+    "victims": [
+      "elderly_patients",
+      "general_practitioners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Elderly Patient",
+      "comment": "PERSPECTIVE 1: ELDERLY PATIENT (SNARE) — Experiences the system as coercive. Required by their physician or insurer, they pay for assessments and interventions of unclear value, and the results can be used to increase their insurance premiums. They are trapped by their health needs and lack of alternatives. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. Just below the canonical snare threshold, but the high suppression (0.65) makes the snare classification appropriate."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Assessment Company",
+      "comment": "PERSPECTIVE 2: ASSESSMENT COMPANY (ROPE) — As the primary beneficiary, the company experiences the system as a pure coordination mechanism. It standardizes a valuable service, connects clients with providers, and creates a market. From their view, they are simply facilitating better health outcomes. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07. Negative effective extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Health Insurer",
+      "comment": "PERSPECTIVE 3: HEALTH INSURER (TANGLED ROPE) — An institutional actor that is both a beneficiary (gains valuable risk-stratification data) and constrained by regulations and market pressures. They see both the coordination value of standardized metrics and the extractive potential for pricing risk. d≈0.30, f(d)≈0.20, σ=1.0 → χ≈0.11. Low extraction reflects their mixed role."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The General Practitioner",
+      "comment": "PERSPECTIVE 4: GENERAL PRACTITIONER (TANGLED ROPE) — Constrained by patient demand (driven by marketing) and insurer requirements. They see the clinical utility (coordination) but also the pressure to bill and the potential for over-medicalization (extraction). They are a victim of the system's pressure but also an agent within it. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.51."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a genuine coordination function (standardizing functional health metrics) but is coupled with a significant, asymmetric extraction mechanism (billing, insurance risk-pricing). This hybrid nature is the hallmark of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "predictive_utility_vs_risk_sorting",
+      "question": "Is the system's primary function to improve patient health outcomes (coordination) or to provide insurers with granular data for risk-sorting and premium pricing (extraction)?",
+      "resolution_mechanism": "Longitudinal studies comparing health outcomes of participants vs. non-participants, controlling for baseline health. Analysis of how insurers change premiums based on assessment scores.",
+      "impact": "If outcomes improve significantly, it strengthens the Rope/Scaffold case. If premiums rise for low-scorers without commensurate support, it confirms the Snare/Tangled Rope classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distinguishing between the system's health benefit and its insurance risk-sorting function."
+    },
+    {
+      "id": "intervention_efficacy",
+      "question": "Do the standardized interventions recommended based on the assessments lead to clinically significant improvements, or do they primarily serve as a billable service?",
+      "resolution_mechanism": "Randomized controlled trials on the recommended interventions (e.g., specific exercise regimens, supplements) versus generalized lifestyle advice.",
+      "impact": "High efficacy supports the coordination function. Low efficacy suggests the interventions are part of the extractive theater, strengthening the Snare classification for victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining if recommended interventions are clinically effective or primarily for revenue."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the evolution of functional aging tests (e.g., grip strength, walking speed) from academic research tools into a commercialized system. This system packages assessment, intervention recommendations, and billing into a product marketed to individuals, clinics, and insurers. While it offers a standardized language for discussing and tracking functional health (a coordination function), its commercial nature introduces significant extraction through service fees and the use of data for insurance risk stratification.",
+    "key_agents": [
+      "Elderly Patients: Primary targets (powerless/trapped) — pay for services and bear the risk of negative insurance consequences.",
+      "Assessment Companies & Specialized Clinics: Primary beneficiaries (institutional/arbitrage) — profit from the sale of assessments and interventions.",
+      "Health Insurers: Secondary beneficiaries (institutional/constrained) — gain data to price risk more accurately, but operate within a regulated environment.",
+      "General Practitioners: Secondary victims (moderate/constrained) — pressured to adopt the system, which can supersede their holistic clinical judgment."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.55) is high, reflecting the direct costs to patients and the indirect costs via insurance premium adjustments. Suppression (0.65) is also high, as patients have few 'official' alternatives if the system is endorsed by their doctor or insurer, and marketing creates strong social pressure to 'age well'. The theater ratio (0.40) is moderate; the tests have real clinical grounding, but the commercial packaging and marketing add a performative layer of promising precise control over the aging process.",
+    "perspectival_gap": "The gap is stark. The company providing the service sees a pure Rope, a tool for empowering users. The patient, facing costs and potential penalties, sees a Snare they cannot easily escape. The insurer and doctor, caught in the middle, see a Tangled Rope, recognizing both the utility of the data and the coercive, extractive pressures the system creates. The analytical view confirms the Tangled Rope, as the system's existence depends on both its coordination function and its ability to extract value.",
+    "directionality_logic": "Beneficiaries (assessment companies, insurers) have low derived directionality (d), resulting in low or negative effective extraction (χ), classifying the constraint as a Rope or low-extraction Tangled Rope from their perspective. Victims (patients, GPs) have high derived directionality, leading to high χ and a Snare or high-extraction Tangled Rope classification. The system's structure creates these divergent experiences.",
+    "mandatrophy_analysis": "This case is a classic example of how a seemingly beneficial coordination tool (standardizing health metrics) becomes a Tangled Rope when commercialized. A simple analysis might label it a 'scam' (Snare) or a 'health innovation' (Rope). The Deferential Realism framework correctly identifies its dual nature. The system is not purely one or the other; its stability comes from serving a genuine coordination need for some actors while simultaneously extracting from others. This resolves the mandatrophy by showing the structure is a hybrid, not a mis-classified pure type."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  }
+}

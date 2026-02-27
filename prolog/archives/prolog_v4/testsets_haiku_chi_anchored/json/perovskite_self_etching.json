@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "perovskite_self_etching",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pero"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 2D Perovskite Machinability Constraint",
+    "topic_domain": "technological/semiconductors",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "conventional_lithography_vendors",
+      "semiconductor_equipment_manufacturers"
+    ],
+    "victims": [
+      "perovskite_researchers",
+      "device_yield_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Perovskite Research Group",
+      "comment": "PERSPECTIVE 1: PEROVSKITE RESEARCH GROUP (SNARE) \u2014 Trapped by material incompatibility. Traditional lithography (photoresist, electron beam, ion implantation) damages the soft lead halide lattice, causing defects and drastically reducing device performance. No viable alternative manufacturing pathway exists within institutional budgets. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Device Yield and Efficiency",
+      "comment": "PERSPECTIVE 2: DEVICE YIELD AND EFFICIENCY (SNARE) \u2014 Constrained by physics and tooling limits. Perovskite devices fabricated with conventional lithography suffer 40-60% performance degradation due to damage-induced defects. Researchers can invest in damage mitigation but cannot escape the constraint without switching materials or developing new processes. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Conventional Lithography Vendors",
+      "comment": "PERSPECTIVE 3: CONVENTIONAL LITHOGRAPHY VENDORS (ROPE) \u2014 Benefit from sustained demand and high margins on equipment and services. The perovskite market's incompatibility with soft materials reinforces their market lock-in: researchers must purchase expensive photoresist, e-beam tools, and reactive ion etching systems regardless of damage. Vendors experience the constraint as pure coordination: 'This is how semiconductor processing works.' d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Emerging Soft-Material Processing Research",
+      "comment": "PERSPECTIVE 4: EMERGING SOFT-MATERIAL PROCESSING RESEARCH (TANGLED ROPE) \u2014 Organized research communities (materials chemistry, soft electronics, MEMS) are developing gentle processing alternatives: self-etching nanowires, selective-dissolution patterning, laser-assisted ablation, and ionic-liquid-based lift-off. These methods reduce damage and achieve comparable feature resolution. However, adoption is constrained by lack of commercial tooling, unproven scalability at device-level, and publication bias toward conventional approaches. d\u22480.48, f(d)\u22480.62, \u03c3=1.1 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Semiconductor Industry Standards",
+      "comment": "PERSPECTIVE 5: SEMICONDUCTOR INDUSTRY STANDARDS (PITON) \u2014 Conventional lithography dominates through institutional inertia, not optimal function. Photoresist, E-beam, RIE, and ion implantation are well-established, taught in every semiconductor engineering program, and embedded in facility design. Equipment manufacturers have decades of optimization investment. Theater ratio 0.64 reflects that much of the 'best practice' rhetoric around conventional lithography is performative: the assumption that this is the only viable path has become unquestioned. The standard persists because the economic switching costs are high, not because alternatives have been fairly evaluated."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open-Source Soft-Fab Movement",
+      "comment": "PERSPECTIVE 6: OPEN-SOURCE SOFT-FAB MOVEMENT (SCAFFOLD) \u2014 Academic and startup ecosystems (Kirchhoff Institute, Cambridge Graphene Center, soft-robotics labs) are building low-cost, damage-minimal alternative processing workflows. These alternatives exhibit coordination function (sharing methods, collaborative troubleshooting) with explicit sunset logic: as soft-material processing matures in the next 5-10 years, researchers will have viable off-the-shelf alternatives to conventional lithography. d\u22480.38, f(d)\u22480.38, \u03c3=1.1 \u2192 \u03c7\u22480.27."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 From a civilizational view, material incompatibility (hard processes + soft materials = damage) appears immutable: 'Lithography requires harsh chemicals and energies; perovskites are soft; therefore incompatibility is inherent.' This naturalizes what is actually a contingent historical fact: conventional lithography was optimized for rigid silicon, not soft materials. The structural data (\u03b5=0.58, suppression=0.68, theater=0.64) reveals this as a false natural law. The constraint is technological (process architecture) not fundamental (physics)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "self_etching_selectivity",
+      "question": "Can self-etching mechanisms achieve sub-100nm feature resolution and aspect ratios comparable to conventional lithography while preserving perovskite lattice integrity?",
+      "resolution_mechanism": "Experimental demonstration of patterned perovskite devices (solar cells, LEDs, photodetectors) with self-etching or gentle processing; comparison of feature precision and device performance against conventional lithography baseline",
+      "impact": "If yes with <5% performance loss: Scaffold perspective confirmed, sunset timeline is 5-10 years. If no or >20% loss: Scaffold is aspirational, constraint persists as Snare/Tangled Rope for foreseeable future.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether self-etching achieves resolution and selectivity parity with conventional lithography"
+    },
+    {
+      "id": "commercial_tooling_availability",
+      "question": "Will equipment manufacturers (Applied Materials, ASML, Coventor) commercialize soft-material processing tools, or will adoption remain confined to academic/startup workflows?",
+      "resolution_mechanism": "Market surveys; equipment vendor R&D announcements and product roadmaps; adoption rates in device manufacturing facilities over next 3-5 years",
+      "impact": "If commercialized: constraint shifts from Snare to Tangled Rope/Scaffold (institutional support for alternatives). If not commercialized: researchers remain trapped (Snare persists), theater ratio continues to rise as conventional tools are used despite their unsuitability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commercial semiconductor equipment vendors will develop soft-material processing tools"
+    },
+    {
+      "id": "material_platform_lock_in",
+      "question": "Are perovskites the optimal semiconductor platform for soft electronics, or are they over-invested due to historical preference for halide materials?",
+      "resolution_mechanism": "Comparative device performance analysis: perovskites via gentle processing vs alternative soft semiconductors (organic conjugated polymers, 2D TMDs, natural biopolymers) using conventional processing",
+      "impact": "If perovskites remain superior: research must solve machinability constraint. If alternatives are competitive: constraint becomes a technology-switching problem, not an inherent limitation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether perovskites remain the optimal soft-semiconductor platform"
+    },
+    {
+      "id": "performance_damage_thresholds",
+      "question": "What is the true damage threshold for conventional lithography on perovskites \u2014 is 40-60% performance loss unavoidable, or can damage mitigation strategies reduce this to <10% with proper protocols?",
+      "resolution_mechanism": "Systematic study of photoresist type, energy density, etch chemistry, and post-process annealing on perovskite device performance; statistical analysis of damage mechanisms",
+      "impact": "If mitigation reduces loss to <10%: constraint becomes lower-severity Tangled Rope (manageable with engineering). If threshold is inherent: constraint remains high-severity Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether performance damage from conventional lithography is avoidable through damage mitigation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The 2D perovskite machinability constraint arises from the fundamental incompatibility between conventional semiconductor lithography techniques and the soft lead halide crystal lattice. Traditional approaches (photolithography with photoresist, electron beam patterning, reactive ion etching, and ion implantation) rely on harsh chemical solvents, energetic particle bombardment, and high temperatures \u2014 all of which damage or destroy perovskite films. This creates a structural extraction mechanism: perovskite researchers are locked into expensive, damage-inducing processing workflows, while vendors of conventional lithography equipment maintain high margins by capturing the entire perovskite research community regardless of material suitability. The constraint exhibits all six DR types depending on perspective: for researchers it is a Snare (trapped by incompatible processes); for vendors it is a Rope (pure coordination through market lock-in); for emerging soft-processing research it is Tangled Rope (mixed coordination and extraction); for the open-fab movement it is Scaffold (temporary with sunset); for semiconductor industry standards it is Piton (degraded ritual maintained by institutional inertia); and from an analytical view it appears as a false Mountain (naturalizing what is actually a contingent technological choice). The theater ratio (0.64) reflects that much of conventional lithography's dominance in the perovskite domain is performative \u2014 the implicit assumption that 'semiconductor processing means silicon-optimized tools' remains unquestioned despite being unsuitable for soft materials. Extractiveness (0.58) captures the sustained cost and performance penalty borne by researchers; suppression (0.68) reflects the lack of commercially viable alternatives and the institutional barriers to process switching.",
+    "key_agents": [
+      "Perovskite research groups: Primary victims (powerless/trapped) \u2014 cannot escape damage-inducing conventional lithography within institutional budgets",
+      "Device yield and efficiency: Secondary victim (moderate/constrained) \u2014 suffer 40-60% performance degradation from damage; can invest in mitigation but not escape constraint",
+      "Conventional lithography vendors: Primary beneficiary (institutional/arbitrage) \u2014 capture sustained demand for expensive equipment; market lock-in enables high margins despite material unsuitability",
+      "Emerging soft-material processing research: Organized secondary actor (organized/constrained) \u2014 developing gentler alternatives (self-etching, selective dissolution, laser ablation); constrained by lack of commercial tooling and publication bias",
+      "Semiconductor industry standards bodies: Institutional secondary actor (institutional/arbitrage) \u2014 maintain and propagate silicon-optimized processing as universal best practice; see conventional lithography as inherent rather than contingent",
+      "Open-source soft-fab movement: Organized alternative pathway (organized/mobile) \u2014 building low-cost damage-minimal workflows in academic/startup settings with explicit sunset logic (5-10 year maturation timeline)",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks falsely naturalizing material incompatibility as physical law rather than technological design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting sustained material damage and economic costs. Perovskite researchers incur significant expenses for conventional equipment unsuitable for their material platform, and they lose 40-60% device performance to damage. However, extractiveness is not maximal (0.70+) because some workarounds exist (damage mitigation strategies, gentler techniques at smaller scales), and the constraint is recognized as a problem rather than accepted as natural. The trajectory from 0.35 to 0.58 over 15 years reflects increasing severity as perovskite research matured and the damage problem became more apparent. Suppression (0.68): Moderate-high. Barriers to alternative processing include lack of commercial tooling, high switching costs, publication bias favoring conventional approaches, and institutional inertia in semiconductor curricula and facility design. However, suppression is not total because academic labs can develop custom gentle-processing workflows, and early-stage alternatives have demonstrated proof-of-concept. Theater ratio (0.64): Moderate-high. Much of conventional lithography's dominance in perovskite domain is performative: the rhetoric of 'best practice' and 'industry standard' is sustained even though the techniques cause material-specific damage. The 'we must use conventional lithography because it is semiconductor best practice' narrative has become unquestioned. Theater has increased over time as the performance degradation became more obvious yet the industry response remained to 'engineer around' the damage rather than question the process choice.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival disagreement on classification type and severity. Perovskite researchers experience pure extraction (Snare): they are forced to use inappropriate tools at high cost with severe performance penalties and no exit option within institutional constraints. Conventional lithography vendors experience pure coordination (Rope): they view themselves as providing standard industry solutions, with no awareness of material-specific unsuitability. Emerging soft-processing research sees mixed coordination and extraction (Tangled Rope): there is genuine value in developing gentler methods and the research community is organized, but commercial barriers and publication bias constrain adoption. The open-fab movement sees a temporary problem with a real sunset (Scaffold): they anticipate that in 5-10 years, mature alternatives will make conventional lithography obsolete for soft materials. Industry standards bodies see institutional best practice (Piton): the constraint is maintained through unquestioned assumption and switching costs, not because it works. The analytical observer sees false universality (false Mountain): naturalizing material incompatibility as physical law rather than a contingent design choice. The perspectival gap reveals that 'conventional lithography' is not a solution \u2014 it is a tool optimized for a different problem (rigid silicon patterning) being forced onto a problem it was never designed to solve.",
+    "directionality_logic": "Perovskite research groups: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction. Researchers cannot exit the constraint without abandoning perovskites entirely. Device yield and efficiency: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction; some mitigation is possible but the fundamental incompatibility remains. Conventional lithography vendors: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Negative effective extraction (net beneficiary) \u2014 vendors can freely switch to new market opportunities and face no constraint. Emerging soft-material processing research: Mixed (organized/constrained) \u2192 d\u22480.48, f(d)\u22480.62. Moderate extraction due to institutional barriers and publication bias, but organized capacity and real alternatives reduce severity. Open-source soft-fab movement: Mixed (organized/mobile) \u2192 d\u22480.38, f(d)\u22480.38. Lower extraction because the movement has agency, developing pathways themselves with visible sunset. Semiconductor industry standards: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification comes from theater gate (\u22650.70), not from high \u03c7. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. False Mountain requires the engine's false summit detector to identify naturalization.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is TECHNOLOGICAL, not NATURAL. The apparent contradiction \u2014 'Is perovskite machinability inherent to the material or a contingent design choice?' \u2014 is dissolved by understanding that conventional lithography is optimized for silicon rigidity, not perovskite softness. The natural-law framing ('material incompatibility is inherent') falsely universalizes what is actually a narrow design choice. The correct classification (Tangled Rope with Snare from researcher perspective, Scaffold from alternatives perspective) reveals that the constraint is institutional, not material-physical. If we measured perovskite compatibility with soft-processing techniques (self-etching, selective dissolution, laser ablation) rather than conventional lithography, the extractiveness would drop significantly and the constraint would shift toward Rope or Scaffold. This is the critical insight: the constraint is not about perovskite properties, but about tool-material mismatch. The mandatrophy prevention rule is satisfied by explicitly declaring beneficiaries (lithography vendors) and victims (perovskite researchers), which reveals the extraction mechanism (market lock-in) rather than naturalizing it as physics."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "perovskite_stability_window",
+      "soft_semiconductor_capital_access",
+      "lead_halide_toxicity_regulation"
+    ],
+    "dual_formulation_note": "The machinability constraint is downstream of broader soft-semiconductor material platform choices (perovskite vs organics vs 2D materials) but represents a distinct structural constraint: process incompatibility. The upstream stability and capital-access constraints set the perovskite adoption landscape; the machinability constraint determines whether perovskite devices can be manufactured profitably."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

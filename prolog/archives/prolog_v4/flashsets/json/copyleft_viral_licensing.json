@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "copyleft_viral_licensing",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Copyleft Viral Licensing (e.g., GPL)",
+    "topic_domain": "technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "copyleft_community",
+      "end_users"
+    ],
+    "victims": [
+      "proprietary_software_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Proprietary Software Developers",
+      "comment": "Developers who wish to create proprietary software are effectively excluded from using copyleft-licensed code. They are trapped if they want to build upon existing copyleft projects but cannot release their derivative work under a proprietary license."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Copyleft Community",
+      "comment": "The copyleft community benefits from the viral nature of the license, as it ensures that improvements and derivatives remain free and open. They can fork projects and have recourse to legal enforcement if the license is violated."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Dual Licensing Companies",
+      "comment": "Companies that offer dual licensing models (e.g., open-source and commercial licenses) experience both benefits and constraints. They can leverage the open-source community while also extracting value through commercial licenses. They are mobile, as they can change their licensing strategy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "End Users",
+      "comment": "End users benefit from the availability of free software and the assurance that it will remain free in the future. They have the arbitrage option of choosing between free and proprietary solutions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees a mixed coordination and extraction mechanism. Copyleft promotes collaboration and ensures software freedom but also restricts the choices of some developers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scope_of_derivative_work",
+      "question": "How broadly should 'derivative work' be defined?",
+      "resolution_mechanism": "Legal precedent and community consensus.",
+      "impact": "A broad definition strengthens the viral effect but may discourage contributions. A narrow definition reduces the license's effectiveness.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Defines the scope of derivative work under the copyleft license."
+    },
+    {
+      "id": "enforcement_effectiveness",
+      "question": "How effectively can copyleft licenses be enforced?",
+      "resolution_mechanism": "Court cases and legal analysis.",
+      "impact": "Effective enforcement deters violations and maintains software freedom. Weak enforcement undermines the license's purpose.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determines the effectiveness of copyleft license enforcement."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Copyleft licensing, exemplified by the GNU General Public License (GPL), is a legal strategy that uses copyright law to guarantee that software and its derivative works remain free and open-source. This is achieved by requiring that any modified or extended versions of the software also be licensed under the same copyleft license, ensuring a 'viral' effect of openness.  However, this creates a tension between the freedom to use and modify software and the restrictions placed on creating proprietary derivative works.",
+    "key_agents": [
+      "Proprietary Software Developers: Primary target (powerless/trapped) - Restricted from creating proprietary derivative works",
+      "Copyleft Community: Primary beneficiary (organized/arbitrage) - Benefits from the assurance of software freedom and continued openness",
+      "End Users: Secondary beneficiary (institutional/arbitrage) - Benefits from the availability of free software",
+      "Dual Licensing Companies: Moderate actors (powerful/mobile) - Balance between open source and proprietary models",
+      "Analytical Observer: Civilizational perspective (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.50): Moderate. Copyleft extracts from proprietary developers by preventing them from incorporating copyleft code into proprietary projects. Suppression (0.60): High. Copyleft effectively suppresses the creation of proprietary derivatives of copyleft-licensed code. Theater Ratio (0.30): Low. Copyleft licensing is more functional than theatrical; its main purpose is to ensure software freedom and openness, and it achieves this directly through legal mechanisms.",
+    "perspectival_gap": "The perspectival gap arises from the conflicting interests of different stakeholders. Proprietary software developers view copyleft as a snare, as it restricts their ability to create closed-source software. The copyleft community, on the other hand, sees it as a rope, as it enables the continued freedom and openness of software. Dual Licensing Companies see a tangled rope. The analytical observer sees both aspects and classifies it as tangled rope.",
+    "directionality_logic": "Proprietary developers are victims because they lose the option to create proprietary derivatives. The copyleft community benefits because the viral effect ensures that derived works remain open. Dual licensing companies experience a mix of both. End users benefit from the guarantee of perpetual software freedom. Directionality is determined by the power, exit options, and beneficiary/victim status of each agent."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "open_source_development_model"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,167 @@
+{
+  "header": {
+    "constraint_id": "soe_property_bailout",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Directed Purchase of Distressed Real Estate Assets",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "failing_private_developers",
+      "local_governments"
+    ],
+    "victims": [
+      "soe_shareholders",
+      "other_private_developers",
+      "general_taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Failing Private Developers",
+      "comment": "Failing private developers benefit in the immediate term through the offloading of distressed assets, improving their balance sheets and preventing bankruptcy. Exit option: arbitrage, as they can reinvest freed-up capital."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "SOE Shareholders",
+      "comment": "SOE shareholders are trapped, as they must bear the cost of the SOE's purchase of distressed assets without receiving commensurate returns. These investments may be suboptimal compared to other potential uses of capital, reducing long-term profitability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "SOE Management",
+      "comment": "SOE management are both beneficiaries and victims. They benefit from political capital by fulfilling the mandate and averting systemic risk. However, they are constrained by government directives and may face long-term losses from acquiring distressed assets at inflated prices. Exit: Constrained \u2013 limited ability to refuse directives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Other Private Developers",
+      "comment": "Other private developers that are not failing are at a disadvantage, as they do not receive similar bailouts and face increased competition from subsidized SOEs. Exit option: Constrained \u2013 cannot access SOE advantages."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Local Governments",
+      "comment": "Local governments benefit from averting a collapse of the property sector within their jurisdiction, protecting their tax base and employment. However, they become constrained by the SOE's acquisition of potentially low-value assets, reducing overall market efficiency and introducing moral hazard."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer views the policy as a Tangled Rope, recognizing the coordination aspect of preventing systemic risk but also the extraction from SOE shareholders and the potential for misallocation of resources."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "property_valuation_accuracy",
+      "question": "To what extent are the distressed real estate assets accurately valued during the SOE purchase?",
+      "resolution_mechanism": "Independent audits of purchased properties, comparison of transaction prices with market comparables.",
+      "impact": "If undervalued: SOEs are unfairly burdened, leading to long-term financial strain. If overvalued: Private developers are excessively bailed out, creating moral hazard.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of property valuation during the distressed asset purchase."
+    },
+    {
+      "id": "soe_investment_efficiency",
+      "question": "How efficiently can SOEs manage and redevelop the acquired distressed properties?",
+      "resolution_mechanism": "Track occupancy rates, rental income, and redevelopment costs for the purchased properties over time, compared to benchmarks for private developers.",
+      "impact": "If inefficient: The policy represents a long-term drain on state resources, with limited economic benefit. If efficient: The policy may succeed in stabilizing the property market and supporting economic growth.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Efficiency of SOE investment and redevelopment of distressed properties."
+    },
+    {
+      "id": "moral_hazard_extent",
+      "question": "To what extent does the policy create a moral hazard, encouraging future reckless behavior by private developers?",
+      "resolution_mechanism": "Observe changes in lending standards and risk-taking behavior by private developers following the implementation of the bailout policy.",
+      "impact": "If high moral hazard: Private developers will increase their risk appetite and debt levels, knowing that they will be bailed out if they fail, leading to future instability. If low moral hazard: The policy will have little impact on developer behavior, with market discipline continuing to prevail.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which the policy creates moral hazard."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A state-directed policy in China where State-Owned Enterprises (SOEs) are instructed to purchase foreclosed or distressed properties from failing private developers. The stated goal is to prevent systemic risk and stabilize the property market. However, this policy introduces various tensions, including moral hazard, potential misallocation of resources, and extraction from SOE shareholders.",
+    "key_agents": [
+      "Failing Private Developers: Primary beneficiary (institutional/arbitrage) - offloads distressed assets.",
+      "SOE Shareholders: Primary victim (powerless/trapped) - bear the cost of suboptimal investments.",
+      "SOE Management: Mixed (institutional/constrained) - benefits from political capital but constrained by government directives.",
+      "Other Private Developers: Victims (moderate/constrained) - face increased competition from subsidized SOEs.",
+      "Local Governments: Mixed (institutional/constrained) - benefits from averting collapse but constrained by inefficient SOE involvement.",
+      "General Taxpayers: Victims - bear the ultimate financial burden of inefficient resource allocation."
+    ],
+    "logic_rationale": "Extractiveness (0.60): The policy extracts value from SOE shareholders and other private developers through increased competition and resource misallocation. Suppression (0.70): The policy suppresses market signals and distorts competition. The theater_ratio is low (0.30) as the policy's stated goals align to some degree with actual coordination function (prevent systemic risk).",
+    "perspectival_gap": "The failing private developers see the policy as a Rope, a lifeline that allows them to survive. However, SOE shareholders see the policy as a Snare, extracting value from their investments. Other private developers view it as a competitive disadvantage. SOE management experience is mixed. The analytical observer acknowledges the coordination aspect of preventing systemic risk but also the extraction from SOE shareholders and the potential for misallocation of resources, leading to a Tangled Rope classification.",
+    "directionality_logic": "The directionality is determined by the structural position of each actor. Failing developers have arbitrage, experiencing minimal extraction. SOE shareholders are trapped, bearing the full cost. SOE management are constrained and experience a mixed influence. Local governments benefit from stability but are constrained by SOE inefficiency. Other private developers face constrained competition.",
+    "mandatrophy_analysis": "The policy could be mislabeled as a pure Rope (coordination mechanism) if only the perspective of the failing developers and the immediate stabilization of the property market are considered. However, the victims (SOE shareholders and other private developers) reveal the extraction aspect, making Tangled Rope the more accurate classification. The moral hazard and resource misallocation are crucial aspects in resolving this mandatrophy."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

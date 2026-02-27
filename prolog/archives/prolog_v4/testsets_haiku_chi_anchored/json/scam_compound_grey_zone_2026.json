@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "scam_compound_grey_zone_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scam"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "The Southeast Asian Scam Compound Grey Zone",
+    "topic_domain": "social/humanitarian/criminal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "compound_management",
+      "supply_chain_actors",
+      "corrupt_officials"
+    ],
+    "victims": [
+      "captive_workers",
+      "foreign_victims_of_scams",
+      "source_country_nationals",
+      "global_financial_system_integrity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Captive Worker",
+      "comment": "PERSPECTIVE 1: CAPTIVE WORKER (SNARE) \u2014 Trafficked into compound, document confiscated, death threats against family. Zero exit options; faces maximum extraction. d\u22480.98, f(d)\u22481.44, \u03c3=0.8 \u2192 \u03c7\u22480.76. The constraint exists solely to extract labor and prevent escape."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Romance Scam Victim",
+      "comment": "PERSPECTIVE 2: ROMANCE SCAM VICTIM (SNARE) \u2014 Located outside compound, financially drained by fabricated emotional relationship. Suppressed by shame, incomplete information about compound structure. Trapped by sunk costs and psychological manipulation. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.93. Global scope amplifies extraction across jurisdictions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Coerced Scammer (Intermediate Perpetrator)",
+      "comment": "PERSPECTIVE 3: COERCED SCAMMER (TANGLED ROPE) \u2014 May have begun as recruit promised wages, now coerced via debt-bondage and violence threats. Simultaneously victim and perpetrator; benefits from compound's infrastructure (shelter, meals, safety from local authorities) while being extracted from. d\u22480.55, f(d)\u22480.75, \u03c3=0.9 \u2192 \u03c7\u22480.46. Coordination function (operational scam machinery) paired with extraction (bondage)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Compound Management/Operators",
+      "comment": "PERSPECTIVE 4: COMPOUND MANAGEMENT (ROPE) \u2014 Views constraint as coordination mechanism: organizing labor, managing supply chains, maintaining operational security. Experiences extraction as efficient resource allocation. d\u22480.08, f(d)\u2248-0.11, \u03c3=0.9 \u2192 \u03c7\u2248-0.07. Net beneficiary; perceives system as functional optimization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Local Corrupt Officials/Border Agents",
+      "comment": "PERSPECTIVE 5: CORRUPT OFFICIALS (TANGLED ROPE) \u2014 Extract bribes while providing operational security; benefit from extraction but also depend on compound's functioning. d\u22480.45, f(d)\u22480.48, \u03c3=0.9 \u2192 \u03c7\u22480.38. Mixed beneficiary-victim status; could mobilize enforcement but choose not to."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Law Enforcement / NGO Responders",
+      "comment": "PERSPECTIVE 6: LAW ENFORCEMENT / NGO RESPONDERS (SNARE) \u2014 Face jurisdictional fragmentation, corruption at scale, resource constraints. Constrained by victim identification ambiguity: compound residents are simultaneously trafficked and criminal. d\u22480.68, f(d)\u22481.02, \u03c3=1.2 \u2192 \u03c7\u22480.68. Extraction mechanism is structural inability to intervene effectively across borders and corrupted local governance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer / Global Financial Integrity",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 Abstract collective good (global financial system integrity, trust in digital platforms). Trapped by architectural asymmetry: extraction mechanisms are cheaper to scale than detection mechanisms. d\u22480.85, f(d)\u22481.28, \u03c3=1.2 \u2192 \u03c7\u22480.87. Cannot opt out of participation in global financial flows without opting out of modernity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "perpetrator_victim_boundary_collapse",
+      "question": "At what point of coercion does a scammer become a trafficked victim, and does this distinction matter for intervention strategy?",
+      "resolution_mechanism": "Longitudinal interview data with compound escapees; psychological assessment of trauma bonding vs. rational cost-benefit analysis; comparison of behavioral patterns with non-coerced criminal perpetrators",
+      "impact": "If boundary is clear: classic trafficking narrative applies, rescue/reintegration strategies can follow. If boundary is collapsed: rescue becomes problematic (removing someone from survival situation), criminal prosecution becomes ethically fraught, victim support programs must serve dual status.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether perpetrator-victim distinction can be operationalized in compound context"
+    },
+    {
+      "id": "compound_exit_feasibility",
+      "question": "Given debt-bondage, family coercion, and local official corruption, is any resident's exit option genuinely 'mobile' or are all residents structurally 'trapped'?",
+      "resolution_mechanism": "Case analysis of successful escapes; mapping of escape routes and their cost-benefit profiles; interviews with residents about perceived vs. actual exit constraints",
+      "impact": "If exit is possible: some coerced scammers might be seen as constrained (mobile in principle). If exit is effectively impossible: all residents are trapped, classification is uniformly snare across all victim categories.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether trapped classification is universal or varies by resident type"
+    },
+    {
+      "id": "weak_governance_naturalization",
+      "question": "Is the compound a natural consequence of weak state capacity in the region, or a deliberately cultivated extraction mechanism that worsens state capacity?",
+      "resolution_mechanism": "Comparative analysis: weak governance regions with and without scam compounds; timeline of compound growth vs. governance institution degradation; interview data on official knowledge and deliberate non-enforcement",
+      "impact": "If natural consequence: constraint appears mountain-like (immutable absent state capacity). If deliberate mechanism: reveals snare structure maintained by organized corruption, enabling targeted intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether weak governance enables or is worsened by compound structure"
+    },
+    {
+      "id": "platform_architectural_responsibility",
+      "question": "Do digital platforms (dating apps, cryptocurrency exchanges, messaging platforms) that enable scam coordination bear responsibility as beneficiaries, or are they neutral conduits?",
+      "resolution_mechanism": "Structural analysis of platform friction costs: what would be required to block scam patterns? User behavior analysis showing platform designs that accidentally optimize for scammer convenience. Comparison with platforms that have implemented costly anti-scam measures.",
+      "impact": "If neutral: platforms are victims themselves (analytical observer narrative). If beneficiary: platforms' business models tacitly depend on reduced friction for scam operations; classification shifts toward organized institutional extraction.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Platform role as neutral conduit vs. architectural beneficiary"
+    },
+    {
+      "id": "ransomware_victim_overlap",
+      "question": "What fraction of scam compound residents are themselves running ransomware operations, and how does this alter victim-perpetrator classification?",
+      "resolution_mechanism": "Compound operational mapping; interviews with law enforcement cyber units; cross-reference of ransomware attack attribution with compound location data; analysis of victim harm (ransomware victims vs. scam victims) as basis for differentiated justice",
+      "impact": "If negligible overlap: scam compound is primarily romance/romance-adjacent fraud. If significant: compound residents are dual-status (victims of trafficking AND perpetrators of high-harm cybercrime), complicating both rescue and prosecution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of ransomware operations within scam compounds"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Southeast Asian scam compound represents a structural collapse of the perpetrator-victim distinction, creating what authorities struggle to classify: is this human trafficking, organized fraud, debt-bondage, labor exploitation, or cybercrime? The answer is all simultaneously. Fortified compounds, typically in regions with weak governance and porous borders (Myanmar-Thailand border, Cambodia-Vietnam border, Philippines island interiors), have emerged as operational centers for large-scale romance fraud, pig-butchering schemes, cryptocurrency theft, and ransomware coordination. The constraint exhibits properties of a pure extraction mechanism (snare) from the perspective of international victims and trafficked workers, but takes on tangled-rope or even rope characteristics when viewed from compound management, corrupt officials, or coerced intermediate perpetrators. The structural ambiguity \u2014 is the worker a victim or a criminal? \u2014 is not accidental; it is the mechanism of extraction. By making victim status epistemically contested, the constraint suppresses external intervention (law enforcement uncertainty), external escape (victim shame/complicity), and internal organization (solidarity is complicated by shared guilt). Theater ratio (0.55) reflects moderate performance: compound operations are genuinely functional (scams produce real financial flows), but significant effort is directed toward concealing the operation from authorities and victims.",
+    "key_agents": [
+      "Captive Workers: Primary victims (powerless/trapped) \u2014 trafficked via false employment or romantic promises; document confiscated; subjected to debt-bondage, violence threats, psychological coercion; zero unilateral exit options",
+      "Romance/Pig-Butchering Victims: Primary external victims (powerless/trapped) \u2014 emotionally and financially drained across borders; suppressed by shame and sunk-cost psychology; cannot identify the operational structure enabling the scam",
+      "Coerced Scammers: Intermediate status (moderate/constrained) \u2014 began as recruits promised wages, now debt-bonded; simultaneously perpetrators of fraud and victims of trafficking; benefit from compound infrastructure while being extracted from",
+      "Compound Management/Operators: Primary beneficiary (institutional/arbitrage) \u2014 profit from labor extraction and scam coordination; experience constraint as operational efficiency",
+      "Corrupt Local Officials: Secondary beneficiary (organized/mobile) \u2014 extract regular bribes in exchange for non-enforcement; benefit from constraint's persistence but could theoretically mobilize",
+      "Digital Platforms: Indirect beneficiary (institutional/arbitrage) \u2014 reduced friction on dating apps, messaging platforms, crypto exchanges enables scam scaling; business model indirectly optimizes for scammer convenience",
+      "Law Enforcement / NGO Responders: Constrained responder (moderate/constrained) \u2014 face jurisdictional fragmentation, corruption at scale, identification ambiguity (is resident victim or criminal?); cannot intervene without clarifying status",
+      "Global Financial System: Abstract victim (analytical/analytical) \u2014 trust and integrity in digital payments/identity systems degraded by large-scale fraud; cannot opt out of participation without opting out of modernity"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint generates substantial monetary extraction from international victims (estimates: $10-20B USD annually for Southeast Asian compounds). Labor extraction from captive workers is severe (unpaid, coerced, no exit). The metric reflects both the volume of extraction and its structural necessity to compound operations. However, it is not maximal (0.70+) because some operational functions are genuine coordination (scam networks require real division of labor, real operational infrastructure), not pure rent-seeking. Suppression (0.78): Very high. Multiple suppression mechanisms operate simultaneously: (1) Victim suppression: captive workers face violence threats against families in source countries; external victims suppressed by shame and self-blame; (2) Epistemic suppression: victim-perpetrator boundary is intentionally blurred, confusing potential rescuers; (3) Structural suppression: weak regional governance provides minimal alternative protection; (4) Organizational suppression: compound residents cannot credibly threaten collective action (coerced scammers' status as perpetrators undermines solidarity). Theater ratio (0.55): Moderate-low and declining. Compound operations are not primarily performative; they produce real financial output. But significant theater persists: false identities for romance/dating profiles, fabricated victim narratives, pseudo-documentation for visa processes. The decline over 10 years reflects increasing operational efficiency (less need for elaborate deception as scam pipelines mature and victims become self-selecting through platform algorithms) and possibly increased sophistication (AI-generated romance narratives reduce manual theater cost).",
+    "perspectival_gap": "The gap between perspectives is the constraint itself. Compound management sees coordination (Rope): efficient organization of labor and capital. Coerced scammers see mixed extraction-coordination (Tangled Rope): they benefit from the compound's provision of survival, but are extracted from via coercion. Captive workers see pure extraction (Snare): no benefits, only costs. Romance victims see pure extraction (Snare): financial and emotional harm with no offsetting benefit. Law enforcement sees tangled complexity (Snare from their constrained perspective): they understand the extraction occurs but cannot intervene without clarifying victim status. Corrupt officials see coordination and benefit (Rope trending toward arbitrage): bribery is straightforward extraction, but they depend on compound functioning. The global financial system sees snare: the constraint undermines trust in digital infrastructure globally. The analytical observer risks naturalizing the constraint as inevitable consequence of weak governance (mountain view), but the structural data reveals it as a deliberately maintained extraction mechanism.",
+    "directionality_logic": "Captive workers: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.44. Maximum extraction. Romance victims: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximum extraction; trapped by psychological factors (sunk cost, shame) rather than physical confinement, but equally unable to exit. Coerced scammers: Mixed victim-beneficiary + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction; they receive some benefits (survival, shelter) but are coerced via debt and violence. Compound management: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; no extraction from their perspective. Corrupt officials: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.28. Low-moderate extraction; they benefit significantly but could theoretically mobilize to stop if incentives shifted. Law enforcement: Observer + constrained \u2192 d\u22480.68, f(d)\u22481.02. Moderate-high extraction from their perspective (structural inability to act). Global financial system: Observer + analytical \u2192 d\u22480.85, f(d)\u22481.28. High extraction; trapped in global architecture.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED VIA DOMINANT SNARE: The constraint classifies as Snare (extractiveness=0.68, suppression=0.78) across the majority of structural perspectives. The tangled-rope perspectives (coerced scammers, corrupt officials) exist but are secondary to the dominant snare classification. This resolves mandatrophy by clarifying: (1) The coordination function in the compound (scam operations) is not the constraint itself \u2014 it is the mechanism used to implement the extraction. (2) The constraint is defined by the structure of suppression and extraction, not by the existence of organization. (3) The apparent ambiguity (perpetrator-victim collapse) is itself the extraction mechanism. By making status contested, the constraint suppresses intervention. The mandatrophy resolution confirms: this is not coordination falsely labeled as extraction (Rope misclassified as Snare). This is extraction (Snare) that uses organizational structures (real scam operations) to function. The organizational reality does not elevate it to Tangled Rope because the coerced workers and victims have no genuine coordination benefit \u2014 they are not co-solving a problem, they are being separated from resources. The beneficiaries (compound management, corrupt officials, platform business models) gain coordination benefits, but the constraint from the victim perspective is pure extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "cross_border_labor_trafficking",
+      "romance_fraud_victim_identification",
+      "platform_moderation_asymmetry",
+      "weak_state_capacity_feedback"
+    ],
+    "dual_formulation_note": "The scam compound grey zone is a structural consequence of and contributor to weak governance. As a separate constraint story, cross-border labor trafficking has higher \u03b5 (0.45) reflecting legitimate labor movement; the compound grey zone adds extraction mechanisms (coercion, debt-bondage, victim-perpetrator ambiguity) raising \u03b5 to 0.68. The network link shows that the compound constraint is downstream of weak governance but creates feedback loops that further degrade state capacity. Similarly, the compound amplifies romance fraud's impact; the individual romance scam may have \u03b5=0.38, but the compound's industrial scaling and victim suppression raises the systemic constraint to \u03b5=0.68."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "cross_border_labor_trafficking",
+      "romance_fraud_victim_identification"
+    ]
+  }
+}

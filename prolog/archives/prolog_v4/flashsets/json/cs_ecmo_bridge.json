@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "cs_ecmo_bridge",
+    "version": "1.0",
+    "generated_date": "2024-08-22",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ECMO Bridge to Transplant",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "transplant_surgeons",
+      "ecmo_device_manufacturers"
+    ],
+    "victims": [
+      "patients_awaiting_transplant",
+      "patients_without_access_to_ecmo"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Patients Awaiting Transplant",
+      "comment": "Patients awaiting transplant, particularly those in critical condition, are trapped. ECMO is their only option, but it only buys them time, creating a snare if a suitable organ is not found in time."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Transplant Surgeons",
+      "comment": "Transplant surgeons benefit from ECMO as it allows them to manage the patient while waiting for a suitable organ, improving the chances of a successful transplant. ECMO provides a tool to optimize outcomes and coordinate the transplant."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Healthcare System",
+      "comment": "The healthcare system is both constrained and benefits from ECMO. It is constrained by the high cost and limited availability of ECMO, but benefits from it as it potentially increases the number of successful transplants and improves patient outcomes. The distribution of resources presents a challenge in balancing the costs and benefits to all patients, creating a tangled rope situation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a global, long-term perspective, ECMO as a bridge to transplant is a tangled rope. It coordinates the allocation of scarce resources (organs, ECMO machines, skilled staff) but also extracts resources and creates potential inequities (access based on location, wealth, or health status)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "organ_availability",
+      "question": "How can organ availability be improved to reduce the time patients spend on ECMO?",
+      "resolution_mechanism": "Increase public awareness of organ donation, improve organ preservation techniques, and expand the donor pool.",
+      "impact": "Reduced time on ECMO would lessen the risks and costs associated with prolonged use, shifting the classification toward a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Improvement of organ availability."
+    },
+    {
+      "id": "ecmo_access_equity",
+      "question": "How can ECMO access be made more equitable across different socioeconomic groups and geographic locations?",
+      "resolution_mechanism": "Implement policies that prioritize equitable access, increase funding for ECMO programs in underserved areas, and develop more affordable ECMO technologies.",
+      "impact": "Increased equity in access would reduce the extraction from vulnerable populations, shifting the classification towards a rope.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Improve ECMO access equity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "ECMO (Extracorporeal Membrane Oxygenation) is used as a bridge to lung transplantation, providing respiratory support to patients awaiting a suitable organ. It allows surgeons to keep a patient alive for a limited time before a lung transplant. While ECMO provides vital support, it also poses risks and raises ethical questions about access and resource allocation.",
+    "key_agents": [
+      "Patients awaiting transplant: Primary target (powerless/trapped) - dependent on ECMO for survival",
+      "Transplant surgeons: Primary beneficiary (institutional/arbitrage) - ECMO allows for better management of patients",
+      "ECMO device manufacturers: Secondary beneficiary (powerful/arbitrage) - Profit from sales and use of ECMO devices",
+      "Patients without access to ECMO: Secondary target (powerless/trapped) - Excluded from potentially life-saving intervention",
+      "Healthcare system: Constrained actor (moderate/constrained) - Balances costs and benefits of ECMO use"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.60) because while ECMO is essential for some patients, it also has inherent risks and high costs associated with its use. Suppression is moderate (0.40) as there are limited alternative treatments for patients in end-stage respiratory failure, but ECMO is not universally available. Theater ratio is low (0.20) because the performance is directly related to the functionality of the transplant success.",
+    "perspectival_gap": "The perspectival gap arises from the different positions of the stakeholders. Patients facing death see it as a last resort (snare), surgeons see it as a valuable tool (rope), the health care system sees both potential and constraints, and the analytical observer sees both benefits and potential issues regarding equity.",
+    "directionality_logic": "Patients awaiting transplant have no exit option, they are trapped, leading to a higher d value. Transplant surgeons have arbitrage via their knowledge and skill making them a beneficiary with a lower d value. Healthcare system is constrained, needing to balance cost and outcomes, resulting in a moderate d value.",
+    "mandatrophy_analysis": "It's essential to differentiate ECMO as beneficial assistance versus a situation where it serves to extract from vulnerable patients. ECMO is a coordination mechanism to allow for life-saving transplants, not just a tool to keep someone alive for longer while accruing costs."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

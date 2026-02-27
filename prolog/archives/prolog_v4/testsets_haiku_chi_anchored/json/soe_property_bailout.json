@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "soe_property_bailout",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "soe_prop"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State-Directed Purchase of Distressed Real Estate Assets",
+    "topic_domain": "economic/real_estate/state_coordination",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_owned_enterprises",
+      "state_financial_stability",
+      "developer_creditors"
+    ],
+    "victims": [
+      "soe_balance_sheets",
+      "private_investors",
+      "retail_homebuyers"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Retail Homebuyer",
+      "comment": "PERSPECTIVE 1: RETAIL HOMEBUYER (SNARE) \u2014 Trapped in a property purchase where developer default occurs mid-construction. No exit without catastrophic loss. No voice in SOE bailout decisions. Extraction is total: pays developer-set price for unfinished asset, subsidizes SOE inventory burden through foregone development completion. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.82."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Private Developer Creditors",
+      "comment": "PERSPECTIVE 2: PRIVATE DEVELOPER CREDITORS (TANGLED ROPE) \u2014 Benefit from SOE absorption of distressed assets (avoids full writedown), but extraction mechanism is opaque: SOE purchases at 60-75% of face value, creditors recover partial principal, but subordinated creditors absorb majority losses. Constrained exit \u2014 cannot force liquidation if state intervenes. Coordination function: prevents cascade failure. d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Central Planning Authority",
+      "comment": "PERSPECTIVE 3: CENTRAL PLANNING AUTHORITY (ROPE) \u2014 Benefits from coordination mechanism: prevented financial system spillover by directing SOE purchases. Maintains property prices and employment in construction sector. Arbitrage exit: can adjust directive parameters, stop purchases if macro conditions shift. Effective extraction is minimized from the state's perspective \u2014 the constraint achieves its coordination objective. d\u22480.10, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03. Net beneficiary through coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The State-Owned Enterprises (Collective)",
+      "comment": "PERSPECTIVE 4: STATE-OWNED ENTERPRISES COLLECTIVE (TANGLED ROPE) \u2014 Benefit from coordinated directive (spreading asset burden across multiple institutions prevents individual SOE collapse), but extraction is severe: absorb distressed inventory at below-market prices, carry non-performing assets on balance sheets, face pressure to hold or rent properties below cost to stabilize prices. Constrained exit \u2014 cannot refuse directive without triggering state intervention. Requires active enforcement: repeated directives, budget supplements, capital injections. d\u22480.70, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Property Market Institution",
+      "comment": "PERSPECTIVE 5: PROPERTY MARKET INSTITUTION (PITON) \u2014 The bailout mechanism has degraded into performative price-stabilization theater. SOE purchases nominally stabilize the market, but the constraint's primary function (preventing financial collapse) has atrophied \u2014 replaced by zombie-asset holding and implicit subsidies. Theater ratio = 0.65: SOEs hold properties below-cost, absorbing losses on behalf of the state. The ritual persists through institutional inertia (career risk of admitting the real estate sector cannot self-stabilize) despite functional degradation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Global Finance Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / GLOBAL FINANCE (TANGLED ROPE) \u2014 From the analytical view, the state-directed purchase is a hybrid: it solves a genuine coordination problem (preventing financial cascade) while also enabling extraction (transferring developer losses to SOE public equity, implicit taxation of domestic savers through inflation/debasement). Mobile exit: international investors can rotate away from assets in the stabilization zone. See the constraint as structurally extractive despite its coordination rationale. d\u22480.58, f(d)\u22480.88, \u03c3=1.0 \u2192 \u03c7\u22480.51."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_boundary_threshold",
+      "question": "What fraction of residential inventory can SOEs absorb before the constraint shifts from coordination (preventing cascade) to pure extraction (zombie-asset hoarding)?",
+      "resolution_mechanism": "Empirical tracking of cumulative SOE property holdings as percentage of local inventory; correlation with market dysfunction indicators (rental vacancy, price anchoring, credit misallocation)",
+      "impact": "If threshold <5%: constraint remains coordination-focused. If threshold >15%: constraint becomes primarily extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Inventory absorption threshold for shifting from coordination to extraction"
+    },
+    {
+      "id": "subsidy_incidence_opacity",
+      "question": "Who ultimately bears the financial loss from below-cost SOE property holdings: domestic savers through inflation, taxpayers through budget supplements, future generations through debt, or international creditors through currency depreciation?",
+      "resolution_mechanism": "Flow-of-funds analysis: track implicit transfer mechanisms (central bank monetization, fiscal transfers to SOEs, currency movements). Identify which household/investor class absorbs the real cost.",
+      "impact": "If cost borne by domestic savers invisibly: extraction is successful and hidden. If cost borne by taxpayers visibly: constraint becomes politically unsustainable. If distributed across generations: long-term fiscal drag emerges.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Identification of who bears the true financial burden of the bailout"
+    },
+    {
+      "id": "moral_hazard_incentive_creation",
+      "question": "Does the SOE bailout create moral hazard for future private developers, encouraging higher leverage and riskier construction projects under the expectation of state rescue?",
+      "resolution_mechanism": "Comparison of developer leverage ratios, project risk profiles, and default rates before vs after first major bailout; survey of developer expectations about future state intervention",
+      "impact": "If moral hazard is severe: constraint will require repeated intervention (escalating suppression). If moral hazard is absent: constraint may achieve temporary stability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the bailout creates expectations of future rescue that increase risk-taking"
+    },
+    {
+      "id": "local_government_fiscal_capacity",
+      "question": "Can local governments sustain the implicit subsidy of SOE property holdings without triggering fiscal crisis or cutting essential services?",
+      "resolution_mechanism": "Fiscal stress test: model local government revenues, debt service, SOE transfer requirements over 5-10 year horizon; identify sustainability breakpoint.",
+      "impact": "If sustainable: constraint remains stable. If unsustainable within <10 years: fiscal crisis will force constraint recalibration.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sustainability of local government fiscal transfers to support the bailout"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "China's state-directed purchase of distressed real estate assets by SOEs represents a hybrid coordination-extraction constraint that emerged after 2014 as property market volatility threatened financial stability. When private developers defaulted on projects, leaving retail homebuyers with unfinished properties and creditors with heavy losses, the central planning authority directed SOEs to acquire these distressed assets. This policy exhibits a genuine coordination function (preventing cascade failure in the financial system) combined with systematic extraction (transferring losses from private actors to public equity, creating implicit subsidy mechanisms). The constraint's theater_ratio has increased over time as the mechanism shifted from emergency intervention to permanent price-stabilization theater, with SOEs holding inventory at below-cost and absorbing ongoing losses. The extractiveness has escalated as the volume of distressed assets accumulated and the implicit fiscal burden on local governments grew. From the retail homebuyer's perspective, the constraint appears as a pure snare \u2014 they are trapped in properties with uncertain completion and no recourse. From the central planning authority's perspective, it is coordination \u2014 prevented system collapse. From the SOE perspective, it is tangled rope with growing extraction burden. The global financial observer sees it as hybrid: legitimate macro-prudential intervention that has evolved into zombie-asset hoarding.",
+    "key_agents": [
+      "Central Planning Authority: Primary beneficiary (institutional/arbitrage) \u2014 achieves stability objective, directs asset absorption, maintains price stability",
+      "State-Owned Enterprises (Collective): Primary victim (organized/constrained) \u2014 forced to absorb distressed inventory, carry non-performing assets, subsidize market stabilization",
+      "Retail Homebuyers: Secondary victim (powerless/trapped) \u2014 trapped in incomplete properties, no leverage over developer or state response",
+      "Private Developer Creditors: Mixed (moderate/constrained) \u2014 benefit from partial recovery vs total writedown, but constrained by state intervention",
+      "Local Government Fiscal Authority: Secondary victim (organized/constrained) \u2014 must fund implicit SOE subsidies through transfers",
+      "International Financial Observers: Powerful analytical agents (powerful/mobile) \u2014 can exit the constraint by diversifying away from exposure, see extraction clearly"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint does achieve genuine coordination (prevents financial cascade), but this is paired with significant extraction. The central authority captures macro stability benefit while SOEs and domestic savers absorb costs. Suppression (0.72): High. Multiple barriers prevent exit: SOEs cannot refuse state directive, homebuyers cannot walk away from sunken costs, local governments cannot reject fiscal transfer requirements. Private creditors face constrained liquidation options. The suppression is partly structural (asset illiquidity) and partly institutional (directive enforcement). Theater ratio (0.65): Moderate-high and rising. The bailout began as emergency intervention with clear objectives (stop cascade failure), but has evolved into performative price stabilization. SOEs hold properties below cost, absorbing losses to maintain headline price indices. The ritual persists because admitting real estate sector cannot self-stabilize carries political costs.",
+    "perspectival_gap": "This constraint exhibits a dramatic perspectival gap between the state authority (sees coordination/rope), the SOEs (see extraction/tangled_rope), the homebuyers (see pure extraction/snare), and the organized creditors (see mixed coordination and subordination/tangled_rope). The gap reflects fundamental disagreement about whether the constraint solves a real problem or merely transfers costs forward. The central authority's perspective naturalizes the bailout as necessary macro-prudential intervention. The SOEs' perspective emphasizes the cumulative burden of inventory and implicit subsidy. The homebuyers' perspective sees irreversible loss of control and no voice in the mechanism. The global observer's perspective sees a hybrid that was genuinely coordinating at t=0 but has degraded into zombie-asset holding by t=6. The theater ratio increase (0.40 \u2192 0.65) documents this perspectival shift over time.",
+    "directionality_logic": "Retail homebuyers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction from their perspective. State authority: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Net beneficiary; achieved stability objective. SOEs (collective): Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. Significant extraction but not total; coordination benefit is real but marginal compared to burden. Developer creditors: Mixed victim + constrained \u2192 d\u22480.65, f(d)\u22480.95. Partial recovery vs total loss, but constrained by state intervention. Local government: Victim + constrained \u2192 d\u22480.75, f(d)\u22481.10. Must absorb fiscal transfers without exit. Global observer: Analytical + mobile \u2192 d\u22480.58, f(d)\u22480.88. Can see both coordination and extraction clearly; can exit exposure.",
+    "mandatrophy_analysis": "MANDATROPHY UNRESOLVED: The classification hinges on an irreducible empirical question: does the constraint actually prevent financial cascade, or does it merely postpone and enlarge it? If the bailout genuinely stabilizes the system and homebuyers eventually complete their properties (coordination function dominates), the constraint might reclassify toward rope. If SOEs accumulate massive unpayable losses and the mechanism requires escalating state subsidies indefinitely (extraction function dominates), the constraint reclassifies toward snare. The measurement trajectory (extractiveness rising from 0.35 to 0.58, theater rising from 0.40 to 0.65) suggests the constraint is drifting toward pure extraction \u2014 the coordination objective is achieved, but the institutional mechanism persists and worsens, meeting the definition of piton degradation. Mandatrophy is NOT yet resolved because the dataset (6 years) is insufficient to determine whether this is temporary stability-building (valid tangled_rope with sunset) or permanent zombie-asset hoarding (extractive snare with theater). Resolution requires 10+ year horizon and clear identification of exit conditions (when do SOEs liquidate inventory? when do homebuyers receive properties? when do implicit subsidies end?)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "developer_leverage_moral_hazard",
+      "residential_price_stickiness",
+      "local_government_fiscal_sustainability"
+    ],
+    "dual_formulation_note": "The state-directed bailout can be decomposed into two distinct constraints: (1) the genuine macro-prudential stabilization mechanism (\u03b5\u22480.25, mountain of financial necessity), and (2) the institutional persistence of SOE asset-holding as a price-stabilization ritual (\u03b5\u22480.70, extractive piton with theater). This story focuses on the aggregate view (\u03b5=0.58). The upstream constraint (developer defaults triggering cascade risk) has different \u03b5 and may classify as mountain. The downstream consequence (zombie-asset hoarding creating fiscal drag) classifies as piton."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.7
+    }
+  ]
+}

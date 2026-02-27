@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "rent_seeking_equilibrium",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rent"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Toll-Bridge Stagnation",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_rent_seekers",
+      "regulatory_capture_apparatus"
+    ],
+    "victims": [
+      "productive_innovators",
+      "general_consumer_welfare"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Productive Innovator",
+      "comment": "PERSPECTIVE 1: PRODUCTIVE INNOVATOR (SNARE) \u2014 Faces regulatory barriers, licensing requirements, and incumbent gatekeeping that consume resources without creating value. Cannot exit the market without accepting losses. Zero degrees of freedom \u2014 extraction is maximal and inescapable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Rent-Seeker",
+      "comment": "PERSPECTIVE 2: INCUMBENT RENT-SEEKER (ROPE) \u2014 Experiences the constraint as coordination. Political influence over regulation coordinates the market to their advantage. Can arbitrage between jurisdictions with different regulatory regimes. Net beneficiary \u2014 the extraction flow moves toward them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Market Competitor",
+      "comment": "PERSPECTIVE 3: MID-MARKET COMPETITOR (TANGLED ROPE) \u2014 Constrained by regulatory costs but can survive by participating in rent-seeking themselves. Benefits from occasional market access through lobbying; bears costs through compliance burdens. Mixed coordination and extraction \u2014 some agency but real constraints."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Anti-Monopoly Reform Coalition",
+      "comment": "PERSPECTIVE 4: ANTI-MONOPOLY REFORM COALITION (SCAFFOLD) \u2014 Organized civil society, antitrust agencies, and political reform movements see rent-seeking equilibrium as a temporary institutional failure with a sunset. Deregulation, antitrust enforcement, and open-access mandates are alternative pathways. Extraction remains manageable because exit pathways are visible and partially realized."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY APPARATUS (PITON) \u2014 The regulatory machinery persists through institutional inertia. Licensing boards, tariff systems, and occupational restrictions continue to operate despite widespread recognition that they primarily serve rent-seeking rather than legitimate public protection. Theater ratio is high \u2014 enforcement exists but primary function has atrophied, replaced by performative legitimacy claims."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global civilizational view, rent-seeking equilibrium is partially a coordination mechanism (solving the incumbent's collective action problem in maintaining regulatory barriers) and partially pure extraction (destroying productive potential and consumer welfare). The constraint has genuine coordination function but operates primarily as asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "productive_vs_rent_seeking_threshold",
+      "question": "At what ratio of rent-seeking-to-productive investment does an economy enter irreversible decline, and is that threshold culturally contingent or universal?",
+      "resolution_mechanism": "Longitudinal economic analysis: comparison of R&D investment, startup formation rates, and regulatory compliance costs across economies; correlation with GDP growth and innovation metrics",
+      "impact": "If threshold is universal and low (10-15%): current OECD economies may already be past the tipping point. If threshold is high (40%+) or culturally variable: significant policy intervention remains effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold ratio of rent-seeking to productive investment that triggers irreversible decline"
+    },
+    {
+      "id": "regulatory_capture_self_awareness",
+      "question": "Do regulatory actors recognize themselves as captured, and does that recognition create pressure for reform or entrench defensive theater?",
+      "resolution_mechanism": "Qualitative analysis of regulatory agency statements, internal documents, and reform proposals; measurement of time between public acknowledgment of capture and actual structural change",
+      "impact": "If recognition leads to reform: scaffold sunset timeline accelerates. If recognition triggers defensive theater: piton classification becomes dominant and equilibrium becomes harder to exit.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulatory self-awareness drives reform or entrenchment"
+    },
+    {
+      "id": "exit_substitution_feasibility",
+      "question": "Can decentralized alternatives (remote work, digital services, jurisdictional arbitrage) actually bypass rent-seeking barriers, or do incumbents capture those too?",
+      "resolution_mechanism": "Empirical tracking: emergence and growth of alternative service models; measurement of incumbent countermeasures (lobbying to restrict alternatives); comparison of compliance costs across channels",
+      "impact": "If alternatives remain viable: productive innovators retain exit options (mobile classification likely). If incumbents capture alternatives: trap becomes total (trapped classification likely).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether decentralized alternatives can sustainably bypass rent-seeking capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Rent-seeking equilibrium describes a state where economic agents rationally invest more resources in capturing existing wealth through political, legal, and regulatory influence than in creating new value through innovation and productive enterprise. This constraint manifests as licensing boards that prevent entry, tariff systems that protect incumbents, occupational restrictions that limit labor mobility, and regulatory compliance burdens that impose fixed costs crushing small competitors but leaving large incumbents unharmed. The toll-bridge metaphor captures the core dynamic: a few agents control access to markets and extract rents by controlling the bridge rather than by improving it. This constraint exhibits the full range of DR classifications depending on structural position. Incumbent beneficiaries see it as coordination (Rope). Productive innovators see it as a snare (Snare). Reform coalitions see it as temporary and solvable (Scaffold). The regulatory apparatus sees its own degradation (Piton). Most fundamentally, it is a hybrid coordination-extraction mechanism that enables powerful actors to coordinate their market position through political influence while extracting from those excluded (Tangled Rope).",
+    "key_agents": [
+      "Incumbent Rent-Seekers: Institutional beneficiaries (institutional/arbitrage) \u2014 established firms, professional associations, regulated industries that benefit from barriers to entry and regulatory capture; invest heavily in lobbying to maintain protected market position",
+      "Productive Innovators: Primary victims (powerless/trapped) \u2014 startups, new market entrants, disruptors that face regulatory barriers, licensing requirements, and compliance costs that exceed their available capital; cannot escape without exiting market entirely",
+      "Regulatory Capture Apparatus: Institutional beneficiary (institutional/arbitrage) \u2014 regulatory agencies, licensing boards, standards bodies that maintain their budget and relevance through rent-seeking gatekeeping; benefit from incumbent support",
+      "General Consumer Welfare: Diffuse victim (powerless/trapped) \u2014 consumers and workers bear the costs through higher prices, reduced innovation, fewer job opportunities, and constrained quality improvements; too dispersed to organize effective opposition",
+      "Mid-Market Competitors: Moderate victim (moderate/constrained) \u2014 firms large enough to survive but small enough to feel compliance burden; participate in rent-seeking to stay viable but face asymmetric extraction relative to incumbents",
+      "Anti-Monopoly Reform Coalition: Organized agent (organized/constrained) \u2014 civil society, antitrust agencies, political reform movements, and some tech platforms (seeking to disrupt traditional rent-seeking) that see the system as changeable through deregulation and enforcement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the constraint as a hybrid coordination-extraction mechanism where the coordination function (incumbents aligning on regulatory protection) is real but primarily serves asymmetric extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts significant resources from productive agents through regulatory barriers, compliance costs, and denied market access. However, it is not maximal (0.70+) because some exit mechanisms exist: digital services, geographic arbitrage, and jurisdictional competition create partial escape routes. The innovator can sometimes work around the barrier by changing location or service model. Suppression (0.68): High. Barriers are substantial and multifaceted: licensing requirements, compliance infrastructure, political networks required for regulatory navigation, capital requirements for navigating legal barriers. However, suppression is not absolute (0.85+) because organized reform coalitions have successfully attacked rent-seeking structures (antitrust, deregulation), and digital disruption sometimes jumps over barriers entirely. Theater ratio (0.65): Moderate-high. Regulatory apparatus justifies itself through public interest narratives (consumer protection, quality assurance, safety standards) even though primary function has become rent extraction. The theatrical element includes licensing exams that don't correlate with service quality, compliance documentation that serves no safety function, and standards boards where industry incumbents set rules. Theater has risen over the interval as regulatory complexity has increased but consumer outcomes have stagnated.",
+    "directionality_logic": "Directionality d is determined by each agent's structural relationship to the constraint. Incumbent rent-seekers are beneficiaries with arbitrage exits (can move capital elsewhere, lobby different jurisdictions) \u2014 derived d \u2248 0.15, very low effective extraction experienced. Productive innovators are victims with trapped exits (cannot exit without losing entire business investment) \u2014 derived d \u2248 0.95, maximum experienced extraction. Mid-market competitors are victims with constrained exits (can survive by participating in rent-seeking but at higher cost than incumbents) \u2014 derived d \u2248 0.70, high experienced extraction. Consumers are victims with trapped exits (cannot easily arbitrage between jurisdictions) \u2014 derived d \u2248 0.92. The analytical observer measures the system effect across all agents \u2014 d \u2248 0.72, producing the tangled rope classification. The directionality pipeline computes chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) for each perspective: beneficiaries get negative chi (experience as low-cost coordination); victims get high chi (experience as extraction).",
+    "perspectival_gap": "The constraint produces a maximal perspectival gap. Incumbent rent-seekers see a purely functional coordination mechanism \u2014 they have aligned political interests and regulatory barriers coordinate the market to their mutual benefit, with low transaction costs (Rope). Productive innovators see a pure extraction mechanism \u2014 they bear all costs and gain no benefits (Snare). Mid-market competitors see a hybrid system \u2014 they must participate in rent-seeking to survive but face permanent cost disadvantage relative to incumbents (Tangled Rope). The reform coalition sees a temporary institutional failure with visible exit pathways through antitrust enforcement and deregulation (Scaffold). The regulatory apparatus sees its own degradation \u2014 it knows licensing serves entry prevention rather than quality assurance, but persists through bureaucratic inertia and incumbent pressure (Piton). The analytical observer at civilizational scale sees the constraint as fundamentally a tangled rope: it has genuine coordination function (enables incumbent collective action) but primarily operates as extraction mechanism (destroys productive potential). All six types appear simultaneously because the constraint's structure genuinely produces different rational classifications from different structural positions.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing how a tangled rope (hybrid coordination-extraction) can be confused with pure coordination (Rope) from the beneficiary perspective. The incumbent rent-seekers genuinely experience the constraint as Rope \u2014 it solves their collective action problem in maintaining regulatory barriers with minimal coercion (they lobby, not invade competitors). But this is mandatrophy: the beneficiary's experience of low-coercion coordination is built on the victim's experience of high-extraction snare. The constraint is tangled rope because it simultaneously (1) provides genuine coordination benefit to incumbents (aligns them on regulatory protection) and (2) extracts asymmetrically from innovators (denies them market access). The piton classification of the regulatory apparatus is the key diagnostic: high theater (performative justification) combined with low functional efficacy (licensing doesn't predict quality) indicates that the regulatory mechanism is maintaining itself through inertia rather than serving legitimate coordination. The scaffold perspective by the reform coalition shows the constraint is not immutable \u2014 antitrust enforcement, deregulation, and digital disruption are creating exit pathways. The constraint is solvable but requires recognizing that 'coordination' and 'extraction' are not alternatives but simultaneous functions of the same mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "occupational_licensing_barriers",
+      "startup_survival_rates"
+    ],
+    "dual_formulation_note": "Rent-seeking equilibrium is upstream of specific regulatory captures (taxi medallions, medical licensing) but represents a distinct structural constraint operating at the economy-wide level. The specific regulatory captures have their own extractiveness values reflecting domain-specific barriers; the equilibrium constraint reflects the systemic metaproblem that agents rationally invest more in rent-seeking than production."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

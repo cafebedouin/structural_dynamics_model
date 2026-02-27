@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "hasbro_licensing_restriction",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hasbro"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hasbro Licensing Restriction on Licensed Properties",
+    "topic_domain": "economic/intellectual_property",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hasbro_ip_portfolio",
+      "brand_consistency_enforcement"
+    ],
+    "victims": [
+      "licensee_innovation_capacity",
+      "consumer_product_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Licensee",
+      "comment": "PERSPECTIVE 1: DEPENDENT LICENSEE (SNARE) \u2014 Small-to-medium licensees have no credible exit option once they invest in tooling, supply chains, and market position around a Hasbro IP license. Contract renegotiation leverages their sunk costs; termination means asset writeoff. d\u22480.92, f(d)\u22481.40, \u03c3=1.1 \u2192 \u03c7\u22480.90. High effective extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Corporate Licensee",
+      "comment": "PERSPECTIVE 2: LARGE CORPORATE LICENSEE (TANGLED ROPE) \u2014 Major licensees (e.g., toy manufacturers with diversified portfolios) can negotiate better terms and have exit options (drop the license, develop competing IP). They experience both coordination benefit (access to valuable IP) and extraction (royalty rates, approval requirements, exclusivity restrictions). d\u22480.48, f(d)\u22480.60, \u03c3=1.1 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Hasbro IP Management Division",
+      "comment": "PERSPECTIVE 3: HASBRO IP MANAGEMENT (ROPE) \u2014 Hasbro benefits from licensing as a coordination mechanism: it expands market reach without direct production, solves the problem of scale across diverse product categories (toys, apparel, gaming, media). Restrictions are experienced as legitimate brand protection. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.1 \u2192 \u03c7\u2248-0.06. Net beneficiary; negative effective extraction from Hasbro's perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Consumer Product Ecosystem",
+      "comment": "PERSPECTIVE 4: CONSUMER PRODUCT ECOSYSTEM (TANGLED ROPE) \u2014 Retailers, consumers, and competing product designers are constrained by limited product diversity under restrictive licensing (fewer innovation pathways, higher prices due to royalty pass-through). But the ecosystem benefits from brand consistency and quality floors. Organized actors (retail chains, consumer advocacy groups) can negotiate terms but face coordination problems. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legacy Licensing Bureaucracy",
+      "comment": "PERSPECTIVE 5: LEGACY LICENSING BUREAUCRACY (PITON) \u2014 Hasbro's approval process for licensee products (design review, quality control, brand guideline compliance) has grown highly formalized and theatrical. Theater ratio = 0.48 reflects that much of the review is procedural compliance checking rather than functional quality assurance; many restrictions are maintained for institutional continuity rather than genuine brand risk. \u03c7=0.28, theater moderately high but not extreme piton territory."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Intellectual Property Dynamics)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the constraint reflects genuine coordination (brand licensing legitimately solves the problem of reaching diverse markets with consistent identity) AND asymmetric extraction (Hasbro captures disproportionate value through royalties, approval leverage, and the ability to set terms unilaterally). The observer notes that restrictions on licensee innovation create welfare loss (fewer product variants, higher prices) while protecting Hasbro's strategic control. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.79."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optimal_restriction_threshold",
+      "question": "What level of licensee restriction maximizes ecosystem welfare vs. Hasbro IP protection? Is the current level extractive rent-seeking or legitimate brand stewardship?",
+      "resolution_mechanism": "Comparative analysis of licensing regimes: restrictive (current Hasbro model) vs. permissive (e.g., Creative Commons licensing, open IP frameworks); measurement of product innovation rates, price elasticity, and brand degradation across regimes",
+      "impact": "If current restrictions significantly exceed the welfare-maximizing threshold: constraint is primarily extractive (Snare for licensees). If current restrictions align with best practices: constraint is primarily coordinating (Rope for all parties).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether current restriction levels maximize ecosystem welfare or represent rent-seeking"
+    },
+    {
+      "id": "licensee_coalition_viability",
+      "question": "Can licensees collectively negotiate terms, or does Hasbro's market power prevent coalition formation (divide-and-conquer licensing)?",
+      "resolution_mechanism": "Historical analysis of licensee consortium formation; examination of contract terms across comparable-size licensees; interviews with mid-market licensees on negotiation leverage; assessment of switching costs (brand recognition, tooling specificity)",
+      "impact": "If coalition possible: licensees have constrained but meaningful bargaining power, constraint is Tangled Rope. If coalition is prevented: licensees are truly powerless, constraint is Snare for nearly all.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether licensees can form effective coalitions to negotiate better terms"
+    },
+    {
+      "id": "brand_degradation_empirical_risk",
+      "question": "Is Hasbro's restriction level justified by measurable brand degradation risk, or is it speculative/precautionary?",
+      "resolution_mechanism": "Archival analysis of past Hasbro IP damage from unlicensed or poorly-controlled derivative products; comparison to competing brands (e.g., Nintendo, Marvel) with different licensing regimes; measurement of brand equity loss correlated with licensing openness",
+      "impact": "If empirical risk is high: restrictions are legitimate coordination mechanisms. If risk is low/speculative: restrictions are primarily wealth extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether restriction levels correspond to measurable brand degradation risk"
+    },
+    {
+      "id": "counterfactual_ecosystem_value",
+      "question": "How much would consumer surplus and licensee profit increase if restrictions were loosened or eliminated?",
+      "resolution_mechanism": "Economic modeling of licensing regimes with varying restriction levels; consumer choice experiments; case study of IP markets with lower barriers (e.g., fan-created content, open-source toy designs)",
+      "impact": "If counterfactual value is high: constraint is primarily extractive, redistribution is beneficial. If counterfactual value is low: restrictions provide genuine coordination benefits.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Estimated consumer and licensee welfare gains from relaxed restrictions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Hasbro's licensing restrictions on its intellectual properties (Transformers, My Little Pony, Power Rangers, G.I. Joe, etc.) represent a structural constraint that simultaneously enables market expansion and extracts value from licensees. The constraint operates through formalized approval processes, royalty structures, exclusivity clauses, and quality control requirements that restrict licensee innovation while protecting brand consistency. This story models how the same structural mechanism produces radically different classifications depending on the observer's structural position: dependent licensees see a snare with no exit; large corporations see a mixed coordination-extraction hybrid; Hasbro sees pure coordination; the broader product ecosystem sees constrained innovation; and the analytical observer sees a tangled rope that extracts disproportionate value while claiming to protect brand integrity. The theater ratio (0.48) reflects moderate performativity in approval processes \u2014 much of the review is procedural compliance checking, but genuine quality control also occurs. The extractiveness (0.58) reflects that Hasbro has increased its leverage over the interval as its IP portfolio has become more valuable and licensees' switching costs have risen.",
+    "key_agents": [
+      "Hasbro IP Management Division: Primary beneficiary (institutional/arbitrage) \u2014 captures value through licensing fees, approval leverage, and strategic control of product roadmaps",
+      "Small-to-Medium Licensees: Primary victims (powerless/trapped) \u2014 face high switching costs and limited negotiating power once invested in product lines; trapped by sunk costs in tooling and supply chains",
+      "Large Corporate Licensees: Secondary actors (powerful/arbitrage) \u2014 negotiate better terms due to diversified portfolios and exit options; experience mixed coordination and extraction",
+      "Consumer Product Ecosystem: Secondary victims (organized/constrained) \u2014 face restricted product diversity and higher prices due to royalty pass-through; retailers and consumers have limited ability to pressurize Hasbro directly",
+      "Retail Distribution Channel: Organized intermediary (organized/constrained) \u2014 experiences licensing restrictions on product selection; has moderate negotiating power through shelf space leverage",
+      "Analytical Observer: Neutral observer (analytical/analytical) \u2014 views constraint as tangled rope with problematic extraction; notes welfare loss from innovation restriction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, trending upward. Hasbro uses licensing to capture value beyond direct production \u2014 royalties (typically 8-15% of wholesale), approval authority over product design, and the ability to redirect licensees' innovation toward Hasbro's strategic priorities. The increase from 0.35 to 0.58 over the 30-year interval reflects Hasbro's growing IP portfolio value and increased consolidation of licensing authority (centralized approval processes, more detailed brand guidelines). Suppression (0.65): Moderate-high. Licensees face significant barriers to exit: sunk costs in manufacturing tooling and supply chain relationships, consumer brand recognition tied to the IP, and the absence of comparable alternative IP portfolios with equivalent market reach. Smaller licensees have no realistic alternative source of established IP with proven consumer demand. Large licensees can walk away but at significant cost. Theater ratio (0.48): Moderate. Hasbro's approval process includes genuine quality control (preventing knockoff products, protecting manufacturing standards) but also performative elements (brand guideline compliance reviews that catch few substantive issues, multi-month review cycles that do not correlate with actual quality outcomes, aesthetic approval that reflects subjective brand taste rather than measurable quality). The increase from 0.35 to 0.48 reflects that procedural overhead has increased as approval authority has been formalized and centralized.",
+    "perspectival_gap": "This constraint displays a stark perspectival split driven by exit options and structural position. Dependent licensees (powerless/trapped) see a snare \u2014 they have invested heavily, have no exit, and face extraction through approval delays, royalty renegotiation, and exclusivity restrictions. Large corporations (powerful/arbitrage) see a tangled rope \u2014 they receive genuine market-access coordination benefits (Hasbro's IP attracts consumers and retail shelf space), but also face extraction through royalties and approval requirements. Hasbro (institutional/arbitrage) sees pure coordination \u2014 the licensing mechanism solves Hasbro's scaling problem without direct production risk. The ecosystem (organized/constrained) sees constrained innovation and higher prices, but also depends on brand consistency that Hasbro's restrictions help maintain. The analytical observer notes that the constraint bundles legitimate coordination (brand identity protection, quality assurance) with rent extraction (pricing power from limited IP alternatives, approval authority used to bias licensee strategy toward Hasbro's interests). The perspectival gap emerges because exit options differ radically: Hasbro can unilaterally change terms; large licensees can exit; small licensees cannot.",
+    "directionality_logic": "Hasbro IP Management: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Hasbro experiences the constraint as beneficial; it solves their scaling problem. Small-to-medium licensees: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. High extraction. No exit option and high dependence on Hasbro IP. Large corporate licensees: Mixed (both benefit and bear costs) + arbitrage \u2192 d\u22480.48, f(d)\u22480.60. Moderate extraction. They benefit from market access but face royalty and approval costs. Consumer ecosystem: Victim + constrained \u2192 d\u22480.65, f(d)\u22481.00. Moderate extraction. The ecosystem has limited ability to influence terms but can exert pressure through retail channel dynamics. The directionality spread (d from 0.08 to 0.92) reflects the structural heterogeneity of the constraint \u2014 it is genuinely beneficial for Hasbro and genuinely extractive for dependent licensees.",
+    "mandatrophy_analysis": "The mandatrophy resolution hinges on distinguishing legitimate coordination (brand integrity protection, quality assurance, market expansion) from rent extraction (leveraging IP scarcity to capture disproportionate value, using approval authority to bias licensee strategy). The constraint is NOT pure coordination (rope) because Hasbro's dominant position allows it to extract beyond the coordination surplus \u2014 licensees bear extraction costs they would not bear in a competitive licensing market. The constraint is NOT pure extraction (snare) because licensing genuinely provides coordination benefits: Hasbro gains market reach, licensees gain access to established IP with consumer recognition, and consumers gain consistent brand experience. The constraint IS tangled rope: it solves a real coordination problem (bringing diverse producers into coherent brand ecosystem) while enabling asymmetric extraction (Hasbro captures disproportionate value through royalties, approval leverage, and strategic control). The mandatrophy is resolved by recognizing that the coordination function is real but not sufficient to justify the extraction level \u2014 a more competitive licensing market would preserve coordination benefits while reducing Hasbro's rents. The theater component (0.48) suggests that some approval overhead is performative rather than functional, but not dramatically so; Hasbro is not primarily a theatrical constraint, though some procedures appear to be bureaucratic rather than value-adding."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "intellectual_property_market_concentration",
+      "toy_industry_consolidation"
+    ],
+    "dual_formulation_note": "Hasbro licensing restriction is downstream of broader IP market concentration and toy industry consolidation. The restriction mechanism depends on Hasbro's market power, which in turn depends on IP portfolio value and limited comparable alternatives. Changes to upstream IP market competition would alter the constraint's extraction potential."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ]
+}

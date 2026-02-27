@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "ergo_mixer_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ergom"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ErgoMixer Privacy Mechanism",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "privacy_preserving_users",
+      "ergo_ecosystem_developers",
+      "financial_sovereignty_advocates"
+    ],
+    "victims": [
+      "blockchain_surveillance_capacity",
+      "regulatory_compliance_infrastructure",
+      "transaction_transparency_norms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Privacy-Seeking User",
+      "comment": "PERSPECTIVE 1: PRIVACY-SEEKING USER (ROPE) \u2014 Individual who desires financial privacy from surveillance capitalism and state tracking. Can exit by not using ErgoMixer (mobile option), but adoption of the protocol solves a genuine coordination problem: enabling private transactions without custodial risk. Benefits from the ecosystem without bearing extraction costs. d\u22480.20, f(d)\u22480.08, \u03c3=1.2 \u2192 \u03c7\u22480.04. Low effective extraction; primarily coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 2: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 State or financial regulator constrained by ErgoMixer's effectiveness but also benefits from baseline blockchain transparency for non-mixed transactions. Cannot fully exit the constraint (jurisdictional responsibility), but experiences both extraction (ability to surveil is compromised) and coordination (protocol reduces need for custodial gatekeeping). d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.40. Moderate extraction masked by coordination appearance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Blockchain Surveillance Vendor",
+      "comment": "PERSPECTIVE 3: BLOCKCHAIN SURVEILLANCE VENDOR (SNARE) \u2014 Company providing transaction monitoring, address clustering, and deanonymization services to financial institutions and law enforcement. ErgoMixer directly reduces product value and customer willingness-to-pay. Trapped: exit requires abandoning the business model. High extraction of their surveillance rent. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.70. High effective extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Custodial Exchange",
+      "comment": "PERSPECTIVE 4: CUSTODIAL EXCHANGE (PITON) \u2014 Traditional crypto exchange that benefits from regulation and user identity requirements (KYC/AML). ErgoMixer marginally reduces their leverage over users seeking privacy, but most exchange value comes from liquidity and price discovery, not surveillance. Theater_ratio\u22480.48 reflects that exchange compliance is partly performative (regulatory theater) and partly functional (actual KYC ritual). d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.22. Moderate but declining extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Ergo Core Development Team",
+      "comment": "PERSPECTIVE 5: ERGO CORE DEVELOPMENT (ROPE) \u2014 Open-source developers who implement ErgoMixer. Solve a genuine coordination problem (enabling non-custodial privacy) while capturing network effects and reputation benefits. Can exit via protocol fork (arbitrage). Benefits dominate without significant extraction. d\u22480.10, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.02. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Financial Stability Apparatus",
+      "comment": "PERSPECTIVE 6: FINANCIAL STABILITY APPARATUS (TANGLED ROPE) \u2014 Central banks and macro-prudential regulators constrained by loss of transaction visibility but also benefit from reduced pressure to implement more intrusive surveillance (ErgoMixer reduces justification for CBDC financial control). Cannot exit (systemic responsibility). Experiences both extraction (visibility loss) and coordination (protocol reduces demand for comprehensive financial surveillance). d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.46. Moderate mixed extraction-coordination."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Cryptographic Limits)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / CRYPTOGRAPHIC VIEW (MOUNTAIN) \u2014 From the perspective of mathematical cryptography, the zero-knowledge proof mechanism creates an inherent gap: you can prove transaction validity without revealing transaction author (emerges from computational hardness assumptions). This perspective sees the privacy-surveillance tradeoff as a fundamental property of cryptographic systems. However, the base properties (\u03b5=0.38, suppression=0.52, theater=0.48) contradict pure mountain \u2014 the engine flags this as a false summit. The tradeoff is not inherent to cryptography itself, but contingent on adoption choices and regulatory architecture."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "mixer_effectiveness_degradation",
+      "question": "As ErgoMixer adoption increases and behavioral analysis techniques improve, does the privacy benefit degrade faster than the regulatory harm?",
+      "resolution_mechanism": "Longitudinal tracking of deanonymization rates as transaction volume and BTC-UTXO-mixing-style clustering analysis improve; comparison with other mixers' empirical privacy guarantees",
+      "impact": "If privacy degrades rapidly: ErgoMixer becomes theater (high theater_ratio), reclassifying as Piton from privacy-seeker perspective. If privacy holds: remains Rope, with stable \u03b5.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ErgoMixer privacy degrades faster than regulatory harm accumulates"
+    },
+    {
+      "id": "regulatory_response_constraint_hardening",
+      "question": "Will regulatory response to ErgoMixer harden the constraint (e.g., blanket criminalization, exchange delisting) faster than technical improvements can evolve?",
+      "resolution_mechanism": "Timeline analysis: when regulatory bans occur vs when technical improvements (enhanced zero-knowledge proof efficiency, cross-chain mixing) are deployed; jurisdictional tracking of ErgoMixer legal status changes",
+      "impact": "If regulation hardens faster: constraint becomes Snare for all users (trapped by law, not just by exit costs). If technical evolution faster: constraint remains Rope-Tangled_Rope mix.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory response hardens faster than technical evolution"
+    },
+    {
+      "id": "non_custodial_vs_surveillance_capitalism_tradeoff",
+      "question": "Is the privacy benefit primarily a defense against state surveillance, or primarily a defense against corporate deanonymization (data brokers, ad networks)?",
+      "resolution_mechanism": "Empirical tracking of deanonymization sources: state subpoenas and LEA requests vs private-sector data correlation; user interviews about threat models",
+      "impact": "If primarily anti-corporate: constraint is Rope (coordination against surveillance capitalism). If primarily anti-state: constraint is Snare for regulators (pure extraction of government surveillance capacity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether privacy benefit is primarily anti-state or anti-corporate"
+    },
+    {
+      "id": "illicit_use_prevalence_extraction_threshold",
+      "question": "What prevalence of illicit-use mixing (>X% of transactions) triggers regulatory response that converts the constraint from Rope to Snare?",
+      "resolution_mechanism": "Forensic analysis of on-chain transaction sources; regulatory action triggers (law enforcement complaints, exchange pressure); threshold comparison with Monero/Zcash illicit use rates",
+      "impact": "If illicit use is <5%: Rope/Tangled_Rope classification holds. If >20%: regulatory response likely forces Snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Illicit use prevalence threshold for regulatory response intensification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "ErgoMixer is a non-interactive, non-custodial cryptocurrency mixer that uses Zero-Knowledge Proofs to break on-chain links between deposit and withdrawal addresses. The constraint exhibits the core structure of a Tangled Rope: it provides a genuine coordination benefit (enabling non-custodial privacy without centralized intermediaries) while simultaneously extracting value from surveillance-dependent actors (blockchain analysis vendors, regulatory visibility). The mechanism solves two distinct problems simultaneously: (1) users gain privacy from both state surveillance and corporate data aggregation, and (2) the protocol extracts surplus from incumbents who profit from financial transparency. This dual nature generates perspectival disagreement: privacy-seeking users see coordination (Rope), surveillance vendors see pure extraction (Snare), regulators experience mixed constraint (Tangled Rope), and the development team captures network benefits (Rope). Theater ratio (0.48) reflects moderate performativity: the privacy claim is substantive but not absolute\u2014behavioral analysis and address clustering can still partially deanonymize transactions. The extractiveness trend (0.22 \u2192 0.38) shows accumulating regulatory pressure and surveillance response as adoption grows.",
+    "key_agents": [
+      "Privacy-Seeking Users: Primary beneficiary (powerless/mobile) \u2014 gain financial privacy from surveillance; benefit from non-custodial coordination mechanism",
+      "Ergo Core Development: Primary beneficiary (organized/arbitrage) \u2014 capture network effects, reputation, protocol governance; solve coordination problem",
+      "Blockchain Surveillance Vendors: Primary victim (moderate/trapped) \u2014 lose direct product value; cannot exit without abandoning business model",
+      "Regulatory Authorities: Secondary victim (organized/constrained) \u2014 lose transaction visibility; constrained to design alternative compliance mechanisms",
+      "Financial Stability Apparatus: Secondary victim (institutional/constrained) \u2014 lose macro-prudential visibility; benefit from reduced pressure to implement CBDC control",
+      "Custodial Exchanges: Tertiary victim (institutional/arbitrage) \u2014 marginal loss of leverage over privacy-seeking users; still benefit from KYC/AML arbitrage",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing cryptographic limits as immutable when regulatory choices are contingent"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. ErgoMixer breaks on-chain surveillance links, capturing value from surveillance-dependent business models. However, the extraction is not as severe as pure-money laundering mixers because the protocol enforces valid transaction structures\u2014it enables privacy without enabling theft of locked funds. The 0.38 reflects that the constraint extracts surveillance rent (a real economic good for law enforcement and financial institutions) but does not extract user funds or create secondary coercive costs. Suppression (0.52): Moderate-high. Significant barriers to privacy preservation include: (1) regulatory pressure to delist from exchanges, (2) growing sophistication of behavioral analysis that partially defeats mixing, (3) user friction from non-custodial mechanics, and (4) ecosystem pressure toward integrated custodial solutions. However, suppression is not total\u2014the zero-knowledge proof mechanism is mathematically sound, and adoption continues despite regulatory headwinds. Theater ratio (0.48): Moderate-low. The protocol's privacy claim is substantive but not absolute. The zero-knowledge proof provides cryptographic privacy guarantees, but behavioral analysis (dust attacks, timing analysis, address clustering) can reduce anonymity. The theater consists of the gap between marketing claims of 'unbreakable privacy' and empirical privacy guarantees\u2014but this gap is smaller than custodial mixers, where theater dominates.",
+    "perspectival_gap": "The core perspectival disagreement is between beneficiaries and surveillance-dependent victims. Privacy-seeking users experience ErgoMixer as pure coordination (Rope)\u2014a solution to a genuine problem with no coercive cost. Blockchain surveillance vendors experience it as pure extraction (Snare)\u2014loss of product value with no offsetting benefit. Regulators experience the hybrid (Tangled Rope)\u2014loss of visibility for monitoring, but also gain: the protocol reduces justification for more intrusive surveillance (CBDC financial control, comprehensive transaction monitoring). The Ergo development team sees the benefit of network effects (Rope), while the analytical observer risks naturalizing the privacy-surveillance tradeoff as cryptographically inherent when it is actually contingent on regulatory architecture. This perspectival gap is diagnostic: if regulators saw ErgoMixer as pure extraction (Snare), they would ban it outright; instead, they treat it as a coordination problem requiring response (Tangled Rope), suggesting they perceive the mixed benefit-cost structure.",
+    "directionality_logic": "Privacy-seeking users: Beneficiary + mobile \u2192 d\u22480.20, f(d)\u22480.08. Low directionality; they benefit with exit options. Blockchain surveillance vendors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction\u2014their business model is the target. Regulatory authorities: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction but not maximal\u2014they retain some visibility and can design alternative compliance (constrained, not trapped). Ergo development: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Net beneficiary; they can fork or exit. Financial stability apparatus: Victim + constrained \u2192 d\u22480.65, f(d)\u22481.00. Mixed constraint\u2014surveillance loss is offset by reduced pressure for invasive CBDC infrastructure. Custodial exchanges: Victim + arbitrage \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction; they benefit from KYC arbitrage and can adapt business model. Analytical observer: d\u22480.72, f(d)\u22481.15. Mountain classification from cryptographic perspective is false summit\u2014contingent on regulatory choices, not inherent to cryptography.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (\u03b5=0.38, below 0.70 threshold but substantive): The constraint avoids the mandatrophy by demonstrating clear coordination benefits alongside extraction. The coordination benefit is non-trivial: ErgoMixer solves the problem of how to achieve financial privacy without custodial intermediaries. This is a genuine collective action problem\u2014users coordinating on a non-custodial standard instead of trusting centralized mixers. The extraction (surveillance rent) is real but secondary to the coordination function. If ErgoMixer were pure extraction (Snare), it would extract user funds or create secondary coercion; instead, it extracts from surveillance-dependent incumbents who profit from transparency. The mixed nature is legitimate: ErgoMixer is simultaneously a coordination mechanism (Rope for privacy-seekers) and an extraction mechanism (Snare for surveillance vendors). The Tangled Rope classification resolves the potential confusion by recognizing that a single constraint can provide both benefits and costs to different actors. The perspectival gap (privacy-users see Rope, vendors see Snare) is not a failure of classification but evidence that the classification is working correctly\u2014different actors experience structurally different constraints at the same protocol."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_surveillance_market",
+      "kyc_aml_compliance_infrastructure",
+      "financial_privacy_ecosystem",
+      "cryptocurrency_regulatory_response"
+    ],
+    "dual_formulation_note": "ErgoMixer is downstream of the fundamental privacy-surveillance tension in digital currency systems. The upstream constraint (privacy_surveillance_fundamental_tradeoff) is a Mountain\u2014inherent to cryptographic systems. ErgoMixer represents a contingent institutional response (implementing the privacy side of the tradeoff), creating secondary constraints for surveillance vendors and regulators. The network decomposition reflects: (1) the cryptographic foundation (mountain-level), (2) the institutional implementation (tangled_rope, this story), and (3) the market responses from surveillance and compliance actors (separate snare and scaffold stories not included here)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

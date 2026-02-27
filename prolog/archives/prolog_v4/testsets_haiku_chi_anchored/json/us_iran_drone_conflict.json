@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "us_iran_drone_conflict",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "usiran"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US-Iran Drone Conflict and Escalation Constraint",
+    "topic_domain": "geopolitical/military/sanctions",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_military_industrial_complex",
+      "regional_proxy_powers"
+    ],
+    "victims": [
+      "civilian_populations_regional",
+      "escalation_prevention_regime",
+      "iraqi_state_sovereignty"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Iraqi Civilian Population and State Sovereignty",
+      "comment": "PERSPECTIVE 1: IRAQI CIVILIANS AND STATE SOVEREIGNTY (SNARE) \u2014 Iraq's sovereignty is trapped between US military presence and Iranian regional power. Iraqi civilians bear the costs of drone strikes, proxy warfare, and US bases on their territory with minimal ability to exit or influence escalation. d\u22480.93, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.59."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Iranian Leadership and IRGC",
+      "comment": "PERSPECTIVE 2: IRANIAN LEADERSHIP / IRGC (TANGLED ROPE) \u2014 Constrained by US sanctions, military encirclement, and threat of strike. Extraction: must maintain deterrent posture and proxy networks as insurance against regime change. Coordination: participates in (coerced) escalation ladder signaling and implicit de-escalation protocols. d\u22480.68, f(d)\u22481.00, \u03c3=1.1 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "US Military Command (CENTCOM)",
+      "comment": "PERSPECTIVE 3: US MILITARY COMMAND / CENTCOM (ROPE) \u2014 Benefits from drone superiority, technical advantage, operational freedom in regional airspace, and continued security justification. Experiences constraint as coordination: managing escalation signaling, maintaining deterrent credibility, and calibrating force to avoid uncontrolled spiraling. d\u22480.12, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.03. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Escalation Prevention Institutions",
+      "comment": "PERSPECTIVE 4: ESCALATION PREVENTION REGIME (SCAFFOLD) \u2014 UN Security Council, JCPOA signatories, and diplomatic channels see the drone conflict as a temporary coordination failure with potential sunset through diplomatic de-escalation (JCPOA restoration, sanctions relief, confidence-building measures). d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.14. Low effective extraction because these institutions have agency and visibility; organized actors can construct alternative pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Deterrence Theory and MAD Framework",
+      "comment": "PERSPECTIVE 5: TRADITIONAL DETERRENCE / MAD FRAMEWORK (PITON) \u2014 Mutual Assured Destruction logic and Cold War-era escalation ladders persist in US-Iran strategic planning despite changed technological and political context. Drone strikes serve partly as performative deterrent signaling rather than functional security measures. theater_ratio\u22480.68 reflects that much of the rhetorical and operational activity (public claims, base alerts, force posturing) is theatrical rather than functional \u2014 actual escalation control relies on implicit communication channels, not on declared doctrine. The framework persists through institutional inertia and because alternatives haven't fully matured."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer / Structural Inevitability View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT RISK) \u2014 From a civilizational view, the constraint appears as an immutable consequence of geopolitical multipolarity: regional powers with grievances will always contest hegemonic powers; drone technology enables low-cost probing; escalation spirals are inherent to security dilemmas. However, the structural data (\u03b5=0.58, suppression=0.72, theater=0.68, requires_active_enforcement=true) contradicts a pure mountain classification. This reveals the false summit: what appears as natural geopolitical law is actually a contingent institutional arrangement maintained by sanctions enforcement, military positioning, and domestic political incentives for conflict. \u03b5\u22640.25 would be required for true mountain; \u03b5=0.58 indicates significant extraction and engineered suppression."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "drone_provenance_verification",
+      "question": "Was the downed drone actually Iranian, and was it actually approaching the US base with hostile intent, or is the claim part of escalation theater?",
+      "resolution_mechanism": "Independent technical analysis of wreckage; satellite imagery corroboration; third-party testimony from Iraqi authorities and regional observers; flight path reconstruction",
+      "impact": "If verified hostile approach: constraint legitimizes as defensive coordination (Rope classification stronger). If unverified or misidentified: constraint is primarily extractive signaling (Snare/Tangled Rope from all perspectives).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Verification of drone identity and hostile intent"
+    },
+    {
+      "id": "proxy_network_attribution_chain",
+      "question": "Does the Iranian government directly control the drone operations, or are these proxy militias (Houthis, PMF factions) acting with degrees of autonomy?",
+      "resolution_mechanism": "Intelligence analysis linking command structures; communications intercepts; comparative timing with Iranian official statements; escalation correlation with IRGC policy shifts",
+      "impact": "If direct control: Iran is active belligerent (escalation spiral more controllable through state-level communication). If proxy autonomy: deterrence fails against distributed actors; suppression increases as control mechanisms degrade.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of drone operations to Iranian state vs proxy autonomy"
+    },
+    {
+      "id": "domestic_political_incentives_us",
+      "question": "To what degree does the US military's operational tempo in the region reflect genuine security requirements vs. institutional interests in sustaining the regional mission and defense budget allocations?",
+      "resolution_mechanism": "Comparative analysis of threat assessments before/after incidents; correlation with Congressional budget cycles; internal DoD planning documents; alternative security analyses from independent institutes",
+      "impact": "If threat-driven: constraint is legitimate deterrent coordination. If institution-driven: extractiveness rises (Snare/Tangled Rope); theater_ratio increases; suppression reflects self-perpetuating conflict machinery rather than genuine defense.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether US military tempo reflects security needs or institutional interests"
+    },
+    {
+      "id": "escalation_spiral_controllability",
+      "question": "Are implicit de-escalation protocols sufficient to prevent uncontrolled spiraling into broader regional war?",
+      "resolution_mechanism": "Game-theoretic analysis of signaling robustness; historical precedents (1973 war, 1981-88 tanker war, recent proxy exchanges); backchannel communication capacity; third-party mediation effectiveness (Oman, Qatar channels)",
+      "impact": "If controllable: constraint resolves as Scaffold (temporary, with sunset via diplomacy). If uncontrollable: Mountain (geopolitical logic makes war inevitable) or high-extraction Snare (elites profit from perpetual crisis while populations suffer).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether escalation protocols prevent uncontrolled spiraling"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The US-Iran drone conflict in the Middle East represents a hybrid extraction-coordination constraint masquerading as natural geopolitical inevitability. The US claims to have shot down an Iranian drone approaching a US military base in Syria. This incident sits within a larger structure of sanctions, military encirclement, proxy warfare, and strategic signaling between the US and Iran. The constraint operates at multiple structural levels: (1) military-technical (drone superiority, force posturing), (2) institutional (Pentagon justification for regional presence, IRGC deterrent posture), (3) economic (sanctions enforcement benefiting certain US sectors), (4) civilian-suffering (Iraqi and regional populations bearing costs of proxy conflicts without representation), and (5) diplomatic (implicit escalation protocols that prevent but also perpetuate the crisis). The constraint exhibits all six DR types from different perspectives, revealing how a geopolitical conflict can simultaneously appear as legitimate defense, enforced extraction, temporary problem with diplomatic sunset, degraded deterrence ritual, mixed coordination-coercion, and false natural law.",
+    "key_agents": [
+      "US Military Command (CENTCOM): Primary beneficiary (institutional/arbitrage) \u2014 maintains operational freedom, regional presence justification, force posture credibility",
+      "Iranian Leadership / IRGC: Primary victim + partial beneficiary (powerful/constrained) \u2014 constrained by sanctions and military encirclement; benefits from deterrent posture and domestic legitimacy from resistance narrative",
+      "Iraqi Civilian Population and State: Primary victim (powerless/trapped) \u2014 territorial host to conflict, bears drone strike costs, cannot exit or control escalation",
+      "Proxy Militias (Houthis, PMF, IRGC-QF): Secondary actor (organized/constrained) \u2014 carry out operations; degree of autonomy affects attribution and controllability",
+      "Escalation Prevention Institutions (UN, JCPOA signatories): Organized agent (organized/constrained) \u2014 attempt to manage crisis through diplomacy; see sunset pathway via sanctions relief and confidence-building",
+      "Defense Contractors / Military-Industrial Complex: Structural beneficiary (institutional/arbitrage) \u2014 profits from sustained regional tension and force modernization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (sanctions, military positioning, domestic politics) as immutable geopolitical law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from Iraqi sovereignty (US bases without Iraqi veto), from Iranian strategic autonomy (sanctions regime forcing deterrent investments), and from regional populations (drone strikes, proxy warfare). However, it is not pure extraction \u2014 the US does provide security services (counterterrorism), deterrence works (no all-out war), and some regional actors benefit from weapons flows and reconstruction contracts. The 0.58 reflects that the primary beneficiary (US military establishment) captures asymmetric advantage during the constraint period, but alternatives exist (diplomacy, sanctions relief, JCPOA restoration). Suppression (0.72): High. Significant barriers prevent exit or challenge: (1) Military: US drone and air superiority; Iranian asymmetric capabilities (proxies) that are distributed and hard to counter. (2) Economic: Sanctions regime enforced globally; Iranian banking system constrained; alternative trade routes limited. (3) Political: US domestic politics favor military posture; Iranian regime legitimacy tied to resistance narrative; proxy forces operate with partial autonomy. (4) Informational: Competing claims about drone identity and intent; limited independent verification; state-controlled media dominates narratives. Theater ratio (0.68): Moderate-high. Much activity is performative: public threat statements serve signaling functions rather than operational necessity; force posturing (base alerts, carrier movements) communicates resolve; rhetoric about deterrence conveys messages more than doctrine. However, the threat is genuine \u2014 drone/missile capabilities are real, casualties are possible, and escalation can occur. The theater reflects that signaling and coordination now dominate over actual combat operations, yet the signaling apparatus could break down. Trending upward (0.42\u21920.68) indicates increasing reliance on rhetoric and symbolism as actual incidents become rarer.",
+    "perspectival_gap": "This constraint produces maximal perspectival divergence. (1) US military sees Rope \u2014 legitimate coordination of deterrence and escalation signaling; maintaining credible defense posture solves the problem of regional stability under multipolarity. (2) Iranian leadership sees Tangled Rope \u2014 forced into deterrent posture by sanctions and encirclement, but the deterrent strategy (proxies, missiles, rhetoric) also provides domestic legitimacy and regional influence; mixed extraction and coordination. (3) Iraqi civilians see Snare \u2014 no choice in hosting the conflict, no veto over operations, no seat at negotiating table; pure victimization. (4) Escalation prevention institutions see Scaffold \u2014 recognize diplomatic pathways (JCPOA restoration, confidence-building) with potential 5-10 year sunset as norms stabilize. (5) Cold War deterrence framework sees Piton \u2014 mutual deterrence rhetoric persists (MAD logic) though technology, alliances, and proxy structures have changed; the framework is maintained through institutional inertia. (6) Civilizational analyst risks seeing Mountain \u2014 geopolitical inevitability, multipolarity producing conflict \u2014 but the structural data reveals this is a false summit: the constraint requires active enforcement (sanctions, military positioning, proxy funding), has significant extractiveness (not a law of nature), and shows theater ratio rising (performative activity increasing). If it were a true natural law, extractiveness would be \u22640.25 and suppression would be minimal (only inherent friction, not engineered barriers).",
+    "directionality_logic": "US Military (CENTCOM): Beneficiary + arbitrage exit \u2192 d\u22480.10, f(d)\u22480.02. Slight beneficiary; benefits from regional security mission justification, force projection capability, and deterrent credibility. Iranian Leadership (IRGC): Victim + constrained exit \u2192 d\u22480.68, f(d)\u22481.00. Constrained by sanctions (cannot unilaterally lift), military encirclement (cannot exit region), and domestic politics (cannot abandon resistance narrative). Partial beneficiary status (deterrence legitimacy, regional influence) reduces d somewhat from pure victim. Iraqi Civilians: Victim + trapped exit \u2192 d\u22480.93, f(d)\u22481.40. No option to refuse hosting US bases or prevent drone strikes; no leverage in escalation decisions; maximum extraction. Escalation Prevention Institutions: Organized + constrained exit \u2192 d\u22480.40, f(d)\u22480.40. Have agency (can broker talks) and visibility (can propose alternatives), but constrained by great-power politics and state sovereignty; can see a path forward (diplomacy) hence lower effective extraction. Deterrence Framework (institutional tradition): Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Institutional frame benefits from crisis perpetuation (justifies military budgets, validates Cold War planning) and can select how to measure success; net beneficiary through selection bias.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that extractiveness and coordination are not opposed properties but can coexist in a single structure. (1) Genuine coordination: Deterrence signaling, escalation protocols, implicit de-escalation channels all work \u2014 there has been no all-out war. The US and Iran have communicated through backchannel, and strikes have been calibrated. (2) Genuine extraction: Iraqi civilians bear costs without consent. US military captures disproportionate budget/influence. Iranian populations suffer sanctions. Regional stability becomes a commodity traded among elites. (3) The Tangled Rope classification captures both: it is a coordination mechanism (deterrence works, prevents spiral into total war) AND an extraction mechanism (distributes costs asymmetrically, prevents exit by weaker parties). Neither aspect can be removed without changing the constraint's identity. If you remove the coordination function (break deterrence protocols), the spiral becomes uncontrolled and extraction becomes even higher (Snare). If you remove the extraction function (equalize power, remove sanctions), the constraint dissolves into pure Rope. The mandatrophy is resolved by recognizing that real-world constraints in conflict domains combine both functions, and the engine's classification reflects the mixed reality. The risk of false natural law (mountain perspective) is precisely that it naturalizes this mixed extraction-coordination as inevitable, when it is contingent on maintained institutions (sanctions, military positioning, proxy funding). Sunset pathway: JCPOA restoration + sanctions relief + diplomatic confidence-building \u2192 constraint transitions to pure Rope or dissolves entirely (12-20 year timeline). This is the Scaffold classification's basis: the open-science coalition of international institutions sees a realistic path to sunset, even if it is not currently being pursued."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "sanctions_enforcement_regime",
+      "regional_proxy_warfare_ecosystem",
+      "iraqi_state_sovereignty_erosion"
+    ],
+    "dual_formulation_note": "This constraint is downstream of the sanctions regime (upstream constraint) which creates the economic suppression that forces Iran into deterrent posture. It is upstream of regional proxy warfare which it enables through military technology flows. It directly affects Iraqi sovereignty by imposing foreign military presence without Iraqi veto."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

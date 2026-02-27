@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "us_ai_chip_export_controls",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Export Controls on Advanced AI Chips to China",
+    "topic_domain": "geopolitical/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_chip_manufacturers",
+      "us_national_security"
+    ],
+    "victims": [
+      "chinese_ai_companies",
+      "global_chip_supply_chain"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Chinese AI Companies",
+      "comment": "Perspective of Chinese AI companies: Trapped by the export controls, hindering their access to advanced AI chips necessary for training large models."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Chip Manufacturers",
+      "comment": "Perspective of US chip manufacturers: Benefit from the controls, as they limit competition from Chinese companies and potentially increase demand for their products from other regions. They also have arbitrage options through selling to non-controlled entities and regions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Chip Supply Chain",
+      "comment": "Perspective of the global chip supply chain: Constrained by the export controls, which disrupt established supply chains and create uncertainty, but also benefits from potential diversification of supply sources. Experiences both extraction and coordination, reflecting its hybrid nature."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "US National Security",
+      "comment": "Analytical perspective: the US attempts to maintain national security interests in the face of potentially threatening technological development. However, this also creates the tangled-rope effect of constraining the global economy while hoping to ensure US security in the long run."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "china_domestic_production",
+      "question": "How quickly can China develop domestic capabilities to produce advanced AI chips?",
+      "resolution_mechanism": "Monitor Chinese semiconductor industry investments and technological advancements.",
+      "impact": "If China achieves self-sufficiency, the export controls become less effective. If not, they maintain their impact.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "China's potential to develop domestic advanced AI chip production."
+    },
+    {
+      "id": "circumvention_methods",
+      "question": "To what extent can Chinese companies circumvent the export controls through third countries or other means?",
+      "resolution_mechanism": "Track trade flows and investigate potential illicit transactions.",
+      "impact": "If circumvention is widespread, the effectiveness of the export controls is significantly reduced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent to which Chinese companies can circumvent export controls."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The US export controls on advanced AI chips to China represent a complex geopolitical and technological constraint. The controls aim to limit China's access to cutting-edge AI technology, impacting various actors including US chip manufacturers, Chinese AI companies, and the global chip supply chain.",
+    "key_agents": [
+      "US Chip Manufacturers: Beneficiaries (institutional/arbitrage)",
+      "Chinese AI Companies: Victims (powerless/trapped)",
+      "Global Chip Supply Chain: Constrained Actor (institutional/constrained)",
+      "US National Security: Institutional Actor (institutional/analytical)"
+    ],
+    "logic_rationale": "Extractiveness: 0.6 - Moderate. The export controls extract significant capabilities from the Chinese AI sector by limiting access to advanced chips. Suppression: 0.7 - High. The controls actively suppress China's ability to develop cutting-edge AI, creating high barriers for innovation. Theater Ratio: 0.3 - Low. The enforcement is less performative and more structural as the controls are actively enforced and monitored.",
+    "perspectival_gap": "Chinese AI companies experience the constraint as a snare, as they are directly and negatively impacted. US chip manufacturers benefit from reduced competition, experiencing it as a rope. The global chip supply chain experiences a mixed effect (tangled rope) due to disruptions and potential diversification. The US national security establishment sees it as a tool to limit a rival's technological prowess.",
+    "directionality_logic": "US chip manufacturers and the US are considered beneficiaries with low 'd' values. Chinese companies are victims with high 'd' values. The global chip supply chain has a moderate 'd' value, reflecting its mixed position."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_semiconductor_supply_chain",
+      "us_china_trade_relations"
+    ]
+  },
+  "directionality_overrides": []
+}

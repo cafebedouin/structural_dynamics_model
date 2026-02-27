@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: pla_loyalty_purge
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-22
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_pla_loyalty_purge, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,22 +54,38 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: pla_loyalty_purge
- *   human_readable: "PLA Loyalty Purge Mechanism"
- *   domain: political
+ *   human_readable: PLA Loyalty Purge Mechanism
+ *   domain: political/military_coercion
  *
  * SUMMARY:
- *   This constraint models the ongoing purge within the People's Liberation Army (PLA)
- *   under Xi Jinping. Framed publicly as an anti-corruption drive, it functions as
- *   a mechanism to enforce absolute personal loyalty, remove potential rivals, and
- *   consolidate control over the military, particularly its nuclear capabilities. The
- *   constraint makes political loyalty the primary metric for survival and advancement,
- *   supplanting military competence or operational readiness.
+ *   The People's Liberation Army loyalty purge under Xi Jinping represents a
+ *   structural mechanism of coercive organizational consolidation within
+ *   China's military institution. Since Xi assumed leadership of the Central
+ *   Military Commission in 2012, the PLA has undergone sustained removal of
+ *   senior officers and regional commanders, officially framed as
+ *   anti-corruption campaigns but structurally functioning as a consolidation
+ *   of factional control. The constraint exhibits both genuine coordination
+ *   features (aligning military command hierarchy with civilian party
+ *   authority) and pure extraction features (removing power competitors,
+ *   enforcing ideological compliance, establishing surveillance-based loyalty
+ *   mechanisms). The purge operates through multiple enforcement channels:
+ *   formal anti-corruption investigations, loyalty denunciations, performance
+ *   evaluations, and career termination. Officers face trapped exit options:
+ *   resignation invites investigation, defection constitutes national
+ *   betrayal, internal opposition triggers documentation as disloyalty. The
+ *   mechanism relies on suppression of alternatives and institutional
+ *   surveillance to maintain compliance. The theater ratio (0.55) reflects
+ *   that formal bureaucratic procedures (performance reviews, corruption
+ *   charges, promotion rituals) provide legitimating cover for what is
+ *   substantially an arbitrary loyalty enforcement mechanism.
  *
- * KEY AGENTS (by structural relationship):
- *   - Senior PLA Officials: Primary target (powerful/trapped) — bear extraction via removal, investigation, and loss of status/freedom.
- *   - Xi Jinping & Inner Circle: Primary beneficiary (institutional/arbitrage) — benefits from consolidated power and elimination of perceived threats.
- *   - Central Commission for Discipline Inspection (CCDI): Enforcer (institutional/constrained) — carries out the purge, institutionally bound to the beneficiary's goals.
- *   - Analytical Observer: External analyst (analytical/analytical) — sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Xi Jinping faction: Primary beneficiary (institutional/arbitrage) — consolidates power by removing military competitors; controls appointment and removal mechanisms
+ *   - Officer corps (targeted): Primary victim (powerless/trapped) — face career termination, reputation destruction, and investigation risk; cannot exit or resist without facing career consequences
+ *   - Regional military commanders: Secondary victim (organized/constrained) — balance operational autonomy against loyalty pressure; face resource centralization and command authority constraints
+ *   - Central Military Commission apparatus: Institutional enforcer (institutional/immediate) — implements purges, manages denunciations, maintains surveillance systems
+ *   - Military bureaucracy: Institutional theater provider (institutional/arbitrage) — maintains formal procedures that legitimize purges; provides plausible deniability
+ *   - Analytical observer: Structural analyst (analytical/analytical) — identifies both genuine coordination and extraction functions operating simultaneously
  */
 
 /* ==========================================================================
@@ -77,98 +93,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(pla_loyalty_purge, 0.75). % High extraction of careers, power, and freedom.
-domain_priors:suppression_score(pla_loyalty_purge, 0.95).   % Structural property (raw, unscaled). Alternatives (disloyalty, opposition) are completely suppressed.
-domain_priors:theater_ratio(pla_loyalty_purge, 0.30).       % Piton detection (>= 0.70). The anti-corruption narrative is theater, but the power consolidation is highly functional.
+domain_priors:base_extractiveness(pla_loyalty_purge, 0.68).
+domain_priors:suppression_score(pla_loyalty_purge, 0.78).
+domain_priors:theater_ratio(pla_loyalty_purge, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(pla_loyalty_purge, extractiveness, 0.75).
-narrative_ontology:constraint_metric(pla_loyalty_purge, suppression_requirement, 0.95).
-narrative_ontology:constraint_metric(pla_loyalty_purge, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(pla_loyalty_purge, extractiveness, 0.68).
+narrative_ontology:constraint_metric(pla_loyalty_purge, suppression_requirement, 0.78).
+narrative_ontology:constraint_metric(pla_loyalty_purge, theater_ratio, 0.55).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(pla_loyalty_purge, snare).
 narrative_ontology:human_readable(pla_loyalty_purge, "PLA Loyalty Purge Mechanism").
-narrative_ontology:topic_domain(pla_loyalty_purge, "political").
+narrative_ontology:topic_domain(pla_loyalty_purge, "political/military_coercion").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(pla_loyalty_purge). % Required for Tangled Rope. The CCDI actively investigates and removes officials.
+domain_priors:requires_active_enforcement(pla_loyalty_purge).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(pla_loyalty_purge, xi_jinping_inner_circle).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(pla_loyalty_purge, senior_pla_officials).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(pla_loyalty_purge, xi_faction_loyalists).
+narrative_ontology:constraint_victim(pla_loyalty_purge, pla_officer_corps).
+narrative_ontology:constraint_victim(pla_loyalty_purge, regional_military_commanders).
+narrative_ontology:constraint_victim(pla_loyalty_purge, institutional_autonomy).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% A senior PLA official is powerful within the military hierarchy but powerless
-% against the purge mechanism. Exit is trapped. The system is purely extractive
-% and coercive from this viewpoint.
-% Engine derives d from: victim + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-% χ ≈ 0.75 * 1.42 * 1.0 (national scope) ≈ 1.065 >= 0.66 (Snare)
+% PERSPECTIVE 1: THE TARGETED OFFICER (SNARE) — Military officers subject to purges face maximum extraction. Exit is structurally trapped: resignation invites investigation, defection is national betrayal, internal opposition is documented as disloyalty. The purge mechanism relies on surveillance, denunciation, and career termination as enforcement tools. No genuine alternatives exist.
 constraint_indexing:constraint_classification(pla_loyalty_purge, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% For Xi Jinping and his core leadership, the purge is a tool of statecraft—a
-% mechanism to coordinate loyalty and ensure stability. It is purely functional.
-% Engine derives d from: beneficiary + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-% χ ≈ 0.75 * -0.12 * 1.0 ≈ -0.09 (Rope)
+% PERSPECTIVE 2: REGIONAL COMMAND STRUCTURE (TANGLED ROPE) — Regional military leaders experience both coordination (clear chain of command) and extraction (loyalty pressure, resource centralization, threat of purge). They benefit from institutional stability but at cost of autonomy. Exit is constrained — resignation is possible but career-ending; internal restructuring is possible within limits.
+constraint_indexing:constraint_classification(pla_loyalty_purge, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: XI FACTION LOYALISTS (ROPE) — Core loyalists experience the purge as pure coordination: identifying threats, consolidating command, clarifying hierarchy. They benefit from removing competitors and strengthening institutional alignment. Exit options are favorable — they can arbitrage between civilian and military authority, between competing factions, between central and local power bases.
 constraint_indexing:constraint_classification(pla_loyalty_purge, rope,
     context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: INSTITUTIONAL REFORM ADVOCATES (SCAFFOLD) — Some reformers view the purge as a temporary mechanism for consolidating civilian party control over a historically autonomous military institution. The extraction (surveillance, fear) is tolerated as temporary, with expectation that once unified command is achieved, fear-based enforcement will decline. Sunset logic: as meritocratic promotion norms replace purge-based discipline, effective extraction should decrease. Sunset timeline: 10-15 years if institutional norm-setting succeeds.
+constraint_indexing:constraint_classification(pla_loyalty_purge, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: MILITARY BUREAUCRACY (PITON) — The formal structure of military discipline, hierarchy, and performance evaluation persists and provides theater for purges. Anti-corruption campaigns provide official justification; performance metrics justify removals; promotion rituals maintain institutional legitimacy. The bureaucracy itself has atrophied as a constraint on arbitrary action — formal procedures are followed but are substantially performative, enabling purges that would be impossible under genuine rule-of-law constraints.
+constraint_indexing:constraint_classification(pla_loyalty_purge, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% An external analyst recognizes both the coordinating function (enforcing loyalty)
-% and the severe, asymmetric extraction. This dual nature is the hallmark of a Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-% The structure includes beneficiary, victim, and active enforcement.
-constraint_indexing:constraint_classification(pla_loyalty_purge, snare,
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a global and long-term view, the purge serves two structural functions: (1) genuine coordination to align military institution with civilian party control and (2) extraction to consolidate factional power and suppress alternative power centers. Both functions are real and structural, not reducible to one or the other. The constraint exhibits both Rope features (coordination of military hierarchy) and Snare features (suppression of dissent and removal of competitors).
+constraint_indexing:constraint_classification(pla_loyalty_purge, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-
-% PERSPECTIVE 4: THE ENFORCER (TANGLED ROPE)
-% The CCDI is an institutional actor but its role is instrumental and its exit is
-% constrained; it must enforce the purge. It experiences the system as a
-% high-stakes mechanism that it must operate, acknowledging its extractive nature.
-% The directionality 'd' is intermediate, leading to a Tangled Rope classification.
-constraint_indexing:constraint_classification(pla_loyalty_purge, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -177,20 +168,17 @@ constraint_indexing:constraint_classification(pla_loyalty_purge, rope,
 :- begin_tests(pla_loyalty_purge_tests).
 
 test(perspectival_gap) :-
-    % Verify the core perspectival gap between the target (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(pla_loyalty_purge, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(pla_loyalty_purge, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+    constraint_indexing:constraint_classification(pla_loyalty_purge, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(pla_loyalty_purge, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_structural_check) :-
-    % Verify that the necessary structural components for a Tangled Rope classification are present.
-    narrative_ontology:constraint_beneficiary(pla_loyalty_purge, _),
-    narrative_ontology:constraint_victim(pla_loyalty_purge, _),
-    domain_priors:requires_active_enforcement(pla_loyalty_purge).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(pla_loyalty_purge, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_claim_match) :-
-    % The analytical classification must match the declared constraint_claim.
-    narrative_ontology:constraint_claim(pla_loyalty_purge, Claim),
-    constraint_indexing:constraint_classification(pla_loyalty_purge, Claim, context(agent_power(analytical), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(pla_loyalty_purge, TR),
+    TR >= 0.70.
 
 :- end_tests(pla_loyalty_purge_tests).
 
@@ -200,79 +188,87 @@ test(analytical_claim_match) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): This score reflects the severe cost imposed on the victims—loss of career, reputation, freedom, and potentially life. The value extracted is the consolidation of absolute political power for the beneficiary.
- *   - Suppression Score (0.95): The system offers no viable alternatives. Officials cannot opt-out, appeal to an independent judiciary, or organize opposition. The only path is compliance or elimination.
- *   - The analytical classification is Tangled Rope because the constraint possesses both a genuine coordination function (enforcing loyalty across the entire command structure) and a brutal, asymmetric extraction mechanism. It is not a pure Snare, as the "anti-corruption" frame provides a coordination narrative that is functional for the regime, even if it's a pretext.
+ *   Extractiveness (0.68): High. The purge extracts loyalty compliance from the officer corps through threat and career termination. Benefits accrue to the Xi faction (consolidated control, removal of competitors) while costs fall on targeted officers and the institutional autonomy of the military structure itself. The measurement trajectory (0.45 → 0.62 → 0.68) shows rising extraction intensity over the purge interval, indicating escalation rather than stabilization. Suppression (0.78): Very high. Officers have minimal alternatives: internal options (resistance, denunciation, lateral movement) trigger investigation; external options (resignation, emigration) trigger investigation and career destruction; strategic silence is the dominant strategy but provides no protection. The suppression arises from comprehensive surveillance, institutional control over advancement, and the life-or-death stakes of military careers. Theater ratio (0.55): Moderate. The purge is not pure performance — genuine institutional restructuring occurs and real officers are removed — but the formal mechanisms (anti-corruption charges, performance metrics) provide substantial theater. Charges may be legitimate or fabricated; the distinction is often unknowable to observers. The theater has remained stable because it serves a legitimating function that cannot be abandoned without revealing the arbitrary nature of the enforcement.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme. For a targeted general (powerless/trapped), the purge is an arbitrary Snare with no recourse. For the regime's architect (institutional/arbitrage), it's a necessary Rope for ensuring political security and control. The analytical view (Tangled Rope) synthesizes these realities, seeing a system that simultaneously coordinates and extracts.
+ *   The constraint exhibits maximum perspectival divergence. The targeted officer sees pure extraction (Snare) — their exit is trapped and costs are total. The regional command sees mixed coordination and extraction (Tangled Rope) — they benefit from unified command but at cost of autonomy. The Xi faction sees pure coordination (Rope) — the purge solves the problem of military alignment with party authority. The institutional reformer sees temporary extraction with sunset (Scaffold) — once unified command is established, fear-based discipline can decline. The military bureaucracy sees its own degraded legitimacy (Piton) — formal procedures persist but are increasingly performative. The analytical observer sees genuine Tangled Rope — both coordination and extraction are real structural features that cannot be separated. This perspectival gap is irreducible: it reflects genuine differences in structural position, not measurement error or perspective bias.
  *
  * DIRECTIONALITY LOGIC:
- *   The declarations `constraint_beneficiary(pla_loyalty_purge, xi_jinping_inner_circle)` and `constraint_victim(pla_loyalty_purge, senior_pla_officials)` are the core drivers of the classification logic. They map directly to the structural power dynamics of the purge. The engine uses this data to derive low 'd' (directionality) for the beneficiary (leading to Rope) and high 'd' for the victim (leading to Snare), quantitatively capturing the perspectival divide.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The CCDI is modeled as an institutional actor with `exit_options(constrained)`. Unlike the ultimate beneficiary who has `arbitrage` exit, the enforcer is bound to its function. This results in a different directionality and reinforces the Tangled Rope classification from its perspective, as it is intimately involved in both the coordinating and extractive aspects of the mechanism.
+ *   Directionality (d) varies by structural position. Targeted officers (powerless/trapped) have d ≈ 0.95, experiencing maximum extraction through the sigmoid function. Regional commanders (organized/constrained) have d ≈ 0.55-0.65, experiencing mixed coordination and extraction. Xi faction loyalists (institutional/arbitrage) have d ≈ 0.05-0.15, experiencing coordination benefits with minimal extraction cost. The purge mechanism relies on high suppression (0.78) to maintain extraction despite the costs it imposes — suppression is not scaled by d, it is a structural feature of the constraint that applies equally across positions. The beneficiary/victim declarations reflect real structural asymmetry: the Xi faction benefits; targeted officers, regional command autonomy, and military institution integrity are the victims.
  *
  * MANDATROPHY ANALYSIS:
- *   [RESOLVED MANDATROPHY] This framework correctly identifies the dual nature of the purge, preventing a simplistic mislabeling. An analysis focused only on the victims would call it a pure Snare. An analysis accepting the state's narrative might see it as a harsh Rope. The Tangled Rope classification, derived from structural data, correctly identifies it as a hybrid system where a coordination mandate (anti-corruption/loyalty) is used to power a severe extraction engine.
+ *   RESOLVED THROUGH TANGLED ROPE AUTHENTICATION: The constraint resolves the mandatrophy by acknowledging that the purge serves TWO structurally real and inseparable functions: (1) genuine coordination to establish civilian party control over the military (Rope function) and (2) extraction to consolidate factional power and suppress alternative power centers (Snare function). Neither can be eliminated without destroying the other. The Xi faction cannot consolidate party control without removing competing power centers. The officer corps cannot resist without threatening party-military relations. The analytical observer cannot separate the legitimate institutional function from the factional extraction mechanism — they are structurally coupled in the purge mechanism itself. Tangled Rope classification is the correct analytical category because both functions are real and both extractiveness and active enforcement are required by the structural design. The constraint cannot be understood as 'really just' coordination with incidental extraction side effects, nor as 'really just' extraction dressed up in coordination language — it is genuinely hybrid.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_pla_purge,
-    'Is the purge primarily driven by a genuine (if paranoid) need to root out real corruption that threatens state stability, or is it almost entirely a pretext to eliminate political rivals and enforce personal loyalty?',
-    'Access to internal CCDI investigation files and high-level Party deliberations.',
-    'If primarily anti-corruption, the coordination function is stronger than modeled. If primarily a loyalty test, the theater_ratio is higher and the constraint is closer in nature to a pure Snare.',
+    anti_corruption_versus_purge_boundary,
+    'How much of the officer removal is driven by genuine corruption investigation versus factional loyalty pressure?',
+    'Comparative analysis of corruption charges: conviction rates for purged officers vs non-purged officers; correlation between purge waves and factional threat perception; consistency of charges across regions and institutional levels',
+    'If primarily corruption-driven: reclassifies as Scaffold with sunset logic (corruption-driven reforms can eventually normalize). If primarily loyalty-driven: confirms Snare classification. If mixed: confirms Tangled Rope.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(anti_corruption_versus_purge_boundary, empirical, 'Boundary between legitimate anti-corruption and factional purge').
+
+omega_variable(
+    institutional_norm_recovery_timeline,
+    'After centralization is achieved, will fear-based enforcement decline or become permanent feature of military hierarchy?',
+    'Historical comparison to Deng-era military reforms, tracking of removal rates over next 15 years, correlation between institutional stability and purge frequency, analysis of successor planning under unified command',
+    'If extraction declines as promised: Scaffold classification confirmed, sunset is real, constraint transitions to Rope. If extraction remains high: Snare persists, purge becomes institutionalized coercion, constraint is mislabeled as temporary.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(institutional_norm_recovery_timeline, preference, 'Whether purge-based discipline can transition to institutional norms').
+
+omega_variable(
+    officer_corps_exit_elasticity,
+    'As purge risk increases, do capable officers seek exit (emigration, early retirement, sector change), creating brain drain that forces higher extraction to maintain compliance?',
+    'Tracking of PLA officer emigration rates; analysis of early retirement requests; correlation between purge intensity and retirements; comparison to exit rates in professional militaries',
+    'If exit elasticity is high: extractiveness becomes unstable (purges cause exits, exits require higher extraction to maintain compliance, higher extraction causes more exits). If exit is trapped: Snare persists stably.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(officer_corps_exit_elasticity, empirical, 'Whether officer exit flows create feedback loop with extraction intensity').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(pla_loyalty_purge, 0, 10).
+narrative_ontology:interval(pla_loyalty_purge, 2012, 2024).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.75 > 0.46), requiring temporal data.
-% The purge has intensified throughout Xi Jinping's tenure (modeled over a 10-year interval).
+% Theater ratio over time
+narrative_ontology:measurement(pla_tr_t0, pla_loyalty_purge, theater_ratio, 0, 0.5).
+narrative_ontology:measurement(pla_tr_t3, pla_loyalty_purge, theater_ratio, 3, 0.52).
+narrative_ontology:measurement(pla_tr_t6, pla_loyalty_purge, theater_ratio, 6, 0.55).
 
-% Theater ratio over time (stable):
-narrative_ontology:measurement(pla_loyalty_purge_tr_t0, pla_loyalty_purge, theater_ratio, 0, 0.30).
-narrative_ontology:measurement(pla_loyalty_purge_tr_t5, pla_loyalty_purge, theater_ratio, 5, 0.30).
-narrative_ontology:measurement(pla_loyalty_purge_tr_t10, pla_loyalty_purge, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(pla_be_t0, pla_loyalty_purge, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(pla_be_t3, pla_loyalty_purge, base_extractiveness, 3, 0.62).
+narrative_ontology:measurement(pla_be_t6, pla_loyalty_purge, base_extractiveness, 6, 0.68).
 
-% Extraction over time (increasing as control consolidates):
-narrative_ontology:measurement(pla_loyalty_purge_ex_t0, pla_loyalty_purge, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(pla_loyalty_purge_ex_t5, pla_loyalty_purge, base_extractiveness, 5, 0.60).
-narrative_ontology:measurement(pla_loyalty_purge_ex_t10, pla_loyalty_purge, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The purge acts as a mechanism to enforce a specific state (loyalty).
 narrative_ontology:coordination_type(pla_loyalty_purge, enforcement_mechanism).
-
-% Network relationships (structural influence edges)
-% The purge directly impacts the operational effectiveness of the military.
-narrative_ontology:affects_constraint(pla_loyalty_purge, pla_military_readiness).
+narrative_ontology:affects_constraint(pla_loyalty_purge, chinese_civil_military_relations).
+narrative_ontology:affects_constraint(pla_loyalty_purge, factional_power_consolidation).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The structural derivation chain
-% (beneficiary/victim declarations + exit options) accurately models the
-% directionality for all key agents.
+constraint_indexing:directionality_override(pla_loyalty_purge, institutional, 0.1).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

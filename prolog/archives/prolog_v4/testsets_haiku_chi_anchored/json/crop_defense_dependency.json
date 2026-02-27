@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "crop_defense_dependency",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cropdef"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dependency on External Pesticides due to Crop Biological Limitations",
+    "topic_domain": "technological/agricultural",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "agrochemical_companies",
+      "industrial_seed_breeding_programs"
+    ],
+    "victims": [
+      "smallholder_farmers",
+      "agricultural_soil_health",
+      "ecological_pest_predator_networks"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Smallholder Farmer",
+      "comment": "PERSPECTIVE 1: SMALLHOLDER FARMER (SNARE) \u2014 Trapped in dependency loop. Cannot switch crops (market-dependent, local climate constraints), cannot stop using pesticides (defenseless cultivars require them), cannot afford integrated pest management alternatives. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96. Maximal extraction with minimal exit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Agricultural Soil and Pest Ecology",
+      "comment": "PERSPECTIVE 2: SOIL HEALTH AND PEST ECOLOGY (SNARE) \u2014 Constrained victim: cannot opt out of pesticide exposure, bears accumulating toxin burden, loses natural pest control mechanisms as predator networks collapse. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.76. Extraction appears as ecological debt."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Agrochemical Industry",
+      "comment": "PERSPECTIVE 3: AGROCHEMICAL INDUSTRY (ROPE) \u2014 Institutional beneficiary. Experiences constraint as pure coordination: defenseless crops require pesticides, creating stable demand. No extraction component from this actor's perspective; they see a solved problem. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary. Has arbitrage exit: can shift product lines if demand changes."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Industrial Seed Breeding Programs",
+      "comment": "PERSPECTIVE 4: SEED BREEDING PROGRAMS (ROPE) \u2014 Organized institutional actor. Benefits from continued high-yield, low-defense breeding strategy: product differentiation, patent/licensing architecture, locked-in customer base. Experiences constraint as coordination achieved \u2014 solved the yield problem. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05. Arbitrage exit: can retool to disease-resistant varieties if profitable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Large-Scale Commercial Agriculture",
+      "comment": "PERSPECTIVE 5: LARGE-SCALE COMMERCIAL AGRICULTURE (TANGLED ROPE) \u2014 Powerful agents with mobile exit (can adopt integrated pest management, crop rotation, precision application). But also benefit from the current system: pesticides are cheaper than labor-intensive alternatives, economies of scale apply to chemical application infrastructure. d\u22480.48, f(d)\u22480.62, \u03c3=1.0 \u2192 \u03c7\u22480.36. Mixed experience: benefits from simplicity, constrained by chemical cost volatility and regulatory tightening."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Food Processing and Retail",
+      "comment": "PERSPECTIVE 6: FOOD PROCESSING AND RETAIL SUPPLY CHAINS (TANGLED ROPE) \u2014 Organized institutional actors benefit from cheap, uniform crop inputs (high-yield monocultures are logistics-optimized). But constrained by pesticide residue limits, retailer brand risk from contamination scandals, and regulatory compliance burden. d\u22480.52, f(d)\u22480.70, \u03c3=1.1 \u2192 \u03c7\u22480.45. Hybrid: benefits from current system but increasingly extracted from via liability and compliance costs."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Agroecological Transition Movement",
+      "comment": "PERSPECTIVE 7: AGROECOLOGICAL TRANSITION MOVEMENT (SCAFFOLD) \u2014 Organized agents (extension services, regenerative agriculture coalitions, organic certification bodies) see the dependency as temporary and solvable: crop defense can be rebuilt through genetic recovery and integrated pest management protocols. d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.26. Low effective extraction because the movement has agency and sees a structural sunset (the constraint can be engineered away). Theater ratio \u22640.70, so scaffold gate passes with sunset implication."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational timescale, high-yield agriculture may appear to require a tradeoff between yield and defense. This perspective risks naturalizing the constraint as inherent to crop biology: 'you cannot have both high yield and robust defenses.' However, the structural data (\u03b5=0.58, suppression=0.68) contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that the 'inherent tradeoff' framing naturalizes what is actually a contingent design choice made in mid-20th-century breeding."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "yield_defense_tradeoff_law",
+      "question": "Is the yield-defense tradeoff a fundamental biological law or a contingent outcome of 20th-century breeding choices?",
+      "resolution_mechanism": "Genetic analysis of wild crop relatives and landraces; screening for varieties combining high yield with robust defense; directed breeding experiments toward dual optimization",
+      "impact": "If law: constraint is mountain (immutable). If contingent: constraint is tangled rope / scaffold (engineerable). This determines whether the dependency is permanent or temporary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether yield-defense tradeoff is biological law or design choice"
+    },
+    {
+      "id": "smallholder_exit_feasibility",
+      "question": "Can smallholder farmers economically viably exit pesticide dependency through integrated pest management without external subsidy?",
+      "resolution_mechanism": "Cost-benefit analysis of IPM protocols vs chemical dependency; longitudinal farmer income tracking in IPM transition zones; market price premium realization for pesticide-reduced crops",
+      "impact": "If viable: snare classification weakens (exit becomes possible). If not viable: snare persists and extraction deepens as global commodity prices pressure farmers toward chemical intensity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic viability of IPM exit for smallholders"
+    },
+    {
+      "id": "genetic_defense_recovery_rate",
+      "question": "How quickly can crop defense mechanisms be recovered through directed breeding without sacrificing yield gains?",
+      "resolution_mechanism": "Historical analysis of crop improvement projects emphasizing disease resistance (e.g., Aphanomyces resistance in peas, bacterial wilt tolerance in tomato); genetic mapping of defense loci; breeding cycle time projections",
+      "impact": "If recovery < 10 years: scaffold sunset is credible. If recovery > 30 years: scaffold becomes pipe dream, and constraint remains snare/tangled rope indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for genetic defense recovery without yield loss"
+    },
+    {
+      "id": "alternative_pest_control_scaling",
+      "question": "Can biological pest control (predatory insects, parasitoids, entomopathogenic fungi) scale to industrial-scale monocultures without pesticide support?",
+      "resolution_mechanism": "Analysis of biological control success rates in field-scale deployments; comparison of pest pressure in organic vs conventional systems; habitat provisioning requirements per hectare",
+      "impact": "If scaling is feasible: agroecological transition becomes structural option (scaffold becomes rope). If scaling requires pesticide-free refugia (incompatible with monoculture): constraint remains tangled rope or snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scalability of biological pest control to monoculture systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 70,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 70,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 1950,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "The dependency on external pesticides arises from a structural mismatch between crop genetics and agronomic practice. Industrial breeding in the mid-20th century optimized for yield and uniformity at the explicit expense of defensive traits (secondary metabolites, disease resistance, herbivory tolerance) that reduce marketable biomass. This created a technological dependency: defenseless cultivars require external chemical protection to survive pest and pathogen pressure. The constraint exhibits the full range of DR types from different structural positions. Smallholder farmers are trapped (snare), bearing extraction costs with no exit. The agrochemical and seed industries experience the constraint as solved coordination (rope), capturing rents from the artificially sustained demand. Large commercial agriculture experiences mixed coordination and extraction (tangled rope), benefiting from chemical-based efficiency but constrained by input costs and regulatory burden. Food supply chains experience increasing extraction as residue liabilities grow. The agroecological transition movement sees this as a temporary engineering problem solvable through genetic recovery and integrated pest management (scaffold). The civilizational analytical observer risks naturalizing the design choice as inherent biological law (false summit mountain). The constraint's theater ratio (0.52) reflects that much pesticide use is genuinely functional (targeting real pest pressure), not purely performative, but with increasing performative elements (prophylactic application, insurance dosing) as pest resistance develops.",
+    "key_agents": [
+      "Smallholder Farmers: Primary victim (powerless/trapped) \u2014 economically dependent on commodity crops, cannot switch cultivars or stop pesticide use without income collapse",
+      "Agricultural Soil and Pest Ecology: Primary victim (moderate/constrained) \u2014 accumulating toxin burden, losing natural pest control predators and parasitoids as chemical intensity increases",
+      "Agrochemical Companies: Primary beneficiary (institutional/arbitrage) \u2014 secured stable, inelastic demand through crop genetics; can exit if markets shift",
+      "Seed Breeding Programs: Primary beneficiary (organized/arbitrage) \u2014 locked in licensing/patent architecture; beneficiary of continued high-yield, low-defense breeding direction",
+      "Large Commercial Agriculture: Mixed (powerful/mobile) \u2014 benefits from chemical simplicity and economies of scale, but increasingly constrained by input costs and regulatory tightening",
+      "Food Processing and Supply Chains: Mixed (organized/constrained) \u2014 benefit from uniform crop inputs, constrained by pesticide residue liability and consumer concerns",
+      "Agroecological Transition Agents: Organized transitional actor (organized/constrained) \u2014 see structural sunset through genetic recovery and IPM, but face scaling and economic barriers",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent design choice as inherent biological limit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The dependency is real and imposes measurable costs on farmers and ecosystems, but is not as severe as a pure snare (extraction \u22650.66). Much of the pesticide use is genuinely required for current cultivars; the extraction is built into the breeding architecture rather than parasitic. The trajectory from 0.35 to 0.58 over 70 years reflects the deepening lock-in as pest resistance develops and chemical alternatives multiply. Suppression (0.68): High. Barriers to exit are substantial: farmers cannot switch crops (market structure, climate), cannot stop pesticides (defenseless cultivars), cannot access integrated pest management (requires training, labor, ecological infrastructure). But suppression is not total (some IPM exists, some organic farming succeeds). Theater ratio (0.52): Moderate. Pesticide application is partly functional (responding to real pest pressure), partly insurance/prophylactic (applied even when pest pressure is low). The theater increases as pest resistance requires increasing dosages to achieve the same efficacy, creating a treadmill where application becomes ritualized.",
+    "perspectival_gap": "This constraint demonstrates deep perspectival divergence. Smallholder farmers and soil ecology experience snare-level extraction with no visible exit. Agrochemical and seed companies experience rope-level coordination with benefits. Large agriculture experiences tangled rope \u2014 benefiting from the system but increasingly constrained by its costs and rigidity. The agroecological transition sees a solvable engineering problem (scaffold) that can be resolved through genetic recovery. The civilizational analytical observer risks seeing an immutable biological law (mountain) \u2014 that high yield requires low defense \u2014 but the structural data reveals this as a false summit: the tradeoff is a contingent design choice, not a law of nature. The perspectival gap widens as climate change and pest resistance accelerate, making the old optimization (yield at defense expense) increasingly fragile.",
+    "directionality_logic": "Smallholder farmers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction: cannot exit, bear full cost. Agricultural soil and ecology: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction: cannot opt out of exposure, suffer accumulating damage. Agrochemical companies: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary: have full exit optionality, benefit from continued dependency. Seed programs: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary: locked-in licensing benefits them, arbitrage exit available. Large agriculture: Mixed + mobile \u2192 d\u22480.48, f(d)\u22480.62. Moderate extraction: can exit (IPM, diversification), but benefits from current simplicity. Food chains: Mixed + constrained \u2192 d\u22480.52, f(d)\u22480.70. Moderate extraction: constrained by liability but benefiting from uniform inputs. Agroecological agents: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.50. Low extraction: organized agency and visible exit path reduce effective extraction even though actors are constrained by transition barriers. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification rejected by false summit detector.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves the mandatrophy by disambiguating the natural law claim from the technological lock-in. The false summit (mountain perspective) claims that 'high-yield crops cannot have robust defenses' \u2014 this is a mid-20th-century breeding choice presented as law. The actual constraint is the technological lock-in (tangled rope): crops have been bred into genetic defenselessness, creating sustained demand for external protection. This is neither immutable nor purely extractive \u2014 it is a hybrid that can be engineered away (scaffold sunset) through deliberate breeding for dual-optimized varieties. The mandatrophy resolves by showing that the perspectival gap is not about disagreement on facts but about whether the constraint is treated as inevitable (false summit) or solvable (scaffold/tangled rope). The agroecological transition perspective proves the constraint is engineering-solvable: many landraces and wild relatives combine moderate yield with robust defense. The contemporary breeding direction (precision breeding for resilience, CRISPR enhancement of defense traits) is recovering this dual optimization. The constraint's extractiveness will decline as genetics enables defense recovery without yield penalty."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "agricultural_chemical_resistance_treadmill",
+      "monoculture_fragility_ecosystem",
+      "smallholder_farmer_debt_trap"
+    ],
+    "dual_formulation_note": "The crop defense dependency decomposes into three structurally distinct constraints: (1) the breeding choice that eliminated defenses (technological lock-in, \u03b5=0.58, this story), (2) the resistance treadmill that amplifies pesticide intensity over time (\u03b5=0.72, upstream), and (3) the farmer debt trap created by recurring chemical purchase obligations (\u03b5=0.68, downstream institutional). Each has different \u03b5 values because they measure different structural properties: the breeding lock-in, the ecological feedback loop, and the financial extraction mechanism. All three are linked \u2014 solving any one weakens the others \u2014 making this a constraint family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "ergo_storage_rent_mechanism",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ergo Storage Rent (Demurrage)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "active_network_participants",
+      "ergo_foundation"
+    ],
+    "victims": [
+      "long_term_inactive_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Inactive User with Lost Keys",
+      "comment": "Inactive user who has lost their keys and cannot move their funds. They are trapped and subject to storage rent indefinitely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Long-Term Hodler with Active Nodes",
+      "comment": "User who holds Ergo long-term and actively participates in the network, albeit infrequently, they are subject to the rent but benefit from the network's overall health."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Ergo Foundation",
+      "comment": "The Ergo Foundation benefits from the storage rent mechanism as it ensures network viability and prevents bloat. It's a rope because it facilitates coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Active Network Participants",
+      "comment": "Active participants benefit from a cleaner, more efficient blockchain due to the storage rent. This promotes network health and decentralization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rent_threshold_fairness",
+      "question": "Is the rent threshold calibrated fairly to balance network viability and user burden?",
+      "resolution_mechanism": "Analyze the distribution of UTXOs and their activity to determine an optimal threshold for storage rent.",
+      "impact": "Determines whether the storage rent disproportionately affects small or infrequent users.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fairness of storage rent threshold"
+    },
+    {
+      "id": "key_loss_mitigation",
+      "question": "How can key loss be mitigated to prevent permanent extraction from trapped users?",
+      "resolution_mechanism": "Explore social recovery mechanisms or other methods for key recovery.",
+      "impact": "Reduces the negative impact of storage rent on users who have lost their private keys.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Mitigation of extraction due to key loss"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Ergo introduces a \"Storage Rent\" or demurrage fee for inactive data stored on the blockchain. This mechanism aims to prevent blockchain bloat by incentivizing users to either move their funds or pay a small fee for keeping their data on-chain indefinitely. The storage rent can be viewed as a tangled rope, providing benefits to active network participants and the Ergo Foundation while potentially extracting value from long-term inactive users.",
+    "key_agents": [
+      "Long-Term Inactive Users: Primary target (powerless/trapped) - Subject to the demurrage fee if their UTXOs remain inactive for a prolonged period.",
+      "Active Network Participants: Primary beneficiary (powerful/mobile) - Benefit from a more efficient and scalable blockchain.",
+      "Ergo Foundation: Secondary beneficiary (institutional/arbitrage) - Receives a portion of the storage rent fees to fund network development and maintenance."
+    ],
+    "logic_rationale": "Extractiveness: The storage rent extracts a small fee from inactive users, contributing to network maintenance. Suppression: Suppression arises from the fact that users need to actively move their funds to avoid the rent, potentially creating a barrier to entry for some. Theater ratio: The theater ratio is low because the mechanism is primarily functional, aimed at preventing bloat.",
+    "perspectival_gap": "The perspectives differ based on the agent's activity and ability to exit. Inactive users see the mechanism as a snare, as they are potentially trapped and subject to the fee. Active participants and the Ergo Foundation see it as a rope, ensuring network viability and efficiency. The long-term hodler sees it as a tangled rope, subject to the rent, but aware of its benefits.",
+    "directionality_logic": "The directionality is determined by whether the agent benefits from or bears the cost of the storage rent. Inactive users bear the cost, while active users and the foundation benefit. Active participants have mobile exit, as they can move their funds and are benefited by the network viability. Ergo Foundation benefits from network health, contributing to its growth."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

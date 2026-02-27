@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "mil_std_810f_tailoring",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mil810f"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "MIL-STD-810F Environmental Tailoring Standard",
+    "topic_domain": "technological/defense_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "prime_contractors",
+      "program_managers"
+    ],
+    "victims": [
+      "subcontractors",
+      "field_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subcontractor",
+      "comment": "PERSPECTIVE 1: SUBCONTRACTOR (SNARE) \u2014 Trapped in a supply chain where prime contractors dictate tailoring parameters without transparent justification. Subcontractors bear cost of compliance uncertainty and cannot exit the contract. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Field Reliability Collective",
+      "comment": "PERSPECTIVE 2: FIELD RELIABILITY COLLECTIVE (SNARE) \u2014 Abstract actors (soldiers, pilots, equipment users) cannot exit deployed systems. If tailoring is inadequate, they bear catastrophic costs with no voice in the tailoring process. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Engineering Test Groups",
+      "comment": "PERSPECTIVE 3: ENGINEERING TEST GROUPS (TANGLED ROPE) \u2014 Constrained by budget caps and schedule pressure. Benefit from standardized methods that reduce design uncertainty. Also harmed by prime contractor manipulation of tailoring parameters to avoid full testing. d\u22480.60, f(d)\u22480.78, \u03c3=1.0 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Prime Contractor",
+      "comment": "PERSPECTIVE 4: PRIME CONTRACTOR (ROPE) \u2014 Benefits from coordinating test strategy with government customer. The tailoring framework provides legitimate efficiency gains by avoiding redundant testing. Captures cost savings through reduced test scope. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Negative effective extraction = net beneficiary through coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Program Manager / Contracting Officer",
+      "comment": "PERSPECTIVE 5: PROGRAM MANAGER (ROPE) \u2014 Controls tailoring authority. Experiences the constraint as a coordination tool: tailoring resolves the legitimate tension between cost-efficiency and adequacy. Benefits from cost savings when tailoring is properly applied. d\u22480.12, f(d)\u2248-0.02, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "DoD Standards Committee",
+      "comment": "PERSPECTIVE 6: DoD STANDARDS COMMITTEE (PITON) \u2014 Maintains the tailoring standard through institutional routine. MIL-STD-810F is largely performative: the actual test limits are determined by program managers with minimal oversight from standards body. The standard persists through regulatory inertia despite limited enforcement mechanism. theater_ratio=0.58 reflects moderate performativity \u2014 some genuine engineering guidance, but much ritualistic documentation. d\u22480.10, f(d)\u2248-0.06, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a universal perspective, some test tailoring is inherent to engineering: you cannot test infinite environmental permutations. This perspective sees the constraint as an immutable property of how complex systems are verified. However, base properties (\u03b5=0.52, suppression=0.65) contradict the mountain classification. The engine will flag this as a false summit, revealing that the 'inherent to engineering' framing naturalizes what is actually a contestable institutional arrangement with asymmetric decision power."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tailoring_transparency_threshold",
+      "question": "What degree of transparency in tailoring rationale would distinguish legitimate cost-benefit optimization from strategic underfunding of critical tests?",
+      "resolution_mechanism": "Comparative analysis of field failure modes vs tailored test envelopes; correlation between contractor cost savings and actual field reliability; post-mortem examination of systems that failed outside tailored limits",
+      "impact": "If threshold shows systematic bias toward cost savings over risk: Snare classification strengthened, extraction mechanism confirmed. If failures track well with tailoring: Rope classification strengthened, coordination mechanism confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Transparency threshold for distinguishing cost optimization from strategic underfunding"
+    },
+    {
+      "id": "subcontractor_exit_viability",
+      "question": "Can subcontractors realistically challenge prime contractor tailoring decisions without contract termination risk?",
+      "resolution_mechanism": "Survey of subcontractor experience with raising test adequacy concerns; analysis of contract termination patterns following technical objections; examination of alternative procurement pathways available to subcontractors",
+      "impact": "If exit is viable: Snare perspective weakens (constrained instead of trapped), chi drops. If exit is blocked: Snare perspective confirmed, extraction ceiling removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subcontractors can challenge tailoring decisions without termination risk"
+    },
+    {
+      "id": "performance_correlation_environmental_scope",
+      "question": "Does the correlation between environmental test scope and field reliability differ significantly when controlled for contractor cost pressure vs when contractor cost pressure is excluded?",
+      "resolution_mechanism": "Regression analysis of field failure modes vs test scope across systems with comparable operational environments but different contracting cost structures; analysis of voluntary over-testing vs contractually-mandated scope",
+      "impact": "If correlation weakens when cost pressure removed: extraction mechanism confirmed. If correlation remains strong: environmental variation is the primary driver, and tailoring represents legitimate efficiency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cost pressure affects correlation between test scope and field reliability"
+    },
+    {
+      "id": "field_user_representation_in_tailoring",
+      "question": "Do field users (soldiers, pilots, equipment operators) have any formal input into tailoring parameters for systems they will deploy and operate?",
+      "resolution_mechanism": "Audit of stakeholder engagement procedures in tailoring process; comparison of DoD systems with field user input vs those without; analysis of downstream failure modes and user complaints pre/post-deployment",
+      "impact": "If no formal field user input: Snare classification confirmed (victims trapped, voiceless). If field users have formal channel: Tangled Rope or Rope classification more appropriate (asymmetry reduced).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Field user representation in tailoring decisions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "MIL-STD-810F Environmental Tailoring Standard creates a structural tension between legitimate engineering efficiency and asymmetric extraction through cost-driven test reduction. The standard gives prime contractors and program managers authority to 'tailor' environmental test limits to match predicted service conditions, eliminating redundant testing. This coordination function is real: systematic testing of all environmental permutations is economically infeasible and technically wasteful. However, the authority to define 'predicted service conditions' becomes an extraction mechanism when held by actors whose incentive structure favors cost reduction over risk mitigation. Subcontractors and field reliability communities lack transparent visibility into tailoring decisions and cannot challenge them without contract termination risk. The constraint exhibits Snare dynamics (trapped victims), Rope dynamics (legitimate coordination), and institutional theater (performative standards committee). The theater ratio has increased over the 30-year interval as test complexity has grown and contractor pressure to reduce test scope has intensified, while the substantive oversight mechanisms have remained stable, creating drift toward performative compliance.",
+    "key_agents": [
+      "Prime Contractors: Primary beneficiary (institutional/arbitrage) \u2014 captures cost savings through reduced test scope; controls tailoring authority",
+      "Subcontractors: Primary victim (powerless/trapped) \u2014 must comply with tailoring decisions they cannot review or challenge; bear cost of compliance uncertainty",
+      "Field Users / Deployed Equipment Operators: Secondary victim (powerless/trapped) \u2014 cannot exit deployed systems; bear catastrophic costs if tailoring is inadequate",
+      "Engineering Test Groups: Moderate/constrained \u2014 benefit from standardized methods but harmed by prime contractor manipulation of tailoring parameters",
+      "Program Managers: Institutional beneficiary (institutional/arbitrage) \u2014 control tailoring authority; benefit from cost savings when properly applied",
+      "DoD Standards Committee: Institutional actor (institutional/arbitrage) \u2014 maintains standard through routine; exercises limited oversight of actual tailoring decisions"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Prime contractors systematically use tailoring authority to reduce test scope beyond what risk-based analysis would justify. The extraction is constrained by some oversight and technical legitimacy of tailoring concept, but the asymmetric cost incentives create systematic bias toward under-testing. The increase from 0.28 to 0.52 over the interval reflects intensifying cost pressure in defense contracting. Suppression (0.65): High. Subcontractors cannot realistically challenge tailoring decisions without contract termination risk. Field users have zero formal input into parameters. Tailoring rationale is documented but not transparently justified. Suppression is structural to the contracting hierarchy. Theater ratio (0.58): Moderate-high. The standard prescribes processes for tailoring (documentation, justification, etc.) but actual enforcement of the justification quality is minimal. Program managers with cost incentives determine the 'sufficiency' of tailoring arguments with limited technical oversight. The theater ratio's increase reflects that the ritualistic documentation has become more elaborate while substantive analysis remains superficial.",
+    "perspectival_gap": "Prime contractors and program managers experience the constraint as legitimate coordination (Rope) \u2014 tailoring solves the real problem of economically infeasible comprehensive testing. Subcontractors experience systematic extraction (Snare) \u2014 they bear cost of compliance with decisions they cannot review. Field users experience maximum extraction (Snare) \u2014 they cannot exit deployed systems and bear catastrophic costs if tailoring was inadequate. Engineering test groups experience mixed coordination-extraction (Tangled Rope) \u2014 the standard provides useful guidance but is weaponized by contractors to avoid adequate testing. The DoD Standards Committee experiences its own authority as degraded (Piton) \u2014 the standard exists but is not substantively enforced. The analytical observer risks naturalizing the constraint as inherent to engineering (Mountain) \u2014 the perspectival gap reveals this as a false summit masking institutional asymmetries.",
+    "directionality_logic": "Subcontractors: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximal extraction; cannot exit or challenge. Field users: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximal extraction; zero voice in process. Engineering test groups: Victim + constrained \u2192 d\u22480.60, f(d)\u22480.78. Significant extraction but some capacity to push back through technical expertise. Prime contractors: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary through cost capture and decision authority. Program managers: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.02. Net beneficiary through budget control. DoD Standards Committee: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.06. Neutral to slightly positive; maintains standard through routine without major cost/benefit.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the Tangled Rope classification captures the true structure: the constraint combines a genuine coordination function (economically efficient test planning) with systematic asymmetric extraction (cost-driven under-testing that transfers risk from contractors to subcontractors and field users). The Rope perspective (prime contractor) represents the legitimate coordination benefit. The Snare perspectives (subcontractors, field users) represent the extracted victims. The Piton perspective (standards committee) shows institutional theater masking the asymmetry. The analytical observer's Mountain is a false summit \u2014 the 'inherent to engineering' framing naturalizes what is actually a contingent institutional arrangement with biased decision authority. The Tangled Rope prevents mislabeling this as either 'pure efficiency coordination' (which would ignore the systematic extraction) or 'pure predatory extraction' (which would ignore the genuine cost-efficiency gains of tailoring). The mandatrophy is resolved by acknowledging both functions operate simultaneously and asymmetrically."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "defense_supplier_power_asymmetry",
+      "field_reliability_knowledge_gap"
+    ],
+    "dual_formulation_note": "MIL-STD-810F tailoring is downstream of both the supplier power asymmetry in defense contracting and the field reliability knowledge gap between planners and users. The standard operationalizes cost pressure from the asymmetry into test scope decisions, and it blocks field user input that could reduce the knowledge gap."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

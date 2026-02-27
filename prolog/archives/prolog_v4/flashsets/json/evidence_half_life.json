@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "evidence_half_life",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Epistemic Decay Constant",
+    "topic_domain": "technological/scientific/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "malicious_actors",
+      "opportunistic_researchers"
+    ],
+    "victims": [
+      "judicial_system",
+      "scientific_community",
+      "uninformed_citizens"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Uninformed Citizens",
+      "comment": "PERSPECTIVE 1: UNINFORMED CITIZENS (SNARE) - Citizens are largely trapped in this system, unable to discern valid information from manipulated evidence. The speed and scale of misinformation make it nearly impossible for the average person to exit this state of confusion. They bear the costs of this decay, from poor decision-making to manipulation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Judicial System",
+      "comment": "PERSPECTIVE 2: JUDICIAL SYSTEM (TANGLED ROPE) - The judicial system is constrained by the need to verify evidence while also facing an increasing rate of epistemic decay. They benefit from improved forensic tools and legal frameworks, but they are still victims of falsified or quickly outdated evidence. They have limited exit options due to their role in upholding the law."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Scientific Community",
+      "comment": "PERSPECTIVE 3: SCIENTIFIC COMMUNITY (TANGLED ROPE) - Scientists are caught in a loop. They develop evidence and methodologies but are constrained by the half-life of the knowledge they're developing. They benefit from increased research capacity and data availability but are equally vulnerable to misinterpretation or manipulation. Their exit is constrained by the need to remain objective and verifiable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Malicious Actors",
+      "comment": "PERSPECTIVE 4: MALICIOUS ACTORS (ROPE) - Actors who intentionally falsify or manipulate evidence benefit from the rapid decay rate. They exploit the gap between the creation of false evidence and its verification, turning the decay constant into a weapon. They have arbitrage exit options by moving to new platforms or methods as old ones are detected."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Opportunistic Researchers",
+      "comment": "PERSPECTIVE 5: Opportunistic Researchers (ROPE) - Those who capitalize on quickly fading relevance in scientific or technological evidence have a net positive immediate benefit. They are in arbitrage as an institution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) - From a civilizational perspective, the observer recognizes that epistemic decay is an inherent challenge that requires continuous adaptation. However, they also recognize that the system is prone to exploitation and that asymmetric extraction is at play. Analysis of this decay constant is necessary."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_speed_vs_decay",
+      "question": "At what point does the speed of verification fail to keep pace with the decay of evidence?",
+      "resolution_mechanism": "Empirical study of legal cases and scientific findings, measuring the time required for verification against the half-life of relevant evidence.",
+      "impact": "If verification lags: the system is vulnerable to widespread misinformation and injustice. If verification keeps pace: The system can function reliably.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determines the tipping point where the verification process is overwhelmed by the decay rate."
+    },
+    {
+      "id": "source_authenticity",
+      "question": "What technological or institutional mechanisms can reliably establish the authenticity and provenance of digital evidence?",
+      "resolution_mechanism": "Develop and test different authentication methods, such as blockchain verification, digital watermarking, and multi-signature schemes. Analyze their resilience against manipulation.",
+      "impact": "If authenticity can be reliably established: the decay constant is less of a threat. If not: the system is highly vulnerable to fabricated evidence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Addresses the core problem of verifying the origin and integrity of evidence."
+    },
+    {
+      "id": "public_awareness_effectiveness",
+      "question": "How effective are public awareness campaigns in educating individuals to critically evaluate information and identify manipulated evidence?",
+      "resolution_mechanism": "Conduct studies to measure the impact of public awareness campaigns on critical thinking skills, media literacy, and susceptibility to misinformation.",
+      "impact": "If effective: the public is more resilient to misinformation. If not: the public remains vulnerable to manipulation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Assesses the potential for public education to mitigate the negative effects."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The rapid pace of information turnover and the ease of digital alteration have created a scenario where the 'half-life' of a piece of evidence can drop below the time required for judicial or scientific verification. This decay creates a structural tension, enabling malicious actors and opportunistic researchers to benefit while harming the judicial system, scientific community, and the ability of citizens to make informed decisions.",
+    "key_agents": [
+      "Judicial System: Primary victim (moderate/constrained) - Struggles to verify evidence quickly enough.",
+      "Scientific Community: Secondary victim (moderate/constrained) - Vulnerable to misinterpretation and manipulation of evidence.",
+      "Uninformed Citizens: Primary victim (powerless/trapped) - Lacks the tools to discern valid information.",
+      "Malicious Actors: Primary beneficiary (institutional/arbitrage) - Exploit the gap between creation and verification of false evidence.",
+      "Opportunistic Researchers: Secondary beneficiary (institutional/arbitrage) - Capitalize on quickly fading relevance of evidence.",
+      "Analytical Observer: (analytical/analytical) - Understands the broader civilizational impact"
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. Significant resources and cognitive effort are extracted from the judicial and scientific systems due to the need for continuous verification. Suppression (0.70): High. The rapid decay rate effectively suppresses the ability of citizens to discern valid information. Theater ratio (0.30): Low. Focus is on the decay and its consequences, less on performative aspects.",
+    "perspectival_gap": "The malicious actors see coordination (Rope) - they are solving their own problems of manipulating information. The judicial and scientific communities see a mixed challenge of coordination and extraction (Tangled Rope) - they must manage resources while struggling to verify evidence. Uninformed citizens see pure extraction (Snare) - they are largely helpless in this system. The analytical observer recognizes the inherent challenge (Tangled Rope) and the need for solutions.",
+    "directionality_logic": "Each perspective's directionality is determined by its structural role. Beneficiaries (malicious actors and researchers) have arbitrage exit options and experience low or negative extraction. Victims (judicial system, scientific community, citizens) are constrained or trapped and bear the costs of decay. The analytical observer attempts to view the situation objectively.",
+    "mandatrophy_analysis": "This resolves the mandatrophy by recognizing that multiple valid perspectives exist. It's not just a Snare (pure extraction) because some actors benefit. It's not just a Rope (pure coordination) because it's being exploited. It's a complex system with inherent tensions and asymmetries."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "confirmation_bias",
+      "algorithmic_opacity"
+    ],
+    "dual_formulation_note": "Evidence half-life is the rate at which reliance upon evidence decays, and this can also decay understanding in an adversarial way if bad actors game the system."
+  },
+  "directionality_overrides": []
+}

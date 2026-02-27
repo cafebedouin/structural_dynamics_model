@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "superbowl_advertising_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "superbowl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "Super Bowl Advertising Market Extraction",
+    "topic_domain": "economic/media_markets",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "nfl_broadcast_rights_holders",
+      "primary_advertising_agencies"
+    ],
+    "victims": [
+      "consumer_attention_commons",
+      "mid_market_advertisers",
+      "small_businesses"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Mid-Market Advertiser",
+      "comment": "PERSPECTIVE 1: MID-MARKET ADVERTISER (SNARE) \u2014 Trapped by fear of missing cultural moment. 30-second spot costs $6-7M (2024 rates). Cannot opt out without losing competitive brand visibility signaling during peak national attention (113M+ viewers). Exit options are catastrophically expensive (alternative national media buys lack temporal concentration). d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.77. High effective extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Consumer Attention Commons",
+      "comment": "PERSPECTIVE 2: CONSUMER ATTENTION COMMONS (SNARE) \u2014 Abstract collective good (shared cultural moment, conversation substrate) that cannot exit. Experiences extraction as: (a) unsolicited psychic incursion during mass spectacle; (b) cognitive capture that commercial advertisers monetize; (c) inability of the commons itself to benefit from or govern its own attention resources. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80. Maximal extraction of abstract resource."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NFL Broadcast Rights Holder",
+      "comment": "PERSPECTIVE 3: NFL BROADCAST RIGHTS HOLDER (ROPE) \u2014 Experiences constraint as coordination mechanism: monetizing concentrated viewership (113M+) solves the collective action problem of funding premier sports broadcasting at scale. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary. The rights holder sees the high ad rates as legitimate compensation for guaranteed audience concentration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Mega-Cap Consumer Brand (Apple, Nike, Coca-Cola)",
+      "comment": "PERSPECTIVE 4: MEGA-CAP BRAND (TANGLED ROPE) \u2014 Has both coordination and extraction functions. Benefits from using Super Bowl as signaling mechanism (billions in impressions, viral potential, cultural dominance positioning). But also extracts via network effects: when mega-caps dominate Super Bowl ad slots, mid-market competitors cannot achieve equivalent ROI (the expected value of a mid-market spot degrades because it is surrounded by superior production, brand recognition, and message recall from mega-caps). d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.20. Low effective extraction because mega-caps have high exit options (they can buy equivalent national reach via other mechanisms). The constraint is more beneficial than extractive for this tier."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Super Bowl Cultural Institution",
+      "comment": "PERSPECTIVE 5: SUPER BOWL CULTURAL INSTITUTION (PITON) \u2014 Super Bowl is maintained as the advertising apex through institutional inertia and theatrical performance. Early Super Bowls (1970s-1990s) genuinely concentrated national attention for sports fan coordination (limited channels, no internet, no streaming). Modern Super Bowl advertising now operates substantially on theater: the idea that Super Bowl ad slots are uniquely valuable persists because previous years' high spend and viral moments created a coordination expectation. But digital targeting alternatives and streaming fragmentation now provide equivalent audience reach at lower cost. theater_ratio=0.64 indicates degradation: the constraint's function (reaching concentrated audience) is increasingly performative as fragmented digital media can achieve the same targeting more efficiently. The institutional commitment to 'Super Bowl advertising spectacle' persists through cultural momentum, not technological necessity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Market Advertiser Collective (Coalition Perspective)",
+      "comment": "PERSPECTIVE 6: MID-MARKET ADVERTISER COLLECTIVE (PITON) \u2014 From an organized coalition perspective, Super Bowl advertising is a degraded coordination mechanism. Historically, it solved the problem of reaching concentrating mass audiences (pre-internet). Now it persists through: (a) sunk cost fallacy (past Super Bowl ads set expectation that future ads must happen); (b) social proof / fashion (if competitors advertise, we must); (c) cultural significance marketing (brands want association with the event, not the audience reach). This creates inertial extraction without coordination benefit. theater_ratio=0.64 captures this. The coalition could negotiate lower rates or coordinate to a cheaper platform, but the institutional commitment to the event's symbolic value prevents coordination escape. d\u22480.72, f(d)\u22481.13, \u03c3=1.0 \u2192 \u03c7\u22480.65. Moderate-high extraction, held in place by institutional theater rather than genuine functional necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer - Media Fragmentation Sunset",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FRAGMENTATION SUNSET (SCAFFOLD) \u2014 From a long-term view, Super Bowl advertising's extraction mechanism has a sunset clause: digital fragmentation, addressable streaming ads, AI audience matching, and metaverse/gaming platforms will eventually provide equivalent audience targeting at lower cost and higher precision. The constraint's extractiveness (0.58) is temporarily high because legacy media still concentrates attention. But the coordination function it once served (reaching mass audiences) is being displaced by precision targeting. The theater ratio (0.64) indicates the constraint is already operating partially on cultural inertia. The sunset is 10-20 years: as streaming becomes primary (not secondary) consumption for Super Bowl generation (Gen Z), the mass-audience gathering is replaced by fragmented individual viewing, and the advertising premium collapses. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.37. Moderate effective extraction on a temporary trajectory."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "audience_fragmentation_timeline",
+      "question": "How quickly will streaming and digital targeting displace Super Bowl's mass audience gathering as the primary advertising venue?",
+      "resolution_mechanism": "Tracking of Gen Z/Gen Alpha viewing patterns (linear TV vs streaming vs gaming during Super Bowl); measurement of advertising ROI parity between Super Bowl and targeted digital buys; emergence of alternative cultural event with equivalent audience concentration",
+      "impact": "If sunset < 10 years: scaffold classification becomes dominant, extraction mechanism collapses early. If sunset > 20 years: piton/snare classifications remain stable; institutional inertia sustains premium pricing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for media fragmentation to displace Super Bowl advertising premium"
+    },
+    {
+      "id": "extracted_value_vs_legitimacy_boundary",
+      "question": "At what advertiser-tier threshold does Super Bowl advertising represent rational brand positioning vs speculative coordination failure (celebrities paying for cultural association rather than audience reach)?",
+      "resolution_mechanism": "Cross-advertiser ROI analysis comparing Super Bowl spend to equivalent digital+traditional media alternatives; survey of advertiser decision-making (cultural prestige vs measured reach); comparison of brand lift metrics pre/post-Super Bowl vs continuous digital campaigns of equivalent spend",
+      "impact": "If rational threshold is high (majority of spend is legitimate ROI): constraint is primarily rope/tangled rope. If rational threshold is low (much spend is performative): constraint is primarily snare/piton (extraction via fashion/inertia).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Super Bowl advertising spend is ROI-justified or driven by cultural fashion"
+    },
+    {
+      "id": "coordination_escape_barriers",
+      "question": "Can mid-market advertisers coordinate a collective exit from Super Bowl advertising without losing competitive positioning, and what prevents such coordination?",
+      "resolution_mechanism": "Game-theoretic analysis of mid-market advertiser payoff matrices; historical precedent analysis (other markets where coordinated escape from expensive signaling occurred); experimental study of advertiser willingness to coordinate",
+      "impact": "If escape is possible: constraint is snare due to coordination failure (tragic commons), not fundamental extraction. If escape is impossible: constraint is more fundamental snare (extraction backed by asymmetric information or power, not pure coordination failure).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether mid-market advertisers can coordinate exit from Super Bowl premium"
+    },
+    {
+      "id": "cultural_premium_measurement",
+      "question": "What fraction of Super Bowl advertising premium (vs equivalent national reach via other media) is due to genuine cultural significance vs institutional fashion/inertia?",
+      "resolution_mechanism": "Historical analysis of advertising premium across eras (growth vs decline vs stabilization); brand association metrics (social listening on 'aspirational' vs 'practical' Super Bowl advertiser associations); longitudinal tracking of brand lift attribution (Super Bowl vs comparable spend on non-Super Bowl vehicles)",
+      "impact": "If cultural premium is real (>60% of premium): constraint legitimacy increases (coordination + prestige signaling). If cultural premium is declining (<30% of premium): piton classification dominates (institutional theater sustaining premium).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of Super Bowl advertising premium due to cultural significance vs inertia"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The Super Bowl advertising market exemplifies how a coordination mechanism (concentrating national attention to solve the collective action problem of reaching mass audiences) has degraded into a snare mechanism (extracting premium pricing from trapped advertisers via fashion and institutional inertia). The constraint operates across three distinct temporal windows: (1) the early internet era (1990s-2010) when Super Bowl genuinely concentrated attention and provided unique ROI; (2) the transition era (2010-2020) when digital targeting emerged as equivalent alternative; (3) the current era (2020-present) when the premium persists primarily through cultural momentum and coordinated advertiser behavior, not technological necessity. The extractiveness trajectory (0.32\u21920.45\u21920.58 over 30 years) captures the paradox: as technological alternatives improved, the effective extraction increased because the constraint's legitimacy eroded but advertiser behavior locked in. Theater ratio (0.38\u21920.51\u21920.64) tracks the degradation: Super Bowl ads shifted from primarily functional messaging (reaching target audiences) to performative spectacle (signaling cultural dominance and brand prestige). The suppression mechanism (0.68) operates through coordinated expectations: individual advertisers believe competitors will advertise, so they must also advertise, creating a locked-in high-price equilibrium that persists despite availability of cheaper alternatives. Mid-market advertisers are trapped: exiting unilaterally means losing visibility signaling, but the signaling value exists only because all competitors remain trapped in the same equilibrium.",
+    "key_agents": [
+      "NFL/Broadcast Rights Holders: Primary beneficiaries (institutional/arbitrage) \u2014 capture direct revenue from ad slot sales (~$7M per 30-second spot in 2024) plus ancillary sponsorship and ratings-based ad network premiums",
+      "Mega-Cap Consumer Brands (Apple, Nike, Coca-Cola, etc.): Secondary beneficiaries (powerful/arbitrage) \u2014 can afford Super Bowl spots and benefit from cultural positioning and viral moment creation; can also afford competing high-cost channels",
+      "Mid-Market Advertisers (automotive, fast food, consumer packaged goods at $500M-$5B revenue): Primary victims (moderate/constrained) \u2014 trapped by coordination failure; must participate in high-price equilibrium despite availability of cheaper national reach",
+      "Small Businesses and Limited-Budget Advertisers: Secondary victims (powerless/trapped) \u2014 cannot participate in Super Bowl market at all; forced to lower-tier advertising alternatives that lack the cultural signaling value",
+      "Consumer Attention Commons: Tertiary victim (powerless/trapped) \u2014 abstract collective resource that experiences extraction as unsolicited psychic incursion during mass spectacle; cannot exit or govern its own attention resources",
+      "Advertising Industry as Collective: Organized participant (organized/constrained) \u2014 agencies profit from Super Bowl ad production and placement fees; have incentive to maintain high prices; partially captured by NFL interests"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint extracts from mid-market and constrained advertisers via coordination failure: each individual advertiser must pay $6-7M for a 30-second spot to maintain competitive visibility signaling, even though cheaper national media alternatives (digital, cable networks, streaming ad networks) provide equivalent reach. The extraction is magnified by the coordination lock-in: the premium persists not because Super Bowl provides unique value, but because all competitors must stay in the game. Without the coordination failure, market prices would fall toward the alternative media baseline (~$1-2M for equivalent reach). Suppression (0.68): High. Suppression mechanisms include: (a) coordinated expectations (if competitors advertise, we cannot exit without losing positioning); (b) cultural prestige marketing (brands feel compelled to associate with the event); (c) media coverage amplification (Super Bowl ads receive disproportionate social media and traditional press attention, creating FOMO); (d) advertiser herding (following competitors' participation decisions rather than independent ROI calculation). Escape from the coordination lock-in is suppressed by lack of focal alternative (hard to coordinate a collective exodus without a unified destination) and fear of individualized loss of visibility. Theater ratio (0.64): Moderate-high. The constraint operates substantially on theatrical performance: the belief that Super Bowl advertising is uniquely valuable persists despite technological displacement. Early Super Bowls (1970s-1990s) had genuine theater reduction (the event actually concentrated attention uniquely). Modern Super Bowls maintain theater through: (a) tradition (past ad virality creates expectation of future ad virality); (b) celebrity participation and cultural narrative (Super Bowl ads are 'cultural events,' not merely advertising); (c) media amplification (ads receive disproportionate social media attention because they are Super Bowl ads, not because they are inherently better). The functional component (audience reach) has degraded from unique necessity to parity with digital alternatives. The performative component (cultural prestige signaling) has grown.",
+    "perspectival_gap": "This constraint shows stark perspectival disagreement on whether extraction is occurring. The NFL/broadcast rights holder sees rope: monetizing concentrated viewership solves the coordination problem of funding premier broadcasting. The mega-cap brand sees tangled rope with net benefit: the constraint enables cultural dominance signaling that has asymmetric value for brands with existing scale and production capacity. The mid-market advertiser sees snare: trapped by coordinated expectations; must pay premium despite availability of cheaper alternatives; the perceived value of a Super Bowl spot degrades as production quality and surrounding advertiser tier increases (my ad's ROI depends on what competitors advertise). The consumer attention commons sees snare: extraction of uncompensated psychic attention during mass cultural moment. The analytical observer sees scaffold with sunset: institutional theater sustaining a constraint that technological fragmentation will displace within 10-20 years as Gen Z consumes entertainment via streaming and gaming rather than live broadcast. The cultural institution perspective sees piton: Super Bowl advertising persists through institutional momentum and sunk cost expectations (past high spend created coordination lock-in) despite technological alternatives. This perspectival spread (from rope to snare) indicates a constraint in transition: the coordination function is degraded, but institutional inertia sustains the extraction mechanism.",
+    "directionality_logic": "NFL/Broadcast Rights Holder: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Direct revenue stream from ad slot sales; can exit to lower-cost programming without loss. Mid-Market Advertiser: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction. Trapped by coordinated expectations; cannot exit without losing visibility signaling; must pay premium despite cheaper alternatives. Consumer Attention Commons: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction. Abstract collective with no exit options; experiences unsolicited extraction of attention resources. Mega-Cap Brand: Mixed (beneficiary + arbitrage, but also partial victim to coordination asymmetry) \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction for this tier because high exit options (can access equivalent reach via other mechanisms) and net benefit from signaling value and production scale advantages. Mid-Market Collective (Organized): Victim + constrained \u2192 d\u22480.72, f(d)\u22481.13. Moderate-high extraction. The collective has more agency than individuals but remains trapped by coordination failure; cannot exit unilaterally without losing individual member positioning.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that Super Bowl advertising is NOT a pure coordination mechanism (rope) but rather a degraded coordination mechanism that has become extractive (tangled rope \u2192 snare). Early Super Bowl advertising (1970s-1990s) was primarily rope: it solved a genuine collective action problem (how to reach mass audiences before cable/digital fragmentation). The coordination value was real and visible: every advertiser benefited from concentration (the chance of their ad going viral, the cultural conversation, the shared viewership). Modern Super Bowl advertising (2020-present) is primarily snare: the coordination problem it solved has been replaced by technological alternatives (digital targeting, streaming ads, addressable TV). The premium persists because of institutional inertia and coordinated expectations, not because of genuine coordination benefit. The mid-market advertiser's dilemma is not 'should I participate in a valuable collective solution?' but 'should I pay $6-7M to signal that I can afford to pay $6-7M?' The constraint has transformed from solving a problem to being the problem. The theater ratio increase (0.38\u21920.64) tracks this transformation: as technological alternatives improved, the functional component degraded and the performative component grew. The constraint meets snare criteria: \u03b5=0.58 (high extraction), suppression=0.68 (high suppression via coordinated expectations), \u03c7\u22480.77 for mid-market victim perspective (very high effective extraction). The constraint does not qualify as pure rope (\u03b5 \u2264 0.45) because the coordination function has eroded. It does not qualify as pure tangled rope (which requires genuine coordination benefit alongside extraction) because the benefits are asymmetric and artificial (cultural prestige signaling, not functional coordination). The analytical observer's scaffold perspective captures the key insight: this constraint has a sunset clause (media fragmentation) but we are still in the plateau phase where institutional theater sustains the premium."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_scarcity_commons",
+      "advertising_budget_allocation_constraints"
+    ],
+    "dual_formulation_note": "Super Bowl advertising extraction is downstream of broader attention market constraints (scarcity of mass-audience platforms in pre-digital era). As upstream constraints (media fragmentation, attention fragmentation) evolve, the structural basis for Super Bowl premium erodes. The network link captures this dependency: fragmentation of attention infrastructure directly impacts whether concentrated Super Bowl audience remains valuable."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ]
+}

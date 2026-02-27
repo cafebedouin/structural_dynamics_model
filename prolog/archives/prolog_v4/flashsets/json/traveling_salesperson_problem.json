@@ -1,0 +1,82 @@
+{
+  "header": {
+    "constraint_id": "traveling_salesperson_problem",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.2,
+    "theater_ratio": 0.1,
+    "claimed_type": "rope",
+    "human_readable": "Applied Logistics Optimization (based on TSP)",
+    "topic_domain": "economic/technological",
+    "beneficiaries": [
+      "logistics_companies",
+      "customers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Logistics Companies",
+      "comment": "Logistics companies benefit from TSP solutions by optimizing routes, reducing fuel consumption, and increasing delivery efficiency. They can arbitrage between different optimization strategies and technological solutions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Individual Delivery Drivers",
+      "comment": "Individual delivery drivers, while subject to optimized routes, benefit from reduced mileage and potentially shorter workdays, but have some mobility in choosing alternative employment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Customers",
+      "comment": "Customers benefit from faster and more reliable deliveries, with some ability to switch providers if service is unsatisfactory."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the application of TSP solutions is a coordination mechanism that improves overall logistics efficiency on a global scale."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "This constraint models the application of solutions to the Traveling Salesperson Problem (TSP) in industrial logistics. It generally functions as a coordination mechanism, improving efficiency for logistics companies, delivery drivers, and customers. The extractiveness and suppression are low, as the benefits are widely distributed and alternatives exist.",
+    "key_agents": [
+      "Logistics Companies: Primary beneficiaries (institutional/arbitrage)",
+      "Delivery Drivers: Secondary beneficiaries (moderate/mobile)",
+      "Customers: Tertiary beneficiaries (moderate/mobile)",
+      "Analytical Observer: Sees coordination (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness is relatively low (0.35) because the optimization provides benefits to multiple parties, not just the logistics company. Suppression is also low (0.20) because customers and drivers have alternatives, even if somewhat limited. The theater ratio is low (0.10) as the optimization is mostly functional.",
+    "perspectival_gap": "All actors generally perceive the application of TSP as a coordination mechanism (Rope).",
+    "directionality_logic": "Logistics companies, delivery drivers, and customers all benefit from the application of TSP solutions. The directionality value is thus skewed towards beneficiaries, resulting in a rope classification.",
+    "mandatrophy_analysis": "The constraint does not exhibit mandatrophy because the optimization provides genuine coordination benefits without significant extraction or suppression."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

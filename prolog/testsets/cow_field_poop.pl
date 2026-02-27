@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: cow_field_poop
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-01
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_cow_field_poop, []).
@@ -12,18 +13,35 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -39,17 +57,28 @@
  *   domain: social/psychological
  *
  * SUMMARY:
- *   This constraint models the presence of "poop" (negative events, social hazards,
- *   or nonsense) as an inherent and diverse feature of existence. The constraint
- *   is not the hazard itself, but the social and institutional systems of rules
- *   and norms for navigating and managing these hazards. It distinguishes between
- *   the analytical act of cataloging hazards and the pragmatic necessity of avoiding them.
+ *   The Cow Field Hazard models a fundamental social and psychological
+ *   constraint: the presence of negative events, social friction, and
+ *   nonsense as an inherent feature of any navigable environment. This is not
+ *   a pathology — it is a structural reality that creates coordination
+ *   problems and opportunities. Agents who share awareness of hazards can
+ *   coordinate to avoid them; agents isolated from collective knowledge
+ *   experience pure extraction. The constraint exhibits all six
+ *   classification types depending on the observer's structural position:
+ *   natural inevitability (mountain), coordination mechanism (rope),
+ *   information asymmetry with mixed benefits (tangled rope), information
+ *   isolation with pure costs (snare), and temporary coordination problems
+ *   with sunset clauses (scaffold). The theater_ratio increases over time as
+ *   hazard-warning institutions persist through inertia rather than function,
+ *   a classic piton pattern.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Unwary Walker (powerless/trapped): Primary target — bears the immediate cost of encountering a hazard.
- *   - Effective Navigators (moderate/mobile): Primary beneficiary — benefits from the system of norms allowing successful avoidance.
- *   - Public Works Department / Urban Planner (institutional/arbitrage): Institutional beneficiary/manager — benefits from the mandate to manage the system.
- *   - The Analytical Observer (analytical/analytical): Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Hazard-Aware Agents: Primary beneficiaries (organized/mobile) — benefit from collective knowledge and reduced stepping costs
+ *   - Field Epistemic Commons: Secondary beneficiary (analytical) — collective knowledge base that improves over time
+ *   - Unaware Newcomers: Secondary victims (powerless/constrained) — experience both coordination benefits and information asymmetry extraction
+ *   - Isolated Agents: Primary victims (powerless/trapped) — experience pure hazard costs with no coordination access
+ *   - Hazard-Mapping Initiative: Organized coordinator (organized/mobile) — systematic awareness and navigation training with sunset horizon
+ *   - Warning Institutions: Inertial actors (institutional/arbitrage) — maintain warning rituals despite declining functional necessity
  */
 
 /* ==========================================================================
@@ -57,73 +86,69 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Encountering a hazard extracts time, emotional energy, and resources (cleaning).
-% The system of norms for avoidance also requires cognitive overhead.
-domain_priors:base_extractiveness(cow_field_poop, 0.40).
-% The "extraordinary" detail of cataloging can suppress the "ordinary"
-% necessity of simple navigation. Alternatives (e.g., systemic cleanup) are suppressed as impractical.
-domain_priors:suppression_score(cow_field_poop, 0.45).
-% The constraint is functional, not performative.
-domain_priors:theater_ratio(cow_field_poop, 0.10).
+domain_priors:base_extractiveness(cow_field_poop, 0.35).
+domain_priors:suppression_score(cow_field_poop, 0.4).
+domain_priors:theater_ratio(cow_field_poop, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(cow_field_poop, extractiveness, 0.40).
-narrative_ontology:constraint_metric(cow_field_poop, suppression_requirement, 0.45).
-narrative_ontology:constraint_metric(cow_field_poop, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(cow_field_poop, extractiveness, 0.35).
+narrative_ontology:constraint_metric(cow_field_poop, suppression_requirement, 0.4).
+narrative_ontology:constraint_metric(cow_field_poop, theater_ratio, 0.55).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(cow_field_poop, tangled_rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(cow_field_poop, rope).
 narrative_ontology:human_readable(cow_field_poop, "The Cow Field Hazard (Pragmatic Avoidance)").
 narrative_ontology:topic_domain(cow_field_poop, "social/psychological").
 
-% --- Binary flags ---
-% The norms and rules for managing public spaces require active enforcement
-% (e.g., fines for littering, maintenance schedules).
-domain_priors:requires_active_enforcement(cow_field_poop).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(cow_field_poop, effective_navigators).
-narrative_ontology:constraint_beneficiary(cow_field_poop, public_works_department).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(cow_field_poop, the_unwary_walker).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(cow_field_poop, hazard_aware_agents).
+narrative_ontology:constraint_beneficiary(cow_field_poop, coordination_practitioners).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE VICTIM (THE STEPPER) - SNARE
-% Agent who bears the most extraction.
+% PERSPECTIVE 1: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) — Negative events, social friction, and nonsense are inherent features of any complex environment. No agent can eliminate hazards from existence — they can only navigate them. This is an irreducible structural fact, not a policy choice. The constraint emerges naturally from the combinatorial explosion of possible failure modes in any social system.
+constraint_indexing:constraint_classification(cow_field_poop, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: PRAGMATIC COORDINATOR (ROPE) — Agents who acknowledge the inevitability of hazards benefit from shared awareness and collective avoidance protocols. The constraint functions as pure coordination: 'yes, there is poop in the field' is information that enables cooperative navigation. Suppression is moderate — groups can share maps and strategies without coercion. Extraction is minimal — the information system itself creates no winners and losers, only shared immunity.
+constraint_indexing:constraint_classification(cow_field_poop, rope,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: UNAWARE NEWCOMER (TANGLED ROPE) — Those unfamiliar with the hazards face both coordination benefits (can learn from others' experience) and extraction (more exposed to costs of stepping in poop, figuratively and literally). Others' knowledge of hazard locations benefits them asymmetrically — the experienced agents coordinate successfully while newcomers still stumble. High suppression due to information asymmetry and social shame around admitting inexperience.
 constraint_indexing:constraint_classification(cow_field_poop, tangled_rope,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 4: ISOLATED AGENT (SNARE) — An agent with no access to others' warnings, no communication channels, and no ability to exit the field experiences pure extraction: all hazards, no coordination. Maximum suppression (no alternatives) and high experienced extractiveness due to complete information isolation. The constraint appears as pure coercion — stepped in poop and has no one to blame but the universe.
+constraint_indexing:constraint_classification(cow_field_poop, snare,
     context(agent_power(powerless),
             time_horizon(immediate),
             exit_options(trapped),
             spatial_scope(local))).
 
-% PERSPECTIVE 2: THE INSTITUTIONAL MANAGER (PUBLIC WORKS) - TANGLED ROPE
-% Agent who manages the system.
-constraint_indexing:constraint_classification(cow_field_poop, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 5: HAZARD-MAPPING INITIATIVE (SCAFFOLD) — Organized groups implementing systematic hazard awareness and navigation training see this as a temporary coordination problem with a sunset clause. As awareness improves and practice solidifies into habit, the constraint's suppression and theater decline — the need for external coordination mechanisms decreases. Exit paths emerge: better shoes, elevated walkways, alternative fields. Theater_ratio is declining as practical solutions replace performative cautionary tales.
+constraint_indexing:constraint_classification(cow_field_poop, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
-            exit_options(arbitrage),
+            exit_options(mobile),
             spatial_scope(regional))).
 
-% PERSPECTIVE 3: THE PRACTICAL WALKER - ROPE
-% Agent with sufficient agency to navigate successfully.
-constraint_indexing:constraint_classification(cow_field_poop, tangled_rope,
-    context(agent_power(moderate),
-            time_horizon(immediate),
-            exit_options(mobile),
+% PERSPECTIVE 6: WARNING INSTITUTION (PITON) — Organizations that maintain hazard warnings (signs, training protocols, designated 'poop spotters') persist through institutional inertia even when actual hazard awareness has improved and agents no longer need the warnings. The ritual of warnings persists long after the functional information transfer has degraded. Theater_ratio is high (0.65+) — much activity is performative compliance with hazard-warning norms rather than substantive new information.
+constraint_indexing:constraint_classification(cow_field_poop, piton,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
             spatial_scope(local))).
-
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER - TANGLED ROPE
-% Default analytical context. Sees both coordination and extraction.
-constraint_indexing:constraint_classification(cow_field_poop, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -132,18 +157,13 @@ constraint_indexing:constraint_classification(cow_field_poop, tangled_rope,
 :- begin_tests(cow_field_poop_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(cow_field_poop, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(cow_field_poop, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(cow_field_poop, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(cow_field_poop, TypeOther, context(agent_power(analytical), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(multi_perspective_variance) :-
-    constraint_indexing:constraint_classification(cow_field_poop, Type1, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(cow_field_poop, Type2, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(cow_field_poop, Type3, context(agent_power(powerless), _, _, _)),
-    Type1 \= Type2,
-    Type2 \= Type3,
-    Type1 \= Type3.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(cow_field_poop, TR),
+    TR >= 0.70.
 
 :- end_tests(cow_field_poop_tests).
 
@@ -153,79 +173,86 @@ test(multi_perspective_variance) :-
 
 /**
  * LOGIC RATIONALE:
- *   Base extractiveness (0.40) and suppression (0.45) are set to values
- *   characteristic of a Tangled Rope. The constraint has a clear coordination
- *   function (navigating public space safely) but also imposes costs and requires
- *   active enforcement, creating asymmetric outcomes. The theater ratio is low (0.10)
- *   as the problem and its management are tangible and functional.
+ *   Extractiveness (0.35): Moderate-low. The constraint's primary function is coordination — sharing hazard awareness enables collective navigation. While information asymmetry creates some extraction (experienced agents have advantages over newcomers), the asymmetry decays as information spreads. The value reflects that this is primarily a coordination problem, not an extraction mechanism. Suppression (0.40): Moderate. Significant barriers include information access gaps, social shame around admitting inexperience, tacit knowledge in hazard recognition, and local variation in hazard types. But suppression is not total — information sharing is possible and agents can learn. Theater ratio (0.55): Moderate-high, rising over time. Early in the constraint's operation, warnings and coordination protocols serve genuine functions. Over time (measured at time_point 10), warning institutions persist through inertia — the theater ratio rises to 0.65 as performative compliance (posting signs, conducting trainings) outlasts functional information transfer.
  *
  * PERSPECTIVAL GAP:
- *   - The Unwary Walker (powerless/trapped) experiences the hazard's consequence
- *     directly as a Snare. It extracts time and dignity, and they are trapped until
- *     the mess is resolved.
- *   - The Practical Walker (moderate/mobile) sees the system of norms as a Rope.
- *     Knowledge of hazards is a tool to coordinate movement successfully.
- *   - The Public Works Department (institutional) sees a Tangled Rope. It performs a
- *     coordination function (public health, safety) but also extracts resources
- *     (taxes, fines) and enforces rules, creating an extractive layer on top of
- *     the coordination.
+ *   This constraint demonstrates how the same structural phenomenon appears as natural law (inevitable hazards exist), coordination mechanism (shared awareness helps), mixed extraction (information asymmetry benefits some agents more than others), pure hazard (isolation), temporary coordination failure (fixable through better systems), and inertial ritual (outdated warning practices). The gap between analytical/civilizational (mountain) and powerless/immediate (snare) perspectives is maximal — one sees inevitable natural structure, the other sees pure coercion. The organized/mobile perspective (rope and scaffold) sees genuinely solvable coordination problems. The institutional/arbitrage perspective (piton) sees its own process as degraded but persisting.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: 'effective_navigators' benefit by successfully avoiding costs.
- *     The 'public_works_department' benefits by having a mandate and budget.
- *   - Victims: 'the_unwary_walker' bears the direct, unmitigated cost of failure.
- *   This clear division of costs and benefits drives the directionality calculation
- *   and explains the wide perspectival gaps.
+ *   Directionality (d) for each perspective is derived from the agent's relationship to the hazard information system. Agents with arbitrage options (experienced, well-connected) derive low d — they benefit from the coordination function. Trapped agents with no information access derive high d — they bear all costs. Organized agents with mobile exit options derive moderate d — they experience both coordination benefits and some information advantage. The sigmoid f(d) produces experienced extractiveness values that reflect actual felt costs and benefits: beneficiaries see rope (low chi), isolated agents see snare (high chi), mixed agents see tangled rope or scaffold depending on time horizon and whether exit paths exist. The constraint's effectiveness depends entirely on whether d values map to real structural access — agents with actual communication channels derive lower d than agents with communication barriers, independent of nominal power level.
  *
- * MANDATROPHY ANALYSIS:
- *   The classification as a Tangled Rope correctly identifies that this is not
- *   pure coordination (a Rope) nor pure extraction (a Snare). It captures the
- *   dual nature of a system that provides a genuine public good while simultaneously
- *   imposing costs and rules enforced asymmetrically. It prevents mislabeling
- *   public works as purely benevolent or purely extractive.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    poop_catalog_utility,
-    "Does 'describing every detail' of life's hazards eventually provide a 'Rope' for better avoidance and systemic mitigation, or is it a form of theatricality that distracts from pragmatic action?",
-    "Audit of navigation success rates in catalogers vs. non-cataloging practitioners; effectiveness of public awareness campaigns versus infrastructure investments in hazard reduction.",
-    "If beneficial: Cataloging is a Rope. If clutter: It is a Snare for time-extraction and a distraction from real solutions.",
+    hazard_inevitability_threshold,
+    'At what ratio of hazards-to-safe-zones does pragmatic avoidance become impossible and the constraint transitions from rope to snare?',
+    'Empirical mapping of hazard density in real navigational environments; correlation with coordination system breakdown rates',
+    'If threshold is high (>70% hazards): most human environments are snares, not coordination systems. If threshold is low (<30% hazards): rope classification is robust across most real scenarios.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(poop_catalog_utility, empirical, "Is detailed hazard cataloging more effective for mitigation than pragmatic avoidance or systemic infrastructure investment?").
+narrative_ontology:omega_variable(hazard_inevitability_threshold, empirical, 'Threshold for hazard density causing coordination collapse').
+
+omega_variable(
+    social_vs_physical_hazards,
+    'Do social hazards (betrayal, shame, rejection) follow the same navigational logic as physical hazards (obstacles, danger), or do they require distinct constraint models?',
+    'Comparative analysis of avoidance behaviors across physical and social domains; identification of common structural features or domain-specific extraction mechanisms',
+    'If equivalent: single rope model explains both. If distinct: social hazards may be snares while physical hazards remain rope (different base_properties for different domains).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(social_vs_physical_hazards, conceptual, 'Whether social and physical hazards share constraint structure').
+
+omega_variable(
+    information_asymmetry_extraction,
+    'Does the asymmetry between hazard-aware and hazard-unaware agents constitute extractive exploitation or legitimate first-mover advantage?',
+    'Behavioral analysis of experienced agents'' willingness to share hazard information; correlation with reputational benefits, social obligation norms, and group identity',
+    'If extractive: unaware agents face snare conditions. If legitimate: coordination is rope with natural learning gradient. Classification of tangled_rope vs rope depends on this resolution.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(information_asymmetry_extraction, preference, 'Whether information asymmetry in hazard awareness constitutes extraction').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(cow_field_poop, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is < 0.46, so temporal measurements are not required.
+% Theater ratio over time
+narrative_ontology:measurement(cowfield_tr_t0, cow_field_poop, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(cowfield_tr_t5, cow_field_poop, theater_ratio, 5, 0.55).
+narrative_ontology:measurement(cowfield_tr_t10, cow_field_poop, theater_ratio, 10, 0.65).
+
+% Extraction over time
+narrative_ontology:measurement(cowfield_be_t0, cow_field_poop, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(cowfield_be_t5, cow_field_poop, base_extractiveness, 5, 0.3).
+narrative_ontology:measurement(cowfield_be_t10, cow_field_poop, base_extractiveness, 10, 0.35).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No Boltzmann or network data declared for this constraint.
+narrative_ontology:coordination_type(cow_field_poop, information_standard).
+narrative_ontology:affects_constraint(cow_field_poop, information_asymmetry_extraction).
+narrative_ontology:affects_constraint(cow_field_poop, social_stigma_suppression).
+
+% DUAL FORMULATION NOTE:
+% The Cow Field Hazard represents two structurally distinct claims: (1) hazards exist and are navigable through collective awareness (coordination problem, ε ≈ 0.25), and (2) information asymmetry about hazards creates extraction opportunities for aware agents over unaware ones (extraction mechanism, ε ≈ 0.45 in isolated contexts). This story emphasizes the coordination reading (rope, tangled_rope, scaffold) but acknowledges the extraction reading in the snare and piton perspectives. If the extraction mechanism becomes primary (hazard information is actively suppressed or weaponized), a separate constraint story should be authored with higher extractiveness.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No directionality overrides are needed; the structural derivation from
-% beneficiary/victim declarations is sufficient.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "epistemic_free_rider_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "efr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Truth-Mining Exhaustion",
+    "topic_domain": "informational/social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "synthetic_information_providers",
+      "attention_capture_platforms"
+    ],
+    "victims": [
+      "primary_researchers",
+      "epistemic_commons",
+      "downstream_knowledge_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Primary Researcher",
+      "comment": "PERSPECTIVE 1: PRIMARY RESEARCHER (SNARE) \u2014 Original researchers (scientists, journalists, domain experts) bear the full cost of producing ground-truth: laboratory work, field investigation, peer review cycles, verification, and correction. They receive minimal reward relative to effort. Exit options are trapped: career progression still requires publication in high-cost journals; abandoning research means forfeiting expertise and credentials. Suppression is maximal: the cost structure has no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Informed Consumer",
+      "comment": "PERSPECTIVE 2: INFORMED CONSUMER (TANGLED ROPE) \u2014 Individuals who attempt to consume ground-truth information face barriers (paywalls, technical complexity, volume) but receive genuine coordination benefit from access to verified claims. Also bear extraction in the form of time spent filtering noise, subscription costs, and epistemic labor to validate sources. Mixed structure: benefits from the truth-mining ecosystem but must pay both directly and indirectly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Synthetic Information Provider",
+      "comment": "PERSPECTIVE 3: SYNTHETIC INFORMATION PROVIDER (ROPE) \u2014 Platforms and LLM-based systems aggregate ground-truth information at near-zero marginal cost and distribute it frictionlessly. They benefit from the truth-mining infrastructure without bearing production cost. This appears as pure coordination from their perspective: they solve the distribution problem. The extraction (cost transfer to researchers) is invisible to this agent \u2014 they see only the coordination function they provide."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Academic Publishing System",
+      "comment": "PERSPECTIVE 4: ACADEMIC PUBLISHING SYSTEM (PITON) \u2014 Traditional peer review and journal publication once provided genuine verification and priority-setting. Now largely theatrical: journals serve as credential markers rather than truth filters, peer review is unpaid and slow, and preprints bypass formal publication entirely. The system persists through institutional inertia (tenure committees still weight journal publications) despite its degraded function. Theater ratio is high because the ritual of submission, review, revision, and acceptance is performatively maintained even as faster and cheaper distribution channels exist."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Knowledge Movement",
+      "comment": "PERSPECTIVE 5: OPEN KNOWLEDGE MOVEMENT (SCAFFOLD) \u2014 Organized agents (arXiv, preprint servers, open-access mandates, citizen science networks, fact-checking coalitions) are building alternative pathways that reduce truth-mining barriers and bypass rent-extraction intermediaries. These represent temporary support structures with sunset logic: as open archives mature and fund research directly, the extraction mechanisms of traditional publishing lose force. The movement sees suppression declining and exit options expanding."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, producing verified information is inherently costly: someone must perform observation, experiment, investigation, and bear the risk of being wrong. The free-rider problem appears as a natural law of epistemology \u2014 verification is expensive, synthesis is cheap, and the gap creates extraction pressure. However, the structural data contradicts the mountain classification: the cost structure and reward distribution are institutional, not natural. The engine will compute this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ground_truth_production_cost",
+      "question": "What is the true minimum cost to produce verified, domain-expert information versus the marginal cost of synthetic derivative distribution?",
+      "resolution_mechanism": "Empirical comparison: full accounting of research costs (labor, equipment, peer review, correction cycles) versus infrastructure costs of LLM-based distribution systems. Controlled study of information accuracy decay as synthesis layers increase.",
+      "impact": "If cost ratio > 100:1, the extraction mechanism is structural and difficult to resolve. If ratio < 10:1, alternative funding models become viable and the snare weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost ratio between ground-truth production and synthetic derivative distribution"
+    },
+    {
+      "id": "synthetic_information_accuracy_threshold",
+      "question": "At what point does accumulated synthetic information become unreliable for downstream decision-making?",
+      "resolution_mechanism": "Longitudinal tracking of information drift: measure accuracy of synthetic summaries compared to original sources; identify domains where synthetic information produces measurable harm; compare error rates to human expert judgments.",
+      "impact": "If threshold is very low: synthetic information becomes unfit for use quickly, creating demand for primary sources. If threshold is high: synthetic information remains useful even after multiple derivation layers, sustaining the free-rider structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Information accuracy degradation threshold for synthetic derivatives"
+    },
+    {
+      "id": "researcher_exhaustion_critical_mass",
+      "question": "What fraction of primary researchers can exit before the truth-mining capacity collapses irreversibly?",
+      "resolution_mechanism": "Historical precedent analysis (journal refusals, researcher strikes); simulation of knowledge production as a network with attrition feedback loops; measurement of minimum critical mass by discipline.",
+      "impact": "If critical mass is very high (>70% must remain): researchers have some bargaining power. If very low (<20%): exhaustion can lead to catastrophic collapse with little warning.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for researcher exit before production collapse"
+    },
+    {
+      "id": "institutional_substitution_feasibility",
+      "question": "Can public, institutional funding of research (without publication intermediaries) fully replace the current journal-based model?",
+      "resolution_mechanism": "Analysis of research funding models that bypass commercial publication (NIH preprint repositories, direct public funding, institutional archives); comparison of knowledge production efficiency; political economy analysis of willingness to fund without prestige-capture.",
+      "impact": "If feasible: scaffold perspective is not aspirational but structural. If not feasible: the extraction mechanism is resilient to institutional reform.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Feasibility of institutional funding substitution for commercial publishing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The epistemic free-rider problem emerges at the intersection of information economics and the institutional structure of knowledge production. Primary researchers (scientists, investigative journalists, domain experts) bear the full cost of producing verified, grounded information through expensive processes: laboratory work, field investigation, peer review cycles, error correction, and reputation building. Simultaneously, the marginal cost of distributing derivative information \u2014 summaries, synthetic analyses, LLM-generated overviews \u2014 has collapsed to near-zero. This creates a two-tier epistemic market: ground-truth production is expensive and underrewarded; derivative consumption is cheap and abundant. The constraint exhibits tangled rope structure: it both coordinates (synthetic information providers solve the distribution problem) and extracts (costs are borne by a shrinking population of primary researchers while benefits accrue to intermediaries and consumers). The 'truth-mining exhaustion' refers not to depletion of facts but to exhaustion of the researcher cohort bearing unsustainable cost burdens. As researchers exit, the ground-truth infrastructure degrades, forcing downstream knowledge consumers to rely on increasingly corrupted synthetic information. This creates a collapse dynamic: the constraint's severity increases as exit accumulates, accelerating further exit.",
+    "key_agents": [
+      "Primary Researchers: Victims (powerless/trapped) \u2014 bear full cost of verification; exit is blocked by credential systems and funding structures",
+      "Epistemic Commons: Victim (collective, powerless) \u2014 abstract good that cannot organize; contaminates via accumulated synthetic error",
+      "Downstream Knowledge Consumers: Mixed (moderate/constrained) \u2014 benefit from cheap access; suffer from accuracy degradation over derivation layers",
+      "Synthetic Information Providers: Beneficiary (institutional/arbitrage) \u2014 aggregate ground-truth at zero marginal cost; capture attention and platform rents",
+      "Attention-Capture Platforms: Beneficiary (institutional/arbitrage) \u2014 distribute synthetic derivatives frictionlessly; profit from engagement without bearing truth-mining cost",
+      "Academic Publishing System: Institutional actor (institutional/constrained) \u2014 maintains performative review system; blocks open distribution; extracts via subscription and article processing fees",
+      "Open Knowledge Movement: Organized agents (organized/mobile) \u2014 building alternative pathways; have exit options and sunset logic"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts from primary researchers through asymmetric reward structures: they produce at high cost while synthetic providers distribute at near-zero cost and capture platform rents. The extraction is not maximal because researchers retain some agency (they can publish open-access, post preprints) and some funding exists outside the extraction mechanism. The value has increased over the measurement interval (0.22 \u2192 0.58) as LLM-based synthesis has scaled, lowering marginal costs and making free-riding more lucrative. Suppression (0.65): High. Barriers to exit include: credential systems that require traditional publication, funding structures that reward journal placement, institutional career incentives that favor high-impact journals, and the tacit knowledge required to conduct primary research. These are structural, not contingent. Theater ratio (0.58): Moderate-high. Traditional peer review is substantially performative (reviewers cannot verify experiments retroactively), but some genuine quality-filtering occurs. The theater has increased as volume has increased \u2014 more papers are published, fewer are read carefully, and the review process becomes ritual rather than verification. Open-access preprints lower theater by eliminating the review bottleneck, but they create new epistemic risks (unfiltered claims). The constraint's theater is neither pure performance nor pure function.",
+    "perspectival_gap": "This constraint demonstrates acute perspectival fragmentation. Primary researchers see extraction and exhaustion (snare). Synthetic providers see coordination and public good (rope). Informed consumers see mixed structure \u2014 they benefit from cheap access but suffer from information degradation (tangled rope). The publishing system sees itself as performing a necessary function despite its performative character (piton). The open knowledge movement sees a solvable temporary problem with alternatives on the horizon (scaffold). The analytical observer risks naturalizing the cost structure as inherent to epistemology (false summit). The perspectival gap is wide because the extraction mechanisms are structurally invisible to beneficiaries \u2014 they experience only the coordination function they provide.",
+    "directionality_logic": "Directionality derives from structural position and exit capacity. Primary researchers are trapped victims with no alternatives within the credential system \u2014 they experience maximum d (\u22480.95), producing maximal f(d). Synthetic providers are beneficiaries with arbitrage options \u2014 they experience low d (\u22480.05), producing negative f(d). Informed consumers are mixed: they have moderate exit options (can seek primary sources, can pay for access) but are partially trapped by cost and complexity \u2014 they experience moderate d (\u22480.55). The publishing system is an institutional intermediary that is constrained (cannot exit the prestige mechanism) but also partially benefits from it \u2014 they experience mid-range d (\u22480.40). The open knowledge movement has mobile exit options (can build alternatives, can distribute outside traditional channels) \u2014 they experience lower d (\u22480.35). Each perspective's chi is computed from base extractiveness, f(d), and scope modifier: ground-truth production is global in scope (\u03c3=1.2), amplifying experienced extraction.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that tangled rope is structurally justified: the epistemic commons DOES receive coordination benefit (derivative information is distributed frictionlessly), AND there IS asymmetric extraction (costs concentrate on researchers while benefits accrue to platforms). Both functions coexist in the same mechanism. The constraint is not mislabeled as pure extraction (snare) because the synthetic provider's distribution function is genuinely valuable for consumers. It is not mislabeled as pure coordination (rope) because the cost structure is genuinely extractive for researchers. The tangled rope classification captures the true hybrid structure. The false summit (mountain) is the analytical observer's view that truth-mining costs are inherent to epistemology \u2014 they are institutionally contingent, as evidenced by the degradation of the constraint when institutional structures change (open access, preprints, public funding alternatives)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "verification_bottleneck",
+      "journal_publication_gatekeeping",
+      "synthetic_information_reliability"
+    ],
+    "dual_formulation_note": "The truth-mining exhaustion is downstream of institutional structures that concentrate costs on researchers (journal gatekeeping, credential dependence) and upstream of information degradation effects (synthetic error accumulation). Three related constraints are structurally linked: (1) verification_bottleneck addresses the delay in confirming claims; (2) journal_publication_gatekeeping addresses the intermediary control of knowledge distribution; (3) synthetic_information_reliability addresses the accuracy decay in derivative information. This constraint models the economic incentive structure that drives the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.4
+    }
+  ]
+}

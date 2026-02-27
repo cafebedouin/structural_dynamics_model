@@ -1,16 +1,30 @@
 % ============================================================================
-% CONSTRAINT STORY: protocol_capture_eee
+% CONSTRAINT STORY: protocol_capture_tangled_rope
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-05-21
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_protocol_capture_eee, []).
+:- module(constraint_protocol_capture_tangled_rope, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -18,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -28,6 +43,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -37,102 +54,133 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: protocol_capture_eee
- * human_readable: The Captured Commons (Embrace, Extend, Extinguish)
- * domain: technological/economic
- * * SUMMARY:
- * A scenario where a dominant entity embraces a decentralized protocol, 
- * extends it with proprietary "features" that create lock-in, and effectively 
- * extinguishes the original open alternative. 
- * It is a Tangled Rope: mandatory for survival but predatory in nature.
- * * KEY AGENTS:
- * - The Developer: Subject (Powerless) - Dependent on the proprietary extensions.
- * - The Platform Giant: Beneficiary (Institutional) - The entity performing the capture.
- * - The Antitrust Auditor: Auditor (Analytical) - Observing the extraction signature.
+ *   constraint_id: protocol_capture_tangled_rope
+ *   human_readable: The Captured Commons (Embrace, Extend, Extinguish)
+ *   domain: technological/economic
+ *
+ * SUMMARY:
+ *   The Embrace, Extend, Extinguish (EEE) pattern describes a strategy where
+ *   a dominant technology provider adopts a decentralized or open protocol,
+ *   initially maintains compatibility, then introduces proprietary extensions
+ *   that fragment the ecosystem and create lock-in, effectively extinguishing
+ *   the original open alternative. This constraint is structurally hybrid: it
+ *   provides genuine coordination benefits (the open protocol reaches
+ *   critical mass faster through the dominant provider's adoption) while
+ *   simultaneously enabling asymmetric extraction (the dominant provider
+ *   captures design authority over the protocol's evolution and forces users
+ *   toward proprietary features). Historical examples include Microsoft's
+ *   embrace of open standards followed by extension and incompatibility
+ *   (OOXML, Kerberos extensions), Meta's adoption and then proprietarization
+ *   of messaging protocols, and platform gatekeeping of interoperability
+ *   standards. The constraint exhibits rising extractiveness over time (0.15
+ *   → 0.58) as extensions accumulate and switching costs increase, while
+ *   theater remains moderate throughout — the coordination benefit is real at
+ *   the start, even as extraction mechanism strengthens.
+ *
+ * KEY AGENTS:
+ *   - Dominant Platform Provider: Primary beneficiary (institutional/arbitrage) — captures user base through open-protocol adoption, then monetizes through proprietary extensions
+ *   - Decentralized Protocol Community: Primary victim (powerless/trapped) — open contributors lose design authority as proprietary features become standard
+ *   - Alternative Implementation Teams: Secondary victim (moderate/constrained) — resource-constrained, face ecosystem bifurcation and user migration pressure
+ *   - Early Adopters of Extensions: Secondary beneficiary (organized/arbitrage) — benefit from first-mover advantage on proprietary features before lock-in hardens
+ *   - Interoperability Standards Bodies: Organized observer (organized/constrained) — regulatory frameworks (DMA, DSA) increasingly pressure reversal of capture
+ *   - Users: Distributed (varies) — initially benefit from ecosystem coordination, later face lock-in and reduced choice
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — sees pattern as recurring in technology markets, neither purely extractive nor purely coordinating
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(protocol_capture_eee, 0.55). % High: Surplus value captured via proprietary extensions.
-domain_priors:suppression_score(protocol_capture_eee, 0.85).   % Very High: Network effects make exit nearly impossible.
-domain_priors:theater_ratio(protocol_capture_eee, 0.40).       % Moderate: Claims of "openness" are increasingly theatrical.
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(protocol_capture_tangled_rope, 0.58).
+domain_priors:suppression_score(protocol_capture_tangled_rope, 0.65).
+domain_priors:theater_ratio(protocol_capture_tangled_rope, 0.48).
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
-narrative_ontology:constraint_metric(protocol_capture_eee, extractiveness, 0.55).
-narrative_ontology:constraint_metric(protocol_capture_eee, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(protocol_capture_eee, theater_ratio, 0.40).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(protocol_capture_tangled_rope, extractiveness, 0.58).
+narrative_ontology:constraint_metric(protocol_capture_tangled_rope, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(protocol_capture_tangled_rope, theater_ratio, 0.48).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% The platform claims its proprietary extensions are necessary for coordination and stability.
-narrative_ontology:constraint_claim(protocol_capture_eee, tangled_rope).
-narrative_ontology:human_readable(protocol_capture_eee, "The Captured Commons (Embrace, Extend, Extinguish)").
-narrative_ontology:topic_domain(protocol_capture_eee, "technological/economic").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(protocol_capture_tangled_rope, tangled_rope).
+narrative_ontology:human_readable(protocol_capture_tangled_rope, "The Captured Commons (Embrace, Extend, Extinguish)").
+narrative_ontology:topic_domain(protocol_capture_tangled_rope, "technological/economic").
 
-% Binary flags
-domain_priors:requires_active_enforcement(protocol_capture_eee). % Legal/Technical enforcement of EULA/API terms.
+domain_priors:requires_active_enforcement(protocol_capture_tangled_rope).
 
-% Structural property derivation hooks:
-%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
-%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-% Both are required for Tangled Rope.
-narrative_ontology:constraint_beneficiary(protocol_capture_eee, platform_operators).
-narrative_ontology:constraint_victim(protocol_capture_eee, third_party_developers).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(protocol_capture_tangled_rope, dominant_platform_provider).
+narrative_ontology:constraint_beneficiary(protocol_capture_tangled_rope, early_adopters_of_extensions).
+narrative_ontology:constraint_victim(protocol_capture_tangled_rope, decentralized_protocol_community).
+narrative_ontology:constraint_victim(protocol_capture_tangled_rope, alternative_implementations).
+narrative_ontology:constraint_victim(protocol_capture_tangled_rope, interoperability_ecosystem).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE CAPTIVE DEVELOPER (SNARE)
-% To the developer, the "extensions" are a trap; they cannot revert to the open standard without losing critical data/access.
-constraint_indexing:constraint_classification(protocol_capture_eee, tangled_rope,
+% PERSPECTIVE 1: OPEN PROTOCOL COMMUNITY (SNARE) — Decentralized contributors to the original protocol face lock-in. The dominant provider's extensions become de facto standard; users migrate to proprietary features; the open alternative becomes marginalized. The community has no enforcement mechanism for the original specification and no exit option once ecosystem momentum shifts. Maximum extraction experienced — full colonization of the commons.
+constraint_indexing:constraint_classification(protocol_capture_tangled_rope, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PLATFORM SHAREHOLDER (ROPE)
-% To the beneficiary, this is a Rope—it provides a stable, high-performance environment for commerce and shareholder value.
-constraint_indexing:constraint_classification(protocol_capture_eee, rope,
+% PERSPECTIVE 2: ALTERNATIVE IMPLEMENTATION TEAMS (TANGLED ROPE) — Benefit from the open protocol's foundation and community trust, but face suppression as proprietary extensions fragment the ecosystem. Resources constrained by inability to match proprietary development velocity. Some benefit from coordination through open standards; significant extraction through ecosystem bifurcation and forced choice between compatibility and independence.
+constraint_indexing:constraint_classification(protocol_capture_tangled_rope, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: DOMINANT PLATFORM PROVIDER (ROPE) — Experiences the constraint as beneficial coordination. Embracing the open protocol captures user base and developer trust. Extending with proprietary features creates switching costs. The constraint solves the coordination problem of reaching critical mass without needing to build from zero. Net beneficiary — extraction mechanism runs toward this entity.
+constraint_indexing:constraint_classification(protocol_capture_tangled_rope, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile),
+            time_horizon(immediate),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Detects the hybrid: The system provides genuine coordination (it works) but relies on extraction (lock-in).
-constraint_indexing:constraint_classification(protocol_capture_eee, snare,
-    context(agent_power(analytical),
-            time_horizon(historical),
-            exit_options(analytical),
+% PERSPECTIVE 4: INTEROPERABILITY STANDARDS BODIES (SCAFFOLD) — Organized actors (IETF, W3C, protocol foundations) see the capture as a coordination failure with a potential sunset: if regulatory frameworks mandate interoperability or if competing platforms adopt compatible extensions, the proprietary lock-in weakens. Standards enforcement through litigation or legislation could force convergence. Theater ratio low here — standards bodies' intervention is functional, not performative.
+constraint_indexing:constraint_classification(protocol_capture_tangled_rope, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(global))).
+
+% PERSPECTIVE 5: LEGACY COMPATIBILITY LAYERS (PITON) — As the proprietary extensions become dominant, backward-compatibility shims and translation layers persist to maintain connection to the original open protocol. These are largely performative — they allow the appearance of open-standards compliance while routing users toward proprietary features. Theater ratio high; functional extraction low because the original protocol is already captured.
+constraint_indexing:constraint_classification(protocol_capture_tangled_rope, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational view, this is a recurring pattern in technology: embrace legitimizes through adoption; extend creates lock-in; extinguish removes the open alternative. The constraint exhibits genuine coordination (users benefit from reaching critical mass) and genuine extraction (beneficiary captures future design decisions). Both are structural features. The engine computes this as Tangled Rope across perspectives, confirming the hybrid nature.
+constraint_indexing:constraint_classification(protocol_capture_tangled_rope, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(eee_capture_tests).
+:- begin_tests(protocol_capture_tangled_rope_tests).
 
 test(perspectival_gap) :-
-    % Verify there is a perspectival gap between powerless and institutional.
-    constraint_indexing:constraint_classification(protocol_capture_eee, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(protocol_capture_eee, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeInstitutional,
-    TypePowerless == snare,
-    TypeInstitutional == rope.
+    constraint_indexing:constraint_classification(protocol_capture_tangled_rope, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(protocol_capture_tangled_rope, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    % Verify the analytical perspective correctly identifies the Tangled Rope signature.
-    constraint_indexing:constraint_classification(protocol_capture_eee, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(protocol_capture_tangled_rope, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-:- end_tests(eee_capture_tests).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(protocol_capture_tangled_rope, TR),
+    TR >= 0.70.
+
+:- end_tests(protocol_capture_tangled_rope_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -140,67 +188,90 @@ test(analytical_classification_is_tangled_rope) :-
 
 /**
  * LOGIC RATIONALE:
- * The base extractiveness (0.55) and suppression (0.85) are high, reflecting a mature "Embrace, Extend, Extinguish" strategy.
- * The platform leverages network effects (high suppression) to enforce its proprietary extensions, which extract value from
- * the ecosystem (high extraction). This creates a stark perspectival gap: developers see a Snare (trapped by dependency),
- * while platform insiders/shareholders see a Rope (a successful business model coordinating a market).
+ *   Extractiveness (0.58): Moderately high. The dominant provider captures significant value through ecosystem control and design authority over extension mechanisms, but the original open protocol remains functional — users retain some exit options through alternative implementations. The constraint is not maximal extraction (would be 0.80+) because the coordination benefit is real and the open alternative has not been fully eliminated (yet). The rising trajectory (0.15 → 0.58) reflects Goodhart drift: early in adoption, the constraint functions primarily as coordination; as proprietary extensions accumulate and become standard, extraction mechanisms strengthen. Suppression (0.65): Moderate-high. Alternative implementations face significant barriers: network effects favor the dominant provider's implementation, users are incentivized toward proprietary features, and interoperability standards lack enforcement mechanisms. However, suppression is not total — regulatory frameworks (DMA) are beginning to mandate interoperability, and open-protocol communities retain some advocacy power. Theater (0.48): Moderate. The coordination benefit of ecosystem adoption is genuine — the open protocol does reach critical mass faster through dominant-provider involvement. The extraction mechanism is also genuine — users experience real lock-in and switching costs. Neither is primarily performative, though compatibility shims may add theatrical elements later (piton perspective). The constraint is hybrid, not theatrical.
  *
- * * [RESOLVED MANDATROPHY]
- * The Mandatrophy is resolved by the Tangled Rope classification. A naive analysis might see only the high extraction and
- * suppression and label it a pure Snare. However, this misses the genuine coordination function the platform provides.
- * The Tangled Rope correctly identifies that the system has both a real coordination benefit (derived from the beneficiary)
- * and asymmetric extraction (derived from the victim), and requires active enforcement to maintain the imbalance.
+ * PERSPECTIVAL GAP:
+ *   The perspectival gap reflects who benefits from the coordination phase versus who bears the extraction cost. The dominant platform provider sees pure coordination (Rope) — they are solving the critical-mass problem. The open protocol community sees pure extraction (Snare) — their design authority is colonized with no exit option. Alternative implementations see the hybrid (Tangled Rope) — they both benefit from the ecosystem growth and suffer from the lock-in. Interoperability standards bodies see a solvable problem with a regulatory sunset (Scaffold) — legislation can force compatibility. Legacy compatibility layers are mostly performative (Piton) — they allow the appearance of openness after capture is complete. The analytical observer sees the pattern as structural to network-effect economics but contingent on market structure and regulation — whether this is inevitable (Mountain) or contestable (Tangled Rope) depends on institutional response. The perspectives cluster around Tangled Rope and Snare, confirming the hybrid constraint classification.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality for each agent is derived from their structural relationship to the extraction flow: (1) Dominant provider: beneficiary + arbitrage exit → low d → low/negative χ. They experience the constraint as beneficial. (2) Open protocol community: victim + trapped exit → high d → high χ. They bear full extraction cost with no alternatives. (3) Alternative implementations: mixed (victim + constrained exit) → moderate d → moderate χ. They have some options but face significant barriers. (4) Standards bodies: organized observer + constrained exit → moderate d. Regulatory mandate can shift the constraint, but implementation takes time. (5) Users: distributed — some beneficiaries (early adopters of extensions), some victims (locked-in users). The sigmoid f(d) applied to these d values produces the perspectival χ spread. The engine derives d automatically from beneficiary/victim declarations and exit options; the structural data here maps clearly to observed user behavior and firm strategy.
+ *
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_extinguish_point,
-    'At what point do the proprietary extensions render the base protocol non-functional for outsiders?',
-    'Measure of protocol fork viability vs. market share of proprietary clients.',
-    'If low viability: Permanent Snare; If high viability: The Tangled Rope can be untangled.',
+    extension_incompatibility_threshold,
+    'At what percentage divergence between proprietary extensions and open standard do users experience lock-in as irreversible?',
+    'Empirical measurement of user migration rates, switching costs, and platform-specific feature adoption curves; comparison across protocol families (XMPP, ActivityPub, SMTP extensibility)',
+    'If threshold < 15% divergence: lock-in occurs quickly (Snare dominates). If threshold > 40%: users retain meaningful exit options longer (Tangled Rope persists).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(extension_incompatibility_threshold, empirical, 'Threshold for irreversible lock-in from proprietary extensions').
+
+omega_variable(
+    regulatory_interoperability_mandate,
+    'Do legislative interoperability mandates (e.g., Digital Markets Act, DMA) actually constrain proprietary extension capture, or do they merely shift the capture to regulated compliance layers?',
+    'Longitudinal analysis of platforms under interoperability mandate; measurement of lock-in metrics pre/post regulation; examination of whether compliance becomes performative theater',
+    'If effective constraint: Scaffold sunset is real — regulation forces de-capture. If merely theatrical: constraint persists as Piton — compliance is formal, capture continues underneath.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_interoperability_mandate, empirical, 'Effectiveness of regulatory mandates against protocol capture').
+
+omega_variable(
+    alternative_protocol_viability,
+    'Can decentralized alternatives (ActivityPub, Nostr, protocol coalitions) establish sufficient network effects to resist capture, or is capture an inevitable outcome of critical-mass dynamics?',
+    'Game-theoretic analysis of network effect equilibria; empirical tracking of alternative protocol adoption and consolidation patterns; comparison of scenarios with and without regulatory barriers to dominant-firm extension',
+    'If alternatives viable: the constraint is contingent on market structure (Rope or Scaffold depending on institutional factors). If capture is inevitable: the constraint is structural to network-effect economics (Mountain or universal Snare).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(alternative_protocol_viability, conceptual, 'Whether network effects make capture inevitable or contingent').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(protocol_capture_eee, 0, 10).
+narrative_ontology:interval(protocol_capture_tangled_rope, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data models the "Embrace, Extend, Extinguish" lifecycle.
-% Initially, the platform embraces the open protocol with low extraction and low theater.
-% Over time, it extends the protocol, increasing extraction and making its "openness" claims more theatrical.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(protocol_capture_eee_tr_t0, protocol_capture_eee, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(protocol_capture_eee_tr_t5, protocol_capture_eee, theater_ratio, 5, 0.30).
-narrative_ontology:measurement(protocol_capture_eee_tr_t10, protocol_capture_eee, theater_ratio, 10, 0.40).
+% Theater ratio over time
+narrative_ontology:measurement(protoee_tr_t0, protocol_capture_tangled_rope, theater_ratio, 0, 0.2).
+narrative_ontology:measurement(protoee_tr_t3, protocol_capture_tangled_rope, theater_ratio, 3, 0.35).
+narrative_ontology:measurement(protoee_tr_t6, protocol_capture_tangled_rope, theater_ratio, 6, 0.48).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(protocol_capture_eee_ex_t0, protocol_capture_eee, base_extractiveness, 0, 0.10).
-narrative_ontology:measurement(protocol_capture_eee_ex_t5, protocol_capture_eee, base_extractiveness, 5, 0.40).
-narrative_ontology:measurement(protocol_capture_eee_ex_t10, protocol_capture_eee, base_extractiveness, 10, 0.55).
+% Extraction over time
+narrative_ontology:measurement(protoee_be_t0, protocol_capture_tangled_rope, base_extractiveness, 0, 0.15).
+narrative_ontology:measurement(protoee_be_t3, protocol_capture_tangled_rope, base_extractiveness, 3, 0.32).
+narrative_ontology:measurement(protoee_be_t6, protocol_capture_tangled_rope, base_extractiveness, 6, 0.58).
+
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The captured protocol now functions as a piece of global infrastructure.
-narrative_ontology:coordination_type(protocol_capture_eee, global_infrastructure).
+narrative_ontology:coordination_type(protocol_capture_tangled_rope, information_standard).
+narrative_ontology:boltzmann_floor_override(protocol_capture_tangled_rope, 0.35).
+narrative_ontology:affects_constraint(protocol_capture_tangled_rope, network_effect_lock_in).
+narrative_ontology:affects_constraint(protocol_capture_tangled_rope, interoperability_mandate_enforcement).
+narrative_ontology:affects_constraint(protocol_capture_tangled_rope, open_source_sustainability).
 
-% Network relationships (structural influence edges)
-% This form of capture creates dependency, a separate constraint.
-narrative_ontology:affects_constraint(protocol_capture_eee, developer_dependency_lock_in).
+% DUAL FORMULATION NOTE:
+% The EEE constraint is downstream of general network-effect dynamics but represents a distinct extractive strategy. The upstream constraint (network effect lock-in) is structural to technology markets; the EEE constraint shows how strategic action captures and weaponizes that structural feature. Regulatory interoperability mandates attempt to reverse capture by forcing compatibility, making the constraint contestable at the institutional level.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(protocol_capture_tangled_rope, institutional, 0.18).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

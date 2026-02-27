@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "arctic_maritime_control",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Arctic Maritime Control Regime",
+    "topic_domain": "geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "arctic_council_nations",
+      "shipping_companies"
+    ],
+    "victims": [
+      "non_arctic_nations",
+      "indigenous_arctic_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-Arctic Nations",
+      "comment": "Non-Arctic nations are largely excluded from decision-making processes and resource exploitation, and are becoming increasingly trapped as climate change opens up the Arctic for resource extraction by other countries."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Indigenous Arctic Communities",
+      "comment": "Indigenous communities face constrained mobility and limited influence, yet benefit somewhat from increased infrastructure development and regulated resource management, but they bear the extraction costs of environmental damage and cultural disruption."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Arctic Council Nations",
+      "comment": "Arctic Council nations benefit from the established legal framework and resource exploitation opportunities, and can arbitrage within the legal framework to their advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Shipping Companies",
+      "comment": "Shipping companies benefit from new Arctic shipping routes, which reduce transit times. However, they bear the costs of complying with the Polar Code and other regulations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the Arctic Maritime Control Regime as a tangled rope, balancing coordination (resource management, safety regulations) with extraction (unequal access, environmental risks)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "climate_change_impact",
+      "question": "How will accelerated climate change and ice melt affect the enforceability and equity of the Arctic Maritime Control Regime?",
+      "resolution_mechanism": "Monitoring sea ice extent, tracking shipping activity, and assessing environmental impact assessments.",
+      "impact": "Greater accessibility could undermine existing regulations and intensify resource competition, potentially shifting the regime towards a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of climate change on regime effectiveness"
+    },
+    {
+      "id": "resource_distribution_equity",
+      "question": "To what extent are the benefits of resource extraction distributed equitably among Arctic nations, indigenous communities, and the global community?",
+      "resolution_mechanism": "Analyzing revenue sharing agreements, assessing community development initiatives, and evaluating environmental protection measures.",
+      "impact": "If benefits are concentrated, the regime will be perceived as a snare by non-beneficiaries. More equitable distribution would reinforce the rope elements of the regime.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Equity of resource distribution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Arctic Maritime Control Regime represents the set of international laws, treaties, and national claims that govern access to and resource extraction from the Arctic Ocean and its surrounding territories. The regime seeks to balance resource exploitation with environmental protection and the rights of Arctic communities, but faces challenges from climate change, geopolitical competition, and uneven distribution of benefits. This regime creates a situation of mixed coordination and extraction.",
+    "key_agents": [
+      "Arctic Council Nations: Primary beneficiaries (institutional/arbitrage) - control access and resources.",
+      "Non-Arctic Nations: Primary victims (powerless/trapped) - excluded from decision-making.",
+      "Indigenous Arctic Communities: Secondary victims (moderate/constrained) - face environmental and cultural disruption, benefit partially from regulated extraction.",
+      "Shipping Companies: Utilize the new Arctic shipping routes (powerful/mobile)."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-High. The regime enables resource extraction and shipping, which can lead to environmental damage and cultural disruption for indigenous communities. Non-Arctic nations are excluded from access and benefit. Suppression (0.40): Moderate. The regime limits access and resource exploitation by non-Arctic nations and imposes regulations on shipping, but it is not completely restrictive. Theater ratio (0.30): Low. The regime does have performative elements, such as symbolic gestures toward environmental protection and indigenous rights, but also has functional coordination like resource management and safety regulations.",
+    "perspectival_gap": "The regime is viewed differently depending on the observer's position. Arctic nations see coordination and benefit, while non-Arctic nations see exclusion. Indigenous communities experience both benefits and costs. This perspectival gap shows it is a tangled rope.",
+    "directionality_logic": "Directionality is determined by the power and exit options of each agent. Arctic nations have high power and the ability to arbitrage, leading to a low effective extraction. Non-Arctic nations have low power and are trapped, leading to high effective extraction. Shipping companies have a moderate power with mobility, while indigenous communities have constrained mobility with some power."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "antarctic_treaty_system",
+      "exclusive_economic_zones"
+    ]
+  },
+  "directionality_overrides": []
+}

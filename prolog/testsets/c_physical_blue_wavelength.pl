@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: c_physical_blue_wavelength
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-08-01
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_c_physical_blue_wavelength, []).
@@ -38,12 +39,9 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,19 +53,29 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: c_physical_blue_wavelength
  *   human_readable: The Physical Wavelength of Blue Light
- *   domain: scientific/physical
+ *   domain: physics/optics/perception
  *
  * SUMMARY:
- *   The perception of "blue" is constrained by the physical properties of the
- *   electromagnetic spectrum, specifically light with a wavelength of ~450-495nm.
- *   This is a fundamental, unchangeable property of the universe as we know it.
- *   It is a classic example of a Mountain: a natural law with zero degrees of
- *   freedom for all agents, regardless of their power or perspective.
+ *   The physical wavelength of blue light is a foundational constraint that
+ *   emerges from electromagnetic physics and the properties of light
+ *   propagation. Blue light, defined as electromagnetic radiation with
+ *   wavelengths approximately 450-495 nanometers, is constrained by the speed
+ *   of light (c), the relationship between frequency and wavelength (c = λν),
+ *   and the quantized energy levels of atomic and molecular states that
+ *   interact with photons in this band. The constraint is not an artifact of
+ *   measurement, convention, or observational perspective — it is a
+ *   structural property of the universe. All agents (biological observers,
+ *   physicists, standards bodies) are equally constrained by this wavelength
+ *   boundary. No exit options exist; no agent can extract value from others
+ *   by controlling this wavelength; no suppression mechanism enforces it
+ *   because enforcement is unnecessary. The constraint emerges naturally from
+ *   physical law and exhibits zero degrees of freedom.
  *
- * KEY AGENTS (by structural relationship):
- *   - Human Observer: Any agent subject to the laws of physics (powerless/trapped)
- *   - Display Manufacturer: Institutional agent building standards upon the law (institutional/mobile)
- *   - Physicist: Analytical observer (analytical/analytical)
+ * KEY AGENTS:
+ *   - Biological Observers (powerless/trapped): Human and animal sensory systems constrained to detect wavelengths in the blue band via cone photoreceptor sensitivity; no exit from this biological constraint.
+ *   - Physicists (analytical/analytical): Scientific observers who measure and model the wavelength constraint; understand it as an immutable feature of quantum electrodynamics and relativity.
+ *   - Standards Bodies (institutional/arbitrage): CIE and other organizations that define measurement standards and color definitions; benefit from authority over standards but cannot override the underlying physics.
+ *   - Light Sources (technological/arbitrage): Lasers, LEDs, lamps that emit light; constrained to produce blue photons at 450-495nm if they are to appear blue; can only work within the constraint, not against it.
  */
 
 /* ==========================================================================
@@ -75,72 +83,54 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Mountains have near-zero extraction (it's a law, not a tax) and low suppression.
-domain_priors:base_extractiveness(c_physical_blue_wavelength, 0.02).
-domain_priors:suppression_score(c_physical_blue_wavelength, 0.01).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(c_physical_blue_wavelength, 0.0).        % Purely functional physical law, zero theater.
+domain_priors:base_extractiveness(c_physical_blue_wavelength, 0.12).
+domain_priors:suppression_score(c_physical_blue_wavelength, 0.02).
+domain_priors:theater_ratio(c_physical_blue_wavelength, 0.05).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(c_physical_blue_wavelength, extractiveness, 0.02).
-narrative_ontology:constraint_metric(c_physical_blue_wavelength, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(c_physical_blue_wavelength, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(c_physical_blue_wavelength, extractiveness, 0.12).
+narrative_ontology:constraint_metric(c_physical_blue_wavelength, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(c_physical_blue_wavelength, theater_ratio, 0.05).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification, and the mountain metric gate will not fire.
-narrative_ontology:constraint_metric(c_physical_blue_wavelength, accessibility_collapse, 1.0). % Alternatives are inconceivable.
-narrative_ontology:constraint_metric(c_physical_blue_wavelength, resistance, 0.0). % Resistance is incoherent.
+narrative_ontology:constraint_metric(c_physical_blue_wavelength, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(c_physical_blue_wavelength, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-% A physical law is the canonical example of a Mountain claim.
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(c_physical_blue_wavelength, mountain).
 narrative_ontology:human_readable(c_physical_blue_wavelength, "The Physical Wavelength of Blue Light").
-narrative_ontology:topic_domain(c_physical_blue_wavelength, "scientific/physical").
+narrative_ontology:topic_domain(c_physical_blue_wavelength, "physics/optics/perception").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint emerges naturally from the laws of physics without human design.
 domain_priors:emerges_naturally(c_physical_blue_wavelength).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% This constraint is a physical law; it has no beneficiaries or victims in the
-% Deferential Realism sense, as there is no asymmetric extraction. It also
-% requires no active enforcement. These facts are omitted as they are not applicable.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   This is a uniform-type constraint (Mountain-only). The classification is
-   invariant across all perspectives because the base extractiveness and
-   suppression are negligible and the constraint is a physical law.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE HUMAN OBSERVER (MOUNTAIN)
-% To the observer, the sky is blue due to Rayleigh scattering; this cannot be
-% changed or negotiated.
+% PERSPECTIVE 1: BIOLOGICAL OBSERVER (MOUNTAIN) — All human perception of blue light is constrained by cone photoreceptor sensitivity peaks in the S-cone class (~420nm) and the physics of light propagation. No exit from this constraint exists at the biological level. The wavelength range that triggers blue perception is fixed by photon physics and retinal biochemistry — zero degrees of freedom.
 constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE INSTITUTION (MOUNTAIN)
-% A standards body (e.g., defining sRGB) cannot change the physics of blue light.
-% They can only build a coordination standard (a Rope) that REFERENCES this Mountain.
-% From their perspective, the physical law itself remains a Mountain.
-constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The physicist observes a fundamental, non-negotiable law of nature.
+% PERSPECTIVE 2: ANALYTICAL OBSERVER / PHYSICS (MOUNTAIN) — From a civilizational timescale and global scope, the electromagnetic spectrum constraint on blue light wavelengths (450-495nm) is a physical law. Light's speed, the relationship between frequency and wavelength (c = λν), and the energy levels of atomic transitions that absorb and emit in this band are immutable features of the universe. No measurement basis, observational framework, or technological intervention can change what wavelength corresponds to blue photons. The constraint is invariant across all physics paradigms and measurement regimes.
 constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+% PERSPECTIVE 3: STANDARDS BODY (MOUNTAIN) — The CIE (International Commission on Illumination) defines blue light based on the physical wavelength constraint. Even as the primary institutional beneficiary of standard-setting authority, the CIE cannot redefine blue to outside the 450-495nm range — the standard must conform to the underlying physics or it becomes incoherent. The constraint permits standardization but does not permit redefinition. The institutional actor experiences zero effective extraction from this limit.
+constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -148,26 +138,24 @@ constraint_indexing:constraint_classification(c_physical_blue_wavelength, mounta
 
 :- begin_tests(c_physical_blue_wavelength_tests).
 
-test(uniformity_is_mountain_as_expected) :-
-    % Verify this is a uniform-type constraint, classifying as Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(c_physical_blue_wavelength, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(c_physical_blue_wavelength, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(c_physical_blue_wavelength, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    % Verify the constraint adheres to the canonical Mountain thresholds.
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
     narrative_ontology:constraint_metric(c_physical_blue_wavelength, ExtMetricName, E),
-    narrative_ontology:constraint_metric(c_physical_blue_wavelength, SuppMetricName, S),
-    E =< 0.25, % Mountain extraction threshold
-    S =< 0.05. % Mountain suppression ceiling
+    domain_priors:suppression_score(c_physical_blue_wavelength, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(nl_profile_is_present_and_correct) :-
-    % Verify the Natural Law profile metrics are present for this Mountain constraint.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(c_physical_blue_wavelength),
     narrative_ontology:constraint_metric(c_physical_blue_wavelength, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(c_physical_blue_wavelength, resistance, R),
-    domain_priors:emerges_naturally(c_physical_blue_wavelength),
     AC >= 0.85,
     R =< 0.15.
 
@@ -179,89 +167,72 @@ test(nl_profile_is_present_and_correct) :-
 
 /**
  * LOGIC RATIONALE:
- *   This constraint is a uniform-type Mountain. A physical law is the canonical
- *   example of a Mountain; it has negligible extraction (ε=0.02) and its
- *   suppression of alternatives is total and requires no enforcement. The
- *   suppression score (S=0.01) is low because the metric measures the *cost*
- *   of suppressing alternatives, which is zero for a physical law as no
- *   alternatives exist. The file includes the full Natural Law profile
- *   (accessibility_collapse=1.0, resistance=0.0, emerges_naturally) required
- *   for the engine to certify it as a Mountain.
+ *   Extractiveness (0.12): Minimal. The physical wavelength constraint does not extract value from any agent — it simply defines the boundary of what 'blue' is in the electromagnetic spectrum. The small non-zero value reflects measurement uncertainty and instrumental limitations (spectrometers have finite precision) rather than true extractiveness. Over civilizational timescales, this measurement noise averages to zero functional extraction. Suppression (0.02): Near-zero. No suppression mechanism enforces the wavelength constraint because it requires no enforcement — the physics is automatic. No agent can suppress alternatives because there are no alternatives. Theater ratio (0.05): Near-zero. The constraint is purely functional with negligible performative content. Any measurement or discussion of blue wavelength carries the theatrical overhead of language and instrumentation, but this is minimal compared to institutional constraints. The constraint requires no symbolic reinforcement, no ideology, no ritual — it simply obtains.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. The constraint is a Mountain from all perspectives,
- *   as no agent can alter a law of physics. This is a uniform-type constraint.
- *
- * DIRECTIONALITY LOGIC:
- *   Directionality is not applicable. As a Mountain, the constraint has no
- *   beneficiaries or victims. The system will fall back to canonical `d` values
- *   for each power atom, but since ε is near zero, the effective extraction χ
- *   remains negligible for all agents.
+ *   This constraint exhibits the minimal perspectival gap characteristic of natural law. All perspectives yield mountain classification because all observers experience the same immutable boundary. The biological observer sees an invariant constraint at the photoreceptor level. The analytical physicist sees an invariant constraint at the level of quantum electrodynamics. The standards body sees the same constraint as the foundation for their authority. No agent perceives meaningful extraction, suppression, or theater. This is the definitional signature of a true mountain constraint: the indexical tuple (P, T, E, S) produces the same classification for all agents because the constraint is genuinely independent of power, time perspective, exit options, and spatial scope.
  *
  * MANDATROPHY ANALYSIS:
- *   [RESOLVED MANDATROPHY] This constraint is a Mountain. Mandatrophy, the misidentification
- *   of extraction as coordination, is not a risk here because the base extractiveness (0.02)
- *   is well below any threshold for a Snare or Tangled Rope. The system correctly
- *   identifies this as a natural law.
+ *   This constraint resolves the mandatrophy trivially: all perspectives classify as mountain, which is the correct classification. There is no risk of mislabeling extraction as coordination or vice versa because no extraction occurs. There is no coordination function being supplied — the constraint is purely passive/generative. The constraint exemplifies the case where a single ε value (0.12) and the physical fact of invariance across all measurement frameworks make the classification determinate and unambiguous. If any perspective classified differently from mountain, that would indicate either (a) an error in the analysis, or (b) that the constraint is actually not a single mountain but a family of constraints that should be decomposed. In this case, all evidence points to a true singular mountain.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_blue_qualia,
-    'Is the subjective experience of blue (qualia) a physical Mountain derived from this constraint, or a constructed Snare of neuro-linguistic programming?',
-    'Advances in the hard problem of consciousness; empirical studies on qualia across different linguistic groups.',
-    'If qualia is a Mountain, color perception is universal. If a Snare, it implies perception can be manipulated or is culturally relative.',
-    confidence_without_resolution(low)
+    wavelength_to_perception_mapping,
+    'Is the mapping from physical wavelength (450-495nm) to the color perception ''blue'' a physical constraint or a biological/cultural construct?',
+    'Cross-species comparison of cone photoreceptor sensitivity curves; historical analysis of color language and categorization across cultures; examination of tetrachromat and color-blind variants',
+    'If purely physical: classification remains mountain (physics truth). If substantially biological/cultural: the wavelength is fixed (mountain) but the blue perception is a construction (not a mountain constraint but a rope-like coordination between physics and culture). The constraint story then requires decomposition into two: one for wavelength physics (mountain), one for blue perception convention (rope).',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(wavelength_to_perception_mapping, empirical, 'Whether wavelength-to-blue mapping is purely physical or includes biological/cultural components').
+
+omega_variable(
+    measurement_independence,
+    'Can the physical wavelength of blue light be measured or verified independently of human or instrumental observation?',
+    'Quantum measurement theory analysis; examination of whether wavelength is an intrinsic property or an observer-dependent specification; comparison with other ''invariant'' physical quantities (charge, mass)',
+    'If wavelength is intrinsic: mountain classification holds across all measurement frameworks. If wavelength is observer-dependent or measurement-dependent: the constraint may be tangled_rope (physics + measurement apparatus interaction) rather than pure mountain.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(measurement_independence, conceptual, 'Whether wavelength is intrinsic to light or dependent on measurement').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(c_physical_blue_wavelength, 0, 10).
+narrative_ontology:interval(c_physical_blue_wavelength, 0, 1000).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data is included for completeness, but as a physical law, its
-% properties are static over human timescales. Extraction is below the 0.46
-% threshold requiring this data, but its inclusion demonstrates stability.
+% Theater ratio over time
+narrative_ontology:measurement(blue_wave_tr_t0, c_physical_blue_wavelength, theater_ratio, 0, 0.05).
+narrative_ontology:measurement(blue_wave_tr_t100, c_physical_blue_wavelength, theater_ratio, 100, 0.05).
+narrative_ontology:measurement(blue_wave_tr_t1000, c_physical_blue_wavelength, theater_ratio, 1000, 0.05).
 
-% Theater ratio remains zero (Physical laws do not perform "theater")
-narrative_ontology:measurement(blue_tr_t0, c_physical_blue_wavelength, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(blue_tr_t5, c_physical_blue_wavelength, theater_ratio, 5, 0.0).
-narrative_ontology:measurement(blue_tr_t10, c_physical_blue_wavelength, theater_ratio, 10, 0.0).
+% Extraction over time
+narrative_ontology:measurement(blue_wave_be_t0, c_physical_blue_wavelength, base_extractiveness, 0, 0.12).
+narrative_ontology:measurement(blue_wave_be_t100, c_physical_blue_wavelength, base_extractiveness, 100, 0.12).
+narrative_ontology:measurement(blue_wave_be_t1000, c_physical_blue_wavelength, base_extractiveness, 1000, 0.12).
 
-% Extraction remains negligible (Nature does not collect rent)
-narrative_ontology:measurement(blue_ex_t0, c_physical_blue_wavelength, base_extractiveness, 0, 0.02).
-narrative_ontology:measurement(blue_ex_t5, c_physical_blue_wavelength, base_extractiveness, 5, 0.02).
-narrative_ontology:measurement(blue_ex_t10, c_physical_blue_wavelength, base_extractiveness, 10, 0.02).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% As a physical law, this constraint has no coordination function itself, so
-% coordination_type is not declared. However, it serves as a foundation for
-% other, human-constructed constraints.
 
-% Network relationships (structural influence edges)
-% This physical law (Mountain) enables the creation of technological standards (Ropes).
-narrative_ontology:affects_constraint(c_physical_blue_wavelength, c_tech_srgb_standard).
+% DUAL FORMULATION NOTE:
+% The physical wavelength of blue light is upstream of many constraints involving color perception, lighting standards, and visual technology. This constraint is not itself decomposable — the wavelength is a singular physical fact. Downstream constraints (e.g., color naming conventions, lighting standards, visual perception) may be rope or tangled_rope structures built on top of this mountain.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No enrichment or overrides needed — Mountain (physical constant).
-% A physical law has no beneficiary/victim asymmetry; suppression is total
-% and extraction is negligible. No agent benefits at the expense of another.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

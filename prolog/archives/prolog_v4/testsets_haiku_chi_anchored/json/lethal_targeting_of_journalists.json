@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "lethal_targeting_of_journalists",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ltoj"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.92,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "De Facto Policy of Lethal Targeting of Journalists in Conflict Zones",
+    "topic_domain": "political/military/human_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_military_command",
+      "information_control_apparatus"
+    ],
+    "victims": [
+      "journalists",
+      "independent_media_ecosystem",
+      "civilian_information_access"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Targeted Journalist",
+      "comment": "PERSPECTIVE 1: TARGETED JOURNALIST (SNARE) \u2014 Operating in an active conflict zone with no exit option short of fleeing the region permanently. Faces direct lethal threat with minimal formal protection mechanisms or accountability. Cannot negotiate exit from constraint. d\u22480.98, f(d)\u22481.45, \u03c3=0.9 \u2192 \u03c7\u22481.02."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Independent Media Outlet",
+      "comment": "PERSPECTIVE 2: INDEPENDENT MEDIA OUTLET (SNARE) \u2014 Trapped within operational theater. Cannot cease reporting without abandoning mission; cannot relocate staffing without losing source networks. Faces systematic targeting. d\u22480.92, f(d)\u22481.30, \u03c3=1.0 \u2192 \u03c7\u22481.02."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Civilian Information Ecosystem",
+      "comment": "PERSPECTIVE 3: CIVILIAN INFORMATION ECOSYSTEM (SNARE) \u2014 Abstract collective of citizens dependent on independent reporting. No exit option. Trapped in information scarcity. Cannot organize collective defense. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22481.05."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "State Military Command",
+      "comment": "PERSPECTIVE 4: STATE MILITARY COMMAND (ROPE) \u2014 Experiences targeting of journalists as a coordination problem solution: suppressing real-time battlefield reporting improves operational security and reduces political friction. Views constraint as necessary military information control. d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Governance Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL GOVERNANCE FRAMEWORK (PITON) \u2014 Geneva Conventions, UN protocols, press freedom resolutions exist as formal commitments but lack enforcement mechanisms in active conflicts. Journalistic protection is performative \u2014 symbolic condemnation without sanctions sufficient to deter targeting. theater_ratio=0.35 but constraint persists through institutional inertia despite low functional governance. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural Reality)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a global/civilizational perspective, lethal targeting of journalists is pure extraction: eliminating independent observers from military decision-making zones to prevent accountability and information asymmetry reversal. No coordination benefit. Pure suppression of alternative information pathways. \u03b5=0.78, suppression=0.92 confirm snare across all observation dimensions. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22481.02."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_threshold",
+      "question": "Is disproportionate journalist casualty rate evidence of de facto targeting policy, or collateral consequence of conflict geography and access patterns?",
+      "resolution_mechanism": "Forensic analysis of strike patterns relative to civilian density; comparison of journalist casualty rates to baseline military casualty rates in same zones; examination of pre-strike intelligence collection on media locations",
+      "impact": "If intentional policy: snare classification confirmed across all perspectives. If collateral: constraint reclassifies to tangled_rope (defensive military necessity + extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether targeting is deliberate policy or collateral outcome"
+    },
+    {
+      "id": "actor_attribution_clarity",
+      "question": "Which institutional actor within the state apparatus owns the targeting policy? Does clarity of command responsibility affect classification?",
+      "resolution_mechanism": "Documentary evidence (orders, targeting guidelines); forensic accountability chains; interviews with military/security personnel; comparison to documented protocols",
+      "impact": "If centralized policy: institutional beneficiary is unified (military command). If distributed/tacit: beneficiary becomes diffuse (information control apparatus generally), potentially increasing theater_ratio.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of targeting authority within state apparatus"
+    },
+    {
+      "id": "counterfactual_information_effect",
+      "question": "What information would journalists report if they could operate safely? Would it change military decision-making or only political accountability?",
+      "resolution_mechanism": "Comparison of operational outcomes in theaters with vs without independent reporting; analysis of civilian casualty patterns; correlation between information access and political response magnitude",
+      "impact": "If information would change military decisions: constraint prevents optimization (extraction is significant). If only political response: extraction is primarily audience information control, not military necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppressed information would alter military or only political outcomes"
+    },
+    {
+      "id": "state_definition_boundary",
+      "question": "Does the de facto targeting policy reflect state-level institutional decision, rogue unit autonomy, or private security actor behavior? Where does institutional responsibility lie?",
+      "resolution_mechanism": "Accountability investigations; comparison of patterns across multiple conflicts; organizational accountability chain analysis; state denial/acknowledgment patterns",
+      "impact": "Clear institutional responsibility: snare classification stable. Ambiguity: constraint potentially bifurcates into separate stories (state_policy_targeting vs private_security_targeting) with different \u03b5 values.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether targeting reflects institutional state policy or non-state actors"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The lethal targeting of journalists in conflict zones represents a de facto extraction mechanism operating through direct violence rather than institutional coercion. Based on documented cases of disproportionate journalist casualties in specific theaters of conflict, this constraint models how state military actors suppress independent observation of battlefield decisions and civilian impacts. The constraint is characterized by high extractiveness (0.78) \u2014 eliminating journalists removes real-time accountability mechanisms \u2014 and extreme suppression (0.92) \u2014 journalists face lethal threat with no formal protection, legal recourse, or negotiated exit. The low theater ratio (0.35) reflects that this extraction mechanism is not disguised as something else; state actors either deny targeting explicitly or justify it as military necessity, making the suppression structurally naked rather than performative. The constraint escalated in extractiveness over the interval (0.42 \u2192 0.78) as conflicts intensified and targeting became more systematic. Theater ratio remained low and stable, indicating that the extraction mechanism relies on direct threat rather than on mis-framing or institutional performativity.",
+    "key_agents": [
+      "Targeted Journalists: Powerless/trapped primary victims (immediate horizon) \u2014 face direct lethal threat with no legal protection or exit option",
+      "Independent Media Outlets: Moderate/trapped secondary victims (biographical horizon) \u2014 cannot cease operations without abandoning mission; face systematic targeting of staff and assets",
+      "Civilian Information Ecosystem: Powerless/trapped abstract victim (generational horizon) \u2014 population dependent on independent reporting for accountability and information asymmetry reversal; no exit option",
+      "State Military Command: Institutional/arbitrage primary beneficiary (immediate horizon) \u2014 benefits from suppressed real-time reporting; experiences constraint as coordination solution for operational security",
+      "Information Control Apparatus: Institutional beneficiary \u2014 state actors managing narrative control and limiting accountability mechanisms",
+      "International Governance Framework: Institutional/constrained secondary actor (civilizational horizon) \u2014 formal commitments to journalist protection lack enforcement; constraint persists through institutional inertia despite low functional governance",
+      "Analytical Observer: Civilizational analyst (global scope) \u2014 sees pure extraction mechanism with no coordination function; constraint is pure information suppression"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High and increasing. The constraint extracts significant value by eliminating independent reporting, preventing accountability mechanisms, and enabling undocumented military decision-making. The escalation from 0.42 to 0.78 over the interval reflects systematic intensification of targeting as conflicts deepened. Unlike 'propaganda' (which involves positive mis-framing), this constraint uses direct lethal force to prevent information flow entirely. Suppression (0.92): Extreme. Journalists face lethal threat with: (1) no formal legal protection mechanisms, (2) no international enforcement of Geneva Convention protections, (3) no meaningful military distinction or protective marking, (4) no negotiated safe passage or non-combatant status recognition, (5) no accessible grievance mechanisms. Exit options are binary: flee the theater entirely or accept lethal risk. Theater ratio (0.35): Low and stable. The constraint does not disguise itself as something beneficial. State actors either deny targeting (explicit denial is low-theater) or justify it as military necessity (framing as required operational security is mid-theater). The stability across the interval indicates the extraction mechanism does not require increasing performativity \u2014 naked threat is sufficient when victims cannot escape.",
+    "perspectival_gap": "All perspectives except the military beneficiary classify as Snare. The targeted journalist, media outlet, civilian information ecosystem, and analytical observer all see pure extraction: elimination of independent observation with no coordination benefit. The international governance framework sees a degraded piton (formal protections that don't function). Only the state military command sees rope (coordination benefit: operational security). This represents a stark perspectival gap where the beneficiary sees coordination and the victims see pure extraction. The gap exists because the 'coordination' from the military perspective (suppressing real-time reporting) is inherently extraction from the civilian perspective (eliminating information access). The two perspectives are not measuring the same constraint from different angles \u2014 they are structurally incompatible. Military operational security gained = civilian information loss. There is no mutual benefit frame.",
+    "directionality_logic": "Targeted journalists: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.45. Near-maximum extraction. No alternative but to accept lethal risk or flee. State military command: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary position. Can exit constraint at will (cease targeting) without material cost. Independent media outlets: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.30. High extraction. Cannot exit without abandoning mission. Civilian information ecosystem: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Abstract collective with no agency. International governance: Constrained institutional actor \u2192 d\u22480.55, f(d)\u22480.75. Moderate directionality. Has formal commitments (constraints) but lacks enforcement power. The directionality derivation is unambiguous: all victims show high d (trapped exit, no alternatives); beneficiary shows low d (arbitrage exit, can reverse targeting at will).",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED WITH MANDATROPHY RESOLVED. Extractiveness > 0.70 requires mandatrophy resolution (\u03b5=0.78). The classification satisfies all snare gates: (1) \u03b5 \u2265 0.46 (\u2713 0.78), (2) suppression \u2265 0.60 (\u2713 0.92), (3) \u03c7 \u2265 0.66 (computed \u03c7 \u2248 1.02 from all victim perspectives, \u2713). The constraint is pure extraction, not mislabeled coordination. No coordination function exists that would justify the military targeting. Claimed coordination value ('operational security') is not mutual gain \u2014 it is information suppression that harms civilians. The mandatrophy is resolved by demonstrating: (a) the beneficiary (military command) experiences rope only because they define 'coordination' as unilateral information elimination, which is extraction by definition; (b) from every victim perspective, the constraint is pure snare; (c) the international governance framework cannot reframe this as coordination because the 'suppressed reporting' would provide accountability, not mutual optimization; (d) the analytical observer sees no legitimate coordination role \u2014 the constraint is structural violence. Therefore, Snare is the correct classification, and no reframing into Tangled Rope is justified."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_information_monopoly",
+      "civilian_casualty_accountability",
+      "press_freedom_suppression"
+    ],
+    "dual_formulation_note": "Lethal targeting of journalists is part of a constraint family around state information control. The upstream constraint is state_information_monopoly (the institutional drive to control narrative); lethal targeting is the enforcement mechanism that makes monopoly effective. The downstream constraint is press_freedom_suppression (the broader structural suppression of independent media). These three constraints have different \u03b5 values reflecting different aspects of the extraction: monopoly (\u03b5\u22480.55, more institutional), targeting (\u03b5\u22480.78, more violent), suppression (\u03b5\u22480.68, more structural). All three are linked through the beneficiary (state information control apparatus)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

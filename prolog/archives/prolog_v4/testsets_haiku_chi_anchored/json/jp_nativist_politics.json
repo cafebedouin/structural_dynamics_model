@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "jp_nativist_politics",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jpnat"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Nativist Online Rhetoric as a Pathway to Political Power in Japan",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "nativist_politicians"
+    ],
+    "victims": [
+      "marginalized_minorities",
+      "political_discourse_quality",
+      "democratic_accountability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Targeted Minority",
+      "comment": "PERSPECTIVE 1: TARGETED MINORITY (SNARE) \u2014 Ethnic Koreans, Chinese, Ainu, LGBTQ+ individuals, and other minorities face sustained coordinated harassment campaigns with no viable exit or defense mechanism within the system. Suppress exit options: cannot leave Japan without abandoning social networks, employment, citizenship. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. Snare classification is structurally stable: high extraction + high suppression + victim trapped."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Democratic Discourse Commons",
+      "comment": "PERSPECTIVE 2: DEMOCRATIC DISCOURSE COMMONS (SNARE) \u2014 The epistemic commons of reasoned political debate is degraded by systematic inflammatory rhetoric. Constrained exit: journalists, academics, and civil society actors who oppose the rhetoric face reputational damage, doxing, and career consequences, creating self-censorship. d\u22480.88, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.78. The commons is victimized because it cannot defend itself against coordinated disruption."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Nativist Political Movement",
+      "comment": "PERSPECTIVE 3: NATIVIST POLITICAL MOVEMENT (ROPE) \u2014 The politician and her coalition experience the rhetoric as a coordination mechanism: mobilizing base support, establishing identity-based political organization, and signaling party membership. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Negative effective extraction = net beneficiary. The constraint solves a genuine coordination problem for this coalition (aggregate supporters who share nativist orientation). The ambiguity here is critical: the rope classification from the beneficiary's perspective disguises the snare mechanism from the victim's perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Liberal Democratic Party Institutional Leadership",
+      "comment": "PERSPECTIVE 4: LDP INSTITUTIONAL LEADERSHIP (TANGLED ROPE) \u2014 The mainstream LDP leadership experiences the nativist rhetoric as both coordination (base mobilization) and extraction (erosion of moderate LDP's international reputation, diplomatic relationships, internal party discipline). The party benefits from the base energy but bears costs from alienation of coalition partners, diplomatic friction, and reputational damage to centrist candidates. d\u22480.48, f(d)\u22480.60, \u03c3=1.0 \u2192 \u03c7\u22480.35. Tangled Rope gate: beneficiaries (nativist base) + victims (party institutions bearing diplomatic costs) + active enforcement (party leadership tolerating and amplifying the rhetoric) = mixed type."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Constitutional Democratic Guardrails",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL DEMOCRATIC GUARDRAILS (PITON) \u2014 Japan's constitutional commitment to minority protection, Article 14 equality, and international human rights treaties persists as an institutional performance with degraded enforcement. Theater_ratio=0.62: constitutional protections are ritually affirmed by LDP leaders while nativist politicians operate within plausible deniability ('free speech', 'cultural pride'). The guardrails remain due to institutional inertia and international pressure, not because they function to prevent harassment. Enforcement capacity has atrophied."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From the civilizational/global perspective, this constraint exhibits the signature extractive structure of nativist populism: it systematically extracts political power and media attention by suppressing alternative voices and minority exit options, maintains hegemony through coordinated harassment, and stages its victims' powerlessness as natural majorities vs artificial minorities. The structure is not contingent on the Japanese context \u2014 it is a repeatable template. Snare from the analytical perspective confirms the victim perspectives' structural reality."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deniability_boundary",
+      "question": "Where is the boundary between protected political speech and coordinated harassment that enables suppression?",
+      "resolution_mechanism": "Comparative analysis of platform moderation decisions, legal cases, and police complaints; investigation of coordination infrastructure (private chat groups, messaging apps, organized campaigns)",
+      "impact": "If deniability is maintained: constraint continues as snare with institutional cover (piton theater). If deniability collapses: politician and coalition face accountability, reducing extraction potential.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between protected speech and coordinated harassment suppression"
+    },
+    {
+      "id": "coalition_stability",
+      "question": "Is the nativist political movement stable as a long-term coalition or dependent on the continued salience of minorities as threat?",
+      "resolution_mechanism": "Longitudinal tracking of nativist politician support; analysis of electoral returns when minority-threat narratives are high vs low; identification of coalition member commitment to other shared policy goals",
+      "impact": "If stable: snare persists indefinitely. If dependent on threat narrative: constraint may degrade if minority issues fade in salience or if alternative organizing frameworks emerge.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of nativist coalition beyond threat narratives"
+    },
+    {
+      "id": "transnational_intervention_capacity",
+      "question": "Can transnational human rights institutions (UN mechanisms, ICC, diplomatic pressure) meaningfully constrain nativist suppression, or does territorial sovereignty protect the mechanism?",
+      "resolution_mechanism": "Analysis of UN reports, diplomatic d\u00e9marches, and their domestic political consequences; tracking of international reputation effects on trade and alliance relationships; examination of domestic implementation of international recommendations",
+      "impact": "If constrained by transnational pressure: extraction costs rise, potentially degrading the snare. If protected by sovereignty: snare structure insulated from external intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of transnational human rights intervention"
+    },
+    {
+      "id": "generational_shift",
+      "question": "As digital natives become the primary audience and younger demographics show lower nativist orientation, does the constraint's extraction potential decline?",
+      "resolution_mechanism": "Demographic analysis of nativist support; generational cohort tracking of attitudes toward minorities; analysis of younger politicians' alignment with nativist rhetoric",
+      "impact": "If generational decline: snare weakens as base shrinks. If nativist framing adapts to younger cohorts: extraction mechanism persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Generational sustainability of nativist political model"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The nativist online rhetoric strategy exemplified by Mio Sugita and allied figures represents a systematic extraction mechanism that weaponizes democratic freedoms (speech, assembly, electoral participation) to suppress minority voices and consolidate political power. The constraint operates through coordinated harassment campaigns, inflammatory rhetoric about minorities (particularly Zainichi Koreans, Chinese nationals, and LGBTQ+ individuals), and strategic positioning within the mainstream Liberal Democratic Party to gain legitimacy and influence. The mechanism extracts political power by converting identity-based grievances into mobilizable base support while suppressing the ability of minorities to contest narratives, organize responses, or enjoy equal participation in democratic discourse. The constraint exhibits hall-of-mirrors ambiguity: the beneficiary (nativist politician) frames the activity as coordination (mobilizing base, expressing cultural pride); the victims experience pure extraction (harassment, exclusion, forced silence); institutional actors negotiate between base mobilization and reputational costs; and constitutional guardrails persist as theater while enforcement atrophies. Theater has increased substantially over the interval (0.38 to 0.62) as constitutional protections are affirmed while nativist rhetoric operates within plausible deniability. The extractiveness has also risen (0.42 to 0.58) as the political strategy matured from fringe social media to mainstream party alignment.",
+    "key_agents": [
+      "Nativist Politicians (institutional/arbitrage): Primary beneficiary \u2014 capture political power, media attention, and base support through inflammatory rhetoric; gain mainstream party legitimacy",
+      "Marginalized Minorities (powerless/trapped): Primary victim \u2014 ethnic Koreans, Chinese nationals, LGBTQ+ individuals face coordinated harassment with no exit option or institutional defense",
+      "Democratic Discourse Commons (moderate/constrained): Secondary victim \u2014 reasoned political debate is degraded by systematic inflammatory rhetoric; journalists and civil society actors face reputational damage and doxing for opposition",
+      "LDP Institutional Leadership (organized/constrained): Mixed position \u2014 benefits from base mobilization but bears costs from diplomatic friction, reputational damage, and erosion of coalition relationships",
+      "Constitutional Democratic Guardrails (institutional/constrained): Performative \u2014 Article 14 equality and international human rights commitments persist as ritual affirmed by leadership while enforcement atrophies",
+      "Analytical Observer (analytical/analytical): Witnesses the extractive structure common to all nativist populist movements \u2014 target suppression and threat narrative substituting for policy substance"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts significant political power, media attention, electoral support, and influence over party direction. The extraction is substantial but not maximal (0.70+) because: (1) the mechanism requires sustained narrative work \u2014 it is not automatic rent extraction like price controls, (2) exit options exist in principle (political realignment, generational change), though they are costly in practice, and (3) some beneficiaries (mainstream LDP) experience offsetting costs. The trajectory upward from 0.42 to 0.58 reflects the strategy's maturation and mainstreaming. Suppression (0.68): High. Multiple suppression mechanisms operate: (1) coordinated harassment campaigns create chilling effects on minority speech, (2) doxing and reputation attacks on opponents, (3) institutional inertia in human rights enforcement, (4) social pressure against dissent in consensus-driven Japanese culture, (5) legal ambiguity enabling plausible deniability. However, suppression is not maximal (0.90+) because some institutional resistance persists (constitutional provisions, international pressure, civil society advocacy), and some exit options remain costly but available. Theater ratio (0.62): Moderate-high. Constitutional protections are ritually affirmed (theater) while enforcement atrophies. The politician's invocation of cultural preservation and free speech establishes legitimacy theater. But the mechanism contains real functional extraction (genuine political power accrual, genuine base mobilization, genuine minority suppression) \u2014 this is not a purely theatrical constraint. The rising trajectory (0.38 to 0.62) reflects increasing reliance on plausible deniability as the strategy's mainstream status increases the cost of explicit minoritarian harm.",
+    "perspectival_gap": "This constraint produces sharp perspectival disagreement on whether the mechanism is coordination or extraction. The nativist politician views it as Rope: mobilizing supporters around shared identity and policy vision. The victims view it as Snare: systematic harassment with no defense or exit. The institutional party leadership experiences Tangled Rope: real base benefits + real reputational costs. The constitutional order perceives Piton: ritual equality protections with degraded enforcement. The analytical observer confirms Snare: the structure is a repeatable template for extractive nativist politics. The gap reveals that 'democracy', 'free speech', and 'self-determination' are being claimed by the beneficiary as coordination goods while being weaponized as extraction mechanisms against powerless victims. The beneficiary's rope classification is not false \u2014 base mobilization IS coordination \u2014 but it masks the asymmetric extraction from those who cannot exit the polity.",
+    "directionality_logic": "Nativist politicians: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; has exit option (could stop rhetoric) but chooses not to because benefits exceed costs. Marginalized minorities: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction; cannot exit polity without abandoning lives, families, employment. Democratic discourse commons: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.35. Cannot exit without abandoning democratic participation; faces harassment for defense. LDP institutional leadership: Both beneficiary (base support) and victim (diplomatic costs, internal faction pressure) + constrained \u2192 d\u22480.48, f(d)\u22480.60. Mixed directionality reflecting tangled rope position. Constitutional guardrails: Nominal beneficiary of rule of law but actual victim of enforcement failure + constrained \u2192 d\u22480.70, f(d)\u22481.10. High d because the constraint operates by exploiting guardrails' weakness, not respecting them."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "democratic_accountability_erosion",
+      "minority_representation_exclusion",
+      "platform_moderation_sovereignty"
+    ],
+    "dual_formulation_note": "This constraint is downstream of broader populist political strategy structures but represents a distinct constraint focused on the rhetoric-to-power pathway in the Japanese context. The upstream constraints involve institutional vulnerability to populism generally; this story models the specific nativist instantiation with \u03b5=0.58."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.7
+    }
+  ]
+}

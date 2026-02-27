@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "franchisee_corporate_squeeze",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fcs"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Franchise Agreement Squeeze",
+    "topic_domain": "economic/franchise_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_franchisor"
+    ],
+    "victims": [
+      "individual_franchisees",
+      "franchisee_profitability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Franchisee",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL FRANCHISEE (SNARE) \u2014 Trapped in long-term franchise agreement with high exit costs (non-refundable initial fee, property lease obligations, buildout sunk costs). Franchisor controls pricing, supply chain, marketing fees, technology fees, and renewal terms. Franchisee bears operational risk but franchisor extracts through multiple revenue streams (royalties, marketing fees, product markups, technology fees). Limited alternatives and high switching costs create a snare structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Franchisee Network",
+      "comment": "PERSPECTIVE 2: FRANCHISEE NETWORK (TANGLED ROPE) \u2014 Moderate power when franchisees organize (franchise associations, litigation coordination). Benefits from brand standardization, shared training, economies of scale in supply purchasing. Also bears extraction through collective fee negotiations often tilted toward franchisor. Coalition-building provides constrained exit (ability to pressure franchisor through collective action) but not mobility. Mix of genuine coordination benefits and asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Corporate Franchisor",
+      "comment": "PERSPECTIVE 3: CORPORATE FRANCHISOR (ROPE) \u2014 Experiences the franchise system as coordination: standardized operations, quality control, brand consistency across locations. Benefits from network effects (more franchisees = stronger brand = more franchise applications). Extracts through multiple fee streams but also invests in brand development, training infrastructure, and marketing that benefits all franchisees. Experiences the constraint primarily as a coordination mechanism. High exit optionality (can increase fees, change terms, open company locations)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 State legislatures, franchisee advocacy groups, and consumer protection agencies pushing for franchise disclosure laws, fee transparency requirements, and non-renewal protections. Sees the squeeze as a temporary problem with policy sunset: better regulation of franchise agreements can reduce extractive pressure while preserving coordination benefits. Extraction is constrained by emerging legal frameworks limiting franchisor unilateral fee increases and requiring good-faith renewal negotiations."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Franchise Theater",
+      "comment": "PERSPECTIVE 5: LEGACY FRANCHISE THEATER (PITON) \u2014 The franchise disclosure document (FDD) and compliance framework are largely performative. Required to reveal fee structures and historical franchisee earnings, but: (a) historical earnings data is voluntarily provided and often selective, (b) actual franchisee profitability varies wildly due to operational skill and market conditions, (c) new franchisees ignore warnings in FDD if brand reputation is strong. Theater ratio (0.48) reflects moderate performativity \u2014 disclosure exists but has limited real bite. Maintained through regulatory requirement, not because it effectively protects franchisees."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, the asymmetry in franchise agreements appears as an immutable natural law: capital owners always hold structural advantage over small-business operators; information asymmetry between franchisor (100+ franchisees of data) and individual franchisee (single location data) is inherent to the business model; and exit costs are inherent to asset-specific investment (property, buildout). However, the structural data contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing that the asymmetries are contingent on legal and contractual design choices, not natural laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "franchisee_profitability_data_reliability",
+      "question": "What fraction of franchisee profit variations are due to franchisor extraction mechanisms versus operator skill, market conditions, and local competition?",
+      "resolution_mechanism": "Longitudinal data on franchisee earnings across same brand in different markets; cohort analysis comparing franchisees entering during high vs low franchisor fee regimes; exit analysis of why franchisees leave",
+      "impact": "If extraction accounts for >40% of variance: snare classification dominates. If <20%: rope classification strengthens. If mixture is large (25-35%): tangled rope is correct classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether franchisee profit variance reflects extraction or operator skill"
+    },
+    {
+      "id": "franchisor_reinvestment_rates",
+      "question": "What fraction of franchisor revenues from royalties and fees are reinvested in brand development, franchisee support, and training versus captured as corporate profit?",
+      "resolution_mechanism": "Franchisor financial disclosure analysis; franchisee surveys on quality and timeliness of support; benchmarking against other franchise systems",
+      "impact": "If reinvestment >50%: coordination narrative strengthens (rope interpretation valid). If <30%: extraction narrative strengthens (snare interpretation valid). Impact on claimed_type classification if findings shift significantly from tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether franchisor fees fund coordination services or pure extraction"
+    },
+    {
+      "id": "regulatory_enforcement_effectiveness",
+      "question": "Do state franchise laws (FDD requirements, non-renewal protections, good-faith negotiation duties) actually reduce extraction rates or merely create compliance theater?",
+      "resolution_mechanism": "Comparison of franchisee profitability and fee structures in heavily regulated states (California, New York) versus lightly regulated states; analysis of regulatory enforcement actions and penalties",
+      "impact": "If effective: scaffold sunset is real, extraction rates declining over time. If theater: regulatory framework is piton-like, theater_ratio should be higher. Affects measurement trajectory and interval sunset assumptions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether franchise regulation reduces extraction or creates compliance theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Franchise agreements represent a hybrid structure: corporations seeking rapid expansion without capital risk, and entrepreneurs seeking branded business models with lower startup risk than independent ventures. However, once franchisees are locked into agreements with sunk costs and limited exit options, franchisors gain asymmetric power to extract wealth through royalty increases, mandatory product purchases, marketing fee inflation, technology fee imposition, and unfavorable renewal terms. The constraint exhibits characteristics of both coordination (brand standardization, operational support, economies of scale) and pure extraction (fee escalation, supply chain markups, unilateral contract modification). From the franchisee's perspective, especially individual owner-operators with trapped exit options, the agreement functions as a snare. From the franchisor's perspective, the system is coordination infrastructure. The analytical observer risks naturalizing the asymmetry as inherent to capital ownership, when in fact it reflects specific contractual design choices that could be reformed through regulation.",
+    "key_agents": [
+      "Corporate Franchisor: Primary beneficiary (institutional/arbitrage) \u2014 controls fee structures, supply chains, brand standards; multiple revenue streams with low cost of capital; can exit or modify terms",
+      "Individual Franchisees: Primary victims (powerless/trapped) \u2014 sunk costs in property, buildout, and working capital; long-term agreements with high exit penalties; subject to unilateral fee increases",
+      "Franchisee Network Organizations: Secondary actors (moderate/constrained) \u2014 franchise associations and litigation groups provide limited collective leverage; can pressure but not exit",
+      "Regulatory Agencies: Reform coalition (organized/constrained) \u2014 state franchise boards and consumer protection agencies pushing for fee transparency and renewal protections; building sunset mechanisms through legal reform",
+      "Legacy Franchise Disclosure System: Institutional theater (institutional/arbitrage) \u2014 required FDD compliance creates appearance of franchisee protection but limited real bite",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent contractual asymmetries as immutable laws of capitalism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high, reflecting multiple extraction mechanisms (royalties typically 5-8%, marketing fees 2-5%, mandatory product markups 15-30%, technology fees 1-3%) and escalating fees over contract term. However, not as severe as pure predatory lending (0.75+) because franchisor reinvests some revenues in brand development and franchisees do retain operational autonomy. The 10-year trajectory shows 0.38\u21920.58, indicating extraction has worsened as franchisors optimize fee structures and consolidate power. Suppression (0.65): High. Exit barriers include non-refundable initial fees (typically $25K-$100K+), property lease obligations (often 10+ years), training sunk costs, and brand-specific buildout (equipment, signage). Career risk of failure (franchisees report 20-30% failure rates in competitive sectors). Limited transparency on actual franchisee earnings. Information asymmetry heavily favors franchisor. Theater ratio (0.48): Moderate, declining over interval. FDD disclosure creates appearance of protection, but effectiveness is limited because (a) historical earnings are optional and selective, (b) new franchisees often ignore warnings if brand is strong, (c) franchisor controls most earnings variables. Theater has declined slightly as regulatory enforcement and franchisee litigation have increased real consequences, reducing pure performativity.",
+    "directionality_logic": "Directionality derivation tracks how structural position determines experienced extractiveness. Individual franchisees: trapped exit + victim status \u2192 d \u2248 0.90 \u2192 f(d) \u2248 1.40 \u2192 \u03c7 high. Franchisee network: constrained exit + organized power \u2192 d \u2248 0.55 \u2192 f(d) \u2248 0.75 \u2192 \u03c7 moderate. Franchisor: arbitrage exit + beneficiary status \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 \u03c7 negative (extraction flows toward franchisor). The pipeline automatically derives these from the declarations of beneficiaries (franchisor), victims (franchisees), power levels, and exit options. No overrides needed \u2014 structural data clearly maps to directionality values.",
+    "perspectival_gap": "The franchisor sees a working coordination system (Rope): brand standardization, training infrastructure, quality control, and network effects justify the fee structure. The franchisee sees extraction under the guise of partnership (Snare/Tangled Rope): fees escalate, alternatives are eliminated, and franchisor controls pricing power. The franchisee network sees mixed benefits and extraction costs (Tangled Rope): collective bargaining can extract some concessions, but information asymmetry and individual competition prevent full closure of the gap. The regulatory coalition sees a temporary market failure (Scaffold) with a sunset: fee transparency, renewal protections, and good-faith negotiation requirements can rebalance the relationship while preserving legitimate coordination benefits. The legacy FDD system sees itself as working (Piton): disclosure requirement is maintained through regulatory habit despite limited real enforcement, creating theater of franchisee protection.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint satisfies all three tangled rope gates: (1) Genuine coordination function exists \u2014 brand standardization, training, operational support, economies of scale are real and franchisees do benefit. (2) Asymmetric extraction is documented \u2014 multiple fee streams, supply chain markups, unilateral term modifications, and unfavorable renewal negotiations create directional extraction from franchisee to franchisor. (3) Active enforcement is required \u2014 franchisor must actively monitor, audit, and enforce compliance with brand standards, supply contracts, and fee obligations. The mandatrophy (confusion between coordination and extraction) is resolved by recognizing that BOTH properties are structural. This is not 'is it coordination or extraction?' but 'it is coordination WITH extraction.' The regulatory coalition's scaffold perspective shows that policy reform can separate legitimate coordination (reduced extraction levels) from rent-seeking (franchisor fee excess). The snare perspective (from trapped franchisees) reflects that from their position, the extraction overwhelms the coordination benefits \u2014 they experience it as pure extraction even though coordination infrastructure exists."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "small_business_capital_access",
+      "supply_chain_monopoly_power"
+    ],
+    "dual_formulation_note": "The franchise squeeze is downstream of capital allocation structures in small business financing (why entrepreneurs need franchises) and upstream of supply chain concentration (franchisor-controlled suppliers capture additional rents). The three constraints form a causal chain: capital access \u2192 franchise dependence \u2192 supply chain vulnerability. Each has distinct extractiveness values reflecting their specific structural mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

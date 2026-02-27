@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "hicbc_uk",
+    "version": "1.0",
+    "generated_date": "2025-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hicbc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK High Income Child Benefit Charge (HICBC)",
+    "topic_domain": "economic/taxation/family_support",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "exchequer_fiscal_consolidation",
+      "higher_income_households_avoiding_charge"
+    ],
+    "victims": [
+      "middle_income_dual_earners",
+      "single_high_earners_with_dependents"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Trapped Dual-Earner Family (\u00a360k-\u00a370k threshold zone)",
+      "comment": "PERSPECTIVE 1: DUAL-EARNER FAMILY IN CLAWBACK ZONE (SNARE) \u2014 Family with two earners totaling \u00a360k-\u00a370k faces 100% benefit withdrawal on marginal earnings. Cannot exit via income reduction (childcare costs prohibit). Cannot exit via migration without significant cost. Suppression is structural: tax design creates poverty trap. d\u22480.92, f(d)\u22481.39, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Single High Earner (\u00a360k+ solo income)",
+      "comment": "PERSPECTIVE 2: SINGLE HIGH EARNER WITH CHILDREN (SNARE) \u2014 Individual earning over \u00a360k on single income faces increasing clawback. Cannot exit via income reduction without household hardship. Can exit via marriage/cohabitation (pooling income may reduce benefit loss if partner earns less), but exit carries social/legal friction. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.60."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Family Tax Relief Coalition (accountants, benefits advisors)",
+      "comment": "PERSPECTIVE 3: TAX AVOIDANCE ADVISORY COALITION (TANGLED ROPE) \u2014 Accountants and benefits advisors have organized a coordination function (legitimate tax planning, income splitting strategies within marriage, salary sacrifice schemes) that also extracts value: families pay \u00a3400-\u00a31200 annually for planning that shifts income below threshold. Suppression is moderate: families feel trapped and must buy coordination. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Treasury (Fiscal Consolidation Beneficiary)",
+      "comment": "PERSPECTIVE 4: THE TREASURY/HM REVENUE (ROPE) \u2014 Experiences HICBC as a coordination mechanism for deficit reduction: high earners are a reliable revenue source; means-testing Child Benefit targets support to lower incomes. Treasury sees net benefit (\u03b5 negative for them, \u03c7 negative). d\u22480.02, f(d)\u2248-0.17, \u03c3=1.0 \u2192 \u03c7\u2248-0.09. Institutional perspective with full exit via policy change \u2014 but politically costly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Wealth-Concentrating Cohort (inherited wealth, non-wage income)",
+      "comment": "PERSPECTIVE 5: INHERITED WEALTH / NON-WAGE INCOME HOLDERS (TANGLED ROPE) \u2014 High-net-worth families can avoid HICBC clawback via income structuring: capital gains taxed differently, dividends managed, trusts for children. They experience the constraint as a coordination mechanism (efficient markets reward tax planning) AND as extraction (they must hire specialists to remain exempt). d\u22480.25, f(d)\u22480.10, \u03c3=1.0 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Policy Legacy (austerity-era mechanism persisting)",
+      "comment": "PERSPECTIVE 6: POLICY LEGACY / INSTITUTIONAL INERTIA (PITON) \u2014 HICBC was introduced in 2012-2013 as an austerity fiscal consolidation measure. Its core function (means-testing child support, deficit reduction) has been superseded by broader tax policy evolution, yet the constraint persists through legislative inertia and administrative friction. Theater_ratio=0.58 reflects: the policy claims to target high earners but actual effect is poverty-trap creation in middle-income zone (mismatch between stated and structural function). Removal is politically costly despite low functional necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Welfare State Design Level)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / WELFARE STATE DESIGN (TANGLED ROPE) \u2014 From civilizational perspective, HICBC reflects a hybrid extraction/coordination mechanism fundamental to how welfare states distribute limited resources. Pure universalism (everyone gets child benefit regardless of income) is fiscally unsustainable; pure means-testing (gradual withdrawal) creates poverty traps. HICBC's binary cliff structure is an attempt at coordination (protecting lower/middle income) that failed and became extractive. d\u22480.60, f(d)\u22480.80, \u03c3=1.0 \u2192 \u03c7\u22480.42."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_cliff_vs_taper",
+      "question": "Is the HICBC's cliff structure (100% withdrawal per \u00a31 earned) a structural requirement of the constraint or a contingent design choice that could be replaced by gradual taper without losing the coordination function?",
+      "resolution_mechanism": "Comparative analysis of equivalent means-tested benefits in OECD countries with tapered vs cliff withdrawal. Simulation of labor supply response to \u00a350 taper vs \u00a3100 cliff at same threshold income.",
+      "impact": "If cliff is contingent: constraint reclassifies as Scaffold (sunset via gradual reform). If cliff is necessary: constraint is locked Tangled Rope (coordination structure inherently generates extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cliff withdrawal is necessary or contingent design choice"
+    },
+    {
+      "id": "income_splitting_loophole_extent",
+      "question": "How much of the HICBC extraction is neutralized by marriage, cohabitation, and income-splitting tax strategies available to organized/wealthy households?",
+      "resolution_mechanism": "Tax year administrative data on HICBC clawback distribution by household income composition (dual earners vs single), by region, by use of salary sacrifice schemes. Comparison of effective benefit loss for married vs unmarried couples at same household income.",
+      "impact": "If >40% of extractive effect is neutralized by behavioral avoidance: constraint reclassifies as Piton (performative means-testing). If <20%: constraint remains Tangled Rope with genuine asymmetric extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which income-splitting neutralizes HICBC extraction"
+    },
+    {
+      "id": "fiscal_replacement_pathway",
+      "question": "If HICBC were abolished tomorrow, what revenue replacement mechanism would be necessary to maintain equivalent fiscal consolidation without creating equivalent poverty traps?",
+      "resolution_mechanism": "OBR/Institute for Fiscal Studies modeling of alternative means-testing designs (gradual taper, modified household income threshold, exemptions for childcare costs). Policy analysis of actual government proposals for HICBC reform.",
+      "impact": "If feasible replacement exists: HICBC is Scaffold (temporary austerity mechanism with sunset pathway). If no replacement: HICBC is locked Tangled Rope (structural necessity of hybrid extraction-coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of fiscal replacement for HICBC without equivalent poverty traps"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The UK High Income Child Benefit Charge (HICBC) is a means-tested withdrawal mechanism introduced in 2012-2013 as part of austerity fiscal consolidation. It claws back Child Benefit (\u00a321.15 weekly per child in 2024) from families where any household member earns over \u00a360,000 annually, with complete withdrawal at \u00a362,000+ income. The constraint exhibits a classic Tangled Rope structure: it performs a coordination function (targeting child support toward lower-income households) while simultaneously creating a severe poverty trap (100% effective marginal tax rate in the \u00a360k-\u00a362k zone) that extracts economic value from middle-income dual-earner families through behavioral distortion and increased costs (tax planning, childcare restructuring, reduced labor supply). The expanding theater_ratio (0.42 \u2192 0.58) reflects that the policy's stated purpose (deficit reduction, targeting support) increasingly diverges from its structural effect (poverty trap creation, regressive redistribution due to income-splitting avoidance). The mechanism is neither pure coordination (it generates genuine extraction and deadweight loss) nor pure extraction (it does allocate resources to lower-income households). Its classification as Tangled Rope is stable, but the growing mismatch between policy narrative and actual distributional effect suggests mandate erosion \u2014 the policy's legitimacy is weakening as the extraction mechanism becomes more transparent.",
+    "key_agents": [
+      "Dual-earner families (\u00a355k-\u00a370k household income): Primary victims (powerless/trapped) \u2014 face 100% marginal tax rate and behavioral deadlock; cannot reduce income without childcare crisis",
+      "Single high earners with children (\u00a360k+ individual income): Secondary victims (moderate/constrained) \u2014 face clawback; can exit via marriage but exit carries friction",
+      "Exchequer/HM Treasury: Primary beneficiary (institutional/arbitrage) \u2014 captures \u00a32bn-\u00a32.3bn annually; experiences HICBC as fiscal consolidation tool with low political sustainability",
+      "Tax planning professionals (accountants, benefits advisors): Secondary beneficiary (organized/constrained) \u2014 coordinate income-splitting strategies, salary sacrifice schemes; extract \u00a3400-\u00a31200 per family annually from fear of clawback",
+      "Wealthy households with non-wage income: Tertiary beneficiary (powerful/arbitrage) \u2014 can structure income via capital gains, dividends, trusts; experience HICBC as coordination problem solved by tax planning",
+      "Child Benefit program legacy: Structural victim (institutional/constrained) \u2014 original universal program corrupted; administrative complexity increases; program loses political support as means-testing becomes visible",
+      "Analytical observer: Welfare state design perspective (analytical/analytical) \u2014 sees constraint as emblematic tension between universalism and fiscal sustainability; risks naturalizing the poverty trap as inherent necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The HICBC creates genuine extraction through poverty trap effect. Families in the \u00a360k-\u00a362k threshold zone face 100% marginal tax rate (all additional earnings lost to clawback). This is more severe than standard taxation. However, extraction is not total (\u03b5<0.66) because: (1) the clawback only applies above \u00a360k (lower incomes unaffected), (2) behavioral avoidance (marriage, income splitting, salary sacrifice) neutralizes 30-40% of intended effect, and (3) the program still allocates resources to lower-income households (it performs its stated coordination function). Suppression (0.68): High. Exit options are severely limited for trapped families. Cannot exit via income reduction (childcare costs prohibit). Cannot exit via geographic relocation (UK-wide policy, no sub-national variation). Can exit via marriage (low friction for cohabiting families but high friction for separated parents), or via tax planning (requires specialist advice, \u00a3400-\u00a31200 annual cost). Suppression reflects the structural lock-in of dual-career household economics. Theater ratio (0.58): Moderate-high and increasing. The policy's narrative (targeting support to lower earners, fiscal consolidation) increasingly diverges from actual effect (regressive redistribution via income-splitting avoidance, poverty trap creation, deadweight loss from reduced labor supply in transition zone). The performative element (policy appears to achieve stated goal) masks the structural dysfunction (it doesn't, for middle-income households). Theater has grown since 2013 because: (a) analysis of distributional effect has become more transparent, (b) income-splitting avoidance strategies are now mainstream, (c) the austerity rationale for fiscal consolidation has weakened, yet the policy persists.",
+    "perspectival_gap": "The constraint produces radically different classifications across structural positions. Dual-earner families (powerless/trapped) perceive a pure Snare (d\u22480.92, \u03c7\u22480.72): the mechanism extracts value with no exit option. Single high earners (moderate/constrained) perceive Snare with potential exit (d\u22480.85, \u03c7\u22480.60): clawback is real but marriage is a viable (if socially costly) exit. Tax planning professionals (organized/constrained) perceive Tangled Rope (d\u22480.55, \u03c7\u22480.39): the system both requires coordination services (benefiting advisors) and constrains families (who must buy advice to navigate clawback). The Treasury (institutional/arbitrage) perceives Rope (d\u22480.02, \u03c7\u2248-0.09): the mechanism is a clean coordination device for targeting resources downward and capturing high earner revenue. Wealthy households (powerful/arbitrage) perceive Tangled Rope (d\u22480.25, \u03c7\u22480.05): the system extracts compliance costs but their non-wage income routes make extraction nearly zero. The policy legacy (institutional/constrained) perceives Piton (theater=0.58): the mechanism is performative, its stated function has been superseded, yet it persists through administrative inertia and political lock-in. This perspectival range (Snare \u2192 Rope \u2192 Tangled Rope \u2192 Piton) demonstrates how the same \u00a32bn fiscal mechanism is experienced as a pure trap by some, as neutral coordination by others, and as degraded theater by institutional observers.",
+    "directionality_logic": "Dual-earner families: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximal extraction because no exit option. Single high earners: Victims + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction; exit (marriage) exists but carries significant friction. Tax planning professionals: Beneficiaries + constrained (they need families to stay in the trap to sell services) \u2192 d\u22480.55, f(d)\u22480.75. They benefit from the constraint's existence and the families' response. Treasury: Beneficiary + arbitrage (can change policy at will) \u2192 d\u22480.02, f(d)\u2248-0.17. Net beneficiary with full exit option. Wealthy households: Mixed (victim to policy structure, beneficiary to income-splitting coordination) + arbitrage \u2192 d\u22480.25, f(d)\u22480.10. Low effective extraction because they have superior exit routes and income flexibility. Child Benefit program: Structural victim of means-testing corruption \u2192 d not applicable (institutional constraint object). Analytical observer: d\u22480.60, f(d)\u22480.80. The observer sees the constraint as a real welfare state tension, not a natural law, but risks naturalizing it as necessary.",
+    "mandatrophy_analysis": "DIAGNOSTIC SIGNATURE: HICBC is a prototype Tangled Rope that is failing its coordination function and becoming a pure extraction mechanism. The mandatrophy is real and unresolved. At inception (2012-2013), the constraint had plausible dual function: (1) Coordination: target child support to lower incomes when fiscal space was constrained. (2) Extraction: capture revenue from high earners as part of austerity consolidation. The theater ratio has grown from 0.42 to 0.58 because the coordination function has degraded. Why? The means-testing design (cliff structure) was too crude: it creates a poverty trap that incentivizes behavioral avoidance (marriage dissolution, income splitting, increased tax planning costs) rather than accepted redistribution. The extraction function has intensified in reality (affecting more middle-income families as nominal earnings rise) even as the fiscal consolidation rationale has weakened (austerity era is over, but the policy persists). The constraint now classifies as Tangled Rope because: (a) it still performs redistribution (coordination function is present but degrading), (b) it creates significant extraction and deadweight loss (poverty trap, behavioral distortion), (c) it requires active enforcement (HMRC clawback calculations, family cooperation). But the Tangled Rope is unstable. As theater_ratio approaches 0.70, the constraint risks reclassifying as Piton (performative means-testing with inertial persistence but failed coordination). Mandatrophy is unresolved because: the Treasury maintains the policy as fiscal consolidation (coordination narrative), families experience it as extraction trap (victim narrative), and policy analysis increasingly reveals it as performative dysfunction (observer narrative). No consensus exists on whether the coordination function justifies the extraction. The constraint cannot be classified as pure Snare (it does allocate resources to lower incomes) or pure Rope (it creates genuine poverty trap). But it can no longer claim stable Tangled Rope status if the coordination function is deteriorating faster than extraction is justifying it."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_child_poverty_dynamics",
+      "dual_career_household_economics",
+      "tax_planning_industry_growth"
+    ],
+    "dual_formulation_note": "HICBC can be decomposed into two distinct structural claims: (1) means-tested_redistribution (\u03b5\u22480.25, Rope/Scaffold): the legitimate fiscal consolidation mechanism allocating child support by household income. (2) poverty_trap_mechanism (\u03b5\u22480.68, Snare): the behavioral distortion created by cliff withdrawal design in \u00a360k-\u00a362k zone. These are not the same constraint viewed from two angles \u2014 they have different \u03b5 values, different victim populations, and different exit options. The current JSON story combines them as a single \u03b5=0.52 Tangled Rope. Future decomposition should separate: constraint_hicbc_redistribution_function (\u03b5\u22480.25, Scaffold) as the stated purpose, and constraint_hicbc_threshold_poverty_trap (\u03b5\u22480.68, Snare) as the structural dysfunction. Both stories would link via affects_constraints, with the poverty trap downstream of the redistribution design choice."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

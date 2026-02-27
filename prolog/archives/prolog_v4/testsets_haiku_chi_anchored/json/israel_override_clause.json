@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "israel_override_clause",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ioc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "The 61-Member Judicial Override Clause",
+    "topic_domain": "political/constitutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_coalition_majority",
+      "coalition_legislative_interests"
+    ],
+    "victims": [
+      "minority_rights_protection",
+      "constitutional_judicial_review",
+      "non_coalition_citizens"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Minority Rights and Constitutional Protections",
+      "comment": "PERSPECTIVE 1: MINORITY RIGHTS (SNARE) \u2014 Cannot exit the jurisdiction; has no veto over override mechanism; depends entirely on judicial review for protection. Suppression is high (0.68): no alternative exit, no political power to block majority coalitions. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.82. Full extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Opposition Political Parties",
+      "comment": "PERSPECTIVE 2: OPPOSITION PARTIES (TANGLED ROPE) \u2014 Can mobilize electorally and legislatively but are excluded from coalition majority. The override clause both constrains them (cannot access judicial veto over coalition legislation) and creates coordination opportunity (can build electoral coalitions, utilize public discourse, petition courts before override). d\u22480.70, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.63. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Coalition Executive and Majority Legislators",
+      "comment": "PERSPECTIVE 3: COALITION MAJORITY (ROPE) \u2014 Primary beneficiary. The override clause solves a coordination problem for the coalition: achieving legislative agenda without judicial obstruction. From their perspective, this is enabling coordination (passing laws), not pure extraction. They have arbitrage options (can govern under existing rules or push for override mechanism). d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Organized Civil Society and Rights Defenders",
+      "comment": "PERSPECTIVE 4: CIVIL SOCIETY ORGANIZATIONS (SNARE) \u2014 Organized but cannot exit jurisdiction; their core function (defending rights through judicial petition) is directly undermined by override mechanism. Suppression high: no legislative voice proportional to their constituencies, judicial remedies stripped. d\u22480.85, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.73. High extraction with organization."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Supreme Court Institutional Capacity",
+      "comment": "PERSPECTIVE 5: SUPREME COURT (PITON) \u2014 Institutional actor whose primary function (constitutional review) is degraded by override mechanism. Theater ratio (0.45) is moderate, but the court's performative aspect increases: rulings become advisory rather than binding. The court persists as an institution (constrained exit from political system) but with reduced structural authority. d\u22480.65, f(d)\u22480.98, \u03c3=1.0 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Institutional Design View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a constitutional design lens, the override clause represents a hybrid: it solves the coordination problem of enabling coalition governance (rope function) while simultaneously creating asymmetric extraction from minorities unable to exit or veto (snare function). The mechanism is explicitly designed to extract from the constrained majority in exchange for coordination benefits to the powerful minority (coalition). d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.38."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "override_threshold_extraction",
+      "question": "At what frequency of overrides does the mechanism transition from coordination tool to permanent extraction mechanism?",
+      "resolution_mechanism": "Empirical observation of override frequency over 10-year period post-enactment; comparison of judicial rulings struck down vs upheld; statistical analysis of override patterns across coalition types",
+      "impact": "If overrides < 5% of rulings: mechanism appears as coordination tool (Rope dominates). If overrides > 25% of rulings: mechanism is extractive (Snare dominates). Current frequency around 0-1%, but expansion with enactment could shift dramatically.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Override frequency threshold for extractive classification"
+    },
+    {
+      "id": "minority_coalition_inclusion",
+      "question": "Can excluded minorities eventually build alternative coalitions to access override power, or is the 61-member threshold a structural lock?",
+      "resolution_mechanism": "Electoral dynamics modeling; coalition formation history; analysis of whether excluded parties can achieve majority coalition in foreseeable electoral scenarios",
+      "impact": "If minorities can realistically form alternative majorities: exit option exists (constrained \u2192 mobile), extraction weakens, classification shifts toward Rope. If threshold locks them out: trapped exit confirmed, extraction is permanent Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether minorities have realistic path to override power"
+    },
+    {
+      "id": "basic_law_scope_ambiguity",
+      "question": "What counts as a 'violation of Basic Laws'? Is scope broad (any legislative coherence concern) or narrow (only explicit constitutional conflicts)?",
+      "resolution_mechanism": "Judicial doctrine analysis; Court precedent on Basic Law interpretation; comparison with similar constitutional courts in other democracies",
+      "impact": "If broad interpretation: override clause applies to many rulings, extraction increases. If narrow interpretation: override applies rarely, extraction remains lower, mechanism functions as coordination.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of Basic Law violations subject to override"
+    },
+    {
+      "id": "international_pressure_constraint",
+      "question": "Will international pressure (from allies, economic partners, human rights bodies) constrain use of the override mechanism, or does the mechanism remove internal constraints entirely?",
+      "resolution_mechanism": "Monitoring of international responses; analysis of economic/diplomatic consequences if clause is invoked; tracking of coalition coalition positions on international pressure",
+      "impact": "If international pressure is effective constraint: suppression (0.68) is overstated, mechanism is more constrained. If pressure is ignored: suppression stands, extraction is unmitigated.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether international pressure constrains override use"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "ioc_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45,
+      "id_override": "ioc_extract_t2"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58,
+      "id_override": "ioc_extract_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "ioc_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42,
+      "id_override": "ioc_theater_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45,
+      "id_override": "ioc_theater_t5"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The 61-Member Judicial Override Clause represents a proposed constitutional mechanism that would allow the Knesset coalition majority to override Supreme Court rulings that invalidate legislation for violating Basic Laws. The constraint exhibits structural characteristics of a pure extraction (Snare) from the perspective of minorities and rights-protected populations, while appearing to the coalition majority as a coordination tool (Rope) enabling effective governance. The mechanism creates asymmetric power: a simple majority coalition can unilaterally strip judicial review from minorities who cannot exit the jurisdiction and have no countervailing institutional power. The extractiveness (0.58) reflects that the mechanism enables the coalition to capture legislative control entirely, while suppression (0.68) reflects the complete elimination of an exit route (judicial veto) for minorities. The moderate theater ratio (0.45) indicates that the mechanism is relatively transparent \u2014 not highly performative \u2014 but the underlying structure creates a coordination function for the majority while extracting from the minority.",
+    "key_agents": [
+      "Coalition Executive and Majority Legislators (61+ MKs): Primary beneficiary (institutional/arbitrage) \u2014 gain unilateral power to implement legislative agenda without judicial veto",
+      "Minority Rights and Constitutional Protections: Primary victim (powerless/trapped) \u2014 depend entirely on judicial review; have no alternative exit or veto mechanism",
+      "Opposition Political Parties: Secondary actor (moderate/constrained) \u2014 excluded from coalition; can mobilize electorally but are subject to outcome of coalition legislation",
+      "Organized Civil Society and Rights Defenders: Victim (organized/trapped) \u2014 cannot exit jurisdiction; their primary advocacy mechanism (judicial petition) is directly undermined",
+      "Supreme Court: Institutional actor (institutional/constrained) \u2014 primary function (constitutional review) is degraded; persists with reduced structural authority",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees hybrid coordination-extraction structure; identifies mechanism as pure extraction for minorities despite coordination framing"
+    ],
+    "logic_rationale": "Extractiveness (0.58): This reflects the degree to which the mechanism enables the majority coalition to extract compliance from minorities. The mechanism does not extract monetary value but political-constitutional submission: minorities must accept legislation even when it violates their constitutional protections. The value is moderate-high because the extraction is not total (minorities retain electoral and civil society options) but is substantial (judicial veto is completely removed). Suppression (0.68): High. The mechanism suppresses the primary alternative exit route for minorities: judicial review. There is no substitute mechanism offered. Suppression is not total (0.95) because minorities retain electoral mobilization options, but those options are long-term and uncertain compared to the immediate judicial remedy being stripped. Theater ratio (0.45): Moderate-low. The mechanism is relatively transparent about its function \u2014 not highly performative. The language is direct (override by 61 votes). However, framing as a 'correction' to judicial overreach adds some performative content. The theater increases slightly over time (from 0.38 to 0.45) as the coalition invokes coordination rhetoric to justify the mechanism.",
+    "perspectival_gap": "This constraint exhibits a dramatic perspectival gap between the coalition majority and the minority populations. The majority sees coordination (Rope): a tool to unblock legislative gridlock and enable democratic governance. The minorities see pure extraction (Snare): loss of their primary protection mechanism. The opposition parties see tangled constraints: they benefit from judicial review while out of power, but would benefit from override power if they form a coalition (constrained exit reflecting this ambiguity). Civil society organizations see the constraint as a fundamental degradation of their advocacy capacity (Snare with organization). The Supreme Court sees its own institutional function degraded but persisting (Piton). The analytical observer sees the mechanism as a straightforward extraction mechanism disguised as coordination \u2014 the 'coordination function' (enabling coalition to pass laws) is not a genuine collective action problem but a preference of the majority to avoid minority constraints. The perspectival gap is maximal between beneficiary and victim.",
+    "directionality_logic": "Coalition majority: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net beneficiary; has multiple exit options (can govern under existing rules or push override mechanism). Minorities: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximal extraction; cannot exit jurisdiction, have no alternative veto mechanism. Opposition parties: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.08. Can mobilize electorally but are excluded from immediate benefit of override mechanism; have constrained exit (electoral mobilization is slow). Civil society: Victim + trapped \u2192 d\u22480.85, f(d)\u22481.25. Cannot exit jurisdiction; primary advocacy mechanism is directly undermined. Supreme Court: Institutional + constrained \u2192 d\u22480.65, f(d)\u22480.98. Constrained by political system; cannot exit; primary function is degraded but institution persists. Analytical observer: Analytical \u2192 d\u22480.50, f(d)\u22480.65. Sees hybrid structure: coordination for majority, extraction for minority.",
+    "mandatrophy_analysis": "The 61-Member Judicial Override Clause resolves mandatrophy in favor of SNARE as the primary type from the system's analytical perspective. While the coalition majority genuinely experiences a coordination function (solving their legislative gridlock), the mechanism is explicitly structured to extract from minorities. The coordination problem for the majority is not a genuine collective action problem (multiple independent actors needing coordination) but a preference of one coalition to avoid constraints from other parts of the constitutional system. The mechanism's \u03b5=0.58 and suppression=0.68 place it squarely in extraction territory. The moderate theater ratio (0.45) prevents it from being misclassified as a mountain (natural law) or piton (purely performative); the mechanism is functionally designed for extraction with transparent logic. The mandatrophy resolution: the 'coordination' framing is political rhetoric. The structural truth is extraction. A Rope classification would require that the override mechanism solve a genuine coordination problem (multiple minorities and majority all needing to coordinate on legislation) \u2014 but the mechanism explicitly solves only the majority's problem at minorities' expense. Therefore: Snare, not Rope, is the correct primary classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "knesset_super_majority_requirements",
+      "basic_law_amendment_procedures",
+      "judicial_review_constitutional_scope"
+    ],
+    "dual_formulation_note": "The override clause is downstream of the Basic Law amendment procedures (which define what counts as a violation of Basic Laws) and upstream of specific legislative disputes that would invoke the override mechanism. The clause itself represents a distinct structural constraint on constitutional governance independent of any specific legislation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.85
+    }
+  ]
+}

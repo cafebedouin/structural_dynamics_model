@@ -1,0 +1,82 @@
+{
+  "header": {
+    "constraint_id": "dldr_information_policy",
+    "version": "0.1",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.15,
+    "suppression": 0.1,
+    "theater_ratio": 0.2,
+    "claimed_type": "rope",
+    "human_readable": "\"Don\u2019t Like, Don\u2019t Read\" (DLDR) Information Policy",
+    "topic_domain": "technological/social",
+    "beneficiaries": [
+      "content_creators",
+      "platform_operators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Individual Reader",
+      "comment": "Readers can choose to ignore content they dislike. This is a coordination mechanism that allows readers to filter content based on their preferences, but it also places the burden of filtering on the individual."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operators",
+      "comment": "Platforms benefit from reduced moderation costs. This policy allows platforms to avoid taking responsibility for the content posted by users, which can save them money and resources."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Content Creators",
+      "comment": "Content creators benefit from increased freedom of expression. They are less likely to be censored or moderated, which can allow them to reach a wider audience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, DLDR is primarily a coordination mechanism that efficiently allocates the responsibility for content filtering."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "The \"Don\u2019t Like, Don\u2019t Read\" (DLDR) policy is a coordination mechanism that shifts the responsibility for content filtering from platforms to individual readers. This policy benefits content creators and platform operators, but also places the burden of filtering on readers.",
+    "key_agents": [
+      "Individual Reader: Chooses whether to engage with content (moderate/mobile)",
+      "Platform Operators: Benefit from reduced moderation costs (institutional/arbitrage)",
+      "Content Creators: Benefit from freedom of expression (powerful/mobile)",
+      "Analytical Observer: Sees the policy as a coordination mechanism (analytical/analytical)"
+    ],
+    "logic_rationale": "The constraint primarily functions as a coordination mechanism (rope). Extractiveness (0.15) is low, as the main effect is a shift in responsibility rather than significant extraction. Suppression (0.10) is also low, as individuals retain the freedom to choose what content they consume.",
+    "perspectival_gap": "The constraint is viewed as a rope from most perspectives, as all benefit from the DLDR policy.",
+    "directionality_logic": "Beneficiaries are content creators and platform operators, while readers bear a small cost in terms of needing to self-filter. However, the low extractiveness indicates that this is primarily a coordination mechanism.",
+    "mandatrophy_analysis": "DLDR is primarily a coordination mechanism, so the possibility of mislabeling it as pure extraction is minimal."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

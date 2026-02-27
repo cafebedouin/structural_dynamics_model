@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "fiat_currency_lifecycle",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.5,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Lifecycle of a Fiat Currency",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "initial_government_issuers",
+      "early_adopters"
+    ],
+    "victims": [
+      "late_adopters",
+      "fixed_income_earners",
+      "holders_of_competing_currencies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Fixed Income Earners",
+      "comment": "PERSPECTIVE 1: FIXED INCOME EARNERS (SNARE) - Trapped by contracts denominated in the depreciating currency, unable to exit without significant loss."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Late Adopters",
+      "comment": "PERSPECTIVE 2: LATE ADOPTERS (TANGLED ROPE) - Constrained by the established network effect but benefit from transactional convenience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Initial Government Issuers",
+      "comment": "PERSPECTIVE 3: INITIAL GOVERNMENT ISSUERS (ROPE) - Benefits from seigniorage and monetary policy flexibility. See it as coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Central Bank (Late Stage)",
+      "comment": "PERSPECTIVE 4: CENTRAL BANK (PITON) - At later stages, may be constrained to maintain the currency's facade even when it's functionally failing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) - Sees the full lifecycle, including both the benefits and the extractive phases."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tipping_point_confidence",
+      "question": "At what level of devaluation does confidence in the currency collapse, triggering hyperinflation or a currency crisis?",
+      "resolution_mechanism": "Empirical study of past currency crises; econometric modeling of confidence indicators.",
+      "impact": "Determines the extractiveness experienced by different groups and the classification from their perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for currency confidence collapse."
+    },
+    {
+      "id": "alternative_currency_accessibility",
+      "question": "How accessible are alternative currencies (stablecoins, foreign currencies, barter systems) to different segments of the population?",
+      "resolution_mechanism": "Surveys of currency usage; analysis of regulatory barriers to alternative currencies.",
+      "impact": "Determines the exit options available to different groups, influencing their classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accessibility of alternative currencies."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models the typical lifecycle of an unbacked fiat currency, from its initial adoption and use to its eventual decline and potential replacement. Early adopters and the government benefit, while later adopters and those on fixed incomes bear the costs of inflation.",
+    "key_agents": [
+      "Initial Government Issuers: Primary beneficiary (institutional/arbitrage) - Benefits from seigniorage and monetary policy flexibility.",
+      "Early Adopters: Secondary beneficiary (moderate/mobile) - Benefit from increased economic activity and asset appreciation.",
+      "Late Adopters: Primary target (moderate/constrained) - Bear the costs of inflation and devaluation.",
+      "Fixed Income Earners: Primary target (powerless/trapped) - Trapped by contracts denominated in the depreciating currency.",
+      "Holders of Competing Currencies: Secondary target (moderate/mobile) - Suffer losses due to the fiat currency's dominance.",
+      "Central Bank (Late Stage): Institutional actor (institutional/constrained) - May be constrained to maintain the currency's facade.",
+      "Analytical Observer: Neutral observer (analytical/analytical) - Sees the full lifecycle, including both the benefits and the extractive phases."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. Inflation and devaluation transfer wealth from savers and fixed-income earners to the government and early adopters. Suppression (0.50): Moderate. Government regulations and network effects create barriers to adopting alternative currencies. Theater ratio (0.75): High. While there may be public statements supporting the currency, the fundamental economic realities drive its lifecycle. The theater increases over time as the central bank attempts to maintain confidence in a failing currency.",
+    "perspectival_gap": "The government and early adopters view the currency as a beneficial tool for economic management, while late adopters and those on fixed incomes experience it as a form of extraction. The analytical observer sees the complete cycle and its distributional effects.",
+    "directionality_logic": "The initial government issuers benefit from the seigniorage (profit made from issuing currency) and the increased monetary policy flexibility a fiat currency offers. Therefore they see the currency's lifecycle as a rope. Fixed income earners are harmed by the inflation the currency generates, and are often trapped by contractual obligations, so they see a snare. Late adopters see a tangled rope as there are benefits and harms.",
+    "mandatrophy_analysis": "The lifecycle of a fiat currency could be mislabeled as a simple snare if only considering those harmed by inflation. However, the initial benefits to the issuing government and early adopters demonstrate that it is initially a tangled rope, offering benefits and extraction, that can degrade over time to a piton."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

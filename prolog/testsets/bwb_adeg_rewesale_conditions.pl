@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: bwb_adeg_rewesale_conditions
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-10-27
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_bwb_adeg_rewesale_conditions, []).
@@ -40,11 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,23 +55,34 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: bwb_adeg_rewesale_conditions
  *   human_readable: BWB Conditions on Rewe's Adeg Store Divestment
- *   domain: economic
+ *   domain: economic/competition_law
  *
  * SUMMARY:
- *   The Austrian Federal Competition Authority (BWB) imposed conditions on the
- *   transfer of 75 Adeg grocery stores from the Rewe Group to independent
- *   merchants. These conditions are designed to ensure the merchants'
- *   independence, particularly by preventing Rewe from forcing them into
- *   exclusive purchasing agreements, thereby preserving competition among
- *   suppliers and protecting smaller market participants.
+ *   The Austrian Federal Competition Authority (BWB) imposed conditions on
+ *   Rewe Group's transfer of approximately 75 Adeg grocery stores to
+ *   independent merchants as part of a market consolidation mitigation. The
+ *   conditions constrain how divested stores can operate post-transfer,
+ *   including supply chain restrictions, pricing guidance, and operational
+ *   autonomy limits. This constraint exhibits both genuine coordination
+ *   (preventing predatory post-sale integration) and extractive elements
+ *   (operational burden on small merchants). The perspectival gap reveals the
+ *   core tension: for independent merchants, the conditions are a trap —
+ *   compliance is mandatory to access the stores but severely limits
+ *   operational freedom. For the retail competition ecosystem, the conditions
+ *   serve a coordination function: they maintain store operator autonomy and
+ *   prevent covert reconsolidation. For Rewe, the conditions are a
+ *   coordination cost that enables clean divestment. For the BWB itself, the
+ *   conditions represent temporary scaffolding for market transition, though
+ *   enforcement theater (monitoring, reporting, audits) may exceed functional
+ *   necessity.
  *
- * KEY AGENTS (by structural relationship):
- *   - rewe_group: Primary target (powerful/constrained) — bears extraction by having its market power and deal-making ability constrained.
- *   - independent_merchants: Primary beneficiary (organized/mobile) — benefits from enhanced autonomy and protection from coercive contracts.
- *   - food_and_beverage_suppliers: Secondary beneficiary (moderate/mobile) - benefits from a more diverse and competitive purchasing landscape.
- *   - bwb_austria: Inter-institutional architect (institutional/arbitrage) — designs and enforces the constraint to fulfill its mandate.
- *   - end_consumers: Powerless observers (powerless/trapped) - experience the market structure as an unchangeable fact.
- *   - analytical_observer: Analytical observer — sees the full structure as a Tangled Rope.
+ * KEY AGENTS:
+ *   - Independent Merchants: Primary target (powerless/trapped) — acquire stores only by accepting all conditions; cannot renegotiate or exit
+ *   - Rewe Group: Primary beneficiary (institutional/arbitrage) — complies with conditions to achieve clean divestment and avoid further regulatory action
+ *   - Austrian Retail Competition: Structural beneficiary (moderate/constrained) — gains store distribution autonomy and prevents consolidation, but bears enforcement burden
+ *   - Austrian Federal Competition Authority (BWB): Regulatory architect (organized/constrained) — designs and monitors conditions to prevent abuse; sees temporary intervention with eventual sunset
+ *   - Legacy Regulatory Framework: Institutional inertia (institutional/arbitrage) — 1980s-era consolidation rules applied to 2020s divestment; high theater relative to functional necessity
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent regulatory design as inherent market law
  */
 
 /* ==========================================================================
@@ -78,103 +90,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(bwb_adeg_rewesale_conditions, 0.48).
-domain_priors:suppression_score(bwb_adeg_rewesale_conditions, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(bwb_adeg_rewesale_conditions, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(bwb_adeg_rewesale_conditions, 0.52).
+domain_priors:suppression_score(bwb_adeg_rewesale_conditions, 0.68).
+domain_priors:theater_ratio(bwb_adeg_rewesale_conditions, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, extractiveness, 0.48).
-narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, extractiveness, 0.52).
+narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(bwb_adeg_rewesale_conditions, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(bwb_adeg_rewesale_conditions, tangled_rope).
+narrative_ontology:human_readable(bwb_adeg_rewesale_conditions, "BWB Conditions on Rewe's Adeg Store Divestment").
+narrative_ontology:topic_domain(bwb_adeg_rewesale_conditions, "economic/competition_law").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(bwb_adeg_rewesale_conditions). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(bwb_adeg_rewesale_conditions).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, independent_merchants).
-narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, food_and_beverage_suppliers).
-narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, bwb_austria). % Fulfills its mandate
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(bwb_adeg_rewesale_conditions, rewe_group).
-
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
+narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, austrian_retail_competition).
+narrative_ontology:constraint_victim(bwb_adeg_rewesale_conditions, rewe_group_operational_autonomy).
+narrative_ontology:constraint_victim(bwb_adeg_rewesale_conditions, market_consolidation_logic).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (REWE GROUP)
-% Agent whose market power is constrained. Engine derives d from:
-%   victim membership + constrained exit -> d approx 0.9 -> f(d) approx 1.35 -> high chi
-% The high suppression and extraction makes this feel like a snare, trapping
-% them in a sub-optimal deal structure.
+% PERSPECTIVE 1: INDEPENDENT MERCHANT (SNARE) — Trapped in the conditions framework. To acquire stores, must comply with all BWB mandates (pricing controls, supply chain restrictions, operational autonomy limits). Cannot renegotiate without losing the acquisition. No exit from the constraint once stores are transferred.
 constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, snare,
-    context(agent_power(powerful),
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 2: AUSTRIAN RETAIL COMPETITION (TANGLED ROPE) — Benefits from the constraint (increased merchant autonomy, store distribution to independents), but faces enforcement costs and market fragmentation. Exit constrained by regulatory structure. Mixed coordination (preventing consolidation) and extraction (enforcement burden).
+constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tangled_rope,
+    context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (INDEPENDENT MERCHANTS)
-% Agent who benefits from the protection. Engine derives d from:
-%   beneficiary membership + mobile exit -> d approx 0.15 -> f(d) approx -0.01 -> low/negative chi
-% From their view, it's a pure coordination mechanism that enables fair competition.
-constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context. Recognizes both the coordination function and
-% the asymmetric extraction, hence classifying it as a Tangled Rope.
-% This classification serves as the ground truth for the constraint_claim.
-constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% The regulator (BWB) and the regulated (Rewe) are both powerful actors
-% with different structural relationships to the constraint.
-
-% PERSPECTIVE 4A: THE REGULATOR (BWB)
-% As the architect, the BWB sees the constraint as a tool to fulfill its
-% mandate of ensuring market competition. It is a pure coordination mechanism.
-% Engine derives d from: beneficiary membership + arbitrage exit -> d approx 0.05 -> f(d) approx -0.12
+% PERSPECTIVE 3: REWE GROUP DIVESTMENT PATHWAY (ROPE) — Experiences conditions as coordination mechanism for orderly market exit. Can divest under the framework; conditions reduce uncertainty. Arbitrage option: comply fully and exit cleanly, or challenge selectively. Net beneficiary of certainty despite operational limits.
 constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 5: THE END CONSUMER (MOUNTAIN)
-% A single consumer in a town with one of the affected stores. They are
-% powerless to change the regulatory conditions and trapped by their local
-% geography. From this viewpoint, the constraint is an unchangeable feature
-% of their economic landscape, appearing as a Mountain.
-constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tangled_rope,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(local))).
+% PERSPECTIVE 4: AUSTRIAN FEDERAL COMPETITION AUTHORITY (SCAFFOLD) — Temporary intervention designed to prevent market consolidation during transition. Theater ratio moderate — enforcement requires monitoring but sunset is implicit (conditions decaying as merchants establish independent operations). Sees constraint as transitional support with eventual removal.
+constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: LEGACY REGULATORY FRAMEWORK (PITON) — Structural rules designed for 1980s retail consolidation now applied to divestment in 2020s e-commerce era. Theater high (compliance reporting, monitoring, audit trails that add cost without clear market effect). Functional core (preventing abuse of dominance) may be atrophied relative to enforcement burden. Maintained through institutional inertia.
+constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN VIEW) — Some constraint on dominant firm divestment appears inherent to market function: if a dominant firm divests subsidiary operations without oversight, the acquiring entities inherit structural market disadvantage (supplier leverage, customer switching costs, network effects). This perspective sees the constraint as an emergent market equilibrium condition, not as regulatory imposition. However, this naturalizes what is contingent institutional design — the engine flags this as a false summit.
+constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -183,22 +165,17 @@ constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tang
 :- begin_tests(bwb_adeg_rewesale_conditions_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between the target (Rewe) and a beneficiary (BWB).
-    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, TypeTarget, context(agent_power(powerful), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    assertion(TypeTarget == snare),
-    assertion(TypeBeneficiary == rope),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_conditions_met) :-
-    % Verify that all structural preconditions for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(bwb_adeg_rewesale_conditions, _),
-    narrative_ontology:constraint_victim(bwb_adeg_rewesale_conditions, _),
-    domain_priors:requires_active_enforcement(bwb_adeg_rewesale_conditions).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(bwb_adeg_rewesale_conditions, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_view_is_tangled_rope) :-
-    narrative_ontology:constraint_claim(bwb_adeg_rewesale_conditions, tangled_rope),
-    constraint_indexing:constraint_classification(bwb_adeg_rewesale_conditions, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(bwb_adeg_rewesale_conditions, TR),
+    TR >= 0.70.
 
 :- end_tests(bwb_adeg_rewesale_conditions_tests).
 
@@ -208,86 +185,90 @@ test(analytical_view_is_tangled_rope) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): Set moderately high. The constraint doesn't seize assets, but it significantly extracts potential monopoly profits and market control from Rewe by severing tied purchasing agreements. This represents a substantial transfer of economic power.
- *   - Suppression Score (s=0.65): High. As the national competition authority, the BWB's decision is binding. Rewe's alternative is to cancel the entire divestment, which may be commercially untenable. This gives the BWB strong coercive power in this context.
- *   - Theater Ratio (τ=0.10): Low. This is a concrete, legally enforceable set of conditions with clear economic impact, not a performative gesture.
+ *   Extractiveness (0.52): Moderate-high. The conditions impose measurable operational costs on merchants — supply restrictions limit sourcing flexibility, pricing guidance constrains margin optimization, compliance reporting consumes management time. However, extraction is not maximal because merchants do gain access to established store locations and customer bases; the transfer itself is not predatory. The extractiveness reflects regulatory overhead plus operational constraint, not pure rent extraction. Suppression (0.68): High. Merchants have limited exit — refusing conditions means no store acquisition. Suppliers of restricted merchandise have limited options (forced Rewe relationship). The suppression derives from the mandatory compliance regime, not from overt coercion, but it is substantial. Theater ratio (0.58): Moderate-high. Enforcement requires extensive monitoring (compliance audits, reporting, pricing verification) that may exceed the actual prevention of market consolidation. Some theater derives from regulatory theater (the visible process of oversight) rather than functional necessity. Merchants experience paperwork and compliance burden that may be primarily performative.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. The target, Rewe Group, experiences the constraint as a Snare. From its viewpoint, the rules are coercive (high suppression) and extract significant value (high ε), trapping it in a less favorable transaction. The beneficiaries—independent merchants and the BWB itself—see a Rope. For them, it is a pure coordination device that corrects a market failure, levels the playing field, and enables fair competition. The disagreement is not about the facts, but about the structural position of each agent relative to the flow of costs and benefits.
+ *   The merchant's snare and the retail competition's tangled rope represent the core perspectival gap. From the merchant's position, the constraint is extractive and inescapable — they must comply to acquire stores. From the retail competition's position, the constraint solves a genuine coordination problem (preventing post-sale reconsolidation). The scaffold perspective (BWB's own view) assumes sunset and temporary necessity. The piton perspective reveals that some conditions may be regulatory theater — applying 1980s consolidation logic to 2020s divestment where online retail has already fragmented the market. The mountain perspective risks naturalizing what is contingent institutional design as an inherent requirement for preventing market abuse.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality `d` is derived automatically from the declared structural relationships.
- *   - Beneficiaries: `independent_merchants`, `food_and_beverage_suppliers`, and the `bwb_austria` (which benefits by fulfilling its mandate). These agents receive a low `d`, resulting in a low or negative effective extraction (χ).
- *   - Victim: `rewe_group` is the sole victim, bearing the costs of the constraint. This assigns it a high `d`, leading to a high χ from its perspective.
- *   This mapping directly reflects the economic reality of the regulatory intervention.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This case perfectly illustrates an inter-institutional dynamic. Both the BWB (`institutional`) and Rewe (`powerful`) are significant actors. However, their relationship to the constraint is oppositional. The BWB, with `exit_options(arbitrage)` (it designed the rule), sees a Rope. Rewe, with `exit_options(constrained)` (it must accept the rule to proceed), sees a Snare. The model correctly captures that even powerful actors can be targets of extraction depending on the regulatory context.
+ *   The constraint's directionality flows asymmetrically: independent merchants bear the extraction (trapped exit, compliance burden, operational limits), while the beneficiaries (Rewe, Austrian retail competition) experience the constraint as coordination or arbitrage opportunity. The BWB occupies an institutional position with constrained exit but also enforcement authority — they experience the constraint as both architecture and burden. The derivation chain flows: merchants (powerless/trapped) → maximum d → high experienced extraction; retail competition (moderate/constrained) → moderate d → mixed extraction/coordination; Rewe (institutional/arbitrage) → low d → arbitrage benefit; BWB (organized/constrained) → moderate-low d → enforcement cost perceived as temporary.
  *
  * MANDATROPHY ANALYSIS:
- *   The Tangled Rope classification is crucial for avoiding mandatrophy. A simplistic analysis might label this regulation as either purely beneficial "pro-competition policy" (Rope) or purely harmful "government overreach" (Snare). The Tangled Rope designation correctly identifies that it is BOTH: it has a genuine coordination function that benefits some market actors (`constraint_beneficiary` is declared) while simultaneously imposing asymmetric costs on another (`constraint_victim` is declared). This dual nature is the hallmark of effective, but non-neutral, regulation.
+ *   This constraint resolves mandatrophy by demonstrating that what appears as 'regulatory extraction' at the merchant level is actually 'market coordination' at the competition level. The merchants experience snare-like constraints, but these constraints serve a genuine coordination function (preventing predatory post-sale behavior). The mandatrophy is resolved by acknowledging both truths: (1) from the merchant's perspective, the constraint is extractive and inescapable, and (2) from the retail market's perspective, the constraint solves a real coordination problem. The analytical observer's mountain view (natural law of market stabilization) is flagged as a false summit — the constraint is a contingent institutional design, not an emergent necessity. The piton perspective identifies that regulatory theater may be substituting for functional necessity as enforcement technology costs increase relative to actual market consolidation risk.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_bwb_adeg,
-    'Will Rewe Group find structural workarounds (e.g., through complex wholesale incentives or loyalty programs) to re-establish de facto purchasing control over the theoretically independent merchants?',
-    'Long-term audit of supplier diversity and purchasing prices for the divested stores over a 5-10 year period.',
-    'If True, the constraint degrades into a Piton (high theater, low function), and the initial extraction was temporary. If False, the constraint remains an effective Tangled Rope.',
+    condition_enforceability_threshold,
+    'What level of merchant compliance with BWB conditions actually prevents market reconsolidation, versus what level is performative oversight?',
+    'Longitudinal tracking of divested store operational metrics post-transfer; correlation between condition strictness and merchant survival/independence over 5-10 years',
+    'If conditions prevent reconsolidation: tangled_rope classification confirmed. If conditions are theater while consolidation proceeds covertly: classification shifts toward piton or snare.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_bwb_adeg, empirical, 'Whether Rewe can structurally bypass the conditions to re-establish de facto purchasing control.').
+narrative_ontology:omega_variable(condition_enforceability_threshold, empirical, 'Whether conditions effectively prevent market reconsolidation').
+
+omega_variable(
+    supply_chain_restriction_necessity,
+    'Are supply chain restrictions (e.g., exclusive supplier relationships, minimum purchase volumes) necessary to merchant independence or do they constitute extractive overreach?',
+    'Comparative analysis: merchant operational outcomes under restrictive vs permissive supply conditions; merchant exit rates correlated with supply restriction severity',
+    'If necessary: extraction component justified as coordination cost (tangled_rope confirmed). If overreach: extractiveness shifts higher, classification risks moving toward snare.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(supply_chain_restriction_necessity, empirical, 'Whether supply restrictions are necessary for merchant independence').
+
+omega_variable(
+    temporal_sunset_mechanism,
+    'Do the conditions have a de facto or de jure sunset date, or do they persist indefinitely as standing restrictions on divested stores?',
+    'Review of BWB enforcement decisions and merchant petitions for condition relief; tracking of condition expiration dates or removal petitions',
+    'If sunset is real and approaching: scaffold classification confirmed. If indefinite: reclassifies toward piton (inertial constraint) or snare (permanent extraction on merchants).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(temporal_sunset_mechanism, empirical, 'Whether conditions have built-in sunset or persist indefinitely').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(bwb_adeg_rewesale_conditions, 0, 10).
+narrative_ontology:interval(bwb_adeg_rewesale_conditions, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data for this new constraint models its intended stability.
-% A future audit could detect drift (e.g., rising theater) if enforcement wanes.
-% Required because base_extractiveness > 0.46.
+% Theater ratio over time
+narrative_ontology:measurement(bwb_adeg_tr_t0, bwb_adeg_rewesale_conditions, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(bwb_adeg_tr_t3, bwb_adeg_rewesale_conditions, theater_ratio, 3, 0.52).
+narrative_ontology:measurement(bwb_adeg_tr_t6, bwb_adeg_rewesale_conditions, theater_ratio, 6, 0.58).
 
-% Theater ratio over time (stable):
-narrative_ontology:measurement(bwb_adeg_tr_t0, bwb_adeg_rewesale_conditions, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(bwb_adeg_tr_t5, bwb_adeg_rewesale_conditions, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(bwb_adeg_tr_t10, bwb_adeg_rewesale_conditions, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(bwb_adeg_be_t0, bwb_adeg_rewesale_conditions, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(bwb_adeg_be_t3, bwb_adeg_rewesale_conditions, base_extractiveness, 3, 0.45).
+narrative_ontology:measurement(bwb_adeg_be_t6, bwb_adeg_rewesale_conditions, base_extractiveness, 6, 0.52).
 
-% Extraction over time (stable):
-narrative_ontology:measurement(bwb_adeg_ex_t0, bwb_adeg_rewesale_conditions, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(bwb_adeg_ex_t5, bwb_adeg_rewesale_conditions, base_extractiveness, 5, 0.48).
-narrative_ontology:measurement(bwb_adeg_ex_t10, bwb_adeg_rewesale_conditions, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This is a classic regulatory enforcement mechanism for market structure.
 narrative_ontology:coordination_type(bwb_adeg_rewesale_conditions, enforcement_mechanism).
+narrative_ontology:affects_constraint(bwb_adeg_rewesale_conditions, austrian_retail_consolidation_baseline).
+narrative_ontology:affects_constraint(bwb_adeg_rewesale_conditions, dominant_firm_divestment_obligations).
 
-% Network relationships (structural influence edges)
-% This constraint influences the general balance of power in the Austrian grocery supply chain.
-narrative_ontology:affects_constraint(bwb_adeg_rewesale_conditions, austrian_grocery_supplier_leverage).
+% DUAL FORMULATION NOTE:
+% The BWB conditions decompose into two structurally distinct constraints: (1) the baseline prevention of retail consolidation (Austrian market structure constraint, epsilon ~0.15, mountain-rope family), and (2) the specific enforcement mechanism on Rewe divestment (this constraint, epsilon 0.52, tangled rope). The divestment conditions are downstream of the consolidation baseline but represent a distinct structural claim about how dominant firms must manage exit. Both constraints share the Austrian regulatory domain but have different ε values and different agent structures.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The automatic derivation
-% based on the declared beneficiary/victim groups and the agents' exit
-% options accurately captures the structural dynamics of the situation.
+constraint_indexing:directionality_override(bwb_adeg_rewesale_conditions, institutional, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

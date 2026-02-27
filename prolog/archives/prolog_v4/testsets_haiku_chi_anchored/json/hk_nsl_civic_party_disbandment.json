@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "hk_nsl_civic_party_disbandment",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hk_nsl"
+  },
+  "base_properties": {
+    "extractiveness": 0.72,
+    "suppression": 0.85,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Hong Kong National Security Law (NSL) leading to the dissolution of the Civic Party",
+    "topic_domain": "political/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "beijing_central_government",
+      "hong_kong_security_apparatus"
+    ],
+    "victims": [
+      "hong_kong_civil_society",
+      "opposition_political_parties",
+      "independent_judiciary",
+      "press_freedom"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Hong Kong Opposition Politician",
+      "comment": "PERSPECTIVE 1: HONG KONG OPPOSITION POLITICIAN (SNARE) \u2014 Cannot exit without abandoning political career or fleeing territory. Faces criminal liability under NSL for vague offenses (sedition, subversion). No independent appeals mechanism. d\u22480.98, f(d)\u22481.50, \u03c3=0.8 \u2192 \u03c7\u22480.90. Maximum extraction and suppression."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Hong Kong Civil Society Activist",
+      "comment": "PERSPECTIVE 2: HONG KONG CIVIL SOCIETY ACTIVIST (SNARE) \u2014 Can exit through emigration but at severe cost (abandonment of community, social capital). Constrained by fear of prosecution, asset freezes, travel restrictions. NSL retroactively criminalizes prior speech. d\u22480.92, f(d)\u22481.35, \u03c3=0.8 \u2192 \u03c7\u22480.79. High extraction despite exit option due to high cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Hong Kong Business Community",
+      "comment": "PERSPECTIVE 3: HONG KONG BUSINESS COMMUNITY (TANGLED ROPE) \u2014 Constrained by dependence on mainland markets and Beijing approval. Experiences NSL as both extraction (regulatory uncertainty, selective enforcement against rivals) and coordination (explicit alignment signals generate preferred-partner status, reduced tariffs, regulatory favor). Benefits from political stabilization that removes protest risk. d\u22480.58, f(d)\u22480.78, \u03c3=1.0 \u2192 \u03c7\u22480.56. Moderate extraction with coordination benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Hong Kong Security Apparatus",
+      "comment": "PERSPECTIVE 4: HONG KONG SECURITY APPARATUS (ROPE) \u2014 Coordinating mechanism for Beijing's sovereignty assertion. Derives institutional authority and expanded jurisdiction from NSL. Experiences as pure coordination: clarity of mandate, elimination of institutional competitors (independent judges, legislators). Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Negative effective extraction = net institutional strengthening."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Beijing Central Government",
+      "comment": "PERSPECTIVE 5: BEIJING CENTRAL GOVERNMENT (ROPE) \u2014 NSL solves a coordination problem: establishing singular Chinese sovereignty over Hong Kong without full institutional merger. Creates clear signal about non-negotiable lines (separatism, foreign interference, subversion). Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12, \u03c3=1.1 \u2192 \u03c7\u2248-0.07. Net beneficiary from coordination."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The International Democratic Coalition",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL DEMOCRATIC COALITION (SNARE) \u2014 Organized (UN member states, NGO networks) but cannot enforce alternative authority in Hong Kong territory. Mobile through sanctions, diplomatic action, visa denials \u2014 but these have low costliness to Beijing. Experiences NSL as pure extraction of Hong Kong's autonomy with no compensating coordination function. d\u22480.88, f(d)\u22481.28, \u03c3=1.2 \u2192 \u03c7\u22480.93. High effective extraction at global scope."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Hong Kong Independent Judiciary",
+      "comment": "PERSPECTIVE 7: HONG KONG INDEPENDENT JUDICIARY (PITON) \u2014 Once a functional constraint on executive power (separation of powers). NSL retroactively subordinates judiciary to national security imperative via National Security Council override. Judicial system continues with formal independence ritual (trials, sentencing, appeals) but substantive function has atrophied \u2014 outcomes determined ex-ante by political direction. theater_ratio=0.68 (\u22650.70 threshold just missed, but trajectory toward piton). Victim + constrained \u2192 d\u22480.85, f(d)\u22481.18, \u03c3=0.8 \u2192 \u03c7\u22480.64. Degraded institutional extraction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Geopolitical Necessity View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / GEOPOLITICAL NECESSITY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, Beijing's assertion of singular sovereignty over Hong Kong is presented as an immutable consequence of the 'One Country, Two Systems' framework collapsing under pressure. But structural data (\u03b5=0.72, suppression=0.85, theater=0.68) contradicts the mountain classification. The engine will detect this as a false summit: the 'geopolitical necessity' framing naturalizes what is actually a contingent political choice (Beijing could maintain autonomy, could allow opposition parties, could protect judiciary). This perspective risks misclassifying extraction as natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_versus_sovereignty",
+      "question": "Does the NSL represent Beijing enforcing an immutable sovereignty principle, or suppressing Hong Kong autonomy that was structurally viable?",
+      "resolution_mechanism": "Counterfactual analysis: trajectories of other autonomous regions (Macau, Singapore, Taiwan); historical comparison with earlier Hong Kong sovereignty arrangements; expert testimony from constitutional scholars in both jurisdictions",
+      "impact": "If immutable: NSL is mountain (natural law of geopolitics). If contingent choice: NSL is snare (political extraction). Classification swing of 5 DR types.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether NSL enforces immutable sovereignty or suppresses viable autonomy"
+    },
+    {
+      "id": "opposition_viability_prior_to_nsl",
+      "question": "Was Hong Kong opposition politics genuinely democratic competition or a Potemkin institution that the NSL merely formalized?",
+      "resolution_mechanism": "Analysis of pre-2020 Hong Kong legislative outcomes: did opposition parties exercise meaningful legislative power? Could they block government initiatives? Historical trajectory of press freedom, assembly rights, electoral competitiveness metrics before NSL.",
+      "impact": "If genuinely democratic: NSL represents dramatic extraction (snare classification is accurate). If already constrained: NSL is incremental suppression (classification may shift toward piton). Affects victim legitimacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Hong Kong opposition was genuinely democratic before NSL"
+    },
+    {
+      "id": "enforcement_selectivity_mechanism",
+      "question": "Is NSL enforcement mechanically inevitable (applied to all subversive speech equally) or discretionary (selectively targeting rival factions)?",
+      "resolution_mechanism": "Comparative analysis of prosecution rates across opposition factions; identification of cases where similar speech produced different outcomes; expert analysis of National Security Council decision-making processes; leaked documentation or testimony about enforcement criteria.",
+      "impact": "If inevitable: Snare with predictable rules (still extraction, but transparent). If discretionary: Snare becomes tangled_rope hybrid (coordination of elites through selective enforcement). Affects directionality of business community perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether NSL enforcement is mechanically inevitable or discretionary"
+    },
+    {
+      "id": "international_enforcement_cost",
+      "question": "Are international sanctions and diplomatic costs high enough to make NSL a net negative for Beijing, or are they absorbed as acceptable extraction cost?",
+      "resolution_mechanism": "Economic modeling of sanctions impact; bilateral trade flow changes; foreign investment reduction; brain drain measurement; comparison with pre-sanction baseline; Beijing's revealed preferences (accepting sanctions vs scaling back NSL).",
+      "impact": "If costs exceed benefits: NSL may degrade into piton (maintained through inertia despite losses). If absorbed costs: Snare classification holds. Affects whether constraint is sustainable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether international costs make NSL a net loss for Beijing"
+    },
+    {
+      "id": "civil_society_coalition_capacity",
+      "question": "Can Hong Kong civil society organize underground networks sufficient to maintain democratic capacity during NSL regime, or is suppression complete?",
+      "resolution_mechanism": "Tracking of underground political activity (confidential polling, diaspora networks, coded communication); comparative analysis with other authoritarian regimes and their resistance movements; technological capacity assessment (VPN prevalence, encrypted communication adoption).",
+      "impact": "If capacity survives: Civil society victims may upgrade from powerless \u2192 moderate/organized (coalition power). If suppression complete: Classification holds at powerless. Affects long-term regime stability.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether Hong Kong civil society can organize resistance under NSL"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Hong Kong National Security Law (NSL), imposed by Beijing in June 2020, created a political environment that culminated in the dissolution of the Civic Party in November 2023. The constraint models the structural extraction mechanism embedded in NSL: it provides vague criminal liability for 'sedition,' 'subversion,' and 'foreign collusion,' backed by a National Security Council with Beijing representatives that overrides normal judicial process. The Civic Party's voluntary dissolution reflects the rational calculation that operating under NSL is impossible \u2014 prosecution is inevitable regardless of conduct, retaliation against family members is possible, and the political space for opposition has been eliminated. This constraint exhibits the full spectrum of DR types from different perspectives: pure extraction (snare) from the opposition's viewpoint, coordination mechanism (rope) from Beijing's perspective, degraded institutional function (piton) from the judiciary's perspective, mixed extraction-coordination (tangled rope) from the business community's perspective, and false natural law (mountain) from the perspective that naturalizes geopolitical determinism. The theater ratio (0.68) reflects the performative nature of the institutional apparatus: trials continue, legal procedure is observed, but outcomes are predetermined by political direction rather than evidence. The high suppression (0.85) captures the combination of criminal liability, asset freezes, emigration barriers, and family retaliation mechanisms that eliminate all practical exit options except complete political abandonment.",
+    "key_agents": [
+      "Civic Party leadership: Primary victim (moderate/constrained) \u2014 voluntary dissolution to avoid prosecution of members, but constrained by family ties and asset bases in Hong Kong",
+      "Hong Kong opposition politicians: Primary victim (powerless/trapped) \u2014 face criminal liability under vague NSL standards; cannot exit without abandoning political identity",
+      "Hong Kong civil society: Secondary victim (moderate/constrained) \u2014 activists, journalists, scholars face prosecution risk; some exit through emigration at high cost",
+      "Beijing central government: Primary beneficiary (institutional/arbitrage) \u2014 achieves sovereignty assertion and elimination of institutional competitors",
+      "Hong Kong security apparatus: Primary beneficiary (institutional/arbitrage) \u2014 expands institutional authority and jurisdiction; coordination mechanism for Beijing's will",
+      "Hong Kong business community: Mixed (organized/constrained) \u2014 benefits from political stabilization and preferred-partner access; constrained by regulatory uncertainty and selective enforcement risk",
+      "Independent judiciary: Victim (institutional/constrained) \u2014 formal independence ritual maintained but substantive function subordinated to national security imperative",
+      "International democratic coalition: Victim (organized/mobile) \u2014 cannot enforce alternative authority in Hong Kong; sanctions have low costliness to Beijing"
+    ],
+    "logic_rationale": "Extractiveness (0.72): Very high. The NSL creates asymmetric extraction mechanism: opposition politicians lose careers and freedom; civil society loses speech rights; judiciary loses independence; business gains preferred-partner access conditional on political compliance. The extraction is not absolute expropriation but permanent threat of prosecution and institutional subordination. Trajectory: initial assertiveness (0.35 at t=0, when NSL was theoretical) \u2192 rapid escalation (0.55 at t=2, after initial prosecutions) \u2192 sustained high level (0.72 at t=4, after Party dissolution). Suppression (0.85): Very high. NSL elimates all meaningful exit options: opposition cannot compete, cannot emigrate freely (asset freezes), cannot appeal to independent judiciary (subordinated to National Security Council), cannot organize covertly (surveillance, informants). Only exit is complete political abandonment. Theater ratio (0.68): Moderately high. NSL regime maintains performative institutions: trials are conducted with legal procedure, evidence is presented, sentences are given. But outcomes are predetermined by political direction; judges receive guidance from National Security Council; appeals are perfunctory. The ritual of justice persists while substance is hollowed out. Trajectory: initial opaqueness (0.42 at t=0) \u2192 increasing formalization of theater (0.55 at t=2) \u2192 stabilization of theatrical procedure (0.68 at t=4).",
+    "perspectival_gap": "This constraint demonstrates extreme perspectival variance across structural positions. Beijing's central government sees coordination (Rope) \u2014 NSL solves the legitimate problem of asserting singular sovereignty and eliminating institutional competitors. The security apparatus sees organizational empowerment (Rope) \u2014 expanded mandate and unambiguous authority. The business community sees mixed extraction-coordination (Tangled Rope) \u2014 loses some regulatory freedom but gains preferred-partner access and political stability. Opposition politicians see pure extraction (Snare) \u2014 no coordination benefit, only criminal liability and career destruction. International actors see extraction without coordination (Snare) \u2014 observe Hong Kong autonomy being eliminated without any demonstrable security benefit to Hong Kong citizens. The judiciary sees its own institutional degradation (Piton) \u2014 formal independence ritual maintained but actual decision-making authority transferred to National Security Council. The analytical observer tempted to naturalize NSL as geopolitical necessity sees a false mountain (mountain) \u2014 structural data contradicts the determinism claim.",
+    "directionality_logic": "Opposition politicians: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.50. Maximum extraction; no exit capacity. Civil society: Victim + constrained \u2192 d\u22480.92, f(d)\u22481.35. High extraction; exit possible only through emigration at severe cost. Judiciary: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.18. Institutional extraction; formal role maintained but substantive function subordinated. Business community: Mixed (beneficiary on regulatory access + victim on enforcement uncertainty) + constrained \u2192 d\u22480.58, f(d)\u22480.78. Moderate extraction mediated by selective enforcement. Hong Kong security apparatus: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.05. Net organizational strengthening; no extraction from perspective. Beijing government: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Maximum beneficiary; sovereignty assertion without constraints. International coalition: Organized victim + mobile \u2192 d\u22480.88, f(d)\u22481.28. High extraction at global scope; sanctions available but low-cost to Beijing.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: This constraint demonstrates the core mandatrophy resolution \u2014 distinguishing extraction from legitimate coordination. NSL could be framed as a coordination mechanism for Hong Kong governance (coordination of security, rule of law, sovereignty clarity). The mandatrophy resolves through structural decomposition: NSL does provide coordination benefits to Beijing and Hong Kong security apparatus (rope perspective), but these coordination benefits are conditional on extraction from opposition and civil society. The constraint is Snare (not Rope) because: (1) the coordination function flows primarily to one party (Beijing), (2) the victim groups (opposition, civil society) derive zero coordination benefit \u2014 they cannot opt into the system by complying more fully, (3) suppression mechanisms (asset freezes, family retaliation, migration barriers) eliminate alternatives that would be available in a pure coordination regime. A genuine coordination mechanism would allow opposition parties to operate under agreed rules; NSL eliminates the possibility of political opposition under any terms. Therefore, mandatrophy is resolved: NSL is Snare, not Rope. The Beijing perspective (Rope) represents a partial truthful framing of how Beijing experiences the constraint (coordination benefit), but the global classification prioritizes the structural reality that opposition cannot negotiate better terms within the constraint system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "hong_kong_press_freedom_degradation",
+      "cross_strait_political_integration_pressure",
+      "china_national_security_law_generalization"
+    ],
+    "dual_formulation_note": "The NSL represents a strategic choice by Beijing to establish singular sovereignty through legal and institutional mechanisms rather than formal abolition of Hong Kong institutions. This creates a constraint family with related extraction mechanisms: press freedom degradation (related snare operating on media institutions), political party dissolution (related snare operating on opposition parties), and generalization of NSL to other territories (related snare with different geographic scope). The present story focuses on the political party dissolution pathway; sibling constraints model press freedom and territorial generalization with their own \u03b5 values reflecting different extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.58
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "strange_attractor_dynamics",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sad"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Strange Attractor Dynamics (Sensitive Dependence)",
+    "topic_domain": "mathematical/physical",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Embedded Observer (Finite Precision)",
+      "comment": "Any observer embedded in the dynamical system with finite measurement precision confronts sensitive dependence as an absolute barrier: exponential divergence of nearby trajectories cannot be overcome by instrument design or computational power within the system's phase space. d\u22481.00, f(d)\u22481.42. The constraint is inescapable from within."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The External Analyst (Mathematical Structure)",
+      "comment": "From the perspective of mathematical analysis, sensitive dependence on initial conditions is a topological property of strange attractors: it follows necessarily from the nonlinear feedback structure and the absence of dissipative coupling that would synchronize nearby trajectories. This is not a limitation imposed by an external agent but a feature of the dynamical geometry itself. d\u22480.50, f(d)\u22480.65. Classified as mountain because the constraint emerges from the mathematical structure, not from extraction or coordination mechanics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Systems Modeler (Structural Inevitability)",
+      "comment": "The systems engineer or climate modeler encounters sensitive dependence as a structural inevitability: no amount of computational investment or methodological refinement eliminates the constraint. Ensemble forecasting and probabilistic approaches acknowledge rather than circumvent the barrier. d\u22480.60, f(d)\u22480.75. Mountain because the constraint is inherent to the system's mathematical structure, not constructed by policy or institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "lyapunov_exponent_measurement",
+      "question": "Is the positive Lyapunov exponent a fundamental property of the attractor or a measurement artifact dependent on the choice of metric and time scale?",
+      "resolution_mechanism": "Computation of Lyapunov spectra across different coordinate systems and time-delay embeddings; analysis of whether exponent values depend on observation method or reflect intrinsic dynamical property",
+      "impact": "If intrinsic: sensitive dependence is a true mathematical/physical constraint (Mountain confirmed). If measurement-dependent: the constraint may degrade to a weaker observational limitation (Piton).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether positive Lyapunov exponents reflect intrinsic dynamics or measurement choice"
+    },
+    {
+      "id": "attractor_basin_structure",
+      "question": "Does the strange attractor basin of attraction occupy a bounded region of phase space, or does sensitive dependence imply unbounded growth of trajectory divergence that would escape any bounded domain?",
+      "resolution_mechanism": "Analysis of the basin of attraction boundaries; computation of maximum divergence rates and comparison to phase space geometry; determination of whether initial condition sensitivity is confined to the attractor or propagates to unbounded regimes",
+      "impact": "If confined: constraint is a local property of the attractor's topology (Mountain with high accessibility_collapse). If unbounded: sensitive dependence extends to global dynamics and becomes a system-wide property affecting all initial conditions (affects classification of parent constraints like weather_predictability_limit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sensitive dependence is confined to the attractor basin or extends globally"
+    },
+    {
+      "id": "noise_amplification_threshold",
+      "question": "Below what noise amplitude does the system recover deterministic predictability? Is there a true noise floor below which trajectories synchronize despite initial condition mismatch?",
+      "resolution_mechanism": "Stochastic perturbation analysis; measurement of synchronization thresholds in systems with sub-attractor-scale noise; determination of whether noise-induced averaging can suppress sensitive dependence",
+      "impact": "If noise always amplifies divergence: constraint is absolute (Mountain). If noise below a threshold allows recovery of order: constraint is conditional on the noise regime (degrades to Tangled Rope or Scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether noise amplification of sensitive dependence can be suppressed below a threshold"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.04
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Strange attractor dynamics represent a mathematical/physical constraint arising from the topological structure of nonlinear dynamical systems. Sensitive dependence on initial conditions \u2014 the core property of chaos \u2014 emerges necessarily from the attractor's geometry: nearby trajectories diverge exponentially at a rate governed by the positive Lyapunov exponent. This constraint is universal across all dynamical systems exhibiting chaos (the Lorenz system, logistic map, double pendulum, fluid turbulence). It is not imposed by an external agent, negotiated through coordination, or maintained through enforcement. Rather, it emerges from the mathematical structure of the system itself. The constraint defines what is achievable: prediction horizons in chaotic systems are fundamentally bounded by the rate of trajectory divergence, independent of computational power or measurement precision. This is not a Rope (coordination mechanism), Snare (extraction), Scaffold (temporary), or Piton (degraded). It is a Mountain \u2014 a structural limit inherent to the system's mathematical nature.",
+    "key_agents": [
+      "Embedded Observer: Any agent measuring or predicting within the chaotic system (powerless/trapped) \u2014 confronts exponential divergence as an absolute barrier to long-term prediction",
+      "External Analyst: Mathematical or computational observer (analytical/analytical) \u2014 recognizes sensitive dependence as a topological property of the attractor, not an imposed constraint",
+      "Systems Modeler: Engineer or climate scientist working with chaotic systems (institutional/analytical) \u2014 must acknowledge the Lyapunov barrier and design ensemble or probabilistic approaches rather than attempting to overcome it",
+      "Dynamical System Itself: The mathematical structure generating the attractor (universal scope) \u2014 is the source of the constraint, not a participant in it"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. No agent extracts from another; the constraint is a mathematical property, not a redistribution mechanism. The low value reflects that this is a structural limit (accessibility collapse \u2265 0.85 \u2192 low \u03b5), not a social or institutional artifact. Suppression (0.02): Negligible. The constraint does not suppress alternatives or coerce compliance \u2014 it operates at the level of mathematical possibility. Alternatives to prediction within the prediction horizon are not suppressed by the constraint; they simply don't exist within the physics of the system. Theater ratio (0.05): Minimal. The constraint exhibits no performative content. Claims of sensitivity to initial conditions can be verified directly through numerical computation; the Lyapunov exponent is a measurable, reproducible quantity. There is no gap between functional and theatrical activity.",
+    "perspectival_gap": "All three perspectives converge on the Mountain classification. The embedded observer, external analyst, and systems modeler all recognize sensitive dependence as an inherent structural property. There is no perspectival gap because the constraint does not arise from institutional choice, beneficiary-victim dynamics, or coordination failures. This is characteristic of a true natural law constraint: it appears the same from all observationally accessible positions. The stability of the classification across perspectives confirms the validity of the mountain claim \u2014 if perspectives diverged significantly, it would indicate that one perspective was observing a different constraint (e.g., model error, measurement artifact) rather than the true sensitive dependence property.",
+    "directionality_logic": "This constraint exhibits no directionality in the usual sense of beneficiary/victim dynamics. Directionality derivation is not applicable because there is no agent extraction occurring. The embedded observer's high d (\u22481.00) reflects not victimhood but epistemic limitation \u2014 the constraint limits what the observer can know, not what they can control or extract. The analytical observer's symmetric d (\u22480.50) reflects true symmetry: the mathematical structure is neither extracting from nor subsidizing the observer; they occupy a symmetric epistemic relationship to the constraint. No directionality overrides are needed because the structural data (\u03b5=0.12, suppression=0.02) unambiguously establishes that this is not an extraction mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "weather_predictability_limit",
+      "butterfly_effect_practical_boundary",
+      "ergodic_sampling_convergence"
+    ],
+    "dual_formulation_note": "Strange attractor dynamics is the foundational constraint from which several downstream constraints (weather predictability, practical butterfly effect) derive their structure. Weather predictability is constrained by sensitive dependence; the practical butterfly effect is the manifestation of sensitive dependence in real-world systems; ergodic sampling convergence involves trade-offs with trajectory divergence. All three downstream constraints are high-extraction or mixed precisely because they layer human institutional and policy dimensions onto this underlying mathematical constraint."
+  },
+  "directionality_overrides": []
+}

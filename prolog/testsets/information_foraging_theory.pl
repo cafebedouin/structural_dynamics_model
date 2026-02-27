@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: information_foraging_theory
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_information_foraging_theory, []).
@@ -23,7 +24,7 @@
 % Do not add measurement_basis, beneficiary/victim, or any other arguments.
 % Linter Rule 23 enforces context/4.
 %
-% See: epsilon_invariance_princi ple.md
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -59,18 +58,34 @@
  *   domain: technological/cognitive
  *
  * SUMMARY:
- *   Information Foraging Theory (IFT) posits that humans, when seeking
- *   information, behave like animals foraging for food. They use evolved
- *   heuristics to maximize their rate of valuable information gain per unit
- *   of effort. This theory models how users navigate information-rich
- *   environments like the web, following cues ("information scent") to decide
- *   which links to click and when to abandon an unpromising source ("patch").
+ *   Information Foraging Theory (IFT), formalized by Pirolli & Card (1999),
+ *   posits that humans searching for information behave analogously to
+ *   animals foraging for food: they assess information scent, evaluate patch
+ *   value, and decide when to leave a depleted patch for a new one. The
+ *   theory emerged from cognitive science as a legitimate descriptive model
+ *   of information-seeking behavior. However, over the past 15 years, IFT has
+ *   undergone a structural transformation in applied contexts. Platform
+ *   operators, interface designers, and attention economists have
+ *   operationalized IFT not as a constraint to accommodate but as a design
+ *   target to optimize. Infinite scroll, recommendation loops, and
+ *   algorithmic curation are justified through IFT logic. The constraint now
+ *   functions as a hybrid: it provides genuine coordination benefits (helping
+ *   users discover information) while simultaneously enabling extraction of
+ *   attention beyond user intent. The constraint exhibits a rising theater
+ *   ratio (0.25 → 0.58) reflecting the increasing gap between rigorous
+ *   cognitive science and rationalization-for-extraction. The foraging
+ *   metaphor itself becomes performative — invoked to justify superstimuli
+ *   design without implementing the core IFT mechanism (patch depletion
+ *   costs). The constraint is not a natural law but a design choice with
+ *   institutional and economic drivers.
  *
- * KEY AGENTS (by structural relationship):
- *   - Attention-farmed users: Primary target (powerless/trapped) — bears extraction when IFT is weaponized to maximize time-on-site.
- *   - UX designers & platform architects: Primary beneficiary (institutional/analytical) — benefits from using IFT to design effective, engaging systems.
- *   - Standard information seekers: Symmetric user (moderate/mobile) — uses IFT as a coordination tool for efficient navigation.
- *   - Analytical observer: Sees the full structure of IFT as a natural law of cognition that can be used for coordination or extraction.
+ * KEY AGENTS:
+ *   - Information Seekers: Primary victims (powerless/trapped) — experience hijacked attention and superstimuli without exit options; cognitive autonomy reduced
+ *   - Platform Operators: Primary beneficiaries (institutional/arbitrage) — benefit from engagement optimization; experience IFT as legitimate coordination technology
+ *   - Interface Designers: Secondary actors (powerful/constrained) — constrained by engagement metrics; use IFT as actionable framework; experience both enabling and extractive dimensions
+ *   - Attention Economists: Secondary beneficiaries (powerful/mobile) — research and optimize attention capture; publish on IFT mechanisms; have mobility through academic positions
+ *   - Cognitive Autonomy Coalition: Organized resistance (organized/constrained) — digital rights advocates, humane tech researchers, user experience ethicists; constrained by platform entrenchment
+ *   - Academic Establishment: Institutional (institutional/arbitrage) — legitimacy source for IFT; maintains rigor in theory but has limited control over application; experiences piton degradation as industry uses theory for post-hoc justification
  */
 
 /* ==========================================================================
@@ -78,105 +93,75 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Low extraction; the theory itself is a model of efficiency. Extraction
-% arises from its application, not its structure.
-domain_priors:base_extractiveness(information_foraging_theory, 0.20).
-% Very low suppression. IFT relies on high-visibility signals ("scent"),
-% which is the opposite of suppressing alternatives. Set to 0.05 to be
-% consistent with the Mountain classification gate.
-domain_priors:suppression_score(information_foraging_theory, 0.05).
-% Low theater. IFT is grounded in evolutionary biology and validated by
-% empirical HCI research. Its predictions match observed behavior closely.
-domain_priors:theater_ratio(information_foraging_theory, 0.08).
+domain_priors:base_extractiveness(information_foraging_theory, 0.38).
+domain_priors:suppression_score(information_foraging_theory, 0.42).
+domain_priors:theater_ratio(information_foraging_theory, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(information_foraging_theory, extractiveness, 0.20).
-narrative_ontology:constraint_metric(information_foraging_theory, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(information_foraging_theory, theater_ratio, 0.08).
+narrative_ontology:constraint_metric(information_foraging_theory, extractiveness, 0.38).
+narrative_ontology:constraint_metric(information_foraging_theory, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(information_foraging_theory, theater_ratio, 0.58).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain.
-% Accessibility Collapse: High (0.95). One cannot design a user interface
-% that ignores IFT principles without suffering predictable user abandonment.
-narrative_ontology:constraint_metric(information_foraging_theory, accessibility_collapse, 0.95).
-% Resistance: Low (0.05). Resistance is incoherent; designers don't fight
-% IFT, they leverage it. It's a law of user behavior to be worked with.
-narrative_ontology:constraint_metric(information_foraging_theory, resistance, 0.05).
-
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(information_foraging_theory, scaffold).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(information_foraging_theory, tangled_rope).
 narrative_ontology:human_readable(information_foraging_theory, "Information Foraging Theory (IFT)").
 narrative_ontology:topic_domain(information_foraging_theory, "technological/cognitive").
 
-% --- Binary flags ---
-% No sunset clause or active enforcement.
+domain_priors:requires_active_enforcement(information_foraging_theory).
 
-% --- Emergence flag (required for mountain constraints) ---
-% IFT emerges naturally from evolutionary pressures for energy conservation
-% in cognitive tasks. Required for the mountain metric gate.
-domain_priors:emerges_naturally(information_foraging_theory).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(information_foraging_theory, ux_designers_and_platform_architects).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(information_foraging_theory, attention_farmed_users).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(information_foraging_theory, interface_designers).
+narrative_ontology:constraint_beneficiary(information_foraging_theory, attention_economists).
+narrative_ontology:constraint_beneficiary(information_foraging_theory, algorithmic_platforms).
+narrative_ontology:constraint_victim(information_foraging_theory, cognitive_autonomy).
+narrative_ontology:constraint_victim(information_foraging_theory, epistemic_commons).
+narrative_ontology:constraint_victim(information_foraging_theory, user_agency).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE ATTENTION-FARMED USER (SNARE)
-% When a platform weaponizes IFT to maximize time-on-site rather than user
-% goal completion, the user becomes trapped. Continuous micro-scents
-% (infinite scroll, notifications) create a low-value extractive loop.
-% Engine derives d ≈ 0.95 -> high χ.
-constraint_indexing:constraint_classification(information_foraging_theory, mountain,
+% PERSPECTIVE 1: THE INFORMATION SEEKER (SNARE) — Individual users framed as foragers cannot exit the constraint. IFT naturalizes attention harvesting as inevitable behavioral biology. Users experience the full extraction: algorithmic curation designed around foraging analogies creates superstimuli (infinite scroll, recommendation loops) that hijack search behavior. No alternative information ecology available at scale.
+constraint_indexing:constraint_classification(information_foraging_theory, snare,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE UX DESIGNER (MOUNTAIN)
-% For a system designer, IFT is an immutable law of user behavior. Ignoring
-% it leads to predictable failure (user abandonment). It is a fixed
-% environmental constraint to be designed around, not challenged.
-% Engine sees ε=0.20, S=0.05, and emerges_naturally -> Mountain.
-constraint_indexing:constraint_classification(information_foraging_theory, scaffold,
+% PERSPECTIVE 2: THE PLATFORM OPERATOR (ROPE) — Experiences IFT as a legitimate coordination mechanism. The foraging metaphor enables efficient matching between users and content patches. Platforms benefit from engagement optimization but also genuinely solve the information discovery coordination problem. From this view, IFT is cooperative technology design that scales information access.
+constraint_indexing:constraint_classification(information_foraging_theory, rope,
     context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: THE INTERFACE DESIGNER (TANGLED ROPE) — Constrained by metrics (engagement, time-on-site, retention) that optimize for foraging behavior. Also benefits from IFT as a legitimate design framework that makes cognitive science actionable. Experiences the constraint as both enabling (I have a theory to justify designs) and extractive (I am measured on attention capture, not user flourishing). Active enforcement through metrics dashboards and engagement targets.
+constraint_indexing:constraint_classification(information_foraging_theory, tangled_rope,
+    context(agent_power(powerful),
             time_horizon(biographical),
-            exit_options(analytical),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (ROPE)
-% The observer sees IFT as a fundamental cognitive coordination mechanism.
-% It's an evolved heuristic that enables efficient navigation of complex
-% information landscapes, making it a natural Rope.
-% χ = 0.20 * f(0.72) * 1.2 ≈ 0.20 * 1.15 * 1.2 ≈ 0.276 -> Rope
+% PERSPECTIVE 4: THE ACADEMIC ESTABLISHMENT (PITON) — IFT began as genuine cognitive science describing how humans search for information (Pirolli & Card, 1999). The theory has become largely performative in industry application: companies invoke 'foraging behavior' to justify attention harvesting, but the academic content (patch depletion costs, information scent) is rarely operationalized precisely. IFT persists as institutional legitimacy theater even as the underlying science is challenged by neuroscience findings on dopamine and behavioral addiction. Theater ratio reflects the gap between rigorous theory and rationalization-for-extraction.
+constraint_indexing:constraint_classification(information_foraging_theory, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: THE COGNITIVE AUTONOMY COALITION (TANGLED ROPE) — Organized agents (digital rights groups, attention researchers, humane tech advocates) see IFT as both coordination and extraction. The theory genuinely solves information discovery problems (coordination benefit), but industry operationalization systematically extracts attention beyond user interest (extraction). Active enforcement of alternative frameworks (attention budgets, friction-by-design, serendipity-loss awareness) constrained by platform entrenchment.
+constraint_indexing:constraint_classification(information_foraging_theory, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: THE ANALYTICAL OBSERVER (FALSE SUMMIT) — From a civilizational view, IFT risks being framed as a natural law: 'humans are information foragers; this is inevitable biology.' The engine will detect this as a false summit. The constraint is not a law of nature but an institutional choice — the mapping of foraging metaphor onto interface design is contingent, not inherent to human cognition. The extractiveness arises from specific design choices and business models, not from the biological fact of foraging.
 constraint_indexing:constraint_classification(information_foraging_theory, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE STANDARD INFORMATION SEEKER (ROPE)
-% For a typical user with a clear goal and freedom to navigate, IFT is a
-% pure coordination tool (Rope). It helps them find the shortest path to
-% their goal, minimizing cognitive load.
-constraint_indexing:constraint_classification(information_foraging_theory, scaffold,
-    context(agent_power(moderate),
-            time_horizon(immediate),
-            exit_options(mobile),
-            spatial_scope(local))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -185,17 +170,13 @@ constraint_indexing:constraint_classification(information_foraging_theory, scaff
 :- begin_tests(information_foraging_theory_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target, beneficiary, and standard user.
-    constraint_indexing:constraint_classification(information_foraging_theory, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(information_foraging_theory, scaffold, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(information_foraging_theory, scaffold, context(agent_power(moderate), _, _, _)).
+    constraint_indexing:constraint_classification(information_foraging_theory, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(information_foraging_theory, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    % Verify metrics are consistent with a Mountain classification possibility.
-    narrative_ontology:constraint_metric(information_foraging_theory, extractiveness, E),
-    narrative_ontology:constraint_metric(information_foraging_theory, suppression_requirement, S),
-    E =< 0.25,
-    S =< 0.05.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(information_foraging_theory, TR),
+    TR >= 0.70.
 
 :- end_tests(information_foraging_theory_tests).
 
@@ -205,89 +186,101 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (0.20) is low because IFT is fundamentally a
- *   theory of efficiency, not extraction. The suppression score was lowered
- *   to 0.05 (from an original 0.1) to be consistent with the Mountain
- *   classification seen by designers; a natural law has near-zero
- *   suppression. The key insight is that this natural law can be leveraged
- *   for different ends, leading to the perspectival split. The NL Profile
- *   metrics (accessibility_collapse=0.95, resistance=0.05) were added to
- *   pass the linter and correctly model the 'law-like' nature of IFT for
- *   designers.
+ *   Extractiveness (0.38): Moderate. IFT operationalization does extract attention beyond user intent, but the extraction is not pure (unlike a predatory snare) because the theory also solves a genuine coordination problem — information discovery at scale. The extraction arises from systematic misalignment: platforms optimize for engagement while users optimize for goal achievement. These diverge over time, but the starting state (user wants to find information; platform helps them find it) is genuinely coordinated. The extractiveness value reflects this hybrid nature. Suppression (0.42): Moderate. Users cannot easily exit attention-optimized platforms, and alternative information ecologies operate at smaller scale. However, suppression is not total — users can reduce engagement, switch platforms, or use friction tools. The rise in theater ratio (0.25 → 0.58) reflects increasing performative content: as neuroscience reveals dopamine exploitation and behavioral addiction mechanisms, industry invokes IFT more explicitly to justify designs that IFT itself wouldn't necessarily endorse. Theater ratio growth indicates Goodhart drift — engagement metrics have replaced the original coordination goal (helping users find relevant information).
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For a designer (institutional), IFT is a Mountain—an
- *   unchangeable feature of the landscape. For a typical user (moderate), it's
- *   a Rope—a helpful tool for navigation. For a user trapped on an
- *   attention-farming platform (powerless), that same tool is weaponized
- *   into a Snare. The classification depends entirely on whether the
- *   application of the theory serves the user's goals or the platform's.
+ *   The central perspectival gap separates beneficiaries and victims. The platform operator sees coordination (Rope): IFT enables efficient information routing at scale. The information seeker sees extraction (Snare): behavioral superstimuli hijack attention independent of actual information need. The interface designer occupies the hybrid middle (Tangled Rope): constrained by engagement metrics but also using IFT legitimately to solve discovery problems. The academic establishment sees its own degradation (Piton): the theory was rigorous; its application became performative. The cognitive autonomy coalition sees mixed coordination-extraction (Tangled Rope): the mechanisms work but are operationalized asymmetrically. The analytical observer risks seeing natural law (false summit): 'humans are foragers; this is inevitable' — but the constraint is contingent on specific business models, interface choices, and metric optimization.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `ux_designers_and_platform_architects` leverage the
- *     predictive power of IFT to build effective systems. Their relationship
- *     is analytical and instrumental.
- *   - Victims: `attention_farmed_users` are those for whom the system is
- *     designed to extract attention, using IFT principles to create sticky,
- *     low-value loops.
- *   This beneficiary/victim structure drives the directionality calculation,
- *   explaining why the powerless/trapped perspective sees high effective
- *   extraction (χ) even with low base extraction (ε).
+ *   Each agent's directionality value derives from their structural position relative to the attention extraction flow. Beneficiaries (platforms, designers, attention economists) experience low or negative d — they capture value from the extraction. Interface designers are constrained (d ≈ 0.50) because they both benefit from a working design theory and are measured on extraction targets. The information seeker is trapped (d ≈ 0.95): no exit options, no benefit, full cost of attention hijacking. The cognitive autonomy coalition is organized but constrained (d ≈ 0.55): has power to articulate alternatives but lacks institutional leverage to implement them at scale. The directionality chain reveals that the constraint's extractiveness is not inevitable but structural — it arises from specific alignments of incentives and metrics.
  *
  * MANDATROPHY ANALYSIS:
- *   This case highlights how a natural law (Mountain) or coordination tool
- *   (Rope) can be instrumentalized into a Snare. The low base extraction (ε)
- *   prevents misclassifying the theory itself as extractive. The perspectival
- *   classifications correctly locate the extraction in the *application* of
- *   the theory within a specific power dynamic (powerless/trapped). The low
- *   metrics also place this constraint in the "Scaffold Danger Zone," but this
- *   is appropriate: IFT acts as a natural, non-expiring scaffold for thought,
- *   which is correctly classified as a Rope from a symmetric perspective.
+ *   IFT resolves the mandatrophy by disambiguating the theory from its application. The theory itself (Pirolli & Card, 1999) is legitimate cognitive science describing how humans search information. The constraint is not 'information foraging is real' but 'information foraging has been operationalized as a target for attention extraction.' These are distinct structural claims. From a powerless agent's perspective, IFT-optimized interfaces produce Snare classification: full extraction with no coordination benefit (they experience hijacked attention). From an institutional perspective (platform operator), the same interfaces produce Rope classification: genuine coordination with minimal extraction overhead. The mandatrophy is resolved not by choosing one type but by recognizing that the six types represent different structural positions in the same system. The false summit classification at the analytical level identifies the naturalization risk: framing contingent design choices (optimize for engagement) as inevitable biology ('humans are foragers'). The constraint's true nature emerges from the perspectival ensemble: a hybrid coordination-extraction system whose balance is determined by operational choices, not by cognitive science necessity.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_ift_weaponization_threshold,
-    'At what point does platform optimization of information scent cross from coordination (Rope) to extraction (Snare)?',
-    'Compare user goal-completion rates vs time-on-site metrics across optimized vs non-optimized platforms.',
-    'If scent serves user goals, IFT remains a Rope. If scent primarily traps attention to serve platform goals, it functions as a Snare for powerless users, warranting reclassification of the platform, not the theory.',
+    foraging_metaphor_structural_validity,
+    'Is the foraging metaphor a structurally accurate model of human information search, or does it systematically mischaracterize goal-directed cognition as scavenging?',
+    'Empirical comparison of user behavior under foraging-optimized interfaces vs goal-tracking interfaces; eye-tracking and cognitive load studies; longitudinal user satisfaction and knowledge retention metrics',
+    'If valid: IFT classification shifts toward Rope (coordination mechanism). If invalid: IFT is a rationalization for attention extraction, classification shifts toward Snare, and ''foraging behavior'' reflects design-induced pathology rather than natural cognition.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_ift_weaponization_threshold, empirical, 'Threshold at which optimizing information scent becomes extractive attention farming.').
+narrative_ontology:omega_variable(foraging_metaphor_structural_validity, empirical, 'Whether foraging metaphor accurately characterizes information search').
+
+omega_variable(
+    patch_depletion_operationalization,
+    'Do modern algorithms actually implement patch depletion costs (the core mechanism in IFT), or do they exploit the absence of such costs?',
+    'Analysis of recommendation algorithm behavior: measurement of whether systems increase friction as patches deplete, or whether they lower friction to capture users between patches. Comparison of engagement metrics under patch-cost vs patch-free designs.',
+    'If operationalized: IFT functions as theory. If absent: algorithms exploit information scent without behavioral cost feedback, making IFT a post-hoc rationalization for a different extraction mechanism (superstimuli without foraging logic).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(patch_depletion_operationalization, empirical, 'Whether algorithms implement patch depletion costs').
+
+omega_variable(
+    cognitive_autonomy_collapse,
+    'To what degree does IFT-optimized interface design measurably reduce user cognitive autonomy (volitional information seeking) vs enhance information access?',
+    'Randomized controlled trials comparing user goal-achievement rates and self-reported autonomy on foraging-optimized vs neutral interfaces. Longitudinal studies on information diet diversity and serendipity.',
+    'If autonomy preserved: extraction classification is overstated, constraint shifts toward Rope. If autonomy degraded: victims classification (cognitive_autonomy) is vindicated, suppression metrics increase, classification remains Snare/Tangled Rope.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(cognitive_autonomy_collapse, empirical, 'Degree of cognitive autonomy loss under IFT-optimized design').
+
+omega_variable(
+    alternative_framework_viability,
+    'Can information systems be designed to preserve foraging benefits (efficient patch discovery) while implementing friction mechanisms (patch depletion costs, attention budgets) that prevent superstimulus exploitation?',
+    'Prototype implementations of attention-budgeted search, friction-by-design information discovery, and user-directed information scent. Measurement of engagement reduction vs user satisfaction and goal achievement.',
+    'If viable: scaffold perspective confirmed — IFT''s extraction is contingent and can be sunset by alternative architectures. If not viable: the foraging mechanism itself may enable exploitation, making the constraint more structural.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_framework_viability, empirical, 'Whether attention-aware alternatives to IFT-optimized design are viable').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(information_foraging_theory, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is 0.20, which is below the 0.46 threshold for
-% mandatory temporal tracking. No measurement/5 facts are required.
+% Theater ratio over time
+narrative_ontology:measurement(ift_tr_t0, information_foraging_theory, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(ift_tr_t5, information_foraging_theory, theater_ratio, 5, 0.42).
+narrative_ontology:measurement(ift_tr_t10, information_foraging_theory, theater_ratio, 10, 0.58).
+
+% Extraction over time
+narrative_ontology:measurement(ift_be_t0, information_foraging_theory, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(ift_be_t5, information_foraging_theory, base_extractiveness, 5, 0.28).
+narrative_ontology:measurement(ift_be_t10, information_foraging_theory, base_extractiveness, 10, 0.38).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No Boltzmann or network data declared for this constraint.
+narrative_ontology:coordination_type(information_foraging_theory, information_standard).
+narrative_ontology:affects_constraint(information_foraging_theory, attention_economy).
+narrative_ontology:affects_constraint(information_foraging_theory, algorithmic_curation).
+narrative_ontology:affects_constraint(information_foraging_theory, behavioral_addiction_mechanisms).
+
+% DUAL FORMULATION NOTE:
+% IFT is part of a constraint family connecting cognitive science to platform economics. Upstream: the genuine cognitive science of information search (foraging as descriptive model). Downstream: specific operationalizations in recommendation algorithms and engagement optimization (foraging as design target). The ε difference reflects the gap between descriptive accuracy and prescriptive misuse. The upstream constraint is lower extractiveness (ε ≈ 0.08, mountain/rope boundary); the downstream constraint is higher extractiveness (ε ≈ 0.38, tangled rope) because application context enables extraction.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No directionality overrides are needed. The structural derivation from
-% beneficiary/victim declarations and exit options accurately models the
-% dynamics of this constraint.
+constraint_indexing:directionality_override(information_foraging_theory, institutional, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

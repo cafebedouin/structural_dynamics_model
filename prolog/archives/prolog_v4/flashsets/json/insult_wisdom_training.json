@@ -1,0 +1,125 @@
+{
+  "header": {
+    "constraint_id": "insult_wisdom_training",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Odd Assignment (Paying for Insults)",
+    "topic_domain": "religious/social/philosophical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "insulters",
+      "master"
+    ],
+    "victims": [
+      "disciple"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Disciple",
+      "comment": "The Disciple experiences the constraint as a Snare because he is forced to pay those who insult him, suppressing his natural inclination to defend himself and his resources. He is trapped because he believes it is a prerequisite for wisdom."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Master",
+      "comment": "The Master benefits from the constraint as he can use this method to train disciples to gain wisdom. He could decide not to assign this at any time, giving him arbitrage exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "The Analytical Observer sees the constraint as a Tangled Rope because it involves both coordination (a method of training) and extraction (the disciple must pay others)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficacy_of_insult_training",
+      "question": "Is paying for insults an effective method for gaining wisdom?",
+      "resolution_mechanism": "Empirical study comparing the wisdom gained by disciples undergoing this training versus other training methods.",
+      "impact": "If effective, the constraint is a rope. If ineffective, the constraint is a snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "The efficacy of using paying for insults as a wisdom training method."
+    },
+    {
+      "id": "alternative_interpretations",
+      "question": "Are there alternative interpretations of the Master's command that reduce the extraction?",
+      "resolution_mechanism": "Philosophical and religious analysis of the command's meaning and purpose.",
+      "impact": "If alternatives exist, the constraint is less of a snare and more of a tangled rope or scaffold. If not, the constraint is more of a snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether alternative interpretations affect the extraction of the command."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 3
+  },
+  "commentary": {
+    "narrative_context": "A disciple is commanded by his Master to pay anyone who insults him for three years as a prerequisite for wisdom. This unusual assignment functions as a constraint, shaping the disciple's behavior and relationships within the community. The core question is whether this serves as a legitimate method to train the disciple, or a method to extract resources.",
+    "key_agents": [
+      "Disciple: Primary target (powerless/trapped) - must pay for insults.",
+      "Insulters: Beneficiaries (moderate/mobile) - receive payments from the disciple.",
+      "Master: Primary beneficiary (institutional/arbitrage) - assigns the task."
+    ],
+    "logic_rationale": "Extractiveness is 0.6 because the disciple is losing resources to those who are insulting him, which would be the point of extraction. Suppression is 0.7 because the disciple is suppressing the inclination to defend himself from the insults and instead pays for them. Theater Ratio is 0.3 because there is not much of a show in the interaction, but rather a transactional process. The master benefits and the Disciple is taken advantage of.",
+    "perspectival_gap": "The Disciple views this as a snare because he must pay for insults to receive wisdom, an action that would be suppressing his natural response. The Master sees this as a means of training as a rope, which he can end at any time. The Analytical Observer sees the entanglement of both and classifies this as a Tangled Rope.",
+    "directionality_logic": "The directionality is derived from the relationship between the actors. The disciple is the target, because he must pay for the insults. The master is the beneficiary as he assigns the task and sees a use for the disciple. The insulters are also considered a beneficiary."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

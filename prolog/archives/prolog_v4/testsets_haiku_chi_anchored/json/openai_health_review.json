@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "openai_health_review",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ohr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "OpenAI ChatGPT Health Review Service",
+    "topic_domain": "technological/economic/healthcare",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "openai",
+      "subscription_tier_purchasers"
+    ],
+    "victims": [
+      "health_literacy_dependent_users",
+      "users_with_chronic_conditions",
+      "medical_liability_commons"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Health Literacy Dependent User",
+      "comment": "PERSPECTIVE 1: HEALTH LITERACY DEPENDENT USER (SNARE) \u2014 Users with low health literacy or chronic conditions face severe extraction. Cannot verify the validity of LLM-generated health advice; must either follow recommendations (medical risk) or ignore them (sunk cost). No alternative affordable health review service at comparable speed/cost. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Medical Liability Commons",
+      "comment": "PERSPECTIVE 2: MEDICAL LIABILITY COMMONS (SNARE) \u2014 The liability infrastructure (medical truth standards, legal duty of care) cannot organize or exit; bears the cost of LLM hallucinations manifesting as medical harm. When ChatGPT gives incorrect health advice, the commons absorbs liability friction without recourse. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.98."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Chronically Ill User (Advocate/Organized)",
+      "comment": "PERSPECTIVE 3: CHRONICALLY ILL USER / PATIENT ADVOCATE (TANGLED ROPE) \u2014 Some users benefit from the coordination function (24/7 health review without gatekeeping delay); also harmed by LLM unreliability and psychological pressure to trust AI-generated advice. Constrained exit: cannot fully abandon (too convenient) but cannot fully rely (too risky). d\u22480.68, f(d)\u22480.98, \u03c3=1.0 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "OpenAI / Subscription Business",
+      "comment": "PERSPECTIVE 4: OPENAI / SUBSCRIPTION BUSINESS (ROPE) \u2014 Captures pure coordination benefit: solves the problem of translating health test results into actionable lifestyle guidance. Users want this service; OpenAI solves it. The service has a genuine coordination function (reducing information asymmetry). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Negative effective extraction = beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Medical Authority",
+      "comment": "PERSPECTIVE 5: REGULATORY MEDICAL AUTHORITY (PITON) \u2014 Medical licensing and liability frameworks (FDA, medical boards, informed consent law) persists as inert theater. LLM health advisories operate in a regulatory gap where traditional medical liability standards are performatively invoked but not enforceable. Regulatory authority cannot update fast enough; maintains nominal gatekeeping through warnings while the actual verification mechanism (human medical review) is bypassed. theater_ratio=0.64 (warnings, disclaimers, appeals to FDA oversight that does not actually occur)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health / Patient Safety Coalition",
+      "comment": "PERSPECTIVE 6: PUBLIC HEALTH / PATIENT SAFETY COALITION (SCAFFOLD) \u2014 Organized actors (patient advocacy groups, medical associations, public health agencies) see this as a temporary problem with a regulatory sunset: AI-generated medical advice will eventually be regulated, restricted, or integrated into formal medical workflows with legal accountability. The coalition can constrain the service through litigation, regulation, and norm-shifting (e.g., 'AI health advice is not a substitute for medical review'). d\u22480.38, f(d)\u22480.38, \u03c3=1.0 \u2192 \u03c7\u22480.14. Low effective extraction because coalition has agency and sees an exit path (regulatory tightening)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law Hypothesis)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW HYPOTHESIS (MOUNTAIN) \u2014 From a civilizational perspective, the gap between human medical expertise and scalable health advisory creates an inherent natural constraint: any attempt to automate diagnosis or treatment recommendation will always face the principal-agent problem of verification (how to know the advice is safe without expert review?). This perspective risks naturalizing what is actually a contingent institutional choice: to permit unverified LLM advice in a liability-critical domain. Accessibility_collapse and resistance thresholds do NOT apply here; this is a false summit (the structural data contradicts the mountain classification)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "llm_health_advice_harm_threshold",
+      "question": "What rate of harmful health advice (% of users experiencing adverse outcomes from following ChatGPT recommendations) constitutes evidence of extraction vs. acceptable risk?",
+      "resolution_mechanism": "Longitudinal epidemiological study: track users of the service and correlate health outcomes with recommendations; adverse event reporting; user surveys on harm perception",
+      "impact": "If harm rate > 5%: snare classification confirmed. If harm rate < 1%: rope classification gains plausibility (coordination function outweighs risk).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Adverse outcome rate from LLM health advice"
+    },
+    {
+      "id": "regulatory_enforcement_velocity",
+      "question": "Will regulatory oversight (FDA, medical boards) move fast enough to constrain LLM health advisory before adoption reaches critical mass?",
+      "resolution_mechanism": "Monitoring regulatory timelines: FDA guidance on AI medical devices, state medical board actions, legislative proposals; comparison with historical medical innovation regulation cycles (3-7 years typical)",
+      "impact": "If regulatory gap > 5 years: scaffold perspective is aspirational (sunset clause is not real). If regulatory response < 2 years: scaffold confirmed (sunset is structural).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Speed of regulatory response to AI health advisory"
+    },
+    {
+      "id": "user_literacy_sorting",
+      "question": "Does the service primarily attract health-literate users (who can verify recommendations) or health-illiterate users (who cannot)?",
+      "resolution_mechanism": "User survey on health literacy, medical knowledge, baseline trust in AI; demographic analysis; comparison with medical error rates across literacy quartiles",
+      "impact": "If literacy-sorted to high: extraction is lower (users can verify). If sorted to low: extraction is higher (users cannot verify). This determines whether the service is differential extraction (targeting vulnerable users) or universal coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "User health literacy distribution and verification capacity"
+    },
+    {
+      "id": "medical_liability_enforcement",
+      "question": "Can users or medical authorities establish legal liability against OpenAI for health advice harm, or does the disclaimerware wall hold?",
+      "resolution_mechanism": "Litigation outcomes; analysis of OpenAI's terms of service and liability waivers; state-level medical practice law interpretations; precedent from other AI medical product cases",
+      "impact": "If liability enforcement succeeds: OpenAI bears cost (incentive realignment). If disclaimers hold: users/commons bear cost (extraction confirmed). This is the key institutional question.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforceability of liability waiver in medical context"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "OpenAI's ChatGPT health review service creates a structural extraction mechanism by placing unverified large language model advice in a domain (healthcare) where verification requires expert human judgment and carries significant liability. The constraint combines: (1) a genuine coordination function (providing accessible health review at scale), (2) severe suppression of alternatives (no comparable low-cost service), (3) differential extraction targeting health-literate users who can verify advice vs. health-illiterate users who cannot, and (4) a regulatory gap where traditional medical liability frameworks (informed consent, duty of care) cannot enforce because the advice originates from an AI, not a licensed physician. The service exhibits characteristics of a snare (for powerless/health-illiterate users), a tangled rope (for moderately-informed users balancing benefit and risk), a rope (from OpenAI's perspective as coordinator), and a piton (regulatory framework performing medical oversight theater without actual enforcement). The theater ratio (0.64) reflects the proliferation of disclaimers, terms-of-service waivers, and appeals to FDA oversight \u2014 performative medical regulation without substantive verification.",
+    "key_agents": [
+      "Health Literacy Dependent Users: Primary victims (powerless/trapped) \u2014 cannot verify LLM advice; face medical risk and sunk cost if recommendations are incorrect",
+      "Chronically Ill Patients: Secondary victims (moderate/constrained) \u2014 benefit from accessible health review but face behavioral trap: convenient advice is unreliable but hard to ignore",
+      "Medical Liability Commons: Institutional victim (powerless/trapped) \u2014 absorbs liability costs when LLM health advice causes harm; cannot exit or organize",
+      "OpenAI: Primary beneficiary (institutional/arbitrage) \u2014 captures subscription revenue and user data; solves genuine health advisory coordination problem",
+      "Regulatory Medical Authority (FDA, medical boards): Inert institutional actor (institutional/arbitrage) \u2014 maintains nominal gatekeeping role but cannot enforce standards; persists through theater",
+      "Patient Advocacy / Public Health Coalition: Organized secondary actor (organized/constrained) \u2014 can constrain through litigation and regulation; sees sunset (eventual regulatory tightening)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. OpenAI captures subscription revenue and user health data while users bear medical risk from potentially incorrect LLM-generated advice. The extraction is not maximal (0.70+) because the service has a genuine coordination function \u2014 users do benefit from accessible health guidance \u2014 and the magnitude of harm varies by user literacy. The value reflects that this is a mixed coordination-extraction hybrid, not pure extraction. Suppression (0.68): High. Barriers to exit include: (a) no comparable low-cost health advisory service, (b) information asymmetry (users cannot easily verify LLM advice accuracy), (c) psychological dependence (convenient advice is hard to ignore even if unreliable), (d) regulatory gaps (medical liability frameworks don't apply). Theater ratio (0.64): Moderate-high. The service is surrounded by performative regulation: disclaimers, terms of service, appeals to FDA oversight, physician-speak in the interface \u2014 but the actual verification mechanism (human medical expert review) is bypassed. As time progresses, the theater increases because disclaimers must become more elaborate as harm cases accumulate.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Health-illiterate users see a pure snare (no exit, high extraction, no coordination benefit). OpenAI sees a rope (solving a coordination problem). Regulatory authorities perform oversight theater (piton). Public health advocates see a temporary extraction with a sunset (scaffold). The analytical observer risks seeing an immutable constraint of medical knowledge (mountain) \u2014 the inherent difficulty of automating diagnosis \u2014 but the structural data (\u03b5=0.58, suppression=0.68, theater=0.64) reveals this as a false summit: the 'difficulty' is actually a contingent institutional choice to permit unverified LLM advice in a liability-critical domain. If the constraint were truly natural law, it would classify identically across all perspectives; the perspectival range here (snare \u2192 rope \u2192 scaffold \u2192 piton) indicates a social/institutional constraint, not a physical limit.",
+    "directionality_logic": "Health literacy dependent users: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Medical liability commons: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. Chronically ill users (moderate/organized): Victim + constrained \u2192 d\u22480.68, f(d)\u22480.98. Mixed; some benefit, some cost. OpenAI: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Regulatory authority: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification derives from theater_ratio gate, not directionality. Public health coalition: Organized + constrained \u2192 d\u22480.38, f(d)\u22480.38. Low effective extraction; coalition has agency to constrain through regulation. The critical directionality insight: the service is NOT extracted equally from all users. It targets vulnerable users (health-illiterate, chronically ill, time-constrained) who cannot verify advice and have limited alternatives. This is differential extraction, making it a snare rather than a rope.",
+    "mandatrophy_analysis": "MANDATROPHY UNRESOLVED (\u03b5=0.58 > 0.46 but < 0.70). The constraint must be classified as either: (a) Snare (pure extraction targeting vulnerable users), or (b) Tangled Rope (hybrid coordination + asymmetric extraction). The mandatrophy resolution hinges on whether the service is merely providing accessible health guidance (rope/tangled rope) or systematically targeting users who cannot verify the advice (snare). Three factors support snare classification: (1) Differential extraction: the service attracts users with lower health literacy who cannot verify advice. (2) Suppression: no competitive alternative provides equivalent speed/cost. (3) Behavioral trap: convenient advice is psychologically difficult to ignore even when unreliable. However, tangled rope is partially defended by the genuine coordination function (users genuinely benefit from accessible health guidance) and the fact that some users can verify advice. The mandate resolves to snare when empirical evidence shows: (i) harm rates above 5%, (ii) systematic targeting of low-literacy users, (iii) disclaimers failing to protect users from behavioral compliance. If future data shows low harm rates or strong literacy-sorting to high-literacy users, reclassification to tangled rope or rope becomes defensible."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_medical_licensing_gap",
+      "health_data_extraction",
+      "clinical_liability_commons"
+    ],
+    "dual_formulation_note": "This constraint is downstream of the AI medical licensing gap (the institutional fact that AI systems are not required to be licensed physicians to give medical advice). The upstream constraint has \u03b5\u22480.10 (structural regulatory gap); this constraint (openai_health_review) has \u03b5=0.58 (operational extraction enabled by the gap). The two constraints are linked: closing the licensing gap would tighten the service's suppression and reduce extractiveness."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ]
+}

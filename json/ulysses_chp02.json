@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp02",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ulys",
+    "module_name_override": "constraint_ulysses_school_1904"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "The Nightmare of History (Dalkey School)",
+    "topic_domain": "economic/social/political",
+    "requires_active_enforcement": false,
+    "victims": [
+      "stephen_dedalus",
+      "student_consciousness",
+      "intellectual_autonomy"
+    ],
+    "beneficiaries": [
+      "colonial_church",
+      "british_imperial_authority"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Stephen Dedalus (The Imprisoned Student)",
+      "comment": "PERSPECTIVE 1: STEPHEN DEDALUS (SNARE) \u2014 Cannot exit the educational apparatus without severe social and economic consequences. Forced to internalize historical narratives of colonial subjugation and religious authority. No genuine alternatives exist within his social class. Maximum extraction: his labor (teaching history), his intellectual development (shaped by imperial curriculum), and his spiritual autonomy (Catholic doctrine) are all subordinated to institutional goals. The 'nightmare of history' is something he must teach while being trapped within it."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Student Consciousness (Collective)",
+      "comment": "PERSPECTIVE 2: STUDENT CONSCIOUSNESS (SNARE) \u2014 Young minds are systematically conditioned to accept imperial history as inevitable and redemptive. Suppression includes: no alternative historical narratives available, religious authority reinforces historical submission, family pressure maintains compliance. Exit options are constrained but not entirely eliminated\u2014some students may later question, but the formative damage is done. Moderate power because students form a collective that sustains the system through compliance; yet individually they are powerless."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Colonial Church and Imperial Authority",
+      "comment": "PERSPECTIVE 3: COLONIAL CHURCH & BRITISH IMPERIAL AUTHORITY (ROPE) \u2014 From this institutional perspective, the school functions as pure coordination: disseminating imperial ideology, training compliant subjects, legitimizing historical subjugation as divine will. The beneficiaries experience the constraint as a coordination mechanism (how to maintain control over a colonized population). They have complete exit options (arbitrage)\u2014they can redirect resources, change curricula, or withdraw institutional support. They see the structure as functional, not extractive from their position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Irish Nationalist Consciousness (Organized Resistance)",
+      "comment": "PERSPECTIVE 4: IRISH NATIONALIST MOVEMENT (TANGLED ROPE) \u2014 Organized agents recognize the school as both coordinating imperial control AND extracting Irish cultural autonomy. They benefit from coordination of educational access (schooling exists) but are victimized by its content and direction. Constrained exit options: cannot easily build parallel schools without resources or political recognition. Must work within and against the system simultaneously. This perspective sees the snare clearly but lacks sufficient power to demolish it unilaterally."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The School Administration (Institutional Theater)",
+      "comment": "PERSPECTIVE 5: SCHOOL ADMINISTRATION (PITON) \u2014 The administrators see the curriculum as degraded\u2014they perform the ritual of teaching imperial history knowing it no longer commands genuine belief among intellectuals. The apparatus persists through institutional inertia: it is easier to continue the old curriculum than to redesign. Theater ratio is high (0.65) because much of the pedagogical activity is performative\u2014delivering prescribed narratives, enforcing compliance through ritual rather than genuine intellectual engagement. The primary function (control) is maintained; the secondary function (actual education) has atrophied."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE MOUNTAIN VIEW (MOUNTAIN) \u2014 From a civilizational perspective, one might argue that the transmission of cultural narratives to young people is an immutable feature of all societies\u2014every culture must teach history to survive. But this naturalizes the snare: it confuses the structural necessity (some transmission of cultural knowledge) with the specific contingent implementation (imperial history as the only available narrative, with no counter-narratives permitted). The constraint is NOT that history must be taught; it is that THIS history, in THIS way, with THIS suppression of alternatives, is enforced. The mountain classification is a false summit\u2014the analytical observer risks naturalizing institutional oppression as natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genuineness_of_student_internalization",
+      "question": "Do students genuinely internalize the imperial historical narrative, or do they perform belief while maintaining private skepticism?",
+      "resolution_mechanism": "Private letters, diaries, post-school testimony from students; comparison of public utterances vs private correspondence; longitudinal tracking of whether students maintain or abandon the taught narratives after leaving school",
+      "impact": "If genuine internalization: suppression is near-total (0.85+), snare classification is robust. If performative: suppression is lower (0.55-0.65), and the constraint transitions toward scaffold (temporary theater maintained until exit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether imperial history narrative is genuinely internalized or performatively maintained"
+    },
+    {
+      "id": "alternative_narrative_availability",
+      "question": "Are alternative Irish historical narratives actually unavailable to students, or do they exist in suppressed form that motivated students could access?",
+      "resolution_mechanism": "Inventory of books available in Ireland 1904; survey of what nationalist families taught children; examination of underground printing and distribution networks; oral history of which students knew which counter-narratives",
+      "impact": "If truly unavailable: suppression \u2265 0.70, snare is robust. If available but forbidden: suppression is lower (0.55-0.65), constraint appears as more of a tangled rope (some agency present).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Real availability of counter-narratives to students"
+    },
+    {
+      "id": "stephen_exit_feasibility",
+      "question": "What were Stephen's actual exit options from teaching at Dalkey beyond quitting the school\u2014could he emigrate, pursue other work, maintain social position?",
+      "resolution_mechanism": "Analysis of Stephen's economic resources, family circumstances, and social opportunities in 1904 Dublin; comparison with other Irish intellectuals' actual choices and career paths; examination of what Stephen believed his options to be vs what they actually were",
+      "impact": "If exit is genuinely impossible: exit_options = trapped, snare classification is maximal. If exit is possible but costly: exit_options = constrained, effective extractiveness diminishes somewhat (d = 0.80 rather than 0.95).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stephen's actual exit options from school employment"
+    },
+    {
+      "id": "institutional_collapse_timeline",
+      "question": "How long did the imperial curriculum maintain this suppressive power\u2014when did alternative narratives become institutionally recognized rather than forbidden?",
+      "resolution_mechanism": "Curriculum histories; timeline of Irish educational reform; comparison with neighboring colonized education systems (India, Egypt) for parallel timelines",
+      "impact": "If suppression persists for 40+ years: this is a stable snare. If it collapses within 15 years: this is a scaffold with a real sunset (1904-1919). Classification shifts based on temporal horizon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Duration of suppressive curriculum before institutional collapse"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "ulys_extractiveness_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.62,
+      "id_override": "ulys_extractiveness_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "ulys_extractiveness_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5,
+      "id_override": "ulys_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58,
+      "id_override": "ulys_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65,
+      "id_override": "ulys_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Stephen Dedalus arrives at the Dalkey School in 1904 to teach history and English. The school is operated under Church authority within the framework of British colonial rule. Stephen is tasked with teaching Irish history through an imperial lens\u2014a curriculum that presents the colonization and subjugation of Ireland as historical inevitability, often framed as redemptive through Christian conversion and British civilization. For Stephen, this is the 'nightmare of history': he must teach a narrative that legitimizes the very oppression he suffers, to students who are being conditioned to accept their own subjugation as natural and divinely ordained. The constraint is structural: he cannot quit without severe economic and social consequences, the curriculum is imposed by higher authority (Church and colonial administration), alternative narratives are unavailable within official channels, and the entire system is designed to suppress the intellectual autonomy and cultural identity of Irish youth. Stephen's teaching is an act of complicity he cannot escape\u2014a perfect Snare.",
+    "key_agents": [
+      "Stephen Dedalus: Primary victim (powerless/trapped) \u2014 forced to teach imperial history while intellectually aware of its falsity and oppressiveness; no viable exit from employment; subject to enforced complicity",
+      "Student Consciousness: Collective victim (moderate/constrained) \u2014 young minds systematically shaped by imperial narratives with no access to counter-narratives; constrained agency through family and social pressure",
+      "The Colonial Church: Primary beneficiary (institutional/arbitrage) \u2014 uses school as mechanism for spiritual and ideological control; maintains institutional authority over conscience and curriculum",
+      "British Imperial Authority: Co-beneficiary (institutional/arbitrage) \u2014 school serves as mechanism for disseminating imperial ideology and training compliant colonial subjects",
+      "Irish Nationalist Movement: Organized observer (organized/constrained) \u2014 recognizes the snare but lacks sufficient institutional power to dismantle it; constrained exit options",
+      "School Administration: Institutional performer (institutional/arbitrage) \u2014 maintains the curriculum through inertia and performative ritual; sees own system as degraded but continues it"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts from Stephen multiple forms of value: his intellectual labor (teaching), his temporal resources (employment), his spiritual autonomy (forced participation in religiously-sanctioned narratives), and his moral agency (complicity in oppressing students). The measurement trajectory shows increasing extractiveness from 0.55 to 0.68 as Stephen internalizes the contradiction between his intellectual awareness and his enforced role\u2014as the constraint deepens its grip through accumulated complicity. Suppression (0.72): High. Multiple mechanisms suppress exit and alternatives: (1) Economic dependence\u2014Stephen needs the salary; (2) Social pressure\u2014Irish Catholic families depend on Church-approved education and employment; (3) Narrative monopoly\u2014imperial history is the only official curriculum available; (4) Authority enforcement\u2014the Church and colonial administration enforce compliance; (5) No institutional recognition of counter-narratives\u2014Irish nationalist history is not taught in official schools. Theater ratio (0.65): Moderate-high. Much of the pedagogical activity is performative ritual: the schoolmaster recites prescribed narratives, students perform belief, examinations test memorization rather than understanding. The theater increases over the interval as Stephen becomes more aware that the entire apparatus is maintained through performative compliance rather than genuine conviction. Claimed type (Snare): The engine gates verify: extractiveness (0.68) > 0.46 \u2713, suppression (0.72) > 0.60 \u2713, victims declared (stephen_dedalus, student_consciousness, intellectual_autonomy) \u2713.",
+    "perspectival_gap": "The analytical observer risks committing a false natural law by framing the 'nightmare of history' as an immutable feature of any civilization that transmits historical knowledge. This naturalizes the snare. The actual constraint is not 'history must be taught' (true and universal) but 'THIS oppressive history, with THIS monopoly on narrative, enforced through THIS institutional apparatus, with NO counter-narratives permitted' (contingent and institutional). The perspectival gap between Stephen's Snare and the Church's Rope reveals that 'the nightmare' is not nightmare because history is taught, but because history is weaponized\u2014because the only available narrative is one that legitimizes Stephen's own subjugation and requires him to replicate that subjugation in students.",
+    "directionality_logic": "Directionality (d) captures each agent's structural position relative to the constraint's extraction mechanism. Stephen: victim status + trapped exit \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 high experienced extractiveness. Student consciousness: victim status (indirect\u2014they are being shaped) + constrained exit \u2192 d \u2248 0.85 \u2192 f(d) \u2248 1.15 \u2192 high experienced extractiveness. Church/Imperial Authority: beneficiary status + arbitrage exit \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 negative experienced extractiveness (they are subsidized). Nationalist movement: victim status (culture is being suppressed) + constrained exit \u2192 d \u2248 0.75 \u2192 f(d) \u2248 1.05 \u2192 moderate-high experienced extractiveness, but the organized power atom modulates this\u2014they have some collective agency. School administration: beneficiary status (maintains institutional resources) + arbitrage exit \u2192 d \u2248 0.15 \u2192 f(d) \u2248 -0.01 \u2192 near-zero experienced extractiveness, but the piton classification overrides this because the theater_ratio gate fires (0.65 > 0.70 threshold is not met; however, the inertial maintenance of degraded ritual is still captured).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The snare classification is robust across all perspectives except the false Mountain and the Rope (from the beneficiaries' view). The mandatrophy is avoided by recognizing that extractive and coordinative functions can coexist in the same institution\u2014the school DOES coordinate something (ideological uniformity, social control), but it DOES extract something more valuable (intellectual autonomy, cultural identity, moral agency). The Snare gate fires because: (1) extractiveness > 0.46, (2) suppression > 0.60, (3) victims are clearly identified, (4) the existence of the constraint depends on suppressing alternatives (without suppression, students could choose different narratives). The classification would collapse into pure Rope only if: (a) alternative narratives were freely available, AND (b) students could choose to teach them without penalty, AND (c) the main function was not extraction but genuine coordination. None of these conditions hold in 1904 Dublin."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "colonial_education_systems",
+      "irish_cultural_suppression",
+      "church_institutional_authority"
+    ],
+    "dual_formulation_note": "The Dalkey School constraint is downstream of broader colonial and ecclesiastical authority structures. It represents a specific institutional implementation of cultural suppression through educational monopoly. The constraint family includes: (1) the general colonial education system (broader scope, lower epsilon because it includes some coordination), (2) Irish cultural suppression (broader scope, higher epsilon because it is pure extraction with no coordination), (3) Church institutional authority (broader scope, focuses on clerical control). This story focuses on the specific pedagogical mechanism through which imperial history is weaponized against students and through which complicity is extracted from teachers."
+  },
+  "directionality_overrides": []
+}

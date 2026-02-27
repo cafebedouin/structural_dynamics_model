@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "winners_curse",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Winner's Curse in Common Value Auctions",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "auction_sellers",
+      "better_informed_bidders"
+    ],
+    "victims": [
+      "naive_winning_bidders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Naive Winning Bidder",
+      "comment": "Perspective of the naive winning bidder who overpays. They are trapped because they've already committed to the auction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Auction Seller",
+      "comment": "Perspective of the auction seller who benefits from the winner's curse. They set up the auction and obtain revenue."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analytical perspective, classifying the winner's curse as a tangled rope due to the combination of extraction and coordination (price discovery)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Better Informed Bidder",
+      "comment": "Perspective of a better informed bidder who exploits the curse by making more accurate bids and winning with better certainty. They can decide to participate or not, thus arbitrage."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "information_asymmetry",
+      "question": "How significant is the information asymmetry among bidders?",
+      "resolution_mechanism": "Analysis of bidder expertise and available information sources.",
+      "impact": "High asymmetry strengthens the Snare aspect; Low asymmetry shifts toward Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree of information asymmetry affects the intensity of the curse."
+    },
+    {
+      "id": "bidder_rationality",
+      "question": "To what extent are bidders aware of and able to adjust for the winner's curse?",
+      "resolution_mechanism": "Behavioral studies of bidding behavior in common value auctions.",
+      "impact": "Full rationality mitigates the curse (moves toward Rope); irrationality intensifies it (moves toward Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The level of rationality in bidders influences the effects of the curse."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Winner's Curse is a phenomenon in common value auctions where the winning bidder tends to overpay, because their winning bid suggests they have the most optimistic (and likely inflated) estimate of the item's true worth. The auction benefits the seller and potentially better-informed bidders at the expense of the naive winning bidder.",
+    "key_agents": [
+      "Naive Winning Bidders: Victims (powerless/trapped) who overpay due to inaccurate valuation.",
+      "Auction Sellers: Beneficiaries (institutional/arbitrage) who gain higher revenue.",
+      "Better Informed Bidders: Beneficiaries (powerful/arbitrage) who exploit the curse."
+    ],
+    "logic_rationale": "The extractiveness is 0.6 because the winning bidder loses value due to the curse. Suppression is 0.4 because there are some strategies to mitigate the curse, but they're not always effective or accessible to all bidders. The theater ratio is low because this is a real economic phenomenon, not a performative one.",
+    "perspectival_gap": "The naive winning bidder sees a snare because they are trapped and lose money. The auction seller sees a rope because they benefit from increased revenue. The better-informed bidder also sees a rope as they can strategically exploit the curse. The analytical observer sees the combined effect as a tangled rope.",
+    "directionality_logic": "The auction seller and better-informed bidders benefit (low d), while the naive bidder is harmed (high d). The analytical observer sees both extraction and coordination, leading to the tangled rope classification.",
+    "mandatrophy_analysis": "The combination of extraction and coordination requires distinguishing between a pure snare and a tangled rope. The coordination aspect is price discovery, although skewed by the curse. Bidders are attempting to ascertain the true value. Mitigation strategies exist, even though not always successful."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

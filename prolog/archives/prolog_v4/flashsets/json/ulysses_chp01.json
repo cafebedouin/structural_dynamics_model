@@ -1,0 +1,143 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp01",
+    "version": "0.1",
+    "generated_date": "2024-01-03",
+    "status": "Draft"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "The Martello Tower Usurpation",
+    "topic_domain": "social/political/religious",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "buck_mulligan",
+      "haines"
+    ],
+    "victims": [
+      "stephen_dedalus"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Stephen Dedalus's Perspective",
+      "comment": "Stephen Dedalus experiences the tower as a Snare. He is trapped by his dependence on Mulligan for shelter and companionship, and suppressed by the boisterous and often offensive behavior of Mulligan and Haines."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Buck Mulligan's Perspective",
+      "comment": "Buck Mulligan benefits from the situation, enjoying the company and the relative freedom from societal constraints that the tower provides. He can engage in his antics without significant repercussions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Haines's Perspective",
+      "comment": "Haines, the English guest, is in a more ambiguous position. He benefits from the temporary lodging and the unique social dynamic, but is also somewhat constrained by the expectations of his hosts and his own cultural background. He's mobile and has the option of leaving anytime."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "British Military (Past)",
+      "comment": "Originally built as a defensive structure (rope), now a remnant of the past, no longer serving its original purpose, but still carries some weight of history."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees the tower as a site of complex social dynamics, where power and dependence intertwine. It highlights the tensions between Irish identity, English influence, and artistic freedom."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "stephens_agency",
+      "question": "To what extent is Stephen truly trapped, versus choosing to remain in this situation?",
+      "resolution_mechanism": "Analyzing Stephen's internal monologues and actions throughout Ulysses to determine his level of agency.",
+      "impact": "If Stephen has high agency, the constraint is less of a Snare and more of a Tangled Rope. If low, then Snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree of Stephen's agency in his situation."
+    },
+    {
+      "id": "mulligans_intent",
+      "question": "Is Mulligan intentionally manipulative, or simply oblivious to Stephen's discomfort?",
+      "resolution_mechanism": "Close reading of Mulligan's dialogues and actions to infer his motivations.",
+      "impact": "If Mulligan is intentionally manipulative, the extraction is higher. If oblivious, then extraction is lower.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Intentions behind Mulligan's behavior."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The opening chapter of James Joyce's Ulysses finds Stephen Dedalus living in a Martello tower with Buck Mulligan and Haines. The tower, originally built for defense, now represents a space where social and intellectual tensions play out. Stephen, burdened by personal and historical traumas, finds himself increasingly alienated by the boisterous and often offensive behavior of his companions. This dynamic highlights themes of usurpation, dependence, and the struggle for artistic freedom.",
+    "key_agents": [
+      "Stephen Dedalus: Primary target (powerless/trapped) \u2014 bears the brunt of the social extraction",
+      "Buck Mulligan: Primary beneficiary (powerful/arbitrage) \u2014 benefits from the social dynamic",
+      "Haines: Secondary actor (moderate/mobile) \u2014 occupies an ambiguous position as an English guest",
+      "British Military (Past): Institutional force (institutional/constrained) \u2014 the original purpose of the tower",
+      "Analytical Observer: Sees full structure (analytical/analytical)"
+    ],
+    "logic_rationale": "The extractiveness is high (0.6) because Stephen experiences a significant loss of agency and well-being due to his dependence on Mulligan and the oppressive atmosphere of the tower. The suppression is also high (0.7) because Stephen feels unable to fully express himself or escape the situation. The theater ratio is relatively high (0.75) because the interactions, while often performative, have real consequences for Stephen.",
+    "perspectival_gap": "Stephen experiences the tower as a Snare, feeling trapped and suppressed. Mulligan, on the other hand, benefits from the situation and experiences it as a source of freedom and amusement (Rope). Haines occupies an intermediate position, benefiting somewhat but also constrained by social expectations (Tangled Rope). The analytical perspective sees it as a Tangled Rope.",
+    "directionality_logic": "Stephen, as the primary victim, experiences a high degree of extraction. Mulligan, as the primary beneficiary, experiences a low degree of extraction. Haines, in his ambiguous position, experiences a moderate degree of extraction.",
+    "mandatrophy_analysis": "This example highlights the subjective nature of constraint classification. What appears as a source of freedom for one person (Mulligan) is a source of oppression for another (Stephen). The analytical perspective attempts to capture the complexity of this dynamic by recognizing both the coordination and extraction aspects of the situation."
+  },
+  "network": {},
+  "directionality_overrides": []
+}

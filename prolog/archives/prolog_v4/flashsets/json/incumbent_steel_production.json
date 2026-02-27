@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "incumbent_steel_production",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Incumbent Blast Furnace Steel Production Method",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "integrated_steel_mills",
+      "coal_mining_industry"
+    ],
+    "victims": [
+      "emerging_steel_technologies",
+      "environment"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Environment",
+      "comment": "The environment is trapped by the continued reliance on blast furnace steel production due to its carbon emissions and pollution. The environment cannot exit and bears the brunt of the extractive process."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Emerging Steel Technologies",
+      "comment": "Emerging steel technologies are constrained by the established infrastructure and economies of scale of blast furnace production, while also benefiting from ongoing research and development and potential future market disruption. They have some mobility, but face significant barriers to entry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Integrated Steel Mills",
+      "comment": "Integrated steel mills benefit from established infrastructure, supply chains, and customer relationships. They have arbitrage opportunities due to their global reach and influence over the steel market. This perspective experiences the constraint as coordination due to established standards and procedures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Coal Mining Industry",
+      "comment": "The coal mining industry is constrained by the long term decline of the steel industry but benefits in the short term from the continued use of coking coal in blast furnaces. They exert pressure through powerful lobbying groups to continue support of the blast furnace methods."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the historical dominance of the blast furnace method as a piton. The technology has been surpassed by emerging technologies, but it maintains its dominance through inertia and its installed base. The theater ratio is high due to the performative aspects of environmental regulations and greenwashing efforts."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_disruption_rate",
+      "question": "What is the rate at which emerging steel technologies will disrupt the dominance of the blast furnace method?",
+      "resolution_mechanism": "Analysis of investment trends, research and development breakthroughs, and market adoption rates of new technologies.",
+      "impact": "Higher disruption rate: the blast furnace method will decline rapidly, leading to stranded assets and job losses. Lower disruption rate: the blast furnace method will persist for longer, exacerbating environmental problems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of technology disruption in steel production."
+    },
+    {
+      "id": "policy_intervention_level",
+      "question": "What is the level of policy intervention required to accelerate the transition to cleaner steel production methods?",
+      "resolution_mechanism": "Assessment of the effectiveness of different policy instruments, such as carbon taxes, subsidies for green technologies, and regulations on emissions.",
+      "impact": "Higher intervention level: faster transition to cleaner steel production, but potential for higher costs and economic disruption. Lower intervention level: slower transition to cleaner steel production, but lower costs and less disruption.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Level of policy intervention required to transition to cleaner steel."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The global steel industry is dominated by the blast furnace method, which requires high-grade iron ore and coking coal. This established method creates a constraint on the adoption of cleaner, more sustainable steel production technologies. The method benefits incumbent steel mills with established infrastructure but extracts from the environment through carbon emissions and other pollutants. This is a tangled rope, where there are benefits and harms involved.",
+    "key_agents": [
+      "Integrated Steel Mills: Primary beneficiary (institutional/arbitrage) - benefits from established infrastructure and customer base.",
+      "Coal Mining Industry: Secondary beneficiary (powerful/constrained) - benefits from continued demand for coking coal.",
+      "Emerging Steel Technologies: Primary victim (moderate/constrained) - faces barriers to entry due to established infrastructure and economies of scale.",
+      "Environment: Ultimate victim (powerless/trapped) - suffers from carbon emissions and pollution."
+    ],
+    "logic_rationale": "Extractiveness (0.6): The blast furnace method extracts significantly from the environment through carbon emissions and other pollutants. Suppression (0.7): The method suppresses the adoption of cleaner, more sustainable steel production technologies through its established infrastructure and economies of scale. Theater ratio (0.75): There is significant performative activity associated with the blast furnace method, including environmental regulations, greenwashing efforts, and public relations campaigns.",
+    "perspectival_gap": "The environment views the incumbent steel production as a Snare, as they cannot escape the burden of pollution and resources consumption. Integrated steel mills view the system as coordination, represented as a Rope, since it benefits them and integrates into their already established system. Emerging steel technologies view the dominance of the blast furnace method as a Tangled Rope because it impedes their growth and market opportunities, yet benefits them through ongoing R&D.",
+    "directionality_logic": "Incumbent steel mills benefit because the system is already set up. The coal industry benefits from continued demand of coking coal. Emerging technologies are stifled through dominance of blast furnaces and the environment is harmed by the large amounts of emissions. The Coal mining industry d value is higher because although powerful, in the long term the decline of steel will impact the industry heavily.",
+    "mandatrophy_analysis": "The mandatrophy is resolved because even though there are both negative (environmental damage, stifled innovation) and positive aspects (established economic engine, raw materials requirements), the system leans more towards extraction than coordination overall, leading to its designation as a Tangled Rope. If there were an emphasis on green tech and an emphasis on helping transition away from coal, then the system would be considered to be more coordination and classified as such."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "iron_ore_supply",
+      "global_carbon_emissions"
+    ]
+  },
+  "directionality_overrides": []
+}

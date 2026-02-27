@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "copyright_protection",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "copy"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Copyright Protection Framework",
+    "topic_domain": "economic/legal/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "original_creators",
+      "publishing_corporations",
+      "rights_administrators"
+    ],
+    "victims": [
+      "derivative_creators",
+      "educational_institutions",
+      "cultural_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Derivative Creator",
+      "comment": "PERSPECTIVE 1: DERIVATIVE CREATOR (SNARE) \u2014 Artists, scholars, and educators who want to build on existing work face legal barriers that suppress alternatives. Cannot exit without abandoning their creative practice. Licensing costs, permission requirements, and litigation risk create severe suppression. Maximum extraction experienced by those without resources to navigate legal complexity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Educational Institution",
+      "comment": "PERSPECTIVE 2: EDUCATIONAL INSTITUTION (SNARE) \u2014 Schools and universities face copyright restrictions on materials needed for teaching. Cannot legally reproduce copyrighted works for classroom use without licensing fees. Trapped within budget constraints and institutional compliance requirements. Extraction flows toward rights holders; educational mission is subordinated."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Open Culture Coalition",
+      "comment": "PERSPECTIVE 3: OPEN CULTURE COALITION (TANGLED ROPE) \u2014 Librarians, digital archivists, and open-access advocates possess some agency through licensing alternatives (Creative Commons, copyleft), but face institutional headwinds and remain subordinate to copyright law's default restrictiveness. Extraction persists because copyright extends legal reach beyond the coalition's institutional reach. Both coordination function (enabling attribution, enabling remixing) and asymmetric extraction (licensing requirements still apply) present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Original Creator",
+      "comment": "PERSPECTIVE 4: ORIGINAL CREATOR (ROPE) \u2014 Individual artists and authors benefit from copyright's coordination function: it establishes attribution rights, enables contract negotiation, and provides a mechanism for royalties. For creators of mass-appeal work, this is genuine coordination enabling viable creative careers. Exit options are high (licensing, direct sales, alternative platforms). Net beneficiary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Publishing Corporation",
+      "comment": "PERSPECTIVE 5: PUBLISHING CORPORATION (SNARE) \u2014 Large publishing, entertainment, and software corporations use copyright as a pure extraction mechanism. They acquire rights through contracts, extend monopoly control through lobbyists, and suppress competitive formats (DRM, circumvention bans). Exit options are maximal \u2014 they can license, sue, lobby, or shift business models. Effective extraction is high because they extract from trapped victims while possessing full agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Copyright Bureaucracy",
+      "comment": "PERSPECTIVE 6: COPYRIGHT BUREAUCRACY (PITON) \u2014 Registration offices, licensing administrators, and Copyright Offices maintain elaborate theatrical procedures (notice, registration, deposit) that persist despite digital metadata making most steps unnecessary. The bureaucracy sees its own function as partly degraded \u2014 it continues because institutional inertia and international treaties lock in procedures, not because they efficiently serve creators. Theater ratio is moderate-high."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Copyright's stated purpose is coordinating creator incentives (genuine function). But in practice it also enables corporate rent extraction and suppresses cultural commons. The analytical observer sees BOTH the coordination mechanism (attribution, contract framework, incentive alignment) AND the asymmetric extraction (duration extensions, anticircumvention bans, restrictions on fair use). This mixed character is irreducible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optimal_copyright_duration",
+      "question": "What copyright duration optimally balances creator incentives against cultural commons access?",
+      "resolution_mechanism": "Empirical analysis of publication and innovation rates under different copyright term lengths; economic modeling of creator behavior; historical comparison of creative output before/after term extensions",
+      "impact": "If optimal duration is short (10-20 years): current framework is severe extraction mechanism (\u03b5 closer to 0.65). If optimal duration matches current law: framework is justified coordination mechanism (\u03b5 closer to 0.25). If no clear optimum: framework is politically contingent (\u03b5 remains at structural baseline ~0.52).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Optimal copyright duration for creator incentives vs. cultural access"
+    },
+    {
+      "id": "drm_circumvention_necessity",
+      "question": "Does legal prohibition of DRM circumvention serve copyright enforcement or function as pure suppression mechanism?",
+      "resolution_mechanism": "Comparison of piracy rates and creator revenue before/after DMCA anti-circumvention provisions; analysis of legitimate uses blocked by DRM; assessment of whether traditional copyright law adequately protects works",
+      "impact": "If circumvention bans prevent substantial infringement: they extend copyright's coordination function (tangled_rope remains). If circumvention bans prevent primarily legitimate interoperability/repair: they function as pure suppression (\u03b5 toward 0.65, snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether DRM prohibitions serve enforcement or pure suppression"
+    },
+    {
+      "id": "corporate_rights_acquisition_asymmetry",
+      "question": "Does copyright's transfer mechanism favor individual creators or corporate rights consolidation?",
+      "resolution_mechanism": "Analysis of work-for-hire practices, contract analysis of standard terms offered to creators, tracking of rights concentration over time, comparison of creator bargaining power by market size",
+      "impact": "If framework enables fair licensing: coordination mechanism dominates (tangled_rope from creator perspective). If framework systematizes creator subordination: extraction mechanism dominates (snare from creator perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether copyright enables fair creator licensing or corporate consolidation"
+    },
+    {
+      "id": "fair_use_judicial_determination",
+      "question": "Is fair use (transformative use exception) a genuine coordinate limiting copyright power or a vestigial doctrine with inconsistent application?",
+      "resolution_mechanism": "Meta-analysis of fair use case outcomes; assessment of litigation costs vs. awards; comparison of fair use success rates across jurisdictions; analysis of whether fair use doctrine has narrowed over time",
+      "impact": "If fair use is reliably protective: it functions as a real constraint on copyright extraction (\u03b5 closer to 0.38, more Rope-like). If fair use is unreliable or expensive: it functions as theatrical limitation (\u03b5 remains high, theater_ratio increases).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fair use doctrine provides meaningful limitation on copyright"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Copyright protection represents a foundational constraint on knowledge and cultural production. Framed as a legal mechanism to incentivize creation, it grants creators and rights holders exclusive control over reproduction and distribution of original works. This framework exhibits the full spectrum of Deferential Realism classifications across different stakeholder perspectives. Original creators experience copyright as genuine coordination\u2014establishing attribution rights, enabling licensing negotiation, and providing income streams. Publishing corporations experience it as a pure extraction mechanism, using copyright to suppress competition and control markets. Derivative creators, educators, and cultural commons advocates experience it as suppression that constrains their ability to build on existing works. The constraint's extractiveness has increased over the 50-year interval as copyright terms have extended (Sonny Bono Act, international harmonization), anticircumvention provisions have proliferated (DMCA), and enforcement technology has improved. Theater ratio has risen as registration and bureaucratic procedures persist despite digital metadata reducing their necessity, and as copyright enforcement becomes increasingly performative\u2014takedown notices, litigation theater\u2014rather than focused on actual infringement.",
+    "key_agents": [
+      "Original Creators: Primary beneficiary (institutional/arbitrage) \u2014 gain coordination mechanism for licensing and attribution; possess exit options (licensing, direct sales, alternative platforms)",
+      "Publishing Corporations: Institutional beneficiary-with-control (institutional/arbitrage) \u2014 use copyright as extraction lever; possess maximal exit options and institutional power",
+      "Derivative Creators: Primary victim (powerless/trapped) \u2014 cannot legally build on existing works without permission; face licensing costs and legal barriers; trapped within framework",
+      "Educational Institutions: Secondary victim (powerless/trapped) \u2014 restricted in reproducing materials for teaching; face licensing fees and compliance burdens; trapped in budget constraints",
+      "Cultural Commons: Tertiary victim (powerless/trapped) \u2014 preservation and access constrained by copyright restrictions; cannot legally maintain cultural heritage archives",
+      "Open Culture Coalition: Organized agent (organized/constrained) \u2014 librarians, digital archivists, open-access advocates; some agency through alternative licensing but subordinate to copyright default",
+      "Copyright Bureaucracy: Institutional maintainer (institutional/arbitrage) \u2014 registration offices, Copyright Offices; maintains theatrical procedures; possessed of full agency but committed to status quo"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Copyright's extractiveness is moderate-to-high because it combines genuine coordination function (enabling creator compensation) with significant asymmetric extraction (duration extensions, corporate consolidation, suppression of derivative works, anticircumvention restrictions). The 50-year trajectory shows extractiveness rising from 0.28 to 0.52 as copyright terms have extended repeatedly, anticircumvention provisions proliferated, and corporate consolidation increased. Suppression (0.68): High. Copyright law eliminates alternatives to permission-based use through legal prohibition. Derivative creators cannot build on works; educators cannot reproduce materials; archivists cannot preserve; technologists cannot interoperate. These are not natural limits but legal suppression. DRM circumvention bans extend suppression into technical domains. Theater ratio (0.55): Moderate. Copyright bureaucracy (registration, deposit, notice) maintains theatrical procedures despite digital metadata reducing necessity. Enforcement is increasingly performative\u2014takedown notices, litigation theater\u2014relative to actual infringement prevention. But copyright still has real coordination function, preventing theater ratio from being very high.",
+    "perspectival_gap": "Original creators and corporations diverge sharply from derivative creators and educators. The beneficiaries perceive coordination and legitimate reward; the victims perceive suppression and unjust barrier. The open culture coalition perceives contingent constraint with emergent alternatives. The copyright bureaucracy perceives its own institutional degradation. These are not measurement artifacts but structural realities of being in different positions within the constraint.",
+    "directionality_logic": "Directionality varies sharply across stakeholders based on their structural position. Original creators are genuine beneficiaries with high exit options (arbitrage), yielding low d and negative effective extraction (they experience coordination). Publishing corporations are institutional beneficiaries with arbitrage options, similarly yielding low structural d. Derivative creators are powerless victims with no exit (trapped), yielding very high d and maximum experienced extraction. Educators are powerless victims with constrained but not trapped exit (some workarounds exist), yielding high d. The open culture coalition is organized with constrained exit, yielding moderate d. The copyright bureaucracy is institutional with arbitrage options, yielding low d despite maintaining the structure. The directionality derivation from beneficiary/victim declarations plus exit options produces the perspectival gap: beneficiaries see rope-like coordination; victims see snare-like suppression; the analytical observer sees both.",
+    "mandatrophy_analysis": "Copyright resolves the mandatrophy by displaying the tangled rope signature clearly: BOTH coordination function AND asymmetric extraction are present and irreducible. Copyright genuinely creates incentives for creation (coordination) while also enabling corporate monopoly and cultural suppression (extraction). The false summit would be claiming copyright is 'purely incentive-aligned' (mountain, coordination-only) or 'purely exploitative' (snare, extraction-only). The tangled rope classification captures that both functions coexist. The rising extractiveness and theater over 50 years shows the framework degrading toward snare\u2014as terms extend, as DRM restrictions tighten, as corporate consolidation increases, the coordination function becomes subordinate to the extraction function. This trajectory suggests potential future decomposition: copyright may be evolving into two distinct constraints\u2014creator incentives (rope-like) and corporate monopoly (snare-like)\u2014that should be split into separate stories if extractiveness continues rising toward 0.65+."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "patent_protection_framework",
+      "trademark_protection_mechanism",
+      "digital_rights_management",
+      "fair_use_doctrine",
+      "open_access_publishing"
+    ],
+    "dual_formulation_note": "Copyright protection may decompose into two structurally distinct constraints as extractiveness rises and corporate consolidation increases. Creator incentives (rope-like, \u03b5\u22480.25) and corporate monopoly (snare-like, \u03b5\u22480.70) are currently bundled in law but represent distinct coordination vs. extraction mechanisms. If extractiveness exceeds 0.65 in future measurement, separate constraint stories for copyright_creator_incentives and copyright_corporate_monopoly should be generated with network linkage showing how creator incentive mechanisms (genuine coordination) are instrumentalized by corporate consolidation (pure extraction)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

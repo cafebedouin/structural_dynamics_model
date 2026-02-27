@@ -2,36 +2,47 @@
   "header": {
     "constraint_id": "carrying_capacity",
     "version": "1.0",
-    "generated_date": "2024-07-16",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cc"
   },
   "base_properties": {
-    "extractiveness": 0.48,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
     "claimed_type": "tangled_rope",
     "human_readable": "Management of Ecological Carrying Capacity (K)",
     "topic_domain": "economic/technological/social",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "industrialized_economies",
-      "high_consumption_lifestyles"
+      "industrial_economies",
+      "high_consumption_populations",
+      "extraction_industries"
     ],
     "victims": [
-      "future_generations",
-      "non_human_species",
-      "climate_vulnerable_nations"
+      "future_populations",
+      "ecosystem_integrity",
+      "biodiversity"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "civilizational",
+      "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Biosphere and Non-Human Species",
-      "comment": "PERSPECTIVE 1: THE BIOSPHERE (SNARE) — Experiences ecological overshoot as pure, uncompensated extraction. It is trapped and has no agency to resist the depletion of its capital. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.82. This is a clear Snare."
+      "label": "The Future Generation",
+      "comment": "PERSPECTIVE 1: FUTURE GENERATION (SNARE) \u2014 Cannot exit the constraint; bears the full cost of carrying-capacity overshoot through degraded resource availability, climate instability, and reduced ecological services. No negotiating power or arbitrage option. Maximum experienced extraction \u2014 inherits depleted commons."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Resource-Dependent Rural Population",
+      "comment": "PERSPECTIVE 2: RESOURCE-DEPENDENT RURAL POPULATION (TANGLED ROPE) \u2014 Constrained by dependence on local ecosystem services (water, fisheries, forestry) but also participates in extraction decisions through subsistence practices. Benefits from access to productive land; bears costs of degradation. Mixed coordination-extraction: genuine local coordination needs coexist with top-down resource allocation that extracts value toward industrial centers."
     },
     {
       "classification_type": "rope",
@@ -39,35 +50,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Industrialized Economy",
-      "comment": "PERSPECTIVE 2: INDUSTRIALIZED ECONOMY (ROPE) — Experiences the constraint as a pure coordination problem: securing resources and externalizing costs. Benefits from technologies that appear to expand K. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07. Negative effective extraction indicates a net beneficiary."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Climate-Vulnerable Nation",
-      "comment": "PERSPECTIVE 3: CLIMATE-VULNERABLE NATION (TANGLED ROPE) — Experiences both the coercive extraction of global overshoot (climate impacts, resource depletion) and the coordination benefits of the global economy it cannot easily exit. d≈0.85, f(d)≈1.15, σ=1.0 → χ≈0.55. This falls squarely in the Tangled Rope range."
+      "label": "Industrial Economy Beneficiary",
+      "comment": "PERSPECTIVE 3: INDUSTRIAL ECONOMY BENEFICIARY (ROPE) \u2014 Institutional actor (corporations, high-income nations) experiences carrying capacity as a coordination problem: managing resource extraction efficiency to maintain supply chains. Has arbitrage options (substitute materials, technological efficiency, geographic diversification). Net beneficiary during overshoot period \u2014 extracts value while externalizing ecosystem costs. Low suppression from their perspective because they control the enforcement mechanisms."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Techno-Optimist Coalition",
-      "comment": "PERSPECTIVE 4: TECHNO-OPTIMIST (SCAFFOLD) — Views current ecological limits as temporary engineering problems. The constraint is a scaffold driving innovation (e.g., fusion, carbon capture) that will eventually make the limit obsolete. This perspective assumes a technological sunset clause. d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.23. Low effective extraction, meeting the Scaffold gate."
+      "label": "The Conservation Coalition",
+      "comment": "PERSPECTIVE 4: CONSERVATION COALITION (SCAFFOLD) \u2014 Organized agents (IUCN, conservation NGOs, some governments) frame carrying-capacity management as a temporary coordination problem with a sunset: sustainable development targets, marine protected areas, and rewilding programs represent transition pathways toward equilibrium within K. Has agency and sees exit toward lower-extraction equilibrium. Theater is lower than status quo because conservation mechanisms emphasize measurable ecological targets rather than performative resource accounting."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "International Governance Bodies",
-      "comment": "PERSPECTIVE 5: INTERNATIONAL GOVERNANCE (PITON) — The function of enforcing ecological limits has atrophied, but the performative aspects (conferences, non-binding treaties, reports) remain. The theater_ratio of 0.75 meets the Piton gate (≥0.70). The institution persists through inertia despite its inability to enforce the constraint."
+      "label": "The Sustainability Reporting Apparatus",
+      "comment": "PERSPECTIVE 5: SUSTAINABILITY REPORTING APPARATUS (PITON) \u2014 ESG reporting, carbon accounting, biodiversity indices, and 'sustainable development' frameworks maintain the appearance of carrying-capacity management while doing minimal actual enforcement. Theater ratio high (0.62): corporations publish sustainability reports while expanding extraction. The reporting ritual persists through institutional inertia \u2014 required by regulation and investor pressure \u2014 but has degraded from any original coordination function. Performative measurement substitutes for structural change."
     },
     {
       "classification_type": "mountain",
@@ -75,98 +77,118 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Malthusian View (False Summit)",
-      "comment": "PERSPECTIVE 6: MALTHUSIAN VIEW (MOUNTAIN) — Frames carrying capacity as an immutable, natural law of population dynamics, ignoring the socio-political structures that mediate it. The engine will flag this as a 'false summit' because the base properties (ε=0.48, suppression=0.75) violate the Mountain classification gates, revealing that this 'natural law' is in fact a contingent institutional arrangement."
+      "label": "The Analytical Observer (Physical Constraints View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL CONSTRAINTS VIEW (MOUNTAIN) \u2014 From a civilizational perspective, carrying capacity is a physical law: a finite biosphere can support a finite total metabolic throughput. Overshoot by definition leads to degradation \u2014 this is not contingent on policy or technology. However, the structural data contradicts the mountain classification. Actual K depends on consumption patterns, technology, and waste resorption capacity \u2014 all human-controllable variables. The 'immutable physical law' framing naturalizes what is actually a contingent set of choices about extraction rates and technology deployment."
     }
   ],
   "omegas": [
     {
-      "id": "technological_substitutability",
-      "question": "To what extent can technological capital substitute for natural capital?",
-      "resolution_mechanism": "Long-term empirical studies on the efficacy and second-order effects of large-scale geo-engineering, closed-loop recycling, and synthetic biology.",
-      "impact": "High substitutability validates the Scaffold perspective. Low substitutability confirms the Snare perspective for future generations.",
+      "id": "technological_substitution_feasibility",
+      "question": "Can renewable energy, circular economy, and efficiency technologies expand effective carrying capacity (K_effective) sufficiently to accommodate projected population and consumption growth?",
+      "resolution_mechanism": "Long-term resource accounting: actual renewable resource depletion rates vs. theoretical substitution models; empirical scaling laws for renewable transition timelines; entropic analysis of circular economy closure rates",
+      "impact": "If feasible (K_effective can grow): carrying-capacity constraint becomes primarily a coordination problem (rope, scaffold). If infeasible: constraint remains fixed or declining (snare, mountain). This determines whether the industrial economy's arbitrage exit is real or illusory.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether technology can truly replace depleted natural resources and ecosystem services."
+      "description": "Feasibility of technological expansion of carrying capacity"
     },
     {
-      "id": "system_collapse_tipping_point",
-      "question": "Where are the non-linear tipping points in the Earth system beyond which recovery is impossible on human timescales?",
-      "resolution_mechanism": "Improved Earth system modeling and paleo-climatic data analysis.",
-      "impact": "If tipping points are near and irreversible, the constraint is a hard Mountain. If they are distant or reversible, it behaves more like a manageable Tangled Rope.",
+      "id": "consumption_pattern_flexibility",
+      "question": "Are current high-consumption patterns in wealthy economies economically and socially necessary, or do they reflect contingent institutional arrangements that could be restructured?",
+      "resolution_mechanism": "Comparative analysis of consumption levels, wellbeing metrics, and social satisfaction across income levels and cultures; identification of status competition vs. utility-driven consumption; historical analysis of how consumption norms change",
+      "impact": "If necessary: carrying-capacity management requires technology scaling (mountain-like constraint). If contingent: redistribution and norm-change become viable \u2014 constraint shifts to tangled_rope with different beneficiaries/victims.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Necessity vs. contingency of consumption patterns"
+    },
+    {
+      "id": "ecosystem_resilience_threshold",
+      "question": "At what level of overshoot do ecosystem collapse dynamics become self-reinforcing and irreversible?",
+      "resolution_mechanism": "Paleoclimatic data on ecosystem state transitions; modeling of feedback loops (permafrost methane, ocean circulation, Amazon tipping points); empirical monitoring of leading indicators for ecosystem collapse",
+      "impact": "If threshold is far above current overshoot: snare classification premature. If threshold is close or already crossed: snare classification is understated \u2014 constraint may already be physically mountain-like (irreversible). Timing determines whether scaffold sunset is realistic.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "The proximity and reversibility of biophysical tipping points."
+      "description": "Distance to ecosystem collapse thresholds"
     },
     {
-      "id": "intergenerational_discount_rate",
-      "question": "What is the ethically appropriate discount rate to apply to the welfare of future generations?",
-      "resolution_mechanism": "Philosophical and ethical consensus-building, not empirical measurement.",
-      "impact": "A near-zero discount rate frames current consumption as extreme extraction (Snare). A high discount rate justifies it as optimal investment (Rope).",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "The ethical weight assigned to future welfare versus present consumption."
+      "id": "enforcement_capacity_asymmetry",
+      "question": "Can enforcement mechanisms (regulation, pricing, monitoring) actually constrain extraction behavior or do they represent pure performance theater?",
+      "resolution_mechanism": "Empirical measurement: carbon pricing and actual emissions reductions; protected area designation and actual habitat loss prevention; resource quota enforcement and actual catch/extraction rates",
+      "impact": "If enforcement effective: suppression is real constraint; classification stands. If enforcement theater: suppression is illusory; actual constraint is information-flow based (does extraction community know K? do they care?); classification shifts toward piton.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Real vs. performative enforcement capacity"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 1950,
-      "value": 0.2
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1990,
+      "time_point": 0,
       "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2024,
+      "time_point": 50,
       "value": 0.48
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 1950,
-      "value": 0.15
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 1990,
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
       "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.75
+      "time_point": 100,
+      "value": 0.62
     }
   ],
   "interval": {
-    "start": 1950,
-    "end": 2024
+    "start": 0,
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "Ecological carrying capacity (K) is the maximum population and consumption an environment can sustain. While rooted in biophysical limits, its 'management' is a socio-economic constraint. The current global system operates in 'ecological overshoot,' liquidating natural capital for short-term economic growth. This creates a structural conflict between beneficiaries of this overshoot and victims who bear its long-term costs. This constraint story models this conflict, showing how the same set of facts about ecological limits can be interpreted as all six constraint types depending on the observer's structural position.",
+    "narrative_context": "The management of ecological carrying capacity (K) represents the constraint governing maximum sustainable population and consumption levels within Earth's biophysical boundaries. This constraint exhibits the full range of DR classification types across different temporal and institutional perspectives. Industrial economies and high-consumption populations benefit from treating K as an expandable coordination problem (rope, institutional perspective) or a temporary challenge with technological solutions (scaffold). Future generations and ecosystem integrity bear the costs of overshoot with no exit option (snare). The sustainability reporting apparatus maintains the appearance of K management through performative metrics while actual extraction continues (piton). From a civilizational analytical perspective, K appears as an immutable physical law (mountain). Yet the structural mechanisms revealing the constraint are economic incentives, governance structures, and consumption norms \u2014 all human-controllable variables. The 50-100 year interval shows extraction rising from 0.35 to 0.58 and theater rising from 0.35 to 0.62, indicating that as material impacts become undeniable, institutional responses emphasize reporting and targets over structural change.",
     "key_agents": [
-      "The Biosphere/Non-Human Species: Primary victim (powerless/trapped) — bears the full cost of habitat destruction and resource depletion.",
-      "Industrialized Economies: Primary beneficiary (institutional/arbitrage) — leverages technology and global markets to exceed local K by importing resources and externalizing waste.",
-      "Climate-Vulnerable Nations: Secondary victim (moderate/constrained) — suffers disproportionately from the consequences of overshoot (e.g., sea-level rise) while being economically constrained.",
-      "The Techno-Optimist Coalition: Organized actors (organized/mobile) — believe technology can indefinitely expand K, viewing limits as temporary problems to be solved.",
-      "International Governance Bodies: Institutional actors (institutional/constrained) — charged with managing the global commons, but lack enforcement power, leading to performative rather than functional regulation.",
-      "The Malthusian Analyst: Analytical observer (analytical/analytical) — frames K as a simple, immutable natural law, ignoring the mediating role of technology, economics, and politics."
+      "Industrial Economies: Primary beneficiary (institutional/arbitrage) \u2014 capture resource value and growth benefits during overshoot; have technology substitution options",
+      "High-Consumption Populations: Beneficiary class (powerful/arbitrage) \u2014 enjoy consumption levels enabled by K overshoot; can substitute through price and technology",
+      "Extraction Industries: Institutional beneficiary (institutional/arbitrage) \u2014 capture short-term rents from resource depletion; fund enforcement of property rights",
+      "Future Generations: Primary victim (powerless/trapped) \u2014 inherit depleted resource base; cannot exit or renegotiate terms",
+      "Ecosystem Integrity: Victim (powerless/trapped) \u2014 absorbs external costs of overshoot; has no negotiating power or representation",
+      "Resource-Dependent Populations: Mixed victim-participant (moderate/constrained) \u2014 depend on local ecosystem services but also participate in extraction decisions through subsistence and market participation",
+      "Conservation Coalition: Organized agents (organized/constrained) \u2014 see carrying-capacity management as solvable through protected areas, sustainable development, and technology transition; experience constraint as temporary",
+      "Sustainability Reporting Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains measurement fiction; benefits from continuation of status quo while appearing to manage it",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent extraction patterns as immutable physical laws"
     ],
-    "logic_rationale": "Extractiveness (ε=0.48): Represents the significant, but not total, rate at which natural capital is being converted into economic capital without replenishment. Suppression (0.75): High. The global economic system, predicated on growth, makes it extremely difficult for societies or individuals to adopt steady-state or degrowth models. Alternatives are structurally suppressed. Theater Ratio (0.75): High. International agreements (e.g., Paris Accord) and corporate sustainability initiatives are largely performative, lacking the enforcement mechanisms to alter the trajectory of overshoot, thus satisfying the Piton gate.",
-    "perspectival_gap": "The gap is maximal. For the biosphere, overshoot is a Snare. For the industrialized consumer, it's a Rope (a resource coordination problem). For a vulnerable nation, it's a Tangled Rope (caught between costs and benefits). For the tech sector, it's a Scaffold for future innovation. For international bodies, it's a Piton (a failed, inertial process). For a Malthusian analyst, it's a Mountain (a natural law). The base metrics support all these views, revealing that the 'problem of K' is fundamentally a problem of perspective and structural position.",
-    "directionality_logic": "Beneficiaries (Industrialized Economies) with arbitrage exit see the system as a net benefit (negative χ), classifying it as a Rope. Victims (Biosphere) who are trapped experience maximal extraction (high positive χ), classifying it as a Snare. Agents with mixed roles and constrained exit options (Vulnerable Nations) experience moderate extraction, classifying it as a Tangled Rope. The system's logic correctly maps these structural positions to divergent classifications from a single set of base properties.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by demonstrating that 'carrying capacity' is not a single type of constraint. Labeling it solely as a Mountain (natural law) is a 'false summit' that obscures the extraction. Labeling it solely as a Snare ignores the genuine coordination functions and perceived benefits that sustain the system. The Deferential Realism framework correctly identifies it as a complex object whose classification is an indexical function of the observer, preventing the collapse into a single, inadequate label."
+    "logic_rationale": "Extractiveness (0.58): The constraint exhibits significant extraction because overshoot wealth accumulates to present-generation beneficiaries while costs defer to future generations and ecosystem integrity (both powerless/trapped). Industrial economies arbitrage the gap between internal sustainable-K and external apparent-K through geographic resource mobility and temporal deferral. The 0.35\u21920.58 trajectory reflects increasing material impact forcing higher institutional extraction effort to maintain the overshoot. Suppression (0.68): Strong suppression mechanisms include information asymmetry (complex systems dynamics are difficult to predict), institutional capture (extraction industries fund enforcement policy), property-right enforcement (nations defend resource access), and consumption-norm normalization (high-extraction lifestyles appear inevitable). Yet suppression is not total (0.68 not 0.90) because: alternative pathways exist (renewable technology, conservation), awareness is growing (climate science, biodiversity monitoring), and some populations have exit options (wealthy nations can transition). Theater ratio (0.62): Sustainability reporting, carbon accounting, ESG metrics, and 'net-zero' commitments represent significant performative activity. Many sustainability initiatives measure inputs (renewable capacity) rather than actual outcomes (emissions reductions, material throughput reduction). The 0.35\u21920.62 trajectory shows theater rising as material impacts become undeniable \u2014 institutions respond with more measurement and targets rather than structural change.",
+    "perspectival_gap": "The perspectival gap is extreme. Industrial beneficiaries experience rope (coordination) or scaffold (temporary problem with technology solution). Future generations and ecosystems experience snare (trapped, no exit). The sustainability apparatus experiences piton (performative ritual). The analytical observer risks experiencing mountain (immutable law). These are not disagreements about facts but different structural positions experiencing the same biophysical constraint differently. Beneficiaries have genuine arbitrage options (substitute materials, efficiency, geographic diversification, technology timing) that appear as real problem-solving from their perspective. Trapped agents have no options and see pure extraction. The gap reveals that 'carrying capacity management' is not a neutral technical problem but an allocation problem: who extracts value during overshoot, who bears costs, and who has exit options?",
+    "directionality_logic": "Each perspective's directionality is determined by structural position relative to extraction flows. Industrial beneficiaries with arbitrage exits derive low d values (0.05-0.20): they benefit from the constraint and can exit through technology or substitution. Their experienced extractiveness (chi) is low or negative \u2014 the constraint subsidizes them. Trapped agents (future generations, ecosystems) derive high d values (0.90-0.95): they bear full extraction cost with zero exit option. Their experienced extractiveness is maximum. Resource-dependent populations are mixed: they benefit from local resource access (low d component) but are also constrained by degradation (high d component), producing moderate d around 0.55-0.65. Conservation coalitions are organized with constrained (not trapped) exits \u2014 they see real alternative pathways (protected areas, rewilding, sustainable-yield management), producing moderate-low d (0.35-0.45). The piton perspective derives from performance theater ratio rather than from high experienced extraction \u2014 the sustainability apparatus has low actual chi because it has arbitrage exits (can switch targets, redefine metrics, perform without enforcing).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that different institutions genuinely perceive different classifications from the same biophysical facts. The industrial economy's rope classification is real from their structural perspective: they ARE solving a coordination problem (how to allocate scarce resources across competing uses; how to synchronize extraction timing). The future generation's snare classification is also real: they ARE trapped with no options. The piton classification is real: sustainability reporting IS performative (most ESG improvements are greenwashing; carbon targets are missed; biodiversity continues declining despite protected area expansion). The mountain classification is the false summit: it naturalizes as 'immutable physical law' what is actually a contingent institutional arrangement. The resolution is not to pick one correct type but to show that mandatrophy analysis reveals the deep structure: carrying-capacity constraint is actually a DISTRIBUTION constraint \u2014 the biophysical floor (absolute K) may or may not be hit soon, but the extraction-incentive structure ensures that present-generation beneficiaries capture value while costs defer to future populations and ecosystems. The 'mandatrophy' is the attempt to frame this as a purely technical problem (can we increase K through technology?) rather than as an allocation problem (who gets to extract, who bears costs, can the trapped agents organize?)."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "global_food_security",
       "climate_stability",
-      "geopolitical_conflict"
-    ]
-  }
+      "biodiversity_loss",
+      "freshwater_depletion",
+      "nutrient_cycling"
+    ],
+    "dual_formulation_note": "Carrying capacity as a constraint family decomposes into domain-specific carrying-capacity constraints: fishery-K (marine resource renewal), agricultural-K (soil fertility and water), forest-K (tree growth and carbon sequestration), aquifer-K (groundwater renewal), and atmosphere-K (carbon absorption). Each has its own epsilon (fishery overshoot around 0.65, forest overshoot around 0.48, atmosphere-K near 0.75). This story concerns the meta-constraint governing all domain-specific K values. The network shows how degradation in one domain (fishery collapse, soil depletion, forest loss, aquifer exhaustion) cascades to others through ecosystem coupling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    }
+  ]
 }

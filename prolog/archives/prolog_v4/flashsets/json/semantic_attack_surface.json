@@ -1,0 +1,170 @@
+{
+  "header": {
+    "constraint_id": "semantic_attack_surface",
+    "version": "1.0",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Meaning Manipulation Horizon",
+    "topic_domain": "technological/informational/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "attackers"
+    ],
+    "victims": [
+      "vulnerable_individuals",
+      "automated_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Individuals Trapped by Misinformation",
+      "comment": "Individuals often lack the resources or knowledge to verify claims, especially in complex domains. This leaves them vulnerable to manipulation and misinformation campaigns."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Automated Systems Reliant on Semantic Data",
+      "comment": "Systems relying on natural language processing (NLP) and machine learning can be misled by adversarial inputs crafted to exploit vulnerabilities in their algorithms. These systems are constrained by their programming and data."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Attackers Exploiting Semantic Manipulation",
+      "comment": "Attackers (individuals, organizations, or nations) can leverage sophisticated techniques to generate and propagate convincing misinformation for financial, political, or social gain. They benefit from the trust placed in established communication channels and automated systems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Platforms Mitigating Semantic Manipulation",
+      "comment": "Social media platforms and search engines grapple with the challenge of identifying and countering misinformation. While these platforms benefit from user engagement, they are also constrained by the need to maintain credibility and avoid censorship."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Researchers Studying Semantic Manipulation",
+      "comment": "Academics and researchers investigate the mechanisms of semantic manipulation, developing techniques for detection and mitigation. This research both constrains manipulators and is itself subject to manipulation (e.g., biased datasets)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Government Regulators",
+      "comment": "Government regulators attempt to create policies and laws to combat semantic manipulation. They are constrained by free speech considerations and the difficulty of defining and detecting manipulation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ai_detection_robustness",
+      "question": "How robust are current AI techniques for detecting and countering semantic manipulation against adversarial attacks?",
+      "resolution_mechanism": "Red-teaming exercises, adversarial training, benchmark datasets with manipulated examples.",
+      "impact": "If robust, moves individuals exit_options closer to mobile and classification more towards rope. If not robust, keeps individuals trapped and classification as snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The ability of AI systems to reliably detect and counter semantic manipulation attempts."
+    },
+    {
+      "id": "human_cognitive_vulnerability",
+      "question": "To what extent are human cognitive biases and heuristics exploitable in semantic manipulation attacks?",
+      "resolution_mechanism": "Psychological experiments, surveys, analysis of real-world misinformation campaigns.",
+      "impact": "Determines extractiveness for individuals. Higher exploitability means more extraction and stronger snare classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The susceptibility of human cognition to deceptive language and framing."
+    },
+    {
+      "id": "platform_incentive_alignment",
+      "question": "How can platform incentives be aligned to prioritize accuracy and reduce the spread of semantic manipulation?",
+      "resolution_mechanism": "Economic modeling, policy experimentation, analysis of platform governance structures.",
+      "impact": "Improved alignment reduces benefits for attackers, moving classification away from rope toward scaffold. Poor alignment leaves attackers with arbitrage options.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The degree to which platforms are motivated to combat misinformation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 'Meaning Manipulation Horizon' describes the escalating potential for exploiting shared language and automated semantic processing to manipulate interpretations. This includes not only individual deception but also systemic manipulation of trust in automated systems. This situation creates a 'tangled rope' where benefits accrue to attackers, and costs are borne by both individuals and the integrity of automated processing systems.",
+    "key_agents": [
+      "vulnerable_individuals: vulnerable targets (powerless/trapped)",
+      "automated_systems: compromised systems (moderate/constrained)",
+      "attackers: malicious actors (powerful/arbitrage)",
+      "platforms: infrastructure providers (organized/constrained)",
+      "researchers: analytical observers (analytical/analytical)",
+      "government_regulators: policy makers (institutional/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.6): Substantial economic, social, and political value is extracted from successful semantic manipulations. Suppression (0.7): High, because individuals and systems are often unaware of the manipulation, or lack the tools to effectively defend themselves. Theater ratio (0.3): Relatively low theater at present, as much of the activity is covert. However, as detection methods improve, there is potential for an increase in performative defenses.",
+    "perspectival_gap": "The targets (individuals, systems) experience a 'snare' due to their limited capacity to detect and respond to manipulations. The manipulators perceive a 'rope,' benefiting from the ability to influence opinions and actions. Platforms experience a 'tangled rope,' as they struggle to balance user engagement with the need to control the spread of misinformation. Analytical observers see a tangled rope: as they develop detection and mitigation techniques, and also become targets of the manipulation.",
+    "directionality_logic": "Attackers benefit from successful manipulations, thus experiencing a 'rope' dynamic. Individuals and automated systems are the target of the manipulation, experiencing a 'snare'. Platforms are caught in the middle, trying to maintain a useful service and prevent malicious activity. The resulting directionality reflects these structural relationships.",
+    "mandatrophy_analysis": "This is classified as Tangled Rope because it blends pure manipulation with elements of coordination. For example, building trust in a community is a coordinating social behavior. Manipulating that trust is extracting value from that coordination. Mitigation strategies must not disrupt legitimate coordination. This classification prevents misinterpreting pure coordination for pure extraction or vice versa."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "misinformation_ecosystem",
+      "algorithmic_bias"
+    ]
+  },
+  "directionality_overrides": []
+}

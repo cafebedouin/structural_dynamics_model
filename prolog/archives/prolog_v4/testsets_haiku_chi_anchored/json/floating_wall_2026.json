@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "floating_wall_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fwall"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The East China Sea Maritime Militia Barrier",
+    "topic_domain": "geopolitical/maritime",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_state_capacity",
+      "chinese_maritime_interests"
+    ],
+    "victims": [
+      "japanese_maritime_access",
+      "regional_freedom_of_navigation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Japanese Fishing Fleet & Maritime Operators",
+      "comment": "PERSPECTIVE 1: JAPANESE FISHING FLEET (SNARE) \u2014 Cannot access traditional fishing grounds without confrontation risk. Militia wall presents as physical/economic barrier with no legitimate coordination benefit. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.72. Trapped exit + victim status produces maximum effective extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Japanese Coast Guard & Maritime Authority",
+      "comment": "PERSPECTIVE 2: JAPANESE COAST GUARD (SNARE) \u2014 Constrained by operational rules of engagement, political escalation risk, and resource limits. Must manage confrontations without conventional military response. Militia barrier extracts political concessions and operational freedom. d\u22480.88, f(d)\u22481.33, \u03c3=0.9 \u2192 \u03c7\u22480.70."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "ASEAN Maritime States & Regional Observers",
+      "comment": "PERSPECTIVE 3: ASEAN MARITIME STATES (TANGLED ROPE) \u2014 Constrained by economic dependence on Chinese markets and desire to avoid confrontation. But also benefit from Chinese willingness to coordinate on certain marine resource issues and infrastructure projects. Mixed extraction and coordination. d\u22480.65, f(d)\u22480.95, \u03c3=0.9 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Chinese State & Maritime Militia Operators",
+      "comment": "PERSPECTIVE 4: CHINESE STATE & MILITIA (ROPE) \u2014 Primary beneficiary. Militia system serves coordination function: mobilizing fishing vessels into floating barriers extends state presence without direct military escalation. Provides low-cost, deniable coercive capability. d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.05. Net beneficiary perspective; sees constraint as coordination mechanism for power projection."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Maritime Law Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL MARITIME LAW (PITON) \u2014 UNCLOS and freedom of navigation norms nominally apply but are substantially theatrical in enforcement. The legal framework persists as international theater while ground reality (militia barrier) operates in space of ambiguous sovereignty. theater_ratio=0.68 indicates performative dimension. Law exists; enforcement is degraded. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structuralist View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational perspective, the militia barrier combines coordination (extending state capacity into disputed waters) with extraction (denying Japanese access). The constraint exhibits genuine dual function: it solves China's problem of projecting power in ambiguous sovereignty zones while simultaneously extracting access denial from Japan. Both functions are structural, not secondary. d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.59. Engine confirms tangled_rope classification at analytical level."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "militia_state_control_threshold",
+      "question": "At what operational autonomy level does the maritime militia transition from plausible deniable proxy to overt state tool?",
+      "resolution_mechanism": "Analysis of command structure, fuel provisioning, tactical coordination patterns, communication infrastructure; comparison with known state-controlled military operations",
+      "impact": "If fully state-controlled: snare classification from all perspectives becomes dominant (pure coercion). If semi-autonomous: tangled_rope holds (coordination + extraction hybrid). If truly independent: classification shifts toward rope (coordination problem).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of state control over maritime militia operational autonomy"
+    },
+    {
+      "id": "japanese_escalation_redline",
+      "question": "Does Japan have a credible military escalation option that would cause militia wall formation to cease, and at what threshold?",
+      "resolution_mechanism": "Gaming of military scenarios; assessment of Japanese political tolerance for naval conflict; historical analysis of previous confrontation patterns and their resolution",
+      "impact": "If escalation threshold is clear and credible: victims transition from trapped to constrained exit. If no credible escalation option: trapped exit remains; snare strengthens. If threshold is ambiguous: constrained exit becomes more likely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Existence and credibility of Japanese military escalation threshold"
+    },
+    {
+      "id": "fishing_vessel_coordination_mechanism",
+      "question": "Are the 2,000 fishing vessels organized through economic incentives (subsidies, protection guarantees, preferential access) or through direct command? How much is coordination vs coercion?",
+      "resolution_mechanism": "Analysis of financial flows to militia participants; interviews with fishing crews; comparison of militia participation rates to economic incentive structures; assessment of penalties for non-participation",
+      "impact": "If primarily incentive-driven: coordination component (rope/tangled_rope) is genuine; suppression is lower. If command-driven: pure coercion (snare) dominates; theater may be higher (performance of civilian purpose). If mixed: current tangled_rope holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Balance between economic incentive and command structures in militia participation"
+    },
+    {
+      "id": "median_line_legitimacy_contest",
+      "question": "Is the Sino-Japanese median line itself a legitimate boundary or a contested claim? If contested, is the militia barrier defending a claim or establishing one?",
+      "resolution_mechanism": "Legal analysis of EEZ delimitation principles; historical record of maritime agreements; assessment of which party initiated the median line as boundary; examination of third-party recognition",
+      "impact": "If Japan legitimately controls median line: militia barrier is clear extraction (snare). If boundary is genuinely contested: militia barrier becomes coordination mechanism for establishing claim (rope becomes viable). If both parties have plausible claims: constraint becomes symmetric (perspectives converge).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legitimacy status of the Sino-Japanese median line boundary"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "China's deployment of massive fishing vessel 'flotillas' forming 400+ kilometer floating walls near the Sino-Japanese median line represents a novel form of maritime coercion that blurs the distinction between civilian activity, state agency, and military operations. The constraint exhibits tangled rope structure: it serves a genuine coordination function for China (projecting state presence without direct military escalation, mobilizing dispersed fishing interests into collective action) while simultaneously extracting access denial and political concessions from Japan and regional observers. The fishing vessels are ostensibly independent operators pursuing commercial activity, yet their coordinated formation into barriers at strategic moments indicates state direction. Japanese authorities face a structural dilemma: the militia barrier is not a military asset (subject to conventional deterrence) but also not purely civilian activity (subject to normal maritime law). The theater_ratio reflects this ambiguity \u2014 the flotilla is simultaneously a functioning coercive mechanism and a performance of civilian maritime activity. Extractiveness has increased over the interval as operational sophistication and frequency of deployments have grown, suggesting accumulated learning in the coercion mechanism.",
+    "key_agents": [
+      "Chinese State & Militia Operators: Primary beneficiary (institutional/arbitrage) \u2014 extends state power projection capacity without direct military escalation; gains access denial and political concessions",
+      "Japanese Fishing Fleet: Primary victim (powerless/trapped) \u2014 cannot access traditional fishing grounds without confrontation risk; lacks recourse mechanisms",
+      "Japanese Coast Guard & Maritime Authority: Secondary victim (moderate/constrained) \u2014 constrained by rules of engagement and escalation risk; extracts political cost but insufficient to break barrier",
+      "ASEAN Maritime States: Tertiary victims (organized/constrained) \u2014 limited by economic dependence on China; face coercive spillover but maintain coordination benefits with China",
+      "International Maritime Law Framework: Institutional actor (institutional/arbitrage) \u2014 nominally applies but degraded in enforcement; theater persists while practice diverges",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 identifies dual coordination-extraction function; sees constraint as hybrid rather than pure coercion"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The militia barrier denies Japanese maritime access and compels political concessions (recognition of Chinese claims, coordination on disputed waters). However, extraction is not maximal because: (1) alternative fishing grounds exist at higher cost rather than impossible access, (2) Japan retains coast guard presence and can monitor/document violations, (3) international attention creates some cost to China. The value reflects significant but not absolute extraction. Suppression (0.72): High. Multiple barriers to Japanese response: (a) militia vessels are nominally civilian, making military response costly politically, (b) China maintains deniability of operational control, (c) escalation risks economic/military consequences disproportionate to fishing access, (d) international law enforcement is weak in disputed waters. Theater ratio (0.68): High. The flotilla operates as simultaneous performance of civilian maritime activity and military coercion. The 'fishing vessel' framing is essential to the coercive mechanism \u2014 treating them as military assets would expose China to different legal/diplomatic costs. The theater has increased over time as operational sophistication makes the performance more elaborate (sustained coordination, timed deployments, engagement protocols).",
+    "perspectival_gap": "This constraint shows maximum perspectival divergence between victim and beneficiary perspectives. Japanese fishing fleet sees pure snare (extraction without coordination benefit). Chinese state sees rope/coordination mechanism for extending state capacity at low cost. ASEAN sees tangled rope (constrained by Chinese economic/political leverage but also benefiting from infrastructure and market access). International maritime law sees piton (framework persists theatrically while enforcement degrades). The analytical observer at civilizational scale sees genuine dual function (tangled rope confirmed) \u2014 China is simultaneously solving its own problem (low-cost state projection) and extracting from Japan (access denial). The perspectival gap is not resolvable by choosing a 'correct' view; it reflects the actual structural ambiguity: the constraint IS both coordination and extraction.",
+    "directionality_logic": "Japanese fishing fleet: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Chinese state: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Japanese coast guard: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.33. High extraction but constrained by escalation risk. ASEAN: Mixed + constrained \u2192 d\u22480.65, f(d)\u22480.95. Moderate extraction offset by coordination benefits. International law: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Framework persists without enforcement. Analytical: observer \u2192 d\u22480.68, f(d)\u22481.02. Confirms tangled_rope at civilizational scale.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint resolves mandatrophy by identifying genuine dual function. The critical mandatrophy question is: 'Is this coordination with extraction, or extraction masquerading as coordination?' Structural analysis confirms both are real: (1) Coordination function: China mobilizes dispersed fishing interests (thousands of independent vessels) into collective action for state projection. This solves a real coordination problem \u2014 individual vessels cannot exert state presence, but coordinated flotilla achieves it. The coordination is genuine, not theater. (2) Extraction function: The same coordinated action denies Japanese maritime access and compels political concessions. This extraction is not byproduct; it is primary goal. Both functions are structural, not secondary. The constraint cannot be reclassified as pure coordination (rope) because suppression is too high (0.72) and victims exist with trapped/constrained exit. It cannot be reclassified as pure snare because beneficiaries (Chinese state) genuinely benefit from coordination mechanism, not merely from extraction. Theater ratio (0.68) indicates significant performative dimension but not Piton-level degradation (\u22650.70). The tangled_rope classification holds: 0.40 \u2264 \u03c7 \u2264 0.90 (\u03c7\u22480.59 at analytical level), base extraction \u03b5\u22650.30 (\u03b5=0.58), suppression \u22650.40 (suppression=0.72), beneficiaries present, victims present, active enforcement required. All gates satisfied."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.35
+  },
+  "network": {
+    "affects_constraints": [
+      "sino_japanese_eez_delimitation",
+      "south_china_sea_nine_dash_line",
+      "chinese_coast_guard_institutional_capacity"
+    ],
+    "dual_formulation_note": "The floating wall constraint is downstream of the Sino-Japanese maritime boundary dispute but represents a distinct structural innovation in coercive mechanism design. EEZ delimitation claims (\u03b5\u22480.15, mountain/rope) provide the upstream legitimacy claim; the floating wall (\u03b5=0.58, tangled_rope) operationalizes coercion through civilian-military hybrid means. The network link captures how unresolved boundary disputes create conditions for novel constraint architectures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

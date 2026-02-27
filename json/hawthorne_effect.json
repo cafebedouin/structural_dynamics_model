@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "hawthorne_effect",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "haw"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Hawthorne Effect (Observer Effect)",
+    "topic_domain": "social/economic/behavioral",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "observer_institution",
+      "knowledge_extractors"
+    ],
+    "victims": [
+      "observed_subjects",
+      "behavioral_authenticity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Observed Subject",
+      "comment": "PERSPECTIVE 1: OBSERVED SUBJECT (SNARE) \u2014 Worker or research participant cannot exit the observation context without career/participation consequences. Awareness of observation creates behavioral modification pressure with no genuine choice. The subject experiences maximum extraction: authentic behavior is suppressed, replaced by performative compliance. No exit options available within the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Middle Manager",
+      "comment": "PERSPECTIVE 2: MIDDLE MANAGER (TANGLED ROPE) \u2014 Benefits from improved measured productivity during observation periods (gets credit for 'managing the effect'), but also constrained by knowledge that measurements are reactive and behavioral data is compromised. Experiences both coordination function (supervision does enable communication) and extraction (pressure to maintain performative metrics). Constrained exit: cannot fully leave the observation regime without losing supervisory authority."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Observer Institution",
+      "comment": "PERSPECTIVE 3: OBSERVER INSTITUTION (ROPE) \u2014 Research institutions, management consultancies, and survey organizations benefit from extracting productivity data and behavioral information. Experience the constraint as pure coordination: observation enables measurement, measurement enables knowledge production. Can arbitrage the behavioral modification effect (designing experiments to measure it) or bypass it (switching to unobserved contexts). Net beneficiary with genuine exit options."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Transparency Coalition",
+      "comment": "PERSPECTIVE 4: TRANSPARENCY COALITION (SCAFFOLD) \u2014 Organized labor, worker advocacy groups, and scientific integrity organizations advocate for observer disclosure and informed consent regimes. See the raw Hawthorne effect as a temporary problem with a sunset: transparent observation protocols, automated measurement, and participatory research design are reducing the reactivity gap. Theater ratio declining as observation becomes normalized and depersonalized. Extraction mechanism weakens as agency and consent replace covert surveillance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Scientific Method Apparatus",
+      "comment": "PERSPECTIVE 5: SCIENTIFIC METHOD APPARATUS (PITON) \u2014 The Hawthorne effect is now largely recognized as a confound in experimental design rather than a novel phenomenon. Observation protocols persist through institutional ritual (double-blind procedures, control groups, statistical adjustment) despite widespread acknowledgment that they don't solve reactivity \u2014 they just redistribute it. The apparatus maintains theater (observance of methodological procedure) while the original functional claim (that we can separate observer from observed) has degraded. Sustained through methodological inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, observation-induced behavior modification is an inherent feature of conscious agents: awareness of observation necessarily alters the observed system (related to thermodynamic measurement uncertainty, quantum mechanics' observer effect, and the reflexivity principle in social science). The constraint appears as an immutable law of measurement itself. However, the structural data (moderate extractiveness, significant suppression, high theater) contradicts the mountain classification \u2014 the engine will compute this as a false summit, revealing naturalization of what is actually a contingent institutional practice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "automation_vs_awareness_threshold",
+      "question": "Does automated observation (sensors, algorithmic monitoring) reduce reactivity compared to human observation, or does awareness of automation produce equivalent behavioral modification?",
+      "resolution_mechanism": "Controlled experiments comparing behavior under human observation vs algorithmic observation vs no observation; analysis of stress biomarkers and behavioral deviation rates",
+      "impact": "If automation reduces reactivity: extractiveness drops to ~0.15, constraint reclassifies as Rope from most perspectives. If awareness of algorithms produces equivalent modification: extractiveness remains ~0.38, and automation is merely a theater substitution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether automation reduces observation-induced reactivity"
+    },
+    {
+      "id": "informed_consent_suppression_reduction",
+      "question": "Does explicit informed consent about observation reduce the extraction mechanism, or does the knowledge that one has consented create a different form of behavioral pressure?",
+      "resolution_mechanism": "Meta-analysis of consent protocols and behavioral modification rates; longitudinal studies tracking behavior before, during, and after consent disclosure",
+      "impact": "If consent genuinely reduces extraction: suppression drops to ~0.20, constraint reclassifies as Rope or Scaffold from most perspectives. If consent creates performative compliance of a different type: suppression remains ~0.42, and transparency is theater substitution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether informed consent reduces observation-induced suppression"
+    },
+    {
+      "id": "observer_effect_universality",
+      "question": "Is observation-induced behavior modification a universal feature of conscious measurement systems, or is it a contingent property of specific social/institutional contexts?",
+      "resolution_mechanism": "Cross-cultural and cross-species studies of reactivity; analysis of whether measurement protocols in non-human systems exhibit equivalent modification patterns",
+      "impact": "If universal: mountain classification is justified, extractiveness is ~0.10, constraint reflects a natural law. If contingent: constraint is fundamentally social/institutional, extractiveness remains ~0.38, and the mountain perspective is a false summit.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether observation effects are universal laws or contingent institutional properties"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Hawthorne Effect describes how individuals modify their behavior in response to awareness of being observed. The original Hawthorne studies (1924-1933) investigated worker productivity at the Western Electric Company and found that both improved working conditions AND deteriorated conditions led to increased productivity \u2014 a result attributed to the fact that workers were aware they were being studied. This constraint creates a structural tension between the epistemic goal of accurate behavioral measurement and the institutional reality that measurement itself corrupts the observed behavior. The same structural phenomenon \u2014 the reactive nature of observation \u2014 appears as an immutable natural law (mountain: observer effect is inherent to consciousness), a coordination problem solved through better experimental design (rope: observation enables communication), a mixed coordination-extraction hybrid (tangled rope: measurement enables knowledge production but suppresses authenticity), a temporary problem being solved through transparency and consent (scaffold: informed observation regimes), and a degraded methodological ritual (piton: statistical controls persist despite widespread acknowledgment of their insufficiency). The constraint operates through awareness and behavioral modification pressure, making it fundamentally about the gap between authentic behavior and performed behavior.",
+    "key_agents": [
+      "Observed Subjects: Primary victim (powerless/trapped) \u2014 workers, research participants, monitored citizens who cannot exit the observation context without career/participation consequences",
+      "Observer Institution: Primary beneficiary (institutional/arbitrage) \u2014 research organizations, management consultancies, government agencies, and surveillance systems that extract behavioral and productivity data",
+      "Middle Management: Secondary actor (moderate/constrained) \u2014 supervisors and implementers who benefit from measured productivity but also face pressure from knowing that metrics are reactive",
+      "Transparency Coalition: Organized agents (organized/constrained) \u2014 labor unions, worker advocates, research ethicists building informed consent and disclosure protocols as sunset mechanisms",
+      "Scientific Method Apparatus: Institutional actor (institutional/arbitrage) \u2014 the standardized protocols, statistical controls, and methodological rituals that maintain the observation regime through inertia",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing a contingent institutional practice as an inherent property of measurement itself"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts behavioral authenticity and replaces it with performative compliance. The original 1924-1933 Hawthorne studies showed productivity increases under both improvement and deterioration conditions, indicating the effect size is real but not maximal \u2014 workers were modifying behavior but not completely suppressing authentic responses. Modern assessment suggests the effect is conditional on context and subject population; extractiveness is not as high as pure coercion (which would be >0.60). Suppression (0.42): Moderate-high. Significant barriers prevent authentic behavior: awareness of observation creates psychological pressure, career/institutional consequences for non-compliance, lack of genuine alternatives, and no meaningful exit. But suppression is not total \u2014 some subjects can and do resist performative pressure, and transparency protocols partially reduce the barrier. Theater ratio (0.68): High. Contemporary observation regimes are substantially performative: double-blind procedures, statistical controls, and methodological rituals persist despite widespread acknowledgment that they don't solve reactivity. The rituals maintain the appearance of controlled measurement while the core problem (observer-induced modification) remains unresolved. Theater has increased over the interval as the scientific community has institutionalized observation protocols and defended them through methodological elaboration rather than addressing the underlying reactivity.",
+    "directionality_logic": "Each perspective's directionality is determined by the agent's structural position relative to the observation-extraction flow. Observed subjects (powerless/trapped) have zero exit options and bear full cost of behavioral suppression \u2014 they experience high d (~0.95) leading to high f(d) and high chi. Observer institutions (institutional/arbitrage) benefit from behavioral data and can exit by switching to alternative measurement contexts or by arbitraging the effect itself \u2014 they experience low d (~0.15) leading to negative f(d) and negative chi. Middle managers (moderate/constrained) occupy an intermediate position: they benefit from measured productivity improvements but face pressure from knowing metrics are reactive \u2014 they experience moderate d (~0.55) leading to moderate chi. The transparency coalition (organized/constrained) experiences constrained exit through advocacy and protocol reform rather than individual escape \u2014 they experience moderate-high d (~0.65) but with agency that produces organized action rather than trapped suffering. The scientific apparatus (institutional/arbitrage) is a beneficiary through its role in maintaining the observation regime \u2014 low d (~0.15). The analytical observer's mountain perspective risks zero d (natural law, no directionality) but is exposed as false because the engine computes the perspective's directionality from the constraint's actual structure, not from its natural-law framing.",
+    "perspectival_gap": "This constraint demonstrates the full perspectival divergence between those who experience measurement and those who conduct it. The observed subject sees pure extraction (Snare) \u2014 awareness of observation is mandatory, behavioral modification is coercive, and there is no exit. The observer institution sees pure coordination (Rope) \u2014 observation enables knowledge production, and they can exit by choosing alternative measurement contexts. The middle manager sees hybrid extraction-coordination (Tangled Rope) \u2014 they benefit from measured improvements but understand the measurements are reactive. The transparency coalition sees a temporary problem with a sunset (Scaffold) \u2014 informed consent and automated monitoring are reducing the extraction mechanism. The scientific apparatus sees its own degraded ritual (Piton) \u2014 methodological controls persist through professional convention despite widespread acknowledgment of their insufficiency. The civilizational analytical observer risks seeing an immutable natural law (Mountain) \u2014 observation necessarily modifies behavior \u2014 but the structural data reveals this as naturalization: the effect size is contingent on institutional context, power asymmetries, and disclosure regimes.",
+    "mandatrophy_analysis": "The Hawthorne Effect resolves the mandatrophy by demonstrating that all six types are legitimate perspectival readings reflecting genuinely different structural positions. The constraint is not 'which type is correct?' but 'which observer position are you reading from?' The beneficiary's rope and the victim's snare are both accurate descriptions of their structural experiences. The scaffold is a real institutional structure (consent protocols, transparency norms) being built to provide sunset mechanisms. The piton is a real observation about scientific practice (ritualized controls with degraded function). The mountain is a false summit \u2014 the analytical observer risks naturalizing what is actually a contingent, modifiable institutional arrangement (observation regimes, power asymmetries, disclosure requirements). The presheaf over the observation site reveals that mandatrophy is not a flaw but a feature: the constraint genuinely looks different from different structural positions, and naming those positions precisely is the work of indexed classification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "measurement_validity_degradation",
+      "workplace_surveillance_extraction"
+    ],
+    "dual_formulation_note": "The Hawthorne Effect is a general phenomenon but operates through distinct mechanisms in different institutional contexts. Workplace observation (productivity measurement, surveillance) and research observation (experimental design, informed consent) share the same base structure (awareness \u2192 behavior modification) but differ in exit options and consent regimes. This story captures the general constraint; downstream stories handle domain-specific implementations."
+  },
+  "directionality_overrides": []
+}

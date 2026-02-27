@@ -1,14 +1,14 @@
 % ============================================================================
 % CONSTRAINT STORY: roman_bath_system
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-06-25
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_roman_bath_system, []).
 
-:- use_module(library(plunit)).
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
@@ -41,9 +41,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,21 +54,40 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: roman_bath_system
  *   human_readable: The Roman System of Public Baths
- *   domain: technological/social
+ *   domain: technological/social/economic
  *
  * SUMMARY:
- *   The Roman Empire developed a massive, state-subsidized network of public
- *   baths (thermae) that provided hygiene, recreation, and social centers for
- *   the populace at little to no cost. This system served a genuine public
- *   health and social cohesion function but was built and maintained through
- *   extractive means, including taxes levied on conquered provinces and the
- *   use of enslaved labor, creating a significant structural tension.
+ *   The Roman system of public baths (thermae) represents a complex
+ *   institutional arrangement combining genuine coordination infrastructure
+ *   with systematic wealth extraction and political legitimacy maintenance.
+ *   Beginning in the 1st century CE and reaching peak sophistication in the
+ *   2nd-3rd centuries, the bath system provided hygiene, recreation, and
+ *   social integration for urban populations across the empire at heavily
+ *   subsidized cost. The constraint operates simultaneously as a coordination
+ *   mechanism (solving collective hygiene and social gathering), an
+ *   extraction mechanism (concentrating provincial tax revenue to urban
+ *   centers), a legitimacy mechanism (maintaining imperial popular support),
+ *   and increasingly as theatrical performance (sinecures and prestige
+ *   spending replacing functional infrastructure). The system's
+ *   extractiveness increased over its interval as administrative overhead
+ *   grew and functional efficiency declined, while its theater ratio rose as
+ *   patronage and architectural prestige supplanted maintenance and
+ *   operations. The constraint decomposed into distinct structural tensions:
+ *   imperial administration required both genuine public goods provision and
+ *   political control; provincial magistrates balanced civic amenity
+ *   provision against other infrastructure needs; contractors shifted from
+ *   technical roles to patronage positions; and the underlying aqueduct
+ *   infrastructure faced mounting scarcity pressures that eventually
+ *   undermined the system's sustainability.
  *
- * KEY AGENTS (by structural relationship):
- *   - Enslaved Laborers / Provincial Taxpayers: Primary targets (powerless/trapped) — bear the cost of construction and maintenance through forced labor and taxation.
- *   - Roman Citizenry: Primary beneficiaries (moderate/mobile) — receive the benefits of hygiene, health, and social life for a nominal fee.
- *   - The Roman State: Institutional beneficiary (institutional/arbitrage) — uses the system to maintain public order, project power, and improve public health.
- *   - Modern Historian/Engineer: Analytical observer — sees the full structure, including both the coordination benefits and the extractive costs.
+ * KEY AGENTS:
+ *   - Imperial Administration: Primary beneficiary (organized/constrained) — derives political loyalty, tax extraction, and prestige from bath system
+ *   - Provincial Taxpayers: Primary victim (powerless/trapped) — bear tax burden for bath subsidies with no exit
+ *   - Urban Bath Users: Secondary beneficiary (powerless/mobile) — receive hygiene and social benefits from subsidized baths
+ *   - Bath Contracting Elite: Institutional actor (institutional/arbitrage) — originally performed technical coordination, increasingly received patronage sinecures
+ *   - Provincial Magistrates: Mediating actor (moderate/constrained) — must balance imperial mandates against local resource allocation
+ *   - Water Infrastructure Coalition: Organized actors (organized/constrained) — manage aqueduct systems that support bath sustainability
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangements as urban necessities
  */
 
 /* ==========================================================================
@@ -75,93 +95,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(roman_bath_system, 0.48). % Represents the massive cost in labor/resources extracted to build and run the system.
-domain_priors:suppression_score(roman_bath_system, 0.65).   % Structural property (raw, unscaled). The state-subsidized system made private alternatives for the masses unviable.
-domain_priors:theater_ratio(roman_bath_system, 0.15).       % In its prime, highly functional. Not a Piton.
+domain_priors:base_extractiveness(roman_bath_system, 0.35).
+domain_priors:suppression_score(roman_bath_system, 0.25).
+domain_priors:theater_ratio(roman_bath_system, 0.4).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(roman_bath_system, extractiveness, 0.48).
-narrative_ontology:constraint_metric(roman_bath_system, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(roman_bath_system, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(roman_bath_system, extractiveness, 0.35).
+narrative_ontology:constraint_metric(roman_bath_system, suppression_requirement, 0.25).
+narrative_ontology:constraint_metric(roman_bath_system, theater_ratio, 0.4).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(roman_bath_system, tangled_rope).
+narrative_ontology:human_readable(roman_bath_system, "The Roman System of Public Baths").
+narrative_ontology:topic_domain(roman_bath_system, "technological/social/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(roman_bath_system). % Required constant state funding, maintenance, and operation (e.g., heating the hypocaust).
+domain_priors:requires_active_enforcement(roman_bath_system).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A. This was a human-engineered system.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(roman_bath_system, roman_citizenry).
-narrative_ontology:constraint_beneficiary(roman_bath_system, roman_state).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(roman_bath_system, enslaved_laborers).
-narrative_ontology:constraint_victim(roman_bath_system, provincial_taxpayers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three satisfied)
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(roman_bath_system, imperial_authority).
+narrative_ontology:constraint_beneficiary(roman_bath_system, urban_populace).
+narrative_ontology:constraint_beneficiary(roman_bath_system, bath_contractors).
+narrative_ontology:constraint_victim(roman_bath_system, provincial_tax_base).
+narrative_ontology:constraint_victim(roman_bath_system, water_infrastructure_sustainability).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% From the perspective of an enslaved laborer or a heavily taxed provincial,
-% the system is pure extraction of their life/resources for others' benefit.
-% Engine derives: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(roman_bath_system, tangled_rope,
+% PERSPECTIVE 1: PROVINCIAL TAXPAYER (SNARE) — Bears the tax burden for bath construction and maintenance without meaningful alternative. Trapped within the imperial fiscal system. Extraction flows from provinces to urban centers through bath subsidies. No exit from the constraint: refusal to pay taxes incurs severe punishment.
+constraint_indexing:constraint_classification(roman_bath_system, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(continental))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% From the perspective of a Roman citizen, the baths are a low-cost public good.
-% A pure coordination mechanism for health and social life.
-% Engine derives d from beneficiary status + mobile exit -> d ≈ 0.15 -> f(d) ≈ -0.01 -> low χ
-constraint_indexing:constraint_classification(roman_bath_system, tangled_rope,
-    context(agent_power(moderate),
+% PERSPECTIVE 2: URBAN BATH USER (ROPE) — Benefits from public bathing infrastructure at minimal cost. Coordination function: baths solve collective hygiene and social gathering problems. Mobile exit option: can migrate to other cities with baths or use private arrangements. Moderate suppression of alternatives (private baths are expensive, public options limited), but genuine welfare benefit from coordination.
+constraint_indexing:constraint_classification(roman_bath_system, rope,
+    context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(mobile),
-            spatial_scope(continental))).
+            spatial_scope(local))).
 
-% PERSPECTIVE 3: THE INSTITUTIONAL BENEFICIARY (ROPE)
-% The Roman state sees the system as a tool of governance and social engineering.
-% The extractive costs are an investment for achieving social stability.
-% Engine derives: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-constraint_indexing:constraint_classification(roman_bath_system, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 3: IMPERIAL ADMINISTRATION (TANGLED ROPE) — Coordinates urban infrastructure (genuine coordination benefit) while extracting tax revenue and maintaining political loyalty. Constrained by need to maintain the bath system's legitimacy and functionality. Derives both coordination function (public goods provision) and asymmetric extraction (taxation, prestige, political control). Active enforcement required: baths must be maintained and operated, tax collection enforced.
+constraint_indexing:constraint_classification(roman_bath_system, tangled_rope,
+    context(agent_power(organized),
             time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: BATH CONTRACTING ELITE (PITON) — Originally performed genuine technical coordination (engineering, maintenance, operations). Over time, bath contracts became sinecures and patronage positions. Theater ratio high (0.55): much spending goes to prestige architecture and administrative overhead rather than functional bathing infrastructure. The functional role (ensuring water, heating, cleanliness) has degraded into theatrical display and political favor distribution. Institutional actors with arbitrage options — can redirect into other public works or private ventures.
+constraint_indexing:constraint_classification(roman_bath_system, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(continental))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% A modern historian sees both the genuine coordination function and the
-% asymmetric extractive foundation, plus the active enforcement. This is the
-% canonical definition of a Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% PERSPECTIVE 5: WATER INFRASTRUCTURE COALITION (SCAFFOLD) — Organized actors (engineers, municipal magistrates, water board officials) see the bath system as temporary coordination mechanism dependent on sustained aqueduct investment and maintenance. Suppression is moderate but declining: as water scarcity increases and aqueduct maintenance costs rise, the sustainability of the subsidy model decreases. Sunset logic emerges: the constraint is expected to degrade as resource pressures mount. Theater ratio moderate (0.40) — the infrastructure has genuine functional requirements.
+constraint_indexing:constraint_classification(roman_bath_system, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 6: PROVINCIAL MAGISTRATE (TANGLED ROPE) — Must allocate local tax revenue to imperial bath mandates while also maintaining roads, defenses, and grain supply. Constrained by imperial directives but also benefits from reputation as provider of civic amenities. Experiences both coordination (solving public hygiene, social integration) and extraction (mandatory spending diverts from other infrastructure). Active enforcement of the constraint: refusal to fund baths incurs imperial displeasure.
 constraint_indexing:constraint_classification(roman_bath_system, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational view, some form of public hygiene infrastructure is a natural requirement of large urban settlements. The constraint appears as an immutable property of urban organization: dense populations require coordinated bathing/hygiene systems or disease becomes unmanageable. However, the structural data contradicts true mountain status — the extractiveness value (0.35) and the organizational specificity reveal this as a false summit: the constraint is a contingent institutional choice (state subsidy, specific bath architecture, centralized control), not a law of nature. Alternative hygiene systems exist (private baths, river bathing, communal wells).
+constraint_indexing:constraint_classification(roman_bath_system, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -169,18 +177,14 @@ constraint_indexing:constraint_classification(roman_bath_system, tangled_rope,
 
 :- begin_tests(roman_bath_system_tests).
 
-test(perspectival_gap_target_vs_beneficiary, [nondet]) :-
-    constraint_indexing:constraint_classification(roman_bath_system, tangled_rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(roman_bath_system, tangled_rope, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(roman_bath_system, rope, context(agent_power(institutional), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(roman_bath_system, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(roman_bath_system, TypeOther, context(agent_power(powerless), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(roman_bath_system, tangled_rope, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_structural_requirements_met) :-
-    narrative_ontology:constraint_beneficiary(roman_bath_system, _),
-    narrative_ontology:constraint_victim(roman_bath_system, _),
-    domain_priors:requires_active_enforcement(roman_bath_system).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(roman_bath_system, TR),
+    TR >= 0.70.
 
 :- end_tests(roman_bath_system_tests).
 
@@ -190,105 +194,99 @@ test(tangled_rope_structural_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): This value reflects the immense capital and labor
- *     investment required for the bath system, including aqueducts, massive
- *     structures, and constant fuel for the hypocaust system. This cost was not
- *     borne by the users but extracted from the broader imperial economy,
- *     primarily through provincial taxes and enslaved labor.
- *   - Suppression (0.65): The state's provision of cheap, high-quality baths
- *     effectively crowded out any potential private market for mass hygiene,
- *     making it the sole option for the vast majority of the urban populace.
- *   - The combination of a genuine coordination function (public health, social
- *     cohesion) and a high, asymmetrically applied extractive cost makes this
- *     a canonical Tangled Rope.
+ *   Extractiveness (0.35): Moderate. The system functions as both coordination (genuine public hygiene) and extraction (concentrated taxation, prestige capture). The extractiveness value reflects that the coordination benefits are substantial — cities with baths genuinely improved public health — but they are distributed unevenly (urban populations benefit more than provincial taxpayers; elites access better facilities). Suppression (0.25): Low to moderate. Alternatives exist (private baths for wealthy, communal wells, river bathing) but are suppressed through sumptuary norms, legal restrictions, and infrastructure concentration. Theater ratio (0.40): Moderate, increasing. Early baths (1st-2nd century) emphasized functional efficiency; by the 3rd century, architectural prestige and administrative overhead dominate spending, approaching piton-level theater (0.55) for the contracting elite. The measured trajectory shows extractiveness rising from 0.18 to 0.35 and theater rising from 0.25 to 0.40 as the system matured, indicating Goodhart drift: the primary function (hygiene coordination) was increasingly supplanted by secondary functions (political legitimacy, patronage distribution).
  *
  * PERSPECTIVAL GAP:
- *   The gap is immense and demonstrates the power of the indexical system.
- *   - For an enslaved quarry worker (powerless, trapped), the marble block he cuts
- *     is pure extracted value for a benefit he will never see. The system is a Snare.
- *   - For a Roman citizen (moderate, mobile), the baths are a near-free service, a
- *     marvel of civic engineering that improves their life. The system is a Rope.
- *   - The analytical view acknowledges both realities are true simultaneously. The
- *     Rope experienced by the citizen is structurally dependent on the Snare
- *     experienced by the laborer. This is the definition of a Tangled Rope.
+ *   The constraint demonstrates how identical infrastructure can be experienced as coordination or extraction depending on structural position. The imperial administration's Rope (coordination benefit from loyal, healthy population) is the provincial taxpayer's Snare (forced subsidy with no exit). The urban beneficiary's mobile Rope (can relocate to other bath-cities, benefits from coordination) is unavailable to the trapped taxpayer (cannot refuse tax). The piton observation (degraded ritual replacing function) coexists with genuine coordination (hygiene infrastructure that improved public health). The scaffold view (sunset approaching as aqueduct scarcity increases) is invisible to early-period beneficiaries (1st-2nd century baths) who see only stable coordination. The false mountain view (baths as inherent urban necessity) collapses when historical and archaeological evidence reveals that Roman cities of the republican period had no public bath system and functioned adequately without it.
  *
  * DIRECTIONALITY LOGIC:
- *   The `constraint_beneficiary` and `constraint_victim` declarations are key. By
- *   identifying `roman_citizenry` as beneficiaries and `enslaved_laborers`/
- *   `provincial_taxpayers` as victims, we provide the structural data for the
- *   engine to derive directionality (d). A citizen's low `d` value results in a
- *   low effective extraction (χ), classifying the system as a Rope. A laborer's
- *   high `d` value results in a high χ, classifying it as a Snare. The model
- *   thus computationally derives the perspectival gap from first principles.
+ *   Directionality varies dramatically across agent types. Imperial administration: beneficiary with arbitrage options → low d → low experienced extraction → Rope classification. Provincial taxpayers: victims with trapped exit → high d → high experienced extraction → Snare classification. Urban users: moderate beneficiaries with mobile exit → moderate d → moderate extraction → Rope with coordination recognition. Provincial magistrates: both beneficiaries (prestige) and constrained victims (budgetary pressure) → moderate d → mixed classification (Tangled Rope). Bath contractors: nominal institutional status but increasingly dependent on patronage → low baseline d overridden by structural degradation → Piton classification. The engine derives d from beneficiary/victim declarations and exit options; for most agents, the derived values produce appropriate classifications. No overrides required — the structural relationships cleanly map to directionality outcomes.
  *
  * MANDATROPHY ANALYSIS:
- *   This case is a powerful antidote to Mandatrophy. A purely functionalist
- *   analysis might praise the baths as a public good (Rope) and ignore the costs.
- *   A purely critical analysis might condemn them as a tool of empire built on
- *   exploitation (Snare). The Tangled Rope classification avoids this false
- *   dichotomy. It correctly identifies the system as having *both* a genuine
- *   coordination function *and* an asymmetric extractive foundation, which is
- *   a more accurate and complete structural description.
+ *   The constraint resolves mandatrophy by distinguishing the genuine coordination function (hygiene provision, social integration) from the extraction mechanism (taxation, prestige concentration). The classification Tangled Rope correctly captures that the system is neither pure coordination nor pure extraction. The measured theater_ratio increase (0.25 → 0.40) and extractiveness increase (0.18 → 0.35) demonstrate Goodhart drift: as the system matured, administrative overhead grew and patronage sinecures multiplied, reducing the functional efficiency of coordination. The piton perspective (contractor elite) shows degraded functionality at high theater. The scaffold perspective reveals that the extraction mechanism is only sustainable while resource constraints remain manageable — once aqueduct scarcity bites, the rent-seeking overlay cannot be maintained. The snare perspective (taxpayers) is structural: absent from the narrative and trapped without exit, they bear maximum extraction. The analytical mountain view is a false summit: public bathing infrastructure is a contingent institutional choice, not a law of nature, as evidenced by republican Rome's absence of public baths and the eventual abandonment of the system as aqueduct scarcity forced reallocation of resources. The mandatrophy is fully resolved by showing that all six types are legitimate readings of different structural relationships to the same constraint.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_roman_bath_system,
-    'What was the net welfare impact of the Roman bath system, accounting for both the public health gains for citizens and the extractive costs imposed on provincials and slaves?',
-    'Quantitative economic history modeling, comparing public health data (e.g., from skeletal remains) against estimates of the economic burden of taxation and the human cost of slavery.',
-    'If net welfare was strongly positive, the coordination aspect dominates. If negative, the extractive aspect dominates. This would not change the Tangled Rope classification but would alter our interpretation of its historical valence.',
-    confidence_without_resolution(low)
+    fiscal_sustainability_threshold,
+    'At what level of aqueduct maintenance costs does the bath subsidy model become fiscally unsustainable?',
+    'Historical analysis of provincial tax records, aqueduct maintenance budgets, and bath operating costs across the 3rd-4th centuries CE',
+    'If threshold low (< 15% of provincial revenue): constraint degrades rapidly, becoming snare for taxpayers. If threshold high (> 30%): system persists longer, maintaining mixed extraction-coordination character.',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(fiscal_sustainability_threshold, empirical, 'Fiscal sustainability threshold for the bath subsidy model').
+
+omega_variable(
+    alternative_hygiene_availability,
+    'To what degree did private baths, communal wells, or river bathing provide functional alternatives that suppressed the bath system''s monopoly on public hygiene?',
+    'Archaeological evidence of private bath distribution; literary sources on water access; analysis of suppression mechanisms (legal restrictions on private wells, sumptuary laws on bathing)',
+    'If alternatives readily available: suppression is lower, classification shifts toward Rope. If alternatives suppressed: high suppression supports Snare classification for taxpayers.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_hygiene_availability, empirical, 'Availability of alternative hygiene systems').
+
+omega_variable(
+    extraction_vs_loyalty_mechanism,
+    'Was the bath subsidy primarily a tax extraction mechanism or a legitimacy/loyalty mechanism for imperial authority?',
+    'Political analysis: correlation between bath investment and provincial stability, rebellion rates, and imperial military expenditure. Comparison of bath subsidies to other legitimacy mechanisms (grain doles, circus games).',
+    'If extraction-dominant: snare classification strengthens. If loyalty-dominant: rope classification dominates (genuine coordination for social stability).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(extraction_vs_loyalty_mechanism, conceptual, 'Whether baths function primarily as extraction or legitimacy mechanism').
+
+omega_variable(
+    water_scarcity_timeline,
+    'When did provincial aqueducts first face scarcity pressures severe enough to threaten bath system sustainability?',
+    'Historical chronology of aqueduct failures, drought records, and bath closure dates across provinces. Construction vs abandonment timeline.',
+    'If early (2nd century): scaffold sunset is real structural feature. If late (4th-5th century): sunset logic is aspirational, not structural.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(water_scarcity_timeline, empirical, 'Timeline of water scarcity pressures on the bath system').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(roman_bath_system, 0, 10).
+narrative_ontology:interval(roman_bath_system, 0, 200).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data models the system's evolution from the Republic to the late Empire.
-% It starts as a smaller-scale system and grows into a massive imperial institution.
+% Theater ratio over time
+narrative_ontology:measurement(bath_tr_t0, roman_bath_system, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(bath_tr_t100, roman_bath_system, theater_ratio, 100, 0.35).
+narrative_ontology:measurement(bath_tr_t200, roman_bath_system, theater_ratio, 200, 0.4).
 
-% Theater ratio over time: Initially low, may have increased in the late empire
-% as function degraded but spectacle remained important.
-narrative_ontology:measurement(roman_bath_system_tr_t0, roman_bath_system, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(roman_bath_system_tr_t5, roman_bath_system, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(roman_bath_system_tr_t10, roman_bath_system, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(bath_be_t0, roman_bath_system, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(bath_be_t100, roman_bath_system, base_extractiveness, 100, 0.28).
+narrative_ontology:measurement(bath_be_t200, roman_bath_system, base_extractiveness, 200, 0.35).
 
-% Extraction over time: Increased dramatically as the empire expanded and
-% could fund ever-larger projects through conquest and taxation.
-narrative_ontology:measurement(roman_bath_system_ex_t0, roman_bath_system, base_extractiveness, 0, 0.25).
-narrative_ontology:measurement(roman_bath_system_ex_t5, roman_bath_system, base_extractiveness, 5, 0.48).
-narrative_ontology:measurement(roman_bath_system_ex_t10, roman_bath_system, base_extractiveness, 10, 0.45).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The bath system was a piece of large-scale civic infrastructure.
-narrative_ontology:coordination_type(roman_bath_system, global_infrastructure).
+narrative_ontology:coordination_type(roman_bath_system, resource_allocation).
+narrative_ontology:affects_constraint(roman_bath_system, roman_aqueduct_infrastructure).
+narrative_ontology:affects_constraint(roman_bath_system, roman_tax_collection_system).
+narrative_ontology:affects_constraint(roman_bath_system, roman_imperial_legitimacy).
 
-% Network relationships (structural influence edges)
-% The baths were structurally dependent on the aqueduct system for water.
-narrative_ontology:affects_constraint(roman_aqueduct_system, roman_bath_system).
+% DUAL FORMULATION NOTE:
+% The bath system is downstream of aqueduct infrastructure (which has its own ε and constraint properties) and feeds into the imperial legitimacy mechanism. Decomposition justified because aqueduct engineering constraints have different ε (~0.10, Mountain) than the bath system's institutional/fiscal arrangement (ε ~0.35, Tangled Rope).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this constraint. The standard derivation
-% based on the declared beneficiary/victim groups and their exit options
-% accurately models the structural dynamics of the Roman bath system.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

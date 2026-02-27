@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "mass_market_extinction_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Mass Market Paperback Sunset",
+    "topic_domain": "economic/cultural",
+    "beneficiaries": [
+      "amazon_kindle_store",
+      "prestige_paperback_publishers"
+    ],
+    "victims": [
+      "mass_market_readers",
+      "independent_bookstores"
+    ],
+    "requires_active_enforcement": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Mass Market Reader",
+      "comment": "The mass market reader, particularly those in lower income brackets or with limited access to online retail, finds their primary source of affordable reading material disappearing. Trapped by economic constraints and limited access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Independent Bookstore",
+      "comment": "Independent bookstores, already struggling, lose a key product category that drove foot traffic and impulse buys. They are constrained by existing leases and inventory, but benefit from increased demand in specialized areas."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Amazon Kindle Store",
+      "comment": "The Kindle store and ebook market generally benefits as readers migrate to digital formats. They have full arbitrage capability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Prestige Paperback Publishers",
+      "comment": "Publishers who focus on prestige paperbacks (trade paperbacks) benefit from the decline of the mass market paperback because there is less direct competition at the bookstore and more price flexibility for new releases."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From an analytical perspective, the end of mass market paperbacks represents a complex interplay of market forces, technological change, and shifting cultural preferences, a tangled rope involving benefits and extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "digital_divide_impact",
+      "question": "How severely will the digital divide limit access to reading for low-income communities?",
+      "resolution_mechanism": "Tracking ebook adoption rates by income level; assessing library ebook lending programs.",
+      "impact": "If severe: Increased inequality in access to culture. If minimal: Transition to digital reading is relatively smooth.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of the digital divide on access to reading"
+    },
+    {
+      "id": "prestige_paperback_price_point",
+      "question": "Will prestige paperbacks remain affordable, or will their prices rise, effectively excluding a segment of readers?",
+      "resolution_mechanism": "Tracking the average price of prestige paperbacks relative to inflation and minimum wage.",
+      "impact": "If affordable: Less impact on readers overall. If prices rise: Further marginalization of low-income readers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The future price point of prestige paperbacks"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint tracks the final collapse of the mass-market paperback format following ReaderLink's decision to cease distribution at the end of 2025. This event disproportionately affects lower-income readers and independent bookstores, while benefiting large online retailers and publishers focused on higher-priced formats. The shift creates a form of cultural and economic extraction.",
+    "key_agents": [
+      "Mass Market Readers: Primary victim (powerless/trapped) - loses access to affordable reading.",
+      "Independent Bookstores: Secondary victim (moderate/constrained) - loses a key revenue stream.",
+      "Amazon Kindle Store: Primary beneficiary (institutional/arbitrage) - gains ebook market share.",
+      "Prestige Paperback Publishers: Secondary beneficiary (institutional/arbitrage) - benefits from less direct competition."
+    ],
+    "logic_rationale": "Extractiveness (0.6): The constraint extracts access to affordable literature, particularly from low-income readers. Suppression (0.7): The dwindling number of outlets for mass market paperbacks and the promotion of more expensive alternatives creates a coercive environment with few alternatives for specific demographics. Theater Ratio (0.3): Low. Little performative coordination.",
+    "perspectival_gap": "The mass market reader experiences a loss of access (snare), while Amazon sees an opportunity for increased ebook sales (rope). Independent bookstores experience the decline as a loss to overall sales but still retain benefits from specialized books and trade paperbacks (tangled rope). Prestige paperback publishers can gain greater revenue as there are less low-cost options. The analytical observer sees all of these as a tangled rope.",
+    "directionality_logic": "Directionality is determined by the degree to which an agent benefits or suffers due to the sunsetting of mass market paperbacks. Readers have little ability to influence this process and are thus victims, while Kindle and prestige paperback publishers benefit economically."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ebook_market_dominance",
+      "literacy_access_inequality"
+    ]
+  },
+  "directionality_overrides": []
+}

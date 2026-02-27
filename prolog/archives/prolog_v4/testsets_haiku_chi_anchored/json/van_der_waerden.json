@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "van_der_waerden",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vdw"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Van der Waerden's Theorem on Arithmetic Progressions",
+    "topic_domain": "mathematical/combinatorics/ramsey_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Finite Colorist",
+      "comment": "PERSPECTIVE 1: THE FINITE COLORIST (MOUNTAIN) \u2014 Any agent attempting to partition the positive integers into finitely many color classes cannot avoid monochromatic arithmetic progressions. This is not a rule imposed by convention or enforcement; it is an unavoidable structural property of finite partitions of infinite sets. No exit exists; the constraint is invariant across all coloring schemes. d=0.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Combinatorial Analyst",
+      "comment": "PERSPECTIVE 2: THE COMBINATORIAL ANALYST (MOUNTAIN) \u2014 Van der Waerden's theorem is a logical consequence of the pigeonhole principle applied recursively to arithmetic structure. From the perspective of mathematical logic, the constraint is a consequence of the rules of combinatorial reasoning itself. The theorem's inevitability follows from axioms; it cannot be negotiated or bypassed. The accessibility of this truth is extremely high (formal proof exists); resistance to acceptance is minimal (all mathematicians agree). d=0.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Community",
+      "comment": "PERSPECTIVE 3: THE MATHEMATICAL COMMUNITY (MOUNTAIN) \u2014 Mathematics as a collective institution treats Van der Waerden's theorem as a fixed truth with zero degrees of freedom. No mathematical society, no funding body, no institutional arrangement can alter the theorem's truth. The constraint appears to the mathematical establishment as a natural law of the logical structure they study. d=0.5, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Ramsey Theory Research Community",
+      "comment": "PERSPECTIVE 4: RAMSEY THEORY RESEARCH COMMUNITY (MOUNTAIN) \u2014 Research groups working on Ramsey theory view Van der Waerden's theorem as a foundational boundary condition. The theorem constrains which research programs are feasible (those consistent with the theorem) and which are not (those contradicting it). This constraint is not enforced externally; it is intrinsic to the problem space. d=0.5, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.05."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "constructive_bound_computability",
+      "question": "Can the Van der Waerden number W(k,r) be computed constructively for all finite k and r, or do some instances require non-constructive existence arguments?",
+      "resolution_mechanism": "Development of explicit algorithms for computing W(k,r) bounds; analysis of proof structure in the Erd\u0151s-Ko-Rado framework and subsequent improvements",
+      "impact": "If fully constructive: the mountain classification is reinforced \u2014 the theorem produces computable guarantees. If inherently non-constructive for some (k,r): the theorem remains mountain but with epistemological interest in the gap between existence and construction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether all Van der Waerden numbers are constructively computable"
+    },
+    {
+      "id": "algorithmic_lower_bounds",
+      "question": "What is the tightest known lower bound on W(k,r) and how does it compare to the theoretical existence guarantee?",
+      "resolution_mechanism": "Computational surveys of colorings; analysis of explicit constructions achieving maximal monochromatic-free lengths; SAT solver verification of bounds",
+      "impact": "Large gaps between lower and upper bounds indicate the theorem's existence guarantee is far weaker than the most efficient possible coloring \u2014 the theorem's force is structural (inevitability) rather than quantitative precision.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Tightness of known Van der Waerden number bounds"
+    },
+    {
+      "id": "axiom_independence_variants",
+      "question": "Are there consistent variants of arithmetic (e.g., intuitionistic or constructive set theory) in which Van der Waerden's theorem holds with a different statement or quantification structure?",
+      "resolution_mechanism": "Proof-theoretic analysis of the theorem in different foundational systems (classical ZFC, intuitionistic ZF, constructive type theory); comparison of statement strength",
+      "impact": "If the theorem's structure changes across logical systems: the mountain is relative to classical logic (not universal). If invariant: the mountain classification is strengthened (true across all reasonable foundations).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical independence of Van der Waerden's theorem across foundational systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Van der Waerden's theorem (1927) is a cornerstone of Ramsey theory asserting that for any finite number of colors and any desired length of arithmetic progression, there exists a threshold N such that any coloring of the integers {1, 2, ..., N} with the given colors must contain a monochromatic arithmetic progression of the desired length. This theorem is a prototypical mountain constraint: it expresses an unavoidable structural property of finite partitions of infinite sets. No agent can negotiate with the constraint, no institutional arrangement can bypass it, and the theorem's truth does not depend on observables, measurement basis, or perspective. The constraint exhibits zero degrees of freedom across all indices. Its accessibility collapse (0.92) reflects that the theorem has a formal, published proof accessible to trained mathematicians; its resistance (0.08) reflects universal acceptance among mathematicians and no credible alternative proposals. The theater ratio (0.15) is low because the theorem's verification is algorithmic and transparent \u2014 there is minimal performative content in its statement or proof verification.",
+    "key_agents": [
+      "The Finite Colorist: Any entity attempting to partition integers into color classes experiences this as an inescapable constraint (powerless/analytical)",
+      "The Combinatorial Analyst: Mathematician studying Ramsey theory and viewing the theorem as a logical consequence (analytical/analytical)",
+      "The Mathematical Community: Collective that treats the theorem as a fixed truth (institutional/analytical)",
+      "Ramsey Theory Research Community: Researchers for whom this is a boundary condition on problem feasibility (organized/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (\u03b5=0.08): Minimal. The theorem does not extract resources, advantage, or asymmetric value from any agent. It is a statement of fact about combinatorial structure with no preferential distribution. Base extraction is near zero because there is no beneficiary-victim asymmetry. Suppression (0.02): Minimal. The theorem imposes a constraint without coercion or suppression of alternatives \u2014 it is simply true that monochromatic arithmetic progressions must exist. Agents are not suppressed from trying to avoid them; they are informed that avoidance is impossible. Theater ratio (0.15): Low. The theorem's statement is transparent, its proof is verifiable, and its application is algorithmic. There is minimal performative content. The small nonzero value reflects the pedagogical framing sometimes used (Ramsey theory is often presented as surprising, capturing attention through paradox of inevitability), but the core constraint is non-theatrical.",
+    "perspectival_gap": "Van der Waerden's theorem exhibits no perspectival gap. All four perspectives classify it as Mountain, reflecting the theorem's invariance across all observables and measurement contexts. This is the defining property of a natural law in mathematics: no observer can negotiate a different relationship to the constraint. The powerless colorist, the analytical mathematician, the institutional community, and the research organization all experience the same structural inevitability. The absence of perspectival gap is itself evidence that the classification is correct.",
+    "directionality_logic": "Mathematical theorems do not have beneficiaries or victims in the structural sense. The theorem is not an arrangement that extracts from some agents and benefits others. Instead, all agents in the mathematical domain are equally subject to the theorem's truth. Directionality for a universal mountain is symmetric: every perspective derives d\u22480.5-0.72 (depending on power atom), and all converge on mountain classification with \u03c7 near 0.05-0.09. No override is needed.",
+    "mandatrophy_analysis": "Van der Waerden's theorem exemplifies the resolution of mandatrophy in the mathematical domain. The apparent tension \u2014 is this a universal law or a contingent institutional fact? \u2014 is resolved by noting that the theorem is indeed universal and necessary within any logical system recognizing combinatorial structure. It is not contingent on social arrangement, measurement choice, or institutional preference. The theorem cannot be misclassified as a Snare (pure extraction) because there is no extraction. It cannot be misclassified as a Scaffold (temporary support) because there is no sunset. It cannot be misclassified as a Rope (coordination) because it is not solving a collective action problem \u2014 it is stating an invariant fact. The mandatrophy is fully resolved by the theorem's logical structure: all six constraint types are ruled out except Mountain by the mathematical properties."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "ramsey_number_computation",
+      "pigeonhole_principle_finite_versions",
+      "hales_jewett_theorem"
+    ],
+    "dual_formulation_note": "Van der Waerden's theorem is part of a family of Ramsey-theoretic results sharing identical mountain structure. The theorem influences weaker results (specific Van der Waerden numbers for small k,r) and generalizations (Hales-Jewett, multidimensional Van der Waerden). All share \u03b5\u22480.08 and mountain classification."
+  },
+  "directionality_overrides": []
+}

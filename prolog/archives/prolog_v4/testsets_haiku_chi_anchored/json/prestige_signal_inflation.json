@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "prestige_signal_inflation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "psi"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Credential Red Queen",
+    "topic_domain": "social/economic/educational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credential_issuers",
+      "early_adopters"
+    ],
+    "victims": [
+      "late_entrants",
+      "non_credentialed_workers",
+      "credential_seekers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Late-Entrant Worker",
+      "comment": "PERSPECTIVE 1: LATE-ENTRANT WORKER (SNARE) \u2014 Cannot exit credential-seeking; must pursue ever-higher qualifications to reach baseline competitive position. Each credential devaluation forces additional investment. Career timeline erodes. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Career Professional",
+      "comment": "PERSPECTIVE 2: MID-CAREER PROFESSIONAL (TANGLED ROPE) \u2014 Constrained by existing credential investments and organizational advancement filters. Benefits from credential systems that legitimize their current status while suffering extraction as credentials devalue. d\u22480.62, f(d)\u22480.82, \u03c3=1.0 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Credential Issuer",
+      "comment": "PERSPECTIVE 3: CREDENTIAL ISSUER (ROPE) \u2014 Universities and professional bodies benefit from credential inflation; increased enrollment and certification demand. Arbitrage exit through voluntary credential redesign or market segmentation. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Early Adopter Elite",
+      "comment": "PERSPECTIVE 4: EARLY ADOPTER ELITE (ROPE) \u2014 Captured credential scarcity premium early; can now signal via exclusivity or informal gatekeeping. Leverage first-mover advantage and social capital. d\u22480.12, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Credentialing Bureaucracy",
+      "comment": "PERSPECTIVE 5: CREDENTIALING BUREAUCRACY (PITON) \u2014 Institutional persistence of degree requirements despite declining predictive validity. Theater_ratio=0.65 reflects performative credential checking (hiring screens for degrees without verification of competence). Extraction function degraded; constraint maintained by institutional inertia and regulatory mandates. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.42."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Credentials Coalition",
+      "comment": "PERSPECTIVE 6: ALTERNATIVE CREDENTIALS COALITION (TANGLED ROPE) \u2014 Organized stakeholders (bootcamps, credentialing bodies, tech companies) building parallel credential systems. Mobile exit: can migrate to alternative signals. Benefits from traditional credential failure while extracting from those locked into devaluing cycles. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Models the constraint as a self-reinforcing cycle: credential devaluation drives demand for new/higher credentials, which become devalued in turn. Coordination function (signal reliability) exists but is undermined by extraction (credential inflation premium). d\u22480.68, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.58."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_learning_decay",
+      "question": "Does credential inflation reflect genuine skill requirement increases or just screening proliferation?",
+      "resolution_mechanism": "Longitudinal job task analysis; comparison of actual required competencies vs credential requirements; measurement of skill-credential gap over time",
+      "impact": "If genuine skill increase: constraint is primarily coordination (organizing larger, more complex labor markets). If screening proliferation: constraint is primarily extraction (rent-seeking through artificial barrier creation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credential inflation reflects real skill requirement increases or screening proliferation"
+    },
+    {
+      "id": "alternative_signal_viability",
+      "question": "Can alternative credentials (portfolios, apprenticeships, bootcamps, work history) effectively replace traditional degrees as labor market signals?",
+      "resolution_mechanism": "Longitudinal hiring outcomes analysis; comparison of employment rates and wage trajectories for workers with alternative vs traditional credentials; measurement of employer acceptance rates",
+      "impact": "If viable: scaffold perspective confirmed \u2014 sunset clause is real as alternative pathways mature. If not viable: constraint persists as snare/tangled_rope without sunset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative credentials can effectively replace traditional degrees"
+    },
+    {
+      "id": "enforcement_mechanism_dependence",
+      "question": "Do hiring organizations truly require credentials for genuine selection purposes, or do they require credentials because other organizations require them (cascade enforcement)?",
+      "resolution_mechanism": "Controlled hiring experiments; interviews with hiring managers and talent acquisition officers; measurement of degree-requirement justification vs actual job description requirements",
+      "impact": "If genuine selection: enforcement is structural coordination. If cascade: enforcement is primarily theater (piton perspective validated).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credential requirements reflect genuine selection needs or cascade enforcement"
+    },
+    {
+      "id": "extraction_margin_attribution",
+      "question": "What portion of credential inflation is extractive rent-seeking vs legitimate coordination overhead?",
+      "resolution_mechanism": "Economic modeling of signaling equilibrium; comparison of credential costs vs employer willingness-to-pay for credentials; measurement of deadweight loss from credential arms race",
+      "impact": "If primarily extraction (>70%): snare perspective dominates. If mixed (30-70%): tangled_rope confirmed. If primarily coordination (<30%): rope perspectives dominate.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of credential inflation attributable to extraction vs coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Credential Red Queen constraint models the systematic devaluation of status markers (degrees, certifications, titles, luxury consumption signals) as they become more accessible, widespread, or mandatory for baseline labor market participation. The constraint operates through a self-reinforcing cycle: as credentials proliferate, their signaling value decreases, forcing credential-seekers to pursue additional or higher credentials to maintain relative position. Meanwhile, credential issuers (universities, professional bodies, bootcamp providers) profit from increased enrollment and certification demand. Early adopters and elites capture the scarcity premium before devaluation; late entrants and non-credentialed workers are forced into ever-escalating credential pursuit. The constraint exhibits high theater (65%) because much credential checking in hiring is performative \u2014 employers screen for degrees without verifying competence, perpetuating the requirement even as degrees lose predictive value. Alternative credential pathways (bootcamps, portfolios, apprenticeships) are emerging but have not yet achieved parity with traditional degrees. The constraint is thus a tangled_rope: it has genuine coordination function (helping match workers to complex roles), but that function is systematically undermined by extraction (credential inflation premium captured by issuers and elites). Suppression is high (68%) because late entrants face structural barriers: credential requirements are mandated by both employers and competitors, creating trapped exit options.",
+    "key_agents": [
+      "Late-Entrant Workers: Primary victims (powerless/trapped) \u2014 must pursue escalating credentials to reach baseline competitive position; forced to finance higher education or certification at increasing cost",
+      "Credential Issuers: Primary beneficiaries (institutional/arbitrage) \u2014 universities, professional bodies, bootcamp providers; profit from increased enrollment and credential demand",
+      "Early Adopter Elite: Secondary beneficiaries (powerful/arbitrage) \u2014 captured scarcity premium before credential devaluation; maintain status through exclusivity or informal gatekeeping",
+      "Mid-Career Professionals: Secondary victims (moderate/constrained) \u2014 invested in existing credentials now devalued; constrained by organizational advancement filters that depend on credentials",
+      "Alternative Credentials Coalition: Organized challengers (organized/mobile) \u2014 bootcamps, tech companies, alternative credentialing bodies; building parallel signals; mobile exit from traditional credential system",
+      "Credentialing Bureaucracy: Institutional performer (institutional/constrained) \u2014 government agencies, regulatory bodies, corporate HR departments; maintains degree requirements through inertia and legal/contractual mandates",
+      "Non-Credentialed Workers: Victims (powerless/trapped) \u2014 excluded from credentialed roles despite potential competence; bearing cost of credential requirements without recourse"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts value through credential premium capture by issuers and elites, plus opportunity costs and time/money barriers for late entrants. The value increased from 0.28 to 0.52 over the interval as degree oversupply became visible and new credentials (masters, bootcamps, professional certificates) proliferated. Extraction is not total (0.52 < 0.66 snare threshold) because credentials still provide genuine labor market access and coordination value. Suppression (0.68): High. Structural barriers include employer mandates for credentials, regulatory/professional requirements, competitive pressure (if peers have degrees, you must match), and limited alternative pathways. Workers in late-entry positions have minimal options for avoiding credential pursuit. Theater_ratio (0.65): High, indicating that credential checking in hiring is substantially performative. Many employers screen for degree presence without verifying competence or field relevance; the degree functions as a filtering heuristic rather than a competence signal. Theater increased from 0.42 to 0.65 as degree proliferation made filtering increasingly performative (more false positives from degree holders, more false negatives from non-credentialed candidates). Claimed_type (tangled_rope): The constraint exhibits both genuine coordination (organizing complex labor market matching) and asymmetric extraction (credential premium capture, barrier creation). Requires_active_enforcement (true): Coordination in the credential system requires active maintenance through hiring mandates, regulatory requirements, and social reproduction of credential legitimacy.",
+    "perspectival_gap": "This constraint shows maximal perspectival fragmentation. The late-entrant worker sees a pure extraction trap (snare) \u2014 forced credential pursuit with no exit. The credential issuer sees pure coordination benefit (rope) \u2014 solving matching problems with no extraction experienced. The early adopter elite sees rental scarcity (rope) \u2014 benefiting from restricted access. The mid-career professional sees mixed extraction and coordination (tangled_rope) \u2014 their existing credentials legitimize their position but are simultaneously devaluing. The alternative credentials coalition sees an opportunity structure (tangled_rope) \u2014 exploiting credential system failure while building alternatives. The credentialing bureaucracy sees degraded ritual (piton) \u2014 perpetuating degree requirements through institutional inertia despite declining predictive value. The analytical observer sees a self-reinforcing arms race (tangled_rope) \u2014 coordination function (signaling reliability) undermined by extraction logic (credential inflation). No two perspectives agree on classification; the perspectival gap reveals that the same structural constraint is experienced as snare (powerless), rope (institutional beneficiary), and tangled_rope (organized challengers) simultaneously.",
+    "directionality_logic": "Late-entrant workers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction \u2014 forced credential pursuit with no alternative. Credential issuers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary \u2014 can redesign credentials or market segmentation. Early adopter elite: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.08. Net beneficiary \u2014 captured scarcity premium, can maintain status via exclusivity. Mid-career professionals: Mixed (both victim via devaluation and beneficiary via existing credentials) + constrained \u2192 d\u22480.62, f(d)\u22480.82. Moderate extraction \u2014 constrained by credential investments, benefiting from legitimacy they provide. Alternative credentials coalition: Organized (both victim of credential system capture and beneficiary of building alternatives) + mobile \u2192 d\u22480.45, f(d)\u22480.50. Low-moderate extraction \u2014 mobile exit available through building alternative pathways. Analytical observer: d\u22480.68, f(d)\u22481.08. Moderate extraction \u2014 observes self-reinforcing cycle but is not trapped in it.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (extractiveness = 0.52, below 0.70 threshold but above 0.46): The constraint is genuinely tangled_rope, not falsely elevated snare or rope. Evidence: (1) Coordination function is real: credentials DO solve labor market matching problems and provide reliable signals in complex industries (software, healthcare, finance). Eliminating credential systems entirely would harm matching quality. (2) Extraction is real: credential inflation premium is captured by issuers and elites; late entrants face escalating cost-of-entry; theater (0.65) indicates performative enforcement. (3) Active enforcement is structural: hiring mandates, regulatory requirements, and social reproduction of credential legitimacy all actively maintain the system. No perspective perceives this as pure coordination or pure extraction \u2014 tangled_rope is the only type that fits all observed data. The mandatrophy is resolved by recognizing that the constraint PREVENTS both pure rope (coordination without extraction) AND pure snare (extraction without coordination) \u2014 it maintains extraction precisely by providing enough coordination value to justify mandatory participation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "student_debt_accumulation",
+      "wage_inequality_signaling",
+      "educational_access_barrier"
+    ],
+    "dual_formulation_note": "The credential red queen decomposes into three related constraints: (1) Credential system as pure coordination problem (rope) \u2014 matching complex labor markets; (2) Credential inflation as extractive rent-seeking (snare) \u2014 capturing premium through barrier creation; (3) Theater-ratio degradation as institutional inertia (piton) \u2014 performative degree checking despite declining predictive value. This story treats all three as aspects of a single tangled_rope constraint. Alternative decomposition: three separate stories at different \u03b5 values would isolate coordination (\u03b5\u22480.15, rope) from extraction (\u03b5\u22480.55, snare) from theater (\u03b5\u22480.40, piton)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

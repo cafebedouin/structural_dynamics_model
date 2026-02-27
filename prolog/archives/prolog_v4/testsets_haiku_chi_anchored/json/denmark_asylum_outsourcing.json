@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "denmark_asylum_outsourcing",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Denmark's Asylum Processing Outsourcing to Third Countries",
+    "topic_domain": "political/migration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "danish_government",
+      "danish_taxpayers_anti_immigration"
+    ],
+    "victims": [
+      "asylum_seekers",
+      "receiving_third_countries",
+      "international_refugee_protection_regime"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Asylum Seeker",
+      "comment": "PERSPECTIVE 1: ASYLUM SEEKER (SNARE) \u2014 Entrapped by geography and desperation. No exit option from the constraint; subject to processing in third countries with weaker legal protections, longer timelines, worse conditions. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.92. Pure extraction from the most vulnerable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Receiving Third Country",
+      "comment": "PERSPECTIVE 2: RECEIVING THIRD COUNTRY (TANGLED ROPE) \u2014 Receives both financial compensation (coordination function) and burden of processing asylum claims in underdeveloped contexts (extraction). Constrained by economic dependence on Danish funding; coordination function exists but is asymmetric. d\u22480.70, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.51."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Danish Government",
+      "comment": "PERSPECTIVE 3: DANISH GOVERNMENT (ROPE) \u2014 Experiences outsourcing as coordination mechanism: externalizing processing reduces domestic political pressure and operational costs. Benefits from arbitrage between domestic political constraints and lower-cost third-country operations. d\u22480.10, f(d)\u22480.02, \u03c3=1.0 \u2192 \u03c7\u22480.01. Net beneficiary; sees problem-solving."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Refugee Protection Regime",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL REFUGEE PROTECTION REGIME (SCAFFOLD) \u2014 Recognizes outsourcing as a temporary deviation from the 1951 Convention framework. The regime retains mechanisms to enforce return to Convention compliance: court challenges, treaty obligations, and normative pressure. Sunset mechanism exists in principle (return to EU-based processing or treaty renegotiation). d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.25. Moderate extraction hidden by procedural theater."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "EU Legal Framework",
+      "comment": "PERSPECTIVE 5: EU LEGAL FRAMEWORK (PITON) \u2014 The outsourcing policy persists despite formal inconsistency with EU asylum law (CEAS) and international refugee convention obligations. The constraint is maintained through procedural theater: legal opacity, selective application, and institutional inertia. theater_ratio=0.58 reflects the gap between stated EU values (burden-sharing, protection) and actual enforcement (permitted through judicial discretion). d\u22480.05, f(d)\u2248-0.12, \u03c3=1.1 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Global Governance View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / GLOBAL GOVERNANCE VIEW (SNARE) \u2014 From the perspective of the international refugee protection system, outsourcing represents pure extraction dressed in neutral language ('processing,' 'burden-sharing,' 'partnerships'). The system structurally extracts compliance from vulnerable actors (asylum seekers and weak states) without reciprocal protection guarantees. d\u22480.88, f(d)\u22481.30, \u03c3=1.2 \u2192 \u03c7\u22480.86. High effective extraction revealed by analyzing who bears costs and who captures benefits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "third_country_agency_level",
+      "question": "Are receiving third countries genuinely cooperative partners (Rope) or coerced participants (Snare) in the outsourcing arrangement?",
+      "resolution_mechanism": "Analysis of: (a) negotiating power during agreement formation; (b) ability to unilaterally withdraw; (c) whether compensation reflects actual processing costs; (d) whether countries would participate without Danish financial incentive",
+      "impact": "If genuinely cooperative: classification shifts toward Tangled Rope with stronger coordination function. If coerced: classification hardens to Snare from their perspective; Danish extraction is amplified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether receiving countries are cooperative partners or coerced"
+    },
+    {
+      "id": "processing_quality_differential",
+      "question": "Does outsourcing demonstrably reduce the quality of asylum determination compared to EU-based processing, or are differences merely procedural?",
+      "resolution_mechanism": "Comparative analysis: approval rates, appeal success rates, time-to-decision, access to legal representation, adherence to UNHCR standards between Danish third-country processing and EU member state processing",
+      "impact": "If significant quality reduction: extraction mechanism is confirmed (suppression \u22650.72 justified). If comparable quality: extraction narrative weakens; constraint may degrade toward Rope or Scaffold.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether outsourcing reduces asylum determination quality"
+    },
+    {
+      "id": "escape_velocity_of_international_pressure",
+      "question": "Can Danish outsourcing be overridden by EU supranational enforcement (Court of Justice rulings, treaty amendments) or does Denmark retain effective veto power through exit threats or political leverage?",
+      "resolution_mechanism": "Historical analysis of EU court decisions on outsourcing; tracking of treaty renegotiation outcomes; analysis of Denmark's leverage (EU veto, border/Schengen negotiation capacity); comparison with other EU member noncompliance cases",
+      "impact": "If EU can force compliance: sunset mechanism is real (Scaffold classification legitimate). If Denmark retains veto/escape path: international pressure is theater (Piton classification reinforced).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether international pressure can force Danish compliance"
+    },
+    {
+      "id": "compensation_adequacy_threshold",
+      "question": "What level of financial compensation to third countries would transform the constraint from Snare to Rope \u2014 i.e., genuine mutual benefit?",
+      "resolution_mechanism": "Cost-benefit analysis: comparison of Danish cost-saving vs third-country operational costs + compensation; survey of third-country government satisfaction and voluntary participation indicators",
+      "impact": "If current compensation < 50% of actual costs: third-country victimhood is real (Snare from their perspective). If compensation > 150% of costs: approaching genuine Rope or benefit-sharing model.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compensation to third countries is adequate for cooperation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Denmark's policy of outsourcing asylum processing to third countries (initially Rwanda, later Libya-adjacent arrangements) represents a structural transfer of cost and risk from the Danish state and receiving EU member states to vulnerable asylum seekers and economically dependent non-EU countries. The constraint exhibits multiple classification perspectives reflecting genuine structural ambiguities: Danish policymakers experience it as efficient coordination (Rope); asylum seekers experience it as inescapable extraction (Snare); third-country recipients experience it as coercive cooperation (Tangled Rope); the international refugee protection regime experiences it as a temporary institutional deviation with formal override mechanisms (Scaffold); EU legal frameworks experience it as degraded theater maintaining procedural compliance while violating substantive obligations (Piton); and the global governance observer sees pure extraction with sophisticated laundering through neutralized language. The theater_ratio (0.58) reflects the gap between Denmark's public positioning ('burden-sharing,' 'partnerships,' 'efficient processing') and the actual mechanisms (transfer of responsibility without equivalent transfer of resources, placement of asylum seekers in countries with weaker legal protections and human rights enforcement). Extractiveness has risen from 0.55 to 0.68 over the observation interval as the policy has hardened and third-country participation has contracted, forcing more intensive extraction from each transaction.",
+    "key_agents": [
+      "Asylum Seekers: Primary victims (powerless/trapped) \u2014 subject to processing in jurisdictions with weaker protections; no choice about location or timeline",
+      "Receiving Third Countries: Secondary beneficiaries/victims (moderate/constrained) \u2014 receive financial compensation (coordination) but bear disproportionate burden and risk; constrained by economic dependence",
+      "Danish Government: Primary beneficiary (institutional/arbitrage) \u2014 reduces domestic political pressure, externalizes costs, captures arbitrage between Danish and third-country operational/political economies",
+      "EU Legal/Governance Framework: Institutional observer (institutional/constrained) \u2014 formally maintains commitment to refugee protection but tolerates outsourcing through judicial discretion and procedural theater",
+      "International Refugee Protection Regime (UNHCR, 1951 Convention): Organized observer (organized/mobile) \u2014 retains formal enforcement mechanisms but lacks practical override power against member states",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the constraint as pure extraction with sophisticated legitimation narratives"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The Danish state captures substantial benefit (reduced domestic political pressure, cost externalization, maintained immigration restrictions) while asylum seekers bear concentrated costs (longer processing, weaker legal protections, geographic displacement). The extractiveness is not maximal (0.95) because the policy includes formal procedural components (compensation to third countries, stated asylum processing standards) that create a coordination appearance. However, the structural asymmetry is severe: Denmark determines terms unilaterally, receives benefit, and exits without bearing verification costs. Suppression (0.72): High. Asylum seekers have zero exit options (trapped by international geography and legal status). Third countries are constrained by economic dependence. Alternative mechanisms (EU burden-sharing, domestic processing) are formally available but politically closed to asylum seekers and weak states due to Danish political veto. Theater_ratio (0.58): Moderate-high. The policy maintains procedural compliance with formal refugee protection norms (asylum determination occurs, appeals theoretically available) while systematically disadvantaging the most vulnerable actors. The theater has increased as the policy has faced legal challenges \u2014 Denmark has added procedural language around 'partnerships' and 'standards' without substantively changing the extraction mechanism.",
+    "perspectival_gap": "The perspectival gap is extreme. The Danish government sees a coordination solution to a collective action problem (EU burden-sharing failure, domestic political pressure): outsourcing allows Denmark to maintain restrictive immigration policy while formally complying with refugee protection obligations. Asylum seekers see pure extraction: they have no choice, cannot exit, and bear concentrated costs. Receiving third countries experience a coercive hybrid (Tangled Rope): they receive compensation (coordination function) but are forced to bear burdens (extraction function) through economic dependence \u2014 they could theoretically refuse, but the economic incentive structure eliminates genuine exit. The EU legal framework experiences institutional degradation (Piton): the formal legal obligation to protect refugees exists, but practical enforcement is theater \u2014 member states retain discretion through court processes and treaty ambiguity. The international refugee protection regime sees a temporary deviation with formal override mechanisms (Scaffold): the 1951 Convention and UNHCR standards formally apply, and legal challenges can force compliance \u2014 but practical enforcement is weak due to state sovereignty norms. The analytical observer sees the entire arrangement as pure extraction (Snare) from the perspective of the global governance system: the constraint distributes costs to the powerless and displaces responsibility to the weak, while concentrating benefits to the institutionally powerful.",
+    "directionality_logic": "Asylum Seekers: Victims + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. No exit option from the constraint; subject to processing in third-country jurisdiction. Danish Government: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Net beneficiary with maximum discretion. Can exit or modify policy unilaterally; captures arbitrage between domestic political economy and third-country operational economics. Receiving Third Countries: Mixed beneficiary-victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. Receive compensation (low-d beneficiary function) but constrained by economic dependence (high-d victim function); no genuine exit despite formal choice. EU Legal Framework: Institutional observer + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Maintains formal authority to enforce refugee protection but exercises that authority through discretionary judicial processes that permit outsourcing; net beneficiary due to political cover (appears to protect refugees while permitting restrictions). International Refugee Protection Regime: Organized observer + mobile \u2192 d\u22480.55, f(d)\u22480.75. Organized enough to mount challenges but mobile enough to shift responsibility to member states; sees outsourcing as a problem but lacks enforcement power. Analytical Observer: Analytical \u2192 d\u22480.88, f(d)\u22481.30. Observes the extraction from the structural baseline; recognizes the policy as pure asymmetric cost transfer.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by clarifying that the high extractiveness (0.68) does NOT constitute a false natural law claim. The analytical observer's Snare classification is the correct structural reading: the policy objectively extracts from powerless agents (asylum seekers) and transfers costs to constrained agents (third countries) while concentrating benefits to the institutionally powerful (Danish state). The Danish government's Rope experience is a perspective-dependent misframing: they genuinely experience the policy as coordination-solving, but the structural data (who bears costs, who captures benefits, who exits) reveals this as a beneficiary perspective that naturalizes asymmetry. The EU and international regime perspectives (Scaffold, Piton) are institutionally coherent but analytically secondary \u2014 they describe how powerful institutions manage the extraction (through theater and formal override mechanisms) rather than revealing the underlying structural asymmetry. Mandatrophy is resolved by recognizing that perspectives are valid descriptions of experience but do not determine the constraint's structural type once the extraction metrics are measured. The Snare classification is robust because it directly reflects the directional flow of costs (to asylum seekers) and benefits (to Danish state), independent of framing."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_asylum_burden_sharing",
+      "third_country_state_capacity",
+      "refugee_protection_norm_erosion"
+    ],
+    "dual_formulation_note": "Denmark's outsourcing policy is downstream of EU asylum burden-sharing failures (institutional coordination breakdown) and upstream of third-country state capacity constraints and global refugee protection norm erosion. The outsourcing mechanism itself (\u03b5=0.68) is structurally distinct from the upstream coordination failure (higher \u03b5 due to institutional disagreement) and the downstream capacity problem (separate \u03b5 due to structural developmental constraints)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

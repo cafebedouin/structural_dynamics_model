@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "gamblers_ruin_stochastic_extinction",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gruin"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Gambler's Ruin: Stochastic Extinction Under Finite Wealth",
+    "topic_domain": "mathematical/economic",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Individual Gambler",
+      "comment": "PERSPECTIVE 1: THE INDIVIDUAL GAMBLER (MOUNTAIN) \u2014 From the gambler's lived experience, ruin is an inexorable force. With finite wealth and the house's infinite resources, bankruptcy approaches probability 1 regardless of fair odds or negative expectation. No exit strategy changes the terminal outcome. This is not perceived as policy or institution \u2014 it is lived as physical inevitability. \u03b5=0.08, accessibility_collapse=0.92, resistance=0.08."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Observer",
+      "comment": "PERSPECTIVE 2: MATHEMATICAL OBSERVER (MOUNTAIN) \u2014 The analytical perspective sees Gambler's Ruin as a mathematical theorem derived from first principles: random walks with absorbing barriers, finite starting capital, and an opponent with unbounded resources. The proof is independent of any institution, policy, or human choice. It is a logical consequence of probability theory. The constraint emerges naturally from the formal structure of betting dynamics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Gambling Addiction Treatment Community",
+      "comment": "PERSPECTIVE 3: TREATMENT & POLICY COMMUNITY (MOUNTAIN) \u2014 Even organized agents (recovery programs, regulation agencies, public health authorities) cannot change the fundamental stochastic law. They can reduce initiation (prevention), accelerate exit (intervention), or redistribute wealth pre-game (progressive taxation, gambling limits). But the ruin mechanism itself is immutable. Policy can lower exposure but not eliminate the constraint. Classification remains mountain because no intervention can guarantee solvency in perpetual fair/negative games."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional House Operator",
+      "comment": "PERSPECTIVE 4: THE HOUSE (INSTITUTIONAL) (MOUNTAIN) \u2014 The casino or house sees ruin as their structural advantage, not as a constraint they manage. The mathematical law ensures eventual accumulation of finite-wealth players' capital. From the house's perspective, the constraint is an enabling law of nature, not a restrictive policy. Yet even they cannot escape it: the theorem applies universally. A house with finite wealth (finite casino, finite city, finite planet) facing a truly infinite opponent would itself face ruin. The mountain applies symmetrically."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "continuous_vs_discrete_gap",
+      "question": "Does the theoretical continuous-time diffusion limit (Brownian motion with absorbing barriers) perfectly capture the empirical dynamics of discrete-time betting games?",
+      "resolution_mechanism": "Comparison of continuous diffusion predictions with high-frequency discrete-bet data from laboratory gambling experiments; analysis of discretization error as bet size and time interval vary",
+      "impact": "If gap is negligible (< 1% prediction error): continuous model fully certifies mountain classification. If gap is substantial (> 5%): discrete empirical process may have structural properties (e.g., Kelly criterion edge recovery, bet-size adaptation) that weaken the ruin guarantee.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of correspondence between continuous diffusion limit and discrete betting empirics"
+    },
+    {
+      "id": "time_subjective_vs_objective",
+      "question": "Is 'inevitability of ruin' experienced the same way across objective time (mathematical limit as t\u2192\u221e) and subjective lifetime (biographical horizon of 50-80 years)?",
+      "resolution_mechanism": "Longitudinal study of actual gambling duration before exit or ruin; correlation between mathematical ruin timeline (computed from bet size, odds, starting capital) and observed biological/financial lifespan",
+      "impact": "If expected ruin time >> human lifetime for realistic bet sizes: the constraint is mathematically mountain but practically rope or scaffold (long enough to feel like coordination/temporary). If ruin time < biological lifespan for most players: mountain classification is empirically sharp.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relationship between mathematical infinity and human biographical time"
+    },
+    {
+      "id": "wealth_redistribution_counterfactual",
+      "question": "If the initial wealth distribution were equalized (both players start with equal capital), does the theorem still classify as mountain or does it degrade to rope (symmetric coordination)?",
+      "resolution_mechanism": "Formal analysis of symmetric random walk (equal starting capital, fair game); proof that symmetric walks have zero absorption probability (neither player faces certain ruin). Compare classification under symmetric vs asymmetric setup.",
+      "impact": "If symmetry degrades the mountain to rope: the constraint is not about randomness per se but about wealth asymmetry. The 'natural law' is conditional on initial inequality \u2014 revealing the constraint as a mathematical encoding of power difference, not physics.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether ruin is inherent to gambling or inherent to wealth asymmetry"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Gambler's Ruin is a foundational theorem in probability theory and mathematical economics, stating that a gambler with finite capital, playing against an opponent with infinite resources in a fair or negative-expectation game, faces certain bankruptcy (probability \u2192 1) as time extends to infinity. The constraint is structurally identical across all observer perspectives because it emerges from first principles of probability, not from institutional design. The proof requires no specification of venue, jurisdiction, or policy \u2014 it holds in casinos, lotteries, financial speculation, insurance claims, and any repeated-bet scenario. The theater ratio is exceptionally low (0.15) because the mechanism is entirely mathematical, with no performative or ritualistic component. Suppression is near-zero (0.02) because the constraint is not enforced but derived \u2014 the gambler faces no hidden barriers or coercive suppression, only the transparent facts of stochastic dynamics. Base extractiveness is low (0.08) not because the extraction is weak, but because 'extraction' is the wrong frame: the constraint is not extracting wealth from the gambler for the house's benefit, but rather redistributing capital according to the absorbing boundary conditions of a random walk. The asymmetry (gambler finite, house infinite) is the constraint's essence, not its extraction mechanism.",
+    "key_agents": [
+      "Individual Gambler: Structural victim (powerless/trapped) \u2014 finite capital facing infinite opponent; certain bankruptcy in limit",
+      "The House/Casino: Structural beneficiary (institutional/arbitrage) \u2014 infinite effective capital; accumulates ruin probabilities from all finite players; not exempt from theorem if facing larger opponent",
+      "Mathematical Proof Community: Analytical observer (analytical/analytical) \u2014 derives and validates the theorem; neutral on distribution of outcomes",
+      "Addiction & Policy Authorities: Organized secondary actors (organized/constrained) \u2014 can reduce exposure but cannot change fundamental mechanism; can redistribute pre-game but not prevent post-game ruin",
+      "Financial Speculators: Analogous victims (powerful or moderate, depending on capital relative to market) \u2014 face ruin dynamics identical to gamblers but in stock/currency markets"
+    ],
+    "logic_rationale": "Extractiveness (0.08): The low value reflects that this is a pure structural theorem, not a policy-enforced extraction. The house doesn't 'extract' capital; rather, the mathematics of finite capital in infinite games redistributes it. The 0.08 value captures the minor institutional overhead: odds-setting, venue operation, rule enforcement. The core mechanism (ruin probability) is costless. Suppression (0.02): Negligible. The gambler faces no hidden suppression or coerced barriers \u2014 the constraint is fully transparent and mathematically proven. Entry and exit are formally unconstrained (though practically psychologically/addiction-driven). Theater ratio (0.15): Very low. The theorem has no performative element \u2014 it is pure mathematical proof. The minor theater reflects that real casinos add ambient experience (lights, sounds, social pressure) that disguises the theorem's coldness, but this is not essential to the constraint itself. Accessibility collapse (0.92): Very high. The constraint is maximally difficult to escape because it is a mathematical law, not a policy. No appeal, no workaround, no exception exists for sufficiently long timescales. Resistance (0.08): Very low. The mechanism faces no logical resistance \u2014 the proof is airtight. Empirical resistance (e.g., Kelly betting strategies, wealth redistribution) can only delay, not prevent, eventual absorption by the lower boundary.",
+    "perspectival_gap": "This constraint is rare in that ALL perspectives converge on mountain classification. There is no perspectival gap because the theorem is independent of observer position. The gambler sees ruin as fate. The house sees ruin as their structural advantage. The mathematician sees it as a theorem. The policy maker sees it as an immutable constraint on what regulation can achieve. All observers, standing in different structural positions, see the same law apply universally. This consensus suggests that Gambler's Ruin is a genuine natural law within its domain of validity (finite capital, infinite opponent, random walk dynamics), not a contingent institutional arrangement. The absence of a perspectival gap is itself informative: it confirms that the constraint is not a Rope (which would appear different to beneficiaries and victims), not a Snare (which would have hidden extraction mechanisms), not a Scaffold (which would have visible sunsets from some positions). It is a Mountain.",
+    "directionality_logic": "The directionality analysis is simplified here because beneficiary/victim language is not primary. The constraint is not an extraction mechanism but a stochastic law. However, we can map structural positions: The gambler is the 'victim' in the sense that they absorb ruin; their d\u22480.95 reflects trapped exit with no structural escape. The house is the 'beneficiary' in the sense that they accumulate capital; their d\u22480.05 reflects that they are on the absorbing boundary from below (bankruptcy) and the absorbing boundary from above is infinity. The mathematician is neutral (d\u22480.72, analytical position). The policy maker is constrained (d\u22480.50, they can redistribute pre-game but not prevent post-game absorption). All d values are structural consequences of probability theory, not negotiable positions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "martingale_betting_impossibility",
+      "random_walk_absorption_law"
+    ],
+    "dual_formulation_note": "Gambler's Ruin is upstream of several derivative constraints: the impossibility of martingale betting strategies (no strategy can guarantee positive expectation against a fair game) depends on the ruin theorem's underlying random walk dynamics. The absorption law for symmetric random walks is the mathematical substrate from which ruin emerges when one boundary is absorbing (bankruptcy) and the other is semi-infinite (house resources)."
+  },
+  "directionality_overrides": []
+}

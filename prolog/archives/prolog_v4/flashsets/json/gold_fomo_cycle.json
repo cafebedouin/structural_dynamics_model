@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "gold_fomo_cycle",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Gold Price 'Fear of Missing Out' Cycle",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_investors",
+      "gold_dealers"
+    ],
+    "victims": [
+      "late_retail_investors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Late Retail Investors",
+      "comment": "Late retail investors, driven by FOMO, enter the market near its peak and are trapped when the price corrects, suffering losses."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Early Investors",
+      "comment": "Early investors who bought gold before the rally benefit from the price increase and can exit the market with substantial profits."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Gold Dealers",
+      "comment": "Gold dealers benefit from increased trading volume and higher prices during the FOMO cycle, but they also face reputational risks if they are perceived as promoting the hype."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Financial Education Initiatives",
+      "comment": "Financial education initiatives attempt to inoculate retail investors against FOMO by promoting rational investment strategies and risk awareness, providing a temporary support to avoid speculative bubbles. Has a sunset clause as better education becomes widespread. The scaffold's sunset derives from the fact that once an investor gains analytical perspective, they should become immune to the FOMO dynamic."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "Traditional Financial Advice",
+      "comment": "Traditional financial advice, though intended to guide investors, can sometimes contribute to the FOMO cycle by inadvertently promoting gold as a safe haven asset during times of economic uncertainty, even when valuations are high. This is a degraded function \u2014 now theater rather than substance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees the gold FOMO cycle as a tangled rope, characterized by a complex interplay of coordination (information sharing) and extraction (transfer of wealth from late to early investors)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rationality_threshold",
+      "question": "What level of financial literacy is needed to resist the FOMO effect in gold investing?",
+      "resolution_mechanism": "Survey retail investors before, during, and after a gold rally to measure literacy and FOMO vulnerability.",
+      "impact": "High level = the effect continues despite current interventions. Low level = further education will help the powerless agents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Level of literacy to resist the FOMO effect"
+    },
+    {
+      "id": "media_influence",
+      "question": "How much do financial news outlets' narratives influence the FOMO and extraction?",
+      "resolution_mechanism": "Test specific narratives on samples of the population.",
+      "impact": "High influence leads to increased regulation to curtail the narratives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Financial news' influence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the market dynamic during a gold price rally where media hype and rapid price appreciation create a 'fear of missing out' (FOMO) among retail investors. Late investors are often trapped when the price corrects, while early investors and gold dealers benefit. The cycle repeats periodically, driven by economic uncertainty and speculative sentiment.",
+    "key_agents": [
+      "Late Retail Investors: Primary target (powerless/trapped) - enter the market at peak and suffer losses.",
+      "Early Investors: Primary beneficiary (institutional/arbitrage) - benefit from price increase and exit with profits.",
+      "Gold Dealers: Secondary beneficiary (powerful/mobile) - benefit from increased trading volume and higher prices.",
+      "Financial Education Initiatives: Temporary support (organized/analytical) - promote rational investment strategies and risk awareness.",
+      "Traditional Financial Advice: Degraded guidance (moderate/constrained) - inadvertently contributes to the FOMO cycle.",
+      "Analytical Observer: Global view (analytical/analytical) - sees a complex interplay of coordination and extraction."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High extraction due to the significant wealth transfer from late to early investors. Suppression (0.40): Moderate suppression due to the strong emotional appeal of gold as a safe haven asset and the lack of readily available information to counter the hype. Theater ratio (0.30): Moderate theater, as the cycle involves both real economic factors (uncertainty) and performative elements (media hype).",
+    "perspectival_gap": "Late retail investors perceive a snare as they are trapped with losses. Early investors, arbitraging the market, see a rope. Gold dealers see it as a tangled rope where they benefit, but face some reputational risk. Financial education initiatives see it as a scaffold they can address. Traditional financial advice provides a degraded function. Analytical observers see the interplays.",
+    "directionality_logic": "Early investors and gold dealers benefit (low d), while late retail investors are targeted (high d). Financial education initiatives provide a temporary fix (medium d). Traditional financial advice, though intention is to benefit investors, reinforces the problem (high-medium d). All feeds into the chi formula.",
+    "mandatrophy_analysis": "This constraint could be misclassified as pure extraction (Snare) if we only consider late investors. However, the early investors provide a rope, while those who profit are powerful. The financial education scaffolding to stop this is also crucial. Hence, Tangled Rope is the type."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "economic_uncertainty",
+      "investor_irrationality"
+    ]
+  },
+  "directionality_overrides": []
+}

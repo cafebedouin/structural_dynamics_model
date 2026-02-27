@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "roman_monumental_construction",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.8,
+    "theater_ratio": 0.7,
+    "claimed_type": "snare",
+    "human_readable": "The Roman State's Monopoly on Opus Caementicium Construction",
+    "topic_domain": "socio_technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "roman_state",
+      "roman_elites"
+    ],
+    "victims": [
+      "private_builders",
+      "subject_provinces"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Subject Provinces",
+      "comment": "Subject provinces were heavily extracted from, with resources and labor directed towards state projects. No exit option as they were under Roman control."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Roman State (Later Empire)",
+      "comment": "As the empire declined, the quality of concrete construction decreased and the state's ability to maintain the infrastructure declined. What was once a source of power, became a constraint, with the structures acting as a reminder of past glory."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Roman Elites",
+      "comment": "Roman elites benefited from access to state-sponsored construction projects but were also constrained by the state's control over the technology. Constrained as they could not build without state authorization. Tangled rope due to the benefit from the extraction happening in other regions."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Private Builders",
+      "comment": "Private builders were largely excluded from monumental construction, limiting their opportunities for profit and innovation. Constrained as they could not compete with state sponsored works."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the mixed nature of this constraint: while it enabled the construction of impressive monuments, it also suppressed alternative building technologies and extracted resources from subject populations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "technology_transfer_limits",
+      "question": "To what degree was the knowledge of opus caementicium construction genuinely limited to the Roman state and its authorized contractors?",
+      "resolution_mechanism": "Archaeological analysis of construction techniques in different regions; historical records of technological diffusion.",
+      "impact": "If knowledge was tightly controlled: extraction is higher. If knowledge diffused more freely: constraint is weaker (closer to rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How much knowledge was needed for successful construction"
+    },
+    {
+      "id": "alternative_construction_viability",
+      "question": "How viable were alternative construction technologies in the absence of Roman concrete?",
+      "resolution_mechanism": "Comparative analysis of building costs and durability; studies of alternative materials and techniques.",
+      "impact": "If alternatives were viable: suppression is lower. If alternatives were limited: suppression is higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Alternative Construction Viability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the socio-technical system surrounding Roman concrete (opus caementicium) for monumental architecture. The Roman state maintained a near-monopoly on the production and use of this material for large-scale building projects, enabling the construction of impressive structures but also suppressing private enterprise and extracting resources from subject provinces. Roman concrete allowed for unprecedented scale and speed of construction. However, this power came at a cost: the state exercised tight control over its production and deployment, channeling resources and labor towards projects that served its political and military ambitions.",
+    "key_agents": [
+      "Roman State: Primary beneficiary (institutional/constrained) \u2014 benefits from the construction of monuments that project power and legitimize rule.",
+      "Roman Elites: Secondary beneficiary (powerful/constrained) \u2014 benefit through state allocation of labor, but are constrained by access to Roman State.",
+      "Private Builders: Primary victim (moderate/trapped) \u2014 face barriers to entry into monumental construction and are excluded from lucrative contracts.",
+      "Subject Provinces: Primary victim (powerless/trapped) \u2014 bear the cost of resource extraction and forced labor.",
+      "Analytical Observer: Assesses long term effects."
+    ],
+    "logic_rationale": "Extractiveness (0.70): High. The state extracted resources and labor from conquered territories to fuel its construction projects. Suppression (0.80): High. Private builders were effectively excluded from monumental construction, and alternative building technologies were not pursued. Theater ratio (0.70): High. The system was primarily functional, with relatively little emphasis on performative aspects.",
+    "perspectival_gap": "The perspectival gap arises from the different positions within the socio-technical system. The Roman state sees the system as a way to project power and legitimize rule, while private builders and subject provinces experience it as a form of extraction and suppression. The Roman elite are caught between the institutional power of the Roman State and their own ambitions.",
+    "directionality_logic": "Beneficiaries such as the Roman State experience the constraint as coordination, while victims such as subject provinces experience it as extraction. The directionality values reflect these opposing perspectives.",
+    "mandatrophy_analysis": "This is a snare because, despite the impressive construction achievements, it suppressed alternative building technologies, extracted resources from conquered territories, and concentrated power in the hands of the state. The monumental construction isn't seen as a helpful tool, but rather as an oppressive regime."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_military_expansion",
+      "roman_economic_system"
+    ]
+  },
+  "directionality_overrides": []
+}

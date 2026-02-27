@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "us_military_recruitment_advertising",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.7,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Military Recruitment Advertising",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_military",
+      "defense_contractors"
+    ],
+    "victims": [
+      "potential_recruits",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Potential Recruits (Trapped)",
+      "comment": "Potential recruits, especially those from disadvantaged backgrounds with limited alternatives, can be ensnared by the idealized portrayals and face significant consequences (physical, psychological, or financial) upon enlisting that were not fully presented or understood beforehand.  Limited exit options once committed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Potential Recruits (Informed)",
+      "comment": "Potential recruits who are better informed or have more options may still be influenced by the advertising but can make more reasoned decisions. Constrained by the limited availability of information, but benefits from potential career opportunities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Military",
+      "comment": "The US military benefits from recruitment advertising by attracting a sufficient number of recruits to maintain its force size and operational capabilities. They can shift advertising strategies to focus on different demographics to arbitrage recruitment numbers."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Taxpayers",
+      "comment": "Taxpayers are constrained to fund the military and its recruitment efforts. The benefits (national security) are increasingly theatrical and diluted, while the costs remain, making it a piton."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, recruitment advertising serves as a tangled rope. It is a necessary function for military readiness but also relies on asymmetric information and can lead to negative outcomes for some recruits. The effectiveness and fairness are constantly evolving."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_impact_on_recruits",
+      "question": "What are the long-term physical, psychological, and economic impacts on recruits who enlist due to advertising?",
+      "resolution_mechanism": "Longitudinal studies tracking the well-being of recruits over decades.",
+      "impact": "If impacts are severe, the classification shifts towards Snare. If positive, it shifts towards Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessment of the long-term effects of military service on recruits."
+    },
+    {
+      "id": "effectiveness_of_alternative_recruitment_methods",
+      "question": "How effective are alternative, less manipulative recruitment methods (e.g., scholarships, vocational training) compared to traditional advertising?",
+      "resolution_mechanism": "Comparative analysis of recruitment numbers and recruit quality using different strategies.",
+      "impact": "If alternative methods are effective, the suppression element decreases. If not, it increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluation of alternative recruitment strategies."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "US military recruitment advertising seeks to attract new members by presenting a curated and often idealized view of military service. While providing opportunities and contributing to national defense, it also relies on asymmetric information and can disproportionately affect vulnerable populations. The type of constraint depends on perspective, with potential recruits, the military, and analytical observers all experiencing it differently.",
+    "key_agents": [
+      "Potential Recruits: Primary target (powerless/trapped) - Subject to idealized portrayal and potential misinformation.",
+      "US Military: Primary beneficiary (institutional/arbitrage) - Uses advertising to maintain recruitment numbers.",
+      "Defense Contractors: Secondary beneficiary (institutional/arbitrage) - Profits from a larger military.",
+      "Taxpayers: Funding source (institutional/constrained) - Forced to fund military recruitment."
+    ],
+    "logic_rationale": "Extractiveness: (0.55) Moderate. Advertising extracts potential from vulnerable recruits by offering a path to social mobility. Suppression: (0.45) Moderate. The portrayal of military life and benefits suppress the negative aspects and risks associated with service. Theater Ratio: (0.70) Medium-High. While recruitment serves a genuine function of maintaining military readiness, a significant portion is dedicated to marketing and branding, projecting an idealized image.",
+    "perspectival_gap": "Potential recruits (trapped) see a snare due to asymmetric information and limited exit options. The US Military perceives a rope, as the ads help solve a coordination problem in finding recruits. Taxpayers view it as a piton with limited benefit. The analytical perspective is a tangled rope, balancing legitimate recruitment needs with potential exploitation and asymmetric information.",
+    "directionality_logic": "Beneficiaries (US Military, Defense Contractors) experience the constraint as a coordination mechanism (rope), while victims (potential recruits, taxpayers) bear the costs. Directionality reflects their positions relative to the extraction flow. The degree of power and exit options influences their perceived impact."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "military_industrial_complex",
+      "patriotic_narratives"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "debt_trap_microfinance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mf_debt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Microfinance Debt Trap",
+    "topic_domain": "economic/development_finance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "microfinance_institutions",
+      "loan_officers",
+      "investors"
+    ],
+    "victims": [
+      "low_income_borrowers",
+      "borrower_households"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Trapped Borrower",
+      "comment": "PERSPECTIVE 1: TRAPPED BORROWER (SNARE) \u2014 Low-income borrower with no exit: repayment enforced through social collateral (group guarantees), asset seizure, or coercive renewal cycles. High interest rates (20-40% annual), mandatory insurance, hidden fees, and group liability create maximal extraction. Borrower experiences pure extraction with no coordination benefit \u2014 the loan structure actively prevents income-generating activity by consuming cash flow."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Borrower Household",
+      "comment": "PERSPECTIVE 2: BORROWER HOUSEHOLD (SNARE) \u2014 Intergenerational trap. Debt obligations consume household income for years; children lose school access due to labor requirements; household assets are pledged as collateral. No exit from the region without defaulting and facing social sanction. Accumulating debt cycles create multi-generational poverty lock-in."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Microfinance Institution",
+      "comment": "PERSPECTIVE 3: MICROFINANCE INSTITUTION (ROPE) \u2014 Views itself as solving a coordination problem: providing access to capital in markets without formal banking. Experiences the constraint as legitimate risk management through interest rates, collateral, and repayment discipline. Net beneficiary \u2014 extraction flows toward the institution through interest, fees, and asset seizure. High arbitrage options: can exit individual markets, refinance portfolios, or rebrand if reputation damage emerges."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Microfinance Reform Coalition",
+      "comment": "PERSPECTIVE 4: MICROFINANCE REFORM COALITION (SCAFFOLD) \u2014 Organized actors (CGAP, Accion, SKS reforms) recognize the debt trap and are building alternative models: group lending with dynamic incentives, cash-flow-based lending instead of asset-based collateral, financial literacy coupled with loan access, and portfolio caps to prevent over-indebtedness. These reforms represent temporary support structures (Scaffold) with sunset logic \u2014 as digital finance and formalized banking reach underserved populations, the microfinance debt-trap mechanism loses dominance. Estimated sunset: 15-25 years as mobile money and regulated digital lenders expand market access."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Development Narrative",
+      "comment": "PERSPECTIVE 5: DEVELOPMENT NARRATIVE (PITON) \u2014 The original microfinance narrative ('financial inclusion empowers the poor') persists in policy despite contradictory evidence. Studies show microfinance has minimal impact on borrower income and substantial default rates in high-extraction contexts. The narrative is maintained through performative metrics (% reaching poorest quintile, repayment rates) that mask debt outcomes. Theater ratio is high because reporting emphasizes outreach numbers while suppressing debt-burden and default data. The constraint persists through institutional inertia and reputational investment in the original theory, not because the mechanism works."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational/global perspective, the debt-trap mechanism is a pure extraction architecture: high interest rates, social collateral enforcement, coercive renewal, hidden fees, and default-triggered asset seizure operate to transfer wealth from borrowers to institutions without creating corresponding productive capacity or income growth for borrowers. Randomized trials show minimal or negative income effects for borrowers in high-extraction environments. The constraint is not a natural law (it is contingent on institutional design choices) and not primarily a coordination mechanism (borrowers gain access but at a cost exceeding the benefit). This is snare classification across all substantive perspectives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "borrower_income_impact_causation",
+      "question": "Does microfinance debt trap reduce borrower income growth, or do low-income borrowers self-select into microfinance precisely because they lack income-growth opportunities?",
+      "resolution_mechanism": "Randomized controlled trials with treatment/control groups in same regions; longitudinal tracking of borrower income with counterfactual matched controls; analysis of borrower selection criteria",
+      "impact": "If causally negative: debt trap is extraction mechanism (Snare confirmed). If selection effect dominates: apparent trap is rational response to limited alternatives (shifts toward Rope classification). If both: extractiveness varies by borrower initial income level.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal impact of microfinance debt on borrower income"
+    },
+    {
+      "id": "social_collateral_enforcement_mechanism",
+      "question": "Is social collateral (group liability) a coordination mechanism that reduces lender risk (Rope interpretation) or a coercive enforcement tool that extracts from borrowers who would otherwise default (Snare interpretation)?",
+      "resolution_mechanism": "Comparative analysis: default rates in individual vs group lending in same markets; measurement of peer pressure intensity and social sanction severity; borrower interviews on repayment motivation; analysis of repayment using coercion vs. genuinely improved cash flow",
+      "impact": "If coordination: suppression \u2264 0.40, classification shifts toward Rope or Tangled Rope. If coercive: suppression \u2265 0.65, Snare classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether social collateral functions as coordination or coercion"
+    },
+    {
+      "id": "alternative_lender_availability",
+      "question": "In microfinance markets, what proportion of borrowers have genuine alternatives (formal bank credit, informal lending, family capital) vs. are trapped with microfinance as the only available option?",
+      "resolution_mechanism": "Market structure analysis: banking penetration, informal lending rates, family capital availability by region; borrower survey on alternative access attempts and rejection rates",
+      "impact": "High trapped proportion (>60%): trap is structural (Snare). Low trapped proportion (<30%): borrowers choose microfinance despite costs (Rope). Mixed: extractiveness varies by subpopulation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of borrowers with genuine exit alternatives"
+    },
+    {
+      "id": "institutional_model_variation",
+      "question": "Does the debt-trap mechanism persist across all microfinance models (community banks, digital lenders, group-based, individual) or only specific institutional forms?",
+      "resolution_mechanism": "Comparative extractiveness measurement across model types; analysis of interest rates, collateral requirements, renewal coercion, and default outcomes by lender type; borrower outcome tracking by institution",
+      "impact": "If universal: snare is structural feature of lending-to-poor mechanism itself (high \u03b5). If model-dependent: snare is institutional design choice (lower \u03b5, implies reform is viable). If reformable: scaffold perspective gains structural weight.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether debt trap is universal or model-specific"
+    },
+    {
+      "id": "reform_sustainability_timeline",
+      "question": "Are alternative microfinance models (cash-flow-based lending, portfolio caps, digital low-cost lenders) sustainable at scale and scaling fast enough to exit from the debt-trap era before a new generation of borrowers are trapped?",
+      "resolution_mechanism": "Tracking adoption rates of reformed microfinance models; measurement of cost structure and default rates as digital lenders scale; projection of traditional high-extraction MFI market share decline; analysis of borrower migration from extractive to reformed lenders",
+      "impact": "If sustainable and scaling fast (>5% annual market shift): scaffold perspective is structural, sunset timeline is real (~20 years). If stalling or fragile: scaffold is aspirational, traditional debt trap persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability and scale of microfinance reform models"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Microfinance emerged in the 1970s-1980s as a development innovation to provide capital access to the poorest populations excluded from formal banking. The original theory was that providing small loans at market interest rates to low-income borrowers would enable income-generating activities and reduce poverty. However, structural analysis reveals a debt-trap mechanism: high interest rates (20-40% annually), mandatory insurance and hidden fees, social collateral enforcement through group liability, and coercive renewal cycles create extraction that exceeds borrower income gains. The constraint exhibits characteristics of pure extraction (Snare) from the borrower perspective but is perceived as legitimate risk management and coordination from the lender perspective. The theater ratio (0.55) reflects that impact measurement emphasizes outreach and repayment rates while suppressing default data, debt-burden analysis, and income outcomes. The extractiveness value has increased over the 20-year interval as competition for borrowers intensified, driving higher interest rates and more aggressive collateral enforcement. The constraint is contingent on institutional design choices (not a law of nature) and is beginning to be undermined by digital lending alternatives, creating scaffold-type reform pathways with genuine sunset potential.",
+    "key_agents": [
+      "Low-income borrowers: Primary victim (powerless/trapped) \u2014 faces repayment enforced through social collateral and asset seizure; extraction exceeds income gains; no alternative access to capital",
+      "Borrower households: Primary victim (powerless/trapped) \u2014 multi-generational debt trap; children lose school access; household assets pledged as collateral; regional immobility",
+      "Microfinance institution: Primary beneficiary (institutional/arbitrage) \u2014 captures interest spread (15-25 percentage points above cost of funds), fees, and asset seizures; high arbitrage options to exit or reposition",
+      "Loan officers: Secondary beneficiary (moderate/arbitrage) \u2014 commission-based compensation incentivizes aggressive lending and coercive renewal; income depends on portfolio volume, not borrower outcomes",
+      "Investors in MFI funds: Secondary beneficiary (institutional/arbitrage) \u2014 expecting 8-12% returns; have no direct relationship with borrowers; exit through secondary market sales",
+      "Microfinance reform coalition (CGAP, Accion, SKS, local regulators): Organized actors (organized/constrained) \u2014 recognize debt trap; building alternative models (cash-flow lending, portfolio caps, digital lenders); constrained by legacy MFI incumbent resistance and network effects",
+      "Development policy community: Institutional observer (institutional/arbitrage) \u2014 maintains original microfinance narrative despite contradictory evidence; reputational investment in theory prevents acknowledgment of debt-trap mechanism",
+      "Analytical observer: Universal perspective (analytical/analytical) \u2014 sees the structural extraction mechanism and its contingency on institutional design"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The measurement reflects that borrowers in high-extraction microfinance environments experience net negative income effects (studies show minimal to negative income growth post-borrowing). Interest rates of 20-40% annually, combined with mandatory insurance (2-5% of loan), processing fees, and renewal incentives, consume 25-35% of borrower income without creating corresponding income-generating capacity. Over-indebtedness is common \u2014 borrowers borrow repeatedly from multiple lenders to service prior debt, creating debt accumulation. RCT evidence from India, Mexico, and Philippines shows zero to negative income impact in the poorest quintile. Suppression (0.68): High. Multiple mechanisms prevent borrower exit: (1) Social collateral \u2014 group members enforce repayment through social sanction, not because they benefit but because group members are jointly liable. Default triggers loss of social standing and exclusion from future credit. (2) Asset seizure \u2014 collateral (land, productive assets, savings) is seized on default, creating downside risk far exceeding any upside from successful borrowing. (3) Information asymmetry \u2014 borrowers often do not understand the full cost of borrowing (hidden fees, mandatory insurance, renewal coercion). (4) Lack of alternatives \u2014 formal banking typically requires documented income and collateral that poor borrowers lack. Theater ratio (0.55): Moderate-high. MFI reporting emphasizes outreach metrics ('reached X million poor borrowers') and repayment rates (often >95% because of coercive enforcement) while suppressing default data, debt-burden measures, and income outcome analysis. The narrative of 'empowering the poor' is maintained despite evidence that borrower welfare outcomes are minimal or negative. The performative element has increased over the interval as institutional pressure for scale and profitability intensified.",
+    "directionality_logic": "Borrower directionality (d): High (0.85-0.95). Borrowers are trapped by the constraint (no genuine exit alternatives), are victims of extraction (debt burden exceeds income gains), and hold no power to reform the mechanism (powerless relative to lender). The sigmoid f(d) produces high effective extractiveness chi experienced by this agent. Lender directionality (d): Low (0.10-0.20). Lenders are beneficiaries (interest spread, fees, asset seizures), have arbitrage options (exit markets, refinance, reposition), and are institutional actors with power to set terms. Low d \u2192 negative f(d) \u2192 negative or minimal experienced chi for the lender. Reform coalition directionality (d): Moderate (0.45-0.55). Organized actors have some power and some exit options (can work in reformed sectors) but are constrained by incumbent resistance and network effects. They bear some cost (fighting institutional inertia) but also have agency to change systems. The perspectival gap is fundamental: what the lender experiences as coordination and legitimate risk management, the borrower experiences as pure extraction with no exit.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. The lender (institutional/arbitrage) sees Rope \u2014 solving the coordination problem of connecting savers with borrowers in underserved markets. The borrower (powerless/trapped) sees Snare \u2014 repayment enforced through social collateral and asset seizure, with no path to exit. The reform coalition (organized/constrained) sees Scaffold \u2014 alternative models exist and are scaling, creating a sunset to the traditional debt-trap model. The development narrative (institutional/arbitrage) sees Piton \u2014 the original theory of empowerment persists through performative metrics despite contradictory evidence. The analytical observer (analytical/analytical) sees pure Snare \u2014 high interest rates, social collateral coercion, and negative borrower outcomes constitute an extraction mechanism without genuine coordination benefit. The gap arises because different agents experience different extraction flows: the lender captures positive flows (interest spread, fees); the borrower experiences negative flows (debt burden, asset seizure, social sanction); the reform coalition experiences constrained opportunity to redirect flows.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED. The mandatrophy analysis confirms that microfinance debt trap is not a hidden coordination mechanism masquerading as extraction. The structural evidence is clear: (1) Beneficiary and victim are distinct \u2014 lenders benefit consistently, borrowers bear consistent costs. (2) Extraction exceeds coordination benefit for borrowers \u2014 RCT evidence shows zero to negative income effects; borrower welfare is not improved. (3) Suppression is high and structural \u2014 social collateral, asset seizure, information asymmetry, and lack of alternatives create effective trapping. (4) Exit is not available \u2014 borrowers cannot walk away without losing assets and social standing. (5) The mechanism is not natural law \u2014 institutional design choices (interest rates, collateral policy, renewal coercion) could be different, and alternative models demonstrate viable reform pathways. The mandatrophy risk would arise if we claimed Tangled Rope (mixed coordination and extraction) \u2014 the microfinance industry narrative does make this claim: 'we provide access to capital that borrowers couldn't otherwise obtain.' But access without positive income outcomes is not coordination; it is predatory lending. The debt-trap classification as Snare is robust across all the evidence dimensions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "rural_informal_lending_substitution",
+      "poverty_trap_asset_seizure"
+    ],
+    "dual_formulation_note": "The microfinance debt trap represents one constraint in a family of extractive lending mechanisms operating on the global poor. It is upstream of alternative informal lending structures and downstream of broader poverty-trap mechanisms that create the demand for microfinance in the first place. The three constraints are linked: poverty creates demand for microfinance \u2192 microfinance creates debt trap \u2192 debt trap forces alternative informal lending or asset loss. Each story has distinct extractiveness: microfinance debt trap (\u03b5=0.58), informal lending substitution effects (\u03b5=0.45), poverty trap dynamics (\u03b5=0.42)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

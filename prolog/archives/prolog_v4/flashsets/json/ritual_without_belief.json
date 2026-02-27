@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "ritual_without_belief",
+    "version": "1.0",
+    "generated_date": "2024-05-03",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.85,
+    "claimed_type": "piton",
+    "human_readable": "The Hollow Orthopraxy",
+    "topic_domain": "social/organizational/religious",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_institution",
+      "ritual_enforcers"
+    ],
+    "victims": [
+      "individual_believers",
+      "organizational_adaptability"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Individual Believer",
+      "comment": "Perspective of an individual believer who no longer finds meaning in the ritual but is pressured to conform. They are trapped within the system, experiencing high extraction due to the suppression of alternative expressions of belief or belonging. The snare arises from the cognitive dissonance and emotional cost of performing a ritual they no longer believe in."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy Institution",
+      "comment": "Perspective of the legacy institution that maintains the ritual. The institution benefits from the continued performance of the ritual, as it provides a sense of continuity and legitimacy. However, the institution is also constrained by its own traditions and may be unable to adapt to changing circumstances. The theater ratio is high, as the external performance of the ritual is more important than its underlying meaning."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Ritual Enforcers",
+      "comment": "Perspective of the individuals responsible for enforcing the ritual. They benefit from the power and status that comes with their role, but they also bear the cost of suppressing dissent and maintaining the system. They have some mobility, as they could potentially choose to leave their role, but they are also constrained by their own beliefs and the expectations of their community. Tangled rope: enforces the ritual (extraction) but is also bound by it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Organizational Adaptability",
+      "comment": "Perspective of the organization as a whole regarding its own ability to adapt to changing circumstances. Its adaptability is harmed as legacy rituals are enforced. There is a mixed coordination/extraction profile as some members see the benefit of tradition while others seek change. The mobility is limited as some of its members are legacy institutions that can't easily exit. Tangled rope."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective of an analytical observer who sees the ritual as a hollow performance. The observer recognizes that the ritual no longer serves its original purpose and that it is maintained primarily for its symbolic value. The high theater ratio and declining meaning indicate a piton."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "original_belief_threshold",
+      "question": "What percentage of adherents must cease to believe in the ritual's efficacy before it is considered 'hollow'?",
+      "resolution_mechanism": "Sociological surveys, historical analysis of belief systems",
+      "impact": "High threshold: ritual is deemed functional despite widespread skepticism. Low threshold: ritual is deemed hollow despite pockets of genuine belief.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for considering a ritual 'hollow'"
+    },
+    {
+      "id": "functional_utility_definition",
+      "question": "What criteria define the 'functional utility' of a ritual? Is it limited to tangible outcomes, or does it include social cohesion and psychological benefits?",
+      "resolution_mechanism": "Interdisciplinary analysis incorporating sociology, psychology, and anthropology",
+      "impact": "Narrow definition: more rituals classified as hollow. Broad definition: fewer rituals classified as hollow.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Criteria for defining the 'functional utility' of a ritual"
+    },
+    {
+      "id": "alternative_expression_availability",
+      "question": "To what extent are alternative expressions of belief or belonging available to individuals who no longer find meaning in the ritual?",
+      "resolution_mechanism": "Sociological studies of social networks and cultural diversity",
+      "impact": "High availability: lower suppression, weaker snare. Low availability: higher suppression, stronger snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of alternative expressions of belief"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.85
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 'Hollow Orthopraxy' describes a social or religious scenario where the external performance of a ritual or protocol is strictly enforced, even though the underlying belief or functional utility has vanished. This constraint often arises in long-standing institutions that have become disconnected from their original purpose. While the ritual may have once served a vital function, such as promoting social cohesion or expressing religious devotion, it has now become a mere formality, devoid of genuine meaning or practical value.",
+    "key_agents": [
+      "Individual Believers: Primary victims (powerless/trapped) \u2013 Forced to conform to rituals they no longer believe in.",
+      "Legacy Institution: Primary beneficiary (institutional/constrained) \u2013 Maintains the ritual for the sake of continuity and legitimacy.",
+      "Ritual Enforcers: Secondary actors (moderate/mobile) \u2013 Enforce the ritual for power and status, but also bear the cost of suppressing dissent.",
+      "Organizational Adaptability: Victim (moderate/mobile). Loses ability to adapt to current context.",
+      "Analytical Observer: Analytical perspective (analytical/analytical) \u2013 Recognizes the ritual as a hollow performance."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The ritual extracts conformity, time, and emotional energy from individuals who no longer believe in it. Suppression (0.70): High. Dissent is suppressed through social pressure, fear of ostracism, or formal sanctions. Theater Ratio (0.85): Very High. The external performance of the ritual is more important than its underlying meaning or practical value. Performative compliance is prized over internal conviction.",
+    "perspectival_gap": "The perspectival gap arises from the differing structural positions of the key agents. The individual believer experiences the ritual as a snare, as they are trapped within the system and forced to conform. The legacy institution sees the ritual as a piton, as it is maintained primarily for its symbolic value. The ritual enforcers experience the ritual as a tangled rope, as they benefit from the power and status that comes with their role, but they also bear the cost of suppressing dissent. The analytical observer sees the ritual as a piton, as it is a degraded institution that no longer serves its original purpose.",
+    "directionality_logic": "The directionality values are determined by the agents' structural relationships to the constraint. The individual believer, as the primary victim, has a high directionality value, as they bear the full cost of the ritual. The legacy institution, as the primary beneficiary, has a low directionality value, as they benefit from the ritual's continued performance. The ritual enforcers have a moderate directionality value, as they both benefit from and bear the cost of the ritual.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by recognizing that the same ritual can be classified differently depending on the observer's perspective. The key is to identify the structural relationships between the agents and the constraint and to understand how these relationships shape their experiences. The piton is not inherently bad or wrong, but it is important to recognize that it is a degraded institution that may need to be reformed or replaced. The mandate is resolved once we can identify each perspective and why it exists."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

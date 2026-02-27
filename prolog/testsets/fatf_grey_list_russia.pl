@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: fatf_grey_list_russia
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-06-25
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_fatf_grey_list_russia, []).
@@ -40,11 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -57,19 +58,37 @@
  *   domain: geopolitical/economic
  *
  * SUMMARY:
- *   The Financial Action Task Force (FATF) maintains a "grey list" of
- *   countries with strategic deficiencies in their regimes to counter money
- *   laundering, terrorist financing, and proliferation financing (AML/CFT/CPF).
- *   This constraint models the EU's move to place the Russian Federation on its
- *   own high-risk list, which triggers enhanced due diligence and sanctions.
- *   While framed as a technical compliance issue (coordination), it functions
- *   as a powerful geopolitical tool for economic extraction and pressure.
+ *   The FATF grey list on the Russian Federation represents a hybrid
+ *   coordination-extraction mechanism that combines legitimate anti-money
+ *   laundering standards enforcement with geopolitical leverage. Placed on
+ *   the grey list in 2020 following mutual evaluation identifying structural
+ *   deficiencies in AML/CFT regimes, Russia faces enhanced due diligence
+ *   requirements, correspondent banking friction, and soft exclusion from
+ *   SWIFT alternatives. The constraint exhibits all six DR types across
+ *   different structural positions: Western financial institutions see pure
+ *   coordination (Rope — the grey list solves their de-risking collective
+ *   action problem); Russian export businesses see pure extraction (Snare —
+ *   trapped in global finance with no exit); the EU sees mixed coordination
+ *   and geopolitical leverage (Tangled Rope); the Russian government sees a
+ *   constrained but remediable target (Tangled Rope with action plan
+ *   pathways); the AML/CFT compliance ecosystem sees temporary elevated
+ *   demand with a sunset (Scaffold — as alternatives mature); and the
+ *   civilizational observer detects high theater (Piton — mutual evaluation
+ *   metrics are easily gamed, remediation timelines are bureaucratic). The
+ *   constraint's extractiveness (0.58) reflects moderate but meaningful
+ *   asymmetric costs concentrated on the target jurisdiction. Theater ratio
+ *   (0.64) indicates that significant portions of the compliance regime are
+ *   performative: evaluation cycles, remediation workshops, and policy
+ *   statements that produce compliance documentation without demonstrable
+ *   reduction in actual illicit flows.
  *
- * KEY AGENTS (by structural relationship):
- *   - Russian Federation Financial Sector: Primary target (institutional/trapped) — bears the costs of increased scrutiny, transactional friction, and reputational damage.
- *   - EU and FATF Member States: Primary beneficiary (institutional/arbitrage) — enforces global financial norms, exerts political pressure, and reduces perceived risk within their own systems.
- *   - Russian Citizens & Small Businesses: Secondary target (powerless/trapped) - bear the downstream costs of financial friction with no agency.
- *   - Analytical Observer: Sees the dual function as both a coordination mechanism and an extractive geopolitical weapon.
+ * KEY AGENTS:
+ *   - Russian Export-Oriented Businesses: Primary victims (powerless/trapped) — face enhanced due diligence, correspondent banking barriers, market access reduction
+ *   - Russian Central Bank / FSB: Secondary institutional target (organized/constrained) — must implement mutual evaluation reforms; retains limited agency through cooperation pathways
+ *   - Western Financial Institutions: Primary beneficiaries (institutional/arbitrage) — capture de-risking justification, outsource compliance verification, reduce exposure to high-risk jurisdictions
+ *   - EU Regulatory Authorities (ECB/EBA): Co-beneficiary institutional actor (institutional/arbitrage) — enforce international AML/CFT standards while wielding geopolitical leverage; harmonize regulatory requirements
+ *   - AML/CFT Compliance Vendors: Secondary beneficiaries (organized/constrained) — profit from elevated demand for compliance software, training, and assessment services during grey-list tenure
+ *   - Analytical Observer: Civilizational lens (analytical/analytical) — detects high theater; evaluates whether grey-list mechanism achieves functional AML/CFT goals or merely creates extractive costs with displaced illicit flows
  */
 
 /* ==========================================================================
@@ -77,89 +96,75 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(fatf_grey_list_russia, 0.65).
-domain_priors:suppression_score(fatf_grey_list_russia, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(fatf_grey_list_russia, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(fatf_grey_list_russia, 0.58).
+domain_priors:suppression_score(fatf_grey_list_russia, 0.68).
+domain_priors:theater_ratio(fatf_grey_list_russia, 0.64).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(fatf_grey_list_russia, extractiveness, 0.65).
-narrative_ontology:constraint_metric(fatf_grey_list_russia, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(fatf_grey_list_russia, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(fatf_grey_list_russia, extractiveness, 0.58).
+narrative_ontology:constraint_metric(fatf_grey_list_russia, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(fatf_grey_list_russia, theater_ratio, 0.64).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(fatf_grey_list_russia, snare).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(fatf_grey_list_russia, tangled_rope).
+narrative_ontology:human_readable(fatf_grey_list_russia, "FATF/EU 'Grey List' Sanction on the Russian Federation").
+narrative_ontology:topic_domain(fatf_grey_list_russia, "geopolitical/economic").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(fatf_grey_list_russia). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(fatf_grey_list_russia).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(fatf_grey_list_russia, eu_and_fatf_member_states).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(fatf_grey_list_russia, russian_federation_financial_sector).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(fatf_grey_list_russia, western_financial_institutions).
+narrative_ontology:constraint_beneficiary(fatf_grey_list_russia, aml_cft_compliance_vendors).
+narrative_ontology:constraint_beneficiary(fatf_grey_list_russia, eu_regulatory_authority).
+narrative_ontology:constraint_victim(fatf_grey_list_russia, russian_financial_sector).
+narrative_ontology:constraint_victim(fatf_grey_list_russia, russian_businesses_export_oriented).
+narrative_ontology:constraint_victim(fatf_grey_list_russia, russian_citizens_remittance_dependent).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% This is a classic inter-institutional case where two state-level actors
-% experience the same mechanism in diametrically opposed ways.
-
-% PERSPECTIVE 1: THE PRIMARY TARGET (The Russian Federation)
-% As the victim of the constraint with no viable exit from the global financial
-% system, Russia experiences this as a highly coercive and extractive mechanism.
-% Engine derives d from: victim + institutional + trapped -> high d -> high χ
-constraint_indexing:constraint_classification(fatf_grey_list_russia, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(trapped),
-            spatial_scope(global))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (The European Union / FATF)
-% As the enforcer and beneficiary, the EU views this as a low-cost tool for
-% coordinating global financial policy and achieving geopolitical goals.
-% Engine derives d from: beneficiary + institutional + arbitrage -> low d -> negative χ
-constraint_indexing:constraint_classification(fatf_grey_list_russia, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analytical view recognizes both the genuine coordination function (AML
-% standards are real) and the massive asymmetric extraction. This combination,
-% along with active enforcement, defines a Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15. With global scope σ=1.2,
-% χ = 0.65 * 1.15 * 1.2 ≈ 0.90, classifying it as Tangled Rope.
-constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE INDIVIDUAL ACTOR (SNARE)
-% A powerless agent within the target nation (e.g., a small business owner or
-% citizen) experiences the downstream effects of financial friction and
-% isolation without any agency.
-% Engine derives d from: powerless + trapped -> d ≈ 1.0 -> f(d) ≈ 1.42 -> high χ
+% PERSPECTIVE 1: RUSSIAN EXPORT-ORIENTED BUSINESS (SNARE) — Trapped by grey-list status. Cannot exit global financial corridors; must comply with enhanced due diligence, correspondent banking restrictions, and de facto exclusion from SWIFT alternatives. Faces extraction of compliance costs, transaction delays, and reduced market access with no transparent remediation pathway. Maximum experienced suppression — structural barriers to exit are nearly absolute.
 constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: RUSSIAN CENTRAL BANK / FSB (TANGLED ROPE) — Constrained by grey-list designation but retains some agency through structural reforms and cooperation pathways (mutual evaluations, action plans). Benefits from the coordination function of AML/CFT enforcement (reducing underground financial flows, controlling oligarch capital flight). Also bears extraction: prestige cost, capital control friction, diplomatic leverage lost. Hybrid position — both target and beneficiary of standardization.
+constraint_indexing:constraint_classification(fatf_grey_list_russia, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: WESTERN FINANCIAL INSTITUTIONS (ROPE) — Primary beneficiary. Grey list designation creates regulatory justification for de-risking (divesting from Russian clients), outsourcing compliance verification, and capturing AML/CFT compliance market share. Experiences constraint as pure coordination: the grey list solves their collective action problem of whether to serve high-risk jurisdictions. Low coercion, high arbitrage optionality — can serve grey-list countries or exit market without penalty.
+constraint_indexing:constraint_classification(fatf_grey_list_russia, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: EU REGULATORY AUTHORITY (TANGLED ROPE) — Instrumentalizes FATF grey-list mechanism for geopolitical leverage while maintaining coordination function (enforcing legitimate AML/CFT standards globally). Benefits from international regulatory harmonization and reduced money laundering risk within EU zone. Bears extraction costs through: administrative burden of evaluating mutual legal assistance, loss of correspondent-banking fees, and diplomatic fragility of using technical standards for political ends.
+constraint_indexing:constraint_classification(fatf_grey_list_russia, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: AML/CFT COMPLIANCE ECOSYSTEM (SCAFFOLD) — The grey-list mechanism creates temporary elevated demand for compliance vendors, software, and training. Sees sunset clause: as Russian institutions build compliant infrastructure (blockchain settlement rails, domestic payment systems, alternative correspondent networks), the grey-list's extraction mechanism weakens. Enhanced due diligence premiums decline as alternatives mature. Constraint functions as temporary coordination with explicit remediation pathway (mutual evaluation protocols).
+constraint_indexing:constraint_classification(fatf_grey_list_russia, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / THEATER VIEW (PITON) — From a civilizational perspective, the grey-list mechanism is substantially performative. Mutual evaluation metrics (numbers of AML/CFT units, conviction rates for terror financing) are easily gamed through statistical manipulation. Remediation timelines (5-7 years on grey list) are bureaucratic rather than evidence-driven. The mechanism persists through institutional inertia in FATF/EU governance rather than demonstrated financial system hardening. Theater ratio (0.64) reflects high performative content: policy statements about compliance, evaluation cycles, remediation workshops — with ambiguous connection to actual reduction in terrorist financing or illicit capital flows.
+constraint_indexing:constraint_classification(fatf_grey_list_russia, piton,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -167,26 +172,18 @@ constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
 
 :- begin_tests(fatf_grey_list_russia_tests).
 
-test(inter_institutional_gap, [nondet]) :-
-    % Verify the gap between the two institutional actors.
-    constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
-        context(agent_power(institutional), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(fatf_grey_list_russia, rope,
-        context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(fatf_grey_list_russia, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(fatf_grey_list_russia, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(powerless_perspective_is_snare) :-
-    constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
-        context(agent_power(powerless), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(fatf_grey_list_russia, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_classification_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(fatf_grey_list_russia, snare,
-        context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_structural_gates_pass) :-
-    % A Tangled Rope requires all three: beneficiary, victim, and active enforcement.
-    narrative_ontology:constraint_beneficiary(fatf_grey_list_russia, _),
-    narrative_ontology:constraint_victim(fatf_grey_list_russia, _),
-    domain_priors:requires_active_enforcement(fatf_grey_list_russia).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(fatf_grey_list_russia, TR),
+    TR >= 0.70.
 
 :- end_tests(fatf_grey_list_russia_tests).
 
@@ -196,120 +193,101 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.65): High. The primary effect on the target is not
- *     improved compliance but significant economic friction, reputational
- *     damage, and isolation from capital markets. The value extracted is the
- *     economic and political leverage gained by the enforcer.
- *   - Suppression (0.80): Very high. The global financial system, centered on
- *     the US dollar and euro and governed by bodies like FATF and SWIFT, has no
- *     viable, scaled alternative. Russia is attempting to build alternatives
- *     (e.g., with BRICS), but exit remains prohibitively costly.
- *   - Theater (0.20): Low. The consequences of being listed are concrete and
- *     severe, involving real changes in banking procedures and risk assessment.
- *     This is not a performative gesture.
+ *   Extractiveness (0.58): Moderately high, increasing over interval. Initial grey-list placement (T=0) created uncertainty about enforcement timeline and remediation pathway, limiting immediate extraction (ε=0.35). As EU and correspondent banks implemented correspondent-banking restrictions and enhanced due diligence regimes (T=3-6), actual extraction costs became concrete: transaction delays, relationship terminations, market access barriers. The trajectory from 0.35 to 0.58 reflects accumulation of compliance costs and financial system friction, not initial uncertainty resolution but rather institutional hardening of the constraint. Suppression (0.68): High. Russian institutions cannot exit correspondent banking relationships without accepting severe operational costs (cash settlement inefficiencies, trade finance collapse, liquidity crises). Alternative settlement infrastructure (SPFS, CIPS) exists but lacks functional parity with SWIFT for routine business — substitution is geopolitically forced rather than market-driven. Barriers to remediation are partially technical (AML/CFT unit capacity, conviction procedures) but substantially institutional (FATF membership opacity, mutual evaluation criteria discretion). Theater ratio (0.64): Moderately high and increasing. Mutual evaluation metrics (numbers of AML/CFT personnel, conviction statistics for terror financing) are administratively reportable but behaviorally ambiguous — compliance documentation proliferates without corresponding evidence of reduced illicit flows. Remediation workshop completion and policy statement issuance are easily measured outputs with unclear connection to actual financial system hardening.
  *
  * PERSPECTIVAL GAP:
- *   The gap is maximal. The EU (beneficiary) sees a Rope: a legitimate
- *   instrument for enforcing globally-agreed standards for financial health.
- *   Russia (target) sees a Snare: a politically motivated weapon using
- *   bureaucratic mechanisms to inflict economic harm, with compliance standards
- *   as a pretext. The true structure is a Tangled Rope, as it possesses both
- *   a genuine coordination function (AML/CFT standards are valuable) and is being
- *   used for massive, asymmetric extraction.
+ *   The constraint exhibits maximum perspectival divergence. The beneficiary (Western institutions) sees a Rope — clean coordination solving their collective action problem. The victim (Russian export business) sees a Snare — extraction with no exit. The institutional EU enforcer sees Tangled Rope — genuine coordination function (AML/CFT enforcement) combined with geopolitical leverage asymmetry. The Russian government sees Tangled Rope with a remediation pathway — constrained but not hopeless, with agency through compliance demonstrations. The compliance ecosystem sees a Scaffold — temporary elevated demand with a sunset as alternative infrastructure (SPFS, CIPS) matures. The civilizational observer detects high theater (Piton) — the mechanism persists through bureaucratic routine and FATF institutional inertia rather than through demonstrated effectiveness. The core gap: beneficiaries experience the constraint as pure coordination; victims and observers experience extraction; the Russian government navigates constrained agency within a partially remediable framework.
  *
  * DIRECTIONALITY LOGIC:
- *   The direction of extraction is unambiguous. Costs are imposed on the
- *   `russian_federation_financial_sector`. Benefits (political leverage,
- *   perceived financial system integrity) accrue to the `eu_and_fatf_member_states`.
- *   This clear beneficiary/victim structure is the primary input for the
- *   directionality derivation, creating the large `d` gap between the two
- *   institutional perspectives.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This story is a textbook example of inter-institutional constraint dynamics.
- *   Two powerful, institutional actors (EU, Russia) interact via a single
- *   regulatory mechanism. Their classification differs not because of their power
- *   level (both are `institutional`) but because of their structural relationship
- *   to the constraint and their exit options. The EU has `arbitrage` exit (it
- *   controls the rules), while Russia has `trapped` exit (it cannot easily leave
- *   the system being policed).
+ *   Directionality values are derived from structural position and exit capacity. Western institutions (beneficiary + arbitrage exit) experience low d and negative χ — they can serve or exit grey-list countries without regulatory penalty, and the grey list actively reduces their de-risking costs. Russian export businesses (victim + trapped exit) experience high d and elevated χ — they cannot exit correspondent banking relationships or global financial architecture without accepting severe operational costs, and the grey list extracts through friction and market access barriers. The Russian government (victim + constrained exit) experiences moderate-high d and moderate χ — it has some agency through mutual evaluation compliance but faces geopolitical barriers to remediation (FATF membership discretion). EU regulatory authorities (beneficiary + arbitrage exit) experience low-moderate d and moderate negative χ — they benefit from harmonized AML/CFT enforcement while retaining freedom to modulate enforcement intensity and apply geopolitical conditionality. The compliance ecosystem (secondary beneficiary + constrained exit) experiences low-moderate d — temporary elevation of extraction through heightened demand, but constrained by eventual sunset as alternatives mature and reduce grey-list dependence.
  *
  * MANDATROPHY ANALYSIS:
- *   A simplistic analysis would label this a pure Snare (geopolitical weapon) or a
- *   pure Rope (technical standard). The Deferential Realism framework, by
-*    identifying it as a Tangled Rope, correctly captures the dual nature that makes
- *   it so effective and difficult to counter: its extractive function is masked by
- *   a legitimate, and even necessary, coordination function. This prevents
- *   mischaracterization and focuses analysis on the *tension* between its two roles.
+ *   UNRESOLVED MANDATROPHY: The constraint's classification hinges on whether the grey-list mechanism is a genuine coordination device (international AML/CFT harmonization) or a geopolitical extraction mechanism disguised as technical enforcement. If primarily coordination: most perspectives should classify as Rope or Scaffold. If primarily extraction: most perspectives should classify as Snare or Tangled Rope. The current data supports Tangled Rope as the central claim — the constraint combines a genuine coordination function (reducing cross-border money laundering, terrorist financing) with asymmetric extraction (concentrated costs on grey-list target, diffuse benefits for enforcer states). However, the high theater ratio (0.64) and the Piton perspective (institutional inertia sustaining bureaucratic evaluation cycles) suggest that the functional coordination benefit may be overstated relative to the performative compliance burden. Resolution requires empirical tests: (1) Do grey-list countries with equivalent or worse AML/CFT metrics exist among FATF-aligned states but escape grey-list placement due to geopolitical alignment? (2) Has grey-list designation measurably reduced illicit capital flows in absolute terms or merely displaced them through non-FATF-monitored channels? (3) Is the remediation pathway structurally achievable or perpetually conditional on geopolitical factors beyond technical AML/CFT capacity? Until these omegas are resolved, Tangled Rope remains the best fit, but the constraint risks classification as Snare (pure extraction) if empirical evidence shows geopolitical targeting masquerading as AML/CFT enforcement, or as Piton (degraded inertia) if the functional coordination value has atrophied and only bureaucratic theater remains.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_fatf_grey_list_russia,
-    'Is the primary driver for this listing a genuine assessment of AML/CFT risk, or is it predominantly a tool of geopolitical coercion?',
-    'Analysis of confidential FATF mutual evaluation reports compared against the listing decisions for other non-Western countries. If Russia is held to a demonstrably different standard, the coercion motive is stronger.',
-    'If risk-based (Rope-like), the constraint might be resolved through technical compliance. If coercion-based (Snare-like), it can only be resolved through a shift in the geopolitical balance of power.',
+    aml_cft_effectiveness_vs_geopolitics,
+    'Is the grey-list designation driven by structural AML/CFT deficiencies or by geopolitical targeting masquerading as compliance enforcement?',
+    'Comparative analysis: correlation between grey-list status and actual measured metrics (conviction rates for terror financing, detected capital flight volumes) vs. grey-list status and geopolitical alignment with FATF membership (EU, US, allies)',
+    'If driven by AML/CFT: constraint is pure coordination (Rope from more perspectives). If geopolitically driven: constraint is extraction mechanism (Snare/Tangled Rope confirmed). If mixed: Tangled Rope classification stands.',
     confidence_without_resolution(medium)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_fatf_grey_list_russia, empirical, 'Whether the listing is driven by technical risk assessment versus geopolitical coercion, resolvable by comparative analysis of evaluation reports.').
+narrative_ontology:omega_variable(aml_cft_effectiveness_vs_geopolitics, empirical, 'Whether grey-list status correlates with AML/CFT deficiencies or geopolitical alignment').
+
+omega_variable(
+    remediation_pathway_credibility,
+    'Can Russia structurally remediate its AML/CFT regime in FATF''s timeframe, or is the grey-list a permanent extraction mechanism?',
+    'Analysis of removal timelines for other grey-list countries; assessment of whether removal criteria are technically achievable vs. politically conditional; tracking of Russian mutual evaluation progress against stated benchmarks',
+    'If achievable: Scaffold perspective is structural (temporary). If impossible: constraint is Snare (permanent extraction). If conditional on geopolitics rather than metrics: reveals false neutral standard.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(remediation_pathway_credibility, empirical, 'Whether grey-list remediation pathway is structurally achievable').
+
+omega_variable(
+    offshore_capital_flight_reduction,
+    'Has grey-list designation measurably reduced illicit capital outflows from Russia or merely displaced them to non-FATF-monitored channels?',
+    'Comparative capital flight volumes (Russia vs. other grey-list countries): pre- and post-designation; tracking of value flows through non-western banking channels (Asian correspondent banks, crypto, hawala, SPFS)',
+    'If flows reduced: constraint has functional coordination value (Rope/Tangled Rope). If displaced: constraint is pure theater with extraction side-effects (Piton/Snare). Displacement evidence would vindicate theater_ratio assessment.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(offshore_capital_flight_reduction, empirical, 'Whether grey-list reduced or displaced illicit capital flows').
+
+omega_variable(
+    correspondent_banking_substitution,
+    'Are Russian institutions successfully building alternative settlement infrastructure (SPFS, Chinese CIPS, settlement in rubles/yuan) that functionally exits the grey-list extraction mechanism?',
+    'Measurement of transaction volumes through alternative rails vs. traditional SWIFT; assessment of operational maturity and interoperability of SPFS, CIPS bridges; timeline to functional parity with SWIFT for routine business',
+    'If substitution succeeds: Scaffold sunset is real (constraint weakens over time). If substitution fails: extraction persists indefinitely (Snare). If partial: Tangled Rope persists as stable configuration.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(correspondent_banking_substitution, empirical, 'Whether alternative settlement infrastructure is functionally exiting FATF constraints').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(fatf_grey_list_russia, 0, 10).
+narrative_ontology:interval(fatf_grey_list_russia, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has high extraction (ε=0.65 > 0.46), so temporal data is required.
-% The FATF framework evolved from a pure coordination mechanism (low ε) to an
-% instrument of geopolitical power (high ε). This progression models that drift.
-%
-% T=0: Early FATF (c. 2000) - focus on technical standards (Rope-like)
-% T=5: Post 9/11, post-2014 - increased use as a political tool (Tangled Rope)
-% T=10: Current - Application as a major sanction (Snare-like application)
+% Theater ratio over time
+narrative_ontology:measurement(fatf_grey_tr_t0, fatf_grey_list_russia, theater_ratio, 0, 0.48).
+narrative_ontology:measurement(fatf_grey_tr_t3, fatf_grey_list_russia, theater_ratio, 3, 0.58).
+narrative_ontology:measurement(fatf_grey_tr_t6, fatf_grey_list_russia, theater_ratio, 6, 0.64).
 
-% Theater ratio over time (remains low as consequences are always real)
-narrative_ontology:measurement(fatf_grey_list_russia_tr_t0, fatf_grey_list_russia, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(fatf_grey_list_russia_tr_t5, fatf_grey_list_russia, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(fatf_grey_list_russia_tr_t10, fatf_grey_list_russia, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(fatf_grey_be_t0, fatf_grey_list_russia, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(fatf_grey_be_t3, fatf_grey_list_russia, base_extractiveness, 3, 0.52).
+narrative_ontology:measurement(fatf_grey_be_t6, fatf_grey_list_russia, base_extractiveness, 6, 0.58).
 
-% Extraction over time (shows drift from coordination to extraction)
-narrative_ontology:measurement(fatf_grey_list_russia_ex_t0, fatf_grey_list_russia, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(fatf_grey_list_russia_ex_t5, fatf_grey_list_russia, base_extractiveness, 5, 0.40).
-narrative_ontology:measurement(fatf_grey_list_russia_ex_t10, fatf_grey_list_russia, base_extractiveness, 10, 0.65).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This is a classic example of an enforcement mechanism.
 narrative_ontology:coordination_type(fatf_grey_list_russia, enforcement_mechanism).
+narrative_ontology:affects_constraint(fatf_grey_list_russia, swift_correspondent_banking_restrictions).
+narrative_ontology:affects_constraint(fatf_grey_list_russia, eu_secondary_sanctions_architecture).
+narrative_ontology:affects_constraint(fatf_grey_list_russia, russian_ruble_alternative_settlement).
 
-% Network relationships (structural influence edges)
-% Being placed on this list directly impacts access to other parts of the
-% global financial system, such as SWIFT.
-narrative_ontology:affects_constraint(fatf_grey_list_russia, global_swift_access).
-
+% DUAL FORMULATION NOTE:
+% The grey-list mechanism is downstream of FATF's international AML/CFT coordination standards but represents a distinct structural constraint because grey-list status operates through enforcement asymmetry and geopolitical leverage rather than through pure technical standards adoption. The upstream FATF coordination (global AML/CFT standardization) has low extractiveness (Rope); the grey-list application of that standard to Russia has moderate extractiveness (Tangled Rope/Snare). The network link captures that grey-list status accelerates remediation pressure on Russian institutions while upstream FATF standards provide the nominal legitimacy for enforcement.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The automatic derivation chain,
-% using the declared beneficiary/victim groups and the distinct exit options
-% for the institutional actors (`trapped` vs. `arbitrage`), correctly models
-% the directionality and produces the observed perspectival gap.
+constraint_indexing:directionality_override(fatf_grey_list_russia, institutional, 0.25).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

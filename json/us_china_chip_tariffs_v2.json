@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "us_china_chip_tariffs_v2",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tariff"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Tariffs on Chinese High-Tech Goods (2024)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_domestic_semiconductor_manufacturers",
+      "us_chipmaking_equipment_suppliers",
+      "us_government_tariff_revenue"
+    ],
+    "victims": [
+      "us_electronics_consumers",
+      "us_downstream_manufacturers",
+      "chinese_semiconductor_exporters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "US Electronics Consumer",
+      "comment": "PERSPECTIVE 1: US CONSUMER (SNARE) \u2014 Cannot exit the tariff regime without abandoning access to low-cost electronics. Trapped by geography and legal jurisdiction. Bears full cost of tariff pass-through (smartphone prices, computer costs, appliance affordability). No alternatives available domestically; switching costs prohibitive. Maximum extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US Downstream Electronics Manufacturer",
+      "comment": "PERSPECTIVE 2: US DOWNSTREAM MANUFACTURER (TANGLED ROPE) \u2014 Constrained by tariff costs on imported components and constrained domestic supply availability. Benefits from domestic semiconductor availability promises and long-term reshoring incentives (subsidies, tax breaks). Extraction is real (higher COGS) but mixed with coordination benefits (supply chain stability, long-term domestic capacity). Constrained exit \u2014 cannot easily relocate supply chains or production."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Semiconductor Manufacturer",
+      "comment": "PERSPECTIVE 3: US DOMESTIC CHIPMAKER (ROPE) \u2014 Primary beneficiary with high arbitrage options. Gains from tariff protection (excludes low-cost competitors), subsidies (CHIPS Act funding), and increased US government procurement commitments. Experiences constraint as pure coordination: tariff regime enables market consolidation and pricing power. Can exit by relocating production to lower-cost jurisdictions, but tariff structure incentivizes staying. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Supply Chain Diversification Coalition",
+      "comment": "PERSPECTIVE 4: SUPPLY CHAIN DIVERSIFICATION (SCAFFOLD) \u2014 Organized multinational firms and industry consortia see tariffs as a temporary forcing mechanism for supply chain reshoring and regionalization. Extraction is constrained by the explicit policy sunset: tariffs are coupled with CHIPS Act sunset provisions and Taiwan-Taiwan US alliance mechanisms that have time horizons (15-20 year subsidies). Coalition sees constraint as having a genuine exit path via geographic redundancy and allied-nation partnerships. Low effective extraction because organization and time-bounded policy create plausible pathway."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Trade Law Architecture",
+      "comment": "PERSPECTIVE 5: WTO/TRADE LAW FRAMEWORK (PITON) \u2014 The tariff regime is formally justified via national security exceptions to WTO rules (IEEPA), but the underlying mechanism is substantially performative: 'national security' is broad enough to encompass economic competitiveness, geopolitical advantage, and industrial policy indistinguishable from protectionism. The traditional multilateral trade system persists in rhetorical form (WTO dispute procedures ongoing) but is functionally degraded \u2014 US unilateralism has eliminated the constraint's force, leaving the rules as theater. High theater ratio reflects the gap between rule-based trade governance and actual state behavior."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Chinese Semiconductor Exporters",
+      "comment": "PERSPECTIVE 6: CHINESE CHIPMAKERS (SNARE) \u2014 Organized but constrained by US extraterritorial enforcement (licensing controls on equipment, advanced nodes blocked, design tool access restricted). High power domestically but cannot exit US market without catastrophic loss of revenue and technology access. Suppression is extreme: OFAC licensing regime, EDA tool export controls, talent restrictions. Extraction takes form of forced technology transfer to US-allied competitors (TSMC, Samsung) and market share loss. Not powerless agents (organized companies) but strategic constraints equivalent to trappage."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Technological Inevitability View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / TECH INEVITABILITY (MOUNTAIN) \u2014 From a civilizational view, semiconductor supply chain concentration in Taiwan is an immutable constraint of physics and economics: advanced chip fabrication requires extreme technical precision, capital intensity, and geographic specificity that cannot be easily replicated. This perspective naturalizes the tariff regime as a necessary response to an inherent fragility of global supply. However, structural data contradicts the mountain classification \u2014 Taiwan's dominance is partly contingent on policy choices (China's restrictions, US subsidies, Taiwan's historical tech investments) not immutable physical law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "domestic_capacity_achievability",
+      "question": "Can US domestic semiconductor manufacturing achieve cost-competitive parity with TSMC within the 20-year subsidy horizon, or will tariff protection become permanent?",
+      "resolution_mechanism": "Comparative cost analysis: US fab operating costs vs Taiwan fab costs including all externalities; process node yield data; energy and labor cost trajectories; CHIPS Act subsidy adequacy assessments",
+      "impact": "If achievable: scaffold sunset is real, tariffs eventually phase out. If not: tariffs become piton (permanent theater) or snare (permanent extraction). Classification shifts from tangled_rope to snare for consumers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether US can achieve cost-competitive semiconductor manufacturing"
+    },
+    {
+      "id": "allied_chip_access_sufficiency",
+      "question": "Do Taiwan, South Korea, and EU partnerships provide reliable alternative chip access sufficient to bypass Chinese sourcing, or is global supply integration so deep that alternatives cannot fully substitute?",
+      "resolution_mechanism": "Supply chain mapping: alternative fab capacity, qualification timelines, product node availability; geopolitical stability assessment of Taiwan/Korea/EU as reliable suppliers under US duress",
+      "impact": "If sufficient: US downstream manufacturers' exit options improve (mobile becomes real option), reducing their experienced extraction. If not: constraint tightens into snare for downstream. Tangled rope becomes snare for multiple perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether allied chip partnerships can substitute for Chinese supply"
+    },
+    {
+      "id": "consumer_price_elasticity_substitution",
+      "question": "Do US consumers reduce electronics consumption sufficiently (price elasticity) to offset tariff cost passthrough, or do they absorb costs through reduced discretionary spending or credit expansion?",
+      "resolution_mechanism": "Consumer behavior data: device replacement cycles, spending diversion to non-tech categories, credit card debt trends, cross-national price comparison studies",
+      "impact": "If elasticity high: tariff extraction is partially self-limiting (less stuff imported). If elasticity low: consumers absorb full cost, snare deepens. Consumer classification confidence increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether US consumer price elasticity limits tariff extraction"
+    },
+    {
+      "id": "geopolitical_taiwan_dependency",
+      "question": "Does the tariff regime increase or decrease structural US vulnerability to Taiwan supply disruption by forcing temporary chip shortages that reveal dependency?",
+      "resolution_mechanism": "Supply shock scenario analysis; TSMC contingency planning documents; US Department of Defense critical supply assessments; Taiwan political stability forecasts",
+      "impact": "If increases vulnerability: tariff regime is security theater (piton), extraction justified by false premise. If decreases: scaffold logic is real. If neutral: tariffs are pure transfer (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tariffs increase US Taiwan supply dependency"
+    },
+    {
+      "id": "chinese_retaliatory_capacity",
+      "question": "Can China impose symmetric or asymmetric tariff costs on US agricultural, aerospace, or automotive exports sufficient to create political coalition for tariff reduction?",
+      "resolution_mechanism": "Tariff reciprocity analysis; political pressure mapping; agricultural state legislative response; US export dependency statistics by sector",
+      "impact": "If high capacity: suppression weakens (US farmers/aerospace lobby pressure), tangled rope may shift toward more balanced rope. If low: suppression persists, snare dynamics deepen.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether China can impose retaliatory tariff costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The US tariff regime on Chinese high-tech goods (50% on semiconductors by 2025, with phased escalation) represents a hybrid coordination-extraction mechanism justified on national security grounds. The constraint exhibits markedly different structural properties depending on the observer's position. US domestic semiconductor manufacturers benefit from tariff protection and CHIPS Act subsidies, experiencing the regime as coordination for reshoring and supply chain resilience. US consumers and downstream electronics manufacturers bear the extraction costs through price increases and supply constraints, experiencing it as a snare or tangled rope respectively. Global semiconductor suppliers (TSMC, Samsung, Chinese fabs) face constrained exit options under extraterritorial enforcement. The tariff regime combines genuine coordination functions (forcing supply chain diversification, reducing Taiwan concentration risk) with asymmetric extraction (consumers bear costs that subsidize domestic producers). The theater ratio reflects the gap between the national security justification (broad enough to encompass industrial policy) and the actual mechanism (tariff-based protection). The constraint's extractiveness has increased over the interval from 0.35 (initial announcement, limited enforcement) to 0.58 (full enforcement, supply disruptions, price passthrough).",
+    "key_agents": [
+      "US Domestic Semiconductor Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 gain tariff protection, CHIPS Act subsidies, forced reshoring of production. Can exit by relocating to allied countries but tariff structure incentivizes staying.",
+      "US Electronics Consumers: Primary victim (powerless/trapped) \u2014 bear tariff cost passthrough; cannot exit without losing access to affordable devices. No alternative suppliers available domestically.",
+      "US Downstream Manufacturers (appliances, phones, computers): Secondary victim (moderate/constrained) \u2014 face higher input costs for chips, constrained by limited domestic alternatives. Some benefit from long-term supply stability promises but extraction is immediate.",
+      "Chinese Semiconductor Exporters: Strategic victim (powerful/constrained) \u2014 organized companies but cannot exit US market without catastrophic loss; face extraterritorial enforcement (licensing, design tool controls, talent restrictions).",
+      "Global Supply Chain Diversification Coalition: Organized actors (organized/constrained) \u2014 multinationals and consortia see tariffs as temporary forcing mechanism for geographic redundancy. Constrained by immediate costs but see sunset path via CHIPS Act horizon.",
+      "WTO/Traditional Trade Law System: Institutional actor (institutional/arbitrage) \u2014 formal rules persist but functionally degraded; national security exceptions render the constraint regime unilateral and outside traditional dispute resolution.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing Taiwan concentration as immutable when it is partly contingent on policy choices."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over interval. The tariff regime extracts real economic value from consumers and downstream manufacturers ($80-150B annually estimated passthrough) while transferring it to domestic producers and government revenue. The extraction is not total (consumers have some substitution options, CHIPS Act subsidies partially offset costs) and is justified by stated coordination goals (supply resilience). Suppression (0.68): High. Enforcement is multi-modal: tariff border controls, extraterritorial licensing (OFAC), design tool export controls, talent restrictions. Chinese exporters have limited options to evade. Consumers have no practical alternatives. The suppression mechanism is comprehensive but not absolute \u2014 smuggling, tariff workarounds (assembly in Mexico/Vietnam), and technological workarounds exist at high cost. Theater ratio (0.62): Moderately high. The national security justification is substantially performative \u2014 economic competitiveness and industrial policy goals are bundled under 'national security' broadly construed. Traditional trade law dispute procedures continue but have been overridden by unilateral action. The rise from 0.48 to 0.62 reflects increasing gap between rhetorical commitment to 'rules-based trade' and actual unilateral tariff enforcement.",
+    "directionality_logic": "Each perspective's directionality is determined by its structural relationship to the extraction flow. US domestic chipmakers are beneficiaries with arbitrage options (can exit to Taiwan/Korea but incentives favor staying) \u2192 low d \u2192 negative experienced extraction (they see coordination). US consumers are victims with no exit options (trapped) \u2192 high d \u2192 high experienced extraction. Chinese exporters are organized but constrained by extraterritorial enforcement (cannot exit without collapse) \u2192 high d modulated upward by enforcement power \u2192 very high experienced extraction. Downstream manufacturers are victims with some mobility (can relocate supply chains, seek alternatives) \u2192 moderate d \u2192 moderate extraction. The organized supply-chain coalition has agency and sees time-bounded policy \u2192 moderate d \u2192 moderate extraction that declines over policy horizon. The WTO system is institutional but constrained by US power and policy override \u2192 moderate d but with theater masking.",
+    "perspectival_gap": "The perspectival gap is extreme and reveals fundamental disagreement about the constraint's function. Domestic chipmakers and US government see rope: coordination mechanism for reshoring and supply resilience. Downstream manufacturers see tangled rope: costs offset by long-term benefits. Consumers see snare: pure extraction with no countervailing benefit. Chinese exporters see snare: forced extraction disguised as security policy. The supply chain coalition sees scaffold: temporary extraction justified by sunset. The WTO system sees degraded piton: rules exist but are functionally overridden. The analytical observer risks mountain: naturalizing Taiwan concentration as immutable. This perspectival range is characteristic of hybrid extraction mechanisms that blend real coordination benefits with asymmetric cost allocation.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint is resolved by decomposing the tariff regime into its constituent functions: (1) COORDINATION: genuine supply chain diversification and Taiwan concentration reduction \u2014 real collective action problem with valid solution. (2) EXTRACTION: asymmetric cost allocation where consumers and Chinese exporters bear costs while domestic producers capture benefits \u2014 classic transfer mechanism. The constraint is tangled rope because both functions are present, both are structural (not accidental), and the enforcement mechanism supports both simultaneously. If the regime were pure coordination (rope), it would not require suppression mechanisms targeting Chinese exporters (licensing, talent controls, design tool restrictions). If it were pure extraction (snare), it would not be coupled with supply chain diversification goals and time-bounded CHIPS Act subsidies. The classification avoids both mislabeling (as pure coordination ignoring extraction) and over-generalization (as pure extraction ignoring real supply resilience gains). The rising extractiveness and theater ratio over the interval (0.35\u21920.58 for \u03b5, 0.48\u21920.62 for theater) indicate creeping rent-seeking layered onto the original coordination mechanism \u2014 classic Goodhart drift where enforcement expands beyond the original policy goal."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "taiwan_semiconductor_concentration",
+      "us_manufacturing_reshoring",
+      "china_advanced_chip_design_constraint"
+    ],
+    "dual_formulation_note": "The tariff regime decomposes into three interdependent constraint stories: (1) Taiwan concentration risk (\u03b5=0.15, Mountain from national security view; \u03b5=0.42, Tangled Rope from economic efficiency view); (2) US manufacturing reshoring (\u03b5=0.35, Scaffold with CHIPS Act sunset); (3) China advanced chip design (\u03b5=0.55, Snare from Chinese exporter view). The tariff regime is the enforcement mechanism that couples these constraints. Each story captures distinct structural elements; the tariff regime is the network node linking them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.82
+    }
+  ]
+}

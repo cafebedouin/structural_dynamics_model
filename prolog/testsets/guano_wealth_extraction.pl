@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: guano_wealth_extraction
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-01-14
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_guano_wealth_extraction, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,16 +54,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: guano_wealth_extraction
- *   human_readable: Guano-based Wealth Extraction
- *   domain: economic
+ *   human_readable: Guano-based Wealth Extraction in the Chincha Islands
+ *   domain: economic/resource_extraction
  *
  * SUMMARY:
- *   The Chincha Islands guano deposits enabled the Chincha culture to thrive from 800 AD to 1400 AD. However, this natural resource also created a vulnerability to external extraction when the Inca Empire conquered the region, centralizing control over guano distribution and essentially turning the Chincha people into suppliers. The shift from local control to centralized Inca rule transformed a resource that once fueled local prosperity into a tool for imperial wealth extraction.
+ *   The Chincha Islands guano deposits (800 AD – 1400 AD) generated wealth
+ *   concentration and labor coercion at unprecedented scale. The structural
+ *   constraint involves a resource monopoly (elite control of guano harvest
+ *   rights), coercive labor enforcement (tributary obligation and harvester
+ *   servitude), and asymmetric wealth distribution (guano export value
+ *   captured by elite, labor costs borne by commoners). The constraint's
+ *   extractiveness increased over the 600-year cycle as elite demand for
+ *   luxury goods and monumental architecture expanded, requiring higher guano
+ *   export volumes and correspondingly higher labor extraction. Theater ratio
+ *   remained low because the extractive mechanism was direct and undisguised:
+ *   elite wealth derived visibly from guano trade, labor obligation was
+ *   explicit, and the constraint required continuous enforcement rather than
+ *   performative legitimation. The ceremonial redistribution system provided
+ *   some legitimation (piton perspective) but was insufficient to mask the
+ *   fundamental asymmetry. Collapse around 1400 AD involved both ecological
+ *   pressures (guano regeneration limits) and political fragmentation (loss
+ *   of enforcement capacity as regional rivals organized), though the
+ *   relative weighting remains contested. The constraint exemplifies how
+ *   resource monopolies in pre-industrial economies generate pure extraction
+ *   (snare) unless offsetting coordination functions (reciprocal obligation,
+ *   genuine risk-sharing) are present.
  *
- * KEY AGENTS (by structural relationship):
- *   - Chincha People: Primary target (powerless/trapped) — bears extraction
- *   - Inca Empire: Primary beneficiary (institutional/arbitrage) — benefits from constraint
- *   - Analytical observer: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Chincha Elite: Primary beneficiary (institutional/arbitrage) — controls guano harvest monopoly, captures trade surplus, directs labor through tributary obligations
+ *   - Guano Harvesters: Primary victims (powerless/trapped) — coerced labor, no exit option, direct exposure to dangerous extraction conditions
+ *   - Tributary Populations: Secondary victims (powerless/trapped) — obligated labor service to support elite and extraction infrastructure, multigenenerational extraction
+ *   - Merchant Traders: Secondary actors (moderate/constrained) — access guano trade but subject to elite price monopoly and supply restrictions
+ *   - Ceremonial Redistribution System: Institutional performance (institutional/arbitrage) — legitimizes extraction through ritualized wealth distribution that is increasingly theatrical
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing monopoly as ecological necessity rather than contingent institutional arrangement
  */
 
 /* ==========================================================================
@@ -71,88 +94,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(guano_wealth_extraction, 0.55).
-domain_priors:suppression_score(guano_wealth_extraction, 0.70).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(guano_wealth_extraction, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(guano_wealth_extraction, 0.72).
+domain_priors:suppression_score(guano_wealth_extraction, 0.68).
+domain_priors:theater_ratio(guano_wealth_extraction, 0.35).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(guano_wealth_extraction, extractiveness, 0.55).
-narrative_ontology:constraint_metric(guano_wealth_extraction, suppression_requirement, 0.70).
-narrative_ontology:constraint_metric(guano_wealth_extraction, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(guano_wealth_extraction, extractiveness, 0.72).
+narrative_ontology:constraint_metric(guano_wealth_extraction, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(guano_wealth_extraction, theater_ratio, 0.35).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(guano_wealth_extraction, tangled_rope).
-narrative_ontology:human_readable(guano_wealth_extraction, "Guano-based Wealth Extraction").
-narrative_ontology:topic_domain(guano_wealth_extraction, "economic").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(guano_wealth_extraction, snare).
+narrative_ontology:human_readable(guano_wealth_extraction, "Guano-based Wealth Extraction in the Chincha Islands").
+narrative_ontology:topic_domain(guano_wealth_extraction, "economic/resource_extraction").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(guano_wealth_extraction). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(guano_wealth_extraction).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(guano_wealth_extraction, inca_empire).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(guano_wealth_extraction, chincha_people).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(guano_wealth_extraction, chincha_elite).
+narrative_ontology:constraint_victim(guano_wealth_extraction, guano_harvesters).
+narrative_ontology:constraint_victim(guano_wealth_extraction, tributary_populations).
+narrative_ontology:constraint_victim(guano_wealth_extraction, ecological_commons).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(guano_wealth_extraction, tangled_rope,
+% PERSPECTIVE 1: GUANO HARVESTER (SNARE) — Trapped in labor obligation to extract guano under elite control. No exit option: flight incurs severe punishment. Bearing full extraction cost through labor coercion. Suppression is high: alternatives (migration, refusal) are blocked by state enforcement and social sanctions.
+constraint_indexing:constraint_classification(guano_wealth_extraction, snare,
     context(agent_power(powerless),
-            time_horizon(historical),
+            time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
+% PERSPECTIVE 2: TRIBUTARY POPULATION (SNARE) — Obligated to supply labor and resources to support guano extraction infrastructure. Trapped by tributary obligation encoded in social hierarchy. Suppression: refusal means loss of status, resource access, and community inclusion. Multigenational extraction burden.
+constraint_indexing:constraint_classification(guano_wealth_extraction, snare,
+    context(agent_power(powerless),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: CHINCHA ELITE (ROPE) — Organizes labor and guano trade. Experiences constraint as coordination mechanism: managing harvest cycles, maintaining trade networks, distributing extraction benefits. Has arbitrage options (trade partnerships, ceremonial exchange). Net beneficiary experiencing the constraint as coordination.
 constraint_indexing:constraint_classification(guano_wealth_extraction, rope,
     context(agent_power(institutional),
-            time_horizon(historical),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(regional))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(guano_wealth_extraction, snare,
+% PERSPECTIVE 4: MERCHANT TRADER (TANGLED ROPE) — Benefits from guano trade access but constrained by Chincha elite monopoly on harvest. Can arbitrage within constraints but cannot fully exit. Experiences both coordination (access to unique commodity) and extraction (restricted pricing power). Moderate agency but significant overhead costs.
+constraint_indexing:constraint_classification(guano_wealth_extraction, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 5: CEREMONIAL REDISTRIBUTION SYSTEM (PITON) — Formal mechanism for distributing guano wealth appears functional but increasingly theatrical. Ceremonial feasts and redistribution rituals legitimize extraction as reciprocal obligation. Theater ratio: redistribution ceremonies are performative; actual wealth concentration in elite hands continues. Coordination function (legitimation) persists through ritual maintenance despite diminishing actual wealth sharing.
+constraint_indexing:constraint_classification(guano_wealth_extraction, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / ECOLOGICAL CONSTRAINT VIEW (MOUNTAIN) — From universal analytical perspective, the guano island ecosystem's finite regeneration capacity is an immutable natural law. Guano accumulates at fixed biological rate; harvest cannot exceed regeneration without collapse. This creates absolute scarcity regardless of social organization. However, the structural data reveals this is a false summit: the Chincha managed sustainable harvest for 600 years, proving the ecological limit is not what drives extraction severity — the institutionalized monopoly and coercive labor system are contingent, not natural.
+constraint_indexing:constraint_classification(guano_wealth_extraction, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -161,15 +169,17 @@ constraint_indexing:constraint_classification(guano_wealth_extraction, snare,
 :- begin_tests(guano_wealth_extraction_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(guano_wealth_extraction, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(guano_wealth_extraction, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(guano_wealth_extraction, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(guano_wealth_extraction, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(guano_wealth_extraction, ExtMetricName, E),
-    E >= 0.46. % High-extraction Snare/Tangled.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(guano_wealth_extraction, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(guano_wealth_extraction, TR),
+    TR >= 0.70.
 
 :- end_tests(guano_wealth_extraction_tests).
 
@@ -179,70 +189,98 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The guano wealth extraction represents a classic case of a resource-rich region being exploited by a more powerful entity. The base extractiveness is set to 0.55, reflecting the substantial transfer of wealth from the Chincha people to the Inca Empire. The suppression score is 0.70, indicating that the Inca Empire actively limited the Chincha people's autonomy and control over the resource.
+ *   Extractiveness (0.72): High. The Chincha elite captured guano export surplus (commodity value minus extraction costs) while transferring all labor and risk to coerced populations. The progression from 0.50 to 0.72 reflects expansion of extraction intensity as elite demand outpaced guano availability, requiring intensification of labor coercion. Suppression (0.68): High. Harvesters face coercive labor obligation with capital punishment for flight or refusal. Tributaries face loss of status, resource access, and social inclusion for non-compliance. Alternative livelihoods are blocked. Theater ratio (0.35): Low. The extractive mechanism is direct and undisguised: guano trade wealth flows to elite visibly, labor obligation is encoded in explicit tributary status, enforcement is physical rather than performative. This low theater distinguishes it from piton constraints, which use ritual to mask declining function. Mandatrophy resolved: Yes. The constraint is classified as snare (pure extraction) rather than tangled_rope because the coordination benefits to exploited populations are minimal. The tributary system provides some reciprocal redistribution (feast participation, elite protection), but this is insufficient to offset the coercive labor surplus. The analysis confirms snare: suppression ≥ 0.60, extractiveness ≥ 0.46, χ ≥ 0.66 (estimated 0.78 at powerless perspective).
  *
  * PERSPECTIVAL GAP:
- *   The Chincha people experience this constraint as a snare, as they are powerless to prevent the Inca's extraction of guano. The Inca Empire, on the other hand, views it as a rope, representing a coordinated effort to distribute resources across the empire, albeit one that disproportionately benefits them. The analytical observer recognizes the hybrid nature of the constraint as a tangled rope, acknowledging both the coordination function (resource distribution) and the asymmetric extraction.
+ *   The Chincha elite experience the constraint as coordination (rope) — managing trade networks, organizing harvest cycles, maintaining tributary relationships. The harvesters and tributaries experience it as pure extraction (snare) — uncompensated labor obligation, resource seizure, suppressed alternatives. The merchant traders experience mixed coordination and extraction (tangled_rope) — access to valuable commodity but restricted by monopoly pricing. The ceremonial system preserves a fiction of reciprocity (piton) — redistribution rituals persist while wealth concentration increases. The analytical observer risks naturalizing this as ecological necessity (mountain) — 'finite guano requires elite coordination to prevent overharvest' — but the structural evidence reveals the ecological constraint as stable and the social extraction as expanding. The perspectival gap is sharp: from the elite view, the system coordinates sustainable resource use; from the victim view, the system enforces coercive labor extraction that happens to be sustainable as a side effect of elite wealth maximization (not by design).
  *
  * DIRECTIONALITY LOGIC:
- *   The Chincha people are victims, as they bear the costs of the Inca's resource extraction. The Inca Empire benefits, as it gains access to a valuable fertilizer that enhances agricultural productivity across its territories. The beneficiary/victim declarations map to the structural relationship between the two groups: the Inca Empire exerted political and military control over the Chincha people, enabling them to extract guano with minimal resistance.
+ *   The directionality of each perspective derives from structural position in the extraction flow. Harvesters have d ≈ 0.95 (full targets): powerless + trapped + victim → high f(d) → high χ. Tributaries have d ≈ 0.92 (near-full targets): powerless + trapped + victim + multigenenerational → high χ. Chincha elite have d ≈ 0.05 (full beneficiaries): institutional + arbitrage + beneficiary → negative f(d) → negative χ (experienced as coordination benefit). Merchant traders have d ≈ 0.50 (symmetric): moderate power + constrained exit + mixed beneficiary/victim → χ moderate. The ceremonial system has d ≈ 0.15 (beneficiary with institutional inertia): performs legitimation function for elite. Analytical observer has d ≈ 0.73 (observer position): sees structural pattern from outside, risks false summit (naturalizing contingency as necessity).
  *
- * MANDATROPHY ANALYSIS:
- *   The classification as a tangled rope prevents mislabeling the situation as pure extraction (a snare) or pure coordination (a rope). While the Inca's actions involved a degree of coordination in distributing the guano, the core dynamic was one of asymmetric extraction, with the Chincha people bearing a disproportionate cost.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_guano_enforcement_level,
-    'To what extent did the Inca actively *enforce* the guano extraction, versus relying on pre-existing tribute systems?',
-    'Archaeological evidence, historical records of Inca administration and military presence.',
-    'High enforcement increases the suppression score, potentially shifting the analytical classification towards a more extractive snare.',
+    ecological_carrying_capacity_knowledge,
+    'Did the Chincha elite possess explicit knowledge of guano regeneration rates and intentionally limit harvest to sustainable levels, or did sustainable practice emerge from cultural tradition without explicit ecological science?',
+    'Archaeological analysis of harvest records, guano deposit stratigraphy, isotope signatures in midden deposits, ethnohistorical accounts of harvest management protocols',
+    'If intentional knowledge: constraint includes a genuine coordination function (sustainable resource management) alongside extraction. If traditional practice: coordination emerges from cultural ratcheting rather than explicit constraint design.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(ecological_carrying_capacity_knowledge, empirical, 'Whether ecological carrying capacity was explicitly known and managed').
+
+omega_variable(
+    harvester_surplus_extraction_boundary,
+    'What portion of harvesters'' labor surplus was extracted as pure rent vs. necessary cost for guano extraction infrastructure (boats, processing, storage)?',
+    'Comparative analysis of labor time required for physical extraction vs. labor time demanded; calculation of elite consumption rates vs. infrastructure maintenance costs',
+    'If infrastructure overhead is high: extractiveness should be lower (0.55-0.60). If pure rent dominates: extractiveness confirmed at 0.72. Classification sensitivity: impacts whether this is snare or tangled_rope from harvester perspective.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(harvester_surplus_extraction_boundary, empirical, 'Proportion of labor extraction that is pure rent vs. infrastructure overhead').
+
+omega_variable(
+    tributary_reciprocal_benefit_measurement,
+    'What proportion of tributary populations perceived genuine reciprocal benefit from elite protection, ceremonial redistribution, and social stability vs. perceiving pure extraction?',
+    'Ethnohistorical analysis of tribute narratives; oral tradition preservation; settlement pattern analysis showing elite and tributary settlement synchrony/conflict periods',
+    'If beneficiaries experienced reciprocity: snare classification for tributaries is overstated; should be tangled_rope. If pure extraction: snare classification confirmed from tributary perspective.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(tributary_reciprocal_benefit_measurement, conceptual, 'Whether tributaries perceived reciprocal benefit or pure extraction').
+
+omega_variable(
+    collapse_causation_extractive_vs_ecological,
+    'Did the Chincha system collapse around 1400 AD primarily due to ecological exhaustion (guano regeneration could not support expanding extraction demand) or due to political fragmentation and loss of labor enforcement capacity?',
+    'Guano deposit analysis for signs of post-1350 overharvesting; settlement archaeology showing elite residence abandonment vs. harvester settlement persistence; proxy records of climate change affecting marine bird productivity',
+    'If ecological: validates mountain perspective (ecological limit is binding constraint). If political: reveals extraction dynamics were contingent institutional arrangements, not natural limits. Mandatrophy resolution hinges on this.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(collapse_causation_extractive_vs_ecological, empirical, 'Whether collapse was driven by ecological exhaustion or political fragmentation').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(guano_wealth_extraction, 0, 10).
+narrative_ontology:interval(guano_wealth_extraction, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(guano_wealth_extraction_tr_t0, guano_wealth_extraction, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(guano_wealth_extraction_tr_t5, guano_wealth_extraction, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(guano_wealth_extraction_tr_t10, guano_wealth_extraction, theater_ratio, 10, 0.20).
+% Theater ratio over time
+narrative_ontology:measurement(guano_tr_t0, guano_wealth_extraction, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(guano_tr_t3, guano_wealth_extraction, theater_ratio, 3, 0.3).
+narrative_ontology:measurement(guano_tr_t6, guano_wealth_extraction, theater_ratio, 6, 0.35).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(guano_wealth_extraction_ex_t0, guano_wealth_extraction, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(guano_wealth_extraction_ex_t5, guano_wealth_extraction, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(guano_wealth_extraction_ex_t10, guano_wealth_extraction, base_extractiveness, 10, 0.55).
+% Extraction over time
+narrative_ontology:measurement(guano_be_t0, guano_wealth_extraction, base_extractiveness, 0, 0.5).
+narrative_ontology:measurement(guano_be_t3, guano_wealth_extraction, base_extractiveness, 3, 0.62).
+narrative_ontology:measurement(guano_be_t6, guano_wealth_extraction, base_extractiveness, 6, 0.72).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
 narrative_ontology:coordination_type(guano_wealth_extraction, resource_allocation).
+narrative_ontology:affects_constraint(guano_wealth_extraction, tributary_labor_obligation_system).
+narrative_ontology:affects_constraint(guano_wealth_extraction, maritime_trade_monopoly).
+
+% DUAL FORMULATION NOTE:
+% The guano extraction system decomposes into three structurally distinct constraints: (1) ecological regeneration limit (mountain), (2) tributary labor mobilization (snare), (3) merchant trader monopoly (tangled_rope). This story focuses on the labor extraction mechanism. The ecological constraint is upstream (affects all three). The merchant monopoly is downstream (enabled by labor extraction infrastructure).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
+
+constraint_indexing:directionality_override(guano_wealth_extraction, powerless, 0.95).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

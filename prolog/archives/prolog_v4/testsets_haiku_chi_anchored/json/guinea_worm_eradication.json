@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "guinea_worm_eradication",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gworm"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Global Guinea Worm Eradication Program",
+    "topic_domain": "social/public_health/humanitarian",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "endemic_populations",
+      "international_health_community",
+      "participating_governments"
+    ],
+    "emerges_naturally": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Endemic Community Members (Individual Level)",
+      "comment": "PERSPECTIVE 1: ENDEMIC COMMUNITY (ROPE) \u2014 Local villagers benefit directly from access to safe water sources and elimination of Guinea worm infection risk. Exit options are mobile: they can adopt provided well systems or water filters. Constraint is primarily coordinative (access to water technology). d\u22480.25, f(d)\u22480.10, \u03c3=0.8 \u2192 \u03c7\u22480.01. Near-zero effective extraction; pure coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Carter Center and International NGOs",
+      "comment": "PERSPECTIVE 2: CARTER CENTER / INTERNATIONAL NGOS (ROPE) \u2014 Primary coordinating institution. Institutional power with arbitrage exit (can shift focus to other eradication programs). Benefits from demonstrated success in disease eradication, which increases donor confidence and institutional legitimacy. The constraint is a coordination mechanism: mobilizing resources, harmonizing health protocols across borders, training health workers. d\u22480.10, f(d)\u2248-0.02, \u03c3=1.2 \u2192 \u03c7\u2248-0.00. Negligible extraction; net beneficiary through mission accomplishment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Endemic Country Governments",
+      "comment": "PERSPECTIVE 3: ENDEMIC COUNTRY GOVERNMENTS (ROPE) \u2014 Organized institutional actors with constrained exit (sovereignty requires health governance participation; international health obligations constrain exit). Benefit from disease elimination, improved population health metrics, and reduced healthcare burden. Experience the eradication program primarily as coordination mechanism: harmonizing with international standards, mobilizing domestic resources, enabling cross-border surveillance. d\u22480.35, f(d)\u22480.25, \u03c3=1.0 \u2192 \u03c7\u22480.03. Very low effective extraction; genuine coordination game."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Health Coordination Institutions (WHO, UNICEF)",
+      "comment": "PERSPECTIVE 4: GLOBAL HEALTH INSTITUTIONS (SCAFFOLD) \u2014 Organized actors (WHO, UNICEF) experience the eradication program as temporary infrastructure with declining sunset logic. The constraint is a scaffolding mechanism for building local health capacity, disease surveillance systems, and water access infrastructure that will persist after eradication. theater_ratio=0.25 is low (functional, not performative). As eradication nears completion, the international coordination apparatus is structurally designed to transition to endemic-country ownership. d\u22480.40, f(d)\u22480.40, \u03c3=1.1 \u2192 \u03c7\u22480.05. Low extraction; sunset mechanism embedded in design."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Global Public Health)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) \u2014 From civilizational/global perspective, the eradication program is a pure coordination mechanism: solving the collective action problem of disease elimination across borders through shared protocols, resource pooling, and aligned incentives. No significant extraction is observable. The constraint is the coordination infrastructure itself. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.08. Low extraction; symmetric coordination game."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "endemic_country_political_will",
+      "question": "Will endemic countries maintain disease surveillance and water quality standards after international coordination support is withdrawn?",
+      "resolution_mechanism": "Post-eradication monitoring of surveillance reporting rates, water access maintenance in remaining endemic regions, and government health budget allocation trends",
+      "impact": "If YES: scaffold sunset succeeds, constraint transitions cleanly. If NO: residual disease rebounds, coordination failure, program reclassifies as snare of external dependency.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of endemic-country health infrastructure post-eradication"
+    },
+    {
+      "id": "funding_model_robustness",
+      "question": "Is the eradication program's funding model dependent on the bounded goal (eradication deadline), or does it risk perpetuation as a low-extractiveness bureaucratic structure?",
+      "resolution_mechanism": "Analysis of funding trends post-eradication declaration; tracking whether international health budgets maintain dedicated guinea worm surveillance or redirect to other priorities",
+      "impact": "If deadline drives funding cessation: pure rope. If bureaucratic perpetuation occurs: constraint degrades to piton (degraded coordination persisting through inertia).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether eradication goal terminus drives funding sunset or bureaucratic persistence"
+    },
+    {
+      "id": "behavioral_adoption_durability",
+      "question": "Do communities continue practicing water safety behaviors (boiling, filtering) after Guinea worm elimination removes the proximal threat?",
+      "resolution_mechanism": "Longitudinal studies of water-use behaviors in declared eradication zones; correlation between health education content retention and disease elimination",
+      "impact": "If behaviors persist: coordination achieved. If behaviors revert: constraint requires ongoing enforcement, reclassifying to snare or tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Durability of behavioral change after disease elimination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Global Guinea Worm Eradication Program, led by The Carter Center since 1986, represents a successful international coordination mechanism for eliminating a parasitic disease through provision of safe drinking water, health education, and surveillance. The constraint is fundamentally coordinative rather than extractive: aligned incentives across endemic populations, international NGOs, national governments, and health institutions create a shared goal of disease elimination. The program exhibits minimal theater (functional outcomes dominate over performative reporting) and declining extractiveness as the disease nears eradication. The constraint's structure is a Rope from all major perspectives, with Scaffold properties emerging as the program approaches its sunset deadline. Endemic populations experience the constraint as access to safer water technology (mobile exit, low extraction). National governments experience it as harmonization of health governance (constrained exit, low extraction). International institutions experience it as temporary coordination infrastructure designed for transition to endemic-country ownership (sunset clause embedded in design). The analytical observer sees a pure coordination game with aligned incentives across all parties.",
+    "key_agents": [
+      "Endemic community members (local level): Primary beneficiaries (powerless/mobile) \u2014 direct recipients of safe water access and health benefits",
+      "The Carter Center and partner NGOs: Primary coordinators (institutional/arbitrage) \u2014 institutional actors mobilizing resources and harmonizing protocols across borders",
+      "Endemic country governments: Institutional participants (organized/constrained) \u2014 sovereign actors with constrained exit due to health governance obligations",
+      "WHO and UNICEF: Coordination infrastructure providers (organized/constrained) \u2014 global health institutions building surveillance and water access systems with sunset logic",
+      "Analytical observer: Views constraint as global public health coordination mechanism (analytical/analytical) \u2014 sees aligned incentives and pure coordination game"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The program's primary mechanism is providing access to water technology and health information \u2014 genuine public goods with minimal value asymmetry. No single party extracts sustained value at others' expense. The beneficiaries (endemic populations) directly receive health improvements. The coordinators (Carter Center, NGOs) benefit from mission accomplishment and institutional legitimacy, but these are not extraction \u2014 they are legitimate coordination benefits. Governments benefit from improved health outcomes and reduced disease burden. The declining extractiveness trend (0.18\u21920.12\u21920.08) reflects increasing efficiency and technology diffusion, reducing coordination overhead. Suppression (0.08): Very low. Communities retain significant agency in adoption decisions. Water filter and well technologies are relatively accessible. Health education enables informed choice. No coercive barriers prevent participation (except poverty, which the program addresses directly). Theater ratio (0.25): Low. The program is substantially functional: reported cases correlate with actual eradication progress, surveillance data drives interventions, and water access improvements demonstrate concrete outcomes. Theater has decreased over time as monitoring becomes more rigorous and community-based verification strengthens.",
+    "perspectival_gap": "The perspectival gap is minimal and primarily temporal. All perspectives converge on Rope classification, which is unusual for a global social program. The slight variation (Scaffold for global institutions) reflects the sunset logic embedded in the program design \u2014 international coordination is structured as temporary support for building endemic-country capacity. This absence of major perspectival disagreement is diagnostic: when all structural positions (powerless beneficiary, institutional coordinator, national government, global institution, analytical observer) agree on a low-extraction, high-coordination classification, the constraint is likely a genuine public good coordination mechanism rather than a hybrid extraction-coordination system. The minor gap between Rope and Scaffold reflects different time horizons: local/biographical perspectives see Rope (immediate coordination); generational/institutional perspectives see Scaffold (temporary infrastructure with sunset).",
+    "directionality_logic": "Endemic populations: Beneficiary + mobile \u2192 d\u22480.25, f(d)\u22480.10. Moderate beneficiary status with exit option; can adopt provided technologies. Carter Center / NGOs: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.02. Net beneficiary; arbitrage exit (can shift to other programs). Endemic governments: Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.25. Constrained exit due to sovereignty and health governance obligations, but genuine coordination benefits. Global health institutions: Both + constrained \u2192 d\u22480.40, f(d)\u22480.40. Symmetric coordination game with constrained exit; benefit from capacity building alignment. Analytical observer: Symmetric \u2192 d\u22480.50, f(d)\u22480.65. Views constraint as equilibrium coordination mechanism with aligned incentives.",
+    "mandatrophy_analysis": "PURE COORDINATION RESOLUTION: This constraint resolves potential mandatrophy by demonstrating that low extractiveness (0.12) across all perspectives is structural, not observational. The program achieves genuine coordination (Rope) by aligning incentives rather than creating asymmetric dependencies. No perspective misidentifies extraction as coordination or vice versa. All parties benefit from disease elimination; the constraint is the mechanism enabling collective achievement of a shared goal. The declining theater ratio and declining extractiveness trend confirm that the system is becoming more functionally pure over time, not accumulating hidden extraction. The Scaffold properties (sunset logic, declining oversight) reflect deliberate program design, not institutional degradation. This is a canonical example of a constraint where mandatrophy does not arise because no perspective has incentive to mislabel the coordination mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "waterborne_disease_access_disparity",
+      "international_health_institution_coordination"
+    ],
+    "dual_formulation_note": "The eradication program's success depends on upstream constraint (international health governance coordination) and downstream constraint (sustainable water access infrastructure). This constraint is the operational mechanism linking institutional coordination to endemic-population outcomes."
+  },
+  "directionality_overrides": []
+}

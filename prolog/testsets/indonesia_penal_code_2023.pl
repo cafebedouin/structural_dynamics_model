@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: indonesia_penal_code_2023
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-28
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_indonesia_penal_code_2023, []).
@@ -40,9 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -57,18 +57,42 @@
  *   domain: political/social
  *
  * SUMMARY:
- *   In 2023, Indonesia ratified a new penal code (KUHP) that criminalizes a
- *   range of personal activities, including extramarital sex, cohabitation by
- *   unmarried couples, and insulting the president or state institutions.
- *   The law, framed as a decolonization effort, creates a powerful tool for
- *   social control and suppression of dissent, impacting citizens, foreigners,
- *   and the business climate.
+ *   Indonesia's 2023 Penal Code (KUHP) represents a significant institutional
+ *   shift toward state criminalization of personal liberties, particularly
+ *   consensual intimate conduct and political expression. The code
+ *   criminalizes extramarital sex, cohabitation by unmarried couples,
+ *   same-sex relationships (through sodomy and morality clauses), and
+ *   insulting the president or state institutions. This constraint exhibits
+ *   the classic snare structure: high extraction (career damage,
+ *   incarceration risk, social stigma), high suppression (state enforcement
+ *   machinery + community policing), and moderate theater (framing as moral
+ *   protection obscures extraction mechanism). However, the constraint also
+ *   manifests piton characteristics—the code revises and partially restores
+ *   colonial-era legal templates, creating institutional inertia rather than
+ *   organic innovation. The theatrical component increases as the code faces
+ *   international criticism and domestic resistance: official rhetoric
+ *   emphasizes consensus-building and legal modernization while enforcement
+ *   remains selective and opaque. The constraint analysis reveals multiple
+ *   structural tensions: between state beneficiaries (institutional
+ *   apparatus, conservative religious coalition) and victims (unmarried
+ *   couples, LGBTQ individuals, political critics); between international
+ *   treaty obligations (CEDAW, ICCPR) and domestic law; between formal legal
+ *   processes (providing piton-level legitimacy) and informal social
+ *   enforcement (providing snare-level extraction through gossip, family
+ *   pressure, religious condemnation). The international human rights
+ *   coalition perceives a scaffold structure with a generational sunset:
+ *   demographic shifts and global norm diffusion will eventually undermine
+ *   political support for criminalizing personal conduct.
  *
- * KEY AGENTS (by structural relationship):
- *   - Unmarried individuals, journalists, and political dissidents: Primary targets (powerless/trapped) — bear the extraction of personal liberty and face risk of prosecution.
- *   - Conservative political and religious factions: Primary beneficiaries (institutional/arbitrage) — benefit from the enforcement of their social norms and the suppression of opposition.
- *   - Foreign tourism and investment sector: Inter-institutional victim (organized/mobile) — bears costs from reputational damage and operational risk.
- *   - Human rights organizations: Analytical observers — see the full structure of coordination for beneficiaries and extraction from victims.
+ * KEY AGENTS:
+ *   - State Institutional Apparatus: Primary beneficiary (institutional/arbitrage) — gains enforcement authority, moral legitimacy, and capacity to suppress opposition through law
+ *   - Conservative Religious Coalition: Primary beneficiary (institutional/arbitrage) — institutionalizes religious moral frameworks; mobilizes constituencies; outsources enforcement to communities
+ *   - Unmarried Couples: Primary victim (powerless/trapped) — criminalized for consensual behavior; no legal exit within Indonesia; subjected to selective prosecution and social stigma
+ *   - LGBTQ Individuals: Primary victim (powerless/trapped) — identity-based criminalization; permanent trap requiring either psychological coercion (conformity) or emigration
+ *   - Political Critics: Secondary victim (moderate/constrained) — insulting-state-institutions clause constrains free expression; have procedural protections but are asymmetrically targeted
+ *   - International Human Rights Coalition: Organized observer (organized/constrained) — sees constraint as temporary institutional failure with generational sunset via demographic/norm diffusion
+ *   - Civil Society Organizations: Secondary victim (moderate/constrained) — face surveillance and selective prosecution for advocacy; constrained exit (cannot fully operate; some emigration of leadership)
+ *   - Post-Colonial Legal Institutions: Structural holder (institutional/arbitrage) — benefit from institutional inertia in maintaining colonial-derived legal templates; experience constraint as coordination mechanism
  */
 
 /* ==========================================================================
@@ -76,90 +100,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(indonesia_penal_code_2023, 0.75).
-domain_priors:suppression_score(indonesia_penal_code_2023, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(indonesia_penal_code_2023, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(indonesia_penal_code_2023, 0.58).
+domain_priors:suppression_score(indonesia_penal_code_2023, 0.72).
+domain_priors:theater_ratio(indonesia_penal_code_2023, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(indonesia_penal_code_2023, extractiveness, 0.75).
-narrative_ontology:constraint_metric(indonesia_penal_code_2023, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(indonesia_penal_code_2023, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(indonesia_penal_code_2023, extractiveness, 0.58).
+narrative_ontology:constraint_metric(indonesia_penal_code_2023, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(indonesia_penal_code_2023, theater_ratio, 0.65).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(indonesia_penal_code_2023, snare).
 narrative_ontology:human_readable(indonesia_penal_code_2023, "Indonesia's 2023 Penal Code (KUHP) Criminalizing Personal Liberties").
 narrative_ontology:topic_domain(indonesia_penal_code_2023, "political/social").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(indonesia_penal_code_2023). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(indonesia_penal_code_2023).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(indonesia_penal_code_2023, conservative_political_and_religious_factions).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(indonesia_penal_code_2023, unmarried_individuals).
-narrative_ontology:constraint_victim(indonesia_penal_code_2023, political_dissidents_and_journalists).
-narrative_ontology:constraint_victim(indonesia_penal_code_2023, foreign_tourism_and_investment_sector).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(indonesia_penal_code_2023, state_institutional_apparatus).
+narrative_ontology:constraint_beneficiary(indonesia_penal_code_2023, conservative_religious_coalition).
+narrative_ontology:constraint_victim(indonesia_penal_code_2023, unmarried_couples).
+narrative_ontology:constraint_victim(indonesia_penal_code_2023, lgbtq_individuals).
+narrative_ontology:constraint_victim(indonesia_penal_code_2023, political_critics).
+narrative_ontology:constraint_victim(indonesia_penal_code_2023, civil_society_organizations).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% An ordinary Indonesian citizen subject to the morality clauses.
-% They are a declared victim with trapped exit. Engine derives d ≈ 0.95 -> f(d) ≈ 1.42.
-% χ = 0.75 * 1.42 * 1.0 (national) ≈ 1.065. High extraction, high suppression.
-constraint_indexing:constraint_classification(indonesia_penal_code_2023, naturalized,
+% PERSPECTIVE 1: UNMARRIED COUPLE (SNARE) — Trapped within Indonesian jurisdiction with no legal exit option. Criminalized for consensual private behavior. Cannot organize, migrate without severe cost, or challenge the constraint through institutional channels. Maximum suppression: state enforcement authority + social policing mechanisms create near-total behavioral chilling effect. No coordination benefit to offset extraction.
+constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% A member of a conservative political party that championed the law.
-% They are a declared beneficiary with arbitrage exit. Engine derives d ≈ 0.05 -> f(d) ≈ -0.12.
-% χ = 0.75 * -0.12 * 1.0 (national) ≈ -0.09. Negative extraction -> a tool for control.
+% PERSPECTIVE 2: LGBTQ INDIVIDUAL (SNARE) — Identity-based criminalization creates permanent trap. Exit options are binary: conform sexuality to legal/social norm (psychological coercion) or emigrate. Trapped agents experience maximum structural extraction. Social suppression layer amplifies state enforcement — peer and family surveillance supplement formal law enforcement. Theater ratio high: rhetorical framing as 'protecting morality' obscures extraction mechanism.
+constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: POLITICAL CRITIC (TANGLED ROPE) — Moderate power and constrained exit. The code provides coordination function (civil society reporting mechanisms, legal remedy framework) but weaponized against critics. Insulting state institutions clause creates asymmetric extraction: critics cannot freely express dissent, but the state can prosecute. Benefits from rule-of-law infrastructure (ability to mount defense, appellate process) but constrained by the code's design. Moderate extraction rather than maximum snare because institutional processes provide some procedural protection.
+constraint_indexing:constraint_classification(indonesia_penal_code_2023, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: STATE INSTITUTIONAL APPARATUS (ROPE) — Primary beneficiary. Gains enforcement authority, moral legitimacy framing, and capacity to suppress organized opposition. Experiences the constraint as a coordination mechanism: centralizes power distribution, clarifies enforcement hierarchy, and provides legal cover for state agents' discretionary enforcement. Can exit (repeal the code) but has no incentive. Arbitrage position: the code enables state to extract maximum compliance from citizens while maintaining institutional legitimacy through formalized legal process.
 constraint_indexing:constraint_classification(indonesia_penal_code_2023, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% A human rights organization assessing the law's structure.
-% Sees both the coordination function for beneficiaries and the severe asymmetric
-% extraction from victims. Requires active enforcement. Canonical Tangled Rope.
-% Engine derives d ≈ 0.72 -> f(d) ≈ 1.15. Global scope amplifies χ.
-constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
+% PERSPECTIVE 5: CONSERVATIVE RELIGIOUS COALITION (ROPE) — Secondary beneficiary. Code institutionalizes religious moral frameworks into state enforcement mechanism. Coordination benefit: mobilizes religious constituencies, legitimizes religious authority within law, reduces enforcement costs by outsourcing social policing to religious communities. Has arbitrage exit (code repeal) but benefits from status quo. Experiences constraint as low-cost coordination of moral enforcement.
+constraint_indexing:constraint_classification(indonesia_penal_code_2023, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: INTERNATIONAL HUMAN RIGHTS COALITION (SCAFFOLD) — Organized but geographically constrained (limited enforcement power within Indonesia). Sees the code as a temporary institutional failure with a structural sunset: demographic shifts (Gen Z has lower acceptance of criminalization), global norm diffusion (ASEAN peers decriminalizing), economic incentives (tourism/FDI damage from human rights concerns), and generational pressure on legal institutions. Coordination function: international treaty obligations (CEDAW, ICCPR ratifications create internal tensions with KUHP). Theater remains high because compliance rhetoric masks non-compliance reality (uneven enforcement, circumvention practices).
+constraint_indexing:constraint_classification(indonesia_penal_code_2023, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(global))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% The foreign tourism sector, which must now navigate increased risk.
-% As an organized victim with mobile exit, d is derived around 0.85 -> f(d) ≈ 1.15.
-% χ = 0.75 * 1.15 * 1.0 (national) ≈ 0.86.
-% Experiences the law as a highly extractive mechanism that disrupts its business model.
-constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(mobile),
+% PERSPECTIVE 7: COLONIAL LEGAL LEGACY (PITON) — The KUHP 2023 is partially a restoration/update of Dutch colonial criminal code architecture (the prior KUHP was inherited from 1918 Dutch law). From a civilizational view, the constraint represents institutional inertia: the code persists because legal infrastructure defaults to existing templates, institutional actors are trained in it, and replacement would require comprehensive legal rewriting. Theater ratio high: the new code is framed as 'modernization' when it largely codifies existing practices with added specificity to personal conduct. The underlying coordination structure (hierarchical criminal administration) is degraded by the code's overreach — it attempts to regulate behavior beyond what formal law can efficiently enforce (private intimate conduct), creating performative enforcement (selective prosecution for political/social purposes).
+constraint_indexing:constraint_classification(indonesia_penal_code_2023, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
             spatial_scope(national))).
 
 /* ==========================================================================
@@ -168,25 +183,18 @@ constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare,
 
 :- begin_tests(indonesia_penal_code_2023_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify the core perspectival gap.
-    constraint_indexing:constraint_classification(indonesia_penal_code_2023, naturalized, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(indonesia_penal_code_2023, rope, context(agent_power(institutional), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(indonesia_penal_code_2023, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(indonesia_penal_code_2023, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    % Ensure the analytical view correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(indonesia_penal_code_2023, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(indonesia_penal_code_2023, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(high_extraction_and_suppression_thresholds) :-
-    % Verify the base metrics are in the Snare/Tangled Rope range.
-    domain_priors:base_extractiveness(indonesia_penal_code_2023, E), E >= 0.46,
-    domain_priors:suppression_score(indonesia_penal_code_2023, S), S >= 0.60.
-
-test(tangled_rope_gate_requirements_met) :-
-    % Verify all three conditions for Tangled Rope are declared.
-    narrative_ontology:constraint_beneficiary(indonesia_penal_code_2023, _),
-    narrative_ontology:constraint_victim(indonesia_penal_code_2023, _),
-    domain_priors:requires_active_enforcement(indonesia_penal_code_2023).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(indonesia_penal_code_2023, TR),
+    TR >= 0.70.
 
 :- end_tests(indonesia_penal_code_2023_tests).
 
@@ -196,83 +204,99 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): The value being extracted is fundamental human liberty—freedom of speech, privacy, and association. The potential penalty (imprisonment) represents a near-total extraction of autonomy, justifying a high score.
- *   - Suppression (0.80): The law's explicit purpose is to suppress lifestyles and speech that deviate from a state-sanctioned norm, directly replacing a more liberal (albeit colonial-era) legal framework. The availability of alternatives is legally foreclosed.
- *   - Theater (0.20): While framed as an act of decolonization and assertion of national identity, the law has severe, real-world enforcement mechanisms. The theater is present but secondary to the functional extraction and suppression.
+ *   Extractiveness (0.58): High-moderate. The code extracts behavioral compliance from powerless agents (unmarried couples, LGBTQ individuals) through criminalization threat, incarceration risk, and career/social damage. However, extractiveness is not maximal (0.66+) because: (1) enforcement is selective rather than systematic, reducing effective extraction for some groups; (2) formal legal processes provide procedural protections that create a thin layer of institutional legitimacy and appeal options; (3) exit through emigration is possible (though costly) for some agents, creating a constrained rather than absolute trap for the most privileged among targeted groups. The trajectory shows increasing extractiveness over the interval as enforcement becomes more confident and community policing mechanisms strengthen. Suppression (0.72): High. Multiple suppression mechanisms operate simultaneously: state enforcement authority (formal prosecution), social stigma (informal punishment via gossip and family pressure), community policing (religious and family-based surveillance), and psychological coercion (agents internalize the criminalization and self-censor). Suppression exceeds the snare minimum (0.60) because the code reaches into private intimate conduct, not just public behavior — this maximizes both state and social enforcement reach. Theater ratio (0.65): Moderate-high. The code is partially performative: official rhetoric emphasizes moral protection and modernization, but the underlying mechanism is behavioral extraction. Enforcement patterns reveal political targeting (critics prosecuted more aggressively than unmarried couples in some contexts), suggesting that the formal legal structure serves as theater for selective state power. Theater is not maximal (0.70+) because some enforcement is consistent enough to create genuine behavioral chilling effects, and the institutional legitimacy is partially real (some Indonesian constituencies genuinely support criminalization for religious reasons).
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For the conservative coalition (beneficiary), the law is a Rope that coordinates their political power and enforces a shared social vision, appearing as a pure good (negative extraction). For an individual citizen or a journalist (target), the same law is a Snare, a coercive tool that extracts their freedom with no corresponding benefit, only the threat of punishment. The law's function is perceived entirely differently depending on one's structural position relative to it.
+ *   The snare vs. rope gap is maximal. From the beneficiary view (state/religious coalition, institutional power, arbitrage exit), the code is a coordination mechanism with net benefit—it organizes society, legitimizes authority, and costs beneficiaries little (they are not targets). From the victim view (unmarried couples, powerless, trapped), the code is pure extraction with no coordination benefit—it constrains behavior, risks incarceration, and provides no reciprocal service. The political critic occupies the tension: they benefit from the rule-of-law infrastructure (due process, appeal rights) but are asymmetrically targeted by the same code. The international coalition sees a different gap: between the code's institutional form (legitimate legal process) and its functional degradation (selective enforcement, piton theater). The analytical observer risks the mountain error—treating the code as an inevitable feature of state capacity (all states need moral enforcement mechanisms)—but the structural data reveals this as naturalization of a contingent institutional arrangement.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: Conservative religious and nationalist factions gain direct political and social power. The law is their instrument. The system derives a low `d`, reflecting that the constraint works for them.
- *   - Victims: Unmarried citizens, LGBTQ+ individuals, political critics, and journalists directly bear the costs. Their freedom is the resource being extracted. The system derives a high `d` from their victim status and trapped/constrained exit options.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The tourism and foreign investment sectors are institutional victims. Unlike individual citizens, they are `organized` and `mobile`. However, the law still imposes significant costs (risk, reputational damage, difficulty attracting foreign talent), making it a Snare from their perspective. It extracts certainty and value from their operations, demonstrating that even powerful actors can be targets of extraction when they lack the specific institutional power to shape the rule-making process.
+ *   Directionality (d) is computed from each agent's structural relationship to the constraint. Beneficiaries (state apparatus, religious coalition) have low d values (around 0.10-0.20, derived from institutional power + arbitrage exit): they experience low or negative extraction. Victims with trapped exit (unmarried couples, LGBTQ individuals) have high d values (0.90-0.95, derived from powerless position + trapped exit): they experience maximum extraction. The political critic has moderate d (around 0.60-0.70, derived from moderate power + constrained exit): they experience significant but not maximal extraction because institutional processes provide some protection and some agency. The international coalition has analytical d (around 0.72-0.80, derived from organized power + constrained geographic exit): they see the constraint from outside, with agency to advocate but limited enforcement power. The piton perspective operates outside the normal directionality computation—it treats the constraint's functional degradation as a structural property independent of who benefits or who bears costs. The theater-driven classification reveals that the code's legitimacy increasingly relies on performative compliance rather than functional enforcement, which is a hallmark of piton degradation. No overrides are necessary because the beneficiary/victim declarations and exit options sufficiently capture the directional relationships.
  *
  * MANDATROPHY ANALYSIS:
- *   [RESOLVED MANDATROPHY] Classifying this law as a simple Snare from all perspectives would be inaccurate, as it would miss its genuine coordination function for the ruling coalition. Classifying it as a Rope would be a gross misrepresentation of its impact on the populace. The analytical classification of Tangled Rope is essential. It correctly identifies the dual nature of the constraint: it is simultaneously a coordination mechanism for one group and a highly extractive mechanism for another, with its existence predicated on active state enforcement. This prevents the mislabeling of coercive social engineering as simple "coordination."
+ *   MANDATROPHY RESOLVED — The constraint exhibits the core mandatrophy: beneficiaries see pure coordination (Rope), victims see pure extraction (Snare), and both readings are structurally valid. The resolution comes from recognizing that the snare and rope are not contradictory perspectives on the same constraint—they are perspectival readings of an asymmetric distribution of extraction and coordination benefits. The code simultaneously: (1) solves a coordination problem for beneficiaries (how to institutionalize moral norms into law), and (2) extracts behavioral compliance from victims (through criminalization and suppression). Both are real. The mandate resolution (choosing between snare and rope as 'the' type) fails because it presumes a single objective constraint. Instead, the constraint is a presheaf over the observation site: each observer's structural position (power level, exit options, beneficiary/victim status) yields a legitimate classification. The analytical task is to chart the perspectival space, not to collapse it to a single type. The mandatrophy dissolves when the observer realizes that the snare-for-victims and rope-for-beneficiaries are not measurement errors—they are the constraint's true structure. The code is snare-shaped from below and rope-shaped from above, and this inversion of perspective is not a paradox; it is the defining feature of asymmetric institutional power. The engine's computation of mandatrophy_resolved=true for extractiveness > 0.70 is satisfied here (extractiveness = 0.58 does not trigger that requirement, but the perpectival analysis confirms mandatrophy resolution through structural understanding).
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_indonesia_penal_code_2023,
-    'Will the law be enforced broadly against the populace, or primarily used selectively to target political opponents and marginalized groups?',
-    'Analysis of prosecution data over a 5-10 year period, cross-referenced with the political affiliations and social status of those charged.',
-    'Broad enforcement confirms its function as a widespread Snare. Selective enforcement suggests its primary function is a Tangled Rope for political suppression, with the general threat serving as a secondary control mechanism.',
-    confidence_without_resolution(low)
+    enforcement_selectivity_threshold,
+    'What distinguishes selective prosecution (political targeting) from systemic enforcement of the criminalization?',
+    'Longitudinal analysis of prosecution patterns: do enforcement rates vary by socioeconomic status, political affiliation, or religious identity? Comparison with pre-2023 practice to identify whether new code changes enforcement probability.',
+    'If enforcement is selective/political: constraint is snare with piton characteristics (institutionalized oppression with inconsistent application). If enforcement is systemic: constraint is more effectively coercive snare but loses piton theater (becomes efficient extraction rather than degraded ritual).',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(enforcement_selectivity_threshold, empirical, 'Whether enforcement is selective political targeting or systematic').
+
+omega_variable(
+    compliance_internalization_mechanisms,
+    'Do criminalization effects operate primarily through state enforcement or through internalized social norms and community policing?',
+    'Behavioral studies pre/post KUHP 2023: self-reported behavior change, survey data on perception of legal risk vs. social disapproval, ethnographic observation of community enforcement mechanisms vs. formal law enforcement.',
+    'If state enforcement dominant: snare classification is accurate (extraction flows from institutional power). If social internalization dominant: suppression floor increases but benefits shift partially to conservative religious community (making constraint more hybrid). If mixed: constraint exhibits both snare (state) and rope (community coordination) simultaneously.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(compliance_internalization_mechanisms, empirical, 'Relative weight of state enforcement vs. social norm internalization').
+
+omega_variable(
+    exit_migration_elasticity,
+    'What fraction of trapped agents (unmarried couples, LGBTQ individuals) can and will exit through emigration vs. remaining subjected to constraint?',
+    'Migration flow data post-KUHP 2023 (visa applications, emigration rates by demographic cohort, destination countries); survey data on migration intention among criminalized groups.',
+    'If exit rate > 15%: snare classification weakened (some agents escape). If exit rate < 5%: snare confirmed as near-total trap. Exit patterns reveal which agent groups experience maximum vs. moderate extraction.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(exit_migration_elasticity, empirical, 'Fraction of targeted individuals who emigrate vs. internalize constraint').
+
+omega_variable(
+    international_treaty_enforcement_gap,
+    'Does Indonesia''s ratification of CEDAW and ICCPR (which protect personal liberty and non-discrimination) create a binding enforcement mechanism that contradicts KUHP 2023?',
+    'International court proceedings (ICJ, CEDAW committee complaints), treaty body review cycles, enforceability of committee recommendations within Indonesian legal hierarchy.',
+    'If treaties are enforceable: scaffold sunset mechanism is real (international pressure creates generational path to repeal). If treaties are non-binding: international human rights coalition perspective becomes aspirational (low organizational power despite coordinated rhetoric). Mandatrophy resolution depends on this gap.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(international_treaty_enforcement_gap, conceptual, 'Whether international treaty obligations create enforceable contradiction with KUHP 2023').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing. Interval models the 3-year transition
-% plus several years of full enforcement.
-narrative_ontology:interval(indonesia_penal_code_2023, 0, 10).
+narrative_ontology:interval(indonesia_penal_code_2023, 0, 12).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.75 > 0.46), so temporal data is required.
-% We model a slight increase in extraction and theater as the law becomes normalized
-% and its enforcement apparatus becomes more entrenched.
+% Theater ratio over time
+narrative_ontology:measurement(idnkuhp_tr_t0, indonesia_penal_code_2023, theater_ratio, 0, 0.58).
+narrative_ontology:measurement(idnkuhp_tr_t6, indonesia_penal_code_2023, theater_ratio, 6, 0.62).
+narrative_ontology:measurement(idnkuhp_tr_t12, indonesia_penal_code_2023, theater_ratio, 12, 0.65).
 
-% Theater ratio over time:
-narrative_ontology:measurement(ipc23_tr_t0, indonesia_penal_code_2023, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(ipc23_tr_t5, indonesia_penal_code_2023, theater_ratio, 5, 0.18).
-narrative_ontology:measurement(ipc23_tr_t10, indonesia_penal_code_2023, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(idnkuhp_be_t0, indonesia_penal_code_2023, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(idnkuhp_be_t6, indonesia_penal_code_2023, base_extractiveness, 6, 0.55).
+narrative_ontology:measurement(idnkuhp_be_t12, indonesia_penal_code_2023, base_extractiveness, 12, 0.58).
 
-% Extraction over time:
-narrative_ontology:measurement(ipc23_ex_t0, indonesia_penal_code_2023, base_extractiveness, 0, 0.70).
-narrative_ontology:measurement(ipc23_ex_t5, indonesia_penal_code_2023, base_extractiveness, 5, 0.72).
-narrative_ontology:measurement(ipc23_ex_t10, indonesia_penal_code_2023, base_extractiveness, 10, 0.75).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The law's function for its beneficiaries is to enforce a
-% specific socio-political ideology.
 narrative_ontology:coordination_type(indonesia_penal_code_2023, enforcement_mechanism).
+narrative_ontology:affects_constraint(indonesia_penal_code_2023, lgbtq_criminalization_southeast_asia).
+narrative_ontology:affects_constraint(indonesia_penal_code_2023, political_speech_criminalization).
+narrative_ontology:affects_constraint(indonesia_penal_code_2023, indonesian_civil_society_restrictions).
 
-% Network relationships: This law directly impacts the investment and tourism
-% climate, which can be modeled as separate constraints.
-narrative_ontology:affects_constraint(indonesia_penal_code_2023, indonesia_tourism_competitiveness).
+% DUAL FORMULATION NOTE:
+% The KUHP 2023 constraint can be decomposed into three structurally distinct constraints with different ε values: (1) criminalization of consensual intimate conduct (ε ≈ 0.62, Snare) — primary extraction mechanism; (2) insulting-state-institutions clause (ε ≈ 0.55, Tangled Rope) — mixed coordination/extraction for political expression; (3) colonial legal infrastructure (ε ≈ 0.35, Piton) — institutional inertia and theater. These are linked via network relationships: the institutional inertia enables both criminalization clauses. In this story, they are unified under the claimed_type 'snare' because the primary structural force is extraction of personal liberty. Separate constraint stories with different ε values could analyze the political-speech dimension and colonial-legacy dimension independently.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this constraint. The standard derivation
-% chain based on the declared beneficiary/victim groups and their respective
-% exit options accurately models the structural relationships and produces
-% the correct directionality (d) values for each perspective.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

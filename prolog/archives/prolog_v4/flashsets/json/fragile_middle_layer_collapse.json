@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "fragile_middle_layer_collapse",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Intermediary Decay",
+    "topic_domain": "economic/technological/logistical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_owners",
+      "end_users"
+    ],
+    "victims": [
+      "middle_layer_intermediaries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Displaced Intermediary",
+      "comment": "Perspective of the displaced intermediary (e.g., regional distributor). Limited exit options due to specialized skills and local market knowledge becoming obsolete. Trapped by lack of alternatives and declining demand for their services."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Owner",
+      "comment": "Perspective of the platform owner. Benefits from increased efficiency, reduced costs, and greater scalability. Sees the process as pure coordination, connecting producers directly with consumers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The End User",
+      "comment": "Perspective of the end-user. Benefits from lower prices and greater access, but also experiences reduced service quality and loss of personalized support. Mobile: end users can choose between platform and traditional alternatives, even if that access is limited."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Analytical observer perspective. Recognizes both the coordination benefits (increased efficiency, lower prices) and the extraction costs (loss of jobs, reduced service quality, concentration of power). Sees the overall process as a tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "re_skilling_effectiveness",
+      "question": "How effective are re-skilling programs for displaced intermediaries in transitioning to new roles within the evolving economy?",
+      "resolution_mechanism": "Longitudinal tracking of employment outcomes for re-skilling program participants compared to non-participants.",
+      "impact": "High effectiveness: mitigates the negative impacts of intermediary decay. Low effectiveness: exacerbates inequality and social unrest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of re-skilling programs."
+    },
+    {
+      "id": "service_quality_degradation",
+      "question": "To what extent does the elimination of intermediaries lead to a degradation of service quality and personalized support for end-users?",
+      "resolution_mechanism": "Surveys and user feedback analysis comparing service experiences with and without intermediaries.",
+      "impact": "Significant degradation: undermines user satisfaction and adoption. Minimal degradation: strengthens the case for direct-to-end-user models.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of disintermediation on service quality."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The intermediary decay describes a scenario where the middle layer of a system is hollowed out by automation and direct-to-end-user scaling. This can lead to increased efficiency and lower prices for end-users, but also results in job losses for intermediaries and a potential degradation of service quality.",
+    "key_agents": [
+      "Platform Owners: Primary beneficiary (institutional/arbitrage) - benefits from increased efficiency and scalability.",
+      "Middle Layer Intermediaries: Primary victim (powerless/trapped) - suffers job losses and declining demand for services.",
+      "End Users: Secondary actor (moderate/mobile) - benefits from lower prices but may experience reduced service quality."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The platform extracts significant value from the displaced intermediaries. Suppression (0.70): High. The automation and direct-to-end-user model significantly reduces the alternatives available to the intermediaries. Theater ratio (0.30): Low. There is relatively little performative activity as the shift is driven by genuine technological and economic forces.",
+    "perspectival_gap": "The platform owner sees the process as pure coordination, connecting producers directly with consumers. The displaced intermediary sees it as a snare, with limited exit options and declining demand for their services. The end-user experiences a mixed outcome, with lower prices but potentially reduced service quality.",
+    "directionality_logic": "The platform owners are the primary beneficiaries and experience low extraction, the end-users have increased optionality and have a mobile exit making them a moderate agent. The intermediaries bear the brunt of the negative impact and are classified as victims with trapped exit options."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "job_polarization",
+      "platform_monopoly"
+    ]
+  },
+  "directionality_overrides": []
+}

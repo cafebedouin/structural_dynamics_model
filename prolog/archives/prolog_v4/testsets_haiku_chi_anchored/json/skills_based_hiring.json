@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "skills_based_hiring",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sbh"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Skills-Based Hiring (De-credentialing)",
+    "topic_domain": "economic/technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "non_traditional_talent_pools",
+      "employers_seeking_flexibility",
+      "technology_platforms_intermediating_assessment"
+    ],
+    "victims": [
+      "traditional_education_providers",
+      "credential_gatekeepers",
+      "workers_without_access_to_skill_certification"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uncreden tialed Worker Without Verification Access",
+      "comment": "PERSPECTIVE 1: UNACCREDITED WORKER WITHOUT VERIFICATION ACCESS (SNARE) \u2014 Cannot afford proprietary skill assessment platforms (LinkedIn, HackerRank, Coursera certificates). Lacks institutional backing to demonstrate competence. Even if skilled, trapped in circular dependency: must demonstrate skills to access jobs, but assessment access requires credentials or payment. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Self-Taught Developer With Portfolio",
+      "comment": "PERSPECTIVE 2: SELF-TAUGHT DEVELOPER WITH PORTFOLIO (TANGLED ROPE) \u2014 Experiences both coordination benefit (can demonstrate competence directly) and extraction (must maintain expensive portfolio/GitHub, navigate opaque algorithmic hiring filters, repeat skill proofs for each employer). Skills-based hiring enabled access but also created new verification burden. d\u22480.58, f(d)\u22480.73, \u03c3=1.0 \u2192 \u03c7\u22480.28."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Technology Platform Provider",
+      "comment": "PERSPECTIVE 3: TECHNOLOGY PLATFORM PROVIDER (ROPE) \u2014 Benefits from coordination function: solving the matching problem between employers seeking skills and workers with non-traditional pathways. Platform captures value through assessment data. Has mobile exit option \u2014 can pivot to new assessment modalities. Low extraction relative to value created. d\u22480.35, f(d)\u22480.31, \u03c3=1.0 \u2192 \u03c7\u22480.12."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Technology Employer",
+      "comment": "PERSPECTIVE 4: LARGE TECHNOLOGY EMPLOYER (ROPE) \u2014 Primary beneficiary of skills-based hiring shift. Can access broader talent pools and reduce hiring costs. Uses skills assessment to gate hiring at scale. Has arbitrage option \u2014 can move assessment systems, switch platforms, or revert to credential-based hiring. Pure coordination value: matching talent to roles efficiently. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Traditional Education Institution",
+      "comment": "PERSPECTIVE 5: TRADITIONAL EDUCATION INSTITUTION (TANGLED ROPE) \u2014 Victim of de-credentialing but also forced to adapt through coordination. Universities develop bootcamps, competency mapping, skills-aligned curricula. Constrained: must respond to labor market signals but has high exit costs (infrastructure, accreditation). Experiences both extraction (reduced diploma value) and coordination benefit (forced innovation). d\u22480.62, f(d)\u22480.81, \u03c3=1.0 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Credential Licensing System",
+      "comment": "PERSPECTIVE 6: CREDENTIAL LICENSING SYSTEM (PITON) \u2014 Formal licensure for regulated professions (medicine, law, engineering) persists despite skills-based hiring pressure because legal mandate, not labor market signal. Theater ratio \u22480.65: licensing exams test some competence but also gate access to lucrative professions. Inertial structure maintained by regulatory capture and professional associations. Cannot exit without statutory change. d\u22480.75, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.35."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Open-Credentials Movement",
+      "comment": "PERSPECTIVE 7: OPEN-CREDENTIALS MOVEMENT (SCAFFOLD) \u2014 Organized agents (Mozilla Open Badges, micro-credentials standards, free skill verification platforms) are building alternative verification pathways to reduce platform lock-in. Low coordination extraction (shared infrastructure), high functional value. Sunset clause: as open standards mature, proprietary skill assessment gatekeeping weakens. d\u22480.32, f(d)\u22480.25, \u03c3=1.0 \u2192 \u03c7\u22480.10."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Skills-based hiring is a genuine coordination mechanism (solves matching problem) bundled with extractive elements (verification rent-seeking, data concentration, algorithmic opacity). From civilizational view: shifts gating mechanism from educational credentials to assessment platforms, creating new asymmetries. Base extraction \u03b5=0.38, suppression 0.42, theater 0.58 indicate hybrid nature: real coordination value but also real extraction embedded in assessment infrastructure. d\u22480.68, f(d)\u22481.03, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_verification_cost_distribution",
+      "question": "Who bears the cost of skill verification \u2014 employer, worker, or platform \u2014 and does this allocation change who benefits from the constraint?",
+      "resolution_mechanism": "Longitudinal cost accounting: employer assessment platform fees vs worker certification/portfolio maintenance costs vs platform operational costs; correlation with hiring outcome equity across income groups",
+      "impact": "If workers bear most costs: extraction dominates, snare classification strengthens. If employers bear costs: coordination dominates, rope classification strengthens. If costs shift over time: constraint transitions between types.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost distribution among workers, employers, and platforms in skills-based hiring"
+    },
+    {
+      "id": "skill_transferability_decay",
+      "question": "How quickly do demonstrated skills become obsolete relative to credential refresh cycles, and does this create new credential-like extraction structures?",
+      "resolution_mechanism": "Skill half-life analysis: time to 50% replacement of top 20 technical skills; frequency of reassessment required; correlation with career continuity for workers who don't continuously re-skill",
+      "impact": "If decay is rapid (< 2 years): skills-based hiring creates perpetual re-assessment treadmill (snare with high theater). If slow (> 10 years): genuine de-credentialing benefit (rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Obsolescence rate of skills relative to credential refresh cycles"
+    },
+    {
+      "id": "algorithmic_opacity_in_hiring",
+      "question": "Are the filtering algorithms used by skills-based hiring platforms transparent to workers, and does opacity recreate the gatekeeping asymmetry of traditional credentials?",
+      "resolution_mechanism": "Audit study comparing worker feedback loops (visibility into why application rejected) between traditional resume screening vs algorithmic skills filtering; analysis of proprietary vs open assessment systems",
+      "impact": "If opaque: skills-based hiring merely relocates gatekeeping to algorithmic layer (tangled rope, high theater). If transparent: genuine reduction in extraction (rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transparency of filtering algorithms in skills-based hiring platforms"
+    },
+    {
+      "id": "access_equity_across_demographics",
+      "question": "Do non-traditional workers (racial minorities, first-generation, low-income) gain disproportionate access from skills-based hiring, or do they face new barriers in skill demonstration?",
+      "resolution_mechanism": "Cohort analysis: hiring outcomes for non-traditional workers under skills-based vs credential-based hiring; cost-adjusted analysis of who can afford high-quality portfolio maintenance; linguistic and cultural bias in skill assessment prompts",
+      "impact": "If equity gains: skills-based hiring delivers on de-credentialing promise (rope/scaffold). If equity stagnates or reverses: extraction mechanism has shifted but access barriers remain (tangled rope/snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether skills-based hiring reduces or maintains barriers for non-traditional workers"
+    },
+    {
+      "id": "platform_consolidation_dynamics",
+      "question": "Do skills-based hiring platforms consolidate into oligopolistic gatekeepers, recreating traditional credential power structures at a new layer?",
+      "resolution_mechanism": "Market concentration analysis: HHI of skill assessment platforms; switching costs for workers and employers; interoperability of skill credentials across platforms; regulatory capture of platform governance by major employers",
+      "impact": "If consolidation occurs: skills-based hiring is a temporary scaffold that collapses into snare (high platform extraction). If fragmented/interoperable: sustained rope/scaffold dynamics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Platform consolidation and oligopoly formation in skills assessment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Skills-based hiring represents a structural shift in how labor markets match workers to roles, de-emphasizing traditional educational credentials in favor of demonstrated competence. This constraint exhibits the hallmark tension of a tangled rope: it solves a genuine coordination problem (reducing barriers for non-traditional talent, improving role-to-capability matching) while embedding new extractive mechanisms (platform gatekeeping, algorithmic opacity, verification cost concentration). The constraint's theater ratio (0.58) reflects that while skills-based hiring does reduce performative credentialing, it has introduced new performative elements: maintaining competitive portfolios, showcasing skills on platforms, narrative construction of non-traditional pathways. The base extractiveness has grown from 0.15 to 0.38 over the interval, indicating that as skills-based hiring has scaled, platform consolidation and assessment cost concentration have increased extraction. The constraint is particularly sensitive to platform architecture: open standards and transparent algorithms sustain coordination benefits; proprietary systems and opaque filtering recreate credential gatekeeping at a new layer.",
+    "key_agents": [
+      "Non-traditional talent pools (powerless/trapped): Cannot afford premium skill verification platforms or portfolio maintenance; face circular dependency. Primary victims of extraction.",
+      "Self-taught developers with portfolios (moderate/constrained): Can demonstrate competence but face algorithmic filtering and continuous re-assessment burden.",
+      "Technology platforms (organized/mobile): LinkedIn, HackerRank, Coursera, Talent.com. Intermediating assessment, capturing data value. Primary beneficiaries of coordination.",
+      "Large technology employers (powerful/arbitrage): Access broader talent pools, reduce hiring costs, use skills assessment to gate hiring at scale. Primary beneficiaries.",
+      "Traditional education institutions (institutional/constrained): Forced to adapt through competency mapping and bootcamps; experience extraction (diploma value erosion) and coordination (forced innovation).",
+      "Credential licensing systems (institutional/trapped): Formal licensure persists through legal mandate; inertial structure for regulated professions.",
+      "Open-credentials movement (organized/constrained): Mozilla Open Badges, free micro-credential standards. Building alternative pathways to reduce platform lock-in.",
+      "Analytical observer (analytical/analytical): Sees skills-based hiring as coordination bundled with extractive platform gatekeeping. Neutral assessment of structural hybrid."
+    ],
+    "logic_rationale": "Base extractiveness (0.38): Moderate. Skills-based hiring has genuine coordination function (solves matching problem, reduces artificial barriers), but assessment infrastructure has become increasingly concentrated and costly. Platform intermediaries capture significant value through data and filtering. Growth from 0.15 to 0.38 over the interval reflects platform consolidation and rent-seeking layered onto coordination. Suppression (0.42): Moderate. Workers can theoretically demonstrate skills without credentials, but significant barriers exist: access to quality skill assessment tools (payment, internet connectivity, prior knowledge), algorithmic opacity preventing appeal/revision, narrative disadvantage for workers without polished portfolio presentation skills. Theater ratio (0.58): Moderate-high and rising. Skills-based hiring reduces some theatrical elements of traditional credentialing (GPA performance, institutional prestige signaling), but introduces new performance requirements: maintaining competitive GitHub profiles, articulating non-traditional pathways convincingly, gaming skill assessment algorithms, continuous skill currency. The growth from 0.35 to 0.58 reflects the increasing prominence of portfolio performance as a gating mechanism.",
+    "perspectival_gap": "The constraint produces sharp perspectival divergence. The large employer and platform see pure coordination (Rope) \u2014 they are solving matching problems efficiently. The self-taught developer sees mixed coordination and extraction (Tangled Rope) \u2014 genuine opportunity but also assessment burden. The unaccredited worker without platform access sees pure extraction (Snare) \u2014 circular dependency unbroken. The traditional education institution sees extraction bundled with forced adaptation (Tangled Rope) \u2014 diploma value erodes but innovation is required. The licensing system sees inertial extraction (Piton) \u2014 legally mandated but increasingly anachronistic theater. The open-credentials movement sees a temporary coordination failure being solved (Scaffold) \u2014 open standards and transparent assessment will sunset proprietary gatekeeping. The analytical observer sees a genuine tangled rope \u2014 coordination mechanism with embedded asymmetric extraction. The perspectival gap reflects real structural differences in who can exit the constraint and who is locked into it.",
+    "directionality_logic": "Non-traditional talent without platform access: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; cannot exit and cannot demonstrate competence. Self-taught developer with portfolio: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.73. Significant extraction (continuous reassessment, algorithm opacity) but can iterate and improve. Technology platform: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.31. Can shift assessment modality; low extraction from their perspective. Large employer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Can exit entirely; pure coordination value. Traditional education institution: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.81. Diploma value erodes but cannot exit education sector. Licensing system: Victim + trapped \u2192 d\u22480.75, f(d)\u22481.10. Cannot exit due to statutory mandate. Open-credentials movement: Organized + constrained \u2192 d\u22480.32, f(d)\u22480.25. Low extraction; coalition has agency and clear path forward. Analytical observer: d\u22480.68, f(d)\u22481.03. Balanced view of coordination and extraction.",
+    "mandatrophy_analysis": "Skills-based hiring resolves mandatrophy by being genuinely hybrid: it is NOT mislabeling pure coordination as extraction (the snare trap) nor pure extraction as coordination (the rope trap). The constraint has real coordination value (matches workers to roles, reduces artificial barriers, enables non-traditional pathways). It also has real extraction (platform gatekeeping, assessment cost concentration, algorithmic opacity, verification rents). The tangled rope classification is the accurate assessment. The mandatrophy resolution hinges on distinguishing: (1) who benefits from the coordination (employers, platforms, workers with platform access) vs (2) who bears extraction costs (workers without platform access, traditional educators, workers underrepresented in algorithmic training data). The growth of extractiveness over the interval (0.15 \u2192 0.38) reflects real market dynamics: as skills-based hiring has scaled, platforms have consolidated and assessment costs have increased. This is not a mislabeling error; it is a legitimate shift in the constraint's character as the market structure evolved. The open-credentials perspective suggests a genuine sunset path: as interoperable standards mature, platform lock-in decreases, and the tangled rope should gradually shift toward rope + scaffold dynamics."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "educational_credentialing_signaling",
+      "platform_labor_intermediation",
+      "algorithmic_hiring_bias"
+    ],
+    "dual_formulation_note": "Skills-based hiring decomposes into multiple structural constraints: (1) the matching coordination problem (solved by skills-based hiring) \u2014 candidate constraint: educational_credentialing_signaling; (2) the platform intermediation extraction layer \u2014 candidate constraint: platform_labor_intermediation; (3) algorithmic bias in assessment filtering \u2014 candidate constraint: algorithmic_hiring_bias. Each upstream constraint has different \u03b5 values and different beneficiary/victim structures. The skills_based_hiring story integrates these perspectives but acknowledges that different measurement approaches (platform revenue concentration vs worker access equity vs algorithmic transparency) would yield different \u03b5 values and potentially different classifications for specialized sub-constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ]
+}

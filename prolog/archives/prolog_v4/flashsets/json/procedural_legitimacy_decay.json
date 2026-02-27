@@ -1,0 +1,125 @@
+{
+  "header": {
+    "constraint_id": "procedural_legitimacy_decay",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.8,
+    "claimed_type": "piton",
+    "human_readable": "The Hollow Formality Trap",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "mandatrophy_resolved": false,
+    "beneficiaries": [
+      "incumbent_bureaucracy"
+    ],
+    "victims": [
+      "affected_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Affected Population",
+      "comment": "The affected population experiences this as a snare because they are forced to comply with procedures that no longer serve a legitimate purpose, and they have no practical means of exiting the system."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incumbent Bureaucracy",
+      "comment": "The incumbent bureaucracy sees the process as a piton. It maintains the process due to inertia and the perceived need to uphold the law, even though the original justification has eroded. They are constrained because dismantling the process would require significant effort and could create political risk."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees this as a tangled rope because it involves both a form of (degraded) coordination and extraction. The process still provides some level of predictability and order, but it also extracts resources from the affected population without delivering commensurate benefits. The coordination aspect is the nominal adherence to legal frameworks."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_threshold",
+      "question": "At what point does the erosion of social consensus render a bureaucratic process illegitimate?",
+      "resolution_mechanism": "Quantitative surveys and qualitative analyses of public opinion, combined with expert assessments of the process's effectiveness.",
+      "impact": "Determines whether the constraint is primarily a piton (if legitimacy is above the threshold) or a snare (if legitimacy is below the threshold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The threshold of social consensus needed to justify the bureaucratic process."
+    },
+    {
+      "id": "enforcement_capacity",
+      "question": "What is the actual capacity of the bureaucracy to enforce the procedure, and how does this affect compliance rates?",
+      "resolution_mechanism": "Statistical analysis of enforcement actions and compliance rates, combined with field research on the practical challenges of implementation.",
+      "impact": "Impacts the perceived extractiveness. Lower enforcement -> Lower perceived extraction, and vice-versa. Also affect the victims' power",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The bureaucracy's actual capacity to enforce the procedure."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a bureaucratic process that has lost its justifying social consensus but maintains its legal force. The process, initially designed to address a specific problem or achieve a legitimate goal, becomes detached from its original purpose due to changing social norms, technological advancements, or evolving priorities. As a result, compliance with the process becomes a hollow formality, imposing costs on the affected population without delivering meaningful benefits. The process continues to be enforced due to institutional inertia, legal mandates, and the self-interest of the incumbent bureaucracy, creating a 'hollow formality trap' that undermines public trust and hinders societal progress.",
+    "key_agents": [
+      "Affected Population: Primary target (powerless/trapped) \u2013 bears the costs of compliance without receiving commensurate benefits.",
+      "Incumbent Bureaucracy: Primary beneficiary (institutional/constrained) \u2013 maintains control and resources through the continued enforcement of the process.",
+      "Analytical Observer: Sees the full structure and can analyze the costs and benefits from a neutral perspective."
+    ],
+    "logic_rationale": "Extractiveness (0.6): High. The process extracts significant time, resources, and effort from the affected population, without delivering substantial benefits in return. Suppression (0.7): High. The affected population has limited means of avoiding compliance, due to legal mandates and the power of the bureaucracy. Theater ratio (0.8): Very High. The process is largely performative, with a significant gap between its stated goals and its actual impact.",
+    "perspectival_gap": "The affected population views the process as a snare, as they are forced to comply with procedures that no longer serve a legitimate purpose. The incumbent bureaucracy views the process as a piton, maintaining it due to inertia and legal mandates. The analytical observer sees a tangled rope, recognizing both the degraded coordination function and the extraction of resources.",
+    "directionality_logic": "The affected population has a high 'd' value (close to 1) because they are the primary target of the process and have limited exit options. The incumbent bureaucracy has a low 'd' value (close to 0) because they benefit from the process and have the power to maintain it. The analytical observer has a moderate 'd' value because they can analyze the process from a neutral perspective."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

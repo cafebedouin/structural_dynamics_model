@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "heuristic_optimization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "heur"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Heuristic Optimization (\"Good Enough\" Solutions)",
+    "topic_domain": "technological/mathematical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "resource_constrained_practitioners",
+      "commercial_vendors"
+    ],
+    "victims": [
+      "optimality_guarantee_seekers",
+      "downstream_system_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Optimality Seeker",
+      "comment": "PERSPECTIVE 1: OPTIMALITY SEEKER (SNARE) \u2014 Cannot exit reliance on heuristics when exact algorithms are computationally intractable. Bears full cost of approximation error without knowing bounds. Trapped in deployment contexts where certifiable global optima are mathematically impossible but heuristic mediocrity is the only available path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Verification Team",
+      "comment": "PERSPECTIVE 2: VERIFICATION TEAM (TANGLED ROPE) \u2014 Constrained by time and computational budgets, but also benefits from rapid iteration cycles enabled by heuristics. Must allocate resources between solution quality and solution speed. Bears asymmetric extraction as performance guarantees remain absent, yet gains coordination benefit from shared heuristic libraries and benchmarking protocols."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Software Vendor",
+      "comment": "PERSPECTIVE 3: SOFTWARE VENDOR (ROPE) \u2014 Benefits from heuristic deployment through speed to market and reduced computational overhead. Experiences the constraint as pure coordination: documenting heuristic behavior, publishing benchmarks, and establishing expectations enable ecosystem participation. Net beneficiary \u2014 extraction runs toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Research Community",
+      "comment": "PERSPECTIVE 4: RESEARCH COMMUNITY (SCAFFOLD) \u2014 Organized agents (approximation algorithm theorists, computational complexity researchers) are building formal bounds on heuristic performance and developing certifiable approximation schemes. These create alternative pathways that maintain speed while providing guarantees. Sees heuristic optimization as temporary: as approximation algorithms mature and quantum computing emerges, the unbounded approximation era has a sunset."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Classical Optimization Theory",
+      "comment": "PERSPECTIVE 5: CLASSICAL OPTIMIZATION THEORY (PITON) \u2014 Traditional optimization pedagogy treats heuristics as stopgap measures, deviations from the proper mathematical objective: find the global optimum. As heuristics have become dominant in practice (neural networks, hyperparameter tuning, routing), the theory persists in its normative framing despite the functional reality that 'good enough, fast' is the actual constraint. Maintained through institutional inertia in mathematics departments; the primary function (finding provably optimal solutions) has atrophied in practical settings."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a computational complexity perspective, many optimization problems are NP-hard or NP-complete. The constraint that optimal solutions are computationally intractable for most real problems is a logical/mathematical limit, not a policy choice. This perspective sees heuristic optimization as forced by the fundamental structure of computation itself. The engine's false summit detector will flag this as naturalization: the NP-hardness is real, but the choice to deploy heuristics despite this is institutional and distributional, not inevitable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "problem_hardness_threshold",
+      "question": "At what problem size or complexity class does exact optimization become practically intractable for a given computational budget?",
+      "resolution_mechanism": "Empirical benchmarking of exact vs heuristic solver runtime as problem size scales; correlation with known NP-completeness proofs; analysis of marginal computational cost per unit solution quality improvement",
+      "impact": "If threshold is low (small problems): heuristics are extractive convenience. If threshold is high (most real-world problems): heuristics are structural necessity. Classification shifts from Snare (extraction) to Mountain (natural limit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Computational threshold where exact optimization becomes intractable"
+    },
+    {
+      "id": "approximation_bound_achievability",
+      "question": "Can formal approximation bounds (e.g., k-approximation algorithms) be computed efficiently for all heuristics in common use, or only for a subset?",
+      "resolution_mechanism": "Survey of heuristics (simulated annealing, genetic algorithms, neural networks) and their proven approximation ratios; identification of heuristics with no known bounds; analysis of proof difficulty",
+      "impact": "If bounds are computable for most: scaffold perspective is realistic \u2014 certifiable approximation is becoming standard. If bounds remain elusive: powerless agents remain trapped in unbounded approximation; extraction persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether formal approximation bounds are achievable for practical heuristics"
+    },
+    {
+      "id": "extraction_intent_vs_structural_necessity",
+      "question": "How much of the deployment of unbounded heuristics reflects institutional choice (vendor lock-in, ease of implementation, performance theater) vs true computational necessity?",
+      "resolution_mechanism": "Analysis of heuristic selection decisions in specific systems; comparison of deployed heuristic performance to known approximation algorithm baselines; audit of performance claims vs actual guarantees provided",
+      "impact": "If mostly institutional: heuristic optimization is primarily Snare/Tangled Rope. If mostly structural: it is primarily Scaffold/Mountain. The mandatrophy answer depends on decomposing intent from necessity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Extent to which heuristic deployment reflects vendor choice vs computational necessity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Heuristic optimization \u2014 the deliberate choice to accept 'good enough' solutions in place of provably optimal ones \u2014 creates a structural tension between mathematical aspiration (global optimality) and practical reality (computational tractability). This constraint exhibits the full range of DR classification because it occupies a genuine middle ground: the underlying problem hardness (NP-completeness) is a mathematical fact, but the institutional response \u2014 treating approximation as an exception rather than the norm \u2014 is contingent and distributional. The constraint's theater_ratio (0.58) reflects that performance claims for heuristic systems often omit error bounds and instead emphasize anecdotal speed improvements or subjective 'solution quality.' As approximation algorithm theory matures and neural networks enable learned heuristics, the landscape is shifting from unbounded approximation toward certifiable approximation schemes, suggesting the constraint has a sunset.",
+    "key_agents": [
+      "Resource-Constrained Practitioners: Primary beneficiary (institutional/arbitrage) \u2014 gain speed and feasibility; capture value from rapid deployment",
+      "Commercial Vendors: Primary beneficiary (institutional/arbitrage) \u2014 profit from simplicity of unbounded heuristics; less engineering complexity than approximation algorithms",
+      "Optimality Guarantee Seekers: Primary victim (powerless/trapped) \u2014 require certifiable bounds but are forced into unbounded approximation for tractability",
+      "Downstream System Reliability: Primary victim (powerless/trapped) \u2014 systems built on heuristics accumulate error without bounds; no theoretical recourse for failures",
+      "Verification Teams: Secondary actor (moderate/constrained) \u2014 must allocate effort between solution quality and validation timeline",
+      "Research Community: Organized agents (organized/mobile) \u2014 developing approximation algorithms and certifiable bounds; creating exit pathways",
+      "Classical Optimization Theory: Institutional actor (institutional/arbitrage) \u2014 maintains normative framing of heuristics as deviations rather than primary practice",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both the real computational limits (NP-hardness) and the contingent institutional responses"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Heuristic optimization extracts value by allowing vendors and practitioners to offer solutions without computational overhead, while shifting uncertainty to users. However, the extraction is constrained by the real fact that for many problems, unbounded approximation is the only feasible path. The value is legitimate speed gain, not pure rent-seeking. Suppression (0.42): Moderate. Barriers to optimality include genuine computational limits (NP-hardness) but also institutional choices (vendor standardization on simple heuristics, absence of approximation bounds in performance claims, educational framing of heuristics as exceptions). Theater ratio (0.58): Moderate-high. Performance evaluation of heuristic systems often emphasizes benchmark scores and runtime without rigorous error analysis or approximation bounds. Comparative claims ('faster than exact solver') may omit solution quality degradation. This has increased over the interval as neural networks and ensemble methods have proliferated.",
+    "directionality_logic": "Directionality varies by agent's structural position. Vendors and practitioners benefit from simplified deployment (low d \u2192 low/negative chi), experiencing heuristic optimization as pure coordination. Optimality seekers trapped in NP-hard problems experience unbounded approximation as extraction (high d \u2192 high chi) because they bear approximation cost without bounds. The verification team is caught between these: they benefit from speed but bear validation burden (moderate d \u2192 moderate chi). The research community has mobile exit (alternative approximation algorithms, certifiable bounds), so their experienced extraction is dampened despite the shared mathematical domain. The classical theory persists through institutional inertia \u2014 its articulated position ('optimization means finding the global optimum') no longer matches practical reality.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival division between beneficiary and victim. Vendors and practitioners see coordination: heuristics solve a real timing/resource problem. Optimality seekers see extraction: they are forced into approximation with no bounds. The scaffold perspective (research community building certifiable alternatives) represents genuine structural change \u2014 approximation algorithms and learning-based bounds provide intermediate pathways between intractable exact optimization and unbounded heuristics. The piton perspective (classical theory) reveals how institutional framing lags reality: optimization pedagogy still teaches exact algorithms as the norm, despite practitioners universally deploying heuristics. The mountain perspective risks naturalizing the NP-hardness of specific problems as inevitable, when in fact the choice to deploy unbounded heuristics is institutional and responsive to that hardness, not forced by it.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing the real computational constraint (NP-hardness is genuine) from the institutional response (unbounded approximation without guarantees is a choice). The mountain perspective correctly identifies the underlying limits but incorrectly naturalizes the choice to accept unboundedness. A mature response (scaffold perspective) would acknowledge the NP-hardness while deploying approximation algorithms or neural networks with learned bounds \u2014 still 'good enough' in practice, but with mathematical structure. The current state exhibits tangled rope structure: vendors and practitioners genuinely solve a coordination problem (how to get solutions fast enough), but they extract value by shifting approximation cost and uncertainty to downstream users and guarantee-seekers. The theater increase (0.35 \u2192 0.58) reflects that as heuristics dominate, performance claims have become increasingly promotional and less rigorous about error bounds. This is the classic Goodhart substitution: 'solution quality' benchmarks become the proxy for actual reliability, degrading the signal."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "np_hardness_barrier",
+      "approximate_algorithm_sufficiency"
+    ],
+    "dual_formulation_note": "Heuristic optimization decomposes into two structurally distinct constraints: (1) NP-hardness as a mathematical fact (Mountain), and (2) institutional choice to deploy unbounded approximation (Tangled Rope/Snare). The first is upstream; the second is downstream. Both use the label 'heuristic optimization' colloquially but represent different extractiveness values and classification outcomes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

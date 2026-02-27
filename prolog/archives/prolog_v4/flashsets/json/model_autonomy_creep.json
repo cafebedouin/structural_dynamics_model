@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "model_autonomy_creep",
+    "version": "1.0",
+    "generated_date": "2024-04-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Administrative Autonomy Slide",
+    "topic_domain": "technological/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "model_developers",
+      "early_adopting_management"
+    ],
+    "victims": [
+      "frontline_employees",
+      "customers",
+      "oversight_boards"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Frontline Employees",
+      "comment": "Frontline employees experience the erosion of their decision-making power as a Snare. They have limited exit options and bear the brunt of the model's errors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Oversight Boards",
+      "comment": "Oversight boards are meant to provide governance but are often constrained in their ability to audit and understand the model's inner workings, leading to a Tangled Rope classification. They benefit from the perceived efficiency but bear the cost of potential failures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Model Developers",
+      "comment": "Model developers benefit from the increased adoption of their technology, leading to increased funding and influence. They experience the system as a Rope, facilitating their goals."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Early Adopting Management",
+      "comment": "Early adopting management benefits from the perceived efficiency gains and cost savings associated with increased automation, but also bears the risk of failures and negative consequences, resulting in a Tangled Rope classification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the gradual shift of decision-making authority to AI models presents a complex mix of coordination and extraction, best described as a Tangled Rope. The analytical observer sees both potential benefits and risks associated with this trend."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "explainability_threshold",
+      "question": "What level of model explainability is sufficient for effective oversight?",
+      "resolution_mechanism": "Comparative analysis of model performance with varying levels of explainability; identification of failure modes associated with insufficient explainability.",
+      "impact": "If high explainability is required: increased development costs and slower adoption. If low explainability is tolerated: increased risk of unintended consequences.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining sufficient model explainability for oversight."
+    },
+    {
+      "id": "accountability_attribution",
+      "question": "How should accountability be attributed when an AI model makes an error with significant consequences?",
+      "resolution_mechanism": "Legal and ethical frameworks for AI accountability; case studies of AI-related incidents; public opinion on AI responsibility.",
+      "impact": "Clear accountability: reduced adoption due to legal risks. Vague accountability: increased risk of unchecked autonomy.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Establishing accountability for AI model errors."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Administrative Autonomy Slide describes a scenario where an AI model incrementally assumes decision-making authority within an organization. This process often starts with the model providing recommendations, then making decisions with human oversight, and eventually making decisions autonomously. The gradual nature of this transition can mask the erosion of human control and accountability, leading to unintended consequences.",
+    "key_agents": [
+      "Model Developers: Primary beneficiary (institutional/arbitrage) - benefit from adoption and influence.",
+      "Early Adopting Management: Secondary beneficiary (powerful/mobile) - benefit from perceived efficiency.",
+      "Frontline Employees: Primary victim (powerless/trapped) - experience job displacement and loss of agency.",
+      "Customers: Secondary victim (moderate/constrained) - may experience reduced service quality or unfair treatment.",
+      "Oversight Boards: Attempted Mitigator (moderate/constrained) - struggle to maintain effective governance."
+    ],
+    "logic_rationale": "Extractiveness (0.55): The model extracts decision-making power from employees and, potentially, control from customers. This is a moderate to high level of extraction. Suppression (0.60): Alternatives to the model's decisions are suppressed as the model's authority grows and human override becomes less common. Theater Ratio (0.40): The theater ratio is relatively low initially as the model is genuinely performing a useful function, but may rise over time.",
+    "perspectival_gap": "The perspectives differ based on the agent's power and exit options. Model developers see a helpful tool (Rope), while frontline employees experience a loss of control (Snare). Early adopting management sees efficiency gains but also risks (Tangled Rope). Oversight boards struggle to maintain effective governance (Tangled Rope). The analytical observer recognizes the trade-offs and potential dangers of unchecked autonomy (Tangled Rope).",
+    "directionality_logic": "Model developers benefit through arbitrage. Early adopting management benefits through mobile exit options. Frontline employees are trapped and bear the brunt. Oversight boards are constrained. Analytical observer sees all aspects.",
+    "mandatrophy_analysis": "The classification as Tangled Rope prevents mislabeling this as purely a Snare (loss of control) or Rope (pure efficiency). It captures the dual nature of the autonomy slide: the model provides a genuine coordination function, but it also extracts agency and potentially creates new risks."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "help_to_buy_uk",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK 'Help to Buy' Equity Loan Scheme",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "property_developers",
+      "high_income_first_time_buyers"
+    ],
+    "victims": [
+      "low_income_borrowers",
+      "future_taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Income Borrowers",
+      "comment": "Low-income borrowers are trapped by the scheme due to rising property values and interest accrual, increasing their debt burden over time."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Property Developers",
+      "comment": "Property developers benefit from increased demand and sales, facilitated by the scheme."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer",
+      "comment": "The scheme acts as a tangled rope, providing coordination for first-time buyers but also extracting value through increased property prices and future taxpayer burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "High Income First Time Buyers",
+      "comment": "High income first time buyers are able to leverage the scheme for more desirable properties or lower initial payments, essentially arbitrage."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_affordability",
+      "question": "What is the long-term affordability of the scheme for low-income borrowers, considering rising property values and interest accrual?",
+      "resolution_mechanism": "Longitudinal study tracking the financial stability of scheme participants over 10-15 years.",
+      "impact": "If unaffordable: Scheme is a snare for low-income borrowers. If affordable: Scheme is a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term affordability for low-income borrowers."
+    },
+    {
+      "id": "impact_on_property_prices",
+      "question": "To what extent did the scheme contribute to overall property price inflation, benefiting developers but harming affordability for non-participants?",
+      "resolution_mechanism": "Econometric analysis comparing property price trends in areas with high vs. low scheme participation.",
+      "impact": "If significant inflation: Scheme is a tangled rope. If minimal inflation: Scheme is closer to a pure rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact on overall property prices."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK 'Help to Buy' Equity Loan Scheme aimed to assist first-time buyers by providing an equity loan from the government. However, the scheme also benefited property developers by stimulating demand and increasing property prices. This created a complex dynamic with both coordination and extraction elements. The scheme ran from 2013 to 2023.",
+    "key_agents": [
+      "Property Developers: Primary beneficiary (institutional/arbitrage) - benefit from increased sales and higher prices.",
+      "Low-Income Borrowers: Primary victim (powerless/trapped) - face rising debt and potential long-term affordability issues.",
+      "Future Taxpayers: Secondary victim (moderate/constrained) - bear the risk of government losses if property values decline.",
+      "High Income First Time Buyers: Secondary beneficiary (institutional/arbitrage) - can afford higher value properties with this scheme."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. The scheme extracts value from future taxpayers through potential losses on equity loans and from low-income borrowers facing affordability challenges. Suppression (0.45): Moderate. The scheme suppresses alternative housing options and potentially traps borrowers into long-term debt. Theater ratio (0.30): Low. While there is some political theater surrounding the scheme's 'success', its primary function is to stimulate the housing market.",
+    "perspectival_gap": "Low-income borrowers experience the scheme as a snare due to the risk of rising debt and limited exit options. Property developers see it as a rope, facilitating increased sales and profits. Analytical observers recognize the tangled rope nature of the scheme, balancing coordination benefits with extraction risks. The high income first time buyers perspective sees it as a rope because they are able to arbitrage the scheme.",
+    "directionality_logic": "Directionality is derived from the agent's structural position. Property developers and high income first time buyers, as beneficiaries with arbitrage options, have low 'd' values and experience the scheme as a rope. Low-income borrowers, as victims with limited exit options, have high 'd' values and experience the scheme as a snare. Future taxpayers bear the risk of potential losses and have a moderate 'd' value.",
+    "mandatrophy_analysis": "The 'Help to Buy' scheme resolves the mandatrophy by highlighting the different perspectives on the same structural phenomenon. While it aims to coordinate first-time buyers with the housing market, it also extracts value through increased prices and taxpayer burden. The analytical observer identifies the tangled rope, balancing the coordination and extraction aspects."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

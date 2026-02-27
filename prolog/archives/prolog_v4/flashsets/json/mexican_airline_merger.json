@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "mexican_airline_merger",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mexican Airline Merger Antitrust Exemption",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "merged_airline",
+      "mexican_government"
+    ],
+    "victims": [
+      "mexican_airline_passengers",
+      "competing_airlines"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Mexican Airline Passengers",
+      "comment": "Passengers have limited alternatives due to the merger reducing competition. They are subject to potentially higher prices and reduced service quality with little recourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Merged Airline",
+      "comment": "The merged airline benefits from reduced competition and potential price fixing, but is also constrained by the need to maintain some level of service and regulatory oversight. Faces potential scrutiny if services degrade drastically. Coordination: securing increased market share. Extraction: extracting rents from passengers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Mexican Government",
+      "comment": "The Mexican government benefits from having a stronger national airline (or so it intends), which is seen as a matter of national pride and economic stability. Coordination: the government is attempting to stabilize the airline industry. Note that this assumes the intervention is well-intentioned; regulatory capture would require a directionality override."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Competing Airlines",
+      "comment": "Smaller competing airlines are constrained because of the merger. They are negatively affected by the increased market power of the merged entity and suppressed by the antitrust exemption. A move to organize may change this perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the merger creates a tangled rope: a coordination attempt (strengthening Mexicana de Aviaci\u00f3n) with asymmetric extraction (passengers and competing airlines bear the costs). The government sacrifices free market principles to attempt a more regulated airline industry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "government_motives",
+      "question": "Are the government's motives genuinely about strengthening the airline industry, or is there regulatory capture?",
+      "resolution_mechanism": "Analyzing lobbying efforts and post-merger regulatory decisions.",
+      "impact": "If regulatory capture: extractiveness increases, and the government perspective shifts towards snare or piton. If genuine: tangled rope classification remains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Government motives for encouraging the merger"
+    },
+    {
+      "id": "consumer_price_sensitivity",
+      "question": "How price-sensitive are Mexican airline passengers?",
+      "resolution_mechanism": "Analyzing demand elasticity data and passenger behavior after the merger.",
+      "impact": "If highly price-sensitive: passengers switch to alternatives or reduce travel, limiting extractiveness. If insensitive: merged airline can raise prices significantly, increasing extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Price sensitivity of Mexican airline passengers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Mexican government's encouragement of an airline merger, ostensibly to bolster Mexicana de Aviaci\u00f3n, creates an antitrust exemption that allows for potential price fixing and reduced service quality for passengers. This can be viewed as a tangled rope, where the government attempts to coordinate the airline industry, but extracts value from passengers and competing airlines in the process. The success of this strategy is contingent on the government's motives and the price sensitivity of passengers.",
+    "key_agents": [
+      "Mexican Airline Passengers: Primary target (powerless/trapped) - Subject to potentially higher prices and reduced service quality.",
+      "Merged Airline: Primary beneficiary (institutional/constrained) - Benefits from reduced competition and potential price fixing.",
+      "Mexican Government: Secondary beneficiary (institutional/arbitrage) - Aims to strengthen the national airline for national pride and economic stability.",
+      "Competing Airlines: Victims (moderate/constrained) - Negatively affected by the increased market power of the merged entity."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The merger enables the merged airline to potentially increase prices and reduce service quality, extracting value from passengers. The government's suppression of competition reinforces this extraction. Suppression (0.70): High. The antitrust exemption suppresses competition, limiting passenger options and protecting the merged airline from market forces. Theater ratio (0.30): Low. The focus is ostensibly on stabilizing the airline industry, but there is genuine coordination intended.",
+    "perspectival_gap": "The merged airline sees a rope (coordination), as it gains market power and stability. The government sees a rope (coordination), as it believes it's strengthening a national asset. Passengers see a snare, as they face limited options and potentially higher prices. Competing airlines also see a snare, as they are suppressed by the merged entity's increased market power. The analytical observer sees a tangled rope, recognizing the mixed coordination and extraction.",
+    "directionality_logic": "Passengers are victims with few exit options, so they experience a high extraction. The merged airline benefits from reduced competition and market power, so they experience a lower extraction. The government benefits from having a stronger national airline, so it experiences a negative extraction. Competing airlines face constrained exit options so they experience a snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

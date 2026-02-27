@@ -1,0 +1,154 @@
+{
+  "header": {
+    "constraint_id": "protocol_drift_accumulation",
+    "version": "1.0",
+    "generated_date": "2024-03-07",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Entropic Standard Decay",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_adopters",
+      "vendors_with_proprietary_extensions"
+    ],
+    "victims": [
+      "late_adopters",
+      "interoperability",
+      "security"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Late Adopters",
+      "comment": "Late adopters are trapped by the accumulated drift. They must either implement multiple versions or be incompatible."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Interoperability",
+      "comment": "Interoperability is constrained by the accumulation of drifts but benefits from a base layer of commonality."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Early Adopters",
+      "comment": "Early adopters benefit from the initial coordination and can arbitrage the drift to create proprietary advantages."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standards Body",
+      "comment": "The standards body maintains the appearance of standardization, but the standard has substantially drifted from the original."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees the standard as a tangled rope, with both coordination and extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "degree_of_interoperability_breakage",
+      "question": "What degree of accumulated drift constitutes a de facto standard breakage?",
+      "resolution_mechanism": "Empirical analysis of real-world interoperability failures.",
+      "impact": "Determines whether the standard is merely degraded (piton) or genuinely broken (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree of accumulated drift that constitutes a de facto standard breakage."
+    },
+    {
+      "id": "early_vs_late_adopter_costs",
+      "question": "What are the relative costs and benefits to early vs. late adopters, and how do these change over time?",
+      "resolution_mechanism": "Detailed cost-benefit analysis of implementing the standard at different points in its lifecycle.",
+      "impact": "Informs the classification of the standard from the perspective of adopters.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The relative costs and benefits to early vs. late adopters."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A foundational protocol or standard (initially a Rope) undergoes incremental, undocumented modifications across different implementations over time. This leads to a divergence from the original specification, creating interoperability issues, security vulnerabilities, and increased complexity for implementers. Early adopters and vendors with proprietary extensions benefit from this drift, while late adopters, interoperability, and security bear the costs.",
+    "key_agents": [
+      "Early Adopters: Benefit from the initial coordination and can arbitrage the drift (institutional/arbitrage)",
+      "Vendors with Proprietary Extensions: Benefit from the drift by creating vendor lock-in (powerful/arbitrage)",
+      "Late Adopters: Trapped by the accumulated drift (powerless/trapped)",
+      "Interoperability: Constrained by the accumulation of drifts but benefits from a base layer of commonality (moderate/constrained)",
+      "Security: Compromised by the drift, creating vulnerabilities (powerless/trapped)",
+      "Standards Body: Maintains the appearance of standardization (powerful/constrained)",
+      "Analytical Observer: Sees the standard as a tangled rope (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The drift extracts value from the standard by increasing complexity and reducing interoperability. Suppression (0.60): Moderate-High. Late adopters are suppressed by the need to implement multiple versions or face incompatibility. Theater ratio (0.75): High. The standards body maintains the appearance of standardization, but the standard has substantially drifted from the original.",
+    "perspectival_gap": "The late adopters are trapped by the accumulated drift (snare), while the early adopters and vendors with proprietary extensions benefit (rope). Interoperability and security are constrained (tangled rope). The standards body maintains the appearance of standardization (piton), while the analytical observer sees the standard as a tangled rope.",
+    "directionality_logic": "The late adopters are victims, while the early adopters and vendors with proprietary extensions are beneficiaries. The standards body is constrained by the drift but also benefits from the continued relevance of the standard.",
+    "mandatrophy_analysis": "The standard could be mislabeled as either a pure coordination mechanism (rope) or a pure extraction mechanism (snare). However, the tangled rope classification captures the reality that the standard is both a source of coordination and a source of extraction. The theater ratio confirms that the standards body is primarily engaged in performative activity rather than functional standardization."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "downgrade_attack_vulnerability"
+    ]
+  },
+  "directionality_overrides": []
+}

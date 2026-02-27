@@ -1,0 +1,164 @@
+{
+  "header": {
+    "constraint_id": "litchfield_sensitive_locations_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "Litchfield School Perimeter Crisis",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "federal_law_enforcement",
+      "local_political_establishment"
+    ],
+    "victims": [
+      "litchfield_residents",
+      "student_families",
+      "civil_liberties_groups"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Litchfield Residents",
+      "comment": "Residents feel trapped and powerless, subject to increased surveillance and potential disruptions to their daily lives. No real exit options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Student Families",
+      "comment": "Families are constrained by the need to ensure their children's safety and education. They may feel forced to accept the situation, even if they have reservations. Some exit options available but costly (relocation)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Civil Liberties Groups",
+      "comment": "Civil liberties groups have some power to organize and protest, and to potentially challenge the actions legally. They benefit from public attention but face suppression from the political establishment. Mobile exit option - can shift focus elsewhere."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Law Enforcement",
+      "comment": "From the perspective of the federal agents, there is a degraded sense of achieving their intended purpose of community protection with potential distrust eroding relationships. The institution is constrained to act despite uncertain impact."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Local Political Establishment",
+      "comment": "From the perspective of the local political establishment, the crisis can be framed as a necessary measure to ensure public safety, thus consolidating their power and leveraging a higher threat profile to extract greater resources from federal agencies. Exit via blame deflection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes a complex mix of security concerns, political opportunism, and erosion of civil liberties. A tangled rope, where the claimed purpose is intertwined with extraction from local communities."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "actual_threat_level",
+      "question": "What is the actual level of threat that necessitated the increased federal presence?",
+      "resolution_mechanism": "Independent threat assessment by non-governmental security experts.",
+      "impact": "If the threat is low, the justification for increased security measures is undermined. If the threat is high, the security measures may be warranted, changing classifications from snare to rope/scaffold for some perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessment of the real threat level driving increased federal presence."
+    },
+    {
+      "id": "political_motivation",
+      "question": "To what extent are the increased security measures driven by political motivations rather than genuine security concerns?",
+      "resolution_mechanism": "Analysis of public statements, internal memos, and financial records of relevant political actors.",
+      "impact": "If political motivations are strong, the crisis is likely a snare for the local community. If genuine security concerns prevail, it could be a rope/scaffold.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Influence of political agendas on security decisions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "On Feb 5, 2026, federal agents were spotted within a block of the School of St. Barnaby in Litchfield, Connecticut, sparking a community uproar. The stated reason was heightened vigilance concerning potential terrorist activity. This incident resulted in increased surveillance, restricted access to public spaces, and a general feeling of unease among residents. The situation raises questions about the balance between security measures and civil liberties.",
+    "key_agents": [
+      "Litchfield Residents: Primary victims (powerless/trapped) - experience increased surveillance and restrictions.",
+      "Student Families: Secondary victims (moderate/constrained) - concerned about safety and education.",
+      "Civil Liberties Groups: Organized advocates (organized/mobile) - concerned about rights violations.",
+      "Federal Law Enforcement: Institutional actor (institutional/constrained) - aims for security but risks distrust.",
+      "Local Political Establishment: Institutional beneficiary (institutional/arbitrage) - consolidating power and extracting federal resources.",
+      "Analytical Observer: Assesses (analytical/analytical) - complex entanglement of security and liberties."
+    ],
+    "logic_rationale": "Extractiveness: High (0.65). The local community bears the cost of increased surveillance, restricted access, and potential disruptions. The federal law enforcement benefits by demonstrating action and the local political establishment benefits from consolidating power. Suppression: High (0.75). Limited exit options for residents who feel trapped. Theater Ratio: High (0.75). The actual functional security improvement is questionable compared to the disruption caused.",
+    "perspectival_gap": "The local residents and student families experience the situation as a snare. Civil liberties groups see the restrictions as a tangle of political posturing and rights violations. The federal law enforcement might perceive it as a necessary but imperfect tool constrained by trust erosion. Local establishment may see genuine coordination (rope) with federal agencies to leverage resources. The analytical observer identifies a tangled rope.",
+    "directionality_logic": "The directionality values are determined by the agent's relationship to the imposition of federal authority. The beneficiaries have arbitrage exits. The residents and families have limited exit options (trapped/constrained), resulting in high directionality (d) and thus high experienced extraction (chi). The civil liberties group has the mobile option and thus lower extraction. The local establishment, as a beneficiary, experiences negative effective extraction as they gain political power.",
+    "mandatrophy_analysis": "The situation is classified as a snare from the perspective of the affected community. However, other perspectives may view it differently. The central challenge is determining the appropriate level of security measures relative to the actual threat and the impact on civil liberties. This is a classic example of a situation where a well-intentioned action can have unintended consequences and disproportionately affect certain groups. The high extractiveness requires mandatrophy resolution, which is achieved by demonstrating the perspectival variation and identifying the key uncertainties (omegas)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mass_surveillance_state",
+      "erosion_of_civil_liberties"
+    ]
+  },
+  "directionality_overrides": []
+}

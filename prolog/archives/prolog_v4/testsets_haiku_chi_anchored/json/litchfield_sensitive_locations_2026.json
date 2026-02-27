@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "litchfield_sensitive_locations_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "litch"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Litchfield School Perimeter Crisis",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "school_students",
+      "school_staff",
+      "school_families",
+      "educational_continuity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "School Community (Students, Staff, Families)",
+      "comment": "PERSPECTIVE 1: SCHOOL COMMUNITY (SNARE) \u2014 Trapped by federal enforcement proximity without control over the federal presence. Cannot exit the geographic constraint or modify federal operations. Bears full extraction cost: disrupted instruction, psychological stress, operational burden of security measures. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "School Administration",
+      "comment": "PERSPECTIVE 2: SCHOOL ADMINISTRATION (SNARE) \u2014 Constrained choice: must manage federal enforcement presence while maintaining educational operations. Cannot refuse federal operations; exit options limited to procedural accommodation or relocation (costly, disruptive). Bears extraction through operational burden and reputational risk. d\u22480.78, f(d)\u22481.08, \u03c3=0.8 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Federal Enforcement Agencies",
+      "comment": "PERSPECTIVE 3: FEDERAL ENFORCEMENT AGENCIES (ROPE) \u2014 Primary beneficiary of enforcement proximity. Coordination function: establish investigative presence near known activity areas. Experiences constraint as operational coordination mechanism: proximity enables execution of federal mandates. d\u22480.15, f(d)\u22480.05, \u03c3=0.9 \u2192 \u03c7\u22480.02. Net beneficiary; low effective extraction from their perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Civil Liberties and Education Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: CIVIL LIBERTIES AND EDUCATION ADVOCACY COALITION (TANGLED ROPE) \u2014 Organized agents see mixed dynamics: genuine coordination function (legitimate law enforcement) overlaid with asymmetric extraction (school disruption). Coalition has agency to organize, litigate, and seek policy changes, but faces institutional barriers. Benefit from coordination (rule of law); bear costs of application (school impacts). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal School Protection Policy Framework",
+      "comment": "PERSPECTIVE 5: FEDERAL SCHOOL PROTECTION POLICY (PITON) \u2014 Institutional framework for balancing law enforcement and school safety has degraded. Prescribed protocols (coordination function) are increasingly performative: school perimeter restrictions, facility hardening, and inter-agency coordination exist as ritual compliance rather than demonstrable protective mechanisms. theater_ratio=0.65 reflects performative elements (visible enforcement presence, public communication) exceeding functional protection. d\u22480.20, f(d)\u22480.12, \u03c3=1.0 \u2192 \u03c7\u22480.06."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural Rights Framework)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / STRUCTURAL RIGHTS FRAMEWORK (SNARE) \u2014 From a universal rights perspective, the constraint reveals structural subordination: school communities have no meaningful input into federal enforcement decisions affecting their immediate environment. The framework classifies this as snare because suppression is high (no exit options, no coordination mechanism, no appeals process visible to school community) and extraction is manifest (psychological externality, operational burden, educational disruption). d\u22480.88, f(d)\u22481.30, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "federal_enforcement_necessity",
+      "question": "Does the federal enforcement presence near Litchfield School represent a legitimate investigative requirement or speculative jurisdiction expansion?",
+      "resolution_mechanism": "Public disclosure of federal enforcement mandate, threat assessment, and investigative scope relative to school proximity. Comparison with precedent cases of school-proximate federal operations.",
+      "impact": "If legitimate necessity: constraint is snare with partial justification (extraction with structural rationale). If speculative expansion: constraint is pure snare with no coordination benefit.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether federal enforcement proximity reflects genuine investigative necessity"
+    },
+    {
+      "id": "school_community_notice_and_process",
+      "question": "Did the school community receive advance notice and meaningful opportunity to challenge or negotiate federal enforcement proximity?",
+      "resolution_mechanism": "Documentation of notice timelines, consultation procedures, formal objection processes. Comparison with federal protocols for sensitive-location enforcement.",
+      "impact": "If notice and process existed: constraint becomes tangled rope (extraction with coordination function). If absent: constraint remains snare (extraction without consent mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether notice and consultation processes preceded federal enforcement presence"
+    },
+    {
+      "id": "enforcement_perimeter_externality_magnitude",
+      "question": "What is the quantifiable educational and psychological cost to the school community from federal enforcement proximity?",
+      "resolution_mechanism": "Longitudinal tracking of student attendance, behavioral disruption, staff turnover, and psychological assessment data pre- and post-federal presence. Comparison with control schools without enforcement proximity.",
+      "impact": "If costs exceed legitimate law enforcement benefits: justifies higher extraction classification. If costs are minimal: constraint may be reevaluated as coordination rather than extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantified educational and psychological externalities from enforcement proximity"
+    },
+    {
+      "id": "alternative_enforcement_modalities",
+      "question": "Are there operationally feasible alternative enforcement approaches that achieve federal mandates with lower school community disruption?",
+      "resolution_mechanism": "Technical analysis of federal enforcement objectives relative to geolocation options. Case studies of functionally equivalent operations with lower sensitive-location proximity.",
+      "impact": "If alternatives exist: suppression metrics increase (artificial maintenance of school proximity despite feasible alternatives). If no alternatives: suppression reflects operational necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of operationally feasible alternative enforcement approaches"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Litchfield School Perimeter Crisis represents a structural conflict between federal law enforcement jurisdiction and school community autonomy. On February 5, 2026, federal agents were spotted operating within a block of a school facility, establishing an investigative presence in a sensitive location where children, educators, and families congregate. The constraint emerges from the asymmetry between federal enforcement authority (institutional capacity to deploy near schools) and school community voice (powerless to challenge or negotiate placement). The crisis is classified as a Snare from most perspectives because it exhibits high suppression (school community has no viable exit options, no consultation mechanism, no formal appeals process) and extractive characteristics (operational burden, psychological externality, educational disruption imposed without consent). From the federal enforcement perspective, the constraint appears as Rope \u2014 a coordination mechanism for legitimate law enforcement. The theater ratio (0.65) reflects that much of the operational response to federal proximity is performative: school hardening measures, security protocols, and public communication about enforcement presence exceed what threat assessment would justify, indicating institutional theater masking the underlying extraction dynamic.",
+    "key_agents": [
+      "School Students: Primary victims (powerless/trapped) \u2014 experience disruption, stress, and loss of educational normalcy without agency",
+      "School Staff and Administration: Secondary victims (moderate/constrained) \u2014 bear operational burden of managing federal presence while maintaining educational mission",
+      "School Families: Primary victims (powerless/trapped) \u2014 experience anxiety, disrupted schedules, and inability to influence federal operations",
+      "Federal Enforcement Agencies: Beneficiary (institutional/arbitrage) \u2014 obtain investigative proximity required for enforcement mandate; experience constraint as coordination mechanism",
+      "Civil Liberties and Education Advocacy Coalition: Organized responders (organized/constrained) \u2014 mobilize to constrain extraction through litigation, policy advocacy, and community organizing",
+      "Federal School Protection Policy Framework: Degraded institutional structure (institutional/arbitrage) \u2014 prescribed coordination protocols have become performative ritual",
+      "Analytical Observer: Universal rights perspective (analytical/analytical) \u2014 identifies structural subordination of school community to federal enforcement discretion"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The federal enforcement presence imposes measurable costs on the school community (operational burden, psychological stress, educational disruption) without proportional benefit or consultation. The extractiveness is not maximal (0.66+) because the federal mandate may reflect legitimate law enforcement need; however, the lack of school community input and the absence of visible alternative locations suggest the extraction is substantive rather than incidental. The measurement trajectory shows extractiveness increasing from 0.35 to 0.52 over 10 time periods, indicating that initial federal presence (framed as temporary) has accumulated into sustained imposition. Suppression (0.68): High. The school community faces multiple layers of suppression: (1) no formal mechanism to challenge federal enforcement proximity, (2) geographic constraint \u2014 the school cannot relocate easily, (3) institutional constraint \u2014 federal authority supersedes school governance, (4) informational asymmetry \u2014 federal mandate scope and duration are not publicly disclosed. Theater ratio (0.65): Moderate-high. The institutional response to federal presence includes performative security measures that exceed threat mitigation: visible enforcement staging, heightened perimeter controls, and public communication about protection efforts. These reflect institutional theater \u2014 signaling security to parents and public \u2014 rather than proportional operational response. The trajectory shows theater increasing from 0.45 to 0.65, indicating mission creep from coordination (enforcement proximity) to performative security (institutional visibility).",
+    "perspectival_gap": "The constraint exhibits a sharp perspectival gap between federal enforcement and school community. Federal agencies classify the constraint as Rope (coordination mechanism for legitimate law enforcement); they experience the school proximity as operationally efficient. School community classifies the constraint as Snare (extraction without consent); they experience it as imposition and threat. The analytical observer, using a structural rights framework, also classifies as Snare \u2014 the absence of school community input into federal decisions affecting their immediate environment is a form of structural subordination. The civil liberties coalition bridges the gap by providing organized voice (Tangled Rope perspective) \u2014 they acknowledge legitimate coordination functions while organizing to constrain extraction. The federal policy framework itself appears as Piton \u2014 the prescribed protocols for school-sensitive enforcement exist as performative ritual rather than functionally protective mechanism.",
+    "directionality_logic": "School students, staff, families: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. No exit options, no consultation mechanism, no appeal process. Federal enforcement agencies: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.05. Net beneficiary. High institutional capacity to exit (they choose the deployment location). Civil liberties coalition: Victim + constrained \u2192 d\u22480.55, f(d)\u22480.75. Organized resistance but institutional barriers. Federal policy framework: Institutional + arbitrage \u2192 d\u22480.20, f(d)\u22480.12. Piton classification comes from theater gate and institutional inertia, not high chi. Analytical observer: analytical \u2192 d\u22480.88, f(d)\u22481.30. Structural subordination from universal rights perspective.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED: The constraint passes all snare gates (extractiveness 0.52 \u2265 0.46, suppression 0.68 \u2265 0.60, potential \u03c7 \u2248 0.68 \u2265 0.66 at analytical observer perspective). The mandatrophy is resolved by differentiating the federal enforcement perspective (Rope, coordination) from the school community perspective (Snare, extraction). The federal perspective legitimizes the coordination function (law enforcement mandate); the school community perspective reveals the extraction mechanism (imposition without consent). The constraint is snare because suppression is high (no exit, no consultation, no appeals) and extraction is manifest (disruption costs imposed unilaterally). The federal perspective does not override the snare classification; rather, it establishes that the coordination function exists but is not being shared with the most affected party (the school community). This is the defining feature of snares: the beneficiary perceives coordination; the victim perceives extraction. Mandatrophy is resolved by making the perspectival gap explicit: the federal constraint-as-coordination depends on the school's constraint-as-extraction. The two perspectives are structurally coupled but directionally opposite."
+  },
+  "network": {
+    "affects_constraints": [
+      "sensitive_location_federal_jurisdiction",
+      "school_hardening_security_theater",
+      "family_enrollment_disruption"
+    ],
+    "dual_formulation_note": "The Litchfield perimeter crisis is downstream of broader federal sensitive-location enforcement policy and upstream of school-specific security theater and enrollment disruption. The constraint has \u03b5=0.52 reflecting the specific imposition on this school community; the parent constraint (sensitive-location federal jurisdiction) has lower \u03b5 reflecting the general policy; the child constraints (school hardening, enrollment impacts) have higher \u03b5 reflecting accumulated extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

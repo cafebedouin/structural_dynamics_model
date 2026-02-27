@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "openai_api_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oaa"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "OpenAI API Access Controls",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "openai_corporation",
+      "api_ecosystem_developers"
+    ],
+    "victims": [
+      "dependent_application_providers",
+      "cost_sensitive_startups",
+      "open_source_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Startup",
+      "comment": "PERSPECTIVE 1: DEPENDENT STARTUP (SNARE) \u2014 A bootstrapped company whose core product depends entirely on the OpenAI API. No alternative provider offers equivalent capability-to-cost ratio. Switching requires months of reengineering and carries reputational/customer risk. Rate limits, pricing changes, and terms-of-service modifications are non-negotiable constraints. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Enterprise Customer",
+      "comment": "PERSPECTIVE 2: ENTERPRISE CUSTOMER (TANGLED ROPE) \u2014 Large organizations benefit from standardized API access (coordination function: enables rapid scaling and feature deployment) but face extraction through pricing tiers, usage monitoring, and SLA enforcement. Can negotiate contracts and have some exit optionality (in-house models, competitor APIs), but switching costs remain substantial. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "OpenAI Corporation",
+      "comment": "PERSPECTIVE 3: OPENAI CORPORATION (ROPE) \u2014 Controls the API and experiences access restrictions as a pure coordination mechanism: rate limiting prevents system overload, tier pricing allocates scarce computational resources efficiently, and usage monitoring enables billing. The constraint solves a genuine collective action problem (preventing tragedy of the commons on GPU capacity). Net beneficiary \u2014 extraction flows toward this actor."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Open Source AI Communities",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE COMMUNITIES (SNARE) \u2014 Projects like LLaMA-based derivatives depend on OpenAI's API for baseline capability comparisons, benchmarking, and integration prototyping. Pricing and access restrictions limit their ability to build alternatives. Cannot exit to competitor APIs without abandoning their specific feature dependencies. No negotiating power; subject to unilateral policy changes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Individual Developers and Researchers",
+      "comment": "PERSPECTIVE 5: INDIVIDUAL DEVELOPERS (TANGLED ROPE) \u2014 Researchers benefit from API access for rapid experimentation (coordination) but face extraction through usage quotas, rate limits, and pricing that disproportionately affect low-budget users. Can theoretically switch to open models but face switching friction for specific GPT capabilities. Constrained exit with partial benefits."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy API Terms and Compliance Theater",
+      "comment": "PERSPECTIVE 6: TERMS AND COMPLIANCE THEATER (PITON) \u2014 OpenAI's published API terms (content policy enforcement, rate limit justifications, acceptable use clauses) are increasingly performative as enforcement scales. Automated content filtering and quota management are the functional constraints; the explicit policy documentation serves symbolic/legal purposes. Theater ratio high (0.48\u21920.62 over interval) as terms multiply without proportional functional change."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Model Initiative",
+      "comment": "PERSPECTIVE 7: OPEN MODEL INITIATIVE (SCAFFOLD) \u2014 Organized actors (Meta/Llama, Mistral, open-weight projects) are building alternative pathways to capable language models. The OpenAI API constraint is structured as temporary from this perspective \u2014 as open models mature and lower-cost alternatives proliferate, API dependency decays. Estimated sunset: 3-7 years for parity in key use cases. Organized agents see exit paths."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a systemic perspective, the API access constraint simultaneously solves a coordination problem (GPU allocation, service stability) and extracts economic rent through pricing power concentration. OpenAI's control derives both from genuine scarcity (compute) and from intellectual property leverage (model weights, training data). The constraint cannot be classified as pure coordination (rope) because extraction is explicit and asymmetric; cannot be classified as pure extraction (snare) because coordination function is non-trivial."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "open_model_capability_parity",
+      "question": "Will open-source language models reach capability parity with OpenAI GPT-4 in cost-critical applications within 3 years?",
+      "resolution_mechanism": "Benchmark comparison (MMLU, GSM8K, code generation) across open models vs GPT-4; cost-per-token parity analysis for specific application classes; developer migration tracking",
+      "impact": "If yes: scaffold timeline is accurate, snare perspective is temporary, constraint transforms to piton. If no: snare perspective persists, open model initiative does not materialize as exit path.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Capability parity timeline for open versus proprietary models"
+    },
+    {
+      "id": "api_pricing_sustainability",
+      "question": "Is OpenAI's current API pricing model extractive (above cost) or competitive (at cost)?",
+      "resolution_mechanism": "Cost accounting analysis: infrastructure costs (GPU, bandwidth, training amortization) vs published pricing; comparison with alternative providers (Anthropic, Google, Azure OpenAI); margin transparency from financial disclosures if available",
+      "impact": "If extractive: tangled rope classification confirmed for all perspectives; snare perspective reflects genuine overcharging. If competitive: classification shifts toward rope for most perspectives; extraction claim softens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether API pricing reflects cost or economic rent"
+    },
+    {
+      "id": "locked_in_customers_proportion",
+      "question": "What fraction of OpenAI API customers face switching costs > 50% of their deployment value?",
+      "resolution_mechanism": "Survey of API customers regarding switching cost estimates; analysis of customer retention after price increases; longitudinal tracking of customers migrating to alternatives",
+      "impact": "If > 60%: snare classification is accurate for majority. If < 30%: trap perspective overstates constraint severity; rope classification more appropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of customers with high switching costs"
+    },
+    {
+      "id": "regulatory_intervention_likelihood",
+      "question": "Will antitrust or API regulation materially change OpenAI's access control enforcement within 5 years?",
+      "resolution_mechanism": "Regulatory filing analysis (DOJ, FTC, EU Digital Markets Act); precedent from prior API monopolies (AWS, Apple App Store); enforcement action timeline",
+      "impact": "If yes: constraint transforms to snare with regulatory ceiling, or scaffold with regulatory sunset. If no: current tangled rope classification persists unchanged.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Likelihood of regulatory intervention on API access"
+    },
+    {
+      "id": "rate_limit_functional_necessity",
+      "question": "Are OpenAI's published rate limits technically necessary for system stability or primarily revenue-driven pricing differentiation?",
+      "resolution_mechanism": "Technical analysis: compare OpenAI's published utilization rates vs theoretical maximum capacity; examine whether tier limits scale with actual demand vs published tiers; analysis of competitor rate limit strategies",
+      "impact": "If necessary: suppression is justified (not coercive), classification leans toward rope. If revenue-driven: suppression is rent-extracting, classification confirms snare/tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether rate limits serve technical necessity or pricing strategy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "OpenAI's API access controls create a structural constraint on the ecosystem of developers, researchers, and companies building applications on large language models. The constraint operates simultaneously as a coordination mechanism (rate limiting prevents service collapse, pricing tiers allocate scarce GPU compute) and as an extraction mechanism (pricing power concentration, lock-in effects, unilateral policy changes). Different actors experience the constraint differently based on their structural position: OpenAI experiences it as efficient resource allocation (Rope); bootstrapped companies dependent on the API experience it as inescapable (Snare); enterprise customers with negotiating power experience mixed coordination and extraction (Tangled Rope); open-source communities see an alternative pathway emerging (Scaffold). The constraint's extractiveness has increased over the measurement interval (0.38\u21920.52) as demand exceeded supply and pricing pressures intensified. The theater ratio has also increased (0.32\u21920.48), reflecting growing performativity in compliance enforcement and terms-of-service justifications.",
+    "key_agents": [
+      "OpenAI Corporation: Primary beneficiary (institutional/arbitrage) \u2014 controls API infrastructure and captures pricing power during period of scarce capacity",
+      "Dependent Startups: Primary victims (powerless/trapped) \u2014 companies whose core products are built on OpenAI API with no viable alternatives; subject to unilateral constraint changes",
+      "Enterprise Customers: Secondary beneficiary-victim (organized/constrained) \u2014 benefit from standardized API but face extraction through tiered pricing and usage monitoring; have some negotiating power",
+      "Open Source Communities: Secondary victim (powerless/trapped) \u2014 depend on API for benchmarking and capability comparison; face pricing and access restrictions with limited alternatives",
+      "Open Model Initiative: Emerging alternative (organized/mobile) \u2014 Llama, Mistral, and other projects building exit pathways; organized actors with agency to create competitive alternatives",
+      "Individual Researchers: Secondary victims (moderate/constrained) \u2014 benefit from API access for rapid experimentation but face quotas and pricing disproportionately affecting low-budget work",
+      "Compliance and Terms Theater: Institutional actor (institutional/arbitrage) \u2014 maintains published policies that are increasingly performative as enforcement scales"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. At launch (0.38), the API was primarily coordinative\u2014scarce GPU capacity genuinely required allocation mechanisms. Over 12 months, extractiveness increased to 0.52 as demand exceeded supply and OpenAI captured pricing power. The $0.002-0.06 per-token pricing spans a 30x range, creating effective extraction through tier stratification. However, extractiveness is not at snare levels (\u22650.66) because: (1) open-source alternatives exist and are maturing, (2) some customers can negotiate enterprise contracts, (3) GPU scarcity is real (not entirely artificial), and (4) the coordination function remains genuine. Suppression (0.58): Moderate-high. Rate limits, usage quotas, tier restrictions, and content policy enforcement create significant barriers to free access. But suppression is not total\u2014paid access is available at all scales, and the technical justification for rate limits (system stability) is partly legitimate. Theaters (0.48): Moderate and rising. The published acceptable use policies and rate limit justifications are increasingly performative\u2014automated enforcement is the functional mechanism; policy text is largely symbolic. Growth from 0.32\u21920.48 reflects multiplication of terms-of-service clauses without proportional functional change.",
+    "perspectival_gap": "All six constraint types are structurally justified from different observational positions. This is NOT a case of indeterminate classification\u2014it is a case where the constraint legitimately exhibits different structural signatures depending on the agent's position. The snare (dependent startup) and rope (OpenAI) perspectives are not contradictory; they are dual descriptions of the same constraint from opposite ends of the extraction flow. The scaffold (open models maturing) is a structural feature\u2014it is NOT aspirational but rather a measurable exit path with empirical timeline. The piton (compliance theater) is also justified\u2014published terms are increasingly divorced from functional enforcement. The tangled rope (analytical observer) is the most complete perspective because it captures the simultaneous coordination and extraction without naturalizing either as the only truth.",
+    "directionality_logic": "Directionality values (d) derive from structural position: beneficiaries with arbitrage options (OpenAI) experience low d (derived ~0.05 from arbitrage exit); victims with trapped exits experience high d (derived ~0.95 from trapped exit + victim status). Enterprise customers and researchers occupy the middle (d ~0.50-0.65) because they have partial exit optionality and partial benefits. The engine's sigmoid f(d) maps these to experienced extractiveness: OpenAI sees f(d)\u2248-0.12 (net subsidy to them); dependent startups see f(d)\u22481.42 (maximum extraction); enterprise customers see f(d)\u22480.75 (high extraction with some agency). Scope modifier \u03c3(S) applies at global scale (\u03c3=1.2), amplifying effective extractiveness across all perspectives because API access transcends regional boundaries and switching costs are globally uniform.",
+    "mandatrophy_analysis": "Mandatrophy resolution for this constraint requires recognizing that 'API access control' conflates two structurally distinct constraints: (1) GPU scarcity allocation (genuine coordination problem, creates rope-like necessity), and (2) OpenAI pricing power and lock-in (economic rent extraction, creates snare-like extraction). The high-level claim 'OpenAI controls API access' combines both. Decomposition: the GPU scarcity problem is real and creates legitimate coordination. The pricing power problem is rent-based and extractive. Both exist simultaneously. The tangled rope classification captures this synthesis. Mandatrophy is resolved by acknowledging that neither pure-coordination nor pure-extraction framing is complete. The constraint simultaneously solves a real problem (GPU allocation) and enables economic rent extraction (pricing concentration). The mandatrophy trap would be claiming the constraint is ONLY coordination (ignoring extraction) or ONLY extraction (ignoring real scarcity coordination). The tangled rope classification rejects this false choice and identifies the constraint as a genuine hybrid."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_model_training_data_access",
+      "large_language_model_deployment_costs"
+    ],
+    "dual_formulation_note": "The OpenAI API access constraint is downstream of GPU scarcity and model training data constraints. The API layer creates its own constraint through access control and pricing power. These are linked: GPU scarcity justifies coordination mechanisms (rate limits), which OpenAI leverages to extract economic rent through tiered pricing. Upstream constraint: GPU supply. This constraint: API access and pricing. Downstream constraints: application-level service availability and cost structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

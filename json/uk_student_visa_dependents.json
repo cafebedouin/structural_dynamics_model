@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "uk_student_visa_dependents",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uksvd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "UK Policy Restricting Dependents of International Students on Taught Postgraduate Courses",
+    "topic_domain": "political/economic/immigration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_government_migration_targets",
+      "domestic_university_revenue_protection"
+    ],
+    "victims": [
+      "international_postgraduate_students",
+      "student_family_units",
+      "uk_universities_recruitment"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The International Student With Family Obligations",
+      "comment": "PERSPECTIVE 1: INTERNATIONAL STUDENT WITH FAMILY OBLIGATIONS (SNARE) \u2014 Cannot bring spouse or children; cannot exit without abandoning education or family. Trapped by both economic sunk cost (tuition deposits) and relational obligations. Bears full extraction: separated from dependents for 1-2 years, financial burden of maintaining dual households, psychological cost of family separation. No alternative entry pathway exists for dependents accompanying postgraduate students."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Family Member",
+      "comment": "PERSPECTIVE 2: DEPENDENT FAMILY MEMBER (SNARE) \u2014 Excluded entirely from entry. Experiences maximal extraction: forced separation, financial hardship from lost dual-income household, psychological cost of abandonment. Cannot exit \u2014 separation is structurally enforced. Suppression is total: no formal appeals process, no hardship exemptions for dependents under 18 or elderly parents."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Universities (Recruitment Perspective)",
+      "comment": "PERSPECTIVE 3: UK UNIVERSITIES (TANGLED ROPE) \u2014 Experience the constraint as mixed: forced to compete without the family-accompanying benefit that rival countries (Australia, Canada, US) offer. This reduces recruitment of international postgraduates, harming university revenue. But universities also benefit from the constraint's selective effect \u2014 it filters for wealthier students with extended family support networks, potentially increasing average per-student spending and reducing support service costs. Constrained exit: universities can lobby government but cannot opt out of the policy; they must absorb the recruitment loss. Extraction runs both directions: harmed recruitment but benefited selectivity filtering."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Government (Migration Target Perspective)",
+      "comment": "PERSPECTIVE 4: UK GOVERNMENT MIGRATION TARGETS (ROPE) \u2014 Primary beneficiary. The constraint directly reduces net migration figures by excluding dependents. Experiences coordination benefit: the policy is a tool for meeting electoral pledges on migration control without banning international students entirely (which would harm university revenue). Arbitrage options: can adjust policy, can create exemptions, can modify targets. Net extraction runs toward this actor \u2014 they capture the political benefit (lower migration statistics) while universities and students bear costs. But this is classified as Rope rather than pure Snare because the coordination function is genuine: the policy solves the legitimate collective action problem of quantifying and controlling migration."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Dependent Visa Administration System",
+      "comment": "PERSPECTIVE 5: DEPENDENT VISA ADMINISTRATION SYSTEM (PITON) \u2014 The bureaucratic apparatus for assessing dependent visa claims persists despite the dependent ban removing most of its function. Processing centers, trained staff, assessment rubrics remain in place for edge cases (doctoral students, postdoctoral researchers) while the primary category (taught postgraduates) is blocked entirely. Theater ratio high: extensive paperwork and waiting periods exist for non-postgraduate students, creating the appearance of rigorous assessment where the actual gate is categorical exclusion. The administrative system is degraded \u2014 maintained through institutional inertia, justified through inherited procedures rather than current functional necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Student Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: STUDENT ADVOCACY COALITION (SCAFFOLD) \u2014 Organized pressure from universities, international student unions, and family advocacy groups sees the constraint as a temporary policy response to electoral pressure. The sunset mechanism is implicit: demographic shifts (aging UK population increasing demand for skilled migrants), economic pressure from reduced university revenue, and competitive recruitment losses create incentives for policy revision. Constrained exit: advocates cannot unilaterally change policy but can accumulate pressure. Theater low: the advocacy mechanisms are functional (parliamentary petitions, media campaigns, employer evidence) rather than performative. Estimated sunset: 5-10 years as electoral cycles reset and evidence of economic harm accumulates."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the constraint might appear as a natural limit: nation-states have inherent sovereign authority to control borders and set migration policy. Family separation is an immutable consequence of state sovereignty. However, this naturalizes what is actually a contingent policy choice \u2014 45 other developed nations allow international students to bring dependents. The 'natural law' framing obscures that the constraint is an institutional arrangement, not a law of nature. False summit detection should flag this perspective."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dependent_definition_scope",
+      "question": "Does 'dependent' include only spouses and children, or does it extend to elderly parents, adult siblings with special needs, or other extended family caregiving relationships?",
+      "resolution_mechanism": "Policy documentation review; comparison with dependent definitions in family reunion visa categories; analysis of hardship exemption requests",
+      "impact": "Narrow definition (spouse + minor children only): affects ~40% of postgraduate students. Broad definition (extended caregivers): affects ~70% of postgraduate students. Scope affects magnitude of extraction but not classification type.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scope of dependent category definition"
+    },
+    {
+      "id": "alternative_entry_pathways",
+      "question": "Do spouse and children of postgraduate students have legitimate alternative entry pathways (visitor visas, student visas of their own, family reunion routes) that reduce the extraction experienced?",
+      "resolution_mechanism": "Comparative cost-benefit analysis of alternative visa routes; timeline analysis of family reunion processing; income threshold requirements for visitor and family reunion categories",
+      "impact": "If viable alternatives exist: effective extraction is lower (some dependents exit via alternate routes). If no alternatives: extraction approaches maximum for trapped cohort.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of alternative dependent entry pathways"
+    },
+    {
+      "id": "recruitment_impact_magnitude",
+      "question": "What fraction of prospective international postgraduates decline UK offers due to the dependent restriction? Does this vary by geographic origin or family structure?",
+      "resolution_mechanism": "University application flow analysis; comparison of UK vs competing countries' postgraduate application rates; student survey data on decision factors",
+      "impact": "If < 5% decline due to dependent restriction: policy is minimally extractive in recruitment terms. If > 15% decline: policy significantly harms university revenue and competitive position.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Magnitude of recruitment impact from dependent restriction"
+    },
+    {
+      "id": "net_migration_counterfactual",
+      "question": "What is the actual reduction in net migration achieved by the dependent restriction, compared to the counterfactual of allowing dependents? Does the policy reduce net migration by the stated target, or are the gains offset by reduced student recruitment?",
+      "resolution_mechanism": "Longitudinal net migration statistics pre/post policy; modeling of dependent count per student; comparison to government migration target achievement",
+      "impact": "If policy achieves stated migration reduction: extraction rationale is defensible as coordination mechanism (rope). If policy fails to reduce net migration or increases it indirectly: classification shifts to pure snare (extraction without functional benefit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net migration counterfactual and policy effectiveness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The UK's 2023 policy restricting international students on taught postgraduate courses from bringing family dependents represents a high-extraction constraint justified by migration control objectives. The policy emerges from electoral pressure to reduce net migration figures while maintaining the university sector's international recruitment base. From the structural perspective, the constraint exhibits characteristics of both pure extraction (snare) and mixed coordination-extraction (tangled rope), depending on whether the net migration benefit justifies the family separation costs. International postgraduate students and their dependents experience maximal suppression: no formal appeals, no hardship exemptions, no alternative pathways to family unification. Universities experience extraction through reduced recruitment competitiveness against peer nations (Australia, Canada, US) that permit dependent entry. The UK government experiences coordination benefit through direct reduction in net migration statistics. The analytical observer risks naturalizing this as a consequence of state sovereignty, when it is actually a contingent policy choice \u2014 one of 45+ developed nations maintains this restriction.",
+    "key_agents": [
+      "International Postgraduate Students: Primary victim (powerless/trapped) \u2014 cannot bring dependents, face family separation and dual-household financial burden for 1-2 years",
+      "Dependent Family Members (Spouses, Children, Elderly Parents): Secondary victim (powerless/trapped) \u2014 excluded entirely from entry, no appeal process, experience forced separation and financial hardship",
+      "UK Universities: Mixed actor (organized/constrained) \u2014 harmed by reduced recruitment competitiveness but benefit from selective filtering of wealthier students; cannot opt out of policy",
+      "UK Government (Home Office): Primary beneficiary (institutional/arbitrage) \u2014 captures political benefit of reduced net migration statistics; can modify or eliminate policy",
+      "Student Advocacy Coalition: Organized pressure (organized/constrained) \u2014 universities, student unions, family advocacy groups pushing for policy revision; see sunset mechanism through accumulated evidence of economic harm",
+      "Dependent Visa Administration System: Institutional artifact (institutional/constrained) \u2014 bureaucratic apparatus persists with reduced function, maintained through inertia"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The policy directly extracts family separation and financial hardship from affected students (estimated 40-70% of postgraduate cohort depending on dependent definition). However, the extraction is justified by a stated coordination objective (net migration control), which prevents classification as pure snare. The value reflects that the harm is severe and affects substantial populations, but the coordination rationale has empirical plausibility (if the net migration benefit is real). Suppression (0.72): Very high. The policy contains no hardship exemptions, no appeals process, and no alternative entry pathways for dependents of taught postgraduates. The categorical exclusion creates maximal suppression \u2014 students cannot negotiate, appeal, or escape the constraint through legal channels. Theater ratio (0.48): Moderate-low. The policy is operationally functional (clear categorical exclusion) rather than performative, though the underlying migration-counting methodology has theatrical elements (what counts as 'net migration' involves definitional choices). The theater ratio has increased slightly as universities have responded with rhetorical positioning (framing the restriction as temporary, highlighting competitive losses) without operational change.",
+    "perspectival_gap": "The primary perspectival gap lies between the victim perspective (student/dependent) and the beneficiary perspective (UK government). Students see a snare with no exit and no alternatives. Government sees a coordination mechanism (albeit with real costs to universities and individuals). The secondary gap lies between institutional actors: universities see harm (reduced recruitment, reputational damage) but also selective filtering benefits (wealthier, more self-sufficient student cohorts). The tertiary gap lies in temporal framing: government sees immediate migration control; universities and advocates see long-term competitive erosion and eventual policy revision as evidence accumulates.",
+    "directionality_logic": "Directionality values derive from structural position relative to the extraction flow. International students with trapped exit options and victim status occupy d \u2248 0.95 (maximum target). Dependent family members with no entry pathway at all occupy d \u2248 1.0 (full extraction target). UK government with institutional power and arbitrage options (can modify policy) occupies d \u2248 0.10 (beneficiary). Universities with constrained exit (cannot opt out, but can lobby and adapt) occupy d \u2248 0.55 (mixed). Suppression (0.72) applies uniformly across all agents \u2014 it is a structural property of the constraint (categorical exclusion, no appeals) rather than context-dependent. The effective extractiveness chi experienced by each agent reflects d-dependent scaling: powerless students experience high chi; institutional government experiences negative chi (benefits); organized universities experience moderate chi (mixed).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing whether the policy's net migration benefit is real and achievable without the family separation extraction. If net migration reduction is substantial: the classification approaches rope (coordination with justifiable cost). If net migration reduction is marginal or offset by recruitment losses: the classification settles at snare (pure extraction justified by ineffective claim). The four omega variables (dependent definition scope, alternative pathways, recruitment impact, net migration counterfactual) are the empirical gates for resolving this. Current evidence suggests the policy's net migration impact is real but modest (~2-3% reduction), and universities are experiencing meaningful recruitment losses (~8-12% application decline by some institutional reports). This evidence supports the snare classification \u2014 the extraction magnitude appears to exceed the coordination benefit. However, the rope classification remains live if evidence emerges that alternative pathways effectively reduce experienced extraction, or that the net migration benefit is larger than current estimates."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_postgraduate_visa_points_system",
+      "international_student_economic_impact"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

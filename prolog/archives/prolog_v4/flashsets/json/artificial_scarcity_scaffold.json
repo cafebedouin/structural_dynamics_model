@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "artificial_scarcity_scaffold",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.45,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "scaffold",
+    "human_readable": "The Resource-Migration Scaffold",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "incumbent_resource_providers",
+      "alternative_resource_developers"
+    ],
+    "victims": [
+      "resource_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Resource Consumers",
+      "comment": "Resource consumers experience the artificial scarcity as a snare, as they have limited alternatives and face higher prices. Their exit options are trapped because they immediately need the resource."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Resource Providers",
+      "comment": "Incumbent resource providers benefit from the short-term artificial scarcity, which allows them to recoup investments and manage the transition. They are constrained in their exit options due to legacy infrastructure and commitments."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Alternative Resource Developers",
+      "comment": "Alternative resource developers benefit from the artificial scarcity, as it incentivizes adoption of their technologies and provides them with a competitive advantage. Their exit options are arbitrage because they can readily invest elsewhere if the scaffold fails."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, this is a tangled rope, as the artificial scarcity serves as a coordination mechanism to facilitate resource migration but also involves extraction from consumers. The long-term consequences and efficacy are not guaranteed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "migration_timeline_accuracy",
+      "question": "How accurately can the resource migration timeline be predicted?",
+      "resolution_mechanism": "Technological forecasting, economic modeling, and policy analysis",
+      "impact": "Overestimation leads to prolonged scarcity and consumer dissatisfaction, while underestimation results in premature market disruption and stranded assets.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree to which the resource migration timeline is knowable"
+    },
+    {
+      "id": "alternative_resource_adoption_rate",
+      "question": "How quickly will consumers adopt the alternative resource?",
+      "resolution_mechanism": "Consumer surveys, market analysis, and pilot programs",
+      "impact": "Slow adoption necessitates extended scaffolding, while rapid adoption renders the scaffold unnecessary and harmful.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Consumer's willingness to adopt alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents a temporary period of enforced artificial scarcity designed to facilitate a transition from a legacy resource to a new, abundant alternative. The purpose is to incentivize innovation and adoption of the new resource while providing incumbent providers a managed exit. The effectiveness and fairness of this scaffold are highly dependent on the accuracy of the predicted transition timeline and consumer adoption rates.",
+    "key_agents": [
+      "Resource Consumers: Primary target (powerless/trapped) \u2014 bear the costs of artificial scarcity in the short term.",
+      "Incumbent Resource Providers: Primary beneficiary (institutional/constrained) \u2014 benefit from managed transition and recouped investments.",
+      "Alternative Resource Developers: Secondary beneficiary (powerful/arbitrage) \u2014 gain competitive advantage and market share.",
+      "Analytical Observer: Sees the full structure (analytical/analytical) \u2014 evaluates long-term consequences and overall efficacy."
+    ],
+    "logic_rationale": "Extractiveness (0.45): Moderate. Resource consumers bear the costs of artificially inflated prices and limited supply during the transition period. Suppression (0.60): Moderate-high. Government regulations and market manipulations restrict access to the legacy resource, suppressing alternatives. Theater Ratio (0.30): Low. The primary focus is on resource migration, and performative actions are limited, as it's a real coordinated effort.",
+    "perspectival_gap": "Resource consumers experience the artificial scarcity as a snare due to limited options. Incumbent providers see it as a scaffold for managing their transition. Alternative developers perceive it as a rope, as it enables their expansion. The analytical observer views it as a tangled rope, acknowledging both the coordination and extraction aspects.",
+    "directionality_logic": "Beneficiaries, such as incumbent providers and alternative developers, experience the constraint as a coordination mechanism with positive outcomes. Victims, such as resource consumers, perceive it as a source of extraction with negative consequences. The analytical perspective captures the mixed nature of the constraint.",
+    "mandatrophy_analysis": "The classification as a scaffold resolves the mandatrophy by recognizing the temporary nature of the constraint. It prevents mislabeling coordination as pure extraction by acknowledging the intended long-term benefits of resource migration. It also prevents mislabeling extraction as pure coordination by highlighting the immediate costs borne by consumers."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

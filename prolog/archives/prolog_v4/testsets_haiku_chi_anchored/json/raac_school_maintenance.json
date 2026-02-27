@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "raac_school_maintenance",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "raac"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Systemic Response to RAAC Concrete Failures in UK Schools",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_government_budgets",
+      "original_contractors_and_insurers",
+      "delayed_remediation_agents"
+    ],
+    "victims": [
+      "affected_schools",
+      "students_and_families",
+      "local_education_authorities",
+      "building_safety_commons"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Students and Families at Affected Schools",
+      "comment": "PERSPECTIVE 1: STUDENTS/FAMILIES (SNARE) \u2014 No choice but to attend schools with failing RAAC; cannot relocate; bear full risk of structural failure, temporary closures, and disrupted education. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. High effective extraction via forced exposure to deteriorating infrastructure without alternative access."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Education Authorities and School Leaders",
+      "comment": "PERSPECTIVE 2: LOCAL EDUCATION AUTHORITIES & SCHOOL LEADERS (SNARE) \u2014 Constrained by statute to provide education while lacking capital budget control. Bear operational costs of managing failing buildings (emergency repairs, temporary moves, staff retention). Cannot exit their duties. d\u22480.88, f(d)\u22481.30, \u03c3=1.0 \u2192 \u03c7\u22480.75. Effective extraction: must compensate for systemic underfunding."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Department for Education and Local Government",
+      "comment": "PERSPECTIVE 3: DfE / LOCAL GOVERNMENT (TANGLED ROPE) \u2014 Coordination function: central government allocates emergency remediation grants; local authorities coordinate building surveys and temporary relocations. Extraction: DfE maintains tight control over capital spending, forcing local authorities to prioritize politically visible projects over maintenance backlog. Required enforcement of spending conditionalities. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.44. Mixed coordination (real emergency response) and extraction (budget constraint weaponized)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Central Government Treasury",
+      "comment": "PERSPECTIVE 4: CENTRAL GOVERNMENT TREASURY (ROPE) \u2014 Coordinates emergency response; benefits from controlling remediation timeline (can delay spending to smooth fiscal forecasts). Has arbitrage: can reallocate from other departments, issue bonds, or delay. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Negative extraction \u2014 this actor is net beneficiary of the coordination mechanism itself."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Building Safety Reform Coalition",
+      "comment": "PERSPECTIVE 5: BUILDING SAFETY REFORM COALITION (SCAFFOLD) \u2014 Organized actors (safety campaigners, engineering associations, some civil servants) pushing for: (a) mandatory national building condition databases, (b) long-term capital funding commitments, (c) liability clarification. Has sunset: as building standards improve and predictive maintenance frameworks mature, the temporary emergency response should transition to routine condition monitoring. d\u22480.45, f(d)\u22480.45, \u03c3=1.0 \u2192 \u03c7\u22480.26. Theater at transition points (public inquiries, emergency closures) but with genuine structural function (knowledge generation)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "School Maintenance Audit System",
+      "comment": "PERSPECTIVE 6: SCHOOL MAINTENANCE AUDIT SYSTEM (PITON) \u2014 Formal inspections and condition reporting have persisted for 30+ years despite consistent findings of massive underfunding. The audit theater continues (condition surveys, risk ratings, etc.) but generates no meaningful action because remediation decisions are made outside the audit system. theater_ratio=0.68 satisfies piton gate. System maintains institutional legitimacy without functional remediation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Historical Institutional View",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the constraint exhibits genuine coordination (managing collective infrastructure risk) AND genuine extraction (political budget cycles prioritizing short-term spending over long-term maintenance). The constraint did not emerge naturally; it was engineered by post-WWII austerity logic that assumed maintenance costs would decline. Instead, deferred maintenance compounds. \u03b5=0.58, suppression=0.72 indicate this is not a natural law but a contested policy regime. The false summit test catches attempts to naturalize underfunding as inevitable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "actual_remediation_cost_estimate",
+      "question": "What is the true total cost to remediate all RAAC-affected UK schools, and over what timeline is it achievable without disrupting education?",
+      "resolution_mechanism": "Comprehensive structural survey of all 223+ affected schools; engineering assessments of repair vs replacement costs; budget modeling for competing capital demands",
+      "impact": "If cost < \u00a32B: underfunding is choice, not constraint (strengthens snare/extraction classification). If cost > \u00a310B: remediation timeline forces extended school closures (shifts to catastrophic risk scenario).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True remediation cost and feasible timeline for affected schools"
+    },
+    {
+      "id": "liability_and_insurance_resolution",
+      "question": "Can insurance, contractor liability, or defects liability trusts cover part of remediation costs, or does responsibility default entirely to public sector?",
+      "resolution_mechanism": "Legal review of original build contracts; insurance policy discovery; assessment of statute of limitations on latent defects",
+      "impact": "If private sector bears 20%+ of costs: constraint shifts toward snare (public absorbs residual). If public sector bears >95%: constraint is pure extraction from current students for past cost evasion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Allocation of liability and remediation costs between public and private actors"
+    },
+    {
+      "id": "maintenance_culture_shift",
+      "question": "Will the RAAC crisis trigger sustained political commitment to predictive maintenance and long-term capital planning, or revert to deferred-maintenance cycles once emergency is visibly 'resolved'?",
+      "resolution_mechanism": "Historical comparison with previous building crises (asbestos removal, contaminated land remediation); tracking of capital spending commitments 5+ years post-crisis",
+      "impact": "If shift is sustained: scaffold perspective is accurate, sunset is real. If reversion occurs: constraint returns to piton (performative audits without remediation); no learning accumulated.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether RAAC crisis produces lasting maintenance culture change or reverts to deferred maintenance cycles"
+    },
+    {
+      "id": "student_educational_harm_quantification",
+      "question": "What is the measurable impact on student attainment, attendance, and wellbeing from attending schools with failing RAAC vs. facilities-adequate comparators?",
+      "resolution_mechanism": "Matched cohort analysis; longitudinal tracking of exam results, absence rates, and mental health indicators; school-level facility condition mapping",
+      "impact": "If harm is quantifiable and large: victims' true extraction cost becomes visible (shifts classification toward snare from powerless perspective). If harm is small/unmeasurable: extraction is obscured by dispersed risk.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurable educational harm from attending schools with failing RAAC"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Reinforced Autoclaved Aerated Concrete (RAAC) was used in hundreds of UK schools from the 1950s through 1990s as a cost-effective building material. By 2022, structural engineers confirmed widespread failure: concrete degrades, loses strength, and loses structural integrity. The constraint emerges from the institutional apparatus designed to manage this failure\u2014a system that coordinates emergency response while extracting costs from students, families, and local authorities. Central government controls capital budgets and remediation timelines; local authorities and schools bear operational costs and educational disruption; students and families have no exit option. The system exhibits all characteristics of tangled rope: genuine coordination function (emergency triage, temporary relocations, remediation grants) overlaid with asymmetric extraction (selective funding, delayed spending, politically-motivated prioritization). Theater is high: extensive condition surveys, risk assessments, and public commitments to remediation exist alongside minimal actual spending. The constraint's temporal trajectory shows increasing extractiveness (\u03b5 rising from 0.32 to 0.58 over 20 years) and theater ratio (from 0.45 to 0.68), consistent with institutional degradation\u2014bureaucratic oversight persists while functional remediation stalls. Suppression is severe: students have no alternative schools; families cannot relocate; building closures cascade across regions simultaneously, preventing market-based solutions.",
+    "key_agents": [
+      "Central Government Treasury: Institutional beneficiary (institutional/arbitrage) \u2014 controls capital allocation and can delay spending; benefits from deferred maintenance as fiscal policy tool",
+      "Department for Education: Institutional coordinator (institutional/constrained) \u2014 manages emergency response and statutory oversight but lacks independent capital authority",
+      "Students and Families: Primary victims (powerless/trapped) \u2014 no exit option; bear full risk of school closures, temporary relocations, and educational disruption",
+      "Local Education Authorities and School Leaders: Secondary victims (moderate/constrained) \u2014 statutorily obliged to provide education; bear operational costs of managing failing buildings without capital control",
+      "Building Safety Reform Coalition: Organized reformers (organized/constrained) \u2014 pushing for mandatory national standards and long-term funding commitments; see scaffold path through building information systems and predictive maintenance",
+      "School Maintenance Audit System: Institutional apparatus (institutional/arbitrage) \u2014 continues to generate formal risk assessments and condition reports while remediation decisions remain outside the audit function (piton classification from civilizational view)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Central government captures fiscal benefits from deferring remediation (lower annual spending, better short-term budget metrics), while the costs are distributed across students (educational disruption), families (anxiety, temporary relocations), and local authorities (emergency repair spending). The extraction is not total because emergency grants do flow and some remediation occurs\u2014but the allocation is politically constrained and slower than structural urgency would warrant. Suppression (0.72): High. Students and families cannot exit their schools; local authorities cannot refuse to provide education; builders cannot retroactively improve concrete. Emergency measures (temporary relocations, enhanced monitoring) exist but are costly and disruptive, leaving suppression high. Theater ratio (0.68): Moderate-high. Formal condition surveys, risk assessments, and public commitments to remediation (especially post-2022 media coverage) are extensive. The actual remediation spending (as proportion of total school maintenance budget) is smaller, reflecting that the theater has increased over the interval\u2014inspection capacity grew without remediation capacity growing in parallel. The school maintenance audit system exemplifies piton: it generates formal outputs (condition ratings, asset registers) that maintain institutional legitimacy while decisions about actual spending remain outside the audit logic.",
+    "perspectival_gap": "Students and families (powerless/trapped) see pure extraction (Snare): their structural position offers no exit, and they bear full educational risk. Local authorities (moderate/constrained) also see extraction (Snare): they must provide education but cannot control capital budgets. Central government (institutional/arbitrage) sees coordination (Rope): it controls the remediation timeline and can arbitrage between spending now vs. later. The building safety coalition (organized/constrained) sees a temporary crisis with a structural solution path (Scaffold): as national building standards improve and predictive maintenance systems mature, the emergency response should mature into routine condition monitoring\u2014sunset logic. The maintenance audit system (institutional/arbitrage, civilizational view) sees its own degraded function (Piton): audits continue to generate formal outputs, but the real remediation decisions happen through political/fiscal channels outside the audit system. The analytical observer (civilizational) sees that this is not an immutable infrastructure constraint but a chosen policy regime\u2014the extraction is contingent on capital budget architecture, not on the physics of concrete failure.",
+    "directionality_logic": "Central government Treasury: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.02. Controls spending timeline; can reallocate from other budgets. Net beneficiary of deferral. Students/families: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. No alternative schools; full exposure to educational disruption. Maximum extraction from this group. Local education authorities: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.30. Must provide education but cannot control capital allocation. High extraction but not maximal (some emergency grants flow). Department for Education: Intermediate role (institutional/constrained). Must manage emergency response while executing central government's fiscal strategy. d\u22480.55, f(d)\u22480.75. Mixed coordination (real emergency triage) and extraction (fiscal discipline imposed from above). Building safety coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.45. Has agency and visibility but constrained by parliamentary budget process. Low effective extraction because coalition can advocate for structural reform.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (Extracted Coordination vs. Pure Extraction): The constraint exhibits genuine coordination function (emergency triage of 223+ schools, temporary relocations, prioritization of highest-risk sites) AND genuine extraction (political budget cycles prioritizing short-term spending over long-term maintenance commitments, selective funding tied to electoral cycles). The tangled rope classification captures this hybrid: central government's immediate need to respond to the crisis (coordination logic) coexists with its fiscal incentive to stretch remediation over electoral cycles (extraction logic). The false summit test applies: attempts to naturalize the underfunding as 'inevitable infrastructure aging' or 'immutable budget constraints' would obscure the policy choice. The extraction is not technologically determined\u2014higher capital budgets, earlier concrete inspection, or mandatory building condition standards could have changed the trajectory. The theater ratio (0.68) reflects that formal institutional processes (condition surveys, risk assessments, emergency protocols) have proliferated while actual remediation spending has not kept pace\u2014Goodhart drift. The constraint will remain tangled rope unless one of two things happens: (1) building safety reform succeeds in shifting to predictive maintenance frameworks and sustained capital commitment (moving toward scaffold/rope equilibrium), or (2) political pressure forces immediate full remediation, collapsing the extraction mechanism (shifting toward rope). Current trajectory suggests neither\u2014the system is drifting toward piton as the emergency becomes chronic and audit theater substitutes for remediation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "school_capital_budget_cycles",
+      "local_government_fiscal_squeeze",
+      "uk_building_safety_standards"
+    ],
+    "dual_formulation_note": "RAAC concrete failure is a downstream constraint arising from mid-20th century cost-optimization decisions (upstream constraint: post-WWII austerity logic embedded in building codes). The structural failure is technologically inevitable; the institutional response is not. This story focuses on the systemic response to failure, not the material failure itself. The network links identify related policy constraints where capital budget cycles drive deferred maintenance patterns across multiple sectors."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "radiologic_diagnostic_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Radiologic Diagnostic Threshold",
+    "topic_domain": "medical/technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "radiologists",
+      "healthcare_systems",
+      "imaging_manufacturers"
+    ],
+    "victims": [
+      "patients",
+      "primary_care_physicians",
+      "diagnostic_accuracy"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Patient",
+      "comment": "PERSPECTIVE 1: PATIENT (SNARE) \u2014 Cannot exit the diagnostic system; bears full cost of threshold-driven misclassification. A finding classified as 'benign' is not communicated; reclassified as 'critical' leads to cascading interventions. No autonomy over the threshold setting. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Primary Care Physician",
+      "comment": "PERSPECTIVE 2: PRIMARY CARE PHYSICIAN (SNARE) \u2014 Constrained by radiologist's threshold authority and liability exposure. Must act on radiologist's classification without power to challenge or adjust thresholds. Victim of both under- and over-calling (missed findings vs cascade of false positives). d\u22480.80, f(d)\u22481.20, \u03c3=0.9 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Radiologist",
+      "comment": "PERSPECTIVE 3: RADIOLOGIST (TANGLED ROPE) \u2014 Benefits from threshold authority (gating function for medical system), coordination of referral streams, and liability protection. Also constrained by defensive medicine pressure, algorithm-mediated recommendations, and professional obligation to err on side of over-calling (suppresses understaffing, technology limits). d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.26."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Healthcare System",
+      "comment": "PERSPECTIVE 4: HEALTHCARE SYSTEM (TANGLED ROPE) \u2014 Benefits from radiologist threshold gatekeeping (controls patient flow, manages resource allocation, defensive liability posture). Experiences tension between cost containment and risk mitigation. Coordination function: radiology department is essential to triage system. Extraction: thresholds are calibrated to reduce system liability, not optimize patient outcomes. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Imaging Manufacturer",
+      "comment": "PERSPECTIVE 5: IMAGING MANUFACTURER (ROPE) \u2014 Coordinates workflow between imaging modality and diagnostic software. Thresholds embedded in algorithm parameterization create dependency lock-in and drive upgrade cycles. Benefits from threshold complexity (proprietary algorithms justify cost). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legal/Regulatory Framework",
+      "comment": "PERSPECTIVE 6: LEGAL/REGULATORY FRAMEWORK (PITON) \u2014 Maintains radiologic threshold as a defense mechanism against malpractice liability. The 'standard of care' is largely performative: thresholds are calibrated to documented defensibility rather than optimal sensitivity/specificity. theater_ratio=0.68 indicates high performative content (defensive documentation > clinical utility). Persists through institutional inertia and risk aversion."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Signal Detection View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SIGNAL DETECTION (MOUNTAIN) \u2014 From a universal perspective, any diagnostic threshold reflects inherent tradeoff between sensitivity and specificity; there is no threshold-free diagnosis. ROC curves are immutable mathematical objects. But structural data (\u03b5=0.52, suppression=0.65) contradicts mountain classification \u2014 this is a false summit. The 'inherent tradeoff' is real but orthogonal to the constraint: the CHOICE of where to position the threshold is contingent, not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "liability_vs_patient_harm",
+      "question": "Does radiologic threshold calibration minimize total harm (malpractice + missed diagnosis + cascade harm) or minimize legal liability (biased toward over-calling)?",
+      "resolution_mechanism": "Comparison of threshold recommendations by expert consensus (e.g., ACR) vs liability insurance guidelines vs empirical harm models; outcome data correlating threshold setting with adverse events, unnecessary procedures, and missed diagnoses",
+      "impact": "If liability-driven: threshold is pure extraction mechanism (Snare). If harm-optimized: threshold is coordination mechanism with legitimate tradeoff (Rope). Current evidence suggests liability-driven > harm-optimized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether thresholds optimize for total harm or legal liability"
+    },
+    {
+      "id": "algorithm_vs_radiologist_authority",
+      "question": "Does AI-assisted diagnosis (algorithm recommendations + radiologist override) represent genuine threshold decomposition or performative compliance theater?",
+      "resolution_mechanism": "Audit of radiologist overrides: frequency, direction (tightening vs loosening), clinical outcomes. Analysis of whether algorithm recommendations change radiologist behavior or merely provide legal cover for pre-existing thresholds.",
+      "impact": "If genuine decomposition: algorithm constraint and radiologist constraint are separate stories (two omegas, two \u03c7 values). If theater: algorithm is piton (maintains appearance of objectivity without functional change).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether AI-assisted diagnosis provides genuine threshold decomposition"
+    },
+    {
+      "id": "communication_asymmetry_necessity",
+      "question": "Is the non-communication of 'benign' findings (findings below threshold not reported to patient or PCP) a necessary feature of diagnostic efficiency or an extraction mechanism concealing uncertainty?",
+      "resolution_mechanism": "Comparative study: systems with vs without patient-direct communication of benign findings; patient knowledge surveys (what fraction of benign findings on their images do patients learn about?); medical-legal analysis of negligence standards",
+      "impact": "If efficiency-necessary: threshold acts as information gate for legitimate triage (Rope component). If extraction: threshold suppresses patient autonomy (Snare component intensified).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether non-communication of benign findings is operationally necessary"
+    },
+    {
+      "id": "threshold_convergence_across_systems",
+      "question": "Do radiologic thresholds converge toward objectively justified positions (e.g., maximizing diagnostic accuracy) or toward defensive consensus (e.g., ACR guidelines shaped by liability fears)?",
+      "resolution_mechanism": "Historical analysis of threshold evolution: compare threshold changes following clinical evidence vs following major liability case law. Analysis of ACR guideline development process (expert consensus vs liability input).",
+      "impact": "If evidence-driven convergence: threshold is a legitimate coordination mechanism despite indexical appearance (Rope). If defensive convergence: threshold is an extraction mechanism coordinated through liability pressure (Tangled Rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether thresholds converge toward clinical evidence or liability defense"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The radiologic diagnostic threshold is the invisible boundary that separates reported findings from unreported ones, actionable diagnoses from incidental observations, and clinical facts from noise. This threshold is not a law of nature\u2014it is a sociotechnical construction shaped by radiologists' liability exposure, healthcare system resource constraints, and patients' structural powerlessness. The same imaging result (e.g., a 5mm nodule) may be classified as 'benign incidental' by a high-threshold reader, 'probably benign recommend follow-up' by a moderate-threshold reader, or 'suspicious for malignancy urgent follow-up' by a low-threshold reader. These are not differences in the image; they are differences in the threshold logic applied to it. The constraint exhibits a classic tangled rope structure: it provides a genuine coordination function (triaging the flood of incidental findings that modern imaging generates) while simultaneously extracting from patients and primary care physicians through liability-driven over-calling, suppressed communication of uncertainty, and cascading unnecessary procedures. Over the 40-year interval (1984\u20132024), the theater ratio has increased from 0.42 to 0.68 as imaging has become more sensitive, as liability fears have grown, and as defensive medicine has become standard practice. Extractiveness has increased from 0.28 to 0.52 as the gap between technical capability and clinical action has widened.",
+    "key_agents": [
+      "Patients: Primary victim (powerless/trapped) \u2014 bear costs of both missed diagnoses and cascade harm from over-calling; lack autonomy in threshold setting",
+      "Primary Care Physicians: Secondary victim (moderate/constrained) \u2014 constrained by radiologist authority and liability exposure; lack power to adjust thresholds or challenge classifications",
+      "Radiologists: Primary beneficiary and coordinator (organized/constrained) \u2014 benefit from threshold gatekeeping authority and liability protection; coordinate patient triage; also constrained by defensive medicine pressure",
+      "Healthcare Systems: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from radiologist gatekeeping to manage resource flow and liability exposure; calibrate thresholds to reduce system risk",
+      "Imaging Manufacturers: Peripheral beneficiary (institutional/arbitrage) \u2014 benefit from threshold complexity that justifies algorithm complexity and upgrade cycles",
+      "Legal/Regulatory Framework: Institutional enforcer (institutional/arbitrage) \u2014 maintains threshold through 'standard of care' doctrine; drives defensive calibration",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the ROC curve tradeoff as immutable, obscuring the contingent choice of where to position the threshold"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The threshold extracts from patients and PCP by suppressing communication of uncertainty, driving cascade procedures, and concentrating diagnostic authority in radiologists. But it also provides genuine coordination (triaging incidental findings). The value reflects that extraction is real but mixed with coordination. Suppression (0.65): Significant barriers include liability law (malpractice exposure for under-calling), institutional risk aversion, professional norms favoring sensitivity over specificity, and patient information asymmetry. Radiologists cannot freely optimize for accuracy; they must optimize for defensibility. Theater ratio (0.68): High and increasing. Defensive documentation (the detailed report justifying the classification) has become decoupled from clinical utility. Many findings are reported with 'recommend follow-up' even when the radiologist's genuine belief is low-probability benign \u2014 the report is performative liability protection, not clinical communication. The rise from 0.42 to 0.68 reflects increasing defensive verbosity without proportional increase in actual diagnostic utility.",
+    "perspectival_gap": "The patient and PCP see a Snare: they are trapped by a threshold logic that was not their choice and that suppresses critical information. The radiologist sees a Tangled Rope: the threshold provides real coordination (gating function) but also constrains their professional judgment (defensive pressure to over-call). The healthcare system sees a Tangled Rope: the threshold coordinates resource flow but also drives unnecessary procedures. The manufacturer sees a Rope: threshold complexity creates demand for algorithmic solutions. The legal framework sees itself as maintaining necessary standards but is actually enforcing a Piton \u2014 a degraded version of evidence-based medicine maintained through liability inertia. The analytical observer risks seeing an immutable Mountain (ROC curve mathematics) that actually conceals a contingent institutional choice (where on the ROC curve to position the operating point). The perspectival gap reveals that the constraint is not 'what is the truth in this image?' but 'who decides what threshold to use, and what incentives drive that decision?'",
+    "directionality_logic": "Patients: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction from the most powerless agent. Primary care physicians: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.20. High extraction; they have some agency (can order follow-up) but are constrained by radiologist authority and liability exposure. Radiologists: Beneficiary + constrained (not arbitrage) \u2192 d\u22480.45, f(d)\u22480.50. They benefit from threshold authority but are constrained by defensive medicine pressure; the entry point to the constraint is coordinating the diagnostic stream, not pure extraction. Healthcare system: Beneficiary + arbitrage \u2192 d\u22480.35, f(d)\u22480.35. Net beneficiary with capacity to exit (can relocate radiology operations, select imaging vendors), but locked in by regulatory requirements and operational dependencies. Imaging manufacturer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Peripheral to the constraint; primarily benefits from threshold complexity without direct exposure to patient harm. Legal framework: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Enforcer with arbitrage ability; doesn't directly bear costs of its own standards.",
+    "mandatrophy_analysis": "MANDATROPHY TENSION: The constraint appears to be both a legitimate coordination mechanism (triaging incidental findings, routing patients appropriately) and an extraction mechanism (liability-driven over-calling, suppressed communication, cascade harm). The mandatrophy is resolved by recognizing that the constraint's classification depends on the measurement baseline: if the baseline is 'what is the medically optimal threshold?', the constraint is a Snare (extractive liability protection). If the baseline is 'how should incidental findings be routed in a resource-constrained system?', the constraint is a Rope (coordination mechanism). The Tangled Rope classification reflects that both baselines are simultaneously true: the constraint provides real coordination while simultaneously extracting through liability-driven suppression. The path to resolve: empirical measurement of whether thresholds converge toward evidence-based optimality or toward defensive consensus (omega variable 4). If thresholds are driven primarily by liability fears rather than clinical evidence, the extraction component dominates and the constraint should reclassify as Snare (\u03b5\u21920.65, suppression\u21920.75). If thresholds converge toward clinical optimality, the coordination component is primary and the constraint should reclassify as Rope (\u03b5\u21920.25, theater\u21920.35). Current evidence (prevalence of defensive medicine, ACR guideline drift toward sensitivity) suggests the extraction-driven reading is more accurate."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "incidentaloma_cascade",
+      "malpractice_liability_threshold",
+      "patient_information_asymmetry_medical"
+    ],
+    "dual_formulation_note": "The radiologic diagnostic threshold decomposes into two structurally distinct constraints: (1) Signal-detection mathematics (ROC curve positioning) \u2014 immutable mathematical limit constraining sensitivity/specificity tradeoff. \u03b5\u22480.08. (2) Institutional threshold calibration (where radiology community positions itself on ROC curve) \u2014 contingent, driven by liability and incentives. \u03b5\u22480.52. This story addresses the institutional constraint. The mathematical constraint is downstream (affects_constraints) and would classify as Mountain if analyzed separately."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "adversarial_surface_inflation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "adv_surf"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Infinite Vulnerability Horizon",
+    "topic_domain": "technological/cybernetic/security",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "security_vendors",
+      "defensive_contractors"
+    ],
+    "victims": [
+      "system_users",
+      "critical_infrastructure_operators",
+      "collective_cybersecurity_resilience"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End-User in Connected Infrastructure",
+      "comment": "PERSPECTIVE 1: END-USER / CRITICAL INFRASTRUCTURE OPERATOR (SNARE) \u2014 Trapped within digital ecosystems with no meaningful exit option. Bearing full cost of vulnerability expansion: software patches never complete the attack surface, supply chain interdependencies create hidden exposures, firmware updates introduce new vectors. Maximum extraction experience \u2014 cannot opt out of digital infrastructure, faces asymmetric information about vulnerabilities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Security Operations Team",
+      "comment": "PERSPECTIVE 2: SECURITY OPERATIONS TEAM (TANGLED ROPE) \u2014 Constrained by budget limitations, staffing scarcity, and the geometric explosion of monitoring requirements. Experiences mixed coordination and extraction: benefits from standardized threat intelligence and vendor tools (coordination function), but forced into reactive posture by the infinite horizon problem. Active enforcement required \u2014 teams must choose between coverage depth and coverage breadth, neither achievable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Security Vendor Ecosystem",
+      "comment": "PERSPECTIVE 3: SECURITY VENDOR ECOSYSTEM (ROPE) \u2014 Primary beneficiary. Experiences constraint as coordination opportunity: the expanding attack surface creates persistent demand for vulnerability scanning, penetration testing, compliance frameworks, and managed security services. No exit costs; arbitrage benefits accumulate. Vendor revenue cycles align with vulnerability discovery rates \u2014 inflation of threat surface directly inflates addressable market."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Zero-Trust Architecture Coalition",
+      "comment": "PERSPECTIVE 4: ZERO-TRUST ARCHITECTURE COALITION (SCAFFOLD) \u2014 Organized agents (NIST, cloud providers, enterprise architecture standards bodies) proposing architectural sunset: micro-segmentation, continuous verification, and principle-of-least-privilege networks designed to decouple security enforcement from surface enumeration. Theater ratio declining as operational evidence accumulates. Exit path credible but requires multi-year architectural transitions \u2014 has sunset clause as perimeter-security paradigm yields to zero-trust model."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Perimeter Defense Doctrine",
+      "comment": "PERSPECTIVE 5: PERIMETER DEFENSE DOCTRINE (PITON) \u2014 Traditional network security (firewalls, intrusion detection, DMZs, castle-and-moat architecture) is substantially performative: assumes enumerable threats and defensible boundaries, but modern interconnected systems have neither. The doctrine persists through institutional inertia, compliance checkbox requirements, and vendor investment despite acknowledged failure modes. Theater ratio (0.64) reflects the gap between the ritual of perimeter hardening and actual threat reduction in distributed architectures."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Computational Limits View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPUTATIONAL LIMITS VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the vulnerability horizon may be inherent to computation itself: the halting problem, G\u00f6del's incompleteness, and Rice's theorem establish fundamental limits on static verification. No system can prove its own security properties without exceeding its own logical framework. This perspective naturalizes the vulnerability explosion as a law of computation. However, the structural data reveals this as false summit: the extraction and suppression metrics (\u03b5=0.52, \u03c3=0.68) contradict the mountain threshold. The 'incompleteness' framing masks contingent choices about architecture, disclosure, and supply-chain interdependence."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "surface_discovery_rate",
+      "question": "Is the apparent exponential growth in vulnerability count a function of expanding actual attack surface or of improving discovery/disclosure mechanisms?",
+      "resolution_mechanism": "Comparative analysis: CVE/CVSS distributions over time; correlation between disclosure rates and detection capability improvements; firmware security auditing depth vs discovered vulnerabilities",
+      "impact": "If discovery-driven: much apparent expansion is observational artifact \u2014 underlying surface may be growing sublinearly. Reframes constraint as piton (degraded monitoring theater). If surface-driven: non-linear system complexity is structurally producing new vectors faster than enumerable defense. Constrains constraint as snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vulnerability growth reflects real surface expansion or improved discovery"
+    },
+    {
+      "id": "microarchitecture_transitive_closure",
+      "question": "Do supply-chain security dependencies form a transitive closure that makes any system vulnerable to any upstream component's compromise?",
+      "resolution_mechanism": "Dependency graph analysis: formal computation of transitive vulnerability propagation paths; case studies of real supply-chain attacks (SolarWinds, 3CX, Codecov); feasibility assessment of complete supply-chain decoupling",
+      "impact": "If true transitive closure: perimeter defense is structurally impossible \u2014 surface is infinite by necessity, not by choice. Constraint becomes mathematical mountain (\u03b5\u21920.05). If bounded by containment: selective decoupling strategies enable surface management. Maintains tangled-rope or scaffold classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether supply-chain dependencies create transitive vulnerability"
+    },
+    {
+      "id": "zero_trust_operational_maturity",
+      "question": "Can zero-trust architectures actually reduce the *effective* attack surface (not just conceptually reframe it) compared to perimeter defense, accounting for implementation overhead and new zero-trust-specific vulnerabilities?",
+      "resolution_mechanism": "Longitudinal case studies: organizations transitioning to zero-trust; comparison of incident rates, mean-time-to-detect, attack complexity, and remediation cost before/after deployment; measurement of 'security theater' ratio in zero-trust operations vs traditional perimeter",
+      "impact": "If zero-trust operationally superior: scaffold perspective confirmed \u2014 sunset is real and measurable. If parity with overhead: zero-trust is a lateral move, not a sunset \u2014 constraint persists under different name. If net negative: zero-trust introduces new vulnerabilities that offset gains \u2014 scaffold is aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether zero-trust reduces effective attack surface vs perimeter defense"
+    },
+    {
+      "id": "disclosure_incentive_asymmetry",
+      "question": "Does the vendor incentive structure (revenue from vulnerability discovery and remediation) drive suppression of disclosure of systemic architectural flaws that would require full redesign?",
+      "resolution_mechanism": "Historical analysis: delay patterns in disclosure of class-level vulnerabilities vs instance-level CVEs; vendor communication patterns when facing redesign-scale vs patch-scale flaws; comparison of disclosed vs undisclosed vulnerability categories by estimated remediation cost",
+      "impact": "If asymmetry confirmed: extraction component is behavioral (vendor incentive suppression) not structural (computational limits). Opens policy intervention opportunities. Clarifies mandatrophy: coordination in threat intelligence vs extraction in incentive structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vendor incentives suppress disclosure of systemic flaws"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The Infinite Vulnerability Horizon describes a structural constraint where the increasing complexity and interconnectedness of digital systems creates a non-linear expansion of possible attack vectors that outpaces defense capabilities. Users, operators, and defenders find themselves in an asymptotic arms race where complete enumeration of the attack surface becomes computationally intractable, while security vendors benefit from the persistent market for vulnerability management. The constraint exhibits tangled-rope properties: it provides genuine coordination benefits (threat intelligence, standardized frameworks, collective defensive posture) while simultaneously extracting from those who bear the asymmetric cost of the expanding horizon. Theater ratio (0.64) reflects that significant defensive effort (penetration testing, compliance auditing, vulnerability scanning) is performative \u2014 it demonstrates security awareness and reduces auditable risk but does not proportionally reduce actual breach probability as complexity grows. The rise of zero-trust architecture represents a genuine structural transition with sunset clause: if widely adopted, it reframes the problem away from surface enumeration toward continuous verification, reducing theater and extraction both.",
+    "key_agents": [
+      "System Users and Critical Infrastructure Operators: Primary victims (powerless/trapped) \u2014 bear extraction cost of infinite horizon, cannot opt out of digital connectivity",
+      "Security Operations Teams: Secondary victims (moderate/constrained) \u2014 constrained by resource limits, forced to choose between coverage depth and breadth, benefit from vendor tools while being exploited by surface expansion",
+      "Security Vendors and Defensive Contractors: Primary beneficiaries (institutional/arbitrage) \u2014 capture persistent market value from vulnerability discovery, threat intelligence licensing, managed services, and compliance frameworks",
+      "Zero-Trust Architecture Coalition: Organized agents (organized/constrained) \u2014 NIST, cloud providers, enterprise architects building alternative paradigm with measurable sunset path",
+      "Perimeter Defense Doctrine Institutions: Institutional inertia actors (institutional/arbitrage) \u2014 compliance frameworks, regulatory bodies, legacy infrastructure operators maintain castle-and-moat paradigm despite acknowledged limits",
+      "Analytical Observer: Sees potential mountain (computational limits) but risks naturalizing contingent architectural choices"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The base extraction reflects that the expanding attack surface creates disproportionate cost burdens on defenders (nonlinear monitoring requirements, supply-chain auditing, continuous patch management) while concentrating gains in the vendor ecosystem. The extraction is not maximal because legitimate coordination benefits exist: threat intelligence sharing, standard frameworks, and collective learning reduce individual burden below what isolated defense would cost. However, extraction exceeds coordination because vendors benefit from surface growth while defenders bear asymmetric costs. Suppression (0.68): High. Significant barriers to exit include: (1) no practical alternative to digital interconnectedness, (2) supply-chain dependencies create invisible attack surfaces, (3) firmware/hardware cannot be fully updated or audited, (4) zero-day asymmetry between attacker advantages and defender timing constraints, (5) disclosure incentive asymmetries suppress architectural redesign discussion. Theater ratio (0.64): Moderate-high. Significant portion of defensive effort is performative: vulnerability scanning identifies fixable instances but does not eliminate class-level vulnerabilities; penetration testing demonstrates access paths but assumes attackers will use those paths; compliance frameworks create audit evidence but correlate weakly with actual breach rates; perimeter hardening appears effective until it is circumvented via supply-chain or insider vectors. Theater has increased from 0.48 to 0.64 over the interval as defensive complexity outpaced effectiveness.",
+    "directionality_logic": "Each agent's directionality (d) reflects their structural position in the extraction flow. Security vendors have d\u22480.05 (beneficiary + arbitrage exit = low d, negative f(d)) \u2014 they benefit and can arbitrage freely between vendor platforms and customer segments. End-users have d\u22480.95 (victim + trapped exit = high d, f(d)\u22481.42) \u2014 they bear extraction costs with no exit option. Security ops teams have d\u22480.60 (victim + constrained exit = moderate d, f(d)\u22480.90) \u2014 they experience extraction but retain some agency through tool selection and architecture recommendations. The zero-trust coalition has d\u22480.50 (both victim and beneficiary, but with mobile/organized exit = symmetric, f(d)\u22480.65) \u2014 they have capacity to transition away from perimeter paradigm. The mountain perspective has d\u22480.72 (analytical observer, derived canonically from analytical power atom) but is revealed as false summit by the structural data.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The vendor sees Rope: pure coordination gains from threat intelligence and defensive tool adoption, no extraction experienced, high arbitrage value. The end-user sees Snare: complete extraction, no exit, maximum suppression. The defender sees Tangled Rope: mixed coordination (threat sharing, standards) and extraction (budget pressure, scope creep). The zero-trust coalition sees Scaffold: temporary problem with a real exit path via architectural transition. The perimeter defense establishment sees Piton: their own doctrine acknowledged as degraded but maintained for compliance/inertia reasons. The analytical observer risks seeing Mountain: treating computational limits as immutable law \u2014 but the metrics contradict this. The perspectival gap is driven by exit options (vendors have arbitrage, users have none) and beneficiary/victim status (vendors benefit, users bear costs), not by disagreement about the underlying technical facts.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint is tangled_rope, not pure_rope, because it combines genuine coordination (threat intelligence, standardized defenses, collective learning) with asymmetric extraction (vendors gain persistent revenue from surface expansion, while end-users bear non-linear cost increase). The coordination function is real and necessary \u2014 isolated defense is catastrophically expensive; threat sharing and standardization reduce collective cost. But the extraction layer is also real: vendor business models profit from vulnerability discovery rates, and supply-chain interdependencies make complete enumeration impossible, creating permanent market for vulnerability management services. The mandatrophy would arise if one tried to classify this as pure Rope (coordination only, no extraction) \u2014 that would ignore the vendor capture of margins and the user asymmetry. The alternative error would be classifying as pure Snare (extraction only, no coordination) \u2014 that would ignore that threat intelligence and standards genuinely reduce marginal defensive cost. Tangled Rope captures both: coordination benefits + asymmetric extraction + active enforcement required = true hybrid. The scaffold perspective (zero-trust) offers a genuine sunset: if widespread adoption shifts from perimeter-enumeration to continuous-verification, the surface-counting game loses relevance, and the vendor model must adapt to service maintenance rather than vulnerability discovery."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_microarchitectural_vulnerability",
+      "firmware_update_risk_accumulation",
+      "zero_day_asymmetry"
+    ],
+    "dual_formulation_note": "The Infinite Vulnerability Horizon is a higher-level constraint that emerges from the interaction of microarchitectural complexity (supply-chain interdependencies), firmware updateability (risk of patch-induced vulnerabilities), and attacker/defender timing asymmetries (zero-day discovery and exploitation). The upstream constraints represent specific technical failure modes; this constraint captures the systemic growth phenomenon across all modes combined. Each upstream constraint contributes to surface inflation nonlinearly."
+  },
+  "directionality_overrides": []
+}

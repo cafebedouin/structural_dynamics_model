@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "grievance_stack_overflow",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gso"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Bureaucratic Saturation Point",
+    "topic_domain": "social/political/organizational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "administrative_gatekeepers",
+      "status_quo_actors"
+    ],
+    "victims": [
+      "grievance_submitters",
+      "system_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Grievance Submitter",
+      "comment": "PERSPECTIVE 1: GRIEVANCE SUBMITTER (SNARE) \u2014 Citizens with legitimate complaints face a system with finite processing capacity. No exit option exists; they cannot opt out of the bureaucracy. As the queue fills, response times approach infinity, and the constraint extracts their time, hope, and faith in redress mechanisms. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Administrative Gatekeepers",
+      "comment": "PERSPECTIVE 2: ADMINISTRATIVE GATEKEEPERS (ROPE) \u2014 Institutional actors (agency directors, complaint processors, bureaucratic management) benefit from saturation: an overflowed queue creates plausible deniability for inaction ('we're doing our best under resource constraints') and shields them from pressure to reform. They experience the constraint as coordination: 'managing expectations' through managed scarcity. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Advocacy and Reform Organizations",
+      "comment": "PERSPECTIVE 3: ADVOCACY & REFORM ORGANIZATIONS (TANGLED ROPE) \u2014 NGOs, ombudsman offices, and reform coalitions are both constrained by the saturation (they cannot process grievances faster than the system allows; they see real people harmed) and benefit from it (saturation creates the political urgency and public visibility that justifies their existence and funding). They pursue structural reform but depend on the problem persisting. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Frontline Bureaucrats",
+      "comment": "PERSPECTIVE 4: FRONTLINE BUREAUCRATS (TANGLED ROPE) \u2014 Individual case workers and complaint processors are victims of the overflow (overwhelming workload, moral injury from inability to help, burnout) but also benefit from low accountability (impossible standards = no one blamed for failures). They see both the coordination function (processing grievances) and the extraction (working conditions, wage stagnation, loss of professional efficacy). d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Digital Government Reform Movement",
+      "comment": "PERSPECTIVE 5: DIGITAL GOVERNMENT REFORM MOVEMENT (SCAFFOLD) \u2014 Open government initiatives, AI-assisted triage systems, and decentralized complaint resolution (community mediation, peer review) represent a temporary support structure with a sunset clause. As digital tools improve, distributed processing, and transparent tracking become standard, the bottleneck's extractive force should diminish. d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.17. Theater is high (~0.65) but declining as automated systems reduce performative aspects of complaint receipt."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legalistic Complaint Apparatus",
+      "comment": "PERSPECTIVE 6: LEGALISTIC COMPLAINT APPARATUS (PITON) \u2014 The formal administrative grievance process (filing forms, waiting periods, appeals, ombudsman review) is substantially theatrical: it performs legitimacy and legal compliance while core redress capacity has degraded relative to demand. Many agencies maintain complaint mechanisms primarily to signal responsiveness, not to resolve grievances at scale. theater_ratio=0.68 indicates high performative content. The system persists through institutional inertia: agencies must appear to have grievance channels (legal requirement, organizational reputation), so they maintain the forms even when functionality has atrophied."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Capacity Ceiling View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / CAPACITY CEILING (MOUNTAIN?) \u2014 From a civilizational view, human-processed grievance systems may face an inherent capacity ceiling: bureaucrats can process N complaints per unit time, population can generate grievances at rate G, and if G > N \u00d7 available_staff, saturation is inevitable law. However, the structural data (\u03b5=0.52, suppression=0.65, theater=0.68) contradicts a pure mountain classification. The constraint is not immutable; it reflects organizational choice (staffing levels), technological choices (manual vs automated triage), and political choices (resource allocation). This perspective risks false summit: naturalizing contingent capacity constraints as immutable limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demand_elasticity_to_processing",
+      "question": "Does increasing bureaucratic processing capacity elastically expand the volume of grievances submitted (demand elasticity), offsetting improvements in response time?",
+      "resolution_mechanism": "Longitudinal analysis of complaint volume before/after system expansions (hiring, digitization, streamlining); comparison of jurisdictions with different processing capacities and complaint rates",
+      "impact": "If elastic: saturation is a structural equilibrium (Mountain-like). If inelastic: saturation is a temporary resource shortfall (Scaffold-like). If U-shaped: both mechanisms operate in different regimes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether demand for grievance processing is elastic to supply capacity"
+    },
+    {
+      "id": "legitimacy_collapse_threshold",
+      "question": "At what complaint response time does a system's perceived legitimacy collapse? Is there a sharp threshold or gradual decline?",
+      "resolution_mechanism": "Public opinion surveys correlating expected vs actual response times to legitimacy judgments; analysis of protest/unrest timing relative to grievance backlog metrics; case studies of administrative systems entering legitimacy crisis",
+      "impact": "If sharp threshold: saturation triggers rapid institutional instability (Snare with binary collapse). If gradual: saturation is a slow erosion (Tangled Rope with long-term extraction). Threshold location determines when reform becomes politically irresistible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Point at which grievance backlog causes system legitimacy collapse"
+    },
+    {
+      "id": "automation_genuine_capability",
+      "question": "Can AI-assisted triage and automated complaint resolution genuinely increase system capacity, or does it merely shift the bottleneck to more complex cases and create false impression of progress?",
+      "resolution_mechanism": "Comparative analysis of systems before/after automation: actual resolution rates vs complaint volume trends, quality of automated decisions, appeal/reversal rates, complexity of remaining manual cases, user satisfaction",
+      "impact": "If genuinely capable: scaffold sunset is real (digital tools resolve saturation). If bottleneck shifts: saturation persists in new form (Piton). If illusion: automated systems are theater masking persistent extraction (Tangled Rope confirmed).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether automation provides genuine increase in grievance processing capacity"
+    },
+    {
+      "id": "extraction_intentionality",
+      "question": "Is saturation maintained intentionally by administrative gatekeepers (malign snare), or is it an unintended consequence of resource scarcity and institutional inertia (benign coordination failure)?",
+      "resolution_mechanism": "Documentary evidence: budget justifications, staffing decisions, modernization proposals denied or deferred, internal communications about processing targets; comparative analysis of jurisdictions with different resource allocation patterns; incentive structure analysis of gatekeeper career advancement",
+      "impact": "If intentional: pure Snare. If unintended: Tangled Rope or Scaffold. Determines whether reform is possible through resource allocation or requires institutional replacement.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether saturation is deliberately maintained or unintentionally produced"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The bureaucratic saturation point represents a structural constraint where legitimate grievances accumulate faster than the administrative system can process them, creating a self-perpetuating extraction mechanism. Citizens with valid complaints face infinite queues and delayed or denied redress. Administrative gatekeepers benefit from the saturation by avoiding accountability for unresolved grievances ('we're understaffed'), while maintaining performative appearance of processing complaints through formal procedures. Frontline workers suffer moral injury and burnout. Reform advocates depend on the crisis to justify their existence. The constraint exhibits characteristics of both pure extraction (Snare from the grievance submitter's perspective) and hybrid coordination-extraction (Tangled Rope from institutional and advocacy perspectives), with a declining but persistent theatrical component (Piton) and emerging technological alternatives (Scaffold). Over the measurement interval, extractiveness has increased from 0.28 to 0.52, and theater has risen from 0.42 to 0.68, indicating that the system's performative content has increased while real processing capacity has not kept pace with demand growth.",
+    "key_agents": [
+      "Grievance Submitters: Primary victims (powerless/trapped) \u2014 citizens with legitimate complaints facing infinite queues and de facto denial of redress; cannot exit the bureaucracy they depend on",
+      "Administrative Gatekeepers: Primary beneficiaries (institutional/arbitrage) \u2014 agency directors and bureaucratic management who benefit from plausible deniability and accountability avoidance; capture career advancement and institutional resources",
+      "Frontline Bureaucrats: Secondary victims (moderate/constrained) \u2014 case workers and complaint processors experiencing overwhelming workload, moral injury, and low accountability for outcomes; also benefit from impossible standards that excuse individual failure",
+      "Advocacy and Reform Organizations: Organized beneficiaries (organized/constrained) \u2014 NGOs, ombudsman offices, civil rights groups who depend on the crisis to justify funding and political relevance; constrained by system capacity but benefit from its dysfunction",
+      "Digital Government Reform Movement: Organized actors (organized/mobile) \u2014 technologists, open government advocates, and efficiency reformers proposing automated triage, transparent tracking, and decentralized resolution; see saturation as temporary and solvable",
+      "Legalistic Complaint Apparatus: Institutional theater (institutional/arbitrage) \u2014 the formal administrative grievance process (filing forms, appeals, ombudsman review) as a system that performs legitimacy while functionality has degraded"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from grievance submitters through denial of timely redress and erosion of faith in institutional responsiveness. The extraction is not absolute (some grievances are processed, though slowly) and is partly unintended (genuine resource scarcity), but institutional gatekeepers structurally benefit from saturation. The value reflects that saturation is both a coordination failure and an extraction mechanism. Suppression (0.65): High. Multiple barriers prevent grievance resolution: queuing delays, complex procedures, resource scarcity, lack of transparency, and limited appeals. However, suppression is not total \u2014 formal grievance channels exist, some complaints are resolved, and advocacy organizations provide secondary pathways. Theater ratio (0.68): Moderate-high. The formal complaint process performs legitimacy (agencies maintain complaint forms, publish policies, hold hearings) while core resolution capacity has degraded relative to demand. Agencies signal responsiveness without demonstrating actual redress. The theater has increased over the interval (0.42 \u2192 0.68) as agencies have added performative elements (ombudsman offices, formal response timelines, complaint tracking websites) while failing to increase substantive processing capacity.",
+    "perspectival_gap": "The constraint demonstrates conflicting readings from different structural positions. Grievance submitters see pure extraction (Snare): their complaints enter a queue and disappear from accountability. Administrative gatekeepers see coordination (Rope): managing expectations through limited capacity, communicating resource constraints, prioritizing cases. Advocacy organizations see a sustainability problem (Tangled Rope): their mission depends on grievance dysfunction, but they also want to solve it, creating a structural conflict between advocacy incentives and reform incentives. Frontline workers see both: coordination failure (impossible workloads, genuine care for complainants) and extraction (moral injury, burnout, wage stagnation for an impossible job). Reform technologists see a solvable problem (Scaffold): digital tools and decentralized processing can bypass the bottleneck with a clear sunset as systems mature. The formal complaint apparatus sees institutional persistence (Piton): the process persists through legal requirement and organizational reputation, not because it works. The civilizational observer might see an immutable law (Mountain): bureaucratic capacity always lags demand, making saturation inevitable. But the structural data reveals this as a false summit: saturation is a contingent outcome of staffing decisions, budget allocation, and technological choices, not an immutable limit.",
+    "directionality_logic": "Grievance Submitters: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximal extraction. No exit option; queue delays approach infinity. Administrative Gatekeepers: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; saturation provides plausible deniability and resource justification. Frontline Bureaucrats: Mixed (victim + constrained) + moderate power \u2192 d\u22480.65, f(d)\u22481.00. Significant extraction (impossible workload) but also benefit from low accountability. Advocacy Organizations: Mixed (victim + constrained) + organized \u2192 d\u22480.55, f(d)\u22480.75. Constrained by system capacity but benefit from crisis visibility. Digital Reform Movement: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction; mobile exit (technological alternatives) reduces structural entrapment. Legalistic Apparatus: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Theater-driven classification from institutional perspective; minimal net extraction because institutional actors maintain the form without functional commitment.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing between coordination failure (Rope/Scaffold) and extraction mechanism (Snare/Tangled Rope). The key differentiator is whether the saturation is seen as a temporary resource mismatch (coordination failure \u2192 solvable through staffing, automation, or decentralization) or as a structural arrangement that benefits gatekeepers (extraction \u2192 requires institutional change to reduce extraction benefits). From the grievance submitter's view (Snare), the constraint is pure extraction regardless of institutional intent. From the gatekeeper's view (Rope), saturation is a coordination problem being 'managed' within resource constraints. The Tangled Rope reading from advocacy organizations reveals the structural truth: saturation both solves a coordination problem (managing limited capacity) and creates extraction (denying redress to those at the back of the queue). The Piton reading confirms that the formal process has become performative while capacity has degraded \u2014 the apparatus persists through organizational inertia, not functional necessity. The Scaffold reading shows that digital tools and decentralized processing represent genuine alternative pathways with a sunset clause: as automation and transparency improve, the bottleneck's extractive force should diminish. The false Mountain perspective (capacity ceiling as inevitable law) is caught by the structural data: staffing and budget choices, not physics, determine saturation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_degradation",
+      "institutional_legitimacy_erosion",
+      "civil_service_burnout_cycle"
+    ],
+    "dual_formulation_note": "The grievance stack overflow is downstream of resource allocation decisions (funding levels, staffing policy, digitization investment) but represents a distinct structural constraint. Upstream constraints on government budgets and civil service compensation determine whether sufficient processing capacity can be maintained. This constraint demonstrates how coordination failure (bounded processing capacity) becomes extraction mechanism (denial of redress) when demand grows faster than supply and gatekeepers benefit from the gap."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

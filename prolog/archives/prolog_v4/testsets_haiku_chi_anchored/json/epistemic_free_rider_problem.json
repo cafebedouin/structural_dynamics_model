@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "epistemic_free_rider_problem",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "epfr"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "The Truth-Mining Exhaustion",
+    "topic_domain": "informational/social/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "truth_miners",
+      "epistemic_commons",
+      "downstream_policy_makers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exhausted Truth-Miner",
+      "comment": "PERSPECTIVE 1: EXHAUSTED TRUTH-MINER (SNARE) \u2014 Bears all verification costs (funding, time, reputational risk). Cannot exit: abandoning verification work collapses epistemic commons. Trapped by dependency on institutional funding and tenure systems that reward productivity over truth-quality. d\u22480.98, f(d)\u22481.48, \u03c3=1.2 \u2192 \u03c7\u22481.04. Maximum extraction signature."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Synthetic Content Consumer",
+      "comment": "PERSPECTIVE 2: SYNTHETIC CONTENT CONSUMER (SNARE) \u2014 Extracts epistemic value from truth-miner labor without bearing verification costs. Has constrained exit: technically can verify claims but faces prohibitive time/expertise barriers. d\u22480.65, f(d)\u22480.95, \u03c3=1.2 \u2192 \u03c7\u22480.66. Beneficiary from asymmetry but becomes snared as epistemic quality degrades."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Media/Platform Intermediary",
+      "comment": "PERSPECTIVE 3: MEDIA/PLATFORM INTERMEDIARY (PITON) \u2014 Extracts attention value from both truth-miners and consumers; maintains performative verification theater (fact-checking labels, editorial standards) while monetizing engagement. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Sees its own verification theater as degraded (theater_ratio=0.65) \u2014 maintains ritual through inertia despite knowing it creates moral hazard. Arbitrage exit: can pivot to pure synthetic content if truth-mining economics collapse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Academic Research Institution",
+      "comment": "PERSPECTIVE 4: ACADEMIC RESEARCH INSTITUTION (TANGLED ROPE) \u2014 Coordinates knowledge production (legitimate coordination function) but also extracts surplus from truth-miners via publication capture, tenure gatekeeping, and productivity metrics that reward quantity over verification rigor. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.52. Both beneficiary (coordinates research) and extractor (captures surplus). Active enforcement required: peer review rituals, journal systems, citation metrics."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons (Collective Good)",
+      "comment": "PERSPECTIVE 5: EPISTEMIC COMMONS (SNARE) \u2014 Abstract victim. Cannot organize or exit. Experiences extraction as degradation: verified information becomes minority good, synthetic derivatives dominate, truth-mining signals get lost in noise. d\u22480.99, f(d)\u22481.49, \u03c3=1.2 \u2192 \u03c7\u22481.08. Pure extraction: the commons has no self-advocacy mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Mountain Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (PITON) \u2014 From a civilizational frame, risks naturalizing the constraint as inherent to information asymmetry and human cognitive limits ('knowledge will always be scarce, verification always expensive'). This perspective risks seeing an immutable mountain when the structural data (\u03b5=0.58, suppression=0.68, theater=0.65) reveals contingent institutional arrangements: monetary incentives for synthetic content, platform algorithms that reward engagement over accuracy, and academic systems that commodify truth-mining. Theater gate (0.65 \u2265 0.70 threshold not quite met) suggests this is PITON not MOUNTAIN \u2014 sustained by institutional inertia and performative verification theater, not by natural law. d\u22480.72, f(d)\u22481.13, \u03c3=1.2 \u2192 \u03c7\u22480.79."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "critical_mass_truth_miner_collapse",
+      "question": "What is the minimum viable population of truth-miners required to maintain epistemic commons above degradation threshold?",
+      "resolution_mechanism": "Longitudinal tracking of active research populations in key domains; correlation between researcher concentration and information quality metrics; stability analysis of knowledge production networks",
+      "impact": "If critical mass < 5% of information workforce: commons already below threshold, collapse irreversible absent major institutional restructuring. If critical mass > 20%: current erosion trajectory suggests 10-30 years to threshold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum viable population of truth-miners for epistemic commons stability"
+    },
+    {
+      "id": "synthetic_derivative_harm_threshold",
+      "question": "At what ratio of synthetic derivatives to verified information does downstream decision-making (policy, medicine, engineering) become statistically indistinguishable from random guidance?",
+      "resolution_mechanism": "Controlled studies of policy outcomes based on high vs low synthetic content; analysis of error propagation through information chains; historical comparison of knowledge-quality-dependent failure rates",
+      "impact": "If threshold already crossed: current epistemic crisis is structural, not correctable by incremental truth-mining incentives. If threshold > 10 years away: reform window still open for institutional restructuring.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Information quality threshold for policy/decision-making failure"
+    },
+    {
+      "id": "truth_miner_compensation_paradox",
+      "question": "Can direct monetary compensation for verification work overcome the synthetic-content arbitrage without creating new extraction mechanisms (e.g., pay-to-publish bias)?",
+      "resolution_mechanism": "Pilot programs testing compensation models; comparison of verification quality under different funding structures; analysis of bias introduction under various incentive schemes",
+      "impact": "If resolvable: institutional restructuring pathway available. If unresolvable: truth-mining exhaustion is not a resource problem but a structural economic problem requiring supply-side constraints on synthetic content.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether compensation can solve truth-mining exhaustion without new bias"
+    },
+    {
+      "id": "platform_algorithm_neutrality",
+      "question": "Do platform algorithms systematically amplify synthetic derivatives relative to verified information due to engagement optimization, or due to explicit content policy?",
+      "resolution_mechanism": "Audit of algorithmic ranking; analysis of engagement metrics for synthetic vs verified content; A/B testing of neutrality constraints; investigation of explicit moderation rules",
+      "impact": "If systematic (algorithm): constraint is economic/coordination problem (Tangled Rope). If explicit (policy): constraint is snare with clear beneficiary (platform). Different impacts suggest different remedies.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether platform amplification of synthetic content is algorithmic or policy-driven"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The epistemic free-rider problem describes a structural collapse in information economics where the costs of producing verified, grounded knowledge are borne by an exhausted minority of truth-miners while the majority of the population consumes low-cost synthetic derivatives (AI-generated summaries, unchecked social media claims, derivative analysis). The constraint operates as a snare: truth-miners are trapped by the collapse of the epistemic commons itself\u2014abandoning verification accelerates the commons' degradation, but continuing to bear verification costs becomes unsustainable. The synthetic-content arbitrage (zero verification cost, high consumption value) creates an extraction mechanism that benefits platforms, content aggregators, and free-riding consumers while imposing costs on truth-miners (funding scarcity, attention deficit, reputational risk of fighting noise) and the epistemic commons (information quality degradation, loss of grounding mechanisms). The theater ratio (0.65) reflects that institutional verification claims (peer review, editorial standards, fact-checking labels) are increasingly performative: verification theater persists as institutional inertia while the actual verification capacity shrinks. The constraint's extractiveness has increased from 0.28 to 0.58 over a 20-year window, indicating the snare is tightening\u2014the ratio of synthetic derivatives to verified information is growing, truth-mining populations are declining in relative size, and platform incentives for synthetic content are intensifying.",
+    "key_agents": [
+      "Truth-miners (researchers, investigative journalists, domain experts): Primary victims (powerless/trapped) \u2014 bear full verification costs, face funding scarcity, declining institutional support, reputational attacks",
+      "Epistemic commons: Collective victim (powerless/trapped) \u2014 abstract good that cannot advocate; experiences extraction as information quality degradation and loss of verification signals",
+      "Synthetic content consumers: Secondary victims/beneficiaries (moderate/constrained) \u2014 extract epistemic value without bearing costs, but become snared as information quality degrades and they lose ability to distinguish signal from noise",
+      "Platforms/media intermediaries: Institutional beneficiaries (institutional/arbitrage) \u2014 monetize engagement from both truth-miners and consumers; maintain performative verification theater while optimizing for synthetic content engagement",
+      "Academic research institutions: Organized actors (organized/constrained) \u2014 coordinate knowledge production but also extract surplus through publication capture, tenure gatekeeping, productivity metrics that incentivize quantity over verification rigor",
+      "Policy-makers and downstream decision-makers: Implicit victims (moderate/constrained) \u2014 depend on epistemic commons quality for informed decision-making; face increasing probability of decisions based on degraded or synthetic information"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Significant and rising. The constraint extracts epistemic labor from truth-miners while providing synthetic derivatives as free-riding alternatives. The 20-year trend (0.28 \u2192 0.58) shows escalating extraction as platform algorithms optimize for engagement and synthetic content generation becomes cheaper. Suppression (0.68): High. Barriers to truth-mining include: funding scarcity (research budgets declining relative to content consumption), attention deficit (verification work is slow and unrewarded by recommendation algorithms), expertise barriers (synthetic derivatives claim expertise without grounding), and institutional degradation (academic systems now incentivize productivity over verification quality). Truth-miners cannot easily exit: the epistemic commons itself becomes a trap \u2014 abandoning verification accelerates collapse, continuing to bear costs becomes unsustainable. Theater ratio (0.65): Moderate-high. Institutional verification claims (journal peer review, platform fact-checking labels, editorial standards) persist but increasingly performative. Platforms label synthetic content as 'AI-assisted' but amplify it regardless. Academic journals maintain review processes but face reviewer burnout and declining quality. The theater has risen from 0.35 to 0.65 as institutions double down on verification ritual while actual capacity shrinks. Mandatrophy: Resolved by showing this is NOT a mountain (immutable law of information scarcity) but a snare with specific extractive agents (platforms, content aggregators) who benefit from the asymmetry. Reform is possible if institutional incentive structures change.",
+    "perspectival_gap": "The truth-miners see a pure snare: they are trapped by declining funding, reputational attacks, and the collapse of the epistemic commons itself. Synthetic content consumers initially see a rope (coordination of information access) but become snared as information quality degrades. Platforms see a piton (their performative verification theater is degraded but maintained through inertia and institutional lock-in). Academic institutions see themselves as coordinating knowledge (rope) but actually extract surplus through productivity metrics and publication capture (tangled rope). The epistemic commons is powerless\u2014it cannot organize or exit, experiencing pure extraction. The analytical observer risks seeing an immutable mountain ('truth is scarce, verification is expensive, information inequality is natural') when the structural data reveals contingent institutional arrangements: platform algorithms optimized for engagement, academic systems optimizing for productivity, and the lack of institutional support for truth-mining labor. The perspectival gap reveals that what appears as 'natural' information scarcity is actually engineered by incentive structures that favor synthetic derivatives.",
+    "directionality_logic": "Truth-miners: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.48. Extreme extraction. Cannot exit without epistemic commons collapse; verification costs borne entirely by this group. Synthetic content consumers: Beneficiary (initial) + constrained \u2192 d\u22480.65, f(d)\u22480.95. Net extraction from truth-miners, but constrained because their information quality depends on verification ecosystem's health. Platforms/media intermediaries: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; can exit by pivoting entirely to synthetic content if truth-mining collapses. Academic institutions: Beneficiary + constrained \u2192 d\u22480.55, f(d)\u22480.75. Mixed coordination (legitimate knowledge production) and extraction (surplus capture via publication systems, tenure gatekeeping). Epistemic commons: Victim + trapped \u2192 d\u22480.99, f(d)\u22481.49. Abstract victim, maximum extraction. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.13. Risks naturalizing contingent institutional arrangements as immutable laws.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLVES MANDATROPHY: The constraint is NOT a mountain (immutable law of information asymmetry) but a snare with identifiable beneficiaries (platforms, content aggregators, free-riding consumers) and identified victims (truth-miners, epistemic commons). This classification enables structural reform: if the snare is maintained by specific institutional incentives (platform engagement algorithms, academic productivity metrics, funding structures), then changing those incentives can release the trap. The rising extractiveness (0.28 \u2192 0.58) and theater ratio (0.35 \u2192 0.65) show the snare is tightening, not relaxing\u2014without intervention, the epistemic commons will degrade past recovery threshold. The constraint is NOT 'humans are lazy and don't want to verify claims' (mountain) but 'institutional systems have optimized to extract epistemic value from truth-miners while subsidizing synthetic content consumption' (snare). Mandatrophy is resolved by showing the classification is determinate and structural: separate agent perspectives produce different types (piton, snare, tangled_rope) because different agents experience the constraint differently, but from the truth-miners' structural position, the classification is unambiguously snare. Reform pathways: (1) platform algorithm neutrality (reduce amplification of synthetic content), (2) academic incentive restructuring (reward verification rigor over productivity), (3) institutional support for truth-mining labor (funding, prestige, career security), (4) literacy infrastructure (help consumers distinguish verified from synthetic). All pathways require acknowledging the constraint is a snare, not a natural limit."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "synthetic_content_amplification",
+      "academic_publication_capture",
+      "platform_engagement_optimization"
+    ],
+    "dual_formulation_note": "The epistemic free-rider problem decomposes into upstream constraints on platform/academic systems (synthetic_content_amplification, engagement_optimization) that create the conditions for truth-mining exhaustion, and downstream constraints on information quality and policy decision-making. This story focuses on the mechanism (free-rider dynamics) that links platform incentives to truth-miner exhaustion. Related constraint stories examine specific institutional mechanisms (publication systems, algorithmic ranking, funding structures) that implement the extraction."
+  },
+  "directionality_overrides": []
+}

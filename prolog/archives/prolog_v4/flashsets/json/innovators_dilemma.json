@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "innovators_dilemma",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Innovator's Dilemma",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_shareholders",
+      "disruptive_innovators"
+    ],
+    "victims": [
+      "incumbent_employees",
+      "incumbent_customers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Incumbent Employees",
+      "comment": "Incumbent employees face job losses and skill obsolescence as a result of the incumbent's inability to adapt to disruptive technologies. They are trapped by their specialized skills and location."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Customers",
+      "comment": "Incumbent customers initially benefit from the incumbent's focus on sustaining innovations, but ultimately suffer as the incumbent fails to adopt disruptive technologies that better meet their needs or offer lower prices. They are constrained by switching costs and network effects."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Shareholders",
+      "comment": "Incumbent shareholders initially benefit from the incumbent's focus on high-margin sustaining innovations, but ultimately bear the cost of the incumbent's failure to adopt disruptive technologies. They can arbitrage by investing in disruptive innovators."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Disruptive Innovators",
+      "comment": "Disruptive innovators benefit from the incumbent's inability to respond to their innovations. They are mobile and can enter the market with lower prices or better features."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the Innovator's Dilemma as a tangled rope, a hybrid of coordination and extraction. It coordinates the rational behavior of companies to focus on high-margin products, but it extracts from incumbent employees and customers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rate_of_disruption",
+      "question": "How rapidly are disruptive technologies emerging in a given industry?",
+      "resolution_mechanism": "Analyze the frequency and impact of new technologies entering the market.",
+      "impact": "High rate of disruption exacerbates the dilemma, making it more difficult for incumbents to adapt. Low rate reduces the pressure on incumbents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determines the pressure on incumbents to adapt."
+    },
+    {
+      "id": "incumbent_adaptability",
+      "question": "What organizational structures and processes enable incumbents to adapt to disruption?",
+      "resolution_mechanism": "Case studies of successful and unsuccessful incumbent responses to disruption.",
+      "impact": "High adaptability reduces the extractiveness of the dilemma. Low adaptability makes it more severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Incumbent's capacity to adapt to disruption."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Innovator's Dilemma describes how successful companies, by rationally listening to their best customers and investing in high-margin products, create a structural inability to respond to 'disruptive' technologies that start in low-margin, niche markets. This creates a tension between short-term profits and long-term survival.",
+    "key_agents": [
+      "Incumbent Shareholders: Benefit from short-term profits (institutional/arbitrage)",
+      "Incumbent Employees: Suffer job losses (powerless/trapped)",
+      "Incumbent Customers: Initially benefit, but ultimately suffer (moderate/constrained)",
+      "Disruptive Innovators: Benefit from incumbent's inability to adapt (powerful/mobile)"
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.55) because the incumbent is extracting value from employees and customers in the long run, even though it is providing value in the short run. Suppression is high (0.65) because the incumbent is suppressing disruptive innovations by focusing on sustaining innovations. Theater Ratio is moderate (0.30) because incumbents genuinely believe they are acting in the best interests of all stakeholders.",
+    "perspectival_gap": "The incumbent shareholders see the dilemma as a coordination problem: they are rationally allocating resources to the most profitable opportunities. The disruptive innovators see the dilemma as an opportunity to disrupt the market. The incumbent employees and customers see the dilemma as a snare, trapping them in a declining ecosystem.",
+    "directionality_logic": "Incumbent shareholders have arbitrage exit options and benefit in the short-term, yielding a low directionality. Incumbent employees are trapped and bear the costs, leading to a high directionality. Customers are constrained, leading to a moderate directionality. Disruptive innovators are mobile and benefit, leading to a low directionality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "creative_destruction",
+      "technological_lock_in"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,126 @@
+{
+  "header": {
+    "constraint_id": "altruistic_misery_paradox_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Paradox of Altruistic Misery",
+    "topic_domain": "social/psychological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "recipients_of_altruism",
+      "society_at_large"
+    ],
+    "victims": [
+      "altruistic_individuals"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Altruistic Individual",
+      "comment": "The altruistic individual, feeling socially obligated to prioritize others' needs, often finds themselves trapped in a cycle of self-sacrifice and suppressed desires. They experience a high degree of extraction with limited means of escape."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Society at Large",
+      "comment": "Society benefits from altruistic behavior, as it fosters cooperation, mutual support, and social cohesion. From an institutional perspective, altruism is seen as a coordinating mechanism that promotes the well-being of the collective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "From a civilizational perspective, the paradox of altruistic misery is a complex interplay between coordination and extraction. While altruism fosters social bonds and mutual support, it also creates a system where some individuals bear a disproportionate burden of self-sacrifice, leading to potential exploitation and unhappiness. The system requires active enforcement through social norms and expectations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intrinsic_vs_extrinsic_motivation",
+      "question": "To what extent is the altruistic behavior driven by intrinsic motivation (genuine empathy) versus extrinsic pressure (social obligation)?",
+      "resolution_mechanism": "Psychological studies examining the correlation between reported altruistic behavior and measures of empathy, social anxiety, and fear of social disapproval.",
+      "impact": "If primarily intrinsic: the constraint may be better characterized as a form of genuine coordination (rope). If primarily extrinsic: the constraint is more accurately described as a system of extraction (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which altruistic behavior is intrinsically or extrinsically motivated."
+    },
+    {
+      "id": "cultural_variation_in_altruistic_expectations",
+      "question": "How do cultural norms and expectations regarding altruism vary across different societies and communities?",
+      "resolution_mechanism": "Cross-cultural anthropological studies examining the prevalence and valuation of altruistic behavior in different societies.",
+      "impact": "If cultural norms are highly demanding: the extraction experienced by altruistic individuals will be more severe (stronger snare). If cultural norms are more balanced: the extraction will be less pronounced (weaker snare or tangled rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cultural variation in altruistic expectations and norms."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The paradox of altruistic misery describes the situation where individuals feel compelled by social pressures to prioritize the happiness and well-being of others through self-sacrifice, often to their own detriment. This creates a tension between the benefits of altruism for society and the potential costs for the individual.",
+    "key_agents": [
+      "Altruistic Individuals: Primary target (powerless/trapped) - Bear the costs of self-sacrifice.",
+      "Recipients of Altruism: Primary beneficiary (powerful/mobile) - Benefit from the selflessness of others.",
+      "Society at Large: Secondary beneficiary (institutional/arbitrage) - Benefits from the overall increase in social cohesion and well-being facilitated by altruistic behavior."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.55) because while altruistic individuals do experience a loss of personal well-being, their actions contribute to a greater social good. Suppression is also high (0.60) because social norms and expectations often discourage individuals from prioritizing their own needs and desires.",
+    "perspectival_gap": "The altruistic individual experiences the constraint as a snare because they are trapped in a cycle of self-sacrifice. Society at large benefits and thus views altruism as a rope, a coordinating mechanism that promotes the well-being of the collective. The analytical observer sees the complex interplay between the benefits of altruism and the potential costs to the individual, resulting in a tangled rope classification.",
+    "directionality_logic": "The directionality logic reflects the structural relationships between the agents. The altruistic individual, as the primary target, has a high 'd' value, indicating that they bear the majority of the costs. The recipients of altruism and society at large, as the beneficiaries, have low 'd' values, indicating that they receive the majority of the benefits. The analytical observer, having a global view, sees both the benefits and costs, resulting in an intermediate 'd' value.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that altruism is neither purely beneficial nor purely exploitative, but rather a complex mix of both. The tangled rope classification accurately reflects this complexity, acknowledging both the coordination aspects of altruism and the potential for extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

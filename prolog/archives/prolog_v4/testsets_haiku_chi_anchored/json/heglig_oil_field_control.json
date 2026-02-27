@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "heglig_oil_field_control",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "heglig"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Control of Heglig Oil Field as a Strategic War Asset",
+    "topic_domain": "geopolitical/economic/conflict",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rsf_paramilitary_faction"
+    ],
+    "victims": [
+      "sudanese_civilian_population",
+      "competing_power_factions",
+      "regional_energy_security"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Sudanese Civilian Population",
+      "comment": "PERSPECTIVE 1: SUDANESE CIVILIAN POPULATION (SNARE) \u2014 Trapped within territory controlled by RSF. Oil revenue diversion funds military operations; civilian access to fuel and foreign exchange collapses. Zero exit options except displacement/refugee status. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Competing Sudanese Factions (SAF/Other Militaries)",
+      "comment": "PERSPECTIVE 2: COMPETING SUDANESE FACTIONS (SNARE) \u2014 Organized military actors unable to retake the field without major offensive (constrained exit). RSF's control of oil wealth + military hardware creates asymmetric extraction \u2014 competing factions lose geopolitical leverage and funding capacity. d\u22480.70, f(d)\u22481.05, \u03c3=1.1 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Global Oil Markets & Energy-Dependent States",
+      "comment": "PERSPECTIVE 3: GLOBAL OIL MARKETS (TANGLED ROPE) \u2014 Sudan's oil production disruption (300k-400k bpd taken offline) affects global energy prices; energy-dependent states bear cost. However, global actors have exit options: alternative suppliers, energy substitution, storage depletion. The constraint provides coordination benefit (price signal forces efficiency investment) alongside extraction (volatility tax on energy importers). d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "RSF Leadership & Affiliated Commercial Networks",
+      "comment": "PERSPECTIVE 4: RSF LEADERSHIP (ROPE) \u2014 Benefits from control via oil revenue extraction, military funding, geopolitical leverage. Experiences constraint as coordination mechanism: control of resource base enables organization of faction, signaling of commitment to external actors, and negotiating leverage. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.1 \u2192 \u03c7\u2248-0.06. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "International Humanitarian & Resource Governance Regime",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL GOVERNANCE REGIME (SNARE) \u2014 From civilizational view, the constraint violates natural resource governance norms (revenue transparency, civilian benefit, environmental protection). The regime cannot enforce; trapped in performative statements. Theater ratio reflects gap between humanitarian law and capacity to prevent military capture of resources. d\u22480.85, f(d)\u22481.20, \u03c3=1.2 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Neighboring States & Regional Economies",
+      "comment": "PERSPECTIVE 6: NEIGHBORING STATES (SNARE) \u2014 Egypt, Ethiopia, Eritrea face refugee flows, cross-border spillover, and disrupted trade. Constrained exit: cannot ignore humanitarian crisis but have limited intervention capacity. Experience extraction via forced burden-sharing and regional destabilization. d\u22480.68, f(d)\u22481.00, \u03c3=1.1 \u2192 \u03c7\u22480.50."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rsf_institutional_durability",
+      "question": "Can the RSF consolidate Heglig control into a sustained state-like institution, or will it remain a warlord extraction mechanism subject to military collapse?",
+      "resolution_mechanism": "Observation of administrative structures, revenue reinvestment in civilian services vs military spending, ability to maintain control against organized international pressure, succession planning and factional coherence",
+      "impact": "If institutional: constraint evolves toward Tangled Rope (with coordination benefits in security/governance). If extraction-only: remains Snare indefinitely, intensifying civilian cost until military resolution.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Sustainability of RSF institutional control over oil field"
+    },
+    {
+      "id": "international_enforcement_threshold",
+      "question": "At what level of humanitarian cost or geopolitical pressure does the international community intervene to forcibly restore resource governance?",
+      "resolution_mechanism": "Analysis of historical precedent (Zimbabwe diamonds, Libya oil, Congo minerals), comparison of civilian casualty thresholds across similar conflicts, measurement of diplomatic pressure intensity",
+      "impact": "If threshold is low: external intervention could shift constraint to temporary military-managed transition (Scaffold). If threshold is high: RSF control persists, Snare classification holds indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for international intervention in resource control"
+    },
+    {
+      "id": "civilian_substitute_energy_access",
+      "question": "Can black-market fuel networks and cross-border smuggling provide sufficient civilian energy access to materially reduce suppression, or does RSF monopoly control remain total?",
+      "resolution_mechanism": "Price tracking of black-market fuel, measurement of informal supply chains, monitoring of electricity access in RSF-controlled regions, comparison with baseline pre-conflict consumption",
+      "impact": "If substitute networks are robust: suppression may decline from 0.75 to 0.55-0.60, weakening Snare classification. If monopoly holds: suppression remains high, Snare classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of black-market fuel networks in mitigating civilian energy suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The RSF capture of Heglig, Sudan's largest and most productive oil field, represents a classic resource capture during state collapse. The constraint embodies military extraction: the RSF uses control of the field (1) to fund military operations, (2) to deny resources to competing factions, and (3) to establish de facto territorial sovereignty. The civilian population\u2014without exit options, organizational capacity, or alternative income sources\u2014bears the full cost: fuel scarcity, currency collapse (lost foreign exchange), and diversion of what limited state capacity remains toward military operations rather than civilian services. Suppression is exceptionally high (0.75): the RSF monopolizes oil infrastructure, controls export corridors, and uses fuel scarcity as a compliance mechanism. Theater ratio (0.55) reflects the gap between RSF's occasional claims of state-building legitimacy and the operational reality of pure resource extraction. The constraint is a high-extractiveness Snare from most perspectives except the RSF leadership (Rope/net beneficiary) and global energy markets (Tangled Rope with both costs and coordination benefits). The international humanitarian regime sees a Snare but has no enforcement capacity\u2014trapped in performative statements while suppression persists.",
+    "key_agents": [
+      "RSF Leadership: Primary beneficiary (institutional/arbitrage) \u2014 captures oil revenue, funds military expansion, establishes geopolitical leverage in factional conflict",
+      "Sudanese Civilian Population: Primary victim (powerless/trapped) \u2014 denied fuel access, subjected to currency collapse, forced to bear costs of resource diversion",
+      "Competing Sudanese Factions (SAF, others): Secondary victim (organized/constrained) \u2014 lose funding capacity and geopolitical leverage; unable to retake field without major offensive",
+      "Global Oil Markets & Energy Importers: Mixed (powerful/mobile) \u2014 experience energy price volatility and reduced supply, but have exit options and derive coordination benefit (price signals)",
+      "Neighboring States (Egypt, Ethiopia, Eritrea): Secondary victim (moderate/constrained) \u2014 absorb refugee flows, cross-border spillover, disrupted trade; cannot ignore crisis but have limited capacity",
+      "International Humanitarian/Governance Regime: Organizational victim (analytical/analytical) \u2014 sees constraint as violation of norms but lacks enforcement mechanisms; trapped in theater"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. RSF extraction is severe and multi-dimensional: direct revenue capture (oil sales valued at ~$5-8B annually), denial of resources to competitors, military equipment procurement, and forced labor or conscription funded by oil wealth. The extraction has increased from 0.45 to 0.68 over the measurement interval as RSF consolidated control and formalized revenue diversion. This reflects not just initial seizure but systematic institutionalization of extraction. Suppression (0.75): Very high. RSF maintains monopoly control through military force, controls all export infrastructure, restricts civilian fuel access through rationing and price inflation, and prevents alternative supply networks from forming. The only reason suppression is not 0.95+ is that some black-market fuel networks persist at high cost to civilians. Theater ratio (0.55): Moderate. The RSF occasionally makes legitimacy claims (state formation narrative, resource nationalism) but these are not central to the constraint's operation. The primary mechanism is direct coercion and resource denial, not performative claims. The theater ratio reflects periodic international negotiations where RSF signals willingness to 'govern responsibly' while extracting maximum value.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. The RSF leadership sees rope (coordination benefit of resource control). Competing factions see snare (extraction and denial). The civilian population sees snare (pure victimization). Global energy markets see tangled rope (mixed costs and coordination benefit). Neighboring states see snare (forced burden-sharing). The international regime sees snare but with performative layer (theater). This divergence reflects that the same structural mechanism (resource monopoly enforced by military power) distributes costs and benefits entirely asymmetrically: one faction extracts maximally; everyone else bears cost. There is no shared perception that the constraint benefits all parties or solves a collective action problem.",
+    "directionality_logic": "RSF Leadership: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; negative effective extraction. Sudanese civilians: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction power. Competing factions: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. High extraction; cannot exit without military investment. Global energy markets: Mixed + mobile \u2192 d\u22480.55, f(d)\u22480.75. Moderate effective extraction; has exit options (substitution, efficiency gains). Neighboring states: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.00. Moderate-high extraction; cannot ignore neighboring state humanitarian crisis. International regime: Victim + analytical \u2192 d\u22480.85, f(d)\u22481.20. High effective extraction of enforcement legitimacy; trapped by lack of enforcement capacity.",
+    "mandatrophy_analysis": "Mandatrophy resolution: This constraint does NOT resolve mandatrophy at extractiveness 0.68 < 0.70 threshold. However, if we project forward to consolidation scenarios where extractiveness reaches 0.72+, mandatrophy would require demonstration that (1) the constraint has genuine coordination function (security provision, administrative capacity for civilian goods), or (2) the classification as pure Snare is stable across time. Current evidence supports Snare classification: the RSF provides no civilian coordination benefit; extraction is the sole mechanism. The mandatrophy is prevented by the absence of any legitimate coordination claim. If the RSF were to establish stable civilian administration (schools, healthcare funded by oil revenue), the constraint would shift toward Tangled Rope, and mandatrophy resolution would become necessary. Currently, the constraint is unambiguously extractive, preventing the mandatrophy paradox."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "sudanese_currency_collapse",
+      "regional_energy_security_east_africa",
+      "refugee_flight_horn_of_africa"
+    ],
+    "dual_formulation_note": "Heglig control is a direct cause (upstream) of multiple constraints: currency collapse (oil revenue diversion reduces foreign exchange), regional energy insecurity (Sudan's production offline), and refugee dynamics (economic collapse drives migration). Each downstream constraint has its own \u03b5 values reflecting the second-order effects. The upstream constraint (Heglig control, \u03b5=0.68, Snare) provides the extraction mechanism that cascades into these effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

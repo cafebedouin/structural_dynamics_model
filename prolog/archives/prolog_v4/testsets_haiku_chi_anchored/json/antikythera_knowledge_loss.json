@@ -1,0 +1,159 @@
+{
+  "header": {
+    "constraint_id": "antikythera_knowledge_loss",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.1,
+    "claimed_type": "snare",
+    "human_readable": "Loss of Hellenistic Precision Gearing Knowledge",
+    "topic_domain": "technological/historical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elite_patrons_of_antiquity",
+      "dogmatic_knowledge_systems"
+    ],
+    "victims": [
+      "future_generations",
+      "hellenistic_engineers_lineage"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "PERSPECTIVE 1: FUTURE GENERATIONS (SNARE) - Trapped by the arrow of time, future civilizations bore the full 1500-year opportunity cost of this lost knowledge. They had no exit and could not influence the past. The loss represents a pure, unrecoverable extraction of technological potential. d≈0.95, f(d)≈1.42, σ=1.2 -> χ≈1.11."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Hellenistic Elite Patrons",
+      "comment": "PERSPECTIVE 2: ELITE PATRONS (ROPE) - For the wealthy individuals who commissioned such devices, the technology was a coordination tool for demonstrating status, predicting events, and organizing society (e.g., timing of games). Its rarity enhanced its value. They were pure beneficiaries with arbitrage power. d≈0.05, f(d)≈-0.12, σ=0.9 -> χ≈-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Hellenistic Engineers",
+      "comment": "PERSPECTIVE 3: HELLENISTIC ENGINEERS (TANGLED ROPE) - The artisans who built the mechanism benefited from their unique, high-value skills (coordination) but were also victims of a system where this knowledge was not widely disseminated and was dependent on fragile patronage networks (extraction). Their lineage was trapped by societal collapse. d≈0.75, f(d)≈1.10, σ=0.8 -> χ≈0.57."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Modern Historian of Technology",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (SNARE) - The analytical view sees a systemic failure. The combination of knowledge concentration, institutional fragility, and societal upheaval created a structural trap that captured and extinguished a critical technological capability for over a millennium. This matches the claimed type."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The 'Cyclical History' View",
+      "comment": "PERSPECTIVE 5: CYCLICAL HISTORY VIEW (MOUNTAIN) - This perspective naturalizes the loss, framing it as an inevitable consequence of civilizational rise and fall, a 'law of history'. It misclassifies a contingent institutional failure as an unchangeable mountain. The engine will flag this as a false summit, as the base properties (high ε and suppression) are inconsistent with a natural law."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1600
+  },
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1600,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1600,
+      "value": 0.1
+    }
+  ],
+  "omegas": [
+    {
+      "id": "knowledge_dissemination_scope",
+      "question": "How widespread was the knowledge to build these mechanisms in the Hellenistic world?",
+      "resolution_mechanism": "Archaeological discovery of other similar mechanisms, fragments, or workshops; textual analysis of engineering treatises.",
+      "impact": "If knowledge was widespread (e.g., dozens of workshops), the loss is more indicative of active suppression (Snare). If it was confined to a single school or workshop, the loss is more a result of fragility (Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent of precision gearing knowledge in antiquity."
+    },
+    {
+      "id": "active_suppression_vs_neglect",
+      "question": "Was the loss of knowledge a result of passive societal decay and neglect, or was there active suppression by rising dogmatic/religious ideologies?",
+      "resolution_mechanism": "Historical analysis of late Roman and early medieval texts for evidence of suppression of mechanical philosophy or specific scientific traditions.",
+      "impact": "Clear evidence of active suppression would confirm the Snare classification and the 'requires_active_enforcement' flag. A finding of pure neglect would weaken the Snare case in favor of a catastrophic Piton (a functional system that simply broke and was forgotten).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Distinguishing between active suppression and passive neglect."
+    },
+    {
+      "id": "mechanism_practical_efficacy",
+      "question": "How accurate and reliable was the mechanism in practice?",
+      "resolution_mechanism": "Advanced modeling of gear wear, friction, and potential inaccuracies based on known Hellenistic manufacturing tolerances.",
+      "impact": "If highly effective, its loss is a true Snare. If it was impressive but ultimately unreliable, it may have been a technological dead-end that was abandoned for practical reasons, making the 'loss' more of a Piton-like degradation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The real-world reliability and accuracy of the device."
+    }
+  ],
+  "commentary": {
+    "narrative_context": "The Antikythera Mechanism reveals a level of Hellenistic engineering that was subsequently lost for over 1,500 years. The constraint is not the device itself, but the set of systemic factors—knowledge concentration, institutional fragility, and societal upheaval—that allowed this advanced capability to be completely erased from the technological landscape. This systemic fragility acted as a snare, trapping knowledge and imposing a massive opportunity cost on subsequent generations.",
+    "key_agents": [
+      "Future Generations: Primary victim (powerless/trapped) - Bore the 1500-year cost of the technological reset.",
+      "Hellenistic Engineers' Lineage: Secondary victim (moderate/constrained) - Possessed valuable skills but were dependent on a fragile system that ultimately collapsed.",
+      "Elite Patrons of Antiquity: Primary beneficiary (institutional/arbitrage) - Used the rare technology as a tool for coordination and status.",
+      "Dogmatic Knowledge Systems: Secondary beneficiary (institutional/constrained) - The absence of a mechanical, predictive model of the cosmos reinforced worldviews based on divine will rather than natural law.",
+      "Modern Historians: Analytical observer - Perceive the full scope of the systemic failure."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65): Represents the immense opportunity cost imposed on subsequent civilizations. The 1500-year gap in precision mechanical engineering is a direct measure of the value extracted from the timeline. Suppression (0.75): High. The combination of the collapse of the Roman empire, the destruction of libraries (like Alexandria), and the rise of worldviews less conducive to mechanical philosophy created an environment where rediscovery was nearly impossible. The alternative (possessing this knowledge) was effectively suppressed. Theater Ratio (0.10): Low. The loss was a structural failure, not a performative act.",
+    "perspectival_gap": "The gap is stark. For the elite patron, the device was a useful Rope for coordination. For the engineer, it was a Tangled Rope of specialized skill and precarious employment. For future generations, the system that allowed its loss was a catastrophic Snare. For a determinist historian, the loss appears as an inevitable Mountain of civilizational cycles. This demonstrates how a single historical event is classified differently based on structural position relative to the flow of knowledge and time.",
+    "directionality_logic": "The beneficiaries are the ancient elites who monopolized the knowledge and the later dogmatic systems whose dominance was unchallenged by a mechanistic worldview. The victims are the artisans whose craft died and, most significantly, all subsequent generations who had to re-derive the lost principles from scratch. The high extraction value is primarily borne by these powerless, temporally distant victims.",
+    "mandatrophy_analysis": "This case resolves a potential mandatrophy where 'history' is seen as a series of random events. The framework classifies the loss not as an accident, but as a structural failure of a knowledge-preservation system. It was a Snare with identifiable properties (high concentration, low dissemination, institutional fragility) that predictably traps and extinguishes complex, non-obvious knowledge during periods of instability. The 'Mountain' perspective is revealed as a false summit that naturalizes this preventable failure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "medieval_clockmaking_delay"
+    ]
+  }
+}

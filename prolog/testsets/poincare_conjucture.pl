@@ -1,9 +1,10 @@
 % ============================================================================
-% CONSTRAINT STORY: poincare_conjecture
+% CONSTRAINT STORY: poincare_conjucture
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_poincare_conjecture, []).
@@ -30,14 +31,18 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
-    domain_priors:emerges_naturally/1,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:omega_variable/3,
     constraint_indexing:constraint_classification/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -47,32 +52,31 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: poincare_conjecture
+ *   constraint_id: poincare_conjucture
  *   human_readable: The Poincaré Conjecture (Mathematical Theorem)
- *   domain: mathematical
+ *   domain: mathematics/topology
  *
  * SUMMARY:
- *   The Poincaré Conjecture asserts that every simply connected, closed
- *   3-manifold is homeomorphic to the 3-sphere. Proven by Grigori Perelman,
- *   it is now a theorem that functions as an unchangeable feature of
- *   topological space. This constraint story models the mathematical truth
- *   itself, which is a Mountain—a fixed, non-extractive law of a formal
- *   system. The social dynamics surrounding its proof and the associated
- *   prizes are a separate, coupled constraint.
+ *   The Poincaré Conjecture is a canonical example of a mathematical
+ *   constraint — a statement about the structure of 3-manifolds that operates
+ *   as an immutable logical boundary across all observers and all time
+ *   periods. Conjectured by Henri Poincaré in 1900 as a question about the
+ *   topology of 3-dimensional spaces, it remained unproven for over a century
+ *   despite being central to the field of topology. In 2002-2003, Grigori
+ *   Perelman published a proof using Ricci flow techniques, resolving the
+ *   conjecture affirmatively. The constraint exhibits zero degrees of
+ *   freedom: the truth-value is determined by the logical structure of
+ *   topology, not by institutions, resources, consensus, or social factors.
+ *   No mathematician can 'exit' the constraint by choosing a different
+ *   framework without abandoning mathematics itself. The constraint is
+ *   unchangeable, irreducible, and appears as natural law — it is what
+ *   mountains look like in mathematics.
  *
- * KEY AGENTS (by structural relationship):
- *   - Any 3-Manifold: The subject whose identity is fixed by its topological
- *     properties (powerless/trapped).
- *   - Topologists & Physicists: Analytical observers who use the theorem as a
- *     foundational tool for classification (institutional/analytical).
- *
- * DUAL FORMULATION NOTE:
- *   This constraint is one of two stories decomposed from the colloquial
- *   label "The Poincaré Conjecture". Decomposed because ε differs across
- *   observables (ε-invariance principle).
- *   - poincare_conjecture (ε=0.01, Mountain): The mathematical theorem itself.
- *   - professional_recognition_system (ε≈0.48, Snare): The social system of
- *     prizes and validation that extracts compliance from researchers.
+ * KEY AGENTS:
+ *   - Working Topologists: Powerless/analytical agents who encounter the constraint as a logical boundary, not a coercive force
+ *   - Mathematical Research Institutions: Institutional agents that cannot suppress or negotiate the constraint's truth-value through policy
+ *   - Grigori Perelman: The specific mathematician whose proof resolved the conjecture, but whose arrival was contingent on prior decades of foundational work
+ *   - Analytical Observer: The universal perspective from which the constraint is seen as a feature of mathematical structure itself, not of any particular human arrangement
  */
 
 /* ==========================================================================
@@ -80,102 +84,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% A proven mathematical theorem has virtually zero extractiveness.
-domain_priors:base_extractiveness(poincare_conjecture, 0.01).
-% It does not suppress alternatives; it defines a category of object.
-domain_priors:suppression_score(poincare_conjecture, 0.01).
-% Mathematical truth has no performative aspect.
-domain_priors:theater_ratio(poincare_conjecture, 0.01).
+domain_priors:base_extractiveness(poincare_conjucture, 0.12).
+domain_priors:suppression_score(poincare_conjucture, 0.02).
+domain_priors:theater_ratio(poincare_conjucture, 0.08).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(poincare_conjecture, extractiveness, 0.01).
-narrative_ontology:constraint_metric(poincare_conjecture, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(poincare_conjecture, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(poincare_conjucture, extractiveness, 0.12).
+narrative_ontology:constraint_metric(poincare_conjucture, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(poincare_conjucture, theater_ratio, 0.08).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain.
-% A topological necessity is nearly absolute.
-narrative_ontology:constraint_metric(poincare_conjecture, accessibility_collapse, 0.99).
-% Resistance to a proven theorem is mathematically incoherent.
-narrative_ontology:constraint_metric(poincare_conjecture, resistance, 0.01).
+narrative_ontology:constraint_metric(poincare_conjucture, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(poincare_conjucture, resistance, 0.05).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(poincare_conjecture, mountain).
-narrative_ontology:human_readable(poincare_conjecture, "The Poincaré Conjecture (Mathematical Theorem)").
-narrative_ontology:topic_domain(poincare_conjecture, "mathematical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(poincare_conjucture, mountain).
+narrative_ontology:human_readable(poincare_conjucture, "The Poincaré Conjecture (Mathematical Theorem)").
+narrative_ontology:topic_domain(poincare_conjucture, "mathematics/topology").
 
-% --- Emergence flag (required for mountain constraints) ---
-% The theorem emerges from the axioms of topology without human enforcement.
-domain_priors:emerges_naturally(poincare_conjecture).
+domain_priors:emerges_naturally(poincare_conjucture).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a Mountain, the theorem has no beneficiaries or
-% victims in the structural sense; it is a feature of the landscape.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   As a Mountain, the classification is invariant across all perspectives.
-   The low ε (0.01) ensures χ remains near zero for all indices.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE 3-MANIFOLD (THE SUBJECT)
-% The manifold itself is bound by this topological law. It cannot change its
-% nature. From its perspective, the constraint is an unchangeable fact.
-constraint_indexing:constraint_classification(poincare_conjecture, mountain,
+% PERSPECTIVE 1: WORKING TOPOLOGIST (MOUNTAIN) — Any topologist working with 3-manifolds encounters the Poincaré Conjecture as a logical and structural boundary. The constraint is not imposed by external coercion or resource scarcity but by the internal structure of mathematical possibility itself. No topologist can 'exit' the truth-value of the conjecture by choosing a different framework — the logical structure is universal and unchangeable.
+constraint_indexing:constraint_classification(poincare_conjucture, mountain,
     context(agent_power(powerless),
             time_horizon(civilizational),
-            exit_options(trapped),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE WORKING MATHEMATICIAN
-% For a topologist or physicist, the proven conjecture is a foundational
-% piece of the landscape—a fixed point of reference.
-constraint_indexing:constraint_classification(poincare_conjecture, mountain,
+% PERSPECTIVE 2: MATHEMATICAL RESEARCH COMMUNITY (MOUNTAIN) — The Poincaré Conjecture constrains what theorems can be proven and what research directions are viable, but this constraint is logical, not coercive. Institutions cannot suppress the conjecture's truth-value through policy or funding pressure. Proof or disproof will arrive through logical necessity, not institutional negotiation. The constraint applies uniformly across all mathematical institutions and all time periods.
+constraint_indexing:constraint_classification(poincare_conjucture, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
+            time_horizon(civilizational),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% From a detached, analytical viewpoint, the theorem is a fundamental,
-% non-extractive truth about the structure of 3-manifolds.
-constraint_indexing:constraint_classification(poincare_conjecture, mountain,
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From the standpoint of mathematical logic, the Poincaré Conjecture is a structural feature of 3-manifold topology that exists independently of all observers and all institutional contexts. Its truth-value is determined by the axiomatic structure of topology and set theory, not by social, economic, or political factors. This is the canonical mathematical perspective: constraints of pure logic are mountains.
+constraint_indexing:constraint_classification(poincare_conjucture, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
+% PERSPECTIVE 4: EARLY CAREER MATHEMATICIAN (MOUNTAIN) — From 1900 until Perelman's proof in 2003, the Poincaré Conjecture operated as a fixed logical horizon for generations of mathematicians. No proof was discovered despite sustained effort. The constraint appeared immutable — a seemingly permanent feature of 3-manifold topology that each generation inherited unchanged. Even when unproven, it constrained valid theorems and guided research directions with logical necessity.
+constraint_indexing:constraint_classification(poincare_conjucture, mountain,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(poincare_conjecture_tests).
+:- begin_tests(poincare_conjucture_tests).
 
-test(classification_invariance) :-
-    % Verify that the classification is Mountain from multiple perspectives,
-    % demonstrating the invariance expected of a natural law.
-    constraint_indexing:constraint_classification(poincare_conjecture, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(poincare_conjecture, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget == mountain,
-    TypeBeneficiary == mountain.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(poincare_conjucture, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(poincare_conjucture, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(natural_law_profile) :-
-    % Verify that the full Natural Law profile is declared.
-    domain_priors:emerges_naturally(poincare_conjecture),
-    narrative_ontology:constraint_metric(poincare_conjecture, accessibility_collapse, AC), AC >= 0.85,
-    narrative_ontology:constraint_metric(poincare_conjecture, resistance, R), R =< 0.15.
-
-test(threshold_validation) :-
-    % Verify that the base metrics are within Mountain thresholds.
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
-    narrative_ontology:constraint_metric(poincare_conjecture, ExtMetricName, E),
-    narrative_ontology:constraint_metric(poincare_conjecture, SuppMetricName, S),
+    narrative_ontology:constraint_metric(poincare_conjucture, ExtMetricName, E),
+    domain_priors:suppression_score(poincare_conjucture, S),
     E =< 0.25,
     S =< 0.05.
 
-:- end_tests(poincare_conjecture_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(poincare_conjucture),
+    narrative_ontology:constraint_metric(poincare_conjucture, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(poincare_conjucture, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(poincare_conjucture_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -183,77 +175,87 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The original file conflated the mathematical theorem (ε≈0) with the
- *   social system of prizes and recognition surrounding its proof (ε>0).
- *   This violates the ε-invariance principle. This regenerated file models
- *   ONLY the mathematical theorem, which is a classic Mountain. Its base
- *   extractiveness and suppression are near zero, as a mathematical truth
- *   does not extract value or coerce behavior.
+ *   Extractiveness (0.12): Very low. The Poincaré Conjecture extracts nothing from any agent. It is not a mechanism of distribution, coordination, or control. Mathematicians do not pay a resource cost to 'obey' the logical structure of topology — they simply accept what is true. The low (non-zero) value reflects that knowledge of the conjecture's truth-value imposes cognitive load and guides research decisions, but this is not extraction in the economic or political sense. It is the weight of truth itself. Suppression (0.02): Negligible. There is no mechanism of suppression. The conjecture cannot be suppressed, hidden, or denied into falsehood. Its truth-value is independent of all observational or institutional measures. Theater ratio (0.08): Very low. The proof of the Poincaré Conjecture is purely functional — mathematical proof is the most direct form of evidence possible. There is no performative content, no ritual, no theater. The proof is either valid or invalid according to logical standards that admit no ambiguity. The small non-zero value reflects only the fact that mathematical communication requires presentation (papers, talks), but this is minimal overhead.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a Mountain, the classification is
- *   invariant across all indices. This uniformity is a key signature of a
- *   natural law or a fundamental logical constraint.
+ *   The Poincaré Conjecture shows zero perspectival gap — it classifies as Mountain from every indexical position. A powerless agent and an institutional agent and an analytical observer all encounter the same logical constraint. A mathematician in 1950 and a mathematician in 2025 inherit the same logical structure. This invariance across all observers and all times is the defining signature of a mountain. The constraint does not differentiate based on power, exit options, time horizon, or spatial scope. It is universal.
  *
  * DIRECTIONALITY LOGIC:
- *   As a Mountain, there are no structural beneficiaries or victims. The
- *   theorem is a feature of the formal landscape, not a mechanism for
- *   transferring value between groups. Therefore, no beneficiary/victim
- *   declarations are needed.
+ *   The Poincaré Conjecture has no directionality (d is undefined/N.A.). There are no beneficiaries or victims. No agent experiences extraction from this constraint. The constraint is a structural property of mathematical space, not a mechanism of distribution between agents. The engine will find no beneficiary or victim declarations in base_properties, and therefore no directionality derivation applies. The constraint's classification as Mountain is independent of the directionality machinery — it follows from the base metrics (ε ≤ 0.25, suppression ≤ 0.05) and the natural law signatures (accessibility_collapse ≥ 0.85, resistance ≤ 0.15, emerges_naturally = true).
  *
  * MANDATROPHY ANALYSIS:
- *   By decomposing the mathematical truth from the social system, this
- *   classification avoids mislabeling a fundamental law as extractive. The
- *   extractive dynamics (e.g., pressure to accept prizes) belong to a
- *   separate constraint story (`professional_recognition_system`), likely a
- *   Snare or Tangled Rope.
+ *   ZERO MANDATROPHY: This constraint demonstrates that the mandatrophy resolution mechanism is not needed for mountains. Mountains have zero degrees of freedom — they classify identically from all perspectives, carry no hidden extraction, and contain no institutional disguise. The Poincaré Conjecture is what it appears to be: a logical truth about 3-manifold topology. There is no risk of falsely labeling it as pure coordination (Rope) or temporary scaffolding (Scaffold). The theorem speaks for itself across all contexts. This is the mathematical ideal of constraint classification — when a constraint is a mountain, there is nothing to resolve, nothing hidden, nothing institutional. The structure is transparent.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_poincare_conjecture,
-    'Is the perceived necessity of mathematical theorems a feature of the universe or a cognitive artifact of axiomatic systems?',
-    'Resolution via formal models of cognition vs. fundamental physics, or evidence of mathematics being unreasonably effective.',
-    'If purely a cognitive artifact, math is a Rope (a coordination tool for minds like ours). If a feature of the universe, it is a Mountain.',
-    confidence_without_resolution(low)
+    mountain_vs_artifact,
+    'Is the Poincaré Conjecture a structural property of 3-manifold topology itself, or an artifact of our choice of axiomatic framework (ZFC vs other foundational systems)?',
+    'Analysis of the conjecture''s status across non-standard set theories and alternative foundational frameworks. Testing whether the result holds in intuitionistic mathematics or other non-classical logics.',
+    'If universal across frameworks: confirms mountain status. If dependent on ZFC: reclassifies as a constraint of a specific axiomatic choice, not a natural law of topology.',
+    confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_poincare_conjecture, conceptual, 'Distinction between mathematical truth as universal law vs. cognitive construct.').
+narrative_ontology:omega_variable(mountain_vs_artifact, conceptual, 'Whether the conjecture is universal or framework-dependent').
+
+omega_variable(
+    proof_necessity_vs_contingency,
+    'Was Perelman''s proof approach (Ricci flow) logically inevitable, or was it a contingent technical innovation that could have gone undiscovered indefinitely?',
+    'Comparative analysis of the Ricci flow proof against alternative approaches attempted historically. Assessment of whether any mathematician''s resource constraints, institutional access, or cognitive capacity truly blocked earlier discovery.',
+    'If inevitable: mountain status confirmed — the logical structure determined discovery timing. If contingent: suggests the constraint was partly social (resource barriers, institutional structure), weakening mountain classification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(proof_necessity_vs_contingency, conceptual, 'Whether proof timing was logically determined or contingent').
+
+omega_variable(
+    higher_dimensional_analogs,
+    'Why is the Poincaré Conjecture true for dimensions ≥ 5 (solved 1960-1970, Smale/Whitney) but notoriously hard for dimension 3 and false in dimension 4 (Donaldson/Freedman)?',
+    'Topological analysis comparing dimension-specific barriers. Understanding whether dimension 3 represents a genuine structural anomaly or a difference in proof accessibility across dimensional contexts.',
+    'If dimension 3 is structurally anomalous: suggests the constraint''s difficulty is not arbitrary but rooted in the geometry of 3-manifolds themselves. If purely proof-technical: suggests institutional/resource factors influenced relative difficulty.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(higher_dimensional_analogs, empirical, 'Why dimension 3 presents unique topological difficulty').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(poincare_conjecture, 0, 10).
+narrative_ontology:interval(poincare_conjucture, 1900, 2003).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required for low-extraction constraints (base_extractiveness <= 0.46).
+% Theater ratio over time
+narrative_ontology:measurement(poin_tr_t1900, poincare_conjucture, theater_ratio, 1900, 0.06).
+narrative_ontology:measurement(poin_tr_t1950, poincare_conjucture, theater_ratio, 1950, 0.07).
+narrative_ontology:measurement(poin_tr_t2003, poincare_conjucture, theater_ratio, 2003, 0.08).
+
+% Extraction over time
+narrative_ontology:measurement(poin_be_t1900, poincare_conjucture, base_extractiveness, 1900, 0.1).
+narrative_ontology:measurement(poin_be_t1950, poincare_conjucture, base_extractiveness, 1950, 0.11).
+narrative_ontology:measurement(poin_be_t2003, poincare_conjucture, base_extractiveness, 2003, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% --- Network Decomposition (Constraint Families) ---
-% This constraint is decomposed from the colloquial label "The Poincaré
-% Conjecture" to separate the mathematical truth from the social dynamics.
-% The theorem (Mountain) provides the foundation upon which the social
-% recognition system (Snare) operates.
-narrative_ontology:affects_constraint(poincare_conjecture, professional_recognition_system).
+narrative_ontology:affects_constraint(poincare_conjucture, ricci_flow_convergence).
+narrative_ontology:affects_constraint(poincare_conjucture, thurston_geometrization).
+
+% DUAL FORMULATION NOTE:
+% The Poincaré Conjecture is part of a constraint family in 3-manifold topology. The conjecture's proof (Mountain, ε=0.12) is logically upstream of Thurston's Geometrization Conjecture (Mountain, ε=0.18), which it resolves as a special case. Both are pure topology constraints with identical mountain classification. The Ricci flow machinery (a Tangled Rope, ε=0.35) developed by Hamilton and completed by Perelman represents the institutional/historical constraint that enabled the proof — a fundamentally different constraint story with higher extractiveness due to resource concentration and priority capture in differential geometry.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable for a Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

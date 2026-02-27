@@ -1,0 +1,163 @@
+{
+  "header": {
+    "constraint_id": "us_employer_health_insurance",
+    "version": "1.0",
+    "generated_date": "2024-01-03",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Employer-Sponsored Insurance (ESI) System",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_employers",
+      "insurance_companies"
+    ],
+    "victims": [
+      "employees",
+      "unemployed",
+      "small_businesses"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Employee (Job Lock)",
+      "comment": "Employees often experience 'job lock' due to their reliance on employer-sponsored health insurance, making them less likely to switch jobs or start their own businesses, even if better opportunities exist elsewhere. They are trapped within the system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Large Employers",
+      "comment": "Large employers benefit from the ESI system because it allows them to attract and retain employees, often at a lower cost than providing equivalent benefits directly. They can arbitrage across a large pool of employees to negotiate lower rates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer",
+      "comment": "An analytical observer sees the ESI system as a deeply flawed arrangement that provides essential healthcare access but is also a source of significant economic distortions and social inequalities. It represents a tangled rope because it offers coordination benefits (access to healthcare) alongside asymmetric extraction (job lock, administrative overhead)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Businesses",
+      "comment": "Small businesses are constrained by the ESI system, as they often face higher premiums and administrative burdens compared to larger employers, making it difficult for them to compete for talent. They experience it as a tangled rope because they must offer insurance to compete, but are at a disadvantage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Insurance Companies",
+      "comment": "Insurance companies benefit as they administer large populations, managing risk and obtaining profits, while shifting costs and risks when advantageous. Their arbitrage comes from risk management over these groups."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "portability_solution_viability",
+      "question": "How viable are proposed solutions for making healthcare coverage more portable and less tied to employment?",
+      "resolution_mechanism": "Analysis of the impact of various policy proposals (e.g., universal healthcare, expanded ACA subsidies) on coverage rates, costs, and labor market dynamics.",
+      "impact": "If viable: the ESI system could transition to a more equitable and efficient model. If not: the ESI system will continue to perpetuate existing inequalities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of solutions for healthcare coverage portability"
+    },
+    {
+      "id": "alternative_financing_feasibility",
+      "question": "What is the feasibility of alternative healthcare financing mechanisms that do not rely on employer contributions?",
+      "resolution_mechanism": "Economic modeling of different financing scenarios, including payroll taxes, income taxes, and value-added taxes.",
+      "impact": "If feasible: the burden of healthcare financing could be shifted away from employers, reducing job lock. If not: employers will continue to play a central role in healthcare financing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of alternative healthcare financing mechanisms"
+    },
+    {
+      "id": "political_will_for_reform",
+      "question": "What is the level of political will to reform the ESI system, given the entrenched interests of employers, insurers, and employees?",
+      "resolution_mechanism": "Analysis of legislative proposals, public opinion polls, and lobbying efforts.",
+      "impact": "If high: comprehensive reform of the ESI system could be possible. If low: incremental changes are more likely, but may not address the fundamental problems.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Political will to reform the ESI system"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The US Employer-Sponsored Insurance (ESI) system is a path-dependent artifact of WWII-era wage freezes that ties essential healthcare access to specific employment. While providing a mechanism for many Americans to obtain health insurance, it also creates economic distortions, job lock, and inequalities in access. The system's design advantages large employers and insurance companies, while placing burdens on employees, the unemployed, and small businesses.",
+    "key_agents": [
+      "Employees: Primary target (powerless/trapped) \u2014 experience job lock due to reliance on ESI.",
+      "Large Employers: Primary beneficiary (institutional/arbitrage) \u2014 attract and retain employees, often at lower cost.",
+      "Insurance Companies: Beneficiary (institutional/arbitrage) - manage risk and obtain profits.",
+      "Unemployed: Victims (powerless/trapped) - lack of access to ESI creates vulnerability.",
+      "Small Businesses: Victims (moderate/constrained) - face higher premiums and administrative burdens."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The ESI system extracts a significant cost from employees in the form of job lock and limited career mobility. It extracts from small businesses through higher premiums. Suppression (0.70): High. The lack of affordable alternatives to ESI suppresses employee agency and choice. The system actively enforces its role as the dominant mechanism for health insurance access. Theater ratio (0.30): Low-moderate. The system does have genuine coordination elements but these are increasingly performative.",
+    "perspectival_gap": "The perspectival gap arises from the different structural positions of the key actors. Large employers see a coordination mechanism that helps them attract and retain employees. Employees, especially those with pre-existing conditions, see a snare that limits their career options. Analytical observers see a tangled rope that provides access to healthcare but also creates economic distortions and social inequalities.",
+    "directionality_logic": "The directionality values are derived from the power and exit options of the agents. Employees are powerless and trapped, giving them a high directionality value (close to 1). Large employers are institutional and have arbitrage options, giving them a low directionality value (close to 0). Insurance Companies are institutional and have arbitrage options, giving them a low directionality value (close to 0). Small businesses are moderate and constrained, giving them a moderate directionality value.",
+    "mandatrophy_analysis": "The ESI system is classified as a tangled rope because it combines elements of coordination (providing healthcare access) with extraction (job lock, administrative overhead, limited choice). A pure coordination mechanism would not create these distortions. A pure extraction mechanism would not provide any benefits to employees."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "aca_individual_mandate",
+      "medicaid_expansion"
+    ],
+    "dual_formulation_note": "The ESI system and related policies (ACA, Medicaid expansion) represent interconnected constraints on healthcare access. The ESI system is the dominant structure; the other policies attempt to mitigate its flaws or provide alternatives."
+  },
+  "directionality_overrides": []
+}

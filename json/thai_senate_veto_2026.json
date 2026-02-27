@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "thai_senate_veto_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tsv"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Senate Constitutional Veto (Post-Transitory Residual)",
+    "topic_domain": "political/constitutional_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "appointed_senate_faction",
+      "military_institutional_interests"
+    ],
+    "victims": [
+      "democratic_constitutional_reform",
+      "electoral_mandate_legitimacy"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Democratic Reformer",
+      "comment": "PERSPECTIVE 1: DEMOCRATIC REFORMER (SNARE) \u2014 Trapped within the constitutional amendment process. Cannot exit without conceding all reform objectives. Bears full extraction cost: any amendment requires Senate supermajority, which is structurally controlled by the junta-appointed faction. No alternative exit; career and legitimacy depend on reform attempt. Experiences maximum coercion with suppression of alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Elected House Coalition",
+      "comment": "PERSPECTIVE 2: ELECTED HOUSE COALITION (TANGLED ROPE) \u2014 Can theoretically govern through ordinary legislation but constrained by veto threat on constitutional changes. Benefits from coordination with Senate on routine legislative matters; coordination function exists (both chambers do pass non-constitutional bills). But extraction occurs via the veto asymmetry: the elected chamber cannot secure fundamental reforms without Senate approval. Active enforcement required \u2014 the veto must be deployed as explicit threat to suppress reform attempts. Mixed coordination (lower chamber needs Senate stability) and extraction (Senate extracts legitimacy tax)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Appointed Senate Faction",
+      "comment": "PERSPECTIVE 3: APPOINTED SENATE FACTION (ROPE) \u2014 Experiences the veto as pure coordination mechanism. Coordination function: prevents destabilizing constitutional churn, provides institutional continuity, stabilizes the political system post-junta transition. Arbitrage exit: can walk away from specific amendments while maintaining institutional position. Net beneficiary \u2014 the veto grants structural power to this agent without perceivable cost. From their structural position, this is coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Junta Legacy Residue",
+      "comment": "PERSPECTIVE 4: JUNTA LEGACY RESIDUE (PITON) \u2014 The Senate veto persists as institutional theater: performative constitutional balance. The original rationale (military oversight to prevent democratic excess) has decayed post-transitory period expiration. The constraint is now sustained by inertia rather than functional legitimacy. Theater ratio of 0.58 reflects that the veto is occasionally deployed (not purely symbolic) but increasingly disconnected from its original justification. The institution maintains itself through historical claim rather than demonstrated necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Constitutional Reform Movement",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized civil society sees the veto as a temporary coordination failure with an implicit sunset. The constraint can be overcome through: (a) coalition-building that secures Senate supermajority through persuasion rather than coercion, (b) civil mobilization that raises political cost of veto use, or (c) structural reform of the Senate itself (reducing junta appointee proportion). The scaffold perceives a path through the constraint, not around it. Suppression declines as democratic norms strengthen and junta institutional legitimacy fades. Estimated sunset: constitutional reform pathway opens within 5-10 year horizon as demographic and institutional change reduces junta faction coherence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the Senate veto is a genuine hybrid: it does provide coordination (prevents constitutional instability, maintains institutional checks), but coordination is subordinate to extraction (junta faction preserves undemocratic control). The constraint requires active enforcement (explicit veto threats), possesses asymmetric beneficiaries (appointed faction gains unelected power), and imposes asymmetric costs (democratic legitimacy is extracted from electoral majority). Suppression is real (alternatives are structurally blocked) but not totalizing (coalition-building and civil mobilization remain viable). This is the structural definition of tangled rope: coordination with extractive asymmetry."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "junta_faction_coherence_decay",
+      "question": "At what rate will the appointed Senate faction's institutional coherence decay as original junta appointees retire and are replaced by younger, less-committed figures?",
+      "resolution_mechanism": "Longitudinal tracking of voting bloc cohesion on constitutional amendments; analysis of appointee demographic turnover and replacement patterns; exit interviews with retiring appointees regarding institutional commitment",
+      "impact": "If coherence decays rapidly (within 5 years): veto becomes toothless, scaffold sunset accelerates, constraint shifts to piton. If decay is slow or arrested: veto remains functional extraction mechanism for 10+ years.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of institutional decay in junta-appointed faction"
+    },
+    {
+      "id": "civil_mobilization_veto_cost_threshold",
+      "question": "At what level of civil mobilization against the veto does the political cost to Senate implementers outweigh institutional benefit preservation?",
+      "resolution_mechanism": "Cross-national analysis of constitutional veto overrides in post-authoritarian democracies; measurement of protest scale, elite political support defection, and veto utilization cessation as consequence of mobilization campaigns",
+      "impact": "If threshold is low (modest sustained protest suffices): scaffold perspective correct, veto becomes functionally obsolete within 3-5 years despite formal retention. If threshold is high: extraction mechanism remains credible even under pressure; constraint persists in tangled-rope form.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Civil mobilization threshold for veto cost parity"
+    },
+    {
+      "id": "democratic_legitimacy_extraction_measurement",
+      "question": "What observable measures would quantify the 'legitimacy tax' extracted from democratic procedures by the veto threat?",
+      "resolution_mechanism": "Measurement of legislative productivity on constitutional items; analysis of abandoned reform attempts attributable to veto threat vs. other causes; polling on public perception of Senate legitimacy; comparative analysis with other bicameral systems lacking veto asymmetry",
+      "impact": "If legitimacy tax is substantial and measurable: tangled-rope classification is robust. If tax is diffuse and hard to quantify: constraint may be piton (performative) rather than tangled rope (functionally extractive). Affects entire mandatrophy resolution pathway.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Quantification of legitimacy extraction mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "Thailand's Senate constitutional veto under Article 256 is a residual constraint from the junta-era transitory framework. The original five-year provision allowing the appointed Senate to vote for Prime Minister expired in 2024, but the one-third veto power over constitutional amendments persists. This constraint exemplifies the structural problem of post-authoritarian institutional legacies: formal mechanisms designed for transitory military oversight continue to function as extraction devices long after their original justification has been superseded. The veto operates as a tangled rope at the structural level \u2014 it provides genuine coordination benefits (prevents constitutional churn, maintains institutional checks) but extracts undemocratic control via asymmetric beneficiaries (appointed faction gains power without electoral mandate) and asymmetric suppression (alternative reform pathways are blocked). The theater ratio has increased from 0.42 to 0.58 over five years, reflecting growing disconnection between the veto's original security rationale (now irrelevant post-transitory period) and its continued deployment (increasingly performative institutional legitimacy claim). Extractiveness has risen from 0.38 to 0.52, driven by the appointed faction's use of the veto threat to block democratic constitutional reforms. The constraint presents a mandate-for-purity problem: the system cannot simultaneously (a) retain the Senate veto as a coordination mechanism for institutional stability and (b) honor the electoral mandate for democratic constitutional reform. Resolution requires either (i) removing or significantly weakening the veto (scaffold pathway), (ii) accepting the constraint as permanent institutional asymmetry (piton acceptance), or (iii) coalition-building that secures Senate supermajority through persuasion (tangled rope equilibrium).",
+    "key_agents": [
+      "Appointed Senate Faction: Primary beneficiary (institutional/arbitrage) \u2014 retains unelected constitutional veto power; experiences constraint as stabilizing coordination",
+      "Elected House Coalition: Primary victim (organized/constrained) \u2014 unable to secure constitutional reforms without Senate approval; constrained by veto threat",
+      "Democratic Reformers: Secondary victim (powerless/trapped) \u2014 civil society actors demanding constitutional democratization; face maximal extraction through closed reform pathways",
+      "Junta Legacy Residue: Institutional anchor (institutional/arbitrage) \u2014 original authoritarian framework persists as constitutional theater despite transitory period expiration",
+      "Constitutional Reform Movement: Organized agent (organized/constrained) \u2014 sees veto as temporary obstacle with sunset pathway through civil mobilization and demographic change",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 identifies tangled rope structure with measurable extraction subordinating coordination function"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderately high. The appointed Senate faction leverages the veto threat to extract undemocratic control over constitutional change. The extraction is not totalizing because (a) non-constitutional legislation proceeds normally, (b) coalition-building can theoretically secure Senate supermajority, and (c) the veto is a one-time tool per amendment, not an ongoing extraction mechanism. But the extraction is real: democratic constituencies cannot implement their constitutional agenda without Senate approval controlled by unelected appointees. The 0.52 value reflects actionable veto power without complete suppression of alternatives. Suppression (0.65): Moderately high. Significant barriers to constitutional reform include the explicit supermajority requirement, the ideological coherence of the appointed faction around military-continuity objectives, and the high political cost of challenging the institutional framework (risks destabilizing post-transition period). But suppression is not totalizing \u2014 coalition-building within the Senate remains possible, civil mobilization can raise veto costs, and the junta faction's institutional coherence is decaying over time. Theater ratio (0.58): Moderate-high. The veto is not purely symbolic \u2014 it has been deployed to block or delay amendments (e.g., restrictions on emergency decrees). But the theater has increased because the original security rationale (military oversight preventing democratic instability) has been superseded by political reality: democratic institutions have proven stable, and the veto now functions primarily to preserve unelected control, not to prevent chaos. The performative aspect has grown as the functional justification has faded.",
+    "perspectival_gap": "This constraint demonstrates radical perspectival divergence on the same structural mechanism. The appointed Senate faction sees coordination and stability preservation (Rope perspective) \u2014 the veto prevents destabilizing constitutional churn and maintains institutional checks. The elected house sees mixed coordination and extraction (Tangled Rope) \u2014 they need Senate stability but are blocked from constitutional reform. The democratic reformer sees pure extraction and coercion (Snare) \u2014 the veto closes off the reform pathway entirely. The constitutional reform movement sees a temporary obstacle with a sunset (Scaffold) \u2014 the veto can be overcome through coalition-building and institutional change. The junta legacy residue sees its own institutional theater (Piton) \u2014 the veto persists through historical inertia despite its original rationale becoming irrelevant. The analytical observer identifies the structural reality (Tangled Rope) \u2014 genuine coordination benefits exist but are subordinate to asymmetric extraction. The gap reflects that the veto's legitimacy depends entirely on whether one believes institutional stability requires undemocratic control.",
+    "directionality_logic": "Each perspective's directionality is determined by structural position. The appointed Senate faction (beneficiary + arbitrage exit) derives low d \u2248 0.15 \u2014 they experience negative extraction (the veto grants them power). The elected house (organized victim + constrained exit) derives higher d \u2248 0.55 \u2014 they cannot easily exit the constitutional system but are constrained by the veto. The democratic reformer (powerless victim + trapped exit) derives maximum d \u2248 0.95 \u2014 they have no exit from the constraint and bear its full cost. The analytical observer (analytical perspective) derives d \u2248 0.72 \u2014 neutral analytical distance, neither beneficiary nor victim. The beneficiary/victim declarations are critical: the appointed faction is beneficiary (gains undemocratic power), while democratic constitutional reform is victim (extracted from), not the House itself. This precision enables the engine to differentiate the Rope from the Snare: the Rope derives from beneficiary status + arbitrage; the Snare derives from victim status + trapped exit.",
+    "mandatrophy_analysis": "The constraint presents an unresolved mandatrophy: it cannot simultaneously be Rope (pure coordination for institutional stability) and Snare (pure extraction of democratic control). The Tangled Rope classification bridges this mandatrophy by showing that both coordination and extraction are genuine. The veto does provide institutional stability (coordination function), but that stability is purchased through undemocratic control (extraction asymmetry). The mandatrophy is resolved not by choosing a single type but by recognizing that (a) beneficiary and victim perspectives see genuinely different constraints, (b) the beneficiary's Rope is the victim's Snare viewed from different structural positions, and (c) the system cannot be reformed toward pure Rope without reducing undemocratic extraction, nor can it remain as Snare without destabilizing democratic institutions. The Tangled Rope is the structural equilibrium: coordination with embedded extraction. Mandatrophy resolution would require either (i) acceptance of the constraint as permanent tangled rope (institutional power-sharing rather than democratic purity), (ii) removal of the veto (pure democratization at cost of coordination), or (iii) restructuring of the Senate itself (reducing appointed faction proportion, restoring coordination function without extraction asymmetry). Current trajectory suggests drift toward either piton (veto becomes toothless theater as junta faction decays) or constitutional crisis (if veto is deployed too aggressively, triggering coalition pressure or civil mobilization)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "thai_emergency_decree_framework",
+      "thai_electoral_mandate_legitimacy"
+    ],
+    "dual_formulation_note": "The Senate veto is structurally linked to the emergency decree framework (the veto can block amendments that constrain emergency power) and to electoral mandate legitimacy (the veto nullifies voting bloc mandates on constitutional matters). These constraints form a family: the veto is downstream of the broader junta legacy institutional design. If the veto is decomposed into separate empirical and normative claims, the empirical claim (the veto functionally blocks amendments via supermajority requirement) is Mountain-like (\u03b5 \u2248 0.08), while the normative claim (the veto extracts democratic legitimacy) is Tangled Rope (\u03b5 \u2248 0.52). This story models the normative-structural constraint; empirical-mechanical constraint should be written separately if analysis requires that decomposition."
+  },
+  "directionality_overrides": []
+}

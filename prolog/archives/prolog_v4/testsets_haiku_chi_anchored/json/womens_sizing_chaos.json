@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "womens_sizing_chaos",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wsc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "Chaotic and non-standardized system of US women's clothing sizes",
+    "topic_domain": "consumer_retail/economic_regulation",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "apparel_manufacturers",
+      "fast_fashion_retailers"
+    ],
+    "victims": [
+      "women_consumers",
+      "plus_size_women",
+      "independent_tailors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Women Consumer (General Sizing)",
+      "comment": "PERSPECTIVE 1: WOMEN CONSUMER (SNARE) \u2014 Trapped within a fragmented sizing ecosystem with no standardized reference. Cannot exit clothing purchases; forced to navigate inconsistent labeling, trial-and-error fitting, and psychological friction from vanity sizing disparities. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Plus-Size Woman Consumer",
+      "comment": "PERSPECTIVE 2: PLUS-SIZE WOMAN CONSUMER (SNARE) \u2014 Doubly trapped: smaller inventory, higher prices (often 20-30% markup), limited style options, and inconsistent vanity sizing compression across brands. No exit from needing clothing; suppression particularly severe. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Apparel Manufacturers and Retailers",
+      "comment": "PERSPECTIVE 3: APPAREL MANUFACTURERS/RETAILERS (ROPE) \u2014 Benefit from non-standardization. Fragmentation allows vanity sizing (size 6 in Brand A = size 8 in Brand B) to mask inflation and preserve profit margins without raising nominal prices. Leverage consumer confusion for inventory optimization and price discrimination. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary through reduced effective extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legacy Government Size Standards (NIST)",
+      "comment": "PERSPECTIVE 4: LEGACY GOVERNMENT STANDARDS (PITON) \u2014 NIST PS 42 (1958) and PS 42.4 (1971) defined women's clothing size standards based on body measurements. These standards were ignored by the industry upon adoption \u2014 manufacturers continued proprietary systems for competitive reasons. The standards persist as regulatory theater (manufacturers claim compliance while violating them), but have zero functional enforcement. theater_ratio=0.61. Institutional inertia maintains the appearance of standardization without its substance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Consumer Advocacy and Standard-Setting Coalitions",
+      "comment": "PERSPECTIVE 5: CONSUMER ADVOCACY/ASTM COALITION (TANGLED ROPE) \u2014 Organized actors (consumer groups, size-diversity advocates, ASTM Committee F6.02) perceive both coordination opportunity and extraction resistance. Pursuing standardization (ASTM D5219) could reduce consumer friction and expand market access for smaller brands. But large retailers actively resist (coordination failure is profitable for them). The constraint provides mixed coordination function (potential standardization pathway) and active suppression (industry opposition). d\u22480.52, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Independent Tailors and Small Tailoring Shops",
+      "comment": "PERSPECTIVE 6: INDEPENDENT TAILORS (SNARE) \u2014 Depend on customer willingness to pay for alterations driven by sizing misfit. Chaotic sizing increases demand for tailoring but also creates a secondary extraction mechanism: consumers bear alteration costs (~$50-150 per garment) that would be unnecessary under standardization. Tailors have constrained mobility (geographically bound, small scale) and are victims of the constraint they superficially benefit from. d\u22480.80, f(d)\u22481.22, \u03c3=1.0 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Institutional Inefficiency View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE MOUNTAIN RISK) \u2014 The constraint risks being naturalized as 'human body diversity makes standardization impossible.' But this is structurally false: body diversity exists everywhere, yet most global clothing markets (EU, Japan, Australia) have either government-enforced or industry-wide standards. The chaos is not inherent to female bodies; it is enforced by manufacturer fragmentation strategies. The engine detects this as a false summit: \u03b5=0.52 and suppression=0.68 contradict the natural-law narrative."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "standardization_adoption_threshold",
+      "question": "What market share of brands must adopt standardized sizing before the constraint collapses through network effects?",
+      "resolution_mechanism": "Historical analysis of standardization success in other markets (EU EN 13402); modeling of consumer switching behavior when multiple standards coexist; empirical tracking of brand adoption rates in pilot programs",
+      "impact": "If threshold < 30%: standardization achievable through coordinated retailer agreement. If threshold > 60%: network lock-in is too strong; only regulatory mandate can force transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Market share threshold for standardization network effects"
+    },
+    {
+      "id": "vanity_sizing_profit_dependency",
+      "question": "How much of retailer margin and consumer lifetime value depends on vanity sizing as a mechanism for psychological price discrimination?",
+      "resolution_mechanism": "Financial analysis of profit per unit under standardized vs non-standardized sizing; A/B testing with standardized sizing cohorts; analysis of return rates and size-related abandonment under different labeling schemes",
+      "impact": "If dependency > 15% of margin: retailers will fight standardization fiercely (snare confirmed). If dependency < 5%: standardization could be negotiated without significant margin loss (constraint is more coordination problem than extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Financial dependency on vanity sizing for retailer profitability"
+    },
+    {
+      "id": "body_measurement_representation",
+      "question": "Do existing size standards (NIST PS 42, ASTM D5219, EU EN 13402) adequately represent the racial, ethnic, and age diversity of women's bodies, or do they encode historical bias that would perpetuate exclusion under standardization?",
+      "resolution_mechanism": "Comparative anthropometric analysis of sizing basis samples; examination of original standard-setting populations (who was measured?); testing of proposed standards against diverse body populations; analysis of fit data across demographic groups under different standardization schemes",
+      "impact": "If standards are racially/ethnically biased: standardization could worsen fit for non-majority populations (snare extends to standard-enforcement). If standards are representative: standardization improves fit universally and enables comparison (rope/coordination confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether size standards encode demographic bias in body representation"
+    },
+    {
+      "id": "international_standard_harmonization",
+      "question": "Could US adoption of ISO 3635 or EU EN 13402 (international standards) create a regulatory coordination pathway that bypasses domestic industry resistance?",
+      "resolution_mechanism": "Analysis of trade implications; modeling of competitive advantage/disadvantage under international standard adoption; study of similar transitions in other regulated industries (automotive, electronics); assessment of retaliatory pressure from large retailers",
+      "impact": "If harmonization is feasible: creates external anchor for standard-setting (scaffold perspective strengthens). If retaliatory pressure is severe: international pathway is blocked and domestic coordination remains necessary (snare persists).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether international standard adoption can bypass domestic resistance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The US women's clothing sizing system is a fragmented, non-standardized ecosystem where manufacturers maintain proprietary sizing schemes despite the existence of government size standards (NIST PS 42, PS 42.4) established in 1958 and 1971. This fragmentation creates systematic extraction: consumers bear cognitive and financial costs (repeated fit failures, alteration expenses), plus-size women face both higher prices and reduced inventory, and small retailers cannot compete on standardization. The constraint exhibits snare characteristics \u2014 high suppression (no unified exit pathway), high extraction (fragmentation benefits manufacturers through price discrimination and reduced inventory risk), and moderate theater (legacy standards exist but are performatively ignored). The chaos has deepened over the past 50 years as 'vanity sizing' (progressively inflating nominal sizes while keeping actual dimensions stable) became a deliberate profit strategy, allowing retailers to signal lower prices while extracting margin through psychological pricing. The theatrical dimension reflects the persistence of NIST standards as regulatory fiction \u2014 manufacturers nominally reference them while systematically violating them. Industry resistance to standardization (exemplified by ASTM Committee F6.02 proposals) is structural: non-standardization is directly profitable through inventory optimization, price discrimination, and reduction of return rates caused by standardized reference.",
+    "key_agents": [
+      "Women consumers (general): Primary victim (powerless/trapped) \u2014 forced to navigate fragmented sizing with no stable reference, bearing search costs and fit friction",
+      "Plus-size women: Primary victim (powerless/trapped) \u2014 secondary victimization with higher prices (20-30% markup), limited inventory, and inconsistent vanity sizing, compounding trapped exit",
+      "Apparel manufacturers and large retailers (Gap, Target, Amazon): Primary beneficiary (institutional/arbitrage) \u2014 profit from non-standardization through vanity sizing, price discrimination, and reduced inventory risk",
+      "NIST and legacy government standards: Institutional theater (institutional/constrained) \u2014 standards persist on paper but lack enforcement; manufacturers ignore without consequence",
+      "Consumer advocacy groups and ASTM Committee: Organized victim-agents (organized/mobile) \u2014 perceive coordination solution but face active resistance from beneficiary manufacturers",
+      "Independent tailors and alteration shops: Secondary victim (moderate/constrained) \u2014 depend on fit friction for demand but are not primary extractors; trapped in supply chain",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing fragmentation as inevitable consequence of body diversity, missing that standardization is both technically feasible and implemented in other markets"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Manufacturers extract through multiple mechanisms: (1) vanity sizing inflates nominal sizes, disguising inflation and extraction of margin, (2) inventory optimization under fragmentation reduces risk to retailer but increases friction cost to consumer, (3) price discrimination via plus-size markup (20-30% higher price, 30-40% lower volume) captures surplus. The extraction is not as severe as a pure monopolistic snare (consumers can still purchase, fit problems are inconvenient rather than survival-level), but it exceeds pure coordination failure. Measurement trajectory shows increasing extractiveness (0.35 \u2192 0.52 over 50 years) reflecting the deliberate deployment of vanity sizing as a profit strategy. Suppression (0.68): High. Limited alternatives exist: consumers cannot easily abandon clothing purchase; fragmentation prevents formation of a unified standard; manufacturers actively block standardization efforts; no enforceable standards exist despite government versions. Plus-size women face particularly severe suppression (constrained inventory, higher prices, limited alternative retailers). Theater ratio (0.61): Moderate-high. NIST standards and manufacturer claims of compliance are performative theater \u2014 standards are violated systematically with no enforcement. The theatrical dimension reflects the regulatory fiction that standardization exists when it does not. Theater has increased over the interval (0.38 \u2192 0.61) as the gap between claimed and actual compliance has widened.",
+    "perspectival_gap": "This constraint shows strong perspectival divergence: the general consumer sees a snare (trapped by fragmentation, bearing search and fit costs), the plus-size consumer sees an intensified snare (trapped plus price-discriminated), the beneficiary retailer sees coordination-like benefits (profitable inventory optimization), the government standard sees piton degradation (persisting without function), and the analytical observer risks seeing natural law (falsely naturalizing fragmentation as inevitable given body diversity). The gap is particularly sharp between the consumer victim and the retailer beneficiary: the same structural phenomenon (size variation between brands) appears as an extractive trap to one agent and as a profitable coordination mechanism to another. The organized advocacy coalition perceives both: they see the coordination solution (standardization would solve the problem) but face active suppression (retailer resistance is explicit and organized).",
+    "directionality_logic": "General women consumers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Near-maximal extraction. Plus-size women: Victim + trapped (with secondary victimization via price markup) \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction due to dual victimization. Apparel manufacturers/retailers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; fragmentation directly profits them. Independent tailors: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.22. High extraction; they depend on fit friction but do not control it. Consumer advocacy/ASTM: Organized + mobile \u2192 d\u22480.52, f(d)\u22480.65. Moderate extraction; they have agency and see a path forward (standardization) but face active resistance. Legacy standards: Institutional + constrained \u2192 d\u22480.15 (piton classification comes from theater gate, not directionality).",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION CONFIRMED: The constraint exhibits snare characteristics across multiple victim perspectives (general consumer, plus-size consumer, tailors) while showing clear beneficiary extraction (retailers). The extractiveness (0.52) and suppression (0.68) exceed the rope thresholds (\u03b5 \u2264 0.45, suppression \u2264 0.40), confirming snare rather than coordination failure. The constraint is not a market coordination problem that would spontaneously resolve through price signals or voluntary standardization \u2014 it is a stable extraction equilibrium because non-standardization is directly profitable for the dominant retailers. The presence of existing government standards (NIST) that are systematically ignored demonstrates that standardization is technically feasible but suppressed for profit reasons. The theatrical dimension (theater ratio = 0.61) reflects manufacturers' use of nominal compliance (citing standards they violate) to preempt regulatory intervention while maintaining the profitable fragmentation. This is a textbook snare: high suppression (no viable exit), high extraction (asymmetric benefit to retailers), existence dependent on preventing the obvious solution (standardization)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "plus_size_market_extraction",
+      "fast_fashion_inventory_opacity"
+    ],
+    "dual_formulation_note": "The women's sizing chaos is downstream of profit-maximization strategies in apparel retail and upstream of secondary extraction mechanisms (plus-size markup, tailoring demand, return/exchange friction). Treated as a single constraint because the root mechanism (manufacturer fragmentation for profit) is structurally distinct from downstream manifestations."
+  },
+  "directionality_overrides": []
+}

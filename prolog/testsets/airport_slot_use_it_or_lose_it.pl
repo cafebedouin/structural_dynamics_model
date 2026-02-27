@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: airport_slot_use_it_or_lose_it
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-24
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_airport_slot_use_it_or_lose_it, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,22 +54,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: airport_slot_use_it_or_lose_it
- *   human_readable: "Use-it-or-lose-it" rule for airport landing slots
- *   domain: economic
+ *   human_readable: Use-it-or-lose-it Rule for Airport Landing Slots
+ *   domain: economic/aviation_regulation
  *
  * SUMMARY:
- *   A regulatory rule requires airlines to operate a high percentage (e.g.,
- *   80%) of their allocated landing/take-off slots at congested airports or
- *   forfeit them. During periods of suppressed demand (like the COVID-19
- *   pandemic), this forces airlines to fly near-empty "ghost flights,"
- *   burning fuel and incurring massive costs for no economic output, purely
- *   to retain their valuable slot assets.
+ *   The use-it-or-lose-it (80% utilization) rule for airport landing slots at
+ *   congested hubs operates as a mechanism to prevent slot hoarding and
+ *   speculation. Ostensibly a coordination mechanism ensuring slots go to
+ *   airlines that actually fly them, the rule functions as a barrier to entry
+ *   protecting incumbent carriers. The constraint reveals itself differently
+ *   from each structural position: legacy carriers see coordination and
+ *   protection; new entrants see a catch-22 lock-out; the allocation
+ *   authority sees procedural routine; competition regulators see a temporary
+ *   measure that has become permanent; and civilizational observers risk
+ *   naturalizing the rule as an immutable consequence of airport physics. The
+ *   extractiveness value (0.52) reflects moderate-to-high asymmetric rent
+ *   extraction: legacy carriers capture protected slot rents while new
+ *   entrants bear the full cost of exclusion. Suppression is high (0.58)
+ *   because the rule is backed by regulatory authority and there is no legal
+ *   pathway for new entrants to challenge or bypass it without proving they
+ *   can already operate at scale. Theater has risen over 30 years (0.25 →
+ *   0.41) because enforcement has become increasingly procedural and
+ *   performative as the original coordination rationale has been superseded
+ *   by rent-protection logic.
  *
- * KEY AGENTS (by structural relationship):
- *   - Airlines: Primary target (powerful/constrained) — bear the direct cost of ghost flights to avoid losing multi-million dollar assets.
- *   - Airport Slot Coordinators/Regulators: Primary beneficiary (institutional/arbitrage) — maintain a stable, predictable system for managing a scarce resource.
- *   - The General Public: Secondary victim (powerless/trapped) — bears the environmental cost of unnecessary carbon emissions.
- *   - Analytical Observer: Sees the full structure, including the valid coordination function and the perverse extractive outcomes.
+ * KEY AGENTS:
+ *   - Legacy Carriers (e.g., BA, Lufthansa, Air France): Primary beneficiaries (institutional/arbitrage) — capture protection rent from slot scarcity; design and control the rule; benefit from suppression of new competition
+ *   - New Entrant Airlines (e.g., Ryanair, easyJet early phase): Primary victims (powerless/trapped) — catch-22 exclusion: cannot access slots without proving utilization they cannot achieve without slots; no regulatory pathway to challenge
+ *   - Regional and Secondary Carriers: Mixed beneficiary/victim (moderate/constrained) — benefit from protection against low-cost entrants but constrained by forced operations to maintain slot holdings; experience tangled rope coordination-extraction mix
+ *   - Airport Authority / Slot Coordinator: Institutional implementer (institutional/arbitrage) — operates the allocation mechanism; maintains regulatory appearance of neutrality; protected from carrier pressure by administrative procedures
+ *   - Competition Authority (EU, FAA, equivalent): Regulator (organized/constrained) — theoretically can repeal or modify the rule but constrained by incumbent carrier lobbying and path dependency; sees the rule as a temporary measure with no political capital to sunset it
+ *   - Market Efficiency: Victim abstraction (powerless/trapped) — slot misallocation, forced unprofitable operations, suppressed competition, and reduced consumer choice; abstract collective good with no advocate
  */
 
 /* ==========================================================================
@@ -77,101 +92,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Extraction is the value destroyed (fuel, labor, maintenance) by flying an
-% empty plane, relative to the value of the asset being protected. High.
-domain_priors:base_extractiveness(airport_slot_use_it_or_lose_it, 0.75).
-
-% Suppression is extremely high. The alternative is to lose a slot worth
-% millions, a catastrophic loss for an airline at a hub airport.
-domain_priors:suppression_score(airport_slot_use_it_or_lose_it, 0.85).
-
-% The flights are real, the rule is real. This is not performative theater.
-domain_priors:theater_ratio(airport_slot_use_it_or_lose_it, 0.10).
+domain_priors:base_extractiveness(airport_slot_use_it_or_lose_it, 0.52).
+domain_priors:suppression_score(airport_slot_use_it_or_lose_it, 0.58).
+domain_priors:theater_ratio(airport_slot_use_it_or_lose_it, 0.41).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(airport_slot_use_it_or_lose_it, extractiveness, 0.75).
-narrative_ontology:constraint_metric(airport_slot_use_it_or_lose_it, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(airport_slot_use_it_or_lose_it, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(airport_slot_use_it_or_lose_it, extractiveness, 0.52).
+narrative_ontology:constraint_metric(airport_slot_use_it_or_lose_it, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(airport_slot_use_it_or_lose_it, theater_ratio, 0.41).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(airport_slot_use_it_or_lose_it, snare).
-narrative_ontology:topic_domain(airport_slot_use_it_or_lose_it, "economic").
-narrative_ontology:human_readable(airport_slot_use_it_or_lose_it, "\"Use-it-or-lose-it\" rule for airport landing slots").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(airport_slot_use_it_or_lose_it, tangled_rope).
+narrative_ontology:human_readable(airport_slot_use_it_or_lose_it, "Use-it-or-lose-it Rule for Airport Landing Slots").
+narrative_ontology:topic_domain(airport_slot_use_it_or_lose_it, "economic/aviation_regulation").
 
-% --- Binary flags ---
-% The rule is enforced by slot coordination bodies.
 domain_priors:requires_active_enforcement(airport_slot_use_it_or_lose_it).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-%
-% Who benefits from this constraint existing?
-% The regulators who manage the system and the incumbent airlines who are
-% protected from new entrants by the high barrier to entry.
-narrative_ontology:constraint_beneficiary(airport_slot_use_it_or_lose_it, airport_slot_coordinators).
-narrative_ontology:constraint_beneficiary(airport_slot_use_it_or_lose_it, incumbent_airlines_in_normal_conditions).
-
-% Who bears disproportionate cost?
-% The airlines forced to fly empty planes, and the public bearing the environmental cost.
-narrative_ontology:constraint_victim(airport_slot_use_it_or_lose_it, airlines_in_low_demand_conditions).
-narrative_ontology:constraint_victim(airport_slot_use_it_or_lose_it, the_general_public).
-
-% Gate requirements for Tangled Rope are met:
-% - constraint_beneficiary/2 (coordination function)
-% - constraint_victim/2 (asymmetric extraction)
-% - requires_active_enforcement/1
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(airport_slot_use_it_or_lose_it, incumbent_legacy_carriers).
+narrative_ontology:constraint_beneficiary(airport_slot_use_it_or_lose_it, slot_allocation_authority).
+narrative_ontology:constraint_victim(airport_slot_use_it_or_lose_it, new_entrant_airlines).
+narrative_ontology:constraint_victim(airport_slot_use_it_or_lose_it, market_efficiency).
+narrative_ontology:constraint_victim(airport_slot_use_it_or_lose_it, slot_underutilization).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE AIRLINES (PRIMARY TARGET)
-% They are powerful actors, but their exit from this constraint is highly
-% constrained. Losing a slot is not a viable business option. As victims,
-% the engine derives a high d, leading to high χ. The rule is a Snare.
+% PERSPECTIVE 1: NEW ENTRANT AIRLINE (SNARE) — Powerless to acquire premium slots at congested airports without proving 80% utilization they cannot achieve without the slots. Trapped in a catch-22: cannot grow without slots, cannot access slots without existing scale. Bears full extraction cost through perpetual exclusion. Maximum suppression: no regulatory pathway to challenge the barrier, no arbitrage opportunity, no exit.
 constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, snare,
-    context(agent_power(powerful),
+    context(agent_power(powerless),
             time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(continental))).
+            exit_options(trapped),
+            spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE REGULATORS (PRIMARY BENEFICIARY)
-% They see the rule as a necessary tool for coordination at congested airports.
-% From their institutional, arbitrage position, the rule's extractive side-effects
-% are secondary to its function. As beneficiaries, engine derives low d, so low χ.
-% The rule is a Rope.
+% PERSPECTIVE 2: REGIONAL CARRIER (TANGLED ROPE) — Constrained by utilization thresholds but also benefits from the barrier to entry that protects their existing slot portfolio from new competition. Experiences both coordination (regular slot schedules enable interline partnerships) and extraction (forced to operate unprofitable routes to maintain slot holdings). Some agency through seasonal variation and route adjustment, but ultimate exit option is exit from the market entirely.
+constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: LEGACY CARRIER (ROPE) — Institutional beneficiary with arbitrage exit. The constraint solves a coordination problem: it locks their dominant slot position, enabling long-term network planning and slot swapping among legacy carriers through informal agreements. Low experienced extraction because they designed and control the rule. Benefits from suppression of new entrants without regulatory overhead costs.
 constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
-            spatial_scope(continental))).
+            spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% This perspective sees both the coordination function and the asymmetric
-% extraction. It recognizes that a system designed for coordination has,
-% under changed conditions, become primarily extractive. This is the
-% definition of a Tangled Rope.
-constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, snare,
+% PERSPECTIVE 4: COMPETITION AUTHORITY (SCAFFOLD) — Organized agent (EU aviation authority, FAA, similar) implementing a transitional mechanism: the 80% rule was intended as a temporary response to slot scarcity, but has calcified into a permanent barrier. The authority sees the constraint as having a sunset clause in principle (when capacity constraints ease, the rule becomes unnecessary), but enforcement inertia has prevented sunsetting. Low effective extraction because the authority retains theoretical power to repeal; constrained in practice by incumbent carrier lobbying.
+constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: SLOT ALLOCATION AUTHORITY (PITON) — The administrative body managing slot allocation has become a theater: it maintains an air of neutral governance while systematically protecting incumbent interests. The rule's original function (preventing speculation) has been replaced by performative metrics (80% utilization reports, annual reviews) that change nothing. The authority has arbitrage (could theoretically reallocate or repeal), but institutional inertia means it doesn't. High theater ratio (0.41 is relatively high for slot administration) reflects that much administrative activity is procedural performance rather than substantive reallocation.
+constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL CONSTRAINT VIEW (MOUNTAIN) — From a civilizational/universal perspective, airport runway capacity is a genuine physical limit: a congested airport has a maximum throughput (movements per hour), and allocating scarce slots requires some rule. This perspective sees the use-it-or-lose-it rule as an immutable feature of managing scarcity. However, the structural data contradicts the mountain classification: the rule is contingent and contestable (slot trading markets, dynamic pricing, congestion-pricing mechanisms all exist as alternatives). The engine's false summit detector identifies this as naturalization of a policy choice.
+constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE GENERAL PUBLIC (SECONDARY VICTIM)
-% The public experiences the negative externality (carbon emissions) without
-% any direct benefit. They are powerless and trapped within the consequences
-% of the system. For them, it is an unalloyed Snare.
-constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, snare,
-    context(agent_power(powerless),
-            time_horizon(generational),
-            exit_options(trapped),
             spatial_scope(global))).
 
 /* ==========================================================================
@@ -180,23 +167,18 @@ constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, sn
 
 :- begin_tests(airport_slot_use_it_or_lose_it_tests).
 
-test(perspectival_gap_airline_vs_regulator, [nondet]) :-
-    % Verify the core perspectival gap.
-    constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, TypeAirline, context(agent_power(powerful), _, exit_options(constrained), _)),
-    constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, TypeRegulator, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    assertion(TypeAirline == snare),
-    assertion(TypeRegulator == rope),
-    TypeAirline \= TypeRegulator.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope, [nondet]) :-
-    constraint_indexing:constraint_classification(airport_slot_use_it_or_lose_it, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    assertion(TypeAnalytical == tangled_rope).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(airport_slot_use_it_or_lose_it, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_requirements) :-
-    % Verify that the necessary structural facts are declared for a Tangled Rope.
-    narrative_ontology:constraint_beneficiary(airport_slot_use_it_or_lose_it, _),
-    narrative_ontology:constraint_victim(airport_slot_use_it_or_lose_it, _),
-    domain_priors:requires_active_enforcement(airport_slot_use_it_or_lose_it).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(airport_slot_use_it_or_lose_it, TR),
+    TR >= 0.70.
 
 :- end_tests(airport_slot_use_it_or_lose_it_tests).
 
@@ -206,102 +188,101 @@ test(tangled_rope_structural_requirements) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.75): This score reflects the immense waste of
- *     flying a large aircraft with no passengers or cargo. The value being
- *     extracted is the full operational cost (fuel, crew, maintenance) for
- *     zero economic benefit, measured against the asset's value.
- *   - Suppression (S=0.85): An airline's slots at a hub like Heathrow or JFK
- *     are among its most valuable, illiquid assets. The threat of losing them
- *     creates a powerful coercive force, suppressing any alternative action.
+ *   Extractiveness (0.52): The rule creates asymmetric extraction favoring incumbents. Legacy carriers capture two rents: (1) protection against new competition (entry barrier), and (2) ability to operate marginal/unprofitable routes profitably because the slots themselves have value. New entrants and market efficiency bear costs. The value is moderate-to-high because the extraction is substantial but not total — secondary trading markets (where permitted) and route flexibility allow some mitigation. Suppression (0.58): High coercive content. The rule is backed by regulatory authority with no legal exit pathway. New entrants cannot challenge it through competition law (it is explicitly authorized regulation), cannot arbitrage around it (slots are location-specific and non-tradeable at many hubs), and cannot exit without abandoning the market. However, suppression is not total because enforcement varies by jurisdiction (EU vs US vs elsewhere) and some lobbying pressure exists. Theater ratio (0.41): Moderate. The slot allocation process has become increasingly procedural over time: annual utilization reviews, administrative hearings, exemption requests. These are performative — they change nothing about the fundamental barrier structure. The original coordination function (preventing speculation) has been replaced by routine administration that maintains the status quo. Theater has risen over the 30-year interval as the rule has ossified from temporary measure to permanent feature.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For the regulator (institutional), the rule is a
- *   Rope—a coordination mechanism that ensures scarce resources aren't hoarded,
- *   maintaining systemic stability. For the airline (powerful/constrained),
- *   it is a Snare—a coercive trap that forces value destruction under threat
- *   of a greater loss. This divergence, where a constraint is simultaneously
- *   a valid coordination tool and a mechanism for asymmetric extraction, is
- *   the hallmark of a Tangled Rope.
+ *   This constraint demonstrates a sharp perspectival gap driven by power asymmetry and exit options. The legacy carrier sees rope (coordination + arbitrage), experiencing low effective extraction because they control the rule. The new entrant sees snare (pure extraction, no exit), experiencing maximum extraction because they are powerless and trapped. The regional carrier sees tangled rope (mixed coordination and extraction), experiencing moderate extraction because they have some agency through route adjustment but cannot escape the utilization requirement. The allocation authority sees itself as a neutral administrator (procedural view), but the competition authority sees it as a captured regulator (institutional inertia view). The gap between the beneficiary's rope and the victim's snare is maximal: the same rule appears as beneficial coordination to one and catastrophic exclusion to the other. This gap reveals the extraction mechanism: the constraint's entire function is to protect incumbents by preventing entry.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `airport_slot_coordinators` benefit from the stability and
- *     control the rule provides. `incumbent_airlines` also benefit in normal
- *     times, as the rule acts as a barrier to entry for new competitors.
- *   - Victims: `airlines_in_low_demand_conditions` are the direct victims,
- *     bearing the financial cost of the ghost flights. `the_general_public`
- *     is an indirect victim, bearing the environmental cost.
- *   - This structure directly informs the directionality `d`. The regulators,
- *     as institutional beneficiaries, receive a low `d`, resulting in a low
- *     effective extraction (χ). The airlines, as victims with constrained
- *     exit, receive a high `d`, resulting in a very high χ.
+ *   Each agent's effective extractiveness (χ) derives from their structural position relative to the constraint. Legacy carriers have institutional power and arbitrage exit (can trade slots informally, adjust routes, influence policy), so their derived directionality is low — they experience the constraint as coordination. New entrants are powerless relative to the rule (no regulatory standing, no exit from the constraint, full cost bearing), so their derived directionality is high — they experience snare extraction. Regional carriers are moderate and constrained (they benefit from protection but pay compliance costs through forced operations), so their derived directionality is middle-range — they experience tangled rope. The allocation authority has institutional power but constrained exit (theoretically could repeal but faces political barriers), producing moderate directionality. The analytical observer's mountain perspective is rejected by the structural data: the rule is contingent (slot trading markets exist; dynamic pricing alternatives exist) and contestable (regulatory authority could repeal it), so naturalizing it as immutable physics is a false summit.
  *
  * MANDATROPHY ANALYSIS:
- *   [RESOLVED MANDATROPHY]
- *   This classification correctly identifies the dual nature of the constraint,
- *   preventing a simplistic mislabeling. Calling it a pure Snare would ignore
- *   its legitimate (and necessary) coordination function in normal times.
- *   Calling it a pure Rope would ignore the catastrophic waste and coercion
- *   it generates under specific, but recurring, market conditions. The
- *   Tangled Rope classification captures this essential duality, showing how a
- *   system designed for coordination can become pathologically extractive.
+ *   The mandatrophy is resolved by recognizing that the tangled rope classification correctly captures the constraint's dual nature: it has a genuine coordination function (preventing slot speculation and enabling long-term network planning) AND asymmetric extraction (protection of incumbents, entry barrier for new competitors). The critical mandatrophy question is: 'Is the coordination function the primary purpose, or merely a rationalization for extraction?' Historical evidence and the perspectival gap suggest extraction is primary: (1) secondary trading markets (e.g., proposed London slot trading) achieve better coordination without the extraction, (2) the utilization threshold has been static despite changing market conditions, suggesting inertia rather than dynamic coordination, (3) lobbying intensity correlates with incumbent rent protection rather than coordination benefit. The theater ratio's rise (0.25 → 0.41) further indicates that performative routine has replaced functional coordination. The constraint resolves as tangled rope with dominant extraction component: the coordination function is real but subordinate to rent extraction. A pure rope or pure snare classification would fail — rope ignores the entry barrier, snare ignores the legitimate coordination of schedule certainty among incumbents.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_airport_slot_use_it_or_lose_it,
-    'Is the rule''s primary latent function coordination (preventing hoarding) or protectionism (barring new entrants)?',
-    'Analysis of regulatory correspondence, lobbying records from incumbent airlines vs. low-cost carriers, and economic modeling of slot allocation without the 80% rule.',
-    'If primarily for coordination, its Rope-like properties are dominant. If primarily for protectionism, its Snare-like properties are dominant, and the coordination claim is more theatrical.',
+    counterfactual_capacity_utilization,
+    'What would actual runway utilization rates be under a slot trading market (London ITA-2008 counterfactual) versus current use-it-or-lose-it enforcement?',
+    'Comparative analysis of slot utilization and revenue metrics in airports with vs without secondary trading; econometric models of counterfactual capacity utilization under dynamic pricing',
+    'If trading markets achieve higher utilization with lower forced operations: the constraint is revealed as pure extraction masquerading as coordination. If trading creates different inefficiencies: the coordination function becomes visible.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(counterfactual_capacity_utilization, empirical, 'Capacity utilization under alternative allocation mechanisms').
+
+omega_variable(
+    incumbent_advantage_magnitude,
+    'How much of legacy carrier profitability derives from slot scarcity protection versus operational efficiency?',
+    'Decomposition of carrier profitability by route segment, slot ownership cohort, and capacity utilization; cost accounting for forced-operation losses vs protection rent; competitive analysis of carriers with vs without premium slots',
+    'If protection rent > 30% of profitability: the constraint is primarily extractive. If < 10%: the constraint may be legitimately coordinating efficient service. If 10-30%: tangled rope classification holds.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(incumbent_advantage_magnitude, empirical, 'Incumbent profitability attributable to slot protection versus efficiency').
+
+omega_variable(
+    new_entrant_viability_threshold,
+    'Is the utilization threshold (80%) technically achievable for a new entrant with access to 5-10 slots, or does it require pre-existing network scale?',
+    'Feasibility analysis of new entrant entry scenarios with varying slot allocations; historical data on entrant utilization trajectories at competing less-congested airports; simulation of break-even network size for various utilization thresholds',
+    'If achievable: the snare classification is disputed; the rule allows entry and the barrier is surmountable (rope or scaffold). If impossible without scale: the snare is confirmed; no regulatory pathway exists for competitive entry.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(new_entrant_viability_threshold, empirical, 'Technical feasibility of 80% utilization for new entrant airlines').
+
+omega_variable(
+    sunset_clause_removal_mechanism,
+    'What political and institutional conditions would be required to repeal the use-it-or-lose-it rule or replace it with secondary trading?',
+    'Institutional analysis of regulatory capture in aviation; comparative study of regulatory changes in EU, US, Australia aviation slot systems; identification of coalition dynamics (competition authority vs carriers vs consumer advocates) necessary for rule change',
+    'If sunset is technically possible but politically impossible: the constraint is revealed as resilient extraction (snare with institutional protection). If sunset is feasible: the scaffold classification is strengthened; the rule is contingent.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(sunset_clause_removal_mechanism, conceptual, 'Political feasibility of rule change or sunset').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(airport_slot_use_it_or_lose_it, 0, 10).
+narrative_ontology:interval(airport_slot_use_it_or_lose_it, 0, 30).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint's extractiveness is highly sensitive to external conditions
-% (passenger demand). The data below models the shift from a low-extraction
-% state (pre-pandemic) to a high-extraction state (current).
+% Theater ratio over time
+narrative_ontology:measurement(slot_tr_t0, airport_slot_use_it_or_lose_it, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(slot_tr_t15, airport_slot_use_it_or_lose_it, theater_ratio, 15, 0.35).
+narrative_ontology:measurement(slot_tr_t30, airport_slot_use_it_or_lose_it, theater_ratio, 30, 0.41).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(asuioli_tr_t0, airport_slot_use_it_or_lose_it, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(asuioli_tr_t5, airport_slot_use_it_or_lose_it, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(asuioli_tr_t10, airport_slot_use_it_or_lose_it, theater_ratio, 10, 0.10).
-
-% Extraction over time (dramatic increase due to demand shock):
-% T=0: Pre-pandemic, high demand. Extraction is low, representing minor inefficiencies.
-narrative_ontology:measurement(asuioli_ex_t0, airport_slot_use_it_or_lose_it, base_extractiveness, 0, 0.20).
-% T=5: Mid-pandemic, rules suspended. Extraction is zero.
-narrative_ontology:measurement(asuioli_ex_t5, airport_slot_use_it_or_lose_it, base_extractiveness, 5, 0.0).
-% T=10: Post-pandemic, rules partially reinstated with low demand. Extraction is extremely high.
-narrative_ontology:measurement(asuioli_ex_t10, airport_slot_use_it_or_lose_it, base_extractiveness, 10, 0.75).
+% Extraction over time
+narrative_ontology:measurement(slot_be_t0, airport_slot_use_it_or_lose_it, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(slot_be_t15, airport_slot_use_it_or_lose_it, base_extractiveness, 15, 0.46).
+narrative_ontology:measurement(slot_be_t30, airport_slot_use_it_or_lose_it, base_extractiveness, 30, 0.52).
 
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The rule is a mechanism for allocating a scarce resource.
 narrative_ontology:coordination_type(airport_slot_use_it_or_lose_it, resource_allocation).
+narrative_ontology:affects_constraint(airport_slot_use_it_or_lose_it, airline_market_concentration).
+narrative_ontology:affects_constraint(airport_slot_use_it_or_lose_it, airport_capacity_constraint).
+narrative_ontology:affects_constraint(airport_slot_use_it_or_lose_it, slot_trading_secondary_market).
+
+% DUAL FORMULATION NOTE:
+% The use-it-or-lose-it rule is downstream of underlying airport capacity constraint (physical runway limit) and upstream of market concentration effects. The upstream constraint (airport_capacity_constraint) has lower extractiveness (0.15-0.25 range: the physical limit is genuine). The use-it-or-lose-it rule transforms that natural bottleneck into an institutional barrier with high extractiveness (0.52) through regulatory mechanism design. Secondary market decomposition: slot trading and use-it-or-lose-it are related but distinct constraints — trading rules solve different coordination problems than utilization rules.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The structural derivation
-% from beneficiary/victim declarations and exit options (constrained vs. arbitrage)
-% accurately models the power dynamics between the airlines and the regulators.
+constraint_indexing:directionality_override(airport_slot_use_it_or_lose_it, institutional, 0.32).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

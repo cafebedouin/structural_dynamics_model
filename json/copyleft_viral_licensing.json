@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "copyleft_viral_licensing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "copyleft"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Copyleft Viral Licensing (e.g., GPL)",
+    "topic_domain": "technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "open_source_developers",
+      "derivative_work_authors",
+      "software_commons"
+    ],
+    "victims": [
+      "proprietary_software_vendors",
+      "closed_source_business_models"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Proprietary Software Vendor",
+      "comment": "PERSPECTIVE 1: PROPRIETARY SOFTWARE VENDOR (SNARE) \u2014 A company incorporating GPL-licensed code into its product is legally trapped: it must either release source code (surrendering competitive advantage) or face infringement liability. Suppression is high: exit options are narrow (costly compliance or legal risk). No coordination benefit accrues to the vendor. Effective extraction runs from proprietary business model toward the commons."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Commercial Derivative Developer",
+      "comment": "PERSPECTIVE 2: COMMERCIAL DERIVATIVE DEVELOPER (TANGLED ROPE) \u2014 A firm building on GPL code experiences both coordination benefits (access to mature libraries, community contributions, peer review) and extraction costs (forced disclosure of improvements, constraint on licensing strategy). Exit is constrained but not impossible: they can avoid GPL components, but at engineering cost. Mixed experience: coordination enables their business model, but asymmetric disclosure requirement extracts value."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Open Source Community",
+      "comment": "PERSPECTIVE 3: OPEN SOURCE COMMUNITY (ROPE) \u2014 Pure coordination mechanism from community perspective. GPL ensures their contributions remain free and accessible; derivative works are automatically part of the commons. No extraction: benefits are symmetrical. Community members can arbitrage away (use non-GPL alternatives) but choose GPL for its coordination properties. Theater ratio is low: the mechanism is functionally transparent \u2014 license text directly specifies rights and obligations."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Enterprise Adapter Layer",
+      "comment": "PERSPECTIVE 4: ENTERPRISE ADAPTER LAYER (SCAFFOLD) \u2014 Large enterprises (Google, Microsoft, Meta) have developed organized strategies to benefit from GPL while minimizing disclosure burden: API boundaries, service architecture, cloud deployment that avoids derivative work classification. These are temporary workarounds with a sunset: as courts clarify what constitutes 'derivative work' in service contexts, the loopholes close. Organizations experience suppression (legal uncertainty) but have agency (resources to navigate ambiguity) and clear exit paths (migrate to permissive licenses or GPL compliance). Theater: contract interpretation and license reading are performative labor; actual engineering constraints are minimal."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Software Patent System",
+      "comment": "PERSPECTIVE 5: SOFTWARE PATENT SYSTEM (PITON) \u2014 GPL's original purpose was coordination: ensure free software remains free. But in its interaction with patent law, GPL has become partly theatrical: GPL does not revoke patent rights, so a GPL licensor can still sue for patent infringement. The patent system persists as a performative constraint on GPL's freedom guarantee, maintained by institutional inertia rather than functional necessity. Patents are increasingly irrelevant to software practice (most firms use defensive patent portfolios, not offensive suits), but GPL's patent grant language persists to assuage pre-2010 concerns. Theater ratio high: the patent mechanism in GPL text serves a historical purpose that has largely atrophied."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Copyright Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COPYRIGHT LAW VIEW (MOUNTAIN) \u2014 From a purely legal-logical perspective, copyleft is an immutable structural feature of copyright law: copyright exists; any copyright holder can impose conditions on derivative works; if conditions are imposed, they bind downstream users by copyright law itself. This perspective sees copyleft as a natural law of intellectual property \u2014 a logical consequence of copyright, not a contingent institutional arrangement. However, the structural data contradicts the mountain classification: suppression is moderate (0.42), not near-zero; extractiveness is moderate (0.38), not near-zero; theater is moderate (0.35), not near-zero. This reveals the 'immutable law' framing as naturalization of a contingent legal system (copyright) that could be replaced or reformed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "derivative_work_definition",
+      "question": "What constitutes a 'derivative work' under GPL in cloud/service architectures where code is not distributed to end users?",
+      "resolution_mechanism": "Case law clarification on AGPL (Affero GPL) enforcement and API-boundary cases; legislative action on software copyright scope",
+      "impact": "If narrow (binary: modified source or not): many service-based wrappers escape GPL. If broad (any functional dependency): GPL applies to most cloud software. High uncertainty directly enables the Scaffold perspective workarounds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Definition of derivative work in service/cloud contexts"
+    },
+    {
+      "id": "commons_preservation_mechanism",
+      "question": "Is GPL the only legal mechanism that reliably preserves software freedom as commons, or can permissive licenses (MIT, Apache) achieve the same effect through social norm and competition?",
+      "resolution_mechanism": "Longitudinal analysis of commons fragmentation in MIT vs GPL projects; measurement of derivative work closed-sourcing rates by license type",
+      "impact": "If GPL is necessary: copyleft is a structural feature of freedom preservation (argues Mountain). If permissive licenses suffice: GPL is one strategy among many (argues against Mountain, supports Rope view).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether GPL is the only effective commons preservation mechanism"
+    },
+    {
+      "id": "enforcement_effectiveness",
+      "question": "How effective is GPL enforcement at preventing proprietary relicensing? What fraction of GPL violations are detected vs undetected?",
+      "resolution_mechanism": "Survey of known GPL compliance audits and litigation outcomes; analysis of compliance rates in closed-source derivative projects; reverse-engineering detection of GPL code in proprietary products",
+      "impact": "If enforcement rate > 50%: GPL is a genuine constraint (Snare for vendors). If enforcement rate < 20%: GPL is a suggestion (Rope or weaker). Directly determines whether suppression coefficient should be 0.42 or lower.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Effectiveness of GPL enforcement against violations"
+    },
+    {
+      "id": "business_model_substitution",
+      "question": "Can proprietary vendors completely exit GPL constraints by adopting service models (SaaS), embedded systems, or permissive alternatives without loss of competitive position?",
+      "resolution_mechanism": "Market analysis of licensing strategies by sector; comparison of market share trends for proprietary vs AGPL-compliant services; engineering cost analysis of permissive alternative adoption",
+      "impact": "If exit is fully available: GPL is not a Snare (should be lower extraction). If exit costs are prohibitive: GPL is a genuine Snare. Determines whether the vendor perspective should be classified as constrained (mid-extraction) vs trapped (high extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of vendor exit strategies from GPL constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.37
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Copyleft licensing, exemplified by the GNU General Public License (GPL), uses copyright law to enforce a reciprocal obligation: any software that incorporates GPL-licensed code must itself be released under GPL. This constraint exhibits radically different structural properties depending on the observer's position. For proprietary software vendors, copyleft is a snare: they cannot use GPL code without surrendering trade secrets or facing infringement liability. For open source communities, copyleft is pure coordination: it ensures contributions remain free and shared. For commercial firms building on GPL infrastructure, copyleft is a mixed constraint: they benefit from mature libraries and community contributions but face forced disclosure and licensing strategy constraints. The constraint's theater ratio has increased modestly over 20 years (0.25 to 0.35) as legal interpretation has shifted from clear bright lines (source code distribution) to ambiguous boundaries (API-wrapped services, cloud computing, embedded systems). Extractiveness has remained relatively stable (0.35 to 0.38) because the structural tension \u2014 free software advocates enforcing perpetual freedom through legal constraints \u2014 is inherent to the mechanism, not an institutional drift.",
+    "key_agents": [
+      "Open Source Developers: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from symmetrical reciprocity and commons preservation",
+      "Open Source Community: Primary beneficiary (institutional/arbitrage) \u2014 coordinate through GPL's legal framework with low friction",
+      "Proprietary Software Vendors: Primary victims (powerful/trapped) \u2014 face binary choice between source disclosure and legal liability",
+      "Commercial Derivative Developers: Secondary victims (moderate/constrained) \u2014 experience mixed extraction (forced disclosure) and coordination (access to code)",
+      "Enterprise Adapter Layer: Organized agents (organized/mobile) \u2014 navigate legal ambiguity through service architecture and licensing strategies",
+      "Software Patent System: Institutional actor (institutional/constrained) \u2014 maintains patent grant clauses in GPL despite reduced relevance",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing copyright law as immutable when it is politically contingent"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. GPL enforces a reciprocal obligation, but the magnitude depends on the vendor's business model. Service-based companies can sometimes escape through architectural boundaries; embedded systems vendors face stricter constraints. The global average extraction is moderate because avoidance strategies exist (migrate to permissive licenses, re-architect services, use non-GPL alternatives) even though they carry engineering costs. Suppression (0.42): Moderate-high. The main suppressive element is legal uncertainty: ambiguity about what constitutes a 'derivative work' creates compliance friction. Additionally, vendors face career and strategic constraints: disclosing proprietary code violates business norms. However, suppression is not extreme because the rule is known and foreseeable. Theater ratio (0.35): Low-moderate. GPL's mechanism is functionally transparent: license text directly specifies rights and obligations. There is minimal performative labor (reading licenses, legal review) compared to, say, securities regulation. Theater has increased slightly because courts must now interpret edge cases (cloud, APIs, embedded systems) that the original GPL text did not clearly address \u2014 interpretation theater has replaced straightforward compliance theater.",
+    "perspectival_gap": "The proprietary vendor sees a Snare because exit options are genuinely limited (comply, rewrite, or litigate). The open source community sees a Rope because they designed and control the constraint for mutual benefit. The commercial derivative developer sees Tangled Rope because they benefit from GPL code access but are asymmetrically constrained by disclosure requirements. The enterprise adapter sees a Scaffold because large organizations have resources to navigate ambiguity and can migrate to alternatives once legal interpretation clarifies (and it has: AGPL addresses cloud computing). The patent system sees its own Piton status: the patent grant clause in GPL persists despite low utility because history carries institutional weight. The analytical observer risks seeing a Mountain by naturalizing copyright law as a fixed feature of property law, when copyright is actually a contingent political system subject to reform. This perspectival range \u2014 from immutable law to temporary scaffold to pure coordination \u2014 demonstrates that the same structural mechanism produces all six types.",
+    "directionality_logic": "Directionality (d) derives from structural position. Proprietary vendors are targets (d \u2248 0.85): they bear extraction and have trapped exits. Open source developers are beneficiaries (d \u2248 0.15): they benefit from reciprocity and have arbitrage options (use non-GPL, or accept GPL). Commercial derivatives occupy middle ground (d \u2248 0.55): they benefit from code access (low d) but face extraction (high d) \u2014 constrained exit prevents full arbitrage. Enterprises with architectural workarounds (d \u2248 0.40): they have partial agency through legal interpretation loopholes (mobile exit), so experienced extraction is dampened. The patent system's position is ambiguous (d \u2248 0.50): it is formally part of GPL but functionally irrelevant \u2014 the constraint has no clear benefit or cost to patent holders, so directional symmetry applies. The analytical perspective (d \u2248 0.72): as observer, they see the full structure but derive no extraction or benefit; their role is analytic detachment.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that GPL is genuinely a Tangled Rope: it has both coordination function (ensures free software remains free, enables community contribution) and asymmetric extraction (proprietary vendors bear costs, open source beneficiaries profit). The core structural property is that GPL uses legal coercion (copyright enforcement) to achieve coordination (perpetual freedom). This hybrid nature is not a classification failure \u2014 it is the structural reality. The alternative classifications (Snare for vendors, Rope for communities, Scaffold for enterprises) are perspectival readings of the same base constraint. The mandatrophy is resolved by declaring that the constraint is a Tangled Rope from the global/institutional perspective while acknowledging that each observer has a legitimate partial perspective. GPL is neither pure coordination (open source myth) nor pure extraction (vendor complaints) \u2014 it is a hybrid that enforces reciprocity through legal constraints. This is exactly what Tangled Rope captures."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_open_source_licensing",
+      "software_patent_enforcement",
+      "derivative_work_definition"
+    ],
+    "dual_formulation_note": "Copyleft as coordination mechanism (open source perspective) is a distinct constraint from copyleft as extraction mechanism (proprietary vendor perspective). Both operate via the same legal text but have different \u03b5 values and base structural properties. However, unified analysis shows they are the same constraint viewed from different positions. This is not constraint decomposition \u2014 it is perspectival differentiation of a single Tangled Rope."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.85
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

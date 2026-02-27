@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "semiconductor_fabrication_chokepoint",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "semicon"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "The geopolitical and capital chokepoint of leading-edge semiconductor manufacturing (e.g., TSMC 2nm node)",
+    "topic_domain": "technological/geopolitical/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "tsmc_shareholders",
+      "taiwan_state_apparatus"
+    ],
+    "victims": [
+      "global_chip_dependent_economies",
+      "semiconductor_design_firms",
+      "device_manufacturers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Chip Ecosystem",
+      "comment": "PERSPECTIVE 1: DEPENDENT CHIP ECOSYSTEM (SNARE) \u2014 AI developers, data center operators, smartphone manufacturers have no exit from TSMC's advanced nodes. Cannot manufacture in-house (capital barrier >$20B, specialized expertise), cannot switch suppliers (TSMC holds >90% of sub-3nm capacity), cannot delay (competitive dynamics punish slowness). Trapped by technological and economic necessity. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.97 (extreme extraction)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Secondary Design Firms and Integrators",
+      "comment": "PERSPECTIVE 2: DESIGN FIRMS & INTEGRATORS (SNARE) \u2014 Moderate power but structurally constrained. Can in theory design around TSMC's capacity (moving to less-advanced nodes, changing architecture), but this incurs competitive penalty. Lead times stretch 18+ months; priority queuing by TSMC favors large customers (Apple, NVIDIA, Intel). No meaningful alternatives exist (Samsung's N3/N4 lag TSMC's roadmap by 6-18 months; Intel's inability to deliver external customers). d\u22480.80, f(d)\u22481.18, \u03c3=1.2 \u2192 \u03c7\u22480.82."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Large Integrated Customers (Apple, NVIDIA, AMD, Qualcomm)",
+      "comment": "PERSPECTIVE 3: LARGE INTEGRATED CUSTOMERS (SNARE) \u2014 Nominally powerful, but leverage is constrained by TSMC's irreplaceability and by geopolitical risk. Apple designs custom processors but depends entirely on TSMC. NVIDIA designs GPUs but manufactures nowhere else. These firms can negotiate better terms (priority access, lower prices) but cannot exit the relationship or credibly threaten to build in-house. They pay the snare toll in form of capacity competition, geopolitical hostage risk, and technology dependency. d\u22480.68, f(d)\u22480.95, \u03c3=1.2 \u2192 \u03c7\u22480.70."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Geopolitical Coalitions (US, EU, Japan, South Korea)",
+      "comment": "PERSPECTIVE 4: GEOPOLITICAL COALITIONS (TANGLED ROPE) \u2014 Organized states view the constraint as mixed coordination + extraction. Coordination function: TSMC provides stable supply of leading-edge chips essential to defense, AI, competitiveness. Extraction function: Taiwan's geopolitical leverage over chip supply creates asymmetry (US cannot credibly diversify to equivalents; therefore must manage Taiwan relations carefully; therefore absorbs geopolitical risk). States are constrained by inability to quickly build domestic capacity but have partial agency: CHIPS Act ($39B), EU Chips Act (\u20ac42B), Japan/South Korea subsidies attempt to build alternative fabs. The constraint requires active state enforcement (export controls on chip-making equipment, subsidies, trade negotiations). d\u22480.58, f(d)\u22480.78, \u03c3=1.2 \u2192 \u03c7\u22480.54."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "TSMC and Taiwan State",
+      "comment": "PERSPECTIVE 5: TSMC AND TAIWAN STATE (ROPE) \u2014 Primary beneficiary. TSMC experiences the constraint as coordination: it solves the problem of coordinating global chip supply, extracting rents through pricing power and priority control. Taiwan state benefits from TSMC as primary revenue source and geopolitical asset. From this perspective, the constraint is not extraction but coordination value \u2014 TSMC provides the essential service that no competitor can. TSMC maintains arbitrage (can shift production to other countries; has considered fabs in US/Japan; holds leverage with all customers). d\u22480.12, f(d)\u22480.10, \u03c3=1.2 \u2192 \u03c7\u22480.07 (net beneficiary; negative effective extraction)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Decentralization/Redundancy Initiatives",
+      "comment": "PERSPECTIVE 6: DECENTRALIZATION INITIATIVES (SCAFFOLD) \u2014 Organized actors (CHIPS Act, EU fabs, Japan/South Korea capacity building) view this as temporary supply crisis with a sunset clause. Goal: reduce TSMC concentration from >90% to <60% sub-3nm capacity within 15 years (2026-2041). Intel, Samsung, SMIC are building capacity; open-source chip design (RISC-V) reduces custom fab dependency. The constraint suppression is deliberate (supply-side constraints intentionally maintained to justify subsidies and create industry rationale), but has a formal sunset. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.35 (moderate, declining extraction)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Equipment Vendors (ASML, Tokyo Electron, Lam Research)",
+      "comment": "PERSPECTIVE 7: EQUIPMENT VENDORS (PITON) \u2014 Historically critical but now degraded. ASML's extreme UV (EUV) lithography monopoly was THE chokepoint (2015-2022); now EUV is commodity-ish and multiple vendors compete. Equipment vendors' former gatekeeper role has attenuated as TSMC and Samsung internalized critical process knowledge. Vendors persist through institutional inertia and because fab buildouts still require massive equipment orders, but their leverage has declined. Theater ratio \u22480.65 (they perform criticality they no longer possess); Chinese sanctions (Huawei) created artificial scarcity that vendors exploited but cannot sustain indefinitely. d\u22480.15, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From civilizational view, one might argue that semiconductor manufacturing concentration is an inherent law of process complexity and capital intensity. This perspective classifies as mountain. However: the structural data (\u03b5=0.58, suppression=0.72, theater=0.35) contradicts mountain thresholds (\u03b5 \u2264 0.25, suppression \u2264 0.05). The apparent inevitability ('you can't make 2nm chips in a garage') naturalizes contingent policy choices (TSMC's IP secrecy, equipment export controls, subsidy allocation). The engine will flag this as a false summit. Manufacturing concentration is real but not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fab_buildout_substitution",
+      "question": "Can Samsung, Intel, and emerging competitors (SMIC, emerging Taiwan capacity) build sufficient sub-3nm capacity within 10-15 years to reduce TSMC's share from >90% to <70%?",
+      "resolution_mechanism": "Empirical: Track capital investment, yield curves, time-to-production for announced fabs (Intel Ohio, Samsung Pyeongchang, SMIC Wuhan). Monitor whether Samsung N3/N4 yield targets are met; whether Intel 7/4/20A reach customer maturity; whether SMIC achieves competitive \u22647nm production.",
+      "impact": "If YES: scaffold perspective confirmed, snare constraint weakens to tangled rope within 15 years, CHIPS Act/subsidies achieve policy goal. If NO: snare classification persists, geopolitical dependence on Taiwan intensifies, risk of supply weaponization increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competing fabs can reduce TSMC's sub-3nm dominance within 15 years"
+    },
+    {
+      "id": "process_node_relevance_degradation",
+      "question": "Does architectural innovation (chiplets, AI-specific designs) reduce demand for the absolute most advanced nodes, making TSMC's 2nm advantage less economically critical than current assumptions?",
+      "resolution_mechanism": "Market analysis: Measure fraction of shipping chip units at leading edge (2nm, 3nm, 5nm) vs leading-edge-capable (7nm and older). Track whether energy-efficient architectures on older nodes compete effectively with brute-force leading-edge designs. Monitor whether NVIDIA/AMD/Apple maintain node-competitive strategies or shift to node-tolerant designs.",
+      "impact": "If YES: effective chokepoint weakens (you can build competitive chips on N5, beneficiaries have exit to older nodes), classification moves from snare toward tangled rope. If NO: concentration intensifies, absolute dependency grows, snare persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether architectural innovation reduces dependence on absolute leading-edge nodes"
+    },
+    {
+      "id": "taiwan_physical_vulnerability",
+      "question": "Is the geopolitical chokepoint actually Taiwan's geographic/military vulnerability, such that the constraint cannot be meaningfully decentralized without political change?",
+      "resolution_mechanism": "Assess whether declared capacity additions in Japan, US, South Korea are genuinely independent or merely TSMC satellites. Analyze whether US/allied governments are willing to tolerate Taiwan-based supply concentration despite military risk, or whether decentralization is existential political requirement. Monitor whether TSMC fabs in Phoenix (Arizona) achieve genuine autonomy or remain dependent on Taiwan process IP.",
+      "impact": "If Taiwan vulnerability is primary: decentralization becomes geopolitical requirement (not market driven), snare classification persists indefinitely, suppression driven by state actors (not just market structure). If manufacturing concentration can be decoupled from Taiwan risk: scaffold perspective gains credibility, 15-year sunset becomes plausible.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the chokepoint is structural (capital intensity) or geopolitical (Taiwan's vulnerability), and whether they can be decoupled"
+    },
+    {
+      "id": "open_source_chip_viability",
+      "question": "Can RISC-V and open-source chip designs achieve price/performance parity with proprietary designs by 2035, enabling lock-in escape through design architecture change rather than fab capacity?",
+      "resolution_mechanism": "Track RISC-V adoption rates, performance benchmarks, software ecosystem maturity. Monitor whether open-source designs (SiFive, StarFive, others) reach data-center/AI-application readiness. Assess whether ISA switching cost (recompiling software stack, retraining developer ecosystem) is lower than fab capacity switching cost.",
+      "impact": "If YES: beneficiaries (Apple, NVIDIA, Qualcomm) can escape TSMC lock-in by switching ISA and design ecosystem (long-term, 10+ years). Constraint becomes tangled rope or even scaffold (exit becomes mobile via design change). If NO: ISA lock-in complements fab lock-in; snare constraint deepens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether RISC-V and open-source chips can provide price/performance parity and reduce fab lock-in"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The fabrication of leading-edge semiconductors (sub-3nm nodes) represents a modern chokepoint where technological, capital, and geopolitical constraints converge into a structural trap. TSMC controls >90% of sub-3nm manufacturing capacity, with competitors (Samsung, Intel, SMIC) years behind on yield and volume. The barrier to entry is extraordinary: a single advanced fab requires $20-25 billion in capital, 5-7 years of construction and ramp-up, specialized supply chains (EUV lithography from ASML, rare materials, equipment from Tokyo Electron/Lam), and proprietary process knowledge accumulated over decades. No company or country has successfully built an independent leading-edge fab in the past 15 years. Simultaneously, global demand for advanced chips is inelastic: AI accelerators, processors, mobile SoCs all require leading-edge performance. This creates a structural snare where dependent economies (US, EU, Japan, South Korea, China) must source from TSMC or face competitive disadvantage. Taiwan's geopolitical status compounds the extraction: the constraint is not just technological but also sovereign-risk dependent. The constraint has intensified over the interval (2016-2026): extractiveness rose from 0.38 to 0.58 as TSMC's share consolidated and competitors fell further behind; geopolitical weaponization increased (US sanctions on Huawei, China's inability to acquire advanced chips). Theater remains low (35%) because the constraint is functionally real\u2014TSMC genuinely produces leading-edge chips that no competitor can replicate. However, multiple organized actors (CHIPS Act, EU fabs, Japan subsidies, South Korea investments) are explicitly attempting to build redundancy and break the chokepoint within 15 years (sunset logic), establishing the scaffold perspective as a real structural feature alongside the snare.",
+    "key_agents": [
+      "TSMC and Taiwan state: Primary beneficiary (institutional/arbitrage) \u2014 captures geopolitical leverage, pricing power, and strategic rent from monopoly position",
+      "Global chip-dependent economies (US, EU, Japan, South Korea): Primary victims (organized/constrained) \u2014 constrained by inability to quickly build alternative capacity, bear geopolitical and supply-chain risk",
+      "Semiconductor design firms (Apple, NVIDIA, AMD, Qualcomm, Broadcom): Secondary victims (powerful/constrained) \u2014 can negotiate but cannot exit; face priority queuing and lead-time uncertainty",
+      "Broader AI/datacenter/smartphone ecosystem: Tertiary victims (powerless/trapped) \u2014 depend on chip supply chains they cannot influence; face capacity constraints and price pressure",
+      "Geopolitical coalitions (US, EU, Japan, South Korea) via CHIPS Acts and subsidies: Organized agents (organized/constrained) \u2014 attempting to build alternative capacity and reduce Taiwan dependence; see constraint as temporary with sunset",
+      "Emerging competitors (Samsung, Intel, SMIC, Taiwan emerging fabs): Constrained challengers (powerful/constrained) \u2014 investing heavily but lagging TSMC by 6-18 months in node maturity and yield",
+      "Equipment vendors (ASML, Tokyo Electron, Lam Research): Institutional gatekeepers (institutional/arbitrage) \u2014 former chokepoint holders; leverage has declined as fab makers internalized process knowledge; now depend on fab growth"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Elevated. TSMC extracts economic rent through pricing power (premium pricing for leading-edge nodes), priority control (preference sequencing by customer size and strategic importance), and implicit geopolitical tolls (dependent governments must manage Taiwan relations carefully to maintain access). The 0.38\u21920.58 trajectory reflects intensified market concentration and geopolitical weaponization. Extractiveness is not higher (0.70+) because: (1) TSMC is not purely predatory\u2014it does provide genuine leading-edge chip production that no competitor can; (2) large customers have some negotiating power; (3) there exists a realistic competitive roadmap (Samsung N3, Intel 4/7, SMIC improvements) that provides modest hope of exit within 10-15 years. Suppression (0.72): High. Multiple barriers prevent exit: (a) capital barrier: $20B+ capital requirement is effectively infinite for non-state actors; (b) knowledge barrier: TSMC's process IP is proprietary and not transferable; (c) supply chain barrier: specialized inputs (EUV lithography) are single-source (ASML) or dual-source (equipment from Tokyo Electron, Lam); (d) time barrier: 5-7 years minimum to reach competitive volume and yield; (e) geopolitical barrier: China cannot access advanced nodes (US sanctions); Europe/Japan/South Korea have not caught up in 15+ years despite billions in investment. Theater ratio (0.35): Low. The constraint is functionally genuine\u2014TSMC produces advanced chips that competitors truly cannot. There is minimal theater: TSMC does not overstate its capabilities, customers understand the supply situation precisely, geopolitical risk is transparent. The modest theater (28%\u219235% over interval) reflects secondary theater: some performance of manufacturing 'difficulty' to justify premium pricing, some state-level theater (CHIPS Act announcements of future capacity that is not yet online). The constraint claim (snare) is appropriate because the base properties align with snare thresholds: \u03b5=0.58 \u2265 0.46, suppression=0.72 \u2265 0.60, \u03c7 values across perspectives exceed 0.66 for most trapped/constrained agents.",
+    "perspectival_gap": "The constraint exhibits extreme perspectival gap. From TSMC's perspective (Rope), the constraint solves the problem of coordinating global chip supply\u2014TSMC is the essential coordination node. From dependent countries' perspectives (Tangled Rope), the constraint is mixed coordination (TSMC provides necessary service) plus extraction (TSMC captures geopolitical rent and supply-chain risk transfer). From design firms' perspectives (Snare), the constraint is pure extraction: they have no meaningful exit, TSMC controls priority, they bear full cost of supply disruption. From the dependent chip ecosystem (powerless economies' perspective), the constraint is catastrophic: there is zero agency, no exit, complete dependency on Taiwan's stability and TSMC's continued operation. From the scaffold perspective (states attempting to build alternatives), the constraint is temporary and remediable via state investment and time. From equipment vendors' perspective (Piton), the constraint is their former criticality\u2014they remember when EUV lithography was the chokepoint; now they are commodity suppliers. From the civilizational analytical observer (false Mountain), the constraint might appear to be an immutable law of physics ('you cannot make 2nm chips cheaply')\u2014but the structural data contradicts this: the constraint is contingent on TSMC's IP secrecy, equipment export controls, and policy choices about subsidies and technology transfer.",
+    "directionality_logic": "TSMC/Taiwan (Rope beneficiary): d\u22480.12, f(d)\u22480.10 \u2014 Full beneficiary (d\u21920), arbitrage exit (can shift production). Negative effective extraction (\u03c7\u22480.07); they experience the constraint as value creation, not constraint. Dependent economies (Tangled Rope): d\u22480.58, f(d)\u22480.78 \u2014 Moderate victim status (bears geopolitical risk, supply constraint), but organized power and constrained exit (can invest in alternatives, but slowly). Large customers (Apple, NVIDIA\u2014Snare): d\u22480.68, f(d)\u22480.95 \u2014 Clear victims but powerful (can negotiate), constrained exit. Design firms (moderate, Snare): d\u22480.80, f(d)\u22481.18 \u2014 Victims, constrained exit, moderate power; no way to source alternatives. Dependent chip ecosystem (Snare): d\u22480.93, f(d)\u22481.40 \u2014 Full victims, trapped (no alternatives for end users), powerless (cannot organize). Decentralization initiatives (Scaffold): d\u22480.45, f(d)\u22480.50 \u2014 Moderate victim position (constrained by time and capital requirements), but organized actors with agency and a sunset plan. Equipment vendors (Piton): d\u22480.15, f(d)\u22480.05 \u2014 Near-beneficiary position but degraded leverage. Analytical observer (false Mountain): d\u22480.72, f(d)\u22481.15 \u2014 Would-be observer position, but mountain classification fails gates (\u03b5=0.58 > 0.25, suppression=0.72 > 0.05).",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLVES MANDATROPHY: The structural data clearly satisfies snare thresholds (\u03b5=0.58 \u2265 0.46, suppression=0.72 \u2265 0.60) and the chi formula produces \u03c7 > 0.66 for the primary victim perspectives (dependent ecosystem \u03c7\u22480.97, design firms \u03c7\u22480.82, large customers \u03c7\u22480.70). The classification is resistant to misidentification as Rope or Tangled Rope because: (1) The beneficiary perspective (TSMC) experiences the constraint as coordination with negative \u03c7\u2014they do not perceive extraction, they perceive value creation. The snare classification is about what dependent agents experience, not about TSMC's experience. (2) There is no genuine coordination benefit to the victims\u2014the constraint transfers risk and rents, it does not solve a collective action problem for the dependent ecosystem. If TSMC's nodes were genuinely coordinating chip production across competitors for mutual gain, the constraint would be Rope or Tangled Rope. Instead, TSMC is extracting economic and geopolitical rents from necessity. (3) Suppression is the key signal: the 0.72 suppression score reflects that alternatives (Samsung, Intel, SMIC) exist but are structurally unreachable due to capital/time barriers maintained by TSMC's IP secrecy and competitors' inability to catch up. This is suppression of alternatives, not technical impossibility. (4) The scaffold perspective (decentralization attempts) demonstrates that the snare is remediable\u2014if it were truly a mountain (immutable law of physics), organized state investment could not build alternatives. The fact that CHIPS Act, EU fabs, and Japanese subsidies are explicitly attempting to break the chokepoint within 15 years shows the constraint is political/economic (snare), not physical (mountain)."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "artificial_intelligence_accelerator_supply",
+      "taiwan_geopolitical_risk",
+      "us_china_technology_decoupling",
+      "semiconductor_equipment_export_controls"
+    ],
+    "dual_formulation_note": "The semiconductor fabrication chokepoint decomposes into at least two structurally distinct constraints: (1) TSMC's manufacturing monopoly at the leading edge (this story, \u03b5=0.58, Snare\u2014capital and knowledge barriers prevent competitor catch-up), and (2) Taiwan's geopolitical vulnerability as a single point of failure (separate story, \u03b5=0.72+, Snare\u2014military/political risk makes the entire constraint hostage-dependent). These are linked but distinct: breaking TSMC's manufacturing dominance (via CHIPS Act decentralization) does not resolve Taiwan's geopolitical risk; conversely, securing Taiwan politically does not reduce TSMC's market concentration if competitors remain years behind. The present story focuses on the manufacturing concentration. A sibling story should address Taiwan geopolitical risk as a separate chokepoint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.68
+    }
+  ]
+}

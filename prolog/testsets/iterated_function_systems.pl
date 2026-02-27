@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: iterated_function_system_convergence
+% CONSTRAINT STORY: iterated_function_systems
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-28
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_iterated_function_system_convergence, []).
+:- module(constraint_iterated_function_systems, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,18 +53,38 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: iterated_function_system_convergence
+ *   constraint_id: iterated_function_systems
  *   human_readable: IFS Convergence and Computational Resources
- *   domain: technological
+ *   domain: technological/computational_mathematics
  *
  * SUMMARY:
- *   Iterated Function Systems (IFS) provide a method for generating fractals by repeatedly applying a set of affine transformations.  A constraint arises from the computational resources required to generate a visually complex fractal to a high degree of convergence. The limitation in processing power, memory, and time to achieve the desired result can be a barrier to certain applications.
+ *   Iterated Function Systems (IFS) provide a mathematically elegant method
+ *   for generating fractals by repeatedly applying a set of affine
+ *   transformations. The constraint examined here is not mathematical (IFS
+ *   theory is stable) but structural: the computational resources required to
+ *   achieve convergence for meaningful visualization and analysis have
+ *   created a resource allocation asymmetry that affects different scientific
+ *   communities differently. High-performance computing centers and
+ *   specialized hardware manufacturers benefit from the resource
+ *   concentration, while small research groups and educational institutions
+ *   bear the extraction costs of limited access and extended computation
+ *   times. The constraint exhibits both coordination functions (standardized
+ *   benchmarks, algorithm publication, resource-sharing protocols) and
+ *   genuine asymmetric extraction (differential access to computational
+ *   capacity). The theater ratio has risen from pedagogical focus on IFS in
+ *   1990s computer science to broader marginalisation in production graphics,
+ *   yet the algorithm persists in curricula through institutional inertia.
+ *   Open-source alternatives and GPU accessibility are creating scaffold
+ *   pathways that may diminish extraction asymmetry over a generational
+ *   timescale.
  *
- * KEY AGENTS (by structural relationship):
- *   - Hobbyists/Small Researchers: Primary target (powerless/trapped) — Limited access to computing resources.
- *   - High-Budget Research Labs/Organizations: Primary beneficiary (institutional/arbitrage) — Possess powerful computing resources.
- *   - Algorithm Developers: Secondary actor (moderate/mobile) — Create and optimize IFS algorithms.
- *   - Analytical observer: Analytical observer — sees full structure
+ * KEY AGENTS:
+ *   - High-Performance Computing Centers: Primary beneficiary (institutional/arbitrage) — consolidate computational resources, capture value from standardization, control resource allocation through queuing and pricing
+ *   - Specialized Hardware Manufacturers: Primary beneficiary (institutional/arbitrage) — extract through vendor lock-in for optimized IFS convergence on proprietary platforms
+ *   - Small Research Groups: Primary victim (moderate/constrained) — bear extraction through limited access, longer computation times, inability to leverage parallelization effectively
+ *   - Undergraduate Researchers: Severe victim (powerless/trapped) — trapped within educational resource constraints, cannot access tools needed for meaningful experimentation; no exit options within institutional context
+ *   - Open Source Community: Organized agent (organized/constrained) — building alternative pathways through FLAM, FractalExplorer, open-source GPU libraries; sees convergence bottleneck as temporary problem with clear sunset
+ *   - Academic Computational Graphics: Institutional observer (institutional/arbitrage) — maintains IFS pedagogy through curriculum inertia despite reduced practical relevance; theater ratio high (0.68)
  */
 
 /* ==========================================================================
@@ -72,124 +92,92 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(iterated_function_system_convergence, 0.42).
-domain_priors:suppression_score(iterated_function_system_convergence, 0.45).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(iterated_function_system_convergence, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(iterated_function_systems, 0.38).
+domain_priors:suppression_score(iterated_function_systems, 0.48).
+domain_priors:theater_ratio(iterated_function_systems, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(iterated_function_system_convergence, extractiveness, 0.42).
-narrative_ontology:constraint_metric(iterated_function_system_convergence, suppression_requirement, 0.45).
-narrative_ontology:constraint_metric(iterated_function_system_convergence, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(iterated_function_systems, extractiveness, 0.38).
+narrative_ontology:constraint_metric(iterated_function_systems, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(iterated_function_systems, theater_ratio, 0.55).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-% narrative_ontology:constraint_metric(iterated_function_system_convergence, accessibility_collapse, [0.85-1.0]).
-% narrative_ontology:constraint_metric(iterated_function_system_convergence, resistance, [0.0-0.15]).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(iterated_function_systems, tangled_rope).
+narrative_ontology:human_readable(iterated_function_systems, "IFS Convergence and Computational Resources").
+narrative_ontology:topic_domain(iterated_function_systems, "technological/computational_mathematics").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(iterated_function_system_convergence, tangled_rope).
-narrative_ontology:human_readable(iterated_function_system_convergence, "IFS Convergence and Computational Resources").
-narrative_ontology:topic_domain(iterated_function_system_convergence, "technological").
+domain_priors:requires_active_enforcement(iterated_function_systems).
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(iterated_function_system_convergence).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(iterated_function_system_convergence). % Required for Tangled Rope
-domain_priors:requires_active_enforcement(iterated_function_system_convergence).
-
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-% domain_priors:emerges_naturally(iterated_function_system_convergence).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(iterated_function_system_convergence, high_budget_research).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(iterated_function_system_convergence, limited_resource_researchers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(iterated_function_systems, specialized_hardware_manufacturers).
+narrative_ontology:constraint_beneficiary(iterated_function_systems, high_performance_computing_centers).
+narrative_ontology:constraint_beneficiary(iterated_function_systems, applied_visualization_vendors).
+narrative_ontology:constraint_victim(iterated_function_systems, small_research_groups).
+narrative_ontology:constraint_victim(iterated_function_systems, undergraduate_education).
+narrative_ontology:constraint_victim(iterated_function_systems, open_source_community).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(iterated_function_system_convergence, tangled_rope,
+% PERSPECTIVE 1: UNDERGRADUATE RESEARCHER (SNARE) — Trapped by institutional resource constraints and curriculum lock-in. Cannot access computational resources required for meaningful IFS convergence experiments. Bears the extraction of limited access to tools while watching commercial vendors dominate the space. No exit options within the educational timeline.
+constraint_indexing:constraint_classification(iterated_function_systems, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(iterated_function_system_convergence, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: SMALL RESEARCH GROUP (TANGLED ROPE) — Moderate power with constrained exit. Benefits from IFS convergence for visualization and modeling work, but extraction occurs through resource allocation asymmetry. Must accept longer convergence timelines and cannot leverage parallelization. Constrained by equipment depreciation cycles and grant funding volatility. Coordination function exists (shared algorithms, published benchmarks) but asymmetric cost distribution.
+constraint_indexing:constraint_classification(iterated_function_systems, tangled_rope,
+    context(agent_power(moderate),
             time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: HIGH-PERFORMANCE COMPUTING CENTER (ROPE) — Institutional beneficiary with arbitrage options. Experiences IFS convergence as a pure coordination problem: resource allocation via queuing systems, standardized interfaces, documented convergence criteria. Can exit to alternative computation problems or service models. Benefits from computational resource consolidation and vendor contracts.
+constraint_indexing:constraint_classification(iterated_function_systems, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(iterated_function_system_convergence, tangled_rope,
+% PERSPECTIVE 4: OPEN SOURCE COMMUNITY (SCAFFOLD) — Organized agents building alternative convergence pathways (FLAM, FractalExplorer, Fractint) that reduce dependency on commercial hardware. Constrained by volunteer effort and fragmented resources, but sees clear sunset logic: GPU accessibility and algorithmic improvements are democratizing IFS convergence. Exit path exists through community software development and distributed computing models. Suppression declining as technology diffuses.
+constraint_indexing:constraint_classification(iterated_function_systems, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: ACADEMIC COMPUTATIONAL GRAPHICS (PITON) — Institutional perspective on legacy IFS pedagogy in computer science curricula. Theater ratio high (0.68): teaching fractal generation persists in textbooks and courses as cultural artifact of 1990s computational aesthetics, but IFS has been largely replaced by procedural texture generation and procedural modeling in production graphics. Algorithms taught, tools rarely used in practice. Maintained through institutional inertia and canonical textbook presence, not functional dominance.
+constraint_indexing:constraint_classification(iterated_function_systems, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LIMIT VIEW (MOUNTAIN) — From a computational complexity perspective, IFS convergence bottlenecks reflect fundamental limits: fractal dimension computation requires iterative refinement to arbitrary precision, creating inherent computational cost that cannot be eliminated by organizational changes. Convergence rate depends on contraction ratio of transformations — a mathematical property, not a resource allocation choice. This perspective sees the constraint as immutable natural law. Engine flagged for false summit detection.
+constraint_indexing:constraint_classification(iterated_function_systems, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(iterated_function_system_convergence_tests).
+:- begin_tests(iterated_function_systems_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(iterated_function_system_convergence, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(iterated_function_system_convergence, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(iterated_function_systems, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(iterated_function_systems, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(iterated_function_system_convergence, ExtMetricName, E),
-    (E =< 0.25 -> true ; E >= 0.46). % Mountain or high-extraction Snare/Tangled.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(iterated_function_systems, TR),
+    TR >= 0.70.
 
-:- end_tests(iterated_function_system_convergence_tests).
+:- end_tests(iterated_function_systems_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -197,100 +185,91 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The scores are assigned based on the fact that while IFS algorithms themselves are not inherently extractive or coercive, the limited access to computing resources poses a constraint on those with fewer resources, preventing them from generating high-resolution fractals. This creates a form of asymmetric extraction since the high-budget researchers benefit due to the computational resources at their disposal.
+ *   Extractiveness (0.38): The constraint exhibits moderate base extraction. The computational requirements for IFS convergence create genuine asymmetries in access and capability, but recent GPU acceleration has reduced the severity of the bottleneck. The declining extraction trajectory (0.52 → 0.38 over the interval) reflects algorithmic improvements and hardware democratization. Suppression (0.48): Moderate. Barriers to entry include capital equipment costs, technical knowledge requirements, and institutional access controls. However, suppression is not total — open-source tools exist, and cloud computing is reducing hardware barriers. Smaller groups can achieve meaningful results with extended computation times. Theater ratio (0.55): The educational presentation of IFS has become increasingly theatrical. While IFS exemplifies key computational concepts (iteration, self-similarity, dimension), it is rarely the primary tool in production graphics or applied research. Its persistence in curricula reflects pedagogical tradition more than operational utility.
  *
  * PERSPECTIVAL GAP:
- *   The target, a powerless researcher with limited computing resources, sees the constraint as a snare since it directly limits their ability to explore complex fractals. The beneficiary, a high-budget research lab, sees this as a rope because they have access to the resources required for IFS and have no restrictions due to a lack of computing resources.
+ *   The constraint produces maximum perspectival divergence: beneficiaries see pure coordination (rope) through resource-sharing and standardized interfaces. Victims see extraction (snare for trapped undergraduates, tangled rope for constrained small groups). The open-source coalition sees a temporary problem with a sunset (scaffold) — GPU accessibility and algorithmic improvements are democratizing convergence. The academic graphics establishment sees a degraded ritual (piton) — IFS persists in teaching despite marginal production relevance. The civilizational analytical observer risks naturalizing a contingent institutional arrangement (resource concentration) as an immutable mathematical law (mountain). This perspectival range indicates a genuine hybrid constraint: both coordination functions and extraction mechanisms are operative.
  *
  * DIRECTIONALITY LOGIC:
- *   High-budget research benefits from the relative scarcity of advanced computing power. Limited resource researchers bear the cost in the form of being excluded from detailed IFS simulation. Algorithm developers benefit indirectly from creating efficiencies, enabling wider use of IFS.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   N/A
+ *   Beneficiary directionality derives from institutional consolidation: HPC centers and hardware vendors benefit from resource concentration and can shift to alternative problems if IFS becomes less relevant (arbitrage exit). Their d values are low, producing negative χ (they experience the constraint as enabling rather than extractive). Victim directionality reflects trapped or constrained exit options: small research groups cannot easily migrate to alternative tools without significant rework (constrained exit, moderate d → moderate f(d) → moderate χ). Undergraduate researchers have no exit option within their institutional timeline (trapped exit, high d → high f(d) → high χ for the snare perspective). Open-source community agents have constrained exit (they cannot immediately replace institutional resources) but organized power and clear sunset logic, producing moderate d and reduced χ compared to isolated small groups.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification as a tangled rope prevents it from being mislabeled as pure extraction because algorithm development serves a coordination function. It also prevents it from being mislabeled as a pure coordination mechanism because resources are required to benefit from this constraint, and a party may lack the resources to benefit from this constraint.
+ *   HYBRID COORDINATION-EXTRACTION: The constraint resolves mandatrophy by identifying both genuine coordination (standardized algorithms, published benchmarks enabling resource-sharing) and genuine asymmetric extraction (hardware access concentration, vendor lock-in effects). Neither dominates. The beneficiaries experience coordination through resource consolidation; the victims experience extraction through access barriers. The open-science coalition's scaffold perspective confirms that the extraction mechanism is not structural (mathematical) but institutional (resource allocation) — as technology diffuses and algorithms improve, the asymmetry declines. The declining extractiveness trajectory (0.52 → 0.38) supports this interpretation: the constraint is eroding as alternatives mature, characteristic of tangled rope degrading toward rope or scaffold.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_ifs,
-    'How rapidly will consumer-grade computing power advance relative to IFS algorithm complexity?',
-    'Tracking the exponential growth curves of both factors.',
-    'If computing power outpaces algorithm complexity, the constraint weakens; if not, it persists or intensifies.',
+    convergence_sufficiency_threshold,
+    'What convergence threshold (iteration count, Hausdorff distance, visual fidelity) constitutes ''sufficient'' IFS rendering for different application domains?',
+    'Empirical comparison across domains: medical imaging requirements vs. entertainment visualization vs. mathematical research. Analysis of diminishing returns in iteration count for visual quality.',
+    'If threshold is low: perceived convergence bottleneck is artificial, extraction is behavioral (agents choosing over-convergence). If threshold is domain-specific and high: bottleneck is structural, extraction is genuine resource asymmetry.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(convergence_sufficiency_threshold, empirical, 'Sufficiency threshold for IFS convergence across application domains').
+
+omega_variable(
+    algorithmic_acceleration_ceiling,
+    'Are recent acceleration techniques (adaptive iteration, early termination, GPU vectorization) genuinely novel or incremental refinements of known optimizations?',
+    'Systematic literature review of convergence acceleration methods from 1990-present. Classification by novelty vs. re-implementation. Measurement of practical speedup achieved.',
+    'If genuinely novel: suppression is declining through innovation, scaffold perspective is valid. If incremental: suppression is structural (fundamental iteration requirements), extraction mechanism is stable.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(algorithmic_acceleration_ceiling, empirical, 'Whether algorithmic acceleration represents fundamental improvement or incremental optimization').
+
+omega_variable(
+    hardware_commodity_transition,
+    'Will GPU/ASIC commoditization eventually eliminate the resource concentration that creates extraction asymmetry?',
+    'Historical price trends for GPU compute per unit. Projection of cost curves vs. algorithmic efficiency gains. Timeline analysis of when household hardware reaches current HPC capability.',
+    'If transition is likely (10-15 year horizon): scaffold sunset is real, constraint converts to rope. If commoditization stalls: extraction persists structurally because hardware cost is irreducible.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(hardware_commodity_transition, empirical, 'Timeline for hardware commoditization eliminating resource concentration').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(iterated_function_system_convergence, 0, 10).
+narrative_ontology:interval(iterated_function_systems, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(ifs_tr_t0, iterated_function_system_convergence, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(ifs_tr_t5, iterated_function_system_convergence, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(ifs_tr_t10, iterated_function_system_convergence, theater_ratio, 10, 0.10).
+% Theater ratio over time
+narrative_ontology:measurement(ifs_tr_t0, iterated_function_systems, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(ifs_tr_t5, iterated_function_systems, theater_ratio, 5, 0.48).
+narrative_ontology:measurement(ifs_tr_t10, iterated_function_systems, theater_ratio, 10, 0.55).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(ifs_ex_t0, iterated_function_system_convergence, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(ifs_ex_t5, iterated_function_system_convergence, base_extractiveness, 5, 0.42).
-narrative_ontology:measurement(ifs_ex_t10, iterated_function_system_convergence, base_extractiveness, 10, 0.42).
+% Extraction over time
+narrative_ontology:measurement(ifs_be_t0, iterated_function_systems, base_extractiveness, 0, 0.52).
+narrative_ontology:measurement(ifs_be_t5, iterated_function_systems, base_extractiveness, 5, 0.45).
+narrative_ontology:measurement(ifs_be_t10, iterated_function_systems, base_extractiveness, 10, 0.38).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-narrative_ontology:coordination_type(iterated_function_system_convergence, resource_allocation).
+narrative_ontology:coordination_type(iterated_function_systems, resource_allocation).
+narrative_ontology:affects_constraint(iterated_function_systems, fractal_dimension_computation).
+narrative_ontology:affects_constraint(iterated_function_systems, procedural_texture_approximation).
+narrative_ontology:affects_constraint(iterated_function_systems, gpu_algorithm_optimization).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(iterated_function_system_convergence, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(iterated_function_system_convergence, [other_constraint_id]).
+% DUAL FORMULATION NOTE:
+% IFS convergence can be framed two ways: (1) As a mathematical constraint on computational complexity (fundamental iteration requirements for arbitrary precision), or (2) As an institutional constraint on resource access (concentration of computational capacity). These generate different ε values (0.08 for pure mathematical bottleneck vs. 0.38 for resource allocation asymmetry). This story addresses the institutional constraint; the mathematical bottleneck is decomposed separately as a distinct mountain-type constraint.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(iterated_function_system_convergence, institutional, 0.30).
+constraint_indexing:directionality_override(iterated_function_systems, organized, 0.42).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "spain_digital_offensive_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "spain_dig"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Spanish Five-Point Digital Offensive",
+    "topic_domain": "political/technological/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "spanish_state_apparatus",
+      "traditional_media_establishment"
+    ],
+    "victims": [
+      "social_media_platforms",
+      "digital_content_creators",
+      "citizen_digital_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Constrained Digital Creator",
+      "comment": "PERSPECTIVE 1: CONSTRAINED DIGITAL CREATOR (SNARE) \u2014 Content creators dependent on social media distribution face escalating compliance costs, moderation pressure, and regulatory uncertainty. Cannot exit platforms without abandoning audience. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Global Social Media Platform",
+      "comment": "PERSPECTIVE 2: GLOBAL SOCIAL MEDIA PLATFORM (TANGLED ROPE) \u2014 Experiences coordination demands (content moderation, regulatory compliance, local language support) coupled with extraction of compliance costs and operational constraints. Can arbitrage between jurisdictions but subject to escalating enforcement threats. d\u22480.58, f(d)\u22480.68, \u03c3=1.1 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Spanish State Apparatus",
+      "comment": "PERSPECTIVE 3: SPANISH STATE APPARATUS (ROPE) \u2014 Benefits from the offensive as coordination tool: establishes information control, regains agenda-setting power from decentralized social networks, builds capacity for strategic enforcement. Frames regulation as solving collective action problem (misinformation, electoral integrity, social cohesion). d\u22480.12, f(d)\u22480.06, \u03c3=1.0 \u2192 \u03c7\u22480.03."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Traditional Media Establishment",
+      "comment": "PERSPECTIVE 4: TRADITIONAL MEDIA ESTABLISHMENT (ROPE) \u2014 Regulatory framework strengthens gatekeeping role of established newspapers, TV, radio against platform distribution. Benefits from audience re-consolidation and reduced competition from viral citizen content. Experiences as coordination (restoring journalistic authority). d\u22480.18, f(d)\u22480.14, \u03c3=1.0 \u2192 \u03c7\u22480.08."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The EU Digital Rights Coalition",
+      "comment": "PERSPECTIVE 5: EU DIGITAL RIGHTS COALITION (SCAFFOLD) \u2014 Organized civil society actors (Mozilla, EDRI, digital rights orgs) see the Spanish offensive as a temporary institutional response to platform externalities with sunset logic: proper algorithmic transparency, decentralization, and user control mechanisms will eventually replace state-mandated content removal. Currently constrained by lobbying disadvantage but mobile within EU framework. d\u22480.48, f(d)\u22480.58, \u03c3=1.1 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Content Moderation Bureaucracy",
+      "comment": "PERSPECTIVE 6: CONTENT MODERATION BUREAUCRACY (PITON) \u2014 The five-point offensive creates extensive compliance theater: notification systems, appeals processes, transparency reports, auditing procedures. Much of this is performative (appeals rarely succeed; moderation at scale cannot achieve stated goals). Maintained through institutional inertia despite recognizing its own degradation. theater_ratio=0.64. d\u22480.22, f(d)\u22480.18, \u03c3=1.0 \u2192 \u03c7\u22480.11."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "misinformation_measurement_problem",
+      "question": "What constitutes 'misinformation' actionable under the offensive, and who defines it?",
+      "resolution_mechanism": "Comparative analysis of moderation decisions across competing claims; tracking of appeals success rates; independence audit of fact-checking methodology",
+      "impact": "If definition is tight and independent: regulatory framework enables genuine coordination. If definition is partisan: framework enables state information control (extraction). Current ambiguity allows both interpretations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition and measurement of actionable misinformation"
+    },
+    {
+      "id": "platform_exit_feasibility",
+      "question": "Can creators and users realistically exit mainstream platforms (Meta, TikTok, X) to alternative networks without audience collapse?",
+      "resolution_mechanism": "Longitudinal tracking of migration rates; audience size correlation; network effects persistence on alternative platforms; income stability for creators post-migration",
+      "impact": "If exit is feasible: creator constraint downgrade (trapped \u2192 constrained). If exit leads to audience collapse: exit is illusory, snare classification confirmed. Currently asymmetric by creator size.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of platform exit for creators and users"
+    },
+    {
+      "id": "enforcement_asymmetry_direction",
+      "question": "Does the offensive disproportionately target anti-government content vs pro-government disinformation, or is enforcement actually content-neutral?",
+      "resolution_mechanism": "Detailed audit of moderation decisions by content direction (pro/anti-government); statistical analysis of appeal outcomes; tracking of platform compliance notices by claim type",
+      "impact": "If enforcement is asymmetric: snare classification dominates; effective extraction against dissent. If enforcement is neutral: tangled_rope confirmed; genuine coordination problem. Currently opaque.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Directionality and symmetry of enforcement decisions"
+    },
+    {
+      "id": "eu_regulatory_harmonization",
+      "question": "Will the Digital Services Act and related EU frameworks eventually render Spain's unilateral five-point offensive obsolete?",
+      "resolution_mechanism": "Tracking of DSA implementation; comparison of Spanish requirements vs harmonized EU standards; pressure from EU for regulatory alignment; sunset clause emergence",
+      "impact": "If EU harmonization occurs: scaffold perspective confirmed; sunset becomes real. If Spain maintains parallel system: extraction mechanism persists independently of broader trends.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "EU regulatory harmonization trajectory and obsolescence timeline"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "In 2024-2026, Spanish PM Pedro S\u00e1nchez declared social media a 'failed state' and announced a five-point digital offensive targeting platform accountability, content moderation, and information control. The offensive frames social media regulation as solving collective action problems (misinformation, electoral integrity, social cohesion), yet simultaneously concentrates information gatekeeping power in state institutions and traditional media. This constraint exhibits structural tension between genuine coordination needs (addressing algorithmic amplification, platform opacity) and extractive state power consolidation. The classification depends critically on directionality: whether the offensive targets genuine platform externalities (coordination problem) or uses externality framing to suppress digital dissent (extraction). Global platforms experience the offensive as simultaneous coordination demand and extraction pressure; creators experience escalating compliance costs with trapped exit options; the state apparatus experiences it as power restoration; traditional media experiences it as audience re-consolidation; organized digital rights movements see it as temporary institutional response with eventual sunset through EU harmonization; the compliance bureaucracy maintains increasingly theatrical moderation processes.",
+    "key_agents": [
+      "Spanish State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 regains information control and agenda-setting power; benefits from institutional coordination framing",
+      "Traditional Media Establishment: Secondary beneficiary (institutional/constrained) \u2014 strengthened gatekeeping role; reduced competition from platform distribution",
+      "Global Social Media Platforms: Primary victim/target (powerful/arbitrage) \u2014 faces escalating compliance costs, moderation pressure, operational constraints; can arbitrage between jurisdictions but subject to enforcement threats",
+      "Digital Content Creators: Constrained victim (powerless/trapped) \u2014 dependent on platform distribution; face escalating compliance uncertainty and audience risk",
+      "Citizen Digital Autonomy: Abstract victim (powerless/trapped) \u2014 loss of unmediated expression channels; increased surveillance and content control",
+      "EU Digital Rights Coalition: Organized observer (organized/mobile) \u2014 advocating for transparency and user control; mobile within EU regulatory framework",
+      "Content Moderation Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 maintains performative compliance theater; recognizes own degradation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The offensive extracts compliance costs from platforms and creators while consolidating state information control. However, extraction is not total (0.70+) because there are genuine coordination problems social media creates (algorithmic amplification, misinformation spread, electoral manipulation). The empirical measure reflects this mixture: the state captures real externalities in its framing, but uses them as justification for broader power consolidation. The initial measurement (0.42) at interval start reflects lower explicit enforcement; the trajectory to 0.58 reflects escalating regulatory action and compliance burden accumulation. Suppression (0.68): High. Content creators face material barriers to exit (audience dependency), platforms face jurisdiction lock-in (cannot simply leave Spanish market), and the moderation system itself suppresses alternative communication channels. However, suppression is not absolute (0.90+) because EU frameworks, digital alternatives, and organized resistance exist. Theater ratio (0.64): Moderate-high. The offensive generates substantial performative activity: compliance notifications, appeals processes, transparency reports, fact-checking audits. Much is theater because: moderation at scale cannot achieve stated quality goals; appeals rarely succeed; fact-checking is partisan-vulnerable; compliance burden is designed to signal action rather than solve problems. Theater has increased from 0.38 to 0.64 over 12 months as the bureaucracy scales compliance processes faster than actual problem-solving.",
+    "perspectival_gap": "The original research framing (S\u00e1nchez's 'failed state' rhetoric) presupposes the state apparatus perspective (Rope: coordination problem). But this naturalizes the state's structural position and ignores the victim perspectives. Digital creators see a Snare (trapped, escalating costs, no exit). Platforms see Tangled Rope (genuine coordination demands mixed with extraction pressure). The compliance bureaucracy sees Piton (increasingly performative theater maintaining inertial processes). The EU digital rights coalition sees Scaffold (temporary response with sunset via harmonization). The analytical observer, integrating all perspectives, sees tangled_rope as claimed type: the offensive exhibits both genuine coordination function (platforms do create externalities) AND asymmetric extraction (state consolidates control beyond necessity). This dual structure \u2014 not pure extraction, not pure coordination \u2014 is mandatrophy-resolved tangled rope.",
+    "directionality_logic": "Spanish state apparatus: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.06. Low effective extraction; net beneficiary from power consolidation. Captures information control as coordination benefit. Traditional media: Beneficiary + constrained \u2192 d\u22480.18, f(d)\u22480.14. Benefits from regulation but constrained by EU frameworks and audience preferences. Global platforms: Victim/target + arbitrage \u2192 d\u22480.58, f(d)\u22480.68. Significant extraction: compliance costs, operational constraints, but powerful enough to arbitrage between jurisdictions (arbitrage exit keeps d below 0.75). Digital creators: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction: audience-dependent exit is illusory; compliance burden is forced. Citizen digital autonomy: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Abstract collective cannot organize; no exit from surveillance infrastructure. EU digital rights coalition: Organized observer + mobile \u2192 d\u22480.48, f(d)\u22480.58. Moderate directionality; coalition has agency and mobility within EU framework. Content moderation bureaucracy: Institutional + arbitrage \u2192 d\u22480.22, f(d)\u22480.18. Low directionality; institutional actors maintain piton through inertia.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint resolves mandatrophy by demonstrating structural duality. Extractiveness (0.58) exceeds rope threshold (0.35) because the state extracts control beyond coordination necessity. Suppression (0.68) meets tangled rope minimum (0.40) because creators and platforms face material barriers. But the constraint has genuine coordination function (platforms do amplify misinformation; electoral integrity faces real threats from algorithmic manipulation). This is not pure extraction masquerading as coordination (Snare with false coordination claim) because: platforms experience real moderation demands, creators benefit from some content standards, the state's coordination framing captures genuine externalities. It is tangled rope because: the state consolidates power beyond what coordination alone requires, beneficiaries (state, traditional media) capture asymmetric gains, victims (creators, platforms) bear disproportionate costs, enforcement is required to sustain the asymmetry. The analytical test: if all coordination benefits could be achieved through platform self-regulation + transparent algorithmic standards + user control, would the state still impose the five-point offensive? The answer reveals extraction beyond coordination necessity. Current evidence suggests yes \u2014 the offensive targets state agenda-setting power restoration, not just problem-solving. This is why tangled_rope (not scaffold) is the claimed type: the sunset condition is not clearly operationalized, and state institutions have incentive to prevent rather than enable the sunset."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_digital_services_act_compliance",
+      "platform_content_liability_regimes",
+      "algorithmic_transparency_mandates"
+    ],
+    "dual_formulation_note": "The Spanish five-point offensive is a specific national instantiation of a broader constraint family around platform regulation. The EU Digital Services Act represents a harmonization attempt with different structural properties (\u03b5\u22480.35, lighter suppression, stronger coordination logic). The offensive's higher extractiveness (0.58) reflects nationalist state consolidation rather than coordination problem-solving. These constraints are linked: the offensive is downstream of both genuine platform externalities AND state capacity recovery pressures; the DSA is upstream as a potential sunset mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

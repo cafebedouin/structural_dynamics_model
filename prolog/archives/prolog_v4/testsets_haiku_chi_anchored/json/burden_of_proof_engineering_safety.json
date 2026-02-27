@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "burden_of_proof_engineering_safety",
+    "version": "1.0",
+    "generated_date": "2024-05-21",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reversal of the Engineering Burden of Proof",
+    "topic_domain": "technological/safety_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "corporate_management",
+      "shareholders"
+    ],
+    "victims": [
+      "end_users",
+      "flight_crews",
+      "dissenting_engineers",
+      "engineering_epistemic_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End-User (e.g., Passenger)",
+      "comment": "PERSPECTIVE 1: END-USER (SNARE) — The end-user is unaware of the reversed burden of proof and has no ability to exit the system or assess the increased risk. They bear the full, uncompensated cost of a failure. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.24. This is extreme extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Corporate Management",
+      "comment": "PERSPECTIVE 2: CORPORATE MANAGEMENT (ROPE) — From this perspective, the constraint is a coordination mechanism to overcome 'excessive' engineering caution, meet deadlines, and deliver shareholder value. It aligns the organization toward market goals. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08. A net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Dissenting Engineer",
+      "comment": "PERSPECTIVE 3: DISSENTING ENGINEER (TANGLED ROPE) — This agent understands both the coordination function (shipping a product) and the severe extraction of safety margins. They are constrained by career risk and organizational pressure, unable to easily exit or reverse the policy. d≈0.85, f(d)≈1.32, σ=1.0 → χ≈0.86."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Captured Regulator",
+      "comment": "PERSPECTIVE 4: CAPTURED REGULATOR (PITON) — The regulatory body maintains the rituals of safety certification, but its function has atrophied due to industry pressure or resource starvation. The process is performative, not functional. The high theater_ratio (0.75) satisfies the piton gate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's objective classification. It recognizes the genuine (if perverse) coordination function of aligning the company to a goal, but also the severe, asymmetric extraction of safety from victims. This is the canonical definition of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2020
+  },
+  "omegas": [
+    {
+      "id": "intent_vs_emergence",
+      "question": "Was the reversal of the burden of proof a deliberate, conscious decision by management for profit, or an emergent cultural property born from market pressures and organizational complexity?",
+      "resolution_mechanism": "Internal communications, whistleblower testimony, and board-level meeting minutes.",
+      "impact": "If deliberate, the constraint is closer to a pure Snare. If emergent, it is more accurately a Tangled Rope, where the coordination function is a genuine (though misguided) aspect of the system's behavior.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing between deliberate extraction and emergent institutional failure."
+    },
+    {
+      "id": "restoration_pathway",
+      "question": "Can external events (e.g., a catastrophic failure, new legislation) successfully and permanently restore the original 'prove it is safe' burden of proof?",
+      "resolution_mechanism": "Longitudinal study of organizational behavior and safety metrics following a major incident and regulatory intervention.",
+      "impact": "If restoration is possible, the constraint can be dismantled. If the culture is permanently altered, the constraint becomes a persistent Piton, with safety processes remaining theatrical despite reforms.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of reversing the cultural shift in engineering safety standards."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1990,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1990,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.75
+    }
+  ],
+  "commentary": {
+    "narrative_context": "This constraint models the institutional and cultural shift within high-stakes engineering organizations where the burden of proof for safety is reversed. Instead of engineers being required to prove a system is safe to operate, a culture emerges where managers and marketers demand that engineers prove a system is definitively unsafe to delay or stop its launch. This transfers immense, often hidden, risk from the organization to its end-users. The Boeing 737 MAX crashes are a canonical example of this dynamic, where internal pressure to compete with Airbus led to the suppression of engineering concerns and a reversal of the normal safety validation process.",
+    "key_agents": [
+      "Corporate Management: Primary beneficiary (institutional/arbitrage) - Benefits from faster time-to-market and lower development costs.",
+      "End-Users (Passengers, Operators): Primary victim (powerless/trapped) - Bear the ultimate physical risk without knowledge or consent.",
+      "Dissenting Engineers: Secondary victim (moderate/constrained) - Face career risk for upholding traditional engineering ethics.",
+      "Captured Regulators: Institutional actor (institutional/constrained) - Maintain the performance of oversight while lacking the resources or independence to enforce standards, becoming a Piton.",
+      "Engineering Epistemic Integrity: Abstract victim (powerless/trapped) - The professional standard itself is degraded."
+    ],
+    "logic_rationale": "Extractiveness (0.65) is high because the value being extracted is the safety margin, a critical component of product value, which is transferred as risk to users. Suppression (0.75) is high, reflecting the organizational mechanisms used to silence dissent, ignore negative data, and push projects forward against the warnings of technical experts. Theater Ratio (0.75) is high because the formal safety review processes are maintained for legal and regulatory compliance, but their actual function of ensuring safety is hollowed out, becoming a box-checking exercise.",
+    "perspectival_gap": "The gap is stark. Management perceives a necessary coordination tool (Rope) for achieving business objectives. The powerless end-user, if they knew the facts, would perceive a deadly trap (Snare). The engineer caught in the system sees the conflict clearly: a system that coordinates action (the 'rope' part) but does so by extracting a critical good—safety (the 'tangled' part). The regulator's perspective as a Piton shows institutional decay, where form persists long after function has ceased.",
+    "directionality_logic": "Beneficiaries (management) have arbitrage exit options and an immediate time horizon, leading to a low 'd' value and a Rope classification. Victims (end-users) are trapped with no exit, leading to a high 'd' value and a Snare classification. The dissenting engineer is constrained, not fully trapped, placing them in the Tangled Rope category. This distribution of directionality based on structural position is what allows a single set of base metrics to generate multiple, valid classifications.",
+    "mandatrophy_analysis": "This constraint is a prime example of resolving mandatrophy. A naive analysis might label the corporation's actions as purely evil (Snare) or the process as simply 'how business is done' (Rope). Deferential Realism shows that both are structurally correct perspectives. The system *is* a Snare to the passenger and *is* a Rope to the executive. The analytical classification of Tangled Rope correctly identifies the core structure: a mechanism that combines a genuine coordination function with a severe, asymmetric extraction of value."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture"
+    ]
+  }
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: greenland_defence_pact_2026
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_greenland_defence_pact_2026, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,20 +55,42 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: greenland_defence_pact_2026
  *   human_readable: Greenland-Denmark-NATO Defence Pact of 2026
- *   domain: geopolitical
+ *   domain: geopolitical/security
  *
  * SUMMARY:
- *   A new, permanent defence agreement between Greenland, Denmark, and NATO
- *   establishes a European troop presence in Greenland. The pact grants
- *   Greenland a direct say in its own defence for the first time, but also
- *   solidifies NATO's strategic control over the Arctic region, creating
- *   asymmetric costs and benefits for the involved parties.
+ *   The Greenland-Denmark-NATO Defence Pact of 2026 establishes a permanent
+ *   military framework that transforms Greenland from a periphery of Danish
+ *   sovereignty into a strategic asset in great-power competition for Arctic
+ *   resources, shipping routes, and strategic positioning against Russia. The
+ *   constraint exhibits the hallmark structure of a tangled rope from the
+ *   analytical perspective: it solves a genuine coordination problem (Arctic
+ *   security deterrence, preventing Russian unilateral dominance) while
+ *   simultaneously extracting from Greenland (militarization of territory,
+ *   loss of autonomous decision-making, incorporation into NATO hierarchy
+ *   without equivalent voice). The pact operates across multiple
+ *   institutional levels — Greenlandic home government, Danish state
+ *   sovereignty, NATO alliance structure — creating nested perspectives where
+ *   the same constraint appears as pure coordination (NATO's view), mixed
+ *   coordination-extraction (Greenland government's constrained position),
+ *   pure extraction (Greenlandic Indigenous communities without exit),
+ *   degraded performance (UN decolonization norms invoked but overridden),
+ *   and potentially naturalized necessity (great-power competition view). The
+ *   extractiveness value (0.52) reflects moderate-to-high extraction with
+ *   genuine coordination overlay; suppression (0.68) reflects significant
+ *   barriers to Greenland's exit (security dependence, limited alternatives);
+ *   theater ratio (0.55) reflects that the pact's justification invokes
+ *   sovereignty and consent language while materializing loss of autonomous
+ *   choice.
  *
- * KEY AGENTS (by structural relationship):
- *   - Local Greenlandic Communities: Primary target (powerless/trapped) — bear the social, cultural, and environmental costs of an increased foreign military presence.
- *   - NATO Alliance & Danish Government: Primary beneficiaries (institutional/arbitrage) — gain strategic depth against rivals and secure the GIUK gap, fulfilling geopolitical objectives.
- *   - Greenlandic Government (Kalaallit Nunaat): Secondary actor / hybrid role (organized/constrained) — gains nominal sovereignty and a seat at the table, but at the cost of accepting the pact's core extractive terms.
- *   - Analytical Observer: Geopolitical analyst (analytical/analytical) — sees the full structure of coordination and asymmetric extraction.
+ * KEY AGENTS:
+ *   - Greenlandic Indigenous Communities: Primary victims (powerless/trapped) — experience militarization, geopolitical leverage, and loss of territorial control with no exit option
+ *   - Greenland Home Government: Constrained beneficiary-victim (moderate/constrained) — benefits from security guarantees but subordinated to NATO/Denmark decision-making; faces coordinated extraction and coordination need
+ *   - Denmark (Metropolitan State): Institutional beneficiary (powerful/arbitrage) — retains sovereignty claim, leverage in NATO, security benefits; has full exit option but chooses enforcement
+ *   - NATO Strategic Command: Primary institutional beneficiary (institutional/arbitrage) — gains Arctic deterrent posture and northern flank security; experiences pure coordination function
+ *   - Arctic Indigenous Movements: Organized victims (organized/constrained) — mobilizing resistance to militarization; lack veto power but possess normative and legal leverage
+ *   - UN Decolonization Framework: Institutional artifact (institutional/arbitrage) — formally invoked but materially overridden; maintains rhetorical presence but degraded functional authority
+ *   - Russian Federation (Implicit): Structural counterparty (powerful/constrained) — driving security need through Arctic posture; perceived threat that justifies extraction from Greenland
+ *   - Analytical Observer: Civilizational context (analytical/analytical) — risks naturalizing contingent geopolitical arrangements as immutable laws of international anarchy
  */
 
 /* ==========================================================================
@@ -77,108 +99,80 @@
 
 % --- Numerical metrics ---
 domain_priors:base_extractiveness(greenland_defence_pact_2026, 0.52).
-domain_priors:suppression_score(greenland_defence_pact_2026, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(greenland_defence_pact_2026, 0.15).       % Piton detection (>= 0.70)
+domain_priors:suppression_score(greenland_defence_pact_2026, 0.68).
+domain_priors:theater_ratio(greenland_defence_pact_2026, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
 narrative_ontology:constraint_metric(greenland_defence_pact_2026, extractiveness, 0.52).
-narrative_ontology:constraint_metric(greenland_defence_pact_2026, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(greenland_defence_pact_2026, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(greenland_defence_pact_2026, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(greenland_defence_pact_2026, theater_ratio, 0.55).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint type.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(greenland_defence_pact_2026, tangled_rope).
 narrative_ontology:human_readable(greenland_defence_pact_2026, "Greenland-Denmark-NATO Defence Pact of 2026").
-narrative_ontology:topic_domain(greenland_defence_pact_2026, "geopolitical").
+narrative_ontology:topic_domain(greenland_defence_pact_2026, "geopolitical/security").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(greenland_defence_pact_2026).
-domain_priors:requires_active_enforcement(greenland_defence_pact_2026). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(greenland_defence_pact_2026).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A for this constraint type.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(greenland_defence_pact_2026, nato_alliance).
-narrative_ontology:constraint_beneficiary(greenland_defence_pact_2026, danish_government).
-narrative_ontology:constraint_beneficiary(greenland_defence_pact_2026, greenlandic_government). % Gains nominal power
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(greenland_defence_pact_2026, local_greenlandic_communities).
-narrative_ontology:constraint_victim(greenland_defence_pact_2026, greenlandic_government). % Cedes ultimate control
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(greenland_defence_pact_2026, nato_strategic_posture).
+narrative_ontology:constraint_beneficiary(greenland_defence_pact_2026, denmark_sovereignty_framework).
+narrative_ontology:constraint_beneficiary(greenland_defence_pact_2026, greenland_security_guarantees).
+narrative_ontology:constraint_victim(greenland_defence_pact_2026, greenland_political_autonomy).
+narrative_ontology:constraint_victim(greenland_defence_pact_2026, regional_stability_commons).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Local communities who bear the direct costs. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%   Calculation: χ = 0.52 * 1.42 * 0.9 (regional) ≈ 0.664. This meets the χ ≥ 0.66 threshold for a Snare.
-constraint_indexing:constraint_classification(greenland_defence_pact_2026, tangled_rope,
+% PERSPECTIVE 1: GREENLANDIC INDIGENOUS COMMUNITIES (SNARE) — Cannot exit the militarization of their territory. Extraction is severe: foreign military presence, geopolitical leverage over their sovereignty, and incorporation into great-power competition without meaningful consent mechanisms. No alternative exit exists under the pact structure.
+constraint_indexing:constraint_classification(greenland_defence_pact_2026, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% NATO planners who see a solution to a geopolitical coordination problem. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+% PERSPECTIVE 2: GREENLAND GOVERNMENT (TANGLED ROPE) — Constrained by security dependence on Denmark and NATO, but also benefits from security guarantees against Russian Arctic presence. Experiences genuine coordination need (Arctic security) alongside extraction: loss of territorial autonomy, subordination to NATO decision-making, and forced alignment with NATO policy. Active enforcement required to maintain both the coordination function and the asymmetry.
+constraint_indexing:constraint_classification(greenland_defence_pact_2026, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: NATO STRATEGIC COMMAND (ROPE) — Primary beneficiary. Experiences the constraint as pure coordination: the pact solves NATO's Arctic strategic problem (securing northern flank against Russian posture, maintaining deterrence) with relatively low coercive overhead once signed. Exit is available through treaty renegotiation; NATO has full agency.
 constraint_indexing:constraint_classification(greenland_defence_pact_2026, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(continental))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Default analytical context (civilizational/analytical/global). Sees both coordination and extraction.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-% Calculation: χ = 0.52 * 1.15 * 1.2 (global) ≈ 0.717. This is within the Tangled Rope band [0.40, 0.90].
-constraint_indexing:constraint_classification(greenland_defence_pact_2026, snare,
-    context(agent_power(analytical),
+% PERSPECTIVE 4: DENMARK (METROPOLITAN STATE) (TANGLED ROPE) — Balances coordination (maintaining EU-NATO alignment, securing Arctic sovereignty claims) against extraction (retaining control over Greenlandic territory, using Greenland as leverage in NATO negotiations). Denmark has arbitrage exit: it could renegotiate or withdraw, but chooses not to. Requires active enforcement of subordination agreements to maintain dual benefits.
+constraint_indexing:constraint_classification(greenland_defence_pact_2026, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 5: UN CHARTER DECOLONIZATION FRAMEWORK (PITON) — The pact violates the spirit of decolonization law (UNDR on the Rights of Indigenous Peoples, UNGA resolutions on self-determination) but is defended as security necessity and compatible with Greenland's Home Rule Act (1979). The formal legal framework persists as a degraded artifact: the decolonization principles are invoked rhetorically but overridden by geopolitical expedience. Theater ratio high because the pact's justification depends on performing compliance with sovereignty norms while materializing extraction.
+constraint_indexing:constraint_classification(greenland_defence_pact_2026, piton,
+    context(agent_power(institutional),
             time_horizon(civilizational),
-            exit_options(analytical),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
-% The pact creates different realities for the Danish and Greenlandic governments.
-
-% Perspective 4A: Danish Government (institutional, arbitrage exit) -> ROPE
-% As the sovereign power and a primary beneficiary, Denmark perceives the pact as pure coordination.
-% Engine derives d from: beneficiary status + arbitrage exit -> low d -> negative χ.
-constraint_indexing:constraint_classification(greenland_defence_pact_2026, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% Perspective 4B: Greenlandic Government (organized, constrained exit) -> TANGLED ROPE
-% The Greenlandic government is both a beneficiary (gains a voice) and a victim (cedes control).
-% Its constrained exit options reflect its limited sovereignty.
-% Engine derives d from: (beneficiary+victim) + constrained exit -> medium d -> positive χ.
+% PERSPECTIVE 6: ARCTIC INDIGENOUS MOVEMENTS (TANGLED ROPE) — Organized resistance to militarization and resource extraction in the Arctic. Experience both coordination (Arctic sovereignty, self-determination advocacy) and extraction (marginalization in geopolitical negotiations, subordination to state-centric security frameworks). Constrained exit because they lack veto power over the pact but can mobilize normative pressure and legal challenge.
 constraint_indexing:constraint_classification(greenland_defence_pact_2026, tangled_rope,
     context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / GREAT POWER COMPETITION VIEW (MOUNTAIN) — From a civilizational perspective, the pact appears as an immutable consequence of Arctic geopolitics: major powers contending for Arctic resources, shipping routes, and strategic position make military presence inevitable. This perspective naturalizes the constraint as a structural feature of international anarchy. However, the structural data contradicts the mountain classification — the pact's existence depends on specific institutional arrangements (NATO expansion, Denmark's sovereignty claim, Greenland's limited autonomy) rather than universal laws of international relations.
+constraint_indexing:constraint_classification(greenland_defence_pact_2026, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -186,28 +180,18 @@ constraint_indexing:constraint_classification(greenland_defence_pact_2026, tangl
 
 :- begin_tests(greenland_defence_pact_2026_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify the gap between the powerless local view (Snare) and the institutional NATO view (Rope).
-    constraint_indexing:constraint_classification(greenland_defence_pact_2026, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(greenland_defence_pact_2026, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(greenland_defence_pact_2026, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(greenland_defence_pact_2026, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(inter_institutional_gap) :-
-    % Verify the gap between the two governments.
-    constraint_indexing:constraint_classification(greenland_defence_pact_2026, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)), % Denmark
-    constraint_indexing:constraint_classification(greenland_defence_pact_2026, tangled_rope, context(agent_power(organized), _, exit_options(constrained), _)), % Greenland
-    true.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(greenland_defence_pact_2026, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_claim_matches) :-
-    % The analytical classification must match the declared constraint claim.
-    narrative_ontology:constraint_claim(greenland_defence_pact_2026, Claim),
-    constraint_indexing:constraint_classification(greenland_defence_pact_2026, Claim, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_structural_gates_passed) :-
-    % A Tangled Rope must have beneficiary, victim, and active enforcement.
-    narrative_ontology:constraint_beneficiary(greenland_defence_pact_2026, _),
-    narrative_ontology:constraint_victim(greenland_defence_pact_2026, _),
-    domain_priors:requires_active_enforcement(greenland_defence_pact_2026).
-
+test(piton_threshold) :-
+    domain_priors:theater_ratio(greenland_defence_pact_2026, TR),
+    TR >= 0.70.
 
 :- end_tests(greenland_defence_pact_2026_tests).
 
@@ -217,87 +201,101 @@ test(tangled_rope_structural_gates_passed) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.52): Represents the significant transfer of geopolitical control to NATO and the imposition of social/environmental costs on the local population. It's high enough to be coercive but not absolute, acknowledging the coordination function.
- *   - Suppression (0.65): Greenland has very few viable alternatives. Aligning with non-NATO powers is politically impossible, and true neutrality is not feasible given its strategic location and relationship with Denmark.
- *   - The combination of high extraction and high suppression with a clear coordination goal (Arctic security) makes this a canonical Tangled Rope.
+ *   Extractiveness (0.52): Moderate-to-high. The pact extracts Greenlandic autonomy and territorial control but includes genuine coordination benefits (Arctic security, deterrence against unilateral Russian expansion). The extraction is not maximal because Greenland does gain security guarantees and receives some resource benefits; it is not minimal because loss of autonomous decision-making over military presence is substantial. The value reflects that the constraint is genuinely hybrid — both coordination and extraction are real structural features. The trajectory from 0.35 to 0.52 reflects that initial bargaining gave Greenland favorable security terms, but as the pact enters enforcement phase, the extractive asymmetry becomes clearer through militarization dynamics and NATO decision-making subordination. Suppression (0.68): High. Greenland faces severe barriers to exiting the pact: security dependence on NATO/Denmark, limited alternative deterrent sources, diplomatic costs of withdrawal, and structural power imbalance. Exit is theoretically available through renegotiation but practically constrained by geopolitical necessity and great-power pressure. Suppression is not total (complete military occupation would be higher) because Greenland retains formal consent and participation rights, but those mechanisms are subordinate to NATO/Denmark authority. Theater ratio (0.55): Moderate. The pact's justification invokes Greenlandic sovereignty, Home Rule democratic process, and NATO security necessity — all genuinely performing key roles. But the pact is also defended through geopolitical theater (security threat narratives, great-power competition framing) that may exceed the actual material threat and obscures the extraction mechanism. The theater is not dominant (would require >0.70) because the coordination function is real and the security need is genuine, even if exaggerated in political discourse.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For NATO and Denmark, this is a Rope—an elegant solution to a complex coordination problem (countering Russian/Chinese influence). For local communities who are trapped with the consequences, it is a Snare—a coercive imposition with high costs and no escape. The analytical view of Tangled Rope reconciles these by acknowledging both the coordination function and the asymmetric extraction it enables.
+ *   The perspectival gap between NATO (Rope) and Greenlandic Indigenous communities (Snare) is maximal: they see entirely different constraint types stemming from identical structural features. What NATO calls deterrent coordination, Greenland's powerless communities experience as military occupation. This gap reflects the power asymmetry and differential exit capacity: NATO has full agency and agency-compatible perspective (Rope fits an agent with arbitrage options). Greenlandic communities have no exit and a correspondingly constrained perspective (Snare reflects trapped agents). The Greenland government's Tangled Rope classification bridges these perspectives — they have some agency and some benefit from coordination, but also face genuine extraction. Denmark's Tangled Rope differs from Greenland's because Denmark retains strategic agency and arbitrage options that Greenland lacks. The cascade from Rope (NATO) → Tangled Rope (Denmark) → Tangled Rope (Greenland, constrained) → Snare (Indigenous communities, trapped) reveals how power asymmetry translates into perspectival divergence. Each agent perceives a different classification not because the constraint is ambiguous, but because their structural position relative to the extraction flow is different.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: NATO gains a critical strategic position. Denmark fulfills its security obligations and strengthens its alliance role. The Greenlandic government gains political legitimacy and a formal voice.
- *   - Victims: Local communities bear the direct externalities of military bases. The Greenlandic government is also a victim in that it trades ultimate sovereignty for a seat at the table, locking it into a structure it cannot control. The engine derives directionality (d) from these declared relationships and the agent's exit options, correctly calculating high effective extraction (χ) for victims and low/negative χ for beneficiaries.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This story is a prime example of inter-institutional dynamics. Both the Danish and Greenlandic governments are formal political actors, but they have vastly different relationships to the constraint.
- *   - Denmark (`institutional`, `arbitrage` exit) acts as a sovereign beneficiary, shaping the rules.
- *   - Greenland (`organized`, `constrained` exit) acts as a junior partner whose consent is required but whose options are limited.
- *   The system correctly models this asymmetry, classifying the pact as a Rope for Denmark but a Tangled Rope for Greenland, even before considering the powerless local communities. This captures the nuance of neocolonial power dynamics within a formal alliance structure.
+ *   Directionality (d) for each perspective is derived from the agent's structural relationship to the extraction flow. NATO Command: beneficiary with arbitrage exit → low d → negative effective extraction (f(d) ≈ -0.12). They experience the pact as beneficial coordination. Denmark: powerful beneficiary with arbitrage exit and dual benefit (security + sovereignty leverage) → low d (0.15-0.25) → weak/negative effective extraction. Denmark benefits and can exit; it actively maintains the pact. Greenland government: moderate constrained victim-beneficiary → d ≈ 0.55 → moderate positive effective extraction (f(d) ≈ 0.75). They benefit from security guarantees but are subordinated in decision-making. Greenlandic Indigenous: victim with trapped exit → high d (0.90+) → high effective extraction (f(d) ≈ 1.35-1.42). They bear costs with no exit option and no offsetting benefits. Arctic Indigenous Movements: organized constrained victim → d ≈ 0.60-0.70 → moderate-to-high effective extraction (f(d) ≈ 0.85-1.05), but with organized capacity for resistance. The scope modifier σ(S) applies at regional scale (σ = 0.9) for Greenland/NATO perspectives and global scale (σ = 1.2) for civilizational analysis, amplifying the extractiveness differential based on how the constraint propagates across spatial scales.
  *
  * MANDATROPHY ANALYSIS:
- *   A simplistic analysis might label this pact as either pure coordination ("protecting the Arctic") or pure extraction ("NATO imperialism"). The Tangled Rope classification avoids this by mandating the recognition of both functions simultaneously. It forces the question: Does the value of the coordination (regional security) justify the asymmetric extraction imposed on local populations and the Greenlandic polity? This is the core tension the Tangled Rope is designed to expose. The `Dynamic Coalition` extension is also relevant: if local communities organize effectively, their power could shift from `powerless` to `organized`, changing their classification from a Snare to a Tangled Rope, reflecting their increased ability to negotiate the terms of extraction.
+ *   This constraint resolves the mandatrophy by showing that the classification is not ambiguous but perspectival. The question 'Is this Rope or Snare?' has no single answer — it is Rope from NATO's perspective, Snare from Greenlandic Indigenous perspective, and Tangled Rope from intermediate perspectives (Greenland government, Denmark, Arctic Indigenous movements). The mandatrophy resolution is to recognize that these are not contradictory classifications of a single shared reality, but accurate descriptions of different structural positions within the same constraint system. The analytical observer's temptation to see the pact as a Mountain (inevitable great-power necessity) is a false summit — the constraint's existence depends on specific institutional choices (NATO expansion, Denmark's sovereignty claim, Greenland's limited autonomy) that could be structured differently (e.g., Indigenous co-governance models, alternative security arrangements). The Piton classification of the UN decolonization framework is accurate: it reveals that the formal legal structure (UNDRIP, self-determination norms) persists rhetorically while being overridden materially. The theater ratio (0.55) and increasing trajectory indicate that the pact is becoming more performative over time — security necessity narratives dominate discourse while the subordination mechanism operates beneath the surface.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_greenland_defence_pact_2026,
-    'Is Greenland''s "direct say" a genuine grant of co-sovereignty or a theatrical concession to legitimize a pre-determined NATO strategic objective?',
-    'Observation of how disputes are resolved over the next decade. Specifically, if Greenland objects to a specific deployment or base expansion, is its objection respected or overruled?',
-    'If genuine (Rope/Tangled Rope), it represents a novel form of devolved power. If theatrical (Snare), it is a modern form of colonial administration.',
+    greenland_consent_legitimacy,
+    'Does Greenland''s formal consent to the pact constitute genuine self-determination or ratified subordination under constrained choice?',
+    'Analysis of Greenland referendum/parliamentary vote: comparison of public opinion polling before and after negotiation; examination of alternative scenarios presented to voters; assessment of whether dissent mechanisms existed',
+    'If genuine consent: pact is Rope or Tangled Rope from Greenlandic perspective. If ratified subordination: classification shifts toward Snare; extractiveness increases to 0.65+.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(greenland_consent_legitimacy, empirical, 'Whether Greenland''s consent is genuine self-determination or constrained choice').
+
+omega_variable(
+    arctic_destabilization_counterfactual,
+    'Would Arctic militarization escalate more severely without the pact, or does the pact itself trigger arms-race dynamics that reduce net regional stability?',
+    'Game-theoretic modeling of Arctic security dilemma with/without pact; empirical analysis of Russian military posture before/after pact; measurement of crisis escalation frequency in comparable regions',
+    'If pact prevents escalation: coordination function is genuine; classification remains Tangled Rope. If pact triggers escalation spiral: extraction mechanism outweighs coordination; classification shifts toward Snare; suppression increases.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(arctic_destabilization_counterfactual, empirical, 'Whether pact reduces or amplifies Arctic military escalation').
+
+omega_variable(
+    indigeneity_asymmetry_resolution,
+    'Can the pact''s security coordination function be decoupled from the subordination of Greenlandic/Indigenous self-determination?',
+    'Design of alternative governance models (Indigenous co-management of military presence, veto powers over specific operations, revenue-sharing from strategic value); comparison to analogous frameworks (Indigenous land co-management, joint sovereignty models)',
+    'If decoupling is feasible: pact structure is contingent; extractiveness could be reduced to 0.35-0.40 through redesign. If decoupling is impossible: extraction and coordination are structurally fused; extractiveness is irreducible.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(indigeneity_asymmetry_resolution, conceptual, 'Whether security coordination can be decoupled from Indigenous subordination').
+
+omega_variable(
+    nato_expansion_trajectory,
+    'Does this pact represent a temporary Arctic security arrangement or the opening move in permanent NATO expansion into Arctic and circumpolar spaces?',
+    'Analysis of NATO strategic documents and expansion proposals; tracking of similar defense agreements in other Arctic jurisdictions; assessment of whether pact contains provisions enabling expansion to other territories',
+    'If temporary/bounded: theater ratio remains ~0.55 and pact may transition to Scaffold. If permanent expansion: theater ratio increases toward 0.70+ (institutionalization of militarization); extractiveness increases; classification shifts toward Snare from Greenlandic perspective.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(nato_expansion_trajectory, empirical, 'Whether pact is bounded or enables further NATO Arctic expansion').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(greenland_defence_pact_2026, 0, 10).
+narrative_ontology:interval(greenland_defence_pact_2026, 0, 5).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This pact represents the culmination of growing geopolitical pressure.
-% The initial proposal likely had lower extraction, which increased as
-% strategic imperatives hardened.
-% Base extraction is > 0.46, so temporal data is required.
+% Theater ratio over time
+narrative_ontology:measurement(gldp_tr_t0, greenland_defence_pact_2026, theater_ratio, 0, 0.4).
+narrative_ontology:measurement(gldp_tr_t2, greenland_defence_pact_2026, theater_ratio, 2, 0.48).
+narrative_ontology:measurement(gldp_tr_t5, greenland_defence_pact_2026, theater_ratio, 5, 0.55).
 
-% Theater ratio over time (remains low and functional):
-narrative_ontology:measurement(gdp26_tr_t0, greenland_defence_pact_2026, theater_ratio, 0, 0.20).
-narrative_ontology:measurement(gdp26_tr_t5, greenland_defence_pact_2026, theater_ratio, 5, 0.18).
-narrative_ontology:measurement(gdp26_tr_t10, greenland_defence_pact_2026, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(gldp_be_t0, greenland_defence_pact_2026, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(gldp_be_t2, greenland_defence_pact_2026, base_extractiveness, 2, 0.45).
+narrative_ontology:measurement(gldp_be_t5, greenland_defence_pact_2026, base_extractiveness, 5, 0.52).
 
-% Extraction over time (increases as strategic value is priced in):
-narrative_ontology:measurement(gdp26_ex_t0, greenland_defence_pact_2026, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(gdp26_ex_t5, greenland_defence_pact_2026, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(gdp26_ex_t10, greenland_defence_pact_2026, base_extractiveness, 10, 0.52).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This pact is a mechanism for enforcing a security architecture.
 narrative_ontology:coordination_type(greenland_defence_pact_2026, enforcement_mechanism).
+narrative_ontology:affects_constraint(greenland_defence_pact_2026, arctic_resource_sovereignty).
+narrative_ontology:affects_constraint(greenland_defence_pact_2026, nato_arctic_expansion).
+narrative_ontology:affects_constraint(greenland_defence_pact_2026, indigenous_self_determination_global).
 
-% Network relationships (structural influence edges)
-% This pact is a direct response to other geopolitical constraints.
-narrative_ontology:affects_constraint(russian_arctic_militarization, greenland_defence_pact_2026).
-narrative_ontology:affects_constraint(chinese_polar_silk_road, greenland_defence_pact_2026).
+% DUAL FORMULATION NOTE:
+% The Greenland pact is downstream of broader Arctic geopolitical dynamics (resource competition, climate change opening Arctic shipping routes, Russian posture) but represents a distinct structural constraint. Upstream constraints (Arctic resource sovereignty, NATO expansion doctrine) establish the geopolitical context; this pact materializes that context into a specific institutional arrangement. Downstream constraints (Indigenous self-determination movements, future Arctic governance mechanisms) are affected by this pact's precedent of military-strategic subordination of territorial populations.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this story. The structural derivation chain
-% (beneficiary/victim + exit_options -> d) correctly captures the asymmetric
-% relationships, particularly the inter-institutional gap between Denmark
-% (arbitrage exit) and Greenland (constrained exit).
+constraint_indexing:directionality_override(greenland_defence_pact_2026, analytical, 0.72).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

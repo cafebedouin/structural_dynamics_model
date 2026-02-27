@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "opioid_political_realignment_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "opioid_pol"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Opioid-Induced Political Capture and Realignment",
+    "topic_domain": "political/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "distributors_wholesalers",
+      "pill_mill_operators"
+    ],
+    "victims": [
+      "opioid_affected_communities",
+      "state_public_health_systems",
+      "electoral_integrity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Opioid-Affected Community",
+      "comment": "PERSPECTIVE 1: OPIOID-AFFECTED COMMUNITY (SNARE) \u2014 Rural and post-industrial communities trapped by addiction epidemiology and limited exit capacity. Cannot leave region, cannot access affordable treatment, bear full cost of addiction while political system ignores community interests. d\u22480.93, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "State Public Health Systems",
+      "comment": "PERSPECTIVE 2: STATE PUBLIC HEALTH SYSTEMS (SNARE) \u2014 Resource-constrained by opioid crisis demands. Extraction takes form of unfunded federal mandates and litigation costs; states bear treatment and overdose response burden while manufacturers capture pricing margin. d\u22480.82, f(d)\u22481.18, \u03c3=0.9 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Coalitions of Affected States and Municipalities",
+      "comment": "PERSPECTIVE 3: STATE/MUNICIPAL COALITIONS (TANGLED ROPE) \u2014 Organized response (state attorneys general, city governance coalitions) sees constraint as hybrid: coordination mechanism (information-sharing about manufacturer practices, litigation strategy) combined with extraction (litigation costs, settlement obligations, political constraint that prevents federal price regulation). d\u22480.58, f(d)\u22480.78, \u03c3=1.0 \u2192 \u03c7\u22480.45."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturers and Distributors",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL MANUFACTURERS/DISTRIBUTORS (ROPE) \u2014 Primary beneficiary. Experiences constraint as coordination mechanism: FDA approval pathways, DEA licensing, distribution networks, marketing channels all function as coordination infrastructure they dominate. Extraction hidden behind institutional compliance theater. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Capture Machinery (DEA, FDA, Congress)",
+      "comment": "PERSPECTIVE 5: REGULATORY CAPTURE MACHINERY (PITON) \u2014 The formal regulatory and legislative apparatus maintains performative enforcement while manufacturers operate within captured framework. DEA quotas set by captured process; FDA approval process bottlenecked by pharma lobbying; Congressional action blocked by donation-driven gridlock. Theater_ratio=0.61 reflects the significant performative component: congressional hearings, agency enforcement actions, and state litigation create appearance of accountability while manufacturers maintain pricing power and market access. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Electoral Base Realignment (Swing Voters and Non-Voters)",
+      "comment": "PERSPECTIVE 6: ELECTORAL REALIGNMENT (TANGLED ROPE) \u2014 Opioid-affected communities experience constraint as political: coordination mechanism (shared grievance, local organizing) combined with extraction (political system ignores their interests despite mobilization; promises to address opioid crisis used for electoral capture, not policy implementation). The realignment toward populism and anti-establishment politics is response to constraint. d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Systemic View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational scale, the constraint is extraction: pharmaceutical companies extracted $billions through deceptive marketing while public health systems, communities, and electoral system bore the costs. The political realignment is causal consequence of unresolved material extraction. d\u22480.88, f(d)\u22481.33, \u03c3=1.2 \u2192 \u03c7\u22480.77."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "marketing_deception_attribution",
+      "question": "To what degree did manufacturer marketing deception (vs. legitimate medical need) drive over-prescription and community addiction?",
+      "resolution_mechanism": "Document analysis of marketing claims vs. clinical evidence; longitudinal correlation between marketing spend and prescription rates by region; internal company communications discovery",
+      "impact": "If deception dominant (>70%): constraint is pure extraction (snare). If legitimate need dominant (>60%): constraint is coordination failure with asymmetric burden (rope with unfair distribution). Attribution determines ethical classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of over-prescription to deception vs. legitimate medical need"
+    },
+    {
+      "id": "political_realignment_causation",
+      "question": "Is the observed electoral realignment in opioid-affected regions a causal response to pharmaceutical extraction and state policy failure, or a spurious correlation with broader cultural/demographic shifts?",
+      "resolution_mechanism": "Temporal precedence analysis: did opioid crisis timeline precede or follow electoral realignment? Regional comparison of opioid impact vs. voting pattern change; counterfactual analysis controlling for education, urbanization, income decline",
+      "impact": "If causal (realignment follows crisis): political capture is consequence of material extraction \u2014 constraint is tangled rope with extractive political component. If spurious: opioid crisis and realignment are parallel effects of different causes \u2014 two separate constraints.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Causal relationship between opioid crisis and political realignment"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Does the regulatory apparatus maintain genuine enforcement capacity that manufacturers circumvent (captured but functional), or has enforcement capacity atrophied entirely (piton degradation)?",
+      "resolution_mechanism": "Analysis of DEA enforcement actions, FDA approvals, and congressional legislation over time; comparison of enforcement intensity in capture vs. post-capture periods; audit of manufacturer compliance with existing rules",
+      "impact": "If capture (functional apparatus): constraint is tangled rope with institutional players maintaining enforcement theater. If piton (atrophied): constraint is snare with no meaningful regulatory alternative. Determines whether reform can work within existing institutional structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory apparatus is captured-but-functional or degraded-inertial"
+    },
+    {
+      "id": "settlement_remediation_efficacy",
+      "question": "Do manufacturer settlements (litigation payouts, treatment funding, monitoring commitments) actually reduce extraction or merely create appearance of accountability without structural change?",
+      "resolution_mechanism": "Tracking of settlement fund disbursement, treatment availability expansion, and prescription rate/overdose trends post-settlement; comparison of manufacturing practices and pricing before/after settlement",
+      "impact": "If settlements effective: constraint shows signs of resolution; future classification may trend toward rope or scaffold. If settlements performative (theater): extraction continues under cover of settlement theater; constraint remains snare or tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether litigation settlements remediate extraction or create accountability theater"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The opioid-political constraint describes a two-stage extraction mechanism: pharmaceutical manufacturers extract wealth and market dominance through deceptive marketing and dosing practices (stage 1: material extraction), which destabilizes affected communities and exhausts state public health budgets (stage 2: systemic harm). The resulting political realignment \u2014 swing toward populism, anti-establishment voting, reduced trust in institutions \u2014 is a causal consequence of unresolved material extraction combined with political system failure to address community interests. The constraint exhibits the full range of DR types across perspectives: communities see snare (trapped, no exit); manufacturers see rope (coordination infrastructure they dominate); state coalitions see tangled rope (mixed coordination and extraction); regulatory apparatus sees piton (performative enforcement); electoral system experiences tangled rope (coordination of grievance combined with extraction of political capital without policy response). The extractiveness has grown from 0.42 (early marketing period) to 0.58 (post-crisis period) as manufacturers continue pricing extraction despite public awareness. Theater ratio has increased from 0.35 to 0.61 as regulatory, judicial, and legislative responses have become increasingly performative relative to material impact.",
+    "key_agents": [
+      "Pharmaceutical Manufacturers (Purdue Pharma, Johnson & Johnson, others): Primary beneficiary (institutional/arbitrage) \u2014 extract wealth through deceptive marketing and pricing; maintain market dominance",
+      "Distributors and Wholesalers: Secondary beneficiary (institutional/arbitrage) \u2014 profit from volume distribution; enable supply chain deception",
+      "Pill Mill Operators: Tertiary beneficiary (powerful/mobile) \u2014 convert pharmaceutical extraction into street-level addiction; operate in shadows of regulatory capture",
+      "Opioid-Affected Communities (rural Appalachia, post-industrial Rust Belt): Primary victim (powerless/trapped) \u2014 bear full cost of addiction, overdose deaths, family dissolution; no exit capacity",
+      "State Public Health Systems: Secondary victim (moderate/constrained) \u2014 unfunded Medicaid treatment burden, overdose response costs, litigation expenses; resource-constrained",
+      "State Attorneys General and Municipal Coalitions: Organized responder (organized/constrained) \u2014 coordinate litigation and information-sharing but constrained by political pressure and settlement agreements",
+      "DEA, FDA, Congress: Captured regulators (institutional/arbitrage) \u2014 maintain performative enforcement; enable manufacturer dominance through capture",
+      "Electoral Base (swing voters in opioid-affected regions): Realigning agents (powerful/mobile) \u2014 shift voting patterns in response to state failure; become politically available to populist movements",
+      "Electoral System Itself: Victim (analytical/analytical) \u2014 loses legitimacy as political responses to material crisis remain symbolic rather than effective"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Manufacturers extracted approximately $280B in net revenue from opioid sales 1996-2020; $50B+ in litigation settlements represents partial recovery but does not eliminate ongoing extraction (manufacturers maintain market share and pricing power post-settlement). The 0.58 reflects that extraction remains substantial but is partially offset by state coalition response and settlement mechanisms. Suppression (0.72): High. Multiple layers prevent community exit and alternative action: (1) addiction creates biological trap (chemical dependence), (2) geographic immobility (limited economic alternatives in affected regions), (3) institutional barriers to treatment access (Medicaid gaps, provider shortages, insurance restrictions), (4) regulatory capture prevents federal price controls or supply restrictions, (5) litigation/settlement agreements prevent transparency about manufacturer practices. Theater ratio (0.61): Moderate-high. The regulatory and political response exhibits substantial performative content: congressional hearings without legislative action, DEA enforcement that doesn't restrict total quotas, state litigation with settlement agreements that fund treatment without requiring business model change, FDA warnings that don't restrict prescription. However, theater is not total (0.61 not 0.85+) because some real enforcement occurred (Purdue guilty plea, settlement payouts, limited dosing restrictions), real treatment infrastructure was built, and real public health impact has occurred.",
+    "perspectival_gap": "The constraint demonstrates a perspectival canyon between beneficiaries and victims. Manufacturers see coordination infrastructure (rope): FDA approval as market entry mechanism, DEA licensing as regulatory pathway, distribution networks as coordination mechanism, marketing as information provision. Affected communities see pure extraction (snare): no legitimate medical need for 30+ million pills in counties of 5,000 people, no treatment access, no exit, no political voice. Regulatory apparatus sees piton: maintains formal enforcement procedures while actual enforcement capacity has atrophied; the FDA can approve and the DEA can license, but neither can restrict pricing or total supply. Organized state/municipal coalitions see tangled rope: litigation and information-sharing coordination combined with extraction that continues despite settlements. Electoral system sees tangled rope: communities can organize and mobilize, but political response remains symbolic. The analytical observer at civilizational scale sees snare: the material extraction is unambiguous, the political realignment is causal consequence, and the regulatory capture is structural rather than accidental.",
+    "directionality_logic": "Pharmaceutical manufacturers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; extraction hidden behind institutional compliance. Affected communities: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction; trapped by addiction and geography. State public health: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.18. High extraction; state must fund treatment but cannot prevent prescriptions or control pricing. State/municipal coalitions: Victim/organized + constrained \u2192 d\u22480.58, f(d)\u22480.78. Moderate extraction; coalitions have agency (litigation, coordination) but constrained by capture. Regulatory apparatus: Beneficiary (apparatus itself) + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Piton classification comes from theater_ratio gate, not from high directionality. Electoral base realigning: Victim + mobile (organized) \u2192 d\u22480.65, f(d)\u22480.95. Moderate-high extraction; can vote and relocate but geographic/economic constraints limit exit; voting becomes primary response mechanism.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: The constraint currently exhibits characteristics of both snare (from victims' perspectives) and tangled rope (from organized responders' perspectives). The mandatrophy resolution depends on the empirical answer to omega_regulatory_capture_mechanism: if regulatory apparatus is captured-but-functional (can enforce if political pressure overcomes capture), the constraint trends toward tangled rope with potential resolution pathway (federal regulation could work). If regulatory apparatus is piton-degraded (enforcement capacity atrophied), the constraint is structural snare with no exit within existing institutions. The political realignment complicates the mandatrophy: the causal link between material extraction and electoral realignment suggests that the constraint is generating systemic instability. If political system cannot respond to material crisis, it loses legitimacy, which accelerates realignment. This creates feedback loop: extraction \u2192 communities mobilize \u2192 political system ignores or co-opts grievances \u2192 realignment accelerates \u2192 political instability deepens \u2192 manufacturers maintain extraction because institutional response remains gridlocked. The constraint will remain unresolved mandatrophy until either (a) federal regulatory reform breaks capture and restricts extraction, (b) political realignment produces coalitions capable of overriding capture, or (c) material exhaustion (community collapse, generational aging) reduces extraction pressure. Currently trending toward (c)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_pharmaceutical_industry",
+      "rural_economic_collapse_appalachia",
+      "electoral_coalition_instability_2024_2028"
+    ],
+    "dual_formulation_note": "This constraint is downstream of regulatory capture in the pharmaceutical industry (which enables the deceptive marketing practices) and upstream of electoral realignment and rural economic collapse (which are causal consequences of unresolved material extraction). The opioid-political constraint is the linking mechanism: it shows how extraction in one domain (pharmaceutical pricing/marketing) cascades into political system destabilization through community devastation and loss of institutional legitimacy."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

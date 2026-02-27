@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "au_social_media_ban_u16",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "PROPOSED"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Australian Under-16 Social Media Ban",
+    "topic_domain": "social_technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "australian_federal_government",
+      "social_media_platforms"
+    ],
+    "victims": [
+      "australian_children_u16",
+      "parents_of_u16"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Australian Children Under 16",
+      "comment": "Perspective of Australian children under 16 who are banned from social media. They are trapped as they have no real way to circumvent this constraint, especially given their age and limited access to resources. High extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Parents of Australian Children Under 16",
+      "comment": "Perspective of parents who are both constrained and benefit from the law. They are constrained by the law, but may also benefit from the perceived safety of their children. Tangled Rope due to mixed constraint and coordination function. However, also a possible victim due to reduced autonomy in decisions about their children."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Australian Federal Government",
+      "comment": "Perspective of the Australian Federal Government. The government benefits through increased control over online content and potential positive public perception. The government sees this as coordination to protect children, with benefits outweighing costs. However, potential loss of support from affected demographics. This is a Rope from the government's perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Social Media Platforms",
+      "comment": "Perspective of social media platforms who are initially forced to invest in age verification but benefit from a clearer regulatory environment and reduced liability for harmful content affecting children. They can arbitrage the new regulations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer views the ban as a Tangled Rope due to its mixed effects: it provides coordination by protecting children but also introduces asymmetric extraction and suppression of freedoms. Benefits some while harming others. Requires active enforcement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "age_verification_accuracy",
+      "question": "How accurate and easily circumvented will age verification systems be?",
+      "resolution_mechanism": "Technical analysis of proposed verification methods and their vulnerability to circumvention.",
+      "impact": "If verification is easily bypassed, the ban is ineffective and the negative impacts are amplified. If verification is highly accurate, the ban's suppression effect is more pronounced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of age verification systems."
+    },
+    {
+      "id": "long_term_impact_on_socialization",
+      "question": "What is the long-term impact of restricted social media access on children's socialization and development?",
+      "resolution_mechanism": "Longitudinal studies comparing the socialization of children with and without social media access.",
+      "impact": "If negative impacts are significant, the ban is harmful. If positive or neutral, the ban is beneficial.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Long term impact on socialization."
+    },
+    {
+      "id": "alternative_platform_migration",
+      "question": "To what extent will children migrate to alternative, less regulated platforms?",
+      "resolution_mechanism": "Tracking of user migration patterns following the implementation of the ban.",
+      "impact": "If migration is significant, the ban is ineffective and may push children to less safe online environments.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Migration to alternative platforms."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A proposed Australian federal law to ban social media access for children under the age of 16, enforced through mandatory age verification systems implemented by platforms. This measure has sparked debate regarding its potential benefits and drawbacks. Some argue it protects children from online harm, while others claim it infringes on their rights and limits their access to information and social interaction. The law's implementation would require significant changes to platform verification practices and raise questions about privacy and data security.",
+    "key_agents": [
+      "Australian Children Under 16: Primary target (powerless/trapped) - Bears extraction through limited access to social media.",
+      "Parents of U16: Secondary target (moderate/constrained) - Impacted by the government's decision and may be forced to monitor children more closely, however, have agency through some monitoring apps.",
+      "Australian Federal Government: Primary beneficiary (institutional/arbitrage) - Benefits through increased control and perceived protection of children.",
+      "Social Media Platforms: Institutional Actor (institutional/arbitrage) - Bear the costs for implementation but can also benefit from the improved image and reduced liability.",
+      "Analytical Observer: (analytical/analytical) sees all sides of the situation and has no direct stake in its success or failure."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. The law extracts from children by limiting access to social media, a significant form of communication and social interaction. Suppression (0.70): High. The ban suppresses children's access to information and limits their online freedoms. Theater ratio (0.30): Low. The law has a genuine aim of protecting children, but there's also a theatrical element to appease concerns around internet safety and appear proactive.",
+    "perspectival_gap": "The perspectival gap arises from the differing structural positions of the agents involved. Children see the ban as a pure extraction (Snare), as it limits their freedoms and access to information. Parents have a more mixed perspective (Tangled Rope) due to their dual role as decision-makers and protectors. The government views it as a form of coordination (Rope) to protect children from online harm. The analytical observer recognizes the trade-offs and classifies it as a Tangled Rope.",
+    "directionality_logic": "Directionality is determined by the relationship each agent has to the constraint. Children are victims and experience a high directionality value (d=0.95) due to their limited exit options. The government benefits from increased control and is the primary beneficiary, thus experiencing a low directionality value (d=0.05). Parents have an intermediate position, with a directionality value reflecting their mixed experience of constraint and potential benefit (d=0.5).",
+    "mandatrophy_analysis": "The constraint is classified as Tangled Rope to account for the mix of extraction and coordination it generates. Classifying it as pure extraction (Snare) would ignore the potential benefits of child protection. Classifying it as pure coordination (Rope) would disregard the limitations of freedom it creates. Tangled Rope captures this nuanced reality."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "online_privacy_laws",
+      "internet_censorship"
+    ]
+  },
+  "directionality_overrides": []
+}

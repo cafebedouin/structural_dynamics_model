@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "hanlons_razor",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hanlon"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hanlon's Razor: Constraint on Intentionality Attribution",
+    "topic_domain": "social/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incompetent_actors",
+      "institutional_negligence",
+      "benefit_of_doubt_norm"
+    ],
+    "victims": [
+      "harm_detection_epistemic_reliability",
+      "coordination_of_response"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Epistemically Trapped Victim",
+      "comment": "PERSPECTIVE 1: EPISTEMICALLY TRAPPED VICTIM (SNARE) \u2014 A person harmed by systematic negligence, incompetence, or institutional failure faces a snare when Hanlon's Razor is applied to their situation. They are forced to remain uncertain whether the harm was intentional malice or mere stupidity. Cannot exit this epistemic trap; bears full cost of misattribution. The constraint extracts their ability to construct accurate causal models of their own harm."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Collective Coordination Function",
+      "comment": "PERSPECTIVE 2: COLLECTIVE COORDINATION FUNCTION (TANGLED ROPE) \u2014 Hanlon's Razor serves a genuine coordination function: it lowers social friction by discouraging malice attribution when simpler explanations fit the evidence. This reduces costly blame cycles and conflict escalation in everyday interaction. But it also enables extraction: institutions and individuals benefit from the ambiguity it preserves about their negligence. Constrained exit \u2014 one cannot abandon the norm without social cost, but the norm itself creates asymmetric risk allocation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Negligent Actor",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL NEGLIGENT ACTOR (ROPE) \u2014 An organization or powerful actor benefits from Hanlon's Razor as a pure coordination mechanism: it provides plausible deniability and deflects scrutiny of systematic failures. The constraint functions as a norm that solves the 'blame allocation' problem: others will interpret failures charitably, assuming incompetence rather than malice. Net beneficiary with full arbitrage \u2014 can exit by demonstrating competence, but has no incentive to do so."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Rationalist Epistemic Community",
+      "comment": "PERSPECTIVE 4: RATIONALIST EPISTEMIC COMMUNITY (PITON) \u2014 Rationalism and skepticism traditionally invoked Hanlon's Razor as a methodological norm: don't attribute to conspiracy what incompetence explains. This served an epistemic function (filtering implausible conspiracy theories) but has become largely performative. In contexts of systematic institutional failure, invoking Hanlon's Razor now functions as theater \u2014 a ritualistic appeal to charity that substitutes for actual investigation. The cognitive tool has degraded; institutional inertia maintains it as a norm even when it prevents truth-seeking."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Accountability and Evidence Movement",
+      "comment": "PERSPECTIVE 5: ACCOUNTABILITY AND EVIDENCE MOVEMENT (SCAFFOLD) \u2014 Organized actors pushing for transparency, harm documentation, and evidence-based causality attribution are constructing alternative pathways that sunset the utility of Hanlon's Razor. Regulatory requirements (adverse event reporting, algorithmic audits, duty of care standards) make negligence more expensive and more detectable than before. These actors see the razor as a temporary coordination failure being solved by institutional maturation \u2014 as accountability systems improve, the need to assume good faith in the absence of evidence declines. Has sunset logic: as transparency increases, the razor's protective function diminishes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Theory View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION THEORY VIEW (MOUNTAIN) \u2014 From a pure information-theoretic perspective, Hanlon's Razor reflects an immutable principle: stupidity (variance in competence) always has greater prior probability than coordinated malice (requires intentional alignment). The razor is a Bayesian heuristic, not a social norm \u2014 it follows from the base rates of human error vs. organized conspiracy. This perspective risks treating a contingent social norm as though it were a natural law of cognition."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_detection_baseline",
+      "question": "What is the true base rate of negligence vs. malice in contexts where Hanlon's Razor is invoked? Does actual outcome distribution match the assumed prior?",
+      "resolution_mechanism": "Historical case analysis: audit documented outcomes in organizational failures, accidents, regulatory violations, and interpersonal harms; compare assumed stupidity explanation vs. discovered malice or negligence after investigation.",
+      "impact": "If stupidity base rate < 0.60: Hanlon's Razor systematically over-extends charity, enabling extraction. If base rate > 0.85: the razor is well-calibrated and coordination justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "True base rate of negligence vs. malice in harm scenarios"
+    },
+    {
+      "id": "detection_cost_asymmetry",
+      "question": "Who bears the cost of investigation to distinguish negligence from malice \u2014 the victim (who must prove malice) or the actor (who must prove competence)?",
+      "resolution_mechanism": "Comparative analysis of burden of proof in civil/criminal law, regulatory contexts, and institutional accountability; measurement of actual investigation costs allocated to each party.",
+      "impact": "If victim bears cost: Hanlon's Razor is extraction mechanism (snare). If actor bears cost: it is coordination incentive (rope). If asymmetric: tangled rope confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Asymmetry in cost of proving negligence vs. malice"
+    },
+    {
+      "id": "harm_distribution_temporal",
+      "question": "Over time, does invoking Hanlon's Razor reduce actual harm (by lowering conflict escalation) or increase it (by enabling undetected negligence)?",
+      "resolution_mechanism": "Longitudinal comparison: scenarios where Hanlon's Razor was applied as a norm vs. scenarios where accountability investigations occurred; measurement of harm recurrence rates, institutional improvement, and victim outcomes.",
+      "impact": "If harm decreases: coordination function genuine, rope classification justified. If harm increases or recurs: extraction mechanism dominates, snare/tangled rope confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net harm reduction from applying Hanlon's Razor vs. requiring accountability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Hanlon's Razor is a heuristic constraint that models how we attribute causality to others' harmful behavior. The principle \u2014 'never attribute to malice that which is adequately explained by stupidity' \u2014 functions as both a coordination norm (reducing blame escalation and social friction) and an extraction mechanism (enabling institutions to evade accountability by claiming incompetence rather than negligence). The constraint exhibits all six classification types from different perspectives because it simultaneously solves a genuine coordination problem (preventing conflict spirals from malice attribution) and enables a genuine extraction problem (preventing detection of systematic negligence). The theater ratio has increased from 0.35 to 0.58 over the interval as the norm has shifted from a genuine epistemic heuristic to a performative appeal to charity in contexts of documented institutional failure. The extractiveness has increased from 0.28 to 0.52 as accountability mechanisms have become available, making negligence more detectable; institutions now invoke Hanlon's Razor specifically to block investigation despite available evidence.",
+    "key_agents": [
+      "Epistemically Trapped Victim: Primary victim (powerless/trapped) \u2014 bears uncertainty about whether harm was intentional or negligent; cannot escape this cognitive trap without external verification",
+      "Institutional Negligent Actor: Primary beneficiary (institutional/arbitrage) \u2014 captures plausible deniability and deflects accountability investigation; can exit only by demonstrating competence",
+      "Collective Social Coordination Function: Moderate/constrained \u2014 genuine benefit from reducing blame escalation, but bears extraction risk when applied to documented negligence",
+      "Accountability and Evidence Movement: Organized/constrained \u2014 constructing alternative pathways (transparency, regulatory duty of care, algorithmic audits) that sunset the razor's protective function",
+      "Rationalist Epistemic Community: Analytical actor \u2014 traditional guardian of the razor as epistemic method; now at risk of weaponizing it as theater",
+      "Information Theorist (Civilizational View): Analytical/analytical \u2014 risks treating a contingent social norm as though it were a Bayesian law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Hanlon's Razor provides genuine coordination benefit (lowers blame cycles, reduces conflict escalation) worth ~0.25-0.30, but the extraction mechanism (protecting negligent actors from accountability) has grown as institutional contexts have become more complex and as evidence-gathering capabilities have improved. When invoked in contexts where investigation is feasible (regulated industries, platform accountability, medical errors), the razor now functions primarily as a barrier to detection, not as a conflict-reduction norm. Suppression (0.65): High. The norm is difficult to challenge without appearing hostile to charity and good faith. Direct questioning of Hanlon's Razor in institutional settings triggers social punishment. Theater ratio (0.58): Moderate-high. The norm began as genuine epistemology (skepticism toward conspiracy theories) but has become performative in institutional contexts. Invoking it is now often a substitute for investigation rather than a principle guiding investigation. The shift from 0.35 to 0.58 reflects this degradation \u2014 what was once a methodological principle is now a ritualistic appeal.",
+    "perspectival_gap": "The most significant perspectival gap exists between the victim (snare: \u03c7 very high) and the institutional actor (rope: \u03c7 minimal/negative). Both experience the same constraint, but their structural positions invert its meaning. For the victim, Hanlon's Razor blocks investigation and accountability. For the institution, it provides coordination (reduces blame spirals). The scaffold perspective reveals that this gap is not permanent \u2014 as evidence-gathering and accountability mechanisms mature, the razor's protective function decays. The piton perspective reveals that the norm persists through institutional inertia despite reduced function in contexts where investigation is feasible.",
+    "directionality_logic": "Directionality values are determined by exit options and structural position. Beneficiaries (negligent institutions) have arbitrage exit \u2014 they can evade accountability if they demonstrate competence, but have no incentive to do so. Their d is low (~0.15), producing negative/minimal \u03c7 from their perspective. Victims have trapped exit and victim status \u2014 their d is high (~0.90), producing high \u03c7. The coordination function has constrained exit and mixed beneficiary/victim status \u2014 d ~0.50, producing moderate \u03c7. The organized accountability movement has constrained exit but some agency \u2014 d ~0.45, with declining \u03c7 over time as their sunset logic materializes. The rationalist community has analytical exit \u2014 d ~0.72, deriving a middle \u03c7 that reflects their risk of weaponizing the tool.",
+    "mandatrophy_analysis": "MANDATROPHY PARTIALLY UNRESOLVED: Hanlon's Razor resolves the first layer of mandatrophy (distinguishing genuine coordination from extraction) by showing that both functions are structurally real. The norm does solve a genuine problem (preventing malice attribution spirals) and does enable extraction (protecting negligence from investigation). But it does not fully resolve whether the net effect is coordination or extraction \u2014 that depends on empirical facts about base rates and harm outcomes that are not yet measured. Omega variables directly address this: if the base rate of malice is truly low and the harm reduction from the norm is documented, then coordination dominates. If investigation reveals that negligence is systematically hidden behind the norm, then extraction dominates. The progression of extractiveness from 0.28 to 0.52 suggests a temporal shift \u2014 the norm may have begun as genuine coordination but transformed into extraction as institutions learned to weaponize it. This is the lifecycle pattern of tangled rope: a real coordination function that attracts parasitic extraction, causing the theater ratio to rise and the true coordination value to become occluded."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_negligence_concealment",
+      "blame_attribution_equilibrium",
+      "epistemic_charity_norm"
+    ],
+    "dual_formulation_note": "Hanlon's Razor decomposes into two structurally distinct claims: (1) a Bayesian prior claim (stupidity has higher base rate than malice), which is a mathematical observation; and (2) a social norm claim (we should preferentially attribute harm to stupidity to reduce conflict), which is a coordination mechanism that can enable extraction. The first claim is mountain-adjacent (information-theoretic limit); the second is tangled rope (coordination with extraction). This story focuses on the second claim, where the constraint operates at the social/institutional level."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.5
+    }
+  ]
+}

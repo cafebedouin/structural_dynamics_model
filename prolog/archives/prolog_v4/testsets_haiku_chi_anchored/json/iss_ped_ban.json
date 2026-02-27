@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "iss_ped_ban",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ped"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NASA's Historical Ban on Personal Electronic Devices on the ISS",
+    "topic_domain": "technological/space_operations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mission_safety_protocols",
+      "nasa_operational_control",
+      "orbital_debris_mitigation"
+    ],
+    "victims": [
+      "astronaut_autonomy",
+      "crew_communication_efficiency",
+      "scientific_capacity"
+    ],
+    "has_sunset_clause": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Isolated Astronaut",
+      "comment": "PERSPECTIVE 1: ISOLATED ASTRONAUT (SNARE) \u2014 Trapped for 6-month mission duration without exit. Cannot bring personal communication devices despite 400km altitude. Bears extraction of autonomy and privacy. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Scientific Research Community",
+      "comment": "PERSPECTIVE 2: SCIENTIFIC RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Constrained by device ban's impact on real-time data analysis and research coordination, yet benefits from mission safety protocols that enable extended operations. d\u22480.68, f(d)\u22481.05, \u03c3=1.1 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "NASA Mission Operations",
+      "comment": "PERSPECTIVE 3: NASA MISSION OPERATIONS (ROPE) \u2014 Benefits from unified communication control and RF spectrum management. Experiences constraint as coordination mechanism for crew safety and orbital asset protection. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Partnership Coalition",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL PARTNERSHIP COALITION (SCAFFOLD) \u2014 Roscosmos, ESA, JAXA, and CSA collectively see the ban as a transitional coordination mechanism with explicit sunset: approved crew tablets (iPad, Samsung Galaxy) and commercial RF terminals are gradually replacing the blanket prohibition. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.15. Low extraction because the coalition has agency and documented sunset timeline (2020-2028 transition complete by 2030)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Orbital Debris Mitigation Authority",
+      "comment": "PERSPECTIVE 5: ORBITAL DEBRIS MITIGATION AUTHORITY (PITON) \u2014 The original justification for the ban (preventing device loss creating trackable debris) has degraded into theater. Modern ISS has 16+ active RF systems, GPS constellation, and Starlink traffic; marginal risk from a lost smartphone is negligible. The ban persists through institutional inertia. theater_ratio=0.68 satisfies piton gate. Original function (debris prevention) is attenuated; ban maintained because 20-year legacy bureaucracy hasn't updated risk models."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a deep-time view, the ban naturalizes as inherent to space operations: RF interference, communication protocol fragility, and mission-critical override requirements might be immutable constraints. However, structural data (\u03b5=0.38, suppression=0.62, theater=0.68) contradicts this. The engine will detect false summit: the constraint is contingent institutional policy, not natural law. Modern ISS successfully operates with approved personal devices, proving the 'immutable' justification was false."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rf_interference_threshold",
+      "question": "What RF interference threshold from personal devices genuinely threatens ISS communication integrity vs. what is regulatory precaution?",
+      "resolution_mechanism": "Controlled RF emission testing in ISS RF environment; comparative analysis with Soyuz/Progress RF specifications; empirical data from post-2020 approved device operations",
+      "impact": "If threshold very low: piton classification confirmed (fear-driven theater). If threshold high: mountain perspective gains credibility (genuine hazard). Device authorization timeline 2020-2030 suggests threshold was misidentified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether RF interference from personal devices genuinely threatens ISS communications"
+    },
+    {
+      "id": "orbital_debris_tracking_gap",
+      "question": "Does the marginal debris risk from a single lost smartphone justify a two-decade blanket ban given modern tracking and Starlink constellation degradation effects?",
+      "resolution_mechanism": "Comparative orbital debris analysis: tracked objects <10cm from ISS altitude; debris generation statistics from known on-orbit device losses (ISS solar panel arrays, cargo pallet releases); risk modeling vs. grandiose Starlink constellation contribution",
+      "impact": "If smartphone debris negligible: ban is pure institutional inertia (high theater). If risk material: piton classification is overstated, functional justification remains.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether smartphone debris risk justifies the blanket ban policy"
+    },
+    {
+      "id": "crew_autonomy_extraction_quantification",
+      "question": "How much psychological/operational extraction does the communication ban impose, and does it degrade crew morale, scientific productivity, or emergency response capacity?",
+      "resolution_mechanism": "Longitudinal crew debriefs comparing pre-2020 (strict ban) and post-2020 (approved devices) missions; cognitive load studies; emergency communication drill performance metrics; family communication quality assessments",
+      "impact": "If extraction is high: snare classification confirmed. If extraction is low/illusory: tangled rope perspective is stronger (genuine coordination benefit dominates). Psychological effects determine whether beneficiary/victim split is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantification of crew autonomy extraction and operational impact"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "NASA's blanket prohibition on personal electronic devices aboard the International Space Station, maintained from the station's establishment through the 2020s, exemplifies how a coordination mechanism for legitimate safety concerns can degrade into institutional theater while maintaining enforcement. The ban ostensibly protected mission safety through RF interference prevention and orbital debris mitigation, yet the constraint exhibits all hallmarks of institutional drift: the original risk model was never quantified, authorized alternatives (crew tablets, commercial terminals) proved the ban unnecessarily restrictive, and enforcement persisted long after its functional justification eroded. The constraint demonstrates the tangled rope archetype: NASA's mission operations genuinely benefited from unified communication control (rope coordination), but astronauts experienced meaningful extraction of autonomy, privacy, and communication efficiency (asymmetric burden). The theater ratio's rise from 0.35 to 0.68 over two decades reveals the ban's transition from functional safety mechanism to performative compliance ritual. By 2020, the International Partnership (ISS partners authorized crews to use approved tablets), the constraint entered scaffold transition phase with documented sunset logic. This story illustrates how indexical classification prevents false mountain claims: the ban might naturalize as an immutable requirement of orbital operations ('RF environment always requires strict control'), but the structural data and authorization of personal devices in practice proves it a contingent institutional arrangement.",
+    "key_agents": [
+      "NASA Mission Operations: Primary beneficiary (institutional/arbitrage) \u2014 captures unified RF spectrum control and communication dominance",
+      "Isolated Astronaut: Primary victim (powerless/trapped) \u2014 bears extraction of autonomy, privacy, and emergency communication capacity for mission duration",
+      "Scientific Research Community: Secondary victim (moderate/constrained) \u2014 real-time data analysis and research coordination constrained; also benefits from mission continuity",
+      "ISS International Partners: Organized coalition (organized/constrained) \u2014 ESA, Roscosmos, JAXA, CSA building authorized device pathway with sunset logic",
+      "Orbital Debris Mitigation Authority: Institutional actor (institutional/arbitrage) \u2014 maintains degraded justification; original function (debris prevention) attenuated but enforcement continues",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy as immutable space law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The astronaut autonomy extraction is real but not maximal \u2014 missions succeed, communication is maintained through NASA-approved channels, and research proceeds. However, the extraction is genuine: lost opportunity for family communication during high-stress operations, inability to document personal observations, constraint on emergency decision-making autonomy. The value reflects that extraction is structural (institutional control of communication) but not punitive (astronauts are not tortured or abused). Suppression (0.62): Moderate-high. The ban's enforcement rests on astronauts' trapped status (cannot exit during mission) and institutional control of launch manifests (cannot negotiate as independent contractors). However, suppression is not total \u2014 astronauts can refuse missions, request policy changes, or use approved devices. The suppression value reflects the genuine difficulty of organizing opposition and the career risk of non-compliance. Theater ratio (0.68): High. The ban persists despite authorization of tablets and personal devices for approved use cases. The enforcement is substantially performative \u2014 astronauts cannot bring smartphones but can use SpaceX-provided communications, raising the question: what genuine safety difference justifies the prohibition? The theater has increased over time as the risk justification decayed.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival disagreement despite identical base metrics. NASA operations perceives a pure coordination mechanism (rope) solving genuine RF spectrum management. The isolated astronaut perceives pure extraction (snare) with no coordination benefit. The international coalition perceives temporary scaffolding with a documented sunset (2020-2030 transition). The debris mitigation authority perceives its own degraded institutional ritual (piton) maintained through bureaucratic inertia. The analytical observer risks naturalizing the constraint as immutable space law (mountain), but the post-2020 authorization of personal devices proves the 'immutability' claim false. The perspectival gap reveals that the constraint is not a natural law but a contingent institutional arrangement with differential beneficiaries.",
+    "directionality_logic": "NASA Mission Operations: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary. Unified RF control is a genuine operational advantage. Isolated astronaut: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. High extraction \u2014 no exit options during mission. ISS partners: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.32. Low effective extraction; they retain agency to authorize alternatives. Debris authority: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Piton classification emerges from theater gate, not high chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain claim is perspectival naturalization; engine's false summit detector catches it.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by showing that all six types are legitimate perspectival readings of the same structural data, with a crucial temporal dimension. In 2001-2010, the constraint was genuine tangled rope: real RF hazards justified coordination, but astronaut autonomy extraction was non-trivial. By 2015-2020, theater ratio rose to 0.60+ as the risk justification atrophied \u2014 piton classification became appropriate (degraded institutional ritual). By 2025, the constraint is actively transitioning to scaffold as authorized devices prove the ban unnecessarily restrictive and explicit sunset logic emerges. The mandatrophy is resolved not by selecting a single type but by recognizing temporal drift: tangled rope \u2192 piton \u2192 scaffold transition reflects genuine institutional change. The false summit (mountain classification) is caught by the engine's NL metrics: the constraint lacks the accessibility_collapse (\u22650.85) and resistance (\u22640.15) signatures of true natural law. The ban is contingent, not immutable."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.35
+  },
+  "network": {
+    "affects_constraints": [
+      "iss_crew_autonomy_degradation",
+      "space_rf_spectrum_management"
+    ],
+    "dual_formulation_note": "The PED ban is downstream of RF spectrum management constraints but represents a distinct institutional policy layer. The upstream RF constraint has structural roots in communication protocol fragility; the PED ban is a specific enforcement choice that degraded into theater. They should be analyzed as separate constraint stories linked by institutional coupling, not as a single phenomenon."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

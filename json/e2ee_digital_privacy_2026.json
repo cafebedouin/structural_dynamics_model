@@ -1,0 +1,227 @@
+{
+  "header": {
+    "constraint_id": "e2ee_digital_privacy_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "e2ee"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "End-to-End Encryption as Digital Privacy Constraint",
+    "topic_domain": "technological/political/social",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "privacy_advocates",
+      "dissidents_political_minorities",
+      "journalists_sources",
+      "financial_transaction_privacy"
+    ],
+    "victims": [
+      "law_enforcement_surveillance_capacity",
+      "state_intelligence_agencies",
+      "corporate_data_brokers",
+      "platform_content_moderation"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dissident in an Authoritarian Regime",
+      "comment": "PERSPECTIVE 1: THE DISSIDENT (SNARE) \u2014 E2EE is technically available but politically dangerous. Using it openly signals dissent and attracts state monitoring. Avoiding it exposes them to regime surveillance. Structurally trapped: the encryption itself provides no protection against arrest based on usage patterns or metadata. Maximum experienced extraction: the regime weaponizes E2EE availability against users (proof of intent to hide). The constraint extracts political vulnerability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Privacy Advocate / Civil Libertarian",
+      "comment": "PERSPECTIVE 2: THE PRIVACY ADVOCATE (ROPE) \u2014 E2EE is a genuine coordination solution to the collective action problem of digital privacy. It enables distributed, peer-to-peer privacy without reliance on institutional intermediaries. The advocate experiences E2EE as pure coordination: they benefit directly and structurally from its existence without extraction cost. High agency, clear exit (can choose encrypted or unencrypted tools). Net coordination, minimal coercion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Law Enforcement / Intelligence Agencies",
+      "comment": "PERSPECTIVE 3: LAW ENFORCEMENT / INTELLIGENCE (SNARE as experienced by the constraint enforcer) \u2014 E2EE constrains their investigative capacity. They are trapped in a structural bind: they cannot simply decrypt protected communications without breaking the mathematical substrate of E2EE itself (which would require breaking cryptography globally \u2014 not possible without cooperation from technology platforms). Their exit options are severely constrained: pressure governments to mandate backdoors (uncertain outcome), infiltrate devices at endpoints (expensive/unreliable), or accept intelligence blind spots (politically untenable). The constraint enforces extraction of surveillance capacity FROM them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Technology Platforms (Meta, Google, Apple, Signal)",
+      "comment": "PERSPECTIVE 4: TECHNOLOGY PLATFORMS (TANGLED ROPE) \u2014 E2EE is both a coordination mechanism (enables user trust, competitive differentiation, regulatory compliance in some jurisdictions) and an extraction mechanism (blocks platform surveillance, blocks advertising targeting based on content, creates liability for illegal content they cannot moderate). Platforms benefit from user trust but are constrained from monetizing message content. They possess agency \u2014 they can implement, lobby against, or offer optional E2EE. Active enforcement required: platforms must implement and maintain E2EE infrastructure. Constrained but not trapped: platforms experience both genuine coordination benefit (user retention, regulatory compliance in EU) and genuine extraction cost (lost advertising intelligence, content moderation blindness)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Cryptography Community",
+      "comment": "PERSPECTIVE 5: OPEN CRYPTOGRAPHY COMMUNITY (SCAFFOLD) \u2014 Views E2EE as temporary support infrastructure for a sunset transition to post-quantum cryptography and alternative surveillance resistance mechanisms. From this perspective, E2EE solves the immediate privacy problem (1977-2040) but faces structural sunset: quantum computing threatens classical encryption, and other privacy architectures (decentralized infrastructure, zero-knowledge proofs, onion routing) may provide superior solutions. The community has agency and exit: they can redirect research, advocate transitions, build alternatives. Theater ratio is low: cryptographic implementation is functionally verifiable. Suppression exists (regulator pressure, US export controls) but is eroding as E2EE becomes standard."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Apparatus (Crypto Export Controls)",
+      "comment": "PERSPECTIVE 6: REGULATORY APPARATUS / CRYPTO EXPORT CONTROLS (PITON) \u2014 The US Crypto Wars (1990s-2000s) established export restrictions on strong encryption, treated as 'munitions.' This regime persists through institutional inertia despite technical obsolescence (strong encryption is freely available globally) and policy incoherence (US government uses the same encryption it restricts). Theater ratio high: enforcement is performative (export controls cannot prevent access to open-source implementations or commercially available tools from other countries). The original function (slowing foreign adversary access to strong crypto) has atrophied as globalization made foreign access inevitable. The constraint persists as 'regulatory heritage,' not because it works."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer / Epistemic Position",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 E2EE is structurally a coordination mechanism (solves privacy in peer-to-peer communication) combined with asymmetric extraction (denies third-party access to content while enabling end-user access, benefiting privacy advocates while harming surveillance-dependent actors). Unlike the false mountain reading ('E2EE is a law of nature'), E2EE is a contingent institutional and cryptographic choice. It emerged in the 1970s (Diffie-Hellman) because mathematicians solved a coordination problem (shared key derivation without prior contact). Its persistence is maintained by active enforcement (platform integration, legal frameworks) and serves both genuine coordination and genuine extraction functions. Neither pure coordination nor pure extraction \u2014 the defining property of tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "backdoor_cryptographic_feasibility",
+      "question": "Is it mathematically feasible to create a cryptographic backdoor that allows only authorized parties (law enforcement) to decrypt E2EE messages without weakening the encryption for malicious actors?",
+      "resolution_mechanism": "Peer review of cryptographic proposals (key escrow, secure enclaves, threshold decryption); evaluation by cryptographic standards bodies (NIST, IETF); demonstration of security proofs or cryptanalytic breaks",
+      "impact": "If feasible: regulatory backdoor mandates become technically viable (Tangled Rope \u2192 Snare from LE perspective). If infeasible: LE constraint becomes structural/permanent (Snare \u2192 Mountain from LE perspective, but false mountain \u2014 it's a choice, not a law).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mathematical feasibility of cryptographic backdoors"
+    },
+    {
+      "id": "quantum_computing_timeline",
+      "question": "When will cryptographically relevant quantum computers (CRQCs) emerge that can break current E2EE systems (RSA-2048, ECC)?",
+      "resolution_mechanism": "Quantum computing hardware development timelines; progress on error correction and qubit scaling; post-quantum cryptography standardization and deployment rates",
+      "impact": "If before 2035: E2EE sunset is real and near (Scaffold perspective validated). If after 2055: E2EE remains viable longer (Scaffold sunset is distant/aspirational). Affects whether E2EE is structural coordination or temporary scaffolding.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cryptographically relevant quantum computer emergence timeline"
+    },
+    {
+      "id": "metadata_surveillance_sufficiency",
+      "question": "Can adversaries (state intelligence, corporate surveillance) extract actionable intelligence from metadata (sender, recipient, timing, frequency, message size patterns) even when message content is E2EE-protected?",
+      "resolution_mechanism": "Empirical analysis of metadata-based inference attacks; case studies of surveillance programs relying on metadata; adversarial machine learning evaluation of pattern-based targeting",
+      "impact": "If sufficient: E2EE provides only partial privacy (Tangled Rope classification confirmed \u2014 extraction still occurs via metadata). If insufficient: E2EE's coordination function is more complete (moves toward Rope for privacy advocates). Affects whether E2EE 'really' protects privacy.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Metadata-based intelligence sufficiency without content access"
+    },
+    {
+      "id": "platform_endpoint_integrity",
+      "question": "Can technology platforms implement device-level surveillance (keystroke logging, message interception at device level) that bypasses E2EE by attacking the endpoint rather than the encrypted channel?",
+      "resolution_mechanism": "Security research on endpoint vulnerabilities; OS-level surveillance capabilities (NAND mirroring, keyloggers, zero-day exploits); feasibility of device-level deployment at scale",
+      "impact": "If feasible at scale: E2EE is functionally limited to protecting transit while devices remain vulnerable (Snare from dissident perspective validated \u2014 E2EE provides false sense of security). If not feasible: E2EE protection extends to device level (Rope classification strengthened).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Device-level surveillance feasibility bypassing E2EE"
+    },
+    {
+      "id": "regulatory_consensus_emergence",
+      "question": "Will democratic governments reach consensus on whether E2EE should be mandated, permitted, or restricted, or will fragmentation persist (EU encryption-neutral, US LE-hostile, China-banned)?",
+      "resolution_mechanism": "International regulatory harmonization efforts; legislative outcomes (DMA, Online Safety Bill, GCTA); compliance outcomes for platforms",
+      "impact": "If consensus emerges toward mandate: E2EE becomes institutional standard (Rope \u2192 Mountain from governance perspective). If fragmentation persists: E2EE remains contested (Tangled Rope indefinitely). Affects whether E2EE is 'settled' or perpetually extracted by regulatory uncertainty.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Regulatory consensus on E2EE policy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1977,
+      "value": 0.15,
+      "id_override": "e2ee_extractiveness_1977"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2001,
+      "value": 0.42,
+      "id_override": "e2ee_extractiveness_2001"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2013,
+      "value": 0.58,
+      "id_override": "e2ee_extractiveness_2013"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.58,
+      "id_override": "e2ee_extractiveness_2026"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1977,
+      "value": 0.05,
+      "id_override": "e2ee_theater_1977"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2001,
+      "value": 0.25,
+      "id_override": "e2ee_theater_2001"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2013,
+      "value": 0.3,
+      "id_override": "e2ee_theater_2013"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.35,
+      "id_override": "e2ee_theater_2026"
+    }
+  ],
+  "interval": {
+    "start": 1977,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "End-to-end encryption (E2EE) emerged in 1977 as a mathematical solution to a coordination problem: how can two parties establish a shared secret without pre-arranged key exchange? Diffie-Hellman key agreement answered this. Over 49 years, E2EE evolved from academic cryptography to global infrastructure embedded in messaging platforms (Signal, WhatsApp, iMessage), email protocols (PGP, S/MIME), and financial systems. This constraint exhibits structural duality: it is simultaneously a coordination mechanism (enabling privacy for legitimate users) and an extraction mechanism (denying surveillance access to powerful actors). The constraint's persistence and evolution reveals how E2EE transitioned from a technical coordination tool (1977-2000s) to a contested political battlefield (2010s-2026), where its existence extracts surveillance capacity from state and corporate actors while coordinating privacy for civil society. The extractiveness has increased over the interval not because E2EE became stronger (cryptographic strength plateaued) but because its deployment became ubiquitous (Snowden disclosures, widespread adoption), making state/corporate workarounds more expensive. The theater ratio remains low: E2EE implementations are mathematically verifiable. The regulatory theater (export controls, backdoor mandates) is high, but this is a separate constraint (crypto_export_controls_piton).",
+    "key_agents": [
+      "Privacy advocates / civil libertarians (powerful/arbitrage) \u2014 benefit directly; low extraction cost",
+      "Dissidents and political minorities (powerless/trapped) \u2014 trapped between surveillance and visibility; maximum extraction",
+      "Law enforcement / intelligence agencies (organized/constrained) \u2014 constrained from accessing content; extract surveillance capacity loss",
+      "Technology platforms: Meta, Google, Apple, Signal (institutional/constrained) \u2014 implement E2EE (coordination gain: user trust, regulatory compliance) but lose content-based monetization and moderation capacity (extraction cost)",
+      "Cryptography research community (organized/mobile) \u2014 design and maintain E2EE; view as temporary scaffold pending post-quantum alternatives",
+      "Regulatory apparatus: US/UK/EU governments (institutional/arbitrage) \u2014 attempt to mandate backdoors or restrictions; extract regulatory authority",
+      "Analytical observer (analytical/analytical) \u2014 sees full dual-function structure; avoids false naturalizations"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. E2EE denies surveillance access that law enforcement and intelligence agencies previously had (or assumed they would have). This denial is 'extraction' from their perspective \u2014 they lose an intelligence capability. However, the extraction is not maximal (0.75+) because: (1) metadata remains accessible; (2) endpoint compromise remains feasible; (3) decryption targets can still be infiltrated. The 0.58 value reflects that E2EE is a partial privacy solution, not total obscuration. Suppression (0.72): High. Significant barriers to E2EE adoption and use exist: regulatory hostility (export controls, backdoor mandates), platform-dependent implementation (not all platforms offer E2EE), user friction (key management, recipient verification), and threat escalation (using strong E2EE signals intent to hide, which attracts scrutiny in authoritarian contexts). The 0.72 reflects that E2EE is technically available but politically/institutionally suppressed in many contexts. Theater ratio (0.35): Low-to-moderate. E2EE implementations themselves have low theater \u2014 the mathematics is transparent and verifiable. However, the regulatory and platform architecture surrounding E2EE contains theater: governments perform 'law and order' through encryption policy; platforms perform 'user protection' through E2EE rollouts while maintaining other surveillance capabilities. The 0.35 reflects cryptographic transparency + moderate institutional theater.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival divergence. The privacy advocate sees pure coordination (Rope) \u2014 a technical solution that enables privacy without reliance on institutional intermediaries. The dissident sees a snare (Rope framed as protection that becomes evidence of intent to hide in authoritarian contexts). Law enforcement sees their own extraction (Snare as experienced by the constrained party). Technology platforms see tangled rope (genuine coordination benefit via user trust + genuine extraction cost via lost surveillance monetization). The cryptography community sees temporary scaffolding with a post-quantum sunset. The regulatory system sees performative enforcement (Piton \u2014 crypto export controls that persist despite technical obsolescence). The analytical observer sees the full tangled rope structure: E2EE is both coordination (user privacy) and extraction (LE surveillance denial) depending on which agent's perspective is primary. No single classification is 'correct' \u2014 all are structurally valid readings from different observer positions.",
+    "directionality_logic": "Directionality (d) reflects the agent's structural position relative to E2EE as a constraint. Privacy advocates benefit directly (d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 negative \u03c7: E2EE rewards them). Law enforcement loses surveillance capacity (d \u2248 0.85 \u2192 f(d) \u2248 1.15 \u2192 high \u03c7: E2EE extracts from them). Technology platforms sit in the middle: they benefit from user trust (d \u2248 0.35) but lose content surveillance (d \u2248 0.65). The engine derives these automatically from: (1) beneficiary declarations (privacy advocates, dissidents, financial privacy) + power level (powerful to powerless) + exit options (arbitrage to trapped) \u2192 low d; (2) victim declarations (LE, data brokers, content moderation) + power level (organized to institutional) + exit options (constrained) \u2192 high d. The directionality overrides are not needed because the structural derivation from beneficiary/victim + power + exit captures the true relationship.",
+    "mandatrophy_analysis": "RESOLVED: This constraint satisfies the mandatrophy resolution criteria by explicitly identifying that E2EE performs BOTH coordination and extraction functions. The 'mandate' against mislabeling is: do not classify E2EE as pure coordination (Rope) even though it solves the privacy coordination problem, because it simultaneously extracts surveillance capability from state/corporate actors (criterion for Tangled Rope). Do not classify as pure extraction (Snare) even though it constrains LE, because it also provides genuine coordination benefit to legitimate users (criterion against pure extraction without coordination function). The tangled_rope classification correctly captures the hybrid: active enforcement (platforms must implement), genuine beneficiaries (privacy advocates), genuine victims (surveillance-dependent actors), asymmetric extraction (LE loses, privacy advocates gain). The mandatrophy forbids naturalizing E2EE as either 'inevitable technology' (false mountain) or 'pure oppression tool' (snare misclassification). The constraint persists because it serves both functions simultaneously \u2014 removing either the coordination OR the extraction component would change the classification. The extractiveness (0.58) and suppression (0.72) are sufficient to trigger mandatrophy review, and the classification (tangled rope, not snare) demonstrates that both conditions are met."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "crypto_export_controls_piton",
+      "platform_content_moderation_snare",
+      "state_surveillance_capacity_extraction"
+    ],
+    "dual_formulation_note": "E2EE as a constraint is distinct from the mathematical cryptographic theorems (Diffie-Hellman, AES, ECC) that instantiate it. The cryptographic theorems are Mountains (\u03b5 \u2264 0.10, accessibility_collapse \u2265 0.90). E2EE as deployed infrastructure is Tangled Rope (\u03b5 \u2248 0.58, requires active enforcement, beneficiaries + victims + asymmetric extraction). The network link to crypto_export_controls_piton shows how degraded regulatory theater (piton) attempts to suppress E2EE deployment (tangled rope upstream). The link to platform_content_moderation_snare shows how E2EE extraction (loss of moderation access) creates snare dynamics for platforms attempting to comply with content regulations."
+  },
+  "directionality_overrides": []
+}

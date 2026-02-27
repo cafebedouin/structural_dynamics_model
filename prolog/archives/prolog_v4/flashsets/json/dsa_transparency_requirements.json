@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "dsa_transparency_requirements",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Digital Services Act (DSA) Transparency Requirements",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "european_commission",
+      "eu_citizens",
+      "researchers"
+    ],
+    "victims": [
+      "vulnerable_users",
+      "vlo_platforms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Vulnerable Users",
+      "comment": "Vulnerable users are trapped by manipulative or illegal content and lack the resources to effectively hold platforms accountable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "VLOPs",
+      "comment": "VLOPs are constrained by compliance costs but also benefit from increased user trust and a level playing field."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "European Commission",
+      "comment": "The European Commission benefits from increased platform accountability and regulatory power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Researchers",
+      "comment": "Researchers benefit from greater access to data but must navigate complex legal and technical frameworks."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "EU Citizens",
+      "comment": "EU citizens benefit from safer online experiences but might see some services diminished or disappear, while their data are more actively scrutinized."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "scope_of_vulnerable_users",
+      "question": "How to define and identify vulnerable users in the online environment?",
+      "resolution_mechanism": "Development of standardized vulnerability metrics and risk assessment tools.",
+      "impact": "Narrow definition: Snare classification weakened. Broad definition: Snare classification strengthened.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Defining and identifying vulnerable users."
+    },
+    {
+      "id": "degree_of_platform_compliance",
+      "question": "To what extent are VLOPs genuinely committed to transparency and accountability?",
+      "resolution_mechanism": "Independent audits of VLOP transparency reports and algorithmic impact assessments.",
+      "impact": "High compliance: Tangled Rope classification weakened, moving towards Rope. Low compliance: Tangled Rope classification strengthened, moving towards Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing VLOP's commitment to transparency and accountability."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The European Union's Digital Services Act (DSA) imposes strict transparency obligations on Very Large Online Platforms (VLOPs), aiming to protect users from illegal content and harmful online practices. While the DSA aims to foster a safer online environment, it also presents challenges for platforms and users, creating a complex interplay of benefits and costs. The DSA transparency requirements are a tangled rope, designed to coordinate platform accountability while extracting effort and data from them.",
+    "key_agents": [
+      "European Commission: Primary beneficiary (institutional/arbitrage) - Gains increased regulatory power and oversight.",
+      "EU Citizens: Secondary beneficiary (moderate/mobile) - Experience safer online environments.",
+      "Researchers: Tertiary beneficiary (analytical/analytical) - Gain greater access to platform data for research purposes.",
+      "VLOPs: Primary target (institutional/constrained) - Face increased compliance costs and regulatory scrutiny.",
+      "Vulnerable Users: Secondary target (powerless/trapped) - Remain vulnerable to manipulative content if DSA implementation is weak."
+    ],
+    "logic_rationale": "The DSA's extractiveness score reflects the compliance costs and data reporting burdens imposed on VLOPs. The suppression score indicates the constraints on platform autonomy and content moderation practices. The theater ratio is low because the DSA is expected to have a genuine function: greater visibility into online content, advertising, and recommender systems.",
+    "perspectival_gap": "The DSA presents a perspectival gap between beneficiaries and targets. The European Commission sees the DSA as a necessary measure to ensure platform accountability, while VLOPs perceive it as an intrusive regulatory burden. Vulnerable users, though intended beneficiaries, may not experience immediate or significant improvements in online safety if the DSA is not effectively enforced.",
+    "directionality_logic": "The European Commission and EU citizens benefit from the DSA because of the increased safety and regulatory clarity it provides. VLOPs are targeted because they face significant compliance costs and potential penalties for non-compliance. The DSA's directionality is derived from the structural relationship between these agents and the policy's objectives."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

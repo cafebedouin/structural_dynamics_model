@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "commercial_data_brokerage",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cdb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Commercial Data Brokerage Ecosystem",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "data_brokers",
+      "advertising_platforms",
+      "financial_services_firms"
+    ],
+    "victims": [
+      "data_subjects",
+      "privacy_expectations",
+      "individual_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Data Subject",
+      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Individuals cannot realistically exit data collection. Even with privacy settings and opt-out requests, data is already aggregated and sold. No meaningful alternative paths exist; suppression is near-total because collection occurs without knowledge and consent is not genuinely voluntary. Maximum extraction experienced."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Data Broker",
+      "comment": "PERSPECTIVE 2: DATA BROKER (ROPE) \u2014 Experiences the ecosystem as coordination: aggregating fragmented data sources into marketable profiles solves the buyer's information problem. Benefits substantially from the constraint through recurring revenue. Suppression is low for this agent; they have full agency and can exit if regulatory pressure mounts. For them, this is not extraction but coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulated Consumer",
+      "comment": "PERSPECTIVE 3: REGULATED CONSUMER (TANGLED ROPE) \u2014 In jurisdictions with privacy law (GDPR, CCPA), consumers have formal exit options: opt-out requests, data access rights. These are mobile rather than trapped, but friction remains high. Consumers benefit from some data-driven services (targeted ads, credit scoring) while bearing extraction costs through privacy loss. Moderate extraction and moderate coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Privacy Regulation Coalition",
+      "comment": "PERSPECTIVE 4: PRIVACY REGULATION COALITION (SCAFFOLD) \u2014 Organized agents (regulators, advocacy groups, privacy engineers) see the brokerage ecosystem as a temporary coordination failure with structural sunset. Privacy-by-design mandates, federated learning, differential privacy, and decentralized data models represent alternative pathways that bypass centralized brokerage. Sunset clause: as technical architectures mature and enforcement strengthens, the data brokerage model loses extractive force. Theater remains moderate because regulations produce performative compliance while brokers shift to shadow brokerage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Privacy Theater",
+      "comment": "PERSPECTIVE 5: LEGACY PRIVACY THEATER (PITON) \u2014 Privacy policies, opt-out mechanisms, and 'transparent' data practices are substantially performative. Most users cannot or do not read privacy policies; opt-out requests disappear into administrative black holes; transparency statements obscure rather than clarify. The theater persists through institutional inertia \u2014 companies maintain privacy rituals while collecting aggressively. Theater ratio 0.68 reflects that much of the compliance infrastructure is ritual without functional constraint."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational/universal view, the structural reality is that data brokerage systematically extracts information asymmetry from powerless agents. No amount of 'transparency' changes this: knowing you are surveilled does not restore autonomy. The constraint is snare, not mountain \u2014 it is not an immutable law of information systems but a contingent institutional choice to centralize and commercialize personal data. Alternative architectures (federated, decentralized, data cooperatives) demonstrate that this is not natural or necessary."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_validity_threshold",
+      "question": "At what level of friction and information asymmetry does 'consent' cease to be meaningful in data collection agreements?",
+      "resolution_mechanism": "Behavioral studies comparing actual vs stated understanding of data practices; correlation between consent rates and policy readability metrics; analysis of regulatory enforcement outcomes",
+      "impact": "If threshold is high (current ~95% click-through rates): consent framework is largely fiction. If threshold is lower (e.g., active opt-in with 20%+ read-through): consent becomes operational gatekeeper. Changes classification from snare to tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for meaningful consent in data brokerage"
+    },
+    {
+      "id": "shadow_brokerage_scale",
+      "question": "How much of the data brokerage value flows through shadow markets (unregulated brokers, illicit data sales, internal company flows) vs regulated brokers?",
+      "resolution_mechanism": "Forensic tracing of data flows; purchase pattern analysis from regulatory filings; undercover acquisition testing; dark web market monitoring",
+      "impact": "If shadow markets > 30% of value: regulation impacts only a portion of extraction. Snare persistence despite regulation. If < 10%: regulation concentrates brokerage and may enable monitoring. Scaffold timeline shifts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of data brokerage through shadow markets"
+    },
+    {
+      "id": "individual_data_cooperative_viability",
+      "question": "Can decentralized data cooperatives (individuals pooling data as collective bargaining units) achieve sufficient scale to reduce extraction relative to centralized brokers?",
+      "resolution_mechanism": "Case studies of existing cooperatives (Swapcard, Solid, DATUM); adoption curves; comparative revenue analysis; exit rates relative to brokerage firms",
+      "impact": "If viable: scaffold sunset is real and timeline is 10-15 years. If unviable at scale: centralized brokerage is structurally necessary and snare persists. Affects mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical and economic viability of data cooperatives"
+    },
+    {
+      "id": "extraction_asymmetry_measurability",
+      "question": "Can the actual value extracted from individual data subjects be measured and compared to payments received by brokers?",
+      "resolution_mechanism": "Regression analysis of data value: model correlations between data attributes and broker margins; consumer surplus calculation for data-driven services; audit of data valuation methodologies",
+      "impact": "If ratio > 100:1 (brokers capture 100x value of individual subject): snare classification confirmed. If < 10:1: possible rope or tangled_rope reframing. Affects directionality and chi computation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Measurability of value extraction asymmetry"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The commercial data brokerage ecosystem represents one of the largest systematic extractions of value from unwitting individuals in the modern economy. Data brokers aggregate information from hundreds of sources \u2014 public records, purchase histories, browsing behavior, location tracking, financial data, health information \u2014 and sell profiles to advertisers, financial firms, insurance companies, employers, and law enforcement. The extraction mechanism is structural: individuals cannot meaningfully consent because they lack information about what is collected, how it is aggregated, or who accesses it. The suppression is extreme because collection occurs without their knowledge, opt-out mechanisms are deliberately obscured, and enforcement against brokers has been minimal. Over the past 20 years, the ecosystem has evolved from fragmented regional brokers to global data giants (Experian, Equifax, TransUnion, Acxiom, Oracle Data Cloud) with near-universal coverage and automated real-time data flows. Theater has increased as privacy policies and regulatory compliance theater have proliferated without meaningfully constraining extraction.",
+    "key_agents": [
+      "Data Subjects (individuals): Primary victims (powerless/trapped) \u2014 cannot exit data collection; extraction occurs without knowledge or meaningful consent",
+      "Data Brokers (corporate): Primary beneficiaries (institutional/arbitrage) \u2014 monetize aggregated profiles; have full agency to shift business models if pressured",
+      "Advertising Platforms (Google, Meta, etc.): Secondary beneficiaries (institutional/arbitrage) \u2014 consume brokered data to improve targeting; benefit from suppressed competition",
+      "Financial Services Firms (lenders, insurers, employers): Secondary beneficiaries (institutional/arbitrage) \u2014 use brokered data for risk assessment and targeting",
+      "Regulated Consumers (GDPR/CCPA jurisdictions): Secondary victims (moderate/mobile) \u2014 have formal exit options (opt-out, data access) but friction remains high",
+      "Privacy Regulation Coalition (regulators, advocates, privacy engineers): Organized agents (organized/constrained) \u2014 building alternative architectures (privacy-by-design, federated learning, data cooperatives) with sunset logic",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 recognizes brokerage as contingent institutional choice, not natural law of information systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Data brokers extract substantial value from data subjects: profiles are sold repeatedly, generating recurring revenue. The extraction is sustained because individuals cannot exit or negotiate. Extractiveness has increased from 0.32 to 0.58 over the interval as data brokers have expanded coverage (from 100M to 500M+ profiles), integrated new data sources (location, behavioral, health), and automated aggregation. However, extractiveness is not maximal (0.70+) because regulatory friction (GDPR, CCPA) has created some friction, and privacy-conscious segments have some exit options through VPNs, data brokers, and privacy-by-design services. Suppression (0.72): Very high. Structural suppression is near-total: data collection occurs without knowledge, consent mechanisms are deliberately obscured through dark patterns in privacy policies, and brokers have no incentive to surface alternatives. Regulatory suppression is lower \u2014 enforcement against brokers exists but is slow and inconsistent. Theater ratio (0.68): Moderate-high. Privacy policies proliferate but are unreadable (average 73,000 words per year per person). Opt-out mechanisms exist but are administratively burdensome and often ineffective. GDPR/CCPA enforcement produces theater of compliance without preventing aggregation or resale. Data deletion requests disappear into opaque processes. The theater has increased from 0.42 to 0.68 as regulatory requirements have created compliance infrastructure that obscures rather than constrains extraction.",
+    "directionality_logic": "Directionality (d) for each perspective is determined by structural position. Data subjects are victims with trapped exits: their d approaches 1.0, maximizing experienced extraction chi. Data brokers are beneficiaries with arbitrage options: their d is near 0.0, creating negative chi (extraction runs toward them, not away). Regulated consumers have mobile exits (opt-out, VPN, privacy-conscious alternatives) and are both beneficiaries (data-driven services) and victims (privacy loss): their d is moderate (~0.50-0.65), classifying them as tangled_rope. Privacy regulation coalition has organized power and constrained (not trapped) exits: their d is moderate (~0.55), with exit pathways visible through technical alternatives. The piton perspective reflects institutional inertia: privacy theater persists not because it constrains extraction but because regulatory requirements mandate it; the theater itself becomes the mechanism of false legitimation.",
+    "perspectival_gap": "This constraint exhibits a profound perspectival gap between trapped and arbitrage-positioned agents. The data subject sees snare: no exit, no knowledge, maximum suppression. The data broker sees rope: solving a coordination problem (matching buyers with profiles), enjoying arbitrage benefits, experiencing zero suppression. A regulated consumer in GDPR jurisdiction sees tangled_rope: formal exit options but significant friction, mixed benefits from data-driven services, moderate suppression. The privacy coalition sees scaffold: technical alternatives exist and are maturing; sunset is real if adoption accelerates. The institutional observer sees piton: privacy mechanisms are performative rituals that don't actually constrain the core extraction. The analytical observer sees snare: information asymmetry is fundamental \u2014 knowing you are profiled does not restore autonomy. The perspectival gap reveals that the same constraint is snare/rope/tangled_rope/scaffold/piton/snare depending on the observer's structural position and exit capacity.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint avoids conflating coordination with extraction. The snare classification (which dominates from the data subject's perspective) does not depend on arguing that all data aggregation is inherently extractive. Rather, it depends on the structural facts: (1) subjects cannot exit, (2) suppression is extreme (no meaningful knowledge or consent), (3) value asymmetry is large (brokers extract 100+ times the individual subject's share), (4) coordination benefits are minimal for subjects and not distributed. If data brokerage were a genuine coordination mechanism, we would expect to see beneficiaries paying for the coordination benefit, exit options being real, and suppression being low. Instead, we observe the opposite. The tangled_rope perspective (regulated consumers with exit options) is legitimate in GDPR/CCPA jurisdictions where subjects have formal rights, but even there, friction prevents many from exercising them. The rope perspective (data brokers) is accurate from their structural position but does not dominate globally \u2014 it is the view from the extracted-to position, not from the extracted-from position. The scaffold perspective is real but aspirational: privacy-by-design and data cooperatives are possible futures, not current structures. The piton perspective reveals that privacy theater (policies, opt-outs, transparency statements) performs regulatory legitimacy while the core extraction mechanism continues unchanged."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_advertising_surveillance",
+      "financial_scoring_systems",
+      "employment_data_extraction"
+    ],
+    "dual_formulation_note": "Commercial data brokerage is downstream of data collection and aggregation technology but represents a distinct structural constraint: the systemic monetization of personal information. Upstream constraints (tracking technology, platform data collection) enable brokerage but have their own extractiveness values. Downstream constraints (credit scoring, insurance pricing, targeted hiring) consume brokered data and have their own extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

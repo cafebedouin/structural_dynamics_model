@@ -1,0 +1,167 @@
+{
+  "header": {
+    "constraint_id": "prisoners_dilemma_equilibrium",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pd"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The Prisoner's Dilemma (Nash Equilibrium)",
+    "topic_domain": "logical/economic",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Rational Agent (Individual Incentive)",
+      "comment": "PERSPECTIVE 1: RATIONAL AGENT (MOUNTAIN) \u2014 From the viewpoint of a single agent analyzing their payoff matrix, mutual defection is the only dominant strategy that survives iterated elimination of dominated strategies. The constraint is the logical structure of the payoff matrix itself: cooperation yields a lower payoff than defection regardless of what the other agent does. This is a logical law, not contingent on enforcement or institutional design. Every rational agent in a one-shot game, facing this payoff structure, must defect."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Nash Equilibrium)",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 The Nash equilibrium at mutual defection is a mathematical theorem: given the payoff structure, no agent can unilaterally improve their outcome by changing strategy. The constraint emerges necessarily from the logical structure of symmetric games with this payoff ordering. The observer sees an invariant: mutual defection IS the Nash equilibrium in one-shot play for any payoff matrix satisfying Sucker's Payoff < Mutual Defection < Mutual Cooperation < Temptation to Defect. This is a law of rational choice, not dependent on observable or measurement basis."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Repeated-Game Coalition (Iteration and Norms)",
+      "comment": "PERSPECTIVE 3: REPEATED-GAME COALITION (ROPE) \u2014 When agents interact repeatedly and can condition future behavior on history, cooperation becomes rational through reciprocal strategies (tit-for-tat, generous tit-for-tat). The constraint shifts from the payoff matrix to the discount factor: agents must value future payoffs sufficiently relative to present payoffs. Organized agents (firms, nations, communities) solve the prisoner's dilemma through repeated interaction, reputation systems, and norm enforcement. This is pure coordination \u2014 no extraction, just collective action enabling mutual benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legal Institution (Contracts and Enforcement)",
+      "comment": "PERSPECTIVE 4: LEGAL INSTITUTION (SCAFFOLD) \u2014 Formal institutions (contracts, courts, police) can transform the payoff matrix by making defection costly and cooperation rewarding through external enforcement. This is temporary support for cooperation: the institution provides the scaffolding that makes cooperation rational. As agents internalize cooperative norms and repeated-game logic becomes salient, institutional enforcement becomes redundant \u2014 the institution's role declines (sunset clause). Legal systems represent a transitional solution: they work, but only as long as enforcement capacity is maintained."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Dominant Player (Unilateral Action)",
+      "comment": "PERSPECTIVE 5: DOMINANT PLAYER (MOUNTAIN) \u2014 An agent with sufficient power (military, economic, or informational advantage) can defect and escape retaliation, making defection strictly dominant even in repeated games. The constraint becomes: defection is optimal for the powerful agent regardless of the other agent's strategy or time horizon. This is a logical law governing asymmetric games, not a contingent institutional outcome."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Logician (Proof of Impossibility)",
+      "comment": "PERSPECTIVE 6: MATHEMATICAL LOGICIAN (MOUNTAIN) \u2014 The prisoner's dilemma is a theorem in combinatorial game theory: for any symmetric game with payoff matrix satisfying Sucker's Payoff < Mutual Defection Payoff < Mutual Cooperation Payoff < Temptation Payoff, the unique Nash equilibrium in pure strategies is mutual defection in one-shot play. This is logically necessary \u2014 not dependent on agent behavior, measurement, or context. The constraint is the proof itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "payoff_matrix_specification",
+      "question": "Does the constraint depend on the specific numerical payoff values, or is it a logical property invariant across all matrices satisfying the ordering?",
+      "resolution_mechanism": "Formal proof that the Nash equilibrium property holds for any payoff matrix satisfying the ordering constraint T > R > P > S (Temptation > Reward > Punishment > Sucker's Payoff)",
+      "impact": "If invariant: The constraint is a pure logical law (Mountain confirmed). If dependent on specific values: The constraint is domain-sensitive and may classify differently under alternative payoff structures.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the constraint is invariant across payoff matrix specifications"
+    },
+    {
+      "id": "one_shot_vs_repeated_decomposition",
+      "question": "Should the one-shot prisoner's dilemma and the repeated-game variant be treated as a single constraint or decomposed into separate constraint stories?",
+      "resolution_mechanism": "Examine whether epsilon values differ: one-shot game (pure Nash equilibrium, no coordination function) vs repeated game (iterated equilibrium, coordination possible). If epsilon differs by a factor > 2, decompose.",
+      "impact": "If single constraint: Rope and Mountain perspectives both apply to the same structure (perspectival gap reflects game horizon). If decomposed: Two separate constraints with different \u03b5 values linked by network relationship.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether one-shot and repeated games form a single constraint or separate structures"
+    },
+    {
+      "id": "rationality_assumption_grounding",
+      "question": "Is the prisoner's dilemma constraint about the logical structure of games (independent of how humans or institutions behave) or about rational agency as a behavioral model?",
+      "resolution_mechanism": "Formal analysis: Does the Nash equilibrium theorem require any empirical assumptions about agent behavior, or is it purely a logical statement about payoff structures? Empirical test: Do agents in laboratory prisoner's dilemma games actually defect as the theory predicts?",
+      "impact": "If logical/mathematical: Mountain classification is robust (independent of human behavior). If behavioral/empirical: The constraint may degrade to Piton (theater persists while function changes) if real agents cooperate despite the theory.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the constraint is logical or behavioral"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Prisoner's Dilemma is a foundational logical structure in game theory demonstrating why rational individual incentives can produce collectively suboptimal outcomes. In its canonical form, two suspects are arrested and interrogated separately. Each faces a choice: confess or remain silent. If both remain silent, each serves 1 year. If one confesses and the other remains silent, the confessor goes free and the silent agent serves 3 years. If both confess, each serves 2 years. The payoff structure creates a dominant strategy equilibrium at mutual confession (mutual defection), even though mutual silence (mutual cooperation) is Pareto-superior. This constraint exhibits the full range of DR classifications depending on observational context and game structure (one-shot vs repeated, symmetric vs asymmetric, with or without enforcement institutions). The primary classification is Mountain: the Nash equilibrium property is a logical theorem about the payoff matrix, not contingent on institutional design, enforcement, or agent behavior. The constraint emerges necessarily from the mathematical structure of games satisfying the canonical payoff ordering.",
+    "key_agents": [
+      "Agent 1 (Suspect A): Rational actor (powerless/immediate/trapped/universal) \u2014 faces a logical inevitability of defection despite mutual cooperation being superior",
+      "Agent 2 (Suspect B): Rational actor (powerless/immediate/trapped/universal) \u2014 symmetric position to Agent 1; both derive the same dominant strategy",
+      "The Payoff Matrix: The logical structure itself \u2014 neither an agent nor an institution, but the constraint's substrate",
+      "The Repeated-Game Coalition: Organized agents (organized/generational/constrained/regional) \u2014 cooperate through iterated strategies and reputation systems",
+      "The Legal Institution: Formal system (institutional/generational/arbitrage/national) \u2014 transforms incentives through external enforcement, making cooperation rational",
+      "The Mathematical Logician: Analytical observer (analytical/civilizational/analytical/universal) \u2014 sees the constraint as a theorem, invariant across all instantiations"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The constraint is a logical property of the payoff structure, not an extractive mechanism that transfers value. No agent 'extracts' from another \u2014 the constraint is the mathematical structure itself. Base extraction is near-zero because there is no beneficiary or victim in the one-shot game; mutual defection is equally suboptimal for both. Suppression (0.03): Minimal. The constraint does not rely on coercion or suppression; it emerges from rational analysis of dominant strategies. Agents 'choose' defection through logical reasoning, not through force. Theater ratio (0.15): Minimal. The constraint has no performative component; the logical analysis is transparent and verifiable. The Nash equilibrium theorem can be proven and tested directly, not through theatrical display.",
+    "perspectival_gap": "The perspectival gap in this constraint is between temporal and structural contexts, not between beneficiaries and victims. The one-shot game (immediate/trapped/universal) classifies as Mountain \u2014 defection is logically dominant. The repeated game (generational/constrained/regional) classifies as Rope \u2014 cooperation becomes rational through iteration and reputation. The legal institution perspective (generational/arbitrage/national) classifies as Scaffold \u2014 formal enforcement temporarily supports cooperation until internalized norms take over. The dominant player perspective (immediate/mobile/local) classifies as Mountain \u2014 the powerful agent's defection is strictly dominant regardless of context. The mathematical logician classifies as Mountain \u2014 the Nash equilibrium is a logical theorem invariant across all instantiations. All perspectives are consistent with the base properties (low extraction, low suppression, low theater) but differ in whether they emphasize the logical inevitability (Mountain) or the institutional/iterative solutions (Rope, Scaffold).",
+    "directionality_logic": "In a one-shot symmetric prisoner's dilemma, there is no meaningful beneficiary or victim \u2014 mutual defection is equally suboptimal for both agents. Directionality derivation does not apply to this symmetric structure in the one-shot case. In asymmetric variants (one agent stronger or more patient), the more powerful agent is a de facto beneficiary (defection against a cooperative opponent yields the Temptation payoff), but this is not extraction in the classical sense \u2014 it is simply the consequence of structural asymmetry. In repeated games with coalitions, the beneficiaries are the organized agents (those capable of maintaining reciprocal strategies), and the victims are unorganized agents (those unable to sustain cooperation). In legal institution perspectives, the beneficiary is the institution itself (gains enforcement authority), and the victim is the agent paying enforcement costs. However, the primary Mountain classification is invariant across all these variants: the logical structure of the Nash equilibrium does not depend on directionality or agent power."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "collective_action_problem_general",
+      "tragedy_of_the_commons",
+      "arms_race_dynamics"
+    ],
+    "dual_formulation_note": "The prisoner's dilemma decomposes into: (1) one-shot equilibrium analysis (pure logical theorem, Mountain), (2) repeated-game coordination (institutional scaffolding and repeated-game Rope), and (3) asymmetric power variants (dominant-player Mountain). These are structurally distinct but share the same payoff-ordering substrate. The network links to downstream applications: tragedy of the commons (extended to N-player), arms races (repeated asymmetric variant), and collective action (general coordination failure). Each downstream constraint inherits the logical structure but adds domain-specific complications."
+  },
+  "directionality_overrides": []
+}

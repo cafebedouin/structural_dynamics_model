@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "steinmetz_valuation_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "steinmetz"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "The Steinmetz Chalk Mark (Knowledge Valuation Asymmetry)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "specialized_knowledge_holders",
+      "capital_intensive_enterprises"
+    ],
+    "victims": [
+      "skilled_labor_without_specialized_knowledge",
+      "industrial_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Industrial Worker",
+      "comment": "PERSPECTIVE 1: INDUSTRIAL WORKER (SNARE) \u2014 Cannot exit the valuation regime; labor market offers no alternative pricing for accumulated skill that lacks the formal 'specialist' credential. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. Extraction is severe: the worker operates at expert level but receives wages calibrated to commodified labor."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Factory Manager",
+      "comment": "PERSPECTIVE 2: FACTORY MANAGER (SNARE) \u2014 Constrained by dependency on specialized knowledge holders for crisis resolution; cannot be transparent about the true cost structure without raising worker compensation demands. d\u22480.70, f(d)\u22481.08, \u03c3=0.9 \u2192 \u03c7\u22480.67. Secondary victim: suffers from hidden cost externalization and labor market instability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Specialized Knowledge Holder",
+      "comment": "PERSPECTIVE 3: SPECIALIZED KNOWLEDGE HOLDER (ROPE) \u2014 High arbitrage power: can move between enterprises, leverage scarcity, extract rents from coordination failure. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary. The specialist experiences the asymmetry as purely beneficial coordination: their scarce knowledge is properly priced, legitimately commanding premium compensation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Industrial Enterprise Leadership",
+      "comment": "PERSPECTIVE 4: INDUSTRIAL ENTERPRISE LEADERSHIP (TANGLED ROPE) \u2014 Powerful + mobile exit. Experiences the constraint as both coordination benefit (access to specialist knowledge) and extractive mechanism (suppresses worker compensation through artificial valuation separation). d\u22480.45, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.24. Low effective extraction because leadership can arbitrage and has agency; they maintain the asymmetry intentionally."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Movement",
+      "comment": "PERSPECTIVE 5: LABOR MOVEMENT (SCAFFOLD) \u2014 Organized collective seeking to compress the valuation asymmetry through unionization, apprenticeship programs, and collective bargaining. d\u22480.55, f(d)\u22480.74, \u03c3=0.9 \u2192 \u03c7\u22480.37. The coalition sees a sunset: broad-based technical education (technical colleges, credentialing reforms) are designed to eliminate the artificial knowledge scarcity that enables extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Credentialing System",
+      "comment": "PERSPECTIVE 6: CREDENTIALING SYSTEM (PITON) \u2014 Educational credentials (engineering degrees, professional certifications) perform gatekeeping theater while the actual knowledge transfer occurs through apprenticeship, on-the-job training, and accumulated experience. theater_ratio=0.55 reflects partial performativity: credentials do signal reliability but also artificially restrict access to knowledge valuations. The credentialing system persists through institutional inertia despite alternatives (bootcamps, open-source communities) emerging."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Asymmetry View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, the constraint appears as an immutable information asymmetry: some knowledge is costly to acquire, therefore those with it can extract rents. Market mechanisms cannot eliminate this because knowledge scarcity is real. However, structural data (\u03b5=0.58, suppression=0.68, theater=0.55) contradicts full naturalization \u2014 the engine detects a false summit. The asymmetry is amplified by artificial credentialing gatekeeping and suppression of alternative knowledge pathways, not purely by information scarcity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tacit_vs_codifiable_knowledge",
+      "question": "What proportion of the specialist's expertise is genuinely tacit (impossible to codify without years of experience) versus artificially restricted through credentialing and institutional gatekeeping?",
+      "resolution_mechanism": "Longitudinal tracking of workers who acquire expertise outside credentialed pathways (bootcamps, apprenticeships, autodidacts); correlation between formal credentials and actual job performance in repair/diagnosis tasks",
+      "impact": "If mostly codifiable: the valuation asymmetry is artificially maintained by credentialing monopoly (increases \u03b5 to 0.70+, Snare confirmed). If mostly tacit: some extraction is justified by real scarcity (decreases \u03b5 to 0.35, shifts toward Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of specialist expertise that is genuinely tacit versus artificially restricted"
+    },
+    {
+      "id": "substitution_feasibility",
+      "question": "Are there organizational or technological substitutes for individual specialist knowledge (documentation, AI diagnostics, distributed problem-solving) that could reduce dependency and enable worker escape from trapped exit?",
+      "resolution_mechanism": "Case studies of repair/diagnostics outsourcing; technology adoption curves for knowledge-encoding systems; comparison of enterprises that invested in knowledge democratization versus those that maintained scarcity",
+      "impact": "If substitutes feasible: suppression can be reduced; constraint becomes Scaffold with real sunset (open-source diagnostics, AI-assisted repair). If infeasible: suppression remains high; Snare classification is structural, not contingent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether organizational or technological substitutes can reduce specialist dependency"
+    },
+    {
+      "id": "knowledge_pricing_market_failure",
+      "question": "Does the labor market fail to price specialist knowledge because of persistent information asymmetry about what workers actually know, or because of deliberate institutional suppression (credentialing restrictions, deliberate opacity about compensation)?",
+      "resolution_mechanism": "Audit studies comparing wage offers for workers with identical actual expertise but different credentials; market wage surveys before/after credentialing requirement changes; historical cases where knowledge became transparent (open-source communities, public documentation)",
+      "impact": "If market failure is genuine: valuation asymmetry is coordination problem (Rope from worker view). If suppression is deliberate: asymmetry is extraction mechanism (Snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Market failure or deliberate institutional suppression in knowledge pricing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Steinmetz chalk mark story exemplifies a fundamental constraint in industrial capitalism: the extreme asymmetry between compensation for physical labor and compensation for specialized knowledge. The apocryphal tale \u2014 Steinmetz diagnosing a factory's broken electrical system with a single chalk mark, then billing Henry Ford $10,000 for the chalk mark ($5,000 for materials and $5,000 for knowing where to make it) \u2014 captures the paradox of knowledge valuation. The worker performs the same diagnostic task but is compensated as if labor is fungible, while the specialist is compensated for the accumulated knowledge embedded in the decision. This constraint creates a snare for workers without formal credentialing in specialized domains: they are trapped by artificial valuation scarcity even when they possess equal expertise. The constraint has intensified over the interval (1900-1950 in historical terms) as formalized credentialing systems emerged to gatekeep access to knowledge-based compensation. The theater ratio (0.55) reflects that both the credentialing system and the knowledge specialization themselves contain performative elements \u2014 a certification signals knowledge without proving capability, while some 'specialized knowledge' is actually codifiable or learnable but artificially restricted through institutional barriers.",
+    "key_agents": [
+      "Specialized Knowledge Holders: Primary beneficiary (institutional/arbitrage) \u2014 extract rents from scarcity; can move between enterprises and leverage exclusive access",
+      "Industrial Workers: Primary victim (powerless/trapped) \u2014 compensation suppressed despite expertise; lack formal credentials or institutional mobility to access knowledge-based pricing",
+      "Factory Managers: Secondary victim (moderate/constrained) \u2014 aware of hidden cost externalization; cannot transparently acknowledge specialist dependency without disrupting labor market",
+      "Industrial Enterprise Leadership: Powerful coordinator (powerful/mobile) \u2014 intentionally maintains asymmetry to suppress labor costs; benefits from both specialist access and worker suppression",
+      "Labor Movement: Organized collective (organized/constrained) \u2014 pursuing education and credentialing democratization; sees sunset in broad-based technical training",
+      "Credentialing System: Institutional maintainer (institutional/constrained) \u2014 enforces gate-keeping through formal requirements; persists despite alternative pathways emerging",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing scarcity as immutable information asymmetry; engine detects false summit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The specialist commands premium compensation far exceeding physical labor costs; this extraction is not absolute (specialists are paid legitimately higher wages) but is amplified by artificial credentialing barriers that restrict who can access knowledge-based pricing. The asymmetry increased from ~0.35 (when knowledge was more often transmitted through apprenticeship) to 0.58 (when formal credentialing became the primary gatekeeping mechanism). Suppression (0.68): High. Multiple suppression mechanisms operate: (1) Information asymmetry \u2014 workers often don't know their own expertise could command higher compensation; (2) Institutional gatekeeping \u2014 formal credentials are required to access specialist labor markets, even for workers with equivalent knowledge; (3) Mobility barriers \u2014 workers without credentials face regional and sectoral restrictions on knowledge-based roles; (4) Deliberate opacity \u2014 enterprises suppress transparency about specialist dependency and true cost structures. Theater ratio (0.55): Moderate. The credentialing system performs gatekeeping theater (formal degree proves competence but doesn't validate actual diagnostic ability), while some specialist knowledge is genuinely tacit and difficult to codify. However, open-source communities and alternative credentialing (bootcamps, apprenticeships) demonstrate that much 'specialized' knowledge is codifiable and teachable, indicating performative gatekeeping rather than pure necessity.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence across power positions. The specialist sees a pure Rope (coordination benefit \u2014 their scarcity is properly rewarded). The enterprise leadership sees Tangled Rope (both coordination and extraction benefit). The labor movement sees Scaffold (temporary problem with educational sunset). The credentialing system sees Piton (degraded ritual maintained through inertia). The factory manager sees Snare as secondary victim. The worker sees maximum extraction (Snare). The civilizational observer risks seeing Mountain (immutable information scarcity) but the structural data reveals a false summit \u2014 artificial credentialing gatekeeping amplifies natural knowledge scarcity. The constraint cannot be resolved from any single perspective; it requires acknowledgment that the valuation asymmetry is neither fully natural nor fully artificial, but contingent on institutional choices about knowledge access.",
+    "directionality_logic": "Specialized knowledge holders: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. They experience the constraint as pure coordination benefit. Industrial workers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. No alternative market for their expertise without formal credentials. Factory managers: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.08. Secondary victim; constrained by knowledge dependency but complicit in labor suppression. Enterprise leadership: Beneficiary + mobile \u2192 d\u22480.45, f(d)\u22480.42. Intentional maintainers of asymmetry; low effective extraction because they have agency and profit from it. Labor movement: Victim + constrained \u2192 d\u22480.55, f(d)\u22480.74. Organized resistance; see a path forward (educational sunset). Credentialing system: Maintains asymmetry + constrained \u2192 d\u22480.35. Piton classification comes from theater gate (0.55 \u2265 0.70 threshold would be high piton; 0.55 indicates partial performativity). Analytical observer: d\u22480.72, f(d)\u22481.15. Natural law perspective leads to false summit detection.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is a Snare (confirmed by \u03b5=0.58, suppression=0.68, \u03c7=0.67) masked by a false Mountain (natural information scarcity). The resolution mechanism is NOT denying that knowledge scarcity is real (it is), but distinguishing between (1) the natural cost of acquiring expertise and (2) the artificial scarcity created by credentialing gatekeeping and institutional opacity. The labor movement's Scaffold perspective offers a concrete sunset mechanism: credentialing democratization (bootcamps, apprenticeships, open-source contributions gaining market recognition) can reduce the artificial component of scarcity without eliminating legitimate specialist compensation. The enterprise leadership maintains the Snare not because it's inevitable, but because it's profitable \u2014 they have chosen to suppress knowledge democratization and maintain labor cost suppression through artificial scarcity. The analytical observer's false summit is the key mandatrophy resolution: the constraint is NOT immutable. Educational policy, transparency requirements, and credentialing reform can reduce suppression from 0.68 to 0.40, shifting the constraint from Snare toward Tangled Rope (legitimate specialist premiums) or Scaffold (temporary transition with sunset)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "credentialing_gatekeeping",
+      "labor_market_information_asymmetry",
+      "knowledge_commodification"
+    ],
+    "dual_formulation_note": "The Steinmetz constraint decomposes into three related mechanisms: (1) inherent knowledge scarcity (low \u03b5, Mountain-like), (2) artificial credentialing gatekeeping (moderate \u03b5, Piton-like), and (3) deliberate enterprise suppression of knowledge democratization (high \u03b5, Snare). The unified constraint (\u03b5=0.58) reflects the composite effect. Upstream constraints (knowledge_commodification) establish the framing; downstream constraints (labor_market_information_asymmetry) measure the impact on worker compensation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

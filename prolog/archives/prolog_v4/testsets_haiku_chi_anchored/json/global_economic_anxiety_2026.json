@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "global_economic_anxiety_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "geax"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "The Global Economic Anxiety Snare",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "financial_extraction_layers",
+      "political_distraction_beneficiaries"
+    ],
+    "victims": [
+      "precarious_workers",
+      "households_under_median_income",
+      "climate_vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (SNARE) \u2014 Trapped in gig economy, contingent employment, or informal sector. Economic anxiety is not a perception but a structural reality: no access to stable income, healthcare, or unemployment insurance. No exit option; bears full cost of extraction. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Deindustrialized Region",
+      "comment": "PERSPECTIVE 2: DEINDUSTRIALIZED REGION (SNARE) \u2014 Manufacturing collapse, falling wage share, declining public investment. Communities are constrained: leaving requires social capital and transportation costs; staying means accepting lower living standards. Anxiety reflects real extractive dynamics: capital mobility extracts wealth while labor bears the cost. d\u22480.85, f(d)\u22481.18, \u03c3=0.9 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Coalition",
+      "comment": "PERSPECTIVE 3: LABOR COALITION (TANGLED ROPE) \u2014 Unions and worker organizations experience mixed extraction and coordination. They organize collective action (coordination) but face suppression through union-busting, legal barriers, and wage stagnation. Can partially exit through strikes or organizing but constrained by employer power and antiunion legislation. d\u22480.60, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Central Bank",
+      "comment": "PERSPECTIVE 4: CENTRAL BANK (ROPE) \u2014 Solves coordination problem of monetary stability, but can selectively benefit from anxiety through policy discretion. Interest rate cycles create arbitrage opportunities for those with access to cheap capital. Experiences constraint as coordination (managing inflation) with institutional exit options (policy changes, forward guidance). d\u22480.20, f(d)\u22480.08, \u03c3=1.2 \u2192 \u03c7\u22480.006. Near-zero extraction due to arbitrage exit and institutional power."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Financial Extraction Apparatus",
+      "comment": "PERSPECTIVE 5: FINANCIAL EXTRACTION APPARATUS (SNARE) \u2014 Banks, private equity, asset managers extracting through debt financing, predatory lending, asset stripping, fee extraction. Anxiety drives borrowing (consumer debt, student loans, mortgages); financial firms capture the spread. High extractiveness masked by appearing as 'market coordination.' d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.005. Negative extraction because beneficiary; but institutional suppression (regulatory capture, opacity) keeps extraction hidden."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Political Establishment",
+      "comment": "PERSPECTIVE 6: POLITICAL ESTABLISHMENT (TANGLED ROPE) \u2014 Benefits from anxiety through voter attention capture (security/jobs messaging), but also bears real constraint from demand for economic action. Coordination function: promises to address anxiety; extraction function: delivers symbolic action (tax cuts, trade wars) that redistribute upward while claiming populism. Mobile exit through rotation out of office; can pivot policy. d\u22480.35, f(d)\u22480.33, \u03c3=1.0 \u2192 \u03c7\u22480.19."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / STRUCTURAL VIEW (SNARE) \u2014 From a civilizational perspective, the anxiety snare is the coordination failure between labor mobility and wage stagnation in late-stage financialization. Workers are trapped by: (1) geographic immobility (housing costs, family ties), (2) skill specificity, (3) capital control. Capital is mobile. The constraint is structural: wage share has fallen from 65% to 52% of GDP across OECD since 1970; households respond with anxiety and consumer debt. d\u22480.82, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.79."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "anxiety_measurement_fidelity",
+      "question": "Does Gallup's question ('What is the most important problem facing your country today?') capture extractive economic constraint or merely perception of economic difficulty?",
+      "resolution_mechanism": "Cross-validation with objective metrics: correlation between reported anxiety and actual income volatility, access to credit, healthcare costs, housing affordability by respondent. Distinguish structural extraction from cyclical uncertainty.",
+      "impact": "If objective extraction high: Snare classification confirmed. If perception high but objective metrics stable: constraint may be partly theatrical (Piton). If perception varies with media framing: mediation effect suggests lower base extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether anxiety reflects extractive structure or perception"
+    },
+    {
+      "id": "wage_share_causality",
+      "question": "Does stagnant wage share cause anxiety, or do both result from deeper structural shifts (automation, capital mobility, financialization)?",
+      "resolution_mechanism": "Lag analysis: does wage share decline predict anxiety increases? Or do both lag policy shifts (union weakening, deregulation, capital controls removal)? Time-series econometrics with policy shocks.",
+      "impact": "If wage share causes anxiety directly: Snare is the constraint (income extraction). If both lag policy: the constraint is the policy framework enabling extraction. If automation-driven: constraint may be technological (partial mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wage stagnation directly causes anxiety or reflects shared causality"
+    },
+    {
+      "id": "exit_capacity_measurement",
+      "question": "How much of workers' trapped exit status is geographic (housing immobility) vs skill-based (retraining barriers) vs behavioral (preference for community stability)?",
+      "resolution_mechanism": "Survey of workers in anxious regions: Which factors constrain exit? What policy interventions would expand exit options (geographic mobility subsidies, retraining, remote work viability)?",
+      "impact": "If geographic: housing market reform could unlock exit. If skill-based: labor market policy could unlock exit. If behavioral: exit capacity is higher than structural claim suggests; anxiety is not pure snare but partly Rope (coordination) if exit becomes available.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Decomposition of exit barriers by type"
+    },
+    {
+      "id": "financial_extraction_opacity",
+      "question": "Do households understand the extraction vectors (debt spreads, fee structures, predatory lending) or experience anxiety as diffuse economic uncertainty?",
+      "resolution_mechanism": "Financial literacy surveys + debt structure analysis. Do households in high-debt-service regions report anxiety at higher rates than those in low-debt regions with similar wage stagnation?",
+      "impact": "If extraction is opaque: snare relies on suppression (lack of awareness). If transparent: snare relies on structural powerlessness (trapped regardless of awareness). Different policy implications for remediation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether financial extraction is hidden or visible to victims"
+    },
+    {
+      "id": "political_distraction_beneficiary",
+      "question": "Do politicians and media deliberately amplify economic anxiety to drive electoral turnout and attention away from other extractive systems (environmental, health, legal)?",
+      "resolution_mechanism": "Media analysis: track frequency of 'economy' framing across news cycles relative to objective economic change. Do media mentions of economy peak during election cycles independent of actual economic indicators?",
+      "impact": "If deliberately amplified: anxiety snare is a Tangled Rope (coordination + extraction hybrid) with deliberate beneficiary. If organic: snare is structural (Snare without organized beneficiary). Affects remediation (media accountability vs systemic reform).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether anxiety is deliberately manufactured or organically reflects conditions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 2016,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The global economic anxiety snare, documented in Gallup's 2026 survey as the #1 concern in 107 countries, is not a perception problem but a structural extraction mechanism operating through wage stagnation, capital mobility, debt financing, and political distraction. Over the past decade, the wage share of GDP has fallen across OECD economies while financial extraction (debt spreads, asset management fees, predatory lending) has risen. Workers are trapped through geographic immobility (high housing costs), skill specificity, and lack of bargaining power. Capital is mobile, extracting returns through automated production and financial arbitrage. The anxiety itself becomes weaponized: anxiety drives consumer borrowing (expanding debt exposure), anxiety drives electoral volatility (creating opportunities for extractive political promises), anxiety drives acceptance of surveillance and authoritarian controls (trading privacy for promises of security). The snare is the coordination failure between globally integrated capital and nationally trapped labor.",
+    "key_agents": [
+      "Precarious Workers: Primary victim (powerless/trapped) \u2014 gig workers, contingent employees, informal sector; no stable income or social safety net",
+      "Deindustrialized Regions: Primary victim (moderate/constrained) \u2014 communities experiencing capital flight, wage decline, disinvestment; constrained by moving costs and social ties",
+      "Households Under Median Income: Victim group (powerless/trapped) \u2014 median household wage growth near-zero since 2000 in developed economies despite productivity gains",
+      "Financial Extraction Layers: Beneficiary (institutional/arbitrage) \u2014 banks, private equity, asset managers capturing spread between policy rates and consumer lending rates",
+      "Political Establishment: Secondary beneficiary (powerful/mobile) \u2014 benefits from anxiety-driven voter attention, can pivot policy to appear responsive while delivering upward redistribution",
+      "Labor Coalitions: Organized victims (organized/constrained) \u2014 unions and worker organizations experience extraction but have coordination capacity; constrained by union-busting and legal barriers",
+      "Central Banks: Institutional coordinator (institutional/arbitrage) \u2014 solve inflation coordination problem; can selectively benefit through policy timing; exit through rate changes",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 reveals extraction as structural: wage share decline, capital mobility, debt dependency"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The snare extracts through multiple vectors: (1) wage stagnation (labor's share of GDP down from 65% to 52% since 1980), (2) debt financing (median household debt-to-income ratio up 40% since 2000), (3) asset inflation (housing, equity) benefiting capital over labor, (4) financial intermediation (fees, spreads). The 0.58 value reflects that extraction is substantial but not total \u2014 workers retain some exit options (reskilling, migration, unionization) and some policy channels remain open. If exit were completely blocked, extractiveness would approach 0.85+. Suppression (0.68): High. Multiple suppression vectors: (1) geographic immobility (housing costs prevent migration), (2) skill specificity (retraining requires time/capital), (3) union suppression (legal barriers, employer power), (4) information opacity (debt structure, financial fees), (5) political capture (tax policy favors capital over labor). Theater ratio (0.65): Moderate-high. Political responses to anxiety are substantially performative: trade wars, tax cuts, infrastructure promises deliver symbolic action without addressing wage share decline or worker power. Central bank forward guidance creates theater of control. Financial sector market-monitoring creates theater of stability. News coverage of 'economic confidence' substitutes for actual income growth. The ratio has increased over the decade as real wage growth has stalled \u2014 political theater has expanded to compensate.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Precarious workers and deindustrialized regions see a pure Snare (trapped, no exit, extraction rising). Labor coalitions see a Tangled Rope (can organize collective action but face suppression; some coordination function but asymmetric extraction). Central banks and financial institutions see a Rope (solving coordination problem) or near-zero extraction (beneficiaries with arbitrage options). Political establishment sees a mixed Tangled Rope (must appear responsive but can pivot policy). The analytical observer sees a structural Snare rooted in capital-labor mobility asymmetry. The perspectival gap indicates high structural complexity: no single policy fix addresses all perspectives simultaneously. Wage policy helps precarious workers but doesn't address regional deindustrialization. Unionization helps organized labor but excludes gig workers. Rate policy helps debtors but may tighten regional inequality. The gap is not epistemic but structural.",
+    "directionality_logic": "Precarious workers: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. Deindustrialized regions: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.18. High extraction. Labor coalitions: Victim + constrained but organized \u2192 d\u22480.60, f(d)\u22480.75. Mixed extraction; organization provides partial escape. Central banks: Beneficiary + arbitrage \u2192 d\u22480.20, f(d)\u22480.08. Near-zero extraction; institutional power and policy exit options. Financial apparatus: Beneficiary + arbitrage (institutional power, capital mobility) \u2192 d\u22480.08, f(d)\u2248-0.08. Negative extraction (net beneficiary); but suppression through opacity keeps extraction mechanism hidden. Political establishment: Mixed beneficiary + mobile (can pivot policy) \u2192 d\u22480.35, f(d)\u22480.33. Low-moderate effective extraction; mobility through electoral cycles allows escape. Analytical observer: observes maximum extraction through structural immobility \u2192 d\u22480.82, f(d)\u22481.15. High effective extraction when accounting for civilizational timescale.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The global economic anxiety snare resolves the extraction vs coordination ambiguity through structural analysis of exit capacity. From the beneficiary's perspective (central banks, financial sector), the constraint appears as Rope (coordination) \u2014 they solve the monetary stability coordination problem. From the victim's perspective (trapped workers), the constraint is pure Snare \u2014 wages stagnate while debt accumulates. The mandatrophy is resolved by recognizing that BOTH are true but apply to different agents with different exit capacities. The extraction only becomes visible when you ask: 'Who can exit and who cannot?' Capital can exit (geographic mobility, portfolio rebalancing, policy arbitrage). Labor cannot (geographic immobility, skill specificity, debt lock-in). This is not a coordination problem (which would affect both parties symmetrically) but an extraction problem (which affects parties asymmetrically based on exit capacity). The Rope-reading is a beneficiary perspective that naturalizes the extraction as coordination. The Snare-reading is a victim perspective that reveals the asymmetry. The framework's job is to honor both perspectives while revealing WHY they diverge: different exit capacity \u2192 different d \u2192 different \u03c7 \u2192 different classification. The true classification is not 'Rope' or 'Snare' but 'asymmetrically extractive Rope-to-Snare across the presheaf of observations.'"
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_stagnation_2026",
+      "housing_affordability_crisis",
+      "consumer_debt_trap",
+      "union_suppression_legal_framework"
+    ],
+    "dual_formulation_note": "The global economic anxiety is downstream of deeper structural constraints: wage stagnation (extraction mechanism), housing affordability (geographic immobility), consumer debt (financial extraction vector), and union suppression (political extraction). Each of these constraints has its own \u03b5 value. The anxiety snare (\u03b5=0.58) represents the aggregated effect of these vectors plus their psychological impact. Decompose into constraint family if detailed analysis of individual extraction mechanisms is needed."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

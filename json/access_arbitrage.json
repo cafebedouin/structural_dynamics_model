@@ -2,23 +2,25 @@
   "header": {
     "constraint_id": "access_arbitrage",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "access"
   },
   "base_properties": {
-    "extractiveness": 0.6,
-    "suppression": 0.75,
-    "theater_ratio": 0.5,
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "Access Arbitrage: Reporters Pay in Framing for Institutional Access",
-    "topic_domain": "media/political_science",
+    "topic_domain": "political_economy/media_institutions",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "elite_institutions"
+      "elite_institutions",
+      "institutional_administrators"
     ],
     "victims": [
-      "the_public",
-      "journalistic_integrity"
+      "field_editorial_independence",
+      "public_information_quality"
     ]
   },
   "perspectives": [
@@ -28,8 +30,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Public",
-      "comment": "PERSPECTIVE 1: THE PUBLIC (SNARE) — Receives information filtered through the access constraint. Lacks viable alternatives for high-level institutional news and cannot exit the information ecosystem. Bears the full cost of diminished accountability. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.85."
+      "label": "The Beat Reporter",
+      "comment": "PERSPECTIVE 1: BEAT REPORTER (SNARE) \u2014 Individual journalists covering elite institutions (White House, Federal Reserve, State Department) have no exit from the access constraint. Career advancement requires access; access requires favorable framing of institutional leadership and policy. Cannot refuse without career termination. Full extraction: reporters bear the cost of constrained framing while institutions capture the benefit of narrative control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The News Organization",
+      "comment": "PERSPECTIVE 2: NEWS ORGANIZATION (TANGLED ROPE) \u2014 Derives coordination benefit from institutional relationships (reliable sourcing, attribution, background briefings) but also extracted from through access denial threats and framing constraints. Can abandon beat coverage but at cost of competitive disadvantage vs organizations with stronger institutional relationships. Active enforcement: institutions revoke press credentials, deny interviews, restrict access as punishment for unfavorable coverage. Mixed: coordination function (relationship as information channel) + asymmetric extraction (institutional control over access flow)."
     },
     {
       "classification_type": "rope",
@@ -37,8 +48,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Elite Institution (e.g., White House)",
-      "comment": "PERSPECTIVE 2: THE ELITE INSTITUTION (ROPE) — Experiences the constraint as a pure coordination tool for message dissemination. Can grant or revoke access to different reporters/outlets at will (arbitrage). Benefits from the favorable framing. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07. Negative extraction indicates a net subsidy."
+      "label": "The Elite Institution",
+      "comment": "PERSPECTIVE 3: ELITE INSTITUTION (ROPE) \u2014 Experiences the constraint as pure coordination: controls which media outlets get access, which reporters get briefings, which stories are shaped pre-publication through background briefings and messaging discipline. Benefit: narrative control and agenda-setting power. Can arbitrage between multiple news organizations' desire for access. No suppression cost \u2014 constraint is self-policing (reporters internalize framing expectations). Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Journalism Profession",
+      "comment": "PERSPECTIVE 4: JOURNALISM PROFESSION (PITON) \u2014 Professional norms of objectivity, access-based sourcing, and institutional credibility are increasingly theatrical as institutional messaging discipline has professionalized. The profession maintains the access ritual (daily briefings, background calls, credential-checking) despite declining functional verification. Alternative information sources (social media, whistleblower platforms, citizen journalism) bypass traditional access entirely. Theater_ratio high (0.58 \u2192 0.68 over interval) because the ritual persists from institutional inertia even as its verification function degrades. Piton: degraded coordination mechanism maintained by institutional habit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Independent/Digital Media Coalition",
+      "comment": "PERSPECTIVE 5: INDEPENDENT/DIGITAL MEDIA COALITION (SCAFFOLD) \u2014 Organized actors (Substack writers, independent newsletters, TikTok journalists, nonprofit news outlets) are building alternative verification pathways that bypass institutional access constraints entirely. They source directly from leaked documents, FOIA requests, primary data, and interview subjects outside official channels. These pathways have lower suppression and higher editorial independence. Theater lower because alternative sources test claims directly rather than through institutional attribution. This is a sunset pathway: as audience trust in institutional media declines, economic incentives shift toward independent sourcing. High suppression is tolerated only because the coalition sees it declining over the time horizon."
     },
     {
       "classification_type": "tangled_rope",
@@ -46,89 +75,124 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Access Journalist / News Organization",
-      "comment": "PERSPECTIVE 3: THE ACCESS JOURNALIST (TANGLED ROPE) — Simultaneously benefits from exclusive access (coordination) and pays a cost in journalistic autonomy (extraction). Exit is possible but career-damaging (constrained). Experiences the system as a necessary, coercive bargain. d≈0.60, f(d)≈0.85, σ=1.0 → χ≈0.51."
+      "label": "The Institutional Media Cartel",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL MEDIA CARTEL (TANGLED ROPE) \u2014 Large news organizations (NYT, WaPo, WSJ, Bloomberg) collectively benefit from institutional access coordination through the access constraint. But individually each is extracted from by the same institutions that depend on them. The cartel maintains the constraint through competitive pressure: if one organization abandons access-based sourcing norms, it gains short-term advantage but destabilizes the whole institutional relationship system. Active enforcement via exclusion and access denial. Cartel members experience both genuine coordination (shared institutional relationships, industry-standard sourcing norms) and extraction (framing constraints imposed by institutions)."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (information dissemination) and the severe, asymmetric extraction (loss of critical framing). The high suppression and extraction values confirm a hybrid classification. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.83."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some asymmetry between information-seekers and information-holders is inherent to the structure of institutions: those controlling resources have structural advantages in narrative. Access is a necessary mechanism for any journalism. The bottleneck appears as an immutable property of how institutions and media interact. However, this classification is a false summit: the structural data (suppression 0.65, theater 0.58, extractiveness 0.52) reveals that the specific contemporary arrangement of access-based sourcing norms is contingent and institutionally reinforced, not a law of nature. The mountain perspective naturalizes what is actually institutional inertia."
     }
   ],
-  "interval": {
-    "start": 1980,
-    "end": 2020
-  },
   "omegas": [
     {
-      "id": "intent_vs_structure",
-      "question": "Is the favorable framing a conscious, quid-pro-quo decision by reporters, or an emergent structural effect of source cultivation and cognitive capture?",
-      "resolution_mechanism": "Ethnographic studies of newsrooms, off-the-record interviews with journalists, and analysis of career trajectories based on coverage tone.",
-      "impact": "If conscious, the constraint is a clearer Snare from the journalist's perspective. If emergent, it solidifies the Tangled Rope classification, highlighting the system's coercive nature over individual intent.",
+      "id": "framing_threshold",
+      "question": "What degree of editorial independence from institutional messaging constitutes breaking the access constraint vs operating within acceptable journalistic norms?",
+      "resolution_mechanism": "Content analysis: comparison of framing patterns when journalists have vs lose institutional access; correlation between access level and critical coverage; longitudinal tracking of institutional responses to critical reporting",
+      "impact": "If threshold is high (organizations must publish institutional messaging verbatim): constraint is snare for all actors. If threshold is low (minor deviations from preferred framing cause access loss): constraint tightens from tangled_rope toward snare.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Distinguishing between conscious intent and emergent structural effects in journalistic framing."
+      "type_class": "conceptual",
+      "description": "Threshold for acceptable editorial independence under access constraint"
     },
     {
-      "id": "public_harm_quantification",
-      "question": "How can the harm to public discourse and democratic accountability (the extraction) be empirically measured?",
-      "resolution_mechanism": "Comparative content analysis of access-driven vs. independent reporting on the same events, correlated with public opinion shifts and measures of institutional trust.",
-      "impact": "Strong empirical evidence of harm would increase the base extractiveness (ε) score, potentially shifting the analytical classification from Tangled Rope to Snare.",
-      "confidence": "low",
+      "id": "alternative_sourcing_viability",
+      "question": "Can non-institutional journalists produce equivalent informational quality about elite institutions without direct access through alternative sources (leaks, FOIA, whistleblowers, primary data)?",
+      "resolution_mechanism": "Comparative analysis of investigative coverage: institutional vs independent outlets on same stories; tracking of follow-up, correction rates, and institutional response to independent coverage; audience epistemic trust metrics",
+      "impact": "If viable: scaffold perspective confirmed \u2014 alternative pathways are real and suppression will decline. If not viable: scaffold is aspirational; institutional access remains necessary structural bottleneck; constraint solidifies as snare.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Quantifying the negative externalities of access journalism on the public."
+      "description": "Whether alternative sourcing can replace institutional access"
+    },
+    {
+      "id": "institutional_messaging_professionalization",
+      "question": "To what degree has institutional messaging discipline (spin, framing discipline, access control) become a formal budgeted function vs informal peer pressure?",
+      "resolution_mechanism": "Structural analysis of institutional communications budgets, press office staffing, messaging discipline procedures; comparison across 30-year interval of messaging sophistication and consistency",
+      "impact": "If high professionalization: constraint is enforced, tangled_rope classification confirmed. If low: enforcement is informal and weaker; constraint might degrade toward rope. If professionalization is increasing over interval: theater_ratio should increase (rising performative burden with declining functional output).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Level of formalization of institutional message discipline"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.35
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
-      "value": 0.6
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.25
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.5
+      "time_point": 30,
+      "value": 0.52
     }
   ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
   "commentary": {
-    "narrative_context": "This constraint models the dynamic of 'access journalism,' where reporters and news organizations require access to elite institutions (e.g., The White House, The Fed) to function. To maintain this access, they face structural pressure to frame coverage in ways that are not overly critical of the institution. This creates a quid pro quo, where the 'payment' for access is a reduction in journalistic adversarialism. The system has a genuine coordination function—disseminating official information to the public—but it is coupled with an extractive function: the institution gains narrative control at the expense of public accountability.",
+    "narrative_context": "Access arbitrage describes the structural constraint that emerges from the asymmetry between journalists' need for institutional access and institutions' control over that access flow. Reporters at major news organizations require regular access to elite institutions (White House, Federal Reserve, State Department, Pentagon) to gather timely information and maintain journalistic credibility. These institutions, in turn, use access control as a tool to shape narrative framing. The constraint exhibits a clear extraction mechanism: institutions implicitly condition access on favorable or at least non-damaging coverage. Journalists internalize framing expectations (rarely violated), news organizations develop institutional dependencies (risk career advancement of journalists who disrupt relationships), and the collective result is narrative conformity that serves institutional interests. The constraint generates theatrical compliance: the daily White House briefing persists as ritual despite declining information value; background briefings shape story framing before publication; press credential revocation is threatened but rarely executed (maintaining the performance of openness). Over the past 30 years, the constraint has intensified as institutional messaging discipline has professionalized and as alternative information sources (digital, independent, leaked) have emerged without access requirements. The access-based sourcing model is increasingly revealed as contingent rather than necessary \u2014 yet the constraint persists through institutional inertia and competitive pressure among news organizations.",
     "key_agents": [
-      "Elite Institutions: Primary beneficiary (institutional/arbitrage) — Gatekeepers of access who benefit from favorable narrative framing.",
-      "The Public: Primary victim (powerless/trapped) — Receives filtered information, leading to a deficit in democratic accountability.",
-      "Access Journalists / News Organizations: Hybrid role (organized/constrained) — Benefit from the prestige and content that access provides, but are victims of the pressure to self-censor or soften coverage.",
-      "Journalistic Integrity: Abstract victim — The core principle of holding power to account is structurally undermined."
+      "Beat Reporters: Primary victims (powerless/trapped) \u2014 require access for career advancement; cannot refuse framing constraints without career termination; bear full cost of narrative control",
+      "News Organizations (Individual): Mixed position (moderate/constrained) \u2014 benefit from institutional relationships (reliable sourcing) but extracted from through access denial threats and framing constraints; can abandon coverage but at competitive cost",
+      "Elite Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 control access flow; achieve narrative control and agenda-setting; can arbitrage between competing news organizations; experience constraint as pure coordination",
+      "Institutional Media Cartel: Collective actor (organized/constrained) \u2014 collectively benefit from shared institutional access but individually extracted from by access controls; maintain constraint through competitive pressure to conform",
+      "Independent/Digital Media Coalition: Alternative pathway actor (organized/constrained) \u2014 building sunset alternative through direct sourcing (leaks, FOIA, whistleblowers, primary data); operates outside access constraint; suppression declining over interval",
+      "Journalism Profession: Institutional actor (institutional/arbitrage) \u2014 maintains access-based sourcing norms through professional credibility (piton): ritual persists from inertia despite declining functional output; theater increasing over interval"
     ],
-    "logic_rationale": "Extractiveness (ε=0.60) is high, representing the significant value of narrative control transferred from the public interest to the institution. Suppression (0.75) is also high, as institutions can and do punish critical outlets by revoking access, a severe penalty for a major news organization. The theater ratio (0.50) reflects the performative nature of many institutional press events (e.g., press briefings), which often function more as message control sessions than genuine forums for accountability. The system requires active enforcement by institutional press offices who cultivate relationships and manage access.",
-    "perspectival_gap": "The perspectival gap is stark. The institution sees a simple coordination mechanism (Rope) for managing its public communications. The public, unable to exit the system and bearing the full cost of weakened oversight, experiences a Snare. The journalist, caught in the middle, sees the reality of the coercive bargain: a Tangled Rope that provides career-sustaining benefits (access) while extracting a professional cost (autonomy).",
-    "directionality_logic": "Directionality is derived from structural positions. The Elite Institution is a clear beneficiary with arbitrage exit options, yielding a low 'd' value and negative effective extraction (Rope). The Public is a victim with trapped exit options, yielding a high 'd' value and high positive extraction (Snare). The Access Journalist is both a beneficiary (of access) and a victim (of compromised integrity) with constrained exit, placing them in the middle and resulting in a Tangled Rope classification.",
-    "mandatrophy_analysis": "This case is a canonical example of a Tangled Rope, resolving a potential mandatrophy. A naive analysis might label the system a pure Snare, ignoring the real coordination value that access provides. Conversely, the institutional narrative would frame it as a pure Rope, ignoring the coercive extraction of favorable coverage. The Tangled Rope classification correctly identifies the hybrid nature of the constraint, acknowledging both its function and its asymmetric cost."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The extraction mechanism is real and structural: institutions condition access on favorable framing; reporters internalize constraints; narrative conformity results. But extractiveness is not at snare levels (\u22650.66) because: (1) institutions generally cannot afford to cut off major news organizations entirely (they also need media coverage), (2) journalists retain some editorial freedom (not every story is shaped), (3) alternative sourcing pathways are emerging. The value reflects a hybrid constraint with genuine coordination function (access as information channel) plus significant asymmetric extraction (framing control). Suppression (0.65): Moderate-high. Significant barriers to independent reporting outside institutional access include: tacit knowledge in institutional operations (accessible only through insider relationships), speed advantages of institutional briefing access (competitors move faster with briefed information), career risk of access denial (advancement depends on institutional relationships), publication bias toward attributed quotes from officials (journalism norms privilege official sourcing). But suppression is not total (\u22650.70) because alternative sourcing mechanisms exist and are viable, and because institutional access denial is rarely enforced to extremes. Theater ratio (0.58): Moderate. The daily White House briefing persists despite low information value; background briefings shape framing pre-publication; credential-checking rituals maintain appearance of gatekeeping. But theater is not high (\u22650.70) because some institutional access does yield genuine information advantage, and because alternative sourcing creates verification pressure. Theater is increasing over interval as institutional messaging discipline professionalized while institutional openness (actual information flow) stagnated.",
+    "perspectival_gap": "This constraint exhibits a clear perspectival gap between extractors and targets. Beat reporters (powerless/trapped) experience pure extraction (Snare): they cannot refuse framing constraints without career termination. The institutions they cover (institutional/arbitrage) experience pure coordination (Rope): they control access, achieve narrative management, face no suppression cost. News organizations (moderate/constrained) experience mixed extraction-coordination (Tangled Rope): they benefit from institutional relationships but are also extracted from through access denial threats. The independent/digital media coalition (organized/constrained) experiences a sunset constraint (Scaffold): they are building alternative verification pathways with lower suppression and higher editorial independence. The journalism profession (institutional/arbitrage) experiences degraded coordination (Piton): the access-based sourcing model is increasingly theatrical, persisting from institutional inertia rather than functional necessity. The analytical observer (analytical/analytical) risks seeing this as an immutable natural law (Mountain) \u2014 'institutions always control access' \u2014 but the structural data reveals this as contingent: alternative sourcing, digital platforms, and declining trust in institutional media are shifting the landscape.",
+    "directionality_logic": "Directionality values (d) reflect each agent's structural position in the extraction flow. Beat reporters are trapped victims with no arbitrage options (d \u2248 0.95): they experience maximum extraction as they cannot exit without career cost. Elite institutions are arbitrage-enabled beneficiaries (d \u2248 0.05): they control access and experience constraint as coordination with negative extraction cost. News organizations are constrained agents with mixed positions (d \u2248 0.55-0.65): they can exit (abandon institutional coverage) but at significant competitive cost. The independent media coalition is organized with constrained options within the institutional system but can arbitrage outside it (d \u2248 0.40-0.50): they experience extraction pressure from institutions but have genuine exit pathways. The pipeline computes effective extraction (\u03c7) by applying the sigmoid f(d) to each directionality value, then scaling by scope modifier \u03c3(S). Beat reporters experience \u03c7 at maximum (d \u2248 0.95, f(d) \u2248 1.42) while institutions experience negative or near-zero \u03c7 (d \u2248 0.05, f(d) \u2248 -0.12). This perspectival gap in experienced extractiveness is central to why the constraint exhibits all six types from different perspectives.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating how access arbitrage is genuinely a tangled rope \u2014 it contains both real coordination function (institutions and journalists both benefit from reliable access relationships) AND real asymmetric extraction (institutions use access control to shape narrative). The coordination function is not epiphenomenal: institutional background briefings do provide genuine information advantage to journalists; institutional relationships are real channels for sourcing. But the coordination function is asymmetric and extractive: institutions capture disproportionate value (narrative control) while journalists bear costs (framing constraints, career risk of access denial). The constraint is not purely extractive (snare) because the coordination benefit is real, not theatrical. The constraint is not purely coordination (rope) because the asymmetric extraction is structural and enforced. The mandatrophy is resolved by recognizing that both elements are genuine: the constraint solves a real coordination problem (journalists need reliable sourcing; institutions need media coverage) while simultaneously using that coordination function as a mechanism for asymmetric extraction (institutions control narrative framing through access control). This is the canonical structure of tangled rope: coordination function + asymmetric extraction + active enforcement (access denial threats). The rising theater_ratio (0.42 \u2192 0.68 over interval) indicates that the coordination function's relative importance is declining while the performative/extractive function is increasing \u2014 suggesting possible lifecycle drift toward snare, but the constraint remains tangled rope at the current measurement point."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "institutional_messaging_discipline",
+      "journalistic_sourcing_norms",
+      "media_ownership_concentration"
+    ],
+    "dual_formulation_note": "Access arbitrage is a constraint family spanning three related structural mechanisms: (1) individual reporter-institution access asymmetry (this story, \u03b5=0.52), (2) institutional messaging discipline as the enforcement mechanism (upstream, \u03b5=0.45, Tangled Rope), (3) media ownership concentration enabling cartel enforcement (upstream, \u03b5=0.58, Snare). Each has distinct empirical status and failure modes. This story focuses on the reporter-level experience of access-based sourcing; the network links to upstream institutional and ownership-level constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
 }

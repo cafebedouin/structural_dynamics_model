@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "sadhu_integrity_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sadhu"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "The Integrity Requirement (Sadhu's Sugar)",
+    "topic_domain": "social/ethical",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "advice_dispensers"
+    ],
+    "victims": [
+      "advice_seekers",
+      "social_trust_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Dependent Seeker",
+      "comment": "PERSPECTIVE 1: THE ADVICE SEEKER (SNARE) \u2014 Trapped in asymmetric information. The seeker cannot distinguish sincere counsel from performative advice; they have no exit option without abandoning the relationship or incurring epistemic/social cost. The constraint forces them to accept advising on terms set entirely by the advisor's structural incentives. Maximum extraction: the seeker bears the full cost of advisor hypocrisy while gaining no verification mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Trusted Advisor",
+      "comment": "PERSPECTIVE 2: THE TRUSTED ADVISOR (ROPE) \u2014 Sees the integrity requirement as coordination. The advisor benefits from the constraint by establishing social credibility; the expectation that they embody their counsel is precisely what makes their advice valuable and sought-after. They experience the constraint as a enabling mechanism rather than extraction. Exit via arbitrage: advisors can engage with multiple seekers, building networks of trust."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Conflicted Advisor",
+      "comment": "PERSPECTIVE 3: THE CONFLICTED ADVISOR (TANGLED ROPE) \u2014 Moderate power but constrained exit. Advisors who operate within institutional frameworks (therapists, coaches, mentors) benefit from the integrity requirement (it establishes their authority) but also bear real costs if they fail to embody their own counsel. They face disciplinary action, loss of licensure, reputation damage. The constraint is both enabling (gives them market value) and extractive (forces behavioral conformity under threat of sanction). They cannot easily exit without abandoning their role."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Ethic",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL ETHICS APPARATUS (PITON) \u2014 Professional codes of ethics enforce the integrity requirement through licensing, certification, and disciplinary boards. But the apparatus has largely become theatrical: ethics boards process cases slowly, rarely enforce against high-status violators, and rely on victim complaints rather than proactive monitoring. The institutional ritual persists as a credibility signal while actual enforcement capacity has atrophied. Theater ratio is low (0.45) because the requirement itself is genuine and widely internalized, not performative \u2014 but the enforcement machinery is degraded."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Accountability Coalition",
+      "comment": "PERSPECTIVE 5: ACCOUNTABILITY COALITION (SCAFFOLD) \u2014 Organized seekers (support groups, community networks, peer circles) are building parallel verification mechanisms that bypass reliance on the individual advisor's internalized integrity. Peer accountability, group verification of advice quality, and distributed mentorship are creating alternative pathways where the integrity requirement is backed by structural redundancy rather than individual virtue. Exit is mobile: seekers can switch to community-based or peer-led models. Theater ratio is lower here because these mechanisms rely less on performative trust and more on observable outcomes and peer corroboration."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER (FALSE MOUNTAIN) \u2014 From a civilizational view, the integrity requirement appears as an immutable logical principle: advice cannot exceed the advisor's demonstrated capacity to follow it; therefore, integrity is inherent to all genuine counsel. This perspective risks naturalizing what is actually a contingent institutional requirement. The constraint functions as an extractive mechanism precisely because it masquerades as a natural law rather than a negotiable structural feature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "integrity_verification_gap",
+      "question": "Can advice-seekers accurately verify whether an advisor embodies their own counsel, or is the verification itself based on narrative performance?",
+      "resolution_mechanism": "Longitudinal tracking of advisor behavior vs. seeker perception; analysis of cases where seekers discovered advisor hypocrisy; comparison of perceived vs. documented advisor compliance with their own advice",
+      "impact": "If verification is accurate: the integrity requirement functions as genuine coordination (rope). If verification is performative: it functions as pure extraction mechanism (snare) \u2014 seekers believe they have assurance but have only theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether seekers can verify advisor integrity or only perceive it"
+    },
+    {
+      "id": "integrity_cost_distribution",
+      "question": "Do advisors who embody their own counsel experience genuine career/reputation benefits that outweigh the behavioral costs, or do they incur net losses that are compensated only by social approval?",
+      "resolution_mechanism": "Economic analysis of advisor earnings and career advancement relative to integrity compliance; surveys of advisor motivation (intrinsic vs. extrinsic); comparison of high-integrity and low-integrity advisors' career trajectories",
+      "impact": "If benefits exceed costs: integrity requirement is genuine coordination (rope). If costs exceed benefits and are sustained only by social pressure: the requirement is extractive (snare/tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether embodying counsel provides net benefit to advisors"
+    },
+    {
+      "id": "hypocrisy_detection_failure_rate",
+      "question": "What fraction of advisor hypocrisy goes undetected by seekers, and for how long?",
+      "resolution_mechanism": "Case analysis of exposed advisor hypocrisy; seeker interviews about when they discovered violations; comparison with advisor self-reported violations; statistical analysis of professional misconduct reports vs. estimated actual violations",
+      "impact": "If high failure rate: the constraint is functionally extractive because verification mechanism is broken. If low failure rate: the constraint approaches genuine coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What proportion of advisor hypocrisy remains undetected"
+    },
+    {
+      "id": "institutional_enforcement_capacity",
+      "question": "Do ethics boards and professional licensing bodies actually enforce the integrity requirement, or do they primarily process complaints without meaningful consequences?",
+      "resolution_mechanism": "Analysis of disciplinary action rates; correlation between reported violations and license revocation; case-study examination of high-profile advisor misconduct outcomes; survey of enforcement agency staffing and caseload",
+      "impact": "If enforcement is real: suppression is structural and the snare classification holds. If enforcement is theatrical: piton perspective is dominant and the constraint is maintained by inertia rather than functional suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether professional enforcement mechanisms actually function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The integrity requirement mandates that an advisor must embody their own counsel before delivering it to others. This constraint creates a structural asymmetry: seekers depend on advisors for guidance but cannot independently verify whether the advisor actually follows the advice they dispense. The constraint functions simultaneously as a coordination mechanism (establishing trust and credibility) and as an extraction device (forcing seekers to accept advising on terms set by advisor incentives and capabilities). The trap emerges when seekers have no mechanism to distinguish sincere counsel from performative advice, yet the social/institutional framework forces them to treat the integrity requirement as a guarantee. The extractiveness has increased over time (0.35 \u2192 0.58) as institutional enforcement has weakened and advisory professions have proliferated, increasing the ratio of unverifiable claims to verifiable outcomes. Theater has remained relatively low (0.32 \u2192 0.45) because the requirement itself is deeply internalized and widely accepted as normatively correct, even though its functional enforcement is theatrical.",
+    "key_agents": [
+      "Advice Seekers: Primary victims (powerless/trapped) \u2014 depend on advisor integrity but have no exit or verification mechanism",
+      "Trusted Advisors: Primary beneficiaries (institutional/arbitrage) \u2014 gain credibility and market value from the integrity requirement; can operate across multiple seeker relationships",
+      "Conflicted Advisors: Secondary actors (moderate/constrained) \u2014 benefit from institutional authority but face disciplinary risk; cannot exit without abandoning role",
+      "Professional Ethics Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains licensing and disciplinary authority; exercises weak actual enforcement",
+      "Accountability Coalitions: Organized challengers (organized/mobile) \u2014 building peer-based verification alternatives that reduce reliance on individual advisor virtue",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks seeing the requirement as an immutable principle rather than a contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The integrity requirement extracts from seekers by forcing them to accept advising on asymmetric information. Seekers cannot verify advisor compliance, yet they are expected to trust and follow counsel. The extraction is not total because some advisors do genuinely embody their counsel, and some seekers can exit (mobile exit exists but is costly). The trajectory from 0.35 to 0.58 reflects degradation of institutional enforcement: as ethics boards have weakened, the actual verification mechanism has atrophied, pushing the constraint toward pure extraction. Suppression (0.62): Moderate-high. Multiple barriers prevent seekers from challenging the integrity requirement or organizing alternative arrangements: social norms require trust in advisors; questioning an advisor's integrity damages the relationship; alternative verification mechanisms (peer accountability, community vetting) are less normalized than institutional authority; exit requires abandoning the advice relationship entirely or incurring social/epistemic cost. Theater (0.45): Moderate. The requirement itself is genuinely internalized and widely accepted as normatively correct \u2014 it is not primarily theatrical. But the enforcement apparatus is partially theatrical: ethics boards process complaints slowly; high-status advisors face lighter consequences; institutions rely on victim complaints rather than proactive monitoring. The relatively low theater ratio (compared to the verification bottleneck example) reflects that the requirement has strong cultural and psychological embedding, not just institutional performativity.",
+    "perspectival_gap": "The advisor sees coordination (rope) \u2014 the integrity requirement is what makes their counsel valuable and sought-after. They experience it as enabling their social role. The seeker sees extraction (snare) \u2014 they are forced to accept advising on terms they cannot verify. They have no exit without abandoning the relationship. The conflicted advisor (therapist, coach, mentor) sees mixed coordination and extraction (tangled rope) \u2014 the requirement is what establishes their authority, but it also subjects them to disciplinary risk and enforces behavioral conformity. The institutional ethics apparatus sees its own degraded ritual (piton) \u2014 the enforcement machinery persists through credibility value (licensing signals trust) but actual enforcement is weak. The accountability coalition sees a temporary institutional lock-in (scaffold) \u2014 peer-based verification and community accountability are building alternatives with lower extractiveness and higher transparency. The civilizational observer risks seeing a natural law (false mountain) \u2014 integrity seems inherent to all genuine counsel, when in fact it is a contingent institutional requirement that depends on unequal verification capacity.",
+    "directionality_logic": "Directionality flows from structural position. Advice seekers are trapped (no exit without abandoning the relationship) and victims (they bear the cost of advisor hypocrisy they cannot detect). They derive d \u2248 0.90-0.95 (maximum target). Trusted advisors are institutional actors with arbitrage options (they can move between seekers, build networks, switch domains). They derive d \u2248 0.10-0.20 (beneficiary with mobility). Conflicted advisors have constrained exit (they cannot abandon their professional role without loss) and face both victim and beneficiary dynamics. They derive d \u2248 0.50-0.55 (symmetric). The powerless seeker and institutional beneficiary perspectives define the perspectival gap. The conflicted advisor perspective fills the middle ground, showing that moderate power with constrained exit produces tangled rope (mixed coordination-extraction). The sanctuary of the institutional advisor is their arbitrage option: they can always find new seekers, can build networks across communities, and can move between advisory domains. This mobility insulates them from the maximum extraction that trapped seekers experience.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing the genuine coordination function (advisors need credibility; seekers benefit from trusting counsel) from the extractive mechanism (seekers cannot verify compliance; advisors face minimal enforcement; trapped seekers have no exit). The snare classification does not deny the coordination value of integrity \u2014 it identifies the structural asymmetry that converts coordination into extraction. The rope perspective (advisor view) captures the genuine coordination. The scaffold perspective (accountability coalition view) shows how alternatives can reduce extractiveness without eliminating the need for some form of trust. The false mountain perspective (civilizational observer) is instructive: it shows how the integrity requirement is often naturalized as an inherent principle of advice rather than recognized as a contingent institutional arrangement. The piton perspective documents the degradation of enforcement mechanisms over time. The tangled rope perspective captures advisors who genuinely embody their counsel but face disciplinary sanction \u2014 they experience both the enabling and constraining functions of the requirement. The mandate against treating coordination and extraction as synonymous is honored by showing that all six types are legitimate readings from different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "expert_authority_asymmetry",
+      "therapeutic_relationship_power_differential"
+    ]
+  },
+  "directionality_overrides": []
+}

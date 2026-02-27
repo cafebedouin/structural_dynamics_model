@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "global_food_market_fragility",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Global Food Market Fragility to Correlated Crop Failures",
+    "topic_domain": "economic/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "food_trading_corporations",
+      "grain_exporting_nations"
+    ],
+    "victims": [
+      "food_importing_nations",
+      "low_income_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Low-Income Populations",
+      "comment": "Low-income populations in food-importing nations are trapped by the global food market. They have no alternatives when prices rise due to crop failures. This is a Snare as they bear the brunt of the fragility with no exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Food-Importing Nations",
+      "comment": "Food-importing nations are constrained. They must secure food for their populations but have limited leverage in the global market. They can diversify sources to some extent, but correlated failures limit this. The outcome is a Tangled Rope; they experience extraction, but maintain constrained coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Grain-Exporting Nations",
+      "comment": "Grain-exporting nations benefit from higher prices and increased demand during times of global food market fragility. They can increase production to capitalize on the market. This is a Rope; they experience coordination and benefits. High production may not be sustainable and relies on continued subsidies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Food Trading Corporations",
+      "comment": "Food trading corporations are positioned to profit from volatility in the market by exploiting price differences and managing risk through sophisticated financial instruments. They also benefit from the continued enforcement of existing trade rules and infrastructure. Pure coordination function for those best positioned to arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "An analytical observer sees the system as a tangled rope: it serves a function in distributing food globally, but also extracts value and exacerbates inequalities during crises, and requires active enforcement to maintain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "climate_model_accuracy",
+      "question": "How accurately can climate models predict correlated crop failures across different regions?",
+      "resolution_mechanism": "Improved climate modeling, historical data analysis, and machine learning to identify patterns and predict risks.",
+      "impact": "If inaccurate, the fragility of the system will remain hidden, leading to unexpected crises. If accurate, proactive measures can be taken to mitigate risks.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of climate models in predicting correlated crop failures."
+    },
+    {
+      "id": "reserve_capacity_sufficiency",
+      "question": "Is the current global reserve capacity (grain stockpiles, storage facilities) sufficient to buffer against large-scale crop failures?",
+      "resolution_mechanism": "Analysis of current reserve levels, historical data on crop failures, and simulations to determine optimal reserve levels.",
+      "impact": "If insufficient, the system will be highly vulnerable to price spikes and food shortages. If sufficient, the system will be more resilient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sufficiency of global reserve capacity to handle crop failures."
+    },
+    {
+      "id": "trade_policy_coordination",
+      "question": "To what extent can international trade policies be coordinated to ensure equitable access to food during crises?",
+      "resolution_mechanism": "Negotiations and agreements among nations, improved monitoring of trade flows, and mechanisms for rapid response to food shortages.",
+      "impact": "If poorly coordinated, protectionist measures and export restrictions can exacerbate crises. If well-coordinated, food can be distributed more equitably.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Coordination of trade policies to ensure food access during crises."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The global food market is a complex system for distributing staple crops. Its fragility arises from its vulnerability to correlated crop failures, often driven by climate change or geopolitical instability. This fragility creates winners and losers, with low-income populations and food-importing nations bearing the brunt of the impact, while food-trading corporations and grain-exporting nations can benefit.",
+    "key_agents": [
+      "Low-Income Populations: Primary target (powerless/trapped) - suffer from price spikes and food shortages.",
+      "Food-Importing Nations: Secondary target (moderate/constrained) - constrained by the market's volatility.",
+      "Grain-Exporting Nations: Primary beneficiary (institutional/arbitrage) - benefit from increased demand and prices.",
+      "Food Trading Corporations: Secondary beneficiary (powerful/arbitrage) - profit from market volatility and price differences."
+    ],
+    "logic_rationale": "The extractiveness is high (0.6) due to the significant transfer of wealth from food-importing to food-exporting nations during crises. Suppression is also high (0.7) because of the lack of alternatives for food-importing nations and low-income populations. Theater ratio is low (0.3) because there is limited performative activity associated with managing this extraction. The enforcement occurs through global trade regulations and existing contracts.",
+    "perspectival_gap": "The perspectival gap is significant. Low-income populations see the system as a snare, as they bear the brunt of the negative impacts. Grain-exporting nations and food trading corporations see it as a rope, benefiting from increased demand and arbitrage opportunities. Food-importing nations see it as a tangled rope, as they are both constrained and benefit from the system's basic function of food distribution.",
+    "directionality_logic": "Directionality is derived from the structural position of each agent. Food-importing nations and low-income populations are victims, so their d values are high, leading to higher chi. Grain-exporting nations and food trading corporations are beneficiaries, so their d values are low, leading to lower chi. An analytical perspective sees the combined impacts with a value of moderate."
+  },
+  "network": {
+    "affects_constraints": [
+      "climate_change_impacts",
+      "global_trade_networks"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "ergo_dexy_gold_protocol",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DexyGold Seigniorage Mechanism",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "early_adopters",
+      "protocol_developers"
+    ],
+    "victims": [
+      "late_adopters",
+      "erg_holders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Late Adopters",
+      "comment": "Late adopters who enter the system near its collapse bear the brunt of the losses as the seigniorage model fails to maintain the peg. They are trapped in a declining asset."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Protocol Developers",
+      "comment": "Protocol developers benefit from the initial hype and attention, potentially extracting value through development grants or future endeavors. They have arbitrage opportunities due to their control over the protocol."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a long-term perspective, the DexyGold mechanism presents a tangled rope: it aims to provide a stablecoin pegged to gold, which can be a useful coordination mechanism, but it also inherently involves extraction due to the seigniorage model's reliance on continuous growth and potential for collapse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Early Adopters",
+      "comment": "Early adopters benefit from the seigniorage rewards and potential price appreciation. However, they are still constrained by the system's reliance on continuous growth and risk of collapse, making it a tangled rope."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "ERGO Holders",
+      "comment": "Existing ERGO holders may experience value dilution as the DexyGold protocol attempts to maintain the gold peg by potentially manipulating reserves or creating inflationary mechanisms. Constrained by their position in the Ergo ecosystem."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "seigniorage_sustainability",
+      "question": "Can the DexyGold seigniorage model be sustainable in the long run, or is it inherently prone to collapse?",
+      "resolution_mechanism": "Longitudinal analysis of the protocol's stability and growth under varying market conditions; comparison with other seigniorage-based stablecoins.",
+      "impact": "If sustainable, the protocol is a useful coordination mechanism (Rope). If unsustainable, it is primarily an extraction mechanism (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of the seigniorage model."
+    },
+    {
+      "id": "peg_maintenance_mechanism",
+      "question": "Are the mechanisms used to maintain the gold peg transparent and fair, or do they create opportunities for exploitation?",
+      "resolution_mechanism": "Audits of the protocol's code and governance; analysis of the impact of peg maintenance actions on different user groups.",
+      "impact": "If transparent and fair, the protocol has a stronger coordination aspect. If exploitable, it has a stronger extraction aspect.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Transparency and fairness of peg maintenance."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "DexyGold is a seigniorage-based algorithmic stablecoin on the Ergo blockchain, pegged to the price of gold (XAU). This system involves potential extraction due to the seigniorage model's reliance on continuous growth. Early adopters and protocol developers may benefit, while late adopters and existing ERG holders may bear the costs. The analytical observer sees a tangled rope.",
+    "key_agents": [
+      "Early Adopters: Moderate/Constrained - Benefit from initial seigniorage but are still exposed to risks.",
+      "Late Adopters: Powerless/Trapped - Bear the brunt of the losses if the system collapses.",
+      "Protocol Developers: Institutional/Arbitrage - Benefit from the initial hype and control the protocol.",
+      "ERG Holders: Moderate/Constrained - May experience value dilution",
+      "Analytical Observer: Analytical/Analytical - Sees the system as a tangled rope, mixing benefits and extraction."
+    ],
+    "logic_rationale": "The system's extractiveness (0.55) is based on the potential for wealth transfer from late to early adopters during a collapse. Suppression (0.40) arises from the lack of alternative exit options for users who bought into the system. The theater ratio (0.20) is low because the system primarily focuses on economic mechanisms rather than performative elements.",
+    "perspectival_gap": "The perspectival gap arises from the differing positions of the agents. Early adopters and protocol developers benefit, while late adopters bear the costs. The analytical observer sees a tangled rope, reflecting the mixed nature of the system.",
+    "directionality_logic": "Beneficiaries (early adopters and protocol developers) have a lower directionality score, resulting in a lower effective extraction (chi). Victims (late adopters and ERG holders) have a higher directionality score, leading to higher chi.",
+    "mandatrophy_analysis": "The system prevents mislabeling coordination as extraction (or vice versa) by clearly identifying beneficiaries and victims. The tangled rope classification accurately reflects the mixed nature of the system, incorporating both coordination and extraction."
+  },
+  "network": {},
+  "directionality_overrides": [],
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  }
+}

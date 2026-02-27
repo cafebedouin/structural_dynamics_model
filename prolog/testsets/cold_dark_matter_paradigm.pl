@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: cold_dark_matter_paradigm
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-22
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_cold_dark_matter_paradigm, []).
@@ -40,9 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,24 +54,39 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: cold_dark_matter_paradigm
- *   human_readable: "The Lambda-CDM model's 'cold dark matter' tenet as a dominant scientific paradigm"
- *   domain: scientific
+ *   human_readable: The Lambda-CDM model's 'cold dark matter' tenet as a dominant scientific paradigm
+ *   domain: cosmology/physics/paradigm_structure
  *
  * SUMMARY:
- *   The Lambda-CDM (ΛCDM) model is the standard model of Big Bang cosmology.
- *   Its assertion that dark matter is "cold" (non-relativistic) and non-interacting
- *   acts as a powerful constraint on research. It provides a common framework for
- *   thousands of scientists (coordination), but also directs funding and publication
- *   priority towards confirming evidence, while suppressing alternative theories (extraction).
- *   Recent JWST observations of galaxy cluster MACS J0417 challenge this tenet,
- *   as the observed formation of ultra-diffuse galaxies is better explained by
- *   Self-Interacting Dark Matter (SIDM), a competing theory.
+ *   The Lambda-CDM (ΛCDM) model has dominated theoretical cosmology since
+ *   ~1998 (accelerating expansion discovery) through ~2024. It provides a
+ *   unified framework explaining cosmic microwave background (CMB)
+ *   anisotropies, large-scale structure, supernovae distances, and baryon
+ *   acoustic oscillations with minimal parameters (six: Ω_b, Ω_cdm, Ω_Λ, H0,
+ *   A_s, n_s). Yet mounting observational tensions (Hubble tension: H0
+ *   discrepancy, S8 tension: matter clustering strength, small-scale
+ *   anomalies: missing satellites, core-cusp problem, too-big-to-fail) have
+ *   accumulated without resolution. Simultaneously, the framework's core
+ *   mechanism — cold dark matter and inflationary initial conditions —
+ *   remains undetected and, many argue, unfalsifiable. This constraint
+ *   exhibits the structural properties of a tangled rope: ΛCDM provides
+ *   genuine coordination (CMB + large-scale structure analysis under unified
+ *   model) while simultaneously suppressing alternative frameworks through
+ *   funding concentration, publication bias, and career risk for dissenters.
+ *   The paradigm is not a natural law (mountain) but an institutional
+ *   arrangement with growing tensions. The theater ratio has increased as
+ *   inflation parameters have become post-hoc fit variables rather than
+ *   predictive tools. Small-scale structure anomalies accumulate as
+ *   constraints on dark matter properties rather than motivating alternative
+ *   models.
  *
- * KEY AGENTS (by structural relationship):
- *   - early_career_dissident_researcher: Primary target (powerless/trapped) — bears career risk and funding exclusion.
- *   - paradigm_aligned_cosmologists: Primary beneficiary (institutional/arbitrage) — benefits from coordinated research and resource allocation.
- *   - alternative_cosmology_proponents: Organized victim group (organized/constrained) — actively resists the paradigm but faces high barriers.
- *   - analytical_observer: Sees both the coordination function and the extractive suppression.
+ * KEY AGENTS:
+ *   - Lambda-CDM Research Establishment: Primary beneficiary (institutional/arbitrage) — controls major survey resources, observatories, graduate training. Benefits from paradigm dominance through funding allocation, publication prestige, institutional legitimacy.
+ *   - Alternative Framework Researchers: Primary victim (powerless/trapped) — bear career costs (funding scarcity, publication barriers, marginalization) for proposing modified gravity or non-standard dark matter. Cannot exit paradigm without sacrificing prospects.
+ *   - Observational Anomaly Detectors: Secondary victim (moderate/constrained) — observe tensions and anomalies; benefit from ΛCDM framework for data interpretation but constrained from pursuing alternative explanations. Must work within paradigm.
+ *   - Alternative Physics Coalition: Organized agents (organized/constrained) — building parallel infrastructure (MOND communities, axion collaborations, modified gravity networks). Creating exit paths but not yet competitive.
+ *   - Inflationary Cosmology Community: Institutional piton (institutional/arbitrage) — inflation framework has atrophied into post-hoc parametrization. Persists through textbook canonicity and foundational myth status rather than predictive power.
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing ΛCDM as universal law rather than contingent paradigm.
  */
 
 /* ==========================================================================
@@ -78,102 +94,72 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% ε is high due to the opportunity cost: billions in funding for direct-detection
-% experiments (that have found nothing) and other ΛCDM-aligned projects that
-% could have funded alternative research avenues.
-domain_priors:base_extractiveness(cold_dark_matter_paradigm, 0.48).
-
-% Suppression is high: peer review, funding committees, and hiring are dominated by
-% proponents of the standard model, creating a high barrier for novel theories.
-domain_priors:suppression_score(cold_dark_matter_paradigm, 0.65).
-
-% Theater is moderate. While much work is genuine, a portion of research involves
-% minor tweaks or confirmations of the paradigm, which can be seen as theatrical
-% maintenance rather than fundamental discovery.
-domain_priors:theater_ratio(cold_dark_matter_paradigm, 0.30).
+domain_priors:base_extractiveness(cold_dark_matter_paradigm, 0.52).
+domain_priors:suppression_score(cold_dark_matter_paradigm, 0.58).
+domain_priors:theater_ratio(cold_dark_matter_paradigm, 0.64).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(cold_dark_matter_paradigm, extractiveness, 0.48).
-narrative_ontology:constraint_metric(cold_dark_matter_paradigm, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(cold_dark_matter_paradigm, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(cold_dark_matter_paradigm, extractiveness, 0.52).
+narrative_ontology:constraint_metric(cold_dark_matter_paradigm, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(cold_dark_matter_paradigm, theater_ratio, 0.64).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(cold_dark_matter_paradigm, tangled_rope).
 narrative_ontology:human_readable(cold_dark_matter_paradigm, "The Lambda-CDM model's 'cold dark matter' tenet as a dominant scientific paradigm").
-narrative_ontology:topic_domain(cold_dark_matter_paradigm, "scientific").
+narrative_ontology:topic_domain(cold_dark_matter_paradigm, "cosmology/physics/paradigm_structure").
 
-% --- Binary flags ---
-% Enforcement is active through peer review, grant allocation, and academic hiring.
-% This is required for a Tangled Rope classification.
 domain_priors:requires_active_enforcement(cold_dark_matter_paradigm).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-
-% Who benefits from this constraint existing?
-% The large community of researchers whose work, careers, and experiments are
-% built on the foundation of the ΛCDM model.
-narrative_ontology:constraint_beneficiary(cold_dark_matter_paradigm, paradigm_aligned_cosmologists).
-
-% Who bears disproportionate cost?
-% Researchers promoting alternative models (SIDM, MOND, etc.) and early-career
-% scientists whose novel ideas are suppressed by the dominant paradigm.
-narrative_ontology:constraint_victim(cold_dark_matter_paradigm, alternative_cosmology_proponents).
-narrative_ontology:constraint_victim(cold_dark_matter_paradigm, early_career_dissident_researcher).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(cold_dark_matter_paradigm, lambda_cdm_research_establishment).
+narrative_ontology:constraint_victim(cold_dark_matter_paradigm, alternative_cosmology_frameworks).
+narrative_ontology:constraint_victim(cold_dark_matter_paradigm, cosmological_anomaly_detection).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function. The engine derives d
-   from beneficiary/victim membership + exit_options.
-   Scope is 'global' (σ=1.2) as cosmology is a global scientific field.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE EARLY-CAREER DISSIDENT RESEARCHER (SNARE)
-% A postdoc or grad student whose work contradicts the paradigm. They risk their
-% career, face rejection from journals/funders, and are effectively trapped.
-% Victim + Trapped -> d ≈ 0.95 -> f(d) ≈ 1.42.
-% χ = 0.48 * 1.42 * 1.2 ≈ 0.82 (Snare).
-constraint_indexing:constraint_classification(cold_dark_matter_paradigm, tangled_rope,
+% PERSPECTIVE 1: ALTERNATIVE FRAMEWORK RESEARCHER (SNARE) — Researchers proposing modified gravity (MOND, TeVeS), non-standard dark matter (self-interacting, fuzzy, axion-specific), or alternative cosmologies face career barriers. Funding concentrated in ΛCDM-aligned research. Publication bias against non-standard models. Cannot exit the paradigm without sacrificing career prospects. Full extraction with no meaningful exit.
+constraint_indexing:constraint_classification(cold_dark_matter_paradigm, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PARADIGM-ALIGNED COSMOLOGIST (ROPE)
-% An established professor whose work uses and supports ΛCDM. For them, it is a
-% pure coordination tool that enables collaboration and secures funding.
-% Beneficiary + Arbitrage -> d ≈ 0.05 -> f(d) ≈ -0.12.
-% χ = 0.48 * -0.12 * 1.2 ≈ -0.07 (Rope).
+% PERSPECTIVE 2: OBSERVATIONAL ANOMALY DETECTOR (TANGLED ROPE) — Observers of small-scale structure anomalies (missing satellites problem, core-cusp problem, too-big-to-fail problem, Hubble tension, S8 tension) benefit from ΛCDM framework for data interpretation and coordination with large surveys. Simultaneously, paradigm commitment suppresses alternative explanations — constraints on data analysis paths, model degrees of freedom. Mixed coordination and extraction.
+constraint_indexing:constraint_classification(cold_dark_matter_paradigm, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: ΛCDM RESEARCH ESTABLISHMENT (ROPE) — Major benefit from paradigm dominance. Access to observatories, survey resources, funding allocation, graduate student recruitment. ΛCDM framework solves the coordination problem of interpreting disparate cosmological observations (CMB, large-scale structure, supernovae, baryon acoustic oscillations) into a unified model. Net institutional beneficiary with high arbitrage options (can migrate resources to new paradigm if ΛCDM fails).
 constraint_indexing:constraint_classification(cold_dark_matter_paradigm, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The system view, recognizing both the vital coordination function and the
-% severe extractive/suppressive effect on alternative inquiry.
-% Analytical -> d ≈ 0.72 -> f(d) ≈ 1.15.
-% χ = 0.48 * 1.15 * 1.2 ≈ 0.66 (Tangled Rope).
-constraint_indexing:constraint_classification(cold_dark_matter_paradigm, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ORGANIZED PROPONENT OF AN ALTERNATIVE THEORY (SNARE)
-% A researcher in a competing school of thought (e.g., SIDM). They are organized
-% but constrained by the dominant paradigm's control over resources. For them, it
-% is a coercive barrier to progress.
-% Victim + Constrained -> d ≈ 0.90 -> f(d) ≈ 1.34.
-% χ = 0.48 * 1.34 * 1.2 ≈ 0.77 (Snare).
-constraint_indexing:constraint_classification(cold_dark_matter_paradigm, snare,
+% PERSPECTIVE 4: ALTERNATIVE PHYSICS COALITION (SCAFFOLD) — Organized groups (MOND conferences, axion collaborations, modified gravity workshops, arXiv preprint communities) are building parallel infrastructure for alternative frameworks. Not yet competitive with ΛCDM in explaining observations, but creating exit paths. Sunset mechanism: if tensions (S8, H0, Hubble) persist and ΛCDM requires > 5 additional free parameters, alternative frameworks become viable. Estimated sunset: 15-25 years if observational tensions remain unresolved.
+constraint_indexing:constraint_classification(cold_dark_matter_paradigm, scaffold,
     context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
 
+% PERSPECTIVE 5: EARLY BIG BANG INFLATION FRAMEWORK (PITON) — Inflationary cosmology (scalar field + potential + reheating mechanism) is now substantially performative within ΛCDM. Originally a genuine theoretical solution (initial conditions problem, horizon problem, flatness problem). Now theater: inflation parameters are fit post-hoc to observations. Framework persists through institutional inertia (textbooks, canonical status, foundational grant programs) despite low predictive power and inability to falsify. Theater ratio ≥ 0.70 — primarily serves to justify ΛCDM phenomenology retrospectively.
+constraint_indexing:constraint_classification(cold_dark_matter_paradigm, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, the dominance of ΛCDM is viewed as discovery of fundamental truths: the universe is spatially flat (k=0), dominated by dark energy (Ω_Λ ≈ 0.68), cold dark matter provides gravitational scaffolding (Ω_CDM ≈ 0.27), and the inflationary paradigm is a natural law of primordial cosmology. This perspective naturalizes institutional arrangements as universal necessities. However, the structural data (suppression of anomalies, publication bias, non-falsifiable parametrization) contradicts the mountain classification — the engine will identify this as a false summit.
+constraint_indexing:constraint_classification(cold_dark_matter_paradigm, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -181,19 +167,18 @@ constraint_indexing:constraint_classification(cold_dark_matter_paradigm, snare,
 
 :- begin_tests(cold_dark_matter_paradigm_tests).
 
-test(perspectival_gap_is_rope_vs_snare) :-
-    constraint_indexing:constraint_classification(cold_dark_matter_paradigm, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(cold_dark_matter_paradigm, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(cold_dark_matter_paradigm, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(cold_dark_matter_paradigm, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(cold_dark_matter_paradigm, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(cold_dark_matter_paradigm, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(organized_opposition_sees_snare) :-
-    constraint_indexing:constraint_classification(cold_dark_matter_paradigm, snare, context(agent_power(organized), _, exit_options(constrained), _)).
-
-test(is_high_extraction_and_suppression) :-
-    domain_priors:base_extractiveness(cold_dark_matter_paradigm, E), E >= 0.46,
-    domain_priors:suppression_score(cold_dark_matter_paradigm, S), S >= 0.60.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(cold_dark_matter_paradigm, TR),
+    TR >= 0.70.
 
 :- end_tests(cold_dark_matter_paradigm_tests).
 
@@ -203,34 +188,16 @@ test(is_high_extraction_and_suppression) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness (ε=0.48) is high, representing the immense opportunity
- *   cost of directing decades of research, funding, and careers down a path that
- *   may be flawed. If ΛCDM is incorrect, this represents a massive misallocation of
- *   scientific resources. The suppression score (0.65) reflects the institutional
- *   mechanisms of science (peer review, funding panels) that enforce conformity to
- *   the dominant paradigm, making it difficult for competing ideas to emerge.
+ *   Extractiveness (0.52): Moderate-high. ΛCDM provides genuine coordination benefit (unified CMB + structure framework) but extraction is real: alternative models are starved of resources, careers are constrained for dissenters, publication pathways are narrowed, anomalies are treated as internal ΛCDM problems rather than paradigm challenges. The extraction is not total (alternatives can still be published, discussed, funded at lower rates) but substantial. Over the interval, extractiveness has increased as anomalies have accumulated without paradigm revision — the coordination benefit (unity of framework) is offset by growing suppression of anomalies and alternatives. Suppression (0.58): Significant. Mechanisms include: (1) funding bias toward ΛCDM proposals at NSF/DOE; (2) editorial bias in high-impact journals (Nature, Astrophysical Journal) against modified gravity and alternative dark matter papers; (3) postdoctoral hiring favoring ΛCDM-trained researchers; (4) anomalies reframed as internal problems (baryonic physics, environmental effects) rather than paradigm challenges; (5) career risk for prominent alternative-framework advocates (loss of grants, fewer citations, marginalization). Theater ratio (0.64): Moderate-high and increasing. Inflation has become substantially performative — scalar field potential is chosen post-hoc to match observations rather than derived from fundamental principles. Dark matter is a placeholder for unknown physics rather than a predictive mechanism. CMB fit is achieved through parameter tuning (6 base parameters + Ad hoc additions like running spectral index, isocurvature perturbations, early dark energy). As anomalies accumulate, more degrees of freedom are added, increasing theater. The constraint's theater has risen from 0.35 (1998-2008, when ΛCDM explained major observations) to 0.64 (2015-2024, when anomalies require continuous parameter adjustment).
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For a beneficiary within the paradigm (`paradigm_aligned_cosmologists`),
- *   it is a perfect coordination device (Rope), providing a common language and
- *   predictive framework. For someone outside or challenging it (`early_career_dissident_researcher`),
- *   it is a career-threatening trap (Snare) that extracts their potential and suppresses
- *   their contributions. This is a classic signature of a Tangled Rope.
+ *   This constraint demonstrates how a single set of structural properties (extractiveness 0.52, suppression 0.58) generates divergent classifications depending on the observer's structural position. The establishment sees rope (coordination + low extraction). The marginalized researchers see snare (pure extraction, no exit). The detectors see tangled rope (mixed). The organized alternative community sees scaffold (temporary constraint, sunset mechanism visible). The piton perspective shows how institutional structures become theatrical. The analytical perspective risks false naturalization. The perspectival gap is not due to disagreement on facts but on structural position — each agent accurately reports their own experience, and the disagreement reveals that the constraint is not a natural law but an institutional arrangement with multiple conflicting interests.
  *
  * DIRECTIONALITY LOGIC:
- *   The beneficiaries are the incumbent researchers and institutions whose work
- *   is validated and funded by the paradigm. The victims are the challengers and
- *   proponents of alternative theories who bear the cost of suppression and
- *   resource denial. The `beneficiary` and `victim` declarations map directly to
- *   this power dynamic between the scientific establishment and its dissidents.
+ *   Directionality values (d) are derived from structural relationships. ΛCDM establishment benefits from the constraint (low d, around 0.10-0.20 from beneficiary status + arbitrage exit) — they experience negative effective extraction, i.e., subsidy. Alternative researchers bear costs (high d, around 0.85-0.95 from victim status + trapped exit) — they experience maximum extractiveness. Anomaly detectors are intermediate (moderate d around 0.55-0.65 from mixed victim/beneficiary role + constrained exit). The organized coalition has lower d (around 0.40-0.50 from constrained exit + some exit paths via alternative infrastructure). Inflation researchers have low d as institutional beneficiaries despite piton status. The analytical observer has moderate-high d (around 0.70 from analytical position) reflecting the epistemic cost of paradigm naturalization.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two common errors. It does not mistake
- *   the paradigm for a Mountain of settled fact, as ongoing observations like JWST's
- *   show it is contestable. It also does not mistake it for a pure Rope, as doing
- *   so would ignore the very real extractive costs borne by those who question it.
- *   The Tangled Rope classification acknowledges both its genuine, powerful coordination
- *   function and its coercive, suppressive side-effects.
+ *   This constraint resolves the mandatrophy by demonstrating that ΛCDM is NOT a mountain (false summit diagnosis). If ΛCDM were a natural law, all perspectives would classify it as mountain — it would be immutable across all observation points. Instead, the constraint produces rope (beneficiary), snare (victim), tangled rope (mixed), scaffold (organized alternative), piton (degraded component), and false-summit mountain (analytical naturalization). The multiplicity of classifications reveals that ΛCDM's dominance is institutional, not natural. The paradigm could be replaced if alternative frameworks achieved comparable explanatory power (which would shift the scaffold sunset mechanism to actual transition) or if institutional mechanisms were reformed (funding reallocation, editorial bias reduction). The mandatrophy is resolved by noting that ΛCDM exhibits tangled-rope structure at the analytical level — genuine coordination function (CMB + structure unification) combined with asymmetric extraction (suppression of alternatives) and active enforcement (funding mechanisms, publication barriers, hiring practices). This is precisely the signature of a contingent institutional arrangement, not a discovered law.
  */
 
 /* ==========================================================================
@@ -238,73 +205,95 @@ test(is_high_extraction_and_suppression) :-
    ========================================================================== */
 
 omega_variable(
-    omega_cdm,
-    'Is the "cold, non-interacting" tenet of ΛCDM fundamentally correct despite growing anomalies, or are these anomalies fatal cracks in the paradigm?',
-    'Decisive null results from all next-generation WIMP direct-detection experiments, combined with consistent validation of SIDM or MOND predictions by future telescopes (e.g., Roman Space Telescope).',
-    'If correct, the constraint is revealed to be a Mountain of physics (ε -> 0), and the suppression of alternatives was justified. If incorrect, it was a multi-decade, globally scoped Snare/Piton that cost billions and delayed progress.',
+    small_scale_structure_resolution,
+    'Can ΛCDM + baryonic physics + environmental effects resolve the core-cusp, missing satellites, too-big-to-fail, and similar anomalies without ad-hoc parameter tuning?',
+    'High-resolution cosmological simulations (FIRE, EAGLE, IllustrisTNG evolution) comparing predictions to dwarf galaxy surveys and Milky Way satellite observations. Quantification of degrees of freedom added vs. anomalies resolved.',
+    'If resolved within existing ΛCDM: anomalies reclassified as solved problems, suppression decreases, paradigm strengthens. If requiring > 3 additional free parameters per anomaly: ΛCDM extraction mechanism becomes visible, suppression increases, alternative frameworks gain credibility.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(small_scale_structure_resolution, empirical, 'Whether small-scale structure anomalies resolve within ΛCDM without parameter proliferation').
+
+omega_variable(
+    hubble_tension_fundamental_or_systematic,
+    'Does the Hubble tension (H0 ≈ 67 km/s/Mpc from CMB vs. ≈ 73 km/s/Mpc from local measurements) reflect a fundamental failure of ΛCDM or systematic error in measurements?',
+    'Independent H0 measurements from James Webb Space Telescope, gravitational lensing time delays, gravitational wave standard sirens, and megamaser distance measurements. Cross-validation of systematic error sources in Cepheid calibration and supernova photometry.',
+    'If systematic: tension resolves, ΛCDM strengthened, alternative frameworks lose primary motivating anomaly. If fundamental: ΛCDM requires early dark energy or other exotic components, parameter space expands, alternative frameworks become competitive.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(hubble_tension_fundamental_or_systematic, empirical, 'Whether Hubble tension is fundamental physics or systematic measurement error').
+
+omega_variable(
+    dark_matter_direct_detection_timeline,
+    'Will direct detection experiments (XENON, LUX, SuperCDMS, COSINE) find a positive signal for WIMP-like dark matter within 10 years, or should null results be interpreted as evidence against cold dark matter?',
+    'Continuation of null result trends in sensitivity curves. Calculation of detection probability for standard WIMP candidates given current constraints. Evaluation of whether parameter space is already ruled out or merely ''hidden.''',
+    'If positive signal: validates ΛCDM dark matter narrative, suppression mechanism weakens, paradigm solidifies. If null results persist: ΛCDM dark matter becomes unfalsifiable component, extraction mechanism strengthens, alternative dark matter candidates (axions, sterile neutrinos, primordial black holes) gain visibility.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(dark_matter_direct_detection_timeline, empirical, 'Whether WIMPs or other cold dark matter candidates will be directly detected').
+
+omega_variable(
+    inflation_falsifiability_criterion,
+    'What observational signature would constitute falsification of inflationary cosmology? Can the framework be constrained to produce specific tensor-to-scalar ratio (r) predictions, or does parameter freedom allow post-hoc fit to any data?',
+    'Analysis of inflation model classes (slow-roll, hybrid, chaotic, etc.) for unique observational predictions. Evaluation of CMB, gravitational wave, and primordial gravitational wave data against theoretical predictions. Count of free parameters and their sensitivity to observational variation.',
+    'If falsifiable predictions exist: inflation becomes testable, ΛCDM component gains or loses credibility based on data. If framework is unfalsifiable: inflation reclassified as metaphysical assumption, piton classification confirmed, theater ratio increases.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(inflation_falsifiability_criterion, conceptual, 'Whether inflationary cosmology has falsifiable predictions or is post-hoc parametrization').
+
+omega_variable(
+    paradigm_lock_institutional_mechanisms,
+    'To what degree does funding concentration (NSF/DOE cosmology programs favor ΛCDM proposals), journal editorial bias, and grant review panel composition institutionally enforce ΛCDM dominance vs. reflecting genuine superior explanatory power?',
+    'Quantitative analysis of funding allocation (proposal success rates by framework), editorial decision rates by journal for ΛCDM vs. alternative submissions, panel composition bias (demographics of cosmological theory reviewers). Comparison with other scientific fields undergoing paradigm shifts (quantum computing, climate modeling) for institutional change timescales.',
+    'If institutional mechanisms are primary driver: suppression is contingent and could be reduced through policy change, tangled rope classification strengthened, sunset mechanism becomes visible. If mechanisms reflect genuine explanatory gaps: suppression is justified, paradigm dominance is earned, extraction interpretation weakens.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(paradigm_lock_institutional_mechanisms, empirical, 'Degree to which institutional mechanisms vs. explanatory power drives ΛCDM dominance').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing. Interval represents the paradigm's
-% dominance from the late 90s to the era of JWST challenges.
-narrative_ontology:interval(cold_dark_matter_paradigm, 0, 10).
+narrative_ontology:interval(cold_dark_matter_paradigm, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε=0.48 > 0.46), so temporal tracking
-% is required to model its lifecycle drift.
-% T=0: ~1998 (paradigm solidifies after supernova data)
-% T=5: ~2008 (LHC begins, peak hope for WIMP detection)
-% T=10: ~2028 (post-JWST era, paradigm under stress from anomalies)
+% Theater ratio over time
+narrative_ontology:measurement(cdm_tr_t0, cold_dark_matter_paradigm, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(cdm_tr_t10, cold_dark_matter_paradigm, theater_ratio, 10, 0.5).
+narrative_ontology:measurement(cdm_tr_t20, cold_dark_matter_paradigm, theater_ratio, 20, 0.64).
 
-% Theater ratio rises as confirming the model becomes more routine and less novel.
-narrative_ontology:measurement(cdm_tr_t0, cold_dark_matter_paradigm, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(cdm_tr_t5, cold_dark_matter_paradigm, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(cdm_tr_t10, cold_dark_matter_paradigm, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(cdm_be_t0, cold_dark_matter_paradigm, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(cdm_be_t10, cold_dark_matter_paradigm, base_extractiveness, 10, 0.4).
+narrative_ontology:measurement(cdm_be_t20, cold_dark_matter_paradigm, base_extractiveness, 20, 0.52).
 
-% Extraction rises as the paradigm becomes more entrenched, its opportunity cost
-% grows, and it more actively suppresses increasingly plausible alternatives.
-narrative_ontology:measurement(cdm_ex_t0, cold_dark_matter_paradigm, base_extractiveness, 0, 0.25).
-narrative_ontology:measurement(cdm_ex_t5, cold_dark_matter_paradigm, base_extractiveness, 5, 0.40).
-narrative_ontology:measurement(cdm_ex_t10, cold_dark_matter_paradigm, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: It serves as the primary standard for information,
-% models, and assumptions in modern cosmology.
 narrative_ontology:coordination_type(cold_dark_matter_paradigm, information_standard).
+narrative_ontology:affects_constraint(cold_dark_matter_paradigm, small_scale_structure_anomalies).
+narrative_ontology:affects_constraint(cold_dark_matter_paradigm, dark_matter_detection_null_results).
+narrative_ontology:affects_constraint(cold_dark_matter_paradigm, hubble_tension_measurement).
+narrative_ontology:affects_constraint(cold_dark_matter_paradigm, inflation_parameter_space).
 
-% --- Network Decomposition (Constraint Families) ---
-% This story focuses on the *specifics* of dark matter being 'cold'. This is
-% distinct from the more fundamental constraint that *some* dark matter is needed.
-% The ε-invariance principle requires decomposition.
-%
 % DUAL FORMULATION NOTE:
-% This constraint is one of 2 stories decomposed from the colloquial label "dark matter".
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - cosmological_dark_matter_necessity (ε≈0.05, Mountain)
-%
-% This story (cold_dark_matter_paradigm) is downstream from the more fundamental claim.
-narrative_ontology:affects_constraint(cosmological_dark_matter_necessity, cold_dark_matter_paradigm).
-
+% The cold dark matter paradigm can be decomposed into separable constraints: (1) CDM_empirical_status (ε~0.08): the observational evidence base supporting cold dark matter particles; (2) CDM_paradigm_lock (ε~0.52): the institutional mechanism suppressing alternatives; (3) inflation_falsifiability (ε~0.45): the degree to which inflationary initial conditions can be tested. These three stories are linked by network.affects_constraints — paradigm lock extraction depends on low empirical falsifiability, and parametrization flexibility increases when anomalies emerge. The present story addresses the paradigm_lock component (tangled rope). The empirical_status story would be lower extractiveness (~0.15-0.25) if solely observational; the parametrization story would be higher (~0.60+) if treating inflation as unfalsifiable metaphysics.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are needed for this constraint. The automatic derivation chain,
-% using the declared beneficiary/victim groups and their exit options,
-% accurately computes the directionality (d) for each perspective and captures
-% the core dynamics of the scientific paradigm.
+constraint_indexing:directionality_override(cold_dark_matter_paradigm, analytical, 0.72).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

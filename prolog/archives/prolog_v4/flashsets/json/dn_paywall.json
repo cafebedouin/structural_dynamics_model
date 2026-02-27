@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "dn_paywall",
+    "version": "1.0",
+    "generated_date": "2024-05-02",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dagens Nyheter Digital Subscription Paywall",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dagens_nyheter"
+    ],
+    "victims": [
+      "occasional_readers",
+      "information_access"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Occasional Reader",
+      "comment": "The occasional reader who only needs access to a single article faces a high barrier to entry. They are trapped by the paywall with no easy exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Moderate News Consumer",
+      "comment": "Regular readers are constrained. They benefit from the quality of journalism funded by the paywall but face the cost of subscription."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Dagens Nyheter",
+      "comment": "Dagens Nyheter benefits from the paywall through increased revenue, enabling the continuation of journalistic activities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the paywall represents a tangled rope. It solves the collective action problem of funding quality journalism but also restricts access to information."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "quality_vs_access",
+      "question": "What is the optimal balance between funding high-quality journalism and ensuring broad access to information?",
+      "resolution_mechanism": "Empirical studies on the impact of paywalls on readership and revenue, coupled with societal values regarding information accessibility.",
+      "impact": "Determines the degree to which paywalls are socially beneficial or detrimental.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Optimal balance between funding quality journalism and ensuring access"
+    },
+    {
+      "id": "alternative_funding_models",
+      "question": "Are there alternative funding models that could provide similar revenue without restricting access to the same extent?",
+      "resolution_mechanism": "Experiments with different funding models, such as micropayments, philanthropic support, or public funding.",
+      "impact": "Could lead to the development of more equitable and sustainable models for funding journalism.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Alternative funding models for journalism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Dagens Nyheter's digital paywall is a mechanism to monetize online content, balancing revenue generation with restricted access. It presents a structural dilemma between sustaining quality journalism and limiting information dissemination. The paywall impacts different actors in various ways, leading to differing perspectives on its overall effect.",
+    "key_agents": [
+      "Dagens Nyheter: Primary beneficiary (institutional/arbitrage) - revenue from subscriptions",
+      "Occasional Readers: Primary victim (powerless/trapped) - restricted access to individual articles",
+      "Moderate News Consumers: (moderate/constrained) - balances cost with access",
+      "Information Access: (powerless/trapped) - abstract collective good, potentially affected by the restriction of information"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The paywall extracts value from readers in exchange for content access. The extraction is not maximal as some content remains free. Suppression (0.45): Moderate. There are alternative news sources, but the paywall restricts access to DN's specific content. Theater ratio (0.20): Low. The paywall is primarily functional, focusing on revenue generation rather than performative aspects.",
+    "perspectival_gap": "The occasional reader sees a snare because they are effectively blocked from accessing content without a subscription. Regular readers experience a tangled rope, balancing the costs of subscription with the benefits of access. Dagens Nyheter views the paywall as a rope, enabling the funding of quality journalism. The analytical observer sees the overall structure as a tangled rope, balancing the benefits and costs to society.",
+    "directionality_logic": "Dagens Nyheter benefits directly from the paywall through subscription revenue (low d). Occasional readers bear the cost of restricted access (high d). Regular readers experience a mix of benefits and costs (moderate d). The analytical observer assesses the net impact on society, considering both the value of quality journalism and the cost of restricted access (moderate d)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

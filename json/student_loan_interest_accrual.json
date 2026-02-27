@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "student_loan_interest_accrual",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sloan"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Student Loan Interest Accrual During Deferment",
+    "topic_domain": "economic/debt/higher_education",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "loan_servicers",
+      "federal_treasury",
+      "secondary_loan_market"
+    ],
+    "victims": [
+      "deferred_borrowers",
+      "forbearance_borrowers",
+      "low_income_graduates"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Deferred Borrower",
+      "comment": "PERSPECTIVE 1: DEFERRED BORROWER (SNARE) \u2014 Borrower placed in deferment due to unemployment, hardship, or enrollment in graduate school. Cannot exit: deferment is often mandatory for certain conditions (e.g., public service loan forgiveness qualification period), and private alternatives are unavailable for federal loans. Interest accrues regardless of payment capacity, creating a principal-growth trap. Maximum extraction experienced \u2014 zero agency, zero alternatives, compounding debt burden invisible during deferment period."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Low-Income Graduate",
+      "comment": "PERSPECTIVE 2: LOW-INCOME GRADUATE (SNARE) \u2014 Holds federal student loans from undergraduate education. Cannot afford payments during early career phase; eligible for income-driven repayment plans or deferment. Interest continues accruing; capitalized interest appears on statement but borrower has no choice about accrual mechanism. Exit is theoretically possible (private refinancing) but inaccessible due to credit profile. Experiences extraction as structural necessity rather than coercive enforcement \u2014 no enforcement needed because the mechanism is locked into the federal loan contract."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Loan Servicers and the Federal Treasury",
+      "comment": "PERSPECTIVE 3: LOAN SERVICERS & FEDERAL TREASURY (ROPE) \u2014 Servicers manage loan accounting and collections; federal treasury captures revenue from interest. Interest accrual during deferment/forbearance is a coordination mechanism: it preserves the loan's value against inflation and creates incentive for borrowers to resume payments. Servicers experience the constraint as functional\u2014interest accrual enables their business model and aligns with federal revenue objectives. Exit is not needed because this perspective benefits from the accrual mechanism. High f(d) approaching negative values indicates net beneficiary status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Borrower Advocacy and Consumer Protection",
+      "comment": "PERSPECTIVE 4: BORROWER ADVOCACY & CONSUMER PROTECTION (TANGLED ROPE) \u2014 Consumer advocacy groups, state attorneys general, and Congress see accrual-during-deferment as both coordination mechanism (prevents principal decay) and extraction (harms vulnerable borrowers). Reform efforts create competing extraction narratives: servicers extract via accrual; advocacy groups extract political pressure. Advocacy has constrained exit\u2014they cannot unilaterally end accrual but can push legislation. Experiences both benefit (forced savings discipline) and cost (debt trap escalation). Suppression is high (servicer information asymmetry, regulatory capture of Education Dept); coordination function exists (prevents moral hazard) but is overshadowed by extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Federal Student Loan Program",
+      "comment": "PERSPECTIVE 5: FEDERAL STUDENT LOAN PROGRAM (PITON) \u2014 The accrual-during-deferment rule persists as institutional inertia. Originally designed (1960s-1980s) to address moral hazard\u2014prevent borrowers from using deferment as indefinite payment avoidance. The theater ratio is moderate (0.35)\u2014accrual has real functional content (prevents principal decay, funds servicer operations), but policy enforcement is largely symbolic: forbearance is available as an alternative, income-driven repayment caps payments regardless of accrual, and periodic policy freezes (COVID-19 pandemic) demonstrate that accrual is not immutable. The constraint maintains itself through servicer lobbying and default departmental procedures, not because the underlying function is essential."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Compound Interest View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a mathematical perspective, interest accrual on deferred balances is derived from the fundamental rules of compound interest: A = P(1 + r/n)^(nt). No agent can 'choose' not to accrue interest without violating the definition of interest itself. This perspective risks naturalizing what is actually a policy choice (the interest rate, the accrual mechanism, the deferment eligibility rules). The engine's false summit detector will identify this as a false mountain\u2014compound interest is a mathematical law, but accrual-during-deferment is a policy design choice that could be replaced (e.g., accrual freeze during deferment, or interest subsidy by the federal government as was the case for subsidized loans through 2012)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deferment_necessity_threshold",
+      "question": "Is accrual-during-deferment necessary to prevent moral hazard, or does it create worse behavior (strategic default, work avoidance)?",
+      "resolution_mechanism": "Comparative analysis of default rates and repayment behavior under accrual vs. no-accrual regimes; natural experiments (COVID-19 payment pause, state-level subsidies); longitudinal borrower surveys on deferment decision-making",
+      "impact": "If moral hazard dominant: accrual serves a coordination function (Rope classification stronger). If perverse incentives dominant: accrual is pure extraction (Snare classification stronger).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether accrual-during-deferment prevents or encourages default"
+    },
+    {
+      "id": "servicer_revenue_dependency",
+      "question": "How much of the loan servicer's business model depends on interest accrual during deferment? Can servicers be profitable under accrual-free deferment?",
+      "resolution_mechanism": "Financial analysis of servicer revenue streams; cost-benefit modeling of operations under different accrual policies; comparison to subsidized loan model (pre-2012)",
+      "impact": "If high dependency: accrual is essential to the servicer's extraction mechanism (Snare or Tangled Rope classification). If low dependency: accrual is a policy choice that serves other objectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Servicer profitability under accrual-free deferment"
+    },
+    {
+      "id": "borrower_awareness_completeness",
+      "question": "Do borrowers understand that interest accrues during deferment? Does accrual lack transparency function as part of the extraction mechanism?",
+      "resolution_mechanism": "Surveys of borrowers in deferment; analysis of loan disclosure documents; comparison of stated awareness to actual accrual-related defaults and payment shocks",
+      "impact": "If awareness is low: accrual functions as hidden extraction (Snare classification stronger, suppression higher). If awareness is high: accrual is transparent mechanism (classification shifts toward Rope or Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Borrower awareness of accrual-during-deferment"
+    },
+    {
+      "id": "federal_subsidy_capacity",
+      "question": "Could the federal government afford to subsidize interest during deferment (as it did for subsidized loans pre-2012)? Is non-accrual politically blocked or fiscally impossible?",
+      "resolution_mechanism": "Federal budget analysis; cost-benefit of subsidy vs. current default write-offs; comparison of subsidy costs to other education spending",
+      "impact": "If affordable and blocked: accrual is a policy choice extracting from borrowers to preserve servicer revenue (Snare classification). If fiscally constrained: accrual reflects genuine resource scarcity (Tangled Rope or Scaffold classification).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Federal budget capacity for interest subsidies during deferment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Student loan interest accrual during deferment or forbearance is a structural mechanism embedded in U.S. federal and private student loan contracts. When a borrower is unable to pay (due to unemployment, hardship, or continued education), they can request deferment or forbearance\u2014a temporary suspension of payments. However, interest on the underlying principal continues to accrue unless the borrower's loan is classified as 'subsidized' (federal government pays interest) or the borrower is on an income-driven repayment plan with interest subsidies. This constraint creates a debt spiral: borrowers who defer because they cannot afford payments see their total debt burden increase invisibly, emerging from deferment owing more than they borrowed. The mechanism operates with minimal coercion\u2014no enforcement action is needed because the accrual is automatic and incorporated into loan contracts. Suppression is high because borrowers often lack full awareness of accrual mechanics and have no exit options while in deferment. The constraint's extractiveness has increased over the past decade as: (1) more borrowers enter deferment due to underemployment, (2) private loan servicers have captured regulatory oversight of the process, (3) subsidized loan availability has declined, and (4) political willingness to freeze or subsidize accrual has eroded. The theater ratio remains low (0.35) because accrual is functionally transparent\u2014the mechanism does what it appears to do\u2014even though awareness of that function is low.",
+    "key_agents": [
+      "Deferred Borrowers: Primary victims (powerless/trapped) \u2014 cannot exit deferment; bear full cost of accrual",
+      "Low-Income Graduates: Secondary victims (moderate/constrained) \u2014 limited alternatives; face payment shocks when deferment ends",
+      "Loan Servicers: Primary beneficiaries (institutional/arbitrage) \u2014 capture servicer fees and interest revenue; operate as monopoly administrators",
+      "Federal Treasury: Secondary beneficiary (institutional/arbitrage) \u2014 captures interest revenue on federal loans; subsidies declined after 2012",
+      "Borrower Advocacy: Secondary actor (organized/constrained) \u2014 push for reform but constrained by servicer lobbying and legislative capture",
+      "Federal Student Loan Program: Institutional actor (institutional/arbitrage) \u2014 maintains accrual policy through inertia and regulatory alignment"
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. Accrual during deferment extracts wealth from borrowers by increasing total debt burden during periods of economic vulnerability. However, extraction is not maximal (\u22650.66 for pure snares) because: (1) accrual rates are transparent and visible in loan documents, (2) income-driven repayment plans partially offset accrual burden through payment caps, and (3) some borrowers have access to subsidized or subsidies-available programs. The extractiveness has increased over time as subsidized loan programs have declined and servicer discretion over deferment terms has expanded. Suppression (0.68): High. Borrowers in deferment face multiple suppression mechanisms: (a) lack of awareness that accrual continues, (b) no private loan alternatives for federal loans (monopoly access), (c) career constraints that forced deferment in the first place make exit infeasible, (d) servicer information asymmetry\u2014borrowers often cannot obtain clear accrual calculations until emerging from deferment, (e) regulatory capture\u2014the Education Department primarily works with servicers rather than borrower advocates. Theater ratio (0.35): Low. Accrual is not performative\u2014the mathematical mechanism works exactly as described. The theater is present in regulatory framing (accrual presented as 'default interest cost' rather than 'policy choice') and servicer compliance theater (borrowers receive notices of accrual but rarely understand them), but the underlying mechanism is substantive.",
+    "directionality_logic": "Servicers and the Treasury derive d from their role as beneficiaries with arbitrage exit options. The pipeline computes their experienced extractiveness as negative or near-zero because they benefit from the accrual mechanism and can, theoretically, choose to end it\u2014but profit-maximization prevents them from doing so. Borrowers derive d from their role as victims with trapped exit options. Maximum d (0.95+) produces maximum f(d) (~1.42), which amplifies their experienced extractiveness \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S). The advocacy coalition derives d from constrained exit\u2014they have organizational power but cannot unilaterally change the mechanism; they are neither victims nor beneficiaries. Overrides are not needed because the structural derivation captures the relationship: accrual flows from borrowers to servicers with no genuine alternatives for deferred borrowers.",
+    "perspectival_gap": "The gap between the deferred borrower's perspective (Snare\u2014maximum extraction, no exit, accumulating debt trap) and the servicer's perspective (Rope\u2014revenue mechanism aligned with institutional function) is maximal. The borrower sees a debt trap; the servicer sees a standard business function. The advocacy perspective (Tangled Rope) occupies the middle ground: accrual serves a coordination function (prevents moral hazard through incentivizing repayment) but is overshadowed by extraction (harms vulnerable populations). The piton perspective (Federal Student Loan Program viewed institutionally) reveals that accrual is maintained partly through inertia\u2014the COVID-19 payment pause (2020-2023) demonstrated that accrual can be frozen, and borrowers did not dramatically increase deferment abuse when accrual was suspended. The analytical/natural law perspective risks falsely naturalizing compound interest mathematics as if accrual-during-deferment were inevitable\u2014but subsidized loans (which existed until 2012) proved that accrual can be prevented through policy choice.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (CONCEPTUAL): The constraint avoids the mandatrophy by distinguishing the coordination function (accrual-as-moral-hazard-prevention) from the extraction mechanism (accrual-as-debt-accumulation). Pure coordination (Rope) would require that accrual equally benefit borrower and servicer\u2014it does not; borrowers in deferment uniformly experience extraction. Pure extraction (Snare) would require that servicers had no legitimate coordination rationale\u2014they do; moral hazard is a real coordination problem. The Snare classification (from borrower and low-income graduate perspectives) is correct because the extraction is primary and the coordination is secondary or absent from their viewpoint. The Tangled Rope classification (from advocacy perspective) is correct because reform efforts acknowledge both the moral hazard problem (coordination) and the extraction harm (borrower trap). The constraint does not collapse because each classification is indexed to a specific observer position. The analytical observer's false mountain (naturalizing accrual as inherent to interest) is caught by the engine's false summit detector: accrual-during-deferment is a policy choice, not a mathematical or physical law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_driven_repayment_cap_evasion",
+      "default_cascade_mechanism",
+      "public_service_loan_forgiveness_gaming"
+    ],
+    "dual_formulation_note": "Student loan interest accrual operates as both a coordination mechanism (preventing moral hazard through incentivizing repayment) and an extraction mechanism (creating debt spirals for deferred borrowers). This constraint family includes: (1) accrual-during-deferment (this story, \u03b5=0.52, Snare), (2) subsidized loan elimination (\u03b5=0.45, Tangled Rope\u2014coordination loss), (3) servicer capture of Education Department (\u03b5=0.55, Snare\u2014institutional extraction). Accrual is downstream of servicer monopoly and upstream of default cascades."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

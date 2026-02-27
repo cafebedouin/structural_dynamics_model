@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "rule_update_failure",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ruf"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Obsolete Protocol Enforcement",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_system_maintainers",
+      "institutional_compliance_auditors"
+    ],
+    "victims": [
+      "end_users",
+      "system_innovators",
+      "operational_efficiency"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Bound by rules that no longer serve legitimate coordination. Cannot exit system; bears full cost of outdated enforcement. Verification requires compliance overhead with zero functional benefit. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.66."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The System Innovator",
+      "comment": "PERSPECTIVE 2: SYSTEM INNOVATOR (TANGLED ROPE) \u2014 Constrained by requirement to maintain backward compatibility with obsolete rules. Benefits from coordination legacy but extraction through version-lock overhead. d\u22480.72, f(d)\u22481.08, \u03c3=0.9 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy System Maintainer",
+      "comment": "PERSPECTIVE 3: LEGACY SYSTEM MAINTAINER (ROPE) \u2014 Benefits from continued enforcement through job security and regulatory compliance credibility. Experiences constraint as coordination: enforcing known rules reduces uncertainty. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Standards Committee",
+      "comment": "PERSPECTIVE 4: STANDARDS COMMITTEE (SCAFFOLD) \u2014 Organized actors can establish deprecation timelines and migration paths. Sees obsolete enforcement as temporary coordination problem with planned sunset. d\u22480.38, f(d)\u22480.38, \u03c3=1.2 \u2192 \u03c7\u22480.19. Low extraction through agency and exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Compliance Audit System",
+      "comment": "PERSPECTIVE 5: COMPLIANCE AUDIT SYSTEM (PITON) \u2014 Enforcement ritual persists despite loss of functional purpose. Auditors continue checking obsolete rules because the audit procedure itself became institutionalized independent of the rule's original rationale. theater_ratio=0.81 exceeds piton gate (\u22650.70). System maintains itself through inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (APPARENT MOUNTAIN) \u2014 Observer risks misclassifying obsolete enforcement as an immutable law: 'All systems must maintain backward compatibility forever.' But extractiveness=0.52 and suppression=0.68 contradict the mountain requirements (\u03b5\u22640.25, suppression\u22640.05). This is a false summit: backward compatibility is a contingent institutional choice, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "functional_obsolescence_threshold",
+      "question": "At what point does a rule transition from 'still has some users' to 'actively harmful coordination cost exceeds coordination benefit'?",
+      "resolution_mechanism": "User impact analysis: measure transaction costs imposed by compliance vs measured benefits of interoperability. Threshold: cost/benefit ratio exceeds 5:1.",
+      "impact": "If threshold set too high: rules persist as snares. If too low: premature deprecation breaks legitimate legacy systems. Mandatrophy hinges on this measurement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional obsolescence threshold for rule deprecation"
+    },
+    {
+      "id": "migration_path_feasibility",
+      "question": "Can systems migrate away from obsolete enforcement without catastrophic compatibility breakage? Is the transition actually gradual (scaffold) or effectively impossible (snare)?",
+      "resolution_mechanism": "Pilot deprecation in controlled environments; measure system failures, user friction, and migration costs. Test whether deprecation warnings + extended timelines enable smooth transitions.",
+      "impact": "If feasible: constraint is a degrading scaffold (sunset is real, structure is honest). If infeasible: constraint is a perpetual snare (exit options were overstated).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether migration from obsolete rules is feasible"
+    },
+    {
+      "id": "hidden_dependency_proliferation",
+      "question": "Do systems that appear to 'just enforce an old rule' actually depend on unstated assumptions embedded in that rule? Are there hidden dependencies that make removal catastrophic even if surface-level compliance seems obsolete?",
+      "resolution_mechanism": "Dependency graph analysis: trace all systems that reference the rule, not just those that explicitly comply. Identify implicit assumptions. Test rule removal in isolation to detect cascade failures.",
+      "impact": "If hidden dependencies are pervasive: 'obsolete' classification is false \u2014 the rule is still functional but poorly understood (tangled rope). If dependencies are minimal: enforcement is purely extractive (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proliferation of hidden dependencies on apparently obsolete rules"
+    },
+    {
+      "id": "enforcement_beneficiary_capture",
+      "question": "Have enforcement institutions (auditors, compliance officers, vendors) developed vested interests in rule persistence independent of the rule's original purpose?",
+      "resolution_mechanism": "Institutional history analysis: trace how compliance audit procedures evolved. Measure proportion of auditor resource allocation to obsolete rules. Interview stakeholders about whether rule deprecation threatens their roles.",
+      "impact": "If capture is high: extractive suppression is maintained by institutional inertia (piton/snare hybrid). If capture is low: rule persistence is legitimate coordination cost (rope/scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional capture of obsolete rule enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.81
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "Obsolete protocol enforcement occurs when a system continues to mandate compliance with a rule designed to solve a problem that no longer exists, yet enforcement persists due to institutional inertia, hidden dependencies, or capture by enforcement institutions. The constraint spans multiple domains: legacy software requiring backward compatibility with deprecated APIs; regulatory compliance mandates that outlive the risks they address; organizational policies that persist after the conditions they were designed to manage have changed; and communication protocols that maintain redundant acknowledgment procedures originally required by hardware limitations that no longer exist. The structural tension is between the legitimate coordination function of having consistent, predictable rules across a system and the extractive cost imposed by rules that serve no current purpose. End users face suppression (compliance overhead with zero benefit), while enforcement institutions benefit from job security and audit scope. System innovators face constrained choices: maintain expensive backward compatibility or risk breaking systems that depend on legacy compliance. This constraint exhibits all six types from different perspectives, revealing how institutional inertia can transform a legitimate coordination mechanism (rope) into a persistent extraction mechanism (snare) as the environmental context that justified the rule shifts.",
+    "key_agents": [
+      "End Users: Primary victim (powerless/trapped) \u2014 bound by rules that no longer serve coordination; cannot exit system without abandoning functionality",
+      "System Innovators: Secondary victim (moderate/constrained) \u2014 must maintain backward compatibility overhead; face resource constraints and architecture lock-in",
+      "Legacy System Maintainers: Primary beneficiary (institutional/arbitrage) \u2014 gain job security and credibility from enforcing known, auditable rules; experience constraint as predictable coordination",
+      "Compliance Audit Institutions: Secondary beneficiary (institutional/arbitrage) \u2014 maintain enforcement scope and budget through continued rule checking; see compliance as their function regardless of rule utility",
+      "Standards Committee: Organized coordinator (organized/mobile) \u2014 can establish deprecation timelines and migration paths; has agency to sunset rules incrementally",
+      "Operational Efficiency: Victim (analytical/trapped) \u2014 abstract aggregate cost of redundant enforcement accumulates across system; nobody directly represents it",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing rule persistence as necessary law rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint imposes real compliance costs on end users and innovators, but the extraction is not total because some legacy compliance requirements do serve residual coordination functions (version compatibility). The original problem has diminished, but not disappeared entirely. The value reflects the gap between original justification and current utility. Suppression (0.68): Moderately high. Users face significant barriers to non-compliance: system integration dependencies, vendor requirements, regulatory mandates. They cannot easily exit. Workarounds exist but carry hidden costs. Theater ratio (0.81): Very high. Compliance auditing for obsolete rules becomes substantially performative \u2014 auditors verify compliance with rules whose original purpose has ceased, conducting ritualized checks that follow procedures rather than addressing current risks. The theater has increased over time as the original functional rationale faded while the enforcement procedure became institutionalized. Measurement trajectory shows classic piton degradation: theater rising as extractiveness rises suggests institutional decay (enforcement persisting despite lost function).",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is stark. Legacy system maintainers see a rope (predictable coordination, manageable rules, clear audit procedures). End users see a snare (immovable barriers to efficiency with no purpose). System innovators see tangled rope (coordination benefits from compatibility offset by extraction costs of maintenance). The standards committee sees a solvable scaffold (they can write deprecation timelines). The compliance audit system sees a piton (the ritual persists through institutional momentum, no longer connected to the original risk). The civilizational observer risks seeing mountain (concluding that backward compatibility is eternally necessary), but the rising extractiveness and theater ratio over time reveal that this is not a natural law \u2014 it is an institutional arrangement that has decoupled from its justification.",
+    "directionality_logic": "End users: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction \u2014 no meaningful exit options, full cost bearer. Legacy system maintainers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary with low directionality; can define what 'compliance' means. System innovators: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.08. High extraction but not maximum; can work around constraints at cost. Compliance auditors: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Their institutional interest lies in continued rule existence. Standards committee: Organized + mobile \u2192 d\u22480.38, f(d)\u22480.38. Low effective extraction through agency. Operational efficiency: Abstract victim \u2192 d\u22480.95, f(d)\u22481.42. Cannot organize to represent itself.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint is: IS BACKWARD COMPATIBILITY A COORDINATION REQUIREMENT (ROPE) OR AN EXTRACTION MECHANISM (SNARE)? The answer is BOTH, but in different proportions at different timescales. At t=0, when the protocol change occurs and systems still depend on the old rule, enforcement is legitimate coordination (rope): breaking compatibility would cause real cascade failures. At t=4-8, when adaptation has occurred in most systems and only legacy hold-outs remain, enforcement becomes increasingly extractive (snare): the rule now prevents rather than enables coordination. The constraint resolves the mandatrophy through TIME-DEPENDENT CLASSIFICATION: early enforcement is rope, late enforcement is snare, and the transition happens when usage falls below a threshold. The measurements show this transition: extractiveness rises from 0.28 to 0.52, theater rises from 0.35 to 0.81. The high theater indicates piton degradation \u2014 the audit procedure persists independent of functional justification. The false summit perspective (mountain) is definitively rejected: if backward compatibility were immutable, theater would remain constant (ritual would maintain original function). Instead, rising theater while extractiveness rises indicates institutional decay. The constraint is a DEGRADING TANGLED ROPE: it maintains some coordination function (legacy systems do still need compatibility) but increasingly functions as extraction (for systems that have already adapted, compliance is pure overhead). The scaffold perspective (sunset) is actionable: standards committees CAN establish deprecation timelines. The mandatrophy is resolved by recognizing time-dependent function: the same rule is honest coordination early and dishonest extraction late."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "technical_debt_accumulation",
+      "vendor_lock_in_persistence"
+    ],
+    "dual_formulation_note": "Obsolete protocol enforcement is downstream of system evolution and environmental change. The upstream constraint (technical debt accumulation) represents the structural drift that makes rules obsolete; the downstream constraint (vendor lock-in persistence) represents how enforcement of obsolete rules enables vendor capture. These three constraints form a family where each affects the others' \u03b5 values: as technical debt rises, rules become more obsolete; as obsolete rules persist, vendor lock-in deepens."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

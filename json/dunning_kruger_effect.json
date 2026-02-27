@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "dunning_kruger_effect",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dk"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dunning-Kruger Effect (Cognitive Bias of Self-Assessment)",
+    "topic_domain": "social/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "low_competence_agents_short_term",
+      "confidence_marketers"
+    ],
+    "victims": [
+      "institutional_quality_assurance",
+      "peer_correction_mechanisms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Novice Trapped in False Confidence",
+      "comment": "PERSPECTIVE 1: NOVICE (SNARE) \u2014 Low-competence agents trapped in genuine illusion of competence. Cannot perceive the gap between self-assessment and actual ability. Maximum extraction: they make decisions based on false confidence, suffer real-world consequences (failed projects, damaged relationships, career setbacks), yet the mechanism preventing learning (metacognitive blindness) is intrinsic to their position. No exit option \u2014 cannot climb the learning curve while trapped in the illusion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Expert Correcting at a Cost",
+      "comment": "PERSPECTIVE 2: EXPERT CORRECTING (ROPE) \u2014 Moderate-power agents (peers, mentors, supervisors) who see the gap and attempt correction face suppression: low-competence agents reject feedback, dismiss corrections as jealousy or gatekeeping, and may retaliate against those who challenge their confidence. Experts experience the constraint as coordination difficulty (how to enable learning without triggering defensive reactions?). Suppression is significant but not total \u2014 some feedback does get through; constrained exit (can partially withdraw from mentoring role but at professional/social cost)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Quality Assurance System",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL QA (TANGLED ROPE) \u2014 Organizations implementing assessment, hiring, and promotion systems bear dual extraction: (1) They must coordinate accurate ability assessment (coordination function); (2) They suffer systematic distortion of signals \u2014 low-competence agents present inflated self-assessments that undermine selection and development processes (extraction). Active enforcement required: interviews, tests, probation periods, 360-degree feedback all exist to bypass the Dunning-Kruger distortion. The institutional victim here is the quality of information used for resource allocation and decision-making."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Confidence Industry",
+      "comment": "PERSPECTIVE 4: CONFIDENCE MARKETERS (ROPE) \u2014 Entities profiting from false confidence (motivational speakers, rapid-credentialing programs, self-help industries, overconfident consultants) experience the constraint as pure coordination: they are solving the market demand for confidence-boosting messages. They benefit from the Dunning-Kruger effect by selling courses, books, and seminars that reinforce overconfidence. No real victims in their frame \u2014 they coordinate supply and demand. Arbitrage exit: can shift between markets easily."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Experimental Psychology Consensus",
+      "comment": "PERSPECTIVE 5: PSYCHOLOGY RESEARCH (PITON) \u2014 The original Dunning-Kruger papers (1999-2000) identified a robust, measurable phenomenon with high replicability. But over 25 years, the consensus has shifted: meta-analyses (Schaeffer et al. 2024) show the effect is much smaller than originally claimed, highly dependent on task domain, and partly an artifact of regression to the mean. The scientific consensus has degraded \u2014 the theatrical invocation of 'Dunning-Kruger' persists in popular culture and organizations despite the empirical effect being much weaker than popular belief assumes. Theater ratio (0.65) reflects that the label persists performatively in organizational contexts even as the underlying empirical claim has become contested."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Constraint Over Capacity)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational timescale, the Dunning-Kruger effect is best understood as a tension between metacognitive capacity and skill complexity: agents lack the very competence needed to recognize incompetence (coordination function \u2014 they cannot self-assess without a reference standard they do not possess), AND this creates systematic extraction as they make high-stakes decisions in domains where they lack grounding. The constraint is hybrid: partly natural (learning always has a lag phase where the learner is unaware of what they don't know), partly institutional (organizations could reduce the effect with better assessment, but don't). Theater ratio reflects that organizations often invoke 'Dunning-Kruger' as an explanation for performance gaps without actually implementing metacognitive training or better assessment."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regression_to_mean_artifact",
+      "question": "Is the observed overconfidence in low-competence groups primarily a genuine bias or an artifact of regression to the mean in measured performance?",
+      "resolution_mechanism": "Statistical decomposition of meta-analyses separating true overconfidence from regression artifacts; studies using latent variable models to measure true vs measured ability",
+      "impact": "If primarily artifact: effect size is much smaller (0.10-0.15 vs 0.40+); many claimed instances are false positives. If genuine bias: original claim (0.40+) is valid; intervention strategies targeting metacognition are justified.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Dunning-Kruger is genuine bias or regression artifact"
+    },
+    {
+      "id": "domain_specificity_boundary",
+      "question": "What features of a domain determine whether Dunning-Kruger overconfidence emerges (simple domains with clear feedback) vs disappears (complex domains with indirect feedback)?",
+      "resolution_mechanism": "Cross-domain meta-analysis; correlation between task feedback quality and observed overconfidence; studies varying feedback structure within domains",
+      "impact": "If primarily domain-dependent: the 'effect' is not a universal cognitive bias but a learning-lag phenomenon specific to domains lacking clear feedback. Interventions would target feedback systems, not cognition per se.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Domain-dependent versus universal nature of overconfidence bias"
+    },
+    {
+      "id": "metacognitive_training_efficacy",
+      "question": "Can explicit metacognitive training (teaching people to evaluate confidence, uncertainty, and knowledge gaps) sustainably reduce overconfidence, or does the bias re-emerge over time?",
+      "resolution_mechanism": "Longitudinal studies with metacognitive intervention groups; measurement of confidence calibration over 6-12 months post-training; replication across age groups and domains",
+      "impact": "If training is effective and stable: the constraint is malleable \u2014 institutional quality assurance can incorporate metacognitive development. If training effects decay: the constraint is more structural and harder to overcome.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy and durability of metacognitive training interventions"
+    },
+    {
+      "id": "cultural_confidence_norms",
+      "question": "Does the magnitude of the Dunning-Kruger effect vary significantly across cultures with different norms around self-promotion and humility?",
+      "resolution_mechanism": "Cross-cultural replication studies in individualist vs collectivist societies; measurement of confidence-competence gap by cultural dimension (Hofstede, Schwartz)",
+      "impact": "If effect is culturally variable: it is not a universal cognitive constraint but partly a cultural-institutional product. Organizational interventions would need to account for cultural context. If effect is universal: cognitive mechanism is primary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cultural variability of overconfidence bias"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Dunning-Kruger effect describes a structural tension in learning and self-assessment: agents with limited competence in a domain lack the very metacognitive capacity needed to recognize their incompetence. This creates a coordination problem (how to enable learning when learners cannot perceive their own gaps?) and an extraction mechanism (low-competence agents make high-stakes decisions based on false confidence, damaging institutions and peer-correction mechanisms). The constraint exhibits hybrid character: partly a natural feature of learning curves (the early phase where confidence outpaces actual ability), partly institutional (organizations could reduce the effect with better assessment and feedback, but organizational inertia preserves performative confidence rituals). The empirical status has shifted dramatically: the original Dunning-Kruger papers (1999-2000) reported a strong, universal effect; meta-analyses (Schaeffer et al. 2024) show the effect is much smaller, domain-dependent, and partly an artifact of regression to the mean. Yet the cultural invocation of 'Dunning-Kruger' persists \u2014 used to explain performance gaps in organizations without addressing the underlying assessment or feedback systems. This perspectival gap between the weakened empirical claim and the persistent institutional narrative is captured in the theater_ratio (0.65), which has increased over the interval as the effect's empirical status has become contested while its rhetorical use has remained stable.",
+    "key_agents": [
+      "Low-Competence Novices: Primary victims (powerless/trapped) \u2014 trapped in metacognitive blindness; cannot perceive gap between confidence and actual ability; bear real-world costs of false-confidence decisions",
+      "Institutional Quality Assurance: Primary victim (institutional/constrained) \u2014 their ability to assess, select, and develop talent is systematically distorted by inflated self-assessments; must enforce verification systems to bypass the bias",
+      "Expert Correctors: Secondary actor (moderate/constrained) \u2014 peers, mentors, and supervisors attempt feedback but face suppression and defensive reactions from low-competence agents",
+      "Confidence Marketers: Primary beneficiary (institutional/arbitrage) \u2014 self-help industry, motivational speakers, rapid-credentialing programs profit by reinforcing overconfidence; experience the effect as pure coordination",
+      "Psychology Research Community: Institutional observer (analytical/analytical) \u2014 original discoverers of the effect; now maintain a more complex position as meta-analyses reveal the effect is smaller, domain-dependent, and partly artifactual",
+      "Organizational Culture: Institutional actor (institutional/constrained) \u2014 invokes Dunning-Kruger performatively to explain performance gaps without addressing underlying assessment or development systems"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The Dunning-Kruger effect extracts from institutional quality assurance and peer-correction mechanisms by distorting self-assessment signals. But the extraction is not as high as the original panic about the effect suggested (early estimates ~0.50). Meta-analytic evidence shows the effect is smaller than originally claimed, more domain-dependent, and partly an artifact of regression to the mean. The extractiveness reflects the real but limited distortion of assessment signals \u2014 institutions can partially overcome it with appropriate verification. Suppression (0.48): Moderate. Low-competence agents actively resist feedback (defensive reactions, dismissal of corrections as jealousy), creating barriers to learning. But suppression is not absolute \u2014 some agents do receive and integrate feedback; some organizations have built effective assessment systems. Theater ratio (0.65): Moderate-high. The increase over the interval reflects that the empirical status of the effect has become contested (meta-analyses showing smaller magnitude, domain-dependency, regression artifacts) while its cultural invocation has remained performatively stable. Organizations use 'Dunning-Kruger' to explain performance gaps without implementing the metacognitive or assessment interventions that would actually reduce the effect.",
+    "perspectival_gap": "The constraint demonstrates how indexical perspective reveals different structural realities. The novice experiences pure extraction (Snare) \u2014 they cannot perceive the gap and suffer real consequences. The expert attempting correction experiences coordination difficulty (Rope) \u2014 how to enable learning despite the novice's defensive reactions? The institution experiences hybrid extraction-coordination (Tangled Rope) \u2014 they must coordinate accurate assessment while being systematically distorted by false-confidence signals. The confidence industry experiences pure coordination (Rope) \u2014 they are simply meeting market demand for confidence-boosting content. The psychology research community has shifted from the original mountain-like certainty (robust, universal effect) to tangled-rope complexity (domain-dependent, partly artifactual, contested). The organizational culture experiences piton dynamics \u2014 invoking the effect performatively without implementing the structural changes that would reduce it. The perspectival gap reveals that the 'Dunning-Kruger effect' is not a single constraint but a cluster of related phenomena: a natural learning-lag (inevitable phase where confidence outpaces ability), a communication/feedback problem (how to convey gaps to agents who cannot perceive them), an institutional assessment problem (organizations not implementing verification), and a cultural narrative (popular invocation detached from current empirical status).",
+    "directionality_logic": "Directionality is derived from structural position in the extraction flow. Low-competence novices are full targets (d \u2248 0.95) because they cannot exit the illusion; the mechanism preventing learning (metacognitive blindness) is intrinsic to their position. They have no arbitrage or mobile exit options \u2014 trapped (d \u2192 high f(d) \u2192 high \u03c7). Institutional quality assurance systems are constrained victims (d \u2248 0.65) because they must invest in verification mechanisms to overcome the signal distortion; they cannot simply exit or arbitrage (constrained exit, victim status). Expert correctors are moderate victims (d \u2248 0.55) \u2014 they face resistance to feedback but have some ability to work around the defense mechanisms; moderate power and constrained exit. Confidence marketers are beneficiaries (d \u2248 0.15) because they profit from the effect; institutional power and arbitrage exit (can move between markets). The psychology research community moved from low-victim (d \u2248 0.20) in 1999-2000 when they 'discovered' a clear effect, to moderate observer (d \u2248 0.72) as they recognized complexities in the effect's empirical basis; analytical exit option. The organizational culture has high institutional power with mixed exit (constrained to invoke narratives, arbitrage to change assessment systems) \u2014 d \u2248 0.50 \u2014 experiencing both coordination (need to communicate about competence) and extraction (performative use without structural change).",
+    "mandatrophy_analysis": "RESOLUTION: The Dunning-Kruger constraint resolves mandatrophy by showing that the 'effect' is not a single natural law or coordination problem, but a hybrid phenomenon varying by indexical context. From the novice's perspective, it is pure extraction (Snare) \u2014 they cannot learn because the mechanism preventing learning is intrinsic to their epistemic position. From the institution's perspective, it is coordination with asymmetric extraction (Tangled Rope) \u2014 they must solve the assessment problem while being distorted by false signals. From the confidence industry's perspective, it is pure coordination (Rope) \u2014 they are meeting demand. The empirical trajectory (original discovery \u2192 meta-analytic refinement \u2192 recognition of domain-dependency and regression artifacts) tracks an institutional shift from 'mountain-like certainty' (robust, universal, natural) to 'tangled rope complexity' (real but limited, domain-dependent, partly institutional). The increasing theater ratio (0.35 \u2192 0.65) captures this: organizations continue to invoke 'Dunning-Kruger' performatively (to explain gaps without addressing systems) even as the empirical basis has become contested. The mandatrophy is resolved by recognizing that the effect is partly natural (learning curve lag is inevitable), partly institutional (organizations could reduce it with better feedback and assessment), and partly narrative (cultural invocation has decoupled from empirical status). No single classification captures the full structure \u2014 the presheaf over different observation contexts IS the answer."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "metacognitive_illusion",
+      "organizational_assessment_validity"
+    ],
+    "dual_formulation_note": "The Dunning-Kruger effect is downstream of metacognitive capacity constraints (the root cause: inability to recognize what one doesn't know) and upstream of organizational assessment and feedback systems (the institutional mechanisms that either amplify or dampen the effect). This story focuses on the social/institutional manifestation; a separate story on the cognitive mechanism (metacognitive_illusion) would have different \u03b5 and different perspectives on the neuroscience of confidence calibration."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ]
+}

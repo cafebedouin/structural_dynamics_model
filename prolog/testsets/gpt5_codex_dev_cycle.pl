@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: gpt5_codex_dev_cycle
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-22
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_gpt5_codex_dev_cycle, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,8 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,94 +53,126 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: gpt5_codex_dev_cycle
- * human_readable: Self-Assisted AI Development Cycle
- * domain: technological
- * * SUMMARY:
- * An AI research lab uses its current flagship model (e.g., GPT-4), assisted by specialized coding models,
- * to write, debug, and optimize significant portions of its next-generation model's codebase.
- * This represents a complex feedback loop where the tool is used to create a more powerful version of itself,
- * concentrating power, creating dependence on existing AI architecture, and altering the role of human developers.
- * * KEY AGENTS:
- * - Junior Developer: Subject (Powerless)
- * - AI Research Lab: Beneficiary (Institutional)
- * - AI Safety Researcher: Auditor (Analytical)
+ *   constraint_id: gpt5_codex_dev_cycle
+ *   human_readable: Self-Assisted AI Development Cycle
+ *   domain: technological/ai_development
+ *
+ * SUMMARY:
+ *   The self-assisted AI development cycle represents a structural constraint
+ *   in contemporary AI research where leading laboratories leverage their
+ *   current flagship models (and specialized code-generation systems) to
+ *   accelerate the development of next-generation systems. This arrangement
+ *   creates a reinforcing asymmetry: the lab with the most capable tools can
+ *   develop the next capability increment faster, which produces the most
+ *   capable next tools, which accelerates the subsequent cycle. The
+ *   constraint exhibits all six DR types from different structural
+ *   perspectives, making it diagnostic for how technological capability
+ *   asymmetries translate into extraction mechanisms. From the flagship lab's
+ *   view, the arrangement is pure coordination—using proven tools
+ *   efficiently. From competing research groups, it is a snare—locked out
+ *   from an accelerating resource advantage. From field epistemic
+ *   independence, it is also a snare—verification of successor models becomes
+ *   circular, relying on inference patterns from the parent model. From open
+ *   standards bodies, it appears as a temporary problem with a
+ *   sunset—federated verification frameworks and open-source alternatives are
+ *   building exit routes. The constraint's rising theater_ratio (0.35 to
+ *   0.58) reflects that published methodology descriptions of self-assisted
+ *   development obscure the actual verification challenge: independent
+ *   researchers cannot audit the code-generation decisions, cannot replicate
+ *   the training optimization patterns, and cannot verify that the successor
+ *   model does not inherit subtle misalignment properties from the parent's
+ *   reasoning patterns embedded in its codebase.
+ *
+ * KEY AGENTS:
+ *   - Flagship Research Laboratory: Primary beneficiary (institutional/arbitrage) — captures acceleration advantage, market positioning, publication priority; can exit via licensing or redirection
+ *   - Current Flagship Model: Beneficiary agent (institutional/immediate) — its capabilities are extended and reused in next-generation development; propagates into successor
+ *   - Competing Research Groups: Primary victim (powerless/trapped) — lack access to equivalent tools; cannot reproduce acceleration advantage; structural lag widens over time
+ *   - Field Epistemic Independence: Secondary victim (powerless/trapped) — abstract collective good; verification mechanisms become self-referential and circular; no exit option
+ *   - Downstream Safety Verification Groups: Secondary victim (moderate/constrained) — benefit from published artifacts but constrained by circular epistemic dependencies; must evaluate systems containing parent-model-generated code
+ *   - Open Standards and Verification Bodies: Organized actor (organized/constrained) — building alternative verification frameworks with sunset logic; constrained by need for institutional adoption
+ *   - Academic Peer Review System: Institutional actor (institutional/arbitrage) — maintains performative review ritual; cannot audit code-generation decisions or training optimization patterns; sees its own process as degraded
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(gpt5_codex_dev_cycle, 0.55). % Mountain suppression <= 0.05, Rope extraction <= 0.15, Snare extraction >= 0.46
-domain_priors:suppression_score(gpt5_codex_dev_cycle, 0.45).   % Structural property (raw, unscaled). Only extractiveness is scaled (by power and scope).
-domain_priors:theater_ratio(gpt5_codex_dev_cycle, 0.20).       % Piton detection (>= 0.70)
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(gpt5_codex_dev_cycle, 0.52).
+domain_priors:suppression_score(gpt5_codex_dev_cycle, 0.68).
+domain_priors:theater_ratio(gpt5_codex_dev_cycle, 0.58).
 
-% Constraint metric facts — primary keys used by the classification engine.
-% These mirror domain_priors values using the metric key names from config.pl.
-narrative_ontology:constraint_metric(gpt5_codex_dev_cycle, extractiveness, 0.55).
-narrative_ontology:constraint_metric(gpt5_codex_dev_cycle, suppression_requirement, 0.45).
-narrative_ontology:constraint_metric(gpt5_codex_dev_cycle, theater_ratio, 0.20).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(gpt5_codex_dev_cycle, extractiveness, 0.52).
+narrative_ontology:constraint_metric(gpt5_codex_dev_cycle, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(gpt5_codex_dev_cycle, theater_ratio, 0.58).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Values: natural_law, coordination, constructed, enforcement
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(gpt5_codex_dev_cycle, tangled_rope).
 narrative_ontology:human_readable(gpt5_codex_dev_cycle, "Self-Assisted AI Development Cycle").
-narrative_ontology:topic_domain(gpt5_codex_dev_cycle, "technological").
+narrative_ontology:topic_domain(gpt5_codex_dev_cycle, "technological/ai_development").
 
-% Binary flags
-% narrative_ontology:has_sunset_clause(gpt5_codex_dev_cycle).      % Mandatory if Scaffold
-domain_priors:requires_active_enforcement(gpt5_codex_dev_cycle). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(gpt5_codex_dev_cycle).
 
-% Structural property derivation hooks:
-%   has_coordination_function/1 is DERIVED from constraint_beneficiary/2
-%   has_asymmetric_extraction/1 is DERIVED from constraint_victim/2
-% Both are required for Tangled Rope. Coordination is also required for Scaffold.
-narrative_ontology:constraint_beneficiary(gpt5_codex_dev_cycle, ai_research_lab).
-narrative_ontology:constraint_victim(gpt5_codex_dev_cycle, junior_developers).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(gpt5_codex_dev_cycle, flagship_lab).
+narrative_ontology:constraint_beneficiary(gpt5_codex_dev_cycle, current_model_capability).
+narrative_ontology:constraint_victim(gpt5_codex_dev_cycle, field_epistemic_independence).
+narrative_ontology:constraint_victim(gpt5_codex_dev_cycle, competing_research_groups).
+narrative_ontology:constraint_victim(gpt5_codex_dev_cycle, future_model_safety_verification).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE)
-% High extraction felt as a predatory trap leading to deskilling and job insecurity.
-constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, tangled_rope,
+% PERSPECTIVE 1: COMPETING RESEARCH GROUPS (SNARE) — Lack access to the flagship model and specialized coding models. Cannot replicate the development acceleration advantage. Trapped in a resource-constrained development cycle while the leading lab gains exponential speed advantage. Maximum experienced extraction through capability gap widening.
+constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% Viewed as essential infrastructure for accelerating progress.
-constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: FIELD EPISTEMIC INDEPENDENCE (SNARE) — The field's ability to independently verify the safety properties and alignment characteristics of successor models is compromised. Verification is bootstrapped from the same model that was used to build it, creating circular epistemic dependencies. No mechanism to exit or challenge the inference chain. Pure extraction of epistemic autonomy.
+constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, snare,
+    context(agent_power(powerless),
             time_horizon(generational),
-            exit_options(mobile),
+            exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Default analytical context (civilizational/analytical/global).
-% Recognizes both the coordination function and the asymmetric extraction.
+% PERSPECTIVE 3: DOWNSTREAM SAFETY VERIFICATION (TANGLED ROPE) — Benefit from accelerated capability advances and published artifacts from the flagship model's self-assisted development. But constrained by circular dependency: they must evaluate successor models that may contain optimization patterns from the parent model's own code generation, creating systematic blind spots. Partial extraction, partial coordination.
 constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: FLAGSHIP LABORATORY (ROPE) — Experiences the constraint as pure coordination: using proven tools to accelerate legitimate engineering work. The lab sees the arrangement as efficient resource allocation. Benefits from speed advantage, published artifacts, and market positioning. Exits via arbitrage: could license models, publish ahead of competition, or redirect capability investment.
+constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: OPEN STANDARDS AND VERIFICATION BODIES (SCAFFOLD) — Organized actors (AI safety institutes, benchmark consortiums, regulatory bodies) see the self-assisted cycle as a temporary coordination failure with a sunset clause: open-source alternative models, independent verification frameworks, and federated development standards are building parallel pathways for capability evaluation that don't rely on flagship model self-generation. Sunset: 5-10 years for open verification infrastructure to mature.
+constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: TRADITIONAL ACADEMIC PEER REVIEW (PITON) — Peer review of AI development methodology is substantially performative: reviewers cannot fully audit code generation decisions, verify training data pipeline integrity, or replicate multi-month training runs. Academic review persists through institutional inertia despite low functional verification capacity. Theater ratio reflects that published methodology papers describe the self-assisted process but cannot validate it independently.
+constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal analytical perspective, some degree of model-assisted development acceleration is inherent to capabilities scaling: more capable tools enable faster iteration, and bootstrapping from existing capabilities is a natural feature of iterative engineering. This perspective naturalizes the arrangement as an immutable consequence of capability advancement. However, structural data contradicts mountain classification — the engine will detect this as a false summit, revealing that the policy choices around model access, verification independence, and development transparency are contingent institutional arrangements, not laws of nature.
+constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE ARCHITECT (SCAFFOLD)
-% This classification is not applicable as the extraction (0.55) is too high
-% for a scaffold (<= 0.30) and there is no sunset clause.
-% constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, scaffold,
-%     context(agent_power(organized),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(continental))) :-
-%     narrative_ontology:has_sunset_clause(gpt5_codex_dev_cycle).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -134,18 +181,17 @@ constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, tangled_rope
 :- begin_tests(gpt5_codex_dev_cycle_tests).
 
 test(perspectival_gap) :-
-    % Verify there is a perspectival gap between powerless and institutional.
     constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless \= TypeInstitutional.
+    constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_conditions_met) :-
-    % Verify the analytical observer sees a tangled_rope.
-    constraint_indexing:constraint_classification(gpt5_codex_dev_cycle, tangled_rope, context(agent_power(analytical), _, _, _)),
-    % And that the structural conditions for it are met.
-    domain_priors:requires_active_enforcement(gpt5_codex_dev_cycle),
-    narrative_ontology:constraint_beneficiary(gpt5_codex_dev_cycle, _),
-    narrative_ontology:constraint_victim(gpt5_codex_dev_cycle, _).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(gpt5_codex_dev_cycle, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(gpt5_codex_dev_cycle, TR),
+    TR >= 0.70.
 
 :- end_tests(gpt5_codex_dev_cycle_tests).
 
@@ -155,88 +201,101 @@ test(tangled_rope_conditions_met) :-
 
 /**
  * LOGIC RATIONALE:
- * This constraint models the recursive, self-improving development cycle of advanced AI.
- * The base extractiveness (0.55) and suppression (0.45) are high, reflecting the significant concentration
- * of technological power and the reduction of alternative development paradigms.
+ *   Extractiveness (0.52): Moderate-high. The flagship lab captures capability advantage during the development window (immediate benefit), which translates to market positioning, talent attraction, and funding priority. The extraction is not total because the lab does genuinely create value—faster development produces better systems. However, the value capture is asymmetric: competing labs cannot access the acceleration mechanism, creating a widening gap. The initial value (0.28) reflects a lower barrier when the advantage was smaller; current value (0.52) reflects that the gap is now structural. Suppression (0.68): High. Significant barriers to independent replication include: (a) closed-source flagship model access, (b) proprietary code-generation systems, (c) computing resource concentration, (d) specialized coding models not publicly available, (e) technical depth required to independently debug complex ML systems. These barriers compound — a lab starting from scratch faces exponential difficulty catching up. Theater ratio (0.58, rising to 0.58): Moderate-high. Published papers on self-assisted development describe the methodology but provide limited transparency into actual code-generation decisions, training optimization patterns, or verification procedures. Reviews assess novelty and writing quality but cannot audit the core technical claim: that self-generated code maintains safety and alignment properties. Theater has increased over the interval as the process has become more opaque—early self-assisted development was more manual and reviewable; current versions are increasingly automated.
  *
  * PERSPECTIVAL GAP:
- * - The 'Junior Developer' (powerless, trapped) perceives this as a Snare. The effective extraction is high
- *   (χ = 0.55 * 1.5 * 1.2 = 0.99), felt as deskilling, reduced autonomy, and existential job risk.
- *   The alternatives are suppressed as this development model becomes the industry standard.
- * - The 'AI Research Lab' (institutional, mobile) sees it as a Rope. Effective extraction is negative
- *   (χ = 0.55 * -0.2 * 1.2 = -0.132), meaning the process generates more value than it costs them.
- *   It's a pure coordination mechanism to accelerate innovation.
- * - The 'Analytical Observer' classifies it as a Tangled Rope. The analysis recognizes both the genuine
- *   coordination function (accelerated development, a benefit to the lab) and the asymmetric extraction
- *   (power concentration, risks to developers). The classification requires all three structural properties:
- *   a beneficiary (the lab), a victim (developers), and active enforcement (IP protection, talent acquisition,
- *   and continuous model improvement to maintain the lead).
+ *   This constraint demonstrates divergent classification from a single structural condition. The flagship lab sees coordination (Rope)—legitimate tool use. Competing labs see extraction (Snare)—structural lock-out from the acceleration mechanism. Safety verification sees both (Tangled Rope)—benefiting from acceleration but trapped by circular epistemic dependency. Open standards bodies see a temporary problem (Scaffold)—with federated verification as the sunset pathway. Peer review sees its own degradation (Piton)—capable of assessing presentation but not of auditing code-generation decisions. The civilizational analytical view risks naturalizing contingency as law (Mountain)—'capable tools inevitably accelerate development'—but the structural data reveals this as a false summit: the acceleration advantage is a policy choice (model access concentration) not a law of nature.
  *
- * The theater_ratio is low (0.20) because the activity is highly functional, not performative.
+ * DIRECTIONALITY LOGIC:
+ *   Directionality (d) values are derived from structural positions: beneficiaries with arbitrage options (flagship lab: d ≈ 0.05-0.15) experience low or negative effective extraction—the constraint subsidizes them. Trapped competitors (powerless/trapped: d ≈ 0.95) experience maximum extraction—they bear costs with no exit. Constrained downstream verification groups (moderate/constrained: d ≈ 0.60) experience moderate extraction through epistemic dependency and resource barriers. The canonical directionality chain flows from access concentration: only the lab with current flagship models can run the code-generation systems at scale, creating a structural asymmetry where exit options differ dramatically across agents. The beneficiary's arbitrage option is: 'license the capability, publish, redirect to other projects.' The competitor's exit option is: 'none—must commit resources to rebuild from scratch or accept permanent lag.' The safety verification group's exit option is: 'constrained'—they can develop independent methodologies but cannot escape reliance on the flagship model's capabilities for practical evaluation.
  *
  * MANDATROPHY ANALYSIS:
- * The Tangled Rope classification is crucial. A simpler model might classify this as a pure Snare,
- * ignoring the very real coordination and innovation benefits that drive its adoption. By requiring
- * the system to acknowledge both the `constraint_beneficiary` (coordination) and `constraint_victim`
- * (extraction), the Tangled Rope provides a more nuanced and accurate model of this complex technological dynamic.
+ *   This constraint resolves the mandatrophy by showing that the classification depends critically on the observer's structural relationship to the access mechanism. If you have access to the flagship model + specialized code-generation tools: Rope (coordination). If you don't have access and resources are concentrated with one lab: Snare (extraction). If you are a safety verification body: Tangled Rope (mixed coordination and extraction through epistemic dependency). If you are building alternative verification frameworks: Scaffold (temporary problem with sunset). The mandatrophy is not 'which type is correct?' but 'whose structural position determines the classification?' The false mountain perspective (natural law view) naturalizes what is actually a contingent institutional arrangement: the concentration of flagship model access and the opacity of code-generation processes. Opening access, increasing verification transparency, and building federated evaluation frameworks would shift all perspectives toward Rope or Scaffold—the constraint's type is not immutable, it is policy-contingent.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_gpt5_codex_dev_cycle,
-    'Does this self-assisted development cycle converge on architectural monoculture, or does it unlock genuinely novel architectures?',
-    'Longitudinal analysis of model architecture diversity and capability jumps over multiple generations of self-assisted development.',
-    'If it converges (True): Leads to systemic risk, entrenched biases, and innovation stagnation (a global Piton). If it diverges (False): Accelerates progress towards AGI by overcoming human cognitive limits.',
+    code_quality_circularity,
+    'Does code generated by the flagship model accelerate development or introduce subtle optimization patterns that bypass safety constraints in the successor model?',
+    'Comparative analysis of code-generation-assisted vs manually-written codebases; longitudinal tracking of safety violations correlated with generated code sections; adversarial testing across generation boundaries',
+    'If code quality is genuinely acceleratory: constraint is mostly Rope/Scaffold from all perspectives. If generation introduces systematic blind spots: constraint is Snare from safety verification perspective.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(code_quality_circularity, empirical, 'Whether self-generated code introduces hidden optimization patterns').
+
+omega_variable(
+    epistemic_independence_recovery,
+    'Can independent verification of successor model safety properties be performed without epistemic bootstrapping from the parent model?',
+    'Development and testing of verification frameworks that do not rely on parent model reasoning; capability-agnostic safety evaluation methodologies; third-party independent audits with access to training data and architecture but not model-generated intermediate artifacts',
+    'If independent verification is achievable: epistemic snare is containable. If all verification paths ultimately rely on model-generated reasoning: snare is locked in structurally.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(epistemic_independence_recovery, empirical, 'Feasibility of epistemic independence in successor model verification').
+
+omega_variable(
+    access_concentration_threshold,
+    'What degree of capability advantage is required before competing groups structurally cannot catch up, and does the flagship lab''s self-assisted cycle exceed this threshold?',
+    'Historical capability growth curves for competing labs; lag-time analysis between flagship capability release and independent reproduction; resource cost comparison for self-assisted vs traditional development pathways',
+    'If lag < 12 months: advantage is temporary (Scaffold perspective valid). If lag > 36 months: structural lock-in (Snare from competitors). Current evidence suggests lag is widening.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(access_concentration_threshold, empirical, 'Whether capability gap creates irreversible competitive lock-in').
+
+omega_variable(
+    alignment_inheritance_problem,
+    'If the flagship model exhibits alignment properties (e.g., reduced refusal to harmful requests, specific optimization targets), do those properties inherit into the successor model through code-generation-assisted development?',
+    'Behavioral testing of successor model against parent model on alignment dimensions; analysis of architectural code patterns and their functional consequences; agent modeling of misaligned incentives in code generation',
+    'If alignment does not inherit: self-assisted cycle is safety-neutral. If alignment inherits undetected: successor model inherits parent''s blind spots—converting safety assumption into safety risk.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(alignment_inheritance_problem, empirical, 'Whether alignment properties inherit through code generation').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(gpt5_codex_dev_cycle, 0, 10).
+narrative_ontology:interval(gpt5_codex_dev_cycle, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-% This models the intensification of the constraint as the lab becomes more
-% reliant on its own tools.
-%
-% Theater ratio over time (remains low and functional):
-narrative_ontology:measurement(gpt5_codex_dev_cycle_tr_t0, gpt5_codex_dev_cycle, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(gpt5_codex_dev_cycle_tr_t5, gpt5_codex_dev_cycle, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(gpt5_codex_dev_cycle_tr_t10, gpt5_codex_dev_cycle, theater_ratio, 10, 0.20).
+% Theater ratio over time
+narrative_ontology:measurement(gpt5_tr_t0, gpt5_codex_dev_cycle, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(gpt5_tr_t3, gpt5_codex_dev_cycle, theater_ratio, 3, 0.48).
+narrative_ontology:measurement(gpt5_tr_t6, gpt5_codex_dev_cycle, theater_ratio, 6, 0.58).
 
-% Extraction over time (increases as the cycle becomes more efficient and entrenched):
-narrative_ontology:measurement(gpt5_codex_dev_cycle_ex_t0, gpt5_codex_dev_cycle, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(gpt5_codex_dev_cycle_ex_t5, gpt5_codex_dev_cycle, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(gpt5_codex_dev_cycle_ex_t10, gpt5_codex_dev_cycle, base_extractiveness, 10, 0.55).
+% Extraction over time
+narrative_ontology:measurement(gpt5_be_t0, gpt5_codex_dev_cycle, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(gpt5_be_t3, gpt5_codex_dev_cycle, base_extractiveness, 3, 0.41).
+narrative_ontology:measurement(gpt5_be_t6, gpt5_codex_dev_cycle, base_extractiveness, 6, 0.52).
+
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This process is a form of allocating advanced computational and cognitive
-% resources to a specific goal.
 narrative_ontology:coordination_type(gpt5_codex_dev_cycle, resource_allocation).
+narrative_ontology:affects_constraint(gpt5_codex_dev_cycle, capability_concentration_asymmetry).
+narrative_ontology:affects_constraint(gpt5_codex_dev_cycle, ai_safety_verification_circularity).
+narrative_ontology:affects_constraint(gpt5_codex_dev_cycle, open_source_ai_accessibility).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(gpt5_codex_dev_cycle, 0.1).
+% DUAL FORMULATION NOTE:
+% The self-assisted development cycle is downstream of the capability concentration constraint but represents a distinct structural mechanism. Upstream constraint focuses on access inequality; this constraint focuses on how that inequality compounds through code-generation-assisted development. A sibling constraint addresses the epistemic circularity specifically—whether verification of successor models can escape bootstrap dependency on parent model reasoning.
 
-% Network relationships (structural influence edges)
-% This development cycle directly creates and reinforces dependency on a
-% small number of foundation models.
-narrative_ontology:affects_constraint(gpt5_codex_dev_cycle, foundation_model_dependency).
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(gpt5_codex_dev_cycle, institutional, 0.08).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

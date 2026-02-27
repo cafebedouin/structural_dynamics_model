@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "us_sanctions_belarus_2022",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ussby"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "U.S. Sanctions on Belarus (2022)",
+    "topic_domain": "geopolitical/sanctions/economic_coercion",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_strategic_interests",
+      "opposition_to_lukashenko"
+    ],
+    "victims": [
+      "belarus_civilian_economy",
+      "belarus_working_population",
+      "belarus_export_dependent_sectors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Belarusian Civilian Economy",
+      "comment": "PERSPECTIVE 1: BELARUSIAN CIVILIAN ECONOMY (SNARE) \u2014 Cannot exit sanctions regime without political concessions. Faces extraction through currency collapse, supply chain disruption, inflation, and capital flight. No exit options available. d\u22480.93, f(d)\u22481.39, \u03c3=1.0 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Belarusian Working Population",
+      "comment": "PERSPECTIVE 2: BELARUSIAN WORKING POPULATION (SNARE) \u2014 Bears direct costs of job losses, wage suppression, reduced access to goods. Trapped by geography and lack of exit options. No ability to negotiate terms. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Belarusian Opposition Movement",
+      "comment": "PERSPECTIVE 3: BELARUSIAN OPPOSITION MOVEMENT (TANGLED ROPE) \u2014 Benefits from sanctions rhetoric (coordination messaging against Lukashenko) but bears costs when sanctions damage the economy (victims' support base). Has some organizational exit options through diaspora networks and international support. Mixed position. d\u22480.58, f(d)\u22480.73, \u03c3=1.0 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "U.S. Policy Apparatus",
+      "comment": "PERSPECTIVE 4: U.S. POLICY APPARATUS (ROPE) \u2014 Experiences sanctions as a coordination mechanism: coordinating with allies on enforcement, signaling policy commitment, organizing collective pressure. High exit optionality (can adjust, remove, or escalate sanctions unilaterally). d\u22480.08, f(d)\u2248-0.09, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary through coordination framing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Allied Nations (EU, Canada, UK)",
+      "comment": "PERSPECTIVE 5: ALLIED NATIONS (ROPE) \u2014 Coordination with U.S. on sanctions enforcement. Extract diplomatic credit for 'principled stance.' Have exit options (can unilaterally lift, modify, or selectively enforce). d\u22480.12, f(d)\u2248-0.05, \u03c3=1.1 \u2192 \u03c7\u2248-0.06. Net beneficiary through unified messaging."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "EU Border States (Lithuania, Poland)",
+      "comment": "PERSPECTIVE 6: EU BORDER STATES (SNARE) \u2014 Bear secondary costs: refugee pressure, trade disruption, border management costs, currency pressure from regional economic collapse. Constrained by EU coordination requirements; cannot unilaterally lift sanctions or negotiate independently. d\u22480.78, f(d)\u22481.12, \u03c3=0.9 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Sanctions Architecture",
+      "comment": "PERSPECTIVE 7: INTERNATIONAL SANCTIONS ARCHITECTURE (PITON) \u2014 Sanctions persist as a tool through institutional inertia despite mixed evidence on effectiveness in achieving political change. Theater ratio high: public messaging about 'isolating authoritarian regimes' persists even as evidence accumulates that sanctions entrench target regimes and harm civilian populations. d\u22480.05, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.03. Classified as piton because theater_ratio=0.58 suggests significant performative component in sanctions justification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer - Sanctions as Hybrid Mechanism",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sanctions function simultaneously as (1) coordination mechanism between allied states (rope function), (2) extraction from civilian population (snare function), and (3) performative policy theater (piton function). The structure contains genuine coordination benefits (allied solidarity, clear signaling) AND asymmetric extraction (harm to non-combatants with no political leverage). Beneficiaries: allied coordination, opposition rhetoric. Victims: civilians. Enforcer (U.S.) maintains control over escalation. \u03b5=0.68, suppression=0.72 confirms tangled hybrid structure. d\u22480.50, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.49."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sanctions_effectiveness_threshold",
+      "question": "At what extraction level do sanctions cross from legitimate pressure tool to counterproductive collective punishment?",
+      "resolution_mechanism": "Comparative analysis of sanctions regimes and political outcomes; econometric evidence on civilian harm vs policy change; longitudinal tracking of target regime behavior",
+      "impact": "If threshold < current extraction (0.68): sanctions are counterproductive punishment, snare classification confirmed for all affected groups. If threshold > 0.80: extraction may be justified by policy leverage, tangled_rope classification sustained.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Sanctions effectiveness threshold vs civilian harm"
+    },
+    {
+      "id": "regime_entrenchment_mechanism",
+      "question": "Do sanctions strengthen or weaken the Lukashenko regime's grip on power in practice?",
+      "resolution_mechanism": "Historical comparison: Belarus political stability indices pre/post-2022 sanctions; defection rates from security apparatus; popular support surveys; regime revenue sources (contraband, Russia, informal economy)",
+      "impact": "If strengthening: sanctions are extraction mechanism benefiting regime (invert beneficiary declaration). If weakening: sanctions may have policy leverage (justify tangled_rope over pure snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sanctions strengthen or weaken target regime"
+    },
+    {
+      "id": "civilian_vs_regime_distribution",
+      "question": "What fraction of sanction costs fall on civilians vs regime leadership / security apparatus?",
+      "resolution_mechanism": "Granular economic impact analysis: inflation effects on wage earners vs oligarch asset values; access to restricted goods by income quintile; capital flight patterns; regime revenue from contraband vs legitimate trade",
+      "impact": "If >80% civilian: pure snare classification. If >60% regime: tangled_rope classification sustained (mixed). If mixed with regime mitigation: asymmetry pronounced, supports snare reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of sanction costs between civilians and regime"
+    },
+    {
+      "id": "opposition_coordination_benefit",
+      "question": "Do international sanctions materially strengthen the organizational capacity or international standing of Belarusian opposition movements?",
+      "resolution_mechanism": "Tracking of opposition funding, international diplomatic access, organizational reach pre/post-sanctions; comparison with non-sanctioned autocracies' opposition capacity",
+      "impact": "If significant: validates tangled_rope as delivering real opposition benefit alongside civilian harm (mixed extraction). If negligible: opposition benefits are rhetorical only, reduces justification for snare classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sanctions strengthen Belarusian opposition capacity"
+    },
+    {
+      "id": "alternative_pressure_mechanisms",
+      "question": "Would diplomatic engagement, economic partnership, or conditional assistance achieve U.S. policy goals with lower civilian extraction than sanctions?",
+      "resolution_mechanism": "Counterfactual modeling; comparison with cases where engagement successfully influenced authoritarian behavior; cost-benefit analysis of diplomatic vs coercive approaches",
+      "impact": "If yes: sanctions are not the only available coordination tool; choice to use high-extraction method (0.68) becomes policy decision, not structural necessity. Strengthens snare classification.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Availability of lower-extraction pressure alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "U.S. sanctions on Belarus beginning in 2022 create a multi-perspective constraint where the same policy tool operates simultaneously as (1) a coordination mechanism between allied states, (2) an extraction mechanism imposing costs on civilians without political leverage, and (3) a performative policy theater. The constraint exemplifies how geopolitical coercion distributes harms asymmetrically: allied governments and opposition groups experience coordination benefits and rhetorical leverage; the Belarusian civilian economy and working population experience trapped extraction with no exit options. The rising theater ratio (0.35 \u2192 0.58 over 12 months) reflects that public justification for sanctions increasingly invokes abstract principles ('isolating authoritarianism,' 'international rules-based order') while tangible outcomes (regime behavior change, opposition strengthening) remain unclear or negative. Theater rise correlates with extraction growth: as sanctions bite harder, the gap between stated objectives and observable impact widens, requiring more performative messaging to sustain public support.",
+    "key_agents": [
+      "Belarusian Civilian Economy: Primary victim (powerless/trapped) \u2014 exposed to supply chain collapse, currency devaluation, inflation, capital flight with zero negotiating power",
+      "Belarusian Working Population: Primary victim (powerless/trapped) \u2014 bears direct costs of job losses, wage suppression, reduced purchasing power, reduced access to goods",
+      "Belarusian Opposition Movement: Secondary beneficiary + victim (organized/mobile) \u2014 receives international messaging support and potential resource flows, but loses civilian support base as economy collapses",
+      "U.S. Policy Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 experiences sanctions as coordination tool with unilateral control over escalation/de-escalation",
+      "Allied Nations (EU, Canada, UK): Secondary beneficiary (institutional/arbitrage) \u2014 gain diplomatic coordination credit and unified messaging capability",
+      "EU Border States: Secondary victim (moderate/constrained) \u2014 bear regional spillover costs (refugee pressure, trade disruption) without ability to negotiate independently",
+      "Lukashenko Regime: Notional target, ambiguous outcome \u2014 sanctions may strengthen grip through rally-around-flag effect; regime accesses contraband supply routes and Russian support",
+      "Analytical Observer: Observes full tangled structure \u2014 sanctions deliver coordination and extraction simultaneously; the mandatrophy question is whether civilian extraction is justified by coordination benefits"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Sanctions impose significant costs on the Belarusian economy through asset freezes, trade restrictions, financial system isolation, and import/export controls. These costs fall disproportionately on civilians and workers rather than regime leadership. The extraction is not minimal (thus not rope), but the presence of stated coordination benefits (allied unity, opposition support) prevents classification as pure snare at the analytical level. Suppression (0.72): High. Victims have extremely limited exit options: cannot escape geography, cannot negotiate sanctions terms, cannot influence U.S. policy decisions. The suppression operates through both institutional mechanisms (legal trade restrictions) and market mechanisms (currency collapse, capital flight). Theater ratio (0.58): Moderate-high. Sanctions are justified through abstract principles ('isolating authoritarianism,' 'defending democracy,' 'rules-based order') while evidence of effectiveness is mixed or negative. The gap between public messaging and observable outcomes has widened over the 12-month interval, requiring increasingly theatrical justification. Theater rise from 0.35 to 0.58 reflects accumulating pressure to sustain support for a policy with unclear success metrics.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence across the observation site. The U.S. policy apparatus sees coordination (Rope) \u2014 allied states unified, clear signal sent, U.S. maintains control. Allied nations see modest coordination (Rope) \u2014 diplomatic credit, unified messaging, low cost to themselves. The Belarusian opposition sees mixed benefit and harm (Tangled Rope) \u2014 international support for messaging but damaged domestic support base. EU border states see extraction (Snare) \u2014 regional spillover costs with constrained exit options. The Belarusian civilian economy and workers see pure extraction (Snare) \u2014 all costs, no control, no exit. The international sanctions architecture appears as degraded ritual (Piton) \u2014 persists through inertia despite mixed evidence on effectiveness. The analytical observer sees the full tangled structure: genuine coordination benefits for some actors (allied states, opposition rhetoric) combined with asymmetric extraction from those with no political leverage (civilians). This is a diagnostic case for how indexical classification exposes distributional asymmetry: the same policy is experienced as coordination by powerful actors and extraction by powerless ones.",
+    "directionality_logic": "Belarusian civilians/workers: Victims + trapped \u2192 d\u22480.94, f(d)\u22481.40. Maximum extraction experienced. Belarusian opposition: Mixed beneficiary + victim + mobile \u2192 d\u22480.60, f(d)\u22480.80. Receives coordination messaging benefits but loses civilian support base. U.S. policy apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary through coordination control. Allied nations: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.05. Modest beneficiary through diplomatic coordination. EU border states: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. Significant extraction without unilateral exit options. International sanctions architecture: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.11. Piton classification comes from theater gate (0.58 > 0.50 threshold) and accumulated evidence of performance gap.",
+    "mandatrophy_analysis": "CORE MANDATROPHY: The constraint classifies as Snare (\u03b5=0.68, suppression=0.72, \u03c7\u22650.66 across victim perspectives) but includes genuine coordination benefits for allied states and opposition rhetoric. This appears to violate the snare definition ('pure extraction, minimal coordination'). Resolution: This is not a classification error but a structural insight. The snare classification is CORRECT FROM THE VICTIM'S PERSPECTIVE (powerless/trapped agent), where \u03c7\u22480.63-0.65. From the beneficiary's perspective (U.S. policy apparatus), it classifies as Rope (\u03c7\u2248-0.06). The mandatrophy is resolved by recognizing that 'snare' and 'rope' are not absolute types \u2014 they are perspectival observations indexed to (P,T,E,S). The constraint IS a snare for the civilians experiencing it AND a rope for the allied states coordinating it. Both classifications are correct. The policy-level mandatrophy question is whether the coordination benefits to allied states and opposition rhetoric justify the extraction imposed on civilians. That is a VALUE QUESTION, not a classification question. The framework's role is to make the asymmetry VISIBLE: extraction is asymmetric, experienced as snare by those with no leverage and rope by those with control. The theatrical justification ('isolating authoritarianism') obscures this asymmetry. The theater ratio rising from 0.35 to 0.58 indicates that as extraction accumulates, the performance burden increases."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "russian_sanctions_cascade",
+      "belarus_regime_legitimacy",
+      "eu_eastern_border_stability"
+    ],
+    "dual_formulation_note": "U.S. sanctions on Belarus are structurally distinct from (1) Russian sanctions cascade (different enforcement coalition, different extraction mechanisms) and (2) Belarus regime legitimacy constraint (regime's internal claim to power). The network links indicate that sanctions policy affects both downstream constraints: escalation to Russian sanctions may intensify the cascade effect, while civilian extraction may alter regime legitimacy dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    }
+  ]
+}

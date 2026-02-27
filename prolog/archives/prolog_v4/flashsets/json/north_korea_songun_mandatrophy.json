@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "north_korea_songun_mandatrophy",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.85,
+    "suppression": 0.9,
+    "theater_ratio": 0.6,
+    "claimed_type": "snare",
+    "human_readable": "North Korean \"Songun\" (Military-First) Policy",
+    "topic_domain": "political/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "korean_peoples_army",
+      "ruling_kim_family"
+    ],
+    "victims": [
+      "north_korean_civilian_population",
+      "national_economy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "North Korean Civilian Population",
+      "comment": "Perspective 1: North Korean Civilian Population (Snare). Powerless and trapped within the system, they bear the brunt of resource extraction for the military, facing severe economic hardship and limited freedoms. No real exit options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Korean People's Army",
+      "comment": "Perspective 2: Korean People's Army (Rope). Benefits from the policy through resource prioritization, maintaining power and privilege. They experience the policy as coordination, ensuring their continued dominance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "National Economy",
+      "comment": "Perspective 3: National Economy (Piton). The economy is constrained and distorted by the policy, with resources diverted from productive sectors. While the policy was initially intended to strengthen national defense, it has become a drag on economic development, maintained through inertia and lack of alternatives. The theater ratio is still high, indicating that the original function of the policy has atrophied, leaving behind only performative elements and the structures to continue to enforce them. "
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Ruling Kim Family",
+      "comment": "Perspective 4: Ruling Kim Family (Tangled Rope). The Kim family benefits greatly from the Songun policy, solidifying their power and control. While they rely on the KPA for protection, they are also constrained by the need to maintain the army's loyalty and prevent internal challenges. They have power over the system (extraction from population), but must also actively maintain and coordinate it (coordinate with KPA) in order to maintain power (active enforcement)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 5: Analytical Observer (Snare). An objective observer sees the Songun policy as a system of coercion and control, extracting resources from the civilian population to benefit the military elite. The policy is unsustainable in the long term, leading to economic stagnation and social unrest."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "internal_stability_threshold",
+      "question": "At what level of economic hardship does the civilian population become a significant threat to internal stability?",
+      "resolution_mechanism": "Analysis of historical data on social unrest and economic conditions in North Korea, coupled with intelligence gathering on current levels of dissatisfaction.",
+      "impact": "If threshold is high: The policy can be sustained for longer, resulting in continued economic stagnation. If threshold is low: The policy may lead to internal unrest and potential regime change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold of economic hardship for internal stability"
+    },
+    {
+      "id": "external_threat_validity",
+      "question": "To what extent is the perceived external threat driving the Songun policy a genuine security concern versus a tool for internal control?",
+      "resolution_mechanism": "Geopolitical analysis of the Korean peninsula, examining the military capabilities and intentions of neighboring countries, as well as the regime's propaganda and rhetoric.",
+      "impact": "If genuine threat: The policy may be seen as a necessary evil for national defense. If a tool for control: The policy is primarily a means of maintaining power and suppressing dissent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Validity of external threat driving Songun policy"
+    },
+    {
+      "id": "military_loyalty_limits",
+      "question": "What is the limit of the Korean People's Army's loyalty in the face of growing economic hardship and potential social unrest?",
+      "resolution_mechanism": "Intelligence gathering on the KPA's internal dynamics, morale, and potential for factions to emerge that may challenge the regime.",
+      "impact": "If loyalty is absolute: The regime can rely on the KPA to suppress dissent and maintain control. If loyalty is conditional: The KPA may become a source of instability, potentially leading to a coup or civil war.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Limits of military loyalty to the regime"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.85
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The \"Songun\" (Military-First) policy in North Korea mandates the absolute prioritization of the Korean People's Army in all affairs of state and resource allocation. This policy has led to severe economic hardship for the civilian population, while solidifying the power of the ruling Kim family and the military elite. The policy's emphasis on military strength as a means of national survival has created a closed and oppressive society, with limited freedoms and widespread human rights abuses. While the regime justifies the policy as a necessary response to external threats, critics argue that it serves primarily to maintain the Kim family's grip on power.",
+    "key_agents": [
+      "North Korean Civilian Population: Primary victim (powerless/trapped) - Bears the brunt of resource extraction for the military.",
+      "Korean People's Army: Primary beneficiary (institutional/arbitrage) - Receives prioritized resource allocation and maintains power.",
+      "Ruling Kim Family: Organized actors (organized/constrained) - benefits most but must coordinate and enforce to maintain power.",
+      "National Economy: Constrained and distorted economic actor (institutional/constrained) - resource extraction creates long-term damage.",
+      "Analytical Observer: Global observer (analytical/analytical) - assesses the regime's true goals"
+    ],
+    "logic_rationale": "Extractiveness (0.85): Very high. The policy leads to severe resource deprivation for the civilian population, with a large portion of the national budget allocated to the military. Suppression (0.90): Extremely high. The regime maintains a tight grip on power through propaganda, surveillance, and repression, severely limiting freedoms and suppressing dissent. Theater ratio (0.60): Moderate-High. While the policy has some genuine military function, much of it is performative, serving to project an image of strength and deter potential adversaries. The Kim family's constant appearances on television and newspapers visiting military installations and personnel serves mostly a propaganda and political purpose. ",
+    "perspectival_gap": "The North Korean civilian population views this as pure extraction (snare). The military views this as coordination to maintain power (rope). The Kim family benefits from extraction and coordinates with the KPA to actively maintain power (tangled rope). An analytical observer sees a destructive regime (snare) extracting maximum possible value to consolidate their power at the expense of their citizen population.",
+    "directionality_logic": "The civilian population's directionality value is high because they are powerless and trapped. The military's directionality value is low because they are the beneficiaries with power and privilege within the system. The Kim family has moderate directionality because they coordinate to maintain power, but must extract from their citizen population to do so. ",
+    "mandatrophy_analysis": "This resolves a potential mandatrophy by differentiating the genuine benefits for the ruling elite and the military from the detrimental impacts on the broader population. The policy is not merely a mechanism for national defense, but also a tool for internal control and resource extraction, hence its classification as a snare for the civilian population and a mixed tangle for the Kim family. It is only a rope from the narrow perspective of the KPA, since they are the main benefactors of the policy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

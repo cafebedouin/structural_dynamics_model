@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "delayed_feedback_instability",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Oscillation Trap",
+    "topic_domain": "systems_engineering/economics/ecology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_term_actors"
+    ],
+    "victims": [
+      "long_term_system_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Long-Term System Stability",
+      "comment": "Long-term system stability is trapped and powerless to avoid the oscillations. Future generations bear the cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Short-Term Actors",
+      "comment": "Short-term actors can arbitrage the system by exploiting the delayed feedback, benefiting in the short term."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the delayed feedback creates a mixed system of coordination and extraction, a tangled rope where the system oscillates."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Regulators",
+      "comment": "Regional regulators who are aware of the system are constrained and can only observe the oscillations. Their actions are largely performative due to the delayed feedback."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "feedback_delay_time",
+      "question": "What is the time constant for feedback in this system?",
+      "resolution_mechanism": "Empirical data analysis to determine the time constant.",
+      "impact": "High delay means more severe extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Uncertainty in the exact delay time."
+    },
+    {
+      "id": "adaptive_capacity",
+      "question": "Can the system adapt to these oscillations?",
+      "resolution_mechanism": "Observe system behavior over a long timescale",
+      "impact": "Adaptive capacity would change the classification to a rope or scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the system has inherent resilience."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint occurs in systems where there is a significant temporal lag between an action and its observable outcome. This delay leads to oscillations, as actors over- or under-correct based on outdated information, creating instability. Short-term actors benefit from exploiting these oscillations, while long-term stability suffers. The theater ratio is high because regulators often engage in performative actions that don't address the root cause of the instability.",
+    "key_agents": [
+      "short_term_actors: Primary beneficiary (institutional/arbitrage) \u2014 can exploit system oscillations for immediate gain",
+      "long_term_system_stability: Primary victim (powerless/trapped) \u2014 suffers from system oscillations",
+      "regional_regulators: Moderate observer (moderate/constrained) \u2014 attempts to stabilize the system but is limited by the time delay",
+      "analytical_observer: Understands the system"
+    ],
+    "logic_rationale": "Extractiveness (0.55): High because the system benefits those taking short-term action at the expense of long-term sustainability. Suppression (0.40): The suppression comes from the lack of timely information and the inability to predict future states accurately. Theater Ratio (0.75): The theater ratio is increased to reflect the performative actions of regulators who are unable to effectively address the oscillations due to the delayed feedback.",
+    "perspectival_gap": "The short-term actors see a Rope, because they are extracting resources and benefits from the oscillations, they see the system as enabling their profit. Long-term system stability sees a Snare because the system is consistently undermined by the oscillations. The Analytical Observer sees a Tangled Rope because they understand both dynamics. Regional regulators see a Piton because their actions are largely performative and ineffective.",
+    "directionality_logic": "Short term actors can arbitrage the system for benefit while long term stability has no escape and bears the cost. Regional regulators are constrained and their actions are often performative.",
+    "mandatrophy_analysis": "The system is a Tangled Rope because there is a mix of extracting value but also coordination since the delay creates problems and then short term players find opportunities to use it. The piton perspective highlights the ineffectiveness of regulatory actions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "resource_depletion",
+      "market_manipulation"
+    ]
+  },
+  "directionality_overrides": []
+}

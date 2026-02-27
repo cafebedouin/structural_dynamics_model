@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "oc_donation_model",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ocd"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.55,
+    "claimed_type": "scaffold",
+    "human_readable": "Open Culture's Voluntary Donation-Based Funding Model",
+    "topic_domain": "economic/social/cultural_commons",
+    "requires_active_enforcement": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "content_consumers",
+      "cultural_commons"
+    ],
+    "victims": [
+      "content_creators",
+      "sustainability_risk"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Content Consumers (Free Access Beneficiary)",
+      "comment": "PERSPECTIVE 1: CONTENT CONSUMERS (ROPE) \u2014 Can access curated cultural content at zero marginal cost; can exit by switching to paywalled alternatives or directly accessing sources. Experience the constraint as pure coordination: aggregation solves the discovery problem. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.00. Net beneficiary with full mobility."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Content Creators (Attribution Without Compensation)",
+      "comment": "PERSPECTIVE 2: CONTENT CREATORS (SNARE) \u2014 Work is aggregated and freely distributed without direct compensation mechanism. Trapped by professional norm that 'exposure' counts as payment and by Open Culture's aggregation advantage. High suppression: alternative monetization paths (Patreon, licensing, direct sales) require upfront audience building that Open Culture's free distribution undercuts. d\u22480.90, f(d)\u22481.35, \u03c3=1.2 \u2192 \u03c7\u22480.45. Extraction without exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Culture Organization (Operator)",
+      "comment": "PERSPECTIVE 3: OPEN CULTURE ORGANIZATION (TANGLED ROPE) \u2014 Provides genuine coordination function (aggregation, curation, accessibility) but funding mechanism creates asymmetry: relies on voluntary donor support while freely distributing others' work. Constrained by non-profit structure and dependence on donor goodwill; cannot easily monetize or charge users. Benefits from volunteer labor and content creator attribution. Requires active enforcement of fair use and copyright compliance. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.25. Mixed coordination (aggregation value) and extraction (unpaid reliance on creator work)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Digital Rights and Open Access Movement",
+      "comment": "PERSPECTIVE 4: DIGITAL RIGHTS MOVEMENT (SCAFFOLD) \u2014 Sees Open Culture as a temporary solution enabling transition from scarcity-based copyright to abundance-based access norms. Organized advocates (Creative Commons, EFF, library associations) frame voluntary donation as a bridge mechanism with sunset logic: as institutional funding for cultural commons matures (library partnerships, public broadcasting models, education endowments), voluntary donation becomes less critical. d\u22480.35, f(d)\u22480.28, \u03c3=1.2 \u2192 \u03c7\u22480.09. Low extraction because exit path is visible (institutional funding alternatives)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Legacy Publishing and Copyright Regime",
+      "comment": "PERSPECTIVE 5: LEGACY COPYRIGHT REGIME (PITON) \u2014 Open Culture's model is performatively compliant with copyright law (fair use, public domain, licensing) but structurally degrades the traditional publishing incentive chain. Theater ratio 0.55: compliance theater (attribution, licensing notices) persists while the underlying payment mechanism fails. The regime remains through institutional inertia and legal frameworks, but its functional control of cultural distribution has atrophied. d\u22480.80, f(d)\u22481.18, \u03c3=1.2 \u2192 \u03c7\u22480.41. Extraction mechanism (copyright control) persists but is effectively neutered."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Information Economics View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational/universal perspective, digital information exhibits natural non-excludability (zero marginal cost to distribute, cannot prevent copying). Open Culture's donation model could be framed as an inevitable response to information economics: once content is digital, voluntarism is the natural equilibrium. However, the structural data (\u03b5=0.28, suppression=0.35) contradicts pure mountain classification \u2014 content creators ARE suppressed through career disincentives, suggesting institutional contingency rather than natural law. False summit risk: information economics does not mandate unpaid creator work, only free distribution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntary_donor_sustainability",
+      "question": "Is voluntary donation a structurally sustainable funding model for large-scale cultural aggregation, or does it require hidden subsidies (volunteer labor, institutional partnerships)?",
+      "resolution_mechanism": "Financial audit tracing all funding sources (direct donations, grants, institutional support, volunteer valuation); comparison with operational costs and content licensing fees.",
+      "impact": "If sustainable: constraint is primarily coordination (Rope/Scaffold). If dependent on hidden subsidies: constraint is extractive (Snare/Tangled Rope) with unpaid labor as the true cost.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether voluntary donations sustain operations without hidden subsidies"
+    },
+    {
+      "id": "creator_attribution_sufficiency",
+      "question": "Does attribution without compensation genuinely benefit content creators, or does it function as a legitimizing narrative for free extraction?",
+      "resolution_mechanism": "Tracking of creator career outcomes: correlation between Open Culture aggregation and creator income, audience growth, licensing deals, or career advancement; interviews with attributed creators.",
+      "impact": "If attribution drives tangible benefits: extraction level is moderate (Tangled Rope). If purely performative: extraction is severe (Snare), and suppression is higher than estimated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether attribution delivers tangible creator benefits"
+    },
+    {
+      "id": "alternative_institutional_maturity",
+      "question": "Are institutional alternatives (library partnerships, public broadcasting models, education endowments, grant funding) sufficiently mature to replace voluntary donation, or is the scaffold sunset speculative?",
+      "resolution_mechanism": "Mapping of institutional funding pathways available to cultural aggregators; analysis of funding trends in open-access infrastructure and cultural commons projects.",
+      "impact": "If alternatives mature: scaffold perspective is grounded and sunset is real (10-20 year horizon). If alternatives stall: scaffold is aspirational, and the constraint remains Tangled Rope indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Maturity of institutional funding alternatives to voluntary donation"
+    },
+    {
+      "id": "moral_licensing_effect",
+      "question": "Does the voluntary donation model's framing as 'altruistic cultural sharing' reduce donor scrutiny of extraction mechanisms and suppress collective action by creators?",
+      "resolution_mechanism": "Comparison of creator advocacy and unionization efforts in Open Culture versus other free-content platforms; analysis of donor knowledge regarding creator compensation.",
+      "impact": "If licensing effect is strong: suppression is higher (0.50+), and Snare classification is justified. If weak: suppression is accurately estimated at 0.35.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether altruistic framing suppresses critique of extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "Open Culture operates a structurally hybrid model: it provides genuine coordination (aggregation, curation, accessibility) for content consumers while simultaneously relying on unpaid or under-compensated content creators and voluntary donors to sustain operations. The constraint exhibits characteristics of both coordination (Rope) and extraction (Snare/Tangled Rope) depending on the observer's structural position. Content consumers experience pure coordination \u2014 they solve the discovery problem at zero cost and can exit freely. Content creators are trapped by professional norms that equate attribution with compensation, facing suppression of alternative monetization paths. The Open Culture organization itself operates as a mixed coordination-extraction hybrid: it aggregates value but cannot adequately fund the creators whose work generates that value. The donation model's increasing theater ratio (0.35\u21920.55 over 14 years) reflects growing reliance on altruistic framing and attribution aesthetics as the sustainability gap widens. The constraint resembles a Scaffold if institutional alternatives (library partnerships, public broadcasting models) mature; it resembles a Tangled Rope if voluntary funding remains primary; it approaches Snare if creator suppression increases without compensation.",
+    "key_agents": [
+      "Content Consumers: Primary beneficiary (powerless/mobile) \u2014 access aggregated cultural content at zero cost; can exit to paywalled alternatives",
+      "Content Creators: Primary victim (powerless/trapped) \u2014 work is freely distributed and aggregated without direct compensation; trapped by attribution norms and opportunity cost of alternative monetization",
+      "Open Culture Organization: Operator (moderate/constrained) \u2014 provides aggregation and curation coordination but depends on voluntary funding and unpaid creator attribution; constrained by non-profit structure",
+      "Voluntary Donors: Secondary participant (moderate/mobile) \u2014 fund operations through discretionary gifts; can exit by withholding support; key to constraint sustainability",
+      "Digital Rights Movement: Organized advocate (organized/arbitrage) \u2014 frames voluntary donation as transitional bridge to institutional funding models; sees sunset path",
+      "Legacy Copyright/Publishing Regime: Institutional incumbent (institutional/constrained) \u2014 compliance theater persists (attribution, licensing) while economic control atrophies; piton perspective"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. Open Culture's model extracts value from creators (attribution without direct compensation) but does not depend on active suppression \u2014 the suppression comes from professional norms (attribution as payment) and structural barriers (difficulty monetizing work post-aggregation). The constraint is neither pure extraction nor pure coordination. Base extractiveness reflects the unpaid reliance on creator work, but the value to consumers exceeds the extraction cost. Suppression (0.35): Moderate. Creators face barriers to alternative monetization (aggregated work undercutting direct sales, opportunity cost of independent distribution, professional norm that 'exposure' counts as payment). But suppression is not total \u2014 some creators can monetize directly, patreon/licensing are available, and professional institutions (universities, publishers) still pay. Theater ratio (0.55): Moderate. The model relies partly on attribution aesthetics and altruistic framing ('support free culture') to justify the funding gap, but the aggregation and curation are functionally valuable. Theater has increased over time as donors increasingly fund 'access' ideology rather than sustainable creator compensation. The ratio reflects growing gap between nominal function (free access) and structural sustainability (unpaid reliance).",
+    "perspectival_gap": "This constraint demonstrates how structural position determines classification. Content consumers see pure coordination (Rope) \u2014 the aggregation solves their discovery problem at zero cost. Content creators see pure extraction (Snare) \u2014 trapped by attribution norms and facing suppression of alternatives. The Open Culture organization sees hybrid coordination-extraction (Tangled Rope) \u2014 it aggregates value but cannot fund it adequately. The digital rights movement sees a temporary bridge (Scaffold) \u2014 institutional funding alternatives are emerging. The legacy copyright regime sees its own degradation (Piton) \u2014 copyright compliance theater persists while economic control fails. The civilizational observer risks seeing information economics inevitability (Mountain) \u2014 but the extraction of creator labor is institutional contingency, not natural law. The perspectival gap reveals that the same constraint means opposite things to creators versus consumers, and no single indexical view captures the full structure.",
+    "directionality_logic": "Content consumers: Beneficiary + mobile \u2192 d\u22480.15, f(d)\u2248-0.01. Near-zero extraction from their perspective; net beneficiary. Content creators: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. High extraction; trapped by norms and opportunity cost. Open Culture organization: Mixed beneficiary (from creator work) + victim (from donor dependence), constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction; organization extracts creator value but is itself constrained by funding uncertainty. Voluntary donors: Secondary + mobile \u2192 d\u22480.25, f(d)\u22480.05. Low extraction; donors can exit and are framed as altruistic partners. Digital rights movement: Organized + arbitrage \u2192 d\u22480.35, f(d)\u22480.28. Low extraction; organized advocates see exit path (institutional funding). Legacy regime: Institutional + constrained \u2192 d\u22480.80, f(d)\u22481.18. High extraction from its own degraded perspective; piton classification.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that Open Culture is genuinely hybrid but asymmetric. The coordination function (aggregation, curation, accessibility) is real and valuable for consumers. The extraction (unpaid creator reliance) is real and harmful for creators. The two are not separable \u2014 the aggregation creates value that is captured by consumers while creators bear the cost. The constraint is Tangled Rope at the analytical level: it has both genuine coordination (solves discovery problem) and asymmetric extraction (creators subsidize it). The Scaffold perspective is forward-looking: if institutional funding alternatives mature, the constraint becomes temporary coordination. The Snare perspective from creators is real: they are trapped by norms. The Rope perspective from consumers is real: they benefit with no cost. The constraint is not 'really' one type \u2014 it is multiple types in a coherent presheaf. The mandatrophy teaches that such hybrids are structurally stable only if extraction remains below consciousness threshold (theater_ratio high, extraction framed as altruism) or if beneficiaries actively defend creators. Open Culture's theater increasing (0.35\u21920.55) indicates that the sustainability gap is widening, and the constraint is moving toward explicit Snare classification unless creator compensation mechanisms are institutionalized."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "creator_compensation_norms",
+      "free_culture_sustainability"
+    ],
+    "dual_formulation_note": "Open Culture's donation model is downstream of broader free culture ideology and upstream of specific creator compensation outcomes. The constraint family includes: (1) free_culture_sustainability (\u03b5\u22480.35, Scaffold) \u2014 the institutional viability of free-access cultural models, (2) oc_donation_model (\u03b5\u22480.28, Tangled Rope) \u2014 the specific funding mechanism, (3) creator_compensation_norms (\u03b5\u22480.55, Snare) \u2014 professional norms that treat attribution as payment. These are distinct constraints with different \u03b5 values reflecting their structural properties."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.8
+    }
+  ]
+}

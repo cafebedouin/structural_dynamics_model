@@ -2,28 +2,29 @@
   "header": {
     "constraint_id": "car_ownership_norm_us",
     "version": "1.0",
-    "generated_date": "2024-05-21",
-    "status": "RESOLVED MANDATROPHY"
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "carownorm"
   },
   "base_properties": {
-    "extractiveness": 0.75,
-    "suppression": 0.85,
-    "theater_ratio": 0.4,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
     "human_readable": "The Norm of Individual Car Ownership in the US",
-    "topic_domain": "economic/social",
-    "requires_active_enforcement": true,
+    "topic_domain": "economic/social_infrastructure",
+    "requires_active_enforcement": false,
     "beneficiaries": [
       "automotive_manufacturers",
       "fossil_fuel_industry",
-      "insurance_companies",
-      "auto_loan_financiers",
-      "suburban_developers"
+      "highway_construction_contractors",
+      "auto_finance_lenders"
     ],
     "victims": [
-      "low_income_households",
-      "non_drivers",
-      "urban_pedestrians"
+      "transit_dependent_populations",
+      "low_income_workers",
+      "urban_renters",
+      "environmental_commons"
     ],
     "mandatrophy_resolved": true
   },
@@ -33,125 +34,175 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "regional",
-      "label": "The Low-Income Commuter",
-      "comment": "PERSPECTIVE 1: LOW-INCOME COMMUTER (SNARE) - In car-dependent regions, access to employment is contingent on car ownership, forcing individuals into debt for transportation. Lack of viable public transit creates a trapped condition. d≈0.95, f(d)≈1.42, σ=0.9 -> χ≈1.00. This is a classic debt and mobility trap."
+      "spatial_scope": "national",
+      "label": "The Transit-Dependent Worker",
+      "comment": "PERSPECTIVE 1: TRANSIT-DEPENDENT WORKER (SNARE) \u2014 Structurally locked into car ownership despite high financial cost. Public transit is systematically underfunded, zoning disperses employment, and social stigma attaches to non-car transportation. The worker has no exit: car ownership is functionally mandatory, subsidizes auto industry profits, and extracts disposable income and debt obligation. Experiences maximum suppression (trapped exit) with zero alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Suburban Parent",
+      "comment": "PERSPECTIVE 2: SUBURBAN PARENT (SNARE) \u2014 Constrained but not fully trapped. Car ownership is normalized as essential for family logistics (school runs, grocery access, children's activities). Transit-accessible housing is expensive; car-dependent zoning is the norm. The parent experiences high extraction (vehicle purchase, fuel, maintenance, insurance) with constrained alternatives \u2014 one child's activity schedule requires vehicle coordination that public transit cannot support."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Automotive-Industrial Complex",
-      "comment": "PERSPECTIVE 2: AUTOMOTIVE-INDUSTRIAL COMPLEX (ROPE) - For beneficiaries like car manufacturers and lenders, the system is a pure coordination mechanism that creates and sustains a massive, predictable market. d≈0.05, f(d)≈-0.12, σ=1.0 -> χ≈-0.09. The negative effective extraction indicates a net subsidy from the system."
+      "spatial_scope": "global",
+      "label": "The Automotive Manufacturer",
+      "comment": "PERSPECTIVE 3: AUTOMOTIVE MANUFACTURER (ROPE) \u2014 Benefits from the constraint as coordination: the norm ensures stable demand for vehicles, financing, maintenance, fuel, and replacement cycles. The manufacturer experiences this as the coordination function that justifies capital investment in production. The constraint subsidizes profitability. Net beneficiary \u2014 experiences the constraint as coordination benefit, not extraction."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "regional",
-      "label": "The Middle-Class Suburban Family",
-      "comment": "PERSPECTIVE 3: MIDDLE-CLASS SUBURBAN FAMILY (TANGLED ROPE) - Experiences both the coordination benefits (mobility, access to suburban amenities) and the high extractive costs (payments, insurance, fuel, time). They have some exit options (moving, remote work) but they are costly. d≈0.85, f(d)≈1.15, σ=0.9 -> χ≈0.78."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "national",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) - The system has a genuine coordination function (enabling mass mobility) but is coupled with extremely high, asymmetrically distributed extraction and suppression of alternatives. This is the canonical Tangled Rope structure. d≈0.72, f(d)≈1.15, σ=1.0 -> χ≈0.86."
-    },
-    {
-      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Urbanist Advocacy Group",
-      "comment": "PERSPECTIVE 5: URBANIST ADVOCACY GROUP (SCAFFOLD) - Views car dependency as a temporary, harmful structure to be replaced. They work to build alternatives (bike lanes, transit funding, zoning reform) with the explicit goal of making the constraint obsolete. Their actions create a sunset clause. d≈0.40, f(d)≈0.40, σ=0.8 -> χ≈0.24."
-    }
-  ],
-  "interval": {
-    "start": 1950,
-    "end": 2025
-  },
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1950,
-      "value": 0.3
+      "spatial_scope": "national",
+      "label": "Urban Transit Advocates",
+      "comment": "PERSPECTIVE 4: URBAN TRANSIT ADVOCATES (TANGLED ROPE) \u2014 Organized actors (transit agencies, urban planning bodies, climate coalitions) see mixed structure: the norm creates genuine coordination problems (congestion, land-use inefficiency) that require collective action, but the constraint also extracts from them (underfunded transit budgets, land devoted to parking and highways instead of housing or community space). They benefit from coordination frameworks but are victimized by extraction toward auto industry."
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 1990,
-      "value": 0.55
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Suburban Planning System",
+      "comment": "PERSPECTIVE 5: SUBURBAN PLANNING SYSTEM (PITON) \u2014 Zoning laws, parking minimums, and highway-centric infrastructure planning originally served a coordination function (efficient movement of goods and people post-WWII). These institutional forms now persist through inertia despite degraded function: they create sprawl, increase housing costs, reduce walkability, and reinforce car dependency. The theater ratio is high \u2014 planning meetings perform responsiveness to growth while infrastructure decisions remain predetermined by car-centric assumptions. The original functional purpose (rapid suburbanization) has atrophied; institutional forms persist."
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.75
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1950,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.3
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.4
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Geography & Scale View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / GEOGRAPHIC REALISM (FALSE SUMMIT) \u2014 From a civilizational perspective, this perspective risks naturalizing car dependency as inherent to American geography and scale: vast distances, dispersed settlement patterns, and low population density supposedly make individual car ownership inevitable. However, this naturalizes what is actually contingent institutional choice. Countries with equivalent or greater land areas (Australia, Canada) have major transit-accessible urban cores; US policy choices drove sprawl and highway-centric zoning rather than inevitable geography."
     }
   ],
   "omegas": [
     {
-      "id": "mobility_price_vs_extraction",
-      "question": "Are the high costs of car ownership a fair market price for the mobility provided, or an extractive rent enabled by the suppression of alternatives like public transit and dense housing?",
-      "resolution_mechanism": "Comparative economic analysis of mobility costs (as % of income) in US cities vs. European/Asian cities with robust public transit and different zoning policies.",
-      "impact": "If costs are found to be a fair reflection of value provided, the constraint is closer to a Rope. If costs are significantly inflated due to suppressed alternatives, it is a Snare.",
+      "id": "transit_feasibility_threshold",
+      "question": "What population density and urban form thresholds make transit genuinely infeasible versus merely underfunded by policy choice?",
+      "resolution_mechanism": "Comparative analysis of US regions with transit investment (Portland MAX, DC Metro, NYC subway) vs peer geographies with equivalent density; identification of density floors for economically viable transit",
+      "impact": "If threshold is low (<5000/sq mi): most US car dependency is policy-driven, not inherent. If threshold is high (>15000/sq mi): significant US regions genuinely require car dependency, reducing snare classification confidence.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Distinguishing fair mobility price from extractive rent."
+      "description": "Population density threshold for economically viable public transit"
     },
     {
-      "id": "revealed_preference_vs_coercion",
-      "question": "To what extent does car ownership reflect a genuine consumer preference for privacy and autonomy versus a choice coerced by land-use patterns and lack of alternatives?",
-      "resolution_mechanism": "Analysis of mobility choices in newly developed mixed-use areas with high-quality transit, controlling for income and demographics.",
-      "impact": "High uptake of alternatives would confirm the coercion hypothesis (Snare/Tangled Rope). Continued dominance of cars would support the preference hypothesis (Rope).",
+      "id": "car_cost_externalization_completeness",
+      "question": "How much of the true cost of car ownership (congestion, pollution, accidents, road maintenance, parking subsidy) is externalized versus captured in vehicle prices and fuel costs?",
+      "resolution_mechanism": "Comprehensive transport cost accounting: comparison of full system costs (user-paid + subsidized + externalized) vs modal alternatives; analysis of gas tax adequacy for road maintenance",
+      "impact": "If >60% externalized: snare classification is robust (extraction obscured by artificial affordability). If <30% externalized: car ownership may be economically rational, reducing snare confidence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of car ownership costs externalized via subsidies and unpriced externalities"
+    },
+    {
+      "id": "zoning_entrenchment_reversibility",
+      "question": "Can car-centric zoning and parking mandates be reversed through policy reform, or are they locked in by property rights, capital stock, and political economy?",
+      "resolution_mechanism": "Case study analysis of zoning reform attempts (Minneapolis YIMBY movement, California SB-9 implementation, parking mandate rollback in major cities); assessment of successful vs failed transitions",
+      "impact": "If readily reversible: the snare is contingent and has political exit pathways, potentially downgrading to tangled_rope. If locked in: snare classification is robust; structural change requires multi-generational capital turnover.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Disentangling consumer preference from structural coercion."
+      "description": "Whether car-centric zoning can be reversed through policy reform"
+    },
+    {
+      "id": "norm_entrenchment_mechanism",
+      "question": "Is car ownership norm maintenance primarily driven by infrastructure lock-in (physical capital) or by cultural/social belief propagation?",
+      "resolution_mechanism": "Analysis of US regions with both transit infrastructure and cultural car preference (San Francisco) vs regions with neither (declining Rust Belt areas); social survey data on car necessity beliefs vs actual availability of alternatives",
+      "impact": "If primarily infrastructure: reform requires capital replacement (slow, expensive, but possible). If primarily cultural: reform requires values shift (potentially harder). Hybrid suggests different intervention levers for different regions.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether car norm maintenance is driven by infrastructure or cultural entrenchment"
     }
   ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
   "commentary": {
-    "narrative_context": "This constraint models the socio-economic system in the United States that normalizes and often necessitates individual car ownership. The system is maintained by a confluence of interests including the automotive, fossil fuel, and real estate development industries. It is enforced through decades of policy choices, such as prioritizing highway construction over public transportation and enacting zoning laws that create low-density, car-dependent sprawl. While providing a genuine coordination function for mobility, it imposes massive financial burdens, particularly on lower-income households, and systematically suppresses less extractive alternatives.",
+    "narrative_context": "Dean Baker's analysis identifies car ownership as a constructed norm in the United States that functions as an extractive constraint on low-income and transit-dependent populations. The constraint emerges from a system of reinforcing institutional choices: zoning laws that mandate sprawl, highway-centric infrastructure investment, parking minimums, gasoline tax insufficiency, and cultural messaging that conflates car ownership with freedom and autonomy. This system extracts wealth from those who cannot afford to live near employment (forcing long commutes), subsidizes auto manufacturers and fossil fuel industries through tax policy and infrastructure spending, and naturalizes this arrangement as inevitable given American geography. From the perspective of a transit-dependent worker or low-income suburban parent, car ownership is not a choice but a trapped necessity. From the perspective of auto manufacturers and oil companies, the constraint is a coordination mechanism that stabilizes demand. The theater ratio has increased over the interval as the performance of 'freedom of choice' has intensified even as real alternatives have diminished.",
     "key_agents": [
-      "Low-Income Households: Primary victims (powerless/trapped) - forced into car ownership and debt to access jobs and services.",
-      "Automotive-Industrial Complex: Primary beneficiaries (institutional/arbitrage) - profit from the guaranteed demand for vehicles, fuel, insurance, and loans.",
-      "Middle-Class Suburbanites: Secondary victims/beneficiaries (moderate/mobile) - receive mobility benefits but bear high financial and time costs.",
-      "Urbanist Advocacy Groups: Organized opposition (organized/constrained) - work to build alternatives and dismantle the car-dependent infrastructure.",
-      "Analytical Observer: System-level view (analytical/analytical) - recognizes the dual nature of the system as both coordination and extraction."
+      "Transit-Dependent Workers: Primary victims (powerless/trapped) \u2014 forced into car ownership despite high cost; no viable alternatives",
+      "Suburban Parents: Secondary victims (moderate/constrained) \u2014 normalized car dependency for family logistics; constrained alternatives for activity scheduling",
+      "Automotive Manufacturers: Primary beneficiaries (institutional/arbitrage) \u2014 stable demand stream for vehicles, maintenance, replacement cycles; experience constraint as coordination benefit",
+      "Fossil Fuel Industry: Primary beneficiaries (institutional/arbitrage) \u2014 normalized gasoline consumption; benefit from car-centric zoning and highway spending",
+      "Highway Construction Contractors: Secondary beneficiaries (institutional/arbitrage) \u2014 recurring infrastructure projects; benefit from underfunded transit alternatives",
+      "Auto Finance Lenders: Secondary beneficiaries (institutional/arbitrage) \u2014 debt-financed vehicle purchases; profit from high-cost ownership structure",
+      "Urban Transit Advocates: Mixed actors (organized/constrained) \u2014 benefit from coordination frameworks; victimized by extraction of transit funding and developable land",
+      "Suburban Planning System: Institutional persistence (institutional/arbitrage) \u2014 maintains zoning and parking mandate architecture through inertia; sees degraded original function",
+      "Environmental Commons: Victim (analytical/analytical) \u2014 bears costs of emissions, sprawl, habitat loss, soil sealing; diffuse and unorganized; no negotiating capacity"
     ],
-    "logic_rationale": "Extractiveness (ε=0.75) is very high, representing the enormous transfer of wealth from households to the auto-industrial complex via car payments, insurance, fuel, and maintenance, often exceeding 20% of household income. Suppression (0.85) is also very high, as land-use patterns and a lack of investment in alternatives make non-car life functionally impossible in most of the US. Theater Ratio (0.40) reflects the powerful cultural narrative equating car ownership with freedom, success, and adulthood, which helps maintain the norm even when it is economically irrational.",
-    "perspectival_gap": "The gap is stark. For the institutional beneficiaries, the system is a highly effective Rope that coordinates a vast market. For the powerless victim trapped in a food desert without a bus line, it is a Snare that extracts wealth in exchange for basic participation in society. For the analytical observer, the system's dual function is clear, classifying it as a Tangled Rope. This gap explains why political discourse on transportation is so polarized: different actors are describing structurally accurate but irreconcilable experiences of the same system.",
-    "directionality_logic": "Beneficiaries (auto industry) have arbitrage exit and benefit, leading to a low 'd' value and a Rope classification with negative effective extraction. Victims (low-income households) are trapped and bear costs, leading to a high 'd' value and a Snare classification with maximal effective extraction. The analytical view averages these effects, resulting in the Tangled Rope classification that captures the system's essential conflict.",
-    "mandatrophy_analysis": "This case is a primary example of resolving mandatrophy. To label the system a 'Rope' based on its coordination function is to ignore the coercive, extractive reality for millions. To label it a 'Snare' is to ignore that it does, in fact, coordinate mobility for those who can afford it. The Tangled Rope classification is essential as it correctly identifies the structure as a hybrid, preventing the mislabeling that would occur if only the beneficiary's or the victim's perspective were considered."
+    "logic_rationale": "Extractiveness (0.58): High. The constraint extracts significant wealth from trapped agents (vehicle payments, fuel, maintenance, insurance costs) while subsidizing beneficiaries through tax policy (highway spending exceeds gas tax revenue by ~$25B annually), zoning-protected monopoly rents for auto manufacturers, and externalized costs (congestion, pollution, accidents). The extraction is less than a pure monopoly snare (0.75+) because some agents retain agency through geographic choice or alternative transit in select cities. Suppression (0.68): High. Structural barriers to alternatives include: zoning that disperses employment, parking mandates that make transit-accessible housing expensive, underfunded transit (order of magnitude lower per capita investment than car infrastructure), social stigma, and gasoline pricing that does not include full infrastructure/environmental costs. Agents cannot easily relocate to transit-accessible areas (cost barrier), cannot reliably use transit (frequency/coverage gaps), and face social pressure to conform. Theater ratio (0.55): Moderate-high. The constraint maintains significant performative element: political messaging around 'freedom of choice' and 'American mobility' masks the systematic underfunding of alternatives; suburban planning processes perform responsiveness while zoning and parking mandates are predetermined; car culture mythology ('the open road') obscures the spatial and financial lock-in. However, the extractive mechanism (forced consumption) is structural and real, not purely theatrical.",
+    "perspectival_gap": "This constraint shows a clear perspectival fissure between beneficiaries and victims. The automotive manufacturer and oil company see Rope \u2014 a stable, legitimate coordination function that solves the transportation problem and justifies capital investment. The transit-dependent worker sees Snare \u2014 trapped in costly, mandatory consumption with no exit. The organized transit advocates see Tangled Rope \u2014 the system creates both coordination problems (congestion, inefficiency) and extraction (underfunded transit). The suburban planning system sees Piton \u2014 the original postwar function (rapid suburban expansion) has atrophied, but zoning and parking mandates persist through institutional inertia. The geographic naturalization view (analytical) risks a false Mountain \u2014 the constraint appears inevitable given American scale and dispersal, but structural evidence shows it is policy-contingent. The perspectival range (Snare \u2192 Rope \u2192 Tangled Rope \u2192 Piton \u2192 false Mountain) demonstrates how a single institutional arrangement produces radically different experienced constraints depending on structural position.",
+    "directionality_logic": "Directionality values derive from agent power, exit options, and beneficiary/victim status. Transit-dependent workers: powerless + trapped + victim status \u2192 d \u2248 0.95 \u2192 high f(d) \u2192 high experienced extraction chi. Automotive manufacturers: institutional + arbitrage + beneficiary status \u2192 d \u2248 0.05 \u2192 low/negative f(d) \u2192 negative/neutral experienced extraction (benefits). Urban transit advocates: organized + constrained + both beneficiary (coordination) and victim (extraction) status \u2192 d \u2248 0.50 \u2192 moderate f(d) \u2192 moderate experienced extraction (mixed). Suburban planning system: institutional + arbitrage + beneficiary status (for legacy zoning/highway interests) \u2192 d \u2248 0.10 \u2192 low f(d). The scope modifier (national, \u03c3=1.0) scales all chi values uniformly across perspectives.",
+    "mandatrophy_analysis": "The snare classification resolves the mandatrophy by demonstrating that the constraint is not a natural coordination mechanism but a hybrid with dominant extraction. The beneficiary perspective (Rope) is empirically false when contextualized: the 'coordination' function (transportation) could be achieved more efficiently through multimodal alternatives that distribute benefits more widely. The snare classification reveals that the coordination framing masks extraction \u2014 the beneficiaries (auto industry, oil companies) have economic interest in maintaining the norm, while costs are borne by those least able to negotiate (low-income, transit-dependent, urban renters). The theater ratio (0.55) confirms degradation: the constraint now maintains itself partly through cultural mythology ('freedom') rather than functional necessity. The analytical mountain perspective is a false summit \u2014 geographic and scale arguments for inevitability do not withstand scrutiny (transit-capable peer countries exist). The mandatrophy is resolved by showing that the snare classification is structurally robust: removal of the constraint (shift to multimodal, transit-investment, zoning reform) would reduce extraction and improve overall welfare, but the beneficiaries have sufficient institutional power to prevent this reform."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure"
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "suburban_zoning_laws",
-      "fossil_fuel_subsidies",
-      "consumer_debt_burden"
+      "suburban_zoning_lock_in",
+      "gasoline_tax_insufficiency",
+      "highway_funding_bias"
+    ],
+    "dual_formulation_note": "Car ownership norm is downstream of three structurally distinct constraints: zoning (controls land-use patterns), gas tax (prices fuel below true cost), and highway funding bias (concentrates infrastructure investment). Each has its own extractiveness value. Car ownership norm integrates these three into a unified extractive system with high suppression and theater. Decomposition into separate stories enables analysis of specific policy levers (zoning reform, carbon pricing, transit investment) while car_ownership_norm_us captures the whole-system constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "suburban_zoning_lock_in",
+      "gasoline_tax_insufficiency"
     ]
   }
 }

@@ -2,27 +2,27 @@
   "header": {
     "constraint_id": "asshole_filter_2015",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "assholefilter"
   },
   "base_properties": {
-    "extractiveness": 0.6,
+    "extractiveness": 0.52,
     "suppression": 0.65,
-    "theater_ratio": 0.75,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "The Asshole Filter",
-    "topic_domain": "psychological/social",
+    "topic_domain": "psychological/social/organizational",
     "requires_active_enforcement": true,
-    "has_sunset_clause": false,
     "beneficiaries": [
-      "transgressive_individuals",
-      "system_maintainers_short_term"
+      "transgressive_actors",
+      "established_boundary_enforcers"
     ],
     "victims": [
-      "cooperative_individuals",
-      "organizational_culture",
-      "system_maintainers_long_term"
-    ]
+      "cooperative_members",
+      "institutional_trustworthiness"
+    ],
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
@@ -31,35 +31,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Cooperative Individual",
-      "comment": "PERSPECTIVE 1: COOPERATIVE INDIVIDUAL (SNARE) — Follows the stated rules and is penalized for it. They are trapped in the system (e.g., by employment) and bear the full cost of the filter's extraction of opportunity and morale. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.68. This high effective extraction crosses the Snare threshold (≥0.66)."
+      "label": "The Cooperative Member",
+      "comment": "PERSPECTIVE 1: COOPERATIVE MEMBER (SNARE) \u2014 Cooperative individuals internalize the norms and boundaries as legitimate social rules. They constrain their behavior in good faith. Yet the system rewards the transgressive actor, punishing cooperation. The cooperative member cannot exit without abandoning their identity commitments. Maximum extraction \u2014 they bear the cost of norm-maintenance without reward."
     },
     {
       "classification_type": "rope",
-      "agent_power": "powerful",
+      "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "local",
-      "label": "The Transgressive Individual",
-      "comment": "PERSPECTIVE 2: TRANSGRESSIVE INDIVIDUAL (ROPE) — Exploits the gap between stated and enforced rules for personal gain. From their perspective, the filter is a simple, effective coordination mechanism to get what they want. As a beneficiary with arbitrage exit, their directionality is low. d≈0.10, f(d)≈-0.07, σ=0.8 → χ≈-0.03. Negative extraction signifies a net subsidy."
+      "spatial_scope": "regional",
+      "label": "The Transgressive Actor",
+      "comment": "PERSPECTIVE 2: TRANSGRESSIVE ACTOR (ROPE) \u2014 The transgressive person experiences the constraint as a coordination mechanism that works in their favor. The norms exist; they ignore them; they profit from the social friction they create. They can exit at any time (reputational cost is low relative to material gain). Net beneficiary \u2014 the constraint coordinates others into compliance while they arbitrage the asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Boundary Enforcer (Management/Community Leadership)",
+      "comment": "PERSPECTIVE 3: BOUNDARY ENFORCER (TANGLED ROPE) \u2014 Institutional actors tasked with boundary maintenance (managers, community leaders, HR) experience the constraint as a hybrid. They benefit from having clear rules to enforce (reduces ambiguity about decision-making). Yet the filter's function selects for transgressive people into leadership positions over time, which undermines the enforcer's own authority. Constrained exit \u2014 they are committed to the role but find it degrading as the system selects their successors from the rule-breakers."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Trustworthiness (Collective Good)",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL TRUSTWORTHINESS (SNARE) \u2014 The abstract collective good of institutional trustworthiness cannot exit or organize. As the filter selects transgressive people into positions of authority, the institution's reliability and predictability degrade. The system's own enforcement mechanism (promoting the people most willing to violate norms) undermines the condition it requires (norm-following). Trapped \u2014 no advocate, no exit, bearing full extraction cost."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The System Maintainer (Long View)",
-      "comment": "PERSPECTIVE 3: SYSTEM MAINTAINER (PITON) — The manager or leader who created the filter through conflict avoidance. Over time, they see the stated rules have become pure theater. The original function (coordination) has atrophied, but the rules persist inertially. The high theater_ratio (0.75) satisfies the Piton gate (≥0.70)."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The New Hire with Options",
-      "comment": "PERSPECTIVE 4: NEW HIRE (SCAFFOLD) — A newcomer who observes the toxic system but has low switching costs. For them, the filter is a temporary problem. Their personal 'sunset clause' is their notice period. They will either see the system reformed or they will leave. The constraint is a temporary support for transgressors that they do not have to tolerate long-term."
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Norm-Setting Theater",
+      "comment": "PERSPECTIVE 5: NORM-SETTING THEATER (PITON) \u2014 Organizational codes of conduct, mission statements, and explicit value hierarchies are largely performative at the institutional level. They signal commitment to norm-following while the selection mechanisms (reward structures, promotion criteria) are indifferent to norm compliance. The theater persists through inertia \u2014 removing it would require acknowledging the filter's operation, which is costly. Theater ratio reflects the gap between stated values and incentive structures."
     },
     {
       "classification_type": "tangled_rope",
@@ -68,82 +77,102 @@
       "exit_options": "analytical",
       "spatial_scope": "global",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — The default analytical view. It recognizes both the claimed coordination function (the stated rules) and the severe, asymmetric extraction enabled by non-enforcement. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.83. This falls squarely in the Tangled Rope classification range (0.40 ≤ χ ≤ 0.90)."
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The civilizational view reveals the asshole filter as a genuine hybrid: it does coordinate behavior (people comply with stated norms in order to avoid transgressive punishment) while extracting from cooperative agents and degrading institutional trustworthiness (the primary coordination mechanism). The constraint is structurally stable because it rewards the people most willing to violate its own stated purposes, creating a selection cascade. Not a natural law but a stable institutional attractor with real coordination function and real extraction."
     }
   ],
   "omegas": [
     {
-      "id": "intent_vs_outcome",
-      "question": "Is the filter an unintentional outcome of conflict avoidance, or a deliberate (if unstated) strategy to attract and reward aggressive 'go-getters'?",
-      "resolution_mechanism": "Behavioral analysis of system maintainers; comparison of their stated values vs. their enforcement actions.",
-      "impact": "If intentional, the system is a more malicious Snare from the maintainer's perspective. If unintentional, it's a Piton or Tangled Rope born of incompetence. The structure for the victim remains a Snare regardless.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Distinguishing between unintentional incompetence and deliberate strategy in the filter's creation."
+      "id": "transgression_definition_boundary",
+      "question": "What constitutes 'transgressive' in context? Is the filter selecting for norm-violators or for agents with sufficient power to ignore consequences?",
+      "resolution_mechanism": "Comparative analysis of transgressive behavior across power levels; distinction between rule-breaking and consequence-immunity; measurement of enforcement selectivity by transgressor power status",
+      "impact": "If power-based: the filter is a snare for the powerless and a rope for the powerful \u2014 purely extractive. If norm-based: the filter is a genuine coordination problem with misaligned incentives \u2014 tangled rope is accurate.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether transgression reflects norm-violation or power to ignore consequences"
     },
     {
-      "id": "repulsion_vs_attraction",
-      "question": "Is the filter's primary mechanism repelling cooperative people, or is it actively attracting transgressive ones?",
-      "resolution_mechanism": "Longitudinal study of cohort composition in organizations with known filters; entry/exit interviews focusing on norm perception.",
-      "impact": "If repulsion is primary, interventions should focus on supporting and rewarding cooperative actors. If attraction is primary, interventions must focus on robustly enforcing boundaries to make the environment unattractive to transgressors.",
-      "confidence": "high",
+      "id": "institutional_selection_mechanism_clarity",
+      "question": "Do institutions explicitly select transgressive people, or does the filter emerge from implicit incentive structures (reward for confidence, speed, decisiveness regardless of boundary compliance)?",
+      "resolution_mechanism": "Analysis of promotion criteria and actual promotion patterns; comparison of stated vs revealed preferences in hiring/advancement; interview data from decision-makers",
+      "impact": "If explicit: institutions knowingly undermine trustworthiness \u2014 high mandatrophy signal. If implicit: the filter is a subtle misalignment of coordination and extraction \u2014 classic tangled rope.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Determining if the filter works by pushing good actors out or pulling bad actors in."
+      "description": "Whether transgressive selection is explicit or implicit in institutional incentives"
+    },
+    {
+      "id": "cooperative_defection_threshold",
+      "question": "At what point do cooperative members defect or abandon the organization? Does the filter self-limit through cooperative exit, or do cooperative members remain trapped indefinitely?",
+      "resolution_mechanism": "Longitudinal tracking of cooperative member retention; exit interviews; comparison of voluntary departure rates in high-filter vs low-filter institutions; measurement of cooperative member commitment over time",
+      "impact": "If defection: the snare is unstable, and the filter cycles (reform \u2192 restoration of cooperation \u2192 re-emergence of filter). If trapped: the snare is stable, and institutional degradation continues until external shock.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cooperative members defect or remain trapped in high-filter institutions"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 4,
-      "value": 0.55
+      "time_point": 5,
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 9,
-      "value": 0.75
+      "time_point": 10,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 4,
-      "value": 0.4
+      "time_point": 5,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 9,
-      "value": 0.6
+      "time_point": 10,
+      "value": 0.52
     }
   ],
   "interval": {
     "start": 0,
-    "end": 9
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The 'Asshole Filter' is a systemic social or organizational constraint where stated rules and boundaries are inconsistently enforced. This dynamic unintentionally repels cooperative individuals who respect the stated rules, while attracting or retaining transgressive individuals who learn that the rules can be ignored for personal gain. The core mechanism is the gap between the 'theater' of the official rules and the reality of what behavior is actually rewarded. Over time, this degrades the social environment, penalizes good actors, and can lead the system's maintainer to falsely conclude that most people are inherently transgressive.",
+    "narrative_context": "The asshole filter is a systemic phenomenon in organizations and communities where established norms and boundaries intended to maintain cooperation and trustworthiness unintentionally repel non-transgressive people while attracting and rewarding transgressive ones. The mechanism is straightforward: enforce a norm, and people who respect norms comply; people who ignore norms violate freely; the system then selects for leadership from among the violators because they appear more confident, decisive, and willing to bend rules 'when necessary.' Over time, the institution becomes populated by people for whom norm-violation is a revealed preference, not a deviation. The irony is complete \u2014 the norm-enforcement mechanism selects its own subversion. This constraint exhibits genuine coordination function (the norms do coordinate behavior, at least temporarily) coupled with extraction (from cooperative members and from the institution's own trustworthiness as a collective good). Theater is high because organizations maintain elaborate codes of conduct and mission statements while their promotion practices contradict them. The filter is neither pure coordination nor pure extraction; it is a tangled rope: it coordinates while extracting, and it survives because both functions are real.",
     "key_agents": [
-      "Cooperative Individuals: Primary victims (powerless/trapped) — they follow the stated rules and are systematically disadvantaged.",
-      "Transgressive Individuals: Primary beneficiaries (powerful/arbitrage) — they ignore the stated rules and are rewarded with access, resources, or faster outcomes.",
-      "System Maintainers: Institutional actors (institutional/constrained) — they create the filter, often unintentionally, through conflict avoidance. They are short-term beneficiaries (avoiding conflict) but long-term victims (presiding over a toxic culture).",
-      "Organizational Culture: Abstract victim (powerless/trapped) — the collective trust and morale of the group, which is degraded by the filter."
+      "Cooperative Members: Primary victims (powerless/trapped) \u2014 internalize norms in good faith; constrained by identity commitments; receive punishment for compliance",
+      "Transgressive Actors: Primary beneficiaries (institutional/arbitrage) \u2014 violate norms with impunity; selected into leadership; benefit from the institutional confusion their presence creates",
+      "Boundary Enforcers (Management/Leadership): Secondary beneficiaries and victims (moderate/constrained) \u2014 benefit from clear rules to enforce; degraded by the filter selecting their successors from rule-breakers",
+      "Institutional Trustworthiness: Collective victim (powerless/trapped) \u2014 abstract public good that cannot organize or exit; degraded by selection of transgressive leadership",
+      "Norm-Setting Theater: Institutional inertia carrier (institutional/arbitrage) \u2014 performative codes and mission statements persist despite contradictory incentives",
+      "Analytical Observer: Systemic view (analytical/analytical) \u2014 sees the complete feedback loop: norms select for their violators, violators become leaders, leaders model norm-violation, new norms are written to contain it, filter repeats"
     ],
-    "logic_rationale": "Extractiveness (ε=0.60): High. The filter allows transgressive individuals to extract significant value (opportunity, attention, resources) at the direct expense of cooperative ones. Suppression (0.65): High. For those trapped in the system (e.g., an employee), the options are to conform to the toxic norm, be exploited, or exit at high personal cost. This lack of viable alternatives is a form of coercion. Theater Ratio (0.75): Very High. The gap between the stated rules (e.g., 'please use the proper channels') and the enforced reality (rewarding those who bypass channels) is the central feature of the constraint. This high ratio enables the Piton classification from the long-term observer's perspective.",
-    "perspectival_gap": "The filter is a powerful example of perspectival divergence. For the cooperative victim, it's a Snare they cannot escape. For the transgressive beneficiary, it's a simple and effective Rope for getting ahead. For the system maintainer who sees the long-term decay, the original rules have become a functionless, inertial Piton. For a new hire with the ability to leave, the filter is a temporary Scaffold supporting a bad system that they can choose to exit. The analytical observer sees the combination of a coordination claim and an extractive reality, classifying it as a Tangled Rope.",
-    "directionality_logic": "The classification for each agent is derived directly from their structural position. The 'Cooperative Individual' is a victim with trapped exit options, leading to a high directionality (d≈0.95) and a Snare classification. The 'Transgressive Individual' is a beneficiary with arbitrage exit options, yielding a low, negative directionality (d≈0.10) and a Rope classification. The analytical observer's canonical directionality (d≈0.72) correctly identifies the underlying Tangled Rope structure.",
-    "mandatrophy_analysis": "This constraint resolves a common mandatrophy where a system is misidentified based on its stated purpose. The 'Asshole Filter' is often created by someone who believes they are establishing a Rope (a fair, clear set of rules for coordination). However, the structural analysis of beneficiaries, victims, and enforcement reveals its true nature as a Tangled Rope or Snare. Deferential Realism prevents this mislabeling by focusing on the observed structural reality of extraction and suppression, rather than the creator's intent or the system's performative claims."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The filter extracts from cooperative members (loss of status/reward for compliance) and from institutional trustworthiness (degradation of reputation). However, extractiveness is not as severe as a pure snare (0.70+) because the transgressive actors do not extract resources directly \u2014 they extract status and authority. The cooperative members remain functionally in the organization and continue to produce value; they are not eliminated. Theater ratio (0.58): High-moderate. The gap between stated organizational values (codes of conduct, mission statements) and actual promotion criteria (reward for confidence, decisiveness, norm-flexibility) is substantial. Approximately 58% of the institutional boundary-maintenance activity is performative \u2014 the codes are enacted as theater while the real selection mechanism operates independently. Suppression (0.65): High. Cooperative members face significant barriers to exit: sunk identity investment, social commitment to the stated values, belief that leaving represents personal failure rather than institutional failure. The filter suppresses alternatives (formation of parallel organizations, explicit rejection of the norms) because defection is costly and appears like moral compromise.",
+    "perspectival_gap": "The asshole filter creates maximum perspectival divergence because the same constraint appears as rope (beneficiary view), snare (victim view), and piton (institutional view) simultaneously. The beneficiary experiences low or negative extraction because they arbitrage the constraint for status gain. The victim experiences high extraction because they comply and are punished. The boundary enforcer experiences tangled rope \u2014 they maintain the system's legitimacy while watching it select for their own subversion. The collective good (institutional trustworthiness) is completely invisible to organizational decision-making, producing snare dynamics from a powerless, trapped position. The piton perspective reveals that institutional codes are maintained as theater because removing them would require explicit acknowledgment of the filter. The analytical view reveals the feedback loop: the constraint selects people who will undermine it, which makes it a stable attractor in organizational dynamics. The presheaf of perspectives shows that the constraint is not a single type but a family of nested extraction mechanisms, each visible from a different position.",
+    "directionality_logic": "Directionality is determined by each agent's structural position relative to the extraction flow. Cooperative members are victims with trapped exit \u2014 high d \u2192 high experienced extraction. Transgressive actors are beneficiaries with arbitrage exit \u2014 low d \u2192 negative experienced extraction (they benefit from the constraint). Boundary enforcers are constrained victims with partial benefit \u2014 medium d \u2192 medium extraction (they experience both the benefit of clear rules and the cost of selected successors who undermine their authority). Institutional trustworthiness is a powerless, trapped victim \u2014 maximum d \u2192 maximum experienced extraction. The norm-setting theater (institutional perspective) benefits from inertia \u2014 low d \u2192 negative extraction (the theater persists because it provides deniability). The analytical observer has analytical exit, which produces medium d under the derivation. The filter is stable when transgressive beneficiaries have sufficient power to resist feedback (arbitrage exit); it becomes unstable when cooperative members defect in sufficient numbers (threshold effect on collaborative capacity) or when institutional trustworthiness degrades to the point where external credibility fails. Boundary enforcers are the critical inflection point: if they remain committed to norm-enforcement despite observed violation, the filter persists; if they defect, the institutional authority structure collapses.",
+    "mandatrophy_analysis": "TANGLED ROPE STATUS: The asshole filter avoids mandatrophy because it exhibits genuine coordination function (the norms do coordinate behavior in short term) coupled with genuine extraction (from cooperative members and institutional trustworthiness). The mandatrophy risk is high because institutions often mislabel the filter as 'natural selection' (mountain) or 'inevitable organizational dynamics' (piton), when it is actually a tangible hybrid. The resolution requires acknowledging that: (1) norm-enforcement selects for norm-violators through reversed incentives, (2) this selection is not inevitable but contingent on reward structures, and (3) realigning incentives (rewarding norm-compliance rather than norm-flexibility) would change the selection mechanism. The theater ratio (0.58) indicates that approximately 58% of the institutional boundary-work is performative \u2014 the codes exist as cover for the real mechanism. If the theater ratio were 0.85+, the constraint would degrade to piton (inertial institution with lost function). If the theater ratio were 0.30\u2013, the constraint would clarify to either pure rope (if beneficiary-focused) or pure snare (if victim-focused). The current 0.58 ratio reflects the genuine hybridity: the norms do some coordination work, but the selection mechanism does extraction work, and the two functions are in tension."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
-    "affects_constraints": []
-  }
+    "affects_constraints": [
+      "organizational_trust_degradation",
+      "cooperative_member_retention"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
 }

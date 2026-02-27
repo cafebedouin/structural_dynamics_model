@@ -1,0 +1,140 @@
+{
+  "header": {
+    "constraint_id": "individual_revolution_autonomy",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The One-Man Revolution",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_power_structures"
+    ],
+    "victims": [
+      "individual_revolutionary_actors",
+      "potential_mass_movements"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Revolutionary Actor",
+      "comment": "Perspective 1: Individual Revolutionary Actor (Snare) - Isolated individuals seeking radical social change often find themselves trapped by the overwhelming power of existing structures, facing social ostracism, legal repercussions, and a lack of resources. They are the primary target of the constraint, bearing the full cost of attempting revolution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Potential Mass Movements",
+      "comment": "Perspective 2: Potential Mass Movements (Tangled Rope) - The focus on individual autonomy can fragment potential mass movements, hindering their ability to coalesce and challenge incumbent powers effectively. While individual autonomy is valuable, its prioritization over collective action can inadvertently strengthen existing hierarchies. These movements have some capacity to affect change, but are constrained by power structures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Incumbent Power Structures",
+      "comment": "Perspective 3: Incumbent Power Structures (Rope) - Existing power structures benefit from the narrative that individual autonomy is the most effective path to revolution. This diverts resources and energy away from organized collective action, which poses a more direct threat to their dominance. Focus on individual revolutions helps them to maintain their status quo through dividing any potential opposition."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Academic Analyst of Social Change",
+      "comment": "Perspective 4: The Academic Analyst (Piton) - Sees the 'individual revolution' as a degraded form of social change. A concept that once held promise now serves primarily as a distraction from structural inequalities. The emphasis on individual responsibility masks underlying systemic issues."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "relative_effectiveness_collective_action",
+      "question": "Is organized collective action more effective than individual autonomy in achieving large-scale social and political change?",
+      "resolution_mechanism": "Historical analysis of successful social movements and revolutions compared to the impact of individualistic approaches.",
+      "impact": "If collective action is more effective: The 'one-man revolution' narrative serves as a distraction. If individual autonomy is more effective: Incumbent powers face challenges to their authority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determining whether collective action or individual autonomy is more effective in causing major social and political change."
+    },
+    {
+      "id": "tradeoff_individual_autonomy_collective_good",
+      "question": "To what extent does the pursuit of individual autonomy undermine the potential for collective action and the pursuit of the collective good?",
+      "resolution_mechanism": "Sociological studies on the effects of individualism on social cohesion and political engagement.",
+      "impact": "If individual autonomy undermines collective action: The constraint is highly extractive. If it does not undermine collective action: The constraint is less extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The effect that individual autonomy has on potential collective action and its role in a common good."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint explores the narrative that individual autonomy and 'one-man revolutions' are the most effective path to social and political change, contrasting it with the pursuit of mass movements and collective action. It identifies a structural tension where the emphasis on individual solutions may inadvertently benefit incumbent power structures by diverting resources and energy away from organized challenges.",
+    "key_agents": [
+      "Individual Revolutionary Actors: Primary victims (powerless/trapped) - those who seek radical social change through individual actions.",
+      "Potential Mass Movements: Secondary victims (moderate/constrained) - the collective potential undermined by the focus on individualism.",
+      "Incumbent Power Structures: Primary beneficiaries (institutional/arbitrage) - existing hierarchies that benefit from the division of potential opposition.",
+      "The Academic Analyst: Analytical perspective that sees the 'individual revolution' as a distraction"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The constraint extracts resources and energy from potential mass movements, diverting them towards individualistic pursuits that are less likely to challenge the status quo. Suppression (0.60): Moderate. The narrative suppresses the idea that collective action is necessary for large-scale social change. Theater Ratio (0.75): High. There is a strong performative aspect to advocating for individual revolution as an approach to solving systemic issues, often overshadowing genuine structural change.",
+    "perspectival_gap": "The individual revolutionary actor experiences this as a snare, feeling trapped and powerless against the system. Incumbent power structures experience it as a rope, facilitating their continued dominance. Potential mass movements experience it as a tangled rope, with individual autonomy undermining the collectivism necessary for revolution. An academic analyst sees it as a piton: a relic of a bygone era.",
+    "directionality_logic": "The directionality logic relies on the agents' structural positions. Individual revolutionary actors have low power and no exit options, leading to a snare classification. Incumbent power structures have high power and arbitrage opportunities, resulting in a rope. Potential mass movements are somewhat constrained and powerful, allowing them to be categorized as a tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "collective_action_problem",
+      "power_asymmetry"
+    ]
+  },
+  "directionality_overrides": []
+}

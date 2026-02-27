@@ -2,28 +2,29 @@
   "header": {
     "constraint_id": "ai_religion_regulation",
     "version": "1.0",
-    "generated_date": "2024-08-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aireg"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "Regulation of AI-Generated Religions and Digital Drugs",
-    "topic_domain": "technological/social/regulatory",
+    "topic_domain": "technological/regulatory",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "general_public",
-      "established_tech_companies",
+      "platform_operators",
       "regulatory_agencies",
-      "traditional_religious_institutions"
+      "advertising_networks"
     ],
     "victims": [
-      "ai_developers_and_startups",
-      "users_seeking_alternative_spirituality",
-      "open_source_ai_community"
-    ]
+      "vulnerable_users",
+      "content_creators",
+      "religious_minorities"
+    ],
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
@@ -31,134 +32,183 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Vulnerable User",
+      "comment": "PERSPECTIVE 1: VULNERABLE USER (SNARE) \u2014 Algorithmic targeting of susceptible populations (adolescents, isolated individuals, people with addictive disorders) creates high-extraction, low-coordination experience. Users cannot exit recommendation systems; bear full cost of engineered psychological manipulation. Suppression is structural: platform design itself prevents awareness or refusal."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Religious Minorities",
+      "comment": "PERSPECTIVE 2: RELIGIOUS MINORITIES (SNARE) \u2014 AI-generated religious content dilutes authentic theological traditions and creates competing 'religions' that mimic surface forms while serving engagement metrics rather than spiritual function. Minorities lack resources to litigate authenticity claims or prevent algorithmic amplification of counterfeit versions of their traditions. Exit constrained by platform dominance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Open-Source Developer",
-      "comment": "PERSPECTIVE 1: OPEN-SOURCE DEVELOPER (SNARE) — Faces insurmountable compliance costs and legal risks. Cannot exit the regulatory environment without abandoning their work. The regulation acts as a pure extraction mechanism, transferring value (market access) to large, compliant firms. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.78."
+      "label": "Independent Content Creators",
+      "comment": "PERSPECTIVE 3: INDEPENDENT CONTENT CREATORS (TANGLED ROPE) \u2014 Regulation requires compliance infrastructure (content moderation, metadata declaration, age-gating) that smaller creators cannot afford. Creates coordination benefit: legitimate creators can differentiate from AI-generated content. But extraction is real: compliance burden falls disproportionately on small creators, while platforms absorb costs into infrastructure. Constrained exit because platform dependency is high."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Established Tech Company",
-      "comment": "PERSPECTIVE 2: ESTABLISHED TECH COMPANY (ROPE) — Benefits from regulatory clarity and a moat against smaller competitors who cannot afford compliance. Can lobby to shape the rules. Experiences the constraint as pure coordination that stabilizes the market. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.07. Negative effective extraction indicates a net subsidy."
+      "label": "Platform Operators",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATORS (ROPE) \u2014 Regulation frames AI-generated content as a coordination problem: detecting and labeling synthetic content improves user trust and advertiser confidence. Operators experience the constraint as enabling their market position \u2014 regulation allows them to differentiate from unregulated competitors and justifies proprietary recommendation systems as 'safer' alternatives. Arbitrage exit: can shift to jurisdictions with lighter regulation if necessary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "AI Model Developers",
+      "comment": "PERSPECTIVE 5: AI MODEL DEVELOPERS (ROPE) \u2014 Regulation constrains the design space but creates market advantage for companies that can afford compliance infrastructure. Open-source model developers face higher barriers; proprietary systems can internalize regulatory costs. Developers experience coordination benefit: preventing reputational contamination from misuse of their models. Arbitrage exit available through licensing agreements or jurisdictional arbitrage."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (protecting users from harm) and the asymmetric extraction (crushing small innovators, creating regulatory moats). This is the canonical view of the constraint's dual nature. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "institutional",
+      "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Traditional Religious Institution",
-      "comment": "PERSPECTIVE 4: TRADITIONAL RELIGIOUS INSTITUTION (SCAFFOLD) — Sees the regulation as a temporary protective measure against disruptive, synthetic competitors. While they benefit, they are constrained within the same cultural marketplace. They hope the scaffold will be removed once the 'threat' is contained or normalized. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.005."
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 6: REGULATORY AGENCIES (TANGLED ROPE) \u2014 Agencies extract legitimacy and budgetary justification from regulation (growing enforcement apparatus, expanded jurisdiction). But also coordinate: preventing harms to constituents is genuine functional mandate. Constrained exit because agencies cannot choose to be unregulated; structural dependency on political support for enforcement."
     },
     {
-      "classification_type": "snare",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Digital Freedom Alliance",
-      "comment": "PERSPECTIVE 5: DIGITAL FREEDOM ALLIANCE (SNARE) — An organized group of technologists and civil libertarians who view the regulation as a coercive infringement on cognitive liberty and innovation. Despite being organized, the high suppression and extraction make it a Snare from their viewpoint, as it criminalizes their desired activities. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.50. Note: χ is below the snare threshold, but the high suppression (0.65) and their position as victims leads them to classify it as a snare."
-    }
-  ],
-  "interval": {
-    "start": 2025,
-    "end": 2035
-  },
-  "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2025,
-      "value": 0.3
+      "label": "Traditional Regulatory Mechanisms",
+      "comment": "PERSPECTIVE 7: TRADITIONAL REGULATORY MECHANISMS (PITON) \u2014 Obscenity laws, consumer protection statutes, and religious fraud regulations are repurposed for AI-generated content. These mechanisms are largely theatrical in application to digital artifacts: 'obscenity' determinations for algorithmic speech are performative; 'fraud' requires mens rea that AI systems don't possess; 'addiction' liability is diffuse across platform, advertiser, and content creator. Theater ratio reflects that regulatory action appears forceful but struggles to translate offline categories to digital context. Theater has risen from 0.45 at interval start (early regulation adapted offline frameworks) to 0.64 (full emergence of mismatch between regulatory tools and digital reality)."
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2030,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2035,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.2
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2035,
-      "value": 0.4
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (MOUNTAIN-FALSE SUMMIT) \u2014 From a civilizational perspective, the fundamental tension between content generation (increasingly automated) and content verification (inherently human-scale) may appear immutable. AI can generate content faster than humans can evaluate it; no regulatory framework can close this gap. However, this is a false summit: the 'impossibility' naturalizes a choice about resource allocation (we can deploy more verification infrastructure; we choose not to because the ROI goes to platforms, not regulators)."
     }
   ],
   "omegas": [
     {
-      "id": "harm_quantification",
-      "question": "What is the measurable, empirical harm of AI-generated religions and 'digital drugs' beyond moral panic?",
-      "resolution_mechanism": "Longitudinal studies comparing psychological well-being of users vs. control groups; analysis of addiction and manipulation patterns.",
-      "impact": "If harm is low, the regulation is a Snare built on false pretenses. If harm is high and widespread, its coordination function is legitimate, making it a Rope or Scaffold from more perspectives.",
+      "id": "ai_generated_vs_human_generated_parity",
+      "question": "At what point does AI-generated content become functionally indistinguishable from human-generated content, rendering the regulatory category incoherent?",
+      "resolution_mechanism": "Blind comparative analysis of engagement, psychological impact, and community satisfaction for AI-generated vs human-generated religious and drug content. Psychometric equivalence testing.",
+      "impact": "If parity achieved: regulation based on 'AI-generated' label becomes theater \u2014 actual harms persist regardless of origin. Shifts classification toward piton (performative regulation). If parity never achieved: regulatory distinction remains structurally meaningful, maintaining tangled_rope classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether AI-generated content reaches functional parity with human-generated content"
+    },
+    {
+      "id": "regulatory_capture_by_platforms",
+      "question": "Does the regulation effectively become a tool for platform operators to eliminate smaller competitors and open-source alternatives, rather than protecting vulnerable users?",
+      "resolution_mechanism": "Time-series analysis of market concentration (HHI index) before/after regulation; survival analysis of independent creators and open-source projects; content creator survey on compliance burden by company size.",
+      "impact": "If capture is real and substantial: classification shifts toward snare (extraction via regulation mechanism). If platforms bear compliance costs equitably: tangled_rope classification holds. If regulation successfully decentralizes platforms: scaffold classification (sunset as alternatives mature).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Empirical basis for harm claims driving regulation"
+      "description": "Whether regulation becomes a tool for platform consolidation"
     },
     {
-      "id": "regulatory_lag",
-      "question": "Can a centralized regulatory framework ever keep pace with decentralized, rapidly evolving AI models?",
-      "resolution_mechanism": "Analysis of enforcement actions vs. emergence of non-compliant open-source models over a 5-year period.",
-      "impact": "If regulation fails to keep pace, it becomes a Piton, extracting compliance costs from legitimate actors while having no effect on the intended targets.",
+      "id": "digital_drug_definition_coherence",
+      "question": "Can 'digital drug' be operationalized as a regulatory category independent of subjective definitions of addiction or harm?",
+      "resolution_mechanism": "Neuroscientific validation of 'digital drug' mechanisms against alcohol, nicotine, and gambling disorder criteria; regulatory agency case law on what constitutes prosecutable 'digital drug' vs legal engagement optimization.",
+      "impact": "If definition coherent: enforcement becomes predictable, benefiting regulated actors and users alike (rope classification for institutional actors). If incoherent: enforcement becomes arbitrary and theatrical (piton classification).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether 'digital drug' can be operationalized as a coherent regulatory category"
+    },
+    {
+      "id": "enforcement_resource_scaling",
+      "question": "Can regulatory agencies scale enforcement to keep pace with AI-generation speeds without surveillance infrastructure that itself becomes extractive?",
+      "resolution_mechanism": "Comparison of content generation rate vs regulatory agency decision rate; analysis of surveillance requirements for compliance monitoring; impact assessment of automated detection systems on false positives.",
+      "impact": "If scaling impossible: regulation is aspirational (scaffold perspective becomes incorrect). If scaling possible with surveillance: classification shifts toward snare (surveillance as primary extraction mechanism). If scaling possible with decentralized verification: tangled_rope classification sustained.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Effectiveness of centralized regulation on decentralized tech"
-    },
-    {
-      "id": "cognitive_liberty_boundary",
-      "question": "Where is the boundary between protecting citizens from harmful manipulation and infringing on their cognitive and religious freedom?",
-      "resolution_mechanism": "Legal and philosophical analysis establishing clear criteria for intervention, likely through landmark court cases.",
-      "impact": "Defines the legitimate scope of the state's interest. A narrow definition favors a Rope/Scaffold classification; a broad definition justifies a Snare from the perspective of those whose beliefs are regulated.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "The legal/philosophical line between protection and censorship"
+      "description": "Whether enforcement can scale to AI-generation speeds"
     }
   ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
   "commentary": {
-    "narrative_context": "This constraint story models a regulatory framework designed to address the societal risks of AI systems capable of generating novel religious belief systems or psychoactive 'digital drugs'. The framework mandates transparency, content moderation, and imposes liability on developers, aiming to protect the public. However, it simultaneously creates significant compliance burdens, potentially stifling innovation and creating a regulatory moat that benefits established technology companies.",
+    "narrative_context": "The regulation of AI-generated religions and digital drugs emerges as a response to algorithmic amplification of engineered psychological manipulation targeting vulnerable populations. The constraint exhibits the full range of indexical classifications: platform operators experience it as coordination (rope), enabling them to differentiate from unregulated competitors; vulnerable users and religious minorities experience it as pure extraction (snare), lacking exit and bearing the full cost of detection failures; independent content creators experience it as a hybrid requiring costly compliance infrastructure (tangled rope); regulatory agencies simultaneously coordinate (protecting constituents) and extract (expanding jurisdiction and budget); traditional regulatory mechanisms (obscenity, fraud, addiction liability) become performative when applied to digital context (piton); and analytical observers risk naturalizing what is actually a resource allocation choice as immutable law (false mountain). The constraint's theater ratio has risen from 0.45 to 0.64 over the interval as the mismatch between offline regulatory categories and digital reality has become evident. Base extractiveness has similarly risen from 0.38 to 0.58 as platforms have used regulatory requirements to consolidate market position and create barriers for independent creators.",
     "key_agents": [
-      "AI Developers & Startups: Primary victims (powerless/trapped) — bear the full cost of compliance and legal risk.",
-      "Established Tech Companies: Primary beneficiaries (institutional/arbitrage) — benefit from reduced competition and legal certainty.",
-      "General Public: Secondary beneficiaries (powerless/mobile) — receive protection from potential harms.",
-      "Regulatory Agencies: Institutional beneficiaries (institutional/arbitrage) — gain authority and budget.",
-      "Users of AI Religions: Secondary victims (powerless/constrained) — their freedom of belief and access to information is curtailed."
+      "Vulnerable Users: Primary victim (powerless/trapped) \u2014 adolescents, isolated individuals, people with addictive disorders targeted by algorithmic content ranking; cannot exit recommendation systems",
+      "Religious Minorities: Primary victim (powerless/constrained) \u2014 face dilution of authentic traditions by AI-generated counterfeits; lack resources for legal action; constrained by platform dominance",
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 use regulation to differentiate from unregulated competitors and consolidate market position; can shift to lighter-regulation jurisdictions",
+      "Independent Content Creators: Secondary victim (moderate/constrained) \u2014 face compliance burden for labeling, metadata, age-gating; smaller creators cannot afford infrastructure; medium-sized creators bear disproportionate compliance cost",
+      "Regulatory Agencies: Secondary beneficiary (organized/constrained) \u2014 extract legitimacy and budgetary expansion from enforcement; coordinate genuine protective mandate; cannot exit regulatory role",
+      "AI Model Developers: Secondary beneficiary (institutional/arbitrage) \u2014 proprietary systems can internalize compliance; open-source alternatives face higher barriers; can exit via licensing or jurisdictional arbitrage",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent resource allocation choices as inherent impossibilities"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55) is high, reflecting the significant compliance costs, liability risks, and innovation friction imposed on developers. Suppression (0.65) is also high, as the framework actively discourages or criminalizes the deployment of unregulated models, thereby suppressing alternatives to the approved, centralized systems. The Theater Ratio (0.40) is moderate; while the regulation has a functional purpose, a significant portion is performative, designed to show that governments are 'doing something' about a poorly understood technological frontier.",
-    "perspectival_gap": "The gap is stark. For a large tech company, the regulation is a Rope that provides a stable, predictable market. For a small startup or open-source developer, it is a Snare that makes their work economically or legally impossible. The analytical observer sees the reality: a Tangled Rope that serves a genuine public good (coordination) while simultaneously concentrating power and extracting value (extraction). This gap is the core of the political conflict over technology regulation.",
-    "directionality_logic": "Beneficiaries like large tech firms have arbitrage exit options (lobbying, shaping rules), leading to a low 'd' value and a Rope classification. Victims like startups are trapped, leading to a high 'd' value and a Snare classification. The regulation's dual function is what creates this wide perspectival divergence from a single set of base properties.",
-    "mandatrophy_analysis": "This case is a classic example of resolving mandatrophy. Labeling the regulation as purely a 'public safety measure' (Rope) ignores the immense extractive costs borne by innovators. Labeling it as purely a 'big tech protection racket' (Snare) ignores the legitimate public interest in mitigating potential harms from powerful new technologies. The Tangled Rope classification from the analytical perspective correctly identifies that the constraint is both at the same time, and that which face one sees depends entirely on one's structural position relative to it."
+    "logic_rationale": "Base extractiveness (0.58): Moderate-high. Platform operators capture significant value through consolidated market position and regulatory moat-building. Independent creators face substantial compliance burden. However, extraction is not total \u2014 the regulation does provide some genuine protection to vulnerable users, and this coordination benefit prevents the constraint from classifying as pure snare. Theater ratio (0.64): Moderate-high. Regulatory mechanisms designed for offline harms (obscenity determinations, fraud liability, addiction causation) translate poorly to digital artifacts. Enforcement appears decisive while struggling to apply meaningful standards (What is 'obscene' digital speech? Who bears mens rea liability for AI-generated content? How to establish addiction causation in algorithmic systems?). Theater has risen substantially as early regulatory optimism (we can adapt offline tools) has collided with digital reality (offline categories don't map cleanly to algorithmic systems). Suppression (0.68): High. Multiple structural barriers prevent vulnerable users from exiting: algorithmic targeting is invisible, recommendation systems are optimized to sustain engagement, platform switching costs are high, regulatory frameworks lack resources for enforcement, alternatives to dominant platforms have network disadvantages.",
+    "perspectival_gap": "The constraint produces divergent classifications across perspectives. Platform operators see rope (coordination benefit from regulatory differentiation, arbitrage exit available). Vulnerable users see snare (no exit, full cost of harms). Independent creators see tangled rope (coordination through content differentiation, but extraction through compliance burden). Regulatory agencies see tangled rope (genuine protective mandate coupled with jurisdictional expansion). Traditional mechanisms see piton (regulatory appearance without functional fit to digital reality). The analytical observer risks false summit (naturalizing resource allocation choices as inevitable limits). This perspectival divergence reflects genuine structural asymmetries: who can exit (platforms, large developers) vs who cannot (vulnerable users), who benefits from regulatory barriers (platforms) vs who bears costs (independent creators), who has resources for compliance infrastructure vs who does not.",
+    "directionality_logic": "Directionality values (d) vary across perspectives according to structural position. Vulnerable users (powerless/trapped) derive d \u2248 0.95 from victim status + trapped exit \u2192 maximum experienced extraction. Platforms (institutional/arbitrage) derive d \u2248 0.05 from beneficiary status + arbitrage exit \u2192 minimum (negative) experienced extraction. Independent creators (moderate/constrained) derive d \u2248 0.60 from mixed victim status (compliance burden) + constrained exit \u2192 high experienced extraction. Regulatory agencies (organized/constrained) derive d \u2248 0.50 from both coordination and extraction functions + constrained exit \u2192 moderate experienced extraction. The engine applies the sigmoid f(d) to each d value to produce effective extractiveness \u03c7. Platform perspectives with low d produce negative \u03c7 (they are subsidized by the constraint); vulnerable user perspectives with high d produce high \u03c7 (they bear the extraction).",
+    "mandatrophy_analysis": "The mandatrophy is NOT resolved for this constraint. Extractiveness (0.58) exceeds 0.46, requiring mandatrophy resolution, yet the classification as tangled rope (mixed coordination-extraction) rather than snare (pure extraction) relies on claims about genuine protective function that remain contested. The coordination function (protecting vulnerable users from AI-generated harms) is real but structurally decoupled from the extraction mechanism (regulatory consolidation of market power). The constraint exhibits genuine coordination benefits (reduced harms to some users, content differentiation enabling quality signaling) but these could be achieved with lower extractiveness via decentralized verification systems, open standards for content labeling, or direct investment in digital literacy rather than platform-mediated regulation. Current trajectory suggests mandatrophy toward snare or piton: if regulatory enforcement continues to underperform (omega: enforcement_resource_scaling), theater ratio will rise and extractiveness will focus on platform consolidation rather than user protection (piton + snare). Resolution would require either (a) decoupling protective function from market consolidation through open standards and decentralized enforcement, or (b) transparent acknowledgment of the extractive component with sunset clause tied to emergence of alternatives (scaffold classification)."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "ai_content_moderation",
-      "digital_therapeutics_approval",
-      "freedom_of_speech_online"
-    ]
-  }
+      "algorithmic_amplification_bias",
+      "platform_network_effects",
+      "digital_literacy_infrastructure"
+    ],
+    "dual_formulation_note": "This constraint family decomposes into three structurally distinct claims: (1) AI-generated religious content (\u03b5 \u2248 0.35, rope from platform perspective; snare from minority perspective) \u2014 the harm is mimicry of authentic traditions; (2) engagement-optimized 'digital drugs' (\u03b5 \u2248 0.62, snare/tangled rope) \u2014 the harm is psychological manipulation of vulnerable users; (3) regulatory framework itself (\u03b5 \u2248 0.58, tangled rope/piton) \u2014 the constraint analyzed here, focusing on how regulation creates extraction while attempting to coordinate. Upstream constraint: algorithmic_amplification_bias determines the base harm. This constraint: regulatory response to that base harm. Downstream constraints: platform_network_effects (market consolidation enabled by regulation) and digital_literacy_infrastructure (alternative pathway to user protection)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
 }

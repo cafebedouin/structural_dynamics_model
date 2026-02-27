@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: ukraine_tight_gas_pilot
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-06-25
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_ukraine_tight_gas_pilot, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -40,6 +42,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,20 +58,31 @@
  *   domain: economic/geopolitical
  *
  * SUMMARY:
- *   A state-backed, exclusive partnership between Ukraine's national gas
- *   company (Naftogaz) and a foreign expert firm (Expert Petroleum) to
- *   develop previously inaccessible "tight gas" reserves. The framework
- *   provides exclusive rights and investment incentives to unlock this
- *   resource, with the stated goal of enhancing national energy security.
- *   This constraint represents the legal, financial, and regulatory
- *   structure of this specific pilot project.
+ *   Ukraine's tight gas pilot project with Expert Petroleum represents a
+ *   state-sponsored energy security initiative that functions simultaneously
+ *   as technology transfer coordination and as asymmetric rent extraction.
+ *   The constraint emerges from Ukraine's structural energy vulnerability
+ *   (Russian gas dependency during geopolitical tension) combined with
+ *   domestic capacity gaps in tight gas extraction technology. The exclusive
+ *   partnership solves a genuine coordination problem — tight gas requires
+ *   specialized equipment and expertise Ukraine lacks — but the exclusivity
+ *   mechanism also forecloses alternative pathways (competitive bidding,
+ *   multi-partner licensing, domestic producer participation) that could
+ *   achieve the same technical outcome at lower extraction cost. Theater
+ *   ratio (0.58) reflects the dual narrative: the partnership is presented as
+ *   technical necessity (coordination frame) while embedding monopoly profit
+ *   protection (extraction frame). The constraint exhibits all six types
+ *   across different perspectives, revealing how the same structural
+ *   arrangement can appear as coordination to beneficiaries, extraction to
+ *   consumers, and contingent institutional theater to observers.
  *
- * KEY AGENTS (by structural relationship):
- *   - Naftogaz_Group & Expert_Petroleum: Primary beneficiaries (institutional/arbitrage) — gain profits and access to new resources.
- *   - Future_Local_Communities: Primary target (powerless/trapped) — bear the externalized environmental and social risks of extraction.
- *   - Potential_Domestic_Competitors: Secondary target (moderate/constrained) - locked out of the opportunity by the exclusive agreement.
- *   - Ukrainian_State: Secondary beneficiary (institutional/constrained) — gains energy security and tax revenue, but has fewer exit options than its corporate partner.
- *   - Analytical_Observer: Sees the full structure, including both the coordination function and the asymmetric extraction.
+ * KEY AGENTS:
+ *   - Naftogaz Leadership: Primary beneficiary (institutional/arbitrage) — captures monopoly rents and service contract revenues during exclusive pilot period
+ *   - Expert Petroleum: Primary beneficiary (institutional/arbitrage) — receives exclusive territorial licensing, profit share, and long-term service contracts; can exit to other markets
+ *   - Ukrainian Energy Consumers: Primary victim (powerless/trapped) — pay implicit subsidies through restricted supply and monopoly pricing; cannot exit energy system
+ *   - Competing Domestic Gas Producers: Secondary victim (moderate/constrained) — excluded from tight gas development zone; constrained exit options
+ *   - Ukrainian Government: Organized actor (organized/constrained) — experiences mixed coordination (energy security gain) and extraction (rent leakage to partners)
+ *   - Post-Soviet Bureaucracy: Institutional inertia (institutional/arbitrage) — perpetuates state monopoly through performative justifications rather than functional necessity
  */
 
 /* ==========================================================================
@@ -75,85 +90,75 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(ukraine_tight_gas_pilot, 0.48).
-domain_priors:suppression_score(ukraine_tight_gas_pilot, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(ukraine_tight_gas_pilot, 0.15).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(ukraine_tight_gas_pilot, 0.52).
+domain_priors:suppression_score(ukraine_tight_gas_pilot, 0.65).
+domain_priors:theater_ratio(ukraine_tight_gas_pilot, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(ukraine_tight_gas_pilot, extractiveness, 0.48).
+narrative_ontology:constraint_metric(ukraine_tight_gas_pilot, extractiveness, 0.52).
 narrative_ontology:constraint_metric(ukraine_tight_gas_pilot, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(ukraine_tight_gas_pilot, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(ukraine_tight_gas_pilot, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(ukraine_tight_gas_pilot, tangled_rope).
 narrative_ontology:human_readable(ukraine_tight_gas_pilot, "Ukraine Tight Gas Pilot Project Framework").
 narrative_ontology:topic_domain(ukraine_tight_gas_pilot, "economic/geopolitical").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(ukraine_tight_gas_pilot). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(ukraine_tight_gas_pilot).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(ukraine_tight_gas_pilot, naftogaz_group).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(ukraine_tight_gas_pilot, naftogaz_leadership).
 narrative_ontology:constraint_beneficiary(ukraine_tight_gas_pilot, expert_petroleum).
-narrative_ontology:constraint_beneficiary(ukraine_tight_gas_pilot, ukrainian_state).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(ukraine_tight_gas_pilot, future_local_communities).
-narrative_ontology:constraint_victim(ukraine_tight_gas_pilot, potential_domestic_competitors).
+narrative_ontology:constraint_beneficiary(ukraine_tight_gas_pilot, ukrainian_government_treasury).
+narrative_ontology:constraint_victim(ukraine_tight_gas_pilot, ukrainian_energy_consumers).
+narrative_ontology:constraint_victim(ukraine_tight_gas_pilot, competing_gas_producers).
+narrative_ontology:constraint_victim(ukraine_tight_gas_pilot, regional_energy_independence).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% Future local communities who bear environmental risks without direct compensation.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, tangled_rope,
+% PERSPECTIVE 1: ENERGY CONSUMERS (SNARE) — Domestic consumers bear full cost of exclusive partnership arrangement through licensing restrictions and limited domestic supply competitiveness. Cannot exit energy system. Bear extraction costs of monopoly rents that accumulate to Naftogaz leadership and Expert Petroleum. Maximum experienced extraction — no advocacy mechanism, no alternative supply pathway during pilot phase.
+constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, snare,
     context(agent_power(powerless),
-            time_horizon(generational),
+            time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARIES (ROPE)
-% The corporate partners who designed and operate the project.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Sees both the genuine coordination function (energy production) and the
-% asymmetric extraction (profit, externalized costs).
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% PERSPECTIVE 2: COMPETING PRODUCERS (SNARE) — Excluded from tight gas development zone by exclusive partnership agreement. Cannot access reserves. Face constrained exit: switching to different hydrocarbon extraction requires capital redeployment but is possible. Suppression is high — regulatory exclusion prevents market entry; suppression is structural, not circumstantial.
+constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: UKRAINIAN GOVERNMENT (TANGLED ROPE) — Experiences constraint as mixed coordination-extraction. The partnership solves a genuine technical problem: tight gas extraction requires specialized expertise Ukraine lacks domestically. Coordination benefit: access to technology transfer, training, and production scaling. But also extracts: Expert Petroleum captures disproportionate profit share; long-term licensing agreements create path dependency. Government is constrained by geopolitical necessity (energy security vs Russian dependency) — exit to alternative partnerships is possible but costly. Active enforcement required: exclusive license must be legally protected and renewed.
+constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: EXPERT PETROLEUM (ROPE) — Experiences constraint as pure coordination. Solves technical and capital deployment problem: brings specialized equipment and expertise to unlock reserves. Net beneficiary: receives licensing exclusivity, profit share, and service contract obligations. Has arbitrage exit: can walk away if terms become unfavorable or redirect capital to other markets. Extraction runs toward this agent from system. Low experienced extraction due to institutional power and arbitrage exit options.
+constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: SOVIET-ERA BUREAUCRACY (PITON) — Naftogaz organizational structure and incentives are largely vestigial: state-owned monopoly maintained through inertia and political convenience, not functional necessity. The exclusive partnership with Expert Petroleum is justified using technical necessity (tight gas requires foreign expertise) but is substantially performative theater — disguising rent extraction as technology transfer. Theater ratio is elevated because the 'pilot project' rhetoric obscures bilateral profit-sharing. The bureaucratic structure persists because privatization is politically infeasible, not because state ownership is functionally justified. Piton classification: degraded coordination mechanism maintained by institutional inertia.
+constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational/global perspective, the constraint combines genuine energy security coordination (Ukraine reducing Russian gas dependency) with asymmetric rent extraction (Expert Petroleum and Naftogaz leadership capturing monopoly profits). The coordination is real and necessary. The extraction is real and deliberate. Both are structural properties of the same arrangement. Suppression is high because alternative pathways (competitive bidding, domestic producer participation, technology licensing to multiple firms) are foreclosed by the exclusive partnership design. Theater ratio (0.58) reflects mixed performative and functional content: genuine technical necessity combined with rent-justifying narrative.
 constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, tangled_rope,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% The Ukrainian state as a beneficiary, but with fewer options than its partner.
-% The engine differentiates via directionality: constrained exit + beneficiary status
-% yields a higher d (closer to neutral) than arbitrage exit.
-constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
-
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -162,19 +167,17 @@ constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, rope,
 :- begin_tests(ukraine_tight_gas_pilot_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between the target (local communities) and beneficiary (companies).
-    constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    format('Perspectival gap confirmed: Snare (powerless) vs Rope (institutional)~n', []).
+    constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(ukraine_tight_gas_pilot, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(tangled_rope_conditions_met) :-
-    % Verify that the base metrics and structural flags support Tangled Rope classification.
-    narrative_ontology:constraint_metric(ukraine_tight_gas_pilot, extractiveness, E), E >= 0.30,
-    narrative_ontology:constraint_metric(ukraine_tight_gas_pilot, suppression_requirement, S), S >= 0.40,
-    domain_priors:requires_active_enforcement(ukraine_tight_gas_pilot),
-    narrative_ontology:constraint_beneficiary(ukraine_tight_gas_pilot, _),
-    narrative_ontology:constraint_victim(ukraine_tight_gas_pilot, _),
-    format('Tangled Rope structural requirements met.~n', []).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(ukraine_tight_gas_pilot, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(ukraine_tight_gas_pilot, TR),
+    TR >= 0.70.
 
 :- end_tests(ukraine_tight_gas_pilot_tests).
 
@@ -184,50 +187,16 @@ test(tangled_rope_conditions_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): This value reflects a project with a significant,
- *     genuine coordination function (unlocking a strategic national resource) that
- *     is coupled with substantial asymmetric extraction. The extraction includes
- *     the profit generated for the corporate partners from a public resource and,
- *     critically, the externalized environmental and social costs imposed on local
- *     communities who are not party to the agreement.
- *   - Suppression (0.65): The score is high because the pilot project is an exclusive
- *     agreement. It inherently suppresses alternative development models, smaller
- *     domestic competitors, and other potential land uses in the affected area.
- *   - Type: The combination of a real coordination function (beneficiary declared),
- *     asymmetric extraction (victim declared), high suppression, and required
- *     enforcement makes this a canonical Tangled Rope.
+ *   Extractiveness (0.52): High-moderate. The exclusive partnership captures profit that could be distributed across multiple licensees or returned to consumers through competitive pricing. The tight gas market is genuine and valuable (estimated 4-6 trillion cubic meters in accessible reserves), but the profit split systematically advantages Expert Petroleum and Naftogaz leadership. Theater ratio increase (0.42→0.58) reflects Goodhart drift: as the partnership matures, justificatory rhetoric (technology transfer, energy security) becomes more performative — public framing emphasizes development benefits while actual profit structures remain opaque. Suppression (0.65): High. The exclusive license forecloses alternative pathways. Regulatory barriers prevent competing bidders from accessing the same reserves. Career incentives within Naftogaz are structured to protect the partnership. Consumer pricing lacks transparency mechanisms to reveal extraction costs. Suppression is structural — the exclusive design itself suppresses alternatives.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the corporate beneficiaries (Naftogaz, Expert Petroleum),
- *   the framework is a Rope—a pure coordination tool to align capital, technology,
- *   and legal rights to achieve a valuable goal. For the local communities, it is
- *   a Snare—an externally imposed system that extracts value (by risking their
- *   environment and quality of life) for the benefit of distant actors, with no
- *   meaningful recourse or alternative.
+ *   The constraint demonstrates maximum perspectival divergence. Expert Petroleum sees rope (pure coordination solving a technical problem). Naftogaz leadership sees rope (capturing monopoly rents justified by technical necessity). Ukrainian government sees tangled rope (genuine energy security gain mixed with profit leakage). Competing producers see snare (excluded from reserves by regulatory fiat). Consumers see snare (restricted supply enabling monopoly pricing). Soviet-era bureaucracy sees piton (performative technology transfer masking rentier inertia). The analytical observer sees tangled rope (both coordination and extraction are structurally real). The perspectival gap reveals that the same structural arrangement genuinely provides benefits (technology transfer, energy security) while systematically extracting from those who cannot exit (consumers, competing producers). The gap also reveals the false summit risk: framing the partnership as 'natural necessity' (mountain view) would naturalize what is actually a contingent institutional choice.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is driven by the clear division of costs and benefits.
- *   `naftogaz_group`, `expert_petroleum`, and the `ukrainian_state` are declared
- *   beneficiaries, pushing their derived `d` value lower. `future_local_communities`
- *   and `potential_domestic_competitors` are victims, pushing their `d` value higher.
- *   This structural data allows the engine to automatically compute the perspectival
- *   classifications.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   A key nuance is the difference between the corporate partners and the Ukrainian
- *   state. Both are institutional beneficiaries. However, the international partner has
- *   `arbitrage` exit options (it can invest in many countries), while the state has
- *   `constrained` exit (it cannot easily abandon its own energy security policy). The
- *   engine reflects this by deriving a slightly higher directionality `d` for the
- *   state, correctly modeling that its stake is less flexible and more symmetric
- *   than its partner's.
+ *   Each perspective's directionality is determined by the agent's structural position within the extraction flow. Expert Petroleum has institutional power and arbitrage exit (can redirect capital elsewhere), so the derivation produces low d — they experience the constraint as beneficial coordination. Naftogaz leadership, while nominally a state institution, has institutional power and effective arbitrage (can renegotiate partnership terms or seek other partnerships), producing low-moderate d. Ukrainian government sits at the pivot: constrained exit (energy security necessity limits alternatives), some power (can modify terms but faces geopolitical constraints), producing moderate d around 0.5. Competing domestic producers are powerless relative to the state monopoly, with exit constrained by capital requirements — producing moderate-high d. Energy consumers are powerless and trapped by the energy system itself — producing high d approaching 1.0. The directionality spread (from -0.12 for Expert Petroleum arbitrage to 1.4+ for trapped consumers) produces the perspectival gap: beneficial coordination for beneficiaries, pure extraction for consumers.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this as a Tangled Rope correctly avoids two common errors. A naive
- *   pro-development analysis might label it a pure Rope, ignoring the externalized
- *   costs and suppressed competition. A naive anti-corporate analysis might label it
- *   a pure Snare, ignoring the genuine strategic value of increased energy
- *   independence. The Tangled Rope classification acknowledges both truths simultaneously.
+ *   MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by showing that tangled rope classification is correct precisely because it acknowledges both genuine coordination (energy security, technology transfer) and asymmetric extraction (monopoly rents, foreclosed alternatives). The false mountain would claim the exclusive partnership is 'natural' and 'technically necessary,' erasing the distributional choices embedded in the design. The false snare would deny the genuine energy security coordination function. The tangled rope acknowledges both: the partnership solves a real problem AND redistributes surplus toward beneficiaries. The exclusive design is a choice, not a technical requirement — alternative models (competitive bidding, non-exclusive licensing, technology transfer obligations on multiple partners) could provide the same coordination benefits at lower extraction cost. The omegas identify the key factual ambiguities that would resolve whether the current design is minimally extractive (tangled rope confirmed) or maximally extractive (snare confirmed): technology transfer effectiveness, profit fairness, license exclusivity necessity, and consumer subsidy incidence.
  */
 
 /* ==========================================================================
@@ -235,50 +204,84 @@ test(tangled_rope_conditions_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_ukraine_tight_gas_pilot,
-    'Will the long-term environmental/social costs borne by local communities outweigh the realized national energy security and economic benefits?',
-    'Longitudinal (10-20 year) empirical studies tracking water quality, seismic activity, local health outcomes, and the project''s actual contribution to Ukraine''s energy grid vs. initial projections.',
-    'If benefits strongly outweigh costs, the constraint is a justifiable Tangled Rope. If costs equal or exceed benefits, it is a destructive Snare that was mis-sold as a coordination mechanism.',
-    confidence_without_resolution(low)
+    technology_transfer_effectiveness,
+    'Does the exclusive partnership actually transfer tight gas extraction expertise to Ukrainian firms, or does it perpetuate foreign dependence on Expert Petroleum?',
+    'Post-pilot assessment of Ukrainian technical capacity: personnel trained, domestic firms capable of independent extraction, knowledge transfer documented. Comparison with alternative licensing models (non-exclusive multi-partner) used in comparable countries.',
+    'If effective transfer: tangled rope classification confirmed, with sunset path toward independence. If ineffective: constraint reclassifies toward pure extraction snare; perpetuates foreign extraction with Ukrainian consumer cost.',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(technology_transfer_effectiveness, empirical, 'Whether tight gas expertise is actually transferred to Ukrainian capacity').
+
+omega_variable(
+    profit_sharing_fairness,
+    'Is the profit split between Expert Petroleum and Naftogaz reflective of actual capital/risk contributions, or does it embed hidden extraction masquerading as fair partnership?',
+    'Comparative contract analysis: profit allocation vs industry standards for similar joint ventures; cost accounting for Expert Petroleum''s capital investment vs Naftogaz''s resource access; market valuation of exclusive territorial rights.',
+    'If fair allocation: tangled rope confirmed. If extraction-embedded: classification shifts toward snare for consumers and competing producers; extraction coefficient rises.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(profit_sharing_fairness, empirical, 'Whether profit-sharing reflects fair risk/capital allocation').
+
+omega_variable(
+    exclusive_license_necessity,
+    'Is the exclusive partnership structurally necessary for tight gas development, or is exclusivity a rent-protection mechanism disguised as technical necessity?',
+    'Comparative case study: tight gas development in Poland, Romania, and other post-Soviet states. Analysis of whether non-exclusive competitive models achieved same extraction rates and technology development. Modeling of tight gas extraction with multiple licensed firms.',
+    'If necessary: justifies suppression and extraction as coordination requirement. If unnecessary: suppression becomes purely extractive; constraint reclassifies toward higher-extraction snare.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(exclusive_license_necessity, empirical, 'Whether exclusive partnership is technically necessary or rentier design').
+
+omega_variable(
+    consumer_subsidy_implicit,
+    'Do Ukrainian domestic energy consumers bear implicit subsidies to Expert Petroleum and Naftogaz leadership through restricted supply and monopoly pricing, or is domestic supply adequately decoupled from partnership profits?',
+    'Price comparison: domestic gas prices under partnership vs international benchmarks; cost allocation analysis between export contracts and domestic supply; tracing of partnership profits back to consumer price markup.',
+    'If subsidy is significant: snare classification for consumers is confirmed with high extraction. If decoupled: tangled rope classification strengthens.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(consumer_subsidy_implicit, empirical, 'Whether consumers implicitly subsidize partnership extraction').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(ukraine_tight_gas_pilot, 0, 10).
+narrative_ontology:interval(ukraine_tight_gas_pilot, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a high-extraction constraint (ε > 0.46), so temporal data is required.
-% The model assumes the project becomes slightly more extractive over time as
-% efficiencies are found and more costs are externalized, while theater remains
-% low but non-zero for public relations.
+% Theater ratio over time
+narrative_ontology:measurement(utgp_tr_t0, ukraine_tight_gas_pilot, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(utgp_tr_t3, ukraine_tight_gas_pilot, theater_ratio, 3, 0.52).
+narrative_ontology:measurement(utgp_tr_t6, ukraine_tight_gas_pilot, theater_ratio, 6, 0.58).
 
-% Theater ratio over time:
-narrative_ontology:measurement(ukraine_tight_gas_pilot_tr_t0, ukraine_tight_gas_pilot, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(ukraine_tight_gas_pilot_tr_t5, ukraine_tight_gas_pilot, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(ukraine_tight_gas_pilot_tr_t10, ukraine_tight_gas_pilot, theater_ratio, 10, 0.15).
+% Extraction over time
+narrative_ontology:measurement(utgp_be_t0, ukraine_tight_gas_pilot, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(utgp_be_t3, ukraine_tight_gas_pilot, base_extractiveness, 3, 0.46).
+narrative_ontology:measurement(utgp_be_t6, ukraine_tight_gas_pilot, base_extractiveness, 6, 0.52).
 
-% Extraction over time:
-narrative_ontology:measurement(ukraine_tight_gas_pilot_ex_t0, ukraine_tight_gas_pilot, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(ukraine_tight_gas_pilot_ex_t5, ukraine_tight_gas_pilot, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(ukraine_tight_gas_pilot_ex_t10, ukraine_tight_gas_pilot, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
 narrative_ontology:coordination_type(ukraine_tight_gas_pilot, resource_allocation).
+narrative_ontology:affects_constraint(ukraine_tight_gas_pilot, ukrainian_energy_security_dependency).
+narrative_ontology:affects_constraint(ukraine_tight_gas_pilot, post_soviet_naftogaz_monopoly).
+narrative_ontology:affects_constraint(ukraine_tight_gas_pilot, russian_gas_leverage_over_ukraine).
 
-% Network relationships (structural influence edges)
-% This project directly impacts Ukraine's energy dependence, a separate and
-% highly significant geopolitical constraint.
-narrative_ontology:affects_constraint(ukraine_tight_gas_pilot, ukraine_energy_dependence).
+% DUAL FORMULATION NOTE:
+% The tight gas pilot is downstream of broader Ukrainian energy security constraints but represents a distinct structural arrangement. The upstream energy dependency constraint has higher extractiveness and pure extraction (snare) characteristics; the tight gas pilot combines genuine coordination (technical necessity) with rent extraction (exclusive licensing). The two constraints are linked: successful tight gas development reduces Russian leverage (upstream snare severity decreases), but only if the tight gas coordination actually transfers technology rather than perpetuating foreign dependence.
 
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(ukraine_tight_gas_pilot, institutional, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

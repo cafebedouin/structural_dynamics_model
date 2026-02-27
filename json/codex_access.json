@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "codex_access",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "codex"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "OpenAI Codex Access Control",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "openai",
+      "early_adopter_enterprises"
+    ],
+    "victims": [
+      "independent_developers",
+      "academic_researchers",
+      "open_source_community"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Developer",
+      "comment": "PERSPECTIVE 1: INDEPENDENT DEVELOPER (SNARE) \u2014 Trapped by market dependency on Codex for competitive productivity in code generation. Cannot exit without material disadvantage relative to enterprises with API access. API rate limits, pricing tiers, and feature gatekeeping create asymmetric extraction. Maximum experienced coercion with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Academic Researcher",
+      "comment": "PERSPECTIVE 2: ACADEMIC RESEARCHER (TANGLED ROPE) \u2014 Constrained by limited research budgets and access tiers that restrict non-commercial research. Benefits from Codex for code generation research but extraction occurs through pricing asymmetry and publication restrictions. Coordination value (standardized benchmark) exists alongside asymmetric cost-sharing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "OpenAI and Enterprise Customers",
+      "comment": "PERSPECTIVE 3: OPENAI / ENTERPRISE PARTNERSHIP (ROPE) \u2014 OpenAI and early-adopter enterprises experience the constraint as coordination: API standardization enables ecosystem development, enterprise integration, and market expansion. Net beneficiaries experience access control as a coordination mechanism with minimal perceived extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Source and Alternative Model Coalition",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE COALITION (SCAFFOLD) \u2014 Organized agents (Hugging Face, open-source LLM communities, Meta Llama releases) are building alternative code generation pathways that reduce dependency on Codex. Access control constraint has sunset logic: as open alternatives mature (CodeLlama, Phi models), closed API dependency declines. Coalition has agency and sees exit path."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Enterprise Licensing",
+      "comment": "PERSPECTIVE 5: LEGACY LICENSING FRAMEWORK (PITON) \u2014 OpenAI's access control persists through institutional inertia from earlier venture-capital funding models and Azure partnership lock-in. The licensing theater (tiers, quotas, rate limits) maintains extraction but has degraded functional utility as market conditions changed. Maintained through contractual obligations and switching costs rather than genuine lock-in advantage."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, proprietary control of frontier AI models might be framed as an immutable natural law: the R&D costs of training large code models are so high that only well-capitalized actors can bear them, making closed access inevitable. However, this perspective risks naturalizing what is a contingent business model choice. The engine's false summit detector will identify this as naturalization \u2014 open alternatives demonstrate that the constraint is institutional, not inherent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "open_model_parity_timeline",
+      "question": "When will open-source code generation models reach feature parity with Codex across key metrics (latency, accuracy, specialized domains)?",
+      "resolution_mechanism": "Benchmark comparison (HumanEval, MultiPL-E, domain-specific code generation tasks) tracking CodeLlama, Phi, and other open models against Codex; empirical measurements of inference speed and fine-tuning capability",
+      "impact": "If parity achieved within 18-24 months: Scaffold sunset is real and near-term; Snare classification becomes temporary. If parity delayed beyond 3 years: open alternatives remain niche; Snare and Tangled Rope persist as primary classifications.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline for open-source code model parity with proprietary Codex"
+    },
+    {
+      "id": "enterprise_lock_in_reversibility",
+      "question": "How reversible is enterprise lock-in to Codex API? Can integrated development workflows migrate to open alternatives without substantial refactoring?",
+      "resolution_mechanism": "Analysis of enterprise integration patterns: API wrapper dependencies, proprietary fine-tuning data, custom model performance SLAs; migration cost estimates for switching to open alternatives",
+      "impact": "If highly reversible: enterprise exit options are better than constrained, weakening Rope classification. If lock-in is strong: enterprise dependency persists, sustaining the Rope perspective for OpenAI/enterprise partnership.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of enterprise lock-in to Codex API infrastructure"
+    },
+    {
+      "id": "pricing_tier_discrimination_intent",
+      "question": "Is OpenAI's pricing tier structure (free tier \u2192 paid tiers \u2192 enterprise contracts) designed primarily for demand management and cost recovery, or does it intentionally extract surplus from independent developers while subsidizing enterprises?",
+      "resolution_mechanism": "Analysis of tier design decisions: cost structure vs pricing; comparison with competitor pricing models; internal documentation (if available) on tier targeting; empirical measurement of who bears highest per-inference cost",
+      "impact": "If primarily cost-recovery: access control is coordination mechanism (Rope dominates). If extraction is intentional: Snare and Tangled Rope classifications are justified. Determines whether suppression (0.65) reflects natural scarcity or artificial gatekeeping.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether pricing tiers reflect cost recovery or intentional surplus extraction"
+    },
+    {
+      "id": "knowledge_distillation_asymmetry",
+      "question": "Do open models trained on Codex outputs (via knowledge distillation or synthetic data generation) constitute genuine alternative capability or merely reproduce Codex behavior with degraded performance?",
+      "resolution_mechanism": "Analysis of distilled model performance: direct comparison with Codex on held-out benchmarks; evaluation of capability generalization beyond training data distribution; detection of memorized patterns vs learned abstractions",
+      "impact": "If genuine alternative: open community can solve the access constraint through indirect learning. If degraded reproduction: open alternatives remain dependent on reverse-engineering proprietary behavior.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether knowledge distillation produces genuine alternative capability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "OpenAI's control of Codex access via restricted API and tiered application represents a structural constraint combining coordination and extraction. The constraint creates asymmetric value distribution: OpenAI and early-adopter enterprises capture disproportionate benefits from first-mover advantage and API integration, while independent developers, academic researchers, and the open-source community bear suppression costs through pricing barriers, rate limits, and feature gatekeeping. Extractiveness has increased from 0.32 to 0.52 over the measurement interval as Codex became integral to developer workflows, raising switching costs. Simultaneously, theater_ratio has declined from 0.55 to 0.48, indicating that the access control mechanism is becoming more functionally efficient (less performative) as API standardization matures. The constraint exhibits all six DR types depending on observer position: independent developers experience pure extraction (Snare), academic researchers experience mixed coordination-extraction (Tangled Rope), enterprises and OpenAI experience coordination (Rope), the open-source coalition sees a temporary problem being solved (Scaffold), legacy licensing frameworks persist through institutional inertia (Piton), and the civilizational analytical observer risks naturalizing a contingent business model as immutable (Mountain).",
+    "key_agents": [
+      "OpenAI: Primary beneficiary and constraint enforcer (institutional/arbitrage) \u2014 controls access, captures pricing premium, benefits from ecosystem lock-in",
+      "Enterprise Customers: Secondary beneficiary (institutional/arbitrage) \u2014 negotiate volume discounts, integrate deeply into workflows, capture competitive advantage from early access",
+      "Independent Developers: Primary victim (powerless/trapped) \u2014 depend on API access for productivity, face rate limits and pricing extraction, cannot negotiate terms",
+      "Academic Researchers: Secondary victim (moderate/constrained) \u2014 restricted research access tiers, publication restrictions, limited budget for API costs",
+      "Open Source Community: Organized victim (organized/constrained) \u2014 developing alternative models (CodeLlama, Phi), building around proprietary dependency",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing proprietary control as inherent to frontier AI capability"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. OpenAI captures substantial surplus through pricing differentiation, rate limiting, and feature gatekeeping. The increase from 0.32 to 0.52 reflects deepening developer dependency as Codex became integral to workflows. However, extraction is not maximal because open alternatives are emerging and developers retain some mobility (can use local models, competitors). Suppression (0.65): High. Independent developers face significant barriers: specialized API knowledge, pricing asymmetry, rate limits that penalize high-volume use, publication restrictions on research, and switching costs from integrated workflows. Academic and open-source actors face additional suppression through explicit access tier restrictions. Theater ratio (0.48): Moderate-low. The access control mechanism is substantially functional \u2014 the API gateway, authentication, and rate limiting actually serve technical purposes (cost management, DoS prevention, quality control) alongside extraction. Theater has declined because the mechanism's technical legitimacy has increased as the platform matured. This is not primarily performative enforcement.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence across structural positions. OpenAI/enterprise sees coordination (Rope) \u2014 the API enables ecosystem development, standardizes interfaces, and allows enterprises to build integrated solutions. Independent developers see extraction (Snare) \u2014 they pay for access without negotiating power and face punitive rate limits. Academic researchers see mixed coordination and extraction (Tangled Rope) \u2014 the platform enables research but access tiers and pricing asymmetry extract surplus. The open-source coalition sees a sunset (Scaffold) \u2014 alternative models are maturing and will reduce dependency. The legacy licensing framework sees degradation (Piton) \u2014 the venture capital licensing model persists through contractual obligations but has lost functional utility as market conditions changed. The civilizational observer risks seeing inevitability (Mountain) \u2014 the high R&D costs of training large code models might appear to necessitate closed access, but the emergence of well-funded open alternatives (Meta's Llama investment, community Llama derivatives) contradicts this naturalization.",
+    "directionality_logic": "Directionality values are derived from each agent's structural relationship to extraction flow. OpenAI (beneficiary + arbitrage exit) derives low d (\u22480.15), producing negative effective extraction \u03c7 \u2014 they experience the constraint as a coordination benefit. Enterprises (beneficiary + constrained exit via switching costs) derive moderate d (\u22480.35), experiencing moderate positive \u03c7. Independent developers (victim + trapped exit due to market dependency) derive high d (\u22480.85), experiencing maximum \u03c7 \u2014 this is the primary extraction flow. Academic researchers (victim + constrained exit through restricted tiers) derive moderate-high d (\u22480.70), experiencing substantial \u03c7. Open-source community (organized victim + constrained exit being actively worked to mobilize) derives moderate d (\u22480.50-0.55), experiencing moderate \u03c7. The engine computes \u03c7 from these d values via the sigmoid function f(d) and scope modifier \u03c3(S=global=1.2), producing effective extractiveness that ranges from negative (beneficiaries) to maximum (trapped victims).",
+    "mandatrophy_analysis": "TANGLED ROPE STRUCTURE CONFIRMED: The constraint satisfies all three Tangled Rope gates. First, genuine coordination function exists: the API standardizes code generation interfaces, enabling enterprises and third-party developers to build integrated solutions without reimplementing underlying models. Second, asymmetric extraction exists: pricing tiers and rate limits impose disproportionate costs on independent developers and academic researchers while subsidizing enterprise volumes. Third, active enforcement is required: OpenAI must actively maintain API access controls, manage rate limits, monitor usage patterns, and enforce licensing terms to sustain the extraction. Without enforcement, developers would exploit unlimited access, breaking the pricing mechanism. The mandatrophy is resolved by recognizing that the Rope coordination function (API standardization) and the Snare extraction function (access gatekeeping) are structurally inseparable. OpenAI cannot provide the coordination benefit without also creating the extraction mechanism. The perspectival gap reflects this structural dual function: agents who benefit from coordination (enterprises) experience it as Rope; agents who bear extraction costs (independent developers) experience it as Snare; agents with mixed relationships (academics) experience Tangled Rope. No single type adequately describes the constraint from all perspectives simultaneously."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "large_language_model_training_cost_barrier",
+      "enterprise_ai_integration_lock_in",
+      "developer_tool_market_concentration"
+    ],
+    "dual_formulation_note": "Codex access control is downstream of training cost economics (LLM training requires massive capital investment) but represents a distinct structural choice about how to distribute access once models are trained. Alternative distribution models (open-source release, public API without gatekeeping) would have different extractiveness values. The constraint story captures OpenAI's specific access control architecture, not the inherent cost structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

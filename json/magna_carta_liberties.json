@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_liberties",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mc"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Great Charter of Liberties (Magna Carta, 1215)",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "baronial_elite",
+      "merchant_cities",
+      "church_hierarchy"
+    ],
+    "victims": [
+      "royal_absolutism_constraints",
+      "peasant_and_serf_population",
+      "common_law_accessibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Peasant and Serf",
+      "comment": "PERSPECTIVE 1: PEASANT AND SERF (SNARE) \u2014 Magna Carta offers elaborate protections for baronial property and merchant trading rights but explicitly excludes the unfree majority. Serfdom remains legally enforced. The charter is a snare because it crystallizes the feudal extraction hierarchy while creating the illusion of universal legal protections. No exit option; the constraint formalizes feudal bonds."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middling Freeholders and Merchants",
+      "comment": "PERSPECTIVE 2: MIDDLING FREEHOLDERS AND MERCHANTS (TANGLED ROPE) \u2014 Magna Carta provides genuine coordination benefits (standardized weights/measures, removal of arbitrary tolls, stable inheritance rights) alongside modest extraction (baronial courts still tax justice). Exit is constrained by feudal tenure obligations, but the charter creates enforceable rights against arbitrary seizure. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Baronial Coalition",
+      "comment": "PERSPECTIVE 3: BARONIAL COALITION (ROPE) \u2014 The immediate beneficiaries. Magna Carta is a coordination mechanism solving the collective action problem of resistance to arbitrary royal prerogative. The barons extract a constraint on kingship itself, converting undefined feudal obligations into specified rents and services. Low overall extraction (for these agents) because the mechanism redistributes power among near-peers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Royal Crown",
+      "comment": "PERSPECTIVE 4: THE ROYAL CROWN (TANGLED ROPE) \u2014 King John is both victim (restrained from arbitrary taxation and military prerogative) and enforcer (Magna Carta requires royal seal and compliance machinery). The crown experiences extraction (loss of absolute prerogative) but also gains coordination benefit (predictable feudal obligations replace arbitrary demands). The charter binds the king to law, converting indefinite extraction capacity into defined rents."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Church Authority",
+      "comment": "PERSPECTIVE 5: THE CHURCH AUTHORITY (SCAFFOLD) \u2014 The charter explicitly protects church liberties and property from royal seizure. For the ecclesiastical hierarchy, Magna Carta is a sunset mechanism: it solves the immediate crisis (the pope had placed England under interdict; the church needed the charter to end the conflict) while creating a framework for transition from direct royal coercion to negotiated feudal order. The church exits the immediate threat and gains contractual security."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Long-Term Institutional View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INSTITUTIONAL INERTIA VIEW (PITON) \u2014 Over centuries, Magna Carta becomes a theatrical symbol of 'English liberties' while the actual feudal extraction it codified gradually atrophies (serfdom declines, peasant revolts succeed, franchise expands). The charter persists as performative cover for institutional change \u2014 reissued 63 times with modifications, cited to legitimize reforms it did not originally contain (parliamentary supremacy, religious freedom, representative consent). Theater ratio rises as the original feudal specificity fades and the mythic 'universal rights' reading replaces historical analysis."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "charter_intent_vs_mythology",
+      "question": "Is Magna Carta primarily a feudal peace treaty codifying existing baronial privileges, or was it a proto-constitutional statement of universal legal rights?",
+      "resolution_mechanism": "Close reading of the 63 surviving copies and reissues; comparison of original clauses (feudal specifics: widow remarriage taxes, forest usufruct, Jewish loan cancellation) against later reinterpretations (Coke's 1628 Petition of Right, American constitutional borrowing)",
+      "impact": "If feudal: constraint is a snare from peasant perspective, rope from baronial perspective, piton from centuries-long analytical view. If proto-constitutional: constraint is rope or scaffold from broader perspectives. The classification hinge depends on this resolution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Magna Carta encodes feudal privileges or universal rights"
+    },
+    {
+      "id": "extraction_beneficiary_identification",
+      "question": "Who are the primary extractors from Magna Carta's codification: the baronial class consolidating power against kingship, or the crown retaining effective prerogative despite nominal constraint?",
+      "resolution_mechanism": "Fiscal analysis of royal revenue post-1215 vs. pre-1215; data on successful baronial enforcement of charter clauses; frequency of reissue as evidence of non-compliance",
+      "impact": "If barons extract: charter is rope from their perspective, snare from peasant perspective. If crown retains effective prerogative: charter is theater (piton) \u2014 the crown renegotiates terms after each rebellion and the constraint is inert. This determines whether beneficiary is baronial_elite or whether the classification degrades.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Who successfully extracts value from Magna Carta's codification"
+    },
+    {
+      "id": "peasant_exclusion_intentionality",
+      "question": "Is the exclusion of serfs and unfree persons from Magna Carta's protections a deliberate restriction to feudal property-holders, or a limitation of contemporary legal categories?",
+      "resolution_mechanism": "Textual analysis of charter language; comparison with contemporary legal documents; evidence of deliberate baronial resistance to broader liberties language",
+      "impact": "If deliberate: constraint is a snare by design, formalizing feudal hierarchy. If categorical limitation: constraint still functions as snare from peasant perspective (same outcome, different intent). Either way, the snare classification holds; the question affects narrative interpretation but not structural classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether peasant exclusion from Magna Carta protections is intentional restriction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "Magna Carta (1215) is a peace treaty between King John and a coalition of rebellious English barons, crystallizing an alternative to unlimited royal prerogative. The charter is a structural hybrid: it functions as coordination mechanism (standardizing feudal obligations, creating predictable legal procedures) while simultaneously formalizing extraction (baronial courts retain toll authority, merchant guilds gain monopoly protections, ecclesiastical hierarchy gains tax immunity). The classification varies sharply by observer position. The peasant majority, excluded from all protections and bound by reinforced serfdom clauses, experiences Magna Carta as a snare \u2014 a formalization of their subordination under the guise of universal law. The baronial coalition experiences it as coordination (solving their collective action problem against kingship). The crown experiences it as constraint (loss of prerogative) mixed with coordination (predictable feudal obligations). The analytical observer over centuries experiences it as piton \u2014 the charter's functional content (feudal property protection, baronial privilege) gradually atrophies as serfdom declines and franchise expands, but the mythic reading ('universal rights,' 'rule of law') persists, reissued 63 times with reinterpretations that would shock the original drafters. The theater ratio rises across the interval as the charter becomes a symbol deployed in later conflicts (Peasant Revolt of 1381, English Civil War, American Revolution) for purposes the original text does not support. The extractiveness declines modestly as baronial enforcement power wanes and the feudal system itself degrades, but suppression remains high throughout \u2014 the constraint's enforcement mechanism relies on baronial military power and royal legitimacy, both of which depend on preventing alternatives (peasant organization, church independence, merchant confederations) from crystallizing.",
+    "key_agents": [
+      "King John: Institutional actor (institutional/trapped initially, arbitrage post-treaty) \u2014 subject to baronial coalition but retains enforcement power and prerogative definition",
+      "Baronial Coalition: Organized actors (organized/constrained) \u2014 primary beneficiaries; solve their collective action problem against arbitrary kingship; extract standardized rents and legal protections",
+      "Peasant and Serf Population: Powerless actors (powerless/trapped) \u2014 explicitly excluded from charter protections; experience reinforced feudal bonds; no exit option",
+      "Merchant Cities and Guilds: Moderate power (moderate/constrained) \u2014 benefit from standardized weights, measures, and toll reductions; constrained by feudal tenure obligations and monopoly requirements",
+      "Church Hierarchy: Institutional actors (institutional/arbitrage) \u2014 gain protection from royal seizure and interdict threat; experience charter as sunset mechanism resolving immediate crisis",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the charter's function gradually degraded and mythologized as feudal system decays"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Magna Carta codifies extraction of feudal obligations, toll authority, and property protections into standardized (rather than arbitrary) forms. The reduction from theoretical royal prerogative to specified rents is extraction for the crown but coordination benefit for the barons. The overall value reflects that the charter redistributes power among hierarchical actors (king, barons, church) without directly extracting from the powerless majority \u2014 instead, it formalizes their subordination. Suppression (0.68): High. The constraint's enforcement relies entirely on baronial military coalition and royal legitimacy. Alternatives (peasant organization, church autonomy, merchant confederations operating outside feudal hierarchy) are systematically suppressed by force and legal prohibition. The charter itself criminalizes oath-breaking and unauthorized assembly, strengthening the suppression mechanism. Theater ratio (0.65): Moderate-high. The charter begins with specific feudal content (widow remarriage tax, forest hunting rights, Jewish creditor limitations) but is quickly reissued with modified language and broader claims. By the 13th century, the charter is cited as evidence of 'English liberties' far beyond its actual clauses. The performative reading accelerates as the feudal system degrades \u2014 the charter persists as symbol precisely because its original function (feudal obligation codification) is no longer operative. Later reissuances (1225, 1297) drop specific feudal language and add more 'universal' framing, increasing theater as the material basis of feudal extraction dissolves.",
+    "perspectival_gap": "This constraint demonstrates extreme perspectival divergence from identical base properties. The baronial coalition sees coordination (rope) \u2014 they are solving their collective action problem against arbitrary kingship by converting undefined feudal obligations into specified rents and services. The crown sees constraint (tangled rope) \u2014 the king is both restrained (loss of prerogative) and gains coordination benefit (predictable obligations replace arbitrary demands). The church sees temporary crisis resolution (scaffold) \u2014 the interdict threat ends; the church gains property protection; the mechanism has a sunset in ecclesiastical independence. The peasant sees pure extraction (snare) \u2014 the charter explicitly reinforces serfdom, formalizes forced labor, and provides no protection. The middling freeholders see mixed coordination and extraction (tangled rope) \u2014 they gain standardized legal procedures and protection from arbitrary seizure, but still owe feudal obligations and face baronial court authority. The analytical observer across centuries sees institutional degradation (piton) \u2014 the charter's feudal content gradually becomes inert; the mythic 'universal rights' reading replaces historical analysis; the constraint persists through reissuance and ceremonial citation long after its functional basis atrophies. The perspectival gap is driven by directionality: beneficiaries (barons, church, merchants with property) experience low or negative extraction; the powerless peasant majority experiences high extraction; the crown straddles both sides of the extraction flow.",
+    "directionality_logic": "The directionality derivation chains from beneficiary/victim declarations and exit options. The baronial coalition benefits from the charter (low d \u2192 low \u03c7, classified as rope); the crown loses prerogative but gains coordination (moderate d, classified as tangled rope for the crown's own perspective); the church benefits and exits the crisis (low d with scaffold dynamics); the peasant majority bears cost and has no exit (high d \u2192 high \u03c7, classified as snare). The analytical observer operates at (analytical/analytical) with universal scope, applying civilizational time horizon \u2014 this produces a d value (\u22480.72-0.73) that would normally indicate snare or tangled rope, but the theater ratio (0.65) and the decaying functional content across the interval produces piton classification. The overrides reflect that the crown's position is genuinely mixed \u2014 it is both enforcer and subject of the constraint \u2014 and the straightforward derivation would mislabel this. The crown perspective includes an override documenting that while the crown nominally bears cost (high d from victim framing), it also retains effective enforcement power and can renegotiate the constraint after each baronial coalition collapses (arbitrage exit option), producing moderate d rather than high d.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by distinguishing the genuine coordination function (baronial coalition solving collective action) from the pure extraction (peasant subordination formalized). The charter IS both \u2014 it is a coordination mechanism for the baronial coalition that solves their coordination problem against arbitrary kingship. Simultaneously, it IS a snare for the peasant majority, who experience only formalized extraction. The mandatrophy is not resolved by collapsing the types but by recognizing that the charter is a DUAL STRUCTURE: two separate constraints operating on different populations through the same formal document. From the baronial/crown perspective, Magna Carta solves a genuine coordination problem (how to convert arbitrary feudal obligations into predictable, enforceable rents) \u2014 this is rope/tangled rope. From the peasant perspective, Magna Carta formalizes subordination while creating the illusion of universal protections \u2014 this is snare. The analytical observer's piton classification emerges from the long-term degradation: the original dual structure (coordination for elites, formalization for peasants) gradually decays as feudal extraction itself declines and becomes vestigial, leaving the charter as a reissued symbol whose mythic content (universal liberties) has entirely replaced its historical content (feudal obligation codification). The 63 reissuances, each with modified language and broader claims, are the primary evidence that the charter's original function is atrophied and the constraint persists through institutional inertia and ceremonial citation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "feudal_obligation_codification",
+      "english_common_law_development",
+      "serfdom_legal_reinforcement"
+    ],
+    "dual_formulation_note": "Magna Carta is a constraint family consisting of three structurally distinct constraints: (1) baronial_coalition_coordination (\u03b5=0.12, rope) \u2014 solves the barons' collective action problem, (2) feudal_extraction_formalization (\u03b5=0.42, tangled rope) \u2014 codifies and standardizes extraction from the peasant majority while also constraining the crown, (3) magna_carta_mythology (\u03b5=0.65, piton) \u2014 emerges over centuries as the original feudal content decays and the mythic 'universal liberties' reading replaces historical analysis. These three constraints share the formal document but operate on different populations through different mechanisms. The main story (magna_carta_liberties) integrates all three through perspectival indexing; the network links capture upstream dependency (the charter depends on feudal obligation codification existing as a constraint) and downstream influence (the charter's mythology drives later constraints like parliamentary supremacy and representative consent)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: network_effects
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-05-21
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_network_effects, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -27,8 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,95 +53,112 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: network_effects
- * human_readable: Network Effects (Demand-Side Economies of Scale)
- * domain: economic/technological
- * * SUMMARY:
- * A phenomenon where a product or service gains additional value as more people
- * use it. This creates a powerful positive feedback loop that often leads to
- * "winner-take-all" dynamics, where a dominant player becomes nearly impossible
- * to displace due to the high cost for users to leave the established network.
- * * KEY AGENTS:
- * - Early Adopter/End User: Subject (Powerless)
- * - Platform Owner: Beneficiary (Institutional)
- * - Strategic Competitor: Subject (Moderate Power)
- * - Systems Auditor: Observer (Analytical)
+ *   constraint_id: network_effects
+ *   human_readable: Network Effects (Demand-Side Economies of Scale)
+ *   domain: economic/technological
+ *
+ * SUMMARY:
+ *   Network effects represent a structural phenomenon where the value of a
+ *   product or service increases as more people use it. This constraint
+ *   occupies a critical position in understanding digital platforms,
+ *   telecommunications, and two-sided markets. The paradox: network effects
+ *   appear as a natural coordination mechanism (early users benefit from each
+ *   other's participation) but also create extractive lock-in once a dominant
+ *   network emerges. Late adopters face a trap — the platform they must join
+ *   is often technically inferior to alternatives but dominates by network
+ *   density alone. The constraint exhibits all six DR types from different
+ *   perspectives, revealing that 'network effects' names a family of
+ *   structurally distinct economic dynamics rather than a single phenomenon.
+ *   The theater_ratio (0.48) reflects that narratives about inevitable
+ *   network dominance operate partly as truthful descriptions of coordination
+ *   benefits and partly as justifications for suppression of switching. The
+ *   extractiveness trajectory (0.15→0.52 over the interval) captures the
+ *   constraint's evolution: in early phases, network effects primarily
+ *   coordinate users and create genuine mutual benefit; in mature phases,
+ *   network effects primarily lock in late adopters and extract through
+ *   monopoly power. The platform owner's perspective reveals that suppression
+ *   is embedded in technical architecture (data portability barriers, API
+ *   restrictions, incompatible formats) rather than through active coercion,
+ *   making the constraint a tangled rope with passive enforcement.
+ *
+ * KEY AGENTS:
+ *   - Early Adopters / First-Movers: Primary beneficiaries (institutional/arbitrage) — capture disproportionate network value; can pivot to new platforms if necessary; experience constraint as coordination mechanism
+ *   - Platform Owner / Monopolist: Secondary beneficiary (institutional/arbitrage) — captures rents from network density; actively suppresses exit options; profits from lock-in; perspective inverts from beneficiary to extractor
+ *   - Late Adopters: Primary victims (powerless/trapped) — forced to use dominant platform despite superior alternatives; face prohibitive switching costs; no exit option; experience maximum extraction
+ *   - Competing Platform Operators: Secondary victims (organized/constrained) — organized actors investing in alternatives but suppressed by network density and winner-take-most dynamics; can partially exit but face formidable incumbent advantages
+ *   - SME User Ecosystem: Tertiary victims (moderate/constrained) — experience mixed coordination (access to customer base) and extraction (platform fees, algorithmic control, terms-of-service changes); constrained by switching costs and ecosystem dependencies
+ *   - Analytical Observer: Civilization-scale view (analytical/analytical) — risks naturalizing contingent institutional lock-in as inevitable economic law; false summit alert on piton classification
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-% Extraction is moderate: users gain utility, but the platform owner extracts
-% disproportionate value through data, fees, or advertising once lock-in is achieved.
-domain_priors:base_extractiveness(network_effects, 0.55).
-% Suppression is high: incumbent networks suppress alternatives by preventing
-% interoperability, raising switching costs, and leveraging their user base.
-domain_priors:suppression_score(network_effects, 0.60).
-% Theater is low; the network's function is real, not performative.
-domain_priors:theater_ratio(network_effects, 0.1).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(network_effects, 0.52).
+domain_priors:suppression_score(network_effects, 0.65).
+domain_priors:theater_ratio(network_effects, 0.48).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(network_effects, extractiveness, 0.55).
-narrative_ontology:constraint_metric(network_effects, suppression_requirement, 0.60).
-narrative_ontology:constraint_metric(network_effects, theater_ratio, 0.1).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(network_effects, extractiveness, 0.52).
+narrative_ontology:constraint_metric(network_effects, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(network_effects, theater_ratio, 0.48).
 
-% Constraint self-claim (what does the constraint claim to be?)
-% Often framed as an inevitable, natural law of markets (Metcalfe's Law).
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(network_effects, tangled_rope).
 narrative_ontology:human_readable(network_effects, "Network Effects (Demand-Side Economies of Scale)").
 narrative_ontology:topic_domain(network_effects, "economic/technological").
 
-% Binary flags
-% Enforcement is required to maintain the lock-in, e.g., by preventing data portability.
 domain_priors:requires_active_enforcement(network_effects).
 
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(network_effects, platform_owners).
-narrative_ontology:constraint_victim(network_effects, innovative_startups).
-narrative_ontology:constraint_victim(network_effects, end_users_facing_lock_in).
-
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(network_effects, early_adopters).
+narrative_ontology:constraint_beneficiary(network_effects, platform_owner).
+narrative_ontology:constraint_victim(network_effects, competing_platforms).
+narrative_ontology:constraint_victim(network_effects, late_adopters).
+narrative_ontology:constraint_victim(network_effects, locked_in_users).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
-   Power (P) and Scope (S) both affect effective extraction.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE END USER (SNARE)
-% Initially a Rope, but over time becomes a Snare due to high switching costs
-% and extractive practices that emerge after the network is dominant.
-constraint_indexing:constraint_classification(network_effects, tangled_rope,
+% PERSPECTIVE 1: LATE ADOPTER (SNARE) — Faces a trap: must use the dominant platform to participate in the network, despite potentially superior alternatives. Switching costs are prohibitive; the network density creates structural lock-in. No meaningful exit option; extraction operates through mandatory participation in an inferior equilibrium.
+constraint_indexing:constraint_classification(network_effects, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PLATFORM OWNER (ROPE)
-% Viewed as a pure coordination mechanism that creates immense value and a
-% defensible market position. Extraction is seen as a fair return.
+% PERSPECTIVE 2: COMPETING PLATFORM OPERATOR (TANGLED ROPE) — Organized actors (alternative platforms, open-source projects) can invest in features and interoperability to coordinate users, but face suppression through network density and winner-take-most dynamics. Both extraction (users preferring dominant network) and coordination (building alternative ecosystems) are present; enforcement requires sustained technical and marketing investment against a formidable incumbent.
+constraint_indexing:constraint_classification(network_effects, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: EARLY ADOPTER (ROPE) — Primary beneficiary. Gains disproportionate value from network growth; coordinates with peers to establish the network's value proposition. Low experienced extraction because this agent benefits from the constraint's operation and can arbitrage to other networks if necessary. Pure coordination function from this perspective.
 constraint_indexing:constraint_classification(network_effects, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE STRATEGIC COMPETITOR (MOUNTAIN)
-% A startup with a superior product sees the incumbent's network effect as an
-% unchangeable law of the market, an insurmountable barrier to entry.
+% PERSPECTIVE 4: PLATFORM OWNER (SNARE) — Appears as beneficiary with arbitrage (can pivot to new platforms), but the perspective shifts from beneficiary to extractor. The platform owner actively suppresses exit options for late adopters through lock-in mechanisms (data portability barriers, API restrictions, incompatible formats). Extraction is embedded in the platform's technical architecture; enforcement is passive (structural) rather than active coercion. High suppression; beneficiary status inverts to reveal extraction.
+constraint_indexing:constraint_classification(network_effects, snare,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: SME USER ECOSYSTEM (TANGLED ROPE) — Small and medium enterprises using the platform experience mixed effects: coordination benefits (access to large customer base, vendor ecosystem, integration tools) but also extraction through platform fees, algorithmic visibility controls, and terms-of-service changes that can disadvantage specific seller classes. Suppression operates through switching costs and platform lock-in; enforcement requires ongoing compliance with platform policies.
 constraint_indexing:constraint_classification(network_effects, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
-            exit_options(trapped),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Recognizes both the genuine coordination value (beneficiaries exist) and the
-% asymmetric, coercive extraction (victims exist), classifying it as a hybrid.
-constraint_indexing:constraint_classification(network_effects, snare,
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NULL MODEL (PITON) — From first principles, network effects are presented as a natural economic phenomenon — 'more users create more value.' But empirical observation reveals substantial theater in how network effects are invoked: they are used to justify monopoly pricing, to rationalize switching cost barriers, and to explain away competitive failures as 'inevitable network dynamics.' The theater_ratio (0.48) reflects that approximately half the activation energy behind network-driven lock-in comes from actual value creation; the other half derives from suppression of alternatives and coordination of user expectations. The constraint persists partly through its own explanatory power — the narrative 'network effects are natural' operates as institutional inertia.
+constraint_indexing:constraint_classification(network_effects, piton,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -138,20 +170,18 @@ constraint_indexing:constraint_classification(network_effects, snare,
 
 :- begin_tests(network_effects_tests).
 
-test(perspectival_gap_user_vs_owner) :-
-    % Verify the user (powerless) and owner (institutional) have different views.
+test(perspectival_gap) :-
     constraint_indexing:constraint_classification(network_effects, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(network_effects, TypeInstitutional, context(agent_power(institutional), _, _, _)),
-    TypePowerless == snare,
-    TypeInstitutional == rope,
-    TypePowerless \= TypeInstitutional.
+    constraint_indexing:constraint_classification(network_effects, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_observer_is_tangled_rope) :-
-    % The analytical view must resolve to Tangled Rope given the metrics.
-    constraint_indexing:constraint_classification(network_effects, snare, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(network_effects, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(competitor_sees_mountain) :-
-    constraint_indexing:constraint_classification(network_effects, tangled_rope, context(agent_power(moderate), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(network_effects, TR),
+    TR >= 0.70.
 
 :- end_tests(network_effects_tests).
 
@@ -161,71 +191,101 @@ test(competitor_sees_mountain) :-
 
 /**
  * LOGIC RATIONALE:
- * The scores reflect the dual nature of network effects. The base extractiveness (0.55)
- * and suppression (0.60) are high enough to qualify for a Snare or Tangled Rope,
- * but not so high as to negate the genuine coordination value it provides.
+ *   Extractiveness (0.52): Moderate-high. The constraint exhibits meaningful extraction, but not as severe as pure monopoly because network-driven value creation is real — users do benefit from larger networks. However, the extraction grows over time as the network matures: initial value derives from genuine coordination benefits; later value derives from lock-in and suppression of alternatives. The 0.52 figure reflects the mature phase where extraction mechanisms are embedded. Suppression (0.65): Moderate-high. Significant barriers to exit include switching costs (data migration, account relocation, rebuilding social/economic connections), switching risk (fear of missing network activities during transition), technical barriers (incompatible formats, API restrictions), and coordination failure (critical mass required to make alternative viable). Suppression is not absolute — some users do switch, and emerging alternatives attract young cohorts — but substantially dampens exit. Theater ratio (0.48): Moderate. Approximately half of the activation energy behind network-driven dynamics comes from actual value creation (genuine coordination benefits); the other half derives from narrative justification of lock-in, marketing of network effects as inevitable, and rationalization of monopoly pricing as natural ecosystem dynamics. The theater has been declining as antitrust scrutiny increases, but the frame 'network effects are inevitable' still operates at institutional inertia levels.
  *
- * The Perspectival Gap is stark:
- * - For the Platform Owner (Institutional), it's a perfect Rope, a tool for value creation.
- * - For the End User (Powerless), it becomes a Snare as switching costs rise and the platform begins extracting value.
- * - For a Competitor (Moderate), it's a Mountain, an immutable barrier to entry.
- * - The Analytical observer, weighing both the coordination function (beneficiaries) and the coercive extraction (victims, enforcement), correctly identifies it as a Tangled Rope.
+ * PERSPECTIVAL GAP:
+ *   This constraint demonstrates significant perspectival divergence. The early adopter sees pure coordination (Rope) — they genuinely benefit from network growth and experience the platform as solving a shared problem. The platform owner sees extraction opportunities (Snare or Tangled Rope depending on perspective) — they actively engineer lock-in while claiming to serve users. Competing operators see suppression (Tangled Rope) — they can invest in alternatives but face formidable incumbent advantages. Late adopters see pure extraction (Snare) — trapped by network density with no viable exit. SME users see mixed effects (Tangled Rope) — coordination benefits from network access but extraction through platform control. The analytical observer risks seeing inevitable economic law (Piton or false Mountain) — the narrative 'network effects are natural' can naturalize what is actually contingent institutional lock-in created through suppression of interoperability and data portability. The perspectival gap is largest between the beneficiary (early adopter) and the victim (late adopter) — they experience structurally opposite dynamics from the same network.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Each perspective's directionality (d) is determined by structural position within the extraction/coordination flow. Early adopters and platform owners occupy beneficiary positions (low d, negative f(d), receive subsidy from the constraint). Their exit options are arbitrage — they can pivot to new platforms and maintain opportunities. Late adopters occupy full-target positions (high d, high f(d), maximum extraction experience) with no exit — they must participate in the dominant network. Competing platform operators occupy partial-target positions (moderate d) — organized but constrained by network density. SME users occupy mixed positions (moderate d) — they receive coordination benefits but also face extraction through platform control mechanisms. The piton perspective derives from high theater_ratio (0.48) indicating that the constraint's operation relies substantially on narrative and institutional inertia rather than active enforcement mechanisms.
  *
  * MANDATROPHY ANALYSIS:
- * Classifying this as a Tangled Rope is critical. A simpler analysis might label it a Snare (focusing only on user lock-in) or a Rope (focusing only on the platform's value creation). The Tangled Rope classification correctly captures the reality that it is BOTH a powerful coordination tool AND an extractive mechanism. This prevents the system from mischaracterizing a constructed market dynamic as either pure malevolence or pure public good.
+ *   MANDATROPHY RESOLUTION: The constraint avoids mislabeling by distinguishing the early-phase coordination function (genuine mutual benefit from network growth) from the late-phase extraction function (lock-in of late adopters). Network effects in early phases are legitimately Rope — they solve a real coordination problem and create shared value. Network effects in late phases are legitimately Tangled Rope or Snare — they combine genuine residual coordination benefits with substantial lock-in extraction. The mandatrophy is resolved by treating network effects as a dual-phase phenomenon: phase 1 (growth) emphasizes coordination; phase 2 (maturity) emphasizes extraction. The measurement trajectory (extractiveness 0.15→0.52) captures this phase transition empirically. The constraint avoids false Rope by acknowledging suppression mechanisms (switching costs, API restrictions, data portability barriers) that are engineered, not emergent. It avoids false Mountain by recognizing that network dominance is contingent on these suppression mechanisms, not inevitable. The piton perspective correctly identifies that 'network effects are inevitable' operates as institutional theater — a narrative maintained through repeated invocation despite its partial falsehood.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_network_effects,
-    'Are network effects an emergent, natural law of digital physics (Mountain) or a constructed barrier maintained by active suppression of interoperability (Tangled Rope)?',
-    'Analysis of markets where interoperability is mandated (e.g., EU via DMA). If new competitors thrive, it supports the "constructed barrier" hypothesis. If the incumbent remains dominant, it supports the "natural law" view.',
-    'If Mountain, policy interventions are futile. If Tangled Rope, regulatory action like forced data portability could dismantle the constraint.',
+    substitutability_threshold,
+    'At what feature/UX gap do network effects cease to bind users to an inferior platform?',
+    'Comparative analysis of platform migrations (MySpace→Facebook, Vine→TikTok, Twitter→Bluesky); identification of feature advantage thresholds that overcome switching costs',
+    'If threshold is low (small feature gap): network effects are coordination-dominated (Rope). If threshold is high (large feature gap required): network effects are extraction-dominated (Snare). Determines whether the constraint is fundamentally a coordination problem or a lock-in mechanism.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(substitutability_threshold, empirical, 'Feature gap required to overcome network-driven switching costs').
+
+omega_variable(
+    interoperability_sufficiency,
+    'Can open protocols and data portability standards effectively neutralize network-driven lock-in without fragmenting the network?',
+    'Analysis of federated systems (ActivityPub, email protocols); measurement of adoption rates and feature parity for interoperable alternatives; assessment of fragmentation costs vs lock-in prevention benefits',
+    'If interoperability works: constraint reclassifies toward Scaffold (sunset via technical standards). If fragmentation outweighs benefits: constraint remains Tangled Rope or Snare (lock-in is structural).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(interoperability_sufficiency, empirical, 'Whether interoperability standards can neutralize network lock-in').
+
+omega_variable(
+    value_creation_attribution,
+    'How much of the platform''s value derives from the network itself vs. the platform owner''s innovation?',
+    'Counterfactual analysis: platforms with similar network size but different feature sets; measurement of user surplus vs platform operator profit; historical comparison of value distribution in early vs mature phases',
+    'If value creation is mostly network: constraint is Rope (coordination rent-sharing). If value creation is mostly platform: constraint is Snare (extraction via monopoly). Directs whether network effects should be treated as natural coordination or engineered lock-in.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(value_creation_attribution, conceptual, 'Attribution of value creation to network effects vs platform innovation').
+
+omega_variable(
+    intergeneration_lock_in,
+    'Do network effects create lock-in across generations, or do generational cohorts reset network dynamics?',
+    'Longitudinal analysis of platform adoption by age cohort; measurement of switching rates across generational boundaries; study of whether Gen Z adoption of new platforms represents lock-in escape or parallel network growth',
+    'If generational reset occurs: lock-in is biographical, not civilizational (Snare reclassifies to Scaffold with shorter sunset). If lock-in persists across generations: constraint is civilizational extraction (Snare confirmed).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(intergeneration_lock_in, empirical, 'Whether network lock-in persists across generational cohorts').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(network_effects, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This models the lifecycle of a successful platform: initial low extraction to
-% attract users, which then increases as lock-in is achieved.
-% Theater ratio remains low, as the function is always real.
+% Theater ratio over time
+narrative_ontology:measurement(neteff_tr_t0, network_effects, theater_ratio, 0, 0.25).
+narrative_ontology:measurement(neteff_tr_t5, network_effects, theater_ratio, 5, 0.38).
+narrative_ontology:measurement(neteff_tr_t10, network_effects, theater_ratio, 10, 0.48).
 
-% Theater ratio over time (metric_substitution):
-narrative_ontology:measurement(network_effects_tr_t0, network_effects, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(network_effects_tr_t5, network_effects, theater_ratio, 5, 0.08).
-narrative_ontology:measurement(network_effects_tr_t10, network_effects, theater_ratio, 10, 0.1).
+% Extraction over time
+narrative_ontology:measurement(neteff_be_t0, network_effects, base_extractiveness, 0, 0.15).
+narrative_ontology:measurement(neteff_be_t5, network_effects, base_extractiveness, 5, 0.38).
+narrative_ontology:measurement(neteff_be_t10, network_effects, base_extractiveness, 10, 0.52).
 
-% Extraction over time (extraction_accumulation):
-narrative_ontology:measurement(network_effects_ex_t0, network_effects, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(network_effects_ex_t5, network_effects, base_extractiveness, 5, 0.40).
-narrative_ontology:measurement(network_effects_ex_t10, network_effects, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Network effects create a shared digital space and user base.
-narrative_ontology:coordination_type(network_effects, global_infrastructure).
+narrative_ontology:coordination_type(network_effects, resource_allocation).
+narrative_ontology:affects_constraint(network_effects, digital_platform_monopoly).
+narrative_ontology:affects_constraint(network_effects, data_portability_barriers).
+narrative_ontology:affects_constraint(network_effects, switching_costs_technology).
 
-% Network relationships (structural influence edges)
-% Network effects are a primary driver of platform lock-in.
-narrative_ontology:affects_constraint(network_effects, platform_lock_in).
-narrative_ontology:affects_constraint(data_portability_mandates, network_effects).
+% DUAL FORMULATION NOTE:
+% Network effects decompose into two structurally distinct claims: (1) coordination-driven growth (early phase, genuine mutual benefit, Rope classification), (2) extraction-driven lock-in (late phase, monopoly rent-seeking, Snare/Tangled Rope classification). These are not the same constraint viewed from different angles — their ε values and suppression mechanisms differ substantially. Story treats the constraint as a time-indexed family with a phase transition. The upstream constraints (digital_platform_monopoly, switching_costs_technology) are downstream effects of network effects operating in extraction phase. Network effects in coordination phase would not create those downstream constraints.
 
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(network_effects, institutional, 0.72).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

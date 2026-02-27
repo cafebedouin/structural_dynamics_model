@@ -1,0 +1,66 @@
+{
+  "header": {
+    "constraint_id": "sts86_ascent_checklist",
+    "version": "0.1",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.01,
+    "suppression": 0.01,
+    "theater_ratio": 0.01,
+    "claimed_type": "mountain",
+    "human_readable": "Space Shuttle Ascent/Abort Procedural Matrix",
+    "topic_domain": "technological/institutional",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.95,
+    "resistance": 0.05
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Astronaut",
+      "comment": "Astronaut must follow the checklist or face catastrophic failure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Mission Control",
+      "comment": "Mission Control must follow the checklist or face catastrophic failure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "Analytical Observer acknowledges the fundamental necessity of a structured checklist for complex, life-or-death procedures."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Space Shuttle Ascent/Abort Procedural Matrix (STS-86) is a critical checklist (JSC-48005) during ascent, representing a procedural constraint. It outlines steps and contingency actions to be taken by the crew and mission control to ensure a safe ascent to orbit, or a controlled abort if necessary. The matrix minimizes the risk of human error during a highly dynamic and unforgiving phase of flight. The checklist serves as a coordination mechanism.",
+    "key_agents": [
+      "Astronaut: bears extraction (trapped/powerless)",
+      "Mission Control: benefits from checklist (analytical/institutional)",
+      "Analytical Observer: understands the need (analytical/analytical)"
+    ],
+    "logic_rationale": "The checklist is effectively a mountain constraint because the risk of not using it is catastrophic, leaving nearly zero room for resistance. Suppression is correspondingly high, while extractiveness is low because, if effective, it extracts nothing.",
+    "perspectival_gap": "There is minimal perspectival gap here; all actors understand the high-stakes nature of spaceflight, therefore are in agreement that proper procedures and a checklist are essential."
+  },
+  "omegas": [],
+  "measurements": [],
+  "network": {},
+  "directionality_overrides": []
+}

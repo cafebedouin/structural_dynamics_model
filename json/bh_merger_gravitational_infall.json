@@ -2,69 +2,154 @@
   "header": {
     "constraint_id": "bh_merger_gravitational_infall",
     "version": "1.0",
-    "generated_date": "2024-05-21",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bhm"
   },
   "base_properties": {
-    "extractiveness": 0.02,
-    "suppression": 0.01,
-    "theater_ratio": 0.0,
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
     "claimed_type": "mountain",
     "human_readable": "Gravitational Infall of Supermassive Black Holes",
-    "topic_domain": "physical/astrophysics",
+    "topic_domain": "physical/cosmology/general_relativity",
     "emerges_naturally": true,
-    "accessibility_collapse": 0.95,
-    "resistance": 0.05
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": []
   },
   "perspectives": [
-    {
-      "classification_type": "mountain",
-      "agent_power": "powerless",
-      "time_horizon": "civilizational",
-      "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Infalling Masses",
-      "comment": "PERSPECTIVE 1: THE INFALLING MASSES (MOUNTAIN) — The black holes and surrounding matter are subject to the laws of gravity. They have no agency or ability to exit the system. The constraint is an unchangeable feature of their environment."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "A Nearby Star System",
-      "comment": "PERSPECTIVE 2: A NEARBY STAR SYSTEM (MOUNTAIN) — A star system within the galaxy is governed by the same gravitational laws. While it might be ejected through a three-body interaction, it cannot alter the fundamental constraint of gravity itself. Its path is determined by an immutable law."
-    },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN) — Human astrophysicists observe and model this process. They understand it as a manifestation of General Relativity, a universal physical law. From this perspective, the constraint is a fundamental, unchangeable aspect of the universe."
+      "label": "The Analytical Observer (General Relativity)",
+      "comment": "PERSPECTIVE 1: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the universal civilizational perspective, gravitational infall of supermassive black holes is a direct consequence of Einstein's field equations and the geometry of spacetime around compact objects. The merger timescale, orbital decay rate, and gravitational wave emission spectrum are all fully determined by the mass distribution and initial conditions. Zero degrees of freedom for modification or evasion. This is a law of nature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Physical System (Dynamical View)",
+      "comment": "PERSPECTIVE 2: PHYSICAL SYSTEM (MOUNTAIN) \u2014 The three-body gravitational dynamics in UGC 11551 follow deterministic orbital mechanics. The merger is inevitable given current masses, separation, and velocities. No escape is possible \u2014 the system has no agency and no alternative state space. The gravitational binding is absolute."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Observational Astronomy Community",
+      "comment": "PERSPECTIVE 3: OBSERVATIONAL ASTRONOMY COMMUNITY (MOUNTAIN) \u2014 From the community perspective, gravitational infall is observable and verifiable through electromagnetic signatures, gravitational wave detectors (LIGO, Virgo, future space-based interferometers), and X-ray monitoring. The constraint is that the merger WILL occur and will generate predicted gravitational radiation regardless of our preferences or theories. We have no choice but to accept the prediction and observe the outcome. The physics is inaccessible to negotiation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Scientific Institution (Epistemic Reliability)",
+      "comment": "PERSPECTIVE 4: SCIENTIFIC INSTITUTION (MOUNTAIN) \u2014 The gravitational infall mechanism is one of the most thoroughly validated predictions in physics. General relativity has passed every precision test since 1915. The constraint on scientific practice is that any claim contradicting the merger prediction would require overturning the most successful theory in the history of physics. The epistemic cost is prohibitive. No room for negotiation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "merger_timescale_uncertainty",
+      "question": "What is the precise merger timescale for the UGC 11551 triple system, given uncertainties in mass estimates and dynamical modeling?",
+      "resolution_mechanism": "High-resolution spectroscopic monitoring of radial velocities; long-baseline gravitational wave detections; Bayesian parameter inference from multi-messenger observations",
+      "impact": "If merger occurs within 10^6 years: urgent observational priority. If > 10^7 years: lower priority for immediate detection campaigns. Does not affect the inevitability of the merger itself.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Uncertainty in merger timescale for UGC 11551"
+    },
+    {
+      "id": "gravitational_wave_detectability",
+      "question": "Will the merger-phase gravitational waves from UGC 11551 be detectable by current or near-future observatories, given the source redshift and system mass?",
+      "resolution_mechanism": "Stochastic gravitational wave background searches; sensitivity projections for LISA and next-generation detectors; source localization via electromagnetic counterpart association",
+      "impact": "If detectable: direct confirmation of the prediction. If not detectable: constraint remains valid but unconfirmed by gravitational waves in this source. Mountain classification unchanged.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Detectability of gravitational waves from the merger"
+    },
+    {
+      "id": "recoil_velocity_destination",
+      "question": "Will the gravitational recoil from asymmetric mass loss during the final merger eject the merged black hole from the galaxy, or will it remain bound to the galactic nucleus?",
+      "resolution_mechanism": "Numerical relativity simulations with spin and mass ratio variations; long-term post-merger trajectory modeling; evidence for off-center nuclear black holes in similar systems",
+      "impact": "If ejected: affects dynamical stability of the galactic center but does not reverse the merger. If bound: affects future merger candidates. Mountain classification unchanged \u2014 the infall itself is inevitable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether recoil ejects the merged black hole from the galaxy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5000000,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10000000,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5000000,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10000000,
+      "value": 0.15
     }
   ],
   "interval": {
     "start": 0,
-    "end": 1000000000
+    "end": 10000000
   },
   "commentary": {
-    "narrative_context": "The gravitational infall of supermassive black holes, as observed in systems like the triple-black-hole candidate in galaxy UGC 11551, is a physical process governed by the laws of General Relativity. This constraint represents the immutable nature of gravity on cosmic scales, dictating the orbital decay and eventual merger of massive objects. It is not a social, political, or economic system, but a fundamental feature of spacetime.",
+    "narrative_context": "Gravitational infall of the three supermassive black holes in UGC 11551 represents a pure constraint from fundamental physics. The system consists of three black holes with masses ~10^9 solar masses separated by kiloparsec-scale distances. Orbital dynamics driven by gravitational attraction will inevitably bring these objects into merger over a timescale of 10^6 to 10^8 years. This constraint is a mountain: it emerges naturally from Einstein's field equations, admits no workarounds, and admits zero degrees of freedom for agents embedded in the system. The constraint is not enforced through suppression or coercion \u2014 it is simply the outcome of how spacetime geometry operates at all scales. Accessibility collapse is high (0.92): no observer can access an alternate outcome; the merger is fully determined. Resistance is low (0.08): the physics admits no ambiguity or escape routes for negotiation.",
     "key_agents": [
-      "Infalling Black Holes: Primary subjects (powerless/trapped) — their dynamics are completely determined by the gravitational field.",
-      "Surrounding Gas and Stars: Secondary subjects (moderate/constrained) — their orbits and fates are dictated by the central masses.",
-      "Astrophysicists: Observers (analytical/analytical) — they model the system but cannot influence it."
+      "General Relativity: The fundamental law governing all interactions in the system \u2014 provides zero flexibility for evasion",
+      "The Physical System (Three Black Holes): The constraint target with no agency \u2014 subject to gravitational dynamics with no choice but merger",
+      "Observational Astronomers: Analytical observers who can measure and verify the prediction but cannot influence the outcome",
+      "Theoretical Physicists: Analytical agents modeling the dynamics; constrained to outcomes consistent with Einstein's equations",
+      "Gravitational Wave Detectors: Instrumental observers that will detect the merger radiation if the source is close enough and massive enough"
     ],
-    "logic_rationale": "This constraint is classified as a Mountain because it represents a fundamental law of nature. Extractiveness (ε=0.02) and suppression (0.01) are minimal; gravity does not 'extract' value for a beneficiary, nor does it 'suppress' alternatives. It is a structural property of the universe. The NL Profile metrics confirm this: it emerges naturally (true), has high accessibility collapse (0.95) as understanding General Relativity requires deep expertise, and has extremely low resistance (0.05) as it is physically impossible to oppose on this scale.",
-    "perspectival_gap": "There is no perspectival gap. All agents, regardless of their structural position—from the black holes themselves to the distant human observers—classify the constraint as a Mountain. This invariance is the defining characteristic of a true natural law within the Deferential Realism framework.",
-    "directionality_logic": "The concepts of beneficiary and victim are not applicable to this constraint. Gravitational infall is an impersonal physical process. As there are no declared beneficiaries or victims, the directionality 'd' is not derived from structural relationships but falls back to canonical values, which are irrelevant as the near-zero base extractiveness (ε) ensures that effective extraction (χ) is negligible from all perspectives.",
-    "mandatrophy_analysis": "This story serves as a baseline case, correctly identifying a physical law as a Mountain. It avoids the mandatrophy of misattributing agency or extractive purpose to a natural process. Any attempt to classify this as a Snare (e.g., 'gravity traps everything') would be a category error, projecting social concepts onto physics. The system correctly identifies its structural signature as that of an unchangeable, non-extractive, universal constraint."
+    "logic_rationale": "Extractiveness (0.12): Very low. The constraint does not extract resources or impose asymmetric costs on any agent. No actor benefits at the expense of another. The gravitational infall is a purely physical process with no economic, political, or institutional dimension. The low value reflects that this is a natural phenomenon entirely decoupled from human interests. Suppression (0.02): Negligible. There are no alternatives being suppressed, no coercive mechanism, no restricted access. The physics operates openly and uniformly across all observers. Theater ratio (0.15): Very low. The constraint is directly verifiable through observation. No performative activity is required to maintain the physics \u2014 the merger will occur regardless of anyone's attention to it. The small theater component reflects only the uncertainty in timing and mass parameters, which is epistemic rather than structural.",
+    "directionality_logic": "No directionality computation is needed for this mountain constraint. No beneficiaries or victims exist because no agent experiences the gravitational infall as extraction or coordination failure. The constraint applies uniformly to the physical system itself (which has no agency to experience it) and to all external observers identically (they all face the same physics). The uniform application across all perspectives confirms the mountain classification.",
+    "perspectival_gap": "There is no perspectival gap. All four perspectives classify the constraint as mountain with identical rationale. The general relativist, the physical system, the observational astronomer, and the scientific institution all see the same constraint: an inevitable outcome of fundamental physics with zero freedom for evasion or modification. This perspectival unanimity is the diagnostic signature of a true mountain. Absence of perspectival gap indicates genuine natural law rather than contingent institutional arrangement.",
+    "mandatrophy_analysis": "NO MANDATROPHY RISK. This constraint is a pure mountain with no hybrid coordination or extraction elements. The baseextractiveness (0.12) falls well below the Snare threshold (0.46). No actor claims coordination benefit or suppression effect. The system is a direct consequence of Einstein's field equations with zero institutional mediation. The constraint cannot be misclassified as coordination (Rope) because no agent benefits relative to another \u2014 all are equally bound by the same gravitational law. It cannot be misclassified as extraction (Snare) because no suppression mechanism exists \u2014 the constraint operates through geometry, not coercion. The mountain classification is robust across all measurement bases."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
-      "general_relativity_field_equations"
+      "gravitational_wave_background_stochasticity",
+      "supermassive_bh_coalescence_timescale"
     ],
-    "dual_formulation_note": "This constraint is a specific manifestation of the more general constraint 'general_relativity_field_equations'. While GR is the universal law (the parent Mountain), specific instances like this merger provide empirical validation and context for it."
+    "dual_formulation_note": "The gravitational infall constraint is upstream of gravitational wave background constraints. The stochastic gravitational wave background derives its properties from the population of merging supermassive black holes throughout the universe. UGC 11551 is one specific realization of this universal constraint family."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "mountain",
+    "downstream_of": []
   }
 }

@@ -94,12 +94,26 @@ def main():
         print(f"  Concept count: {fca['concept_count']}")
     print(f"  Phase 3 completed in {time.time() - t3:.1f}s")
 
+    # Phase 2b: T13 Reconciliation
+    print("\n[Phase 2b] T13 Criterion Reconciliation...")
+    t2b = time.time()
+    from audit.t13_reconciliation import run_t13_reconciliation
+    phase2b = run_t13_reconciliation(data, OUTPUT_DIR)
+    print(f"  Corrected T13 fires: {phase2b['n_group_a']} "
+          f"(was {phase2['n_t13_firing']} in Phase 2)")
+    print(f"  Group A: {phase2b['group_a_ids']}")
+    print(f"  Phase 2b completed in {time.time() - t2b:.1f}s")
+
     # Generate report
     print("\n[Report] Generating summary...")
     report = generate_report(data, phase1, phase2, phase3)
     report_path = OUTPUT_DIR / "spectral_audit_report.md"
     report_path.write_text(report, encoding="utf-8")
     print(f"  Report saved to {report_path}")
+
+    # Append Section 7 (T13 Reconciliation)
+    from audit.t13_reconciliation import append_section7_to_report
+    append_section7_to_report(phase2b, report_path)
 
     total_time = time.time() - t0
     print(f"\n{'=' * 60}")

@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: liar_paradox
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_liar_paradox, []).
@@ -17,7 +18,7 @@
 % If changing the observable used to evaluate this constraint would change ε,
 % you are looking at two distinct constraints. Write separate .pl files for
 % each, link them with affects_constraint/2, and document the relationship
-- % in both files' narrative context sections.
+% in both files' narrative context sections.
 %
 % The context tuple is CLOSED at arity 4: (P, T, E, S).
 % Do not add measurement_basis, beneficiary/victim, or any other arguments.
@@ -30,12 +31,19 @@
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
-    domain_priors:emerges_naturally/1,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:omega_variable/3,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -50,20 +58,26 @@
  *   domain: logic/epistemology
  *
  * SUMMARY:
- *   The constraint emerges from the sentence "This statement is false." If the
- *   statement is true, then it must be false; if it is false, then it must be
- *   true. This creates a logical contradiction that functions as a structural
- *   limit on any formal system that allows unrestricted self-reference. It is
- *   a foundational "no-go zone" in classical logic, closely related to
- *   Gödel's incompleteness theorems and the Halting Problem.
+ *   The Liar Paradox is a self-referential logical impossibility: the
+ *   sentence 'This statement is false' generates an irreducible contradiction
+ *   in classical logic. If the statement is true, its content asserts
+ *   falsehood, making it false. If it is false, its assertion of falsehood is
+ *   false, making it true. This creates a cycle with no fixed point in
+ *   classical bivalent semantics. Unlike institutional constraints (markets,
+ *   regulations, social hierarchies), the liar paradox does not depend on
+ *   enforcement, power asymmetry, or beneficiary/victim relationships. It is
+ *   a limit imposed by the axioms of formal reasoning itself. The constraint
+ *   is invariant across all formal systems that include self-reference and
+ *   bivalent truth assignment. It cannot be negotiated, escaped, or
+ *   engineered away — only formalized, stratified, or re-axiomatized. This
+ *   makes the liar paradox a canonical example of a Mountain constraint: a
+ *   natural law of logical space with zero degrees of freedom for all agents.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Logician (institutional/trapped): Encounters the paradox as an
- *     unbreakable law of their domain, a fundamental boundary condition.
- *   - The Programmer (powerless/mobile): Experiences the paradox as a
- *     recursive error or infinite loop; can exit by rewriting the code.
- *   - The Philosopher (analytical/analytical): Studies the paradox as an
- *     object, mapping its implications for theories of truth and language.
+ * KEY AGENTS:
+ *   - Logician: Analytical agent (analytical/analytical) — observes the paradox as a structural feature of formal language, not a problem to solve but a limit to recognize
+ *   - Formal System Designer: Institutional agent (institutional/mobile) — must design around the paradox through type hierarchies, stratification, or non-classical semantics; has mobile exit options through system redesign but cannot eliminate the underlying constraint
+ *   - Student/Reasoner: Moderate agent (moderate/constrained) — encounters the paradox when engaging the proposition; constrained by the necessity of the logical contradiction
+ *   - Mathematical Logician: Powerful agent (powerful/arbitrage) — has institutional resources and technical sophistication but no escape from the constraint; arbitrage options in system choice do not dissolve the paradox itself
  */
 
 /* ==========================================================================
@@ -71,87 +85,61 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(liar_paradox, 0.05).
-domain_priors:suppression_score(liar_paradox, 0.01).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(liar_paradox, 0.0).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(liar_paradox, 0.08).
+domain_priors:suppression_score(liar_paradox, 0.03).
+domain_priors:theater_ratio(liar_paradox, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(liar_paradox, extractiveness, 0.05).
-narrative_ontology:constraint_metric(liar_paradox, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(liar_paradox, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(liar_paradox, extractiveness, 0.08).
+narrative_ontology:constraint_metric(liar_paradox, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(liar_paradox, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-narrative_ontology:constraint_metric(liar_paradox, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(liar_paradox, resistance, 0.01).
+narrative_ontology:constraint_metric(liar_paradox, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(liar_paradox, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(liar_paradox, mountain).
 narrative_ontology:human_readable(liar_paradox, "The Liar Paradox (Self-Referential Inconsistency)").
 narrative_ontology:topic_domain(liar_paradox, "logic/epistemology").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint emerges naturally from the structure of logic and language
-% without human design or enforcement. Required for the mountain metric gate.
 domain_priors:emerges_naturally(liar_paradox).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a Mountain (natural law), the Liar Paradox does not
-% have structural beneficiaries or victims in the sense of asymmetric
-% extraction. Its effects are universal and symmetric for any system
-% operating under its rules.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT: MOUNTAIN
-% As a natural law of logic, the Liar Paradox classifies as a Mountain from
-% all perspectives. Its status as an unchangeable feature of reality is not
-% dependent on the observer's power, time horizon, or exit options. The
-% following perspectives demonstrate this invariance.
-
-% PERSPECTIVE 1: THE INSTITUTIONAL LOGICIAN
-% For the logician working within a formal system, the paradox is an
-% unchangeable feature of the landscape. They are trapped by the rules of
-% their system and cannot wish the paradox away.
-constraint_indexing:constraint_classification(liar_paradox, mountain,
-    context(agent_power(institutional),
-            time_horizon(civilizational),
-            exit_options(trapped),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE POWERLESS PROGRAMMER
-% For a programmer, the paradox manifests as an infinite loop or a type error
-% they cannot resolve. While they can exit by rewriting the specific piece of
-% code (mobile exit), the underlying logical constraint remains a Mountain
-% that they must code around.
-constraint_indexing:constraint_classification(liar_paradox, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(mobile),
-            spatial_scope(local))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The philosopher or meta-mathematician observes the paradox as a fundamental
-% law. Their analytical stance does not change its nature. This is the default
-% analytical context.
+% PERSPECTIVE 1: LOGICAL ANALYST (MOUNTAIN) — From the perspective of formal logic and proof theory, the liar paradox is an irreducible structural impossibility. The paradox is not contingent on institutional arrangement, measurement context, or observer position. It follows necessarily from the axioms of self-reference and truth-value assignment in classical logic. No escape mechanism exists that does not fundamentally alter the logical system itself. This is a constraint imposed by the laws of formal reasoning.
 constraint_indexing:constraint_classification(liar_paradox, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+% PERSPECTIVE 2: MATHEMATICAL LOGICIAN (MOUNTAIN) — Even for agents with sophisticated technical resources and institutional power, the liar paradox cannot be engineered away through clever frameworks. Tarski's undefinability theorem, Gödel's incompleteness results, and the logical hierarchy (object language vs metalanguage) are formal constraints that no amount of power or sophistication can circumvent. The paradox reveals a fundamental limit to what any formal system can express about itself. Access to arbitrage options does not dissolve the underlying impossibility.
+constraint_indexing:constraint_classification(liar_paradox, mountain,
+    context(agent_power(powerful),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: STUDENT OF LOGIC (MOUNTAIN) — Even agents with limited power and constrained exit options cannot escape the paradox through ignorance or non-engagement. Encountering the sentence 'This statement is false' forces the same logical contradiction regardless of the agent's resources or institutional position. The constraint is imposed uniformly across all observers who engage with the proposition. No exit option exists through evasion or reinterpretation within classical logic.
+constraint_indexing:constraint_classification(liar_paradox, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 4: FORMAL SYSTEMS DESIGNER (MOUNTAIN) — Institutions attempting to codify logic (formal systems, proof assistants, automated theorem provers) encounter the paradox as a fundamental engineering constraint. Designers of type-theoretic systems, constructive logics, and modern proof assistants must explicitly exclude self-referential sentences or adopt stratified languages. This is not an enforcement choice — it is a mathematical necessity. The liar paradox is not suppressed through institutional will; it is avoided through architectural design that respects its inexorability.
+constraint_indexing:constraint_classification(liar_paradox, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -159,25 +147,21 @@ constraint_indexing:constraint_classification(liar_paradox, mountain,
 
 :- begin_tests(liar_paradox_tests).
 
-test(classification_invariance) :-
-    % Verify that the classification is Mountain across all tested perspectives.
-    constraint_indexing:constraint_classification(liar_paradox, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(liar_paradox, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(liar_paradox, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(liar_paradox, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(liar_paradox, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_metric_thresholds) :-
-    % Verify that base metrics adhere to the Mountain classification thresholds.
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SuppMetricName),
-    config:param(mountain_extractiveness_max, MountainEpsMax),
-    config:param(mountain_suppression_ceiling, MountainSuppMax),
     narrative_ontology:constraint_metric(liar_paradox, ExtMetricName, E),
-    narrative_ontology:constraint_metric(liar_paradox, SuppMetricName, S),
-    E =< MountainEpsMax,
-    S =< MountainSuppMax.
+    domain_priors:suppression_score(liar_paradox, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(natural_law_profile_present) :-
-    % Verify that the required NL profile data is present for certification.
+test(nl_profile_validation) :-
     domain_priors:emerges_naturally(liar_paradox),
     narrative_ontology:constraint_metric(liar_paradox, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(liar_paradox, resistance, R),
@@ -192,80 +176,76 @@ test(natural_law_profile_present) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Liar Paradox is a canonical example of a Mountain constraint. It is a
- *   natural law of any logical system sufficiently expressive to allow
- *   self-reference.
- *   - Extractiveness (0.05): Represents the minimal cognitive or computational
- *     overhead required to navigate around the paradox. It doesn't extract
- *     value, but it forecloses certain direct logical paths.
- *   - Suppression (0.01): The paradox cannot be suppressed. Resistance is
- *     incoherent. Alternatives like paraconsistent logics do not eliminate
- *     the paradox within classical systems; they create new systems with
- *     different rules.
- *   - NL Profile: Accessibility collapse is 1.0 because no alternative is
- *     conceivable within its logical frame. Resistance is near-zero. It
- *     emerges naturally from the structure of language.
+ *   Extractiveness (0.08): Extremely low. The liar paradox does not extract value from any agent or for any beneficiary. No agent benefits from the paradox; no agent is victimized by it in the sense of resource transfer. It is a structural limit, not a mechanism of exploitation. The non-zero value (0.08 rather than 0.00) reflects that encountering the paradox imposes a cognitive cost on the reasoner — the necessity of recognizing the inconsistency constitutes a minimal 'extraction' of intellectual effort. Suppression (0.03): Negligible. The paradox cannot be suppressed. Agents cannot avoid it through ignorance or non-engagement without fundamentally limiting their logical capacity. The minimal suppression value reflects that the paradox is avoided only through explicit architectural choices (stratified languages, type theories) in formal systems — but these are not suppression of the paradox itself, only its prevention through system design. Theater ratio (0.15): Minimal. The paradox has zero performative content. Its expression and recognition are entirely transparent. There is no gap between the appearance and the reality of the logical constraint. The minimal (non-zero) value reflects only that formal languages involve syntax and presentation conventions, which have trivial performative content. The paradox does not accumulate theater over time because its logical status is invariant.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. As a natural law, its classification is
- *   invariant. A programmer might have 'mobile' exit from a specific instance
- *   (rewriting code), but this doesn't change the nature of the underlying
- *   logical law, which remains a Mountain.
+ *   Unlike typical Deferential Realism constraints, the liar paradox exhibits NO perspectival gap. All four perspectives classify it as Mountain from fundamentally different starting positions: the analytical observer sees it as a universal logical limit; the powerful agent with arbitrage options still cannot escape it; the moderately-powered constrained agent is subject to the same irreducible contradiction; the institutional formal systems designer must build around it but cannot eliminate it. This uniformity of classification is diagnostic of a genuine natural law. The constraint's impossibility is not observer-relative, context-dependent, or contingent on power, time, or scope. This is precisely the opposite of constraints like the verification bottleneck, which appear as six different types from six different perspectives. The liar paradox appears as Mountain from all perspectives — not because all agents agree, but because none have any exit option whatsoever.
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint is a clear Mountain, preventing misclassification.
- *   Previous attempts to frame it as a Snare (e.g., used by mainstream
- *   logicians to suppress dialetheism) commit a category error. The social
- *   enforcement of a particular logical paradigm is a separate, human-created
- *   constraint (likely a Tangled Rope), not a property of the paradox itself.
- *   The ε-invariance principle requires separating the logical law (liar_paradox,
- *   ε=0.05) from the academic normativity (e.g., peer_review_orthodoxy, ε=0.55).
+ *   NO MANDATROPHY ISSUE. The liar paradox cannot be mislabeled as extraction or coordination because it involves no beneficiaries, no victims, and no transfer of value. The paradox is a logical structure, not a social structure. The baseline extractiveness (0.08) is so minimal that the constraint cannot satisfy any extraction-type threshold (snare, tangled rope, piton). The suppression is so low (0.03) that suppression gates are not approached. The theater ratio is negligible (0.15). The constraint passes the Mountain gates definitively: extractiveness ≤ 0.25 (actual: 0.08), suppression ≤ 0.05 (actual: 0.03), emerges_naturally = true, accessibility_collapse ≥ 0.85 (actual: 0.92), resistance ≤ 0.15 (actual: 0.08). This is a clean mountain with no hidden extraction.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_liar_paradox,
-    'Is logic a feature of the universe (Platonism) or a construct of human cognition?',
-    'Discovery of non-human intelligence with a fundamentally different, yet effective, logical framework.',
-    'If universal, the paradox is a physical limit like gravity. If cognitive, it is a bug in our specific mental "operating system" that another intelligence might not share.',
-    confidence_without_resolution(low)
+    truth_value_assignment,
+    'Is the constraint a logical impossibility inherent to classical truth-value semantics, or does it reveal a flaw in the assumption that every proposition must have a truth value?',
+    'Comparison of formal systems with and without bivalence (classical vs multi-valued logic, paraconsistent logic). Analysis of whether truth-value gaps or truth-value gluts resolve the paradox or merely relocate it.',
+    'If truth-value assignment is the issue: the paradox is contingent on bivalent semantics (not a mountain). If self-reference is the issue: the paradox is fundamental (mountain). This omega determines whether the constraint is truly immutable or system-dependent.',
+    confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_liar_paradox, conceptual, 'Whether logic is discovered (Platonic) or invented (Cognitive construct).').
+narrative_ontology:omega_variable(truth_value_assignment, conceptual, 'Whether the paradox is inherent to truth-value semantics or to self-reference itself').
+
+omega_variable(
+    semantic_vs_syntactic_resolution,
+    'Does the paradox reside in the semantics of truth or in the syntax of self-reference, and can these be separated?',
+    'Formal analysis of Tarski''s hierarchy (object language / metalanguage separation). Examination of whether removing the ability to quantify over truth predicates eliminates the paradox or merely suppresses its expression.',
+    'If semantic: paradox may be resolvable through revised truth-predicate definitions (contingent). If syntactic: paradox is unavoidable in any system with sufficient expressive power (mountain). If inseparable: paradox marks a fundamental limit to formal expression (strong mountain).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(semantic_vs_syntactic_resolution, conceptual, 'Whether the paradox is a semantic or syntactic phenomenon').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(liar_paradox, 0, 10).
+narrative_ontology:interval(liar_paradox, 0, 2000).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not applicable. As a Mountain with base_extractiveness < 0.46, this
-% constraint does not exhibit lifecycle drift. Its properties are static.
+% Theater ratio over time
+narrative_ontology:measurement(liar_tr_t0, liar_paradox, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(liar_tr_t1000, liar_paradox, theater_ratio, 1000, 0.15).
+narrative_ontology:measurement(liar_tr_t2000, liar_paradox, theater_ratio, 2000, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(liar_be_t0, liar_paradox, base_extractiveness, 0, 0.06).
+narrative_ontology:measurement(liar_be_t1000, liar_paradox, base_extractiveness, 1000, 0.08).
+narrative_ontology:measurement(liar_be_t2000, liar_paradox, base_extractiveness, 2000, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Not applicable for this fundamental logical constraint.
+narrative_ontology:coordination_type(liar_paradox, information_standard).
+narrative_ontology:affects_constraint(liar_paradox, godels_incompleteness).
+narrative_ontology:affects_constraint(liar_paradox, tarskis_undefinability).
+narrative_ontology:affects_constraint(liar_paradox, self_reference_in_type_theory).
+
+% DUAL FORMULATION NOTE:
+% The liar paradox is upstream to multiple formal impossibility results (Gödel's Incompleteness, Tarski's Undefinability Theorem). These constraints share the same structural origin — the impossibility of self-reference in formal systems with sufficient expressive power — but manifest in different domains (completeness vs truth-definability). The family of constraints forms a cluster linked by the common generative principle: self-referential negation creates irreducible fixed-point problems in formal systems.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable. As a Mountain, there are no beneficiaries or victims, so
-% directionality derivation is not used.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

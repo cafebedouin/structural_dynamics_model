@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "msgs_asset_bundling",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "msgs"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.54,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bundled Ownership of Knicks and Rangers under MSG Sports",
+    "topic_domain": "economic/corporate_structure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dolan_family",
+      "institutional_investors"
+    ],
+    "victims": [
+      "minority_shareholders",
+      "competitive_sports_market"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Minority Shareholders",
+      "comment": "PERSPECTIVE 1: MINORITY SHAREHOLDERS (SNARE) \u2014 Cannot exit without accepting substantial losses. Bundled structure forces investment in both franchises simultaneously, eliminating the option to selectively divest underperforming asset. No mechanism for separating the Knicks' asset value from the Rangers' operational costs. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Individual Sports Fans / Local Market Consumers",
+      "comment": "PERSPECTIVE 2: INDIVIDUAL SPORTS FANS / LOCAL MARKET CONSUMERS (SNARE) \u2014 Cannot choose to fund only the Knicks or Rangers through ticket/merchandise purchases; bundled organizational structure inflates operational overhead. Revenue from one franchise subsidizes inefficient management in the other. Limited ability to exit \u2014 geographic monopoly on premier arena (Madison Square Garden). d\u22480.88, f(d)\u22481.32, \u03c3=0.9 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Institutional Investors / Asset Managers",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL INVESTORS / ASSET MANAGERS (TANGLED ROPE) \u2014 Benefit from consolidated revenue streams and simplified portfolio management (single ticker instead of two). Experience bundling as coordination mechanism enabling larger institutional positions. But also victimized by inability to optimize exposure: may want Knicks valuation without Rangers operational drag, or vice versa. d\u22480.52, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dolan Family / Controlling Shareholders",
+      "comment": "PERSPECTIVE 4: DOLAN FAMILY / CONTROLLING SHAREHOLDERS (ROPE) \u2014 Primary beneficiary. Bundled structure consolidates voting control, reduces dilution of ownership across two franchises, simplifies tax/debt structures. Can arbitrage between franchise valuations, cross-subsidize underperforming assets, and maintain unified brand identity ('MSG Sports'). Retains unilateral operational control despite public stock listing. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Sports Antitrust Reformers / Regulatory Advocates",
+      "comment": "PERSPECTIVE 5: SPORTS ANTITRUST REFORMERS / REGULATORY ADVOCATES (SCAFFOLD) \u2014 Organized agents (Congress, state legislatures, antitrust coalitions) increasingly scrutinize sports franchise ownership structures as artificial scarcity mechanisms. The bundled structure appears as a temporary coordination arrangement with an implicit sunset: if antitrust enforcement expands or franchise separation becomes mandatory, the bundling enforces a transition. Theater ratio remains moderate (0.54) because bundling is not performative\u2014it has real operational effects\u2014but its legitimacy is decaying. d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.27. Organized challenge to the structure's durability."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Sports Industry Legacy System",
+      "comment": "PERSPECTIVE 6: SPORTS INDUSTRY LEGACY SYSTEM (PITON) \u2014 From the viewpoint of historical franchise ownership patterns, bundling appears as vestigial institutional inertia. Historically, wealthy individuals owned single franchises; Dolan's model (consolidating NBA/NHL under one parent) was an innovation but is now maintained through path-dependent momentum rather than functional necessity. Theater_ratio=0.54 sits below piton threshold (0.70), but the theatrical elements (branding claims about 'integrated sports management') exceed functional gains. The constraint persists because alternatives haven't fully displaced it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer / Capital Markets Efficiency",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / CAPITAL MARKETS EFFICIENCY (TANGLED ROPE) \u2014 From a civilizational view of market structure, bundling creates both coordination and extraction. Coordination: single governance simplifies investor decision-making and reduces transaction costs. Extraction: bundling suppresses price discovery, inflates the Knicks' valuation (proxy for prestige), and subsidizes Rangers performance with Knicks revenue, masking operational inefficiency. The constraint serves the market-concentration logic of the controlling shareholder at the cost of allocative efficiency. d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.52."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "franchise_valuation_independence",
+      "question": "Does the bundled structure artificially inflate the Knicks' franchise valuation by coupling it with the Rangers' revenue base, and would separate valuations reveal material differences in underlying asset quality?",
+      "resolution_mechanism": "Comparable transaction analysis comparing separately-held NBA franchises (Lakers, Warriors, Heat) and NHL franchises (Devils, Stars) to proxy valuations; spin-off announcement and market reaction analysis; investor surveys on willingness-to-pay for separate vs bundled exposure",
+      "impact": "If Knicks overvalued by bundling: extractiveness rises to 0.62+ (shareholders bear hidden Knicks premium). If valuations are independent: bundling is neutral, classification shifts toward pure Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether bundling artificially inflates Knicks valuation"
+    },
+    {
+      "id": "antitrust_enforcement_timeline",
+      "question": "Will regulatory pressure to unbundle sports franchises materialize within the next 10 years (franchise separation mandate, cross-ownership restrictions)?",
+      "resolution_mechanism": "Congressional antitrust subcommittee activity; state-level sports franchise regulation; FTC/DOJ litigation against other bundled structures; international precedents (European sports regulation)",
+      "impact": "If mandate emerges: Scaffold classification confirmed, sunset is structural. If no regulatory change: bundling persists indefinitely, Tangled Rope / Rope classification stabilizes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether antitrust enforcement will mandate franchise separation"
+    },
+    {
+      "id": "operational_synergy_reality",
+      "question": "Do consolidated NBA/NHL operations under MSGS produce genuine cost savings or operational efficiencies, or is the bundling primarily a financial engineering mechanism with minimal operational integration?",
+      "resolution_mechanism": "Detailed operating expense analysis; comparison of MSGS overhead ratios vs separately-operated franchises; employee survey on integration; shared resource utilization metrics (arena, analytics, front office)",
+      "impact": "If genuine synergies exist: bundling is legitimate coordination, \u03c7 decreases. If pure financial engineering: bundling is extraction mechanism, \u03c7 increases to 0.58+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether operational synergies justify bundled structure"
+    },
+    {
+      "id": "controlling_shareholder_extraction_magnitude",
+      "question": "How much economic value does the Dolan family extract annually through bundled structure (tax arbitrage, dividend flow-through, cross-subsidy control) compared to a hypothetical separated ownership model?",
+      "resolution_mechanism": "Forensic accounting analysis of dividend patterns, inter-company transfer pricing, tax deduction clustering; comparable family office structures; historical unbundling precedents (Berkshire Hathaway case study)",
+      "impact": "If extraction > 5% EBITDA annually: \u03c7 \u2265 0.55, Snare classification gains traction. If extraction < 1%: \u03c7 < 0.40, Rope classification strengthens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Magnitude of family extraction through bundled control"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.54
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Madison Square Garden Sports (MSGS) is the parent company of the New York Knicks (NBA) and New York Rangers (NHL), trading as a single publicly listed entity under the control of the Dolan family. This bundled ownership structure exemplifies a hybrid constraint combining genuine coordination benefits (simplified governance, consolidated venue management) with structural extraction mechanisms (suppressed price discovery, minority shareholder lock-in, cross-subsidy opacity). The constraint exhibits different classifications from the perspectives of powerless minority shareholders (Snare), institutional investors (Tangled Rope), the Dolan family (Rope), sports antitrust reformers (Scaffold with sunset clause), and the analytical observer evaluating capital market efficiency (Tangled Rope). The theater ratio (0.54) reflects that the bundling claim rests partially on operational synergy arguments that are not transparent\u2014shared arena management is real, but whether it justifies the franchise-level coupling is contestable. The extractiveness trajectory (0.35 \u2192 0.52 over the interval) indicates that as regulatory scrutiny has increased and minority shareholder protections have improved, the constraint's extraction mechanism has become more explicit and harder to justify as pure coordination.",
+    "key_agents": [
+      "Dolan Family: Controlling shareholder (institutional/arbitrage) \u2014 primary beneficiary, retains unilateral control despite public listing",
+      "Minority Shareholders: Public equity holders (powerless/trapped) \u2014 forced to maintain bundled exposure, cannot selectively divest",
+      "Institutional Investors: Asset managers, pension funds (powerful/mobile) \u2014 benefit from consolidated portfolio option but constrained by inability to optimize individual exposures",
+      "Individual Fans / Local Market Consumers: Regional market participants (powerless/constrained) \u2014 geographic monopoly forces funding of both franchises through integrated pricing",
+      "Sports Antitrust Reformers: Congressional, state-level advocates (organized/constrained) \u2014 building sunset clause through regulatory pressure",
+      "Sports Industry Legacy System: Historical ownership patterns (institutional/arbitrage) \u2014 bundling persists through path-dependent momentum"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The bundled structure creates real barriers to minority shareholder exit and distorts price discovery. The Dolan family captures value through consolidated control that they could not achieve under separated franchises. However, extractiveness is not extreme (would be 0.65+) because operational synergies are real (shared arena, unified governance), and institutional investors do benefit from simplified portfolio access. Suppression (0.68): High. The bundling suppresses alternative ownership structures, investor choice (cannot buy only Knicks or only Rangers), and transparent franchise valuation. Minority shareholders cannot exit without accepting losses; fans cannot allocate spending to preferred franchise without supporting underperforming asset. No regulatory mandate yet enforces separation, creating de facto monopoly on these assets under MSGS. Theater ratio (0.54): Moderate. The bundling narrative emphasizes operational synergy and 'integrated sports management,' but underlying transparency is limited. Financial reports do not break down franchise-level ROI or cross-subsidy flows, creating theater around efficiency claims. Yet the constraint is not primarily performative\u2014it has real operational and financial effects\u2014so theater is moderate rather than high.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The Dolan family sees pure Rope: consolidated governance is coordination, reducing transaction costs and enabling unified branding. Institutional investors see Tangled Rope: they benefit from the single ticker but lose the ability to optimize exposure, experiencing both coordination and constraint. Minority shareholders see Snare: trapped in bundled ownership, unable to exit selectively, bearing hidden costs of Dolan's cross-subsidy decisions. Sports antitrust reformers see Scaffold: the bundling is temporary, increasingly fragile under regulatory scrutiny, with an implicit sunset clause as antitrust enforcement tightens. The analytical observer sees Tangled Rope at the civilizational scale: market efficiency is distorted by the controlling shareholder's ability to suppress price discovery and maintain artificial scarcity. No single perspective is 'wrong'\u2014the presheaf structure captures how different positions in the constraint experience fundamentally different realities.",
+    "directionality_logic": "Dolan family: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary; derives controlling leverage impossible under separate ownership. Minority shareholders: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; cannot exit, cannot optimize. Institutional investors: Mixed (beneficiary of consolidated access + victim of constraint on optimization) + mobile \u2192 d\u22480.52, f(d)\u22480.65. Significant extraction but with exit optionality. Individual fans: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. Geographic monopoly prevents exit. Antitrust reformers: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.50. Coalition has agency to change the structure but not yet sufficient power. Analytical observer: d\u22480.65, f(d)\u22481.00. Sees the full extraction mechanism but also real operational coordination.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the bundled structure is NOT pure coordination (ruling out simple Rope) and NOT pure extraction (ruling out simple Snare). The Dolan family genuinely benefits from consolidation (coordination function present), but they also suppress alternatives for minority shareholders (extraction present). Both functions are structural, not observational artifacts. The Scaffold perspective identifies a real mechanism for mandatrophy resolution: regulatory pressure to unbundle. If antitrust enforcement mandates separation within 10-15 years, the current structure transitions from Tangled Rope to Scaffold (temporary with sunset). If regulation fails to materialize, the structure stabilizes as permanent Tangled Rope or drifts toward Snare as minority shareholder pressure increases. The theater ratio's increase over the interval (0.42 \u2192 0.54) indicates that operational efficiency claims are becoming less credible relative to the control benefits the bundling provides to the family\u2014classical Goodhart drift where the coordination narrative mask is wearing thin."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "sports_franchise_scarcity",
+      "nba_nhl_monopoly_power",
+      "capital_market_price_discovery"
+    ],
+    "dual_formulation_note": "The bundled asset constraint decomposes into three related claims: (1) whether sports franchises are artificially scarce (upstream constraint affecting bundling viability), (2) whether NBA/NHL hold monopoly power that bundling reinforces (parallel constraint), (3) whether capital market pricing reflects true franchise values under bundling vs separate ownership (downstream measurement constraint). This story focuses on the bundling structure itself; upstream constraints address the scarcity that makes bundling viable; downstream constraints address valuation distortion outcomes."
+  },
+  "directionality_overrides": []
+}

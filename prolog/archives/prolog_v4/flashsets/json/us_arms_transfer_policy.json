@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "us_arms_transfer_policy",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Arms Transfer Policy",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_defense_industry",
+      "us_government"
+    ],
+    "victims": [
+      "regional_stability",
+      "human_rights",
+      "civilian_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global Civilian Populations",
+      "comment": "Perspective 1: Global Civilian Populations (Snare) - Trapped in conflict zones, bear the brunt of arms proliferation with no exit option. The policy extracts stability and safety from these populations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Stability",
+      "comment": "Perspective 2: Regional Stability (Tangled Rope) - Constrained by arms flows which can escalate conflicts, but also benefits from US security guarantees and deterrence. Extraction is significant, but not absolute, reflecting a mixed benefit-cost relationship."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "US Defense Industry",
+      "comment": "Perspective 3: US Defense Industry (Rope) - Benefits from arms sales contracts, which enhance profitability and secure jobs. The policy facilitates coordination and expansion opportunities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "US Government",
+      "comment": "Perspective 4: US Government (Tangled Rope) - Benefits from enhanced geopolitical influence and strategic alliances, but constrained by reputational risks and potential blowback from arms transfers. The policy provides instruments of power projection, but also imposes restraints. "
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "International Norms on Arms Control",
+      "comment": "Perspective 5: International Norms on Arms Control (Piton) - The US arms transfer policy can degrade international norms and treaties, with its performance being theatrical rather than impactful. This perspective reflects a piton classification due to the inertia and limited current functional impact of these norms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 6: The Analytical Observer (Tangled Rope) - Sees the policy as a blend of coordination (alliance building) and extraction (regional destabilization, human rights costs). Assesses net effect and long-term implications of the transfers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "criteria_enforcement_strength",
+      "question": "How strictly are human rights and regional stability criteria enforced in arms transfer decisions?",
+      "resolution_mechanism": "Audits of arms transfer review processes; comparative analysis of arms transfer decisions versus documented human rights records.",
+      "impact": "Stringent enforcement reduces extraction (closer to Rope). Lax enforcement increases extraction (closer to Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Strength of enforcement for human rights and stability criteria"
+    },
+    {
+      "id": "unintended_use_probability",
+      "question": "What is the probability that transferred arms will be used for unintended purposes (e.g., internal repression, diversion to non-state actors)?",
+      "resolution_mechanism": "Post-transfer tracking of arms; analysis of conflict event data; risk assessments based on recipient country characteristics.",
+      "impact": "High probability increases extraction from civilian populations (Snare). Low probability shifts towards coordination (Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Likelihood of unintended use or diversion"
+    },
+    {
+      "id": "alternative_supplier_availability",
+      "question": "To what extent can recipient countries readily obtain arms from alternative suppliers if the US restricts transfers?",
+      "resolution_mechanism": "Market analysis of global arms trade; evaluation of recipient country relationships with alternative suppliers.",
+      "impact": "High availability weakens the US influence (less enforcement capacity) and shifts towards rope. Limited availability strengthens US leverage (more snare-like).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of alternative arms suppliers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The US Arms Transfer Policy involves a complex interplay of factors, including national security interests, economic benefits, and geopolitical strategy. It also entails significant ethical considerations regarding human rights and regional stability. The policy governs the sale and distribution of weapons and military technology by the United States to other nations. Different stakeholders experience it in diverse ways, leading to a range of classifications.",
+    "key_agents": [
+      "US Defense Industry: Primary beneficiary (institutional/arbitrage)",
+      "US Government: Secondary beneficiary (institutional/constrained)",
+      "Regional Stability: Primary victim (moderate/constrained)",
+      "Human Rights: Secondary victim (powerless/trapped)",
+      "Civilian Populations: Target (powerless/trapped)"
+    ],
+    "logic_rationale": "Extractiveness (0.60): Reflects the policy's potential to exacerbate conflicts, destabilize regions, and contribute to human rights abuses. The arms transfer policy's impacts are broad and can often contribute to high levels of extractiveness from affected communities and populations. Suppression (0.70): Indicates a high degree of constraint on alternative courses of action due to legal frameworks, international agreements, and the dominance of US arms in the global market. This suggests limited space for change. Theater Ratio (0.75): Reflects that performative actions, like stating the importance of human rights, do not necessarily translate into practical impact. The policy is often justified with rhetoric about promoting stability and security, but the actual impact can be quite different.",
+    "perspectival_gap": "The US defense industry benefits economically (Rope), while regional stability suffers (Snare). The US government navigates a complex trade-off (Tangled Rope). The Analytical observer must account for these different structural positions.",
+    "directionality_logic": "Beneficiaries like the US Defense industry (arbitrage) experience low extraction and see the policy as coordination (rope). Victims like regional stability and civilian populations (trapped) experience high extraction (snare). The US government, in a constrained position, experiences mixed benefits and costs (tangled rope).",
+    "mandatrophy_analysis": "The policy blends coordination (alliance building, security provision) with extraction (conflict escalation, human rights abuses). The tangled rope classification reflects this mixed character, preventing the policy from being mislabelled as purely extractive (snare) or purely coordinative (rope)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "international_arms_control_treaties",
+      "us_foreign_policy"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,86 @@
+{
+  "header": {
+    "constraint_id": "medical_residency_match",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.1,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The NRMP Medical Residency Match",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "medical_students",
+      "residency_programs"
+    ],
+    "victims": [
+      "unmatched_medical_students"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Medical Student Perspective",
+      "comment": "The Match provides a structured way for students to obtain residency positions, avoiding a chaotic free-for-all. Mobile exit because they can choose not to participate, but constrained in that participation greatly increases chances of placement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Residency Program Perspective",
+      "comment": "The Match offers a centralized system for programs to fill residency slots with qualified candidates. Arbitrage in that the program can withdraw."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer Perspective",
+      "comment": "The Match represents a significant improvement over previous, less-organized systems, leading to a more efficient allocation of resources and talent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Unmatched Medical Student",
+      "comment": "For unmatched medical students, they can be considered trapped in the matching process, powerless to improve the outcome. There is also extraction in that there is no program for them and they may not be able to continue in their planned career. "
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "The National Resident Matching Program (NRMP) Medical Residency Match is a centralized clearinghouse using a stable matching algorithm (Roth-Peranson) to pair medical students with residency programs. The Match aims to create a fair and efficient process for matching students and programs, resolving what would otherwise be a chaotic and potentially exploitative market.",
+    "key_agents": [
+      "Medical Students: Beneficiaries (moderate/mobile) - gain a structured pathway to residency positions.",
+      "Residency Programs: Beneficiaries (institutional/arbitrage) - efficiently fill residency slots with qualified candidates.",
+      "Unmatched Medical Students: Potential victims (powerless/trapped) - those who do not match may face significant challenges.",
+      "NRMP: Administrator (institutional/constrained) - responsible for maintaining and operating the matching algorithm."
+    ],
+    "logic_rationale": "Extractiveness (0.35): The Match extracts a degree of autonomy from both students and programs, as they must abide by the algorithm's results. However, this is offset by the benefits of a stable and organized system.Suppression (0.25): Participation in the Match is not strictly mandatory, but it is strongly encouraged, creating a degree of suppression of alternative pathways. Theater Ratio (0.10): The Match is primarily a functional process, with minimal theatrical or performative elements.",
+    "perspectival_gap": "Students and programs generally perceive the Match as beneficial, but unmatched students may experience it as a snare. An analytical observer recognizes the Match as a positive development, but also acknowledges the potential for unintended consequences or areas for improvement.",
+    "directionality_logic": "Medical students and residency programs benefit directly from the match. Unmatched students bear the cost of the program, though there may be ways for them to find a path forward.",
+    "mandatrophy_analysis": "The NRMP match solves the mandatrophy problem by being fundamentally a coordination mechanism instead of an extraction mechanism, and is only tangled rope from a position of weakness in the system."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

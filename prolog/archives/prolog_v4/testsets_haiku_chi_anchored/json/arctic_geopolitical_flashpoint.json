@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "arctic_geopolitical_flashpoint",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Melting Ice and the Scramble for Greenland",
+    "topic_domain": "geopolitical/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "great_powers",
+      "mining_corporations"
+    ],
+    "victims": [
+      "greenlandic_indigenous_population",
+      "denmark_government",
+      "global_climate_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Greenlandic Indigenous Population",
+      "comment": "PERSPECTIVE 1: INDIGENOUS POPULATION (SNARE) — Trapped by geography and power asymmetry. The promise of mineral wealth acts as a lure, but the structural reality is the extraction of resources with severe environmental and cultural costs, and a loss of sovereignty to external powers. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.83."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Great Powers (US/China/Russia)",
+      "comment": "PERSPECTIVE 2: GREAT POWERS (ROPE) — Experience the situation as a pure coordination game ('The Great Game'). They have the capital and military power to set the rules and can shift investment elsewhere (arbitrage). The constraint is about managing competition and access among peers. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.09. Negative extraction indicates a net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Danish Government",
+      "comment": "PERSPECTIVE 3: DANISH GOVERNMENT (TANGLED ROPE) — As the nominal sovereign, Denmark is caught between managing Greenland's autonomy, pressure from great power allies/rivals, and its own economic interests. It cannot easily exit its treaty obligations or historical ties. It sees both the coordination function and the severe extractive pressure. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.72."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Mining Corporations",
+      "comment": "PERSPECTIVE 4: MINING CORPORATIONS (SCAFFOLD) — View their investment as a temporary project with a clear lifecycle (sunset clause: resource depletion). They are building the infrastructure for extraction, which requires coordination with states, but their commitment is finite. They can exit if the project becomes unprofitable. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.58. This χ is high for a scaffold, but the sunset logic is dominant for this agent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Environmental Treaty System",
+      "comment": "PERSPECTIVE 5: ENVIRONMENTAL TREATY SYSTEM (PITON) — Institutions like the Paris Agreement or the Arctic Council lack enforcement power here. Their function is largely performative—hosting summits and issuing statements while the resource scramble accelerates. The high theater_ratio (0.75) reflects this gap between function and performance, qualifying it as a Piton."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a genuine coordination function (managing new sea routes, deconflicting military activity) but is dominated by asymmetric extraction (mineral wealth flowing to external powers) and requires active enforcement (military presence, diplomatic coercion). This is the canonical Tangled Rope structure. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "greenlandic_independence_viability",
+      "question": "Will the resource boom enable genuine Greenlandic independence or transform it into a dependent client state of the highest bidder?",
+      "resolution_mechanism": "Tracking capital flows, terms of mining contracts, and political concessions made by the Greenlandic government over the next decade.",
+      "impact": "If genuine independence: the 'victim' agent gains power, potentially reclassifying the constraint. If client state: confirms the Snare classification for the local population.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether resource wealth leads to true independence or client state status for Greenland."
+    },
+    {
+      "id": "great_power_conflict_threshold",
+      "question": "Will the scramble be managed via a stable, albeit tense, equilibrium, or will it cross a threshold into direct military conflict?",
+      "resolution_mechanism": "Monitoring military deployments, near-miss incidents, and escalatory rhetoric between NATO/US, Russia, and China in the GIUK gap and Northern Sea Route.",
+      "impact": "Stable equilibrium confirms the Rope/Tangled Rope views. Direct conflict would represent a catastrophic failure of the coordination function, collapsing the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The likelihood of the Arctic scramble escalating into direct military conflict."
+    },
+    {
+      "id": "nsr_economic_viability",
+      "question": "Is the Northern Sea Route a transformative global shipping lane, or is its economic importance overstated compared to the risks and seasonal limitations?",
+      "resolution_mechanism": "Analysis of shipping volumes, insurance costs, and infrastructure investment vs. projections over the 2025-2030 period.",
+      "impact": "If highly viable: the coordination function is real and significant, strengthening Rope/Tangled Rope classifications. If overstated: the 'coordination' aspect is mostly theater, and the constraint is more purely about mineral extraction (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The actual economic viability of the Northern Sea Route versus strategic hype."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2024,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2030,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2035,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2024,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2030,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2035,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 2024,
+    "end": 2035
+  },
+  "commentary": {
+    "narrative_context": "The rapid melting of Arctic ice is unlocking both new shipping lanes (the Northern Sea Route) and vast reserves of critical minerals under Greenland. This has transformed the region from a remote periphery into a central chessboard for geopolitical competition. The constraint is the emerging framework of treaties, military postures, and economic deals governing this scramble. It forces all actors—great powers, regional states, indigenous populations, and corporations—into a high-stakes game where the rules are being written in real-time.",
+    "key_agents": [
+      "Great Powers (US, China, Russia): Primary beneficiaries (institutional/arbitrage) - seek strategic control of sea lanes and access to minerals.",
+      "Greenlandic Indigenous Population: Primary victims (powerless/trapped) - face environmental risk and potential loss of sovereignty for promised economic gains.",
+      "Denmark Government: Constrained sovereign (institutional/constrained) - attempts to manage its relationship with Greenland, NATO allies, and economic pressures.",
+      "Mining Corporations: Organized beneficiaries (organized/mobile) - seek to profit from resource extraction under temporary licenses.",
+      "International Environmental System: Degraded institution (institutional/constrained) - provides a forum for discussion but lacks enforcement power, becoming largely performative."
+    ],
+    "logic_rationale": "Extractiveness (0.65) is high, representing the immense value of mineral wealth being claimed by external actors. Suppression (0.70) is high due to the military and economic power asymmetries that limit the choices of smaller actors like Greenland and Denmark. Theater Ratio (0.75) is high because the gap between the rhetoric of international cooperation, environmental protection, and indigenous rights, and the reality of a naked resource grab is vast. The constraint requires active enforcement through military presence and coercive diplomacy.",
+    "perspectival_gap": "The gap is extreme. For Great Powers, it's a coordination 'game' (Rope). For the indigenous population, it's a coercive trap (Snare). For Denmark, it's a complex hybrid of opportunity and threat (Tangled Rope). For environmental bodies, it's a failed, inertial process (Piton). This diversity of classification from a single set of base properties is a hallmark of a complex geopolitical constraint.",
+    "directionality_logic": "Beneficiaries (Great Powers, Corporations) have arbitrage or mobile exit options, leading to low or negative effective extraction (χ). They see the system as a tool for coordination. Victims (Greenlandic Population, Denmark) are trapped or constrained, leading to high derived directionality (d) and thus high effective extraction (χ). They experience the system as coercive and extractive. The analytical view synthesizes these functions, identifying the structure as a Tangled Rope.",
+    "mandatrophy_analysis": "This case resolves the mandatrophy by demonstrating that 'Rope' and 'Snare' are not mutually exclusive descriptions of reality, but valid perspectival slices of a more complex Tangled Rope structure. An analysis that only saw the Great Power coordination game would miss the extraction. An analysis that only saw the indigenous victimhood would miss the genuine coordination functions. The Deferential Realism framework correctly identifies the complete structure by integrating these perspectives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "critical_mineral_supply_chains",
+      "global_shipping_lanes",
+      "nato_cohesion"
+    ]
+  }
+}

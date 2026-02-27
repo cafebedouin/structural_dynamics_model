@@ -1,0 +1,185 @@
+{
+  "header": {
+    "constraint_id": "rotation_seven_kubo_ranking",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "R7 Kubo Credit and Ranking System",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "crew_underclass",
+      "low_ranking_households",
+      "intergenerational_mobility"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Locked-In Crew Member",
+      "comment": "PERSPECTIVE 1: CREW UNDERCLASS (SNARE) \u2014 Trapped in generational dependency on Kubo rankings. Cannot exit the ship; ranking algorithm is opaque; career trajectory locked by birthright credit assignments. d\u22480.98, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Middle-Tier Worker",
+      "comment": "PERSPECTIVE 2: MIDDLE-TIER WORKER (SNARE) \u2014 Can attempt upward mobility through Kubo accumulation but faces systematic barriers. Credit decay and administrative penalties ensure constrained exit. d\u22480.82, f(d)\u22481.18, \u03c3=0.8 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Ship Administration",
+      "comment": "PERSPECTIVE 3: SHIP ADMINISTRATION (ROPE) \u2014 Benefits from labor scheduling and allocation via Kubo. Experiences system as coordination tool: gamification drives participation, ranking automates resource distribution, credit mechanics reduce direct coercion overhead. d\u22480.08, f(d)\u2248-0.11, \u03c3=0.8 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Formal Resistance Movement",
+      "comment": "PERSPECTIVE 4: FORMAL RESISTANCE (PITON) \u2014 Organized opposition has documented Kubo exploitation for three generations; proposals for alternatives exist (needs-based allocation, participatory budgeting). But the system persists through institutional inertia: ship code treats Kubo as immutable, captain's office resists alternatives as 'unproven,' crew socialization normalizes rankings as natural. theater_ratio=0.58 reflects that much Kubo legitimacy comes from narrative (meritocracy myth) rather than functional necessity. d\u22480.45, f(d)\u22480.45, \u03c3=0.8 \u2192 \u03c7\u22480.21."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Elite Officer Class",
+      "comment": "PERSPECTIVE 5: ELITE OFFICER CLASS (TANGLED ROPE) \u2014 Senior officers benefit from Kubo (prestige, resource allocation preference), but also experience it as coordination necessity. They see the system as both justified (merit should reward labor) and extractive (they inherit high credit). Mobile exit: officers can be reassigned, promoted off the ranking ladder, or claim institutional exemptions. Mixed perception: net beneficiary but with genuine coordination rationale. d\u22480.35, f(d)\u22480.33, \u03c3=0.8 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational perspective, the Kubo system is a pure extraction mechanism: it creates psychological compliance (gamification), systematic suppression of alternatives (ranking naturalized as merit), and intergenerational debt bondage (credit heredity). Base extraction \u03b5=0.68 and suppression \u03c3=0.72 meet snare thresholds. \u03c7\u22480.68 at this scope. The 'merit' narrative is theater (ratio=0.58), not function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credit_decay_algorithm_opacity",
+      "question": "Is the credit decay formula (the 'drift') a mathematical necessity for fiscal sustainability or an intentional suppression mechanism to perpetuate debt cycles?",
+      "resolution_mechanism": "Cryptographic audit of the decay formula; comparison with alternative allocation algorithms (needs-based, participatory, lottery); analysis of who benefits from decay patterns over 10+ generations",
+      "impact": "If mathematical necessity: Snare classification stands but with lower suppression score (~0.60). If intentional mechanism: Suppression confirmed as deliberate extraction, snare classification hardened (suppression\u21920.85).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credit decay is structurally necessary or deliberately suppressive"
+    },
+    {
+      "id": "alternative_allocation_viability",
+      "question": "Could the ship's resource distribution and labor scheduling operate effectively without Kubo gamification (e.g., via lottery, rotation, needs-based allocation)?",
+      "resolution_mechanism": "Simulation of alternative systems with same labor constraints; trial periods with partial opt-out zones; ethnographic study of motivation under non-gamified allocation in ship archives",
+      "impact": "If viable: Kubo is pure extraction theater (Snare classification confirmed, theater_ratio\u21920.70+). If necessary: Some coordination rationale exists (reclassify to Tangled Rope with lower extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-gamified labor allocation could replace Kubo"
+    },
+    {
+      "id": "intergenerational_credit_mobility",
+      "question": "What percentage of crew members born into bottom-decile credit actually exit that decile within their lifetime, versus how many remain trapped?",
+      "resolution_mechanism": "Longitudinal birth-cohort analysis from ship census; correlation between birth credit rank and lifetime earnings rank; identification of mobility barriers (algorithm bias, administrative penalties, network effects)",
+      "impact": "If mobility < 15%: Snare extraction confirmed (intergenerational debt bondage). If mobility > 50%: System has genuine meritocratic function (reclassify toward Tangled Rope). Current suspicion: ~8% mobility suggests structural trap.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Intergenerational credit mobility rates and mobility barriers"
+    },
+    {
+      "id": "captain_dependency_legitimacy",
+      "question": "Does the Kubo system's legitimacy depend primarily on the ship captain's personal authority or on perceived fairness of the ranking algorithm?",
+      "resolution_mechanism": "Captain turnover analysis: do legitimacy crises occur at leadership transitions? Survey data on crew perception of ranking fairness vs. institutional authority; correlation with captain charisma/competence vs. algorithm transparency",
+      "impact": "If primarily personal authority: System is piton (theatrical maintenance via captain myth). If primarily algorithm legitimacy: Snare has deeper roots (belief in merit naturalizes extraction).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Source of Kubo system legitimacy: personal captain authority versus algorithmic fairness perception"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.46
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Kubo Credit and Ranking System on Rotation Seven is a multi-generational labor-extraction mechanism disguised as meritocratic gamification. Crew members are assigned birthright credit scores at registration; these scores determine access to resources, work assignments, and social status. The system employs psychological compliance mechanisms (leaderboards, rank badges, advancement narratives) and systematic suppression (opaque algorithms, credit decay, intergenerational debt heredity, administrative penalties for complaints). The ship administration uses Kubo to solve a genuine coordination problem \u2014 allocating scarce labor and resources across a closed population \u2014 but the solution is extractive: it concentrates benefit among high-ranking families and forces the underclass into perpetual debt service. Theater pervades the system: the 'merit' narrative obscures that credit assignments are path-dependent (inheritance matters more than ability); the gamification creates the illusion of fairness through visible ranking mechanics; crew narratives blame individual failure rather than algorithmic bias. The constraint exhibits snare characteristics at all perspectives except the administration (which sees coordination benefit) and a small elite officer class (which experiences mixed benefit). Mandatrophy is resolved: this is not a coordination failure misclassified as extraction, nor an extraction failure misclassified as coordination. The Kubo system genuinely solves the allocation problem AND genuinely extracts from the underclass simultaneously.",
+    "key_agents": [
+      "Crew Underclass (powerless/trapped): Born into low credit; face maximum extraction through labor demands and resource rationing; cannot exit; generations accumulate debt",
+      "Middle-Tier Workers (moderate/constrained): Attempt upward mobility through Kubo accumulation; systematically blocked by credit decay and administrative penalties; no real exit option",
+      "Ship Administration (institutional/arbitrage): Designers and operators of Kubo system; benefit from labor allocation efficiency and reduced direct coercion overhead; experience as coordination tool",
+      "Elite Officer Class (powerful/mobile): Inherit high credit; enjoy resource preference and prestige; can be reassigned or exempted from ranking ladder; see mixed benefit",
+      "Formal Resistance Movement (organized/constrained): Multi-generational opposition documented in ship records; propose alternatives (participatory budgeting, needs-based allocation); persist despite suppression",
+      "Analytical Observer (analytical/analytical): Views from civilizational perspective; recognizes extraction mechanism beneath merit narrative; identifies theater (58% of legitimacy is performative)"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and increasing. The Kubo system transfers labor value from the underclass to administrators and beneficiary families. Initial extractiveness (~0.42 at generation 1) reflected genuine coordination benefit when alternatives were truly unavailable; but as the system matured and the administration actively suppressed alternatives (killing participatory budgeting proposals, dismissing lottery schemes), the extraction component intensified. Current value (0.68) reflects that the system now primarily serves rent-seeking rather than coordination. Suppression (0.72): High and structural. Multiple barriers prevent exit: (a) algorithmic opacity (decay formula not publicly audited), (b) credit inheritance (born into debt), (c) administrative penalties (complaints trigger credit penalties), (d) narrative capture (crew socialization treats Kubo as natural/fair), (e) absence of alternatives (institutional resistance to proposals). Theater ratio (0.58): Moderate-high and rising. Theater comes from: (a) merit narrative (ranks presented as reflecting ability; actually reflect inheritance + bias), (b) leaderboard gamification (visible rankings create illusion of fairness through transparency), (c) advancement stories (individual success narratives obscure systemic barriers). Rising over time because as extraction intensified, theater had to increase to maintain legitimacy (the system requires belief in its fairness to function).",
+    "perspectival_gap": "The crew underclass perceives pure extraction (Snare) with d\u22480.98, trapped in perpetual low ranking with no path to exit. The middle tier perceives similar extraction (d\u22480.82) but with slightly more agency \u2014 they attempt mobility even if systematically blocked. The administration perceives coordination (Rope, d\u22480.08) \u2014 Kubo genuinely allocates labor and resources. The elite officer class perceives mixed benefit (Tangled Rope, d\u22480.35) \u2014 they benefit from rankings but also feel constrained by the system's logic. The resistance movement perceives inertial degradation (Piton) \u2014 the system persists through narrative maintenance, not functional necessity. The analytical observer perceives extraction (Snare, d\u22480.72 in universal scope) \u2014 the theater and suppression mechanisms are fully visible at civilizational scale. This six-way perspectival gap is the diagnostic signature of the Kubo system: different structural positions reveal radically different mechanisms.",
+    "directionality_logic": "The crew underclass is the primary victim (high extraction, high suppression). They bear the full cost of labor allocation without proportional benefit. Directionality d\u22480.98 follows from: (a) victim classification (they are explicitly targeted by debt mechanics), (b) trapped exit (cannot leave the ship, cannot exit the ranking system without death or mutiny), (c) highest f(d) function (f(0.98)\u22481.40). The middle tier is also victim (d\u22480.82) but with slightly lower d because they have constrained mobility \u2014 some rare individuals do escape low rankings. The administration is beneficiary (d\u22480.08) because they solve coordination problems without bearing allocation costs. Their arbitrage exit (they can modify Kubo rules unilaterally) results in low d and negative effective extraction from their perspective. The elite officer class occupies ambiguous position (d\u22480.35) \u2014 they benefit from rankings but are also constrained by them (cannot simply ignore merit optics). The resistance movement has moderate directionality (d\u22480.45) because while they oppose extraction, they remain embedded in the system (organized agents, but constrained in their ability to change outcomes). The analytical observer sees the full extraction from maximum distance (d\u22480.72 in universal scope), treating Kubo as a pure mechanism independent of legitimate coordination rationale.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLVES MANDATROPHY: The critical distinction is whether Kubo's coordination function justifies its extraction. Mandatrophy resolution: Yes, Kubo genuinely solves labor allocation (no pure-coordination alternative exists that the administration has genuinely tested), BUT the current extraction level (0.68) far exceeds what coordination would require. Historical analysis shows: (a) Generation 1: \u03b5\u22480.42, genuine coordination necessity, suppression moderate (allocation under scarcity), theater low (crew understood tradeoffs). (b) Generation 3: \u03b5\u22480.55, administration begins suppressing alternatives (kills participatory budgeting pilot), theater rises (merit narrative hardens), extraction increases. (c) Generation 6: \u03b5\u22480.68, alternatives actively blocked, theater entrenched (crew socialized into Kubo belief), extraction dominant. The mandatrophy is NOT that Kubo is mislabeled \u2014 it is correctly labeled Snare because extraction now exceeds coordination necessity. The system represents a drift from legitimate coordination constraint (would have been Rope or Scaffold) into pure extraction mechanism. The snare classification certifies that the extraction is structural and systemic, not a bug in an otherwise fair system."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "generation_ship_closed_loop_psychology",
+      "shipboard_succession_legitimacy"
+    ],
+    "dual_formulation_note": "The Kubo system is downstream of the closed-loop constraint (generational ship cannot exit) and upstream of succession legitimacy (ranking determines who captains next rotation). The three constraints form a family: the closed-loop makes extraction impossible to resist; Kubo extracts through labor allocation; succession legitimacy ensures offspring of high-Kubo families inherit power."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ]
+}

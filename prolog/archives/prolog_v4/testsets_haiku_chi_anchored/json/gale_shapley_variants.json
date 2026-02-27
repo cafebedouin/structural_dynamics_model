@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "gale_shapley_variants",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gsmc"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.18,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Gale-Shapley Algorithm for Market Clearing",
+    "topic_domain": "economic/market_mechanisms",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "market_participants",
+      "algorithm_adopters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Individual Market Participant",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL MARKET PARTICIPANT (ROPE) \u2014 An agent (applicant, resident, donor) in a GS-mediated market experiences the algorithm as pure coordination. They obtain a match that respects their preferences and stability properties. Exit options are mobile: they can propose alternative matching mechanisms or leave the market. No extraction occurs relative to the participant's legitimate interests. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.14."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Market Clearing Institution",
+      "comment": "PERSPECTIVE 2: MARKET CLEARING INSTITUTION (ROPE) \u2014 A centralizing authority (college admissions board, residency matching service, organ procurement) adopts GS as the coordination mechanism. The institution benefits from reduced transaction costs, enhanced legitimacy through algorithm transparency, and elimination of bilateral negotiation overhead. Exit options are arbitrage: the institution can switch to alternative mechanisms (Boston mechanism, random serial dictatorship, centralized clearing without stability guarantees). The institution experiences the constraint as pure coordination with positive externalities. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.002. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Well-Informed Strategic Player",
+      "comment": "PERSPECTIVE 3: WELL-INFORMED STRATEGIC PLAYER (ROPE) \u2014 An agent with superior information about market structure, preference distributions, or algorithm implementation can extract limited advantage through strategic preference revelation (preference manipulation, coalition formation). However, the stability guarantee of GS severely constrains exploitation: any deviation that benefits a coalition must leave at least one member worse off, and the algorithm is designed to be strategy-proof in certain contexts (e.g., proposer-optimal variant). Exit options are mobile. The strategic player sees the mechanism as coordination with limited rent-seeking opportunity. d\u22480.45, f(d)\u22480.58, \u03c3=1.0 \u2192 \u03c7\u22480.13."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Constrained Participant without Information Symmetry",
+      "comment": "PERSPECTIVE 4: CONSTRAINED PARTICIPANT WITHOUT INFORMATION SYMMETRY (TANGLED ROPE) \u2014 A participant who cannot costlessly access preference revelation information, has limited ability to form credible coalition signals, or faces institutional barriers to truthful preference expression experiences the algorithm as mixed. The coordination mechanism works (they receive a stable match), but the stability guarantee only applies to true preferences. If they misreport due to information asymmetry or strategic uncertainty, they may be trapped in a suboptimal stable match. The algorithm requires active institutional enforcement (verification of true preferences, prevention of fraud, administration of appeals). Suppression arises from inability to costlessly access information about other participants' preferences. d\u22480.70, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.23."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Alternative Market Design Coalition",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE MARKET DESIGN COALITION (SCAFFOLD) \u2014 Economists and mechanism designers (organized agents) view GS as a temporary coordination solution appropriate to specific market contexts (college admissions, residency matching) but not universally optimal. The coalition recognizes that GS is strategy-proof only for proposers, may suffer from preference falsification by responders, and does not maximize total welfare. Alternative mechanisms (top trading cycles, probabilistic serial, random serial dictatorship with redistribution) offer different trade-offs. GS is a scaffold: it solved the coordination crisis in 1960s-1980s markets (medical residency, college admissions) where no stable mechanism existed, but as mechanism design theory matures, the field is transitioning to context-specific optimizations. The sunset clause is real: as markets adopt specialized mechanisms (e.g., kidney exchange with edge constraints, school choice with diversity requirements), GS's dominance declines. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.08."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Mathematical Existence Result View",
+      "comment": "PERSPECTIVE 6: MATHEMATICAL EXISTENCE RESULT VIEW (MOUNTAIN) \u2014 From the civilizational/analytical perspective, the Gale-Shapley theorem is a natural law: for any two-sided market with transitive preferences, a stable matching exists and can be computed in polynomial time. This is not a policy choice; it is a mathematical fact independent of implementation details. The stability guarantee (no pair would rather match with each other) is a structural property, not an institutional design. The algorithm itself emerges naturally from the existence proof. However, this perspective risks naturalizing what is actually contingent: the choice to optimize for stability rather than welfare, the decision to use the proposer-optimal variant, the institutional enforcement of truthful preference revelation. The base metrics (\u03b5=0.22, suppression=0.18) contradict a mountain classification \u2014 the engine will compute this as a false summit, indicating that the 'mathematical inevitability' framing conceals institutional choices."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legacy Matching System Under Procedural Pressure",
+      "comment": "PERSPECTIVE 7: LEGACY MATCHING SYSTEM UNDER PROCEDURAL PRESSURE (PITON) \u2014 In mature matching markets (e.g., NRMP residency matching, medical school admissions in multiple countries), GS persists through institutional inertia and stakeholder consensus, not because it is functionally optimal. The algorithm is substantially performative: extensive institutional effort (appeals processes, preference counseling, outcome auditing) is required to maintain the assumption that preferences are truthfully revealed. Theater ratio is high (\u22480.50) in these contexts: the 'mechanical' algorithm obscures the institutional labor required to make it work. As newer mechanisms prove superior in specific contexts (e.g., top trading cycles in school choice with diversity constraints), GS remains in place due to switching costs, familiarity, and stakeholder lock-in. d\u22480.25, f(d)\u22480.18, \u03c3=1.0 \u2192 \u03c7\u22480.04. Theater_ratio \u2248 0.50 does not trigger the piton gate (requires \u22650.70), so this perspective classifies as rope-with-theatrical-elements rather than strict piton."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "strategy_proofness_scope",
+      "question": "Is the algorithm strategy-proof only for proposers, or can responders also manipulate outcomes without detection?",
+      "resolution_mechanism": "Empirical analysis of preference revelation patterns in mature markets (NRMP, medical school admissions); detection of systematic preference misreporting by responder-side participants; measurement of individual payoff variation under strategy-proof vs non-strategy-proof algorithms in the same market",
+      "impact": "If responders can successfully manipulate: suppression rises to 0.35+, classification shifts toward snare or tangled_rope. If responder manipulation is negligible: rope classification is robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent of strategy-proofness for responder-side participants"
+    },
+    {
+      "id": "welfare_stability_tradeoff",
+      "question": "Does the prioritization of stability over welfare maximize aggregate utility, or does it systematically disadvantage efficiency-enhancing matches?",
+      "resolution_mechanism": "Comparison of GS stable matchings to welfare-optimal matchings in historical market data; measurement of efficiency loss (Kaldor-Hicks gains from alternative mechanisms); correlation between stability and individual regret across market sizes and preference distributions",
+      "impact": "If stability sacrifices significant welfare: institutional choice becomes visible (not natural law), classification may shift toward tangled_rope with extractiveness rising to 0.35+. If welfare-stability alignment is tight: rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical welfare-stability tradeoff in GS vs alternative mechanisms"
+    },
+    {
+      "id": "information_symmetry_requirement",
+      "question": "What fraction of market participants can access sufficient information about preference distributions, algorithm mechanics, and coalition opportunities to make truthful preference revelations?",
+      "resolution_mechanism": "Surveys of participants post-matching (understanding of algorithm, information sources, strategic reasoning); correlation of information access with match outcomes; measurement of information asymmetry impact on preference falsification rates by demographic group",
+      "impact": "If <60% can access adequate information: suppression rises to 0.45+, extractiveness rises to 0.35+, classification shifts toward snare or tangled_rope. If >80% have access: rope classification is robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of participants with adequate information for truthful preference revelation"
+    },
+    {
+      "id": "context_specificity_degradation",
+      "question": "How many distinct market contexts (college admissions, medical residency, school choice, kidney exchange, etc.) now use GS vs context-optimized alternatives?",
+      "resolution_mechanism": "Inventory of major two-sided matching markets globally; measurement of GS adoption rates over time in each context; tracking of migrations to alternative mechanisms (top trading cycles, probabilistic serial, constrained mechanisms); documentation of mechanism choice justifications",
+      "impact": "If GS dominance is declining sharply (< 40% of major markets by 2030): scaffold perspective confirmed, sunset is empirically observable, extraction falls as alternatives mature. If GS remains dominant (> 70%): rope or piton classification suggests institutional stickiness rather than optimality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Trend in GS adoption vs context-specific alternatives across market types"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Gale-Shapley algorithm represents a landmark coordination mechanism for resolving two-sided matching markets. Introduced in 1962, it guarantees the existence of stable matchings and provides a polynomial-time algorithm for computing them. The constraint it embodies is the requirement to stabilize matches in markets (college admissions, medical residency, kidney exchange, school choice) where bilateral negotiation would create inefficiencies and externalities. The GS algorithm itself is not extractive in the classical sense \u2014 it solves a genuine coordination problem that would otherwise remain unsolved. However, institutional context matters: the choice to optimize for stability rather than welfare, the decision to implement the proposer-optimal variant, and the enforcement of truthful preference revelation all introduce contingent choices that could generate extraction. The constraint exhibits rope characteristics from most perspectives, but temporal data shows a modest increase in theater ratio and extractiveness as institutional adoption matures, suggesting a slow degradation toward piton status in some contexts. The analytical perspective risks naturalizing the algorithm as a mathematical inevitability, when in fact the choice to use GS in any particular market is a policy decision with alternatives.",
+    "key_agents": [
+      "Market Participants: Applicants, residents, transplant candidates, students \u2014 primary beneficiaries of stable matching; experience coordination benefit with minimal extraction if information access is symmetric",
+      "Market Clearing Institution: College admissions boards, NRMP, kidney procurement organizations \u2014 institutional beneficiary (arbitrage); benefits from reduced transaction costs and enhanced legitimacy",
+      "Strategic Players: Sophisticated participants with information advantages or coalition-formation capacity; limited extraction opportunity due to strategy-proofness constraints of the proposer-optimal variant",
+      "Constrained Participants: Those with information asymmetry, institutional barriers to truthful revelation, or vulnerability to preference manipulation; experience tangled_rope: benefits from stability but bears extraction through information disadvantage",
+      "Alternative Mechanism Coalition: Economists and mechanism designers advancing context-specific mechanisms (top trading cycles, probabilistic serial, kidney exchange with constraints); pushing transition beyond GS as optimality for their domain becomes clear",
+      "Legacy Institutional Operators: Mature matching markets (NRMP, medical school admissions in established countries) that maintain GS through inertia; experience piton-like dynamics with increasing theater as procedural overhead is required to enforce stability assumptions"
+    ],
+    "logic_rationale": "Extractiveness (0.22): Low to moderate. The algorithm itself solves a genuine coordination problem \u2014 matching without instability guarantees would leave participants worse off. However, extractiveness rises above zero due to: (1) the proposer-optimality of the standard variant (proposes-side participants receive superior matches on average), (2) institutional leverage in preference counseling and appeals, (3) information asymmetries that favor sophisticated players, (4) institutional choice to prioritize stability over welfare. The low base value reflects that the coordination benefit dominates, but extraction is not zero. Suppression (0.18): Moderate-low. Market participants face modest suppression: they must reveal preferences truthfully (or face suboptimal matches), institutional information requirements limit accessibility, and coalition formation is costly. However, suppression is not high because participants can typically exit to alternative markets or mechanism designs in most contexts. Theater ratio (0.35): Moderate. The algorithm is presented as 'mechanical' and inevitable, obscuring the institutional labor required to enforce truthful preference revelation, manage appeals, and maintain stability assumptions. As markets mature and theater ratio rises (0.15 \u2192 0.35), the constraint approaches piton status.",
+    "perspectival_gap": "The perspectival gap reflects who benefits and who bears friction. Individual participants see pure coordination (rope), experiencing stable matching without awareness of the proposes-optimality asymmetry. Market institutions see beneficial coordination (rope with arbitrage), capturing reduced transaction costs. Strategic players see constrained coordination (still rope, but with limited extraction opportunity). Constrained participants see mixed coordination and suppression (tangled_rope) \u2014 they obtain stable matches but may be trapped in suboptimal outcomes due to information disadvantage or strategic uncertainty. The alternative mechanism coalition sees a temporary solution (scaffold) that is being optimized away in context-specific applications. Institutional operators in mature markets see degraded ritual (piton) \u2014 GS persists through inertia, not because it is optimal, but because switching costs are high and stakeholders are locked in. The mathematical perspective risks a false summit (mountain) \u2014 naturalizing the algorithm as inevitable when it is actually a policy choice.",
+    "directionality_logic": "Individual market participant: Beneficiary + mobile \u2192 d\u22480.50, f(d)\u22480.65. Symmetric: coordination benefit \u2248 institutional constraint burden. Market clearing institution: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary \u2014 institution captures coordination externality. Strategic player: Beneficiary (through superior information) + mobile \u2192 d\u22480.45, f(d)\u22480.58. Moderate extraction opportunity, constrained by strategy-proofness. Constrained participant: Victim (through information disadvantage) + trapped \u2192 d\u22480.70, f(d)\u22481.05. Significant extraction despite stability guarantee, because suboptimal revelation traps them. Alternative mechanism coalition: Organized + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low extraction; coalition sees sun-setting mechanism and is building exit paths. Legacy institutional operator: Institutional + constrained (cannot costlessly switch) \u2192 d\u22480.25, f(d)\u22480.18. Piton classification driven by theater gate, not high extraction.",
+    "mandatrophy_analysis": "The Gale-Shapley algorithm resolves the mandatrophy by distinguishing coordination from pure extraction. The algorithm is fundamentally coordinate-achieving: it solves the market clearing problem that would otherwise be unsolved. The modest extraction (\u03b5=0.22) arises not from the algorithm's core function but from contextual institutional choices (proposes-optimality variant, information asymmetries, institutional inertia). The constraint is rope-classified from institutional and analytical perspectives, with tangled_rope emerging from the perspective of constrained participants with information asymmetry, and scaffold from the perspective of the alternative mechanism coalition. No perspective sees pure snare, confirming that the algorithm is not exploitative at its core \u2014 it is coordination with institutional friction. The false summit danger (mountain classification from the civilizational/analytical view) is real: the algorithm's mathematical inevitability can naturalizes institutional choices that are actually contingent. The temporal degradation (theater_ratio 0.15 \u2192 0.35) and rising extractiveness (0.12 \u2192 0.22) suggest the constraint is slowly transitioning toward piton status in mature markets, as institutional labor required to maintain stability assumptions increases and context-specific alternatives prove superior in specialized contexts."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "preference_aggregation_stability",
+      "two_sided_market_equilibrium"
+    ],
+    "dual_formulation_note": "The Gale-Shapley algorithm is part of a constraint family covering two-sided market clearing mechanisms. The upstream constraint is the mathematical existence of stable matchings (Mountain: \u03b5\u22480.05); GS is the algorithmic realization with institutional implementation choices (Rope: \u03b5\u22480.22); downstream constraints include context-specific variants (kidney exchange with edge constraints, school choice with diversity requirements, probabilistic mechanisms for fairness). Each story in the family has its own \u03b5 reflecting the institutional choices embedded in the mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

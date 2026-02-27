@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "value_extraction_plateau",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vep"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "The Law of Diminishing Predation",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator"
+    ],
+    "victims": [
+      "dependent_producers",
+      "end_users",
+      "labor_supply"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Producer",
+      "comment": "PERSPECTIVE 1: DEPENDENT PRODUCER (SNARE) \u2014 Sellers on the platform face commission rates of 15-30%, algorithmic demotion as punishment for price-setting, and mandatory use of platform payment systems. Exit requires rebuilding entire customer base on alternative platforms with similar or worse terms. No meaningful exit option despite repeated attempts by competing platforms. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User",
+      "comment": "PERSPECTIVE 2: END USER (SNARE) \u2014 Faces escalating take rates embedded in final prices, algorithmic ranking that favors high-margin items, and data harvesting with no compensation. Switching costs (lost reviews, wishlists, recommendation history) trap users despite superior alternatives existing. The platform throttles service quality to force premium tier adoption. No exit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Labor Supply",
+      "comment": "PERSPECTIVE 3: LABOR SUPPLY (SNARE) \u2014 Gig workers receive declining per-task compensation while platform takes 25-40% commission. Algorithmic account suspension and rating manipulation create unstable income. Geographic arbitrage to lower-wage regions reduces bargaining power. Some exit capacity (seeking alternative gigs) but constrained by skill specificity and platform switching costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Experiences the extraction mechanism as a coordination solution: matching buyers and sellers, handling payment infrastructure, providing discovery algorithms. The platform sees its commission as coordination tax. High exit optionality (can pivot to new markets, adjust pricing strategy, lobby regulators). Net beneficiary experiencing the constraint as functional infrastructure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Experiences both coordination (platforms solve matching problems, enable commerce) and extraction (rent-seeking behavior, consumer harm, labor exploitation). Regulatory capacity is constrained by lobbying pressure and threat of service relocation. Active enforcement exists (FTC investigations, EU regulations) but faces resource limits and legal complexity. Mixed experience: genuine coordination benefit but asymmetric extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Venture Capital System",
+      "comment": "PERSPECTIVE 6: VENTURE CAPITAL SYSTEM (PITON) \u2014 Continues funding extraction-maximizing platforms despite declining ROI and increasing regulatory friction. The VC funding ritual (Series A, B, C milestones) persists as performative growth theater long after unit economics become unsustainable. The system maintained by institutional inertia: investors expect platform exits, regulation is treated as temporary friction, and failed exit predictions are rationalized away. Extraction function has atrophied (newer platforms fail faster), but VC ritual persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal analytical perspective, extraction economics suggests a hard ceiling: platforms cannot extract more than the net surplus they create. At high commission rates (>35%), producer defection and quality collapse reduce total volume and make extraction self-limiting. This perspective sees the plateau as a natural law \u2014 extraction is thermodynamically constrained by the surplus function itself. However, the structural data (high suppression, active enforcement) reveals this naturalizes what is actually a contingent institutional equilibrium."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "surplus_collapse_threshold",
+      "question": "At what commission rate do dependent producers cease finding the platform economically viable, causing quality collapse and platform exodus?",
+      "resolution_mechanism": "Historical analysis of platform commission increases and corresponding producer retention curves; cross-platform comparison of viability thresholds; econometric modeling of producer surplus vs platform take",
+      "impact": "If threshold < 25%: extraction is already at plateau, further increases trigger collapse. If threshold > 40%: significant extraction potential remains untapped, platform has room to increase predation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical commission rate for producer viability collapse"
+    },
+    {
+      "id": "algorithmic_retaliation_effectiveness",
+      "question": "Can platforms maintain effective suppression through algorithmic demotion and account suspension without triggering regulatory intervention or competitive displacement?",
+      "resolution_mechanism": "Regulatory action outcomes (FTC, EU); cross-platform retention rates after enforcement actions; emergence and success of alternative platforms with transparent algorithms",
+      "impact": "If retaliation remains effective: suppression remains at 0.72, snare classification stable. If regulatory/competitive pressure succeeds: suppression drops below 0.60, classification shifts toward tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic suppression can persist against regulation"
+    },
+    {
+      "id": "network_effect_irreversibility",
+      "question": "Are network effects (incumbent advantage from size and ecosystem lock-in) irreversible, or can new platforms with superior terms bootstrap competing networks?",
+      "resolution_mechanism": "Historical precedent analysis (Instagram vs Orkut, Discord vs Teamspeak); time-to-equilibrium for entrant platforms; econometric measurement of switching cost elasticity",
+      "impact": "If irreversible: incumbent platform extraction is truly trapped (snare persists indefinitely). If reversible: extraction plateau represents unstable equilibrium vulnerable to competitive displacement.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Reversibility of network effects and competitive displacement"
+    },
+    {
+      "id": "producer_coalition_capacity",
+      "question": "Can dependent producers organize collective defection (coordinated boycott or migration) to counter platform predation?",
+      "resolution_mechanism": "Historical analysis of producer union organizing; cross-platform comparison of collective action capacity; game-theoretic modeling of defection coordination with network heterogeneity",
+      "impact": "If coalitions succeed: powerless agent power may upgrade to organized, snare classification shifts toward tangled rope with credible exit. If coordination fails: snare persists with high suppression.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether producer coalitions can organize collective defection"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Digital platforms have entered a mature extraction phase where marginal increases in commission rates, algorithmic suppression, and rent-seeking overhead produce diminishing returns on control. The dependent producers, end users, and gig labor supply face successively higher extraction barriers (15-40% commissions, algorithmic demotion, data harvesting, rating manipulation) yet remain trapped by network effects and switching costs. The platform operator captures institutional benefits from the coordination function while maximizing extraction. Regulatory authorities experience mixed coordination-extraction tension. The venture capital system perpetuates a degraded funding ritual despite declining unit economics. The analytical observer risks naturalizing this extraction plateau as an immutable law of digital economics when it is actually a contingent institutional equilibrium maintained by suppression mechanisms. The constraint exhibits the defining characteristic of diminishing predation: extraction is approaching a hard ceiling where further increases trigger producer quality collapse, algorithmic backlash, regulatory intervention, or competitive displacement.",
+    "key_agents": [
+      "Dependent Producers: Primary victims (powerless/trapped) \u2014 sellers face 15-30% commissions, algorithmic demotion, mandatory platform payment; rebuild customer base on exit; captured",
+      "End Users: Primary victims (powerless/trapped) \u2014 face escalating take rates, algorithmic ranking bias, data harvesting; high switching costs trap despite alternatives",
+      "Gig Labor Supply: Secondary victims (moderate/constrained) \u2014 receive declining per-task compensation while platform takes 25-40%; geographic arbitrage and skill specificity constrain exit",
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures coordination tax and rent-seeking surplus; high exit optionality enables pricing and market pivots",
+      "Regulatory Authority: Mixed stakeholder (organized/constrained) \u2014 sees both coordination benefits and extraction harm; constrained by lobbying and legal complexity; active enforcement exists but resource-limited",
+      "Venture Capital System: Institutional actor (institutional/arbitrage) \u2014 maintains performative funding ritual (Series rounds) despite declining ROI; treats regulation as temporary friction; inertia-driven",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent equilibrium as thermodynamic law of surplus extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The platform captures 15-40% of transaction value across dependent producers and end users through multiple rent-extraction mechanisms: commission scaling, algorithmic ranking bias favoring high-margin items, mandatory payment system lock-in, data monetization. The extractiveness is measured at 0.68 rather than higher values (0.75+) because the extraction rate is approaching saturation: further increases trigger producer exodus and quality collapse. The trajectory (0.38\u21920.68 over 9 periods) shows extraction climbing toward its asymptote but decelerating\u2014characteristic of diminishing predation. Suppression (0.72): High. Dependent producers face multiple suppression mechanisms: algorithmic demotion for price-setting independence, account suspension threats, rating manipulation that destroys seller reputation, switching costs from customer base rebuild requirements. End users face service quality throttling and recommendation system manipulation forcing premium tier adoption. Labor faces account deactivation and income instability. Suppression is not maximal (0.85+) because some escape routes exist (competitive platforms, though inadequate) and regulatory pressure is rising. Theater ratio (0.48): Moderate-low. Unlike traditional extraction mechanisms, platform extraction is largely functional rather than performative. Commissions ostensibly pay for infrastructure, algorithms, and payment handling. The theater emerges not from false claims about function but from inflated cost justifications (algorithms are cheaper than claimed commission rates suggest) and opacity (users and producers cannot see actual cost structure). Theater is rising (0.32\u21920.48) as extraction mechanism becomes more abstract and harder to verify.",
+    "directionality_logic": "Platform operator (beneficiary, institutional power, arbitrage exit): Low directionality d \u2248 0.15. The operator benefits from the extraction mechanism and retains high exit optionality (can pivot products, adjust commission rates, lobby regulators). The sigmoid f(d) produces negative or minimal effective extraction from the operator's perspective\u2014they see the constraint as a coordination mechanism generating surplus they capture. Dependent producers (victims, powerless, trapped exit): High directionality d \u2248 0.92. Producers are both victims of extraction and trapped by network effects. The sigmoid f(d) produces maximum experienced extractiveness chi from their perspective. Regulatory authority (mixed beneficiary/victim, organized, constrained exit): Moderate directionality d \u2248 0.58. Regulators benefit from the platform's coordination function but experience extraction asymmetry (consumer harm, labor exploitation). Constrained exit (cannot shut down the platform without harming commerce) yields intermediate d. The derived chi reflects mixed perception: genuine coordination benefit partially offset by extraction concerns.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence driven by structural position. The platform operator sees a Rope: their commission is coordination tax for matching, payment infrastructure, algorithmic discovery\u2014a functional mechanism with beneficiaries. Dependent producers see a Snare: their extraction is asymmetric predation with no exit option and no coordination benefit they couldn't obtain from alternative platforms with lower commissions. Regulators see Tangled Rope: they experience both coordination value (platform solves genuine matching problem) and extraction harm (consumer surplus loss, labor exploitation); their constrained exit (cannot eliminate the platform) forces them to tolerate mixed extraction. The venture capital system sees a Piton: the institutional ritual of funding platform growth persists (Series A, B, C, IPO) despite degraded unit economics and regulatory uncertainty\u2014the VC machine is inertia-driven theater, no longer functional. The analytical observer risks seeing a Mountain: extraction is constrained by thermodynamics (cannot extract more than surplus created), so the plateau is natural law. The structural data (high suppression, active enforcement requirements) reveals this is false: the extraction plateau is maintained by contingent suppression mechanisms, not immutable surplus physics.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: This constraint resolves the coordination-vs-extraction ambiguity by decomposing the platform's function into two structurally distinct roles. (1) COORDINATION FUNCTION: Matching buyers and sellers, payment infrastructure, discovery algorithms\u2014genuinely valuable. Baseline extractiveness for pure coordination would be 0.05-0.15 (Rope). (2) RENT-SEEKING OVERLAY: Commission scaling beyond infrastructure costs, algorithmic demotion of price-competitive sellers, mandatory ecosystem lock-in, data monetization without compensation\u2014predatory. Baseline extractiveness for pure predation would be 0.72+ (Snare). The observed extractiveness of 0.68 reflects that the platform has optimized its rent layer while still maintaining minimal coordination functionality (otherwise whole system collapses). The snare classification is justified by: (a) high measured suppression (0.72), (b) asymmetric extraction toward powerful beneficiary (platform operator), (c) lack of genuine beneficiary status for victims (producers gain nothing from 25% commission they wouldn't get from 10% commission on alternative platform), (d) active enforcement (algorithmic punishment for defection). The constraint is pure extraction dressed in coordination clothing\u2014the mandatrophy is resolved by recognizing that the coordination function is instrumentalized to enable extraction, not the reverse."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_opacity_extraction",
+      "network_effect_lock_in",
+      "venture_capital_ponzi_scaling"
+    ],
+    "dual_formulation_note": "The platform extraction mechanism decomposes into three structurally distinct constraints: (1) algorithmic_opacity_extraction (\u03b5\u22480.45, Tangled Rope)\u2014the information asymmetry enabling ranking manipulation, (2) network_effect_lock_in (\u03b5\u22480.35, Rope)\u2014the coordination problem of customer base, (3) venture_capital_ponzi_scaling (\u03b5\u22480.62, Snare)\u2014the institutional extraction layer where VC funding finances rent-seeking rather than product development. The observed constraint value_extraction_plateau (\u03b5=0.68) reflects the composite of all three operating simultaneously. The plateau emerges when all three components reach their structural limits concurrently: algorithmic opacity hits regulatory scrutiny, network effects face competitive displacement, and VC funding evaporates."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ]
+}

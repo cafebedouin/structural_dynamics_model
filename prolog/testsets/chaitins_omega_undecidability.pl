@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: chaitins_omega_undecidability
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-28
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_chaitins_omega_undecidability, []).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
@@ -55,21 +54,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: chaitins_omega_undecidability
- *   human_readable: Chaitin's Constant (Halting Probability)
- *   domain: mathematical/technological
+ *   human_readable: Chaitin's Constant (Halting Probability) Undecidability
+ *   domain: mathematical/computational_theory
  *
  * SUMMARY:
- *   Chaitin's Constant (Ω) represents the probability that a randomly
- *   constructed program on a universal Turing machine will halt. It is a
- *   "definable but uncomputable" number, embodying an absolute limit of
- *   mathematical compression and predictability. Its existence proves that
- *   there are mathematical truths that are true for no discernible reason,
- *   i.e., their simplest description is the truth itself.
+ *   Chaitin's Constant (Ω) is the halting probability — a real number in [0,
+ *   1] representing the proportion of all possible programs that terminate on
+ *   a universal Turing machine. Mathematically, Ω is well-defined but
+ *   computationally unreachable: the first N bits of Ω are uncomputable, and
+ *   computing those bits would require solving an infinite family of halting
+ *   problems. This constraint represents an absolute epistemic barrier, not a
+ *   policy choice or institutional failure. From every structural position —
+ *   the computationalist trying to prove it, the institution funding
+ *   research, the applied scientist needing it, the analytical observer
+ *   studying formal systems — Ω undecidability appears as a natural law. No
+ *   agent benefits from this constraint; no agent can be said to suffer
+ *   extraction in the usual sense. Rather, the constraint defines the
+ *   boundary of what is knowable through computation. This is the
+ *   paradigmatic mountain constraint: emerges naturally from Turing
+ *   completeness, accessibility collapses to near-zero at high precision,
+ *   resistance to external pressure is absolute, and suppression and
+ *   extraction are structural zeros.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Formal Logician: Any agent attempting to create a complete and consistent formal system (powerless/trapped).
- *   - The Complexity Researcher: Any agent studying the limits of computation and information (analytical/analytical).
- *   - The Universal Turing Machine: The abstract computational model subject to the constraint (powerless/trapped).
+ * KEY AGENTS:
+ *   - Computationalist attempting proof (powerless/trapped) — faces absolute mathematical barrier with no escape
+ *   - Institutional math research program (institutional/arbitrage) — cannot overcome fundamental undecidability through organization or resources
+ *   - Applied computer scientist (moderate/constrained) — experiences the constraint as immovable boundary in cryptography and verification tasks
+ *   - Analytical observer (analytical/analytical) — recognizes the constraint as a consequence of formal logic and Turing completeness
  */
 
 /* ==========================================================================
@@ -77,79 +88,61 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: As a fundamental mathematical limit, Ω has near-zero extraction
-% or suppression. It doesn't extract value in an economic sense; it simply
-% defines a boundary of what is possible.
-domain_priors:base_extractiveness(chaitins_omega_undecidability, 0.05).
-domain_priors:suppression_score(chaitins_omega_undecidability, 0.01).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(chaitins_omega_undecidability, 0.01).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(chaitins_omega_undecidability, 0.12).
+domain_priors:suppression_score(chaitins_omega_undecidability, 0.03).
+domain_priors:theater_ratio(chaitins_omega_undecidability, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(chaitins_omega_undecidability, extractiveness, 0.05).
-narrative_ontology:constraint_metric(chaitins_omega_undecidability, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(chaitins_omega_undecidability, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(chaitins_omega_undecidability, extractiveness, 0.12).
+narrative_ontology:constraint_metric(chaitins_omega_undecidability, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(chaitins_omega_undecidability, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-% Accessibility Collapse: 1.0. It is logically impossible to compute Ω.
-% Resistance: 0.0. One cannot "resist" a mathematical theorem.
-narrative_ontology:constraint_metric(chaitins_omega_undecidability, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(chaitins_omega_undecidability, resistance, 0.0).
+narrative_ontology:constraint_metric(chaitins_omega_undecidability, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(chaitins_omega_undecidability, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(chaitins_omega_undecidability, mountain).
-narrative_ontology:human_readable(chaitins_omega_undecidability, "Chaitin's Constant (Halting Probability)").
-narrative_ontology:topic_domain(chaitins_omega_undecidability, "mathematical/technological").
+narrative_ontology:human_readable(chaitins_omega_undecidability, "Chaitin's Constant (Halting Probability) Undecidability").
+narrative_ontology:topic_domain(chaitins_omega_undecidability, "mathematical/computational_theory").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Emerges naturally from the definition of universal computation.
 domain_priors:emerges_naturally(chaitins_omega_undecidability).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. This is a uniform-type Mountain constraint (natural law).
-% Beneficiary/victim declarations are omitted as the constraint's effects are
-% symmetric and definitional, not extractive or coordinative in a structural sense.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE FORMAL LOGICIAN (MOUNTAIN)
-% For any agent attempting to build a complete axiomatic system, the
-% uncomputability of Ω is an unchangeable feature of the logical landscape.
+% PERSPECTIVE 1: COMPUTATIONALIST ATTEMPTING PROOF (MOUNTAIN) — Any finite agent attempting to compute or verify Chaitin's Constant Ω to arbitrary precision faces an absolute barrier: the halting problem is undecidable. No amount of computational power, cleverness, or resources can circumvent this limit. The barrier is not economic or institutional but mathematical — a fundamental fact about the expressiveness of formal systems. Zero degrees of freedom.
 constraint_indexing:constraint_classification(chaitins_omega_undecidability, mountain,
     context(agent_power(powerless),
             time_horizon(civilizational),
             exit_options(trapped),
             spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE COMPLEXITY RESEARCHER (MOUNTAIN)
-% For an institutional or analytical actor, Ω is not a tool for coordination
-% (Rope) but a fixed landmark defining the boundary of the computable world.
+% PERSPECTIVE 2: INSTITUTIONAL MATH RESEARCH PROGRAM (MOUNTAIN) — Even with vast funding, collaboration networks, and computational resources, mathematics as an institution cannot decide the halting problem. The constraint is not suppressible through better organization or enforcement. It emerges naturally from Turing completeness. Institutional actors have no path to circumvent it — arbitrage opportunities do not exist at the boundary of mathematical undecidability.
 constraint_indexing:constraint_classification(chaitins_omega_undecidability, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The default analytical context confirms the constraint is a fundamental,
-% unchangeable limit.
+% PERSPECTIVE 3: ANALYTICAL OBSERVER / FORMAL LOGIC (MOUNTAIN) — Chaitin's Constant Ω is provably uncomputable and algorithmically irreducible from any finitary perspective. This is not a contingent limitation of current technology or current mathematics — it follows from Gödel's incompleteness and the Church-Turing thesis. The analytical observer sees an absolute epistemic frontier, a natural law of computation itself. No alternative framing or measurement basis changes this classification.
 constraint_indexing:constraint_classification(chaitins_omega_undecidability, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+% PERSPECTIVE 4: APPLIED COMPUTER SCIENTIST (MOUNTAIN) — For any concrete application requiring knowledge of Ω (cryptographic key generation, program verification, AI safety), the undecidability is an absolute boundary. Approximations and heuristics can be developed, but they cannot substitute for the actual constant. The scientist experiences this as an immovable constraint — not a policy choice or a design tradeoff, but a mathematical fact.
+constraint_indexing:constraint_classification(chaitins_omega_undecidability, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -157,18 +150,26 @@ constraint_indexing:constraint_classification(chaitins_omega_undecidability, mou
 
 :- begin_tests(chaitins_omega_undecidability_tests).
 
-test(uniformity_is_mountain) :-
-    % Verify that this is a uniform-type constraint, classifying as Mountain
-    % from all major perspectives.
-    constraint_indexing:constraint_classification(chaitins_omega_undecidability, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(chaitins_omega_undecidability, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(chaitins_omega_undecidability, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(chaitins_omega_undecidability, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(chaitins_omega_undecidability, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(natural_law_profile_complete) :-
-    % Verify that all required metrics for a natural law are present.
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(chaitins_omega_undecidability, ExtMetricName, E),
+    domain_priors:suppression_score(chaitins_omega_undecidability, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(nl_profile_validation) :-
     domain_priors:emerges_naturally(chaitins_omega_undecidability),
-    narrative_ontology:constraint_metric(chaitins_omega_undecidability, accessibility_collapse, AC), AC >= 0.85,
-    narrative_ontology:constraint_metric(chaitins_omega_undecidability, resistance, R), R =< 0.15.
+    narrative_ontology:constraint_metric(chaitins_omega_undecidability, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(chaitins_omega_undecidability, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(chaitins_omega_undecidability_tests).
 
@@ -178,79 +179,79 @@ test(natural_law_profile_complete) :-
 
 /**
  * LOGIC RATIONALE:
- *   This constraint is modeled as a uniform-type Mountain. Its base
- *   extractiveness (0.05) and suppression (0.01) are minimal, reflecting its
- *   nature as a mathematical fact rather than a socio-economic rule. It does
- *   not extract resources or coerce behavior; it defines a hard limit on
- *   computability. The Natural Law Profile metrics (accessibility_collapse=1.0,
- *   resistance=0.0) and the emerges_naturally flag certify its status as a
- *   fundamental, unchangeable feature of the logical universe.
+ *   Extractiveness (0.12): Near-zero. Chaitin's Constant undecidability does not extract value from any agent. It is a pure epistemic boundary — a fact about the mathematical universe, not a mechanism of power or coercion. The low value reflects that no agent benefits from the constraint and no agent is systematically disadvantaged by an extractive process. The value is not zero because knowledge systems do exhibit some theater (representation challenges, pedagogical framing) around the concept, but the core undecidability is absolute. Suppression (0.03): Nearly zero. There is no suppression because there is no alternative pathway being foreclosed. The constraint is not 'suppressing alternatives' — it is defining the boundary of possibility itself. Suppression measures active blockage of escape routes; Ω undecidability is not a blockage but a natural law. Theater ratio (0.15): Low. Mathematical exposition of Chaitin's work does involve some pedagogical representation and conceptual framing (Kolmogorov complexity, incompleteness connections), but the core result is not performative. The theatrical element represents how humans must communicate about undecidability, not any deeper performativity in the constraint itself.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. The constraint is a Mountain from all
- *   perspectives. While its *implications* may feel like a "Snare" to a
- *   logician seeking completeness or a "Rope" to a researcher coordinating on
- *   a benchmark, these are metaphorical descriptions of downstream effects, not
- *   the structural properties of the constraint itself. The constraint lacks
- *   the asymmetric extraction and enforcement of a Snare, and the genuine
- *   cost-reducing coordination function of a Rope.
+ *   The perspectival gap is minimal — all perspectives converge on mountain classification. This is a uniform-type constraint. The computationalist, the institution, the applied scientist, and the analytical observer all encounter the same absolute boundary. The constraint does not appear as coordination from one view and extraction from another. It does not appear as temporary from one perspective and permanent from another. This invariance across all observables confirms the mountain classification and satisfies the accessibility-collapse requirement (0.92). No observer position can reframe undecidability as a policy choice or an institutional arrangement.
  *
  * DIRECTIONALITY LOGIC:
- *   As a uniform Mountain, directionality is irrelevant. No beneficiary or
- *   victim groups are declared because the constraint's "costs" and "benefits"
- *   are symmetric and definitional.
+ *   Directionality derivation does not apply to mountain constraints. There are no beneficiaries or victims in the usual sense. Ω undecidability does not extract from some agents to benefit others — it is a boundary condition that applies universally. The constraint is not suppressing alternatives because no alternatives exist in the Turing-complete model. The structural data (zero beneficiaries, zero victims, emerges_naturally=true, accessibility_collapse=0.92, resistance=0.08) confirms that this is a natural law, not an extraction mechanism.
  *
  * MANDATROPHY ANALYSIS:
- *   By classifying this as a Mountain, we avoid mislabeling a fundamental
- *   limit as a social construct like a Snare or Rope. This prevents the
- *   conflation of mathematical impossibility with policy-driven coercion or
- *   coordination, ensuring analytical clarity.
+ *   NO MANDATROPHY RISK. Chaitin's Constant is a pure mountain constraint with ε=0.12 (well below the 0.46 extraction threshold). There is no risk of false classification as coordination, no asymmetric extraction disguised as consensus, and no theatrical performance masking real extraction. The constraint is what it appears to be: a mathematical fact about the limits of computation. The analytical observer does not need to worry that naturalizing Ω as a 'law of nature' is actually masking an institutional choice — the mathematical proof definitively establishes that undecidability follows from Turing completeness, not from policy or enforcement.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Omega variables — open questions the framework cannot yet resolve
-%
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_chaitins_omega_undecidability,
-    'Is there a form of hyper-computation, physically realizable, that would render Ω computable?',
-    'Empirical discovery of physical processes that violate the Church-Turing thesis (e.g., harnessing closed timelike curves).',
-    'If Yes: The constraint is not a Mountain but a Scaffold, contingent on our current technological paradigm. If No: It remains a permanent Mountain.',
-    confidence_without_resolution(low)
+    oracle_access_counterfactual,
+    'If an oracle for the halting problem were available, would Chaitin''s Constant become decidable, or does undecidability propagate to any sufficiently expressive system?',
+    'Formal proof or counterexample showing whether Ω relative to a halting oracle is itself decidable or merely moves the undecidability to a higher level in the Turing jump hierarchy',
+    'If decidable with oracle: the mountain classification reflects limitations of standard Turing machines specifically, not universal limits on knowledge. If undecidable: the constraint is truly absolute — no enrichment of computational power resolves it.',
+    confidence_without_resolution(high)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_chaitins_omega_undecidability, empirical, 'Whether physically realizable hyper-computation exists that could compute Ω.').
+narrative_ontology:omega_variable(oracle_access_counterfactual, conceptual, 'Whether Chaitin''s Constant remains undecidable given access to a halting oracle').
+
+omega_variable(
+    physical_universe_realizability,
+    'Is Chaitin''s Constant a mathematical artifact of formal systems, or does it represent a physical constraint that would limit any universe capable of computing?',
+    'Interpretation of Church-Turing thesis in relation to physical law; analysis of whether physics violates or respects Turing completeness; investigation of hypercomputation proposals',
+    'If purely formal artifact: the mountain classification is about formalism, not nature. If physical law: the constraint extends beyond mathematics into the structure of physical possibility.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(physical_universe_realizability, conceptual, 'Whether Chaitin''s Constant reflects physical law or purely formal limitations').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(chaitins_omega_undecidability, 1975, 2026).
+narrative_ontology:interval(chaitins_omega_undecidability, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not applicable. Base extractiveness is below the 0.46 threshold for
-% mandatory temporal tracking. As a mathematical constant, its properties
-% do not drift over time.
+% Theater ratio over time
+narrative_ontology:measurement(chaitin_tr_t0, chaitins_omega_undecidability, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(chaitin_tr_t50, chaitins_omega_undecidability, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(chaitin_tr_t100, chaitins_omega_undecidability, theater_ratio, 100, 0.18).
+
+% Extraction over time
+narrative_ontology:measurement(chaitin_be_t0, chaitins_omega_undecidability, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(chaitin_be_t50, chaitins_omega_undecidability, base_extractiveness, 50, 0.12).
+narrative_ontology:measurement(chaitin_be_t100, chaitins_omega_undecidability, base_extractiveness, 100, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Not applicable for this constraint.
+narrative_ontology:coordination_type(chaitins_omega_undecidability, information_standard).
+narrative_ontology:affects_constraint(chaitins_omega_undecidability, halting_problem_undecidability).
+narrative_ontology:affects_constraint(chaitins_omega_undecidability, kolmogorov_complexity_incompressibility).
+narrative_ontology:affects_constraint(chaitins_omega_undecidability, godel_incompleteness_arithmetic).
+
+% DUAL FORMULATION NOTE:
+% Chaitin's Constant is part of a constraint family in mathematical logic. It is downstream of Gödel's incompleteness theorem (which establishes limits on formal proof) and the halting problem (which establishes undecidability of program termination). Chaitin's Ω unifies these constraints through algorithmic information theory — showing that incompleteness and undecidability are consequences of Kolmogorov complexity. All members of this family are mountains with ε ≤ 0.15.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable for this constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

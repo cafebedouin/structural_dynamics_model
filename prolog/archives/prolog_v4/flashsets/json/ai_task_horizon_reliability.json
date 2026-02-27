@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "ai_task_horizon_reliability",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The AI Task Horizon and Reliability Bottleneck",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_developers",
+      "early_adopters"
+    ],
+    "victims": [
+      "downstream_users",
+      "reliability_of_ai_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Downstream Users",
+      "comment": "Downstream users of AI systems are often trapped by their reliance on these systems, with limited ability to verify or understand their outputs, especially for complex tasks. They bear the cost of unreliable AI predictions or decisions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "AI Developers",
+      "comment": "AI developers benefit from the increased adoption of AI systems, gaining funding, recognition, and market share. They can often arbitrage different AI models or approaches, mitigating the impact of reliability issues on any single project."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Early Adopters",
+      "comment": "Early adopters of AI systems are both beneficiaries and victims. They gain a competitive edge by using AI for complex tasks, but they also face the risk of system unreliability, leading to potential losses or inefficiencies. Their exit options are constrained by the need to maintain their competitive advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the observer sees the tangled rope of increasing AI capabilities coupled with the increasing potential for unpredictable failures, requiring careful management and oversight. The constraint is a complex interplay of coordination and extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "task_complexity_metric",
+      "question": "How should task complexity be accurately and consistently measured across different domains?",
+      "resolution_mechanism": "Develop a standardized metric for task complexity based on human time-to-complete, data requirements, and cognitive load.",
+      "impact": "A better metric could refine the extractiveness score and improve the prediction of AI system reliability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Metric for measuring task complexity in AI systems."
+    },
+    {
+      "id": "system_reliability_definition",
+      "question": "What constitutes acceptable reliability for AI systems in various critical applications?",
+      "resolution_mechanism": "Establish domain-specific standards for AI reliability based on risk assessment, cost-benefit analysis, and ethical considerations.",
+      "impact": "Clearer definitions of reliability could change the perception of the constraint from a snare to a more manageable risk.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Defining acceptable reliability for AI systems."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint reflects the trade-off between the increasing complexity of tasks that AI systems are attempting to solve and the decreasing reliability of these systems as task complexity increases. As AI is applied to more intricate and demanding problems, the potential for errors, biases, and unpredictable failures rises, creating a structural tension that impacts various stakeholders.",
+    "key_agents": [
+      "AI Developers: Primary beneficiaries (institutional/arbitrage) - Gain funding and market share.",
+      "Downstream Users: Primary victims (powerless/trapped) - Suffer from unreliable AI outputs.",
+      "Early Adopters: Moderate participants (moderate/constrained) - Benefit from competitive edge but face risks of unreliability.",
+      "Reliability of AI Systems: Collective victim (powerless/trapped) - The trustworthiness of AI is damaged by repeated failures."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The constraint extracts value from downstream users who rely on AI systems, especially as task complexity increases. Suppression (0.40): Moderate. There are limited alternatives to using AI in many complex applications, creating a degree of suppression of choices for users. Theater Ratio (0.30): Relatively low. While there is marketing and hype around AI, the actual performative aspect is not as high as in other domains, as practical application and tangible results are prioritized.",
+    "perspectival_gap": "The perspectival gap arises because AI developers benefit from increased adoption and can arbitrage their risk, while downstream users are often trapped by their reliance on AI and bear the cost of unreliability. Early adopters experience a mix of both benefits and risks, constrained by the need to stay competitive.",
+    "directionality_logic": "AI developers benefit from the adoption of AI (low d). Downstream users, particularly those with limited alternatives, bear the cost of unreliable AI (high d). Early adopters have a mixed relationship, gaining competitive advantages but also facing risks (moderate d).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by recognizing that the inverse relationship between task complexity and AI reliability can be viewed as a coordination challenge (rope) for developers who are constantly improving their systems, while also being an extractive process (snare) for users who are forced to rely on unreliable systems. The tangled rope perspective captures this duality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "the_wall_procedural_barrier",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wall"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Intelligence/Law Enforcement Information Sharing Barrier (\"The Wall\")",
+    "topic_domain": "legal/institutional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "civil_liberties_advocates",
+      "intelligence_source_protection"
+    ],
+    "victims": [
+      "criminal_investigators",
+      "counterterrorism_operations",
+      "terrorism_prevention_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Potential Terrorism Victim",
+      "comment": "PERSPECTIVE 1: POTENTIAL TERRORISM VICTIM (SNARE) \u2014 Cannot exit the information silo that prevents law enforcement from detecting coordinated plots. Lacks awareness of threat interconnections. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73. The constraint extracts from the general public through constrained security."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Criminal Investigator",
+      "comment": "PERSPECTIVE 2: CRIMINAL INVESTIGATOR (SNARE) \u2014 Structurally trapped by wall procedures. Cannot request intelligence agency data even when investigating terrorism-related financial crimes or conspiracies. Career advancement blocked; cases weakened. d\u22480.85, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.60. High suppression: institutional rules prohibit information requests; no alternative career pathway avoids the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Liberties Coalition",
+      "comment": "PERSPECTIVE 3: CIVIL LIBERTIES COALITION (TANGLED ROPE) \u2014 Benefits from wall as protection against intelligence agency over-reach into criminal prosecution; also constrained by it (cannot access intelligence summaries even for constitutional challenges). Coordination function: prevents chilling effect on protected political speech by separating intelligence surveillance from prosecutorial use. Asymmetric extraction via suppression: must maintain visibility restrictions even when those restrictions harm their own litigation. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Intelligence Community",
+      "comment": "PERSPECTIVE 4: INTELLIGENCE COMMUNITY (ROPE) \u2014 Beneficiary through source protection and operational security. Wall separates classified intelligence from prosecutorial discovery rules. Experiences constraint as pure coordination: protecting source identities and methods from criminal discovery. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Negative effective extraction = institutional beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The DOJ Bureaucratic Implementation",
+      "comment": "PERSPECTIVE 5: DOJ BUREAUCRATIC IMPLEMENTATION (PITON) \u2014 The wall procedures (Attorney General Guidelines, administrative walls, CIPA procedures) are largely theatrical: designed to appear to enforce separation while permitting functional intelligence-prosecution coordination through back-channels (national security grounds, foreign intelligence exception, attorney general waiver). theater_ratio=0.58 reflects substantial procedural theater masking substantive access. The official wall is maintained through institutional inertia despite acknowledged functional inadequacy post-9/11. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer (Civil/Security Tradeoff)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CIVIL-SECURITY TRADEOFF VIEW (TANGLED ROPE) \u2014 From a civilizational perspective, the wall embodies a genuine coordination problem: how to enable counterterrorism while preventing prosecutorial weaponization of intelligence. Both functions are legitimate; neither can be fully optimized without harming the other. Analyzed as a tradeoff constraint rather than a natural law. Benefits civil liberties communities; extracts from counterterrorism capacity. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39. The constraint is enduring but not immutable \u2014 policy choices about what constitutes appropriate oversight reshape it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "source_protection_necessity",
+      "question": "How much information sharing would compromise intelligence source protection and operational methods?",
+      "resolution_mechanism": "Declassified post-action reviews of specific cases; comparison of actual source compromises in post-wall vs wall period; analysis of how prosecutorial discovery rules affect classified information",
+      "impact": "If minimal compromise: wall may be overbuilt extraction mechanism (Snare classification confirmed). If significant: wall is legitimate coordination protection (Rope classification confirmed). Current empirical status contested post-9/11.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How much information sharing would compromise intelligence sources"
+    },
+    {
+      "id": "prosecutorial_weaponization_risk",
+      "question": "Would prosecutors routinely weaponize intelligence summaries to justify criminal charges, creating prosecutorial overreach?",
+      "resolution_mechanism": "Post-wall case analysis (2001-2008): frequency of charges filed based on questionable intelligence foundation; comparison with pre-wall prosecutorial patterns; civil rights litigation outcomes",
+      "impact": "If weaponization frequent: wall is legitimate civil liberties protection (Tangled Rope with real asymmetric extraction). If rare: wall over-constrains legitimate counterterrorism coordination (pure Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prosecutors would abuse intelligence information"
+    },
+    {
+      "id": "information_silos_threat_detection",
+      "question": "How much of the 9/11 plot coordination could have been detected with wall removal?",
+      "resolution_mechanism": "9/11 Commission Report analysis of specific intelligence vs criminal investigative data held separately; reconstruction of detection pathways under pre-wall vs wall procedures; comparison with post-wall terrorism prevention effectiveness",
+      "impact": "If substantial coordination detectable: extraction cost on public safety is high (Snare classification confirmed). If minimal: wall's security cost is overestimated (Rope or Piton classification suggested).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wall procedures blocked viable threat detection"
+    },
+    {
+      "id": "alternative_coordination_mechanisms",
+      "question": "Do modified back-channel procedures (national security letters, attorney general waivers, CIPA procedures) provide sufficient information flow without full wall removal?",
+      "resolution_mechanism": "Post-9/11 usage data on alternative information sharing methods; effectiveness comparison; civil liberties impact of alternative channels",
+      "impact": "If alternatives sufficient: the wall itself becomes optional (Piton classification \u2014 maintained through inertia). If alternatives inadequate: wall removal is necessary (Snare classification confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative mechanisms provide adequate information flow"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 1995,
+    "end": 2001
+  },
+  "commentary": {
+    "narrative_context": "The Wall refers to a set of administrative procedures and attorney general guidelines restricting information sharing between intelligence agencies (CIA, NSA, FBI intelligence division) and law enforcement prosecutors (DOJ, FBI criminal division) that were formalized in the 1995 DOJ memorandum and remained in effect through September 2001. The constraint was designed to prevent prosecutorial weaponization of classified intelligence and protect intelligence sources and methods from criminal discovery obligations. However, the wall created information silos that prevented law enforcement from detecting coordinated terrorism plots. The constraint embodies a genuine civil liberties protection (preventing intelligence weaponization against protected speech and defendants' rights) simultaneously with a security extraction (preventing detection of terrorism coordination). This makes it a canonical Tangled Rope: both the coordination function and the asymmetric extraction are structurally real, not an error in framing. The 9/11 Commission found that information held separately by the FBI's intelligence division and criminal division \u2014 combined with CIA intelligence on the same individuals \u2014 could have revealed the plot, but the wall procedures prevented those databases from being queried together. This suggests the wall's extraction cost on public safety was substantial. Simultaneously, the civil liberties protection was real: post-wall, concerns about prosecutorial abuse of intelligence were partially vindicated in cases like the COINTELPRO-adjacent tracking of domestic protest groups.",
+    "key_agents": [
+      "Civil Liberties Advocates: Primary beneficiary (organized/constrained) \u2014 protected from intelligence weaponization in prosecution; also constrained by inability to access intelligence summaries in their own litigation",
+      "Intelligence Community: Primary beneficiary (institutional/arbitrage) \u2014 protected source identities and operational methods from prosecutorial discovery",
+      "Criminal Investigators: Primary victim (moderate/constrained) \u2014 unable to access relevant intelligence data; case development hindered; terrorism detection capacity reduced",
+      "Law Enforcement Prosecutors: Secondary victim (institutional/constrained) \u2014 forbidden from accessing intelligence summaries; discovery obligations limited by wall rules",
+      "Potential Terrorism Victims: Secondary victim (powerless/trapped) \u2014 unaware of threat interconnections; lack information-enabled security. Cannot exit or access protective information.",
+      "DOJ Bureaucracy: Institutional actor (institutional/arbitrage) \u2014 maintains wall procedures through administrative inertia; wall is largely theatrical after 9/11 policy reversals",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees wall as real civil-security tradeoff, not as natural law or unambiguous error"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The wall's security extraction is substantial \u2014 the 9/11 Commission documented specific intelligence-criminal investigative data silos. However, extractiveness is not maximal (not 0.70+) because post-wall analysis shows that information sharing alone would not have prevented 9/11 (other intelligence sharing, policy, and operational failures were critical). The extraction cost is real but not total. Suppression (0.68): Moderately high. Institutional rules actively prohibit information requests across the wall. Alternative pathways (national security letters, attorney general waivers) exist but are administratively difficult and require high-level authorization. Career incentives do not punish investigators who don't try to access intelligence, so suppression is not maximum (not 0.85+). Theater ratio (0.58): Moderate. The wall is substantial procedure but includes functionally-operative back-channels (national security grounds exception, attorney general waivers, certain CIPA procedures). The official wall is maintained for civil liberties signaling while intelligence-prosecution coordination occurs through legitimate exceptions. Theater has risen over the interval as acknowledged inadequacy of the wall post-9/11 becomes manifest, yet the wall is not immediately dismantled \u2014 bureaucratic and civil liberties inertia maintain it despite functional erosion.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. The intelligence community sees the wall as a legitimate source protection mechanism (Rope). Criminal investigators see pure extraction blocking necessary information (Snare). Civil liberties advocates see a real but insufficient protection against intelligence weaponization (Tangled Rope \u2014 both protected and constrained). The DOJ bureaucracy sees its own procedures as largely performative theater (Piton). Potential terrorism victims see invisible threat that could have been detected (Snare \u2014 trapped, with extraction cost in lives). The analytical observer recognizes a genuine civil-security tradeoff (Tangled Rope) rather than a natural law or unambiguous institutional failure. This perspectival divergence is not due to observer bias but to genuine structural asymmetry: the wall truly does protect civil liberties (benefiting organized agents), truly does extract security capacity (harming powerless potential victims), and truly is maintained through bureaucratic inertia (piton features).",
+    "directionality_logic": "Civil liberties advocates: Beneficiary + constrained \u2192 d\u22480.45, f(d)\u22480.55. Protected from intelligence weaponization but cannot access intelligence for their own litigation. Moderate beneficiary, some extraction. Intelligence community: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary through source protection. Criminal investigators: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.15. High extraction; cannot access needed data but must work around wall. Potential terrorism victims: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction \u2014 unaware of threats, no exit option. DOJ bureaucracy: Institutional + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.02. Piton classification from theater ratio gate, not from high chi. Analytical observer: analytical \u2192 d\u22480.55, f(d)\u22480.75. Tradeoff classification reflects genuine dual function.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves the mandatrophy by showing that the wall is structurally a Tangled Rope: it genuinely provides civil liberties coordination (prevents prosecutorial weaponization of intelligence) while simultaneously extracting from security capacity (prevents threat detection). Both functions are real. The mandatrophy error would be to classify it as pure Snare (mislabeling the real civil liberties protection as theater) or as pure Rope (ignoring the real security extraction). Post-9/11, policy discourse attempted to resolve the mandatrophy by arguing the wall was a pure Snare (bureaucratic obstruction), justifying its removal. But the civil liberties protection was real \u2014 the post-wall period (2001-2008) saw expansion of intelligence-prosecution cooperation and documented concerns about prosecutorial overreach in terrorism cases. The correct framing is: the wall was a legitimate Tangled Rope protecting civil liberties at the cost of security capacity. Removing it required accepting higher risk of prosecutorial abuse, not merely removing bureaucratic obstacle. This fidelity to the dual structure prevents the false choice between 'pure security enhancement' vs 'bureaucratic obstruction.'"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_surveillance_expansion",
+      "prosecutorial_discovery_rules_terrorism"
+    ],
+    "dual_formulation_note": "The wall decomposed into two structurally distinct constraints: (1) the civil liberties protection against prosecutorial weaponization of intelligence (\u03b5\u22480.20, pure coordination, Rope), and (2) the information silo preventing threat detection (\u03b5\u22480.60, pure extraction, Snare). The wall as a single institutional structure embodied both \u2014 removal of the wall resolved one at the cost of the other. The post-wall environment trades Rope protection for reduced Snare extraction, but increases prosecutorial overreach risks (captured in separate constraint on prosecutorial discretion in terrorism cases)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

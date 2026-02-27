@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: constraint_riemann_mapping
+% CONSTRAINT STORY: riemann_mapping_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-16
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_riemann_mapping, []).
+:- module(constraint_riemann_mapping_theorem, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,23 +53,36 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: constraint_riemann_mapping
+ *   constraint_id: riemann_mapping_theorem
  *   human_readable: Riemann Mapping Theorem
- *   domain: technological
+ *   domain: mathematical/technological
  *
  * SUMMARY:
- *   The Riemann Mapping Theorem guarantees the existence of a conformal mapping
- *   between any two simply connected open subsets of the complex plane (except
- *   the complex plane itself). While the theorem ensures existence, its proof is
- *   non-constructive, providing no general method for explicitly finding the
- *   mapping. This gap between existence and construction creates a significant
- *   computational burden for those who need to apply the theorem.
+ *   The Riemann Mapping Theorem, proved by Bernhard Riemann in 1851, is a
+ *   foundational result in complex analysis stating that every non-empty
+ *   simply connected open subset of the complex plane (except the plane
+ *   itself) is conformally equivalent to the unit disk. This theorem
+ *   establishes a structural invariant of 2D complex topology: the existence
+ *   of conformal mappings that preserve angles and local structure between
+ *   domains. The constraint is purely mathematical — it emerges from the
+ *   logical structure of complex analysis and the special properties of 2D
+ *   conformal geometry. Unlike technological constraints, this theorem cannot
+ *   be engineered around, negotiated with, or suspended. Its base
+ *   extractiveness (0.08) reflects that it imposes no actual extraction on
+ *   any agent — instead, it guarantees availability of a mapping solution.
+ *   Its accessibility collapse (0.92) reflects that the theorem is fully
+ *   accessible to anyone with the mathematical background to understand
+ *   complex analysis. Its resistance to challenge (0.08) is minimal because
+ *   the proof is rigorous and uncontested. The theorem appears as a Mountain
+ *   from all perspectives because no observer's power level, time horizon,
+ *   exit options, or spatial scope changes what the theorem guarantees.
  *
- * KEY AGENTS (by structural relationship):
- *   - Grad Students & Junior Researchers: Primary target (powerless/trapped) — bear the full computational burden of finding or approximating mappings for their specific problems.
- *   - Computational Mathematicians & Applied Scientists: Secondary target (moderate/constrained) — possess tools to manage the computational cost, but still expend significant resources.
- *   - Theoretical Mathematicians: Primary beneficiary (institutional/arbitrage) — benefit from the guaranteed existence of mappings, which enables further theoretical development without bearing the construction cost.
- *   - Analytical Observer: Sees the full structure of coordination and asymmetric cost.
+ * KEY AGENTS:
+ *   - Applied Engineers: Technological practitioners (moderate/analytical) — use conformal mappings in electromagnetics and fluid dynamics; cannot circumvent the theorem but benefit from its guarantee
+ *   - Mathematics Students: Learning agents (powerless/analytical) — encounter the theorem as a structural fact; must internalize it as part of complex analysis knowledge
+ *   - Research Mathematicians: Inquiry agents (powerful/analytical) — push the boundaries of the theorem, investigate when it fails, explore deeper structures; constrained by the theorem's limits
+ *   - Academic Institutions: Institutional actors (institutional/analytical) — organize knowledge transmission around the theorem; cannot teach complex analysis without it
+ *   - Analytical Observers: Meta-level perspective (analytical/analytical) — recognize the theorem as a logical constraint on what mathematics permits
  */
 
 /* ==========================================================================
@@ -77,103 +90,97 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constraint_riemann_mapping, 0.35).
-domain_priors:suppression_score(constraint_riemann_mapping, 0.50).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(constraint_riemann_mapping, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(riemann_mapping_theorem, 0.08).
+domain_priors:suppression_score(riemann_mapping_theorem, 0.02).
+domain_priors:theater_ratio(riemann_mapping_theorem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constraint_riemann_mapping, extractiveness, 0.35).
-narrative_ontology:constraint_metric(constraint_riemann_mapping, suppression_requirement, 0.50).
-narrative_ontology:constraint_metric(constraint_riemann_mapping, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(riemann_mapping_theorem, extractiveness, 0.08).
+narrative_ontology:constraint_metric(riemann_mapping_theorem, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(riemann_mapping_theorem, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% This is not a mountain constraint.
+narrative_ontology:constraint_metric(riemann_mapping_theorem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(riemann_mapping_theorem, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(constraint_riemann_mapping, tangled_rope).
-narrative_ontology:human_readable(constraint_riemann_mapping, "Riemann Mapping Theorem").
-narrative_ontology:topic_domain(constraint_riemann_mapping, "technological").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(riemann_mapping_theorem, mountain).
+narrative_ontology:human_readable(riemann_mapping_theorem, "Riemann Mapping Theorem").
+narrative_ontology:topic_domain(riemann_mapping_theorem, "mathematical/technological").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(constraint_riemann_mapping). % Required for Tangled Rope
+domain_priors:emerges_naturally(riemann_mapping_theorem).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(constraint_riemann_mapping, theoretical_mathematicians).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(constraint_riemann_mapping, computational_mathematicians_and_applied_scientists).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (TANGLED ROPE)
-% A graduate student or junior researcher who must apply the theorem.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-constraint_indexing:constraint_classification(constraint_riemann_mapping, tangled_rope,
+% PERSPECTIVE 1: APPLIED ENGINEER (MOUNTAIN) — Cannot escape the constraint. Any engineer working with conformal mappings in electromagnetic field simulation, aerodynamic flow analysis, or hydraulic design discovers that simply connected domains must map to each other. No exit, no alternative. Zero degrees of freedom.
+constraint_indexing:constraint_classification(riemann_mapping_theorem, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(national))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% A theoretical mathematician using the theorem as a lemma.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-constraint_indexing:constraint_classification(constraint_riemann_mapping, rope,
-    context(agent_power(institutional),
             time_horizon(civilizational),
-            exit_options(arbitrage),
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Default analytical context. The high cost of construction is visible.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15. χ = 0.35 * 1.15 * 1.2 (global) ≈ 0.483.
-constraint_indexing:constraint_classification(constraint_riemann_mapping, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
+% PERSPECTIVE 2: GRADUATE STUDENT (MOUNTAIN) — Cannot avoid the theorem. It appears as a foundational result in complex analysis curriculum. The student may not fully understand the proof, but the constraint (the guarantee that mappings exist) operates regardless of comprehension. The theorem determines what is mathematically possible.
+constraint_indexing:constraint_classification(riemann_mapping_theorem, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
             exit_options(analytical),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE EXPERIENCED PRACTITIONER (TANGLED ROPE)
-% An established computational mathematician with resources and expertise.
-% The cost is still significant, classifying as a Tangled Rope.
-constraint_indexing:constraint_classification(constraint_riemann_mapping, tangled_rope,
-    context(agent_power(moderate),
+% PERSPECTIVE 3: RESEARCH MATHEMATICIAN (MOUNTAIN) — Even the most advanced researcher cannot evade the theorem. It is a ceiling and floor simultaneously: a ceiling on what unmapped regions can exist (none between simply connected domains) and a floor on what must be true of all such mappings (existence and uniqueness up to normalization). The theorem constrains the solution space universally.
+constraint_indexing:constraint_classification(riemann_mapping_theorem, mountain,
+    context(agent_power(powerful),
             time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: ACADEMIC INSTITUTION (MOUNTAIN) — Mathematics departments cannot teach complex analysis without the Riemann Mapping Theorem. The theorem is a structural fact, not a policy. Institutions cannot negotiate with it, override it, or find loopholes. It is equally immutable whether a university funds research or not.
+constraint_indexing:constraint_classification(riemann_mapping_theorem, mountain,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) — From a logical perspective spanning all of mathematics and its applications, the Riemann Mapping Theorem is an irreducible property of the complex plane. Its universality is not contextual. No measurement basis, no institutional arrangement, no technological deployment can change the underlying claim: simply connected domains in the complex plane are conformally equivalent to the unit disk or the plane itself. The constraint is logically invariant.
+constraint_indexing:constraint_classification(riemann_mapping_theorem, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(constraint_riemann_mapping_tests).
+:- begin_tests(riemann_mapping_theorem_tests).
 
-test(perspectival_gap) :-
-    % Verify perspectival gap between target (powerless) and beneficiary (institutional).
-    constraint_indexing:constraint_classification(constraint_riemann_mapping, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(constraint_riemann_mapping, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget == tangled_rope,
-    TypeBeneficiary == rope,
-    TypeTarget \= TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(riemann_mapping_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(riemann_mapping_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(tangled_rope_structural_requirements) :-
-    % Verify that the structural requirements for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(constraint_riemann_mapping, _),
-    narrative_ontology:constraint_victim(constraint_riemann_mapping, _),
-    domain_priors:requires_active_enforcement(constraint_riemann_mapping),
-    domain_priors:suppression_score(constraint_riemann_mapping, S), S >= 0.40.
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(riemann_mapping_theorem, ExtMetricName, E),
+    domain_priors:suppression_score(riemann_mapping_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-test(analytical_claim_consistency) :-
-    narrative_ontology:constraint_claim(constraint_riemann_mapping, ClaimedType),
-    constraint_indexing:constraint_classification(constraint_riemann_mapping, AnalyticalType, context(agent_power(analytical), _, _, _)),
-    ClaimedType == AnalyticalType.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(riemann_mapping_theorem),
+    narrative_ontology:constraint_metric(riemann_mapping_theorem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(riemann_mapping_theorem, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
-:- end_tests(constraint_riemann_mapping_tests).
+:- end_tests(riemann_mapping_theorem_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -181,92 +188,88 @@ test(analytical_claim_consistency) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.35): Represents the significant, irreducible
- *     computational cost required to find or approximate the mapping whose
- *     existence the theorem guarantees. This is not monetary extraction but
- *     an extraction of effort and computational resources.
- *   - Suppression Score (S=0.50): This is high not due to physical coercion,
- *     but because for many problems in complex analysis and physics, the
- *     theorem is the only known tool that provides the necessary theoretical
- *     guarantee. The lack of equally powerful constructive alternatives
- *     suppresses other approaches.
- *   - Requires Active Enforcement: This flag is asserted. In an academic
- *     context, "enforcement" occurs via peer review, established curricula,
- *     and consensus, which dictate that proofs relying on such mappings must
- *     be grounded in the theorem.
+ *   Base extractiveness (0.08): Minimal. The Riemann Mapping Theorem does not extract resources, rents, or benefits from any agent. Instead, it provides a guarantee — it is a constraint that bounds what must be true, not what is extracted. The small non-zero value reflects the minimal cognitive/computational cost of understanding and applying the theorem, not extraction. Suppression (0.02): Negligible. No suppression of alternatives is needed because there is no coercion — the theorem is not enforced against resistance, it is simply true. Theater ratio (0.15): Low. The theorem has minimal performative content. The proof is rigorous, the statement is unambiguous, and applications directly test the guarantee. Some theater exists in how the theorem is presented pedagogically, but the underlying structure is functional throughout. Accessibility collapse (0.92): Very high. The theorem is extremely difficult to circumvent — any simply connected domain must either map to the unit disk or be the plane itself. No agent can escape this constraint. Resistance (0.08): Very low. The theorem faces virtually no resistance because it is not antagonistic to any agent. No one resists the existence of conformal mappings; they leverage them.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For theoretical mathematicians (beneficiaries), the
- *   theorem is a pure coordination good (Rope) that enables elegant proofs
- *   and theoretical advances. For computational mathematicians and students
- *   (victims), it is a Tangled Rope: a useful tool whose non-constructive
- *   nature imposes a heavy cost, creating a significant work burden that is
- *   asymmetric to the benefit received by the theorists.
+ *   The key feature of the Riemann Mapping Theorem is that it classifies identically from ALL perspectives — it is a uniform-type Mountain. The applied engineer, the graduate student, the research mathematician, the institution, and the analytical observer all perceive the theorem as an unchangeable structural fact. There is no perspectival gap because the theorem's constraint is not relative to power, time horizon, exit options, or scope. A powerless graduate student and a powerful research mathematician both face the same constraint: simply connected domains are conformally equivalent to the unit disk. This uniformity is what characterizes a true mathematical mountain — it is independent of all observables and measurement bases.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `theoretical_mathematicians` gain a powerful tool for
- *     proving other theorems without needing to engage in the computational
- *   - Victims: `computational_mathematicians_and_applied_scientists` bear the
- *     cost of turning the abstract existence proof into a concrete, usable
- *     algorithm for specific applications.
+ *   The Riemann Mapping Theorem does not involve extraction or beneficiary/victim relationships. It is a guarantee, not a cost. All agents experience the same benefit: the assurance that conformal mappings between simply connected domains exist. There is no asymmetry in who benefits or bears costs. This is why directionality overrides are unnecessary and why the theorem has no beneficiaries or victims. It is a public mathematical fact that constrains all agents equally and benefits all equally by providing a structural guarantee.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies the dual nature of the theorem.
- *   It is not a pure Rope, because the cost to implementers is significant and
- *   asymmetrically borne. It is not a Snare, because it provides a genuine,
- *   irreplaceable coordination function for the field. The Tangled Rope
- *   classification captures this essential tension between a coordination good
- *   and the extractive cost of its application.
+ *   MATHEMATICAL NATURAL LAW: The Riemann Mapping Theorem resolves mandatrophy trivially by being a true natural law of mathematics. It is not coordination masquerading as extraction, nor extraction masquerading as coordination. It is a structural fact: simply connected domains in the complex plane have a specific topological and conformal equivalence class. The theorem is not a human institution that could be re-engineered or negotiated. It is not a policy that could be reversed. It is not a temporary scaffold with a sunset clause. It is an invariant of 2D complex topology, true in all mathematical frameworks that contain the complex plane.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_riemann_mapping,
-    'To what extent can efficient, general algorithms be developed to construct Riemann mappings?',
-    'Fundamental breakthroughs in computational complex analysis or computer science (e.g., P vs NP).',
-    'If efficient general algorithms are found, the extraction (ε) would drop significantly, and the constraint would resolve into a pure Rope for all perspectives. If proven impossible, the Tangled Rope classification is solidified.',
+    constructivity_of_proof,
+    'Is the Riemann Mapping Theorem constructive or merely existential? Can the conformal mapping be computed explicitly for arbitrary simply connected domains?',
+    'Analysis of proof techniques (Dirichlet problem, normal families, kernel convergence); comparison of explicit vs non-constructive paths to the result; empirical assessment of algorithmic feasibility for different domain shapes',
+    'If constructive: the theorem yields algorithms (Schwarz-Christoffel, boundary integral methods). If purely existential: the theorem provides a guarantee without computational pathway. Classification remains Mountain in both cases, but technological access differs.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(constructivity_of_proof, conceptual, 'Whether the proof is constructive or purely existential').
+
+omega_variable(
+    domain_boundary_pathology,
+    'Do pathological boundary behaviors (fractal, nowhere-smooth boundaries) still satisfy the theorem''s guarantee? What is the weakest regularity condition on domain boundaries that preserves the existence guarantee?',
+    'Rigorous analysis of boundary conditions; exploration of increasingly pathological domain shapes; determination of minimal regularity sufficient for the theorem',
+    'If the theorem holds for arbitrarily pathological boundaries: Mountain classification is fully universal. If boundaries require regularity: the theorem has a hidden bounded scope.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(domain_boundary_pathology, empirical, 'Weakest boundary regularity sufficient for the theorem').
+
+omega_variable(
+    higher_dimensional_analogue,
+    'Why does the Riemann Mapping Theorem fail in higher dimensions? Is this failure a fundamental limit or a contingency of the proof technique?',
+    'Deep analysis of the techniques that make dimension 2 special (maximum principle, harmonic functions, conformal structure); investigation of partial generalizations in higher dimensions; determination of whether alternative mathematical frameworks bypass the failure',
+    'If the failure is fundamental to topology: the theorem is Mountain in 2D but points to a deeper structural limit. If contingent: the theorem might have generalizations in unexpected mathematical frameworks.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(higher_dimensional_analogue, conceptual, 'Why the theorem fails in dimensions > 2').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(constraint_riemann_mapping, 0, 10).
+narrative_ontology:interval(riemann_mapping_theorem, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Base extractiveness is below the 0.46 threshold for mandatory temporal data.
-% However, data is provided to model the slow increase in perceived extraction
-% as computational demands in science have grown.
-narrative_ontology:measurement(constraint_riemann_mapping_tr_t0, constraint_riemann_mapping, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(constraint_riemann_mapping_tr_t5, constraint_riemann_mapping, theater_ratio, 5, 0.08).
-narrative_ontology:measurement(constraint_riemann_mapping_tr_t10, constraint_riemann_mapping, theater_ratio, 10, 0.10).
+% Theater ratio over time
+narrative_ontology:measurement(rmt_tr_t0, riemann_mapping_theorem, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(rmt_tr_t50, riemann_mapping_theorem, theater_ratio, 50, 0.15).
+narrative_ontology:measurement(rmt_tr_t100, riemann_mapping_theorem, theater_ratio, 100, 0.15).
 
-narrative_ontology:measurement(constraint_riemann_mapping_ex_t0, constraint_riemann_mapping, base_extractiveness, 0, 0.30).
-narrative_ontology:measurement(constraint_riemann_mapping_ex_t5, constraint_riemann_mapping, base_extractiveness, 5, 0.33).
-narrative_ontology:measurement(constraint_riemann_mapping_ex_t10, constraint_riemann_mapping, base_extractiveness, 10, 0.35).
+% Extraction over time
+narrative_ontology:measurement(rmt_be_t0, riemann_mapping_theorem, base_extractiveness, 0, 0.08).
+narrative_ontology:measurement(rmt_be_t50, riemann_mapping_theorem, base_extractiveness, 50, 0.08).
+narrative_ontology:measurement(rmt_be_t100, riemann_mapping_theorem, base_extractiveness, 100, 0.08).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-narrative_ontology:coordination_type(constraint_riemann_mapping, information_standard).
+narrative_ontology:coordination_type(riemann_mapping_theorem, information_standard).
+narrative_ontology:affects_constraint(riemann_mapping_theorem, conformal_field_theory_constraints).
+narrative_ontology:affects_constraint(riemann_mapping_theorem, schwarz_christoffel_mapping).
+
+% DUAL FORMULATION NOTE:
+% The Riemann Mapping Theorem is a foundational constraint that affects downstream theorems and applications in conformal field theory, aerodynamic simulation, and electromagnetic field mapping. It is upstream of all conformal mapping applications because it guarantees the existence of the mappings that those applications require.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed; the structural derivation from beneficiary/victim
-% status and exit options accurately models the dynamics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

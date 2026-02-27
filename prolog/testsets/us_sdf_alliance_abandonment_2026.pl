@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: us_sdf_alliance_abandonment_2026
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_us_sdf_alliance_abandonment_2026, []).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,23 +54,38 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: us_sdf_alliance_abandonment_2026
  *   human_readable: US Strategic Alliance Abandonment (Syria 2026)
- *   domain: geopolitical
+ *   domain: geopolitical/military_alliance
  *
  * SUMMARY:
- *   The constraint represents the strategic alliance between the United States
- *   and the Kurdish-led Syrian Democratic Forces (SDF). Initially formed as a
- *   coordination mechanism to defeat ISIS, the alliance was fundamentally
- *   asymmetric. The US abruptly withdraws support in 2026, allowing a new
- *   Syrian government to overrun SDF territory, revealing the extractive
- *   nature of the relationship where the US transferred long-term existential
- *   risk to its local partner.
+ *   The US-SDF alliance in northeast Syria (2014-2026) represents a strategic
+ *   partnership with structural asymmetry: the SDF provided ground forces for
+ *   counter-ISIS operations at high human cost while the US provided air
+ *   support, logistics, and intelligence. By 2026, internal US political
+ *   pressures and strategic reorientation away from the Middle East triggered
+ *   a policy shift toward alliance abandonment. This constraint exhibits pure
+ *   snare characteristics from the SDF's perspective and tangled rope
+ *   characteristics from the US institutional perspective. The key agents
+ *   operate at different structural levels: the SDF forces and Kurdish
+ *   civilian populations are trapped with no exit options; the US military
+ *   apparatus retains arbitrage exits via strategic repositioning; Turkish
+ *   state interests see liberation from constraint; regional balance-of-power
+ *   structures face consolidation under authoritarian actors. The
+ *   constraint's theater_ratio (0.55) reflects the gap between formal
+ *   alliance commitments (written into military doctrine, diplomatic
+ *   protocols) and actual enforcement mechanisms (withdrawal of support).
+ *   Extractiveness has accelerated dramatically over the 6-year interval as
+ *   the US signaled and then executed withdrawal, converting a mixed
+ *   coordination-extraction arrangement into a pure extraction mechanism with
+ *   no protective function.
  *
- * KEY AGENTS (by structural relationship):
- *   - Kurdish SDF: Primary target (organized/trapped) — bore the risk and cost of abandonment.
- *   - Civilians in AANES: Secondary target (powerless/trapped) — ultimate victims of the instability.
- *   - US Government: Primary beneficiary (institutional/arbitrage) — achieved military goals with low cost and exited without bearing the consequences faced by its partner.
- *   - New Syrian Government & Turkey: Secondary beneficiary (institutional/mobile) — capitalized on the US withdrawal to seize territory.
- *   - Foreign Policy Analyst: Analytical observer — sees the full structure of coordination and asymmetric extraction.
+ * KEY AGENTS:
+ *   - SDF Military Forces: Primary victim (powerless/trapped) — locked into dependency on US air support, intelligence, and logistics; cannot exit without military collapse
+ *   - Kurdish Civilian Populations in Northeast Syria: Primary victim (moderate/constrained) — face displacement and persecution risks; cannot exit the region without abandoning ancestral territories
+ *   - US Military-Strategic Apparatus: Primary extractor (institutional/arbitrage) — benefits from ground force provision and regional leverage; has exit option via strategic redeployment
+ *   - Turkish State: Secondary beneficiary (powerful/arbitrage) — experiences constraint removal as liberation; gains freedom to conduct military operations
+ *   - Assad Regime and Russian Interests: Secondary beneficiary (powerful/constrained) — benefit from power vacuum and SDF weakness; consolidate regional control
+ *   - International Alliance Treaty System: Institutional actor (institutional/constrained) — formal commitments persist theatrically; enforcement power atrophied
+ *   - Regional Balance-of-Power Structure: Collective system victim (organized/constrained) — trapped in zero-sum dynamics; abandonment enables authoritarian consolidation
  */
 
 /* ==========================================================================
@@ -79,119 +93,77 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(us_sdf_alliance_abandonment_2026, 0.65).
-domain_priors:suppression_score(us_sdf_alliance_abandonment_2026, 0.75).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(us_sdf_alliance_abandonment_2026, 0.40).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(us_sdf_alliance_abandonment_2026, 0.68).
+domain_priors:suppression_score(us_sdf_alliance_abandonment_2026, 0.72).
+domain_priors:theater_ratio(us_sdf_alliance_abandonment_2026, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(us_sdf_alliance_abandonment_2026, extractiveness, 0.65).
-narrative_ontology:constraint_metric(us_sdf_alliance_abandonment_2026, suppression_requirement, 0.75).
-narrative_ontology:constraint_metric(us_sdf_alliance_abandonment_2026, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(us_sdf_alliance_abandonment_2026, extractiveness, 0.68).
+narrative_ontology:constraint_metric(us_sdf_alliance_abandonment_2026, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(us_sdf_alliance_abandonment_2026, theater_ratio, 0.55).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(us_sdf_alliance_abandonment_2026, snare).
 narrative_ontology:human_readable(us_sdf_alliance_abandonment_2026, "US Strategic Alliance Abandonment (Syria 2026)").
-narrative_ontology:topic_domain(us_sdf_alliance_abandonment_2026, "geopolitical").
+narrative_ontology:topic_domain(us_sdf_alliance_abandonment_2026, "geopolitical/military_alliance").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(us_sdf_alliance_abandonment_2026). % Required for Tangled Rope
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(us_sdf_alliance_abandonment_2026, us_government).
-narrative_ontology:constraint_beneficiary(us_sdf_alliance_abandonment_2026, syrian_turkish_alliance).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(us_sdf_alliance_abandonment_2026, kurdish_sdf).
-narrative_ontology:constraint_victim(us_sdf_alliance_abandonment_2026, civilians_in_aanes).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three are present)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_victim(us_sdf_alliance_abandonment_2026, sdf_forces).
+narrative_ontology:constraint_victim(us_sdf_alliance_abandonment_2026, kurdish_civilian_populations).
+narrative_ontology:constraint_victim(us_sdf_alliance_abandonment_2026, regional_stability).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1A: THE PRIMARY TARGET (THE KURDISH SDF)
-% The alliance became a trap. They invested everything based on US security
-% guarantees, leaving them with no alternatives when support was withdrawn.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → high χ.
-% The SDF, though an 'organized' military force, is powerless relative to its
-% state-level patrons and adversaries.
-constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(regional))).
-
-% PERSPECTIVE 1B: THE CIVILIAN POPULATION (POWERLESS)
-% Civilians in the region have no agency in these geopolitical decisions but
-% suffer the most direct consequences of the alliance's collapse.
-% Engine derives d from: victim membership + trapped exit -> d ≈ 0.95 -> high χ.
+% PERSPECTIVE 1: SDF GROUND FORCES (SNARE) — Locked into dependency on US logistics, air support, and intelligence. Cannot exit the alliance without facing immediate military collapse against Turkish forces and Assad regime. Abandonment represents complete extraction: military assets frozen, supply chains severed, promised air cover withdrawn. Maximum coercion, zero exit velocity.
 constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (THE US GOVERNMENT)
-% The alliance was a highly effective, low-cost coordination tool. From a US
-% strategic viewpoint, it achieved its objective (destroying ISIS caliphate) and
-% was terminated when it was no longer a priority.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → low/negative χ.
-constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: KURDISH CIVILIAN POPULATIONS (SNARE) — Constrained exit but severe extraction. Alliance promised security from Turkish incursion and cultural persecution; abandonment exposes them to displacement, demographic dilution, and military occupation. Moderate power level derives from some collective organization (YPG/PKK structures) but fundamental inability to resist Turkish/Assad military pressure without US support. High suppression from multiple threat vectors (Turkey, Assad, ISIS remnants).
+constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare,
+    context(agent_power(moderate),
             time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: US MILITARY-STRATEGIC APPARATUS (TANGLED ROPE) — Hybrid. The alliance served genuine coordination functions: counter-ISIS operations (2014-2021), anti-ISIS information sharing, basing for Middle East operations, pressure on Iranian expansion. But it also served extractive functions: maintaining leverage over Turkey/NATO ally, cost-shifting ground warfare to SDF, preventing Syrian government consolidation. US institutional actors have arbitrage exits — redeployment to other regions, pivot to Israel/Gulf focus. The constraint is enforced via contingency planning and alliance management. Coordination (counter-ISIS) mixed with asymmetric extraction (burden-shifting, leverage extraction).
+constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% A historian or foreign policy analyst sees both the genuine coordination
-% function and the severe asymmetric extraction, classifying it as a Tangled Rope.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
+% PERSPECTIVE 4: TURKISH STATE INTERESTS (ROPE) — From Ankara's perspective, the SDF-US alliance was a pure constraint on Turkish freedom of action. Abandonment removes this constraint entirely, enabling Turkish military operations in northern Syria without US interference. Turkish state sees this as coordination: resolving the blockade on Turkish security operations. Zero extraction experienced — this is liberation. The constraint is dissolving through US policy shift.
+constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, rope,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% This highlights the difference between the two main parties to the alliance.
+% PERSPECTIVE 5: INTERNATIONAL LAW AND ALLIANCE TREATY NORMS (PITON) — The formal commitment to protect SDF forces derives from NATO alliance obligations, counterterrorism cooperation agreements, and informal security guarantees. These norms persist theatrically despite abandonment: written into military doctrine, teach-and-test cycles, diplomatic rhetoric. But functional enforcement is zero — the constraint provides no actual protection. Theater_ratio high (0.55): the formal structures remain, but their force has atrophied. Piton classification: institutional inertia, not actual coercive power.
+constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(constrained),
+            spatial_scope(global))).
 
-% Perspective 4A: Kurdish SDF Command (Organized Actor, Trapped)
-% Same as Perspective 1A, but explicitly framed as an institutional actor.
-% For them, the alliance's collapse is an existential threat.
+% PERSPECTIVE 6: REGIONAL BALANCE-OF-POWER STRUCTURE (SNARE) — The SDF-US alliance was a structural constraint on Assad/Russia/Iran consolidation in northeast Syria. Abandonment removes this pressure, allowing authoritarian consolidation and power vacuum fill by Turkish intervention. The regional system is trapped in a zero-sum game: SDF abandonment enables Turkish expansion, which enables Assad return, which enables Russian/Iranian entrenchment. High suppression (0.72): no region-level actor can exit or reshape the dynamic once the US withdraws. This perspective sees the constraint as the overall geopolitical structure constraining all regional actors.
 constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare,
     context(agent_power(organized),
             time_horizon(generational),
-            exit_options(trapped),
+            exit_options(constrained),
             spatial_scope(regional))).
 
-% Perspective 4B: US State Dept/Pentagon (Institutional Actor, Arbitrage)
-% Same as Perspective 2. For them, the alliance is one of many foreign
-% policy tools in a global portfolio, to be used or discarded as needed.
-constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(continental))).
-
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) — At the civilizational/analytical level, the constraint reflects an immutable structural fact: small stateless nations cannot survive between great powers without a protector. The SDF's geographic position (between Turkey, Syria, Iran, Iraq) makes it inherently dependent on a patron. The US alliance was a contingent manifestation of this structural necessity. This perspective risks naturalizing a political choice (US commitment) as a natural law. The engine's false summit detector should flag this.
+constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -199,25 +171,18 @@ constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, 
 
 :- begin_tests(us_sdf_alliance_abandonment_2026_tests).
 
-test(perspectival_gap_organized_beneficiary) :-
-    % Verify the core perspectival gap between the SDF and the US.
-    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare, context(agent_power(organized), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(perspectival_gap_powerless_beneficiary) :-
-    % Verify the gap between the most vulnerable population and the beneficiary.
-    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(us_sdf_alliance_abandonment_2026, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(analytical_view_is_tangled_rope) :-
-    % Verify the analytical observer correctly identifies the hybrid nature.
-    constraint_indexing:constraint_classification(us_sdf_alliance_abandonment_2026, snare, context(agent_power(analytical), _, _, _)).
-
-test(tangled_rope_gate_requirements) :-
-    % Verify that all structural requirements for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(us_sdf_alliance_abandonment_2026, _),
-    narrative_ontology:constraint_victim(us_sdf_alliance_abandonment_2026, _),
-    domain_priors:requires_active_enforcement(us_sdf_alliance_abandonment_2026).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(us_sdf_alliance_abandonment_2026, TR),
+    TR >= 0.70.
 
 :- end_tests(us_sdf_alliance_abandonment_2026_tests).
 
@@ -227,116 +192,101 @@ test(tangled_rope_gate_requirements) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.65): High. This value represents the massive
- *     existential risk transferred from the US to the SDF. The US achieved its
- *     counter-terrorism goals at a fraction of the cost in blood and treasure
- *     it would have taken to do so alone, while the SDF paid for the alliance
- *     with its long-term security and political viability.
- *   - Suppression (S=0.75): High. US patronage was conditional, actively
- *     discouraging the SDF from pursuing alternative alliances or deals (e.g.,
- *     with the Damascus government) that might have provided a long-term
- *     survival path. This reliance on a single patron was a core feature of
- *     the trap.
- *   - Theater (T=0.40): Moderate. The alliance had a real, functional purpose for
- *     many years. However, the rhetoric of "steadfast partnership" became
- *     increasingly theatrical as US strategic priorities shifted, masking the
- *     contingent and temporary nature of the commitment.
+ *   Extractiveness (0.68): High. The constraint exhibits strong unidirectional extraction over the interval. Initially (T=0, ε=0.35), the alliance functioned primarily as coordination: SDF provided ground forces, US provided air support, both benefited from counter-ISIS gains. By T=3 (ε=0.52), US withdrawal signals converted the arrangement into extraction: SDF bore increasing human costs while US signaled willingness to abandon. By T=6 (ε=0.68), extraction is near-maximal: SDF forced to hold ground without air cover or resupply while US maintains option to withdraw completely. The upward trajectory reflects accumulating asymmetry as US commitment becomes less credible. Suppression (0.72): Very high. The SDF faces multiple suppression vectors: Turkish military incursion, Assad regime consolidation, ISIS remnant activity, and now abandoned air support. No legal mechanisms, no diplomatic recourse, no coalition support. The SDF cannot appeal to international law (alliance commitments are informal), cannot retaliate (military vastly outmatched), cannot negotiate (Turkey and Assad see zero-sum advantage in military pressure). Suppression is structural, not circumstantial. Theater ratio (0.55): Moderate. Formal alliance structures remain in place (base agreements, command coordination, intelligence protocols) but enforcement has dissolved. The theater represents the gap between written commitments and actual military support. As withdrawal accelerates, the performative content increases — alliance norms become background noise rather than operational constraint.
  *
  * PERSPECTIVAL GAP:
- *   - The SDF (organized) and civilians (powerless) experience the alliance as a
- *     Snare because they were induced to over-invest in a partnership where they
- *     had no leverage and no safe exit. The final outcome, abandonment, is the
- *     realization of the trap.
- *   - The US experiences it as a Rope because, from its perspective, it was a
- *     successful, voluntary coordination mechanism that achieved its stated
- *     goals. The US's ability to exit at will (arbitrage) means it never
- *     experiences the coercive, extractive aspects of the constraint.
- *   - The Analytical observer sees both sides and correctly identifies it as a
- *     Tangled Rope: a structure with a genuine coordination function that is
- *     also built on a foundation of severe, asymmetric extraction.
+ *   This constraint demonstrates stark perspectival divergence driven by exit options and structural position. The SDF forces (powerless/trapped) perceive pure snare — abandonment means death or displacement with no alternatives. Kurdish civilians (moderate/constrained) perceive snare with slightly different color: they have theoretical exit (migration) but abandonment makes it coercive (flee or face occupation). The US military apparatus (institutional/arbitrage) perceives tangled rope — the alliance provided coordination functions (ISIS counter, regional pressure) but also enabled extraction (cost-shifting, leverage against Turkey). From Ankara's perspective, the SDF-US alliance was itself a constraint on Turkish action; its dissolution is rope-like liberation. The analytical observer risks the mountain classification (stateless nations inherently dependent on patrons) but the engine's false summit detector should identify this as naturalization of a political choice. The perspectival gap reveals the constraint's character: it appears to each actor through the lens of their exit options and structural dependency.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `us_government`. The US benefited by outsourcing its ground
- *     war against ISIS, saving American lives and resources. `syrian_turkish_alliance`
- *     benefited secondarily from the power vacuum created by the withdrawal.
- *   - Victim: `kurdish_sdf` and `civilians_in_aanes`. They bore the vast majority
- *     of the combat casualties and were ultimately sacrificed for broader
- *     geopolitical shifts.
- *   - The engine uses this data to derive directionality: SDF and civilians as victims with
- *     `trapped` exit get a high `d` (~0.95), making effective extraction χ very
- *     high. The US as a beneficiary with `arbitrage` exit gets a low `d` (~0.05),
- *     making χ low or negative. This mathematical gap reflects the structural reality.
+ *   Directionality values (d) are computed from agent structural position, power level, and exit options. The SDF forces (victims, trapped exit) derive d ≈ 0.90-0.95, producing high f(d) ≈ 1.35-1.42, amplifying experienced extractiveness chi toward maximum. Kurdish civilians (victims, constrained exit) derive d ≈ 0.78-0.85, producing f(d) ≈ 1.15-1.25. The US institutional apparatus (beneficiary, arbitrage exit) derives d ≈ 0.15-0.25, producing f(d) ≈ -0.01 to 0.20, reducing experienced chi downward (the constraint costs the US far less than it costs the SDF). Turkish state (beneficiary of constraint removal, arbitrage exit) derives d ≈ 0.05-0.15, experiencing the alliance (not the abandonment) as constraint. No directionality overrides are required — the structural data produces the observed perspectival gap naturally through the derivation chain.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two common errors. It does not dismiss
- *   the alliance as a pure Snare from the outset, acknowledging the real
- *   coordination (the Rope element) that defeated ISIS. It also avoids framing
- *   it as a simple Rope, which would ignore the profound power asymmetry and
- *   the extractive risk transfer that was always present. The Tangled Rope
- *   classification captures the dual nature that is essential to understanding
- *   such geopolitical arrangements.
+ *   MANDATROPHY RESOLVED. This constraint avoids the mandatrophy trap by clearly separating pure extraction (snare) from mixed coordination-extraction (tangled rope) via agent perspective. The US military apparatus genuinely experiences the alliance as coordination (counter-ISIS, regional pressure, NATO solidarity) — this is not false labeling. Simultaneously, the SDF experiences abandonment as pure extraction with no protective function. Both are correct readings from their respective structural positions. The constraint resolves the mandatrophy by indexing: from the institutional US perspective, it's tangled rope; from the powerless SDF perspective, it's snare. No single type applies universally — the presheaf over observation sites is the answer. The mandatrophy_resolved flag indicates that the analysis has accounted for this multiplicity and does not claim a single 'true' type. The upward extractiveness trajectory (0.35 → 0.68) reflects that as the constraint transitions from active alliance to abandoned commitment, its character shifts from tangled rope toward pure snare. The final classification (snare) reflects the endpoint, not the entire arc.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_us_sdf_alliance_abandonment_2026,
-    'Was the eventual abandonment an intended outcome from the start (a cynical use of a proxy), or the result of strategic drift and shifting priorities within the US government?',
-    'Access to classified US strategic planning documents from the 2014-2018 period.',
-    'If intended, the constraint was always a Snare masked as a Rope. If drift, it was a Rope that degraded into a Tangled Rope before the final collapse.',
+    abandonment_finality_vs_hedging,
+    'Is US abandonment of the SDF a final structural break or a hedging strategy that preserves covert support and maintains residual leverage?',
+    'Longitudinal tracking of US military presence, intelligence liaison continuation, covert financial flows, and cyber/drone support to SDF forces post-announced withdrawal',
+    'If final: SDF constraint is a pure snare with no escape path (extractiveness increases to 0.78+). If hedged: constraint becomes tangled_rope with residual coordination function (extractiveness drops to 0.55-0.60). Classification hinges on whether abandonment is performative or structural.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(abandonment_finality_vs_hedging, empirical, 'Whether abandonment is final or maintains hedging support').
+
+omega_variable(
+    sdf_coalition_viability_without_us,
+    'Can the SDF establish alternative patron relationships (Russia, Assad, Iran, or Arab coalition) that restore functional military capacity and reduce extraction/suppression?',
+    'Monitoring of SDF diplomatic outreach, alliance formation attempts, and military capability restoration within 12-24 months post-abandonment. Measurement of weapons flows, training support, and security guarantees from alternative sources.',
+    'If viable alternatives emerge: SDF constraint transitions from snare to tangled_rope or scaffold (temporary). If no alternatives: snare classification deepens and extractiveness remains high (0.68+). This determines whether abandonment is permanently terminal or transitional.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(sdf_coalition_viability_without_us, empirical, 'Whether SDF can establish viable alternative patron relationships').
+
+omega_variable(
+    turkish_occupation_stability_and_exit,
+    'Does Turkish military occupation of northeast Syria create a sustainable extraction regime or a temporary military intervention that eventually withdraws (enabling SDF resurgence)?',
+    'Analysis of Turkish administrative integration, settler-colonist population flows, economic investment in occupied territories, and historical precedent from previous Turkish interventions (1974 Cyprus, 1990-2007 Northern Iraq). Timeline projection for Turkish exit incentives.',
+    'If occupation becomes permanent extraction: regional snare deepens. If Turkish withdrawal is likely within 5-10 years: the constraint cycles back to SDF-US dependency (or SDF-Russia dependency), changing the periodicity and duration of snare compression. Classification stability depends on Turkish commitment duration.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(turkish_occupation_stability_and_exit, empirical, 'Whether Turkish occupation is permanent or temporary').
+
+omega_variable(
+    us_reengagement_threshold,
+    'What future geopolitical shock (Israeli escalation, ISIS resurgence, Iran expansion, Russian consolidation) would trigger US re-engagement with SDF forces?',
+    'Scenario analysis of regional contingencies and their alignment with US stated strategic interests. Monitoring of contingency planning documents, congressional positions, and forward-deployed military posture changes.',
+    'If reengagement threshold is low (ISIS resurgence): the abandonment is performative and the constraint reverts to tangled_rope (extractiveness drops to 0.50-0.55). If threshold is high or nonexistent: snare classification holds indefinitely. This determines whether abandonment represents genuine structural change or a policy cycle.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(us_reengagement_threshold, preference, 'Threshold for US military re-engagement with SDF').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(us_sdf_alliance_abandonment_2026, 0, 10).
+narrative_ontology:interval(us_sdf_alliance_abandonment_2026, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% The constraint degraded over its lifecycle. It began as a more functional
-% partnership and became more extractive and theatrical over time.
-% Base extractiveness is high (>0.46), so temporal data is required.
+% Theater ratio over time
+narrative_ontology:measurement(usdf_tr_t0, us_sdf_alliance_abandonment_2026, theater_ratio, 0, 0.4).
+narrative_ontology:measurement(usdf_tr_t3, us_sdf_alliance_abandonment_2026, theater_ratio, 3, 0.48).
+narrative_ontology:measurement(usdf_tr_t6, us_sdf_alliance_abandonment_2026, theater_ratio, 6, 0.55).
 
-% Theater ratio over time (metric_substitution):
-narrative_ontology:measurement(us_sdf_tr_t0, us_sdf_alliance_abandonment_2026, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(us_sdf_tr_t5, us_sdf_alliance_abandonment_2026, theater_ratio, 5, 0.30).
-narrative_ontology:measurement(us_sdf_tr_t10, us_sdf_alliance_abandonment_2026, theater_ratio, 10, 0.40).
+% Extraction over time
+narrative_ontology:measurement(usdf_be_t0, us_sdf_alliance_abandonment_2026, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(usdf_be_t3, us_sdf_alliance_abandonment_2026, base_extractiveness, 3, 0.52).
+narrative_ontology:measurement(usdf_be_t6, us_sdf_alliance_abandonment_2026, base_extractiveness, 6, 0.68).
 
-% Extraction over time (extraction_accumulation):
-narrative_ontology:measurement(us_sdf_ex_t0, us_sdf_alliance_abandonment_2026, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(us_sdf_ex_t5, us_sdf_alliance_abandonment_2026, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(us_sdf_ex_t10, us_sdf_alliance_abandonment_2026, base_extractiveness, 10, 0.65).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: It allocated military resources and enforced a security zone.
-narrative_ontology:coordination_type(us_sdf_alliance_abandonment_2026, resource_allocation).
 narrative_ontology:coordination_type(us_sdf_alliance_abandonment_2026, enforcement_mechanism).
+narrative_ontology:affects_constraint(us_sdf_alliance_abandonment_2026, isis_resurgence_syria_iraq).
+narrative_ontology:affects_constraint(us_sdf_alliance_abandonment_2026, turkish_kurdish_regional_conflict).
+narrative_ontology:affects_constraint(us_sdf_alliance_abandonment_2026, iranian_expansion_regional).
+narrative_ontology:affects_constraint(us_sdf_alliance_abandonment_2026, russian_consolidation_middle_east).
+narrative_ontology:affects_constraint(us_sdf_alliance_abandonment_2026, nato_alliance_credibility).
 
-% Network relationships: This constraint is deeply coupled with other regional power dynamics.
-narrative_ontology:affects_constraint(us_sdf_alliance_abandonment_2026, turkish_border_security).
-narrative_ontology:affects_constraint(us_sdf_alliance_abandonment_2026, iranian_regional_influence).
-narrative_ontology:affects_constraint(us_sdf_alliance_abandonment_2026, syrian_civil_war_resolution).
-
+% DUAL FORMULATION NOTE:
+% This constraint is downstream of broader US strategic reorientation away from Middle East. The upstream constraint (us_middle_east_strategic_retrenchment) determines alliance abandonment policy. The SDF alliance abandonment has multiple downstream effects: ISIS operational freedom, Turkish expansion, regional power consolidation. Each downstream constraint has its own ε value reflecting domain-specific empirical status.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are needed for this story. The structural derivation chain
-% (using beneficiary/victim declarations and exit_options) correctly computes
-% the directionality `d` for all key agents, reflecting the asymmetric power
-% dynamic at the heart of the constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

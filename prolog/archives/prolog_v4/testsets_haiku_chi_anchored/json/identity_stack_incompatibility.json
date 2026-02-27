@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "identity_stack_incompatibility",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "identity"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Fragmented Digital Self",
+    "topic_domain": "technological/social/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "government_agencies",
+      "identity_verification_services"
+    ],
+    "victims": [
+      "individual_citizens",
+      "cross_platform_autonomy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Fragmented Individual",
+      "comment": "PERSPECTIVE 1: FRAGMENTED INDIVIDUAL (SNARE) \u2014 Individual citizens cannot exit the fragmentation. Trapped by platform lock-in, regulatory fragmentation, and mandatory digital presence for essential services (banking, voting, healthcare access). Bears full cost of identity fraud, data breaches, and cognitive burden of managing multiple incompatible credential systems. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.86."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operators",
+      "comment": "PERSPECTIVE 2: PLATFORM OPERATORS (ROPE) \u2014 Institutions like Google, Apple, Meta experience the fragmentation as a coordination problem that they solve through proprietary federation protocols, federated login, and OAuth integrations. Operators benefit from network effects while maintaining walled gardens. d\u22480.10, f(d)\u22480.02, \u03c3=1.2 \u2192 \u03c7\u22480.01. Effective extraction is minimal; operators see pure coordination value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Government Agencies",
+      "comment": "PERSPECTIVE 3: GOVERNMENT AGENCIES (TANGLED ROPE) \u2014 States and regulatory bodies face a hybrid constraint: they benefit from fragmenting identity systems (enabling surveillance, control, and regulatory arbitrage across jurisdictions), but they are also constrained by the need for interoperability with private platforms for essential service delivery (digital tax filing, digital identity cards, healthcare records). Agencies possess enforcement power but face international coordination problems and private-sector resistance. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.25."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Identity Verification Services",
+      "comment": "PERSPECTIVE 4: IDENTITY VERIFICATION SERVICES (TANGLED ROPE) \u2014 Third-party identity verifiers (Veriff, Jumio, IDology) benefit from fragmentation: they extract value by providing bridges between incompatible systems, selling KYC/AML verification services, and licensing identity data to platforms. But they are constrained by regulatory pressure (GDPR, eIDAS), platform lock-in (Apple Privacy, Google's Privacy Sandbox), and competition. The coordination function: they reduce fraud risk and enable cross-platform transactions. d\u22480.38, f(d)\u22480.36, \u03c3=0.9 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Self-Sovereign Identity Coalition",
+      "comment": "PERSPECTIVE 5: SELF-SOVEREIGN IDENTITY COALITION (SCAFFOLD) \u2014 Open-standards advocates (W3C Verifiable Credentials, decentralized identity, DIDs) see fragmentation as a temporary problem with a sunset clause. They are building interoperable, user-controlled identity systems that reduce platform lock-in and regulatory fragmentation. The coalition has agency and clear exit paths: W3C standards, blockchain-based verifiable credentials, EU's eIDAS 2.0 framework creating legal interoperability. d\u22480.30, f(d)\u22480.22, \u03c3=1.2 \u2192 \u03c7\u22480.13. Theater ratio will decline as standards mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Digital Divide Narrative",
+      "comment": "PERSPECTIVE 6: LEGACY DIGITAL DIVIDE NARRATIVE (PITON) \u2014 The framing that identity fragmentation is inherent to the 'nature of the internet' or 'decentralization' persists through institutional inertia. This narrative maintains theater (claims that fragmentation is efficient, privacy-preserving, or necessary) despite evidence that it is extractive and remediable. theater_ratio=0.64 reflects substantial performative content in identity debates: claims about privacy benefits of platform isolation, efficiency of proprietary verification, and technical feasibility of alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit Candidate)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (FALSE SUMMIT CANDIDATE) \u2014 From a civilizational view, some identity fragmentation appears immutable: different contexts (work, medical, financial, social) genuinely require different identity attributes and have different trust requirements. However, the structural data (\u03b5=0.52, suppression=0.68, theater=0.64) contradicts the mountain gate. This perspective risks naturalizing contingent regulatory and market choices as immutable natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "contextual_identity_necessity",
+      "question": "Are context-specific identity systems (work vs. medical vs. financial) structurally required by different trust models, or are they maintained primarily through regulatory fragmentation and platform incentives?",
+      "resolution_mechanism": "Comparative analysis of actual trust requirements vs. declared requirements; examination of which attributes are technically inseparable vs. artificially segregated; pilots of unified-attribute systems with context-based access controls",
+      "impact": "If structurally required: some fragmentation is unavoidable (mountain from some perspectives). If primarily maintained by incentives: unified interoperable systems are feasible, and current fragmentation is extractive (snare from powerless perspective holds).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether identity fragmentation is structurally necessary or incentive-driven"
+    },
+    {
+      "id": "decentralized_identity_scalability",
+      "question": "Can decentralized/self-sovereign identity systems (DIDs, verifiable credentials) scale to handle government-scale identity verification (voter registration, benefits distribution, law enforcement) without collapsing into proprietary gatekeepers?",
+      "resolution_mechanism": "Technical feasibility studies (throughput, latency, revocation); pilot programs in national digital identity (Estonia, Singapore models); analysis of whether decentralized systems require trusted anchors that become de facto gatekeepers",
+      "impact": "If scalable: self-sovereign identity scaffold is real, sunset is achievable within 10-15 years. If not scalable: fragmentation persists, and decentralization narrative is theater masking unavoidable centralization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized identity systems can replace fragmented platforms at scale"
+    },
+    {
+      "id": "regulatory_harmonization_feasibility",
+      "question": "Can regulatory frameworks (eIDAS, GDPR, state-level digital ID laws) harmonize sufficiently to enable cross-border identity interoperability without creating a single global identity infrastructure?",
+      "resolution_mechanism": "Analysis of regulatory convergence; examination of eIDAS 2.0 implementation; assessment of whether interoperability requires either (a) full regulatory unification (impossible), or (b) meta-standards that platforms can route around (as with OAuth)",
+      "impact": "If harmonizable: government agencies' tangled-rope classification holds. If not: government fragmentation is permanent structural extraction masquerading as necessary sovereignty.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory harmonization can enable cross-border identity interoperability"
+    },
+    {
+      "id": "platform_incentive_realignment",
+      "question": "What economic or regulatory mechanisms would realign platform operators' incentives toward genuine interoperability rather than mimicking interoperability through proprietary federation?",
+      "resolution_mechanism": "Antitrust case outcomes; analysis of DMA/DSA impacts on EU platforms; examination of whether interoperability requirements (forced or voluntary) change platform extraction patterns",
+      "impact": "If realignment mechanisms exist: platform extraction is remediable policy choice (tangled rope can shift toward rope). If not: platform lock-in is de facto immutable (false mountain).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether platform incentives can be realigned toward interoperability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "The fragmented digital self emerges where individuals maintain separate, non-interoperable identity credentials across government systems, commercial platforms, and regulatory domains. An individual might have a government-issued digital ID, separate Apple ID, Google account, banking credentials, healthcare portals, and employment systems \u2014 each with different authentication mechanisms, attribute schemas, and access controls. They cannot easily prove a single fact (e.g., 'I am over 18') across contexts without re-authentication and re-verification by each system. This fragmentation is not technically inevitable: the underlying cryptographic and infrastructure technologies can support unified, user-controlled identity with context-based access. Instead, fragmentation persists due to platform lock-in strategies, regulatory silos, competing interests in identity gatekeeping, and the performative narrative that fragmentation is necessary for privacy or security. The constraint exhibits a tangled hybrid: it provides genuine coordination value (specialized trust models for different contexts, fraud prevention through multiple verification layers) while extracting substantial costs (data duplication, breach surface area, user friction, platform vendor lock-in, regulatory arbitrage). The constraint's extractiveness has grown from ~0.28 (early 2010s, when identity fragmentation was nascent and less economically consequential) to 0.52 (present, when digital identity controls access to essential services). Theater has also risen: claims about the necessity of fragmentation, the privacy benefits of platform isolation, and the technical impossibility of interoperable identity now dominate policy debates despite contradictory evidence.",
+    "key_agents": [
+      "Individual Citizens: Primary victims (powerless/trapped) \u2014 trapped by mandatory digital presence for essential services; manage multiple incompatible credential systems; bear cost of identity fraud and data breaches",
+      "Platform Operators (Google, Apple, Meta, etc.): Primary beneficiaries (institutional/arbitrage) \u2014 benefit from proprietary federation, network lock-in, and user data extraction; see fragmentation as coordination problem they solve at profit",
+      "Government Agencies: Powerful institutional agents (powerful/constrained) \u2014 benefit from identity fragmentation (surveillance, regulatory control) but constrained by need for private-sector interoperability; pursue both centralization and delegation",
+      "Identity Verification Services (Veriff, Jumio, IDology): Secondary beneficiaries (organized/constrained) \u2014 extract value from bridging incompatible systems; provide KYC/AML services; constrained by GDPR, platform privacy policies, and regulatory pressure",
+      "Self-Sovereign Identity Coalition: Organized actors (organized/mobile) \u2014 W3C, blockchain advocates, decentralized identity proponents; building alternative systems with clear sunset logic; have exit paths",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent choices as immutable technical constraints"
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. Platform operators extract substantial value through lock-in, data monetization, and control over identity verification gatekeeping. Government agencies extract value through surveillance and regulatory arbitrage. Identity verification services extract value through KYC licensing and data brokerage. But extractiveness is not maximal (not 0.70+) because: (1) genuine coordination value exists (fraud prevention, attribute specialization), (2) users retain some mobile options (federated login, account switching, decentralized identity experimentation), and (3) regulatory pressure (GDPR, eIDAS) is beginning to force interoperability. Suppression (0.68): High. Multiple barriers prevent exit: (a) network effects (switching platforms costs valuable social graph), (b) regulatory lock-in (government IDs are mandatory), (c) operational dependency (essential services require platform credentials), (d) switching costs (re-verification, data migration). Suppression has remained stable because the barriers are structural, not theatrical. Theater ratio (0.64): Moderate-high. Substantial performative content in identity debates: claims that fragmentation is necessary for privacy (actually supported by platform privacy theater), that centralized identity threatens freedom (partially true but conflates regulatory centralization with technical integration), that current systems are secure (contradicted by epidemic of breaches), and that interoperability is technically infeasible (contradicted by eIDAS, W3C standards).",
+    "perspectival_gap": "This constraint shows the full range of perspectival divergence. The powerless individual sees pure extraction (Snare): they are trapped in multiple systems with no coordination benefit, only friction and risk. Platform operators see pure coordination (Rope): they solve the real problem of verifying identity across contexts. Identity services see hybrid benefits (Tangled Rope): they both coordinate (reduce fraud) and extract (monetize verification). Government sees constrained benefit (Tangled Rope): they gain surveillance and control but lose coordination efficiency. The self-sovereign coalition sees a temporary problem with a sunset (Scaffold): standards are maturing, regulatory pressure is mounting, pilots are showing feasibility. The legacy narrative sees an immutable constraint (Piton or false Mountain): fragmentation is presented as inherent to decentralization or privacy, maintained through theater despite empirical evidence that it is remediable. The analytical observer risks falling into the false mountain trap by naturalizing contingent institutional choices. The perspectival gaps reveal the core structural question: is fragmentation a feature of technology, or a feature of economic incentives and regulatory choices?",
+    "directionality_logic": "Individual citizens: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. They cannot exit and bear all friction costs. Platform operators: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.02. Minimal effective extraction because they are net beneficiaries with high exit options (they can switch protocol standards). Government agencies: Both beneficiary (surveillance, control) and victim (coordination costs, regulatory fragmentation) + constrained \u2192 d\u22480.45, f(d)\u22480.48. Significant extraction experienced due to constraints on sovereignty and interoperability. Identity verification services: Beneficiary (revenue stream) and partial victim (regulatory pressure, platform gatekeeping) + constrained \u2192 d\u22480.38, f(d)\u22480.36. Moderate extraction; they profit from fragmentation but face increasing pressure to enable interoperability. Self-sovereign coalition: Organized + mobile \u2192 d\u22480.30, f(d)\u22480.22. Low effective extraction because they see agency and exit paths.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely hybrid: fragmentation provides both coordination (fraud prevention, context-specific trust) and extraction (platform lock-in, gatekeeping, vendor control). The snare classification from the powerless individual's view is accurate: they experience only extraction with no coordination benefit. The rope classification from platform operators' view is also accurate: they experience primarily coordination with minimal extraction. The tangled rope classification from the organizational and government perspectives is accurate because both functions coexist in their experience. The scaffold classification is accurate because regulatory frameworks (eIDAS 2.0) and technical standards (W3C Verifiable Credentials) are building real interoperability pathways with sunset logic. The piton classification captures the performative narrative layer: claims about necessity of fragmentation are theatrical. The false mountain risk is real: naturalizing institutional choices as technical limits. The constraint's mandatrophy is not resolved by finding 'the' correct type, but by recognizing that all types are simultaneously true from their respective structural positions. The system is extractive (snare) at the individual level, coordinative (rope) at the platform level, hybrid (tangled rope) at the institutional level, transitioning (scaffold) at the regulatory level, performative (piton) at the narrative level, and risks false naturalization (false mountain) at the civilizational level."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_digital_surveillance",
+      "regulatory_gatekeeping_power",
+      "cross_border_data_localization"
+    ],
+    "dual_formulation_note": "Identity fragmentation is downstream of broader platform gatekeeping strategies and regulatory silos but represents a distinct structural constraint with its own \u03b5 value. Upstream constraints (platform extraction, regulatory fragmentation) feed into identity fragmentation; downstream constraints (surveillance capability, gatekeeping power) depend on the fragmentation persisting. The constraint family models how technical choices (API design, authentication standards) translate to economic extraction (lock-in, data monetization) and regulatory consequences (surveillance, sovereignty conflicts)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

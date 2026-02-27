@@ -1,0 +1,131 @@
+{
+  "header": {
+    "constraint_id": "vns_implant_for_trd",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vagus Nerve Stimulation (VNS) Implant for Treatment-Resistant Depression",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "device_manufacturers",
+      "surgeons",
+      "hospitals"
+    ],
+    "victims": [
+      "trd_patients"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "TRD Patients",
+      "comment": "Patients with TRD may feel trapped due to limited alternative treatment options and the invasive nature of the implant. The high cost and potential side effects contribute to the snare-like experience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Device Manufacturers",
+      "comment": "Device manufacturers benefit from the sale and maintenance of VNS devices. They can readily switch to alternative product lines if VNS becomes unprofitable or undesirable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes the mixed coordination and extraction. VNS provides a treatment option (coordination) but also introduces potential risks and costs for patients (extraction)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Surgeons",
+      "comment": "Surgeons benefit from performing VNS implantations, providing a new service and revenue stream to their practice. They are mobile, as they can offer a range of surgical procedures."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_efficacy",
+      "question": "What is the long-term efficacy of VNS for TRD compared to other treatments?",
+      "resolution_mechanism": "Longitudinal studies comparing VNS to alternative therapies and sham stimulation.",
+      "impact": "If efficacy is low, the treatment becomes primarily extractive. If high, it supports a more coordination-focused classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the long-term effectiveness of VNS for TRD."
+    },
+    {
+      "id": "patient_selection_criteria",
+      "question": "What are the optimal patient selection criteria for VNS to maximize its benefits and minimize harm?",
+      "resolution_mechanism": "Clinical trials and retrospective data analysis to identify patient characteristics that predict treatment response.",
+      "impact": "Refined criteria could shift the classification from a snare for some patients to a rope or scaffold if benefits are more clearly defined and targeted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty regarding the ideal patient selection for VNS therapy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Vagus Nerve Stimulation (VNS) implant system for treatment-resistant depression (TRD) represents a complex interaction between technological intervention, patient experience, and economic incentives. While offering potential relief for a difficult-to-treat condition, it also involves significant costs, potential side effects, and uncertainties about long-term efficacy.",
+    "key_agents": [
+      "TRD Patients: Primary target (powerless/trapped) - bear the costs and risks of the invasive procedure.",
+      "Device Manufacturers: Primary beneficiary (institutional/arbitrage) - profit from the sale and maintenance of the devices.",
+      "Surgeons: Secondary beneficiary (powerful/mobile) - gain from performing the surgical procedure.",
+      "Hospitals: Secondary beneficiary (institutional/constrained) - increased revenue and patient base.",
+      "Analytical Observer: Sees the full structure (analytical/analytical) - assesses the overall impact and balance of benefits and costs."
+    ],
+    "logic_rationale": "Extractiveness: 0.55. Moderate extraction due to the financial burden on patients, the potential for side effects, and the uncertainty of long-term efficacy. Suppression: 0.45. Moderate suppression due to limited alternative options for TRD patients, creating a sense of limited choice. Theater Ratio: 0.30. Low theater ratio as the treatment involves a direct, physical intervention with tangible, measurable effects, although the mechanisms are not fully understood.",
+    "perspectival_gap": "TRD patients experience the treatment as a snare due to feeling trapped and the potential for negative outcomes. Device manufacturers see it as a coordination mechanism (rope), allowing them to create and sell a product. Surgeons see it similarly as they can now offer a surgical treatment for a condition with very few treatments. The analytical observer sees a mixed coordination-extraction hybrid (tangled rope), acknowledging both the potential benefits and inherent risks."
+  }
+}

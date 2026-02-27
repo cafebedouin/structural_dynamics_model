@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "fungal_shift_grassland_loss",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fungal"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Ecological Transition from Grassland to Scrub via Fungal Network Disruption",
+    "topic_domain": "ecological/climate/soil_biology",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "grassland_plant_communities",
+      "grassland_dependent_fauna",
+      "human_pastoral_economies",
+      "regional_biodiversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Grassland Plant Communities",
+      "comment": "PERSPECTIVE 1: GRASSLAND PLANT COMMUNITIES (SNARE) \u2014 Cannot exit the altered soil mycorrhizal environment. Warm-winter conditions disrupt arbuscular mycorrhizal fungal networks that grassland species depend upon for nutrient uptake and water access. Loss of fungal partnerships forces competitive disadvantage against drought-tolerant scrub species. No alternative metabolic pathway; no mobility. Maximum experienced extraction \u2014 the constraint removes the biological foundation of their survival."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Grassland-Dependent Fauna",
+      "comment": "PERSPECTIVE 2: GRASSLAND-DEPENDENT FAUNA (SNARE) \u2014 Birds, insects, and small mammals dependent on grassland structure and plant diversity cannot adapt to rapid scrub conversion. No geographic exit available within their range before habitat converts. Migratory capacity is limited. Bears full cost of ecosystem shift with no agency or alternative habitat access."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Pastoral Communities",
+      "comment": "PERSPECTIVE 3: PASTORAL COMMUNITIES (ROPE) \u2014 Experience the constraint as a coordination problem with partial exit options. Herding animals can migrate to higher elevations or shift to scrub-compatible livestock. Economic adaptation is costly but possible. Communities face reduced carrying capacity and income, but possess some agency through transhumance, herd composition shifts, or economic diversification. Effective extraction is moderate \u2014 they can partially escape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Conservation Organizations and Ecological Scientists",
+      "comment": "PERSPECTIVE 4: CONSERVATION AND ECOLOGICAL SCIENCE SECTOR (TANGLED ROPE) \u2014 Possess institutional capacity to study and document the transition, creating career opportunities in climate adaptation research and management. Benefit from the constraint through research funding and expertise valuation. Simultaneously constrained by rapid ecosystem change that outpaces intervention capacity and by the tragedy of documenting loss without preventing it. Active enforcement of conservation protocols (protected areas, restoration) often fails against the underlying driver (warmer winters). Exhibits both coordination function (monitoring networks, scientific knowledge) and asymmetric extraction (institutional benefit from studying ecosystem degradation)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Global Agricultural/Pastoral Policy Frameworks",
+      "comment": "PERSPECTIVE 5: GLOBAL AGRICULTURAL POLICY FRAMEWORKS (PITON) \u2014 Policy institutions (FAO, regional agricultural ministries) maintain subsidies and grazing regulations designed for stable grassland conditions. These policies persist despite becoming maladapted to the new ecological reality. Theater ratio is high: continued grassland-management regulations are largely performative \u2014 they cannot reverse fungal network disruption or restore grassland competitiveness. Institutions maintain the policy apparatus through inertia even as its functional basis erodes. Beneficiaries (large pastoral operations leveraging subsidies) have arbitrage options to shift to other regions or commodity types."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Thermodynamic View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a thermodynamic and evolutionary perspective, the transition from grassland to scrub via fungal network disruption is a form of ecological phase transition. Stable snowpack thresholds create bistability: above the threshold, grassland fungal networks are favored; below it, scrub-adapted communities dominate. The transition is not reversible without restoring the snowpack \u2014 it is a structural reorganization of the soil-plant system. However, this perspective risks naturalizing what is fundamentally a climate-driven constraint imposed by human greenhouse gas forcing. The 'natural law' framing obscures the causal attribution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "fungal_network_recovery_timeline",
+      "question": "Can arbuscular mycorrhizal fungal networks recover if winters re-stabilize, or has the community state shifted irreversibly?",
+      "resolution_mechanism": "Long-term snowpack restoration experiments; seed bank and fungal spore bank viability assays; paleoecological reconstruction of post-recovery scenarios",
+      "impact": "If reversible: constraint is a temporary Scaffold with sunset tied to climate policy. If irreversible: constraint is a permanent Mountain-like transition with no recovery pathway.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether fungal network collapse is reversible or represents permanent state change"
+    },
+    {
+      "id": "snowpack_threshold_specificity",
+      "question": "Is there a precise snowpack depth/duration threshold above which grassland fungi persist and below which scrub fungi dominate, or is the transition gradual and context-dependent?",
+      "resolution_mechanism": "Controlled snowpack manipulation experiments; multivariate analysis of snowpack vs fungal community composition across elevation and geographic gradients; dynamic systems modeling",
+      "impact": "If precise threshold exists: constraint is a Mountain with well-defined accessibility collapse. If gradual: constraint is a Tangled Rope with negotiable but costly transitions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fungal transition exhibits sharp or gradual thresholds"
+    },
+    {
+      "id": "fungal_network_functional_redundancy",
+      "question": "Do scrub-associated fungal networks provide equivalent nutrient-acquisition and drought-resilience functions for grassland plant species, or is the incompatibility fundamental?",
+      "resolution_mechanism": "Cross-inoculation experiments; nutrient uptake kinetics comparisons; hydraulic function analysis of grassland species with scrub fungal partners",
+      "impact": "If functional redundancy exists: grassland species can persist in modified form (reduces snare severity). If incompatible: grassland species face obligate decline (confirms snare for perspective 1).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative fungal networks can sustain grassland species"
+    },
+    {
+      "id": "human_adaptation_capacity_ceiling",
+      "question": "At what rate of grassland loss do pastoral adaptation strategies (migration, herd composition change, diversification) cease being effective, triggering systemic economic collapse?",
+      "resolution_mechanism": "Ethnographic case studies of pastoral adaptation limits; economic modeling of carrying capacity thresholds; historical analysis of pastoral collapse events",
+      "impact": "If adaptation ceiling is high: pastoral communities remain Rope (moderate extraction). If ceiling is low and rapidly approaching: communities move toward Snare (powerless/trapped).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Human adaptive capacity ceiling for pastoral economies under grassland loss"
+    },
+    {
+      "id": "policy_framework_inertia_drivers",
+      "question": "Are agricultural policies maintained by institutional path dependence, vested interests in grassland subsidies, or genuine belief in grassland management viability?",
+      "resolution_mechanism": "Policy audit and legislative history analysis; stakeholder interviews; budget flow analysis for grassland vs scrub-adapted programs",
+      "impact": "If path dependence only: Piton classification is correct. If vested interests: reveals Snare extraction by policy beneficiaries at expense of pastoral communities. If genuine belief: policy is misclassified as Piton and should be Tangled Rope (enforcement + learning).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Root cause of maladapted policy persistence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Warming winters in mountain grassland ecosystems disrupt the soil mycorrhizal fungal networks upon which grassland plant communities depend. Stable snowpack maintains soil temperatures and moisture conditions that favor arbuscular mycorrhizal fungi \u2014 species that form obligate partnerships with grassland roots for nutrient uptake and drought tolerance. Reduced snow cover exposes soil to greater winter temperature fluctuations and desiccation, favoring drought-adapted saprotrophic and ectomycorrhizal fungi associated with scrub vegetation. Over 30-50 years, this fungal community shift cascades into irreversible grassland loss as scrub species outcompete grassland plants for resources. The constraint exhibits characteristics of a pure extraction mechanism (Snare) from the perspective of grassland organisms and dependent fauna, which bear ecological costs with no exit option. However, from institutional and pastoral perspectives, it exhibits mixed characteristics: conservation sectors benefit from research opportunities while being constrained by inability to reverse the transition; pastoral communities face reduced carrying capacity but possess some adaptive mobility. The theater ratio (0.38) reflects that early policy responses (grassland protection, restoration initiatives) operate at cross-purposes with the underlying driver (climate forcing) and become increasingly performative as they fail to halt the transition.",
+    "key_agents": [
+      "Grassland Plant Communities: Primary victim (powerless/trapped) \u2014 lose fungal partnerships required for survival; no geographic or metabolic exit; forced competitive disadvantage against scrub species",
+      "Grassland-Dependent Fauna: Primary victim (powerless/trapped) \u2014 birds, insects, small mammals dependent on grassland structure cannot adapt rapidly enough to scrub conversion; limited migratory capacity",
+      "Pastoral Communities: Secondary victim (moderate/mobile) \u2014 face reduced pasture carrying capacity and income but possess partial exit options through herd migration, livestock composition shifts, economic diversification",
+      "Conservation and Ecological Science Sector: Dual agent (organized/constrained) \u2014 benefits from research funding and expertise valuation (beneficiary) while constrained by inability to prevent ecosystem change and outpacing of knowledge by events (victim)",
+      "Agricultural Policy Institutions: Institutional beneficiary (institutional/arbitrage) \u2014 maintain grassland-focused subsidies and regulations that persist through inertia despite becoming maladapted; possess exit options to shift policy frameworks",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing climate-driven constraint as ecological natural law, obscuring human causation"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint mechanisms include: (1) direct ecological extraction from grassland organisms \u2014 loss of fungal symbioses removes a core biological input with no alternative source; (2) temporal extraction from pastoral economies \u2014 carrying capacity declines over 20-40 year span, creating forced economic transition; (3) indirect extraction from conservation efforts \u2014 resources devoted to grassland protection yields diminishing returns as the underlying driver (snowpack loss) continues. The value (0.52) reflects that this is primarily an ecological constraint with significant human extractiveness components, but not maximum extraction because some agents (pastoral communities, conservation sector) retain partial agency and adaptation pathways. Suppression (0.68): High. Barriers to grassland persistence include: fundamental incompatibility of grassland plants with scrub-associated fungal networks; geographic constraints preventing migration to cooler elevations (space constraints); socioeconomic constraints on pastoral adaptation (capital requirements for livestock composition change, land tenure barriers, market access); institutional path dependence in agricultural policy. The snowpack threshold creates a bistability trap \u2014 once crossed, grassland recovery requires external intervention (snowpack restoration via climate policy) beyond the capacity of local land management. Theater ratio (0.38): Moderate-low. Initial policy responses (grassland protection areas, restoration initiatives) represent genuine coordination attempts but become progressively performative as their functional basis (stable snowpack) erodes. By year 40, continued grassland management policies are substantially theatrical \u2014 they maintain institutional roles and funding streams while failing to address the underlying driver. The low initial theater reflects that the constraint itself is genuinely ecophysiological (not socially constructed), but institutional responses progressively become performative.",
+    "perspectival_gap": "This constraint demonstrates divergent classifications arising from structural asymmetries in exit options and beneficiary/victim status. Grassland organisms (Snare) have no exit; pastoral communities (Rope) have costly but real exit options; conservation institutions (Tangled Rope) benefit from documenting loss while being constrained by inability to prevent it; policy institutions (Piton) maintain increasingly performative grassland frameworks through institutional inertia. The analytical observer's thermodynamic perspective risks misclassifying a climate-driven constraint as an immutable ecological law, thereby obscuring the causal attribution to greenhouse gas emissions and policy choices. The key perspectival gap is between organisms experiencing the constraint in real time (immediate/biographical timeframes, regional scope) and policy institutions operating at civilizational timescales with global scope \u2014 the latter can rationalize grassland loss as inevitable while the former experience it as catastrophic extraction.",
+    "directionality_logic": "Directionality values (d) are derived from the structural position of each agent relative to the fungal-network disruption mechanism. Grassland plants and dependent fauna have d \u2248 0.95 (full targets): they bear costs with no capacity to exit or benefit from the transition. Pastoral communities have d \u2248 0.55-0.65 (victims with exit options): they bear significant costs but possess adaptation pathways via migration and economic diversification. Conservation scientists have d \u2248 0.30-0.40 (mixed beneficiary and victim): they benefit from research opportunities and institutional funding while being constrained by inability to prevent ecosystem loss. Policy institutions have d \u2248 0.05-0.15 (beneficiaries): they maintain grazing subsidies and regulatory frameworks that concentrate benefits among large pastoral operations while dispersing costs across grassland organisms and small-scale pastoralists. No explicit directionality overrides required \u2014 the structural derivation captures the real asymmetries.",
+    "mandatrophy_analysis": "MANDATROPHY PATHWAY: The constraint is classified as a Snare (\u03b5=0.52, \u03c7 \u2265 0.66) for the powerless agents bearing primary costs (grassland organisms, dependent fauna). However, the classification is not uniform \u2014 it resolves mandatrophy by showing that the same ecological mechanism exhibits different constraint types depending on structural position. For grassland organisms, it is a Snare (no exit, maximum extraction). For pastoral communities, it is a Rope or Tangled Rope (partial exit, mixed extraction/coordination). For conservation institutions, it is a Tangled Rope (asymmetric extraction despite coordination function). For policy institutions, it is a Piton (degraded institutional framework). The mandatrophy is resolved by recognizing that 'the fungal shift grassland loss' is not a single homogeneous constraint but a structural phenomenon that generates different extraction/coordination dynamics depending on the agent's position within it. The snare classification for primary victims (grassland and fauna) is unambiguous. The institutional classifications differ because institutions possess buffers (funding, policy flexibility, geographic mobility of operations) that individual organisms lack. The constraint becomes a snare precisely at the point where exit options collapse \u2014 which occurs at different thresholds for different agents."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "snowpack_decline_mountain_hydrology",
+      "climate_driven_ecosystem_state_change"
+    ],
+    "dual_formulation_note": "The fungal network disruption is downstream of climate forcing (snowpack decline). The upstream constraint is the climate system's thermodynamic tendency to reduce stable winter precipitation in this region. The fungal shift is the mechanism through which the climate constraint is translated into ecological extraction."
+  },
+  "directionality_overrides": []
+}

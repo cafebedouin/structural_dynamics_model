@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "yangtze_fishing_ban",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Yangtze River Fishing Ban",
+    "topic_domain": "economic, environmental, political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "yangtze_river_ecosystem",
+      "future_generations"
+    ],
+    "victims": [
+      "yangtze_fishermen",
+      "fish_consumers"
+    ],
+    "has_sunset_clause": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Yangtze Fishermen",
+      "comment": "Fishermen who have lost their livelihoods due to the ban. They often lack alternative skills and resources for transition. Limited exit options and high dependence on the river make them vulnerable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Governments",
+      "comment": "Local governments are responsible for enforcing the ban and providing support to affected fishermen. They face pressure to balance economic development with environmental protection. Constrained by resources and policy directives from the central government."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Central Government of China",
+      "comment": "The central government benefits from the ban through improved environmental reputation and long-term ecological sustainability. They have the power to implement and enforce the ban across the entire Yangtze River basin. Arbitrage via international praise and long-term resource security."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Environmental Organizations",
+      "comment": "International NGOs play a role in monitoring and advocating for the Yangtze River ecosystem. They can mobilize resources and expertise to support conservation efforts. Has a sunset clause tied to successful ecological restoration, transitioning to monitoring and support."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Long-term observer analyzing the effectiveness of the ban in restoring biodiversity and the socio-economic impacts on affected communities. Sees both benefits and drawbacks, requiring a nuanced assessment. The fishing ban is an extraction from current fishing communities for the benefit of future generations and the environment, with uncertain long-term benefits. A tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ecosystem_recovery_rate",
+      "question": "How quickly will the Yangtze River ecosystem recover?",
+      "resolution_mechanism": "Long-term monitoring of fish populations, water quality, and biodiversity.",
+      "impact": "Determines the long-term effectiveness and justification for the ban.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Recovery rate of the Yangtze River ecosystem."
+    },
+    {
+      "id": "livelihood_transition_success",
+      "question": "How successful are alternative livelihood programs for affected fishermen?",
+      "resolution_mechanism": "Tracking employment rates, income levels, and social well-being of transitioned fishermen.",
+      "impact": "Determines the social cost of the ban and the need for additional support.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Success of livelihood transition programs."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Yangtze River Fishing Ban is a permanent ban implemented by the Chinese government to restore biodiversity. It aims to reverse the effects of overfishing and ecological damage. The ban has significant socio-economic impacts, particularly on fishermen who have traditionally relied on the river for their livelihoods.",
+    "key_agents": [
+      "Yangtze Fishermen: Primary target (powerless/trapped)",
+      "Local Governments: Implementing authority (moderate/constrained)",
+      "Central Government of China: Primary beneficiary (institutional/arbitrage)",
+      "Yangtze River Ecosystem: Ultimate beneficiary",
+      "International Environmental Organizations: Monitor and advocate (organized/mobile)"
+    ],
+    "logic_rationale": "The extractiveness is moderate because while the ban significantly impacts fishermen, there are attempts to provide alternative livelihoods. Suppression is high due to the strict enforcement of the ban and limited alternative options for fishermen. The theater ratio is relatively low as there's a genuine effort to improve the ecosystem beyond performative actions.",
+    "perspectival_gap": "The fishermen see the ban as a snare, taking away their livelihoods. The central government views it as a rope, providing long-term benefits to the ecosystem and the nation's environmental reputation. Local governments face a tangled rope situation, balancing enforcement with the need to support affected communities. International environmental organizations view it as a scaffold to preserve nature until the river is healthy again.",
+    "directionality_logic": "The central government, as the implementer, benefits the most, experiencing the constraint as a rope. The fishermen, bearing the brunt of the economic impact and having limited exit options, experience it as a snare. Local governments are constrained by the central authority but do have a role in how the ban is executed.",
+    "mandatrophy_analysis": "The fishing ban is a complex issue with both benefits and drawbacks, making it difficult to classify as purely extraction or pure coordination. The tangled rope classification reflects this complexity, recognizing the legitimate need to restore the ecosystem while also acknowledging the significant negative impacts on affected communities. It is important to consider the perspectives of all stakeholders involved to fully understand the consequences of the ban."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

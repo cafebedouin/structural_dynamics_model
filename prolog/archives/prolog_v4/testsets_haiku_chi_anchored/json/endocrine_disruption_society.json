@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "endocrine_disruption_society",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "edc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Systemic Endocrine Disruption via Industrial Chemicals",
+    "topic_domain": "social/environmental/biological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "chemical_manufacturers",
+      "consumer_product_industries"
+    ],
+    "victims": [
+      "general_population",
+      "fetal_and_developmental_cohorts",
+      "reproductive_health_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exposed Population",
+      "comment": "PERSPECTIVE 1: EXPOSED POPULATION (SNARE) \u2014 Citizens cannot exit ubiquitous chemical exposure; products containing EDCs are pervasive in consumer goods, food packaging, personal care items, and building materials. No alternative supply chain exists. Biological exposure is involuntary. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.98. Pure extraction with high coercive overhead."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Fetal and Developmental Cohorts",
+      "comment": "PERSPECTIVE 2: FETAL AND DEVELOPMENTAL COHORTS (SNARE) \u2014 Window of maximum vulnerability occurs before voluntary choice or awareness. Maternal exposure during pregnancy and early childhood window (critical periods for endocrine development) creates involuntary harm with no exit option and no informed consent. Exposure is transgenerational: maternal body burden transfers to fetus. d\u22480.98, f(d)\u22481.50, \u03c3=1.2 \u2192 \u03c7\u22481.08. Peak snare structure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Chemical Manufacturers and Formulators",
+      "comment": "PERSPECTIVE 3: CHEMICAL MANUFACTURERS (ROPE) \u2014 Experience the constraint as coordination: regulatory compliance, market access through formulation standardization, industry standards that enable trade. Cost of reformulation is real but manageable; companies that innovate on safer alternatives gain competitive advantage. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary; constraint enables market structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Consumer Product Industry",
+      "comment": "PERSPECTIVE 4: CONSUMER PRODUCT INDUSTRY (TANGLED ROPE) \u2014 Benefits from low-cost formulations using EDCs (cost reduction = margin expansion). Simultaneously bears reputational and liability risk from toxicity discovery. Exit options exist (reformulation, market repositioning) but carry transition costs. Organized sector with lobbying capacity. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.17. Mixed: coordination on market standards + extraction through cost externalization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Public Health and Environmental Advocates",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH ADVOCATES (TANGLED ROPE) \u2014 Constrained by funding asymmetry and regulatory capture but increasingly mobile through scientific evidence accumulation and coalition-building. See coordination function (epistemic standards, evidence synthesis) and extraction (suppression of negative findings, regulatory delays). d\u22480.60, f(d)\u22480.85, \u03c3=1.0 \u2192 \u03c7\u22480.49. Significant perspectival gap from powerless victims."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Chemical Safety Regulatory Framework",
+      "comment": "PERSPECTIVE 6: REGULATORY FRAMEWORK (PITON) \u2014 Chemical safety regulations (REACH in EU, TSCA in US) are largely performative: regulatory review assumes burden of proof on government to prove harm, not on manufacturers to prove safety. Review processes are slow (average 7-15 years for full risk assessment), allowing sustained commercial use during approval window. Theater ratio 0.65 reflects: mandatory testing protocols exist but lack real enforcement capacity; companies can reformulate to avoid regulation; risk assessments are technically detailed but slow to translate to policy. This is institutional inertia \u2014 the machinery persists through legal mandate but doesn't effectively constrain exposure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Limit View (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (FALSE SUMMIT) \u2014 A risk frame might argue that industrial chemistry necessarily involves novel compounds, true hazard assessment for novel compounds is inherently uncertain, and perfect safety is impossible \u2014 therefore some exposure risk is inherent to industrial civilization. This naturalizes the constraint. However, the structural data (\u03b5=0.58, suppression=0.68, theater=0.65) contradicts a mountain classification. The 'inherent uncertainty' framing masks contingent institutional choices (regulatory burden of proof, slow review timelines, liability cap structures, international regulatory arbitrage) that are not laws of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dose_response_threshold_uncertainty",
+      "question": "Do endocrine-disrupting chemicals have linear dose-response relationships with clear safety thresholds, or do they exhibit non-monotonic dose responses (U-shaped or inverted-U curves) where low doses produce effects comparable to high doses?",
+      "resolution_mechanism": "Meta-analysis of dose-response studies across animal models and human epidemiology; identification of mechanistic explanations for non-monotonic responses; reproduction of low-dose effects in independent labs",
+      "impact": "If linear with clear thresholds: regulatory 'safe' levels may be scientifically justified, snare classification weakens. If non-monotonic: no safe exposure exists, extraction mechanism is mathematically unavoidable, snare classification strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Dose-response relationship structure for EDCs"
+    },
+    {
+      "id": "mixture_interaction_amplification",
+      "question": "Do endocrine-disrupting chemicals exhibit synergistic (greater-than-additive) interactions when combined in realistic exposure mixtures, or are mixture effects approximately additive?",
+      "resolution_mechanism": "In vitro and in vivo experiments testing environmental mixtures at realistic concentrations; comparison of observed effects against additive predictions; mechanistic analysis of receptor binding and signaling pathway interference",
+      "impact": "If synergistic: regulatory exposure limits based on individual chemicals substantially underestimate real-world harm, suppression mechanism is stronger, extraction is higher. If additive: traditional risk assessment is more justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Synergistic effects of chemical mixtures"
+    },
+    {
+      "id": "window_of_susceptibility_reversibility",
+      "question": "How much endocrine disruption harm during critical developmental windows is irreversible vs. potentially reversible through intervention or avoidance after the window closes?",
+      "resolution_mechanism": "Longitudinal epidemiological studies tracking developmental outcomes from fetal exposure through reproductive age; studies of exposure reduction and outcome recovery; mechanistic analysis of epigenetic and receptor-level changes",
+      "impact": "If irreversible: constraint on fetal cohort is permanent, snare classification for generational victims is structural. If reversible: harm mitigation through later exposure reduction is possible, constraint becomes more rope-like.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Reversibility of developmental endocrine disruption"
+    },
+    {
+      "id": "alternative_formulation_cost_feasibility",
+      "question": "What is the actual economic cost of reformulating major consumer products to eliminate endocrine-disrupting chemicals at scale, and how much of the current cost difference is driven by genuine technical constraints vs. entrenched cost structures?",
+      "resolution_mechanism": "Engineering cost analysis of formulation alternatives for major product categories (personal care, plastics, flame retardants); comparison of reformulation costs across companies with different innovation track records; analysis of barrier costs (capital retooling, supply chain reorganization) vs. material input cost",
+      "impact": "If feasible at <10% cost premium: beneficiary perspective (chemical manufacturers) is partly illusory, constraint becomes more rope-like. If cost premium >30%: extraction mechanism is partially driven by genuine technical economics, tangled_rope framing is more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic feasibility of EDC-free alternatives"
+    },
+    {
+      "id": "regulatory_capture_mechanism_evidence",
+      "question": "To what extent does the chemical industry's influence on regulatory agencies (through funding, personnel flow, industry-sponsored research) explain the slow regulatory pace and high burden of proof on government, vs. structural epistemic limitations in toxicology?",
+      "resolution_mechanism": "Analysis of funding sources for regulatory research; tracking of industry scientist \u2192 regulator \u2192 industry career paths; comparison of regulatory timelines and stringency across jurisdictions with different institutional designs (EU vs. US approach); review of scientific advisory committee membership and conflicts of interest",
+      "impact": "If capture is primary mechanism: suppression is actively maintained, theater_ratio is artificial (compliance performance masking inaction), snare classification is robust. If epistemic limitations are primary: some theater is genuine, some regulatory paralysis is scientific (not political), constraint is closer to mountain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Role of regulatory capture in EDC assessment delays"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Systemic endocrine disruption via industrial chemicals represents a structural extraction mechanism operating at population scale with minimal exit options for exposed individuals. Endocrine-disrupting chemicals (EDCs) are compounds that interfere with hormone production, transport, or function \u2014 effects that are particularly damaging during fetal development and early childhood when endocrine systems are establishing critical programming. These chemicals are ubiquitous in consumer products: BPA and phthalates in plastics, parabens in personal care products, organophosphate pesticides in food, per- and polyfluorinated compounds (PFAS) in food packaging and textiles, flame retardants in furniture and electronics, and others. The constraint exhibits classic snare structure: the exposed population cannot exit (chemicals are in food packaging, drinking water, air, building materials, consumer goods with no alternative supply chains), suppression is high (knowledge asymmetries: manufacturers know formulation hazards; consumers do not; regulatory reviews are slow; scientific uncertainty is weaponized), and extraction is significant (chemical manufacturers and consumer product companies benefit from low-cost formulations while externalities (healthcare costs, reproductive harm, transgenerational effects) are socialized). The constraint's theater_ratio (0.65) reflects that regulatory compliance is largely performative: mandatory safety testing exists but operates under a burden of proof that requires government to demonstrate harm rather than manufacturers to demonstrate safety; review timelines are so slow (7-15 years) that chemicals accumulate in the population before regulatory action occurs; and reformulation is often not required even when hazards are documented.",
+    "key_agents": [
+      "General population (powerless/trapped) \u2014 involuntary ubiquitous exposure, no consumer exit option, bears full cost of health externalities",
+      "Fetal and developmental cohorts (powerless/trapped) \u2014 peak vulnerability during critical windows before any possible choice or awareness; maternal exposure transfers to fetus; transgenerational harm",
+      "Chemical manufacturers (institutional/arbitrage) \u2014 beneficiary; low-cost formulations with EDCs enable margin expansion; cost of safer alternatives is manageable; experience constraint as coordination mechanism for market access",
+      "Consumer product industry (powerful/arbitrage) \u2014 beneficiary; margin expansion through cost reduction; organized sector with lobbying capacity; bears reputational and liability risk but has exit options (reformulation, market repositioning)",
+      "Public health and environmental advocates (moderate/mobile) \u2014 victim with growing coalition capacity; constrained by funding asymmetry and regulatory capture; increasingly mobile through scientific evidence accumulation",
+      "Regulatory framework (institutional/constrained) \u2014 maintains performative compliance machinery; inherent bias toward delay (burden of proof on government); capture-resistant in some jurisdictions (EU), more vulnerable in others (US)",
+      "Analytical observer (analytical/analytical) \u2014 risks naturalizing contingent institutional choices (regulatory design, liability structures) as inherent to industrial chemistry"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Chemical manufacturers and consumer product companies directly benefit from low-cost formulations containing EDCs; these cost savings translate to profit margin expansion. The extraction is not total (0.70+) because reformulation is technically feasible and some companies have successfully transitioned to safer alternatives without major market loss, indicating that much of the cost difference reflects entrenched structures rather than genuine technical necessity. The extraction increases over the 50-year interval (from 0.32 to 0.58) as knowledge of EDC hazards has accumulated but regulatory response has lagged, allowing manufacturers to continue using known-hazard chemicals because the institutional penalty is low. Suppression (0.68): High. Multiple suppression mechanisms: (1) information asymmetry \u2014 manufacturers know toxicity data; consumers do not; (2) regulatory capture \u2014 industry influence on agencies lengthens review timelines and raises burden of proof; (3) scientific uncertainty weaponization \u2014 genuine dose-response and mixture effect uncertainties are deployed to justify continued use; (4) liability cap structures \u2014 corporations' maximum legal exposure is far below actual population harm costs; (5) international regulatory arbitrage \u2014 companies manufacture for jurisdictions with lower standards then export products globally. Theater ratio (0.65): Moderate-high. Regulatory testing and compliance procedures are extensive and technically detailed, but the actual harm-prevention function is limited: TSCA testing doesn't apply to chemicals grandfathered in before 1976; REACH in EU is more stringent but still slow; industry-sponsored safety studies have systematic bias toward finding safety; advisory committees include industry scientists; slow regulatory timelines allow decades of exposure before action. The theater has increased over time (0.42 \u2192 0.65) as regulatory machinery has expanded without proportional increase in enforcement or restriction capacity.",
+    "perspectival_gap": "This constraint produces a sharp perspectival gap between victims and beneficiaries. The exposed population (powerless/trapped) classifies the constraint unambiguously as snare \u2014 no exit, high coercion, pure extraction. Fetal cohorts experience even more severe snare structure because exposure occurs during critical developmental windows with no possible consent or avoidance. Chemical manufacturers (institutional/arbitrage) experience the constraint as rope \u2014 a coordination mechanism enabling market access and regulatory compliance; their cost-benefit analysis favors continued use because reformulation carries capital costs they can externalize through regulatory delay. The consumer product industry (powerful/arbitrage) occupies a hybrid position (tangled_rope) \u2014 they benefit from low-cost formulations but face growing reputational and liability risk, creating a mixed experience of extraction (margin expansion) and constraint (risk management). Public health advocates (moderate/mobile) classify as tangled_rope because they see both coordination (evidence synthesis, epistemic standards for toxicology) and extraction (suppression of negative findings, regulatory capture). The regulatory framework (institutional/constrained) sees its own process as piton \u2014 technically detailed but functionally degraded, maintained through legal mandate rather than effectiveness. An analytical observer risks classifying as mountain by naturalizing the constraint as inherent to industrial chemistry ('true hazard assessment for novel compounds is impossible; therefore some exposure risk is inevitable'). The engine's false summit detector reveals this as a naturalization of contingent institutional choices.",
+    "directionality_logic": "General population: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.98. Maximum extraction structure. Fetal cohorts: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.50, \u03c3=1.2 \u2192 \u03c7\u22481.08. Peak snare: exposure during critical developmental windows with no voluntary component. Chemical manufacturers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary; cost externalization through regulatory delay is structural. Consumer product industry: Mixed (powerful/arbitrage) \u2192 d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.17. Benefits from cost reduction but faces organized opposition and reputational risk. Public health advocates: Victim + mobile (organized) \u2192 d\u22480.60, f(d)\u22480.85, \u03c3=1.0 \u2192 \u03c7\u22480.49. Increasingly mobile through evidence accumulation and coalition-building; significant perspectival gap from powerless victims. Regulatory framework: Institutional + constrained \u2192 d\u22480.40, f(d)\u22480.40, \u03c3=1.0 \u2192 \u03c7\u22480.26. Piton classification emerges from theater gate (0.65 \u2265 0.70 threshold not quite met, but close); the framework is constrained by institutional mandate and capture.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the snare classification is robust across multiple structurally independent lines of evidence: (1) Victim populations cannot exit (trapped), (2) Suppression is high (information asymmetry, regulatory capture, liability caps), (3) Extractiveness is significant (manufacturers benefit, costs externalized), (4) No offsetting coordination function (unlike tangled_rope which requires genuine benefit to victims), (5) The classification is stable across perspectives from victims \u2014 all powerless and moderate agents see snare or tangled_rope extraction, never rope. The risk of mandatrophy occurs in the consumer product industry perspective (powerful/arbitrage): they might claim the constraint is rope (coordination for market access) when actually it's tangled_rope (mixed coordination and extraction). The distinguishing factor is that the industry perspective sees real extraction (margin expansion from low-cost formulations) alongside coordination, and the tangled_rope classification correctly captures this mixture. The regulatory framework's piton classification is robust because it reflects a genuine phenomenon: regulatory machinery persists without proportional harm-prevention function (theater_ratio 0.65 indicating degraded process), maintained through legal mandate rather than effectiveness. This is not a mandatrophy risk \u2014 it's a valid observation that the apparatus is vestigial."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "reproductive_health_decline",
+      "developmental_neurotoxicity_substrate"
+    ],
+    "dual_formulation_note": "This constraint represents the systemic exposure mechanism. Downstream constraints include specific reproductive health outcomes (fertility decline, sexual dysfunction, genital malformations) and developmental neurotoxicity (attention disorders, reduced IQ). The snare structure of endocrine disruption creates the foundation for these downstream extraction mechanisms. Upstream constraints include regulatory capture in chemical safety assessment and liability cap structures in corporate governance."
+  },
+  "directionality_overrides": []
+}

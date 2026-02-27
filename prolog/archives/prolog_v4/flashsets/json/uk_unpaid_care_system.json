@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "uk_unpaid_care_system",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The UK's reliance on unpaid carers for social and healthcare",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_government",
+      "nhs"
+    ],
+    "victims": [
+      "unpaid_carers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Unpaid Carers",
+      "comment": "Unpaid carers, often family members, are trapped by their sense of duty and lack of affordable alternatives, bearing the brunt of the extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Government",
+      "comment": "The UK government benefits from the unpaid care system as it reduces the financial burden on the state. However, they are constrained by public opinion and legal obligations to provide some level of support."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "National Health Service (NHS)",
+      "comment": "The NHS also benefits from the unpaid care system, as it reduces demand for their services. However, they are constrained by their duty to provide healthcare to all citizens."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a global, civilizational perspective, the system is a tangled rope, balancing cost savings with potential exploitation of carers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_value_unpaid_care",
+      "question": "What is the true economic value of unpaid care in the UK?",
+      "resolution_mechanism": "Independent economic analysis, considering opportunity cost, health impacts, and social contributions.",
+      "impact": "Impacts the perception of extractiveness. If high, the system is more extractive. If low, less extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic value of unpaid care."
+    },
+    {
+      "id": "availability_affordable_alternatives",
+      "question": "To what extent are affordable and accessible social care alternatives available?",
+      "resolution_mechanism": "Assessment of social care provision, costs, and eligibility criteria across the UK.",
+      "impact": "Impacts the perception of suppression and exit options for carers. More alternatives equal less suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of affordable alternatives."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK's social care system relies heavily on a large population of unpaid carers, typically family members, who provide essential support to ill, elderly, or disabled relatives. This reliance creates a complex system where the government and NHS benefit from reduced costs, while unpaid carers often face significant personal and financial burdens.",
+    "key_agents": [
+      "Unpaid Carers: Primary target (powerless/trapped) - bear the brunt of care responsibilities with limited support.",
+      "UK Government: Primary beneficiary (institutional/constrained) - benefits from cost savings but constrained by social expectations.",
+      "NHS: Secondary beneficiary (moderate/constrained) - benefits from reduced demand but constrained by healthcare obligations."
+    ],
+    "logic_rationale": "Extractiveness (0.65): Significant extraction from unpaid carers due to limited financial and practical support, high time commitment, and emotional burden. Suppression (0.70): High suppression due to lack of affordable alternatives and social expectations. Theater ratio (0.30): Relatively low theater, as the system is primarily functional, but some performative aspects exist, such as symbolic gestures of support.",
+    "perspectival_gap": "Unpaid carers experience the system as a snare, feeling trapped by their care responsibilities with limited support. The government and NHS view it as a rope, enabling them to provide social and healthcare services at a reduced cost. The analytical observer recognizes the tangled nature of the system, acknowledging both its benefits and potential exploitation.",
+    "directionality_logic": "Directionality is driven by structural relationships. The government and NHS are beneficiaries because they save resources. Unpaid carers are victims because they bear the costs of providing care. Exit options influence the degree of extraction experienced. Trapped carers experience the highest extraction, while the government and NHS, though constrained, have more flexibility.",
+    "mandatrophy_analysis": "The system is classified as a tangled rope, recognizing both its coordination function (providing care) and its extractive nature (relying on unpaid labor). This classification prevents mislabeling the system as either pure coordination (rope) or pure extraction (snare) by acknowledging the complex balance of benefits and burdens."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

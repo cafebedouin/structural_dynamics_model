@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: axiom_of_choice
+% CONSTRAINT STORY: axiom_of_choice_determinacy
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_axiom_of_choice, []).
+:- module(constraint_axiom_of_choice_determinacy, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,31 +53,34 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: axiom_of_choice
+ *   constraint_id: axiom_of_choice_determinacy
  *   human_readable: The Axiom of Choice (AC)
  *   domain: mathematical/logical
  *
  * SUMMARY:
- *   The Axiom of Choice (AC) states that for any collection of non-empty sets,
- *   there exists a "choice function" that selects one element from each set.
- *   It is a fundamental, non-constructive principle in ZFC set theory. While
- *   it enables powerful results in analysis and topology (e.g., the
- *   Well-Ordering Theorem), it also implies counter-intuitive consequences
- *   like the Banach-Tarski paradox. This creates a significant perspectival
- *   gap between those who use it as a tool and those who see its results as
- *   a violation of physical intuition.
+ *   The Axiom of Choice is a foundational axiom in set theory asserting that
+ *   for any collection of non-empty sets, there exists a function selecting
+ *   exactly one element from each set. AC is independent of Zermelo-Fraenkel
+ *   set theory (ZF) alone and was proven independent by Gödel (1938,
+ *   consistency) and Cohen (1966, independence). Despite its non-constructive
+ *   character and long-standing philosophical debate, AC has become
+ *   universally adopted in classical mathematics and underlies most theorems
+ *   in analysis, topology, algebra, and functional analysis. The constraint
+ *   structure is NOT institutional extraction but logical necessity:
+ *   mathematicians collectively treat AC as a natural law because (1) it is
+ *   logically independent of weaker foundations, (2) it is irreplaceable for
+ *   a vast class of theorems, and (3) it is pragmatically indispensable for
+ *   classical mathematics. No agent benefits at another's expense; no
+ *   suppression enforces adoption; no theater masks function. The axiom's
+ *   logical status is invariant across all observers and measurement
+ *   methodologies.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mathematical Constructivists: Primary target (moderate/constrained) — AC
- *     extracts the requirement for explicit construction, forcing acceptance
- *     of non-constructive proofs and their "pathological" results.
- *   - Functional Analysts: Primary beneficiary (institutional/mobile) — AC
- *     is a pure coordination tool (Rope) that guarantees the existence of
- *     essential mathematical objects (e.g., basis vectors, linear functionals).
- *   - Set Elements: A conceptual agent (powerless/trapped) for whom selection
- *     by a choice function is an unchangeable law of the ZFC universe.
- *   - Analytical Observer: Sees the full structure as a Mountain of formal
- *     logic, whose consequences are interpreted differently by various schools.
+ * KEY AGENTS:
+ *   - The Logical Structure: The mathematical foundation — AC emerges as a necessary question once infinite collections are introduced. No agent; no extraction.
+ *   - Pure Mathematicians: Users of AC (analytical/analytical) — freely choose to invoke AC because it enables powerful theorems. Benefit entirely from its adoption; no cost imposed.
+ *   - Mathematical Community: Institutional coordinating entity (institutional/arbitrage) — collectively adopts ZFC as standard foundation. Gain shared language and theorem database; no extraction.
+ *   - Constructivists and Intuitionists: Alternative framework advocates (organized/constrained) — can and do develop mathematics without full AC. Small minority; their exit is technically possible but costlier in terms of theorem availability.
+ *   - Formal Logic Observers: Analytical perspective (analytical/analytical) — assess the independence result and logical structure. No stake in adoption; purely epistemic position.
  */
 
 /* ==========================================================================
@@ -85,136 +88,97 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: 0.25. AC is on the threshold of being a Mountain. It "extracts"
-% the requirement for specific constructive rules, replacing them with a
-% guarantee of existence. This is a form of cognitive/philosophical extraction.
-domain_priors:base_extractiveness(axiom_of_choice, 0.25).
-
-% Rationale: 0.05. Within the ZFC framework, AC is a foundational axiom and
-% does not suppress alternatives; it defines the system. The low score
-% reflects its status as a "law of nature" within this formal system, which
-% is the defining feature of a Mountain. The suppression of alternative
-% mathematical systems (like ZF+AD) is a sociological constraint, not an
-% intrinsic property of AC itself. This resolves the MOUNTAIN_METRIC_CONFLICT.
-domain_priors:suppression_score(axiom_of_choice, 0.05).
-
-% Rationale: 0.0. The axiom has no theatrical component; it is a pure
-% functional declaration within a formal system.
-domain_priors:theater_ratio(axiom_of_choice, 0.0).
+domain_priors:base_extractiveness(axiom_of_choice_determinacy, 0.12).
+domain_priors:suppression_score(axiom_of_choice_determinacy, 0.03).
+domain_priors:theater_ratio(axiom_of_choice_determinacy, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(axiom_of_choice, extractiveness, 0.25).
-narrative_ontology:constraint_metric(axiom_of_choice, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(axiom_of_choice, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(axiom_of_choice_determinacy, extractiveness, 0.12).
+narrative_ontology:constraint_metric(axiom_of_choice_determinacy, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(axiom_of_choice_determinacy, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl.
-narrative_ontology:constraint_metric(axiom_of_choice, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(axiom_of_choice, resistance, 0.05).
+narrative_ontology:constraint_metric(axiom_of_choice_determinacy, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(axiom_of_choice_determinacy, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(axiom_of_choice, scaffold).
-narrative_ontology:human_readable(axiom_of_choice, "The Axiom of Choice (AC)").
-narrative_ontology:topic_domain(axiom_of_choice, "mathematical/logical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(axiom_of_choice_determinacy, mountain).
+narrative_ontology:human_readable(axiom_of_choice_determinacy, "The Axiom of Choice (AC)").
+narrative_ontology:topic_domain(axiom_of_choice_determinacy, "mathematical/logical").
 
-% --- Binary flags ---
-% No active enforcement is required; it is a logical axiom.
+domain_priors:emerges_naturally(axiom_of_choice_determinacy).
 
-% --- Emergence flag (required for mountain constraints) ---
-% The axiom emerges from the logical structure of the ZFC system without
-% human design or enforcement. Required for the mountain metric gate.
-domain_priors:emerges_naturally(axiom_of_choice).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% While the analytical claim is Mountain, the perspectival gaps are driven by
-% these relationships. They are included to enable the Rope/Snare classifications.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(axiom_of_choice, functional_analysts).
-narrative_ontology:constraint_beneficiary(axiom_of_choice, transfinite_topologists).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(axiom_of_choice, mathematical_constructivists).
-narrative_ontology:constraint_victim(axiom_of_choice, physical_intuitionists).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SET ELEMENT (MOUNTAIN)
-% For an element within a set, the possibility of its selection by a choice
-% function is an unchangeable law of the ZFC universe. It has no agency.
-constraint_indexing:constraint_classification(axiom_of_choice, mountain,
-    context(agent_power(powerless),
-            time_horizon(immediate),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE FUNCTIONAL ANALYST (ROPE)
-% For the analyst, AC is a pure coordination tool. It guarantees the existence
-% of objects needed to build theories (e.g., Hahn-Banach theorem), with
-% effectively zero extraction from their perspective.
-constraint_indexing:constraint_classification(axiom_of_choice, scaffold,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 3: THE CONSTRUCTIVIST / INTUITIVE GEOMETER (SNARE)
-% For those who require explicit construction or physical intuition, AC is a
-% Snare. It extracts the "sanctity of construction" and forces acceptance of
-% "monstrous" results like the Banach-Tarski paradox. The exit option
-% (rejecting ZFC) is professionally costly.
-constraint_indexing:constraint_classification(axiom_of_choice, scaffold,
-    context(agent_power(moderate),
-            time_horizon(civilizational),
-            exit_options(constrained),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The analytical observer sees AC as a foundational axiom within a formal
-% system (ZFC). Its properties (ε=0.25, S=0.05) and NL profile metrics make
-% it a Mountain of logic. The Rope/Snare classifications are interpretations
-% of its consequences, not properties of the axiom itself.
-constraint_indexing:constraint_classification(axiom_of_choice, mountain,
+% PERSPECTIVE 1: PURE MATHEMATICS VIEW (MOUNTAIN) — AC is a foundational axiom of set theory, independent of ZF and unprovable from weaker foundations. Its logical status is invariant across all mathematical contexts. Emergence is natural: the structure of infinite choice sets forces the question. No agent benefits or bears cost; no suppression exists. The axiom either holds or does not in a formal system — this is a property of logical entailment, not institutional arrangement.
+constraint_indexing:constraint_classification(axiom_of_choice_determinacy, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
+% PERSPECTIVE 2: MATHEMATICAL COMMUNITY ADOPTION (MOUNTAIN) — In practice, the mathematical community has overwhelmingly adopted AC as a working axiom despite its non-constructive nature. This adoption is not extractive or coercive — it is pragmatic coordination around a proven powerful tool. AC is treated as a natural law of mathematics because it reliably generates true theorems. Resistance to AC is low (restricted to constructivists and intuitionists, <10% of mathematicians). Accessibility collapse is high: once AC's logical independence is understood, mathematicians cannot 'exit' its reality — they can only choose to use it or not. The constraint here is logical, not institutional.
+constraint_indexing:constraint_classification(axiom_of_choice_determinacy, mountain,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: WORKING MATHEMATICIAN (MOUNTAIN) — Individual mathematicians experience AC as a constraint of their logical environment, not as an institutional extraction. When proving theorems in analysis, topology, or algebra, AC is ubiquitous (Tychonoff's theorem, Hausdorff maximality lemma, etc.). A mathematician cannot avoid encountering AC-dependent results. The constraint is not suppressive — mathematicians freely choose to invoke AC because it works. The foundational debate (constructivism vs classicism) is resolved by effectiveness, not enforcement. Exit options are 'constrained' because one can restrict to constructive mathematics, but this severely limits theorem availability — the cost is prohibitive, not coercive.
+constraint_indexing:constraint_classification(axiom_of_choice_determinacy, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: FORMAL LOGIC / INDEPENDENCE (MOUNTAIN) — From the standpoint of formal logic, AC is independent of ZF (Gödel/Cohen). This means: ZF ⊢ AC if and only if ZF is inconsistent (for classical logic). AC is an irreducible additional axiom. This independence is a mathematical fact, not subject to negotiation or institutional pressure. The constraint is the logical structure itself — the space of consistent set theories that either include or exclude AC. No suppression, no extraction, no theater. AC emerges necessarily from asking: 'Given arbitrary non-empty sets, what choice structures exist?'
+constraint_indexing:constraint_classification(axiom_of_choice_determinacy, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 5: AXIOM SYSTEM COORDINATION (ROPE) — ZFC (Zermelo-Fraenkel + Choice) is pure coordination: mathematicians agree on a common foundation so that theorems stated in one institution are recognizable in another. This agreement has no extraction — mathematicians do not 'lose' to the axiom system; they gain a shared language. The axiom system provides coordination value without coercive overhead. ZF alone is weaker; AC makes it strong enough for most classical mathematics. This is low-extraction coordination, not enforcement. There is no beneficiary (beyond all mathematicians equally); there is no victim.
+constraint_indexing:constraint_classification(axiom_of_choice_determinacy, rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(axiom_of_choice_tests).
+:- begin_tests(axiom_of_choice_determinacy_tests).
 
-test(perspectival_gap_analyst_vs_constructivist) :-
-    % Verify the analyst (beneficiary) sees a Rope, while the constructivist (victim) sees a Snare.
-    constraint_indexing:constraint_classification(axiom_of_choice, scaffold, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(axiom_of_choice, scaffold, context(agent_power(moderate), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(axiom_of_choice_determinacy, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(axiom_of_choice_determinacy, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(analytical_view_is_mountain) :-
-    % The formal, analytical view must classify as Mountain.
-    constraint_indexing:constraint_classification(axiom_of_choice, mountain, context(agent_power(analytical), _, _, _)).
-
-test(mountain_thresholds_adherence) :-
-    % Verify the base metrics are consistent with the Mountain claim.
-    narrative_ontology:constraint_metric(axiom_of_choice, extractiveness, E),
-    narrative_ontology:constraint_metric(axiom_of_choice, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(axiom_of_choice_determinacy, ExtMetricName, E),
+    domain_priors:suppression_score(axiom_of_choice_determinacy, S),
     E =< 0.25,
     S =< 0.05.
 
-:- end_tests(axiom_of_choice_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(axiom_of_choice_determinacy),
+    narrative_ontology:constraint_metric(axiom_of_choice_determinacy, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(axiom_of_choice_determinacy, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(axiom_of_choice_determinacy_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -222,84 +186,89 @@ test(mountain_thresholds_adherence) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.25): Set at the maximum for a Mountain. AC does
- *     not extract resources, but it extracts a philosophical price: the
- *     requirement to accept non-constructive existence proofs and their
- *     counter-intuitive consequences.
- *   - Suppression Score (S=0.05): Within the ZFC axiomatic system, AC is a
- *     foundational law; it does not "suppress" anything, it *defines* the
- *     space. Its low suppression score reflects this status as a "law of
- *     nature" for that formal system.
- *   - NL Profile (AC=1.0, R=0.05, emerges_naturally): These metrics certify the
- *     Mountain classification. Within ZFC, AC is absolute and forecloses
- *     alternatives (accessibility_collapse=1.0). Resistance is a philosophical
- *     debate external to the system, not an internal opposition (resistance=0.05).
- *     The axiom emerges from the logic of the system, not human enforcement.
+ *   Extractiveness (0.12): Very low. AC does not extract resources or benefits from a subset of agents. Rather, AC is a shared logical foundation that benefits all mathematicians equally. The low value reflects that there is no asymmetric flow of costs or benefits — adoption is purely a coordination mechanism around a proven powerful tool. Suppression (0.03): Minimal. There is no coercion enforcing AC adoption. Constructivists and intuitionists can and do develop alternative mathematics; their exit is expensive (theorem availability decreases) but not forbidden. Suppression would require forbidding alternative frameworks — mathematicians do not do this. Theater ratio (0.15): Very low. AC is not performative. Mathematicians invoke AC precisely where needed for proofs; when an AC-free proof exists, mathematicians prefer it (lower complexity, stronger result). The small non-zero theater reflects minor pedagogical presentation (e.g., introductory mathematics texts sometimes invoke AC informally without detailed discussion) but this is negligible. Accessibility collapse (0.92): Very high. Once the logical independence of AC is understood, mathematicians cannot 'unsee' its necessity for certain theorems. The structure of the infinite forces the question. Resistance (0.08): Very low. The philosophical debate over AC (Brouwer, constructivism) lasted ~60 years; today, >90% of mathematicians work within classical logic where AC is standard. The remaining resistance comes from constructivists, who are a small, organized minority with full exit rights.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound. For the institutional analyst, AC is a foundational
- *   Rope that makes their field possible. For the constructivist, it is a
- *   Snare that violates core principles of mathematical truth by divorcing
- *   existence from construction. The analytical view resolves this by
- *   classifying the axiom itself as a Mountain of formal logic, whose
- *   *consequences* are then interpreted as Rope or Snare depending on the
- *   observer's philosophical commitments.
+ *   Unlike the verification bottleneck exemplar, the Axiom of Choice produces MINIMAL perspectival gap. All perspectives classify as Mountain or Rope. The working mathematician sees it as an immutable logical constraint; the formal logician sees logical independence; the axiom system sees pure coordination; the mathematical community sees pragmatic necessity. No perspective experiences AC as extraction, suppression, or enforcement. This uniformity is characteristic of genuine natural laws — the structure of the phenomenon is invariant across all reasonable measurement methodologies and observer positions. The small gap that exists (Rope perspective for axiom systems vs Mountain perspective for pure logic) reflects the distinction between the abstract logical structure (invariant, mountain) and the practical adoption mechanism (coordinated choice, rope). Both are correct; they emphasize different aspects of the same phenomenon.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `functional_analysts`, `transfinite_topologists`. These
- *     groups rely on theorems that require AC. Their work is enabled by it.
- *   - Victims: `mathematical_constructivists`, `physical_intuitionists`. These
- *     groups find their foundational principles (constructibility, conservation
- *     of volume) violated by the consequences of AC.
+ *   AC has no directionality in the sense of beneficiary/victim dynamics. There is no agent d-value because there is no extraction structure. All agents (mathematicians, logicians, axiom systems) benefit equally from AC or can easily exit to alternative frameworks. The constraint is structural, not relational. The absence of directionality overfitting is itself significant — it confirms that AC is not an extraction mechanism but a logical property.
  *
  * MANDATROPHY ANALYSIS:
- *   This story demonstrates how a single formal object can be a Mountain
- *   analytically, but generate intense perspectival disagreement. The framework
- *   avoids mislabeling it as a pure Snare by recognizing its foundational,
- *   low-suppression role within its native system (ZFC), while still capturing
- *   the valid experience of extraction from the constructivist's perspective.
+ *   AC RESOLVES MANDATROPHY BY BEING GENUINELY NON-EXTRACTIVE. The mandatrophy is the risk that mathematicians have mislabeled a coordinated fiction (voluntary axiom adoption) as a natural law. Resolution: (1) Independence result is proven — AC is irreducible in classical logic. (2) Exit is possible — constructivists and intuitionists can and do develop alternative mathematics. (3) Adoption is pragmatic — mathematicians choose AC because it works, not because they are forced. (4) No suppression — alternative frameworks are published and studied openly. (5) Theater is minimal — AC is invoked precisely where needed. These five facts together constitute a complete resolution: AC is a natural law of logical structure, not a Snare masquerading as a Mountain. The mountain classification is secure.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_ac_physicality,
-    'Is the Axiom of Choice a Mountain reflecting a deep truth about reality (e.g., quantum indeterminacy), or merely a formalist Snare of convenience with no physical counterpart?',
-    'Empirical evidence from quantum foundations or cosmology demonstrating a physical process that requires an infinite, non-constructive choice.',
-    'If true, AC is a genuine Mountain of physics. If false, it remains a Mountain of logic but its application to physics is a Snare.',
-    confidence_without_resolution(low)
+    constructive_truth_status,
+    'Is the non-constructive nature of AC (existence without construction method) a logical limit or a feature of classical logic that becomes unnecessary in constructive mathematics?',
+    'Comparison of theorem density and applicability: constructive mathematics with/without variants of choice principles; empirical assessment of whether constructive mathematics sacrifices essential results',
+    'If constructive is genuinely sufficient: AC is a convenience axiom, not a necessity — classification remains mountain but on pragmatic grounds. If constructive mathematics loses essential theorems: AC is a logical necessity for certain theorems — mountain classification is strengthened by indispensability.',
+    confidence_without_resolution(high)
 ).
+
+narrative_ontology:omega_variable(constructive_truth_status, conceptual, 'Logical status of non-constructiveness in AC').
+
+omega_variable(
+    dependent_choice_sufficiency,
+    'For practically all mathematical theorems, is the Axiom of Dependent Choice (DC) or other weaker choice variants sufficient, making full AC unnecessary?',
+    'Systematic survey of published theorems claiming AC dependency; reclassification with respect to DC and other choice variants; measure of theorems genuinely requiring full AC vs those requiring only weak choice',
+    'If DC suffices for most theorems: AC is over-strong, and mathematicians use it out of convenience rather than necessity. Mountain classification remains but with lower necessity floor. If full AC is genuinely needed for significant theorems: AC is indispensable.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(dependent_choice_sufficiency, empirical, 'Whether weaker choice principles suffice for most mathematics').
+
+omega_variable(
+    models_without_choice,
+    'Do consistent models of ZF without AC (e.g., Solovay''s model) support sufficient mathematics to be considered viable alternatives, or do they degrade mathematical practice unacceptably?',
+    'Evaluation of theorem availability and proof accessibility in AC-free models; measure of degradation in mathematical expressiveness; assessment of whether AC-free mathematics remains coherent and useful',
+    'If AC-free models are viable alternatives: AC is a choice point, not a natural law. If viable alternatives are severely constrained: AC is effectively necessary. Mountain classification persists but with clarification that ''natural law'' means ''pragmatically indispensable given classical logic,'' not ''logically required.''',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(models_without_choice, conceptual, 'Viability of mathematics without AC').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(axiom_of_choice, 1904, 2026).
+narrative_ontology:interval(axiom_of_choice_determinacy, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required, as base_extractiveness (0.25) is not > 0.46.
-% The properties of this mathematical axiom are considered stable over the interval.
+% Theater ratio over time
+narrative_ontology:measurement(aoc_tr_t0, axiom_of_choice_determinacy, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(aoc_tr_t50, axiom_of_choice_determinacy, theater_ratio, 50, 0.14).
+narrative_ontology:measurement(aoc_tr_t100, axiom_of_choice_determinacy, theater_ratio, 100, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(aoc_be_t0, axiom_of_choice_determinacy, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(aoc_be_t50, axiom_of_choice_determinacy, base_extractiveness, 50, 0.11).
+narrative_ontology:measurement(aoc_be_t100, axiom_of_choice_determinacy, base_extractiveness, 100, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No coordination type, as the analytical claim is Mountain.
-% No network relationships declared in this file.
+narrative_ontology:coordination_type(axiom_of_choice_determinacy, information_standard).
+narrative_ontology:affects_constraint(axiom_of_choice_determinacy, zorn_lemma).
+narrative_ontology:affects_constraint(axiom_of_choice_determinacy, well_ordering_theorem).
+narrative_ontology:affects_constraint(axiom_of_choice_determinacy, tychonoff_theorem).
+
+% DUAL FORMULATION NOTE:
+% AC is a foundational axiom that structurally supports multiple dependent constraints (Zorn's lemma, well-ordering theorem, Tychonoff's theorem, Hausdorff maximality lemma). These downstream constraints have higher extractiveness values reflecting the empirical contestedness of their consequences (e.g., Tychonoff's infinitary compactness was controversial for topological spaces). AC itself remains a pure mountain; the downstream consequences inherit AC's independence structure but face additional philosophical debates.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations and exit options accurately models the perspectives.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "optimization_fragility",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "optfrag"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Efficiency-Resilience Tradeoff in Hyper-Optimized Supply Systems",
+    "topic_domain": "economic/technological/infrastructural",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cost_minimizers",
+      "just_in_time_operators"
+    ],
+    "victims": [
+      "systemic_resilience",
+      "end_users",
+      "risk_absorbers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Supply Chain Worker",
+      "comment": "PERSPECTIVE 1: SUPPLY CHAIN WORKER (SNARE) \u2014 Trapped in hyper-optimized logistics requiring constant availability, zero buffer time, and mandatory responsiveness. Faces extraction through enforced overwork, reduced safety margins, and immediate termination for any deviation. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Systemically Vulnerable End User",
+      "comment": "PERSPECTIVE 2: SYSTEMICALLY VULNERABLE END USER (SNARE) \u2014 Trapped in dependency on optimized systems (medical supplies, food distribution, power grids) with zero redundancy. Faces extraction through catastrophic cost-externalization when optimization fails (medical shortages, supply ruptures). Cannot exit without complete infrastructure rebuild. d\u22480.95, f(d)\u22481.42, \u03c3=0.9 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cost-Minimization Operator",
+      "comment": "PERSPECTIVE 3: COST-MINIMIZATION OPERATOR (ROPE) \u2014 Institutional beneficiary (supply chain manager, logistics company, retailer). Experiences constraint as pure coordination: eliminating buffer inventory and safety margin enables synchronized production and just-in-time delivery, solving collective action problem of coordinated resource flow. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition (Safety Advocates)",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION / SAFETY ADVOCATES (TANGLED ROPE) \u2014 Organized agents (labor unions, environmental regulators, emergency response authorities) see both coordination benefit (synchronized supply) AND asymmetric extraction (risk offloaded to workers and vulnerable users). Constrained by the dominance of cost-minimization logic and political economy of deregulation. d\u22480.68, f(d)\u22481.02, \u03c3=1.1 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Risk Management Establishment",
+      "comment": "PERSPECTIVE 5: RISK MANAGEMENT ESTABLISHMENT (PITON) \u2014 Insurance companies, regulators, and risk officers maintain theater of resilience planning (disaster plans, redundancy protocols, stress tests) while the underlying operational architecture eliminates actual redundancy. theater_ratio=0.55 reflects mixed functional/performative activity \u2014 some genuine monitoring exists but is subordinated to cost pressure. d\u22480.50, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Tradeoff as Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FALSE NATURAL LAW VIEW (MOUNTAIN CANDIDATE) \u2014 Civilizational perspective might frame efficiency-resilience as an immutable tradeoff (Pareto frontier): you cannot have both maximum efficiency and maximum resilience; the constraint appears to be natural law. However, the structural data (extractiveness=0.58, suppression=0.68) reveals this is not a natural law but a contingent institutional choice. The 'inevitability' is politically constructed, not mathematically necessary."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optimization_vs_redundancy_threshold",
+      "question": "What level of buffer/redundancy is genuinely 'waste' vs genuinely 'resilience capacity'?",
+      "resolution_mechanism": "Empirical analysis of system failure modes and recovery times across industries; comparison of actual downtime costs vs buffer maintenance costs in comparable systems with different redundancy levels",
+      "impact": "If threshold >> current practice: buffer removal is pure extraction (Snare from all perspectives). If threshold \u2248 current practice: optimization is genuinely optimal (Rope from most perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between justified efficiency and dangerous fragility"
+    },
+    {
+      "id": "cost_externalization_mechanism",
+      "question": "Are supply chain costs genuinely minimized, or are they transferred to workers, vulnerable users, and emergency responders who absorb failure costs?",
+      "resolution_mechanism": "Total cost accounting: labor injury rates, burnout costs, emergency response expenditures, supply rupture damages, system recovery costs \u2014 compared across supply chain models with different optimization levels",
+      "impact": "If true total costs are lower with redundancy: optimization is actively destructive (Snare for everyone). If costs are genuinely minimized: tradeoff is real but distributional (Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether buffer reduction transfers costs or eliminates them"
+    },
+    {
+      "id": "institutional_lock_in",
+      "question": "Is the hyper-optimization enforced by competitive pressure (all firms must optimize or lose market share) or by deliberate policy choice (regulatory capture, investor pressure)?",
+      "resolution_mechanism": "Structural analysis of competitive dynamics vs deliberate constraint; comparison to jurisdictions with different regulatory frameworks; historical analysis of how optimization norms emerged",
+      "impact": "If competitive lock-in: constraint is largely structural/mountain-like (unavoidable under current regime). If policy-enforced: constraint is Snare with deliberate extraction (beneficiaries are known, removable).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether optimization is inevitable under competitive pressure or imposed by policy"
+    },
+    {
+      "id": "resilience_recovery_time",
+      "question": "When optimization fails (supply rupture, cascade failure, demand spike), what is the actual recovery time vs theoretical recovery time, and what determines the gap?",
+      "resolution_mechanism": "Historical case studies of supply chain failures (semiconductor shortage 2021-2022, container port congestion 2021, energy grid cascades); measurement of actual recovery vs theoretical recovery; identification of missing capacity causing delay",
+      "impact": "If recovery is longer than necessary due to zero buffers: this proves buffers have real function (not waste). Strengthens Snare/Tangled Rope framing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How buffer removal extends system recovery time after failures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The efficiency-resilience tradeoff in hyper-optimized supply systems represents a structural transformation in how industrial production manages risk. Over the past 30 years, just-in-time logistics, lean manufacturing, and real-time demand-responsive operations have radically reduced inventory buffers, safety margins, and redundant capacity. This optimization is genuinely functional \u2014 it solves a real coordination problem of synchronized production and distribution. However, it has also created cascading fragility: systems optimized for steady-state conditions face catastrophic failure under disruption because they have zero recovery slack. The constraint is a Tangled Rope: it possesses a genuine coordination function (enabling efficient supply) AND asymmetric extraction (costs of failures fall on workers, vulnerable populations, and emergency systems that were not party to the optimization decision). The extractiveness has grown over the 30-year interval as optimization has deepened and become embedded in competitive expectations \u2014 firms that try to maintain redundancy are now undercut by fully optimized competitors. Theater has also risen as the risk management profession has developed elaborate protocols, stress tests, and resilience certifications that obscure the underlying structural fragility.",
+    "key_agents": [
+      "Supply Chain Workers: Primary victims (powerless/trapped) \u2014 face enforced availability, zero buffer time, immediate termination for deviation; extract through hyperexploitation",
+      "Cost-Minimization Operators: Primary beneficiaries (institutional/arbitrage) \u2014 logistics companies, retailers, manufacturers; benefit from efficiency gains and competitive advantage",
+      "Systemically Vulnerable End Users: Secondary victims (powerless/trapped) \u2014 dependent on optimized systems for medical supplies, food, energy; bear catastrophic externalized costs of failures",
+      "Regulatory Coalition (Unions, Safety Advocates): Organized opposition (organized/constrained) \u2014 labor organizations, environmental groups, emergency responders; see extraction but lack power to reverse optimization",
+      "Risk Management Establishment: Institutional actor maintaining theater (institutional/constrained) \u2014 insurance firms, regulators, corporate risk officers; maintain performative resilience protocols while operational fragility deepens",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choice as immutable economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint exhibits genuine extraction, but it is not maximal because the coordination function (just-in-time efficiency) has real economic benefits. Costs are transferred to workers and vulnerable users, but not through pure coercion \u2014 through institutional lock-in and competitive pressure. The increase from 0.32 \u2192 0.58 over 30 years reflects how optimization has become deeper and more mandatory (competitive necessity). Suppression (0.68): Moderate-high. Workers face enforced overtime, availability, and zero deviation tolerance. Users face infrastructure with no graceful degradation. Regulatory options are suppressed: firms that maintain redundancy lose competitive advantage; regulators face political capture by cost-minimization interests. Theater ratio (0.55): Moderate. Risk management protocols, disaster plans, and resilience certifications are genuinely maintained but are substantially performative \u2014 they exist to satisfy liability requirements and stakeholder expectations, not to provide actual recovery capacity. Theater increased from 0.35 \u2192 0.55 as the gap between protocol and capability widened.",
+    "perspectival_gap": "This constraint demonstrates the diagnostic power of perspectival indexing. The cost-minimization operator (beneficiary/institutional) sees pure coordination: we solved the logistics problem! The worker (victim/powerless) sees pure extraction: my availability is mandatory and my safety margins are gone. The regulatory coalition (organized opposition) sees hybrid: the coordination is real but the extraction is real and unjust. The risk manager (institutional performer) sees degraded ritual: we maintain protocols that don't actually protect. The analytical observer risks seeing natural law: efficiency and resilience cannot both be maximized. The engine's false summit detector catches this last perspective \u2014 the tradeoff is contingent, not necessary.",
+    "directionality_logic": "Cost-minimization operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiaries; experience as pure coordination. Supply chain workers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 no exit options within the system. Vulnerable end users: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 dependent on system with no alternatives. Regulatory coalition: Organized + constrained \u2192 d\u22480.68, f(d)\u22481.02. High extraction but with agency and potential countermovements; classified as Tangled Rope because they experience both the coordination function and the extraction mechanism. Risk managers: Institutional + constrained \u2192 d\u22480.50, f(d)\u22480.65. Piton classification comes from theater gate (theater_ratio=0.55) and perception of degraded function, not from chi.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing the true structure: optimization IS a coordination mechanism (real), AND it IS extraction (real). The error would be (a) claiming it's pure coordination and minimizing the worker/user costs, or (b) claiming it's pure extraction and ignoring that efficiency gains are genuine and valued. The Tangled Rope classification holds the tension: the coordination is real, the extraction is real, and they are structurally inseparable under current institutional arrangements. Mandatrophy is resolved by refusing the false dichotomy \u2014 the constraint is exactly what it appears to be from different observatories: coordination to the beneficiary, extraction to the victim, and hybrid with internal contradictions to the analytical view."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_fragility",
+      "labor_exploitation_regime",
+      "systemic_risk_accumulation"
+    ],
+    "dual_formulation_note": "Optimization fragility is upstream of specific supply chain vulnerabilities (semiconductor shortage, container congestion) and labor regime constraints. These constraints share institutional drivers but represent distinct structural phenomena with different \u03b5 values and victim sets."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ]
+}

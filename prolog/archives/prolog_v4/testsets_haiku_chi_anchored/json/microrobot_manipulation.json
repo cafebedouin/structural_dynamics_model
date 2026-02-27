@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "microrobot_manipulation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "microbot"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Micro-scale Programmable Robotic Manipulation",
+    "topic_domain": "technological/microrobotics/nanotechnology",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "medical_diagnostic_research",
+      "materials_science_researchers",
+      "semiconductor_manufacturing",
+      "pharmaceutical_delivery_development"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Collaborative Research Ecosystem",
+      "comment": "PERSPECTIVE 1: COLLABORATIVE RESEARCH ECOSYSTEM (ROPE) \u2014 Organized research groups globally benefit from the coordination mechanism that microrobotic manipulation provides: standardized light-based actuation enables multi-site collaboration on in-vivo diagnostics, particle assembly, and drug delivery. Exit options are mobile (groups can develop alternative manipulation methods, but microrobots provide superior coordination value). d\u22480.40, f(d)\u22480.40, \u03c3=1.2 \u2192 \u03c7\u22480.09. Pure coordination without significant extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Technology Platform Providers",
+      "comment": "PERSPECTIVE 2: TECHNOLOGY PLATFORM PROVIDERS (ROPE) \u2014 Institutions providing microrobotics hardware (optical tweezers, holographic traps, photophoretic platforms) see the constraint as enabling coordination: they solve the collective action problem of precise, programmable microscale manipulation. Exit options are arbitrage (they can shift to alternative technologies, but their competitive advantage lies in superior microrobot systems). d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. Slight net beneficiary position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Early-Adopter Medical Research Institutions",
+      "comment": "PERSPECTIVE 3: EARLY-ADOPTER MEDICAL RESEARCH (SCAFFOLD) \u2014 High-resource institutions (NIH-funded centers, top medical schools) experience microrobotics as temporary infrastructure support. They benefit from priority access and capability advantage during the early window while the technology matures. Exit options are mobile (can transition to standard surgical or diagnostic tools if microrobots fail to deliver promised outcomes). The constraint has a sunset: as microrobotics mature and diffuse, the early-adopter advantage decays. d\u22480.48, f(d)\u22480.60, \u03c3=1.0 \u2192 \u03c7\u22480.11. Low extraction; coordination function dominates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Resource-Limited Medical Centers",
+      "comment": "PERSPECTIVE 4: RESOURCE-LIMITED MEDICAL CENTERS (TANGLED ROPE) \u2014 Mid-tier institutions and developing-world research centers face constraints in accessing microrobotic platforms: high equipment costs, specialized training requirements, and lack of technical support create barriers. They benefit from the capability if they gain access (coordination function) but are victims of the scarcity and concentration of the technology. Exit options are constrained (they cannot easily develop alternative capabilities; they are locked into dependency on platform providers for access). Requires active enforcement to maintain the training, support, and licensing regimes. d\u22480.70, f(d)\u22481.00, \u03c3=0.9 \u2192 \u03c7\u22480.16. Modest effective extraction due to both coordination benefit and access constraints."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Microscopy and Surgical Tool Vendors",
+      "comment": "PERSPECTIVE 5: TRADITIONAL MICROSCOPY VENDORS (PITON) \u2014 Incumbent firms selling conventional optical microscopy, surgical robots, and precision instruments maintain their market position through institutional inertia and network effects despite microrobots' superior capabilities for specific applications (single-cell manipulation, in-vivo assembly, micro-dosing). Theater ratio \u22650.70 reflects performative marketing of compatibility and ecosystem lock-in despite actual functional displacement by microrobots in key niches. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.12. The constraint extracts from them (market share loss) but their response is primarily theatrical (ecosystem bundling, compatibility claims) rather than functional innovation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational perspective, the constraint reflects fundamental limits of the laws of physics: optical scattering, photon momentum transfer, viscous drag at low Reynolds numbers, and thermal noise set hard floors on microrobot precision, speed, and controllability. These limits are mathematical consequences of wave optics and fluid dynamics, not contingent institutional arrangements. However, the base properties (\u03b5=0.18, suppression=0.12, theater=0.25) place this firmly outside the mountain gates (\u03b5 must be \u22640.25, suppression \u22640.05). The analytical observer risks naturalizing what is actually a maturing technological capability. The 'law' is that light-driven manipulation works within these bounds \u2014 not that it is impossible or immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "nanoscale_assembly_sufficiency",
+      "question": "Can light-driven microrobots achieve the precision, speed, and reliability required for routine drug delivery and cellular surgery without closed-loop feedback, or will the physical limits require expensive sensor integration that degrades cost advantages?",
+      "resolution_mechanism": "Empirical demonstration of in-vivo drug delivery success rates with and without feedback; comparison of error rates in cellular assembly tasks to alternative manipulation methods",
+      "impact": "If feedback-free feasible: rope classification strengthens across perspectives; coordination value is high. If feedback required: tangled rope increases in all perspectives; cost barriers become permanent extraction mechanisms.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether microrobots can achieve required precision without feedback systems"
+    },
+    {
+      "id": "optical_trap_depth_scaling",
+      "question": "Do optical trap depths scale favorably with microrobot size and payload mass to enable macroscopic-scale applications, or does the trapping force plateau at piconewton scales, permanently limiting scope?",
+      "resolution_mechanism": "Theoretical modeling of dipole force scaling with wavelength and particle geometry; experimental measurements of trap stiffness for robots >100 micrometers diameter",
+      "impact": "If favorable scaling: mountain perspective shifts (limit is expandable, not immutable). If plateau: mountain holds; the constraint becomes a stable technological ceiling.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether optical trapping scales to larger payloads or hits fundamental limits"
+    },
+    {
+      "id": "phototoxicity_containment",
+      "question": "Can biological tissues tolerate the photon doses required for routine microrobot operation without damage, or will phototoxicity and thermal effects limit medical applications to narrow windows?",
+      "resolution_mechanism": "In-vivo studies measuring cellular damage vs microrobot operation time; tissue damage thresholds at relevant wavelengths",
+      "impact": "If contained: medical research and drug delivery perspectives see high rope classification. If pervasive: medical applications shift to snare (constraint is imposed cost); tangled rope deepens for medical centers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether phototoxicity limits medical applicability of microrobots"
+    },
+    {
+      "id": "manufacturing_cost_trajectory",
+      "question": "Does microrobot manufacturing cost follow Moore's Law-like exponential decline, or does it hit fabrication complexity ceilings that keep costs permanently high?",
+      "resolution_mechanism": "Historical cost tracking for optically-trapped microrobots; comparison of learning curves to established semiconductor or MEMS manufacturing",
+      "impact": "If exponential decline: scaffold expires faster; diffusion to resource-limited centers becomes likely (tangled rope resolves toward rope). If plateau: scarcity persists; tangled rope and piton perspectives become durable (resource-limited centers remain victims).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether manufacturing costs decline exponentially or hit a plateau"
+    },
+    {
+      "id": "alternative_actuation_parity",
+      "question": "Will chemical, magnetic, acoustic, or thermal microactuation methods match or exceed optical manipulation in precision, programmability, and biological compatibility within 20 years?",
+      "resolution_mechanism": "Comparative performance benchmarks across modalities; tracking of patent filings and research investment by actuation type",
+      "impact": "If alternatives match: rope classification strengthens (multiple coordination mechanisms available; exit options improve for all perspectives). If optical remains superior: rope and rope-like classifications persist; technology vendors' piton position deteriorates (no credible alternative to defend).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative actuation methods provide equivalent capabilities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.16
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.13
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Micro-scale programmable robotic manipulation, powered by light, represents a technological coordination mechanism enabling precise control of microscopic objects through optical trapping, holographic field shaping, and photophoretic effects. The constraint models the collective action solved by this capability: research groups worldwide benefit from standardized, programmable manipulation without the coordination overhead of developing individual custom systems. The constraint exhibits primarily rope and scaffold classifications across perspectives, with a piton perspective from incumbent vendors and a tangled rope perspective from resource-limited institutions. Unlike extractive constraints, this technology is fundamentally generative \u2014 it creates new capabilities rather than redistributing existing resources. The low extractiveness (0.18) and suppression (0.12) reflect that the technology enables action rather than constraining it, and that competitive pressure from alternative technologies and declining manufacturing costs keep rent-seeking bounded. Theater ratio (0.25) is low because the functional value is genuine and measurable; performative components (marketing claims, compatibility theater) are minimal relative to actual capability delivery.",
+    "key_agents": [
+      "Medical Diagnostic Research: Primary beneficiary (organized/mobile) \u2014 uses microrobots for single-cell manipulation, in-vivo imaging guidance, and surgical precision",
+      "Materials Science Researchers: Primary beneficiary (organized/mobile) \u2014 uses microrobots for particle assembly, colloidal manipulation, and microscale testing",
+      "Semiconductor Manufacturing: Primary beneficiary (institutional/arbitrage) \u2014 uses optical manipulation for precision lithography and defect analysis",
+      "Pharmaceutical Delivery Development: Primary beneficiary (organized/mobile) \u2014 uses microrobots for drug targeting and nanoscale particle delivery testing",
+      "Technology Platform Providers: Institutional beneficiary (institutional/arbitrage) \u2014 optical tweezers vendors, holographic display manufacturers, photophoretic platform designers",
+      "Early-Adopter Medical Institutions: Powerful beneficiary (powerful/mobile) \u2014 high-resource centers gaining temporary competitive advantage during early diffusion",
+      "Resource-Limited Medical Centers: Victim/constrained beneficiary (moderate/constrained) \u2014 need microrobotics for best outcomes but face access, training, and cost barriers",
+      "Traditional Microscopy Vendors: Piton institution (institutional/arbitrage) \u2014 incumbent firms defending market against functional displacement",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing technological maturation as immutable physical law"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The constraint provides genuine capability enabling rather than rent-seeking extraction. Beneficiaries are numerous and diverse; no single party captures disproportionate value. Technology providers extract modest margin through hardware sales, but competitive entry keeps margins bounded. The rising trajectory (0.08\u21920.18) reflects learning-curve pricing and market concentration in the early phase, but this is expected in technology diffusion, not a sign of permanent extraction. Suppression (0.12): Low. Barriers to entry are real (specialized optics, photonics expertise, cleanroom facilities) but not prohibitive. Multiple actuation modalities exist (alternatives: magnetic, acoustic, chemical). Knowledge is largely academic and publishable (not proprietary-locked). No party has strong incentive or power to suppress alternatives; competition is vigorous. Theater ratio (0.25): Low. Functional value is measurable and genuine. Microrobots deliver capabilities (single-cell precision, programmability, non-contact actuation) that alternative methods cannot easily match. Marketing claims align with demonstrated performance. Performative components (ecosystem bundling by vendors, compatibility claims) are modest relative to functional content. Low theater indicates a healthy, capability-driven market, not a degraded institutional ritual.",
+    "perspectival_gap": "This constraint shows a perspectival gap between beneficiaries and victims, but without the polarization typical of snares. Collaborative research ecosystems and platform providers see pure coordination (Rope) \u2014 the constraint solves genuine collective action problems of precision manipulation. Early-adopter medical institutions see temporary advantage (Scaffold) \u2014 the capability gap narrows as technology matures. Resource-limited medical centers see mixed benefit and constraint (Tangled Rope) \u2014 they benefit from the capability but are locked into dependency on expensive platforms and training. Traditional microscopy vendors see their market position degraded (Piton) \u2014 they maintain sales through institutional inertia and ecosystem lock-in, but functional superiority of microrobots in key niches is undeniable. The analytical observer risks seeing immutable physical law (Mountain) \u2014 optical scattering and viscous drag do set hard limits on microrobot performance \u2014 but the base metrics place this outside the mountain gates. The 'law' is that light-driven manipulation works within certain bounds, not that it is impossible. Perspectival gaps are modest and driven by access/resource differences, not by fundamental extraction.",
+    "directionality_logic": "Collaborative research ecosystem: Beneficiary + mobile \u2192 d\u22480.40, f(d)\u22480.40. Genuine coordination value without lock-in. Platform providers: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary through hardware sales; competitive pressure prevents extraction. Early-adopter institutions: Beneficiary + mobile (powerful power atom) \u2192 d\u22480.48, f(d)\u22480.60. Temporary advantage; exit is available (can switch to alternatives if microrobots underperform). Resource-limited centers: Mixed victim/beneficiary + constrained \u2192 d\u22480.70, f(d)\u22481.00. Constrained exit creates dependency; they need the technology but cannot easily afford or support it. Traditional microscopy vendors: Victim (losing market share) + arbitrage \u2192 d\u22480.50, f(d)\u22480.65. Piton classification from theater_ratio gate, not from high chi; they are losing competitive position but responding via institutional mechanisms (ecosystem claims) rather than functional innovation. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain perspective risks naturalizing a maturing technology as law of physics.",
+    "mandatrophy_analysis": "NO MANDATROPHY DETECTED. This constraint avoids mandatrophy (conflation of coordination and extraction) because the beneficiary/victim structure is clear and justified. Beneficiaries are identified (research groups, platform vendors, pharma developers) and their benefits are genuine (capability access, capability development, market position). Victims, where present (resource-limited centers), experience genuine constraints (cost, training barriers, dependency), not mere redistribution of pre-existing value. The low extractiveness (0.18) reflects that the constraint is fundamentally generative (creating new capability) rather than redistributive (extracting existing value). Rope classification for primary perspectives is correct: this is coordination without significant asymmetric extraction. Tangled rope for resource-limited centers is correct: they experience both coordination benefit and extraction via access barriers, and enforcement (training, support, licensing) is active. Piton for incumbent vendors is correct: their constraint is degradation (losing competitive position) due to technological displacement, not from extractive enforcement. The constraint does not confuse coordination with extraction because the base metrics (low \u03b5, low suppression, low theater) and the perspective-level analysis (multiple rope perspectives, no snare perspectives except from the analytical observer's risk of naturalizing) both signal a healthy technological coordination mechanism, not a degraded extractive one."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "optical_manipulation_scalability",
+      "photophoretic_field_control",
+      "biocompatibility_thermal_effects"
+    ],
+    "dual_formulation_note": "This constraint is upstream of specific application constraints (drug delivery precision, cellular surgery safety, manufacturing accuracy). Each downstream constraint inherits the coordination and extraction properties of the microrobotics platform but introduces domain-specific extraction mechanisms (e.g., biocompatibility constraints in medical applications introduce victim groups; manufacturing scalability constraints in semiconductor applications may increase suppression). This story models the capability provider's view; downstream stories model application-specific extraction."
+  },
+  "directionality_overrides": []
+}

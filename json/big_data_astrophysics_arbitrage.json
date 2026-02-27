@@ -2,23 +2,26 @@
   "header": {
     "constraint_id": "big_data_astrophysics_arbitrage",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bdaa"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.2,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
     "human_readable": "Big Data Arbitrage in Modern Astrophysics",
-    "topic_domain": "technological/scientific_practice",
-    "requires_active_enforcement": true,
+    "topic_domain": "technological/astronomy",
+    "requires_active_enforcement": false,
     "beneficiaries": [
-      "large_survey_consortia"
+      "data_infrastructure_operators",
+      "machine_learning_specialists"
     ],
     "victims": [
-      "small_research_groups",
-      "astronomy_epistemic_commons"
+      "resource_limited_observatories",
+      "developing_nation_astronomers",
+      "small_research_groups"
     ]
   },
   "perspectives": [
@@ -28,35 +31,62 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Small Research Group",
-      "comment": "PERSPECTIVE 1: SMALL RESEARCH GROUP (SNARE) — Trapped by resource limitations (compute, storage, personnel). Cannot compete in real-time analysis of petabyte-scale raw data streams. The promise of open data is an illusion; they are locked out of the primary discovery space. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+      "label": "The Small Observatory",
+      "comment": "PERSPECTIVE 1: SMALL OBSERVATORY (SNARE) \u2014 Locked into traditional observing modes or data access tiers. Cannot afford computational infrastructure or storage to compete in time-domain analysis. Bears full cost of data arbitrage through reduced competitiveness and funding loss to data-rich competitors."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Developing Nation Astronomy Programs",
+      "comment": "PERSPECTIVE 2: DEVELOPING NATION ASTRONOMY PROGRAMS (SNARE) \u2014 Structural barriers: bandwidth costs, computational resources, and proprietary data pipeline access. No exit from the data arbitrage system without external funding or partnership subordination. Excluded from high-value transient discovery and characterization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Tier Research Institutions",
+      "comment": "PERSPECTIVE 3: MID-TIER RESEARCH INSTITUTIONS (TANGLED ROPE) \u2014 Can access data through consortiums (LSST, ZTF) but face algorithmic constraints and processing delays. Benefits from data access and collaborative pipelines but also bears extraction through data-access tiers, embargo periods, and algorithmic opacity. Constrained exit: can partially build alternative pipelines but at significant opportunity cost."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Large Survey Consortium",
-      "comment": "PERSPECTIVE 2: LARGE SURVEY CONSORTIUM (ROPE) — Experiences the system as pure coordination. They built the infrastructure and their proprietary access period/first-look advantage is the necessary reward and operational requirement to manage the data deluge for the benefit of all science. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08. Negative effective extraction signifies a net subsidy."
+      "label": "Data Infrastructure Operators",
+      "comment": "PERSPECTIVE 4: DATA INFRASTRUCTURE OPERATORS (ROPE) \u2014 Primary beneficiary (Caltech, La Silla Paramounts, AWS-backed pipelines). Controls the computational and storage infrastructure that transforms raw observational data into actionable science. Experiences the constraint as coordination: data pipeline management, standardization, and distribution enable global time-domain astronomy. Arbitrage optionality: can switch data partners, negotiate terms, or commercialize algorithms."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (producing an unprecedented public good) and the asymmetric extraction (scientific priority and funding captured by consortia with privileged access). The structure is a hybrid. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "label": "Machine Learning Specialists",
+      "comment": "PERSPECTIVE 5: MACHINE LEARNING SPECIALISTS (ROPE) \u2014 Secondary beneficiary. Controls algorithmic gatekeeping: neural networks, anomaly detection, classification pipelines that convert terabyte streams into discovery-ready candidates. Benefits from data volume and proprietary algorithm training. High arbitrage optionality: can license algorithms, shift to industry applications, or migrate to different observatories."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Open-Source AI/ML Community",
-      "comment": "PERSPECTIVE 4: OPEN-SOURCE AI/ML COMMUNITY (SCAFFOLD) — Views the access bottleneck as a temporary technical problem. By developing and distributing powerful, efficient, open-source analysis tools and platforms, they aim to democratize access. This effort has an implicit sunset clause: once the tools are mature enough, the arbitrage advantage of the consortia will diminish. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.50."
+      "label": "Open-Source Astronomy Coalition",
+      "comment": "PERSPECTIVE 6: OPEN-SOURCE ASTRONOMY COALITION (SCAFFOLD) \u2014 Organized effort (Rubin Observatory mandate, AstroML, open-data initiatives) to create alternative verification and analysis pathways. Sees the data arbitrage as a temporary coordination failure with a sunset: public data release windows, open-source pipelines (ZTF Forced Photometry, LSST pipelines), and democratized ML tools reduce the extraction barrier. Theater ratio low because open-source alternatives bypass proprietary bottlenecks. Constrained exit: can build alternatives but within broader funding/policy constraints."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Traditional Observational Protocols",
+      "comment": "PERSPECTIVE 7: TRADITIONAL OBSERVATIONAL PROTOCOLS (PITON) \u2014 Classical observing proposals, peer-reviewed time allocation, and publication-first data release norms are increasingly performative. The real science happens in real-time alert streams and proprietary reductions. The old institutional process persists through inertia (funding structures, career evaluation metrics) despite its functional degradation. Theater ratio high because formal observing committee decisions often ratify pre-existing data-pipeline discoveries."
     },
     {
       "classification_type": "mountain",
@@ -64,86 +94,115 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The 'Physics of Progress' Observer",
-      "comment": "PERSPECTIVE 5: 'PHYSICS OF PROGRESS' OBSERVER (MOUNTAIN) — Argues this structure is an unchangeable law of big science. Petabyte-scale instruments necessitate large, centralized teams. The resulting inequality is not a contingent policy choice but an emergent, natural feature of technological scaling. The engine will flag this as a false summit, as the high base extractiveness (0.55) and suppression (0.65) violate the Mountain classification gates."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a physics/information-theory perspective, terabyte-scale data streams inherently require specialized computational infrastructure; time-domain science inherently privileges those with processing capacity. The constraint appears as an immutable natural consequence of the data deluge. However, the structural data reveals this as a false summit: institutional choices (proprietary algorithms, access tiers, funding concentration) naturalizes what could be structured as open-source coordination."
     }
   ],
   "omegas": [
     {
-      "id": "ai_democratization_hypothesis",
-      "question": "Will advanced AI/ML analysis tools democratize data access, or will they concentrate power further by requiring immense computational resources for training and inference?",
-      "resolution_mechanism": "Track adoption of open-source tools by under-resourced institutions and measure their publication output on survey data vs. consortia members over a 5-10 year period.",
-      "impact": "If democratizing, the 'Scaffold' perspective is validated and ε will decrease. If concentrating, the 'Snare' perspective becomes dominant for most actors.",
+      "id": "algorithm_provenance_independence",
+      "question": "Are the highest-value algorithmic transformations (RealBogus classification, transient type prediction) sufficiently novel that proprietary training is necessary, or are they teachable commodities that would commoditize under open-source release?",
+      "resolution_mechanism": "Comparative analysis of open-source vs proprietary algorithm performance on public datasets; skill distribution analysis of ML specialists trained in each paradigm; licensing data for algorithmic tools",
+      "impact": "If algorithms are teachable commodities: open-source alternatives can dissolve the arbitrage within 3-5 years, confirming scaffold sunset. If truly novel and resource-limited: extraction barrier is structural, snare classification hardens.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether AI/ML tools will democratize or concentrate access to big astronomical data."
+      "description": "Whether proprietary algorithms are necessarily novel or teachable commodities"
     },
     {
-      "id": "proprietary_period_necessity",
-      "question": "Is the proprietary data access period for survey consortia a necessary incentive for instrument construction (coordination) or an artificial rent-seeking mechanism (extraction)?",
-      "resolution_mechanism": "Comparative analysis of projects with different data access policies, controlling for funding models and scientific scope. Economic modeling of consortium funding with and without proprietary periods.",
-      "impact": "If deemed necessary, the constraint is closer to a Rope/Tangled Rope. If deemed artificial, it is structurally a Snare.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether proprietary data periods are necessary incentives or artificial extraction."
+      "id": "bandwidth_infrastructure_equity",
+      "question": "What fraction of the extraction comes from raw bandwidth/storage costs vs algorithmic gatekeeping? If bandwidth were free, would the arbitrage collapse?",
+      "resolution_mechanism": "Cost accounting for data pipeline infrastructure (compute, storage, bandwidth) vs algorithmic development; international bandwidth cost analysis; counterfactual modeling of free data access scenarios",
+      "impact": "If bandwidth >> algorithms: developing-nation programs could exit by scaling infrastructure investment. If algorithms >> bandwidth: institutional asymmetry is harder to solve and snare classification is more structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of bandwidth costs vs algorithmic control to data arbitrage"
+    },
+    {
+      "id": "discovery_latency_consequence",
+      "question": "Does the multi-month traditional publication + data release cycle for time-domain discoveries create genuine scientific consequence (lost confirmations, wrong follow-up targets) or is it primarily a priority/credit arbitrage?",
+      "resolution_mechanism": "Historical analysis of follow-up success rates for early vs late discoveries; missed-opportunity analysis for transients; publication citation patterns for open vs embargoed datasets",
+      "impact": "If consequence is scientific (lost transients, contaminated targets): snare extraction harms field outcomes, mandatrophy unresolved. If consequence is primarily credit/career: extraction is pure rent-seeking, mandatrophy may resolve toward pure snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether publication embargo creates scientific consequence or primarily credit arbitrage"
+    },
+    {
+      "id": "coalition_sunset_timeline_achievability",
+      "question": "Given current funding trends and open-source ML momentum, can public data pipelines and open-source algorithms reach feature parity with proprietary systems within a realistic timeline (10-15 years)?",
+      "resolution_mechanism": "Progress benchmarks for open-source ML frameworks (PyTorch, JAX) vs proprietary tools; funding analysis for open-science infrastructure; talent migration patterns from proprietary to open-source astrophysics",
+      "impact": "If yes: scaffold perspective is structural, has real sunset. If no: open-source coalition is aspirational theater, and snare extraction persists. May require analysis of whether 'open' really means 'requires million-dollar compute clusters' = functional barrier remains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of open-source algorithms reaching feature parity within 10-15 years"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.55
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.2
+      "value": 0.45
     }
   ],
   "interval": {
-    "start": 2010,
-    "end": 2030
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The shift to time-domain astronomy has created a data deluge, with surveys like LSST and SKA generating petabytes of data. This creates a structural arbitrage opportunity. Groups with the immense computational resources, proprietary pipelines, and early access can extract high-impact discoveries before the broader community can effectively analyze the data. This constraint is not about financial profit, but the extraction of scientific capital: priority, publications, and funding.",
+    "narrative_context": "Modern time-domain astronomy (LSST, Pan-STARRS, ZTF) generates petabyte-scale data streams requiring specialized computational infrastructure and algorithmic expertise to extract scientific value. This creates a structural arbitrage mechanism: institutions and researchers with capital and ML talent can access high-value discoveries (supernova candidates, kilonovae, Fast Radio Bursts) within hours; resource-limited observers and developing-nation programs access the same data months or years later, after embargo periods, with lower processing capacity, and often through derivative analyses. The constraint exhibits mixed character depending on observation point: pure snare for trapped small observatories; tangled rope for organized mid-tier institutions with consortium access; rope for data infrastructure operators; scaffold for open-science efforts building alternatives; piton for traditional observing committees whose role has degraded. Base extractiveness (0.58) reflects substantial asymmetry in data access, algorithmic gatekeeping, and career/funding concentration, but not total suppression\u2014open-source pipelines (LSST public releases, ZTF forced photometry, AstroML tools) are creating alternative pathways. Suppression (0.68) is high: bandwidth costs, computational resource barriers, proprietary algorithm access, and publication embargo periods together lock smaller actors into constrained or trapped positions. Theater ratio (0.45) is relatively low because the real action is in automated alert systems and proprietary reductions, not in traditional peer-review decision-making, though classical observing proposals retain performative status.",
     "key_agents": [
-      "Large Survey Consortia: Primary beneficiaries (institutional/arbitrage) - Control the data pipelines and benefit from first-look discovery rights.",
-      "Small Research Groups: Primary victims (powerless/trapped) - Lack the computational and financial resources to process raw data streams in a competitive timeframe.",
-      "Astronomy Epistemic Commons: Abstract victim (powerless/trapped) - The ideal of equitable data access is compromised, potentially slowing the overall pace of discovery.",
-      "Open-Source AI/ML Community: Organized agents (organized/mobile) - Attempting to build tools to close the access gap, viewing it as a temporary technical hurdle."
+      "Data Infrastructure Operators (Caltech, observatories, cloud providers): Institutional/arbitrage beneficiaries \u2014 control computational and storage infrastructure that transforms raw data into discovery candidates",
+      "Machine Learning Specialists: Institutional/arbitrage beneficiaries \u2014 control algorithmic gatekeeping via neural networks and anomaly detection pipelines; trainable talent with commercial exit options",
+      "Resource-Limited Observatories: Powerless/trapped victims \u2014 cannot afford computational scaling or proprietary algorithm access; structurally excluded from time-domain discovery advantage",
+      "Developing Nation Astronomy Programs: Powerless/trapped victims \u2014 face bandwidth costs, computational resource barriers, and knowledge gaps; no domestic exit path without external partnership",
+      "Mid-Tier Research Institutions: Organized/constrained actors \u2014 benefit from consortium data access but face algorithmic constraints, embargo delays, and processing bottlenecks",
+      "Open-Source Astronomy Coalition (Rubin Observatory, LSST public engagement, AstroML): Organized/constrained actors \u2014 building alternative pipelines (public data releases, open algorithms) with sunset logic; constrained by funding and institutional inertia",
+      "Traditional Observing Committees: Institutional/arbitrage actors \u2014 maintain performative role in proposal review despite functional degradation by real-time data streams; persist through funding structure inertia",
+      "Analytical Observer: Civilizational/analytical \u2014 risks naturalizing contingent infrastructure asymmetries as immutable laws of big-data science"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55): High. The scientific advantage conferred by privileged access is substantial and directly translates to career and funding outcomes. Suppression (0.65): High. The barriers to entry for analyzing raw petabyte-scale data are immense, requiring access to supercomputing facilities and highly specialized software, effectively suppressing competition from smaller institutions. Theater Ratio (0.20): Low. While there is a narrative of 'open data,' the core activity is genuine scientific work, not performative ritual. The enforcement is active through data access policies and the sheer technical architecture of the data systems.",
-    "perspectival_gap": "The core gap is between the Large Survey Consortium (seeing a Rope) and the Small Research Group (seeing a Snare). The consortium views its privileged access as a necessary component of a massive coordination effort. The small group experiences this same structure as a lock-out, a coercive barrier to participation in cutting-edge science. The Analytical observer reconciles these views as a Tangled Rope, acknowledging both the valid coordination function and the severe extractive asymmetry.",
-    "directionality_logic": "Beneficiaries (Large Consortia) have arbitrage exit options, leading to a low 'd' value and a Rope classification. Victims (Small Groups) are trapped by resource constraints, leading to a high 'd' value and a Snare classification. The system's structure directly creates these opposing experiences from a single set of facts.",
-    "mandatrophy_analysis": "This case avoids mandatrophy by demonstrating how a system can be simultaneously a legitimate coordination effort and a highly extractive mechanism. Labeling it purely as a Rope (the consortium's view) would ignore the coercive exclusion of most of the field. Labeling it purely as a Snare (the small group's view) would ignore the genuine scientific infrastructure being created. The Tangled Rope classification from the analytical perspective correctly identifies the hybrid nature of the constraint."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The data arbitrage captures substantial value through time advantage (days to weeks for alert stream access vs months for public data release), algorithmic advantage (proprietary ML models vs open-source baselines), and computational advantage (real-time processing vs batch). But extraction is not maximal (0.70+) because: (1) public data releases and open-source tools provide real alternatives, not complete closure; (2) collaborative consortium access (LSST ZTF partnership models) offer constrained but genuine participation pathways; (3) simple algorithmic approaches (forced photometry, basic classification) can be replicated by resourced institutions. The trajectory (0.32 \u2192 0.58 over 10 years) reflects the transition from traditional observing to real-time alert science; as time-domain discovery becomes central to astrophysics funding and hiring, the data infrastructure asymmetry has become more extractive. Suppression (0.68): High. Multiple reinforcing barriers lock smaller actors into constrained positions: (a) bandwidth and storage costs scale non-linearly with data volume; (b) proprietary algorithms (RealBogus, transient classifiers) lack open equivalents; (c) publication embargo periods (6-12 months for ZTF, LSST data release policy) enforce temporal gatekeeping; (d) career prestige concentrates on first discoveries; (e) funding allocation favors institutions with proven data infrastructure. Suppression is not total (0.80+) because escape routes exist: open-source pipelines, consortium partnerships, secondary science tracks. Theater ratio (0.45): Moderate-low. The classical observing proposal system persists (proposal deadlines, peer-review committees, time allocation) but is increasingly theatrical\u2014the real discoveries happen in automated alert streams that bypass proposal review entirely. New-time-domain discoveries often pre-date the traditional data release that would have justified the original proposal. The ratio is lower than piton-level (0.70) because alert systems do provide real functional value, not just performance.",
+    "perspectival_gap": "The constraint demonstrates how indexical position determines the classification. Data infrastructure operators experience rope (coordination that enables their work). Small observatories experience snare (locked out of high-value discovery). Mid-tier institutions experience tangled rope (benefits from data access, extraction from embargo delays and algorithmic opacity). Open-science coalition experiences scaffold (temporary failure with sunset timeline). Observing committees experience piton (degraded role maintained by inertia). The false mountain perspective naturalizes institutional asymmetries as physical inevitabilities\u2014'big data requires big infrastructure' sounds like a law of nature but is actually a choice about who controls the infrastructure and how algorithms are distributed.",
+    "directionality_logic": "Directionality (d) values are derived from each agent's structural position relative to the data arbitrage flow. Data infrastructure operators and ML specialists are beneficiaries with arbitrage optionality (can license algorithms, shift observatory partnerships, commercialize tools)\u2014low d, negative experienced extraction (they capture value). Small observatories are victims with trapped exit (cannot build million-dollar computational infrastructure unilaterally, cannot train ML specialists at scale without collaboration)\u2014high d, high experienced extraction. Mid-tier institutions are partial beneficiaries with constrained exit (can participate in consortiums but cannot unilaterally escape algorithmic gatekeeping or embargo periods)\u2014intermediate d, moderate extraction. Developing-nation programs are victims with trapped-to-constrained exit (structural bandwidth barriers, no domestic computational capacity, knowledge gaps in proprietary tools)\u2014very high d, high extraction. The open-science coalition is organized with constrained exit (can build alternatives but within funding/policy constraints)\u2014intermediate d, experienced as mixed coordination-extraction. Traditional observing committees are institutional actors whose functional role has degraded but who retain positional arbitrage (prestige, funding authority)\u2014low d but high theater because the arbitrage has shifted to algorithms outside their control.",
+    "mandatrophy_analysis": "SNARE WITH PARTIAL SCAFFOLD RESOLUTION: The base classification is Snare (\u03b5=0.58, suppression=0.68, \u03c7 > 0.66 for trapped victims), but the mandate problem is complex. The data arbitrage meets snare criteria for small observatories and developing-nation programs: high extraction, suppression via bandwidth/algorithm access, and no self-correction mechanism (embargo periods and proprietary algorithms prevent learning or exit). However, the open-science coalition perspective reveals genuine structural change: public data release mandates (Rubin Observatory, LSST, ZTF), open-source algorithmic frameworks (AstroML, open photometry pipelines), and increasing pressure for democratized ML access are creating alternative pathways with real sunset logic. Mandatrophy is NOT fully resolved because: (1) even 'public' data often requires million-dollar compute clusters (barrier remains, just shifted); (2) algorithm feature parity timelines are uncertain (10-15 years vs 50+ years); (3) career prestige still concentrates on first discoveries. The constraint is transitional: currently a snare for powerless agents, but with measurable scaffold structure for organized agents building alternatives. If the open-source timeline achieves feature parity and funding structures shift toward equitable access, snare will degrade toward tangled rope (extraction with genuine coordination function) or rope (pure coordination around data standards). If proprietary infrastructure consolidates, snare hardens."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure"
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "academic_publishing_models",
-      "scientific_funding_allocation"
-    ]
-  }
+      "gravitational_wave_electromagnetic_follow_up",
+      "pulsar_population_inference_bias"
+    ],
+    "dual_formulation_note": "The big data arbitrage is upstream of specific astrophysics discoveries (gravitational wave follow-up, pulsar timing inference) whose outcomes depend on access to alert streams and algorithmic processing power. The upstream constraint (data infrastructure control) structurally determines which populations and phenomena get studied (selection bias). Each specific discovery domain has its own extractiveness reflecting empirical status, but all are downstream of this data arbitrage gate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    }
+  ]
 }

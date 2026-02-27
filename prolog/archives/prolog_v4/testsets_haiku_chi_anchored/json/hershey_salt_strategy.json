@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "hershey_salt_strategy",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hershey_salt"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Hershey's Salt Inclusion Strategy in Confectionery Products",
+    "topic_domain": "economic/consumer_goods/food_industry",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "hershey_corporation",
+      "processed_food_industry"
+    ],
+    "victims": [
+      "health_conscious_consumers",
+      "sodium_sensitive_populations",
+      "public_health_outcomes"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Sodium-Sensitive Consumer",
+      "comment": "PERSPECTIVE 1: SODIUM-SENSITIVE CONSUMER (SNARE) \u2014 Consumers with hypertension or dietary sodium restrictions face narrowing product choice. Salt-enhanced formulations increase reward stimulation, creating habit-forming preferences that lock consumers into higher sodium intake. Exit options are severely limited: most mass-market confectionery now includes salt, and reformulation to low-sodium alternatives requires significant effort and carries social friction. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Children Developing Taste Preferences",
+      "comment": "PERSPECTIVE 2: CHILDREN DEVELOPING TASTE PREFERENCES (SNARE) \u2014 Early exposure to salt-enhanced sweets during critical taste preference development (ages 2-12) establishes high salt tolerance and preference. Once formed, these preferences persist into adulthood. Children have no exit option and no agency in product selection. Trapped by cognitive development biology. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Hershey Corporation Management",
+      "comment": "PERSPECTIVE 3: HERSHEY CORPORATION (ROPE) \u2014 From management perspective, salt inclusion is a coordination mechanism solving legitimate product differentiation and shelf-life challenges. Salt enhances flavor contrast, extends product freshness, and creates competitive product positioning. Hershey experiences this as beneficial coordination: they capture market share and margin improvement through formulation innovation. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Price-Conscious Consumer",
+      "comment": "PERSPECTIVE 4: PRICE-CONSCIOUS CONSUMER (TANGLED ROPE) \u2014 Budget-constrained consumers benefit from low-cost confectionery but bear extraction cost of salt-induced consumption patterns. Salt increases hedonic reward, driving repeat purchases and consumption frequency. Consumers experience both coordination (access to affordable treats) and extraction (habit formation and health cost externalization). Exit options are constrained by budget limitations. d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.49."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Food Regulatory Agencies",
+      "comment": "PERSPECTIVE 5: FOOD REGULATORY AGENCIES (PITON) \u2014 FDA/USDA oversight of salt levels in food is largely performative. Regulatory guidance (like 2016 sodium reduction targets) exists but lacks enforcement mechanism. Agencies lack resources to audit compliance or impose penalties for salt strategy intensification. The theater_ratio=0.58 reflects mixed performative and functional content: agencies issue guidance, companies acknowledge it, but no real constraint on product formulation exists. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Public Health Advocacy Organizations",
+      "comment": "PERSPECTIVE 6: PUBLIC HEALTH ADVOCACY ORGANIZATIONS (TANGLED ROPE) \u2014 Health advocates benefit from research on salt-health links (funding, visibility, institutional legitimacy) but bear extraction cost of industry resource asymmetry. They can organize (organized power) but face structural constraints: industry has superior lobbying resources, data on taste preferences is proprietary, and health costs are externalized to society. d\u22480.58, f(d)\u22480.78, \u03c3=1.0 \u2192 \u03c7\u22480.41."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational scale, the strategy represents asymmetric extraction: salt use exploits the biological fact that human taste receptors evolved under salt-scarcity conditions. Hershey leverages this ancient adaptation to drive consumption in conditions of modern salt abundance. The extraction is stable and difficult to counter through individual choice because preference formation is biological/developmental. d\u22480.85, f(d)\u22481.23, \u03c3=1.2 \u2192 \u03c7\u22480.65."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "taste_preference_malleability",
+      "question": "Are salt-taste preferences genuinely habit-forming/locked, or can consumers re-calibrate sensitivity with effort?",
+      "resolution_mechanism": "Longitudinal studies of taste preference adaptation; measurement of salt sensitivity recovery in populations shifting to low-sodium diets; genetic vs environmental contribution to salt preference thresholds",
+      "impact": "If preferences are malleable: exit options improve from 'trapped' to 'constrained' \u2192 classification shifts from Snare toward Tangled Rope. If locked: Snare classification is stable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether salt taste preferences can be re-calibrated or are permanently locked"
+    },
+    {
+      "id": "salt_health_attribution",
+      "question": "What proportion of sodium-induced health costs (hypertension, cardiovascular disease) are directly attributable to Hershey's salt strategy vs broader industrial salt use?",
+      "resolution_mechanism": "Population attributable risk analysis; dose-response modeling of confectionery salt contribution to total dietary sodium; market share analysis of Hershey vs competitors in categories with high salt inclusion",
+      "impact": "If Hershey's contribution is <10% of total salt intake: extraction magnitude is lower than currently assessed (\u03b5 might decrease to 0.38). If >25%: extraction is severe and \u03b5 might increase to 0.62.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of sodium health costs attributable to Hershey's strategy"
+    },
+    {
+      "id": "reformulation_technical_feasibility",
+      "question": "Is salt reduction technically feasible in mass-market confectionery without significant cost increase or consumer rejection?",
+      "resolution_mechanism": "Benchmarking against low-sodium confectionery brands; cost analysis of salt-replacement ingredients; sensory panel testing of reformulated products; market penetration data for existing low-sodium alternatives",
+      "impact": "If reformulation is feasible: suppression drops from 0.68 to 0.40 \u2192 reclassifies toward Tangled Rope (still extractive but with visible alternatives). If not feasible: Snare classification solidifies.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical and economic feasibility of salt reduction in confectionery"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "Does Hershey's lobbying presence prevent regulatory action on salt limits, or do regulatory agencies lack resources independent of industry influence?",
+      "resolution_mechanism": "Analysis of FDA staff capacity for sodium monitoring; comparison of regulatory stringency in jurisdictions with vs without strong industry lobbying presence; tracking of draft regulations and industry comment responses",
+      "impact": "If capture is active: suppression increases to 0.80, constraint becomes harder to exit. If agencies lack resources: suppression reflects capacity constraints, not active enforcement of extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory suppression is due to active capture or resource constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Hershey's strategy to include salt in more of its product portfolio represents a classic extraction mechanism masked as product innovation. Salt enhances flavor contrast and extends shelf life, providing legitimate technical benefits. However, the strategy simultaneously exploits biological taste preference vulnerabilities and creates path-dependency in consumer consumption patterns. The constraint operates through product formulation choices that narrow the choice set for health-conscious or sodium-restricted consumers while increasing hedonic reward for price-sensitive consumers, locking them into higher consumption frequency. The strategy's effectiveness depends on suppression: regulatory oversight is weak, consumer information about salt content is poorly aggregated, and reformulation alternatives are economically marginalized. The theater_ratio (0.58) reflects the mixed character: some communication about salt (labeling, marketing emphasis on taste enhancement) is functional, while much of the health risk externalization (not advertising sodium content prominently, framing salt as flavor enhancement rather than behavioral driver) is performative.",
+    "key_agents": [
+      "Hershey Corporation: Primary beneficiary (institutional/arbitrage) \u2014 captures margin improvement and market share growth through salt-enhanced product differentiation",
+      "Sodium-Sensitive Consumers: Primary victim (powerless/trapped) \u2014 face shrinking choice set and health risk as salt-enhanced products proliferate",
+      "Children Developing Preferences: Primary victim (powerless/trapped) \u2014 exposed to salt-enhanced sweets during taste preference formation; preferences lock before autonomous choice becomes possible",
+      "Price-Conscious Consumers: Secondary victim (moderate/constrained) \u2014 benefit from low-cost confectionery but bear extraction cost through habit formation and health externalization",
+      "Processed Food Industry: Beneficiary (institutional/arbitrage) \u2014 salt inclusion strategy is industry-wide; Hershey's approach reinforces category norms and creates competitive pressure to match",
+      "FDA/USDA Regulatory Agencies: Institutional observer (institutional/constrained) \u2014 issue guidance but lack enforcement capacity; constraint persists through agency resource scarcity",
+      "Public Health Advocacy: Organized observer (organized/constrained) \u2014 can organize and document harms but face industry resource asymmetry and proprietary data barriers"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Salt inclusion in confectionery exploits biological taste preference mechanisms and creates consumption lock-in. The extraction is not total (consumers can theoretically switch to unsalted alternatives) but highly effective because: (1) alternatives are economically marginalized, (2) preference formation is developmental/biological, (3) habit formation creates path-dependency. The value increased from 0.28 (early period, limited salt inclusion) to 0.52 (current period, widespread salt formulation) reflecting deliberate strategy intensification. Suppression (0.68): High. Multiple mechanisms suppress alternatives: regulatory guidance lacks enforcement, health information is not prominently disclosed, reformulation alternatives have higher cost/lower availability, and taste preference lock-in is biological. However, suppression is not total (medical information exists, some low-sodium brands persist) and activism creates occasional pressure. Theater ratio (0.58): Moderate-high. Some communication is functional (salt does enhance flavor, shelf-life extension is real). But significant performative content: industry frames salt inclusion as taste innovation rather than behavioral exploitation, health costs are externalized from product marketing, and regulatory theater (guidance without enforcement) maintains appearance of oversight. The theater has increased over time as health communication about salt risks has become more visible \u2014 industry response is partly functional adaptation and partly performative CSR messaging.",
+    "perspectival_gap": "The perspectival gap divides sharply by power and exit options. Hershey and the food industry see Rope (coordination through flavor innovation). Sodium-sensitive and developing-preference populations see pure Snare (trapped by both preference lock and market narrowing). Price-conscious consumers see Tangled Rope (benefits from affordable products but extraction through habit). Regulatory agencies see Piton (performative oversight). Organized advocates see Tangled Rope (can advocate but face resource asymmetry). The analytical observer sees Snare (biological exploitation). The gap reveals how the same formulation choice is simultaneously product innovation (beneficiary view) and behavioral lock-in (victim view). No single perspective is 'wrong' \u2014 they capture different structural positions.",
+    "directionality_logic": "Hershey: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; experiences the constraint as profitable innovation. Sodium-sensitive consumers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit option. Developing children: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction; cognitive biology locks preferences before autonomy. Price-conscious consumers: Victim + constrained (budget limits their options) + secondary beneficiary (afford treats) \u2192 d\u22480.65, f(d)\u22480.95. Mixed extraction; constrained exit reflects budget limitation. Regulatory agencies: Constrained (by resource limits, not active enforcement) \u2192 d\u22480.50, f(d)\u22480.65. Moderate extraction; piton classification comes from theater_ratio gate, not from chi. Public health advocates: Organized but constrained (resource asymmetry) + victim of suppressed alternatives \u2192 d\u22480.58, f(d)\u22480.78. Moderate extraction; organized power reduces d but constraints remain. Analytical observer: Civilizational + global scope amplifies \u03c7 via \u03c3=1.2, producing high effective extraction (\u03c7\u22480.65).",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION STABILITY: The constraint does not resolve into Tangled Rope because the beneficiary (Hershey) does not provide meaningful coordination function \u2014 salt is added to increase consumption, not to solve a collective action problem. The extraction mechanism is asymmetric: Hershey captures private benefit (margin, market share) while health costs are externalized to consumers. Active enforcement is not required for the Snare to function \u2014 enforcement is implicit in preference lock and market structure. FALSE ROPE TEST: Could this be misclassified as pure Rope (coordination)? No. Rope requires base_extractiveness \u2264 0.45 and \u03c7 \u2264 0.35. This constraint has \u03b5=0.52 and effective \u03c7 (from most victim perspectives) \u2265 0.65. REFORMULATION FEASIBILITY: The constraint remains Snare even if reformulation is technically feasible, because Hershey has chosen not to reformulate, suppression keeps alternatives marginalized, and the strategy is deliberate rent-seeking. Feasibility does not change classification; it clarifies that the constraint is maintained by choice and structure, not by impossibility. The constraint's stability depends on sustained suppression: if regulatory enforcement were to increase or consumer information were to improve dramatically, the classification might shift toward Tangled Rope (still extractive but with visible alternatives). Currently, suppression is sufficient to maintain pure Snare from victim perspectives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "refined_sugar_consumption_norm",
+      "dietary_sodium_externalization",
+      "food_industry_regulatory_capture"
+    ],
+    "dual_formulation_note": "Hershey's salt strategy is downstream of broader processed food industry norm-setting around salt inclusion for cost/shelf-life optimization. The upstream constraint (industry standard salt use) has \u03b5\u22480.35 (Rope from industry perspective, coordination mechanism). Hershey's strategy intensifies and weaponizes this norm, creating a distinct downstream constraint (\u03b5\u22480.52, Snare) where salt inclusion becomes deliberate consumption-driving mechanism rather than incidental technical benefit. The two constraints are linked through industry coordination: Hershey's strategy reinforces norms that make low-sodium formulation a competitive disadvantage across the sector."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.65
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "refined_sugar_consumption_norm",
+      "food_industry_regulatory_capture"
+    ]
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "udhr_1946",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "udhr"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Universal Declaration of Human Rights (1948)",
+    "topic_domain": "political/legal/international",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "signatory_governments",
+      "international_institutions"
+    ],
+    "victims": [
+      "marginalized_populations",
+      "political_dissidents",
+      "non_ratifying_states"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Persecuted Dissident",
+      "comment": "PERSPECTIVE 1: PERSECUTED DISSIDENT (SNARE) \u2014 Formally protected by UDHR but lacks enforcement mechanism or exit. Government can violate rights with minimal consequence. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.91. High extractiveness: the declaration promises protection while providing none, creating false hope that suppresses alternative forms of resistance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Domestic Civil Society",
+      "comment": "PERSPECTIVE 2: DOMESTIC CIVIL SOCIETY (TANGLED ROPE) \u2014 Benefits from UDHR as a coordination frame for rights-based advocacy (coordination function), but also trapped within state sovereignty framework that permits violations without external enforcement. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.55. Mixed: gains rhetorical legitimacy but faces structural powerlessness."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Signatory Government (Beneficiary)",
+      "comment": "PERSPECTIVE 3: SIGNATORY GOVERNMENT BENEFICIARY (ROPE) \u2014 Gains international legitimacy and soft power from UDHR ratification while retaining domestic enforcement discretion. Can claim rights compliance internationally while controlling implementation domestically. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary: UDHR provides coordination frame without binding constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The United Nations System",
+      "comment": "PERSPECTIVE 4: UNITED NATIONS SYSTEM (ROPE) \u2014 Designed as coordination mechanism among sovereign states. UDHR is procedurally functional as a standard-setting document, enabling interstate dialogue and norm-building. Exit cost is low (no enforcement), making this pure coordination. d\u22480.12, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.03. Net beneficiary: UN gains legitimacy as norm-keeper without enforcement responsibility."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Human Rights Movement",
+      "comment": "PERSPECTIVE 5: HUMAN RIGHTS MOVEMENT (SCAFFOLD) \u2014 Treats UDHR as a temporary coordination frame with eventual sunset toward direct accountability mechanisms (International Criminal Court, human rights courts, enforcement protocols). Organized actors see the declarative form as transitional toward binding law. d\u22480.42, f(d)\u22480.42, \u03c3=1.2 \u2192 \u03c7\u22480.27. Low extraction: movement has agency and perceives a sunset path toward enforceable standards."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Rationalization",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL RATIONALIZATION (PITON) \u2014 UDHR exists primarily as theatrical legitimation of state sovereignty. States celebrate 'universal human rights' while retaining domestic enforcement monopoly. theater_ratio=0.68 satisfies the piton gate (\u22650.70). Performative function (demonstrate compliance to international norms) has largely replaced substantive enforcement. Maintained through institutional inertia \u2014 governments continue citing UDHR as if it constrains them, when actual enforcement relies on national systems, treaty bodies, and ad hoc pressure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN) \u2014 Risks naturalizing UDHR as an immutable law of international relations: 'universal rights are inherent to humanity.' But the structural data (\u03b5=0.55, suppression=0.65, theater=0.68) contradicts the mountain classification. The engine will compute this as a false summit, revealing that treating UDHR as a natural law masks the contingent power dynamics (state sovereignty, lack of enforcement, signatory discretion) that make it a tangled rope rather than a mountain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_mechanism_threshold",
+      "question": "At what point does a rights declaration transition from pure theater to binding constraint? What enforcement mechanism changes the classification from Snare to Rope?",
+      "resolution_mechanism": "Historical analysis of rights documents with and without enforcement (UDHR vs ECHR vs ICC); correlation between enforcement presence and compliance rates; longitudinal tracking of state behavior before/after binding protocols",
+      "impact": "If enforcement < 5% effective: UDHR remains Snare/Piton. If enforcement > 50%: classification shifts toward Rope/Tangled Rope. Threshold determines whether UDHR is fundamentally deceptive or genuinely coordinate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforcement threshold for transitioning from theater to constraint"
+    },
+    {
+      "id": "state_sovereignty_incompatibility",
+      "question": "Is UDHR structurally compatible with Westphalian state sovereignty? Can a document claiming universal rights exist alongside absolute enforcement discretion at the national level?",
+      "resolution_mechanism": "Formal analysis of sovereignty doctrine vs universal rights doctrine; case studies of states claiming UDHR compliance while violating specific rights; longitudinal tracking of state withdrawal/non-ratification patterns",
+      "impact": "If incompatible: UDHR is inherently extractive (states gain legitimacy without constraint). If compatible: additional enforcement mechanisms can resolve the tension without reclassifying the base document.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Compatibility between UDHR universalism and state sovereignty"
+    },
+    {
+      "id": "signatory_discretion_gap",
+      "question": "Does UDHR ratification impose any actual behavioral constraint on states, or is the gap between signature and enforcement completely discretionary?",
+      "resolution_mechanism": "Empirical comparison of rights compliance in ratifying vs non-ratifying states; analysis of state responses to UN rights reviews; correlation between ratification and domestic legal change",
+      "impact": "If discretionary gap > 80%: UDHR is primarily theater (Piton/Snare). If gap < 30%: UDHR has genuine coordination function (Rope/Tangled Rope). This determines whether the declaration is structurally deceptive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of state discretion in UDHR implementation"
+    },
+    {
+      "id": "marginalized_population_exit_capacity",
+      "question": "Do marginalized populations within rights-violating states have ANY exit option (mobile, constrained, or only trapped)? Or is the powerless designation itself the source of maximal extraction?",
+      "resolution_mechanism": "Comparative analysis of emigration, internal displacement, and underground resistance options available to persecuted groups; assessment of whether these constitute meaningful exit or merely desperate escape",
+      "impact": "If exit = trapped (d\u22480.92): Snare/Piton (maximal extraction through false hope). If exit = constrained (d\u22480.75): Tangled Rope (extraction with some alternatives). Determines whether UDHR creates worse conditions by promising protection it cannot deliver.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Exit capacity available to marginalized populations under UDHR"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 1948,
+    "end": 1998
+  },
+  "commentary": {
+    "narrative_context": "The Universal Declaration of Human Rights (1948) is a foundational international instrument that establishes a comprehensive list of civil, political, economic, social, and cultural rights claimed to be 'inalienable' to all humans. Adopted in the aftermath of World War II, the UDHR represents an attempt to create a universal coordination frame for human dignity across all states and cultures. However, it exhibits a critical structural tension: it claims to constrain state behavior while possessing no binding enforcement mechanism, remaining dependent on national implementation and voluntary state compliance. This makes UDHR a diagnosis exemplar for distinguishing coordination functions (genuine mutual benefit) from extraction mechanisms (asymmetric benefit) disguised as universal principles. The constraint operates across six distinct DR types depending on observer position: for persecuted dissidents, it is a Snare (promises protection while providing none); for civil society, it is a Tangled Rope (enables advocacy while remaining powerless); for compliant governments, it is a Rope (coordination frame without constraint); for the UN system, it is pure Rope (standard-setting without enforcement); for human rights movements, it is a Scaffold (temporary frame with sunset toward binding law); for states maintaining performative compliance, it is a Piton (degraded ritual); and for the uncritical observer, it risks appearing as a Mountain (natural law of universal rights) \u2014 but the structural data reveals this as a false summit.",
+    "key_agents": [
+      "Marginalized Populations / Political Dissidents: Primary victim (powerless/trapped) \u2014 promised rights with no enforcement mechanism; bear full cost of false hope that suppresses alternative resistance forms",
+      "Domestic Civil Society: Secondary victim (moderate/constrained) \u2014 gain rhetorical legitimacy for rights advocacy but remain trapped within state sovereignty framework lacking external enforcement",
+      "Signatory Governments (Compliance): Primary beneficiary (institutional/arbitrage) \u2014 gain international legitimacy and soft power from ratification while retaining complete discretion over domestic enforcement",
+      "United Nations System: Institutional beneficiary (institutional/arbitrage) \u2014 gains legitimacy as norm-keeper and arbiter of international standards without accepting enforcement responsibility",
+      "Human Rights Movement: Organized actor (organized/constrained) \u2014 treats UDHR as temporary coordination frame with sunset toward binding enforcement mechanisms (ICC, regional courts, treaty protocols)",
+      "States Maintaining Performative Compliance: Institutional actor (institutional/arbitrage) \u2014 uses UDHR citation for international legitimation while actual domestic enforcement remains completely discretionary (Piton perspective)",
+      "Uncritical Analytical Observer: Risk of naturalizing contingent arrangements as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-to-high. The UDHR creates an asymmetry where signatory states gain international legitimacy for ratification while retaining complete enforcement discretion domestically. The original 1948 environment had lower extraction (\u03b5\u22480.35) because many states genuinely treated rights protection as constraining. Over 50 years, extraction increased (\u03b5\u22480.55) as states learned to gain the legitimacy of ratification while treating enforcement as optional. The rise reflects Goodhart drift: states optimize for the metric (ratification/citation) while degenerating the function (actual rights protection). Suppression (0.65): Moderate-to-high. Significant barriers to enforcement include: (1) state sovereignty doctrine treating enforcement as domestic prerogative, (2) lack of binding enforcement mechanism in the original declaration, (3) publication bias against reporting violations (states suppress reporting while claiming compliance), (4) international norms that protect state discretion over human rights. But suppression is not total \u2014 some states do enforce, some international bodies exercise soft pressure, and civil society mobilizes around UDHR language. Theater ratio (0.68): Moderate-high. UDHR compliance has become substantially performative: states cite UDHR in diplomatic contexts and constitutional preambles while engaging in documented violations. The ritual of UN rights review, domestic rights commissions, and periodic 'human rights progress reports' functions primarily as theater \u2014 most actual state behavior reflects domestic interests rather than UDHR constraints. The theater has increased over the interval as the gap between ratification/rhetoric and enforcement has widened.",
+    "perspectival_gap": "This constraint exhibits maximal perspectival divergence. The persecuted dissident sees a Snare (false hope suppresses resistance). Domestic civil society sees a Tangled Rope (rhetorical power without enforceability). Compliant governments see pure Rope (coordination without constraint). The UN sees Rope (norm-setting without enforcement responsibility). The human rights movement sees Scaffold (temporary frame with sunset toward binding law). States performing compliance see Piton (degraded theater). The uncritical observer risks Mountain (natural law). This spread reflects a fundamental decomposition failure: the UDHR label covers multiple structurally distinct constraints \u2014 the aspirational universal principle (which IS mountain-like to idealist observers), the coordination frame between states (Rope), the coercive apparatus of state enforcement (Snare to victims), and the performative legitimation ritual (Piton). The perspectival gap is not measurement noise \u2014 it reveals that 'the UDHR' is a conflation of at least three different constraints operating at different scope levels.",
+    "directionality_logic": "Marginalized populations: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction: the document promises protection without providing it; the false hope itself becomes coercive by suppressing alternative resistance forms (direct action, emigration, underground organizing appear less urgent when 'rights' are supposedly guaranteed). Domestic civil society: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. High extraction but not maximal: civil society benefits from UDHR as a coordination frame for advocacy, creating a mixed relationship \u2014 the document enables and constrains simultaneously. Signatory governments (compliance): Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary: complete discretion on enforcement means governments face no actual constraint; they gain legitimacy at near-zero cost. UN system: Institutional + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.05. Net beneficiary: UN gains legitimacy as norm-keeper without enforcement responsibility or reputational risk. Human rights movement: Organized + constrained \u2192 d\u22480.42, f(d)\u22480.42. Low extraction: organized actors have agency in framing UDHR as transitional (Scaffold) and can shift the constraint toward binding mechanisms. States (performative): Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Beneficiary through theater: Piton classification comes from high theater_ratio (0.68), not from high chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Risks mountain classification through naturalizing contingent arrangements.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint exemplifies the mandatrophy problem and its resolution. The naive question is 'Is UDHR coordination (Rope) or extraction (Snare)?' The answer is 'Both, depending on your structural position.' The signatory government sees pure coordination (Rope): mutual agreement to respect human dignity creates a coordination frame that lowers conflict. The dissident sees pure extraction (Snare): the government violates the rights while citing UDHR as proof of legitimacy, using the declaration to suppress resistance. These are not incompatible readings \u2014 they are structural facts about different agents' relationships to the same constraint. The mandatrophy resolves when we recognize that UDHR is a Tangled Rope from the analytical perspective: it REQUIRES both a genuine coordination function (legitimate mutual benefit for cooperating states) AND asymmetric extraction (the mechanism suppresses victims' exit options while benefiting enforcers). The coordination function (mutual respect for human dignity among signatories) is real and creates the basis for international cooperation. But this coordination is BUILT ON the suppression of marginalized populations' alternatives: a dissident in a rights-violating state cannot use the fact of UDHR ratification as evidence that they should expect international support (that support doesn't exist); the UDHR instead creates a false expectation that suppresses local resistance. Both features \u2014 genuine inter-state coordination AND suppression of victim agency \u2014 are structural requirements for UDHR to function as written. This is the defining property of Tangled Rope: you need both the coordination framework AND the extraction mechanism for the constraint to persist. The theater_ratio (0.68) rising to 0.72 indicates Piton degradation: as actual enforcement has failed to materialize, the performative function (citing UDHR as proof of legitimacy) has increasingly replaced the substantive function (actual rights protection). The mandatrophy is resolved by recognizing that the original 1948 intent (genuine universalism) decomposed into two separate constraints: (1) the inter-state coordination frame (Rope), which persists; (2) the rights-protection mechanism (which degraded to Piton theater). These should be analyzed separately."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "international_humanitarian_law",
+      "icc_jurisdiction_sovereignty_tension",
+      "state_ratification_enforcement_gap"
+    ],
+    "dual_formulation_note": "The UDHR label conflates multiple structurally distinct constraints: (1) the aspirational principle of universal human dignity (appears as Mountain to idealist observers, but structural data contradicts this); (2) the inter-state coordination frame for mutual respect (Rope); (3) the domestic enforcement mechanism (degraded to Piton, should be reclassified as separate constraint with its own \u03b5); (4) the suppression of marginalized populations' alternatives (Snare). These should ideally be decomposed into separate stories linked by network relationships. The present story treats UDHR as a single Tangled Rope from the primary analytical perspective, with perspectives showing how different agents experience the decomposition differently."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "international_humanitarian_law",
+      "westphalian_state_sovereignty"
+    ]
+  }
+}

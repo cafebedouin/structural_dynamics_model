@@ -1,0 +1,217 @@
+{
+  "header": {
+    "constraint_id": "meta_nuclear_power_agreement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "meta_nuc"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Meta's direct investment and offtake agreements for advanced nuclear power",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "meta_corporation",
+      "smr_developers",
+      "power_market_participants"
+    ],
+    "victims": [
+      "regional_grid_operators",
+      "competitive_power_generators",
+      "energy_price_discovery",
+      "grid_reliability_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Regional Grid Operators and Competitive Generators",
+      "comment": "PERSPECTIVE 1: REGIONAL GRID OPERATORS (SNARE) \u2014 Operators and non-aligned generators face extraction through bilateral bypass of the wholesale market. Meta's long-term power purchase agreements lock in capacity and pricing outside transparent auctions, reducing available supply for competitive bidding. Grid planners lose visibility into future demand and supply dynamics. Exit options are trapped: they must operate the grid infrastructure regardless of whether large power users exit the market through private deals."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Energy Price Discovery Mechanism",
+      "comment": "PERSPECTIVE 2: PRICE DISCOVERY COMMONS (SNARE) \u2014 The transparent wholesale electricity market depends on aggregating diverse supply and demand. When large consumers (Meta) and developers (SMR vendors) bypass price discovery through bilateral deals, the market loses volume and representative cost signals. This undermines accurate pricing for remaining market participants. The abstract collective good of price transparency has no exit option and bears the cost of extraction through information asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Grid Reliability and Resilience Coalition",
+      "comment": "PERSPECTIVE 3: GRID RELIABILITY COALITION (TANGLED ROPE) \u2014 Grid operators, utility regulators, and resilience engineers benefit from SMR deployment (additional generation capacity, load diversity, heat valorization). However, the bilateral structure between Meta and SMR developers extracts information and control: deployment timing becomes optimization for Meta's data center footprint, not grid reliability; emergency dispatch becomes uncertain (private agreements may reduce availability during system stress). Mixed benefits and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Meta Corporation",
+      "comment": "PERSPECTIVE 4: META CORPORATION (ROPE) \u2014 Experiences the constraint as pure coordination: long-term power purchase agreements solve the fundamental problem of matching massive, predictable AI demand with low-carbon supply. Direct investment in SMR developers aligns incentives and reduces capital barriers. Meta benefits from price stability, geographic flexibility, and guaranteed low-carbon capacity. Exit options are strong: Meta can locate data centers globally and has access to alternative power sources. The constraint is coordination that Meta structures to its advantage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "SMR Developers and Vendor Ecosystem",
+      "comment": "PERSPECTIVE 5: SMR DEVELOPERS (ROPE) \u2014 Offtake agreements de-risk capital development for advanced nuclear: guaranteed customer, long-term revenue, reduced merchant risk. Meta's willingness to sign multi-billion dollar contracts enables financing and deployment at scale. Developers benefit from both coordination (demand aggregation) and extraction (long-term customer lock-in at favorable terms from their perspective). Exit options are arbitrage: vendors can pursue alternative customers or different deployment models."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Energy Transition and Decarbonization Coalition",
+      "comment": "PERSPECTIVE 6: DECARBONIZATION COALITION (SCAFFOLD) \u2014 Climate advocates, renewable energy operators, and carbon accounting groups see Meta's SMR agreements as a temporary coordination mechanism accelerating the transition away from fossil fuels. The constraint is a bridge technology: it mobilizes private capital for nuclear deployment while grid decarbonization infrastructure matures. The sunset is structural \u2014 as grid carbon intensity falls (renewables + storage), the necessity for bilateral mega-watt agreements declines. The coalition experiences suppression (market distortion) but sees it as transitional, not permanent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Traditional Utility Regulation and Wholesale Market Operators",
+      "comment": "PERSPECTIVE 7: UTILITY REGULATORS (PITON) \u2014 The regulatory framework (FERC Order 2222, state RPS mandates, wholesale market rules) was designed for a world of geographically dispersed generators selling into transparent wholesale markets. Meta's bilateral offtake agreements exploit regulatory arbitrage: the agreements are structured as merchant generation + direct purchase, sidestepping utility-of-record obligations and rate oversight. The regulatory theater (public hearings, cost-benefit analysis, rate case litigation) persists but has diminished functional effect on deployment. Regulators maintain the illusion of oversight while private actors restructure the market underneath."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer: System-Level Constraint",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a system perspective, Meta's agreements solve a genuine coordination problem (matching AI demand with decarbonized power) while simultaneously creating asymmetric extraction (bypassing price discovery, consolidating market power, externalizing grid planning costs). The constraint is not a natural law but a contingent institutional arrangement: the ability to structure bilateral deals outside the wholesale market depends on regulatory permission, which is itself contested. The analytical perspective sees both the coordination function (real) and the extraction mechanism (real)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "regulatory_permission_boundary",
+      "question": "Will FERC and state regulators permit large-scale bilateral power purchase agreements to bypass wholesale market participation, or will they mandate wholesale participation and regulator-approved cost recovery?",
+      "resolution_mechanism": "FERC orders, state regulatory decisions, court challenges to merchant generation structures, legislative changes to grid market rules",
+      "impact": "If regulators permit bilateral bypass: the constraint escalates toward pure snare (market consolidation). If regulators mandate wholesale participation: the constraint degrades toward pure rope (coordination with transparent pricing).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether regulators allow bilateral offtake agreements to bypass wholesale markets"
+    },
+    {
+      "id": "smr_deployment_timeline_realism",
+      "question": "Will SMR vendors achieve cost-competitive, grid-ready deployment on the timeline promised in Meta agreements (2027\u20132035), or will technical delays and cost overruns force renegotiation?",
+      "resolution_mechanism": "Comparative analysis of promised vs actual SMR timelines; cost tracking for deployed units; regulatory approval pace (NRC licensing, environmental review); financing realization rates",
+      "impact": "If timelines hold: bilateral structure locks in extraction for 20+ years. If delays extend 5+ years: extraction opportunity window closes (grid decarbonization via renewables makes bilateral SMR agreements less necessary).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether SMR deployment timelines are achievable"
+    },
+    {
+      "id": "competitive_generator_coalition_formation",
+      "question": "Will competitive generators, utilities, and grid operators organize to challenge bilateral agreements through regulatory proceedings, or will they accept market consolidation passively?",
+      "resolution_mechanism": "FERC complaint filings, state regulatory interventions, legislative lobbying, litigation outcomes, market participation metrics",
+      "impact": "If coalition forms: regulatory pressure may force market opening (increasing \u03c7 in the constraint, raising suppression). If passive acceptance: extraction persists unchallenged.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether competitive generators organize political opposition"
+    },
+    {
+      "id": "grid_stability_empirical_impact",
+      "question": "Does Meta's demand flexibility (data center load shifting, geographic arbitrage) actually provide grid services that offset the market consolidation cost, or is demand-side flexibility insufficient to justify the market distortion?",
+      "resolution_mechanism": "Grid impact studies comparing actual vs promised flexibility; analysis of real-time dispatch data; frequency stability metrics with and without Meta load response",
+      "impact": "If flexibility is substantial: tangled rope classification confirmed (real coordination benefit + extraction). If flexibility is limited: snare classification escalates (extraction without offsetting coordination benefit).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Meta's demand flexibility provides grid services"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Meta's direct investment and power purchase agreements for advanced nuclear reactors (particularly Small Modular Reactors) represent a structural constraint that operates at the intersection of energy decarbonization, market consolidation, and regulatory arbitrage. The constraint arises because a single large consumer (Meta) can negotiate bilateral agreements with technology developers (SMR vendors) outside the transparent wholesale electricity market. This creates extraction through market bypass (reduced price discovery), consolidation of supply, and externalization of grid planning costs to regional operators. Simultaneously, the same agreements solve a genuine coordination problem: matching massive AI demand with low-carbon capacity at scale. The constraint exhibits both coordination and extraction, making it a diagnostic exemplar of Tangled Rope classification and the institutional permission boundary that determines whether it escalates toward pure market consolidation (Snare) or degrades toward transparent coordination (Rope).",
+    "key_agents": [
+      "Meta Corporation (institutional/arbitrage): Primary beneficiary \u2014 captures price stability, guaranteed low-carbon capacity, geographic flexibility, long-term supply security through direct investment and bilateral agreements",
+      "SMR Developers and Vendors (institutional/arbitrage): Primary beneficiary \u2014 de-risks capital, guarantees offtake, reduces merchant risk, gains access to Meta's financial resources and data center sites",
+      "Regional Grid Operators and Transmission Companies (moderate/constrained): Victim of market bypass \u2014 lose visibility into capacity planning, face reduced competitive supply for other customers, bear grid coordination costs externalized by bilateral agreements",
+      "Competitive Power Generators and Utilities (powerful/constrained): Victims of market consolidation \u2014 face reduced wholesale market volume, pricing opacity, and difficulty accessing Meta's demand (a prime customer lost to bilateral market)",
+      "Price Discovery Commons and Wholesale Market Mechanisms (powerless/trapped): Abstract victim \u2014 loses volume and representative cost signals as large transactions exit transparent market, undermining pricing accuracy for remaining participants",
+      "Decarbonization Coalition and Climate Advocates (organized/constrained): Mixed beneficiary and victim \u2014 benefits from SMR deployment acceleration but constrained by market distortion; sees constraint as temporary bridge technology with structured sunset",
+      "Energy Regulators and FERC (institutional/arbitrage): Institutional actor maintaining theater \u2014 oversee wholesale markets and merchant generation but lack enforcement mechanisms to prevent regulatory arbitrage; theater increases as bilateral structures proliferate"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. Meta's offtake agreements extract value through three mechanisms: (1) market bypass (exiting transparent wholesale market reduces pricing pressure), (2) supply consolidation (SMR capacity that could serve competitive market is locked into bilateral contract), (3) grid planning externality (regional operators must plan for unpredictable large consumer via private arrangement, not transparent forecasting). However, extractiveness is not severe (not 0.70+) because SMR capacity is genuinely new (not diverted from existing supply) and Meta's demand response flexibility provides some offsetting grid service. The measurement trajectory shows extractiveness increasing from 0.28 to 0.52 over the interval as bilateral agreements proliferate and lock in longer-term commitments. Suppression (0.48): Moderate. Barriers to competitive access include regulatory arbitrage (bilateral structures exploit gaps in wholesale market rules), capital concentration (only large consumers can negotiate SMR investment), information asymmetry (bilateral negotiations occur outside transparent venues), and path dependency (once Meta has secured supply, remaining generators have weaker negotiating position). However, suppression is not severe (not 0.60+) because regulatory mechanisms exist (FERC can mandate wholesale participation) and competitive generators can organize (industry associations, state-level interventions). Theater ratio (0.35): Low. The bilateral agreements are functionally transparent \u2014 the extraction mechanism (market bypass, consolidation, pricing advantage) is visible and explicable. Unlike traditional utility regulation or peer review, there is minimal performative theater: the constraint operates primarily through material market structure, not ritual. The theater ratio declines over the interval as market participants become increasingly explicit about the consolidation dynamic.",
+    "perspectival_gap": "This constraint reveals a fundamental divergence in how market actors perceive the same institutional arrangement. Meta sees coordination (solving the demand-supply matching problem for decarbonized power at scale). SMR developers see coordination with de-risking (achieving capital financing through guaranteed offtake). Grid operators and competitive generators see extraction and market consolidation (losing volume, visibility, and competitive position). The price discovery commons sees degradation of information quality (opacity from bilateral transactions). The decarbonization coalition sees a temporary but necessary bridge (constraint will sunset as renewables + storage mature). Regulators see their own theater (the wholesale market rules persist but their effect diminishes as bilateral deals proliferate). The analytical observer sees the tangled rope clearly: both coordination function and extraction mechanism are real and structural. The perspectival gap arises because different agents have different exit options relative to the constraint. Meta and SMR developers have strong arbitrage exits (both could restructure differently). Grid operators and generators have constrained exits (they must participate in wholesale markets regardless). The price discovery commons has no exit (transparency is a collective good). This structural differentiation in exit options produces the gap.",
+    "directionality_logic": "Directionality (d) for each agent is derived from their structural position: beneficiary status, victim status, and exit options. Meta (beneficiary + arbitrage) derives low d (~0.05\u20130.15), producing negative or near-zero f(d) \u2014 effective extraction runs TOWARD Meta, not away from it. Meta experiences \u03c7 < 0 (benefit). SMR developers (beneficiary + arbitrage) similarly derive low d, with positive f(d) benefit. Grid operators (victim + constrained) derive higher d (~0.55\u20130.65), producing elevated f(d) (1.15+) \u2014 they experience extraction. Competitive generators (victim + constrained but with some industry organization) derive d ~0.60\u20130.75, also elevated. The price discovery commons (powerless/trapped) derives maximum d (~0.95), producing maximum f(d) (~1.42) \u2014 the abstract collective good experiences maximum extraction but has no power to resist. The analytical observer (analytical exit) derives d ~0.70, producing f(d) ~1.15 \u2014 the observer is not extracted from but sees the structure clearly. The sigmoid f(d) function ensures that beneficiaries with strong exits experience dampened effective extraction (Meta's f(d) < 0), while victims with weak exits experience amplified extraction (grid operators' f(d) > 1.0). No directionality overrides are necessary \u2014 the structural derivation produces accurate d values.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY DECOMPOSITION: Meta's bilateral agreements decompose into at least three structurally distinct constraints: (1) the SMR financing problem (can venture capital + bilateral agreements de-risk nuclear development faster than traditional utility models?), (2) the market consolidation problem (do large bilateral agreements constitute monopolistic harm or efficient matching?), (3) the grid planning problem (do bilateral structures improve or degrade grid reliability?). These are not mere observational variations of a single constraint \u2014 they have different \u03b5 values, different victim/beneficiary structures, and different regulatory resolutions. SMR financing as a pure coordination problem would be Rope (\u03b5 ~0.15\u20130.25). Market consolidation is Snare or Tangled Rope (\u03b5 ~0.45\u20130.65). Grid planning coordination is Scaffold or Rope (\u03b5 ~0.20\u20130.40). The unified Meta constraint story (presented here) treats them as a single tangled rope because the offtake agreement bundles all three problems together structurally. However, future analysis may separate these stories if empirical work reveals that one component (e.g., SMR financing) decouples from another (e.g., market consolidation). The mandatrophy is resolved by recognizing that the tangled rope classification is the correct synthetic view: the constraint genuinely exhibits both coordination (SMR finance + supply matching) and extraction (market consolidation + grid planning externality). The theater ratio is low (0.35) because the extraction mechanism is not hidden \u2014 it operates through visible market structure, not performance or ritual."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "smr_capital_finance_bottleneck",
+      "wholesale_electricity_market_consolidation",
+      "renewable_grid_integration_timing"
+    ],
+    "dual_formulation_note": "Meta's agreements bundle three distinct structural constraints: (1) SMR financing (upstream: capital availability), (2) bilateral market consolidation (lateral: wholesale market dynamics), (3) grid planning coordination (downstream: regional reliability). Each has different \u03b5 values and victim structures. The unified constraint story (tangled rope) integrates them because they are structurally coupled by the offtake agreement. If empirical work reveals decoupling (e.g., SMR financing succeeds while market consolidation fails), the constraint family should decompose into separate stories linked by network edges. See 'uke_scope' field for UKE_SCOPE manifest provenance."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "smr_capital_finance_bottleneck"
+    ]
+  }
+}

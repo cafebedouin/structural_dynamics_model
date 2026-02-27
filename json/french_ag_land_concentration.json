@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "french_ag_land_concentration",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fagland"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "French Agricultural Land Concentration",
+    "topic_domain": "economic/agricultural_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_farm_operators",
+      "agricultural_equipment_manufacturers",
+      "input_consolidators"
+    ],
+    "victims": [
+      "small_holders",
+      "rural_communities",
+      "agricultural_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Small Farmer",
+      "comment": "PERSPECTIVE 1: SMALL FARMER (SNARE) \u2014 Trapped by mechanization costs, credit requirements, and land value inflation. Cannot exit without abandoning livelihood. Bears full cost of consolidation pressure through land value escalation and inability to compete with economies of scale. No coordination benefit; pure extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Sized Cooperative",
+      "comment": "PERSPECTIVE 2: MID-SIZED COOPERATIVE (TANGLED ROPE) \u2014 Constrained by subsidy structures and input pricing but benefits from cooperative pooling of resources and shared equipment. Experiences both extraction (pressure to consolidate for subsidy efficiency) and coordination (collective bargaining for input prices). Moderate agency through regional networks."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Agricultural Corporation",
+      "comment": "PERSPECTIVE 3: LARGE AGRICULTURAL CORPORATION (ROPE) \u2014 Benefits from consolidation through economies of scale and simplified logistics. Experiences constraint as coordination mechanism: land consolidation enables efficient input distribution and standardized production protocols. Net beneficiary with high exit options (can exit French market or lease arrangements at will)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Agricultural Ministry/CAP Structure",
+      "comment": "PERSPECTIVE 4: AGRICULTURAL MINISTRY & CAP STRUCTURE (TANGLED ROPE) \u2014 Enforces consolidation through subsidy structures that reward farm size and mechanization. Possesses institutional power and organizational capacity but constrained by EU CAP requirements and rural political backlash. Enforcement mechanism is active: acreage-based payments and equipment subsidies create strong incentive gradients toward consolidation. Secondary beneficiary through simplified administration."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Agro-Ecological Reform Movement",
+      "comment": "PERSPECTIVE 5: AGRO-ECOLOGICAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized advocates (environmental ministries, NGOs, young farmer collectives) see consolidation as a temporary institutional arrangement with a sunset. Regenerative agriculture, polyculture farms, and carbon credit markets are building alternative economic models that reward smaller-scale, biodiverse operations. High agency and visible exit pathway. Theater is minimal \u2014 actual alternative production systems are being deployed."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Rural Village Economy",
+      "comment": "PERSPECTIVE 6: RURAL VILLAGE ECONOMY (PITON) \u2014 The traditional multi-family farm village was the primary unit. That function has atrophied \u2014 consolidation has eliminated most of the small holdings that sustained rural communities. The village remains institutionally, with town halls, schools, and cultural events, but the economic base has collapsed. Maintenance is now performative: subsidized cultural festivals, heritage preservation grants. Theater ratio is high because the institutions persist without primary function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Agricultural Economics View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / ECONOMIC NATURALIZATION (MOUNTAIN) \u2014 From a civilizational view, consolidation appears as an immutable law of agricultural economics: mechanization and capital intensity necessarily drive consolidation; small farms cannot compete with economies of scale. This perspective naturalizes what is actually a contingent policy choice (subsidy structures, credit allocation, land-value taxation). The engine's false summit detector will identify this as naturalization of institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsidy_elasticity_threshold",
+      "question": "What level of CAP subsidy reform would shift the consolidation dynamic from snare to rope for small holders?",
+      "resolution_mechanism": "Comparative policy analysis: subsidy-per-hectare vs subsidy-per-farm-entity models; pilot regions with different payment structures; historical data from subsidy reforms (2003, 2015 CAP revisions)",
+      "impact": "If threshold exists at current funding levels: structural reform is possible. If consolidation is driven primarily by mechanization cost (not subsidies): subsidy reform alone cannot reverse trend.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "CAP subsidy elasticity for consolidation reversal"
+    },
+    {
+      "id": "agro_ecological_market_viability",
+      "question": "Can carbon markets, organic premiums, and regenerative agriculture create a sustainable economic alternative to consolidation before rural communities collapse entirely?",
+      "resolution_mechanism": "Market analysis of carbon credit pricing and volume; organic crop price differentials vs conventional; profitability modeling for small-scale regenerative operations; timeline comparison with rural depopulation rates",
+      "impact": "If viable at scale within 10 years: scaffold sunset is real and the constraint may reverse. If not viable: agro-ecological movement is aspirational theater, and consolidation is structural.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Market viability of regenerative agriculture as consolidation alternative"
+    },
+    {
+      "id": "land_value_spiral_reversibility",
+      "question": "Is land value inflation (driven by consolidation itself) reversible by policy, or has it created a structural lock-in where small-scale farming is no longer mathematically viable?",
+      "resolution_mechanism": "Land-value time series analysis; correlation with consolidation rates; modeling of land-tax or speculation-control policies and their historical effectiveness in other countries; assessment of whether current valuations can sustain small-farm economics even with optimal subsidies",
+      "impact": "If reversible: policy intervention (land tax, speculation controls, tenant protections) could restore viability. If locked-in: consolidation is now semi-autonomous and resistant to subsidy-based remedies.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether land value inflation creates irreversible consolidation lock-in"
+    },
+    {
+      "id": "intergenerational_succession_mechanism",
+      "question": "What fraction of small-farm abandonment is driven by active extraction (pricing out young farmers) vs passive succession failure (aging owners with no heirs willing to stay)?",
+      "resolution_mechanism": "Demographic analysis of farm succession patterns; interviews with exiting farmers; comparison of abandonment rates with land purchase prices for new farmers; assessment of family farm culture shift",
+      "impact": "If active extraction dominates: policy can address barriers (credit access, land pricing). If succession failure dominates: the constraint is demographic and cultural, not purely economic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of active extraction vs cultural succession failure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "French agricultural land concentration represents a multi-decade structural transformation driven by mechanization, subsidy incentives, and credit allocation patterns. The constraint exhibits the hallmark Tangled Rope structure: it solves a genuine coordination problem (input logistics, equipment efficiency, labor markets) while simultaneously extracting from a substantial class of actors (small farmers, rural communities). The extractiveness has increased from 0.32 to 0.58 over four decades as consolidation has become self-reinforcing through land value inflation and subsidy structure. The low theater ratio (0.45) indicates that the underlying consolidation is real and functional\u2014this is not a performative ritual but an actual economic mechanism. However, the constraint now faces pressure from agro-ecological movements and climate-focused agricultural reform (carbon markets, regenerative premiums), which may provide a genuine sunset pathway via alternative economic models. The piton perspective captures the collapse of rural village economies: the institutions remain (town halls, cooperatives) but their primary function (supporting multi-family farming) has atrophied. The mountain perspective risks naturalizing a contingent policy choice as an iron law of agricultural economics.",
+    "key_agents": [
+      "Small Farmers: Primary victims (powerless/trapped) \u2014 face mechanization costs, land value inflation, subsidy structures that disadvantage smaller operations",
+      "Large Farm Operators: Primary beneficiaries (institutional/arbitrage) \u2014 capture economies of scale, favorable subsidy treatment, operational flexibility",
+      "Agricultural Ministry & CAP Structure: Institutional enforcer (organized/constrained) \u2014 maintains consolidation-favoring subsidy systems while constrained by EU requirements and rural political backlash",
+      "Agro-Ecological Movement: Organized reformers (organized/mobile) \u2014 environmental NGOs, young farmers, climate advocates building alternative economic models with sunset potential",
+      "Rural Village Communities: Victims through degradation (institutional/constrained) \u2014 experienced primary function collapse; now maintained through heritage subsidies (piton state)",
+      "Input Consolidators (Equipment, Seed, Fertilizer): Secondary beneficiaries (institutional/arbitrage) \u2014 larger farms create simplified distribution networks and standardized input requirements",
+      "Credit and Land Finance Systems: Institutional participants (institutional/arbitrage) \u2014 land value appreciation and consolidation financing create extraction through debt and asset concentration"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High but not extreme. The constraint demonstrates clear extraction (small farmers exit while their land passes to larger operations at inflated values). However, the underlying coordination function is real\u2014consolidation does enable efficient input distribution and mechanized operations. The value reflects that extraction is structural and self-reinforcing but not total: some small farmers survive through niche markets, cooperatives, or agro-ecological premiums. Suppression (0.62): Moderate-high. Multiple barriers prevent small farmers from competing: mechanization capital requirements, credit gatekeeping, subsidy structures that reward acreage, and land value inflation that makes entry prohibitive. However, suppression is not absolute\u2014exit options exist through cooperative structures, agro-ecological pivots, or part-time farming. Theater ratio (0.45): Moderate-low. The consolidation is functionally real, not performative. Mechanization actually reduces labor needs; scale actually reduces per-unit input costs. This is not a ritual maintained by institutional inertia but an active economic mechanism. The theater that exists (heritage preservation grants, rural development subsidies) is supplementary to the core consolidation dynamic.",
+    "perspectival_gap": "This constraint shows maximal perspectival divergence. The small farmer sees a snare (trapped, no alternatives, pure extraction). The large operator sees a rope (coordination mechanism enabling efficient operations). The ministry sees tangled rope (they both solve a coordination problem AND extract value). The agro-ecological movement sees a scaffold (temporary arrangement with a visible sunset via carbon markets and regenerative economics). The rural village sees a piton (institutional forms persist, but primary economic function has collapsed). The civilizational analytical observer risks seeing a mountain (natural law of agricultural economics), but this naturalizes what is actually a policy choice about subsidy design and credit allocation. The engine's false summit detector should flag this.",
+    "directionality_logic": "Directionality values are derived from structural position and exit options. Small farmers (trapped exit, victim status) experience maximum d \u2192 high f(d) \u2192 high effective extraction chi. Large operators (arbitrage exit, beneficiary status) experience low d \u2192 low/negative f(d) \u2192 they experience the constraint as beneficial coordination. The ministry has organized power and constrained exit (locked into CAP structure by EU), placing them in institutional beneficiary position with moderate d. The agro-ecological movement has organized power and mobile exit (can deploy alternative systems), giving them lower d despite partial victim status. Rural communities have constrained exit and victim status historically, but their institutions now lack primary function\u2014they are maintained through separate subsidy mechanisms (piton). This decomposition requires separate perspectives for each institutional actor because their exit options and structural relationships differ substantially.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through structural differentiation of actors and their exit options. The potential error is naturalizing consolidation as inevitable economic law (mountain perspective). The actual structure is: a genuine coordination problem (mechanization requires scale) is being solved through institutional mechanisms (subsidy structures, credit allocation, land-value taxation policies) that extract from one class (small farmers) while benefiting another (large operators). If the subsidy and credit structures were redesigned, the same mechanization coordination could be achieved with lower extraction\u2014proving that the extractiveness is not an immutable feature of agricultural economics but a contingent feature of French policy design. The scaffold perspective (agro-ecological alternatives) tests this: if regenerative and polyculture systems can become economically competitive through carbon credits and organic premiums, the constraint may reverse. This would conclusively show that consolidation was tangled rope (coordination + extraction), not mountain (natural law)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "european_cap_subsidy_structure",
+      "rural_property_speculation"
+    ],
+    "dual_formulation_note": "French agricultural land concentration is downstream of EU CAP subsidy design (acreage-based payments favor larger operations) and upstream of rural community collapse. The constraint family includes the CAP structure itself (institutional-level mechanism) and individual regional land-concentration stories with different \u03b5 values based on local geography and inheritance patterns."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

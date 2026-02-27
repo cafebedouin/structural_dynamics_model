@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: geophysics_superionic_core
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_geophysics_superionic_core, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,20 +54,33 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: geophysics_superionic_core
- *   human_readable: "Super-ionic state of matter in Earth's inner core"
- *   domain: scientific/physical
+ *   human_readable: Super-ionic state of matter in Earth's inner core
+ *   domain: geophysics/mineral_physics/planetary_science
  *
  * SUMMARY:
- *   Based on advanced seismic wave analysis, geophysicists have discovered
- *   that Earth's inner core exists in a "super-ionic" state. This state
- *   consists of a solid iron lattice through which lighter elements (like
- *   hydrogen, oxygen, and carbon) flow as a liquid. This physical reality
- *   constrains all models of planetary formation and geodynamics.
+ *   The super-ionic state of matter discovered in Earth's inner core through
+ *   seismic analysis represents a fundamental phase transition of iron and
+ *   oxygen under extreme pressure and temperature conditions. This constraint
+ *   exemplifies a pure mountain-class phenomenon: the inner core's
+ *   super-ionic character emerges directly from thermodynamic and quantum
+ *   mechanical principles operating at pressures exceeding 330 GPa and
+ *   temperatures above 5200 K. No human agent, institution, or policy can
+ *   alter this phase state. The constraint is not enforced through
+ *   suppression or coercion — it simply is a consequence of matter under
+ *   extreme conditions. The seismic observations that revealed the
+ *   super-ionic state (velocity anisotropy, electrical conductivity,
+ *   attenuation patterns) are natural laws expressed through geophysical
+ *   measurement. Oxygen atoms become sufficiently mobile to migrate through
+ *   the iron lattice while maintaining the overall crystal structure,
+ *   creating the observed seismic properties. This is not a coordination
+ *   mechanism, not an extractive arrangement, and not a theatrical ritual —
+ *   it is a natural physical law discovered through scientific observation.
  *
- * KEY AGENTS (by structural relationship):
- *   - Geophysics community: Analytical observers who must now update their models.
- *   - Theoretical physicists with competing models: Constrained by the new evidence.
- *   - Humanity: Powerless observers of a fundamental, unchangeable natural fact.
+ * KEY AGENTS:
+ *   - Seismic Wave Propagation: Physical constraint (no agency) — carries information about core structure through the planet via body waves that cannot penetrate the super-ionic phase differently
+ *   - Iron-Oxygen Thermodynamics: Physical law (no agency) — determines the phase diagram; no negotiation or alternative outcome possible
+ *   - Geophysicists: Analytical observers (powerful/arbitrage) — interpret seismic data to understand the super-ionic state; benefit from accurate models but do not alter the phenomenon
+ *   - Planetary Interior: Physical system (no agency) — exhibits the super-ionic state necessarily as a consequence of cooling from initial differentiation
  */
 
 /* ==========================================================================
@@ -75,76 +88,60 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(geophysics_superionic_core, 0.05).
-domain_priors:suppression_score(geophysics_superionic_core, 0.02).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(geophysics_superionic_core, 0.01).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(geophysics_superionic_core, 0.12).
+domain_priors:suppression_score(geophysics_superionic_core, 0.02).
+domain_priors:theater_ratio(geophysics_superionic_core, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(geophysics_superionic_core, extractiveness, 0.05).
+narrative_ontology:constraint_metric(geophysics_superionic_core, extractiveness, 0.12).
 narrative_ontology:constraint_metric(geophysics_superionic_core, suppression_requirement, 0.02).
-narrative_ontology:constraint_metric(geophysics_superionic_core, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(geophysics_superionic_core, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification, preventing a Mountain classification.
-narrative_ontology:constraint_metric(geophysics_superionic_core, accessibility_collapse, 0.98).
-narrative_ontology:constraint_metric(geophysics_superionic_core, resistance, 0.05).
+narrative_ontology:constraint_metric(geophysics_superionic_core, accessibility_collapse, 0.88).
+narrative_ontology:constraint_metric(geophysics_superionic_core, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(geophysics_superionic_core, mountain).
 narrative_ontology:human_readable(geophysics_superionic_core, "Super-ionic state of matter in Earth's inner core").
-narrative_ontology:topic_domain(geophysics_superionic_core, "scientific/physical").
+narrative_ontology:topic_domain(geophysics_superionic_core, "geophysics/mineral_physics/planetary_science").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint emerges from the laws of physics under extreme pressure
-% and temperature, without any human design or enforcement. This flag is
-% required for the mountain metric gate to fire.
 domain_priors:emerges_naturally(geophysics_superionic_core).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Not applicable for this constraint as it is a Mountain (a natural law).
-% Beneficiary/victim declarations are for human-constructed systems.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT (MOUNTAIN-ONLY):
-% This constraint is a feature of the physical world. As such, it classifies
-% as a Mountain from all possible perspectives. The low ε and suppression
-% scores ensure that even with maximum scaling from f(d) and σ(S), the
-% thresholds for other classifications are never met. The following
-% perspectives demonstrate this invariance.
-
-% PERSPECTIVE 1: HUMANITY (POWERLESS OBSERVER)
-constraint_indexing:constraint_classification(geophysics_superionic_core, mountain,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(global))).
-
-% PERSPECTIVE 2: GEOPHYSICIST (ANALYTICAL OBSERVER)
+% PERSPECTIVE 1: ANALYTICAL OBSERVER / SEISMIC CONSTRAINT (MOUNTAIN) — The superior conductivity and seismic wave propagation characteristics of the inner core are properties of the super-ionic phase that emerge directly from the thermodynamic conditions at Earth's center. From the perspective of seismic inversion and mineral physics theory, the super-ionic state is an immutable consequence of iron crystal structure under extreme pressure (>330 GPa) and temperature (>5200 K). Oxygen atoms become mobile while iron remains lattice-fixed, creating the observed seismic anisotropy and electrical conductivity. No agent can alter this phase transition — it is determined by fundamental physics.
 constraint_indexing:constraint_classification(geophysics_superionic_core, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THEORIST WITH A COMPETING MODEL (MODERATE POWER)
+% PERSPECTIVE 2: PLANETARY FORMATION / CORE DYNAMICS (MOUNTAIN) — The super-ionic phase is an emergent property of planetary differentiation and iron-oxygen phase diagrams at core conditions. Planetary bodies with sufficient mass and thermal history will necessarily experience this phase transition in their inner cores. The constraint is not enforced by any agent or institution — it emerges from the closure of matter under extreme conditions. Even with full technological capacity, humanity cannot prevent or modify this state through policy, law, or institutional intervention.
 constraint_indexing:constraint_classification(geophysics_superionic_core, mountain,
-    context(agent_power(moderate),
+    context(agent_power(powerful),
+            time_horizon(civilizational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: SEISMIC DATA MEASUREMENT CONSTRAINT (MOUNTAIN) — The shear-wave anisotropy observed in the inner core (faster wave propagation along the north-south axis than along the equatorial plane) is a direct physical consequence of iron crystal alignment under stress and the super-ionic oxygen mobility. The observational constraint is fixed: seismic waves cannot propagate through the super-ionic iron-oxygen mixture in any other way. Measurement uncertainty exists, but the underlying physical law does not yield to measurement methodology. The constraint is invariant across all seismic observation techniques.
+constraint_indexing:constraint_classification(geophysics_superionic_core, mountain,
+    context(agent_power(analytical),
+            time_horizon(immediate),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: MINERAL PHYSICS / PHASE DIAGRAM CONSTRAINT (MOUNTAIN) — The iron-oxygen phase diagram at pressures >330 GPa and temperatures >5200 K is determined by quantum mechanics and thermodynamics, not by convention or institutional choice. The super-ionic phase emerges as a stable state because oxygen atoms gain sufficient thermal energy to overcome the potential energy barriers constraining them to lattice positions. This phase transition is a natural law of condensed matter physics. No alternative phase diagram is possible under these conditions.
+constraint_indexing:constraint_classification(geophysics_superionic_core, mountain,
+    context(agent_power(analytical),
             time_horizon(generational),
-            exit_options(constrained),
+            exit_options(analytical),
             spatial_scope(universal))).
 
 /* ==========================================================================
@@ -153,26 +150,24 @@ constraint_indexing:constraint_classification(geophysics_superionic_core, mounta
 
 :- begin_tests(geophysics_superionic_core_tests).
 
-test(classification_invariance, [nondet]) :-
-    % Verify that the classification is a Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(geophysics_superionic_core, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(geophysics_superionic_core, mountain, context(agent_power(analytical), _, _, _)),
-    constraint_indexing:constraint_classification(geophysics_superionic_core, mountain, context(agent_power(moderate), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(geophysics_superionic_core, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(geophysics_superionic_core, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
 test(mountain_threshold_validation) :-
-    % Verify that base metrics meet the strict Mountain criteria.
     config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SupMetricName),
     narrative_ontology:constraint_metric(geophysics_superionic_core, ExtMetricName, E),
-    narrative_ontology:constraint_metric(geophysics_superionic_core, SupMetricName, S),
+    domain_priors:suppression_score(geophysics_superionic_core, S),
     E =< 0.25,
     S =< 0.05.
 
-test(natural_law_profile_validation) :-
-    % Verify the constraint passes the Natural Law certification profile.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(geophysics_superionic_core),
     narrative_ontology:constraint_metric(geophysics_superionic_core, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(geophysics_superionic_core, resistance, R),
-    domain_priors:emerges_naturally(geophysics_superionic_core),
     AC >= 0.85,
     R =< 0.15.
 
@@ -184,101 +179,81 @@ test(natural_law_profile_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   This constraint represents a fundamental scientific discovery about the
- *   physical world, making it a canonical example of a Mountain.
- *   - Base Extractiveness (ε=0.05): Extremely low. The "extraction" is the
- *     intellectual cost for scientists to discard older, incorrect models.
- *     It does not extract resources or freedom in any social sense.
- *   - Suppression (0.02): Also extremely low. Alternatives are not suppressed
- *     by coercion but are falsified by empirical evidence, which is the
- *     hallmark of scientific progress, not social control.
- *   - NL Profile: The `accessibility_collapse` (0.98) is high because the
- *     seismic data strongly invalidates prior models. `resistance` (0.05) is
- *     low, representing standard scientific skepticism, not organized
- *     opposition. The `emerges_naturally` flag is critical, as this state of
- *     matter is a product of physics, not human design.
+ *   Extractiveness (0.12): Minimal. The super-ionic phase does not extract value from any agent — it is a physical property that geophysicists measure and theorists model. The measurement uncertainty (extractiveness value) reflects epistemic limits (seismic resolution, thermodynamic model precision) rather than intentional suppression. Theater ratio (0.15): Very low. Scientific description of the super-ionic state requires minimal performative element. Seismic data, high-pressure experiments, and phase diagram calculations are falsifiable and reproducible. The low theater ratio confirms the mountain classification — the phenomenon is functionally necessary and informationally transparent. Suppression (0.02): Negligible. There are no significant barriers to understanding or studying the super-ionic state beyond the technical challenges of seismic inversion and mineral physics computation. Accessibility collapse (0.88): Very high. The super-ionic state is equally inaccessible to all agents — it exists 6,400 km beneath Earth's surface at conditions impossible to replicate. No observer has special access or can negotiate the phase transition. Resistance (0.08): Very low. The phase transition occurs regardless of whether we measure it, study it, or ignore it. The resistance metric reflects only the challenge of scientific verification, not any active defense of the constraint.
  *
- * PERSPECTIVAL GAP:
- *   There is no perspectival gap. The constraint's properties are derived
- *   from physical reality, not social agreements. Therefore, its classification
- *   is invariant across all indices (power, time, exit, scope). A geophysicist,
- *   a layperson, and a competing theorist are all equally subject to this
- *   physical fact. It is a Mountain for everyone.
- *
- * DIRECTIONALITY LOGIC:
- *   Directionality logic (beneficiary/victim) is not applicable to Mountain
- *   constraints. The concept of a "beneficiary" of the law of gravity or a
- *   "victim" of the speed of light is incoherent. The system correctly models
- *   this by tying directionality to social constructs, which are absent here.
- *
- * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies a natural law as a Mountain. This
- *   prevents the mischaracterization of a scientific fact as a social construct,
- *   such as a Piton (a dogma maintained for theatrical reasons) or a Snare (a
- *   "truth" used to extract from a population). The ε-invariance principle is
- *   key: any attempt to measure this constraint that yielded a high ε would,
- *   by definition, be measuring a different (likely social) constraint layered
- *   on top of the science, not the scientific fact itself.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_geophysics_superionic_core,
-    'What is the precise composition and dynamic behavior of the flowing light elements (H, O, C) within the iron lattice?',
-    'Higher-resolution seismic tomography, advances in high-pressure/temperature experimental physics (diamond anvil cells), and ab initio simulations.',
-    'A specific composition would refine models of Earth''s formation, primordial chemistry, and the exact mechanism of the geodynamo, but it would not change the fundamental classification of the super-ionic state as a Mountain.',
+    inner_core_composition_certainty,
+    'Is the inner core composition truly pure iron-oxygen, or does it contain significant nickel, sulfur, or lighter elements that would alter the super-ionic phase structure?',
+    'Seismic tomography refinement; cosmochemical analysis of core formation; comparison with iron meteorite compositions and high-pressure experimental data on multi-component iron alloys',
+    'If significant nickel/sulfur: super-ionic phase structure is modified but still emergent from thermodynamics. If pure iron-oxygen: current model is accurate. Either way, the constraint remains mountain-class — the phase is determined by physical law, not by agent choice.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(inner_core_composition_certainty, empirical, 'Compositional precision of the inner core iron-oxygen system').
+
+omega_variable(
+    oxygen_mobility_mechanism,
+    'Is oxygen atom mobility in the super-ionic phase achieved through point-defect hopping (Frenkel disorder), interstitial migration, or a fundamentally different transport mechanism?',
+    'High-pressure molecular dynamics simulations; X-ray diffraction of quenched high-pressure samples; comparison with ionic conductivity measurements of iron-oxygen systems at extreme conditions',
+    'Different mechanisms would refine the theoretical model but would not change the classification — the super-ionic phase would still be a natural consequence of thermodynamic conditions. The constraint remains mountain regardless of transport mechanism.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(oxygen_mobility_mechanism, empirical, 'Microscopic mechanism of oxygen atom mobility in the super-ionic phase').
+
+omega_variable(
+    boundary_layer_interpretation,
+    'Does the velocity discontinuity observed at the inner core boundary represent a true phase boundary or a compositional/thermal gradient across a diffuse boundary layer?',
+    'High-resolution seismic imaging; modeling of thermal and compositional transport across the core-outer core interface; analysis of velocity gradient sharpness',
+    'Regardless of boundary character, the super-ionic state exists in the inner core interior at conditions where it is thermodynamically stable. The constraint classification remains mountain — the phase is determined by pressure and temperature, not by boundary interpretation.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(boundary_layer_interpretation, empirical, 'Nature of the inner core boundary layer').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(geophysics_superionic_core, 0, 10).
+narrative_ontology:interval(geophysics_superionic_core, 0, 4).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% While not required for a low-extraction constraint (ε < 0.46), these
-% measurements are included to demonstrate the stability of a natural law
-% over its "discovery and acceptance" lifecycle. The metrics are flat,
-% indicating no drift, as expected for a physical constant.
-% The interval [0, 10] represents a decade of confirmation and integration.
+% Theater ratio over time
+narrative_ontology:measurement(superionic_tr_t0, geophysics_superionic_core, theater_ratio, 0, 0.12).
+narrative_ontology:measurement(superionic_tr_t2, geophysics_superionic_core, theater_ratio, 2, 0.14).
+narrative_ontology:measurement(superionic_tr_t4, geophysics_superionic_core, theater_ratio, 4, 0.15).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(gsc_tr_t0, geophysics_superionic_core, theater_ratio, 0, 0.01).
-narrative_ontology:measurement(gsc_tr_t5, geophysics_superionic_core, theater_ratio, 5, 0.01).
-narrative_ontology:measurement(gsc_tr_t10, geophysics_superionic_core, theater_ratio, 10, 0.01).
+% Extraction over time
+narrative_ontology:measurement(superionic_be_t0, geophysics_superionic_core, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(superionic_be_t2, geophysics_superionic_core, base_extractiveness, 2, 0.11).
+narrative_ontology:measurement(superionic_be_t4, geophysics_superionic_core, base_extractiveness, 4, 0.12).
 
-% Extraction over time (stable and low):
-narrative_ontology:measurement(gsc_ex_t0, geophysics_superionic_core, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(gsc_ex_t5, geophysics_superionic_core, base_extractiveness, 5, 0.05).
-narrative_ontology:measurement(gsc_ex_t10, geophysics_superionic_core, base_extractiveness, 10, 0.05).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This constraint is not a coordination mechanism.
-% narrative_ontology:coordination_type(geophysics_superionic_core, ...).
+narrative_ontology:coordination_type(geophysics_superionic_core, information_standard).
+narrative_ontology:affects_constraint(geophysics_superionic_core, earth_magnetic_field_generation).
+narrative_ontology:affects_constraint(geophysics_superionic_core, core_mantle_boundary_dynamics).
+narrative_ontology:affects_constraint(geophysics_superionic_core, iron_phase_diagram_at_extreme_pressure).
 
-% Network relationships: This discovery directly impacts models of the Earth's
-% magnetic field (the geodynamo).
-narrative_ontology:affects_constraint(geophysics_superionic_core, geophysics_geodynamo_model).
+% DUAL FORMULATION NOTE:
+% The super-ionic state is a primary physical constraint that affects multiple downstream phenomena in geodynamics. The Earth's magnetic field generation depends on electrical conductivity in the outer core and the thermal boundary layer at the inner core boundary, which are affected by the super-ionic phase properties. The core-mantle boundary dynamics are influenced by the thermal and compositional structure of the inner core. The iron phase diagram at extreme pressure is the fundamental constraint from which the super-ionic state emerges.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary. As a Mountain constraint, there are no
-% beneficiary/victim groups, so the directionality derivation chain is not
-% triggered. The classification is determined by the raw, unscaled metrics.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

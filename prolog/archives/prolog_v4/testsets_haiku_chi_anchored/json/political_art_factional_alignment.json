@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "political_art_factional_alignment",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pafa"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Factional Alignment Requirement for Political Art",
+    "topic_domain": "economic/cultural_production",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "faction_aligned_artists",
+      "polarized_audience_faction",
+      "platform_gatekeepers"
+    ],
+    "victims": [
+      "nonaligned_artists",
+      "cross_factional_discourse",
+      "artistic_independence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Non-Aligned Artist",
+      "comment": "PERSPECTIVE 1: NON-ALIGNED ARTIST (SNARE) \u2014 Artist without faction backing lacks distribution channels, funding, audience access. Market demands explicit factional alignment to achieve monetization. Exit is trapped: cannot reach audience without platform mediation, platforms filter by faction. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Cross-Factional Discourse Function",
+      "comment": "PERSPECTIVE 2: CROSS-FACTIONAL DISCOURSE (SNARE) \u2014 The abstract function of art that creates shared meaning across factional boundaries has no institutional advocate and no exit. Bears full cost of factional sorting: art that could bridge divides is suppressed by market logic. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Faction-Aligned Artist",
+      "comment": "PERSPECTIVE 3: FACTION-ALIGNED ARTIST (TANGLED ROPE) \u2014 Benefits from platform promotion, audience infrastructure, funding from faction-aligned patrons. But also constrained: must maintain alignment signals, faces backlash if perceived as drifting, career depends on sustaining faction identity. Coordination function exists (faction + artist together amplify message); extraction function exists (faction demands narrative loyalty). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Platform Gatekeepers & Algorithm Operators",
+      "comment": "PERSPECTIVE 4: PLATFORM GATEKEEPERS (ROPE) \u2014 Social media platforms and recommendation algorithms benefit from factional polarization: engagement metrics reward emotionally charged content, factional alignment drives engagement. Experience the constraint as coordination: matching artists to factions is a search problem they claim to solve algorithmically. d\u22480.10, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03. Low extraction (beneficiaries); exit via arbitrage (can shift algorithms anytime)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Organized Faction Leadership",
+      "comment": "PERSPECTIVE 5: FACTION LEADERSHIP (TANGLED ROPE) \u2014 Benefits from art that reinforces factional narrative and attracts supporters (coordination function: narratives amplified through cultural production). But also faces costs: must fund artists, manage defections, maintain coherent messaging, risk of artists becoming famous enough to break free. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Arts Funding & Curation Institution",
+      "comment": "PERSPECTIVE 6: TRADITIONAL ARTS INSTITUTIONS (PITON) \u2014 Museums, galleries, publishing houses once served cross-factional curation function. Now largely theatrical: endorse diversity and artistic freedom while adhering to factional alignment norms in actual acquisition/exhibition. theater_ratio\u22480.58 reflects performative neutrality masking factional gatekeeping. Sees own function as degraded but persists through institutional inertia and board/donor faction alignment. d\u22480.15, f(d)\u22480.10, \u03c3=1.0 \u2192 \u03c7\u22480.06."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scale: factional alignment requirement is a hybrid mechanism. Coordination function: connects artists with audiences of shared values (real efficiency gain). Extraction function: suppresses cross-factional art that could build broader understanding (real cost). d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.62. The constraint has both genuine and extractive components."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "artist_authenticity_vs_alignment",
+      "question": "Can an artist authentically express factional perspective without coercion, or does market selection create illusory alignment?",
+      "resolution_mechanism": "Interview-based study of artist intent pre- and post-success; analysis of artistic output change as faction audience grows; longitudinal tracking of artist statements about creative constraints",
+      "impact": "If authentic: constraint is pure coordination (Rope from all perspectives). If coerced: constraint is extraction (Snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether factional alignment is authentic expression or market coercion"
+    },
+    {
+      "id": "cross_factional_audience_viability",
+      "question": "In a polarized market, can art that explicitly avoids factional alignment still achieve commercial viability, or is the market structure itself anti-viability?",
+      "resolution_mechanism": "Tracking of 'non-aligned' or 'bridge-building' art projects: funding sources, distribution reach, audience size, revenue, sustainability. Comparison with faction-aligned art of similar quality.",
+      "impact": "If viable: market is filtering, not suppressing (constraint is coordination problem). If systematically non-viable: market structure enforces factional alignment (constraint is extraction/snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Market viability of non-aligned or cross-factional art"
+    },
+    {
+      "id": "platform_neutrality_capacity",
+      "question": "Can recommendation algorithms be designed to promote cross-factional art at parity with faction-aligned art, or does engagement optimization inherently favor polarization?",
+      "resolution_mechanism": "Experimental A/B testing of platform algorithms: engagement metrics for factional vs. non-aligned content under different algorithmic weightings; technical feasibility analysis of neutrality-preserving ranking",
+      "impact": "If feasible: gatekeeping is design choice, not technical necessity (platforms are complicit extractors). If infeasible: constraint emerges from engagement structure itself (closer to inevitable economic law).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of platform neutrality in algorithmic promotion"
+    },
+    {
+      "id": "subsidy_sufficiency_for_cross_factional",
+      "question": "Would public funding, grants, or patronage systems without factional requirements enable cross-factional art to compete with commercially-driven faction-aligned art?",
+      "resolution_mechanism": "Comparative analysis of non-commercial art production (grants, public radio, indie publishing): rate of cross-factional themes vs. commercially-dependent art; artistic freedom statements from funded vs. commercially-dependent artists",
+      "impact": "If yes: constraint is market structure (could be reformed). If no: constraint reflects audience genuine preferences (coordination problem, not extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative funding models enable cross-factional art"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "In a politically polarized media environment, commercial success for art addressing divisive figures or topics increasingly requires alignment with a sufficiently large and financially supporting faction. This creates a tangled rope constraint: genuine coordination function (connecting artists with aligned audiences) coexists with extractive mechanism (suppressing cross-factional art and artistic independence). The constraint has strengthened over the past two decades as polarization has grown, social media algorithms have optimized for engagement (which correlates with emotional/factional content), and funding increasingly flows through faction-aligned patronage networks. The theater ratio (0.58) reflects that institutions ostensibly dedicated to artistic freedom and cross-factional dialogue (museums, arts councils, publishing) increasingly operate under factional pressure while maintaining performative neutrality. The constraint affects different agents radically differently: non-aligned artists face trapped exit (need platform access but platforms demand alignment); faction-aligned artists see mixed benefits and constraints; platforms benefit from alignment-driven engagement; faction leadership gains narrative power but incurs management costs; traditional curation institutions are degraded pitons performing their former cross-factional function.",
+    "key_agents": [
+      "Non-aligned artists: Primary victims (powerless/trapped) \u2014 cannot access distribution without faction alignment; artistic independence is suppressed",
+      "Cross-factional discourse function: Abstract victim (powerless/trapped) \u2014 the capacity of art to bridge political divides has no institutional advocate and bears full cost of polarization",
+      "Faction-aligned artists: Beneficiaries and constrained victims (moderate/constrained) \u2014 benefit from faction platform and funding but locked into alignment signaling and narrative loyalty",
+      "Platform gatekeepers (social media algorithms, recommendation systems): Primary beneficiaries (institutional/arbitrage) \u2014 profit from engagement driven by factional alignment; experience constraint as coordination problem they are solving",
+      "Faction leadership & organized political movements: Beneficiaries (organized/constrained) \u2014 gain narrative amplification and cultural production aligned with ideology; must fund and manage artist relationships",
+      "Traditional arts institutions (museums, galleries, publishing): Degraded institutions (institutional/arbitrage) \u2014 maintain performance of artistic freedom while operating under factional pressure; see own function as atrophied piton",
+      "Analytical observer: Neutral analytical perspective (analytical/analytical) \u2014 identifies both coordination (matching artists to compatible audiences) and extraction (suppressing cross-factional art) components"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over time. Base measurement at t=0 was 0.30 \u2014 when polarization was less severe and digital distribution less concentrated. Current value (0.52) reflects that faction-aligned content receives disproportionate platform amplification, funding availability, and audience reach. Non-aligned artists systematically face higher barriers to monetization. The trajectory shows accumulation of extraction as platforms have become more concentrated and polarization has intensified. Suppression (0.68): High. Multiple mechanisms suppress non-aligned art: algorithmic preference for engagement (which correlates with factional content), platform content moderation that is faction-sensitive, funding concentrated through faction-aligned patrons, peer networks and professional communities that reward factional alignment. But suppression is not total: independent art production remains possible (hence not 0.95). The gap reflects that suppression works through market incentives and social pressure rather than direct coercion. Theater ratio (0.58): Moderate-high. Arts institutions nominally dedicated to artistic freedom and cross-factional dialogue (museum acquisition committees, literary prizes, grants programs) increasingly screen for factional alignment while framing decisions as merit-based. The performative content has grown as the gap between stated values and actual behavior has widened. Claimed type: Tangled Rope (required fields met: requires_active_enforcement=true, beneficiaries=[faction_aligned_artists, polarized_audience_faction, platform_gatekeepers], victims=[nonaligned_artists, cross_factional_discourse, artistic_independence]).",
+    "perspectival_gap": "Radical divergence in classification across perspectives reveals structural asymmetry. Non-aligned artists and cross-factional discourse perceive pure extraction (Snare): the market structure actively prevents their participation. Faction-aligned artists experience hybrid constraint (Tangled Rope): they benefit from faction infrastructure but are locked into alignment signals. Platform gatekeepers experience pure coordination (Rope): they genuinely solve the problem of matching artists to audiences (from their perspective, the 'problem' is that artists are diverse and markets are heterogeneous). Traditional institutions see their own degradation (Piton): they once served cross-factional curation but now operate as faction-aligned gatekeepers while performing artistic neutrality. The analytical observer sees the full tangled structure: real coordination problem (audiences have real factional preferences) plus real extraction (suppression of cross-factional art that could serve minority preferences or bridge functions). The perspectival gap is not an observation problem \u2014 it reflects that different agents experience genuinely different constraint types.",
+    "directionality_logic": "Non-aligned artists: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction for powerless agents. Cross-factional discourse: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Abstract function cannot exit or organize. Faction-aligned artists: Beneficiary-victim hybrid + constrained \u2192 d\u22480.55, f(d)\u22480.75. They benefit from faction infrastructure (d downward) but face constraints on artistic independence (d upward); net effect is moderate extraction rather than pure benefit. Platform gatekeepers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Low directionality \u2014 can shift algorithms and audience targeting without cost. Faction leadership: Beneficiary-victim + constrained \u2192 d\u22480.50, f(d)\u22480.65. Genuine mixed experience: gain narrative power (benefit) but incur costs of managing artist relationships and maintaining coalition (cost). Traditional institutions: Degraded beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.10. Once powerful orchestrators of cross-factional discourse, now complicit in factional gatekeeping despite nominal commitment to artistic freedom. Analytical observer: Neutral \u2192 d\u22480.65, f(d)\u22481.00. Sees both coordination and extraction functions.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing how the same structural phenomenon generates genuinely different classifications for different agents, none of which is 'the' true type. The non-aligned artist sees Snare because the market structure systematically prevents their participation. The faction-aligned artist sees Tangled Rope because the constraint both enables (access to audience, funding) and constrains (loyalty demands, artistic restrictions) their work. Platform operators see Rope because they are solving a real coordination problem (matching artists to audiences). The cross-factional discourse function sees Snare because there is no market incentive to preserve it and no institutional exit. The traditional arts institution sees Piton because it has lost functional relevance while maintaining institutional inertia. The analytical observer sees Tangled Rope because the structure has both genuine coordination and genuine extraction components. These are not different measurements of the same underlying type \u2014 they are the same constraint experienced from genuinely different structural positions. The mandatrophy resolves: there is no single 'correct' classification because the constraint is a presheaf, not a point. The system's proper output is the presheaf: {Snare-for-powerless, Rope-for-institutional, Tangled-Rope-for-moderate, Piton-for-degraded-institutions, Tangled-Rope-for-analytical}."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "social_media_engagement_optimization",
+      "political_polarization_dynamics",
+      "arts_funding_concentration"
+    ],
+    "dual_formulation_note": "This constraint is downstream of platform algorithm design (engagement optimization) and upstream of ideological sorting in cultural production. The factional alignment requirement emerges from the interaction of multiple structural mechanisms: platform engagement metrics, concentrated funding sources, and audience genuine preferences. Decomposition would treat these as separate constraints with their own \u03b5 values. Here we model the integrated effect on artistic output."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.5
+    }
+  ]
+}

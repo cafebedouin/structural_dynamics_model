@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "mexican_airline_merger",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mxam"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mexican Airline Merger Antitrust Exemption",
+    "topic_domain": "economic/aviation_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "consolidated_airline_group",
+      "mexican_government_revenue"
+    ],
+    "victims": [
+      "mexican_air_passengers",
+      "smaller_competitor_airlines",
+      "market_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Mexican Air Passengers",
+      "comment": "PERSPECTIVE 1: MEXICAN AIR PASSENGERS (SNARE) \u2014 Domestic travelers have no exit: air is the primary intercity transport for Mexico's geography. Post-merger pricing power is concentrated; alternatives (bus, car) are inferior for long-distance routes. Suppression: regulatory exemption eliminates competitive discipline. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Smaller Competitor Airlines",
+      "comment": "PERSPECTIVE 2: SMALLER COMPETITOR AIRLINES (SNARE) \u2014 Face structural disadvantage post-merger: consolidated carrier gains route density advantage, economies of scale, and regulatory favor. Exit is constrained (capital-intensive industry, regulatory barriers). Cannot match merged entity's pricing on shared routes. d\u22480.88, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.70."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Consolidated Airline Group",
+      "comment": "PERSPECTIVE 3: CONSOLIDATED AIRLINE GROUP (ROPE) \u2014 Experiences merger as a coordination mechanism: eliminating redundant routes, consolidating hubs, reducing operating costs. Antitrust exemption enables rational route consolidation. Benefits from network effects and scale. Government support de-risks restructuring. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mexican Government (Dual Role)",
+      "comment": "PERSPECTIVE 4: MEXICAN GOVERNMENT (TANGLED ROPE) \u2014 Coordination function: consolidating a national champion airline reduces bankruptcy risk, preserves strategic aviation capacity, and maintains air connectivity (Mexicana serves underserved routes). Extraction function: uses exemption to extract regulatory compliance from competitors, avoid antitrust enforcement costs, and signal industrial policy willingness. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Mexican Antitrust Authority (COFECE)",
+      "comment": "PERSPECTIVE 5: MEXICAN ANTITRUST AUTHORITY / COFECE (PITON) \u2014 Formally independent regulator, but merger exemption granted through political pressure (government direction to rescue Mexicana). COFECE's nominal enforcement power is real, but actual enforcement is theater: the exemption removes the legal basis for challenge. Authority persists (COFECE exists, reviews mergers) but core function (preventing anticompetitive consolidation) is degraded. theater_ratio\u22480.58 reflects that regulatory review rituals continue but with predetermined outcome. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (International Antitrust Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global competition law standpoint, this merger exhibits both coordination and extraction. Coordination: avoiding airline bankruptcy and maintaining connectivity services (genuine public good). Extraction: using government power to override competitive discipline and suppress prices/service quality adjustments through market. The exemption is not a law of nature (mountain) but a deliberate policy choice that redistributes welfare from passengers and competitors to the consolidated carrier and government. d\u22480.70, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.56."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "merger_efficiency_claims",
+      "question": "Do the claimed operational efficiencies from consolidation materialize, or is the exemption purely extractive rent protection?",
+      "resolution_mechanism": "Post-merger cost analysis: fuel efficiency gains, labor consolidation, route optimization vs actual price increases and service reductions. Comparison with pre-exemption baseline.",
+      "impact": "If real efficiencies: classification shifts toward Rope (legitimate coordination gain). If absent: classification solidifies as Snare (pure extraction with no coordination benefit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether merger generates operational efficiencies or is pure rent extraction"
+    },
+    {
+      "id": "government_subsidy_contingency",
+      "question": "Is the exemption contingent on government financial bailout/subsidy, or does the merged carrier stand alone?",
+      "resolution_mechanism": "Financial audit: track government capital injection, implicit guarantees, favorable debt restructuring, subsidy contracts for underserved routes. Compare actual government outlay to stated rescue mission.",
+      "impact": "If subsidized: exemption is extraction mechanism for government-backed monopoly (Snare for passengers). If standalone: exemption is genuine coordination investment (Rope from efficiency view).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether airline independence or government subsidy contingency determines exemption justification"
+    },
+    {
+      "id": "competitive_reentry_feasibility",
+      "question": "After consolidation, how realistic is market reentry for new carriers or reentry of dissolved competitors?",
+      "resolution_mechanism": "Regulatory analysis: slot allocation transparency, gate access requirements, airport capacity bottlenecks. Comparative analysis with other aviation markets (US, EU) post-merger.",
+      "impact": "If reentry blocked: exemption creates permanent extraction window (Snare). If reentry remains realistic: exemption is temporary coordination mechanism (Scaffold).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory barriers prevent competitive reentry after consolidation"
+    },
+    {
+      "id": "unserved_route_expansion",
+      "question": "Does the merged carrier expand service to previously unserved routes, or does it consolidate existing profitable routes?",
+      "resolution_mechanism": "Route network analysis: map all routes pre-merger and post-merger; measure expansion to low-income or remote areas vs optimization of high-margin hub-to-hub corridors.",
+      "impact": "If expansion: coordination function is real (connectivity gain justifies exemption). If consolidation: exemption enables cream-skimming (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether merger expands unserved routes or consolidates profitable routes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "Mexico's antitrust exemption for airline consolidation creates a structural hybrid of coordination necessity and extraction mechanism. The ostensible rationale \u2014 preserving Mexicana de Aviaci\u00f3n as a national carrier and avoiding bankruptcy \u2014 provides a genuine coordination function: maintaining domestic air connectivity, preventing route abandonment in remote areas, and retaining a Mexican-controlled airline in strategic corridors. However, the exemption simultaneously enables the consolidated carrier to raise prices, reduce service quality, and suppress smaller competitors without antitrust constraint. The constraint exhibits the full range of Deferential Realism types depending on observer position: passengers experience pure extraction (Snare), competitors face structural disadvantage (Snare), the consolidated carrier sees rational consolidation (Rope), the government pursues dual interests (Tangled Rope), the regulatory authority becomes theatrical (Piton), and the analytical observer sees the coordination-extraction hybrid clearly (Tangled Rope). The theater ratio (0.58) reflects that regulatory review processes continue \u2014 COFECE maintains merger review authority \u2014 but the predetermined exemption removes the substantive enforcement mechanism. The constraint's extractiveness (0.52) and suppression (0.65) place it squarely in the Tangled Rope range, requiring both coordination function and asymmetric extraction to be present.",
+    "key_agents": [
+      "Consolidated Airline Group (Mexicana + merger partner): Primary beneficiary (institutional/arbitrage) \u2014 gains monopoly pricing power, route consolidation advantages, and government support; experiences constraint as coordination",
+      "Mexican Air Passengers: Primary victim (powerless/trapped) \u2014 bear full cost of price increases and reduced service; cannot exit (geography and transportation alternatives inferior)",
+      "Smaller Competitor Airlines: Secondary victim (moderate/constrained) \u2014 face structural disadvantage in competing on exempted routes; exit constrained by capital and regulatory barriers",
+      "Mexican Government: Dual actor (organized/constrained) \u2014 coordination role (preserve national carrier, connectivity) and extraction role (control aviation sector, industrial policy); constrained by budget and political legitimacy concerns",
+      "Mexican Antitrust Authority (COFECE): Institutional observer (institutional/arbitrage) \u2014 maintains nominal authority but exemption degrades enforcement function to theater; piton perspective reflects degraded constraint",
+      "Analytical Observer: Global competition law perspective (analytical/analytical) \u2014 sees tangled coordination-extraction hybrid; can distinguish genuine efficiency gains from rent protection"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The exemption directly enables price-fixing capacity through consolidation and regulatory prohibition of competitive discipline. However, extractiveness is not maximal (0.66+) because the consolidated carrier may provide real operational efficiencies, maintain service obligations, and faces some residual competition from international carriers and ground transport. The measurement trajectory (0.28\u21920.52 over 5 years) reflects that initial post-merger adjustments appear as efficiency gains, but prices stabilize at elevated levels while capacity remains constrained, revealing the extraction mechanism. Suppression (0.65): High. Multiple reinforcing barriers prevent competitive response: antitrust exemption removes legal recourse; regulatory authority (COFECE) is politically constrained; high capital barriers for new entrants; government support of consolidated carrier creates asymmetric competitive advantage. Only residual suppression (<1.0) reflects that international flights and ground alternatives provide some competitive pressure. Theater ratio (0.58): Moderate. COFECE review processes, merger approval hearings, and ongoing regulatory oversight maintain performative components. However, the predetermined exemption removes substantive uncertainty \u2014 the theater is visible and acknowledged. Theater is not as high (\u22650.70) as in truly degraded systems because regulatory authority still exists and future enforcement remains possible if political conditions change.",
+    "perspectival_gap": "The perspectival gap reveals the constraint's hybrid nature. The consolidated airline sees legitimate coordination (rope): eliminating redundant routes, consolidating hubs, reducing bankruptcy risk \u2014 all genuine operational benefits. The government sees mixed coordination and extraction (tangled rope): preserving strategic capacity (coordination) while using exemption to control competition and signal industrial policy (extraction). Passengers see pure extraction (snare): higher prices, reduced capacity, trapped exit. Competitors see structural extraction (snare): regulatory prohibition of competitive response. The regulatory authority sees theater (piton): maintaining review processes while enforcement is predetermined. The analytical observer sees the full tangled rope: both coordination and extraction are real, neither cancels the other. The gap between the airline/government view and the passenger/competitor view is irreducible \u2014 they experience structurally different constraints from the same policy.",
+    "directionality_logic": "Consolidated airline group: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary with low extraction pressure. Mexican government: Beneficiary + constrained (political legitimacy constraint) \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position; benefits from coordination, costs from passenger dissent and international scrutiny. Passengers: Victim + trapped (no alternative transport) \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction pressure; cannot exit. Smaller competitors: Victim + constrained (capital barriers, regulatory capture) \u2192 d\u22480.88, f(d)\u22481.35. High extraction pressure; some exit possible but costly. COFECE (antitrust authority): Institutional + arbitrage (can exit through formal exemption application) \u2192 d\u22480.05, f(d)\u2248-0.12. Appears as beneficiary of exemption because burden is removed, but actually degraded as constraint actor. Analytical observer: analytical \u2192 d\u22480.70, f(d)\u22481.08. High perceived extraction because observer sees inefficiency (monopoly deadweight loss) clearly.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing GENUINE COORDINATION (maintaining connectivity, preventing route abandonment) from OPPORTUNISTIC EXTRACTION (price-fixing, capacity constraints). The consolidated airline benefits both from legitimate efficiency gains AND from regulatory prohibition of competitive response. The Tangled Rope classification holds both simultaneously: the merger may be structurally necessary (coordination), but the exemption enables anti-competitive behavior (extraction). No single type misses the reality. Mountain (false summit test): 'Airline consolidation is a law of nature' \u2014 rejected. The exemption is a deliberate policy choice, not an immutable law. Rope (coordination-only): Rejected for passengers and competitors perspective; rejected at global level where exemption appears as rent-seeking. Snare (extraction-only): Rejected for airline and government perspective; reductionist if it denies real operational benefits. The Tangled Rope holds because BOTH coordination and extraction occur, benefitting different agents. The classification prevents confusion: exemption is not 'good policy for efficiency' (which would be Rope) and not 'pure monopoly rent' (which would be Snare). It's explicitly hybrid."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "mexican_airline_bankruptcy_prevention",
+      "latin_american_aviation_consolidation"
+    ],
+    "dual_formulation_note": "The merger exemption is downstream of bankruptcy risk (upstream constraint: Mexicana financial distress) but represents a distinct structural choice. Alternative constraints include labor cost restructuring without consolidation, route subsidization without merger, and international codeshare without exemption. The exemption family includes both the consolidation decision and the competitive outcome."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ]
+}

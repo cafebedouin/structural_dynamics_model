@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "jp_eez_enforcement",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Enforcement of Japan's Claimed Exclusive Economic Zone (EEZ)",
+    "topic_domain": "geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "japanese_fishing_industry",
+      "japan_coast_guard"
+    ],
+    "victims": [
+      "chinese_fishing_vessels",
+      "regional_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Chinese Fishing Vessels",
+      "comment": "Perspective of Chinese fishing vessels operating in the disputed waters. They face potential capture, fines, and loss of livelihood, with limited ability to exit the situation due to economic pressures and state support."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regional Stability",
+      "comment": "Perspective of regional stability. The enforcement activity contributes to tensions and risks escalation, but also provides a degree of predictability and prevents unchecked exploitation of resources. Constrained by the existing geopolitical landscape."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Japan Coast Guard",
+      "comment": "Perspective of the Japan Coast Guard. Benefits from increased resources and mandate. Sees its role as maintaining order and protecting Japanese interests. Can reallocate resources based on strategic needs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Japanese Fishing Industry",
+      "comment": "Perspective of the Japanese fishing industry. Benefits from the protection of fishing grounds, but also faces constraints due to geopolitical tensions and potential disruptions of trade."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective observing the long-term implications of the enforcement activity on international law, regional security, and resource management. This perspective considers the interplay of geopolitical interests, historical claims, and economic factors."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "senkaku_island_sovereignty",
+      "question": "What is the legally recognized sovereignty status of the Senkaku/Diaoyu Islands?",
+      "resolution_mechanism": "International legal rulings, historical treaty analysis, diplomatic negotiations.",
+      "impact": "If Japanese sovereignty is universally recognized, enforcement is a routine act. If Chinese sovereignty is recognized, enforcement is an act of aggression. Contested status leads to the Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Legally recognized sovereignty status of the Senkaku/Diaoyu Islands."
+    },
+    {
+      "id": "resource_depletion_threshold",
+      "question": "What is the threshold of resource depletion in the EEZ that would trigger international intervention or condemnation of enforcement activities?",
+      "resolution_mechanism": "Scientific assessments of fish stocks, monitoring of fishing activities, international agreements on sustainable resource management.",
+      "impact": "If depletion is high, international pressure may force Japan to reduce enforcement activities, shifting the classification. If depletion is low, enforcement may be seen as justified resource management.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold of resource depletion triggering intervention."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the active enforcement of Japan's claimed Exclusive Economic Zone (EEZ) around the Senkaku/Diaoyu Islands. This enforcement is a point of contention with China, which also claims the islands and the surrounding waters. The enforcement activities, primarily carried out by the Japan Coast Guard, involve patrolling the area, intercepting foreign vessels (mainly Chinese fishing boats), and potentially seizing vessels found to be operating illegally within the EEZ. The situation is further complicated by the ambiguous legal status of the islands and the surrounding waters under international law.",
+    "key_agents": [
+      "Chinese Fishing Vessels: Primary target (powerless/trapped) - faces potential capture and fines.",
+      "Japan Coast Guard: Primary enforcer (institutional/arbitrage) - benefits from increased mandate and resources.",
+      "Japanese Fishing Industry: Beneficiary (powerful/constrained) - benefits from protection of fishing grounds.",
+      "Regional Stability: Affected party (moderate/constrained) - faces increased tension and risk of escalation.",
+      "Analytical Observer: Neutral observer (analytical/analytical) - assesses long-term implications."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The enforcement actions directly extract resources (fines, seized vessels) and restrict access to fishing grounds for Chinese vessels. Suppression (0.70): High. Japan actively suppresses competing claims to the EEZ through patrols and enforcement. Theater Ratio (0.30): Low. The enforcement actions are largely functional, with a clear objective of maintaining control over the EEZ, although the act itself carries performative weight in signaling resolve.",
+    "perspectival_gap": "The enforcement of Japan's EEZ is viewed differently by various actors. Chinese fishing vessels perceive it as a snare, limiting their access to resources. The Japan Coast Guard sees it as a rope, enabling them to maintain order. The Japanese fishing industry benefits, but also acknowledges the constrained environment created by geopolitical tensions. Regional stability is affected by both the stabilizing and destabilizing aspects of the enforcement actions, leading to a tangled rope classification. The analytical observer recognizes the complex interplay of factors, also resulting in a tangled rope classification.",
+    "directionality_logic": "The directionality is derived from the beneficiaries and victims declared in base_properties. The Japan Coast Guard and the Japanese fishing industry benefit from the enforcement, resulting in a lower directionality value. Chinese fishing vessels and regional stability bear the costs, resulting in a higher directionality value.",
+    "mandatrophy_analysis": "The enforcement of the EEZ could be misconstrued as simply a protection of resources (Rope) or pure aggression (Snare). However, the Tangled Rope classification captures the complexity of the situation. It acknowledges the legitimate need for resource management and maritime security while also recognizing the potential for escalation and the impact on other stakeholders. The enforcement provides a coordination function for Japanese fishing interests, but also extracts from Chinese fishing vessels and contributes to regional instability. Resolving the mandatrophy requires considering the interplay of these factors."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

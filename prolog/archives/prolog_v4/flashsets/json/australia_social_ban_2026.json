@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "australia_social_ban_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Australian Under-16 Social Media Ban",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "australian_government",
+      "social_media_platforms"
+    ],
+    "victims": [
+      "australian_under_16s",
+      "parents_of_australian_under_16s"
+    ],
+    "has_sunset_clause": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Australian Under-16s",
+      "comment": "Under-16s in Australia experience the ban as a snare, as they are deprived of access to social media platforms, potentially limiting their social interactions and access to information. Their exit options are limited within the Australian jurisdiction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Parents of Australian Under-16s",
+      "comment": "Parents experience a tangled rope. They benefit from the perceived safety and reduced screen time for their children but are also burdened with the responsibility of enforcement and potentially face strained relationships with children seeking access."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Australian Government",
+      "comment": "The Australian government views the ban as a rope, a means to coordinate the protection of minors online and assert regulatory control. They benefit from the perceived goodwill and political capital."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Social Media Platforms",
+      "comment": "Social media platforms initially bear the cost of enforcement but ultimately benefit from a clearer regulatory landscape and the potential for more robust age verification technologies, leading to a scaffold classification as they adapt and find new revenue streams. They can exit by adapting business models and developing services outside Australia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the ban represents a tangled rope, exhibiting both coordination (protection of minors) and extraction (limitation of access and potential data collection). The long-term effects on societal norms and technological development are uncertain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effectiveness_age_verification",
+      "question": "How effective are age verification technologies in preventing under-16s from accessing social media?",
+      "resolution_mechanism": "Empirical studies on the accuracy and bypass rates of age verification systems.",
+      "impact": "High effectiveness could justify the ban as a successful coordination mechanism; low effectiveness would indicate a snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of age verification measures."
+    },
+    {
+      "id": "unintended_consequences",
+      "question": "What are the unintended consequences of the ban, such as increased use of VPNs or alternative platforms?",
+      "resolution_mechanism": "Data analysis on internet traffic and usage patterns among Australian under-16s.",
+      "impact": "Significant unintended consequences could shift the classification towards a snare, highlighting the limitations of the ban.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Potential for unintended consequences."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "Effective December 2025, Australia's ban on social media for under-16s shifts the digital burden of proof onto platforms. While touted as a child protection measure, it also creates a complex landscape of enforcement, access limitations, and potential circumvention, impacting various stakeholders differently.",
+    "key_agents": [
+      "Australian Government: Beneficiary (institutional/arbitrage) - Gains political capital and asserts regulatory control.",
+      "Social Media Platforms: Beneficiary (powerful/mobile) - Adapts to regulatory clarity and develops new technologies.",
+      "Australian Under-16s: Victim (powerless/trapped) - Limited access and potential isolation.",
+      "Parents of Australian Under-16s: Victim (moderate/constrained) - Responsibility of enforcement and potential conflict with children."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate - The ban extracts access from under-16s. Suppression (0.70): High - The ban actively suppresses access. Theater Ratio (0.30): Relatively low, as the enforcement has a material effect.",
+    "perspectival_gap": "Under-16s experience a snare while the government sees a rope. This is because the ban directly restricts the access and freedoms of the under-16s. The government focuses on the coordination aspect, but the unintended consequences on minors are real. The analytical observer sees a complex mix of extraction and coordination.",
+    "directionality_logic": "Directionality is based on the beneficiaries and victims. The Australian government benefits in public perception, while social media platforms benefit from clearer regulations. Under-16s and parents are negatively impacted."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

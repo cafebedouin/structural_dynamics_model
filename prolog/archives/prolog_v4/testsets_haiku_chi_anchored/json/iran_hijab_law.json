@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "iran_hijab_law",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hijab"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Mandatory Hijab Law in Iran",
+    "topic_domain": "political/social/religious",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_religious_authority",
+      "morality_enforcement_apparatus"
+    ],
+    "victims": [
+      "iranian_women",
+      "religious_minorities",
+      "secular_citizens"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Iranian Women Under Enforcement",
+      "comment": "PERSPECTIVE 1: IRAINIAN WOMEN (SNARE) \u2014 Trapped within national borders with no practical exit from the constraint. Daily enforcement via morality police creates coercive compliance. Exit costs include social stigma, arrest, prosecution, and family consequences. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.95. Pure extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Religious Minorities and Secular Citizens",
+      "comment": "PERSPECTIVE 2: RELIGIOUS MINORITIES & SECULAR CITIZENS (SNARE) \u2014 Constrained by state religious doctrine imposed on non-Muslim populations and secular citizens. Enforcement targets not just dress but religious orthodoxy. No exemption for non-Muslims or secular belief systems. d\u22480.88, f(d)\u22481.30, \u03c3=1.0 \u2192 \u03c7\u22480.88. Effective extraction masks religious coercion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Religious Authority",
+      "comment": "PERSPECTIVE 3: STATE RELIGIOUS AUTHORITY (ROPE) \u2014 Frames hijab law as coordination mechanism enforcing Islamic moral standards and social cohesion. Experiences the constraint as legitimate religious governance without acknowledging extraction. d\u22480.10, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03. Near-zero effective extraction from their framing; net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Women's Rights Movement and Civil Society",
+      "comment": "PERSPECTIVE 4: WOMEN'S RIGHTS MOVEMENT (TANGLED ROPE) \u2014 Organized agents with partial mobility (activism abroad, diaspora networks, international platforms) experience mixed constraint: the law both oppresses and creates organizing space. Coordination function: enforcement creates shared grievance; extraction function: state suppresses movement. d\u22480.60, f(d)\u22480.70, \u03c3=1.0 \u2192 \u03c7\u22480.48. Active enforcement \u22650.46 satisfies tangled rope gate."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Morality Police Apparatus (Gasht-e Ershad)",
+      "comment": "PERSPECTIVE 5: MORALITY POLICE APPARATUS (PITON) \u2014 Enforcement institution maintaining performative compliance. Theater ratio 0.65 reflects that visible enforcement (checkpoints, arrests, fines) is partly theatrical deterrent rather than functional regulation \u2014 many women employ tactical noncompliance (styled headscarves, gradual loosening). Enforcement has degraded over time as resistance techniques evolve. theater_ratio=0.65 approaches piton gate (\u22650.70); combined with declining functional capacity, suggests institutional inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 From civilizational distance, observer might frame hijab law as inherent to Iranian sovereignty or unchangeable Islamic governance principle. However, structural data (\u03b5=0.68, suppression=0.78, theater=0.65) contradicts mountain classification. This represents a false summit where contingent institutional arrangements (post-1979 revolutionary enforcement) are naturalized as civilizational constants. Engine false summit detector fires."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_capacity_degradation",
+      "question": "How far has enforcement capacity degraded due to normalized resistance and changing social norms, and at what point does performative enforcement become functionally equivalent to optional compliance?",
+      "resolution_mechanism": "Longitudinal data on arrest rates, fine collection, public compliance patterns, and tactical noncompliance prevalence over 10-year intervals; surveys of enforcement officer morale and actual checkpoint compliance rates",
+      "impact": "If degradation near 50%: constraint shifts from Snare to Piton (institutional inertia). If degradation > 70%: constraint approaches Rope or Scaffold endpoint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of enforcement capacity degradation over time"
+    },
+    {
+      "id": "diaspora_exit_option_threshold",
+      "question": "At what proportion of women accessing exit via diaspora networks does the constraint shift from 'trapped' to 'mobile' for the broader population?",
+      "resolution_mechanism": "Migration statistics, asylum claims on gender grounds, social network analysis of diaspora connections, cost-benefit analysis of exit routes (family separation, economic loss vs freedom)",
+      "impact": "If diaspora exit reaches 5-10%: structural exit option shifts from trapped to constrained. If 20%+: exit shifts to mobile. Classification of powerless perspective changes from Snare to Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Critical threshold for exit option availability via diaspora"
+    },
+    {
+      "id": "post_morality_police_expansion",
+      "question": "Following July 2024 suspension of morality police operations, is the constraint shifting from active enforcement (Snare) to theatrical maintenance (Piton) or dissolving toward Scaffold?",
+      "resolution_mechanism": "Comparative analysis of enforcement patterns pre/post-suspension; tracking of hijab-related arrests, public compliance behavior, and state rhetoric; assessment of whether suspension is permanent or performative pause",
+      "impact": "If suspension is permanent: constraint transforms to Scaffold with sunset clause. If performative pause: constraint maintains Snare classification but theater ratio increases. If rebounds: confirms Snare persistence.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Classification evolution following morality police suspension"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 45
+  },
+  "commentary": {
+    "narrative_context": "The mandatory hijab law in the Islamic Republic of Iran, enforced by the state's morality police (Gasht-e Ershad), represents a high-extraction constraint combining religious doctrine with coercive state apparatus. Post-1979 revolutionary consolidation institutionalized hijab enforcement as both a symbol of Islamic governance and a mechanism for behavioral control. The constraint extracts compliance from women, religious minorities, and secular citizens through daily enforcement (checkpoints, arrests, fines) while positioning itself as coordinating religious/moral community standards. The state religious authority frames this as a coordination mechanism (Rope from their perspective), but the structural asymmetry \u2014 enforcement apparatus with monopoly on legitimate violence, trapped victims with no exit, degraded theater of compliance \u2014 reveals the constraint as a multi-layered Snare from those targeted. The theater ratio (0.65) reflects that visible enforcement is increasingly performative: women employ tactical noncompliance (styled headscarves, gradual loosening), enforcement officers face declining morale and corruption, and social norms have shifted substantially since 1979. The July 2024 suspension of morality police operations represents a critical inflection point; if permanent, the constraint would transition toward Scaffold with sunset. The women's rights movement experiences the constraint as both oppressive and organizing (Tangled Rope perspective) \u2014 state enforcement creates shared grievance that fuels activism.",
+    "key_agents": [
+      "Iranian Women: Primary victim (powerless/trapped) \u2014 subjected to daily enforcement, no practical exit, bear full cost of non-compliance through arrest, fines, social stigma, family consequences",
+      "Religious Minorities and Secular Citizens: Secondary victim (powerless/constrained) \u2014 enforcement imposes state Islamic orthodoxy on non-Muslim populations and secular belief systems",
+      "State Religious Authority: Primary beneficiary (institutional/arbitrage) \u2014 maintains control over social behavior and moral regulation; consolidates religious governance legitimacy",
+      "Morality Police Apparatus (Gasht-e Ershad): Enforcement institution (institutional/constrained) \u2014 maintains coercive apparatus; experiences degrading functional capacity",
+      "Women's Rights Movement and Civil Society: Organized opposition (organized/mobile) \u2014 international networks, diaspora activism, underground resistance; experiences mixed constraint as oppression + organizing opportunity",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing post-1979 institutional arrangements as inherent Islamic governance or unchangeable cultural constants"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High but not maximum. The constraint extracts substantial compliance costs (behavioral restriction, enforcement harassment, economic fines, social control) from targeted populations. However, extraction is not 0.85+ because degrading enforcement effectiveness and tactical noncompliance have created spaces of partial autonomy. The interval measurements show extractiveness rising from 0.45 (early post-1979 period) to 0.68 (current), reflecting that enforcement mechanisms intensified over time as initial revolutionary fervor normalized into institutional practice. Suppression (0.78): Very high. Coercive apparatus with monopoly on violence, criminalization of non-compliance, family/social pressure, arrest and prosecution mechanisms all severely constrain exit and voice options. Victims have minimal alternatives \u2014 non-wearing is criminalized, emigration is economically and socially costly, resistance is suppressed. Suppression exceeds extractiveness because the apparatus maintains control partly through threat alone. Theater ratio (0.65): Moderate-high. Visible enforcement (checkpoints, arrests) is increasingly performative as enforcement capacity degrades and tactical noncompliance becomes normalized. State rhetoric about moral community standards masks control function. The rising theater ratio (from 0.42 to 0.65) indicates that actual enforcement is declining while performative aspects increase \u2014 approaching piton thresholds but not yet there.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival gap across all six perspectives. The state religious authority (Rope) frames hijab enforcement as legitimate religious coordination, emphasizing community morality and Islamic governance. Women trapped in enforcement zones (Snare) experience it as coercive behavioral control with no exit. The women's rights movement (Tangled Rope) sees both oppression and organizing opportunity \u2014 the constraint creates shared grievance that mobilizes activism. The morality police apparatus (Piton) maintains enforcement through degraded practice and institutional inertia \u2014 the actual functional capacity to enforce is declining. Religious minorities (Snare) experience it as religious coercion, not moral coordination. The analytical observer (false summit) risks naturalizing the post-1979 institutional choice as an unchangeable aspect of Iranian sovereignty or Islamic governance when it is actually a contingent enforcement architecture that has weakened significantly. The widest gap separates the state authority's beneficiary perspective (Rope) from the victims' trapped experience (Snare) \u2014 the same enforcement apparatus is coordination for one and extraction for the other.",
+    "directionality_logic": "State Religious Authority: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u22480.08, \u03c3=1.0 \u2192 \u03c7\u22480.05. Rope classification; net beneficiary experiencing constraint as low-cost coordination. Morality Police Apparatus: Institutional + constrained (by degrading legitimacy, officer morale, resource constraints) \u2192 d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.24. Piton classification reflects that enforcement institution maintains apparatus through inertia despite declining functional capacity. Iranian Women: Victim + trapped (no practical exit, domestic space monitored, social/family consequences) \u2192 d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.95. Snare classification; maximum extraction from the powerless. Religious Minorities: Victim + constrained (some diaspora exit options, international legal avenues, but costly and incomplete) \u2192 d\u22480.88, f(d)\u22481.30, \u03c3=1.0 \u2192 \u03c7\u22480.88. Snare classification; high extraction with marginally more options than women. Women's Rights Movement: Organized + mobile (international networks, diaspora platforms, underground organizing) \u2192 d\u22480.60, f(d)\u22480.70, \u03c3=1.0 \u2192 \u03c7\u22480.48. Tangled Rope; organized opposition creates coordination function while experiencing extraction.",
+    "mandatrophy_analysis": "SNARE WITH DEGRADING ENFORCEMENT: This constraint resolves mandatrophy by classifying primarily as Snare (high extraction, high suppression, \u03c7=0.95 for powerless victims) while acknowledging the Piton perspective (enforcement apparatus maintaining degraded practice). The constraint is NOT mislabeled as pure coordination (Rope) \u2014 the state authority's beneficiary perspective does not define the constraint type for the engine; the asymmetric extraction from trapped victims does. Mandatrophy_resolved=true because (1) the snare classification is supported by \u03b5=0.68 and suppression=0.78 meeting snare thresholds, (2) beneficiaries and victims are explicitly declared, (3) the architectural enforcement via Gasht-e Ershad is not a coordination solution but a coercive apparatus, and (4) the multiple perspectives (including state authority's Rope framing) reveal the mandatrophy risk (naturalizing extraction as coordination) but do not override the structural classification. The July 2024 suspension of morality police creates uncertainty about evolution toward Scaffold, but that remains an omega variable pending empirical resolution."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "iran_women_labor_participation",
+      "iran_religious_freedom_restriction",
+      "iran_dissent_suppression"
+    ],
+    "dual_formulation_note": "The mandatory hijab law is upstream of women's labor participation constraints and religious freedom restrictions. Each downstream constraint has its own \u03b5 reflecting specific domain metrics (labor participation \u03b5\u22480.55, religious freedom \u03b5\u22480.72), but all share the structural enforcement apparatus. Network decomposition reveals that hijab law is not a unitary constraint but a control mechanism that feeds into multiple extraction vectors."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

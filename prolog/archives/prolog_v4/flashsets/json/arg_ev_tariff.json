@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "arg_ev_tariff",
+    "version": "1.0",
+    "generated_date": "2024-11-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Argentine Tariff on Chinese Electric Vehicles",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "argentine_auto_manufacturers"
+    ],
+    "victims": [
+      "argentine_consumers",
+      "chinese_ev_exporters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Argentine Consumers",
+      "comment": "Argentine consumers face higher EV prices and limited choices due to the tariff, effectively trapped in a market with less competition."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Chinese EV Exporters",
+      "comment": "Chinese EV exporters are constrained by the tariff, limiting their access to the Argentine market and impacting their global market share."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Argentine Auto Manufacturers",
+      "comment": "Argentine auto manufacturers benefit from reduced competition, potentially leading to increased sales and market share, but may also face pressure to innovate and compete in the long run. They can arbitrage the situation by increasing prices without improving quality. Coordination function: protects the domestic auto industry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Argentine Government",
+      "comment": "The Argentine government aims to protect the domestic auto industry and promote economic growth, but also risks retaliatory measures from China and reduced consumer welfare. Constrained because they must balance different interests."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the tariff represents a form of protectionism that may hinder the adoption of EVs and the transition to a more sustainable transportation system."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "china_retaliation",
+      "question": "Will China retaliate with tariffs on Argentine exports?",
+      "resolution_mechanism": "Monitoring trade policy announcements and analyzing trade flows",
+      "impact": "If yes, Argentina's overall trade balance will worsen. If no, the tariff's protectionist effect will be more pronounced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The likelihood of Chinese retaliation"
+    },
+    {
+      "id": "consumer_demand_elasticity",
+      "question": "How sensitive is Argentine consumer demand for EVs to price increases?",
+      "resolution_mechanism": "Analyzing sales data before and after the tariff implementation",
+      "impact": "If highly elastic, the tariff will significantly reduce EV sales. If inelastic, the tariff will primarily transfer wealth from consumers to manufacturers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Consumer demand elasticity for EVs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Argentina's proposed tariff on Chinese electric vehicles (EVs) is a protectionist measure aimed at bolstering the domestic auto industry. However, it raises concerns about consumer welfare, trade relations with China, and the overall transition to sustainable transportation. The tariff is designed to reduce competition from cheaper Chinese EVs and encourage the purchase of domestically produced vehicles, which are often more expensive and technologically less advanced.",
+    "key_agents": [
+      "Argentine Consumers: Primary victims (powerless/trapped) - face higher prices and reduced choices.",
+      "Chinese EV Exporters: Secondary victims (moderate/constrained) - limited access to the Argentine market.",
+      "Argentine Auto Manufacturers: Primary beneficiaries (institutional/arbitrage) - reduced competition and potential increased sales.",
+      "Argentine Government: Intermediary (institutional/constrained) - aims to protect domestic industry but faces trade and economic risks."
+    ],
+    "logic_rationale": "The extractiveness is set at 0.60, reflecting the significant cost to consumers in terms of higher prices and limited choices. Suppression is high at 0.70, indicating the reduction in competition and the constraint on alternative EV options. The theater ratio is moderate at 0.30, suggesting some genuine intent to protect the domestic industry but also potential performative aspects in signaling protectionist policies.",
+    "perspectival_gap": "Argentine consumers and Chinese EV exporters see the tariff as a snare, limiting their options and increasing costs. Argentine auto manufacturers see it as a rope, providing coordination and protection. The Argentine government sees it as a tangled rope, balancing the benefits of protecting domestic industry with the risks of trade retaliation and reduced consumer welfare. The analytical observer sees the policy as a mixed bag with long-term consequences for innovation and sustainability.",
+    "directionality_logic": "The beneficiaries (Argentine auto manufacturers) experience a low d value due to their protected market position and potential for increased profits. Victims (Argentine consumers and Chinese EV exporters) experience high d values due to limited choices and reduced market access, respectively. The government's d value is moderate, reflecting their constrained position and the need to balance competing interests.",
+    "mandatrophy_analysis": "The tariff policy could be misconstrued as pure extraction, but it also has a coordination component by aiming to protect and develop the domestic auto industry. The tangled rope classification acknowledges both the extractive effects on consumers and exporters and the coordination function of supporting local manufacturing. Mandatrophy is resolved because the government's intent is not solely to extract but to foster domestic growth, albeit with potentially negative consequences."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_ev_market",
+      "china_argentina_trade_relations"
+    ]
+  },
+  "directionality_overrides": []
+}

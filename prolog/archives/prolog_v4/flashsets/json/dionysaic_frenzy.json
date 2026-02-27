@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "dionysaic_frenzy",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dionysiac Religious Possession",
+    "topic_domain": "religious/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dionysus_cult",
+      "community_cohesion"
+    ],
+    "victims": [
+      "social_order",
+      "possessed_individuals"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Possessed Individual",
+      "comment": "Perspective of the individual overtaken by the frenzy, losing control and potentially facing social repercussions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Local Community",
+      "comment": "Perspective of the local community, experiencing both the disruption of social order and potential revitalization of communal bonds."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Dionysus Cult Leadership",
+      "comment": "Perspective of the Dionysus cult leadership, benefiting from increased followers and influence, shaping and managing the rituals."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Ruling Elite",
+      "comment": "Perspective of established political/religious authorities who may see the frenzy as a threat to social order and their power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "Perspective of a detached observer, recognizing both the disruptive and cohesive elements of the phenomenon across different cultures and time periods."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "authenticity_of_possession",
+      "question": "Is the possession genuine divine intervention, a form of altered mental state, or a constructed performance?",
+      "resolution_mechanism": "Neurological studies of subjects during rituals; historical analysis of accounts of possession across cultures",
+      "impact": "Affects classification: if performance, then piton for leadership and snare for followers; if divine, rope/tangled_rope depending on exit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Nature of the religious experience"
+    },
+    {
+      "id": "coercion_level",
+      "question": "To what extent is participation in the frenzy voluntary or coerced?",
+      "resolution_mechanism": "Sociological studies of cult membership; analysis of power dynamics within the community",
+      "impact": "Influences the extractiveness felt by possessed individuals; high coercion yields stronger snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of individual agency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Dionysiac religious possession involves a state of divinely induced madness, compelling subjects to abandon their social roles for mountain rites. This phenomenon can be viewed as a constraint that extracts from individual autonomy and social order while simultaneously providing a release valve for social tensions and strengthening community bonds. The degree of extraction and suppression varies based on the perspective of the individual, the community, and the ruling elite.",
+    "key_agents": [
+      "Possessed Individuals: Primary target (powerless/trapped) \u2014 experience loss of control and potential social stigma.",
+      "Dionysus Cult: Primary beneficiary (institutional/arbitrage) \u2014 gains followers and influence.",
+      "Local Community: Mixed impact (moderate/constrained) \u2014 experiences both disruption and communal bonding.",
+      "Ruling Elite: Potential victim (institutional/constrained) \u2014 may see the frenzy as a threat to social order."
+    ],
+    "logic_rationale": "Extractiveness (0.6): Moderate-high. The frenzy extracts from the possessed individual, as social norms are abandoned. It extracts from social order due to disruption. Suppression (0.7): High. Social pressures, fear of reprisal, and the allure of the ritual suppress alternatives to participation. Theater Ratio (0.3): Moderate. While there is performative display involved, it is secondary to the felt experience and transformative potential for participants.",
+    "perspectival_gap": "The perspectival gap arises from the differing structural positions of agents. The possessed individual experiences a snare, while the cult leadership benefits as a rope. The ruling elite may see the frenzy as an institutional snare, while the local community experiences mixed effects of a tangled rope. This difference highlights the contextual nature of the constraint.",
+    "directionality_logic": "Directionality is derived from structural positions. Victims (possessed individuals) experience extraction. Beneficiaries (cult leadership) benefit through access to followers, resources and status. Authority is undermined, a further extraction of power. The degree of agency determines how strongly the d-score moves from 0.5"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "nsw_transmission_bottleneck",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "NSW Regional Transmission Congestion",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "coal_power_generators_in_nsw",
+      "transmission_network_operators"
+    ],
+    "victims": [
+      "renewable_energy_generators_in_sa",
+      "nsw_electricity_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Renewable Energy Generators in SA",
+      "comment": "South Australian renewable energy generators are trapped by the bottleneck, unable to fully export their electricity to NSW, leading to curtailed output and lost revenue."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Transmission Network Operators",
+      "comment": "Transmission network operators benefit from congestion by creating a need for new infrastructure investment and potentially increasing revenues through congestion management."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer recognizes the tangle of infrastructure limitations, market design flaws, and political considerations that lead to transmission congestion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "NSW Electricity Consumers",
+      "comment": "Consumers in NSW are constrained; they bear higher electricity prices due to the limited supply from SA's cheaper renewables. However, they also benefit from the reliability provided by existing coal generators."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Coal Power Generators in NSW",
+      "comment": "The coal generators in NSW benefit from the reduced competition from SA renewables due to the transmission constraints. They are somewhat constrained by regulations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "future_transmission_capacity",
+      "question": "How quickly can transmission capacity between SA and NSW be increased?",
+      "resolution_mechanism": "Project timelines for new transmission lines and HVDC interconnectors.",
+      "impact": "Higher transmission capacity reduces extraction, potentially shifting the constraint towards a pure coordination problem.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline and cost for new transmission capacity."
+    },
+    {
+      "id": "market_design_changes",
+      "question": "Can market design changes alleviate the congestion and create more efficient dispatch?",
+      "resolution_mechanism": "Modeling the impact of different market rules on congestion and generator dispatch.",
+      "impact": "Effective market design changes can reduce the extractiveness of the constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Impact of market design changes on congestion."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The physical limit on megawatts that can be transferred from South Australia to New South Wales results in transmission congestion. This constraint impacts renewable energy generators in South Australia, limits access to cheaper renewable energy for NSW consumers, and creates opportunities for incumbent fossil fuel generators. The interaction between infrastructure limitations and market dynamics creates the opportunity for this constraint to act as a tangled rope.",
+    "key_agents": [
+      "Renewable Energy Generators in SA: Primary target (powerless/trapped) - bear extraction due to curtailed generation.",
+      "Coal Power Generators in NSW: Primary beneficiary (powerful/constrained) - benefit from reduced competition.",
+      "NSW Electricity Consumers: Secondary victim (moderate/constrained) - pay higher prices.",
+      "Transmission Network Operators: Beneficiary (institutional/arbitrage) - benefit from infrastructure investment and congestion management revenues.",
+      "Analytical Observer: Civilizational view (analytical/analytical) - sees infrastructure limitations and market design flaws."
+    ],
+    "logic_rationale": "Extractiveness (0.6): High extraction. The constraint significantly limits the ability of SA renewable generators to export power, resulting in lost revenue and potentially stranded assets. Suppression (0.4): Moderate suppression. While new transmission infrastructure can be built, it is a lengthy and expensive process, effectively suppressing competition from SA renewables. Theater ratio (0.2): Low theater. There is limited performative activity associated with the transmission congestion itself; most activity is focused on building new infrastructure or changing market rules.",
+    "directionality_logic": "Renewable generators in SA are victims and trapped, leading to a high directionality value. Coal generators benefit from less competition, resulting in a low directionality value. Transmission network operators also benefit, further lowering their directionality value. Consumers are both victims (higher prices) and beneficiaries (reliable supply), giving a moderate directionality value.",
+    "perspectival_gap": "The renewable generators in SA experience the constraint as a snare, limiting their access to the NSW market. Transmission network operators view it as a coordination mechanism, necessitating infrastructure investments. The analytical observer sees a tangled rope - a complex interaction of market dynamics, infrastructure limitations, and potentially political considerations.",
+    "mandatrophy_analysis": "The tangled rope classification is appropriate because the constraint involves both coordination (managing electricity flow) and extraction (limiting competition and raising prices). It prevents mislabeling as pure coordination by highlighting the negative impacts on SA renewable generators and NSW consumers, and as pure extraction by recognizing the genuine need for network management and stability."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

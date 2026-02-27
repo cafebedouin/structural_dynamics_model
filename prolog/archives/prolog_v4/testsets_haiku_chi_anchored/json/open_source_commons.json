@@ -1,0 +1,175 @@
+{
+  "header": {
+    "constraint_id": "open_source_commons",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "osc"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "The Mutual Garden",
+    "topic_domain": "social/technological",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "contributing_developers",
+      "consuming_projects",
+      "user_base",
+      "ecosystem_health"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Volunteer Contributor",
+      "comment": "PERSPECTIVE 1: VOLUNTEER CONTRIBUTOR (ROPE) \u2014 Participants in the open-source commons experience pure coordination: contributing code solves their own problems, provides reputation, builds skills, and creates value for others. Exit is mobile (can fork, start new project, or contribute elsewhere). d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.14. Low effective extraction because participation is genuinely voluntary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Commercial Beneficiary",
+      "comment": "PERSPECTIVE 2: COMMERCIAL BENEFICIARY (ROPE) \u2014 Companies integrating open-source code into products experience the commons as a coordination mechanism that solves resource bottlenecks. Exit is arbitrage (could build proprietary alternatives but cheaper to use open source). d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.002. Negative effective extraction = net subsidy from the commons to commercial actors. This is the beneficiary's perspective on a rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Large Open-Source Project Maintainer",
+      "comment": "PERSPECTIVE 3: LARGE PROJECT MAINTAINER (ROPE) \u2014 Linux, Python, Kubernetes maintainers coordinate massive distributed contributor networks with minimal centralized coercion. Power to set standards and define scope, but exit is mobile (can leave project, community can fork). d\u22480.48, f(d)\u22480.60, \u03c3=1.2 \u2192 \u03c7\u22480.13. Coordination with soft power, not extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Sustainability Infrastructure",
+      "comment": "PERSPECTIVE 4: SUSTAINABILITY INFRASTRUCTURE (SCAFFOLD) \u2014 Organized actors (GitHub, Linux Foundation, CNCF) are building structures (sponsorship programs, security audits, training) that are temporary scaffolding for mature governance. As projects mature, they transition from volunteer-dependent to professionally-supported. d\u22480.40, f(d)\u22480.40, \u03c3=1.2 \u2192 \u03c7\u22480.19. Moderate extraction to fund the commons, but with clear sunset as projects reach sustainability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational view, open-source commons is a pure coordination mechanism. It solves the collective action problem of knowledge dissemination and resource pooling without relying on markets or hierarchies. No suppression of alternatives (proprietary development exists freely). Low theater (the function is what you see \u2014 code is visible, collaboration is transparent). d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.25. The analytical frame supports the rope classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "maintainer_burnout_extraction",
+      "question": "Is the expectation of unpaid volunteer maintenance labor a hidden extraction mechanism that coerces key maintainers?",
+      "resolution_mechanism": "Longitudinal burnout rate tracking among critical maintainers; correlation between funding availability and contributor retention; analysis of forced hand-offs vs voluntary succession planning",
+      "impact": "If burnout is systemic extraction: commons shifts toward Tangled Rope or Snare (victims = burned-out maintainers bearing disproportionate labor cost). If burnout is selectable risk: remains Rope (contributors choose difficulty level).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether maintainer burnout represents hidden extraction or voluntary risk selection"
+    },
+    {
+      "id": "corporate_capture_risk",
+      "question": "Can large companies steer open-source project direction toward proprietary interests while maintaining the appearance of commons coordination?",
+      "resolution_mechanism": "Feature-request and PR approval analysis for projects with corporate majority contributors; governance structure analysis (voting vs. meritocratic); correlation between corporate contribution increase and project dependency lock-in",
+      "impact": "If corporate capture is structural: commons functions as Tangled Rope from contributor perspective (coordination facade masking extraction). If governance prevents capture: remains Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether corporate contributors can capture commons governance"
+    },
+    {
+      "id": "vendor_lock_in_paradox",
+      "question": "Does the proliferation of proprietary wrapper layers and cloud-hosted open-source services create de facto lock-in despite the code being open?",
+      "resolution_mechanism": "Cost analysis of migration (effort to switch cloud vendors vs cost savings); measurement of switching friction introduced by vendor-specific integrations; comparison of true switching costs vs advertised 'openness'",
+      "impact": "If lock-in is substantial: commons provides freedom-to-use but not freedom-from-vendor (Snare from user perspective). If friction is low: remains Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proprietary wrappers create hidden vendor lock-in"
+    },
+    {
+      "id": "knowledge_commons_sustainability",
+      "question": "Can the commons model sustain itself without either significant volunteer labor or commercial subsidy, or is it structurally dependent on one or the other?",
+      "resolution_mechanism": "Historical analysis of successful long-term projects (Linux, Python, Apache): funding sources, contributor demographics, burnout rates; comparison with dead or dying projects; modeling of equilibrium contributor base size",
+      "impact": "If dependent on subsidy: commons is Scaffold with hidden sunset (sustainable only while funding lasts or while some actors accept labor loss). If self-sustaining: remains Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commons can sustain without external subsidy or volunteer overwork"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The open-source commons represents a high-trust coordination environment where software code and knowledge are shared freely, with no formal extraction mechanism and minimal suppression of alternatives. Contributors, consumers, and maintainers interact through transparent governance, meritocratic decision-making, and voluntary participation. The constraint exhibits genuine rope characteristics: it solves the collective action problem of knowledge dissemination by aligning individual incentives (reputation, skill development, solving personal problems) with collective benefit (public goods available to all). The extractiveness has increased modestly over the interval (0.12 to 0.18) as the commons has matured and professional actors have joined, creating subtle pressures on volunteer maintainers and expectations of constant availability. Theater ratio remains low (0.35), indicating that the function is transparent \u2014 code visibility, open discussion, and merit-based decisions dominate over performative activity. The commons exhibits all five rope characteristics: low base extraction (no coercive power structure), low suppression (exit is genuinely available), low theater (function is what you observe), multiple perspectives viewing it as pure coordination, and beneficiaries clearly aligned with contributors.",
+    "key_agents": [
+      "Volunteer Contributors: Primary coordinating agent (moderate/mobile) \u2014 choose to participate because personal incentives align with commons good",
+      "Commercial Companies: Primary beneficiary (institutional/arbitrage) \u2014 extract value from the commons while contributing some labor and funding",
+      "Project Maintainers: Gatekeepers (powerful/mobile at project scale) \u2014 coordinate contributions and manage scope; face burnout risk from unsustainable volunteer expectations",
+      "User Base: Consumer beneficiary (powerless/mobile) \u2014 access free software; can switch projects easily",
+      "Ecosystem Health: Abstract collective good (powerless/trapped) \u2014 benefits from commons participation but has no exit or organizing power",
+      "Foundation Infrastructure: Organizational support (organized/constrained) \u2014 GitHub, Linux Foundation, CNCF provide scaffolding for commons sustainability",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees pure coordination mechanism solving knowledge dissemination"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low-moderate. The constraint shows minimal extraction compared to market or hierarchical alternatives. Contributors participate voluntarily, often for intrinsic rewards (learning, reputation, solving personal problems). Commercial beneficiaries do extract value (using free software that cost them nothing to develop), but this is legitimate because: (a) the code is available to anyone, including competitors, (b) contributing companies do fund some development, and (c) alternatives (proprietary development, vendor lock-in) are available. The modest increase over the interval (0.12\u21920.18) reflects growing professionalization and maintenance burden concentration, not coercive extraction. Suppression (0.12): Very low. Exit is genuinely available \u2014 contributors can fork projects, start alternatives, or work on different initiatives. No technical barriers prevent alternative coordination mechanisms. Knowledge is transparent. This is the defining characteristic of a rope. Theater ratio (0.35): Low. The commons function is what you observe: visible code, open discussions, documented decisions, transparent governance. Some theater exists (project marketing, foundation PR, corporate reputation-washing), but it is not the primary mechanism. This low ratio supports rope classification over tangled_rope or piton.",
+    "perspectival_gap": "The open-source commons exhibits minimal perspectival gaps \u2014 all five perspectives classify it as Rope or Scaffold (temporary support). Volunteer contributors and commercial beneficiaries both see pure coordination. Large maintainers see soft-power coordination. The sustainability infrastructure sees temporary scaffolding as projects professionalize. The analytical observer sees a pure coordination mechanism solving knowledge dissemination. The absence of major gaps (no snare, no piton, no false mountain) indicates that the commons is genuinely functioning as coordination, not masking extraction or theater. The constraint's robustness comes from this alignment: no major actor experiences it as coercive or performative.",
+    "directionality_logic": "Volunteer contributors: Participant + mobile \u2192 d\u22480.50, f(d)\u22480.65. Symmetric \u2014 they both contribute and benefit. Commercial beneficiaries: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net subsidy from commons to commercial sector. Project maintainers: Powerful + mobile \u2192 d\u22480.48, f(d)\u22480.60. Power is present but exit is available; coordination, not coercion. Sustainability infrastructure: Organized + constrained \u2192 d\u22480.40, f(d)\u22480.40. Supporting function; moderate extraction to fund commons operations. User base: Consumer + mobile \u2192 d\u22480.45, f(d)\u22480.55. Benefit without being primary contributors. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. This is the observer's structural position, not an evaluative judgment. The derived directionalities are all in the low-extraction range (d<0.75 for all non-analytical perspectives), supporting rope classification.",
+    "mandatrophy_analysis": "COORDINATION CONFIRMED: The open-source commons resolves mandatrophy by demonstrating that \u03b5=0.18, suppression=0.12, and \u03c7<0.35 (across perspectives) are genuinely consistent with a pure rope. No hidden extraction mechanism is disguised as coordination (tangled rope would require \u03b5>0.30 and beneficiaries + victims in tension). No performative activity masks degraded function (piton would require theater>0.70). The constraint's five perspectives converge on rope or scaffold because the underlying coordination mechanism is transparent and voluntary participation is genuinely available. The omegas identify potential futures where burnout, corporate capture, or vendor lock-in could degrade the commons toward tangled_rope or snare \u2014 but those futures are not yet realized. The current state is authentic rope. The risks are real vulnerabilities, not present extractions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "software_supply_chain_security",
+      "knowledge_commons_sustainability",
+      "platform_governance_capture"
+    ],
+    "dual_formulation_note": "The Mutual Garden (open-source commons) is upstream of three dependent constraints: supply-chain security depends on commons reliability; platform governance risks depend on commons maturity; knowledge dissemination efficiency depends on commons health. These dependencies form a constraint family where commons degradation (toward tangled_rope or snare) would cascade to downstream constraints."
+  },
+  "directionality_overrides": []
+}

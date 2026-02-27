@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "sa_renewable_price_differential",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sa_renew"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "SA Renewable Price Arbitrage Proxy",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "sa_renewable_generators",
+      "sa_industrial_consumers",
+      "nem_arbitrage_traders"
+    ],
+    "victims": [
+      "nsw_coal_generators",
+      "nsw_industrial_consumers",
+      "retail_price_pressure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "NSW Coal Generator Stranded Asset",
+      "comment": "PERSPECTIVE 1: NSW COAL GENERATOR (SNARE) \u2014 Trapped in depreciation cycle as SA's renewables force wholesale prices below operating costs. No exit without capital loss. Cannot arbitrage across states; trapped by location and asset lock. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "NSW Industrial Consumer",
+      "comment": "PERSPECTIVE 2: NSW INDUSTRIAL CONSUMER (TANGLED ROPE) \u2014 Benefits from coordination: NEM integrates SA's cheap generation, reducing NSW wholesale costs. Constrained by inability to relocate production to SA (labor, logistics, land costs). Pays higher retail price than SA equivalent due to network tariffs + retailer hedging. d\u22480.58, f(d)\u22480.72, \u03c3=0.9 \u2192 \u03c7\u22480.19."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "SA Renewable Operator (Institutional)",
+      "comment": "PERSPECTIVE 3: SA RENEWABLE OPERATOR (ROPE) \u2014 Primary beneficiary. Achieves record generation volumes at cost-of-fuel-zero. Experiences constraint as pure coordination: wholesale market pricing enables dispatch; NEM integration creates demand. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiary via arbitrage exit (can expand, relocate capacity, optimize grid-facing contracts)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "NEM Arbitrage Trader (Financial)",
+      "comment": "PERSPECTIVE 4: NEM ARBITRAGE TRADER (TANGLED ROPE) \u2014 Extracts value from SA/NSW price spread via interconnect capacity arbitrage: long SA, short NSW. Benefits from volatility and structural price floor ($37 SA) as anchor for spread bets. Faces suppression: interconnect congestion limits arbitrage capacity; AEMO intervention constrains dispatch; future renewable adequacy may compress spread. d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.17."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "NEM Decarbonization Coalition",
+      "comment": "PERSPECTIVE 5: NEM DECARBONIZATION COALITION (SCAFFOLD) \u2014 Organized agents (renewable investors, grid operators, climate advocates) see price arbitrage as transient coordination mechanism enabling fast renewable deployment. Theater \u2264 0.35 (substantive economic arbitrage, not pure performance). Structural sunset: as coal retires and NSW renewables scale, the SA/NSW spread compresses toward renewable parity pricing. d\u22480.25, f(d)\u22480.18, \u03c3=1.0 \u2192 \u03c7\u22480.06. Low extraction because mechanism has genuine sunset and solves real coordination problem."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "NEM Balancing Authority (AEMO)",
+      "comment": "PERSPECTIVE 6: AEMO / NEM BALANCING AUTHORITY (PITON) \u2014 Maintains system stability through interconnect management and constraint equations. Theater_ratio \u2248 0.38: much institutional activity around 'balancing' is adaptive response to renewable variability, but system stability measures (frequency control ancillary services = FCAS) increasingly performative as storage/demand response mature. Sees itself as solving imminent grid problems; actually maintaining inertia-dependent system architecture that newer tech is making obsolete. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.18."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Energy Transition Systems Analyst",
+      "comment": "PERSPECTIVE 7: ENERGY TRANSITION SYSTEMS ANALYST (TANGLED ROPE from analytical position) \u2014 Sees the price differential as both enabler (coordinates rapid SA renewable deployment) and extraction mechanism (captures rents from geographically arbitrary coal stranding, redistributes to renewable owners and traders). Recognizes coordination function (NEM integration, interconnect capacity) is genuine but accompanies asymmetric extraction (coal bearer loses capital, renewable beneficiary gains). d\u22480.62, f(d)\u22480.88, \u03c3=1.2 \u2192 \u03c7\u22480.48. This is the classification the engine should compute as `constraint_claim` for the story."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coal_exit_speed_threshold",
+      "question": "Does the SA/NSW price differential accelerate coal retirement at economically rational pace or force premature stranded assets?",
+      "resolution_mechanism": "Longitudinal tracking of coal plant closure announcements and capex decisions; comparison of economic IRR for retained coal vs retirement date; correlation with wholesale price dynamics",
+      "impact": "If rational: constraint is coordination mechanism (Rope/Scaffold). If accelerated: constraint is extractive (Snare/Tangled Rope). Classification hinges on whether coal retirement reflects market signals or policy-forced externalization.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether price differential forces rational or premature coal exit"
+    },
+    {
+      "id": "retail_price_passthrough_asymmetry",
+      "question": "Do SA consumers realize wholesale price savings in retail pricing, or are they captured by retailer hedging and network tariff arbitrage?",
+      "resolution_mechanism": "Price decomposition: wholesale (AEMO) vs network tariff (SA Power Networks) vs retailer margin. Longitudinal retail price tracking SA vs NSW controlled for consumption profile. Survey of retailer hedging contract terms.",
+      "impact": "If passthrough complete: SA constraint benefits extend to end consumers (coordination). If captured: SA retail prices remain high despite wholesale collapse (extraction by retailers/network operators masked by wholesale visibility).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of wholesale savings passthrough to SA retail consumers"
+    },
+    {
+      "id": "interconnect_capacity_constraint_origin",
+      "question": "Is the SA/NSW interconnect capacity constraint a technical reality (cable physics) or an institutional constraint (regulatory/investment choice)?",
+      "resolution_mechanism": "Engineering audit of Heywood and Darlington interconnects: thermal limits, cable age, upgrade costs. Comparison of capital expenditure allocation for interconnect expansion vs other NEM upgrades. AEMO planning decisions analysis.",
+      "impact": "If technical: arbitrage spread is immutable (Mountain-like constraint). If institutional: spread can be compressed by capex decisions (Tangled Rope with policy levers). Classification of financial extraction hinges on whether spread is structural or policy-enforced.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical vs institutional nature of interconnect capacity limits"
+    },
+    {
+      "id": "renewable_adequacy_convergence_timeline",
+      "question": "When will NSW renewable deployment reach SA-equivalent penetration, compressing the price arbitrage floor?",
+      "resolution_mechanism": "Scenario modeling: NEM renewable build-out trajectory, capacity factors, storage additions. Comparison with historical SA deployment curves. Timeline to wholesale price convergence ($37 SA \u2192 $55+NSW).",
+      "impact": "If < 5 years: scaffold sunset is imminent, extraction window limited (Scaffold classification confirmed). If > 15 years: extraction mechanism persists long-term (Snare/Tangled Rope). Timing determines whether constraint is transitional or locked.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for NSW renewable adequacy to compress SA/NSW price spread"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "South Australia's renewable penetration reached 84% as of February 2026, driving wholesale electricity prices to $37/MWh \u2014 the lowest in the National Electricity Market (NEM). NSW wholesale prices remain at approximately $75/MWh, creating a sustained price differential that operates as an arbitrage proxy for deeper structural tensions in the NEM. The constraint exhibits both genuine coordination function (NEM interconnection enables economic dispatch of lowest-cost renewable generation across state lines) and extractive asymmetry (coal-dependent regions bear stranded asset costs while renewable beneficiaries and financial arbitrageurs capture rents). The tension between these functions makes it a Tangled Rope: the NEM coordination mechanism is real and socially beneficial (lower average wholesale costs, faster decarbonization), but it accompanies forced redistribution of capital from coal interests to renewable interests. The fundamental question is whether this redistribution reflects market-efficient signaling or policy-enforced externalization of transition costs.",
+    "key_agents": [
+      "SA Renewable Generators: Primary beneficiary (institutional/arbitrage) \u2014 achieve cost-of-fuel-zero dispatch at scale; capture wholesale rents during SA leadership period",
+      "NSW Coal Generators: Primary victim (powerless/trapped) \u2014 face depreciation and closure decisions forced by wholesale price floor; cannot relocate assets; cannot arbitrage across markets",
+      "NSW Industrial Consumers: Secondary victim (moderate/constrained) \u2014 benefit from NEM wholesale cost reduction but pay higher retail prices due to network tariffs and retailer hedging; constrained by inability to relocate production to SA",
+      "NEM Arbitrage Traders: Secondary beneficiary (powerful/arbitrage) \u2014 extract value from SA/NSW spread via interconnect capacity trading; faces suppression from congestion limits",
+      "NEM Decarbonization Coalition: Organized agent (organized/constrained) \u2014 includes renewable investors, climate advocates, grid operators; sees constraint as beneficial coordination mechanism with natural sunset as NSW renewables scale",
+      "AEMO (NEM Balancing Authority): Institutional steward (institutional/constrained) \u2014 maintains system stability; increasingly manages renewable variability; sees balancing role as threatened by architectural obsolescence",
+      "Energy Transition Systems Analyst: Analytical observer (analytical/analytical) \u2014 sees full structure: coordination function genuine but accompanied by asymmetric extraction; classification depends on whether transition proceeds at market-rational or policy-forced pace"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The price differential ($75 NSW vs $37 SA) represents real economic rent capture by SA generators and a real cost imposed on NSW coal operators. However, this is not maximum extraction (0.75+) because the rent is open-value creation from renewable deployment, not purely redistributive: NEM-wide wholesale costs decline due to SA's low-cost generation. The extractiveness value reflects that ~half the price differential is pure rents (captured by renewable operators and traders) and ~half is genuine efficiency gain (dispersed across all NEM consumers). Suppression (0.48): Moderate. Significant barriers to escape: coal operators cannot immediately retire or relocate; NSW consumers face retail price stickiness; AEMO maintains inertia-dependent balancing requirements that slow institutional adaptation. However, suppression is not total \u2014 NSW renewable investment is proceeding rapidly, interconnect capacity provides partial arbitrage relief, and storage/demand response are eroding AEMO's monopoly on balancing. Theater ratio (0.35): Low. The constraint's mechanism is substantively economic \u2014 it reflects real physics (renewable cost curve, network physics, wholesale market pricing) with minimal performative overlay. Wholesale market pricing is functional, not theatrical; interconnect management is responsive to real congestion, not ceremonial.",
+    "perspectival_gap": "This constraint exhibits a dramatic perspectival split between NSW coal operators (who see a Snare with d\u22480.92) and SA renewable operators (who see a Rope with d\u22480.08). The gap reveals that the same price differential is experienced as catastrophic extraction by the stranded coal interest and as benign coordination by the renewable beneficiary. The NEM analyst sees the truth: it is Tangled Rope \u2014 coordination function (lower NEM costs, efficient dispatch) coupled with asymmetric extraction (coal depreciation, renewable rents). The key disagreement is whether this asymmetry is market-justified or policy-enforced. The coal generator would argue for Snare (unjust expropriation by renewable subsidies or carbon policy). The renewable operator would argue for Rope (legitimate market reward for capital-efficient technology). The analyst sees both: the mechanism is genuinely coordinating, but it is also genuinely extractive from the coal interest. The scaffold perspective (decarbonization coalition) anticipates sunset \u2014 as NSW renewable penetration rises toward SA levels, the spread compresses and extraction window closes. This temporal structure is what makes it Scaffold-like in the long view, even though current classification is Tangled Rope.",
+    "directionality_logic": "SA renewable generators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Negative effective extraction; net beneficiaries. NSW coal generators: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum directionality; maximum extraction. Cannot exit asset base or market position. NSW industrial consumers: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.72. Moderate extraction; benefit from wholesale cost reduction but constrained from capturing full savings due to retail price stickiness and network tariff separation. NEM arbitrage traders: Mixed beneficiary-victim + arbitrage \u2192 d\u22480.35, f(d)\u22480.32. Lower extraction because arbitrage exit option is available; traders can rebalance portfolios or exit spread positions. AEMO: Institutional + constrained (not arbitrage) \u2192 d\u22480.45, f(d)\u22480.48. Moderate extraction derived from institutional constraint (legally mandated stability role limits flexibility) despite institutional power level. Energy analyst: Analytical position \u2192 d\u22480.62, f(d)\u22480.88. Sees the system from outside; observes coordination + extraction symmetrically; applies global scope \u03c3=1.2 to account for NEM-wide impacts.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by explicitly declaring the dual structure: it is genuinely a Rope (NEM coordination, efficient dispatch) AND genuinely extractive (coal stranding, uncompensated transition costs). The classification is Tangled Rope, which permits exactly this: a constraint with both coordination function and asymmetric extraction, where both are structurally real. The mandatrophy would arise if one tried to classify it as ONLY Rope (ignoring coal depreciation) or ONLY Snare (ignoring genuine efficiency gains). The Tangled Rope classification is mandatrophy-resolving precisely because it acknowledges both: 'the constraint coordinates efficient generation dispatch (coordination benefit = real) while imposing uncompensated costs on coal-dependent regions (extraction = real).' The theater_ratio (0.35) is low because the mechanism is substantive, not performative \u2014 this distinguishes it from a Piton (degraded ritual). The beneficiaries (SA renewables, traders) are real and generate real coordination function. The victims (NSW coal, some consumers) experience real extraction, not theatrical pressure. The constraint passes the mandatrophy gate: both functions are present, suppression is substantial but not total, and the system retains capacity for policy-driven resolution (sunset via NSW renewable scaling, equity mechanisms via transition funding)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "nsw_coal_depreciation_cycle",
+      "nem_interconnect_congestion",
+      "renewable_storage_investment_asymmetry"
+    ],
+    "dual_formulation_note": "The SA renewable price arbitrage is structurally decomposable into three linked constraints: (1) physical wholesale price floor set by SA renewable cost curves (high \u03b5), (2) NSW coal asset depreciation cascade driven by wholesale price floor (high \u03b5, high suppression), (3) interconnect congestion limiting arbitrage escape valve (moderate \u03b5, coordination function). This story focuses on the integrated system (Tangled Rope, \u03b5=0.52); the downstream constraints have higher \u03b5 values reflecting their more severe extraction mechanisms. All three are linked via network: the price differential drives depreciation decisions, which increases urgency for interconnect upgrade investment."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

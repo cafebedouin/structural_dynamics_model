@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "value_extraction_plateau",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vep"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "The Law of Diminishing Predation",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "dominant_platform"
+    ],
+    "victims": [
+      "platform_users",
+      "small_merchants",
+      "content_creators",
+      "ecosystem_health"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Trapped User",
+      "comment": "PERSPECTIVE 1: TRAPPED USER (SNARE) \u2014 Platform dependence for livelihood, social connection, or business visibility. Exit costs are prohibitive: network effects lock in network effects, switching costs are high, alternative platforms lack critical mass. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.64. High extraction, high suppression of alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Small Merchant",
+      "comment": "PERSPECTIVE 2: SMALL MERCHANT (SNARE) \u2014 Dependent on platform for customer acquisition and payment processing. Margin erosion from algorithmic demotion, fee extraction, and terms-of-service changes reduces viability. Can theoretically exit but faces customer loss and reputational cost. d\u22480.80, f(d)\u22481.20, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Content Creator",
+      "comment": "PERSPECTIVE 3: CONTENT CREATOR (SNARE) \u2014 Despite high individual power (audience, influence, marketability), locked into platform's monetization scheme. Can exit to competing platform but loses accumulated audience. Algorithmic suppression, demonetization, and revenue-share cuts extract value without direct alternative. d\u22480.65, f(d)\u22481.00, \u03c3=1.2 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Dominant Platform",
+      "comment": "PERSPECTIVE 4: DOMINANT PLATFORM (ROPE) \u2014 Experiences constraint as coordination problem: must maintain user engagement, merchant participation, and ecosystem health to sustain extraction. Extraction is experienced as coordination function \u2014 matching users, creators, merchants, and advertisers. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary; sees own mechanism as market-making."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Experiences both coordination benefit (efficient allocation of digital goods) and extraction problem (consumer harm, economic concentration). Regulation is enforcement mechanism that appears to coordinate but actually limits platform extraction. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.35."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Digital Feudalism Narrative",
+      "comment": "PERSPECTIVE 6: DIGITAL FEUDALISM NARRATIVE (PITON) \u2014 The framing that platform dominance is inevitable, natural, and permanent. This narrative persists despite increasing evidence that extraction has reached saturation: user churn accelerating, merchant margin collapse reducing ecosystem viability, creator burnout reducing content quality. theater_ratio=0.58 reflects that much discourse about platform 'innovation' is actually performative justification for rent extraction. The narrative degrades as extraction becomes unsustainable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN FRAME) \u2014 From a civilizational view, network effects and winner-take-most dynamics appear as immutable laws of digital markets. But the structural data (\u03b5=0.68, suppression=0.72, theater=0.58) contradicts a mountain classification. The constraint is contingent on specific institutional arrangements (legal immunity, data privacy gaps, network lock-in via regulation). False summit detected: what appears as digital destiny is actually extractive structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_saturation_point",
+      "question": "At what margin/fee/suppression level does platform extraction become self-defeating, causing ecosystem collapse faster than alternative platforms can capture users?",
+      "resolution_mechanism": "Longitudinal analysis of churn rates, merchant defection, content creator retention, and cross-platform growth as fee structures intensify. Identify inflection points where ecosystem health metrics turn negative.",
+      "impact": "If saturation is <15% of potential value: extraction-driven collapse is imminent, snare classification holds but with finite horizon. If saturation is >40%: platform can extract indefinitely, snare is stable/permanent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extraction saturation point at which ecosystem collapse accelerates"
+    },
+    {
+      "id": "alternative_platform_viability",
+      "question": "Do decentralized, interoperable, or federated alternatives reduce the lock-in effect sufficiently to make exit mobile rather than trapped for average users?",
+      "resolution_mechanism": "Network-adoption analysis of alternative platforms (Mastodon, Bluesky, etc.); measurement of switching cost reduction via data portability, identity federation, open standards adoption.",
+      "impact": "If alternatives gain critical mass: exit options become 'mobile' and classification shifts from Snare to Tangled Rope for many perspectives. If alternatives remain marginal: exit remains 'trapped' and Snare persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether decentralized alternatives provide viable exit paths"
+    },
+    {
+      "id": "regulatory_intervention_effectiveness",
+      "question": "Do antitrust enforcement, interoperability mandates, or data rights regulations actually reduce extraction, or do they create theater while maintaining structural lock-in?",
+      "resolution_mechanism": "Post-regulation measurement of fee reduction, merchant profitability recovery, creator earnings stability, and user churn. Compare between jurisdictions with vs. without intervention.",
+      "impact": "If effective: regulation enables exit options ('mobile' to regulated alternatives), classification shifts toward Scaffold or Tangled Rope. If theater: suppression persists under new guise, Snare classification confirmed with regulatory theater as new suppression mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory intervention reduces extraction or generates theater"
+    },
+    {
+      "id": "bifurcation_trap",
+      "question": "As extraction intensity increases, does the platform bifurcate into separate ecosystems (premium/standard users, exclusive/commodity creators) that actually stabilize the snare by segmenting victims into differently-trapped groups?",
+      "resolution_mechanism": "Structural analysis of platform segmentation: separate fee tiers, algorithmic ranking by creator status, merchant categories. Measurement of whether segmentation reduces churn or merely redistributes extraction.",
+      "impact": "If segmentation stabilizes: the snare becomes self-reinforcing through stratification, theater increases, and piton dynamics emerge. If segmentation drives defection: extraction limit is real and structural collapse approaches.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platform bifurcation stabilizes or destabilizes extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Law of Diminishing Predation describes a structural constraint in dominant platforms and network-based monopolies where extraction from users, merchants, and content creators has reached biological/economic saturation. The dominant platform (e.g., Meta, Amazon marketplace, YouTube) has spent 10-15 years optimizing its capture of surplus value through algorithmic suppression, fee inflation, terms-of-service changes, and data monetization. The constraint exhibits a classic snare structure: users and merchants are trapped by network effects and switching costs, while the platform experiences extraction as necessary coordination. Theater has increased as the platform performs 'innovation' and 'community building' while systematically degrading economics for ecosystem participants. The constraint's distinguishing feature is that it has hit a plateau: further extraction increases ecosystem collapse faster than the platform can monetize additional value. User churn accelerates, merchant margins collapse below viability, creator burnout reduces content quality, and alternative platforms begin to capture defectors. The platform perceives the constraint as coordination (keeping markets efficient), but trapped participants see it as pure extraction.",
+    "key_agents": [
+      "Platform Users: Primary victims (powerless/trapped) \u2014 locked in by network effects, social data, accumulated profiles, and lack of viable alternatives. Bears extraction through algorithmic suppression, data commodification, attention harvesting.",
+      "Small Merchants: Secondary victims (moderate/constrained) \u2014 dependent on platform for customer acquisition but facing margin erosion from fees, algorithmic demotion, and algorithm-driven competition. Can theoretically exit but lose customer base and reputational capital.",
+      "Content Creators: Tertiary victims (powerful/mobile) \u2014 despite individual power and audience, locked into platform's monetization scheme and subject to algorithmic demotion, demonetization, and revenue-share cuts. Have capacity to exit but lose accumulated audience.",
+      "Dominant Platform: Primary beneficiary (institutional/arbitrage) \u2014 extracts value through advertising, fee collection, data monetization, and merchant/creator surplus capture. Experiences extraction as market-making and platform coordination.",
+      "Regulatory Authority: Secondary stakeholder (organized/constrained) \u2014 sees both coordination benefit (efficient digital goods allocation) and extraction problem (consumer harm, economic concentration). Regulation is enforcement that appears to coordinate but actually limits extraction.",
+      "Alternative Platform Ecosystem: Potential constraint disruptor (organized/constrained) \u2014 decentralized, federated, or open-source alternatives (Mastodon, Bluesky, Threads, etc.) that reduce lock-in if they achieve critical mass.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing platform dominance as immutable digital law. False summit: what appears inevitable is actually contingent institutional structure."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The platform captures surplus through multiple extraction channels: advertising fees (20-30% of merchant revenue), data monetization (user behavioral profiles sold to advertisers), algorithmic suppression (creators cannot reach audience without paid promotion), and terms-of-service control (unilateral fee increases, demonetization policies). The value is concentrated: small number of dominant platforms extract from billions of users, millions of merchants, hundreds of millions of creators. Measurement across decade shows escalation from 0.42 to 0.68 as optimization deepens. Suppression (0.72): High. Alternatives are suppressed through: network effects (utility increases with participant count, creating winner-take-most dynamics), data lock-in (user profiles, social graphs, accumulated reputation non-portable), switching costs (loss of audience, customer base, and accumulated capital), and legal/regulatory barriers (platform immunity rules, data privacy fragmentation that favors incumbents). Suppression increased from 0.60 to 0.72 as platforms invested in moats. Theater ratio (0.58): Moderate-high. Significant performative content in platform narratives: 'innovation' that actually extracts value faster, 'community safety' policies that suppress creators while protecting platform interests, 'creator funds' and 'merchant development' that perform support while degrading actual economics. Theater increased from 0.35 to 0.58 as extraction intensity required more justification. Claimed type (Snare): The base properties meet snare thresholds \u2014 \u03b5 \u2265 0.46, suppression \u2265 0.60, \u03c7 \u2265 0.66 from key victim perspectives.",
+    "perspectival_gap": "The most significant perspectival gap is between the dominant platform's perception (Rope/coordination) and the trapped user's perception (Snare/extraction). The platform legitimately coordinates supply and demand \u2014 it matches users with merchants, creators with audiences, and advertisers with targets. This matching function is real and valuable. But the structural data reveals that the platform captures an asymmetric share of the value created by this matching. From the platform's perspective (institutional/arbitrage), \u03c7 is negative: the platform is subsidizing the market-making function. From the trapped user's perspective (powerless/trapped), \u03c7 is high: they bear the extraction cost. The regulatory authority sees Tangled Rope \u2014 both coordination benefit and extraction problem. The analytical observer risks seeing a Mountain (digital destiny, network effects as natural law), but the structural data contradicts this: the constraint is contingent on legal immunity (Section 230 in US), data privacy fragmentation, network lock-in via regulation (interoperability rules missing), and specific business model choices (advertising-based revenue). The piton perspective (digital feudalism narrative) reflects that much discourse about platform inevitability is performative \u2014 justifying extraction as natural rather than structural.",
+    "directionality_logic": "Platform users: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Cannot exit without severe cost. Small merchants: Victims + constrained \u2192 d\u22480.80, f(d)\u22481.20. Significant extraction but some exit option (migrate to direct sales, own website, but lose customers). Content creators: Despite high power (audience, marketability), victims + mobile exit option \u2192 d\u22480.65, f(d)\u22481.00. Moderate-to-high extraction because exit is theoretically available but audience loss is severe cost. Dominant platform: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; derives d from arbitrage exit option and beneficiary status. Regulatory authority: Mixed beneficiary (coordination) and victim (extraction overshooting) + constrained \u2192 d\u22480.50, f(d)\u22480.65. Tangled rope arises from split incentive. Digital feudalism narrative: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Piton comes from theater gate (theater \u2265 0.70 threshold), not from chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain would require \u03b5 \u2264 0.25, emerges_naturally=true, accessibility_collapse \u2265 0.85. The structural data fails these gates: \u03b5=0.68 and emerges_naturally=false contradicts mountain.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the platform's Rope perspective is valid but perspectival. The platform DOES coordinate supply and demand; the matching function is real and valuable. But the extraction of asymmetric value from this coordination transforms it into a Snare from the victim's perspective. The mandatrophy appears when the analytical observer or regulator asks: 'Is this coordination or extraction?' The answer is both \u2014 it is a Tangled Rope (coordination + enforcement) from the regulatory view, a Rope from the platform's view, and a Snare from the trapped user's view. The critical resolution is that the extraction has hit saturation: further increase in \u03c7 will degrade the coordination function faster than it extracts value. At this plateau, the constraint becomes self-defeating \u2014 the platform must choose between deeper extraction (risking ecosystem collapse and loss of coordination function entirely) or moderate extraction (accepting lower revenue but maintaining viability). The piton perspective (digital feudalism narrative) masks this choice by naturalizing extraction as inevitable. Regulation that enforces interoperability, data portability, and legal liability could shift the constraint from Snare to Scaffold (temporary coordination problem with sunset) or even to competitive Rope (coordination without asymmetric extraction). The mandatrophy analysis reveals that the classification is stable only if extraction remains at plateau level; either deeper extraction or regulatory intervention will force classification change."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "network_effects_winner_take_most",
+      "data_lock_in_switching_costs",
+      "algorithmic_transparency_gap"
+    ],
+    "dual_formulation_note": "The Law of Diminishing Predation is downstream of network effects (which create the structural lock-in) and data lock-in (which amplifies switching costs). It is upstream of specific policy interventions (antitrust, interoperability mandates, data rights). The constraint family decomposes as: network_effects (\u03b5\u22480.05, Mountain) \u2192 value_extraction_plateau (\u03b5\u22480.68, Snare) \u2192 regulatory_intervention (\u03b5\u22480.40, Scaffold). Each story has distinct \u03b5 because they measure different structural claims: network effects as natural law, extraction as institutional choice, regulation as temporary enforcement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.65
+    }
+  ]
+}

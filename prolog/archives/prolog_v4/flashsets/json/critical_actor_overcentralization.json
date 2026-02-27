@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "critical_actor_overcentralization",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Single Point of Failure",
+    "topic_domain": "logistical/technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "critical_actor"
+    ],
+    "victims": [
+      "network_participants"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Critical Actor Perspective",
+      "comment": "The critical actor benefits from their central role through increased power, influence, and revenue streams. They can arbitrage their position to further solidify control."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Network Participants Perspective",
+      "comment": "Network participants are trapped due to high switching costs or lack of alternatives, making them vulnerable to exploitation or failure of the critical actor. They bear the brunt of the system's collapse if the single point of failure occurs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Regulators Perspective",
+      "comment": "Regulators are constrained by existing regulations and lobbying efforts of the critical actor but also benefit from the stability the critical actor provides. The system extracts from them by increasing systemic risk, while also allowing them to maintain a degree of control. They can not fully exit, but are more than trapped."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer Perspective",
+      "comment": "The analytical observer can see both sides. High centralization coordinates resources and increases efficiency up to a point. That point is reached when the rest of the network becomes unable to act on its own."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "actor_substitutability",
+      "question": "How easily can the critical actor be replaced or substituted with alternative actors or decentralized systems?",
+      "resolution_mechanism": "Assess availability of alternative providers, transition costs, and regulatory hurdles for switching to different models.",
+      "impact": "High substitutability reduces the 'snare' effect; low substitutability increases the risk of systemic failure and extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the difficulty of substituting the critical actor with alternatives."
+    },
+    {
+      "id": "failure_probability",
+      "question": "What is the probability of failure for the critical actor, considering technological, economic, and political risks?",
+      "resolution_mechanism": "Conduct a risk assessment that considers historical data, stress tests, and expert opinions on potential failure modes.",
+      "impact": "Higher failure probability significantly amplifies the snare characteristic of the system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluates the likelihood of the critical actor's failure."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.525
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Critical actor overcentralization describes a scenario where a network\u2019s functional survival depends entirely on a single node\u2014be it a clearinghouse bank, a cloud provider, or a charismatic leader. This creates a single point of failure that can be exploited or can fail, harming all dependent actors.",
+    "key_agents": [
+      "Critical Actor: Primary beneficiary (institutional/arbitrage) - Benefits from increased power, influence, and revenue streams.",
+      "Network Participants: Primary victims (powerless/trapped) - Vulnerable due to dependence on the central actor.",
+      "Regulators: Constrained actors (moderate/constrained) - Can influence but not fully control the central actor."
+    ],
+    "logic_rationale": "The system is classified as a tangled rope, because a single point of failure is a severe and total problem for its victim, the participants of the network, but the critical actor also provides a coordination function. The critical actor gains power and benefits from extraction, and requires active enforcement to maintain its position.",
+    "perspectival_gap": "The gap stems from the differential distribution of benefits and costs. The critical actor experiences the system as beneficial and enabling (rope), while network participants experience it as constraining and risky (snare). Regulators have a mixed view (tangled_rope), acknowledging both the benefits and the risks.",
+    "directionality_logic": "Directionality is determined by the structural position of each agent. The critical actor, as beneficiary with arbitrage options, has a low d. Network participants, trapped and bearing the costs, have a high d. Regulators, being between, have a moderate d.",
+    "mandatrophy_analysis": "The original classification as a snare was incorrect because it did not account for the coordination function provided by the critical actor. By classifying it as a tangled rope, we acknowledge both the benefits and the risks associated with overcentralization."
+  },
+  "network": {
+    "affects_constraints": [
+      "market_concentration",
+      "interbank_lending_contagion"
+    ]
+  },
+  "directionality_overrides": []
+}

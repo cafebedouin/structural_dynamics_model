@@ -1,0 +1,138 @@
+{
+  "header": {
+    "constraint_id": "landscape_of_fear_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Landscape of Fear",
+    "topic_domain": "biological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "predators",
+      "ecosystem_health"
+    ],
+    "victims": [
+      "prey_populations",
+      "agricultural_output"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Prey Population",
+      "comment": "Perspective 1: Prey animals experience the landscape of fear as a snare, constantly threatened and unable to fully utilize resources, leading to reduced fitness and population sizes. Trapped within their habitat, the perceived threat suppresses optimal foraging and movement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Predator Population",
+      "comment": "Perspective 2: Predators benefit from the landscape of fear as it concentrates prey, making hunting more efficient. As an institution, this benefit is maintained across generations, creating an environment that favors predator success. They can 'arbitrage' the locations within the landscape to optimize hunting."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Ecological Researcher",
+      "comment": "Perspective 3: From an analytical perspective, the landscape of fear represents a tangled rope. It structures ecosystem dynamics by both coordinating predator-prey interactions and creating inherent extraction. Researchers observing the system see the complexities in prey behavior and population distribution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Livestock Grazers",
+      "comment": "Perspective 4: Ranchers with livestock in open grazing areas view the landscape of fear as a tangled rope, as their livestock is preyed upon, but the predators also may help keep the general ecosystem healthy (reducing invasive species, etc.) They are constrained in their ability to move their livestock."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "predator_threat_perception",
+      "question": "How much does the perceived threat from predators vary across prey species and environments?",
+      "resolution_mechanism": "Conducting behavioral experiments with various prey species to measure their responses to different predator cues.",
+      "impact": "If the threat perception is uniform, the landscape of fear acts as a more consistent snare. If the threat perception varies, the landscape of fear is more fragmented and complex.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantifies the perceived threat from predators."
+    },
+    {
+      "id": "ecosystem_feedback_strength",
+      "question": "How strongly does the altered prey behavior influence overall ecosystem health and resilience?",
+      "resolution_mechanism": "Developing ecological models to simulate the effects of different prey behavior patterns on plant communities and nutrient cycling.",
+      "impact": "If the feedback is strong, the landscape of fear serves as an important regulator. If the feedback is weak, the landscape of fear is primarily extractive.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Models the ecosystem feedback."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The \"landscape of fear\" describes how the mere presence or perception of predators constrains prey behavior, affecting feeding patterns, reproductive rates, and survival far beyond direct predation. This phenomenon has profound impacts on ecosystem dynamics and can even affect human activities such as agriculture.",
+    "key_agents": [
+      "Prey Populations: Primary target (powerless/trapped) - constrained by predator presence, affects behaviors, feeding",
+      "Predators: Primary beneficiary (institutional/arbitrage) - benefits from concentrated prey making hunting more efficient",
+      "Ecosystem Health: Secondary beneficiary (analytical/mobile) - the regulation of populations may improve ecosystem health overall",
+      "Agricultural Output: Secondary target (moderate/constrained) - If prey are pests, reduced output from limited pest reduction"
+    ],
+    "logic_rationale": "The extractiveness value (0.55) reflects a mix of direct consumption by predators and indirect costs due to altered prey behavior, such as reduced foraging time and increased vigilance. The suppression value (0.70) is high due to the strong inhibitory effect of predator presence on prey activities.",
+    "perspectival_gap": "The perspectival gap arises because what benefits the predators (concentrated prey) directly harms the prey (reduced fitness and population sizes). The analytical view sees that this complex relationship can also positively affect the ecosystem overall. A secondary target of agricultural output represents the view that decreased prey reduces the harm to crop production.",
+    "directionality_logic": "The Landscape of Fear benefits the predator populations, while also coordinating the ecosystem as a whole. The existence of predators changes the behavior of the prey, so the ecosystem as a whole is structured based on those behavioral changes."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

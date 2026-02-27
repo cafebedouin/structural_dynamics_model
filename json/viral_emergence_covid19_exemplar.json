@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "viral_emergence_covid19_exemplar",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "covid_response"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Societal Response to SARS-CoV-2 Emergence",
+    "topic_domain": "social/political/health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_authorities",
+      "essential_sector_employers",
+      "pharmaceutical_manufacturers"
+    ],
+    "victims": [
+      "non_essential_workers",
+      "small_business_operators",
+      "students_educational_access",
+      "mental_health_vulnerable_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Non-Essential Worker During Lockdown",
+      "comment": "PERSPECTIVE 1: NON-ESSENTIAL WORKER (SNARE) \u2014 Trapped without exit. Loses income through mandated closure while bearing full health and economic risk. No agency in constraint design or timing. Suppression is extreme: cannot work, cannot access unemployment benefits immediately, cannot contest the mandate without risking social stigma. Extraction runs unidirectionally toward the institutional apparatus \u2014 the worker's costs subsidize public health coordination efforts."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global Poor and Unvaccinated Populations",
+      "comment": "PERSPECTIVE 2: GLOBAL POOR & VACCINE-EXCLUDED (SNARE) \u2014 Trapped in regions with vaccine access restrictions and manufacturing constraints. Bear health burden and lockdown costs without vaccine access. No exit option: cannot move to vaccine-rich regions, cannot obtain doses through normal channels. Maximum experienced extraction \u2014 abstract global coordination mechanism (vaccine equity) subordinated to national interest."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Business Operators",
+      "comment": "PERSPECTIVE 3: SMALL BUSINESS OPERATORS (TANGLED ROPE) \u2014 Constrained by lockdown mandates but also benefit from some coordinated support (PPP loans, moratoriums). Coordination function: businesses are part of integrated supply chains; collective closure prevents health system collapse. But extraction is asymmetric: large corporations receive more support per employee; small businesses face disproportionate closure risk. Agency is limited but not zero \u2014 some negotiation over essential designations, some adaptation capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Public Health Authorities",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH AUTHORITIES (ROPE) \u2014 Primary beneficiary with institutional power and arbitrage options. Constraint functions as coordination mechanism: centralized decision-making prevents healthcare system collapse and enables resource allocation. Extraction is minimal from this perspective because authorities are solving the genuine collective action problem. Can exit through deference to medical advice; can arbitrage by claiming scientific authority. Experiences the constraint as legitimate coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturers",
+      "comment": "PERSPECTIVE 5: PHARMACEUTICAL MANUFACTURERS (ROPE) \u2014 Institutional beneficiary. Benefits from vaccine development urgency, regulatory fast-tracking (Operation Warp Speed), intellectual property protection, and guaranteed government procurement. Experiences constraint as coordination mechanism enabling vaccine development at scale. Has arbitrage options: can choose which vaccines to produce, which markets to serve. Extraction is minimal from this perspective \u2014 the constraint aligns manufacturer incentives with public health objectives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Education System and Students",
+      "comment": "PERSPECTIVE 6: EDUCATION SYSTEM & STUDENTS (TANGLED ROPE) \u2014 Organized institutional agent constrained by closure mandates. Genuine coordination function: preventing school transmission protects vulnerable populations and reduces healthcare demand. But extraction is severe: student learning loss, teacher burnout, digital divide deepens educational inequality. Shutdown theaters (temperature checks, hybrid learning) provide low functional benefit. Constrained exit: schools cannot fully reopen without risking transmission surges; cannot stay closed indefinitely without harming development. Mixed experience \u2014 real coordination benefit paired with significant imposed costs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Mass Testing & Surveillance Infrastructure",
+      "comment": "PERSPECTIVE 7: TESTING & SURVEILLANCE INFRASTRUCTURE (PITON) \u2014 Institutional actor. Theater ratio is high (0.61): rapid antigen tests have low sensitivity; PCR tests are delayed; surveillance systems produce data without clear action protocols; testing theater (frequent testing of asymptomatic individuals) persists after effectiveness plateaued. The constraint maintains itself through inertia \u2014 testing capacity built during emergency persists long after utility declines. Primary function has atrophied (early pandemic: essential for case finding; mid-pandemic: ritualized compliance signaling) but infrastructure persists."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer - Global Health Coordination",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational/global scope, the constraint is a mixed coordination-extraction hybrid. Coordination function: pandemic requires centralized information sharing, resource allocation, and supply chain management. Genuine public health good. But asymmetric extraction: benefits concentrate in wealthy nations (vaccine access, economic support); costs distribute to low-income populations (disease burden, economic collapse). Theater is significant: global coordination theater (WHO declarations, vaccine diplomacy) masks resource hoarding and inequality. Effective extraction chi remains moderate to high even after accounting for genuine coordination benefit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "original_virus_severity",
+      "question": "What was the true baseline severity of SARS-CoV-2 in naive populations without pre-existing cross-reactive immunity or pre-vaccination?",
+      "resolution_mechanism": "Serological studies of early outbreaks; age-stratified infection fatality rate estimates from random sampling; comparison to endemic coronavirus burden",
+      "impact": "If IFR < 0.2%: response severity appears excessive relative to threat (extraction emphasis increases). If IFR > 0.5%: response severity aligns with genuine pandemic threat (coordination emphasis increases). Classification could shift from Tangled Rope toward Rope if threat was severe, or toward Snare if threat was moderate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Baseline infection fatality rate of SARS-CoV-2 in naive populations"
+    },
+    {
+      "id": "vaccine_efficacy_against_transmission",
+      "question": "Did vaccines substantially reduce transmission, or primarily protect individual recipients from severe disease?",
+      "resolution_mechanism": "Controlled studies comparing vaccinated/unvaccinated transmission rates in controlled settings; analysis of vaccination impact on population-level case curves accounting for variant emergence",
+      "impact": "If vaccine-induced sterilizing immunity: mandates are coordination mechanism (Rope/Tangled Rope with lower extraction). If vaccine primarily prevents severe disease: mandates are extraction mechanism subordinating individual autonomy to collective protection (Snare/high-extraction Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether vaccines reduce transmission or primarily prevent severe disease"
+    },
+    {
+      "id": "lockdown_counterfactual_health",
+      "question": "What would health outcomes (mortality, disease incidence) have been absent lockdowns, given the actual behavioral response to perceived threat?",
+      "resolution_mechanism": "Comparison to jurisdictions with minimal lockdowns (Sweden, Japan, Georgia); modeling of voluntary behavior change absent mandates; meta-analysis of lockdown effectiveness across heterogeneous populations",
+      "impact": "If counterfactual health outcomes similar: lockdowns were extraction mechanism with minimal coordination benefit (Snare). If counterfactual health outcomes substantially worse: lockdowns were necessary coordination mechanism (Rope/Tangled Rope). Shifts evidence-base for classification type across all perspectives.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Health outcomes under counterfactual scenario without lockdowns"
+    },
+    {
+      "id": "costs_lockdown_containment",
+      "question": "What were the full accounting of costs imposed by lockdowns \u2014 mortality from delayed care, educational loss, mental health burden, economic loss \u2014 relative to disease-specific mortality prevented?",
+      "resolution_mechanism": "Comprehensive cost-benefit analysis including disability-adjusted life years (DALYs) from lockdown-induced harms; longitudinal health tracking of closure cohorts; economic productivity analysis",
+      "impact": "If lockdown costs > prevented disease costs: constraint appears as extraction (Snare). If lockdown costs < prevented disease costs: constraint appears as justified coordination (Rope/Tangled Rope). This omega determines whether victims' snare perspective or beneficiaries' rope perspective has empirical priority.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Full cost-benefit accounting of lockdown harms versus prevented disease mortality"
+    },
+    {
+      "id": "surveillance_mission_creep",
+      "question": "Did surveillance infrastructure built for pandemic response persist and expand beyond health applications?",
+      "resolution_mechanism": "Documentation of surveillance capabilities retained post-emergency; analysis of mission creep precedents in other crises; legal challenges to surveillance authority retention",
+      "impact": "If substantial mission creep: theater_ratio was understated, piton classification confirmed (institutional inertia masquerading as health infrastructure). If surveillance dismantled: theater_ratio was correct, temporary emergency function (Scaffold). Affects piton vs scaffold classification for surveillance actors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Persistence and expansion of surveillance capabilities beyond emergency response"
+    },
+    {
+      "id": "institutional_capture_dynamics",
+      "question": "To what extent did public health authorities become captured by pharmaceutical manufacturers, hospital systems, or political interests \u2014 suppressing dissent and alternative approaches?",
+      "resolution_mechanism": "Analysis of regulatory decisions favoring particular manufacturers; documentation of dissent suppression; comparison to pre-pandemic institutional norms; examination of revolving-door employment",
+      "impact": "If substantial capture: beneficiary actors (authorities + manufacturers) extracted more value than coordination function justified (extraction emphasis increases). If minimal capture: beneficiary authority decisions were motivated by genuine health coordination (coordination emphasis increases). Affects directionality for institutional perspectives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree of institutional capture by industry and political interests"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "covid_response_extract_0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.45,
+      "id_override": "covid_response_extract_6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52,
+      "id_override": "covid_response_extract_24"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "covid_response_theater_0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "covid_response_theater_6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.61,
+      "id_override": "covid_response_theater_24"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The emergence of SARS-CoV-2 in late 2019 triggered an unprecedented coordinated global response combining public health authority, economic intervention, surveillance expansion, and supply chain reorganization. This constraint story models the evolving 'societal response' as a structural phenomenon that exhibits multiple classification types depending on the observer's structural position. From the perspective of non-essential workers, the response appears as a snare: mandatory income loss without exit, high suppression, and asymmetric bearing of costs. From the perspective of public health authorities, the same response appears as rope: a coordination mechanism solving the legitimate collective action problem of preventing healthcare system collapse. From the analytical global perspective, it appears as tangled rope: genuine coordination benefit paired with severe asymmetric extraction benefiting wealthy nations and harming low-income populations. The constraint's extractiveness increased over time (0.25 \u2192 0.52) as initial emergency measures calcified into persistent mandates, and theater_ratio increased (0.35 \u2192 0.61) as performative measures (asymptomatic testing, certification theater, vaccination theater) accumulated despite declining functional benefit. The constraint demonstrates how identical policies can be coordinating mechanisms or extraction schemes depending entirely on the observer's structural relationship to enforcement and benefit.",
+    "key_agents": [
+      "Public Health Authorities: Institutional beneficiary (institutional/arbitrage) \u2014 primary architects of response, design authority, access to best available information",
+      "Non-Essential Workers: Primary victim (powerless/trapped) \u2014 mandatory income loss, no exit, bear full cost of institutional coordination choices",
+      "Small Business Operators: Secondary victim (moderate/constrained) \u2014 constrained by closures but some access to support programs; disproportionate burden relative to large corporations",
+      "Pharmaceutical Manufacturers: Institutional beneficiary (institutional/arbitrage) \u2014 benefit from regulatory acceleration, intellectual property protection, guaranteed procurement",
+      "Essential Sector Employers: Beneficiary (institutional/arbitrage) \u2014 maintain operations while competitors close; access to preferred labor pools; reduced competition",
+      "Education System & Students: Mixed victim/agent (organized/constrained) \u2014 benefit from legitimate infection prevention coordination but bear severe learning loss and mental health costs",
+      "Global Poor & Vaccine-Excluded Populations: Victim (powerless/trapped) \u2014 locked out of vaccine access, locked down without support, suffer both disease and economic collapse",
+      "Testing & Surveillance Infrastructure: Institutional maintainer (institutional/arbitrage) \u2014 benefits from permanent expansion; theater ratio increases as core function atrophies"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. The constraint extracts significant resources from non-essential workers and small businesses to fund public health coordination and economic support for essential sectors. The extraction is asymmetric \u2014 non-essential workers and small businesses bear disproportionate costs; essential employers and pharmaceutical manufacturers realize disproportionate benefits. The trajectory from 0.25 (early emergency: genuine coordination) to 0.52 (late pandemic: calcified extraction) reflects the transformation from emergency response to institutional routine. Suppression (0.68): High. Multiple suppression mechanisms: (1) legal mandates with criminal penalties for violations, (2) social suppression (ostracism of dissidents), (3) occupational suppression (employment termination for non-compliance), (4) informational suppression (suppression of alternative medical voices and cost-benefit analyses). Suppression increases over time as initial voluntary cooperation gives way to enforced compliance. Theater ratio (0.61): Moderate-high. Performance components include: rapid antigen testing (low sensitivity, high theater), asymptomatic testing (declining marginal benefit), vaccination theater (frequent boosters despite declining effectiveness), certification systems (produce compliance signaling without health benefit), contact tracing (low implementation effectiveness masked by visible effort). Theater increased over the interval as genuine emergency measures (intensive care coordination, triage protocols) were replaced by ritualized compliance signaling.",
+    "perspectival_gap": "This constraint exhibits the full perspectival gap across all six types. Public health authorities experience rope (pure coordination) \u2014 solving collective action problems, legitimate authority. Non-essential workers experience snare (pure extraction) \u2014 mandatory cost-bearing without benefit or exit. Pharmaceutical manufacturers experience rope (pure coordination) \u2014 vaccine development aligns private and public interest. Global poor experience snare (pure extraction) \u2014 lockdown and vaccine exclusion without support. Small businesses and education systems experience tangled rope (mixed coordination and extraction) \u2014 genuine pandemic response coordination paired with asymmetric cost distribution. Surveillance infrastructure experiences piton (degraded inertia) \u2014 theater persists after core function atrophies. The gaps are not perspectival differences in interpretation but genuine structural differences in how the constraint functions for different agents. Public health authorities genuinely solve coordination problems; non-essential workers genuinely bear extraction costs. Both perspectives are structurally accurate for their respective agents. The perspectival gap reveals the constraint as an asymmetric institutional arrangement subordinating individual costs to collective coordination.",
+    "directionality_logic": "Directionality (d) values derive from beneficiary/victim status combined with exit options. Non-essential workers: victim status + trapped exit \u2192 d \u2248 0.95 \u2192 f(d) \u2248 1.42 (maximum experienced extraction). Public health authorities: beneficiary status + arbitrage exit \u2192 d \u2248 0.05 \u2192 f(d) \u2248 -0.12 (negative/beneficial extraction from their perspective). Small business operators: victim status + constrained exit (can adapt, relocate, or transition but with high friction) \u2192 d \u2248 0.65 \u2192 f(d) \u2248 1.00 (moderate extraction). Essential employers: beneficiary status + arbitrage exit \u2192 d \u2248 0.15 \u2192 f(d) \u2248 -0.01 (minimal extraction). These d values drive the classification differences: powerless trapped victims experience snare (high chi), institutional arbitrage beneficiaries experience rope (negative chi), moderate constrained actors experience tangled rope (moderate chi). The directionality chain is the mechanism by which the same constraint produces different classifications for different observers.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by showing that legitimate coordination coexists with significant extraction. The temptation is to classify the entire response as either (a) pure coordination (rope) \u2014 pandemic legitimately requires centralized authority \u2014 or (b) pure extraction (snare) \u2014 the response is an authoritarian power grab. The reality is tangled: the constraint solves genuine collective action problems (preventing healthcare collapse, coordinating vaccine distribution) AND imposes severe extraction on those with no exit options (mandated income loss, occupational suppression). The mandatrophy is resolved by accepting that both descriptions are structurally accurate. The response is rope from the beneficiary/authority perspective (genuine coordination), snare from the trapped victim perspective (pure extraction), and tangled rope from the analytical perspective (mixed coordination and extraction). The classification type is determined by the observer's structural relationship, not by a single objective property. The analytical observer's tangled rope classification is the most complete because it acknowledges both the genuine coordination function and the asymmetric extraction. False mandatrophy resolution would claim 'it's really rope' (ignoring victim extraction) or 'it's really snare' (ignoring genuine coordination benefit)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_fragility",
+      "institutional_trust_erosion",
+      "surveillance_authority_expansion"
+    ],
+    "dual_formulation_note": "The 'societal response to viral emergence' decomposes into three constraint families: (1) Disease-specific constraints (transmission dynamics, vaccine efficacy) \u2014 these are mountain-to-rope depending on empirical severity and intervention effectiveness. (2) Institutional response constraints (lockdown mandates, vaccine mandates) \u2014 these are tangled rope to snare depending on exit options and cost distribution. (3) Structural consequence constraints (supply chain disruption, trust erosion, surveillance expansion) \u2014 these are pitons with high theater. This story focuses on constraint family (2) \u2014 the institutional response apparatus \u2014 and its downstream effects on families (1) and (3)."
+  },
+  "directionality_overrides": []
+}

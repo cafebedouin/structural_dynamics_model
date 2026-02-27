@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: moores_law
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_moores_law, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -40,6 +42,8 @@
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -54,25 +58,32 @@
  *   domain: technological/economic
  *
  * SUMMARY:
- *   Moore's Law is the observation that the number of transistors on a
- *   microchip doubles approximately every two years. This story models the
- *   law not as a physical inevitability, but as a self-fulfilling prophecy
- *   or a "socially enforced" pace of innovation that coordinates the global
- *   semiconductor industry while simultaneously creating a coercive R&D
- *   treadmill and planned obsolescence.
+ *   Moore's Law, Gordon Moore's 1965 observation that the number of
+ *   transistors on a microchip doubles approximately every two years, has
+ *   evolved from an empirical regularity into an industry coordination
+ *   mechanism and extraction regime. The constraint exhibits structural
+ *   features of a tangled rope: it serves a genuine coordination function
+ *   (synchronized investment, standardized roadmaps, predictable ecosystem
+ *   planning) while simultaneously extracting costs from rivals, smaller
+ *   competitors, and physical materials. From the perspective of dominant
+ *   semiconductor manufacturers (TSMC, Samsung, Intel), Moore's Law is a
+ *   coordination tool that benefits them through capital scale and
+ *   first-mover advantage. From the perspective of smaller manufacturers and
+ *   materials science, it is a snare: a pacing requirement that cannot be
+ *   escaped without market death, enforced by customer expectations and
+ *   analyst projections. The theater ratio has risen from 0.15 (1965-2005,
+ *   when the doubling was largely descriptive) to 0.58 (2020+), reflecting
+ *   that firms now announce Moore's Law pacing regardless of actual process
+ *   node improvements, creating a performative aspect where the cultural
+ *   narrative outpaces physical progress.
  *
- * KEY AGENTS (by structural relationship):
- *   - Chip Fabricators (e.g., Intel, TSMC): Primary target (institutional/constrained) — bears the immense R&D cost to maintain the pace.
- *   - Platform Capitalists & Software Developers: Primary beneficiary (institutional/arbitrage) — benefits from predictable hardware gains to build more complex services.
- *   - Consumers / Legacy Infrastructure Owners: Secondary target (powerless/mobile) — benefits from cheaper compute but is subject to planned obsolescence.
- *   - Analytical Observer: Sees the full structure as a Tangled Rope of coordination and extraction.
- *
- * DUAL FORMULATION NOTE:
- * This constraint is one of 2 stories decomposed from the colloquial label "Moore's Law".
- * Decomposed because ε differs across observables (ε-invariance principle).
- * This story models the INDUSTRIAL CONVENTION (ε=0.30, Tangled Rope).
- * The related story models the PHYSICAL LIMIT:
- *   - silicon_quantum_limit (ε=0.02, Mountain)
+ * KEY AGENTS:
+ *   - Dominant Manufacturers (TSMC, Samsung, Intel): Primary beneficiary (institutional/arbitrage) — capture competitive advantage from process leadership; benefit from industry-wide coordination around Moore's Law roadmaps
+ *   - Smaller Semiconductor Firms: Primary victim (powerless/trapped) — locked into Moore's Law pacing by market expectations; cannot opt out without losing relevance; R&D costs prohibitive
+ *   - Materials Science and Physics: Primary victim (powerless/trapped) — physical constraints cannot exit; bears cost of accelerating toward quantum tunneling and heat limits
+ *   - Systems Integrators and ODMs: Secondary actor (moderate/constrained) — constrained by Moore's Law pacing but benefit from synchronized ecosystem; partial agency through alternative workload distribution
+ *   - Technology Ecosystem (software, application developers): Secondary beneficiary (institutional/arbitrage) — benefits from predictable performance improvement; can arbitrage between generations
+ *   - Analyst Community and Industry Culture: Institutional enforcer (institutional/arbitrage) — maintains Moore's Law narrative; projects adherence as market expectation; benefits from the coordination role
  */
 
 /* ==========================================================================
@@ -80,91 +91,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: It extracts value through planned obsolescence and coercive R&D
-% cycles. Devices lose utility rapidly as the "frontier" moves forward,
-% forcing consumption and extracting capital from both consumers and producers.
-domain_priors:base_extractiveness(moores_law, 0.30).
-
-% Rationale: Alternative hardware architectures (e.g., analog, neuromorphic)
-% are suppressed by the massive economies of scale and "gravity" of the
-% standard silicon roadmap.
-domain_priors:suppression_score(moores_law, 0.50).
-
-% Rationale: A highly technical constraint with minimal performative theater.
-domain_priors:theater_ratio(moores_law, 0.02).
+domain_priors:base_extractiveness(moores_law, 0.52).
+domain_priors:suppression_score(moores_law, 0.48).
+domain_priors:theater_ratio(moores_law, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(moores_law, extractiveness, 0.30).
-narrative_ontology:constraint_metric(moores_law, suppression_requirement, 0.50).
-narrative_ontology:constraint_metric(moores_law, theater_ratio, 0.02).
+narrative_ontology:constraint_metric(moores_law, extractiveness, 0.52).
+narrative_ontology:constraint_metric(moores_law, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(moores_law, theater_ratio, 0.58).
 
-% --- Constraint claim (must match analytical perspective type) ---
-% Analytically, this is a Tangled Rope: it has a coordination function,
-% asymmetric extraction, and requires active enforcement.
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(moores_law, tangled_rope).
 narrative_ontology:human_readable(moores_law, "Moore's Law as an Industrial Convention").
 narrative_ontology:topic_domain(moores_law, "technological/economic").
 
-% --- Binary flags ---
-% Rationale: Requires active, massive capital investment and industry-wide
-% coordination (e.g., via ITRS roadmap) to maintain the pace.
 domain_priors:requires_active_enforcement(moores_law).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(moores_law, platform_capitalists).
-narrative_ontology:constraint_beneficiary(moores_law, software_developers).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(moores_law, semiconductor_fabricators).
-narrative_ontology:constraint_victim(moores_law, legacy_infrastructure_owners).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(moores_law, semiconductor_manufacturers).
+narrative_ontology:constraint_beneficiary(moores_law, technology_product_ecosystems).
+narrative_ontology:constraint_victim(moores_law, rival_chip_design_methodologies).
+narrative_ontology:constraint_victim(moores_law, manufacturing_cost_sustainability).
+narrative_ontology:constraint_victim(moores_law, materials_science_constraints).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE CHIP FABRICATOR (SNARE)
-% For the manufacturer, the law is a Snare. It is an "unrelenting
-% treadmill." If they fail to meet the doubling pace for a single cycle,
-% their market position evaporates. The cost of maintaining the pace
-% increases exponentially as physical limits approach.
+% PERSPECTIVE 1: MATERIALS SCIENCE CONSTRAINTS (SNARE) — Physical limits on transistor density, power dissipation, and quantum tunneling are absolute. The materials science floor cannot exit the Moore's Law timetable; it bears the cost of accelerating toward fundamental barriers. No alternative pathway; extraction enforced by physics.
+constraint_indexing:constraint_classification(moores_law, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: SMALLER MANUFACTURERS (SNARE) — Locked into Moore's Law pacing by market expectations and ecosystem demands. Cannot opt out without losing market share. R&D costs for next-node development are prohibitive; trapped in an escalating extraction cycle where only capital-rich firms survive.
+constraint_indexing:constraint_classification(moores_law, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: SYSTEMS INTEGRATORS AND ODMS (TANGLED ROPE) — Constrained by Moore's Law pacing but also benefit from predictable roadmaps and ecosystem standardization. Coordination function (shared technology roadmaps) coexists with extraction (forced investment in new designs every product cycle). Moderate agency but structural dependence.
+constraint_indexing:constraint_classification(moores_law, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: DOMINANT MANUFACTURERS (ROPE) — Primary beneficiary. Moore's Law coordinates industry expectations, justifies capital expenditure, and creates competitive advantage for firms with process leadership. Benefits from the predictability and the coordination function; experiences low extraction cost due to capital scale and arbitrage options.
 constraint_indexing:constraint_classification(moores_law, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
-            exit_options(constrained),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE SOFTWARE DEVELOPER / PLATFORM CAPITALIST (ROPE)
-% For the beneficiary, Moore's Law is a Rope. It is a predictable ladder of
-% progress, a coordination mechanism that guarantees "free" hardware gains
-% to offset inefficient code (Wirth's Law) and enable more complex services.
+% PERSPECTIVE 5: PRODUCT ECOSYSTEM (ROPE) — Software, application design, and consumer expectations are coordinated around Moore's Law pacing. Benefits from predictable performance improvement curves; experiences the constraint as enabling coordination rather than extractive. Can arbitrage between chip generations and optimize for cost/performance tradeoffs.
 constraint_indexing:constraint_classification(moores_law, rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE END USER (ROPE)
-% For the user, it is also a Rope. It ensures that the computer they buy
-% today will be significantly more powerful than older models, lowering the
-% barrier to entry for complex software. The extraction via planned
-% obsolescence is less salient than the immediate utility gain.
-constraint_indexing:constraint_classification(moores_law, tangled_rope,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(mobile),
+% PERSPECTIVE 6: MOORE'S LAW AS CULTURAL ARTIFACT (PITON) — The prediction itself has become performative. The original observation (an empirical regularity from 1965-2005) is now a self-fulfilling prophecy maintained by industry culture and analyst expectations. Theater ratio high: firms announce adherence to Moore's Law pacing regardless of physical progress, creating a disconnect between the performative claim and underlying physics. The ritual persists through institutional inertia and narrative momentum.
+constraint_indexing:constraint_classification(moores_law, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The observer sees the full structure: a powerful coordination mechanism
-% (Rope function) that has become coercive and extractive (Snare function)
-% through active industrial enforcement. This hybrid nature is the definition
-% of a Tangled Rope.
-constraint_indexing:constraint_classification(moores_law, tangled_rope,
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL LIMITS (MOUNTAIN) — From a universal/civilizational perspective, some transistor density doubling is inherent to manufacturing progress: physical laws set hard limits on scaling, and the gap between optimistic pacing and actual capability is structural. This perspective risks naturalizing contingent industrial coordination as an immutable law. The false summit detector should flag this perspective as naturalization.
+constraint_indexing:constraint_classification(moores_law, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,19 +174,17 @@ constraint_indexing:constraint_classification(moores_law, tangled_rope,
 :- begin_tests(moores_law_tests).
 
 test(perspectival_gap) :-
-    % Verify gap between the fabricator (Snare) and beneficiary (Rope).
-    constraint_indexing:constraint_classification(moores_law, rope, context(agent_power(institutional), _, constrained, _)),
-    constraint_indexing:constraint_classification(moores_law, rope, context(agent_power(institutional), _, arbitrage, _)).
+    constraint_indexing:constraint_classification(moores_law, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(moores_law, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_claim_matches_tangled_rope) :-
-    % The analytical view must be Tangled Rope, matching the claim.
-    constraint_indexing:constraint_classification(moores_law, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(moores_law, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_properties) :-
-    % Verify the three structural requirements for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(moores_law, _), % has_coordination_function
-    narrative_ontology:constraint_victim(moores_law, _),     % has_asymmetric_extraction
-    domain_priors:requires_active_enforcement(moores_law).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(moores_law, TR),
+    TR >= 0.70.
 
 :- end_tests(moores_law_tests).
 
@@ -195,35 +194,16 @@ test(tangled_rope_structural_properties) :-
 
 /**
  * LOGIC RATIONALE:
- *   The original file incorrectly claimed this was a Mountain, leading to a
- *   metric conflict. This version corrects the analysis by treating Moore's
- *   Law as a social and economic convention, not a physical one. The base
- *   metrics (ε=0.30, suppression=0.50) are appropriate for a Tangled Rope,
- *   reflecting the dual nature of coordination and extraction. The analytical
- *   claim is now `tangled_rope`, resolving the linter errors.
+ *   Extractiveness (0.52): Moderate-high and rising. The constraint creates asymmetric costs: dominant manufacturers invest heavily but recoup benefits through market share and pricing power. Smaller firms face existential pressure. Materials science faces physical barriers with no escape. The extractiveness has increased from ~0.25 (1965-2005, when doubling was largely descriptive) to 0.52 (2020+) as the pacing has become prescriptive and the physical bottlenecks have tightened. Suppression (0.48): Moderate. Firms cannot easily exit Moore's Law commitments without losing investor confidence and market position. But suppression is not total — some firms have chosen specialty markets (power efficiency, cost optimization) that decouple from Moore's Law pacing. The trend toward alternative architectures (AI accelerators, specialized processors) is gradually reducing suppression for some segments. Theater ratio (0.58): Elevated and rising. From 1965-2005, Moore's Law was primarily descriptive. Since 2015, firms announce adherence to Moore's Law roadmaps while actual node transitions slip or show smaller increments. The performative aspect intensified with EUV delays, chiplet strategies, and process maturation. Theater has become the dominant mechanism for maintaining the convention as physical scaling slows.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For beneficiaries (software developers, platform
- *   capitalists), it's a pure Rope providing predictable progress. For the
- *   chip fabricators forced to maintain the pace, it's a Snare—an
- *   inescapable, costly treadmill. End users also see a Rope, as the utility
- *   gains from new hardware overshadow the slower-moving costs of e-waste
- *   and planned obsolescence.
+ *   This constraint demonstrates perspectival inversion. Dominant manufacturers perceive Moore's Law as a coordination benefit (Rope) — it synchronizes supply chains, justifies capital expenditure, and creates competitive advantage. Smaller manufacturers perceive it as a snare (Snare) — they are locked into a pacing requirement they cannot afford. Materials science perceives it as a fundamental limit (Mountain or Snare, depending on whether the physicist believes the scaling will continue). The analyst community perceives it as a cultural performance (Piton) — the narrative persists through institutional momentum even as the underlying physics slows. Systems integrators perceive it as mixed coordination and constraint (Tangled Rope) — the roadmap enables planning but forces constant redesign. The product ecosystem perceives it as enabling (Rope) — predictable performance curves enable long-term software planning. The civilizational analytical observer risks naturalizing this as an immutable law (false summit in Mountain classification).
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: `platform_capitalists` and `software_developers` gain
- *     immense value from the predictable increase in computational power,
- *     allowing them to build more complex and profitable services.
- *   - Victims: `semiconductor_fabricators` bear the direct, astronomical
- *     costs of R&D. `legacy_infrastructure_owners` (including consumers)
- *     bear the indirect cost of forced obsolescence.
+ *   Directionality (d) derives from each agent's position in the extraction flow. Dominant manufacturers are beneficiaries with arbitrage options (exit: migrate to specialty markets or alternative architectures, but low incentive). Their d approaches 0.0 (full beneficiary); f(d) is negative, producing negative effective extraction — they experience the constraint as coordination benefit. Smaller manufacturers are victims with constrained options (exit: specialty markets, but costly; exit: exit industry). Their d approaches 0.95 (near-full target); f(d) is 1.42, producing high experienced extraction. Materials science is powerless and trapped (exit: none). Their d approaches 1.0; f(d) is 1.42. Systems integrators are moderate agents with some mobility (exit: workload distribution, alternative architectures). Their d ~0.55; f(d) ~0.75, producing moderate experienced extraction. The analytical observer's d ~0.73 (observer position); f(d) ~1.15, producing observer-level chi. Scope modifier σ(S) = 1.2 (global) amplifies these values.
  *
  * MANDATROPHY ANALYSIS:
- *   Classifying this as a Tangled Rope correctly identifies that the
- *   coordination function is real and valuable, preventing the mislabeling
- *   of the entire system as a pure Snare. However, it also acknowledges the
- *   significant, non-consensual extraction imposed on producers and the
- *   environment, avoiding the naive view that it is a pure Rope.
+ *   Moore's Law resolves the mandatrophy by revealing the constraint's hybrid nature. It appears as pure extraction (Snare) to powerless agents locked into a pacing timetable they cannot escape. It appears as coordination (Rope) to dominant beneficiaries who use it to synchronize ecosystems. It appears as mixed (Tangled Rope) to moderate agents constrained but not broken by it. The Piton classification (theater ratio 0.58) indicates the performative aspect is rising — the cultural narrative now carries more weight than the underlying physics. The false summit (Mountain classification from the analytical observer) reveals the risk of naturalizing a contingent industry convention as a law of nature. The mandatrophy is resolved by recognizing that Moore's Law is NOT a single constraint but a network of three structurally distinct constraints: (1) the physical doubling rate of transistor density (base_extractiveness ~0.25-0.30, Mountain or Rope depending on whether it's inevitable or coordinated), (2) the industry convention of pacing technology releases every 2 years (base_extractiveness ~0.50, Tangled Rope or Snare depending on perspective), and (3) the performance expectation set by analyst projections and marketing (base_extractiveness ~0.45, Piton with high theater). The current story models the constraint at the industry convention level (level 2), which is the most policy-relevant and the locus of actual extraction.
  */
 
 /* ==========================================================================
@@ -231,56 +211,85 @@ test(tangled_rope_structural_properties) :-
    ========================================================================== */
 
 omega_variable(
-    omega_moores_law,
-    'Is the 2-year doubling pace primarily driven by market coordination (a social construct) or is it an emergent optimal path dictated by thermodynamic and economic limits (a near-Mountain)?',
-    'Analysis of semiconductor R&D capital allocation cycles vs. fundamental physics breakthroughs.',
-    'If social construct -> Tangled Rope is correct. If emergent optimum -> Closer to a Rope with high maintenance cost.',
+    physical_scaling_limit_timeline,
+    'What timeline before physical barriers (quantum tunneling, power dissipation, heat management) halt transistor density doubling?',
+    'Empirical research on sub-nanometer scaling limits, power wall studies, and quantum mechanical tunneling probability curves. Longitudinal tracking of actual die density improvement vs Moore''s Law prediction.',
+    'If <5 years: Moore''s Law is already breaking down and snare extraction is accelerating. If 10+ years: the convention has decades of structural validity remaining.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(physical_scaling_limit_timeline, empirical, 'Timeline to physical scaling barriers').
+
+omega_variable(
+    alternative_computing_paradigms_adoption,
+    'Do alternative computing approaches (quantum, neuromorphic, optical, analog) substitute for traditional CMOS scaling and reduce Moore''s Law enforcement power?',
+    'Market adoption rates of alternative architectures; correlation between alternative-platform share and competitive pressure on CMOS roadmaps; analysis of workload migration to alternatives vs traditional scaling.',
+    'If alternatives gain >20% market share: Moore''s Law shifts from Mountain/Snare to Scaffold or Piton (sunset clause becomes real). If alternatives remain niche: Moore''s Law extraction mechanism persists.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_computing_paradigms_adoption, empirical, 'Whether alternative paradigms reduce Moore''s Law enforcement').
+
+omega_variable(
+    industry_coordination_vs_physical_inevitability,
+    'Is the observed doubling from 1965-2005 a description of physical inevitability, an industry coordination mechanism, or both in different periods?',
+    'Historical analysis of when Moore''s Law transitions from descriptive observation to prescriptive industry target; examination of R&D allocation changes and marketing emphasis; comparison with semiconductor physics papers.',
+    'If coordination mechanism: the constraint is structurally tangled_rope or snare depending on perspective (current classification holds). If physical inevitability: mountain classification is legitimate. If both: the constraint''s ε depends on which period is evaluated.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(industry_coordination_vs_physical_inevitability, conceptual, 'Whether Moore''s Law is physical fact or industry convention').
+
+omega_variable(
+    capital_concentration_causality,
+    'Does Moore''s Law enforcement drive capital concentration in semiconductor manufacturing, or does capital concentration drive adherence to Moore''s Law?',
+    'Causal analysis of firm consolidation timelines relative to Moore''s Law announcements; examination of R&D spending curves; comparison of smaller-firm survival rates before/after each node transition.',
+    'If Moore''s Law drives concentration: the snare victim classification for smaller manufacturers is correct. If concentration drives Moore''s Law: the causality points to an industry choice to maintain the convention despite alternatives.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(capital_concentration_causality, empirical, 'Direction of causality between Moore''s Law and capital concentration').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(moores_law, 0, 10).
+narrative_ontology:interval(moores_law, 0, 30).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint intensified over time. It began as a simple observation
-% (Rope) and became a coercive industrial standard (Tangled Rope) as R&D
-% costs to maintain the pace skyrocketed.
-%
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(moores_law_tr_t0, moores_law, theater_ratio, 0, 0.02).
-narrative_ontology:measurement(moores_law_tr_t5, moores_law, theater_ratio, 5, 0.02).
-narrative_ontology:measurement(moores_law_tr_t10, moores_law, theater_ratio, 10, 0.02).
+% Theater ratio over time
+narrative_ontology:measurement(moores_tr_t0, moores_law, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(moores_tr_t15, moores_law, theater_ratio, 15, 0.38).
+narrative_ontology:measurement(moores_tr_t30, moores_law, theater_ratio, 30, 0.58).
 
-% Extraction over time (increasing due to rising R&D costs and obsolescence):
-narrative_ontology:measurement(moores_law_ex_t0, moores_law, base_extractiveness, 0, 0.15).
-narrative_ontology:measurement(moores_law_ex_t5, moores_law, base_extractiveness, 5, 0.25).
-narrative_ontology:measurement(moores_law_ex_t10, moores_law, base_extractiveness, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(moores_be_t0, moores_law, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(moores_be_t15, moores_law, base_extractiveness, 15, 0.4).
+narrative_ontology:measurement(moores_be_t30, moores_law, base_extractiveness, 30, 0.52).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: It serves as a shared timeline and target for a global industry.
-narrative_ontology:coordination_type(moores_law, information_standard).
+narrative_ontology:coordination_type(moores_law, global_infrastructure).
+narrative_ontology:affects_constraint(moores_law, semiconductor_supply_chain_consolidation).
+narrative_ontology:affects_constraint(moores_law, rare_earth_element_concentration).
+narrative_ontology:affects_constraint(moores_law, chip_design_complexity_scaling).
+narrative_ontology:affects_constraint(moores_law, power_consumption_limits).
 
-% Network relationships: The physical limits of silicon are an upstream
-% constraint that affects the viability and cost of maintaining Moore's Law.
-narrative_ontology:affects_constraint(silicon_quantum_limit, moores_law).
+% DUAL FORMULATION NOTE:
+% Moore's Law as an industrial convention (base_extractiveness 0.52) is downstream of Moore's Law as a physical doubling rate (base_extractiveness ~0.25). These are structurally distinct constraints with different ε values. The physical doubling is increasingly Mountain-like; the industry convention is increasingly Tangled Rope or Piton. Constraint family linking enables separate analysis of the descriptive claim (physics) vs the prescriptive norm (industry).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides needed. The structural derivation from beneficiary/victim
-% declarations and exit options (constrained vs. arbitrage) correctly
-% models the perspectival gaps between different institutional actors.
+constraint_indexing:directionality_override(moores_law, institutional, 0.05).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

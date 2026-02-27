@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "german_board_gender_quota",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gbgq"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "German Gender Quota for Corporate Boards (F\u00fcPoG II)",
+    "topic_domain": "economic/labor/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "underrepresented_women_in_leadership",
+      "corporate_legitimacy_institutions"
+    ],
+    "victims": [
+      "male_incumbent_board_candidates",
+      "firm_selection_autonomy"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Qualified Female Candidate Outside the Quota Window",
+      "comment": "PERSPECTIVE 1: QUALIFIED FEMALE CANDIDATE EXCLUDED (SNARE) \u2014 Women who enter the labor market before quota implementation or in firms below thresholds face no guarantee of advancement despite qualification. The quota creates artificial scarcity of board seats for women without removing pre-board gatekeeping. d\u22480.90, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.48."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Women Benefiting from Quota Implementation",
+      "comment": "PERSPECTIVE 2: WOMEN WITHIN QUOTA COHORT (ROPE) \u2014 Women hired into boards post-F\u00fcPoG II benefit from explicit coordination mechanism (reserved seats). Experience the constraint as solving a collective action problem: firms now have liability if they don't source and advance qualified women. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.004. Net coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Board-Nominating Corporations",
+      "comment": "PERSPECTIVE 3: BOARD-NOMINATING CORPORATIONS (TANGLED ROPE) \u2014 Firms experience both coordination benefit (pressure removes internal political barriers to advancing qualified women; legitimacy gains with shareholders/stakeholders) and extraction cost (mandatory sourcing overhead, seat reservation reduces discretion, reputational risk if quota not met). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.26. Mixed structure: genuine coordination function (solve the collective action problem of systemic exclusion) plus asymmetric extraction (loss of board selection autonomy)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "EU Gender Equality Directive Coalition",
+      "comment": "PERSPECTIVE 4: EU EQUALITY COALITION (SCAFFOLD) \u2014 Organized advocates (EU Parliament, equality commissions, women's organizations) see the quota as temporary enforcement mechanism during the transition from systemic exclusion to normative inclusion. Expects sunset: once women's representation stabilizes at 40%+ and becomes self-sustaining cultural norm, the legal mandate should be unnecessary. d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.11. Low extraction because sunset is visible and coalition has agency in policy design."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legacy Male Board Members",
+      "comment": "PERSPECTIVE 5: MALE INCUMBENT BOARD COHORT (PITON) \u2014 Men already on boards see the quota as a ritual of apology and bureaucratic compliance rather than a functional constraint on their own position (most have grandfather clause exemptions or retire before quota enforcement). Theater ratio = 0.55: boards conduct diversity training, hire 'chief diversity officers', publish gender reports, but substantive power dynamics among sitting directors remain largely unchanged. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.35. Piton gate not fully satisfied (theater < 0.70), but classification captures the degraded status of the enforcement mechanism relative to the stated goal."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer: Systemic Gender Exclusion",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational perspective, the quota simultaneously enforces inclusion (genuine coordination function: solves centuries-old structural exclusion) and extracts from firm autonomy (real loss of selection discretion). d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.40. Classification remains Tangled Rope at analytical level because both functions are structurally real, not because of observable choice. The constraint is not a natural law; it is a hybrid coordination-extraction mechanism that will need either sunset or evolution toward norms-based inclusion."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "pipeline_sufficiency",
+      "question": "Are there enough qualified women in mid-management pipelines to meet 40% board quota without artificial advancement or credential dilution?",
+      "resolution_mechanism": "Longitudinal analysis of mid-manager demographics pre-2021 vs post-2021; correlation of board appointment dates with prior tenure and performance metrics",
+      "impact": "If yes: quota is enforcing coordination to overcome institutional discrimination (Rope/Tangled Rope confirmed). If no: quota forces firms to either advance under-qualified candidates (extraction becomes visible as performance drag) or exhaust pipeline and freeze, revealing structural exclusion depth.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sufficiency of female mid-manager pipeline for quota targets"
+    },
+    {
+      "id": "internalization_vs_compliance",
+      "question": "Does the quota catalyze genuine norm change toward gender-inclusive board culture, or does it remain a compliance theater with unchanged power dynamics?",
+      "resolution_mechanism": "Ethnographic board study; measurement of influence/decision-making contribution for women appointed pre-quota vs post-quota; tracking of board diversity metric sustainability after quota removal scenarios",
+      "impact": "If internalized: scaffold perspective confirmed, sunset is achievable. If theater: piton classification will dominate, and the constraint becomes inert institutional baggage requiring external pressure to maintain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quota drives norm change vs compliance performance"
+    },
+    {
+      "id": "cross_border_regulatory_arbitrage",
+      "question": "Do multinational firms headquartered outside Germany with German subsidiaries or CJEU jurisdiction experience the quota as extractive constraint vs coordination signal?",
+      "resolution_mechanism": "Survey of multinational board structure decisions; analysis of whether firms relocate board seats away from German jurisdiction to avoid quota; comparison of enforcement intensity by nationality of ultimate parent company",
+      "impact": "If arbitrage prevalent: quota effectiveness depends on jurisdictional enforcement and credibility, revealing extractive component (victim = firm autonomy). If arbitrage rare: indicates internalization or that reputational costs exceed compliance costs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Regulatory arbitrage by multinationals on board composition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The German F\u00fcPoG II (F\u00fchrungspositionen-Gesetz II), effective August 2021, mandates 40% gender representation on corporate boards (Vorstandsr\u00e4te) in listed companies and large cooperatives. This constraint exemplifies the Tangled Rope classification: it simultaneously functions as a coordination mechanism (solving centuries-old structural exclusion of women from leadership) and as an extraction mechanism (removing firms' discretion in board composition). The extractiveness score (0.35) reflects that the coordination benefit (solving a collective action problem where individual firms lack incentive to advance qualified women despite availability) is larger than the extraction cost (loss of autonomous seat allocation), but both are real. The suppression score (0.42) captures the institutional barriers to women's advancement that the quota overrides \u2014 pre-board gatekeeping, implicit bias in partner-track selection, and Old Boys Network exclusion. The theater ratio (0.55) reflects rising compliance theater: diversity training, chief diversity officer positions, public reporting on board composition, but slower change in actual decision-making power distribution or pre-board pipeline advancement. The constraint reveals the mandatrophy: framing the quota as 'pure extraction' (firms lose autonomy) misses the coordination function (society solves the collective action problem of systemic exclusion); framing it as 'pure coordination' misses the real cost to firm flexibility and the extraction of selection discretion.",
+    "key_agents": [
+      "Underrepresented Women in Leadership: Primary beneficiary (powerful/arbitrage post-2021) \u2014 gain access to board seats previously unavailable; career pathway accelerated by quota. Pre-quota women face continued exclusion (trapped/powerless).",
+      "Board-Nominating Corporations: Primary victim of extraction (institutional/constrained) \u2014 lose autonomy over board composition; incur sourcing and training overhead; face penalties for non-compliance.",
+      "Male Incumbent Board Members: Secondary actor (moderate/constrained) \u2014 grandfather clause exemptions reduce personal impact; power dynamics among sitting directors largely unchanged.",
+      "EU Gender Equality Coalition: Organized agent (organized/constrained) \u2014 advocate groups, EU Parliament; see quota as temporary enforcement mechanism with sunset as norm internalization.",
+      "Mid-Level Female Managers: Structural beneficiary but not primary agent \u2014 quota creates pressure on firms to surface and advance qualified women from pipelines.",
+      "Analytical Observer: Systemically detects both coordination and extraction components; clarifies that constraint is not natural law but intentional hybrid mechanism."
+    ],
+    "logic_rationale": "Extractiveness (0.35): The quota removes firm discretion over 40% of board seats \u2014 a real extraction of selection autonomy. However, this extraction solves a collective action problem: individual firms benefit from accessing qualified female talent (improved decision-making, legitimacy), but lack individual incentive to overcome internal biases and networking effects. The quota forces this incentive alignment. The value (0.35, not 0.60+) reflects that the coordination benefit outweighs the extraction cost \u2014 firms' net welfare may increase if they were artificially excluding qualified candidates. Suppression (0.42): Moderate. The quota overrides implicit gatekeeping (partner-track selection bias, Old Boys Network exclusion, credential devaluation for women) but does not eliminate it. Pre-board pipeline barriers remain; women must still navigate systemic discrimination to reach mid-level positions eligible for board appointment. Theater ratio (0.55): Rising over the interval. Firms initially had low theater (genuine sourcing challenge 2021-2022), but as quotas were met and norms adapted, compliance theater increased: diversity reports, training programs, diversity officer positions that perform inclusion without shifting power. The trajectory reflects Goodhart drift \u2014 optimizing for the metric (women on board) rather than the goal (inclusive decision-making culture).",
+    "perspectival_gap": "The beneficiary perspective (women in quota cohort) sees pure coordination: a barrier was removed, and they gained access. The firm perspective sees mixed: coordination (we now access broader talent) plus extraction (we lost discretion and face compliance cost). The male incumbent perspective sees theater: the quota appears as ritual and bureaucratic obligation, not as a real constraint on their own power (grandfather clauses, retirement timelines). The powerless perspective (qualified women excluded by pipeline barriers) sees snare: the quota bypasses them and leaves structural exclusion in place. The analytical perspective (civilizational) sees the hybrid structure clearly: both functions are real, and the question is whether the coordination function will eventually internalize as norm (sunset path) or require continued enforcement (persistent extraction path).",
+    "directionality_logic": "Underrepresented women (beneficiary + arbitrage) \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary; effective extraction is slightly negative (coordination benefit dominates). Corporations (victim + constrained) \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction; firms cannot freely exit but can adapt through compliance. Male incumbents (victim + constrained but with exemptions) \u2192 d\u22480.65, f(d)\u22481.00. Moderate extraction on the cohort, but grandfather clause effects reduce this to low on individuals. EU coalition (organized + constrained) \u2192 d\u22480.35, f(d)\u22480.32. Low extraction because coalition maintains agency in policy evolution and sunset design. Analytical observer (analytical + analytical) \u2192 d\u22480.72, f(d)\u22481.15. Hybrid structure is visible; observer does not naturalize the constraint as immutable law but as intentional mechanism with possible lifecycle paths."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_gender_balance_directive",
+      "workplace_gender_bias_exclusion"
+    ],
+    "dual_formulation_note": "F\u00fcPoG II is downstream of broader EU Gender Balance Directive and upstream of individual workplace gender bias constraints. The quota itself is a coordination mechanism (solving collective action problem of systemic exclusion), but decomposes into separate constraints when observing the pre-board pipeline (where structural exclusion remains) vs post-quota board dynamics (where the coordination function operates)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

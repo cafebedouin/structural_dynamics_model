@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "sti_clinical_testing_bottleneck",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sti"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Requirement for Clinical Lab Testing for Chlamydia/Gonorrhea",
+    "topic_domain": "medical/technological/public_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "clinical_laboratories",
+      "healthcare_system_gatekeepers"
+    ],
+    "victims": [
+      "symptomatic_individuals",
+      "asymptomatic_carriers",
+      "public_health_transmission_prevention"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Symptomatic Patient in Rural Area",
+      "comment": "PERSPECTIVE 1: RURAL SYMPTOMATIC PATIENT (SNARE) \u2014 Trapped in clinical gatekeeping. Symptoms present but no access to testing without traveling 40+ miles to nearest clinic, incurring time off work, childcare costs, and 3-5 day confirmation wait. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73. Pure extraction: mandatory clinical pathway extracts time, money, and health risk."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Asymptomatic Carrier",
+      "comment": "PERSPECTIVE 2: ASYMPTOMATIC CARRIER (SNARE) \u2014 Most chlamydia/gonorrhea infections are asymptomatic (60-80%). Carrier has zero motivation to seek testing without direct symptoms. Clinical-only pathway means carriers remain undetected, continue transmission, and bear zero cost despite being transmission vectors. System extracts from future partners and public health. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.69. Snare through enforced non-testing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Urban Motivated Individual",
+      "comment": "PERSPECTIVE 3: URBAN MOTIVATED INDIVIDUAL (TANGLED ROPE) \u2014 Has clinic access, motivation to test (STI-aware), but still constrained: must schedule appointment (1-2 week wait), pay copay ($20-150), collect sample (uncomfortable, often painful for urethral/cervical swabs), wait 3-5 days for results. Benefits from diagnostic accuracy of clinical confirmation and counseling. Costs are real but navigable. d\u22480.58, f(d)\u22480.72, \u03c3=1.0 \u2192 \u03c7\u22480.38. Mixed coordination (needs confirmation) and extraction (unnecessary friction)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Health Authority",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH AUTHORITY (TANGLED ROPE) \u2014 Organized agent with mandate to reduce STI transmission. Benefits from clinical lab capacity (reliable results, quality control, epidemiological surveillance). Constrained by the fact that clinical-only pathways prevent detection of 70-80% of infections (asymptomatic carriers). System requires coordination (lab infrastructure) but extraction mechanism (gatekeeping) undermines public health mission. d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.22. Moderate effective extraction because this agent has agency and can push alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Clinical Laboratory System",
+      "comment": "PERSPECTIVE 5: CLINICAL LABORATORY SYSTEM (ROPE) \u2014 Primary beneficiary. Centralized testing requirement means guaranteed specimen volume, payment flow, regulatory compliance, and professional status. Sees the constraint as coordination: 'We maintain quality through centralized expertise.' Can arbitrage by expanding testing menus, implementing rapid turnaround technologies (PCR), or staying entrenched. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary. Effective extraction is negative (subsidy) because barrier is enforced for their benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Home/Telehealth Testing Coalition",
+      "comment": "PERSPECTIVE 6: HOME TESTING ALTERNATIVE COALITION (SCAFFOLD) \u2014 Organized agents (tech companies, public health startups, sexual health nonprofits) developing direct-to-consumer STI testing (mail-in kits, at-home collection with lab confirmation, telehealth-connected rapid tests). See clinical-only testing as a temporary regulatory constraint with visible sunset. d\u22480.35, f(d)\u22480.33, \u03c3=1.0 \u2192 \u03c7\u22480.17. Scaffold because: (1) coordination function exists (testing still requires lab, just with reduced friction), (2) has_sunset_clause implicit in regulatory trends (FDA, CMS modernizing telehealth/home testing rules), (3) suppression declining as alternatives gain traction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Medical Licensing Framework",
+      "comment": "PERSPECTIVE 7: MEDICAL LICENSING FRAMEWORK (PITON) \u2014 Requires physician/provider involvement in STI testing because 'STI diagnosis requires clinical judgment.' This rule persists through professional credentialing inertia: it was sensible before rapid diagnostics existed, but continues despite technological obsolescence. theater_ratio=0.64: substantial performative content (physician consult largely ritual for straightforward STI testing). The licensing system arbitrages through gatekeeping but sees its own rule as degraded \u2014 many physicians view home testing as inevitable. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (MOUNTAIN / FALSE SUMMIT) \u2014 Risk of naturalizing the constraint as inherent to diagnosis: 'Any health condition requires professional evaluation.' But base properties (\u03b5=0.52, suppression=0.68) contradict mountain gates (\u03b5 \u2264 0.25, suppression \u2264 0.05). Chlamydia/gonorrhea diagnosis is simple binomial testing (nucleic acid amplification), not complex judgment. This mountain classification is a false summit \u2014 it naturalizes a regulatory choice as scientific law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "clinical_judgment_necessity",
+      "question": "How much of the clinical testing requirement reflects genuine diagnostic necessity versus regulatory gatekeeping?",
+      "resolution_mechanism": "Comparative analysis of STI diagnostic protocols across regulatory regimes (US vs UK vs EU); evaluation of diagnostic accuracy for home-collected vs clinician-collected samples; retrospective analysis of physician decision-making on STI cases (how often does 'clinical judgment' override lab result?)",
+      "impact": "If necessity is high (>70%): clinical testing may be Rope or even Mountain. If gatekeeping dominates (<30% necessity): constraint is clearly Snare/Tangled Rope. At 30-70% mixed: Tangled Rope is correct classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether clinical judgment necessity justifies the testing bottleneck"
+    },
+    {
+      "id": "transmission_prevention_efficacy",
+      "question": "Does faster access to STI testing (via home kits) actually reduce transmission rates compared to clinical-only testing?",
+      "resolution_mechanism": "Cohort comparison: regions/populations with home testing access vs clinical-only controls, measured by incident infection rates, partner notification time, partner treatment uptake. Analysis of asymptomatic carrier detection rates.",
+      "impact": "If home testing reduces transmission by >20%: public health victim is real and extraction is severe (Snare confirmed). If reduction is <5%: extraction argument weakens; may be more Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of rapid testing access on STI transmission reduction"
+    },
+    {
+      "id": "regulatory_sunset_credibility",
+      "question": "Are regulatory changes (FDA approval of at-home testing, telehealth billing reform, physician-independent testing) actually materializing or is the scaffold hypothesis aspirational?",
+      "resolution_mechanism": "Tracking of FDA authorizations for home STI tests; CMS reimbursement policy changes; state-by-state telehealth testing rules over next 5 years; market share of direct-to-consumer STI testing vs clinical testing.",
+      "impact": "If regulations change in 2-5 years: scaffold is real. If gatekeeping persists and alternatives remain niche (>10 years): constraint may degrade to Piton rather than Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory sunset for home/telehealth testing is materializing"
+    },
+    {
+      "id": "quality_control_maintenance",
+      "question": "Can diagnostic accuracy and quality control be maintained if STI testing is decentralized (home collection, distributed labs, telehealth-guided)?",
+      "resolution_mechanism": "Comparative analysis of false positive/negative rates in decentralized vs centralized testing; evaluation of chain-of-custody data for home-collected samples; accuracy data from existing home STI testing services.",
+      "impact": "If accuracy is maintained: clinical laboratory monopoly is purely extractive (Snare). If accuracy degrades >5%: there is a genuine quality coordination function (Rope/Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether decentralized testing can maintain diagnostic accuracy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The requirement for clinical laboratory testing of chlamydia and gonorrhea creates a structural bottleneck that exhibits properties of both coordination and extraction. Traditionally justified as a quality-control and clinical-judgment mechanism, the centralized testing requirement has become increasingly extractive as diagnostic technology has advanced (nucleic acid amplification tests are robust and simple) while regulatory barriers have remained static. The constraint operates differently depending on the agent's structural position: rural symptomatic individuals experience pure extraction (Snare); asymptomatic carriers are effectively undetected (extraction through enforced non-testing); public health authorities see a coordination function undermined by gatekeeping (Tangled Rope); clinical laboratories benefit from guaranteed specimen volume (Rope); home testing alternatives are emerging with a visible regulatory sunset (Scaffold); and medical licensing frameworks persist through institutional inertia despite technological obsolescence (Piton). The theater ratio (0.64) reflects that physician involvement in routine STI testing is substantially performative: for straightforward chlamydia/gonorrhea diagnosis, the clinical consultation adds ritual compliance but minimal diagnostic value. This constraint demonstrates how technological change (rapid diagnostics, telehealth, at-home collection) can expose coordination mechanisms that were justified in earlier eras but become extractive when conditions shift.",
+    "key_agents": [
+      "Symptomatic individuals in resource-limited settings: Primary victims (powerless/trapped) \u2014 bear full cost of access barriers and diagnostic delays",
+      "Asymptomatic carriers: Hidden victims (powerless/trapped) \u2014 system enforces non-testing, enabling continued transmission without their awareness",
+      "Public health authorities: Organized victims (organized/constrained) \u2014 mandate to reduce transmission but constrained by clinical-only testing pathways that miss majority of infections",
+      "Clinical laboratory system: Primary beneficiary (institutional/arbitrage) \u2014 receives guaranteed specimen volume and payment flow from centralized requirement",
+      "Healthcare system gatekeepers (physicians, clinics): Secondary beneficiary (institutional/arbitrage) \u2014 maintain professional gatekeeping and capture consultation fees",
+      "Home testing alternative providers: Emerging organized actors (organized/mobile) \u2014 developing decentralized testing pathways with mobile exit options",
+      "Medical licensing framework: Institutional custodian (institutional/arbitrage) \u2014 enforces physician requirement through credentialing, benefits from professional gatekeeping",
+      "Analytical observer: Civilian/universal position (analytical/analytical) \u2014 risks naturalizing regulatory choice as inherent medical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The clinical testing requirement extracts time (appointment wait, clinic visit, 3-5 day result turnaround), money (copay, transportation), and delayed treatment from symptomatic individuals. For asymptomatic carriers (majority of infections), the extraction is through enforced non-testing and continued transmission. However, extractiveness is not extreme (\u03b5 < 0.70) because: (1) clinical testing does provide genuine diagnostic confirmation and counseling benefits, and (2) coordinated lab infrastructure has real quality-control value. The extraction is parasitic on coordination, not pure. Suppression (0.68): Moderate-high. Significant barriers to alternatives include regulatory prohibition of physician-independent STI testing in many states, FDA/clinical credentialing requirements, professional licensing gatekeeping, and insurance reimbursement tied to clinical encounter codes. But suppression is not total (< 0.90) because home testing is emerging and regulatory momentum is shifting toward telehealth/decentralized testing. Theater ratio (0.64): Moderate-high. Physician involvement in routine STI testing is substantially performative. For uncomplicated chlamydia/gonorrhea, the 'clinical judgment' narrative is largely ritual: most cases follow straightforward diagnostic and treatment protocols. The theater increased over time (from 0.48 to 0.64) as diagnostic technology became simpler and more reliable, yet physician gatekeeping remained constant \u2014 the gap between ritual requirement and technical necessity widened.",
+    "perspectival_gap": "Massive perspectival divergence across all agent types. Rural symptomatic individuals see a Snare with no exit (trapped, powerless). Public health sees a Tangled Rope where coordination (lab infrastructure) is undermined by extraction (gatekeeping). Clinical laboratories see a Rope that guarantees their specimen volume and enables quality control. Home testing coalitions see a Scaffold with visible regulatory sunset \u2014 they have agency and can see the path to alternative pathways. Medical licensing sees a Piton \u2014 the rule persists through inertia despite technological obsolescence. The analytical observer risks a Mountain, but this is a false summit. The perspectival range is: snare (rural trapped) to mountain (false summit). This diversity confirms the tangled rope diagnosis at base level: genuine coordination mixed with real extraction.",
+    "directionality_logic": "Symptomatic rural individual: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction for least mobile agent. Asymptomatic carrier: Victim + trapped (enforced non-testing) \u2192 d\u22480.88, f(d)\u22481.32. High extraction through absence of testing option. Public health authority: Victim + constrained \u2192 d\u22480.42, f(d)\u22480.42. Organized agent with constrained mobility; they can push alternatives but are bound by current regulations. Urban motivated individual: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.72. Mixed \u2014 has clinic access but faces friction. Clinical laboratory: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net subsidy through regulatory protection. Medical licensing: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Net subsidy through professional gatekeeping. Home testing coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.33. Low effective extraction because this actor has real alternatives emerging.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint avoids mandatrophy (mislabeling pure extraction as coordination) by explicitly declaring both beneficiaries (clinical labs, physicians, licensing system) and victims (patients, public health). The clinical-only requirement does provide a genuine coordination function (lab quality control, diagnostic accuracy, epidemiological surveillance) \u2014 but this coordination function is not the primary driver of the bottleneck. The bottleneck's primary function is extraction: guaranteeing specimen volume for clinical labs and maintaining professional gatekeeping for physicians. The constraint is Tangled Rope (not pure Snare) because it genuinely coordinates lab infrastructure AND extracts from patients. The measurement data (theater_ratio increasing from 0.48 to 0.64) supports this diagnosis: as diagnostic technology simplified, the 'clinical judgment' narrative became more performative, yet the bottleneck persisted and extraction increased. This is the canonical Tangled Rope pattern: coordination + inertia + extraction bundled together."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "std_transmission_prevention_infrastructure",
+      "sexual_health_equity_access"
+    ],
+    "dual_formulation_note": "The clinical testing bottleneck is downstream of regulatory frameworks (medical licensing, FDA credentialing) and upstream of transmission prevention outcomes (STI prevalence, partner notification speed). This story focuses on the bottleneck itself (\u03b5=0.52); upstream regulatory stories (\u03b5 likely higher, more purely extractive) and downstream transmission prevention stories (\u03b5 variable by intervention type) represent separate constraint family members."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

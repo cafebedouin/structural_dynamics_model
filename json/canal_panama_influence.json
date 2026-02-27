@@ -2,35 +2,74 @@
   "header": {
     "constraint_id": "canal_panama_influence",
     "version": "1.0",
-    "generated_date": "2024-07-16",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "canal"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.75,
-    "theater_ratio": 0.3,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
     "human_readable": "Geopolitical Influence over Panama Canal",
-    "topic_domain": "political",
+    "topic_domain": "political/geopolitical",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "united_states",
-      "china"
+      "united_states_strategic_interests",
+      "swiss_port_operators",
+      "global_shipping_efficiency"
     ],
     "victims": [
-      "panamanian_sovereignty",
-      "global_trade_stability"
+      "panama_sovereignty",
+      "developing_economies_tariff_exposure",
+      "neutral_shipping_nations"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "civilizational",
+      "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Global Trade Stability",
-      "comment": "PERSPECTIVE 1: GLOBAL TRADE STABILITY (SNARE) — The ideal of stable, apolitical global trade is trapped by great power competition. Any disruption for strategic reasons is pure extraction from this ideal, with no recourse or exit. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+      "label": "Panama's Sovereignty Constraint",
+      "comment": "PERSPECTIVE 1: PANAMA SOVEREIGNTY (SNARE) \u2014 Panama cannot exit its geographic position or renegotiate canal control meaningfully without economic catastrophe. The nation is trapped by dependency on canal revenues (6-8% of GDP) and cannot credibly threaten closure or renegotiation. Bears full extraction cost through restricted autonomy in canal governance and vulnerability to external pressure from US-China competition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Developing Economies (Tariff Exposure)",
+      "comment": "PERSPECTIVE 2: DEVELOPING ECONOMIES TARIFF EXPOSURE (TANGLED ROPE) \u2014 Latin American and African nations benefit from low transit costs and efficient routing but are constrained by inability to negotiate alternative routes or reduce dependency. Experiences mixed extraction: canal efficiency benefits them, but geopolitical rent-seeking and leverage over shipping rates imposes asymmetric costs. Exit options are constrained (cannot easily shift to other routes); power is moderate (can coordinate but not credibly threaten closure)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Swiss Port Operators & Global Shipping Efficiency",
+      "comment": "PERSPECTIVE 3: SWISS PORT OPERATORS & GLOBAL EFFICIENCY (ROPE) \u2014 Swiss-owned concessionaires benefit from operational expertise, cost-efficiency improvements, and neutral positioning. Experience the constraint as pure coordination: managing canal flow, investing in modernization, and maintaining throughput benefits them directly. High exit options (can shift investments to other ports globally) and institutional power mean they experience low or negative extraction \u2014 the constraint solves their operational coordination problem."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "United States Strategic Interest",
+      "comment": "PERSPECTIVE 4: UNITED STATES STRATEGIC INTEREST (SNARE) \u2014 Despite institutional power and historic dominance, US faces organized constraints from Chinese economic competition and Panamanian nationalism. Experiences high suppression: cannot explicitly control canal anymore (1977 treaty transfer), cannot prevent Chinese investment (Swiss intermediaries provide plausible deniability), cannot unilaterally raise tolls without triggering renegotiation. The extraction mechanism is maintenance of geopolitical dominance despite formal treaty constraints \u2014 high suppression required to sustain the influence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Chinese Economic Expansion",
+      "comment": "PERSPECTIVE 5: CHINESE ECONOMIC EXPANSION (SNARE) \u2014 China pursues leverage through investment in adjacent port infrastructure (Col\u00f3n, Balboa) and Belt and Road Initiative financing. Experiences extraction through US strategic opposition and cannot freely expand presence (constrained by US pressure on Panama). High suppression: must operate through intermediaries, Chinese firms face visa restrictions, cannot directly control canal operations despite financial investment. Extraction mechanism is maintenance of restricted access despite capital deployment."
     },
     {
       "classification_type": "tangled_rope",
@@ -38,132 +77,143 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Constrained Host Nation (Panama)",
-      "comment": "PERSPECTIVE 2: PANAMA (TANGLED ROPE) — As a sovereign state, Panama is organized but highly constrained. It benefits from canal revenues (coordination) but suffers a significant loss of strategic autonomy due to US and Chinese pressure (extraction). It cannot move the canal and must navigate these external forces. d≈0.70, f(d)≈1.06, σ=1.0 → χ≈0.58."
+      "label": "Neutral Shipping Nations & Merchant Fleets",
+      "comment": "PERSPECTIVE 6: NEUTRAL SHIPPING NATIONS (TANGLED ROPE) \u2014 Nations with significant merchant fleets (Singapore, Norway, Greece) benefit from efficient transit but are constrained by geopolitical leverage. Coordination function: canal enables global commerce. Extraction function: vulnerability to toll increases, potential closure if geopolitical conflict escalates, inability to influence canal governance despite heavy usage. Suppression via US military presence in region and implicit threat of escalation."
     },
     {
-      "classification_type": "rope",
+      "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Incumbent Hegemon (United States)",
-      "comment": "PERSPECTIVE 3: UNITED STATES (ROPE) — The US views its influence as a necessary coordination mechanism to ensure the canal's security and openness for global trade, which primarily benefits its own strategic and economic interests. From this viewpoint, extraction is framed as the cost of providing global security. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
+      "spatial_scope": "national",
+      "label": "Panama Canal Authority Bureaucracy",
+      "comment": "PERSPECTIVE 7: PANAMA CANAL AUTHORITY (PITON) \u2014 The PCA maintains the fiction of Panamanian control while operating under significant external constraints (US security interests, international commerce law, geopolitical pressure). Theater ratio high: formal sovereignty over an asset that cannot be meaningfully modified. Decision-making power is constrained by treaty and geopolitical reality despite bureaucratic autonomy. The institution persists through inertia \u2014 Panamanian control is nominal, but no alternative governance structure has emerged to replace it."
     },
     {
       "classification_type": "scaffold",
-      "agent_power": "institutional",
+      "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Rising Challenger (China)",
-      "comment": "PERSPECTIVE 4: CHINA (SCAFFOLD) — China's investments in ports and infrastructure are a temporary support structure (scaffold) to build long-term influence. The goal is to create a new geopolitical reality where its presence is permanent and dominant. The 'sunset' occurs when its influence is entrenched and no longer requires active construction. d≈0.15, f(d)≈-0.01, σ=1.2 → χ≈-0.01."
+      "label": "Alternative Maritime Routes & Renewable Logistics",
+      "comment": "PERSPECTIVE 8: ALTERNATIVE ROUTES COALITION (SCAFFOLD) \u2014 Arctic shipping, expanded Suez capacity, and overland corridors (Nicaragua, other routes) represent emerging alternatives. These constraints are temporary: as climate change opens Arctic routes and alternative infrastructure develops, canal dependency decreases. Sunset mechanism: decentralization of global shipping routes reduces leverage over any single chokepoint. Coalition includes climate researchers, infrastructure planners, and logistics companies exploring path dependence reduction."
     },
     {
-      "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Commercial User (Global Shipping)",
-      "comment": "PERSPECTIVE 5: GLOBAL SHIPPING COMPANIES (ROPE) — Actors like MSC are largely agnostic to the geopolitical struggle. For them, the canal is a pure coordination mechanism that reduces transit time and cost. As long as it operates efficiently, they perceive minimal extraction. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.43. This χ is high for a rope, but below the tangled_rope threshold, reflecting the friction of geopolitical risk."
-    },
-    {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The system has a clear coordination function (facilitating ~5% of global trade) but is inextricably linked with coercive geopolitical extraction, where great powers vie for control at the expense of Panamanian sovereignty and global stability. This is the canonical Tangled Rope structure. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "spatial_scope": "universal",
+      "label": "Natural Geographic Constraint (Mountain View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / GEOGRAPHY (MOUNTAIN) \u2014 From a civilizational perspective, the canal's geographic position as the shortest water route between Atlantic and Pacific is a natural constraint. No agent can change that fact. Any power can only extract from this fixed bottleneck position \u2014 the geography itself is the unmovable constraint. However, the structural data (high suppression, active enforcement, geopolitical competition) reveals this as a false summit: the extractive mechanism is geopolitical, not geographic."
     }
   ],
   "omegas": [
     {
-      "id": "chinese_intent_ambiguity",
-      "question": "Is China's involvement (e.g., port operations) purely commercial or a precursor to strategic/military control via dual-use infrastructure?",
-      "resolution_mechanism": "Declassified intelligence assessments of Chinese port operations; an overt attempt by China to leverage its position during a crisis.",
-      "impact": "If purely commercial, the constraint is closer to a Rope/Scaffold. If strategic, it confirms the Snare/Tangled Rope classification for other actors.",
+      "id": "swiss_intermediary_allegiance",
+      "question": "Do Swiss operators maintain genuine neutrality or tacitly favor US or Chinese interests through operational decisions?",
+      "resolution_mechanism": "Detailed analysis of toll structures, priority allocation, infrastructure investment patterns, and decision-maker funding sources; tracking of operational decisions during US-China diplomatic incidents",
+      "impact": "If genuinely neutral: Swiss intermediaries function as constraint-reducing agents. If captured by either power: constraint becomes asymmetric snare with hidden beneficiary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Swiss operators maintain neutrality or are captured by geopolitical interests"
+    },
+    {
+      "id": "panama_exit_credibility",
+      "question": "Could Panama credibly threaten canal closure or renegotiation to improve its bargaining position?",
+      "resolution_mechanism": "Analysis of alternative revenue sources, economic resilience to closure, military capacity, and international support; simulation of renegotiation scenarios",
+      "impact": "If exit credible: Snare classification degrades to Tangled Rope (Panama gains negotiating power). If exit not credible: Snare classification confirmed, Panama trapped.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Ambiguity of Chinese commercial vs. strategic intent in canal infrastructure."
+      "description": "Whether Panama has credible threat capacity for renegotiation"
     },
     {
-      "id": "us_resolve_threshold",
-      "question": "What is the threshold of Chinese influence that would trigger overt US intervention (economic or military) to reassert control?",
-      "resolution_mechanism": "A crisis event, such as Panama granting exclusive port rights to a Chinese state-owned enterprise or denying transit to US naval assets.",
-      "impact": "A low threshold confirms the US role is actively coercive (Snare-like), while a high threshold suggests its role is a more passive coordination function (Rope-like).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "The point at which the US would intervene to counter Chinese influence."
-    },
-    {
-      "id": "panama_agency_limit",
-      "question": "Can Panama successfully leverage the great power competition to maximize its own sovereignty and economic benefit, or is it an inevitable pawn?",
-      "resolution_mechanism": "Longitudinal analysis of Panamanian policy decisions on port contracts, security agreements, and diplomatic alignments over the next decade.",
-      "impact": "If Panama demonstrates agency, its Tangled Rope perspective is confirmed. If it consistently capitulates to the stronger power, its position is closer to being trapped in a Snare.",
+      "id": "geopolitical_competition_intensity",
+      "question": "Is US-China competition the primary driver of canal influence suppression, or are other factors (local corruption, maritime law, environmental constraints) equally important?",
+      "resolution_mechanism": "Decomposition of suppression sources via governance analysis, stakeholder interviews, and counterfactual scenarios (US-China d\u00e9tente, unilateral US withdrawal)",
+      "impact": "If geopolitical competition primary: current tangled_rope classification correct. If other factors dominant: constraint may be Scaffold (solvable) or Rope (coordination-only).",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "The degree of real strategic autonomy held by Panama."
+      "description": "Primary drivers of suppression and geopolitical influence"
+    },
+    {
+      "id": "alternative_routes_timeline",
+      "question": "At what efficiency threshold do alternative routes (Arctic, expanded Suez, overland) eliminate canal dependency and reduce geopolitical leverage?",
+      "resolution_mechanism": "Infrastructure capacity analysis, cost modeling for Arctic vs Panama vs alternatives, climate projection integration, and logistics network optimization",
+      "impact": "If threshold reachable in 20 years: Scaffold sunset is real, constraint will degrade to Rope. If threshold unreachable: constraint persists as Snare indefinitely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility and timeline for alternative route dominance"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2015,
-      "value": 0.45
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2030,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.4
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2015,
+      "time_point": 0,
       "value": 0.35
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
       "metric": "theater_ratio",
-      "time_point": 2030,
-      "value": 0.3
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.51
     }
   ],
   "interval": {
-    "start": 2000,
-    "end": 2030
+    "start": 0,
+    "end": 50
   },
   "commentary": {
-    "narrative_context": "The Panama Canal is a critical global infrastructure asset whose control is a site of intense geopolitical competition, primarily between the United States and China. While the canal provides a vital coordination function for global trade, this function is overlaid with a struggle for strategic influence. This constraint story models the tension between the canal's role as a global public good and its reality as a strategic chokepoint subject to great power politics, which extracts strategic autonomy from Panama and introduces systemic risk into global trade.",
+    "narrative_context": "The Panama Canal represents a critical global chokepoint where geopolitical competition between the United States and China intersects with Panamanian sovereignty, Swiss commercial interests, and the shipping requirements of the global economy. The constraint exhibits tangled-rope structure: a genuine coordination function (efficient canal operations, global commerce enablement) exists alongside asymmetric extraction (US maintains strategic dominance, China seeks leverage, Panama bears sovereignty costs, developing economies face tariff exposure). Swiss port operators provide a crucial institutional buffer through operational neutrality and technical expertise, though their true allegiances remain contested. The constraint's extractiveness has increased from 0.35 to 0.58 over the past 25 years as US-China competition has intensified, while theater ratio remains moderate (0.48), indicating that operational legitimacy persists even as geopolitical leverage accumulates. Panama remains trapped by geographic inevitability and economic dependency, unable to credibly threaten closure or renegotiation. The emergence of alternative maritime routes (Arctic shipping, expanded Suez capacity, overland corridors) represents a potential scaffold sunset mechanism that could reduce leverage concentration within 20-50 years.",
     "key_agents": [
-      "United States: The incumbent power, views its influence as a stabilizing force (institutional/arbitrage).",
-      "China: The rising challenger, using economic investment to build influence (institutional/mobile).",
-      "Panama: The host nation, caught between powers and trying to maintain sovereignty (organized/constrained).",
-      "Global Shipping Companies: Commercial users who prioritize efficiency over politics (powerful/mobile).",
-      "Global Trade Stability: An abstract victim of the geopolitical risk (powerless/trapped)."
+      "Panama Government: Primary victim (powerless/trapped) \u2014 geographic dependency, economic reliance on canal revenues (6-8% of GDP), constrained renegotiation capacity",
+      "United States Strategic Interest: Primary beneficiary/constrained extractor (organized/constrained) \u2014 maintains geopolitical dominance despite treaty constraints; must operate indirectly through military presence and diplomatic pressure",
+      "Chinese Economic Expansion: Secondary extractor (powerful/constrained) \u2014 pursues leverage through adjacent port investment and Belt and Road financing; faces US opposition and constrained access",
+      "Swiss Port Operators: Institutional beneficiary (institutional/arbitrage) \u2014 experiences canal as coordination problem; maintains neutrality to preserve operational access; high exit options (can relocate investments)",
+      "Panama Canal Authority: Institutional actor (institutional/arbitrage) \u2014 nominal Panamanian control with limited actual autonomy; theater-heavy role maintaining fiction of sovereignty",
+      "Developing Economies & Neutral Shipping Nations: Secondary victims (moderate/constrained) \u2014 benefit from efficient transit but face tariff exposure and vulnerability to geopolitical escalation",
+      "Alternative Routes Coalition: Organized agents (organized/mobile) \u2014 emerging actors exploring Arctic, Suez, and overland options; represent sunset mechanism for canal dependency"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55) is high, representing the extraction of strategic sovereignty from Panama and the imposition of geopolitical risk on global trade, rather than direct monetary extraction. Suppression (0.75) is very high due to the lack of viable alternative shipping routes and the active diplomatic and economic pressure exerted by the US and China to limit each other's influence. Theater Ratio (0.30) is low-to-moderate; while diplomatic rhetoric is constant, the core of the constraint involves tangible actions like port acquisitions and infrastructure deals.",
-    "perspectival_gap": "The gap is stark. The US perceives a Rope, where its hegemony provides a stable, coordinated system. China perceives a Scaffold, a temporary project to build its own influence. Commercial users also see a Rope, caring only for function. In contrast, Panama experiences a Tangled Rope, balancing the economic benefits against a severe loss of sovereignty. The abstract ideal of apolitical global trade is caught in a Snare, bearing all the risk of the conflict with no agency.",
-    "directionality_logic": "The US and China are designated as beneficiaries, as they seek to gain strategic advantage from control over the canal. Panama and the abstract concept of Global Trade Stability are victims, as they bear the costs of this competition through lost autonomy and increased risk. This structural relationship directly informs the directionality calculations, leading to negative effective extraction (χ) for the beneficiaries and high positive χ for the victims, thus explaining the wide perspectival gap.",
-    "mandatrophy_analysis": "This case demonstrates how the framework resolves mandatrophy by refusing to assign a single classification to a complex geopolitical reality. A simplistic analysis might label the situation a 'Snare' for Panama or a 'Rope' for the world. Deferential Realism shows that both, and more, are true simultaneously. The constraint's identity is the full set of indexed classifications. The system correctly identifies a core coordination function (the canal works) that is inseparable from an extractive power struggle, the hallmark of a Tangled Rope from the analytical view."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts significant geopolitical leverage for the US and access denial for China, while Panama bears sovereignty costs and developing economies face tariff vulnerability. The value reflects that genuine coordination function (canal operation) exists but is increasingly subordinated to geopolitical competition. Suppression (0.68): High. Panama cannot credibly exit or renegotiate; both US and China must operate indirectly (military presence for US, intermediary investment for China); neutral shipping nations cannot effectively reduce dependency; Swiss operators maintain neutrality under pressure. Active enforcement required to maintain the constraint against countervailing interests. Theater ratio (0.48): Moderate. Canal operations maintain high legitimacy and technical professionalism (Swiss management), but geopolitical competition increasingly drives strategic decisions. The constraint has not degraded into pure performative theater (as in a Piton) because actual shipping does occur and efficiency is genuinely at stake. The theater reflects the gap between formal Panamanian sovereignty and actual geopolitical constraints.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. Panama sees a Snare \u2014 trapped by geography and economic dependency, unable to modify its structural position. The US sees constrained extraction through diplomatic and military means (Snare from their position) despite formal treaty limitations. China sees blocked expansion (Snare) requiring indirect investment strategies. Swiss operators see pure coordination (Rope) \u2014 their exit options and institutional power mean they experience low effective extraction. Developing economies see mixed benefits and costs (Tangled Rope) \u2014 efficiency gain but tariff vulnerability. The alternative routes coalition sees a temporary problem with a sunset (Scaffold) \u2014 decentralized shipping routes emerging as viable alternatives. The analytical observer risks naturalizing geographic inevitability as immutable law (Mountain), but the structural data reveals geopolitical suppression as the critical extraction mechanism.",
+    "directionality_logic": "Panama's directionality: powerless/trapped status + victim classification \u2192 high d (0.85-0.95) \u2192 high f(d) \u2192 high experienced \u03c7. Panama cannot arbitrage or exit; bears full extraction cost from geopolitical competition. US directionality: institutional/constrained status + beneficiary classification \u2192 moderate d (0.40-0.50) \u2192 moderate f(d). US benefits from strategic dominance but is constrained by treaty and must use indirect enforcement mechanisms. China directionality: powerful/constrained status \u2192 high d (0.55-0.65) \u2192 high f(d). China seeks benefits but faces suppression and access denial. Swiss operators directionality: institutional/arbitrage status + beneficiary classification \u2192 low d (0.10-0.20) \u2192 negative f(d). Arbitrage options and technical expertise mean they experience minimal extraction cost; the constraint solves their operational coordination problem. Developing economies directionality: moderate/constrained status + victim classification \u2192 high d (0.65-0.75) \u2192 high f(d). Constrained exit and tariff exposure create moderate-to-high extraction experience.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that both genuine coordination and asymmetric extraction coexist structurally. The canal IS a coordination mechanism \u2014 efficient shipping, legitimate operations, technical professionalism. The canal IS an extraction mechanism \u2014 geopolitical leverage concentration, sovereignty constraints, tariff vulnerability, blocked access. The constraint is not misclassified as pure extraction; it genuinely contains both functions. The tangled-rope classification is correct because (1) beneficiaries exist and benefit from coordination (Swiss, global shipping efficiency), (2) victims exist and bear extraction costs (Panama, developing economies), and (3) active enforcement (diplomatic pressure, military presence, indirect investment controls) is required to maintain the asymmetry. The perspectival gaps (Snare from Panama, Rope from Swiss operators, Scaffold from alternative routes coalition) are legitimate \u2014 different agents experience different structural realities based on their exit options and power positions."
   },
   "boltzmann": {
     "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
-      "global_supply_chains",
-      "us_naval_hegemony"
-    ]
-  }
+      "suez_canal_chokepoint",
+      "arctic_shipping_dependency",
+      "us_china_technology_competition",
+      "developing_economy_trade_asymmetry"
+    ],
+    "dual_formulation_note": "The canal influence constraint can be decomposed into three related claims: (1) Geographic bottleneck (\u03b5 \u2248 0.10, Mountain) \u2014 purely physical constraint; (2) Operational efficiency (\u03b5 \u2248 0.25, Rope) \u2014 neutral coordination mechanism; (3) Geopolitical leverage (\u03b5 \u2248 0.58, Tangled Rope) \u2014 the actual constraint family. The present story focuses on the geopolitical layer. Upstream constraints (US-China competition, Panamanian sovereignty) feed this story; downstream constraints (alternative routes coalition) represent sunset mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
 }

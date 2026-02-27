@@ -1,0 +1,123 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp12",
+    "version": "0.1",
+    "generated_date": "2024-01-01",
+    "status": "Draft"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cyclopean Snare (Barney Kiernan's Pub)",
+    "topic_domain": "social/political/nationalist",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nationalist_regulars"
+    ],
+    "victims": [
+      "outsiders_nonconformists"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Outsider/Nonconformist",
+      "comment": "For an outsider like Bloom, the pub becomes a Snare. Trapped in a hostile social environment, he faces constant verbal attacks and the threat of physical violence for his perceived lack of patriotism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Nationalist Regulars",
+      "comment": "For the nationalist regulars, the pub is a Rope. It provides a space for coordinating and reinforcing shared beliefs, creating a sense of belonging and collective identity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the pub embodies a Tangled Rope. It facilitates coordination among nationalists while simultaneously extracting from and suppressing dissenting voices. The coordination and asymmetric extraction is clear."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intensity_nationalism",
+      "question": "How intense does nationalism need to become before its coercive aspects outweigh its coordinating benefits?",
+      "resolution_mechanism": "Historical analysis of nationalist movements and their consequences.",
+      "impact": "Determines whether a particular instance of nationalism should be viewed as a positive force (Rope) or a negative one (Snare).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Threshold for nationalism's coercive vs coordinating effects"
+    },
+    {
+      "id": "social_enforcement_threshold",
+      "question": "At what point does social pressure become undue coercion?",
+      "resolution_mechanism": "Ethical and legal analysis of freedom of speech and association.",
+      "impact": "Determines whether the actions of the nationalists constitute legitimate social enforcement or illegitimate suppression.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Point at which social pressure becomes coercion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "Leopold Bloom's entry into Barney Kiernan's pub reveals the social dynamics of Irish nationalism in 1904 Dublin. While the pub serves as a hub for nationalist coordination, Bloom, as an outsider, experiences its darker side, facing xenophobia and ultimately violence. This environment showcases how a seemingly positive force like nationalism can become a source of extraction and suppression.",
+    "key_agents": [
+      "Nationalist Regulars: Primary beneficiaries (powerful/arbitrage) - Coordinate, reinforce shared beliefs.",
+      "Outsiders/Nonconformists: Primary victims (powerless/trapped) - Face xenophobia and potential violence.",
+      "The Citizen: Enforcer of nationalist norms",
+      "Leopold Bloom: Target of nationalist hostility",
+      "Narrator: Observer of the pub's dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The pub's environment extracts from outsiders by subjecting them to social pressure, verbal abuse, and the threat of violence if they do not conform to nationalist ideals. Suppression (0.70): High. Dissenting opinions are actively suppressed through intimidation and social exclusion. Theater ratio (0.40): Moderate. While there is a performative aspect to the nationalism on display, it also serves a genuine function of coordinating and reinforcing shared beliefs.",
+    "perspectival_gap": "The differing perspectives highlight the dual nature of nationalism. For the nationalists, the pub is a space for positive coordination and belonging. For outsiders, it is a site of exclusion and potential harm. The analytical perspective acknowledges both aspects, recognizing the Tangled Rope dynamic.",
+    "directionality_logic": "Beneficiaries (nationalist_regulars) experience the pub as a coordination mechanism, while victims (outsiders_nonconformists) experience it as a source of extraction and suppression. The directionality is determined by their relative power and exit options. The nationalists have power within the pub and the ability to coordinate, while outsiders are trapped and lack the power to resist the social pressure."
+  },
+  "network": {},
+  "directionality_overrides": []
+}

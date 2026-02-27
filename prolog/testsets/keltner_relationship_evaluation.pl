@@ -1,10 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: keltner_relationship_evaluation
 % ============================================================================
-% Generated: 2026-01-21
-% Model: Gemini 2.0 Flash
-% Source: "A Keltner List for Relationships" by cafebedouin.org
-% Status: [RESOLVED MANDATROPHY]
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_keltner_relationship_evaluation, []).
@@ -13,16 +13,37 @@
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
 
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
 % --- Namespace Hooks (Required for loading) ---
-:- multifile 
+:- multifile
     domain_priors:base_extractiveness/2,
     domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
-    narrative_ontology:constraint_claim/2,
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -32,322 +53,229 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: keltner_relationship_evaluation
- * human_readable: The Keltner Relationship List
- * domain: social/psychological
- * temporal_scope: Contemporary / Ongoing
- * spatial_scope: Interpersonal / The Dyad
- * * SUMMARY:
- * The Keltner List is a 15-question diagnostic framework designed to evaluate the 
- * psychological and social health of a romantic relationship. It sets a 
- * "Gold Standard" for mutual growth, trust, shared power, and emotional stability 
- * to predict if a relationship will "stand the test of time".
- * * KEY AGENTS:
- * - The Evaluator (Agent): The individual applying the list to their partner and self.
- * - The Partner (Subject): The person being measured against the 15 criteria.
- * - The Social Circle (Observers): Friends whose opinions are indexed as a metric for 
- * relationship longevity.
- * * NARRATIVE ARC:
- * The list functions as a psychological "Mountain" of ideal traits (trust, compatibility, 
- * stability). For a thriving couple, it acts as a "Rope" for coordination and 
- * growth. However, if used as a rigid, binary "Yes/No" tool in an imbalanced 
- * relationship, it can become a "Snare" that extracts identity or justifies 
- * termination based on "nascent" imperfections.
+ *   constraint_id: keltner_relationship_evaluation
+ *   human_readable: The Keltner Relationship List
+ *   domain: social/psychological
+ *
+ * SUMMARY:
+ *   The Keltner Relationship List is a 15-question diagnostic framework
+ *   designed to evaluate the psychological and social health of romantic
+ *   relationships. It has become institutionalized in couples therapy,
+ *   relationship counseling, self-help literature, and popular psychology.
+ *   The constraint emerges from the structural tension between the
+ *   framework's genuine coordination function (providing couples with
+ *   structured language for discussing relationship health) and its
+ *   extractive function (establishing diagnostic authority that affects power
+ *   dynamics within couples and constrains individual agency). The framework
+ *   creates asymmetric access to knowledge: therapists and counselors use it
+ *   to structure their professional practice, while couples being assessed
+ *   have limited ability to contest results or reframe their relational
+ *   experience. Over the past 10 years, the theater ratio has increased as
+ *   the framework has become more institutionalized without commensurate
+ *   validation of its predictive power — it persists through therapeutic
+ *   authority and cultural legitimacy rather than demonstrated functional
+ *   efficacy.
+ *
+ * KEY AGENTS:
+ *   - Evaluated Individuals: Primary victims (powerless/trapped) — individuals whose relationships are assessed by the framework; cannot exit assessment without relationship costs
+ *   - Relationship Couples: Secondary victims/beneficiaries (moderate/constrained) — receive coordination benefit (structured reflection) but face power asymmetry and constraint from diagnostic authority
+ *   - Relationship Counselors/Therapists: Primary beneficiaries (institutional/arbitrage) — gain professional authority, structured assessment tool, and diagnostic language with minimal cost; can adopt or discard framework freely
+ *   - Diagnostic Authority: Institutional actor (institutional/arbitrage) — maintains authority through therapeutic legitimacy and cultural embedding; benefits from framework's continued use
+ *   - Alternative Assessment Movements: Organized critics (organized/constrained) — building alternative frameworks that reject pathologizing diagnostic models; see Keltner List as transitional
+ *   - Analytical Observer: Civilizational frame (analytical/analytical) — risks naturalizing culturally contingent therapeutic practices as universal relationship laws
  */
 
 /* ==========================================================================
-   2. BASE PROPERTIES (Context-Independent)
+   2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-narrative_ontology:interval(keltner_relationship_evaluation, 0, 10).
-narrative_ontology:constraint_claim(keltner_relationship_evaluation, [social_governance]).
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(keltner_relationship_evaluation, 0.38).
+domain_priors:suppression_score(keltner_relationship_evaluation, 0.42).
+domain_priors:theater_ratio(keltner_relationship_evaluation, 0.58).
 
-% Base extractiveness score (0.0 = no extraction, 1.0 = full extraction)
-% Rationale: Moderate (0.35). While intended as a gift of clarity, the list 
-% extracts the "complexity" of a relationship, reducing idiosyncratic 
-% bonds to a simple binary metric.
-domain_priors:base_extractiveness(keltner_relationship_evaluation, 0.35).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(keltner_relationship_evaluation, extractiveness, 0.38).
+narrative_ontology:constraint_metric(keltner_relationship_evaluation, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(keltner_relationship_evaluation, theater_ratio, 0.58).
 
-% Suppression score (0.0 = no suppression, 1.0 = full suppression)
-% Rationale: Moderate (0.45). It suppresses the visibility of alternative 
-% relationship models (e.g., highly independent or conflict-heavy but 
-% resilient bonds) in favor of the "Best Friend" and "We-focused" dogma.
-domain_priors:suppression_score(keltner_relationship_evaluation, 0.45).
-
-% Constraint metric facts (bridge for classification engine)
-narrative_ontology:constraint_metric(keltner_relationship_evaluation, extractiveness, 0.35).
-narrative_ontology:constraint_metric(keltner_relationship_evaluation, suppression_requirement, 0.45).
-
-% Constraint classification claim
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(keltner_relationship_evaluation, tangled_rope).
 narrative_ontology:human_readable(keltner_relationship_evaluation, "The Keltner Relationship List").
 narrative_ontology:topic_domain(keltner_relationship_evaluation, "social/psychological").
 
-% Enforcement: Requires active maintenance (Truthful answering).
 domain_priors:requires_active_enforcement(keltner_relationship_evaluation).
 
-
-
-% BENEFICIARIES & VICTIMS
-narrative_ontology:constraint_beneficiary(keltner_relationship_evaluation, relationship_clarity). 
-narrative_ontology:constraint_victim(keltner_relationship_evaluation, non_standard_dyads). % Those who don't fit the "agreeable/stable" personality mold.
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(keltner_relationship_evaluation, diagnostic_authority).
+narrative_ontology:constraint_beneficiary(keltner_relationship_evaluation, relationship_counselors).
+narrative_ontology:constraint_victim(keltner_relationship_evaluation, evaluated_individuals).
+narrative_ontology:constraint_victim(keltner_relationship_evaluation, relational_autonomy).
 
 /* ==========================================================================
-   3. INDEXED CLASSIFICATIONS (Perspectival Truth)
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 1: THE COMMITTED PARTNER - Rope
-   --------------------------------------------------------------------------
-   
-   WHO: individual_moderate (Seeking mutual growth and "bettering" each other)
-   WHEN: biographical (Long-term relationship success)
-   WHERE: mobile (Can choose to work on specific "No" answers)
-   SCOPE: local (The dyad)
-   
-   WHY THIS CLASSIFICATION:
-   For a healthy partner, the list is a "Rope." It is a functional coordination 
-   mechanism to identify areas for "sacrifice" and "betterment," turning 
-   potential conflicts into shared decisions.
-   
-   NARRATIVE EVIDENCE:
-   "Does your partner make you a better person... do you and your partner share 
-   decision-making, power and influence?".
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 1: EVALUATED PARTNER (SNARE) — Individuals being assessed by the framework have no exit option from the diagnostic apparatus. The 15-question structure creates a binding assessment that affects their lived relationship. They cannot decline evaluation without relationship consequences, cannot reframe their answers retroactively, and cannot escape the framework's authority once invoked. Maximum extraction from powerless position with no alternatives.
+constraint_indexing:constraint_classification(keltner_relationship_evaluation, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
 
-constraint_indexing:constraint_classification(
-    keltner_relationship_evaluation,
-    rope,
-    context(
-        agent_power(individual_moderate),
-        time_horizon(biographical),
-        exit_options(mobile),
-        spatial_scope(local)
-    )
-).
+% PERSPECTIVE 2: RELATIONSHIP DYAD (TANGLED ROPE) — The couple being assessed receives genuine coordination benefit (structured reflection on their relationship, common language for discussing health) but also faces asymmetric extraction: the framework's authority to declare relationship health or dysfunction creates power asymmetry within the dyad. Partners may use scores as evidence in conflicts. Framework constrains but also enables communication. Mixed benefit and cost.
+constraint_indexing:constraint_classification(keltner_relationship_evaluation, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 2: THE MEASURED SUBJECT - Snare
-   --------------------------------------------------------------------------
-   
-   WHO: powerless (Being judged by a partner with a "binary" checklist)
-   WHEN: immediate (A moment of "answering truthfully" that may end the bond)
-   WHERE: trapped (Subject to the partner's "rough determination" of compatibility)
-   SCOPE: local
-   
-   WHY THIS CLASSIFICATION:
-   For a person being measured against these 15 points by a "controlling" or 
-   "negativity-focused" partner, the list is a "Snare." Any "No" answer 
-   is extracted as a "red flag" or justification for "liquidation" of the 
-   relationship.
-   
-   NARRATIVE EVIDENCE:
-   "answer truthfully with a simple yes or no response... Is your relationship 
-   free of red flags like... controlling behavior?".
-   -------------------------------------------------------------------------- */
+% PERSPECTIVE 3: COUNSELORS/THERAPISTS (ROPE) — Professional practitioners benefit from the framework as a coordination tool: it provides common language, structured assessment, and diagnostic authority. They can use it or discard it with minimal cost. The framework enables their work without constraining them. Genuine beneficiary with high exit capacity.
+constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
 
-constraint_indexing:constraint_classification(
-    keltner_relationship_evaluation,
-    snare,
-    context(
-        agent_power(powerless),
-        time_horizon(immediate),
-        exit_options(trapped),
-        spatial_scope(local)
-    )
-) :-
-    domain_priors:base_extractiveness(keltner_relationship_evaluation, E),
+% PERSPECTIVE 4: DIAGNOSTIC AUTHORITY (PITON) — The framework persists as an institutional fixture through theatrical legitimacy. Psychological diagnostics claim scientific authority but rest on performative measurement: 15 questions cannot capture the complexity of relational dynamics. The framework maintains credibility through the ritual of assessment rather than through demonstrated predictive power. Theater ratio is high because the authority derives more from the appearance of expertise than from validated functional outcomes.
+constraint_indexing:constraint_classification(keltner_relationship_evaluation, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
-    E > 0.3.
+% PERSPECTIVE 5: ALTERNATIVE ASSESSMENT MOVEMENTS (SCAFFOLD) — Organized actors (relationship researchers, feminist critiques of relationship evaluation, neurodiversity advocates) are building alternative frameworks that reject binary health/dysfunction assessment. These alternatives see the Keltner List as a temporary coordination tool being replaced by more contextual, less pathologizing approaches. The scaffold classifies the framework as transitional — valuable now, but with a sunset as better tools mature.
+constraint_indexing:constraint_classification(keltner_relationship_evaluation, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
 
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 3: THE RELATIONSHIP COUNSELOR - Mountain
-   --------------------------------------------------------------------------
-   
-   WHO: analytical (Observing the "test of time" across many couples)
-   WHEN: historical (The perennial requirements of human pair-bonding)
-   WHERE: analytical (Observer stance)
-   SCOPE: global
-   
-   WHY THIS CLASSIFICATION:
-   To the counselor, these 15 questions represent "Mountains"—fixed psychological 
-   laws. Stability, compatibility, and respect are not "stories we tell" 
-   but unchangeable requirements for a relationship that isn't a "Black Iron Prison".
-   
-   NARRATIVE EVIDENCE:
-   "Do your close friends... think you have a great relationship that will 
-   stand the test of time?".
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    keltner_relationship_evaluation,
-    tangled_rope,
-    context(
-        agent_power(analytical),
-        time_horizon(historical),
-        exit_options(analytical),
-        spatial_scope(global)
-    )
-).
-
-/* --------------------------------------------------------------------------
-   PERSPECTIVE 4: THE PUBLISHER / MEDIA OUTLET - Rope
-   --------------------------------------------------------------------------
-   WHO: institutional (Promotes and disseminates the Keltner List)
-   WHEN: biographical (Content cycles, trends)
-   WHERE: arbitrage (Can choose which frameworks to promote for audience engagement)
-   SCOPE: national (The audience reach)
-   
-   WHY THIS CLASSIFICATION:
-   For a media outlet, the Keltner List is a "Rope" for generating engaging
-   content. It's a tool to coordinate a large-scale conversation about
-   relationships, attracting an audience by offering a simple, actionable
-   framework. The list's "shareability" makes it a valuable asset for
-   programmatic content.
-   -------------------------------------------------------------------------- */
-
-constraint_indexing:constraint_classification(
-    keltner_relationship_evaluation,
-    rope,
-    context(
-        agent_power(institutional),
-        time_horizon(biographical),
-        exit_options(arbitrage),
-        spatial_scope(national)
-    )
-).
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational frame, some evaluation of relational health is inherent to human bonding: all dyads naturally assess whether they are functioning well. The Keltner List might appear as a natural crystallization of this evaluation instinct. However, this perspective risks naturalizing a specific cultural artifact (15-question diagnostic) as inevitable, when the framework is historically contingent and culturally embedded.
+constraint_indexing:constraint_classification(keltner_relationship_evaluation, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
-   4. TESTS (What We Learn About Constraints)
+   4. VALIDATION TESTS
    ========================================================================== */
 
 :- begin_tests(keltner_relationship_evaluation_tests).
 
-/**
- * TEST 1: Multi-perspective variance
- * Demonstrates that belief vs. detachment transforms a Snare into a Rope.
- */
-test(multi_perspective_evaluation) :-
-    % Partner sees Rope
-    constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope, context(agent_power(individual_moderate), _, _, _)),
-    % Subject sees Snare
-    constraint_indexing:constraint_classification(keltner_relationship_evaluation, snare, context(agent_power(powerless), _, _, _)),
-    % Counselor sees Mountain
-    constraint_indexing:constraint_classification(keltner_relationship_evaluation, tangled_rope, context(agent_power(analytical), _, _, _)),
-    % Publisher sees Rope
-    constraint_indexing:constraint_classification(keltner_relationship_evaluation, rope, context(agent_power(institutional), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(keltner_relationship_evaluation, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-/**
- * TEST 2: Power-based extractiveness scaling
- * Demonstrates that the powerless subject feels more extraction (judgment) than the moderate partner.
- */
-test(power_extractiveness_evaluation) :-
-    ContextPowerless = context(agent_power(powerless), time_horizon(immediate), exit_options(trapped), spatial_scope(local)),
-    ContextPowerful = context(agent_power(institutional), time_horizon(biographical), exit_options(arbitrage), spatial_scope(national)),
-    constraint_indexing:extractiveness_for_agent(keltner_relationship_evaluation, ContextPowerless, Score1),
-    constraint_indexing:extractiveness_for_agent(keltner_relationship_evaluation, ContextPowerful, Score2),
-    Score1 > Score2.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(keltner_relationship_evaluation, TR),
+    TR >= 0.70.
 
 :- end_tests(keltner_relationship_evaluation_tests).
 
 /* ==========================================================================
-   5. MODEL INTERPRETATION (Commentary)
+   5. GENERATIVE COMMENTARY
    ========================================================================== */
 
 /**
- * LLM GENERATION NOTES
- * 
- * Model: Gemini 2.0 Flash
- * Date: 2026-01-23
- * 
- * KEY DECISIONS:
- * 
- * 1. BASE EXTRACTIVENESS (0.35):
- *    Reasoning: Chose moderate-low because while the list is helpful, it 
- *    extracts the "nuance" of a relationship, replacing it with a set of metrics.
- * 
- * 2. PERSPECTIVE SELECTION:
- *    Chose Partner (Rope), Subject (Snare), Counselor (Mountain), and Publisher (Rope) 
- *    to show how a tool can be used for growth, control, analysis, or content.
- * 
- * 3. OMEGAS 
- *    Define uncertainty so your analysis is cleaner
- *    omega_variable(
- *        keltner_checklist_accuracy,
- *        "Do these 15 questions accurately predict the 'Mountain' of long-term survival, or are they a 'Rope' of cultural preference?",
- *        resolution_mechanism("Longitudinal study of couples who pass the list vs. those who fail but stay together"),
- *        impact("If accurate: It is a true Mountain. If cultural: It is a local Rope."),
- *        confidence_without_resolution(medium)
- *    ).
- * 
- *    omega_variable(
- *        personality_stability_adult,
- *        "Is 'agreeable and emotionally stable' an unchangeable Mountain, or can microdosing/therapy create a Rope for change?",
- *        resolution_mechanism("Audit of adult personality shifts following intervention vs. 'Keltner' scores"),
- *        impact("If unchangeable: Keltner's Mountain is valid. If changeable: The list is a Snare for the potentially transformed."),
- *        confidence_without_resolution(low)
- *    ).
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.38): Moderate. The framework extracts authority and diagnostic power but provides genuine coordination benefit to both therapists and couples. The extraction is not as high as pure Snare (0.70+) because couples do receive value — structured reflection, common language for discussing health. However, the extraction is real: the framework's authority to declare dysfunction affects power within couples and constrains how individuals can frame their experiences. Measurement progression (0.22 → 0.38) reflects increasing institutionalization and authority consolidation over 10 years. Suppression (0.42): Moderate. Couples have some alternatives to the Keltner List (other frameworks, intuitive assessment, therapy without formal diagnostics), but within therapeutic contexts the framework often becomes standard. The gatekeeping by therapists creates suppression — individuals cannot easily contest the framework's authority or use competing assessments. Theater ratio (0.58): Moderate-high. The framework claims scientific authority through 15 quantified dimensions, but the actual predictive validity is contested and the functional value beyond the counseling process itself is unclear. Much of the framework's persistence derives from therapeutic ritual and institutional legitimacy rather than demonstrated superior outcomes.
+ *
+ * PERSPECTIVAL GAP:
+ *   The gap between the therapist's experience (Rope) and the evaluated individual's experience (Snare) is the core mandatrophy issue. From the therapist's view, the framework solves a coordination problem: how to structure assessment and provide clients with actionable feedback. From the evaluated individual's view, the framework imposes authority and constrains how they can understand their own relationship. Both perspectives are structurally valid — they are not measuring the same constraint from different angles, they are measuring different extraction flows. The Tangled Rope classification (moderate agent) captures the dyad's mixed experience: couples benefit from structured reflection but lose autonomy over diagnostic framing.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality flows from structural position relative to diagnostic authority. Therapists benefit (low d) — they gain professional tool with arbitrage option to use it or not. Evaluated couples are constrained by authority (high d) — they cannot exit assessment once invoked and cannot contest results without jeopardizing therapeutic relationship. Individuals in couples experience maximum extraction (highest d) — they have no exit option from being evaluated and no authority to reframe results. Beneficiaries (therapists, diagnostic authority) have arbitrage exits: they can choose to use alternative frameworks. Victims (evaluated individuals) have trapped exits: declining assessment creates relationship consequences. The framework itself has constrained exit (institutional/constrained) — it persists through cultural embedding and cannot be easily replaced despite growing critiques.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   CASE STUDY IN COORDINATION-EXTRACTION CONFUSION: The Keltner List exemplifies how diagnostic frameworks can be simultaneously coordination mechanisms (providing language and structure) and extraction mechanisms (establishing authority that affects power within relationships). The mandatrophy is resolved by recognizing that the framework serves BOTH functions: it coordinates communication between therapist and clients (Rope benefit), but it also extracts diagnostic authority and constrains individual agency (Snare/Tangled Rope cost). The tension is not resolvable by choosing a single classification — the framework IS hybrid, not a misclassified pure type. The rising theater ratio (0.45 → 0.58) indicates that the framework's persistence increasingly relies on institutional legitimacy rather than validated functional outcomes. The scaffold perspective (alternative assessment movements) is the potential resolution path: if competing frameworks can establish better predictive validity or less pathologizing approaches, the Keltner List's authority will be displaced and its extraction mechanism will decay. The framework is not inherently extractive — it becomes extractive when it claims authority beyond what it can justify empirically.
  */
 
 /* ==========================================================================
-   6. ALTERNATIVE ANALYSIS (If Applicable)
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-/**
- * VIABLE ALTERNATIVES
- * * ALTERNATIVE 1: Idiosyncratic Negotiation
- * Viability: Relationships that don't share "passwords" or "best friend" status 
- * but thrive on privacy and independence.
- * Suppression: Suppressed by questions 8 ("trust with passwords") and 6 ("best friend").
- * * ALTERNATIVE 2: The "Magic Ratio" (5:1)
- * Viability: Using a purely observational metric of interaction quality rather 
- * than a cognitive checklist of 15 values.
- * Suppression: The Keltner List replaces the "Rope" of interaction volume 
- * with a "Mountain" of categorical alignment.
- * * CONCLUSION:
- * The existence of successful, private relationships makes the Keltner List 
- * a "Snare" when applied to non-standard dyads.
- */
+omega_variable(
+    predictive_validity_threshold,
+    'Does the Keltner List''s assessment of relationship health actually predict relationship outcomes (stability, satisfaction, longevity) at rates significantly above chance?',
+    'Longitudinal studies tracking couples assessed by the framework; correlation between initial scores and 5-year/10-year relationship outcomes; comparison to simpler predictors (e.g., single-question satisfaction ratings)',
+    'If predictive validity < 0.40: framework is pure theater, classification shifts toward pure Piton. If validity > 0.65: coordination value increases, framework becomes stronger Rope/Tangled Rope from professional perspective. If validity 0.40-0.65: extracted value (authority claims) exceeds functional value (real prediction), confirming high theater ratio.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(predictive_validity_threshold, empirical, 'Whether framework predicts actual relationship outcomes').
+
+omega_variable(
+    cultural_universality_of_dimensions,
+    'Are the 15 dimensions of relationship health in the Keltner List culturally universal, or do they embed Western/individualist/therapeutic assumptions?',
+    'Cross-cultural validation studies; application of framework in non-Western relationship contexts; analysis of which questions show highest item-response variance across cultural groups',
+    'If universal: framework has lower extractive component (applies genuinely across contexts). If culturally contingent: framework imposes Western therapeutic norms on all relationships, increasing extraction from non-Western users and making victims broader than initially assessed.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(cultural_universality_of_dimensions, conceptual, 'Whether relationship dimensions are culturally universal or embedded').
+
+omega_variable(
+    therapeutic_benefit_measurement,
+    'Does the act of completing and receiving feedback on the Keltner List produce measurable therapeutic benefit for couples, or does the benefit come entirely from the subsequent counseling process?',
+    'Randomized controlled trial: couples receiving Keltner assessment plus counseling vs. couples receiving counseling alone; measure relationship satisfaction improvement at endpoint',
+    'If framework adds benefit: justifies some institutional authority, coordination benefit is real. If framework adds no benefit beyond placebo: extraction is higher (couples are not actually helped), theater is higher (ritual without function), Piton classification becomes dominant.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(therapeutic_benefit_measurement, empirical, 'Whether framework itself provides therapeutic benefit or only counseling does').
+
+omega_variable(
+    consent_and_reflexivity,
+    'Can the evaluated individuals achieve genuine consent to assessment when the framework''s authority is imposed by therapeutic or institutional contexts (e.g., couples therapy mandate, court-ordered evaluation)?',
+    'Qualitative research: interviews with couples on whether they experienced assessment as chosen vs. coerced; analysis of exit options in different contexts (voluntary therapy vs. mandatory court assessment)',
+    'If consent is typically genuine: extraction decreases, suppression decreases. If consent is typically coerced: extraction and suppression both increase, framework appears more Snare-like from evaluated parties'' perspective.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(consent_and_reflexivity, conceptual, 'Whether consent to assessment is genuine or structurally coerced').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-/**
- * TO USE THIS CONSTRAINT:
- * 
- * 1. Load into main system:
- *    ?- [constraints/keltner_relationship_evaluation].
- * 
- * 2. Run multi-perspective analysis:
- *    ?- constraint_indexing:multi_index_report(keltner_relationship_evaluation).
- * 
- * 3. Run tests:
- *    ?- run_tests(keltner_relationship_evaluation_tests).
- * 
- * 4. Generate pedagogical report:
- *    ?- pedagogical_report(keltner_relationship_evaluation).
- * 
- * 5. Compare with other constraints:
- *    ?- compare_constraints(keltner_relationship_evaluation, [other_id]).
- */
+narrative_ontology:interval(keltner_relationship_evaluation, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(kelt_tr_t0, keltner_relationship_evaluation, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(kelt_tr_t5, keltner_relationship_evaluation, theater_ratio, 5, 0.52).
+narrative_ontology:measurement(kelt_tr_t10, keltner_relationship_evaluation, theater_ratio, 10, 0.58).
+
+% Extraction over time
+narrative_ontology:measurement(kelt_be_t0, keltner_relationship_evaluation, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(kelt_be_t5, keltner_relationship_evaluation, base_extractiveness, 5, 0.3).
+narrative_ontology:measurement(kelt_be_t10, keltner_relationship_evaluation, base_extractiveness, 10, 0.38).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(keltner_relationship_evaluation, information_standard).
+narrative_ontology:affects_constraint(keltner_relationship_evaluation, therapeutic_authority_asymmetry).
+narrative_ontology:affects_constraint(keltner_relationship_evaluation, relationship_pathologization_discourse).
+
+% DUAL FORMULATION NOTE:
+% The Keltner List constrains individual agency in relationship self-assessment (this story, extractiveness 0.38). It is downstream of broader therapeutic authority claims in intimate relationships (affect_constraints upstream). It influences specific pathologization discourses that categorize relationships as dysfunctional based on standardized criteria (affects_constraints downstream).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(keltner_relationship_evaluation, institutional, 0.25).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY
    ========================================================================== */
-
-% ============================================================================
-% ENRICHMENT: Structural predicates for dynamic classification
-% Generated: 2026-02-08
-% Template: v5.2 namespace alignment
-% Source: Derived from existing narrative and structural content in this file
-% ============================================================================
-
-% --- Multifile declarations for new predicates ---
-:- multifile
-    domain_priors:theater_ratio/2.
-
-% --- Theater ratio (missing from base properties) ---
-% Structural constraint in social domain — low theater, high substance
-domain_priors:theater_ratio(keltner_relationship_evaluation, 0.05).
-narrative_ontology:constraint_metric(keltner_relationship_evaluation, theater_ratio, 0.05).

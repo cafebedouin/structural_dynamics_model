@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "grete_samsa_transition",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Grete's Burden and Ascendance in The Metamorphosis",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "samsa_family",
+      "grete_samsa"
+    ],
+    "victims": [
+      "gregor_samsa",
+      "grete_samsa"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Gregor Samsa's Perspective",
+      "comment": "PERSPECTIVE 1: GREGOR SAMSA (SNARE) - Gregor is trapped in his transformed state and completely dependent on his family, particularly Grete, for survival. He experiences the constraint as pure extraction, as his ability to contribute is gone, and he is a burden. Initially, he has some hope for reconnection and usefulness, which gradually diminishes. He is structurally powerless, with no exit options within the family context."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Grete Samsa's Perspective",
+      "comment": "PERSPECTIVE 2: GRETE SAMSA (TANGLED ROPE) - Grete experiences a mix of coordination and extraction. Initially, she is burdened with caring for Gregor, but as she takes on more responsibility within the family, she gains skills and influence. She has limited exit options due to familial duty but is not completely trapped. Her extraction is high initially but decreases as she ascends within the family structure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Samsa Family as Unit",
+      "comment": "PERSPECTIVE 3: SAMSA FAMILY (ROPE) - The family initially coordinates to deal with Gregor's condition. Grete's increasing responsibilities provide a means to manage their changed circumstances. The extraction is low as the family is benefitting from Grete's contributions and ability to create new income streams."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) - From a civilizational, analytical perspective, Grete's transformation represents a complex dynamic of burden and ascendance. Her initial burden is heavy, but her adaptation ultimately empowers her. The structural elements include the dependence of Gregor, the family's need for income, and Grete's own skills. This is a tangled rope due to the presence of both significant extraction (Gregor and initially Grete) and a coordinating function (survival of the family)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gretes_agency",
+      "question": "To what extent is Grete's ascendance a genuine empowerment vs. a constrained adaptation?",
+      "resolution_mechanism": "Analysis of Grete's personal goals and desires vs. her actions within the story. Examination of whether her choices are truly free or dictated by circumstances.",
+      "impact": "If genuine empowerment, the classification shifts toward a scaffold. If constrained adaptation, the classification remains a tangled rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The degree of Grete's individual agency in her actions and ascendance."
+    },
+    {
+      "id": "family_dependency",
+      "question": "How strong is the family's dependency on Grete's contributions vs. other available options?",
+      "resolution_mechanism": "Examination of the family's potential alternatives to Grete's efforts. Analysis of the economic and social context of the story.",
+      "impact": "If high dependency, the extraction element is strengthened, reinforcing the tangled rope or snare classification for some perspectives. If other options existed, the extraction is less severe.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The degree of the family's dependency on Grete's contribution."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the evolving role of Grete Samsa following her brother Gregor's transformation. Initially burdened with caring for Gregor, Grete's role expands to include providing for the family's economic needs. This transition showcases a dynamic where extraction (the initial burden) is balanced by an increasing degree of coordination (Grete's emerging agency and family support).",
+    "key_agents": [
+      "Gregor Samsa: Primary target (powerless/trapped) - experiences high extraction and dependence.",
+      "Grete Samsa: Mixed target/beneficiary (moderate/constrained) - initially burdened, later empowered.",
+      "Samsa Family: Beneficiary (institutional/constrained) - relies on Grete's adaptation for survival."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Initially, Grete bears a heavy burden of caring for Gregor, which is emotionally and physically draining. This burden decreases as she takes on more responsibilities and gains influence. Suppression (0.45): Moderate. Grete's initial options are limited due to family duty. As she takes on more responsibilities, her options increase, but she remains constrained by her family's needs. Theater Ratio (0.30): Low. Most of Grete's activity serves a functional purpose, with minimal theater.",
+    "perspectival_gap": "Gregor experiences the transformation as a snare due to his complete dependence and lack of agency. Grete experiences a tangled rope as her initial burden is balanced by her growing skills and influence within the family. The family experiences the transition as a rope, as they benefit from Grete's contributions to manage the crisis. The analytical observer recognizes the complex dynamic of extraction and coordination.",
+    "directionality_logic": "Gregor's trapped exit option gives him a high directionality, which increases the effect of his extraction. Grete's constrained exit option reduces her experienced extraction, especially as she ascends within the family structure. The family's constrained exit option results in a low directionality, as they are benefitting from Grete's effort."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

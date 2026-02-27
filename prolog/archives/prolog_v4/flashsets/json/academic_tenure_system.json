@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "academic_tenure_system",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.5,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Academic Tenure System",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "tenured_faculty",
+      "university_administration"
+    ],
+    "victims": [
+      "junior_faculty",
+      "adjunct_faculty",
+      "students"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Junior Faculty Perspective",
+      "comment": "Junior faculty face intense pressure to publish and secure grants to achieve tenure, often at the expense of work-life balance and pedagogical quality. Limited job mobility outside academia further traps them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Tenured Faculty Perspective",
+      "comment": "Tenure is perceived as a protection of academic freedom, enabling research and teaching without fear of reprisal. However, it also creates a system where some faculty are less productive after achieving tenure, contributing less to the university than before."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer Perspective",
+      "comment": "The tenure system simultaneously coordinates the protection of academic freedom while enabling the extraction of hyper-productivity from junior faculty. This creates a tangled rope where both coordination and extraction occur."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "University Administration Perspective",
+      "comment": "Tenure provides stability and prestige to the university. However, it also limits flexibility in staffing and resource allocation, potentially leading to institutional stagnation and increased reliance on adjunct labor. The performative aspects of tenure review processes (committee meetings, documentation) have increased over time, even as their functional impact on faculty quality has diminished."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alt_eval_metrics",
+      "question": "Are there alternative evaluation metrics (beyond publications and grants) that better assess a faculty member's contributions to the university and academic community?",
+      "resolution_mechanism": "Pilot programs with alternative evaluation systems, longitudinal studies comparing outcomes under different evaluation metrics.",
+      "impact": "If viable metrics are found, the extractiveness of the tenure system for junior faculty could be reduced. If no viable metrics are found, the current system may be justified as the 'least bad' option.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Existence of alternative evaluation metrics"
+    },
+    {
+      "id": "academic_freedom_scope",
+      "question": "To what extent does tenure effectively protect academic freedom, and are there alternative mechanisms that could provide similar protection?",
+      "resolution_mechanism": "Legal studies, surveys of faculty experiences, comparative analysis of academic freedom in tenured vs. non-tenured positions.",
+      "impact": "If tenure is shown to be essential for academic freedom, its benefits may outweigh its costs. If alternative mechanisms are found, the need for tenure may be re-evaluated.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Efficacy of tenure in protecting academic freedom"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The academic tenure system is a complex arrangement that aims to protect academic freedom while also structuring the career paths of faculty. It incentivizes productivity in junior faculty but may lead to stagnation in tenured faculty. It also creates a reliance on adjunct labor, impacting students' educational experiences. The theater ratio has increased over time as the performative aspects of tenure review processes (committee meetings, documentation) have grown, even as their functional impact on faculty quality has diminished.",
+    "key_agents": [
+      "Tenured Faculty: Primary beneficiary (institutional/constrained) - receives job security and academic freedom",
+      "Junior Faculty: Primary victim (powerless/trapped) - experiences pressure to publish and secure grants",
+      "University Administration: Secondary beneficiary (institutional/constrained) - receives stability and prestige",
+      "Adjunct Faculty: Secondary victim (powerless/constrained) - receives low pay and little job security",
+      "Students: Indirect victims (moderate/constrained) - affected by reliance on adjunct labor"
+    ],
+    "logic_rationale": "Extractiveness (0.60): High, reflecting the significant pressure on junior faculty. Suppression (0.50): Moderate, reflecting limited job mobility and publication bias. Theater Ratio (0.75): High, reflecting the performative aspects of tenure review processes.",
+    "perspectival_gap": "The tenure system is a Snare from the perspective of junior faculty due to the pressure to achieve tenure and the lack of alternative career paths within academia. However, from the perspective of tenured faculty, it's a system (Rope) that protects academic freedom, enabling research and teaching without fear of reprisal. The analytical observer recognizes that the system is a hybrid, balancing these two aspects (Tangled Rope). The University Administration sees the system as a piton, where the original function of ensuring quality has degraded, but the performative aspects of the review process persist.",
+    "directionality_logic": "The directionality values are derived from the beneficiaries and victims declared. Tenured faculty and university administration, as beneficiaries, receive low 'd' values, leading to a Rope classification. Junior faculty and adjunct faculty, as victims, receive high 'd' values, leading to a Snare classification. The analytical observer's 'd' value balances these opposing forces, resulting in a Tangled Rope classification. The University Administration's perspective is classified as a piton due to the high theater ratio and constrained exit options.",
+    "mandatrophy_analysis": "The tenure system is designed to coordinate academic freedom, but this often comes at the cost of extracting productivity from junior faculty, making it appear as a pure extraction (Snare). However, labeling it as pure extraction fails to account for the stated purpose and perceived benefits of the system, specifically from the perspective of tenured faculty and the protection of academic freedom. The perspectives show both aspects, and the analytical observer classifies the situation as tangled rope, acknowledging both. The piton perspective highlights the degradation of the system's original function, further complicating the analysis."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

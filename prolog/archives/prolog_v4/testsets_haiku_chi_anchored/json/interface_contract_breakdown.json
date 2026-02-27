@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "interface_contract_breakdown",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "icb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Protocol Dissolution",
+    "topic_domain": "technological/software_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_provider",
+      "feature_shipping_teams"
+    ],
+    "victims": [
+      "dependent_applications",
+      "system_stability",
+      "client_integration_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Application Developer",
+      "comment": "PERSPECTIVE 1: DEPENDENT APP DEVELOPER (SNARE) \u2014 Bound to the platform API; cannot exit without rewriting core functionality. Faces continuous breaking changes, undocumented side effects, and version churn. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.68. Full extraction: trapped in maintenance burden, zero negotiating power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Integration Infrastructure Team",
+      "comment": "PERSPECTIVE 2: INTEGRATION INFRASTRUCTURE TEAM (TANGLED ROPE) \u2014 Constrained by dependency on the platform's feature velocity but also benefits from early access to new capabilities and vendor coordination. d\u22480.68, f(d)\u22481.06, \u03c3=1.0 \u2192 \u03c7\u22480.55. Mixed: must absorb breaking changes but gains preferential notification and mitigation pathways."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Provider (Shipping)",
+      "comment": "PERSPECTIVE 3: PLATFORM PROVIDER / FEATURE SHIPPING TEAMS (ROPE) \u2014 Benefits from rapid iteration and feature velocity as a competitive advantage. Experiences the constraint as coordination: publishing APIs enables ecosystem growth. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary; sees API as coordination tool."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standards and Compatibility Coalition",
+      "comment": "PERSPECTIVE 4: STANDARDS COALITION (SCAFFOLD) \u2014 Organized effort (semantic versioning, deprecation notices, API stability SLAs, contract testing frameworks) to impose temporary coordination discipline on feature velocity. d\u22480.42, f(d)\u22480.42, \u03c3=1.2 \u2192 \u03c7\u22480.26. Lower extraction because coalition has agency and sunset logic: versioning and contract testing create a path to decoupling vendor lock-in from feature velocity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Backwards-Compatibility Ritual",
+      "comment": "PERSPECTIVE 5: LEGACY COMPATIBILITY RITUAL (PITON) \u2014 Formal deprecation cycles and stability commitments persist as theater: vendors announce breaking changes with 'deprecation periods' (6-12 months) but the economic incentive to migrate dependent applications is suppressed by the switching cost (rewriting integrations). theater_ratio=0.58: the ritual of compatibility promises is largely performative. Maintained through institutional inertia and legal liability exposure, not functional protection."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Bottleneck View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some degree of API instability is inherent to software evolution: undocumented side effects and specification drift are inevitable consequences of complex system dynamics. This perspective risks naturalizing what is actually a contingent institutional failure (inadequate contract formalization, insufficient regression testing, incentive misalignment). The engine will compute this as a false summit given \u03b5=0.52."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "breaking_change_definition_threshold",
+      "question": "What constitutes a 'breaking change' vs. a 'behavioral refinement' vs. a 'bug fix'?",
+      "resolution_mechanism": "Formal specification of API contracts; automated equivalence testing between versions; dependent application error correlation analysis",
+      "impact": "If definition is strict: most feature velocity is classified as breaking changes (increases suppression perception). If definition is loose: many incompatibilities are hidden (increases extraction). The threshold determines whether the platform has institutional capacity for honest API governance.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition of breaking change vs behavioral refinement"
+    },
+    {
+      "id": "contract_observability_gap",
+      "question": "Can dependent applications automatically detect deviations from the declared API contract?",
+      "resolution_mechanism": "Implementation of contract testing frameworks (Pact, Spring Cloud Contract); measurement of contract coverage across dependent applications; post-deployment contract violation detection",
+      "impact": "If high observability: extraction mechanism is visible and can be challenged (moves toward rope). If low observability: extraction is hidden, and theater ratio increases (piton deepens).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Capability for detecting API contract deviations"
+    },
+    {
+      "id": "version_fragmentation_cost",
+      "question": "What is the true cost of version fragmentation (n versions in simultaneous support)?",
+      "resolution_mechanism": "Measurement of bug fix backport effort, security patch regression distribution, documentation maintenance burden across versions",
+      "impact": "If cost is linear or sublinear: versioning is a functional solution (moves toward scaffold). If cost is superlinear: versioning is theater masking extraction (piton confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost structure of supporting multiple API versions"
+    },
+    {
+      "id": "vendor_switching_incentive",
+      "question": "Are the switching costs of moving to an alternative platform driven by technical lock-in or by vendor market dominance?",
+      "resolution_mechanism": "Comparison of rewrite costs across similar platforms; analysis of dependent application migrations and their triggers; measurement of competitive platform feature parity",
+      "impact": "If technical lock-in dominates: suppression is structural (\u03b5 remains high). If market dominance dominates: suppression is chosen (extraction is intentional), and the snare classification strengthens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of API switching costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The protocol dissolution constraint describes a structural tension in software platform evolution where rapid feature velocity (agile shipping incentives) conflicts with API stability (dependent application needs). The platform provider benefits from velocity as a competitive advantage; dependent applications and the broader system stability bear the cost of undocumented side effects, breaking changes, and version fragmentation. This constraint exhibits a clear mandatrophy signature: it appears to dependent applications as pure extraction (Snare), to the platform vendor as pure coordination (Rope), and to coordinated standardization efforts (semantic versioning, deprecation cycles) as a temporary problem with a sunset (Scaffold). The theater_ratio (0.58) reflects that backwards-compatibility promises and deprecation cycles are partially performative \u2014 vendors announce compatibility windows but the economic incentive structure suppresses actual migration, leaving dependent applications perpetually in a broken-change absorption cycle. The constraint has degraded from coordination (early platform history, when APIs were more stable) toward extraction (current state, where feature velocity dominates stability commitments). Base extractiveness has risen from 0.28 to 0.52 over the interval, indicating progressive layering of extraction onto what began as a coordination mechanism.",
+    "key_agents": [
+      "Platform Provider: Primary beneficiary (institutional/arbitrage) \u2014 captures competitive advantage through rapid feature velocity; controls version deprecation timing",
+      "Feature Shipping Teams: Secondary beneficiary (institutional/arbitrage) \u2014 measured on feature velocity, not on dependent application stability; incentive misalignment drives breaking changes",
+      "Dependent Applications: Primary victim (powerless/trapped) \u2014 must absorb breaking changes without negotiation capacity; rewriting integrations is expensive",
+      "Integration Infrastructure Teams: Secondary victim (moderate/constrained) \u2014 face resource constraints in tracking API changes; also benefit from vendor coordination and early access",
+      "System Stability (Abstract): Tertiary victim (powerless/trapped) \u2014 version fragmentation and undocumented side effects accumulate in the ecosystem",
+      "Standards and Compatibility Coalition: Organized agents (organized/constrained) \u2014 semantic versioning, contract testing frameworks, deprecation standards attempting to decouple velocity from extraction",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing API instability as inherent to software evolution rather than as institutional failure"
+    ],
+    "logic_rationale": "Extractiveness (0.52): The platform provider extracts value from dependent applications through version lock-in and velocity advantage. However, 0.52 reflects that this is not pure extraction \u2014 the velocity does create genuine ecosystem value (features, capabilities). The extraction is the asymmetry in who bears the cost of incompatibility. Initial value (0.28) reflects early platform history when API stability was higher and coordination benefits clearer. Current value reflects progressive feature creep, undocumented side effects, and shifting incentives toward feature velocity over stability. Suppression (0.65): Significant barriers to exit include switching costs (rewriting integrations), ecosystem lock-in (third-party libraries depending on the platform), and vendor market dominance. But suppression is not total \u2014 some applications do migrate to alternatives, and open-source alternatives exist. Theater ratio (0.58): Moderate-high. Backwards-compatibility promises, deprecation cycles, and stability SLAs are substantively performative. Vendors publish compatibility windows, but the economic incentive to migrate is suppressed by switching costs, so the ritual persists while the actual protection is limited. Theater has increased from 0.32 as the gap between announced stability and actual stability has widened.",
+    "perspectival_gap": "The perspectival gap is maximal here, revealing the mandatrophy structure. The dependent application sees Snare \u2014 extraction with no exit, no negotiation, pure cost absorption. The platform vendor sees Rope \u2014 they are solving coordination: publishing APIs enables ecosystem growth and competitive advantage. The organized standards coalition sees Scaffold \u2014 semantic versioning and contract testing create a sunset path toward decoupled evolution. The legacy compatibility ritual sees Piton \u2014 formal deprecation promises persist as theater. The analytical observer risks seeing Mountain \u2014 API instability as inherent to software evolution \u2014 but the structural data (high suppression, rising extractiveness, performative theater) reveals this as a false summit. The true constraint is institutional: misaligned incentives between feature velocity (vendor) and stability (dependents).",
+    "directionality_logic": "Platform provider: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; controls exit timing and ecosystem dependencies. Feature shipping teams: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Measured on velocity, not on dependent impact; incentive misalignment drives extraction. Dependent applications: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 trapped by switching costs and ecosystem dependencies; no negotiating power. Integration teams: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.06. Significant extraction but with some agency (can plan migrations, can negotiate for advance notice). System stability: Victim + trapped \u2192 d\u22481.00, f(d)\u22481.42. Abstract collective cannot exit; bears full accumulation of undocumented side effects and version fragmentation. Standards coalition: Organized + constrained \u2192 d\u22480.42, f(d)\u22480.42. Lower extraction because coalition has agency through formalization (versioning specs, contract testing) and sunset logic (mature standards decoupling evolution from lock-in). Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival risk; the engine's false summit detector should flag this.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED via perspectival decomposition: The constraint does NOT admit a single correct classification because institutional position structurally determines perception. Dependent applications genuinely experience Snare (trapped, extraction, no exit). The vendor genuinely experiences Rope (benefits from ecosystem coordination). The standards coalition genuinely experiences Scaffold (temporary problem with sunset via mature versioning/contract standards). The legacy compatibility ritual genuinely shows Piton signature (theater \u2265 0.70, degraded function maintained through inertia). No perspective is 'wrong' \u2014 each captures a true structural relationship. The resolution: this is a Tangled Rope because it simultaneously exhibits (1) genuine coordination function (APIs do enable ecosystem value), (2) asymmetric extraction (velocity benefits vendor, stability costs absorb by dependents), and (3) active enforcement (vendor controls version deprecation, feature shipping teams control API surface). The mandatrophy resolves by recognizing that 'which type?' is less important than 'what institutional change decouples the coordination from the extraction?' The answer: contract formalization (semantic versioning, contract testing frameworks, formal stability SLAs) moves toward Rope by making the extraction visible and thus challengeable. Absent that, the constraint degrades toward Snare (pure extraction) as theater increases."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "semantic_versioning_stability",
+      "ecosystem_lock_in_dependency"
+    ],
+    "dual_formulation_note": "The protocol dissolution is downstream of broader platform strategy choices. Semantic versioning and contract testing are upstream constraints that, if formalized, could decouple velocity from extraction. Ecosystem lock-in is a downstream consequence that amplifies suppression. The three stories (this one + two upstream/downstream) form a family linked by institutional governance choices."
+  },
+  "directionality_overrides": []
+}

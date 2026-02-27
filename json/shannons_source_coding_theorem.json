@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "shannons_source_coding_theorem",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "shannon"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Shannon's Source Coding Theorem (Achievable Compression Limit)",
+    "topic_domain": "information_theory/technological",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "requires_active_enforcement": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Data Source Subject to Compression",
+      "comment": "PERSPECTIVE 1: DATA SOURCE (MOUNTAIN) \u2014 Any source exhibiting statistical regularities is subject to Shannon's limit. No exit, no escape, no alternative encoding scheme can exceed the entropy bound. The compression ceiling is invariant across all measurement methodologies and encoding approaches. This is not a constraint imposed by human choice but a structural feature of information itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Communications Engineer",
+      "comment": "PERSPECTIVE 2: COMMUNICATIONS ENGINEER (MOUNTAIN) \u2014 Can approach the Shannon limit with Huffman codes, arithmetic coding, or modern entropy coding schemes, but cannot exceed it regardless of ingenuity or computational resources. The limit is not a barrier to be overcome but a law to be approached asymptotically. Resistance to the constraint is zero \u2014 engineers can get arbitrarily close but never surpass."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mathematical View)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the mathematical perspective, Shannon's theorem is a proven lower bound on the expected codeword length for any lossless compression of a source with entropy H. The theorem derives from the pigeonhole principle and basic probability \u2014 it is a logical necessity, not a contingent physical law. Zero degrees of freedom. No observational dependence. The compression limit is a theorem, not a measurement artifact."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "finite_vs_asymptotic",
+      "question": "Does the theorem's asymptotic achievability (limit as block length approaches infinity) constitute a practical constraint on finite-length compression tasks?",
+      "resolution_mechanism": "Empirical analysis of gap between theoretical limit and practical performance for finite block lengths (N=10, 100, 1000 symbols); comparison of Huffman vs arithmetic coding for various source distributions",
+      "impact": "If gap is small for practical N: theorem is effectively tight even in real systems. If gap is large: the theorem's constraint is more aspirational than operational for finite sources.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether asymptotic achievability applies to finite-length compression"
+    },
+    {
+      "id": "entropy_estimation_precision",
+      "question": "How much estimation error in source entropy (due to finite sample size or model mismatch) propagates to compression performance?",
+      "resolution_mechanism": "Monte Carlo estimation of entropy from finite samples; comparison of theoretical H vs estimated H-hat; impact on compression ratio for mismatched models",
+      "impact": "High error tolerance: theorem remains operative even with rough entropy estimates. Low tolerance: entropy must be precisely known, limiting practical applicability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sensitivity of compression performance to entropy estimation error"
+    },
+    {
+      "id": "lossy_vs_lossless_boundary",
+      "question": "Does the theorem constrain lossy compression or only lossless? At what distortion threshold does lossy information theory take over?",
+      "resolution_mechanism": "Rate-distortion analysis; comparison of source coding theorem with rate-distortion theorem predictions across distortion budgets",
+      "impact": "If boundary is sharp: two distinct constraint types (mountains). If fuzzy: single constraint with distortion parameter.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope boundary between lossless and lossy compression domains"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Shannon's Source Coding Theorem (1948) establishes that the expected length of any lossless code for a source with entropy H(X) cannot be less than H(X) bits per symbol, and codes approaching this limit can be constructed (e.g., Huffman, arithmetic coding). This theorem is a mathematical mountain \u2014 an irreducible logical consequence of probability theory and the pigeonhole principle. It exhibits zero degrees of freedom across all measurement methodologies: whether encoding binary strings, natural language text, images, or abstract data sources, the entropy limit is invariant. The constraint does not emerge from institutional design, physical hardware limitations, or policy choices; it emerges from the mathematical structure of information itself. All agents \u2014 data compressors, communication engineers, data centers optimizing storage, adversaries trying to evade the limit \u2014 encounter the same immutable boundary. The theorem's resistance value (0.08) captures the small gap between asymptotic theoretical achievability and finite-block practical performance; this gap closes as engineers employ more sophisticated algorithms and longer block lengths. The theater ratio (0.15) reflects minor pedagogical performance: explaining the theorem involves proof machinery (pigeonhole principle, Jensen's inequality) that can obscure the underlying insight, but this is pedagogical theater, not operational theater.",
+    "key_agents": [
+      "Data Source: Passive entity (powerless/trapped) \u2014 all sources are subject to the entropy limit regardless of their statistical properties",
+      "Communications Engineer: Active optimizer (powerful/analytical) \u2014 can approach the limit but cannot exceed it; ingenuity is applied to narrowing the gap, not escaping the bound",
+      "Analytical Observer: Detached analyst (analytical/analytical) \u2014 observes the theorem as a mathematical fact with zero degrees of freedom"
+    ],
+    "logic_rationale": "Extractiveness (0.08): The theorem has negligible extractiveness because it is a pure lower bound with no coercive content. No agent extracts value at another's expense; the constraint applies uniformly. The small non-zero value reflects that the gap between theoretical limit and practical algorithm performance can be exploited by sophisticated designers (they extract efficiency gains that naive compressors leave on the table), but this is benefit capture, not extraction \u2014 both the designer and the data source benefit from better compression. Suppression (0.02): Minimal. Engineers have complete freedom to develop new algorithms, implement existing ones, or trade compression ratio for speed. The only 'suppression' is that no amount of effort can exceed the entropy bound \u2014 but this is logical necessity, not coercive suppression. Theater ratio (0.15): Low. The theorem's statement is relatively direct: H(X) is the compression floor. Proof exposition involves some machinery (Jensen's inequality, the Kraft inequality), but once the theorem is stated, its content is clear. Unlike Pitons (where the theater hides functional decay), the theater here is purely pedagogical, not masking loss of function.",
+    "perspectival_gap": "No meaningful perspectival gap exists for this constraint \u2014 it is a uniform-type mountain. All agents (powerless sources, powerful engineers, analytical observers) see the same constraint. The theorem's classification is invariant across all contexts because it is a logical/mathematical truth, not a contingent institutional arrangement. The gap measurement here is zero: the analytical observer's view and the engineer's practical experience align perfectly. The only variation is in how quickly different agents approach the limit (sophisticated Huffman vs naive run-length encoding), but they all ultimately face the same boundary.",
+    "directionality_logic": "Directionality is undefined for this constraint in the traditional sense. There is no beneficiary/victim distinction because the constraint is not extractive. The entropy bound applies equally to all data sources and all encoding agents. If anything, the constraint is collectively beneficial \u2014 it provides a target that engineers can aim for and legitimizes the search for ever-better algorithms. There is no directional flow of resources or power; the constraint is a shared property of information that all actors navigate together."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "kraft_inequality",
+      "huffman_optimality",
+      "lossless_compression_limits"
+    ],
+    "dual_formulation_note": "Shannon's Source Coding Theorem is an upstream constraint that directly implies Kraft's Inequality (the necessary condition for codeword length distributions) and Huffman optimality (the constructive algorithm for achieving near-Shannon performance). It also bounds the feasible region for Lossy Compression Limits via Rate-Distortion Theory."
+  }
+}

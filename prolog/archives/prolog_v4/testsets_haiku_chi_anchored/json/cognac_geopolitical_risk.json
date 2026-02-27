@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "cognac_geopolitical_risk",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cognac"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Geopolitical Risk to Cognac Sales",
+    "topic_domain": "economic/trade/commodities",
+    "requires_active_enforcement": false,
+    "victims": [
+      "cognac_producers",
+      "french_regional_economy",
+      "small_distillers"
+    ],
+    "beneficiaries": [],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Cognac Producer",
+      "comment": "PERSPECTIVE 1: COGNAC PRODUCERS (SNARE) \u2014 Face extraction through tariffs, sanctions, and market access restrictions imposed by geopolitical actors beyond their control. Cannot exit global markets without abandoning centuries of supply chains and brand equity. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Geopolitical Actor (State/Coalition)",
+      "comment": "PERSPECTIVE 2: GEOPOLITICAL ACTOR / SANCTIONING STATE (ROPE) \u2014 Uses trade restrictions as coordination mechanism to signal displeasure and enforce geopolitical objectives. Experiences constraint as effective coordination tool with minimal internal cost (tariff collection, symbolic enforcement). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Economy (Aquitaine/Charente)",
+      "comment": "PERSPECTIVE 3: REGIONAL ECONOMY (SNARE) \u2014 Cognac production represents significant employment, tax revenue, and cultural heritage for French regions. Constrained by geographic specialization and cannot relocate production without destroying regional identity and brand. d\u22480.88, f(d)\u22481.32, \u03c3=0.9 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The European Trade Alliance",
+      "comment": "PERSPECTIVE 4: EUROPEAN TRADE ALLIANCE (TANGLED ROPE) \u2014 Organized response to geopolitical risk includes retaliatory tariffs, diversification agreements, and trade bloc coordination. Benefits from collective bargaining power (coordination) but faces extraction through volatility and resource costs of maintaining alliance discipline. d\u22480.52, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Small Distiller",
+      "comment": "PERSPECTIVE 5: SMALL DISTILLER (SNARE) \u2014 Family-owned producers with no capital reserves to weather market disruptions, no political voice, and no ability to relocate. Completely extracted by geopolitical volatility with no exit option. d\u22480.95, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.60."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Diversification Initiative",
+      "comment": "PERSPECTIVE 6: DIVERSIFICATION INITIATIVE (SCAFFOLD) \u2014 Coordinated effort to reduce geopolitical dependency through new market development, product diversification (cognac-based goods, hospitality tourism), and supply chain resilience building. Has sunset clause: once new markets mature and diversification reaches critical mass, geopolitical risk exposure decreases structurally. d\u22480.45, f(d)\u22480.42, \u03c3=1.2 \u2192 \u03c7\u22480.24. Theater ratio for this perspective is low (0.15) because diversification activities are functionally productive, not performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Diplomatic Theater",
+      "comment": "PERSPECTIVE 7: DIPLOMATIC THEATER (PITON) \u2014 Trade negotiations, tariff discussions, and retaliatory threat cycles are largely ritualistic. Real decisions are made by defense and geopolitical strategists; trade negotiations are performative displays of state strength. theater_ratio=0.62 reflects substantial but not dominant theatrical content. Maintains institutional inertia through repeated cycles of crisis and negotiation despite low functional effect on structural geopolitical tensions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sanctions_permanence_threshold",
+      "question": "Are geopolitical restrictions on Cognac sales temporary tariff cycles or permanent structural shifts in global trade patterns?",
+      "resolution_mechanism": "Historical analysis of trade restrictions: duration, reversal rates, and pattern of escalation/de-escalation across commodity categories over 20-year horizon",
+      "impact": "If temporary: constraint is primarily Scaffold with realistic sunset. If permanent: constraint is primarily Snare with no exit mechanism. Changes classification distribution across perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether geopolitical restrictions are temporary or structural"
+    },
+    {
+      "id": "alternative_market_viability",
+      "question": "Can Cognac successfully develop sufficient market depth in non-sanctioned regions (Asia, Africa, Middle East, Latin America) to offset loss of traditional markets (US, EU)?",
+      "resolution_mechanism": "Market analysis of demand elasticity in alternative regions; brand reputation maintenance in geopolitically neutral markets; price-point sustainability without traditional premium markets",
+      "impact": "If viable: diversification scaffold is real and sunset is achievable. If not viable: producers face permanent revenue contraction and snare classifications persist.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative market development"
+    },
+    {
+      "id": "state_subsidy_effectiveness",
+      "question": "Can French/EU state subsidies and trade protections effectively shield Cognac producers from geopolitical extraction, or does state intervention create moral hazard and productivity loss?",
+      "resolution_mechanism": "Comparative analysis: subsidy-dependent producers vs market-adapted producers; correlation between subsidy level and innovation/efficiency metrics; long-term market share retention post-subsidy removal",
+      "impact": "If effective: constraint is partially converted to Rope (state coordination function dominates). If ineffective: state intervention masks fundamental snare structure and delays adaptation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of state subsidies in mitigating geopolitical risk"
+    },
+    {
+      "id": "brand_equity_decay_rate",
+      "question": "How quickly does Cognac brand equity depreciate under sustained market access disruption? Can hundred-year brand reputation weather multi-year sanctions?",
+      "resolution_mechanism": "Brand valuation modeling; consumer preference tracking in disruption periods; comparison with other luxury goods (wine, champagne) under sanctions; market recovery rates post-sanctions removal",
+      "impact": "If decay is slow: constraints are temporary, scaffold reasoning valid. If decay is fast: multi-year disruptions cause permanent value destruction, converting constraint to pure snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Rate of brand equity depreciation under market access disruption"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Cognac production represents one of France's iconic luxury exports, with deep regional historical roots in Aquitaine and Charente. Since 2018, producers have faced escalating geopolitical risk: US tariffs on French wines (2018-2021), China trade tensions, UK Brexit disruptions, and ongoing tensions between NATO/EU and Russia have created unpredictable market access restrictions. This constraint exhibits the snare structure where producers are trapped by immobile capital (land, distillery equipment, brand geographic specificity) while facing extraction through tariffs, sanctions, and retaliatory trade measures imposed by geopolitical actors. The constraint is NOT a purely natural economic phenomenon but a manufactured extraction mechanism using trade policy as enforcement. However, significant ongoing coordination efforts to diversify markets and build trade alliance cohesion create overlapping scaffold and tangled_rope perspectives. Small family distillers face maximal extraction with no exit; large multinational producers have more mobility through portfolio diversification; geopolitical states experience the constraint as a functional coordination tool with minimal cost; organized European coalitions see both coordination benefits and extraction costs.",
+    "key_agents": [
+      "Cognac Producers (Large): Moderate power through multinational portfolio diversification; constrained within Cognac category but mobile across regions and product categories",
+      "Small/Family Distillers: Powerless; geographically and capital-locked; bear full extraction; typical size 20-100 employees",
+      "Regional Economy (Charente/Aquitaine): Moderate power; organized through chambers of commerce; constrained by geographic specialization; employment/tax/cultural identity at stake",
+      "French State: Institutional actor; both beneficiary (tariff revenue, retaliatory leverage) and protector (subsidies, trade negotiations); arbitrage position",
+      "European Union: Institutional actor; coordinates retaliatory tariffs and trade policy; exercises arbitrage options",
+      "Sanctioning States (US, China, Russia): Institutional actors; use Cognac tariffs as symbolic/practical leverage in broader geopolitical strategy; beneficiaries through tariff extraction",
+      "Diplomatic Corps: Institutional actor; performs trade negotiations with low functional effect on underlying geopolitical tensions; piton perspective",
+      "Alternative Markets (Asia, Africa, Middle East): Emerging beneficiaries of market diversification; enable scaffold/mobile perspectives"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. Initial value (0.28) reflects pre-2018 baseline when Cognac faced normal commodity price volatility but not geopolitical targeting. By year 10, extractiveness reaches 0.52 reflecting cumulative impact of multiple tariff cycles, market access restrictions, and uncertainty premium on supply chain costs. Suppression (0.65): High. The mechanism is coercive (tariffs, sanctions) with minimal legitimacy from the producers' perspective. Alternative market access (arbitrage/mobile option) exists in principle but faces barriers: brand preference for traditional markets, logistical infrastructure built around established routes, price-sensitivity differences. Producers cannot easily 'shop' for better geopolitical contexts. Theater ratio (0.38): Moderate-low. Trade negotiations and diplomatic cycles contain performance elements (public posturing, reciprocal threat displays) but underlying tariff policies are functionally real and impose material extraction. The theatrical content is lower than true piton constraints because extraction mechanisms work; trade policy is not purely symbolic.",
+    "perspectival_gap": "This constraint shows dramatic perspectival divergence. The geopolitical actor (state/coalition) sees Rope \u2014 an effective coordination mechanism for signaling and enforcement. The small distiller sees Snare \u2014 pure extraction with no agency. The regional economy sees Snare \u2014 extraction of employment and tax revenue. The large producer sees Tangled Rope / Scaffold \u2014 mixed coordination and extraction, with some mobility options. The diversification initiative sees Scaffold \u2014 a temporary problem solvable through market adaptation. The diplomatic corps sees Piton \u2014 ritualistic negotiation maintaining institutional forms despite low functional effect. The European trade alliance sees Tangled Rope \u2014 benefits from collective coordination but faces extraction through compliance costs and volatility. These gaps are not measurement artifacts but genuine structural differences: producers experience powerlessness; states experience agency; alliances experience mixed constraint.",
+    "directionality_logic": "Cognac Producers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Cannot exit; bear costs of tariffs, market access loss, and uncertainty. Large producers have slightly lower d (\u22480.82) through portfolio diversification, but cannot exit Cognac category without destroying brand asset. French Regional Economy: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction. Geographically locked to region; cannot relocate employment; constrained by heritage/identity factors. Geopolitical Actor: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Can unilaterally impose restrictions; faces no counter-extraction; experiences tariff revenue benefits. European Union: Beneficiary + arbitrage (mixed victim in secondary way) \u2192 d\u22480.12, f(d)\u2248-0.08. Slight beneficiary through coordination role, but also faces extraction through retaliation cycles. Trade Alliance: Victim + mobile (organized) \u2192 d\u22480.52, f(d)\u22480.65. Intermediate. Organized response reduces effective extraction but does not eliminate it; mobility through collective action is partial. Diversification Initiative: Agent + mobile \u2192 d\u22480.45, f(d)\u22480.42. Low effective extraction due to agency and exit pathway (new markets); represents adaptive response converting snare to scaffold.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Extractiveness \u03b5=0.52 > 0.46 requires mandatrophy closure. The constraint is classified as SNARE from primary victims' perspective (d\u22480.92, f(d)\u22481.38, \u03c7\u22480.81), satisfying snare thresholds (\u03b5\u22650.46, suppression\u22650.60, \u03c7\u22650.66). However, the alternative scaffold and tangled_rope perspectives are not misclassifications but legitimate observational positions. The mandatrophy is resolved by recognizing that (1) the primary extraction mechanism (geopolitical tariffs/sanctions) is functionally real, not theater; (2) the constraint exists regardless of whether victims resist or accept it; (3) beneficiaries (sanctioning states) experience genuine coordination gain with minimal cost; (4) escape routes exist (diversification, market mobility, state subsidies) but are constrained/costly. This prevents the mischaracterization of the constraint as pure coordination (false Rope) while acknowledging that organized responses and market adaptation can convert portions of the snare into temporary scaffold structures. The classification remains SNARE as claimed_type because the baseline structural relationship is extraction, not coordination; the scaffold and tangled_rope are overlays that reduce but do not eliminate the snare structure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "luxury_goods_supply_chain_resilience",
+      "french_agricultural_export_dependency",
+      "trade_retaliation_cycles"
+    ],
+    "dual_formulation_note": "This constraint is a specific instantiation of broader geopolitical extraction mechanisms in trade policy. It affects and is affected by constraints on wine, agricultural exports, and luxury goods supply chains generally. The constraint family includes: trade_retaliation_cycles (\u03b5\u22480.35, Tangled Rope) as the upstream macro-structural constraint, cognac_geopolitical_risk (\u03b5=0.52, Snare) as the sector-specific manifestation, and French_agricultural_export_dependency (\u03b5\u22480.48, Snare) as a parallel vulnerability. The \u03b5 values differ because sectoral specificity (Cognac) faces higher extraction than broader category effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

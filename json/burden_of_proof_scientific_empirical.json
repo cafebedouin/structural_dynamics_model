@@ -2,24 +2,26 @@
   "header": {
     "constraint_id": "burden_of_proof_scientific_empirical",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bops"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.6,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "Statistical Significance Threshold (p < 0.05)",
     "topic_domain": "technological/social",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "researchers_with_significant_results",
-      "journal_publishers"
+      "established_research_programs",
+      "methodology_gatekeepers"
     ],
     "victims": [
-      "researchers_with_null_results",
-      "field_epistemic_reliability"
+      "marginal_hypotheses",
+      "resource_constrained_researchers",
+      "replication_studies"
     ]
   },
   "perspectives": [
@@ -29,8 +31,26 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Researcher with Null Results",
-      "comment": "PERSPECTIVE 1: RESEARCHER WITH NULL RESULTS (SNARE) — Trapped by a system that devalues and suppresses their work, extracting career potential and funding. The high suppression (0.75) and high base extraction (0.65) lead to a high effective extraction (χ > 0.66) from this viewpoint."
+      "label": "The Marginal Hypothesis",
+      "comment": "PERSPECTIVE 1: MARGINAL HYPOTHESIS (SNARE) \u2014 A genuinely true effect with true p-value of 0.06 or an effect true at local scope (regional/national) but global noise floor set at 0.05. Cannot exit the threshold; trapped by the gate. Bears full cost: suppression of true knowledge through arbitrary barrier. No advocacy mechanism for effects just outside the threshold boundary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Resource-Constrained Researcher",
+      "comment": "PERSPECTIVE 2: RESOURCE-CONSTRAINED RESEARCHER (SNARE) \u2014 Cannot afford large sample sizes required to drive p-values below threshold. Underfunded research programs face pressure to either inflate p-values through methodological choices (p-hacking) or suppress null/marginal findings. Exit options are either data manipulation or silence. Trapped by statistical requirements that assume abundant resources."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Replication Program",
+      "comment": "PERSPECTIVE 3: REPLICATION PROGRAM (TANGLED ROPE) \u2014 Benefits from having a clear target (threshold) and a coordination function (knowing what level of evidence is required). But also bears extraction: replication studies require higher statistical power to overturn published claims than to publish new ones (Type S error asymmetry). Constrained by pressure to generate novel positive findings for career advancement while also required to verify existing claims. Mixed: coordination mechanism (knowing the standard) plus asymmetric extraction (replication costs more than discovery)."
     },
     {
       "classification_type": "rope",
@@ -38,123 +58,152 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Researcher with 'Significant' Results",
-      "comment": "PERSPECTIVE 2: RESEARCHER WITH 'SIGNIFICANT' RESULTS (ROPE) — Experiences the threshold as a pure coordination mechanism that validates their work and enables publication. As a primary beneficiary with arbitrage (can choose which high-impact journal to publish in), their effective extraction is negative (χ < 0)."
+      "label": "The Established Research Program",
+      "comment": "PERSPECTIVE 4: ESTABLISHED RESEARCH PROGRAM (ROPE) \u2014 Benefits from the p < 0.05 threshold. Large sample sizes (from established funding and collaborations) make crossing the threshold easier. First-mover advantage: once a hypothesis crosses the threshold, subsequent replication studies face higher burden of proof to overturn the claim (Bayesian updating asymmetry). Experiences the constraint as a coordination mechanism: a shared standard enables comparison and cumulative knowledge. Net beneficiary."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer (Meta-Scientist)",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (a common standard) and the severe asymmetric extraction (publication bias, file-drawer problem). The constraint requires active enforcement by reviewers and editors, fulfilling the three requirements for a Tangled Rope."
-    },
-    {
-      "classification_type": "piton",
+      "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "constrained",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Journal Editor",
-      "comment": "PERSPECTIVE 4: JOURNAL EDITOR (PITON) — Enforces a standard known to be flawed and arbitrary (p=0.049 vs p=0.051). The function has degraded, but the ritual persists due to institutional inertia and lack of a consensus alternative. The theater_ratio (0.60) is significant, though below the hard 0.70 gate; from this actor's perspective of ritual enforcement, the performative aspect is dominant."
+      "label": "The Methodology Gatekeeper",
+      "comment": "PERSPECTIVE 5: METHODOLOGY GATEKEEPER (ROPE) \u2014 Journals, statistical societies, funding agencies enforce the threshold. Benefits from its enforcement: it provides clear standards, reduces ambiguity about what counts as publishable, and creates a gatekeeping role. Can choose which threshold to apply and which methods to accept/reject. Arbitrage exit: can shift standards (adopt p < 0.005 for certain domains) without loss. Experiences the constraint as coordination (shared standards) with institutional beneficiary."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Open Science Reformer",
-      "comment": "PERSPECTIVE 5: OPEN SCIENCE REFORMER (SCAFFOLD) — Views the p<0.05 rule as a temporary, flawed system to be replaced. They are building the alternative (pre-registration, Bayesian methods, focus on effect sizes) which acts as a sunset clause on the old standard's dominance. They are organized and have mobility to create new publication venues and norms."
+      "label": "The Open Science Reform Coalition",
+      "comment": "PERSPECTIVE 6: OPEN SCIENCE REFORM COALITION (SCAFFOLD) \u2014 Organized agents (preregistration systems, p-curve analysis communities, meta-science researchers) see the p < 0.05 threshold as a temporary coordination problem with built-in sunset. Preregistration, Bayesian methods, effect-size reporting, and meta-science provide alternative verification pathways that bypass the binary significance gate. The coalition has agency and sees an explicit exit: as open-science norms mature, the binary threshold loses force. Suppression is tolerated because it is declining over the time horizon. Sunset estimated at 15-25 years as alternative standards mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Publishing System",
+      "comment": "PERSPECTIVE 7: ACADEMIC PUBLISHING SYSTEM (PITON) \u2014 The p < 0.05 threshold is largely performative in modern publishing. Editors and reviewers know that p-hacking, researcher degrees of freedom, and selective reporting are endemic (false positive rate ~30-50% across many fields). The threshold persists through institutional inertia: journals enforce it because it is the standard, not because it effectively separates signal from noise. Theater ratio is high (0.64) because the system maintains the ritual despite knowing it is degraded. The functional verification has atrophied (replaced by effect-size, pre-registration, replication pressure) but the gate remains."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerful",
+      "agent_power": "analytical",
       "time_horizon": "civilizational",
-      "exit_options": "constrained",
+      "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Naive Empiricist",
-      "comment": "PERSPECTIVE 6: THE NAIVE EMPIRICIST (MOUNTAIN) — Misinterprets a social convention as a fundamental law of inference. Believes that *some* arbitrary cutoff is an unavoidable, natural feature of empirical science. The engine will flag this as a false summit, as the high ε and suppression values are inconsistent with a natural law."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, the p < 0.05 threshold appears to be an immutable feature of hypothesis testing: any threshold is arbitrary, and the choice of 0.05 is just a convention for managing Type I error rates. This perspective risks naturalizing a contingent institutional choice. However, the base properties (extractiveness 0.52, suppression 0.68) contradict the mountain classification \u2014 the engine will detect this as a false summit. The illusion of naturalness derives from the fact that the threshold is mathematically well-defined and universally applied, not from its structural necessity."
     }
   ],
   "omegas": [
     {
-      "id": "file_drawer_causality",
-      "question": "To what extent is the 'file drawer problem' (suppression of null results) caused by the p<0.05 threshold versus an inherent human bias towards positive or novel findings?",
-      "resolution_mechanism": "Analysis of publication rates from pre-registered report repositories, which commit to publishing regardless of the outcome.",
-      "impact": "If the problem is primarily caused by the threshold, the constraint is a strong Snare. If caused by inherent bias, the constraint is more of a Piton that formalizes a pre-existing tendency.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Causality of the file drawer problem: p-value threshold vs. inherent bias."
+      "id": "threshold_arbitrariness_boundary",
+      "question": "Does the choice of 0.05 as a threshold reflect a mathematically necessary boundary or a historically contingent institutional choice?",
+      "resolution_mechanism": "Historical analysis of Fisher's original writings and subsequent adoption patterns; comparison of threshold choices across disciplines; cross-cultural science systems that use different thresholds (e.g., 0.01 in some fields, 0.10 in others)",
+      "impact": "If mathematically necessary: the mountain perspective is correct, and the constraint is a natural law. If historically contingent: the constraint is institutional extraction disguised as mathematical necessity. This determines whether the classification stands as mountain or collapses to tangled_rope/snare.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether p=0.05 is mathematically necessary or historically contingent"
     },
     {
-      "id": "alternative_framework_viability",
-      "question": "Are proposed alternatives (e.g., Bayesian factors, confidence intervals) fundamentally less gameable, or do they simply introduce new, more subtle forms of extraction and theater?",
-      "resolution_mechanism": "Longitudinal study of scientific sub-fields that adopt alternative standards, measuring changes in replicability and researcher behavior.",
-      "impact": "If alternatives are robustly better, the Scaffold perspective is confirmed. If they are equally gameable, the constraint may be a persistent Piton or even a Mountain of social dynamics.",
+      "id": "effect_size_informativeness",
+      "question": "Do alternatives to p-value significance testing (Bayesian credible intervals, effect-size reporting, pre-registration) actually reduce false positives and improve replication rates, or do they simply displace the arbitrary threshold to a different metric?",
+      "resolution_mechanism": "Meta-analysis of replication rates pre- and post-adoption of alternative standards in specific fields; tracking of p-hacking migration to effect-size gaming; monitoring of publication bias under different reporting standards",
+      "impact": "If alternatives genuinely reduce false positives: the scaffold perspective is correct, and the sunset is structural. If alternatives merely create new games: the constraint persists unchanged, the scaffold is aspirational, and the extraction remains high.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Gameability and viability of alternative statistical frameworks."
+      "description": "Whether alternatives to p-value testing reduce false positives"
+    },
+    {
+      "id": "sample_size_equity_threshold",
+      "question": "What sample size threshold creates equity between well-funded and under-resourced research programs under the p < 0.05 gate?",
+      "resolution_mechanism": "Analysis of sample size distributions across funding quintiles; correlation between research budget and p-value distribution; controlled experiments with equivalent true effects but different sample sizes",
+      "impact": "If threshold can be achieved equitably: the snare classification for resource-constrained researchers is incorrect. If the gate inherently favors large-sample research: the extraction from underfunded programs is structural and the snare classification is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether p < 0.05 threshold can be achieved equitably across funding levels"
+    },
+    {
+      "id": "null_hypothesis_coherence",
+      "question": "Is the null hypothesis (effect size = 0) a coherent claim for all research domains, or is it a domain-contingent assumption?",
+      "resolution_mechanism": "Examination of null hypothesis plausibility across disciplines (e.g., null hypothesis is absurd in some fields, reasonable in others); analysis of which fields report high rates of null rejections vs null acceptances; study of baseline effect-size distributions in mature fields",
+      "impact": "If null hypothesis is incoherent in some domains: the p < 0.05 threshold is not a neutral gate but a domain-inappropriate extraction mechanism in those fields. This could split the constraint into multiple domain-specific stories.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether null hypothesis is coherent across all research domains"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.3
+      "value": 0.35
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 30,
+      "metric": "theater_ratio",
+      "time_point": 20,
       "value": 0.5
     },
     {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.64
+    },
+    {
       "metric": "base_extractiveness",
-      "time_point": 65,
-      "value": 0.65
-    },
-    {
-      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.28
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.45
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.4
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 65,
-      "value": 0.6
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
     }
   ],
   "interval": {
-    "start": 1950,
-    "end": 2015
+    "start": 0,
+    "end": 40
   },
   "commentary": {
-    "narrative_context": "The convention of using a p-value threshold of < 0.05 to claim statistical significance is a core coordination mechanism in the empirical sciences. Initially proposed as a heuristic, it has ossified into a rigid gatekeeper for publication and funding. This creates a powerful incentive structure that rewards 'positive' results and suppresses 'null' findings, leading to systemic problems like publication bias (the 'file drawer problem') and the replication crisis. The constraint's structure is not monolithic; it functions simultaneously as a useful standard, a career-destroying trap, and a performative ritual, depending on the agent's structural position.",
+    "narrative_context": "The p < 0.05 significance threshold represents a critical junction in empirical science where the burden of proof is codified through a single numerical gate. Adopted by Ronald Fisher in the 1920s as a pragmatic tool for agricultural experimentation, the threshold has become institutionalized globally across biology, medicine, psychology, and social sciences. This constraint exhibits multiple classification types depending on structural position: it functions as pure extraction (Snare) for researchers with marginal true effects or limited resources, as mixed coordination and extraction (Tangled Rope) for replication programs, as coordination (Rope) for established programs with large samples, and as degraded ritual (Piton) for the publishing system that enforces it despite knowing it is gamed. The theater_ratio (0.64) reflects that the significance threshold is substantially performative: journals enforce it, researchers optimize for it, but the actual false positive rate (estimated at 30-50% across many fields) indicates the gate fails to separate signal from noise effectively. The extractiveness (0.52) captures the asymmetry: those who clear the threshold gain publication, funding, and career advancement; those who fall just outside (p=0.06) are suppressed despite potentially discovering real effects. Open science reforms (preregistration, Bayesian methods, effect-size reporting) represent scaffolding with an explicit sunset: as alternative standards mature, the binary significance threshold loses gatekeeping force.",
     "key_agents": [
-      "Researchers with 'significant' results: Primary beneficiaries (institutional/arbitrage) who see a useful coordination standard (Rope).",
-      "Researchers with null results: Primary victims (powerless/trapped) who face a career-limiting extractive system (Snare).",
-      "Journal editors & reviewers: Institutional enforcers (institutional/constrained) who maintain a degraded, inertial standard (Piton).",
-      "Open Science reformers: Organized challengers (organized/mobile) who see a temporary system to be replaced (Scaffold).",
-      "Field epistemic reliability: Abstract victim (powerless/trapped) damaged by the distorted scientific record.",
-      "Analytical meta-scientists: Observers (analytical/analytical) who see the dual coordination/extraction function (Tangled Rope)."
+      "Marginal Hypotheses: Primary victim (powerless/trapped) \u2014 true effects just outside the threshold (p=0.06 or effects true at smaller scope) are suppressed by the gate",
+      "Resource-Constrained Researchers: Primary victim (powerless/trapped) \u2014 underfunded research programs cannot afford large samples required to drive p-values below threshold; face pressure to p-hack or suppress findings",
+      "Replication Programs: Secondary victim (moderate/constrained) \u2014 required to replicate published claims but face higher burden of proof (Type S error asymmetry) to overturn them; also benefit from having clear standards",
+      "Established Research Programs: Primary beneficiary (institutional/arbitrage) \u2014 large sample sizes make crossing threshold easier; first-mover advantage under Bayesian updating asymmetry; can choose which findings to replicate",
+      "Methodology Gatekeepers: Primary beneficiary (institutional/arbitrage) \u2014 journals, statistical societies, funding agencies enforce threshold; benefit from gatekeeping role and clear standards; can shift thresholds without loss",
+      "Open Science Reform Coalition: Organized actors (organized/constrained) \u2014 arXiv, preregistration systems, meta-science communities building alternative verification pathways; see sunset as structural and achievable",
+      "Academic Publishing System: Institutional actor (institutional/arbitrage) \u2014 maintains threshold through institutional inertia despite knowing it is gamed; benefits from performative gatekeeping (piton perspective)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent threshold choice as mathematical necessity; false summit perspective"
     ],
-    "logic_rationale": "Extractiveness (0.65) is high due to the severe career and funding consequences of failing to meet the threshold. Suppression (0.75) is very high, as publishing null results in many fields is exceptionally difficult, effectively silencing a large portion of scientific work. Theater Ratio (0.60) is significant, reflecting the arbitrary nature of the 0.05 cutoff and the ritualistic 'p-hacking' behaviors it encourages to achieve significance, often divorced from genuine scientific inquiry.",
-    "perspectival_gap": "The profound gap between the beneficiary's Rope and the victim's Snare is the core tension. One agent's useful convention is another's coercive trap. The analytical Tangled Rope classification correctly identifies that both are true simultaneously: the constraint has a genuine coordination function *and* a severe, asymmetric extractive function. The Piton and Scaffold perspectives highlight the constraint's lifecycle dynamics: it is both degrading through inertia and being actively challenged by reformers.",
-    "directionality_logic": "Beneficiaries (researchers with positive results) have arbitrage exit options (they can shop their paper to multiple journals), leading to a low 'd' value and a Rope classification. Victims (researchers with null results) are trapped, with few venues for their work, leading to a high 'd' value and a Snare classification. Institutional actors like editors are constrained by norms, while organized reformers are mobile enough to create new norms. This differentiation in exit options and structural benefit drives the diverse classifications from a single set of base metrics.",
-    "mandatrophy_analysis": "This constraint is a classic example of mandatrophy resolution. A naive analysis might label the p-value system as simply 'bad' (Snare) or 'a necessary convention' (Rope). Deferential Realism avoids this by showing that these are perspectival truths. The complete description is the full set of classifications indexed by structural position. The system is a Tangled Rope from the analytical view precisely because it generates these valid, yet contradictory, experiences for agents within it."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The p < 0.05 threshold creates clear winners and losers. Those who cross the threshold gain publication, citations, and career advancement; those just outside face suppression. The extraction is not total (some marginal findings do get published through alternative routes, some null results are now accepted), but the asymmetry is structural. The value increased from 0.28 to 0.52 over the interval as researcher degrees of freedom and p-hacking practices became endemic and well-documented \u2014 the constraint's extractive power grew as its ineffectiveness became visible. Suppression (0.68): High. Barriers include the binary gate itself (effects cannot be published at p=0.06 regardless of true magnitude), publication bias against null results, researcher pressure to p-hack or suppress findings, and career risk of replication studies that overturn published claims. The threshold actively prevents knowledge from being published. Theater_ratio (0.64): Moderate-high. The threshold is substantially performative: it is mathematically well-defined but empirically broken (false positive rate ~30-50% in many fields). Journals enforce it as a ritual; researchers optimize for it; the publishing system knows it is gamed. The theater increased over the interval as meta-science research exposed researcher degrees of freedom, p-hacking, and publication bias. The threshold's performative nature became visible.",
+    "directionality_logic": "Directionality is determined by structural position relative to the gate. Marginal hypotheses (true effects with p=0.06) are trapped on the wrong side of the threshold with no exit \u2192 high d \u2192 high \u03c7 \u2192 snare. Resource-constrained researchers cannot afford samples large enough to cross threshold with reasonable power \u2192 trapped \u2192 high d \u2192 snare. Replication programs have constrained exit (required to publish replications but face higher burden to overturn) \u2192 constrained exit \u2192 moderate-high d \u2192 tangled_rope. Established programs with large samples can cross threshold easily and benefit from first-mover advantage \u2192 arbitrage exit, beneficiary status \u2192 low d \u2192 rope. Gatekeepers can shift thresholds and choose enforcement patterns \u2192 arbitrage exit, beneficiary status \u2192 low d \u2192 rope. The open science coalition sees an exit path (preregistration, alternative standards) \u2192 constrained exit, organized power \u2192 moderate d \u2192 scaffold with sunset. The publishing system maintains the threshold despite knowing it is degraded \u2192 arbitrage exit, institutional power \u2192 low d, but high theater \u2192 piton.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (a numerical gate on publication) appears as pure extraction (Snare) from the perspective of those trapped outside it, as mixed coordination and extraction (Tangled Rope) from the perspective of replication programs that benefit from clear standards but suffer from asymmetric burden of proof, as coordination (Rope) from the perspective of well-resourced programs that benefit from the gate, as ritual degradation (Piton) from the publishing system's own perspective (which knows the threshold is gamed), and as temporary scaffolding (Scaffold) from the open science coalition that sees alternative pathways maturing. The perspectival gap is large because the constraint's effect depends entirely on structural position: where you stand relative to the threshold determines whether you experience it as law, coordination, support, or snare. The false summit perspective (mountain from analytical view) risks naturalizing the threshold as a necessary feature of hypothesis testing rather than as a contingent institutional choice.",
+    "mandatrophy_analysis": "EXEMPLAR OF MANDATROPHY RESOLUTION: This constraint resolves the mandatrophy by showing that the p < 0.05 threshold is NOT an irreducible tradeoff between coordination and extraction \u2014 it is an extractive gate that was chosen for historical contingency and persists through institutional inertia despite having alternatives. The mandatrophy would ask: 'Is the threshold a necessary burden-of-proof mechanism or an unjustified extraction?' The analysis shows it is an extraction mechanism masquerading as a necessary gate. Coordination alternatives exist (preregistration, Bayesian methods, open data) that provide clearer standards with lower extraction. The scaffold perspective shows the explicit exit path: as alternative standards mature, the binary threshold loses gatekeeping force. The Snare perspective for marginal hypotheses shows that effects just outside the threshold are suppressed despite being potentially true \u2014 the 'burden of proof' argument fails because the threshold is arbitrary and gamed. Therefore the constraint is classified as Tangled Rope (coordination function mixed with asymmetric extraction) for established programs but Snare (pure extraction) for those trapped outside the gate. The extractiveness increased over time as p-hacking became endemic and the threshold's ineffectiveness became visible \u2014 confirming that the gate is not a natural law but a degraded institutional arrangement."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "replication_crisis_social_science"
-    ]
-  }
+      "publication_bias_psychology",
+      "replication_crisis_biomedicine",
+      "multiple_comparisons_problem"
+    ],
+    "dual_formulation_note": "The p < 0.05 threshold is downstream of the null hypothesis convention and upstream of publication bias. Separate constraint stories should decompose the threshold's role in each: (1) as a gate for publication decisions (this story), (2) as a Type I error control mechanism (measurement theory), and (3) as a proxy for effect size (behavioral economics). Each has different \u03b5 and structural relationships."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ]
 }

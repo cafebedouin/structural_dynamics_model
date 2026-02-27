@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "evidence_half_life",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ehl"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "The Epistemic Decay Constant",
+    "topic_domain": "technological/scientific/legal",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "rapid_claim_makers",
+      "digital_platform_operators"
+    ],
+    "victims": [
+      "institutional_verification_systems",
+      "truth_dependent_actors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Verification Apparatus",
+      "comment": "PERSPECTIVE 1: INSTITUTIONAL VERIFICATION SYSTEMS (SNARE) \u2014 Courts, peer review, regulatory agencies, and archival systems cannot exit the constraint. They are structurally required to verify claims, but the information half-life (18-36 months for digital evidence, 6-12 months for social media) is now shorter than judicial timelines (3-7 years) and peer review cycles (12-24 months). The verification apparatus bears the full cost: delayed rulings become irrelevant, scientific papers reference evidence that no longer exists or has been altered. Maximum experienced extraction\u2014no alternatives available, no exit option."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Litigant Seeking Truth",
+      "comment": "PERSPECTIVE 2: TRUTH-DEPENDENT LITIGANTS (SNARE) \u2014 Individual plaintiffs, defendants, and parties to disputes cannot exit the constraint. They depend on evidence preservation for justice. Digital evidence degrades, cloud accounts are deleted, platform algorithms bury posts. By the time trial occurs, the evidentiary base has decayed. Suppression is extreme: the constraint forces reliance on institutional mechanisms (courts, platforms) that operators can manipulate. No independent verification pathway."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Rapid Claim Maker",
+      "comment": "PERSPECTIVE 3: RAPID CLAIM MAKERS (ROPE) \u2014 Journalists, researchers publishing preprints, companies releasing statements, and social media influencers benefit structurally from the decay constant. They stake claims before verification is complete. If verification confirms the claim, they gain priority and attention. If verification disproves the claim, the evidence may have already decayed or the narrative has been superseded. They experience the constraint as coordination: 'publish quickly or lose narrative priority.' Arbitrage exit (they can choose timing and platform) reduces experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: DIGITAL PLATFORM OPERATORS (TANGLED ROPE) \u2014 Facebook, Twitter/X, YouTube, and cloud storage providers face a dual structural role. They benefit from rapid content turnover (engagement, algorithmic churn, data ephemeralness reduces liability). They are also constrained by legal discovery obligations, regulatory compliance, and reputational damage from evidence loss. They have incentives to allow evidence decay (reduces their costs) while being legally required to preserve it (increases their costs). Active enforcement of data retention policies would conflict with business model optimization. Hybrid coordination-extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Evidentiary Standard Tradition",
+      "comment": "PERSPECTIVE 5: EVIDENTIARY STANDARD TRADITION (PITON) \u2014 Legal and scientific standards for evidence admissibility, chain of custody, and reproducibility were designed for a different era (paper records, stable institutional memory, slower information cycles). Courts still require 'original' evidence, scientific journals still expect archived datasets, but the infrastructure that preserved these is now degraded. The standards persist through institutional inertia\u2014validated by 200+ years of common law\u2014but the technical substrate they depend on has atrophied. Theater ratio is high: elaborate discovery procedures, expert witness testimony, and peer review processes consume time while the underlying evidence decays."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Thermodynamic View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, information entropy is a fundamental property of digital systems. All digital records decay: bit rot, link rot, server shutdown, platform closure, algorithmic suppression. The half-life of evidence in a digitized information ecosystem is a structural feature of the system itself, not a policy choice. No institution can reverse entropy. This perspective sees the constraint as immutable\u2014verification was only possible in a low-entropy regime (paper, slow information), and the shift to digital is irreversible. However, structural analysis reveals this as a false summit: many technical solutions exist (distributed archives, cryptographic proof of timestamp, decentralized storage, legal mandates for preservation) that would dramatically extend the half-life. The naturalization of entropy occludes contingent policy choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "half_life_threshold_definition",
+      "question": "What constitutes the effective 'half-life' of evidence in practice: when it becomes inaccessible, when courts rule it inadmissible, when the narrative context has shifted enough to render it irrelevant, or when the technical substrate (platform) ceases to exist?",
+      "resolution_mechanism": "Longitudinal study of digital evidence from landmark cases (Cambridge Analytica, Jan 6, Trump v. Carroll, etc.); tracking of evidence accessibility and admissibility over trial duration; analysis of when narratives shift faster than legal timelines",
+      "impact": "If half-life is measured by inaccessibility (platform deletion): constraint is nearly immutable (mountain-adjacent). If measured by legal admissibility: constraint is policy-dependent (snare with possible remedies). If measured by narrative obsolescence: constraint is structural to information cycles (rope/tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Definition of evidence half-life in digital systems"
+    },
+    {
+      "id": "archive_intervention_feasibility",
+      "question": "Can decentralized archives (IPFS, blockchain-anchored repositories, mandatory institutional preservation laws) effectively counter the decay constant, or is the technical solution itself subject to platform and political pressure?",
+      "resolution_mechanism": "Case studies of archive implementation (Internet Archive, Wayback Machine, legal mandate compliance); analysis of platform resistance to preservation mandates; evaluation of distributed archive robustness against state/corporate pressure to remove content",
+      "impact": "If intervention is technically feasible and politically sustainable: constraint downgrades from Snare to Scaffold (temporary, with sunset as archives mature). If archives are themselves subject to pressure and decay: constraint is structurally embedded in the power dynamics, not the technology.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether decentralized archives can counter evidence decay"
+    },
+    {
+      "id": "verification_speed_floor",
+      "question": "Is there a physical/cognitive limit to how quickly scientific verification or judicial fact-finding can occur, independent of evidence decay? Or could institutions accelerate verification to match the half-life if incentivized?",
+      "resolution_mechanism": "Comparative analysis of accelerated trials (emergency proceedings, expedited review); study of verification speed in high-stakes domains (nuclear safety, pandemic response); assessment of whether fast verification produces higher error rates",
+      "impact": "If cognitive/logistical limits prevent acceleration: constraint is coordination problem (Rope/Scaffold potential). If acceleration is possible but not incentivized: constraint is extraction (Snare/Tangled Rope maintained by choice).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether verification speed can match evidence decay"
+    },
+    {
+      "id": "platform_liability_alignment",
+      "question": "Do platform operators' liability incentives align with or oppose evidence preservation? Can liability law be structured to make evidence retention cheaper than deletion?",
+      "resolution_mechanism": "Analysis of platform behavior under different liability regimes (GDPR right-to-be-forgotten vs. discovery preservation requirements); case study of liability settlements where evidence loss was central; economic modeling of cost curves for retention vs. deletion",
+      "impact": "If liability can be restructured to favor preservation: platform cooperation becomes possible (tangled rope stabilizes toward rope). If platform liability consistently favors erasure: constraint is structurally embedded in the business model (snare persists).",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Whether liability law can incentivize evidence preservation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The epistemic decay constant describes a structural constraint that emerges when the speed of information turnover in digital systems falls below the time required for institutional verification. Evidence\u2014digital documents, social media posts, video recordings, transaction logs\u2014has a half-life measured in months to years. Legal proceedings, peer review, and regulatory investigations require years to complete. This creates a temporal inversion: by the time a claim is verified or falsified, the evidence base has decayed, been altered, deleted, or become algorithmically inaccessible. The constraint exhibits high extractiveness (0.58) and high suppression (0.68) because rapid claim makers benefit from the verification lag, institutional actors bear the costs, and the alternatives for verification are structurally limited. The theater ratio (0.64) reflects that courts and peer review continue elaborate procedures to verify claims, but the underlying evidentiary substrate has become ephemeral. This is a classical Snare from the perspective of those dependent on truth verification, and a structural Rope from the perspective of those who benefit from narrative speed.",
+    "key_agents": [
+      "Institutional Verification Systems (Courts, Peer Review, Regulatory Agencies): Primary victim (powerless/trapped) \u2014 structurally required to verify but face evidence decay; cannot exit",
+      "Truth-Dependent Actors (Litigants, Scientific Community, Legal Professionals): Primary victim (moderate/trapped) \u2014 depend on evidence preservation for justice and knowledge; face epistemic harm",
+      "Rapid Claim Makers (Journalists, Preprint Authors, Social Media Influencers): Primary beneficiary (institutional/arbitrage) \u2014 gain narrative advantage from speed; can choose publication timing and platform",
+      "Platform Operators (Tech Companies, Cloud Providers): Secondary beneficiary and constrained actor (institutional/constrained) \u2014 benefit from ephemeralness (reduced liability, algorithmic churn) but face legal preservation obligations",
+      "Evidentiary Standard Tradition (Legal and Scientific Norms): Institutional actor (institutional/constrained) \u2014 maintains verification standards designed for stable information but the substrate has degraded",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent platform design choices as immutable information physics"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint creates a systematic advantage for rapid claim makers and platform operators over institutions dependent on verification. The original research group (verification systems) cannot avoid the verification process; they cannot exit or accelerate arbitrarily. Rapid claim makers can choose when to publish, on which platforms, and benefit if the narrative persists longer than the verification process. The extractiveness value (0.58) reflects that this is not complete predation (snares at 0.66+ tend to involve direct coercion), but rather a structural misalignment of timescales. Suppression (0.68): High. Significant barriers to evidence preservation and verification include: platform design that prioritizes content turnover, no legal mandates for long-term preservation in many jurisdictions, technical difficulty of decentralized archives, cost of institutional storage, and business model incentives against preservation. But suppression is not absolute\u2014the Internet Archive, blockchain timestamps, and emerging legal mandates provide partial alternatives. Theater ratio (0.64): Moderate-high. Courts and peer review engage in elaborate verification procedures (expert witnesses, statistical analysis, reproducibility checks) that consume significant time and resources. These procedures are theater in the sense that their output (a ruling, an acceptance) occurs long after the evidentiary base has decayed. The theater serves the legitimacy function (showing that verification was attempted) rather than the epistemic function (actually verifying when evidence is fresh). The ratio has increased over the interval as digital evidence has accelerated while institutional timescales have remained fixed.",
+    "directionality_logic": "Directionality (d) for each agent follows from their structural position. Verification systems (courts, peer review) have no exit options from the verification requirement; they are trapped in the timescale mismatch. They are structural victims bearing the costs of evidence decay. This produces high d (0.85+) and thus high experienced extraction chi. Rapid claim makers have arbitrage options\u2014they can choose timing, platform, and narrative framing\u2014and they benefit from the constraint. This produces low d (0.15-0.25) and negative or low chi. Platform operators are institutionally constrained but not fully trapped; they face regulatory pressure to preserve evidence but business incentives to enable decay. This produces moderate d (0.50-0.65) and moderate chi, classifying as Tangled Rope. The engine computes these d values from the beneficiary/victim declarations and exit options; the directionality logic unfolds from the structural power asymmetry.",
+    "perspectival_gap": "The perspectival gap between Snare (institutional verification systems) and Rope (rapid claim makers) is maximal. The same constraint\u2014evidence decay\u2014is experienced by one agent as trap (they cannot avoid verification, cannot accelerate it, watch evidence decay) and by another as coordination opportunity (publish quickly before verification invalidates the narrative, or before the narrative becomes obsolete). The Platform Operator perspective (Tangled Rope) reveals that the constraint has a genuine coordination function (rapid information sharing) alongside asymmetric extraction (reduced liability for data loss). The Piton perspective shows that legal and scientific standards for evidence remain ceremonially important but technically degraded\u2014elaborate procedures persist even though the substrate has changed. The Mountain perspective (analytical/universal) risks naturalizing the constraint as an immutable feature of digital physics, when in fact it reflects contingent policy choices about platform design, liability structures, and preservation mandates. This false summit is the key diagnostic: entropy is universal, but evidence decay is not.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint has both genuine coordination and genuine asymmetric extraction. The coordination function: rapid information dissemination through platforms enables knowledge sharing that would be impossible if every claim required institutional pre-verification. The extraction function: those who benefit from narrative speed (claim makers, platform operators) structurally benefit when evidence is ephemeral, because they avoid accountability for false claims. The Snare classification is appropriate from the perspective of verification systems and truth-dependent actors, for whom the constraint is pure extraction. The Tangled Rope classification for platform operators is appropriate because they have both incentives to enable decay (business model) and legal obligations to prevent it (discovery, GDPR, preservation mandates). The constraint does not mandate that evidence decay\u2014it emerges from the interaction of platform design, business incentives, and weak preservation mandates. This means the extraction could be reduced through policy intervention (stronger preservation requirements, liability restructuring) without eliminating the coordination function (rapid sharing). The Scaffold perspective is latent but not yet realized: if mandatory preservation laws and decentralized archives mature, the constraint could be downgraded from Snare to Scaffold with a clear sunset clause."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_via_narrative_speed",
+      "journalistic_accountability_gap"
+    ],
+    "dual_formulation_note": "The epistemic decay constant is downstream of digital platform architecture and upstream of specific epistemic failures (false viral claims, unverified legal testimony, retracted scientific papers). It is distinct from 'information entropy' (which is universal) and 'platform design choices' (which are contingent). The constraint emerges from their interaction: entropy is inevitable, but the half-life of evidence is policy-dependent. Decomposition recognizes that technical interventions (decentralized archives) affect the constraint differently than policy interventions (liability restructuring), and that platform operators experience the constraint as Tangled Rope rather than pure Snare."
+  },
+  "directionality_overrides": []
+}

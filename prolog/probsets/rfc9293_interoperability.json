@@ -1,0 +1,94 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_interoperability",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.1,
+    "suppression": 0.01,
+    "theater_ratio": 0.05,
+    "claimed_type": "rope",
+    "human_readable": "TCP Interoperability & Reliability Requirements",
+    "topic_domain": "technological",
+    "beneficiaries": [
+      "internet_users",
+      "application_developers",
+      "network_operators",
+      "device_manufacturers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Network Operators",
+      "comment": "Network operators benefit from a stable and interoperable TCP protocol, enabling efficient network management and service delivery. Can arbitrage by choosing other protocols if TCP fails."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Application Developers",
+      "comment": "Application developers rely on TCP for reliable data transmission. While they are mobile in their protocol choices, TCP provides a stable base they benefit from."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Internet Users",
+      "comment": "Internet users benefit indirectly from TCP's reliability and interoperability, as it underpins many applications and services they use. They are mobile to other apps, but need reliable underlying transport."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Device Manufacturers",
+      "comment": "Device manufacturers rely on standard TCP for interoperability. They are able to choose and implement other protocols, but derive benefit from the existing standard."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, TCP represents a successful coordination mechanism for reliable data transmission, which has facilitated the growth and stability of the internet."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "RFC 9293 codifies the requirements for TCP, ensuring interoperability and reliability. This constraint functions as a rope, facilitating coordination among various actors in the internet ecosystem. It is viewed as a fundamental coordination mechanism by both institutional actors and analytical observers.",
+    "key_agents": [
+      "Internet Users: Benefit from reliable data transfer (moderate/mobile)",
+      "Application Developers: Rely on stable data transfer protocol (powerful/mobile)",
+      "Network Operators: Benefit from standardized protocol (institutional/arbitrage)",
+      "Device Manufacturers: Rely on standardized protocol (institutional/arbitrage)",
+      "Analytical Observer: Sees coordination mechanism (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness is low because TCP mainly provides coordination with minimal coercion. Suppression is also low, as alternative protocols can be used, but TCP's widespread adoption and standardization make it a preferred choice. The theater ratio is low as the requirements are directly tied to functionality.",
+    "perspectival_gap": "All perspectives see this constraint as a rope, highlighting its successful coordination function. The different agents have slightly different exit options and power, but all benefit significantly from the protocol.",
+    "directionality_logic": "All agents listed as beneficiaries experience TCP interoperability & reliability as beneficial. Some have the ability to arbitrage, others are mobile. The analytical observer sees no significant extraction.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by primarily acting as a pure coordination mechanism, providing reliable data transfer. It avoids being mislabeled as pure extraction because its suppression and extractiveness are minimal."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {},
+  "directionality_overrides": [],
+  "omegas": [],
+  "measurements": []
+}

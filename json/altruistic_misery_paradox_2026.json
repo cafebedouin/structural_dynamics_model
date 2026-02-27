@@ -2,23 +2,25 @@
   "header": {
     "constraint_id": "altruistic_misery_paradox_2026",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "altru"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.65,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "The Paradox of Altruistic Misery",
     "topic_domain": "social/psychological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "recipients_of_aid",
-      "social_group_cohesion"
+      "social_norm_enforcers",
+      "extraction_beneficiaries"
     ],
     "victims": [
-      "compulsive_altruists"
+      "self_sacrificing_agents",
+      "collective_wellbeing"
     ]
   },
   "perspectives": [
@@ -28,64 +30,100 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Compulsive Altruist",
-      "comment": "PERSPECTIVE 1: THE COMPULSIVE ALTRUIST (SNARE) — Trapped by internalized guilt and social expectations, the individual cannot exit the cycle of self-sacrifice without significant social or psychological cost. The constant extraction of their time, energy, and well-being feels like a trap. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. With suppression at 0.65, this is on the threshold of a Snare, reflecting the coercive nature of the social pressure."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "local",
-      "label": "The Recipient of Aid",
-      "comment": "PERSPECTIVE 2: THE RECIPIENT (ROPE) — From the perspective of someone receiving help, the altruist's actions are a pure coordination good. They benefit directly with minimal cost, experiencing the social norm as a reliable support system. As a beneficiary with arbitrage options, their effective extraction is negative. d≈0.15, f(d)≈-0.01, σ=0.8 → χ≈-0.004."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "regional",
-      "label": "The Social Group",
-      "comment": "PERSPECTIVE 3: THE SOCIAL GROUP (ROPE) — The community as a whole perceives the norm of altruism as a highly effective coordination mechanism that fosters cohesion, trust, and mutual support. The costs borne by a few over-taxed individuals are seen as minor compared to the collective benefit. d≈0.50, f(d)≈0.65, σ=0.9 → χ≈0.32. This low effective extraction classifies it as a Rope, a tool for collective well-being."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Burned-Out Altruist",
-      "comment": "PERSPECTIVE 4: THE BURNED-OUT ALTRUIST (PITON) — After years of self-sacrifice, the altruist's actions become performative. They go through the motions to maintain their social role, but the genuine desire or ability to help has been exhausted. The function (providing effective aid) has atrophied, but the theater remains. The high theater_ratio of 0.75 meets the Piton classification gate."
+      "label": "The Self-Sacrificing Caregiver",
+      "comment": "PERSPECTIVE 1: SELF-SACRIFICING CAREGIVER (SNARE) \u2014 Trapped within family, community, or institutional roles where self-denial is framed as moral duty. Exit is existentially costly (loss of identity, community expulsion, guilt). Bears full extraction: emotional labor, financial depletion, health deterioration. No viable exit option. Maximum experienced extraction due to trapped status and powerlessness."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Dependent Beneficiary",
+      "comment": "PERSPECTIVE 2: DEPENDENT BENEFICIARY (TANGLED_ROPE) \u2014 Child, parent, or dependent family member who receives care and material benefit from the sacrificer. Benefits from the extraction (care, resources) but also constrained by the psychological weight of being 'the reason' for another's misery. Experiences mixed coordination (legitimate caregiving) and extraction (guilt, obligation imposed on them). Constrained exit \u2014 can separate but at significant social/emotional cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Social Norm Enforcement System",
+      "comment": "PERSPECTIVE 3: SOCIAL NORM ENFORCEMENT SYSTEM (ROPE) \u2014 Religious institutions, family structures, cultural narratives, and social media amplify altruistic obligation as coordination mechanism. Experiences the constraint as solving a collective action problem: ensuring care provision for vulnerable members. Beneficiary through institutional legitimacy, social control mechanisms, and reduced accountability for systemic failures. Arbitrage exit \u2014 can reframe norms without substantial cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mental Health and Wellness Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: MENTAL HEALTH ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents (therapists, wellness advocates, boundary-setting movements) are constructing alternative narratives emphasizing self-care and psychological autonomy. See the altruistic misery trap as a temporary institutional failure with sunset: as mental health literacy spreads and therapeutic practices normalize self-compassion, the extractive power of guilt-based obligation declines. Constrained exit because cultural change is slow, but trajectory is toward structural decline of the constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Religious and Virtue-Signaling Systems",
+      "comment": "PERSPECTIVE 5: RELIGIOUS/VIRTUE-SIGNALING SYSTEMS (PITON) \u2014 Traditional religious frameworks and contemporary social-media-driven virtue displays maintain performative altruism long after their functional coordination purpose has atrophied. Rituals of self-sacrifice (tithing, emotional labor performances, conspicuous suffering) persist through institutional inertia rather than genuine coordination function. Theater ratio (0.64) reflects that much altruistic display is performative signaling rather than effective care. Degraded institutions maintained through habit and social pressure rather than demonstrated benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Institutional Power Brokers",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL POWER BROKERS (TANGLED_ROPE) \u2014 Large organizations (corporations, hospitals, religious institutions, states) benefit from voluntary self-sacrifice norms reducing their obligation to provide adequate compensation, support systems, or safety infrastructure. They coordinate resource allocation while extracting uncompensated labor (care workers, volunteers, clergy). Mobile exit (can shift to exploitative contracting models) but also genuinely dependent on volunteer labor \u2014 mixed coordination and extraction."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The psychologist or sociologist sees the full picture: a system that provides genuine coordination benefits (social cohesion) but achieves this through asymmetric extraction from a specific subgroup (the altruists). It requires active social enforcement to maintain. This dual nature is the hallmark of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Naturalization Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN - FALSE SUMMIT) \u2014 The universal/civilizational view risks naturalizing altruistic misery as an inherent feature of human bonding: 'Love requires sacrifice, sacrifice requires suffering, therefore those who love must suffer.' This perspective treats the paradox as an immutable law of social existence. However, the structural data reveals this as contingent institutional arrangements (guilt-based obligation, inadequate public support, concentrated caregiving responsibility) rather than natural laws. Engine detects false summit."
     }
   ],
   "omegas": [
     {
-      "id": "motivation_purity",
-      "question": "Is the altruist's motivation primarily selfless concern for others, or a selfish desire for social approval and the 'warm glow' of giving?",
-      "resolution_mechanism": "Neuro-imaging studies correlating brain reward centers with altruistic acts under varying conditions of social visibility and internal vs. external pressure.",
-      "impact": "If primarily selfish/performative, the constraint is more of a Snare from more perspectives, as it's a system for extracting social status. If primarily selfless, it's a more tragic Tangled Rope where a virtue is exploited.",
+      "id": "voluntary_vs_coerced_boundary",
+      "question": "What distinguishes genuine voluntary altruism from coerced self-sacrifice masked as choice?",
+      "resolution_mechanism": "Empirical study of exit costs and psychological freedom; comparison of self-sacrifice rates in high-support vs unsupported contexts; longitudinal tracking of burnout and guilt trajectories",
+      "impact": "If boundary is permeable: most 'altruistic' sacrifice is actually coerced, raising extractiveness to 0.65+. If boundary is clear: some genuine altruism exists, extractiveness remains ~0.52.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing selfless motivation from selfish desire for social approval in altruism."
+      "description": "Boundary between voluntary altruism and coerced self-sacrifice"
     },
     {
-      "id": "pathology_threshold",
-      "question": "At what point does the cost to the altruist's well-being (burnout, resentment, depression) outweigh the benefit to the recipient and the group?",
-      "resolution_mechanism": "Longitudinal studies tracking mental and physical health outcomes of individuals with varying levels of altruistic behavior against the perceived benefits to their communities.",
-      "impact": "Defines the boundary where the constraint flips from a beneficial Rope to a harmful Tangled Rope or Snare. This threshold is likely culturally and individually variable.",
-      "confidence": "low",
+      "id": "collective_wellbeing_extraction",
+      "question": "Does normalized altruistic misery reduce collective wellbeing by degrading the mental health of the sacrificers, or does it maintain societal cohesion through distributed care?",
+      "resolution_mechanism": "Population-level mental health metrics in high-altruism vs high-self-care cultures; correlation between altruistic obligation norms and suicide rates, depression incidence, and caregiver burnout; measurement of care quality under coerced vs supported conditions",
+      "impact": "If collective wellbeing degrades: the constraint is pure extraction (Snare from field perspective). If it maintains minimal cohesion: the constraint is hybrid coordination-extraction (Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether altruistic misery reduces or maintains collective wellbeing"
+    },
+    {
+      "id": "guilt_mechanism_origin",
+      "question": "Is guilt-based obligation a coordinating mechanism selected for its effectiveness, or a residual control tool from patriarchal/authoritarian structures?",
+      "resolution_mechanism": "Historical analysis of guilt-obligation norms; comparison with alternative coordination mechanisms (reciprocity, mutual aid, institutional support); ethnographic study of cultures with high altruism but low guilt-based obligation",
+      "impact": "If selected for effectiveness: the constraint is coordination-heavy (Rope/Tangled Rope). If residual control tool: the constraint is extraction-heavy (Snare/Piton).",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Defining the threshold between healthy altruism and pathological self-sacrifice."
+      "description": "Origin and function of guilt-based obligation mechanisms"
+    },
+    {
+      "id": "public_support_sufficiency",
+      "question": "Would universal, well-funded public support systems (healthcare, elder care, childcare, mental health services) eliminate the extractive power of altruistic obligation, or does the paradox persist at deeper psychological levels?",
+      "resolution_mechanism": "Policy intervention studies comparing jurisdictions with high vs low public care infrastructure; measurement of altruistic misery in wealthy vs resource-poor contexts; psychological analysis of guilt persistence despite material support availability",
+      "impact": "If public support eliminates extraction: the constraint degrades to Scaffold/Piton. If paradox persists: the constraint's extractive mechanism is psychological rather than structural (impacts classification rationale).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether public support systems can eliminate altruistic misery constraint"
     }
   ],
   "measurements": [
@@ -96,48 +134,68 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.45
+      "time_point": 5,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.55
+      "time_point": 10,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.6
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.75
+      "value": 0.64
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint models the 'Paradox of Altruistic Misery,' a social norm that pressures individuals to prioritize the happiness of others through self-sacrifice. While fostering community cohesion (a coordination function), this pressure can lead to burnout, resentment, and diminished well-being for the altruist (an extraction function). The constraint's structure is a classic example of a Tangled Rope, where a socially valuable behavior is maintained through mechanisms that create a distinct class of victims.",
+    "narrative_context": "The paradox of altruistic misery captures a structural constraint operating across social, familial, and institutional contexts: social pressure to prioritize others' wellbeing through self-sacrifice creates a system where those who give most suffer most. This constraint exhibits the defining features of a Tangled Rope: it coordinates care provision (genuine coordination function) while simultaneously extracting emotional labor, financial resources, and health from the sacrificing agents (asymmetric extraction). The constraint is enforced through guilt, religious/cultural narrative, social status signals, and institutional design (understaffed care systems, inadequate public support). The theater ratio (0.64) reflects that much of the observable 'altruism' is performative virtue signaling rather than effective care provision. Mental health advocacy and public support initiatives represent a structural sunset pathway, though cultural change is slow. The analytical observer faces a false summit: the temptation to naturalize altruistic misery as inherent to human bonding masks the contingent institutional arrangements (guilt-based obligation, inadequate systemic support) that could be redesigned.",
     "key_agents": [
-      "Compulsive Altruists: Primary victims (powerless/trapped) — bear the emotional and material costs of the norm.",
-      "Recipients of Aid: Primary beneficiaries (powerful/arbitrage) — receive support and view the norm as a pure good.",
-      "The Social Group: Secondary beneficiary and enforcer (organized/mobile) — benefits from social cohesion and actively maintains the norm through praise and censure.",
-      "The Analytical Observer: Sees the full, mixed nature of the constraint (analytical/analytical)."
+      "Self-Sacrificing Agents: Primary victim (powerless/trapped) \u2014 caregivers, family members, care workers bearing emotional and material extraction with no viable exit",
+      "Dependent Beneficiaries: Secondary victim/beneficiary (moderate/constrained) \u2014 children, parents, vulnerable persons who receive care but also bear the psychological weight of 'being the reason' for another's sacrifice",
+      "Social Norm Enforcement System: Primary beneficiary (institutional/arbitrage) \u2014 religious institutions, family structures, cultural narratives that legitimize obligation and reduce accountability for systemic care failures",
+      "Institutional Power Brokers: Secondary beneficiary (powerful/mobile) \u2014 corporations, hospitals, states benefiting from unpaid care work and volunteer labor; can exit exploitation through alternative labor models but dependent on continued altruistic obligation",
+      "Mental Health and Wellness Coalition: Organized agents (organized/constrained) \u2014 therapists, boundary-setting movements building alternative narratives; represent structural sunset pathway through psychological literacy",
+      "Collective Wellbeing: Structural victim (powerless/trapped) \u2014 abstract collective good degraded by caregiver burnout, mental health deterioration, reduced care quality under extraction conditions"
     ],
-    "logic_rationale": "Extractiveness (ε=0.55): Represents the significant, non-financial cost (time, emotional energy, opportunity cost) imposed on the altruist. Suppression (0.65): High, reflecting the power of social norms, guilt, and fear of being labeled 'selfish' which prevent individuals from easily opting out. Theater Ratio (0.75): High, as social pressure incentivizes performative acts of giving to gain approval, which can become more prevalent as genuine motivation wanes due to burnout.",
-    "perspectival_gap": "The gap is profound. The altruist, trapped by expectation, experiences a Snare. The recipient, benefiting from aid, sees a pure Rope. The wider community also sees a Rope, valuing the collective benefit of the norm over the individual cost. The burned-out individual experiences a Piton, where the function of helping is gone but the performance remains. Only the analytical observer perceives the complete structure as a Tangled Rope, acknowledging both the genuine coordination and the harmful extraction.",
-    "directionality_logic": "Directionality is derived from the clear roles. 'Compulsive altruists' are victims with trapped exit, leading to a high 'd' value (~0.95) and a Snare classification. 'Recipients of aid' are beneficiaries with arbitrage exit, leading to a very low 'd' (~0.15) and a Rope classification. The 'Social Group' is a beneficiary but also self-constraining, leading to a moderate 'd' (~0.50) that still classifies as Rope due to the immense perceived coordination benefit. The analytical view uses the canonical 'd' for that power atom, revealing the Tangled Rope.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that a social norm is not monolithically 'good' or 'bad'. Labeling it a pure Rope (the community view) ignores the victims. Labeling it a pure Snare (the victim's view) ignores the real coordination benefits it provides. The Tangled Rope classification from the analytical perspective correctly identifies the dual nature of the phenomenon, preventing the mislabeling of coercive social pressure as pure coordination."
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. The constraint extracts substantial costs from sacrificing agents (emotional labor, financial depletion, health deterioration, lost opportunities) while concentrating benefits among institutional norm enforcers and dependent beneficiaries. The value reflects that extraction is real and structural but not total \u2014 some genuine care coordination occurs alongside the extraction, and some agents experience genuine fulfillment. Suppression (0.68): High. Multiple barriers prevent exit: psychological (internalized guilt, identity dissolution), social (community expulsion, status loss), economic (inadequate alternative care systems), and institutional (concentrated caregiving responsibility). The suppression value reflects that alternatives exist but carry substantial costs. Theater ratio (0.64): Moderate-high. Much observable 'altruism' is performative: social media virtue signaling, religious displays of suffering, conspicuous self-sacrifice for status. But the ratio is not maximal because some genuine care coordination persists. The theater has increased as social media enables performance-intensive virtue display.",
+    "perspectival_gap": "The constraint reveals a profound perspectival gap between the sacrificer and beneficiary. The self-sacrificing agent sees a Snare: they are trapped, their needs are systematically deprioritized, they bear extraction costs with no viable exit. The dependent beneficiary sees Tangled Rope: they receive genuine care (coordination benefit) but also bear the psychological weight of obligation and guilt \u2014 mixed experience. The institutional norm enforcer sees Rope: they experience the constraint as solving a legitimate coordination problem (ensuring care provision) while extracting uncompensated labor (arbitrage benefit). The analytical observer risks seeing a Mountain: naturalizing the paradox as inherent to human bonding rather than recognizing the contingent institutional arrangements. The mental health coalition sees a Scaffold with sunset: they recognize structural pathways (public support systems, therapeutic literacy, boundary-setting norms) that will degrade the constraint's extractive power. The religious/virtue-signaling system sees a Piton: the performative displays of altruism persist through inertia even as their functional coordination purpose has atrophied.",
+    "directionality_logic": "Each perspective's directionality is determined by the agent's structural position relative to the constraint. Sacrificing agents are trapped victims with no exit (d ~0.92, f(d) ~1.40): maximum experienced extraction. Dependent beneficiaries are constrained victims-beneficiaries (d ~0.55, f(d) ~0.75): mixed experience reflecting genuine care coordination alongside obligation. Institutional norm enforcers are beneficiaries with arbitrage exit (d ~0.08, f(d) ~-0.16): negative effective extraction (they benefit from the constraint). Power brokers are beneficiaries with mobile exit (d ~0.45, f(d) ~0.55): moderate extraction benefit. Organized coalitions are constrained with agency (d ~0.42, f(d) ~0.43): moderate experienced extraction because they perceive sunset pathways. The analytical observer has analytical exit (d ~0.72, f(d) ~1.15) and risks naturalizing contingency, producing false summit classification.",
+    "mandatrophy_analysis": "The paradox of altruistic misery resolves mandatrophy by demonstrating how the same structural arrangement can coordinate necessary care while extracting from caregivers. The Tangled Rope classification prevents two mislabelings: (1) treating it as pure coordination (Rope) would ignore the genuine harm to sacrificing agents and the institutional benefits from their subordination; (2) treating it as pure extraction (Snare) would ignore that some care coordination is genuinely needed and that some beneficiaries experience authentic care rather than pure predation. The Tangled Rope accurately captures the hybrid: there is a real coordination function (care provision for vulnerable persons) that requires genuine cooperation, AND there is asymmetric extraction (guilt-based obligation, uncompensated labor, health deterioration of sacrificers). The extractive component is not accidental to the coordination \u2014 it is the mechanism that makes the coordination 'free' for institutional beneficiaries. The psychological component (guilt, identity fusion with caregiver role) amplifies the extraction by making exit appear impossible even where material alternatives exist. The mental health coalition's Scaffold perspective confirms that institutional redesign (public support systems, therapeutic literacy, boundary-setting norms) can reduce the extractive power while preserving legitimate care coordination. The analytical observer's false summit reveals how naturalization language ('love requires sacrifice', 'that's just how families work') disguises contingent institutional arrangements as natural laws."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
-  }
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "caregiver_labor_undervaluation",
+      "guilt_based_compliance",
+      "family_enmeshment_dynamics"
+    ],
+    "dual_formulation_note": "The altruistic misery paradox represents a hybrid coordination-extraction constraint. Upstream constraints (family enmeshment dynamics, guilt-based compliance mechanisms) create the psychological conditions enabling extraction. Downstream constraints (caregiver labor undervaluation, institutional inadequacy of public care) concentrate benefits among norm enforcers. The three are linked through the guilt mechanism: guilt functions simultaneously as a coordination signal (care is needed) and an extraction tool (obligation is internalized). Each related constraint has its own extractiveness value reflecting its specific structural properties."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ]
 }

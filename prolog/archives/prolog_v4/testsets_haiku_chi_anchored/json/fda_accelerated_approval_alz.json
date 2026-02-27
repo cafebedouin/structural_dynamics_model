@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "fda_accelerated_approval_alz",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fda_alz"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FDA Accelerated Approval Pathway for Alzheimer's Drugs",
+    "topic_domain": "technological/economic/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pharmaceutical_manufacturers",
+      "patients_with_early_symptoms"
+    ],
+    "victims": [
+      "post_market_safety_surveillance",
+      "clinical_evidence_standards",
+      "patients_enrolled_in_confirmatory_trials"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Patients in Confirmatory Trials",
+      "comment": "PERSPECTIVE 1: PATIENTS IN CONFIRMATORY TRIALS (SNARE) \u2014 Enrolled in post-market studies under ethical obligation; cannot exit without forfeiting access to marketed drug. Bear the full risk of off-label use before confirmatory efficacy is proven. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.86."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Alzheimer's Patients Seeking Any Option",
+      "comment": "PERSPECTIVE 2: ALZHEIMER'S PATIENTS SEEKING ANY OPTION (SNARE) \u2014 Cognitive decline creates urgency; constrained by disease timeline and hope bias. Limited exit options: refuse the drug and watch decline, or accept unproven surrogate endpoint. Suppress information about uncertainty through medical authority. d\u22480.88, f(d)\u22481.30, \u03c3=1.2 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturers",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURERS (ROPE) \u2014 Primary beneficiary. Accelerated approval reduces time-to-market by 3-5 years, capturing first-mover advantage and extended market exclusivity. Market conditions are favorable post-approval regardless of confirmatory trial outcome. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary through arbitrage (exit via patent expiration, alternative indications)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "FDA Regulatory Agency",
+      "comment": "PERSPECTIVE 4: FDA REGULATORY AGENCY (TANGLED ROPE) \u2014 Enforcer of accelerated pathway; benefits from perceived innovation (public health theater), constrained by incomplete post-market data and political pressure. Coordination function: enabling early access to serious disease drugs. Extraction: approving drugs before efficacy proven, then maintaining approval regardless of confirmatory trial results (Aducanumab precedent). d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Neurology Medical Community",
+      "comment": "PERSPECTIVE 5: NEUROLOGY MEDICAL COMMUNITY (TANGLED ROPE) \u2014 Coordination: early drug availability to treat desperately ill patients. Extraction: pressure to prescribe drugs with unproven clinical benefit; reputational risk from adverse outcomes; constrained by liability if confirmatory trials later show harm. d\u22480.62, f(d)\u22480.88, \u03c3=1.0 \u2192 \u03c7\u22480.46."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Clinical Evidence Standards",
+      "comment": "PERSPECTIVE 6: CLINICAL EVIDENCE STANDARDS (PITON) \u2014 Historically required proven clinical benefit for approval. Accelerated pathway created exception for surrogate endpoints. Theater ratio 0.64: surrogate endpoints are treated as proxies for clinical benefit (performative claim). Institutional inertia: pathway persists even when confirmatory trials show no benefit (Aducanumab approved 2023, confirmatory trial inconclusive/halted). d\u22480.70, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Argues that uncertainty in Alzheimer's biomarkers and complex pathophysiology is inherent: surrogate endpoints can never perfectly predict clinical benefit in neurodegeneration. Trade-off between early access and certainty is immutable law of medical science. However, base properties (\u03b5=0.52, suppression=0.68, theater=0.64) contradict mountain classification \u2014 the false summit reveals that the 'inherent uncertainty' framing naturalizes what is actually a regulatory policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "surrogate_endpoint_validity",
+      "question": "Does amyloid plaque reduction reliably predict meaningful clinical benefit (cognitive stability/functional preservation) in Alzheimer's disease?",
+      "resolution_mechanism": "Long-term outcome correlation studies: link baseline amyloid PET imaging to longitudinal cognitive decline trajectories; cross-validate against lecanemab and donanemab confirmatory trial results; meta-analysis of surrogate-to-clinical correlation coefficients",
+      "impact": "If correlation > 0.70: surrogate endpoint classification valid (accelerated pathway justified). If correlation < 0.40: surrogate is theater; pathway becomes pure snare. If 0.40-0.70: tangled rope classification confirmed (mixed coordination and extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Predictive validity of amyloid reduction as clinical benefit proxy"
+    },
+    {
+      "id": "confirmatory_trial_enforcement",
+      "question": "Will FDA enforce withdrawal or label restriction if post-market confirmatory trials show no clinical benefit?",
+      "resolution_mechanism": "Historical precedent analysis: compare Aducanumab (approved 2023, confirmatory trial inconclusive, remains approved) with hypothetical future failures; examine regulatory language for mandatory withdrawal clauses vs discretionary continuation",
+      "impact": "If enforcement strict: pathway becomes true scaffold with sunset (enforcement risk constrains extraction). If enforcement weak: pathway becomes pure snare (approval is terminal regardless of evidence).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether FDA enforces withdrawal on failed confirmatory trials"
+    },
+    {
+      "id": "patient_harm_attribution",
+      "question": "How much cognitive decline and adverse drug events in accelerated-approval patients are attributable to drug vs. disease natural history?",
+      "resolution_mechanism": "Propensity-matched cohort comparison: accelerated-approval recipients vs. historical controls or parallel patients on placebo in confirmatory trials; time-to-event analysis for cognitive decline and ARIA (amyloid-related imaging abnormalities) adverse events",
+      "impact": "If drug harms > disease natural history: snare extraction clearly documented, pathway faces legitimacy crisis. If drug inert: coordination benefit (early access) is pure theater; pathway degrades to piton. If drug modestly slows decline: tangled rope classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of drug-specific cognitive decline vs. natural disease progression"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "To what extent does FDA decision-making on Alzheimer's drugs reflect pharmaceutical industry lobbying vs. genuine scientific evidence?",
+      "resolution_mechanism": "Regulatory affairs analysis: track FDA advisory committee voting patterns pre/post industry presentations; cross-correlate approval decisions with NIH/industry funding flows to advisory committee members; compare FDA decision thresholds for Alzheimer's vs. other serious diseases",
+      "impact": "If capture high (>60%): pathway is pure snare enforced through regulatory capture. If capture low (<20%): pathway is genuine compromise between early access and evidence. If capture moderate: tangled rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of pharmaceutical industry influence on FDA Alzheimer's approval decisions"
+    },
+    {
+      "id": "hope_bias_magnitude",
+      "question": "How much do Alzheimer's patients overestimate the clinical benefit of drugs approved on surrogate endpoints vs. realistic expectations?",
+      "resolution_mechanism": "Patient survey cohort: pre- and post-approval expectations vs. actual outcomes; qualitative interviews on decision regret; measurement of placebo effect in actual prescribing (prescriber optimism bias) vs. inert drug response",
+      "impact": "If hope bias >> realistic benefit: patients experience snare (trapped by false expectations). If hope bias marginal: coordination function is legitimate (early access justified). If hope bias moderate: tangled rope (some benefit, some extraction via false hope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of patient hope bias regarding surrogate endpoint benefits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The FDA's accelerated approval pathway for Alzheimer's drugs creates a structural conflict between two legitimate goals: enabling early access to treatments for a devastating disease and maintaining evidence standards that protect patients from ineffective or harmful therapies. The constraint operates by allowing drugs to be approved based on surrogate biomarkers (amyloid plaque reduction) that are 'reasonably likely' to predict clinical benefit, rather than proven clinical benefit (cognitive stabilization or functional improvement). This creates asymmetric extraction: pharmaceutical manufacturers capture market exclusivity and profit during the approval window regardless of confirmatory trial outcomes, while patients and post-market evidence systems bear the risk of inefficacy or harm. The theater ratio (0.64) reflects that surrogate endpoints are treated rhetorically as clinical proxies without full evidence; the suppression (0.68) reflects barriers to exit (desperate patients, regulatory authority), and extractiveness (0.52) reflects the material benefit capture by manufacturers. This constraint exhibits all six DR types from different perspectives: a snare for desperate patients and trial enrollees who cannot exit, a rope for manufacturers who coordinate on market access, a tangled rope for regulators and physicians who balance early access against evidence, a piton for classical clinical trial standards that have been relegated to secondary importance, and a false mountain for observers who naturalize the uncertainty-access tradeoff as inherent to neuroscience rather than a contingent regulatory choice.",
+    "key_agents": [
+      "Pharmaceutical Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 capture market exclusivity, extended marketing period, and patent protection regardless of confirmatory trial outcomes",
+      "Patients with Early Alzheimer's Symptoms: Primary beneficiary + victim (moderate/constrained) \u2014 gain access to drugs years earlier, but access depends on unproven surrogate endpoints; experience hope bias",
+      "Patients Enrolled in Confirmatory Trials: Victim (powerless/trapped) \u2014 enrolled in post-market studies after drug is already marketed; cannot exit without forfeiting access; bear safety monitoring burden",
+      "FDA Regulatory Agency: Institutional enforcer (organized/constrained) \u2014 enforces accelerated pathway; benefits from perceived innovation; constrained by incomplete post-market data and political pressure from patient advocates and industry",
+      "Neurology Medical Community: Institutional prescriber (institutional/constrained) \u2014 benefits from early drug availability for seriously ill patients; constrained by liability if outcomes are poor",
+      "Clinical Evidence Standards: Victim/Structural principle (institutional/constrained) \u2014 historical standard of proven clinical benefit has been degraded; post-market confirmatory trials are secondary to approval",
+      "Post-Market Safety Surveillance: Victim (powerless/constrained) \u2014 tasked with detecting harms after drugs are marketed and patient expectations are set; limited power to enforce withdrawal",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the regulatory choice as inherent uncertainty rather than contingent policy"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-to-high. The manufacturers capture real economic value: 3-5 year earlier market entry, patent extension, and first-mover pricing power. Even if confirmatory trials later show marginal or no benefit (as with Aducanumab), the approval itself is not retrospectively withdrawn \u2014 extraction is locked in. The extractiveness is not maximal (0.66+) because the pathway does enable some early access benefit to patients, and some drugs (lecanemab, donanemab) show modest clinical effects in confirmatory trials. Suppression (0.68): Moderate-to-high. Significant barriers to exit: desperate patients have limited alternatives; regulatory authority suppresses information about surrogate endpoint uncertainty through medical framing ('reasonably likely' predictor); post-market data collection is insufficient to detect harms before widespread adoption. Theater ratio (0.64): Moderate-high. The surrogate endpoint framing treats biomarker changes as clinical benefit through rhetorical substitution rather than proven causation. The FDA's approval decision is performative in that it signals 'confidence' without evidence; the confirmatory trial is subsequently treated as optional rather than mandatory. Over the measurement interval (years 0-20), theater has increased from 0.35 to 0.64 because regulatory language has shifted from 'exceptional circumstance' to routine use of surrogate endpoints, and confirmatory trial enforcement has weakened (Aducanumab precedent).",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Manufacturers see a coordination mechanism (Rope) \u2014 the pathway solves the problem of getting promising drugs to market efficiently. Desperate patients see opportunity (partial Rope) but also entrapment (partial Snare) \u2014 they have no real exit. Trial-enrolled patients see pure extraction (Snare) \u2014 they are in studies for drugs already approved based on surrogate endpoints. Regulators see a hybrid (Tangled Rope) \u2014 early access is real coordination, but the loss of post-market enforcement is extraction. Physicians see the same hybrid with different emphasis (Tangled Rope) \u2014 they coordinate on patient care but face liability. Classical evidence standards see degradation (Piton) \u2014 the surrogate endpoint pathway has relegated confirmatory trials to secondary status, maintained through institutional inertia despite weak enforcement. The analytical observer risks false naturalization (Mountain) \u2014 treating the uncertainty-access tradeoff as inherent to neuroscience rather than a regulatory policy. The perspectival gap is resolvable through the \u03b5-invariance test: the extracted value (manufacturer profit, extended monopoly) is identical across all perspectives, confirming the constraint is real and tangled_rope is the correct type.",
+    "directionality_logic": "Manufacturers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary. Desperate patients: Beneficiary (access) + victim (false hope) + constrained \u2192 d\u22480.60, f(d)\u22480.82. Mixed experience but more victimization because hope bias and disease timeline constrain exit. Trial enrollees: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 cannot exit without losing drug access. FDA: Beneficiary (innovation credit) + victim (enforcement burden) + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction because agency has structural power but faces conflicting mandates. Physicians: Beneficiary (early tools) + victim (liability) + constrained \u2192 d\u22480.62, f(d)\u22480.88. Moderate extraction due to professional liability and prescribing pressure. Evidence standards: Victim (degraded) + institutional (no exit) + constrained \u2192 d\u22480.70, f(d)\u22481.05. High extraction through institutional substitution. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is false summit; the constraint is regulatory policy, not inherent science.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint resolves the mandatrophy between 'early access' (coordination) and 'unproven efficacy' (extraction) by mapping to tangled_rope classification, which contains BOTH functions as structural properties. The FDA accelerated approval pathway is genuinely a coordination mechanism \u2014 it enables early patient access to serious disease drugs \u2014 AND genuinely an extraction mechanism \u2014 manufacturers capture profit and market exclusivity before confirmatory trials, and the extraction persists even if trials fail (Aducanumab precedent). The tangled_rope classification is not a compromise or ambiguity; it is the accurate structural description: 0.52 extractiveness captures the real profit capture, 0.68 suppression captures real barriers to exit, 0.64 theater captures real rhetorical substitution of surrogate endpoints for clinical benefit. The mandatrophy is resolved by recognizing that BOTH the beneficiary (manufacturers) and victims (patients, evidence standards) are correct \u2014 they occupy different structural positions in the same constraint. The policy question ('should we allow accelerated approval?') is not resolved by classification; the classification merely disambiguates the structural facts. The Aducanumab case (approved 2023, confirmatory trial inconclusive, remained approved despite professional criticism) confirms the tangled_rope reading: the coordination function (early access) is real, but the extraction function (manufacturer profit and regulatory authority independence from evidence) persists independent of efficacy."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "biomarker_validation_uncertainty",
+      "pharmaceutical_pricing_power",
+      "post_market_surveillance_adequacy"
+    ],
+    "dual_formulation_note": "The accelerated approval pathway is downstream of surrogate biomarker validation claims and upstream of pricing and post-market enforcement mechanisms. Upstream constraint (biomarker_validation_uncertainty) determines whether surrogate endpoints are legitimate proxies; downstream constraints (pricing_power, post_market_adequacy) determine whether the extraction persists even if efficacy fails."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

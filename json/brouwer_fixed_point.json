@@ -2,21 +2,20 @@
   "header": {
     "constraint_id": "brouwer_fixed_point",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "brouwer"
   },
   "base_properties": {
-    "extractiveness": 0.01,
-    "suppression": 0.01,
-    "theater_ratio": 0.0,
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
     "claimed_type": "mountain",
     "human_readable": "Brouwer Fixed Point Theorem",
     "topic_domain": "mathematics/topological",
     "emerges_naturally": true,
-    "accessibility_collapse": 0.98,
-    "resistance": 0.02,
-    "beneficiaries": [],
-    "victims": []
+    "accessibility_collapse": 0.92,
+    "resistance": 0.05
   },
   "perspectives": [
     {
@@ -25,58 +24,124 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Topologist",
-      "comment": "PERSPECTIVE 1: THE TOPOLOGIST (MOUNTAIN) — The theorem is a fundamental, unchangeable feature of the logical landscape defined by the axioms of topology. It is a natural law of this mathematical reality."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The General Equilibrium Economist",
-      "comment": "PERSPECTIVE 2: THE ECONOMIST (MOUNTAIN) — The theorem is an indispensable tool for proving the existence of market equilibria. Models must conform to it; there is no exit. It functions as an immutable law for model-building."
+      "label": "The Analytical Observer (Pure Mathematics)",
+      "comment": "PERSPECTIVE 1: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the standpoint of pure mathematical logic and topology, Brouwer's theorem is an invariant law. The statement follows necessarily from the axioms of topological continuity and compactness. No degree of freedom exists: any continuous function from a compact convex set to itself must have a fixed point. This is a property of the mathematical structure itself, not contingent on observation or context."
     },
     {
       "classification_type": "mountain",
       "agent_power": "powerful",
-      "time_horizon": "biographical",
+      "time_horizon": "civilizational",
       "exit_options": "mobile",
       "spatial_scope": "universal",
-      "label": "The Algorithm Designer",
-      "comment": "PERSPECTIVE 3: THE ALGORITHM DESIGNER (MOUNTAIN) — The theorem's non-constructive nature presents a hard barrier. It guarantees a fixed point exists but offers no efficient method to find it, a mountain-like obstacle for computational complexity."
+      "label": "The Applied Mathematician (Constructive View)",
+      "comment": "PERSPECTIVE 2: APPLIED MATHEMATICIAN (MOUNTAIN) \u2014 Even from the perspective of an agent seeking to construct or apply fixed point algorithms, the theorem remains a structural ceiling. The existence of a fixed point is guaranteed, but the theorem does not provide constructive algorithm, nor can any such algorithm avoid the topological constraint. The agent experiences this not as extraction or coordination, but as an immutable boundary condition on what computation can achieve. No suppression of alternatives exists because there are no alternatives \u2014 this is the fundamental constraint on continuous mappings."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Community",
+      "comment": "PERSPECTIVE 3: MATHEMATICAL COMMUNITY (MOUNTAIN) \u2014 From the perspective of the collective of mathematicians who use fixed point theorems across economics, game theory, and topology, Brouwer's result is a universal structural property. Different mathematical communities (equilibrium theory in economics, topology in pure mathematics, game theory) all rely on this single invariant law. They cannot negotiate or modify it, cannot suppress the theorem's conclusion, and cannot find an alternative foundation. The constraint is not enforced but emerges from logical necessity."
     },
     {
       "classification_type": "mountain",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Mathematics Student",
-      "comment": "PERSPECTIVE 4: THE STUDENT (MOUNTAIN) — For a student learning topology, the theorem is an absolute, unchangeable fact that must be accepted to solve problems and pass examinations. There is no option to negotiate or resist its logic."
+      "spatial_scope": "universal",
+      "label": "The Student Learning Topology",
+      "comment": "PERSPECTIVE 4: STUDENT (MOUNTAIN) \u2014 From the perspective of a student first encountering the theorem, it appears as an unalterable fact of the mathematical universe. The student cannot escape the constraint, cannot negotiate with it, and cannot find a loophole. The theorem is presented as discovered, not invented \u2014 a property of reality that the student must internalize. The 'powerlessness' here is epistemic: the student has no agency over whether the theorem is true, only over whether they understand it."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "constructive_vs_classical",
+      "question": "Does the theorem hold in constructive mathematics without the law of excluded middle, or is it fundamentally a classical mathematics artifact?",
+      "resolution_mechanism": "Analysis of constructive proof strategies for fixed point theorems; comparison of classical and intuitionistic topological foundations; examination of whether non-constructive existence can be reframed as constructive constraint",
+      "impact": "If constructive: theorem is truly universal (stronger mountain). If classical only: theorem's necessity is contingent on a particular foundational choice (weakens mountain classification, possibly to rope).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Brouwer's theorem is constructively or classically dependent"
+    },
+    {
+      "id": "discrete_topology_analogue",
+      "question": "Is there a discrete or algorithmic analogue of Brouwer's theorem that preserves the same structural necessity, or does discretization fundamentally change the constraint type?",
+      "resolution_mechanism": "Examination of discrete fixed point results (combinatorial topology, graph theory); assessment of whether discrete analogues have the same logical necessity or are contingent on implementation choices",
+      "impact": "If true discrete analogue exists with same necessity: universality of fixed point principle confirmed (mountain). If discrete case is different: constraint may be specific to continuous topology (narrows scope, possibly downgrade).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether discrete topology admits Brouwer-analogous fixed point necessity"
+    },
+    {
+      "id": "foundational_assumption_dependency",
+      "question": "Which axioms of set theory and topology are strictly necessary for Brouwer's proof, and are these axioms themselves natural/unavoidable or chosen conventions?",
+      "resolution_mechanism": "Proof analysis in minimalist foundations (ZF minus Choice, intuitionistic ZF, type theory); identification of points where proofs diverge or collapse; assessment of whether minimal axiom sets are 'natural' or 'contingent'",
+      "impact": "If all necessary axioms are foundationally necessary: theorem is maximally constrained (pure mountain). If some axioms are conventional choices: constraint may be a rope-like coordination on a chosen framework.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Axiom dependency of Brouwer's theorem proof"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.1
     }
   ],
   "interval": {
-    "start": 1910,
-    "end": 2026
+    "start": 0,
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "The Brouwer Fixed Point Theorem is a fundamental result in topology stating that any continuous function from a compact convex set to itself has at least one fixed point. This theorem is a classic example of a non-constructive proof; it guarantees existence without providing a general method for finding the point. Its status as a proven mathematical theorem makes it a structural constant within its logical domain, applicable across fields from economics to game theory.",
+    "narrative_context": "The Brouwer Fixed Point Theorem is a foundational result in topology proven in 1911, stating that any continuous function mapping a compact convex set to itself must have at least one fixed point. This constraint exemplifies a pure mathematical natural law: the statement is not contingent on social, institutional, or physical context, nor can it be suppressed, negotiated, or circumvented through alternative mechanisms. The theorem holds with equal necessity from every structural perspective \u2014 it is invariant across all observables, all time horizons, and all agents. The constraint imposes no beneficiary/victim asymmetry and requires no enforcement mechanism. It is a property of the mathematical structure itself, discovered rather than invented, and its truth is independent of who observes it or what they intend to do with it.",
     "key_agents": [
-      "The Topologist (analytical/analytical): Views the theorem as a foundational feature of the mathematical universe.",
-      "The Economist (institutional/constrained): Relies on the theorem as a non-negotiable tool for proving the existence of market equilibria.",
-      "The Algorithm Designer (powerful/mobile): Confronts the theorem's non-constructive nature as a hard limit on computational tractability.",
-      "The Mathematics Student (powerless/trapped): Experiences the theorem as an absolute truth to be learned and applied without question."
+      "Mathematical Community: Universal observer (organized/constrained) \u2014 benefits from and is constrained by the theorem as a shared foundation for proofs and applications",
+      "Topologists: Specialists (powerful/mobile) \u2014 use the theorem as a boundary condition but cannot overcome it",
+      "Applied Mathematicians: Problem-solvers (powerful/mobile) \u2014 attempt to construct algorithms and applications within the constraint's limits",
+      "Students: Learners (powerless/trapped) \u2014 encounter the theorem as an immutable fact to internalize",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 observes the theorem as a structural necessity of mathematical logic"
     ],
-    "logic_rationale": "This constraint is a canonical Mountain. Extractiveness (0.01) and Suppression (0.01) are minimal, as the theorem describes a logical necessity rather than imposing a cost or preventing alternatives—alternatives are logically incoherent. Theater Ratio (0.0) is zero as the theorem is pure function with no performative aspect. As a proven mathematical result, it `emerges_naturally` from its axiom system. `accessibility_collapse` (0.98) is extremely high; while the proof is non-trivial, the result is an absolute and inescapable conclusion. `resistance` (0.02) is correspondingly low, as one cannot 'resist' a mathematical proof.",
-    "perspectival_gap": "There is no perspectival gap. This is a key diagnostic feature of a pure Mountain constraint. All observers, regardless of power, exit options, or scope, converge on the 'mountain' classification. The theorem's properties are invariant because it is a feature of the logical environment itself, not a contingent social or economic arrangement.",
-    "directionality_logic": "Directionality is not applicable in a meaningful way. The constraint has no defined beneficiaries or victims. It is a symmetric, universal law within its domain. The engine will derive near-zero effective extraction (χ) for all perspectives due to the extremely low base extractiveness (ε), reinforcing the uniform Mountain classification.",
-    "mandatrophy_analysis": "The Brouwer Fixed Point Theorem serves as a 'true summit' or baseline case against which socially constructed constraints can be compared. Its classification is stable, unambiguous, and not subject to mandatrophy. It demonstrates a case where the 'Mountain' classification is not a naturalized social arrangement but a genuine, irreducible structural limit."
+    "logic_rationale": "Extractiveness (0.08): Minimal. The theorem does not extract value from any agent or benefit any agent at the expense of others. It is a constraint on the structure of continuous functions, not a redistribution mechanism. The low value reflects that this is a natural law, not a social or institutional constraint. Suppression (0.02): Negligible. There is no suppression mechanism because there are no alternatives to suppress. The theorem either holds or it does not \u2014 there is no 'suppressed alternative' mode of continuous function behavior. Theater ratio (0.10): Low. The proof of the theorem is direct and necessary; there is minimal performative content. The slight nonzero value reflects that mathematical presentation itself involves some conventional notation and pedagogical framing, but the core logical structure is not performative. Accessibility collapse (0.92): High. The theorem is inaccessible in the sense that it cannot be 'escaped' or 'negotiated' \u2014 the topological structure completely determines the outcome. Resistance (0.05): Minimal. No resistance mechanism can defeat the theorem because it is a logical necessity, not a physical force subject to counterforce.",
+    "perspectival_gap": "All four perspectives classify the theorem as Mountain with identical logic. This is the defining characteristic of a true natural law in the mathematical domain: the constraint is invariant across all observables and all structural positions. The perspective axis does not change the classification because there is no extraction, no coordination alternative, no suppression mechanism, and no beneficiary/victim asymmetry. The theorem is equally immutable whether viewed by a powerless student or an analytical observer, over biographical or civilizational time horizons, from local or universal scope.",
+    "directionality_logic": "No beneficiaries or victims are declared because the theorem has no extraction or coordination function. No agent experiences directionality-dependent extraction or benefit. The constraint is a structural feature of continuous mathematics, not a social or institutional mechanism. All agents \u2014 regardless of power level, time horizon, or exit options \u2014 face the identical immutable constraint. This is the feature that makes classification as Mountain uniquely appropriate: the constraint's character does not depend on perspective, measurement basis, or observer position."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
       "nash_equilibrium_existence",
-      "walrasian_general_equilibrium"
-    ]
+      "banach_contraction_principle",
+      "kakutani_fixed_point"
+    ],
+    "dual_formulation_note": "Brouwer's theorem is a foundational constraint that enables other fixed point results in game theory and functional analysis. Nash equilibrium existence, Banach's contraction principle, and Kakutani's generalization are downstream constraints that inherit the necessity of fixed point logic from Brouwer's base result. Each downstream constraint has its own extractiveness and structural complexity, but all depend on Brouwer as a universal foundation."
   }
 }

@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "taiwan_university_application_system",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "taiwan_app"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Taiwan's Application-Based University Admission System",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elite_prep_industry",
+      "high_resource_schools",
+      "well_connected_families"
+    ],
+    "victims": [
+      "rural_students",
+      "low_income_families",
+      "first_generation_applicants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Rural Student Without Resources",
+      "comment": "PERSPECTIVE 1: RURAL STUDENT WITHOUT RESOURCES (SNARE) \u2014 Trapped between the rhetoric of 'holistic assessment' and the material requirement for expensive prep coaching, essay workshops, and portfolio development. Cannot exit the university system (education is career-essential); cannot access the 'application materials' coaching market; bears full extraction cost of the constraint. Maximum d (0.95) \u2014 full victim, no alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The First-Generation Applicant",
+      "comment": "PERSPECTIVE 2: FIRST-GENERATION APPLICANT (TANGLED ROPE) \u2014 Benefits from the system's stated goal of holistic evaluation \u2014 their unique family background, leadership in community contexts, and resilience narratives CAN be conveyed in applications. However, constrained by lack of social capital to interpret what universities actually want, no family mentor experience navigating the system, and economic barriers to presentation professionalization. Moderate extraction but genuine coordination benefit also present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Prep Industry and Educational Consultants",
+      "comment": "PERSPECTIVE 3: PREP INDUSTRY & CONSULTANTS (ROPE) \u2014 Experiences the application system as pure coordination benefit. The system creates a market for application essay services, portfolio coaching, interview preparation, and 'positioning strategy' consulting. These service providers have high arbitrage (can sell to multiple students, can exit if system changes). They benefit from the constraint without bearing costs \u2014 extraction runs toward them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Well-Resourced High Schools",
+      "comment": "PERSPECTIVE 4: WELL-RESOURCED HIGH SCHOOLS (ROPE) \u2014 Institutional beneficiaries. These schools invest in dedicated college counseling staff, have alumni networks with universities, understand the application narrative that works, and can provide in-school essay workshops and interview coaching. They benefit from arbitrage \u2014 they apply the system's logic once and sell the benefit repeatedly to their students. No extraction cost for them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "University Admissions Committees",
+      "comment": "PERSPECTIVE 5: UNIVERSITY ADMISSIONS COMMITTEES (TANGLED ROPE) \u2014 Experience the system as both coordination and extraction. Genuinely want to identify capable students beyond test scores (coordination benefit \u2014 holistic evaluation is real). But constrained by volume (thousands of applications per institution), pressure to maintain prestige signals, and inability to verify essay authenticity or applicant-to-narrative truthfulness. Active enforcement required: committees must review applications, interview candidates, write justifications. The constraint extracts labor (committee effort) and creates perverse incentives (narrative credibility signals extraction value, creating demand for coaching)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Standardized Testing Industry",
+      "comment": "PERSPECTIVE 6: STANDARDIZED TESTING INDUSTRY (PITON) \u2014 Technically, the application system was designed to reduce test dependence. In reality, tests remain primary filters \u2014 universities use test scores to shortlist applicants before reviewing application materials. The old testing-based system persists through institutional inertia: it's easy to administer, comparable, defensible in disputes. Theater ratio high (0.64) because the performative aspect of 'holistic evaluation' coexists with persistent test reliance. The testing industry maintains arbitrage through the dual-gate system (tests filter; applications select among filtered cohort)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Selection Problem View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SELECTION PROBLEM VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, any large-scale selection system (universities choosing students; employers choosing workers; admissions committees choosing peers) faces an irreducible epistemic problem: subjective qualities (creativity, resilience, moral character) cannot be measured without relying on proxies that can be gamed. The application essay is a proxy for 'ability to tell a compelling story about oneself' not for 'actual resilience.' No selection system can escape this without abandoning the goal of holistic assessment. This perspective risks naturalizing the extractive gaming as an inevitable feature of human evaluation \u2014 but the data shows resource-dependent gaming is contingent, not inherent."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "essay_authenticity_verification",
+      "question": "What proportion of application essays are substantially authored by students versus service providers or family members?",
+      "resolution_mechanism": "Linguistic analysis of essays vs classroom writing samples; interviews with admitted students on their authorship; market research on essay coaching uptake; university plagiarism detection audit",
+      "impact": "If > 40% ghostwritten: application system is identity fraud mechanism (pure Snare). If < 10%: narrative credibility is mostly self-generated (Rope/Tangled Rope). Mid-range: extraction mechanism is active but not total.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of application essays substantially ghostwritten by services"
+    },
+    {
+      "id": "admission_outcome_by_resource_level",
+      "question": "Do students from high-income families with prep coaching access systematically achieve higher admission rates or higher-tier university placements when controlling for test scores?",
+      "resolution_mechanism": "Regression analysis: admission outcome vs family income, controlling for test scores and application materials quality; stratified by test score band; longitudinal tracking of admitted cohorts",
+      "impact": "If effect size > 0.3 standard deviations: system is extractive (income \u2192 better outcome independent of merit). If < 0.1: system is weakly extractive or mostly merit-based. Effect size determines whether suppression estimate (0.68) is accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether prep coaching and family resources predict admission independent of test scores"
+    },
+    {
+      "id": "rural_school_admission_representation",
+      "question": "Does rural school representation in admission cohorts differ systematically from their share of the applicant pool? Has this changed since application system implementation?",
+      "resolution_mechanism": "Demographic analysis of admitted cohorts vs applicant pool; stratification by school location (urban/suburban/rural); time series from before/after application system adoption; university public admissions data (if available)",
+      "impact": "If rural representation declined post-implementation: system is extractive for rural students (supports Snare classification and high suppression). If unchanged: system extracts but not differentially. If increased: system is genuinely improving access (Rope perspective stronger).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether rural school representation declined after application system adoption"
+    },
+    {
+      "id": "university_true_flexibility_on_essays",
+      "question": "How much weight do universities actually place on application essays and portfolios versus test scores in admission decisions?",
+      "resolution_mechanism": "University admissions office surveys; admission file analysis (test score distribution vs application material distribution in accepted vs rejected cohorts); interview with admissions staff on decision processes",
+      "impact": "If essays < 20% weight: system is theater (Piton classification strengthened). If 40-60%: genuine coordination benefit exists (Rope/Tangled Rope). If > 70%: essays are primary filter (system is holistic as intended).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual weight of essays versus test scores in university admission decisions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Taiwan's Application-Based Admission (\u500b\u4eba\u7533\u8acb) system was introduced as a reform to reduce the stranglehold of standardized testing on university entrance and provide a more holistic assessment of applicants. The system permits students to apply directly to universities with portfolios, essays, and interview records, bypassing or supplementing the Joint College Entrance Exam (JCEE). However, the constraint has bifurcated along resource lines. The rhetoric of 'holistic evaluation' created a market for application coaching, essay services, and narrative positioning expertise. Well-resourced students gained a new avenue to signal capability; poorly resourced students face a new barrier requiring cash and cultural capital to navigate. The system exhibits all six classification types depending on structural position: for rural students it is a pure extraction mechanism (Snare); for prep coaches it is pure coordination benefit (Rope); for admissions committees it is mixed (Tangled Rope); for the testing industry it is a degraded ritual they maintain through inertia (Piton); for students with family mentors it is genuine coordination (Rope); for the field as a whole, the epistemic problem of selecting for unobservable qualities is irreducible (Mountain, though naturalization fallacy applies). The theater ratio (0.64) reflects that universities still rely heavily on test scores to filter applicants before reviewing essays \u2014 the holistic review is largely performative for shortlisted cohorts, not for initial selection.",
+    "key_agents": [
+      "Rural Students / First-Generation Applicants: Primary victims (powerless/trapped) \u2014 cannot access coaching market; lack social capital to interpret expectations; face new resource barrier created by 'holistic' system",
+      "Elite Prep Industry / Educational Consultants: Primary beneficiaries (institutional/arbitrage) \u2014 new market created by essay and portfolio coaching demand; high arbitrage; no extraction cost",
+      "Well-Resourced High Schools: Secondary beneficiaries (institutional/arbitrage) \u2014 have in-house college counseling; alumni networks; understanding of application narratives; can embed coaching into curriculum",
+      "Wealthy/Connected Families: Beneficiaries (institutional/arbitrage) \u2014 can afford private essay coaches ($500-2000 USD for application packages); have social capital to decode university preferences",
+      "University Admissions Committees: Mixed actors (organized/constrained) \u2014 genuinely want holistic evaluation; constrained by volume and unable to verify essay authenticity; enforce the system through labor (reading, interviewing)",
+      "Standardized Testing Industry: Piton actors (institutional/arbitrage) \u2014 appear displaced but persist through institutional inertia; test scores remain primary filters; maintain arbitrage in dual-gate system",
+      "Analytical Observer: Views system as selection problem with irreducible epistemic limits (civilizational/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The system creates a resource-dependent advantage for coaching access. While not as severe as pure predatory extraction (Snare across all perspectives), the effect is systematic and increasing. Initial extractiveness (0.28) reflects lower market sophistication in early years; final value (0.52) reflects mature coaching market and established expectation among elite schools that essay coaching is standard. The intermediate value (0.40) captures the inflection point where coaching became common practice rather than anomaly. Suppression (0.68): Moderate-high. Rural students face multiple suppression mechanisms: lack of nearby coaching services, cultural capital barriers (what makes an essay 'good' is tacit among elites), time cost (essays require significant effort for non-native narrative composers), financial cost (coaching is expensive relative to rural family budgets), and informational suppression (university expectations are opaque outside well-connected networks). However, suppression is not total (some rural students do navigate the system; universities do admit them) and is not backed by explicit coercion \u2014 it is structural. Theater ratio (0.64): Moderate-high. The 'holistic evaluation' narrative is performative in two ways: (1) tests remain primary filters, so essays are mostly read for margin selection within test-score bands; (2) applicant narratives are coached/professionalized, making the 'personal story' authenticity questionable. However, theater is not maximal (0.64 not 0.85) because some admissions committees genuinely engage with essays and some applicants do author authentically.",
+    "perspectival_gap": "This constraint demonstrates how the same structural mechanism produces opposite phenomenological experiences. The application system's stated goal is 'more holistic, fairer evaluation.' From the prep industry's perspective, it is a pure good (Rope) \u2014 it created a market and allows service providers to help students. From a wealthy family's perspective, it is a coordination mechanism (Rope) \u2014 I can hire experts to help my child present authentically, and the system works as intended. From a rural student's perspective, it is a pure extraction (Snare) \u2014 I now face an additional requirement (essay coaching) that I cannot afford, with no alternative exit. From an admissions committee's perspective, it is mixed (Tangled Rope) \u2014 I genuinely want holistic evaluation and the system enables it, but I am constrained by volume and unable to verify authenticity. From the testing industry's perspective, it is degraded but persistent (Piton) \u2014 the application system was supposed to displace us, but we persist because tests are still the primary filter. From a civilizational/analytical perspective, the constraint is an inherent feature of any large-scale selection system (Mountain) \u2014 but this naturalizes what is actually a contingent institutional arrangement (resource-dependent gaming is not intrinsic to holistic evaluation; it is contingent on inequality). The perspectival gap reveals that the constraint is fundamentally about converting test-score inequality into essay-coaching inequality, not about reducing inequality.",
+    "directionality_logic": "Directionality (d) is derived from structural position relative to extraction flow. Rural students: d \u2248 0.90 (trapped exit + victim status + low power \u2192 full target). First-generation applicants: d \u2248 0.70 (constrained exit + mixed victim/beneficiary status + moderate power \u2192 target but with some mobility). Prep industry: d \u2248 0.10 (arbitrage exit + beneficiary status + institutional power \u2192 beneficiary). Well-resourced schools: d \u2248 0.05 (arbitrage exit + clear beneficiary + institutional power \u2192 strong beneficiary). Admissions committees: d \u2248 0.55 (constrained exit + enforcer role + organized power \u2192 symmetric, bearing enforcement cost and benefiting from system legitimacy). The engine derives high d \u2192 high f(d) \u2192 high experienced \u03c7 for trapped students; low d \u2192 low f(d) \u2192 negative \u03c7 for beneficiaries. This produces the perspectival gap: snare from powerless (d=0.90, f(d)\u22481.42), rope from institutional beneficiaries (d=0.05-0.10, f(d)\u2248-0.12 to -0.01).",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves the mandatrophy by showing that it is NOT a mountain. The civilizational observer's argument ('all selection systems have this tradeoff') mistakes the epistemic problem of measuring unobservables for the extractive problem of resource-dependent access. The epistemological tradeoff is real (holistic vs measurable is inherent). The extractive gaming is not (it emerges only when wealthy students can buy narrative coaching). A hypothetical system that (1) provided free essay coaching to all students, (2) anonymized applications at initial read, and (3) weighted essays more heavily than tests, would solve the epistemic tradeoff AND eliminate the resource-dependent extraction. Such a system is feasible, so the extraction is not inherent \u2014 it is contingent on institutional design. Therefore, the Mountain classification is a false summit. The system is best described as Tangled Rope at the analytical level: it has a genuine coordination function (holistic evaluation) but is being overlaid with asymmetric extraction (resource-dependent coaching advantage). The mandatrophy is resolved by clarifying the distinction between the epistemic problem (unsolvable) and the extractive mechanism (contingent, solvable)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "standardized_testing_dependence",
+      "educational_inequality_reproduction"
+    ],
+    "dual_formulation_note": "This constraint decomposes the broader 'Taiwan university admission reform' into two structurally distinct claims: (1) Application system as information standard for evaluating non-test dimensions (Rope/Tangled Rope, \u03b5 \u2248 0.30), and (2) Application system as extractive gatekeeping mechanism enabled by resource inequality (Snare from victim perspective, \u03b5 \u2248 0.52 from systemic view). The higher \u03b5 value captures the extractive layering onto the coordination function. Upstream: standardized_testing_dependence (still persists; \u03b5 \u2248 0.45, Tangled Rope). Downstream: educational_inequality_reproduction (application system amplifies via coaching market; \u03b5 \u2248 0.60, Snare from victim perspective)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "jevons_paradox",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Jevons Paradox (The Rebound Effect)",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "consumers",
+      "technology_producers"
+    ],
+    "victims": [
+      "environmental_commons",
+      "future_generations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Environmental Commons",
+      "comment": "Perspective 1: Environmental Commons (Snare). The environmental commons, lacking agency, is trapped and bears the brunt of increased resource consumption. No exit option; powerless to counteract the paradox."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Technology Producers",
+      "comment": "Perspective 2: Technology Producers (Rope). Technology producers benefit from increased demand for their efficiency-enhancing technologies. They experience the Jevons Paradox as a positive feedback loop, driving further innovation and sales. Arbitrage opportunities abound."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Consumers",
+      "comment": "Perspective 3: Consumers (Tangled Rope). Consumers benefit from lower per-unit resource costs due to increased efficiency, but are constrained by the overall increase in consumption. They experience both benefits (lower costs) and costs (environmental degradation)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 4: Analytical Observer (Tangled Rope). Analyzes the system holistically, recognizing both the coordination (increased efficiency) and extraction (increased consumption) aspects of the Jevons Paradox. Sees the long-term implications for resource depletion and environmental damage."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demand_elasticity",
+      "question": "How elastic is the demand for the resource in question? High elasticity exacerbates the rebound effect.",
+      "resolution_mechanism": "Empirical analysis of demand curves and consumer behavior in response to price changes.",
+      "impact": "If demand is highly elastic, the Jevons Paradox is more likely to occur and be more severe. If inelastic, the rebound effect is weaker.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Elasticity of demand for the resource."
+    },
+    {
+      "id": "consumer_preferences",
+      "question": "To what extent do consumer preferences favor resource-intensive lifestyles?",
+      "resolution_mechanism": "Sociological studies of consumer attitudes, values, and consumption patterns.",
+      "impact": "If consumers prioritize resource-intensive goods and services, the Jevons Paradox is more pronounced. If preferences shift towards sustainability, the rebound effect can be mitigated.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Consumer preferences impacting resource consumption."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Jevons Paradox occurs when technological progress increases the efficiency with which a resource is used, but the rate of consumption of that resource rises because of increasing demand. This increased demand often negates the benefits of the increased efficiency. It represents a complex interplay of technological advancement, consumer behavior, and resource economics.",
+    "key_agents": [
+      "Consumers: Moderate power, constrained exit. Benefit from lower prices but are constrained by resource availability.",
+      "Technology Producers: Institutional power, arbitrage exit. Benefit from increased demand for their technologies.",
+      "Environmental Commons: Powerless, trapped exit. Suffers from increased resource consumption.",
+      "Future Generations: Powerless, trapped exit. Inherit depleted resources and degraded environment."
+    ],
+    "logic_rationale": "The Jevons Paradox is classified as a Tangled Rope because it involves both coordination (increased efficiency) and extraction (increased consumption). Extractiveness is rated at 0.55 because the overall effect leads to greater resource depletion. Suppression is at 0.40 as the market forces drive the consumer behavior. The Theater Ratio is low because there is not really a significant theatrical performance component.",
+    "perspectival_gap": "Technology Producers see the Jevons Paradox as a benefit (Rope), while the Environmental Commons experience it as a loss (Snare). Consumers experience a mix of benefits and costs (Tangled Rope). The Analytical Observer attempts to understand the systemic implications (Tangled Rope).",
+    "directionality_logic": "The directionality is derived from the beneficiaries and victims. Technology producers benefit (low d), environmental commons are harmed (high d). Consumers experience a mixed effect, with directionality values between 0 and 1 based on the elasticity of demand and their capacity for exit (shifting to less resource-intensive consumption)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "resource_depletion",
+      "climate_change"
+    ]
+  },
+  "directionality_overrides": []
+}

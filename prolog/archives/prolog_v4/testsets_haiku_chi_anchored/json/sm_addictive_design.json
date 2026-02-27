@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "sm_addictive_design",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "smad"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Social Media Addictive Design Features",
+    "topic_domain": "technological/platform_economics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "platform_operators",
+      "advertisers"
+    ],
+    "victims": [
+      "end_users",
+      "adolescent_cognitive_development",
+      "attention_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User (Behavioral Captive)",
+      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Individual users lack viable alternatives and bear the full extraction cost through attention capture and behavioral manipulation. Notification systems, infinite scroll, variable reward schedules, and social validation metrics create compulsive use patterns. Exit requires coordinated collective action. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Adolescent Cognitive Development (Systemic Victim)",
+      "comment": "PERSPECTIVE 2: ADOLESCENT COGNITIVE DEVELOPMENT (SNARE) \u2014 Cannot consent to or opt out of exposure during critical neural development windows. Features exploit reward-seeking and social-validation circuits during formation. Supression is structural and near-total in childhood/early adolescence. d\u22480.98, f(d)\u22481.50, \u03c3=1.2 \u2192 \u03c7\u22481.02 (capped at theoretical limits by \u03c7 formula bounds)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Platform Operators",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATORS (ROPE) \u2014 Experience addictive design as a coordination solution: aligning user engagement with advertising spend and shareholder returns. The constraint enables information exchange between users and platforms, mediated by algorithmic matching. Operators have arbitrage exit (can shift to alternative revenue models) and see coordination benefits. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.08. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Advertisers",
+      "comment": "PERSPECTIVE 4: ADVERTISERS (ROPE) \u2014 Experience addictive design as a coordination mechanism: solving the matching problem between their products and attention-captured users. High engagement = high conversion probability. Arbitrage exit (can shift to other platforms) and pure coordination function with minimal extraction from advertiser perspective. d\u22480.10, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Content Creators (Intermediate Victims)",
+      "comment": "PERSPECTIVE 5: CONTENT CREATORS (TANGLED ROPE) \u2014 Depend on platform algorithms for reach and income, but also benefit from engagement optimization (their content gets amplified). However, they are constrained by algorithmic opacity and platform policy changes. Mixed extraction and coordination: they both exploit and are exploited by the addictive mechanics. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Attention Commons Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational view, addictive design extracts from the shared attention commons \u2014 a public good that once degraded, affects collective coordination capacity, democratic deliberation, and long-term social well-being. The constraint is viewed as extraction from a statistical aggregate (society-wide attention and focus capacity). d\u22480.85, f(d)\u22481.20, \u03c3=1.2 \u2192 \u03c7\u22480.83."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntary_vs_compulsive_boundary",
+      "question": "At what threshold does engagement optimization become behavioral addiction rather than normal persuasion?",
+      "resolution_mechanism": "Neuroscientific studies of dopamine response patterns; comparison of behavioral metrics (time-to-compulsion, withdrawal symptoms, interference with other activities) across user populations",
+      "impact": "If threshold low (design features trigger measurable addiction): snare classification confirmed for all perspectives. If threshold high (users retain substantial agency): reframe as tangled_rope or piton (degraded coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between persuasion and behavioral addiction"
+    },
+    {
+      "id": "alternative_coordination_viability",
+      "question": "Could advertising-funded social coordination exist without addictive design mechanics?",
+      "resolution_mechanism": "A/B testing of non-addictive engagement features on major platforms; market analysis of alternative revenue models (subscription, data marketplace, federation); user behavior under reduced-engagement designs",
+      "impact": "If viable: addictive design is contingent extraction, not inherent coordination requirement \u2014 snare classification strengthened. If not viable: extract is bound to coordination function \u2014 tangled_rope from platform operator perspective becomes primary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether advertising can be sustained without addictive mechanics"
+    },
+    {
+      "id": "adolescent_consent_capacity",
+      "question": "What developmental age marks sufficient prefrontal maturity for meaningful consent to addictive design exposure?",
+      "resolution_mechanism": "Longitudinal neuroimaging and behavioral studies of impulse control development; correlation between age-of-exposure and long-term behavioral patterns; cross-cultural adoption studies",
+      "impact": "If development complete by age 16: current adolescent exposure may be recoverable (tangled rope). If development extends past age 21 or requires protective periods: exposure to under-21s is extraction from incapacity (maximal snare). Direct implication for regulation severity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Developmental maturity for addictive design consent"
+    },
+    {
+      "id": "algorithmic_opacity_extractiveness",
+      "question": "How much of the extractiveness (0.58) derives from algorithmic opacity vs. from the addictive features themselves?",
+      "resolution_mechanism": "Comparison of user behavior and satisfaction under transparent (disclosed algorithms) vs. opaque design; regulatory transparency mandates (EU AI Act, digital services acts) and behavioral outcomes; user agency under informed-choice conditions",
+      "impact": "If primarily opacity: fixing transparency reduces \u03c7 to ~0.30, reclassifying toward rope. If primarily mechanics: transparency has minimal effect, snare classification stands. Determines whether regulation focuses on transparency or feature restriction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of extractiveness to opacity vs. design mechanics"
+    },
+    {
+      "id": "collective_action_threshold",
+      "question": "At what user-base coordination level do end users transition from powerless to organized?",
+      "resolution_mechanism": "Historical analysis of platform migration waves (Reddit, Bluesky, Mastodon); critical mass thresholds for alternative adoption; network effects analysis",
+      "impact": "If threshold low (1-5% coordinated exit): end users may organize collective exit, upgrading to organized/mobile perspective. If threshold very high: coordination deficit persists (powerless/trapped remains dominant). Affects whether snare classification is temporally stable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Collective action threshold for end-user coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.27
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Social media addictive design represents a system of coordinated technological features (notification systems, infinite scroll, variable reward schedules, social validation metrics, algorithmic amplification) optimized to maximize user engagement and time-on-platform. This constraint operates as pure extraction from the end-user perspective but appears as coordination from the platform operator and advertiser perspectives. The structural asymmetry is stark: platforms and advertisers benefit from maximized engagement, while users bear the costs of attention capture, behavioral manipulation, and in the case of adolescents, disrupted cognitive development during critical neural windows. The constraint's extractiveness (0.58) and suppression (0.68) reflect high coercion and minimal perceived alternatives for individual users. The theater_ratio (0.35) indicates that while platforms deploy performative narratives around 'community' and 'connection,' the primary function is straightforward extraction of attention for monetization \u2014 the theater is lower than in many Tangled Rope constraints because the coordination function is minimal from the user's perspective.",
+    "key_agents": [
+      "End Users (Individual Consumers): Primary victim (powerless/trapped) \u2014 bear attention extraction and behavioral manipulation costs; few individual exit options",
+      "Adolescents: Vulnerable victim subclass (powerless/trapped at development stage) \u2014 cannot meaningfully consent; exposure during neural development window creates capacity-based extraction",
+      "Attention Commons: Abstract collective victim (powerless/trapped) \u2014 public good degradation; reduced societal focus capacity and democratic deliberation quality",
+      "Platform Operators (Meta, Google, ByteDance, etc.): Primary beneficiary (institutional/arbitrage) \u2014 extract attention and behavioral data for monetization; have exit options (alternative business models) but benefit from current arrangement",
+      "Advertisers: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from engagement-amplified targeting; have alternative platforms available",
+      "Content Creators: Intermediate victim (moderate/constrained) \u2014 depend on algorithmic amplification for reach but also constrained by algorithmic opacity and policy changes; mixed extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Addictive design mechanisms systematically extract attention and behavioral data from users in exchange for access to social features. The extraction is not maximal (0.7+) because users do retain some agency (can reduce usage, switch platforms, use features selectively), but the mechanics are specifically engineered to minimize these exit paths. Measured as: (time extracted / total user time) \u00d7 (behavioral autonomy loss) \u00d7 (data monetization value). Suppression (0.68): Moderate-high. Significant suppression of alternatives comes from: (a) network effects (everyone is on the major platforms), (b) lack of transparent alternatives (most people unaware addictive mechanics can be removed), (c) algorithmic opacity (users cannot see why content is amplified), (d) switching costs (social graph re-establishment), and (e) developmental stage (adolescents cannot fully evaluate alternatives). Theater ratio (0.35): Low-moderate. Platforms deploy narrative theater around 'bringing people together,' 'authentic connection,' and 'community,' but this is subordinate to the actual function: monetizing attention through engagement optimization. The theater is present (marketing, community guidelines, fact-checking) but less central than in Tangled Rope or Piton constraints \u2014 the primary mechanism is transparent extraction via observable metrics (likes, shares, watch time). The theater has increased over the interval as regulatory pressure mounted, pushing platforms to invest in corporate responsibility narratives.",
+    "perspectival_gap": "The perspectival gap here is maximal and structural. Platform operators and advertisers classify the constraint as Rope (coordination: matching users with content and ads). End users classify it as Snare (extraction: attention capture with minimal exit). Adolescents see an even more extreme Snare (incapacity-based extraction). Content creators occupy a middle position (Tangled Rope) \u2014 they benefit from engagement optimization but are also constrained by it. The analytical observer can take multiple views: the attention commons perspective (Snare of civilization-scale attention degradation), or a developmental perspective (Snare of cognitive development extraction). No agent sees Rope except the beneficiaries. No agent sees coordination except from the platform's own narrowly-scoped goal (maximizing engagement). The gap reflects the fundamental misalignment: what the platform calls 'engagement coordination' is what users experience as 'attention extraction.' The metrics (extractiveness=0.58, suppression=0.68) support the user and analytical observer classifications; the platform operators' Rope classification comes from their structural position as beneficiaries with arbitrage exit, not from intrinsic constraint properties.",
+    "directionality_logic": "End users: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction from individual perspective. Users cannot exit without coordination and lack information about behavioral mechanics. Adolescents: Victim + trapped + incapacity \u2192 d\u22480.98, f(d)\u22481.50. Near-maximal extraction from capacity-based perspective. Developmental stage prevents meaningful consent or exit reasoning. Platform operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. Have alternative revenue models available (subscription, licensing, federation) but current model maximizes revenue. Advertisers: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.10. Net beneficiary. Can shift advertising budgets to alternative platforms. Content creators: Mixed victim/beneficiary + constrained \u2192 d\u22480.55, f(d)\u22480.75. Constrained because they depend on platform algorithms for reach but cannot opt out of algorithmic opacity. Attention commons: Victim (structural aggregate) + no exit \u2192 d\u22480.85, f(d)\u22481.20. High extraction from collective perspective. No entity represents attention commons interests; degradation persists.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy (the conflation of coordination with extraction) by maintaining clear beneficiary/victim boundaries. Platform operators genuinely coordinate users with content (Rope from their perspective), but this coordination is secondary to their primary function: extracting attention for monetization (Snare from user perspective). The constraint does NOT claim that coordination and extraction are the same thing; it recognizes that the same mechanisms serve different functions for different agents. The mandatrophy would arise if an analyst claimed 'addictive design IS coordination for users' \u2014 but the metrics (suppression=0.68, extractiveness=0.58) and the structural data (beneficiary/victim split) prevent this confusion. The snare classification is confirmed across the powerless, analytical, and adolescent perspectives, with only the beneficiary perspectives seeing rope. This pattern (snare from victims, rope from beneficiaries) is exactly the structure that resolves mandatrophy: the constraint exhibits both coordination and extraction, but they are structurally asymmetric and directed at different agents."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "attention_scarcity_market",
+      "adolescent_mental_health_extraction",
+      "data_monetization_apparatus"
+    ],
+    "dual_formulation_note": "Addictive design is downstream of advertising-funded platform economics and upstream of specific mental health outcomes (depression, anxiety, sleep disruption in adolescents). The extractiveness value (0.58) reflects the attention-extraction mechanism; downstream constraints decompose the specific damage pathways (mental health, cognitive development). Upstream constraint (advertising model) has different \u03b5 reflecting the market structure choice rather than behavioral mechanics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "iran_nuclear_deal_informal_2023",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "iran_informal"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Informal US-Iran Nuclear De-escalation Agreement (2023)",
+    "topic_domain": "geopolitical/nuclear_diplomacy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "us_regional_military_interests",
+      "iranian_sanctions_relief_constituency"
+    ],
+    "victims": [
+      "global_nonproliferation_regime",
+      "treaty_verification_integrity",
+      "regional_allies_excluded"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Regional Allies (Israel, Gulf States)",
+      "comment": "PERSPECTIVE 1: REGIONAL ALLIES (SNARE) \u2014 Israel and Gulf Arab states face binding commitment to accept a de-escalation framework they did not negotiate and cannot modify. Trapped by geographic proximity and dependence on US security umbrella. The informal agreement constrains their options without representation. Maximum extraction: high suppression (cannot veto), high asymmetry (excluded from negotiations), no arbitrage path."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global Nonproliferation Regime",
+      "comment": "PERSPECTIVE 2: NONPROLIFERATION REGIME (SNARE) \u2014 The NPT framework and IAEA verification architecture cannot exit an informal arrangement that bypasses their institutional mechanisms. The regime is trapped by great-power politics. Informal deals undermine the institutional integrity required for verification. Cannot organize or enforce. Trapped and victimized."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Iran",
+      "comment": "PERSPECTIVE 3: IRAN (TANGLED ROPE) \u2014 Powerful enough to demand recognition and negotiate terms, but constrained by sanctions vulnerability and internal factional pressures. Benefits from de-escalation (sanctions relief pathway, legitimacy) but bears verification burdens and constrained by ability to credibly signal compliance without formal transparency. Mixed experience: coordination mechanism (mutual restraint) plus extraction (asymmetric disclosure requirements)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "United States Administration",
+      "comment": "PERSPECTIVE 4: US ADMINISTRATION (TANGLED ROPE) \u2014 Organized power with primary beneficiary status. Gains diplomatic victory and de-escalation narrative. But constrained by domestic political opposition, Congressional skepticism, and need for plausible deniability if informal arrangement breaks down. Active enforcement required (signaling compliance, restraining hardliners) but cannot formalize without Senate approval. Extraction runs through: informal status shields US from treaty constraints while appearing cooperative."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Russian and Chinese Strategic Interests",
+      "comment": "PERSPECTIVE 5: RUSSIAN/CHINESE STRATEGIC INTERESTS (ROPE) \u2014 Benefit from US-Iran de-escalation as coordination mechanism reducing their own Middle East exposure and conflict risk. Can arbitrage between formal/informal arrangements. See the constraint as pure coordination: US and Iran managing mutual threat reduces great-power intervention scenarios. Low extraction experienced because both benefit from reduced conflict."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Formal Treaty Infrastructure (JCPOA/UN Institutions)",
+      "comment": "PERSPECTIVE 6: FORMAL TREATY INFRASTRUCTURE (PITON) \u2014 The JCPOA and UN inspection apparatus persist as institutional structures, but their functional verification role has been displaced by an informal arrangement they cannot access. The formal apparatus continues performing verification theater (IAEA inspections continue, reporting continues) but the real coordination happens off-stage. Piton because function has atrophied (verification now depends on back-channel signaling) while institutional forms persist through inertia."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Temporary De-escalation Framework)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 From an analytical/generational perspective, the informal arrangement functions as a temporary coordination mechanism with an implicit sunset: it exists because formal negotiation is politically impossible in 2023, but creates pressure toward either (a) formalization into a new treaty, or (b) breakdown into crisis when political conditions shift. Theater ratio high (0.65) because performative diplomatic engagement masks underlying verification gaps. Sunset logic: incompleteness of informal arrangement drives pressure toward resolution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "informal_vs_binding",
+      "question": "Does 'informal' create a structurally different constraint from a formal treaty, or is it the same constraint with different theater ratio?",
+      "resolution_mechanism": "Empirical test: Compare compliance behavior under formal JCPOA (2015-2018) to informal arrangement (2023-present). If behavioral patterns are similar, it is the same constraint with higher theater. If compliance mechanisms fundamentally differ, it is a different constraint.",
+      "impact": "If same constraint: the \u03b5 value should remain ~0.52 and classification is stable tangled_rope. If different constraint: informal arrangement may have lower \u03b5 (pure coordination) or higher \u03b5 (pure extraction/snare) depending on verification sufficiency.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether informality creates structurally different constraint"
+    },
+    {
+      "id": "verification_sufficiency",
+      "question": "Can Iran's compliance be verified through informal signaling and intelligence channels, or does effective verification require the IAEA institutional apparatus?",
+      "resolution_mechanism": "Post-2023 case analysis: Document specific verification events (breakout scenarios, facility access, enrichment alerts). Compare detection speed and confidence under informal vs formal JCPOA arrangements. Cross-reference with IAEA technical capacity assessments.",
+      "impact": "If informal verification is sufficient: suppression score should be lower (~0.45), classification may shift to rope. If insufficient: suppression should increase (~0.80), classification may become snare. This is the most consequential omega.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether informal verification mechanisms suffice"
+    },
+    {
+      "id": "us_domestic_constraint_asymmetry",
+      "question": "Does the US domestic political constraint (Senate opposition to formal treaty) represent a genuine structural limit of the constraint, or is it a temporary political artifact?",
+      "resolution_mechanism": "Monitor US Congressional positions on Iran nuclear diplomacy. Track whether future administrations could formalize the arrangement. Assess whether Senate dynamics are structural or cyclical.",
+      "impact": "If structural: the informality is not temporary, and the constraint is a stable tangled_rope or piton. If temporary: the constraint is a genuine scaffold with a real sunset toward formalization.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether US domestic constraint is structural or temporary"
+    },
+    {
+      "id": "regional_ally_coalition_capacity",
+      "question": "Can excluded regional allies (Israel, Gulf states) credibly threaten to exit the implied coordination framework, or are they structurally trapped?",
+      "resolution_mechanism": "Analyze military action scenarios (Israeli strikes, Gulf arms race) and their relationship to informal arrangement. Track whether allies develop independent verification or deterrence pathways.",
+      "impact": "If capable of credible threat: regional allies' exit options improve from trapped to constrained, reducing their experienced extraction. If powerless: they remain snares from their perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional allies can credibly exit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The informal US-Iran nuclear de-escalation agreement of 2023 represents a constrained diplomatic arrangement where both principal parties (US and Iran) benefit from reduced tensions and sanctions relief pathways, but the informality creates structural asymmetries: excluded regional allies are trapped, the global nonproliferation regime loses institutional control, and verification depends on back-channel signaling rather than transparent inspection. The constraint exhibits high suppression (68%) because alternatives are actively foreclosed \u2014 formal renegotiation is politically impossible in both capitals, regional allies cannot veto, and the nonproliferation regime has no enforcement lever. Theater ratio (65%) reflects that public diplomatic engagement and IAEA inspections continue as performative apparatus while real coordination happens through informal channels. The agreement is neither pure extraction (Snare) nor pure coordination (Rope) \u2014 it is a hybrid where the US and Iranian administrations coordinate mutual restraint (coordination function) while extracting terms that exclude other stakeholders and bypass institutional verification (extraction function). This makes it a diagnostic tangled_rope: it solves the immediate US-Iran crisis (coordination benefit) while accumulating verification deficits and excluding affected parties (asymmetric extraction).",
+    "key_agents": [
+      "United States Administration: Primary beneficiary (organized/constrained) \u2014 gains de-escalation narrative and sanctions relief leverage without formal treaty constraints",
+      "Iran: Primary beneficiary (powerful/constrained) \u2014 gains sanctions relief pathway and legitimacy; constrained by verification burdens and internal faction management",
+      "Regional Allies (Israel, Gulf States): Primary victims (powerless/trapped) \u2014 excluded from negotiation, dependent on US security umbrella, face binding de-escalation they did not consent to",
+      "Global Nonproliferation Regime: Structural victim (powerless/trapped) \u2014 IAEA and NPT frameworks bypassed; verification integrity compromised by great-power politics",
+      "Formal Treaty Infrastructure (JCPOA/UN): Institutional actor (institutional/arbitrage) \u2014 formal apparatus persists but functional role has atrophied; sees verification displaced by informal channels",
+      "Russian and Chinese Strategic Interests: Tertiary beneficiaries (institutional/arbitrage) \u2014 benefit from reduced US-Iran conflict without being pulled into crisis management",
+      "Analytical Observer: External perspective (analytical/analytical) \u2014 sees the arrangement as temporary scaffold with implicit sunset toward either formalization or breakdown"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The US administration and Iran each extract benefits (de-escalation, sanctions relief, legitimacy) from the coordination function, but this is legitimate mutual benefit rather than pure extraction. However, the informality enables asymmetric extraction: US avoids Senate ratification burdens while appearing cooperative; Iran must accept verification asymmetries and informal compliance burdens. The growth from 0.44 to 0.52 reflects expanding compliance verification requirements over the interval. Suppression (0.68): High. Significant structural suppression: regional allies have zero input on the arrangement, the formal nonproliferation regime cannot participate, and alternative pathways (Congressional renegotiation, multilateral approaches) are actively foreclosed by political constraints. Senate opposition makes formalization impossible in the US; Iranian hardline factions constrain Iran's flexibility. Theater ratio (0.65): Moderate-high. Public diplomatic statements, IAEA inspections, and UN reporting continue as performative apparatus while substantive verification happens through back-channel intelligence sharing. The performative content is high because the public claim (de-escalation through transparency) masks the reality (informal arrangement relies on trust and intelligence sharing, not institutional verification). Theater has increased from 0.50 to 0.65 as the gap widens between public posture and informal reality.",
+    "directionality_logic": "Each perspective's directionality is determined by structural position relative to the extraction flow. The US and Iran, as primary beneficiaries with power to negotiate, experience low d values (beneficiary + organized/powerful \u2192 d \u2248 0.35-0.45) despite constrained exit \u2014 they structured the arrangement to benefit themselves. Regional allies, trapped with no negotiating capacity, experience high d values (victim + powerless/trapped \u2192 d \u2248 0.95). The nonproliferation regime, bypassed entirely, experiences high d (victim + powerless \u2192 d \u2248 0.95). Russia and China, who can arbitrage between formal and informal arrangements, experience low d (beneficiary + institutional/arbitrage \u2192 d \u2248 0.15). The formal treaty infrastructure persists but its verification function is displaced, creating ambiguous directionality \u2014 it nominally benefits from continued institutional role (IAEA inspections continue) but actually becomes vestigial (real decisions happen off-stage). This directionality distribution (majority of perspectives showing high d or low d) indicates significant perspectival gaps.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. Regional allies and the nonproliferation regime experience pure extraction (Snare) \u2014 they are trapped, excluded, and bear costs without benefits. The US and Iran experience mixed coordination and extraction (Tangled Rope) \u2014 they both benefit from mutual de-escalation (coordination) while structuring the arrangement to extract favorable terms (extraction). Russia and China experience pure coordination (Rope) \u2014 they benefit from reduced conflict risk and can arbitrage between formal/informal arrangements. The formal treaty apparatus experiences degradation (Piton) \u2014 its institutional role persists but functional verification has been displaced. The analytical observer sees a temporary arrangement (Scaffold) with an implicit sunset \u2014 informality creates pressure toward either formalization (once US politics change) or breakdown (if violations emerge). The perspectival gaps arise from structural asymmetries: who was included in negotiations determines their experience. Beneficiaries see coordination; victims see extraction; observers see temporality and theater.",
+    "mandatrophy_analysis": "MANDATROPHY CASE: This constraint avoids the trap of mislabeling pure extraction (snare) as coordination (rope). From some perspectives it is legitimately a snare (regional allies, nonproliferation regime), from others legitimately tangled rope (US and Iran), from others rope (Russia/China). The mandatrophy is resolved by recognizing that the same constraint is GENUINELY different structural objects from different observation positions. The US administration's experience (tangled rope: both coordinate and extract) is not the same constraint as Israel's experience (snare: pure exclusion and extraction). The perspectival gap is not measurement error \u2014 it is structural reality. The informality itself is the resolution mechanism: by keeping the arrangement informal, the US and Iran avoid the formal commitment that would force the nonproliferation regime or Congress into the negotiation, which would reduce their extracted benefits. Informality = structural device to maximize extraction from parties with no veto power while maintaining coordination with the peer power (Iran). The theater ratio (0.65) reflects that this extraction mechanism depends on plausible deniability: public messaging emphasizes cooperation and de-escalation (coordination frame) while actual terms emphasize exclusion and verification asymmetry (extraction frame). The arrangement survives because affected parties either benefit (US, Iran) or are structurally unable to mobilize (regional allies, nonproliferation regime)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "saudi_iran_rapprochement_2023",
+      "iaea_verification_asymmetry",
+      "regional_ally_security_dependency"
+    ],
+    "dual_formulation_note": "The informal arrangement decomposes into two structurally distinct constraints: (1) US-Iran mutual restraint (\u03b5 \u2248 0.35, tangled_rope) \u2014 genuine coordination with asymmetric extraction; (2) Regional exclusion and nonproliferation regime bypass (\u03b5 \u2248 0.70, snare) \u2014 pure extraction from trapped actors. These are linked: the informal status of constraint (1) enables the extraction in constraint (2). Downstream constraints show how the informality propagates: Saudi-Iran rapprochement requires parallel exclusion logic; IAEA verification becomes asymmetric; regional allies deepen security dependency."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "jcpoa_formal_treaty_2015"
+    ]
+  }
+}

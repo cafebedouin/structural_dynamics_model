@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "shitty_feedback_handling",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Protocol for Handling Shitty Feedback",
+    "topic_domain": "social/professional",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ineffective_managers",
+      "feedback_training_industry"
+    ],
+    "victims": [
+      "employees_receiving_feedback",
+      "organizational_performance"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Employee Receiving Shitty Feedback",
+      "comment": "The employee receiving the feedback often feels trapped, unable to effectively challenge or ignore the feedback without risking negative repercussions. The extraction comes from the emotional toll, wasted time, and potential career stagnation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Well-Meaning Colleague",
+      "comment": "Colleagues observe the shitty feedback and may attempt to mitigate its effects or offer alternative interpretations. They are constrained by their own positions and relationships within the organization but benefit from maintaining a functional work environment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Ineffective Managers",
+      "comment": "Managers who provide 'shitty feedback' may benefit from maintaining control, avoiding difficult conversations, or simply lacking the skills to provide constructive criticism. This is coordination for them, as the system supports the status quo."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "HR Department (Procedural Compliance)",
+      "comment": "HR departments often have protocols for feedback, but these may be performative and ineffective at addressing the root causes of 'shitty feedback.' The process exists, but its functional value is limited."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The observer sees the system as a tangled rope, with coordination (maintaining hierarchical structure) and extraction (emotional toll on employees). The observer sees the entire structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "feedback_skill_definition",
+      "question": "What constitutes 'good' versus 'shitty' feedback in a specific organizational context?",
+      "resolution_mechanism": "Empirical studies of feedback effectiveness; analysis of the impact of different feedback styles on employee performance and well-being",
+      "impact": "Clarifying the definition could shift the classification from Snare to Rope or vice versa, depending on whether the feedback is perceived as helpful or harmful.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The definition of 'good' vs 'shitty' feedback"
+    },
+    {
+      "id": "cultural_feedback_norms",
+      "question": "How do cultural norms and expectations influence the perception and delivery of feedback?",
+      "resolution_mechanism": "Cross-cultural studies of feedback practices; analysis of the impact of cultural differences on employee reactions to feedback",
+      "impact": "Different cultural norms could mitigate or exacerbate the negative effects of 'shitty feedback,' influencing the overall extractiveness of the system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact of cultural norms on feedback perception"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "\"Shitty feedback\" is a ubiquitous byproduct of social systems where feedback skills are rare. The protocol for handling it involves complex power dynamics, emotional resilience, and organizational structures. It manifests as a tangled rope, with coordination in the form of maintaining hierarchical structure and extraction in the emotional toll it takes on employees and the drag it puts on organizational performance. It also has piton aspects, with existing HR protocols being little more than theater and organizational inertia maintaining the status quo.",
+    "key_agents": [
+      "Employees Receiving Feedback: Primary target (powerless/trapped) - subject to the negative effects of poorly delivered feedback.",
+      "Ineffective Managers: Primary beneficiary (institutional/arbitrage) - benefits from maintaining control or avoiding difficult conversations.",
+      "HR Department: Secondary institutional actor (institutional/constrained) - maintains feedback protocols, often performative.",
+      "Well-Meaning Colleague: Moderate actor (moderate/constrained) - observes feedback dynamics and attempts to mitigate the negative effects",
+      "Feedback Training Industry: Beneficiary (powerful/arbitrage) - can arbitrage demand for better feedback skills."
+    ],
+    "logic_rationale": "Extractiveness is moderate (0.55) because while the extraction can be high for individuals, the effects are often localized and diffused. Suppression is moderate (0.40) because employees often have limited options for challenging or ignoring the feedback without risking negative consequences. Theater is also moderate (0.75) since procedures are in place, but their efficacy is low.",
+    "perspectival_gap": "The employee feels trapped, the manager feels in control, the HR department fulfills its duty, and the organization performs sub-optimally. The system supports the status quo, providing benefits to managers and the HR department, but extracting from the employees and the organization as a whole.",
+    "directionality_logic": "Directionality is determined by the power level, exit options, and relationship to the extraction flow. The pipeline computes 'd' from these context parameters and applies a sigmoid function to produce effective extractiveness, chi.",
+    "mandatrophy_analysis": "The protocol for handling shitty feedback demonstrates the nuances of human interaction within organizational structures. While certain perspectives may view the scenario as purely extractive or merely co-ordinative, this model identifies the co-existence of both elements creating a system that at once extracts from some whilst coordinating on behalf of others."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

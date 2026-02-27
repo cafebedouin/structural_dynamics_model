@@ -1,0 +1,156 @@
+{
+  "header": {
+    "constraint_id": "ritualistic_transition_scaffold",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rts"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.65,
+    "claimed_type": "scaffold",
+    "human_readable": "The Habit-Building Scaffold",
+    "topic_domain": "social/institutional",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "organizational_leadership",
+      "stabilizing_agents"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Organizational Leadership",
+      "comment": "PERSPECTIVE 1: ORGANIZATIONAL LEADERSHIP (SCAFFOLD) \u2014 Institutional actors with exit optionality. They deploy ritual and procedural constraint intentionally to stabilize chaotic operational states. The constraint is temporary by design: once organizational habits solidify and implicit coordination replaces explicit ritual, the constraint can be lifted. Leadership experiences the ritual as a sunset mechanism, not an extractive burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Individual Member",
+      "comment": "PERSPECTIVE 2: INDIVIDUAL MEMBER (ROPE) \u2014 Participants in the ritual experience it primarily as coordination. The shared procedural structure reduces ambiguity about role expectations, meeting times, communication norms, and decision-making processes. Extractiveness is low because the ritual directly enables the member's own goal (stable collaboration). Mobile exit options (can leave if norms become intolerable) prevent maximum suppression."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Collective Habit Formation",
+      "comment": "PERSPECTIVE 3: COLLECTIVE HABIT FORMATION (SCAFFOLD) \u2014 Organized agents (the implicit group coordination system) see the ritual as a temporary support structure for embedding new norms. Theater ratio is elevated because much of the ritual is performative \u2014 the explicit verbalization and ceremonial aspects serve to reinforce cognitive pathways rather than accomplish material tasks. But the sunset is clear: as habits solidify and the group internalizes coordination, explicit ritual becomes redundant and dissolves naturally."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Resistant Minority",
+      "comment": "PERSPECTIVE 4: RESISTANT MINORITY (TANGLED ROPE) \u2014 Some members experience the ritual as both coordination (solving the chaos problem) and extraction (time cost, forced participation, loss of autonomy). They are constrained by organizational membership and group pressure while also benefiting from the stabilization. The mixture of coordination function and asymmetric cost places this perspective at tangled_rope rather than pure rope or pure snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Behavioral Science Observer",
+      "comment": "PERSPECTIVE 5: BEHAVIORAL SCIENCE OBSERVER (ROPE) \u2014 From the analytical/civilizational level, ritual-based habit formation is a well-established coordination mechanism with strong empirical support (habit loops, environmental design, social proof). The constraint classifies as pure rope: coordination function is primary, extraction is minimal, theater serves coordination by encoding norms into behavior. No sunset is visible from this perspective \u2014 the mechanism works perpetually for habit consolidation, though specific rituals may rotate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coercion_vs_coordination_boundary",
+      "question": "At what point does voluntary ritual participation become enforced compliance, converting the scaffold into a snare?",
+      "resolution_mechanism": "Measurement of exit costs: anonymous surveys on perceived choice, tracking of members who leave during ritual establishment phase, correlation between ritual adherence and social/career consequences",
+      "impact": "If exit costs rise above 0.5: classification shifts toward snare for affected members. If costs remain low: rope classification holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary between voluntary coordination ritual and coercive enforcement"
+    },
+    {
+      "id": "implicit_coordination_emergence_timeline",
+      "question": "How long does it take for explicit ritual to become implicit habit, and how is successful transition measured?",
+      "resolution_mechanism": "Longitudinal measurement of ritual abandonment rates, meeting efficiency metrics, informal coordination frequency, member self-reports of internalized norms",
+      "impact": "If transition occurs within 12-24 months: sunset clause is real and timing estimates are valid. If transition stalls beyond 36 months: ritual may be degrading into piton (performative without functional internalization).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline and indicators for habit internalization"
+    },
+    {
+      "id": "ritual_dependency_risk",
+      "question": "Does sustained ritual create organizational dependency where explicit procedures prevent natural habit formation, trapping the organization in perpetual theater?",
+      "resolution_mechanism": "Comparative analysis: organizations that extended ritual beyond projected sunset vs those that phased ritual out; measurement of member competence and autonomy in both conditions",
+      "impact": "If dependency occurs: constraint degrades from scaffold to piton. If habits solidify and ritual phases out as designed: scaffold classification holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Risk of ritual creating permanent dependency rather than temporary scaffolding"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The habit-building scaffold is an intentional deployment of procedural theater to stabilize chaotic organizations during transitions. When established organizations disrupt operations (merger, leadership change, technology adoption, crisis recovery), explicit rituals \u2014 structured meetings, standardized communication protocols, ceremonial decision-making, documented handoffs \u2014 reduce ambiguity and help members internalize new coordination norms. The scaffold is temporary by design: once habits solidify and coordination becomes implicit, the explicit ritual phases out naturally. This differs from a degraded piton (which persists through inertia) or a pure extraction snare (which uses procedure to extract from participants). The critical feature is the sunset clause: leadership commits to phasing out explicit ritual once implicit coordination emerges, measured by meeting efficiency, reduced need for facilitation, and member self-reports of internalized norms. Theater ratio rises during the ritual phase because much of the activity is performative \u2014 verbalization, ceremony, and documentation serve to encode norms into behavior rather than accomplish external tasks. But theater should decline as the scaffold is phased out and implicit coordination takes over.",
+    "key_agents": [
+      "Organizational Leadership: Institutional actors (institutional/arbitrage) \u2014 design and deploy the ritual intentionally; control the sunset timeline; experience the scaffold as a temporary coordination investment",
+      "Individual Members: Moderate actors (moderate/mobile) \u2014 participate in ritual; benefit from reduced ambiguity; experience coordination function; retain exit option (can leave organization if norms become intolerable)",
+      "Collective Habit Formation: Organized agents (organized/constrained) \u2014 the implicit coordination system that the ritual stabilizes; initially chaotic, gradually solidifies into habit; beneficiary of the scaffold",
+      "Resistant Minority: Powerful actors (powerful/constrained) \u2014 experience both coordination benefit (stability) and extraction cost (time, autonomy); constrained by membership but powerful enough to voice dissent; perspective reveals mixture of rope and snare",
+      "Behavioral Science Observer: Analytical actor (analytical/analytical) \u2014 sees ritual-based habit formation as a well-established coordination mechanism with minimal extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-to-moderate. The ritual imposes time and behavioral constraints on participants, but these are justified by the coordination function (reducing organizational chaos). The extractiveness value reflects that most participants experience net benefit \u2014 the ritual solves real coordination problems. The extractiveness is not zero because there is asymmetry: leadership controls the ritual design and sunset timing, while members must participate. But extractiveness does not rise to snare levels because: (1) membership is voluntary with exit options, (2) members perceive genuine coordination benefit, and (3) the constraint is explicitly temporary. Suppression (0.35): Moderate. Participation is expected (social pressure, organizational expectation) but not coerced. Members can voice dissent, negotiate ritual modifications, or leave. The resistant minority experiences higher suppression (constrained exit due to career costs of leaving), but organization-wide, suppression is moderate. Theater ratio (0.65): Moderate-high. Explicit ritual by definition elevates theater: verbalization, ceremony, documentation, and procedural compliance all serve symbolic/encoding functions rather than producing external goods. Theater peaks during the mid-phase (time point 6) when the ritual is most active and explicitly performative, then would decline as the scaffold is phased out and coordination becomes implicit (not captured in this 12-month interval, which shows the scaffold at maturity).",
+    "perspectival_gap": "The key perspectival gap is between leadership (who see the ritual as intentionally temporary coordination support) and resistant members (who see it as extracted time and autonomy loss). Leadership's rope/scaffold perspectives show the coordination function and sunset design. The resistant minority's tangled_rope perspective captures the mixed experience: real coordination benefit but asymmetric cost. The individual member's rope perspective shows that most participants experience genuine coordination gain. The behavioral science observer's rope perspective validates the mechanism as pure coordination, not extraction. The gap reveals that the constraint's classification depends critically on whether participants perceive the ritual as legitimately temporary or as degrading into performative theater without function (the piton risk identified in omega_ritual_dependency_risk).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing the scaffold from adjacent types through three structural markers: (1) Explicit sunset clause \u2014 leadership publicly commits to phasing out ritual once implicit coordination emerges. (2) Low base extractiveness (0.28 < 0.46) \u2014 the constraint is not a snare; participants experience net coordination benefit. (3) Theater ratio (0.65) is elevated but declining during the measurement interval as habits form and ritual becomes less necessary \u2014 the theater is part of the coordination mechanism (encoding norms into behavior), not a sign of degradation. If the ritual were to persist beyond the projected sunset (12-24 months), theater would remain high and extractiveness would rise (as participants begin experiencing ritual as busywork rather than coordination), converting the scaffold into a piton. The mandatrophy test: Can leadership commit to and execute the sunset? If yes, scaffold. If the ritual becomes permanent through inertia despite low ongoing coordination function, piton. If the ritual becomes coercive (exit costs rise dramatically for dissenters), snare."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

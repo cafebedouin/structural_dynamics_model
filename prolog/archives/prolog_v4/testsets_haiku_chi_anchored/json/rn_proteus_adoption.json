@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "rn_proteus_adoption",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "proteus"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Royal Navy's adoption of the Leonardo Proteus uncrewed helicopter",
+    "topic_domain": "defense/technological_capability",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "leonardo_spa",
+      "operational_commanders",
+      "uk_defense_procurement"
+    ],
+    "victims": [
+      "crewed_helicopter_ecosystem",
+      "carrier_air_group_billets",
+      "helicopter_pilot_training_pipeline"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Crewed Helicopter Pilot Community",
+      "comment": "PERSPECTIVE 1: CREWED HELICOPTER PILOT COMMUNITY (SNARE) \u2014 Trapped by contractual obligations and seniority systems; cannot exit the Royal Navy to preserve career continuity. The two-year Proteus trial creates uncertainty about future air group billets. Career path now bifurcates into manned/unmanned tracks with asymmetric prestige. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.49."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Helicopter Training Infrastructure",
+      "comment": "PERSPECTIVE 2: HELICOPTER TRAINING INFRASTRUCTURE (TANGLED ROPE) \u2014 Constrained by dual curriculum requirements (manned + unmanned pilots) and funding bottlenecks. Coordination benefit: Proteus training creates new pilot pipeline efficiencies. Extraction: uncertainty about resource allocation and curriculum evolution. d\u22480.58, f(d)\u22480.72, \u03c3=1.0 \u2192 \u03c7\u22480.25."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Leonardo Dynamics and UK Defense Procurement",
+      "comment": "PERSPECTIVE 3: LEONARDO SPA + UK DEFENSE PROCUREMENT (ROPE) \u2014 Experiences the constraint as coordination: Proteus adoption solves Royal Navy's requirement for extended-range ISR/strike capability without the crew costs of traditional helicopters. Leonardo captures contract revenue; procurement gains capability at reduced operational cost. First-mover advantage in NATO UUV market. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.03. Net beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "UK Defense Industrial Strategy",
+      "comment": "PERSPECTIVE 4: UK DEFENSE INDUSTRIAL STRATEGY (SCAFFOLD) \u2014 Organized agents (MoD, UKSA, industry roadmaps) see Proteus adoption as a temporary coordination bridge: shifting from crewed to autonomous helicopter platforms is inevitable, and the two-year trial is a structured transition mechanism with an implicit sunset (full transition to unmanned carrier air by ~2035). Suppression is tolerated because the coalition has visibility and agency. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.10. Low effective extraction relative to coordination benefit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The NATO Crewed Helicopter Doctrine",
+      "comment": "PERSPECTIVE 5: NATO CREWED HELICOPTER DOCTRINE (PITON) \u2014 Traditional carrier air group organization (with crewed helicopters) persists through institutional inertia and interoperability requirements even as operational logic favors unmanned platforms. theater_ratio=0.58 indicates partial degradation: maritime doctrine still emphasizes crewed presence ('boots on deck') despite unmanned capability proving superior for many missions. The ritual of crewed carrier aviation maintains itself through allied training relationships and doctrine manuals even as the primary function (reconnaissance, targeting, strike) is migrating to unmanned platforms. d\u22480.30, f(d)\u22480.18, \u03c3=1.2 \u2192 \u03c7\u22480.03."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Operational Commander (Royal Navy Strike Flotilla)",
+      "comment": "PERSPECTIVE 6: OPERATIONAL COMMANDER / STRIKE FLOTILLA (TANGLED ROPE) \u2014 Powerful actor with mobile exit (can deploy alternative ISR platforms). Experiences the constraint as mixed: Proteus offers significant operational benefit (longer endurance, persistent station-keeping, reduced crew risk) but introduces new suppression (regulatory complexity, contested airspace rules of engagement for unmanned systems, technical dependency on Leonardo supply chain). Benefits from capability expansion; constrained by integration unknowns. d\u22480.42, f(d)\u22480.42, \u03c3=1.0 \u2192 \u03c7\u22480.15."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Technological Inevitability View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / TECHNOLOGICAL INEVITABILITY (MOUNTAIN) \u2014 From a civilizational perspective, the shift from crewed to autonomous helicopters follows an irreversible technological trend: drone platforms are inherently more cost-effective, lower-risk, and better-suited to modern naval warfare than crewed helicopters. This constraint is therefore a natural consequence of technological evolution \u2014 the two-year trial is not an extraction mechanism but an adjustment to objective reality. However, the structural data (\u03b5=0.35, suppression=0.42, theater=0.58) contradicts the mountain classification. The engine will identify this as a false summit: the transition is not inevitable by physics but contingent on institutional choices (defense budgets, workforce redeployment, doctrine evolution) and therefore amenable to collective decision-making."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "operational_performance_parity",
+      "question": "Will Proteus performance in the two-year trial match or exceed crewed helicopter capabilities in contested maritime environments (electronic warfare, air defense, complex tactical scenarios)?",
+      "resolution_mechanism": "Operational evaluation reports; comparative metrics on target detection, engagement accuracy, and platform survivability; classified assessment of performance against peer nation air defenses",
+      "impact": "If parity achieved: transition to unmanned platforms is genuine capability upgrade (enables broader transition roadmap). If deficiencies persist: Proteus adoption is theater masking underlying capability shortfall \u2014 classification shifts toward piton (degraded ritual).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Proteus performance matches crewed helicopter capabilities in contested environments"
+    },
+    {
+      "id": "crew_redeployment_capacity",
+      "question": "Can helicopter pilots and crew disemployed by Proteus adoption be credibly redeployed into emerging roles (hypersonic defense, space warfare, AI system management) with compensation parity and psychological buy-in?",
+      "resolution_mechanism": "Career transition success rates post-trial; retention rates for redeployed personnel; salary/status parity metrics; union/personnel committee feedback",
+      "impact": "If successful redeployment: constraint is genuine scaffold with real sunset (temporary disruption, organized transition). If redeployment fails: constraint is snare disguised as modernization (permanent career loss, generational bitterness in naval culture).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether disemployed crews can be redeployed with parity and buy-in"
+    },
+    {
+      "id": "regulatory_airspace_clarity",
+      "question": "Will international maritime airspace and rules of engagement for unmanned combat systems be clarified sufficiently by 2028 to enable Proteus operational deployment, or will ambiguity persist, requiring crewed oversight for legal compliance?",
+      "resolution_mechanism": "IMO/ICAO regulatory progress; legal precedent from trial incidents; NATO CONOPS revision documentation; clarity on unmanned platform targeting authority delegation",
+      "impact": "If clarity achieved: Proteus enables true operational autonomy (rope/tangled_rope classification holds). If ambiguity persists: Proteus requires embedded crewed oversight or legal cover, increasing cost and degrading the efficiency argument (shifts toward piton or snare).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether international regulatory frameworks will clarify for unmanned combat systems"
+    },
+    {
+      "id": "leonardo_supply_chain_resilience",
+      "question": "Can Leonardo Spa maintain supply chain integrity and geopolitical independence for Proteus component manufacturing and software updates across a 20+ year operational horizon given UK-EU-NATO supply dependencies and potential US export control escalation?",
+      "resolution_mechanism": "Supply chain audit; geographic sourcing data; software update mechanisms; comparison to alternative vendor options; impact assessment of hypothetical US technology restrictions",
+      "impact": "If resilient: Proteus adoption is robust modernization (coordination benefit justified). If vulnerable: adoption creates long-term dependency on single vendor subject to geopolitical risk \u2014 extraction mechanism hardens into structural lock-in (snare from UK defense perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Leonardo supply chain can sustain Proteus over 20+ year horizon"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The Royal Navy's adoption of the Leonardo Proteus uncrewed helicopter represents a technological transition that exhibits hybrid coordination-extraction dynamics. The constraint operates at multiple levels: Leonardo and UK defense procurement experience the integration as straightforward coordination (solving a capability gap); the helicopter pilot community experiences it as pure extraction (career disruption, status loss, trapped in seniority systems); training infrastructure experiences mixed coordination and extraction; and defense industrial strategy sees it as a temporary scaffold leading to full unmanned transition by ~2035. The theater ratio (0.58) reflects that much of the current discussion around Proteus adoption emphasizes modernization rhetoric ('next-generation ISR,' 'autonomous capability') while the underlying drivers are cost reduction and workforce optimization \u2014 the capability frame partially masks the extraction mechanism. The two-year trial is simultaneously a genuine operational test and a staged workforce transition that suppresses alternative voices in the pilot community through contractual lock-in.",
+    "key_agents": [
+      "Helicopter Pilot Community: Primary victim (powerless/trapped) \u2014 career disruption, billet compression, status loss relative to emerging unmanned drone operators",
+      "Leonardo Spa: Primary beneficiary (institutional/arbitrage) \u2014 contract revenue, market dominance in UK/NATO unmanned helicopter segment, first-mover advantage",
+      "UK Defense Procurement (MoD): Secondary beneficiary (institutional/arbitrage) \u2014 capability acquisition at reduced lifecycle cost, modernization narrative",
+      "Helicopter Training Infrastructure: Mixed (moderate/constrained) \u2014 benefits from new curriculum; constrained by dual-track requirements and funding uncertainty",
+      "Strike Flotilla Operational Commanders: Mixed (powerful/mobile) \u2014 gains extended operational range and persistence; constrained by integration risks and regulatory ambiguity",
+      "UK Defense Industrial Strategy: Organized coordinator (organized/constrained) \u2014 drives transition; sees sunset when unmanned platforms mature (~2035)"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The constraint extracts career value from the pilot community through billet compression and status realignment, but the extraction is not maximal because the Royal Navy is not deliberately destroying the pilot community \u2014 it is responding to genuine technological change that favors unmanned platforms. The extraction is real but bounded by the legitimacy of the underlying operational requirement. Suppression (0.42): Moderate. Significant barriers exist: contractual lock-in of pilots, institutional dependencies on existing crewed doctrine, training infrastructure dual-loading, and regulatory uncertainty around unmanned combat systems. However, suppression is not total \u2014 pilots retain options to leave the service (costly but possible), alternative voices (helicopter industry, allied navies) can articulate dissent, and the trial mechanism itself allows for performance-based course correction. Theater ratio (0.58): Moderate-high. The modernization narrative around Proteus emphasizes capability and autonomy, but a substantial portion of the discussion is performative: the primary driver is cost reduction (~25-30% per-flight-hour savings vs crewed platforms), which is less publicly emphasized because it implies workforce reduction. The technical integration challenges are real, but the theater reflects selective emphasis on capability gains over workforce displacement.",
+    "perspectival_gap": "The helicopter pilot community (snare) sees career loss and institutional abandonment. Leonardo and procurement (rope) see a straightforward capability upgrade with revenue benefit. The operational commander (tangled rope) sees genuine operational advantage mixed with integration risk. The defense industrial strategy (scaffold) sees a temporary transition with an endpoint (full unmanned by 2035). The NATO doctrine establishment (piton) sees its own traditional crewed-helicopter doctrine as degrading but persisting through institutional momentum. The civilizational analytical observer (mountain) risks naturalizing what is actually a contingent institutional choice as inevitable technological evolution. The perspectival gap is unusually wide here because the constraint affects a specific, bounded occupational community (helicopter pilots) while benefiting abstract entities (capability, cost reduction) and distributed stakeholders (Leonardo, procurement). The pilot perspective is structurally suppressed because pilots cannot organize collectively to block the transition without violating military hierarchy.",
+    "directionality_logic": "Helicopter pilot community: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. Pilots cannot exit without career destruction. Leonardo + procurement: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary. Free to exit (cancel contract) but highly incentivized to proceed. Training infrastructure: Mixed victim/beneficiary + constrained \u2192 d\u22480.58, f(d)\u22480.72. Moderate extraction balanced by coordination benefit. Operational commander: Mixed victim/beneficiary + mobile \u2192 d\u22480.42, f(d)\u22480.42. Can deploy alternatives; benefits from capability but constrained by integration complexity. Defense industrial strategy: Organized beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.30. Low extraction because the coalition has agency and vision of sunset. NATO doctrine: Institutional beneficiary + arbitrage \u2192 d\u22480.30, f(d)\u22480.18. Piton classification from theater gate, not from high chi.",
+    "mandatrophy_analysis": "MANDATROPHY DETECTION: The constraint does NOT resolve mandatrophy cleanly because it genuinely straddles coordination and extraction. The Proteus adoption simultaneously solves a real coordination problem (Royal Navy needs extended-endurance ISR in constrained-budget environment) and extracts value from the pilot community (career disruption, workforce compression, status loss). The key omega variable is crew redeployment capacity: if the Navy successfully redeployments disemployed pilots into equivalent or higher-status roles (emerging hypersonic, space, AI domains), the constraint becomes a true scaffold with sunset and the mandatrophy resolves. If redeployment fails and pilots are simply downsized, the constraint reveals itself as a snare with performative modernization language obscuring extraction. The theater ratio (0.58) is the diagnostic signal: it indicates partial degradation of the coordination narrative, suggesting that rhetorical emphasis on capability gains is masking the cost-reduction driver. The two-year trial is structured to delay mandatrophy resolution until after initial institutional commitment, which is itself an extraction mechanism (suppressing the crew redeployment question until the trial's success becomes organizational consensus)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "uk_naval_drone_doctrine",
+      "nato_unmanned_air_integration",
+      "defense_industrial_workforce_transition"
+    ],
+    "dual_formulation_note": "Proteus adoption is part of a broader constraint family around UK/NATO military roboticization and workforce transition. It is downstream of the abstract constraint 'defense_industrial_workforce_transition' (\u03b5\u22480.50, Snare at worker perspective) and upstream of 'uk_naval_drone_doctrine' (\u03b5\u22480.25, Rope, addressing integration and interoperability). The Proteus story focuses on the specific technological transition mechanism; the family's structure links workforce displacement to doctrinal evolution to capability modernization."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

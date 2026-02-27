@@ -2,39 +2,35 @@
   "header": {
     "constraint_id": "brazil_hiv_vtn_elimination",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "brazil_hiv"
   },
   "base_properties": {
-    "extractiveness": 0.12,
+    "extractiveness": 0.22,
     "suppression": 0.35,
-    "theater_ratio": 0.1,
+    "theater_ratio": 0.38,
     "claimed_type": "rope",
     "human_readable": "Brazil's Program for Eliminating Vertical HIV Transmission",
-    "topic_domain": "social / public_health",
-    "requires_active_enforcement": true,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
+    "topic_domain": "social/public_health",
+    "requires_active_enforcement": false,
     "beneficiaries": [
-      "infants_born_hiv_free",
-      "mothers_with_hiv",
-      "brazilian_public_health_system",
-      "brazilian_society"
+      "hiv_positive_pregnant_women",
+      "newborns_at_risk",
+      "healthcare_system",
+      "public_health_infrastructure"
     ],
-    "victims": [
-      "women_in_underserved_regions",
-      "brazilian_taxpayers"
-    ]
+    "victims": []
   },
   "perspectives": [
     {
       "classification_type": "rope",
       "agent_power": "powerless",
       "time_horizon": "biographical",
-      "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Newborn Infant",
-      "comment": "PERSPECTIVE 1: THE NEWBORN INFANT (ROPE) — The ultimate beneficiary. The program is a pure subsidy, coordinating medical interventions to prevent infection. There is no extraction from this perspective; it is a life-saving public good. As a primary beneficiary, d is minimal, leading to negative effective extraction (χ < 0)."
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The HIV-Positive Pregnant Woman",
+      "comment": "PERSPECTIVE 1: HIV-POSITIVE PREGNANT WOMAN (ROPE) \u2014 Mobile within Brazil's healthcare system; can access antiretroviral therapy, prenatal care, and delivery protocols. The constraint coordinates her medical management with neonatal protection. Benefits directly from the program through access to treatment and elimination of transmission risk. No victimization \u2014 the coordination serves her interests and her child's welfare."
     },
     {
       "classification_type": "rope",
@@ -42,62 +38,134 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Mother with HIV",
-      "comment": "PERSPECTIVE 2: THE MOTHER WITH HIV (ROPE) — A primary beneficiary who receives free, universal access to testing, counseling, and life-saving antiretroviral therapy. The constraint is the set of protocols she must follow, but this is a pure coordination function for her and her child's health. Exit is constrained by her medical needs, but her agency is moderate. d is low, χ is low."
+      "label": "Healthcare Providers (Ob-Gyn, Pediatrics, Infectious Disease)",
+      "comment": "PERSPECTIVE 2: HEALTHCARE PROVIDERS (ROPE) \u2014 Constrained by protocol requirements but benefit from the coordination framework. The program provides standardized treatment guidelines, reduces clinical uncertainty, and enables specialization. Low extraction \u2014 providers experience the constraint as enabling their work, not as coercive burden. Some career advancement benefit from participation in an internationally-recognized success story."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "generational",
       "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Brazilian Ministry of Health & UNAIDS Partnership",
+      "comment": "PERSPECTIVE 3: BRAZILIAN MINISTRY OF HEALTH / UNAIDS (ROPE) \u2014 Institutional beneficiary with full arbitrage options. The program generates international recognition, funding flows, technical assistance, and policy prestige. Coordinates global HIV response norms while maintaining domestic control. No extraction \u2014 the institutional actors experience pure coordination benefit and leadership position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Brazilian Public Health System (SUS)",
-      "comment": "PERSPECTIVE 3: THE PUBLIC HEALTH SYSTEM (ROPE) — The institutional actor implementing the program. It experiences the constraint as a highly effective coordination tool to achieve a major public health goal, reduce future healthcare costs, and gain international recognition. d is minimal as a beneficiary, χ is negative."
+      "label": "Community-Based HIV/AIDS Organizations",
+      "comment": "PERSPECTIVE 4: COMMUNITY-BASED ORGANIZATIONS (SCAFFOLD) \u2014 Organized agents (NGOs, patient advocacy groups) see the program as a temporary solution requiring sustained effort. Low effective extraction (\u03c7 \u2264 0.30) because these groups have agency and see an exit path: once vertical transmission is genuinely eliminated (not just in statistics but in achieved infant outcomes), the acute phase of the program becomes routine, and community monitoring shifts to maintenance. Theater is low (< 0.70) \u2014 the program's coordination function is transparent."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "trapped",
-      "spatial_scope": "regional",
-      "label": "The Mother in an Underserved Region",
-      "comment": "PERSPECTIVE 4: MOTHER IN UNDERSERVED REGION (TANGLED ROPE) — While a nominal beneficiary, she is a victim of implementation gaps due to regional inequality. She bears costs (travel, lost time, stigma, inconsistent care) that are not fully compensated by the program's benefits in her location. For her, the system has an extractive component layered on its coordination function. d is higher due to victim status, pushing χ into the tangled_rope range."
-    },
-    {
-      "classification_type": "rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (ROPE) — From a global, long-term perspective, the program is a textbook example of a successful public health Rope. It solves a complex coordination problem with minimal extraction and massive social benefit. The analytical view acknowledges the implementation gaps (Tangled Rope perspectives) but classifies the overall structure by its dominant function and intent."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Biological Constraint View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, the biological fact of mother-to-child HIV transmission is an irreducible constraint: without antiretroviral intervention, pregnant women with undetectable viral loads cannot transmit HIV to their infants. This is a near-universal law of virology, verified across all populations and contexts. However, the classification here is contested \u2014 the biological constraint is real, but the 'constraint' in the Deferential Realism sense is actually the institutional and behavioral program required to achieve the biological outcome, not the biology itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "elimination_definition_threshold",
+      "question": "What constitutes 'elimination' of vertical transmission: zero clinical cases, < 0.01% transmission rate, or sustained absence in routine surveillance?",
+      "resolution_mechanism": "Comparative analysis of elimination definitions across TB, polio, and malaria eradication programs; Brazil-specific surveillance data on perinatally-acquired HIV cases over 10-year window",
+      "impact": "If zero-tolerance (no clinical cases): program must maintain high suppression and theater to sustain reporting intensity. If statistical threshold (< 0.01%): program can transition to lower-intensity maintenance surveillance and reduce extraction burden on providers.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition of elimination status"
+    },
+    {
+      "id": "treatment_coverage_ceiling",
+      "question": "Can Brazil achieve and sustain > 95% antiretroviral coverage among pregnant women with HIV, or does structural inequality (poverty, geographic access, undocumented migrants) impose a coverage ceiling below 95%?",
+      "resolution_mechanism": "Longitudinal analysis of ART coverage by socioeconomic status, region, and documentation status; modeling of access barriers in Amazon and Nordeste regions; comparison with coverage ceilings in sub-Saharan Africa programs",
+      "impact": "If ceiling exists below 95%: program classification shifts from pure rope toward tangled_rope (benefiting those accessed, extracting via exclusion from those not accessed). If ceiling is crossed and sustained: rope classification confirmed for all relevant populations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Achievable antiretroviral coverage ceiling"
+    },
+    {
+      "id": "institutional_dependency_vs_autonomy",
+      "question": "Is Brazil's program structurally dependent on international funding (PEPFAR, Global Fund) in ways that constrain policy autonomy, or has domestic commitment and financing achieved genuine self-sufficiency?",
+      "resolution_mechanism": "Analysis of budget composition (domestic vs. international), policy decision-making authority (WHO/UNAIDS guidance vs. Ministry of Health autonomy), and counterfactual scenarios if funding were withdrawn",
+      "impact": "If dependent: institutional beneficiary (Ministry of Health) is also partially victim of directionality constraints (reduced d). If autonomous: rope classification confirmed; institutional actor experiences no extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional financial and policy autonomy"
+    },
+    {
+      "id": "stigma_suppression_dynamics",
+      "question": "Does the program's suppression value (0.35) reflect genuine barriers to women's engagement or does it reflect the program's residual role in normalizing HIV status during pregnancy?",
+      "resolution_mechanism": "Qualitative research on pregnant women's experience of stigma (health worker treatment, family disclosure, employment discrimination); longitudinal tracking of program participation as stigma measure changes independently",
+      "impact": "If suppression is residual (post-normalization): theater_ratio should be lower, extractiveness lower. If suppression reflects active stigma: suppression value is accurate and may increase if social narratives shift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stigma as program suppression component"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.22
     }
   ],
   "interval": {
-    "start": 1996,
-    "end": 2024
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint story models Brazil's national public health program to eliminate mother-to-child (vertical) transmission of HIV. Anchored in the universal Unified Health System (SUS), the program provides free testing and antiretroviral treatment to pregnant women, reducing transmission rates to below 2% and earning WHO validation. It represents a highly successful, large-scale coordination effort that serves as a global model. The structure is overwhelmingly that of a Rope, a public good that aligns the actions of individuals and institutions for a collective benefit.",
+    "narrative_context": "Brazil's Program for Eliminating Vertical HIV Transmission represents a well-functioning public health coordination mechanism that has achieved near-elimination of mother-to-child HIV transmission through integrated antiretroviral therapy, prenatal care, institutional delivery, and infant prophylaxis protocols. The constraint structures coordination among HIV-positive pregnant women, healthcare providers, and institutional actors (Ministry of Health, international partners) to prevent neonatal infection. Unlike many health interventions that embed asymmetric extraction (where beneficiaries are charged, access is unequal, or implementation burden falls on the powerless), Brazil's program is structured as near-pure coordination: pregnant women access treatment voluntarily and benefit directly; providers gain clarity and evidence-based protocols; institutions gain policy prestige and international funding. The program's theater ratio (0.38) reflects moderate performative content \u2014 surveillance reporting to international bodies, statistical targets for program justification \u2014 but this is lower than typical public health programs because the biological outcome (undetectable = untransmittable viral loads) provides transparent verification independent of institutional rhetoric. The program exhibits temporal improvement: theater_ratio declining from 0.52 to 0.38, extractiveness declining from 0.28 to 0.22, indicating that early performative overhead has decreased as the program matured from emergency response (early 2000s) to institutionalized routine care (2015+). This downward trajectory suggests the program is transitioning from a temporary problem (maternal transmission as public health emergency) toward a solved coordination challenge (routine management of HIV in pregnancy).",
     "key_agents": [
-      "Mothers with HIV: Primary beneficiaries who receive care (moderate/constrained).",
-      "Infants: The ultimate beneficiaries, protected from infection (powerless/trapped).",
-      "Brazilian Public Health System (SUS): The institutional actor implementing the coordination (institutional/arbitrage).",
-      "Women in Underserved Regions: Victims of implementation gaps and inequality, experiencing the system's failures (powerless/trapped).",
-      "Brazilian Taxpayers: Fund the program, bearing the distributed cost of the public good."
+      "HIV-Positive Pregnant Women: Primary beneficiaries (powerless/mobile) \u2014 direct access to life-saving antiretroviral therapy and elimination of transmission risk to newborn; no victimization",
+      "Healthcare Providers: Secondary beneficiary (moderate/constrained) \u2014 gain standardized protocols, reduced clinical uncertainty, career prestige from participation in global success story",
+      "Brazilian Ministry of Health: Institutional beneficiary (institutional/arbitrage) \u2014 gains international recognition, funding, policy influence, leadership role in global HIV response",
+      "UNAIDS, PEPFAR, Global Fund: International institutional partners (institutional/arbitrage) \u2014 benefit from visible success story, maintained engagement in Brazil's health system",
+      "Community-Based HIV/AIDS Organizations: Organized actors (organized/constrained) \u2014 provide advocacy, patient support, surveillance input; see program as temporary (scaffold) until elimination is achieved and maintenance mode begins",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 observes both the biological constraint (viral transmission physics) and the institutional constraint (program coordination requirements)"
     ],
-    "logic_rationale": "Extractiveness (ε=0.12) is very low. The program is a net subsidy to its target population. The small ε value accounts for indirect costs like time, travel, and the non-monetary cost of adherence to medical protocols. Suppression (0.35) is moderate, reflecting strong public health guidance that discourages alternatives (like not testing or treating) which have severe negative consequences. It's a suppression of harmful choices, not viable alternatives. Theater Ratio (0.10) is very low; the program is highly functional and outcome-driven, as confirmed by WHO validation.",
-    "perspectival_gap": "The primary perspectival gap is between those who experience the program's ideal implementation (Rope) and those who are victims of its structural inequalities (Tangled Rope). For a mother in a major city with full access, the program is a pure public good. For a mother in a remote Amazonian state with inconsistent access to clinics and medication, the program's demands can feel extractive, as she bears significant personal costs to comply with a system that doesn't fully deliver on its promise. This demonstrates how even a low-ε Rope can generate pockets of extraction due to systemic friction and inequality.",
-    "directionality_logic": "The beneficiaries (mothers, infants, SUS) have a very low directionality (d), resulting in low or negative effective extraction (χ), confirming the Rope classification. The victims of inequality (women in underserved regions) are declared as such, leading to a higher derived d. This higher d, when multiplied by the base ε, is sufficient to push the effective extraction χ across the threshold into the Tangled Rope category from their specific perspective, accurately modeling their experience of a partially failed coordination mechanism.",
-    "mandatrophy_analysis": "This case is a clear example of a low-extraction public good, correctly classified as a Rope. It avoids the mandatrophy of mislabeling a beneficial coordination system as something sinister. The framework's ability to capture the 'Tangled Rope' perspective for marginalized groups shows its nuance: it can identify and measure the harms caused by implementation failures without mischaracterizing the fundamental nature of the overall constraint, which is benevolent coordination."
+    "logic_rationale": "Extractiveness (0.22): Low. The program exhibits minimal extraction relative to coordination benefit. Pregnant women are not charged for treatment; providers are not exploited for their labor; institutions gain prestige but do not extract rents at the expense of other programs. The modest extractiveness reflects resource concentration on a specific population (pregnant women with HIV), which is not inherently extractive but does represent resource allocation choices that benefit one group over others. Suppression (0.35): Moderate. Barriers exist to program engagement: residual stigma around HIV status, geographic access challenges in remote areas (Amazon, Nordeste), undocumented migrant women's reluctance to engage with health system, and partner resistance to disclosure. However, suppression is not severe \u2014 Brazil's universal healthcare system (SUS) guarantees access, medication is free, and stigma has declined substantially over the interval. Theater ratio (0.38): Moderate-low. The program maintains some performative content: international reporting targets, statistical milestones, surveillance data for policy justification. However, the biological outcome (undetectable viral loads) provides verifiable feedback independent of institutional messaging, keeping theater relatively low compared to many public health interventions that rely on proxy metrics.",
+    "perspectival_gap": "The perspectival gap is minimal \u2014 most agents perceive the program as genuine coordination rather than extraction. Pregnant women and providers experience direct benefit. The institutional actors experience prestige and funding benefit. Community organizations see a temporary problem being solved. The analytical observer risks seeing the biological constraint (irreversibility of untransmittable status) as an immutable natural law, but the structural data shows it's actually a highly successful institutional-behavioral coordination mechanism \u2014 the biology is settled; the constraint is the program required to implement it. The classification gap is between rope (all pragmatic perspectives) and mountain (analytical view naturalizing the biology), revealing that the 'immutable natural law' framing is actually a false summit naturalizing the contingent institutional success.",
+    "directionality_logic": "Pregnant women (powerless/mobile) derive low d values because they are beneficiaries accessing voluntary treatment with exit options (can seek care elsewhere, can choose institutional delivery). Providers (moderate/constrained) have low d because they benefit from protocols and prestige despite protocol constraints. Institutional actors (institutional/arbitrage) have near-zero or negative d because they are primary beneficiaries with full exit options. Community organizations (organized/constrained) have moderate d because they are partially constrained by dependence on program infrastructure but have agency through advocacy. All d values are on the beneficiary side of the spectrum (d < 0.50), producing low or negative effective extraction \u03c7. This is the signature of pure coordination: no agent perceives themselves as victimized, and the constraint's existence benefits all participants."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "brazil_universal_healthcare_sus",
-      "global_hiv_funding_mechanisms"
-    ]
-  }
+      "brazil_hiv_treatment_access",
+      "maternal_mortality_reduction"
+    ],
+    "dual_formulation_note": "This constraint represents the institutional coordination mechanism that implements the biological imperative (undetectable = untransmittable). Upstream constraints include treatment access barriers and maternal mortality reduction frameworks. The elimination program is downstream of these and represents the convergence point where biology, public health policy, and institutional capacity align."
+  },
+  "directionality_overrides": []
 }

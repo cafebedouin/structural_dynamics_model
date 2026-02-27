@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "french_local_elections_march_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "flem"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.42,
+    "theater_ratio": 0.65,
+    "claimed_type": "scaffold",
+    "human_readable": "March 2026 French Municipal Elections",
+    "topic_domain": "political/electoral",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "centrist_coalitions",
+      "incumbent_local_mayors",
+      "administrative_continuity"
+    ],
+    "victims": [
+      "radical_reform_movements",
+      "independent_candidates",
+      "protest_voters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Protest Voter",
+      "comment": "PERSPECTIVE 1: PROTEST VOTER (SNARE) \u2014 Trapped within the electoral calendar with no exit option. Forced to choose between centrist consensus candidates or irrelevant third-party symbolic votes. Suppression is high: no recall mechanisms, no direct democracy tools, no bypass to administrative structures. The protest vote is absorbed into the system without structural consequence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Independent Candidate",
+      "comment": "PERSPECTIVE 2: INDEPENDENT CANDIDATE (TANGLED ROPE) \u2014 Constrained by ballot access rules, media access disparities, and campaign finance thresholds. But also benefits from the electoral framework: the municipal level permits grassroots organizing that higher-level elections do not. Mixed experience \u2014 coordination function exists (local voice aggregation) but asymmetric extraction persists (funding and media favor incumbents)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Mayor Network",
+      "comment": "PERSPECTIVE 3: INCUMBENT MAYOR NETWORK (ROPE) \u2014 Institutional actors with arbitrage options (career mobility, re-election probability, administrative continuity). The election is a coordination mechanism: it aggregates local preferences and legitimizes administrative action. The election benefits this agent group through resource control and electoral advantage. Low experienced extraction \u2014 beneficiary perspective."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Democratic Reform Coalition",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC REFORM COALITION (SCAFFOLD) \u2014 Organized agents (environmental groups, regional autonomy movements, direct democracy advocates) view the March 2026 election as a temporary institutional structure. The constraint is a coordination mechanism with a genuine sunset: proportional representation experimentation (already adopted in some regions), sortition pilots, and participatory budgeting are creating parallel structures that will gradually reduce reliance on the five-year electoral cycle. The coalition has agency and sees an exit path. Theater ratio is moderate because the electoral campaign contains genuine debate alongside performative ritual."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Administrative State",
+      "comment": "PERSPECTIVE 5: ADMINISTRATIVE STATE (PITON) \u2014 The centralized French administrative apparatus views municipal elections as a degraded mechanism for legitimizing prefectural directives. The election ritual persists (quinquennial theater) but the core function \u2014 translating local will into policy \u2014 has atrophied. Prefectures and national ministries execute most structural decisions; mayors execute or rubber-stamp. The election maintains theater but minimal functional verification of administrator competence. Theater ratio \u2265 0.70."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (False Summit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN - FALSE SUMMIT) \u2014 From a civilizational perspective, periodic elections might appear as an immutable constraint of liberal democracy: communities must coordinate leadership succession, and periodic contests are a natural solution. However, the structural data reveals this as naturalization of a contingent institutional arrangement. Other democracies use sortition, multi-year administrations, or continuous recall mechanisms. The mountain classification is a false summit \u2014 the engine detects naturalization of institutional choice as law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proportional_representation_adoption",
+      "question": "Will France adopt proportional representation for municipal elections before 2030, creating genuine organizational space for third-force candidates?",
+      "resolution_mechanism": "Legislative tracking; electoral commission reform proposals; regional experimentation outcomes from Occitanie and Brittany proportional pilots",
+      "impact": "If adopted: scaffold sunset accelerates \u2014 extraction mechanism loses force as alternative pathways open. If rejected: constraint persists as snare/tangled rope beyond the nominal sunset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportional representation adoption accelerates the scaffold sunset"
+    },
+    {
+      "id": "direct_democracy_tool_effectiveness",
+      "question": "Do participatory budgeting and citizen assemblies at the municipal level actually devolve decision power or remain performative theater?",
+      "resolution_mechanism": "Case studies of participatory budgeting outcomes in Grenoble, Lyon, and Marseille; tracking whether citizen recommendations are adopted vs symbolic",
+      "impact": "If effective devolution: alternative institutional pathways truly reduce reliance on electoral constraint. If theater: reform movements face degraded alternatives, and scaffold sunset remains aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether participatory mechanisms provide genuine power transfer or remain theater"
+    },
+    {
+      "id": "turnout_legitimacy_threshold",
+      "question": "What turnout level constitutes sufficient democratic legitimacy for municipal electoral outcomes? Does declining turnout (2014: 63.6%, 2020: 55.6%) signal constraint degradation or rational voter behavior under snare classification?",
+      "resolution_mechanism": "Comparative analysis of turnout trends across European municipalities; survey data on voter satisfaction with electoral vs participatory mechanisms",
+      "impact": "If declining turnout = rational protest: the snare classification is strengthened, and many protest voters are signaling accurate perception of powerlessness. If declining turnout = disengagement: the constraint may be shifting toward piton (maintained through inertia, not functional).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether declining turnout indicates snare perception or piton-level inertia"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 2018,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The March 15 and 22, 2026, French municipal elections serve as a Scaffold \u2014 a temporary institutional structure with genuine coordination function but rising theater ratio and embedded extraction mechanisms, designed with a concrete sunset clause through democratic experimentation. The constraint exhibits how electoral cycles function as coordination mechanisms that aggregate local preferences while simultaneously extracting consent from agents (protest voters, independent candidates, reform movements) who would prefer alternative institutional pathways. Unlike snares (which extract without coordination), the municipal election framework delivers real coordination benefits: local administrations genuinely reflect preference distributions, mayors gain legitimacy for executing local public goods, and community-level decision-making capacity is aggregated. However, the constraint also exhibits extraction: centrist coalitions benefit from incumbent advantage and media concentration; protest voters face forced choice between constrained options; independent candidates face ballot access barriers; and the administrative state maintains prefectural override authority despite electoral outcomes. The theater ratio has risen from 0.50 (2018, when local reform movements had real insurgent potential) to 0.65 (2026, as campaign spectacle has expanded while voter efficacy perception has declined). Critically, the constraint possesses a genuine sunset clause: proportional representation experimentation in Occitanie and Brittany, participatory budgeting pilots in major cities, and sortition proposals for regional councils are creating parallel institutional pathways. Within 10-15 years, if these experiments succeed, the reliance on five-year electoral cycles will diminish. This makes the 2026 election a window in which the constraint is Scaffold rather than entrenched Snare.",
+    "key_agents": [
+      "Centrist Coalitions (institutional/arbitrage): Primary beneficiary \u2014 control media narratives, maintain coalition discipline, extract maximum electoral advantage from incumbent status",
+      "Incumbent Local Mayors (institutional/arbitrage): Secondary beneficiary \u2014 gain legitimacy for administrative action, control campaign narrative through incumbency, receive administrative resource concentration",
+      "Protest Voters (powerless/trapped): Primary victim \u2014 face forced choice between centrist consensus candidates or symbolic third-party votes with zero policy impact",
+      "Independent Candidates (moderate/constrained): Secondary victim \u2014 face ballot access barriers (10% signature threshold in most departments), media access disparities, campaign finance disadvantages vs party machinery",
+      "Reform Movements (organized/constrained): Strategic actor \u2014 view electoral constraint as temporary, invest in parallel institutional experiments (proportional representation pilots, participatory budgeting, sortition) to create exit paths",
+      "Administrative State / Prefectures (institutional/arbitrage): Institutional actor \u2014 maintains override authority regardless of electoral outcome, views election as legitimacy ritual for prefectural directives",
+      "Analytical Observer (analytical/analytical): Sees potential false summit \u2014 risks naturalizing contingent five-year electoral cycle as immutable feature of democracy"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Moderate-low. The municipal election framework provides genuine coordination benefits (local preference aggregation, administrative legitimacy, community decision-making capacity). However, extraction mechanisms are clearly visible: incumbent advantage, media concentration favoring establishment parties, ballot access barriers for independents, and centralized administrative override. The extracted value is moderate because coordination benefits are real and widely distributed \u2014 it is not a pure Snare. The constraint is not extracting maximum value (which would be 0.46+). Suppression (0.42): Moderate. Barriers to alternative pathways are significant but not absolute: ballot access rules (10% signatures), campaign finance disparities, and media concentration create high suppression. However, proportional representation pilots and participatory budgeting mechanisms are lowering suppression by creating alternative verification pathways. Theater ratio (0.65): Moderate-high and rising. The electoral campaign contains genuine debate and preference aggregation, but campaign spectacle has expanded while voter efficacy perception has declined. Turnout dropped from 63.6% (2014) to 55.6% (2020), indicating rising theater perception. The election ritual persists partly through inertia and partly because alternatives are still nascent.",
+    "directionality_logic": "Incumbent mayors and centrist coalitions are structural beneficiaries (institutional power, arbitrage exit options, low d \u2248 0.15). They experience low effective extraction because the constraint coordinates voter preferences into support for their continued rule. Protest voters are structural victims (powerless, trapped exit) \u2014 they experience high d \u2248 0.95, maximum experienced extraction. Independent candidates occupy the middle (moderate power, constrained exit) \u2014 they benefit from local-level grassroots organizing but face institutional barriers, yielding d \u2248 0.60. Reform movements (organized power, constrained exit but with strategic agency) view the constraint through the sunset lens, yielding d \u2248 0.45 but with the critical caveat that they see d declining as parallel structures mature. The administrative state (institutional, arbitrage) experiences the election as a coordination mechanism for legitimizing its directives, not as a site of extraction \u2014 low d \u2248 0.10. The perspectival gap is large because the powerless agent (protest voter) experiences the constraint as a snare while the beneficiary (incumbent) experiences it as a rope.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival gap: the powerless protest voter sees pure extraction (Snare \u2014 trapped with no functional voice), while the incumbent mayor sees pure coordination (Rope \u2014 the election legitimizes local governance). The independent candidate sees mixed experience (Tangled Rope \u2014 benefits from local organizing space but faces institutional barriers). The reform movement sees a temporary structure with declining force (Scaffold \u2014 open-science-style sunset as proportional representation and participatory mechanisms mature). The administrative state sees degraded theater (Piton \u2014 the election ritual persists while prefectural directives remain de facto supreme). The analytical observer risks seeing an immutable constraint (Mountain \u2014 periodic elections as natural law of democracy) but the structural data reveals this as naturalization of contingent institutional choice. The perspectival gaps are not merely observational differences \u2014 they reflect genuine structural asymmetries in how agents experience the constraint.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by clearly distinguishing coordination function from extraction mechanism. The election IS a coordination tool: it aggregates local preferences, produces legitimate administrations, and enables community-level decision-making. However, it ALSO exhibits extraction: incumbent advantage, media bias, ballot access barriers, and administrative override. This mixed character is precisely what makes it Scaffold rather than pure Rope or pure Snare. The sunset clause is credible because proportional representation pilots and participatory mechanisms are real structural alternatives being actively implemented. The scaffold classification resolves the ambiguity: the constraint is temporary coordination with declining extraction as alternatives mature, not a false binary between 'pure coordination' and 'pure extraction.' The key indicator is whether theater ratio continues rising (piton degradation) or whether alternative mechanisms actually reduce reliance on the five-year electoral cycle (scaffold sunset confirmation). Current trajectory suggests early-stage sunset confirmation \u2014 but the omega variables identify the decision points where trajectory could reverse."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "french_presidential_authority",
+      "prefectural_administrative_power",
+      "participatory_democracy_experimentation"
+    ],
+    "dual_formulation_note": "The municipal electoral cycle is downstream of the larger centralized French state structure (prefectural authority) but represents a distinct institutional constraint at the local coordination level. The upstream constraint (prefectural override authority) determines the scope within which municipal elections can operate; the municipal election constraint has its own extractiveness reflecting the incumbent-vs-challenger asymmetry. Participatory experimentation (sortition, proportional representation pilots) is a parallel constraint with lower extractiveness and shorter temporal horizon \u2014 it represents the structural alternative pathway that defines the scaffold sunset."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.45
+    }
+  ]
+}

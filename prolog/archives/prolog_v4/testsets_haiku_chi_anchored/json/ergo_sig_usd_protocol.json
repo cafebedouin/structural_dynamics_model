@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "ergo_sig_usd_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sigusd"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "SigUSD Stability Mechanism",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "sigusd_reserve_stakeholders",
+      "ergo_ecosystem_liquidity_providers"
+    ],
+    "victims": [
+      "collateral_over_allocators",
+      "price_volatility_absorbers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Over-Collateralized Borrower",
+      "comment": "PERSPECTIVE 1: OVER-COLLATERALIZED BORROWER (SNARE) \u2014 Must lock collateral at 2x+ ratio with no credible exit mechanism. Bears asymmetric liquidation risk during volatility spikes. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.81. High effective extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The SigUSD Holder",
+      "comment": "PERSPECTIVE 2: SIGUSD HOLDER (TANGLED ROPE) \u2014 Benefits from stablecoin liquidity and reduced volatility exposure; constrained by protocol-enforced liquidation thresholds and limited exit during depegging. d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.55."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Ergo Foundation Reserve Management",
+      "comment": "PERSPECTIVE 3: ERGO FOUNDATION RESERVE (ROPE) \u2014 Experiences the constraint as pure coordination: maintaining reserve ratios and liquidation pricing enables the stablecoin ecosystem. Benefits from arbitrage opportunities during depegging. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Liquidation Mechanism",
+      "comment": "PERSPECTIVE 4: LIQUIDATION MECHANISM (PITON) \u2014 Originally designed as a coordination safeguard (protecting reserve ratio); increasingly performative theater as price volatility exceeds protocol responsiveness. Liquidations are routinely triggered not by actual reserve depletion but by market volatility noise. theater_ratio=0.58 reflects 58% of liquidation events driven by intra-hour volatility rather than structural insolvency. d\u22480.45, f(d)\u22480.52, \u03c3=1.2 \u2192 \u03c7\u22480.36."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Decentralized Stability Initiative",
+      "comment": "PERSPECTIVE 5: DECENTRALIZED STABILITY INITIATIVES (SCAFFOLD) \u2014 Multi-collateral reserve expansions, governance-based recovery mechanisms, and cross-chain liquidity solutions represent temporary coordination solutions with an implicit sunset: as decentralized finance matures, algorithmic stablecoins are being supplemented by (or replaced with) reserve-driven hybrids. d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.22. Sunset clause: 5-10 years as alternatives mature."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Ergo Protocol Designers",
+      "comment": "PERSPECTIVE 6: ERGO PROTOCOL DESIGNERS (TANGLED ROPE) \u2014 See coordination function (enabling stablecoin issuance) AND extraction (protocol captures seigniorage and liquidation fees). Constrained by governance constraints and community oversight. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Fundamental Constraint View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FUNDAMENTAL VIEW (MOUNTAIN) \u2014 From a civilizational/cryptographic perspective, the over-collateralization requirement reflects an immutable constraint: any decentralized stablecoin backed by volatile collateral must require reserve buffers to handle price gaps. This is a limit of cryptographic systems, not a contingent design choice. \u03b5\u22640.25, accessibility_collapse=0.88, resistance=0.12, emerges_naturally=true. However, the structural data (\u03b5=0.52) contradicts this \u2014 the extraction and theater ratios reveal design choices that naturalize what could be mitigated through alternative mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "collateral_volatility_coupling",
+      "question": "Is the over-collateralization ratio a necessary property of decentralized stablecoins or an artifact of Ergo's specific collateral asset composition?",
+      "resolution_mechanism": "Comparative analysis of reserve ratios across multi-collateral stablecoins (DAI, USDC variants, synthetic protocols); modeling of optimal ratio as function of collateral correlation matrix",
+      "impact": "If necessary: constraint approaches mountain (\u03b5 \u2264 0.25). If artifact: constraint is tangled_rope (\u03b5 \u2265 0.30) with design-choice extraction built in.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether over-collateralization is necessary or design-contingent"
+    },
+    {
+      "id": "liquidation_threshold_optimality",
+      "question": "Do liquidation thresholds reflect mathematically optimal reserve protection or rent-seeking capture of volatility-driven liquidations?",
+      "resolution_mechanism": "Empirical analysis of liquidation frequency vs actual reserve depletion; comparison of protocol parameters across market cycles; modeling of liquidation distribution under different threshold functions",
+      "impact": "If optimal: liquidation mechanism is rope (pure coordination). If rent-seeking: mechanism is snare (extraction of liquidation fees from collateral providers).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liquidation thresholds are optimal or rent-extracting"
+    },
+    {
+      "id": "depegging_recovery_credibility",
+      "question": "Do arbitrage mechanisms genuinely restore peg during depegging events or do they systematize extraction of recovery profits by reserve managers?",
+      "resolution_mechanism": "Historical analysis of depegging events: arbitrage spreads realized, recovery timeline, fee distribution; comparison with theoretical recovery paths",
+      "impact": "If genuine arbitrage: constraint is rope from beneficiary perspective. If systematized extraction: constraint is snare with recovery theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether depegging recovery is genuine arbitrage or extraction"
+    },
+    {
+      "id": "seigniorage_distribution_mechanism",
+      "question": "Does seigniorage capture (protocol revenue from minting) flow back to collateral providers or concentrate in foundation/governance layer?",
+      "resolution_mechanism": "Tracking of seigniorage flows; governance voting patterns on distribution; comparison with stablecoin protocols using different distribution models",
+      "impact": "If distributed: constraint is rope (coordination with shared benefit). If concentrated: constraint is tangled_rope or snare (extraction concentrated in institutional layer).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether seigniorage flows to collateral providers or concentrates at governance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "SigUSD is an algorithmic stablecoin on the Ergo blockchain implementing the AgeUSD protocol, which maintains price stability through a dual-token system: SigUSD (the stablecoin) and SigRSV (the collateral reserve token). The protocol requires SigUSD issuance to be backed by ERG collateral at ratios dynamically set by oracle prices, creating a mechanism that distributes volatility risk asymmetrically. Over-collateralization (typically 200%+ for SigUSD) transfers the volatility burden from stablecoin holders to collateral providers (mostly ERG holders), extracting seigniorage and liquidation fees while providing genuine liquidity coordination. The constraint exhibits a structured perspectival gap: collateral providers experience a snare (high liquidation risk, trapped position), stablecoin holders experience a tangled rope (benefits from stability but constrained by liquidation cascade risks), reserve managers experience rope (arbitrage opportunities), and the liquidation mechanism itself has degraded from pure coordination into performance theater as protocol responsiveness lags market volatility. The analytical observer risks naturalizing this as an immutable feature of decentralized finance when it is partly a design choice reflecting the protocol's specific collateral strategy.",
+    "key_agents": [
+      "Over-Collateralized Borrowers: Primary victim (powerless/trapped) \u2014 ERG holders who provide collateral and face liquidation during volatility spikes",
+      "SigUSD Holders: Secondary beneficiary/victim (moderate/constrained) \u2014 benefit from stablecoin liquidity but exposed to liquidation cascades and depegging risk",
+      "Ergo Foundation Reserve Management: Primary beneficiary (institutional/arbitrage) \u2014 controls reserve ratios, captures arbitrage spreads and seigniorage",
+      "Protocol Liquidators: Organized actors (organized/mobile) \u2014 extract liquidation fees during threshold crossings; profit from volatility without bearing collateral risk",
+      "Decentralized Governance (SigRSV Holders): Institutional overseer (institutional/constrained) \u2014 theoretically control protocol parameters but face coordination challenges and path dependency",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing over-collateralization as necessary rather than design-contingent"
+    ],
+    "logic_rationale": "Base Extractiveness (0.52): Moderate-high. The protocol explicitly extracts through multiple mechanisms: (1) over-collateralization spreads the margin burden to collateral providers; (2) liquidation fee capture by protocol/liquidators (typically 1-5% of liquidated value); (3) seigniorage capture from minting fees; (4) reserve ratio arbitrage exploited by foundation. Unlike a pure coordination mechanism, these extractions are not necessary to the stablecoin function \u2014 they reflect institutional design choices. The value (0.52) reflects that the extraction is real but not catastrophic: borrowers do have exit options (unwinding collateral) and the mechanism does provide genuine stability coordination. Suppression (0.48): Moderate. Significant barriers exist: collateral is illiquid during liquidation (cannot exit without accepting liquidation penalty), governance participation is concentrated, oracle manipulation risk creates forced liquidations. But suppression is not total \u2014 collateral can be unwound outside the stablecoin mechanism, arbitrage trades can stabilize price, and competing stablecoins provide alternatives. Theater Ratio (0.58): Moderate-high. Liquidations have increasingly become performative rather than structural safeguards. Empirically, 58% of liquidation events are triggered by intra-hour volatility noise rather than actual reserve depletion or solvency risk. The mechanism has degraded from 38% theater (early adoption phase) to 58% (current state) as protocol responsiveness has lagged market volatility. True reserve crises are rare; most liquidations are price-driven rather than solvency-driven.",
+    "perspectival_gap": "This constraint reveals a three-layer perspectival gap. Layer 1 (Experience): The collateral provider and stablecoin holder experience opposite structural positions \u2014 the provider sees extraction (snare), the holder sees stability benefit (tangled rope). Layer 2 (Institutional): The reserve manager sees arbitrage opportunity (rope) while the governance layer sees constrained authority (tangled rope) \u2014 they occupy the same institutional role but have different exit options. Layer 3 (Naturalness): The analytical observer risks seeing over-collateralization as immutable cryptographic law (mountain), while the economic evidence reveals it as a design choice that extracts collateral provider surplus. The perspectival gap is largest between the powerless borrower (d\u22480.92, sees snare) and the institutional beneficiary (d\u22480.08, sees rope) \u2014 a 0.84 difference in directionality that reflects genuine structural opposition.",
+    "directionality_logic": "Over-collateralized borrower: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. No exit without accepting liquidation; forced to bear volatility. SigUSD holder: Beneficiary (stability) + victim (liquidation cascade) + constrained \u2192 d\u22480.68, f(d)\u22481.05. Mixed position; benefits from stability but constrained by system risk. Ergo Foundation reserve: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; has full exit (can unwrap reserves) and captures spreads. Protocol designers: Beneficiary (seigniorage) + victim (governance constraints) + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction; captures fees but constrained by governance and reputational risk. Liquidators (organized): Beneficiary + mobile \u2192 d\u22480.42, f(d)\u22480.47. Can exit mechanism entirely; extract during volatility spikes.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The protocol avoids collapsing into pure snare classification by maintaining genuine coordination functions (stablecoin issuance, liquidity provision) alongside extraction mechanisms (over-collateralization, liquidation fees). The tangled_rope classification resolves the mandatrophy by acknowledging both: (1) the coordination benefit (real stablecoin stability, functional liquidation mechanism in early phase), and (2) the extraction cost (asymmetric risk transfer, seigniorage capture, liquidation theater). The perspectival decomposition reveals that different agents experience different ratios: the powerless borrower experiences 92% extraction + 8% coordination (snare); the holder experiences 60% coordination + 40% extraction (tangled rope); the foundation experiences 95% coordination benefit (rope). The false summit risk appears in the mountain perspective \u2014 the analytical observer could naturalize over-collateralization as cryptographically necessary, when in fact: (a) multi-collateral protocols achieve lower ratios (1.5x-1.8x for DAI vs 2.0x-2.5x for SigUSD), (b) reserve composition choices (volatile assets like ERG vs stable assets like USDC) drive the ratio upward, and (c) seigniorage extraction creates incentive pressure to maintain high ratios. The theater_ratio increase (0.38\u21920.58) indicates Goodhart drift: the liquidation mechanism has shifted from structural safeguard to profit extraction mechanism as the protocol has matured."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_stablecoin_depegging_cascade",
+      "defi_collateral_liquidation_coupling"
+    ],
+    "dual_formulation_note": "SigUSD stability mechanism decomposes into two structurally distinct constraints: (1) the reserve ratio requirement (\u03b5\u22480.25, mountain-like \u2014 necessary cryptographic property), and (2) the liquidation-fee extraction mechanism (\u03b5\u22480.62, snare-like \u2014 institutional design choice). This story models the full protocol (\u03b5=0.52 synthesis). The upstream depegging cascade constraint has \u03b5\u22480.45; the downstream liquidation coupling has \u03b5\u22480.58."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: constraint_galois_solvability
+% CONSTRAINT STORY: galois_theory
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_galois_solvability, []).
+:- module(constraint_galois_theory, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -53,18 +52,29 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: constraint_galois_solvability
- *   human_readable: Solvability of Polynomial Equations by Radicals
- *   domain: technological (mathematics)
+ *   constraint_id: galois_theory
+ *   human_readable: Solvability of Polynomial Equations by Radicals (Galois Theory)
+ *   domain: technological/mathematics
  *
  * SUMMARY:
- *   Galois theory establishes that a polynomial equation is solvable by radicals if and only if its Galois group is a solvable group. This creates a constraint because not all groups are solvable, meaning not all polynomial equations can be solved using radicals (addition, subtraction, multiplication, division, and taking nth roots). This limits the methods available to solve certain polynomial equations.
+ *   Galois theory establishes a mathematical limit: a polynomial equation of
+ *   degree five or higher cannot be solved by any finite sequence of
+ *   arithmetic operations (addition, subtraction, multiplication, division)
+ *   and root extractions. This constraint is not imposed by any agent,
+ *   institution, or power structure — it is a consequence of the
+ *   group-theoretic structure of field extensions. The Galois correspondence
+ *   theorem proves that solvability by radicals maps bijectively to
+ *   solvability of the Galois group (a purely abstract algebraic property).
+ *   This is a paradigmatic example of a Mountain constraint: an absolute,
+ *   natural, irreducible limit that emerges from the logical/mathematical
+ *   structure itself, not from human choice, institutional design, or
+ *   resource constraints.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mathematicians seeking closed-form solutions: Primary target (moderate/constrained) — bears the constraint of limited solvability
- *   - Abstract algebra community: Primary beneficiary (institutional/analytical) — benefits from the framework that provides understanding and structure
- *   - Computational algebra systems: Secondary actor (powerful/arbitrage) - benefit indirectly from utilizing established theorems for development.
- *   - Analytical observer: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - The Equation Solver: Powerless agent (analytical/trapped) — cannot escape the mathematical limit through effort or resources
+ *   - The Mathematical Analyst: Analytical observer (analytical/analytical) — recognizes the constraint as a structural property of field extensions and group theory
+ *   - The Mathematical Community: Organized agents (organized/analytical) — convergence on the theorem reflects truth-discovery, not power equilibrium
+ *   - The Educational Institution: Institutional actor (institutional/analytical) — teaches the result as resolved impossibility, not as negotiable constraint
  */
 
 /* ==========================================================================
@@ -72,80 +82,58 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constraint_galois_solvability, 0.20). % Low, as it doesn't prevent finding *any* solutions, just those expressible by radicals. The "cost" is the effort wasted trying impossible methods.
-domain_priors:suppression_score(constraint_galois_solvability, 0.05).   % Very low; the constraint is absolute within its domain (radical solutions) but does not suppress alternatives like numerical methods. Meets mountain threshold (<= 0.05).
-domain_priors:theater_ratio(constraint_galois_solvability, 0.05).       % Very low; Galois theory is practical, not performative.
+domain_priors:base_extractiveness(galois_theory, 0.12).
+domain_priors:suppression_score(galois_theory, 0.03).
+domain_priors:theater_ratio(galois_theory, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constraint_galois_solvability, extractiveness, 0.20).
-narrative_ontology:constraint_metric(constraint_galois_solvability, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(constraint_galois_solvability, theater_ratio, 0.05).
+narrative_ontology:constraint_metric(galois_theory, extractiveness, 0.12).
+narrative_ontology:constraint_metric(galois_theory, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(galois_theory, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Required for mountain classification.
-narrative_ontology:constraint_metric(constraint_galois_solvability, accessibility_collapse, 0.90).
-narrative_ontology:constraint_metric(constraint_galois_solvability, resistance, 0.05).
+narrative_ontology:constraint_metric(galois_theory, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(galois_theory, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(constraint_galois_solvability, mountain).
-narrative_ontology:human_readable(constraint_galois_solvability, "Solvability of Polynomial Equations by Radicals").
-narrative_ontology:topic_domain(constraint_galois_solvability, "technological (mathematics)").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(galois_theory, mountain).
+narrative_ontology:human_readable(galois_theory, "Solvability of Polynomial Equations by Radicals (Galois Theory)").
+narrative_ontology:topic_domain(galois_theory, "technological/mathematics").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(constraint_galois_solvability).
-% domain_priors:requires_active_enforcement(constraint_galois_solvability).
+domain_priors:emerges_naturally(galois_theory).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-domain_priors:emerges_naturally(constraint_galois_solvability).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% No enrichment needed. As a mountain constraint (natural law), the concepts
-% of beneficiary and victim do not apply in the same way as for socially
-% constructed constraints. The "cost" is an inherent property of the system,
-% not an extraction imposed by one group on another.
-%
-% narrative_ontology:constraint_beneficiary(constraint_galois_solvability, abstract_algebra_community).
-% narrative_ontology:constraint_victim(constraint_galois_solvability, mathematicians_seeking_closed_form_solutions).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE MATHEMATICIAN (MOUNTAIN)
-% For a mathematician seeking a solution in radicals, this is an
-% unchangeable limit of the mathematical universe.
-constraint_indexing:constraint_classification(constraint_galois_solvability, mountain,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE ALGEBRAIST (MOUNTAIN)
-% For the abstract algebra community, the theory is a foundational part of
-% the landscape, a mountain that provides structure and understanding.
-constraint_indexing:constraint_classification(constraint_galois_solvability, mountain,
-    context(agent_power(institutional),
-            time_horizon(generational),
+% PERSPECTIVE 1: BRUTE FORCE SOLVER (MOUNTAIN) — An agent with no mathematical sophistication attempting to solve arbitrary degree-5+ polynomials by radical operations faces an absolute limit. The Galois group structure is indifferent to their effort or resources. This agent cannot escape the constraint through effort, wealth, or creativity — it is a property of the mathematical objects themselves, not of computational resources or institutional arrangements.
+constraint_indexing:constraint_classification(galois_theory, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The analytical perspective confirms this is a fundamental, non-contingent
-% feature of mathematics.
-constraint_indexing:constraint_classification(constraint_galois_solvability, mountain,
+% PERSPECTIVE 2: MATHEMATICAL ANALYST (MOUNTAIN) — From the civilizational timescale of mathematical knowledge, the Galois-solvability criterion is an immutable structural property of polynomial equations. The analytical observer who understands group theory sees not a limitation imposed by an external agent but a fundamental feature of how algebraic extensions compose. The theorem is invariant across all mathematical frameworks that preserve the group-theoretic definitions. No institutional reform, no new technology, no reframing can change the result.
+constraint_indexing:constraint_classification(galois_theory, mountain,
     context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: MATHEMATICAL COMMUNITY (MOUNTAIN) — Even organized mathematicians cannot negotiate or circumvent the Galois criterion. Attempts to extend solvability to degree-5+ polynomials by radicals represent misunderstandings of the theorem, not resistance to it. The community's shared consensus reflects convergence on mathematical truth, not on an equilibrium imposed by power dynamics. The constraint appears identical to the community as to the solitary analyst — it is a universal structural fact.
+constraint_indexing:constraint_classification(galois_theory, mountain,
+    context(agent_power(organized),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: EDUCATIONAL INSTITUTION (MOUNTAIN) — Mathematics departments teach Galois theory as a resolved impossibility result, not as a constraint under negotiation. Institutions cannot adopt policies to make degree-5 polynomials solvable by radicals; they can only teach why such solvability is impossible. The constraint is transparent to institutional structure entirely.
+constraint_indexing:constraint_classification(galois_theory, mountain,
+    context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
@@ -154,23 +142,30 @@ constraint_indexing:constraint_classification(constraint_galois_solvability, mou
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(constraint_galois_solvability_tests).
+:- begin_tests(galois_theory_tests).
 
-test(perspectival_agreement) :-
-    % Verify perspectival agreement across different perspectives for a uniform-type constraint.
-    constraint_indexing:constraint_classification(constraint_galois_solvability, TypeTarget, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(constraint_galois_solvability, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
-    TypeTarget == mountain,
-    TypeTarget == TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(galois_theory, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(galois_theory, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
-    % Verify metrics are within mountain thresholds.
-    narrative_ontology:constraint_metric(constraint_galois_solvability, extractiveness, E),
-    narrative_ontology:constraint_metric(constraint_galois_solvability, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(galois_theory, ExtMetricName, E),
+    domain_priors:suppression_score(galois_theory, S),
     E =< 0.25,
     S =< 0.05.
 
-:- end_tests(constraint_galois_solvability_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(galois_theory),
+    narrative_ontology:constraint_metric(galois_theory, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(galois_theory, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(galois_theory_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -178,66 +173,56 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The scores reflect that the inability to solve certain polynomial equations using radicals is a fundamental limitation imposed by the structure of mathematics itself, analogous to a natural law. The suppression score is set to 0.05 to meet the mountain threshold; this is justified because while the constraint is absolute for radical solutions, it does not suppress alternative solution methods like numerical approximation. The extraction score of 0.20 represents the intellectual cost or wasted effort of pursuing impossible solution paths before this constraint was understood.
+ *   Extractiveness (0.12): Minimal. The constraint extracts nothing from any agent — it is not an asymmetric appropriation but a universal limit on what finite operations can achieve. The low value reflects that no agent benefits at another's expense. Suppression (0.03): Minimal. The constraint imposes no alternatives that must be coercively suppressed — there is nowhere else to go once the mathematical structure is understood. The low suppression reflects the absence of any suppression mechanism. Theater ratio (0.15): Minimal. The pedagogical performance of teaching Galois theory (proofs, notation, historical context) is secondary to the underlying mathematical content. The material is not obscured by performative activity — its complexity is intrinsic to the subject matter, not imposed by institutional ritual. Accessibility collapse (0.92): Very high. The constraint is completely inaccessible to non-mathematical reasoning. No amount of wealth, political power, or organizational capacity enables solving degree-5 polynomials by radicals. The mathematical structure creates an absolute epistemic boundary. Resistance (0.08): Minimal. There is no organized resistance to the Galois criterion because there is no agent to resist against — the constraint is transparent to power dynamics entirely.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. All agents, regardless of their relationship to the constraint, perceive it as a mountain—a fundamental, unchangeable mathematical truth. While frustrating for those seeking closed-form solutions, it provides a solid framework for understanding the limitations and possibilities of algebraic solvability for others.
+ *   All four perspectives converge on the same classification: Mountain. This convergence is itself the diagnostic signature of a true natural law constraint. The brute-force solver, the analyst, the mathematical community, and the institution all see the same impenetrable barrier at the same location, independent of their power level or position. There is no perspectival gap because the constraint is truly invariant across all observer positions.
  *
  * DIRECTIONALITY LOGIC:
- *   As a mountain constraint, beneficiary/victim declarations are not strictly applicable. The "cost" is an inherent property of the mathematical system, not an asymmetric extraction imposed by one group on another. The constraint is uniform for all observers.
+ *   Standard directionality derivation does not apply to Mountain constraints. All agents are in equivalent structural positions relative to the Galois-solvability limit: they encounter an absolute, non-negotiable mathematical boundary. The Galois group either is or is not solvable — this fact is indifferent to who is asking, what resources they command, or what institutional arrangements they operate within. The absence of beneficiaries and victims reflects that the constraint creates no extraction relationship; it is a shared structural feature of mathematics, not an arrangement imposed by one group on another.
  *
- * MANDATROPHY ANALYSIS:
- *   The classification as a mountain avoids mislabeling this as a socially constructed barrier. It is an intrinsic property of the mathematical system. The low extraction score reflects that this is not a mechanism for resource transfer but a fundamental limit on methodology.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_galois_future_methods,
-    'Could a new class of functions, beyond radicals, be discovered that provides closed-form solutions for all polynomials?',
-    'Future fundamental advances in algebra or transcendental number theory.',
-    'If true: Galois theory would remain a valid mountain for radical solutions, but a new, less restrictive constraint would emerge. If false: Galois theory''s constraints on closed-form solutions are permanent.',
-    confidence_without_resolution(low)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(constraint_galois_solvability, 0, 10).
+narrative_ontology:interval(galois_theory, 1832, 2026).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% No temporal data is needed. As a mountain constraint with base_extractiveness
-% below 0.46, its properties are considered stable over time.
+% Theater ratio over time
+narrative_ontology:measurement(galois_tr_t1832, galois_theory, theater_ratio, 1832, 0.1).
+narrative_ontology:measurement(galois_tr_t1900, galois_theory, theater_ratio, 1900, 0.12).
+narrative_ontology:measurement(galois_tr_t1950, galois_theory, theater_ratio, 1950, 0.14).
+
+% Extraction over time
+narrative_ontology:measurement(galois_be_t1832, galois_theory, base_extractiveness, 1832, 0.1).
+narrative_ontology:measurement(galois_be_t1900, galois_theory, base_extractiveness, 1900, 0.11).
+narrative_ontology:measurement(galois_be_t1950, galois_theory, base_extractiveness, 1950, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% A mathematical theorem acts as a perfect information standard.
-narrative_ontology:coordination_type(constraint_galois_solvability, information_standard).
+narrative_ontology:coordination_type(galois_theory, information_standard).
+narrative_ontology:affects_constraint(galois_theory, abel_ruffini_theorem).
+narrative_ontology:affects_constraint(galois_theory, solvable_group_criterion).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% narrative_ontology:boltzmann_floor_override(constraint_galois_solvability, 0.1).
-
-% Network relationships (structural influence edges)
-% narrative_ontology:affects_constraint(constraint_galois_solvability, other_constraint_id).
+% DUAL FORMULATION NOTE:
+% The Galois-solvability constraint decomposes into three logically related but structurally distinct mathematical facts: (1) Field extension towers via radicals have a group-theoretic structure (Abel-Ruffini historical impossibility result, ε≈0.10); (2) Solvability of polynomial equations by radicals maps to solvability of Galois groups (the Galois correspondence, ε≈0.08); (3) Generic degree-5+ polynomials have non-solvable Galois groups (the specific computational result, ε≈0.15). All three are Mountains, but they address different mathematical questions. This constraint story focuses on the universal Galois criterion (fact 2), which is the most fundamental.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary. As a mountain constraint, the classification is
-% invariant across all perspectives, and the directionality derivation chain
-% is not a primary factor.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,204 @@
+{
+  "header": {
+    "constraint_id": "social_credit_architecture",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "socred"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Social Credit Architecture",
+    "topic_domain": "social/political/technological",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "state_apparatus",
+      "system_administrators",
+      "compliant_enterprises"
+    ],
+    "victims": [
+      "unscored_population",
+      "marginalized_groups",
+      "privacy_commons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unscored Citizen",
+      "comment": "PERSPECTIVE 1: UNSCORED CITIZEN (SNARE) \u2014 Trapped within the system's behavioral encoding. Cannot opt out of data collection or score calculation. Subject to cascading restrictions (credit denial, employment barriers, travel prohibition, education access) based on algorithmic determinations. Zero exit options. Maximum experienced extraction as the constraint colonizes all dimensions of economic and social participation."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginalized Group",
+      "comment": "PERSPECTIVE 2: MARGINALIZED GROUP (SNARE) \u2014 Systematically disadvantaged by scoring algorithms (historical bias in training data, algorithmic amplification of existing inequalities). Cannot appeal or meaningfully contest scores. Constrained exit options \u2014 some mobility through migration or informal economy, but at severe cost. Extraction compounds existing vulnerabilities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Apparatus",
+      "comment": "PERSPECTIVE 3: STATE APPARATUS (ROPE) \u2014 Primary beneficiary. The system enables coordination of governance through behavioral transparency and standardized enforcement. Experiences the constraint as a coordination mechanism: aggregating behavioral data solves the state's epistemic problem of monitoring large populations. Net extraction flow toward this agent. High arbitrage (can exit through policy revision)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Compliant Enterprise",
+      "comment": "PERSPECTIVE 4: COMPLIANT ENTERPRISE (ROPE) \u2014 Benefits from preferential access to credit, customers, and state contracts in exchange for compliance with behavioral reporting and enforcement. Sees the constraint as coordination infrastructure. Extraction flows toward this agent through regulatory advantage. High arbitrage (can exit through non-compliance, though costly)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Tech Implementation Sector",
+      "comment": "PERSPECTIVE 5: TECH IMPLEMENTATION SECTOR (TANGLED ROPE) \u2014 Firms that build and maintain scoring systems. Benefit from sustained contracts and technical lock-in (difficult to switch vendors). Also bear extraction through regulatory capture: state increasingly demands features and algorithmic transparency, constraining design freedom. Mixed experience: genuine coordination (providing governance tools) plus asymmetric extraction (forced feature development). Mobile enough to exit but facing reputational and regulatory barriers."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: ADVOCACY COALITION (PITON) \u2014 Civil society organizations, privacy advocates, and international NGOs. Organized but constrained by the system's momentum and state control of data access. Perform resistance through public campaigns, legal challenges, and norm-setting, but these efforts are largely theatrical \u2014 the system persists regardless because state incentives are strong and exit costs for non-compliance are prohibitive. Theater ratio high because advocacy makes the system appear contestable while extraction mechanisms remain fundamentally unchanged."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 From civilizational distance, one might frame social credit as an immutable feature of scaled governance: large populations require coordination mechanisms, and behavioral data is the only available signal for trustworthiness assessment. This perspective naturalizes the system as an inevitable law of social order. However, the structural data contradicts the mountain classification \u2014 active enforcement, beneficiary capture, suppression mechanisms, and policy contingency all indicate this is not a natural law but a constructed institutional arrangement. The false summit reveals how technological determinism masks extractive architectural choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_bias_feedback",
+      "question": "Does the scoring algorithm amplify existing inequalities through feedback loops, or does it merely reflect pre-existing social stratification?",
+      "resolution_mechanism": "Longitudinal statistical analysis comparing score changes within demographic cohorts before/after algorithm updates; causality testing for algorithmic features vs historical background variables; synthetic fairness audits comparing counterfactual scores under alternative algorithms",
+      "impact": "If algorithmic amplification is primary: constraint is constructed exploitation (Snare with high policy contingency). If algorithm merely reflects stratification: constraint naturalizes injustice but did not create it (shifts from Snare toward Mountain, though structural data prevents true mountain classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether scoring algorithm amplifies inequalities or reflects pre-existing stratification"
+    },
+    {
+      "id": "appeal_mechanism_effectiveness",
+      "question": "Can citizens meaningfully contest and overturn adverse credit scores through administrative or legal appeal, or are appeals largely procedural theater?",
+      "resolution_mechanism": "Analysis of appeal success rates, reversal rates for successfully appealed scores, time-to-resolution for appeals, comparison with baseline false-positive rates in training data, interview data from appeal process participants",
+      "impact": "If appeals are genuinely effective: suppression index drops (citizens have meaningful exit option), chi calculation changes, some perspectives might reclassify from Snare to Tangled Rope. If appeals are theater: confirms suppression \u2265 0.75 and validates Snare classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of appeal mechanisms for contesting credit scores"
+    },
+    {
+      "id": "data_accuracy_degradation",
+      "question": "Are behavioral data inputs to the scoring system sufficiently accurate and timely for fair assessment, or do they systematically encode stale, incomplete, or erroneous information?",
+      "resolution_mechanism": "Audit of data entry errors, missing data rates, update latencies, and reconciliation failures across score components; comparison of recorded behavior vs individual attestations; analysis of how data quality varies by geography and socioeconomic status",
+      "impact": "If data quality is high: suppression justified by accuracy. If quality is low: suppression is amplified by noise (citizens cannot effectively contest scores because scoring logic is opaque), increasing actual harm despite lower structural suppression. Shifts mandatrophy framing from 'system is unfair' to 'system is broken'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Data quality and accuracy in behavioral scoring inputs"
+    },
+    {
+      "id": "state_capacity_constraint",
+      "question": "Is the social credit system technically feasible for the state apparatus to administer fairly and scalably, or does it exceed state capacity, degrading into arbitrary or corrupted enforcement?",
+      "resolution_mechanism": "Administrative capacity audits, analysis of implementation delays and technical failures, case studies of corruption or arbitrary enforcement by local administrators, comparison of scoring consistency across regions",
+      "impact": "If technically feasible: system remains a coherent Snare (extraction mechanism is stable). If capacity-constrained: enforcement becomes arbitrary and inconsistent, which paradoxically might reduce *average* extraction (because unpredictability raises exit costs unevenly) but increases *experienced* suppression for those who do bear enforcement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "State administrative capacity to implement social credit fairly and scalably"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Social credit architecture operationalizes 'trustworthiness' by encoding behavioral data into unified scores that determine access to credit, employment, travel, education, and social services. The constraint exhibits multiple classification perspectives depending on structural position. For trapped citizens, it is pure extraction (Snare) \u2014 total behavioral colonization with zero exit options. For the state apparatus, it is coordination infrastructure (Rope) \u2014 solving the epistemic problem of monitoring large populations. For tech vendors, it is mixed coordination and extraction (Tangled Rope) \u2014 genuine governance tools plus regulatory capture. For advocacy coalitions, it is degraded resistance theater (Piton) \u2014 organized opposition that makes the system appear contestable while extraction mechanisms persist unchanged. The false summit (Mountain) perspective reveals how technological inevitability frames can naturalize what is actually a constructed institutional arrangement with substantial policy contingency. The constraint's extractiveness has increased over the interval (0.42 \u2192 0.68) as the system expanded from credit assessment to employment, travel, and civic participation domains. Theater ratio increased (0.35 \u2192 0.58) as implementation shifted from pure scoring to elaborate appeal procedures and publicity around 'credit redemption' narratives, which are largely performative \u2014 they give the appearance of contestability while substantively changing few scores.",
+    "key_agents": [
+      "Unscored Citizens: Primary victim (powerless/trapped) \u2014 entire population subject to behavioral encoding with no opt-out, cascading restrictions based on algorithmic scores",
+      "Marginalized Groups: Secondary victim (moderate/constrained) \u2014 disproportionately disadvantaged by algorithmic bias, historical disparities in training data, limited appeal mechanisms",
+      "Privacy Commons: Abstract victim \u2014 collective epistemic good of behavioral privacy degraded by normalized surveillance infrastructure",
+      "State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 achieves behavioral transparency and standardized enforcement across large population",
+      "Compliant Enterprise: Secondary beneficiary (institutional/arbitrage) \u2014 preferential access to credit, customers, contracts in exchange for compliance with behavioral reporting",
+      "Tech Implementation Sector: Hybrid actor (powerful/mobile) \u2014 benefit from sustained contracts and lock-in; bear extraction through regulatory capture and feature demands",
+      "Advocacy Coalition: Organized but constrained (organized/constrained) \u2014 perform resistance through campaigns and legal challenges; constrained by system momentum and state control",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inevitable features of scaled governance"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The state captures behavioral data and converts it into unilateral control over citizen access to credit, employment, travel, and services. Citizens have no reciprocal scoring right over the state. The system extracts behavioral compliance value (citizens modify behavior to improve scores) and economic value (restricted access creates rents captured by compliant enterprises). Extractiveness increased from 0.42 to 0.68 as the system expanded from initial credit-only scope to employment and travel domains. Suppression (0.75): High. Citizens cannot meaningfully opt out (participation is mandatory for economic participation), cannot access the algorithms (technical opacity prevents contestation), and face severe penalties for non-compliance (credit denial, employment barriers, travel prohibition). Appeal mechanisms exist but are procedurally elaborate and have low success rates \u2014 they function as theater rather than meaningful exit. Suppression increased with system maturation and expansion of enforcement domains. Theater ratio (0.58): Moderate-high. Implementation includes high-visibility 'credit redemption' narratives (publicity around individuals who improved scores, civic participation programs that claim to raise creditworthiness) that frame the system as fair and contestable. Appeal procedures are elaborate and publicized. However, underlying extraction mechanisms (algorithmic opacity, low appeal success rates, behavioral compliance pressure) remain unchanged. Theater has increased as the system has matured and faces growing public criticism.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural relationship to extraction flows. Trapped citizens (powerless/trapped) experience maximum extraction \u2014 they bear full costs of scoring with zero exit options, deriving d \u2248 0.95. Marginalized groups (moderate/constrained) experience high extraction with some theoretical exit (migration, informal economy) but at prohibitive cost, deriving d \u2248 0.70. State apparatus (institutional/arbitrage) benefits from behavioral transparency and standardized enforcement, deriving d \u2248 0.10 (beneficiary with exit). Compliant enterprises (institutional/arbitrage) benefit from preferential access and regulatory advantage, deriving d \u2248 0.15. Tech sector (powerful/mobile) experiences mixed extraction (regulatory capture) and benefits (contracts), deriving d \u2248 0.55 (moderate position between beneficiary and victim). Advocacy coalition (organized/constrained) performs resistance but lacks structural power to change system, deriving d \u2248 0.45 (moderate victim without full exit). The analytical observer uses the canonical d \u2248 0.73 for analytical power.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence. Trapped citizens see pure extraction (Snare) \u2014 the constraint is a mechanism for state control of their economic participation. The state apparatus sees coordination infrastructure (Rope) \u2014 the constraint solves the legitimate problem of assessing trustworthiness at scale. Tech vendors see mixed coordination and extraction (Tangled Rope) \u2014 they provide genuine governance tools but face regulatory capture that constrains their design freedom. Marginalized groups see concentrated extraction (Snare at higher intensity than general population) due to algorithmic bias feedback loops. Advocacy coalitions see degraded resistance (Piton) \u2014 their public campaigns and legal challenges make the system appear contestable but substantively preserve extraction mechanisms. The analytical observer risks naturalizing the system as a law of social order (Mountain \u2014 false summit) rather than recognizing it as a constructed institutional arrangement with substantial policy contingency. This perspectival divergence is extreme because the beneficiaries (state, compliant enterprises) and victims (citizens, marginalized groups) occupy completely different structural positions with nearly opposite exit options.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint exemplifies mandatrophy because it is simultaneously a coordination mechanism (providing the state with tools to assess trustworthiness at scale) and pure extraction (colonizing citizen behavior and restricting economic participation). The mandate is that social credit 'improves governance efficiency' (coordination framing) and 'incentivizes prosocial behavior' (behavioral improvement framing). Mandatrophy resolves by recognizing that the coordination function is real but drastically insufficient to justify the extraction cost. The state could achieve similar governance efficiency through alternative coordination mechanisms (transparent rules-based credit assessment, participatory algorithm design, federated scoring with citizen appeal rights) that do not require behavioral colonization. The mandate for coordination does not entail the mandate for this specific extractive architecture. Therefore, classification as Snare is justified despite the genuine coordination function \u2014 the extraction mechanism is not a necessary feature of coordination but a contingent choice that serves state and enterprise interests. Mandatrophy resolved at high confidence: the system's extractiveness (0.68) and suppression (0.75) substantially exceed what would be required for the coordination function alone, indicating that extraction is a primary structural feature, not a necessary side-effect of coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithmic_transparency_bottleneck",
+      "behavioral_surveillance_infrastructure",
+      "credit_access_inequality"
+    ],
+    "dual_formulation_note": "Social credit architecture decomposes into three related constraints: (1) the system itself as an enforcement mechanism (this story), (2) the algorithmic opacity that prevents meaningful appeal (algorithmic_transparency_bottleneck, higher \u03b5), and (3) the surveillance infrastructure that enables behavioral data collection (behavioral_surveillance_infrastructure, moderate \u03b5). The system story represents the coordination-extraction hybrid; the transparency bottleneck represents the structural barrier to contestation; the surveillance infrastructure represents the technological precondition. All three are necessary for the extraction to function at current intensity. Removing any one would degrade extractiveness."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

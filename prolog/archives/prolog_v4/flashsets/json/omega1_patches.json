@@ -1,0 +1,127 @@
+{
+  "header": {
+    "constraint_id": "omega1_patches",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Omega-1 Data Quality Patching Process",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "knowledge_base_users"
+    ],
+    "victims": [
+      "patch_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Patch Developer",
+      "comment": "Perspective of a patch developer who is forced to work on low-priority, under-specified issues with little recognition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Knowledge Base Users",
+      "comment": "Perspective of Knowledge Base users who benefit from the improved data quality, leading to better outcomes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "Perspective of an analytical observer who sees that the process provides both useful data quality, but at a cost."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "patch_specification_completeness",
+      "question": "To what degree are patches well-specified and scoped?",
+      "resolution_mechanism": "Analysis of patch documentation and impact assessments",
+      "impact": "Impacts the degree of extraction from patch developers",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Completeness of the patch specification"
+    },
+    {
+      "id": "developer_recognition_policy",
+      "question": "Are developers given recognition for the patches they develop?",
+      "resolution_mechanism": "Evaluation of the recognition policies for developers who contribute patches.",
+      "impact": "If developers are recognized and rewarded, then the patch developer perspective becomes rope.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Recognition given to developers for their patch contributions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the institutional process of auditing and patching under-specified constraints in a large knowledge base.  The Knowledge Base users benefit from having higher quality data, but patch developers, who are forced to work on the patches, are extracted from.",
+    "key_agents": [
+      "Knowledge Base Users: Primary beneficiary (institutional/arbitrage)",
+      "Patch Developers: Primary victim (powerless/trapped)",
+      "Analytical Observer: Civilizational View (analytical/analytical)"
+    ],
+    "logic_rationale": "The base extractiveness is 0.6 because the patch developers have to deal with the under-specified constraints in the knowledge base. The suppression is 0.4 because developers might not have the option to refuse the patch, but there might be some alternatives.",
+    "perspectival_gap": "Knowledge Base Users benefit greatly by getting higher quality data. Patch developers, on the other hand, might not be happy. An analytical observer sees a tangled rope that provides value but at a cost.",
+    "directionality_logic": "Patch developers bear costs because they are forced to work on under-specified issues, while KB users benefit.",
+    "mandatrophy_analysis": "In this constraint, mandatrophy is resolved by observing that the KB users genuinely benefit from the patch. Even though patch developers may feel extracted, that extraction is directed at a genuine need for higher quality data."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

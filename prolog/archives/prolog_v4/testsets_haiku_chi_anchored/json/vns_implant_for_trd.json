@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "vns_implant_for_trd",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vns"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vagus Nerve Stimulation (VNS) Implant for Treatment-Resistant Depression",
+    "topic_domain": "biomedical/psychiatric_treatment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "device_manufacturer",
+      "implanting_surgeons",
+      "psychiatric_establishment"
+    ],
+    "victims": [
+      "trd_patients",
+      "medical_autonomy",
+      "alternative_treatment_pathways"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Treatment-Resistant Depression Patient",
+      "comment": "PERSPECTIVE 1: TRD PATIENT (SNARE) \u2014 Exhausted all standard psychiatric treatments (multiple SSRIs, psychotherapy, ECT). Faces binary: accept surgical implant with permanent device-dependence or remain untreated. Cannot exit the constraint without accepting depression. Suppression is extreme: information asymmetry, surgical lock-in, device manufacturer dependency. d\u22480.93, f(d)\u22481.39, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Device Manufacturer (Entellus/LivaNova)",
+      "comment": "PERSPECTIVE 2: DEVICE MANUFACTURER (ROPE) \u2014 Benefits from approval pathway, patient lock-in (replacement batteries, settings optimization, long-term follow-up revenue). Experiences constraint as coordination: FDA approval creates predictable market, clinical protocols standardize use. Has full exit option (arbitrage) \u2014 can shift to other neurotech products. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary; effective extraction is negative (subsidy)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Psychiatric Establishment",
+      "comment": "PERSPECTIVE 3: PSYCHIATRIC ESTABLISHMENT (TANGLED ROPE) \u2014 Coordination function: VNS provides validated intervention for TRD, enabling treatment of previously untreatable patients (genuine coordination benefit). Extraction mechanism: VNS promotes neurobiological reductionism, pathologizes depression as device-fixable disease, marginalizes psychosocial approaches (structural extraction). Constrained exit: institutional commitments to pharmacological/biomedical models make exit costly. d\u22480.48, f(d)\u22480.62, \u03c3=1.0 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Implanting Surgeon",
+      "comment": "PERSPECTIVE 4: IMPLANTING SURGEON (TANGLED ROPE) \u2014 Coordination: surgical intervention enables treatment for desperate patients (genuine benefit). Extraction: captures procedural revenue, device-dependent income stream, creates patient lock-in that drives follow-up appointments and optimization consultations. Constrained exit: professional reputation tied to adoption of FDA-approved intervention. d\u22480.52, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Alternative Treatment Pathway Development",
+      "comment": "PERSPECTIVE 5: ALTERNATIVE TREATMENT PATHWAYS (SNARE) \u2014 Psychedelic-assisted therapy, intensive psychotherapy, neurofeedback, and other non-surgical approaches face suppression by VNS approval and reimbursement capture. Medical establishment endorsement of VNS as 'the' validated solution for TRD suppresses research funding and clinical development of alternatives. Constrained exit: these pathways exist but lack institutional backing. d\u22480.88, f(d)\u22481.28, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Medical Autonomy Ideal",
+      "comment": "PERSPECTIVE 6: MEDICAL AUTONOMY / BIOPOLITICAL AUTONOMY (PITON) \u2014 The ideal of patient autonomy in medical decision-making is substantially performative within the VNS system. Theater ratio (0.61) reflects: informed consent rituals that obscure irreversible surgical commitment, outcome statistics that inflate efficacy estimates, and procedural complexity that prevents meaningful patient evaluation. The autonomy ideal persists as institutional ritual while actual decision-making capacity is severely constrained by information asymmetry and desperation. theater_ratio\u22650.70 not quite met, but approaching degradation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN) \u2014 Risk of naturalizing as immutable: 'Severe treatment-resistant depression is by definition untreatable by standard means; therefore any available intervention becomes acceptable.' This invokes a natural law framing (depression is intractable, therefore VNS is inevitable), but the structural data (\u03b5=0.52, suppression=0.68, theater=0.61) contradicts true mountainhood. The constraint is contingent on institutional choices (reimbursement, professional adoption, alternative pathway suppression), not on natural limits. Engine will flag as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "true_response_rate_attribution",
+      "question": "What portion of VNS efficacy is attributable to device stimulation vs. therapeutic ritual, placebo response, intensive follow-up care, or selection bias toward motivated patients?",
+      "resolution_mechanism": "Long-term follow-up data comparing device-on vs. sham stimulation; patient-reported outcomes; correlation with objective depression biomarkers; comparison of efficacy in blinded vs. unblinded populations",
+      "impact": "If efficacy is >60% ritual/placebo: extraction mechanism is amplified (patients pay for theater). If efficacy is <30% ritual/placebo: tangled rope classification is correct (genuine coordination benefit exists). This determines whether the constraint is primarily Snare or Tangled Rope from patient perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of VNS efficacy to device vs. ritual/placebo"
+    },
+    {
+      "id": "alternative_pathway_suppression_mechanism",
+      "question": "Does VNS FDA approval and insurance reimbursement actively suppress development of alternative non-surgical TRD treatments, or do they coexist independently?",
+      "resolution_mechanism": "Historical analysis of funding allocation for psychedelic-assisted therapy, intensive psychotherapy, and neurofeedback trials pre- vs. post-VNS approval; correlation between insurance reimbursement expansion and research grant distribution; interviews with alternative treatment researchers on funding pressures",
+      "impact": "If suppression is active and significant: VNS is a Snare from the perspective of alternative pathways (victim classification confirmed). If suppression is minimal: VNS is neutral to competing approaches. This determines whether 'medical autonomy' victim classification is justified.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether VNS approval suppresses alternative treatment development"
+    },
+    {
+      "id": "device_dependence_irreversibility_burden",
+      "question": "What is the true lifetime cost and burden of device dependence (battery replacements, device malfunctions, infection risk, MRI restrictions, explantation difficulty)?",
+      "resolution_mechanism": "Longitudinal patient cohort tracking device-related complications, explantation rates, quality-of-life impact from device-related restrictions; cost analysis of lifetime device management vs. one-time surgical investment; patient regret rates at 5, 10, and 20 year follow-up",
+      "impact": "If lifetime burden is high: extraction mechanism is amplified (patient lock-in cost is real). If burden is manageable: coordin function is amplified (intervention enables ongoing treatment). This directly affects \u03c7 calculation and whether the constraint should be classified as pure Snare or Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Lifetime burden of device dependence and irreversibility"
+    },
+    {
+      "id": "patient_desperation_boundary",
+      "question": "At what threshold of treatment failure does patient desperation override informed consent? Is surgical implant acceptance a genuine autonomous choice or structural coercion?",
+      "resolution_mechanism": "Psychological assessment of decision-making capacity in TRD patients pre-VNS; comparison of autonomy measures between VNS candidates and general population; analysis of counterfactual alternatives (what would patients choose if alternative treatments were equally available and funded?)",
+      "impact": "If desperation-based coercion is primary: patient agency is severely constrained, d\u21920.98, and Snare classification is unambiguous. If autonomy is substantial: tangled rope classification is more accurate. This is conceptual and preference-dependent, not purely empirical.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether patient desperation overrides informed consent capacity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Vagus Nerve Stimulation (VNS) for treatment-resistant depression represents a surgical intervention for patients who have failed multiple pharmacological and psychological treatments. The constraint operates as a tangled rope with severe asymmetric extraction: VNS provides genuine coordination benefit (enabling treatment of otherwise untreatable severe depression) while simultaneously creating structural lock-in that benefits manufacturers, surgeons, and the psychiatric establishment at the expense of patient autonomy and alternative treatment pathways. The device requires permanent implantation, long-term follow-up, periodic battery replacements, and generates irreversible dependency. Theater ratio (0.61) reflects that informed consent processes, outcome statistics, and clinical protocols contain substantial performative elements that obscure the true costs and alternatives. The constraint exhibits all six types from different structural positions: a natural law perspective (depression is intractable, therefore intervention is inevitable), a manufacturer/surgeon perspective (coordination enabling profit), an establishment perspective (mixed coordination and professional extraction), a patient perspective (structural snare), and a medical autonomy perspective (degraded ritual). The core mandatrophy tension: Is VNS a coordination mechanism enabling treatment of the severely disabled (genuine benefit) or pure extraction exploiting desperation (structural predation)? The answer depends critically on what alternatives would be available if VNS were not approved and funded, which is counterfactual and suppressed by current institutional choices.",
+    "key_agents": [
+      "Treatment-Resistant Depression Patient: Primary victim (powerless/trapped) \u2014 exhausted all standard treatments; faces binary choice between surgical implant or continued illness",
+      "Device Manufacturer (LivaNova/Entellus): Primary beneficiary (institutional/arbitrage) \u2014 captures approval pathway, long-term revenue from device replacements and clinical optimization",
+      "Implanting Surgeon: Secondary beneficiary (moderate/constrained) \u2014 derives procedural revenue and device-dependent follow-up income; professional reputation tied to adoption",
+      "Psychiatric Establishment: Mixed beneficiary/coordinator (organized/constrained) \u2014 benefits from validated biomedical intervention but constrained by professional commitments to neurobiological models",
+      "Alternative Treatment Pathways: Secondary victim (moderate/constrained) \u2014 psychedelic-assisted therapy, intensive psychotherapy, and neurofeedback face suppression from VNS institutional dominance",
+      "Medical Autonomy Ideal: Abstract victim (powerful/mobile) \u2014 informed consent processes become performative; patient decision-making capacity is substantially constrained by desperation and information asymmetry",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional choice as immutable law of psychiatric medicine"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. VNS creates substantial extraction from patients through device lock-in (permanent implant, battery replacements, MRI restrictions, explantation difficulty), long-term clinical dependency, and information asymmetry about true efficacy vs. ritual/placebo contribution. However, extractiveness is not maximal because the intervention does provide genuine therapeutic benefit for some patients (coordination function exists). The manufacturing and surgical revenue streams amplify extraction. Suppression (0.68): Moderate-high. Patients face multiple suppression mechanisms: (1) information asymmetry \u2014 complex neuroscience framing obscures lack of understanding of mechanism; (2) desperation \u2014 exhausted standard treatments create psychological coercion; (3) procedural complexity \u2014 surgical irreversibility and device management prevent easy exit; (4) institutional barrier \u2014 psychiatric establishment endorsement marginalizes alternative pathways; (5) financial capture \u2014 insurance reimbursement preferentially funds VNS over alternatives. Suppression is not total (some patients do decline, alternatives do exist) but is severe. Theater ratio (0.61): Moderate-high. The clinical validation process contains substantial theatrical elements: (1) efficacy statistics conflate device effect with therapeutic ritual, (2) informed consent rituals create appearance of autonomous choice while desperation constrains actual agency, (3) outcome reporting emphasizes responder rates while suppressing non-responder experiences, (4) follow-up optimization appointments are presented as personalized care while serving revenue capture. Theater has increased over the 20-year interval as institutional adoption has normalized the procedure.",
+    "perspectival_gap": "This constraint manifests dramatically different classification across structural positions. The manufacturer sees coordination (Rope/pure benefit) \u2014 VNS solves a genuine medical need while generating stable revenue. The surgeon sees mixed coordination-extraction (Tangled Rope) \u2014 patients benefit from treatment access; surgeon benefits from procedural revenue. The psychiatric establishment sees mixed coordination-extraction (Tangled Rope) \u2014 VNS enables treatment of severe TRD while reinforcing neurobiological reductionism. The TRD patient sees extraction (Snare) \u2014 offers only binary choice (implant or remain ill), creates permanent device dependence, and obscures true mechanisms through medical theater. Alternative treatment pathways see suppression (Snare) \u2014 VNS FDA approval and insurance capture suppress development of non-surgical approaches. Medical autonomy sees degraded ritual (Piton) \u2014 informed consent becomes performative. The analytical observer risks seeing natural law (false Mountain) \u2014 depression is intractable, therefore VNS becomes inevitable \u2014 but the structural data reveals this as a contingent institutional choice, not a natural law.",
+    "directionality_logic": "TRD Patient: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.39. Maximum extraction. Patient is the primary target of extraction; has no exit option within the constraint (accept implant or remain untreated; cannot exit the constraint itself). Device Manufacturer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Negative effective extraction (net subsidy from constraint). Has full exit option \u2014 can shift to competing neurotech products. Implanting Surgeon: Beneficiary + constrained \u2192 d\u22480.55, f(d)\u22480.75. Moderate-high extraction. Surgeon benefits from procedural revenue and device-dependent follow-up, but has constrained exit (professional reputation tied to adoption of FDA-approved intervention). Psychiatric Establishment: Mixed + constrained \u2192 d\u22480.48, f(d)\u22480.62. Moderate extraction. Both coordinates (enables treatment) and extracts (reinforces professional power); constrained exit (institutional commitments). Alternative Pathways: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.28. High extraction. Suppressed by VNS dominance; have constrained exit (exist but lack institutional backing). Medical Autonomy: Victim + mobile \u2192 d\u22480.85, f(d)\u22481.15. High extraction. Ideal is nominal mobile in other contexts, but within medical decision-making process is structurally trapped by information asymmetry and desperation.",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: The VNS constraint sits at the boundary between Tangled Rope (coordination + extraction) and Snare (pure extraction). The mandatrophy is unresolved because the empirical facts are ambiguous: (1) True efficacy attribution is contested \u2014 how much of VNS benefit is device stimulation vs. therapeutic ritual/placebo? (2) Alternative pathway suppression is real but not quantified \u2014 does VNS approval actively suppress other treatments or do they coexist? (3) Patient autonomy is contested \u2014 is desperation-driven consent genuine autonomous choice or structural coercion? The claimed_type (tangled_rope) reflects that genuine coordination function exists (VNS does enable treatment of severe TRD), but the suppression metrics (0.68) and patient victim classification (snare from powerless perspective) indicate extraction mechanisms are severe. RESOLUTION PATH: Three experiments would resolve this: (A) Long-term outcome studies comparing device-on vs. sham stimulation to isolate true efficacy from ritual/placebo \u2014 if true efficacy is >60% device effect, tangled rope is correct. (B) Historical analysis of alternative treatment funding pre- vs. post-VNS approval \u2014 if suppression is active and significant, snare classification is amplified. (C) Counterfactual scenario modeling what patients would choose if alternative treatments (psychedelic-assisted therapy, intensive psychotherapy) were equally funded and available \u2014 if alternatives would be chosen by >40% of current VNS candidates, patient desperation coercion is real. Until these empirical questions are resolved, the constraint cannot be definitively classified. The current tangled_rope classification is conservative (recognizes genuine benefit) but acknowledges unresolved snare risk."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "psychiatric_pharmaceutical_extraction",
+      "biomedical_model_dominance",
+      "medical_desperation_coercion"
+    ],
+    "dual_formulation_note": "VNS for TRD is downstream of pharmaceutical treatment failure (patients reach VNS only after exhausting SSRIs, SNRIs, ECT) and upstream of biomedical model hegemony (VNS legitimizes neurobiological reductionism in depression treatment). The constraint family includes (1) psychiatric_pharmaceutical_extraction (the broader pharma-dependent patient lock-in), (2) biomedical_model_dominance (institutional marginalization of psychosocial approaches), and (3) medical_desperation_coercion (structural use of patient desperation to override autonomous decision-making). Each has distinct \u03b5 value reflecting different aspects of the system."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "incumbent_steel_production",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "steel"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Incumbent Blast Furnace Steel Production Method",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "integrated_steelmakers",
+      "coking_coal_producers",
+      "iron_ore_miners"
+    ],
+    "victims": [
+      "alternative_steel_technologies",
+      "developing_nations_without_ore_reserves",
+      "decarbonization_programs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Developing Steel Startup",
+      "comment": "PERSPECTIVE 1: DEVELOPING STEEL STARTUP (SNARE) \u2014 Small steelmakers lacking access to high-grade ore and coking coal infrastructure cannot exit the blast furnace supply chain. Trapped by resource geography and capital barriers; must purchase inputs at monopolistic prices or abandon steel production entirely. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Alternative Steel Technology Developer",
+      "comment": "PERSPECTIVE 2: ALTERNATIVE STEEL TECHNOLOGY DEVELOPER (TANGLED ROPE) \u2014 Electric arc furnace (EAF), hydrogen-based direct reduction, and other emerging methods offer genuine technical alternatives, but face suppression through: (1) capital requirements favoring incumbents, (2) market lock-in around blast furnace-optimized supply chains, (3) regulatory acceptance delays. Coordination benefit exists (cleaner production, circular economy potential) but is asymmetrically distributed \u2014 incumbents extract rents by delaying transition while appearing to support decarbonization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Integrated Steelmaker",
+      "comment": "PERSPECTIVE 3: INTEGRATED STEELMAKER (ROPE) \u2014 Major producers benefit from blast furnace infrastructure as a coordination standard. Access to long-term ore and coal contracts, established supply logistics, and production process expertise create genuine efficiency gains. The constraint appears as pure coordination \u2014 the blast furnace ecosystem enables scale economies and reliable output. High arbitrage capacity (can shift investment to alternative methods if economics change)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Decarbonization Coalition",
+      "comment": "PERSPECTIVE 4: DECARBONIZATION COALITION (SCAFFOLD) \u2014 Policy makers, climate coalitions, and steel customers organizing around net-zero commitments treat blast furnace dominance as a temporary problem with a sunset clause. EU Green Deal, US Inflation Reduction Act, and green steel procurement standards are building economic exit ramps through: (1) carbon border adjustment mechanisms (CBAM), (2) green steel premium markets, (3) subsidies for hydrogen and EAF infrastructure. Experienced extraction is low because the coalition has organized exit pathways with explicit timelines (2030-2050 decarbonization targets). Theater ratio remains moderate because the coalition's mechanisms involve genuine regulatory shifts, not performative compliance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Capital Investment System",
+      "comment": "PERSPECTIVE 5: LEGACY CAPITAL INVESTMENT SYSTEM (PITON) \u2014 Blast furnace infrastructure represents tens of billions in sunk capital with typical 30-50 year lifespans. Financial institutions and industrial policy continue privileging blast furnace investment through: (1) favorable depreciation schedules, (2) assumption that existing capacity will remain economically central, (3) low cost of capital for incumbent expansion vs. higher-risk alternatives. This persistence appears to be functional coordination (avoiding stranded assets) but is increasingly performative \u2014 the theater lies in asserting technological inevitability when superior alternatives exist. Theater ratio is the primary classification driver here, not high extraction; the system extracts value by delaying transition, but this extraction is theater-driven rather than structurally novel."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Coking Coal Producer Nation",
+      "comment": "PERSPECTIVE 6: COKING COAL PRODUCER NATION (TANGLED ROPE) \u2014 Nations dependent on coking coal exports (Australia, Mongolia, parts of Africa and Central Asia) experience the blast furnace constraint as both coordination and extraction. Coordination benefit: established export markets, foreign exchange revenue, employment stability. Extraction asymmetry: locked into commodity markets vulnerable to decarbonization shocks, structurally constrained from diversifying economy, dependent on incumbent steelmakers' purchasing power. Exit options are constrained by both resource geography and sunk capital in mining infrastructure. The nation benefits from the status quo but cannot easily exit, creating classic tangled rope dynamics."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, blast furnace dominance is neither a natural law nor a pure coordination mechanism. It is a genuine hybrid: (1) coordination function is real \u2014 the blast furnace solved the technical problem of large-scale steel production in the 19th century and created economies of scale that persist. (2) Extraction is real and growing \u2014 resource constraints (declining ore grades, coking coal scarcity), climate costs externalized, and technology lock-in mechanisms delay transition to superior alternatives. (3) Enforcement is active \u2014 capital allocation favors incumbents, regulatory timelines are accommodating, supply chain lock-in persists. This is a textbook tangled rope: benefits exist, but asymmetrically distributed, and alternatives are suppressed through institutional rather than technical barriers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_technology_viability",
+      "question": "Will hydrogen-based direct reduction or electric arc furnace technologies achieve cost parity with blast furnaces by 2035?",
+      "resolution_mechanism": "Tracking capital costs for green steel capacity installations, energy price trajectories, and learning curves for nascent technologies; comparative levelized cost analysis at scale",
+      "impact": "If yes: blast furnace constraint transitions from tangled_rope to piton (enforcement weakens). If no: tangled_rope status persists; transition extends beyond 2050, affecting mandatrophy classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative steel technologies reach economic viability"
+    },
+    {
+      "id": "iron_ore_reserve_depletion_timeline",
+      "question": "At current extraction rates and declining ore grades, when do high-grade iron ore reserves become economically exhausted?",
+      "resolution_mechanism": "US Geological Survey reserve assessments, grade decline trends in major mining regions, break-even cost analysis for low-grade ore processing",
+      "impact": "If depletion timeline < 2050: blast furnace constraint becomes mountain (physical scarcity forces transition). If > 2070: constraint remains institutional/economic (alternatives compete, not replace due to shortage).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for high-grade iron ore reserve exhaustion"
+    },
+    {
+      "id": "carbon_pricing_enforcement",
+      "question": "Will carbon border adjustment mechanisms (CBAM) and similar policies actually create sufficient price pressure to shift blast furnace investment patterns?",
+      "resolution_mechanism": "Monitoring carbon credit prices, green premium actualization in steel procurement markets, capital expenditure shifts in integrated steelmaker five-year plans",
+      "impact": "If effective: scaffold perspective confirmed \u2014 decarbonization coalition has real exit pathway with 2030-2040 sunset. If weak: coal coalition perspective strengthens; constraint remains tangled rope longer than expected.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether carbon pricing enforcement creates sufficient transition incentives"
+    },
+    {
+      "id": "supply_chain_lock_in_strength",
+      "question": "How deeply embedded are blast furnace-optimized logistics and customer specifications in global supply chains?",
+      "resolution_mechanism": "Analysis of switching costs for major steel consumers (automotive, construction, appliance manufacturers); feasibility studies for supply chain reconfiguration for alternative steel types",
+      "impact": "If lock-in is strong: suppression value increases; victims trapped longer. If lock-in is weak: exit paths open faster; constraint weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of supply chain lock-in around blast furnace-optimized specifications"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The blast furnace method dominates global steel production because it achieved massive economies of scale during the 20th century industrial expansion. High-grade iron ore and coking coal are concentrated geographically, creating lock-in: integrated steelmakers invested billions in blast furnace capacity, supply chains optimized for blast furnace inputs, and regulatory standards written around blast furnace outputs. This constraint exhibits tangled rope structure: genuine coordination benefits exist (the blast furnace ecosystem enables efficient large-scale production), but extraction mechanisms have intensified as technological alternatives emerge (hydrogen-based direct reduction, electric arc furnaces powered by renewables) and resource constraints tighten (declining ore grades, climate regulations forcing coal phase-out). The constraint is neither a natural law nor pure coordination \u2014 it is an institutional arrangement maintained through capital allocation bias, regulatory accommodation, and supply chain lock-in, not through technical inevitability. Different stakeholders experience it differently: incumbent steelmakers see rope (efficiency), developing steelmakers see snare (trapped by geography), alternative technologies see tangled rope (suppressed), coal-producing nations see tangled rope (locked in), and decarbonization coalitions see scaffold (temporary, with sunset clauses). The extractiveness has increased from 0.42 to 0.58 over the interval as climate regulations force incumbent steelmakers to defend blast furnace investment against alternatives, increasing theater and suppression mechanisms.",
+    "key_agents": [
+      "Integrated Steelmakers (institutional/arbitrage): Primary beneficiaries \u2014 capture economies of scale, lock in supply chains, maintain capital depreciation advantages. Structural relationship: beneficiary. Can exit (have capital to invest in alternatives) but choose not to.",
+      "Coking Coal Producers (organized/constrained): Secondary beneficiaries \u2014 export commodity dependent on blast furnace demand. Structural relationship: beneficiary in short term, victim in long term (locked into declining markets). Cannot easily exit resource extraction.",
+      "Iron Ore Miners (institutional/arbitrage): Beneficiaries \u2014 depend on blast furnace demand for high-grade ore. Can potentially pivot to alternative mineral extraction but currently locked into iron ore.",
+      "Alternative Steel Technology Developers (moderate/constrained): Victims \u2014 suppressed by capital allocation favoring incumbents, market lock-in, regulatory inertia. Genuine technical capability but constrained exit (capital barriers).",
+      "Developing Nations Without Ore Reserves (powerless/trapped): Victims \u2014 cannot access high-grade iron ore at competitive prices, forced to purchase at monopolistic terms or import finished steel. No exit option.",
+      "Decarbonization Programs (organized/constrained): Victims of delay \u2014 forced to accommodate blast furnace timelines in climate targets, constrained by political economy of steel. But building organized exit pathways (green steel standards, carbon pricing).",
+      "Global Steel Customers (powerful/mobile): Secondary actors with exit capacity \u2014 can specify green steel, pressure suppliers to transition, source from alternatives. Mobile exit option (can diversify suppliers) creates potential coalition with decarbonization."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The blast furnace constraint extracts value through multiple mechanisms: (1) geographic concentration of high-grade ore and coking coal enables monopolistic pricing by resource owners, (2) capital barriers to building alternative capacity delay transition and protect incumbent returns, (3) supply chain lock-in forces customers to accept blast furnace-produced steel even at environmental cost, (4) regulatory accommodation (slow carbon pricing, long transition timelines) protects incumbent investment. However, extraction is not as severe as a pure snare (0.75+) because genuine coordination benefits exist \u2014 the blast furnace ecosystem does enable efficient production, and some alternative technologies (EAF with renewable power) are approaching cost parity. Suppression (0.62): Moderate-high. Significant barriers to exit: (1) capital requirements for new steel plants ($1-2B for greenfield blast furnace vs. $500M-1B for EAF, but still massive), (2) supply chain inertia \u2014 steel customers have specifications and logistics designed around blast furnace outputs, (3) regulatory uncertainty \u2014 green steel standards are emerging but not globally uniform, (4) employment and geopolitical lock-in \u2014 steel production is strategic, nations defend incumbent capacity. Suppression is not total because alternatives are technically viable and capital is available for transition; the suppression is institutional rather than absolute. Theater ratio (0.48): Moderate. The constraint exhibits mixed theater and function. Real functionality exists \u2014 the blast furnace ecosystem does solve genuine coordination problems around scale and efficiency. But theater is increasing: (1) incumbent steelmakers tout decarbonization commitments while expanding blast furnace capacity, (2) regulatory timelines extend far beyond feasibility to protect incumbent investment, (3) green steel standards are performative compliance (minimal carbon reduction) rather than genuine alternatives.",
+    "perspectival_gap": "The perspectival gap is driven by structural position relative to the ore/coal supply chain and the capital requirements for alternatives. Integrated steelmakers (institutional/arbitrage) perceive rope \u2014 the constraint is a coordination mechanism enabling efficient production, with high exit capacity via capital allocation. They have agency to shift investment but perceive no economic incentive to do so yet. Developing steelmakers (powerless/trapped) perceive snare \u2014 geographic concentration of ore and coal, capital barriers, and supply chain lock-in trap them in dependent positions with no exit. Alternative technology developers (moderate/constrained) perceive tangled rope \u2014 genuine technical capability to solve the problem (hydrogen-based DR, EAF) but suppressed by capital allocation bias and market lock-in. They have partial agency (can prove technology works) but constrained exit (cannot build plants without capital from incumbents or governments). Decarbonization coalitions (organized/constrained) perceive scaffold \u2014 they see the constraint as a temporary institutional arrangement with a clear sunset clause (2050 net-zero targets, carbon pricing). Exit pathways exist (green steel standards, alternative technologies) but require coordinated investment and regulatory certainty. The analytical observer perceives tangled rope \u2014 a genuine hybrid of coordination and extraction, neither natural nor pure, institutional rather than inevitable. Each perspective's classification is accurate from its structural position; the gap is real, not observational noise.",
+    "directionality_logic": "Directionality (d) is derived from structural position in the extraction flow and exit capacity. Beneficiaries with high exit capacity (integrated steelmakers, institutional/arbitrage) derive low d (~0.15) \u2014 they benefit from the constraint and can exit (by investing in alternatives), but choose not to. The sigmoid f(d) produces low \u03c7 for this perspective even with moderate base extractiveness. Victims with no exit capacity (developing steelmakers, powerless/trapped) derive high d (~0.95) \u2014 they bear the constraint's full weight with no option to leave or organize. f(d) produces high \u03c7, magnifying the experienced extraction. Alternative technology developers (moderate/constrained) derive mid-range d (~0.65) \u2014 they perceive the constraint as oppositional (it suppresses their alternatives) but have some agency (technical proof of concept, coalitional organizing potential). f(d) produces moderate \u03c7. The coal-producing nation (organized/constrained) derives mid-range d (~0.55) \u2014 benefits short-term from blast furnace demand (beneficiary in current regime) but faces lock-in and long-term vulnerability (victim in transition regime). This dual position is captured by the moderate d value, which reflects that the nation is both beneficiary and victim depending on time horizon. No directionality overrides are needed \u2014 the structural derivation from beneficiary/victim declarations and exit options produces accurate d values for each perspective.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED THROUGH STRUCTURAL DECOMPOSITION: The constraint resolves the tangled rope/snare ambiguity by distinguishing between the true structural function (coordination around blast furnace-optimized supply chains and economies of scale) and the extraction mechanisms (capital lock-in, geographic monopoly, supply chain inertia, regulatory accommodation). This is NOT a case of wrongly labeling pure extraction as coordination. Rather: (1) Coordination is genuine and creates real efficiency gains. (2) Extraction is genuine and growing as alternatives become viable. (3) The constraint is hybrid because both functions are essential to explaining why it persists despite superior alternatives existing. If we classified this as pure snare, we would miss the genuine coordinating function that makes the constraint efficient relative to fragmented competitors. If we classified it as pure rope, we would miss the asymmetric extraction that makes alternatives artificially uncompetitive. The tangled rope classification captures the true hybrid: a mechanism that solves real coordination problems (scale economies, supply reliability) while extracting rents through capital lock-in and market dominance. The scaffold perspective (decarbonization coalition) adds crucial temporal information: the constraint is undergoing institutional transition (sunset clause through 2050 net-zero targets). This sunset is real \u2014 carbon pricing, green steel standards, and alternative technology deployment create genuine exit pathways with explicit timelines. The piton perspective (legacy capital system) reveals theater increasing over time (theater ratio rises from 0.35 to 0.48 in the interval) \u2014 the constraint persists partly through performative defense of incumbent investment, not just functional necessity. Mandatrophy is resolved by acknowledging that the constraint is currently tangled rope but is transitioning toward piton (increasing theater as true functionality declines) and toward mountain for certain resource constraints (ore grade depletion, coal scarcity). The classification is temporally grounded and structurally accurate: the incumbent blast furnace method is a genuine hybrid that extracts asymmetrically while providing coordination benefits, and this hybrid is unstable \u2014 either alternatives will break the lock-in (transition to alternative technologies), or resource scarcity will force transition (constraints become physical), or institutional inertia will maintain it as theater (constraint degrades to piton)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "coking_coal_supply_chain",
+      "iron_ore_geographic_concentration",
+      "green_steel_technology_adoption",
+      "global_carbon_pricing_harmonization"
+    ],
+    "dual_formulation_note": "The incumbent blast furnace constraint decomposes into several structurally distinct constraints: (1) coking coal supply chain (resource extraction + geopolitics), (2) iron ore geographic concentration (resource monopoly), (3) alternative technology suppression (capital allocation bias), (4) global carbon pricing (regulatory harmonization). Each has its own \u03b5 and classification. The blast furnace constraint itself (\u03b5=0.58) represents the coordination function around production scale; downstream constraints represent the mechanisms that lock in that coordination function despite alternatives."
+  },
+  "directionality_overrides": []
+}

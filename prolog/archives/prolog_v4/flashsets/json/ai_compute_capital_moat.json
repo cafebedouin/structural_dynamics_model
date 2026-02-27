@@ -1,0 +1,162 @@
+{
+  "header": {
+    "constraint_id": "ai_compute_capital_moat",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The AI Compute & Capital Moat",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "frontier_ai_labs"
+    ],
+    "victims": [
+      "open_source_ai_community",
+      "academic_ai_researchers",
+      "smaller_ai_startups"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Open Source AI Community",
+      "comment": "The open-source AI community lacks the resources to compete with frontier AI labs, faces an increasingly difficult playing field, and is effectively trapped. They are the targets of the moat."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Academic AI Researchers",
+      "comment": "Academic researchers face funding constraints, limiting their access to compute resources. They are also constrained by the publish-or-perish system. They are significantly disadvantaged by the capital moat."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Smaller AI Startups",
+      "comment": "Smaller AI startups struggle to compete with well-funded frontier AI labs in attracting talent and securing compute resources. They are constrained by capital."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Frontier AI Labs",
+      "comment": "Frontier AI labs benefit from the capital moat, allowing them to attract top talent, build massive compute clusters, and maintain a competitive advantage. They can arbitrage talent and compute resources across the globe."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational perspective, the AI compute and capital moat poses a significant barrier to entry for smaller players and the open-source community, concentrating power and resources in the hands of a few dominant players. Coordination within these powerful actors happens even as they extract from other players. "
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hardware_commoditization",
+      "question": "How quickly will specialized AI hardware become commoditized and accessible?",
+      "resolution_mechanism": "Track the development and adoption of open-source hardware and cloud-based AI compute services.",
+      "impact": "If hardware commoditizes quickly, the capital moat will weaken. If it remains specialized and expensive, the moat will persist.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate of AI hardware commoditization"
+    },
+    {
+      "id": "algorithmic_efficiency",
+      "question": "To what extent will algorithmic innovations reduce the compute requirements for training frontier AI models?",
+      "resolution_mechanism": "Monitor advances in model compression, pruning, and other efficiency techniques.",
+      "impact": "Significant algorithmic improvements could shrink the compute requirements and erode the capital moat.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of algorithmic efficiency gains on compute requirements"
+    },
+    {
+      "id": "decentralized_training",
+      "question": "Will decentralized training methods enable collaborative model development across smaller organizations and individuals?",
+      "resolution_mechanism": "Evaluate the scalability and effectiveness of federated learning and other distributed training approaches.",
+      "impact": "Successful decentralized training could bypass the need for massive compute clusters and weaken the capital moat.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility and impact of decentralized training"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The development of frontier AI models requires immense capital for two primary inputs: elite research talent and massive-scale GPU compute clusters. This creates a significant barrier to entry, concentrating power and resources in the hands of a few dominant players. This barrier is described as a compute and capital moat.",
+    "key_agents": [
+      "Frontier AI Labs: Primary beneficiary (institutional/arbitrage) \u2014 benefits from the capital moat, attracting top talent and building massive compute clusters.",
+      "Open Source AI Community: Primary victim (powerless/trapped) \u2014 lacks the resources to compete and is effectively trapped.",
+      "Academic AI Researchers: Secondary victim (moderate/constrained) \u2014 faces funding constraints, limiting access to compute resources.",
+      "Smaller AI Startups: Secondary victim (moderate/constrained) \u2014 struggles to compete in attracting talent and securing compute resources."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. The capital moat creates a significant barrier to entry for smaller players and the open-source community, extracting their potential contributions and limiting innovation. Suppression (0.70): High. The high cost of compute and talent effectively suppresses competition from smaller players. Theater ratio (0.20): Low. The effort is very functionally oriented in building capability, and less about performative aspects.",
+    "perspectival_gap": "The frontier AI labs experience the capital requirements as coordination - they solve the difficult problem of building and managing talent and infrastructure. The open-source community, academic researchers, and smaller startups experience it as a significant barrier and a source of extraction. The analytical observer sees a concentrated ecosystem with limited distribution.",
+    "directionality_logic": "Frontier AI labs (institutional/arbitrage) are beneficiaries with a negative d. The open-source community (powerless/trapped), academic researchers (moderate/constrained) and smaller startups (moderate/constrained) are victims with high d values. The directionality values appropriately reflect the structural relationships and power dynamics.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by considering the perspectives of different stakeholders. While the capital moat may be necessary for developing frontier AI models, it also creates a significant barrier to entry and concentrates power and resources, so a pure coordination framing would be inaccurate."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_model_proliferation",
+      "ai_talent_pipeline"
+    ],
+    "dual_formulation_note": "The AI compute and capital moat is distinct from AI model proliferation but affects it. Similarly, it is tied to the AI talent pipeline but represents a separate constraint on entry."
+  },
+  "directionality_overrides": []
+}

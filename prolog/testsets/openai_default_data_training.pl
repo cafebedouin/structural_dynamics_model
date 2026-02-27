@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: openai_default_data_training
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_openai_default_data_training, []).
@@ -40,10 +41,10 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -52,28 +53,37 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: openai_default_data_training
- *   human_readable: "Default Use of ChatGPT User Data for Model Training"
- *   domain: technological
+ *   human_readable: Default Use of ChatGPT User Data for Model Training
+ *   domain: technology/platform_governance
  *
  * SUMMARY:
- *   This constraint describes the policy and technical implementation by which
- *   OpenAI uses conversations from non-API ChatGPT users to train its models
- *   by default. While users can opt-out, the burden is on them to do so,
- *   creating a structural extraction of valuable training data. A recent
- *   court ruling shielded this practice from federal DMCA claims but left it
- *   vulnerable to state-level privacy lawsuits, codifying its complex legal
- *   and ethical status.
+ *   OpenAI's default-to-training policy for free tier and plus tier ChatGPT
+ *   conversations represents a structural extraction mechanism disguised as a
+ *   coordination necessity. Users implicitly consent (through disclosed but
+ *   unread terms) to having their conversations incorporated into training
+ *   data, improving the model at their expense. The policy is architecturally
+ *   suppressive: opting out requires discovering and navigating settings that
+ *   are not prominently advertised. The extraction is structurally
+ *   asymmetric: OpenAI captures the training signal value while users receive
+ *   a bounded service. From the free tier user perspective, this is a pure
+ *   snare — no meaningful exit, no compensation, trapped by service
+ *   dependency and information asymmetry. From OpenAI's perspective, it is
+ *   coordination — solving the problem of obtaining diverse, real-world
+ *   training data. From the paid user perspective, it is still snare because
+ *   payment does not escape the training extraction. From regulators and
+ *   privacy advocates, it is tangled rope: real coordination function
+ *   (continuous improvement requires signal) but unjustified extraction
+ *   (default bias toward contribution rather than explicit opt-in). The
+ *   consent theater (Piton perspective) reflects that disclosure is
+ *   performatively legitimate while functionally opaque.
  *
- * KEY AGENTS (by structural relationship):
- *   - ChatGPT Users: Primary target (powerless/trapped) — their data is extracted,
- *     representing a loss of privacy and intellectual property.
- *   - OpenAI: Primary beneficiary (institutional/arbitrage) — receives vast
- *     quantities of high-quality training data at zero marginal cost, a key
- *     competitive advantage.
- *   - AI Researchers / Society: Secondary beneficiaries — benefit from the
- *     accelerated capability improvements of models trained on this data.
- *   - Analytical Observer: Sees the full structure, recognizing both the
- *     coordination benefit and the asymmetric extraction.
+ * KEY AGENTS:
+ *   - Free Tier Users: Primary victim (powerless/trapped) — no payment, complete service dependency, cannot exit without losing tool access
+ *   - ChatGPT Plus Users: Secondary victim (moderate/constrained) — paid subscription but still defaults to training data extraction, switching costs prevent true arbitrage exit
+ *   - OpenAI Corporation: Primary beneficiary (institutional/arbitrage) — captures training data value without explicit per-user negotiation, can change policy unilaterally
+ *   - Privacy Advocates & Regulators: Organized agent (organized/constrained) — see coordination problem AND extraction, can impose costs (GDPR fines, legislation) but cannot force architectural change without innovation tradeoffs
+ *   - Consent Documentation System: Institutional actor (institutional/arbitrage) — maintains disclosure ritual that satisfies legal requirements while functioning as theater
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent policy choice (default opt-in) as inherent necessity of model improvement
  */
 
 /* ==========================================================================
@@ -81,91 +91,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(openai_default_data_training, 0.52).
-domain_priors:suppression_score(openai_default_data_training, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(openai_default_data_training, 0.15).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(openai_default_data_training, 0.58).
+domain_priors:suppression_score(openai_default_data_training, 0.68).
+domain_priors:theater_ratio(openai_default_data_training, 0.55).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(openai_default_data_training, extractiveness, 0.52).
-narrative_ontology:constraint_metric(openai_default_data_training, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(openai_default_data_training, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(openai_default_data_training, extractiveness, 0.58).
+narrative_ontology:constraint_metric(openai_default_data_training, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(openai_default_data_training, theater_ratio, 0.55).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(openai_default_data_training, snare).
+narrative_ontology:human_readable(openai_default_data_training, "Default Use of ChatGPT User Data for Model Training").
+narrative_ontology:topic_domain(openai_default_data_training, "technology/platform_governance").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(openai_default_data_training, tangled_rope).
+domain_priors:requires_active_enforcement(openai_default_data_training).
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(openai_default_data_training). % Required for Tangled Rope
-
-% --- Emergence flag (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(openai_default_data_training, openai).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(openai_default_data_training, chatgpt_users).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
-%   Snare:        victim required; beneficiary optional -> MET
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(openai_default_data_training, openai_corporation).
+narrative_ontology:constraint_victim(openai_default_data_training, chatgpt_free_tier_users).
+narrative_ontology:constraint_victim(openai_default_data_training, chatgpt_plus_users).
+narrative_ontology:constraint_victim(openai_default_data_training, user_data_commons).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE CHATGPT USER (PRIMARY TARGET)
-% For a user unaware of the opt-out, or for whom the privacy cost is high,
-% the default data collection is purely extractive.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42.
-% χ = 0.52 * 1.42 * 1.2 (global scope) ≈ 0.88. This χ > 0.66 and suppression > 0.60
-% classifies it as a Snare.
-constraint_indexing:constraint_classification(openai_default_data_training, tangled_rope,
+% PERSPECTIVE 1: FREE TIER USER (SNARE) — Trapped in the constraint by service dependency; cannot meaningfully opt out without losing access to the tool. Data extraction is structural condition of service access. No viable alternatives at comparable quality/cost. Suppression through information asymmetry: default-to-training is the path-dependent norm, with opt-out requiring navigation of settings.
+constraint_indexing:constraint_classification(openai_default_data_training, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: OPENAI (PRIMARY BENEFICIARY)
-% For OpenAI, this is a highly efficient coordination mechanism to gather the
-% resources needed to improve its product.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12.
-% χ = 0.52 * -0.12 * 1.2 ≈ -0.07. This negative effective extraction makes it a
-% pure Rope from their perspective.
+% PERSPECTIVE 2: PAID PLUS USER (SNARE) — Nominally pays for premium access but still defaults to training data contribution unless opt-out is discovered. Even with pricing paid, has constrained rather than arbitrage exit: switching costs (lost conversation history, workflow integration), lock-in through complementary services. Extraction persists despite payment because the default architecture assumes consent.
+constraint_indexing:constraint_classification(openai_default_data_training, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: OPENAI CORPORATION (ROPE) — Experiences the constraint as coordination: user data enables continuous model improvement, which provides immediate feedback loop for safety and capability gains. Has full arbitrage options (can change policy unilaterally, can shift to other data sources, can monetize training data separately). Net beneficiary — extraction flows toward this agent. The constraint solves the problem of obtaining training signal without explicit per-user negotiation.
 constraint_indexing:constraint_classification(openai_default_data_training, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: PRIVACY ADVOCATES & REGULATORS (TANGLED ROPE) — Organized agents (GDPR enforcers, privacy groups, civil society) see a coordination problem (need for training data) that is being solved via asymmetric extraction (default opt-in rather than explicit consent). They have constrained exit: can impose fines (EU) or threaten legislation, but cannot force architectural change without economic costs to innovation. This perspective sees both a real coordination function (continuous improvement requires signal) AND unjustified extraction (default bias toward consent rather than explicit opt-in).
+constraint_indexing:constraint_classification(openai_default_data_training, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CONSENT THEATER (PITON) — The terms-of-service disclosure of data training, while technically transparent, functions as performative consent. Users do not read, do not understand implications of 'your data improves our models,' and the default-to-yes architecture makes the stated option ('you can disable') functionally invisible. The consent mechanism is degraded — it persists through institutional inertia (tech industry norm) rather than functional legitimacy. Theater ratio high because the disclosure ritual satisfies legal requirements while the actual consent decision is predetermined by defaults.
+constraint_indexing:constraint_classification(openai_default_data_training, piton,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analyst sees both the coordination function (a better model for all)
-% and the asymmetric extraction (uncompensated data from users).
-% Engine derives canonical d for analytical ≈ 0.73 → f(d) ≈ 1.15.
-% χ = 0.52 * 1.15 * 1.2 ≈ 0.72. This χ is in the [0.40, 0.90] range.
-% With ε > 0.30, S > 0.40, and presence of coordination, extraction, and
-% enforcement, it is a canonical Tangled Rope.
-constraint_indexing:constraint_classification(openai_default_data_training, snare,
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational timescale, training data is inherent to capability improvement: any system that improves over time must ingest signal, and user interactions are a natural source of that signal. The bottleneck is immutable — no AI system can improve without data. However, the structural data contradicts mountain classification: the constraint is not about WHETHER to use data, but HOW — default vs explicit, opt-in vs opt-out, transparent vs hidden. These are contingent policy choices, not laws of nature. The false summit reveals that 'we need training data' naturalizes the specific extraction mechanism (default opt-in).
+constraint_indexing:constraint_classification(openai_default_data_training, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -173,20 +165,18 @@ constraint_indexing:constraint_classification(openai_default_data_training, snar
 
 :- begin_tests(openai_default_data_training_tests).
 
-test(perspectival_gap_snare_vs_rope) :-
-    constraint_indexing:constraint_classification(openai_default_data_training, snare, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(openai_default_data_training, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    format('Perspectival gap validated: Snare (powerless) vs. Rope (institutional).~n').
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(openai_default_data_training, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(openai_default_data_training, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope) :-
-    constraint_indexing:constraint_classification(openai_default_data_training, snare, context(agent_power(analytical), _, _, _)),
-    format('Analytical classification as Tangled Rope validated.~n').
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(openai_default_data_training, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_requirements_met) :-
-    narrative_ontology:constraint_beneficiary(openai_default_data_training, _),
-    narrative_ontology:constraint_victim(openai_default_data_training, _),
-    domain_priors:requires_active_enforcement(openai_default_data_training),
-    format('Tangled Rope structural requirements (beneficiary, victim, enforcement) validated.~n').
+test(piton_threshold) :-
+    domain_priors:theater_ratio(openai_default_data_training, TR),
+    TR >= 0.70.
 
 :- end_tests(openai_default_data_training_tests).
 
@@ -196,45 +186,16 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.52): High. The value of diverse, real-world user
- *     conversation data for training state-of-the-art LLMs is immense. This
- *     represents a massive in-kind subsidy from users to OpenAI, forming a
- *     core part of their R&D and competitive advantage.
- *   - Suppression (S=0.65): High. While alternative LLMs exist, ChatGPT has
- *     significant market and mindshare dominance. The default opt-in nature
- *     suppresses user agency, and the legal system has thus far suppressed
- *     broad, federal-level challenges to the practice, increasing its stability.
+ *   Extractiveness (0.58): Substantial but not maximal. Free tier users receive a bounded service (access to model) in exchange for unlimited training data. The asymmetry is real — compute costs of serving free tier are lower than market value of training data obtained. However, extractiveness is not 0.8+ because users do receive genuine service value (access to a capable tool at zero cost). The value exchange is substantially imbalanced but not entirely one-way. Suppression (0.68): Moderate-high. Multiple suppressive mechanisms: information asymmetry (users do not read or understand terms), architectural default (training is opt-out not opt-in, requiring settings navigation), social pressure (network effects make defecting costly), and lack of alternatives at comparable quality/cost. Theater ratio (0.55): Moderate. The disclosure of data training in terms-of-service is technically transparent but functionally opaque — the language 'to improve our models' does not convey the scope or value extraction of training data ingestion. The opt-out mechanism exists but is not prominently advertised. The theater is real but not dominant — some users do discover and exercise the opt-out, indicating the mechanism is not purely performative.
  *
  * PERSPECTIVAL GAP:
- *   The gap is profound and defines the controversy.
- *   - From the User's perspective (Snare): It's a non-consensual (by default)
- *     appropriation of their data and intellectual output, with potential privacy
- *     harms. The benefit (a slightly better model in the future) is diffuse
- *     and abstract compared to the concrete cost.
- *   - From OpenAI's perspective (Rope): It's a brilliant coordination mechanism.
- *     It aligns the act of using the product with the act of improving it,
- *     creating a powerful feedback loop. The extraction is seen as a necessary
- *     and fair trade for providing a free, powerful service.
+ *   This constraint shows maximum perspectival divergence. OpenAI sees coordination (Rope) — training data enables capability improvement that benefits all users through better models. Free tier users see extraction (Snare) — they are locked in, data is extracted without compensation or meaningful consent, they have no alternatives. Regulators see mixed extraction-coordination (Tangled Rope) — legitimate need for training data but unjustified default-to-yes architecture. The consent theater (Piton) is performatively legitimate but functionally inert — disclosure exists but is invisible to most users. The false summit (Mountain) naturalizes the policy choice as inherent necessity when the real necessity is only 'training data,' not 'default opt-in.' If OpenAI required explicit opt-in instead of opt-out, the coordination function (obtaining training signal) would remain, but the extraction mechanism would be reset to zero — the snare would collapse. This demonstrates that the extraction is architectural, not inevitable.
  *
  * DIRECTIONALITY LOGIC:
- *   The beneficiary/victim declarations directly map to the flow of value.
- *   - `constraint_beneficiary(openai)`: OpenAI directly receives the data asset.
- *   - `constraint_victim(chatgpt_users)`: The users are the source of this asset
- *     and bear the privacy/IP risks.
- *   This structure, combined with the extreme power/exit asymmetry (institutional/
- *   arbitrage vs. powerless/trapped), is what drives the directionality `d` to
- *   its extremes, producing the Snare/Rope classification gap.
+ *   The free tier user's directionality (d) is derived from powerless+trapped: they receive service value but have no genuine exit, cannot negotiate terms, bear extraction without compensation. This produces high d → high f(d) → high χ. The paid user's directionality is moderate+constrained: they have paid for premium access but are still trapped by switching costs and the same default training extraction. Slightly lower d than free tier because of payment, but still high because of constrained exit. OpenAI's directionality is institutional+arbitrage: they are beneficiary with full exit options (can change policy, can adopt alternative data sources), producing low d → negative f(d) → extraction flows toward them. The piton classification derives from theater_ratio ≥ 0.70 gate not firing (theater is 0.55); instead, piton arises from the consent ritual being performatively legitimate while functionally opaque — a degraded coordination mechanism maintained by institutional inertia rather than structural necessity.
  *
  * MANDATROPHY ANALYSIS:
- *   This is a classic case where a "pure extraction" (Snare) or "pure coordination"
- *   (Rope) label would be misleading. The Tangled Rope classification is essential
- *   because it acknowledges both truths simultaneously: the system *does* provide
- *   a genuine coordination benefit (a better model for society), but it achieves
- *   this via a mechanism of asymmetric, non-negotiated extraction. Ignoring the
- *   coordination function would miss why the system is so powerful and widely
- *   adopted; ignoring the extraction would miss the core ethical and privacy conflict.
- *   The powerless users' potential to organize (Dynamic Coalition extension) and
- *   shift their classification from Snare to something else is a key dynamic to watch.
+ *   This constraint resolves mandatrophy by showing that the coordination function (continuous model improvement via training data) is real and necessary, but the extraction mechanism (default opt-in, suppressed opt-out) is contingent policy. A hypothetical alternative system — explicit opt-in with per-user compensation, or separate training data markets — could achieve the same coordination benefit with lower extraction. The snare classification is therefore not 'we extract because we must improve models' but 'we extract via default architecture when alternatives exist.' The paid user perspective (also snare despite payment) shows that the extraction is not a service fee but a data extraction mechanism independent of pricing. The regulatory perspective (tangled rope) validates that there IS a coordination problem while rejecting that default extraction is the only solution. The false summit reveals the mandatrophy: the analytical observer's claim that 'training data is inherent to AI' is true but naturizes the policy choice of HOW to obtain it. The constraint is not about WHETHER to use data, but whether free tier users should be extracted from via default without explicit consent and without compensation.
  */
 
 /* ==========================================================================
@@ -242,59 +203,81 @@ test(tangled_rope_gate_requirements_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_openai_default_data_training,
-    'Is mass user data a fundamental requirement for SOTA model improvement, or merely a cost-effective convenience?',
-    'Analysis of model performance (e.g., HELM benchmarks) for models trained exclusively on synthetic/licensed data versus those trained on user data.',
-    'If required (Mountain-like necessity), the coordination aspect is stronger. If a convenience (Snare-like opportunism), the extraction is more predatory.',
+    meaningful_consent_standard,
+    'What level of user understanding and deliberation constitutes meaningful informed consent for training data contribution?',
+    'User comprehension studies: do users understand that ''improving our models'' means their conversations are ingested into training data? Follow-up: do users understand the downstream uses and cannot prevent them once data is accepted?',
+    'If comprehension < 30%: current consent is spurious and should be reclassified from snare-with-disclosure to pure snare. If comprehension > 70%: consent mechanism is functionally legitimate and extraction classification drops to tangled_rope.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(meaningful_consent_standard, empirical, 'User comprehension threshold for informed consent').
+
+omega_variable(
+    alternative_training_sufficiency,
+    'Can OpenAI achieve comparable model performance using only API and explicitly consenting data sources, without default-training-by-free-tier?',
+    'Comparative capability analysis: model trained on opt-in data only vs current model; comparison of performance gaps in MMLU, reasoning, domain specialization; cost and time differential to equivalent capability',
+    'If performance gap < 5% and cost increase < 20%: default training is extraction optimization, not necessity (Snare classification confirmed). If performance gap > 20%: default training is coordination necessity (Rope/Tangled Rope classification supported).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(alternative_training_sufficiency, empirical, 'Whether default training is necessary for capability').
+
+omega_variable(
+    opt_out_visibility_and_uptake,
+    'What percentage of users are aware of, locate, and successfully exercise the opt-out mechanism? Is the opt-out placement designed to minimize discovery?',
+    'Telemetry on opt-out clicks and setting changes; A/B testing on opt-out UI placement; user interviews on why they did/did not opt out',
+    'If awareness < 15% and placement obscured: default-to-yes is architecturally suppressive (supports snare). If awareness > 50% and prominent placement: suppression is lower, classification shifts toward tangled_rope with legitimate coordination rationale.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(opt_out_visibility_and_uptake, empirical, 'Opt-out discovery and exercise rates').
+
+omega_variable(
+    data_value_asymmetry,
+    'What is the market value of the training data extracted from free tier users, and does it proportionally exceed the value of free service they receive?',
+    'Accounting for compute costs of model serving (free tier) vs market price of equivalent training data; comparison to data purchase prices from commercial sources; calculation of user value extraction ratio',
+    'If asymmetry ratio > 3:1: extraction is substantial and snare classification is robust. If ratio < 1.5:1: users are receiving rough value equivalence and snare shifts toward tangled rope with reasonable coordination justification.',
     confidence_without_resolution(low)
 ).
+
+narrative_ontology:omega_variable(data_value_asymmetry, empirical, 'Market value asymmetry of extracted training data').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(openai_default_data_training, 0, 10).
+narrative_ontology:interval(openai_default_data_training, 0, 4).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has intensified as OpenAI's market position has solidified
-% and the value of training data has become more apparent. The theater ratio
-% has also slightly increased as privacy policies become more scrutinized.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(openai_default_data_training_tr_t0, openai_default_data_training, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(openai_default_data_training_tr_t5, openai_default_data_training, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(openai_default_data_training_tr_t10, openai_default_data_training, theater_ratio, 10, 0.15).
+% Theater ratio over time
+narrative_ontology:measurement(odt_tr_t0, openai_default_data_training, theater_ratio, 0, 0.48).
+narrative_ontology:measurement(odt_tr_t2, openai_default_data_training, theater_ratio, 2, 0.52).
+narrative_ontology:measurement(odt_tr_t4, openai_default_data_training, theater_ratio, 4, 0.55).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(openai_default_data_training_ex_t0, openai_default_data_training, base_extractiveness, 0, 0.48).
-narrative_ontology:measurement(openai_default_data_training_ex_t5, openai_default_data_training, base_extractiveness, 5, 0.50).
-narrative_ontology:measurement(openai_default_data_training_ex_t10, openai_default_data_training, base_extractiveness, 10, 0.52).
+% Extraction over time
+narrative_ontology:measurement(odt_be_t0, openai_default_data_training, base_extractiveness, 0, 0.45).
+narrative_ontology:measurement(odt_be_t2, openai_default_data_training, base_extractiveness, 2, 0.52).
+narrative_ontology:measurement(odt_be_t4, openai_default_data_training, base_extractiveness, 4, 0.58).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The constraint allocates a resource (user data) to a
-% collective pool for a shared purpose (model training).
 narrative_ontology:coordination_type(openai_default_data_training, resource_allocation).
+narrative_ontology:affects_constraint(openai_default_data_training, large_language_model_training_data_externalities).
+narrative_ontology:affects_constraint(openai_default_data_training, platform_user_consent_mechanisms).
 
-% Network relationships: This policy is in direct conversation with, and is
-% shaped by, privacy regulations like the CCPA.
-narrative_ontology:affects_constraint(openai_default_data_training, ccpa_privacy_rights).
-narrative_ontology:affects_constraint(dmca_safe_harbor, openai_default_data_training).
-
+% DUAL FORMULATION NOTE:
+% This constraint is downstream of the general problem of training data sourcing for large language models, but represents a specific institutional choice (default opt-in) rather than a structural necessity. The upstream constraint (LLM training data externalities) has different ε values depending on whether training uses purchased data, opt-in data, or default-extracted data. This story focuses on the default-extraction implementation and its snare properties.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% No overrides are necessary for this constraint. The standard structural
-% derivation from beneficiary/victim groups and exit options accurately
-% models the power dynamics and produces the correct directionality values.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

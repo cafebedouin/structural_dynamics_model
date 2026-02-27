@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "endowment_effect",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.3,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Endowment Effect",
+    "topic_domain": "economic/cognitive",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "sellers",
+      "incumbent_owners"
+    ],
+    "victims": [
+      "potential_buyers",
+      "market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Potential Buyers",
+      "comment": "Potential buyers, lacking the endowment, find it harder to acquire goods at the inflated prices set by sellers, especially when they have limited access to alternatives or are emotionally attached to acquiring a specific item. They are essentially trapped by the seller's inflated valuation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Sellers/Owners",
+      "comment": "Sellers benefit from the endowment effect by being able to set higher prices, extracting more value than the market might otherwise bear. However, they are constrained by the risk of not selling the item at all if their price is too high. This perspective captures the mixed nature of the effect: a benefit to the seller but constrained by market realities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Behavioral Economics Researchers",
+      "comment": "Researchers benefit from studying this effect, gaining insights into cognitive biases and market inefficiencies. They are able to arbitrage this knowledge to refine economic models and potentially design interventions. They benefit from the predictable irrationality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Market Efficiency",
+      "comment": "From the perspective of overall market efficiency, the endowment effect introduces inefficiencies and distortions. While it might not be completely trapped, the market is constrained by these biases, leading to suboptimal resource allocation. The analytical perspective sees the extraction as a reduction in overall welfare but also recognizes the potential coordination function of established ownership and trust."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "magnitude_variability",
+      "question": "How much does the magnitude of the endowment effect vary across different goods, populations, and experimental designs?",
+      "resolution_mechanism": "Meta-analysis of endowment effect studies; identification of moderating variables (e.g., good type, cultural context)",
+      "impact": "If magnitude is highly variable: effect is context-dependent, limiting generalizability. If magnitude is relatively stable: effect is robust, supporting universal cognitive bias.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of endowment effect variability."
+    },
+    {
+      "id": "cognitive_mechanism",
+      "question": "What are the underlying cognitive mechanisms driving the endowment effect (e.g., loss aversion, psychological ownership)?",
+      "resolution_mechanism": "Neuroimaging studies; cognitive modeling; experimental manipulations targeting specific cognitive processes",
+      "impact": "Identifying the mechanism informs interventions. Loss aversion suggests framing effects, psychological ownership implies strategies targeting attachment.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Cognitive mechanism driving endowment effect."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The endowment effect describes the tendency for people to place a higher value on objects they own compared to objects they do not. This bias affects market transactions, negotiations, and resource allocation. It's an example of how cognitive biases distort rational economic behavior. The extractiveness represents the welfare loss due to inefficient allocation of resources.",
+    "key_agents": [
+      "Potential Buyers: Primary target (powerless/trapped) \u2014 unable to acquire goods at reasonable prices.",
+      "Sellers/Owners: Primary beneficiary (moderate/constrained) \u2014 benefits from inflated prices, but constrained by market demand.",
+      "Behavioral Economics Researchers: Analytical observer (institutional/arbitrage) \u2014 benefits from studying and understanding the effect.",
+      "Market Efficiency: Systemic victim (analytical/constrained) \u2014 overall efficiency is reduced."
+    ],
+    "logic_rationale": "Extractiveness (0.50): Moderate. Reflects the inefficient allocation of resources and potential welfare loss due to inflated prices. Suppression (0.30): Low-Moderate. While alternatives exist, the endowment effect creates a barrier for potential buyers, limiting their choices and suppressing the overall market activity. Theater ratio (0.20): Low. Not much theater in the manifestation of the effect - the inflated prices are a direct expression of the bias, not a performative ritual.",
+    "perspectival_gap": "Potential buyers experience a snare because the endowment effect limits their access to goods at fair prices, effectively trapping them in a disadvantageous position. Sellers, on the other hand, experience a tangled rope. They benefit from the increased valuation they place on their possessions, enabling them to demand higher prices. However, they are also constrained by the market's willingness to pay, as overly inflated prices can deter potential buyers, leading to a failure to sell. The analytical observer can arbitrage this knowledge.",
+    "directionality_logic": "Buyers have a trapped exit so see a snare. Sellers are constrained but benefit from inflated prices. Researchers are analytical. The market itself is constrained by cognitive biases.",
+    "mandatrophy_analysis": "The tangled rope classification resolves the mandatrophy by acknowledging the mixed nature of the endowment effect. It's not pure extraction because sellers are still subject to market forces and must balance their inflated valuation with the risk of not selling. It's not pure coordination because potential buyers are disadvantaged by the effect, leading to inefficiencies and potential welfare loss. The effect isn't a natural law but it is a genuine cognitive bias."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

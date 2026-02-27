@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "jordan_microfinance",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jmf"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ideological Gating of Microfinance in Jordan",
+    "topic_domain": "economic/international_development",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "finca_international",
+      "usaid_narrative_compliance",
+      "ideological_alignment_gatekeepers"
+    ],
+    "victims": [
+      "impoverished_loan_applicants",
+      "financial_autonomy",
+      "non_aligned_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Impoverished Loan Applicant",
+      "comment": "PERSPECTIVE 1: IMPOVERISHED LOAN APPLICANT (SNARE) \u2014 Needs capital urgently to start or expand microenterprise; has no alternative funding source; trapped: must attend mandatory ideological sessions to access credit. Cannot exit without losing access to the only available capital source in local economy. d\u22480.93, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Local Microentrepreneur Community",
+      "comment": "PERSPECTIVE 2: LOCAL MICROENTREPRENEUR COMMUNITY (TANGLED ROPE) \u2014 Constrained by limited alternative credit sources and social ties within communities that value ideological conformity; benefits from the microfinance mechanism itself (access to working capital) but also bears extraction through mandatory attendance and ideological compliance requirements. d\u22480.72, f(d)\u22481.08, \u03c3=0.9 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Finca International / USAID",
+      "comment": "PERSPECTIVE 3: FINCA INTERNATIONAL / USAID (ROPE) \u2014 Primary beneficiary with arbitrage exit. Experiences the constraint as coordination mechanism: educational sessions align borrower populations with development narrative, ensuring programmatic compliance and reportable impact. Extraction framed as capacity-building. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary; coordination function is real (borrower retention and compliance) but asymmetric."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Jordanian Government / Central Bank Regulators",
+      "comment": "PERSPECTIVE 4: JORDANIAN GOVERNMENT / CENTRAL BANK (PITON) \u2014 Nominally oversees microfinance regulation; constrained by dependence on USAID funding and development narrative compliance. Sees the mandatory education requirement as degraded theater: the sessions do not substantively improve loan outcomes or borrower financial literacy (theater_ratio=0.64), but persist because disabling them would contradict USAID narrative and risk funding flows. The regulatory role has atrophied into performative endorsement. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Development NGO Coalition / Civil Society Monitors",
+      "comment": "PERSPECTIVE 5: DEVELOPMENT NGO COALITION (TANGLED ROPE) \u2014 Organized agents (human rights groups, financial inclusion advocates) see the constraint as both enabling and extractive. Coordination function: USAID funding and microfinance access do bring capital to marginalized populations \u2014 this is real and valuable. But the mandatory ideological sessions are extractive: they condition financial access on behavioral compliance and worldview alignment. d\u22480.48, f(d)\u22480.62, \u03c3=1.1 \u2192 \u03c7\u22480.35. The coalition recognizes both functions and pushes for decoupling them (making education optional)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer / Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (FALSE SUMMIT) \u2014 From a civilizational view, the perspective risks naturalizing the constraint as immutable: 'International development always involves value transmission; conditionality is inherent to aid.' This naturalizes what the structural data reveals as contingent: the mandatory ideological gating is a design choice (\u03b5=0.52, suppression=0.68), not a law of nature. The theater ratio (0.64) suggests the education has degraded into performative compliance, not substantive capacity-building. Engine detects false summit: this is not a Mountain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "education_session_efficacy",
+      "question": "Do the mandatory educational sessions produce measurable improvements in loan repayment, financial literacy, or enterprise success for borrowers?",
+      "resolution_mechanism": "Randomized controlled trial: cohorts with mandatory sessions vs optional sessions vs no sessions; longitudinal tracking of loan outcomes, business growth, and financial stress; borrower self-reported financial knowledge and confidence metrics",
+      "impact": "If sessions show measurable benefit: constraint partially justifiable as coordination/capacity-building (Rope likelihood increases). If sessions show no benefit or negative effects: constraint is pure extraction theater (Snare from borrower perspective, Piton from institutional view).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of mandatory educational sessions on loan outcomes"
+    },
+    {
+      "id": "ideological_content_proportion",
+      "question": "What proportion of the mandatory sessions contains explicit ideological content (values, worldview transmission) vs practical financial/business education?",
+      "resolution_mechanism": "Content analysis of session curricula; borrower interviews on perceived session purpose; NGO observer documentation of session content and tone",
+      "impact": "If <20% ideological: constraint is primarily a coordination mechanism (Rope). If >50% ideological: constraint is primarily extraction via behavioral compliance (Snare/Tangled Rope). Proportion directly affects theater_ratio calibration.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of ideological content in mandatory sessions"
+    },
+    {
+      "id": "alternative_credit_availability",
+      "question": "Are there functioning alternative microfinance or credit sources available to loan applicants in Jordan outside FINCA's program?",
+      "resolution_mechanism": "Mapping of microfinance providers in target regions; borrower survey on awareness of alternatives; loan application success rates and terms across providers",
+      "impact": "If true alternatives exist: suppression should be lower (~0.40-0.50), and applicants have exit options (Tangled Rope dominates from borrower view, not Snare). If FINCA is de facto sole source: suppression remains high (~0.68), and Snare classification from borrower view is correct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of alternative credit sources to borrowers"
+    },
+    {
+      "id": "usaid_narrative_conditionality",
+      "question": "Does USAID's funding for the FINCA program explicitly condition continued funding on maintaining the mandatory education requirement?",
+      "resolution_mechanism": "USAID grant agreements and performance metrics; correspondence between USAID and FINCA; testimony from FINCA program managers on funding contingencies",
+      "impact": "If conditioning is explicit: narrative compliance is a real structural force (benefits USAID, extracts from borrowers). If conditioning is implicit/cultural: constraint reveals institutional capture (Piton from regulator view). Either way, the beneficiary classification and directionality are confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "USAID conditionality on mandatory education requirement"
+    },
+    {
+      "id": "borrower_consent_and_awareness",
+      "question": "Are loan applicants genuinely informed that the education sessions are mandatory and conditioned on access to credit, or is the conditionality presented implicitly or obscured?",
+      "resolution_mechanism": "Borrower interviews on decision-making process; review of loan application materials and disclosures; comparison of stated and actual mandatory status",
+      "impact": "If applicants are uninformed or misled: suppression is near-maximum (~0.85), Snare classification is robust. If applicants are aware but accept the tradeoff: suppression is lower (~0.55-0.60), Tangled Rope classification is stronger from borrower view.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Borrower awareness and consent to mandatory education conditionality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Jordan microfinance program operated by FINCA and backed by USAID represents a structural hybrid: a genuine coordination mechanism (access to working capital for marginalized populations) coupled with asymmetric extraction (conditioning access on mandatory ideological/behavioral compliance sessions). Impoverished loan applicants face a choice between financial autonomy (achieved through the loan) and behavioral autonomy (surrendered through mandatory attendance). The constraint exhibits all markers of a Tangled Rope from the primary target's perspective: the coordination function (microfinance access) is real and valuable, but the extraction mechanism (behavioral gating) is also real and coercive. The extractiveness has increased over the interval as the program has matured \u2014 from an initial value of 0.35 (when sessions were presented more as optional services) to 0.52 (when compliance became a documented program requirement with explicit funding accountability). The theater ratio has risen from 0.48 to 0.64, indicating that the mandatory sessions have increasingly taken on a performative character \u2014 compliance can be tracked and reported to USAID, but the educational outcomes for borrowers have not proportionally improved. This suggests institutional drift toward Goodhart's law: the program has optimized for measurable compliance metrics (session attendance, USAID reporting) rather than actual borrower financial capability.",
+    "key_agents": [
+      "Impoverished Loan Applicants: Primary victim (powerless/trapped) \u2014 need capital urgently; no alternative access; forced choice between financial and behavioral autonomy",
+      "FINCA International: Primary beneficiary (institutional/arbitrage) \u2014 captures program management fees, borrower data, compliance metrics, and narrative alignment with donor priorities",
+      "USAID: Secondary beneficiary (institutional/arbitrage) \u2014 achieves programmatic narrative (development impact, behavioral alignment), justifies continued funding allocation",
+      "Local Microentrepreneur Community: Secondary victim (moderate/constrained) \u2014 access to credit but constrained by mandatory attendance and community visibility of compliance",
+      "Jordanian Government/Central Bank: Institutional regulator (institutional/constrained) \u2014 nominally oversees program but dependent on USAID funding; regulatory role degraded to performative endorsement",
+      "Development NGO Coalition: Organized monitors (organized/constrained) \u2014 recognize both coordination function and extraction; push for decoupling",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing conditionality as inherent to aid; structured analysis reveals contingent design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The mandatory education requirement conditions access to the only available capital source in the local economy, creating behavioral extraction beyond the legitimate financial terms of the loan. The value has increased from 0.35 to 0.52 over the interval because the program has shifted from framing education as optional value-add to treating it as a documented compliance requirement tied to funding metrics. This is not the maximum extraction (Snare-tier) because the microfinance function itself is genuinely valuable and borrowers do gain capital access \u2014 but they pay a price beyond interest and fees: compliance with an ideological/behavioral gating mechanism. Suppression (0.68): High. Limited alternative credit sources in rural Jordan, social pressure within communities, implicit understanding that non-compliance means loan denial, and information asymmetry about the true nature of the sessions all create significant barriers to exit or refusal. Borrowers cannot 'just say no' without losing access to capital. Theater ratio (0.64): Moderately high. The mandatory education sessions appear to have become increasingly performative over time. The initial curriculum may have contained substantive financial literacy content, but as the program has matured and donor reporting has become more central, sessions have shifted toward compliance tracking and narrative demonstration rather than measurable borrower capability development. The theater ratio of 0.64 suggests that roughly 2/3 of the session value is performance for external audiences (USAID, program evaluators) rather than substantive education.",
+    "perspectival_gap": "The constraint demonstrates a significant perspectival gap between the primary beneficiary (FINCA/USAID) and the primary target (loan applicants). From the beneficiary's view, the mandatory education is a coordination mechanism (Rope) \u2014 it solves the alignment problem of ensuring borrowers internalize development narratives and comply with program requirements. From the applicant's view, it is pure extraction (Snare) \u2014 it conditions financial access on behavioral compliance with no meaningful alternative. The civil society coalition occupies a middle position (Tangled Rope) \u2014 they recognize both the genuine coordination function (access to capital) and the genuine extraction mechanism (behavioral gating). The Jordanian government's piton perspective reveals institutional capture: the regulatory role has atrophied into performative endorsement because the government depends on USAID funding and challenging USAID's program design risks that funding flow. The analytical observer's risk is naturalizing this as inherent to international development rather than recognizing it as a contingent design choice that could be decoupled (making education optional while preserving access).",
+    "directionality_logic": "Loan applicants: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.38. Maximal extraction from the applicant perspective: they need the capital, have no alternatives, and face mandatory behavioral compliance. FINCA/USAID: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. They have multiple exit options (funding sources, program locations, donor relationships) and benefit from the constraint through program management, compliance metrics, and narrative alignment. Microentrepreneur community: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.08. Constrained by limited alternatives and social ties; extraction is real but mixed with genuine coordination benefit from capital access. Jordanian regulator: Victim + constrained \u2192 d\u22480.55, f(d)\u22480.75. Nominally an overseer but actually constrained by funding dependence; sees own regulatory role as degraded (piton). Development NGO coalition: Organized + constrained \u2192 d\u22480.48, f(d)\u22480.62. Constrained by limited leverage over USAID-funded programs but organized enough to advocate for change and publicize the extraction mechanism. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Risk of naturalizing contingent design choice; structural data prevents false summit classification.",
+    "mandatrophy_analysis": "The mandatrophy tension in this constraint is between the real coordination function (access to microfinance capital for populations excluded from traditional banking) and the real extraction mechanism (behavioral compliance gating). The claimed_type (Tangled Rope) resolves this by requiring ALL three gates: (1) beneficiaries present (FINCA, USAID, narrative compliance gatekeepers) \u2713, (2) victims present (loan applicants, financial autonomy, non-aligned populations) \u2713, (3) active enforcement (mandatory sessions documented as program requirement, tied to funding metrics) \u2713. The constraint is not pure coordination (Rope) because the extraction is significant and asymmetric \u2014 borrowers cannot opt out of the education without losing capital access. It is not pure extraction (Snare) because the microfinance function itself is genuinely valuable and creates real coordination benefit. The Tangled Rope classification is robust: the program solves a real coordination problem (capital access) AND extracts beyond that solution through behavioral gating. The extraction is not minimizable without reducing coordination \u2014 this is the defining tension of a Tangled Rope. Mandatrophy is resolved by showing that both dimensions are structurally present and necessary to the classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "conditional_aid_behavioral_gating",
+      "microfinance_debt_cycle_lock_in"
+    ],
+    "dual_formulation_note": "The Jordan microfinance constraint is downstream of broader structural constraints on international development funding (USAID narrative compliance, conditionality regimes) and upstream of borrower-level debt/autonomy tradeoffs. The network link reflects that this constraint's extractive force depends partly on upstream narrative gatekeeping and partly creates downstream borrower vulnerability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

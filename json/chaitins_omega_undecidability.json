@@ -2,38 +2,44 @@
   "header": {
     "constraint_id": "chaitins_omega_undecidability",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "chaitin"
   },
   "base_properties": {
-    "extractiveness": 0.01,
-    "suppression": 0.02,
-    "theater_ratio": 0.0,
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
     "claimed_type": "mountain",
-    "human_readable": "Chaitin's Constant (Halting Probability)",
-    "topic_domain": "mathematical/technological",
+    "human_readable": "Chaitin's Constant (Halting Probability) Undecidability",
+    "topic_domain": "mathematical/computational_theory",
     "emerges_naturally": true,
-    "accessibility_collapse": 0.98,
-    "resistance": 0.01
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "requires_active_enforcement": false,
+    "has_sunset_clause": false,
+    "mandatrophy_resolved": false
   },
   "perspectives": [
     {
       "classification_type": "mountain",
       "agent_power": "powerless",
-      "time_horizon": "biographical",
+      "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Working Programmer",
-      "comment": "PERSPECTIVE 1: THE WORKING PROGRAMMER (MOUNTAIN) — The programmer is trapped by this limit. They cannot write a general-purpose program verifier or a program to compute Ω. This is not a policy or a market failure; it is an irreducible feature of computation. d≈1.0, but χ remains near zero because ε is negligible."
+      "label": "The Computationalist Attempting Proof",
+      "comment": "PERSPECTIVE 1: COMPUTATIONALIST ATTEMPTING PROOF (MOUNTAIN) \u2014 Any finite agent attempting to compute or verify Chaitin's Constant \u03a9 to arbitrary precision faces an absolute barrier: the halting problem is undecidable. No amount of computational power, cleverness, or resources can circumvent this limit. The barrier is not economic or institutional but mathematical \u2014 a fundamental fact about the expressiveness of formal systems. Zero degrees of freedom."
     },
     {
       "classification_type": "mountain",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "universal",
-      "label": "The Institutional Research Lab",
-      "comment": "PERSPECTIVE 2: THE INSTITUTIONAL RESEARCH LAB (MOUNTAIN) — An institution with vast resources can work on other problems (arbitrage) but cannot overcome this specific limit. No amount of funding or personnel can compute Ω. The limit is invariant to scale and power."
+      "label": "The Institutional Math Research Program",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL MATH RESEARCH PROGRAM (MOUNTAIN) \u2014 Even with vast funding, collaboration networks, and computational resources, mathematics as an institution cannot decide the halting problem. The constraint is not suppressible through better organization or enforcement. It emerges naturally from Turing completeness. Institutional actors have no path to circumvent it \u2014 arbitrage opportunities do not exist at the boundary of mathematical undecidability."
     },
     {
       "classification_type": "mountain",
@@ -41,31 +47,98 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Algorithmic Information Theorist",
-      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN) — This is the canonical view. The uncomputability of Ω is a fundamental theorem, a natural law of the mathematical universe of computation. It has zero degrees of freedom for all indices."
+      "label": "The Analytical Observer (Formal Logic)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER / FORMAL LOGIC (MOUNTAIN) \u2014 Chaitin's Constant \u03a9 is provably uncomputable and algorithmically irreducible from any finitary perspective. This is not a contingent limitation of current technology or current mathematics \u2014 it follows from G\u00f6del's incompleteness and the Church-Turing thesis. The analytical observer sees an absolute epistemic frontier, a natural law of computation itself. No alternative framing or measurement basis changes this classification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Applied Computer Scientist",
+      "comment": "PERSPECTIVE 4: APPLIED COMPUTER SCIENTIST (MOUNTAIN) \u2014 For any concrete application requiring knowledge of \u03a9 (cryptographic key generation, program verification, AI safety), the undecidability is an absolute boundary. Approximations and heuristics can be developed, but they cannot substitute for the actual constant. The scientist experiences this as an immovable constraint \u2014 not a policy choice or a design tradeoff, but a mathematical fact."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oracle_access_counterfactual",
+      "question": "If an oracle for the halting problem were available, would Chaitin's Constant become decidable, or does undecidability propagate to any sufficiently expressive system?",
+      "resolution_mechanism": "Formal proof or counterexample showing whether \u03a9 relative to a halting oracle is itself decidable or merely moves the undecidability to a higher level in the Turing jump hierarchy",
+      "impact": "If decidable with oracle: the mountain classification reflects limitations of standard Turing machines specifically, not universal limits on knowledge. If undecidable: the constraint is truly absolute \u2014 no enrichment of computational power resolves it.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Chaitin's Constant remains undecidable given access to a halting oracle"
+    },
+    {
+      "id": "physical_universe_realizability",
+      "question": "Is Chaitin's Constant a mathematical artifact of formal systems, or does it represent a physical constraint that would limit any universe capable of computing?",
+      "resolution_mechanism": "Interpretation of Church-Turing thesis in relation to physical law; analysis of whether physics violates or respects Turing completeness; investigation of hypercomputation proposals",
+      "impact": "If purely formal artifact: the mountain classification is about formalism, not nature. If physical law: the constraint extends beyond mathematics into the structure of physical possibility.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Chaitin's Constant reflects physical law or purely formal limitations"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
     }
   ],
   "interval": {
     "start": 0,
-    "end": 1
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "Chaitin's Constant (Ω) is the probability that a randomly generated program, fed to a universal Turing machine, will eventually halt. While Ω is a well-defined real number, it is uncomputable. Its digits are algorithmically random, and knowing the first N bits of Ω would allow one to solve the Halting Problem for all programs up to length N. This makes its computation impossible in general. The constraint is the absolute mathematical limit on knowability and computability that Ω represents.",
+    "narrative_context": "Chaitin's Constant (\u03a9) is the halting probability \u2014 a real number in [0, 1] representing the proportion of all possible programs that terminate on a universal Turing machine. Mathematically, \u03a9 is well-defined but computationally unreachable: the first N bits of \u03a9 are uncomputable, and computing those bits would require solving an infinite family of halting problems. This constraint represents an absolute epistemic barrier, not a policy choice or institutional failure. From every structural position \u2014 the computationalist trying to prove it, the institution funding research, the applied scientist needing it, the analytical observer studying formal systems \u2014 \u03a9 undecidability appears as a natural law. No agent benefits from this constraint; no agent can be said to suffer extraction in the usual sense. Rather, the constraint defines the boundary of what is knowable through computation. This is the paradigmatic mountain constraint: emerges naturally from Turing completeness, accessibility collapses to near-zero at high precision, resistance to external pressure is absolute, and suppression and extraction are structural zeros.",
     "key_agents": [
-      "The Working Programmer: Primary subject (powerless/trapped) — cannot build tools (e.g., perfect debuggers, verifiers) that would require computing Ω.",
-      "The Institutional Research Lab: Institutional actor (institutional/arbitrage) — cannot direct resources to overcome this limit, must work around it.",
-      "The Algorithmic Information Theorist: Analytical observer (analytical/analytical) — studies and defines the limit."
+      "Computationalist attempting proof (powerless/trapped) \u2014 faces absolute mathematical barrier with no escape",
+      "Institutional math research program (institutional/arbitrage) \u2014 cannot overcome fundamental undecidability through organization or resources",
+      "Applied computer scientist (moderate/constrained) \u2014 experiences the constraint as immovable boundary in cryptography and verification tasks",
+      "Analytical observer (analytical/analytical) \u2014 recognizes the constraint as a consequence of formal logic and Turing completeness"
     ],
-    "logic_rationale": "This constraint is a canonical example of a Mountain. Base Extractiveness (ε=0.01) and Suppression (0.02) are negligible. The constraint extracts no value and its 'suppression' of computability is an intrinsic property of mathematics, not an externally imposed force. It emerges naturally from the axioms of computation (emerges_naturally=true). The proof of its uncomputability is definitive, leading to extremely high accessibility collapse (0.98) and extremely low resistance (0.01). Once the logic is understood, the conclusion is inescapable.",
-    "perspectival_gap": "There is no perspectival gap. This is a key diagnostic signature of a true Mountain constraint. All observers, regardless of their power, exit options, or time horizon, correctly classify the constraint as a Mountain. The limit is universal and invariant. A programmer, a research institution, and a theorist all confront the same irreducible fact.",
-    "directionality_logic": "As a Mountain constraint representing a mathematical fact, there are no beneficiaries or victims. The concept of directionality is not applicable in the typical sense of social or economic extraction. The engine will derive d values based on canonical fallbacks for each power atom, but with ε ≈ 0, the effective extraction χ will be approximately zero for all perspectives, reinforcing the Mountain classification.",
-    "mandatrophy_analysis": "This constraint serves as a ground-truth calibration for the Mountain type. It prevents the mandatrophy of misinterpreting a fundamental, impersonal limit as a form of social coercion. Any attempt to classify Ω's uncomputability as a Snare or Tangled Rope would involve projecting agency and extraction onto a mathematical abstraction, a category error the Deferential Realism system is designed to prevent. The Mountain classification correctly identifies this as a fixed feature of the landscape."
+    "logic_rationale": "Extractiveness (0.12): Near-zero. Chaitin's Constant undecidability does not extract value from any agent. It is a pure epistemic boundary \u2014 a fact about the mathematical universe, not a mechanism of power or coercion. The low value reflects that no agent benefits from the constraint and no agent is systematically disadvantaged by an extractive process. The value is not zero because knowledge systems do exhibit some theater (representation challenges, pedagogical framing) around the concept, but the core undecidability is absolute. Suppression (0.03): Nearly zero. There is no suppression because there is no alternative pathway being foreclosed. The constraint is not 'suppressing alternatives' \u2014 it is defining the boundary of possibility itself. Suppression measures active blockage of escape routes; \u03a9 undecidability is not a blockage but a natural law. Theater ratio (0.15): Low. Mathematical exposition of Chaitin's work does involve some pedagogical representation and conceptual framing (Kolmogorov complexity, incompleteness connections), but the core result is not performative. The theatrical element represents how humans must communicate about undecidability, not any deeper performativity in the constraint itself.",
+    "perspectival_gap": "The perspectival gap is minimal \u2014 all perspectives converge on mountain classification. This is a uniform-type constraint. The computationalist, the institution, the applied scientist, and the analytical observer all encounter the same absolute boundary. The constraint does not appear as coordination from one view and extraction from another. It does not appear as temporary from one perspective and permanent from another. This invariance across all observables confirms the mountain classification and satisfies the accessibility-collapse requirement (0.92). No observer position can reframe undecidability as a policy choice or an institutional arrangement.",
+    "directionality_logic": "Directionality derivation does not apply to mountain constraints. There are no beneficiaries or victims in the usual sense. \u03a9 undecidability does not extract from some agents to benefit others \u2014 it is a boundary condition that applies universally. The constraint is not suppressing alternatives because no alternatives exist in the Turing-complete model. The structural data (zero beneficiaries, zero victims, emerges_naturally=true, accessibility_collapse=0.92, resistance=0.08) confirms that this is a natural law, not an extraction mechanism.",
+    "mandatrophy_analysis": "NO MANDATROPHY RISK. Chaitin's Constant is a pure mountain constraint with \u03b5=0.12 (well below the 0.46 extraction threshold). There is no risk of false classification as coordination, no asymmetric extraction disguised as consensus, and no theatrical performance masking real extraction. The constraint is what it appears to be: a mathematical fact about the limits of computation. The analytical observer does not need to worry that naturalizing \u03a9 as a 'law of nature' is actually masking an institutional choice \u2014 the mathematical proof definitively establishes that undecidability follows from Turing completeness, not from policy or enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
       "halting_problem_undecidability",
-      "goedel_incompleteness"
+      "kolmogorov_complexity_incompressibility",
+      "godel_incompleteness_arithmetic"
     ],
-    "dual_formulation_note": "Chaitin's Constant is a specific formulation and consequence of the Halting Problem's undecidability. It provides a concrete, information-theoretic expression of the limits first formalized by Turing."
-  }
+    "dual_formulation_note": "Chaitin's Constant is part of a constraint family in mathematical logic. It is downstream of G\u00f6del's incompleteness theorem (which establishes limits on formal proof) and the halting problem (which establishes undecidability of program termination). Chaitin's \u03a9 unifies these constraints through algorithmic information theory \u2014 showing that incompleteness and undecidability are consequences of Kolmogorov complexity. All members of this family are mountains with \u03b5 \u2264 0.15."
+  },
+  "directionality_overrides": []
 }

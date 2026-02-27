@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "brazil_mexico_financial_requirement",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "snare",
+    "human_readable": "Mexican Financial Proof Requirement for Brazilian Travelers",
+    "topic_domain": "geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mexican_government",
+      "united_states_government"
+    ],
+    "victims": [
+      "brazilian_travelers",
+      "brazilian_tourism_sector"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Brazilian Travelers",
+      "comment": "Brazilian travelers, particularly those with limited financial resources, are trapped by this requirement. They may be unable to travel to Mexico, losing out on tourism, business, or personal opportunities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Brazilian Tourism Sector",
+      "comment": "The Brazilian tourism sector is constrained as potential travelers are deterred by the financial requirement, impacting revenue and growth. However, they can adapt by promoting alternative destinations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Mexican Government",
+      "comment": "The Mexican government benefits by complying with US pressure, potentially avoiding further economic or political repercussions and stemming migration. They experience this as a coordination mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "United States Government",
+      "comment": "The United States benefits by having Mexico enforce stricter border controls, reducing the flow of irregular migrants. They see this as a coordination mechanism for border security."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, this policy is a tangled rope. It serves as a tool for geopolitical maneuvering, extracting from some while providing perceived benefits to others, with long-term implications for international relations and human mobility."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effectiveness_of_deterrence",
+      "question": "How effectively does the financial requirement deter irregular migration?",
+      "resolution_mechanism": "Data analysis of migration patterns before and after the policy implementation, surveys of potential migrants, and comparison with other border control measures.",
+      "impact": "If highly effective: justifies the policy from the perspective of the US and Mexico. If ineffective: raises questions about the policy's true purpose and potential for unintended consequences.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assesses the efficacy of the financial requirement in deterring irregular migration."
+    },
+    {
+      "id": "economic_impact_on_brazil",
+      "question": "What is the overall economic impact on the Brazilian tourism sector?",
+      "resolution_mechanism": "Analysis of tourism revenue, number of Brazilian tourists visiting Mexico, and feedback from tourism businesses and associations.",
+      "impact": "If significant negative impact: calls for diplomatic intervention or alternative solutions. If minimal impact: reduces the urgency for addressing the policy's consequences.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluates the economic consequences for the Brazilian tourism industry."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Mexico, under pressure from the United States to curb irregular migration, has imposed a rule requiring Brazilian travelers to prove they possess at least R$10,000 (~US$1,900) to cover their expenses. This constraint creates a complex geopolitical dynamic, extracting from Brazilian travelers and tourism while benefiting the Mexican and US governments.",
+    "key_agents": [
+      "Brazilian Travelers: Primary victims (powerless/trapped) - Face barriers to travel.",
+      "Brazilian Tourism Sector: Secondary victims (moderate/constrained) - Suffers economic losses.",
+      "Mexican Government: Primary beneficiaries (institutional/arbitrage) - Gains political capital and potentially avoids repercussions from the US.",
+      "United States Government: Secondary beneficiaries (institutional/arbitrage) - Achieves border control objectives through external enforcement."
+    ],
+    "logic_rationale": "Extractiveness: The financial requirement directly extracts from Brazilian travelers by creating a financial barrier to entry. Suppression: The policy suppresses travel opportunities and economic growth in the tourism sector. Theater Ratio: The relatively low theater ratio reflects that the policy's stated purpose (reducing irregular migration) is somewhat aligned with its actual effect, although its impact is disproportionately borne by legitimate travelers.",
+    "perspectival_gap": "Brazilian travelers experience the policy as a snare, limiting their mobility. The Mexican government views it as a rope, enabling them to meet US demands and manage migration flows. The analytical observer sees a tangled rope, where geopolitical maneuvering extracts from one group to benefit another.",
+    "directionality_logic": "The Mexican and US governments benefit from the policy, seeing it as a tool to manage migration. Brazilian travelers and the tourism sector bear the costs of the policy through restricted travel and economic losses. The directionality is determined by the structural relationship to the constraint, with beneficiaries experiencing low d values and victims experiencing high d values.",
+    "mandatrophy_analysis": "The policy could be misinterpreted as a rope if focusing solely on the benefits to the US and Mexican governments. However, analyzing the policy through the lens of Brazilian travelers reveals its extractive nature, justifying its classification as a snare. The multi-perspective analysis clarifies the complex dynamics."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_mexico_migration_agreement"
+    ]
+  },
+  "directionality_overrides": []
+}

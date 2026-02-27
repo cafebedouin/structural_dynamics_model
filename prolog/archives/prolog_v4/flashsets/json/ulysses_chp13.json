@@ -1,0 +1,128 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp13",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "The Sentimental Snare (Sandymount Shore)",
+    "topic_domain": "social/artistic/psychological",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "literary_analysis"
+    ],
+    "victims": [
+      "gerty_macdowell"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Gerty MacDowell's Perspective",
+      "comment": "Gerty, driven by societal expectations and personal desires, is trapped by the idealized romantic narrative she projects onto Bloom and herself. She is powerless to escape the snare of her own sentimental expectations."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Romantic Ideal as Social Construct",
+      "comment": "The romantic ideal, once a powerful force, has become a degraded and theatrical performance, particularly for women in Gerty's social context. The ritual of courtship and romantic fantasy persists, but its functional significance has diminished."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Authorial Perspective",
+      "comment": "From Joyce's analytical perspective, the sentimental snare is a device for exploring the complexities of human desire and the social forces that shape individual experience. Bloom's voyeurism facilitates the fulfillment of Gerty's romantic fantasy. This is not a coercive action on his part but rather a collaborative fulfillment of Gerty's fantasies and Bloom's desires, both of which exist within the larger 'artistic' project of Joyce's work."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Perspective",
+      "comment": "From an analytical perspective, the sentimental snare is a device for exploring the complexities of human desire and the social forces that shape individual experience."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "role_of_intention",
+      "question": "To what extent is Bloom's participation intentional exploitation versus accidental fulfillment of Gerty's desires?",
+      "resolution_mechanism": "Close reading of Bloom's internal monologue and actions in the chapter, considering his motivations and awareness of Gerty's perspective.",
+      "impact": "If Bloom is intentionally manipulative, the constraint is a more severe snare. If accidental, it is a tangled rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The degree to which Bloom's actions are intentional or accidental."
+    },
+    {
+      "id": "social_expectations_impact",
+      "question": "How heavily do societal expectations weigh on Gerty's decisions and self-perception?",
+      "resolution_mechanism": "Analysis of the prevailing social norms and gender roles of 1904 Dublin, considering Gerty's age, class, and social context.",
+      "impact": "If social expectations are overwhelming, Gerty's trapped perspective is justified. If less impactful, her agency is higher, and the constraint weakens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The impact of social expectations on Gerty's decisions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Chapter 13 models the encounter between Gerty MacDowell and Leopold Bloom on Sandymount Strand. Gerty, influenced by romantic novels and societal expectations, projects an idealized fantasy onto Bloom. Bloom, in turn, observes and participates in this fantasy, fulfilling both his own desires and Gerty's romantic expectations. This intersection creates a snare for Gerty, trapping her in a self-constructed narrative that extracts from her agency and self-perception.",
+    "key_agents": [
+      "Gerty MacDowell: Primary victim (powerless/trapped) - ensnared by her own romantic ideals.",
+      "Leopold Bloom: Opportunistic observer (moderate/mobile) - a catalyst for Gerty's fantasy fulfillment.",
+      "The Reader: Analytical observer - analyzes the interplay between characters and societal forces."
+    ],
+    "logic_rationale": "Extractiveness (0.6): The constraint extracts from Gerty's sense of self and agency as she becomes increasingly invested in the romantic narrative. Suppression (0.7): Societal expectations and Gerty's internal desires suppress her ability to see Bloom and the situation clearly. Theater ratio (0.75): The performance of romantic ideals has a high theatrical element and also serves a genuine emotional function for Gerty.",
+    "perspectival_gap": "Gerty experiences the event as a snare, trapped by societal expectations and her own desires. The author sees the scene as a rope, creating a coordination point that fulfills the desires of the main actors. Social constructs around dating are historically a piton."
+  },
+  "directionality_overrides": []
+}

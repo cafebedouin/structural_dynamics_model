@@ -1,0 +1,131 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp02",
+    "version": "0.1",
+    "generated_date": "2024-01-03",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Nightmare of History (Dalkey School)",
+    "topic_domain": "economic/social/political",
+    "victims": [
+      "stephen_dedalus",
+      "irish_intellectual_freedom"
+    ],
+    "beneficiaries": [
+      "dalkey_school"
+    ],
+    "requires_active_enforcement": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Stephen Dedalus' Perspective",
+      "comment": "Stephen, trapped by economic necessity, experiences the school as a snare. He lacks power and sees no immediate escape from the cycle of history and the intellectual constraints it imposes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Dalkey School's Perspective",
+      "comment": "The school, as an institution, is a piton. It once served a purpose (education of the elite), but now its function is degraded, mainly theatrical, and supports a system of privilege that Stephen finds stifling."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Ireland's Perspective",
+      "comment": "Ireland, struggling with its own history and colonial past, experiences the school as a tangled rope. It represents both a constraint on intellectual freedom and a potential coordination point for future generations, though deeply flawed. There are extraction dynamics and a need to maintain some sort of historical narrative, while simultaneously grappling with it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer's Perspective",
+      "comment": "From a civilizational perspective, the analytical observer views the situation as a tangled rope, demonstrating the complex interplay of historical forces, individual agency, and systemic constraints. It showcases the tension between the burden of the past and the potential for future liberation. There are elements of coordination (education) and extraction (maintaining the status quo) within this system."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "history_determinism",
+      "question": "To what extent is Stephen's fate predetermined by historical forces vs. his own agency?",
+      "resolution_mechanism": "Analyzing Stephen's future choices and their consequences within the narrative.",
+      "impact": "If deterministic: School is an inescapable snare. If agentic: School is a temporary piton.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The degree to which Stephen's future is already determined by history."
+    },
+    {
+      "id": "school_agency",
+      "question": "Can the school reform from within, or is its primary purpose to enforce the status quo?",
+      "resolution_mechanism": "Looking at if the school changes over time within the narrative.",
+      "impact": "If reformable: School could shift into a scaffold (temporary support). If unyielding: School is a snare for its teachers.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "To what extent the school has any real flexibility."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "For Stephen Dedalus, the school at Dalkey is a Snare defined by the 'nightmare of history' and the futility of teaching privileged boys who lack innocence. This constraint highlights Stephen's trapped position and the weight of the past on his present.",
+    "key_agents": [
+      "Stephen Dedalus: Primary victim (powerless/trapped) - feels trapped by economic necessity and the weight of Irish history.",
+      "Dalkey School: Institutional Actor (institutional/constrained) - represents the status quo and degraded purpose of education.",
+      "Ireland: Nation (moderate/constrained) - trapped by history, looking for ways to coordinate a path forward."
+    ],
+    "logic_rationale": "Extractiveness (0.70): High - Stephen's intellectual and creative energies are drained by the oppressive atmosphere of the school and the perceived futility of his work. He must conform to the system's expectations and suppress his own thoughts and feelings. Suppression (0.80): High - The school environment stifles intellectual freedom and reinforces existing social hierarchies. Stephen faces limited opportunities for genuine expression or upward mobility. Theater ratio (0.75): High - The school still offers a nominal education, even if it's degraded.",
+    "perspectival_gap": "The perspectival gap arises from the different positions of the actors involved. Stephen sees a snare because he's trapped. Ireland sees a tangled rope because it's a mix of tradition and stifling the future. The school sees itself as part of the system, and the analytical observer sees the whole picture as a tangle, not just one thing.",
+    "directionality_logic": "The directionality value is determined by power dynamics. Stephen has little power, Ireland a bit more, and the observer has the most. This is reflected in how they experience the weight of history and the system."
+  },
+  "boltzmann": {},
+  "network": {}
+}

@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "fda_gonorrhea_efficacy_standard",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fda_gono"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FDA Unified Efficacy Standard for Gonorrhea Treatment",
+    "topic_domain": "regulatory/pharmaceutical/public_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "existing_antibiotic_manufacturers",
+      "regulatory_agency_authority",
+      "clinical_trial_standardization"
+    ],
+    "victims": [
+      "patients_with_resistant_infections",
+      "novel_antibiotic_developers",
+      "public_health_treatment_options"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Gonorrhea Patient with Resistant Infection",
+      "comment": "PERSPECTIVE 1: RESISTANT-INFECTION PATIENT (SNARE) \u2014 No exit from the constraint. Standard-of-care oral antibiotics have failed. The patient faces limited options: expensive IV/IM cephalosporin, prolonged treatment, or risk of untreated infection complications. Cannot choose a different regulatory regime. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Novel Antibiotic Developer",
+      "comment": "PERSPECTIVE 2: NOVEL ANTIBIOTIC DEVELOPER (TANGLED ROPE) \u2014 Victim of extraction: high efficacy standard raises development costs and time-to-market. But also benefits from coordination: the standard ensures their eventual product (if approved) will have credible efficacy claims and market exclusivity. Constrained exit (product viability depends on FDA approval). d\u22480.68, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Existing Antibiotic Manufacturer",
+      "comment": "PERSPECTIVE 3: EXISTING ANTIBIOTIC MANUFACTURER (ROPE) \u2014 Primary beneficiary. High efficacy standard delays/blocks competitor entry, protecting their market position and pricing power. Experiences constraint as coordination of market access and quality assurance. Arbitrage exit available (shift to other markets, other drugs). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The FDA Regulatory Authority",
+      "comment": "PERSPECTIVE 4: FDA REGULATORY AUTHORITY (TANGLED ROPE) \u2014 Experiences constraint as coordination (ensuring drug safety/efficacy), but also exercises extraction (gate-keeping power, standard-setting authority, industry control). Powerful position with mobile exit (can adjust standards). But also constrained by congressional mandate and public health pressure. d\u22480.45, f(d)\u22480.55, \u03c3=1.0 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Health System",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH SYSTEM (TANGLED ROPE) \u2014 Benefits from coordination: high efficacy standard ensures approved drugs actually work. But extracted from: limited treatment options, narrowed clinical pathways, rising costs of non-oral alternatives. Organized (can petition for standard revision) but constrained (bound by FDA authority). d\u22480.52, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Clinical Trial Infrastructure",
+      "comment": "PERSPECTIVE 6: CLINICAL TRIAL INFRASTRUCTURE (PITON) \u2014 Maintains a high efficacy standard that persists partly through institutional inertia. The standard is performative in a key sense: microbiological cure rates (the primary efficacy measure) don't perfectly predict clinical outcomes or resistance development. The constraint persists because the alternative (outcome-based standards accounting for resistance dynamics) is harder to measure and would destabilize the entire approval apparatus. theater_ratio=0.65 reflects this performative quality. d\u22480.15, f(d)\u22480.08, \u03c3=1.0 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN?) \u2014 From a civilizational view, some efficacy standard is inherent to any medical approval system: you cannot approve drugs without evidence they work. The constraint appears as an immutable natural law. However, the structural data (\u03b5=0.58, suppression=0.72, beneficiaries, victims) contradicts mountain classification \u2014 the specific standard chosen (90% microbiological cure rate, single-dose, n\u2265100 trials) is contingent institutional design, not law of nature. This is a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "resistance_dynamics_threshold",
+      "question": "What level of resistance prevalence should trigger a revision of the efficacy standard to include resistance-aware measures?",
+      "resolution_mechanism": "Longitudinal surveillance of resistance rates; correlation between approved drug efficacy (by current standard) and clinical treatment failure in the field",
+      "impact": "If threshold is already crossed: current standard is dangerously inadequate, and the extraction mechanism is severe (false assurance of drug efficacy). If threshold is distant: current standard is precautionary and appropriate, reducing extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Resistance prevalence threshold for standard revision"
+    },
+    {
+      "id": "microbiological_vs_clinical_alignment",
+      "question": "How well do microbiological cure rates (the primary standard measure) predict clinical treatment success and prevent resistance emergence in the population?",
+      "resolution_mechanism": "Post-approval surveillance data; comparison of microbiological outcomes in trials vs. real-world clinical outcomes; population-level resistance emergence curves",
+      "impact": "If poorly aligned: the standard is theater (performative, not functional), elevating the piton perspective. If well-aligned: the standard is genuine coordination, reducing piton classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Alignment of microbiological cure rates with clinical outcomes"
+    },
+    {
+      "id": "alternative_standard_feasibility",
+      "question": "Could an alternative efficacy standard (e.g., resistance-adjusted, outcome-based, adaptive trial designs) be implemented without destabilizing the entire drug approval apparatus?",
+      "resolution_mechanism": "Pilot implementation of alternative standard in regulatory framework; cost-benefit analysis vs. current standard; international precedent review",
+      "impact": "If feasible: the current standard is a chosen constraint, not a necessary one, increasing mandatrophy. If infeasible: the current standard is locked in by infrastructure, increasing piton classification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Feasibility of alternative efficacy standards"
+    },
+    {
+      "id": "market_entry_barriers_causation",
+      "question": "How much of the delayed/blocked market entry for novel antibiotics is due to the high efficacy standard vs. other factors (manufacturing scale-up, patent/IP timing, clinical trial logistics)?",
+      "resolution_mechanism": "Developer interviews; comparative analysis of approval timelines for antibiotics vs. other drug classes; country-level variation in standards",
+      "impact": "If standard is primary barrier: extraction mechanism is clear and severe. If secondary: extraction is real but smaller, and supply constraints are shared with other domains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal weight of efficacy standard on market entry barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The FDA's unified efficacy standard for gonorrhea treatment (exemplified by rejection of a novel oral antibiotic despite clinical promise) creates a structural constraint that simultaneously coordinates drug safety and extracts from patients, developers, and public health systems. The standard requires microbiological cure in \u226590% of subjects in controlled trials with sample sizes of at least 100 per arm. This threshold was established decades ago when gonorrhea susceptibility to antibiotics was near-universal; today, with widespread resistance, the standard operates in a fundamentally changed epidemiological context. The advisory panel's rejection reflects adherence to the standard even when it conflicts with public health need \u2014 patients with resistant infections lack treatment options, and developers of promising new antibiotics face approval delays that may make development uneconomical. The constraint exhibits properties of a Tangled Rope: it coordinates legitimate functions (ensuring new drugs actually work, preventing approval of ineffective treatments) while extracting from those outside the coordination framework (patients already resistant, developers with novel approaches, the broader public health system trying to manage resistance).",
+    "key_agents": [
+      "Patients with resistant gonorrhea: Primary victim (powerless/trapped) \u2014 have no exit from the constraint; bear full cost of treatment limitation",
+      "Novel antibiotic developers: Secondary victim (moderate/constrained) \u2014 face high development costs and delayed market entry; constrained by FDA approval requirement",
+      "Existing antibiotic manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 protected from competitor entry by high standard; can shift to other markets if pressured",
+      "FDA regulatory authority: Powerful institutional actor (powerful/mobile) \u2014 exercises gate-keeping power; experiences constraint as coordination mandate; can adjust standards but is politically constrained",
+      "Public health systems: Organized victim (organized/constrained) \u2014 benefit from safety coordination but extracted from by narrow treatment options; constrained by FDA authority",
+      "Clinical trial infrastructure: Institutional maintainer (institutional/arbitrage) \u2014 preserves performative efficacy standard through inertia; beneficiary of standardization",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent standard as immutable scientific requirement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The standard extracts from several groups: patients with resistant infections lack options; developers face high barriers; public health systems have narrowed treatment pathways. But the extraction is not maximal because the standard also performs genuine coordination (prevents approval of ineffective drugs, ensures drug quality). The 0.58 value reflects that the standard's coordination function is real but increasingly misaligned with epidemiological reality \u2014 as resistance rises, the standard extracts without proportional coordination benefit. The trajectory from 0.35 (0-year value) to 0.58 (30-year value) reflects increasing misalignment: the standard was reasonable when resistance was rare; it becomes extractive as resistance becomes common. Suppression (0.72): High. Significant barriers to alternative approaches: (a) changing the standard requires regulatory reform that is slow and risky; (b) developers cannot easily exit by selling to other regulators (many international regulators harmonize with FDA); (c) patients cannot exit by choosing non-approved drugs without assuming legal and medical risk. Theater ratio (0.65): Moderate-high. The efficacy standard is performative in a key sense: microbiological cure rates in controlled trials don't perfectly predict real-world clinical outcomes or resistance development. The standard persists because outcome-based alternatives (e.g., measuring long-term resistance in treated populations) are harder to execute and would destabilize the entire trial infrastructure.",
+    "perspectival_gap": "This constraint exhibits a severe perspectival gap between beneficiaries and victims. The existing antibiotic manufacturer sees a Rope (coordination, market protection, legitimate efficacy assurance). The FDA sees a Tangled Rope (coordination mandate with gate-keeping power). The public health system sees a Tangled Rope (coordination benefit but extraction via limited options). The novel developer sees a Snare (high extraction, constrained exit). The resistant-infection patient sees a Snare (no exit, no choice). The clinical trial infrastructure sees a Piton (performative, sustained by inertia). The analytical observer risks seeing a Mountain (naturalized as inherent to medicine). The gap reveals that the 'beneficiary' (existing manufacturers, trial infrastructure) experience genuine coordination, while the 'victims' (developers with new approaches, patients needing alternatives) experience pure extraction. The standard is not inherently coordination or extraction \u2014 it depends on whether resistance prevalence makes it adaptive or maladaptive.",
+    "directionality_logic": "Existing antibiotic manufacturers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary. They have exit options (other drugs, other markets) and benefit from the standard's market protection. FDA regulatory authority: Mixed (coordination function + gate-keeping power) + mobile \u2192 d\u22480.45, f(d)\u22480.55. Moderate extraction. Can adjust standards but politically constrained. Public health system: Victim (limited options) + organized but constrained \u2192 d\u22480.52, f(d)\u22480.68. Significant extraction. Novel developers: Victim (high barriers) + constrained (must have FDA approval) \u2192 d\u22480.68, f(d)\u22481.05. High extraction. Resistant-infection patients: Victim (no options) + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. Clinical trial infrastructure: Institutional + arbitrage \u2192 d\u22480.15, f(d)\u22480.08. Net beneficiary; maintains standard through inertia (piton). Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Risks naturalizing contingent standard.",
+    "mandatrophy_analysis": "The mandatrophy is partially unresolved (mandatrophy_resolved: false). The core question: is the FDA standard genuine coordination (preventing ineffective drugs from harming patients) or extraction (protecting incumbent manufacturers and trial infrastructure at the expense of patients with resistant infections and developers with novel approaches)? The answer is: both, and context-dependent. When resistance prevalence is low (historical baseline), the standard is primarily coordination with side effects of market protection. When resistance prevalence is high (current status), the standard is primarily extraction justified by outdated coordination logic. The constraint has crossed a threshold where its original rationale no longer holds, but the institutional infrastructure (trial design, regulatory procedures, manufacturer lobbying) maintains it. The mandatrophy is resolved only if one of: (1) the FDA revises the standard to account for resistance dynamics (sunset the current standard, adopt a new one); (2) resistance rises to the point where the standard's harm becomes undeniable and political pressure forces revision; (3) alternative regulators (EU, other nations) adopt lower standards, fragmenting the global approval landscape and reducing the FDA's gate-keeping power. Until one of these occurs, the constraint remains an unresolved mandatrophy: labeled Tangled Rope (coordination + extraction) but increasingly functioning as a Snare (extraction justified by increasingly-distant coordination rationale)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "antibiotic_resistance_emergence",
+      "drug_development_timeline_pressure",
+      "alternative_treatment_access"
+    ],
+    "dual_formulation_note": "The FDA gonorrhea efficacy standard is downstream of the broader antibiotic resistance crisis (antibiotic_resistance_emergence) but represents a distinct regulatory constraint. The standard's increasing extractiveness is driven by epidemiological change (rising resistance prevalence) that makes the original coordination logic obsolete. Constraint family decomposition: (1) the original standard (\u03b5\u22480.25, primarily coordination) from when resistance was rare; (2) the current standard (\u03b5\u22480.58, mixed) as resistance rises; (3) a hypothetical revised standard (\u03b5\u22480.15, primarily coordination) that accounts for resistance dynamics. These are distinct constraints with different \u03b5 values because the observable (resistance prevalence in the population being treated) changes the structural relationship between the standard and treated populations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

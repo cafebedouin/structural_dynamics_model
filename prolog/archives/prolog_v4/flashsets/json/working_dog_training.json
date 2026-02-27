@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "working_dog_training",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Training of Working Dogs for Specific Tasks",
+    "topic_domain": "social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "task_sponsors",
+      "dog_trainers"
+    ],
+    "victims": [
+      "working_dogs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Working Dog",
+      "comment": "The dog is subject to the training regime, often with limited agency or understanding of the broader purpose."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Dog Trainer",
+      "comment": "The trainer coordinates the dog's activities and benefits from the dog's skills, but is also constrained by the requirements of task sponsors."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Task Sponsors",
+      "comment": "Organizations (police, military, etc) sponsoring the dog's training benefit from the dog's capabilities and can choose which trainers to use."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Training creates utility but imposes involuntary constraints on a non-human actor."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dog_welfare",
+      "question": "How well does the training regime align with the dog's physical and psychological welfare?",
+      "resolution_mechanism": "Veterinary evaluation of dogs post-training; behavioral analysis of dog stress levels",
+      "impact": "If alignment is low, ethical questions are raised. High extractiveness classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How ethical are the training methods used?"
+    },
+    {
+      "id": "alternative_method_efficacy",
+      "question": "Are there alternative, less coercive training methods that would achieve similar efficacy?",
+      "resolution_mechanism": "Comparative studies of dogs trained with different methods; long-term efficacy analysis",
+      "impact": "If alternative methods are effective, the constraint could shift from tangled_rope to rope for the dog.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Do other methods achieve similar results with less coercion?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint describes the training regime imposed on working dogs, such as those used for bomb detection or search and rescue. The training process extracts effort and obedience from the dog, benefiting the task sponsors and trainers. The dog's perspective, however, is often one of limited choice and potentially high stress.",
+    "key_agents": [
+      "Working Dogs: Primary target (powerless/trapped)",
+      "Dog Trainers: Primary beneficiary (moderate/mobile)",
+      "Task Sponsors: Secondary beneficiary (institutional/arbitrage)"
+    ],
+    "logic_rationale": "Extractiveness (0.50): Moderate. The training regime extracts effort and obedience from the dog, but also provides the dog with stimulation and purpose. Suppression (0.40): Moderate. The dog's freedom of movement and choice is limited during training. Theater ratio (0.20): Low. The activities are primarily functional and involve little theatrical performance.",
+    "perspectival_gap": "The dog experiences the training as a constraint on its natural behaviors, while the trainers and sponsors see it as a beneficial process. The analytical observer acknowledges the ethical tension.",
+    "directionality_logic": "The working dog is the primary victim of the training regime, experiencing trapped exit options and therefore high directionality. Trainers and task sponsors are beneficiaries, with mobile and arbitrage exit options, resulting in lower (or even negative) directionality values."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

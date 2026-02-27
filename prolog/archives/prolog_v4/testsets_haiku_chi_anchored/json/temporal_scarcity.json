@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "temporal_scarcity",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "temporal"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The \"Scoop Economy\" in Digital Media",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "first_mover_publishers",
+      "algorithmic_amplification_systems"
+    ],
+    "victims": [
+      "reader_information_quality",
+      "late_arrivals",
+      "verification_culture"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The General Reader",
+      "comment": "PERSPECTIVE 1: GENERAL READER (SNARE) \u2014 Trapped in algorithmic feeds optimized for engagement velocity. Cannot exit without abandoning access to breaking news. Bears cost of misinformation, incomplete context, and information cascades. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.88."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Subject of News Event",
+      "comment": "PERSPECTIVE 2: SUBJECT OF NEWS EVENT (SNARE) \u2014 Individuals and organizations caught in breaking news cycles have no exit: stories about them spread before context or response is possible. Verification opportunity is forfeited for speed. d\u22480.98, f(d)\u22481.50, \u03c3=1.2 \u2192 \u03c7\u22480.94."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Verification Journalist",
+      "comment": "PERSPECTIVE 3: VERIFICATION JOURNALIST (TANGLED ROPE) \u2014 Constrained by competitive pressure and resource limits. Benefits from scoop rewards (career advancement, audience) but also suffers systematic disadvantage: verification-first reporting loses algorithmic ranking to speed-first competitors. d\u22480.72, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.59."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "First-Mover News Organization",
+      "comment": "PERSPECTIVE 4: FIRST-MOVER NEWS ORGANIZATION (ROPE) \u2014 Primary beneficiary. Captures traffic, engagement, and narrative framing advantage through speed. Experiences scoop pressure as a coordination mechanism: publishing quickly establishes newsworthiness and prevents competitors from claiming the story. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Algorithmic Feed Operator",
+      "comment": "PERSPECTIVE 5: ALGORITHMIC FEED OPERATOR (TANGLED ROPE) \u2014 Structural beneficiary: speed-optimized feeds maximize engagement and ad impressions. Also provides coordination value (delivering timely information). But requires active suppression of verification signals to maintain speed priority. Benefits from extraction (engagement increases with uncertainty and novelty), but also depends on minimal-friction information flow. d\u22480.15, f(d)\u2248-0.02, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. Slight net beneficiary due to arbitrage exit and algorithmic control."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Media Literacy and Fact-Check Coalition",
+      "comment": "PERSPECTIVE 6: MEDIA LITERACY AND FACT-CHECK COALITION (SCAFFOLD) \u2014 Organized agents (fact-checkers, media literacy initiatives, platform interventions) see scoop pressure as a temporary coordination failure with a sunset. Infrastructure for distributed verification (community notes, fact-check partnerships, prebunking) is building alternative pathways that reduce extraction. d\u22480.45, f(d)\u22480.48, \u03c3=1.2 \u2192 \u03c7\u22480.30. Low effective extraction because coalition has agency and sunset is structural (verification infrastructure adoption)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Professional Editorial Standards",
+      "comment": "PERSPECTIVE 7: PROFESSIONAL EDITORIAL STANDARDS (PITON) \u2014 Traditional journalism norms (verify before publishing, distinguish reporting from commentary, correct errors) persist through institutional inertia but are increasingly performative. Editorial standards are publicly maintained (corrections sections, retraction policies) but subordinated to speed-driven incentives. theater_ratio=0.68 satisfies the piton gate (\u22650.70, marginal). The institutional standards see themselves as degraded \u2014 maintained for legitimacy rather than function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Information Cascade View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / INFORMATION CASCADE VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some speed-verification tradeoff appears inherent to distributed information systems: you cannot verify globally distributed claims faster than they spread. This perspective sees scoop pressure as an immutable property of information dynamics. However, structural data (\u03b5=0.52, suppression=0.65, theater=0.68) contradicts a pure mountain classification \u2014 the engine will compute this as a false summit, revealing that the speed-verification tradeoff is amplified by institutional and algorithmic choices, not purely by information physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_speed_necessity",
+      "question": "Is the speed-first algorithmic ranking structurally necessary for engagement, or a contingent design choice that could be modified without sacrificing platform utility?",
+      "resolution_mechanism": "Comparative analysis of platform engagement with modified ranking (verification weight increase, time-delay penalty reduction, quality signal amplification); A/B testing verification-first ranking against speed-first on representative user cohorts",
+      "impact": "If necessary: scoop pressure is partly immutable (higher mountain likelihood). If contingent: scoop pressure is institutional choice amenable to structural reform (snare/tangled_rope confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether speed-first ranking is necessary for algorithmic engagement"
+    },
+    {
+      "id": "verification_infrastructure_maturity",
+      "question": "Can distributed fact-check partnerships and community-driven verification (community notes, crowdsourced fact-checking) achieve error-detection rates comparable to pre-publication editorial review?",
+      "resolution_mechanism": "Comparison of error detection rates and correction latency: pre-publication editorial review vs post-publication community fact-checking on identical news stories; longitudinal tracking of claim accuracy for speed-published vs verification-first reporting",
+      "impact": "If comparable or better: scaffold sunset is real and structural (alternative verification pathways are functional). If inferior: scoop extraction persists because alternatives are not yet sufficient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether distributed fact-checking matches pre-publication editorial review effectiveness"
+    },
+    {
+      "id": "reader_attention_scarcity_primacy",
+      "question": "Is reader attention scarcity the primary driver of speed-first incentives, or is it advertising economics and engagement-driven metrics that amplify scoop pressure beyond information-theoretic necessity?",
+      "resolution_mechanism": "Comparative platform analysis: outlets funded by subscriptions vs ads; measurement of speed-verification tradeoff in markets with different monetization models; historical analysis of scoop pressure intensity before and after advertising-optimized algorithmic distribution",
+      "impact": "If attention scarcity is primary: scoop pressure reflects fundamental information economics (mountain-adjacent). If advertising economics amplify beyond necessity: scoop pressure is extractive institutional choice (snare/tangled_rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary driver of speed-first incentives: attention scarcity vs advertising economics"
+    },
+    {
+      "id": "counter_narrative_velocity",
+      "question": "Can verified counter-narratives and corrections spread as quickly through organic distribution and algorithmic amplification as initial false claims?",
+      "resolution_mechanism": "Comparative analysis of narrative velocity: time to reach equivalent audience size for initial claim vs correction/counter-narrative; measurement of viral coefficient for retractions vs original false claims; longitudinal tracking of correction reach in algorithmic feeds",
+      "impact": "If correction velocity matches claim velocity: verification pathways can keep pace (scaffold hypothesis supported). If corrections are structurally slower: speed asymmetry creates extraction (snare dynamic confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether corrections can spread as quickly as initial claims"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 'scoop economy' in digital media creates a structural tension between the speed of information distribution and the time required for verification. When publishing algorithms optimize for engagement velocity and reward first-publication advantage, they create an asymmetry: speed gains significant immediate benefit (audience capture, narrative framing, advertising revenue) while verification incurs costs (slower publication, reduced algorithmic ranking, lost scoop advantage). This constraint demonstrates how institutional and algorithmic choices amplify what might appear to be an information-theoretic necessity (you cannot verify as fast as information spreads) into an extractive system that punishes verification and rewards speed-first publishing. The constraint exhibits tangled rope dynamics: real coordination benefit exists (timely information distribution) alongside systematic extraction (first-movers capture disproportionate value; readers receive lower-quality information; verification culture degrades). Theater ratio has increased from 0.35 to 0.68 over the interval as editorial standards (corrections, retractions, verification practices) have become increasingly performative \u2014 publicly maintained for legitimacy while undermined by speed-driven incentives. The general reader and subjects of news events are trapped with no exit; verification journalists face constrained choice; algorithmic systems benefit from the speed asymmetry while providing some genuine coordination value; fact-check coalitions represent a sunset pathway (verification infrastructure maturation); professional editorial standards persist as a piton (degraded but institutionally maintained); the analytical observer risks naturalizing speed-verification tradeoff as an immutable law of information physics.",
+    "key_agents": [
+      "General Reader: Primary victim (powerless/trapped) \u2014 bears cost of misinformation and incomplete context; cannot exit algorithmic feeds without losing access to timely information",
+      "Subject of News Event: Primary victim (powerless/trapped) \u2014 caught in spreading narratives before response or context is possible; no exit from reputational extraction",
+      "First-Mover News Organization: Primary beneficiary (institutional/arbitrage) \u2014 captures traffic, narrative framing, and engagement advantage through speed; solves coordination problem by delivering timely information",
+      "Verification Journalist: Secondary victim (moderate/constrained) \u2014 constrained by competitive pressure; loses audience and rankings to speed-first competitors despite higher quality",
+      "Algorithmic Feed Operator: Structural beneficiary (powerful/arbitrage) \u2014 speed-optimized feeds maximize engagement and ad revenue; maintains extraction through ranking algorithms",
+      "Media Literacy and Fact-Check Coalition: Organized agents (organized/constrained) \u2014 building alternative verification pathways (community notes, fact-checking partnerships, prebunking); represents sunset mechanism",
+      "Professional Editorial Standards: Institutional actor (institutional/arbitrage) \u2014 maintains verification norms publicly but subordinated to speed incentives; piton classification",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional choices as immutable information laws"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising over interval. The initial state (0.25) reflects mixed coordination and extraction \u2014 early digital media still maintained separation between news and comment, with verification remaining valued. By time 5 (0.38), algorithmic ranking systems had begun prioritizing engagement velocity over accuracy. At time 10 (0.52), the scoop economy is fully mature: first-mover advantage is substantial, speed-verification tradeoff is explicit, and algorithmic amplification directly rewards speed. The rising trajectory reflects institutional drift toward extraction as engagement metrics became primary optimization targets. Suppression (0.65): High. Significant barriers to verification-first publishing include: algorithmic demotion of content below trending thresholds (technical suppression); career/revenue loss for verification-focused outlets (economic suppression); reader expectations for immediate coverage (social suppression); lack of infrastructure for post-publication verification at scale (systemic suppression). However, suppression is not total \u2014 some outlets maintain verification-first models (subscription-based, niche communities), and fact-checking infrastructure is emerging. Theater ratio (0.68): High and rising. Editorial standards (corrections, retractions, verification procedures) are publicly performed but operationally subordinated. News organizations maintain corrections sections and retraction policies (theater) while speed-driven publishing and algorithmic ranking undermine verification in practice (reality). This mismatch has increased as algorithmic distribution has bypassed editorial gatekeeping.",
+    "perspectival_gap": "This constraint demonstrates significant perspectival divergence. The first-mover publisher sees a coordination mechanism (Rope) \u2014 speed solves the problem of delivering timely information. The general reader sees pure extraction (Snare) \u2014 they receive lower-quality information and have no exit. The verification journalist sees mixed dynamics (Tangled Rope) \u2014 they benefit from verification infrastructure but suffer competitive disadvantage. The algorithmic operator sees slight net benefit (Tangled Rope) \u2014 genuine coordination value (timely delivery) alongside extraction benefit (engagement optimization). The fact-check coalition sees a temporary problem with emerging solutions (Scaffold) \u2014 community verification infrastructure is building an exit path. Professional editorial standards see their own degradation (Piton) \u2014 verification norms persist through institutional memory rather than operational priority. The analytical observer risks seeing an immutable information law (Mountain) \u2014 but structural data reveals this is a false summit: the speed-verification asymmetry is amplified by institutional choices (algorithmic ranking, advertising monetization, scoop rewards) that are not information-theoretic necessities.",
+    "directionality_logic": "General reader: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 no exit from algorithmic feeds. Subject of news event: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.50. Maximum extraction \u2014 reputational cost with no ability to respond in real time. First-mover publisher: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary \u2014 captures scoop advantage and can exit by publishing faster. Verification journalist: Victim + constrained \u2192 d\u22480.72, f(d)\u22481.12. Significant extraction but not maximal \u2014 can exit by adopting speed-first strategy but loses identity/quality value. Algorithmic operator: Beneficiary + arbitrage with coordination function \u2192 d\u22480.15, f(d)\u2248-0.02. Near-net-beneficiary \u2014 extraction value (engagement increase) offset by coordination value (timely distribution). Fact-check coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Low effective extraction; coalition has agency and sees structural exit path. Editorial standards: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Piton classification comes from theater gate (0.68 \u2265 0.70), not from high chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival (observer naturalizes institutional choice as law); false summit detection applies.",
+    "mandatrophy_analysis": "The scoop economy resolves mandatrophy by showing the constraint is genuinely tangled_rope from multiple perspectives: it provides real coordination value (timely information distribution) while extracting asymmetric value (first-mover advantage, reader misinformation, verification culture degradation). The constraint is NOT purely extractive (pure snare) because algorithmic feed systems do solve the genuine problem of distributing large volumes of information efficiently. It is NOT purely coordination (pure rope) because the speed asymmetry creates structural winners and losers, and extraction mechanisms are built into ranking algorithms and scoop reward structures. The mandatrophy resolution shows why institutional reform is possible: the coordination function can be decoupled from the extraction mechanism. Alternative designs (verification-weighted ranking, community fact-checking infrastructure, slower-but-accurate publishing models) can maintain coordination benefit while reducing extraction. The scaffold perspective's sunset is structural and achievable: distributed fact-checking, community notes, and prebunking infrastructure are mature enough that post-publication verification can begin to match pre-publication editorial capacity. This is not a natural law \u2014 it is a contingent institutional arrangement amenable to reform."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "information_cascade_asymmetry",
+      "engagement_metric_optimization"
+    ],
+    "dual_formulation_note": "The scoop economy is downstream of algorithmic ranking systems and engagement-driven monetization. The upstream constraints (algorithmic ranking design, advertising economics) have their own \u03b5 values reflecting the direct information-theoretic and economic choices. The scoop economy represents the emergent constraint at the journalist/reader level where those upstream choices have structural consequences."
+  },
+  "directionality_overrides": []
+}

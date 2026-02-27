@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "meta_nda",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "meta_nda"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Meta's Non-Disclosure Agreements for Undercover Testers",
+    "topic_domain": "economic/platform_governance/labor",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "meta_internal_testing_operations"
+    ],
+    "victims": [
+      "undercover_testers",
+      "public_epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Undercover Tester",
+      "comment": "PERSPECTIVE 1: UNDERCOVER TESTER (SNARE) \u2014 Trapped by employment contract and legal liability. Cannot disclose platform vulnerabilities, manipulative design patterns, or testing methodologies without legal exposure. Exit requires abandoning income and facing potential litigation. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Public Epistemic Commons",
+      "comment": "PERSPECTIVE 2: PUBLIC EPISTEMIC COMMONS (SNARE) \u2014 Cannot access information about platform design flaws, content moderation failures, or vulnerability in manipulative tactics. Trapped in informational asymmetry. No exit mechanism exists; public bears cost of hidden platform risks without knowledge or recourse. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Meta Internal Testing Operations",
+      "comment": "PERSPECTIVE 3: META INTERNAL TESTING OPERATIONS (ROPE) \u2014 Experiences the NDA as a coordination mechanism: ensures controlled testing environment, prevents competitive leakage, enables systematic vulnerability discovery. Benefits from testers' compliance and information asymmetry. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Regulatory Bodies and Lawmakers",
+      "comment": "PERSPECTIVE 4: REGULATORY BODIES / LAWMAKERS (TANGLED ROPE) \u2014 Powerful actors with exit options (can subpoena, conduct independent audits, mandate disclosure). See mixed function: NDA enables structured testing (coordination benefit) but also enables information hiding from regulators (extraction). d\u22480.45, f(d)\u22480.45, \u03c3=1.2 \u2192 \u03c7\u22480.33."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Researcher Community / Journalists",
+      "comment": "PERSPECTIVE 5: RESEARCHER / JOURNALIST COMMUNITY (TANGLED ROPE) \u2014 Organized but constrained by legal barriers to information access. The NDA enables structured testing (which researchers could theoretically access through collaboration) but prevents independent verification and disclosure. d\u22480.68, f(d)\u22480.98, \u03c3=1.0 \u2192 \u03c7\u22480.41."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legal Department Enforcement Theater",
+      "comment": "PERSPECTIVE 6: LEGAL DEPARTMENT ENFORCEMENT THEATER (PITON) \u2014 Maintains performative enforcement: NDA compliance is monitored, but the primary function (preventing collective disclosure) is theatrical \u2014 an individual tester has minimal leverage to expose Meta even without the NDA. The constraint persists through institutional inertia and legal ritualism rather than genuine enforcement capacity. theater_ratio=0.55 reflects modest theatrical component; many enforcement activities are substantive (legal letters, litigation threats), but the constraint's core extraction function relies on perceived rather than demonstrated legal risk."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "individual_vs_collective_disclosure",
+      "question": "Is the NDA extraction mechanism primarily against individual disclosure or collective whistleblowing?",
+      "resolution_mechanism": "Historical analysis of disclosed Meta internal testing details; comparison of legal enforcement rates against individual leakers vs coordinated group disclosures",
+      "impact": "If primarily individual: constraint is less severe (coordinated resistance possible). If primarily collective: extraction is more complete (prevents organized counter-narrative). Classification shifts from Snare (\u03c7\u22480.62) toward Snare (\u03c7\u22480.75).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether NDA targets individual or collective disclosure"
+    },
+    {
+      "id": "tester_alternative_employment",
+      "question": "Do alternative testing employment paths exist for undercover testers that do not require equivalent NDAs?",
+      "resolution_mechanism": "Labor market analysis of testing contractor roles; survey of NDA clauses across competing platforms and independent testing firms",
+      "impact": "If alternatives exist without NDAs: exit options upgrade to 'constrained' or 'mobile' (\u03c7 decreases). If trapped in NDA-requiring labor market: exit remains trapped (\u03c7\u22480.62 confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of alternative employment without restrictive NDAs"
+    },
+    {
+      "id": "vulnerability_discovery_rate",
+      "question": "Does the NDA-enabled controlled testing environment discover more platform vulnerabilities than would be discovered through public bug bounties or academic research?",
+      "resolution_mechanism": "Comparison of vulnerability discovery rates: Meta internal testing vs public bug bounties vs academic security research in similar domains",
+      "impact": "If internal testing discovers significantly more: NDA enables coordination benefit (\u03c7 downward pressure). If discovery rates similar: NDA is primarily extraction with minimal coordination value (\u03c7 upward pressure to 0.70+).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether NDA-enabled testing improves vulnerability discovery vs alternatives"
+    },
+    {
+      "id": "legal_enforceability_probability",
+      "question": "What is the actual probability that Meta would pursue legal action against a whistleblowing tester?",
+      "resolution_mechanism": "Historical record of Meta litigation against former testers; cost-benefit analysis of litigation vs reputational damage",
+      "impact": "If enforcement probability is low (<30%): constraint is primarily theatrical (theater_ratio approaches 0.85, piton classification). If high (>70%): constraint is substantive extraction (snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Actual enforcement likelihood of NDA legal terms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Meta's Non-Disclosure Agreements (NDAs) with undercover testers in simulated environments ('Simulated Terrorist Attack,' 'Simulated School Shooting') represent a structural extraction mechanism that prevents disclosure of platform vulnerabilities, manipulative design patterns, and testing methodologies. The constraint operates through legal enforceability and employment power asymmetry to silence testifier-victims while preserving Meta's informational monopoly. Undercover testers are recruited to discover how bad actors exploit Meta's systems, how content moderation fails, and how users can be manipulated \u2014 but the NDA prevents them from sharing findings with regulators, researchers, journalists, or the public. This creates a dual extraction: Meta captures the benefit of systematic vulnerability discovery while externalizing the cost of hidden platform flaws onto the public (which cannot exit the platform and cannot access information needed to assess its risks). The constraint exhibits classical snare properties: high suppression (legal liability, employment dependence), asymmetric extraction (Meta benefits, testers and public pay), and minimal coordination benefit (the testing function could operate without information lockdown).",
+    "key_agents": [
+      "Undercover Testers: Primary victims (powerless/trapped) \u2014 recruited specifically for vulnerability discovery but legally prohibited from disclosing findings; trapped by employment and litigation risk",
+      "Meta Internal Testing Operations: Primary beneficiary (institutional/arbitrage) \u2014 captures vulnerability information while preventing competitors and regulators from accessing it; uses tester labor while externalizing risk",
+      "Public Epistemic Commons: Secondary victim (powerless/trapped) \u2014 cannot access information about platform design flaws or manipulative tactics; trapped in informational asymmetry",
+      "Regulatory Bodies / Lawmakers: Powerful observer (powerful/mobile) \u2014 can theoretically mandate disclosure or subpoena, but rely on public complaints and external research to identify problems because internal testing remains hidden",
+      "Researcher / Journalist Community: Organized observer (organized/constrained) \u2014 can conduct independent research but face legal barriers to accessing Meta's internal testing data; constrained by IP protections and legal threats",
+      "Legal Department: Institutional enforcer (institutional/arbitrage) \u2014 maintains NDA enforcement apparatus; benefits from institutional inertia and threat of litigation even if actual enforcement is rare"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High. Meta extracts substantial value from the NDA: monopoly control over vulnerability information, reduced reputational exposure (hidden flaws prevent public pressure), competitive advantage (vulnerability data unavailable to competitors), and regulatory opacity (hidden testing prevents informed policy response). The value increases over time as Meta accumulates vulnerability data and the public's information deficit deepens. Suppression (0.68): High. Testers face multiple barriers to disclosure: legal liability (actual litigation risk is moderate but widely publicized), employment dependence (loss of income and professional reputation if violate NDA), informational asymmetry (most testers lack resources to fight Meta litigation), and collective action barriers (dispersed individual testers cannot coordinate). Public also faces suppression: no direct access to testing data, dependent on leaked information, high barriers to independent verification. Theater ratio (0.55): Moderate. Enforcement is partly theatrical (actual litigation is rare; threat of litigation carries more weight) and partly substantive (legal threats are credible and have chilling effect). The enforcement apparatus is maintained through institutional inertia \u2014 legal departments perceive NDAs as standard practice \u2014 but the actual deterrence comes from perceived rather than demonstrated legal risk.",
+    "perspectival_gap": "The gap between Meta's institutional view and the tester's powerless view is maximal. Meta sees the NDA as a coordination mechanism ensuring controlled testing (Rope) \u2014 it enables systematic vulnerability discovery by preventing testers from discussing methodology with external parties, thus preserving research validity. Testers see the NDA as pure extraction (Snare) \u2014 it prevents them from exiting an exploitative arrangement and silences them even when they discover serious platform failures. Regulatory bodies see mixed function (Tangled Rope) \u2014 the NDA enables structured testing (coordination benefit) but blocks access to findings that regulators need to assess platform risk. Journalists and researchers see constrained extraction (Tangled Rope) \u2014 the NDA enables Meta to maintain a monopoly on vulnerability information, preventing independent verification. The public sees the constraint as a complete information barrier (Snare) \u2014 unable to access information about platform risks, dependent on leaks or independent research, bearing cost of hidden flaws without recourse.",
+    "directionality_logic": "Undercover Testers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximal extraction. Employment dependence + legal liability + lack of exit options produce high directionality. Public Epistemic Commons: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximal extraction. Abstract collective cannot exit, cannot organize, cannot even recognize itself as a victim (no mechanism to perceive the platform risks being hidden). Meta Internal Testing: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Can disclose findings selectively, can use vulnerability data to improve platform (competitive advantage), can manage regulatory exposure by controlling information flow. Regulatory Bodies: Powerful + mobile \u2192 d\u22480.45, f(d)\u22480.45. Can mandate disclosure or conduct independent audits, but choose not to (or lack capacity). Mixed directionality reflects that they could exit but don't exercise that power. Researcher/Journalist Community: Organized + constrained \u2192 d\u22480.68, f(d)\u22480.98. Significant extraction because their ability to access and verify information is blocked by NDA. They cannot walk away from the constraint (it prevents their core function of independent verification) without accepting ignorance.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the tester NDA is structurally a Snare, not a Rope. The superficial coordination narrative (NDAs enable controlled testing) masks an asymmetric extraction mechanism. A true Rope would require: (1) genuine coordination benefit that requires information lockdown, or (2) symmetric cost-sharing (both Meta and testers restricted). Instead: Meta retains full disclosure authority (can leak findings selectively to regulators, use internally for competitive advantage), while testers bear full restriction. The testing function could operate under Rope-level disclosure rules (e.g., findings disclosed to independent auditors, regulatory bodies, or peer-reviewed researchers) without compromising research validity. The actual function of the NDA is to maximize Meta's monopoly on vulnerability information and prevent external accountability \u2014 pure extraction masked as coordination. The false positive (Rope framing) is dangerous because it legitimizes information lockdown as a technical necessity rather than recognizing it as a power asymmetry."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_content_moderation_opacity",
+      "meta_algorithmic_opacity_regulation",
+      "labor_power_asymmetry_tech_contractors"
+    ],
+    "dual_formulation_note": "The tester NDA is a specific instantiation of broader platform information asymmetry constraints. It downstream affects regulatory response capacity (which depends on access to internal platform data) and labor protections (which depend on testers' ability to report conditions). The NDA is upstream of public epistemic deficit regarding platform risks."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.68
+    }
+  ]
+}

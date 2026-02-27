@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "prime_age_male_unwork",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pmmu"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "The \"New Misery\" of Prime-Age Male Labor Force Exit",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "capital_owners",
+      "wage_disciplining_employers"
+    ],
+    "victims": [
+      "prime_age_males",
+      "low_skill_male_workers",
+      "family_dependents",
+      "labor_market_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Exited Worker",
+      "comment": "PERSPECTIVE 1: EXITED PRIME-AGE MALE (SNARE) \u2014 Trapped by wage floors set below reservation levels, skill obsolescence, disability (official or undiagnosed), addiction/mental health barriers, and family instability. No meaningful exit options within the formal labor market. Withdrawal is the only available response. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. High effective extraction: the constraint extracts labor force participation, family stability, and dignity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Family Dependent",
+      "comment": "PERSPECTIVE 2: FAMILY DEPENDENT (SNARE) \u2014 Wife/partner, children, or aging parent dependent on the exited worker's income. Constrained by geography (job loss concentrated in specific regions), caregiving obligations, and secondary earner status. Bears cost of lost income, household instability, and reduced social mobility. d\u22480.85, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.73. Significant extraction through income loss and family dissolution."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Capital and Wage-Disciplining Employers",
+      "comment": "PERSPECTIVE 3: CAPITAL/EMPLOYERS (ROPE) \u2014 Experiences labor force exit as coordination mechanism: lower wage pressure, reduced unionization, increased employer monopsony power, greater workforce discipline. Workers who drop out cannot negotiate; remaining workers work harder for lower real wages. Capital flows to labor-scarce sectors or automation. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Negative effective extraction = net beneficiary. The constraint disciplines labor supply through exit threat."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Unions and Worker Organizations",
+      "comment": "PERSPECTIVE 4: LABOR UNIONS/WORKER ORGANIZATIONS (TANGLED ROPE) \u2014 See coordinating function (solidarity, wage standards) but also extraction mechanism (workforce fragmentation, loss of bargaining power when prime-age men exit). Union density correlates with regions of high male labor force exit. Coordination mechanisms are weakened by exit \u2014 the threat of exit is weaponized against remaining workers. d\u22480.62, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55. Moderate extraction: unions benefit from coordination logic but lose power as members disappear."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Social Safety Net (Disability, SSI, Opioid Treatment)",
+      "comment": "PERSPECTIVE 5: SOCIAL SAFETY NET (PITON) \u2014 Provides subsistence but has degraded from income replacement to income supplementation. Theater ratio high: Disability Insurance and Supplemental Security Income function as de facto unemployment programs, yet maintain fiction of medical necessity. Enforcement is ritualistic (periodic reviews, benefit denials and appeals). The SSDI/SSI system persists as primary income support for exited males despite being designed for unable-to-work populations. theater_ratio=0.62 (close to piton threshold). d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.38. Moderate extraction: safety net provides minimal income while extracting labor force participation and agency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Community-Based Reintegration Programs",
+      "comment": "PERSPECTIVE 6: REINTEGRATION PROGRAMS (SCAFFOLD) \u2014 Community colleges, trade apprenticeships, peer recovery networks, and local job training see labor force exit as a temporary failure to match workers with available roles. Coordinate around skill development and local employer engagement. Theater low (direct outcome measurement). Many programs have sunset logic: they work themselves out of jobs if successful reintegration occurs. d\u22480.35, f(d)\u22480.25, \u03c3=0.8 \u2192 \u03c7\u22480.07. Low effective extraction: genuine coordination benefit with declining need as exit rates improve. has_sunset_clause_rationale: Successful reintegration reduces exited population, which reduces program justification and funding."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Structural Economic Limit (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scale, male labor force exit might appear to reflect immutable economic constraints: automation, globalization, skill-biased technological change, and fertility decline are presented as natural limits on employment opportunity. Wage floors are set by 'market clearing' logic. However, the base metrics (\u03b5=0.58, suppression=0.68, theater=0.55) contradict mountain classification \u2014 this is a false summit. The constraint is contingent on wage policy choices, enforcement of labor standards, and regional investment decisions, not natural law."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer (Institutional Extraction View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / EXTRACTION VIEW (SNARE) \u2014 Comprehensive structural analysis reveals the constraint as extraction mechanism: labor force exit discipline, wage suppression, destruction of bargaining power, and concentration of benefits in capital. The suppression (0.68) is high: skill obsolescence is manufactured through lack of investment in training; wage floors are below subsistence through policy choice; family instability is reinforced through benefits cliffs that punish marriage or part-time work; regional economies collapse through outsourcing and underinvestment. d\u22480.75, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.64. Significant extraction: the system functions to extract labor participation and concentrate wealth."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "wage_floor_policy_choice",
+      "question": "Is the current wage floor (real minimum wage adjusted for inflation) a natural market outcome or a policy choice that could be changed?",
+      "resolution_mechanism": "Comparative analysis of wage floors across OECD countries and historical wage floors in US; counterfactual modeling of employment effects under higher wage floors; analysis of employer wage-setting behavior in tight vs slack labor markets",
+      "impact": "If wage floor is policy choice: labor force exit is partly endogenous to wage suppression policy, shifting classification toward snare (extraction). If wage floor is natural market outcome: classification toward piton (degraded system) or mountain (unavoidable). High confidence that policy choice explanation is correct.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wage floors reflect policy choice or natural market clearing"
+    },
+    {
+      "id": "disability_gatekeeping_effect",
+      "question": "Does SSDI/SSI function as intentional unemployment program or as degraded income support system where medical necessity is theater?",
+      "resolution_mechanism": "Analysis of approval rates over time; comparison of SSDI enrollment to medical evidence of disability; interview studies on program experience; administrative cost analysis (overhead per beneficiary)",
+      "impact": "If intentional unemployment program: safety net is scaffold with sunset logic (better design possible). If degraded system: piton classification confirmed. High theatrical content suggests piton, but high extraction suggests snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether SSDI functions as deliberate or degraded income support"
+    },
+    {
+      "id": "regional_investment_reversibility",
+      "question": "Are regions of high male labor force exit economically abandoned through structural inevitability (resource depletion, geographic disadvantage) or through policy-driven disinvestment that could be reversed?",
+      "resolution_mechanism": "Regional development studies comparing deindustrialized regions that recovered vs those that remained stagnant; analysis of public/private investment flows by region; counterfactual modeling of regional development under different policy regimes",
+      "impact": "If structural/inevitable: constraint approaches mountain. If policy-driven disinvestment: constraint is snare (extraction through underinvestment). Evidence strongly suggests policy-reversibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regional decline is structural or policy-driven"
+    },
+    {
+      "id": "skill_obsolescence_investment_gap",
+      "question": "Does the gap between worker skills and employer demands reflect natural technological change or deliberate underinvestment in training and education?",
+      "resolution_mechanism": "Comparative analysis of training investment (public/private) in countries with low male labor force exit; analysis of employer investment in worker development vs wage suppression; econometric studies of training returns and employer contribution rates",
+      "impact": "If natural technological change: piton or mountain classification. If underinvestment: snare classification (suppression is policy-driven). Evidence suggests significant underinvestment component.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether skill gaps reflect technology or underinvestment"
+    },
+    {
+      "id": "family_instability_causality",
+      "question": "Does male labor force exit cause family instability (divorce, single parenthood) or does pre-existing family instability cause exit? What is the causal direction?",
+      "resolution_mechanism": "Longitudinal analysis with lagged variables; studies of male exit timing relative to family transition events; analysis of exit rates by family structure before exit; intervention studies on family stability and employment",
+      "impact": "If exit causes instability: snare classification (extraction through family degradation). If instability causes exit: exit is response to family constraint rather than cause. Mixed evidence suggests bidirectional feedback.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction between labor force exit and family instability"
+    },
+    {
+      "id": "opioid_crisis_externality",
+      "question": "To what extent does opioid crisis (external shock) explain male labor force exit vs. is it symptom of deeper labor market dysfunction?",
+      "resolution_mechanism": "Timing analysis of opioid availability vs labor force exit onset; regional correlation studies; comparison of exit rates in regions with/without opioid epidemics; analysis of whether opioid use precedes or follows exit",
+      "impact": "If external shock: exit is piton (degraded response to shock). If symptom of dysfunction: exit is snare (opioid use is adaption to labor market extraction). Evidence suggests opioids amplified pre-existing exit trend.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether opioid crisis causes or amplifies labor force exit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "Beginning in the 1990s and accelerating through the 2000s and 2010s, the United States experienced a dramatic decline in labor force participation among prime-age men (aged 25-54). By 2020, approximately 1 in 10 prime-age men were neither employed nor actively seeking work \u2014 the highest rate since the Great Depression. This constraint \u2014 the \"New Misery\" \u2014 is fundamentally a snare: a structural mechanism that extracts labor force participation, family stability, and economic agency from a specific demographic group while concentrating benefits in capital owners and wage-disciplining employers. The extraction operates through multiple overlapping mechanisms: wage suppression (real wages for less-educated men have declined sharply), skill obsolescence (manufacturing job losses combined with underinvestment in retraining), regional economic collapse (deindustrialized areas receive minimal reinvestment), family destabilization (benefits cliffs that punish marriage or secondary income), disability gatekeeping (SSDI/SSI function as de facto unemployment programs with theatrical medical justification), and the opioid epidemic (a symptom and amplifier of deeper labor market dysfunction). The constraint exhibits different classifications from different perspectives precisely because the structural data reveals an asymmetric extraction mechanism dressed up in coordination language (\"labor market flexibility,\" \"natural technological change\") and institutional inertia (degraded social safety net, performative retraining programs). The suppression (0.68) is particularly high because workers who exit have no realistic pathway to re-entry: skill development opportunities are inadequate, wage floors are below subsistence, family obligations prevent relocation, and disability systems create perverse incentives against work. The theater ratio (0.55) reflects that many policy responses (job training programs, disability determinations, labor market participation campaigns) maintain surface legitimacy while failing to address underlying wage suppression and regional disinvestment.",
+    "key_agents": [
+      "Prime-age males (25-54, less-educated): Primary victim (powerless/trapped) \u2014 face wage suppression, skill obsolescence, regional collapse, family instability",
+      "Low-skill male workers: Primary target (powerless/constrained) \u2014 especially in manufacturing-dependent regions with high job losses",
+      "Family dependents (spouses, children): Secondary victim (moderate/constrained) \u2014 bear costs of lost income, household instability, reduced social mobility",
+      "Capital owners and employers: Primary beneficiary (institutional/arbitrage) \u2014 benefit from wage suppression, reduced bargaining power, lower unionization",
+      "Regional employers (surviving firms): Beneficiary (powerful/mobile) \u2014 can discipline remaining workforce through threat of exit, access low-wage labor",
+      "Labor unions and worker organizations: Secondary actor (organized/constrained) \u2014 fragmented by exit, lose bargaining power, unable to organize exited workers",
+      "Federal safety net (SSDI/SSI): Institutional actor (institutional/constrained) \u2014 functions as de facto unemployment program; maintains theater of medical necessity; provides inadequate income",
+      "Community reintegration programs: Organized agents (moderate/mobile) \u2014 attempt to coordinate skill development and job matching; capacity-constrained; partial sunset logic",
+      "Analytical observer: Sees full structure (analytical/analytical) \u2014 must avoid naturalizing contingent policy choices as natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts labor force participation, family income, and dignity. Unlike pure unemployment (cyclical, reversible), male labor force exit is structural and persistent. The extraction is not as severe as extreme snares (slavery, debt bondage, \u03b5 > 0.75) because some exit is voluntary (workers choosing non-market activity or subsistence); however, the lack of meaningful alternatives (no jobs at living wages, no mobility, no retraining) makes the 'choice' more coerced than free. The upward trajectory (0.35 \u2192 0.58 over 30 years) reflects increasing extraction: as manufacturing jobs disappeared, replacement employment opportunities failed to materialize, wage floors declined in real terms, and regional economies stagnated. Suppression (0.68): High. Multiple constraints prevent exit from exit: (1) Geographic immobility \u2014 exited workers are concentrated in deindustrialized regions with no employment alternatives; relocation requires capital and social networks they lack. (2) Wage suppression \u2014 replacement jobs (if available) offer wages below subsistence or below reservation level given family obligations. (3) Skill obsolescence \u2014 training opportunities inadequate and poorly integrated with employer demand; opportunity cost of training (foregone income) prohibitive. (4) Family obligations \u2014 caregiving, debt, and social ties anchor workers to failing regions. (5) Disability gatekeeping \u2014 SSDI approval rates create perverse incentive against part-time work or job search (earnings tests, benefits cliffs). (6) Stigma and identity \u2014 cultural devaluation of non-working males, loss of status and self-concept. Theater ratio (0.55): Moderate. The constraint maintains considerable theatrical legitimacy through policy narratives and institutional performances: (a) Job training programs proliferate but fail to match skills to actual employer demand or compensate for wage suppression. (b) SSDI determinations invoke medical necessity, but medical justification is theater \u2014 many beneficiaries have no disabling condition, yet are trapped by benefits structure. (c) Labor force participation campaigns blame worker motivation rather than job availability or wage floors. (d) Regional economic policy emphasizes 'attracting investment' but delivers minimal results. (e) Opioid crisis is medicalized rather than framed as symptom of labor market dysfunction. Theater is rising (0.38 \u2192 0.55) as the gap between policy claims (solutions exist) and reality (exits persist) widens.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The exited worker (powerless/trapped) sees a snare: no jobs at living wages, no escape from their region, no family situation stable enough for employment, benefits that punish work. The family dependent (moderate/constrained) sees a snare: lost income, household dissolution, reduced life chances. Capital and employers (institutional/arbitrage) see a rope: labor force exit is coordination mechanism that disciplines remaining workers, reduces wage pressure, eliminates union power, increases monopsony rents. The analytical observer sees a snare with high confidence \u2014 the structural data is unambiguous. However, policy institutions (SSDI, retraining programs) see piton (degraded system maintained by inertia) or scaffold (temporary problem solvable by better matching). This gap reveals that the constraint persists precisely because beneficiaries experience it as coordination while victims experience it as extraction. Power asymmetry is the gap.",
+    "directionality_logic": "Prime-age males: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. Maximum extraction \u2014 no exit options within formal labor market. Family dependents: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.25, \u03c3=1.0 \u2192 \u03c7\u22480.73. High extraction \u2014 can leave (relocation, new marriage) but costs prohibitive. Capital/employers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary \u2014 can exit to automation, offshoring, or capital reallocation. Labor unions: Mixed (coordination benefit, extraction harm) + constrained \u2192 d\u22480.62, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.55. Moderate extraction \u2014 unions benefit from coordination logic but are weakened by member exit. Safety net institutions: Provides subsistence (beneficiary aspect) but constrains beneficiaries through earnings tests (victim aspect) + constrained \u2192 d\u22480.50 (symmetric) \u2192 f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.38. Moderate extraction. Reintegration programs: Mobile (see exit as solvable) + moderate agents \u2192 d\u22480.35, f(d)\u22480.25, \u03c3=0.8 \u2192 \u03c7\u22480.07. Low extraction \u2014 genuine coordination benefit. Analytical observer: analytical \u2192 d\u22480.75, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.64. Snare classification is robust.",
+    "mandatrophy_analysis": "SNARE-PITON DISTINCTION: The constraint could be misclassified as piton (degraded system) rather than snare (extraction mechanism) if policy makers focus on institutional inertia (SSDI theater, ineffective retraining programs) rather than underlying wage suppression and regional disinvestment. Piton would suggest that better administration (more rigorous disability determinations, better job matching) would solve the problem. Snare reveals the true structure: the system functions to extract labor participation and suppress wages. The theater (SSDI ritual, training programs) is not the constraint; it is a consequence of the constraint. MANDATROPHY RESOLUTION: The snare classification is mandatrophy-robust because (1) Beneficiaries are clearly identified: capital owners, wage-disciplining employers, monopsony-wielding firms. (2) Victims are clearly identified: prime-age males, family dependents, labor organizations. (3) Extraction mechanism is structural (wage suppression, skill obsolescence, regional disinvestment) not relational (trade-off) or performative (theater alone). (4) The constraint persists precisely because beneficiaries perceive coordination benefit while victims perceive extraction. (5) Alternative policies are feasible (higher wage floors, regional investment, family-friendly benefits, aggressive skill development) but actively avoided by benefit-holders. (6) The constraint has strengthened over 30 years as wage floors stagnated and deindustrialization accelerated \u2014 this is not natural law (mountain) or inevitable decline (piton) but chosen extraction. The suppression (0.68) and extractiveness (0.58) are consistent with snare, not mountain (would require \u03b5 \u2264 0.25) or piton (would require low suppression and theater \u2265 0.70)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_floor_insufficiency",
+      "regional_economic_collapse",
+      "family_stability_benefits_cliff",
+      "deindustrialization_automation"
+    ],
+    "dual_formulation_note": "Prime-age male labor force exit is downstream of specific labor market failures: wage suppression (\u03b5\u22480.45), regional disinvestment (\u03b5\u22480.52), benefits design (\u03b5\u22480.35), skill development underinvestment (\u03b5\u22480.40). The aggregate constraint (\u03b5=0.58) reflects reinforcing interaction of these upstream mechanisms. Each upstream constraint has its own snare signature; the aggregate is more extractive than any single component because they interact to suppress all exit paths simultaneously."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.62
+    }
+  ]
+}

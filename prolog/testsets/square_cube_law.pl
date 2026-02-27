@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: square_cube_law
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-08-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_square_cube_law, []).
@@ -39,10 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -58,18 +56,20 @@
  *   domain: technological/biological
  *
  * SUMMARY:
- *   The Square-Cube Law, a principle of geometry, states that as an object
- *   grows in size, its surface area increases by the square of the multiplier,
- *   while its volume (and mass) increases by the cube. This represents a
- *   fundamental scaling limit where properties dependent on surface area
- *   (like structural strength or heat dissipation) fail to keep pace with
- *   properties dependent on volume (like weight or heat generation). It is an
- *   immutable feature of three-dimensional space.
+ *   The Square-Cube Law is a geometric principle stating that as linear
+ *   dimensions increase by a factor k, surface area increases by k^2 and
+ *   volume increases by k^3. This creates a fundamental constraint on all
+ *   scaling processes in biology and engineering. The constraint is not
+ *   imposed by any agent or institution; it emerges directly from the
+ *   mathematics of three-dimensional space. No organism, engineer, or society
+ *   can negotiate with or suppress this relationship. It is a natural law in
+ *   the strict Deferential Realism sense: zero degrees of freedom, absolute
+ *   accessibility collapse, irreducible across all observables.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mega-Fauna / Giant: Primary target (powerless/trapped) — physical integrity is bound by the law.
- *   - Aircraft Designer / Engineer: Institutional actor (institutional/mobile) — must operate within the fixed boundaries of the law.
- *   - Evolutionary Biologist: Analytical observer (analytical/analytical) — maps the physical limits on animal size.
+ * KEY AGENTS:
+ *   - Biological Organisms: All living systems subject to scaling laws (powerless/trapped) — cannot alter geometric relationships
+ *   - Engineering Systems: Structures, machines, vehicles designed by engineers (institutional/analytical) — must optimize within geometric constraints
+ *   - Analytical Observer: Mathematics perspective (analytical/analytical) — sees pure dimensional necessity
  */
 
 /* ==========================================================================
@@ -77,74 +77,49 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: As a fundamental law of geometry, the square-cube law has near-zero
-% extractiveness and suppression. It doesn't "extract" value in a socio-economic
-% sense; it defines the fixed, neutral landscape of physical possibility.
-domain_priors:base_extractiveness(square_cube_law, 0.01).
-domain_priors:suppression_score(square_cube_law, 0.01).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(square_cube_law, 0.0).       % Piton detection (>= 0.70). A physical law has no performative aspect.
+domain_priors:base_extractiveness(square_cube_law, 0.08).
+domain_priors:suppression_score(square_cube_law, 0.02).
+domain_priors:theater_ratio(square_cube_law, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(square_cube_law, extractiveness, 0.01).
-narrative_ontology:constraint_metric(square_cube_law, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(square_cube_law, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(square_cube_law, extractiveness, 0.08).
+narrative_ontology:constraint_metric(square_cube_law, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(square_cube_law, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Without these, the NL signature defaults to 0.5
-% and fails certification.
-narrative_ontology:constraint_metric(square_cube_law, accessibility_collapse, 1.0). % No alternative is conceivable.
-narrative_ontology:constraint_metric(square_cube_law, resistance, 0.0). % Active resistance is incoherent.
+narrative_ontology:constraint_metric(square_cube_law, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(square_cube_law, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(square_cube_law, mountain).
 narrative_ontology:human_readable(square_cube_law, "The Square-Cube Law").
 narrative_ontology:topic_domain(square_cube_law, "technological/biological").
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint emerges naturally from the geometry of 3D space without
-% human design or enforcement. Required for the mountain metric gate.
 domain_priors:emerges_naturally(square_cube_law).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% Not applicable. As a Mountain constraint representing a physical law, there
-% are no socio-economic beneficiaries or victims. No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% UNIFORM-TYPE CONSTRAINT: As a natural law, this constraint is a Mountain
-% from all perspectives. The classification is invariant. We include multiple
-% perspectives to demonstrate this invariance.
-
-% PERSPECTIVE 1: THE POWERLESS SUBJECT (GIANT)
-% Experiences the law as an absolute physical limit on their existence.
+% An organism scaling up cannot escape the law. As it grows, surface area increases as L^2 while volume increases as L^3. Heat dissipation, nutrient absorption, and structural support all degrade relative to mass. No organism can negotiate with geometry — the constraint is absolute.
 constraint_indexing:constraint_classification(square_cube_law, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
+            time_horizon(civilizational),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE INSTITUTIONAL ACTOR (ENGINEER)
-% Views the law as a fixed boundary condition for design and construction.
+% Engineers cannot escape the law, only optimize within it. Structural requirements scale as L^3; surface area available for bracing, heat dissipation, or material efficiency scales as L^2. Larger structures require disproportionate material investment. No institutional arrangement, technology, or market mechanism can repeal this geometry.
 constraint_indexing:constraint_classification(square_cube_law, mountain,
     context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(mobile), % Can choose different materials, but not a different law.
-            spatial_scope(global))).
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (BIOLOGIST)
-% Views the law as an unchangeable feature of the universe's geometric "hardware."
+% From the analytical perspective, the square-cube law is a consequence of dimensional analysis alone. It holds for all objects in three-dimensional space regardless of material, composition, or context. It is not a contingent property of physics but a logical consequence of geometry itself.
 constraint_indexing:constraint_classification(square_cube_law, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -157,20 +132,24 @@ constraint_indexing:constraint_classification(square_cube_law, mountain,
 
 :- begin_tests(square_cube_law_tests).
 
-test(perspectival_invariance) :-
-    % Verify that the classification is Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(square_cube_law, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(square_cube_law, mountain, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(square_cube_law, mountain, context(agent_power(analytical), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(square_cube_law, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(square_cube_law, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation_mountain) :-
-    % Verify the metrics are within the canonical range for a Mountain.
-    narrative_ontology:constraint_metric(square_cube_law, extractiveness, E),
-    narrative_ontology:constraint_metric(square_cube_law, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(square_cube_law, ExtMetricName, E),
+    domain_priors:suppression_score(square_cube_law, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(square_cube_law),
     narrative_ontology:constraint_metric(square_cube_law, accessibility_collapse, AC),
     narrative_ontology:constraint_metric(square_cube_law, resistance, R),
-    E =< 0.25,
-    S =< 0.05,
     AC >= 0.85,
     R =< 0.15.
 
@@ -182,70 +161,45 @@ test(threshold_validation_mountain) :-
 
 /**
  * LOGIC RATIONALE:
- *   This file models a canonical Mountain: a physical/mathematical law. The
- *   scores are near-zero (ε=0.01, suppression=0.01) because a physical law is
- *   not extractive; it is a neutral, fixed feature of reality. The consequences
- *   of the law (e.g., a giant's bones breaking) are distinct from the nature
- *   of the law itself.
+ *   Extractiveness (0.08): Near-zero. The square-cube law does not extract value from anyone; it is not a constraint imposed by agents but a pure geometric fact. No extraction occurs because there is no asymmetry in who bears costs — all agents bear the same geometric constraint equally. Suppression (0.02): Near-zero. The constraint cannot be suppressed or negotiated because it is not enforced by coercion but follows from first principles of geometry. No alternative exists to be suppressed. Theater ratio (0.15): Minimal. The constraint has no performative component — it operates identically whether observed or not. Engineering calculations and biological physiology implement the law directly, not through ritual or theater. Accessibility collapse (0.92): Very high. The square-cube law cannot be made accessible to agents who want to violate it. It is fundamentally irreducible — no clever design, material science, or institutional arrangement can make a large organism's surface-area-to-volume ratio scale linearly instead of as L^-1. Resistance (0.08): Very low. The law meets zero resistance because no one resists a pure mathematical fact. Engineers and biologists do not resist the square-cube law; they acknowledge it and design within its constraints.
  *
  * PERSPECTIVAL GAP:
- *   There is no perspectival gap. The law is a Mountain for the powerless
- *   giant, the institutional engineer, and the analytical biologist alike.
- *   Their *strategies* for dealing with the law differ, but their
- *   classification of the law itself is uniform. This demonstrates the
- *   "uniform-type" exception for natural laws.
+ *   There is no perspectival gap. All observers — organisms, engineers, mathematicians — classify the square-cube law as a mountain from their distinct contexts. The powerless organism experiences it as an absolute limit on scaling. The engineer experiences it as a binding constraint on design. The mathematician sees it as a logical necessity. All three perspectives produce mountain classification because the underlying structure is invariant across all observables and all agent contexts.
  *
  * DIRECTIONALITY LOGIC:
- *   Not applicable. As a Mountain constraint, there are no beneficiaries or
- *   victims in a socio-economic sense, so directionality (d) is not derived
- *   from structural relationships.
+ *   Directionality is undefined for this constraint because there are no beneficiaries or victims in the structural sense. The square-cube law does not create an extraction flow from one agent to another. All agents experience the same geometric limit symmetrically. The constraint is not a power relationship; it is a natural fact. The absence of beneficiary/victim structure and directionality values is a defining feature of true mountains.
  *
  * MANDATROPHY ANALYSIS:
- *   Mandatrophy is not applicable here. As a pure Mountain with near-zero
- *   extraction, there is no coordination function to degrade or asymmetric
- *   extraction to disguise. The constraint's claim of being a `mountain` is
- *   verifiably true, posing no risk of misclassification.
+ *   The square-cube law resolves the mandatrophy by being non-contestable. There is no risk of mislabeling coordination as extraction because no coordination function exists — the constraint is purely geometric. There is no risk of mislabeling extraction as coordination because no asymmetric power relationship exists. The law is invariant across all observables: whether measured in biological scaling, engineering load calculations, physics simulations, or pure mathematics, the L^2/L^3 ratio remains identical. No measurement basis or context changes the classification.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_square_cube_law,
-    'Is the law a feature of spacetime geometry itself, or an emergent property of particle interactions within that geometry?',
-    'A unified theory of quantum gravity or experimental evidence of non-Euclidean geometry at micro-scales.',
-    'If geometry itself, the Mountain is absolute. If emergent, there may be exotic physics (e.g., inside a neutron star) where the law is bypassed, changing its scope from universal to conditional.',
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(square_cube_law, 0, 10).
+narrative_ontology:interval(square_cube_law, 0, 1).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required. Base extractiveness (0.01) is below the 0.46 threshold for
-% mandatory temporal tracking. As a physical law, its properties do not drift.
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No coordination function is present, so coordination_type is not applicable.
-% No known structural dependencies on other constraints in the corpus.
+narrative_ontology:affects_constraint(square_cube_law, allometric_scaling_law).
+narrative_ontology:affects_constraint(square_cube_law, structural_material_limit).
+narrative_ontology:affects_constraint(square_cube_law, metabolic_scaling_exponent).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not applicable for a Mountain constraint.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

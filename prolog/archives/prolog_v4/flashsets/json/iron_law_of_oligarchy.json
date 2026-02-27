@@ -1,0 +1,134 @@
+{
+  "header": {
+    "constraint_id": "iron_law_of_oligarchy",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Iron Law of Oligarchy",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "organizational_leaders"
+    ],
+    "victims": [
+      "rank_and_file_members"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Rank-and-File Members",
+      "comment": "Perspective 1: Rank-and-file members (SNAPE) - Feel trapped within the organization due to social ties, shared goals, or lack of alternatives. They experience the extraction of their agency and democratic input as the organization becomes increasingly dominated by a small group of leaders."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle Management",
+      "comment": "Perspective 2: Middle Management (TANGLED ROPE) - Constrained by their position within the hierarchy. They benefit from the stability and career opportunities provided by the organization, but also experience the limitations imposed by the oligarchy. They have some mobility but are also dependent on the leaders."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Organizational Leaders",
+      "comment": "Perspective 3: Organizational leaders (ROPE) - Benefit from the system they create; they experience it as pure coordination, as they use their power to direct the organization and consolidate their influence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective 4: Analytical observer (TANGLED ROPE) - Observing the process over a long period, sees the organization as a Tangled Rope, where there is a mix of coordination benefits and extractive costs. Observes both the coordination and the asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "internal_democracy_viability",
+      "question": "Can internal mechanisms within large organizations effectively prevent the emergence of oligarchical power structures?",
+      "resolution_mechanism": "Comparative case studies of organizations with different internal governance structures, examining the long-term distribution of power and influence.",
+      "impact": "If internal democracy is viable, the Iron Law is a contingent tendency, not an absolute law (Tangled Rope or Scaffold). If not viable, the Iron Law approaches a Mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The viability of internal democracy as a countermeasure to oligarchy."
+    },
+    {
+      "id": "grassroots_movements_longevity",
+      "question": "How long can grassroots movements sustain their initial democratic ethos before succumbing to oligarchical tendencies?",
+      "resolution_mechanism": "Longitudinal tracking of grassroots movements, measuring changes in leadership accountability, member participation, and decision-making transparency over time.",
+      "impact": "If movements can sustain democracy, Iron Law is a weaker constraint. If movements succumb quickly, the Iron Law is a stronger constraint (closer to Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The sustainability of democracy in grassroots movements."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Iron Law of Oligarchy, proposed by Robert Michels, asserts that all complex organizations, irrespective of their initial democratic structure, inevitably evolve into oligarchies. This occurs as power becomes concentrated in the hands of a few leaders who prioritize their own interests and the organization's survival over the democratic ideals it initially espoused.",
+    "key_agents": [
+      "Organizational Leaders: Primary beneficiary (institutional/arbitrage) - Consolidate power and influence.",
+      "Rank-and-File Members: Primary victim (powerless/trapped) - Experience loss of agency.",
+      "Middle Management: Secondary actor (moderate/constrained) - Benefit from stability, limited by leadership."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. Leaders extract agency and democratic input from the members. Suppression (0.70): High. Members face social and economic costs for opposing the leaders. Theater ratio (0.30): Low. Actions are somewhat theatrical, but still functional.",
+    "perspectival_gap": "The perspectival gap arises from the different positions within the organizational structure. Leaders see the organization as serving its purpose, while the members feel their democratic input has been extracted.",
+    "directionality_logic": "Leaders benefit, members are victimized. Middle management has mixed experience. The analytical observer sees the trend over time.",
+    "mandatrophy_analysis": "The classification differentiates legitimate organizational processes from extraction by examining the balance of power and the degree to which the members' interests are represented. If the leaders only focus on their interest, then it can be labelled as a case of extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

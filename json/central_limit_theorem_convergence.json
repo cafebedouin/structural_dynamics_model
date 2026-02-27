@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "central_limit_theorem_convergence",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "clt"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Central Limit Theorem (CLT) \u2014 Convergence to Normality",
+    "topic_domain": "mathematical/probability_theory",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Applied Statistician",
+      "comment": "PERSPECTIVE 1: APPLIED STATISTICIAN (MOUNTAIN) \u2014 The CLT is an invariant structural fact: whatever the underlying distribution, sufficient averaging will produce normality. No exit, no extraction \u2014 the constraint simply defines the boundary of what is mathematically possible. The statistician cannot negotiate with the theorem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the civilizational/universal view, the CLT is a law of probability theory. It does not extract value, suppress alternatives, or require enforcement. It simply holds wherever its conditions (finite variance, independence) obtain. The theorem is emergent from first principles of measure theory and probability axioms."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Practicing Data Analyst",
+      "comment": "PERSPECTIVE 3: PRACTICING DATA ANALYST (MOUNTAIN) \u2014 In daily practice, the CLT is an immutable fact: it enables inference from finite samples without knowing the true distribution. The analyst cannot escape the constraint \u2014 it is a precondition for the validity of their methods. But this is not extraction; it is simply the structure of probability itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Community",
+      "comment": "PERSPECTIVE 4: MATHEMATICAL COMMUNITY (MOUNTAIN) \u2014 The CLT is a foundational theorem, proven and reproven across multiple formulations (Lindeberg, Lyapunov, multivariate). There is no debate about whether it holds \u2014 the debate (if any) concerns whether conditions are met in specific empirical contexts. The theorem itself is invariant."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "finite_variance_requirement",
+      "question": "What is the scope and necessity of the finite variance condition? Do stable distributions with infinite variance violate the CLT or illustrate a different limit theorem?",
+      "resolution_mechanism": "Rigorous classification of distributions by tail behavior; mapping of which limit theorems apply to which classes; specification of when generalized CLT (e.g., stable law convergence) replaces classical CLT",
+      "impact": "If variance requirement is absolute: CLT is truly mountain-like for a strict domain. If generalized CLT extends to infinite-variance cases: the constraint is a special case of a broader convergence principle, still mountain-like but more precisely scoped.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope and necessity of finite variance condition for CLT validity"
+    },
+    {
+      "id": "dependence_structure_boundaries",
+      "question": "At what level of dependence does the CLT cease to apply? Are weakly dependent sequences (mixing conditions) still governed by CLT, or do they require separate limit theorems?",
+      "resolution_mechanism": "Formal analysis of mixing properties (\u03c6-mixing, \u03b1-mixing); comparison of CLT, central limit theorems for dependent variables, and other asymptotic results",
+      "impact": "If CLT extends to weak dependence: the constraint captures a broader class of phenomena. If dependence breaks CLT entirely: the theorem's domain is narrower than classical intuition suggests.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundaries of CLT applicability under dependence structures"
+    },
+    {
+      "id": "empirical_convergence_rate",
+      "question": "How does convergence rate to normality vary across distributions? Are distributions with high kurtosis or skewness practically non-normal even at large n?",
+      "resolution_mechanism": "Berry-Esseen bounds and refinements; empirical convergence studies across heavy-tailed, skewed, and multimodal distributions; application to real data",
+      "impact": "If convergence is uniformly fast: CLT is reliably applicable. If convergence is highly distribution-dependent (slower for some): practical applications may misclassify non-normal data as approximately normal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution-dependent convergence rates to normality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "The Central Limit Theorem is a foundational result in probability theory and mathematical statistics. It states that the sum or average of a large number of independent random variables, each with finite variance, converges in distribution to a normal (Gaussian) distribution, regardless of the underlying distribution of the individual variables. This constraint exhibits the defining properties of a Mountain in the DR framework: it is an invariant structural fact that emerges from first principles of probability theory; it cannot be negotiated, enforced, or circumvented; and it holds universally across all contexts where its conditions obtain. The theorem does not extract value from any agent, impose suppression on alternatives, or rely on institutional enforcement. Rather, it defines a fundamental boundary of what is mathematically possible. The CLT has been proven rigorously in multiple formulations (classical, Lindeberg, Lyapunov, multivariate) and is invariant across all observational perspectives.",
+    "key_agents": [
+      "Applied Statistician: Uses CLT to justify inference from finite samples without knowing true distribution \u2014 experiences the theorem as an enabling constraint (analytical/universal)",
+      "Probability Theorist: Formalizes and proves CLT in multiple contexts \u2014 views it as emergent from probability axioms (analytical/civilizational)",
+      "Practicing Data Analyst: Applies CLT assumptions in hypothesis testing and confidence intervals \u2014 relies on the theorem's invariance (moderate/biographical)",
+      "Mathematical Community: Maintains and extends CLT through research (e.g., weak dependence, multivariate, stable distributions) \u2014 theorem is beyond debate, only domain specification is open (institutional/civilizational)"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Extremely low. The CLT does not extract value from any agent. It does not favor one distribution over another; it does not subsidize one interpretation of data over another. The theorem is a pure structural fact. The low value reflects that there is no asymmetric benefit flow \u2014 all parties gain equally from the theorem's validity, or the theorem is indifferent to value distribution altogether. Suppression (0.02): Minimal. The CLT does not suppress alternatives \u2014 it simply defines the asymptotic distribution. Distributions that fail the finite variance condition fall under different limit theorems (stable law convergence, etc.), but they are not suppressed by the CLT; they are outside its domain. Theater ratio (0.05): Negligible. There is no performative component. The CLT either holds or does not, based on mathematical rigor. There are no ceremonial gates, no institutional enforcement, no proxy metrics. The theorem's validity is determined by proof and mathematical analysis, not by social agreement or institutional ritual.",
+    "perspectival_gap": "All perspectives converge on the same classification: Mountain. This is characteristic of natural law constraints. The applied statistician, the theoretical probabilist, the practicing analyst, and the institutional mathematical community all experience the CLT as an immutable structural fact. The constraint exhibits zero perspectival gap because there is no distributional asymmetry in how it applies \u2014 it is not relative to an agent's power, exit options, or time horizon. The universality of the classification is the hallmark of a true Mountain.",
+    "directionality_logic": "Directionality derivation is not applicable to this constraint because there are no beneficiaries or victims. The CLT is a structural invariant of probability theory that applies equally across all contexts. The constraint does not create or require asymmetric relationships between agents. Each agent (statistician, theorist, analyst) experiences the theorem identically: as a precondition for valid inference, not as extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "law_of_large_numbers",
+      "normal_distribution_empirical_frequency"
+    ],
+    "dual_formulation_note": "The CLT is foundational to multiple statistical constraints. Related constraints include the Law of Large Numbers (weaker form, convergence to expectation) and empirical applications of normality assumptions in statistical hypothesis testing. The CLT is upstream: its validity enables or constrains the validity of downstream statistical procedures."
+  },
+  "directionality_overrides": []
+}

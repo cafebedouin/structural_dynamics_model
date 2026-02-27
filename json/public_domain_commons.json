@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "public_domain_commons",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pubdom"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Public Domain as a Cultural Commons",
+    "topic_domain": "legal/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cultural_creators",
+      "educational_institutions",
+      "remix_derivative_works_producers"
+    ],
+    "victims": [
+      "legacy_rights_holders",
+      "public_domain_access_constraint"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Orphaned Work",
+      "comment": "PERSPECTIVE 1: ORPHANED WORK / POWERLESS VICTIM (SNARE) \u2014 A creative work whose copyright holder cannot be identified or located. Despite technically entering public domain at some date, the work remains inaccessible due to legal uncertainty: digitization platforms fear liability, archives cannot clear rights, educators cannot safely use the material. The orphaned work is trapped in a status quo of non-use despite legal expiration of copyright. Maximum experienced extraction \u2014 the work generates no value, benefits no one, and cannot escape the legal limbo."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Educator and Librarian",
+      "comment": "PERSPECTIVE 2: EDUCATOR / LIBRARIAN (TANGLED ROPE) \u2014 Constrained by licensing costs, legal uncertainty, and resource limitations. Also genuinely benefits from public domain material that reduces licensing costs and enables curriculum design. The constraint is mixed: active enforcement of copyright term extensions and digital rights management extract value, but the existence of the public domain itself enables lower-cost educational access. Moderate experienced extraction with real agency and some benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cultural Remix Creator",
+      "comment": "PERSPECTIVE 3: REMIX CREATOR / INSTITUTIONAL BENEFICIARY (ROPE) \u2014 Artists, musicians, and filmmakers who build derivative works from public domain material. For them, the constraint is primarily coordination: public domain access enables remixing, sampling, and adaptation. They benefit from clear legal status and freely available material. Net beneficiary perspective \u2014 the constraint enables their primary workflow."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legacy Copyright Holder",
+      "comment": "PERSPECTIVE 4: LEGACY COPYRIGHT HOLDER / ORGANIZED EXTRACTION (SNARE) \u2014 Publishers, film studios, and estate executors who control copyright-expired material and leverage legal uncertainty to maintain access restrictions. These actors have been organized to lobby for copyright term extensions (Sonny Bono Act, EUCD, etc.). They experience the constraint as an opportunity to extract licensing fees from material that should be free. Organized actors benefit from suppression (legal uncertainty, technical barriers, DRM); they are trapped in the enforcement regime they have created."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Culture Coalition",
+      "comment": "PERSPECTIVE 5: OPEN CULTURE COALITION (SCAFFOLD) \u2014 Creative Commons, Internet Archive, Wikipedia, and public libraries working to build alternative pathways for public domain access. These actors see the constraint as temporary coordination failure with a sunset: metadata standards, full-text indexing, open-access digitization, and legal clarity initiatives (European Public Domain Navigator, Public Domain Review) are creating parallel infrastructures that bypass copyright gatekeeping. High agency, exit path visible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Copyright System",
+      "comment": "PERSPECTIVE 6: COPYRIGHT SYSTEM AS PITON (DEGRADED ENFORCEMENT) \u2014 The copyright system's stated purpose is to incentivize creation and reward creators. For works entering the public domain (copyright expired), this function has completely atrophied: the creator receives no benefit, yet enforcement overhead persists. The system maintains rights-management theater (TPM, licensing systems, rights clearance fees) on material with no active creator to reward. Theater ratio high because the legal apparatus continues with minimal functional verification \u2014 many orphaned works have no identifiable rights holder yet enforcement persists. Institutional inertia maintains the constraint despite loss of primary function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scarcity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE NATURAL LAW (MOUNTAIN) \u2014 From a civilizational perspective, some might argue that rights scarcity is inherent to property systems: someone always owns something, and access always requires permission or payment. This naturalizes the contingent institutional choice to extend copyright terms and enforce DRM. However, the public domain itself disproves the necessity claim \u2014 works can exist in commons status where use requires no permission. The mountain classification here reveals a false summit: confusing the institutional design choice (copyright enforcement) with a law of nature (scarcity of cultural goods)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "orphan_works_threshold",
+      "question": "At what point does legal uncertainty about copyright status become equivalent to practical non-access? Is a 50-year-old work with unidentifiable owner functionally 'public domain' if no one dares use it?",
+      "resolution_mechanism": "Empirical tracking of digitization rates for orphaned works before/after legal clarity provisions; comparison with works of known rights status and similar age",
+      "impact": "If threshold is low (< 5 years uncertainty): orphaned works are effective snare traps. If threshold is high (> 20 years): legal status matters less than technical access, reframing the constraint as infrastructure problem rather than IP problem.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for when copyright uncertainty equals functional non-access"
+    },
+    {
+      "id": "copyright_term_extension_incentive",
+      "question": "Do extended copyright terms (life+70) actually incentivize creation, or do they primarily benefit legacy rights holders and extractors of orphaned works?",
+      "resolution_mechanism": "Cross-national comparison of creation rates before/after term extensions (UK 1998, US 1998, EU 1993); correlation with measurable creative output metrics",
+      "impact": "If extensions incentivize creation: term lengths are legitimate coordination mechanism (rope). If extensions primarily benefit extractors: term extensions are pure rent-seeking (snare from creator perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether copyright term extensions incentivize creation or just extraction"
+    },
+    {
+      "id": "digital_commons_viability",
+      "question": "Can large-scale public domain digitization (Internet Archive, Google Books, Europeana) achieve discovery and usability parity with commercial platforms without institutional resources?",
+      "resolution_mechanism": "User studies comparing search success rates, metadata quality, interface usability between public archives and commercial platforms; longitudinal tracking of institutional funding sustainability for public archives",
+      "impact": "If viability achieved: scaffold perspective confirmed \u2014 open-access infrastructure can sunset copyright gatekeeping. If unachievable: legacy platforms remain necessary, constraining alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of large-scale open-access digitization infrastructure"
+    },
+    {
+      "id": "remix_culture_dependency",
+      "question": "Does contemporary creative culture actually depend on large-scale public domain access, or can creators operate within a regime of constant licensing negotiations?",
+      "resolution_mechanism": "Analysis of derivative works by public domain dependence: songs sampled from pre-1928 recordings; films using pre-1923 footage; literature explicitly built from older works",
+      "impact": "If high dependency (>30%): public domain is essential infrastructure (rope for creators). If low dependency (<10%): remix is niche practice, and constraint primarily affects archivists/educators.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which contemporary culture depends on public domain access"
+    },
+    {
+      "id": "institutional_sunset_timeline",
+      "question": "Given current trends in open-access digitization and legal harmonization (EU copyright reform), what is the realistic sunset date for copyright-based gatekeeping on expired works?",
+      "resolution_mechanism": "Policy analysis of DSM Directive implementation, Sonny Bono Act reform proposals, and institutional funding commitments for public digitization projects",
+      "impact": "If sunset < 10 years: scaffold is structural (real exit path). If sunset > 30 years: scaffold is aspirational (institutional momentum maintains current regime).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Realistic timeline for sunset of copyright gatekeeping on public domain works"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The public domain as a cultural commons exhibits a structural tension between its intended function (providing permanent access to expired creative works) and the mechanisms that suppress that access (legal uncertainty, digital rights management, organizational gatekeeping). The constraint encompasses copyright term extensions that push works further from entry to public domain, technical barriers that prevent access even to legal public domain material, and institutional arrangements that maintain extraction streams from works that should generate no exclusive revenue. The same phenomenon appears as an essential coordination mechanism enabling remix culture (rope), a temporary problem being solved by open digitization (scaffold), a degraded enforcement system maintaining theater (piton), an unavoidable side effect of property rights (mountain), or pure extraction targeting orphaned works and legacy access restrictions (snare), depending on the observer's structural position. Over the 30-year interval, extractiveness has increased as copyright term extensions (Sonny Bono Act 1998, EU harmonization 1993-2006) have pushed more works into legal ambiguity, while theater has grown as rights-management systems (DRM, TPM, licensing platforms) have proliferated despite covering material with no active creator to benefit. Simultaneously, open-access infrastructure (Internet Archive, Creative Commons, public digitization initiatives) has created genuine alternatives, making the constraint increasingly visible as institutional choice rather than natural necessity.",
+    "key_agents": [
+      "Orphaned Works: Primary victim (powerless/trapped) \u2014 legally in public domain but functionally inaccessible due to rights uncertainty",
+      "Legacy Rights Holders: Primary beneficiary and extractor (organized/constrained) \u2014 publishers, studios, estates that maintain control over copyright-expired material through licensing and legal barriers",
+      "Educators and Librarians: Secondary victim (moderate/constrained) \u2014 face licensing costs and legal uncertainty; benefit from portions of public domain but constrained by access restrictions",
+      "Remix Creators and Artists: Secondary beneficiary (institutional/arbitrage) \u2014 depend on public domain material for derivative works; experience constraint as coordination mechanism",
+      "Open Culture Coalition: Organized agents (organized/mobile) \u2014 Internet Archive, Creative Commons, public libraries building alternative access infrastructures with sunset logic",
+      "Copyright System: Institutional actor (institutional/arbitrage) \u2014 maintains rights-management apparatus on expired works where original creators receive zero benefit; piton perspective reveals degraded function",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent copyright regime as inherent to property systems"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts value through multiple mechanisms: copyright term extensions delay public domain entry (currently life+70 in many jurisdictions), licensing fees capture value from material that should be free, DRM and access controls create artificial scarcity on digital public domain works, and orphan works remain inaccessible despite legal expiration. The extraction is not total (0.70+) because the public domain itself exists, access to some material is unrestricted, and remix culture does occur at scale. The value has increased from 0.25 to 0.52 over the interval as term extensions have layered additional extraction mechanisms. Suppression (0.65): Moderate-high. Barriers include legal uncertainty about orphan works and rights clearance, technical barriers (DRM, paywalls on digitized public domain), institutional gatekeeping (Google Books settlement limiting full-text access), and coordination costs for educators to verify rights status. However, suppression is not total \u2014 some public domain material is fully accessible, open-access digitization is expanding, and legal clarity initiatives are reducing uncertainty. Theater ratio (0.58): Moderate. Rights-management systems (licensing, TPM, search barriers) perform significant theater: they suggest verification of rights status, but much of this theater applies to material with no identifiable rights holder. Traditional copyright functions (incentivizing creators, providing revenue to creators) have completely atrophied for public domain works, yet enforcement overhead persists. The theater has increased as digital systems have proliferated.",
+    "directionality_logic": "Each perspective's directionality derives from structural position relative to the extraction flow. Orphaned works and educators have high d (victims/trapped or constrained) \u2014 they bear the cost of access restrictions with minimal exit. Legacy rights holders have low d (beneficiaries/arbitrage) \u2014 they extract licensing revenue and can shift to other business models if copyright were reformed. Remix creators have very low d (beneficiaries/institutional) \u2014 public domain access directly enables their creative work. The open culture coalition has moderate d (organized agents with mobile exit) \u2014 they can build alternatives even if legacy systems persist. The copyright system itself (piton perspective) has low d as beneficiary but high theater: it maintains rights-management machinery on expired works where the beneficiary (creator) no longer exists. The analytical observer risks d \u2248 0.5 by naturalizing institutional choice as inevitability.",
+    "perspectival_gap": "The constraint demonstrates sharp perspectival divergence. Orphaned works see pure extraction (snare) \u2014 legal expiration provides no benefit, only perpetual inaccessibility. Educators see mixed extraction and access (tangled rope) \u2014 licensing costs extract value, but public domain material is cheaper than alternatives. Remix creators see coordination (rope) \u2014 public domain enables their primary workflow. Legacy rights holders organized through lobbying see opportunity (snare from their perspective \u2014 they are trapped in maintaining enforcement systems). The open culture coalition sees a solvable problem with sunset (scaffold) \u2014 digitization and legal clarity are building exits. The copyright system sees its own degradation (piton) \u2014 rights management persists on works with zero active creators. The civilizational view risks naturalizing this entire arrangement (false mountain) \u2014 confusing contingent institutional choice with inherent scarcity.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that the public domain is fundamentally a coordination mechanism (rope for creators, scaffold for institutions building alternatives) being weaponized into an extraction mechanism (snare for orphaned works, tangled rope for educators). The constraint is tangled rope because it possesses genuine coordination function (enabling remix, providing archival access, reducing transaction costs for derivative works) PLUS asymmetric extraction (copyright term extensions, licensing gatekeeping, DRM barriers targeting material that should be free). The active enforcement requirement is satisfied: copyright term extensions, DMCA takedown enforcement, and DRM systems actively suppress access to material that has legally entered the public domain. The beneficiaries are clear: remix creators, educators, and cultural institutions benefit from public domain access. The victims are equally clear: orphaned works are trapped in inaccessibility, educators face licensing costs, and legacy archivists cannot safely digitize. The theater ratio (0.58) reflects that licensing and rights-clearance systems perform significant institutional theater on material with no active rights holder. The constraint resolves to tangled rope, not pure extraction (snare) at the system level, because the public domain infrastructure itself provides real coordination value \u2014 the problem is suppression and term extension layered onto that infrastructure, not the coordination function itself. The open culture coalition's scaffold perspective is empirically structural (not aspirational) because digitization infrastructure, metadata standards, and legal clarity initiatives are demonstrably creating parallel pathways that will sunset legacy gatekeeping within 10-20 years."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "copyright_term_extension",
+      "digital_rights_management",
+      "orphan_works_access"
+    ],
+    "dual_formulation_note": "The public domain as commons is upstream of three specific extraction mechanisms: copyright term extensions (regulatory), DRM barriers (technical), and orphan works uncertainty (legal). Each downstream constraint has higher \u03b5 values (0.65-0.75) reflecting more specialized extraction mechanisms. The public domain story models the commons infrastructure itself; the downstream stories model specific institutional mechanisms that suppress it."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.35
+    }
+  ]
+}

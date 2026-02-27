@@ -1,0 +1,173 @@
+{
+  "header": {
+    "constraint_id": "ulysses_chp07",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aeolus"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "The Rhetorical Press (Aeolus)",
+    "topic_domain": "technological/social/political",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "journal_editorial_apparatus",
+      "rhetorical_gatekeepers"
+    ],
+    "victims": [
+      "commercial_advertisers",
+      "ordinary_circulation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Advertiser (Bloom)",
+      "comment": "PERSPECTIVE 1: LEOPOLD BLOOM (SNARE) \u2014 Trapped. Requires the newspaper's circulation to reach potential customers; cannot exit without losing business opportunity. Faces extraction disguised as editorial discretion and rhetorical performance. No alternative coordination mechanism exists. d\u22480.92, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Editorial Institution",
+      "comment": "PERSPECTIVE 2: FREEMAN'S JOURNAL EDITORIAL APPARATUS (ROPE) \u2014 Experiences the constraint as coordination: managing the gatekeeping function, filtering signal from noise, curating editorial voice. Benefits from advertiser dependence (leverage over content). Sees rhetorical performance as necessary coordination overhead. d\u22480.08, f(d)\u2248-0.11, \u03c3=0.9 \u2192 \u03c7\u2248-0.05. Net beneficiary through arbitrage."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Commercial Newspaper Ecosystem",
+      "comment": "PERSPECTIVE 3: COMMERCIAL NEWSPAPER ECOSYSTEM (SNARE) \u2014 Must use newspapers to reach urban middle-class customers; alternative advertising channels (posters, handbills, word-of-mouth) insufficient for scale. Constrained by newspaper monopoly over circulation access in major cities. Editorial discretion and rhetorical gatekeeping extract value. d\u22480.78, f(d)\u22481.12, \u03c3=0.9 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Print-Based Public Sphere",
+      "comment": "PERSPECTIVE 4: PRINT-BASED PUBLIC SPHERE (TANGLED ROPE) \u2014 Organized actors (readership, circulation networks, printing technology) depend on newspaper infrastructure for access to information and cultural conversation. The rhetorical filtering function serves a genuine coordination purpose (managing information overload, providing editorial curation). But extraction is embedded: editorial apparatus extracts cultural capital and political influence through gatekeeping. Mobile exit option (eventually: alternative media, oral networks, handwritten circulation) exists but requires institutional disruption. d\u22480.52, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.35."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Printing Press Apparatus",
+      "comment": "PERSPECTIVE 5: PRINTING PRESS APPARATUS (PITON) \u2014 From the civilizational view, the constraint reflects degradation of the printing press's original coordination function. Gutenberg's press was a technology that democratized access to text. By 1904, the printing press apparatus has become a gatekeeping mechanism maintained by institutional inertia (newspaper monopolies, editorial traditions, advertising dependence) rather than by genuine technological necessity. Theater ratio 0.81 reflects that much of the 'editorial curation' is performative (clanking drums, rhetorical display, office theater) rather than substantive verification or filtering. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Piton classification reflects theater gate (theater_ratio \u2265 0.70)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the newspaper serves genuine coordination functions (distributing information, creating shared epistemic commons, enabling public conversation) while simultaneously extracting rent through gatekeeping authority and rhetorical performance. The constraint is hybrid: the newspaper cannot disappear without creating information asymmetry and public fragmentation; but the extraction mechanism is unnecessary and historically contingent on institutional power consolidation. d\u22480.68, f(d)\u22481.02, \u03c3=1.2 \u2192 \u03c7\u22480.54."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rhetoric_vs_substance_boundary",
+      "question": "Where is the boundary between legitimate editorial curation (substantive filtering) and performative gatekeeping (extractive rhetoric)?",
+      "resolution_mechanism": "Analysis of advertiser outcomes: do editorial delays/rhetorical displays correlate with better-quality placements or merely with extraction of editorial flattery? Comparison of circulation impact with vs without editorial curation.",
+      "impact": "If substantive: newspaper service is genuine coordination (Rope/Tangled Rope from more perspectives). If performative: extraction mechanism is pure gatekeeping theater (Snare from advertiser perspective is confirmed).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between editorial curation and performative gatekeeping"
+    },
+    {
+      "id": "alternative_circulation_feasibility",
+      "question": "Could 1904-era commercial actors reach customers effectively through non-newspaper channels (pamphlets, direct mail, word-of-mouth networks, shop displays)?",
+      "resolution_mechanism": "Historical case studies: tracking advertising effectiveness before newspapers, in small towns without newspapers, among commercial networks using non-newspaper distribution.",
+      "impact": "If feasible alternatives exist: exit option should be 'mobile' for advertisers, not 'trapped'. Classification shifts to Tangled Rope or Rope. If newspapers are monopoly gatekeepers: 'trapped' is justified, Snare confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether non-newspaper advertising channels could substitute for newspaper circulation"
+    },
+    {
+      "id": "editorial_discretion_arbitrariness",
+      "question": "Is the newspaper's editorial discretion over advertisement placement/timing exercised according to stated editorial principles, or is it fundamentally arbitrary/extractive?",
+      "resolution_mechanism": "Historical analysis: do editorial delays correlate with newspaper financial incentives? Do advertisers with lower budgets face longer delays? Do rhetorical demands increase with advertiser's bargaining power?",
+      "impact": "If principled: gatekeeping serves filtering function (supports Rope classification). If arbitrary: pure extraction mechanism (confirms Snare from advertiser view).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether editorial discretion operates by principle or arbitrary extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.74
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Aeolus episode of James Joyce's Ulysses (Chapter 7) stages the newspaper office as a symbolic space of rhetorical production and institutional gatekeeping. Leopold Bloom enters the Freeman's Journal office seeking to renew an advertisement for Alexander Dowie's bathhouse. What should be a straightforward commercial transaction becomes entangled in the newspaper's performative apparatus: editorial vanity, rhetorical display, departmental hierarchies, and the 'clanking drums' of printing machinery. The episode juxtaposes Bloom's modest commercial purpose with the editors' grandiose political and cultural rhetoric, revealing how the newspaper institution extracts value (flattery, attention, editorial favors, delayed placement) from advertisers who have no alternative access to circulation. The constraint operates at multiple levels: the technological level (printing press monopoly on information distribution), the institutional level (newspaper gatekeeping through editorial discretion), the social level (rhetorical performance as proof of cultural legitimacy), and the political level (media control over public discourse). Bloom is trapped: he needs the newspaper's circulation to reach customers; the newspaper controls that access; the only way to secure favorable placement is to participate in the rhetorical theater\u2014to entertain the editors, to perform commercial legitimacy, to wait for editorial whim. The constraint is a snare: Bloom has no real alternative, suppression is high (no other mass circulation mechanism available), and the newspaper extracts value disguised as editorial discretion and cultural curation.",
+    "key_agents": [
+      "Leopold Bloom: Primary victim (powerless/trapped) \u2014 needs newspaper circulation; has no alternative; must participate in rhetorical performance to secure placement",
+      "Freeman's Journal Editorial Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 controls gatekeeping function; extracts flattery, editorial attention, deferred placement as leverage",
+      "Commercial Advertiser Network: Secondary victim (moderate/constrained) \u2014 dependent on newspapers for reaching middle-class customers; constrained by monopoly on urban circulation",
+      "Print-Based Public Sphere: Organized actor (organized/mobile) \u2014 benefits from coordination function of newspapers; also bears extraction cost through filtered information access",
+      "Printing Press Technology: Institutional artifact (institutional/arbitrage) \u2014 appears as constraint mechanism; actually degraded from its democratizing function to gatekeeping tool",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees hybrid coordination-extraction structure; recognizes theater ratio (0.81) indicating performative degradation"
+    ],
+    "logic_rationale": "Extractiveness (0.52): High-moderate. The newspaper extracts multiple forms of value from advertisers: payment for placement, editorial flattery (rhetorical performance as fee), delayed publication (temporal leverage), and deference to editorial authority. The extraction is not total (some advertisers do secure placement; some commercial coordination does occur), but the asymmetry is severe. Bloom enters the office with a simple transaction and leaves having surrendered considerable deference and attention to editorial vanity. Suppression (0.68): High. Advertisers cannot exit because: (1) no alternative mass circulation mechanism exists in 1904 Dublin; (2) word-of-mouth, posters, and direct communication reach insufficient scale; (3) the newspaper monopolizes urban middle-class attention. Exit is not absolutely impossible (mobile outcome exists for large commercial operations), but for small advertisers like Bloom it is effectively unavailable. Theater ratio (0.81): Very high. The episode emphasizes performative elements: the 'clanking drums' of the printing press, the editors' grandiose political rhetoric, the office's hierarchical theater, the 'clattering' of machinery. Much of what appears as editorial curation is performed for its own sake\u2014to display cultural authority, editorial sophistication, newspaper prestige. Bloom's simple advertisement is treated as occasion for rhetorical display rather than as straightforward commercial service. The theater has increased over the ten-year interval as newspaper competition has intensified and editorials have become more elaborate.",
+    "perspectival_gap": "The constraint exhibits radical perspectival divergence. From Bloom's viewpoint (powerless/trapped), it is pure extraction (Snare): he needs the newspaper and has no alternative. From the editorial institution's viewpoint (institutional/arbitrage), it appears as coordination (Rope): they are managing gatekeeping, filtering, curating editorial quality. The print-based public sphere sees a hybrid (Tangled Rope): newspapers provide genuine coordination (shared epistemic access) but the coordination is entangled with extraction (gatekeeping authority, information filtering). The printing press apparatus itself (civilizational/arbitrage) reveals degradation (Piton): the technology that democratized information access has become a gatekeeping monopoly maintained by institutional inertia and performative ritual. The analytical observer sees the full structure (Tangled Rope): the newspaper cannot disappear without creating information chaos, but the extraction mechanism is historically contingent and unnecessary. Each perspective is structurally correct from its position; the perspectival gap reveals how the same institutional apparatus produces opposite experiences for different actors.",
+    "directionality_logic": "Bloom (advertiser): Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. No exit option; complete dependence on editorial apparatus; must participate in rhetorical performance. Editorial apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary. Controls gatekeeping; leverages advertiser dependence. Commercial ecosystem: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. High extraction. Can exit through local networks or large-scale alternatives, but constrained by newspaper monopoly on urban circulation. Print-based public sphere: Organized + mobile \u2192 d\u22480.52, f(d)\u22480.68. Mixed. Has agency (alternative media, oral networks eventually emerge); benefits from coordination function; bears extraction cost through filtered access. Printing press apparatus: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification from theater gate, not high chi. Degraded from democratizing technology to gatekeeping tool. Analytical observer: Analytical \u2192 d\u22480.68, f(d)\u22481.02. Hybrid classification reflects that the newspaper simultaneously enables public sphere coordination and extracts rent through institutional authority.",
+    "mandatrophy_analysis": "RESOLUTION: The snare classification is confirmed by the victim's structural position (Bloom is trapped, faces extraction, has no alternative) and by the high suppression (0.68) and theater ratio (0.81). However, the analytical perspective reveals that the snare is historically contingent and technologically degraded, not inevitable. The printing press was designed as a democratizing technology; by 1904, institutional consolidation (newspaper monopolies, advertising dependence, editorial gatekeeping) has transformed it into an extraction mechanism. The theater ratio (0.81) indicates that much of the apparent 'editorial curation' is performative maintenance of institutional authority rather than substantive service. The constraint resolves as a snare from the advertiser's perspective (trapped, no alternative, extraction disguised as editorial discretion) but reveals itself as a degraded coordination mechanism (piton) from the civilizational view. The mandatrophy is averted by recognizing that the coordination function is real (newspapers do distribute information, enable public discourse, curate signal from noise) but the extraction mechanism is unnecessary and historically specific. A future without newspaper monopolies would maintain the information coordination function while eliminating the extraction rent. The snare classification is justified for the 1904 epistemic moment; the piton classification anticipates the degradation of the newspaper institution as alternative media emerge."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "dublin_commercial_circulation",
+      "print_media_gatekeeping"
+    ],
+    "dual_formulation_note": "The rhetorical press constraint is downstream of the printing press monopoly on mass circulation and upstream of specific Dublin commercial outcomes (Bloom's advertisement fate). The constraint family includes the technological-historical fact of print monopoly and the institutional-social fact of newspaper gatekeeping. Each has its own \u03b5 and classification; they are linked by affects_constraints."
+  },
+  "directionality_overrides": []
+}

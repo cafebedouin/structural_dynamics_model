@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "hub_short_form_tv_market_fragmentation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sfv"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Short-Form Video's Impact on Traditional TV Market Fragmentation",
+    "topic_domain": "economic/media",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "short_form_platform_operators",
+      "content_creators_short_form"
+    ],
+    "victims": [
+      "traditional_broadcast_networks",
+      "cable_providers",
+      "theatrical_distributors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Legacy Broadcast Station",
+      "comment": "PERSPECTIVE 1: LEGACY BROADCAST NETWORK (SNARE) \u2014 Trapped by regulatory constraints (broadcast licenses requiring local service), infrastructure capital investment in transmission networks, and contractual obligations to affiliates and content providers. Cannot exit the market without massive write-down. Fragmentation of audience directly reduces ad revenue and audience measurement. Zero negotiating power with short-form platforms; no viable alternative revenue model that preserves the traditional business."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Cable Provider",
+      "comment": "PERSPECTIVE 2: CABLE PROVIDER (SNARE) \u2014 Constrained by sunk infrastructure cost (fiber/coax network), regulatory franchise agreements with municipalities, and customer lock-in through bundling (broadband + video + phone). As short-form video consumption grows, bundle value erodes. Can marginally exit by deprioritizing video, but loses revenue. Cord-cutting accelerates as viewer preference shifts to streaming and short-form platforms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Media Conglomerate",
+      "comment": "PERSPECTIVE 3: MEDIA CONGLOMERATE (TANGLED ROPE) \u2014 Powerful institutional actor with diverse revenue streams (broadcast, cable, streaming services, content production). Experiences fragmentation as a genuine coordination problem: it must maintain content pipelines across multiple formats and platforms simultaneously. Also extracts through exclusive content licensing, control of IP, and strategic platform partnerships. Can exit traditional TV to focus on streaming (has mobile options), but coordination across legacy and new platforms adds complexity and cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Short-Form Platform Operator",
+      "comment": "PERSPECTIVE 4: SHORT-FORM PLATFORM OPERATOR (ROPE) \u2014 Primary beneficiary with full arbitrage exit. Controls algorithmic curation (low marginal cost of reaching new audiences), owns audience attention data, and extracts through advertising-based revenue model. Experiences fragmentation as beneficial coordination: user engagement metrics and network effects drive platform value. Can arbitrage audience attention across geographies and content types. Minimal regulatory burden and no legacy infrastructure obligations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Independent Short-Form Creator",
+      "comment": "PERSPECTIVE 5: INDEPENDENT SHORT-FORM CREATOR (ROPE) \u2014 Organized agent (creator collectives, talent agencies for influencers) with mobile exit options. Can switch between platforms (TikTok, YouTube Shorts, Instagram Reels). Experiences constraint as enabling coordination: algorithmic distribution and creator fund programs lower barriers to audience access vs traditional media gatekeeping. Benefits from fragmentation through reduced competition for visibility and direct monetization pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Broadcast Regulation and Must-Carry Rules",
+      "comment": "PERSPECTIVE 6: BROADCAST REGULATION (PITON) \u2014 Public interest media regulations (FCC must-carry rules, local news requirements, educational programming mandates) are substantially performative. These rules were designed to ensure universal access in a scarcity environment; they persist through institutional inertia despite abundance. Short-form platforms operate in lighter regulatory regimes, creating asymmetric enforcement. The regulation maintains theater (compliance documentation, local content commitments) but diminishing functional protection for broadcast public interest goals."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Advertiser",
+      "comment": "PERSPECTIVE 7: ADVERTISER (TANGLED ROPE) \u2014 Moderate institutional power with mobile exit options across platforms. Experiences both coordination benefit (fragmentation enables targeted microtargeting by algorithm) and extraction (platform algorithm opacity, opaque CPM/CPC pricing, privacy data asymmetry). Can exit to different platforms, but extraction through algorithmic control and data asymmetry remains constant. Must coordinate across multiple platforms to reach fragmented audiences."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Attentional Scarcity)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (MOUNTAIN VIEW) \u2014 From a civilizational perspective, human attention is fundamentally scarce. The rise of short-form video reflects a natural equilibrium allocation of fixed attention budget toward formats that maximize engagement per unit time. Fragmentation is not extraction but rather optimal sorting of viewers to their preferred content experiences. This perspective risks naturalizing market capture through algorithmic engagement maximization as an immutable law rather than a contingent design choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_engagement_vs_user_autonomy",
+      "question": "Is algorithmic short-form recommendation extraction (loss of user agency in content discovery) or genuine coordination (matching users to content they prefer)?",
+      "resolution_mechanism": "User autonomy studies: comparison of choice architecture between short-form algorithm and traditional TV guide/EPG; measurement of user regret (post-viewing satisfaction delta); randomized intervention to disable algorithmic ranking",
+      "impact": "If extraction dominates: short-form platforms are Snare from user perspective, not Rope. If coordination dominates: fragmentation is efficient equilibrium, not extractive capture. Changes classification for 'viewer as victim' from Snare to Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether algorithmic engagement is user preference matching or manipulative extraction"
+    },
+    {
+      "id": "public_interest_content_production",
+      "question": "Do short-form platforms produce or fund public interest content (local news, educational programming, civic information) at rates comparable to traditional broadcasters?",
+      "resolution_mechanism": "Content audit: volume and reach of public interest programming on short-form platforms vs broadcast networks; advertiser funding for news and educational content; longitudinal tracking of local journalism funding across platforms",
+      "impact": "If yes: fragmentation is neutral economic reallocation, not extraction of public goods. If no: extraction includes removal of public interest production \u2014 piton perspective on regulation strengthened, and broadcast must-carry rules become asymmetric.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Public interest content production on short-form vs traditional platforms"
+    },
+    {
+      "id": "platform_switching_friction",
+      "question": "Do creator and user switching costs between platforms represent genuine mobile exit or constrained exit in practice?",
+      "resolution_mechanism": "Cross-platform creator analysis: measuring switching rates for creators with equivalent success on multiple platforms; creator cost accounting (time to rebuild audience, algorithm learning curves); user switching frequency tracking",
+      "impact": "If high friction despite nominal mobility: exit_options should be 'constrained' not 'mobile' for creators. If low friction: arbitrage exit is real and sustained across creators. Affects directionality for creator perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Creator and user switching costs between short-form platforms"
+    },
+    {
+      "id": "geopolitical_extraction_dimension",
+      "question": "Does foreign ownership of short-form platforms (e.g., ByteDance/TikTok) constitute structural extraction of US/Western audience attention and data that should be modeled as a separate constraint?",
+      "resolution_mechanism": "Data flow analysis: where user attention metrics and engagement data are processed; national security assessments of algorithmic control points; comparison to domestic platform architecture",
+      "impact": "If yes: constraint should decompose into domestic market fragmentation (tangled rope) plus geopolitical data extraction (snare). If no: ownership structure is operationally irrelevant to market fragmentation mechanics. Changes scope from 'global' to 'national' in some perspectives.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether foreign platform ownership constitutes separate structural extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The fragmentation of traditional television by short-form video platforms represents a structural shift in how consumer attention and advertising revenue are allocated across media formats. Rather than a simple market displacement, this constraint combines genuine coordination functions (matching viewers to preferred content experiences, enabling creator access without gatekeeping) with asymmetric extraction (platform capture of attention through algorithmic engagement maximization, data asymmetry with advertisers, regulatory arbitrage). Legacy broadcast and cable networks face trapped exits due to sunk infrastructure costs and regulatory obligations, while short-form platforms enjoy low friction mobility and algorithmic scale advantages. The constraint exhibits a full spectrum of DR types depending on the agent's structural position, from pure snare (trapped networks) to rope (platform operators). Theater ratio remains low (0.35) because the fragmentation is functionally real\u2014algorithmic distribution genuinely does reach audiences more efficiently than traditional linear scheduling\u2014rather than performative. The trajectory shows extractiveness rising sharply from 2015\u20132025 as platform dominance solidifies, while theater remains stable, indicating the coordination function persists alongside increasing extraction.",
+    "key_agents": [
+      "Short-Form Platform Operators (institutional/arbitrage) \u2014 Primary beneficiaries; capture audience attention, ad revenue, and creator data; operate in lighter regulatory regimes",
+      "Traditional Broadcast Networks (powerless/trapped) \u2014 Primary victims; lose audience and revenue; sunk infrastructure and must-carry obligations prevent easy exit",
+      "Cable/ISP Providers (moderate/constrained) \u2014 Secondary victims; bundle value erodes as video consumption shifts; can exit video but lose revenue",
+      "Independent Short-Form Creators (organized/mobile) \u2014 Secondary beneficiaries; access algorithmic distribution without traditional gatekeeping; can switch platforms",
+      "Media Conglomerates (powerful/mobile) \u2014 Mixed position; must coordinate across traditional and short-form channels; can exit traditional TV but face complexity",
+      "Advertisers (moderate/mobile) \u2014 Mixed experience; gain targeting precision through algorithmic data but face opacity and extraction through CPM control",
+      "Broadcast Regulators (institutional/constrained) \u2014 Maintain must-carry and public interest rules that increasingly operate in shadow (piton); regulate traditional platforms while short-form platforms operate with lighter oversight",
+      "Viewers/Audiences (powerless/trapped) \u2014 Fragmented perspective; benefit from content choice but experience algorithmic extraction of autonomy"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint exhibits measurable extraction at multiple levels: (1) short-form platforms capture 30\u201340% of daily media attention in young demographics, directly reducing traditional TV consumption and advertising revenue; (2) algorithmic control creates attention lock-in that users cannot easily escape; (3) data asymmetry between platforms and advertisers enables extraction of CPM/CPC value. However, extractiveness is not at snare levels (\u22650.66) because coordination functions are genuine\u2014algorithmic distribution does match users to content more efficiently than linear scheduling\u2014and the extraction coexists with real consumer benefit (choice). Suppression (0.48): Moderate. Barriers exist but are not total: (1) regulatory constraints on traditional broadcasters (must-carry, licensing) but minimal constraints on platforms (regulatory arbitrage); (2) switching costs for creators are low; (3) capital barriers to entry for new platforms (moderate, not prohibitive). Suppression would be higher if platforms had genuine monopoly power, but multi-platform presence is feasible for creators and advertisers. Theater ratio (0.35): Low. The fragmentation is structurally real\u2014engagement metrics are genuinely predictive of user behavior, algorithmic ranking does alter content discovery, and ad targeting does improve advertiser ROI. Theater would be higher if platforms maintained expensive compliance rituals (like broadcast must-carry) without functional effect; instead, platform operations are lean and directly tied to engagement metrics.",
+    "directionality_logic": "Directionality (d) derives from each agent's structural position relative to attention extraction. Platform operators (institutional/arbitrage) have d \u2248 0.05\u20130.15 (full beneficiaries): they control algorithmic distribution and benefit from network effects; their exit options are arbitrage (can shift to new markets). Broadcast networks (powerless/trapped) have d \u2248 0.92 (full targets): they lose audience and revenue with no viable exit due to sunk costs. Independent creators (organized/mobile) have d \u2248 0.25\u20130.35 (slight beneficiaries): they gain distribution access but lose direct revenue control to platforms. Advertisers (moderate/mobile) have d \u2248 0.50\u20130.65 (symmetric to slight victim): they gain precision targeting but face data extraction and pricing opacity. The large perspectival gaps (platform d = 0.10 vs network d = 0.92) explain why platforms perceive Rope (coordination) while networks perceive Snare (extraction). Media conglomerates have intermediate d \u2248 0.45\u20130.55 because they can arbitrage across legacy and short-form, making the constraint a Tangled Rope from their perspective: genuine coordination burden (maintaining multiple pipelines) alongside genuine extraction (platform demand for exclusive content).",
+    "perspectival_gap": "The constraint generates maximum perspectival disagreement across structural positions. (1) Platform operators see a pure coordination gain (Rope): fragmenting audience to match content preference is efficient. (2) Broadcast networks see pure extraction (Snare): losing audience and revenue with no exit. (3) Media conglomerates see mixed coordination-extraction (Tangled Rope): must coordinate pipelines across platforms but also extract through IP licensing leverage. (4) Independent creators see coordination benefit (Rope): algorithmic distribution bypasses traditional gatekeeping. (5) Broadcast regulators see their own rules becoming degraded (Piton): must-carry and public interest mandates maintain ceremonial weight while platforms operate in lighter regimes. (6) Analytical observer risks naturalizing fragmentation as efficient sorting (Mountain): attentional equilibrium rather than extraction\u2014but this perspectival choice obscures the role of algorithmic engagement maximization in driving that equilibrium. The perspectival gaps reveal that 'fragmentation' is not an objective phenomenon but rather the aggregate effect of asymmetric structural positions. Networks experience extraction because they cannot exit; platforms don't experience extraction because they control exit options.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that classification varies coherently with agent structural position rather than collapsing into incoherence. The platform operator genuinely experiences Rope (low-friction coordination of creator distribution). The broadcast network genuinely experiences Snare (high-friction exit from legacy business). Both descriptions are structurally sound given their different exit options and beneficiary/victim status. The mandatrophy is NOT 'which classification is correct?' but 'what are the internal contradictions within each perspective?' Within the platform operator's Rope classification, there are no internal contradictions\u2014low extraction (coordination), low suppression (multiple platforms available for creators), low theater (engagement metrics drive design). Within the broadcast network's Snare classification, there are no internal contradictions\u2014high extraction (audience loss), high suppression (trapped by infrastructure and regulatory obligations), moderate theater (broadcasting ritual persists but is increasingly ineffectual). The perspectival gap is not a sign of failure but rather evidence that the constraint's structure is being correctly modeled. The analytical observer's Mountain perspective (attentional scarcity as natural law) IS internally contradictory: if fragmentation is just optimal equilibrium, why has theater_ratio remained stable at 0.35 rather than converging to 0 (pure coordination)? The stability of theater suggests hidden extraction mechanisms\u2014platform engagement optimization and attention lock-in\u2014that prevent the system from reaching true equilibrium. This contradiction surfaces the false summit: the constraint is not a natural law but a contingent institutional arrangement."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "broadcast_must_carry_regulatory_arbitrage",
+      "advertising_market_concentration",
+      "creator_economic_dependency"
+    ],
+    "dual_formulation_note": "This constraint should be decomposed into three structurally distinct claims: (1) market segmentation by format (short-form vs long-form consumption preferences)\u2014low extractiveness, pure coordination; (2) algorithmic attention capture and lock-in\u2014moderate-to-high extractiveness, platform extraction; (3) regulatory asymmetry (light regulation of platforms vs heavy regulation of broadcasters)\u2014separate snare story for broadcasters. The 0.52 extractiveness value reflects aggregation across these mechanisms. For fine-grained policy analysis, decompose into network-linked stories by mechanism."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

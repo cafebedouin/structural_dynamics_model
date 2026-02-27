@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "ice_safe_departure",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "ICE Safe Departure Program",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ice",
+      "federal_courts"
+    ],
+    "victims": [
+      "departing_immigrants",
+      "immigrant_families"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Departing Immigrants",
+      "comment": "Immigrants with deportation orders have limited options and face significant disruption."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Immigrant Families",
+      "comment": "Families may be separated and face emotional and financial hardship. Exit options are constrained but not non-existent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "ICE",
+      "comment": "ICE benefits from streamlined departures, reduced administrative burden, and possibly improved public image. Arbitrage in the sense they can choose whom to target."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Courts",
+      "comment": "Federal Courts see reduced case loads, freeing up judicial resources."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a broad perspective, the program presents a mixed picture of managed departures and potential human rights concerns."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "program_effectiveness",
+      "question": "How effectively does the program achieve its stated goals?",
+      "resolution_mechanism": "Statistical analysis of program outcomes compared to traditional deportation methods.",
+      "impact": "If effective, may shift classification towards a more favorable assessment. If ineffective, extraction may be viewed as pure snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessment of program's operational efficiency."
+    },
+    {
+      "id": "human_rights_impact",
+      "question": "What are the long-term human rights implications of the program?",
+      "resolution_mechanism": "Longitudinal studies of departing immigrants and their families.",
+      "impact": "Understanding of the true impact on the immigrants and families. Determines whether to maintain tangled rope classification or pure snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Evaluation of the social impacts on human rights."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The ICE Safe Departure Program was an initiative designed to allow certain immigrants with final deportation orders to leave the United States in a managed manner. This program presents a complex constraint with both coordination and extraction aspects. ICE and federal courts benefit from the program through streamlined processes, while departing immigrants and their families face potential disruption and hardship. The program's effectiveness and human rights implications are key uncertainties.",
+    "key_agents": [
+      "Departing Immigrants: Primary targets (powerless/trapped) - experience significant disruption and limited options.",
+      "Immigrant Families: Secondary targets (moderate/constrained) - face potential separation and hardship.",
+      "ICE: Primary beneficiary (institutional/arbitrage) - benefits from streamlined departures and reduced burden.",
+      "Federal Courts: Secondary beneficiary (institutional/arbitrage) - benefits from reduced caseload."
+    ],
+    "logic_rationale": "The extractiveness score (0.55) reflects the program's impact on departing immigrants, who face significant disruption. The suppression score (0.65) reflects the limited options available to immigrants with deportation orders. The theater ratio (0.40) reflects the program's mixed emphasis on procedural efficiency and genuine support for departing immigrants. The program qualifies as a Tangled Rope because it includes both a coordination function (managed departures) and asymmetric extraction (disruption to immigrants).",
+    "perspectival_gap": "The perspectives reveal a significant gap between the institutional benefits (ICE and Federal Courts) and the individual costs (Departing Immigrants and Families). ICE sees it as Rope; analytical sees as Tangled Rope; targets see as Snare. This conflict is at the heart of the ethical debate surrounding immigration enforcement policies.",
+    "directionality_logic": "ICE and Federal Courts are beneficiaries with high exit options and receive low values. Departing immigrants and families are the victims with lower exit options and receive higher directionality values."
+  },
+  "network": {
+    "affects_constraints": [
+      "immigration_enforcement_policy"
+    ]
+  },
+  "directionality_overrides": []
+}

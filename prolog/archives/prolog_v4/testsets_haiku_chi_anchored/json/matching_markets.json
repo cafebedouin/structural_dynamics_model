@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "matching_markets",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mmce"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Matching Market Congestion Externality",
+    "topic_domain": "economic/market_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operator",
+      "early_adopters"
+    ],
+    "victims": [
+      "late_entrants",
+      "marginal_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Late Entrant",
+      "comment": "PERSPECTIVE 1: LATE ENTRANT (SNARE) \u2014 New participants entering a congested market face degraded matching probability with no ability to improve their position through individual action. Exit is costly (sunk search investment, reputation capital). Market congestion is a trap they cannot escape; they bear the full externality cost. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Marginal Participant",
+      "comment": "PERSPECTIVE 2: MARGINAL PARTICIPANT (TANGLED ROPE) \u2014 Benefits from the coordination service (matching mechanism reduces search costs vs alternatives) but also bears congestion costs that reduce matching quality. Exit is costly but possible (switch to alternative platforms or markets). The constraint both enables and extracts. d\u22480.68, f(d)\u22481.06, \u03c3=0.9 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Benefits from growth in participant count, which increases network effects and platform value. Experiences the congestion constraint as a coordination problem to solve: matching algorithms, queue management, and surge pricing all serve to allocate scarce matching capacity. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Net beneficiary through monopoly-like positioning."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Early Adopters",
+      "comment": "PERSPECTIVE 4: EARLY ADOPTERS (ROPE) \u2014 Benefit from first-mover advantage: access the best matches before congestion degrades quality; build reputation and social capital early. For them, the constraint functions purely as coordination (the matching mechanism itself). They exit into arbitrage opportunities as congestion rises (switching to new platforms or markets). d\u22480.12, f(d)\u2248-0.05, \u03c3=1.2 \u2192 \u03c7\u2248-0.02."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Competing Platform Coalition",
+      "comment": "PERSPECTIVE 5: COMPETING PLATFORM COALITION (TANGLED ROPE) \u2014 Organized competitors (DoorDash vs Uber Eats, eHarmony vs Match, LinkedIn vs alternative hiring platforms) see congestion as both a coordination failure they can exploit (better algorithms, lower congestion) and an extraction mechanism imposed by incumbent's network lock-in. They have agency (can build alternatives) but face switching costs and network effects. d\u22480.50, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.28."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 6: REGULATORY AUTHORITY (PITON) \u2014 Platforms claim to self-regulate congestion through algorithmic matching and pricing mechanisms, but regulatory scrutiny reveals this is substantially performative: actual congestion metrics are opaque, algorithms are proprietary, and the extraction via degraded match quality is systemic. Theater ratio (0.35) is moderate\u2014some genuine algorithmic improvement occurs, but capacity constraints are real and deliberately maintained to maximize platform value. Regulatory mechanisms (disclosure requirements, fair matching audits) persist without strongly constraining the underlying extraction. d\u22480.42, f(d)\u22480.42, \u03c3=1.1 \u2192 \u03c7\u22480.16."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a game-theoretic perspective, matching market congestion externality is an inherent feature of any market where participants are heterogeneous and matching capacity is finite. This appears as a natural law: no matching mechanism can avoid the tragedy of the commons when uncongested entry is incentivized. However, the structural data (\u03b5=0.38, suppression=0.42, theater=0.35) contradicts mountain classification\u2014this is a contingent institutional fact (platform design choices, capacity allocation, pricing mechanisms) masquerading as a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "algorithmic_opacity_vs_structural_inevitability",
+      "question": "Is congestion externality a structural inevitability of matching markets or a contingent outcome of opaque algorithmic allocation and deliberately limited capacity?",
+      "resolution_mechanism": "Comparison of congestion levels across platforms with different algorithmic transparency and capacity policies; A/B testing with full-capacity matching vs congestion-inducing algorithms on same platform",
+      "impact": "If structural inevitability: mountain classification is correct (but unlikely). If contingent: constraint is tangled_rope at best, and regulatory intervention (platform transparency mandates, capacity sharing requirements) could shift it toward rope or even scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether congestion is inherent or contingent on platform design choices"
+    },
+    {
+      "id": "competing_platform_viability",
+      "question": "Can competing platforms with better congestion management actually overcome network effects and incumbency advantages, or are they permanently trapped by latecomers' disadvantage?",
+      "resolution_mechanism": "Historical case studies of platform transitions (e.g., Uber to competitors, Facebook to alternatives); measurement of congestion differential required to trigger switching; analysis of network effects magnitude",
+      "impact": "If viability high: competing platforms provide real exit option \u2192 classify as constrained (not trapped) for many participants. If viability low: late entrants are truly trapped \u2192 snare classification is robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether competing platforms provide viable exit from incumbent congestion"
+    },
+    {
+      "id": "dynamic_matching_price_efficiency",
+      "question": "Do surge pricing and algorithmic matching allocation mechanisms actually achieve efficient congestion management or primarily extract rent from desperate participants?",
+      "resolution_mechanism": "Empirical comparison of matching quality under dynamic pricing vs fixed pricing; measurement of participant surplus before/after price spikes; analysis of whether price increases correlate with match quality improvements or just revenue extraction",
+      "impact": "If efficient: platform's rope perspective (coordination) is accurate. If primarily extractive: constraint is snare for price-sensitive late entrants and tangled rope for others.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dynamic pricing achieves efficiency or extracts rent"
+    },
+    {
+      "id": "sunk_investment_lock_in",
+      "question": "How much of late entrants' inability to exit is due to sunk reputation/search investment vs actual capacity constraints?",
+      "resolution_mechanism": "Measurement of average sunk investment per participant cohort; tracking of participant lifetime value and switching costs; comparison of switching rates to new platforms when alternatives emerge",
+      "impact": "If lock-in is primarily sunk investment: suppression rating should be higher (~0.60+). If primarily capacity constraints: suppression is accurate (~0.42).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of lock-in from sunk reputation investment vs capacity constraints"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Matching markets (ride-sharing, online dating, job boards, meal delivery) solve a real coordination problem: finding compatible pairs among millions of participants is computationally hard and informationally complex. The platform provides genuine value by reducing search costs. However, as participation grows, the matching probability per participant declines\u2014a negative externality borne unequally by late entrants and marginal participants. The platform operator benefits from increased network size and can monetize congestion through surge pricing and premium matching algorithms. Early adopters captured high-quality matches before congestion. Late entrants face degraded matching probability with limited ability to improve their position. This creates a tangled constraint: the matching mechanism itself is valuable coordination, but platform design choices (capacity allocation, pricing, algorithmic opacity) layer extraction on top. The constraint exhibits different faces from different positions: coordination mechanism (rope) from the beneficiary's view, mixed coordination and extraction (tangled rope) from the moderate participant's view, pure extraction (snare) from the trapped late entrant's view, and a performative regulatory theater (piton) from the regulator's view.",
+    "key_agents": [
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 benefits from scale, network effects, and ability to monetize congestion through pricing and data capture",
+      "Early Adopters: Secondary beneficiary (institutional/arbitrage) \u2014 captured high-quality matches before market congestion; built reputation and social capital during low-congestion period",
+      "Late Entrants: Primary victim (powerless/trapped) \u2014 face severe congestion externality with no ability to improve through individual action; sunk search investment creates lock-in",
+      "Marginal Participants: Secondary victim (moderate/constrained) \u2014 benefit from coordination mechanism but face meaningful congestion costs; can exit but at significant cost",
+      "Competing Platforms: Organized agents (organized/constrained) \u2014 see congestion as both an opportunity (build better algorithm) and a trap (network lock-in prevents switching)",
+      "Regulatory Authority: Institutional actor (institutional/constrained) \u2014 attempts to regulate through transparency and fairness mandates but encounters algorithmic opacity and platform power",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent platform design choices as inherent features of matching mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The base extraction reflects that platform operators deliberately maintain congestion to maximize value and pricing power. Early entrants and the platform benefit substantially, while late entrants bear costs. However, the extraction is not maximal (\u03b5 < 0.46) because the coordination function is genuine\u2014the platform does solve a real matching problem that would be much harder to solve through decentralized alternatives. The 0.38 value represents a meaningful but not dominant extraction component overlaid on legitimate coordination. Suppression (0.42): Moderate. Late entrants face real barriers: network effects lock in the incumbent platform, sunk reputation and search investment make switching costly, algorithmic opacity prevents informed assessment of match quality degradation, and capacity constraints are structured into platform design. However, suppression is not total (< 0.60) because competing platforms do exist and can provide alternatives, even if constrained by network effects. Participants can exit, but at significant cost. Theater ratio (0.35): Low-moderate. The platform's algorithmic matching mechanisms are substantively real (they do solve matching problems) but are overlaid with performative elements: claimed efficiency often masks capacity constraints that are deliberately maintained, surge pricing claims to optimize congestion but also extracts rent, and algorithmic fairness claims encounter opacity. The theater has increased slightly over the interval as algorithmic complexity has increased without corresponding transparency.",
+    "perspectival_gap": "This constraint demonstrates significant perspectival divergence driven by temporal position (early vs late adoption) and structural role (operator vs participant). Early adopters see pure coordination (rope) because they entered before congestion degraded quality. The platform operator sees coordination with opportunity to monetize (rope/institutional arbitrage position). Late entrants see pure extraction (snare/powerless trap). Marginal participants see mixed coordination and extraction (tangled rope/moderate constrained). Competing platforms see a mixed constraint: they recognize the coordination function but experience it as an extraction mechanism imposed by network lock-in (tangled rope/organized). The regulatory authority sees performative management (piton) \u2014 platforms claim to self-regulate through algorithms and pricing, but actual congestion metrics and matching quality remain opaque. The analytical observer risks seeing an immutable natural law (mountain) \u2014 matching markets must have congestion \u2014 but the structural data reveals this as contingent on platform design choices.",
+    "directionality_logic": "Platform operator: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Early adopters: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.05. Net beneficiary. Late entrants: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction \u2014 cannot exit without severe cost. Marginal participants: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.06. Significant extraction but not maximal. Competing platforms: Victim (of network lock-in) + constrained \u2192 d\u22480.50, f(d)\u22480.65. Moderate-high extraction; they have agency (can build alternatives) but face switching costs. Regulatory authority: Constrained institutional position \u2192 d\u22480.42, f(d)\u22480.42. Low-moderate effective extraction through regulatory mechanisms. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival (observer naturalizes constraint); the engine's false summit detector will flag this.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by distinguishing between the genuine coordination function (matching mechanism) and the contingent extraction mechanism (congestion-induced degradation of match quality for late entrants). The platform's rope perspective is NOT false\u2014there is genuine coordination value. The late entrant's snare perspective is NOT false\u2014they genuinely experience extraction without exit. The resolution is that both are accurate readings of a tangled rope structure: coordination (rope gate: matching mechanism solves real problem) PLUS asymmetric extraction (snare gate: beneficiaries capture early-adopter advantage, late entrants bear congestion cost). The tangled rope classification is correct because: (1) there is a genuine coordination function (the matching algorithm reduces search costs compared to alternatives), (2) there is asymmetric extraction (platform and early adopters benefit disproportionately from growth-driven congestion), and (3) the constraint requires active enforcement (platform's capacity allocation, pricing, and algorithmic decisions maintain the extraction). The mandatrophy is NOT resolved by claiming the constraint is 'really' a rope with no extraction, nor by claiming it is 'really' a snare with no coordination. Both components are structurally necessary. The analytical observer's mountain view (congestion is inherent to matching markets) is a FALSE SUMMIT because: (a) competing platforms with different congestion management strategies exist, (b) regulatory interventions (capacity sharing, pricing caps, transparency mandates) demonstrably reduce congestion, and (c) the \u03b5=0.38 is contingent on platform design choices, not fixed by mathematical necessity."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "ride_sharing_surge_pricing",
+      "job_market_signaling_cascade",
+      "online_dating_user_fatigue"
+    ],
+    "dual_formulation_note": "The matching market congestion externality is upstream of domain-specific constraints (ride-sharing surge pricing, job market signaling cascades). Each domain instantiates the general congestion mechanism with different structural parameters. \u03b5=0.38 for the abstract mechanism may vary across domains (ride-sharing may be \u03b5\u22480.42 due to time-sensitive matching; job markets may be \u03b5\u22480.35 due to lower switching costs), but the core tangled rope structure persists."
+  },
+  "directionality_overrides": []
+}

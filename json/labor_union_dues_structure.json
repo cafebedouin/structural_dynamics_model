@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "labor_union_dues_structure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "labor_union"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandatory Union Dues-for-Grievance Mechanism",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "union_leadership",
+      "protected_workers"
+    ],
+    "victims": [
+      "free_riders",
+      "non_union_competitors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dues-Paying Worker Without Grievance",
+      "comment": "PERSPECTIVE 1: DUES-PAYING WORKER WITHOUT GRIEVANCE (SNARE) \u2014 Worker with few transferable skills, bound to union shop by need for employment. Pays dues regularly but has no access to grievance mechanism without union authorization. Cannot exit without losing job; cannot modify terms. Extraction is coercive and lacks coordination benefit for this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Worker With Grievance",
+      "comment": "PERSPECTIVE 2: WORKER WITH GRIEVANCE (TANGLED ROPE) \u2014 Worker who benefits from grievance mechanism (real protection against termination, wage theft, unsafe conditions). Pays dues and receives service. Constrained exit: can move to non-union shop but sacrifices protection. Mixed experience: significant benefit but also structural dependency on union leadership."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Union Leadership",
+      "comment": "PERSPECTIVE 3: UNION LEADERSHIP (ROPE) \u2014 Primary beneficiary. Collects dues, allocates resources, controls grievance process. Mobile exit (can restructure union, change dues formulas). Sees constraint as pure coordination mechanism: dues enable collective bargaining, strike funds, legal defense. Net positive experience; extraction flows toward this agent."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Non-Union Competitor",
+      "comment": "PERSPECTIVE 4: NON-UNION COMPETITOR (SNARE) \u2014 Small non-union firm in union-dominated industry. Trapped by market structure: union firms set wages/conditions, non-union firms cannot undercut labor costs without triggering strikes or boycotts. Experiences union dues structure as extraction mechanism that inflates competitor wages, raising market floor. No genuine exit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Global Workforce Coordinator",
+      "comment": "PERSPECTIVE 5: GLOBAL WORKFORCE COORDINATOR / MULTINATIONAL EMPLOYER (SCAFFOLD) \u2014 Large firm with leverage to negotiate union contracts. Sees mandatory dues as temporary coordination mechanism with sunset logic: as offshoring and automation mature, union bargaining power declines. Can exit by relocating production. Experiences extraction as constrained and declining; sees sunset as built-in as union density falls."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Collective Action Problem View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, mandatory dues solve an immutable collective action problem: individual workers cannot negotiate with large employers without coordination; free-riding destroys the collective. The dues mechanism is viewed as inevitable to overcoming rational defection. However, this perspective risks naturalizing a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "grievance_mechanism_necessity",
+      "question": "Would the grievance mechanism function with voluntary dues (opt-in contributions)?",
+      "resolution_mechanism": "Comparative analysis of voluntary union systems (Germany co-determination boards, Sweden union presence in firms), empirical measurement of participation rates and enforcement efficacy",
+      "impact": "If voluntary system works: mandatory dues are extraction, not coordination. If voluntary fails: dues are necessary coordination mechanism (Rope from all perspectives). If partial success: Tangled Rope classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether grievance mechanism requires mandatory funding"
+    },
+    {
+      "id": "dues_allocation_opacity",
+      "question": "How much of collected dues goes to grievance/legal services vs administrative overhead, political contributions, and leadership salaries?",
+      "resolution_mechanism": "Financial audit of union accounting; comparison of grievance handling costs to dues collected; longitudinal tracking of allocation ratios",
+      "impact": "If grievance services consume >70% of dues: Rope classification justified. If <40%: Snare classification from worker perspective justified. If 40-70%: Tangled Rope classification supported.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Transparency of dues allocation"
+    },
+    {
+      "id": "free_rider_capacity",
+      "question": "What percentage of union benefits (workplace safety standards, wage floors, grievance precedent) accrue to non-paying workers in non-union shops?",
+      "resolution_mechanism": "Comparative wage analysis between union and non-union shops in same industry; measurement of safety standard adoption rates; survey of non-union workers' awareness of union-established norms",
+      "impact": "If high free-riding (>40%): justifies suppression gate and mandatory dues. If low (<20%): benefits are excludable and voluntary system becomes feasible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Scale of free-rider problem"
+    },
+    {
+      "id": "worker_exit_feasibility",
+      "question": "In tight labor markets, can workers realistically switch to non-union employment or negotiate individual exit from union shop membership?",
+      "resolution_mechanism": "Labor market transition data; measurement of wage penalty for union-to-non-union switches; policy variation experiments (right-to-work vs union security laws)",
+      "impact": "If exit is realistic (low wage penalty): exit_options upgrade to 'mobile' and snare classification becomes less defensible. If exit is costly (>15% wage penalty): trapped classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of worker exit from union dues"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The mandatory union dues structure creates a structural tension between legitimate collective protection (grievance handling, legal defense, wage negotiation) and extractive enforcement mechanisms that trap workers without exit options. The constraint exhibits markedly different classifications across perspectives depending on the agent's structural position. A worker with an active grievance perceives genuine coordination and protection (Tangled Rope); a worker paying dues who never needs grievance services perceives pure extraction (Snare); union leadership perceives coordination that enables their bargaining power (Rope); multinational employers perceive a declining extraction mechanism as automation reduces union power (Scaffold); and analytical observers risk naturalizing mandatory dues as an immutable solution to collective action (Mountain). The theater_ratio (0.48) reflects moderate performative content: grievance handling includes genuine dispute resolution, but union dues collection is partly ritualistic (seniority-based allocation, bureaucratic grievance denial, enforcement against whistleblowers). Extractiveness (0.52) reflects moderate asymmetry: dues provide real benefits (job protection, wage floors) but also fund union apparatus that resists internal reform and may extract rents through corruption or misaligned incentives.",
+    "key_agents": [
+      "Union Leadership: Primary beneficiary (organized/mobile) \u2014 controls dues collection, allocates grievance resources, captures surplus through administrative apparatus",
+      "Worker With Grievance: Secondary beneficiary (moderate/constrained) \u2014 receives real protection from employment coercion; benefits from collective bargaining power",
+      "Dues-Paying Worker Without Grievance: Primary victim (powerless/trapped) \u2014 pays mandatory dues without accessing grievance mechanism; cannot exit without employment loss",
+      "Non-Union Competitor: Secondary victim (powerless/trapped) \u2014 experiences union wage floors as extracted externality; trapped by market structure",
+      "Multinational Employer: Powerful actor (powerful/mobile) \u2014 perceives union dues as declining constraint as offshoring/automation reduce union leverage; can exit through relocation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing mandatory dues as inevitable to solve free-rider problem"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting the dual nature of the constraint. Base extraction is the mandatory nature of dues collection \u2014 workers cannot opt out without losing employment. However, extraction is not maximal because a significant fraction of dues genuinely funds grievance mechanisms that protect workers from termination and wage theft. The extractiveness has increased over the interval (from 0.35 to 0.52) as union administrations have grown relative to grievance-handling capacity, and as union leadership has used dues collection to fund political activities diverging from worker interests. Suppression (0.65): Moderate-high. Workers face significant barriers to exit: employment termination for union non-membership in union security agreements, inability to work in unionized shops without paying dues, and social pressure within shop floors. Suppression is not total because some workers can exit to non-union shops (though often at wage penalty), and some jurisdictions (right-to-work states) have reduced suppression. Theater ratio (0.48): Moderate. Genuine grievance handling occurs, but union bureaucracy introduces performative elements: grievance denial based on seniority rather than merit, dues collection rituals that feel disconnected from direct benefit, and union elections/governance structures that serve administrative visibility rather than worker agency.",
+    "perspectival_gap": "The perspectival gap is maximal here. Union leadership sees a pure coordination mechanism (Rope) \u2014 dues enable collective bargaining and legal defense. A worker receiving grievance services sees a mixed mechanism (Tangled Rope) \u2014 real protection but also structured dependency on union apparatus that controls access. A worker paying dues without ever needing grievance services sees pure extraction (Snare) \u2014 coercive payment for a service they do not use, with no alternative. A non-union competitor sees an externality-imposing constraint (Snare) \u2014 union-set wages and benefits inflate market floor, trapping non-union firms. A multinational can see the constraint as temporary (Scaffold) \u2014 union density is declining, automation is rising, so the extraction mechanism has a built-in sunset. The analytical observer risks seeing natural law (Mountain) \u2014 free-riding would destroy any voluntary system \u2014 but this naturalization conceals that many systems operate with voluntary or opt-in participation (Germany, Sweden), suggesting the mountain classification is a false summit.",
+    "directionality_logic": "Directionality derives from each agent's structural position. Union leadership: beneficiary with mobile exit \u2192 d \u2248 0.10 \u2192 low/negative f(d) \u2192 they experience low extraction. Dues-paying worker without grievance: victim with trapped exit \u2192 d \u2248 0.92 \u2192 high f(d) \u2192 they experience high extraction. Worker with grievance: beneficiary AND victim with constrained exit \u2192 d \u2248 0.55 \u2192 moderate f(d) \u2192 they experience moderate extraction. Non-union competitor: victim with trapped exit (cannot escape market structure) \u2192 d \u2248 0.88 \u2192 high f(d) \u2192 high extraction. Multinational employer: powerful with mobile exit (can offshore) \u2192 d \u2248 0.45 \u2192 moderate f(d) \u2192 they experience moderate/declining extraction. These directionality values explain why the same base properties (\u03b5=0.52, suppression=0.65) produce different classification types from different perspectives: the engine's sigmoid f(d) transforms beneficiary/victim relationships and exit options into differential experienced extractiveness, which then determines classification.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that mandatory dues solve a real collective action problem (free-rider defection) but also enable rent extraction by union leadership. The classification as Tangled Rope reflects this hybrid: genuine coordination (grievance handling, strike funds, legal defense) AND asymmetric extraction (dues collection that funds administrative apparatus, political spending, and bureaucratic gatekeeping of grievance access). The false summit (mountain perspective) naturalizes mandatory dues as inevitable to solving free-rider problems, but empirical comparison with voluntary/opt-in systems (Germany, Sweden) shows that the free-rider problem is not immutable \u2014 it is contingent on system design. The Scaffold perspective (multinational employer) shows that the constraint has built-in sunset logic as union density declines and automation reduces bargaining leverage. The Snare perspective (trapped worker) shows that the extractive component is severe for those who pay dues without benefiting from grievance services. The resolution: the constraint is genuinely Tangled Rope at the analytical level, with legitimate coordination function and asymmetric extraction both present. No single perspective 'wins' \u2014 the heterogeneity of experiences is structural to the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "right_to_work_state_dynamics",
+      "union_density_decline",
+      "workplace_safety_standards"
+    ],
+    "dual_formulation_note": "The mandatory dues structure can be decomposed into two related constraints: (1) the collective action problem of funding grievance mechanisms (Rope/coordination) and (2) the extraction of surplus through union apparatus (Snare/extraction). These are linked: the coordination function justifies mandatory dues, but the extraction emerges from how leadership allocates those dues. Both perspectives are necessary to capture the full structural picture."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "misunderstanding_as_mismatch",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mism"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Social Pressure for Worldview Assimilation",
+    "topic_domain": "social/psychological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dominant_worldview_coalition",
+      "social_coherence_maintainers"
+    ],
+    "victims": [
+      "alternative_viewpoint_holders",
+      "cognitive_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Dissenting Individual",
+      "comment": "PERSPECTIVE 1: DISSENTING INDIVIDUAL (SNARE) \u2014 Trapped within immediate social network (family, workplace, community). Cannot exit without severe social cost (isolation, reputation damage, economic harm). Bears full extraction: cognitive suppression, emotional labor of code-switching, systematic dismissal of alternative views. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.57."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Cautious Minority",
+      "comment": "PERSPECTIVE 2: CAUTIOUS MINORITY (TANGLED ROPE) \u2014 Constrained by social fear but mobile enough to seek alternative communities (religious minorities, political dissidents, cultural immigrants). Experiences both extraction (pressure to conform in dominant spaces) and coordination benefit (community verification through consensus checking, mutual support for maintaining alternative worldview). d\u22480.65, f(d)\u22480.95, \u03c3=0.9 \u2192 \u03c7\u22480.49."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Dominant Coalition",
+      "comment": "PERSPECTIVE 3: DOMINANT COALITION (ROPE) \u2014 Institutional actors (media, academia, political parties, corporations) that benefit from worldview alignment. Experience the constraint as pure coordination: assimilation mechanisms maintain epistemic coherence and operational efficiency. Arbitrage exit: can freely express dominant view without cost. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiary; negative extraction indicates subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Counter-Culture Organization",
+      "comment": "PERSPECTIVE 4: COUNTER-CULTURE ORGANIZATION (TANGLED ROPE) \u2014 Organized groups explicitly rejecting assimilation pressure (social movements, alternative communities, intellectual subcultures). Mobile enough to build parallel institutions but still subject to extraction from dominant society (material deprivation, institutional barriers, delegitimization). Also provide coordination within their own epistemic framework. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Performative Inclusion Ritual",
+      "comment": "PERSPECTIVE 5: PERFORMATIVE INCLUSION RITUAL (PITON) \u2014 Institutional diversity/inclusion programs that claim to celebrate worldview diversity while maintaining assimilatory pressure. Theater ratio (0.55) reflects that inclusion rhetoric persists despite minimal structural change: 'welcoming alternative views' remains performative as long as social costs for dissent remain high and dominant frameworks are unexamined. The mechanism has degraded from genuine pluralism (if it ever existed) to theatrical tolerance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, social pressure toward cognitive alignment may appear inherent to human group cognition: all coherent communities require some shared framework, and deviation imposes coordination costs. This perspective risks treating contingent institutional assimilation as an immutable feature of social existence. However, \u03b5=0.52, suppression=0.68, theater=0.55 contradict mountain gates; this is a false summit revealing that extractive assimilation is institutionally contingent, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "distinction_between_coordination_and_extraction",
+      "question": "How much of assimilation pressure is necessary for legitimate group coordination versus unnecessary extraction of cognitive conformity?",
+      "resolution_mechanism": "Comparative analysis: societies/groups with high coordination benefits and low assimilation cost vs. those with high cost and low coordination benefits. Measurement of epistemic function with and without conformity pressure.",
+      "impact": "If most coordination requires minimal conformity: assimilation is largely extractive (snare dominant). If coordination requires strong alignment: assimilation is legitimate overhead (rope dominant, piton as degradation).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether assimilation is necessary for coordination or unnecessary extraction"
+    },
+    {
+      "id": "exit_option_availability_variance",
+      "question": "What fraction of populations in a given institutional context actually have mobile or arbitrage exit options versus trapped or constrained options?",
+      "resolution_mechanism": "Demographic analysis: migration capacity, alternative community availability, economic independence by socioeconomic status, geographic location. Measurement of actual exit costs versus perceived exit costs.",
+      "impact": "If most are trapped (>70%): constraint is primarily snare (extraction from majority). If most are constrained (50-70%): tangled rope dominant. If most are mobile/arbitrage (>50%): rope or scaffold classifications increase.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of exit options across population"
+    },
+    {
+      "id": "alternative_worldview_sustainability",
+      "question": "Can alternative worldviews sustain themselves without constant defense against assimilation pressure, or does assimilation resistance itself become extractive (blocking internal evolution)?",
+      "resolution_mechanism": "Historical case studies: long-term stability of counter-cultural communities, measurement of ideological flexibility within alternatives vs. rigidity driven by external pressure, analysis of internal diversity in communities under siege.",
+      "impact": "If alternatives require constant defensive extraction: counter-pressure becomes a secondary snare (victims are members of alternative groups). If alternatives can evolve sustainably: scaffold sunset is real (assimilation pressure is temporary institutional imbalance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative worldviews require perpetual assimilation resistance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Social pressure for worldview assimilation is the structural constraint that generates misunderstanding as a default outcome in cognitively heterogeneous groups. When individuals hold incompatible interpretive frameworks and face costs for expressing them, they develop alternative public and private vocabularies. This code-switching creates systematic misalignment between expressed and held beliefs, making genuine communication impossible. The constraint is not the existence of diverse worldviews \u2014 diversity per se is not extractive. Rather, the constraint is the institutional enforcement mechanism that penalizes deviation from dominant cognitive frameworks through social sanction, professional exclusion, reputational damage, and economic pressure. Over the measurement interval (100-year timescale), assimilation pressure has intensified as institutional reach has expanded (corporate monoculture, algorithmic amplification of consensus, globalization of Western epistemic standards) while performative inclusion rituals have proliferated to mask the underlying extraction. This creates the theatrical gap: institutions claim to welcome diverse worldviews while maintaining severe penalties for actual cognitive deviance.",
+    "key_agents": [
+      "Dissenting Individual: Primary victim (powerless/trapped) \u2014 bears full cost of maintaining cognitive integrity; cannot exit without severe social harm",
+      "Cautious Minority: Secondary victim (moderate/constrained) \u2014 experience mixed coordination and extraction; can build alternative communities but at resource/status cost",
+      "Dominant Coalition: Primary beneficiary (institutional/arbitrage) \u2014 benefits from worldview alignment; maintains extraction mechanism through institutional channels",
+      "Counter-Culture Organization: Secondary beneficiary and victim (moderate/mobile) \u2014 benefit from coordination within alternative frameworks but face extraction from dominant society",
+      "Performative Inclusion Ritual: Institutional actor (institutional/arbitrage) \u2014 perpetuates illusion of cognitive freedom while maintaining assimilation pressure; piton from self-perception",
+      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 risks naturalizing contingent assimilation as inherent human group dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts significant cognitive labor from dissenters (self-monitoring, code-switching, emotional regulation) and blocks alternative knowledge production (dissidents cannot build institutions without strategic compromise). However, extraction is not total \u2014 alternative communities persist and some institutional spaces permit bounded deviance. The trajectory shows intensification from 0.38 to 0.52 as institutional reach expands and consensus-enforcement mechanisms (media, algorithms, professional gatekeeping) strengthen. Suppression (0.68): High. Multiple structural barriers prevent expression of alternative worldviews: economic dependence on dominant institutions, social isolation costs, professional exclusion, legal/political persecution in extreme cases. But suppression is not absolute \u2014 underground networks, diaspora communities, and historical periods of openness show variation. Theater ratio (0.55): Moderate. Performative inclusion practices (diversity statements, welcoming language, ritual acknowledgment of alternative views) mask the underlying assimilation mechanism. The ratio reflects genuine contradiction: some institutions have made real progress toward cognitive pluralism, while others use inclusion rhetoric to legitimize unexamined dominance. The rising trajectory (0.38 \u2192 0.55) tracks the proliferation of 'woke' corporate inclusion alongside hardened epistemic gatekeeping.",
+    "perspectival_gap": "The dissenting individual sees a snare: they are trapped and cannot maintain cognitive integrity without social cost. The cautious minority sees tangled rope: they can build alternative communities but remain subordinated in broader society. The dominant coalition sees rope: maintaining shared worldview is coordination that enables efficient collaboration. The counter-culture organization sees tangled rope: they provide coordination within their epistemic community but extract from members (demand for ideological loyalty) while being extracted from by dominant society. The performative inclusion ritual sees itself as degraded (piton): the institution acknowledges that its diversity claims don't match structural reality. The civilizational observer risks seeing a mountain: human groups always need epistemic coherence, therefore assimilation is natural. The engine will flag this as a false summit because the structural data (measurable suppression, identifiable beneficiaries/victims, rising theater) shows contingent institutional enforcement, not immutable law.",
+    "directionality_logic": "Dissenting individual: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit option. Cautious minority: Victim + constrained \u2192 d\u22480.65, f(d)\u22480.95. Significant extraction with partial exit. Counter-culture organization: Mixed (provides internal coordination, faces external extraction) + mobile \u2192 d\u22480.50, f(d)\u22480.65. Moderate extraction externally, coordination internally. Dominant coalition: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; can freely operate. Performative inclusion: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Piton classification emerges from theater (0.55), not from high chi.",
+    "mandatrophy_analysis": "This constraint demonstrates how indexical classification prevents conflating coordination with extraction. A naive analysis might treat assimilation pressure as 'natural social cohesion' (mountain) or 'coordination mechanism' (rope). But the indexed perspectives reveal the extraction: from the victim's perspective it's snare (trapped, suppressed, extracted from); from the beneficiary's perspective it's rope (coordination feels costless when you set the frame); from the organized counter-cultural perspective it's tangled rope (mixed benefits and costs); from the institutional self-perception it's piton (degraded, performative). The mandatrophy is resolved by recognizing that these are not competing truths about which type is 'really' correct. Instead, the presheaf of perspectives reveals that the constraint simultaneously provides coordination for the dominant coalition AND extracts from those whose worldviews deviate. It is both rope and snare, depending on which side of the assimilation boundary you occupy. The analytical mountain perspective is a false summit because it naturalizes what the structural data reveals as an institutional mechanism with identifiable beneficiaries (dominant coalition), identifiable victims (dissenters), measurable suppression (0.68), and rising theater (0.55 trajectory). This is contingent institutional extraction, not immutable law."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "echo_chamber_reinforcement",
+      "epistemic_gatekeeping_by_consensus",
+      "cognitive_liberty_suppression"
+    ],
+    "dual_formulation_note": "Worldview assimilation pressure is downstream of broader institutional coordination mechanisms but represents a distinct structural constraint focusing on cognitive conformity extraction. Related constraints (echo chambers, epistemic gatekeeping, cognitive suppression) share the same institutional beneficiaries and victims but operate through different mechanisms and have different \u03b5 values reflecting their structural specificity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "french_local_elections_march_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "frloc"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "scaffold",
+    "human_readable": "March 2026 French Municipal Elections",
+    "topic_domain": "political/electoral_institutions",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "incumbent_mayors",
+      "established_parties",
+      "electoral_commission"
+    ],
+    "victims": [
+      "local_policy_innovation",
+      "marginalized_constituencies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Marginalized Constituency",
+      "comment": "PERSPECTIVE 1: MARGINALIZED CONSTITUENCIES (SNARE) \u2014 Trapped in electoral cycle with resource-intensive participation requirements. Cannot exit the franchise system without fundamental disenfranchisement. Faces suppression through language barriers, transportation costs, intimidation. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.32."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Reform-Minded Voter",
+      "comment": "PERSPECTIVE 2: REFORM-MINDED VOTERS (SCAFFOLD) \u2014 Constrained by lack of viable alternatives between elections, but the election itself is a temporary coordination mechanism enabling voice and potential change. Theater_ratio=0.58 reflects significant procedural theater (candidate campaigns, debates) but also genuine choice and stakes. d\u22480.55, f(d)\u22480.75, \u03c3=0.8 \u2192 \u03c7\u22480.14. Low extraction because the sunset (next 6-year cycle) creates hope for course correction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Incumbent Mayor",
+      "comment": "PERSPECTIVE 3: INCUMBENT MAYOR (ROPE) \u2014 Benefits from electoral machinery; experiences election as coordination mechanism that validates/extends their mandate. Has arbitrage options (party switching, coalition building, post-election negotiation). d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.03. Negative effective extraction = net institutional beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Established Party Network",
+      "comment": "PERSPECTIVE 4: ESTABLISHED PARTIES (ROPE) \u2014 Electoral system is pure coordination mechanism for parties: aggregating voter preferences, allocating candidacies, mobilizing supporters. Parties have arbitrage options (coalition shifts, recruitment strategies, issue framing). d\u22480.12, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Near-zero effective extraction; system serves their coordination interests."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Far-Right National Rally (RN)",
+      "comment": "PERSPECTIVE 5: FAR-RIGHT NATIONAL RALLY / POPULIST CHALLENGER (TANGLED ROPE) \u2014 Powerful insurgent with mobile options (street organizing, alternative platforms, coalition pivots). Electoral system both constrains (mainstream party gatekeeping, media access bias) and enables (universal suffrage amplifies their message). Benefits from coordination mechanism (elections legitimize their participation) but also bears suppression through establishment resistance. d\u22480.48, f(d)\u22480.60, \u03c3=1.0 \u2192 \u03c7\u22480.17. Active enforcement required: establishment parties coordinate against RN to maintain exclusion."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Electoral Commission / Administrative State",
+      "comment": "PERSPECTIVE 6: ELECTORAL COMMISSION / ADMINISTRATIVE STATE (PITON) \u2014 Maintains elaborate electoral machinery (voter rolls, polling locations, observer protocols, counting procedures) whose primary function has atrophied: ensuring ballot security in the age of digital identity and online political mobilization. Much of the theater (physical polling stations, paper ballots, signature verification) persists through institutional inertia and constitutional tradition rather than functional necessity. theater_ratio=0.58 approaching piton threshold; machinery persists because formal alternatives haven't legally superseded it, not because it uniquely solves the coordination problem. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Administrative beneficiary."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Institutional Constraints View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SCAFFOLD WITH CIVILIZATIONAL SUNSET) \u2014 From a historical/global perspective, the March 2026 election represents a temporary coordination mechanism with a built-in sunset: French municipal elections are constitutionally fixed to 6-year terms with explicit renewal points. The constraint (electoral cycle, campaign finance, incumbent advantage) has a defined termination that enables reform between cycles. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.18. The civilizational view recognizes that electoral systems themselves are provisional human constructs, not immutable laws \u2014 this grounds the scaffold classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "campaign_finance_distortion_magnitude",
+      "question": "Does campaign finance advantage for incumbents and established parties rise to the level of functional extraction (snare) or remain within normal coordination overhead (scaffold)?",
+      "resolution_mechanism": "Comparative analysis of spending ratios: incumbent vs challenger vs party vs independent candidates; correlation between spending and electoral success; exit analysis for candidates without financial backing",
+      "impact": "If advantage > 3:1 funding ratio AND >> 80% of elections won by better-funded candidates: escalates to tangled_rope or snare from voter perspective. If advantage < 2:1 and << 60% of outcomes determined by funding: remains within scaffold coordination overhead.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether campaign finance advantage constitutes functional extraction or normal overhead"
+    },
+    {
+      "id": "marginalization_intentionality",
+      "question": "Are suppressive barriers (language complexity, document requirements, transportation) intentional exclusion mechanisms or unintended consequences of administrative procedure?",
+      "resolution_mechanism": "Historical policy analysis: explicit intent documentation (legislative debates, policy memos); comparative international standards for voting access; longitudinal trend analysis of barrier removal vs persistence",
+      "impact": "If intentional: constraint escalates to deliberate snare from marginalized perspective. If unintended: constraint remains snare but mandates accessibility reform as part of scaffold sunset mechanism.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether marginalization barriers are intentional exclusion or unintended consequence"
+    },
+    {
+      "id": "alternative_coordination_readiness",
+      "question": "Are institutional alternatives to electoral cycles (participatory budgeting, continuous representation, digital platforms) mature enough to function as a true sunset successor, or do they lack necessary infrastructure?",
+      "resolution_mechanism": "Empirical evaluation of alternative mechanisms in operating French municipalities and regional bodies; assessment of participation rates, decision quality, cost structure, conflict resolution capacity",
+      "impact": "If mature: scaffold sunset is credible \u2014 next generation can replace electoral cycle with distributed coordination. If immature: sunset becomes aspirational (piton threat) \u2014 electoral machinery persists through lack of genuine alternatives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternatives to electoral cycles are institutionally mature"
+    },
+    {
+      "id": "rn_insurgent_trajectory",
+      "question": "Will National Rally integration into formal electoral coalitions transform them from challengers (tangled_rope) to establishment beneficiaries (rope), or will they maintain structural exclusion despite electoral gains?",
+      "resolution_mechanism": "Outcome tracking post-election: RN participation in municipal coalitions, committee assignments, policy influence; mainstream party coalition behavior toward RN candidates; voter treatment analysis",
+      "impact": "If integrated: tangled_rope resolves toward rope \u2014 suppression mechanism dissolves, active enforcement decays. If excluded: tangled_rope persists or escalates \u2014 suppression hardens, creating two-tier electoral system.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether National Rally will achieve insider status or remain structurally excluded"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.24
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The March 15 and 22, 2026, French municipal elections represent a temporal constraint structure that functions as a Scaffold: a temporary coordination mechanism enabling voice and preference aggregation, built with an explicit sunset clause (the 6-year electoral cycle). The elections embody a paradox characteristic of democratic scaffolds \u2014 they simultaneously expand and restrict political agency. For voters, they are a rare moment of meaningful power to direct local governance; for marginalized constituencies, they are resource-intensive participation rituals with suppressive barriers; for incumbent mayors and established parties, they are validation mechanisms with institutional advantage; for the far-right National Rally, they represent an insurgent entry point with structural obstacles; for the administrative state, they are an elaborate machinery whose primary function (ballot security in analog registration systems) has partially atrophied. The constraint's low extractiveness (0.28) and moderate suppression (0.42) reflect that the election is genuinely a coordination mechanism \u2014 it solves a real collective action problem (aggregating preferences into municipal leadership) \u2014 rather than pure extraction. The theater ratio (0.58) captures the significant performative content (campaign spectacle, public debates, campaign finance signaling) alongside genuine substantive choice. The sunset clause is constitutional and enforceable: the next election is guaranteed in 2032, creating a defined reform window.",
+    "key_agents": [
+      "Incumbent Mayors: Institutional beneficiaries (organized/arbitrage) \u2014 gain legitimacy extension and continued resource control; experienced electoral coordination as Rope",
+      "Established Parties (Socialist, Republicans, Ensemble, Green): Organized beneficiaries (organized/arbitrage) \u2014 benefit from candidate nomination control, voter mobilization infrastructure, existing council seats; experience as Rope coordination",
+      "Marginalized Constituencies: Primary victims (powerless/trapped) \u2014 face language barriers, transportation costs, document requirements, electoral intimidation; experience as Snare",
+      "Reform-Minded Voters: Secondary victims (moderate/constrained) \u2014 constrained by inability to change policy direction between elections, but experience election as temporary coordination mechanism enabling voice; experience as Scaffold",
+      "Far-Right National Rally: Powerful insurgent (powerful/mobile) \u2014 mobile in organizing/media strategies, but structurally constrained by mainstream party gatekeeping and media access bias; benefits from franchise legitimacy but faces suppression; experience as Tangled Rope",
+      "Electoral Commission & Administrative State: Institutional actors (institutional/arbitrage) \u2014 maintain elaborate voting machinery with increasingly degraded functional purpose; experience as Piton",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes electoral systems as provisional human constructs with built-in renewal points; grounds Scaffold classification"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The electoral system does extract political control from voters (they cannot direct local policy between elections) and concentrates it in incumbent mayors and party structures. However, the extraction is not severe because elections genuinely aggregate preferences and create stakes for responsiveness. The 6-year term creates a meaningful constraint (powerless voters cannot exit), but it is transparent and predictable. The low extractiveness (vs. historical autocratic systems without elections) reflects that elections ARE a real coordination mechanism solving the genuine problem of aggregating preferences. Suppression (0.42): Moderate. Significant barriers exist: language requirements for ballot materials disadvantage migrants, transportation barriers affect elderly and disabled voters, voter registration complexity, intimidation/family pressure in some communities, campaign finance asymmetry. However, suppression is not extreme because France has universal suffrage, formal nondiscrimination law, and established voter protection institutions. Theater ratio (0.58): Moderate. Campaign spectacle (media coverage, candidate debates, political advertising) constitutes a substantial portion of electoral activity, but substantive choice remains. The performative content has increased from historical norms (0.35 at interval start) as media-driven campaigning has intensified. Claimed type (Scaffold): The election is a temporary coordination mechanism with constitutional sunset. The mechanics (voting procedures, counting, observer protocols) include redundancy and ritual, but the underlying function (aggregating preferences into local leadership) remains genuine. Active enforcement is required because suppressive barriers must be maintained against universal suffrage expansion, and incumbent advantage requires structural protection.",
+    "perspectival_gap": "This constraint exhibits maximal perspectival divergence. Incumbent mayors and established parties experience it as pure Rope (coordination serving their interests). Marginalized constituencies experience it as Snare (suppressive, extractive, inescapable). Reform-minded voters experience it as Scaffold (temporary, renewable, enabling voice). The far-right National Rally experiences it as Tangled Rope (simultaneous enablement via universal franchise and suppression via establishment gatekeeping). The electoral commission experiences it as Piton (elaborate machinery maintained by institutional inertia as much as functional necessity). The analytical observer sees Scaffold (provisional human construct with built-in sunset). These are not competing interpretations of the same phenomenon \u2014 they are structural realities from different positions within the constraint. The gap is not resolvable by 'correct' measurement; it is inherent to the electoral system's structure.",
+    "directionality_logic": "Marginalized constituencies: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.32. High extraction. Reform-minded voters: Victim + constrained \u2192 d\u22480.55, f(d)\u22480.75, \u03c3=0.8 \u2192 \u03c7\u22480.14. Moderate extraction tempered by scaffold sunset logic. Incumbent mayors: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.03. Net institutional benefit; Rope classification. Established parties: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.05, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Near-zero effective extraction; pure coordination. National Rally: Neither pure beneficiary nor victim; powerful but suppressed. Powerful + mobile \u2192 d\u22480.48, f(d)\u22480.60, \u03c3=1.0 \u2192 \u03c7\u22480.17. Tangled Rope: genuine coordination benefit (universal franchise enables their entry) combined with active suppression (establishment gatekeeping). Electoral commission: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Administrative beneficiary; Piton classification driven by theater gate, not by extraction.",
+    "mandatrophy_analysis": "The March 2026 election resolves the mandatrophy through the Scaffold classification: it is a genuine coordination mechanism (aggregating voter preferences into local leadership) with a built-in sunset clause (6-year cycle guarantees renewal and reform opportunity). The mandatrophy threat would be: 'Is this really coordination (Rope) disguised as temporary (Scaffold), or pure extraction (Snare) disguised as coordination?' The Scaffold classification answers: it is coordination (benefits all agents by solving preference aggregation), but temporally bounded (the 6-year cycle means marginalized groups can eventually mobilize for reform, incumbent advantage is reset every cycle, suppressive barriers can be legislatively addressed). The low extractiveness (0.28) and genuine presence of beneficiaries (incumbent mayors, established parties do legitimately benefit from voter preference aggregation) confirms coordination function. The sunset clause (constitutionally enforceable 6-year term) confirms temporality. The active enforcement requirement (barriers must be maintained against universal suffrage expansion) confirms that suppression is structural but not foundational \u2014 it persists because laws allow it, not because the voting mechanism inherently requires it. The theater ratio (0.58, below piton threshold of 0.70) confirms that substantive choice remains meaningful. The classification holds: Scaffold, not degraded Piton, because the system still solves its intended coordination problem and has a defined renewal point."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "french_national_policy_cycle",
+      "national_rally_political_trajectory",
+      "european_regulatory_harmonization"
+    ],
+    "dual_formulation_note": "The March 2026 municipal elections are nested within the broader French electoral cycle (European Parliament 2024, presidential 2027, national assembly 2027). This story focuses on the local institutional constraint; the national policy cycle story captures how local electoral outcomes cascade to national governance. The National Rally trajectory is upstream (their 2022 gains created structural conditions for the 2026 local insurgency); municipal results will feed forward into 2027 national positioning."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.48
+    }
+  ]
+}

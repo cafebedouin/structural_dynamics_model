@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "texas_hispanic_political_pivot",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "txhsp"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Texas Hispanic Voting Block Volatility (2024-2026)",
+    "topic_domain": "political/electoral/immigration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "gop_electoral_coalition",
+      "border_enforcement_contractors"
+    ],
+    "victims": [
+      "undocumented_immigrant_communities",
+      "mixed_status_families",
+      "hispanic_democratic_coalition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Undocumented Immigrant Community",
+      "comment": "PERSPECTIVE 1: UNDOCUMENTED IMMIGRANTS (SNARE) \u2014 No legal exit from enforcement regime. Faces maximum extraction through deportation threat, workplace raids, family separation. d\u22480.96, f(d)\u22481.43, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Mixed-Status Hispanic Families",
+      "comment": "PERSPECTIVE 2: MIXED-STATUS FAMILIES (SNARE) \u2014 Constrained by family bonds and rootedness in Texas. Extraction occurs through fear, workplace vulnerability, and separation threats. d\u22480.82, f(d)\u22481.18, \u03c3=0.9 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Socially-Conservative Hispanic Voters (2024 GOP-Aligned)",
+      "comment": "PERSPECTIVE 3: SOCIALLY-CONSERVATIVE HISPANIC VOTERS (TANGLED ROPE) \u2014 Attracted to GOP by immigration restriction rhetoric, social conservatism, and economic messaging. But enforcement accelerates after election, breaking the implied bargain. Mobile enough to switch parties, but face community backlash. d\u22480.58, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "GOP Electoral Coalition Leadership",
+      "comment": "PERSPECTIVE 4: GOP ELECTORAL COALITION (ROPE) \u2014 Benefits from Hispanic outreach in 2024 as coordination mechanism solving electoral math problem (flipping Texas margins). Post-election enforcement escalates extraction while maintaining coordination rhetoric. d\u22480.18, f(d)\u22480.10, \u03c3=1.0 \u2192 \u03c7 \u22480.06."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Hispanic Democratic Coalition (Texas)",
+      "comment": "PERSPECTIVE 5: HISPANIC DEMOCRATIC COALITION (TANGLED ROPE) \u2014 Experiences both extraction (loss of electoral base to GOP in 2024) and coordination benefit (coalition rebuilding around immigration protection). Organized but constrained by Texas political geography. d\u22480.54, f(d)\u22480.64, \u03c3=0.9 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Border Enforcement Contractors & ICE",
+      "comment": "PERSPECTIVE 6: ENFORCEMENT APPARATUS (ROPE) \u2014 Benefits from enforcement expansion through funding, contract awards, operational mandate. Coordination function: centralizing immigration control. d\u22480.12, f(d)\u2248-0.02, \u03c3=1.0 \u2192 \u03c7 \u2248-0.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural Pattern)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Identifies structural pattern: coalition formation (2024 coordination) followed by enforcement acceleration (2025+ extraction). Theater component: rhetoric of 'orderly immigration' vs reality of family-separation tactics. d\u22480.65, f(d)\u22480.93, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hispanic_voter_realignment_durability",
+      "question": "Will the 2024 Hispanic GOP coalition realignment prove durable after enforcement escalation, or revert to historical Democratic alignment?",
+      "resolution_mechanism": "2026 midterm election results in Texas congressional districts with high Hispanic population share; tracking of voter registration changes and exit polling",
+      "impact": "If durable (GOP holds 40%+ Hispanic vote): constraint becomes Rope (successful coordination overrides enforcement concerns). If reverts (<35%): constraint becomes Snare (extraction breaks coalition, demographics reassert).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "2024 Hispanic GOP coalition durability after enforcement escalation"
+    },
+    {
+      "id": "family_separation_scale_threshold",
+      "question": "At what scale of family separation does enforcement credibly threaten political viability of GOP Hispanic coalition in Texas?",
+      "resolution_mechanism": "Comparison of enforcement data (deportations, workplace raids, family separation cases) against Hispanic approval tracking; correlation analysis of enforcement intensity with Hispanic GOP support decline",
+      "impact": "If threshold low (few hundred cases): coalition fractures immediately (Snare dominates). If threshold high (tens of thousands): extraction can persist within coalition tolerance (Tangled Rope equilibrium).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Family separation threshold for coalition viability"
+    },
+    {
+      "id": "enforcement_rhetoric_benefit_gap",
+      "question": "How large is the gap between enforcement rhetoric (strong borders, rule of law) that appeals to GOP Hispanic voters and actual enforcement tactics (family separation, workplace raids)?",
+      "resolution_mechanism": "Content analysis of GOP messaging to Hispanic voters vs enforcement actions; surveys of Hispanic GOP voters about awareness of enforcement details; comparison of stated policy preferences vs enforcement actuality",
+      "impact": "If gap small (rhetoric matches action): constraint is Rope (honest coordination). If gap large (rhetoric conceals extraction): constraint is Snare (coalition maintained through deception with predetermined collapse).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Rhetoric-enforcement gap in GOP Hispanic outreach"
+    },
+    {
+      "id": "economic_extraction_vs_immigration_salience",
+      "question": "Does the economic benefit that Hispanic voters perceive from GOP policy (tax cuts, deregulation, business-friendly environment) outweigh the immigration enforcement harms?",
+      "resolution_mechanism": "Econometric analysis of Hispanic household income, employment, and wealth outcomes in GOP-controlled vs Democratic-controlled districts; surveys on relative salience of economic vs immigration policy; longitudinal tracking of Hispanic voter issue priorities",
+      "impact": "If economic benefits dominate: constraint resolves as Rope (coordination logic outweighs extraction concerns). If immigration harms dominate: constraint becomes Snare (extraction mechanism overrides economic coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic benefit salience vs immigration enforcement harms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "In 2024, the Republican party successfully mobilized a significant portion of the Texas Hispanic electorate by emphasizing border security, legal immigration pathways, and socially conservative values. Approximately 44% of Hispanic voters in Texas voted GOP in 2024, the highest share in decades, driven by messaging that distinguished 'legal' from 'illegal' immigration and economic opportunity. However, beginning in late 2024 and accelerating through 2025-2026, federal enforcement under GOP administration has escalated dramatically: workplace raids, ICE detention increases, family separation cases, and aggressive deportation campaigns. This acceleration has broken the implicit coalition bargain that Hispanic GOP voters believed they were making \u2014 they understood themselves to be supporting 'immigration enforcement' in the abstract, not the specific destruction of their own families and communities. The constraint is a hybrid coordination-extraction mechanism where the coordination function (electoral coalition building, economic messaging) was genuine but the enforcement extraction mechanism was suppressed in the pre-election period and then activated post-election. The theater ratio reflects the gap between 'enforce immigration law fairly' and the reality of community-scale family separations.",
+    "key_agents": [
+      "Undocumented Immigrants: Primary victim (powerless/trapped) \u2014 face maximum extraction through enforcement; no legal alternative",
+      "Mixed-Status Hispanic Families: Primary victim (moderate/constrained) \u2014 face family separation threat and workplace vulnerability; constrained by family bonds",
+      "Socially-Conservative Hispanic Voters (2024 GOP-Aligned): Coalition member (moderate/mobile) \u2014 attracted to GOP but now experiencing enforcement escalation they did not anticipate; mobile enough to switch but face community backlash",
+      "GOP Electoral Coalition Leadership: Primary beneficiary (powerful/arbitrage) \u2014 gained electoral advantage in Texas and nationally from Hispanic outreach; can continue or adjust strategy",
+      "Hispanic Democratic Coalition: Secondary victim (organized/constrained) \u2014 lost electoral base to GOP in 2024 but benefiting from GOP enforcement backfiring; rebuilding coalition around immigration protection",
+      "Border Enforcement Contractors & ICE: Secondary beneficiary (powerful/arbitrage) \u2014 benefit from enforcement escalation through expanded budget, operations, and mandate",
+      "Analytical Observer: Sees Tangled Rope structure (analytical/analytical) \u2014 identifies that coalition formation was genuine coordination but enforcement extraction was activated post-election"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits genuine coordination in the 2024 election (authentic coalition building on shared values and policy preferences) but transitions to extraction post-election through enforcement escalation. The measure reflects the time-averaged state where extraction is now dominant but was not fully present in the pre-election period. The 2024 messaging created a coordination function (solving the GOP's need for Hispanic votes and Hispanic conservatives' search for a rightward party home); the 2025-2026 enforcement represents the extraction mechanism activating after the coalition locked in. Suppression (0.62): Moderate-high. The enforcement regime uses multiple suppression mechanisms: threat of family separation (targets extended family, not just deportable individuals), workplace vulnerability (creates fear in mixed-status communities), and detention conditions (leverage for compliance). However, suppression is not total \u2014 Hispanic voters retain voting power, media voice, and the ability to switch coalitions, which constrains how extreme enforcement can become. Theater ratio (0.58): Moderate. The constraint exhibits significant performative content: 'enforcement of immigration law' becomes theater when the enforcement specifically targets Hispanic families that believed they had made a political bargain. The rhetoric of 'rule of law' and 'orderly immigration' conceals the reality of family-unit targeting. However, the theater is not dominant (as it would be in a Piton) because the extraction mechanism is functionally real \u2014 families are actually being separated, workplace raids are actually happening. The theater is in the justification gap between stated policy (enforce immigration law) and actual targeting (Hispanic communities that supported the GOP).",
+    "perspectival_gap": "This constraint demonstrates radical perspectival divergence. The GOP coalition leadership perceives Rope (coordination solved the electoral problem; enforcement is implementation detail). Undocumented immigrants perceive Snare (maximum extraction with no exit). Socially-conservative Hispanic voters perceive Tangled Rope (they were promised coordination, now experiencing extraction). The Hispanic Democratic coalition perceives Tangled Rope (lost voters in 2024 but benefiting from GOP overreach; organizing around immigration protection). Mixed-status families perceive Snare (vulnerability through family bonds). Border enforcement apparatus perceives Rope (unified with GOP on enforcement mission). The analytical observer perceives Tangled Rope (sees both coordination phase 2024 and extraction phase 2025-26 as parts of single constraint). The perspectival gap is driven by whether the observer was inside or outside the 2024 coalition bargain and whether they anticipated enforcement escalation.",
+    "directionality_logic": "Undocumented immigrants: Victim + trapped \u2192 d\u22480.96, f(d)\u22481.43. Maximum extraction directionality. Mixed-status families: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.18. High extraction but not maximum due to constrained (rather than trapped) exit options \u2014 family bonds are constraining but not absolute. Socially-conservative Hispanic voters: Both beneficiary of coalition (2024 coordination) and victim of enforcement (2025+ extraction); mobile \u2192 d\u22480.58, f(d)\u22480.68. Moderate extraction because they can credibly exit (vote for Democrats in 2026) and because they retain some power through electoral leverage. GOP leadership: Beneficiary + arbitrage \u2192 d\u22480.18, f(d)\u22480.10. Arbitrage exit (can adjust enforcement policy without losing organizational capacity) makes them net beneficiary despite enforcement expansion. Hispanic Democratic coalition: Victim (lost 2024 votes) but also beneficiary (gaining back voters through GOP overreach); organized + constrained \u2192 d\u22480.54, f(d)\u22480.64. Enforcement apparatus: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.02. Institutional actors with expanding mandate and budget. Analytical observer: d\u22480.65, f(d)\u22480.93. Observer perspective shows substantial extraction in current period.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves mandatrophy by showing how a coalition-based extraction mechanism works. The 2024 phase was genuinely Rope \u2014 GOP and Hispanic conservatives solved an electoral coordination problem through authentic shared messaging on values, economy, and immigration philosophy (legal vs illegal distinction). But the constraint transitions to Snare/Tangled Rope post-election because the enforcement regime targets the very communities that made the GOP coalition coalition viable. The mandatrophy asks: 'Is this coordination or extraction?' The answer is 'both sequentially.' The 2024 coalition was coordination. The 2025-26 enforcement is extraction. The constraint's unity comes from the enforcement activation depending on the coalition lock-in: enforcement becomes politically feasible after the Hispanic vote is already committed. Analytically, this resolves the mandatrophy by showing that \u03b5 value (0.58) is time-indexed. In 2024, \u03b5\u22480.32 (mostly coordination, some enforcement prep). By 2026, \u03b5\u22480.58 (extraction dominant). The single constraint with rising \u03b5 over time is the analytic truth \u2014 a Tangled Rope that evolved toward Snare as enforcement mechanisms activated. The theater component (0.58) reflects that enforcement is partly justified through 'rule of law' framing that conceals the coalition-targeting nature of the policy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "border_enforcement_regime",
+      "hispanic_electoral_coalition_stability",
+      "family_separation_policy"
+    ],
+    "dual_formulation_note": "The Texas Hispanic pivot constraint is downstream of border enforcement regime expansion (which provides operational capacity) and upstream of specific family separation policy implementation (which is the enforcement mechanism activated post-coalition lock-in). The constraint family shows causal dependency: broader enforcement regime enables Hispanic-targeted enforcement, which destabilizes the Hispanic coalition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

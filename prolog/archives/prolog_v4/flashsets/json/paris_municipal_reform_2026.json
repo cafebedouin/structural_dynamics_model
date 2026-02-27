@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "paris_municipal_reform_2026",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Paris Municipal Reform (Loi Maillard/PLM Reform)",
+    "topic_domain": "political/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "smaller_political_parties",
+      "opposition_parties"
+    ],
+    "victims": [
+      "dominant_political_party"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Dominant Political Party (Losing Majority)",
+      "comment": "Perspective of the dominant political party, which sees its guaranteed majority significantly reduced. They are trapped in the reformed system in the immediate aftermath, reducing their influence."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Smaller Political Parties",
+      "comment": "Perspective of smaller parties who benefit from increased representation. They can arbitrage the new system to gain influence, leading to better coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer (National Level)",
+      "comment": "A balanced perspective recognizing both the coordination (increased representation) and extraction (reduced power for the previously dominant party) aspects of the reform."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Opposition Parties",
+      "comment": "Opposition parties benefit from increased representation, but are constrained by the existing political landscape and may still face challenges in gaining significant power."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_impact_on_governance",
+      "question": "Will the reform lead to more inclusive and responsive governance in Paris, or will it create political gridlock and instability?",
+      "resolution_mechanism": "Longitudinal analysis of policy outcomes, coalition formation, and public opinion in Paris after the reform.",
+      "impact": "If positive: The reform is a successful coordination mechanism (Rope). If negative: The reform is a destabilizing extraction (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The long-term impact of the reform on the quality of governance in Paris."
+    },
+    {
+      "id": "coalition_dynamics",
+      "question": "How will the new electoral system affect coalition formation and political alignment in the Paris City Council?",
+      "resolution_mechanism": "Analysis of voting patterns, alliance building, and policy negotiations in the City Council after the reform.",
+      "impact": "Impacts relative influence of parties and policy outputs",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Dynamics of new political landscape"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The 2026 reform (Loi du 11 ao\u00fbt 2025) fundamentally shifts the \"Majority Premium\" (Prime Majoritaire) for the Council of Paris from 50% down to 25% of seats. This reform aims to promote greater political pluralism within the Council of Paris by reducing the advantage traditionally held by the dominant political party. While intended to enhance representation and inclusivity, the reform also entails a redistribution of political power, potentially impacting governance dynamics and policy outcomes. The reform is a shift away from the old system towards what's supposed to be greater representation but also a loss of guaranteed power for the formerly dominant.",
+    "key_agents": [
+      "Dominant Political Party: Loses guaranteed majority, affected by reduction in seat allocation",
+      "Smaller Political Parties: Beneficiaries of increased representation and potential for coalition building",
+      "Opposition Parties: Gain opportunities for increased influence and policy input.",
+      "Analytical Observer: Assesses the overall impact on governance, inclusivity, and policy outcomes"
+    ],
+    "logic_rationale": "Extractiveness (0.50): Moderate. The dominant party experiences a tangible reduction in guaranteed seats (extraction of power). Smaller parties experience an increase in potential influence. Suppression (0.40): Moderate. While the reform increases representation, it does not fully eliminate barriers to entry or influence for smaller parties. Established political dynamics and resources still play a significant role. Theater ratio (0.30): Relatively low. The reform represents a substantive change in the electoral system, not merely a performative adjustment.",
+    "perspectival_gap": "The dominant political party perceives the reform as an extractive measure, diminishing their established power (Snare). Smaller parties view it as a coordinating mechanism, enhancing their opportunities for representation and influence (Rope). The analytical observer recognizes the mixed nature of the reform, balancing coordination and extraction elements (Tangled Rope).",
+    "directionality_logic": "Beneficiaries (smaller parties) gain influence and opportunities for representation, yielding low d and negative chi. The dominant party, which is a victim, sees its guaranteed power and influence diminish, yielding high d and high chi."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

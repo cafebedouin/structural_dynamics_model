@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "ukr_mobilization",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ukrmob"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Ukrainian Mobilization Law and Conscription Enforcement",
+    "topic_domain": "political/military/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ukrainian_state_military_apparatus",
+      "western_military_coalition_partners"
+    ],
+    "victims": [
+      "conscriptable_male_citizens",
+      "border_crossing_refugees",
+      "economic_development_capacity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Conscripted Soldier",
+      "comment": "PERSPECTIVE 1: CONSCRIPTED MALE CITIZEN (SNARE) \u2014 No legal exit from mobilization without criminal penalties or flight. Military service is compulsory; refusal results in prosecution, asset seizure, or international warrant status if fleeing. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.95. Extraction is total and enforced through state monopoly on legitimate violence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Border-Trapped Refugee",
+      "comment": "PERSPECTIVE 2: BORDER-TRAPPED REFUGEE (SNARE) \u2014 Males aged 18-60 are prohibited from leaving the country. Border guards (acting as enforcement agents of the state) physically prevent departure. Exit is illegal; trapped within the mobilization apparatus. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.95. Suppression is maximal and transparent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Professional Military Command",
+      "comment": "PERSPECTIVE 3: UKRAINIAN MILITARY COMMAND (TANGLED ROPE) \u2014 Benefits from mobilization (expansion of forces, resource allocation, operational capability). Also constrained by enforcement requirements (maintaining morale, managing desertion, coordinating with NATO). Coordination function: mobilization supplies trained soldiers. Extraction function: conscription transfers private labor to state control. d\u22480.35, f(d)\u22480.30, \u03c3=1.0 \u2192 \u03c7\u22480.20. Low effective extraction because the military sees itself as both organizer and constrained actor."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The NATO Alliance",
+      "comment": "PERSPECTIVE 4: NATO AND WESTERN ALLIANCE (ROPE) \u2014 Benefits from Ukrainian military capability and deterrent against Russian expansion. Experiences Ukrainian mobilization as coordination: shared defense against a common threat. Exit options abundant (support can shift). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Negative effective extraction from their perspective \u2014 the mobilization subsidizes their security without requiring their own conscription."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civilian Labor Market",
+      "comment": "PERSPECTIVE 5: UKRAINE'S ECONOMIC DEVELOPMENT (SNARE) \u2014 Mobilization removes productive males from civilian labor markets (agriculture, manufacturing, services, reconstruction). Economic output declines; gender-imbalanced labor force impairs long-term growth. No exit from this structural impact. d\u22480.78, f(d)\u22481.12, \u03c3=1.0 \u2192 \u03c7\u22480.76. Extraction is indirect but severe: the constraint transfers human capital from productive to destructive use."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The International Human Rights Framework",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL HUMAN RIGHTS FRAMEWORK (SCAFFOLD) \u2014 Organizations (UN, ICC, Human Rights Watch) document mobilization coercion and enforce accountability mechanisms. Theater of enforcement (investigations, indictments) is low \u2014 structural constraints on compliance are high (state sovereignty, wartime exception claims). Sunset clause: mobilization is justified only for duration of existential threat. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.49. Moderate effective extraction because the framework has organizational capacity but limited enforcement leverage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Observes both genuine coordination function (mobilization enables collective defense against invasion) AND extractive mechanism (state transfers private labor to military without consent or compensation beyond survival). The observer notes that the constraint's justification (existential threat) is real and structural \u2014 not theater. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.94. High effective extraction even from analytical view because suppression (0.72) is so high that no perspective experiences meaningful alternatives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "existential_threat_threshold",
+      "question": "What empirical conditions would falsify the 'existential threat' justification for total mobilization coercion?",
+      "resolution_mechanism": "Assess Russian military capacity to occupy/annex territory. Monitor diplomatic off-ramps (cease-fire, territorial settlement). Measure Ukrainian military effectiveness at different force levels. Timeline: when battlefield stabilizes or Russia sustains heavy losses.",
+      "impact": "If threat is truly existential: mobilization remains a snare but justified snare (coordination function under duress). If threat recedes: constraint becomes pure extraction snare without coordination rationale \u2014 mandatrophy deteriorates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether existential threat threshold justifies total conscription coercion"
+    },
+    {
+      "id": "border_enforcement_alternative",
+      "question": "Could a voluntary professional military supplemented by incentivized mobilization (paid enlistment, temporary service limits, exit options) achieve equivalent military objectives with lower suppression?",
+      "resolution_mechanism": "Comparative military effectiveness analysis. Historical precedent: how did Ukraine's pre-2022 professional military perform? Model force composition scenarios with different conscription ratios.",
+      "impact": "If voluntary system sufficient: suppression is contingent policy choice (0.72 \u2192 could be 0.40). Constraint reclassifies from pure snare toward tangled rope or scaffold. If professional insufficient: suppression is structurally necessary \u2014 true snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether volunteer/incentivized mobilization can substitute for coercive conscription"
+    },
+    {
+      "id": "post_war_demobilization_credibility",
+      "question": "Does Ukraine have institutional credibility to demobilize and restore exit options after conflict ends? Or will wartime conscription architecture become permanent?",
+      "resolution_mechanism": "Examine post-conflict demobilization in comparable states (Israel, South Korea, Vietnam). Assess Ukrainian legislative debate on sunset clauses. Monitor international pressure for demobilization timelines.",
+      "impact": "If demobilization credible: scaffold sunset is real \u2014 snare is time-bounded. If demobilization uncertain: snare may persist indefinitely \u2014 constraint reclassifies toward permanent piton.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether post-conflict demobilization architecture will restore citizen exit options"
+    },
+    {
+      "id": "diaspora_flight_substitution",
+      "question": "Are males fleeing to diaspora (Poland, EU, Canada) functionally exempting themselves from mobilization, and does this create a hidden exit option that underestimates actual freedom?",
+      "resolution_mechanism": "Quantify border crossing flows by gender and age. Track Ukrainian expat military enlistment rates. Measure Ukrainian government enforcement of extradition or asset seizure against diaspora.",
+      "impact": "If flight is functional exit: effective suppression lower than 0.72 \u2014 constraint is more constrained/mobile than trapped. If Ukrainian government successfully pressures diaspora to return: suppression increases, snare becomes tighter.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether diaspora mobility functions as a hidden exit option from conscription"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "ukrmob_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.65,
+      "id_override": "ukrmob_extract_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.68,
+      "id_override": "ukrmob_extract_t24"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "ukrmob_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35,
+      "id_override": "ukrmob_theater_t12"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.38,
+      "id_override": "ukrmob_theater_t24"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "Ukraine's mobilization law (enacted February 2022, expanded through 2024) mandates military conscription for all able-bodied males aged 18-60, with criminal penalties for refusal and a de facto border prohibition on male emigration. The constraint operates as a snare: the Ukrainian state extracts military labor from its citizens through coercive enforcement backed by the sovereign monopoly on legitimate violence. The state justifies the constraint through existential threat (Russian invasion), which is structurally real but creates a temporal ambiguity: is this a permanent snare or a time-bounded scaffold? The constraint exhibits low theater (0.38) because the coercion is direct and transparent \u2014 the state clearly enforces the law through visible mechanisms (border patrols, military police, prosecution). This transparency paradoxically increases suppression (0.72) by eliminating plausible deniability. The constraint's extractiveness (0.68) reflects the state's nearly complete appropriation of conscripted labor without compensation beyond survival benefits. From the conscripted soldier's perspective, the constraint is pure extraction: no exit, no agency, no alternative. From NATO's perspective, the constraint is coordination: a shared defense mechanism that benefits all parties. From the analytical observer's view, the constraint is tangled rope: it solves a genuine coordination problem (collective defense) through an extractive mechanism (coercive conscription). The unresolved mandatrophy concerns whether wartime exigency justifies permanent snare classification or whether the constraint should be scaffolded with a sunset clause.",
+    "key_agents": [
+      "Ukrainian Male Citizens (18-60): Primary victims (powerless/trapped) \u2014 no legal exit from conscription; border prohibition prevents emigration; prosecution for refusal",
+      "Ukrainian State Military: Primary beneficiary (organized/constrained) \u2014 obtains mobilized forces; also constrained by enforcement burden and international law pressure",
+      "NATO Alliance: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from Ukrainian military capability; abundant exit options; subsidized security",
+      "Border Enforcement Apparatus: Enforcement agent (organized/constrained) \u2014 implements conscription law; maintains border closure for males; operates under state authority",
+      "Civilian Labor Markets: Structural victim (moderate/constrained) \u2014 loses productive population; economic output declines; reconstruction capacity impaired",
+      "International Human Rights Framework: Organized observer (organized/mobile) \u2014 documents coercion; attempts accountability; limited enforcement leverage against warring state",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes both genuine coordination function and extractive mechanism; notes temporal ambiguity on sustainability"
+    ],
+    "logic_rationale": "Base Extractiveness (0.68): The state extracts essentially all productive labor from conscripted males without meaningful compensation beyond survival. The extraction is nearly complete. The value is high (0.68 vs. maximum 1.0) rather than maximum because some soldiers receive combat bonuses, family support, or social status that partially offsets the coercion. Over the interval, extractiveness increased from 0.45 (initial mobilization with some volunteer component) to 0.68 (full coercive enforcement with border closure), reflecting the state's progressive hardening of mobilization mechanisms. Suppression (0.72): Suppression is high but not maximal. Legal alternatives (conscientious objector status, medical exemptions, contract buyouts) exist on paper but are rarely granted or are prohibitively expensive. Border enforcement is strict for males but permeable for females, international advocates, and the wealthy. Some groups (medical personnel, essential workers) receive deferrals. The 0.72 value reflects substantial but not total suppression of exit options. Theater Ratio (0.38): Low theater. The mobilization law is enforced through direct, transparent mechanisms: border patrols deny male departure; military conscription offices issue draft notices; courts prosecute refusers. There is minimal performative activity \u2014 the state does not stage elaborate legitimacy theater. The low theater reflects that the constraint's justification (existential military threat) is widely accepted, reducing the need for narrative legitimation work. Theater has slightly increased (0.28 \u2192 0.38) as the conflict duration stretches the 'existential threat' narrative and the state requires increasing rhetorical effort to maintain mobilization commitment.",
+    "perspectival_gap": "The constraint produces a stark perspectival gap between the conscripted victim (snare with d\u22480.92, f(d)\u22481.40, \u03c7\u22480.95) and the beneficiary institutional actors (rope or tangled rope with d\u22480.08-0.35, f(d)\u2248-0.08-0.30, \u03c7\u2248-0.07-0.20). The conscripted soldier experiences total extraction: no exit, no choice, no alternative future. The military command experiences coordination: mobilization solves the collective action problem of military readiness and provides operational resources. NATO experiences subsidized security: Ukrainian conscription defends NATO's eastern flank without NATO bearing the conscription cost. The victim and beneficiary inhabit fundamentally different constraint universes \u2014 this is not a perspectival difference in degree but in kind. The analytical observer sees both truths simultaneously: the snare is real (coercive, extractive, backed by violence) AND the rope is real (genuine coordination function, shared existential threat, mutual defense benefit). The mandatrophy emerges here: can a mechanism be both a genuine response to existential threat AND a snare? The framework resolves this by noting that snare and rope are not opposite but intersecting: a tangled rope is snare + rope. The Ukrainian mobilization is a tangled rope observed by military strategists and a pure snare observed by conscripts. The analytical perspective reveals both.",
+    "directionality_logic": "Conscripted male citizens: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum structural extraction. Cannot exit legally (conscription is mandatory); cannot exit practically (border closure for males); refusal is criminalized. No alternatives present. Border-trapped refugees: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Slightly higher than conscripted soldiers because the border mechanism itself is purely coercive (no legal exemptions). Military command: Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.30. Moderate benefit (mobilization supplies forces) but constrained by enforcement burden, international pressure, and need to maintain morale. Not fully arbitrage because the state is also bound by its own mobilization commitment. NATO alliance: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net subsidy receiver. Can exit (stop supporting Ukraine, shift alliance focus) but chooses not to. Negative effective extraction from their view. Civilian labor market: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.12. Structural victim (loses labor force) but has some constrained options (female labor participation, automation, foreign workers). Not fully trapped. International human rights framework: Observer + mobile \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position \u2014 can document and pressure but has limited enforcement leverage against a sovereign state in existential conflict.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint resolves the Snare vs. Coordination ambiguity by classifying it as tangled rope at the analytical level while acknowledging that specific agents perceive it as pure snare (victims) or coordination (beneficiaries). The mandatrophy is: Can you conscript your population to save your state from invasion? The framework resolves this by noting that the answer depends on the temporal boundary. If 'existential threat' is permanent, the constraint is a permanent snare \u2014 conscription becomes the normal state, extraction becomes normalized, and the constraint likely persists as a piton after the war ends. If 'existential threat' is time-bounded and demobilization will occur, the constraint is a scaffold \u2014 temporary coercion justified by temporary necessity, with a planned exit. The current classification (tangled rope, snare when viewed by victims) holds because: (1) the coordination function is real (Ukrainian mobilization genuinely enables collective defense against Russian invasion); (2) the extraction is real (state takes labor without meaningful consent); (3) the temporal uncertainty is real (nobody knows whether demobilization will occur post-conflict). The high mandatrophy_resolved value reflects that the framework successfully models the constraint without collapsing into false naturalization (mountain) or pure extraction (snare-only). The constraint is what it appears to be: a state enforcing coercive conscription through genuine existential necessity, justified in present but temporally uncertain in duration."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ukrainian_labor_market_collapse",
+      "diaspora_brain_drain",
+      "russian_mobilization_countermeasure",
+      "nato_credibility_commitment"
+    ],
+    "dual_formulation_note": "Ukrainian mobilization is a snare (from conscript perspective) that solves a tangled rope (from state/coalition perspective). It decomposes into: (1) mobilization as coercive labor extraction (\u03b5\u22480.68, snare), and (2) mobilization as collective defense coordination (\u03b5\u22480.35, tangled rope). These are not two observables of one constraint but two structurally distinct mechanisms that happen to be enforced by the same legal apparatus. The framework models them as a single story with perspectival divergence rather than network decomposition because the enforcement mechanism is unified \u2014 but future analysis may decompose the labor extraction from the defense coordination into separate constraint stories."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    }
+  ]
+}

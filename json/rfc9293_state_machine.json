@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_state_machine",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tcp_sm"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "TCP State Machine Constraints (RFC 9293)",
+    "topic_domain": "technological/protocol_specification",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Protocol Specification (Formal Logic View)",
+      "comment": "PERSPECTIVE 1: PROTOCOL SPECIFICATION (MOUNTAIN) \u2014 The TCP state machine emerges from the mathematical requirements of stateful connection negotiation over unreliable packet delivery. The constraint is invariant across all implementations: SYN-SENT must precede ESTABLISHED; TIME-WAIT must follow FIN; transitions follow the state diagram deterministically. No degree of freedom exists \u2014 the state machine is an immutable logical structure, not a convention or policy choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Endpoint Implementation (Execution View)",
+      "comment": "PERSPECTIVE 2: ENDPOINT IMPLEMENTATION (MOUNTAIN) \u2014 A TCP stack must implement the state machine exactly or fail interoperability testing. No alternative path exists from SYN-RECEIVED to ESTABLISHED except through the prescribed transitions. The constraint is absolute from the implementation perspective: deviation results in immediate packet rejection by compliant peers. The endpoint experiences zero degrees of freedom."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Standards Body (RFC Authority View)",
+      "comment": "PERSPECTIVE 3: STANDARDS BODY (MOUNTAIN) \u2014 RFC 9293 codifies an already-immutable logical structure. The standards body cannot negotiate, compromise, or alter the fundamental state transitions without breaking compatibility with decades of deployed infrastructure. The constraint pre-exists the standard and is recovered by specification, not created by it. Authority over the document confers no authority over the underlying structure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open-Source Implementation Community",
+      "comment": "PERSPECTIVE 4: OPEN-SOURCE COMMUNITY (MOUNTAIN) \u2014 Organized developers cannot implement alternative state machines and remain part of the TCP ecosystem. Every major TCP implementation (Linux kernel, BSD, Windows, Go runtime) converges on the same state diagram because deviation yields non-interoperability. The constraint is self-enforcing through network effects: deviate and your implementation is incompatible. No sunset clause exists \u2014 the structure is permanent as long as TCP is used."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optional_rfc_extensions",
+      "question": "Do optional TCP extensions (TCP_USER_TIMEOUT, TCP_KEEPALIVE, SACK, window scaling) represent genuine extensions to the state machine or merely additional transitions that preserve the core constraint?",
+      "resolution_mechanism": "Formal verification showing that all RFC extensions map onto or extend the RFC 9293 core without contradicting any state transition rules; identification of any extension that would require modification to the base state diagram",
+      "impact": "If extensions preserve the core: mountain classification confirmed across temporal horizons. If any extension fundamentally alters state transitions: constraint decomposes into multiple stories (core mountain + extension-specific rope/tangled_rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether TCP extensions alter or merely extend the base state machine"
+    },
+    {
+      "id": "congestion_control_decoupling",
+      "question": "Are TCP congestion control algorithms (Reno, CUBIC, BBR) logically decoupled from the state machine constraint, or do they impose additional hidden state transitions that constrain the state machine's freedom?",
+      "resolution_mechanism": "State diagram analysis showing whether congestion control modifies legal state transitions or only affects timing/data-delivery within transitions; identification of any congestion state (e.g., timeout recovery) that would add vertices to the core graph",
+      "impact": "If fully decoupled: TCP state machine is pure mountain (zero extraction, universal). If coupled: congestion control is a separate tangled_rope constraint (extraction via window scaling, retransmission delays) layered onto the mountain. Story should decompose into rfc9293_state_machine (mountain) and tcp_congestion_control (tangled_rope).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether congestion control is decoupled from state transitions"
+    },
+    {
+      "id": "middlebox_constraint_interaction",
+      "question": "Do network middleboxes (firewalls, NAT, proxies) that intercept or modify TCP state transitions constitute violations of the RFC 9293 constraint or legitimate extensions to it?",
+      "resolution_mechanism": "Analysis of middlebox behavior: do they replay compliant state transitions transparently, or do they rewrite headers/sequences in ways that modify the endpoint state machine logic? Examination of whether middleboxes create new failure modes not predicted by the state diagram.",
+      "impact": "If transparent replay: mountain constraint holds end-to-end, middleboxes are orthogonal. If rewriting occurs: a secondary constraint (middlebox_interception) emerges at tangled_rope or snare level, decomposing the network into endpoint mountains + middlebox extraction. Story should add network.affects_constraints link to middlebox_interception if high confidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether middleboxes violate or legitimately extend the state machine"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The TCP state machine defined in RFC 9293 governs the lifecycle of every TCP connection: SYN-RECEIVED \u2192 ESTABLISHED \u2192 FIN-WAIT-1 \u2192 FIN-WAIT-2 \u2192 TIME-WAIT \u2192 CLOSED. This constraint is invariant across all implementations, operating systems, and network topologies. It emerges from the mathematical structure of stateful connection negotiation over unreliable packet delivery, not from policy, convention, or institutional agreement. The state machine is an immutable logical structure \u2014 no alternative path exists from SYN to ESTABLISHED that maintains correctness. Deviating from the prescribed transitions results in immediate incompatibility with compliant peers. The constraint exhibits zero degrees of freedom for all agent positions: endpoints must implement it exactly, standards bodies can only codify it, and open-source communities converge on it through network effects. The theater ratio (0.15) reflects minimal performative content \u2014 the state machine is purely functional with no ritual or ceremonial overhead. The extractiveness (0.08) is extremely low because the constraint imposes no asymmetric burden: all agents face identical logical requirements regardless of power position.",
+    "key_agents": [
+      "TCP Endpoint (Client): Logical actor (analytical/analytical) \u2014 bound by the state machine at the protocol level; no exit option",
+      "TCP Endpoint (Server): Logical actor (analytical/analytical) \u2014 bound by the state machine at the protocol level; no exit option",
+      "TCP Implementation (Stack): Logical actor (powerless/trapped) \u2014 must execute the state machine exactly or fail interoperability; zero freedom",
+      "Standards Body (IETF/RFC Authority): Institutional actor (institutional/arbitrage) \u2014 codifies the immutable structure; cannot negotiate or modify it",
+      "Open-Source Developer Community: Organized actor (organized/constrained) \u2014 implements the constraint; constrained by network effects and compatibility requirements",
+      "Analytical Observer (Formal Verification): Symbolic actor (analytical/analytical) \u2014 can prove the state machine's logical necessity and invariance"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Extremely low. The TCP state machine imposes identical constraints on all agents \u2014 no agent benefits at the expense of another. The constraint is purely structural, not distributive. There is no extraction because there is no asymmetry: endpoints, stacks, standards bodies all face the same logical necessity. The minimal non-zero value (0.08 vs 0.00) reflects that formal specification carries small institutional overhead (RFC document maintenance, version control, obsolescence procedures), but this is negligible relative to the constraint's logical content. Suppression (0.03): Minimal. Agents cannot avoid the state machine, but suppression is not meaningful because there are no alternatives to suppress \u2014 the state machine is not competing with other mechanisms; it is the only mechanism that solves the problem of stateful connection negotiation. Agents experience the constraint as mathematical necessity, not as coercion. Theater ratio (0.15): Very low. The state machine has minimal performative content \u2014 it is purely functional. The small non-zero value (0.15 vs 0.00) reflects that RFC specification documents contain explanatory prose and rationale sections that exceed the bare logical minimum, but the core specification is direct and functional.",
+    "perspectival_gap": "All four perspectives unanimously classify the constraint as Mountain. There is no perspectival gap because the constraint exhibits zero degrees of freedom across all observation contexts. The endpoint, the standards body, the developer community, and the formal logician all see the same immutable structure. This consensus is itself evidence of the mountain classification: constraints that appear identical from radically different perspectives (powerless vs institutional, immediate vs civilizational, trapped vs arbitrage) are typically natural laws. The absence of a perspectival gap is the hallmark of universality.",
+    "directionality_logic": "Directionality (d) is undefined for this constraint because there are no beneficiaries or victims \u2014 the constraint is purely structural, not distributive. All agents occupy identical logical positions relative to the state machine. The sigmoid function f(d) does not apply because d does not exist: there is no extraction flow from any agent to any other. The constraint is invariant under all permutations of agent power, time horizon, exit options, and spatial scope because the logical structure is universal. This is the defining characteristic of a mountain: it imposes identical constraints on all agents, with no asymmetry in burden or benefit.",
+    "mandatrophy_analysis": "PURE MOUNTAIN: The TCP state machine resolves mandatrophy trivially because it exhibits zero extraction. There is no risk of mislabeling coordination as extraction or vice versa: the constraint is neither. It is purely structural, imposing identical logical requirements on all agents without creating asymmetric benefit or burden. All perspectives converge on Mountain classification, confirming the absence of extractive or coordinative dynamics. The constraint serves as a baseline reference for what a true natural law looks like in the technological domain."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_congestion_control",
+      "middlebox_interception"
+    ],
+    "dual_formulation_note": "RFC 9293 state machine is a pure structural constraint. Congestion control algorithms (CUBIC, BBR) and middlebox interception represent separate constraints that operate *within* the state machine's framework but add extraction or hybrid dynamics. The decomposition is: (1) rfc9293_state_machine (mountain, \u03b5=0.08), (2) tcp_congestion_control (tangled_rope, \u03b5\u22480.35, because window-scaling creates asymmetric information advantage), (3) middlebox_interception (snare, \u03b5\u22480.52, because NAT/firewall state rewriting captures traffic flow control). All three are linked: the state machine is upstream; the others operate within it."
+  },
+  "directionality_overrides": []
+}

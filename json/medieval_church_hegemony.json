@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "medieval_church_hegemony",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mch"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Medieval Ecclesiastical Hegemony",
+    "topic_domain": "religious/economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_clergy",
+      "papal_hierarchy"
+    ],
+    "victims": [
+      "laity",
+      "peasantry",
+      "dissident_theologians"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Peasant or Laborer",
+      "comment": "PERSPECTIVE 1: THE PEASANT/LABORER (SNARE) \u2014 Trapped within the constraint system with no exit options. Required to tithe (10% extraction), denied direct access to scripture (Latin barrier), subject to excommunication which ends social standing and spiritual salvation claims. The laity experiences maximum coercion with minimal alternatives. Suppression operates through both material extraction and spiritual terror."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Dissident Theologian",
+      "comment": "PERSPECTIVE 2: THE DISSIDENT THEOLOGIAN (SNARE) \u2014 Trapped by institutional monopoly on scriptural interpretation. Challenges to Church doctrine face suppression through excommunication, imprisonment, or execution. The constraint enforces theological orthodoxy through structural elimination of alternatives. Exit is blocked by the Church's exclusive access to legitimacy and its capacity to suppress competing claims."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Clergy",
+      "comment": "PERSPECTIVE 3: THE INSTITUTIONAL CLERGY (ROPE) \u2014 Experiences the hegemony as a coordination mechanism solving the problem of collective spiritual authority. Clergy members benefit from institutional backing, career advancement, material support (tithing revenue), and social status. The constraint appears to them as providing legitimate coordinating function: the Church standardizes doctrine, manages sacramental authority, and enables organizational infrastructure. Net beneficiary with arbitrage options."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Papal Hierarchy",
+      "comment": "PERSPECTIVE 4: THE PAPAL HIERARCHY (ROPE) \u2014 Sees the hegemony as a complex coordinating institution providing theological standardization, military-religious alliance capacity (crusades), and political leverage. The papacy experiences genuine coordination benefits: the constraint enables monopoly extraction but also creates stable institutional structure that concentrates power effectively. Arbitrage options include alliance-shifting, excommunication leverage, and doctrinal authority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Local Noble or Merchant",
+      "comment": "PERSPECTIVE 5: THE LOCAL NOBLE/MERCHANT (TANGLED ROPE) \u2014 Occupies a hybrid position. Receives benefits from Church legitimation of land holdings, ecclesiastical blessing of commercial transactions, and spiritual authority reinforcement of social hierarchy. But also subject to tithing demands, restricted economic activities (usury prohibitions), and risk of excommunication that threatens social standing. Exit is constrained: cannot fully exit without losing legitimacy, but has some negotiating power through donations, patronage, and political leverage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Monastic Scholarly Order",
+      "comment": "PERSPECTIVE 6: THE MONASTIC SCHOLARLY ORDER (PITON) \u2014 Maintains the hegemony through performative scholarship and scriptural custody. The constraint persists partly through genuine knowledge preservation function (monasteries as libraries) but substantially through theater: the mystification of Latin literacy, ritualized copying of texts, and deliberate restriction of textual access all serve to maintain the monopoly on interpretation. The monastic order's primary function (preservation) has degraded into a maintenance function (enforcing restriction). Theater ratio is high because the restriction mechanism is increasingly performative as literacy alternatives emerge (illuminated manuscripts, vernacular transmission)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized Authority View)",
+      "comment": "PERSPECTIVE 7: THE ANALYTICAL OBSERVER / NATURALIZED AUTHORITY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some form of spiritual authority and interpretive hierarchy is inherent to religious systems. This perspective naturalizes the constraint as an immutable property of how organized religion functions: claims to exclusive salvific access are intrinsic to monotheistic religions; interpretive authority is necessarily concentrated. However, the structural data contradicts this classification \u2014 the specific mechanisms (Latin monopoly, tithing enforcement, excommunication leverage) are contingent institutional arrangements, not natural laws. This is a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "latin_literacy_bottleneck_permanence",
+      "question": "Is the Latin literacy monopoly structural to ecclesiastical authority or contingent to medieval technology and education distribution?",
+      "resolution_mechanism": "Historical analysis of Church response to vernacular translation movements; empirical data on literacy rates and Church suppression of polyglot scripture; longitudinal tracking of excommunication rates for translation work across the medieval period",
+      "impact": "If structural: Latin monopoly is inherent to institutional religious authority (supports mountain view). If contingent: the monopoly is a policy choice that depends on enforcement and can be reversed through literacy expansion (supports snare view).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Latin monopoly is inherent or policy-contingent"
+    },
+    {
+      "id": "tithing_extraction_versus_institutional_maintenance",
+      "question": "What portion of tithing revenue goes to genuine institutional coordination (church maintenance, clergy support, poor relief) versus extractive consolidation (papal political power, military campaigns)?",
+      "resolution_mechanism": "Historical accounting of Church revenue flows; analysis of budget allocation across dioceses; comparison of poor relief spending to military/political expenditure ratios",
+      "impact": "If coordination-dominant (>60% coordination): constraint may be tangled_rope rather than snare. If extraction-dominant (>60% extraction): confirms snare classification and high base_extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ratio of tithing used for institutional maintenance versus extraction"
+    },
+    {
+      "id": "excommunication_structural_effectiveness",
+      "question": "How much of excommunication's power derives from genuine theological belief versus social coercion leveraging Church monopoly on community ritual?",
+      "resolution_mechanism": "Comparative analysis of excommunication impact in regions with competing religious authority; psychological/sociological evidence on belief vs. social enforcement; historical records of resistance to excommunication when alternatives existed",
+      "impact": "If belief-dominant: suppression relies on internalized spiritual conviction, constraint is less coercive (lower suppression). If coercion-dominant: suppression relies on social elimination via ritual monopoly, constraint is highly coercive (higher suppression, confirms snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether excommunication power is theological or structural-coercive"
+    },
+    {
+      "id": "reformation_timing_and_constraint_degradation",
+      "question": "Did the Reformation succeed because the medieval hegemony had degraded (theater_ratio rising, enforcement costs rising) or did it create the conditions for degradation?",
+      "resolution_mechanism": "Timeline analysis of enforcement costs, suppression intensity, and theater_ratio in the 100 years before Reformation; correlation between printing press literacy expansion and Church response; economic analysis of tithing burden and resistance patterns",
+      "impact": "If pre-degraded: constraint was already piton before Reformation (supports theory of institutional inertia). If created by Reformation: constraint remained snare until theological challenge materialized (supports theory of ideological displacement).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Reformation was response to degraded constraint or cause of degradation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "The medieval ecclesiastical hegemony represents a multi-layered constraint system where the Catholic Church monopolizes not only spiritual authority but also institutional legitimacy, literacy, and the mechanisms of social belonging. The constraint operates through three overlapping enforcement mechanisms: (1) Economic extraction via mandatory tithing (10% tax on agricultural produce and commerce), (2) Epistemic control via Latin-only liturgy and restricted textual access, and (3) Social exclusion via excommunication threat that eliminates access to community ritual, sacraments, and legitimacy. The constraint exhibits all six DR types from different perspectives, revealing deep structural tensions between coordination functions (genuine spiritual authority, institutional stability) and extraction mechanisms (wealth concentration, interpretive monopoly, behavioral control). The church's institutional position as the sole arbiter of salvation creates a binding constraint on the laity that combines coercion, belief capture, and structural elimination of alternatives. Theater ratio (0.68) reflects significant performative content: the Latin liturgy, monastic scholarship, and excommunication rituals maintain the monopoly's legitimacy through mystification rather than through functional necessity. The constraint's extractiveness increased from 0.45 to 0.58 over the first 500 years of the medieval period as papal power consolidated and institutional mechanisms became more elaborate, then plateaued as enforcement costs and resistance patterns stabilized.",
+    "key_agents": [
+      "Peasantry and Laity: Primary victims (powerless/trapped) \u2014 subject to mandatory tithing, denied scriptural access, vulnerable to excommunication",
+      "Dissident Theologians: Secondary victims (powerless/trapped) \u2014 suppressed through institutional monopoly on interpretation and threat of execution/imprisonment",
+      "Institutional Clergy: Primary beneficiaries (institutional/arbitrage) \u2014 receive institutional support, social status, material sustenance from tithing, career advancement",
+      "Papal Hierarchy: Primary beneficiary (organized/arbitrage) \u2014 concentrates political and spiritual power, directs military campaigns, leverages excommunication for political control",
+      "Local Nobility and Merchants: Hybrid position (moderate/constrained) \u2014 benefit from Church legitimation but constrained by usury prohibitions and tithing demands",
+      "Monastic Scholarly Orders: Institutional maintenance (institutional/constrained) \u2014 preserve and restrict textual access; maintain monopoly through controlled scriptural custody",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (Latin restriction, tithing, excommunication) as inherent properties of religion"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High moderate. The Church extracts approximately 10% of agricultural output and commercial transaction value through tithing, representing significant material extraction. However, the extraction is not as severe as pure predation (0.70+) because much tithing revenue is cycled back into institutional infrastructure (church maintenance, poor relief programs, clergy support) that provides some coordination benefit. The net extraction rate reflects that while the laity bears a real tax burden, some portion funds genuine public goods. Suppression (0.72): High. Multiple mechanisms suppress alternatives to the hegemony: (a) Institutional monopoly on scriptural interpretation enforced through excommunication; (b) Latin language barrier preventing direct textual access; (c) Career and physical elimination of dissident theologians; (d) Social coercion via excommunication threat that eliminates community membership. The laity cannot easily exit because the Church controls the sole path to perceived salvation, and excommunication carries severe social costs. Theater ratio (0.68): Moderate-high. Significant performative content in the constraint mechanism: Latin liturgy is presented as sacred necessity but functions to maintain interpretive monopoly; monastic scholarship is presented as knowledge preservation but functions to control textual access; excommunication ritual is presented as spiritual judgment but functions as social exclusion enforcement. However, the theater is not overwhelming (not 0.85+) because the constraint has genuine institutional coordination functions \u2014 standardized doctrine, stable authority hierarchy, regular ritual provision \u2014 that laity perceive as valuable even when experiencing extraction.",
+    "perspectival_gap": "The medieval ecclesiastical hegemony exhibits maximal perspectival divergence. Powerless agents (peasantry, dissident theologians) perceive pure extraction via institutional monopoly; they classify the constraint as Snare with no exit and maximum coercion. Institutional agents (clergy, papacy) perceive legitimate coordinating function providing spiritual authority, doctrinal standardization, and organizational infrastructure; they classify as Rope with benefit flows toward them. Local nobility perceive mixture of legitimation benefits (Church blessing of land holdings and commercial authority) and extraction constraints (tithing demands, behavioral restrictions, usury prohibitions); they classify as Tangled Rope with constrained exit. The monastic order perceives its own function as degraded \u2014 knowledge preservation and textual preservation have become maintenance mechanisms for an exclusive control system; they perceive Piton despite institutional status. The analytical observer who naturalizes the arrangement as inherent to monotheistic religion risks false-summit classification, misunderstanding the contingency of specific enforcement mechanisms (Latin exclusion, excommunication leverage, tithing extraction rates). The gap between victim perception (snare, trapped) and beneficiary perception (rope, coordinating) is the structural hallmark of this constraint.",
+    "directionality_logic": "Directionality values (d) are computed from each agent's structural position relative to the extraction flow. Powerless agents with trapped exit (peasantry, dissident theologians) derive high d (~0.90-0.95) because they bear the constraint's costs with no alternatives. Institutional agents with arbitrage exit (clergy, papacy) derive low d (~0.10-0.20) because they benefit from the constraint and can shift alliances or interpretations. Moderate agents with constrained exit (local nobility) derive mid d (~0.50-0.60) because they experience mixed costs and benefits. The Church's monopoly on salvation claims creates particularly high d for powerless agents because the exit cost is existentially severe: excommunication is perceived as damnation, not merely social exile. The constraint's effectiveness as a snare depends critically on this existential exit cost \u2014 if salvation monopoly perception weakens, d values would drop and the classification would shift toward tangled_rope or even rope from some perspectives. The monopoly's power is belief-dependent but enforcement is structural.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: The medieval ecclesiastical hegemony resolves the mandatrophy by showing that the constraint is NOT inherently a snare \u2014 it is a snare only from the perspective of powerless, trapped agents. From the perspective of institutional beneficiaries, it is a legitimate (if concentrated) coordination mechanism. The constraint's classification depends entirely on the observer's structural position: trapped laity perceive snare; beneficiary clergy perceive rope; analytical observer risks naturalizing either through institutional framing. The true insight is that the constraint is ACTUALLY a snare-in-rope-clothing: it provides real coordination functions (theological standardization, ritual provision, institutional stability) that laity value, but these functions are bundled inseparably with extraction mechanisms (tithing, interpretive monopoly, excommunication coercion) that laity cannot escape. The laity cannot opt for 'just the coordination, skip the extraction' \u2014 the constraint is designed such that extraction enforcement (excommunication threat) IS the mechanism that makes the coordination stick. This is why the snare classification is most accurate from the victim perspective: the extraction mechanisms are necessary for the constraint's enforcement, not separable from the coordination function. The Reformation's success came not from exposing the extraction (which was always visible to victims) but from providing alternative coordination mechanisms (Protestant communities, vernacular scripture, distributed spiritual authority) that decoupled coordination from extraction. The constraint shifted from snare (inescapable extraction bundled with valuable coordination) toward tangled_rope (mixed benefits/costs with exit options) as alternatives emerged."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "peasant_labor_obligation",
+      "literacy_monopoly",
+      "excommunication_social_exclusion"
+    ],
+    "dual_formulation_note": "The medieval ecclesiastical hegemony is a compound constraint system encompassing three structurally distinct enforcement mechanisms: (1) Economic tithing extraction, (2) Epistemic control via Latin monopoly, (3) Social exclusion via excommunication. Each mechanism has its own extractiveness profile and could be decomposed into separate constraint stories. However, their structural coupling \u2014 the ways in which each mechanism reinforces the others \u2014 justifies the unified analysis. Tithing enforcement relies on excommunication threat; excommunication effectiveness relies on existential perception shaped by Latin liturgy control; Latin control relies on clerical monopoly maintained by tithing revenue. The network edges indicate upstream causal dependencies: the ecclesiastical hegemony affects downstream constraints by providing the institutional framework for all three mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

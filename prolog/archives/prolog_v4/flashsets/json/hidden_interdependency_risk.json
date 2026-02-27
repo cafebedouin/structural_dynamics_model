@@ -1,0 +1,113 @@
+{
+  "header": {
+    "constraint_id": "hidden_interdependency_risk",
+    "version": "1.0",
+    "generated_date": "2024-03-07",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Shadow Foundation Trap",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "shadow_foundation_operator"
+    ],
+    "victims": [
+      "dependent_businesses"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Dependent Business",
+      "comment": "Perspective of a business critically dependent on the shadow foundation. Switching costs or lack of viable alternatives create a trapped situation, leading to a snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Shadow Foundation Operator",
+      "comment": "Perspective of the operator of the shadow foundation. They benefit from the dependence of multiple businesses and can exert influence or extract value. They have arbitrage exit options because they can shift their strategy or sell the underlying dependency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective observing the entire system. Recognizes the hidden interdependency and the potential for systemic risk and extraction, thus identifying it as a tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "discovery_of_dependency",
+      "question": "When will the dependency become widely known?",
+      "resolution_mechanism": "Public disclosure, technical analysis, or market event.",
+      "impact": "Alters power dynamics, potentially reducing extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uncertainty about the visibility of the dependency."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Shadow Foundation Trap occurs when multiple businesses, seemingly independent, rely on a common, non-obvious low-level dependency. This creates a single point of failure or control, allowing the dependency's operator to exert influence or extract value. The hidden nature of the dependency amplifies the risk and suppression.",
+    "key_agents": [
+      "Dependent Businesses: Target businesses reliant on the shadow foundation (powerless/trapped)",
+      "Shadow Foundation Operator: The entity controlling the underlying dependency (institutional/arbitrage)"
+    ],
+    "logic_rationale": "The extractiveness is rated high because the shadow foundation operator can leverage the dependency for significant value extraction. Suppression is high because the hidden nature and lack of alternatives make it difficult for dependent businesses to exit.",
+    "perspectival_gap": "The dependent businesses experience a snare, feeling trapped and exploited. The shadow foundation operator benefits from the situation, seeing it as a coordination mechanism. The analytical observer recognizes the systemic risk and potential for abuse, classifying it as a tangled rope.",
+    "directionality_logic": "The shadow foundation operator benefits from the dependency (d close to 0), while the dependent businesses are targeted (d close to 1). The derived chi reflects this asymmetry."
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

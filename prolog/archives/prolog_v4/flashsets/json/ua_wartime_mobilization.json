@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "ua_wartime_mobilization",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.8,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Wartime Mobilization Law in Ukraine",
+    "topic_domain": "political/military",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ukrainian_armed_forces",
+      "ukrainian_state"
+    ],
+    "victims": [
+      "ukrainian_male_population",
+      "ukrainian_economy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Ukrainian Male (18-60)",
+      "comment": "Perspective 1: Individual Ukrainian Male (Snare) - Limited exit options (legally trapped within the country), high suppression of alternatives (mandatory conscription), and high extraction (risk of death/injury, loss of income, disruption of life)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ukrainian Economy",
+      "comment": "Perspective 2: The Ukrainian Economy (Tangled Rope) - Constrained by the loss of labor, but benefits from the defense of its territory and sovereignty. Experiences both extraction (economic disruption) and coordination (defense against aggression)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Ukrainian Armed Forces",
+      "comment": "Perspective 3: The Ukrainian Armed Forces (Rope) - Benefits from the influx of manpower, enabling it to defend the country. Experiences the constraint as coordination \u2013 solving a collective action problem of national defense."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ukrainian State",
+      "comment": "Perspective 4: The Ukrainian State (Tangled Rope) - Benefits from increased military strength and territorial defense, but constrained by the economic costs and social disruption of mobilization. Active enforcement is required to maintain conscription."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Perspective 5: The Analytical Observer (Tangled Rope) - Sees the mobilization law as a necessary but costly measure for national survival. Recognizes both the coordination benefits (national defense) and the extraction costs (individual and economic)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_economic_impact",
+      "question": "What will be the long-term economic impact of mass mobilization on Ukraine's future economic prospects?",
+      "resolution_mechanism": "Economic modeling and analysis of post-war recovery scenarios, considering factors such as labor force participation, investment, and technological innovation.",
+      "impact": "If the economic impact is severe, it could lead to long-term decline and social instability, requiring significant international aid and reconstruction efforts. If manageable, Ukraine can rebuild its economy and integrate with European markets.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term economic impact of mobilization"
+    },
+    {
+      "id": "social_and_demographic_consequences",
+      "question": "What will be the social and demographic consequences of mass mobilization, including potential brain drain, gender imbalances, and psychological trauma?",
+      "resolution_mechanism": "Sociological studies and demographic analysis of post-war population trends, considering migration patterns, birth rates, and mental health outcomes.",
+      "impact": "If the social and demographic consequences are severe, it could undermine Ukraine's social fabric and future development. If relatively mild, Ukraine can address these challenges through targeted social programs and reconciliation efforts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Social and demographic consequences of mobilization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "In response to the full-scale Russian invasion, the Ukrainian state enacted and enforces a general mobilization law. This law mandates the conscription of eligible male citizens (typically 18-60) into the armed forces, with limited exceptions. While necessary for national defense, the mobilization law also entails significant costs for individuals, the economy, and society.",
+    "key_agents": [
+      "Ukrainian Male Population: Primary target (powerless/trapped) - bears the cost of conscription, potential injury or death, and disruption of life.",
+      "Ukrainian Armed Forces: Primary beneficiary (institutional/arbitrage) - receives manpower to defend the country.",
+      "Ukrainian State: Secondary beneficiary (institutional/constrained) - benefits from enhanced military strength but constrained by economic and social costs.",
+      "Ukrainian Economy: Secondary target (moderate/constrained) - suffers from labor shortages and economic disruption, but benefits from territorial defense.",
+      "Analytical Observer: Sees the mobilization law as a necessary but costly measure (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (0.70): High. The mobilization law imposes significant costs on individuals, including the risk of death or injury, loss of income, and disruption of life. Suppression (0.80): Very High. The law mandates conscription with limited exceptions, effectively suppressing alternative options for eligible citizens. Theater Ratio (0.30): Low. The mobilization is primarily functional, focused on generating military manpower for national defense, with relatively little performative or theatrical activity.",
+    "perspectival_gap": "The individual Ukrainian male experiences the mobilization law as a snare, with limited exit options and high extraction. The Ukrainian Armed Forces experience it as a rope, enabling them to defend the country. The Ukrainian state and economy experience it as a tangled rope, with both benefits and costs. The analytical observer sees the overall picture and recognizes the trade-offs involved.",
+    "directionality_logic": "The directionality is determined by the structural relationship of each agent to the mobilization law. Individuals targeted for conscription experience high extraction, while the armed forces that receive manpower benefit. The state and economy experience both benefits and costs, resulting in intermediate directionality.",
+    "mandatrophy_analysis": "The classification prevents mislabeling by recognizing the complex interplay of coordination and extraction. While the mobilization law is necessary for national defense (coordination), it also imposes significant costs on individuals and the economy (extraction). A pure coordination or extraction classification would fail to capture this complexity. The tangled rope classification reflects the inherent trade-offs and the active enforcement required to maintain the mobilization."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

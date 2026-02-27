@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: constraint_borsuk_ulam
+% CONSTRAINT STORY: borsuk_ulam_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-26
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_borsuk_ulam, []).
+:- module(constraint_borsuk_ulam_theorem, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,9 +41,7 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -53,17 +52,30 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: constraint_borsuk_ulam
+ *   constraint_id: borsuk_ulam_theorem
  *   human_readable: Borsuk-Ulam Theorem
- *   domain: mathematical
+ *   domain: mathematical/topology
  *
  * SUMMARY:
- *   The Borsuk-Ulam theorem states that for any continuous function mapping an n-dimensional sphere into n-dimensional Euclidean space, there exists a pair of antipodal points on the sphere which are mapped to the same point in Euclidean space. In simple terms, there are always two points directly opposite each other on the Earth (assuming it's a perfect sphere) with the exact same temperature and barometric pressure. This theorem can be seen as a constraint on what is mathematically possible.
+ *   The Borsuk-Ulam theorem is a foundational result in algebraic topology
+ *   established by Karol Borsuk and Stanislaw Ulam in 1933. It states that
+ *   for any continuous function f: S^n → R^n, there exist antipodal points p
+ *   and -p on the n-sphere S^n such that f(p) = f(-p). This is a constraint
+ *   of pure mathematical necessity — a logical consequence of the topological
+ *   properties of spheres and continuous maps. It is not imposed by any
+ *   agent, enforced by any institution, or contingent on any empirical
+ *   condition. The theorem is invariant: all valid proofs reach identical
+ *   conclusions, all measurement frameworks (homological, fixed-point,
+ *   covering space) confirm the same result, and no alternative formulation
+ *   of standard topology can escape it. This constraint is the canonical
+ *   example of a mountain in the Deferential Realism framework — irreducible,
+ *   universal, and transparent to all observers.
  *
- * KEY AGENTS (by structural relationship):
- *   - Mathematicians: Primary analytical observer (analytical/analytical) — understands the theorem.
- *   - Engineers designing sensors: Constrained by limits on sensor placement (moderate/constrained).
- *   - Theoretical physicists: Beneficiary of the mathematical structure (analytical/analytical). Provides constraints on their models.
+ * KEY AGENTS:
+ *   - Applied Mathematicians/Engineers: Structural agents whose continuous maps are constrained to satisfy antipodal collapsing — zero exit options relative to this topological fact
+ *   - Mathematical Researchers: Community that accepts Borsuk-Ulam as foundational knowledge — cannot collectively circumvent the constraint without abandoning standard topology
+ *   - Computational Systems: Any algorithm or numerical method attempting continuous mappings from S^n to R^n must respect the antipodal collapsing property
+ *   - Analytical Observer: Civilizational perspective confirming invariance across all measurement frameworks and time horizons
  */
 
 /* ==========================================================================
@@ -71,100 +83,57 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(constraint_borsuk_ulam, 0.05).
-domain_priors:suppression_score(constraint_borsuk_ulam, 0.01).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(constraint_borsuk_ulam, 0.0).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(borsuk_ulam_theorem, 0.08).
+domain_priors:suppression_score(borsuk_ulam_theorem, 0.02).
+domain_priors:theater_ratio(borsuk_ulam_theorem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(constraint_borsuk_ulam, extractiveness, 0.05).
-narrative_ontology:constraint_metric(constraint_borsuk_ulam, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(constraint_borsuk_ulam, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(borsuk_ulam_theorem, extractiveness, 0.08).
+narrative_ontology:constraint_metric(borsuk_ulam_theorem, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(borsuk_ulam_theorem, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-narrative_ontology:constraint_metric(constraint_borsuk_ulam, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(constraint_borsuk_ulam, resistance, 0.05).
+narrative_ontology:constraint_metric(borsuk_ulam_theorem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(borsuk_ulam_theorem, resistance, 0.05).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(constraint_borsuk_ulam, mountain).
-narrative_ontology:human_readable(constraint_borsuk_ulam, "Borsuk-Ulam Theorem").
-narrative_ontology:topic_domain(constraint_borsuk_ulam, "mathematical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(borsuk_ulam_theorem, mountain).
+narrative_ontology:human_readable(borsuk_ulam_theorem, "Borsuk-Ulam Theorem").
+narrative_ontology:topic_domain(borsuk_ulam_theorem, "mathematical/topology").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(constraint_borsuk_ulam).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(constraint_borsuk_ulam). % Required for Tangled Rope
+domain_priors:emerges_naturally(borsuk_ulam_theorem).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-domain_priors:emerges_naturally(constraint_borsuk_ulam).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(constraint_borsuk_ulam, theoretical_physicists).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(constraint_borsuk_ulam, engineers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(constraint_borsuk_ulam, mountain,
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(constrained),
-            spatial_scope(global))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(constraint_borsuk_ulam, mountain,
+% PERSPECTIVE 1: TOPOLOGICAL INVARIANT — The Borsuk-Ulam theorem is a foundational theorem of algebraic topology asserting that for any continuous function f: S^n → R^n, there must exist antipodal points p and -p on the n-sphere such that f(p) = f(-p). This is a logical necessity following from fundamental properties of topological spaces and the properties of continuous maps. No agent can circumvent this: it is an immutable constraint on all possible continuous functions mapping n-spheres to n-dimensional Euclidean spaces. Classification: Mountain from all measurement angles.
+constraint_indexing:constraint_classification(borsuk_ulam_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(constraint_borsuk_ulam, mountain,
+% PERSPECTIVE 2: APPLIED MATHEMATICIAN — An applied mathematician or engineer designing a continuous mapping from S^n to R^n cannot avoid this constraint. The theorem guarantees that any such mapping will collapse antipodal pairs. This is not a restriction imposed by convention or institutional policy — it is a structural limit on the topology of all continuous functions. The applied mathematician has zero degrees of freedom relative to this constraint. Classification: Mountain.
+constraint_indexing:constraint_classification(borsuk_ulam_theorem, mountain,
+    context(agent_power(powerless),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 3: RESEARCH COMMUNITY — The mathematical research community treats Borsuk-Ulam as a foundational result that constrains all subsequent topological reasoning. No organized body of mathematicians can collectively vote to repeal or circumvent it. Any attempted alternative topology that violates Borsuk-Ulam would simply be a different mathematical structure, not a refutation of Borsuk-Ulam within standard topology. The research community has zero exit options and zero degrees of freedom relative to this theorem. Classification: Mountain.
+constraint_indexing:constraint_classification(borsuk_ulam_theorem, mountain,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 4: ANALYTICAL OBSERVER — From a meta-mathematical perspective, the Borsuk-Ulam theorem is invariant across all formulations, measurement frameworks, and observables. Whether stated via fixed-point theorems, covering space arguments, homology, or cohomology, the core structural constraint remains identical: antipodal collapsing is inevitable for continuous mappings from S^n to R^n. No observable, measurement basis, or alternative proof method changes the classification. Classification: Mountain.
+constraint_indexing:constraint_classification(borsuk_ulam_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -174,20 +143,30 @@ constraint_indexing:constraint_classification(constraint_borsuk_ulam, mountain,
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(constraint_borsuk_ulam_tests).
+:- begin_tests(borsuk_ulam_theorem_tests).
 
-test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(constraint_borsuk_ulam, TypeTarget, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(constraint_borsuk_ulam, TypeBeneficiary, context(agent_power(analytical), _, _, _)),
-    TypeTarget == TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(borsuk_ulam_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(borsuk_ulam_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(constraint_borsuk_ulam, ExtMetricName, E),
-    E =< 0.25. % Mountain or low-extraction Rope.
+    narrative_ontology:constraint_metric(borsuk_ulam_theorem, ExtMetricName, E),
+    domain_priors:suppression_score(borsuk_ulam_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(constraint_borsuk_ulam_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(borsuk_ulam_theorem),
+    narrative_ontology:constraint_metric(borsuk_ulam_theorem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(borsuk_ulam_theorem, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(borsuk_ulam_theorem_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -195,97 +174,49 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Borsuk-Ulam Theorem represents a fundamental mathematical constraint, and its existence has no extractiveness or suppression in a societal context. Therefore it is a mountain. Base extractiveness and suppression are set to minimal values.
+ *   Extractiveness (0.08): Minimal. The Borsuk-Ulam theorem asserts an existence claim — there must exist antipodal points mapping to the same image — but does not extract value from any agent. No asymmetric resource flow occurs. No agent is enriched at the expense of another. This is not extraction; it is a limit on all possible configurations. Base extraction ≤ 0.08 satisfies the mountain gate (ε ≤ 0.25). Suppression (0.02): Minimal. The theorem does not suppress alternatives through coercion or institutional power. Rather, it eliminates certain configurations as impossible. Suppression measures coercive maintenance of an arrangement; Borsuk-Ulam requires no enforcement — it is self-evident once the definitions are grasped. Suppression ≤ 0.02 satisfies the mountain gate (suppression ≤ 0.05). Theater ratio (0.15): Minimal. Proof and verification of Borsuk-Ulam are entirely functional — there is no performative component. The proof is transparent: the contrapositive (if no antipodal points collide, the map cannot be continuous) is verifiable by any mathematician. No ritual, ceremony, or institutional gatekeeping is required. Theater ratio = 0.15 (negligible) supports the mountain classification.
  *
  * PERSPECTIVAL GAP:
- *   The theorem is a mathematical truth, therefore the classification of 'mountain' will stay consistent. There is not a perspectival gap between groups.
+ *   There is no perspectival gap. All four perspectives classify identically as Mountain. This uniformity is itself the proof that the constraint is a mountain: no agent, no matter their power level, time horizon, exit options, or spatial scope, experiences a different classification. The applied mathematician and the analytical observer see the same constraint. This invariance across all (P,T,E,S) tuples is the defining signature of a mountain — it is not observer-dependent, it is not contingent, and it is not subject to negotiation.
  *
  * DIRECTIONALITY LOGIC:
- *   While the theorem places constraints on engineers (they must design around it when placing sensors), its core impact is as a fixed mathematical fact. The beneficiaries are physicists and other theorists who can rely on it for modeling reality.
+ *   The standard directionality chain (beneficiary/victim + exit options → d → f(d) → χ) does not apply to this constraint. Mountains have zero degrees of freedom in all indices. No agent benefits or bears costs relative to Borsuk-Ulam — the theorem is not a mechanism that extracts from anyone or coordinates anyone's behavior. It is a logical boundary condition that all continuous functions must satisfy. All d values default to the analytical context (d ≈ 0.73), and f(d) ≈ 1.15, but this produces χ = 0.08 × 1.15 × 1.0 ≈ 0.092, which remains well below extraction thresholds (χ ≤ 0.35). The directionality derivation confirms mountain classification.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification as a Mountain prevents the mislabeling of a fundamental constraint as a Snare. It is not extractive or coercive. It is an inherent limit of mathematical space.
+ *   NO MANDATROPHY: The Borsuk-Ulam theorem exhibits zero mandatrophy. Extraction is minimal (0.08), suppression is minimal (0.02), and all perspectives agree. The theorem neither masks coordination as extraction nor extraction as coordination. It is neither contingent nor performative. It is a pure topological fact with zero ambiguity. This constraint serves as a gold standard for mountain certification in the Deferential Realism framework.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_borsuk_ulam,
-    'Is this a genuine limitation on physical systems or merely a property of mathematical models?',
-    'Empirical testing of physical systems approaching the theoretical limits of the theorem.',
-    'If True: More stringent design constraints. If False: The theorem is less relevant to real-world engineering.',
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(constraint_borsuk_ulam, 0, 10).
+narrative_ontology:interval(borsuk_ulam_theorem, 0, 500).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(constraint_borsuk_ulam_tr_t0, constraint_borsuk_ulam, theater_ratio, 0, 0.0).
-narrative_ontology:measurement(constraint_borsuk_ulam_tr_t5, constraint_borsuk_ulam, theater_ratio, 5, 0.0).
-narrative_ontology:measurement(constraint_borsuk_ulam_tr_t10, constraint_borsuk_ulam, theater_ratio, 10, 0.0).
-
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(constraint_borsuk_ulam_ex_t0, constraint_borsuk_ulam, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(constraint_borsuk_ulam_ex_t5, constraint_borsuk_ulam, base_extractiveness, 5, 0.05).
-narrative_ontology:measurement(constraint_borsuk_ulam_ex_t10, constraint_borsuk_ulam, base_extractiveness, 10, 0.05).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-% narrative_ontology:coordination_type(constraint_borsuk_ulam, information_standard).
+narrative_ontology:coordination_type(borsuk_ulam_theorem, information_standard).
+narrative_ontology:affects_constraint(borsuk_ulam_theorem, hairy_ball_theorem).
+narrative_ontology:affects_constraint(borsuk_ulam_theorem, brouwer_fixed_point_theorem).
+narrative_ontology:affects_constraint(borsuk_ulam_theorem, topological_degree_conservation).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(constraint_borsuk_ulam, 0.01).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(constraint_borsuk_ulam, [other_constraint_id]).
+% DUAL FORMULATION NOTE:
+% Borsuk-Ulam is upstream of several derived topological constraints (hairy ball theorem, Brouwer fixed-point theorem). These are not decompositions but dependencies — they rely on Borsuk-Ulam's existence guarantees. All three constraints (Borsuk-Ulam, hairy ball, Brouwer fixed-point) are mountains with minimal extractiveness.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(constraint_borsuk_ulam, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

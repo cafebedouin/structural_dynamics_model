@@ -1,0 +1,162 @@
+{
+  "header": {
+    "constraint_id": "cuny_light_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cuny_light"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Metasurface Light Steering (CUNY ASRC)",
+    "topic_domain": "technology/physics/photonics",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "optical_systems_designers",
+      "adaptive_imaging_applications",
+      "lidar_and_sensing_platforms"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Optical Systems Designers",
+      "comment": "PERSPECTIVE 1: OPTICAL SYSTEMS DESIGNERS (ROPE) \u2014 Organized collective (photonics engineers, device manufacturers) benefits from mechanical-motion-free steering. The coordination function is direct: metasurface standard enables rapid prototyping and miniaturization. Low extraction \u2014 designers have alternative technologies (mechanical actuators, liquid crystals) and can migrate if metasurface ecosystem fails. This is pure coordination: the constraint solves a genuine collective action problem (standardizing on one steering mechanism reduces integration complexity)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "CUNY ASRC Research Program",
+      "comment": "PERSPECTIVE 2: CUNY ASRC RESEARCH PROGRAM (ROPE) \u2014 Institutional beneficiary (research institution) gains resources, publication venues, and technology transfer opportunities. The constraint is coordination for knowledge dissemination. Exit is high (arbitrage): CUNY can publish, license, pivot to other optical technologies. The research program experiences minimal coercion. The metasurface technology is freely publishable and has no lock-in effect on the institution."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Adaptive Imaging Applications (Commercial)",
+      "comment": "PERSPECTIVE 3: ADAPTIVE IMAGING APPLICATIONS (ROPE) \u2014 Powerful commercial sector (autonomous vehicles, surveillance, medical imaging) has resources and alternatives but benefits from mechanical-motion-free steering for integration into compact form factors. Exit is mobile: multiple steering technologies exist. Extraction is low because competition among steering modalities keeps any single technology from locking in customers. The constraint is pure coordination: 'adopt metasurface standard for this class of problems' with no asymmetric benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "LiDAR and Sensing Platforms (Defense/Commercial)",
+      "comment": "PERSPECTIVE 4: LIDAR AND SENSING PLATFORMS (ROPE) \u2014 Powerful sector (defense, aerospace, autonomous systems) seeks solid-state steering to reduce vibration sensitivity and power consumption. The metasurface technology enables new capability classes (phased-array steering without rotating parts). Exit is very high (arbitrage): defense can build alternative systems or use legacy mechanical steering. The technology is adopted because it solves a genuine engineering coordination problem, not because alternatives are blocked. Suppression is negligible."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Physics Community)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational/universal view, the metasurface steering constraint is a coordination mechanism for solving an engineering problem that has no fundamental lock-in or extraction. The physics community sees the technology as a toolkit enabling new capabilities. No asymmetric benefits, no coercion, no alternatives suppressed. Pure coordination: many actors adopt because it solves their problems simultaneously, not because they are forced or extractively benefited."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "efficiency_scaling_scalability",
+      "question": "Can metasurface steering maintain sub-wavelength efficiency as beam steering angles exceed 60 degrees, or do efficiency cliffs emerge that force fallback to mechanical steering for extreme angles?",
+      "resolution_mechanism": "Experimental beam steering tests across full angular range (0-180 degrees); efficiency mapping across frequency bands; comparison of theoretical diffraction limits vs achieved performance.",
+      "impact": "If efficiency maintained: metasurface is fully general-purpose steering. If efficiency cliffs emerge: metasurface is niche coordination (works best for \u00b145 degree range), reducing scope of coordination problem solved.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Efficiency scaling at large steering angles"
+    },
+    {
+      "id": "manufacturing_yield_maturity",
+      "question": "What yield rates are achievable in mass production of metasurface steering chips, and how sensitive is yield to fabrication parameter variation?",
+      "resolution_mechanism": "Manufacturing run data from multiple foundries; yield vs design complexity; statistical process control analysis.",
+      "impact": "If yield >90%: coordination function is robust, rope classification stable. If yield <70%: manufacturing brittleness may introduce extraction (only well-resourced firms can absorb losses), shifting toward snare or tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Manufacturing yield and scalability"
+    },
+    {
+      "id": "intellectual_property_barriers",
+      "question": "How concentrated are metasurface steering patents, and do patent pools or cross-licensing allow open access, or do a small number of firms control key design spaces?",
+      "resolution_mechanism": "Patent landscape analysis (USPTO, WIPO); licensing availability; freedom-to-operate assessments for new entrants.",
+      "impact": "If patents are open/cross-licensed: coordination remains pure (rope). If patent concentration exceeds 60% in single firms: rope degrades toward tangled_rope due to extraction through licensing gatekeeping.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Patent concentration and licensing barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.13
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Metasurface light steering represents a pure coordination mechanism in photonics. The CUNY ASRC work demonstrates a paper-thin chip that steers light electronically without mechanical motion, eliminating vibration, reducing power consumption, and enabling miniaturization across multiple application domains. The constraint is the alignment of optical system designers, commercial imaging platforms, and defense/sensing sectors on a common steering modality. All perspectives classify as Rope because the technology solves a genuine collective action problem with minimal asymmetric extraction. No actor is locked in \u2014 alternative steering technologies (mechanical gimbal, liquid crystal, acoustic modulation) remain available and competitive. The technology spreads because it enables new capabilities, not because alternatives are suppressed. The theater ratio is low because the functional benefit is direct and measurable: fewer moving parts, lower power, better reliability. There is no performative layer masking extraction.",
+    "key_agents": [
+      "CUNY ASRC Research Program: Institutional beneficiary (institutional/arbitrage) \u2014 develops and publishes the technology; experiences no lock-in or coercion",
+      "Optical Systems Designers: Organized collective (organized/mobile) \u2014 adopt metasurface standard to simplify integration; have alternative technologies available",
+      "Adaptive Imaging Applications: Powerful sector (powerful/mobile) \u2014 commercial and autonomous systems; benefit from compact steering; not dependent on metasurface",
+      "LiDAR and Sensing Platforms: Powerful sector (powerful/arbitrage) \u2014 defense and aerospace applications; high exit capacity; adopt for performance gains not forced adoption",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees pure coordination with no extraction or suppression"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. No agent experiences significant extraction because all have alternatives and all benefit symmetrically from coordination. The metasurface technology is genuinely beneficial for its use cases but does not lock in any actor. CUNY retains publication rights. Commercial actors can choose alternative steering. Defense applications can fall back to proven mechanical systems. The 0.08 reflects only the minimal asymmetry in timing: early adopters gain a few years of performance advantage, but this is a normal innovation timing differential, not extraction. Suppression (0.02): Negligible. No alternatives are blocked or penalized. Mechanical steering remains viable and preferable for some applications (thermal robustness, established supply chains). Suppression scales to zero because actors do not face barriers to exit or to using alternatives. Theater ratio (0.15): Very low. The functional content is high: metasurface steering actually does steer light with fewer moving parts. The performance gains are measurable (power, size, vibration). There is minimal performative layer \u2014 the technology does what it claims without hidden extraction mechanisms.",
+    "perspectival_gap": "All five perspectives converge on Rope classification with consistent reasoning. The gap between beneficiary and victim is zero because there are no victims \u2014 all perspectives identify beneficiaries only. The CUNY perspective focuses on knowledge creation and publication; the commercial perspectives focus on engineering capability; the defense perspective focuses on performance gains; the analytical perspective sees structural pure coordination. These gaps are not tensions but complementary views of the same coordination benefit. The invariance across perspectives (all Rope) is a signature of genuine coordination without extraction.",
+    "directionality_logic": "Each beneficiary group experiences low directionality (d \u2248 0.05-0.15) because they all have high exit capacity (arbitrage or mobile) and benefit symmetrically from the coordination. The sigmoid f(d) maps these low d values to slightly negative or near-zero effective extraction chi. No group is trapped or constrained. The absence of victims (empty base_properties.victims array) confirms that no agent bears asymmetric costs. The directional flow is symmetric: all actors gain from standardizing on one steering modality, and all retain capacity to defect to alternatives if metasurface performance deteriorates or costs rise.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy trivially: all six perspectives would classify as Rope (or possibly Mountain from the analytical view if viewing the underlying physics limit on steering efficiency). There is no ambiguity between pure coordination and pure extraction because the constraint exhibits all Rope signatures from every observer position. No perspective naturalizes extraction as law. The coordination function is explicit and measurable. The technology spreads by its own merit, not by suppression of alternatives. The mandatrophy is resolved by absence of the underlying ambiguity: this is unambiguous coordination, not masked extraction pretending to be coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "solid_state_phased_array_steering",
+      "integrated_photonics_ecosystem"
+    ],
+    "dual_formulation_note": "Metasurface light steering as a coordination mechanism is structurally distinct from the underlying physics constraints (diffraction efficiency limits, thermal stability). The physics constraints (electromagnetic steering efficiency, phase modulation bandwidth) are separate Mountain-type stories. This story models the institutional/engineering coordination layer where optical systems designers and commercial platforms align on a common steering modality."
+  },
+  "directionality_overrides": []
+}

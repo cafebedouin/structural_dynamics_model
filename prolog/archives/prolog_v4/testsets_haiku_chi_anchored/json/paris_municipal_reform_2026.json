@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "paris_municipal_reform_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pmr"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Paris Municipal Reform 2026 (Loi Maillard/PLM Reform)",
+    "topic_domain": "political/legal/municipal_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_center_right_coalition",
+      "fragmented_opposition_blocs"
+    ],
+    "victims": [
+      "electoral_proportionality",
+      "minority_representation_principle"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Small Minority Party (< 12% threshold)",
+      "comment": "PERSPECTIVE 1: SMALL MINORITY PARTY (SNARE) \u2014 Parties below the 12% threshold for bonus allocation have no exit. The 50%\u219225% reduction was meant to help them, but the majority premium still suppresses proportional representation. They cannot exit Paris politics; they are trapped in a system that systematically underweights their votes. d\u22480.92, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.60. High extraction: structural disadvantage with no alternative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Left-Green Coalition (Socialist/\u00c9cologiste bloc)",
+      "comment": "PERSPECTIVE 2: LEFT-GREEN COALITION (TANGLED ROPE) \u2014 Organized actors with significant vote share (20-30% estimated) benefit from the reduced majority premium relative to pre-2026 rules, gaining negotiating power in coalition scenarios. Constrained because they depend on Paris electoral outcomes and cannot easily relocate political base. The reform simultaneously extracts from them (smaller bonus than before) and enables them (better proportional representation). d\u22480.58, f(d)\u22480.74, \u03c3=0.8 \u2192 \u03c7\u22480.31. Mixed extraction; genuine coordination improvement through proportionality."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Center-Right Incumbent Coalition (LR/Renaissance/Modem alliance)",
+      "comment": "PERSPECTIVE 3: CENTER-RIGHT INCUMBENT (ROPE) \u2014 Benefits from the majority premium structure even at 25%, maintaining supermajority capacity with ~35-40% of votes. Has arbitrage: could exit Paris politics entirely or shift national focus. The reform is largely cosmetic for them \u2014 redistribution within the bonus zone. d\u22480.15, f(d)\u22480.02, \u03c3=0.8 \u2192 \u03c7\u2248-0.01. Minimal extraction; sees the reform as coordination (democratic legitimacy through modest proportionality gain)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Electoral Reform Movement (proportionality advocates)",
+      "comment": "PERSPECTIVE 4: ELECTORAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized advocates for proportional representation see the 2026 reform as a stepping stone toward full PR. The reduction from 50% to 25% is a sunset step: each successive reform erodes the majority premium further until true proportionality emerges. Constrained by political feasibility but seeing a trajectory. d\u22480.42, f(d)\u22480.48, \u03c3=0.8 \u2192 \u03c7\u22480.20. Moderate extraction from legacy system, but the sunset clause is embedded in the coalition platform (committed to further PR reforms)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Paris Municipal Administration",
+      "comment": "PERSPECTIVE 5: PARIS MUNICIPAL ADMINISTRATION (PITON) \u2014 The administrative apparatus (maire's office, councilors' staff, committee structure) largely persists regardless of coalition composition. The reform requires rhetorical adaptation (proportionality theater) but minimal functional reorganization. Theater ratio \u22480.64: the reform appears to democratize but administrative continuity absorbs whatever changes the coalition composition might imply. d\u22480.05, f(d)\u2248-0.12, \u03c3=0.8 \u2192 \u03c7\u2248-0.02. Institutional inertia masks functional change."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Electoral Systems Comparison)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/comparative perspective, the majority premium is both a coordination mechanism (ensures stable executive leadership) and an extraction mechanism (suppresses proportionality). The reduction from 50% to 25% suggests a hybrid system: partial coordination (bonus still exists), partial extraction (suppression remains). The analytical view depends on the jurisdiction's constitutional intent. Does the system prioritize stable governance (coordination frame) or representative legitimacy (extraction frame)? Both are defensible; the reform attempts to balance them. d\u22480.65, f(d)\u22481.02, \u03c3=0.8 \u2192 \u03c7\u22480.43. Genuine ambiguity resolved by constitutional design, not by logic alone."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "majority_premium_terminal_target",
+      "question": "Is the 25% majority premium the final stable equilibrium, or will further reforms continue eroding it toward full proportionality?",
+      "resolution_mechanism": "Monitor coalition platforms in 2028 elections; track legislative proposals for electoral law revisions at national and municipal levels; survey elite consensus on 'ideal' Paris governance structure",
+      "impact": "If stable at 25%: tangled_rope classification is terminal. If eroding further: scaffold classification is correct \u2014 the system is a stepping stone. If pressures reverse toward 50%: snare extraction is hidden behind temporary cosmetics.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether 25% is final or interim majority premium target"
+    },
+    {
+      "id": "coalition_fragmentation_boundary",
+      "question": "What vote-share fragmentation point makes executive stability impossible, forcing government collapse or grand coalitions?",
+      "resolution_mechanism": "Simulate 2026 and 2028 election scenarios with varying fragmentation; track coalitional stability over 6-year terms; compare to other French cities with varying bonus structures",
+      "impact": "If boundary < 35%: 25% bonus insufficient to prevent fragmentation crises; system degrades to gridlock. If boundary > 45%: 25% bonus still concentrates power excessively; reform insufficient. If 35-45%: reform hits a narrow stability band.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Coalition stability boundary as function of vote-share fragmentation"
+    },
+    {
+      "id": "small_party_mobilization_response",
+      "question": "Will the improved proportionality (50%\u219225% bonus reduction) trigger mobilization of parties in the 8-15% range, or do structural barriers prevent coalition-building?",
+      "resolution_mechanism": "Analyze 2026 campaign messaging and voter targeting by small parties; measure vote gains in groups previously below threshold; track coalition negotiation difficulty in post-2026 period",
+      "impact": "If mobilization strong: proportionality improvement is real; snare classification for small parties improves to constrained. If weak: structural barriers (ballot access, media access, threshold psychology) persist; snare classification remains despite bonus reduction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether sub-threshold parties will mobilize effectively under reduced bonus"
+    },
+    {
+      "id": "administrative_continuity_mechanism",
+      "question": "Does the majority premium reduction actually change governance outcomes (coalition composition, policy direction, committee leadership) or do administrative networks preserve continuity regardless?",
+      "resolution_mechanism": "Compare committee leadership, policy outcomes, and administrative decision-making pre-2026 vs post-2026; measure coalition volatility; track whether aide-m\u00e9moires and administrative culture shift or persist",
+      "impact": "If outcomes change substantially: reform has real effects; piton classification is too pessimistic. If outcomes persist: piton theater ratio (0.64) is accurate; administrative inertia masks political change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether majority premium reduction produces governance change or masks continuity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.68,
+      "id_override": "pmr_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.58,
+      "id_override": "pmr_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "id_override": "pmr_extract_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "pmr_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.6,
+      "id_override": "pmr_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64,
+      "id_override": "pmr_theater_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The 2026 Paris Municipal Reform (Loi du 11 ao\u00fbt 2025) reduces the Majority Premium (Prime Majoritaire) for the Council of Paris from 50% to 25% of seats. This reform exemplifies the structural tension between electoral legitimacy (proportional representation) and executive stability (concentrated power). The constraint exhibits a tangled_rope structure: it simultaneously enables minority representation (coordination function) and suppresses full proportionality (extraction function). The reform emerged as a compromise between the incumbent center-right coalition's interest in maintaining governing stability and growing pressure from left-green opposition and electoral reform advocates for proportionality. The 50%\u219225% reduction appears as a negotiated settlement, but it masks underlying uncertainties: Is this the final equilibrium or a stepping stone toward full PR? Will administrative inertia absorb the change or produce real governance shifts? Do small parties below the 12% threshold gain meaningful voice or remain structurally trapped?",
+    "key_agents": [
+      "Incumbent Center-Right Coalition (LR/Renaissance/Modem): Primary beneficiary (institutional/arbitrage) \u2014 maintains supermajority capacity with modest legitimacy gain from 'proportionality reform'",
+      "Left-Green Opposition (Socialist/\u00c9cologiste): Secondary beneficiary (organized/constrained) \u2014 gains better proportional representation and coalition leverage, though still constrained by Paris electoral base",
+      "Small Parties (< 12% vote share): Primary victim (powerless/trapped) \u2014 structural disadvantage remains despite bonus reduction; cannot exit Paris politics",
+      "Electoral Proportionality Principle: Systemic victim (powerless/trapped) \u2014 abstract collective good suppressed by majority premium structure",
+      "Paris Municipal Administration: Institutional actor (institutional/arbitrage) \u2014 maintains continuity through administrative networks regardless of coalition composition",
+      "Electoral Reform Movement: Organized advocate (organized/constrained) \u2014 sees reform as scaffolding toward full PR; committed to generational trajectory of bonus reduction"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The majority premium, even at 25%, systematically extracts legitimacy from smaller parties. Pre-2026 (50%), extraction was severe (\u03b5\u22480.68); post-2026 (25%), the mechanism persists but with reduced force. The trajectory shows declining extraction as the system moves toward proportionality (t0=0.68 \u2192 t6=0.52). However, 25% is not proportionality; it still privileges the largest coalition bloc by a factor of 2.5-3x relative to vote share. Suppression (0.58): Moderate-high. Structural barriers include ballot access costs, media attention concentration on large parties, voter psychology (threshold effects), and coalition negotiation complexity for small parties. The 2026 reform partially lowers these barriers but does not eliminate them. Parties in the 8-15% range now have realistic hopes for meaningful representation, improving from previous complete exclusion. Theater ratio (0.64): High-moderate. The reform is partly performative: it appears to democratize through proportionality language while preserving majority premium mechanics. The incumbent coalition frames the change as 'balancing stability with legitimacy,' which is theater \u2014 the real function (executive stability via bonus) persists. However, the theater is not maximal (0.70+) because the bonus reduction is genuine, not purely symbolic.",
+    "perspectival_gap": "This constraint generates significant perspectival divergence. The incumbent coalition sees coordination (Rope: 'we maintain stable governance while improving legitimacy'). The left-green opposition sees mixed extraction and coordination (Tangled Rope: 'we benefit from proportionality but remain constrained by the residual bonus'). Small parties see structural trap (Snare: 'the bonus reduction does not eliminate our disadvantage'). Electoral reform advocates see scaffolding (Scaffold: 'this is a step toward full proportionality; the sunset is committed in platform'). The administration sees inertia masked by cosmetics (Piton: 'coalition composition may shift but governance continuity persists'). The analytical observer sees genuine ambiguity (Tangled Rope: 'the system is simultaneously stabilizing and legitimizing; which is primary depends on constitutional intent'). This range of types from a single set of metrics illustrates how indexical position determines classification.",
+    "directionality_logic": "Center-right incumbent: Beneficiary + arbitrage \u2192 d\u22480.12, f(d)\u2248-0.04. Net beneficiary. The reform preserves their governing advantage; arbitrage means they could shift focus nationally if municipal politics became unfavorable. Left-green coalition: Victim (from prior extraction under 50% bonus) + constrained \u2192 d\u22480.58, f(d)\u22480.74. Moderate extraction. They benefit from the reform but remain constrained by Paris electoral outcomes; they cannot arbitrage to another jurisdiction. Small parties: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. High extraction. They bear structural disadvantage with no exit; Paris politics is not optional for localized parties. Electoral proportionality principle: Victim (abstract) + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction. The abstract principle of proportional representation cannot exit; it is systematically suppressed by the bonus structure. Administrative apparatus: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Minimal extraction; inertia dominates. Electoral reform movement: Organized + constrained \u2192 d\u22480.40, f(d)\u22480.40. Low-moderate extraction from legacy system; organized actors see a path forward (sunset to full PR).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the 50%\u219225% reduction is a genuine compromise rather than a false equilibrium. The reform both extracts (suppresses proportionality relative to a 1-person-1-vote ideal) and coordinates (stabilizes executive power, enables coalition-building). The classification as Tangled Rope reflects this irreducible ambiguity. The reform cannot be decomposed into 'pure extraction that looks like coordination' (Snare disguised) or 'pure coordination with minor extraction as theater' (Rope with theater). Instead, the extraction and coordination are structurally independent: the majority premium would suppress proportionality even if it perfectly ensured stable governance, and governance stability would require concentrated power even without proportionality suppression. The tangled_rope classification is terminal, not false. The perspectival divergence (incumbent\u2192Rope, opposition\u2192Tangled Rope, small parties\u2192Snare, reformers\u2192Scaffold, administration\u2192Piton, analyst\u2192Tangled Rope) confirms the hybrid structure: different structural positions genuinely experience different constraint types because they differently benefit from coordination and suffer from extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "french_municipal_suffrage",
+      "european_proportional_representation"
+    ],
+    "dual_formulation_note": "The Paris reform is downstream of broader French municipal governance principles and European electoral systems. The majority premium itself (constraint_id: majority_premium_principle) would be a separate higher-level constraint; this story focuses on the 50%\u219225% reform event as a distinct structural shift."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
+}

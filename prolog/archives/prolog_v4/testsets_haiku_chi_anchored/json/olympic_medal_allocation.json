@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "olympic_medal_allocation",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oly_medal"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Olympic Medal Allocation System",
+    "topic_domain": "social/sports_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealthy_sports_nations",
+      "ioc_bureaucracy",
+      "host_nation_prestige"
+    ],
+    "victims": [
+      "developing_nations",
+      "peripheral_sports",
+      "athlete_equity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Peripheral Nation Athlete",
+      "comment": "PERSPECTIVE 1: PERIPHERAL NATION ATHLETE (SNARE) \u2014 Athletes from developing nations face structural barriers: limited training facilities, insufficient coaching, inadequate funding, and talent drain to wealthy nations. The medal system incentivizes concentration of resources in wealthy countries. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96. Trapped exit; bears full cost of resource asymmetry."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Minor Sport Athlete",
+      "comment": "PERSPECTIVE 2: MINOR SPORT ATHLETE (SNARE) \u2014 Athletes in sports with low commercial appeal (race walking, modern pentathlon, badminton in non-Asian regions) face structural disadvantage. Funding flows to high-revenue sports; minor sports are constrained by the medal counting system's indifference to sport development equity. d\u22480.88, f(d)\u22481.32, \u03c3=1.2 \u2192 \u03c7\u22480.91. Trapped; extraction through resource starvation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Wealthy Sports Nation",
+      "comment": "PERSPECTIVE 3: WEALTHY SPORTS NATION (TANGLED ROPE) \u2014 Rich nations (USA, China, Russia, Japan, Germany) benefit from medal concentration and prestige accumulation, but are also constrained by Olympic governance rules, anti-doping obligations, and reputational risk. Exit is constrained because withdrawing means losing prestige investment. Benefits from coordination (international sport rules enable predictable competition). d\u22480.35, f(d)\u22480.35, \u03c3=1.2 \u2192 \u03c7\u22480.24. Mixed: benefits from coordination + extraction of prestige from weaker nations."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Olympic Committee",
+      "comment": "PERSPECTIVE 4: IOC BUREAUCRACY (ROPE) \u2014 The IOC's interests align with maintaining the medal system as-is: it guarantees participation, creates investment incentives from wealthy nations and hosts, and generates revenue through broadcasting and sponsorship. The IOC experiences the system primarily as a coordination mechanism for managing global competition. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Net beneficiary through arbitrage (sets rules, captures compliance value)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Development Coalition",
+      "comment": "PERSPECTIVE 5: DEVELOPMENT COALITION (TANGLED ROPE) \u2014 Developing nations' sports federations, coaches, and athletes' rights organizations recognize both the coordination value (Olympics provides legitimate competition pathway) and the extraction (resource concentration favors wealthy nations). They are constrained by dependence on Olympic funding and broadcast revenue. d\u22480.62, f(d)\u22480.88, \u03c3=1.2 \u2192 \u03c7\u22480.62. Significant extraction; some coordination benefit from infrastructure investment."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Host Nation Government",
+      "comment": "PERSPECTIVE 6: HOST NATION GOVERNMENT (PITON) \u2014 Host governments participate in Olympic hosting primarily for prestige, but the actual functional value has degraded: hosting costs have exploded, post-Olympic facilities often remain underutilized, and prestige gains are temporary. The commitment persists through institutional inertia (legacy expectations, sunk costs in bid processes). theater_ratio=0.68; much Olympic spectacle is performative (opening ceremonies, medals ceremonies) rather than functionally necessary. d\u22480.22, f(d)\u22480.12, \u03c3=1.2 \u2192 \u03c7\u22480.10. Degraded function; persistence through theater."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational view, resource concentration in competitive sport might appear immutable: wealthier nations will always have more athletes, better training, and more medals. This perspective risks naturalizing the contingent institutional structure as an inherent limit. However, the structural data (\u03b5=0.58, suppression=0.62) contradicts a mountain classification \u2014 the engine will identify this as a false summit, revealing that 'natural' medal inequality is actually maintained by institutional design choices (funding rules, talent recruitment, doping enforcement asymmetries)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "resource_concentration_threshold",
+      "question": "At what threshold of resource concentration (athlete-per-capita training funding ratio) does medal inequality become structurally inevitable rather than contingent on policy?",
+      "resolution_mechanism": "Comparative analysis of medal distribution across Olympic eras with different resource-sharing policies; correlation between funding equity interventions and medal distribution entropy",
+      "impact": "If threshold exists at current global inequality: extraction is structural (tangled rope confirmed). If no threshold: current inequality is policy-contingent (scaffold potential exists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold of resource concentration determining structural inevitability"
+    },
+    {
+      "id": "talent_development_independence",
+      "question": "Can developing nations build Olympic medal capacity through autonomous talent development infrastructure, or is external investment (wealthy nation coaching, facilities, competition access) structurally necessary?",
+      "resolution_mechanism": "Historical case study of nations that achieved medal count growth without significant external investment; analysis of medal trajectories for Kenya (distance running), Jamaica (sprinting), China (targeted sports)",
+      "impact": "If autonomous development possible: extraction is contingent on resource gatekeeping (snare confirmed for minor sports). If necessary: dependency is structural, and the snare classification is robust across development models.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether autonomous talent development is possible in Olympic sports"
+    },
+    {
+      "id": "medal_counting_system_alternatives",
+      "question": "Would alternative medal allocation systems (per-capita weighting, sport-equity normalization, cumulative development index) materially reduce extraction asymmetry, or do they merely performatively relocate the inequality?",
+      "resolution_mechanism": "Simulation of medal rankings under alternative systems; analysis of which nations gain/lose prestige under each system; examination of whether alternative systems attract genuine participation changes",
+      "impact": "If alternatives reduce inequality: current system is a policy choice (scaffold logic applies, sunset possible). If alternatives merely redistribute prestige: extraction is structural regardless of counting method (snare confirmed).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Effectiveness of alternative medal allocation systems"
+    },
+    {
+      "id": "suppression_enforcement_asymmetry",
+      "question": "Are doping enforcement, eligibility verification, and facility access standards applied uniformly across wealthy and developing nations, or is enforcement itself a vector for extraction?",
+      "resolution_mechanism": "Comparative analysis of doping investigation resources per nation; audit of facilities compliance verification; examination of suspension patterns by nation wealth and political alignment",
+      "impact": "If enforcement is asymmetric: suppression is actively maintained (snare confirmed). If enforcement is uniform: suppression is passive (athletes simply lack resources).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Asymmetry in Olympic enforcement standards"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The Olympic medal allocation system distributes prestige and resources among nations based on athletic performance measured in a uniform, universal medal count. The system is justified as meritocratic coordination \u2014 each nation's athletes compete fairly, and medals reflect performance. However, the structural reality exhibits all characteristics of a tangled rope hybrid: genuine coordination (Olympics provide legitimate international competition framework, promote sport development, generate global engagement) combined with asymmetric extraction (wealthy nations' resource concentration translates to medal concentration, prestige accumulation, and broadcasting revenue, while developing nations' athletes face structural barriers). The constraint has degraded over four Olympic cycles: extractiveness has increased from 0.35 (when broader participation and post-Cold War optimism reduced asymmetry perception) to 0.58 (as wealthy nations' dominance became mathematically entrenched and prestige concentration accelerated). Theater ratio increased from 0.42 to 0.68 as performance metrics (medal count) became divorced from functional sport development (most medal-count growth comes from concentration in a few high-revenue sports, not from distributed athletic development).",
+    "key_agents": [
+      "Peripheral Nation Athletes: Primary victims (powerless/trapped) \u2014 face structural resource barriers; extraction through resource starvation",
+      "Minor Sport Athletes: Primary victims (powerless/trapped) \u2014 constrained by funding concentration in high-revenue sports",
+      "Wealthy Sports Nations: Primary beneficiaries (powerful/constrained) \u2014 capture prestige and medal concentration; exit constrained by Olympic reputation investment",
+      "International Olympic Committee: Secondary beneficiary (institutional/arbitrage) \u2014 maintains coordination framework; captures compliance and broadcast value",
+      "Development Coalition: Mixed (organized/constrained) \u2014 recognizes both coordination benefit and extraction; constrained by funding dependence",
+      "Host Nation Governments: Tertiary actor (institutional/arbitrage) \u2014 pursue prestige but face degraded functional value; persist through institutional inertia",
+      "Analytical Observer: Perspective (analytical/analytical) \u2014 risks naturalizing contingent resource structures as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The 1-to-1 medal counting system directly maps resource capacity to prestige allocation. Wealthy nations with 10x per-athlete funding capacity predictably achieve 10x medal concentration. This is not chance or merit disparity \u2014 it is structural incentive design. The system does not adjust for development level, sport infrastructure, or talent pool size. The increase from 0.35 to 0.58 over 40 years reflects that as global inequality increased and wealthy nations' dominance became undeniable, the extraction mechanism became more visible. Suppression (0.62): Multiple vectors maintain resource concentration. Developing nations face barriers to talent identification (no systematic scout networks), training facility access (limited infrastructure), competition access (international tournament entry fees), athlete brain drain (lucrative contracts in wealthy nations), and enforcement asymmetry (doping enforcement consumes disproportionate resources in poor nations, reducing training time). These are not accidental \u2014 they are structural to the current system. Theater ratio (0.68): Opening and closing ceremonies, medal presentations, and prestige narratives constitute ~68% of Olympic spectacle. The actual functional outputs (athlete development, sport infrastructure, international goodwill) are secondary to the theatrical performance. The increase from 0.42 to 0.68 reflects that as infrastructure costs exploded and post-Olympic facility utilization declined, host nations increasingly emphasize ceremony over function.",
+    "perspectival_gap": "The constraint exhibits a massive perspectival gap between resource-rich and resource-poor perspectives. Wealthy nations and the IOC see primarily rope (coordination benefits, legitimate competition framework, international engagement). Developing nations see primarily snare (extraction through resource concentration, prestige hoarding, career asymmetry). The analytical observer risks seeing mountain (natural law of competition: wealthy nations will always dominate) but the structural data contradicts this \u2014 the constraint is contingent on institutional design choices (uniform medal counting, no development-weighted allocation, IOC's revenue model concentrating in wealthy-nation broadcasting). This divergence is diagnostic: if the perspectival gap were due to measurement ambiguity, changing the observable should eliminate it. Instead, changing from medal count to per-capita medals or sport-equity-weighted systems would produce the opposite perspectival gap (developing nations would claim rope/scaffold, wealthy nations would claim snare). The gap is not measurement-dependent; it is structural.",
+    "directionality_logic": "Peripheral nation athlete: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit option within Olympic system. Minor sport athlete: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.32. Maximum extraction; trapped by sport scarcity (Olympics is primary competition venue). Wealthy sports nation: Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.35. Moderate extraction beneficiary; constrained because withdrawing from Olympics means losing prestige investment. IOC: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; high arbitrage power (sets all rules, controls compliance verification). Development coalition: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.88. Significant extraction; constrained by dependence on Olympic funding and broadcast revenue share. Host nation: Institutional + arbitrage \u2192 d\u22480.22, f(d)\u22480.12. Low chi despite beneficiary status, because arbitrage power is limited (IOC controls essential terms) and functional benefit is degraded.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint is classified as tangled rope (\u03b5=0.58, suppression=0.62, 0.40\u2264\u03c7\u22640.90). This classification resolves the mandatrophy by acknowledging both the genuine coordination function (Olympics provide legitimate international competition, promote sport globally, create development infrastructure) and the genuine asymmetric extraction (resource concentration translates to medal concentration, prestige hoarding, and career opportunity asymmetry). The false summit risk is high: the analytical observer can see the system as a natural law ('wealthier nations naturally have better athletes'), but the structural data confirms contingency. The extractiveness increased from 0.35 to 0.58 as inequality widened \u2014 if this were inherent law, extractiveness would have remained constant. The theater ratio increase (0.42 to 0.68) indicates that performative elements are compensating for degraded functional value; host nations increasingly emphasize ceremony because actual sport development outcomes are declining. A pure snare classification would miss the genuine coordination value; a pure rope classification would miss the asymmetric extraction. Tangled rope correctly captures both."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "international_sport_governance",
+      "athlete_labor_equity",
+      "host_nation_infrastructure"
+    ],
+    "dual_formulation_note": "The Olympic medal allocation system should be decomposed into at least two distinct constraints: (1) the competition structure (who participates, how performance is measured) with \u03b5\u22480.25 (rope), and (2) the prestige/resource allocation mechanism (how medals translate to funding, sponsorship, broadcasting revenue) with \u03b5\u22480.58 (tangled rope). The current story focuses on the allocation mechanism; the competition structure is upstream and should be analyzed separately."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.62
+    }
+  ]
+}

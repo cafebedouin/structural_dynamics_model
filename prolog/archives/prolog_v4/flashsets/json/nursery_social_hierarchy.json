@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "nursery_social_hierarchy",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Social Hierarchy of Playthings",
+    "topic_domain": "social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "complex_toys",
+      "dominant_children"
+    ],
+    "victims": [
+      "simple_toys",
+      "submissive_children"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Simple Toys",
+      "comment": "Simple toys are trapped in their low status, unable to change their perceived lack of complexity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Submissive Children",
+      "comment": "Submissive children are trapped in their low social status, unable to challenge the dominant children and their association with 'superior' toys."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Complex Toys",
+      "comment": "Complex toys benefit from the social hierarchy, gaining prestige and dominance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Dominant Children",
+      "comment": "Dominant children benefit from the social hierarchy by wielding the complex toys to assert their dominance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical observer sees the entangled nature of the hierarchy, with both benefits and costs."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "complexity_definition",
+      "question": "What exactly constitutes 'complexity' in the eyes of a child? Is it purely mechanical, or does perceived complexity factor in?",
+      "resolution_mechanism": "Observational studies of children interacting with toys of varying complexity, surveys assessing their perceptions.",
+      "impact": "If perceived complexity dominates, the hierarchy could shift based on marketing or narratives. If purely mechanical, interventions become more difficult.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Definition of complexity and its impact on the hierarchy."
+    },
+    {
+      "id": "hierarchy_permanence",
+      "question": "Is the nursery hierarchy a temporary phase or does it have lasting effects on social development?",
+      "resolution_mechanism": "Longitudinal studies tracking the social trajectories of children involved in the nursery hierarchy.",
+      "impact": "If temporary, intervention is less critical. If permanent, strategies for dismantling the hierarchy become crucial.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term effects of the nursery social hierarchy."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A status-based framework within the nursery where mechanical complexity is equated with \"reality.\" This system extracts dignity from simple toys to fuel the social dominance of modern, technical objects.",
+    "key_agents": [
+      "Complex Toys: Beneficiary (institutional/arbitrage)",
+      "Dominant Children: Beneficiary (powerful/mobile)",
+      "Simple Toys: Victim (powerless/trapped)",
+      "Submissive Children: Victim (powerless/trapped)",
+      "Analytical Observer: Neutral observer (analytical/analytical)"
+    ],
+    "logic_rationale": "The extractiveness is moderate, as the hierarchy isn't absolute but strongly favors complexity. Suppression is high, as simple toys and submissive children have difficulty escaping their low status.",
+    "perspectival_gap": "The simple toys and submissive children experience pure extraction, while complex toys and dominant children see the hierarchy as a system of coordination that benefits them.",
+    "directionality_logic": "Directionality is determined by whether the agent benefits or is victimized by the social hierarchy."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": []
+  },
+  "directionality_overrides": []
+}

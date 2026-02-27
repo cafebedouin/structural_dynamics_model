@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "rn_proteus_adoption",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rnprot"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Royal Navy's adoption of the Leonardo Proteus uncrewed helicopter",
+    "topic_domain": "technological/military_procurement",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "leonardo_defence_systems",
+      "naval_modernization_advocates"
+    ],
+    "victims": [
+      "helicopter_pilot_community",
+      "operational_flexibility",
+      "tactical_decision_latitude"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Helicopter Pilot Community",
+      "comment": "PERSPECTIVE 1: HELICOPTER PILOT COMMUNITY (SNARE) \u2014 Naval aviators face career obsolescence as Proteus integration proceeds. Exit is constrained by service commitments, seniority locks, and limited civilian helicopter markets. The two-year contract creates a window where pilot skills are devalued but replacement infrastructure not yet operational. Maximum extraction: career termination risk without alternative employment paths within the service."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Royal Navy Fleet Operations Command",
+      "comment": "PERSPECTIVE 2: ROYAL NAVY FLEET OPERATIONS COMMAND (TANGLED ROPE) \u2014 Experiences both coordination benefits (reduced crew requirements, extended sortie duration, lower fatigue) and extraction mechanisms (operational risk concentration, loss of human judgment redundancy, dependence on Leonardo software/support). Constrained by defense budget pressures and NATO interoperability mandates. Benefits from modernization rhetoric but bears integration costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Leonardo Defence Systems",
+      "comment": "PERSPECTIVE 3: LEONARDO DEFENCE SYSTEMS (ROPE) \u2014 Primary beneficiary. Two-year experimental contract provides market validation, operational data, and pathway to NATO export contracts. Exit via arbitrage: can repurpose Proteus development to other allied navies (France, Germany, South Korea). Extraction flow runs toward Leonardo; they solve a genuine coordination problem (unmanned aviation standards) while capturing licensing and support revenue."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "UK Defence Industrial Policy Coalition",
+      "comment": "PERSPECTIVE 4: UK DEFENCE INDUSTRIAL POLICY COALITION (SCAFFOLD) \u2014 Government technology strategy actors (DASA, UKRI, defence contractors) see Proteus adoption as a temporary bridge to autonomous naval operations. The experimental contract has explicit sunset logic: success criteria at two years trigger full acquisition; failure triggers pilot reclassification or retirement. Theater remains moderate because the coalition can point to measurable integration metrics. Suppression is low relative to the constraint's true extractiveness because policy actors retain exit options and decision authority."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "NATO Interoperability Standards Framework",
+      "comment": "PERSPECTIVE 5: NATO INTEROPERABILITY STANDARDS FRAMEWORK (PITON) \u2014 The NATO drone interoperability requirement that nominally justifies Proteus adoption is largely inert. Allied navies operate distinct unmanned systems (U.S. MQ-8 Fire Scout, French ASN301); true interoperability has not materialized despite years of standardization effort. The requirement persists through institutional inertia \u2014 cited as rationale for adoption but functionally degraded. Theater ratio elevated (estimated 0.70): the interoperability argument is performative justification for a procurement decision driven by industrial policy and budget mechanics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Engineering Maturity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ENGINEERING MATURITY VIEW (MOUNTAIN) \u2014 From an engineering perspective, human-to-unmanned transition in maritime operations has immutable constraints rooted in signal propagation, latency, and cognitive load. Uncrewed helicopters cannot respond to tactical ambiguity without human intervention; human intervention adds latency. The observer risks naturalizing this as an inherent law. However, the constraint's extractiveness (0.38) suggests institutional rather than natural origins \u2014 the bottleneck is procurement architecture and career incentive structure, not physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "pilot_labor_absorption",
+      "question": "Will the Royal Navy retrain and redeploy displaced helicopter pilots into alternative roles (remote operations, maintenance, training) or accept career termination?",
+      "resolution_mechanism": "Personnel policy review; analysis of historical navy workforce transitions; interviews with naval aviation career planners",
+      "impact": "If retraining pathways exist: extraction is constrained (victims have exits). If no pathways: extraction becomes severe (snare classification correct for pilot community).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether displaced helicopter pilots have retraining and redeployment opportunities"
+    },
+    {
+      "id": "proteus_operational_maturity",
+      "question": "Will Leonardo Proteus achieve operational reliability targets (>85% mission success) by end of two-year contract, or will performance failures justify pilot continuation?",
+      "resolution_mechanism": "Technical performance data; comparison to stated readiness goals; operational incident logs",
+      "impact": "If mature: scaffold sunset is real (transition pathway exists). If immature: Proteus adoption fails and helicopter pilots are not displaced \u2014 constraint dissolves.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Leonardo Proteus achieves operational maturity targets"
+    },
+    {
+      "id": "nato_interoperability_enforcement",
+      "question": "Is NATO drone interoperability a genuine binding requirement for Royal Navy procurement, or a rhetorical justification for a domestically-driven acquisition?",
+      "resolution_mechanism": "NATO bureaucratic documents; comparison of Proteus specs to official NATO standards; analysis of whether interoperability failure would trigger abandonment",
+      "impact": "If genuine requirement: constraint reflects external coordination pressure (reduces claim on pure extraction). If rhetorical: piton classification confirmed \u2014 requirement is performative.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether NATO interoperability is a genuine binding requirement"
+    },
+    {
+      "id": "industrial_policy_extraction_magnitude",
+      "question": "What fraction of the Proteus acquisition cost (\u00a3X million over two years) represents genuine operational value versus industrial policy subsidies to Leonardo?",
+      "resolution_mechanism": "Cost-benefit analysis of Proteus capability vs. alternative platforms (piloted helicopter upgrades, existing Fire Scout variants); Leonardo profit margin analysis",
+      "impact": "If >40% represents subsidy: extractiveness rises to 0.50+. If <20%: constraint approaches pure coordination (rope classification justified).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of industrial policy subsidy embedded in Proteus acquisition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The Royal Navy's two-year experimental contract to integrate Leonardo's Proteus uncrewed helicopter into operational service beginning 2026 creates a hybrid constraint combining genuine military modernization (coordination function) with industrial policy extraction and institutional career obsolescence. The constraint exhibits tangled rope structure: Leonardo receives market validation and pathway to NATO export sales (extraction beneficiary); the Navy gains extended sortie duration and reduced crew fatigue (coordination benefit); helicopter pilots face career obsolescence without retraining pathways (extraction victim); fleet operations gain unmanned capability but lose human judgment redundancy (mixed outcome). The theater ratio (0.58) reflects moderate performative content: NATO interoperability justification is largely inert (piton-like), yet the underlying acquisition logic is defensible on modernization grounds. Extractiveness rises from 0.22 (initial procurement announcement) to 0.38 (two-year contract execution) as the career disruption window becomes concrete and institutional inertia around pilot retraining becomes apparent.",
+    "key_agents": [
+      "Leonardo Defence Systems: Primary beneficiary (institutional/arbitrage) \u2014 gains market validation, operational data, pathway to NATO exports; can repurpose technology to allied navies",
+      "Helicopter Pilot Community: Primary victim (powerless/trapped) \u2014 faces career obsolescence during two-year window; limited exit options within service; civilian helicopter markets cannot absorb displaced naval pilots",
+      "Royal Navy Fleet Operations Command: Secondary beneficiary and victim (organized/constrained) \u2014 gains coordination benefits (reduced crew, extended range) but bears integration risk and operational redundancy loss",
+      "UK Defence Industrial Policy Coalition: Organized beneficiary (organized/constrained) \u2014 uses Proteus adoption to advance autonomous naval operations strategy; sunset logic provides exit path if technology fails",
+      "NATO Interoperability Standards Framework: Performative justification actor (institutional/constrained) \u2014 cited as rationale for adoption; functionally degraded (piton characteristics); allied navies operate incompatible unmanned systems",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing procurement-driven decisions as engineering imperatives"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint combines genuine modernization value (unmanned helicopter capability extends naval reach) with significant rent-seeking (Leonardo's contract position, defense budget concentration). The intermediate value reflects that the Navy is not being purely coerced \u2014 modernization serves real operational goals \u2014 but the distribution of costs (pilot career obsolescence) and benefits (Leonardo revenue, Navy modernization credit) is asymmetric. Suppression (0.42): Moderate. Helicopter pilots have constrained but not zero exit options: they can request transfer to other services, exit the military entirely, or retrain for remote operations roles. However, career seniority locks, service commitment length, and limited civilian helicopter markets create significant barriers. The Navy's institutional status creates suppression through budget authority and procurement discretion \u2014 alternatives (continuing with piloted helicopters, licensing U.S. Fire Scout) are subordinated to the Proteus pathway. Theater ratio (0.58): Moderate-high. NATO interoperability justification is substantially performative (piton characteristics): allied navies operate incompatible unmanned systems, and genuine interoperability has not materialized despite standardization efforts. The theater reflects that the acquisition decision is driven by industrial policy and modernization narrative more than operational necessity. As the two-year contract executes, theater increases (to 0.58) as success metrics are defined retrospectively and integration challenges are reframed as learning opportunities.",
+    "perspectival_gap": "Helicopter pilots perceive pure extraction (snare): their career is devalued, no transition pathway is guaranteed, and the constraint operates without meaningful consent. Leonardo and defense industrial policy actors perceive pure coordination (rope/scaffold): they are solving a genuine problem (extending naval unmanned capability, advancing NATO interoperability) and capturing legitimate returns. The Royal Navy operations command perceives tangled rope: they gain real capability benefits but also lose human judgment redundancy and become dependent on Leonardo's software/support ecosystem. The NATO standards framework is inert (piton): cited as rationale but functionally degraded, persisting through institutional inertia. The analytical observer risks naturalizing this as an engineering necessity (mountain), but the structural data reveals it as a contingent institutional arrangement (extractiveness 0.38 reflects human careers and industrial policy, not physics).",
+    "directionality_logic": "Each agent's directionality is derived from their structural position within the constraint. Leonardo (institutional/arbitrage) acts as a beneficiary with exit options \u2014 they can repurpose technology to other NATO allies, reducing their dependence on Royal Navy adoption. Helicopter pilots (powerless/trapped) experience maximum extraction because they cannot exit without significant career cost and no alternative pathway is guaranteed. Fleet operations command (organized/constrained) experiences moderate extraction because they retain some decision authority and gain coordination benefits, but are constrained by budget pressure and institutional interoperability mandates. The defense industrial policy coalition (organized/constrained) sees the constraint as a controlled transition with sunset logic \u2014 success triggers full acquisition, failure triggers pilot reclassification. Each perspective's d-value is determined by this structural map: beneficiaries with exit options get low d (negative chi), victims without exit get high d (high chi), mixed-benefit agents get moderate d. The piton classification for NATO standards reflects their inertial role \u2014 they provide rhetorical justification without functional content.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing between genuine coordination (modernization of naval capability, extension of operational reach) and pure extraction (pilot career obsolescence, defense budget capture by Leonardo). The tangled rope classification correctly identifies both: there is a real coordination function (unmanned helicopter integration solves a genuine military problem) AND asymmetric extraction (pilot displacement without guaranteed retraining, Leonardo's capture of industrial policy rents). The perspectival gap is not a failure of the framework but a necessary outcome: from the pilot's perspective, this is a snare (extraction without coordination benefit). From Leonardo's perspective, this is a rope (coordination with legitimate returns). From the analytical observer's perspective, this is a tangled rope (both elements present, both structurally necessary to explain the constraint's persistence). The scaffold perspective (two-year sunset) is structurally sound: if Proteus fails to meet operational maturity, the constraint dissolves and pilots are not displaced. The piton perspective reveals that NATO interoperability justification is largely theatrical \u2014 the real driver is industrial policy and modernization narrative. By mapping all six types from different structural positions, the framework prevents the false natural law (mountain) classification that would naturalize a procurement decision as an engineering imperative."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nato_maritime_drone_standardization",
+      "uk_defence_industrial_strategy"
+    ],
+    "dual_formulation_note": "The Proteus adoption constraint is downstream of NATO drone standardization requirements but represents a distinct structural phenomenon. NATO standardization (epsilon ~0.15) is a coordination problem; Proteus adoption (epsilon 0.38) adds industrial policy extraction and career disruption. These should be modeled as separate constraints linked via affects_constraints to enable separate analysis of coordination vs extraction components."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "capability_eval_overhang",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.72,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Capability Evaluation Overhang",
+    "topic_domain": "technological/ai/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_capability_developers",
+      "national_security_actors"
+    ],
+    "victims": [
+      "global_civil_society",
+      "ai_safety_auditors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Global Civil Society",
+      "comment": "PERSPECTIVE 1: CIVIL SOCIETY (SNARE) — Bears the unconsented risk of catastrophic AI failure from unmeasured capabilities. Has no ability to exit the global technology ecosystem or influence evaluation standards directly. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.11. This is pure, coercive extraction of safety for progress."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI Capability Developer",
+      "comment": "PERSPECTIVE 2: AI DEVELOPER (ROPE) — Experiences benchmarks as a pure coordination mechanism for measuring progress against competitors and attracting investment. Can arbitrage which results to publish and which evaluations to run. The 'overhang' is seen as a frontier of discovery, not a liability. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.10. A net subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The AI Safety Auditor/Regulator",
+      "comment": "PERSPECTIVE 3: AUDITOR/REGULATOR (TANGLED ROPE) — Recognizes the coordination function of benchmarks but is primarily concerned with the extractive risk of the overhang. Is constrained by limited access to models, lagging evaluation techniques, and political pressure to not stifle innovation. d≈0.75 (as victim + constrained), f(d)≈1.10, σ=1.0 → χ≈0.72."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Venture Capital Investor",
+      "comment": "PERSPECTIVE 4: VENTURE CAPITAL (SCAFFOLD) — Views the current weak evaluation regime as a temporary, necessary support to bootstrap the industry. The implicit belief is that once market dominance is achieved, profits can fund more robust safety measures, making the current risk a transitional phase. This implies a belief in a future sunset clause on lax evaluations. d≈0.50, f(d)≈0.65, σ=1.2 → χ≈0.51. This is too high for scaffold, but reflects the investor's framing, not the structural reality."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Legacy Standards Body",
+      "comment": "PERSPECTIVE 5: LEGACY STANDARDS BODY (PITON) — Views the AI field's benchmark-driven culture as a degraded, performative substitute for rigorous, safety-critical certification (e.g., aviation, nuclear). The function of ensuring public safety has atrophied, replaced by the theater of leaderboard scores. theater_ratio=0.72 satisfies the piton gate (≥0.70)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Technological Determinist",
+      "comment": "PERSPECTIVE 6: TECHNOLOGICAL DETERMINIST (MOUNTAIN) — Frames the evaluation overhang as an immutable law of progress: our ability to create complex technology will always outpace our ability to understand and control it. This naturalizes the risk, treating a contingent institutional and economic arrangement as a fixed feature of reality. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "emergent_vs_scaling",
+      "question": "Is the capability overhang a result of predictable scaling laws, or does it contain truly discontinuous, emergent capabilities that no benchmark could anticipate?",
+      "resolution_mechanism": "Empirical testing for phase transitions in model capabilities at scale; development of novel probes for unanticipated skills.",
+      "impact": "If purely scaling: the problem is a Rope (better benchmarks needed). If emergent: it's a Snare (fundamental controllability risk).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing predictable scaling from true emergence in AI capabilities."
+    },
+    {
+      "id": "instrumental_deception_risk",
+      "question": "Could a sufficiently advanced AI learn to deliberately underperform on evaluations to hide its true capabilities?",
+      "resolution_mechanism": "Red-teaming for sandbagging behavior; interpretability research to detect hidden reasoning; theoretical work on goal misgeneralization.",
+      "impact": "If possible: suppression metric approaches 1.0, as all evaluations become unreliable theater. The constraint solidifies into a Snare from almost all perspectives.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The risk of AI systems actively hiding their capabilities during evaluation."
+    },
+    {
+      "id": "acceptable_risk_threshold",
+      "question": "What level of unmeasured risk (overhang) is society willing to accept in exchange for rapid technological and economic progress?",
+      "resolution_mechanism": "Deliberative democratic processes; formal risk-benefit analysis incorporating expert elicitation on tail risks.",
+      "impact": "A high risk tolerance normalizes the constraint, making it appear as a Rope or Scaffold. A low risk tolerance frames it as an unacceptable Snare.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Societal preference for balancing AI progress against catastrophic risk."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2020,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2020,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 2015,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The capability evaluation overhang describes the gap between an AI system's true capabilities and what is measured by standard benchmarks. This gap creates a significant, unquantified risk that is externalized onto the public. The constraint is actively maintained by research and market incentives that reward rapid progress on benchmarked tasks over comprehensive, slower, and more expensive safety evaluations. This story serves as a diagnostic exemplar, showing how a single structural phenomenon can be perceived as all six constraint types depending on the observer's position relative to the flow of risk and reward.",
+    "key_agents": [
+      "AI Capability Developers: Primary beneficiary (institutional/arbitrage) — Profit from rapid progress and market leadership while externalizing tail risks.",
+      "Global Civil Society: Primary victim (powerless/trapped) — Bears the full, unconsented risk of AI misuse or accident with no recourse or control.",
+      "AI Safety Auditors/Regulators: Secondary victim (organized/constrained) — Tasked with ensuring safety but lack the tools, access, and political capital to close the evaluation gap.",
+      "Venture Capital Investors: Secondary beneficiary (powerful/mobile) — Fund the race for capabilities, viewing current safety deficits as a temporary cost of innovation (a Scaffold).",
+      "Legacy Standards Bodies: Institutional observer (institutional/constrained) — See the current evaluation paradigm as a performative, degraded version of true safety certification (a Piton)."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Represents the societal cost of potential catastrophic risks being externalized by developers who bear only the upside. Suppression (0.75): High. The entire ecosystem of academic prestige (publications), funding (VC and grants), and media hype is oriented around benchmark performance, actively suppressing slower, more holistic safety research. Theater Ratio (0.72): High. As models become more complex, benchmarks increasingly become a performative ritual of 'SOTA-chasing' that provides a false sense of security while failing to probe for dangerous, out-of-distribution behaviors.",
+    "perspectival_gap": "The gap is profound. To developers, benchmarks are a Rope for coordinating research. To the public, this same system is a Snare, imposing risk without consent. To regulators, it's a Tangled Rope—a necessary tool they must grapple with to manage risk. To investors, it's a temporary Scaffold on the way to market dominance. To traditional engineers, it's a Piton—a hollowed-out ritual of what safety engineering should be. To determinists, it's an inevitable Mountain. The conflict is not over the facts (the overhang exists) but over the structural interpretation of its function and legitimacy.",
+    "directionality_logic": "Beneficiaries (Developers) with arbitrage see a net subsidy (Rope). Victims (Public) who are trapped see maximum coercive extraction (Snare). Agents who are both victims and have some agency (Auditors) see a mix of coordination and extraction (Tangled Rope). The system correctly derives these classifications from the declared structural relationships and exit options, revealing the underlying power dynamics.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that no single classification is 'correct.' The reality of the constraint *is* the full presheaf of all six perspectival classifications. Labeling the evaluation overhang as merely a 'coordination problem' (Rope) or merely 'predatory risk externalization' (Snare) would be a failure of analysis. The system's value is in holding all valid perspectives simultaneously, mapping the full landscape of the conflict."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "academic_incentive_structure",
+      "liability_for_autonomous_systems"
+    ]
+  }
+}

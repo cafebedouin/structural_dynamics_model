@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "lyapunov_stability",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lyap"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
+    "claimed_type": "mountain",
+    "human_readable": "Lyapunov Stability Criteria",
+    "topic_domain": "mathematical/physical",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Physical System Under Perturbation",
+      "comment": "PERSPECTIVE 1: PHYSICAL SYSTEM (MOUNTAIN) \u2014 A dynamical system at equilibrium cannot choose to violate Lyapunov stability criteria. The trajectory behavior is mathematically and physically determined. No exit option exists; the constraint is universal and immutable. d\u22481.0, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.11."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Observer",
+      "comment": "PERSPECTIVE 2: MATHEMATICAL OBSERVER (MOUNTAIN) \u2014 Lyapunov stability is a theorem about the structural properties of dynamical systems. From the civilizational/universal analytical perspective, this is a pure mathematical fact: the existence of a Lyapunov function that decreases along trajectories is logically equivalent to stability of the equilibrium. This is not contingent on measurement, institutional arrangement, or social convention. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.09."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Control Engineer",
+      "comment": "PERSPECTIVE 3: CONTROL ENGINEER (MOUNTAIN) \u2014 For practitioners designing feedback control systems, Lyapunov stability is an inescapable constraint. Controllers must be designed to satisfy stability criteria or the system fails \u2014 there is no workaround, no institutional flexibility. The engineer experiences the constraint as a natural law binding their design options. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.06."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Research Community",
+      "comment": "PERSPECTIVE 4: RESEARCH COMMUNITY (MOUNTAIN) \u2014 The stability research field cannot choose to redefine stability in ways that violate Lyapunov criteria without breaking continuity with established theory. New stability concepts (input-to-state stability, exponential stability, orbital stability) are all defined in relation to the Lyapunov framework. The community has mobility within the framework but not out of it. d\u22480.40, f(d)\u22480.40, \u03c3=1.0 \u2192 \u03c7\u22480.03."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "measurement_artifacts_in_real_systems",
+      "question": "Can measurement apparatus or observation methods create artifactual instability that violates idealized Lyapunov criteria in physical realizations?",
+      "resolution_mechanism": "Comparison of Lyapunov analysis predictions against observed stability in real physical systems with quantified measurement precision and noise characteristics",
+      "impact": "If true: the mountain status applies to the mathematical abstraction, not necessarily to any physical system. If false: the mountain extends to physical implementation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether measurement artifacts can violate Lyapunov predictions in real systems"
+    },
+    {
+      "id": "nonstandard_dynamics_coverage",
+      "question": "Do Lyapunov criteria apply to all classes of dynamical systems (stochastic, delayed, hybrid, quantum), or only to deterministic ODEs?",
+      "resolution_mechanism": "Systematic construction of extensions: stochastic Lyapunov theory (Brownian motion stability), time-delayed systems (Krasovskii functionals), quantum state stability (Lindblad equation). Verification that extensions reduce to classical Lyapunov in the classical limit.",
+      "impact": "If fully generalizable: mountain status holds across all dynamics. If limited to classical deterministic ODEs: mountain is a local feature of a broader landscape that may contain constraints of other types.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Coverage of Lyapunov criteria across all dynamical system classes"
+    },
+    {
+      "id": "algorithmic_decidability_of_stability",
+      "question": "For arbitrary polynomial systems, is Lyapunov stability decidable in finite time, or are there systems where Lyapunov stability is undecidable?",
+      "resolution_mechanism": "Verification of algorithmic complexity bounds; identification of polynomial degree or dimension thresholds where decidability becomes uncomputable; proof-theoretic analysis of stability assertions in restricted logical fragments",
+      "impact": "If decidable: Lyapunov stability is a computable property (mountain status preserved). If undecidable for some systems: the constraint becomes a type-dependent phenomenon (tangled with epistemology/computational limits), potentially downgrading to Snare for certain system classes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decidability of Lyapunov stability verification for polynomial systems"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "Lyapunov stability is a foundational concept in dynamical systems theory that characterizes whether a system returns to equilibrium after perturbation. This constraint exemplifies a pure mathematical mountain: the existence of a Lyapunov function (a scalar function that decreases along system trajectories) is logically equivalent to asymptotic stability of the equilibrium point. The criterion is observer-independent, contingency-independent, and holds with zero degrees of freedom across all measurement modalities. The mathematical structure is not socially constructed, not subject to regulatory arbitrage, not dependent on institutional power, and not verifiable through approval processes \u2014 it is verifiable through formal proof. The constraint applies uniformly to classical continuous dynamical systems (ODEs), discrete systems, hybrid systems with extensions, and even stochastic formulations through generalized Lyapunov theory. No agent can exit this constraint without abandoning the formal framework of dynamical systems altogether.",
+    "key_agents": [
+      "Physical System: Constrained by the mathematical laws governing equilibrium behavior (powerless/trapped) \u2014 cannot violate stability criteria",
+      "Control Engineer: Institutional actor (institutional/constrained) \u2014 must design controllers within Lyapunov stability requirements; no institutional flexibility available",
+      "Research Community: Organized (organized/mobile) \u2014 can advance stability theory, define new stability concepts, but all are constrained by the foundational Lyapunov framework",
+      "Mathematical Analyst: Analytical perspective (analytical/analytical) \u2014 perceives the constraint as a logically necessary property of dynamical systems"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. Lyapunov stability imposes no extraction in the DR sense \u2014 it is not a mechanism by which one agent benefits from another's constraint. The low value reflects that the constraint is purely structural: it describes what IS, not what BENEFITS. Suppression (0.02): Negligible. There is no coercive element. The constraint is not enforced by threat or penalty; it is logically intrinsic to the mathematical definition of stability. Theater ratio (0.05): Minimal. Verification of Lyapunov stability is mathematical (proof-based) rather than performative. A Lyapunov function either exists or it does not; there is no room for theatrical compliance or proxy metrics. The near-zero value reflects that the entire constraint is functional \u2014 every element is substantive verification, not ritual.",
+    "perspectival_gap": "Unlike the verification bottleneck exemplar, Lyapunov stability shows NO perspectival gap. All four perspectives \u2014 the physical system, the analyst, the control engineer, and the research community \u2014 perceive the constraint identically as a mountain. This uniformity is the defining signature of a true natural law: across all indexical positions, the classification is invariant. The mountain is not contingent on observer position, not dependent on exit options, not mediated by institutional power. This invariance is the mathematical constraint's strength as a gold-standard mountain in the DR corpus.",
+    "directionality_logic": "Standard canonical fallback applies uniformly: all power atoms map to mountain classification because \u03b5\u22640.25, suppression\u22640.05, and accessibility_collapse\u22650.85. No beneficiary/victim structure exists \u2014 the constraint is not extractive and imposes equal structural limits on all agents regardless of power. Directionality derivation is not needed; the constraint is beneficiary-neutral and victim-neutral."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "feedback_linearization",
+      "asymptotic_stability_verification",
+      "attractivity_basin_estimation"
+    ],
+    "dual_formulation_note": "Lyapunov stability is upstream of practical control verification and basin estimation constraints. The theoretical mountain status here is foundational; downstream constraints inherit its properties but may introduce institutional or epistemological complications in implementation."
+  },
+  "directionality_overrides": []
+}

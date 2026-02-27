@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "non_compete_agreements",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nca"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Non-Compete Agreements (Post-Employment Restraint)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_employer"
+    ],
+    "victims": [
+      "departing_employee",
+      "competitive_labor_market_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Departing Employee",
+      "comment": "PERSPECTIVE 1: DEPARTING EMPLOYEE (SNARE) \u2014 Trapped between unemployment and contractual prohibition on using learned skills. Exit is illusory: signing the agreement is employment condition (coerced); leaving employment invokes the agreement (trapped). No alternative income path available within geographic scope. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Early-Career Professional",
+      "comment": "PERSPECTIVE 2: EARLY-CAREER PROFESSIONAL (SNARE) \u2014 More mobility than powerless agent but severe constraints. Can relocate geographically or wait out time period, but opportunity cost is substantial (lost wages, career discontinuity). Restrictions most severe for industry-specialized roles. d\u22480.78, f(d)\u22481.18, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The High-Mobility Professional (Executive/Researcher)",
+      "comment": "PERSPECTIVE 3: HIGH-MOBILITY PROFESSIONAL (SNARE) \u2014 Greater exit capacity (can relocate internationally, switch industries, negotiate waiver). But extraction still severe: either waives years of career advancement or pays substantial liquidated damages. Enforcement asymmetry favors employer with legal resources. d\u22480.55, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Incumbent Employer",
+      "comment": "PERSPECTIVE 4: INCUMBENT EMPLOYER (ROPE) \u2014 Experiences constraint as coordination mechanism: protects genuine proprietary knowledge investment and training, enables planning around employee knowledge. Also provides extraction benefit (reduced competitive pressure). d\u22480.08, f(d)\u2248-0.10, \u03c3=0.9 \u2192 \u03c7\u2248-0.05. Negative effective extraction = strong beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Market (Aggregate Perspective)",
+      "comment": "PERSPECTIVE 5: LABOR MARKET / COMPETITIVE EFFICIENCY (TANGLED ROPE) \u2014 Non-competes provide coordination benefit (allocative efficiency of training investment) but also extract through reduced job mobility and wage competition. Suppression is structural: departing workers cannot signal skills to competitors. d\u22480.60, f(d)\u22480.85, \u03c3=1.0 \u2192 \u03c7\u22480.50. Active enforcement (litigation threat) is required to maintain the mixed regime."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Legal Enforcement Apparatus",
+      "comment": "PERSPECTIVE 6: LEGAL ENFORCEMENT APPARATUS (PITON) \u2014 Non-compete enforcement is substantially performative. Courts struggle with reasonableness standards (duration, geography, legitimate protectable interest) and rarely grant full injunctions; settlement and threat dynamics do most enforcement work. Theater_ratio\u22480.48 indicates moderate performative content \u2014 legal machinery is real but its actual restraining force is smaller than the formal contract suggests. Institutional inertia maintains the regime because alternatives (garden leave, liquidated damages, knowledge lockup) have their own costs."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational distance, some form of post-employment restraint appears inherent to any knowledge-intensive economy: employers must protect legitimate investments in training and proprietary knowledge, AND workers must have career mobility, AND these interests conflict. But this perspective risks naturalizing what is a contingent political choice about the balance between capital and labor property rights. The structural data (\u03b5=0.58, suppression=0.72, theater=0.48) indicates this is NOT a mountain: the high suppression reveals active coercion, not natural law. False summit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Pro-Worker Reform Coalition",
+      "comment": "PERSPECTIVE 8: PRO-WORKER REFORM COALITION (SCAFFOLD) \u2014 Organized labor, portable benefits advocates, and some states (California) see non-compete agreements as a temporary regime being actively phased out through legal invalidation and alternative mechanisms (stake-in-enterprise, portable retirement, non-disparagement as substitute). d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.28. Low effective extraction because coalition has agency and clear sunset path (legislative action, forum-shopping to worker-friendly jurisdictions)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimate_protectable_interest_definition",
+      "question": "What qualifies as a legitimate protectable interest justifying post-employment restraint: trade secrets only, customer relationships, confidential processes, or competitive position itself?",
+      "resolution_mechanism": "Comparative legal analysis across jurisdictions; empirical assessment of whether non-competes actually protect legitimate investments or function as pure rent extraction",
+      "impact": "Narrow definition: non-competes classified as snare across more perspectives. Broad definition: more perspectives classify as rope (genuine coordination).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition of legitimate protectable interests under non-compete enforceability"
+    },
+    {
+      "id": "garden_leave_substitutability",
+      "question": "Does paid garden leave (wage continuation during non-compete period) substitute adequately for workers, making the extraction symmetric and converting the snare to a rope or tangled_rope?",
+      "resolution_mechanism": "Comparison of wages during garden leave vs unemployment; analysis of whether garden leave is offered; study of worker welfare outcomes with vs without garden leave",
+      "impact": "If garden leave is widely offered: constraint becomes more symmetrical (shifts toward tangled_rope). If rare: extraction remains asymmetric (remains snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether garden leave addresses worker harm from non-competes"
+    },
+    {
+      "id": "california_invalidation_effectiveness",
+      "question": "Does California's near-total ban on non-competes (Business & Professions Code \u00a716600) reduce extractiveness through forum-shopping and regulatory competition, or do employers find workarounds (liquidated damages, non-disparagement, restrictive covenants)?",
+      "resolution_mechanism": "Longitudinal comparison of labor mobility and wages in California vs other states; analysis of litigation patterns post-ban; assessment of whether non-competes are replaced with functionally equivalent restrictions",
+      "impact": "If ban is effective: non-compete constraint is ending (scaffold sunset is real). If workarounds prevalent: extraction shifts form but persists (snare endures under different names).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of non-compete invalidation in California"
+    },
+    {
+      "id": "trade_secret_leakage_empirical_risk",
+      "question": "What is the actual empirical rate of harmful trade secret disclosure by departing employees in industries with vs without enforceable non-competes?",
+      "resolution_mechanism": "Litigation data analysis; industry surveys on actual competitive harm from employee departure; comparison of firms in non-compete jurisdictions vs non-enforceable jurisdictions",
+      "impact": "If high leakage rate without non-competes: snare classification justified by genuine coordination need. If minimal: non-competes are rent extraction with weak coordination rationale.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Empirical rate of harmful trade secret disclosure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 1990,
+    "end": 2020
+  },
+  "commentary": {
+    "narrative_context": "Non-compete agreements represent a structural extraction mechanism that has evolved significantly over three decades. Beginning as industry-specific tools (primarily in software and biotech) to protect genuine investments in proprietary knowledge and employee training, non-competes have metastasized into mass-market agreements imposed on low-wage workers (fast food franchise managers, hair stylists, warehouse supervisors) with minimal negotiating power and often zero legitimate protectable interest. The constraint exhibits the six-type perspectival structure: departing employees (powerless/trapped) experience pure snare; employers (institutional/arbitrage) experience coordination; the labor market aggregately experiences tangled extraction; legal enforcement is partially performative (piton); the pro-worker reform coalition (organized/mobile) sees a sunset mechanism in progress. The decreasing theater ratio (0.52\u21920.48) indicates that the constraint has become MORE functional (less performative) over time \u2014 not because enforcement got stronger, but because employers shifted from court-based enforcement (which involves rituals and reasonableness standards) to contractual threat and settlement dynamics, which require less theatrical justification. The rising extractiveness (0.35\u21920.58) reflects expansion from high-skill, high-wage workers (where legitimate interest arguments are stronger) to low-skill, low-wage workers (where protection rationales are weaker).",
+    "key_agents": [
+      "Departing Employee: Primary victim (powerless/trapped) \u2014 bears full cost of restraint period; faces unemployment or forced relocation or loss of skill application",
+      "Incumbent Employer: Primary beneficiary (institutional/arbitrage) \u2014 captures value from restraint on competitive pressure and knowledge diffusion",
+      "Early-Career Professional: Secondary victim (moderate/constrained) \u2014 greater mobility than powerless agent but substantial opportunity costs",
+      "High-Mobility Professional: Secondary victim (powerful/mobile) \u2014 most exit capacity but still faces significant extraction if negotiating power is unequal",
+      "Competitive Labor Market: Aggregate victim (organized/constrained) \u2014 efficiency losses from reduced job mobility and wage competition",
+      "Legal Enforcement Apparatus: Institutional enforcer (institutional/constrained) \u2014 maintains performative regime through courts; declining theater indicates shift to contractual threat",
+      "Pro-Worker Reform Coalition: Organized beneficiary-of-sunset (organized/mobile) \u2014 includes labor advocates, portable benefits proponents, and state regulators building alternative regime"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significantly through forced unemployment or relocation, lost wages, and career discontinuity. However, it is not maximum (0.72+) because: (1) some employers offer garden leave or waive enforcement; (2) workers can sometimes negotiate duration/geography; (3) high-mobility workers (powerful/mobile) have meaningful exit options; (4) geographic/temporal boundaries create natural decay. The extractiveness has risen from 0.35 to 0.58 over 30 years as non-competes expanded from high-skill/high-wage workers (where protection rationales are legitimate) to low-skill workers (where rationales are weak), increasing the extraction asymmetry. Suppression (0.72): High. Departing employees have severely limited alternatives: they cannot reveal they are seeking employment (signals covenant breach), cannot contact customers or colleagues (non-solicitation additions), and must either move or wait out the period. Legitimate alternatives (negotiating waiver, paying liquidated damages) are asymmetric in power. Theater ratio (0.48): Moderate. Non-compete enforcement involves substantial legal machinery (litigation, reasonableness standards, injunction procedures) but the actual restraining power is smaller than the formal contract suggests. Courts frequently modify agreements or refuse injunctions on reasonableness grounds. Real enforcement happens through threat and settlement dynamics, not through completed litigation. The declining theater (0.52\u21920.48) indicates employers have optimized away from court-based theater toward more efficient contractual threat, which requires less performative justification.",
+    "perspectival_gap": "This constraint generates maximum perspectival divergence. Departing employees see pure snare: trapped, no coordination benefit, pure extraction. Employers see rope: coordination mechanism that enables training investment and knowledge protection. The labor market sees tangled rope: both coordination benefit (allocative efficiency) and extraction (reduced mobility and wage competition). The legal system sees piton: performative machinery (courts, reasonableness standards) masking a threat-based enforcement reality. The reform coalition sees scaffold: temporary regime being actively phased out through legislative action (California, executive orders), alternative mechanisms (portable benefits, stake-in-enterprise), and forum-shopping. The analytical observer risks seeing mountain: 'every knowledge economy needs some form of post-employment restraint' \u2014 but the structural data (high suppression, rising extractiveness, moderate theater) reveals this is a false summit. The naturalizing perspective confuses a contingent political choice about capital-labor property rights with an immutable economic law.",
+    "directionality_logic": "Departing employee: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Early-career professional: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.18. High extraction with some mobility. High-mobility professional: Victim + mobile \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction; exit options reduce but do not eliminate. Incumbent employer: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; experiences constraint as coordination. Labor market aggregate: Mixed (coordination + extraction) + constrained \u2192 d\u22480.60, f(d)\u22480.85. Snare dynamics dominated but coordination function present. Legal enforcement: Institutional + constrained \u2192 d\u22480.50, f(d)\u22480.65 (piton classification comes from theater gate, not chi). Reform coalition: Organized + mobile \u2192 d\u22480.45, f(d)\u22480.48. Low effective extraction because coalition has agency and clear exit path.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing how the same structural phenomenon (post-employment restraint) is either a coordination mechanism or extraction depending entirely on the power asymmetry and exit options of the agent. For high-skill workers who negotiate favorable terms with employers who offer garden leave, the constraint is rope (genuine coordination). For low-wage workers coerced into signing and offered no alternative, it is snare (pure extraction). The SAME contractual mechanism produces different classifications from different positions. The resolution: the constraint cannot be classified as universally rope or universally snare. The correct statement is: 'Non-compete agreements are structured as snares for powerless agents and ropes for institutional beneficiaries.' The mandatrophy dissolves when we recognize that indexical classification captures this asymmetry \u2014 there is no single type, there is a perspectival presheaf. The analytical observer's mountain ('inevitable in knowledge economies') is a false summit that naturalizes the extractive asymmetry as if it were a law of nature. The structural data (high suppression, no natural emergence, contingent legal enforcement) refutes the mountain claim."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "mobility_wage_premium",
+      "knowledge_asymmetry_extraction",
+      "employment_at_will_doctrine"
+    ],
+    "dual_formulation_note": "Non-compete agreements are downstream of broader employment relationship structures (at-will employment, asymmetric information, capital-labor power dynamics) but represent a distinct constraint mechanism. The upstream constraint (employment_at_will_doctrine) creates the structural vulnerability that non-competes exploit; the downstream constraint (mobility_wage_premium) models the wage penalty for restraint. Non-competes bridge these two constraints by making the vulnerability mechanical and enforced."
+  },
+  "directionality_overrides": []
+}

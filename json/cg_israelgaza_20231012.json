@@ -2,23 +2,26 @@
   "header": {
     "constraint_id": "cg_israelgaza_20231012",
     "version": "1.0",
-    "generated_date": "2024-10-26",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cgaz"
   },
   "base_properties": {
-    "extractiveness": 0.85,
-    "suppression": 0.95,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.72,
+    "suppression": 0.85,
+    "theater_ratio": 0.48,
     "claimed_type": "snare",
     "human_readable": "Israeli Blockade of Gaza Strip",
     "topic_domain": "political/humanitarian",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "israeli_security_establishment"
+      "israeli_security_apparatus",
+      "israeli_political_leadership"
     ],
     "victims": [
       "gaza_civilian_population",
-      "gaza_economy"
+      "gaza_economic_capacity",
+      "palestinian_self_determination"
     ],
     "mandatrophy_resolved": true
   },
@@ -29,135 +32,167 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Gaza Civilian",
-      "comment": "PERSPECTIVE 1: THE TRAPPED POPULATION (SNARE) — Experiences the blockade as totalizing coercion. With no exit, bearing the full humanitarian and economic cost, the structure is pure extraction. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈1.14. This is the canonical victim experience."
+      "label": "Gaza Civilian Population",
+      "comment": "PERSPECTIVE 1: GAZA CIVILIAN POPULATION (SNARE) \u2014 Trapped. No exit from Gaza without Israeli permission. Movement severely restricted; employment, education, medical care, and trade all controlled by blockade. Bears full extraction cost: 16+ years of economic contraction, unemployment >40%, humanitarian dependency on external aid, zero arbitrage options. Maximum experienced extraction \u2014 powerless agent with trapped exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Palestinian Authority and Gaza Administration",
+      "comment": "PERSPECTIVE 2: PALESTINIAN AUTHORITY / GAZA ADMINISTRATION (TANGLED ROPE) \u2014 Constrained exit. Shares some coordination function (governance, services delivery within blockade bounds) but experiences severe extraction through loss of revenue, sovereignty, and administrative capacity. Benefits from maintaining institutional roles; severely harmed by blockade's economic strangulation. Moderate power with constrained options produces mixed coordination-extraction."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "The Israeli State",
-      "comment": "PERSPECTIVE 2: THE ISRAELI STATE (ROPE) — As the enforcer and primary beneficiary, the state experiences the blockade as a security coordination mechanism. It controls the terms (arbitrage exit) and externalizes all costs. d≈0.05, f(d)≈-0.12, σ=0.9 → χ≈-0.09. The negative effective extraction signifies a net subsidy from the constraint."
+      "spatial_scope": "global",
+      "label": "Israeli Security Apparatus",
+      "comment": "PERSPECTIVE 3: ISRAELI SECURITY APPARATUS (ROPE) \u2014 Primary beneficiary. Experiences blockade as coordination mechanism: maintains security perimeter, prevents weapons smuggling, deters attacks. Has arbitrage options (can adjust enforcement intensity, negotiate exceptions, modify checkpoint procedures). Net beneficiary from extraction flow \u2014 constraint subsidizes security goals."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "Hamas Governance",
-      "comment": "PERSPECTIVE 3: HAMAS GOVERNANCE (TANGLED ROPE) — As the stated target, Hamas is a victim of the blockade's extraction. However, the siege also serves a coordination function for its internal political control, creating a rally effect and dependency. It is both extracted from and benefits from the structure. d≈0.75, f(d)≈1.10, σ=0.8 → χ≈0.75."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "immediate",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "International Aid Organizations",
-      "comment": "PERSPECTIVE 4: INTERNATIONAL AID ORGANIZATIONS (SCAFFOLD) — These organizations operate a massive support structure made necessary by the blockade. Their entire operation is a temporary scaffold to sustain life, predicated on the aspirational sunset clause of a future political resolution that ends the blockade. Their work is a coordination function (distributing aid) under coercive conditions."
+      "label": "International Humanitarian Community",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL HUMANITARIAN COMMUNITY (TANGLED ROPE) \u2014 Organized actors (UN, ICRC, NGOs) see blockade as mixing genuine coordination (logistics of humanitarian access, disease prevention, refugee management) with severe extraction (dependency creation, aid conditionality, inability to address root causes). Exit is constrained by institutional mandates and Palestinian dependence. Moderate effective extraction for organized actors with exit paths."
     },
     {
-      "classification_type": "snare",
-      "agent_power": "analytical",
+      "classification_type": "piton",
+      "agent_power": "institutional",
       "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The International Legal Analyst",
-      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (SNARE) — The default analytical view, which aligns with the claimed_type. The extreme metrics for base extractiveness (0.85) and suppression (0.95), combined with clearly identified victims, make the Snare classification structurally unavoidable. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈1.17."
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Israeli Political Establishment",
+      "comment": "PERSPECTIVE 5: ISRAELI POLITICAL ESTABLISHMENT (PITON) \u2014 Maintains blockade through institutional inertia despite degraded functionality. Original security justification (prevent weapons/attack) has atrophied into de facto collective punishment regime. Theater ratio high: blockade persists because alternatives haven't replaced it politically, not because it achieves stated security goals. Political cost of lifting blockade exceeds perceived security benefit, creating performative maintenance."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "regional",
-      "label": "The 'Realpolitik' Analyst",
-      "comment": "PERSPECTIVE 6: THE 'REALPOLITIK' ANALYST (MOUNTAIN) — This perspective naturalizes the blockade as an immutable feature of an intractable conflict, a geopolitical 'law of nature'. The engine will identify this as a false summit, as the constraint requires continuous, active military enforcement and has none of the structural properties of a Mountain (e.g., emerges_naturally=false, high ε and suppression)."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Geographic/Geopolitical Constraint",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / GEOPOLITICAL VIEW (FALSE SUMMIT) \u2014 From civilizational perspective, some form of territorial control/border enforcement appears as immutable geopolitical law. Gaza's geography (Sinai border, Israel border, coastline) creates inherent coordination challenges. However, this perspective naturalizes what is actually a contingent political choice \u2014 blockade severity and humanitarian scope are policy decisions, not geophysical constants. Engine flags this as false summit."
     }
   ],
   "omegas": [
     {
-      "id": "security_vs_punishment",
-      "question": "Is the blockade a narrowly tailored security measure (Rope-like function) or a form of collective punishment (pure Snare function)?",
-      "resolution_mechanism": "Declassified intelligence on prevented attacks correlated with analysis of goods permitted/denied to determine if the logic is consistent with security needs or broader economic/political pressure.",
-      "impact": "If proven to be primarily collective punishment, the Snare classification is solidified. If a strong, direct link to preventing specific, credible threats is shown, the Rope/Tangled Rope perspectives gain more weight, though the high ε remains.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Distinguishing the security rationale from collective punishment."
-    },
-    {
-      "id": "hamas_culpability_feedback_loop",
-      "question": "To what extent do Hamas's own governance, resource allocation (e.g., tunnels vs. civilian infrastructure), and military actions perpetuate the blockade, creating a feedback loop?",
-      "resolution_mechanism": "Counterfactual modeling of Israeli policy under a different Gazan authority; analysis of Hamas's internal budgets and strategic decisions.",
-      "impact": "High Hamas culpability would strengthen the Tangled Rope classification, framing the constraint as a destructive equilibrium between two actors. Low culpability reinforces the primary Snare classification against the civilian population.",
+      "id": "security_necessity_empirical",
+      "question": "To what extent is blockade severity empirically necessary for Israeli security, versus what portion represents extractive surplus?",
+      "resolution_mechanism": "Comparative analysis: security metrics (attack prevention, smuggling interdiction rates) versus blockade stringency over time; comparison with alternative security frameworks in similarly contested territories; counterfactual analysis of reduced-severity regimes.",
+      "impact": "If security necessity <30%: classification shifts toward pure snare. If >70%: classification shifts toward rope (genuine coordination for security). Current assessment assumes ~40-50% necessity, placing constraint at tangled rope/snare boundary.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Quantifying the feedback loop between Hamas's actions and the blockade's continuation."
+      "type_class": "empirical",
+      "description": "Empirical necessity of blockade stringency for security versus extractive component"
     },
     {
-      "id": "egyptian_strategic_interest",
-      "question": "Is Egypt's role in enforcing the blockade at Rafah primarily driven by coordination with Israel or by its own independent security interests regarding Sinai and the Muslim Brotherhood?",
-      "resolution_mechanism": "Analysis of Egyptian border policy during periods of varying relations with Israel and Hamas; intelligence on Egyptian security assessments.",
-      "impact": "If Egypt's role is independent, the system is a network of two overlapping constraints rather than a single monolithic Snare, complicating exit pathways and diplomatic solutions.",
+      "id": "exit_pathway_feasibility",
+      "question": "Are there structurally viable alternatives (two-state resolution, regional open-border framework, Gaza demilitarization treaty) that could replace the blockade without Israeli security compromise?",
+      "resolution_mechanism": "Game-theoretic modeling of alternative frameworks; historical analysis of similar territorial disputes resolved without indefinite blockade; negotiation simulation with credible commitment mechanisms.",
+      "impact": "If alternatives exist and are politically blocked: extraction mechanism is revealed as volitional, not structural (snare classification strengthened). If alternatives are genuinely infeasible: partial mountain/rope classification may apply.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether structurally viable alternatives exist to current blockade arrangement"
+    },
+    {
+      "id": "humanitarian_threshold_definition",
+      "question": "At what level of blockade stringency does a security measure cross into prohibited collective punishment under international humanitarian law?",
+      "resolution_mechanism": "International legal analysis; comparison with ICJ precedent on occupation law; documentation of threshold violations through humanitarian access data, health metrics, economic indicators.",
+      "impact": "If current blockade crosses threshold: classification confirmed as snare with legal violation component. If within threshold: partial legitimacy claim for security coordination function may apply.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether blockade violates collective punishment prohibitions under IHL"
+    },
+    {
+      "id": "palestinian_alternative_governance",
+      "question": "Would Palestinian self-governance structures demonstrate capacity to implement security arrangements that would justify reduced blockade, or does governance collapse indicate necessity of external control?",
+      "resolution_mechanism": "Institutional analysis of Palestinian Authority capacity; comparison with other disputed territories managing security autonomously; simulation of governance structures under reduced blockade.",
+      "impact": "If capacity demonstrated: blockade appears as externally imposed extraction rather than protection of failed governance. If capacity doubtful: partial coordination justification for blockade may apply.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Determining if Egypt's role is independent or coordinated."
+      "description": "Palestinian capacity for self-governance under reduced blockade conditions"
+    },
+    {
+      "id": "intergenerational_extraction_permanence",
+      "question": "Is the blockade structurally designed as temporary security measure (with time-bound enforcement) or as permanent regime (with indefinite extraction by default)?",
+      "resolution_mechanism": "Analysis of blockade design documents, official policy statements, enforcement timelines, and termination conditions. Comparison of stated justifications against actual policy implementation; examination of whether relaxation mechanisms or sunset clauses exist.",
+      "impact": "If designed as temporary: may legitimately classify as scaffold rather than snare. If permanent by default (termination requires political negotiation): extraction mechanism is revealed as volitional and open-ended, strengthening snare classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether blockade is structurally temporary or permanently designed"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.6
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 8,
-      "value": 0.75
+      "value": 0.62
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 17,
-      "value": 0.85
+      "time_point": 16,
+      "value": 0.72
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.2
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
       "time_point": 8,
-      "value": 0.3
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 17,
-      "value": 0.4
+      "time_point": 16,
+      "value": 0.48
     }
   ],
   "interval": {
-    "start": 2007,
-    "end": 2024
+    "start": 0,
+    "end": 16
   },
   "commentary": {
-    "narrative_context": "The Israeli blockade of the Gaza Strip, imposed in 2007 and severely intensified in October 2023, is a system of control restricting the movement of people and goods. Israel cites security concerns, primarily preventing weapons from reaching Hamas, as its rationale. However, human rights organizations and the UN have described it as a form of collective punishment, leading to a severe, long-term humanitarian crisis and the collapse of the Gazan economy. The constraint is actively maintained through military control of land, air, and sea access, with Egypt controlling the only other border crossing at Rafah.",
+    "narrative_context": "The Israeli blockade of the Gaza Strip, implemented as a security measure following the 2007 Hamas takeover, represents one of the clearest structural examples of a snare constraint in contemporary geopolitics. The blockade restricts the movement of people and goods in and out of Gaza through comprehensive control of crossing points, airspace, and territorial waters. For 16+ years, the constraint has operated through dual mechanics: (1) genuine security coordination function (preventing weapons smuggling, interdicting attack planning), and (2) extractive economic strangulation (unemployment, dependency on aid, loss of productive capacity). The constraint exhibits high suppression (0.85) \u2014 Gaza's geographic isolation and complete Israeli control of exits eliminate alternatives \u2014 and high extractiveness (0.72) \u2014 the civilian population bears catastrophic costs while security benefits accrue to Israeli institutions. Theater ratio (0.48) remains moderate because the security justification retains material credibility, though enforcement has drifted toward collective punishment rationale. The constraint qualifies as snare because suppression and extractiveness both exceed thresholds; mandatrophy is resolved by acknowledging that coordination and extraction components genuinely coexist \u2014 the blockade does provide security (real), and it does extract from the trapped population (real). Neither component negates the other; the constraint is hybrid. However, the snare classification reflects that extraction exceeds coordination from most analytical perspectives.",
     "key_agents": [
-      "Gaza Civilian Population: Primary victim (powerless/trapped) — bears the full humanitarian and economic cost with no exit.",
-      "Israeli Security Establishment: Primary beneficiary (institutional/arbitrage) — enforces the blockade to achieve security and political objectives, controlling its terms.",
-      "Hamas Governance: Secondary victim/beneficiary (organized/constrained) — the stated target of the blockade, yet the siege also consolidates its internal power.",
-      "International Aid Organizations: Mitigating actor (organized/constrained) — operates a temporary support structure made necessary by the crisis.",
-      "Analytical Observers: Includes international legal bodies and 'realpolitik' analysts who frame the constraint in starkly different terms (Snare vs. Mountain)."
+      "Gaza Civilian Population: Primary victims (powerless/trapped) \u2014 2.3 million people subject to indefinite blockade with zero exit options; bear full extraction cost through unemployment, economic collapse, humanitarian dependency",
+      "Israeli Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 controls extraction mechanism, benefits from security perimeter, has arbitrage options to adjust enforcement",
+      "Palestinian Authority/Gaza Administration: Secondary actor (moderate/constrained) \u2014 shares governance coordination function but severely harmed by blockade's revenue loss and sovereignty restriction",
+      "Israeli Political Leadership: Institutional actor (institutional/arbitrage) \u2014 maintains blockade through policy choice; benefits from domestic security narrative and regional positioning",
+      "International Humanitarian Community: Organized observer (organized/constrained) \u2014 provides aid within blockade constraints; sees both coordination (humanitarian logistics) and extraction (aid dependency creation)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent geopolitical arrangement as immutable territorial constraint"
     ],
-    "logic_rationale": "Extractiveness (ε=0.85) is extremely high, reflecting the documented economic devastation ($16.7B cost, 50% GDP reduction), mass unemployment (>40%), and near-total aid dependency (80%). The constraint extracts life chances, economic potential, and well-being. Suppression (0.95) is near-total; with military control of air, sea, and two of three land crossings, there are virtually no alternatives for the trapped population. Theater Ratio (0.40) reflects the gap between the stated security rationale and the observed reality of restrictions on food, medicine, and basic goods, which suggests a broader purpose of political and economic pressure beyond pure security screening.",
-    "perspectival_gap": "The gap is profound. For the Israeli state, it is a Rope—a necessary security tool whose costs are externalized. For the Gaza civilian, it is a Snare—a trap that extracts their future. For Hamas, it is a Tangled Rope—a constraint that also serves as a political coordination device. For aid organizations, it is a Scaffold—a temporary structure pending a political solution. For some analysts, it is a Mountain—an intractable feature of the landscape. This diversity demonstrates that the 'type' of a constraint is not absolute but is indexed to the observer's structural position.",
-    "directionality_logic": "The starkly different classifications emerge directly from the agents' structural positions. The Israeli state, as a beneficiary with arbitrage exit, has a derived directionality `d` near 0, producing a negative chi (Rope). The Gaza civilian, as a victim with trapped exit, has a `d` near 1.0, producing a maximal chi (Snare). Hamas and aid organizations, as organized but constrained actors, occupy intermediate positions, leading to Tangled Rope and Scaffold classifications. The analytical observer's default `d` of ~0.72 is high enough to classify the structure as a Snare from a neutral standpoint.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy of whether the blockade is a 'security measure' or 'collective punishment'. The DR framework shows it is structurally both, depending on the observer. The Israeli state experiences the security coordination function (Rope). The civilian population experiences the punishment and extraction function (Snare). The analytical perspective, which must account for the immense, undeniable extraction (ε=0.85), correctly identifies the overall structure as a Snare, while acknowledging the beneficiary's perspectival reality. The framework does not have to choose one label; it maps the entire perspectival manifold."
+    "logic_rationale": "Extractiveness (0.72): High and increasing. The blockade transfers economic value to Israeli security apparatus (cost-free perimeter defense, eliminated internal threats from Gaza-based groups, strategic leverage in Israeli-Palestinian negotiations). The trapped population bears 100% of economic cost: Gaza GDP per capita declined ~40% since 2007; unemployment among youth exceeds 50%; manufactured goods industry collapsed; agriculture severely restricted. The 0.72 value reflects that extraction is severe and open-ended \u2014 no mechanism for extraction to decline except through external political change. Suppression (0.85): Very high. Gaza's geography (surrounded by Israel and Egypt, no independent exit points) combined with Israeli military control creates near-total suppression of alternatives. Population cannot exit without Israeli permission; economic activity is impossible without Israeli permission; humanitarian goods cannot enter without Israeli approval. Alternative supply routes (Egypt border) are intermittently open and controlled by Egyptian state. Suppression slightly below 1.0 only because limited humanitarian corridors and occasional Egyptian cooperation provide minimal alternatives. Theater ratio (0.48): Moderate, not high. This distinguishes the blockade from purely theatrical constraints. The security justification retains empirical credibility \u2014 Hamas weapons smuggling was documented, attack planning did involve Gaza-based groups. The theater is present in how security rationale has drifted from specific threat prevention toward comprehensive collective punishment, and in how humanitarian rhetoric co-exists with enforcement that contradicts stated humanitarian concern. But the theater is not dominant; the constraint functions as intended (security perimeter maintained). This prevents piton classification.",
+    "perspectival_gap": "The constraint demonstrates divergent classification from identical structural data. The security apparatus and political leadership see coordination (Rope) with their arbitrage options and beneficiary status. The trapped population sees extraction (Snare) with their trapped exit and victim status. The international community sees hybrid (Tangled Rope) because they have constrained exit and see both coordination and extraction. The political establishment's institutional inertia view (Piton) reflects that the blockade persists through policy choice, not security necessity. The false summit (Mountain) perspective risks naturalizing a contingent arrangement. The perspectival gap is extreme because the same structural constraint operates as fundamentally different institutions for different agents \u2014 which is the defining signature of snare classification.",
+    "directionality_logic": "Directionality values (d) reflect each agent's structural position relative to extraction flow. The trapped Gaza population has d \u2248 0.95 (full target): they are excluded from exit options entirely, declared as victims, experiencing powerlessness within the constraint. The Israeli security apparatus has d \u2248 0.08 (near full beneficiary): they are declared as beneficiaries, retain arbitrage exit options (can negotiate, adjust enforcement, have alternatives), and benefit from extraction flow. The Palestinian Authority has d \u2248 0.65 (moderate target): they are partly beneficiaries (retain administrative roles) but mostly victims (loss of revenue, sovereignty). The international community has d \u2248 0.72 (analytical observer): they see full structure including both coordination and extraction, with constrained ability to exit humanitarian commitment. The Israeli political establishment has d \u2248 0.15 (partial beneficiary): they benefit from domestic security narrative and regional positioning but face international costs and maintain blockade through institutional choice rather than structural necessity. These d values produce the chi scaling that differentiates perspectives: beneficiaries with arbitrage experience low or negative chi (constraint subsidizes them); trapped agents experience maximum chi; organized agents with partial exits experience moderate chi.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The blockade genuinely contains both coordination and extraction components. The coordination function is real (security perimeter prevents specific threats). The extraction is real (trapped population bears 100% cost). Mandatrophy is resolved by acknowledging both components exist while classifying the constraint as snare because: (1) extraction exceeds coordination in magnitude and impact for most analytical perspectives; (2) the primary victims (trapped population) experience zero coordination benefit while bearing maximum extraction cost; (3) the extraction flow is open-ended and volitional (not structurally necessary, sustained by political choice); (4) suppression is so high that exit alternatives are essentially zero, making victims unable to negotiate or organize. The snare classification does not deny the security coordination function; it reflects that this function is asymmetrically distributed \u2014 beneficial to one institutional actor, catastrophic to another. The blockade is not a pure mountain (not immutable law of geography) and not a pure rope (not symmetric coordination) precisely because the two components serve opposite institutional interests."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "palestinian_economic_capacity",
+      "israeli_palestinian_power_asymmetry",
+      "humanitarian_access_mechanisms"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
 }

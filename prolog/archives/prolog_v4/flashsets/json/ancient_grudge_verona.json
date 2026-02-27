@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "ancient_grudge_verona",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "RESOLVED MANDATROPHY"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.9,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Montague-Capulet Feud",
+    "topic_domain": "social/political",
+    "requires_active_enforcement": true,
+    "victims": [
+      "montague_family",
+      "capulet_family",
+      "verona_peace"
+    ],
+    "beneficiaries": [
+      "opportunistic_criminals",
+      "mercutio_tybalt_archetypes"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Families Themselves",
+      "comment": "Perspective 1: The families, locked in a generational feud with no easy escape, see the conflict as a deadly snare. Violence is expected, and peace is actively suppressed by societal norms and expectations. They cannot exit without dishonor."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Peacekeepers of Verona",
+      "comment": "Perspective 2: Peacekeepers, such as the Prince, find their efforts constantly thwarted by the feud. They are constrained in their ability to enforce peace and face the constant threat of renewed violence. Suppressing the violence requires constant effort."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Mercutio/Tybalt Archetypes",
+      "comment": "Perspective 3: Certain individuals within the families (e.g., Mercutio, Tybalt) derive social standing and opportunities for advancement through displays of aggression and loyalty to the feud. It's a tangled rope because they benefit from the conflict even as it endangers them. Mobile in that they can seek opportunities elsewhere (were it not for loyalty), but powerful within the existing structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Church",
+      "comment": "Perspective 4: The Church, as an organized institution, could potentially mediate or resolve the conflict. However, they are constrained by their own power dynamics and the deeply ingrained nature of the feud. The Church does derive some benefit (power/influence) from serving as an arbitrator, but also incurs costs when their interventions fail. Constrained in that they can't directly interfere without risking their authority."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The concept of Honor",
+      "comment": "Perspective 5: The concept of honor, as it applies to this specific feud, has largely become performative. It is invoked to justify violence, but the original reasons for the feud have been lost or distorted over time. The institutional memory sustains the conflict beyond its functional relevance. Analytical in that it represents an observer position that can assess the entire lifecycle."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "local",
+      "label": "Verona's Peace",
+      "comment": "Perspective 6: The abstract 'peace of Verona' is trapped by the feud. It is the ultimate victim, constantly suppressed and violated by the actions of the families. An analytical perspective here highlights the structural problems preventing lasting peace."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "original_cause_authenticity",
+      "question": "Is the original cause of the feud remembered accurately, or has it been distorted over time?",
+      "resolution_mechanism": "Historical research into original documents and oral traditions.",
+      "impact": "If the original cause is accurate, reconciliation might be possible. If distorted, the feud is self-perpetuating.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether the original cause of the feud is accurately remembered."
+    },
+    {
+      "id": "community_intervention_threshold",
+      "question": "At what point could external intervention (e.g., by the Prince, the Church, or a rival city-state) successfully resolve the conflict?",
+      "resolution_mechanism": "Game-theoretic modeling of power dynamics and potential intervention strategies.",
+      "impact": "Determines whether the feud is ultimately resolvable, or a permanent feature of Verona's political landscape.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The point at which external intervention could resolve the feud."
+    },
+    {
+      "id": "opportunity_cost_perception",
+      "question": "To what extent do the families perceive the opportunity costs (e.g., economic, social) of maintaining the feud?",
+      "resolution_mechanism": "Economic analysis of the feud's impact on Verona's economy, combined with surveys of family members' attitudes.",
+      "impact": "If the opportunity costs are high and perceived, the families might be more willing to compromise. If low, the feud will likely continue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The extent to which families perceive the opportunity costs of the feud."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The Montague-Capulet feud represents an inherited, transgenerational conflict that mandates spontaneous violence between two noble houses in Renaissance Verona. The 'ancient grudge' creates a context where acts of aggression are expected and peace is actively suppressed by social norms and expectations. This constraint extracts social and economic value from the city of Verona, benefiting only opportunistic criminals and those who thrive on chaos. It functions as a deadly snare for the families themselves and an impediment to the city's overall well-being. The concept of 'honor' is leveraged theatrically to sustain the conflict.",
+    "key_agents": [
+      "Montague Family: Primary victim (powerless/trapped) - locked in the feud.",
+      "Capulet Family: Primary victim (powerless/trapped) - locked in the feud.",
+      "Verona Peace: Abstract victim (powerless/trapped) - the overall peace and stability of Verona suffers.",
+      "Opportunistic Criminals: Beneficiary (moderate/mobile) - thrive on the chaos and disruption.",
+      "Mercutio/Tybalt Archetypes: Mixed beneficiary/victim (powerful/mobile) - derive social standing but risk death.",
+      "The Church: Potential peacekeeper (organized/constrained) - attempts to mediate but is limited by the feud's intransigence."
+    ],
+    "logic_rationale": "Extractiveness: 0.75. The feud extracts a high social and economic cost from Verona. It diverts resources into violence, disrupts trade, and creates a climate of fear. Suppression: 0.90. Peace is actively suppressed by social norms, expectations of violence, and lack of credible exit options for family members. Theater Ratio: 0.75. 'Honor' is used as a performative justification for violence, masking the underlying causes and perpetuating the cycle of conflict. The theater ratio has increased over time as the original reasons for the feud have become less relevant, and the performative aspects have become more prominent.",
+    "perspectival_gap": "The families themselves see the conflict as an inescapable snare. Peacekeepers find their efforts thwarted. Certain individuals derive social standing from the conflict, making it a tangled rope for them. The Church sees the possibility of mediation, but is constrained by the feud's deep roots. The concept of 'honor' has become a performative justification, indicating a degraded piton. The abstract concept of Verona's peace is trapped and constantly violated.",
+    "directionality_logic": "Victims (Montagues, Capulets, Verona Peace) experience high extraction because they are trapped in the conflict with no easy escape. Beneficiaries (opportunistic criminals, certain individuals within the families) experience low to negative extraction because they profit from the chaos. The Church, as a potential peacekeeper, has a more neutral directionality, as its interventions are sometimes successful and sometimes not. The performative concept of honor is a piton because its original function has been lost, and it is now primarily used to justify violence.",
+    "mandatrophy_analysis": "The Montague-Capulet feud presents a mandatrophy challenge because it could be framed as either a pure extraction mechanism (snare) or a mixed coordination-extraction system (tangled rope). The key to resolving this is to recognize that the feud, while harmful, also serves a coordination function by defining group identity and providing a framework for social interaction. The 'honor' system, while often performative, also provides a code of conduct and a means of resolving disputes (albeit violently). Therefore, the tangled rope classification is more accurate because it acknowledges both the extractive and coordinative aspects of the feud. The high extractiveness score reflects the severe consequences of the conflict, while the theater ratio indicates the performative nature of the 'honor' system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "verona_city_watch_corruption",
+      "arranged_marriage_alliance_failure"
+    ],
+    "dual_formulation_note": "The Montague-Capulet feud is a specific instance of a broader class of inherited conflicts and honor-based violence. It is distinct from related constraints, such as corruption within the city watch or the failure of arranged marriages to foster peace, but it influences and is influenced by them."
+  },
+  "directionality_overrides": []
+}

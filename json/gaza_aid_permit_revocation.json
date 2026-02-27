@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "gaza_aid_permit_revocation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gaza_permit"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Revocation of Work Permits for Local Aid Workers in Gaza",
+    "topic_domain": "political/humanitarian_access",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_military_administration"
+    ],
+    "victims": [
+      "palestinian_aid_workers",
+      "humanitarian_organizations",
+      "gazan_population_access_to_aid"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Palestinian Aid Worker",
+      "comment": "PERSPECTIVE 1: PALESTINIAN AID WORKER (SNARE) \u2014 No meaningful exit. Permit revocation eliminates employment in humanitarian sector; alternative employment in Gaza is nonexistent due to blockade and economic collapse. Family depends on aid sector wages. Faces maximum coercive pressure with zero alternatives. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "International Humanitarian Organizations",
+      "comment": "PERSPECTIVE 2: INTERNATIONAL HUMANITARIAN ORGANIZATIONS (SNARE) \u2014 Cannot exit Gaza without abandoning mission; must operate within permit system controlled by Israeli military. Constrained exit: can relocate staff but cannot redirect mission. Faces extraction through forced employment of international staff (higher cost) or mission reduction. Suppression is structural: no alternative channels exist for aid delivery into Gaza."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Israeli Military Administration (COGAT)",
+      "comment": "PERSPECTIVE 3: ISRAELI MILITARY ADMINISTRATION (COGAT) (ROPE) \u2014 Experiences permit revocation as a coordination mechanism: controlling aid worker permits enables military security screening and operational control. From this perspective, the system solves a real coordination problem (vetting aid workers for security risks). Beneficiary with full arbitrage options \u2014 can revoke, reinstate, or modify permit conditions at will. Low effective extraction from own perspective; sees the mechanism as security coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Community and Human Rights Monitoring",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL COMMUNITY / HUMAN RIGHTS MONITORS (TANGLED ROPE) \u2014 Has coordination function (documenting violations, applying diplomatic pressure) but also experiences extraction (limited ability to influence permit policy, dependent on Israeli cooperation for access). Can organize multilateral response but exits are constrained by geopolitical relationships. Sees mixed coordination-extraction structure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Humanitarian Law Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL HUMANITARIAN LAW FRAMEWORK (PITON) \u2014 Theoretically governs permit revocation through Geneva Conventions (protecting humanitarian access). Framework persists as institutional ritual despite selective enforcement and frequent violations. Theater ratio reflects gap between legal obligations and actual protection mechanisms. IHL exists and is cited but has degraded functional capacity to prevent permit revocations in practice."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Gaza Population (Indirect Victim)",
+      "comment": "PERSPECTIVE 6: GAZA POPULATION (INDIRECT VICTIM) (SNARE) \u2014 Cannot exit or organize response. Dependent on humanitarian aid for survival; aid worker permit revocations reduce aid delivery capacity. Bears extraction through reduced aid access, increased hunger, medical emergencies left untreated. No alternatives; no exit options. Maximum experienced harm with zero agency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Occupying Power Sovereignty View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SOVEREIGNTY VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, occupying powers have inherent authority to control entry/exit and permit issuance for populations under military control. Permit revocation is presented as an immutable consequence of military occupation status. However, the structural data reveals false summit: permit revocation is a contingent policy choice, not an inherent feature of occupation. The mountain classification naturalizes what is actually a discretionary extraction mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_vetting_necessity",
+      "question": "Are permit revocations genuinely necessary for security screening, or do they serve primarily as extraction/control mechanisms with minimal actual security function?",
+      "resolution_mechanism": "Comparative analysis: security incidents involving permit holders vs. revoked workers; data on permit revocation grounds (percentage citing security vs. other administrative reasons); cross-case comparison with other occupied territories and conflict zones",
+      "impact": "If genuine security necessity: constraint shifts toward Rope/Tangled Rope from some perspectives. If primarily extraction: Snare classification confirmed across all victim perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether permit revocations serve genuine security functions"
+    },
+    {
+      "id": "alternative_aid_delivery_capacity",
+      "question": "Could international aid organizations maintain comparable aid delivery using only international (non-Palestinian) staff, or is Palestinian local staff functionally irreplaceable?",
+      "resolution_mechanism": "Logistics analysis: cost differential for international vs. local staffing; operational capacity comparisons pre- and post-revocation; documented bottlenecks that cannot be overcome with international staff alone",
+      "impact": "If international staff can substitute: suppression floor lowers, extraction becomes partial. If local staff irreplaceable: suppression remains high, confirms maximum extraction logic.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Palestinian aid workers are functionally replaceable by international staff"
+    },
+    {
+      "id": "permit_revocation_reversibility",
+      "question": "What is the historical pattern of permit reinstatement? Are revocations intended as permanent exclusion or temporary coercive pressure?",
+      "resolution_mechanism": "Historical data: percentage of revoked permits reinstated; timeline of revocation-to-reinstatement; conditions for reinstatement; declarations by COGAT on permanence vs. temporality of revocations",
+      "impact": "If commonly reinstated: constraint may have Scaffold element (temporary coercion with exit path). If permanent: pure Snare confirmed (no possibility of restored employment).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Historical pattern of permit reinstatement vs. permanent revocation"
+    },
+    {
+      "id": "humanitarian_carve_out_enforceability",
+      "question": "Is the humanitarian carve-out in international law (presumptive protection of humanitarian access) structurally enforceable against permit revocation, or is it merely aspirational?",
+      "resolution_mechanism": "Legal precedent analysis: cases where humanitarian carve-outs have successfully prevented permit-based access denial; documentation of enforcement mechanisms (sanctions, court orders, etc.); comparison to other territorial control scenarios",
+      "impact": "If enforceable: Piton classification confirmed (legal framework exists but enforcement degraded). If purely aspirational: moves toward acknowledging IHL as theater, Piton confirmed.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether humanitarian carve-out in international law has structural enforceability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The revocation of work permits for local Palestinian staff of international humanitarian organizations in Gaza represents a structural extraction mechanism operating through administrative control. Israeli military administration (COGAT) controls permit issuance and revocation for all personnel working in humanitarian organizations operating within occupied Gaza. Beginning in late 2023 and intensifying through 2024-2025, systematic permit revocations have eliminated employment for Palestinian aid workers, forcing organizations to either reduce operations, employ expensive international replacements (with reduced local knowledge and access), or halt programs entirely. The constraint exhibits the characteristics of a pure snare from the perspective of Palestinian aid workers and the dependent Gaza population: no exit options, maximum suppression (no alternative employment, blockade conditions), and high extraction (loss of livelihood, reduced aid access). From the Israeli military perspective, the mechanism appears as legitimate security coordination. From the international community perspective, it is a partially enforceable but degraded humanitarian protection mechanism (piton). The constraint's theater ratio (0.45) reflects that permit revocations are justified primarily through security screening rationales that may or may not have actual security function, obscuring the extraction mechanism beneath ostensible regulatory authority.",
+    "key_agents": [
+      "Palestinian Aid Workers: Primary victims (powerless/trapped) \u2014 lose employment and livelihood with zero alternatives due to Gaza blockade and economic collapse",
+      "International Humanitarian Organizations: Secondary victims (moderate/constrained) \u2014 forced to reduce operations or employ expensive international replacements; cannot exit Gaza without abandoning mandate",
+      "Gaza Population: Indirect victims (powerless/trapped) \u2014 dependent on aid delivery; reduced aid worker capacity means reduced aid access and increased humanitarian emergencies",
+      "Israeli Military Administration (COGAT): Primary beneficiary (institutional/arbitrage) \u2014 controls aid worker access; extracts operational control and political leverage over humanitarian sector",
+      "International Community / Human Rights Monitors: Organized observers (organized/constrained) \u2014 document violations but have limited enforcement capacity; dependent on Israeli cooperation for access and information",
+      "International Humanitarian Law Framework: Institutional structure (institutional/arbitrage in theory) \u2014 provides legal framework for humanitarian protection but enforcement is degraded (piton)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing occupation-based control as inherent and immutable rather than contingent policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint produces direct economic extraction (loss of Palestinian worker income), operational extraction (forcing organizations to redirect resources), and instrumental extraction (gaining political control over humanitarian access). The trajectory from 0.52 to 0.68 reflects intensification: initial selective revocations (security-justified) evolved into systematic exclusion. Base extraction is legitimized through security rhetoric but functions structurally as employment elimination and humanitarian access control. Suppression (0.75): Very high. Palestinian aid workers face suppression through: (1) no alternative employment in Gaza (blockade conditions, economic collapse), (2) no ability to challenge permit decisions (military administrative authority), (3) family dependence on aid sector wages, (4) no exit or substitution options. Organizations face suppression through: (1) inability to operate without permits, (2) no alternative aid delivery channels, (3) choice between mission abandonment or cost escalation. Theater ratio (0.45): Moderate-low. Permit revocation justification relies on security screening rhetoric ('vetting for Hamas connections,' 'preventing aid diversion'), but the structural function is access control and employment elimination. The theater is lower than traditional bureaucratic mechanisms because the security justification is often transparent as secondary rationale; the primary function (control through permit authority) is visible. The ratio increases slightly over the interval as revocations become more systematic and less individually justified.",
+    "perspectival_gap": "The constraint demonstrates a 'Rope-Snare duality' \u2014 the same structural mechanism (permit control by military authority) is experienced as coordination by the beneficiary and as maximum extraction by victims. This gap is not a measurement ambiguity but a fundamental structural property: permit authority inherently centralizes control in one agent and removes alternatives for all others. The gap cannot be closed through better information or clarification \u2014 it reflects the irreducible asymmetry of permit-based access control. The piton perspective (IHL framework) shows that international humanitarian law nominally addresses this gap through humanitarian carve-outs and presumptive protection of aid access, but enforcement mechanisms are degraded, converting the legal framework into performative ritual.",
+    "directionality_logic": "Palestinian aid workers: Structural position as victims with trapped exit options produces maximum directionality d \u2248 0.95, yielding f(d) \u2248 1.42 (powerless equivalent). They experience the full weight of extraction with zero agency or exit. Israeli military administration: Position as beneficiary with arbitrage exit options produces low directionality d \u2248 0.05-0.15, yielding negative or near-zero f(d) \u2014 they experience the constraint as coordination benefit (control gained), not extraction cost. International organizations: Position as moderate-power victims with constrained exit produces d \u2248 0.65-0.75, yielding f(d) \u2248 1.00-1.15 (moderate experienced extraction) \u2014 they can partially exit (relocate staff, change operations) but cannot fully exit without abandoning mandate. Gaza population: Position as powerless indirect victims with trapped options produces d \u2248 0.93, f(d) \u2248 1.40 \u2014 maximum experienced extraction despite not being direct permit holders. International community: Position as organized observers with analytical/constrained exit produces d \u2248 0.70-0.75, f(d) \u2248 1.12 \u2014 can document and pressure but cannot prevent, experiencing moderate extraction through limited agency.",
+    "mandatrophy_analysis": "MANDATROPHY PRESENT AND REQUIRES RESOLUTION: The classification as Snare is clear from victim perspectives (Palestinian workers, Gaza population, organizations). However, the Israeli military administration's perspective generates the false Rope classification \u2014 the mandate to provide security coordination is real and legitimate, but it is being used as cover for extraction. The risk is conflating 'security coordination is a legitimate function' with 'therefore the mechanism is Rope rather than Snare.' Mandatrophy resolution requires recognizing that extraction mechanisms can be justified through legitimate mandates without becoming coordination mechanisms. The permit system serves BOTH coordination (security screening) AND extraction (employment elimination, political control). The mandatrophy is resolved by acknowledging that the classification depends on the extraction ratio: if security screening is the primary function and employment impact is secondary, the mechanism is Tangled Rope (hybrid). If employment control is primary and security screening is secondary justification, the mechanism is Snare with security theater. The intensity of permit revocations (0.52 \u2192 0.68 extractiveness trajectory) and the breadth of victimization (Palestinian workers, organizations, Gaza population all trapped) suggest the constraint functions as Snare with security mandate (i.e., security coordination is the stated mandate but extraction is the structural outcome). The mandate is genuine but is being operationalized as extraction mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gaza_humanitarian_access_blockade",
+      "palestinian_employment_collapse",
+      "international_ngo_operational_reduction"
+    ],
+    "dual_formulation_note": "The permit revocation mechanism is downstream of broader Gaza blockade constraints but represents a distinct structural lever. The blockade constrains all economic activity; permit revocation specifically targets humanitarian sector. These are separate constraints with different extractiveness profiles: blockade affects all Palestinians (broader but less directly controlled), while permit revocation affects aid workers specifically (narrower but more directly enforced through administrative mechanism)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

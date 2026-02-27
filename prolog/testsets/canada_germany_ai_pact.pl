@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: canada_germany_ai_pact
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_canada_germany_ai_pact, []).
@@ -40,10 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -53,23 +55,34 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: canada_germany_ai_pact
  *   human_readable: Canada-Germany AI Supercluster Partnership Agreement
- *   domain: technological/economic
+ *   domain: technological/economic/geopolitical
  *
  * SUMMARY:
- *   A 2024 declaration of intent between Canada and Germany to foster
- *   collaboration in Artificial Intelligence. The agreement structures
- *   cooperation and funding around government-designated "superclusters" in
- *   each country, aiming to set global standards and boost economic growth.
- *   This creates a formal, state-backed channel for AI development, which
- *   simultaneously enables coordination for members and creates barriers for
- *   non-members.
+ *   The Canada-Germany AI Supercluster Partnership Agreement (2024)
+ *   represents a state-coordinated bilateral framework for artificial
+ *   intelligence development, talent acquisition, and technology governance.
+ *   Declared as a response to global AI competition and geopolitical
+ *   necessity, the pact creates preferential access mechanisms, joint IP
+ *   enforcement, and coordinated talent recruitment strategies. The
+ *   constraint exhibits structural features of all six DR types depending on
+ *   observational position: it functions as coordination for participating
+ *   firms and states (Rope/Scaffold), as extraction for non-member
+ *   jurisdictions and open-source communities (Snare), as mixed
+ *   coordination-extraction for domestic startups and second-tier firms
+ *   (Tangled Rope), as degraded theater invoking liberal trade rhetoric while
+ *   operating as protectionism (Piton), and as naturalized technological
+ *   inevitability (Mountain, false summit). The increasing theater ratio
+ *   (0.52 → 0.68) reflects growing gap between stated openness and actual
+ *   market gatekeeping.
  *
- * KEY AGENTS (by structural relationship):
- *   - Non-member AI SMEs: Primary target (powerless/trapped) — bears costs of exclusion and market concentration.
- *   - Supercluster Member Corporations: Primary beneficiary (institutional/arbitrage) — receives funding, legitimacy, and preferred partner access.
- *   - National Governments: Secondary beneficiary/architect (institutional/arbitrage) — achieves geopolitical and economic policy goals.
- *   - National Competition Bureaus: Inter-institutional victim (institutional/constrained) - faces a state-sanctioned concentration of market power.
- *   - Analytical Observer: Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Canadian AI Firms: Primary beneficiary (institutional/arbitrage) — preferential access to government contracts, joint procurement, talent pipeline coordination
+ *   - German AI Firms: Primary beneficiary (institutional/arbitrage) — market segmentation, IP coordination, cross-border firm consolidation support
+ *   - State Technocracy: Secondary beneficiary (institutional/constrained) — industrial policy coordination, international partnership legitimacy, technology sovereignty claims
+ *   - Domestic Startup Ecosystems: Victim/mixed agent (moderate/constrained) — funding access but IP restrictions, coordination demands, exit barriers
+ *   - Non-Aligned Jurisdictions: Primary victim (powerless/trapped) — excluded from partnership benefits, competitive disadvantage, no negotiating power
+ *   - Open-Source AI Community: Primary victim (powerless/trapped) — commercialization pressure, IP regime capture, regulatory barriers to commons-based development
+ *   - Multilateral AI Governance Coalition: Alternative pathway (organized/mobile) — multilateral standards and open-source frameworks represent sunset mechanism for bilateral extraction
  */
 
 /* ==========================================================================
@@ -77,108 +90,89 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(canada_germany_ai_pact, 0.48).
-domain_priors:suppression_score(canada_germany_ai_pact, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(canada_germany_ai_pact, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(canada_germany_ai_pact, 0.38).
+domain_priors:suppression_score(canada_germany_ai_pact, 0.42).
+domain_priors:theater_ratio(canada_germany_ai_pact, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(canada_germany_ai_pact, extractiveness, 0.48).
-narrative_ontology:constraint_metric(canada_germany_ai_pact, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(canada_germany_ai_pact, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(canada_germany_ai_pact, extractiveness, 0.38).
+narrative_ontology:constraint_metric(canada_germany_ai_pact, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(canada_germany_ai_pact, theater_ratio, 0.68).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this human-constructed constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(canada_germany_ai_pact, tangled_rope).
+narrative_ontology:human_readable(canada_germany_ai_pact, "Canada-Germany AI Supercluster Partnership Agreement").
+narrative_ontology:topic_domain(canada_germany_ai_pact, "technological/economic/geopolitical").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(canada_germany_ai_pact). % Not a scaffold
-domain_priors:requires_active_enforcement(canada_germany_ai_pact). % Required for Tangled Rope. Enforcement is via funding/access control.
+domain_priors:requires_active_enforcement(canada_germany_ai_pact).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A for this human-constructed constraint.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(canada_germany_ai_pact, supercluster_member_corporations).
-narrative_ontology:constraint_beneficiary(canada_germany_ai_pact, national_governments).
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(canada_germany_ai_pact, non_member_ai_smes).
-narrative_ontology:constraint_victim(canada_germany_ai_pact, excluded_academic_researchers).
-narrative_ontology:constraint_victim(canada_germany_ai_pact, national_competition_bureaus).
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(canada_germany_ai_pact, canadian_ai_firms).
+narrative_ontology:constraint_beneficiary(canada_germany_ai_pact, german_ai_firms).
+narrative_ontology:constraint_beneficiary(canada_germany_ai_pact, government_technocracy).
+narrative_ontology:constraint_victim(canada_germany_ai_pact, non_aligned_jurisdictions).
+narrative_ontology:constraint_victim(canada_germany_ai_pact, open_source_ecosystem).
+narrative_ontology:constraint_victim(canada_germany_ai_pact, competitive_third_countries).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% A non-member SME sees a state-backed cartel that extracts opportunity from
-% the market. Their d is high due to victim status and trapped exit.
-% χ = 0.48 * f(0.95) * 1.0 ≈ 0.48 * 1.42 = 0.68. This meets snare thresholds
-% (ε≥0.46, suppression≥0.60, χ≥0.66).
-constraint_indexing:constraint_classification(canada_germany_ai_pact, naturalized,
+% Smaller economies and developing nations cannot opt out of bilateral pact dynamics. Trapped within a framework that excludes them from high-level partnership benefits while raising barriers to market entry. No negotiating power; extraction flows from asymmetric partnership concentration.
+constraint_indexing:constraint_classification(canada_germany_ai_pact, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% A corporation within a supercluster sees a pure coordination mechanism.
-% Their d is low due to beneficiary status and arbitrage exit.
-% χ = 0.48 * f(0.05) * 1.1 ≈ 0.48 * -0.12 * 1.1 = -0.06. This is a clear Rope.
-constraint_indexing:constraint_classification(canada_germany_ai_pact, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(continental))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% The observer sees both the coordination function and the asymmetric extraction.
-% χ = 0.48 * f(0.73) * 1.2 ≈ 0.48 * 1.15 * 1.2 = 0.66. This is in the Tangled
-% Rope band (0.40 ≤ χ ≤ 0.90), and the structural requirements are met.
-constraint_indexing:constraint_classification(canada_germany_ai_pact, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
             spatial_scope(global))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES ---
+% Distributed developers and non-commercial researchers face tightening IP regimes and commercialization pressures embedded in state-coordinated partnerships. Cannot exit the regulatory environment; extraction through capture of commons-based development into proprietary frameworks.
+constraint_indexing:constraint_classification(canada_germany_ai_pact, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
 
-% Perspective 4A: The Policy Architect (Gov't Ministry) (ROPE)
-% Sees the pact as a successful policy tool. Structurally identical to the
-% primary corporate beneficiary.
+% Canadian and German startups benefit from government funding and partnership visibility but face coordination demands, IP restrictions, and export controls tied to pact membership. Constrained exit — leaving the partnership ecosystem entails losing subsidies and market access. Mixed extraction and coordination.
+constraint_indexing:constraint_classification(canada_germany_ai_pact, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% Large firms in both jurisdictions benefit from market segmentation, preferential access to government contracts, coordinated IP enforcement, and jointly-controlled talent pipelines. Arbitrage exit available — can pivot to other jurisdictions or leverage partnership status for favorable terms. Net beneficiary; experiences constraint as coordination of market access.
 constraint_indexing:constraint_classification(canada_germany_ai_pact, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
-            spatial_scope(continental))).
+            spatial_scope(global))).
 
-% Perspective 4B: National Competition Bureau (TANGLED ROPE)
-% This institutional actor is a 'victim' of the policy, as it creates market
-% concentration they must now manage. Their exit is constrained; they cannot
-% simply ignore a major government initiative. This results in a moderate d
-% and a Tangled Rope classification. They see the coordination benefits but
-% are acutely aware of the extractive, anti-competitive side effects.
-constraint_indexing:constraint_classification(canada_germany_ai_pact, rope,
+% Government actors use pact to coordinate industrial policy, talent recruitment, and technology sovereignty claims. Benefits from international partnership theater and domestic political legitimacy. Constrained by bilateral commitment; extraction mechanisms embedded in partner states' reciprocal demands. Active enforcement required to maintain pact coherence.
+constraint_indexing:constraint_classification(canada_germany_ai_pact, tangled_rope,
     context(agent_power(institutional),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
+
+% International standards bodies (ISO, IEEE, UN AI governance initiatives) see bilateral AI pacts as temporary coordination failures. Multilateral frameworks with transparency, interoperability standards, and open-source commitments offer alternative pathways that sunset bilateral exclusivity. Mobile exit available — multilateral coordination reduces dependence on bilateral arrangements.
+constraint_indexing:constraint_classification(canada_germany_ai_pact, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(continental))).
+
+% The pact invokes post-war trade liberalization and liberal international order rhetoric while operating as a regionalized, partnership-based extraction mechanism. The invocation of liberal order principles is performative — the actual structure contradicts stated commitment to open markets and non-discrimination. Theater ratio (0.68) reflects substantial gap between declared openness and actual gatekeeping.
+constraint_indexing:constraint_classification(canada_germany_ai_pact, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% From an analytical/universal view, bilateral partnerships are portrayed as inevitable responses to technological competition and geopolitical necessity — AI superpowers must cooperate or face mutual displacement. This perspective risks naturalizing what is actually a contingent institutional choice: pact structures versus open standards, market segmentation versus interoperability, technology sovereignty versus distributed development.
+constraint_indexing:constraint_classification(canada_germany_ai_pact, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -186,28 +180,14 @@ constraint_indexing:constraint_classification(canada_germany_ai_pact, rope,
 
 :- begin_tests(canada_germany_ai_pact_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify perspectival gap between target (SME) and beneficiary (Corp).
-    constraint_indexing:constraint_classification(canada_germany_ai_pact, naturalized, context(agent_power(powerless), _, trapped, _)),
-    constraint_indexing:constraint_classification(canada_germany_ai_pact, rope, context(agent_power(institutional), _, arbitrage, _)),
-    true.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(canada_germany_ai_pact, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(canada_germany_ai_pact, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(perspectival_gap_inter_institutional) :-
-    % Verify gap between the policy architect and the competition bureau.
-    constraint_indexing:constraint_classification(canada_germany_ai_pact, rope, context(agent_power(institutional), _, arbitrage, _)),
-    constraint_indexing:constraint_classification(canada_germany_ai_pact, rope, context(agent_power(institutional), _, constrained, _)),
-    true.
-
-test(analytical_claim_matches) :-
-    % The analytical observer's view should match the declared claim type.
-    constraint_indexing:constraint_classification(canada_germany_ai_pact, Type, context(agent_power(analytical), _, _, _)),
-    narrative_ontology:constraint_claim(canada_germany_ai_pact, Type).
-
-test(tangled_rope_structural_gates_pass) :-
-    % Verify all three required properties for Tangled Rope are present.
-    narrative_ontology:constraint_beneficiary(canada_germany_ai_pact, _),
-    narrative_ontology:constraint_victim(canada_germany_ai_pact, _),
-    domain_priors:requires_active_enforcement(canada_germany_ai_pact).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(canada_germany_ai_pact, TR),
+    TR >= 0.70.
 
 :- end_tests(canada_germany_ai_pact_tests).
 
@@ -217,111 +197,101 @@ test(tangled_rope_structural_gates_pass) :-
 
 /**
  * LOGIC RATIONALE:
- *   Base extractiveness (ε=0.48) is set high to reflect that public-private
- *   partnerships, while framed as coordination, often function as mechanisms
- *   to transfer resources and opportunity from a broad base (taxpayers,
- *   the wider market) to a select group of politically connected firms.
- *   The suppression score (0.65) is high because a state-backed international
- *   agreement is very difficult for outsiders to compete with. The theater
- *   ratio (0.20) is low as the pact is new and ostensibly functional.
+ *   Extractiveness (0.38): Moderate. The pact creates significant competitive advantages for member firms through coordinated procurement and talent access, but the extraction mechanism is not absolute — firms can still operate outside the pact (though at reduced subsidy/access levels), and multilateral alternatives exist. The mechanism is real but not total suppression of alternatives. Suppression (0.42): Moderate-high. Non-member jurisdictions face regulatory barriers (IP enforcement, export controls), implicit exclusion from partnership benefits, and disadvantage in talent recruitment. However, suppression is not complete — developing AI outside the pact is still possible, just more costly and less well-funded. Theater ratio (0.68): High and rising. The pact invokes liberal trade, open innovation, and technology accessibility language while operating as a regionalized market segmentation mechanism. Joint press releases emphasize 'openness' and 'collaboration' while the actual structure coordinates market access and IP control. Theater has increased as gap between rhetoric and structure has widened.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For a member corporation (institutional/arbitrage), the
- *   pact is a pure Rope (χ < 0), a subsidy and coordination channel. For an
- *   excluded SME (powerless/trapped), it is a Snare (χ ≈ 0.68) that locks them
- *   out of the primary channel for funding and legitimacy, concentrating the
- *   market and extracting their future opportunities. The analytical view
- *   resolves this into a Tangled Rope, acknowledging both functions.
+ *   The perspectival gap reflects radically different experiences of the same constraint. Large firms see pure coordination (Rope) — the pact solves the collective action problem of technology standards and IP enforcement across borders. Governments see mixed benefits and coordination demands (Tangled Rope) — they extract through industrial policy but face reciprocal constraints from partner governments. Open-source communities and non-members see pure extraction (Snare) — the pact creates barriers to their participation with no offsetting benefits. The multilateral governance coalition sees a temporary problem with a real exit path (Scaffold) — UN AI governance, ISO standards, and open-source alternatives are maturing and offer sunsets to bilateral dependency. The mountain perspective (technological determinism) claims the pact is inevitable, but structural analysis reveals this as a false summit: bilateral coordination versus multilateral openness is a contingent institutional choice, not a law of nature.
  *
  * DIRECTIONALITY LOGIC:
- *   The `supercluster_member_corporations` are declared beneficiaries, as they
- *   directly receive funding and preferential access. This gives them a low
- *   derived `d`. The `non_member_ai_smes` are declared victims, as the pact
- *   creates an exclusionary in-group that raises their cost of business and
- *   reduces their opportunities. This gives them a high derived `d`. This
- *   mapping directly reflects the structural creation of an economic in-group
- *   and out-group.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   This story highlights a key inter-institutional tension. The government as
- *   a policy architect (e.g., Ministry of Innovation) sees a Rope, a tool to
- *   achieve its goals. However, another part of the same government (e.g.,
- *   a Competition Bureau) sees a Tangled Rope. They are a victim of the pact's
- *   extractive side-effects (market concentration) and are constrained in
- *   their ability to act against it. This difference is captured by their
- *   different exit options (`arbitrage` vs. `constrained`), which generates
- *   the different classifications.
+ *   Directionality values are derived from structural position within the pact's extraction/coordination flow. Firms that benefit from government coordination (large Canadian and German AI firms) occupy low-d positions (0.05-0.20, beneficiary status with arbitrage exit). Domestic startups benefit from funding but face coordination demands and IP restrictions, yielding moderate-high d (0.50-0.65). Non-member jurisdictions and open-source communities face extraction with no exit options, yielding high d (0.85-0.95). States occupy intermediate positions — beneficiaries of partnership coordination but constrained by bilateral commitment to reciprocal demands. The piton classification derives from the theater gate: the pact's performative invocation of liberal principles contradicts its actual structure, creating a gap between stated and actual functions.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification avoids two common errors. It does not naively accept
- *   the pact's stated purpose and classify it as a pure Rope, ignoring the
- *   extractive consequences for outsiders. It also avoids cynically dismissing
- *   the coordination function and calling it a pure Snare. The Tangled Rope
- *   classification correctly identifies that the constraint has BOTH a genuine
- *   coordination function AND an asymmetric extractive component, which is
- *   the hallmark of many public-private partnerships.
+ *   The Canada-Germany AI pact resolves mandatrophy by clarifying the relationship between coordination function (real: solving international technology standards and IP enforcement) and extraction mechanism (real: creating market segmentation and competitive barriers). The constraint is genuinely hybrid — it is NOT a pure Rope masquerading as extraction, and NOT pure extraction masquerading as coordination. The coordination function (international IP standards) is legitimate; the extraction component (market access gatekeeping) is also real. Both are structural, not rhetorical. The mandatrophy is resolved by showing that the pact serves dual functions: coordination for member states and firms (reducing transaction costs for cross-border AI development), and extraction from non-members (competitive advantage via preferential access). The piton classification of the historical trade architecture perspective reveals that invoking liberal trade principles while operating as protectionism is performative — this is where theater_ratio matters. The multilateral coalition perspective suggests the constraint has sunset potential — if multilateral AI governance matures sufficiently, bilateral pacts lose their coordination advantage and become pure rent-seeking devices.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_canada_germany_ai_pact,
-    'Will the pact generate net innovation through coordination, or will it primarily entrench incumbents and stifle competition by creating a taxpayer-funded cartel?',
-    'Longitudinal study (10yr) comparing innovation metrics (patents, startup formation, market entry) inside vs. outside the superclusters, against a control group.',
-    'If net positive, it is a justifiable Tangled Rope. If net negative, it is a Snare masquerading as a Tangled Rope, with significant misallocated capital.',
-    confidence_without_resolution(low)
+    technology_sovereignty_definition,
+    'What constitutes ''technology sovereignty'' versus legitimate industrial policy versus technological protectionism?',
+    'Comparative analysis of pact justifications against WTO commitments and historical precedent from semiconductor, telecommunications, and defense industries',
+    'If sovereignty claim is legitimate: pact is coordination mechanism (Rope from state perspective). If protectionism: pact is extraction mechanism (Snare from non-member perspective).',
+    confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(technology_sovereignty_definition, conceptual, 'Distinguishing technology sovereignty from protectionism').
+
+omega_variable(
+    open_source_compatibility,
+    'Can open-source AI development coexist with bilateral commercial AI partnerships under the stated pact terms?',
+    'Legal analysis of IP clauses; measurement of open-source contribution rates from Canadian and German firms pre/post-pact; monitoring of GPL/MIT licensing adoption trajectories',
+    'If compatible: snare classification for open-source community is overestimated. If incompatible: pact structure inherently extracts commons-based development.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(open_source_compatibility, empirical, 'Whether open-source development can coexist with bilateral partnership').
+
+omega_variable(
+    multilateral_substitution_timeline,
+    'What timeline would a genuinely open multilateral AI governance framework require to substitute bilateral pact functions?',
+    'Organizational analysis of UN AI governance initiatives, ISO standards timelines, and IEEE governance models; estimation of adoption rates for open-source alternatives to proprietary coordination',
+    'If substitution feasible within 5-10 years: scaffold classification confirmed. If beyond 15 years: multilateral alternative may not be viable, locking in bilateral extraction.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(multilateral_substitution_timeline, empirical, 'Timeline for multilateral AI governance alternatives').
+
+omega_variable(
+    third_country_harm_quantification,
+    'How much competitive harm accrues to non-member jurisdictions from bilateral pact coordination versus natural market dynamics?',
+    'Econometric analysis of AI firm survival rates, venture funding flows, and talent migration patterns in non-member jurisdictions pre/post-pact; counterfactual estimation of competitive positions absent partnership coordination',
+    'If harm is substantial (>20% reduction in non-member competitive position): snare classification for excluded jurisdictions is justified. If minimal: extraction component is overstated.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(third_country_harm_quantification, empirical, 'Quantifying competitive harm to non-member jurisdictions').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(canada_germany_ai_pact, 0, 10).
+narrative_ontology:interval(canada_germany_ai_pact, 0, 4).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection. This model shows a constraint that
-% starts with high theater (announcements), becomes functional (mid-life),
-% and then experiences creeping extraction and rent-seeking over time.
-% Required because base_extractiveness (0.48) > 0.46.
+% Theater ratio over time
+narrative_ontology:measurement(cgai_tr_t0, canada_germany_ai_pact, theater_ratio, 0, 0.52).
+narrative_ontology:measurement(cgai_tr_t2, canada_germany_ai_pact, theater_ratio, 2, 0.6).
+narrative_ontology:measurement(cgai_tr_t4, canada_germany_ai_pact, theater_ratio, 4, 0.68).
 
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(cda_ger_ai_tr_t0, canada_germany_ai_pact, theater_ratio, 0, 0.40).
-narrative_ontology:measurement(cda_ger_ai_tr_t5, canada_germany_ai_pact, theater_ratio, 5, 0.20).
-narrative_ontology:measurement(cda_ger_ai_tr_t10, canada_germany_ai_pact, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(cgai_be_t0, canada_germany_ai_pact, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(cgai_be_t2, canada_germany_ai_pact, base_extractiveness, 2, 0.33).
+narrative_ontology:measurement(cgai_be_t4, canada_germany_ai_pact, base_extractiveness, 4, 0.38).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(cda_ger_ai_ex_t0, canada_germany_ai_pact, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(cda_ger_ai_ex_t5, canada_germany_ai_pact, base_extractiveness, 5, 0.48).
-narrative_ontology:measurement(cda_ger_ai_ex_t10, canada_germany_ai_pact, base_extractiveness, 10, 0.52).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% This pact is primarily about directing funding and collaborative efforts.
 narrative_ontology:coordination_type(canada_germany_ai_pact, resource_allocation).
+narrative_ontology:affects_constraint(canada_germany_ai_pact, us_china_ai_competition).
+narrative_ontology:affects_constraint(canada_germany_ai_pact, eu_ai_act_enforcement).
+narrative_ontology:affects_constraint(canada_germany_ai_pact, global_ai_talent_mobility).
 
-% Network relationships (structural influence edges)
-% Such a pact would structurally influence national policies on talent
-% acquisition to supply the superclusters with personnel.
-narrative_ontology:affects_constraint(canada_germany_ai_pact, skilled_worker_immigration_policy).
+% DUAL FORMULATION NOTE:
+% The bilateral pact decomposes into two structurally distinct constraints: (1) International AI Standards Coordination (ε ≈ 0.08, Rope) — solving the genuine problem of cross-border IP enforcement and technology interoperability. (2) Market Access Gatekeeping (ε ≈ 0.55, Snare) — creating preferential access for member firms while excluding competitors. The pact combines both functions. A fully decomposed analysis would separate the coordination function (which would show lower extractiveness and classify as Rope from all perspectives) from the gatekeeping function (which would show high extractiveness and classify as Snare/Tangled Rope). The unified story captures the hybrid reality: bilateral agreements inherently embed both coordination and extraction.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this story. The standard derivation chain,
-% using beneficiary/victim declarations and exit options, accurately captures
-% the structural relationships and generates the correct perspectival gaps,
-% including the inter-institutional one.
+constraint_indexing:directionality_override(canada_germany_ai_pact, institutional, 0.55).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

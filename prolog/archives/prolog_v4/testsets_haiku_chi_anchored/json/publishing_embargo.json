@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "publishing_embargo",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "pubemb"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Academic Publishing Embargo",
+    "topic_domain": "social/academic_publishing",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_publishers",
+      "journal_gatekeepers"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "public_health_responsiveness",
+      "global_scientific_collaboration"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Early Career Researcher",
+      "comment": "PERSPECTIVE 1: EARLY CAREER RESEARCHER (SNARE) \u2014 Cannot share findings before publication without violating embargo terms; career advancement depends on journal placement; no exit option without severe cost. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Public Health Emergencies",
+      "comment": "PERSPECTIVE 2: PUBLIC HEALTH EMERGENCIES (SNARE) \u2014 Critical findings (pandemic treatments, vaccine efficacy data, disease vectors) are suppressed during embargo windows precisely when time-sensitive response is needed. Constrained by journal-driven publication timelines, not by scientific necessity. d\u22480.88, f(d)\u22481.35, \u03c3=1.2 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Global Research Community",
+      "comment": "PERSPECTIVE 3: GLOBAL RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Benefits from peer-review coordination (quality control, citation standards, research validation). Simultaneously experiences extraction through delayed dissemination, journal access costs, and gatekeeping. d\u22480.58, f(d)\u22480.80, \u03c3=1.2 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Commercial Publisher",
+      "comment": "PERSPECTIVE 4: COMMERCIAL PUBLISHER (ROPE) \u2014 Embargo enforces temporal monopoly on distribution; coordinates peer review and editorial services; captures subscription revenue during embargo window. Experiences constraint as enabling their coordination function. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Journal Editorial System",
+      "comment": "PERSPECTIVE 5: JOURNAL EDITORIAL SYSTEM (PITON) \u2014 Embargo enforcement relies on behavioral compliance (researchers honor terms) rather than technical enforcement. The theater ratio is high: embargo persists through cultural inertia despite preprint alternatives (arXiv, bioRxiv, medRxiv). theater_ratio=0.68 reflects that much editorial gatekeeping is performative in the preprint era. d\u22480.35, f(d)\u22480.32, \u03c3=1.2 \u2192 \u03c7\u22480.27."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open Science Coalition",
+      "comment": "PERSPECTIVE 6: OPEN SCIENCE COALITION (SCAFFOLD) \u2014 Preprint servers (arXiv, bioRxiv, medRxiv), open-access mandates, and registered reports provide alternative verification pathways with explicit sunset logic. Organized agents (funding agencies, universities, researcher collectives) are migrating away from embargo-dependent publication. d\u22480.42, f(d)\u22480.43, \u03c3=1.2 \u2192 \u03c7\u22480.22. Theater declining as alternatives mature."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Coordination View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / COORDINATION VIEW (ROPE) \u2014 From civilizational distance, embargo is a coordination mechanism solving real problems: maintaining publication incentives, funding review quality assurance, and establishing priority claims. The constraint appears as pure coordination without extractive machinery. However, structural data (\u03b5=0.52, suppression=0.65) contradicts this \u2014 the engine will flag as false summit if observer naturalizes embargo as necessary coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "preprint_quality_sufficiency",
+      "question": "Do preprint servers provide equivalent quality assurance to traditional peer review for establishing priority and validating claims?",
+      "resolution_mechanism": "Longitudinal analysis of preprint-to-publication correction rates vs journal-direct publication error rates; citation impact and replication outcomes correlated with publication pathway",
+      "impact": "If equivalent: scaffold sunset is real \u2014 embargo is contingent institutional arrangement, not necessary. If inferior: embargo remains functionally justified, classification shifts toward rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether preprints provide sufficient quality assurance without embargo"
+    },
+    {
+      "id": "time_criticality_variance",
+      "question": "What fraction of embargoed findings have time-criticality (pandemic response, public health, safety) that conflicts with embargo windows?",
+      "resolution_mechanism": "Historical analysis of embargoed publications that subsequently became policy-relevant; comparison of time-to-publication vs policy decision windows in health, safety, and environmental domains",
+      "impact": "If >20% of publications have time-criticality conflicts: snare classification dominates (suppression serves pure gatekeeping). If <5%: tangled_rope classification holds (extraction is byproduct of coordination function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fraction of embargoed research with time-critical applications"
+    },
+    {
+      "id": "enforcement_mechanism_degradation",
+      "question": "Is embargo enforcement becoming technically obsolete as researchers adopt preprint-first strategies and institutional repositories bypass journal-gated distribution?",
+      "resolution_mechanism": "Tracking adoption rates of preprint-first workflows by institution and discipline; measurement of effective enforcement through citation lag and knowledge diffusion timing",
+      "impact": "If enforcement degrading: piton classification confirmed \u2014 embargo persists through inertia, not functional necessity. If enforcement stable: institutional power prevents alternative pathways from fully replacing embargoed publication.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether embargo enforcement is degrading through preprint adoption"
+    },
+    {
+      "id": "publisher_coordination_necessity",
+      "question": "Are commercial publishers providing coordination functions (peer review, editorial curation, quality assurance) that cannot be replicated by open-science infrastructure?",
+      "resolution_mechanism": "Comparative analysis of peer review quality, editorial standards, and citation impact across journal-published vs preprint-published research; cost-benefit analysis of publisher services vs open-science alternatives",
+      "impact": "If publishers essential: rope classification justified \u2014 embargo is byproduct of necessary coordination. If replicable: tangled_rope or snare classification strengthened \u2014 embargo is pure rent extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether publisher coordination functions are irreplaceable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Academic publishing embargoes represent a structural tension between the coordination function of peer-reviewed journals (quality assurance, priority establishment, citation standards) and the extractive gatekeeping that delays public access to findings. The embargo constraint exhibits characteristics of both coordination mechanisms (rope) and pure extraction (snare/tangled rope) depending on the observer's structural position. For early-career researchers and time-critical domains (pandemic response, public health), embargoes function as pure extraction \u2014 they suppress findings precisely when dissemination matters most, while researchers have no exit option without career damage. For commercial publishers, embargoes coordinate peer review and distribute editorial authority while capturing subscription revenue. For the global research community, embargoes both enable quality assurance and extract value through delayed access. The theater_ratio (0.68) reflects degradation of the embargo mechanism itself: preprint servers, institutional repositories, and researcher-direct dissemination strategies are making embargo enforcement increasingly performative. The constraint appears to be in transition from functional coordination mechanism (rope) toward institutional inertia (piton), with residual extraction (tangled rope) visible from institutional perspectives.",
+    "key_agents": [
+      "Early Career Researchers: Primary victim (powerless/trapped) \u2014 career advancement depends on journal placement; cannot share findings before official publication without violating embargo terms",
+      "Commercial Publishers: Primary beneficiary (institutional/arbitrage) \u2014 embargo enforces temporal monopoly on dissemination and creates subscription demand; coordinates peer review coordination function",
+      "Public Health Emergencies: Secondary victim (moderate/constrained) \u2014 time-critical findings (pandemic treatments, vaccine efficacy, disease vectors) are suppressed during embargo windows when rapid response is needed",
+      "Global Research Community: Mixed stakeholder (organized/mobile) \u2014 benefits from peer-review quality control and citation standards; experiences extraction through delayed access and journal gatekeeping",
+      "Journal Editorial System: Institutional actor (institutional/constrained) \u2014 administers embargo enforcement through behavioral compliance; piton perspective: performative ritual maintained through inertia",
+      "Open Science Coalition: Organized alternatives (organized/mobile) \u2014 preprint servers (arXiv, bioRxiv, medRxiv), open-access mandates, and registered reports providing alternative pathways with explicit sunset logic",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing embargo as necessary for quality assurance when alternatives demonstrate coordination without gatekeeping"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The embargo captures subscription value and enforces temporal monopoly on distribution, but this extraction is intertwined with genuine coordination functions (peer review, editorial curation, citation standards). The \u03b5 value reflects that extractiveness is not as pure as commercial gatekeeping (\u03b5\u22480.65-0.75) because journals do provide coordination value; but it is higher than pure coordination mechanisms (\u03b5\u22640.35) because the temporal monopoly extracts beyond the cost of coordination services. Suppression (0.65): High. Early-career researchers face severe career risks from violating embargo terms; preprint-first strategies still carry reputation costs in traditional disciplines; institutional repositories and researcher-direct dissemination remain socially risky despite technical feasibility. Public health response timelines are suppressed precisely when critical. Suppression is sustained by cultural/institutional norms, not by technical barriers. Theater ratio (0.68): High and increasing. Embargo enforcement relies on behavioral compliance rather than technical enforcement \u2014 researchers honor terms through cultural inertia despite preprint alternatives. The theater has increased over the measurement interval as preprint normalization has advanced (arXiv: 1991-present; bioRxiv: 2013-present; medRxiv: 2019-present) yet embargo cultural power persists. This trajectory is diagnostic of piton degradation: the constraint's functional necessity declines while performative maintenance increases.",
+    "perspectival_gap": "This constraint exhibits sharp perspectival divergence. The early-career researcher and public health systems see snare: they cannot exit, their findings are suppressed at the moment of maximum value, and the constraint extracts via career risk and institutional gatekeeping. The commercial publisher sees rope: embargo coordinates peer review and distribution, and the constraint enables their coordinating function. The global research community sees tangled rope: they benefit from quality assurance but experience extraction through delayed access. The journal editorial system sees piton: the ritual persists through inertia despite preprint alternatives making embargo technically obsolete. The open science coalition sees scaffold: preprint pathways provide a real sunset mechanism for embargo-dependent publication. The analytical observer risks seeing rope (necessary coordination) when structural data reveals tangled rope or snare (extraction disguised as coordination). The perspectival gap widens over time as preprint normalization advances \u2014 the constraint's functional justification erodes while its extractive effects persist.",
+    "directionality_logic": "Early career researchers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction from the most vulnerable agent. Public health emergencies: Victim + constrained (by publication timelines, not by research necessity) \u2192 d\u22480.88, f(d)\u22481.35. High extraction from a systemic victim. Global research community: Mixed beneficiary/victim + mobile (can migrate to preprints) \u2192 d\u22480.58, f(d)\u22480.80. Moderate extraction; increasing mobility reduces effective d. Commercial publishers: Beneficiary + arbitrage (can relax embargo, implement open access, negotiate alternative models) \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; low directionality toward victimhood. Journal editorial system: Institutional + constrained (cannot unilaterally abandon embargo without publisher pressure) \u2192 d\u22480.35, f(d)\u22480.32. Moderate directionality; institutional actor trapped by business model inertia. Open science coalition: Organized + mobile (can migrate researchers and funding to preprint-first norms) \u2192 d\u22480.42, f(d)\u22480.43. Low-moderate extraction; organized agency reduces effective d. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Observer perspective; risks naturalizing contingent institutional arrangement.",
+    "mandatrophy_analysis": "The mandatrophy in embargo classification arises from the tension between the coordination function that justifies embargo (peer review, priority establishment, quality assurance) and the extractive gatekeeping that the constraint actually enforces (temporal monopoly, subscription capture, suppression of time-critical findings). RESOLUTION: The constraint is genuinely tangled rope, not a false rope classification masking snare. Evidence: (1) Peer review coordination is a real function \u2014 preprint servers do NOT eliminate the need for editorial curation and quality assurance; (2) Extraction is also real \u2014 the temporal monopoly extracts value beyond the cost of coordination services, and early-career researchers experience genuine career risk from circumventing embargo; (3) The two functions are structurally coupled \u2014 the publisher's ability to coordinate peer review is monetized through the subscription monopoly that embargo enables. The mandatrophy is resolved by recognizing that tangled rope is the correct type: the constraint both enables coordination AND extracts asymmetrically. The respectable question is not 'is embargo coordination or extraction?' but 'can the coordination function be decoupled from the extractive monopoly?' Evidence from the open science coalition suggests YES \u2014 preprint servers provide coordination without temporal monopoly. The scaffold perspective captures this: embargo is tangled rope with a real sunset mechanism as preprints mature. The theater_ratio (0.68) and rising trajectory indicate that embargo enforcement is increasingly performative precisely because the coordination function is becoming decoupled from the extractive mechanism. This is the signature of piton emergence from tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "journal_subscription_monopoly",
+      "academic_credential_gatekeeping",
+      "open_access_implementation"
+    ],
+    "dual_formulation_note": "The publishing embargo decomposes into two structurally distinct constraints: (1) peer_review_coordination (\u03b5\u22480.15, Rope) \u2014 the quality assurance and priority-establishment functions of editorial gatekeeping; (2) temporal_distribution_monopoly (\u03b5\u22480.58, Snare) \u2014 the embargo's suppression of preprint dissemination and enforcement of journal-exclusive distribution windows. These are empirically entangled through institutional practice but structurally separable. The embargo as a whole (\u03b5=0.52) represents their hybrid: the coordination function justifies institutional enforcement, while the monopoly extracts value beyond coordination costs. Preprint normalization is decoupling them: coordination migrates to preprint peer commentary; monopoly persists through cultural/career inertia (piton degradation)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.38
+    }
+  ]
+}

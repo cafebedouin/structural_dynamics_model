@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "oscar_campaign_spending",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oscar"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Oscar Campaign Spending Limits",
+    "topic_domain": "social/entertainment/cultural_politics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_studios",
+      "awards_voting_establishment"
+    ],
+    "victims": [
+      "independent_producers",
+      "diverse_storytelling_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Independent Producer",
+      "comment": "PERSPECTIVE 1: INDEPENDENT PRODUCER (SNARE) \u2014 Trapped by resource disparity. Campaign spending for international festivals, screenings, critic dinners, and guild events requires $500K-$2M minimum. Independent producers cannot access studio financing or amortize costs across multiple films. No exit without withdrawing from awards consideration entirely. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.52."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Diversity Equity Coalition",
+      "comment": "PERSPECTIVE 2: DIVERSITY EQUITY COALITION (TANGLED ROPE) \u2014 Organized groups (filmmakers of color, women directors, disability advocates) benefit from awards visibility and industry validation (coordination function), but face structural barriers to mobilizing equivalent campaign resources. High suppression (limited studio backing, cultural gatekeeping) combined with genuine coordination need (visibility enables future funding). d\u22480.65, f(d)\u22480.95, \u03c3=1.0 \u2192 \u03c7\u22480.36."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Major Studios",
+      "comment": "PERSPECTIVE 3: MAJOR STUDIOS (ROPE) \u2014 Experience the spending limit as pure coordination mechanism. The informal ceiling (roughly $15M total across print, digital, events, and studio support) allows studios to plan budgets predictably while ensuring winners retain legitimacy. Exceeding the ceiling triggers voter backlash and industry criticism, degrading the awards' reputational value studios rely on. d\u22480.10, f(d)\u22480.00, \u03c3=1.0 \u2192 \u03c7\u22480.00. Negative extraction \u2014 studios benefit from the constraint's coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Academy Governance",
+      "comment": "PERSPECTIVE 4: ACADEMY GOVERNANCE (PITON) \u2014 The Academy has no formal spending limit, only an informal 'understanding' that campaigns exceeding $15M draw criticism. This informal limit is maintained through theater: Academy statements about 'respecting the spirit of the awards,' editorial criticism, and voter resentment operate as performative enforcement rather than structural barriers. The governance system is degraded \u2014 it relies on social pressure instead of clear rules, yet the rules cannot be formalized without appearing to restrict speech. theater_ratio=0.65 reflects this: the limit is mostly enforced through narrative and shame, not mechanism. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.03."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Reform Movement (Sunset View)",
+      "comment": "PERSPECTIVE 5: REFORM MOVEMENT / SUNSET VIEW (SCAFFOLD) \u2014 Advocates for formalized spending caps see this as a temporary coordination problem with a sunset pathway. If the Academy formalizes a hard cap ($10M baseline, adjusted for inflation) with transparent reporting, the informal suppression mechanism degrades over time. Reform groups (organizations tracking campaign spending, criticism campaigns against excessive budgets) have constrained but growing agency. d\u22480.45, f(d)\u22480.55, \u03c3=1.0 \u2192 \u03c7\u22480.21. Scaffold gate satisfied if sunset implementation assumed within 5-10 years."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a long-view analytical position, the spending limit is both coordination mechanism (solves the collective action problem of awards inflation) and extraction mechanism (preserves studio leverage over storytelling and narrative control). The constraint prevents spending wars that would make awards inaccessible, but also prevents independent and diverse voices from competing equally. \u03b5=0.38 and suppression=0.48 indicate hybrid structure. d\u22480.70, f(d)\u22481.10, \u03c3=1.0 \u2192 \u03c7\u22480.42."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "spending_cap_threshold_definition",
+      "question": "Where is the actual spending ceiling below which backlash is minimal? Is it $15M, $10M, or is the threshold observer-dependent (different for studios vs independents)?",
+      "resolution_mechanism": "Historical analysis of campaigns exceeding claimed limits; correlation between spending levels and voter backlash, critic commentary volume, and industry response",
+      "impact": "If threshold is objective and universal (~$15M): constraint is coordination mechanism (Rope/Scaffold views validated). If threshold varies by studio backing and filmmaking identity: constraint is extraction mechanism enforcing asymmetric suppression (Snare/Tangled Rope views validated).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Where the actual spending ceiling lies and whether it is uniform"
+    },
+    {
+      "id": "studio_subsidy_opacity",
+      "question": "How much of campaign spending is absorbed by studios and not disclosed publicly? Is the $15M ceiling measured as direct campaign spending or including in-kind studio support?",
+      "resolution_mechanism": "Investigative accounting of campaign budgets (Academy data if disclosed, industry reporting, producer interviews); comparison of declared vs estimated total spending",
+      "impact": "If studio subsidies are large and hidden: effective spending cap for independents is much lower than for studio films, confirming snare structure. If studio subsidies are transparent and limited: constraint operates more symmetrically, supporting rope or tangled rope views.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Extent of studio campaign subsidy absorption"
+    },
+    {
+      "id": "informal_limit_enforceability",
+      "question": "Is the spending limit actually enforced through Academy action (disqualification, rules), or only through social pressure and industry reputation mechanisms?",
+      "resolution_mechanism": "Review of Academy rules and official statements; documentation of enforcement actions (disqualifications, public criticism) tied to spending; analysis of whether exceeding the limit has structural consequences or only reputational ones",
+      "impact": "If enforced through rules: constraint is coordination mechanism with clear boundaries (Rope/Scaffold). If enforced through social pressure alone: constraint is extraction disguised as cultural norm (Snare/Piton).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the spending limit is formally enforced or purely social"
+    },
+    {
+      "id": "diversity_campaign_resource_gap",
+      "question": "Do films with diverse casts and female directors receive equivalent campaign support from their studios compared to traditional prestige films?",
+      "resolution_mechanism": "Comparative analysis of campaign budgets by film genre and director demographics; studio spending decisions across portfolio; correlation between director identity and campaign resource allocation",
+      "impact": "If gap exists (diverse-backed films receive less campaign support): suppression term includes structural bias, confirming high-suppression tangled rope and snare perspectives. If no gap: constraint affects all producers symmetrically, supporting rope interpretation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Campaign resource disparity by director demographics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The Oscar campaign spending limit is an informal but powerful constraint on how films compete for awards. Studios and filmmakers understand that campaigns exceeding approximately $15 million in total spending (print advertising, digital marketing, screenings, guild events, critic dinners, travel, and other voter outreach) trigger backlash and diminishing returns. The constraint operates through no formal rules, only through cultural consensus and industry reputation effects. This creates a hybrid structure: the spending limit genuinely solves a coordination problem (preventing spending wars that would make awards inaccessible), but it also preserves structural advantages for major studios who can leverage their distribution networks, existing critic relationships, and in-kind support to run more efficient campaigns. Independent producers and filmmakers from underrepresented backgrounds face higher per-dollar campaign costs because they lack these institutional relationships and must spend directly on visibility. The constraint exhibits all the hallmarks of a tangled rope: it has a real coordination function (preventing arms races), active enforcement (social pressure, critic backlash, voter resentment), beneficiaries (major studios who set the standard), victims (independents and diverse storytelling), and high suppression (limited exit from awards consideration without withdrawing from consideration entirely). The theater ratio (0.65) reflects that the constraint is increasingly maintained through narrative and cultural messaging rather than institutional mechanism \u2014 the Academy has no formal spending limit despite decades of discussion, relying instead on industry understanding and reputation effects to enforce the ceiling.",
+    "key_agents": [
+      "Major Studios: Primary beneficiary (institutional/arbitrage) \u2014 absorb campaign costs into distribution budgets, leverage existing relationships, experience the constraint as coordination mechanism",
+      "Independent Producers: Primary victim (powerless/trapped) \u2014 must spend directly and cannot access studio financing; face barrier to awards consideration without equivalent resources",
+      "Diversity Equity Coalition: Secondary victim (organized/constrained) \u2014 organized advocacy groups benefit from visibility but face suppressed campaign resources and cultural gatekeeping",
+      "Academy Governance: Institutional actor (institutional/arbitrage) \u2014 maintains informal limit through social pressure; resists formalizing rules to avoid appearing to restrict speech",
+      "Reform Movement: Organized agents (organized/constrained) \u2014 advocate for transparent spending caps and formalized limits; see pathway to sunset through institutionalization",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees constraint as both coordination mechanism and asymmetric extraction mechanism operating simultaneously"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The spending limit does create asymmetric outcomes \u2014 major studios run more efficient campaigns and get better ROI per dollar. But the extraction is not severe because independent films do win (frequently) and the constraint does prevent total spending wars. The value reflects that the limit partially solves the coordination problem while preserving studio advantage. Suppression (0.48): Moderate. Significant barriers include resource disparity, limited access to critic networks, lack of studio in-kind support, and structural bias in awards voter composition. But suppression is not total \u2014 independent pathways exist (festival circuits, streaming platforms, grassroots campaigns) even though they are resource-intensive. Theater ratio (0.65): Moderate-high. The enforcement mechanism is increasingly theater \u2014 Academy statements about 'respecting the spirit,' critic commentary, and voter resentment operate as performative pressure rather than formal rules. The theater has increased over the interval (years 0-30) as the spending gap has widened while the Academy has resisted formalizing rules. The constraint maintains itself through narrative ('this is what the awards community expects') rather than mechanism.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. Major studios perceive pure coordination (Rope) \u2014 the spending limit allows predictable budgeting and maintains awards credibility. Independent producers perceive pure extraction (Snare) \u2014 they are locked into a system where they cannot compete on equal terms and cannot exit without giving up awards consideration. The diversity coalition perceives hybrid structure (Tangled Rope) \u2014 they benefit from the awards' reputational validation but face suppression in campaign resources and cultural gatekeeping. The Academy governance sees itself as managing informal norms (Piton) \u2014 the institution acknowledges the constraint exists but refuses to formalize it, maintaining plausible deniability about enforcement. Reform advocates see a temporary problem with a solution path (Scaffold) \u2014 formalizing spending caps would establish clear boundaries and reduce theater. The analytical observer sees the full tangled rope structure: genuine coordination function (preventing arms races) plus asymmetric extraction (preserving studio leverage).",
+    "directionality_logic": "Major studios: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.00. Net beneficiary. Studios benefit from the constraint's coordination function without bearing significant costs. Independent producers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Cannot exit awards consideration without forfeiting career opportunities; bear full cost of resource disparity. Diversity coalition: Victim + constrained \u2192 d\u22480.65, f(d)\u22480.95. Significant extraction; organized but constrained by systemic factors outside their control. Academy governance: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Slightly benefits from maintaining the status quo (avoiding rule formalization). Reform movement: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.55. Have growing agency but constrained by Academy resistance to formalizing rules. Analytical observer: Derives d from structural position as neutral observer \u2192 d\u22480.70, f(d)\u22481.10. Sees asymmetric extraction layered onto coordination.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that the same structural phenomenon operates as both coordination and extraction depending on observer position. The studios' rope perspective is genuine \u2014 they experience pure coordination benefit. The independents' snare perspective is also genuine \u2014 they experience pure extraction cost. The constraint is not 'really' one or the other; it is a presheaf that looks like rope from one structural position and snare from another. The tangled rope classification for the analytical observer captures the full structure: the constraint has a real coordination function (prevents spending wars, maintains awards legitimacy) AND produces asymmetric extraction (preserves studio advantage, suppresses diverse voices). The question 'which type is correct?' is malformed. The correct answer is 'all of them, from their respective positions.' The mandatrophy is resolved by recognizing that the constraint's legitimacy depends on whether the coordination benefits (preventing arms races) outweigh the extraction harms (suppressing diverse storytelling). This is a value question, not a classification question, and is properly handled as an omega variable (whether the informal limit is truly enforceable and fair)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "streaming_awards_legitimacy",
+      "diverse_filmmaker_industry_access"
+    ],
+    "dual_formulation_note": "The spending limit constraint decomposes into two distinct structural claims: (1) whether the limit prevents spending arms races (coordination problem, \u03b5\u22480.15), and (2) whether the limit preserves studio leverage over storytelling (extraction problem, \u03b5\u22480.55). These are typically conflated in industry discourse. The reported \u03b5=0.38 averages the two, but the two-story decomposition would clarify whether reforms should focus on formalizing the coordination mechanism or on removing barriers to independent campaign access."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.65
+    }
+  ]
+}

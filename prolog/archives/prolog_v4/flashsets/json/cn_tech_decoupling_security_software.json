@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "cn_tech_decoupling_security_software",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandate for Chinese SOEs to replace US security software",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_software_vendors",
+      "chinese_government"
+    ],
+    "victims": [
+      "chinese_soes",
+      "us_software_vendors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Chinese SOEs",
+      "comment": "Chinese SOEs are forced to adopt potentially inferior domestic software, facing increased security risks and operational inefficiencies with limited recourse."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "US Software Vendors",
+      "comment": "US software vendors are significantly constrained due to the forced removal of their products from the Chinese market."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Domestic Software Vendors",
+      "comment": "Domestic software vendors benefit from guaranteed market share, enabling further development and innovation, but also leading to less competitive pressure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Chinese Government",
+      "comment": "The Chinese government views the mandate as a means to enhance national security and technological independence, though at the cost of economic efficiency and potential retaliatory measures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer recognizes the mandate as a tangled rope, featuring both the coordination of resources toward national tech independence and the asymmetric extraction of value from SOEs and US software vendors."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "domestic_software_capability",
+      "question": "How closely can domestic software vendors match the performance and security standards of the replaced US software?",
+      "resolution_mechanism": "Independent security audits and performance benchmarking of domestic vs. US software.",
+      "impact": "If domestic software is comparable: reduced impact on SOE efficiency. If domestic software is inferior: increased security risks and operational costs for SOEs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Capability of domestic security software to replace US software"
+    },
+    {
+      "id": "enforcement_severity",
+      "question": "How strictly will the mandate be enforced, and what penalties will be imposed for non-compliance?",
+      "resolution_mechanism": "Analysis of government directives and actual penalties levied against non-compliant SOEs.",
+      "impact": "Strict enforcement: higher compliance rates but potentially greater economic disruption. Lax enforcement: limited effectiveness of the mandate in achieving its goals.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Severity of mandate enforcement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "A state mandate requires Chinese state-owned enterprises (SOEs) to replace US-origin network security software with domestic alternatives. This policy aims to enhance national security and foster technological independence, but it also presents challenges and creates structural tensions.",
+    "key_agents": [
+      "Chinese SOEs: Primary target (powerless/trapped) - forced to adopt potentially inferior domestic software.",
+      "US Software Vendors: Secondary target (moderate/constrained) - lose market access in China.",
+      "Domestic Software Vendors: Primary beneficiary (institutional/arbitrage) - guaranteed market share and government support.",
+      "Chinese Government: Institutional actor (institutional/constrained) - aims to improve national security and tech independence.",
+      "Analytical Observer: Evaluates the mandate's overall impact (analytical/analytical)."
+    ],
+    "logic_rationale": "The extractiveness is moderate-high (0.60) reflecting the significant costs imposed on SOEs and US vendors. Suppression (0.70) indicates limited exit options for SOEs. The theater ratio (0.30) is relatively low, as the mandate involves real changes in software infrastructure, not just performative compliance.",
+    "perspectival_gap": "Chinese SOEs view the mandate as a snare due to the lack of choice and potential security risks. US Software vendors view it as a snare because they're losing market access. Domestic software vendors see it as a rope enabling growth. The Chinese government views it as a tangled rope, balancing national security goals with economic costs. The analytical observer views it as a tangled rope due to the blend of coordination (domestic software development) and extraction (costs to SOEs).",
+    "directionality_logic": "The SOEs have limited exit options (trapped), so they experience higher extraction (higher d value), even if they are nominally powerful. The domestic software vendors have arbitrage because the government is providing subsidies. The US Software vendors have constrained because they can sell elsewhere, but it's still a loss of revenue.",
+    "mandatrophy_analysis": "The mandate can be seen as legitimate coordination from the government's perspective (a necessary step for national security) or as pure extraction from the SOEs' perspective (forced adoption of inferior products). The tangled rope classification captures both aspects. The key is whether the domestic alternatives are truly adequate; if they are not, the \"coordination\" aspect is primarily theatrical."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_china_trade_relations",
+      "china_cybersecurity_law"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "institutional_trust_decay",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "itd"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "The Legitimacy Void",
+    "topic_domain": "social/institutional_governance",
+    "requires_active_enforcement": false,
+    "victims": [
+      "public_epistemic_commons",
+      "marginalized_communities",
+      "subordinate_institutions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dependent Citizen",
+      "comment": "PERSPECTIVE 1: DEPENDENT CITIZEN (SNARE) \u2014 Citizens dependent on institutional services (healthcare, education, social safety net) have no exit option. As trust collapses, they bear the full cost: degraded service quality, internalized illegitimacy of their own claims, and psychological burden of navigating systems they cannot trust. d\u22480.93, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker",
+      "comment": "PERSPECTIVE 2: PRECARIOUS WORKER (SNARE) \u2014 Workers dependent on state labor protections and employment contracts cannot exit when institutional enforcement erodes. As trust decays, employers face reduced reputational cost for wage theft, unsafe conditions, and contract violation. d\u22480.82, f(d)\u22481.23, \u03c3=1.0 \u2192 \u03c7\u22480.71."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Institutional Beneficiary",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL BENEFICIARY (ROPE) \u2014 Elite institutions, corporations, and well-positioned officials experience trust decay as liberation from constraint. Reduced accountability risk. Can arbitrage between failed public systems and private alternatives (private healthcare, elite education, private security). d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Global Capital Holder",
+      "comment": "PERSPECTIVE 4: GLOBAL CAPITAL HOLDER (TANGLED ROPE) \u2014 International investors and multinational actors experience mixed effects: trust decay in a specific nation reduces regulatory overhead (extraction benefit) but also increases instability and default risk (coordination cost). Can exit to other jurisdictions or arbitrage regulatory arbitrage opportunities. d\u22480.45, f(d)\u22480.52, \u03c3=1.1 \u2192 \u03c7\u22480.33."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Institutional Theater",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL THEATER (PITON) \u2014 Formal institutions (legislatures, courts, bureaucracies) persist in performative mode as trust erodes. Meetings occur, procedures are followed, official narratives are maintained, but actual legitimacy and enforcement capacity have collapsed. theater_ratio=0.81 indicates predominantly performative activity. The institutional apparatus maintains itself through inertia despite loss of functional legitimacy. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational view, institutional trust decay represents a snare: citizens are trapped in de facto dependence on institutions that have lost the capacity to fulfill their function. The constraint operates through psychological mechanisms (legitimacy belief) rather than overt coercion, making it difficult to perceive as extraction. But the extraction is real: those benefiting from institutional malfunction gain power while those dependent on institutional function lose security. d\u22480.78, f(d)\u22481.18, \u03c3=1.2 \u2192 \u03c7\u22480.68."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimacy_vs_performance_threshold",
+      "question": "At what level of institutional performance does public belief in legitimacy collapse irreversibly?",
+      "resolution_mechanism": "Longitudinal survey data on trust vs service quality metrics; causal inference on tipping points in historical collapses; experimental studies on threshold effects",
+      "impact": "If threshold is high (>70% service quality): constraint is recoverable by institutional reform. If threshold is low (<40%): decay becomes self-reinforcing and irreversible without regime change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Performance threshold for trust collapse"
+    },
+    {
+      "id": "substitution_economy_viability",
+      "question": "Do alternative institutional systems (informal networks, private markets, NGOs) actually provide equivalent function or do they degrade service for the dependent population?",
+      "resolution_mechanism": "Comparative analysis of service delivery and access across formal/informal/market alternatives; longitudinal tracking of outcomes for vulnerable populations during transitions",
+      "impact": "If alternatives viable: trust decay becomes a filtered constraint (powerful/organized gain access to substitutes). If alternatives fail: constraint remains snare for all (no exit option actually works).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative institutional systems can substitute for collapsed formal institutions"
+    },
+    {
+      "id": "trust_recovery_possibility",
+      "question": "Can institutional legitimacy be rebuilt once it collapses, or is the decay path path-dependent and irreversible?",
+      "resolution_mechanism": "Historical case studies of institutional restoration (post-war Japan, post-apartheid South Africa); experimental studies on belief updating after institutional failure; modeling of belief dynamics",
+      "impact": "If recoverable: constraint is temporary (scaffold with long sunset). If irreversible: constraint becomes permanent (piton or snare with no exit).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether institutional legitimacy can be restored after collapse"
+    },
+    {
+      "id": "collective_action_capacity_during_decay",
+      "question": "Does institutional trust decay prevent or enable collective action for institutional reform?",
+      "resolution_mechanism": "Analysis of protest movements, reform coalitions, and institutional change during periods of high distrust; modeling of coordination capacity under low institutional trust",
+      "impact": "If decay enables action: victims may organize alternative power structures. If decay prevents action: victims remain atomized and trapped (snare persists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether low trust enables or prevents collective action for change"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.43
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Institutional trust decay describes a systemic condition where public belief in institutional competence and integrity evaporates. This is not a sudden collapse but a gradual extraction-through-legitimacy mechanism in which those dependent on formal institutions for essential services experience both degraded function and reduced psychological security. The constraint operates through belief rather than overt coercion: citizens internalize institutional illegitimacy and reduce demands on or cooperation with institutional systems, which accelerates performance degradation, which further erodes trust in a reinforcing cycle. The constraint extracts value from those dependent on institutional function by reducing their expectations and agency, while benefiting those with the ability to exit to alternative (private, informal, or international) systems. Theater ratio growth (0.35 \u2192 0.81) indicates that formal institutions increasingly operate performatively, going through procedural motions without functional legitimacy. This creates a snare for the dependent population: they remain structurally dependent on institutions they no longer trust, have no credible exit option, and face suppression of their own claims to legitimacy.",
+    "key_agents": [
+      "Dependent citizens: Primary victims (powerless/trapped) \u2014 cannot exit institutional dependence; bear full cost of trust erosion",
+      "Marginalized communities: Secondary victims (powerless/trapped) \u2014 historically positioned outside institutional trust networks; suffer accelerated harm from decay",
+      "Precarious workers: Secondary victims (moderate/constrained) \u2014 labor protection depends on institutional enforcement; face increased exploitation as trust decays",
+      "Elite institutions and corporations: Primary beneficiaries (institutional/arbitrage) \u2014 reduced accountability; can exit to private alternatives",
+      "Global capital holders: Secondary beneficiaries (powerful/mobile) \u2014 exploit regulatory arbitrage and instability; can exit to other jurisdictions",
+      "Formal institutional apparatus: Performative maintainer (institutional/constrained) \u2014 persists through inertia despite loss of functional legitimacy",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 can perceive the extraction mechanism and its structural targets"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The constraint operates through legitimacy belief rather than overt coercion, but the extraction is substantial and measurable. Those dependent on institutional services lose both material benefits (degraded service quality) and psychological security (loss of belief in protective function). The extraction increases over time as more dependent populations lose faith and reduce cooperation. Suppression (0.68): High. Multiple suppression mechanisms operate: (1) Citizens internalize institutional illegitimacy, suppressing their own claims; (2) Alternative institutions (informal, private, NGO) cannot fully substitute, leaving no credible exit; (3) Elite discourse naturalizes distrust as inevitable or deserved; (4) Collective action is suppressed by the atomization that trust decay produces. Theater ratio (0.81): Very high and growing. Institutions engage in extensive performative activity (ceremonies, official communications, procedural compliance) while lacking actual legitimacy or enforcement capacity. The growth trajectory (0.35 \u2192 0.81) shows the constraint strengthening over time as institutions become increasingly disconnected from their professed function.",
+    "perspectival_gap": "The beneficiary (institutional/arbitrage) sees reduced constraint and increased freedom. The analytical observer sees a snare for the dependent population. The piton perspective shows institutional systems persisting through theater despite loss of function. The powerless see no escape despite formal procedures for redress. The global capital holder sees mixed effects: reduced regulatory overhead but also increased instability and default risk. The perspectival gap is maximal: the same structural phenomenon (loss of institutional legitimacy) produces opposite effects for different populations, creating a snare for the dependent and a rope (or even a benefit) for the powerful.",
+    "directionality_logic": "Dependent citizens: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. No exit option; dependent on institutional function; cannot credibly demand enforcement. Precarious workers: Victim + constrained \u2192 d\u22480.82, f(d)\u22481.23. High extraction. Some exit options (change jobs) but limited due to labor market constraints; institutional protections erode. Institutional beneficiaries: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary. Can exit to private alternatives; reduced accountability; arbitrage between failed public and functional private systems. Global capital holders: Mixed (mobile) \u2192 d\u22480.45, f(d)\u22480.52. Moderate extraction from instability risk but also benefit from regulatory arbitrage and reduced enforcement. Institutional theater: Constrained + institutional \u2192 d\u22480.50, f(d)\u22480.65. Moderate extraction. Institutions persist through inertia but lose actual functional capacity; they extract legitimacy belief while providing reduced value.",
+    "mandatrophy_analysis": "SNARE MANDATROPHY RESOLUTION: The constraint is classified as snare from multiple perspectives (dependent citizen, precarious worker, analytical observer), with moderate to high extractiveness (0.58) and high suppression (0.68). The mandatrophy is resolved by demonstrating that the constraint exhibits genuine extraction (those dependent on institutions lose material and psychological security while those with exit options gain power) rather than pure coordination failure. The constraint could superficially appear as a coordination problem (low institutional trust \u2192 coordination failure \u2192 reduced mutual benefit), but the asymmetric beneficiary structure (elite gain while dependent lose) confirms extraction. The growing theater ratio (0.35 \u2192 0.81) shows the system increasingly decoupled from actual function, consistent with snare degradation into piton. The analytical observer's perspective confirms this: institutional trust decay is not an inevitable property of modern governance but a contingent institutional arrangement that benefits the powerful while extracting from the dependent. The suppression mechanisms (internalized illegitimacy, lack of credible exit, atomization preventing collective action) are active and maintained, not naturally emergent. This resolves the mandatrophy: the snare classification is correct; the constraint is not a natural law but an extraction mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_cycle",
+      "collective_action_problem",
+      "legitimacy_belief_dynamics"
+    ],
+    "dual_formulation_note": "Institutional trust decay is upstream of specific institutional failures (healthcare access, labor protection, educational quality) but represents a distinct structural constraint. The decay operates at the level of belief in institutional legitimacy rather than specific institutional function. This belief-level constraint creates conditions for downstream institutional capture and collective action failure. Each specific institutional failure has its own constraint story; trust decay is the meta-level condition that accelerates and reinforces them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.72
+    }
+  ]
+}

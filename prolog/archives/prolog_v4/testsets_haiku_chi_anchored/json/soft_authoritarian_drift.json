@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "soft_authoritarian_drift",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "soft_auth"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.81,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Incremental Compliance Web",
+    "topic_domain": "political/social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_security_apparatus",
+      "platform_moderation_staff",
+      "bureaucratic_administrators"
+    ],
+    "victims": [
+      "individual_autonomy",
+      "speech_margin",
+      "privacy_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Monitored Citizen",
+      "comment": "PERSPECTIVE 1: MONITORED CITIZEN (SNARE) \u2014 Powerless individual subject to graduated surveillance and compliance rules with no meaningful exit. Cannot opt out of digital infrastructure, mobility tracking, or content moderation without accepting total social exclusion. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80. Classification: Snare."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Platform User Community",
+      "comment": "PERSPECTIVE 2: PLATFORM USER COMMUNITY (TANGLED ROPE) \u2014 Moderate power but constrained exit. Benefits from platform coordination (connection, commerce, information access) while bearing extraction costs (behavioral nudging, data harvesting, algorithmic ranking suppression). d\u22480.62, f(d)\u22480.88, \u03c3=1.0 \u2192 \u03c7\u22480.51. Classification: Tangled Rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The State Security Apparatus",
+      "comment": "PERSPECTIVE 3: STATE SECURITY APPARATUS (ROPE) \u2014 Institutional beneficiary with arbitrage optionality (can migrate regulatory focus, deploy selective enforcement). Experiences constraint as coordination mechanism for threat-detection and order-maintenance. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; negative effective extraction indicates pure benefit. Classification: Rope."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Liberties Coalition",
+      "comment": "PERSPECTIVE 4: CIVIL LIBERTIES COALITION (SCAFFOLD) \u2014 Organized agents perceive soft authoritarian drift as a temporary institutional failure with a sunset: legal challenges, regulatory reform, and alternative decentralized platforms (mesh networks, end-to-end encrypted infrastructure) represent real exit pathways. d\u22480.48, f(d)\u22480.63, \u03c3=1.0 \u2192 \u03c7\u22480.36. Sunset rationale: encryption mandates, privacy legislation, and platform alternatives can reverse the compliance web over 15-25 years."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Compliance Theater System",
+      "comment": "PERSPECTIVE 5: COMPLIANCE THEATER SYSTEM (PITON) \u2014 Degraded institutional machinery where performative compliance (audit trails, checkboxes, automated flags) has replaced genuine security or safety function. theater_ratio=0.81 satisfies piton gate (\u22650.70). The system persists through bureaucratic inertia despite demonstrable inefficacy (false positives exceed actionable signals). Administrators see their own process as degraded but lack institutional incentive to replace it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Global Capital Elite",
+      "comment": "PERSPECTIVE 6: GLOBAL CAPITAL ELITE (TANGLED ROPE) \u2014 Powerful actors with genuine mobile exit (can relocate, use alternative infrastructure, hire privacy services). The drift is a tangled rope from their perspective: they benefit from social order and consumer surveillance (data for monetization) while retaining exit optionality that lower-power agents lack. d\u22480.35, f(d)\u22480.36, \u03c3=1.2 \u2192 \u03c7\u22480.25. Lower effective extraction due to mobile exit and structural coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Civilizational view: soft authoritarian drift combines genuine coordination gains (public health surveillance reducing pandemic risk, fraud detection protecting commerce) with asymmetric extraction (state power accumulation, inequality of surveillance access). Not a mountain (natural law) because the degree of drift is policy-contingent; not a rope (pure coordination) because suppression and theater are measurable. d\u22480.58, f(d)\u22480.79, \u03c3=1.0 \u2192 \u03c7\u22480.46."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "harm_reduction_threshold",
+      "question": "At what point does genuine public safety benefit (pandemic monitoring, fraud detection) become a threshold masking extractive surveillance?",
+      "resolution_mechanism": "Comparative analysis: measure public health/security outcomes vs. behavioral coercion metrics; identify inflection point where surveillance expansion ceases to improve outcomes but extraction persists",
+      "impact": "If threshold is near current state: drift is primarily extractive (Snare from most perspectives). If threshold is far higher: drift legitimately serves coordination (Rope from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Safety benefit threshold masking surveillance extraction"
+    },
+    {
+      "id": "voluntary_consent_fiction",
+      "question": "Can a system with network-effect lock-in (everyone on platform X, impossible to exclude yourself) ever achieve genuine 'voluntary' compliance with its terms?",
+      "resolution_mechanism": "Legal and economic analysis of platform switching costs; survey data on perceived choice; comparison to historical consent-under-duress standards",
+      "impact": "If consent is illusory: classification shifts toward Snare even for moderate-power agents (exit becomes 'trapped' not 'constrained'). If some genuine choice exists: Tangled Rope classification holds.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether network lock-in falsifies consent to compliance rules"
+    },
+    {
+      "id": "decentralization_viability",
+      "question": "Do decentralized alternatives (mesh networks, end-to-end encrypted platforms, federated systems) offer real escape from the compliance web or merely relocate it?",
+      "resolution_mechanism": "Technical analysis of censorship resistance; historical tracking of decentralized platform adoption; study of whether decentralized systems develop their own compliance constraints",
+      "impact": "If viable: scaffold sunset is real (open-science-style exit pathways). If decentralized systems replicate the compliance web: drift is structural to infrastructure itself (approaches Mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized platforms escape compliance constraints"
+    },
+    {
+      "id": "institutional_reversibility",
+      "question": "Once surveillance infrastructure and compliance bureaucracy are built, can they be meaningfully dismantled, or do they create irreversible asymmetric power?",
+      "resolution_mechanism": "Historical case studies (Stasi dissolution, NSA reform efforts, GDPR effectiveness); measurement of whether surveillance capacity, once built, has ever been truly reduced rather than merely concealed",
+      "impact": "If irreversible: drift approaches Mountain (constraint embedded in infrastructure). If reversible: scaffold sunset and legal-challenge pathways remain viable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether surveillance infrastructure can be dismantled"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Soft authoritarian drift describes a structural phenomenon where democratic or open systems incrementally adopt restrictive measures \u2014 initially justified as temporary safety, public health, or efficiency responses \u2014 that accumulate into a comprehensive compliance web. Each individual measure appears minor (a content-moderation policy, a tracking requirement, a behavioral audit) and often carries genuine coordination benefits (reducing harmful content, preventing fraud, detecting threats). Over time, however, the cumulative effect is that individual autonomy becomes contingent on state or platform approval, and exit from the system becomes economically and socially impossible. The constraint exhibits different classifications from different structural perspectives: a powerless citizen sees a Snare with no exit; the state security apparatus sees a Rope coordinating public order; civil liberties advocates see a temporary Scaffold problem solvable through legal and technological reform; bureaucratic administrators see a degraded Piton ritual; moderate-power platform users see a Tangled Rope mixing coordination and extraction; the global capital elite see a Tangled Rope they can partially escape; and the analytical observer sees a genuinely hybrid mechanism where some surveillance serves coordination goals and some serves asymmetric extraction. The theater_ratio (0.81) reflects that much compliance machinery is performative: automated flags and audit trails create the appearance of systematic threat-detection while actual human review and consequential action remain concentrated and selective. The constraint's extractiveness (0.58) has increased dramatically over the measurement interval from 0.28, indicating that while coordination benefits (public health coordination, fraud reduction) remain roughly constant, extraction mechanisms (behavioral nudging, data harvesting, selective enforcement) have proliferated.",
+    "key_agents": [
+      "Individual Citizens: Primary victim (powerless/trapped) \u2014 subject to graduated surveillance, compliance nudging, and social exclusion for non-compliance; cannot exit digital infrastructure without accepting total isolation",
+      "Platform User Community: Secondary victim (moderate/constrained) \u2014 benefit from platform coordination but subject to algorithmic ranking suppression, behavioral prediction, and content removal",
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 gains public order coordination, threat-detection capability, and population-scale behavioral data; can arbitrage regulatory focus",
+      "Platform Moderation Staff: Secondary beneficiary (institutional/constrained) \u2014 benefit from growth and legitimacy of compliance infrastructure, though often alienated from its actual purpose",
+      "Civil Liberties Coalition: Organized agent (organized/constrained) \u2014 see the drift as a temporary institutional failure with viable legal and technical exit pathways (encryption, decentralized platforms, constitutional reform)",
+      "Global Capital Elite: Powerful agent (powerful/mobile) \u2014 partially escape the compliance web through privacy services and alternative infrastructure; benefit from population-scale surveillance data while retaining exit optionality",
+      "Compliance Theater System: Institutional actor (institutional/arbitrage) \u2014 maintains degraded ritual (audit trails, automated flags) through bureaucratic inertia; sees its own machinery as performative but lacks incentive to replace it",
+      "Privacy Commons: Abstract victim (powerless/trapped) \u2014 collective right to privacy erosion; cannot organize or exit; bears full cost of surveillance asymmetry"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts significant value from lower-power agents through behavioral steering, data harvesting, and selective enforcement. However, extractiveness is not maximal (\u22650.70) because genuine coordination benefits exist (fraud prevention reduces costs for all users, pandemic monitoring provided real public health value, and platform moderation does prevent some genuine harms). The trajectory from 0.28 to 0.58 indicates that extraction mechanisms have been layered onto coordination functions over time \u2014 the drift is real and accelerating. Suppression (0.68): High. Multiple barriers prevent exit or non-compliance: network-effect lock-in makes switching platforms prohibitively costly, algorithmic ranking suppression makes non-compliant voices economically invisible, and social/professional consequences (job loss, reputation damage, platform bans) create behavioral coercion. Suppression is not total (\u22651.0) because some actors (capital elite, organized civil libertarians) have partial exit capacity. Theater ratio (0.81): Very high. Compliance machinery is heavily performative. Automated content-flagging systems generate false-positive rates exceeding true threats by 10-100x; audit trails create appearance of systematic process while actual consequential decisions remain concentrated in human hands; terms-of-service enforcement is selective and opaque. The high theater ratio indicates drift toward Piton-type degradation \u2014 the machinery persists through institutional inertia rather than efficacy. The trajectory from 0.42 to 0.81 shows that performative elements have proliferated: behavioral scoring, algorithmic transparency reports, and compliance certifications now dominate governance rhetoric while actual enforcement power remains centralized.",
+    "perspectival_gap": "This constraint demonstrates the maximum possible perspectival divergence. The powerless citizen perceives a Snare (no exit, pure extraction, maximum d\u22480.92). The state apparatus perceives a Rope (coordination benefit, arbitrage exit, d\u22480.08). The civil liberties coalition perceives a Scaffold (temporary problem with legal and technical sunset pathways, organized escape routes). The compliance theater sees itself as a degraded Piton (performative machinery maintained by inertia). The moderate platform user perceives a Tangled Rope (mixed coordination and extraction, constrained exit). The capital elite perceive a Tangled Rope with partial escape (genuine mobile exit, both coordination and extraction benefits). The analytical observer perceives a Tangled Rope at civilizational scale (hybrid mechanism with both genuine safety coordination and asymmetric extraction). The perspectival gap arises because the constraint operates asymmetrically: those with exit capacity (capital, institutions, organized groups) experience the coordination benefits and can arbitrage the extraction; those without exit (citizens, privacy commons) experience the full force of both extraction and coercion. No single type is 'correct' \u2014 the presheaf of perspectives IS the structure.",
+    "directionality_logic": "Individual citizens: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction target. Platform user community: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.88. High extraction target but with some coordination benefit. State security apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary with low structural extraction (negative chi indicates benefit). Civil liberties coalition: Organized + constrained \u2192 d\u22480.48, f(d)\u22480.63. Moderate extraction pressure but organized capacity to resist. Capital elite: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.36. Partial beneficiary with genuine escape routes (mobile exit). Analytical observer: analytical \u2192 d\u22480.58, f(d)\u22480.79. Neither pure beneficiary nor pure victim; sees balanced hybrid. Compliance theater: Institutional + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Structured as beneficiary, though the institution perceives itself as degraded (piton classification from theater gate, not directionality).",
+    "mandatrophy_analysis": "MANDATROPHY RISK: The constraint's high theater ratio (0.81) and high extractiveness (0.58) create a false-positive risk \u2014 the system could be mislabeled as a Snare everywhere when it is actually a legitimate hybrid mechanism (Tangled Rope) with genuine coordination benefits layered with extraction. The mandatrophy is resolved by indexical analysis: from the powerless citizen perspective (d\u22480.92), it IS a Snare \u2014 they experience only extraction and coercion, no coordination benefit. From the state apparatus perspective (d\u22480.08), it IS a Rope \u2014 they experience only coordination benefit. The analytical observer perspective prevents oversimplification: the system contains BOTH real safety-coordination gains (pandemic response, fraud detection, harm reduction) AND real extraction mechanisms (behavioral steering, asymmetric data access, selective enforcement). The high theater ratio shows that performative elements have proliferated, but the underlying mechanism remains hybrid. The mandatrophy is resolved by refusing to collapse the perspectival structure into a single type: soft authoritarian drift is a Tangled Rope viewed from most positions, a Snare from those without exit, a Rope from beneficiary institutions, and a Scaffold from those who perceive viable exit pathways. The falsity would be claiming it is ONLY a Snare (erasing coordination benefits) or ONLY a Rope (erasing extraction). The correct classification is Tangled Rope from the baseline analytical perspective, with Snare, Scaffold, and Piton as valid perspectival readings from structurally different positions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_moderation_asymmetry",
+      "state_surveillance_infrastructure",
+      "algorithmic_rank_suppression"
+    ],
+    "dual_formulation_note": "Soft authoritarian drift is a macroscopic constraint composed of three structurally distinct microconstraints: platform moderation asymmetry (\u03b5\u22480.45, enforcement-type coordination), state surveillance infrastructure (\u03b5\u22480.52, enforcement-type extraction), and algorithmic rank suppression (\u03b5\u22480.38, information-standard coordination mixed with extraction). The soft_authoritarian_drift story models the integrated effect; its upstream components have their own \u03b5 values and network dependencies."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

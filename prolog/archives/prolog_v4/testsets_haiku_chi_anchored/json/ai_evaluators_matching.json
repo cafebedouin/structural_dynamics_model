@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "ai_evaluators_matching",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aiem"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Talent Evaluators: Efficiency vs. Opacity in Automated Hiring",
+    "topic_domain": "labor_economics/human_resources/algorithmic_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hiring_organizations",
+      "algorithmic_vendors"
+    ],
+    "victims": [
+      "job_seekers",
+      "labor_market_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Job Seeker",
+      "comment": "PERSPECTIVE 1: THE JOB SEEKER (SNARE) \u2014 Trapped in opaque evaluation system with no exit option. Cannot know scoring criteria, cannot challenge algorithmic decisions, bears full cost of rejection without recourse. Career trajectory constrained by black-box metrics they cannot interrogate. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Hiring Organization",
+      "comment": "PERSPECTIVE 2: HIRING ORGANIZATION (ROPE) \u2014 Benefits from coordination function: AI evaluators reduce hiring time, standardize screening, enable scale. Experiences constraint as solution to real collective action problem (screening cost). Exit option (arbitrage) through vendor selection and competitive hiring market. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Algorithmic Vendor",
+      "comment": "PERSPECTIVE 3: ALGORITHMIC VENDOR (ROPE) \u2014 Primary beneficiary. Captures switching costs, data advantages, and market dominance through network effects. Frames constraint as efficiency gain and coordination enabler. Exit option (arbitrage) through vendor competition and feature development. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.07. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Market Aggregate",
+      "comment": "PERSPECTIVE 4: LABOR MARKET AGGREGATE (TANGLED ROPE) \u2014 Constrained by systemic exposure; cannot exit without losing employment opportunity access. Benefits from some coordination (faster hiring, reduced interview burden). Bears costs through information asymmetry, bias amplification, and reduced transparency. d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.59. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY COALITION (SCAFFOLD) \u2014 Organized actors (labor advocates, regulators, transparency advocates) see algorithmic hiring as a temporary problem with a sunset: transparency requirements, explainability mandates, right-to-explanation laws are building accountability pathways. EEOC guidance, SEC disclosure rules, EU AI Act establish alternative frameworks. d\u22480.45, f(d)\u22480.48, \u03c3=1.0 \u2192 \u03c7\u22480.28. Low effective extraction due to coalition agency and regulatory sunset clauses."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Market Efficiency Frame",
+      "comment": "PERSPECTIVE 6: MARKET EFFICIENCY FRAME (PITON) \u2014 Institutional narrative that AI evaluators are 'natural' market optimization. The frame persists through performative legitimacy (efficiency benchmarks, diversity metrics) despite degraded actual function (bias reproduction, misalignment of metrics with job performance). theater_ratio=0.61 captures persistent narrative legitimacy despite questioned empirical basis. Theater has increased as controversy has mounted but efficiency claims persist."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Scaling Limit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational perspective, some opacity is inherent to any automated evaluation at scale: full explainability becomes computationally intractable, perfect fairness is mathematically underdetermined, and measurement always introduces distortion (Goodhart drift). This perspective risks naturalizing what are actually contingent design choices as inevitable trade-offs. The structural data (\u03b5=0.58, suppression=0.68) contradicts this classification \u2014 the engine will compute as false summit, revealing that the 'inherent to AI' framing obscures policy choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "explainability_feasibility_threshold",
+      "question": "What level of algorithmic explainability is technically feasible and economically viable without destroying the efficiency gains that justify AI evaluation systems?",
+      "resolution_mechanism": "Technical analysis of explanation methods (LIME, SHAP, counterfactual generation) against false-positive rates and computational cost; cost-benefit analysis of explainability overhead vs. hiring cost savings",
+      "impact": "If feasible at <5% efficiency loss: tangled rope classification shifts toward rope; transparency becomes binding constraint. If infeasible or cost-prohibitive (>20% overhead): snare classification hardens; opacity becomes structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of explainability without destroying efficiency gains"
+    },
+    {
+      "id": "algorithmic_bias_correction_sufficiency",
+      "question": "Can demographic parity, equalized odds, or other fairness metrics be enforced on AI evaluators without destroying their discriminative power and reverting to random screening?",
+      "resolution_mechanism": "Empirical testing of fairness-constrained models against unconstrained baselines; measurement of hiring success rates and retention for demographically-balanced cohorts vs. performance-optimized cohorts",
+      "impact": "If fairness constraints preserve performance: biased extraction can be engineered away; victim costs decline. If fairness-constrained models fail predictively: the constraint becomes a trilemma (fairness, accuracy, explainability \u2014 choose two); extraction hardens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether fairness constraints on AI evaluators are sufficiently powerful"
+    },
+    {
+      "id": "regulatory_enforcement_timeliness",
+      "question": "Can transparency and explainability regulations (EU AI Act, EEOC guidance, SEC disclosure) be enforced fast enough to prevent winner-take-most market concentration and vendor lock-in?",
+      "resolution_mechanism": "Timeline analysis of regulation-to-enforcement, market consolidation rates, and vendor switching costs; comparison of regulatory velocity vs. technology deployment velocity",
+      "impact": "If enforcement lags 5+ years behind deployment: market lock-in occurs, alternatives are strangled before they mature, scaffold sunset fails and constraint hardens to snare. If enforcement keeps pace: scaffold perspective is validated; regulatory intervention prevents extraction accumulation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulation can enforce transparency before market lock-in"
+    },
+    {
+      "id": "alternative_hiring_mechanisms_viability",
+      "question": "Do alternative hiring approaches (skills-based assessment, apprenticeship pipelines, open hiring) achieve comparable hiring outcomes to AI evaluation without the opacity costs?",
+      "resolution_mechanism": "Comparative study of hiring success, retention, and career progression across AI-screened vs. skills-based vs. open-hiring cohorts; cost analysis of alternative mechanisms",
+      "impact": "If alternatives are comparable: the constraint is not a coordination mechanism but pure extraction; rope classification collapses and snare classification strengthens. If alternatives are significantly more costly: rope classification is validated; coordination function is real.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative hiring mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Automated AI talent evaluation systems create a structural extraction mechanism disguised as coordination. Hiring organizations and algorithmic vendors benefit from reduced screening costs, standardized metrics, and scale advantages. Job seekers and labor markets bear costs through opacity, reduced recourse, bias amplification, and information asymmetry. The constraint exhibits the full DR spectrum: pure extraction (snare) from the job seeker's perspective (trapped, powerless, no exit); pure coordination (rope) from the beneficiary's perspective (institutional, arbitrage, genuine efficiency gains); mixed coordination and extraction (tangled rope) from the labor market aggregate perspective (moderate, constrained, benefits from speed but harmed by opacity); temporary regulatory problem with sunset (scaffold) from the regulatory coalition's perspective (organized, constrained, building transparency requirements); degraded institutional narrative (piton) from the efficiency-frame perspective (theater persists despite contested empirical basis); and naturalized technical inevitability (mountain, false summit) from the civilizational analytical view. The theater ratio has increased from 0.35 to 0.61 as controversy has mounted but efficiency narratives have persisted and strengthened in marketing claims despite deteriorating empirical defense.",
+    "key_agents": [
+      "Job Seekers: Primary victim (powerless/trapped) \u2014 face opaque evaluation, cannot challenge algorithms, bear career cost of rejection without recourse or explanation",
+      "Hiring Organizations: Primary beneficiary (institutional/arbitrage) \u2014 reduce screening cost, achieve scale, standardize criteria; experience as coordination function; have vendor selection exit options",
+      "Algorithmic Vendors: Primary beneficiary (institutional/arbitrage) \u2014 capture switching costs, data advantages, network effects; frame constraint as efficiency solution",
+      "Labor Market Aggregate: Secondary victim (moderate/constrained) \u2014 exposed to systemic bias amplification, reduced information, but also benefits from faster hiring and reduced interview burden",
+      "Regulatory Coalition: Organized interveners (organized/constrained) \u2014 labor advocates, transparency groups, regulators building accountability frameworks (EU AI Act, EEOC guidance, right-to-explanation); see sunset path",
+      "Market Efficiency Frame: Institutional narrative (institutional/arbitrage) \u2014 persistent claim that AI evaluation is 'natural' optimization; theater increases with controversy but narrative persists",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent design choices as inevitable technical trade-offs"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant value from job seekers (reduced transparency, reduced recourse) and captures it for beneficiaries (reduced screening cost, vendor lock-in). The extraction is not maximum because hiring organizations do derive genuine efficiency gains from AI evaluation, not pure rent-seeking. The value reflects that the coordination function is real but is coupled with asymmetric information extraction. Theater ratio (0.61): Moderate-high. Algorithmic hiring is defended through performative metrics (diversity dashboards, accuracy benchmarks, fairness claims) that persist despite contested empirical foundation. Vendors publish benchmark scores but obscure model details and training data. Theater has increased as criticism has mounted \u2014 the efficiency narrative has become more assertive as empirical questions have accumulated. Suppression (0.68): Moderate-high. Significant barriers to transparency include proprietary model architectures, black-box deep learning, switching costs, and regulatory lag. Job seekers have no mechanism to challenge or understand scoring criteria. Alternative hiring approaches exist but face coordination costs and network disadvantages. Suppression is not total because regulatory pressure (EU AI Act, EEOC) is building requirements.",
+    "perspectival_gap": "The job seeker sees a snare: trapped in an opaque system with no exit and no recourse. The hiring organization sees a rope: solving a genuine coordination problem (screening cost) with a tool that works. The vendor sees a rope: enabling efficient matching at scale. The labor market sees tangled rope: both benefits and costs, both coordination and extraction mixed. The regulatory coalition sees a scaffold: temporary problem with a regulatory sunset and viable alternative frameworks. The market efficiency frame sees a piton: degraded institutional narrative persisting through marketing despite contested empirical basis. The analytical observer risks seeing a mountain: technical inevitability of scale-explainability trade-offs. This perspectival distribution is diagnostic: if all perspectives produced the same classification, the constraint would have no meaningful structure. The gap reveals the constraint is neither pure coordination nor pure extraction, but a hybrid where beneficiaries and victims experience fundamentally different structural realities.",
+    "directionality_logic": "Job seeker: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction from this agent; no exit options, bears full cost of opacity. Hiring organization: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary; has vendor selection and competitive market exit options. Algorithmic vendor: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net beneficiary; has competitive exit through market and feature development. Labor market aggregate: Mixed victim + constrained \u2192 d\u22480.68, f(d)\u22481.02. Significant extraction but not maximum; benefits from hiring speed but harmed by opacity and bias; cannot exit without losing employment access (constrained rather than trapped). Regulatory coalition: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Moderate extraction; coalition has agency and builds alternative frameworks; regulatory timeline creates sunset path (constrained, not trapped). Market efficiency frame: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification driven by theater gate (\u22650.70 required; actual 0.61 borderline), not from chi. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification would apply if constraint were truly natural law; structural data contradicts this, triggering false summit detection.",
+    "mandatrophy_analysis": "CRITICAL MANDATROPHY: The constraint resolves the false choice between 'coordination' and 'extraction' by showing that AI evaluation systems ARE coordination mechanisms that HAVE BEEN coupled with extraction. The beneficiaries (vendors, hiring organizations) truthfully perceive coordination \u2014 screening cost is real, the tool solves a real problem, efficiency gains are genuine. The victims (job seekers) truthfully perceive extraction \u2014 opacity is asymmetric, recourse is unavailable, information power is concentrated. Both are correct. The tangled rope classification unifies these truths: the constraint provides genuine coordination (reduced screening cost) AND enforces asymmetric extraction (opacity, lack of recourse). The mandatrophy dissolves when we stop asking 'is this coordination or extraction?' and start asking 'for whom?' The regulatory scaffold perspective shows the exit path: transparency requirements, explainability mandates, and right-to-explanation rules are building alternative coordination mechanisms (matched hiring WITH transparency) that decouple the coordination function from the extraction mechanism. If regulatory sunset succeeds, the constraint bifurcates: efficient hiring remains (rope), but opacity and extraction decline. If regulatory intervention fails, market lock-in accumulates and the constraint hardens toward snare (pure extraction with coordination framing). The theater ratio trajectory is diagnostic: as controversy accumulates, efficiency claims become more assertive and performative (theater rising from 0.35 to 0.61), while empirical defense weakens. This is textbook Goodhart drift \u2014 the efficiency narrative persists even as its empirical foundation erodes."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "labor_market_information_asymmetry",
+      "algorithmic_bias_reproduction",
+      "hiring_discrimination_enforcement"
+    ],
+    "dual_formulation_note": "The AI evaluators constraint is downstream of broader labor market information asymmetry and upstream of specific discrimination enforcement mechanisms. The constraint's \u03b5=0.58 reflects the coupling of genuine coordination (screening cost reduction) with extraction (opacity, reduced recourse). Upstream constraints (information asymmetry, vendor lock-in) have higher \u03b5 values (\u22650.65) reflecting their more purely extractive structure. Downstream constraints (bias reproduction, discrimination enforcement) have \u03b5 values sensitive to regulatory intervention, decomposing into separate stories based on measurement approach."
+  },
+  "directionality_overrides": []
+}

@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: trivial_topology_info_asymmetry
+% CONSTRAINT STORY: the_trivial_topology
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-01-16
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_trivial_topology_info_asymmetry, []).
+:- module(constraint_the_trivial_topology, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,8 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,18 +52,40 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: trivial_topology_info_asymmetry
+ *   constraint_id: the_trivial_topology
  *   human_readable: Trivial Topology Information Asymmetry
- *   domain: technological
+ *   domain: technological/network_architecture
  *
  * SUMMARY:
- *   The "Trivial Topology" highlights that while all nodes in a fully connected network can theoretically communicate, the ability to efficiently and effectively access and process information may be highly asymmetric. Nodes with greater computational power, better algorithms, or more centralized control experience an informational advantage, leading to extractive dynamics despite the seeming equality of the network structure. This constraint focuses on the asymmetric distribution of information processing capabilities.
+ *   The trivial topology information asymmetry is a structural constraint in
+ *   fully connected networks where theoretical connectivity masks practical
+ *   information access inequality. While every node has a theoretical path to
+ *   every other node, the cost, latency, and cognitive load of accessing
+ *   information vary dramatically across the network. Central nodes with
+ *   aggregation capacity, caching, and processing power can access
+ *   information efficiently; peripheral nodes face routing delays, indirect
+ *   paths, and dependence on intermediary processors. This constraint
+ *   exhibits all six DR types from different perspectives, making it
+ *   diagnostic for how network architecture embeds extraction mechanisms. The
+ *   same structural phenomenon — full connectivity with asymmetric access
+ *   cost — appears as an immutable law of network physics (mountain), a
+ *   coordination mechanism enabling global reach (rope), a temporary problem
+ *   solved by decentralized alternatives (scaffold), a performative standard
+ *   (piton), a mixed coordination-extraction hybrid (tangled rope), or pure
+ *   extraction (snare), depending on the observer's position in the topology.
+ *   The theater_ratio (0.61) reflects that modern routing protocols (BGP, DNS
+ *   hierarchies, CDN infrastructure) are substantially theatrical: they
+ *   perform the ritual of network universality (all nodes connected) while
+ *   compensating for the real asymmetry through complex hierarchical
+ *   mechanisms.
  *
- * KEY AGENTS (by structural relationship):
- *   - Information Consumers: Primary target (powerless/trapped) — bears extraction through inefficient information access
- *   - Information Providers: Primary beneficiary (powerful/arbitrage) — benefits from informational dominance
- *   - Network Architects: Secondary actor (institutional/constrained) — influenced by Information Providers
- *   - Analytical observer: Analytical observer — sees full structure
+ * KEY AGENTS:
+ *   - Peripheral Nodes: Primary victims (powerless/trapped) — theoretically connected but practically dependent on central processors; bear full cost of routing inefficiency and information gatekeeping
+ *   - Central Information Processors: Primary beneficiaries (institutional/arbitrage) — positioned to aggregate, cache, and prioritize information; capture efficiency gains and role asymmetry
+ *   - Application Developers: Secondary victims (moderate/constrained) — must design around asymmetry through replication, caching, and compensatory logic; can migrate to alternative architectures at switching cost
+ *   - Decentralization Movement: Organized actors (organized/constrained) — IPFS, DHT, peer-to-peer communities building alternative architectures with different asymmetry properties
+ *   - Legacy Protocol Standards: Institutional actors (institutional/arbitrage) — TCP/IP, DNS, BGP maintain theatrical hierarchies that hide the trivial topology's asymmetry
+ *   - Analytical Observer: Universal/civilizational view (analytical/analytical) — risks naturalizing contingent architectural choices as inherent network laws
  */
 
 /* ==========================================================================
@@ -72,155 +93,94 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(trivial_topology_info_asymmetry, 0.48).
-domain_priors:suppression_score(trivial_topology_info_asymmetry, 0.55).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(trivial_topology_info_asymmetry, 0.20).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(the_trivial_topology, 0.52).
+domain_priors:suppression_score(the_trivial_topology, 0.58).
+domain_priors:theater_ratio(the_trivial_topology, 0.61).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(trivial_topology_info_asymmetry, extractiveness, 0.48).
-narrative_ontology:constraint_metric(trivial_topology_info_asymmetry, suppression_requirement, 0.55).
-narrative_ontology:constraint_metric(trivial_topology_info_asymmetry, theater_ratio, 0.20).
+narrative_ontology:constraint_metric(the_trivial_topology, extractiveness, 0.52).
+narrative_ontology:constraint_metric(the_trivial_topology, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(the_trivial_topology, theater_ratio, 0.61).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-% narrative_ontology:constraint_metric(trivial_topology_info_asymmetry, accessibility_collapse, [0.85-1.0]).
-% narrative_ontology:constraint_metric(trivial_topology_info_asymmetry, resistance, [0.0-0.15]).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(the_trivial_topology, tangled_rope).
+narrative_ontology:human_readable(the_trivial_topology, "Trivial Topology Information Asymmetry").
+narrative_ontology:topic_domain(the_trivial_topology, "technological/network_architecture").
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(trivial_topology_info_asymmetry, tangled_rope).
-narrative_ontology:human_readable(trivial_topology_info_asymmetry, "Trivial Topology Information Asymmetry").
-narrative_ontology:topic_domain(trivial_topology_info_asymmetry, "technological").
+domain_priors:requires_active_enforcement(the_trivial_topology).
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(trivial_topology_info_asymmetry).      % Mandatory if Scaffold
-domain_priors:requires_active_enforcement(trivial_topology_info_asymmetry). % Required for Tangled Rope
-
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-% domain_priors:emerges_naturally(trivial_topology_info_asymmetry).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(trivial_topology_info_asymmetry, information_providers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(trivial_topology_info_asymmetry, information_consumers).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(the_trivial_topology, central_information_processors).
+narrative_ontology:constraint_beneficiary(the_trivial_topology, network_topology_designers).
+narrative_ontology:constraint_victim(the_trivial_topology, peripheral_nodes).
+narrative_ontology:constraint_victim(the_trivial_topology, latency_sensitive_applications).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, tangled_rope,
+% PERSPECTIVE 1: PERIPHERAL NODE (SNARE) — A leaf node in a fully connected topology theoretically has a path to all other nodes, but experiences severe latency, throughput, and processing asymmetry. Cannot exit the network; trapped by dependence on central processors for information aggregation and routing decisions. Bears full cost of architectural extraction via forced indirect routing, buffering delays, and information gatekeeping.
+constraint_indexing:constraint_classification(the_trivial_topology, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: APPLICATION DEVELOPER (TANGLED ROPE) — Must design around the trivial topology's latency and asymmetry constraints. Experiences both coordination (the network enables global reach) and extraction (forced to compensate for inefficient routing, cache management, and replication strategies). Can migrate to alternative architectures (mesh, hierarchical) but at significant switching cost and loss of interoperability.
+constraint_indexing:constraint_classification(the_trivial_topology, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, rope,
-    context(agent_power(powerful),
-            time_horizon(generational),
+% PERSPECTIVE 3: CENTRAL INFORMATION PROCESSOR (ROPE) — Benefits from the trivial topology as a pure coordination mechanism: direct connectivity to all nodes enables information aggregation, caching, and request prioritization. Experiences the constraint as enabling rather than extractive. Can arbitrage between network roles (hub, arbiter, relay) and exit into higher-value service layers.
+constraint_indexing:constraint_classification(the_trivial_topology, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, tangled_rope,
+% PERSPECTIVE 4: DECENTRALIZATION MOVEMENT (SCAFFOLD) — Organized advocates (blockchain communities, peer-to-peer networks, distributed systems researchers) perceive the trivial topology's information asymmetry as a temporary architectural problem with a sunset: content-addressable networks (IPFS), sharding, and local-first protocols are building alternative verification and discovery pathways that reduce dependence on central processors. The extraction mechanism loses force as redundant caching and edge computing mature.
+constraint_indexing:constraint_classification(the_trivial_topology, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: LEGACY PROTOCOL STANDARD (PITON) — Standards like TCP/IP assume trivial connectivity (all nodes theoretically reachable) but rely on performative hierarchical routing to hide the asymmetry. The protocol standard persists through institutional inertia: IPv6 and modern DNS hierarchy are substantially theatrical compensations for the trivial topology's inefficiency, maintained because migration costs are prohibitive, not because they optimally solve the problem.
+constraint_indexing:constraint_classification(the_trivial_topology, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION-THEORETIC VIEW (MOUNTAIN) — From a universal/civilizational perspective, some information asymmetry is inherent to any finite network: physical latency, bandwidth constraints, and entropy production make perfect information symmetry impossible. This perspective sees the trivial topology's asymmetry as a natural consequence of thermodynamic limits on communication. However, the structural data contradicts the mountain classification — the engine will compute this as a false summit, revealing that the 'inherent to networks' framing naturalizes what is actually a contingent architectural choice.
+constraint_indexing:constraint_classification(the_trivial_topology, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVES (declare when applicable) ---
-% When a constraint operates between institutional actors with different
-% structural relationships, declare separate perspectives for each.
-% The engine differentiates via directionality: different exit_options
-% produce different d values even for the same power atom.
-%
-% Example — Regulatory capture:
-%
-% % Perspective 4A: Captured regulator (institutional, constrained exit)
-% constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, [type],
-%     context(agent_power(institutional),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(national))).
-%
-% % Perspective 4B: Regulated company (institutional, arbitrage exit)
-% constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, [type],
-%     context(agent_power(institutional),
-%             time_horizon(generational),
-%             exit_options(arbitrage),
-%             spatial_scope(national))).
-
-% PERSPECTIVE 5: THE ARCHITECT (SCAFFOLD)
-% Temporary coordination that expires over time.
-% Requires: has_sunset_clause declared, χ ≤ 0.30, theater ≤ 0.70.
-% constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, scaffold,
-%     context(agent_power(organized),
-%             time_horizon(generational),
-%             exit_options(constrained),
-%             spatial_scope(continental))) :-
-%     narrative_ontology:has_sunset_clause(trivial_topology_info_asymmetry).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(trivial_topology_info_asymmetry_tests).
+:- begin_tests(the_trivial_topology_tests).
 
 test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(trivial_topology_info_asymmetry, TypeBeneficiary, context(agent_power(powerful), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+    constraint_indexing:constraint_classification(the_trivial_topology, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(the_trivial_topology, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(threshold_validation) :-
-    config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(trivial_topology_info_asymmetry, ExtMetricName, E),
-    (E =< 0.25 -> true ; E >= 0.46). % Mountain or high-extraction Snare/Tangled.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(the_trivial_topology, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-:- end_tests(trivial_topology_info_asymmetry_tests).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(the_trivial_topology, TR),
+    TR >= 0.70.
+
+:- end_tests(the_trivial_topology_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -228,113 +188,89 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The base extractiveness is set to 0.48, reflecting a significant level of information extraction. Information providers exert considerable influence, which gives a suppression score of 0.55. The theatrical ratio is low at 0.20, since the main constraint is functional and informational, not inertial or performative.
+ *   Extractiveness (0.52): Moderate-high. Central processors capture efficiency and control benefits during the network's growth phase (interval 0-10), but the extraction is not maximal — much of the asymmetry is justified by legitimate resource constraints and physics-driven latency. The rising trajectory (0.28 → 0.52) reflects that as the network scales and dependence on central aggregation increases, the extraction mechanism becomes more severe. Suppression (0.58): Moderate-high. Significant barriers to exit include switching costs to alternative architectures, standardization lock-in (TCP/IP ubiquity), and the coordination benefit of global connectivity. However, suppression is not absolute — decentralized alternatives exist and are improving. Theater ratio (0.61): Moderate-high. Modern routing and caching infrastructure (BGP, DNS, CDN) performs substantial theater: they maintain the fiction of network universality and peer equivalence while hiding real hierarchical asymmetry through technical complexity. The rising trajectory (0.38 → 0.61) reflects increasing gap between formal protocol simplicity and actual implementation complexity as networks scale.
  *
  * PERSPECTIVAL GAP:
- *   Information Consumers perceive the constraint as a Snare because they are often trapped with limited access to processed and easily understandable information, making them vulnerable to extraction. Information Providers, on the other hand, view it as a Rope enabling efficient information dissemination (from their perspective), a necessary coordination function.
+ *   Peripheral nodes perceive the trivial topology as pure extraction (Snare): they have theoretical access but practical dependence. Central processors perceive it as pure coordination (Rope): global reach enables their legitimate function. Application developers perceive mixed experience (Tangled Rope): the architecture enables reach but forces compensatory design patterns. Decentralization advocates perceive a temporary problem with a sunset (Scaffold): alternatives are maturing. Legacy standards perceive a degraded ritual (Piton): TCP/IP and DNS hierarchies are largely performative solutions to problems that decentralized protocols might solve more elegantly. The analytical observer risks perceiving an immutable law (Mountain) — network asymmetry is inevitable given finite bandwidth and latency. The engine's false summit detector identifies this as naturalization of a contingent architectural choice: the asymmetry is not inherent to networks but to the specific design decision to optimize for central aggregation rather than edge-first decentralization.
  *
  * DIRECTIONALITY LOGIC:
- *   Information Providers benefit from the constraint because they control the flow and interpretation of information, leading to increased influence and potential monetization. Information Consumers bear the cost as they are subject to the biases and filters imposed by the providers, often leading to inefficient decision-making and value extraction.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   N/A.
+ *   Directionality varies by agent position. Central processors with arbitrage options experience low or negative effective extraction (beneficiary position). Peripheral nodes with no exit options experience high effective extraction (trapped victim position). Application developers with constrained options experience moderate extraction (moderate power, constrained exit). Decentralization advocates with organized capacity and partial exit paths experience lower extraction (organized power, constrained exit but with visible alternatives). Legacy protocol standards, as institutional beneficiaries, experience arbitrage-level directionality. The analytical observer at the civilizational level has maximum analytical distance. Each perspective's chi value is derived from these structural positions through the sigmoid f(d) function and scope modifier σ(S). The perspectival gap is large: beneficiaries see rope or scaffold, victims see snare or tangled_rope, observers risk false mountain classification.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling genuine coordination as pure extraction by considering that while there may be some coordination in the network (a genuine Rope function for the beneficiary), it is not evenly distributed. The asymmetry introduces a significant extractive component, making it a Tangled Rope from an analytical view and a Snare for the target.
+ *   DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by showing that all six types are perspectival readings of the same architectural structure. The question 'Is trivial topology information asymmetry Rope or Snare?' has no single answer — it depends on the observer's structural position. The beneficiary (central processor) genuinely experiences coordination (Rope). The victim (peripheral node) genuinely experiences extraction (Snare). The scaffold perspective (decentralization advocates) identifies a real structural feature: alternatives are emerging and the extraction mechanism has a sunset date (10-20 years as IPFS, DHT, and edge computing mature). The piton perspective identifies another real feature: legacy protocols maintain the extraction through inertial institutional arrangements. The mountain perspective is false — the engine correctly identifies this as naturalization. The true analytical resolution is that trivial topology information asymmetry is a Tangled Rope from the system's aggregate perspective: it provides genuine coordination (global reach) while embedding extractive asymmetry (dependence on central processors). The perspectival presheaf over all observables is more accurate than any single type.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_trivial_topology_info_asymmetry,
-    'How resilient are information consumers to manipulation?',
-    'Longitudinal studies of media literacy and critical thinking skills.',
-    'If resilient, weaker Tangled Rope; if vulnerable, stronger Snare.',
+    central_processing_bottleneck_empirical,
+    'What fraction of global information requests pass through a central processor versus peer-to-peer routing in practice?',
+    'Network traffic analysis; packet-level measurement of routing paths; comparison of direct peer routes versus centralized aggregation for common query types',
+    'If < 20% centralized: information asymmetry is largely a theoretical concern (Mountain). If > 60% centralized: extraction mechanism is real and structural (Snare/Tangled Rope).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(central_processing_bottleneck_empirical, empirical, 'Empirical measurement of central processing bottleneck prevalence').
+
+omega_variable(
+    decentralized_alternative_maturity,
+    'Do decentralized protocols (IPFS, DHT-based systems, edge computing) actually provide comparable information access latency and reliability as centralized architectures?',
+    'Longitudinal performance benchmarks; comparison of p99 latency, availability, and update propagation times between centralized and decentralized systems for canonical workloads',
+    'If decentralized ≥ 90% of centralized performance: scaffold sunset is real and imminent (Scaffold from organized perspective). If decentralized < 60% of centralized performance: architectural constraint persists (extraction mechanism remains).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(decentralized_alternative_maturity, empirical, 'Whether decentralized alternatives match centralized performance').
+
+omega_variable(
+    information_asymmetry_necessity,
+    'Is the information asymmetry in trivial topologies a consequence of network physics (latency, bandwidth) or a consequence of architectural choice (hierarchical routing, caching strategies)?',
+    'Controlled network experiments: measure asymmetry in flat routing protocols (flooding, gossip) versus hierarchical protocols; analysis of theoretical bounds on information symmetry under constraint of finite resources',
+    'If physics-driven: constraint is a Mountain (natural law of networks). If architecture-driven: constraint is extractive design choice (Snare/Tangled Rope). This determines whether decentralization solutions are addressing a real limit or a contingent design artifact.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(information_asymmetry_necessity, conceptual, 'Whether information asymmetry is physics-driven or architecture-driven').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(trivial_topology_info_asymmetry, 0, 10).
+narrative_ontology:interval(the_trivial_topology, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(trivial_topology_info_asymmetry_tr_t0, trivial_topology_info_asymmetry, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(trivial_topology_info_asymmetry_tr_t5, trivial_topology_info_asymmetry, theater_ratio, 5, 0.18).
-narrative_ontology:measurement(trivial_topology_info_asymmetry_tr_t10, trivial_topology_info_asymmetry, theater_ratio, 10, 0.20).
+% Theater ratio over time
+narrative_ontology:measurement(trivtop_tr_t0, the_trivial_topology, theater_ratio, 0, 0.38).
+narrative_ontology:measurement(trivtop_tr_t5, the_trivial_topology, theater_ratio, 5, 0.5).
+narrative_ontology:measurement(trivtop_tr_t10, the_trivial_topology, theater_ratio, 10, 0.61).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(trivial_topology_info_asymmetry_ex_t0, trivial_topology_info_asymmetry, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(trivial_topology_info_asymmetry_ex_t5, trivial_topology_info_asymmetry, base_extractiveness, 5, 0.44).
-narrative_ontology:measurement(trivial_topology_info_asymmetry_ex_t10, trivial_topology_info_asymmetry, base_extractiveness, 10, 0.48).
+% Extraction over time
+narrative_ontology:measurement(trivtop_be_t0, the_trivial_topology, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(trivtop_be_t5, the_trivial_topology, base_extractiveness, 5, 0.4).
+narrative_ontology:measurement(trivtop_be_t10, the_trivial_topology, base_extractiveness, 10, 0.52).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-narrative_ontology:coordination_type(trivial_topology_info_asymmetry, information_standard).
+narrative_ontology:coordination_type(the_trivial_topology, global_infrastructure).
+narrative_ontology:affects_constraint(the_trivial_topology, routing_protocol_gatekeeping).
+narrative_ontology:affects_constraint(the_trivial_topology, dns_hierarchy_lock_in).
+narrative_ontology:affects_constraint(the_trivial_topology, content_delivery_network_monopsony).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(trivial_topology_info_asymmetry, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(trivial_topology_info_asymmetry, [other_constraint_id]).
-
-% --- Network Decomposition (Constraint Families) ---
-% When a natural-language label covers multiple constraints with different ε
-% values, each gets its own file. Link family members with affects_constraint:
-%
 % DUAL FORMULATION NOTE:
-% This constraint is one of [N] stories decomposed from [colloquial label].
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - [sibling_constraint_1] (ε=[value], [Type])
-%   - [sibling_constraint_2] (ε=[value], [Type])
-%
-% narrative_ontology:affects_constraint(trivial_topology_info_asymmetry, [sibling_constraint_id]).
+% Trivial topology information asymmetry decomposes into three subordinate constraints: (1) routing_protocol_gatekeeping (ε≈0.45) addresses the specific extraction through routing decisions; (2) dns_hierarchy_lock_in (ε≈0.38) addresses institutional lock-in; (3) content_delivery_network_monopsony (ε≈0.58) addresses extraction through edge computing consolidation. The parent constraint represents the abstract architectural feature; subordinates represent specific institutional manifestations.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(trivial_topology_info_asymmetry, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

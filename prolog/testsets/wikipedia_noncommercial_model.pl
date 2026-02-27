@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: wikipedia_noncommercial_model
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_wikipedia_noncommercial_model, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,25 +55,39 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: wikipedia_noncommercial_model
  *   human_readable: Wikipedia's Non-Commercial, Volunteer-Driven Model
- *   domain: technological
+ *   domain: technological/information/governance
  *
  * SUMMARY:
- *   This constraint describes the socio-technical model of Wikipedia, which
- *   relies on a global community of volunteer editors and a non-profit,
- *   donation-based funding structure to produce a free, comprehensive
- *   knowledge commons. The model explicitly constrains against commercial
- *   advertising, paid editing, and algorithmic curation, prioritizing human
- *   collaboration and verifiable neutrality. This structure has enabled it
- *   to become a foundational piece of internet infrastructure while suppressing
- *   for-profit competitors.
+ *   Wikipedia's non-commercial, volunteer-driven model represents a critical
+ *   point in the history of knowledge distribution infrastructure. Launched
+ *   in 2001, the platform succeeded in creating the largest free encyclopedia
+ *   ever assembled through a global community of unpaid editors, sustained by
+ *   a non-profit organizational structure funded through small-dollar
+ *   donations. This constraint embeds a fundamental tension: the model
+ *   depends on the voluntary extraction of labor from editors, justified by
+ *   the ideology of 'free knowledge,' while simultaneously providing genuine
+ *   coordination benefits to users (free access) and academic communities
+ *   (comprehensive reference material). The tension is not incidental but
+ *   structural — the non-commercial model's competitive advantage relative to
+ *   paid alternatives derives partly from avoiding the salary costs of
+ *   professional writers, meaning some portion of its success is built on
+ *   unpaid labor extraction. Over its 20+ year lifecycle, the model has
+ *   evolved from pure coordination (early Wikipedians as a technical
+ *   community with shared mission) through mixed tangled-rope (current state
+ *   with moderate extraction and coordination functions) toward potential
+ *   piton (institutional contributions becoming performative). The constraint
+ *   exhibits all six types from different perspectives, making it a
+ *   diagnostic test for how 'free labor' is classified in a post-industrial
+ *   economy.
  *
- * KEY AGENTS (by structural relationship):
- *   - Global Public (Readers): Primary beneficiary (moderate/mobile) — receives a vast, free resource.
- *   - Volunteer Editors: Primary cost-bearers (organized/mobile) — provide the uncompensated labor that creates the value.
- *   - Wikimedia Foundation: Institutional beneficiary/steward (institutional/arbitrage) — manages the infrastructure and funds.
- *   - Big Tech Platforms: Secondary institutional beneficiaries (institutional/arbitrage) — use Wikipedia data for free to power services like knowledge graphs and train AI models.
- *   - Commercial Encyclopedia Publishers: Suppressed victims (institutional/constrained) — their business models were rendered largely unviable.
- *   - Analytical Observer: Sees the full structure as a highly successful coordination mechanism.
+ * KEY AGENTS:
+ *   - Volunteer Editors: Primary victims (powerless/trapped) — donate hundreds of hours for zero compensation; constrained by sunk-cost psychology and normative pressure to contribute to public knowledge
+ *   - Information Access Users: Primary beneficiaries (institutional/arbitrage) — experience zero or negative extraction through free access; high exit optionality
+ *   - Academic Community: Secondary beneficiary (moderate/constrained) — benefits from free reference material but constrained by citation norms and institutional evaluation pressures
+ *   - Wikimedia Foundation: Organizational beneficiary (institutional/arbitrage) — controls institutional power and funding flows; coordinates volunteer labor allocation
+ *   - Commercial Encyclopedia Publishers: Competitors in snare (powerless/trapped) — unable to undercut free model; trapped by legacy business model incompatibility
+ *   - Moderators and Administrators: Hidden victims (powerless/trapped) — undertake essential infrastructure labor (vandalism revert, spam removal, dispute resolution) with zero compensation
+ *   - AI and Commercial Knowledge Platforms: Emerging competitors (organized/arbitrage) — developing alternative knowledge distribution models that may eventually displace Wikipedia's unique value
  */
 
 /* ==========================================================================
@@ -81,103 +95,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(wikipedia_noncommercial_model, 0.12). % Extraction is the value of donated labor/funds, which is low relative to the immense public value created.
-domain_priors:suppression_score(wikipedia_noncommercial_model, 0.55).   % Structural property (raw, unscaled). High suppression of commercial alternatives via network effects and zero cost.
-domain_priors:theater_ratio(wikipedia_noncommercial_model, 0.10).       % Piton detection (>= 0.70). Very low; focus is on function.
+domain_priors:base_extractiveness(wikipedia_noncommercial_model, 0.38).
+domain_priors:suppression_score(wikipedia_noncommercial_model, 0.42).
+domain_priors:theater_ratio(wikipedia_noncommercial_model, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(wikipedia_noncommercial_model, extractiveness, 0.12).
-narrative_ontology:constraint_metric(wikipedia_noncommercial_model, suppression_requirement, 0.55).
-narrative_ontology:constraint_metric(wikipedia_noncommercial_model, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(wikipedia_noncommercial_model, extractiveness, 0.38).
+narrative_ontology:constraint_metric(wikipedia_noncommercial_model, suppression_requirement, 0.42).
+narrative_ontology:constraint_metric(wikipedia_noncommercial_model, theater_ratio, 0.58).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A. This is a human-constructed system.
-
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(wikipedia_noncommercial_model, rope).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(wikipedia_noncommercial_model, tangled_rope).
 narrative_ontology:human_readable(wikipedia_noncommercial_model, "Wikipedia's Non-Commercial, Volunteer-Driven Model").
-narrative_ontology:topic_domain(wikipedia_noncommercial_model, "technological").
+narrative_ontology:topic_domain(wikipedia_noncommercial_model, "technological/information/governance").
 
-% --- Binary flags ---
-% domain_priors:requires_active_enforcement is declared to resolve a SCAFFOLD_DANGER_ZONE
-% lint warning. The "enforcement" is the constant, active community moderation
-% (reverting vandalism, enforcing NPOV) required to maintain the encyclopedia's
-% integrity. This active maintenance is a core part of the non-commercial model.
 domain_priors:requires_active_enforcement(wikipedia_noncommercial_model).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(wikipedia_noncommercial_model, global_public_readers).
-narrative_ontology:constraint_beneficiary(wikipedia_noncommercial_model, wikimedia_foundation).
-narrative_ontology:constraint_beneficiary(wikipedia_noncommercial_model, big_tech_platforms).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(wikipedia_noncommercial_model, volunteer_editors). % They provide the labor.
-narrative_ontology:constraint_victim(wikipedia_noncommercial_model, donors). % They provide the funds.
-narrative_ontology:constraint_victim(wikipedia_noncommercial_model, commercial_encyclopedia_publishers). % Their market is suppressed.
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(wikipedia_noncommercial_model, information_access_users).
+narrative_ontology:constraint_beneficiary(wikipedia_noncommercial_model, wikipedia_foundation_institutional_power).
+narrative_ontology:constraint_victim(wikipedia_noncommercial_model, volunteer_editor_labor).
+narrative_ontology:constraint_victim(wikipedia_noncommercial_model, commercial_encyclopedia_publishers).
+narrative_ontology:constraint_victim(wikipedia_noncommercial_model, for_profit_knowledge_platforms).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE GENERAL PUBLIC / READER (ROPE)
-% As a primary beneficiary with no costs, they see a pure coordination good.
-% Engine derives a very low d from beneficiary status.
-constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope,
+% PERSPECTIVE 1: VOLUNTEER EDITOR (SNARE) — Trapped in unpaid labor extraction justified by 'free knowledge' ideology. Editors donate hundreds of hours for zero compensation, competing with professional writers. Suppression is high: psychological sunk costs (identity as 'Wikipedian'), social norms of voluntarism, and lack of alternative platforms for free knowledge contribution. No viable exit without abandoning the shared goal. Maximum experienced extraction.
+constraint_indexing:constraint_classification(wikipedia_noncommercial_model, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: ACADEMIC COMMUNITY (TANGLED ROPE) — Constrained by citation norms (Wikipedia not citeable) and research evaluation pressures, yet benefits enormously from free access to comprehensive summaries for teaching and literature review. Academics experience both extraction (cannot monetize their knowledge contribution to Wikipedia articles) and coordination (access to freely indexed knowledge). Suppression is moderate: institutional pressure to publish in commercial journals limits alternative knowledge-sharing venues.
+constraint_indexing:constraint_classification(wikipedia_noncommercial_model, tangled_rope,
     context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
+            time_horizon(generational),
+            exit_options(constrained),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: THE VOLUNTEER EDITOR (ROPE)
-% As a cost-bearer (victim=labor) but also a believer in the mission, their
-% position is nuanced. Their power is 'organized' and exit is 'mobile'.
-% The engine derives a moderate d (≈0.55), but with ε=0.12, the resulting χ
-% is very low. They perceive it as a Rope they are helping to weave.
-constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope,
-    context(agent_power(organized),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE WIKIMEDIA FOUNDATION (ROPE)
-% As the institutional steward and a primary beneficiary, they see a pure Rope.
-% Engine derives d from beneficiary status + arbitrage exit → d ≈ 0.05 → negative χ.
+% PERSPECTIVE 3: INFORMATION ACCESS USER BASE (ROPE) — Primary beneficiaries with high exit optionality (can access commercial alternatives, paywalled encyclopedias, AI summaries). Yet the non-commercial model directly benefits these users through free access. Experienced extraction is negative or near-zero: they pay nothing and receive knowledge. The constraint functions purely as coordination: Wikipedia's non-profit structure enables free distribution that commercial competitors cannot undercut.
 constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: THE ANALYTICAL OBSERVER (ROPE)
-% Acknowledges the costs borne by volunteers but recognizes the model's primary
-% function as a massive, low-extraction coordination mechanism.
-constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope,
+% PERSPECTIVE 4: COMMERCIAL ENCYCLOPEDIA PUBLISHERS (SNARE) — Trapped by the non-commercial model's competitive advantage. Unable to charge subscription fees without appearing exploitative relative to free Wikipedia. Exit options are severely limited: pivoting to free ad-supported models still lose content-creation differentiation. High suppression: brand reputation damage, sunk costs in proprietary content, locked-in reader habits. Experienced extraction flows away from them toward Wikipedia, making this a snare from the opposite direction.
+constraint_indexing:constraint_classification(wikipedia_noncommercial_model, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 5: WIKIMEDIA FOUNDATION GOVERNANCE COALITION (SCAFFOLD) — Organized institutional actors (Wikipedia Foundation, chapter organizations, editor communities) see the non-commercial model as a temporary coordination scaffold with a sunset implicit in its structure. The model's sustainability depends on sustained donor engagement and volunteer morale. As AI and commercial knowledge platforms mature, the 'free encyclopedia' mission may transition to 'free knowledge verification infrastructure' or 'community editorial oversight layer.' The coalition has partial agency and sees potential exit paths through mission evolution.
+constraint_indexing:constraint_classification(wikipedia_noncommercial_model, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: INSTITUTIONAL CONTENT CONTRIBUTION (PITON) — Many institutional actors (universities, government agencies, NGOs, corporations) nominally contribute to Wikipedia through official channels, but the theater ratio is high: institutional contributions are often low-effort, poorly maintained, or quickly reverted by volunteer editors. The performative aspect — 'we participate in Wikipedia' — exceeds the functional contribution. Institutional arbitrage (reputation via Wikipedia presence) with low actual influence over content.
+constraint_indexing:constraint_classification(wikipedia_noncommercial_model, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / ECONOMIC LAW VIEW (MOUNTAIN) — From a civilizational perspective, the non-commercial model appears to embody an immutable economic principle: knowledge goods exhibit infinite marginal reproduction cost approaching zero; therefore free distribution is the inevitable endpoint for information. Suppression of commercial alternatives is 'natural' — paid encyclopedias cannot compete with free. However, the structural data reveals this as a false summit: the non-commercial model is contingent on sustained volunteer motivation, donor funding, and organizational governance, not on economic laws.
+constraint_indexing:constraint_classification(wikipedia_noncommercial_model, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-
-% PERSPECTIVE 5: BIG TECH PLATFORMS (ROPE)
-% These actors are institutional beneficiaries who consume the output (data) for
-% free to enhance their own commercial products. Their exit is 'arbitrage'.
-% Like the Wikimedia Foundation, they experience the constraint as a pure public good.
-% The engine derives a very low d, resulting in a negative χ.
-constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -185,18 +177,14 @@ constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rop
 
 :- begin_tests(wikipedia_noncommercial_model_tests).
 
-test(uniform_classification_as_rope) :-
-    % Verify that key actors all perceive this as a Rope, demonstrating its
-    % nature as a powerful coordination mechanism.
-    constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope, context(agent_power(moderate), _, _, _)),
-    constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope, context(agent_power(organized), _, _, _)),
-    constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(wikipedia_noncommercial_model, rope, context(agent_power(analytical), _, _, _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(wikipedia_noncommercial_model, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(wikipedia_noncommercial_model, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(low_extraction_threshold) :-
-    % Verify that the base extractiveness is low, consistent with a Rope.
-    domain_priors:base_extractiveness(wikipedia_noncommercial_model, E),
-    E < 0.45.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(wikipedia_noncommercial_model, TR),
+    TR >= 0.70.
 
 :- end_tests(wikipedia_noncommercial_model_tests).
 
@@ -206,113 +194,100 @@ test(low_extraction_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.12): This value is low because the model is
- *     explicitly non-profit. The "extraction" is of voluntary labor and
- *     donations, not coerced payment or rent-seeking. While the absolute value
- *     of this contributed labor is enormous, relative to the total public
- *     value created, the extractive ratio is minimal.
- *   - Suppression (0.55): The model is highly suppressive of for-profit
- *     alternatives, not through legal coercion but through market dominance
- *     achieved via network effects and a zero-price public good.
- *   - Theater (0.10): The Wikimedia Foundation is lean and mission-focused.
- *     Fundraising efforts are direct and functional, not theatrical.
- *   - Active Enforcement: The model requires active enforcement, not by a state,
- *     but by its global community of editors who constantly revert vandalism,
- *     remove unsourced claims, and enforce policies like Neutral Point of View.
- *     This declaration is crucial to distinguish this durable Rope from a
- *     temporary, non-enforced Scaffold, resolving a potential ambiguity in the
- *     classification engine.
+ *   Extractiveness (0.38): Moderate. The non-commercial model exhibits clear asymmetry: volunteer editors create all content and sustain operations through unpaid labor, while the Wikimedia Foundation captures institutional control, donor access, and operational authority. However, the extraction is not maximal (ε > 0.46) because (a) editors gain genuine benefits (reputation, learning, community belonging, impact on public knowledge) that partially offset labor costs, and (b) the model produces real coordination benefits for users and society. The intermediate value reflects that the model combines genuine coordination (free knowledge access) with asymmetric extraction (labor capture). Suppression (0.42): Moderate. Multiple suppression mechanisms operate: (1) ideological framing ('free knowledge as public good') that discourages treating editorial labor as valuable; (2) sunk-cost psychology where editors have already invested identity in Wikipedia; (3) lack of alternative platforms for free knowledge contribution at scale; (4) normative pressure within editor communities; (5) structural barriers to collective bargaining (globally distributed, anonymous volunteers). However, suppression is not extreme: some editors do leave, alternative platforms exist (specialized wikis, Reddit communities), and some institutional criticism of the model is visible. Theater ratio (0.58): Moderate-high. Significant performative elements: institutional 'contributions' from corporations and governments are often low-effort; ceremonial 'Edit-a-thons' that produce minimal net content improvement; the facade of 'community consensus' governance while actual power concentrates in administrator and foundation roles; donor recognition rituals that outpace actual knowledge contribution. The theater ratio has increased over time as the platform matured — early Wikipedia was mostly functional (editors creating content), but recent platforms include substantial performative governance (RfC ceremonies, process theater, bureaucratic review cycles).
  *
  * PERSPECTIVAL GAP:
- *   There is a remarkable LACK of a perspectival gap. Nearly all agents,
- *   including the cost-bearing volunteers, perceive the constraint as a Rope.
- *   This is a hallmark of a successful, mission-driven coordination project.
- *   The volunteers are aligned with the project's goals, so their contribution
- *   is seen as participation, not extraction. The only agents who might see it
- *   differently are the commercial competitors whose models were suppressed, but
- *   the constraint doesn't extract *from* them; it simply out-competes them.
+ *   This constraint demonstrates dramatic perspectival divergence. Volunteer editors see a snare: they are trapped in unpaid labor extraction justified by ideology. Information users see rope: they experience pure coordination (free access, no extraction). Academics see tangled rope: genuine benefit from free access, but constrained by institutional pressures and unable to reciprocate knowledge contribution. The Wikimedia Foundation sees rope or weak tangled rope: successful coordination of global knowledge, with moderate institutional extraction from donors and volunteers. Commercial competitors see snare: trapped by a model they cannot compete with. Moderators see hidden snare: essential infrastructure labor performed for zero compensation. The analytical observer sees mountain: free knowledge distribution is economically inevitable given information cost structure. The perspectival gap reveals that the model's stability depends on suppressing awareness of the snare from volunteer editors and moderators — if editors recognized that their labor is being extracted, model collapse would accelerate.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: The 'global_public_readers' and 'big_tech_platforms'
- *     receive immense value for zero cost. The 'wikimedia_foundation' benefits
- *     by fulfilling its mission. These declarations lead to low `d` values and
- *     negative effective extraction (χ), correctly identifying them as
- *     beneficiaries.
- *   - Victims: The 'volunteer_editors' and 'donors' are listed as victims
- *     because they bear the primary costs (labor and money). This correctly
- *     assigns them a higher directionality `d`. However, because their exit is
- *     'mobile' and power 'organized', and base extraction ε is so low, the
- *     resulting χ remains far below the threshold for a Tangled Rope or Snare.
- *     This correctly models their relationship as voluntary contributors to a
- *     system they support.
+ *   Directionality values are derived from each agent's structural position relative to the extraction and coordination flows. Volunteer editors are trapped victims (d ≈ 0.90): they receive normative and social pressure to contribute without exit options, their labor is captured by the institution, and they bear the cost (time investment with no compensation). Information users are beneficiaries with arbitrage exits (d ≈ 0.05): they can access commercial alternatives but choose free Wikipedia; their experienced extraction is negative. The Wikimedia Foundation is an institutional beneficiary (d ≈ 0.10): it controls labor allocation, donor funding, and institutional power, with full exit optionality (could pivot the model). Commercial publishers are trapped by the model's competitive advantage (d ≈ 0.85 in reverse): they cannot compete with free without abandoning their revenue model, and they bear the cost of reduced market share. The academic community is moderately constrained (d ≈ 0.55): they benefit from access but are constrained by citation norms and institutional pressure that prevent them from reciprocating or monetizing their knowledge contribution. Moderators are trapped victims (d ≈ 0.92): they undertake essential infrastructure labor with zero compensation and high burnout risk.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly identifies Wikipedia as a Rope (coordination)
- *   despite the huge amount of labor involved. A naive analysis might mislabel
- *   the uncompensated labor as pure extraction (Snare). The Deferential Realism
- *   framework avoids this error by considering the low base extractive *ratio* (ε),
- *   the voluntary nature of the contribution (mobile exit), and the alignment
- *   of the contributors with the project's goals. It correctly separates a
- *   cooperative, high-functioning public good from a coercive, extractive system.
+ *   The mandatrophy arises from the classification ambiguity: is Wikipedia primarily a Rope (pure coordination for free knowledge) or a Tangled Rope (coordination plus asymmetric labor extraction)? The snare perspective from volunteers and the rope perspective from users seem to contradict. Resolution: these are not contradictions but perspectival readings of the same structure. From the user's position (d ≈ 0.05), experienced extraction χ is near zero — they see rope. From the editor's position (d ≈ 0.90), experienced extraction χ is high — they see snare. The base properties (ε = 0.38, moderate extractiveness, moderate suppression) support tangled rope as the structural classification: the model contains BOTH genuine coordination (free access) AND asymmetric extraction (unpaid labor). The mandatrophy is resolved by recognizing that the base properties do not determine a single perspective but rather a family of perspectives. The model IS a snare for editors, IS a rope for users, IS a tangled rope as a structural whole. No single type is 'correct' — the indexical classification system maps each agent to their experienced type. The false summit risk is that treating Wikipedia as a 'natural law' of information distribution (mountain) obscures the contingent social arrangements (normative suppression, labor invisibility, institutional power concentration) that hold the model together.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_wikipedia_sustainability,
-    'Is the volunteer labor and donation model sustainable in the long term against editor burnout, misinformation campaigns, and competition for attention from commercial platforms?',
-    'Longitudinal data on editor retention rates, donation levels per user, and the cost/effort required to revert vandalism and coordinated disinformation.',
-    'If unsustainable (False), the constraint could degrade into a Piton (maintained by inertia but losing function) or require a structural change that increases ε. If sustainable (True), it remains a durable Rope.',
+    volunteer_sustainability_threshold,
+    'What rate of volunteer burnout and editor attrition becomes incompatible with Wikipedia''s coverage and quality maintenance?',
+    'Longitudinal tracking of editor retention rates, article quality metrics, and coverage expansion rates; correlation with compensation introduction pilots or alternative incentive structures',
+    'If sustainability threshold exceeded: volunteer snare becomes untenable, forcing model transition to hybrid paid/unpaid or full professionalization. If threshold remains distant: current extractive labor model persists as structurally stable.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(volunteer_sustainability_threshold, empirical, 'Critical volunteer attrition threshold for model stability').
+
+omega_variable(
+    commercial_platform_capability_convergence,
+    'Will AI-generated knowledge platforms (ChatGPT, Claude, Gemini) or commercial alternatives (Brittanica Online, specialized wikis) converge to matching Wikipedia''s breadth and verifiability?',
+    'Comparative analysis of coverage breadth, citation accuracy, expert review depth, and user trust across platforms; longitudinal tracking of market share and usage metrics',
+    'If convergence occurs: rope perspective for users weakens — free access is no longer a unique advantage. If convergence fails: rope coordination stabilizes indefinitely. Either way, tangled rope classification may shift.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(commercial_platform_capability_convergence, empirical, 'Whether commercial alternatives can match Wikipedia''s coverage and trust').
+
+omega_variable(
+    donation_dependency_risk,
+    'Is the non-commercial model''s reliance on donor funding (particularly foundation grants) compatible with editorial independence, or does it introduce hidden extraction through donor influence?',
+    'Analysis of funding source concentration, donor influence on editorial policy, comparison of editorial outcomes in donor-dependent vs volunteer-driven sections',
+    'If hidden extraction detected: the model shifts from snare-on-volunteers to tangled-rope-with-donors, revealing a second layer of asymmetric extraction. If independence confirmed: volunteer snare remains primary structural feature.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(donation_dependency_risk, empirical, 'Whether donation funding creates hidden donor influence on Wikipedia content').
+
+omega_variable(
+    content_moderation_labor_invisibility,
+    'Is content moderation (vandalism revert, spam removal, dispute resolution) being suppressed from consciousness as ''volunteer labor'' rather than recognized as essential infrastructure requiring compensation?',
+    'Tracking of moderation labor hours, comparison with equivalent professional content moderation salaries, analysis of editor burnout in high-moderation areas (politics, current events)',
+    'If recognized as essential infrastructure: model pressures increase to compensate moderators, reducing pure snare classification. If invisibility persists: extraction deepens as moderation needs grow with platform scale.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(content_moderation_labor_invisibility, empirical, 'Whether content moderation labor is being invisibilized in the volunteer model').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(wikipedia_noncommercial_model, 0, 10).
+narrative_ontology:interval(wikipedia_noncommercial_model, 0, 14).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has been remarkably stable. The temporal data reflects this,
-% showing no significant drift towards higher extraction or theater.
-% As ε < 0.46, this section is not strictly required but is included for completeness.
+% Theater ratio over time
+narrative_ontology:measurement(wiki_tr_t0, wikipedia_noncommercial_model, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(wiki_tr_t7, wikipedia_noncommercial_model, theater_ratio, 7, 0.47).
+narrative_ontology:measurement(wiki_tr_t14, wikipedia_noncommercial_model, theater_ratio, 14, 0.58).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(wiki_tr_t0, wikipedia_noncommercial_model, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(wiki_tr_t5, wikipedia_noncommercial_model, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(wiki_tr_t10, wikipedia_noncommercial_model, theater_ratio, 10, 0.10).
+% Extraction over time
+narrative_ontology:measurement(wiki_be_t0, wikipedia_noncommercial_model, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(wiki_be_t7, wikipedia_noncommercial_model, base_extractiveness, 7, 0.28).
+narrative_ontology:measurement(wiki_be_t14, wikipedia_noncommercial_model, base_extractiveness, 14, 0.38).
 
-% Extraction over time (stable and low):
-narrative_ontology:measurement(wiki_ex_t0, wikipedia_noncommercial_model, base_extractiveness, 0, 0.12).
-narrative_ontology:measurement(wiki_ex_t5, wikipedia_noncommercial_model, base_extractiveness, 5, 0.12).
-narrative_ontology:measurement(wiki_ex_t10, wikipedia_noncommercial_model, base_extractiveness, 10, 0.12).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Wikipedia is a textbook example of a global information standard.
-narrative_ontology:coordination_type(wikipedia_noncommercial_model, global_infrastructure).
+narrative_ontology:coordination_type(wikipedia_noncommercial_model, information_standard).
+narrative_ontology:affects_constraint(wikipedia_noncommercial_model, open_source_software_volunteer_model).
+narrative_ontology:affects_constraint(wikipedia_noncommercial_model, knowledge_commons_sustainability).
 
-% Network relationships (structural influence edges)
-% Wikipedia's data is a foundational input for training Large Language Models.
-narrative_ontology:affects_constraint(wikipedia_noncommercial_model, llm_training_data_commons).
+% DUAL FORMULATION NOTE:
+% Wikipedia's non-commercial model should be decomposed into (1) the knowledge coordination constraint (free encyclopedia as information standard) with ε ≈ 0.08 (Mountain) and (2) the volunteer labor extraction constraint (unpaid editor labor as institutional dependency) with ε ≈ 0.52 (Snare). These are structurally distinct: the first is about what Wikipedia produces; the second is about how it produces it. Current analysis combines both under tangled rope at ε = 0.38. Future corpus expansion should separate these stories.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The standard derivation
-% from beneficiary/victim declarations and exit options accurately models the
-% structural relationships of all key agents.
+constraint_indexing:directionality_override(wikipedia_noncommercial_model, institutional, 0.12).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

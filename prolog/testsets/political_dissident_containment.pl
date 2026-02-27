@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: political_dissident_containment
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-21
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_political_dissident_containment, []).
@@ -40,11 +41,11 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
-    narrative_ontology:omega_variable/3.
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -54,23 +55,34 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: political_dissident_containment
  *   human_readable: The state carceral system for neutralizing political opposition
- *   domain: political
+ *   domain: political/authoritarian_control
  *
  * SUMMARY:
- *   Based on the death of Russian opposition leader Alexei Navalny in an Arctic
- *   penal colony, this constraint models the legal and carceral framework used by
- *   an authoritarian state to neutralize political dissidents. This framework
- *   encompasses selective prosecution, harsh sentencing for politically-motivated
- *   charges (e.g., "extremism"), and punitive prison conditions designed to
- *   degrade health and eliminate political agency, culminating in the target's
- *   death. The system functions as a tool of power consolidation for the ruling
- *   regime.
+ *   The death of Russian opposition leader Alexei Navalny in the Arctic penal
+ *   colony at Kharp in February 2024 exemplifies a structural constraint in
+ *   authoritarian systems: the legal and carceral framework used to eliminate
+ *   political opposition while maintaining a facade of due process. This
+ *   constraint operates through multiple layers: vague extremism statutes
+ *   that criminalize opposition activity, a judiciary subordinate to the
+ *   security apparatus, remote prison placement that isolates dissidents from
+ *   public support and medical care, and harsh conditions that function as
+ *   slow attrition. The constraint exhibits a critical feature of Snare
+ *   classification: it combines legal theater (trials, appeals, formal
+ *   procedures) with substantive incapacitation (imprisonment, isolation,
+ *   deteriorating health). The classification demonstrates how mandatrophy is
+ *   resolved: the constraint is not a coordination mechanism (no genuine
+ *   public benefit from dissident elimination) and not a mountain (the
+ *   carceral system is a choice, not an immutable law of political order). It
+ *   is a pure extraction mechanism that neutralizes political threats through
+ *   state violence disguised as legal process.
  *
- * KEY AGENTS (by structural relationship):
- *   - Political Dissidents (e.g., Navalny): Primary target (powerless/trapped) — bears total extraction of freedom, health, and life.
- *   - The Authoritarian State Apparatus (e.g., The Kremlin, FSB, Prison Service): Primary beneficiary (institutional/arbitrage) — benefits from the elimination of political threats and the consolidation of power.
- *   - Western Governments / International Bodies: Secondary institutional actor (institutional/constrained) — experiences the constraint as a violation of international norms but has limited tools to intervene.
- *   - Analytical Observer: Sees the full structure of coercion and extraction.
+ * KEY AGENTS:
+ *   - Political Dissidents: Primary victim (powerless/trapped) — face predetermined conviction, remote imprisonment, and deteriorating conditions with no exit options or legal recourse
+ *   - Ruling Party Regime and Security Apparatus: Primary beneficiary (institutional/arbitrage) — maintains political monopoly through dissident elimination; uses carceral system for opposition neutralization without triggering regime-collapse-level international sanctions
+ *   - Opposition Parties and Civil Society: Secondary victim (moderate/constrained) — diverted resources toward legal defense and organizational survival; face preemptive suppression through extremism charges
+ *   - State Judicial System: Institutional actor maintaining theater (institutional/arbitrage) — operates as subordinate apparatus delivering predetermined verdicts while maintaining appearance of legal legitimacy
+ *   - International Human Rights Community: Organized observer (organized/mobile) — documents violations but has limited capacity to alter regime behavior; advocacy sometimes instrumentalized for geopolitical positioning
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing regime violence as inherent to state sovereignty rather than recognizing it as a contingent choice to eliminate opposition through extraction
  */
 
 /* ==========================================================================
@@ -78,86 +90,73 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(political_dissident_containment, 0.85).
-domain_priors:suppression_score(political_dissident_containment, 0.95).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(political_dissident_containment, 0.30).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(political_dissident_containment, 0.78).
+domain_priors:suppression_score(political_dissident_containment, 0.88).
+domain_priors:theater_ratio(political_dissident_containment, 0.65).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(political_dissident_containment, extractiveness, 0.85).
-narrative_ontology:constraint_metric(political_dissident_containment, suppression_requirement, 0.95).
-narrative_ontology:constraint_metric(political_dissident_containment, theater_ratio, 0.30).
+narrative_ontology:constraint_metric(political_dissident_containment, extractiveness, 0.78).
+narrative_ontology:constraint_metric(political_dissident_containment, suppression_requirement, 0.88).
+narrative_ontology:constraint_metric(political_dissident_containment, theater_ratio, 0.65).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint type.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(political_dissident_containment, snare).
+narrative_ontology:human_readable(political_dissident_containment, "The state carceral system for neutralizing political opposition").
+narrative_ontology:topic_domain(political_dissident_containment, "political/authoritarian_control").
 
-% --- Binary flags ---
 domain_priors:requires_active_enforcement(political_dissident_containment).
 
-% --- Emergence flag (required for mountain constraints) ---
-% This constraint is human-designed and enforced; not natural.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(political_dissident_containment, the_russian_state_apparatus).
-%
-% Who bears disproportionate cost?
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(political_dissident_containment, ruling_party_regime).
+narrative_ontology:constraint_beneficiary(political_dissident_containment, state_security_apparatus).
 narrative_ontology:constraint_victim(political_dissident_containment, political_dissidents).
-narrative_ontology:constraint_victim(political_dissident_containment, international_normative_order).
+narrative_ontology:constraint_victim(political_dissident_containment, civil_society_organizations).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE)
-% The political dissident, who experiences total extraction with no escape.
-% Engine derives d from: victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
+% PERSPECTIVE 1: POLITICAL DISSIDENT (SNARE) — No meaningful exit options. The dissident is trapped within the state's jurisdiction with no protection from legal retaliation. Once charged under vague extremism statutes, the pathway is predetermined: conviction, imprisonment in remote facilities, deteriorating conditions. The constraint operates through legal machinery but functions as pure incapacitation. Suppression is maximal: no independent judiciary, no meaningful appeals, no international intervention capacity. The dissident experiences the full extractive force of the state apparatus with zero alternatives.
 constraint_indexing:constraint_classification(political_dissident_containment, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% The state apparatus, which sees this as a tool for maintaining order and power.
-% Engine derives d from: beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
+% PERSPECTIVE 2: RULING PARTY REGIME (ROPE) — Benefits from the constraint as a coordination mechanism: the carceral system neutralizes opposition while maintaining a facade of legal process. The regime experiences the constraint as solving a coordination problem: how to eliminate political threats without triggering international sanctions that are severe enough to risk regime collapse. The legal apparatus provides deniability (prosecutions appear to follow legal procedures), and the remote prison system isolates consequences from public view. No extraction cost — pure benefit flows to the regime through political monopoly maintenance.
 constraint_indexing:constraint_classification(political_dissident_containment, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (SNARE)
-% The analyst sees the system for its primary function: pure, coercive extraction.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
+% PERSPECTIVE 3: OPPOSITION PARTIES & CIVIL SOCIETY (SNARE) — Severely constrained by fear of prosecution and organizational suppression. Exit options are limited: operate underground (high risk), exit the country (loss of base), or accept neutered status. The constraint functions as a preemptive extraction mechanism: resources, leadership, and organizational capacity are diverted toward legal defense and regime avoidance rather than political activity. Suppression through legal jeopardy (defamation suits, extremism charges) prevents any organized challenge. The mechanism is intentionally brutal — the visibility of dissident imprisonment serves as a deterrent to broader movement participation.
 constraint_indexing:constraint_classification(political_dissident_containment, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: INTERNATIONAL HUMAN RIGHTS COMMUNITY (TANGLED ROPE) — Organized actors (UN bodies, NGOs, Western governments) have genuine mobility and exit options (diplomatic pressure, sanctions, refugee asylum). They benefit from coordination (treaty frameworks, documented cases create norm-setting precedent) but experience asymmetric extraction: their advocacy is instrumentalized by Western governments for geopolitical positioning, their documentation is often ineffectual against determined authoritarian regimes, and their intervention sometimes endangers dissidents further. Suppression is moderate at this level (regimes cannot directly imprison international observers, but can restrict access and retaliate against domestic partners). The mixed nature reflects both coordination gains (establishing international norms) and extraction costs (limited actual leverage).
+constraint_indexing:constraint_classification(political_dissident_containment, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: STATE JUDICIAL SYSTEM (PITON) — The court system operates largely as theater: judges are subordinate to the security apparatus, verdicts are predetermined, legal procedures provide the appearance of legitimacy without substance. The theater ratio is high (0.65) because formal legal machinery — trials, appeals, legal representation — persists despite being non-functional as genuine dispute resolution. The judiciary maintains the performative framework (proper courtroom procedures, judges in robes, defense lawyers present) while delivering pre-determined outcomes. The system persists through institutional inertia: removing the judicial theater entirely would trigger international condemnation and destabilize regime legitimacy, so the regime maintains the shell of legal process.
+constraint_indexing:constraint_classification(political_dissident_containment, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, one might argue that state monopoly on violence is an inherent feature of sovereignty itself — that any state must suppress internal threats to maintain territorial integrity. This perspective risks naturalizing the constraint as an immutable law of political order. However, the structural data contradicts the mountain classification: the extractiveness (0.78), suppression (0.88), and theater ratio (0.65) reveal a contingent institutional arrangement, not a law of nature. The false summit exposes how authoritarian regimes use natural-law framing ('the state must maintain order') to legitimize what is actually a choice to eliminate opposition through carceral extraction rather than manage it through democratic competition.
+constraint_indexing:constraint_classification(political_dissident_containment, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% --- INTER-INSTITUTIONAL PERSPECTIVE ---
-% Western governments and international bodies see the system as a violation
-% of norms they uphold, but their ability to act is limited. They are a victim
-% of the norm-breaking with constrained exit options.
-constraint_indexing:constraint_classification(political_dissident_containment, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(continental))).
-
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -165,26 +164,18 @@ constraint_indexing:constraint_classification(political_dissident_containment, r
 
 :- begin_tests(political_dissident_containment_tests).
 
-test(perspectival_gap_target_vs_beneficiary) :-
-    % Verify the core perspectival gap between the dissident and the state.
-    constraint_indexing:constraint_classification(political_dissident_containment, TypeTarget, context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(political_dissident_containment, TypeBeneficiary, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    TypeTarget \= TypeBeneficiary.
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(political_dissident_containment, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(political_dissident_containment, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_matches_target) :-
-    % Verify the analytical view aligns with the victim's experience of a Snare.
-    constraint_indexing:constraint_classification(political_dissident_containment, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(political_dissident_containment, TypeAnalytical, context(agent_power(analytical), _, _, _)),
-    TypeTarget == TypeAnalytical.
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(political_dissident_containment, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(high_extraction_and_suppression_thresholds, [nondet]) :-
-    % Verify the constraint meets the numerical criteria for a Snare.
-    config:param(extractiveness_metric_name, ExtMetricName),
-    config:param(suppression_metric_name, SupMetricName),
-    narrative_ontology:constraint_metric(political_dissident_containment, ExtMetricName, E),
-    narrative_ontology:constraint_metric(political_dissident_containment, SupMetricName, S),
-    E >= 0.46,
-    S >= 0.60.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(political_dissident_containment, TR),
+    TR >= 0.70.
 
 :- end_tests(political_dissident_containment_tests).
 
@@ -194,114 +185,100 @@ test(high_extraction_and_suppression_thresholds, [nondet]) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.85): The system extracts the most valuable assets
- *     an individual possesses: political agency, freedom, health, and ultimately,
- *     life. The extraction is near-total.
- *   - Suppression Score (0.95): For an individual caught in this system (e.g.,
- *     imprisoned in a penal colony), there are no viable alternatives. Legal
- *     appeals are performative, and escape is impossible. The constraint is
- *     designed to foreclose all other paths.
- *   - Theater Ratio (0.30): The system maintains a veneer of legality (trials,
- *     charges, official statements), but this is secondary to its primary
- *     function of physical and political elimination. The theater is present but
- *     not the dominant feature.
+ *   Extractiveness (0.78): High and increasing. The regime extracts political monopoly through dissident elimination. The constraint has intensified over the measured interval (0.55 → 0.78) as the regime faces increased opposition mobilization and responded with broader extremism prosecutions and harsher carceral conditions. The trajectory shows the constraint functioning as designed: each wave of opposition sparks broader criminalization and harsher imprisonment. Suppression (0.88): Extreme. No independent judiciary, no international intervention capacity, no meaningful appeals, vague criminal statutes that apply to any political organizing, remote prison placement that prevents solidarity or rescue, and documented medical neglect creating lethal conditions. Victims cannot organize alternatives because the constraint itself prevents organization. Theater ratio (0.65): Moderate-high and increasing (0.45 → 0.65). The regime maintains performative legal machinery (trials, judges, defense lawyers, appeal processes) despite all outcomes being predetermined by the security apparatus. The theater has increased as international attention has grown — the regime has responded by ensuring the appearance of legal process becomes more elaborate, not by abandoning it. This indicates the theater serves regime legitimacy, not genuine justice.
  *
  * PERSPECTIVAL GAP:
- *   The gap is extreme. For the 'political_dissidents' (powerless/trapped), the
- *   system is a Snare—a coercive mechanism of pure extraction from which there
- *   is no escape. For 'the_russian_state_apparatus' (institutional/arbitrage),
- *   it is a Rope—an effective coordination mechanism to enforce state policy,
- *   maintain stability, and eliminate perceived threats, with benefits far
- *   outweighing any internal costs.
+ *   The constraint demonstrates maximum perspectival divergence. The dissident sees pure incapacitation with no exit (Snare). The regime sees a coordination solution to the problem of maintaining political monopoly (Rope). The international community sees a mixed constraint where coordination around human rights norms conflicts with limited leverage (Tangled Rope). The judiciary sees its degraded ritual role (Piton). The analytical observer risks seeing an inherent feature of sovereignty (Mountain), but the structural data reveals this as naturalization of a choice. The gap between the beneficiary (regime monopoly) and the victim (dissident incapacitation) is absolute — no shared interest or mutual benefit exists. This gap is the diagnostic signature of a Snare: the constraint persists because suppression is sufficient to prevent organized victim resistance, not because both parties benefit.
  *
  * DIRECTIONALITY LOGIC:
- *   The directionality is unambiguous. 'the_russian_state_apparatus' is the
- *   sole beneficiary, using the constraint to consolidate power. 'political_dissidents'
- *   are the explicit victims, bearing the full cost. The engine's derivation
- *   of a low `d` for the beneficiary and a high `d` for the victim accurately
- *   reflects this severe power asymmetry.
+ *   Each agent's directionality is determined by their structural position relative to the extraction flow. Dissidents have maximum d (0.95-1.0): victims with trapped exit options → high f(d) → high experienced extraction. The regime has minimum d (0.05): beneficiary with arbitrage exit (can maintain monopoly indefinitely) → low/negative f(d) → extraction flows toward them. Civil society has moderate d (0.55-0.65): victims with constrained exit options (cannot leave but can organize defensively) → moderate f(d) → moderate extraction. International observers have moderate d (0.70-0.75): analytical position with mobile options but limited leverage → high f(d) but not maximal. The judicial system has minimum d (0.05): subordinate beneficiary with arbitrage (maintains position by delivering verdicts) → low f(d). The directionality gradient tracks the extraction asymmetry: power and exit options determine who bears the cost and who reaps the benefit.
  *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The perspective of Western governments (institutional/constrained) highlights
- *   a key dynamic. Though they are powerful institutions, their ability to
- *   alter this specific constraint is limited, placing them in a `constrained`
- *   exit position. They are victims of the violation of international norms.
- *   Their classification as Snare, like the primary target's, shows that from
- *   the outside, the system is still seen as one of pure, illegitimate coercion,
- *   even if they don't bear the physical costs.
- *
- * MANDATROPHY ANALYSIS: [RESOLVED MANDATROPHY]
- *   This classification correctly identifies the system as a Snare from the
- *   analytical and victim perspectives, preventing the state's "Rope" narrative
- *   (i.e., that this is merely "law and order") from obscuring the underlying
- *   extractive reality. The high ε (0.85) and suppression (0.95) scores ensure
- *   it cannot be misclassified as a flawed coordination tool (Tangled Rope).
- *   The high extraction is justified by the total loss of freedom, health, and
- *   life for the target.
+ * MANDATROPHY ANALYSIS:
+ *   RESOLVED BY STRUCTURAL CLARITY: The constraint is unambiguously a Snare, not a false coordination mechanism masquerading as extraction. Three tests confirm: (1) Beneficiary clarity: The regime experiences genuine benefit (political monopoly maintenance) with no corresponding cost. There is no coordination problem being solved for both parties. (2) Victim clarity: Dissidents experience pure incapacitation with no reciprocal benefit. The constraint offers them nothing in exchange for their imprisonment. (3) Suppression sufficiency: The regime can maintain the constraint indefinitely through suppression alone, without relying on victim buy-in or coordination incentives. The Snare classification is resistant to reframing. The mandate risk — 'maybe this is actually coordination around security?' — fails because the regime receives security through dissident elimination, not through cooperation with dissidents. The constraint is not an agreement (implicit or explicit) but an imposition. Mandatrophy is resolved: this is a Snare, not a Tangled Rope or Scaffold. The regime has chosen extraction over any genuine coordination mechanism.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% /5 form: narrative detail for story context
 omega_variable(
-    omega_political_dissident_containment,
-    'Was Navalny''s death the result of a direct order (targeted assassination) or the inevitable systemic outcome of the prison conditions (systemic negligence)?',
-    'Access to internal Kremlin/FSIN communications or a credible whistleblower account.',
-    'If direct order -> a maximally sharpened Snare, applied with specific intent. If systemic -> a Snare whose standard operating procedure is lethal over time. The classification remains Snare, but the intentionality changes.',
+    dissident_threat_threshold,
+    'At what threshold of political threat does a regime transition from criminal prosecution to extrajudicial carceral elimination?',
+    'Comparative analysis across regimes: identify correlation between regime fragility, opposition mobilization capacity, and severity of dissident imprisonment. Historical case studies of transitions from political detention to systematic elimination.',
+    'If threshold is regime-fragility dependent: the constraint is a rational (though brutal) regime survival mechanism. If threshold is arbitrary: the constraint reflects ideological elimination rather than threat response, suggesting higher extractiveness (> 0.85) classification.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(dissident_threat_threshold, empirical, 'Threshold determining transition from prosecution to elimination').
+
+omega_variable(
+    international_sanction_elasticity,
+    'Do international sanctions (economic, diplomatic, arms embargoes) actually increase or decrease the severity of dissident treatment within the regime?',
+    'Time-series analysis of sanction severity vs prison conditions, dissident release rates, and mortality; comparative case studies of isolated vs partially-integrated regimes.',
+    'If sanctions increase severity: they strengthen the regime''s narrative (external enemies), increasing suppression and extraction. If sanctions decrease severity: international pressure creates genuine constraints on the regime''s extraction capacity. This affects whether the constraint''s suppression level is endogenous or externally moderated.',
     confidence_without_resolution(low)
 ).
 
-% /3 form: typed classification for reporting engine (REQUIRED)
-narrative_ontology:omega_variable(omega_political_dissident_containment, empirical, 'Distinguishing between a direct assassination order and lethal systemic negligence requires empirical evidence like internal communications.').
+narrative_ontology:omega_variable(international_sanction_elasticity, empirical, 'Impact of international sanctions on dissident treatment severity').
+
+omega_variable(
+    regime_legitimacy_feedback,
+    'Does visible dissident persecution strengthen or weaken regime legitimacy among the general population and international community?',
+    'Survey data on public opinion in regimes with visible dissident persecution; international polling on perception of regime legitimacy; correlation between dissident imprisonment visibility and protest frequency.',
+    'If strengthens legitimacy (domestic fear-compliance): the constraint is self-reinforcing (Snare confirmed). If weakens legitimacy (domestic sympathy, international isolation): the constraint is unstable and depends on suppression intensity to persist, suggesting this is a doomed strategy rather than a stable equilibrium.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regime_legitimacy_feedback, empirical, 'Effect of dissident persecution visibility on regime legitimacy').
+
+omega_variable(
+    biological_constraint_lethality,
+    'Are deaths in Arctic penal colonies the result of deliberate state policy (homicide via carceral design) or foreseeable but unintended consequences of harsh conditions?',
+    'Forensic analysis of death causes; investigation of medical care availability and deliberate denial; comparative analysis of mortality rates across Russian penal facilities (Arctic vs temperate); documentation of specific cases (e.g., Navalny).',
+    'If deliberate policy: extractiveness should be rated > 0.85 (genocide-adjacent), mandatrophy becomes existential (is this even classifiable as a constraint or is it naked state violence?). If foreseeable consequences: extractiveness remains 0.78 (incapacitation + elimination through carceral conditions). This is the highest-stakes omega for this constraint.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(biological_constraint_lethality, empirical, 'Whether carceral deaths reflect deliberate policy or foreseeable consequences').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
 narrative_ontology:interval(political_dissident_containment, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint intensified over the last decade. The data models this
-% drift from a harsh but not necessarily lethal system to one where death
-% is a predictable outcome. This reflects 'extraction_accumulation'.
+% Theater ratio over time
+narrative_ontology:measurement(pdissident_tr_t0, political_dissident_containment, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(pdissident_tr_t5, political_dissident_containment, theater_ratio, 5, 0.58).
+narrative_ontology:measurement(pdissident_tr_t10, political_dissident_containment, theater_ratio, 10, 0.65).
 
-% Theater ratio over time (legal pretenses eroding):
-narrative_ontology:measurement(pdc_tr_t0, political_dissident_containment, theater_ratio, 0, 0.50).
-narrative_ontology:measurement(pdc_tr_t5, political_dissident_containment, theater_ratio, 5, 0.40).
-narrative_ontology:measurement(pdc_tr_t10, political_dissident_containment, theater_ratio, 10, 0.30).
+% Extraction over time
+narrative_ontology:measurement(pdissident_be_t0, political_dissident_containment, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(pdissident_be_t5, political_dissident_containment, base_extractiveness, 5, 0.68).
+narrative_ontology:measurement(pdissident_be_t10, political_dissident_containment, base_extractiveness, 10, 0.78).
 
-% Extraction over time (conditions becoming more lethal):
-narrative_ontology:measurement(pdc_ex_t0, political_dissident_containment, base_extractiveness, 0, 0.60).
-narrative_ontology:measurement(pdc_ex_t5, political_dissident_containment, base_extractiveness, 5, 0.75).
-narrative_ontology:measurement(pdc_ex_t10, political_dissident_containment, base_extractiveness, 10, 0.85).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% This system coordinates the actions of the judiciary, security services,
-% and penal system to achieve a political goal.
 narrative_ontology:coordination_type(political_dissident_containment, enforcement_mechanism).
+narrative_ontology:affects_constraint(political_dissident_containment, authoritarian_surveillance_state).
+narrative_ontology:affects_constraint(political_dissident_containment, suppression_of_civil_society_assembly).
 
-% Network relationship: Media censorship is a prerequisite for maintaining
-% the public narrative that allows this containment system to operate with
-% minimal domestic backlash.
-narrative_ontology:affects_constraint(media_censorship_laws, political_dissident_containment).
-
+% DUAL FORMULATION NOTE:
+% The political dissident containment constraint is structurally upstream of broader authoritarianism mechanisms. The carceral elimination of opposition leaders enables the regime to deploy surveillance and assembly restrictions against the general population without facing organized resistance. This story represents the apex extraction mechanism; the related constraints represent secondary enforcement layers.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The structural relationships
-% are stark, and the default derivation from beneficiary/victim status and
-% exit options accurately models the extreme power imbalance.
+constraint_indexing:directionality_override(political_dissident_containment, institutional, 0.05).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "martian_signal_latency",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "msl"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Martian Signal Latency (One-Way Light Time)",
+    "topic_domain": "technological/scientific/space_exploration",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "requires_active_enforcement": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Rover Controller (Real-Time Operator)",
+      "comment": "PERSPECTIVE 1: ROVER OPERATOR (MOUNTAIN) \u2014 Trapped in real-time response loops that span 3-22 minutes one-way. Cannot negotiate around the speed of light. Must operate in autonomous mode or accept command delays that make reactive control impossible. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.17. The constraint is a pure physical limit, not a coordination problem or extraction mechanism."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "Space Agency Mission Planner",
+      "comment": "PERSPECTIVE 2: SPACE AGENCY PLANNER (MOUNTAIN) \u2014 Despite powerful institutional position and significant resources, cannot change the speed of light. The constraint operates at the same level for all actors. Mobility (via relay satellites, communication networks) does not reduce the fundamental latency. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.08. Mountain classification is invariant across power levels."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Physics Observer (Natural Law)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the perspective of physics, signal latency is a direct consequence of the speed of light constant (c \u2248 299,792 km/s) and the orbital geometry of Earth-Mars distance (54.6 to 401 million km depending on orbital position). The constraint is axiomatic to spacetime structure. No amount of engineering, coordination, or institutional arrangement can overcome it. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.14. Mountain classification certified by Natural Law profile metrics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "relay_network_sufficiency",
+      "question": "Can relay satellites in Martian orbit or at Lagrange points reduce the effective operational latency below the one-way light time threshold?",
+      "resolution_mechanism": "Deployment and operational testing of communication relay networks (e.g., Mars Relay Network, proposed L4/L5 stations); measurement of effective decision loop closure time with relay-based autonomous command sequences",
+      "impact": "If effective: operational latency can be reduced through autonomous protocols, but the underlying physical constraint (one-way light time) remains unchanged. If ineffective: one-way light time remains the binding constraint on all Mars operations.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether relay networks can reduce effective operational latency"
+    },
+    {
+      "id": "autonomous_agency_scalability",
+      "question": "Can Mars rovers be given sufficient autonomous decision-making authority to operate productively without real-time Earth oversight, effectively neutralizing the latency constraint as a practical limitation?",
+      "resolution_mechanism": "Historical data on rover success rates with increasing autonomy levels; mission outcomes under high-autonomy protocols (e.g., Curiosity/Perseverance autonomous navigation) vs constrained protocols; analysis of tasks that require Earth-Mars loop closure",
+      "impact": "If yes: latency becomes a constraint on human oversight, not on rover function \u2014 the constraint's structural impact diminishes. If no: latency remains a binding constraint on mission complexity and scientific capability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether autonomous agency can neutralize latency as a practical constraint"
+    },
+    {
+      "id": "physical_law_versus_institutional_contingency",
+      "question": "Is the constraint properly classified as a Mountain (immutable natural law) or as an institutionally contingent limitation (Snare or Tangled Rope) on mission design choices that could be restructured with different operational paradigms?",
+      "resolution_mechanism": "Decomposition analysis: the speed of light is a Mountain; but the specific operational demand for real-time control is a contingent institutional choice. If missions are redesigned to operate purely autonomously (Mars base with local decision authority), the latency constraint becomes irrelevant to mission function.",
+      "impact": "If purely natural law: Mountain classification holds for all observables. If institutionally contingent: separate constraint stories needed for 'speed of light' (Mountain) vs 'real-time control requirement' (Tangled Rope/Scaffold).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this is a natural law or institutionally contingent operational constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Martian signal latency is the absolute, irreducible delay in electromagnetic communication between Earth and Mars caused by the finite speed of light (c \u2248 299,792 km/s) and the vast interplanetary distance (54.6 to 401 million km depending on orbital configuration). One-way light time ranges from approximately 3 minutes at closest approach (conjunction) to 22 minutes at maximum distance (opposition). This creates a round-trip delay of 6 to 44 minutes, making real-time teleoperation of rovers impossible and forcing Mars missions to operate with high levels of autonomous decision-making or accept significant mission complexity and risk from delayed Earth-based command loops. Unlike extractive constraints (Snare, Tangled Rope) or contingent institutional arrangements (Scaffold, Piton, Rope), Martian signal latency is a direct consequence of fundamental physics and cannot be negotiated, circumvented, or restructured through institutional innovation. It is a constraint of the natural law class: immutable, universal, and invariant across all observables. However, the operational impact of this constraint depends heavily on mission design choices (autonomous vs remote-controlled operations), raising a subtle distinction between the physical constraint itself (undeniably a Mountain) and the institutional framing of how Mars missions are designed around it.",
+    "key_agents": [
+      "Mars Rover/Lander: Primary actor (powerless/trapped) \u2014 subject to latency; must operate autonomously or accept delayed command loops",
+      "Earth-Based Mission Control: Primary operator (institutional/arbitrage) \u2014 designs operations around the latency constraint; experiences it as a planning requirement, not as extraction",
+      "Space Agency (NASA/ESA/CNSA): Institutional beneficiary (institutional/arbitrage) \u2014 frames mission architecture to accommodate latency; benefits from long operational lifespans of autonomous rovers",
+      "Physics Observer: Analytical perspective (analytical/analytical) \u2014 sees the constraint as axiomatic to spacetime structure; latency is a logical consequence of c and distance, not a negotiable term"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The constraint does not extract value from any agent \u2014 it is not redistributive or coercive in the classical sense. Instead, it imposes uniform structural requirements on all Mars operations. One-way light time affects mission design equally regardless of the operator's resources or position; it is not a mechanism by which one actor gains at another's expense. The low extractiveness reflects that this is a constraint of nature, not a social mechanism. Suppression (0.03): Minimal. There are no alternative modalities being suppressed. Agents cannot choose to ignore signal latency or use workarounds; the constraint is total in its domain (electromagnetic communication across interplanetary space). However, suppression is near-zero because agents can fully perceive and plan around the constraint \u2014 it is not hidden or obscured. Theater ratio (0.15): Very low. The constraint requires minimal performative overhead. Mission planners explicitly account for latency in operational procedures; there is no illusion that real-time control is possible. Autonomy protocols are transparent. The slight theater (0.15, not 0.0) reflects minor ceremonial aspects of mission briefings and public communication about 'commanding' rovers, which implies real-time control even though operations are entirely pre-planned and autonomous.",
+    "perspectival_gap": "All three perspectives classify as Mountain, reflecting that this constraint is genuinely natural law \u2014 invariant across observables. However, the perspectives differ in their relationship to the latency. The rover operator (powerless/trapped) experiences the constraint as binding on every action \u2014 they cannot operate in real-time modes. The mission planner (powerful/mobile) experiences the constraint as a design parameter \u2014 it shapes architecture but does not prevent capability. The analytical observer (analytical/analytical) sees the constraint as axiomatic \u2014 it is a logical fact about spacetime, not a problem to be solved. No perspectival gap exists in classification (all Mountain), but the structural experience of the constraint differs by agent position. This is the expected pattern for true natural law constraints: identical classification, but different operational contexts.",
+    "directionality_logic": "Mountain constraint: Beneficiaries and victims are not applicable. The constraint imposes uniform structural requirements on all agents. Directionality does not apply to natural law \u2014 all agents are equally subject to c and distance. The three perspectives derive directionality as follows: (1) Rover operator: d\u22480.95 (trapped agent experiencing the constraint as an absolute limitation), f(d)\u22481.42. (2) Mission planner: d\u22480.50 (balanced \u2014 powerful position can accommodate the constraint through design, but cannot eliminate it), f(d)\u22480.65. (3) Analytical observer: d\u22480.72 (observing the constraint as a structural property of physics), f(d)\u22481.15. All three derive from the power and exit options of the observer, not from an asymmetric extraction relationship. The constraint's structure is identical for all agents; only their relationship to it differs.",
+    "mandatrophy_analysis": "NO MANDATROPHY RISK. This constraint is classified as Mountain from all perspectives, and Mountain is the correct classification. The extractiveness (0.12) is well below the threshold for mandatrophy detection (\u03b5 > 0.46). The constraint does not risk being mislabeled as coordination (Rope) because there is no coordination function \u2014 signal latency creates operational requirements, not collective action problems. The constraint does not risk being mislabeled as extraction (Snare) because there is no redistribution or asymmetric coercion \u2014 the latency affects all agents uniformly. The constraint does not risk being labeled as a temporary problem (Scaffold) because the speed of light is not a temporary institutional arrangement with a sunset clause. The natural law profile metrics (accessibility_collapse=0.92, resistance=0.08, emerges_naturally=true) all confirm the Mountain classification. This constraint is a gold standard exemplar of a true natural law: immutable, universal, and invariant across all measurement bases."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "mars_mission_autonomy_requirement",
+      "interplanetary_communication_bandwidth"
+    ],
+    "dual_formulation_note": "Martian signal latency is a pure physical constraint (this story, \u03b5=0.12, Mountain). It should not be confused with the institutional constraint of 'real-time control requirement' (separate story if needed, \u03b5 potentially higher, Tangled Rope or Scaffold). The speed of light is immutable; the demand for real-time oversight is contingent. These are two different constraints related by causality but structurally distinct."
+  },
+  "directionality_overrides": []
+}

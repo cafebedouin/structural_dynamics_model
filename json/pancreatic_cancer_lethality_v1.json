@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "pancreatic_cancer_lethality_v1",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "panc_lethality"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Biological Lethality of Pancreatic Adenocarcinoma",
+    "topic_domain": "technological/medical/oncology",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [],
+    "victims": [],
+    "requires_active_enforcement": false,
+    "has_sunset_clause": false,
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Afflicted Patient",
+      "comment": "PERSPECTIVE 1: THE AFFLICTED PATIENT (MOUNTAIN) \u2014 No exit option exists. Pancreatic cancer's biological lethality is a constraint imposed by cellular and systemic biology that transcends institutional or political solutions. The patient confronts an immutable natural limit: the cancer's aggressive phenotype, late detection biology, and limited organ tolerance. From this perspective, the constraint is purely natural law \u2014 no degree of freedom, no negotiation, no escape route except palliative care or experimental intervention with minimal survival impact."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Oncologist",
+      "comment": "PERSPECTIVE 2: THE ONCOLOGIST (MOUNTAIN) \u2014 From the position of clinical practice, pancreatic cancer lethality appears as a structural natural law that resists technological intervention. Current surgical, chemotherapeutic, and radiation approaches marginally extend survival (months, not years). The constraint is not one of knowledge gaps or policy failures \u2014 it is a deep biological property: early dissemination, intrinsic chemotherapy resistance, anatomical constraints on resection, and the organ's critical endocrine function. Even as an organized, educated, therapeutically capable agent, the oncologist encounters the constraint as irreducible."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law)",
+      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational, universal scope, pancreatic cancer lethality is an invariant constraint on human biology. The high lethality emerges from irreducible constraints: (1) Anatomical: the pancreas is deeply embedded in the retroperitoneum, limiting resection margins and allowing early lymphatic/vascular invasion. (2) Cellular: pancreatic adenocarcinoma exhibits intrinsic resistance to chemotherapy and radiation through desmoplastic stroma, poor drug penetration, and multi-drug transporter activity. (3) Temporal: most pancreatic cancers are detected at stage III-IV, when curative intervention is impossible. These constraints are not policy failures, institutional failures, or coordination problems \u2014 they are structural features of pancreatic anatomy and cancer biology that persist across all current technological approaches."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Research Community",
+      "comment": "PERSPECTIVE 4: THE RESEARCH COMMUNITY (MOUNTAIN) \u2014 Despite decades of research investment, molecular profiling, immunotherapy trials, and combination regimens, the survival plateau persists. This is not evidence of insufficient effort or coordination failure \u2014 it is evidence of a deep constraint. The research community observes that pancreatic cancer lethality is not contingent on policy, funding allocation, or institutional arrangements. The constraint is structural: the biology of this cancer type, the constraints of human anatomy, and the limitations of current-generation therapeutic modalities. The mountain persists across all observables and measurement frameworks."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "early_detection_possibility",
+      "question": "Could earlier detection through biomarker screening convert the constraint from mountain to rope by enabling curative resection before dissemination?",
+      "resolution_mechanism": "Longitudinal prospective screening studies correlating early biomarker detection with R0 resection rates and 5-year survival outcomes in screened vs unscreened populations",
+      "impact": "If early detection sufficient: survival plateau is detection-timing constraint (potentially rope/scaffold, not mountain). If early detection insufficient: confirms mountain status \u2014 even detected-early cancers have similar poor survival, indicating intrinsic biological constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether earlier detection converts lethality from mountain to contingent constraint"
+    },
+    {
+      "id": "chemotherapy_resistance_mechanism",
+      "question": "Is pancreatic adenocarcinoma's chemotherapy resistance an intrinsic cellular property (mountain) or a tumor microenvironment problem (potentially reversible via architecture modification)?",
+      "resolution_mechanism": "Comparative genomics and in vitro chemosensitivity across organ sites; desmoplastic stroma ablation studies in mouse models with chemotherapy response monitoring; single-cell transcriptomics identifying resistance mechanisms as cell-intrinsic vs stromal-derived",
+      "impact": "If intrinsic: confirms mountain \u2014 biological property of the cancer cells themselves. If stromal/architectural: suggests rope/tangled rope \u2014 technological solution exists but requires coordination or sustained intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether chemotherapy resistance is intrinsic or microenvironment-mediated"
+    },
+    {
+      "id": "anatomical_constraint_fundamentality",
+      "question": "Is the pancreas's retroperitoneal location and proximity to vital structures a fundamental anatomical constraint or a limitation of current surgical technique?",
+      "resolution_mechanism": "Comparative anatomy of pancreatectomy margins across species; analysis of R0 resection rates in specialized high-volume centers vs general surgery settings; outcome correlation with degree of gross residual disease left behind",
+      "impact": "If fundamental: confirms mountain \u2014 anatomy imposes limits regardless of surgeon skill. If technical: suggests rope \u2014 training, volume, and technique can extend curative resection rates.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether retroperitoneal location imposes fundamental resection limits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Pancreatic adenocarcinoma's biological lethality represents a natural law constraint in the Deferential Realism framework. The 5-year survival rate below 10% is not the product of institutional failure, coordination breakdown, or policy misallocation \u2014 it is an emergent property of irreducible biological, anatomical, and temporal constraints. The pancreas's retroperitoneal location limits surgical resection margins; the cancer's intrinsic chemotherapy resistance defeats pharmaceutical intervention; the disease's aggressive dissemination and late-stage presentation at diagnosis eliminate curative options. This constraint is invariant across all technological approaches and persists despite decades of research investment, clinical trial infrastructure, and molecular profiling advances. The lethality manifests identically whether evaluated through early detection metrics, therapeutic response rates, or survival curves \u2014 it is a mountain: unchangeable and fixed.",
+    "key_agents": [
+      "Afflicted Patient: Primary constraint-bearer (powerless/trapped/biographical) \u2014 confronts biological lethality with no exit option",
+      "Oncologist: Clinical translator (moderate/analytical/generational) \u2014 observes constraints as irreducible biological realities, not policy failures",
+      "Research Community: Institutional investigator (organized/analytical/civilizational) \u2014 documents plateau in survival despite optimized therapeutics",
+      "Analytical Observer: Theoretical perspective (institutional/analytical/civilizational) \u2014 identifies constraint as structural property of pancreatic anatomy and cancer biology"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The constraint is not extractive \u2014 no agent captures value or benefit from pancreatic cancer lethality. The low value reflects that this is a pure natural limit, not a mechanism that transfers resources from one party to another. Suppression (0.02): Negligible. There is no suppression of alternatives \u2014 the biological mechanisms operate transparently. All agents (patients, physicians, researchers) understand the constraint fully; the problem is not information asymmetry or institutional gatekeeping, but the irreducible difficulty of the constraint itself. Theater ratio (0.15): Very low. Clinical management of pancreatic cancer involves genuine therapeutic attempts (surgery, chemotherapy, radiation), not performative ritual. The theater ratio reflects only the margins of uncertainty in prognosis discussions and supportive care framing \u2014 the bulk of clinical activity is substantive engagement with an intractable biological problem. The flatness of the measurement trajectory over 50 years reflects the constraint's invariance \u2014 lethality does not improve substantially, indicating that the constraint is not socially contingent.",
+    "directionality_logic": "This constraint has no directionality in the traditional sense because there are no structural beneficiaries or victims relative to the constraint's operation. The constraint is not extractive \u2014 it does not advantage one agent at the expense of another. All agents (patients, clinicians, researchers, institutions) are uniformly constrained by the same biological reality. The absence of beneficiary/victim structure is itself evidence of mountain classification: a true natural law does not serve interests; it simply delimits what is possible for all who encounter it.",
+    "perspectival_gap": "There is no perspectival gap across the four perspectives \u2014 they all classify as mountain. This uniformity across observables (patient experience, clinical practice, research outcomes, analytical review) is itself evidence of the mountain classification. If the constraint were social or institutional in origin, we would expect different perspectives (e.g., beneficiaries seeing rope, victims seeing snare). The fact that all perspectives converge on the same immutable classification indicates that the constraint is truly structural: a property of biology itself, not of human arrangement.",
+    "mandatrophy_analysis": "MOUNTAIN ONLY: No mandatrophy resolution required. This constraint exhibits zero degrees of freedom across all indices. The five-year survival rate is not negotiable through policy, coordination, or institutional design. The constraint is invariant across all measurement observables: anatomical analysis, molecular profiling, clinical trial outcomes, and epidemiological tracking all reveal the same irreducible lethality. The mountain classification is robust against alternative measurement frameworks or observables. This is a canonical natural law in the medical domain \u2014 comparable to fundamental limits in physics."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "cancer_screening_access",
+      "oncology_resource_allocation",
+      "end_of_life_care_frameworks"
+    ],
+    "dual_formulation_note": "Pancreatic cancer lethality is a natural law constraint (mountain) that affects downstream policy constraints in screening, resource allocation, and care frameworks. These downstream constraints may be rope, tangled_rope, or snare depending on institutional response, but they are all structured around the irreducible upstream natural law."
+  },
+  "directionality_overrides": []
+}

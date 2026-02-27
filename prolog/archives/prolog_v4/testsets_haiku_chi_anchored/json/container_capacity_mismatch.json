@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "container_capacity_mismatch",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ccm"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Volume-Infrastructure Paradox: Container Capacity Mismatch",
+    "topic_domain": "logistics/physical_infrastructure/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "source_producers",
+      "infrastructure_operators"
+    ],
+    "victims": [
+      "downstream_receivers",
+      "market_efficiency",
+      "supply_chain_reliability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Congested Receiver",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM RECEIVER (SNARE) \u2014 Cannot exit the supply chain; bears full cost of congestion, spoilage, and inventory backlog. Trapped in regional market with limited alternative sources. d\u22480.92, f(d)\u22481.39, \u03c3=0.9 \u2192 \u03c7\u22480.65. Pure extraction through forced waiting and quality degradation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Logistics Provider",
+      "comment": "PERSPECTIVE 2: LOGISTICS PROVIDER (TANGLED ROPE) \u2014 Provides coordination function (movement of goods), but also extracts rents through congestion premiums, storage fees, and priority pricing. Constrained by infrastructure assets they cannot quickly scale. d\u22480.58, f(d)\u22480.72, \u03c3=1.0 \u2192 \u03c7\u22480.37. Hybrid coordination-extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Source Producer",
+      "comment": "PERSPECTIVE 3: SOURCE PRODUCER (ROPE) \u2014 Benefits from efficient production and bottleneck creation. Can arbitrage away to alternative markets or hold inventory to manage demand. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary; sees constraint as coordination mechanism (market clearing through scarcity value)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Infrastructure Authority",
+      "comment": "PERSPECTIVE 4: INFRASTRUCTURE AUTHORITY (TANGLED ROPE) \u2014 Operates the capacity bottleneck (ports, highways, rail, data centers). Coordination function: moves goods and data at scale. Extraction function: controls access, sets tolls/rates, resists capacity expansion (CapEx avoidance). d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.18. Moderate effective extraction; beneficiary from status quo capacity shortage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Fiction",
+      "comment": "PERSPECTIVE 5: REGULATORY FICTION (PITON) \u2014 'Just-in-time' supply chain doctrine treats the mismatch as optimized efficiency, not as a chronic structural crisis. Ritual compliance with efficiency metrics (cost-per-unit, inventory turns) masks that the system runs at the edge of collapse. theater_ratio=0.58 reflects performative metrics; actual reliability is degraded. The fiction persists through inertia \u2014 no institutional actor has incentive to acknowledge that the emperor has no clothes."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Resilience Coalition",
+      "comment": "PERSPECTIVE 6: RESILIENCE COALITION (SCAFFOLD) \u2014 Organized response (buffer stock programs, supply chain diversification, distributed production) to build redundancy and reduce bottleneck dependence. d\u22480.45, f(d)\u22480.50, \u03c3=1.2 \u2192 \u03c7\u22480.29. Lower effective extraction because coalition has agency and sees an exit path (decentralization). Has implicit sunset: as distributed systems mature, centralized choke points lose power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL LAW (MOUNTAIN) \u2014 Treats capacity constraints as immutable physical limits: ports have fixed throughput, rail corridors have fixed capacity, data pipes have fixed bandwidth. From this view, the mismatch is an inherent property of large-scale logistics. However, structural data (\u03b5=0.52, suppression=0.68) contradicts mountain classification \u2014 this is a false summit. Capacity is not physically immutable; it is a choice of investment and governance, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capacity_expansion_economics",
+      "question": "Why do infrastructure operators chronically under-invest in capacity expansion despite high rents from scarcity premiums?",
+      "resolution_mechanism": "Financial analysis of infrastructure operator capital budgets, ROI calculations, and political economy of public/private infrastructure investment; comparison with historical expansion rates during different regulatory regimes",
+      "impact": "If CapEx barriers are primarily financial: problem is Rope (coordination of investment). If barriers are political/regulatory: problem is Snare (operators use regulation to maintain extraction rents). If barriers are technical/physical: constraint approaches Mountain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Root cause of chronic capacity under-investment"
+    },
+    {
+      "id": "production_efficiency_source",
+      "question": "Does the source producer's efficiency (ability to produce far beyond container capacity) reflect genuine technological advantage or artificial suppression of alternative distribution channels?",
+      "resolution_mechanism": "Comparative analysis: efficiency metrics when alternative distribution exists vs when bottleneck is sole outlet; investigation of infrastructure operator investment in competing channels; study of producer pricing behavior when capacity is abundant vs constrained",
+      "impact": "If genuine efficiency: mismatch is coordination problem (Rope \u2192 Tangled Rope). If artificial suppression: mismatch is extraction mechanism (Snare/Piton with theatrical efficiency metrics).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether production efficiency is genuine or artificially created by suppressing alternatives"
+    },
+    {
+      "id": "supply_chain_fragility_threshold",
+      "question": "At what point does the bottleneck shift from a managed constraint (Tangled Rope) to a systemic fragility (Snare) with catastrophic breakdown risk?",
+      "resolution_mechanism": "Stress testing: simulation of demand shocks, capacity disruptions, and cascading failures; historical analysis of supply chain collapses; measurement of actual vs theoretical reserve capacity margins",
+      "impact": "If threshold is high and distant: current state is manageable Tangled Rope. If threshold is low and imminent: system is brittle Snare masked by piton theater. Determines whether scaffold sunset is sufficient or catastrophic derisking is required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fragility threshold for supply chain collapse"
+    },
+    {
+      "id": "decentralization_viability",
+      "question": "Can distributed production and supply chains reduce dependence on centralized infrastructure, or are scale/efficiency losses prohibitive?",
+      "resolution_mechanism": "Pilot projects with distributed production (3D printing, regional manufacturing, local storage hubs); cost-benefit analysis comparing centralized bottleneck rents vs distributed redundancy overhead; market adoption rates when alternatives become available",
+      "impact": "If decentralization is viable: scaffold sunset is real and imminent (10-20 years). If costs are prohibitive: coalition is aspirational; constraint persists indefinitely as structural feature.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Technical and economic viability of decentralized alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The volume-infrastructure paradox arises when efficient source production vastly outpaces the physical or logical capacity of distribution channels. This creates a structural tension between the producers' incentive to maximize output and infrastructure operators' incentive to maintain scarcity rents. The constraint exhibits all six DR types from different perspectives: pure extraction (Snare) for trapped receivers, mixed coordination-extraction (Tangled Rope) for logistics providers and infrastructure authorities, net benefit (Rope) for source producers, theatrical compliance (Piton) for regulatory systems, temporary solution (Scaffold) for resilience coalitions, and false naturalization (Mountain) for analysts who treat capacity limits as immutable. The theater ratio reflects that 'just-in-time' doctrine and 'optimization' metrics mask the fundamental brittleness of running at capacity ceiling. Infrastructure operators maintain congestion partly through deliberate under-investment in expansion, partly through regulatory capture that prevents competing infrastructure, and partly through genuine technical constraints. The constraint's extractiveness has risen from 0.28 to 0.52 over twenty years as source production has accelerated and infrastructure investment has stagnated. The theater ratio has similarly risen from 0.35 to 0.58, indicating that the system increasingly relies on performative efficiency metrics rather than actual capacity resilience.",
+    "key_agents": [
+      "Source Producers (Institutional/Arbitrage): Primary beneficiary\u2014gain scarcity rents, can arbitrage to alternative markets or hold inventory, experience the constraint as a market-clearing mechanism",
+      "Infrastructure Operators (Organized/Constrained): Mixed beneficiary-victim\u2014extract congestion rents and priority pricing, but constrained by physical assets and regulatory limits on expansion; maintain chronic under-investment",
+      "Downstream Receivers (Powerless/Trapped): Primary victims\u2014bear full cost of spoilage, inventory backlog, supply uncertainty, and price volatility; cannot exit regional markets",
+      "Logistics Providers (Moderate/Constrained): Secondary beneficiary-victim\u2014provide transportation coordination but also extract through congestion surcharges and storage fees",
+      "Regulatory/Policy Bodies (Institutional/Arbitrage): Maintain piton theater\u2014enforce 'efficient supply chains' via just-in-time doctrine and cost-per-unit metrics, avoiding acknowledgment of fragility",
+      "Resilience Coalition (Organized/Mobile): Build alternative pathways\u2014buffer stock programs, supply diversification, distributed production infrastructure with sunset logic",
+      "Analytical Observer (Analytical/Analytical): Risks naturalizing contingent infrastructure choices as physical laws"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts from receivers through forced waiting, spoilage losses, inventory carrying costs, and price volatility. However, extraction is not maximal (\u22650.66 for snare) because the system maintains a veneer of coordination: goods do eventually move, supply chains do function. The extractiveness has grown from 0.28 to 0.52 over the interval as the production-capacity gap has widened and infrastructure operators have deliberately under-invested. Suppression (0.68): High. Receivers face significant barriers to exit: capacity is controlled by infrastructure monopolies or oligopolies, alternative distribution channels are suppressed through regulatory/financial barriers, and switching costs are prohibitive. Geographic/contractual lock-in is common. Suppression reflects both structural barriers and deliberate maintenance of scarcity. Theater ratio (0.58): Moderate-high. The system justifies itself through 'just-in-time' efficiency doctrine, cost-per-unit optimization, and 'lean supply chain' metrics. These are performative\u2014the system measures what it optimizes for (inventory turns, cost per unit) while ignoring what it does not (resilience, reliability, buffer capacity). As the theater has risen from 0.35 to 0.58, the gap between official metrics and actual fragility has widened.",
+    "perspectival_gap": "This constraint shows maximum perspectival divergence. The source producer sees pure coordination (Rope)\u2014they are solving the efficient-production problem. Infrastructure operators see temporary profit optimization (Tangled Rope with implicit rent extraction). Logistics providers see mixed coordination-extraction (Tangled Rope)\u2014they move goods but also extract through surcharges. Downstream receivers see pure extraction (Snare)\u2014they have no escape and bear all costs. The resilience coalition sees a solvable temporary problem with a sunset (Scaffold)\u2014distributed alternatives can emerge. The regulatory system sees a naturalized efficiency requirement (Piton)\u2014the theater of 'lean' supply chains masks the brittleness. The civilizational analytical observer risks seeing immutable physical limits (Mountain)\u2014'ports have fixed throughput'\u2014but the structural data reveals this as a false summit: capacity is a choice of investment and governance.",
+    "directionality_logic": "Source producers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; arbitrage options give high exit value. Downstream receivers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction; regional lock-in removes exit options. Logistics providers: Mixed + constrained \u2192 d\u22480.58, f(d)\u22480.72. Moderate-high extraction; extraction via surcharges and priority pricing offset by coordination function. Infrastructure operators: Beneficiary (from rents) + constrained \u2192 d\u22480.35, f(d)\u22480.35. Low-moderate effective extraction because they extract rents, but constrained by regulatory/political limits and sunk asset bases prevent rapid exit. Resilience coalition: Organized + mobile \u2192 d\u22480.45, f(d)\u22480.50. Lower effective extraction; coalition has agency (can build alternatives) and mobile exit (distributed systems). Regulatory system: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification comes from theater gate (\u22650.70 theaters), not from high chi. Analytical observer: Analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is false summit\u2014naturalizes contingent governance choices.",
+    "mandatrophy_analysis": "RESOLUTION STRATEGY: This constraint resolves mandatrophy by separating the legitimate coordination function (moving goods at scale) from the extraction mechanism (scarcity rents maintained through deliberate under-investment). The coordination function is real\u2014large-scale supply chains are genuinely difficult to manage. The extraction mechanism is also real\u2014infrastructure operators benefit from the mismatch and have little incentive to expand capacity. The mandatrophy is resolved by recognizing that this is a Tangled Rope, not a pure Rope or pure Snare. (1) Coordination function: The constraint solves the problem of moving commodity volumes. (2) Asymmetric extraction: Infrastructure operators and source producers extract rents from receivers through congestion. (3) Active enforcement: The extraction requires deliberate under-investment decisions and regulatory capture to suppress competing infrastructure. The theater ratio (0.58) reflects performative 'efficiency' metrics that hide the extraction. The scaffold perspective (resilience coalition with sunset) is the key structural feature: if distributed alternatives mature, the central bottleneck loses extractive power. The piton perspective (regulatory theater) is real but not permanent\u2014policy can change. The false mountain is important: the constraint is NOT an immutable physical law, though it is often framed that way. The analytical observer who naturalizes the bottleneck misses the political economy."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "supply_chain_concentration",
+      "geographic_rent_extraction",
+      "just_in_time_fragility"
+    ],
+    "dual_formulation_note": "The volume-infrastructure paradox decomposes into three structurally distinct constraints: (1) supply_chain_concentration (\u03b5\u22480.35, Rope/Tangled Rope) \u2014 the efficiency logic of centralized hubs; (2) geographic_rent_extraction (\u03b5\u22480.55, Tangled Rope/Snare) \u2014 the political economy of infrastructure monopoly; (3) just_in_time_fragility (\u03b5\u22480.62, Snare) \u2014 the systemic risk from eliminating buffer capacity. This story aggregates the perspectives across all three. Upstream: supply_chain_concentration drives the efficiency gain that creates the volume mismatch. Downstream: geographic_rent_extraction and just_in_time_fragility inherit the bottleneck structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

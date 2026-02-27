@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "reputational_cascade_failure",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "repcf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Social Liquidity Trap",
+    "topic_domain": "social/economic/informational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "initial_claim_spreaders",
+      "attention_capture_mechanisms"
+    ],
+    "victims": [
+      "reputation_target",
+      "epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Reputation Target",
+      "comment": "PERSPECTIVE 1: REPUTATION TARGET (SNARE) \u2014 Once unverified negative information enters circulation, the target faces maximum extraction with no exit. Social disinvestment is self-reinforcing: each defector increases the incentive for others to defect (coordination failure). The target cannot credibly communicate refutation without amplifying the claim further (publicity trap). d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22480.98."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 2: EPISTEMIC COMMONS (SNARE) \u2014 Reputation systems depend on reliable signal transfer. Cascade failures corrupt the epistemic substrate: true information and false information become indistinguishable. The commons has no agent to defend it and no way to exit the contamination. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Network Participant",
+      "comment": "PERSPECTIVE 3: NETWORK PARTICIPANT (TANGLED ROPE) \u2014 Individual agents face mixed incentives. Coordination benefit: social networks solve collective action (trust, reputation aggregation). Extraction cost: rational defection when negative signal appears (cutoff cost is low). Suppression of counterargument is high \u2014 contrarians face social cost, alternative framings are filtered. d\u22480.65, f(d)\u22481.02, \u03c3=1.2 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Social platforms coordinate information flow and reputation aggregation. They experience the constraint as a coordination solution: viral negativity is high-engagement content. The platform benefits from the cascade mechanism (amplification, metric capture). Suppression is built into algorithmic feed (negative content outranks corrections). d\u22480.10, f(d)\u22480.08, \u03c3=1.2 \u2192 \u03c7\u22480.04. Net beneficiary \u2014 effective extraction negative."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Institutional Reputation Framework",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL REPUTATION FRAMEWORK (SCAFFOLD) \u2014 Institutional solutions (verification requirements, editorial oversight, credential systems, legal recourse) are building alternative reputation pathways that bypass viral cascade. These frameworks have high activation cost but low extraction. Theater ratio is declining as blockchain-based reputation, decentralized review, and cryptographic credential verification mature. d\u22480.45, f(d)\u22480.48, \u03c3=1.2 \u2192 \u03c7\u22480.35. Sunset clause: as institutional alternatives mature (estimated 10-15 years), the viral cascade loses force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legacy Reputation Institution",
+      "comment": "PERSPECTIVE 6: LEGACY REPUTATION INSTITUTION (PITON) \u2014 Traditional reputation systems (credentials, memberships, endorsements, vetting boards) persist through institutional inertia despite low functional verification capacity. Theater ratio=0.64 reflects that credentialing is substantially performative in the face of information velocity \u2014 credentials lag reality, verification is costly and stale. The institution maintains the ritual (gating, accreditation) without enforcement power in attention economy. \u03c7 is low because arbitrage path (leaving system and using viral signals instead) is increasingly viable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, reputational asymmetry is inherent to social information: true information requires effort to verify, false information spreads freely. This perspective risks seeing the cascade as an immutable law of information ecology. However, the structural data (\u03b5=0.58, suppression=0.68, theater=0.64) contradicts deep mountain classification. The engine's false summit detector will flag that the 'inherent asymmetry' framing naturalizes contingent platform design (algorithmic amplification, engagement optimization) that could be otherwise."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verifiability_lag_threshold",
+      "question": "What threshold for claim complexity and verification cost distinguishes legitimate reputation signal lag from extractive cascade amplification?",
+      "resolution_mechanism": "Empirical comparison of verification timelines for true vs false claims across domains; correlation between claim complexity and replication success rates",
+      "impact": "If threshold is low (simple claims): cascade indicates strong network signaling efficiency (Rope). If threshold is high (complex claims): cascade indicates extraction mechanism (Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Verification lag threshold for reputation claims"
+    },
+    {
+      "id": "algorithmic_amplification_necessity",
+      "question": "Does the cascade occur primarily due to human cognitive biases (confirmation bias, availability heuristic) or does algorithmic amplification (engagement optimization, filter bubbles) drive the self-reinforcement?",
+      "resolution_mechanism": "A/B testing platforms with vs without algorithmic amplification; comparison of cascade dynamics on algorithm-free vs algorithm-optimized networks",
+      "impact": "If human bias dominant: cascade is structural property of any reputation system (Mountain or inevitable Snare). If algorithmic dominant: cascade is design choice (Tangled Rope); sunsets possible via algorithm redesign (Scaffold path viable).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Role of algorithmic amplification vs cognitive bias in cascade dynamics"
+    },
+    {
+      "id": "counterargument_suppression_mechanism",
+      "question": "Is suppression of counterargument primarily due to network topology (retweets>quotes, loss of nuance), platform design (shadowbanning, demotion of corrections), or social psychology (costly disagreement)?",
+      "resolution_mechanism": "Content analysis of correction ratios; measurement of visibility loss for counterarguments; experimental manipulation of platform affordances for dispute framing",
+      "impact": "If topology: institutional/scaffold solutions (federated networks, quote-first design) reduce suppression (Rope path). If platform: regulatory intervention or algorithm change reduces extraction (Snare\u2192Tangled Rope). If psychology: suppression is quasi-irreducible (Mountain-like component).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism driving suppression of counterarguments"
+    },
+    {
+      "id": "exit_velocity_from_cascade",
+      "question": "Can a reputation target credibly exit a cascade via public response, institutional verification, or network isolation without amplifying the original claim?",
+      "resolution_mechanism": "Historical case analysis of successful reputation recovery; measurement of information decay vs persistence across platforms and time horizons",
+      "impact": "If exit is possible: target is not fully trapped (exit_options\u2192constrained rather than trapped; Tangled Rope instead of Snare). If exit is impossible: target is trapped by publicity paradox (Snare confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Ability of reputation target to credibly exit cascade"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The social liquidity trap is a self-reinforcing reputational cascade triggered by unverified negative information that spreads faster than correction or verification can occur. Once negative signal enters a networked reputation system, individual agents face a rational defection incentive: cutting ties with the target is low-cost social signaling, while defending the target carries reputational risk. This creates a coordination failure where individually rational choices (defect) collectively destroy information integrity. The constraint exhibits tangled-rope structure: it combines coordination function (networks enable reputation aggregation and trust) with extraction mechanism (asymmetric information amplification, suppression of nuance, and publicity traps that prevent credible refutation). The constraint's theater ratio (0.64) reflects that much of the activity in reputation systems is performative signaling rather than substantive verification \u2014 platforms optimize for engagement rather than accuracy, users perform trust rather than verify competence, and institutions maintain credentialing theater despite low verification capacity. The base extractiveness (0.58) reflects moderate but significant asymmetry: the initial claim spreaders capture attention and engagement value while the target and epistemic commons bear concentration costs and reputational contamination.",
+    "key_agents": [
+      "Reputation Target: Primary victim (powerless/trapped) \u2014 cannot exit or refute without amplifying the claim; maximum extraction",
+      "Epistemic Commons: Secondary victim (moderate/trapped) \u2014 reputation signal fidelity declines; abstract collective with no agency or exit",
+      "Network Participants: Secondary actors (moderate/mobile) \u2014 face coordination failure; rational individual defection damages collective reputation infrastructure",
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 designs for engagement; viral cascades drive metrics; benefits from negative content amplification",
+      "Initial Claim Spreaders: Primary beneficiary (institutional/arbitrage) \u2014 capture initial attention and credibility from breaking story; enjoy status boost from 'knowing first'",
+      "Institutional Reputation Framework: Organized agents (organized/constrained) \u2014 building verification, credential, and legal alternative pathways to replace viral reputation (scaffold logic)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing platform design choices and human cognitive limits as inherent laws"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint combines real coordination failure (network reputation mechanisms are genuinely useful) with significant extraction asymmetry (unverified information spreads faster than truth, making refutation self-defeating; platform algorithmic amplification favors viral negativity). The value reflects that extraction is not total but substantial and directional. Over the measurement interval, extractiveness rises from 0.32 to 0.58 as cascade acceleration increases (positive feedback in social disinvestment). Suppression (0.68): High. Counterargument suppression occurs through multiple channels: platform algorithm demotion of replies/quotes relative to retweets, social cost of public disagreement, confirmation bias filtering in feed selection, and the loss of nuance in cascading transmission (complex argument reduces to meme). However, suppression is not total \u2014 some alternative narratives emerge in secondary networks and institutional channels. Theater ratio (0.64): Moderate-high, and rising. Much reputation system activity is performative: public credentialing without verification, status signaling through network affiliation, institutional vetting that cannot track information velocity. As the cascade accelerates, theater increases because users perform protective distancing (public condemnation of target) rather than invest in actual verification. At t=6, the platform ecosystem is substantially theatrical \u2014 the game is played for audience rather than for truth.",
+    "perspectival_gap": "The reputational cascade demonstrates sharp perspectival divergence. The reputation target (Snare) sees total extraction and no exit. The network participant (Tangled Rope) sees mixed incentives but experiences the pressure toward defection as overwhelming. The platform operator (Rope) sees a functioning coordination mechanism \u2014 their metrics are working perfectly. The institutional reputation framework (Scaffold) sees a temporary problem being solved by alternative structures. The epistemic commons (Snare) suffers silent damage with no advocate. The legacy institution (Piton) continues credentialing theater while watching its authority erode. The analytical observer (Mountain attempt) risks endorsing the 'natural law' framing of platform designers and neuroscientists. The constraint's true type is Tangled Rope because it has both coordination function (reputation aggregation solves collective action in trust) and extraction mechanism (asymmetric information, suppression of nuance, publicity trap). The snare perspectives are real \u2014 the target and commons are extractively victimized \u2014 but they coexist with genuine coordination benefits that the rope and scaffold perspectives capture.",
+    "directionality_logic": "Reputation Target: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 cannot exit or refute. Epistemic Commons: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximum extraction \u2014 suffers contamination with no defense. Network Participant: Victim/Mixed + mobile \u2192 d\u22480.65, f(d)\u22481.02. Moderate-high extraction but agent has some exit capacity (can refuse to defect, can seek alternative networks). Platform Operator: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.08. Net beneficiary \u2014 can exit platform reputation system entirely; benefits from cascade dynamics. Initial Claim Spreaders: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.02. Net beneficiary \u2014 capture status from 'breaking' story; can move on to next story. Institutional Reputation Framework: Organized + constrained \u2192 d\u22480.45, f(d)\u22480.48. Low-moderate extraction; organized agents see exit path via alternative infrastructure. Legacy Institution: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u22480.08. Low extraction due to arbitrage (users leaving for platforms); piton classification comes from theater gate.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The reputational cascade resolves the mandatrophy by demonstrating that the constraint is NOT pure extraction (Snare) despite having victimized agents. The coordination function is genuine: networks aggregate reputation and solve the trust problem better than individual verification could. The extraction is also genuine: asymmetric information, algorithmic amplification, and publicity traps transfer value from target and commons to platform and claim spreaders. The constraint is Tangled Rope precisely because both functions operate simultaneously. Eliminating the coordination function would destroy reputation systems entirely \u2014 the solution is not to shut down networks but to reduce the extraction through redesign (algorithm transparency, correction amplification, verification-first ranking). The scaffold perspective confirms that institutional alternatives (blockchain reputation, decentralized review, legal recourse) are maturing as exit paths. The false summit detector flags the 'natural law' perspective: the cascade is not inherent to reputation \u2014 it is contingent on specific platform design choices (engagement optimization, algorithmic amplification, loss of nuance in cascading). The constraint's mandatrophy is resolved by recognizing that the same structural mechanism (high-speed information diffusion in networks) produces coordination benefit and extraction cost simultaneously. Policy levers exist (algorithm design, platform liability, institutional credentialing) that could shift the \u03c7 value without destroying the rope function."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_engagement_optimization",
+      "institutional_credentialing_decay",
+      "truth_decay_asymmetry"
+    ],
+    "dual_formulation_note": "The reputational cascade is downstream of platform design (engagement optimization) and upstream of institutional trust decay. Separate constraint stories model the platform's algorithmic amplification mechanism (\u03b5 higher, pure snare extraction) and the epistemic commons contamination (\u03b5 high, snare victim), while this story captures the hybrid tangled-rope structure of the cascade as a coordination-extraction hybrid."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ]
+}

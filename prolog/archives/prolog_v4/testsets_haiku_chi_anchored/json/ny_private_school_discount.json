@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "ny_private_school_discount",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nyps"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Discount-for-Data Scheme in Private Schools",
+    "topic_domain": "economic/education",
+    "requires_active_enforcement": false,
+    "victims": [
+      "low_income_families",
+      "child_privacy_commons"
+    ],
+    "beneficiaries": [
+      "school_operator",
+      "data_broker_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Low-Income Family",
+      "comment": "PERSPECTIVE 1: LOW-INCOME FAMILY (SNARE) \u2014 Faces genuine tuition barrier; the 42% discount is economically coercive given education access constraints. Cannot easily exit: alternative schools are unaffordable, public options may be inadequate, relocation is costly. Data extraction is the price of market participation. d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Child Privacy Commons",
+      "comment": "PERSPECTIVE 2: CHILD PRIVACY COMMONS (SNARE) \u2014 Collective interest in child data protection is diffuse, unorganized, and has no direct exit mechanism. Bears full cost of data monetization and secondary use (behavioral profiling, discrimination risk). Cannot negotiate, cannot withdraw consent retroactively. d\u22480.88, f(d)\u22481.28, \u03c3=0.9 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The School Operator",
+      "comment": "PERSPECTIVE 3: SCHOOL OPERATOR (ROPE) \u2014 Frames the constraint as efficient market coordination: parents voluntarily exchange data for tuition relief; school solves operational costs through data monetization. From this perspective, the mechanism is consensual coordination. Experiences high regulatory arbitrage (FERPA compliance theater, minimal enforcement in private school context). d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Parent Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: PARENT ADVOCACY COALITION (TANGLED ROPE) \u2014 Organized agents (education advocacy groups, privacy nonprofits, parent unions) see both coordination failure (market for education access) and extraction (data asymmetry). They have partial exit options (regulatory campaigns, public attention) and some enforcement capacity (media, litigation). d\u22480.52, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Data Broker Ecosystem",
+      "comment": "PERSPECTIVE 5: DATA BROKER ECOSYSTEM (SNARE) \u2014 Views this as a structural feature of behavioral capitalism: consumer data is the commodity, education is the carrot. The ecosystem has no incentive to create exit options because constraint perpetuation is profitable. Theater ratio is low (0.35) because the extraction mechanism is functionally real, not ceremonial. d\u22480.15, f(d)\u22480.02, \u03c3=1.2 \u2192 \u03c7\u22480.01. Data brokers are beneficiaries with near-zero perceived extraction cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Regulatory Pretense",
+      "comment": "PERSPECTIVE 6: REGULATORY PRETENSE (PITON) \u2014 Education authorities and state regulators maintain the fiction of oversight while private schools operate under minimal surveillance. Parental consent forms are performative (buried in enrollment documents, written in impenetrable legalese). Theater ratio = 0.35 fails piton gate (requires \u22650.70), so this classification is borderline; the constraint is functionally extractive, not ceremonial. However, the regulatory theater (opt-out language, consent language, data minimization claims) persists through institutional inertia despite being widely flouted."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_voluntariness_threshold",
+      "question": "At what discount level does 'voluntary' consent become coercive given education access constraints?",
+      "resolution_mechanism": "Empirical analysis of family income elasticity; comparison of discount levels across socioeconomic strata; survey data on perceived voluntariness",
+      "impact": "If threshold < 42%: this scheme crosses into coercion. If threshold > 60%: discount framing succeeds in obscuring extraction. Policy intervention depends entirely on this boundary.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Discount threshold at which consent becomes coercive"
+    },
+    {
+      "id": "data_monetization_secondary_use",
+      "question": "How extensively is child behavioral data re-sold and used for downstream targeting, discrimination, or manipulation?",
+      "resolution_mechanism": "Data broker subpoena; tracking of data flows through broker networks; analysis of downstream use cases (targeted advertising, credit scoring proxies, employment filtering)",
+      "impact": "If secondary use is limited: extraction cost is lower than modeled. If secondary use includes discrimination or manipulation: extraction cost is catastrophic, moving toward pure predation.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Extent of secondary use and downstream targeting"
+    },
+    {
+      "id": "alternative_school_availability",
+      "question": "Are there genuinely affordable alternative schools (public, charter, community-based) in the same geographic region?",
+      "resolution_mechanism": "Regional school census; cost analysis of alternatives; mobility barriers (transportation, catchment areas); quality proxy comparison",
+      "impact": "If alternatives exist and are accessible: families have exit options, moving toward tangled_rope. If alternatives are absent or inaccessible: families are trapped, confirming snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Availability of affordable alternatives"
+    },
+    {
+      "id": "data_governance_regulatory_gap",
+      "question": "Do private schools fall under meaningful data protection regulation (COPPA, FERPA, state privacy law)?",
+      "resolution_mechanism": "Legal analysis of jurisdiction; empirical survey of enforcement by state attorney general; comparison to public school obligations",
+      "impact": "If regulation applies and is enforced: constraint is manageable via law. If gap exists: regulation theater persists while extraction is unmonitored.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Regulatory coverage and enforcement gap"
+    },
+    {
+      "id": "parent_awareness_asymmetry",
+      "question": "Do parents understand the full scope of data collection, broker relationships, and secondary use?",
+      "resolution_mechanism": "Survey of enrolled families; analysis of consent documents; comparison of parent stated understanding vs actual data practices",
+      "impact": "If awareness gap is large: extraction operates under asymmetric information (snare is worsened). If parents are informed: at least some coercion is mitigated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Parent understanding of data practices"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "A new private school startup in New York offers a 42% tuition discount in exchange for extensive parental data provision, including children's behavioral profiles, academic performance, health information, family demographics, and device usage patterns. The scheme targets low-income families priced out of private education, framing data exchange as a 'market solution' to education access. The constraint exhibits high extractiveness (0.58) because the discount is structurally coercive \u2014 it exploits education insecurity to capture data that is then monetized through broker networks for behavioral profiling and secondary targeting. Suppression is high (0.68) because families face genuine barriers to exit: public school alternatives may be inadequate, relocation is costly, and the legal architecture governing private schools creates a regulatory gap. Theater ratio is low (0.35) \u2014 the extraction is functionally real, not ceremonial \u2014 because the school makes no pretense of data minimization or protection; data monetization is the actual business model.",
+    "key_agents": [
+      "Low-Income Families: Primary victims (powerless/trapped) \u2014 face genuine tuition barriers; the discount is economically coercive given education access constraints",
+      "Child Privacy Commons: Diffuse victim (powerless/trapped) \u2014 unorganized collective interest in child data protection; cannot negotiate or withdraw retroactively",
+      "School Operator: Primary beneficiary (institutional/arbitrage) \u2014 solves operational costs through data monetization; experiences regulatory arbitrage",
+      "Data Broker Ecosystem: Secondary beneficiary (institutional/arbitrage) \u2014 purchases and re-monetizes child behavioral data for downstream targeting",
+      "Parent Advocacy Coalition: Organized responder (organized/constrained) \u2014 sees mixed coordination failure and extraction; has partial exit options",
+      "State Regulators: Institutional theater (institutional/arbitrage) \u2014 maintain fiction of oversight while private schools operate under minimal surveillance"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The 42% discount is economically coercive. For a family with annual income ~$45K, this discount (~$4K-$8K depending on baseline tuition) represents meaningful economic pressure. The constraint extracts because (a) families are forced to choose between data privacy and education access, and (b) the data extracted is monetized without ongoing family benefit. Over the 4-year interval, extractiveness increases from 0.35 to 0.58 as the school scales and data broker relationships deepen, confirming that extraction accumulates as the mechanism matures. Suppression (0.68): Families have limited exit options. Public school alternatives may be inadequate (overcrowded, low-performing). Relocation is costly. Behavioral shift to homeschooling is not feasible for working parents. Alternative private schools are unaffordable. The legal architecture (FERPA exempts private schools from mandatory transparency; state data protection laws often exclude educational records) creates a regulatory gap that suppresses exit via law. Theater ratio (0.35): The extraction is functionally real, not ceremonial. The school genuinely collects data and sells it to brokers; the process is not performative or decorative. Theater declines over time (0.55 \u2192 0.35) as the school's operations mature and the legitimizing language (consent forms, privacy notices) is simplified or removed.",
+    "perspectival_gap": "The low-income family sees a snare: a coercive choice disguised as a voluntary transaction. The child privacy commons sees a snare: extraction from a powerless, unorganized collective. The school operator sees a rope: efficient market coordination between education supply and family demand. The data broker ecosystem is nearly invisible to families but sees itself as a beneficiary in a rope (information standard coordination). The parent advocacy coalition sees a tangled rope: real coordination failure (education access) layered with real extraction (data asymmetry). The regulatory theater perspective sees a piton (oversight maintained through forms and language despite actual non-enforcement). The perspectival gap is driven by exit options: families cannot exit; the school and brokers can exit if regulation threatens. The organized coalition has partial exit options (public pressure, legislative campaigns) that mediate their perception.",
+    "directionality_logic": "Low-income families: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximal extraction perception because they cannot walk away. Child privacy commons: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.28. High extraction because the collective is diffuse and has no exit option. School operator: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; can exit if regulation threatens. Data brokers: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.02. Near-zero perceived extraction; structural position is pure benefit. Parent advocacy coalition: Mixed + constrained \u2192 d\u22480.52, f(d)\u22480.68. Moderate extraction because the coalition has some agency (media, litigation, regulatory pressure) but not full exit options. The directionality gradient from 0.92 (trapped family) to 0.08 (institutional beneficiary) creates the perspectival gap: the same constraint is experienced as severe extraction from below and as efficient coordination from above.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids mislabeling coordination as extraction by declaring both beneficiaries AND victims. If beneficiaries were omitted, the entire mechanism would appear as pure predation (snare across all perspectives). If victims were omitted, the entire mechanism would appear as consensual (rope from all perspectives). The actual structure is: the school creates a real coordination function (solving education access) and uses it as cover for real extraction (data monetization). The snare classification holds because (a) the primary mechanism is extraction (data sale), not coordination (education access is just the carrot), and (b) the beneficiary (school/brokers) has full control over exit options while the victim (family) does not. From the organized coalition perspective, it appears as tangled rope because the coalition has some agency and can negotiate policy responses. From the regulatory perspective, it appears as piton because the oversight theater persists despite non-enforcement. The mandatrophy is resolved by recognizing that this is a snare with coordination theater \u2014 not a rope with extractive side effects."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "education_access_inequality",
+      "behavioral_data_brokers",
+      "coppa_regulatory_gap"
+    ],
+    "dual_formulation_note": "This constraint is upstream of broader behavioral capitalism mechanisms (data broker ecosystem, algorithmic discrimination) and downstream of education access inequality. The discount-for-data scheme operationalizes the intersection of these two problems: education market failure + data extraction infrastructure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

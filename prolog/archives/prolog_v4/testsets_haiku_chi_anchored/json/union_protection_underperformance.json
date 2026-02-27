@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "union_protection_underperformance",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ujp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "\"Just Cause\" Protection for Underperforming Union Employees",
+    "topic_domain": "economic/labor_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "unionized_workers",
+      "union_leadership",
+      "worker_advocacy_organizations"
+    ],
+    "victims": [
+      "employer_productivity",
+      "high_performing_peers",
+      "consumer_service_quality",
+      "firm_competitive_position"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Union Coalition",
+      "comment": "PERSPECTIVE 1: UNION LEADERSHIP & COALITION (ROPE) \u2014 Organized beneficiary with mobile exit options (can negotiate different terms, shift to different industries). Experiences just-cause as pure coordination mechanism: solves collective action problem of protecting median worker from arbitrary dismissal. Union successfully advocates for worker interests through collective bargaining. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Negative effective extraction; net beneficiary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Underperforming Employee (Trapped View)",
+      "comment": "PERSPECTIVE 2: UNDERPERFORMING EMPLOYEE TRAPPED VIEW (SNARE) \u2014 When an employee faces repeated performance issues but cannot be terminated, the constraint appears as pure extraction to coworkers who must compensate. From the trapped peer's view (same union, same workplace, high performer bearing extra load), just-cause protection extracts from them. d\u22480.88, f(d)\u22481.28, \u03c3=0.8 \u2192 \u03c7\u22480.54. High extraction from the productive median."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Underperforming Employee (Mixed View)",
+      "comment": "PERSPECTIVE 3: UNDERPERFORMING EMPLOYEE MIXED VIEW (TANGLED ROPE) \u2014 The same employee protected by just-cause sees coordination AND extraction. Coordination: protection against arbitrary dismissal is genuinely valuable (solves fear problem). Extraction: protection also means minimal career consequence for chronic underperformance, creating perverse incentive. d\u22480.60, f(d)\u22480.80, \u03c3=0.9 \u2192 \u03c7\u22480.37. Mixed experience reflects dual function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Employer",
+      "comment": "PERSPECTIVE 4: EMPLOYER (SNARE) \u2014 Powerful actor with arbitrage exit options (can restructure, relocate, contract out, automate). Experiences just-cause as pure extraction: unable to remove unproductive workers at will, forced to incur remediation, documentation, grievance costs. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72. High effective extraction. The employer bears direct productivity costs and cannot exit without substantial reorganization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Industry Sector",
+      "comment": "PERSPECTIVE 5: INDUSTRY SECTOR INSTITUTIONAL VIEW (TANGLED ROPE) \u2014 Unionized sector (auto, steel, public service) benefits from labor stability (reduces costly turnover, maintains institutional knowledge) but bears collective extraction through reduced flexibility to optimize workforce composition. d\u22480.62, f(d)\u22480.85, \u03c3=1.0 \u2192 \u03c7\u22480.44. Mixed coordination (stability) and extraction (inflexibility)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Relations Theatre",
+      "comment": "PERSPECTIVE 6: LABOR RELATIONS INSTITUTIONAL THEATER (PITON) \u2014 The formal just-cause process is substantially performative: employers document performance issues, schedule remediation meetings, file grievances, wait for arbitration \u2014 all rituals that often fail to change outcomes. Many protected workers remain underperforming after arbitration. theater_ratio=0.65 reflects that grievance procedures consume substantial labor-relations resources with limited productivity improvement. Constraint persists through institutional inertia and legal structure, not functional necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global, long-term view, just-cause protection solves a genuine coordination problem (arbitrary dismissal creates worker precarity and efficiency loss) but introduces new extraction (protected underperformance reduces firm competitiveness and harms productive workers). The constraint is structurally hybrid: both protective and extractive. d\u22480.52, f(d)\u22480.75, \u03c3=1.2 \u2192 \u03c7\u22480.47. Solidly tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "performance_measurement_validity",
+      "question": "Are employer performance metrics valid and reliably executed, or are they systematically biased, politicized, or used as cover for discrimination?",
+      "resolution_mechanism": "Comparative analysis of performance evaluation reliability across unionized vs non-unionized workforces; audit of evaluation calibration and consistency within firms; correlation between performance ratings and actual productivity measures",
+      "impact": "If metrics valid: just-cause protection efficiently targets truly arbitrary dismissals (rope). If metrics unreliable: just-cause is necessary protection against discrimination or arbitrary targeting (snare for workers). Classification shifts from tangled_rope toward rope from worker perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Validity of employer performance measurement systems"
+    },
+    {
+      "id": "remediation_effectiveness",
+      "question": "Do formal remediation and performance improvement plans (PIPs) actually improve performance, or do they function as pre-termination theater masking predetermined outcomes?",
+      "resolution_mechanism": "Longitudinal tracking of employees on PIPs: percentage actually improved vs terminated vs left voluntarily; comparison of performance gains (if any) across unionized vs non-unionized workforces with similar performance improvement protocols",
+      "impact": "If remediation effective: just-cause serves coordination function (pipe \u2192 rope). If theater: just-cause protects bad employees without changing behavior (pure extraction for peers, snare for employers). Determines whether constraint is functional hybrid or performative extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether performance improvement plans achieve actual remediation"
+    },
+    {
+      "id": "peer_burden_distribution",
+      "question": "How much additional work burden do high-performing union peers absorb due to underperforming protected coworkers? Is this burden proportional, concentrated, or systemically unequal?",
+      "resolution_mechanism": "Time-use and workload analysis within unionized teams; surveys of peer burden perception; correlation between peer workload and team underperformance rate; comparison of burn-out rates for high performers in union vs non-union settings with similar underperformance rates",
+      "impact": "If burden minimal/distributed: extraction from peers is low, classification shifts toward rope. If burden concentrated: some peers effectively subsidize underperformers (high snare signal). Determines whether just-cause is symmetric coordination or asymmetric extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Work burden absorbed by high performers due to protected underperformance"
+    },
+    {
+      "id": "arbitration_bias_direction",
+      "question": "Do union arbitrators systematically favor worker retention (union bias) or do they split the difference, resulting in retention but with meaningful remediation (functional outcome)?",
+      "resolution_mechanism": "Analysis of arbitration outcomes: percentage of cases resulting in reinstatement, demotion, or reduced hours; comparison of arbitrator decision patterns over time; surveys of employer and union satisfaction with arbitration outcomes",
+      "impact": "If arbitrators consistently reinstate without consequence: extraction mechanism is unbiased but labor-intensive (piton theater). If arbitrators impose meaningful terms: constraint is more functional than it appears (rope with enforcement). Affects classification from employer perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Direction and magnitude of arbitrator bias in just-cause disputes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "Just-cause protection in union contracts creates a structural tension between two legitimate objectives: protecting workers from arbitrary dismissal and maintaining firm productivity and fair distribution of work. The constraint manifests differently depending on the observer's structural position within the labor system. Union leadership and worker advocates see a pure coordination mechanism solving a collective action problem. Employers see extraction \u2014 the inability to remove unproductive workers without exhaustive documentation and grievance costs. High-performing union peers see extraction \u2014 they absorb workload to compensate for protected underperformance. The underperforming employee themselves experience a hybrid: protection against dismissal (genuine benefit) plus reduced career consequences (perverse incentive). The labor-relations system sees its own process as substantially performative: performance improvement plans, grievance procedures, and arbitration consume significant labor-relations resources with limited success at actually improving performance. The constraint's extractiveness has increased over 40 years (0.32 \u2192 0.52) as performance measurement has become more sophisticated, creating more opportunities for just-cause disputes and more elaborate remediation theater. Theater ratio has likewise increased (0.48 \u2192 0.65) as formal grievance procedures have grown more complex relative to actual productivity outcomes.",
+    "key_agents": [
+      "Union Leadership & Worker Advocacy: Primary beneficiary (organized/mobile) \u2014 negotiates just-cause terms, reduces arbitrary dismissal, maintains membership value",
+      "Unionized Workers (Average): Mixed beneficiary/victim (moderate/constrained) \u2014 protected from arbitrary dismissal but also constrained by peer compensation for underperformance",
+      "High-Performing Union Peers: Secondary victim (moderate/trapped) \u2014 forced to absorb workload from protected underperformers, receive no extra compensation",
+      "Underperforming Protected Employee: Hybrid beneficiary/victim (powerless to moderate/constrained) \u2014 protected from dismissal but also insulated from performance consequences, creating perverse incentive",
+      "Employers (Firm Management): Primary victim (powerful/arbitrage) \u2014 bears direct productivity loss, documentation burden, grievance costs; can arbitrage but at substantial cost",
+      "Industry Sector (e.g., Auto, Steel): Institutional victim (institutional/constrained) \u2014 collective workforce inflexibility reduces competitive positioning, though labor stability provides offsetting benefit",
+      "Labor Relations System: Institutional theater (institutional/constrained) \u2014 maintains performative grievance procedures that consume resources but rarely achieve productivity improvement"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Just-cause protection extracts from employers and high-performing peers. Employers face real costs: documentation burden, grievance procedures, potential arbitration, inability to quickly replace unproductive workers. High performers absorb workload. However, the extraction is not as severe as pure dismissal prohibition would be (which would approach 0.75+) because employers can still terminate through arbitration if documentation is sufficient \u2014 the process is costly and uncertain, but not impossible. The recent increase from 0.32 to 0.52 reflects growing sophistication of grievance procedures and arbitration, making the extraction mechanism more visible and more costly in labor-relations resources. Suppression (0.68): High. Workers have significant barriers to opting out: collective bargaining agreement applies to entire bargaining unit, individual workers cannot negotiate away just-cause terms, switching to non-union employment typically requires changing employers or sectors. For employers, suppression is also high: they cannot easily terminate workers unilaterally, cannot contract around collective bargaining terms without union agreement, cannot reduce grievance rights without negotiation. Theater ratio (0.65): Moderate-high. The formal just-cause process includes performance evaluation, documentation, remediation meetings, performance improvement plans, formal grievance filing, union representation, potential arbitration \u2014 all rituals that are often decoupled from actual performance improvement. Many employees go through the full process and remain underperforming. The 0.65 value reflects that the theater has grown as procedures have become more formal while actual productivity gains from the procedures remain modest.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence despite a single structural mechanism. Union leadership and worker advocates classify it as Rope: pure coordination solving collective action problem. Employers classify it as Snare: pure extraction with no offsetting coordination benefit. High-performing peers classify it as Snare: they bear all extraction, no coordination benefit. The underperforming employee experiences Tangled Rope: coordination (protection from arbitrary dismissal) bundled with extraction (reduced career consequences). The analytical observer sees Tangled Rope: both coordination function (necessary to prevent arbitrary dismissal) and extraction function (protects underperformance) are real and inseparable. The labor relations system sees Piton: the formal process is substantially performative, maintained through institutional inertia and legal structure rather than functional productivity. The perspectival gap reflects fundamentally different structural positions: beneficiaries see coordination; victims see extraction; observers see both.",
+    "directionality_logic": "Union leadership: Beneficiary + organized/mobile \u2192 d\u22480.10, f(d)\u2248-0.05. Net beneficiary. Successfully advocates for worker interests. Underperforming protected worker: Victim + constrained (from job loss) but beneficiary (from dismissal protection) = mixed d\u22480.55, f(d)\u22480.75. Mixed extraction/benefit. High-performing peer: Victim (forced to compensate) + trapped (cannot exit union without changing job) \u2192 d\u22480.88, f(d)\u22481.28. High extraction from this agent. Employer: Victim (productivity loss, grievance costs) + arbitrage (can restructure/automate but at high cost) \u2192 d\u22480.85, f(d)\u22481.15. High extraction. Industry sector: Victim/beneficiary mix (benefits from labor stability, harmed by inflexibility) \u2192 d\u22480.60, f(d)\u22480.80. Mixed experience. Labor relations system: Institutional theater maintaining process \u2192 d\u22480.50, f(d)\u22480.65. The constraint benefits unions (who created it) and harms efficiency, neutral institutional position.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that classification depends entirely on structural position. Union advocates experience genuine coordination: solving collective dismissal problem, establishing fairness norms, enabling worker dignity. This is legitimate Rope functionality. Simultaneously, employers and high performers experience genuine extraction: real productivity loss, real work burden. This is legitimate Snare reality. The constraint is NOT misclassified as tangled rope due to confusion between coordination and extraction at the same level \u2014 both are real structural features at different levels of the system. The extraction from employers enables coordination for workers. The constraint is tangled because it solves a coordination problem (worker security) through a mechanism that extracts from other agents (employer flexibility, peer workload). Rejecting mandatrophy would require either denying that just-cause solves a real coordination problem (false \u2014 worker arbitrary dismissal is real), or denying that it extracts real costs (also false \u2014 productivity loss and peer burden are real). The tangled rope classification stands."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "union_wage_compression",
+      "seniority_based_advancement",
+      "employer_automation_incentive"
+    ],
+    "dual_formulation_note": "Just-cause protection is downstream of broader union bargaining power and upstream of specific labor market outcomes (wage compression, seniority advancement, automation). The wage compression constraint (\u03b5\u22480.15, Rope) shows the enabling coordination side; this story (\u03b5\u22480.52, Tangled Rope) shows the extraction side of the same institutional structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.88
+    }
+  ]
+}

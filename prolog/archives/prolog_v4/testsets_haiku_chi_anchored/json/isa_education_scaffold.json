@@ -1,0 +1,194 @@
+{
+  "header": {
+    "constraint_id": "isa_education_scaffold",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "isa"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.52,
+    "claimed_type": "scaffold",
+    "human_readable": "Income Share Agreement (ISA) Funding for Education",
+    "topic_domain": "economic/educational",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "isa_education_providers",
+      "high_income_graduates"
+    ],
+    "victims": [
+      "low_income_graduates",
+      "career_changers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Income Graduate",
+      "comment": "PERSPECTIVE 1: LOW-INCOME GRADUATE (SNARE) \u2014 Trapped by income-contingent obligation with no escape: even career disruption, illness, or involuntary unemployment does not suspend the ISA claim. Cannot refinance or exit. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Career Graduate",
+      "comment": "PERSPECTIVE 2: MID-CAREER GRADUATE (TANGLED ROPE) \u2014 Benefits from access to education without upfront cost; constrained by income-share obligation during earning years. Can exit via relocation or underreporting, but with friction and risk. d\u22480.65, f(d)\u22481.00, \u03c3=1.0 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The High-Income Graduate",
+      "comment": "PERSPECTIVE 3: HIGH-INCOME GRADUATE (ROPE) \u2014 ISA functions as coordination mechanism: deferred payment enables access; high income makes repayment manageable. Can exit via full repayment. d\u22480.10, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.02. Effective extraction near zero \u2014 net beneficiary from both access and favorable burden distribution."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Education Access Coalition",
+      "comment": "PERSPECTIVE 4: EDUCATION ACCESS COALITION (SCAFFOLD) \u2014 Organized advocates (community colleges, equity organizations, open-source education platforms) see ISA as a temporary solution enabling access while superior alternatives (free public higher education, skills-based hiring, apprenticeships) mature. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.13. Low extraction because the coalition has agency and a clear exit path."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The ISA Education Provider",
+      "comment": "PERSPECTIVE 5: ISA EDUCATION PROVIDER (ROPE) \u2014 Coordinates capital flows: enables student access in exchange for income-contingent repayment. Sees the mechanism as fair burden-sharing. d\u22480.08, f(d)\u2248-0.06, \u03c3=1.0 \u2192 \u03c7\u2248-0.02. Negative extraction: provider benefits from asset bundling and portfolio effects; institutional arbitrage (lending, securitization, income forecasting) is the coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Student Debt System Legacy",
+      "comment": "PERSPECTIVE 6: STUDENT DEBT SYSTEM LEGACY (PITON) \u2014 ISA is partly rhetorical replacement for traditional student loans: the performative innovation narrative ('income-contingent is humane!') masks that the underlying extraction (prolonged earnings capture) persists. theater_ratio=0.52 reflects that ISA marketing emphasizes access benefits while underspecifying income-contingency severity. Debt system inertia maintains ISA despite emergence of tuition-free alternatives. d\u22480.70, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.44."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (False Summit Risk)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN RISK) \u2014 From a civilizational view, some form of capital-allocation mechanism for education funding appears immutable: education requires investment, and someone must bear initial cost. This perspective risks naturalizing the ISA as an inherent feature of education financing. However, the structural data (\u03b5=0.38, suppression=0.48, theater=0.52) reveals this is contingent institutional design, not natural law. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "income_contingency_exit_threshold",
+      "question": "At what income threshold does ISA function as coordination versus extraction?",
+      "resolution_mechanism": "Longitudinal income tracking of ISA cohorts; modeling of welfare outcomes under ISA vs alternatives by income quintile; comparison of repayment burden across income distributions",
+      "impact": "If threshold \u2264 1.5x poverty line: ISA is extraction for most borrowers (Snare). If threshold \u2265 3x median income: ISA is pure coordination (Rope). Current design shows mixed outcomes suggesting Scaffold/Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Income level at which ISA transitions from extraction to coordination"
+    },
+    {
+      "id": "alternative_education_funding_maturation",
+      "question": "Will free public higher education or skills-based hiring displace ISA, or will ISA become permanent?",
+      "resolution_mechanism": "Policy tracking of tuition-free programs; measurement of employer adoption of competency-based hiring; longitudinal comparison of educational outcomes across funding models",
+      "impact": "If alternatives mature: scaffold thesis confirmed \u2014 ISA has a real sunset. If alternatives stall: scaffold becomes aspirational \u2014 ISA may become Piton (degraded but persistent). If ISA expands despite alternatives: ISA is Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative education funding models will displace ISA"
+    },
+    {
+      "id": "income_share_moral_hazard",
+      "question": "Do ISA terms create perverse incentives for career suppression or earnings underreporting?",
+      "resolution_mechanism": "Comparison of career outcomes (job selection, further education, side income) for ISA vs loan-funded graduates; audit analysis of income reporting compliance; survey data on awareness of income-contingency effects",
+      "impact": "If moral hazard is severe: ISA becomes a Snare (suppresses earnings potential for some cohorts). If minimal: ISA is genuinely Tangled Rope (mixed benefits and costs, but not purely extractive).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ISA creates perverse incentives for earnings underreporting"
+    },
+    {
+      "id": "securitization_and_secondary_extraction",
+      "question": "Does ISA securitization and secondary market trading create extraction layers beyond the student-provider relationship?",
+      "resolution_mechanism": "Analysis of ISA portfolio structures, securitization terms, and third-party investor incentives; measurement of total value transfer from graduates to secondary market actors",
+      "impact": "If secondary extraction is significant: ISA graduates bear costs beyond nominal income share (true \u03c7 higher than apparent). If minimal: ISA is closer to pure coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of secondary market extraction in ISA structures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Income Share Agreements (ISAs) have emerged as an alternative to traditional student loans, allowing students to fund education by committing a fixed percentage of post-graduation income for a set term. The constraint exhibits Scaffold classification: it solves the real coordination problem of upfront education access barriers (beneficiaries = education providers and high-income graduates who can absorb the repayment burden easily), while imposing asymmetric costs on low-income graduates and career-changers who face prolonged earnings capture. The key structural feature marking it as Scaffold rather than pure extraction (Snare) is the built-in sunset clause: ISAs are term-limited (typically 10-25 years), and the policy ecosystem increasingly includes tuition-free alternatives, competency-based hiring, and income-based repayment hardship provisions. However, the theater ratio (0.52, rising from 0.35) indicates growing performative content: ISA marketing emphasizes 'risk-sharing' and 'access' while underspecifying the income-contingency burden for low earners. The extractiveness (0.38, rising from 0.22) reflects that the mechanism is accumulating rent-seeking behavior: securitization, investor incentives to maximize income collection, and administrative barriers to income verification hardship claims are layering extraction onto the underlying coordination function. The constraint is transitional: whether it remains a temporary scaffold or degrades into a Piton depends on whether alternative education funding models mature as projected.",
+    "key_agents": [
+      "Low-income graduates: Primary victim (powerless/trapped) \u2014 face prolonged income-contingent obligation with minimal exit options; bear disproportionate repayment burden",
+      "Mid-career graduates: Secondary victim (moderate/constrained) \u2014 can relocate or underreport income but face friction and risk; experience mixed coordination (access) and extraction (income share)",
+      "High-income graduates: Primary beneficiary (powerful/arbitrage) \u2014 access to education is valuable; repayment burden is manageable; can exit via full repayment",
+      "ISA education providers: Institutional beneficiary (institutional/arbitrage) \u2014 coordinate capital flows; benefit from asset securitization and portfolio effects",
+      "Education access coalition: Organized agents (organized/mobile) \u2014 advocate for free/alternative education models; see ISA as temporary solution with a sunset",
+      "Student debt system legacy: Institutional actor (institutional/constrained) \u2014 perpetuates income-contingent earning capture through inertia; maintains ISA despite alternatives",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent financing design as inherent to education funding"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. ISAs extract earnings through income-contingent repayment, but the extraction is not as severe as traditional predatory lending (\u03b5 > 0.50) because (a) repayment is capped at a fixed percentage, (b) term-limits exist, (c) hardship provisions reduce burden in genuine cases, and (d) some borrowers benefit from lower overall cost vs debt-plus-interest models. The rising trajectory (0.22 \u2192 0.38) reflects that securitization and administrative barriers are increasing effective extraction over time. Suppression (0.48): Moderate. Barriers to exit include: (i) income-contingency creates disincentive to career advancement (earnings suppression via moral hazard), (ii) underreporting income carries legal risk, (iii) relocation may trigger early repayment, (iv) hardship provisions are underutilized due to administrative friction. But suppression is not total \u2014 borrowers can exit via geographic relocation, career switching, or full repayment, unlike trapped debt where default is the only exit. Theater ratio (0.52): Moderate. ISA marketing emphasizes access and risk-sharing benefits while underspecifying income-contingency burden for low earners. Hardship provisions exist but are rhetorically downplayed. The rising trajectory (0.35 \u2192 0.52) indicates that as ISA portfolios mature, rhetoric diverges more from operational reality \u2014 'income-contingent risk-sharing' becomes the performative narrative masking 'prolonged earnings capture.'",
+    "perspectival_gap": "This constraint produces a sharp perspectival gap between high-income and low-income graduates. For high earners, ISA is pure coordination (Rope): it solves the access problem, repayment burden is light, and they can exit via full repayment. For low earners, ISA is extraction (Snare): they face prolonged income-contingency with no meaningful exit, income suppression via moral hazard, and administrative barriers to hardship relief. The mid-range graduate sees Tangled Rope: they benefit from access but constrain their own career decisions to minimize repayment burden. The education access coalition sees a temporary scaffold with a clear sunset as alternatives mature. The ISA provider sees Rope: they coordinate capital flows and benefit from asset securitization. The student debt system legacy sees Piton: ISA perpetuates income-contingency capture through institutional inertia, despite the availability of tuition-free alternatives that would make ISAs obsolete. The analytical observer at civilizational scale risks seeing a Mountain \u2014 education funding always requires capital allocation \u2014 but the structural data reveals this as a false summit: the specific design choice to impose income-contingency on individuals rather than funding education through public investment is contingent, not inevitable.",
+    "directionality_logic": "Low-income graduate: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction. No exit options; repayment obligation persists even during income disruption. High-income graduate: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Net beneficiary. Can exit via full repayment; burden is light relative to income. Mid-career graduate: Victim + constrained \u2192 d\u22480.65, f(d)\u22481.00. Significant extraction. Can exit but faces friction (relocation cost, underreporting risk, hardship form complexity). ISA provider: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.06. Negative extraction: provider benefits from portfolio effects and securitization. Education access coalition: Organized + mobile \u2192 d\u22480.35, f(d)\u22480.35. Low extraction; coalition has agency and alternative pathways. Student debt system: Institutional + constrained \u2192 d\u22480.70, f(d)\u22481.15. Piton derivation from theater ratio, not pure directionality \u2014 the system is constrained by institutional inertia despite having alternatives. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. False summit risk: naturalizes contingent design.",
+    "mandatrophy_analysis": "SCAFFOLD RESOLUTION: ISA resolves the mandatrophy by demonstrating that a constraint can be simultaneously a coordination solution (for those who benefit from access) AND extraction (for those bearing prolonged repayment burden) AND temporary (because alternatives are maturing). The mandatrophy question is: 'Is this a Rope (coordination) or a Snare (extraction)?' The answer is both, depending on income trajectory and career path. The Scaffold classification captures this hybrid nature with a temporal trajectory: ISA functions as a legitimate scaffold (temporary access mechanism) only if alternative education funding actually matures within the term. If alternatives stall, ISA degrades into a Piton (theatrical persistence) or Snare (open extraction). The theater ratio (0.52, rising) is the key diagnostic: as performative content increases and operational reality (earnings suppression, hardship barriers) becomes clearer, the constraint's legitimacy as a coordination mechanism declines. The measurement trajectory (extractiveness rising from 0.22 to 0.38) shows accumulating rent-seeking behavior (securitization layers, administrative barriers, investor incentives to maximize collection) that transforms the constraint from pure access coordination into mixed coordination-extraction. The mandatrophy is resolved by recognizing that ISA's classification depends on whether the sunset clause is real: if tuition-free education, income-based repayment, or apprenticeships mature to provide genuine alternative access pathways, ISA remains a Scaffold. If those alternatives stall or are blocked by policy, ISA becomes a permanent Snare."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "student_debt_burden",
+      "education_access_inequality",
+      "income_based_repayment_compliance"
+    ],
+    "dual_formulation_note": "ISA is downstream of the general education access problem (\u03b5_high) but represents a specific financing mechanism with its own \u03b5=0.38. The constraint family includes student loans (higher \u03b5, pure Snare), income-based repayment (similar \u03b5, Tangled Rope), and tuition-free alternatives (\u03b5\u22480.05, Rope). ISA occupies the middle ground: less extractive than traditional loans, more extractive than public funding, dependent on the maturation of alternatives for its legitimacy as a temporary scaffold."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "finnish_debt_adjustment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "finda"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Finnish Private Debt Adjustment System",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "financial_institutions",
+      "debt_adjustment_administrators"
+    ],
+    "victims": [
+      "over_indebted_individuals",
+      "creditor_coordination"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Over-Indebted Debtor",
+      "comment": "PERSPECTIVE 1: OVER-INDEBTED DEBTOR (SNARE) \u2014 Trapped in debt cycle with minimal exit options. Adjustment program is technically available but requires acceptance of income cuts, asset restructuring, and years of supervision. Cannot exit the financial system; lives with debt stigma and constrained consumption throughout the adjustment period. Suppression is high: creditors retain leverage through wage garnishment threats, collateral seizure, and the debtor's psychological entrapment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Adjustment Program Participants (Via Courts)",
+      "comment": "PERSPECTIVE 2: ADJUSTMENT PARTICIPANTS (TANGLED ROPE) \u2014 Those formally enrolled in adjustment programs experience genuine coordination benefits (predictable payment schedules, reduced creditor harassment, partial debt forgiveness after 5 years) alongside extraction (court fees, mandatory financial counseling costs, years of income disclosure and supervisory control). They have entered a binding coordination structure that solves the collective action problem of multiple creditors but at significant personal cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Financial Institutions (Credit Providers)",
+      "comment": "PERSPECTIVE 3: FINANCIAL INSTITUTIONS (ROPE) \u2014 Banks and credit companies benefit from the adjustment system as a coordination mechanism: instead of chaotic individual bankruptcy proceedings, they coordinate recovery through the court system with predictable outcomes and reduced legal uncertainty. The system enables them to recover some portion of bad debts while avoiding default cascades. They experience this as pure coordination (solving the creditor competition problem) rather than extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Consumer Protection Advocates",
+      "comment": "PERSPECTIVE 4: CONSUMER PROTECTION MOVEMENT (SCAFFOLD) \u2014 Organized consumer advocates see the adjustment program as a temporary intervention with a sunset clause: as wage levels rise, household financial literacy improves, and credit regulation tightens, the need for debt adjustment should structurally decline. The program solves an immediate crisis (over-indebtedness from 1990s recession) but advocates view it as transitional, aiming toward systemic prevention (income support, credit regulation) that would make adjustment unnecessary. Theater remains moderate because the intervention addresses real coordination failures."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Debtor Imprisonment Stigma (Vestigial Norm)",
+      "comment": "PERSPECTIVE 5: VESTIGIAL DEBTOR SHAME (PITON) \u2014 Finland abolished debtor's prison in 1883, yet the social stigma and psychological treatment of debtors retains significant performative content. The adjustment program preserves (rather than eliminates) this theatrical stigma: public court proceedings, years of income monitoring, and social exclusion continue the ancient function of shaming debtors, even though the system is officially designed for relief. The theater ratio is high because the stigma serves no functional coordination purpose but remains through institutional inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Debt Adjustment Administrators (Courts & Trustees)",
+      "comment": "PERSPECTIVE 6: DEBT ADJUSTMENT ADMINISTRATORS (TANGLED ROPE) \u2014 Court trustees and debt adjustment administrators operate a coordination mechanism (managing creditor claims, scheduling payments, enforcing compliance) while also extracting rents through mandatory fees, professional control over debtor finances, and the power to extend or terminate adjustment status. They benefit from the system's continuation (job creation, fee revenue) while coordinating what would otherwise be chaotic multi-creditor disputes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational view, some form of insolvency resolution is a fundamental requirement of any credit system. Without structured debt adjustment mechanisms, either debtors must face debtor's prison (pre-1883) or credit markets collapse entirely (no one lends if unpayable debts cannot be discharged). From this perspective, the Finnish system appears to solve an immutable coordination problem inherent to credit economies. However, the structural data reveals this as a false summit: the system's extractiveness (0.38) and suppression (0.48) indicate contingent institutional design choices, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "Do court-administered fees and income restrictions in the adjustment program constitute legitimate coordination costs or extractive rent-seeking by administrators?",
+      "resolution_mechanism": "International comparison of debt adjustment systems (Sweden, Germany, France) and their fee structures; analysis of trustee fee distributions vs. actual case management costs; surveys of debtor outcomes with varying fee levels",
+      "impact": "If coordination: system should classify as Rope from administrator perspective. If rent-seeking: should classify as Snare from debtor perspective despite availability of adjustment option.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether administrator fees are coordination costs or extraction"
+    },
+    {
+      "id": "voluntary_participation_constraint",
+      "question": "Is entry into debt adjustment effectively voluntary (genuine exit option for debtors) or coercive (implicit threat of wage garnishment / asset seizure forces participation)?",
+      "resolution_mechanism": "Analysis of alternative exit routes for debtors who refuse adjustment (actual enforcement rates of wage garnishment vs. announced rates); interviews with debtors about participation decisions; historical data on debtor outcomes comparing adjustment participants vs. non-participants",
+      "impact": "If voluntary: debtor exit_options should be 'mobile' (actual choice available). If coercive: should be 'trapped' (participation forced by threat). Shifts debtor classification from Snare to potentially Tangled_Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether adjustment participation is genuinely voluntary"
+    },
+    {
+      "id": "sunset_mechanism_realism",
+      "question": "Is the scaffold perspective's claim about a sunset clause realistic, or is the adjustment system structural and permanent?",
+      "resolution_mechanism": "Longitudinal data on adjustment program caseloads (1990-2026); relationship between household debt levels and adjustment program demand; analysis of whether credit regulation and income support are actually reducing over-indebtedness or merely displacing it",
+      "impact": "If sunset realistic: Scaffold classification is valid and extractiveness should decline over interval. If permanent: system should classify as persistent extraction mechanism (Snare or Tangled_Rope) regardless of intended temporality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the debt adjustment system has a realistic sunset"
+    },
+    {
+      "id": "psychological_credibility_collapse",
+      "question": "How much of the adjustment program's control over debtors (income disclosure, consumption restrictions, years of monitoring) rests on psychological credibility vs. legal enforcement power?",
+      "resolution_mechanism": "Analysis of debtor compliance rates when monitoring is reduced; international comparison of systems with similar legal power but different psychological framing; studies of placebo enforcement (announced monitoring vs. actual auditing)",
+      "impact": "If psychological: suppression (0.48) overstates actual coercive power; theater_ratio should be higher. If legal enforcement: suppression reflects real structural coercion.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "How much suppression is psychological vs. legal"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Finland's debt adjustment system emerged from the 1990s economic crisis when over-indebtedness became widespread across the population. The legal mechanism allows court-administered restructuring of private debts: debtors negotiate reduced payment schedules with creditors (coordinated by court trustees), and remaining debt can be discharged after 5 years of compliance. The system demonstrates how a single structural arrangement can legitimately classify as six different constraint types depending on the observer's position. For debtors trapped without alternatives, it is a Snare \u2014 years of income disclosure and consumption restriction. For participants within it, it is a Tangled Rope mixing coordination benefits (creditor relief) with extraction (fees, monitoring). For financial institutions, it is a Rope solving the collective action problem of competing creditors. For consumer advocates, it is a Scaffold with a sunset as wages rise and prevention becomes viable. For court administrators, it is a Tangled Rope generating rent. The vestigial stigma attached to debt adjustment (echoing abolished debtor's prison) is a Piton \u2014 performed shame serving no functional purpose. The false mountain perspective naturalizes the system as an immutable requirement of credit economies, but the extractiveness metrics reveal it as a contingent institutional design. The constraint's theater ratio has declined over 30 years (0.72 \u2192 0.58) as the system matured and formalized, and extractiveness has declined (0.48 \u2192 0.38) as credit regulation improved and household income recovered. The trend supports the scaffold perspective: the system is solving a temporary problem with declining severity.",
+    "key_agents": [
+      "Over-indebted Debtors: Primary victims (powerless/trapped) \u2014 face years of income disclosure, consumption restriction, and social stigma; trapped by lack of alternative insolvency relief",
+      "Financial Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from coordinated creditor structure that enables debt recovery and reduces legal uncertainty",
+      "Debt Adjustment Administrators (Court Trustees): Secondary beneficiaries (organized/mobile) \u2014 extract professional fees and maintain institutional power over debtor finances; coordinate creditor claims",
+      "Consumer Protection Movement: Organized advocates (organized/constrained) \u2014 view system as temporary intervention with sunset; work toward systemic prevention through income support and credit regulation",
+      "Creditor Coordination: Implicit beneficiary \u2014 the system solves the multiple-creditor race problem; without it, creditors would compete destructively",
+      "Vestigial Debtor Shame: Institutional actor (institutional/arbitrage) \u2014 social norm of debtor stigma persists through courts; maintains performative control despite official compassion framing",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent coordination mechanism as law of credit economies"
+    ],
+    "logic_rationale": "Extractiveness (0.38, declining to 0.38 by year 30): Moderate. The system extracts from debtors through mandatory fees (typically 2-3% of restructured debt), years of income monitoring, consumption restrictions, and psychological costs. However, extractiveness is tempered by genuine coordination benefits: debtors receive partial debt forgiveness, protection from wage garnishment escalation, and structured predictability replacing chaotic multi-creditor enforcement. The declining trajectory (0.48 \u2192 0.38 over 30 years) reflects improved economic conditions and reduced over-indebtedness, making the extraction less severe. Suppression (0.48): Moderate-high. Debtors face significant coercive mechanisms: income disclosure requirements, asset controls, mandatory financial counseling (sometimes) that reduces actual exit options. However, suppression is not total \u2014 adjustment is technically voluntary (though alternatives are unattractive), and the system provides structured relief rather than pursuing maximum extraction. The suppression reflects real institutional control but not absolute coercion. Theater ratio (0.58, declining from 0.72): Moderate-high. The adjustment program retains significant performative elements: court proceedings are public, income monitoring is documented and socially visible, and the debtor carries years of marked status within the financial system. However, theater has declined as digital processes replaced paper-based public record-keeping and as credit system professionalization normalized debt restructuring rather than viewing it as moral failure. The theater reflects vestigial stigma from abolished debtor's prison rather than modern functional requirements.",
+    "directionality_logic": "Directionality values are derived from agents' structural relationships to the system: Debtors (powerless/trapped) experience maximum negative d \u2192 high f(d) \u2192 high effective extraction (chi). Financial institutions (institutional/arbitrage) experience beneficiary d \u2192 low/negative f(d) \u2192 negative chi (they experience coordination benefit, not extraction cost). Adjustment administrators (organized/mobile) experience ambiguous d: they benefit from the system's continuation and extract fees, but also solve creditor coordination problems. The system-level d for administrators is set to 0.35 (partial beneficiary with extraction capacity), producing moderate f(d) and moderate chi. Consumer advocates (organized/constrained) experience d = 0.60 (they bear some of the system's costs through advocacy effort while seeing progress toward sunset) producing moderate f(d). The analytical observer's d at civilizational scale is set to 0.72 (neutral between natural law and contingency) which the engine interprets as false summit detection.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival divergence across the six types: Debtors see a Snare (pure coercion, extraction, no coordination benefit). Adjustment participants see a Tangled Rope (mixed benefits and extraction). Financial institutions see a Rope (pure coordination solving creditor competition). Consumer advocates see a Scaffold (temporary intervention with sunset). Administrators see a Tangled Rope (rent extraction + coordination function). Vestigial stigma is a Piton (performative without function). The analytical observer risks a false Mountain (naturalizing design as law). The gap exists because each agent occupies a fundamentally different structural position: debtors are extraction targets; institutions are coordination beneficiaries; administrators are hybrid beneficiary-extractors; advocates see systemic change; social stigma operates mechanically. The classification gap is not a measurement problem but a reflection of genuine structural asymmetry. The debtor's Snare view is not wrong; neither is the institution's Rope view. Both are correct from their structural position.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy through perspectival honesty rather than collapse to a single type. The false mountain perspective (natural law view) is explicitly identified and marked as analytical naturalization: insolvency resolution is necessary in all credit systems, but the Finnish implementation is not a natural law \u2014 it is a contingent institutional design with extractiveness (0.38) and suppression (0.48) that reflect policy choices, not physical necessity. The system genuinely provides coordination benefits (solving creditor competition, structured payment paths) for some actors (institutions, administrators) and genuine extraction for others (debtors). It is not pure extraction misclassified as coordination (the snare mandatrophy), nor is it pure coordination misclassified as extraction (the rope mandatrophy). The Tangled Rope classification for adjustment participants and administrators correctly captures the hybrid nature: the system coordinates creditor claims AND extracts from debtors simultaneously. The declining extractiveness trajectory (0.48 \u2192 0.38) and declining theater ratio (0.72 \u2192 0.58) suggest the system is trending toward pure Rope (coordination without extraction) as external conditions improve and design matures. This is consistent with the scaffold sunset hypothesis: as the underlying problem (over-indebtedness) declines, the system's extraction component should also decline, leaving only the coordination machinery."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nordic_social_contract",
+      "household_debt_accumulation_cycle"
+    ],
+    "dual_formulation_note": "The Finnish adjustment system is downstream of broader Nordic welfare policy (income support, unemployment insurance, credit regulation) and upstream of household financial stability. The system's extractiveness depends on the adequacy of social safety nets: strong income support and employment policy reduce adjustment demand and lower extraction; weak safety nets increase debtor desperation and raise effective suppression. This constraint family requires analysis of the welfare infrastructure supporting or undermining the adjustment mechanism."
+  },
+  "directionality_overrides": []
+}

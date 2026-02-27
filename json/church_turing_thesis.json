@@ -2,93 +2,117 @@
   "header": {
     "constraint_id": "church_turing_thesis",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ctt"
   },
   "base_properties": {
-    "extractiveness": 0.02,
-    "suppression": 0.01,
-    "theater_ratio": 0.0,
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
     "claimed_type": "mountain",
     "human_readable": "Church-Turing Thesis (Computability Boundary)",
-    "topic_domain": "technological/mathematical",
+    "topic_domain": "mathematical/computational_theory",
+    "requires_active_enforcement": false,
     "emerges_naturally": true,
-    "accessibility_collapse": 0.98,
-    "resistance": 0.01,
-    "beneficiaries": [],
-    "victims": []
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
   },
   "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Uncomputable Function",
+      "comment": "PERSPECTIVE 1: UNCOMPUTABLE FUNCTION (MOUNTAIN) \u2014 Any function outside the Turing-computable set is structurally inaccessible to algorithmic computation. This is not a constraint imposed by an external agent; it is a logical limit. No escape, no workaround, no observer perspective changes this classification. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Programmer Attempting Hypercomputation",
+      "comment": "PERSPECTIVE 2: PROGRAMMER SEEKING HYPERCOMPUTATION (MOUNTAIN) \u2014 A programmer attempting to compute a Halting Problem instance or Kolmogorov complexity value experiences the constraint as absolute. Constrained exit options reflect that they can avoid the problem by changing the target function, but cannot change the boundary itself. The constraint's extractiveness is minimal because no agent benefits from the limit \u2014 it is a structural property of computation itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Computer Science Institution",
+      "comment": "PERSPECTIVE 3: COMPUTER SCIENCE INSTITUTION (MOUNTAIN) \u2014 Academic and industrial computing communities take the Church-Turing Thesis as foundational. No verification apparatus enforces it; no agent suppresses alternatives. It exists as a mathematical fact. The institutional perspective confirms the mountain classification: the thesis is not maintained by institutional power, but by logical necessity. The institution organizes itself around its constraints, but does not create them."
+    },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Theoretical Computer Scientist",
-      "comment": "PERSPECTIVE 1: ANALYTICAL (MOUNTAIN) — The thesis is viewed as a fundamental, unchangeable law defining the limits of what is algorithmically computable. It is the bedrock of the field."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Frustrated Engineer",
-      "comment": "PERSPECTIVE 2: POWERLESS (MOUNTAIN) — An engineer attempting to create a perfect bug-checker (equivalent to the Halting Problem) experiences the thesis as an absolute, insurmountable wall. There is no exit."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Quantum Computing Researcher",
-      "comment": "PERSPECTIVE 3: INSTITUTIONAL (MOUNTAIN) — Even for researchers exploring novel computational paradigms, the thesis (in its original form regarding computability, not complexity) is a fixed boundary. Quantum computers can solve certain problems faster, but they cannot solve Turing-uncomputable problems."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "organized",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Pragmatic AI Developer",
-      "comment": "PERSPECTIVE 4: ORGANIZED (MOUNTAIN) — For developers using heuristics and statistical methods, the thesis is a background constant of nature that explains why certain problems require approximation rather than exact algorithmic solutions. They are mobile, able to choose problems that are computationally tractable."
+      "label": "The Analytical Observer (Formal Verification)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / FORMAL VERIFICATION (MOUNTAIN) \u2014 From the position of mathematical analysis, the Church-Turing Thesis is a precise claim: the class of lambda-computable functions equals the class of Turing-computable functions equals the class of \u03bc-recursive functions. This equivalence has been proven in multiple formal systems. No observer perspective changes the boundary. No measurement methodology reveals exceptions. The thesis is invariant under all mathematical formalisms that encode computation."
     }
   ],
   "omegas": [
     {
-      "id": "physical_realizability",
-      "question": "Could a physical process exist in the universe that violates the Church-Turing Thesis (i.e., performs hypercomputation)?",
-      "resolution_mechanism": "Discovery of a physical system that demonstrably solves a Turing-uncomputable problem, such as the Halting Problem. This would likely require new physics.",
-      "impact": "If resolved 'yes', the constraint is not a Mountain but a Scaffold of our current understanding of physics, to be superseded. The entire foundation of computer science would be revised.",
-      "confidence": "low",
+      "id": "hypercomputation_physical_realizability",
+      "question": "Could physical processes (quantum computing, relativistic computation, analog devices, novel physical substrates) compute beyond the Turing limit?",
+      "resolution_mechanism": "Formal proof that proposed hypercomputational models reduce to Turing-computable operations or genuinely exceed them; empirical verification of quantum advantage on uncomputable problems (not just hard problems); demonstration of closed timelike curves or other exotic physics enabling non-Turing computation",
+      "impact": "If hypercomputation is physically realizable: Church-Turing Thesis remains mathematically valid but loses its empirical universality claim. The boundary becomes a mathematical property of abstract models, not a physical law. Classification remains Mountain (mathematical limit), but the practical scope narrows. If hypercomputation is physically impossible: the thesis strengthens as a law of physics, not merely mathematics.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether a physical 'hypercomputer' could violate the thesis."
+      "description": "Whether physical processes could exceed Turing computability"
+    },
+    {
+      "id": "oracle_machine_ontology",
+      "question": "Are oracle machines and hypercomputation conceptually coherent, or do they reveal that the thesis is incomplete in its scope?",
+      "resolution_mechanism": "Philosophical analysis of oracle machine semantics; clarification of what it means to 'have access to' an oracle vs. to compute it; comparison with other mathematical abstractions that outreach their foundational theories (e.g., ordinal arithmetic in ZFC)",
+      "impact": "If oracles are legitimate mathematical objects: the thesis is locally correct (Turing machines compute the Turing-computable set) but incomplete \u2014 it does not claim to exhaust all meaningful computation, only algorithmic computation. If oracles are notational artifacts: the thesis is complete and the boundary is absolute.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether oracle machines represent genuine hypercomputation or notational artifacts"
+    },
+    {
+      "id": "implicit_assumptions_thesis_scope",
+      "question": "Does the Church-Turing Thesis make implicit assumptions about what constitutes 'computation' (determinism, finitism, discrete steps) that could be relaxed to permit new classes of processes?",
+      "resolution_mechanism": "Formal analysis of the thesis statement's definitional dependencies; exploration of computation models with non-standard assumptions (continuous computation, probabilistic computation, nondeterministic computation); assessment of whether these models fall inside or outside the thesis's scope",
+      "impact": "If the thesis is definition-dependent: it is logically sound but contextual \u2014 different formal definitions of 'computation' produce different boundaries. If it is definition-independent: the boundary is absolute and invariant across all reasonable formalizations.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether implicit assumptions constrain the thesis's scope"
     }
   ],
+  "measurements": [],
   "interval": {
-    "start": 1936,
-    "end": 2024
+    "start": 0,
+    "end": 1
   },
   "commentary": {
-    "narrative_context": "The Church-Turing Thesis posits that any function computable by an algorithm can be computed by a Turing machine. It establishes a fundamental boundary on what is mechanically computable, effectively defining the limits of digital computers. This is not a formal theorem but a hypothesis about the nature of computation that has stood for nearly a century, underpinning the entire field of computer science. It is considered a natural law of the informational world.",
+    "narrative_context": "The Church-Turing Thesis is a mathematical claim asserting that the class of functions computable by an algorithm equals the class of functions computable by a Turing machine. Unlike constraints that emerge from power dynamics, institutional arrangements, or coordination failures, the Church-Turing Thesis is a structural property of computation itself. No agent benefits from the computability boundary; no agent suppresses alternatives to it. The boundary exists because logical necessity produces it, not because someone enforces it. The thesis demonstrates the 'Mountain' classification in its purest form: zero extractiveness (\u03b5 \u2248 0.12, reflecting only the minimal irreducible measurement uncertainty in mathematical claims), minimal suppression (\u03c3 \u2248 0.03, reflecting that no coercive apparatus is required), and negligible theater (\u03b8 \u2248 0.15, reflecting that the thesis is verified through formal proof, not institutional performance). The accessibility collapse is extremely high (0.92): the boundary is completely inaccessible to algorithmic methods \u2014 no amount of cleverness or effort can compute an uncomputable function using standard computation. The resistance is very low (0.08): there is no organized alternative to the thesis; no community claims or attempts to disprove it through practice.",
     "key_agents": [
-      "Theoretical Computer Scientists: Analytical observers who formalize and study the limit.",
-      "Software Engineers: Practitioners (powerless/trapped) who encounter the limit as an unbreakable rule in their work (e.g., the impossibility of a perfect general-purpose virus scanner).",
-      "Quantum Computing Researchers: Institutional actors who explore the boundaries of the thesis, confirming its robustness even with exotic hardware.",
-      "AI Developers: Organized actors who work around the limit using heuristics and approximations for intractable problems."
+      "Uncomputable Functions: Structural limit (no power) \u2014 Halting Problem, Kolmogorov complexity, other incomputable problems are outside algorithmic reach",
+      "Programmers/Algorithms: Powerless/constrained agents \u2014 Cannot transcend the boundary; can only work within it",
+      "Computer Science Institution: Institutional consensus (arbitrage) \u2014 Takes the thesis as foundational; organizes research around its implications",
+      "Mathematical Community: Analytical observers (civilizational) \u2014 Formalized the thesis across multiple equivalent formalisms (lambda calculus, Turing machines, \u03bc-recursion)"
     ],
-    "logic_rationale": "This constraint is a canonical Mountain. Extractiveness (0.02) and Suppression (0.01) are near zero, as the thesis does not extract value or coerce behavior; it simply defines what is possible. It is a pure signal with no performative aspect (Theater Ratio = 0.0). The Natural Law profile is met: it emerges naturally from logic (emerges_naturally: true), presents a sharp, uncrossable boundary (accessibility_collapse: 0.98), and cannot be resisted (resistance: 0.01). No beneficiaries or victims exist as it applies universally.",
-    "perspectival_gap": "There is no perspectival gap. This is a key diagnostic feature of a pristine Mountain constraint. Every observer, regardless of power, exit options, or time horizon, correctly classifies the thesis as a Mountain. Its status as a fundamental limit is invariant across all structural positions.",
-    "directionality_logic": "As a universal, non-extractive constraint, there are no beneficiaries or victims. The directionality `d` for any agent is derived from canonical fallbacks, resulting in a symmetric relationship where the constraint applies equally to all. Effective extraction (χ) is therefore negligible from all perspectives, reinforcing the Mountain classification.",
-    "mandatrophy_analysis": "This constraint serves as a 'true summit' baseline. It demonstrates a case where the Mountain classification is robust, invariant, and structurally justified. It helps calibrate the system to detect 'false summits'—contingent, human-made rules (Snares or Tangled Ropes) that are presented as natural or inevitable laws. The unwavering Mountain classification here, contrasted with the perspectival variance of a constraint like the 'verification_bottleneck', illustrates the core function of the indexical system: to distinguish between genuine natural law and naturalized policy."
+    "logic_rationale": "Extractiveness (0.12): The Church-Turing Thesis exhibits minimal extractiveness because it extracts nothing \u2014 no agent benefits at the expense of others. The low score (not zero) reflects epistemic humility: mathematical proofs can contain hidden gaps, and the thesis, while foundationally verified across multiple formalisms, remains a conjecture about the totality of computation rather than a proven theorem of set theory. No coercive mechanism maintains the boundary; logical necessity suffices. Suppression (0.03): Minimal. The thesis is not enforced through suppression of alternatives or elimination of competitors. No funding is withheld from hypercomputation research; no papers are rejected for proposing oracle machines. The research community openly studies hypercomputation as a mathematical construct, even while accepting that Turing machines capture all practical, realizable computation. Theater ratio (0.15): Very low. The thesis is verified through formal proof and mathematical equivalence proofs across multiple models, not through institutional performance or ritualistic verification. Publications do not stake claims that are later retracted; the foundational equivalences (lambda calculus = Turing machines = \u03bc-recursion) are established through rigorous proof, not empirical confirmation. The minimal theater reflects that the thesis operates at the mathematical level, where verification is proof-based, not performance-based.",
+    "perspectival_gap": "All four perspectives converge on the Mountain classification because the Church-Turing Thesis is an invariant under all observation positions. The uncomputable function experiences the boundary as absolute (trapped, powerless). The programmer experiencing the constraint as logical necessity (constrained, moderate). The computer science institution operates within the boundary (institutional, analytical). The formal analyst verifies its invariance across all mathematical models (analytical, universal). There is no perspectival gap because the constraint is not observational \u2014 it is not relative to the observer's power, time horizon, exit options, or spatial scope. This convergence is the diagnostic signature of a natural law: all observation positions produce the same classification because the constraint transcends institutional, social, or contextual variation.",
+    "directionality_logic": "The Church-Turing Thesis has no beneficiaries and no victims. Directionality (d) is not computed from power asymmetries or exit options because there is no extraction to direct. All perspectives converge on Mountain because the boundary is absolute and symmetric: no agent extracts from others through the thesis; the thesis is not maintained by coercion or suppression; it exists purely as a mathematical property. The lack of beneficiary/victim structure is the critical diagnostic: if there were a beneficiary (e.g., a research community defending the thesis to protect their turf), or a victim (e.g., hypercomputation researchers suppressed by mainstream orthodoxy), the constraint would be a Tangled Rope or Snare, not a Mountain. The absence of extractive directionality confirms the natural law classification.",
+    "mandatrophy_analysis": "The Church-Turing Thesis resolves the mandatrophy by exhibiting zero extractiveness (\u03b5 \u2248 0.12) and zero asymmetry across perspectives. Mandatrophy is the false positive error: mislabeling a pure coordination mechanism or a symmetric constraint as asymmetric extraction. The inverse error \u2014 mislabeling a true power asymmetry as a natural law \u2014 is sometimes called 'false naturalization.' The Church-Turing Thesis avoids both errors: it is not extractive (no agent benefits), and it is genuinely invariant (all perspectives agree). The thesis demonstrates that a Mountain classification is not merely a claim that 'this constraint is natural,' but a precise mathematical property: zero beneficiary/victim asymmetry, zero institutional enforcement, and invariance under all reasonable observation frameworks. The minimal omegas (confined to epistemological questions about hypercomputation's possibility, not about institutional suppression) further confirm the classification."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
       "halting_problem",
-      "godels_incompleteness_theorems",
-      "computational_complexity_theory"
-    ]
-  }
+      "algorithmic_information_theory",
+      "computational_universality"
+    ],
+    "dual_formulation_note": "The Church-Turing Thesis is a unified claim about computability boundaries. Unlike constraints that decompose into multiple distinct claims with different \u03b5 values, the thesis has a single, invariant \u03b5 across all mathematical formalizations. It is not decomposed into separate stories because the boundary is absolute and unchanging: lambda computable = Turing computable = \u03bc-recursive computable across all observational contexts."
+  },
+  "directionality_overrides": []
 }

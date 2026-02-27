@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "knowledge_action_gap",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Informational Friction Barrier",
+    "topic_domain": "social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "status_quo_actors",
+      "habitual_consumers"
+    ],
+    "victims": [
+      "future_generations",
+      "informed_but_inert_individuals"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Future Generations",
+      "comment": "Future generations bear the cost of inaction on systemic risks and have no agency or ability to exit the situation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Informed but Inert Individuals",
+      "comment": "Individuals who understand the risks but are constrained by habit, cognitive load, or switching costs experience the constraint as a tangled rope. They benefit from the lower immediate cost of inaction but are harmed in the long run."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Status Quo Actors",
+      "comment": "Actors who benefit from the existing system (e.g., industries profiting from fossil fuels) see the constraint as a rope because it maintains their advantageous position. They benefit from the collective inertia and the difficulty of coordinating change."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Habitual Consumers",
+      "comment": "Individuals locked into detrimental habit loops (e.g. fast food) benefit from the immedate reward and face short term cost of adaptation. However, the long term cost (health issues) are very high. Benefit derived from inertial force."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the knowledge-action gap as a tangled rope because it involves both coordination failures (difficulty of collective action) and asymmetric extraction (benefits accruing to those maintaining the status quo at the expense of future generations)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "switching_cost_tolerance",
+      "question": "What level of economic or cognitive switching cost is tolerable for individuals to alter their behavior?",
+      "resolution_mechanism": "Behavioral economic analysis and sociological surveys.",
+      "impact": "Impacts policy decision regarding interventions, taxes, etc.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Tolerance for changing behaviors given increased costs."
+    },
+    {
+      "id": "collective_action_threshold",
+      "question": "What percentage of actors are needed to initiate change?",
+      "resolution_mechanism": "Network analysis of historical regime changes. Agent-based modelling of behavior",
+      "impact": "Impacts mobilization effort, policy decision.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "What is needed for critical mass to affect change"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents the structural disconnect between having access to perfect information regarding a systemic risk (e.g., climate change, public health) and the inability to coordinate a response due to high switching costs, cognitive load, or entrenched habit-loops. It is classified as a tangled rope because it involves both a coordination failure and asymmetric extraction. Status quo actors and habitual consumers benefit from maintaining the current system, while future generations and informed individuals bear the costs of inaction. The high suppression reflects the difficulty of overcoming entrenched behaviors and institutional inertia.",
+    "key_agents": [
+      "Status Quo Actors: Primary beneficiary (institutional/arbitrage) - maintain their advantageous position due to collective inertia.",
+      "Habitual Consumers: Primary beneficiary (powerful/mobile) - benefit from immediate rewards and inertia of bad habit loops",
+      "Future Generations: Primary victim (powerless/trapped) - will bear most of the cost.",
+      "Informed but Inert Individuals: Secondary victim (moderate/constrained) - understand risk, but can't effect change."
+    ],
+    "logic_rationale": "Extractiveness: (0.6) - High extraction because the beneficiaries are extracting significant value by pushing long term costs. Suppression (0.7) - high level of institutional inertia. Theater Ratio - (0.75).",
+    "perspectival_gap": "The perspectival gap arises from the different structural positions of the agents. Future generations see a snare because they are trapped and bear the full costs. Status quo actors see a rope because it coordinates to their benefit. Analytical observer sees a tangled rope because there is extraction and an attempt to coordinate to solve a problem.",
+    "directionality_logic": "Directionality is determined by whether the constraint enables extraction toward or away from an agent. Beneficiaries profit, those being extracted against become victims.",
+    "mandatrophy_analysis": "Without the DR framework, this constraint could be misclassified as a coordination problem. However, by analyzing the power, time, exit, and scope, it is clear that there is a structural imbalance in extraction. Long term effect outweigh any current benefits."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

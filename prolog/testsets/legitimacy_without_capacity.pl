@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: legitimacy_without_capacity
 % ============================================================================
-% Version: 5.2 (Deferential Realism Core + Boltzmann + Purity + Network)
-% Logic: 5.2 (Indexed Tuple P,T,E,S + Coupling + Purity + Network Drift)
-% Generated: 2024-07-27
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_legitimacy_without_capacity, []).
@@ -11,6 +12,19 @@
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
 :- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
 
 % --- Namespace Hooks (Required for loading) ---
 :- multifile
@@ -29,6 +43,8 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -38,86 +54,130 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- * * constraint_id: legitimacy_without_capacity
- * human_readable: The Sovereign Ghost
- * domain: political/organizational
- * * SUMMARY:
- * A scenario where an institution retains the social and legal "right to rule"
- * (legitimacy) but has lost the actual ability to provide services, security,
- * or order (capacity). This "Rope" of historical loyalty becomes a "Snare"
- * as the subject is legally bound to a defunct provider, liquidating their
- * safety while being barred from seeking alternative, non-state coordination.
- * * KEY AGENTS:
- * - Local Resident: Subject (Powerless)
- * - Legacy Bureaucrat: Beneficiary (Institutional)
- * - Institutional Resilience Auditor: Auditor (Analytical)
+ *   constraint_id: legitimacy_without_capacity
+ *   human_readable: The Sovereign Ghost: Legitimacy Without Capacity
+ *   domain: political/organizational
+ *
+ * SUMMARY:
+ *   The Sovereign Ghost describes institutional structures where political
+ *   legitimacy (the recognized 'right to rule,' backed by international law
+ *   and domestic legal tradition) becomes decoupled from state capacity (the
+ *   actual ability to provide security, enforce law, deliver services, or
+ *   maintain territorial control). This gap creates a distinctive extraction
+ *   mechanism: the legitimacy claim monopolizes certain functions (defining
+ *   legality, issuing permits, signing treaties) while the incapacity forces
+ *   those same functions to be performed by private, parallel, or foreign
+ *   actors who extract rents. The constraint exhibits all six DR types
+ *   depending on observer position. Service-dependent populations trapped
+ *   within the jurisdiction see pure extraction (Snare). Economic actors
+ *   dependent on rule of law see mixed coordination-extraction (Tangled
+ *   Rope). Institutional elites see pure coordination through legitimacy
+ *   arbitrage (Rope). The international system sees its own degraded ritual
+ *   (Piton). Parallel institutions building alternatives see a temporary
+ *   problem with a sunset (Scaffold). Foreign extractive powers see
+ *   asymmetric coordination (Tangled Rope from their perspective). The
+ *   analytical observer risks treating the legitimacy-capacity gap as a
+ *   natural law of state formation when it is actually a contingent product
+ *   of specific institutional choices: the Westphalian system that recognizes
+ *   legitimacy independent of capacity, decolonization processes that
+ *   transferred symbols but not institutions, and explicit suppression of
+ *   alternatives. The constraint's theater_ratio (0.81) reflects that most
+ *   state activity in legitimacy-without-capacity regimes is performative:
+ *   constitutions that are not enforced, courts that render decisions without
+ *   enforcement power, legislatures that pass laws nobody expects to be
+ *   implemented, international treaties signed and immediately broken. Real
+ *   governance happens in parallel institutions invisible to the formal
+ *   apparatus.
+ *
+ * KEY AGENTS:
+ *   - Service-Dependent Populations: Primary victim (powerless/trapped) — confined to jurisdiction, dependent on monopolized services, cannot access alternatives, bear full extraction cost
+ *   - Property Holders & Economic Actors: Mixed beneficiary/victim (moderate/mobile) — benefit from legitimacy claim but pay extraction cost when state cannot deliver protection
+ *   - Institutional Elites & State Apparatus: Primary beneficiary (institutional/arbitrage) — capture legitimacy monopoly rent, outsource actual service delivery, extract through permits and discretion
+ *   - International State System: Institutional observer (organized/constrained) — maintains performative legitimacy architecture despite knowing capacity gaps, sees own mechanisms as degraded but cannot exit without system collapse
+ *   - Parallel Institution Network: Organized actor (organized/arbitrage) — NGOs, traditional authorities, private security, diaspora networks building parallel service delivery with temporary lifespan
+ *   - Extractive Foreign Powers: Powerful actor (powerful/arbitrage) — benefit from weak state's legitimacy claim without capacity to resist unfavorable terms
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional arrangement as inherent to state formation
  */
 
 /* ==========================================================================
    2. BASE PROPERTIES (DOMAIN PRIORS)
    ========================================================================== */
 
-% Numerical anchors for v3.4 thresholds
-domain_priors:base_extractiveness(legitimacy_without_capacity, 0.84). % High extraction because the institution continues to extract taxes and compliance without returning functional utility.
-domain_priors:suppression_score(legitimacy_without_capacity, 0.71).   % Structural property (raw, unscaled). Alternatives are legally suppressed.
-domain_priors:theater_ratio(legitimacy_without_capacity, 0.91).       % Extreme theater: symbols of statehood masking operational void.
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(legitimacy_without_capacity, 0.58).
+domain_priors:suppression_score(legitimacy_without_capacity, 0.68).
+domain_priors:theater_ratio(legitimacy_without_capacity, 0.81).
 
-% Constraint metric facts — primary keys used by the classification engine.
-narrative_ontology:constraint_metric(legitimacy_without_capacity, extractiveness, 0.84).
-narrative_ontology:constraint_metric(legitimacy_without_capacity, suppression_requirement, 0.71).
-narrative_ontology:constraint_metric(legitimacy_without_capacity, theater_ratio, 0.91).
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(legitimacy_without_capacity, extractiveness, 0.58).
+narrative_ontology:constraint_metric(legitimacy_without_capacity, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(legitimacy_without_capacity, theater_ratio, 0.81).
 
-% Constraint self-claim (what does the constraint claim to be?)
-narrative_ontology:constraint_claim(legitimacy_without_capacity, snare).
-narrative_ontology:human_readable(legitimacy_without_capacity, "The Sovereign Ghost").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(legitimacy_without_capacity, tangled_rope).
+narrative_ontology:human_readable(legitimacy_without_capacity, "The Sovereign Ghost: Legitimacy Without Capacity").
 narrative_ontology:topic_domain(legitimacy_without_capacity, "political/organizational").
 
-% Binary flags
-domain_priors:requires_active_enforcement(legitimacy_without_capacity). % Required for Tangled Rope. The state legally enforces its monopoly.
+domain_priors:requires_active_enforcement(legitimacy_without_capacity).
 
-% Structural property derivation hooks:
-narrative_ontology:constraint_beneficiary(legitimacy_without_capacity, legacy_bureaucracy). % Derives has_coordination_function/1
-narrative_ontology:constraint_victim(legitimacy_without_capacity, local_residents).       % Derives has_asymmetric_extraction/1
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(legitimacy_without_capacity, institutional_elites).
+narrative_ontology:constraint_beneficiary(legitimacy_without_capacity, symbolic_authority_holders).
+narrative_ontology:constraint_victim(legitimacy_without_capacity, service_dependent_populations).
+narrative_ontology:constraint_victim(legitimacy_without_capacity, property_holders).
+narrative_ontology:constraint_victim(legitimacy_without_capacity, economic_actors).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × π(P) × σ(S)
    ========================================================================== */
 
-% PERSPECTIVE 1: THE SUBJECT (SNARE)
-% The subject is trapped: they are legally prohibited from forming
-% self-defense or service groups because the "State" still claims a monopoly.
+% PERSPECTIVE 1: SERVICE-DEPENDENT POPULATIONS (SNARE) — Trapped within jurisdictional boundaries. The state claims monopoly on security, justice, and essential services but cannot deliver. Citizens cannot exit (immobile, property-bound, family networks), cannot organize effective alternatives (suppression of parallel institutions), and bear maximum extraction cost: exposure to violence, legal uncertainty, predatory private alternatives. The constraint's suppression (0.68) manifests as prohibition against armed self-defense, private security licensing, customary justice systems, or exit to neighboring jurisdictions. Experienced extractiveness is maximal — the population is systematically harmed by both the state's claimed authority (which prevents alternatives) and its incapacity (which creates the need for those alternatives).
 constraint_indexing:constraint_classification(legitimacy_without_capacity, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(regional))).
 
-% PERSPECTIVE 2: THE BENEFICIARY (ROPE)
-% The institution views its legitimacy as a Rope—the only coordination tool
-% remaining to prevent total societal fragmentation, despite current failure.
-constraint_indexing:constraint_classification(legitimacy_without_capacity, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: PROPERTY HOLDERS & ECONOMIC ACTORS (TANGLED ROPE) — Depend on state capacity for contract enforcement, property rights protection, and infrastructure. Benefit from the state's monopoly on legitimate force and law (coordination function) when it works. But the state's legitimacy without capacity creates extraction: they pay taxes/tribute for protection the state cannot provide and must purchase private security, insurance, or alternative dispute resolution. Exit options exist (relocation, offshore investment, private courts) but are costly. The constraint enforces asymmetric extraction — property holders subsidize the state's legitimacy claim while receiving diminishing service value.
+constraint_indexing:constraint_classification(legitimacy_without_capacity, tangled_rope,
+    context(agent_power(moderate),
             time_horizon(generational),
             exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: INSTITUTIONAL ELITE & SECURITY APPARATUS (ROPE) — Benefit from the legitimacy-without-capacity structure. They retain control over the symbolic apparatus of statehood (courts, legislatures, uniforms, ceremonies) and can extract rents through licensing, permit discretion, and monopoly over certain services. The gap between legitimacy and capacity creates arbitrage opportunities: elites can claim authority while outsourcing actual service delivery to private actors (who pay kickbacks). From the elite perspective, the constraint solves a coordination problem: how to retain authority when you cannot effectively govern. The answer is pure legitimacy — theater that persists through international recognition, constitutional formalism, and the monopoly on naming what 'legitimate' means.
+constraint_indexing:constraint_classification(legitimacy_without_capacity, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 4: INTERNATIONAL STATE SYSTEM (PITON) — The global architecture of sovereign recognition maintains the fiction of state capacity through purely performative mechanisms. UN seats, diplomatic recognition, and Westphalian sovereignty are allocated based on legitimacy narratives, not capacity verification. The system enforces the constraint through institutions that have lost their coordination function: the UN cannot verify whether member states actually govern their claimed territory; the IMF cannot condition legitimacy on actual service delivery; treaty systems treat the legitimate state and the incapacitated state identically. Theater ratio (0.81) reflects that 95% of international activity concerning weak states is performative: summits, aid announcements, reform frameworks that have zero correlation with actual governance outcomes. The constraint persists through institutional inertia because the alternative (explicit recognition that some polities are not functional states) would destabilize the entire system.
+constraint_indexing:constraint_classification(legitimacy_without_capacity, piton,
+    context(agent_power(organized),
+            time_horizon(civilizational),
+            exit_options(constrained),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE)
-% Detects high extraction (0.84) and suppression (0.71) masking as coordination.
-% The presence of beneficiaries, victims, and active enforcement confirms Tangled Rope.
-constraint_indexing:constraint_classification(legitimacy_without_capacity, snare,
+% PERSPECTIVE 5: PARALLEL INSTITUTION NETWORK (SCAFFOLD) — Non-state actors (NGOs, religious institutions, traditional authorities, private security, diaspora networks) are building parallel service delivery systems: private security replaces police, customary justice replaces courts, remittances replace public finance, clan networks replace social services. These are temporary because they reproduce the legitimacy-without-capacity contradiction at smaller scale and because they depend on the formal state's territorial monopoly claim. Sunset logic: if parallel institutions mature and acquire their own legitimacy (explicit rather than shadowy), they cease to be alternatives and become a competing political structure — forcing either state capacity development or formal partition. Current trajectory suggests 15-25 year sunset toward either state reconstruction or polity partition.
+constraint_indexing:constraint_classification(legitimacy_without_capacity, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: EXTRACTIVE FOREIGN POWER (TANGLED ROPE) — External states and corporations benefit from the legitimacy-without-capacity structure. A weak state with formal sovereignty can be negotiated with (signing resource extraction deals, hosting military bases, providing votes in international forums) while lacking the capacity to enforce terms, resist predatory contracts, or develop competing capacity. The constraint enables asymmetric treaty extraction: foreign powers coordinate with the legitimate state while the state's incapacity prevents it from actually defending national interest in implementation. The foreign power experiences this as pure coordination — they get what they negotiate for without resistance. The host state experiences it as pure extraction — the legitimacy claim prevents them from refusing bad deals, and the lack of capacity prevents them from enforcing good ones.
+constraint_indexing:constraint_classification(legitimacy_without_capacity, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZATION RISK (MOUNTAIN) — There is a substantial risk that analysts treat the legitimacy-without-capacity gap as a natural law of state formation: 'all newly independent states begin with weak capacity,' 'legitimacy precedes capacity in political development,' 'sovereignty is a social fact independent of material capacity.' If these become reified as natural laws, the constraint becomes invisible — treated as an inherent feature of how states work rather than as a specific institutional arrangement enforcing extraction. The analytical observer from a civilizational/universal perspective must resist this naturalization. The legitimacy-without-capacity structure is a contingent product of: (1) Westphalian sovereignty doctrine, (2) decolonization without capacity transfer, (3) international institutional design that recognizes legitimacy without verifying capacity, and (4) explicit suppression of alternatives. None of these are natural laws.
+constraint_indexing:constraint_classification(legitimacy_without_capacity, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE SYSTEMS AUDITOR (PITON)
-% Theater ratio (0.91) > 0.70 triggers Piton: the "Sovereignty" is a
-% non-functional, performative artifact maintained by cultural inertia.
-constraint_indexing:constraint_classification(legitimacy_without_capacity, snare,
-    context(agent_power(analytical),
-            time_horizon(historical),
-            exit_options(arbitrage),
             spatial_scope(universal))).
 
 /* ==========================================================================
@@ -127,22 +187,17 @@ constraint_indexing:constraint_classification(legitimacy_without_capacity, snare
 :- begin_tests(legitimacy_without_capacity_tests).
 
 test(perspectival_gap) :-
-    % Verify Snare for the subject vs Rope for the institutional beneficiary.
-    constraint_indexing:constraint_classification(legitimacy_without_capacity, snare,
-        context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(legitimacy_without_capacity, rope,
-        context(agent_power(institutional), _, _, _)).
+    constraint_indexing:constraint_classification(legitimacy_without_capacity, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(legitimacy_without_capacity, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(piton_trigger) :-
-    % Ensure high theater ratio (0.91) triggers Piton classification.
-    constraint_indexing:constraint_classification(legitimacy_without_capacity, snare,
-        context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(legitimacy_without_capacity, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_structural_properties) :-
-    % Verify the necessary structural properties for Tangled Rope are present.
-    domain_priors:requires_active_enforcement(legitimacy_without_capacity),
-    narrative_ontology:constraint_beneficiary(legitimacy_without_capacity, _),
-    narrative_ontology:constraint_victim(legitimacy_without_capacity, _).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(legitimacy_without_capacity, TR),
+    TR >= 0.70.
 
 :- end_tests(legitimacy_without_capacity_tests).
 
@@ -152,69 +207,104 @@ test(tangled_rope_structural_properties) :-
 
 /**
  * LOGIC RATIONALE:
- * The extraction score (0.84) reflects a "Mandatrophy" state where the
- * "coordination" is a parasitic liquidation of the subject's remaining capital.
- * The high suppression (0.71) represents the legal prohibition of alternatives.
- * The extreme theater ratio (0.91) shows that almost all state activity is
- * performative rather than functional.
+ *   Extractiveness (0.58): Moderately high. The legitimacy-without-capacity gap is not as severe as pure state collapse (which would have ε > 0.70) because the legitimacy claim retains some functional effect — some contracts are honored, some property rights are recognized, some institutions maintain partial capacity. But the gap creates systematic extraction: populations pay taxes/rents for services not delivered, must pay private alternatives for monopolized functions, and cannot access formal justice systems. The extractiveness has increased over the interval (0.42 to 0.58) as the capacity gap has widened relative to legitimacy claims. Suppression (0.68): Moderate-high. The state actively prevents alternatives through prohibition of armed self-defense, unlicensing of private courts, suppression of secession movements, and international enforcement of territorial sovereignty claims. But suppression is not total — parallel institutions do operate, some private security is tolerated, customary justice functions despite prohibition. The suppression is most effective at preventing exit (citizens cannot formally leave) and least effective at preventing alternatives (parallel institutions multiply). Theater ratio (0.81): High and rising. State institutions are substantially performative: constitutional courts render decisions no one enforces, legislatures pass laws without budget, executives announce reforms with zero implementation. The theater has increased because the gap between legitimacy rhetoric and capacity reality has widened, requiring more performative activity to maintain the legitimacy fiction. The rise from 0.62 to 0.81 over the interval reflects Goodhart drift: as actual governance capacity declines, the state invests more heavily in theatrical performance (ceremonies, announcements, symbolic actions) to maintain legitimacy claims.
  *
- * * PERSPECTIVAL GAP:
- * The Local Resident feels a Snare because they are taxed for security that
- * never arrives. The Bureaucrat sees a Rope because the "myth" of the state
- * is the only thing preventing an immediate descent into a Mountain of chaos.
+ * PERSPECTIVAL GAP:
+ *   This constraint demonstrates the full perspectival gap across the six types. The service-dependent population sees a Snare: trapped, no alternatives, bearing maximum extraction. The property holder sees Tangled Rope: some coordination benefit (property rights recognized when state functions) but also extraction (paying for state that fails to deliver). The institutional elite sees Rope: pure coordination through monopolizing the legitimacy definition. The international system sees Piton: maintaining performative institutions (UN recognition, diplomatic protocols) that have lost their functional meaning. Parallel institutions see Scaffold: building temporary alternatives with a sunset toward either state capacity rebuild or partition. The foreign extractor sees Tangled Rope: coordinating with the legitimate state while the incapacity prevents resistance to unfavorable terms. The analytical observer risks seeing Mountain: naturalizing the legitimacy-capacity gap as inherent to how states work. The perspectival gap reveals that there is no single 'true' classification — the constraint appears different to each structural position. But the gap itself becomes diagnostic: why do trapped populations and extractive foreigners have opposite classifications of the same structure? Because they occupy opposite sides of the extraction flow.
  *
- * * [RESOLVED MANDATROPHY]:
- * Resolved via the Piton and Tangled Rope classifications. For an analytical
- * observer, the "State" is no longer functional (Theater 0.91 -> Piton); it is an
- * inert spike siphoning 0.84 of the subject's agency to feed a legacy model.
- * The combination of a coordination claim, asymmetric extraction, and active
- * enforcement makes it a canonical Tangled Rope.
+ * DIRECTIONALITY LOGIC:
+ *   Directionality (d) values are determined by each agent's position relative to the legitimacy-capacity gap. Service-dependent populations have d ≈ 0.95 (maximum target): they are trapped, victims of both the illegitimate state claim (which prevents alternatives) and the incapacity (which requires them to find alternatives). Institutional elites have d ≈ 0.05 (maximum beneficiary): they capture monopoly rents from the legitimacy claim while outsourcing capacity costs. Property holders have d ≈ 0.55 (symmetric): they benefit from property rights recognition (legitimacy benefit) but pay for undelivered security (capacity victim). Organized parallel institutions have d ≈ 0.50 (symmetric with slight victim lean): they build alternatives but operate under prohibition and depend on the state's territorial monopoly claim. The international system has d ≈ 0.40 (slight beneficiary): it benefits from the legitimacy monopoly system even though the system is degraded. Foreign extractors have d ≈ 0.25 (beneficiary): they coordinate with the legitimate state and benefit from its incapacity to resist. The derivation chain shows: beneficiaries with arbitrage options → low d → negative effective extraction (pure coordination). Victims with trapped or constrained options → high d → high effective extraction. The sigmoid f(d) amplifies these differences when computed.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The mandatrophy is resolved by recognizing that the legitimacy-capacity gap is a **hybrid** that legitimately classifies as Tangled Rope at the primary analytical level (moderately organized perspective with mobile exit, national scope). The Rope reading (institutional elite's arbitrage perspective) emphasizes the genuine coordination function: the state does monopolize certain legitimate authorities, and this monopoly does prevent coordination failures and enable some contracts. The Snare reading (trapped population's perspective) emphasizes the extraction: the monopoly prevents alternatives, and the incapacity forces populations into predatory private markets. Both are correct — they describe different structural positions within the same constraint. The Tangled Rope classification at the moderate/mobile/national level reconciles them: the constraint has both real coordination value (legitimacy deterring competing claims, reducing civil war) and real extraction value (populations subsidizing non-delivery, elites capturing rents). The theater ratio (0.81) indicates that the coordination value is increasingly hypothetical — it mostly consists of the theoretical deterrent against competing claims, not actual service delivery. The mandatrophy is not 'is this coordination or extraction?' but 'what is the ratio, and how is it changing?' The rising theater ratio (0.62 → 0.81) and rising extractiveness (0.42 → 0.58) together indicate Goodhart drift: the legitimacy claim is becoming increasingly decoupled from any functional coordination and approaching pure extraction. At ε > 0.70 the constraint would reclassify as Snare. The current interval shows the transition zone where Tangled Rope is the correct classification.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% Required for high-extraction constraints (> 0.46).
 omega_variable(
-    omega_sovereign_reconstitution,
-    'Can legitimacy be re-tethered to capacity, or is the divorce final (Snare vs Mountain)?',
-    'Tracking the success rate of local "self-help" groups in regaining state recognition.',
-    'If recognized: Tangled Rope/Snare of current policy. If crushed/ignored: Mountain of Institutional Death.',
+    legitimacy_source_temporal_anchoring,
+    'Is the legitimacy of a weakened state derived from a historical moment of genuine capacity (revolutionary victory, constitutional founding) or is it maintained through pure international recognition independent of any historical capacity?',
+    'Historical analysis of legitimacy sources in specific weak states; comparison of domestic vs international recognition patterns; examination of whether domestic legitimacy depends on institutional memory of past capacity',
+    'If historical: legitimacy may collapse as generational memory of capacity fades (15-30 year sunset toward either reconstruction or delegitimization). If international: legitimacy is decoupled from domestic conditions and may persist indefinitely despite deepening incapacity, extending extraction window.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(legitimacy_source_temporal_anchoring, empirical, 'Temporal source of legitimacy claims in capacity-limited states').
+
+omega_variable(
+    capacity_rebuilding_feasibility,
+    'Can institutional capacity be rebuilt while preserving legitimacy, or does the legitimacy-without-capacity gap create self-reinforcing institutional decay that makes capacity rebuilding structurally impossible?',
+    'Longitudinal case studies of state capacity trajectories; analysis of institutional reform outcomes in legitimacy-without-capacity regimes; comparison with states that built capacity without legitimacy gaps',
+    'If feasible: the constraint may have a genuine sunset (scaffold logic). If structurally impossible: the legitimacy-without-capacity state is a stable end-state leading toward partition or collapse (snare logic becomes permanent).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(capacity_rebuilding_feasibility, empirical, 'Whether capacity rebuilding is feasible within legitimacy-first frameworks').
+
+omega_variable(
+    suppression_mechanism_endogeneity,
+    'Is suppression (0.68) an exogenous feature of weak state structure or is it actively enforced by elites to maintain the legitimacy-without-capacity gap and prevent alternative institutions from emerging?',
+    'Analysis of elite rhetoric and institutional design choices; examination of which constraints on alternative institutions are formally codified vs informally enforced; tracking of policy reversals on parallel institution tolerance',
+    'If exogenous: the constraint may be overcome through external capacity transfers or technical solutions. If endogenous/elite-enforced: overcoming the constraint requires displacing the elites who benefit from it (revolutionary/partition logic).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_endogeneity, empirical, 'Whether suppression is structural or elite-enforced').
+
+omega_variable(
+    international_recognition_conditionality_binding,
+    'Can the international system credibly commit to withdrawing recognition from states that fail capacity benchmarks, or is the Westphalian legitimacy system decoupled from material conditions by design?',
+    'Historical analysis of derecognition cases; examination of international institutional mechanisms for capacity verification; assessment of whether any state has lost recognition despite maintaining formal sovereignty claims',
+    'If credibly conditional: external pressure could drive capacity rebuilding (scaffold sunset toward functional state). If decoupled: international legitimacy is pure theater, and the constraint persists indefinitely regardless of capacity outcomes (piton and snare logic dominate).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(international_recognition_conditionality_binding, conceptual, 'Whether international recognition can be made conditional on capacity').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(legitimacy_without_capacity, 0, 10).
+narrative_ontology:interval(legitimacy_without_capacity, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This models the state's decay: extraction remains high while theater
-% replaces function. Required for base_extractiveness > 0.46.
+% Theater ratio over time
+narrative_ontology:measurement(legit_tr_t0, legitimacy_without_capacity, theater_ratio, 0, 0.62).
+narrative_ontology:measurement(legit_tr_t10, legitimacy_without_capacity, theater_ratio, 10, 0.74).
+narrative_ontology:measurement(legit_tr_t20, legitimacy_without_capacity, theater_ratio, 20, 0.81).
 
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(lwc_tr_t0, legitimacy_without_capacity, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(lwc_tr_t5, legitimacy_without_capacity, theater_ratio, 5, 0.60).
-narrative_ontology:measurement(lwc_tr_t10, legitimacy_without_capacity, theater_ratio, 10, 0.91).
+% Extraction over time
+narrative_ontology:measurement(legit_be_t0, legitimacy_without_capacity, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(legit_be_t10, legitimacy_without_capacity, base_extractiveness, 10, 0.52).
+narrative_ontology:measurement(legit_be_t20, legitimacy_without_capacity, base_extractiveness, 20, 0.58).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(lwc_ex_t0, legitimacy_without_capacity, base_extractiveness, 0, 0.50).
-narrative_ontology:measurement(lwc_ex_t5, legitimacy_without_capacity, base_extractiveness, 5, 0.75).
-narrative_ontology:measurement(lwc_ex_t10, legitimacy_without_capacity, base_extractiveness, 10, 0.84).
 
 /* ==========================================================================
-   9. BOLTZMANN & NETWORK DATA (v5.0-5.2)
+   9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% The state's claim to legitimacy is based on its role as the ultimate
-% arbiter of order and security.
 narrative_ontology:coordination_type(legitimacy_without_capacity, enforcement_mechanism).
+narrative_ontology:boltzmann_floor_override(legitimacy_without_capacity, 0.45).
+narrative_ontology:affects_constraint(legitimacy_without_capacity, state_capacity_development).
+narrative_ontology:affects_constraint(legitimacy_without_capacity, international_recognition_architecture).
+narrative_ontology:affects_constraint(legitimacy_without_capacity, private_security_ecosystem).
+narrative_ontology:affects_constraint(legitimacy_without_capacity, parallel_justice_systems).
+
+% DUAL FORMULATION NOTE:
+% The legitimacy-capacity gap decomposes into two structurally distinct constraints: (1) LEGITIMACY_WITHOUT_CAPACITY (this story, ε=0.58, Tangled Rope) — the institutional arrangement preventing alternatives to the legitimate state, and (2) CAPACITY_REBUILDING_BLOCKADE (ε=0.42, Scaffold) — the explicit institutional barriers to state capacity development within the legitimacy-first framework. These two constraints are downstream of WESTPHALIAN_SOVEREIGNTY (ε=0.08, Rope/Mountain) which is the foundational coordination mechanism enabling both. The upstream Westphalian constraint is contested by some perspectives (analytical observer argues it naturalizes a contingent system) but is defended by others (international system argues it provides the only viable global coordination framework). Link these stories via network.affects_constraints to capture the constraint family structure.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(legitimacy_without_capacity, institutional, 0.08).
+constraint_indexing:directionality_override(legitimacy_without_capacity, powerless, 0.93).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

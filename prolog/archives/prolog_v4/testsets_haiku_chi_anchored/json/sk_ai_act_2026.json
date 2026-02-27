@@ -1,0 +1,225 @@
+{
+  "header": {
+    "constraint_id": "sk_ai_act_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sk_ai"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "South Korea's Proposed AI Industry Promotion Act",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_ai_companies",
+      "technology_ministry"
+    ],
+    "victims": [
+      "data_subjects",
+      "copyright_holders",
+      "competing_jurisdictions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Data Subject",
+      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Citizens whose personal data becomes trainable material without consent. No exit option within South Korean jurisdiction; cannot opt out of data collection sweeps. Suppression is explicit (exemption from privacy law). d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.81. Full extraction mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "International Copyright Holder",
+      "comment": "PERSPECTIVE 2: INTERNATIONAL COPYRIGHT HOLDER (SNARE) \u2014 Publishers, authors, creative industries outside South Korea face material extraction of works for training data. Exit option is constrained: legal challenge requires engagement with foreign jurisdiction, expensive and slow. Suppression is structural (exemption applies only within Korean territory, creating asymmetric extraction). d\u22480.85, f(d)\u22481.20, \u03c3=0.9 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Domestic AI Industry Coalition",
+      "comment": "PERSPECTIVE 3: DOMESTIC AI INDUSTRY COALITION (TANGLED ROPE) \u2014 South Korean AI companies benefit from coordinated data access (coordination function) AND asymmetric extraction from data subjects and foreign creators. Benefits from reduced compliance overhead, competitive advantage during training window, and state backing. Constrained because exemptions could be revoked or reciprocated by trading partners. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.20. Low effective extraction from industry perspective \u2014 the law reads as pure coordination benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Technology Ministry / Government",
+      "comment": "PERSPECTIVE 4: TECHNOLOGY MINISTRY & GOVERNMENT (ROPE) \u2014 Primary institutional beneficiary. Exercises direct policy control with maximum flexibility. Can revise exemptions, grant safe harbors selectively, or sunset the act if international pressure mounts. Arbitrage exit: can shift to alternative industrial policy (semiconductor subsidies, chip foundry investment) without constraint. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary. Experiences constraint as pure coordination mechanism (coordinating industry around a common policy direction)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "International Tech Companies & WIPO Coalition",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL TECH COMPANIES & WIPO COALITION (TANGLED ROPE) \u2014 US, EU, and international publishers organized through WIPO and trade associations. Face extraction (uncompensated use of works for Korean AI training). But also have mobility: can lobby trade negotiations, threaten IP sanctions, pursue WTO dispute, or themselves adopt analogous extraction policies in their home markets (race-to-the-bottom logic). Constrained because retaliation is slow and uncertain. d\u22480.58, f(d)\u22480.80, \u03c3=1.1 \u2192 \u03c7\u22480.51. Moderate extraction; some mitigation through exit options (mobility, organized pressure)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Privacy Advocates & Civil Society",
+      "comment": "PERSPECTIVE 6: PRIVACY ADVOCATES & CIVIL SOCIETY (SCAFFOLD) \u2014 Korean and international NGOs frame the exemption as temporary, contingent on demonstrating measurable AI sector gains. The scaffold logic: sunset clause after 7-10 years if alternative funding/training mechanisms emerge (federated learning, synthetic data, licensed datasets). Theater_ratio low in this perspective because advocates are building alternative technical pathways (differential privacy, on-device training) that bypass the exemption entirely. d\u22480.62, f(d)\u22480.88, \u03c3=1.0 \u2192 \u03c7\u22480.30. Moderate extraction but declining trajectory via technical alternatives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Global Privacy Regulatory Regime",
+      "comment": "PERSPECTIVE 7: GLOBAL PRIVACY REGULATORY REGIME (PITON) \u2014 GDPR, CCPA, and emerging regional privacy norms have become the global epistemic standard for data protection. South Korea's exemption is experienced by the international regime as degraded \u2014 a rollback of established norms maintained through nationalist industrial policy, not through demonstration that the exemption serves coordination. Theater_ratio=0.52 reflects mixed function: the exemption does coordinate industry BUT also creates visible norm violation. The global privacy regime sees this as institutional theater: the exemption persists via state power and competitive pressure, not because it's functionally superior to privacy-preserving alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View (False Summit)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN?) \u2014 Risk of naturalizing the act as inevitable response to 'the law of AI development' \u2014 that global AI competitiveness necessarily requires unrestricted data access. This view sees exemptions as immutable feature of any nation pursuing AI leadership. However, base properties contradict mountain: \u03b5=0.58 (too high for natural law), suppression=0.68 (explicit coercion, not natural scarcity), theater=0.52 (mixed function, not inherent limit). The engine's false summit detector will flag this perspective as a misclassification \u2014 the 'naturalness' is aspirational framing by beneficiaries, not structural inevitability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "data_subject_compensation_sufficiency",
+      "question": "Would mandatory compensation for data subjects (micropayments, benefit-sharing) convert the snare into a tangled rope, or would it remain extraction despite token payments?",
+      "resolution_mechanism": "Comparative analysis of South Korean public opinion on acceptable compensation levels; international precedent (EU data dividend proposals, California CPRA buyouts); economic modeling of training data value extraction",
+      "impact": "If compensation \u226510% of AI model value generation: reclassifies snare perspective as tangled rope (coordination + asymmetric but acknowledged extraction). If compensation <2% of value: snare classification confirmed; compensation is performative theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compensation could legitimize data extraction"
+    },
+    {
+      "id": "technical_training_necessity",
+      "question": "Is unrestricted data access technically necessary for competitive AI training, or are privacy-preserving alternatives (federated learning, synthetic data, differential privacy) sufficient for the state-of-the-art?",
+      "resolution_mechanism": "Benchmark performance of Korean AI models trained under exemption vs. international models trained on privacy-preserving methods; technical assessment by independent ML researchers; follow-up performance metrics over 3-5 years",
+      "impact": "If privacy-preserving methods prove sufficient: exemption is purely extractive, not coordination-driven; reclassifies from tangled rope toward pure snare. If unrestricted data proves materially superior: strengthens tangled rope / scaffold narratives (legitimate competitive need for temporary exemption).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether unrestricted data access is technically necessary for competitive AI"
+    },
+    {
+      "id": "international_reciprocal_liability",
+      "question": "Will exemptions in other countries (US domestic foundation model training, EU data adequacy decisions, China's training data policies) converge into mutual legitimation or escalate into bilateral sanctions?",
+      "resolution_mechanism": "Tracking of US, EU, and China exemption policies; analysis of trade dispute filings and IP litigation patterns; monitoring of technology transfer restrictions and sanctions threats",
+      "impact": "If reciprocal exemptions emerge: globally normalized extraction (all perspectives see rope/tangled rope). If retaliation escalates: snare perspective strengthens for Korean companies (trapped by trade war), scaffold collapse (international sunset pressure evaporates), and global regime pitonification (privacy norms become vestigial theater).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exemptions will be reciprocated or trigger retaliation"
+    },
+    {
+      "id": "domestic_legal_challenge_route",
+      "question": "Will Korean constitutional courts, administrative courts, or international human rights bodies sustain the privacy exemption against data subject challenges?",
+      "resolution_mechanism": "Monitoring of filed lawsuits; analysis of Korean constitutional law precedent (right to privacy, informational self-determination); international human rights committee positions; analysis of sunset clause triggers",
+      "impact": "If domestic courts strike exemption: constraint dissolves (snare becomes moot, scaffold accelerates). If courts sustain: data subject victimhood is formally legitimized (snare perspective confirmed in law). If international human rights body finds violation: global regime pressure mounts (piton degradation accelerates).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legal sustainability of exemption under domestic and international law"
+    },
+    {
+      "id": "sunset_clause_enforceability",
+      "question": "If a sunset clause is written into the act (scaffold logic), will politicians actually allow it to expire, or will competitive pressure force indefinite renewal?",
+      "resolution_mechanism": "Analysis of prior industrial policy sunsets in South Korea (semiconductor export restrictions, shipbuilding subsidies); monitoring of industry lobbying intensity as sunset deadline approaches; international pressure measurement (trade disputes, IP litigation volume)",
+      "impact": "If sunsets enforced: scaffold classification confirmed; institutional commitment to transition to privacy-preserving alternatives. If renewed indefinitely: scaffold is aspirational theater; reclassifies piton (performative sunset threat maintained but not executed).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political will to enforce sunset clauses"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 7
+  },
+  "commentary": {
+    "narrative_context": "South Korea's proposed AI Industry Promotion Act creates a legal framework granting AI developers broad exemptions from privacy and copyright law, framed as temporary industrial policy to accelerate national AI competitiveness. The act exemplifies a structural tension between national technological development incentives and global data protection norms. The same regulatory architecture exhibits all major constraint types depending on observer position: pure extraction for data subjects (snare), mixed coordination-extraction for the domestic AI industry (tangled rope), pure coordination for the government (rope), mixed extraction with organized resistance for international firms (tangled rope), temporary crisis framework for advocates (scaffold), and degraded norm violation for the global privacy regime (piton). The constraint's extractiveness has risen from 0.35 (initial proposal) to 0.58 (current draft) as exemptions have expanded beyond anonymized research data to include commercial model training. Theater ratio (0.52) reflects mixed function: the exemption does coordinate industry around a common data pipeline, but also requires performative compliance mechanisms (ethics review boards, vague 'research purpose' certifications) that operate as theater masking the extraction.",
+    "key_agents": [
+      "Data Subjects (citizens): Primary victims (powerless/trapped) \u2014 personal data becomes non-consensual training material; no exit option within Korean jurisdiction",
+      "Copyright Holders (international): Secondary victims (moderate/constrained) \u2014 creative works extracted without compensation; exit constrained by enforcement slowness and foreign jurisdiction",
+      "Domestic AI Companies: Primary beneficiaries (organized/constrained) \u2014 gain coordinated data access and competitive advantage; constrained by potential revocation or international retaliation",
+      "Technology Ministry & Government: Institutional beneficiary (institutional/arbitrage) \u2014 shapes policy directly; arbitrage exit to alternative industrial policies; net coordinator",
+      "International Tech Companies & WIPO Coalition: Organized victims (organized/mobile) \u2014 face extraction but have mobility through trade pressure, WTO disputes, reciprocal exemptions",
+      "Privacy Advocates & Civil Society: Secondary agents (powerful/mobile) \u2014 build alternatives (differential privacy, federated learning); frame exemption as temporary scaffold",
+      "Global Privacy Regulatory Regime: Institutional observer (institutional/arbitrage) \u2014 GDPR/CCPA represent international epistemic standard; South Korean exemption degrades this norm"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The act grants unrestricted collection and processing of personal data without consent for AI training \u2014 a significant extraction from data subjects. However, it falls short of maximal extraction (0.70+) because: (1) the exemption is territorially bounded (applies only within South Korea), limiting total extractable data; (2) international copyright holders retain legal recourse in foreign courts, though expensive; (3) the act includes nominal ethics review procedures (theater, but reducing bare extraction); (4) competitive pressure and international responses will constrain duration. Suppression (0.68): High. Suppression is explicit and multifaceted: privacy law is suspended by statute, copyright law is exempted, consent requirements are waived, and no data subject notification is mandated. Suppression is not maximal (0.70+) because data subjects retain some informal exit options (VPN, pseudonymization, alternative identity use) and privacy advocates retain international recourse. Theater ratio (0.52): Mixed. The ethics review procedures (Research Ethics Boards) are performative theater \u2014 they lack enforcement power, clear standards, or meaningful review authority. However, the core function (coordinating industry around a data pipeline) is genuinely structural, not purely theatrical. Unlike a piton, the core coordination function remains intact; unlike a rope, significant extraction remains visible. The trajectory over time shows theater increasing (more review procedures added) while core extraction also increases (scope expanded), suggesting the act is accumulating legitimacy theater while actual extraction grows.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence driven by directionality. Data subjects and copyright holders perceive snare \u2014 they are trapped and harvested. The domestic AI industry perceives rope \u2014 pure coordination benefit with maximum exit options (arbitrage to other policies). International firms perceive tangled rope \u2014 they face real extraction but have organized power to push back. Privacy advocates perceive scaffold \u2014 a temporary problem being solved by technical alternatives (privacy-preserving ML). The global privacy regime perceives piton \u2014 the exemption violates established norms but persists through state power, not through demonstrated superiority. The analytical observer risks mountain \u2014 naturalizing extraction as inevitable law of AI development. This perspectival spread (snare \u2192 rope \u2192 tangled rope \u2192 scaffold \u2192 piton \u2192 mountain) is maximal, indicating the constraint has not yet stabilized into a clear type. The instability is driven by the omega variables: if technical alternatives succeed, scaffold \u2192 rope; if international retaliation escalates, rope \u2192 snare (for beneficiaries); if courts strike the exemption, all perspectives collapse. The constraint is a pure case of contested institutional architecture with unstable equilibrium.",
+    "directionality_logic": "Data subjects: Victim + trapped within national boundaries \u2192 d\u22480.92, f(d)\u22481.40. Cannot exit, cannot organize, cannot legally object. Maximum d derives from structural powerlessness combined with full victimhood (data extraction without compensation). Copyright holders: Victim + constrained (can litigate but slowly, expensively, in foreign courts) \u2192 d\u22480.85, f(d)\u22481.20. High d because extraction is uncompensated and escape routes are blocked by jurisdiction and cost. Domestic AI companies: Beneficiary + constrained (could lose exemptions via retaliation or domestic political shift) \u2192 d\u22480.35, f(d)\u22480.35. Low d because they are net beneficiaries of the structure; constraint is experienced as coordinating opportunity, not extraction. Technology ministry: Beneficiary + arbitrage (can shift to other policies without constraint) \u2192 d\u22480.08, f(d)\u2248-0.10. Minimal d; net beneficiary with maximum exit flexibility. International tech coalition: Mixed (both beneficiaries of reciprocal exemptions globally AND victims of this specific exemption) + organized + mobile \u2192 d\u22480.58, f(d)\u22480.80. Mid-range d reflecting that they can push back through coordinated action but face real extraction costs during the act's duration. Global privacy regime: Institutional observer + institutional power but constrained by state sovereignty \u2192 d\u22480.65, f(d)\u22480.95 (not explicitly computed but implied piton observation). The regime sees itself as victim of norm erosion but lacks direct enforcement power.",
+    "mandatrophy_analysis": "Mandatrophy is UNRESOLVED. The constraint contains genuine coordinating function (aligning industry around shared data infrastructure, enabling Korean AI sector coordination) AND genuine extraction (uncompensated data use, copyright violation, consent waiver). The challenge is decomposing whether the extraction is NECESSARY to the coordination or merely EXPLOITATIVE. (1) NECESSARY EXTRACTION pathway: Unrestricted data access is technically required for competitive model training. Privacy-preserving alternatives (federated learning, differential privacy, synthetic data) cannot match performance. In this case, the exemption is a justified temporary measure \u2014 tangled rope with legitimate asymmetry. The sunset clause omega (#1, data compensation) determines whether this legitimacy is acknowledged. (2) PURELY EXPLOITATIVE pathway: Privacy-preserving methods are technically sufficient, but exemption is cheaper and faster \u2014 extraction serves rent-seeking, not coordination. In this case, the exemption is a snare masquerading as industrial policy. Omega #2 (technical necessity) will resolve this. (3) RACE-TO-THE-BOTTOM pathway: South Korea's exemption triggers reciprocal exemptions in US, EU, China, and India. Global convergence to mutual extraction (all countries exempting copyright and privacy for their AI sectors) becomes normalized as 'the cost of AI competitiveness.' In this case, all perspectives shift: what appears as snare to Korean data subjects appears as rope to a global AI industry that has collectively exempted itself. Omega #3 (reciprocal liability) resolves this. CURRENT STATUS: High extractiveness (0.58 > 0.46) triggers mandatrophy requirement. The commentary declares the constraint TANGLED ROPE with the explicit caveat that this is contingent on omegas #2 and #3 resolving toward 'technical necessity' and 'reciprocal legitimation.' If omegas resolve opposite \u2014 technical alternatives exist AND retaliation escalates \u2014 the constraint reclassifies to SNARE and mandatrophy is violated (false tangled rope). The act's actual classification will be determined by 3-5 years of empirical data: Do Korean AI models outperform privacy-trained alternatives? Do other jurisdictions retaliate or reciprocate? The framework's role is to make this instability explicit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_ai_data_governance",
+      "gdpr_extraterritorial_scope",
+      "copyright_ai_training_liability"
+    ],
+    "dual_formulation_note": "This constraint is downstream of two distinct upstream pressures: (1) technical claims about AI training data requirements (epsilon \u2248 0.42, contested); (2) geopolitical race dynamics in semiconductor/AI leadership (epsilon \u2248 0.35, structural). The 0.58 extractiveness of the act itself represents a mixed response to both pressures. Decomposition: global_ai_data_governance (\u03b5=0.35, rope/scaffold) establishes the international coordination problem; sk_ai_act_2026 (\u03b5=0.58, tangled rope) is a unilateral response that transforms coordination into extraction. The act also feeds back into copyright_ai_training_liability (\u03b5=0.48, tangled rope) by establishing precedent for statutory exemption rather than statutory liability."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "global_ai_data_governance",
+      "geopolitical_ai_race"
+    ]
+  }
+}

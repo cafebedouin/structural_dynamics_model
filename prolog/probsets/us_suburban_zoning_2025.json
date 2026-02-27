@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "us_suburban_zoning_2025",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "has_sunset_clause": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Low-Income Renters",
+      "comment": "Low-income renters are trapped by the lack of affordable housing options within the region due to exclusionary zoning. They have little power to change zoning laws and are disproportionately affected by the limited housing supply."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Existing Homeowners",
+      "comment": "Existing homeowners benefit from increased property values and the preservation of neighborhood character. They often have the power to influence local zoning decisions and can arbitrage their position through political action and community organizing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Future Residents",
+      "comment": "Future residents are constrained by the limited housing supply and higher costs imposed by zoning regulations. While they may benefit from the perceived stability and character of single-family neighborhoods, their housing options are limited, and they lack representation in current zoning decisions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "YIMBY Organizations",
+      "comment": "YIMBY (Yes In My Backyard) organizations are actively working to reform zoning laws and increase housing density. They view the current zoning system as a temporary obstacle to be overcome through advocacy and policy changes. They are mobile because they can advocate for changes in zoning policy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Local Zoning Boards",
+      "comment": "Local zoning boards are often trapped by existing regulations and political pressures from homeowners. While they may have the authority to make changes, they are constrained by limited resources and public opposition, resulting in incremental adjustments rather than fundamental reforms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational and global perspective, single-family zoning presents a mixed picture. On one hand, it preserves neighborhood character and promotes stability. On the other hand, it limits housing supply, increases costs, and perpetuates inequality. The long-term consequences of this system are difficult to predict, making it a tangled rope with both benefits and drawbacks."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "density_tolerance_threshold",
+      "question": "What is the maximum acceptable density increase that can be implemented without causing significant social or environmental disruption?",
+      "resolution_mechanism": "Empirical studies of density impacts, community surveys, and simulations of traffic and infrastructure changes.",
+      "impact": "If low tolerance: zoning reform will be limited, perpetuating existing housing shortages. If high tolerance: more significant zoning changes will be possible, potentially leading to more affordable housing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Density increase tolerance level in existing single family areas."
+    },
+    {
+      "id": "political_feasibility_of_reform",
+      "question": "What is the likelihood of overcoming political opposition to zoning reform and implementing meaningful changes?",
+      "resolution_mechanism": "Analysis of political dynamics, public opinion polls, and case studies of successful zoning reforms in other areas.",
+      "impact": "If low feasibility: zoning reform will be stalled, and existing patterns of segregation and inequality will persist. If high feasibility: zoning reform will be successful, leading to more diverse and inclusive communities.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Political feasibility of zoning reform."
+    },
+    {
+      "id": "economic_impact_of_deregulation",
+      "question": "What would be the economic consequences of deregulating zoning and allowing higher-density housing?",
+      "resolution_mechanism": "Economic modeling of housing markets, employment patterns, and tax revenues under different zoning scenarios.",
+      "impact": "If negative impact: zoning deregulation may lead to unintended consequences, such as increased traffic congestion and infrastructure strain. If positive impact: zoning deregulation may boost economic growth and create more opportunities for low-income residents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic impact from zoning deregulation and increased densification."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Local zoning codes in the United States restrict large swaths of metropolitan land to low-density, single-family homes. This constraint story examines the impacts of these zoning codes on various stakeholders, including homeowners, renters, and future residents. The system creates winners and losers, and there are complex trade-offs to consider when evaluating the effectiveness and fairness of these regulations.",
+    "key_agents": [
+      "Existing Homeowners: Primary beneficiary (institutional/arbitrage) - benefit from increased property values and preservation of neighborhood character.",
+      "Low-Income Renters: Primary victim (powerless/trapped) - trapped by the lack of affordable housing options due to exclusionary zoning.",
+      "Future Residents: Secondary victim (moderate/constrained) - constrained by the limited housing supply and higher costs imposed by zoning regulations.",
+      "Construction Industry: Secondary beneficiary (powerful/mobile) - benefit from increased demand for single-family homes and the ability to build in desirable areas.",
+      "YIMBY Organizations: Organized agents (organized/mobile) - actively working to reform zoning laws and increase housing density.",
+      "Local Zoning Boards: Institutional actors (institutional/constrained) - constrained by existing regulations and political pressures from homeowners."
+    ],
+    "logic_rationale": "Extractiveness (0.6): Significant. Zoning regulations extract value from low-income renters and future residents by limiting housing supply and increasing costs. Existing homeowners and the construction industry benefit from this extraction. Suppression (0.7): High. Zoning codes actively suppress alternative housing options, such as apartments and townhouses, and limit the potential for higher-density development. This suppression is enforced through legal regulations and community opposition. Theater ratio (0.75): High. While there is some public participation in zoning decisions, the process is often dominated by homeowners and developers, and the interests of renters and future residents are not adequately represented.",
+    "perspectival_gap": "The perspectives of different stakeholders vary significantly. Homeowners see zoning as a way to protect their property values and neighborhood character, while renters see it as a barrier to affordable housing. Future residents may benefit from the perceived stability of single-family neighborhoods, but they also face limited housing options and higher costs. YIMBY organizations view zoning as a temporary obstacle to be overcome through advocacy and policy changes.",
+    "directionality_logic": "Directionality is determined by the agent's position relative to the extraction flow. Existing homeowners and the construction industry benefit from zoning regulations, while renters and future residents bear the costs. YIMBY organizations are working to change the system, and their directionality is therefore more complex. Local zoning boards are often caught in the middle, trying to balance the competing interests of different stakeholders.",
+    "mandatrophy_analysis": "This constraint presents a trade-off between the benefits of preserving neighborhood character and the costs of limiting housing supply and increasing inequality. The classification as a tangled rope reflects the complex interplay of coordination and extraction, with no easy solutions. While zoning can be seen as a tool for coordination (e.g., preventing incompatible land uses), it also creates significant barriers to entry and perpetuates existing patterns of segregation. The challenge is to find a balance that promotes both affordability and community stability."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "us_housing_market_instability",
+      "urban_sprawl_inefficiency"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "fda_gonorrhea_efficacy_standard",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gonor"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "FDA Unified Efficacy Standard for Gonorrhea Treatment",
+    "topic_domain": "pharmaceutical/regulatory/public_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_drug_manufacturers",
+      "clinical_trial_infrastructure"
+    ],
+    "victims": [
+      "antibiotic_resistant_patients",
+      "drug_development_innovation"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Treatment-Resistant Patient",
+      "comment": "PERSPECTIVE 1: TREATMENT-RESISTANT PATIENT (SNARE) \u2014 Patient infected with antibiotic-resistant gonorrhea has no exit: existing drugs fail, FDA standard blocks novel oral option. Trapped between failed treatment and regulatory barrier. Maximum experienced extraction \u2014 no alternatives available within constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Antibiotic Researcher/Developer",
+      "comment": "PERSPECTIVE 2: ANTIBIOTIC RESEARCHER (TANGLED ROPE) \u2014 Benefits from coordination function (FDA efficacy standard prevents race-to-bottom in drug safety). Simultaneously bears extraction cost: high regulatory barrier delays market entry, reduces investment attractiveness, creates 10+ year development timeline. Constrained exit \u2014 can develop drugs but faces unified efficacy gate controlling market access."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Established Pharmaceutical Manufacturer",
+      "comment": "PERSPECTIVE 3: ESTABLISHED MANUFACTURER (ROPE) \u2014 Sees efficacy standard as coordination mechanism protecting market position. High regulatory barrier creates moat: competitors must invest billions to clear FDA hurdle. Net beneficiary \u2014 extraction runs toward this actor. Can arbitrage between jurisdictions (approve elsewhere first, pressure FDA later)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Public Health Authority Coalition",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH AUTHORITY (SCAFFOLD) \u2014 Sees efficacy standard as temporary coordination problem with sunset. Advanced diagnostics (rapid resistance testing), combination therapies, and vaccine development pathways are emerging alternatives that will eventually bypass the antibiotic bottleneck. Standard has built-in review mechanism (5-year efficacy review cycles) creating explicit sunset logic. Mobile exit through alternative intervention pathways."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "FDA Advisory Panel",
+      "comment": "PERSPECTIVE 5: FDA ADVISORY PANEL (PITON) \u2014 The specific efficacy standard applied to gonorrhea oral antibiotics is substantially performative. Panel lacks current resistance surveillance data at time of voting; standard is calibrated to preclinical efficacy thresholds developed for earlier-generation drugs; voting process performs scientific rigor while underlying data has degraded relevance. Theater ratio (0.65) reflects that the panel's deliberation appears rigorous but the informational basis is outdated. Maintained through institutional inertia rather than current functional verification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational/global view, the efficacy standard performs both coordination (prevents unsafe drugs) and extraction (blocks needed treatments). Unlike a pure mountain (immutable scientific law), the standard is a constructed institutional rule. Unlike pure rope, it creates genuine harm by delaying access. The dual function (real coordination + real extraction) and active enforcement (FDA committee voting) make this legitimately tangled."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "resistance_trajectory_certainty",
+      "question": "What is the true current rate of fluoroquinolone-resistant N. gonorrhoeae, and does it exceed the threshold at which an oral antibiotic with 90% efficacy becomes a net public health benefit despite lower efficacy than IV cephalosporin standard?",
+      "resolution_mechanism": "National surveillance data (CDC GISP program) with resistance rates stratified by region and risk population; prospective comparison of treatment outcomes with oral 90%-efficacy drug vs. fluoroquinolone-resistant strains in realistic patient populations",
+      "impact": "If resistance rate > 30% in target populations: the efficacy standard is extractive (blocks beneficial treatment). If resistance rate < 15%: standard may be defensibly protective. Resistance trajectory also matters \u2014 accelerating resistance changes the cost-benefit calculus.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Current fluoroquinolone resistance rate and acceleration trajectory"
+    },
+    {
+      "id": "efficacy_threshold_derivation",
+      "question": "Was the 95% efficacy threshold for new oral gonorrhea antibiotics derived from current epidemiological data, or inherited from older standards for different drug classes and resistance landscapes?",
+      "resolution_mechanism": "Document review of FDA guidance documents and historical efficacy standard precedents; comparison to 2022-2025 resistance surveillance data and treatment failure rates under current standard",
+      "impact": "If inherited from older standards: threshold is a piton (performative, maintained by inertia) and extraction occurs because standard is not calibrated to current conditions. If newly derived: standard is legitimately coordinating. This determines whether the regulation is tangled rope (mixed) or pure snare (blocking needed treatment).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether efficacy threshold reflects current epidemiology or historical precedent"
+    },
+    {
+      "id": "alternative_pathway_viability",
+      "question": "What is the realistic timeline for alternative gonorrhea interventions (rapid diagnostics, combination therapies, vaccines) to reduce dependence on this specific oral antibiotic pathway?",
+      "resolution_mechanism": "Clinical pipeline review; analysis of CDC/WHO resistance containment strategies; assessment of vaccine development progress (e.g., meningococcal vaccine cross-reactivity)",
+      "impact": "If alternatives mature within 5-7 years: scaffold perspective is valid (temporary barrier with sunset). If alternatives are 15+ years away: scaffold classification is aspirational rather than structural, and the constraint becomes more purely extractive. Determines whether mandatrophy is resolved (real sunset) or deferred (appearance of exit without functional exit).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline for alternative intervention pathways to mature"
+    },
+    {
+      "id": "treatment_failure_attribution",
+      "question": "When an oral antibiotic candidate fails to meet the 95% efficacy threshold in trial, is the failure primarily due to pharmacological inadequacy, trial design sensitivity, or evolving resistance in the trial population during enrollment?",
+      "resolution_mechanism": "Re-analysis of failed trial datasets; mechanism-of-action studies; correlation of failure with strain resistance patterns in enrolled patients",
+      "impact": "If failures are primarily pharmacological: standard is protective coordination. If failures are trial design artifacts or resistance dynamics: standard blocks viable treatments and is extractive. Determines whether the regulation serves its stated safety function or performs coordination while achieving extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Root cause of efficacy threshold failures in clinical trials"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The FDA efficacy standard for new oral gonorrhea antibiotics exemplifies a regulatory constraint that performs both protective coordination and extractive market gatekeeping. The constraint emerged from legitimate concerns about drug safety and resistance management, but has evolved into a mechanism that blocks potentially beneficial treatments while maintaining market advantage for established manufacturers. The Advisory Committee's rejection of a candidate oral antibiotic reflects a 95% efficacy threshold that may not reflect current epidemiological realities of fluoroquinolone resistance. For patients infected with resistant strains, the standard creates a structural trap: existing drugs fail, and the regulatory barrier prevents access to novel options. For researchers and smaller manufacturers, the barrier extracts through delayed market entry and increased development costs. For public health authorities and the established pharmaceutical industry, the standard performs coordination by preventing degradation of antibiotic stewardship. The constraint's theater ratio (0.65) reflects that the FDA deliberation appears scientifically rigorous while operating on outdated efficacy thresholds, creating substantial performative content. The extractiveness trajectory (0.35\u21920.58 over 10 years) shows increasing extraction as resistance rates accelerated and the efficacy standard's protective function degraded while its gatekeeping function strengthened.",
+    "key_agents": [
+      "Treatment-Resistant Patient: Primary victim (powerless/trapped) \u2014 faces failed existing treatments and FDA-blocked alternatives; no structural exit",
+      "Antibiotic Researcher/Developer: Secondary victim (moderate/constrained) \u2014 benefits from coordination function but bears extraction through regulatory delay and high development costs",
+      "Established Pharmaceutical Manufacturer: Primary beneficiary (institutional/arbitrage) \u2014 protected market position through regulatory moat; can arbitrage across jurisdictions",
+      "Public Health Authority: Organized actor (organized/mobile) \u2014 sees temporary coordination problem with alternative pathways (diagnostics, vaccines) as exit routes",
+      "FDA Advisory Panel: Institutional actor (institutional/constrained) \u2014 maintains performative efficacy standard; sees own process as degraded but constrained to follow inherited precedent",
+      "Analytical Observer: Neutral analyst (analytical/analytical) \u2014 observes genuine dual function (protective coordination + extractive gatekeeping) that resists reduction to single type"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The efficacy standard blocks market access for new oral antibiotics, benefiting established manufacturers and maintaining high development costs that deter entry. However, the extraction is not maximal because: (1) the standard has a stated protective function (drug safety and resistance management) that is not entirely pretextual, and (2) alternative interventions exist (IV cephalosporins, although increasingly failing). Suppression (0.62): Moderate-high. Barriers include the 95% efficacy threshold itself, high trial costs ($500M+ for antibiotic development), lengthy review timelines (10+ years), and lack of incentive structures (antibiotic profits are low relative to other drug classes). But suppression is not total \u2014 drugs can eventually clear the standard; the pathway is constrained rather than entirely closed. Theater ratio (0.65): Moderate-high. The FDA Advisory Committee's voting process appears rigorous (expert review, evidence presentation), but the underlying efficacy threshold is outdated, calibrated to older resistance landscapes. The deliberation performs scientific authority while operating on stale data.",
+    "perspectival_gap": "Beneficiary (established manufacturer) experiences the standard as protective coordination \u2014 it prevents generic competition and maintains stewardship. Victim (resistant patient) experiences it as pure extraction \u2014 the regulatory barrier blocks needed treatment. Researcher experiences it as tangled rope \u2014 the standard provides coordination (ensures safety) but extracts through delayed market entry. The gap reflects genuine structural differences: each agent's exit options, power level, and position in the extraction flow are different. The standard is not 'really' any single type; it is legitimately tangled across perspectives.",
+    "directionality_logic": "Beneficiaries (established manufacturers) have institutional power and arbitrage options \u2014 they can lobby for standard maintenance or shift to other therapeutic areas. Their directionality (d) is low (~0.20), yielding negative effective extractiveness from their perspective. Victims (resistant patients) have powerless status and trapped exit \u2014 no alternatives within or outside the constraint. Their d is high (~0.90), yielding maximum experienced extraction. Researchers occupy the middle: moderate power, constrained exit (can develop drugs but face high barrier). Their d is moderate (~0.55), consistent with tangled rope classification. The suppression value (0.62) is not scaled by these directionality parameters \u2014 suppression is a raw structural property of the constraint itself, reflecting the objective barriers to market entry.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by clarifying the dual mechanism: the efficacy standard performs legitimate coordination (prevents unsafe drugs from reaching market) while simultaneously extracting value (blocks competition, maintains prices, delays access to beneficial treatments for resistant infections). This is the definition of tangled rope \u2014 genuine coordination function PLUS asymmetric extraction. The classification cannot be reduced to 'really just a snare' or 'really just a rope' because both the protective function and the extractive mechanism are structurally real. The ambiguity is not resolvable by choosing a measurement basis \u2014 it reflects genuine institutional hybridity. Mandatrophy is resolved by accepting that the standard is legitimately tangled, not by denying either the protective or extractive component."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "antibiotic_stewardship_incentive",
+      "rare_disease_drug_development",
+      "drug_pricing_power_asymmetry"
+    ],
+    "dual_formulation_note": "The efficacy standard constraint is upstream of multiple downstream constraints: it affects antibiotic stewardship policy (by controlling which drugs can be prescribed), drug development incentives (by raising entry costs), and pricing power asymmetries (by maintaining market concentration). Each downstream constraint has its own extractiveness value reflecting domain-specific factors, but all are structurally influenced by this efficacy standard's gate."
+  },
+  "directionality_overrides": []
+}

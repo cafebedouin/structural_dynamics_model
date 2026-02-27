@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "mltt_economic_model",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Major League Table Tennis Economic Model",
+    "topic_domain": "sports/economic_organization",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "league_ownership",
+      "franchise_operators",
+      "elite_players"
+    ],
+    "victims": [
+      "development_tier_players",
+      "grassroots_table_tennis_clubs",
+      "amateur_competitive_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Development Tier Player",
+      "comment": "PERSPECTIVE 1: DEVELOPMENT TIER PLAYER (SNARE) \u2014 Trapped in a system where advancement requires acceptance of league contract terms with limited negotiating power. High suppression of alternatives (limited professional opportunities outside MLTT). Cannot exit without sacrificing career development pathway. d\u22480.92, f(d)\u22481.40, \u03c3=1.0 \u2192 \u03c7\u22480.73."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Grassroots Club Ecosystem",
+      "comment": "PERSPECTIVE 2: GRASSROOTS CLUB ECOSYSTEM (SNARE) \u2014 Local and regional clubs face extraction through league centralization policies that concentrate prize money, sponsorships, and media attention at the MLTT level. Trapped in providing talent pipeline while bearing training costs. Clubs cannot exit without abandoning pathway to visibility. d\u22480.88, f(d)\u22481.35, \u03c3=0.9 \u2192 \u03c7\u22480.60."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Elite Player",
+      "comment": "PERSPECTIVE 3: ELITE PLAYER (TANGLED ROPE) \u2014 High-ranked players benefit from centralized league sponsorship, media coverage, and prize distribution while bearing constraints on team composition, scheduling, and contractual restrictions. Extraction exists (salary cap, revenue sharing limits) but coordination benefits (guaranteed income, infrastructure, international exposure) are genuine. d\u22480.58, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "League Ownership and Franchise Operators",
+      "comment": "PERSPECTIVE 4: LEAGUE OWNERSHIP AND FRANCHISE OPERATORS (ROPE) \u2014 Primary beneficiaries experiencing the constraint as coordination mechanism. League structure solves collective action problem of talent concentration and broadcast rights negotiation. Franchises can arbitrage between league rules and player development. d\u22480.10, f(d)\u2248-0.08, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Net beneficiaries."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Players Association and Regulatory Bodies",
+      "comment": "PERSPECTIVE 5: PLAYERS ASSOCIATION AND REGULATORY BODIES (TANGLED ROPE) \u2014 Organized agents with agency to negotiate terms and enforce standards. Experience mixed coordination (unified rules, dispute resolution) and extraction (revenue caps, restricted mobility). Association has mobile exit option (strike, legal challenge) but faces institutional barriers. d\u22480.52, f(d)\u22480.70, \u03c3=1.0 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Table Tennis Federation Structures",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL TABLE TENNIS FEDERATION STRUCTURES (PITON) \u2014 Legacy federation governance persists through institutional inertia despite MLTT creating parallel organizational structure. Dual governance theater (both ITTF and MLTT claim authority). theater_ratio=0.58 indicates moderate performative content in maintaining jurisdictional claims. Degraded function: international coordination happens through MLTT; federation maintains ceremonial role."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Market Competition View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From civilizational timescale, league-based professionalization in sport appears as inevitable structural evolution. Centralized economic models emerge as irreducible constraint from competitive market dynamics: concentration creates efficiency, networks effects drive consolidation. However, structural data (\u03b5=0.52, suppression=0.48) contradicts mountain classification \u2014 empirically, alternative models exist (cooperative leagues, player-owned franchises, guild systems). False summit detection: constraint is contingent institutional choice, not immutable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "franchise_financial_viability",
+      "question": "Are franchise financial models sustainable without extracting from development-tier players and grassroots clubs?",
+      "resolution_mechanism": "Multi-year financial audit of franchise operations; comparative analysis with alternative league structures (cooperative, player-owned models); sensitivity analysis on revenue sources",
+      "impact": "If sustainable: coordination model (Rope/Tangled Rope). If not: extraction is structurally required for league survival (Snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether franchise models can be financially viable without extracting from development tier"
+    },
+    {
+      "id": "player_mobility_threshold",
+      "question": "What salary or contractual flexibility would convert development-tier players from trapped to constrained or mobile?",
+      "resolution_mechanism": "Survey data on player career alternatives; analysis of contract opt-out frequency and utilization rates; international comparisons with less restrictive leagues",
+      "impact": "If threshold is achievable: constraint degrades from Snare toward Tangled Rope. If threshold is economically infeasible: Snare classification is structural.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Salary and contractual flexibility needed for player mobility"
+    },
+    {
+      "id": "grassroots_subsidy_requirement",
+      "question": "Do grassroots clubs require direct MLTT subsidy to remain viable, or is voluntary participation sufficient?",
+      "resolution_mechanism": "Financial tracking of club closure rates pre- and post-MLTT; analysis of participation trends in regions with vs. without MLTT franchise presence; comparison with independent club models",
+      "impact": "If subsidy required: victims are trapped (Snare). If voluntary: victims are constrained but not trapped (Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether grassroots clubs require MLTT subsidies for viability"
+    },
+    {
+      "id": "international_federation_authority",
+      "question": "Does MLTT hold de facto governing authority over professional table tennis, or does ITTF retain residual control?",
+      "resolution_mechanism": "Analysis of rule-setting precedence; tracking of player eligibility and sanctions decisions; documentation of jurisdictional disputes and outcomes",
+      "impact": "If MLTT is dominant: federation is Piton (degraded). If authority is contested: constraint is Tangled Rope with regulatory capture risk.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether MLTT or ITTF holds de facto governing authority"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Major League Table Tennis economic model represents a newly consolidated organizational structure in a historically fragmented sport. MLTT centralizes professional competition, sponsorship, media rights, and player compensation previously distributed across independent tournaments, regional associations, and grassroots clubs. This constraint exhibits the core characteristics of Tangled Rope: it solves genuine coordination problems (unified broadcast standards, international tournament scheduling, centralized marketing) while simultaneously extracting from development-tier players who lack negotiating power and grassroots clubs whose talent pipeline is now controlled by league franchises. The constraint appears as pure extraction (Snare) to trapped development players, as coordination benefit (Rope) to institutional league owners, and as degraded institutional authority (Piton) to international federation structures that predate MLTT. The theater ratio has declined over the first six years as the organizational structure has stabilized\u2014early promotional language about 'revolutionary professionalization' has given way to operational focus on franchise performance and player contracts.",
+    "key_agents": [
+      "League Ownership and Franchises: Institutional beneficiary (institutional/arbitrage) \u2014 capture concentrated sponsorship revenue and media rights, solve coordination problem of talent concentration",
+      "Elite Players (Top 50 Ranked): Secondary beneficiary (moderate/constrained) \u2014 gain access to centralized salary structure, broadcast exposure, and infrastructure while accepting contractual constraints",
+      "Development Tier Players (Ranked 51-300): Primary victim (powerless/trapped) \u2014 dependent on league advancement pathway with limited alternative professional opportunities; accept below-market salaries and restrictive contracts",
+      "Grassroots Clubs and Regional Associations: Secondary victim (powerless/trapped) \u2014 lose autonomy and revenue as talent pipeline becomes league-controlled; bear training costs for players who may be extracted by franchises",
+      "Players Association: Organized intermediary (organized/mobile) \u2014 negotiates terms for players but faces structural asymmetry between elite and development players",
+      "International Table Tennis Federation: Institutional observer (institutional/arbitrage) \u2014 retains nominal governance authority but experiences degraded function as MLTT becomes de facto governing body"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. MLTT captures meaningful economic surplus from two victim groups: development-tier players face below-market compensation due to limited alternatives; grassroots clubs lose autonomous revenue streams (sponsorships, participant fees flowing to franchises). However, extractiveness is not maximal (0.66+) because elite players do receive material benefits (salary stability, broadcast exposure, infrastructure investment) and coordination functions are genuine (tournament scheduling, broadcast standards, player development programs). The extraction is hybrid rather than pure. Suppression (0.48): Moderate. Development-tier players and grassroots clubs face real barriers to exit (limited alternative professional opportunities, dependence on league for competitive visibility) but not absolute suppression\u2014alternative models exist (independent tournaments, international club circuits, coaching careers). Suppression has structural sources (market concentration) rather than explicit coercion. Theater ratio (0.35): Low. The league exhibits functional coordination with minimal performative content\u2014operational structure (franchise ownership, player contracts, tournament logistics) has real economic consequences rather than symbolic function. The declining trajectory reflects maturation from promotional phase to stable operations.",
+    "perspectival_gap": "This constraint demonstrates substantial perspectival divergence driven by exit options and beneficiary/victim positioning. Development-tier players classify the structure as Snare (high extraction, suppression, no exit) while institutional owners classify it as Rope (coordination with positive net benefit to league). Elite players occupy an intermediate position (Tangled Rope\u2014genuine coordination benefit mixed with real contractual constraints). The organizational coalition (Players Association + Regulatory Bodies) sees a Tangled Rope with active enforcement, experiencing both coordination function and extraction pressure. The International Federation views MLTT as Piton\u2014a degraded institutional structure that has been superseded but persists through inertia. The civilizational analytical observer risks classifying the league-based model as an immutable mountain (inevitable evolution of professionalized sport) but the existence of alternative economic models (player cooperatives, guild systems, open tournament circuits) reveals this as a false summit\u2014the constraint is a contingent institutional choice enabled by market concentration, not a law of nature.",
+    "directionality_logic": "League ownership/franchises: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.07. Net beneficiaries with minimal extraction burden. Elite players: Beneficiary and victim (mixed) + constrained \u2192 d\u22480.58, f(d)\u22480.75. Moderate extraction: benefits from centralized system exceed constraints. Development-tier players: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction\u2014no alternatives. Grassroots clubs: Victim + trapped \u2192 d\u22480.88, f(d)\u22481.35. High extraction through loss of autonomy and revenue. Players Association: Organized + mobile \u2192 d\u22480.52, f(d)\u22480.70. Can negotiate and has strike capability but faces structural constraints from player-class asymmetry. International Federation: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.08. Retains nominal authority but has little active role\u2014Piton classification emerges from theater ratio, not directionality.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying that the tangled rope classification is not a mislabeling of either pure coordination or pure extraction. MLTT exhibits genuine coordination function (unified broadcasting, international tournament scheduling, player development infrastructure) AND genuine asymmetric extraction (development-tier salary suppression, grassroots revenue consolidation, franchise ownership concentration). The classification would be false if extractiveness were low (would indicate Rope not Tangled Rope) or if coordination were absent (would indicate Snare). The presence of both elements at moderate intensity (\u03b5=0.52, suppression=0.48, beneficiaries present, victims present, active enforcement required) confirms tangled rope rather than collapsing to either pure type. The mandatrophy is resolved through perspectival decomposition: different agents genuinely experience different constraint types because their structural positions generate different directionality values\u2014this is not ambiguity but rather accurate representation of asymmetric constraint structures."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "international_sports_league_proliferation",
+      "athlete_unionization_dynamics",
+      "grassroots_sports_participation_trends"
+    ],
+    "dual_formulation_note": "The MLTT economic model can be decomposed into two distinct constraints: (1) Professional League Coordination (\u03b5\u22480.15, primarily Rope) addressing genuine tournament scheduling and broadcast efficiency problems; (2) Economic Rent Extraction (\u03b5\u22480.58, primarily Snare) addressing talent concentration and development-tier salary suppression. The tangled rope classification at \u03b5=0.52 reflects the empirical fact that both mechanisms operate simultaneously with similar intensity. Upstream constraints (international federation fragmentation, athlete talent concentration) create conditions enabling both the coordination and extraction functions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "dutch_minority_govt_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dutch_minority"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dutch Minority Government External Support Agreement (2026)",
+    "topic_domain": "political/governmental",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pvv_parliamentary_caucus",
+      "coalition_formation_negotiators"
+    ],
+    "victims": [
+      "support_partner_parliamentary_independence",
+      "policy_coherence_across_spectrum"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The External Support Partner",
+      "comment": "PERSPECTIVE 1: EXTERNAL SUPPORT PARTNER (SNARE) \u2014 Constrained by legislative arithmetic: withdrawal collapses government and triggers early elections, risking worse outcomes. Cannot exit without severe political cost. Faces continuous extraction through veto power exploitation and policy concessions. d\u22480.80, f(d)\u22481.20, \u03c3=1.0 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The PVV-Led Government",
+      "comment": "PERSPECTIVE 2: PVV-LED GOVERNMENT (ROPE) \u2014 Experiences the support agreement as pure coordination: obtains parliamentary majority through negotiated terms. Arbitrage exit available (call elections, seek different coalition). Benefits from parliamentary stability and policy implementation. d\u22480.10, f(d)\u22480.05, \u03c3=1.0 \u2192 \u03c7\u22480.03. Near-zero effective extraction; net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Opposition Bloc",
+      "comment": "PERSPECTIVE 3: OPPOSITION BLOC (TANGLED ROPE) \u2014 Organized actors (left-right opposition) benefit from leverage in legislative amendments and agenda-setting (coordination function) but also suffer extraction: support agreement limits their blocking power and forces them into reactive positioning. Constrained exit due to electoral math. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Dutch Parliamentary Democracy",
+      "comment": "PERSPECTIVE 4: DUTCH PARLIAMENTARY DEMOCRACY (SCAFFOLD) \u2014 The support agreement is explicitly temporary (indexed to confidence votes, budget negotiations, election schedule). It solves a immediate gridlock (coordination function) via sunset: once electoral fragmentation deepens beyond recovery or consensus realigns, the agreement ends. Dutch consensual norms (polder model tradition) provide self-limiting structure. theater_ratio moderate; sunset clause implicit in support mechanism. d\u22480.45, f(d)\u22480.50, \u03c3=1.0 \u2192 \u03c7\u22480.26."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "European Parliamentary Stability Norms",
+      "comment": "PERSPECTIVE 5: EUROPEAN PARLIAMENTARY STABILITY NORMS (PITON) \u2014 The support agreement maintains performative appearance of parliamentary legitimacy while functioning as a contingency mechanism. European norms expect stable governments; the agreement theater creates that appearance despite fragile underlying arithmetic. theater_ratio=0.58 reflects performative confidence votes and policy scripts. Function (preventing electoral chaos) has degraded compared to majority coalition governments; maintained through institutional inertia and electoral law constraints. d\u22480.50, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.38."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Electoral Arithmetic)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ELECTORAL ARITHMETIC (MOUNTAIN-CANDIDATE) \u2014 From a civilizational/global view, Dutch electoral proportionality (D'Hondt method) creates structural inevitability: fragmented results mathematically require either grand coalitions or external support mechanisms. The constraint appears natural-law-like \u2014 inherent to the electoral system design. However, base properties (\u03b5=0.52, suppression=0.65, theater=0.58) contradict mountain classification: this is contingent on specific historical party configurations and electoral choices, not on mathematical necessity. Engine flags as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "support_partner_defection_threshold",
+      "question": "What policy concession or external shock would trigger defection of the support partner?",
+      "resolution_mechanism": "Tracking of policy negotiations; analysis of partner's red lines; coalition stress-testing under budget crises or immigration controversies",
+      "impact": "If threshold is low: support agreement is fragile (behaves like Snare). If threshold is high: government has real stability (Rope-like). Determines whether next 12-24 months see collapse or consolidation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Defection threshold for support partner"
+    },
+    {
+      "id": "extraction_mechanism_formality",
+      "question": "Is the extraction mechanism (veto power, policy concessions) formally written in the support agreement or implicit in repeated negotiation?",
+      "resolution_mechanism": "Analysis of published support agreement text; comparison to actual policy outcomes; measurement of support partner influence on budgets, appointments, legislation",
+      "impact": "If formal: transparent Tangled Rope with measurable beneficiary/victim structure. If implicit: degrades to contingent Snare (support partner cannot publicly defend concessions as negotiated). Affects legitimacy and sustainability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Formality of extraction mechanism in support agreement"
+    },
+    {
+      "id": "electoral_realignment_timeline",
+      "question": "What electoral timeline would force renegotiation or collapse of the support agreement?",
+      "resolution_mechanism": "Polling trends; analysis of party coalition capacity; modeling of next election scenarios",
+      "impact": "If renegotiation likely within 18 months: agreement is Scaffold with real sunset. If stable for 3+ years: functions as quasi-permanent Tangled Rope. Sunset timing determines classification longevity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline to electoral realignment forcing renegotiation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Following the fragmented 2025 Dutch election, the far-right PVV emerged as the largest party but cannot command a majority coalition \u2014 no mainstream parties will enter formal coalition with the PVV due to ideological distance and international pressure. To govern, the PVV formed a minority government and secured external parliamentary support from one or more support partners (likely a combination of center-right and centrist parties) who agreed to abstain or conditionally vote for government measures in exchange for policy concessions and consultation rights. This creates a Tangled Rope constraint: the support partner provides genuine coordination (enabling government formation and passage of budgets/legislation) while simultaneously extracting policy concessions, ministerial positions, and/or budgetary commitments. The constraint exhibits the full perspectival range: the support partner experiences it as coercive (Snare) due to defection costs; the PVV government experiences it as beneficial coordination (Rope); opposition parties see both coordination opportunity and extraction (Tangled Rope); Dutch parliamentary norms see it as temporary stabilization (Scaffold); European stability expectations see it as degraded but maintained performance (Piton); and a global analytical observer risks naturalizing the constraint as inherent electoral inevitability (false Mountain).",
+    "key_agents": [
+      "PVV Parliamentary Caucus: Primary beneficiary (powerful/arbitrage) \u2014 forms government and controls cabinet; has arbitrage exit via new elections if dissatisfied with support terms",
+      "Support Partner (Center-Right/Centrist Coalition): Primary victim and agent of extraction (organized/constrained) \u2014 constrained by electoral arithmetic; withdrawal causes government collapse and likely worse electoral outcomes",
+      "Opposition Bloc (Left-Green-Socialist Parties): Secondary agent (organized/constrained) \u2014 have leverage through amendments and blocking coalitions but constrained by fragmentation; experience mixed coordination and extraction",
+      "Dutch Parliamentary Procedures: Institutional actor (institutional/constrained) \u2014 confidence votes and budget review cycles create formal venues for support partner leverage",
+      "EU Commission and International Partners: Analytical observer (analytical/analytical) \u2014 concern about PVV governance quality; support agreement provides reassurance of centrist constraint on PVV autonomy"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The support partner extracts significant policy concessions (typically 30-40% of cabinet positions, budget influence, veto rights on key legislation). But the extraction is not overwhelming because the support partner also has genuine coordination function \u2014 they enable government formation, which both sides need. The value reflects that roughly half of the support agreement's content is quid-pro-quo coordination, half is extraction asymmetry. Suppression (0.65): High. The support partner faces severe constraints: (1) legislative arithmetic forces continued participation (defection triggers elections); (2) reputational cost of being seen as propping up a controversial party; (3) internal party pressure from members who oppose supporting the PVV. These barriers suppress alternative negotiating outcomes. Theater ratio (0.58): Moderate. The agreement includes performative elements (confidence votes, policy speeches emphasizing consensus) but maintains functional legislative activity. The theater has increased from initial support agreement (0.42 at formation) as the government has become defensive and procedurally ritualistic. The increase tracks with extraction accumulation \u2014 as support partner leverage grows, more of the process becomes scripted negotiation and less is organic legislative work.",
+    "perspectival_gap": "The PVV government sees the support agreement as routine political coordination (Rope perspective) \u2014 they obtained parliamentary majority and can govern. The support partner sees it as coercive (Snare perspective) \u2014 trapped by electoral arithmetic, forced to tolerate a party they opposed, extracting concessions because defection is catastrophic. Opposition parties see opportunity and constraint (Tangled Rope) \u2014 they can amend government bills and force concessions from a weakened coalition, but they are also locked out by the support partner's veto. Dutch democratic norms see temporary stabilization (Scaffold) \u2014 the agreement is indexed to confidence votes and budgets, providing a natural sunset. European observers see degraded democracy (Piton) \u2014 the performative confidence votes create appearance of legitimacy while masking fragile coalition arithmetic. A naive analytical observer risks seeing electoral necessity (false Mountain) \u2014 claiming proportional representation mathematically requires support agreements \u2014 but the actual constraint is contingent on this specific party configuration.",
+    "directionality_logic": "PVV Government: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.05. Net beneficiary; can threaten new elections if dissatisfied with support terms. Support Partner: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.20. Severe extraction; constrained by electoral arithmetic and reputational risk. Opposition Bloc: Mixed victim/beneficiary + constrained \u2192 d\u22480.55, f(d)\u22480.75. Can lever amendments but cannot veto government measures. Dutch Parliamentary Norms: Institutional + constrained \u2192 d\u22480.45, f(d)\u22480.50. Norms enable support mechanism but are also strained by it. EU/International: Analytical observer + arbitrage \u2192 d\u22480.30, f(d)\u22480.15. Can influence support partner choice through diplomatic pressure but not directly participate.",
+    "mandatrophy_analysis": "The support agreement resolves the mandatrophy by distinguishing genuine coordination (government formation, budget passage, legislative majority) from asymmetric extraction (policy concessions, cabinet positions, ongoing veto leverage). The Tangled Rope classification is appropriate: both functions are real. The support partner genuinely needs to participate in governance (coordination); the PVV government genuinely extracts concessions in return (extraction). The perspectival gap shows how the same structural arrangement appears as Rope to beneficiaries and Snare to victims. The mandatrophy is resolved by acknowledging that BOTH readings are correct \u2014 the constraint IS a hybrid. The support agreement prevents mislabeling this as pure coordination (Rope) which would ignore the extraction, or pure extraction (Snare) which would ignore the coordination function. The theater ratio increase (0.42 \u2192 0.58) shows early signs of Goodhart drift: as the support partner's leverage grows, more of the process becomes performative script rather than functional governance. This tracks the extraction accumulation and suggests the constraint could degrade toward Piton or Snare if the support mechanism persists beyond its natural sunset."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_migration_policy_constraints",
+      "dutch_fiscal_sustainability"
+    ],
+    "dual_formulation_note": "The support agreement is downstream of the 2025 electoral fragmentation constraint but represents a distinct structural phenomenon. Electoral fragmentation (\u03b5\u22480.30, more stable/natural) creates the condition; the support agreement mechanism (\u03b5\u22480.52, more extractive/contingent) is the institutional response. They are linked but structurally distinct."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.8
+    }
+  ]
+}

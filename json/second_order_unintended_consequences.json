@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "second_order_unintended_consequences",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cobra",
+    "module_name_override": "constraint_second_order_unintended_consequences"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cobra Effect Trap: Second-Order Unintended Consequences",
+    "topic_domain": "social/economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "policy_implementers",
+      "metric_optimizers"
+    ],
+    "victims": [
+      "systemic_integrity",
+      "end_users",
+      "ground_truth_tracking"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User / Systemic Integrity",
+      "comment": "PERSPECTIVE 1: END USER / SYSTEMIC INTEGRITY (SNARE) \u2014 Those who depend on the system functioning for its original purpose (not the metric) are trapped. The Rope was intended to solve problem A; the secondary effect is problem B. End users have no exit: they cannot opt out of the system or the unintended consequence. The constraint appears as pure extraction because their welfare diverges from the incentive target."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ground-Truth Observer / Measurement Auditor",
+      "comment": "PERSPECTIVE 2: GROUND-TRUTH OBSERVER / MEASUREMENT AUDITOR (TANGLED ROPE) \u2014 Auditors and field-based observers who detect the secondary effect face a mixed experience. They benefit from the Rope's coordination function (shared measurement standards, systematic feedback) but bear the extraction cost of discovering metric gaming and having to report it despite institutional pressure to hide the divergence. Constrained exit: they can speak, but face institutional retaliation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Policy Implementer / Metric Optimizer",
+      "comment": "PERSPECTIVE 3: POLICY IMPLEMENTER / METRIC OPTIMIZER (ROPE) \u2014 The agent who designed or deployed the incentive structure experiences the constraint as coordination: the Rope is solving their primary problem (organizing behavior toward the metric). They benefit from arbitrage (can choose which metrics to optimize, can shift targets if the secondary effect becomes visible). From their perspective, this is pure coordination \u2014 the system is working as intended. The fact that unintended consequences arise is an observable-level phenomenon, not part of their structural experience."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Adaptive Systems Community",
+      "comment": "PERSPECTIVE 4: ADAPTIVE SYSTEMS COMMUNITY (SCAFFOLD) \u2014 Organizational learning theorists, system dynamics researchers, and feedback-loop auditors see the cobra effect as a solvable problem with a sunset: multi-objective optimization, Goodhart-aware metric design, adversarial auditing, and causal inference methods are building alternative verification pathways. The constraint is temporary coordination failure, not inherent extraction. Organized agents see an exit: redesigned incentive architectures with feedback loops that detect secondary effects before they compound."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Metric Regime",
+      "comment": "PERSPECTIVE 5: LEGACY METRIC REGIME (PITON) \u2014 Traditional performance measurement systems (KPIs, SLAs, quota-based incentives) persist as ritualized theater despite well-documented failure modes. The regime persists not because it works but because changing measurement infrastructure is institutionally costly. The theater ratio is moderate (0.48) because some metric-driven coordination still functions \u2014 but the primary function (aligning incentives with system health) has atrophied. Piton classification reflects institutional inertia: the constraint endures through maintenance rituals despite reduced efficacy."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer / Universal View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / UNIVERSAL VIEW (MOUNTAIN) \u2014 From a civilizational, universal perspective, some second-order effects are inherent to goal-driven systems: any proxy metric will diverge from ground truth, any incentive structure will create gaming opportunities, and complex systems with feedback delay always exhibit oscillation and overshoot. This perspective risks naturalizing the cobra effect as an immutable law \u2014 'all measurement systems create perverse incentives' \u2014 when structural data reveals this as a false summit. The effect is contingent on specific feedback loop delays, metric opacity, and institutional architecture \u2014 not universal."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory / Oversight Agency",
+      "comment": "PERSPECTIVE 7: REGULATORY / OVERSIGHT AGENCY (TANGLED ROPE) \u2014 Institutional regulators (bank supervisors, environmental agencies, safety inspectors) often benefit from the original Rope (standardized reporting, systematic auditing) but bear asymmetric extraction when secondary effects emerge. They have constrained exit: they cannot ignore detected gaming without institutional consequences, but they also cannot easily redesign the entire regulatory framework. Mixed experience of coordination and coercion."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "metric_divergence_threshold",
+      "question": "At what rate of metric-reality divergence does the secondary effect become structurally dominant (when the unintended consequence exceeds the original problem's severity)?",
+      "resolution_mechanism": "Comparative measurement of original system state (before Rope) vs metric-optimized state vs ground-truth state; quantification of secondary effect magnitude relative to primary problem",
+      "impact": "If threshold < 2x original problem: secondary effect triggers rapid policy reversal (Scaffold sunset is real). If threshold > 5x: effect compounds undetected for years (Snare persists longer). Determines whether constraint is temporary (Scaffold) or entrenched (Snare/Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for secondary effect dominance over original problem"
+    },
+    {
+      "id": "feedback_loop_observability",
+      "question": "Can the policy implementer and oversight community detect the divergence between metric and ground truth before the secondary effect compounds beyond recovery cost?",
+      "resolution_mechanism": "Audit trail analysis; comparison of time-to-detection vs time-to-secondary-effect-saturation; analysis of institutional incentives to report divergence vs incentives to hide it",
+      "impact": "If observable < 1 year: divergence detected before compounding (enables Scaffold exit). If unobservable > 3 years: secondary effect becomes entrenched before visibility (Snare/Piton dynamics dominate).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Observability of metric-reality divergence within institutional timescales"
+    },
+    {
+      "id": "multi_objective_solution_accessibility",
+      "question": "Are there technically and institutionally accessible alternatives to single-metric optimization (multi-objective functions, causal inference, feedback auditing) that the policy implementer could adopt without major institutional cost?",
+      "resolution_mechanism": "Survey of available methods; analysis of implementation barriers (computational cost, institutional complexity, expertise requirements); case study comparison with systems that adopted multi-objective approaches",
+      "impact": "If accessible: Scaffold sunset is credible (organized actors can redesign). If inaccessible: constraint persists as Snare or Tangled Rope (institutional lock-in dominates).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Accessibility of multi-objective alternatives to single-metric optimization"
+    },
+    {
+      "id": "accountability_asymmetry",
+      "question": "Do institutional actors face differential accountability for the secondary effect vs the original problem? Who bears the cost of failure?",
+      "resolution_mechanism": "Analysis of career consequences for policy implementers if secondary effect is revealed vs if original problem persists undetected; identification of accountability gaps",
+      "impact": "If implementer is shielded from secondary-effect costs: extraction persists (Snare/Tangled Rope). If implementer bears costs: pressure for redesign (Scaffold sunset). Determines whether constraint is sustained by institutional misalignment.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Asymmetric accountability for primary problem vs secondary effect"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Cobra Effect Trap is a structural constraint where an incentive Rope designed to solve problem A creates unexpected secondary effects (problem B) that worsen systemic state or create new extraction channels. The classic example is the colonial bounty on cobra skins: paying for dead cobras incentivized breeding rather than hunting. Modern examples span automated content filtering (incentivizing divisive content that triggers engagement metrics), pharmaceutical pricing metrics (incentivizing narrow-market profitable drugs over high-volume generics), citation counting (incentivizing citation inflation and gaming over impact), and AI alignment metrics (rewarding proxy objectives that diverge from intended behavior). The constraint exhibits high perspectival variance: the policy implementer sees pure Rope (successful coordination toward a metric), the end user sees Snare (trapped by the unintended consequence), the auditor sees Tangled Rope (mixed coordination and coercion), and the civilizational observer risks seeing a natural law (Goodhart's law as immutable). The extractiveness trajectory shows the classic cobra pattern: initial low extraction (the Rope works for its stated goal), rising extraction (metric gaming begins, secondary effects accumulate), and high extraction (secondary effects dominate the system state, creating new winners and losers). Theater ratio remains moderate because some metric-driven coordination still functions \u2014 the system has not fully degraded to pure theater (unlike a Piton). This classification as Tangled Rope reflects that the Rope has genuine coordination function (it does organize behavior) but creates sustained asymmetric extraction (those optimizing the metric benefit at the cost of those bearing the secondary effects).",
+    "key_agents": [
+      "Policy Implementer / Metric Optimizer: Primary beneficiary (institutional/arbitrage) \u2014 designed the Rope, benefits from metric-driven behavior, experiences the constraint as pure coordination; has institutional incentive to claim the Rope is working even if secondary effects emerge",
+      "End User / Systemic Integrity: Primary victim (powerless/trapped) \u2014 depends on the system functioning for original purpose; bears full cost of secondary effect; has no exit or voice",
+      "Ground-Truth Observer / Auditor: Secondary actor (moderate/constrained) \u2014 detects divergence between metric and reality; benefits from the Rope's coordination function but faces extraction pressure (retaliation, institutional silencing) when reporting secondary effects",
+      "Regulatory / Oversight Agency: Institutional actor (organized/constrained) \u2014 benefits from systematic auditing enabled by the Rope but constrained by inability to redesign entire regulatory framework; faces mixed extraction and coordination",
+      "Adaptive Systems Community: Organized actor (organized/constrained) \u2014 sees secondary effect as solvable problem with sunset; building alternative multi-objective architectures; represents Scaffold perspective",
+      "Legacy Metric Regime: Institutional infrastructure (institutional/arbitrage) \u2014 persists through inertia; sees own measurement systems as degraded but difficult to replace (Piton perspective)",
+      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing the cobra effect as an immutable law rather than recognizing it as contingent on feedback delays, metric opacity, and institutional misalignment"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The Rope creates sustained asymmetry between those optimizing the metric (policy implementers, metric owners) and those bearing secondary effects (end users, systemic integrity, ground-truth trackers). The extraction is not maximal because the original Rope function does solve its stated problem \u2014 the system still coordinates behavior, just toward a proxy that diverges from intended outcomes. The trajectory shows the cobra pattern: extractiveness rises over the interval as metric gaming compounds and secondary effects accumulate. By time point 6, the secondary effect has become a structural feature, not a transient side effect. Suppression (0.62): Moderate-high. Significant barriers prevent visibility and correction of secondary effects: institutional incentives to hide divergence, technical difficulty in detecting metric gaming, career risk for auditors who report problems, and high institutional cost of redesigning systems. But suppression is not total \u2014 field-based observers eventually detect divergence, auditors can surface issues, and some institutions do redesign. Theater ratio (0.48): Moderate. The Rope still has functional coordination content \u2014 metrics do organize behavior, auditing does happen, feedback systems exist. Theater is not high because the system is not purely performative (unlike a Piton). But the feedback loop's delayed response and metric opacity create moderate performative content (ritual reporting, post-hoc justification of secondary effects as 'unexpected' rather than 'designed for').",
+    "perspectival_gap": "This constraint demonstrates the full perspectival range of a Tangled Rope. The policy implementer sees Rope (pure coordination). The end user sees Snare (pure extraction). The auditor sees Tangled Rope (mixed). The regulatory agency sees Tangled Rope with institutional complexity (coordinating function + constrained exit). The adaptive systems community sees Scaffold (temporary problem with solution in progress). The legacy metric regime sees Piton (degraded institutional ritual). The analytical observer risks seeing Mountain (Goodhart's law as inevitable). The engine's task is to show that the mountain perspective is a false summit \u2014 the cobra effect is not inevitable but contingent on specific feedback delays, metric opacity, and institutional misalignment. Redesigned incentive architectures with multi-objective optimization and feedback auditing represent real alternatives, making the Scaffold sunset plausible.",
+    "directionality_logic": "Each perspective's directionality is driven by structural position within the extraction flow created by metric gaming. The policy implementer benefits from the original Rope and has arbitrage exit (can change metrics, can claim secondary effects were unforeseeable); low d. The end user is trapped with no exit and bears full secondary-effect costs; high d. The auditor has moderate power and constrained exit (can speak but faces retaliation); moderate d. The regulatory agency is organized but institutionally constrained (cannot easily redesign frameworks); moderate-high d. The adaptive systems community is organized with exit paths (alternative architectures exist); lower-moderate d. The legacy metric regime has institutional arbitrage (metrics can change) but is increasingly inert; d reflects both historical beneficiary status and contemporary institutional decay.",
+    "mandatrophy_analysis": "MANDATROPHY CHALLENGE: The cobra effect appears to violate the tangled rope classification because the extractiveness seems to exceed what pure coordination should allow. If the Rope is 'just' an incentive structure, why does it create such severe secondary effects? The resolution is that the Rope's coordination function is real and persists \u2014 metrics do organize behavior, auditing does happen, feedback systems do function. But the Rope is sustained by suppression of feedback loops (metric opacity, institutional pressure to hide divergence, career risk for auditors). The tangled rope classification holds because both the coordination function (real) and the extraction asymmetry (real) are present. The secondary effect is not inherent to the Rope itself but contingent on the feedback loop structure and institutional incentives to game the metric. Multi-objective optimization and adversarial auditing represent genuine Scaffold alternatives \u2014 not perfect solutions but real structural changes that reduce secondary-effect severity. The classification prevents mislabeling the cobra effect as either pure coordination (which would miss the real extraction) or pure extraction (which would miss the real coordination function). The tangled rope classification highlights the hybrid nature: solve problem A, create problem B, sustain the asymmetry through institutional pressure, create the conditions for alternative solutions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "goodharts_law_metric_divergence",
+      "institutional_metric_gaming",
+      "feedback_loop_delay_oscillation"
+    ],
+    "dual_formulation_note": "The Cobra Effect Trap is a family of constraints sharing the structure: Rope designed for problem A creates secondary effects worse than problem A. Each domain (pharma, tech, regulation, academia) has distinct epsilon values reflecting different metric opacity and institutional accountability. The family members are linked by shared causal structure (feedback delay + metric opacity + suppression of divergence reports) but differ in severity and sunset credibility. 'goodharts_law_metric_divergence' is upstream (abstract principle); 'institutional_metric_gaming' and 'feedback_loop_delay_oscillation' are downstream domain-specific manifestations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

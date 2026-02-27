@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "matching_markets_general",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "match"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Matching Markets (Non-Commodity Exchange)",
+    "topic_domain": "economic/social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "platform_operators",
+      "high_preference_agents"
+    ],
+    "victims": [
+      "low_preference_agents",
+      "market_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Agent",
+      "comment": "PERSPECTIVE 1: EXCLUDED AGENT (SNARE) \u2014 Agents with low preference signals or limited access cannot exit; face structural extraction through limited choice set and asymmetric information about alternatives. No transparent substitute markets. d\u22480.92, f(d)\u22481.39, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Matched Participant",
+      "comment": "PERSPECTIVE 2: MATCHED PARTICIPANT (TANGLED ROPE) \u2014 Participants benefit from liquidity and coordination function (finds compatible counterpart) but constrained by algorithm transparency limits and lock-in effects. Extraction occurs through information asymmetry about match quality. d\u22480.68, f(d)\u22481.05, \u03c3=0.9 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) \u2014 Benefits from network effects and data advantages. Experiences constraint as pure coordination problem: solving matching is their core function. Can arbitrage between different market designs. d\u22480.08, f(d)\u2248-0.09, \u03c3=1.2 \u2192 \u03c7\u2248-0.04. Negative effective extraction = net beneficiary through coordination rent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 4: REGULATORY AUTHORITY (PITON) \u2014 Regulatory frameworks (antitrust, data protection, disclosure) for matching markets are largely performative or degraded: rules written for commodity markets don't fit thick preference structures; enforcement is theater because regulators lack algorithmic transparency. theater_ratio=0.58 approaches piton threshold. Constrained by inability to mandate real-time algorithm inspection. d\u22480.50, f(d)\u22480.65, \u03c3=1.1 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Open Standards Coalition",
+      "comment": "PERSPECTIVE 5: OPEN STANDARDS COALITION (SCAFFOLD) \u2014 Organized efforts (portable matching algorithms, API standardization, preference portability protocols) aim to reduce lock-in and create alternative matching pathways. Temporary support for transition from closed platforms to decentralized/interoperable designs. d\u22480.42, f(d)\u22480.42, \u03c3=1.1 \u2192 \u03c7\u22480.21. Low extraction because coalition has exit mechanism (portability) and sunset timeline (standards adoption)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From civilizational scope, mutual preference matching is an irreducible feature of thick markets: cannot reduce to price alone; some version of preference aggregation is structurally necessary. However, this naturalizes what is actually a design choice: centralized vs decentralized, opaque vs transparent, proprietary vs portable. The mountain framing risks conflating necessity (matching is needed) with current contingency (closed platforms dominate)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "preference_measurability_threshold",
+      "question": "How much of an agent's preference can be captured in algorithmic form without inducing strategic behavior or misrepresentation?",
+      "resolution_mechanism": "Longitudinal studies comparing stated vs revealed preferences on matching platforms; analysis of strategic distortion when preference signals affect matching outcomes",
+      "impact": "If threshold high: matching is near-transparent (Rope from more perspectives). If threshold low: significant information extraction (Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurability limit of preferences in algorithmic matching"
+    },
+    {
+      "id": "platform_interoperability_feasibility",
+      "question": "Can portable preference profiles and interoperable matching protocols actually reduce lock-in without degrading match quality?",
+      "resolution_mechanism": "Technical feasibility studies; comparison of match quality in centralized vs distributed matching systems; measurement of user switching costs with vs without portability",
+      "impact": "If feasible: scaffold perspective confirmed \u2014 decentralized sunset is real. If infeasible: lock-in is structural necessity, not extractive design choice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether portable profiles reduce lock-in while maintaining match quality"
+    },
+    {
+      "id": "thick_preference_coordination_necessity",
+      "question": "Does mutual preference matching fundamentally require centralized coordination, or can it be achieved through decentralized/market mechanisms?",
+      "resolution_mechanism": "Comparison of historical peer-to-peer matching mechanisms (personal networks, matchmakers, bulletin boards) with platform algorithms; analysis of failure modes in decentralized matching",
+      "impact": "If decentralized viable: extraction is platform design choice (Tangled Rope confirmed). If centralization necessary: current platform dominance is coordination equilibrium (Rope more legitimate).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Necessity of centralized coordination in thick markets"
+    },
+    {
+      "id": "multi_platform_simultaneous_matching",
+      "question": "Can an agent simultaneously participate in multiple matching platforms without incurring prohibitive search/coordination costs?",
+      "resolution_mechanism": "Empirical study of multi-platform users in dating, labor, housing markets; measurement of effort required to maintain consistent profiles and preferences across platforms",
+      "impact": "If feasible: exit options are mobile (lower d, lower \u03c7). If prohibitive: exit options are trapped/constrained (higher d, higher \u03c7).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Multi-platform participation feasibility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Matching markets\u2014labor markets, dating platforms, housing rentals, organ allocation\u2014create a structural tension between coordination and extraction. Unlike commodity markets where price aggregates preferences into a single clearing mechanism, matching markets require algorithms to approximate mutual preference and orchestrate bilateral outcomes. This creates an asymmetric structural position: platforms control both the information (what preferences are revealed and visible to whom) and the algorithm (how preferences map to matches). The constraint exhibits all six DR types depending on the observer's structural relationship to the platform. For agents excluded by the algorithm or locked into a platform with poor matches, the market is a snare with no exit. For matched participants, it is a mixed rope-snare hybrid where coordination benefits are offset by information asymmetry and switching costs. For platform operators, it is pure coordination\u2014the matching function is their value proposition. For regulators, matching market oversight is largely theater: rules written for price-clearing commodity markets don't fit thick preference structures, and algorithm transparency remains voluntary. For standards advocates, the constraint is a temporary scaffolding being replaced by portability protocols. For the civilizational observer, mutual preference matching is an irreducible feature\u2014but this risks naturalizing what is actually a design choice: whether the platform is open, transparent, and interoperable or closed, proprietary, and lock-in prone.",
+    "key_agents": [
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 control algorithm, capture information rents, benefit from network effects and lock-in",
+      "Excluded/Low-Signal Agents: Primary victim (powerless/trapped) \u2014 limited choice set, no transparency into matching algorithm, cannot access alternative markets",
+      "Matched Participants: Secondary victim (moderate/constrained) \u2014 benefit from liquidity but constrained by lock-in, information asymmetry about match quality relative to alternatives",
+      "Regulators: Institutional actor (institutional/constrained) \u2014 mandates are performative; cannot enforce real algorithm transparency or interoperability without platform cooperation",
+      "Open Standards Coalition: Organized agents (organized/constrained) \u2014 portability protocols, API standardization efforts to reduce lock-in and enable switching",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing platform dominance as structural necessity rather than design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Matching markets combine genuine coordination function (finding compatible counterparts is hard and platforms solve this) with meaningful extraction (information asymmetry about preferences, lock-in, and algorithm opacity). The constraint is not pure coordination (\u03b5 would be \u22640.05) because platforms can and do extract rents through opaque ranking and preference revelation. But extractiveness is not severe (\u03b5<0.46) because the coordination function is real and participants do benefit from liquidity and match quality. The trajectory from 0.22 to 0.38 reflects increasing sophistication of extraction: early platforms were relatively transparent about matching; as markets matured and competition concentrated, algorithmic opacity and behavioral targeting increased. Suppression (0.52): Moderate-high. Significant barriers include information asymmetry (users don't know how the algorithm works), lock-in costs (rebuilding profiles on new platforms), network effects (better matches require larger user base), and lack of transparent substitutes. But suppression is not total\u2014multi-platform participation is feasible in some domains (dating, labor) though costly. Theater ratio (0.58): Moderate. Regulatory frameworks for matching markets are increasingly performative as they apply commodity-market rules to thick-preference structures. Data protection compliance (GDPR) and algorithmic transparency mandates (AI Act) are well-intentioned but have limited enforcement reach into proprietary algorithms. The theater has increased as platforms have become more algorithmically complex and regulators' ability to inspect or enforce has become more limited.",
+    "perspectival_gap": "This constraint exhibits the full range of perspectival disagreement. Platform operators see pure coordination (Rope) because matching is their value function and they have arbitrage options (enter new markets, change algorithms). Excluded agents see pure extraction (Snare) because they have no exit and no transparency. Matched participants see mixed coordination-extraction (Tangled Rope) because the platform both solved their matching problem and constrained their options. Regulators see their own degraded function (Piton) because oversight rules don't fit the constraint's structure. Standards advocates see a temporary problem with a sunset (Scaffold) because portability protocols are technically feasible and adoption is increasing. The civilizational observer risks seeing an immutable natural law (Mountain)\u2014mutual preference matching requires centralized coordination\u2014but this conflates structural necessity (matching is needed) with current design (closed platforms dominate). The perspectival gap is 100% real: no single type is 'correct'; the system's truth is the presheaf of observations.",
+    "directionality_logic": "Platform operators: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net beneficiary through information control and network effects. Excluded agents: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction because no transparency, no alternatives, no exit. Matched participants: Victim + constrained (but with some benefit) \u2192 d\u22480.68, f(d)\u22481.05. Significant extraction (lock-in, info asymmetry) but offset by genuine coordination benefit. Regulators: Divided (mandating transparency but constrained by technical opacity) \u2192 d\u22480.50, f(d)\u22480.65. Piton classification emerges from theater gate, not directionality alone. Standards coalition: Organized + constrained (but with exit path visible) \u2192 d\u22480.42, f(d)\u22480.42. Low effective extraction because coalition has agency and sunset mechanism is real. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Mountain classification is perspectival\u2014risks naturalizing design choice.",
+    "mandatrophy_analysis": "RESOLUTION THROUGH ARCHITECTURAL DECOMPOSITION: This constraint resolves mandatrophy by showing that the classification depends critically on platform architecture. A closed, opaque matching platform (high information asymmetry, high switching costs, proprietary algorithm) classifies as Tangled Rope or Snare. An open, transparent, interoperable platform (low information asymmetry, low switching costs, portable profiles) classifies as Rope. The constraint is not ambiguous about type\u2014it is ambiguous about architecture. The mandatrophy is resolved by recognizing that matching markets as a category can instantiate multiple types depending on design. The current extractiveness (0.38) reflects the actual empirical distribution of platform architectures in 2026: mostly closed (extraction-prone) with growing open alternatives (coordination-dominant). As open standards adoption increases, the empirical \u03b5 for the category should decrease toward 0.20 (coordination-dominant), revealing that the extraction was contingent design, not structural necessity. The measurement trajectory (0.22\u21920.38) shows extraction growing during the market concentration phase; the open standards coalition perspective predicts this trajectory will reverse if portability protocols succeed (scaffold sunset mechanism). The mandatrophy is not 'which type is correct?' but 'which architecture trajectory dominates?' The analytical observer's mountain is a false summit if it naturalizes current closed-platform dominance as inevitable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithm_opacity_verification",
+      "platform_network_effects",
+      "preference_aggregation_authenticity"
+    ],
+    "dual_formulation_note": "Matching markets decompose into at least three distinct structural constraints: (1) the matching algorithm's inherent coordination complexity (resource_allocation problem), (2) the information asymmetry and opacity of platform algorithms (verification/transparency constraint), (3) the network effects and lock-in that prevent exit (switching_cost constraint). This story captures the aggregate constraint; upstream constraints have their own \u03b5 values reflecting the empirical status of specific architectural choices. Platform architecture (open vs closed, transparent vs opaque) mediates the relative contribution of each component to total extractiveness."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ]
+}

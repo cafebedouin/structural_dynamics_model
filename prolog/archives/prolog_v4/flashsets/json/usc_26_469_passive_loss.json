@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "usc_26_469_passive_loss",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Passive Activity Loss (PAL) Rules",
+    "topic_domain": "economic/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "irs",
+      "active_income_taxpayers"
+    ],
+    "victims": [
+      "passive_investors",
+      "rental_property_owners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Passive Investor",
+      "comment": "The passive investor, often lacking the resources or knowledge to navigate the complex rules, finds their losses trapped and unusable to offset other income. They are largely powerless and trapped by the legislation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Rental Property Owner",
+      "comment": "Rental property owners are constrained because they can't easily exit the rental market without incurring losses. They are victims of the rule, but also benefit from the general tax structure that allows some deductions. They are constrained, not trapped, as they have some mobility, albeit limited."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "IRS",
+      "comment": "The IRS benefits from the rule by increasing tax revenue and reducing opportunities for tax avoidance. They also need to expend resources to enforce the law and arbitrate disputes."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Active Income Taxpayers",
+      "comment": "Those who primarily earn active income (wages) benefit because the playing field is considered more level as other taxpayers can't reduce their tax liability through passive losses."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the trade-offs inherent in this legislation. Some coordination (fairness) at the expense of asymmetric extraction (limits investor freedom)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_impact",
+      "question": "What is the overall economic impact of the PAL rules on investment in passive activities?",
+      "resolution_mechanism": "Econometric studies analyzing investment behavior before and after the implementation of Section 469.",
+      "impact": "If negative: the rule stifles productive investment. If neutral or positive: the rule primarily curtails tax avoidance without harming the economy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The economic impact of PAL rules."
+    },
+    {
+      "id": "complexity_cost",
+      "question": "How much does the complexity of the PAL rules cost in terms of compliance and enforcement?",
+      "resolution_mechanism": "Studies analyzing tax preparation fees, IRS enforcement costs, and litigation expenses related to Section 469.",
+      "impact": "If high: the rule's benefits may be outweighed by its costs. If low: the rule is relatively efficient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The complexity cost of PAL rules."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Established by the Tax Reform Act of 1986, Section 469 prohibits taxpayers from using losses from 'passive activities' (rental properties or businesses without material participation) to offset active income (wages) or portfolio income. This rule aims to prevent tax shelters and ensure a more equitable distribution of the tax burden. The effectiveness and fairness of these rules have been debated for decades.",
+    "key_agents": [
+      "Passive Investors: Primary target (powerless/trapped) - unable to utilize losses to offset income.",
+      "Rental Property Owners: Secondary target (moderate/constrained) - restricted in offsetting income with rental losses.",
+      "IRS: Primary beneficiary (institutional/arbitrage) - increased tax revenue, reduced tax avoidance.",
+      "Active Income Taxpayers: Secondary beneficiary (powerful/arbitrage) - more equitable tax burden."
+    ],
+    "logic_rationale": "The extractiveness is moderate because, while it restricts the use of passive losses, it doesn't completely eliminate all tax benefits for passive activities. The suppression is moderate-high because it significantly limits the options available to taxpayers for managing their tax liability related to passive investments. The theater ratio is low because the rules are primarily functional with limited performative aspects.",
+    "perspectival_gap": "The passive investor sees a snare because they are unable to use losses. The IRS sees a rope as it helps to collect tax revenue. The analytical observer, depending on their assessment of the rule's economic impact, may see either a tangled rope or a rope. Active income taxpayers are powerful because they benefit from the curtailing of tax shelters that passive income earners used to use.",
+    "directionality_logic": "The directionality values are determined by whether the entity benefits from the policy or is harmed by the policy. The IRS and Active Income Taxpayers are beneficiaries, while Passive Investors and Rental Property Owners are victims. The level of power also influences directionality. Powerless agents have high directionality values, and institutional agents have low directionality values."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "usc_26_tax_code"
+    ]
+  },
+  "directionality_overrides": []
+}

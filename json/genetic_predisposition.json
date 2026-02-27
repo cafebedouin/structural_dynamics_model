@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "genetic_predisposition",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "genpred"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "Socio-Economic Response to Genetic Predisposition",
+    "topic_domain": "technological/social/economic",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "genetic_testing_industry",
+      "insurance_gatekeepers",
+      "high_income_earners"
+    ],
+    "victims": [
+      "genetically_high_risk_individuals",
+      "low_income_populations",
+      "reproductive_autonomy_agents"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The High-Risk Individual",
+      "comment": "PERSPECTIVE 1: HIGH-RISK INDIVIDUAL (SNARE) \u2014 Individual with genetic predisposition (BRCA1, familial hypercholesterolemia, sickle cell trait) faces binary choice: accept social/economic penalties (insurance denial, employment discrimination, reproductive stigma) or remain ignorant of health status. Knowledge itself becomes a trap. Cannot escape the constraint without abandoning biological identity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Low-Income Population",
+      "comment": "PERSPECTIVE 2: LOW-INCOME POPULATION (TANGLED ROPE) \u2014 Constrained by healthcare access and genetic literacy barriers, but also dependent on genetic screening for disease prevention. Experiences both coordination (preventive medicine) and extraction (risk stratification enabling insurance/employment discrimination). Moderate power through collective health advocacy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Genetic Testing Industry",
+      "comment": "PERSPECTIVE 3: GENETIC TESTING INDUSTRY (ROPE) \u2014 Benefits from expanding genetic knowledge and market expansion. Experiences constraint as coordination: testing standardization, medical guideline formation, and data sharing solve collective action problems in genomic medicine. Net beneficiary with arbitrage options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Insurance and Employment Systems",
+      "comment": "PERSPECTIVE 4: INSURANCE AND EMPLOYMENT GATEKEEPERS (SNARE) \u2014 Institutional extraction mechanism using genetic information for actuarial stratification and risk selection. High coercion (genetic discrimination) with minimal coordination benefit. Organized actors (insurers, employers) maintain information asymmetry advantage. Mobile exit options only available to privileged actors."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Medical Essentialism Narrative",
+      "comment": "PERSPECTIVE 5: MEDICAL ESSENTIALISM NARRATIVE (PITON) \u2014 The framing that genetic predisposition 'determines' health outcomes is largely performative. Penetrance and expressivity vary enormously; lifestyle, environment, and medical intervention often override genetic risk. The theater ratio reflects continued institutional reliance on genetic determinism despite overwhelming counterevidence. Theater maintains gatekeeping function without delivering promised predictive power."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Genetic Privacy and Anti-Discrimination Frameworks",
+      "comment": "PERSPECTIVE 6: GENETIC PRIVACY AND ANTI-DISCRIMINATION FRAMEWORKS (SCAFFOLD) \u2014 Regulatory sunset mechanisms (genetic non-discrimination laws, GDPR genetic data protections, NIH genome privacy standards) are building temporary barriers to gatekeeping while alternative verification methods mature. Sunset mechanism: as polygenic risk scores and environmental interventions mature, genetic discrimination loses actuarial justification. High suppression is tolerated because the framework explicitly includes exiting logic."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Genomic Information View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (ROPE) \u2014 From a universal/analytical perspective, genomic information generates coordination benefits: disease prevention, pharmacogenomics, population health infrastructure. The constraint appears as a coordination mechanism (how to distribute health information efficiently) rather than extraction. This perspective risks naturalizing the predatory gatekeeping as inevitable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "genetic_penetrance_determination",
+      "question": "What threshold of penetrance and environmental modifiability determines when genetic information should be treated as predictive vs performative?",
+      "resolution_mechanism": "Longitudinal cohort studies tracking genetic-risk individuals with and without preventive intervention; correlation analysis between genetic markers and actual health outcomes controlling for environmental factors",
+      "impact": "If low penetrance dominates: genetic tests are largely theater (piton classification strengthens). If high penetrance: coordination benefits are real (rope classification strengthens). Current evidence shows mixed penetrance by condition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determination of genetic penetrance and environmental modifiability thresholds"
+    },
+    {
+      "id": "discrimination_suppression_enforcement",
+      "question": "How effectively do genetic non-discrimination laws actually prevent insurance and employment discrimination against high-risk individuals?",
+      "resolution_mechanism": "Audit studies with fictitious high-genetic-risk applicants; comparison of insurance denial rates before/after GINA passage; employee litigation analysis showing successful vs dismissed discrimination claims",
+      "impact": "If enforcement is effective: suppression drops, classification shifts toward rope/scaffold. If enforcement is weak: suppression persists, snare classification confirmed. Current evidence suggests significant gaps in enforcement and regulatory scope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of genetic non-discrimination law enforcement"
+    },
+    {
+      "id": "alternative_risk_stratification_sufficiency",
+      "question": "Do environmental health scores, lifestyle monitoring, and molecular phenotypes provide equally effective risk stratification without genetic information?",
+      "resolution_mechanism": "Prospective studies comparing predictive power of genetic-only vs environmental-only vs integrated models; insurance and employment outcome studies using alternative stratification methods",
+      "impact": "If alternative methods are sufficient: genetic information is optional (enables scaffold/piton sunset). If genetic is uniquely powerful: constraint becomes harder to escape (snare persists). Current evidence: modest incremental value of genetics beyond environment.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative risk stratification methods provide equivalent predictive power"
+    },
+    {
+      "id": "reproductive_autonomy_versus_health_duty",
+      "question": "Is genetic screening for reproductive decision-making a neutral information tool (rope) or an extraction mechanism enabling eugenic stigma (snare)?",
+      "resolution_mechanism": "Qualitative research on reproductive decision-making post-genetic counseling; tracking of stigma, coercion, and autonomous choice; cross-cultural comparison of reproductive selection pressures and outcomes",
+      "impact": "If autonomous choice dominates: screening is rope/coordination. If structural coercion dominates: screening is snare/extraction. Classification depends on whether the constraint enables freedom or restricts it.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether genetic reproductive screening enables autonomy or enforces eugenic extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The socio-economic response to genetic predisposition creates a structural constraint distinct from the biological fact of heritable disease risk (which would be a Mountain). This constraint models how societies institutionalize genetic information into gatekeeping systems: insurers using genetic data for risk stratification and coverage denial, employers using genetic screening for hiring discrimination, healthcare systems using genetic tests to ration access, and reproductive systems using genetic information to enforce normative trait selection. The constraint exhibits all six types depending on perspective: pure extraction (snare) for high-risk individuals trapped by knowledge; mixed coordination and extraction (tangled rope) for populations dependent on genetic medicine but vulnerable to discrimination; coordination (rope) for the testing industry and analytical observers; degraded ritual (piton) for medical essentialism persisting despite modest predictive power; and temporary scaffolding (scaffold) for anti-discrimination frameworks with explicit sunset clauses. The extractiveness has risen from 0.35 to 0.58 over the interval as genetic databases have expanded, risk stratification has become more granular, and gatekeeping institutions have learned to weaponize genetic information more effectively. Theater ratio has similarly increased from 0.42 to 0.64 as medical essentialism has decoupled from actual predictive power \u2014 genetic tests are marketed as deterministic despite environmental dominance and low penetrance for most conditions.",
+    "key_agents": [
+      "Genetically High-Risk Individuals: Primary victims (powerless/trapped) \u2014 face binary choice between knowledge and social/economic penalties; cannot escape the constraint",
+      "Low-Income Populations: Secondary victims (moderate/constrained) \u2014 dependent on genetic screening for disease prevention but vulnerable to discrimination; limited exit options",
+      "Genetic Testing Industry: Primary beneficiary (institutional/arbitrage) \u2014 expands market through medicalization of genetic risk; experiences constraint as coordination",
+      "Insurance and Employment Gatekeepers: Primary beneficiary (organized/mobile) \u2014 use genetic information for actuarial stratification and risk selection; maintain information asymmetry",
+      "High-Income Earners: Secondary beneficiary (powerful/arbitrage) \u2014 can afford genetic testing, expert interpretation, and insurance alternatives; can exit constraint through wealth",
+      "Medical Essentialism Narrative: Institutional actor (institutional/arbitrage) \u2014 maintains gatekeeping function through performative genetic determinism",
+      "Anti-Discrimination Coalitions: Organized agents (organized/constrained) \u2014 civil rights, disability justice, reproductive autonomy movements building regulatory barriers with sunset clauses",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing predatory gatekeeping as inevitable genomic medicine"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts substantial value from high-risk individuals through insurance denial, employment discrimination, and reproductive stigma. The trajectory from 0.35 to 0.58 reflects that genetic gatekeeping has become increasingly sophisticated \u2014 early genetic testing was crude and high-theater; modern applications are more targeted and have lower theater, enabling more effective extraction. However, extractiveness is not at snare maximum (0.75+) because: (1) some high-risk individuals benefit from early intervention enabled by genetic knowledge, (2) wealth-based exit options remain available to privileged populations, and (3) anti-discrimination frameworks have created some friction. Suppression (0.68): High. Multiple suppression mechanisms operate: information asymmetry (testing industry controls interpretation), regulatory capture (insurance industry influences genetic guidelines), knowledge barriers (genetic literacy is highly skewed), coordination failure (no collective action by high-risk individuals to resist discrimination), and structural coercion (no alternative to genetic testing for disease prevention in many contexts). Theater ratio (0.64): Moderate-high. Medical essentialism \u2014 the framing that genetic predisposition 'determines' disease \u2014 is substantially performative. Penetrance is low for most genetic risk variants (5-15% lifetime risk for BRCA1 carriers, for example); environmental factors usually dominate; polygenic risk scores have poor clinical accuracy. Yet genetic testing is marketed as deterministic, and genetic data is used for gatekeeping despite weak predictive power. The theater has increased because testing has become more granular (can now identify hundreds of low-penetrance variants) while clinical utility has not increased proportionally.",
+    "directionality_logic": "Directionality values derive from agents' structural positions in the extraction flow. High-risk individuals have d \u2248 0.95 (full targets, trapped exit) producing high f(d) \u2248 1.42, maximizing experienced extraction (snare). Low-income populations have d \u2248 0.70 (partial targets, constrained exit) producing f(d) \u2248 1.05, moderate-high extraction (tangled rope). The genetic testing industry has d \u2248 0.05 (beneficiary, arbitrage exit) producing f(d) \u2248 -0.12, negative/minimal extraction (rope). Insurance gatekeepers have d \u2248 0.35 (mixed beneficiary-target, mobile exit conditional on wealth) producing f(d) \u2248 0.35, moderate-high extraction (snare/rope boundary). The analytical observer has d \u2248 0.72 (observer, analytical exit) producing f(d) \u2248 1.15, moderate extraction, but risks misclassifying coordination as natural law. Directionality overrides are not needed; the structural data produces appropriate d values for most agents.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The high-risk individual sees pure extraction (snare) \u2014 genetic knowledge becomes a trap from which there is no exit. The low-income population sees mixed coordination and extraction (tangled rope) \u2014 genetic medicine enables disease prevention but simultaneously enables discrimination. The testing industry sees coordination (rope) \u2014 they are solving the legitimate problem of identifying heritable disease risks. Insurance gatekeepers see profitable risk stratification (snare, but experienced as rope from their perspective). Anti-discrimination frameworks see a temporary problem (scaffold) \u2014 genetic privacy laws and non-discrimination protections are building exit pathways while alternative risk assessment methods mature. The piton perspective reveals that medical essentialism has decoupled from function \u2014 genetic determinism is performatively maintained despite modest actual predictive power. The analytical observer risks seeing genomic information as a neutral coordination good (rope) and missing the predatory gatekeeping enabled by information asymmetry. The perspectival gap is driven by differential exit options: wealth enables escape from genetic discrimination; poverty locks individuals into the constraint.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (\u03c7 \u2248 0.72 > 0.70): This constraint resolves mandatrophy by identifying the structural asymmetry that converts potential coordination into extraction. Genetic information itself (the biological data) has genuine coordination value: identifying disease risk, enabling preventive medicine, matching patients to effective treatments. But the socio-economic system built on genetic information is predatory: insurance companies use genetic data to deny coverage, employers use genetic information to avoid hiring liability, and populations are pressured into genetic testing under threat of future discrimination. The mandatrophy is resolved by separating the information (coordination good) from the institution (extraction mechanism). Alternative institutional designs would enable genetic coordination without extraction: public insurance (eliminates insurance gatekeeping), employment protections (prevents hiring discrimination), genetic literacy (reduces information asymmetry), collective bargaining (organizes high-risk individuals), and anti-eugenic reproductive ethics (prevents selection-based discrimination). The current constraint persists because institutional actors profit from extractive gatekeeping and have successfully naturalized genetic essentialism as inevitable \u2014 a false summit. The scaffold perspective and anti-discrimination frameworks provide evidence that alternative designs are possible, making the current extraction contingent rather than natural."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "insurance_risk_stratification",
+      "employment_discrimination_mechanisms",
+      "reproductive_coercion_systems"
+    ],
+    "dual_formulation_note": "Genetic predisposition is itself a Mountain (immutable biological fact). This constraint story addresses the socio-economic system built on genetic information. Upstream constraint: genetic_biology (Mountain, \u03b5 \u2248 0.05). Downstream constraints: insurance stratification, employment screening, reproductive selection pressures. The three downstream constraints form a constraint family \u2014 each is a distinct extraction mechanism using genetic data, but they share structural dependence on genetic information asymmetry and medical essentialism narratives. Affects relationships establish that genetic discrimination in insurance enables employment discrimination (insurability affects employability) and both enable reproductive coercion (health gatekeeping affects reproductive autonomy)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "genetic_biology"
+    ]
+  }
+}

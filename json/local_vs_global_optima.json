@@ -1,0 +1,167 @@
+{
+  "header": {
+    "constraint_id": "local_vs_global_optima",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lgo"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "The Existence of Local Optima in Non-Convex Spaces",
+    "topic_domain": "mathematical/computational",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Topological Analyst",
+      "comment": "PERSPECTIVE 1: TOPOLOGICAL ANALYST (MOUNTAIN) \u2014 From the vantage of mathematical topology and dynamical systems theory, local optima are an inevitable structural feature of non-convex landscapes. No algorithm, no matter how sophisticated, can escape this constraint without changing the problem space itself (imposing convexity assumptions). The existence of local optima follows necessarily from the definition of non-convexity. Zero degrees of freedom."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Algorithm Designer",
+      "comment": "PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) \u2014 Even the most advanced optimization algorithms (SGD variants, evolutionary strategies, simulated annealing, neural networks) cannot guarantee global optimality in non-convex spaces with finite computational resources. This is not a limitation of current techniques but a fundamental mathematical constraint. Better algorithms can *reduce* the probability of getting trapped but cannot eliminate local optima. The landscape itself enforces the constraint."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Machine Learning Industry",
+      "comment": "PERSPECTIVE 3: MACHINE LEARNING INDUSTRY (MOUNTAIN) \u2014 From the practical standpoint of training neural networks at scale, local optima are observed as a fundamental phenomenon, yet the industry operates successfully by treating them as manageable noise rather than blockers. The constraint manifests as the empirical observation that networks train to reasonable solutions despite the theoretical guarantee of local optima. The industry has 'arbitraged' the constraint by accepting that good solutions (not necessarily global optima) are sufficient for most applications. Yet the mathematical constraint remains immutable \u2014 local optima exist whether the industry profits from workarounds or not."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Foundationalist",
+      "comment": "PERSPECTIVE 4: MATHEMATICAL FOUNDATIONALIST (MOUNTAIN) \u2014 Local optima are a logical consequence of the axioms of topology and set theory. In any space where the neighborhood structure differs from convexity (e.g., any realistic loss landscape with millions of parameters), the existence of points that are locally maximal but not globally maximal is a tautology. No escape, no workaround, no contemporary research will change this. It is as immutable as the Halting Problem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Practitioner",
+      "comment": "PERSPECTIVE 5: PRACTITIONER (MOUNTAIN) \u2014 A researcher training a deep neural network encounters local optima as an immovable fact of practice. They can restart from different initializations, use learning rate schedules, apply regularization, or switch algorithms \u2014 but they cannot escape the existence of local optima in the underlying loss surface. Every workaround is an adaptation to the constraint, not a negation of it. The practitioner's agency is real but operates within the constraint's boundaries."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Universal Observer",
+      "comment": "PERSPECTIVE 6: UNIVERSAL OBSERVER (MOUNTAIN) \u2014 Across all conceivable non-convex optimization problems \u2014 in physics (protein folding), economics (equilibrium computation), biology (neural development), engineering (control systems design) \u2014 local optima are universally present. No measurement basis, no change in perspective, no new theory can alter this fact. The constraint is invariant across all observables and application domains."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "global_vs_local_definition_precision",
+      "question": "Does the mathematical definition of 'global optimum' and 'local optimum' require discrete/continuous topology assumptions that might vary across problem classes?",
+      "resolution_mechanism": "Formal review of topology textbooks and Morse theory; analysis of whether definitions hold equally in discrete optimization (NP-complete problems) and continuous (differentiable) optimization",
+      "impact": "If definitions are universal: constraint is mountain across all problem classes. If definitions require assumption sets: local optima might not exist in some formally distinct problem spaces (e.g., fully discrete, or non-Hausdorff topologies).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Precision of global vs local optima definitions across topology classes"
+    },
+    {
+      "id": "convexity_escape_mechanisms",
+      "question": "Can a non-convex optimization problem be transformed into an equivalent convex problem through change of variables or problem reformulation?",
+      "resolution_mechanism": "Survey of convex relaxation techniques in operations research; analysis of when transformations preserve optimality vs when they create new constraints",
+      "impact": "If transformations preserve optimality universally: the constraint becomes variable-dependent (might be a Rope or Tangled Rope for problem designers). If transformations always lose information: local optima are truly immutable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-convex problems can be transformed to convex equivalents"
+    },
+    {
+      "id": "landscape_concentration_limits",
+      "question": "In very high-dimensional spaces (e.g., neural networks with billions of parameters), do concentration phenomena (high-dimensional Gaussian measure concentration, loss landscape smoothness at scale) reduce the practical relevance of local optima even if they theoretically exist?",
+      "resolution_mechanism": "Analysis of recent work on neural network loss landscape geometry (e.g., mode connectivity, loss landscape visualization); empirical measurement of how often gradient descent gets stuck vs reaches acceptable solutions",
+      "impact": "If concentration makes local optima rare or harmless in high dimensions: the constraint becomes less binding in practice (Scaffold or Piton). If local optima remain pervasive and harmful: the constraint stays Mountain.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relevance of local optima in high-dimensional neural network optimization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.14
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The existence of local optima in non-convex optimization spaces is a fundamental mathematical constraint inherent to the topology of non-convex sets and the structure of optimization itself. It is not a feature of any particular algorithm, implementation, or application domain \u2014 it is a property of the mathematical landscape itself. In any space where the neighborhood structure deviates from convexity (which is to say, virtually all realistic optimization problems), there must exist points that are superior to all immediate neighbors but are not the global best. This constraint appears identically across all structural perspectives because it emerges necessarily from the definition of non-convexity. The constraint has zero degrees of freedom for all indices: no algorithm, no computational power, no reformulation can eliminate the existence of local optima without fundamentally changing the problem space (e.g., by imposing convexity constraints, which changes the problem to something different). The theater_ratio is extremely low (0.15) because the constraint has no performative component \u2014 it is pure mathematical fact with no institutional, social, or observational ambiguity. The suppression is minimal (0.03) because there is nothing to suppress \u2014 the constraint does not coerce anyone; it simply describes the topology of optimization landscapes. The extractiveness value (0.12) reflects that this is a constraint on the problem space itself, not an extraction mechanism from any agent. All perspectives classify identically as Mountain because the constraint's structure is invariant across all observables and all measurement methodologies.",
+    "key_agents": [
+      "Algorithm Designers: Computational agents (powerful/mobile) \u2014 encounter the constraint as an immovable limit on what algorithms can guarantee; can design better heuristics but cannot escape the fundamental limit",
+      "Machine Learning Practitioners: Applied agents (moderate/mobile) \u2014 experience local optima empirically in training; adapt through restarts, regularization, and architecture choices but cannot eliminate the constraint",
+      "Machine Learning Industry: Institutional actor (institutional/arbitrage) \u2014 has arbitraged the constraint by accepting 'good enough' solutions instead of global optima; profits from workarounds while the constraint remains immutable",
+      "Mathematical Community: Analytical observer (analytical/analytical) \u2014 understands local optima as a topological inevitability; the constraint is central to optimization theory and complexity theory",
+      "Optimization Theory: Foundational knowledge domain (analytical/analytical) \u2014 local optima are a core research topic precisely because they are unavoidable; the body of optimization theory is largely about understanding, characterizing, and mitigating the effects of local optima"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The constraint does not extract value from anyone; it is a property of the mathematical landscape. The value is not zero because some agents (practitioners, algorithm designers) must expend resources (computational time, research effort) to work around or adapt to the constraint. But this is not extraction in the DR sense \u2014 it is not asymmetric transfer of value. It is the cost of engaging with a constrained problem space. Suppression (0.03): Minimal. There is nothing suppressed. No agent can be 'freed' from this constraint through different framing, exit, or negotiation. The constraint is identical for all participants. Theater_ratio (0.15): Very low. The constraint is purely functional \u2014 there is no performative institutional component. The mathematical literature does not contain 'theater' around local optima; it contains rigorous proofs of their existence and analysis of their properties. The small non-zero value reflects only minor presentation/pedagogical choices in how the constraint is communicated, but these do not change the underlying reality.",
+    "perspectival_gap": "There is no perspectival gap. All six perspectives classify as Mountain identically because the constraint's existence is independent of the observer's position, power, time horizon, exit options, or scope. The constraint does not vary based on who measures it or how they measure it. This is the defining feature of a true Mountain constraint in the DR framework.",
+    "directionality_logic": "Directionality (d) is not applicable for Mountain constraints because there is no extraction mechanism. All agents are equally 'subject to' the constraint in the sense that it describes the topology of their problem space, not because it extracts from them. There is no beneficiary and no victim \u2014 the constraint simply exists as a boundary condition on all non-convex optimization problems.",
+    "mandatrophy_analysis": "Mandatrophy does not arise for this constraint because it is uniformly classified as Mountain from all perspectives. There is no risk of mislabeling coordination as extraction (or vice versa) because the constraint has no coordination function and no extraction mechanism. It is pure mathematical structure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "no_free_lunch_theorem",
+      "np_hardness_computational",
+      "convergence_rate_bounds"
+    ],
+    "dual_formulation_note": "Local optima are a structural feature of non-convex spaces; they are upstream of many computational complexity results (NP-hardness, no-free-lunch theorem, convergence rate bounds). Decomposition into separate constraint stories would be inappropriate \u2014 local optima is a single, unified mathematical phenomenon with invariant \u03b5 across all measurement bases."
+  },
+  "directionality_overrides": []
+}

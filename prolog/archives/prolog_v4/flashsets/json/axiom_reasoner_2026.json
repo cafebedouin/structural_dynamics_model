@@ -1,0 +1,153 @@
+{
+  "header": {
+    "constraint_id": "axiom_reasoner_2026",
+    "version": "1.0",
+    "generated_date": "2024-03-07",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.5,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Axiom's Self-Improving Superintelligent Reasoner",
+    "topic_domain": "technological/scientific",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "axiom_company",
+      "early_adopters"
+    ],
+    "victims": [
+      "competing_ai_companies",
+      "society_at_large"
+    ],
+    "has_sunset_clause": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Society at Large",
+      "comment": "Society at large may be trapped by the reasoner's decisions, especially if its goals are misaligned with human values."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Competing AI Companies",
+      "comment": "Competing AI companies are constrained by Axiom's advancements but also benefit from the general progress in the field."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Axiom Company",
+      "comment": "Axiom benefits from its own reasoner and can adapt its strategy. Has significant control over the reasoner's development."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees that as the field matures there is an increase in shared knowledge and standards, providing coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "goal_alignment",
+      "question": "Will the superintelligent reasoner's goals align with human values?",
+      "resolution_mechanism": "Careful design of reward functions and ethical constraints during development.",
+      "impact": "If aligned: potential for massive societal benefit. If misaligned: existential risk.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The alignment of the reasoner's goals with human values."
+    },
+    {
+      "id": "control_problem",
+      "question": "Can humanity retain control over a self-improving superintelligent system?",
+      "resolution_mechanism": "Development of robust control mechanisms and safety protocols.",
+      "impact": "If control is maintained: system can be used for good. If control is lost: unpredictable consequences.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Humanity's ability to control the reasoner."
+    },
+    {
+      "id": "unintended_consequences",
+      "question": "What unintended consequences might arise from the reasoner's actions?",
+      "resolution_mechanism": "Extensive simulations and testing to identify potential negative outcomes.",
+      "impact": "Positive or negative depending on the specific consequences.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Potential unintended consequences of the reasoner's actions."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Axiom's mission is to move beyond the probabilistic approximations of current AI by building a self-improving reasoner centered on mathematical rigor. This presents both opportunities and risks. The reasoner could solve some of humanity's most pressing problems, but it could also create new challenges if its goals are misaligned with human values or if it becomes uncontrollable.",
+    "key_agents": [
+      "Axiom Company: Primary beneficiary (institutional/arbitrage) \u2013 stands to gain significant advantages.",
+      "Early Adopters: Beneficiaries (moderate/mobile) \u2013 gain advantage over market.",
+      "Competing AI Companies: Victims (moderate/constrained) \u2013 potentially outcompeted.",
+      "Society at Large: Victims (powerless/trapped) \u2013 potentially exposed to existential risk."
+    ],
+    "logic_rationale": "Extractiveness: Moderate. The company and early adopters extract value initially, while competing companies and society at large may experience negative impacts. Over time the value and risk both increase. Suppression: The self-improving nature of the system increases its power and ability to extract value/control.",
+    "perspectival_gap": "The perspectives differ based on the agent's power and exit options. Axiom company can use the system and has arbitrage. Competing AI companies have limited exits. Society as a whole has low power and limited exits.",
+    "directionality_logic": "Each perspective's directionality value (d) is determined by the agent's structural position \u2014 their power level, exit options, and relationship to the extraction flow. The pipeline computes d from these context parameters and applies the sigmoid f(d) to produce experienced extractiveness chi. Beneficiaries with arbitrage options experience low or negative effective extraction; trapped agents with no exit bear maximum extraction.",
+    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by showing that all four types are legitimate perspectival readings of the same structural data."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_protocols",
+      "algorithmic_bias"
+    ],
+    "dual_formulation_note": "The Axiom reasoner is downstream of the general AI safety protocols, but introduces new challenges. The upstream constraints have their own extractiveness values reflecting the the safety protocol status."
+  },
+  "directionality_overrides": []
+}

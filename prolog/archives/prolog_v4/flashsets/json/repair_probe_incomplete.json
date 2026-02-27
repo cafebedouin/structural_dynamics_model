@@ -1,0 +1,61 @@
+{
+  "header": {
+    "constraint_id": "repair_probe_incomplete",
+    "version": "0.1",
+    "generated_date": "2024-08-22",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.01,
+    "suppression": 0.01,
+    "theater_ratio": 0.01,
+    "claimed_type": "rope",
+    "human_readable": "Data Repair Bridge Probe (Deliberately Incomplete)",
+    "topic_domain": "investigation/testing",
+    "beneficiaries": [
+      "data_repair_engine"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "immediate",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective sees this as a pure coordination mechanism to ensure data integrity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Data Repair Engine",
+      "comment": "The data repair engine benefits from this probe as it allows it to validate and improve its repair algorithms."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1
+  },
+  "omegas": [],
+  "measurements": [],
+  "commentary": {
+    "narrative_context": "A minimal testset designed to trigger data_repair.pl bridge paths. This constraint ensures that the data repair engine functions correctly by providing it with deliberately incomplete data. The intent is purely to coordinate data integrity validation and enhancement.",
+    "key_agents": [
+      "Data Repair Engine: Primary beneficiary (institutional/arbitrage) - benefits from the probe to validate and improve repair algorithms.",
+      "Analytical Observer: Sees the probe as a coordination mechanism (analytical/analytical) - ensures data integrity."
+    ],
+    "logic_rationale": "Extractiveness (0.01): Very low, as the probe is designed for testing and validation, not extraction. Suppression (0.01): Very low, there is no suppression as this is a voluntary testing mechanism. Theater Ratio (0.01): Very low, as the probe is purely functional and designed for specific testing purposes.",
+    "perspectival_gap": "Both the analytical observer and the data repair engine view this constraint as a coordination mechanism, hence there is no significant perspectival gap.",
+    "directionality_logic": "The data repair engine is the beneficiary, experiencing a low 'd' value, and the analytical observer also sees this as pure coordination.",
+    "mandatrophy_analysis": "The probe is designed to ensure data integrity and is not intended for extraction. The low extractiveness and suppression values confirm that this is indeed a coordination mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

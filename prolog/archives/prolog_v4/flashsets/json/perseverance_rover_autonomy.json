@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "perseverance_rover_autonomy",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Perseverance Rover Autonomy",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nasa_science_team",
+      "ai_developers"
+    ],
+    "victims": [
+      "earth_based_rover_operators"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Earth-Based Rover Operators",
+      "comment": "Earth-based rover operators experience a loss of direct control. The autonomous system dictates exploration to some extent, limiting direct, real-time input. They are trapped because of signal delay and reliance on the autonomous system."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "NASA Science Team",
+      "comment": "The science team benefits from increased exploration speed and efficiency due to autonomy. However, they are constrained by the AI's decision-making, requiring adaptation to its directives. They benefit from the increased data but must adapt to the rover's autonomous choices. Their exit option is constrained because they cannot abandon the autonomous exploration entirely without significantly impacting the mission's scope and speed."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "AI Development Community",
+      "comment": "AI developers see the autonomy as a coordination mechanism to test and improve AI algorithms for space exploration, contributing to future missions. The AI Development Community benefits directly from the data collected and the opportunity to refine their algorithms and expertise. They have an arbitrage exit option because they can apply their skills to other projects without significantly impacting their overall career or the development of the field."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer recognizes the autonomy as a mixed blessing. It increases data acquisition but may reduce human understanding and serendipitous discoveries. Overall, there is a trade-off between human control and automated exploration efficiency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "human_oversight_threshold",
+      "question": "What level of human oversight is needed to maintain scientific integrity and prevent unintended consequences?",
+      "resolution_mechanism": "Compare data quality and incidence of anomalies under different oversight protocols.",
+      "impact": "Insufficient oversight leads to data corruption; excessive oversight negates efficiency gains.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal level of human oversight in autonomous rover operations."
+    },
+    {
+      "id": "algorithm_bias",
+      "question": "To what extent does the rover's algorithm introduce bias in data collection and analysis?",
+      "resolution_mechanism": "Analyze datasets for representational imbalances; test algorithm against diverse simulated environments.",
+      "impact": "High bias skews scientific understanding; low bias increases accuracy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Potential bias introduced by the rover's algorithms."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Perseverance rover's autonomous exploration capability on Mars presents a constraint on direct, real-time human control. This autonomy allows the rover to make decisions about navigation, sample selection, and data collection without immediate input from Earth-based operators, who are limited by signal delays. While increasing efficiency and the volume of data collected, this autonomy reduces direct human oversight and potentially limits the range of scientific questions that can be addressed. ",
+    "key_agents": [
+      "Earth-Based Rover Operators: Primary target (powerless/trapped) - Experience a loss of direct control over the rover.",
+      "NASA Science Team: Primary beneficiary (moderate/constrained) - Benefits from increased data collection speed but is also limited by the AI's choices.",
+      "AI Developers: Beneficiary (institutional/arbitrage) - Use the mission to test and improve AI algorithms.",
+      "Analytical Observer: (analytical/analytical) - Sees both benefits and drawbacks of the autonomy."
+    ],
+    "logic_rationale": "Extractiveness (0.55): The autonomous system extracts direct control and real-time decision-making from the earth-based operators, although it increases the data acquisition rate for the science team. Suppression (0.65): The reliance on AI suppresses the ability of human operators to make real-time adjustments based on unexpected findings. The suppression comes from the signal delay between Earth and Mars, which makes immediate human intervention impractical. Theater Ratio (0.30): The low theater ratio indicates that the autonomous system is primarily functional, with limited performative or ceremonial aspects.",
+    "perspectival_gap": "The Earth-based operators see the system as a snare because they lose direct control. The science team sees it as a tangled rope because they gain data but lose some control over the direction of exploration. The AI developers see it as a rope because it allows them to test and improve their algorithms, but this also depends on the other agents relinquishing some control. The analytical observer attempts to balance the scientific gains against the loss of the potential for human-directed discovery.",
+    "directionality_logic": "Earth based operators are the victims with no escape, as they are powerless and trapped by distance. NASA science team has limited escape as they are constrained to follow the parameters of the mission. The AI development community can apply their algorithms in many other domains, so they benefit, with an arbitrage exit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

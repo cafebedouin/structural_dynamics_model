@@ -1,0 +1,157 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenants",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "HOA Architectural Review and Restrictive Covenants",
+    "topic_domain": "economic/social/legal",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hoa_board",
+      "property_management_companies"
+    ],
+    "victims": [
+      "individual_homeowners",
+      "minority_homeowners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Individual Homeowner",
+      "comment": "Individual homeowners often feel trapped by the covenants, facing significant costs and limited exit options due to property value impacts. They bear the brunt of the extraction with limited recourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Conforming Homeowner",
+      "comment": "Homeowners who generally conform to HOA covenants experience a mix of benefits and constraints. They benefit from maintained property values and aesthetic consistency but are constrained in their personal expression and property use."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "HOA Board",
+      "comment": "HOA boards benefit from the covenants by maintaining control and property values, but also face the burden of enforcement and potential legal challenges. They can arbitrage power effectively."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Property Management Companies",
+      "comment": "Property management companies benefit from the fees associated with enforcing the covenants, experiencing the constraint as a source of revenue and business opportunities. They can arbitrage within the HOA legal structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "regional",
+      "label": "Legal Scholar",
+      "comment": "Legal scholars analyze the covenants as a tangled rope, acknowledging both the coordination benefits (property value maintenance, aesthetic consistency) and extraction costs (restrictions on individual liberty, potential for discriminatory enforcement)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_fairness",
+      "question": "Is enforcement of covenants applied fairly and consistently across all homeowners, or does it disproportionately target certain groups?",
+      "resolution_mechanism": "Statistical analysis of enforcement actions, surveys of homeowner experiences, legal audits of HOA practices",
+      "impact": "If enforcement is fair: Covenant is a functional rope (property value maintenance). If enforcement is discriminatory: Covenant is a pure snare (extraction mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fairness and consistency of covenant enforcement."
+    },
+    {
+      "id": "community_preference_alignment",
+      "question": "Do the covenants reflect the genuine preferences of the majority of homeowners, or are they imposed by a small group or outdated regulations?",
+      "resolution_mechanism": "Regular homeowner surveys, community meetings, amendment processes, and analyses of homeowner participation rates.",
+      "impact": "If aligned with community preferences: Covenants serve a legitimate coordination function (rope). If misaligned: Covenants are an extraction mechanism (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Alignment of covenants with community preferences."
+    },
+    {
+      "id": "property_value_impact",
+      "question": "Do the covenants genuinely contribute to maintaining or increasing property values, or do they stifle innovation and individual expression, ultimately decreasing property values?",
+      "resolution_mechanism": "Comparative analysis of property values in HOA-governed communities versus non-HOA communities, surveys of potential homebuyers.",
+      "impact": "If covenants increase property values: HOA provides net coordination benefit (rope or scaffold). If covenants decrease property values: HOA enacts net extraction (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of covenants on property values."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Homeowners' association (HOA) covenants are legally binding agreements that regulate the use and appearance of properties within a community. These covenants, enforced by an elected board or a property management company, aim to maintain property values and aesthetic standards. However, they also impose restrictions on individual homeowners, potentially leading to conflicts and perceptions of unfairness. The structure embodies coordination and extraction, making it a tangled rope.",
+    "key_agents": [
+      "Individual Homeowners: Primary target (powerless/trapped) - bears the brunt of restrictive covenants.",
+      "HOA Board: Primary beneficiary (institutional/arbitrage) - maintains control and property values.",
+      "Property Management Companies: Secondary beneficiary (powerful/arbitrage) - profits from enforcement.",
+      "Conforming Homeowner: Experiences a mix of benefit and constraint.",
+      "Minority Homeowners: Homeowners who may face discrimination (powerless/trapped) - subject to biased enforcement.",
+      "Legal Scholar: Analytical observer (analytical/analytical) - analyzes structure and impact."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. Restrictions on property use and modifications can significantly limit homeowners' autonomy and investment choices. Enforcement costs can be substantial, including fines and legal fees. Suppression (0.65): High. Homeowners have limited ability to exit the HOA or modify the covenants, particularly in established communities. The legal framework generally favors enforcement of covenants. Theater Ratio (0.40): Moderate. While there are stated goals of maintaining property values, the enforcement often comes down to aesthetic preferences and can feel performative, or worse, capricious.",
+    "perspectival_gap": "The individual homeowner sees a snare (extraction), while the HOA board and property management company view the arrangement as a rope (coordination). The legal scholar sees the hybrid nature of the arrangement, a tangled rope. Conforming Homeowners sees a mix of both.",
+    "directionality_logic": "The HOA board benefits by maintaining property values and community standards (low d), while the individual homeowner bears the cost of restrictions (high d). Property management companies directly benefit through fees and contracts (low d).",
+    "mandatrophy_analysis": "The claim of 'maintaining property value' is often a justification for extractive practices. The tension between the stated coordination benefits and the clear limitations on individual homeowners requires a tangled rope classification. This avoids falsely labeling as rope, which would deny extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "german_board_gender_quota",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gbgq"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "German Gender Quota for Corporate Boards (F\u00fcPoG II)",
+    "topic_domain": "economic/regulatory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "women_in_executive_positions",
+      "workforce_diversity_advocates"
+    ],
+    "victims": [
+      "male_candidates_for_board_seats",
+      "boards_facing_compliance_costs"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Male Candidate Pool",
+      "comment": "PERSPECTIVE 1: EXCLUDED MALE CANDIDATES (SNARE) \u2014 Male candidates in high-potential management tiers face systematic exclusion from board advancement during the quota implementation window. The constraint operates through mandate-driven selection rather than merit competition. No exit option exists within the German corporate system; candidates must either accept reduced advancement prospects or relocate to non-quota jurisdictions. Trapped exit + victim status \u2192 maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "German Corporations (DAX/MDAX Listed)",
+      "comment": "PERSPECTIVE 2: CORPORATIONS (TANGLED ROPE) \u2014 Firms experience both coordination benefit (diversity-driven board effectiveness, reduced legal/reputational risk, access to wider talent pool) and enforcement extraction (compliance costs, board nomination process disruption, potential reduction in candidate experience levels during transition). Constrained exit: firms can relocate headquarters but face legal, tax, and operational barriers. Active enforcement regime required by law."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Women Advancing to Board Level",
+      "comment": "PERSPECTIVE 3: WOMEN CANDIDATES (ROPE) \u2014 Primary beneficiary. Quota mechanism enables board access that was previously blocked by informal gatekeeping and network effects. The constraint solves a coordination problem: firms lacked incentive to seek women candidates; quota removes that decision burden by mandating inclusion. Women candidates experience this as pure coordination benefit with minimal coercive content \u2014 they gain access without bearing significant cost. Arbitrage exit available (international board opportunities)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Gender Parity Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: GENDER PARITY COALITION (SCAFFOLD) \u2014 Organized actors (works councils, feminist organizations, regulatory bodies) view the quota as a temporary scaffolding structure with explicit sunset logic embedded in the law. F\u00fcPoG II contains a built-in review clause at 10 years (2031) with expectation that market mechanisms and cultural shifts will make the quota unnecessary. The coalition sees enforcement suppression declining over the interval as norms internalize and alternative selection mechanisms mature."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Corporate Governance Tradition",
+      "comment": "PERSPECTIVE 5: CORPORATE GOVERNANCE TRADITION (PITON) \u2014 The old selection mechanism (cooptation, informal networks, tenure-track sponsorship) persists as vestigial practice even after quota implementation. Boards maintain ceremonial commitment to 'merit' while de facto using quota mandates. Theater ratio elevated (0.55) reflects performative invocation of continuity-with-merit narratives obscuring the fact that selection mechanism has fundamentally shifted. The tradition is inert \u2014 maintained through institutional habit rather than functional necessity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "German State (Regulatory Authority)",
+      "comment": "PERSPECTIVE 6: GERMAN STATE (TANGLED ROPE) \u2014 Regulatory authority experiences the constraint as both enforcer and beneficiary. Coordination benefit: quota mechanism advances long-term labor market efficiency and gender equity goals that align with EU directives and broader demographic shifts. Extraction dynamic: enforcement requires monitoring, penalty assessment, and reputational management. Constrained exit: Germany cannot unilaterally withdraw from EU-aligned standards without trade/diplomatic cost. Active enforcement mechanism explicit in law (fines, mandatory reporting)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational analytical position, one could argue that gender-balanced organizational performance is a natural property of human capital optimization \u2014 excluding half the population from leadership was always suboptimal, and the quota merely corrects a persistent market failure. Under this reading, the constraint is a law-like correction of deviation, not an imposition. However, this perspective risks naturalizing a contingent policy choice as inherent organizational logic. Engine will flag as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "selection_quality_metric",
+      "question": "Does board composition selected under quota mandate optimize for governance effectiveness as well as demographic representation?",
+      "resolution_mechanism": "Comparative analysis of board performance metrics (ROI, strategic decision quality, risk management) for quota-selected vs pre-quota boards; longitudinal tracking of firm outcomes post-2021",
+      "impact": "If yes: quota represents efficient correction of market failure (Mountain perspective gains credibility; extraction classification overstated). If no: quota is enforced allocation with real cost to selection quality (Snare/Tangled Rope perspectives confirmed; extraction magnitude increases).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quota selection optimizes governance effectiveness"
+    },
+    {
+      "id": "alternative_pathway_sufficiency",
+      "question": "Would organic market-driven selection of women to boards have eventually reached comparable parity levels without legal mandate?",
+      "resolution_mechanism": "Comparative analysis of gender representation trends in non-German EU firms; analysis of firms that exceeded quota voluntarily pre-2021; counterfactual modeling of market trajectory absent quota",
+      "impact": "If alternative pathway sufficient: quota is unnecessary intervention (Scaffold sunset logic confirmed early; suppression level overestimated). If alternative pathway stalled: quota was essential structural correction (Snare and Tangled Rope severity confirmed; extraction is unavoidable cost of market correction).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether market-driven selection would have achieved similar parity"
+    },
+    {
+      "id": "male_candidate_reallocation",
+      "question": "Do excluded male candidates permanently exit German corporate leadership or reallocate to non-board management roles with similar compensation?",
+      "resolution_mechanism": "Longitudinal career tracking of male candidates blocked from board advancement 2021-2026; analysis of compensation, title, and authority reallocation; international relocation rates",
+      "impact": "If permanent exit: extraction is severe (careers truncated). If reallocation to equivalent roles: extraction is redistributive not destructive (Tangled Rope classification supported). If international relocation: extraction is externalized (German corporations benefit at cost to global male candidate mobility).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reallocation patterns for excluded male candidates"
+    },
+    {
+      "id": "compliance_cost_asymmetry",
+      "question": "Are compliance costs distributed fairly across firm size, or do small/medium firms bear disproportionate enforcement burden?",
+      "resolution_mechanism": "Cost analysis by firm size (DAX vs MDAX vs Mittelstand); analysis of penalty assessment patterns; comparison of compliance infrastructure investments",
+      "impact": "If symmetric: extraction is legitimate regulatory cost (Tangled Rope classification confirmed). If asymmetric to SME: quota extracts disproportionately from smaller firms (Snare classification for SME cohort).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of compliance costs across firm size"
+    },
+    {
+      "id": "internalization_horizon",
+      "question": "How long until gender-balanced board selection becomes internal organizational norm rather than mandate-driven practice?",
+      "resolution_mechanism": "Survey of corporate culture shifts; analysis of board nomination process rhetoric; tracking of voluntary diversity commitments that exceed quota; generational turnover analysis",
+      "impact": "If internalization < 5 years: Scaffold sunset logic robust; suppression declining rapidly (theater ratio will drop significantly). If internalization > 15 years: Scaffold is aspirational; enforcement suppression may remain high (Tangled Rope persists longer than expected).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Timeline for norm internalization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Germany's F\u00fcPoG II (F\u00fchrungspositionen-Gesetz II), effective August 2021, mandates 40% gender representation on corporate boards of publicly listed and large companies. This constraint exhibits Tangled Rope structure at the institutional level: it combines genuine coordination benefit (solving a market failure in talent allocation and organizational effectiveness) with asymmetric extraction (imposing career costs on excluded male candidates and compliance costs on firms). The constraint's perspectival range spans from pure extraction (Snare) when viewed from excluded male candidates' position, to pure coordination (Rope) when viewed from women beneficiaries, to temporary scaffolding (Scaffold) when viewed by gender parity advocates, to degraded ritual (Piton) in the vestigial corporate governance tradition. The theater ratio (0.55) reflects ongoing invocation of merit-based selection narratives even though the selection mechanism is now mandate-driven \u2014 this performative layer is gradually declining as norms shift and quota become internalized practice.",
+    "key_agents": [
+      "Women Board Candidates: Primary beneficiary (institutional/arbitrage) \u2014 gain board access previously blocked by informal gatekeeping; experience constraint as pure coordination benefit",
+      "Male Candidates in Management Pipeline: Primary victim (powerless/trapped) \u2014 face systematic exclusion from board advancement during quota window; constrained to German jurisdiction or international relocation",
+      "DAX/MDAX Listed Corporations: Secondary actor (organized/constrained) \u2014 bear compliance costs and board nomination disruption but benefit from diversity-driven governance effectiveness; constrained exit via regulatory/tax barriers",
+      "German Regulatory Authority (BMAS): Enforcer/beneficiary (institutional/constrained) \u2014 implements quota mandate and monitors compliance; benefits from EU alignment and demographic efficiency goals",
+      "Works Councils & Union Structures: Organized beneficiary (organized/constrained) \u2014 support quota as workforce equity mechanism; constrained by labor law framework",
+      "Corporate Governance Establishment: Vestigial actor (institutional/arbitrage) \u2014 maintains merit-based selection rhetoric while operating under mandate; low functional necessity (Piton perspective)",
+      "Gender Parity Advocacy Coalition: Organized beneficiary (organized/constrained) \u2014 views quota as temporary scaffolding with 2031 sunset review; sees suppression declining as norms internalize"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint imposes real costs on excluded male candidates (career advancement blocked) and firms (compliance overhead, nomination process disruption, potential reduction in board experience levels during transition). However, extractiveness is not severe (not Snare-level) because: (1) alternative management roles with comparable compensation exist for excluded candidates; (2) the 40% target is not total exclusion, leaving 60% of board seats available; (3) firms gain offsetting benefits from diversity-driven governance effectiveness and reduced legal/reputational risk; (4) the enforcement mechanism has a built-in sunset clause (10-year review) with expectation of eventual internalization. Suppression (0.48): Moderate. Significant barriers to exit exist for male candidates within German corporate system and for firms within EU regulatory framework, but alternatives exist (international relocation for candidates, compliance pathways for firms). Not total suppression. Theater ratio (0.55): Moderate-high. Corporate governance discourse continues to invoke merit-based selection and continuity narratives even though the selection mechanism has fundamentally shifted to mandate-driven parity. This performative layer (theater) is gradually declining as quota selection becomes internalized and norms shift. The trajectory shows theater declining from 0.38\u21920.55 initially (increase in performative gap as mandate takes effect and old rhetoric collides with new practice), suggesting eventual decline as internalization completes.",
+    "directionality_logic": "Directionality varies dramatically across perspectives. Women candidates (beneficiary + arbitrage exit) derive d \u2248 0.15, experiencing negative/negligible extraction. Male candidates in management (victim + trapped exit) derive d \u2248 0.95, experiencing high extraction. Corporations (mixed beneficiary/victim + constrained exit) derive d \u2248 0.50, experiencing moderate mixed extraction. German state (enforcer + constrained exit) derives d \u2248 0.45, experiencing moderate extraction offset by coordination benefit. The mandatrophy is resolved by recognizing that the constraint is genuinely hybrid: it solves a coordination problem (firms had no incentive to seek women board members despite efficiency gains) while creating asymmetric extraction (male candidates bear cost). Both functions are real and structurally necessary \u2014 the constraint could not achieve the coordination benefit without the extraction mechanism, which makes it Tangled Rope rather than pure Rope or pure Snare.",
+    "perspectival_gap": "The gap between perspectives is substantial and structurally rooted. Women candidates see pure coordination (Rope) \u2014 the quota removes a barrier that was previously blocking access. Male candidates see pure extraction (Snare) \u2014 they are excluded with no exit option. Corporations see mixed dynamics (Tangled Rope) \u2014 they benefit from governance diversity but face disruption costs. The advocacy coalition sees a temporary structure with a sunset (Scaffold) \u2014 enforcement suppression is expected to decline as norms internalize. The corporate governance tradition sees itself as degraded (Piton) \u2014 merit-based rhetoric persists but the actual mechanism is mandate-driven. The analytical observer risks seeing a natural law (Mountain) \u2014 gender parity as optimal organizational structure \u2014 but this perspective naturalizes a contingent policy choice. The perspectival gaps reflect genuine structural asymmetries: different agents occupy different positions relative to the extraction flow (who benefits, who bears cost, what exit options exist). No single type is correct; all six readings are legitimate observations of different structural positions.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that Tangled Rope classification is correct and unavoidable. The constraint CANNOT be pure Rope because the coordination benefit (diversity-driven governance) necessarily requires extraction from male candidates (removing them from candidacy pool during quota implementation). Conversely, it CANNOT be pure Snare because genuine coordination benefit accrues to firms and to the broader economy (market failure correction, efficiency gain). The constraint is hybrid by structural necessity: achieving the coordination function requires the extraction mechanism. Attempting to classify it as either pure Rope or pure Snare separately would miss the integrated structure. The active enforcement mechanism (mandatory reporting, fines for non-compliance) confirms the Tangled Rope gate requirement. The beneficiaries (women candidates, firms via governance effectiveness, state via EU alignment) and victims (male candidates, firms via compliance cost) are both present and both essential to the constraint's function. The perspectival range (Snare/Rope/Tangled Rope/Scaffold/Piton/Mountain) shows that the constraint is observed differently depending on the agent's position, but all perspectives converge on acknowledging the hybrid structure: pure extraction (Snare) plus pure coordination (Rope) plus enforcement overlay (Tangled Rope). The mandatrophy is fully resolved: this is a legitimate Tangled Rope, not a mislabeled Snare pretending to be Rope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_directive_2022_2464_board_diversity",
+      "german_equal_opportunity_law"
+    ],
+    "dual_formulation_note": "F\u00fcPoG II is downstream of EU regulatory harmonization (2022/2464) and reflects German implementation of broader EU gender parity directives. The national constraint has its own extractiveness profile reflecting specific German corporate structure and labor law; the EU directive has its own extractiveness reflecting cross-national regulatory imposition. Linked via network."
+  },
+  "directionality_overrides": []
+}

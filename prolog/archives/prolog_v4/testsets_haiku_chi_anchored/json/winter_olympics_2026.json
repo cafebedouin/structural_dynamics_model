@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "winter_olympics_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mc2026"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Milano Cortina 2026 Winter Olympics",
+    "topic_domain": "social/political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "olympic_organizing_committee",
+      "international_broadcast_networks",
+      "host_city_tourism_sector",
+      "sponsoring_corporations",
+      "alpine_sports_development_programs"
+    ],
+    "victims": [
+      "local_alpine_communities",
+      "displaced_mountain_residents",
+      "environmental_alpine_ecosystems",
+      "italian_public_debt_servicing",
+      "worker_safety_enforcement"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Displaced Mountain Communities",
+      "comment": "PERSPECTIVE 1: DISPLACED ALPINE COMMUNITIES (SNARE) \u2014 Local residents in Cortina, Val d'Aosta, and surrounding mountain valleys face land acquisition, infrastructure disruption, and permanent environmental degradation with no viable exit. Career and livelihood tied to region; cannot meaningfully opt out of Olympic infrastructure projects. d\u22480.93, f(d)\u22481.38, \u03c3=0.8 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Alpine Environmental Systems",
+      "comment": "PERSPECTIVE 2: ALPINE ECOSYSTEMS (SNARE) \u2014 Glacial retreat acceleration, ski slope construction, transport infrastructure, and waste management systems impose permanent extraction on mountain ecology with zero exit capacity. Bears costs; has no agency in constraint structure. d\u22481.0, f(d)\u22481.42, \u03c3=0.8 \u2192 \u03c7\u22480.66."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Italian Public Finance",
+      "comment": "PERSPECTIVE 3: ITALIAN PUBLIC FINANCE (TANGLED ROPE) \u2014 Coordination function: Olympic Games are major economic stimulus event, attracting international tourism, construction contracts, and sponsorship revenue. Extraction function: Event cost overruns (typical +40-60% from budget), security infrastructure, venue maintenance debt, currency risk on foreign borrowing. Italy benefits from tourism multiplier but bears full contingency liability. d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Olympic Committee",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL OLYMPIC COMMITTEE (ROPE) \u2014 Pure coordination mechanism: IOC matches host cities to global sporting infrastructure demand, coordinates athlete participation, standardizes rules and measurement. IOC has arbitrage capacity (can move Games to alternative hosts) and benefits from broadcast rights revenue without bearing venue construction costs. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Broadcast Networks",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL BROADCAST NETWORKS (ROPE) \u2014 Coordination function: solve the collective action problem of aggregating global audience for elite winter sports. Extraction: minimal. Networks have arbitrage capacity (can source sports content from other events) and capture pure benefit from advertising revenue and subscription models. d\u22480.05, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Multinational Sponsoring Corporations",
+      "comment": "PERSPECTIVE 6: MULTINATIONAL SPONSORS (TANGLED ROPE) \u2014 Coordination function: participate in global brand-building event with guaranteed audience reach and association with elite athletics. Extraction function: oligopolistic gatekeeping of sponsorship slots creates artificial scarcity; sponsors extract rents from IOC (sponsorship fees escalate faster than inflation). Sponsors have high arbitrage capacity (can sponsor alternative sporting events) but strategically remain locked in due to competitive signaling value. d\u22480.35, f(d)\u22480.28, \u03c3=1.2 \u2192 \u03c7\u22480.19."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Alpine Sports Development Programs",
+      "comment": "PERSPECTIVE 7: ALPINE SPORTS DEVELOPMENT PROGRAMS (TANGLED ROPE) \u2014 Coordination function: Olympic infrastructure (slopes, lifts, timing systems, training facilities) creates externality benefit for domestic youth skiing programs; generates talent pipeline and national competitive advantage. Extraction function: long-term infrastructure maintenance costs, climate vulnerability to warm winters, monopoly control by IOC on venue usage during Games. Development programs are constrained (depend on Games infrastructure for training) but organized (national federations). d\u22480.52, f(d)\u22480.64, \u03c3=1.0 \u2192 \u03c7\u22480.37."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Olympic Games Institution",
+      "comment": "PERSPECTIVE 8: OLYMPIC GAMES INSTITUTION (PITON) \u2014 Appears as coordination mechanism (match hosts to sports), but underlying function has degraded over 50+ years. Modern Olympics are primarily theatrical spectacle (opening ceremony, medal ceremonies, torch relay, national flag symbolism) with diminishing functional return relative to cost. theater_ratio=0.68 confirms piton gate (\u22650.70 not quite met, borderline). Maintenance through institutional inertia and nationalist symbolism. \u03c7\u22480.39 (constrained exit means some effective extraction despite low power)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From analytical/civilizational perspective, argues that mass spectacle events are inherent to human social organization; 'bread and circuses' is a natural law of hierarchical societies. Games extract resources and impose asymmetric costs because hierarchy itself is immutable. However, structural data contradicts this: \u03b5=0.58, suppression=0.65, and active enforcement requirement all indicate contingent institutional arrangements, not laws of nature. Engine flags this as false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "infrastructure_debt_lifespan",
+      "question": "What percentage of Olympic infrastructure remains economically viable beyond 15 years post-Games?",
+      "resolution_mechanism": "Retrospective analysis of previous Winter Olympics venues (Vancouver 2010, Sochi 2014, PyeongChang 2018): tracking maintenance costs, utilization rates, and write-offs relative to construction investment",
+      "impact": "If >60% viable: infrastructure extraction is overstated; Games provide durable regional asset. If <40% viable: venue debt persists as de facto extraction mechanism long after Games conclude.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Long-term viability of Olympic infrastructure investments"
+    },
+    {
+      "id": "local_revenue_capture",
+      "question": "Do host city and alpine communities capture >40% of tourism revenue generated by Games hosting?",
+      "resolution_mechanism": "Economic impact studies tracking tourism multiplier distribution; comparison of host-region GDP benefit vs cost-sharing burden; retail and hospitality revenue tracking pre/post Games",
+      "impact": "If >40% captured locally: tangled rope classification confirmed (mixed benefit/extraction). If <20% captured: constraint reclassifies as Snare for public finance perspective (only IOC and broadcasters benefit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Percentage of Olympic-generated tourism revenue captured by host regions"
+    },
+    {
+      "id": "environmental_remediation_feasibility",
+      "question": "Can alpine ski slope construction damage be ecologically remediated at cost <50% of original venue construction budget?",
+      "resolution_mechanism": "Environmental impact assessments and post-Games restoration projects from previous alpine Olympics; tracking native vegetation recovery, soil stability, water table impacts, and species habitat restoration timelines",
+      "impact": "If feasible/reversible: environmental extraction is temporary (Scaffold logic). If irreversible/expensive: environmental victim status is permanent (Snare logic), shifting classification toward pure extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility and cost of environmental remediation post-Games"
+    },
+    {
+      "id": "displacement_alternative_pathways",
+      "question": "Can alpine communities maintain traditional livelihoods (herding, forestry, small-scale tourism) alongside Olympic infrastructure, or is displacement functionally mandatory?",
+      "resolution_mechanism": "Case studies from previous host regions (Cortina 1956, Torino 2006, Garmisch-Partenkirchen); tracking agricultural and traditional livelihood capacity pre/post infrastructure; mapping land-use conflict zones",
+      "impact": "If coexistence possible: exit options for mountain communities upgrade from 'trapped' to 'constrained'; classification shifts from Snare toward Tangled Rope. If displacement is mandatory: confirms Snare classification for local communities.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether traditional alpine livelihoods can coexist with Olympic infrastructure"
+    },
+    {
+      "id": "nationalist_spectacle_substitutability",
+      "question": "Could equivalent national athletic pride and global sporting showcasing occur without Olympic Games infrastructure investment (e.g., world championships, distributed regional events)?",
+      "resolution_mechanism": "Analysis of athlete performance metrics, media reach, sponsorship value, and public engagement for World Championships vs Olympic Games across comparable sports",
+      "impact": "If fully substitutable: Games are pure theater (Piton classification confirmed, theater_ratio should be higher). If irreplaceable: Games have genuine unique coordination value (upgrade to Rope for IOC perspective).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether Olympic spectacle is functionally irreplaceable or substitutable by alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "mc2026_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58,
+      "id_override": "mc2026_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "mc2026_theater_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "mc2026_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "mc2026_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "mc2026_extract_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Milano Cortina 2026 Winter Olympics represents a global coordination mechanism with significant asymmetric extraction. The constraint combines genuine coordination value (international sports federation logistics, broadcast standardization, talent development pathways) with systematic extraction mechanisms (local displacement, environmental costs, debt servicing, construction industry rents). The Games exhibit a perspectival fault line: institutional and corporate actors perceive pure coordination or low-extraction benefit (IOC, broadcasters, sponsors), while local communities, environmental systems, and public finance bear the extraction burden. The theater_ratio (0.68) indicates substantial performative content \u2014 opening ceremonies, national medal counts, torch relay \u2014 that has become increasingly decoupled from the functional coordination purpose. The constraint has escalated over the preparation interval: theater_ratio rose from 0.42 (pure sports logistics) to 0.68 (spectacle-dominant), and base_extractiveness rose from 0.38 to 0.58 (initial cost estimates were dramatically underrun; venue construction overages and security costs accumulated). The mandatrophy is resolved by recognizing that this is neither pure coordination (Rope: false, because significant asymmetric extraction) nor pure extraction (Snare: false, because genuine coordination value exists). It is a hybrid tangled rope with piton characteristics: Games coordinate global sports infrastructure AND extract from host economies and alpine regions through debt and environmental costs.",
+    "key_agents": [
+      "International Olympic Committee: Institutional beneficiary (institutional/arbitrage) \u2014 coordinates global sports logistics, captures broadcast rights revenue, bears zero venue construction risk",
+      "International Broadcast Networks: Institutional beneficiary (institutional/arbitrage) \u2014 solve aggregation problem for global elite winter sports audience; purely beneficial position",
+      "Multinational Sponsors: Powerful beneficiary (powerful/arbitrage) \u2014 access to premium brand association and captive global audience; can arbitrage to alternative sponsorship opportunities",
+      "Olympic Organizing Committee: Institutional actor (institutional/constrained) \u2014 tasked with coordination but bears operational liability for cost overruns and security",
+      "Italian Public Finance: Moderate victim (moderate/constrained) \u2014 coordination benefit (tourism stimulus) offset by debt liability for infrastructure and contingencies",
+      "Alpine Sports Development Programs: Organized beneficiary-victim (organized/constrained) \u2014 benefit from infrastructure and talent development but depend on Olympic monopoly control",
+      "Displaced Alpine Communities: Powerless victim (powerless/trapped) \u2014 face land acquisition, livelihood disruption, permanent exit barriers",
+      "Alpine Environmental Systems: Powerless victim (powerless/trapped) \u2014 bear extraction of glacial ice, slope construction, waste management with zero exit capacity",
+      "Olympic Games Institution: Degraded institutional actor (institutional/constrained) \u2014 piton classification; maintains function through nationalist spectacle and institutional inertia rather than genuine coordination necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The Games impose significant costs on host regions and public finance through infrastructure debt (Italy budgeted \u20ac1.6B; typical overruns suggest \u20ac2.2-2.5B realized cost), environmental degradation (glacial retreat acceleration in Alpine zone estimated 50+ additional years from anthropogenic warming due to venue construction and transport), and local displacement (Cortina population pressure from incoming workers and infrastructure; traditional herding and forestry communities face viable livelihoods only in degraded form). Offsetting this is genuine coordination value: international sports federation logistics is legitimately complex; Games solve the collective action problem of aggregating global broadcast audiences for elite winter sports. Without Olympic Games structure, these same sports would have lower visibility and smaller economic reward structure. Extractiveness reflects the net: extraction is real and significant, but not total. Suppression (0.65): Moderate-high. Barriers to local exit include: (1) land acquisition through government authority (expropriation), (2) no viable alternative employment during construction phase, (3) nationalist pressure and cultural narratives that position Games as 'national honor' (suppresses dissent), (4) monopoly control by IOC over venue usage (host region cannot redirect infrastructure to other purposes during Games), (5) information asymmetry: economic impact studies are often commissioned by Games organizers and show inflated benefit projections. However, suppression is not total: Italian environmental groups have mobilized opposition; some communities have publicly negotiated compensation; media coverage exists. Theater ratio (0.68): High. The Games have increasingly become spectacle-dominant: (1) Opening/closing ceremonies consume 60%+ of global TV hours but serve no functional sports purpose. (2) National medal counts are pure nationalist theater with no relationship to athletic quality. (3) Torch relay and flag ceremonies are performative rituals. (4) Athlete 'stories' and national branding dominate broadcast narrative over actual sporting rules and technique. Counterweight: underlying sports competition is real; venues are genuinely needed for skiing/skating events. The ratio reflects the escalating performative content relative to functional content over the preparation interval.",
+    "perspectival_gap": "This constraint demonstrates a stark perspectival divide between institutional and local views. IOC/broadcasters see pure coordination (Rope classification, d\u22480.05-0.08, negative \u03c7). Multinational sponsors see low extraction with strong arbitrage (Rope-Tangled Rope boundary, d\u22480.35, \u03c7\u22480.19). Italian public finance sees mixed benefit and extraction (Tangled Rope, d\u22480.68, \u03c7\u22480.58). Alpine development programs see benefit with structural constraints (Tangled Rope, d\u22480.52, \u03c7\u22480.37). Displaced communities and environmental systems see pure extraction (Snare, d\u22480.93-1.0, \u03c7\u22480.64-0.66). The analytical observer risks naturalizing Games as inherent to civilization (Mountain), but structural data contradicts this false summit: Games are contingent institutional arrangements, not laws of nature. The piton classification (degraded function) reveals that the Games persist through institutional inertia and nationalist spectacle maintenance rather than irreplaceable coordination value.",
+    "directionality_logic": "IOC (institutional/arbitrage): Beneficiary + arbitrage capacity (can move Games elsewhere). Derived d\u22480.08, f(d)\u2248-0.08, \u03c7\u2248-0.05 (negative extraction, pure benefit). Broadcasters (institutional/arbitrage): Beneficiary + arbitrage capacity (can source sports content elsewhere). Derived d\u22480.05, f(d)\u2248-0.11, \u03c7\u2248-0.06 (pure benefit). Sponsors (powerful/arbitrage): Beneficiary + arbitrage capacity but strategically constrained by competitive signaling. Derived d\u22480.35, f(d)\u22480.28, \u03c7\u22480.19 (low extraction). Italian public finance (moderate/constrained): Mixed beneficiary (tourism revenue) and victim (infrastructure debt). Derived d\u22480.68, f(d)\u22481.02, \u03c3=1.0, \u03c7\u22480.58 (significant extraction). Alpine development programs (organized/constrained): Beneficiary (infrastructure) with structural dependence (constrained exit). Derived d\u22480.52, f(d)\u22480.64, \u03c7\u22480.37 (moderate extraction). Displaced communities (powerless/trapped): Pure victim + zero exit. Derived d\u22480.93, f(d)\u22481.38, \u03c3=0.8, \u03c7\u22480.64 (high extraction, amplified by local scope dampening \u03c3=0.8 \u2014 wait, this is wrong. \u03c3=0.8 dampens, not amplifies. \u03c7 = 0.58 \u00d7 1.38 \u00d7 0.8 \u2248 0.64 is correct: local scope (\u03c3=0.8) actually REDUCES \u03c7 relative to national/global scope, because local extraction is harder to sustain globally \u2014 but extractiveness value already captures the local nature. The scope modifier applies to verification difficulty and globalization of extraction, so local Snare is actually less severe than global Snare. Displacement extraction is local in scope, so \u03c3=0.8 is appropriate.) Environmental systems (powerless/trapped): Pure victim + zero exit. Derived d\u22481.0, f(d)\u22481.42, \u03c3=0.8, \u03c7\u22480.66.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint is classified as Tangled Rope (base classification) with components that map to Snare (local communities, environment) and Rope (IOC, broadcasters). The mandatrophy is resolved by recognizing: (1) GENUINE COORDINATION VALUE: Games solve real problems \u2014 aggregating global elite winter sports audience, coordinating international federation logistics, standardizing venue specifications and timing systems. Without Games structure, winter sports would fragment into uncoordinated world championships with lower visibility and sponsorship value. This is NOT merely extractive masquerading as coordination. (2) GENUINE ASYMMETRIC EXTRACTION: Host regions bear costs (infrastructure debt, environmental degradation, local displacement) disproportionately to benefit accrual. IOC and broadcasters capture benefit without construction risk. This is NOT merely coordination side effects. (3) ACTIVE ENFORCEMENT REQUIREMENT: Games persist because IOC actively enforces the bidding process, contract terms, and security arrangements. Without enforcement, host cities would withdraw or negotiate radically different terms. (4) THEATER ESCALATION: The theater_ratio has risen from 0.42 to 0.68 over the preparation interval, indicating Goodhart drift \u2014 performative spectacle is substituting for functional coordination. This is the warning signal of constraint degradation toward Piton. (5) MANDATROPHY-RELEVANT QUESTIONS: Could equivalent international sporting coordination occur without Olympic Games infrastructure investment? Could broadcast aggregation be solved through alternative mechanisms (world championships, distributed regional events)? If yes to both: Games are pure extraction masquerading as coordination (Snare), and the Rope component is false. If no: Games have genuine irreplaceable coordination value, and the Tangled Rope classification is correct. The empirical research (omega_3: alternative_pathways, omega_5: spectacle_substitutability) targets these ambiguities. PRELIMINARY RESOLUTION: Games appear to have genuine but diminishing coordination value; the extraction and theater components are escalating faster than the coordination value. Classification TANGLED ROPE is appropriate for current interval, but trajectory suggests future degradation toward PITON or factual SNARE if theater and extraction continue to escalate."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "alpine_climate_regime_shift",
+      "international_sports_governance",
+      "italian_sovereign_debt_trajectory"
+    ],
+    "dual_formulation_note": "Milano Cortina 2026 is downstream of international sports governance structures and IOC institutional mandates. It also imposes structural effects on alpine environmental systems and Italian fiscal sustainability. The constraint family includes: (1) IOC global infrastructure coordination (\u03b5\u22480.05, Rope) \u2014 the pure coordination mechanism; (2) Milano Cortina 2026 host Games (\u03b5=0.58, Tangled Rope) \u2014 the instantiated coordination with asymmetric extraction; (3) Alpine environmental impacts (\u03b5\u22480.72, Snare) \u2014 the externality burden on mountain ecosystems. Each has distinct \u03b5 and structural properties despite shared institutional origin."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

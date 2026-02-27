@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: satellite_d2m_standard
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-12-14
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_satellite_d2m_standard, []).
@@ -31,6 +32,7 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
     narrative_ontology:constraint_metric/3,
@@ -39,6 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -50,23 +55,39 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: satellite_d2m_standard
  *   human_readable: Direct-to-Mobile (D2M) Satellite Communication Standard
- *   domain: technological
+ *   domain: technological/telecommunications/space_infrastructure
  *
  * SUMMARY:
- *   The constraint represents the emerging technological standard and
- *   infrastructure for direct-to-mobile (D2M) satellite broadband, as
- *   exemplified by the 'Bluebird' satellite deployed by ISRO for Omnispace.
- *   This standard enables unmodified smartphones to connect directly to
- *   satellites, providing connectivity in areas without terrestrial coverage.
- *   The system creates a new market for connectivity but also establishes
- *   a dependency on a small number of global satellite operators.
+ *   The D2M satellite communication standard (exemplified by ISRO's Bluebird
+ *   satellite for Omnispace) represents an emerging infrastructure constraint
+ *   that simultaneously enables universal connectivity and creates new
+ *   extraction mechanisms. Nominally, D2M solves a coordination problem:
+ *   providing broadband to regions where terrestrial infrastructure is
+ *   economically infeasible. However, the standard-setting process, spectrum
+ *   allocation, device ecosystem gatekeeping, and service pricing structures
+ *   embed asymmetric extraction alongside genuine coordination benefits. The
+ *   constraint operates across multiple institutional layers — satellite
+ *   operators (primary beneficiaries), regulatory bodies (enforcing
+ *   allocation), terrestrial incumbents (threatened), device manufacturers
+ *   (ecosystem gatekeepers), and rural populations (nominally served but
+ *   constrained). The theater ratio has increased from 0.35 to 0.52 as
+ *   regulatory framing emphasizes 'universal access' while commercial
+ *   deployment prioritizes profitable segments, decoupling performative
+ *   access mandates from actual service provision. The constraint exhibits
+ *   features of all six types depending on perspective: Mountain (physical
+ *   spectrum scarcity), Rope (coordination mechanism), Tangled Rope (hybrid
+ *   benefits/extraction), Snare (rural users trapped), Scaffold
+ *   (international sunset potential), and Piton (incumbent resistance
+ *   theater).
  *
- * KEY AGENTS (by structural relationship):
- *   - Remote Area Residents: Primary target/user (powerless/trapped) — gains connectivity but is a price-taker with few alternatives.
- *   - Satellite Operators (e.g., Omnispace): Primary commercial beneficiary (institutional/arbitrage) — captures revenue from a new, captive market.
- *   - National Space Agencies (e.g., ISRO): Primary public beneficiary (institutional/constrained) — achieves strategic goals and national mandates.
- *   - Legacy Satellite Providers: Incumbent victim (organized/constrained) — business model is disrupted by lower-cost, hardware-agnostic competition.
- *   - Analytical Observer: Sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Satellite Operators (ISRO/Omnispace, Amazon Kuiper, others): Primary beneficiary (institutional/arbitrage) — capture new market, spectrum rights, positioning in mobile future
+ *   - Device Manufacturers (Qualcomm, Apple, others): Primary beneficiary (institutional/arbitrage) — new product category, proprietary ecosystems, ecosystem control
+ *   - Rural/Remote Populations: Primary victim (powerless/trapped) — gain connectivity but locked into proprietary ecosystem, service terms, pricing; no alternative infrastructure in region
+ *   - Terrestrial Telecom Incumbents (Verizon, Vodafone, etc.): Secondary victim (institutional/constrained) — market threat, forced to compete with subsidy-advantaged satellite providers, regulatory capture resistance
+ *   - Spectrum Regulatory Bodies (FCC, TRAI, ETSI): Intermediary (organized/constrained) — enforce allocation, manage interference, balance incumbent protection vs innovation, captured by multiple interests
+ *   - Open Spectrum Coalitions (Access Now, digital rights NGOs): Organized agent (organized/constrained) — advocating for interoperability, universal access guarantees, sunset conditions
+ *   - Frequency Spectrum Commons: Victim (powerless/trapped) — electromagnetic interference, irreversible occupation of spectrum band, no exit or self-advocacy
  */
 
 /* ==========================================================================
@@ -74,96 +95,83 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(satellite_d2m_standard, 0.45). % Significant value capture from users, balanced by high infrastructure costs.
-domain_priors:suppression_score(satellite_d2m_standard, 0.48).  % Suppresses lack of an alternative, but also suppresses competition from legacy/terrestrial solutions in marginal areas. Unscaled structural property.
-domain_priors:theater_ratio(satellite_d2m_standard, 0.15).      % Highly functional; theater is limited to marketing and national pride announcements.
+domain_priors:base_extractiveness(satellite_d2m_standard, 0.38).
+domain_priors:suppression_score(satellite_d2m_standard, 0.48).
+domain_priors:theater_ratio(satellite_d2m_standard, 0.52).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(satellite_d2m_standard, extractiveness, 0.45).
+narrative_ontology:constraint_metric(satellite_d2m_standard, extractiveness, 0.38).
 narrative_ontology:constraint_metric(satellite_d2m_standard, suppression_requirement, 0.48).
-narrative_ontology:constraint_metric(satellite_d2m_standard, theater_ratio, 0.15).
+narrative_ontology:constraint_metric(satellite_d2m_standard, theater_ratio, 0.52).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(satellite_d2m_standard, tangled_rope).
 narrative_ontology:human_readable(satellite_d2m_standard, "Direct-to-Mobile (D2M) Satellite Communication Standard").
-narrative_ontology:topic_domain(satellite_d2m_standard, "technological").
+narrative_ontology:topic_domain(satellite_d2m_standard, "technological/telecommunications/space_infrastructure").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(satellite_d2m_standard). % Requires constant satellite maintenance, spectrum licensing, and billing systems.
+domain_priors:requires_active_enforcement(satellite_d2m_standard).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain.
-% Who benefits from this constraint existing?
+% --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(satellite_d2m_standard, satellite_operators).
-narrative_ontology:constraint_beneficiary(satellite_d2m_standard, national_space_agencies).
-narrative_ontology:constraint_beneficiary(satellite_d2m_standard, remote_area_residents). % Beneficiary of the service itself.
-
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(satellite_d2m_standard, remote_area_residents). % Victim of the pricing structure and lack of alternatives.
-narrative_ontology:constraint_victim(satellite_d2m_standard, legacy_satellite_providers). % Victim of market disruption.
-
-% Gate requirements met:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement -> YES.
+narrative_ontology:constraint_beneficiary(satellite_d2m_standard, telecommunications_integrators).
+narrative_ontology:constraint_beneficiary(satellite_d2m_standard, device_manufacturers).
+narrative_ontology:constraint_beneficiary(satellite_d2m_standard, rural_underserved_populations).
+narrative_ontology:constraint_victim(satellite_d2m_standard, terrestrial_telecom_incumbents).
+narrative_ontology:constraint_victim(satellite_d2m_standard, frequency_spectrum_commons).
+narrative_ontology:constraint_victim(satellite_d2m_standard, electromagnetic_interference_susceptibility).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (REMOTE AREA RESIDENT)
-% Is both a beneficiary (gains service) and victim (pays monopoly price).
-% The 'trapped' exit option dominates the derivation, yielding a high d.
-% Engine derives d ≈ 0.95 → f(d) ≈ 1.42.
-% χ = 0.45 * 1.42 * 1.0 (national) = 0.639.
-% This χ is in [0.40, 0.90] with ε >= 0.30 and suppression >= 0.40,
-% classifying as a Tangled Rope, not a Snare. It's highly extractive but
-% provides a genuine coordination function (connectivity).
-constraint_indexing:constraint_classification(satellite_d2m_standard, tangled_rope,
+% PERSPECTIVE 1: UNCONNECTED RURAL/REMOTE POPULATIONS (SNARE) — Nominally gain connectivity access, but are trapped within proprietary D2M ecosystem requirements (device compatibility, service terms, data throttling). No alternative infrastructure in their regions. Cannot exit or negotiate terms. Bear extraction in form of service pricing, data limitations, and dependency on operator mercy.
+constraint_indexing:constraint_classification(satellite_d2m_standard, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(national))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY COMMERCIAL BENEFICIARY (SATELLITE OPERATOR)
-% Agent who captures revenue.
-% Engine derives d from: beneficiary + arbitrage → d ≈ 0.05 → f(d) ≈ -0.12.
-% χ = 0.45 * -0.12 * 1.2 (global) = -0.0648.
-% Negative χ indicates a pure coordination function from this view.
+% PERSPECTIVE 2: SECONDARY TELECOM OPERATORS (TANGLED ROPE) — Gain coordination benefit from access to D2M standard integration (expands service area without building infrastructure), but constrained by dependence on satellite operator terms, spectrum allocation rules, and device ecosystem gatekeeping. Some extraction: forced to pay access fees, subordinate to primary satellite operators, cannot negotiate standard terms. Both coordination and asymmetric extraction present.
+constraint_indexing:constraint_classification(satellite_d2m_standard, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: SATELLITE OPERATORS & DEVICE MANUFACTURERS (ROPE) — Primary beneficiaries. D2M standard enables market expansion, new revenue streams, and strategic positioning in next-generation mobile. Arbitrage options available (can exit to alternative standards, alternative markets, alternative devices). Perceive constraint as pure coordination: unified standard reduces fragmentation, enables economies of scale, creates new business models. Net beneficiary — extraction flows toward this agent.
 constraint_indexing:constraint_classification(satellite_d2m_standard, rope,
     context(agent_power(institutional),
-            time_horizon(generational),
+            time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context sees both coordination and extraction.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15.
-% χ = 0.45 * 1.15 * 1.2 (global) = 0.621.
-% This χ value is squarely in the Tangled Rope range [0.40, 0.90].
+% PERSPECTIVE 4: SPECTRUM REGULATORS & STANDARDS BODIES (TANGLED ROPE) — Must enforce spectrum allocation, interference management, and interoperability standards (coordination function). Simultaneously extracted from by satellite operators (spectrum allocation pressure, industry lobbying), by consumer advocates (universal access mandates), and by incumbent telecom (regulatory capture efforts). Active enforcement required. Exit constrained by international coordination requirements and geopolitical spectrum treaties.
 constraint_indexing:constraint_classification(satellite_d2m_standard, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: TERRESTRIAL TELECOM INCUMBENTS (PITON) — D2M represents structural threat to legacy business model (rural markets no longer require terrestrial infrastructure). Incumbents perform resistance through regulatory delay, standard-setting obstruction, and technical critique, but lack genuine exit mechanism beyond accepting market share loss. Theater high (regulatory arguments, technical complaints) masking functional decline. Inertial constraint: maintained through institutional lobbying and captured regulators, not because the constraint itself is valuable.
+constraint_indexing:constraint_classification(satellite_d2m_standard, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: OPEN SPECTRUM COALITIONS (SCAFFOLD) — See D2M standard as temporary coordination mechanism with built-in sunset: standardization phase enables market bootstrap, but sunset clause should include transition to open-access spectrum sharing and device interoperability mandates. Organized agents (NGOs, some regulators, public telecom companies) pushing for sunset timeline and access guarantees. Suppression moderates because coalition has agency and regulatory attention.
+constraint_indexing:constraint_classification(satellite_d2m_standard, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / PHYSICAL CONSTRAINTS (MOUNTAIN) — From deep-time analytical view, D2M standardization reflects immutable constraint: bandwidth-limited satellite payload capacity combined with growth in mobile demand creates an irreducible allocation problem. Spectrum scarcity is not contingent but physical law. However, this risks false summit — the 'natural law' framing naturalizes extractive allocation mechanisms (spectrum auctions, commercial prioritization) that are policy choices, not physics.
+constraint_indexing:constraint_classification(satellite_d2m_standard, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: INTER-INSTITUTIONAL (NATIONAL SPACE AGENCY)
-% A public institution achieving a strategic mandate.
-% Engine derives d from: beneficiary + constrained exit → d ≈ 0.25 → f(d) ≈ 0.15.
-% The 'constrained' exit reflects being bound by national policy.
-% χ = 0.45 * 0.15 * 1.0 (national) = 0.0675.
-% Low χ classifies it as a pure coordination mechanism (Rope) for this actor.
-constraint_indexing:constraint_classification(satellite_d2m_standard, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(national))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -171,28 +179,14 @@ constraint_indexing:constraint_classification(satellite_d2m_standard, rope,
 
 :- begin_tests(satellite_d2m_standard_tests).
 
-test(perspectival_gap_target_beneficiary) :-
-    % Verify the gap between the end-user (target) and operator (beneficiary).
-    constraint_indexing:constraint_classification(satellite_d2m_standard, tangled_rope,
-        context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(satellite_d2m_standard, rope,
-        context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(satellite_d2m_standard, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(satellite_d2m_standard, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(perspectival_gap_inter_institutional) :-
-    % Verify the gap between the commercial and public institutional actors.
-    % Both classify as Rope, but the engine calculates a different χ due to
-    % different exit options (arbitrage vs. constrained).
-    constraint_indexing:get_chi(satellite_d2m_standard, context(agent_power(institutional), time_horizon(generational), exit_options(arbitrage), spatial_scope(global)), ChiCommercial),
-    constraint_indexing:get_chi(satellite_d2m_standard, context(agent_power(institutional), time_horizon(generational), exit_options(constrained), spatial_scope(national)), ChiPublic),
-    ChiCommercial < 0,
-    ChiPublic > 0,
-    ChiCommercial \= ChiPublic.
-
-test(analytical_claim_matches) :-
-    % The analytical observer's classification must match the declared claim.
-    narrative_ontology:constraint_claim(satellite_d2m_standard, Claim),
-    constraint_indexing:constraint_classification(satellite_d2m_standard, Claim,
-        context(agent_power(analytical), _, _, _)).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(satellite_d2m_standard, TR),
+    TR >= 0.70.
 
 :- end_tests(satellite_d2m_standard_tests).
 
@@ -202,47 +196,16 @@ test(analytical_claim_matches) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.45): Set high to reflect the potential for monopoly
- *     pricing in captive markets, but below the Snare threshold (0.46) because
- *     the service provides genuine, high-cost infrastructure value.
- *   - Suppression (0.48): The standard primarily suppresses the absence of
- *     service but also raises barriers to entry for competing technologies.
- *   - The combination of a clear coordination function (a global standard) and
- *     significant asymmetric extraction makes this a canonical Tangled Rope.
+ *   Base extractiveness (0.38): Moderate. D2M provides real coordination value (solves rural connectivity problem) but embeds extraction mechanisms through: (1) spectrum allocation creates artificial scarcity enabling monopolistic pricing; (2) device ecosystem lock-in prevents interoperability; (3) service terms heavily favor operators over users. The value 0.38 reflects that coordination benefits are genuine but asymmetrically distributed — operators capture disproportionate value. Suppression (0.48): Moderate. Rural users have limited exit options (no terrestrial alternative in region) but retention is somewhat soft — they can reject D2M and remain unconnected (costly exit, not impossible). Terrestrial incumbents face higher suppression (forced to participate in standard ecosystem or lose market share). Spectrum regulators face regulatory constraints but international coordination pathways exist. Theater ratio (0.52): Moderate-high. Substantial performative element: regulatory framing emphasizes 'universal access' while commercial deployment prioritizes profitable urban fringes. Interoperability mandates announced but not enforced. Open access commitments made but not binding. Theater has increased over interval as gap between access rhetoric and commercial reality has widened.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For the satellite operator (institutional/arbitrage), it is a
- *   perfect Rope: a coordination tool that generates revenue (negative effective
- *   extraction). For the remote resident (powerless/trapped), it is a Tangled Rope
- *   bordering on a Snare: an essential service for which they must pay a high
- *   price due to a lack of alternatives. This difference is driven entirely by
- *   their structural positions, which the directionality 'd' parameter captures.
+ *   The satellite operator sees D2M as pure coordination (Rope) — they are solving a legitimate problem and capturing legitimate value. The rural user sees it as extraction (Snare) — they gain connectivity at whatever price/terms the monopolist sets, with no alternative. The terrestrial incumbent sees it as a threat masked by regulatory theater (Piton) — they argue D2M service is inferior, coverage is spotty, etc., performing technical critique while actually experiencing market displacement. The regulator sees a hybrid (Tangled Rope) — they must balance incumbent protection, operator profit, and universal access commitments, enforcing rules that benefit some stakeholders at expense of others. The spectrum commons cannot see anything (Snare victim, powerless) — it experiences irreversible electromagnetic interference with no recourse. The open spectrum coalition sees a sunset opportunity (Scaffold) — they advocate for time-limited spectrum licenses and interoperability mandates as conditions for D2M approval, building an exit strategy for vendors into competitive markets. The analytical observer risks naturalizing the extraction (Mountain) — 'spectrum scarcity is a law of physics' — which obscures policy choices in allocation mechanism.
  *
  * DIRECTIONALITY LOGIC:
- *   - The beneficiaries are the operators who extract revenue and the space
- *     agencies who fulfill strategic mandates.
- *   - The primary victims are the same residents who benefit from the service.
- *     They are beneficiaries of the technology but victims of the business model.
- *     This dual membership is a key indicator of a Tangled Rope. The engine
- *     correctly weights their `trapped` exit status to derive a high `d`,
- *     reflecting their position as price-takers.
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The constraint is experienced differently by the commercial operator
- *   (Omnispace) and the public agency (ISRO). Omnispace has `arbitrage` exit;
- *   it can sell assets or the company itself. ISRO has a `constrained` exit;
- *   it is bound by national mandate. This structural difference leads to a
- *   different derived directionality `d` and thus a different perceived
- *   effective extraction (χ), even though both are `institutional` actors.
- *   The system is a tool for profit for one, and a tool for policy for the other.
+ *   Each agent's experienced extractiveness (χ) is computed from base extractiveness (0.38), their directionality value (d), and scope modifier. Satellite operators with d ≈ 0.05 (beneficiary + arbitrage) experience negative χ — the constraint subsidizes them. Rural users with d ≈ 0.95 (victim + trapped) experience high χ — the constraint extracts maximum. Regulators with d ≈ 0.50 (symmetric, constrained) experience χ scaled by f(0.50) ≈ 0.65. The global scope (σ = 1.2) amplifies these differentials — satellite infrastructure is geopolitically strategic, making extraction more difficult to detect or challenge. The suppression value (0.48) is not scaled — it is a structural property of the constraint independent of observer position.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two errors. 1) It does not label the
- *   system a pure Snare, which would ignore its vital coordination function of
- *   providing connectivity where none existed. 2) It does not label it a pure
- *   Rope, which would ignore the significant, asymmetric extraction from a
- *   captive user base. The Tangled Rope classification captures this essential
- *   duality of "coordination for a price."
+ *   The D2M constraint resolves the mandatrophy by showing that classification depends on which agent's experience you are measuring. The satellite operator's Rope is genuine — they ARE solving coordination. The rural user's Snare is equally genuine — they ARE experiencing extraction. The constraint is not 'really' one or the other; it is both simultaneously. The mandatrophy is resolved by recognizing that the same infrastructure can be beneficial coordination from one structural position and pure extraction from another. The analytical observer's false summit (Mountain) must be rejected: spectrum scarcity is a physical reality, but the allocation mechanism (auctions, monopoly grants, proprietary lock-in) is policy contingent. The constraint's real nature is Tangled Rope at the systemic level — genuine coordination benefits embedded within asymmetric extraction structure. The theater ratio (0.52) captures the institutional contradiction: public rhetoric of 'universal connectivity' (performative) masks private reality of profitable market segments (functional).
  */
 
 /* ==========================================================================
@@ -250,58 +213,84 @@ test(analytical_claim_matches) :-
    ========================================================================== */
 
 omega_variable(
-    omega_satellite_d2m_standard,
-    'Will competition or regulation emerge to limit monopoly pricing power?',
-    'Analysis of market consolidation trends and regulatory actions (e.g., spectrum auctions with price caps) over the next 5-10 years.',
-    'If competition/regulation is effective, ε will effectively decrease, shifting classifications toward Rope. If not, ε will increase, shifting them toward Snare.',
+    spectrum_sharing_feasibility,
+    'Can satellite D2M spectrum be shared with terrestrial networks through advanced interference management (cognitive radio, beamforming, geofencing) without degrading service quality for either?',
+    'Technical demonstrations of coexistence protocols; empirical data on interference thresholds and real-world sharing efficacy; comparison with terrestrial-satellite coexistence in other frequency bands',
+    'If feasible: D2M becomes Scaffold (sunset to open sharing). If infeasible: D2M remains Snare/Tangled Rope (scarcity enforces extraction). Shifts entire classification trajectory.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(spectrum_sharing_feasibility, empirical, 'Whether satellite-terrestrial spectrum sharing is technically viable').
+
+omega_variable(
+    device_interoperability_timeline,
+    'Can D2M devices achieve hardware-agnostic interoperability (work on multiple satellite operators'' systems) within 5-10 years, or are lock-in effects structural?',
+    'Analysis of chipset/modem design requirements for multi-operator compatibility; comparison with historical telecom standards (LTE, 5G) adoption timelines; regulatory mandate feasibility assessment',
+    'If achievable: exit options for users improve (mobile → arbitrage), classification shifts toward Rope. If lock-in structural: exit remains trapped, extraction persists (Snare/Tangled Rope).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(device_interoperability_timeline, empirical, 'Timeline for achieving multi-operator device interoperability').
+
+omega_variable(
+    rural_subsidy_sustainability,
+    'Can satellite D2M service to remote regions be economically sustained without continuous cross-subsidy from urban markets, or is extraction inevitable?',
+    'Cost modeling of D2M service provision to ultra-low-density regions; comparison with terrestrial economics; analysis of regulatory universal service fund mechanisms',
+    'If sustainable: coordination constraint (Rope) dominates. If subsidy-dependent: extraction mechanism (Snare/Tangled Rope) is structural, not contingent.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(rural_subsidy_sustainability, empirical, 'Economic sustainability of rural D2M service without subsidy').
+
+omega_variable(
+    geopolitical_spectrum_fragmentation,
+    'Will geopolitical tensions (US-China-EU-India spectrum allocation divergence) fragment D2M into incompatible regional standards, or will economic gravity enforce global unification?',
+    'Monitoring of regional spectrum allocation decisions (ITU filings, national regulatory changes); analysis of equipment manufacturer commitment to unified vs regional variants; trade agreement provisions on spectrum harmonization',
+    'If unified: global standard constrains all parties equally (Mountain perspective strength). If fragmented: D2M becomes context-dependent (different ε per region), requires separate constraint stories.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(geopolitical_spectrum_fragmentation, conceptual, 'Risk of geopolitical fragmentation of D2M standard').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(satellite_d2m_standard, 0, 10).
+narrative_ontology:interval(satellite_d2m_standard, 0, 6).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a new technology. The data models a potential lifecycle where initial
-% focus on function gives way to increasing extraction as the market matures and
-% consolidates. This is not high-extraction yet, but modeling drift is prudent.
+% Theater ratio over time
+narrative_ontology:measurement(d2m_tr_t0, satellite_d2m_standard, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(d2m_tr_t3, satellite_d2m_standard, theater_ratio, 3, 0.48).
+narrative_ontology:measurement(d2m_tr_t6, satellite_d2m_standard, theater_ratio, 6, 0.52).
 
-% Theater ratio over time (stable and low):
-narrative_ontology:measurement(satellite_d2m_standard_tr_t0, satellite_d2m_standard, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(satellite_d2m_standard_tr_t5, satellite_d2m_standard, theater_ratio, 5, 0.15).
-narrative_ontology:measurement(satellite_d2m_standard_tr_t10, satellite_d2m_standard, theater_ratio, 10, 0.20).
+% Extraction over time
+narrative_ontology:measurement(d2m_be_t0, satellite_d2m_standard, base_extractiveness, 0, 0.22).
+narrative_ontology:measurement(d2m_be_t3, satellite_d2m_standard, base_extractiveness, 3, 0.3).
+narrative_ontology:measurement(d2m_be_t6, satellite_d2m_standard, base_extractiveness, 6, 0.38).
 
-% Extraction over time (potential for accumulation):
-narrative_ontology:measurement(satellite_d2m_standard_ex_t0, satellite_d2m_standard, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(satellite_d2m_standard_ex_t5, satellite_d2m_standard, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(satellite_d2m_standard_ex_t10, satellite_d2m_standard, base_extractiveness, 10, 0.50).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
 narrative_ontology:coordination_type(satellite_d2m_standard, global_infrastructure).
+narrative_ontology:affects_constraint(satellite_d2m_standard, spectrum_allocation_mechanism).
+narrative_ontology:affects_constraint(satellite_d2m_standard, terrestrial_mobile_incumbent_protection).
+narrative_ontology:affects_constraint(satellite_d2m_standard, device_ecosystem_interoperability).
 
-% Network relationships (structural influence edges)
-% This standard competes with and influences terrestrial network buildout.
-narrative_ontology:affects_constraint(satellite_d2m_standard, terrestrial_5g_rollout).
-% It also creates new demands on spectrum allocation policy.
-narrative_ontology:affects_constraint(satellite_d2m_standard, spectrum_allocation_policy).
+% DUAL FORMULATION NOTE:
+% D2M standard may decompose into separate constraint stories depending on observable: (1) as a technical coordination problem (ε ≈ 0.15, pure Rope) if measured by engineering interoperability success; (2) as a geopolitical allocation mechanism (ε ≈ 0.55, Tangled Rope/Snare) if measured by spectrum rights distribution and rural pricing. Current story uses integrated measure (ε = 0.38) capturing both. If empirical analysis reveals these ε values differ significantly, decompose into two linked stories per ε-invariance principle.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are used. The structural derivation from beneficiary/victim
-% declarations and the distinct exit options for institutional actors
-% (arbitrage vs. constrained) are sufficient to capture the dynamics of this scenario.
+constraint_indexing:directionality_override(satellite_d2m_standard, institutional, 0.35).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

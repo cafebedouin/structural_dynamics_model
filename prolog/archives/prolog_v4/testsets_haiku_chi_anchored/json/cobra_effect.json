@@ -1,0 +1,139 @@
+{
+  "header": {
+    "constraint_id": "cobra_effect",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Cobra Effect (Perverse Bounty Incentive)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "cobra_breeders",
+      "corrupt_officials"
+    ],
+    "victims": [
+      "public_safety",
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Public",
+      "comment": "The public is trapped by the unintended consequences of the bounty. They experience increased cobra populations and wasted tax revenue. Their exit options are limited. d=0.95, f(d)=1.42, scope=0.8 --> chi = 0.62"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Government (Initial Intention)",
+      "comment": "Initially, the government intends to incentivize cobra reduction, creating a rope-like coordination mechanism. d=0.05, f(d)=-0.12, scope=1.0 --> chi = -0.07. But the actual implementation backfires."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "The analytical observer sees the cobra effect as a tangled rope, a combination of coordination (initial incentive) and extraction (perverse consequences). The analytical observer notes the perverse incentives lead to unintended consequences and extraction from taxpayers. d=0.72, f(d)=1.15, scope=1.2 --> chi = 0.76"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Cobra Breeders",
+      "comment": "The cobra breeders arbitrage the bounty. They coordinate cobra breeding to take advantage of the incentive. d=0.05, f(d)=-0.12, scope=0.8 --> chi = -0.05"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cobra_farming_detectability",
+      "question": "How easily can cobra farming be detected and prevented?",
+      "resolution_mechanism": "Improved monitoring and enforcement mechanisms.",
+      "impact": "If cobra farming is easily detectable, the cobra effect can be mitigated. If difficult to detect, the cobra effect will persist.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Detectability of cobra farming."
+    },
+    {
+      "id": "incentive_alignment",
+      "question": "How well aligned are the incentives with the desired outcome?",
+      "resolution_mechanism": "Thorough analysis of potential unintended consequences.",
+      "impact": "If incentives are well-aligned, the cobra effect can be avoided. If poorly aligned, the cobra effect is likely to occur.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Alignment of incentives with the desired outcome."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Cobra Effect describes a situation where an intended solution makes a problem worse. It typically results from poorly designed incentives. The canonical example involves a bounty placed on cobras in colonial India. The government intended to reduce the cobra population, but people started breeding cobras to collect the bounty, leading to an increase in cobras when the bounty was eventually removed.",
+    "key_agents": [
+      "The Public: Primary victim (powerless/trapped) \u2014 suffers increased cobra populations and wasted tax revenue.",
+      "The Government (Initial Intention): Well-intentioned actor (institutional/arbitrage) \u2014 attempts to solve the problem, but creates perverse incentives.",
+      "Cobra Breeders: Primary beneficiary (powerful/arbitrage) \u2014 take advantage of the bounty to profit from cobra breeding.",
+      "Corrupt Officials: Secondary beneficiary (powerful/arbitrage) \u2014 may profit from the scheme through kickbacks or bribes.",
+      "Taxpayers: Victim (moderate/constrained) -- lose money in the form of bounty payments to cobra breeders",
+      "Public Safety: Victim (powerless/trapped) -- Cobra population is not reduced and public risk is increased"
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate-high. The Cobra Effect results in a significant extraction from taxpayers, as money is paid out for cobra breeding. Suppression (0.65): Moderate-high. The initial incentive suppresses alternative solutions to cobra control. Theater ratio (0.30): Low. The program does have a real function, but the unintended consequence is that cobra breeding is incentivized. Therefore, it performs poorly.",
+    "perspectival_gap": "The government views the program as a solution, a rope. The cobra breeders see it as an opportunity, a rope. The analytical observer views the program as a tangled rope, coordination combined with extraction. The public experiences the cobra effect as a snare.",
+    "directionality_logic": "The government initially intends a rope (coordination). Cobra breeders see the bounty as a rope (coordination). Public Safety becomes a snare for the public. Taxpayers are victimized.",
+    "mandatrophy_analysis": "The Cobra Effect can be differentiated from a pure snare because the original intention was to implement a solution. There was a coordination element. The program did provide a benefit to cobra breeders, which is a coordination element. The negative outcome was an unintended consequence."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "pla_aerial_carrier_doctrine",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "plaac"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "China's Development of an Aerial Drone Carrier Doctrine",
+    "topic_domain": "technological/political/military",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pla_strategic_command"
+    ],
+    "victims": [
+      "regional_air_space_sovereignty",
+      "contested_maritime_territories",
+      "smaller_neighbor_nations"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Contested Maritime Territory",
+      "comment": "PERSPECTIVE 1: CONTESTED MARITIME TERRITORY (SNARE) \u2014 Cannot exit the constraint; has no countervailing air defense. A maritime zone claimed or disputed (South China Sea, East China Sea) faces persistent aerial reconnaissance, interception, and blockade through aerial carrier doctrine. d\u22480.92, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.74."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Smaller Regional Nations",
+      "comment": "PERSPECTIVE 2: SMALLER REGIONAL NATIONS (SNARE) \u2014 Face escalating air superiority over territorial waters and airspace. Constrained by limited air defense budgets and doctrine asymmetry. Cannot field equivalent aerial carriers. d\u22480.85, f(d)\u22481.16, \u03c3=0.9 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Allied Air Powers (US Navy, Regional Partners)",
+      "comment": "PERSPECTIVE 3: ALLIED AIR POWERS (SNARE) \u2014 Have technical exits (carrier battle groups, advanced SAM systems) but operate under strategic constraints: cannot escalate to direct kinetic conflict without risking global war. Doctrinal arbitrage exists but is politically constrained. d\u22480.55, f(d)\u22480.75, \u03c3=0.9 \u2192 \u03c7\u22480.39."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "PLA Strategic Command",
+      "comment": "PERSPECTIVE 4: PLA STRATEGIC COMMAND (ROPE) \u2014 Benefits from the doctrine through force projection capability, demonstrates technological parity with Western navies, and establishes control over regional air-sea commons. Sees the constraint as coordination of its own tactical advantage. d\u22480.05, f(d)\u2248-0.12, \u03c3=0.9 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Naval Convention System",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL NAVAL CONVENTION SYSTEM (TANGLED ROPE) \u2014 Organized system (UNCLOS, freedom of navigation norms) both benefits from and is violated by aerial carrier doctrine. Coordinating principle: international waters are open to all. Extraction mechanism: unilateral air control of disputed waters invalidates the norm's enforceability. d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.60."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a global/civilizational view, this doctrine represents mixed extraction and coordination. Coordination function: enables regional powers to pursue their legitimate strategic interests (deterrence, maritime security). Extraction function: unilateral air control that bypasses multilateral dispute resolution. \u03b5=0.58, suppression=0.72 support tangled rope classification. d\u22480.72, f(d)\u22481.15, \u03c3=1.0 \u2192 \u03c7\u22480.67."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "escalation_threshold_definition",
+      "question": "At what level of aerial surveillance/interception does the doctrine cross from deterrent signaling into active blockade or territorial annexation?",
+      "resolution_mechanism": "Incident classification: tracking provocations, intercepts, and airspace violations over time; analysis of PLA command decisions and escalation messaging",
+      "impact": "If threshold is high (persistent surveillance without shootdown): constraint remains snare but with lower \u03c7 through ambiguity. If threshold is low (any intercept = active blockade): constraint strengthens to pure extraction snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Escalation threshold from surveillance to blockade"
+    },
+    {
+      "id": "technical_sustainability",
+      "question": "Can continuous aerial carrier operations maintain drone availability and pilot rotation without unsustainable logistics or attrition?",
+      "resolution_mechanism": "Technical analysis of drone lifespan, repair cycles, pilot fatigue limits, and supply chain capacity; comparison with Western UAV sustainment models",
+      "impact": "If unsustainable: doctrine is performative (theater_ratio should be higher). If sustainable: doctrine represents genuine capability shift and extraction mechanism holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Logistical sustainability of aerial carrier doctrine"
+    },
+    {
+      "id": "united_states_military_response",
+      "question": "Will the US develop and deploy countervailing aerial carriers, escalate to direct kinetic conflict, or accept regional air asymmetry and shift deterrence to nuclear or cyber domains?",
+      "resolution_mechanism": "US strategic doctrine statements, force structure planning, defense budget allocation, and strategic communication; signals from DoD and State Department",
+      "impact": "Symmetry response: constraint weakens to tangled rope (mutual deterrence coordination). Asymmetric response (cyber/nuclear shift): constraint strengthens as conventional air control becomes uncontested. Conflict: constraint becomes a casualty of kinetic warfare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "US strategic response to aerial carrier capability"
+    },
+    {
+      "id": "international_legal_status",
+      "question": "Do aerial drone carriers in international waters constitute legal surveillance under UNCLOS freedom of navigation, or do they violate coastal state rights to air defense exclusion zones?",
+      "resolution_mechanism": "International law interpretation by maritime law scholars and UN bodies; incident-specific rulings by regional dispute resolution mechanisms",
+      "impact": "If legal under freedom of navigation: constraint is snare (weaker international pushback, higher \u03c7). If violation: stronger legal-diplomatic countervailing pressure, constraint weakens.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "International legal status of aerial carrier operations"
+    },
+    {
+      "id": "coalition_counter_doctrine",
+      "question": "Can allied air powers (US, Japan, India, Australia) develop a joint doctrine that neutralizes aerial carrier advantage through coordinated air defense, cyber interdiction, or pre-emptive strikes?",
+      "resolution_mechanism": "Analysis of multilateral defense agreements (Quad, AUKUS, Japan-South Korea cooperation); war games and doctrine publications; defense spending coordination",
+      "impact": "If coalition emerges: constraint shifts from snare to tangled rope (coordinated deterrence). If coalition fails: PLA doctrine consolidates and snare classification strengthens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Potential coalition counter-doctrine formation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "China's development of an unmanned aerial vehicle (UAV) carrier platform \u2014 a large aerial vehicle capable of launching and recovering multiple smaller drones \u2014 represents a significant shift in regional air-sea power dynamics. This doctrine enables persistent aerial surveillance and interception over contested maritime territories without requiring carrier battle groups or land bases within contested zones. The constraint models the extraction mechanism created by this capability: unilateral air superiority that bypasses multilateral dispute resolution frameworks and prevents smaller regional nations from effectively contesting maritime claims. The doctrine operates in a gray zone between peacetime surveillance (lawful under international maritime law) and active blockade (which would constitute an act of war). This ambiguity is itself extractive: it allows the PLA to establish control over disputed waters without triggering unified allied military response.",
+    "key_agents": [
+      "PLA Strategic Command: Primary beneficiary (institutional/arbitrage) \u2014 gains force projection, demonstrates technological parity, establishes control over regional air-sea commons",
+      "Contested Maritime Territories: Primary victim (powerless/trapped) \u2014 cannot exit; lacks countervailing air defense to contest surveillance or enforce sovereignty",
+      "Smaller Regional Nations: Secondary victim (moderate/constrained) \u2014 face escalating air superiority; constrained by budget and doctrine asymmetry; cannot develop equivalent capability",
+      "Allied Air Powers (US Navy, Regional Partners): Secondary actor (institutional/arbitrage) \u2014 have technical exits but are politically constrained; risk of global escalation limits escalation options",
+      "International Naval Convention System (UNCLOS): Organized system (organized/constrained) \u2014 coordinating principle (freedom of navigation) violated by unilateral air control; enforcement mechanism weakened",
+      "Analytical Observer: Global observer (analytical/analytical) \u2014 sees the doctrine as mixed coordination (legitimate deterrence) and extraction (unilateral control override of multilateral norms)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The doctrine creates genuine asymmetry in air control over disputed territories. The PLA can surveil and interdict shipping without equivalent countermeasures available to smaller nations. However, \u03b5 is not maximal (0.66+) because the doctrine operates in a gray zone \u2014 it is not outright blockade, and it does not prevent all alternative transit routes or deny all access to contested waters. The extraction is real but not total. Measurement trajectory: 0.35\u21920.58 reflects gradual capability maturation and integration into operational doctrine over 10-year interval. Suppression (0.72): High. Significant barriers to resistance include: (1) technical gap (no regional power has aerial carrier equivalent or rapid air defense deployment capability), (2) strategic asymmetry (allied response risks nuclear escalation, creating deterrent against intervention), (3) jurisdictional ambiguity (gray zone between surveillance and blockade, making UN action difficult), (4) geographic advantage (doctrine is optimized for contested waters where PLA bases are nearby, allies are distant). Theater ratio (0.38): Low-moderate. The doctrine has real functional content \u2014 actual surveillance, actual interception capability, actual threat to shipping. Performance is not primarily theatrical. The theater component comes from peacetime signaling: publicized tests and demonstrations serve deterrent messaging and domestic legitimacy, but the underlying capability is material, not performative.",
+    "perspectival_gap": "This constraint demonstrates the gap between structural victims and strategic beneficiaries. The contested maritime territory and smaller nations see a snare \u2014 they cannot exit and cannot retaliate at equivalent scale. Allied powers see a snare too, but with higher d (constrained rather than trapped) because they have technical exits (superior anti-UAV systems, cyber interdiction, pre-positioned defenses) even if escalation costs are high. The PLA sees a rope \u2014 force coordination achieving their strategic objective. The international maritime convention system sees tangled rope: the doctrine both relies on and violates UNCLOS principles (uses international waters, but denies freedom of navigation through unilateral air control). The analytical observer sees tangled rope at global scale: the doctrine is extractive (unilateral control override) but also coordinates PLA legitimate strategic interests (deterrence, security, rise assertion). The perspectival gap between the PLA (rope/beneficiary) and regional nations (snare/victim) is the core structural feature.",
+    "directionality_logic": "PLA Strategic Command: Beneficiary + arbitrage exit \u2192 d\u22480.05, f(d)\u2248-0.12. The PLA experiences the constraint as a beneficial coordination mechanism \u2014 a way to project power and assert control. Net beneficiary. Contested maritime territories: Victim + trapped exit \u2192 d\u22480.92, f(d)\u22481.40. No way to exit the zone; surveillance and interception capability cannot be resisted. Maximum extraction. Smaller regional nations: Victim + constrained exit \u2192 d\u22480.85, f(d)\u22481.16. Can purchase air defense systems, join allied coalitions, but cannot deploy air carriers equivalent to PLA capability, and alliance escalation carries nuclear risk. High extraction with some constrained alternatives. Allied air powers: Victim + arbitrage exit \u2192 d\u22480.55, f(d)\u22480.75. Have technical countermeasures (carrier groups, SAM systems, cyber), but strategic constraints (war-escalation risk) limit their utility. Moderate extraction. International maritime system: Victim + constrained exit \u2192 d\u22480.68, f(d)\u22481.02. The UNCLOS framework is being violated but cannot easily enforce; alternative frameworks (regional agreements) are weak. Moderate-high extraction.",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: This constraint avoids the snare/tangled rope misclassification risk by recognizing that the doctrine contains a genuine coordination component (PLA strategic deterrence, assertion of great-power status) alongside pure extraction (denying maritime access to smaller powers). The mandatrophy is resolved through perspective differentiation: (1) From the PLA's perspective, this is rope \u2014 coordination of force projection. (2) From the victims' perspective, this is snare \u2014 unilateral extraction. (3) From the analytical observer's perspective, this is tangled rope \u2014 the doctrine both solves a coordination problem (PLA capability integration) and creates an extraction mechanism (unilateral air control). The claimed_type=snare reflects the base structural reality: the doctrine's primary function is to extract control from smaller nations over disputed waters. The tangled rope and rope perspectives show that the extraction is not purely coercive \u2014 it is bundled with genuine coordination for its beneficiary (the PLA). Mandatrophy is marked resolved because the perspectival decomposition clarifies the structure: extraction and coordination coexist, and their relative weighting depends on structural position."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "south_china_sea_sovereignty",
+      "taiwan_strait_air_superiority",
+      "regional_air_defense_doctrine"
+    ],
+    "dual_formulation_note": "Aerial carrier doctrine is distinct from but influences specific territorial disputes (South China Sea, Taiwan Strait). The doctrine represents a capability constraint on multiple territorial claims. Each territorial dispute has its own story with different base properties; this story models the doctrinal constraint that enables extraction across multiple territorial contexts."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

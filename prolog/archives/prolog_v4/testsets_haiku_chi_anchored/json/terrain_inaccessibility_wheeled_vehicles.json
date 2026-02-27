@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "terrain_inaccessibility_wheeled_vehicles",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "terrain"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Inaccessibility of Terrain to Wheeled Vehicles",
+    "topic_domain": "technological/physical",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Wheeled Vehicle (Physical Reality)",
+      "comment": "PERSPECTIVE 1: WHEELED VEHICLE (MOUNTAIN) \u2014 A wheeled vehicle with fixed axle and rigid wheel geometry cannot surmount obstacles larger than wheel diameter or steeper than maximum gradeability angle. This is a mathematical and physical limit, not a policy choice. \u03b5\u22480.10, suppression\u22480.02, accessibility_collapse=0.92 (contact dynamics and geometry fully determine failure modes), resistance=0.08 (wheel diameter and spring travel define narrow operational envelope). No beneficiary/victim \u2014 this is immutable law of physics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Tribology & Mechanics)",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From first principles of tribology, contact mechanics, and dynamics: wheel-terrain interaction requires normal force perpendicular to ground and insufficient tangential force to overcome rolling resistance + gravitational load component on slope. Physics and geometry determine outcome. No degrees of freedom for policy or institutional design. \u03b5\u22480.08, suppression\u22480.01, accessibility_collapse=0.95, resistance=0.05. This perspective confirms the natural law view."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Transportation Engineer (Design Space Boundary)",
+      "comment": "PERSPECTIVE 3: TRANSPORTATION ENGINEER (MOUNTAIN) \u2014 Even with technological optimization (low-profile tires, hydropneumatic suspension, all-terrain geometry, weight distribution), wheeled vehicles face hard limits: gradeability ceiling ~45-50\u00b0, obstacle clearance = wheel radius + suspension compression, sinkage depth function of ground bearing capacity. These limits are not suppressible by policy or funding \u2014 they are laws of mechanics. \u03b5\u22480.15, suppression\u22480.04, accessibility_collapse=0.88, resistance=0.10. The constraint persists despite engineering effort because it is rooted in fundamental geometry and dynamics."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Powerful Agent (Terrain-Independent Access Seeker)",
+      "comment": "PERSPECTIVE 4: POWERFUL AGENT WITH RESOURCES (MOUNTAIN) \u2014 Even unlimited resources cannot overcome the constraint through wheeled vehicles alone. Alternative solutions (tracked vehicles, helicopters, legged robots, foot traffic) exist, but wheeled vehicles as a class have immutable access limits. The powerful agent can choose alternative transport; they cannot make wheels work on bedrock or boulder fields. This perspective demonstrates that the constraint is truly immutable \u2014 resources and power do not defeat it. \u03b5\u22480.10, suppression\u22480.02, accessibility_collapse=0.94, resistance=0.07."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "wheel_geometry_optimality",
+      "question": "Is there a theoretical optimal wheel geometry that could exceed current gradeability and obstacle limits while remaining a wheeled vehicle?",
+      "resolution_mechanism": "Formal analysis of contact mechanics and dynamics; exploration of non-rigid wheel designs, segmented wheels, or morphing tire concepts; empirical testing of prototype high-performance designs",
+      "impact": "If no geometry exceeds ~50\u00b0 grade and wheel-radius obstacle clearance: confirms mountain classification. If optimization pathway extends limits to 65\u00b0+ and 2x wheel radius: constraint remains mountain but accessible envelope expands (\u03b5 unchanged, but effective penetration of terrain increases). Constraint identity unchanged because the limits are set by physics, not by current engineering.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether optimized wheel geometry can exceed physical gradeability and obstacle limits"
+    },
+    {
+      "id": "terrain_complexity_definition",
+      "question": "What constitutes 'unstructured, rugged terrain' for classification purposes? Where does 'rough surface' transition to 'inaccessible terrain'?",
+      "resolution_mechanism": "Terrain taxonomy by obstacle frequency, size distribution, slope, and deformability; empirical testing of wheeled vehicle performance across terrain classes; statistical mapping of vehicle failure rates to terrain parameters",
+      "impact": "If boundary is sharp (discrete transition): constraint has well-defined operational envelope. If boundary is gradual (continuous degradation): constraint exhibits smooth failure, not hard limit. Classification remains mountain either way, but the accessibility_collapse metric might shift by \u00b10.05 depending on continuity of failure modes.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Where the boundary lies between traversable and inaccessible terrain for wheeled vehicles"
+    },
+    {
+      "id": "alternative_vehicle_classes",
+      "question": "Should alternative vehicle classes (tracked, legged, flying) be counted as 'wheeled vehicle solutions' or as constraint escapes that define the boundary of the constraint's domain?",
+      "resolution_mechanism": "Definitional analysis: is the constraint about 'wheeled vehicles' (narrow) or 'ground vehicles' (broad)? Review of engineering taxonomy; assessment of whether alternative designs represent optimization within constraint space or exit from constraint space",
+      "impact": "If narrow definition (wheeled only): constraint is mountain over wheeled vehicle domain. If broad definition (all ground transport): constraint dissolves into 'terrain types and vehicle-terrain fit' (many constraints, not one). The narrow reading is correct for this story because 'wheeled vehicle' is the structural commitment that creates the limit.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether constraint applies to wheeled vehicles specifically or all ground vehicles"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.11
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The inaccessibility of unstructured terrain to wheeled vehicles is a foundational constraint in transportation physics and engineering. A wheeled vehicle's ability to traverse terrain is determined by immutable geometric and mechanical principles: wheel diameter, suspension travel, axle design, weight distribution, and tire properties interact with terrain slope, obstacle size, surface deformability, and friction coefficient to produce deterministic success or failure outcomes. This constraint exhibits uniform mountain classification across all observational perspectives because it is rooted in physical law, not institutional arrangement or policy. Unlike constraints with beneficiaries and victims (where different agents experience different effective extraction based on their structural position), the terrain inaccessibility constraint is invariant: all agents \u2014 wheeled vehicles, engineers, planners, travelers \u2014 face the same immutable limit. The constraint cannot be suppressed by resources, cannot be negotiated around for wheeled vehicles specifically, and has no hidden theater or performative content. It is what it claims to be: a natural law boundary.",
+    "key_agents": [
+      "Wheeled Vehicles: Physical objects subject to constraint (no power) \u2014 cannot traverse steep slopes, large obstacles, or soft/deformable terrain regardless of design optimization",
+      "Transportation Engineers: Design specialists (powerful/analytical) \u2014 understand limits and work within them; cannot defeat constraint but can optimize vehicle parameters to extend accessible envelope",
+      "Terrain: Physical environment (no agency) \u2014 obstacle distribution, slope, bearing capacity, and friction are given conditions, not subject to negotiation",
+      "Mission Planners / Explorers: Decision-makers (moderate to powerful) \u2014 face constraint as a real operational boundary; can choose alternative vehicle types but cannot make wheels traverse impossible terrain",
+      "Physics / Mechanics: Underlying natural law (no agent) \u2014 fundamental principle constraining all designs equally"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The constraint does not extract value from any agent; it is a neutral fact about physical interaction. The 0.12 (rather than 0.0) reflects minor measurement uncertainty and the fact that engineering effort can approach (but not exceed) physical limits through optimization. Suppression (0.03): Minimal. There is no coercive mechanism or lack of alternatives\u2014alternative vehicle types exist (tracked, legged, helicopters, foot traffic). Suppression is low because the constraint is not imposed by an actor with gatekeeping power; it emerges from physics. Theater (0.15): Minimal. The constraint is functional, not performative. Vehicle designers do not engage in ritualistic behavior to honor the limit; they simply hit it and adapt design or switch vehicle type. The small theater value reflects minor overhead in testing and validation to confirm physical limits, not any substantial performative content. Accessibility collapse (0.92): High. The constraint fully determines which terrain is accessible. Once you specify vehicle geometry, suspension, and tire properties, the set of traversable terrain is nearly fully determined by contact mechanics and dynamics. Resistance (0.08): Low. The constraint cannot be resisted or overcome through force, negotiation, or alternative institutional arrangements. Alternative vehicle types bypass it (they are not wheeled), but wheeled vehicles cannot exceed it.",
+    "perspectival_gap": "There is NO perspectival gap. All four perspectives (vehicle, analyst, engineer, powerful agent) classify the constraint identically as Mountain. This uniformity is not a weakness but the signature of a true natural law constraint. The lack of beneficiary/victim structure, the absence of suppression mechanisms, and the invariance across all observational positions confirm that this is an immutable physical limit, not a contingent institutional arrangement. Even a powerful agent with unlimited resources cannot make wheeled vehicles traverse bedrock or boulder fields\u2014they must switch to alternative vehicle types. This is the core definition of a mountain constraint: zero degrees of freedom for all indices.",
+    "directionality_logic": "Not applicable. Mountain constraints have no beneficiaries or victims; they have no directionality computation. All agents face the same immutable limit. The constraint's existence is not contingent on any agent's structural position or power. This is true invariance across the index space."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "terrain_accessibility_tracked_vehicles",
+      "terrain_accessibility_legged_vehicles",
+      "modal_choice_ground_transport"
+    ],
+    "dual_formulation_note": "This constraint defines the boundary of wheeled vehicle capability. Parallel stories for tracked vehicles and legged vehicles have different \u03b5 values and different accessible terrain envelopes, but all three are rooted in the same underlying physical principles. The network links show how the choice of vehicle modal class intersects with terrain accessibility\u2014each modality has its own constraint story reflecting different geometric and dynamic limits. This is not decomposition due to measurement ambiguity, but rather a constraint family where each member addresses a distinct vehicle class operating over the same terrain complexity space."
+  },
+  "directionality_overrides": []
+}

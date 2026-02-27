@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "bedouin_sedentary_transition",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.7,
+    "suppression": 0.8,
+    "theater_ratio": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Bedouin Sedentary Transition",
+    "topic_domain": "social/economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_governments",
+      "oil_companies"
+    ],
+    "victims": [
+      "bedouin_tribes",
+      "traditional_bedouin_culture"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Bedouin Tribes",
+      "comment": "The Bedouin tribes experience this transition as a snare. Their traditional nomadic lifestyle is suppressed, and they are increasingly dependent on the government for resources. Exit options are limited due to loss of traditional skills and resources."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "National Governments",
+      "comment": "National governments benefit from the transition as settled populations are easier to administer and control. It also provides a workforce for the oil industry and other sectors. The transition is seen as a form of national development and integration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Second Generation Bedouin",
+      "comment": "The second generation Bedouin face a tangled rope situation. They may benefit from access to education and healthcare in settled communities, but they also experience a loss of cultural identity and traditional skills. They are constrained by limited economic opportunities and dependence on government support."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the transition as a complex process with both positive and negative consequences. It represents a shift from a sustainable, traditional lifestyle to a dependence-based existence. The long-term impacts on social cohesion, cultural preservation, and environmental sustainability are uncertain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cultural_preservation",
+      "question": "Can traditional Bedouin culture be preserved in settled communities?",
+      "resolution_mechanism": "Assessment of cultural programs, language preservation efforts, and intergenerational transmission of knowledge.",
+      "impact": "If cultural preservation efforts are successful, the negative impacts of the transition can be mitigated. If not, the Bedouin culture may be lost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The long-term impact of cultural preservation efforts on Bedouin identity and traditions."
+    },
+    {
+      "id": "economic_sustainability",
+      "question": "Can settled Bedouin communities achieve economic self-sufficiency?",
+      "resolution_mechanism": "Analysis of employment rates, income levels, and access to economic opportunities in settled communities.",
+      "impact": "If settled communities can achieve economic self-sufficiency, they will be less dependent on government support. If not, they may experience poverty and social unrest.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The potential for economic self-sufficiency in settled Bedouin communities."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 60
+  },
+  "commentary": {
+    "narrative_context": "The Bedouin sedentary transition represents the shift of nomadic Bedouin tribes from a resilient, millennium-old pastoral lifestyle in the hyper-arid Empty Quarter to a dependency-based existence in settled communities. This transition is driven by factors such as oil discovery, government policies, and technological advancements. It has significant social, economic, and cultural consequences for the Bedouin people.",
+    "key_agents": [
+      "Bedouin Tribes: Primary target (powerless/trapped) - experiencing the loss of traditional lifestyle and increased dependency.",
+      "National Governments: Primary beneficiary (institutional/arbitrage) - gaining control over population, workforce, and resources.",
+      "Oil Companies: Secondary beneficiary (institutional/arbitrage) - requiring a settled workforce for oil extraction and production.",
+      "Second Generation Bedouin: (moderate/constrained) - experiencing mixed benefits and drawbacks of the transition.",
+      "Traditional Bedouin Culture: A victim experiencing the cultural impacts of the transition."
+    ],
+    "logic_rationale": "Extractiveness (0.70): High. The Bedouin are losing their traditional lifestyle and becoming increasingly dependent on external resources. Suppression (0.80): High. Government policies and economic incentives are suppressing the nomadic lifestyle. Theater Ratio (0.60): Moderate. Government programs aimed at integrating Bedouin communities into the national fabric often have performative aspects. The transition is a tangled rope as it is not purely extractive and offers some benefits to the bedouin in terms of access to services and integration in to the national economy but at a cost to cultural identity and traditional lifeways.",
+    "perspectival_gap": "The Bedouin tribes experience the transition as a snare due to their loss of autonomy and increasing dependency. National governments view it as a rope, enabling better administration and resource control. Second-generation Bedouin experience the transition as a tangled rope, balancing benefits and drawbacks. An analytical observer sees a complex transition with uncertain long-term consequences.",
+    "directionality_logic": "The directionality values are derived from the structural relationships between the agents and the constraint. National governments and oil companies benefit from the transition and have arbitrage exit options, resulting in low directionality values. The Bedouin tribes are the targets of the transition and have limited exit options, resulting in high directionality values."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

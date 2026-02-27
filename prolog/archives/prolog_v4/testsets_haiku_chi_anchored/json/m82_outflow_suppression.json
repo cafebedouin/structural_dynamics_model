@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "m82_outflow_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "m82"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "M82* Explosive Outflow and Star Formation Suppression",
+    "topic_domain": "physical/astronomical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "supermassive_black_hole_m82"
+    ],
+    "victims": [
+      "surrounding_stellar_population",
+      "galactic_accretion_reservoir"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Surrounding Stellar Population",
+      "comment": "PERSPECTIVE 1: SURROUNDING STELLAR POPULATION (SNARE) \u2014 Stars within the outflow cone cannot escape the suppressive mechanism; their star formation is directly inhibited by the energetic feedback. d\u22480.93, f(d)\u22481.40, \u03c3=0.9 \u2192 \u03c7\u22480.52. The stellar material is systematically extracted from accretion-to-formation by the outflow mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Galactic Accretion Reservoir",
+      "comment": "PERSPECTIVE 2: GALACTIC ACCRETION RESERVOIR (SNARE) \u2014 The gas supply available for stellar formation is systematically suppressed by the outflow. Material destined for accretion is expelled before it can form stars. d\u22480.92, f(d)\u22481.39, \u03c3=0.9 \u2192 \u03c7\u22480.52. Pure extraction of potential star-forming material."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Supermassive Black Hole M82*",
+      "comment": "PERSPECTIVE 3: SUPERMASSIVE BLACK HOLE M82* (ROPE) \u2014 The outflow mechanism is a coordination solution: it regulates its own growth through self-limiting feedback, preventing runaway accretion. The SMBH experiences the outflow as a coordination function that maintains energy equilibrium. d\u22480.08, f(d)\u2248-0.09, \u03c3=0.8 \u2192 \u03c7\u2248-0.03. Net beneficiary through coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (AGN Feedback System)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / AGN FEEDBACK SYSTEM (TANGLED ROPE) \u2014 From a cosmological view, AGN outflows like M82* serve a genuine coordination function: they regulate galaxy growth and prevent excessive black hole accretion, maintaining cosmic equilibrium. Simultaneously, this mechanism extracts resources from the host galaxy (star formation suppression, gas removal). The constraint has both coordination (feedback stability) and asymmetric extraction (stellar suppression). d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.30. Moderate effective extraction at civilizational scale."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Star Formation History Community",
+      "comment": "PERSPECTIVE 5: STAR FORMATION HISTORY COMMUNITY (SCAFFOLD) \u2014 Organized scientific observers recognize the outflow as a temporary suppression mechanism during high-accretion epochs. As the black hole reaches equilibrium and the outflow weakens, star formation can resume. The constraint has a natural sunset: accretion-driven feedback is strongest during early/active phases; secular evolution allows recovery. d\u22480.38, f(d)\u22480.38, \u03c3=0.9 \u2192 \u03c7\u22480.17. Low effective extraction because the mechanism is transient."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Physical Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL LAW VIEW (MOUNTAIN) \u2014 From a fundamental physics perspective, energy and momentum conservation laws guarantee that accretion-powered feedback will suppress star formation in active galaxies. This is not contingent but an irreducible constraint of physics. \u03b5\u22640.25, suppression\u22640.05 structurally. However, the measured base properties (\u03b5=0.38, suppression=0.52) reveal this as a false summit: the outflow is a contingent astrophysical phenomenon (dust settling, magnetic field geometry) not a pure law of physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "outflow_causal_primacy",
+      "question": "Does the outflow directly suppress star formation through energetic feedback, or does feedback-suppression causally precede and enable the outflow?",
+      "resolution_mechanism": "High-resolution simulation of coupled SMBH accretion-AGN feedback dynamics; temporal correlation analysis of outflow initiation and star formation quenching across galaxies with similar M82* properties",
+      "impact": "If outflow-driven suppression: snare classification confirmed for stellar population. If feedback-preceded: constraint is more rope-like (coordination of feedback). Causality reversal changes directionality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal ordering between outflow initiation and star formation suppression"
+    },
+    {
+      "id": "escape_velocity_threshold",
+      "question": "At what outflow velocity do stars definitively escape the galaxy vs. remain in the potential well? Is the transition continuous or sharp?",
+      "resolution_mechanism": "N-body simulations with parametric outflow velocity; observational surveys of escape fractions across AGN activity levels; dynamical modeling of M82* system",
+      "impact": "If sharp threshold: some stars escape while others are trapped (heterogeneous victim population). If continuous: suppression is graded rather than binary. Affects whether 'trapped' is accurate or too strong.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Velocity threshold for permanent escape from galaxy potential"
+    },
+    {
+      "id": "recovery_timescale_duration",
+      "question": "After outflow quenching, how long until star formation resumes to pre-outflow rates? Is recovery autonomous or does it require external gas accretion?",
+      "resolution_mechanism": "Longitudinal observation of post-active galaxies; simulations of cooling timescales and gas refueling; comparison of M82 historical star formation rate recovery with other AGN",
+      "impact": "If recovery is rapid (<1 Gyr): scaffold sunset is real. If recovery is slow or requires external inputs (>5 Gyr or dependent on mergers): sunset is theoretical, not structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timescale and mechanism for star formation recovery after outflow suppression"
+    },
+    {
+      "id": "dust_and_magnetic_contingency",
+      "question": "How much of the observed outflow is contingent on dust opacity and magnetic field geometry vs. inherent to energy conservation in SMBH accretion?",
+      "resolution_mechanism": "Multi-wavelength decomposition (radio-optical-infrared) of outflow composition; magnetohydrodynamic simulations varying dust opacity and field structure; comparison of outflows in galaxies with different dust properties",
+      "impact": "If highly contingent (dust/field dependent): constraint is institutional/structural, not physical law. If fundamental: some aspects are closer to mountain (but \u03b5 and suppression still rule out pure mountain). Affects false-summit diagnosis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Contingency of outflow on dust and magnetic field properties vs. fundamental physics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "M82*, the supermassive black hole at the center of the nearby starburst galaxy M82, exhibits a remarkable phenomenon: instead of passively accreting material, it actively expels it through powerful jets and winds. This outflow carries enormous kinetic energy\u2014sufficient to suppress star formation across the surrounding galactic disk and eject pristine gas into the intergalactic medium. The constraint here is not the outflow itself (which is straightforward hydrodynamics) but the systematic extraction of star-forming potential from the galaxy's stellar population and accretion reservoir. The outflow mechanism exhibits features of both coordination (it regulates SMBH growth through self-limiting feedback) and extraction (it suppresses star formation for the victim populations). The constraint demonstrates a perspectival split: the SMBH experiences coordination; the stellar population experiences suppression; the analytical observer must decide whether to naturalize this as a physical law (false) or recognize it as a contingent astrophysical phenomenon driven by dust geometry, magnetic fields, and accretion rates.",
+    "key_agents": [
+      "Supermassive Black Hole M82*: Primary beneficiary (institutional/arbitrage) \u2014 achieves accretion equilibrium through outflow feedback; experiences self-regulation as coordination",
+      "Surrounding Stellar Population: Primary victim (powerless/trapped) \u2014 direct suppression of star formation within outflow cone; cannot escape feedback",
+      "Galactic Accretion Reservoir: Secondary victim (powerless/trapped) \u2014 gas destined for star formation is expelled before condensing; lost to the galaxy",
+      "Star Formation History Community: Organized observer (organized/constrained) \u2014 recognizes outflow as transient feedback mechanism with natural sunset as accretion declines",
+      "Cosmological AGN Feedback Framework: Analytical perspective (analytical/analytical) \u2014 sees outflow as necessary regulator of galaxy-black-hole coevolution; risks naturalizing contingent mechanism as fundamental law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The outflow suppresses star formation significantly but not absolutely\u2014some star formation persists in protected regions and in the post-outflow epoch. The extraction is real (gas and energy removed from star-forming material) but not maximal because: (a) the outflow is not perfectly efficient (some gas escapes suppression), (b) star formation can resume after accretion decline, and (c) the mechanism is transient rather than permanent. The trajectory (0.18\u21920.28\u21920.38) reflects increasing severity of suppression as the black hole's accretion rate rises. Suppression (0.52): Moderate-high. The outflow creates genuine barriers to star formation: energetic heating, mechanical stripping, and potential-well escape eliminate options for affected gas. But suppression is not total because: (a) radiation pressure and jets do not instantaneously affect all gas, (b) magnetic fields and dust geometry create localized shielding, (c) some stellar formation can occur in dense cores. Theater ratio (0.48): Moderate. The outflow is not primarily performative\u2014it is a direct physical mechanism coupling accretion energy to kinetic feedback. However, some 'theatrical' elements exist: (a) the visible outflow component is a small fraction of the total energy budget (much is radiated), (b) radio observations show structured jets that may overstate the actual mechanical coupling, (c) the feedback's effectiveness varies with dust content and viewing angle, creating apparent performance variation. Theater increases slightly over the interval as dust settles and magnetic fields organize, making the outflow more structured and apparently more purposeful.",
+    "perspectival_gap": "This constraint demonstrates the critical perspectival divide between beneficiary and victim. The SMBH (institutional/arbitrage) perceives coordination: the outflow solves the feedback regulation problem and maintains accretion equilibrium. It classifies as Rope\u2014pure coordination with minimal extraction. The surrounding stars (powerless/trapped) perceive extraction: they are systematically prevented from forming within the outflow cone and cannot escape. It classifies as Snare\u2014pure extraction with no coordination benefit. The analytical observer at cosmological scale (analytical/analytical) perceives both: the outflow is a genuine regulator of galaxy-black-hole coevolution (Rope from the system's perspective) AND it suppresses local star formation (Snare from the galaxy's perspective), making it Tangled Rope at the civilizational level. The false-summit danger: the observer might naturalize this as inevitable physics (Mountain), claiming that energy conservation and momentum transfer are physical laws requiring such suppression. The structural data contradict this: suppression (0.52) is too high, extractiveness (0.38) is too high for a pure law. The outflow is a specific outcome of dust settling, magnetic field amplification, and accretion-rate thresholds\u2014all contingent on astrophysical conditions, not fundamental physics.",
+    "directionality_logic": "Supermassive Black Hole M82*: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.09. Net institutional beneficiary. The SMBH achieves regulation through the outflow and experiences it as coordination. Surrounding Stellar Population: Victim + trapped \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction. Stars cannot escape the outflow cone or its suppressive effects; they bear the full cost of feedback. Galactic Accretion Reservoir: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Near-maximum extraction. Gas destined for star formation is expelled; no exit option. Star Formation History Community: Organized + constrained \u2192 d\u22480.38, f(d)\u22480.38. Low effective extraction because community recognizes the outflow as transient and has research pathways to study recovery. Analytical Observer (AGN Feedback): analytical \u2192 d\u22480.50, f(d)\u22480.65. Moderate\u2014symmetry between coordination (galaxy-BH balance) and extraction (star formation suppression). Analytical Observer (Physical Law): analytical \u2192 d\u22480.72, f(d)\u22481.15. Would imply high naturalization; contradicted by structural data.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by distinguishing between genuine physical law (Mountain) and contingent astrophysical mechanism (Tangled Rope). The false-summit detector identifies that \u03b5=0.38 and suppression=0.52 exceed mountain thresholds, ruling out pure law status. The constraint genuinely is Tangled Rope: it exhibits both coordination (SMBH feedback regulation) and extraction (star formation suppression), with active enforcement (energetic feedback) required. The outflow is not inevitable from physics alone\u2014it emerges from specific conditions: (1) accretion rates exceeding a critical threshold, (2) dust content creating sufficient opacity to couple radiation to mechanical energy, (3) magnetic field amplification providing jet collimation, (4) galaxy mass and potential-well depth determining escape fractions. These are contingent astrophysical parameters, not fundamental constants. The scaffold perspective confirms the transient nature: as the black hole's accretion rate declines (either through exhausting the gas supply or reaching equilibrium), the outflow weakens and star formation resumes. This is not a permanent suppression (Snare) but a temporary mechanism with a natural sunset measured in galactic evolutionary timescales (0.1-1 Gyr). The Tangled Rope classification is robust: coordination function (accretion feedback) + asymmetric extraction (star formation suppression) + active enforcement (outflow jets) + contested scope (local vs. galactic scale)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "agn_feedback_galaxy_coevolution",
+      "star_formation_rate_regulation"
+    ],
+    "dual_formulation_note": "M82* outflow suppression is downstream of AGN accretion physics but represents a distinct structural constraint. The upstream accretion constraint has lower extractiveness (\u03b5\u22480.15, more coordination-focused); the outflow constraint adds the suppression mechanism (\u03b5\u22480.38), which couples accretion to galactic-scale star formation outcomes. These are linked: accretion enables outflow, but outflow's suppressive effects are distinct structural phenomena."
+  },
+  "directionality_overrides": []
+}

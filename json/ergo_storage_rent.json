@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "ergo_storage_rent",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ergsr"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ergo Storage Rent (UTXO Demurrage)",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "active_network_participants",
+      "storage_resource_maintainers"
+    ],
+    "victims": [
+      "long_term_hodlers",
+      "dormant_account_holders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Long-Term Holder",
+      "comment": "PERSPECTIVE 1: LONG-TERM HOLDER (SNARE) \u2014 Cannot exit without loss of wealth. Storage rent extracts value from dormant UTXOs at approximately 0.25 ERG per year per 1000 bytes. Holders who leave coins unspent for 4+ years face mandatory attrition. No alternative storage mechanism; no meaningful exit. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Inactive Retail Investor",
+      "comment": "PERSPECTIVE 2: INACTIVE RETAIL INVESTOR (TANGLED ROPE) \u2014 Constrained by knowledge barriers and transaction friction; may not understand demurrage mechanism. Benefits from network's reduced blockchain bloat and improved scalability. Extraction is significant but not absolute \u2014 can exit by moving coins (albeit at transaction cost), but incentivized to forget or abandon small amounts rather than pay fees to reclaim them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Active Exchange or Merchant",
+      "comment": "PERSPECTIVE 3: ACTIVE EXCHANGE OR MERCHANT (ROPE) \u2014 Benefits from demurrage-driven fee structure. Transaction volume keeps UTXOs fresh; storage rent is a minor operating cost. Experiences the constraint as coordination: demurrage incentivizes network-level housekeeping (pruning dead UTXOs), reducing full-node resource requirements and enabling decentralization. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Developer",
+      "comment": "PERSPECTIVE 4: PROTOCOL DEVELOPER (PITON) \u2014 Storage rent is a governance tool with theoretical elegance (demurrage encourages velocity; reduces UTXO set explosion) but operational effectiveness is degraded. In practice, long-term holders move coins to avoid rent, creating artificial transaction churn \u2014 the constraint is maintained through institutional commitment to the model rather than through persistent functional superiority over simple UTXO fees. Theater ratio high because the demurrage mechanism requires constant narrative justification."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Blockchain State Optimization Coalition",
+      "comment": "PERSPECTIVE 5: BLOCKCHAIN STATE OPTIMIZATION COALITION (SCAFFOLD) \u2014 Organized nodes and developers see storage rent as a temporary solution to UTXO set growth, with eventual sunset as layer-2 scaling (rollups, sidechains) matures. The demurrage mechanism is a coordination device to manage on-chain resource constraints until better solutions exist. As network throughput increases and state efficiency improves, the functional need for demurrage declines \u2014 sunset estimated at 5-15 years as scaling solutions mature."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Information Economics View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INFORMATION ECONOMICS VIEW (MOUNTAIN) \u2014 From a universal civilizational perspective, storage rent reflects an immutable constraint of distributed systems: decentralization requires every participant to maintain full state, creating a tragedy of the commons unless usage incentives are aligned. Demurrage is a natural law solution to aligning individual incentives (minimize storage burden) with collective health (UTXO pruning). However, this perspective risks naturalizing a design choice \u2014 the constraint derives from Ergo's specific architectural commitment to state transparency and full-node accessibility, not from physics or mathematics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demurrage_rate_empirical_optimality",
+      "question": "Does the 0.25 ERG per year per 1000 bytes demurrage rate optimally balance UTXO pruning against unintended wealth extraction from legitimate long-term holders?",
+      "resolution_mechanism": "Historical analysis of UTXO set growth and pruning rates pre- and post-demurrage; measurement of forced transaction churn attributable to rent avoidance; economic modeling of fair rent vs. coordination incentive threshold",
+      "impact": "If rate too high: demurrage functions as wealth extraction (Snare) even from perspectival beneficiaries. If rate too low: UTXO set still explodes and demurrage is theater (Piton). If optimized: true Tangled Rope coordination-extraction hybrid.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether demurrage rate is optimally calibrated for network health"
+    },
+    {
+      "id": "layer_two_scaling_timeline",
+      "question": "At what stage of layer-2 maturity (rollups, sidechains, sharding) does on-chain storage rent become functionally obsolete?",
+      "resolution_mechanism": "Historical analysis of Ethereum's state growth vs. layer-2 adoption; technical assessment of when Ergo could safely disable demurrage without state explosion; community consensus on when sunset could be declared",
+      "impact": "If layer-2 solutions mature before storage rent extraction becomes severe: Scaffold classification confirmed (genuine sunset path). If demurrage persists despite mature alternatives: constraint reclassifies toward Piton (inertial theater) or Snare (wealth extraction mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for functional obsolescence of on-chain storage rent via layer-2 scaling"
+    },
+    {
+      "id": "intentional_dormancy_vs_loss",
+      "question": "What fraction of demurrage collection derives from genuinely lost keys vs. intentional long-term holding strategies? Can this distinction be detected via on-chain behavior analysis?",
+      "resolution_mechanism": "Statistical clustering of UTXO movement patterns; identification of dust accumulation signatures; survey of hodler behavior and motivations; time-series analysis of rent payment patterns",
+      "impact": "If lost-key fraction is very high (>60%): demurrage functions primarily as lost-coin recycling (coordination, Rope). If low (<20%): demurrage is intentional extraction from active hodlers (Snare). If mixed: validates Tangled Rope classification.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Fraction of storage rent from intentional holding vs. lost keys"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Ergo's storage rent (UTXO demurrage) is a structural constraint that charges inactive UTXOs a periodic fee to incentivize blockchain state pruning and encourage monetary velocity. The mechanism extracts value from long-term holders to subsidize network efficiency for active participants. Storage rent exhibits the full indexical spectrum: it appears as coordination mechanism (Rope) to active traders, as temporary state-management necessity (Scaffold) to scaling-aware developers, as degraded ritual (Piton) to protocol architects, as mixed extraction-coordination (Tangled Rope) to moderate inactive holders, as predatory wealth extraction (Snare) to long-term hodlers, and as an immutable information economics constraint (Mountain) from a civilizational-scope analytical view. The perspectival gap is sharp: the same 0.25 ERG per year per 1000 bytes appears as fair coordination overhead to one observer and as uncompensated wealth confiscation to another.",
+    "key_agents": [
+      "Long-term hodlers: Primary victim (powerless/trapped) \u2014 forced to pay demurrage or lose holdings; no meaningful exit",
+      "Inactive retail investors: Secondary victim (moderate/constrained) \u2014 bear extraction cost but with some exit capacity through movement (transactional friction)",
+      "Active traders and merchants: Primary beneficiary (institutional/arbitrage) \u2014 experience demurrage as low-cost coordination mechanism; benefit from reduced UTXO bloat and faster full-node sync",
+      "Storage resource maintainers: Beneficiary (institutional/arbitrage) \u2014 reduced full-node resource burden from UTXO set pruning",
+      "Protocol developers: Institutional perspective (institutional/arbitrage) \u2014 maintain demurrage as governance tool; recognize theatrical justification component",
+      "Layer-2 scaling coalition: Organized agents (organized/constrained) \u2014 see storage rent as temporary necessity; building alternatives with sunset path",
+      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing design choice as immutable constraint"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Storage rent extracts from dormant holders (~0.25 ERG per year per 1000 bytes, approximately 0.04% annual wealth decay depending on unit density), but the extraction is bounded and proportional to inactivity duration. Not as severe as a lender-of-last-resort extraction mechanism (which would approach 0.60+), but not negligible. The mechanism's purpose includes genuine network coordination (UTXO pruning), which moderates the pure extractiveness component. Suppression (0.52): Moderate-high. Significant barriers to exit include: (1) transaction costs to move coins, (2) knowledge barriers \u2014 many holders unaware of demurrage until rent is due, (3) psychological friction \u2014 moving coins to avoid rent creates artificial churn and defeats the mechanism's purported efficiency goal. However, exit is not impossible \u2014 holders can pay transaction fees to reclaim holdings or move to layer-2. Theater ratio (0.35): Moderate-low. The demurrage mechanism has genuine technical function (incentivizing UTXO pruning, reducing node storage), but protocol narratives often overstate its necessity and elegance. As layer-2 solutions mature, the functional justification weakens faster than the mechanism is retired \u2014 the theatrical component increases during sunset phases.",
+    "directionality_logic": "Beneficiaries (active_network_participants, storage_resource_maintainers) experience low d-values through the derivation chain: they are institutional actors with arbitrage options (can move funds freely; bear minimal storage rent relative to transaction volume). Their d-values map to the beneficiary end of the spectrum (d \u2248 0.05-0.15). Victims (long_term_hodlers) experience high d-values: they are powerless agents with trapped exit options (cannot leave the network without permanent loss; cannot avoid demurrage without transaction cost). Their d-values map to the victim end (d \u2248 0.85-0.95). The sigmoid f(d) amplifies the extraction experienced by victims and dampens it for beneficiaries, producing the perspectival gap: the snare perspective from the trapped agent and the rope perspective from the institutional beneficiary derive from the same structural data (extractiveness 0.38, suppression 0.52) but different d-values.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence between institutional beneficiaries and powerless victims. Active traders see Rope (coordination): demurrage incentivizes velocity and pruning, reducing full-node sync time from days to hours. Long-term hodlers see Snare (extraction): their wealth decays at 4% per four-year cycle independent of network use. The scaffold perspective (organizing developers) sees a genuine sunset mechanism \u2014 layer-2 solutions will eventually replace on-chain demurrage \u2014 but the actual timeline and market adoption path are uncertain. The piton perspective (protocol architects) observes that demurrage is maintained through institutional commitment and narrative justification more than through persistent technical superiority. The analytical observer's mountain risks naturalizing a specific architectural choice (Ergo's commitment to lightweight full nodes and state transparency) as an immutable law of distributed systems.",
+    "mandatrophy_analysis": "Storage rent resolves mandatrophy through explicit structural classification: it is a Tangled Rope that genuinely includes both coordination (UTXO pruning, network efficiency) and extraction (wealth decay for dormant holders). The perspectival gap is not a failure of classification but a feature \u2014 different observers legitimately perceive the same mechanism as dominant coordination (Rope), dominant extraction (Snare), or balanced hybrid (Tangled Rope) depending on their structural position. The constraint avoids mandatrophy collapse by: (1) explicitly declaring beneficiaries and victims, (2) showing why network-level efficiency gains are real but unequally distributed, (3) documenting the scaffold sunset path (layer-2 scaling will reduce on-chain demurrage need), (4) acknowledging the piton component (theatrical justification). No single perspective is the 'correct' classification; the presheaf of six perspectives IS the correct answer."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "utxo_set_explosion",
+      "full_node_resource_burden"
+    ],
+    "dual_formulation_note": "Storage rent is downstream of UTXO set growth dynamics and node resource constraints. The upstream constraints (utxo_set_explosion, full_node_resource_burden) have their own extractiveness profiles reflecting empirical UTXO growth rates; storage rent as demurrage represents a governance solution attempting to manage those upstream constraints. Decomposition enables separate analysis of whether demurrage is effective resource management (Tangled Rope) or ineffective theater (Piton)."
+  },
+  "directionality_overrides": []
+}

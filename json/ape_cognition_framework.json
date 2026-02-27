@@ -2,24 +2,27 @@
   "header": {
     "constraint_id": "ape_cognition_framework",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "apecog"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "The scientific and ethical framework defining the limits of ape cognition",
     "topic_domain": "social/scientific",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "research_institutions",
-      "human_society"
+      "primatology_establishment",
+      "institutional_funding_bodies",
+      "conservation_authorities"
     ],
     "victims": [
-      "great_apes_as_a_class",
-      "dissenting_researchers"
+      "ape_cognitive_agency",
+      "field_methodological_innovation",
+      "ethical_clarity"
     ]
   },
   "perspectives": [
@@ -28,18 +31,27 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Research Subject (Great Ape)",
-      "comment": "PERSPECTIVE 1: THE GREAT APE (SNARE) — Experiences the framework as a justification for confinement, coercive study, and the removal of autonomy. As the primary victim with no exit, the effective extraction is maximized. d≈0.95, f(d)≈1.42, σ=0.8 → χ≈0.62. This χ is just below the snare threshold of 0.66, but the high suppression (0.75) and victim status make Snare the most fitting classification."
+      "spatial_scope": "global",
+      "label": "The Ape Subject",
+      "comment": "PERSPECTIVE 1: APE COGNITIVE SUBJECT (SNARE) \u2014 Trapped within a framework that declares certain cognitive capacities impossible a priori, regardless of observed behavior. No exit from definitional constraints embedded in scientific protocols. Maximum extraction: the ape's demonstrated capacities are systematically reinterpreted to fit framework constraints rather than framework adapting to evidence. The subject experiences pure extraction with no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Field Methodologist",
+      "comment": "PERSPECTIVE 2: FIELD METHODOLOGIST (TANGLED ROPE) \u2014 Constrained by funding requirements tied to established frameworks but also benefits from access to primatology infrastructure, collaborative networks, and validated protocols. Can propose methodological innovation but faces publication and grant bias toward framework-confirming results. Mixed extraction and coordination: the framework both enables systematic study and suppresses novel findings."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Mainstream Researcher",
-      "comment": "PERSPECTIVE 2: THE MAINSTREAM RESEARCHER (ROPE) — Experiences the framework as a pure coordination mechanism that enables funding, ethical approval, and peer-reviewed publication. As a primary beneficiary with arbitrage, extraction is negative. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08."
+      "label": "The Primatology Establishment",
+      "comment": "PERSPECTIVE 3: PRIMATOLOGY ESTABLISHMENT (ROPE) \u2014 Benefits from framework stability: clear definitions enable standardized research, comparative studies across sites, and institutional coherence. Experiences the constraint as coordination mechanism rather than extraction. Arbitrage option: can redefine framework terms if evidence demands, but has low incentive to do so. Net beneficiary."
     },
     {
       "classification_type": "tangled_rope",
@@ -47,17 +59,17 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Animal Rights Advocate",
-      "comment": "PERSPECTIVE 3: THE ANIMAL RIGHTS ADVOCATE (TANGLED ROPE) — Sees both the coordinating function (a shared language for debate) and the severe extraction from apes. As an organized but constrained agent, they perceive a system with both utility and high coercive cost. d≈0.55, f(d)≈0.75, σ=1.2 → χ≈0.50."
+      "label": "The Animal Ethics Coalition",
+      "comment": "PERSPECTIVE 4: ANIMAL ETHICS COALITION (ORGANIZED) (TANGLED ROPE) \u2014 Organized actors (ethics boards, welfare advocates, conservation NGOs) benefit from cognitive framework as basis for welfare policies (more cognition = more welfare protections) but are constrained by framework's conservatism: many observed ape behaviors that suggest suffering or complex preferences are excluded from policy consideration by definitional fiat. Mixed: the framework enables some protections but suppresses advocacy for stronger protections based on excluded evidence."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Ethics Committee Member",
-      "comment": "PERSPECTIVE 4: THE ETHICS COMMITTEE (PITON) — The function of ensuring 'ethical' research has degraded into a bureaucratic, liability-mitigating ritual. The high theater_ratio (0.75) meets the Piton gate. The committee maintains the framework out of institutional inertia, not a belief in its current functional efficacy."
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Comparative Psychology Canon",
+      "comment": "PERSPECTIVE 5: COMPARATIVE PSYCHOLOGY CANON (PITON) \u2014 The theoretical framework itself (distinctions between 'true' metacognition vs behavioral signs, 'genuine' theory of mind vs performance mimicry) has degraded from functional tool to performative ritual. Researchers spend substantial effort defending which capacities qualify as 'real' cognition vs mere behavior, but this definitional theater does little cognitive work \u2014 most researchers privately acknowledge the categories are fuzzy. The framework persists through institutional inertia: journals still require 'ruling out simpler explanations,' ethics boards still apply the same thresholds, but the underlying theoretical confidence has eroded. Theater ratio high because much research effort goes to framework defense rather than capacity discovery."
     },
     {
       "classification_type": "mountain",
@@ -65,106 +77,114 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Human Exceptionalist View",
-      "comment": "PERSPECTIVE 5: HUMAN EXCEPTIONALISM (MOUNTAIN) — This philosophical stance frames the cognitive divide between humans and apes as a fixed, natural law. The framework is seen merely as the process of discovering this immutable boundary. The engine will flag this as a false summit, as the high base extractiveness and suppression are inconsistent with a natural law."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER (TANGLED ROPE) — The default analytical view recognizes all components: a genuine coordination function for science, asymmetric extraction from non-consenting subjects, and active enforcement by institutions. This matches the canonical definition of a Tangled Rope. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "label": "The Analytical Observer (Methodological Naturalism View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / METHODOLOGICAL NATURALISM (MOUNTAIN) \u2014 From a universal analytical context, some epistemic conservatism is inherent to science: distinguishing genuine cognition from sophisticated behavioral mimicry requires controlled evidence, and that bar is necessarily high to prevent false positives. This view sees the framework as expressing an immutable principle of scientific method itself. However, the structural data (high suppression, active enforcement, extraction from field innovation) contradicts pure naturalism \u2014 the engine will identify this as a false summit, revealing that 'scientific conservatism' naturalizes what is actually a contingent institutional arrangement with gatekeeping power."
     }
   ],
   "omegas": [
     {
-      "id": "consciousness_qualia",
-      "question": "Is the subjective experience (qualia) of a great ape qualitatively distinct from or merely quantitatively different to that of a human?",
-      "resolution_mechanism": "A theoretical and empirical breakthrough in the science of consciousness, likely requiring novel neuro-imaging or analytical techniques.",
-      "impact": "If qualitatively distinct, it might reinforce the existing framework. If merely quantitatively different, it would undermine the ethical basis for extraction, shifting the classification toward Snare from more perspectives.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether ape consciousness is qualitatively or quantitatively different."
-    },
-    {
-      "id": "non_invasive_methods",
-      "question": "Can non-invasive methods (e.g., passive observation, advanced neuro-imaging) fully replace the knowledge gained from coercive or captive studies?",
-      "resolution_mechanism": "Longitudinal studies comparing the data yield and scientific impact of non-invasive vs. traditional research programs.",
-      "impact": "If yes, the justification for suppression and extraction collapses, and the constraint could evolve into a pure Rope. If no, the Tangled Rope structure remains stable.",
+      "id": "cognition_definition_boundary",
+      "question": "What constitutes genuine ape cognition vs. sophisticated behavioral response? Where is the principled boundary?",
+      "resolution_mechanism": "Longitudinal comparison of behavioral predictions under novel conditions; identification of whether framework revisions track evidence or resist it; historical analysis of how boundaries have shifted for other species",
+      "impact": "If boundary is empirically determined: framework evolves with evidence (Rope/Scaffold). If boundary is definitional-prior: framework suppresses evidence (Snare/Piton).",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Sufficiency of non-invasive research methods to replace coercive ones."
+      "type_class": "conceptual",
+      "description": "Definition of cognition boundary and its empirical vs. conceptual status"
     },
     {
-      "id": "personhood_threshold",
-      "question": "What specific, measurable cognitive abilities would be sufficient to grant great apes legal personhood or a protected 'rights-bearing' status?",
-      "resolution_mechanism": "Legal and philosophical debate informed by scientific findings, culminating in legislative or judicial precedent.",
-      "impact": "Defining a clear threshold would resolve the central ambiguity. It would either codify the current Tangled Rope or dismantle it in favor of a new framework.",
+      "id": "publication_bias_direction",
+      "question": "Does the framework's enforcement suppress novel cognition claims more than it suppresses false-positive cognition claims?",
+      "resolution_mechanism": "Meta-analysis of published ape cognition studies: proportion claiming framework-confirming results vs. novel capacity claims; analysis of rejection rates for capacity-expanding vs. capacity-limiting papers; interview data from researchers on submission and review experience",
+      "impact": "If suppression is symmetric: framework functions as quality control (Rope). If suppression is asymmetric: framework functions as extraction mechanism (Snare/Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Directional bias in publication and review of ape cognition claims"
+    },
+    {
+      "id": "welfare_protection_sufficiency",
+      "question": "Do current cognitive framework definitions provide adequate ethical protection for ape welfare, or do excluded capacities imply welfare needs that policy ignores?",
+      "resolution_mechanism": "Correlation analysis: ape behaviors that field researchers observe but framework excludes vs. subsequent welfare harms; expert elicitation from ethicists and field researchers on gap between framework definitions and observed suffering indicators",
+      "impact": "If framework is sufficient: ethical mechanism works (Rope). If gap is large: framework suppresses welfare advocacy (Snare) and organized actors are constrained (Tangled Rope).",
       "confidence": "medium",
       "type_class": "preference",
-      "description": "The societal and legal threshold for granting legal personhood."
+      "description": "Adequacy of cognitive framework for ape welfare protection"
+    },
+    {
+      "id": "methodological_conservatism_necessity",
+      "question": "Is the high epistemic bar for ape cognition claims a principled necessity (to prevent false positives) or a social institutional choice (status quo bias masked as methodology)?",
+      "resolution_mechanism": "Comparative analysis: what bar do other animal cognition fields use (octopus, corvid, cetacean cognition)? Historical analysis of how the bar for comparable species (great apes vs. other primates) has evolved; examination of whether bar height correlates with evidence quality or with institutional investment in current framework",
+      "impact": "If necessity: framework is mountain-adjacent (high resistance). If institutional choice: framework is extractive (Snare/Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether methodological conservatism reflects necessity or institutional choice"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
+      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 60,
-      "value": 0.55
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 30,
+      "time_point": 15,
       "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 60,
-      "value": 0.75
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
     }
   ],
   "interval": {
-    "start": 1966,
-    "end": 2026
+    "start": 0,
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "The framework governing research on great ape cognition is a complex social construct blending scientific inquiry with evolving ethical norms. It functions to coordinate research but does so by enabling the study of a powerless, non-consenting group. This creates a structural conflict where the same set of rules can be perceived as a benign coordination tool, a coercive trap, a degraded ritual, or a natural boundary, depending on the observer's position relative to the flow of extraction.",
+    "narrative_context": "The scientific and ethical framework defining ape cognition operates as a dual-function constraint: it coordinates research methodology and enables welfare policy, while simultaneously suppressing field innovation and constraining ethical advocacy. The framework establishes boundaries between genuine cognition (typically requiring controlled laboratory conditions, explicit task performance, and ruling out 'simpler' explanations) and sophisticated behavior (field observations, novel problem-solving in natural contexts, apparent emotional or social complexity). These boundaries are presented as methodological necessities but function as institutional gatekeeping. The constraint exhibits all six DR types depending on the observer's structural position: for the ape subject, it is pure extraction (snare); for field methodologists, it is mixed coordination and suppression (tangled rope); for the primatology establishment, it is coordination (rope); for animal ethics coalitions, it is constrained protection (tangled rope); for the comparative psychology canon, it is degraded ritual (piton); and from the analytical universal view, it appears as immutable methodological necessity (mountain \u2014 though the structural data reveals this as false summit). The constraint's theater ratio has risen from 0.38 to 0.58 over 30 years, indicating increasing performative effort to defend framework boundaries against accumulating anomalous field observations. The extractiveness has grown from 0.35 to 0.52, reflecting rising suppression of methodological alternatives and growing mismatch between framework definitions and observed ape capacities.",
     "key_agents": [
-      "Great Apes (as a class): Primary victim (powerless/trapped) — the subjects of study.",
-      "Research Institutions: Primary beneficiary (institutional/arbitrage) — gain knowledge, funding, and prestige.",
-      "Mainstream Researchers: Beneficiary (institutional/arbitrage) — operate within the framework to build careers.",
-      "Ethics Committees: Institutional actor (institutional/constrained) — enforce the framework, often performatively.",
-      "Animal Rights Advocates: Organized opposition (organized/constrained) — seek to dismantle or reform the framework.",
-      "Analytical Observers: External analysts (analytical/analytical) — classify the structure from different philosophical premises."
+      "Ape subjects: Powerless/trapped. Bear full cost of definitional exclusion; observed capacities are systematically reinterpreted to fit framework constraints.",
+      "Field methodologists: Moderate/constrained. Face funding and publication bias toward framework-confirming research; constrained innovation capacity.",
+      "Primatology establishment: Institutional/arbitrage. Primary beneficiary. Controls framework definitions; has arbitrage option to revise definitions if evidence demands but low incentive.",
+      "Animal ethics coalitions: Organized/constrained. Benefit from cognitive framework as policy basis but are constrained by framework's conservatism in advocacy for stronger protections.",
+      "Comparative psychology canon: Institutional/arbitrage. Framework persists through institutional inertia despite degraded theoretical foundation.",
+      "Field researchers (implicit secondary victim): Experience constraint as methodological friction; novel observations encounter higher publication barriers than framework-confirming results."
     ],
-    "logic_rationale": "Extractiveness (0.55): Represents the significant, non-monetary extraction of autonomy, natural habitat, and bodily integrity from apes for human knowledge. Suppression (0.75): High. Operating outside this framework is nearly impossible due to universal requirements for ethical review (IACUC/IRB), funding agency rules, and journal publication standards. Theater Ratio (0.75): High. Much of the ethical review process has become a bureaucratic checklist to mitigate legal liability rather than a deep philosophical engagement with the ethics of the research, making it highly performative.",
-    "perspectival_gap": "The gap is profound. For the researcher, the framework is a Rope enabling science. For the ape, it is a Snare justifying captivity. For the ethics committee, it is a Piton of institutional inertia. For a philosopher of human exceptionalism, it is a Mountain—a natural law being discovered. For an advocate, and for the final analytical view, it is a Tangled Rope, acknowledging both its coordinating function and its deeply extractive nature. This diversity demonstrates that the constraint's 'type' is not a monolithic property but an indexical one.",
-    "directionality_logic": "Beneficiaries (researchers, institutions) have arbitrage exit and low 'd' values, perceiving a Rope. Victims (apes) are trapped, leading to a high 'd' and the perception of a Snare. Constrained actors (advocates, committees) fall in between. The analytical 'Mountain' perspective is a framing choice, not a structural reality, and is revealed as a false summit by the system's metrics.",
-    "mandatrophy_analysis": "This story resolves the mandatrophy by showing that a single, coherent set of base properties (ε=0.55, S=0.75, T=0.75) can and does generate classifications across the entire DR spectrum. The question is not 'Which type is it?' but 'From which structural position is it being observed?'. The framework is simultaneously a Rope to its beneficiaries and a Snare to its victims; its analysis requires acknowledging the validity of all perspectives derived from the underlying structure."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The framework creates asymmetric cognitive authority: primatology establishment defines what counts as genuine cognition, constrains which methods are legitimate pathways to evidence, and controls publication and funding resources. Field researchers can propose innovation but face suppression through review and funding gatekeeping. This is extraction, not pure coordination, because the beneficiary (establishment) captures resource value and gatekeeping power while the cost-bearer (field innovation, ape agency) receives no reciprocal benefit. Suppression (0.65): High. Multiple barriers prevent alternative framings: (1) definitional barriers \u2014 novel capacity claims must overcome the presumption that established categories are exhaustive; (2) methodological barriers \u2014 field observations are considered lower-quality evidence than controlled lab tests; (3) career barriers \u2014 researchers advancing novel frameworks face publication bias and reputation risk; (4) institutional barriers \u2014 funding bodies reward framework-confirming research. Theater ratio (0.58): Moderate-high and rising. Much research effort goes to defending framework boundaries against anomalies rather than discovering new capacities. The 'ruling out simpler explanations' ritual has become performative \u2014 researchers and reviewers acknowledge the categories are fuzzy but continue enforcing them, maintaining the theater.",
+    "perspectival_gap": "The framework creates a fundamental gap between what field researchers observe and what the framework permits to count as evidence. A chimpanzee that solves a novel problem in a natural context using apparent planning, teaching younger individuals, and social coordination would be classified by the framework as 'clever behavior' or 'cultural learning,' but not as genuine 'cognition' in the theoretical sense \u2014 that label is reserved for laboratory tasks with explicit controls. This gap grows as field observation methods improve and become more rigorous; the theater ratio increases because researchers must invest effort defending the boundaries. The organized ethics coalition experiences this gap as a welfare policy failure: they observe behavioral indicators of suffering, preference, social attachment, and planning that would justify stronger protections if the framework recognized them as genuine cognition, but the framework's definitional conservatism prevents translation of observation into policy.",
+    "directionality_logic": "Directionality is derived from structural position within the extraction flow. The primatology establishment benefits from framework stability and has arbitrage options (can revise definitions if evidence demands) \u2014 derives low d, experiences low chi. Field methodologists bear constraints (publication bias, funding gatekeeping) but also benefit from infrastructure and validation \u2014 derives moderate d. Ape subjects have no exit and bear all suppression costs \u2014 derives high d, experiences high chi. Ethics coalitions are organized but have constrained exit (framework is institutional, not easily dismissed) and face suppression in advocacy \u2014 derives moderate-high d. The comparative psychology canon has arbitrage options but low motivation to revise \u2014 derives low d but experiences theater-ratio drag. The analytical observer at the universal scope is attempting to naturalize contingent institutional arrangement \u2014 derives false mountain d.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that the tangled_rope classification is structural, not perspectival confusion. The framework genuinely provides both coordination (standardized comparative methodology, enabling research) and asymmetric extraction (suppresses field innovation, excludes ape agency from policy). The framework cannot be reduced to pure coordination (rope) because suppression is systematic and benefits a specific group. It cannot be reduced to pure extraction (snare) because research infrastructure and validated protocols genuinely enable study. The piton classification is real: the comparative psychology canon has experienced theoretical degradation \u2014 most researchers privately acknowledge the cognition/behavior boundary is fuzzy, yet maintain the framework through institutional inertia. The false mountain (analytical observer) is diagnostic: the framework naturalizes its own conservatism as methodological necessity, but the structural data reveals this as institutional choice. The resolving insight is that all perspectives are accurate readings of the same constraint: the framework is simultaneously a coordination mechanism (enabling comparative science), an extraction mechanism (suppressing alternative framings), a degraded ritual (maintaining theater despite theoretical erosion), and a false natural law (claiming necessity it does not possess). Mandatrophy is resolved by recognizing that the apparent type-ambiguity is itself the structural feature \u2014 the framework's power derives from conflating coordination with extraction, making it hard to reform without losing the legitimate coordination benefits."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "animal_welfare_legislation",
-      "funding_for_basic_science"
-    ]
-  }
+      "primate_welfare_policy_framework",
+      "evolutionary_continuity_hypothesis",
+      "research_ethics_primate_studies"
+    ],
+    "dual_formulation_note": "This constraint is upstream of specific primatology research questions (e.g., ape theory of mind, metacognition, culture) and downstream of broader scientific methodology choices. It decomposes from the colloquial 'ape cognition' into two structurally distinct claims: (1) what empirical capacities apes possess (empirical constraint with variable epsilon depending on the specific capacity), and (2) what definitions and methods legitimately count as evidence for cognition (institutional/definitional constraint with high suppression). The story focuses on the definitional/institutional constraint, which has higher extractiveness. Specific empirical claims about ape theory of mind or metacognition would form separate constraint stories with their own epsilon values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
 }

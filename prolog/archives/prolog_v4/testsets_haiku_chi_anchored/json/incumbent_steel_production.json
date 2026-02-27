@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "incumbent_steel_production",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "steel"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "claimed_type": "snare",
+    "human_readable": "Incumbent Blast Furnace Steel Production Method",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "integrated_steel_producers",
+      "coking_coal_suppliers",
+      "high_grade_ore_suppliers"
+    ],
+    "victims": [
+      "emerging_economy_steelmakers",
+      "scrap_steel_recyclers",
+      "hydrogen_reduction_startups",
+      "climate_transition_actors"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Emerging Economy Steelmakers Without Ore Access",
+      "comment": "PERSPECTIVE 1: EMERGING ECONOMY STEELMAKERS WITHOUT ORE ACCESS (SNARE) \u2014 Cannot exit the blast furnace supply chain due to capital constraints and geographic iron ore scarcity. Must purchase coking coal and high-grade ore at monopolistic prices controlled by incumbent suppliers. Structural victim with no alternative pathway. d\u22480.93, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Scrap Steel Recyclers and Electric Furnace Operators",
+      "comment": "PERSPECTIVE 2: SCRAP STEEL RECYCLERS AND ELECTRIC FURNACE OPERATORS (SNARE) \u2014 Constrained by blast furnace dominance in capital markets and industry standards. Electric furnace technology exists but faces structural disadvantages: cannot compete on cost due to electricity pricing, cannot access premium markets where blast furnace provenance is preferred, face financing barriers because incumbent operators control investment flows. d\u22480.82, f(d)\u22481.20, \u03c3=1.0 \u2192 \u03c7\u22480.70."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Hydrogen Reduction Technology Developers",
+      "comment": "PERSPECTIVE 3: HYDROGEN REDUCTION TECHNOLOGY DEVELOPERS (SNARE) \u2014 Technology exists (direct reduced iron via hydrogen) but cannot achieve scale due to suppression of alternatives. Face intellectual property barriers, lack of supply infrastructure for green hydrogen, industrial procurement standards written for blast furnace output, and incumbent control of R&D funding and pilot plant access. The constraint operates through technical standards and market structure rather than legal prohibition. d\u22480.78, f(d)\u22481.12, \u03c3=1.1 \u2192 \u03c7\u22480.77."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Climate Transition Coalition",
+      "comment": "PERSPECTIVE 4: CLIMATE TRANSITION COALITION (ORGANIZED) \u2014 International climate targets require 30-40% reduction in steel sector emissions by 2050, but incumbent blast furnace infrastructure has 50+ year capital depreciation cycles. Coalition (governments, climate NGOs, corporate carbon commitments) is victim of lock-in: cannot accelerate transition without absorbing stranded asset costs. Can partially organize exit (carbon pricing, green procurement mandates) but faces coordinated supplier resistance and incumbent lobbying. d\u22480.68, f(d)\u22480.95, \u03c3=1.2 \u2192 \u03c7\u22480.67."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Integrated Steel Producers and Major Ore/Coal Suppliers",
+      "comment": "PERSPECTIVE 5: INTEGRATED STEEL PRODUCERS AND MAJOR ORE/COAL SUPPLIERS (ROPE) \u2014 Primary beneficiaries experiencing the constraint as coordination. The blast furnace system solves a genuine problem: proven, scalable, zero-carbon baseline (though with high direct emissions), massive existing supply chain, mature financing. Beneficiaries have arbitrage exit (can shift marginally to emerging technologies while maintaining blast furnace dominance) and derive all major extraction benefits through standard economic rent capture, not through artificial suppression. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Negative effective extraction = net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regulatory Bodies and International Standard-Setting Organizations",
+      "comment": "PERSPECTIVE 6: REGULATORY BODIES AND INTERNATIONAL STANDARD-SETTING ORGANIZATIONS (TANGLED ROPE) \u2014 Simultaneously benefit from and bear costs of blast furnace standardization. Benefit: technical standards provide global coordination on safety and interoperability; regulators extract rents through certification requirements that favor incumbent producers. Bear costs: locked into standards that slow climate-aligned innovation; face pressure from climate commitments and ESG regulations that they themselves created; constrained by lobbying power of incumbent producers. d\u22480.52, f(d)\u22480.68, \u03c3=1.1 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Blast Furnace as Historical Institution",
+      "comment": "PERSPECTIVE 7: THE BLAST FURNACE AS HISTORICAL INSTITUTION (PITON) \u2014 From a 200+ year perspective, the blast furnace is a degraded institutional form maintained through inertia despite superior alternative technologies (electric furnaces for recycling, direct reduction for new production) being technically mature. The constraint persists not because blast furnaces are optimal but because the institutional, financial, and social infrastructure built around them cannot be rapidly displaced. theater_ratio=0.42 indicates moderate performative content: much marketing and standard-setting effort goes to legitimizing incumbent dominance despite acknowledged technical maturity of alternatives. Inertia explains persistence better than optimization."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Steel Production Necessity",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / STEEL PRODUCTION NECESSITY (FALSE SUMMIT ATTEMPT) \u2014 Risk of naturalizing the constraint as inherent to steel production ('you cannot make steel without blast furnaces'). The structural data (\u03b5=0.58, suppression=0.68, theater=0.42, requires_active_enforcement=false) contradicts a mountain classification. The constraint is a contingent lock-in enabled by capital depreciation cycles and incumbent market power, not a law of metallurgy. The engine's false summit detector will classify this as snare or tangled rope, not mountain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "hydrogen_cost_parity_threshold",
+      "question": "At what green hydrogen cost ($/kg) does hydrogen direct reduction achieve capital-neutral cost parity with incumbent blast furnace operations, enabling exit for alternative producers?",
+      "resolution_mechanism": "Engineering cost curves for hydrogen DRI vs blast furnace; tracking of green hydrogen production costs; market pricing analysis as hydrogen electrolyzer capacity scales",
+      "impact": "If threshold achieved within 10 years: scaffold perspective validated, constraint becomes temporary (sunset becomes real). If threshold requires 30+ years: snare classification persists; alternative producers remain trapped.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold cost of green hydrogen enabling alternative production methods"
+    },
+    {
+      "id": "scrap_availability_and_recycling_limits",
+      "question": "Does global scrap steel availability sustainably support 100% electric furnace production, or does blast furnace production remain necessary for net new steel supply?",
+      "resolution_mechanism": "Material flow analysis of scrap generation rates vs steel demand; analysis of virgin vs recycled content ratios; historical recycling rate trends; building stock lifecycle modeling",
+      "impact": "If sustainable 100% recycling: electric furnace is true alternative (snare has genuine exit). If net new steel requires virgin ore: blast furnace is inescapable bottleneck (mountain-like for some perspectives). If partial recycling suffices: mixed tangled rope + snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether global scrap availability enables full transition away from virgin ore production"
+    },
+    {
+      "id": "incumbent_capital_depreciation_flexibility",
+      "question": "Can incumbent integrated producers accelerate retirement of blast furnace assets without triggering financial crises in supplier ecosystems and pension funds?",
+      "resolution_mechanism": "Analysis of stranded asset write-downs; financial modeling of early asset retirement vs forced depreciation; pension fund exposure to coking coal and ore suppliers; banking sector stress tests for transition scenarios",
+      "impact": "If flexible depreciation possible: climate coalition gains real exit option (snare \u2192 tangled rope or scaffold). If locked into 50-year cycles: incumbent producers can enforce slow transition, extending constraint period (snare persists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether incumbent producers can absorb financial costs of accelerated asset retirement"
+    },
+    {
+      "id": "technical_standard_conversion_capability",
+      "question": "Can existing technical standards for blast furnace steel (carbon equivalent, inclusion profiles, grain structure specs) be modified to accept hydrogen DRI or electric furnace output without massive quality revalidation?",
+      "resolution_mechanism": "Metallurgical comparison of output specs across production methods; review of automotive/construction/rail standards; testing programs for alternative-method compliance; industry adoption timelines",
+      "impact": "If standards are convertible: regulatory barrier is reduced (snare becomes constrained rather than trapped). If revalidation required: regulatory gate creates 5-10 year delay for alternative entry (snare persists with high suppression).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether existing technical standards can accommodate alternative production methods"
+    },
+    {
+      "id": "political_economy_of_incumbent_defense",
+      "question": "What is the durability of incumbent producer lobbying power as climate regulation tightens, and at what carbon price do political coalitions flip toward accelerated transition?",
+      "resolution_mechanism": "Analysis of lobbying spending and effectiveness over time; tracking of political support shifts (government subsidies, research funding allocation); carbon price sensitivity analysis for policy flip points",
+      "impact": "If political economy is path-dependent and durable: incumbent suppression persists despite regulations (snare). If flips at realistic carbon prices ($80-150/ton): coalition gains political power to overcome suppression (snare \u2192 tangled rope with sunset).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Durability of incumbent producer political power under tightening climate regulation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The global steel industry's dependence on blast furnace technology represents a structural extraction mechanism that operates through capital lock-in, supply chain dominance, and technical standardization rather than through explicit legal prohibition. The blast furnace method requires high-grade iron ore and coking coal, both controlled by a concentrated set of integrated producers and mining companies. Alternative production methods\u2014electric furnaces using recycled scrap, hydrogen direct reduction, plasma-based production\u2014are technically mature but face systematic suppression through financing barriers, technical standard gatekeeping, lack of green hydrogen infrastructure, and incumbent control of R&D investment. The constraint extracts from emerging economy steelmakers without ore access, scrap recyclers, hydrogen technology developers, and climate transition actors, while benefiting integrated producers and ore/coal suppliers. The extractiveness has increased over the 50-year observation window (0.42 \u2192 0.58) as alternative technologies became technically viable but remained economically locked out, indicating that suppression has intensified rather than relaxed as alternatives have matured.",
+    "key_agents": [
+      "Integrated Steel Producers (Vale, Rio Tinto, ArcelorMittal, Nippon Steel): Primary beneficiaries (institutional/arbitrage) \u2014 capture rents through control of coking coal and high-grade ore supply chains, market concentration, and technical standard setting",
+      "Coking Coal Suppliers (Glencore, Teck, Arch Resources): Primary beneficiaries (institutional/arbitrage) \u2014 locked-in demand from blast furnace dominance; extraction through limited supply and monopolistic pricing",
+      "Emerging Economy Steelmakers (India, Vietnam, Indonesia, Turkey): Primary victims (powerless/trapped) \u2014 cannot access high-grade ore deposits, forced to import at premium prices; lack capital for alternative furnace technology; structurally locked into higher cost structure",
+      "Scrap Steel Recyclers and Electric Furnace Operators (Nucor, Tenaris, regional recyclers): Secondary victims (moderate/constrained) \u2014 technically superior option (lower capital intensity, lower emissions) blocked by capital cost asymmetry, procurement standard bias, and financing barriers",
+      "Hydrogen Reduction Technology Developers (H2 Green Steel, Boston Metal, HYBRIT): Secondary victims (moderate/constrained) \u2014 technology mature but faces infrastructure barriers, lack of green hydrogen supply, no funding advantage vs incumbent R&D",
+      "Climate Transition Coalition (UNEP, IEA, national governments, corporate net-zero commitments): Organized victims (organized/constrained) \u2014 locked into slow transition by incumbent capital depreciation cycles; cannot overcome suppression without major policy intervention",
+      "Regulatory Bodies and Standard-Setting Organizations (ISO, ASTM, national steel standards): Mixed institutional actors (institutional/constrained) \u2014 benefit from standardization coordination but pay cost of lock-in to suboptimal incumbent technology",
+      "Blast Furnace Institution: Historical form (institutional/arbitrage) \u2014 persists through 200+ years of institutional accumulation despite technical obsolescence in many applications (piton perspective)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The constraint extracts through multiple channels: (1) ore/coal suppliers extract monopolistic rents through supply concentration; (2) incumbent producers extract through capital cost asymmetry (blast furnaces require $2-4B per plant, electric furnaces $500M-1B, but amortized cost per ton is lower for blast furnaces due to existing depreciation); (3) technical standards extract by requiring revalidation of alternative outputs; (4) lack of green hydrogen infrastructure extracts by making hydrogen DRI uneconomical; (5) financing barriers extract by directing capital toward proven incumbent technology. The 0.58 value reflects that extraction is substantial but not maximal \u2014 alternative technologies are technically proven (not suppressed to zero), and climate regulations are beginning to create countervailing forces (not pure snare). Suppression (0.68): Systematic barriers to exit include: (1) lack of ore access for emerging producers (geographic/geological); (2) lack of capital for technology transition ($2-4B per plant); (3) technical standards written for blast furnace output; (4) absence of green hydrogen supply chain; (5) incumbent control of financing, R&D, and procurement standards; (6) regulatory capture by incumbents in coal and ore producing regions; (7) pension fund and supplier ecosystem lock-in to blast furnace demand. Suppression is high but not total because alternative technologies exist, some capital is becoming available (climate finance, ESG investing), and some jurisdictions are actively supporting alternatives (EU, Scandinavia). Theater ratio (0.42): Moderate-low. The constraint operates primarily through real capital and resource barriers (structural), not through performative justifications (theater). Marketing and standard-setting efforts exist (legitimizing incumbent dominance) but represent a smaller share of constraint maintenance than capital lock-in. This low theater distinguishes the constraint from piton \u2014 the constraint persists because of real economic forces, not institutional inertia alone, though inertia is a secondary factor.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence driven by exit options and beneficiary/victim status. The integrated producer sees rope or even mountain (coordination function: proven technology at scale; natural limit: metallurgical requirements for certain steel grades). The emerging economy steelmaker sees pure snare (trapped by ore geography and capital barriers). The scrap recycler sees snare with constrained exit (technology exists but capital and procurement barriers prevent entry). The hydrogen developer sees snare (technology mature but infrastructure and financing barriers suppress scale). The climate coalition sees snare-to-tangled-rope (pure extraction from lock-in, but climate regulation creates countervailing power, so mixed). The regulatory body sees tangled rope (benefits from standard-setting coordination but pays cost of technology lock-in). The blast furnace as institution sees piton (historical form maintained by inertia despite technical alternatives). The analytical observer risks seeing mountain (naturalizing incumbent dominance as inherent to steel production) but the structural data reveals it as snare/tangled rope. The perspectival gaps are primarily driven by the asymmetry between beneficiaries (institutional, arbitrage) and victims (powerless-to-organized, trapped-to-constrained).",
+    "directionality_logic": "Integrated producers + ore/coal suppliers: Beneficiaries + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiaries; effective extraction is negative (they subsidize the system through capital investment and technology maintenance). Emerging economy steelmakers: Victims + trapped (ore geography, capital constraints) \u2192 d\u22480.93, f(d)\u22481.40. Maximum extraction; no exit options and no alternatives. Scrap recyclers: Victims + constrained (technology exists but capital barriers) \u2192 d\u22480.82, f(d)\u22481.20. High extraction; can exit partially through technology upgrade but face financing and standard barriers. Hydrogen developers: Victims + constrained (technology exists but infrastructure and financing barriers) \u2192 d\u22480.78, f(d)\u22481.12. Significant extraction; real technical pathway exists but suppressed by missing supply chains and incumbent control of R&D funding. Climate coalition: Victims + constrained (political power but facing incumbent resistance) \u2192 d\u22480.68, f(d)\u22480.95. Moderate-high extraction; have organizing power and regulation on side but constrained by capital depreciation cycles and incumbent lobbying. Regulators: Institutional + constrained (coordination benefits but locked into suboptimal standard) \u2192 d\u22480.52, f(d)\u22480.68. Moderate extraction; benefit from coordination function but pay cost of technology lock-in. Blast furnace institution: Institutional + arbitrage \u2192 d\u22480.08, but piton classification from theater gate (0.42 \u2265 0.70 would be piton floor, but 0.42 < 0.70 so this is false piton \u2014 constraint maintains itself through capital, not inertia).",
+    "mandatrophy_analysis": "RESOLVED VIA SNARE + VICTIM COALITION POWER: The constraint classifies as snare (\u03b5=0.58 > 0.46, suppression=0.68 > 0.60, \u03c7\u22480.75 > 0.66 from powerless/trapped perspective). Mandatrophy resolution follows the 'dynamic coalition' extension: the primary victim group (emerging economy steelmakers) is powerless in isolation (d\u22480.93 \u2192 snare), but alternative victims (climate coalition, hydrogen developers, scrap recyclers) are organized to moderate power. When these groups coalesce, the effective opposition to incumbent extraction rises to organized level (multiple moderate + organized agents). The coalition has access to regulatory power (climate targets, carbon pricing, procurement standards), research funding (climate finance), and corporate commitments (net-zero steel procurement). The snare classification persists (not converted to tangled rope) because the beneficiaries retain structural advantage: capital control, ore/coal monopoly, existing depreciated furnaces, established financing access. However, the coalition's emergence as an organized countervailing force creates realistic sunset conditions \u2014 climate regulation will eventually force transition regardless of incumbent suppression (estimated 20-40 year timeline). This is not a scaffold (which requires the constraint itself to have a sunset clause) but a snare with an external forcing function (climate regulation) that will overcome suppression. The mandatrophy is resolved by classifying the constraint as snare (accurate structural assessment) while documenting the coalition power that will eventually force exit despite continued incumbent dominance."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "green_hydrogen_supply_infrastructure",
+      "coking_coal_phase_out",
+      "steel_sector_emissions_intensity",
+      "emerging_economy_manufacturing_cost"
+    ],
+    "dual_formulation_note": "The incumbent blast furnace constraint is upstream of multiple downstream constraints in the steel supply ecosystem. Upstream, it depends on coking coal availability and high-grade ore extraction. The constraint family decomposes into: (1) incumbent_steel_production (\u03b5=0.58, snare) \u2014 the capital/supply lock-in mechanism; (2) green_hydrogen_supply_infrastructure (\u03b5\u22480.45, tangled_rope) \u2014 the coordination/extraction hybrid preventing hydrogen DRI scale; (3) coking_coal_phase_out (\u03b5\u22480.35, scaffold with sunset) \u2014 the regulatory pressure forcing incumbent transition. These three are linked: hydrogen infrastructure is blocked by incumbent suppression; coal phase-out will force hydrogen investment; forced investment changes incumbent extraction mechanism from snare to constrained."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

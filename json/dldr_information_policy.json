@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "dldr_information_policy",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dldr"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Don't Like, Don't Read (DLDR) Information Policy",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "archive_operators",
+      "content_creators"
+    ],
+    "victims": [
+      "vulnerable_readers",
+      "cultural_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Vulnerable Reader",
+      "comment": "PERSPECTIVE 1: VULNERABLE READER (SNARE) \u2014 Individuals seeking archive content (fanworks, historical materials, community records) cannot negotiate content filtering without abandoning access entirely. No ability to pre-filter or customize warning systems. Trapped between exposure to harmful content and platform exit. Maximum suppression: warnings may be inadequate, obfuscated, or absent; content moderation relies entirely on voluntary labeling by creators. No institutional recourse."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Archive Community",
+      "comment": "PERSPECTIVE 2: ARCHIVE COMMUNITY (TANGLED ROPE) \u2014 Community-operated archives (AO3, Wattpad communities, fan forums) experience DLDR as both coordination and extraction. Coordination function: reader autonomy reduces moderation burden and aligns with anti-censorship values. Extraction function: platforms shift liability and labor to readers; communities cannot enforce consistent filtering; participation carries asymmetric information risk. Constrained exit: migrating archives is costly; alternatives are limited or proprietary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Archive Operator",
+      "comment": "PERSPECTIVE 3: ARCHIVE OPERATOR (ROPE) \u2014 Platform operators (Tumblr, AO3 moderation teams, Discord servers) experience DLDR as pure coordination: decentralized filtering reduces operational cost, distributes trust responsibility, and aligns with community values of reader agency. Net beneficiary through reduced liability and operational overhead. Arbitrage exit: operators can migrate to proprietary systems or different policy regimes without reputational cost to their primary function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Accessibility Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: ACCESSIBILITY ADVOCACY COALITION (SCAFFOLD) \u2014 Organized advocates (disability communities, trauma-informed content advocates, digital rights organizations) see DLDR as a temporary friction point with a sunset: progressive refinement of tagging standards (AO3 Additional Tags, content rating systems), AI-assisted content classification, and reader browser plugins are building more accessible filtering mechanisms. Sunset logic: as annotation and filtering infrastructure mature, DLDR becomes obsolete. Theater is moderate (advocacy pressure creates performance of accessibility improvement)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Publishing Industry Legacy",
+      "comment": "PERSPECTIVE 5: PUBLISHING INDUSTRY LEGACY (PITON) \u2014 Traditional publishing gatekeeping and content review mechanisms have atrophied in the digital era. DLDR represents institutional inertia: the historical norm of editorial responsibility persists as a rhetorical ideal ('caveat emptor, reader beware') while actual filtering mechanisms have degraded to performative warning labels. Theater ratio high (0.64): labeling compliance is inconsistent and unenforced; the ritual of content warnings substitutes for actual accessibility architecture. Function has declined; inertia maintains the policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Content Creator",
+      "comment": "PERSPECTIVE 6: CONTENT CREATOR (TANGLED ROPE) \u2014 Creators experience DLDR as mixed coordination and extraction. Coordination: platform provides free distribution without editorial vetting, reducing friction to publication. Extraction: responsibility for tagging and warnings transfers to creators; failure to tag can result in community shaming, account suspension, or reputation damage. Arbitrage exit: creators can move between platforms, but switching costs are moderate. Effective extraction (chi) remains significant: creators bear disciplinary burden despite platform's operational reduction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, the information asymmetry between content creator and reader is structural: creators always know their content better than readers can know it without exposure. DLDR appears as a natural equilibrium of this asymmetry \u2014 readers cannot access information without risk, so filtering responsibility must rest with someone. However, this naturalizes a contingent choice: alternative regimes (mandatory tagging, platform classification, age-gated access) exist but require institutional investment. The engine's false summit detector should flag this as naturalization of institutional choice, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tagging_compliance_measurement",
+      "question": "What percentage of user-generated content in DLDR archives carries accurate, actionable content warnings?",
+      "resolution_mechanism": "Large-scale content audit: sample archives (AO3, Wattpad, FFnet) and compare creator-provided tags against independent content classification; measure agreement rates for common content categories (violence, sexual content, mental health triggers)",
+      "impact": "If compliance > 80%: DLDR functions as effective coordination (Rope from creator perspective). If compliance < 50%: DLDR is mostly extractive theater (Snare from reader perspective). If compliance 50-80%: mixed model (Tangled Rope) is confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy and completeness of user-provided content warnings"
+    },
+    {
+      "id": "reader_harm_correlation",
+      "question": "Do readers encountering unwarned harmful content in DLDR archives experience measurable psychological or social harm compared to platform-filtered alternatives?",
+      "resolution_mechanism": "Comparative study: survey readers on DLDR platforms vs algorithm-filtered platforms (YouTube, TikTok); measure trauma/distress rates, avoidance behavior, and self-reported vulnerability to unwanted exposures",
+      "impact": "If harm rate significantly higher on DLDR platforms: supports Snare classification from vulnerable reader perspective. If harm rates comparable: suggests readers have developed coping strategies or DLDR warnings are functionally adequate. If harm rate lower: unexpected finding suggesting reader agency is genuinely protective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Psychological harm correlation with DLDR versus filtered platforms"
+    },
+    {
+      "id": "platform_liability_materialization",
+      "question": "Does DLDR actually reduce platform legal liability for user-generated content, or does it merely shift visibility of liability without reducing legal exposure?",
+      "resolution_mechanism": "Legal analysis: compare litigation outcomes and settlement patterns for DLDR platforms (AO3, fan archives) versus moderated platforms (Reddit, Facebook); examine whether 'readers assume risk' doctrine holds in relevant jurisdictions",
+      "impact": "If liability genuinely reduced: DLDR achieves its primary institutional function and benefits to operators are real (Rope). If liability merely concealed: DLDR is extractive theater masking legal exposure that operators have shifted to readers (Snare). If liability shared: mixed model (Tangled Rope).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether DLDR actually reduces platform legal liability"
+    },
+    {
+      "id": "alternative_filtering_feasibility",
+      "question": "Are there technically and economically feasible alternatives to DLDR that would provide reader protection without reducing creator autonomy?",
+      "resolution_mechanism": "Technology assessment: evaluate cost and feasibility of options \u2014 mandatory structured tagging schemas, crowdsourced rating systems, browser-side filtering plugins, AI content classification. Measure implementation cost vs operational burden reduction.",
+      "impact": "If feasible alternatives exist and are low-cost: DLDR is revealed as institutional choice, not necessity. Strengthens Scaffold sunset logic and supports False Mountain (analytical) observation. If no feasible alternatives: DLDR may approach Mountain status (structural equilibrium). If alternatives exist but high-cost: supports Tangled Rope (mixed coordination-extraction where trade-off favors operators).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical and economic feasibility of alternative content filtering mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 'Don't Like, Don't Read' (DLDR) information policy represents a constraint that has evolved from explicit archive governance principle to implicit platform design pattern across fan communities, NSFW content spaces, and community-operated archives. DLDR shifts responsibility for content filtering from platform/creator to reader, justified as protecting reader autonomy and creator freedom. However, the constraint exhibits the structural signature of a Tangled Rope: it achieves genuine coordination (decentralized filtering reduces platform burden and aligns with anti-censorship values) while simultaneously extracting asymmetric costs (vulnerable readers bear exposure risk; creators bear tagging burden; platforms reduce liability without eliminating it). The theater_ratio has increased from 0.35 to 0.64 over the measurement interval, indicating that DLDR's performative content (community norms, platform rhetoric about 'reader choice') has outpaced its functional content (actual accessible filtering mechanisms). The constraint's suppression (0.68) reflects significant barriers to exit: readers cannot access archive content without accepting DLDR terms; vulnerable populations (trauma survivors, neurodivergent users) cannot pre-filter without community infrastructure; creators cannot opt into filtered distribution without leaving the archive.",
+    "key_agents": [
+      "Vulnerable Readers: Primary victims (powerless/trapped) \u2014 individuals seeking archive content but unable to negotiate content filtering; bear full exposure risk",
+      "Archive Operators: Primary beneficiaries (institutional/arbitrage) \u2014 reduce operational cost and liability by delegating content filtering to readers and creators",
+      "Content Creators: Secondary beneficiary and secondary victim (powerful/arbitrage) \u2014 gain free distribution without editorial vetting but bear disciplinary responsibility for accurate tagging",
+      "Archive Community: Secondary actor (moderate/constrained) \u2014 community-operated archives benefit from cost reduction but share extraction burden with readers",
+      "Accessibility Advocacy Coalition: Organized agent (organized/constrained) \u2014 advocates for infrastructure improvements; sees DLDR as temporary friction with sunset logic",
+      "Publishing Industry Legacy: Institutional observer (institutional/arbitrage) \u2014 DLDR represents atrophied editorial responsibility maintained through inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing DLDR as inherent to information asymmetry rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts meaningful costs from vulnerable readers (exposure risk) and creators (tagging burden) while providing asymmetric benefits to operators (cost reduction and liability management). The extractiveness is not as severe as pure data extraction or labor exploitation (0.70+) because alternatives exist and reader participation is nominally voluntary. The interval trajectory (0.32\u21920.52) reflects accumulation of extractive pressure: as archives have scaled, tagging becomes increasingly burdensome and inconsistent, shifting more filtering responsibility to readers. Suppression (0.68): High. Significant barriers to exit include: specialized archive content (fan communities, rare collections) concentrated in specific platforms; locked-in creator communities; switching costs for long-form content; social penalties for creating alternative filtering infrastructure. Vulnerable readers cannot condition their archive participation on improved filtering without abandoning the content entirely. Theater ratio (0.64): Moderately high and rising. Community norms and platform rhetoric emphasize 'reader choice' and 'creator autonomy' as justifications, but functional filtering mechanisms remain inconsistent. Content warnings are often incomplete, vague, or absent; platform compliance mechanisms are minimal; the ritual of tagging has replaced actual accessible design. Rising theater reflects growing awareness that DLDR's promised benefits (balanced responsibility, reader empowerment) are increasingly rhetorical.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. The archive operator sees pure coordination (Rope) \u2014 they are solving a legitimate problem of distributing filtering responsibility without centralized gatekeeping. The vulnerable reader sees pure extraction (Snare) \u2014 they bear exposure risk with minimal recourse. The content creator sees mixed coordination-extraction (Tangled Rope) \u2014 they gain distribution but are disciplined through tagging expectations. The accessibility coalition sees a temporary problem being solved (Scaffold) \u2014 better tagging infrastructure and filtering tools are emerging. The publishing industry sees its own degraded gatekeeping ritual (Piton) \u2014 editorial responsibility persists rhetorically but functions performatively. The analytical observer risks seeing natural law (Mountain) \u2014 information asymmetry always requires filtering delegation \u2014 but structural evidence reveals DLDR as institutional choice, not necessity. The perspectival gap reflects fundamental disagreement about who should bear filtering burden: operators prefer readers; readers prefer operators; creators prefer both; advocates prefer infrastructure solutions.",
+    "directionality_logic": "Directionality values (d) for each perspective derive from structural position and exit capacity. Vulnerable readers occupy d\u22480.95 (maximum target status): trapped exit, victim status, no arbitrage options produce the highest effective extraction. Archive operators occupy d\u22480.05 (maximum beneficiary status): arbitrage exit, beneficiary status, reduced operational burden produce negative/minimal extraction. Content creators occupy d\u22480.50 (mixed position): powerful status and arbitrage exit partially offset victim status from tagging burden; the mixed directionality reflects their dual role as beneficiary (free distribution) and victim (disciplinary tagging expectations). Archive communities occupy d\u22480.65 (moderate target status): constrained exit and mixed beneficiary/victim status. The analytical observer at d\u22480.72 (observer position) reflects the perspectival distance required to see the constraint holistically. Operators with arbitrage exit + beneficiary status derive low d via sigmoid f(d)\u2248-0.12; readers with trapped exit + victim status derive high d via sigmoid f(d)\u22481.42; the sigma scope modifier \u03c3(global=1.2) amplifies effective extraction slightly due to global coordination difficulty.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by identifying the legitimate coordination function (decentralized filtering reduces platform burden and enables creator autonomy) while showing that the extraction asymmetry violates the boundaries of pure coordination. DLDR is Tangled Rope, not pure Rope, because: (1) Rope requires beneficiary/victim declaration; DLDR has clear victims (vulnerable readers) and beneficiaries (operators); (2) Rope requires low suppression (\u22640.05) or genuine exit mobility; DLDR has high suppression (0.68) and constrained/trapped exits for most agents; (3) Rope requires low effective extraction (\u03c7 \u22640.35); DLDR achieves \u03c7\u22480.52-0.68 depending on perspective. The critical misclassification risk is treating DLDR as pure coordination (Rope) because its coordination function is real and valuable. The Tangled Rope classification preserves the coordination while flagging the extraction. The rising theater (0.35\u21920.64) indicates Goodhart drift: as filtering burden accumulates, DLDR's rhetoric about reader autonomy becomes increasingly performative, suggesting the constraint is degrading toward Piton status (inertial theater without function)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "content_moderation_scalability",
+      "reader_informed_consent",
+      "creator_liability_asymmetry"
+    ],
+    "dual_formulation_note": "DLDR decomposes into three structurally related constraints: (1) Content Moderation Scalability (\u03b5\u22480.25, Rope) \u2014 the coordination problem of filtering large-scale user-generated content; (2) Reader Informed Consent (\u03b5\u22480.55, Tangled Rope) \u2014 whether readers can make meaningful choices about exposure; (3) Creator Liability Asymmetry (\u03b5\u22480.48, Tangled Rope) \u2014 whether creators bear disproportionate responsibility. DLDR is the policy response that conflates these three claims. The constraint stories should be decomposed for precision."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
+}

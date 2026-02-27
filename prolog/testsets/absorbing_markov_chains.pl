@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: absorbing_markov_chain_trap
+% CONSTRAINT STORY: absorbing_markov_chains
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-01-05
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_absorbing_markov_chain_trap, []).
+:- module(constraint_absorbing_markov_chains, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,19 +53,31 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: absorbing_markov_chain_trap
+ *   constraint_id: absorbing_markov_chains
  *   human_readable: State Space Trap in Absorbing Markov Chain
- *   domain: technological
+ *   domain: technological/mathematical_foundations
  *
  * SUMMARY:
- *   An absorbing Markov chain, once entered into an absorbing state, can never leave. This represents a 'trap' where systems or entities entering such states are effectively 'absorbed', facing limited or no further transitions.
- *   The extractiveness comes from the difficulty or impossibility of escaping the absorbed state. Suppression arises from the limited alternatives available once trapped.
+ *   An absorbing Markov chain is a mathematical structure in which certain
+ *   states (absorbing states) have the property that, once entered, the chain
+ *   can never leave them. Formally, if state i is absorbing, then P_ii = 1.0
+ *   and P_ij = 0 for all j ≠ i. This constraint is a paradigmatic example of
+ *   a mountain—an irreducible structural limit that emerges from the
+ *   mathematical definition itself. The trap is not imposed by an external
+ *   agent or contingent social arrangement; it is a necessary feature of the
+ *   formal system. The constraint applies identically across all observer
+ *   positions, all time horizons, and all spatial scopes. No beneficiary or
+ *   victim relationship exists because the constraint is not extractive—it is
+ *   a boundary condition that all agents must respect equally. The absorbing
+ *   state trap reveals the difference between constraints that are engineered
+ *   (and hence negotiable) and constraints that are structural (and hence
+ *   inviolable).
  *
- * KEY AGENTS (by structural relationship):
- *   - Trapped Entity: Primary target (powerless/trapped) — bears extraction
- *   - System Designer: Primary beneficiary (powerful/arbitrage) — benefits from chain properties.
- *   - Regulator: Secondary actor (institutional/constrained) - can modify the chain.
- *   - Analyst: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - System Designer: Agent who chooses the absorbing state structure (powerful/mobile) — creates the trap intentionally, but cannot escape it
+ *   - Trapped Agent: Entity that enters the absorbing state (moderate/constrained) — experiences absolute irreversibility
+ *   - Downstream Stakeholder: Institution relying on the Markov chain system (institutional/arbitrage) — can avoid the trap prospectively but not retrospectively
+ *   - Analytical Observer: Mathematical/scientific perspective (analytical/analytical) — recognizes the constraint as a necessary feature of the formal system
  */
 
 /* ==========================================================================
@@ -73,138 +85,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(absorbing_markov_chain_trap, 0.55).
-domain_priors:suppression_score(absorbing_markov_chain_trap, 0.65).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(absorbing_markov_chain_trap, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(absorbing_markov_chains, 0.12).
+domain_priors:suppression_score(absorbing_markov_chains, 0.03).
+domain_priors:theater_ratio(absorbing_markov_chains, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(absorbing_markov_chain_trap, extractiveness, 0.55).
-narrative_ontology:constraint_metric(absorbing_markov_chain_trap, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(absorbing_markov_chain_trap, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(absorbing_markov_chains, extractiveness, 0.12).
+narrative_ontology:constraint_metric(absorbing_markov_chains, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(absorbing_markov_chains, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-% narrative_ontology:constraint_metric(absorbing_markov_chain_trap, accessibility_collapse, [0.85-1.0]).
-% narrative_ontology:constraint_metric(absorbing_markov_chain_trap, resistance, [0.0-0.15]).
+narrative_ontology:constraint_metric(absorbing_markov_chains, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(absorbing_markov_chains, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(absorbing_markov_chain_trap, tangled_rope).
-narrative_ontology:human_readable(absorbing_markov_chain_trap, "State Space Trap in Absorbing Markov Chain").
-narrative_ontology:topic_domain(absorbing_markov_chain_trap, "technological").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(absorbing_markov_chains, mountain).
+narrative_ontology:human_readable(absorbing_markov_chains, "State Space Trap in Absorbing Markov Chain").
+narrative_ontology:topic_domain(absorbing_markov_chains, "technological/mathematical_foundations").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(absorbing_markov_chain_trap).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(absorbing_markov_chain_trap). % Required for Tangled Rope
+domain_priors:emerges_naturally(absorbing_markov_chains).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-% domain_priors:emerges_naturally(absorbing_markov_chain_trap).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(absorbing_markov_chain_trap, system_designer).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(absorbing_markov_chain_trap, trapped_entity).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(absorbing_markov_chain_trap, tangled_rope,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(local))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(absorbing_markov_chain_trap, rope,
-    context(agent_power(powerful),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(absorbing_markov_chain_trap, snare,
+% PERSPECTIVE 1: MATHEMATICAL STRUCTURE (MOUNTAIN) — From the standpoint of formal mathematics, the absorbing state property is a logical necessity that follows from the definition of an absorbing Markov chain. Once a state is designated as absorbing (by construction: P_ii = 1.0, P_ij = 0 for j ≠ i), the chain cannot transition out. This is not contingent on implementation or observer position—it is a structural feature of the mathematical object itself. No agent can circumvent this; no exit option exists from the formal system.
+constraint_indexing:constraint_classification(absorbing_markov_chains, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
-% --- INTER-INSTITUTIONAL PERSPECTIVES (declare when applicable) ---
-% When a constraint operates between institutional actors with different
-% structural relationships, declare separate perspectives for each.
-% The engine differentiates via directionality: different exit_options
-% produce different d values even for the same power atom.
-%
-% Example — Regulatory capture:
-%
-% % Perspective 4A: Captured regulator (institutional, constrained exit)
-constraint_indexing:constraint_classification(absorbing_markov_chain_trap, scaffold,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: SYSTEM DESIGNER (MOUNTAIN) — A system architect choosing to model a process as an absorbing Markov chain deliberately creates irreversibility. The trap is not externally imposed—it is a design choice. Yet once the choice is made and the chain instantiated, the absorbing state becomes logically inescapable. Even the designer cannot violate the mathematical structure they created. The absorbing property holds independently of the designer's power or intent.
+constraint_indexing:constraint_classification(absorbing_markov_chains, mountain,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: TRAPPED AGENT / SUBJECTIVE VIEW (MOUNTAIN) — An entity that enters an absorbing state (bankruptcy, locked-in dataset, obsolete system state) experiences the trap as an absolute boundary. From the agent's internal perspective, there are no degrees of freedom, no negotiations, no hidden exit paths. The mathematical constraint becomes lived reality. Suppression is absolute because the boundary is not socially constructed or negotiable—it is enforced by the formal structure of the state space.
+constraint_indexing:constraint_classification(absorbing_markov_chains, mountain,
+    context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
+
+% PERSPECTIVE 4: DOWNSTREAM STAKEHOLDER / INSTITUTIONAL (MOUNTAIN) — An institution relying on a Markov chain system that absorbs (e.g., a data processing pipeline, a state machine for resource allocation) faces an inescapable constraint: once the system enters certain states, recovery is impossible. No institutional workaround can override the mathematical structure. Arbitrage options (switching systems, redefining the state space) represent a way to avoid the trap prospectively, but once trapped, no arbitrage is available. The constraint is absolute.
+constraint_indexing:constraint_classification(absorbing_markov_chains, mountain,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(absorbing_markov_chain_trap_tests).
+:- begin_tests(absorbing_markov_chains_tests).
 
-test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(absorbing_markov_chain_trap, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(absorbing_markov_chain_trap, TypeBeneficiary, context(agent_power(powerful), _, _, _)),
-    TypeTarget \= TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(absorbing_markov_chains, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(absorbing_markov_chains, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(absorbing_markov_chain_trap, ExtMetricName, E),
-    (E =< 0.25 -> true ; E >= 0.46). % Mountain or high-extraction Snare/Tangled.
+    narrative_ontology:constraint_metric(absorbing_markov_chains, ExtMetricName, E),
+    domain_priors:suppression_score(absorbing_markov_chains, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(absorbing_markov_chain_trap_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(absorbing_markov_chains),
+    narrative_ontology:constraint_metric(absorbing_markov_chains, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(absorbing_markov_chains, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(absorbing_markov_chains_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -212,116 +176,88 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The extractiveness is moderate because while escape from an absorbing state is *theoretically* impossible within the formal system, real-world approximations often involve workarounds or redefinitions that allow for "escape."
- *   Suppression is also moderate, because it prevents exploration of other possible states.
+ *   Extractiveness (0.12): Very low. The absorbing state property does not extract value from any agent—it is a symmetrical constraint that applies uniformly. No redistribution occurs; no asymmetry in who benefits or who pays. The minimal non-zero value reflects that the constraint has real consequences (agents become trapped), but these consequences are not due to extraction by a beneficiary. They are due to the mathematical structure itself. Suppression (0.03): Minimal. There is no suppression in the sense of coercive enforcement or hidden alternatives. The constraint is transparent and operates through logical necessity. Once the state space is defined and the transition matrix is set, the absorbing property is evident to all observers. Theater ratio (0.15): Low. No performative component exists. The mathematical constraint is exact and requires no theatrical performance to maintain. The minimal non-zero value reflects only the inherent abstraction between the formal system and its real-world instantiation.
  *
  * PERSPECTIVAL GAP:
- *   The target (trapped entity) perceives it as a snare, due to the lack of exit options.
- *   The system designer, focusing on chain's properties like stability or predictability, sees it as a rope.
+ *   All four perspectives classify the constraint identically as Mountain. There is no perspectival gap because the absorbing state property is not relative to observer position—it is a structural feature of the mathematical object. The system designer, the trapped agent, the downstream stakeholder, and the analytical observer all perceive the same constraint: once an absorbing state is entered, exit is impossible. This uniformity across perspectives confirms the mountain classification. The constraint exhibits the hallmark property of mountains: invariance under changes in observer position, power level, time horizon, or spatial scope.
  *
  * DIRECTIONALITY LOGIC:
- *   The system designer benefits from the predictability/stability the absorbing states provide, enhancing system utility.
- *   The trapped entity incurs costs because they are unable to transition to other possibly more preferable states.
- *
- * INTER-INSTITUTIONAL DYNAMICS (if applicable):
- *   The regulator perceives the state as a Tangled Rope because while it facilitates the functioning of the system, it also restricts entities, necessitating oversight.
+ *   The standard directionality derivation does not apply to this constraint because there is no beneficiary or victim. Mountains are characterized by the absence of asymmetric extraction. All agents—regardless of power level or exit options—experience the same logical boundary. The absorbing state property does not distribute benefits to one group while imposing costs on another. Instead, it imposes a symmetrical constraint on the entire state space. This is why no directionality override is needed and no beneficiary/victim declaration is meaningful.
  *
  * MANDATROPHY ANALYSIS:
- *   The classification prevents mislabeling as a rope, as it acknowledges the inability of the entity to switch back to alternative states.
+ *   This constraint does not face a mandatrophy resolution problem because it exhibits no confusion between coordination and extraction. It is neither: it is a structural boundary. The mountain classification is not threatened by alternative interpretations. The absorbing state property is not contingent on how we measure it, what domain we apply it to, or what perspective we adopt. It follows logically from the definition of an absorbing Markov chain. The only omega variable that matters (state space redefinition) is conceptual, not empirical—it asks whether the mathematical formalism itself is an appropriate choice, not whether the constraint is correctly classified within the formalism.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_absorbing_markov_chain_trap,
-    'How easily can the definition of "state" be changed to allow for pseudo-escape?',
-    'Historical analysis of similar systems; technical analysis of the specific system.',
-    'If easy, extraction is low; if hard, extraction is high.',
+    state_space_redefinition,
+    'Can the state space be redefined or extended to convert the absorbing state into a transient state in a larger chain?',
+    'Formal analysis of state space transformations; examples of ''escape'' via augmented Markov chain structures (e.g., hierarchical or layered chains)',
+    'If state space is immutable: Mountain classification confirmed (absolute trap). If state space is malleable: Mountain is contingent on the choice of state space representation—the true trap is a meta-level constraint (choice of formalism).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(state_space_redefinition, conceptual, 'Whether state space can be redefined to escape absorbing states').
+
+omega_variable(
+    probabilistic_escape_boundary,
+    'Is the mathematical zero-probability of escape (P_escape = 0.0) an exact boundary or an asymptotic limit?',
+    'Rigorous analysis of probability measure theory; investigation of whether numerical approximations or continuous relaxations of the discrete chain alter the boundary',
+    'If exact zero: Mountain. If asymptotic limit: Mountain is an artifact of discretization; a continuous relaxation might permit rare escapes, converting the constraint to Tangled Rope.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(probabilistic_escape_boundary, conceptual, 'Whether escape probability is exactly zero or asymptotic').
+
+omega_variable(
+    absorbing_state_purpose,
+    'When an absorbing Markov chain is used to model real processes (retirement, system shutdown, bankruptcy), is the absorbing property a feature or a flaw?',
+    'Case analysis across domains (finance, operations, reliability engineering); assessment of whether absorbing states match or violate domain-level recovery requirements',
+    'If feature: Mountain captures domain reality (retirement is irreversible). If flaw: Mountain reveals a mismatch between mathematical model and domain, suggesting alternative formalisms (continuous-time chains, hierarchical structures).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(absorbing_state_purpose, preference, 'Whether absorbing states represent domain features or modeling flaws').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(absorbing_markov_chain_trap, 0, 10).
+narrative_ontology:interval(absorbing_markov_chains, 0, 2).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(absorbing_markov_chain_trap_tr_t0, absorbing_markov_chain_trap, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(absorbing_markov_chain_trap_tr_t5, absorbing_markov_chain_trap, theater_ratio, 5, 0.12).
-narrative_ontology:measurement(absorbing_markov_chain_trap_tr_t10, absorbing_markov_chain_trap, theater_ratio, 10, 0.15).
+% Theater ratio over time
+narrative_ontology:measurement(amct_tr_t0, absorbing_markov_chains, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(amct_tr_t1, absorbing_markov_chains, theater_ratio, 1, 0.12).
+narrative_ontology:measurement(amct_tr_t2, absorbing_markov_chains, theater_ratio, 2, 0.15).
 
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(absorbing_markov_chain_trap_ex_t0, absorbing_markov_chain_trap, base_extractiveness, 0, 0.55).
-narrative_ontology:measurement(absorbing_markov_chain_trap_ex_t5, absorbing_markov_chain_trap, base_extractiveness, 5, 0.57).
-narrative_ontology:measurement(absorbing_markov_chain_trap_ex_t10, absorbing_markov_chain_trap, base_extractiveness, 10, 0.60).
+% Extraction over time
+narrative_ontology:measurement(amct_be_t0, absorbing_markov_chains, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(amct_be_t1, absorbing_markov_chains, base_extractiveness, 1, 0.11).
+narrative_ontology:measurement(amct_be_t2, absorbing_markov_chains, base_extractiveness, 2, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-narrative_ontology:coordination_type(absorbing_markov_chain_trap, enforcement_mechanism).
+narrative_ontology:coordination_type(absorbing_markov_chains, information_standard).
+narrative_ontology:affects_constraint(absorbing_markov_chains, path_dependence_in_system_dynamics).
+narrative_ontology:affects_constraint(absorbing_markov_chains, technological_lock_in).
 
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(absorbing_markov_chain_trap, [0.0-1.0]).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(absorbing_markov_chain_trap, [other_constraint_id]).
-
-% --- Network Decomposition (Constraint Families) ---
-% When a natural-language label covers multiple constraints with different ε
-% values, each gets its own file. Link family members with affects_constraint:
-%
 % DUAL FORMULATION NOTE:
-% This constraint is one of [N] stories decomposed from [colloquial label].
-% Decomposed because ε differs across observables (ε-invariance principle).
-% Related stories:
-%   - [sibling_constraint_1] (ε=[value], [Type])
-%   - [sibling_constraint_2] (ε=[value], [Type])
-%
-% narrative_ontology:affects_constraint(absorbing_markov_chain_trap, [sibling_constraint_id]).
+% Absorbing Markov chains form a mathematical family with two related constraints: (1) the absorbing state property (this story, ε=0.12, Mountain), which is a formal necessity; (2) the practical lock-in when absorbing states model irreversible real-world transitions (technological_lock_in, higher ε, Tangled Rope), which involves social and institutional barriers to reversibility. The first constraint is about the mathematics; the second is about the institutional consequences of using that mathematics. Both stories link via network.affects_constraints.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(absorbing_markov_chain_trap, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

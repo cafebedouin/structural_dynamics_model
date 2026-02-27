@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "floating_wall_2026",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fwall"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The East China Sea Maritime Militia Barrier",
+    "topic_domain": "geopolitical/maritime",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_maritime_state_apparatus",
+      "chinese_fishing_interests"
+    ],
+    "victims": [
+      "japanese_fishing_communities",
+      "freedom_of_navigation_regime",
+      "east_china_sea_maritime_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Japanese Coastal Fishing Communities",
+      "comment": "PERSPECTIVE 1: JAPANESE FISHING COMMUNITIES (SNARE) \u2014 Excluded from traditional fishing grounds by overwhelming numerical blockade. Cannot compete with 2,000-vessel formations. No exit option except abandoning ancestral fisheries or accepting years of exclusion. Experience maximal extraction with no offsetting coordination benefit. Suppression is total within the regional scope."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Freedom of Navigation Regime",
+      "comment": "PERSPECTIVE 2: FREEDOM OF NAVIGATION REGIME (SNARE) \u2014 Abstract legal order cannot organize or exit. Each blockade weakens precedent for unobstructed passage. Successive floating walls accumulate extraction from the commons. No beneficiary status, no exit pathway, purely targeted for suppression. Theater-high: each wall performs 'civilian fishing' while executing coordinated state strategy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Japan's Maritime Self-Defense Force",
+      "comment": "PERSPECTIVE 3: JAPAN'S MSDF (TANGLED ROPE) \u2014 Organized state actor with significant capacity. Experiences both extraction and coordination: the floating wall forces Japan into closer maritime monitoring and alliance coordination with U.S. Navy, but also restricts MSDF's own operational freedom in the zone. Can escalate or de-escalate, but constrained by political cost of armed intervention against 'fishing vessels.' Mixed experience: some imposed costs, some coordination benefits, but asymmetric \u2014 net extraction relative to pre-barrier baseline."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Chinese Maritime State Apparatus",
+      "comment": "PERSPECTIVE 4: CHINESE MARITIME STATE APPARATUS (ROPE) \u2014 Primary beneficiary. Mobilizes fishing fleet as tool for territorial assertion without direct military commitment. Solves the coordination problem of projecting state power into contested waters while maintaining plausible deniability ('civilian fishing activity'). Experiences constraint as enabling mechanism: the floating wall coordinates dispersed fishing vessels into unified barrier. Net beneficiary with minimal extraction cost \u2014 the constraint serves this actor's strategic interests directly."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "UNCLOS-Based Maritime Governance Coalition",
+      "comment": "PERSPECTIVE 5: UNCLOS COALITION (SCAFFOLD) \u2014 International maritime law bodies, regional maritime dialogue mechanisms, and allied states view the floating wall as a temporary deviation from UNCLOS norms. The constraint has an implicit sunset: as maritime dispute resolution mechanisms (trilateral China-Japan-South Korea talks, expanded UNCLOS dispute mechanisms, increased naval presence norms) mature, the floating wall's exclusionary effect declines. Suppression is high in the immediate term, but the perspective classifies as scaffold because there is genuine forward progress toward alternative governance pathways and exit mechanisms for constrained actors."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Post-WWII Territorial Settlement System",
+      "comment": "PERSPECTIVE 6: POST-WWII TERRITORIAL SETTLEMENT (PITON) \u2014 The floating wall exploits the degraded functional capacity of the post-WWII East China Sea settlement: the 1945 Cairo Declaration and 1952 San Francisco Treaty left the median line status ambiguous (Japan claims ECS median; China claims continental shelf extension). The settlement persists as a framework but its verification mechanism has atrophied \u2014 no enforcement body, no updated survey data, no binding arbitration. The floating wall is enabled by the inertial maintenance of an ambiguous legal structure that no longer functions. Theater-high: both sides cite different versions of the same treaties."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the floating wall serves a dual function: (1) coordination mechanism for China's maritime state in asserting jurisdictional claims; (2) extraction mechanism targeting Japanese fishing and freedom of navigation norm. Both functions are real. The constraint is neither a pure coordination problem (rope) nor a pure extraction mechanism (snare) \u2014 it is hybrid. Theater is high (civilian framing of state strategy), suppression is high (2,000-vessel blockade with military backing), extractiveness is moderate-high (0.58) because the mechanism works only under specific geopolitical conditions (power asymmetry, legal ambiguity, weak enforcement)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "plausible_deniability_threshold",
+      "question": "At what scale of coordinated fishing vessel deployment does 'civilian fishing activity' cross into recognized state military operation, triggering different legal regimes?",
+      "resolution_mechanism": "International maritime law precedent review; analysis of past flotilla actions (Falklands, Hormuz, South China Sea); threshold identification from UNCLOS state practice",
+      "impact": "If threshold < 1,000 vessels: floating wall is classified as state military operation (Snare for all perspectives). If threshold > 3,000: civilian framing prevails and classification shifts toward Rope for beneficiary perspectives. Current ambiguity enables the tangled_rope classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Threshold for civilian vs military classification of coordinated vessel flotillas"
+    },
+    {
+      "id": "median_line_legal_status",
+      "question": "Does the East China Sea median line constitute binding maritime boundary under UNCLOS Article 74, or is the continental shelf extension claim (China's position) legally valid?",
+      "resolution_mechanism": "UNCLOS dispute panel ruling; geological survey analysis of continental shelf configuration; state acceptance of binding arbitration mechanism",
+      "impact": "If median line valid: floating wall is territorial exclusion (Snare). If continental shelf valid: floating wall is rights enforcement (Rope for China). Current legal ambiguity is the structural enabler of the constraint \u2014 resolution would degrade it or eliminate it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legal validity of East China Sea median line vs continental shelf claim"
+    },
+    {
+      "id": "escalation_pathway_risk",
+      "question": "What is the probability that a floating wall deployment triggers accidental naval collision or deliberate military response that escalates beyond maritime militia operations?",
+      "resolution_mechanism": "Historical incident frequency analysis; MSDF incident reports; modeling of collision risk from increased vessel density; analysis of rules of engagement ambiguity",
+      "impact": "If escalation probability is low (< 5% per deployment): floating wall persists as a stable constraint. If high (> 20%): the mechanism becomes self-defeating (escalation cost exceeds benefit) and the constraint collapses. Current assessment: medium (10-15%), making floating walls a recurring tactic.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Probability of military escalation from maritime militia flotilla operations"
+    },
+    {
+      "id": "fishing_economics_dependency",
+      "question": "How economically dependent are the Chinese fishing vessels on the government subsidies and market protections that make the floating wall mobilization feasible?",
+      "resolution_mechanism": "Analysis of Chinese fishing fleet economics; subsidy structure documentation; profitability comparison with/without state support; vulnerability to subsidy reduction",
+      "impact": "If dependency is high (>70%): floating wall is maintained by continuous state extraction from non-fishers. If low (<30%): vessels participate voluntarily and constraint is genuinely coordinated. Current evidence: high dependency (state fuel subsidies, forced crew participation, port-of-origin mandates). High dependency shifts the classification toward pure extraction (Snare from fishing communities perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic dependence of Chinese fishing fleet on state subsidies enabling floating wall mobilization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "China has deployed massive floating barriers of fishing vessels (up to 2,000 boats forming 400+ km lines) near the Sino-Japanese median line in the East China Sea on at least two occasions (2016 and 2020), with preparations for repeat operations. The mechanism is: mobilize civilian fishing fleet through state direction (fuel subsidies, port controls, crew conscription via village leadership), concentrate them in contested waters to exclude Japanese fishing vessels and establish de facto exclusion zone, maintain plausible deniability by framing as 'civilian fishing activity,' sustain the blockade for weeks or months until political objectives are achieved or domestic pressure mounts. This constraint exhibits all the characteristics of a tangled rope: it serves a genuine coordination function (organizing China's maritime state to project power into contested waters), it extracts costs from multiple parties (Japanese fishers, freedom of navigation norm, alternative dispute resolution mechanisms), it requires active enforcement (state fuel subsidies, mandatory participation, coordinated command), and it operates through a hybrid of coordination and coercion. The theater ratio is high (0.68) because the entire operation depends on civilian framing that obscures state military strategy. The extractiveness is moderate-high (0.58) because the mechanism is effective but fragile \u2014 it works only against weaker opponents without military capacity to break the blockade, and only in a context of legal ambiguity about maritime boundaries.",
+    "key_agents": [
+      "Chinese Maritime State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 uses floating wall as tool for territorial assertion without direct military escalation, solves coordination problem of maritime power projection",
+      "Chinese Fishing Vessel Operators & Crews: Complex status (powerless-to-moderate/trapped) \u2014 nominally mobilized as 'civilian' actors but subject to state direction, fuel subsidies, and mandatory participation; benefit from subsidies but bear deployment costs and collision risk",
+      "Japanese Coastal Fishing Communities: Primary victim (powerless/trapped) \u2014 excluded from traditional fishing grounds, cannot compete with 2,000-vessel formations, no exit except abandonment or years of exclusion",
+      "Japan's Maritime Self-Defense Force: Organized secondary actor (organized/constrained) \u2014 can monitor and escalate but constrained by political cost of military response against 'civilians'",
+      "Freedom of Navigation Regime / UNCLOS Framework: Abstract victim (powerless/trapped) \u2014 each blockade weakens precedent, cannot organize or enforce",
+      "UNCLOS-Based Maritime Governance Coalition: Organized reform actor (organized/constrained) \u2014 sees floating wall as deviation from norms, building alternative dispute resolution mechanisms with sunset logic",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 identifies the constraint as a tangled rope serving both genuine maritime coordination and asymmetric extraction"
+    ],
+    "logic_rationale": "Base extractiveness (0.58): High-moderate. The floating wall extracts significant costs from Japanese fishing communities (geographic exclusion from ancestral grounds) and the international maritime freedom norm (each deployment weakens the precedent for unobstructed passage). However, extractiveness is not extreme (0.70+) because the mechanism is temporary (weeks to months per deployment), subject to escalation risk if sustained too long, and dependent on legal ambiguity that may eventually be resolved. The temporal measurement shows extractiveness rising from 0.35 (early 2010s, isolated incidents) to 0.58 (2020s, established tactic) as the Chinese state refined the mechanism and normalized its use. Suppression (0.72): High. A 2,000-vessel blockade creates overwhelming numerical suppression of alternative exit options for Japanese fishers. The blockade is backed by implicit state military presence (naval support, weather coordination, safe passage guarantees). State direction of the fishing fleet (via subsidies, port controls, crew conscription) suppresses fishers' individual exit options from the mobilization. Theater ratio (0.68): High. The entire operation depends on maintaining the fiction that 2,000 fishing vessels independently chose to concentrate in a 400km line at a specific time for purposes of 'fishing' rather than state-directed blockade. The theater serves the constraint's function by enabling plausible deniability \u2014 Japan cannot respond with military force against 'civilians' without triggering international condemnation. Theater has increased from 0.48 to 0.68 over the interval as the operation became normalized and the civilian cover more practiced.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. Chinese maritime state apparatus sees Rope (coordination mechanism solving the problem of asserting maritime jurisdiction without direct military escalation). UNCLOS coalition sees Scaffold (temporary deviation from norms, with resolution pathways emerging as maritime governance mechanisms mature). Japanese fishing communities see Snare (pure exclusion with no offsetting benefits and no exit). The analytical observer sees Tangled Rope (genuine coordination function AND asymmetric extraction co-present). The post-WWII settlement system sees Piton (degraded legal framework persisting through inertia, its ambiguity exploited by the floating wall). This divergence is not due to measurement ambiguity \u2014 it reflects the constraint's true hybrid structure. The same structural phenomenon (coordinated fishing vessel deployment) solves a real coordination problem (maritime power projection) while simultaneously extracting from multiple parties (fishers, norm regime, alternative governance mechanisms). The constraint works precisely BECAUSE it serves both functions simultaneously.",
+    "directionality_logic": "The floating wall's directionality varies sharply across agent positions. Chinese maritime state apparatus: beneficiary + arbitrage exit \u2192 d \u2248 0.10 \u2192 low/negative f(d) \u2192 they experience it as enabling (negative \u03c7, net benefit). Japanese fishing communities: victim + trapped exit \u2192 d \u2248 0.95 \u2192 high f(d) \u2248 1.42 \u2192 they experience maximum extraction. Japan's MSDF: victim (constrained response options) + organized power + constrained exit \u2192 d \u2248 0.65 \u2192 moderate f(d) \u2248 1.00 \u2192 moderate extraction. UNCLOS coalition: victim (norm weakening) + organized power + constrained exit (can build alternatives but slowly) \u2192 d \u2248 0.60 \u2192 moderate f(d) \u2248 0.85 \u2192 moderate extraction with visible exit pathway (Scaffold classification reflects this \u2014 organized agents see an exit path even if it takes decades). The constraint's stability depends on this directionality gap: the beneficiary experiences it as coordination while victims experience extraction. If the beneficiary's d shifted upward (if China bore costs of the operation) or the victims' d shifted downward (if they gained exit options), the classification would change.",
+    "mandatrophy_analysis": "The floating wall resolves the mandatrophy \u2014 the fundamental question of whether it is a legitimate coordination mechanism or an illegitimate extraction mechanism \u2014 by being BOTH. At the analytical level, it is a tangled rope: genuine coordination function (maritime power projection solving China's problem of asserting jurisdiction without military escalation) + asymmetric extraction (imposing costs on fishers, weakening norm regime). Neither pure Rope nor pure Snare is adequate. The mandatrophy resolution comes from recognizing that 'is this coordination or extraction?' is answerable only relativistically \u2014 it depends on whose experience you are measuring. For Chinese maritime state: Rope (genuine coordination). For Japanese fishers: Snare (pure extraction). For UNCLOS coalition: Scaffold (temporary, with exit pathways). The analytical observer who insists on a single answer naturalizes one agent's perspective as universal truth \u2014 false summit risk. The constraint story honors the multiperspectival reality: the same mechanism serves coordination function for beneficiaries and extraction for victims, and this dual nature is what makes it a Tangled Rope rather than a pure form."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "south_china_sea_fishing_blockade",
+      "east_china_sea_median_line_ambiguity",
+      "unclos_dispute_resolution_capacity"
+    ],
+    "dual_formulation_note": "The floating wall constraint is enabled by (and feeds back into) the East China Sea median line legal ambiguity \u2014 the constraint would be impossible if UNCLOS median line status were clearly established. Network link documents this causal dependency. Downstream constraints (South China Sea fishing blockades, UNCLOS dispute capacity) are affected by the floating wall's success or failure in establishing precedent for maritime exclusion through civilian vessel deployment."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.95
+    }
+  ]
+}

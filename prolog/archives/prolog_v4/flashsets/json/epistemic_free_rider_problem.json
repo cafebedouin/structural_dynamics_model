@@ -1,0 +1,119 @@
+{
+  "header": {
+    "constraint_id": "epistemic_free_rider_problem",
+    "version": "0.1",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.4,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Truth-Mining Exhaustion",
+    "topic_domain": "informational/social/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "synthetic_content_consumers"
+    ],
+    "victims": [
+      "truth_miners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Exhausted Truth-Miner",
+      "comment": "The individual truth-miner, facing increasing costs to produce verified information, has no ability to exit the system without sacrificing their livelihood and reputation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Synthetic Content Consumer",
+      "comment": "The consumer of synthetic content, able to arbitrage information sources, sees the system as beneficial. They obtain information at low cost, regardless of its veracity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer recognizes both the coordination aspect (information dissemination) and the extraction aspect (exhaustion of truth-miners)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "synthetic_content_veracity",
+      "question": "What is the correlation between the cost of producing information and its veracity?",
+      "resolution_mechanism": "Empirical analysis of various information sources, correlating production cost with error rates and bias.",
+      "impact": "If low-cost information is consistently inaccurate, the problem is a pure Snare. If some low-cost information is accurate, the problem is Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Correlation between production cost and veracity"
+    },
+    {
+      "id": "truth_miner_agency",
+      "question": "Can truth-miners effectively organize to demand compensation for their services?",
+      "resolution_mechanism": "Analysis of collective action attempts by journalists, researchers, and fact-checkers.",
+      "impact": "If truth-miners can organize, their perspective shifts from Snare to Tangled Rope, as they gain some agency. If they cannot organize, the Snare classification is reinforced.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Capacity for collective action among truth-miners"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "A scenario where the cost of producing verified, grounded information is borne by a shrinking pool of 'truth-miners,' while the majority of the population consumes low-cost, unverified synthetic derivatives. This creates an epistemic free-rider problem, where the value of verified information is undermined by the proliferation of cheaper, less reliable alternatives.",
+    "key_agents": [
+      "truth_miners: Primary target (powerless/trapped) \u2014 bears cost of producing verified information",
+      "synthetic_content_consumers: Primary beneficiary (institutional/arbitrage) \u2014 benefits from low-cost information, regardless of veracity",
+      "analytical_observer: analytical observer"
+    ],
+    "logic_rationale": "Extractiveness (0.6): High. Truth-miners are increasingly burdened by the cost of verification. Suppression (0.4): Moderate. Alternative sources of information exist, but they are often less reliable. Theater ratio (0.3): Low. The system still has some functional verification, but it is declining.",
+    "perspectival_gap": "Truth-miners experience the system as a Snare, as they are trapped and bear the costs. Consumers experience the system as a Rope, as they benefit from low-cost information. The analytical observer recognizes the Tangled Rope dynamics.",
+    "directionality_logic": "Directionality is derived from the structural position. Truth-miners (victims) have low power and no exit, leading to high d. Consumers (beneficiaries) have high power and arbitrage options, leading to low d."
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "unconditional_university_offers_uk",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Use of Unconditional Offers in UK University Admissions",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_universities"
+    ],
+    "victims": [
+      "prospective_students",
+      "overall_quality_of_education"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Prospective Student",
+      "comment": "Perspective of a student feeling pressured to accept an unconditional offer, potentially limiting their options and leading to a suboptimal educational path. Trapped in the sense that they may feel they cannot refuse a guaranteed place."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "University Admissions Officer",
+      "comment": "Perspective of a university admissions officer, balancing the need to meet enrollment targets with concerns about the overall academic profile of the student body. Constrained by market pressures but also benefits from increased enrollment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Universities",
+      "comment": "Perspective of UK universities benefiting from increased enrollment and financial stability due to unconditional offers, acting as a coordination mechanism to secure students in a competitive market. Arbitrage in the sense that they are exploiting the competitive environment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Higher Education Analyst",
+      "comment": "Analytical perspective observing the long-term effects on educational standards and student outcomes. Sees a tangled rope as it provides universities with revenue but may lower overall quality of graduates."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "long_term_impact_on_educational_standards",
+      "question": "What is the long-term impact of unconditional offers on the quality of education and student outcomes?",
+      "resolution_mechanism": "Longitudinal studies tracking student performance and career outcomes for students admitted via unconditional offers versus traditional offers.",
+      "impact": "If negative impact is significant: classification shifts towards a snare. If minimal impact: classification remains tangled rope or potentially shifts towards a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term effect on educational standards."
+    },
+    {
+      "id": "student_choice_vs_pressure",
+      "question": "To what extent are students genuinely exercising free choice when accepting unconditional offers, versus feeling pressured to accept the first offer they receive?",
+      "resolution_mechanism": "Surveys and interviews with students to assess their decision-making process when faced with unconditional offers.",
+      "impact": "If students feel significantly pressured: classification shifts towards a snare from the student perspective. If students feel empowered: classification remains tangled rope or potentially shifts towards a rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Genuine student choice vs. pressure to accept."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Following the removal of student number caps in 2015, UK universities increasingly used \"unconditional offers\" to secure student admissions in a more competitive market. This practice involves offering students a place regardless of their final exam results, creating a strong incentive for them to accept the offer early. This constraint story explores the structural dynamics and indexical classifications associated with this practice.",
+    "key_agents": [
+      "UK Universities: Primary beneficiary (institutional/arbitrage) - benefit from increased enrollment and financial stability.",
+      "Prospective Students: Primary victim (powerless/trapped) - potentially pressured to accept offers early, limiting their options.",
+      "University Admissions Officers: Moderate influence, constrained by market pressure but seeking higher academic standing",
+      "Overall Quality of Education: Secondary victim (powerless/trapped) - potential decline in academic standards if universities prioritize enrollment over student quality."
+    ],
+    "logic_rationale": "Extractiveness: 0.55 - The system extracts from prospective students by limiting their choices and potentially leading them to accept suboptimal educational paths. Universities extract by prioritizing quantity over quality, which may lead to an overall decline in education standards. Suppression: 0.45 - The system suppresses student's choice, as well as suppressing focus on results in A levels. Students can see an unconditional offer as the 'easy route' therefore putting in less effort with A Level exams.",
+    "perspectival_gap": "Students feel trapped by the offer, while the universities see it as a way to secure their intakes. Analysts see the long-term implications. Some universities are now backtracking, but this is difficult to do due to financial pressures.",
+    "directionality_logic": "Directionality is derived from the structural positions of the agents. Universities benefit from increased enrollment (low d), while students potentially bear the cost of limited choice (high d)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "working_dog_training",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wdt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Training of Working Dogs for Specific Tasks",
+    "topic_domain": "social/labor/animal_welfare",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "handler_institutions",
+      "human_beneficiaries"
+    ],
+    "victims": [
+      "working_dogs"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Working Dog",
+      "comment": "The dog experiences maximum extraction: total behavioral control, restricted autonomy, coercive conditioning through reward/punishment, high suppression (cannot refuse, cannot negotiate, cannot exit). The constraint extracts physical labor and psychological compliance without the dog's capacity to consent. No alternatives visible within the dog's agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Handler Institutions",
+      "comment": "Law enforcement, military, search-and-rescue organizations experience the constraint as pure coordination: establishing shared training protocols enables effective deployment of canine labor. Beneficiary with high exit optionality \u2014 can adopt alternative detection methods, adjust training regimens, or retire dogs. Effective extraction runs toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Individual Handler",
+      "comment": "Handler experiences mixed coordination and extraction. Training protocols solve the legitimate coordination problem of establishing reliable canine behavior for safety-critical tasks. But handlers also experience institutional enforcement: mandatory training curricula, performance metrics, career consequences for inadequate control. Constrained exit \u2014 cannot refuse to train assigned dog or adopt non-sanctioned methods without career risk."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Human Subjects Identified by Dogs",
+      "comment": "Individuals identified by drug or explosive detection dogs experience extraction without consent. Once identified, they bear legal consequences. Suppression is near-total: cannot dispute dog's identification, cannot opt out of detection regime, cannot know training protocols that produced the alert. High experienced extraction \u2014 structural victim with no escape option during the detection event."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Canine Training Standards Authority",
+      "comment": "Formal training standards, professional certifications, and validation protocols for working dogs serve a real coordination function (ensuring reliable behavior) but have become substantially performative. Many jurisdictions rely on certified handler-dog teams despite significant false positive/negative rates. Theater ratio (0.38) reflects that validation focuses on handler credentials and protocol adherence rather than empirical detection accuracy. Institutional inertia: alternatives (electronic detection, human scent specialists) exist but certification bodies maintain traditional dog-training standards largely through regulatory grandfathering."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a civilizational view, working dog training exhibits genuine coordination function (establishing reliable behavioral control for safety-critical tasks) AND asymmetric extraction (from the dog's perspective, maximum coercion; from institutional perspective, low cost). The constraint is not a pure snare because handlers and institutions do derive coordination benefits \u2014 they can reliably predict dog behavior. But the beneficiaries (institutions) impose suppression on both victims (dogs and detected individuals) without consent mechanisms. Classification: Tangled Rope with strong snare characteristics when viewed from the dog's perspective."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "detection_accuracy_threshold",
+      "question": "What level of false positive/negative rates in canine detection justifies continued use of the training regime versus alternatives?",
+      "resolution_mechanism": "Empirical validation studies comparing certified dog-team performance to electronic detection, handler accuracy, and population prevalence; cost-benefit analysis of error rates against human liberty interests",
+      "impact": "If accuracy < 70%: training regime becomes unjustifiable extraction. If accuracy > 90%: coordination function is genuine and snare classification may not apply to identified individuals. Current literature suggests 60-85% range depending on context.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for detection accuracy justifying the training regime"
+    },
+    {
+      "id": "dog_welfare_counterfactual",
+      "question": "Would the dogs in the training regime experience better or worse welfare if the constraint were removed entirely?",
+      "resolution_mechanism": "Longitudinal welfare studies of retired working dogs vs purpose-bred companion dogs vs feral dogs; ethological assessment of behavioral suppression, stress indicators, lifespan, injury rates",
+      "impact": "If training provides higher welfare than alternatives available to these genetic lines: extraction classification weakens (constraint becomes protective). If training causes measurable welfare degradation: snare classification is strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative welfare outcomes if the constraint were removed"
+    },
+    {
+      "id": "consent_proxy_adequacy",
+      "question": "Can breeding selection, early socialization, and positive reward protocols constitute meaningful proxy consent for the dog to the behavioral constraint?",
+      "resolution_mechanism": "Philosophical analysis of consent frameworks for non-human agents; empirical assessment of whether selectively bred dogs exhibit preference alignment with training objectives or evidence of genuine autonomy within the constraint",
+      "impact": "If proxy consent is adequate: classification shifts from snare toward rope/tangled rope (coordination with consent mechanisms). If proxy consent is insufficient: snare classification stands unambiguously.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether breeding and socialization constitute adequate proxy consent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Working dog training for specialized tasks (bomb detection, narcotics detection, search and rescue, police apprehension) creates a complex constraint structure with multiple structural relationships. The constraint imposes total behavioral control on the dog (breeding, socialization, operant conditioning) to generate reliable performance in high-stakes human contexts. From the dog's perspective, this is maximum suppression and extraction: the dog cannot refuse training, cannot negotiate task assignments, and cannot exit the constraint absent retirement. From the handler institution's perspective, the constraint is primarily a coordination mechanism \u2014 establishing reliable canine behavior for safety-critical tasks reduces coordination costs and enables predictable deployment. From the perspective of individuals identified by drug or explosive detection dogs, the constraint extracts identification without consent and creates asymmetric legal consequences. The constraint has increased in extractiveness over time as institutions have expanded canine task deployment and intensified training protocols, while theater ratio has remained relatively stable because validation focuses on handler credentials rather than empirical detection accuracy.",
+    "key_agents": [
+      "Working Dogs: Primary victims (powerless/trapped) \u2014 undergo total behavioral control via selective breeding, early socialization, operant conditioning; cannot refuse training or exit constraint",
+      "Handler Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 law enforcement, military, search-and-rescue organizations benefit from reliable canine labor; high exit optionality to alternative detection methods",
+      "Individual Handlers: Secondary actors (moderate/constrained) \u2014 implement training regimes, experience institutional enforcement, have constrained exit (cannot refuse assignments without career risk)",
+      "Identified Individuals: Secondary victims (moderate/trapped) \u2014 persons detected by drug/explosive dogs experience asymmetric extraction without consent or capacity to dispute alerts",
+      "Canine Training Standards Authority: Institutional maintenance (institutional/arbitrage) \u2014 professional certifications, validation protocols sustain training regime through regulatory grandfathering",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees genuine coordination function (reliable behavior for safety) combined with asymmetric extraction from dog's perspective"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. From the dog's perspective, the constraint represents near-total behavioral extraction \u2014 the dog's actions are entirely controlled via conditioning, breeding, and institutional assignment. However, from the institutions' perspective, the extraction is moderate because alternative detection methods exist and handler institutions can deploy them without catastrophic loss. The score reflects the weighted perspective: primary victim (dog) experiences high extraction, but beneficiary has significant exit optionality, yielding a mixed value. Theater ratio (0.38): Moderate-low. Working dog training includes genuine coordination elements (reliable behavioral protocols) but also performative elements (handler certifications, validation rituals that don't directly measure detection accuracy). The theater ratio reflects that formal validation focuses on training protocol adherence rather than empirical detection performance. Suppression (0.72): High. Dogs have no negotiation capacity, cannot refuse training, cannot modify behavioral objectives, and are legally property of their institutions. Humans identified by dogs cannot dispute alerts or opt out of detection regimes. The only agents with low suppression are handler institutions, which have arbitrage options.",
+    "perspectival_gap": "This constraint demonstrates a stark perspectival gap between the beneficiary (handler institutions) and victims (dogs and identified individuals). Handler institutions perceive the constraint as pure coordination (Rope) \u2014 solving the legitimate problem of generating reliable canine behavior for safety-critical tasks. The dog perceives pure extraction (Snare) \u2014 total behavioral control with no exit option. Individual handlers perceive mixed coordination and enforcement (Tangled Rope) \u2014 they solve coordination problems but face institutional coercion. Identified individuals perceive pure extraction (Snare) \u2014 identification without consent, with asymmetric legal consequences. The analytical observer sees genuine coordination function combined with asymmetric extraction structure (Tangled Rope), recognizing that both elements are real: the constraint does solve coordination problems, AND it imposes extraction from victims who did not consent.",
+    "directionality_logic": "Directionality values are derived from structural position. Working dogs occupy maximum victim status (trapped exit, total behavioral suppression) yielding d \u2248 0.95, mapping to high experienced extractiveness f(d) \u2248 1.42. Handler institutions occupy beneficiary status (arbitrage exit, institutional power) yielding d \u2248 0.05, mapping to negative or near-zero f(d) \u2248 -0.12 \u2014 extraction flows toward them, not away. Individual handlers occupy constrained victim status (cannot refuse institutional training mandates) yielding d \u2248 0.70, mapping to moderate f(d) \u2248 1.10. Identified individuals occupy trapped victim status outside the coordination mechanism (no consent, no escape during detection event) yielding d \u2248 0.90, mapping to high f(d) \u2248 1.35. The piton perspective reflects that institutional validation bodies maintain the training regime through regulatory inertia and grandfathering despite alternatives existing.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by disambiguating the dual function: working dog training is genuinely a coordination mechanism (solving the problem of reliable canine behavior for safety-critical contexts) AND genuinely an extraction mechanism (from the dog's perspective, and secondarily from the perspective of non-consenting identified individuals). The beneficiaries (institutions) have every incentive to frame the constraint as pure coordination ('we need reliable dogs for public safety'), while victims (dogs) experience it as pure snare ('total behavioral control, no exit'). The Tangled Rope classification captures the truth: both elements are real. The constraint cannot be justified as pure coordination (ignores asymmetric extraction from dogs), nor can it be dismissed as pure snare (genuine coordination function exists and beneficiaries do solve a real problem). The classification forces the analytical question: Under what conditions does the coordination benefit justify the extraction cost from the dog? Current consensus (dog welfare standards, training certification requirements) implicitly assumes the answer is 'yes' \u2014 but the mandatrophy analysis shows this assumption is hidden in the classification, not justified by it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "drug_enforcement_detection",
+      "border_security_screening",
+      "police_use_of_force_authority"
+    ],
+    "dual_formulation_note": "Working dog training is a constraint family with multiple decomposable elements: the training regime itself (high extraction from dogs' perspective), the detection technology (moderate accuracy with institutional benefit), and the institutional enforcement structure (sustained through piton-like mechanisms). This story focuses on the training regime; sibling constraints address detection accuracy and institutional deployment decisions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.6
+    }
+  ]
+}

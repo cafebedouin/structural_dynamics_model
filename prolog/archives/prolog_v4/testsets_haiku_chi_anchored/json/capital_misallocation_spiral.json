@@ -1,0 +1,162 @@
+{
+  "header": {
+    "constraint_id": "capital_misallocation_spiral",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.4,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Zombie Asset Loop",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "zombie_firm_executives",
+      "incumbent_asset_managers",
+      "central_bank_policymakers"
+    ],
+    "victims": [
+      "savers_and_pensioners",
+      "productive_new_entrants",
+      "future_economic_growth"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Saver or Pensioner",
+      "comment": "PERSPECTIVE 1: SAVER (SNARE) — Trapped in a low-yield environment, their capital is forced into unproductive assets, extracting value from their future with no recourse or alternative. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Zombie Firm Executive",
+      "comment": "PERSPECTIVE 2: ZOMBIE FIRM EXECUTIVE (ROPE) — Experiences the low-rate environment as a pure coordination mechanism, providing the cheap capital necessary to continue operations and avoid default. The extractive nature of the loop is invisible from this position. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.01."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Central Bank Policymaker",
+      "comment": "PERSPECTIVE 3: CENTRAL BANK (SCAFFOLD) — Views the policy as a temporary support to prevent systemic collapse, believing it has an implicit sunset clause (i.e., it can be unwound once the economy recovers). The long-term extraction is seen as a necessary cost of short-term stability. d≈0.25, f(d)≈0.15, σ=1.0 → χ≈0.10."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Productive New Entrant",
+      "comment": "PERSPECTIVE 4: PRODUCTIVE NEW ENTRANT (TANGLED ROPE) — Sees both the coordination function of capital markets and the severe extractive effect of being crowded out by zombies who absorb available capital. d≈0.75, f(d)≈1.10, σ=1.0 → χ≈0.72."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes the dual nature of the constraint: a distorted resource allocation mechanism (coordination) that systematically transfers wealth from productive sectors and future generations to unproductive incumbents (extraction). This is the canonical classification. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "policy_intent_vs_effect",
+      "question": "Is the capital misallocation an unfortunate side effect of a necessary stability policy, or an intended (if unstated) feature to protect incumbent institutions?",
+      "resolution_mechanism": "Econometric studies isolating policy effects from confounding factors; analysis of internal policy-making documents.",
+      "impact": "If side effect: strengthens the Scaffold perspective. If intended: strengthens the Snare perspective for the entire system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distinguishing between policy side effect and unstated intent"
+    },
+    {
+      "id": "schumpeterian_threshold",
+      "question": "At what point does the harm from suppressed creative destruction outweigh the benefit of preventing zombie firm defaults?",
+      "resolution_mechanism": "Longitudinal studies comparing economic growth and innovation in sectors with high vs. low concentrations of zombie firms.",
+      "impact": "A low threshold suggests the system is a highly extractive Snare; a high threshold suggests it functions more like a costly but potentially justifiable Scaffold.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The threshold where preventing defaults causes more harm than good"
+    },
+    {
+      "id": "exit_feasibility",
+      "question": "Can central banks realistically unwind these policies without triggering a catastrophic financial crisis, or are they permanently trapped?",
+      "resolution_mechanism": "Agent-based modeling of market reactions to policy normalization scenarios; historical analysis of past unwinding attempts.",
+      "impact": "If exit is feasible: confirms the Scaffold perspective. If exit is impossible: the system is a permanent Snare, and the 'temporary' justification is pure theater.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Feasibility of unwinding the policies without systemic collapse"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2008,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2028,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2008,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2028,
+      "value": 0.4
+    }
+  ],
+  "interval": {
+    "start": 2008,
+    "end": 2028
+  },
+  "commentary": {
+    "narrative_context": "The Zombie Asset Loop describes a feedback cycle where accommodative monetary policy or institutional mandates, initially intended for stabilization, lead to the sustained misallocation of capital. Capital flows to unproductive 'zombie' firms or assets, keeping them alive but generating little to no real growth. The resulting economic stagnation then justifies the continuation of the accommodative policies, reinforcing the loop. This dynamic extracts value from productive sectors of the economy, suppresses returns for savers, and inhibits the process of creative destruction.",
+    "key_agents": [
+      "Savers and Pensioners: Primary victims (powerless/trapped) — forced to accept low returns and risk on their capital.",
+      "Productive New Entrants: Secondary victims (moderate/constrained) — starved of capital that is diverted to zombies.",
+      "Zombie Firm Executives: Primary beneficiaries (powerful/mobile) — receive cheap capital to continue operations, preserving their positions.",
+      "Central Bank Policymakers: Institutional beneficiaries (institutional/constrained) — achieve short-term stability mandates, even at the cost of long-term productivity.",
+      "Analytical Observer: Sees the full structure (analytical/analytical) — recognizes the system as a distorted coordination mechanism with severe extractive consequences."
+    ],
+    "logic_rationale": "Extractiveness (ε=0.65): High. The constraint systematically transfers economic potential from savers and innovators to non-viable incumbents. This represents a significant loss of value. Suppression (0.75): High. The policy environment actively closes off alternatives. Savers cannot find safe, reasonable yields, and productive firms cannot compete with zombies for capital on a level playing field. Theater Ratio (0.40): Moderate. While the policies have a real function (preventing defaults), the public justifications often obscure the growing misallocation, becoming more performative over time as the negative consequences mount.",
+    "perspectival_gap": "The gap is profound. For a saver, the system is a pure Snare, trapping their capital for extractive ends. For a zombie firm's CEO, it's a Rope, a lifeline of cheap credit that coordinates their survival. For the central banker who enacted the policy, it's a Scaffold, a temporary and necessary evil to prevent a worse crisis. The analytical observer, seeing all parts, classifies it as a Tangled Rope, acknowledging the (distorted) coordination function while focusing on the massive, asymmetric extraction it enables.",
+    "directionality_logic": "Beneficiaries (zombie executives, policymakers) have low derived directionality (d), resulting in low or negative effective extraction (χ), hence they perceive a Rope or Scaffold. Victims (savers, new entrants) have high derived directionality, resulting in high χ, leading to a Snare or Tangled Rope classification. The powerless and trapped saver experiences the highest possible χ, while the constrained but moderate-power new entrant experiences a slightly lower, but still highly extractive, χ.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating how a policy can be simultaneously a life-saving support (Rope/Scaffold) and a predatory trap (Snare). The classification depends entirely on the agent's structural relationship to the flow of capital. The system avoids mislabeling the central bank's action as pure malice (Snare) or the saver's experience as a mere coordination problem (Rope). It captures the full, contradictory reality by indexing the classification to each observer."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "technological_stagnation",
+      "sovereign_debt_crisis"
+    ]
+  }
+}

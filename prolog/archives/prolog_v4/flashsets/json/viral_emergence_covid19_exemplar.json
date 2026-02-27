@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "viral_emergence_covid19_exemplar",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.75,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Societal Response to SARS-CoV-2 Emergence",
+    "topic_domain": "social/political/health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_political_regimes",
+      "pharmaceutical_companies"
+    ],
+    "victims": [
+      "civil_liberties",
+      "small_businesses",
+      "global_mobility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Isolated Individual",
+      "comment": "Individual trapped by lockdowns, mandates, and travel restrictions; bears the brunt of economic and social costs with limited exit options."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Business Owner",
+      "comment": "Subject to restrictions and economic uncertainty, but with some capacity to adapt or seek government support."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Political Regime",
+      "comment": "Benefits from increased executive power and popular support in the initial phase, using the crisis to consolidate control."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Company",
+      "comment": "Benefits from accelerated regulatory approvals, government contracts, and increased demand for vaccines and therapeutics, with some public scrutiny and reputational risk."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The WHO (constrained)",
+      "comment": "Initially seen as a coordinator, but perceived as degraded as the pandemic progressed. Lacks enforcement and is constrained by member states. Retains performative function (issuing guidance), but effectiveness is diminished."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "Sees the complex interplay of coordination and extraction, observing the long-term societal and political consequences of the pandemic response."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "severity_assessment_accuracy",
+      "question": "How accurately was the initial severity of SARS-CoV-2 assessed, and what impact did this have on subsequent policy decisions?",
+      "resolution_mechanism": "Retrospective analysis of epidemiological data, seroprevalence studies, and modeling scenarios.",
+      "impact": "Overestimation led to excessive restrictions and economic damage; underestimation led to delayed action and higher mortality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of initial severity assessment of SARS-CoV-2."
+    },
+    {
+      "id": "counterfactual_intervention_impact",
+      "question": "What would have been the impact of alternative policy interventions, such as focused protection strategies or less stringent lockdowns?",
+      "resolution_mechanism": "Comparative modeling studies, historical analysis of different regional responses, and randomized controlled trials (where feasible).",
+      "impact": "Determines the efficiency and effectiveness of implemented policies relative to potential alternatives.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual impact of alternative policy interventions."
+    },
+    {
+      "id": "long_term_social_consequences",
+      "question": "What are the long-term social and psychological consequences of the pandemic and related policies, including mental health impacts, social polarization, and erosion of trust in institutions?",
+      "resolution_mechanism": "Longitudinal cohort studies, surveys, and qualitative research on social attitudes and behaviors.",
+      "impact": "Reveals the hidden costs of the pandemic response and informs strategies for mitigating negative social impacts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term social and psychological consequences."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The COVID-19 pandemic and the societal response to it represent a complex, evolving constraint with significant implications for public health, civil liberties, and economic stability. The response involved a mixture of coordination (e.g., vaccine development, public health messaging) and extraction (e.g., lockdowns, travel restrictions, mandates). Different actors experienced the constraint in vastly different ways, leading to polarized opinions and debates about the appropriateness and effectiveness of various measures.",
+    "key_agents": [
+      "The Isolated Individual: Primary victim (powerless/trapped) - bore the brunt of lockdowns, mandates, and economic disruption.",
+      "Small Business Owner: Secondary victim (moderate/constrained) - faced economic hardship and uncertainty due to restrictions.",
+      "Incumbent Political Regimes: Primary beneficiary (institutional/arbitrage) - consolidated power through emergency measures.",
+      "Pharmaceutical Companies: Secondary beneficiary (powerful/mobile) - profited from vaccine development and distribution.",
+      "The WHO: Constrained Institution (institutional/constrained)",
+      "The Analytical Observer: Global perspective (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Significant economic and social costs imposed on individuals and businesses. Suppression (0.75): High. Government mandates, travel restrictions, and censorship suppressed alternative viewpoints. Theater ratio (0.75): High. While some measures were scientifically justified, others were performative and lacked clear evidence of effectiveness.",
+    "perspectival_gap": "The isolated individual experiences the response as a snare. Small businesses experience it as a tangled rope. Incumbent regimes see it as a rope. Pharmaceutical companies benefit through access to arbitrage. The analytical observer sees the complex dynamic as a tangled rope.",
+    "directionality_logic": "Directionality is determined by the agent's power, exit options, and relationship to extraction. Trapped individuals experience high extraction; powerful institutions benefit; analytical observers see the full complexity.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing the legitimate yet conflicting perspectives of different actors. The social response was not simply 'good' or 'bad,' but a complex interplay of coordination and extraction with varying impacts."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "trust_in_institutions",
+      "economic_inequality"
+    ]
+  },
+  "directionality_overrides": []
+}

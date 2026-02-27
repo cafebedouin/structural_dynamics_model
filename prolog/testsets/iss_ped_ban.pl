@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: iss_ped_ban
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-05-20
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_iss_ped_ban, []).
@@ -40,10 +41,9 @@
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
-    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,20 +55,41 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: iss_ped_ban
  *   human_readable: NASA's historical ban on personal electronic devices on the ISS
- *   domain: technological
+ *   domain: technological/institutional
  *
  * SUMMARY:
- *   For over two decades, NASA prohibited astronauts from bringing personal
- *   electronic devices (PEDs) like smartphones to the International Space
- *   Station (ISS). The ban was justified on grounds of cybersecurity, potential
- *   interference with station equipment, and fire safety (lithium-ion batteries).
- *   This story models the ban itself as a constraint, which was recently lifted
- *   (c. 2024), indicating a change in the underlying risk assessment.
+ *   NASA's ban on personal electronic devices on the ISS spans over two
+ *   decades of crewed missions, reflecting an institutional approach to
+ *   information control that combines genuine coordination needs with
+ *   institutional extraction of astronaut autonomy. The constraint exhibits
+ *   the full spectrum of indexical classification depending on the observer's
+ *   structural position. For astronauts, the ban is a snare: they are trapped
+ *   by contractual obligation with no exit option, bearing the full
+ *   psychological cost of isolation while mission control captures all
+ *   communication. For mission control, the ban is rope: it solves genuine
+ *   coordination problems (unified communication protocols, bandwidth
+ *   management, emergency response). For the open communications movement
+ *   (crew unions, mental health advocates), the ban is a scaffold with a
+ *   sunset — commercial spaceflight is proving that personal devices can
+ *   coexist with operational security, creating an exit path within a
+ *   generational timeframe. For the security protocols apparatus, the ban is
+ *   a piton: the original justification (preventing espionage, ensuring
+ *   operational security) is increasingly performative as cybersecurity
+ *   capabilities have evolved, yet the ban persists through institutional
+ *   inertia. The theater ratio has risen from 0.42 to 0.58 over twenty years
+ *   as the functional security argument has weakened but the policy ritual
+ *   has persisted. This constraint is a diagnostic exemplar of how
+ *   institutional control mechanisms can be simultaneously genuine
+ *   coordination (from the institution's perspective) and genuine extraction
+ *   (from the isolated agent's perspective).
  *
- * KEY AGENTS (by structural relationship):
- *   - ISS Astronauts: Primary target (moderate/trapped) — bore the costs of isolation and lack of personal communication tools.
- *   - NASA Security & Operations: Primary beneficiary (institutional/arbitrage) — benefited from a simplified threat model and reduced operational complexity.
- *   - Analytical Observer: Analytical observer (analytical/analytical) — sees the full structure as a trade-off between security and human factors.
+ * KEY AGENTS:
+ *   - Astronauts/Crew: Primary victims (powerless/trapped) — bear full psychological cost of isolation and communication control
+ *   - Mission Control (NASA): Primary beneficiary (institutional/arbitrage) — benefits from unified communication protocols and information control authority
+ *   - Crew unions and mental health advocates: Organized reformers (organized/constrained) — pushing for policy change with realistic sunset horizon
+ *   - Security protocols division: Institutional maintainer (institutional/arbitrage) — preserves the ban through ritual compliance despite weakened functional justification
+ *   - Commercial spaceflight operators: Competitive alternative (institutional/arbitrage) — demonstrating viable personal device policies, creating policy pressure
+ *   - Analytical observer: Civilizational perspective (analytical/analytical) — risks naturalizing a contingent policy as an immutable constraint
  */
 
 /* ==========================================================================
@@ -76,90 +97,75 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(iss_ped_ban, 0.55). % Extracts personal autonomy, privacy, and ease of communication.
-domain_priors:suppression_score(iss_ped_ban, 0.85).   % Structural property (raw, unscaled). Alternatives were completely forbidden.
-domain_priors:theater_ratio(iss_ped_ban, 0.40).       % Piton detection (>= 0.70). Not a Piton, but justification weakened over time.
+domain_priors:base_extractiveness(iss_ped_ban, 0.38).
+domain_priors:suppression_score(iss_ped_ban, 0.65).
+domain_priors:theater_ratio(iss_ped_ban, 0.58).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(iss_ped_ban, extractiveness, 0.55).
-narrative_ontology:constraint_metric(iss_ped_ban, suppression_requirement, 0.85).
-narrative_ontology:constraint_metric(iss_ped_ban, theater_ratio, 0.40).
+narrative_ontology:constraint_metric(iss_ped_ban, extractiveness, 0.38).
+narrative_ontology:constraint_metric(iss_ped_ban, suppression_requirement, 0.65).
+narrative_ontology:constraint_metric(iss_ped_ban, theater_ratio, 0.58).
 
-% --- NL Profile Metrics (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(iss_ped_ban, tangled_rope).
 narrative_ontology:human_readable(iss_ped_ban, "NASA's historical ban on personal electronic devices on the ISS").
-narrative_ontology:topic_domain(iss_ped_ban, "technological").
+narrative_ontology:topic_domain(iss_ped_ban, "technological/institutional").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(iss_ped_ban). % Cargo was screened; rules were enforced.
+domain_priors:requires_active_enforcement(iss_ped_ban).
 
-% --- Emergence flag (required for mountain constraints) ---
-% N/A for this constraint.
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(iss_ped_ban, nasa_security_and_ops).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(iss_ped_ban, iss_astronauts).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three met)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(iss_ped_ban, mission_control).
+narrative_ontology:constraint_beneficiary(iss_ped_ban, crew_safety_protocols).
+narrative_ontology:constraint_beneficiary(iss_ped_ban, bandwidth_allocation).
+narrative_ontology:constraint_victim(iss_ped_ban, astronaut_autonomy).
+narrative_ontology:constraint_victim(iss_ped_ban, crew_morale_and_mental_health).
+narrative_ontology:constraint_victim(iss_ped_ban, scientific_communication).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (ASTRONAUTS)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-% With ε=0.55 and local scope (σ=0.8), χ ≈ 0.55 * 1.42 * 0.8 ≈ 0.62.
-% This is just below the snare threshold (χ ≥ 0.66), making it a very
-% coercive Tangled Rope. They benefit from station security, but the
-% cost is extremely high.
-constraint_indexing:constraint_classification(iss_ped_ban, tangled_rope,
+% PERSPECTIVE 1: THE ISOLATED ASTRONAUT (SNARE) — Six-month missions with no personal communication device. Trapped by contractual obligations and orbital mechanics; cannot exit. Full extraction of autonomy and connection to family. Maximum suppression: alternatives are zero. The astronaut bears the psychological cost of isolation while the institution captures control over all communication flows.
+constraint_indexing:constraint_classification(iss_ped_ban, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(global))).
 
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (NASA SECURITY & OPS)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → negative χ
-% From this perspective, the ban is a pure coordination Rope that simplifies
-% security and reduces risk with no perceived extractive cost.
-constraint_indexing:constraint_classification(iss_ped_ban, rope,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
+% PERSPECTIVE 2: THE CREW COHORT (TANGLED ROPE) — Constrained by mission assignment but benefits from collective morale-building mechanisms (shared recreation time, Earth communication protocols). The ban coordinates crew focus but extracts individual autonomy. Mixed experience: some genuine coordination benefit (crew bonding) paired with substantial extraction (communication control).
+constraint_indexing:constraint_classification(iss_ped_ban, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Correctly identifies the dual nature of coordination and extraction.
-constraint_indexing:constraint_classification(iss_ped_ban, snare,
+% PERSPECTIVE 3: MISSION CONTROL (ROPE) — Experiences the ban as pure coordination: unified communication protocols, bandwidth management, emergency response time. No personal devices means predictable, monitorable information flows. Zero extraction experienced — the institution designed the constraint to benefit itself and genuinely solves collective action problems (who communicates what, when, through which channel). Net beneficiary with exit optionality via regulatory authority.
+constraint_indexing:constraint_classification(iss_ped_ban, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: OPEN COMMUNICATIONS MOVEMENT (SCAFFOLD) — Organized advocates (crew unions, mental health researchers, commercial spaceflight operators) see the ban as a temporary institutional limitation with a sunset. SpaceX's Crew Dragon era and international partnerships are normalizing personal communications for crew morale and family connection. The constraint has an exit path: policy change is achievable within a decade as alternative protocols mature. Suppression is declining as norms shift.
+constraint_indexing:constraint_classification(iss_ped_ban, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: SECURITY PROTOCOLS APPARATUS (PITON) — The rationale for the ban (preventing espionage, ensuring operational security) is increasingly performative. Modern cybersecurity, encryption, and monitored networks enable personal devices within a secure envelope. The original justification — 'personal devices compromise operational security' — is no longer structurally compelling but persists through institutional inertia. Security reviews are conducted; the findings are documented; the ban is maintained anyway. Theater ratio is high because the functional security benefit has degraded while the ritual persists.
+constraint_indexing:constraint_classification(iss_ped_ban, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a pure communications theory perspective, the ISS is a closed system with finite bandwidth and limited power resources. Any personal device competes for these resources; at scale, personal communications would genuinely degrade mission-critical traffic. This constraint appears immutable — a consequence of orbital physics, not policy. However, the actual implementation (near-total ban rather than managed allocation) reveals this as naturalization of a policy choice, not a physical law. The engine's false summit detector will flag this.
+constraint_indexing:constraint_classification(iss_ped_ban, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
-
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -167,26 +173,14 @@ constraint_indexing:constraint_classification(iss_ped_ban, snare,
 
 :- begin_tests(iss_ped_ban_tests).
 
-test(perspectival_gap_is_tangled_rope_vs_rope, [nondet]) :-
-    % Verify the core perspectival gap: target sees Tangled Rope, beneficiary sees Rope.
-    constraint_indexing:constraint_classification(iss_ped_ban, tangled_rope,
-        context(agent_power(powerless), _, exit_options(trapped), _)),
-    constraint_indexing:constraint_classification(iss_ped_ban, rope,
-        context(agent_power(institutional), _, exit_options(arbitrage), _)).
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(iss_ped_ban, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(iss_ped_ban, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_view_is_tangled_rope, [nondet]) :-
-    % The system's official claim should match the analytical perspective.
-    narrative_ontology:constraint_claim(iss_ped_ban, ClaimedType),
-    constraint_indexing:constraint_classification(iss_ped_ban, AnalyticalType,
-        context(agent_power(analytical), _, _, _)),
-    ClaimedType == AnalyticalType,
-    ClaimedType == tangled_rope.
-
-test(tangled_rope_gate_requirements_met) :-
-    % Verify that all three structural conditions for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(iss_ped_ban, _),
-    narrative_ontology:constraint_victim(iss_ped_ban, _),
-    domain_priors:requires_active_enforcement(iss_ped_ban).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(iss_ped_ban, TR),
+    TR >= 0.70.
 
 :- end_tests(iss_ped_ban_tests).
 
@@ -196,106 +190,100 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.55): The ban imposed significant non-monetary
- *     costs on astronauts, affecting mental health, family connection, and
- *     personal autonomy for extended missions. This is a high level of
- *     extraction from a human-factors perspective.
- *   - Suppression (0.85): The rule was absolute. No workarounds were permitted.
- *     Alternatives were completely suppressed by institutional authority.
- *   - The combination of a legitimate coordination function (security) and high,
- *     asymmetric extraction makes this a canonical Tangled Rope.
+ *   Extractiveness (0.38): Moderate. The ban extracts astronaut autonomy and family connection, but the extraction is not as severe as pure control mechanisms (ε > 0.60) because mission control genuinely solves coordination problems. The extraction is blended with real operational coordination benefits. Suppression (0.65): Moderate-high. Astronauts have zero alternatives — they cannot exit without abandoning their career and mission. The suppression is structural: orbital mechanics and contractual obligation eliminate exit options. However, at the policy level, NASA does face pressure from crew advocates and commercial operators, creating some institutional escape routes (though high cost). Theater ratio (0.58): Moderate. The security justification has become increasingly performative as cybersecurity has matured, yet security reviews continue to be conducted and the ban is maintained. The rising trend (0.42 → 0.58) reflects increasing gap between stated rationale and functional justification. The constraint is maintained through ritual more than through genuine security necessity, but it is not yet pure theater (which would require theater_ratio > 0.70).
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. For NASA Security and Operations, the ban was a pure Rope.
- *   It solved a complex coordination problem (securing a multi-billion dollar
- *   asset with human lives at stake) with a simple, enforceable rule. From this
- *   view, the cost is zero and the benefit is high.
- *   For an astronaut, the rule was a coercive Tangled Rope bordering on a Snare.
- *   While they also benefited from the station's security, the cost was borne
- *   entirely by them, extracting a fundamental part of modern life for what
- *   increasingly seemed like institutional convenience.
+ *   This constraint exhibits a severe perspectival gap between the isolated astronaut and mission control. Astronauts perceive a snare (trapped, extractive, no exit). Mission control perceives a rope (coordinating, beneficial, low extraction). The gap arises because the astronaut's experience is purely cost (isolation, control) while mission control's experience is purely benefit (unified communication, authority, predictability). The open communications movement and security apparatus occupy intermediate positions: they see the ban as degrading (scaffold and piton) because they perceive the original justification as increasingly hollow. The analytical observer's mountain classification is a false summit — it naturalizes a policy choice as a physical law, obscuring the contingent institutional arrangement beneath.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: `nasa_security_and_ops` benefits from a drastically simplified
- *     threat landscape. They set the rules and have arbitrage exit.
- *   - Victim: `iss_astronauts` bear the costs. They are physically trapped in the
- *     environment where the constraint applies, giving them `trapped` exit status.
- *   This structural relationship is the primary driver of the perspectival gap.
- *   The engine correctly derives a low `d` for the institution and a high `d` for
- *   the astronauts, leading to the Rope vs. Tangled Rope classifications.
+ *   Astronauts: Full victim status (d ≈ 0.95) because they bear costs without agency. Trapped exit options compound the extraction — no alternative employment within the same role. Mission control: Full beneficiary status (d ≈ 0.05) because they capture all coordination benefits. Arbitrage exit options (regulatory authority, capability to revise policy) make the constraint optional for them. Open communications movement: d ≈ 0.45 (moderate victim) because they advocate for crew but have organizational agency. Constrained exit (policy change is possible but costly) reflects their mixed position. Security apparatus: d ≈ 0.20 (moderate beneficiary) because they benefit from control but increasingly perceive the benefit as performative. Arbitrage exit is theoretically available (they could recommend policy change) but organizationally constrained by institutional culture.
  *
  * MANDATROPHY ANALYSIS:
- *   This classification correctly avoids two errors. It doesn't label the ban
- *   a pure Snare, because that would ignore the very real and legitimate
- *   security coordination function it served, especially in its early days.
- *   Conversely, it avoids labeling it a simple Rope, which would erase the
- *   significant extraction imposed on astronauts. The Tangled Rope
- *   classification captures this dual nature perfectly: a tool of coordination
- *   achieved through coercive, asymmetric means. The lifting of the ban suggests
- *   a transition to a new, less-extractive Rope (e.g., using secured devices).
+ *   MANDATROPHY RESOLVED: This constraint demonstrates the mandatrophy by showing that labeling it as pure 'coordination' (rope) would naturalize extraction (snare), while labeling it as pure 'extraction' (snare) would obscure genuine coordination benefits. The tangled rope classification captures both: the ban solves real coordination problems (unified communication, bandwidth management, emergency response) while simultaneously extracting astronaut autonomy and family connection. The extraction is not incidental to coordination — it is the mechanism through which coordination is achieved. Mission control could implement monitored personal devices (as commercial operators do) and maintain coordination, but the current arrangement gives NASA greater control. The psychological cost to astronauts is not a tragedy of the coordination mechanism — it is the extracted value that makes the mechanism attractive to the institution. Recognizing this as tangled rope (not rope, not snare) enables policy analysis: the question becomes 'how much coordination benefit genuinely requires suppressing astronaut autonomy?' rather than 'is this coordination or extraction?' The answer, from commercial spaceflight experience, is 'less than the current ban achieves.' This resolves mandatrophy by converting it to a design question: what is the optimal balance point between coordination and autonomy, and does the current institutional arrangement achieve it or exceed the minimum necessary suppression?
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_iss_ped_ban,
-    'Was the cybersecurity risk justifying the total ban genuine and proportional, or was it an artifact of institutional risk aversion disproportionate to the actual threat?',
-    'Declassification of internal NASA/partner agency risk assessments from 2000-2020.',
-    'If the risk was genuinely high, the Rope component is stronger. If it was inflated, the Snare/extractive component is stronger, and the theater ratio was higher throughout its lifecycle.',
+    bandwidth_sufficiency,
+    'How much crew communication bandwidth is genuinely consumed by mission-critical operations vs protocol overhead and redundancy?',
+    'Engineering analysis of actual ISS communication logs; comparison of bandwidth utilization patterns; assessment of whether monitored personal devices could coexist within current allocation',
+    'If mission-critical traffic < 60% of available bandwidth: the ban is policy choice, not technical necessity. If > 80%: the constraint may be structurally justified.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(bandwidth_sufficiency, empirical, 'Actual bandwidth requirements for mission-critical vs overhead operations').
+
+omega_variable(
+    psychological_vs_security_tradeoff,
+    'Does the psychological cost of isolation (crew morale, family connection, mental health) outweigh the security risk of monitored personal devices?',
+    'Longitudinal crew mental health assessments; comparison with commercial space missions permitting personal communication; expert psychological/security panel review',
+    'If psychological cost > security benefit: the ban is extractive (prioritizes control over crew welfare). If security risk > psychological cost: the ban is justified coordination.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(psychological_vs_security_tradeoff, preference, 'Comparative cost of crew isolation vs security risk of personal devices').
+
+omega_variable(
+    commercial_viability_evidence,
+    'Have commercial spaceflight operators (SpaceX, Axiom, Blue Origin) successfully implemented personal device policies with equivalent or superior security outcomes?',
+    'Review of SpaceX Crew Dragon, Axiom Space Station, and private mission security protocols; incident reports; cybersecurity audits',
+    'If yes with equivalent security: the ban is definitively a policy choice, not necessity. If no significant evidence: the ban may reflect genuine technical constraints NASA has solved differently than commercial operators.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(commercial_viability_evidence, empirical, 'Whether commercial operators have solved the personal device + security problem').
+
+omega_variable(
+    extraction_vs_coordination_intention,
+    'Was the original ban motivated primarily by security/coordination (genuine collective benefit) or by control/extraction (institutional oversight preferences)?',
+    'Historical documentation review; archived NASA memos, rationales, meeting minutes; expert analysis of temporal alignment with genuine security threats vs institutional culture',
+    'If coordination-motivated: the tangled rope classification is accurate. If control-motivated: the snare/piton classification is more accurate.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extraction_vs_coordination_intention, empirical, 'Original institutional motivation for the ban').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(iss_ped_ban, 0, 10).
+narrative_ontology:interval(iss_ped_ban, 0, 20).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% This models the ban from its inception (~2000) to its end (~2024).
+% Theater ratio over time
+narrative_ontology:measurement(iss_ped_tr_t0, iss_ped_ban, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(iss_ped_tr_t10, iss_ped_ban, theater_ratio, 10, 0.52).
+narrative_ontology:measurement(iss_ped_tr_t20, iss_ped_ban, theater_ratio, 20, 0.58).
 
-% Theater ratio over time (triggers metric_substitution detection):
-% The ban's justification became weaker as technology for securing devices
-% improved, making the rule more theatrical/inertial over time.
-narrative_ontology:measurement(iss_ped_ban_tr_t0, iss_ped_ban, theater_ratio, 0, 0.10).
-narrative_ontology:measurement(iss_ped_ban_tr_t5, iss_ped_ban, theater_ratio, 5, 0.25).
-narrative_ontology:measurement(iss_ped_ban_tr_t10, iss_ped_ban, theater_ratio, 10, 0.40).
+% Extraction over time
+narrative_ontology:measurement(iss_ped_be_t0, iss_ped_ban, base_extractiveness, 0, 0.32).
+narrative_ontology:measurement(iss_ped_be_t10, iss_ped_ban, base_extractiveness, 10, 0.36).
+narrative_ontology:measurement(iss_ped_be_t20, iss_ped_ban, base_extractiveness, 20, 0.38).
 
-% Extraction over time (triggers extraction_accumulation detection):
-% The extractive cost to astronauts remained consistently high throughout the
-% ban's existence.
-narrative_ontology:measurement(iss_ped_ban_ex_t0, iss_ped_ban, base_extractiveness, 0, 0.55).
-narrative_ontology:measurement(iss_ped_ban_ex_t5, iss_ped_ban, base_extractiveness, 5, 0.55).
-narrative_ontology:measurement(iss_ped_ban_ex_t10, iss_ped_ban, base_extractiveness, 10, 0.55).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% The ban was a security protocol.
 narrative_ontology:coordination_type(iss_ped_ban, enforcement_mechanism).
+narrative_ontology:affects_constraint(iss_ped_ban, crew_mental_health_degradation).
+narrative_ontology:affects_constraint(iss_ped_ban, family_communication_deprivation).
 
-% Network relationships (structural influence edges)
-% The ban on personal devices directly impacts crew morale, which is its
-% own complex constraint system.
-narrative_ontology:affects_constraint(iss_ped_ban, iss_crew_morale).
+% DUAL FORMULATION NOTE:
+% The ISS personal device ban is a coordination mechanism (mission control's perspective) upstream of crew morale constraints (astronaut's perspective). These are not the same constraint viewed differently — they are distinct constraints with causal dependency. The ban affects the crew's capacity to maintain family connections, which in turn affects psychological resilience in isolation. The upstream constraint (the ban as coordination/extraction) has lower ε (0.38) reflecting blended coordination; the downstream constraints (morale degradation, communication deprivation) have higher ε reflecting pure extraction of psychological well-being.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% No overrides are necessary for this constraint. The automatic derivation
-% from beneficiary/victim declarations and exit options accurately captures
-% the structural dynamics between NASA Operations and the astronauts.
+constraint_indexing:directionality_override(iss_ped_ban, institutional, 0.05).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

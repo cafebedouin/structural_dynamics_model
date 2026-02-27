@@ -1,0 +1,200 @@
+{
+  "header": {
+    "constraint_id": "risk_socialization_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "risk_soc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "The Asymmetric Liability Trap",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "systemically_critical_firm"
+    ],
+    "victims": [
+      "taxpayers",
+      "depositors_creditors",
+      "competitors",
+      "future_fiscal_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Taxpayer Base",
+      "comment": "PERSPECTIVE 1: TAXPAYER BASE (SNARE) \u2014 Trapped in socialization of losses without consent. No exit: cannot opt out of nation-state currency/insurance guarantees, cannot liquidate firm exposure, cannot recoup bailout costs. Experiences full extraction of crisis losses through tax liability. d\u22480.95, f(d)\u22481.42, \u03c3=1.0 \u2192 \u03c7\u22480.82."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Business Competitors",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS COMPETITORS (SNARE) \u2014 Constrained by inability to access implicit government guarantee on liabilities. Large competitor survives crisis via bailout; small competitor fails and is liquidated. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Executive Leadership & Shareholders",
+      "comment": "PERSPECTIVE 3: EXECUTIVE LEADERSHIP & SHAREHOLDERS (TANGLED ROPE) \u2014 Experience coordination benefit (firm survives, shareholder value preserved during bailout) but also extraction in long-term stock price depression post-crisis. However, the coordination function is real: the bailout preserves systemic function. d\u22480.35, f(d)\u22480.25, \u03c3=1.0 \u2192 \u03c7\u22480.15. Low effective extraction reflects that benefit slightly dominates cost post-recovery."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Central Bank / Financial Regulator",
+      "comment": "PERSPECTIVE 4: CENTRAL BANK / FINANCIAL REGULATOR (ROPE) \u2014 Sees bailout as coordination mechanism: preventing systemic collapse protects the entire financial network. Regulator has arbitrage exit (can choose intervention timing, scope, conditions). d\u22480.10, f(d)\u2248-0.02, \u03c3=1.0 \u2192 \u03c7\u2248-0.01. Net beneficiary: regulation is enforced, crisis contained, system restored."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Progressive Reform Coalition",
+      "comment": "PERSPECTIVE 5: PROGRESSIVE REFORM COALITION (SCAFFOLD) \u2014 Organized advocates (labor unions, progressive politicians, consumer protection groups) frame the bailout as temporary (with stated intent to end too-big-to-fail through regulation, capital requirements, breakup). They see suppression of alternatives (regulatory capture, lobbying power) but believe the sunset clause is structural: Dodd-Frank, TARP restrictions, stress tests create a path toward markets where firm size doesn't guarantee rescue. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.51. Moderate extraction, but coalition has agency and exit path (regulatory change)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Financial System Authority (Institutional Inertia View)",
+      "comment": "PERSPECTIVE 6: FINANCIAL SYSTEM AUTHORITY (PITON) \u2014 Maintains bailout protocol as degraded institutional ritual. Publicly claims that regulation and capital requirements have solved too-big-to-fail; privately prepares for the next crisis with the same playbook (emergency lending, equity injections, liquidity facilities). theater_ratio=0.68 reflects the performative regulatory theater: stress tests show stability, but the implicit guarantee remains. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.0 \u2192 \u03c7\u2248-0.04. Institutional beneficiary but aware its own legitimacy is degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Financial Gravity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FINANCIAL GRAVITY VIEW (MOUNTAIN) \u2014 From a civilizational view, systemic risk is an immutable property of financial networks: concentration is mathematically inevitable under profit-maximizing dynamics; cascade effects are thermodynamic facts about coupled systems; bailouts are therefore a law of nature, not a policy choice. However, the structural data (\u03b5=0.58, suppression=0.72, theater=0.68) contradicts this. The engine will compute this as a false summit, revealing that 'financial gravity' naturalizes what is actually a policy choice: alternative regulatory regimes exist (EU-style separation, Canadian-style capital buffers, Nordic-style resolution authority) that distribute bailout risk differently."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "moral_hazard_threshold",
+      "question": "At what probability of future bailout does private incentive structure flip toward maximizing downside tail risk?",
+      "resolution_mechanism": "Empirical measurement of risk-taking behavior (derivative positions, leverage ratios, asset concentration) as a function of implicit guarantee value; historical analysis of pre-crisis vs post-crisis behavior",
+      "impact": "If threshold < 60% bailout probability: all major firms are in moral hazard regime, snare classification strengthens. If threshold > 90%: only rare stress scenarios trigger extraction, snare weakens to tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Probability threshold at which moral hazard dominates firm behavior"
+    },
+    {
+      "id": "exit_alternative_availability",
+      "question": "Do alternative financial systems (crypto, decentralized finance, community banks) actually reduce taxpayer exposure to systemic risk, or merely increase correlated risk?",
+      "resolution_mechanism": "Stress test analysis: if alternative systems scale, do they reduce too-big-to-fail concentration or introduce new systemic vulnerabilities? Comparison of bailout costs across regulatory regimes.",
+      "impact": "If true alternatives exist: suppression index decreases, exit_options improve for some victims, snare weakens. If alternatives increase correlation: suppression strengthens, snare deepens.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether alternative financial systems reduce systemic risk exposure"
+    },
+    {
+      "id": "political_viability_of_non_bailout",
+      "question": "Could a democratic government actually allow a systemically critical firm to fail and manage the consequences, or is bailout politically inevitable?",
+      "resolution_mechanism": "Comparative institutional analysis: Iceland's Icesave default, Argentina's bank defaults, vs US bailouts; public opinion polling on willingness to accept short-term contagion for long-term discipline",
+      "impact": "If non-bailout is politically viable: suppression index decreases (real alternative exists), exit_options for regulatory reformers improve. If bailout is inevitable: suppression is maximum, snare deepens.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether non-bailout default is politically feasible for systemically critical firms"
+    },
+    {
+      "id": "regulatory_capture_extent",
+      "question": "How much of the implicit guarantee persists as a formal protection vs how much is maintained through regulatory capture and political lobbying?",
+      "resolution_mechanism": "Institutional analysis: comparison of stated policy (Dodd-Frank ending too-big-to-fail) vs actual regulatory behavior (favorable supervision, lenient stress test thresholds, lobbying influence on resolution authority); measurement of capture intensity through regulatory comment analysis and agency budget allocation",
+      "impact": "If capture is total: suppression is maximum (no real regulatory alternative), snare is unambiguous. If capture is partial: some scaffolding is real, reform coalition has genuine exit path.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent to which implicit guarantee is maintained through regulatory capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The asymmetric liability trap describes a structural constraint in which a systemically critical entity (typically a large financial institution or state-backed utility) captures the asymmetry between profit distribution and loss distribution. During periods of stability, profits flow to shareholders and executives, but when systemic risk materializes, losses are socialized through taxpayer-funded bailouts. The constraint exhibits high suppression (barriers to alternative institutional arrangements prevent escape) and moderate extractiveness (the extraction is real but offset by genuine systemic coordination benefits). The tension between the two components \u2014 coordination benefit + extraction harm \u2014 makes this a diagnostic exemplar of when extraction and coordination coexist structurally. The increasing theater ratio over time (0.42 \u2192 0.68) reflects the growing gap between stated regulatory intent (ending too-big-to-fail) and actual institutional practice (preserving implicit guarantees through capital requirement leniency, favorable stress test calibration, and resolution authority capture). The constraint is most clearly a snare from the perspectives of trapped taxpayers and constrained small business competitors, who experience pure extraction with no coordination benefit. From the regulator's institutional perspective, the bailout is coordination (preventing cascade failure). From the reform coalition's perspective, it is a temporary scaffold with a sunset clause (regulatory change, capital requirements, resolution authority). From the financial authority's own perspective, it is a piton \u2014 a degraded ritual maintained through inertia despite official claims that the problem has been solved.",
+    "key_agents": [
+      "Taxpayers: Primary victim (powerless/trapped) \u2014 no exit from currency, taxation, deposit guarantees; bear crisis losses without consent",
+      "Small Business Competitors: Secondary victim (moderate/constrained) \u2014 cannot access implicit guarantee; fail when large competitor survives bailout",
+      "Depositors & Creditors: Secondary victim (moderate/constrained) \u2014 protected by implicit guarantee but only through socialization of losses",
+      "Shareholders & Executives: Primary beneficiary (powerful/mobile) \u2014 capture upside during stability, preserve value through bailout",
+      "Central Bank / Financial Regulator: Institutional actor (institutional/arbitrage) \u2014 sees bailout as coordination mechanism preventing systemic collapse",
+      "Progressive Reform Coalition: Organized agents (organized/constrained) \u2014 reformers viewing constraint as temporary (Dodd-Frank, capital requirements); constrained by regulatory capture",
+      "Financial System Authority: Institutional actor maintaining degraded ritual (institutional/arbitrage) \u2014 piton perspective; knows implicit guarantee remains despite stated regulatory solutions",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing policy choice as financial law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from taxpayers through crisis-period socialization of losses, but the extraction is partially offset by genuine systemic benefits of maintaining financial stability. The asymmetry between profit privatization and loss socialization is the core extraction mechanism. The value reflects that while extraction is real and growing (trend 0.32 \u2192 0.58), it is not as severe as pure rent-seeking (which would be 0.70+) because the coordination benefit (preventing systemic collapse) is structurally real. Suppression (0.72): High. Significant barriers prevent escape: alternative financial systems remain marginal; regulatory alternatives (decentralized, community-based finance) lack scale; political viability of non-bailout is uncertain; regulatory capture maintains the implicit guarantee despite stated policy solutions. Suppression is not total (0.95+) because regulatory reform, capital requirements, and stress testing create some genuine friction on the extraction mechanism. Theater ratio (0.68): High. Regulatory theater is substantial: stress tests show stability while implicit guarantee is maintained; Dodd-Frank claims to end too-big-to-fail while regulatory agencies interpret rules leniently; resolution authority protocols are created but never tested in live crisis; public discourse distinguishes between official policy (problem solved) and institutional reality (bailout apparatus remains), creating performative gap.",
+    "perspectival_gap": "This constraint exhibits sharp perspectival divergence. Taxpayers (powerless/trapped) see pure extraction (Snare) \u2014 they have no exit and bear full crisis costs. Small competitors (moderate/constrained) see similar extraction (Snare) \u2014 they cannot access the guarantee that keeps large competitors alive. Shareholders (powerful/mobile) see mixed benefit (Tangled Rope) \u2014 they experience coordination (firm survives) and some extraction (stock depression post-crisis), but the coordinate benefit typically dominates long-term. The regulator (institutional/arbitrage) sees coordination (Rope) \u2014 preventing systemic collapse is the benefit that justifies bailout. The reform coalition (organized/constrained) sees a temporary problem (Scaffold) \u2014 regulatory changes will reduce the implicit guarantee. The financial authority (institutional/arbitrage) knows the process is degraded (Piton) \u2014 it maintains bailout protocol as ritual despite official claims of solution. The civilizational analytical observer risks seeing immutable law (Mountain) \u2014 financial gravity makes bailouts inevitable \u2014 but the structural data reveals this as false naturalization: alternative regulatory regimes exist and distribute risk differently.",
+    "directionality_logic": "Taxpayers: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Maximum extraction \u2014 no exit from national currency, taxation, or implicit guarantee system. Competitors: Victim + constrained \u2192 d\u22480.88, f(d)\u22481.32. High extraction \u2014 significant barriers to accessing same guarantee as large competitor. Shareholders/Executives: Beneficiary + mobile \u2192 d\u22480.35, f(d)\u22480.25. Low extraction (net beneficiary) \u2014 significant exit options (sell equity, move operations), benefit exceeds cost. Regulator: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.02. Net beneficiary \u2014 arbitrage exit (can choose intervention), coordination achieved. Reform coalition: Organized agent with constrained exit \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction with agency \u2014 can advocate for regulatory change, not trapped, but constrained by regulatory capture. Financial authority: Institutional + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Piton classification comes from theater ratio, not directionality \u2014 authority knows process is degraded.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (Extractiveness = 0.58 > 0.46 \u2192 Required): The constraint resolves the mandatrophy by showing that snare classification (pure extraction) is correct from the powerless agent perspective (taxpayers, small competitors) but incomplete from institutional perspectives. The temptation to call this a Mountain (financial gravity makes bailouts inevitable) is the false summit that the engine detects: alternative regulatory regimes exist (EU resolution authority powers, Canadian capital-requirement-based approach, Nordic stress-tested resolution protocols) that distribute socialization differently. The temptation to call it pure Rope (coordination benefit of financial stability) is also incomplete: the coordination benefit does not require the asymmetry between profit privatization and loss socialization \u2014 the same stability could be achieved with symmetric risk distribution (equity-financed firms, common-equity tier 1 buffer requirements, pre-agreed resolution mechanisms). The actual constraint is a Snare from the victim perspective (trapped taxpayers, constrained competitors) because the asymmetry persists despite alternatives existing and the suppression (regulatory capture, political inevitability of bailout) prevents those alternatives from being chosen. The reform coalition's Scaffold perspective is real but subordinate: the sunset clause (Dodd-Frank, capital requirements, resolution authority) has not actually eliminated the implicit guarantee in practice, only created regulatory theater that creates appearance of solution. The engine's classification as Snare is therefore justified: the structural facts (asymmetric risk distribution, high suppression, no exit for most agents, extraction persists despite stated policy) are snare-characteristic. The theater ratio elevation (0.42 \u2192 0.68) tracks the growing gap between regulatory intent and institutional reality, which is a piton diagnostic: degraded ritual maintained by inertia."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_threshold",
+      "moral_hazard_incentive_structure",
+      "deposit_insurance_moral_hazard"
+    ],
+    "dual_formulation_note": "The asymmetric liability trap decomposes into three structurally distinct constraints: (1) regulatory_capture_threshold (\u03b5\u22480.45) \u2014 how regulatory capture enables the implicit guarantee; (2) moral_hazard_incentive_structure (\u03b5\u22480.55) \u2014 how guaranteed bailout changes firm risk-taking; (3) deposit_insurance_moral_hazard (\u03b5\u22480.38) \u2014 how deposit guarantee creates asymmetric incentives. This story (\u03b5=0.58) is the systemic integration constraint \u2014 the combined effect of all three. Decomposition is necessary because empirical evidence and policy levers differ across the three."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

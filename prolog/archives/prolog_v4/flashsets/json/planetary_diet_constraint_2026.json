@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "planetary_diet_constraint_2026",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.6,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Planetary Boundary Dietary Alignment",
+    "topic_domain": "ecological/economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "global_ecosystem_health",
+      "future_generations"
+    ],
+    "victims": [
+      "meat_producers",
+      "consumers_unwilling_to_change_diet"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Unwilling Consumer",
+      "comment": "The consumer who is unwilling or unable to change their diet due to habit, taste, or affordability is trapped by the constraint.  They experience extraction as limited food choices and increased costs."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Local Meat Producers",
+      "comment": "Local meat producers face immediate economic hardship due to decreased demand for their products, without viable alternatives for income (trapped)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Average Global Citizen",
+      "comment": "The average global citizen is both constrained (by limited options and social pressure) and benefits (from a healthier planet).  They have limited ability to arbitrage, but are also not totally trapped."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Global Ecosystem Health",
+      "comment": "The constraint promotes the long-term health of the global ecosystem.  The ecosystem has an 'arbitrage' option in that it will eventually find a new equilibrium, but benefits from dietary changes that accelerate healing."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Plant-Based Food Industry",
+      "comment": "The plant-based food industry benefits in the short term but may lose relevance if future dietary trends shift away from current plant-based alternatives. Therefore, the plant-based food industry is a scaffold, offering temporary support for the shift to planetary diets."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the constraint as a tangled rope, balancing planetary health with individual freedoms and economic interests. The observer recognizes the complexities and trade-offs involved in promoting planetary diets."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consumer_willingness_to_change",
+      "question": "To what extent are consumers willing to alter their diets for environmental reasons?",
+      "resolution_mechanism": "Surveys, market research, and behavioral studies to assess consumer preferences and adoption rates of planetary diets.",
+      "impact": "High willingness: smoother transition, less extraction. Low willingness: requires stronger interventions, increased extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Consumer willingness to change diet"
+    },
+    {
+      "id": "meat_producer_adaptation",
+      "question": "Can meat producers successfully adapt to producing plant-based alternatives or sustainable meat products?",
+      "resolution_mechanism": "Track meat producer investments in plant-based alternatives or regenerative agriculture practices.",
+      "impact": "Successful adaptation: less economic disruption, reduced extraction. Limited adaptation: greater economic hardship, increased extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Meat producer adaptation to plant-based alternatives"
+    },
+    {
+      "id": "dietary_shift_equity",
+      "question": "How can the dietary shift be implemented equitably across different socioeconomic groups and regions?",
+      "resolution_mechanism": "Analyze policy proposals for ensuring affordability and access to sustainable diets for all.",
+      "impact": "Equitable implementation: reduced social inequality, increased coordination. Inequitable implementation: exacerbates inequalities, increased extraction from vulnerable populations.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Equitable dietary shift across socioeconomic groups"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The \"Planetary Boundary Dietary Alignment\" constraint aims to shift global diets towards patterns that reduce environmental impact and promote sustainability. This involves reducing meat consumption, increasing plant-based food intake, and promoting food production practices that minimize resource depletion and greenhouse gas emissions. The constraint balances global ecological needs with individual consumer preferences and economic interests of food producers.",
+    "key_agents": [
+      "Global Ecosystem Health: Primary beneficiary (institutional/arbitrage) - benefits from reduced environmental impact.",
+      "Future Generations: Secondary beneficiary (institutional/analytical) - benefits from a more sustainable planet.",
+      "Meat Producers: Primary victim (powerless/trapped) - faces economic hardship due to reduced demand.",
+      "Consumers Unwilling to Change Diet: Secondary victim (powerless/trapped) - faces limited food choices and increased costs.",
+      "Plant-Based Food Industry: Organized agent (organized/mobile) - benefits in the short term with a sunset clause if dietary trend shifts.",
+      "Average Global Citizen: The average global citizen is both constrained and benefits"
+    ],
+    "logic_rationale": "Extractiveness: Moderate-high. The constraint extracts from meat producers and consumers unwilling to change their diets. It imposes costs in terms of economic disruption and limited food choices. Suppression: Moderate-high. There is significant social and economic pressure to adopt planetary diets. Theater Ratio: Low. The focus is on real dietary changes, rather than performative actions. The claimed type is Tangled Rope because the constraint combines the coordination function of achieving planetary health with the asymmetric extraction from specific groups.",
+    "perspectival_gap": "The unwilling consumer and meat producers see a Snare, as they bear the brunt of the costs. The global ecosystem benefits (Rope), while plant-based food industry see it as a scaffold. The average global citizen faces a tangled rope and the analytical observer also sees tangled rope with the complexities and trade-offs.",
+    "directionality_logic": "Directionality is determined by the agent's relationship to the constraint. Beneficiaries (global ecosystem) experience negative directionality. Victims (meat producers, unwilling consumers) experience positive directionality. The analytical observer sees a balanced view. The derived D values affect the perceived extractiveness (chi).",
+    "mandatrophy_analysis": "This analysis identifies the classification for the planetary diet as a Tangled Rope due to active enforcement and having both beneficiaries and victims. The classification resolves the mandatrophy with evidence and rationale."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "sustainable_agriculture_practices",
+      "global_climate_agreement"
+    ],
+    "dual_formulation_note": "The Planetary Boundary Dietary Alignment constraint is linked to Sustainable Agriculture Practices and the Global Climate Agreement as it contributes to achieving their objectives."
+  },
+  "directionality_overrides": []
+}

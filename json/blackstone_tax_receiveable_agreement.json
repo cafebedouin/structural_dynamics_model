@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "blackstone_tax_receiveable_agreement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bstra"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.65,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blackstone Tax Receivable Agreement (TRA)",
+    "topic_domain": "economic/financial_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "selling_partners",
+      "blackstone_management"
+    ],
+    "victims": [
+      "blackstone_public_shareholders",
+      "future_equity_holders"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Public Shareholder",
+      "comment": "PERSPECTIVE 1: PUBLIC SHAREHOLDER (SNARE) \u2014 Powerless and trapped. The TRA obligation extracts from Blackstone's future cash flows without shareholder consent or visibility into the true cost. Shareholders cannot exit: selling their stake realizes the depressed price resulting from the TRA liability. They bear the extraction in perpetuity or until the agreement expires. Maximum experienced extraction with no exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Selling Partners (Founders/Early Investors)",
+      "comment": "PERSPECTIVE 2: SELLING PARTNERS (TANGLED ROPE) \u2014 Organized agents with significant negotiating power. They benefit from the 85% tax receivable pass-through (coordination function: they are compensated for their pre-IPO ownership). But they also constrain the firm's capital allocation for decades (extraction mechanism: future shareholders subsidize their exit). The constraint has both a genuine coordination component (pricing their equity stake) and an asymmetric extraction component (locking in permanent tax obligations). Active enforcement required: the TRA is contractually binding and indexed to tax code sections."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Blackstone Management Company",
+      "comment": "PERSPECTIVE 3: BLACKSTONE MANAGEMENT COMPANY (ROPE) \u2014 Institutional actor with arbitrage exit (can liquidate or restructure). Management benefits from TRA as a coordination mechanism: it enables acquisition of partner interests without requiring them to sell at discount or exit immediately. The TRA pricing is negotiated (not coercive). From management's perspective during the IPO, the TRA is a pure coordination solution: we want to buy partners out, they want fair compensation, TRA bridges that gap. Management experiences this as rope: solving the collective action problem of equity consolidation with minimal coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Tax Equity Markets and Financial Engineering Ecosystem",
+      "comment": "PERSPECTIVE 4: TAX EQUITY MARKETS (TANGLED ROPE) \u2014 Powerful institutional investors and financial engineers who understand TRA mechanics and can arbitrage tax benefit asymmetries. They benefit from TRA as a coordination instrument (it creates a reliable tax asset class they can value and trade). But they also extract from future shareholders through secondary market pricing that capitalizes the tax obligation without fully passing the cost back. The TRA enables their arbitrage (mobile exit) while constraining the underlying asset. Moderate extraction because the ecosystem has agency and visibility; coordination because TRA creates a new asset class."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Tax Regulatory and Legislative Oversight",
+      "comment": "PERSPECTIVE 5: TAX REGULATORY OVERSIGHT (SCAFFOLD) \u2014 Organized government actors (Treasury, IRS, Congress) who see TRA as a temporary coordination mechanism with an implicit sunset: tax code changes, carried interest reform, or partnership liquidation will eventually unwind the 85/15 split. Theater ratio is low here because regulators perceive TRA as a structural arbitrage they can address through legislative action. The constraint has a sunset horizon (not indefinite). Suppression is moderate because regulators have enforcement mechanisms (tax code redefinition) but face coordination costs (legislative gridlock). The scaffold perspective suggests that as tax reform advances, the TRA obligation will diminish in force."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Financial Analyst (Theoretical View)",
+      "comment": "PERSPECTIVE 6: FINANCIAL ANALYST / THEORETICAL VIEW (PITON) \u2014 From a deep analytical perspective, TRA classifies as degraded coordination. It was created to solve a legitimate problem (how to price founder equity in a transformation from partnership to public company) but has become a theater: the original coordination rationale (founders exiting fairly) is exhausted within years, yet the TRA obligation persists for decades with updated valuations, catch-up provisions, and secondary exchanges. The mechanism has lost its primary function but remains enforced through institutional inertia. Analysts see the TRA as increasingly performative \u2014 the 'fair compensation' narrative persists while the actual redistribution effect dominates. Theater ratio 0.42 reflects this partial degradation: TRA still has real coordination function at inception, but becomes increasingly theatrical after the first generation of beneficiaries exits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tax_code_permanence",
+      "question": "Will carried interest preferential tax treatment survive legislative reform, or will TRA obligations become claims on ordinary income?",
+      "resolution_mechanism": "Tracking of legislative proposals for carried interest taxation; monitoring of Treasury guidance on partnership-to-public entity transitions; analysis of comparable TRA provisions under alternative tax regimes",
+      "impact": "If carried interest preserved: TRA remains high-extraction (\u03b5 stays 0.38+). If carried interest eliminated: TRA obligations collapse to ordinary income rates, shareholder extraction decreases significantly (\u03b5 drops to 0.15-0.20), constraint reclassifies as scaffold with hard sunset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Permanence of carried interest tax treatment and impact on TRA enforceability"
+    },
+    {
+      "id": "future_partner_acquisitions",
+      "question": "Will Blackstone continue acquiring partner interests at rates that sustain the TRA tax benefit generation, or will acquisition rates decline?",
+      "resolution_mechanism": "Historical analysis of partner buyback rates relative to headcount growth; projection models of when most profitable partners will have fully exited; analysis of whether new partners avoid equity consolidation to preserve their own eventual TRA benefits",
+      "impact": "If acquisitions continue: TRA obligations persist as permanent extraction mechanism. If acquisitions decline: TRA becomes a wasting asset (beneficiaries get paid but new generations don't), shifting it toward scaffold dynamics (sunset from exhaustion rather than legislation).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sustainability of partner interest acquisition rates needed to sustain TRA tax benefits"
+    },
+    {
+      "id": "secondary_market_pricing_opacity",
+      "question": "Do secondary market prices for TRA interests fully reflect the underlying tax obligation to public shareholders, or do they systematically underprice the future liability?",
+      "resolution_mechanism": "Comparison of secondary market TRA valuations with actuarial models of future tax liability; analysis of whether secondary purchasers experience value capture in excess of their acquisition cost; tracking of realized vs expected tax savings after secondary transfers",
+      "impact": "If fully priced: market discovery functions correctly, public shareholders adjust valuations rationally (no hidden extraction). If underpriced: secondary market participants extract from public shareholders through information asymmetry (extraction \u03b5 increases to 0.50+, snare classification for analysts).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether secondary TRA market prices fully reflect future tax liabilities"
+    },
+    {
+      "id": "regulatory_classification_drift",
+      "question": "Will tax authorities ever challenge the TRA as a disguised partnership distribution rather than a legitimate tax provision realization?",
+      "resolution_mechanism": "Monitoring of IRS guidance, Tax Court cases, and Treasury regulations on TRA treatment; analysis of whether comparable provisions in other structured acquisitions receive similar treatment; tracking of audit activity on TRA filers",
+      "impact": "If challenged successfully: TRA obligations become unenforceable (constraint collapses to rope or dissolves entirely). If upheld: TRA remains enforceable as a snare for public shareholders (extraction \u03b5 stabilizes at 0.38+).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether tax authorities will challenge TRA as mislabeled distribution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Blackstone's Tax Receivable Agreement (TRA) represents a hybrid coordination-extraction mechanism embedded in the firm's 2007 IPO structure. When Blackstone acquired interests from existing partnership investors to create a publicly tradable equity structure, it committed to paying 85% of the resulting tax benefits directly to those selling partners. This constraint exhibits the full diagnostic range of indexical classification: from the selling partners' perspective, it is a fair coordination mechanism pricing their equity exit; from public shareholders' perspective, it is a permanent extraction mechanism that depresses equity value and locks capital allocation decisions for decades. The constraint's theater ratio has increased over time\u2014the original 'fair compensation for founders' rationale has been progressively replaced by secondary market trading, catch-up provisions, and valuation disputes that serve primarily to maintain the extraction flow after the original coordination problem (founder exit) is exhausted. The suppression is structural: public shareholders cannot easily understand the TRA's cash flow impact (it is buried in tax footnotes and actuarial calculations), cannot exit without realizing the depressed price, and cannot renegotiate the terms. The constraint is active, enforceable, and has generated billions in payments to pre-IPO partners.",
+    "key_agents": [
+      "Selling Partners (Pre-IPO Investors): Primary beneficiaries (organized/arbitrage) \u2014 receive 85% of tax savings from their interest sales; negotiated exit compensation",
+      "Blackstone Management Company: Secondary beneficiary and coordinator (institutional/arbitrage) \u2014 solves the equity consolidation problem without requiring partner liquidations; captures residual 15% of tax benefit",
+      "Public Shareholders: Primary victims (powerless/trapped) \u2014 bear the TRA liability in perpetuity; cannot exit without realizing depressed price; no visibility into true cost",
+      "Future Equity Holders: Secondary victims (powerless/trapped) \u2014 purchase equity with embedded TRA liability; face permanent cash flow claims from pre-IPO beneficiaries",
+      "Tax Equity Investors: Tertiary beneficiaries (powerful/mobile) \u2014 arbitrage the secondary TRA market and capture pricing gaps between actuarial value and market prices",
+      "Tax Regulatory Authorities: Oversight actor (organized/constrained) \u2014 perceive TRA as a temporary coordination mechanism subject to legislative reform; hold implicit sunset power"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The TRA creates a genuine value transfer from public shareholders to selling partners, but it is not as severe as pure extraction (snare \u03b5 \u2265 0.46) because: (1) the original coordination rationale is legitimate (founders needed an exit mechanism), (2) the tax benefit is real (not phantom), and (3) the amount (85%) is contractually specified (not arbitrary coercion). However, extractiveness has increased from 0.22 at inception to 0.38 currently as the original coordination rationale has been exhausted and the mechanism has become primarily extractive in character. Suppression (0.65): Moderate-high. Multiple barriers exist: (a) informational suppression \u2014 most investors do not understand TRA mechanics or cannot quantify the cash flow impact from SEC disclosures; (b) exit suppression \u2014 selling shares realizes the depressed price created by the TRA liability; (c) renegotiation suppression \u2014 the agreement is contractual and not subject to shareholder votes; (d) distributed suppression \u2014 the impact is spread across millions of shareholders making coordination costly. Theater ratio (0.42): Moderate-low. At inception, the TRA had high functional content (it solved a real problem). Currently, it still has functional content (partners continue exiting, tax benefits continue accruing) but increasingly includes theatrical elements: secondary market valuations are disputed, catch-up provisions require actuarial revaluation, and the 'fair compensation' narrative persists despite the mechanism's primary function being exhausted. The theater ratio has grown from 0.15 to 0.42 over the measurement interval.",
+    "perspectival_gap": "This constraint demonstrates a stark perspectival divergence between the beneficiary and victim perspectives. The selling partners (organized/arbitrage) experience the TRA as rope\u2014a coordination mechanism that fairly prices their exit and compensates them for their pre-IPO risk. They negotiated the terms, they understand the mechanics, and they have agency (they can refuse the deal or demand different terms). Blackstone management experiences it as rope: the TRA enables equity consolidation without forcing partners to liquidate at discounts. Public shareholders (powerless/trapped) experience the TRA as snare: they inherit an obligation they did not create, cannot understand fully, cannot exit, and cannot renegotiate. The gap reflects the fundamental asymmetry: founders experience the constraint as fair compensation; later shareholders experience it as permanent extraction. The analytical perspective from a financial engineering ecosystem sees it as tangled rope\u2014a coordination tool that has become an arbitrage opportunity, benefiting those with information advantage and mobile capital. The regulatory perspective sees it as scaffold\u2014a temporary arrangement subject to legislative and regulatory change. The gap between 'fair founder compensation' (selling partners' view) and 'permanent shareholder extraction' (public shareholder view) is the core diagnostic feature.",
+    "directionality_logic": "The TRA's directionality differs dramatically by agent. Selling partners have d \u2248 0.20 (beneficiary with exit options\u2014they negotiated the deal and can walk away if unsatisfied; they have arbitrage: they can restructure or avoid the TRA if terms are unfavorable). Their f(d) \u2248 0.15, producing low \u03c7\u2014they experience the constraint as beneficial. Public shareholders have d \u2248 0.85 (victims with minimal exit\u2014they inherit the liability, cannot negotiate, and realizing their shares at a discount is their only exit). Their f(d) \u2248 1.15, producing high \u03c7\u2014they experience maximum extraction. The regulatory perspective has d \u2248 0.55 (symmetric, with constrained exit\u2014they can change the tax code but face political and coordination costs). Their f(d) \u2248 0.75, producing moderate \u03c7. The derivation chain runs from the structural positions (who negotiated, who inherited, who regulates) through the exit options (arbitrage for negotiators, trapped for inheritors, constrained for regulators) to d values that reflect true structural relationships, not nominal power.",
+    "mandatrophy_analysis": "The TRA resolves the mandatrophy by disambiguating between legitimate coordination and rent extraction. The temptation is to classify the TRA as pure rope (founders fair compensation, problem solved) or pure snare (shareholder extraction, rent-seeking). The mandatrophy test asks: does the constraint have BOTH a genuine coordination function AND asymmetric extraction? YES: (1) Coordination function: the TRA enables founders to exit without forcing them to liquidate at discounts, solving a real collective action problem. Blackstone management also coordinates founder interests with public capital raising. (2) Asymmetric extraction: the TRA extracts from public shareholders who inherit the obligation without choice or consent. The benefit flows to a specific class (selling partners) in perpetuity, not to the system as a whole. The asymmetry is baked in\u2014founders captured upside during negotiation, later shareholders inherit downside in perpetuity. The classification is tangled rope because BOTH elements are present: genuine coordination at inception (founders exit fairly) AND asymmetric extraction at steady state (public shareholders permanently subsidize founder returns). Piton analysis: The theater ratio (0.42) reflects the constraint's degradation. At inception, theater was low (0.15) because the mechanism had clear functional content. At time 10, theater has increased (0.42) because the original function (founder exit) is exhausted, yet the mechanism persists through secondary markets, catch-up provisions, and valuation disputes. This creeping theater is the signature of mandatrophy in progress\u2014a coordination mechanism converting to extraction theater as its primary function atrophies."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "carried_interest_tax_preference",
+      "partnership_to_corporation_arbitrage",
+      "private_equity_fee_extraction"
+    ],
+    "dual_formulation_note": "The TRA is downstream of two structural constraints: (1) carried interest tax preference (\u03b5 \u2248 0.15, rope\u2014tax code structure enabling partnership income to qualify for capital gains treatment), and (2) partnership-to-corporation arbitrage (\u03b5 \u2248 0.35, tangled rope\u2014asymmetric benefit capture during IPO structure change). The TRA operationalizes the exploitation of both upstream constraints. As a family: carried_interest_tax_preference \u2192 partnership_to_corporation_arbitrage \u2192 blackstone_tra. Each constraint has a distinct \u03b5 and structural data; together they form a constraint family showing how tax code features enable corporate structure arbitrage which enables individual TRA extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.7
+    }
+  ]
+}

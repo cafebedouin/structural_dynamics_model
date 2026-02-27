@@ -1,0 +1,148 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_institutional_analysis",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.75,
+    "suppression": 0.8,
+    "theater_ratio": 0.75,
+    "claimed_type": "snare",
+    "human_readable": "The Silent Safety Silo (NASA Decision-Making Pre-Challenger)",
+    "topic_domain": "political/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nasa_top_management",
+      "morton_thiokol_management"
+    ],
+    "victims": [
+      "challenger_astronauts",
+      "nasa_engineers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Challenger Astronauts",
+      "comment": "Astronauts were unaware of the O-ring risks and had no way to exit the situation. They bore the ultimate cost."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "NASA Engineers",
+      "comment": "Engineers who raised concerns were constrained by the organizational structure and pressure to launch. Their concerns were suppressed, and they were victims of the flawed decision-making process."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "NASA Top Management",
+      "comment": "NASA management, while benefiting from the continued launch schedule and perceived success, ultimately operated within a degraded communication system that prevented them from making informed decisions. The system was in place but failing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Morton Thiokol Management",
+      "comment": "Morton Thiokol management benefited from maintaining their contract with NASA and avoided potential penalties for delaying the launch. They actively suppressed dissenting engineering opinions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An objective analysis reveals a system where critical safety information was actively filtered out, creating a dangerous environment. While there was a coordination function (launching the shuttle), asymmetric extraction (suppression of safety concerns for launch schedule) means this operated as a tangled rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "organizational_culture_influence",
+      "question": "To what extent did NASA's organizational culture prioritize schedule and budget over safety?",
+      "resolution_mechanism": "Historical analysis of NASA documents, interviews with personnel, and comparative studies with other organizations.",
+      "impact": "If culture was a dominant factor, the constraint is more deeply entrenched. If it was a temporary deviation, reforms may be more effective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessment of organizational culture influence"
+    },
+    {
+      "id": "communication_channel_integrity",
+      "question": "How effective were the formal and informal communication channels for conveying critical safety information?",
+      "resolution_mechanism": "Analysis of communication protocols, interviews with engineers and managers, and simulations of information flow.",
+      "impact": "If channels were fundamentally flawed, the constraint is more severe. If they were simply misused, targeted improvements may suffice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Integrity of communication channels"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.75
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The Rogers Commission identified a \"silent safety\" constraint where critical technical data regarding O-ring erosion was filtered out before reaching top-level NASA management. This created a flawed decision-making process that ultimately contributed to the Challenger disaster. The constraint involved the suppression of dissenting opinions, the prioritization of launch schedules over safety, and a degraded communication system that prevented informed decision-making.",
+    "key_agents": [
+      "Challenger Astronauts: Primary victims (powerless/trapped) - bore the ultimate cost of the flawed decision-making process.",
+      "NASA Engineers: Secondary victims (moderate/constrained) - raised concerns but were constrained by the organizational structure.",
+      "NASA Top Management: Beneficiary/Victim (institutional/constrained) - benefited from the continued launch schedule but operated within a degraded communication system.",
+      "Morton Thiokol Management: Primary beneficiary (institutional/arbitrage) - benefited from maintaining their contract with NASA and avoided potential penalties.",
+      "Analytical Observer: Observers (analytical/analytical) - able to see complete structure."
+    ],
+    "logic_rationale": "Extractiveness (0.75): High. The suppression of safety concerns for the sake of maintaining the launch schedule represents a significant extraction from safety protocols and ethical considerations. Suppression (0.80): High. The active filtering of information and the discouragement of dissenting opinions indicate a high degree of suppression. Theater ratio (0.75): High. There were formal safety procedures in place, but they were not effectively implemented or followed, leading to a theatrical performance of safety rather than genuine safety measures.",
+    "perspectival_gap": "The Challenger astronauts were unaware and trapped, seeing a snare. NASA engineers saw a snare because they had safety concerns that were ignored, despite their moderate power. NASA management was constrained by the information they received (or did not receive) and the need to launch on schedule. Morton Thiokol management saw an opportunity for arbitrage, prioritizing profit over safety, actively suppressing dissenting engineering opinions to achieve this. From an analytical perspective, the entire system of NASA decision making acted as a tangled rope that suppressed safety for the sake of continued operation and launch schedules.",
+    "directionality_logic": "Directionality is determined by the agents structural role within the constraint. NASA management and Morton Thiokol, who benefitted from the launch going ahead, have low d values. Those whose opinions were suppressed, or who were otherwise disadvantaged by the constraint, have a high d. The analytical observer sees the entire picture.",
+    "mandatrophy_analysis": "The constraint prevents mislabeling coordination as pure extraction by highlighting the trade-offs between safety and operational goals. While NASA had the coordination function of launching the shuttle, the suppression of safety concerns means this operated as a tangled rope rather than a pure rope, and for those who paid the ultimate price, a snare. The high extractiveness is justified by the ultimate cost paid by the astronauts, and the active suppression of safety concerns."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

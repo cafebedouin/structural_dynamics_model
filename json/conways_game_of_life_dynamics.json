@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "conways_game_of_life_dynamics",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cgol"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Conway's Game of Life Dynamics",
+    "topic_domain": "mathematical/computational",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Analyst",
+      "comment": "PERSPECTIVE 1: MATHEMATICAL ANALYST (MOUNTAIN) \u2014 From the perspective of formal logic and mathematics, the dynamics of Conway's Game of Life are an inescapable logical consequence of the four birth/survival/death rules applied deterministically to a 2D grid. The emergence of complex patterns (gliders, blinkers, gospers) from simple local rules is a mathematical fact, not subject to negotiation, suppression, or alternative interpretation. The constraint is the rule set itself \u2014 it permits no degrees of freedom once initial conditions are specified."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Computational Researcher",
+      "comment": "PERSPECTIVE 2: COMPUTATIONAL RESEARCHER (MOUNTAIN) \u2014 A researcher investigating Game of Life dynamics faces an unchangeable constraint: the four rules are axiomatic. No amount of funding, institutional pressure, or alternative methodology can alter the fact that a live cell with 2-3 neighbors survives, or that a dead cell with exactly 3 neighbors births a live cell. The researcher can compute, visualize, and analyze patterns, but cannot change the underlying dynamical rules. The mountain persists across all attempts to observe or manipulate."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Student Learning Cellular Automata",
+      "comment": "PERSPECTIVE 3: STUDENT (MOUNTAIN) \u2014 A student learning cellular automata discovers that Game of Life rules are non-negotiable: they cannot wish away the emergence of complex patterns, cannot opt out of the logical consequences of the rules, and cannot find an alternative formalism that avoids the constraint. The rules are presented as fundamental \u2014 barriers to exit from this learning context are low, but the constraint itself is immutable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Institution",
+      "comment": "PERSPECTIVE 4: ACADEMIC INSTITUTION (MOUNTAIN) \u2014 Universities teaching or researching cellular automata recognize that Conway's Game of Life rules are invariant across all institutional contexts. A computer science department cannot negotiate with the mathematics of emergence. The constraint defines the problem space within which research occurs. The institution benefits from teaching and research on Game of Life (publication, prestige), but cannot modify the underlying rules \u2014 it can only explore their consequences."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "computational_universality_threshold",
+      "question": "At what grid scale and configuration complexity do the emergent computational properties of Game of Life become undecidable?",
+      "resolution_mechanism": "Formal proof of Turing completeness threshold; identification of specific patterns that encode halting-problem instances",
+      "impact": "If threshold is low (small grid, few patterns): universality is a fundamental feature of the rules. If threshold is high: universality is an artifact of scale and may not apply to physically realizable systems.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Game of Life universality requires unbounded computational resources"
+    },
+    {
+      "id": "pattern_emergence_predictability",
+      "question": "Can the long-term behavior of arbitrary Game of Life configurations be predicted without simulation, or is the problem fundamentally uncomputable?",
+      "resolution_mechanism": "Proof or disproof of the decidability of the Game of Life halting problem; algorithmic analysis of pattern classes",
+      "impact": "If decidable: Game of Life is analyzable in principle, even if computation is hard. If undecidable: the mountain constraint includes irreducible computational unpredictability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Game of Life behavior is computationally decidable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Conway's Game of Life is a zero-player cellular automaton created by John Conway in 1970. It operates on a 2D grid where each cell is either alive or dead. At each time step, the state of each cell is determined by four simple rules: (1) a live cell with 2-3 live neighbors survives; (2) a live cell with fewer than 2 or more than 3 neighbors dies; (3) a dead cell with exactly 3 live neighbors becomes alive; (4) all other cells remain dead. Despite these minimal rules, the system generates rich emergent behavior: stable patterns (blocks, beehives), oscillators (blinkers, toads), moving patterns (gliders), and complex metaconstructions (gossip guns, universal Turing machines). The constraint is the rule set itself: no agent, context, or interpretation can escape the logical consequences of these four rules. This makes Game of Life a paradigmatic mountain constraint \u2014 a natural law of the mathematical domain it inhabits.",
+    "key_agents": [
+      "The Mathematical Rules: The constraint itself (institutional/arbitrage) \u2014 defines the problem space; no agent can modify or escape them",
+      "Computational Researchers: Observers of emergent patterns (powerful/mobile) \u2014 can compute, visualize, and analyze, but cannot alter the underlying dynamics",
+      "Students and Educators: Learners within the system (moderate/constrained) \u2014 encounter the rules as fundamental; can understand but not negotiate",
+      "Academic Institutions: Beneficiaries of research and pedagogy (institutional/arbitrage) \u2014 benefit from publications and prestige, but constrained by the immutable rules"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The Game of Life rules do not extract value from any agent \u2014 they are logical constraints, not institutional mechanisms. The rules simply define the problem space. No agent is made worse off by the existence of the rules; rather, they enable computational and mathematical exploration. Suppression (0.02): Minimal. There are no alternatives to suppress; the rules do not constrain agent choices because they define a mathematical domain, not a social or economic system. No agent is forced into the Game of Life; it is studied voluntarily. Theater ratio (0.15): Low. The presentation of Game of Life rules is straightforward and non-performative. Teaching may include visualization, animation, or pedagogical narrative, but the core rules are stated plainly as axioms. The theater reflects only the inevitable gap between formal statements and intuitive explanation.",
+    "perspectival_gap": "All four perspectives classify the constraint as mountain with near-perfect unanimity. This is the hallmark of a true natural law: no matter the observer's power, time horizon, exit options, or spatial scope, the constraint is perceived identically. The mathematical analyst sees immutable logic. The computational researcher sees unchangeable dynamics. The student sees non-negotiable rules. The institution sees an invariant problem space. The absence of perspectival disagreement is diagnostic evidence of mountainhood \u2014 if the constraint were social or economic in nature, we would expect beneficiaries and victims to perceive it differently.",
+    "directionality_logic": "The standard directionality derivation (beneficiary/victim + exit options \u2192 d) does not apply to mountain constraints. Game of Life has no beneficiaries or victims \u2014 it is a pure logical constraint. The engine derives d uniformly across all perspectives from the canonical fallback for the power atom. For analytical contexts (d \u2248 0.73), the high f(d) \u2248 1.15 would suggest high experienced extractiveness, but the mountain classification gates on accessibility_collapse \u2265 0.85 and resistance \u2264 0.15, which override any extractiveness scaling. The constraint is mountain-identified by its intrinsic properties, not by directionality derivation."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "cellular_automaton_universality",
+      "emergence_and_reducibility",
+      "computational_halting_problem"
+    ],
+    "dual_formulation_note": "Game of Life is upstream of broader constraints on cellular automaton behavior and computational universality. The four rules are fundamental; they are not downstream of more primitive constraints. Claims about the 'simplicity' vs 'complexity' of Game of Life behavior depend on measurement (state space enumeration vs visual complexity vs computational expressiveness), but the underlying rules remain invariant."
+  }
+}

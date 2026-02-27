@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "israeli_settlement_policy_authority_restriction",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ispa"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Israeli Settlement Policy Restricting Palestinian Authority",
+    "topic_domain": "political/territorial_control",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "israeli_settlement_movement",
+      "israeli_state_apparatus"
+    ],
+    "victims": [
+      "palestinian_authority",
+      "palestinian_civil_population"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Palestinian Authority and Civil Population",
+      "comment": "PERSPECTIVE 1: PALESTINIAN AUTHORITY & CIVIL POPULATION (SNARE) \u2014 Cannot exit Area C restrictions; bears full cost of territorial exclusion and administrative subordination. PA has no meaningful self-determination in 60% of West Bank territory. Extraction is severe: loss of resource access, administrative authority, settlement rights, and economic development capacity. d\u22480.92, f(d)\u22481.38, \u03c3=1.1 \u2192 \u03c7\u22480.65."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Israeli Security Establishment",
+      "comment": "PERSPECTIVE 2: ISRAELI SECURITY ESTABLISHMENT (TANGLED ROPE) \u2014 Constrains PA authority through security coordination requirements while also extracting territorial and administrative control. Claims coordination function (joint security, intelligence sharing) alongside asymmetric extraction (settlement expansion, military jurisdiction). Requires active enforcement via military administration and law enforcement. d\u22480.58, f(d)\u22480.82, \u03c3=1.1 \u2192 \u03c7\u22480.40."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Israeli Settlement Movement and State Apparatus",
+      "comment": "PERSPECTIVE 3: ISRAELI SETTLEMENT MOVEMENT & STATE APPARATUS (ROPE) \u2014 Primary beneficiary. Experiences the constraint as coordination enabling settlement expansion and territorial consolidation. State apparatus uses legal classification system (Area C unilateral Israeli control) to justify policy. Movement sees restriction as protection mechanism for settlement rights. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.1 \u2192 \u03c7\u2248-0.06. Net beneficiary; negative effective extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The International Community and Advocacy Groups",
+      "comment": "PERSPECTIVE 4: INTERNATIONAL COMMUNITY & ADVOCACY GROUPS (TANGLED ROPE) \u2014 Observer-advocates with constrained exit. Recognize both coordination (security concerns) and extraction (territorial restrictions). Can document violations but cannot enforce compliance. Limited leverage through sanctions or diplomatic pressure. d\u22480.65, f(d)\u22480.98, \u03c3=1.1 \u2192 \u03c7\u22480.50."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Oslo Accords Framework",
+      "comment": "PERSPECTIVE 5: OSLO ACCORDS FRAMEWORK (PITON) \u2014 Formally established Area C as joint Israeli-PA coordination zone, but the framework is degraded: Israeli unilateral control has superseded negotiated agreements. Theater_ratio=0.58 reflects performative invocation of the accords while actual implementation is extractive militarized administration. The accords persist through institutional inertia despite functional collapse."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global perspective, the structural properties (\u03b5=0.68, suppression=0.72, mandatrophy=true) indicate pure extraction with coerced coordination framing. The constraint exhibits all hallmarks of a snare: high extraction, high suppression, active enforcement requirement, and strategic use of security language to naturalize territorial control. Mandatrophy resolved through recognition that 'security coordination' is secondary to territorial extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "security_coordination_authenticity",
+      "question": "Is the claimed security coordination function (joint Israeli-PA security operations) a genuine structural feature or performative justification for extraction?",
+      "resolution_mechanism": "Analysis of operational security arrangements: actual joint patrols, intelligence sharing, coordinated operations; comparison to unilateral Israeli military activities; assessment of threat levels before/after coordination claims",
+      "impact": "If authentic coordination: constraint classifies as Tangled Rope from Israeli perspective. If performative: constraint classifies as pure Snare across all perspectives; mandatrophy is resolved.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether security coordination is genuine or performative"
+    },
+    {
+      "id": "settlement_expansion_causation",
+      "question": "Does Area C administrative control directly enable settlement expansion, or would settlement patterns follow alternative causal pathways?",
+      "resolution_mechanism": "Comparative historical analysis: settlement growth rates under different administrative arrangements; counterfactual modeling of settlement expansion without Area C restrictions; analysis of resource allocation and legal enforcement mechanisms",
+      "impact": "If direct causation: extraction mechanism is clear (territorial control \u2192 settlement capacity). If indirect: extraction may be mediated by political/demographic factors; snare classification remains but extraction mechanism is more complex.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal link between Area C control and settlement expansion"
+    },
+    {
+      "id": "pa_exit_capacity",
+      "question": "What exit options actually remain for the Palestinian Authority: unilateral state declaration, armed resistance, diplomatic withdrawal, or none?",
+      "resolution_mechanism": "Assessment of PA capacity for each exit pathway; analysis of international recognition, military capacity, economic viability, and internal legitimacy; historical precedent analysis",
+      "impact": "If meaningful exits exist: PA directionality shifts from trapped (d\u22480.92) toward constrained or mobile. If exits are illusory: trapped classification confirmed; snare classification is certain.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "PA's actual exit options from the constraint"
+    },
+    {
+      "id": "suppression_mechanism_nature",
+      "question": "Is suppression (0.72) primarily military/coercive or administrative/structural (or both equally)?",
+      "resolution_mechanism": "Decomposition of suppression: military enforcement incidents, administrative restrictions, resource barriers, legal jurisdiction restrictions; analysis of which mechanism is primary vs secondary",
+      "impact": "If primarily military: snare classification is certain. If primarily administrative: classification may shift toward Tangled Rope if coordination elements increase. If equal: snare classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Primary suppression mechanism type"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 1993,
+    "end": 2023
+  },
+  "commentary": {
+    "narrative_context": "Israeli settlement policy in Area C of the West Bank creates a structural constraint that restricts Palestinian Authority administrative authority, resource access, and territorial control. Area C comprises approximately 60% of West Bank territory and is designated for Israeli control under the Oslo Accords framework, but the framework itself has become degraded through unilateral Israeli expansion of settlements and military administration. The constraint exhibits characteristics of a pure extraction mechanism (snare) from the Palestinian perspective, while Israeli institutional actors frame it as a coordination and security mechanism (tangled rope). The constraint's theater ratio (0.58) reflects the gap between formal Oslo Accords language describing joint coordination and actual unilateral Israeli administrative and military control. Extractiveness has increased steadily from 0.42 (early 1990s, immediate post-Oslo period with genuine coordination mechanisms) to 0.68 (current, with settlement expansion and military jurisdiction superseding negotiated arrangements). Suppression (0.72) reflects multiple overlapping mechanisms: military authority, administrative restrictions, resource access barriers, and legal frameworks that subordinate Palestinian civil authority. The constraint is active, enforced, and structurally entrenched.",
+    "key_agents": [
+      "Palestinian Authority: Primary victim (powerless/trapped) \u2014 bears full cost of territorial exclusion and administrative subordination; cannot exit Area C restrictions",
+      "Palestinian Civil Population: Primary victim (powerless/trapped) \u2014 constrained settlement rights, resource access, economic development; subject to Israeli military jurisdiction in 60% of West Bank",
+      "Israeli Settlement Movement: Primary beneficiary (institutional/arbitrage) \u2014 drives settlement expansion; benefits from territorial control and legal frameworks enabling Jewish-only settlements",
+      "Israeli State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 maintains military administration of Area C; derives security justification and territorial control from restriction policy",
+      "Israeli Security Establishment: Secondary actor (organized/constrained) \u2014 claims coordination function (joint security operations) alongside extraction of administrative control; represents hybrid perspective",
+      "International Community and Advocacy Organizations: Observer-mediators (moderate/constrained) \u2014 can document violations but have limited enforcement capacity; constrained by diplomatic and geopolitical factors",
+      "Oslo Accords Framework: Institutional structure (institutional/constrained) \u2014 formally establishes joint coordination but is functionally degraded by unilateral Israeli expansion; represents piton perspective"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts substantial value from Palestinian Authority: loss of administrative authority in 60% of West Bank territory, inability to authorize settlements or development projects, subordination to Israeli military jurisdiction, and resource access barriers. The trajectory from 0.42 to 0.68 reflects settlement expansion accelerating beyond the Oslo Accords framework, with unilateral Israeli control increasingly replacing negotiated coordination. The current level is high enough to classify the constraint as a snare when viewed from Palestinian perspective, but remains below the 0.80+ levels of pure confiscatory extraction (some coordination language persists, some security cooperation continues). Suppression (0.72): High. Multiple overlapping mechanisms suppress Palestinian Authority alternatives: military authority and law enforcement (Israeli military reserves all coercive power in Area C), administrative restrictions (PA cannot authorize development or settlement without Israeli approval), legal frameworks (settlements are legally Israeli territory under Israeli law; Palestinians have no equivalent rights), and resource barriers (water, minerals, development land are allocated asymmetrically). The constraint cannot be escaped through ordinary administrative process. Theater ratio (0.58): Moderate-high. The Oslo Accords framework uses language of 'joint coordination' and 'transitional arrangement,' but actual implementation is unilateral Israeli military administration. The theater reflects the gap between formal agreements describing negotiated zones and actual practice of Israeli security control. Theater has increased from 0.35 (early 1990s, when some joint security operations genuinely occurred) to 0.58 (current, when 'coordination' is largely performative invocation of security language to justify unilateral control). Mandatrophy (true): The constraint resolves the mandatrophy by acknowledging that security coordination language (which would classify as Tangled Rope) is secondary to territorial extraction (which classifies as Snare). The primary function is extraction of territorial control and settlement rights; security coordination is the justification framing.",
+    "perspectival_gap": "The constraint demonstrates a stark perspectival gap between beneficiary and victim perspectives. The Israeli settlement movement and state apparatus experience the constraint as coordination and protection (Rope) \u2014 a mechanism enabling legitimate territorial claims and security requirements. The Palestinian Authority and civil population experience the constraint as extraction and subordination (Snare) \u2014 loss of administrative authority, territorial rights, and self-determination capacity. The Israeli security establishment occupies a hybrid position (Tangled Rope) \u2014 they coordinate security operations with the PA while simultaneously extracting administrative control. The international observer (analytical perspective) sees the constraint as a snare, recognizing that the 'security coordination' frame naturalizes what is structurally a pure extraction mechanism. The Oslo Accords framework itself (piton perspective) shows functional degradation \u2014 it was designed as a coordination mechanism but has become a legal justification for unilateral Israeli control, persisting through institutional inertia rather than operational function.",
+    "directionality_logic": "Palestinian Authority & Civil Population: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction directionality. PA has no exit option; cannot unilaterally declare independence (international recognition blocked), cannot effectively resist (military asymmetry), cannot withdraw from constraint (territorial location fixed). Bears full cost of restriction. Israeli Settlement Movement & State Apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary directionality. Can walk away from constraint (withdraw settlements, restore joint coordination); instead maintains control through policy choice. Negative effective extraction indicates net gain from constraint. Israeli Security Establishment: Victim + constrained AND Beneficiary + arbitrage (hybrid) \u2192 d\u22480.58, f(d)\u22480.82. Constrained exit (security logic requires some level of territorial control and PA coordination) but also benefits from administrative control and intelligence access. Moderate extraction directionality reflects mixed position. International Community: Observer + analytical \u2192 d\u22480.65, f(d)\u22480.98. Moderate-high directionality; constrained exit (geopolitical factors, state sovereignty limits intervention) but also benefits from access to both Israeli and PA cooperation. Oslo Accords Framework: Institutional + constrained \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position; equally violated by both Israeli unilateral expansion and Palestinian non-implementation of security cooperation clauses.",
+    "mandatrophy_analysis": "SNARE WITH SECONDARY COORDINATION FRAMING: The constraint resolves the mandatrophy through careful examination of primary vs secondary functions. Israeli institutional actors claim this is a Tangled Rope: security coordination with extraction (settlement protection) as an asymmetric but necessary element of security architecture. The mandatrophy resolution recognizes that this framing inverts the causal hierarchy. The primary structural function (what drives the policy) is territorial extraction and settlement expansion; security coordination is the post-hoc justification and secondary mechanism. Evidence: (1) Settlement expansion continues regardless of security threat levels; (2) Coordination only occurs where it benefits Israeli interests; (3) PA capacity to provide security is extensive but remains subordinated to Israeli control; (4) Theater ratio (0.58) indicates performative coordination language. When security coordination is recognized as secondary, the classification shifts from Tangled Rope to Snare. The constraint is mandatrophy-resolved at \u03b5=0.68 (extractiveness high enough to require resolution). Recommendation: classify as Snare from analytical perspective; acknowledge Tangled Rope framing from Israeli institutional perspective as theoretically possible but empirically secondary."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "palestinian_state_formation_capacity",
+      "west_bank_water_rights_allocation",
+      "israeli_palestinian_trade_asymmetry"
+    ],
+    "dual_formulation_note": "The settlement policy constraint is downstream of broader Israeli territorial expansion policies but represents a distinct structural mechanism. The upstream constraint (territorial expansion logic) has different \u03b5 reflecting fundamental territorial claims; this constraint has \u03b5=0.68 reflecting specifically the administrative restriction of PA authority in Area C. The constraint family includes related extraction mechanisms in water rights, economic dependency, and state formation capacity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

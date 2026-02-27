@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "us_labor_mobility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uslm"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "US Geographic and Professional Labor Mobility",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_skill_workers_networked",
+      "coastal_tech_hubs",
+      "educational_credential_gatekeepers"
+    ],
+    "victims": [
+      "geographically_immobile_workers",
+      "rural_labor_markets",
+      "credential_excluded_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Place-Bound Worker",
+      "comment": "PERSPECTIVE 1: PLACE-BOUND WORKER (SNARE) \u2014 Lacks capital, social network, or credentials for geographic relocation. Constrained to local labor markets with limited job options. Career mobility is virtually impossible without prohibitive costs (education, moving, credential acquisition). Trapped by family obligations, healthcare needs, or lack of liquidity. Experiences maximal extraction \u2014 constraint prevents access to higher-wage opportunities nationwide."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Credential-Bearing Professional",
+      "comment": "PERSPECTIVE 2: CREDENTIAL-BEARING PROFESSIONAL (TANGLED ROPE) \u2014 Holds degree or certification enabling geographic mobility, but faces barriers: student debt constrains relocation choice, professional networks are region-specific, occupational licensing creates friction between states. Benefits from national labor market access for jobs matching credentials; bears extraction through debt servicing, network establishment costs, and regulatory compliance overhead. Mixed coordination-extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Coastal Tech Hub Employer",
+      "comment": "PERSPECTIVE 3: COASTAL TECH HUB EMPLOYER (ROPE) \u2014 Benefits from geographic wage arbitrage: attracts talent nationwide by offering premium salaries while capturing productivity gains. Experiences the constraint as pure coordination: the ability to hire from across the country enables specialization and capital concentration. High exit options (can relocate, can hire remote, can partner with other hubs). Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Educational Credential Industry",
+      "comment": "PERSPECTIVE 4: CREDENTIAL INDUSTRY (TANGLED ROPE) \u2014 Universities, professional certification bodies, licensing boards enforce the credential requirement that gates geographic mobility. They benefit from the constraint (tuition, exam fees, continuing education mandates) while providing genuine coordination function (standardization enables employer trust in worker quality). Active enforcement through accreditation, licensure verification, and professional standards. Organized institutional actors with some exit options (alternative credentials emerging, but slowly)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Occupational Licensing System",
+      "comment": "PERSPECTIVE 5: OCCUPATIONAL LICENSING SYSTEM (PITON) \u2014 Professional licensing (medical, legal, engineering, cosmetology) creates state-level friction that persists through institutional inertia. The functional purpose (quality assurance) has largely been replaced by performative recertification requirements. Licensing creates real barriers to interstate mobility but provides minimal additional quality verification beyond initial credentialing. Theater ratio reflects that licensure renewal is largely bureaucratic rather than substantively protective."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Human Capital View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN ATTEMPT) \u2014 From a civilizational view, human capital localization appears immutable: knowledge and skills are embodied in persons, whose relocation is inherently costly. Some scholars naturalize labor immobility as a consequence of information asymmetry or social capital geography. However, the structural data reveals contingent institutional arrangements (credential gatekeeping, state licensing, housing supply constraints) rather than natural law. This classification is likely a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credential_requirement_justification",
+      "question": "Do occupational credential requirements primarily serve quality assurance or function as rent-extraction mechanisms that suppress geographic competition?",
+      "resolution_mechanism": "International comparison of credential-to-outcome ratios; analysis of credential inflation (time/cost required for license renewal relative to actual risk reduction); correlation between licensing stringency and wage premiums",
+      "impact": "If primarily quality assurance: constraint is Mountain-adjacent coordination. If primarily extraction: constraint is Snare from credential-excluded workers' perspective. If mixed: Tangled Rope holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credentials serve quality assurance or rent extraction"
+    },
+    {
+      "id": "remote_work_structural_change",
+      "question": "Does remote work infrastructure fundamentally alter the geographic labor market structure, converting the constraint from Snare to Rope?",
+      "resolution_mechanism": "Longitudinal wage equity analysis (remote-capable vs place-bound workers); measurement of professional network effects in distributed vs colocated teams; tracking of remote adoption rates by professional category",
+      "impact": "If remote enables genuine option: many victims gain exit options, classification shifts toward Rope. If remote is selective (high-skill workers only): extraction mechanism persists, remains Tangled Rope or Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether remote work fundamentally changes labor market geography"
+    },
+    {
+      "id": "housing_supply_as_structural_constraint",
+      "question": "Is geographic labor immobility primarily driven by occupational licensing and credential requirements, or by housing supply constraints in high-wage regions?",
+      "resolution_mechanism": "Counterfactual analysis: regions with loose licensing but tight housing (e.g., California tech + housing shortage) vs tight licensing with abundant housing (e.g., Texas + professional reciprocity); comparison of relocation rates pre/post housing interventions",
+      "impact": "If housing-dominated: the labeled constraint is misidentified; true constraint is 'housing supply gatekeeping'. If licensing-dominated: Tangled Rope classification holds. If roughly equal: both are coupled constraints requiring network decomposition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative importance of licensing versus housing supply in mobility barriers"
+    },
+    {
+      "id": "network_effect_substitutability",
+      "question": "Can social capital and professional networks be efficiently acquired by relocated workers, or does geographic isolation permanently limit network returns?",
+      "resolution_mechanism": "Longitudinal earnings tracking of relocated workers; network-formation time measurements; correlation between relocation distance and professional network size after 3/5/10 years",
+      "impact": "If networks are substitutable: relocation friction is temporary and declining (Scaffold perspective strengthens). If networks are local-dependent: relocation carries permanent opportunity cost (Snare perspective for isolated workers strengthens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether professional networks can be acquired post-relocation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "US labor mobility\u2014the ability of workers to relocate for economic opportunity\u2014operates as a hybrid coordination and extraction mechanism. The nominal function is coordination: credential standards and licensing provide employers with trust in worker capability, enabling national labor matching. The structural reality diverges sharply by worker position. High-skill, networked workers in coastal tech hubs experience genuine coordination\u2014national markets increase their opportunity set. Place-bound workers in rural and declining industrial regions experience extraction: credential requirements, state licensing friction, housing market gatekeeping, and lack of social capital effectively trap them in local labor markets with declining opportunities. The extractiveness has increased over 30 years as geographic inequality has widened, credential requirements have inflated, and housing supply constraints in high-productivity regions have intensified. The theater ratio (0.48) reflects that credential renewal requirements and licensing maintenance increasingly function as performative recertification rather than meaningful quality assurance, especially as occupation-specific knowledge becomes obsolete faster than licensure cycles.",
+    "key_agents": [
+      "Geographically Immobile Workers: Primary victims (powerless/trapped) \u2014 lack capital, networks, or credentials for relocation; trapped in declining local labor markets",
+      "High-Skill Coastal Tech Workers: Primary beneficiaries (institutional/arbitrage) \u2014 capture wage premiums from national labor market access; can relocate at low cost; experience constraint as coordination",
+      "Educational Credential Gatekeepers: Active enforcers (organized/constrained) \u2014 universities, professional associations, licensing boards; benefit from credential requirements (tuition, fees, authority); provide genuine standardization function but also suppress competition",
+      "State Licensing Boards: Institutional enforcers (institutional/constrained) \u2014 occupational licensing creates state-level friction; maintain through bureaucratic inertia rather than functional quality assurance",
+      "Housing Supply Gatekeepers: Structural beneficiaries (institutional/arbitrage) \u2014 zoning restrictions and supply constraints in high-wage regions; benefit from artificial scarcity; limit mobility through cost barriers",
+      "Rural Labor Markets: Systemic victim (powerless/trapped) \u2014 drained of talent; remaining workers face declining job options and wages; cannot organize exit"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significantly from place-bound workers by limiting their access to national opportunity sets, but extraction is not total\u2014some local mobility is possible, and remote work is beginning to expand options. The value increased from 0.48 to 0.58 over 30 years as geographic inequality widened and credential requirements became more stringent. Suppression (0.62): Moderate-high. Substantial barriers prevent exit: credential requirements impose time and cost, state licensing creates friction between jurisdictions, housing costs in high-wage regions make relocation prohibitive, and lack of social capital makes network formation difficult for isolated workers. Organizing alternative labor matching systems faces network effects favoring incumbent credentialing. Theater ratio (0.48, rising): Moderate. Credential renewal and licensing maintenance increasingly function as ritual compliance rather than meaningful quality verification. Early career credential acquisition serves a genuine signal function; continuing education requirements become increasingly performative as specialized knowledge dominates and standardized recertification cannot meaningfully measure competence.",
+    "directionality_logic": "Directionality varies sharply by agent position. Beneficiaries (coastal tech employers, credential gatekeepers) have low d\u2014they experience the constraint as beneficial coordination or extraction-favoring arrangement (d \u2248 0.10-0.30). Victims (place-bound workers, rural labor markets) have high d\u2014trapped in local markets with no realistic exit, they experience maximum extraction (d \u2248 0.85-0.95). Moderate agents (professionals with credentials but regional ties) fall in the middle\u2014constrained but not trapped, with some mobility but significant friction (d \u2248 0.50-0.70). The credential industry occupies an ambiguous position: they are enforcers of extraction but also provide genuine standardization coordination, placing them at d \u2248 0.40 (organized/constrained, mixed function). The engine's derivation should produce higher chi for powerless/trapped workers and lower chi for institutional/arbitrage beneficiaries\u2014this perspectival gap is the core diagnostic of the constraint's asymmetry.",
+    "perspectival_gap": "This constraint exhibits a dramatic perspectival gap. The coastal tech employer sees a well-functioning national labor market (Rope)\u2014they can hire the best talent from anywhere and benefit from geographic wage arbitrage. The place-bound worker sees a trap (Snare)\u2014credential requirements and network barriers lock them out of higher-wage opportunities. The credential industry sees legitimate standardization (Tangled Rope with mixed benefit/cost)\u2014they provide real quality assurance but also capture rents through licensing requirements. The state licensing system sees itself as a degraded institution (Piton)\u2014occupational licensing persists through bureaucratic inertia, with licensing renewal requirements becoming increasingly performative. The analytical observer might naturalize immobility as inevitable (Mountain false summit), but the structural data reveals contingent institutional arrangements: credential gatekeeping, state-level licensing friction, and housing supply constraints. None of these are natural laws of labor markets.",
+    "mandatrophy_analysis": "The mandatrophy here is the risk of naturalizing geographic inequality as market-efficient rather than extraction-enabled. High-skill workers' concentration in coastal hubs is portrayed as 'agglomeration economies' (natural) rather than as the outcome of credential-gated access and housing scarcity (contingent). The Tangled Rope classification resolves this by documenting both the genuine coordination function (credential standardization does enable employer trust) and the asymmetric extraction (the costs fall predominantly on place-bound workers who benefit least from the coordination function). The piton classification of state licensing reveals that much of the constraint's enforcement is theatrical\u2014continuing licensure requirements persist not because they meaningfully assess competence but because the licensing apparatus has become institutional. The mountain perspective is explicitly marked as likely false: there is nothing natural about labor immobility in a digital-capable economy; the barriers are institutional and policy-modifiable."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "housing_supply_gatekeeping",
+      "educational_credential_inflation",
+      "regional_wealth_divergence"
+    ],
+    "dual_formulation_note": "US labor mobility decomposes into multiple structural constraints: (1) occupational credential and licensing systems (this story, \u03b5\u22480.58), (2) housing supply constraints in high-wage regions (separate story, \u03b5\u22480.65), (3) state-level licensing friction (embedded here as piton perspective), (4) social capital geography and network effects (embedded here as direction of d for moderate agents). These are linked through network affects: credential requirements reinforce geographic segregation because credentials concentrate in coastal regions; housing scarcity in those regions compounds the extraction mechanism; regional divergence in opportunity makes credentials more essential, increasing the gatekeeping power of credential institutions. Each story has its own \u03b5 and metrics but shares the underlying theme of geographic labor market segmentation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
+}

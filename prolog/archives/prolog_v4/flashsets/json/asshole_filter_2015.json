@@ -1,0 +1,133 @@
+{
+  "header": {
+    "constraint_id": "asshole_filter_2015",
+    "version": "1.0",
+    "generated_date": "2024-01-01",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Asshole Filter",
+    "topic_domain": "psychological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "transgressive_individuals"
+    ],
+    "victims": [
+      "non_transgressive_individuals",
+      "ethical_organizational_culture"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Non-Transgressive Individuals",
+      "comment": "Perspective of individuals who are repelled by the transgressive behavior and cannot thrive in the environment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "Transgressive Individuals",
+      "comment": "Perspective of individuals who benefit from the lack of boundaries and are rewarded for their behavior."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Ethical Organizational Culture",
+      "comment": "Perspective of the intended ethical culture of the organization, which is harmed by the filter."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Perspective of an observer analyzing the system and recognizing the unintended consequences."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "boundaries_definition",
+      "question": "How are the boundaries defined, and what level of transgression is tolerated?",
+      "resolution_mechanism": "Analyzing the code of conduct and observed behavior.",
+      "impact": "Determines the level of extraction and suppression.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The clarity and enforcement of organizational boundaries."
+    },
+    {
+      "id": "reward_systems",
+      "question": "What behaviors are rewarded, and how do those rewards contribute to the filter?",
+      "resolution_mechanism": "Examining promotion and recognition criteria.",
+      "impact": "Highlights the incentives that drive the filter.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Organizational reward structures and their effects on behavior."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 'asshole filter' describes how seemingly neutral organizational structures can inadvertently favor transgressive individuals. This happens when ethical boundaries are weakly enforced, allowing those who disregard them to gain an advantage. Simultaneously, individuals who respect ethical standards are disadvantaged or driven away, leading to a degradation of organizational culture.",
+    "key_agents": [
+      "Transgressive Individuals: Primary beneficiary (powerful/arbitrage) - thrive in the absence of boundaries.",
+      "Non-Transgressive Individuals: Primary victim (powerless/trapped) - repelled by the lack of ethical standards.",
+      "Ethical Organizational Culture: Secondary victim (institutional/constrained) - harmed by the erosion of values."
+    ],
+    "logic_rationale": "The base extractiveness reflects the degree to which the organization extracts value from ethical individuals while disproportionately rewarding transgressive behavior. The suppression represents the limitations on ethical individuals' ability to thrive or challenge the behavior. The high extractiveness indicates a significant benefit to the transgressive individuals at the expense of the ethical organizational culture.",
+    "perspectival_gap": "Transgressive individuals perceive the system as a rope, enabling their advancement. Non-transgressive individuals experience it as a snare, trapping them in an unethical environment. The ethical organizational culture is harmed over time.",
+    "directionality_logic": "The directionality is derived from the structural relationships: transgressive individuals benefit and have arbitrage options, resulting in a low 'd' value. Ethical individuals are targeted, with limited or no exit options, leading to a high 'd' value.",
+    "mandatrophy_analysis": "The tangled rope classification prevents mislabeling the system as either pure coordination or pure extraction by recognizing the mixed incentives and consequences. It acknowledges that while some benefit from the system, others are significantly harmed."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  }
+}

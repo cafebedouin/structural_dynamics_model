@@ -1,0 +1,146 @@
+{
+  "header": {
+    "constraint_id": "y_combinator",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.4,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Y Combinator Standard Equity Terms",
+    "topic_domain": "economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "y_combinator",
+      "yc_batch_startups"
+    ],
+    "victims": [
+      "yc_non_batch_startups",
+      "yc_founder_equity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "YC Non-Batch Startups",
+      "comment": "Startups outside the YC batch program that still have to compete with YC-backed companies face a significant disadvantage in attracting funding and talent.  They cannot easily exit this environment. These startups are often in a weaker negotiating position and are essentially 'trapped' by the outsized influence of YC-backed startups. Their access to capital is suppressed as investors favor YC companies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "YC Founder Equity",
+      "comment": "YC founders see a tangle of rope.  While they benefit from the brand name and resources of the YC program, they also often have to give up a larger chunk of equity than they would have otherwise, thus diluting their ownership and long-term potential gains. Their exit is 'constrained' in that they chose to be a part of YC, but their long-term equity is impacted."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Y Combinator",
+      "comment": "Y Combinator experiences the equity terms as a rope.  The terms are essential to ensuring the program's continued operation and success.  They allow YC to take a standardized amount of equity in each company, which it uses to reinvest in future batches. They have complete arbitrage exit options. "
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "YC Batch Startups",
+      "comment": "Startups within the YC batch program benefit from the network, resources, and potential funding opportunities that YC provides. They see this as a rope, providing valuable coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees the YC equity terms as a tangled rope: it enables coordination and funding opportunities for early-stage startups, but also creates a power dynamic where YC benefits disproportionately compared to startups outside the YC ecosystem.  It provides value, but also extractiveness."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "yc_network_effect",
+      "question": "How much of YC's success is due to its network effect versus its actual value add?",
+      "resolution_mechanism": "Compare the success rates of YC-backed startups to those of startups with similar profiles but no YC backing, controlling for other factors.",
+      "impact": "If network effect is dominant, YC's extraction is higher. If the value-add is dominant, extraction is lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Assessing the true value of YC beyond its network effect."
+    },
+    {
+      "id": "alternative_funding_access",
+      "question": "Do startups outside of YC have comparable access to funding opportunities?",
+      "resolution_mechanism": "Analyze funding data to compare the amounts and terms of funding received by YC-backed startups versus non-YC startups.",
+      "impact": "If funding is more difficult to obtain, then YC's terms create a snare. If other funding options exist, the snare is weaker.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determine outside-YC funding access."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Y Combinator's standard SAFE (Simple Agreement for Future Equity) agreement and equity terms place a constraint on early-stage startups. This creates a power dynamic where YC-backed companies have easier access to resources than non-YC startups.",
+    "key_agents": [
+      "Y Combinator: Primary beneficiary (institutional/arbitrage)",
+      "YC Batch Startups: Beneficiary (powerful/mobile)",
+      "YC Non-Batch Startups: Victim (powerless/trapped)",
+      "YC Founder Equity: Impacted (moderate/constrained)",
+      "Analytical Observer: Observer (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.55):  Moderate, reflecting the value provided and the equity demanded.  Suppression (0.40): Limited options outside of YC create suppression. Theater Ratio: the theater ratio is low (0.20). The SAFE agreements are relatively straightforward and there's little 'theater' in the sense of performative activity not tied to functionality.",
+    "perspectival_gap": "The perspectival gap stems from the power imbalance and the varying degrees to which agents can navigate or exit the arrangement. YC sees the terms as fair (rope), non-YC startups experience suppression (snare), and YC founders must give up equity (tangled rope).",
+    "directionality_logic": "Beneficiaries of the program receive the derived coordination benefits. Victims must give up more equity than they might in other agreements. Extraction flow goes from the smaller startups towards Y Combinator, increasing asymmetry in the space. Each perspective's classification depends on the degree to which the agent experiences coordination vs. extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

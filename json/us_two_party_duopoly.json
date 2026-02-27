@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "us_two_party_duopoly",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "duop"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The U.S. Two-Party Political Duopoly",
+    "topic_domain": "political/electoral",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "democratic_party_apparatus",
+      "republican_party_apparatus",
+      "major_party_donors",
+      "incumbent_legislators"
+    ],
+    "victims": [
+      "third_party_movements",
+      "independent_candidates",
+      "ideological_minorities",
+      "electoral_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Third-Party Candidate",
+      "comment": "PERSPECTIVE 1: THIRD-PARTY CANDIDATE (SNARE) \u2014 A viable candidate from outside the two major parties faces ballot access barriers (signature collection, filing fees), mathematical spoiler dynamics (vote splitting), debate exclusion (polling thresholds), and voter strategic defection (lesser-evil voting). Exit from the constraint (running) carries career destruction risk. No institutional support exists. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Ideological Minority Voters",
+      "comment": "PERSPECTIVE 2: IDEOLOGICAL MINORITY VOTERS (SNARE) \u2014 Voters whose preferences align with neither major party (libertarians, greens, progressives beyond Democratic mainstream, paleo-conservatives beyond Republican mainstream) face a structural extraction: they vote for a major-party compromise candidate who does not represent their values, or they 'waste' their vote on a non-viable option that cannot win. The spoiler dynamic mathematically locks them into the Duopoly for generations. No exit that doesn't carry strategic cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Major Party Leadership",
+      "comment": "PERSPECTIVE 3: MAJOR PARTY LEADERSHIP (TANGLED ROPE) \u2014 Democratic and Republican leadership benefit enormously from the Duopoly structure (guaranteed access to ballot, debate stages, media attention, two-state duopoly of electoral viability). But they are also constrained by it: they must appeal to a geographic majority coalition, manage internal ideological factions, and compete predictably within the two-dimensional liberal-conservative axis. They coordinate with donors and activists (rope function) while extracting from third parties and minorities (snare function). Active enforcement required: ballot access rules, debate exclusion criteria, strategic messaging against spoilers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Major Party Donors",
+      "comment": "PERSPECTIVE 4: MAJOR PARTY DONORS (ROPE) \u2014 Institutional donors (corporations, super-PACs, wealthy individuals) benefit from duopoly certainty: two predictable counterparties, no third-party spoiler risk, guaranteed access to whoever wins. They experience the constraint as coordination\u2014it provides a stable arena for political investment with known rules. Exit option (funding a third party that could actually win) carries catastrophic risk (both incumbents punish the defector), so exit is theoretically available but practically arbitrage (switching allegiance between parties based on returns). Net beneficiary with stable rules\u2014coordination with a hidden extraction asymmetry favoring concentrated capital."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Electoral Institutions (State & Federal Bureaucracy)",
+      "comment": "PERSPECTIVE 5: ELECTORAL INSTITUTIONS (PITON) \u2014 State and federal election administration agencies maintain ballot access rules, debate commission authority (nominally nonpartisan but controlled by the two parties), and voter registration systems that operationalize the duopoly. The functional role (coordinate vote counting, prevent fraud) persists, but the Duopoly maintenance is substantially performative\u2014debate commission thresholds shift based on which party benefits, state legislatures (controlled by one of the two parties) set ballot access rules that favor incumbents and disadvantage new entrants. Theater ratio high: the institutions perform neutrality while operationalizing duopoly preservation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Ranked-Choice Voting Coalition",
+      "comment": "PERSPECTIVE 6: RANKED-CHOICE VOTING COALITION (SCAFFOLD) \u2014 Organized reformers (voting rights NGOs, Maine, Alaska ballot initiatives, local RCV experiments) see the duopoly as a temporary institutional failure with a sunset clause. RCV systems eliminate the spoiler dynamic, releasing trapped ideological minorities. These coalitions have agency (ballot initiatives win, legislatures pass RCV bills) and a clear exit path (system redesign that mathematically eliminates vote splitting). Enforcement requirements decline as systems migrate. Theater in RCV activism remains high (voters must be educated), but the fundamental mechanism change removes the duopoly's extraction function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Comparative Political Analyst",
+      "comment": "PERSPECTIVE 7: COMPARATIVE POLITICAL ANALYST (TANGLED ROPE) \u2014 From a civilizational and global perspective, two-party systems are neither natural nor inevitable. Proportional representation, multi-party systems, and hybrid electoral designs function in democracies worldwide. The U.S. duopoly is a specific institutional artifact (single-seat-district plurality voting) not a law of nature. The system simultaneously enables large-scale democratic coordination (two parties aggregate diverse coalitions) and extracts from ideological minorities through spoiler dynamics and vote-splitting. The constraint is active, enforced, and benefits a specific class (major party apparatuses) at clear cost to others. Classification as tangled rope reflects both genuine coordination function and asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "spoiler_dynamics_threshold",
+      "question": "At what ideological distance from the major parties does the spoiler dynamic become mathematically inevitable (vote splitting guarantees defeat)?",
+      "resolution_mechanism": "Historical election data: correlation of third-party vote share with major-party defeat margins; counterfactual analysis of 2000 (Nader), 2016 (Johnson/Stein), and 2020 elections; polling on ideological distance of third-party supporters from nearest major party",
+      "impact": "If threshold is low (voters <0.3 on left-right scale from nearest major party): spoiler dynamics affect most ideological variation, making the duopoly extraction severe. If threshold is high (voters >0.6 on scale): spoiler dynamics affect only extreme fringes, reducing duopoly extraction severity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ideological distance threshold triggering spoiler dynamics"
+    },
+    {
+      "id": "ranked_choice_adoption_rate",
+      "question": "Will ranked-choice voting adoption become irreversible (cascade to majority of states/federal level) or stall at local/state experiments?",
+      "resolution_mechanism": "Longitudinal tracking of RCV ballot initiatives and legislation; analysis of states/municipalities that adopt RCV vs those that revert or block adoption; measurement of duopoly apparatus opposition intensity as RCV threatens core extraction mechanism",
+      "impact": "If adoption is irreversible: scaffold sunset is real and imminent (10-20 year timeline). If stalled: duopoly maintenance persists indefinitely, tangled-rope classification accurate long-term.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether RCV adoption becomes irreversible or stalls"
+    },
+    {
+      "id": "duopoly_enforcement_mechanism",
+      "question": "Is duopoly maintenance primarily structural (mathematical consequence of plurality voting) or active (deliberate party strategy through debate exclusion, ballot access rules, messaging)?",
+      "resolution_mechanism": "Legal analysis of ballot access rule origins; historical document review of debate commission founding and threshold evolution; comparison of enforcement intensity across states with different ballot access rules; counterfactual: would spoiler dynamics persist under identical ballot access rules but RCV voting?",
+      "impact": "If primarily structural: duopoly requires institutional change (voting system redesign) to break; party strategy is secondary. If primarily active: targeted legal challenges to ballot access rules and debate exclusion could partially restore competitive space without voting system change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether duopoly is structurally inevitable or strategically maintained"
+    },
+    {
+      "id": "major_party_prisoner_dilemma",
+      "question": "Do the two major parties view the duopoly as mutually beneficial coordination, or are they locked in a prisoner's dilemma where each would benefit from defecting (adopting RCV unilaterally) but neither does because the other would be destroyed?",
+      "resolution_mechanism": "Analysis of internal party documents on voting system reform; interviews with party leadership on RCV adoption; game-theoretic analysis of payoff matrices for unilateral and mutual adoption scenarios; historical cases where a party considered RCV adoption",
+      "impact": "If mutual benefit: the constraint is primarily a rope (coordination mechanism benefiting both parties equally). If prisoner's dilemma: the constraint includes an extractive component where the two parties collectively extract from ideological minorities, but neither party individually wants to break the mechanism.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether parties view duopoly as coordination or prisoner's dilemma"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The U.S. two-party duopoly is a structural constraint on electoral competition and ideological representation that arises from the interaction of single-seat-district plurality voting (SSDP) and the spoiler effect. Candidates and voters with preferences outside the narrow liberal-conservative axis find themselves mathematically trapped: voting for an ideologically aligned candidate guarantees that candidate's defeat (vote splitting) and returns the nomination to a major party. This constraint simultaneously provides substantial coordination benefits\u2014two major parties efficiently aggregate diverse coalitions, reduce voter decision complexity, and structure legislative cooperation\u2014while extracting from ideological minorities through systematic exclusion. The two major parties actively maintain the constraint through ballot access rules, debate exclusion criteria, and strategic messaging against spoiler candidates. From different structural positions, the duopoly appears as a natural law (to those born into it), a coordination mechanism (to major party leadership), pure extraction (to third-party candidates), and a temporary problem with a sunset clause (to ranked-choice voting reformers). The constraint's extractiveness has risen over the interval as ideological polarization has increased turnout sensitivity to spoiler dynamics, and the theater ratio has risen as parties invest more in messaging against third-party 'spoilers' rather than engaging substantively with alternative platforms.",
+    "key_agents": [
+      "Third-Party Candidates: Primary victims (powerless/trapped) \u2014 face ballot access barriers, spoiler mathematics, debate exclusion, and voter strategic defection",
+      "Ideological Minority Voters: Primary victims (moderate/trapped) \u2014 structural forced choice between compromise major-party candidate and strategic waste vote",
+      "Democratic Party Apparatus: Primary beneficiary (powerful/constrained) \u2014 guaranteed ballot access, debate inclusion, geographic viability; constrained by two-party competition and internal coalition management",
+      "Republican Party Apparatus: Primary beneficiary (powerful/constrained) \u2014 symmetric benefits and constraints to Democratic apparatus",
+      "Major Party Donors: Secondary beneficiary (institutional/arbitrage) \u2014 duopoly provides predictable counterparties and spoiler-risk elimination; exit (funding a competitive third party) is theoretically available but practically impossible",
+      "Electoral Institutions: Piton performer (institutional/arbitrage) \u2014 maintain ballot access rules, debate commissions, and voter registration systems that operationalize the duopoly; primary function (vote counting) persists, but duopoly maintenance is substantially performative",
+      "Ranked-Choice Voting Coalition: Organized reformer (organized/mobile) \u2014 arXiv of electoral reform; see the duopoly as a temporary institutional failure with a sunset clause provided by RCV system adoption"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The duopoly extracts from third parties (ballot denial) and ideological minorities (vote splitting), but the extraction is not total\u2014voters can vote for non-viable candidates, candidates can run despite spoiler odds, and ideological minorities can form movements within major parties. The extraction value of 0.58 reflects substantial but not maximal coercion. The value has risen from 0.42 to 0.58 over the 50-year interval as ideological polarization has increased the cost of supporting a non-preferred major-party candidate (moving voters from strategic compromise to bitter strategic voting). Suppression (0.72): High. Ballot access requirements (signature collection, filing fees, state-specific rules), debate exclusion (polling thresholds controlled by the two parties), media marginalization (third parties receive <5% of coverage), and voter strategic defection (Duverger's law: plurality voting produces two-party equilibrium) collectively create severe barriers to third-party competition. The barriers are not absolute\u2014some third-party candidates run and gather votes\u2014but they are sufficient to prevent any third party from achieving electoral viability. Theater ratio (0.65): Moderate-high. Both major parties invest substantial effort in messaging against spoiler candidates ('wasted vote' narratives, strategic voting arguments) and in defending the debate commission thresholds that exclude third parties. This theater performs the maintenance of the duopoly. The underlying function (vote counting, aggregating coalition preferences) persists, but the function is increasingly inseparable from the theater of duopoly maintenance.",
+    "directionality_logic": "Beneficiaries of the duopoly (Democratic and Republican apparatuses, major party donors) experience low effective extraction (d \u2248 0.2-0.4) because they benefit from the constraint. They see it as coordination (rope function). Victims (third-party candidates, ideological minority voters) experience high effective extraction (d \u2248 0.85-0.95) because they bear the cost of spoiler dynamics and ballot access barriers, with no exit. Organized reformers (ranked-choice voting coalition) experience lower effective extraction (d \u2248 0.4-0.5) because they have agency and see a clear exit path (system redesign). The piton classification derives from high theater ratio (0.65) combined with degraded function: the institutions maintaining the duopoly perform neutrality while operationalizing partisan advantage. The comparative analyst sees the constraint as active and enforced (tangled rope), neither natural nor inevitable, reflecting both genuine coordination (two-party aggregation) and asymmetric extraction (spoiler dynamics).",
+    "perspectival_gap": "The widest gap exists between the beneficiary (major party apparatus) and victim (third-party candidate) perspectives. The beneficiary sees rope (coordination mechanism enabling stable governance), while the victim sees snare (mathematical trap with no exit). The organized reformer sees scaffold (temporary structure being dismantled by RCV adoption), while the piton perspective sees the institutions as degraded and performative. The comparative analyst sees the full structure as tangled rope\u2014genuine coordination function paired with systematic extraction. This gap reflects the fundamental asymmetry: the duopoly genuinely coordinates electoral preferences into a two-dimensional policy space (coordination function), but it achieves this by excluding ideological space outside that two-dimensional axis (extraction function). Different agents experience different balances of the coordination and extraction.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the duopoly is neither pure coordination (rope) nor pure extraction (snare). It is tangled rope: a genuine coordination mechanism (two-party aggregation reduces voter decision complexity, structures legislative cooperation) that generates asymmetric extraction (ideological minorities trapped by vote-splitting). The major parties benefit from both the coordination (efficient coalition building) and the extraction (spoiler suppression). Third-party actors benefit from neither. The constraint requires active enforcement (ballot access rules, debate exclusion) precisely because it is not a natural law or mathematical inevitability\u2014other democracies use proportional representation and multi-party systems. The theater ratio (0.65) reflects that much of the enforcement is performative: debate commission thresholds shift with partisan advantage, ballot access rules are selectively enforced, and messaging against spoilers emphasizes strategic voting rather than engaging third-party platforms substantively. The mandatrophy is dissolved by showing that all six types are legitimate perspectival readings: mountain (to those naturalizing the duopoly as inherent to democracy), rope (to beneficiaries), tangled rope (to analytical observers), snare (to victims), scaffold (to reformers), and piton (to degraded institutions maintaining the system through inertia). The system is NOT a mountain\u2014it is an active, enforced, contingent institutional artifact that depends on specific electoral mechanics (SSDP) and party strategy. Ranked-choice voting provides a concrete path to dismantling the constraint, confirming that it is not a natural law but a contingent extraction mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "campaign_finance_concentration",
+      "gerrymandering_entrenchment",
+      "primary_election_capture"
+    ],
+    "dual_formulation_note": "The two-party duopoly is structurally upstream of campaign finance concentration (two parties monopolize institutional donor access), gerrymandering entrenchment (two parties use redistricting to lock in electoral advantage), and primary election capture (two parties control the mechanism for selecting candidates). All three downstream constraints depend on the duopoly's structural stability\u2014they could not persist if third parties and independents had meaningful electoral viability. The duopoly is thus a keystone constraint in the political extraction ecosystem."
+  },
+  "directionality_overrides": []
+}

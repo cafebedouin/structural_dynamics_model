@@ -1,0 +1,149 @@
+{
+  "header": {
+    "constraint_id": "uk_ssp_eligibility",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "UK Statutory Sick Pay (SSP) Eligibility and Rate",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uk_government",
+      "large_employers"
+    ],
+    "victims": [
+      "low_wage_workers",
+      "part_time_workers",
+      "gig_economy_workers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Wage Workers",
+      "comment": "Low-wage workers, particularly those in part-time or gig economy roles, are often ineligible for SSP due to the Lower Earnings Limit. They have limited exit options and bear the full cost of illness without income support."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small to Medium Employers",
+      "comment": "SMEs are constrained by the SSP requirements. Although they receive some compensation from the government, they still bear administrative and financial burdens. They benefit from having a healthier workforce, but are also extracting through lower wage costs overall from those not eligible. This makes them tangled_rope."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "UK Government",
+      "comment": "The UK government benefits from the SSP system by limiting public expenditure on sick pay and potentially incentivizing workforce participation. They can adjust policy, rates, and eligibility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Large Employers",
+      "comment": "Large employers benefit from the SSP system through cost savings associated with a lower overall wage bill due to reduced sick pay expenses. They are somewhat constrained because they may want better benefits to attract more workers. The system is piton because large employers can offer their own sick pay on top of this, but it adds theater compared to its functional benefits, such as reporting requirements and compliance checks."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, the SSP system represents a tangled rope. It coordinates a minimum level of sick pay provision but also extracts from vulnerable workers by excluding them from eligibility, which requires enforcement through employers only paying it for eligible workers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "minimum_earnings_threshold",
+      "question": "What is the optimal minimum earnings threshold for SSP eligibility that balances worker protection with employer costs and government expenditure?",
+      "resolution_mechanism": "Economic modeling and empirical analysis of the impact of different thresholds on worker health, labor supply, and government finances.",
+      "impact": "Higher threshold improves worker protection but increases employer costs and government expenditure. Lower threshold reduces worker protection but decreases employer costs and government expenditure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal minimum earnings threshold for SSP eligibility."
+    },
+    {
+      "id": "alternative_sick_pay_models",
+      "question": "How do alternative sick pay models (e.g., universal basic income, social insurance) compare to the SSP system in terms of coverage, adequacy, and efficiency?",
+      "resolution_mechanism": "Comparative analysis of the design and outcomes of different sick pay models across countries.",
+      "impact": "Alternative models may provide broader coverage and greater adequacy but may also be more costly or less efficient.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Comparison of alternative sick pay models."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.7
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The UK Statutory Sick Pay (SSP) system provides a minimum level of sick pay for eligible employees. However, the eligibility criteria, particularly the Lower Earnings Limit (LEL), exclude a significant portion of low-wage workers, part-time workers, and those in the gig economy. This creates a system where those most vulnerable to income loss due to illness are often excluded from support.",
+    "key_agents": [
+      "Low-Wage Workers: Primary target (powerless/trapped) - Excluded from SSP due to LEL.",
+      "Part-Time Workers: Target (powerless/trapped) - Often ineligible due to working hours/earnings.",
+      "Gig Economy Workers: Target (powerless/trapped) - Ineligible due to variable income and employment status.",
+      "UK Government: Beneficiary (institutional/arbitrage) - Limits expenditure on sick pay.",
+      "Large Employers: Beneficiary (institutional/constrained) - Cost savings from lower wage bill."
+    ],
+    "logic_rationale": "Extractiveness (0.60): The LEL and other eligibility criteria extract a significant portion of potential sick pay benefits from low-wage, part-time, and gig economy workers, creating a substantial wealth transfer to the government and indirectly to employers through lower labor costs. Suppression (0.70): High, as limited alternatives exist for low-wage workers, given their often precarious employment status and lack of access to private insurance or savings. Theater ratio (0.75): The SSP system has a performative aspect because large employers can offer their own sick pay on top of this, but it adds theater compared to its functional benefits, such as reporting requirements and compliance checks.",
+    "perspectival_gap": "The system creates a perspectival gap. Low-wage workers experience it as a snare, with no escape from the negative consequences of illness without income. The government views it as a rope, coordinating a basic level of sick pay provision while managing public finances. Large employers see it as a piton. The analytical observer sees a tangled rope: a system with both coordination and extraction components.",
+    "directionality_logic": "Low-wage workers, with limited exit options, experience high extraction (d=0.95). The UK government benefits from reduced expenditure and sees the system as coordination (d=0.05). Small employers are both beneficiary and victim, so their d is 0.5, a tangled rope.",
+    "mandatrophy_analysis": "The SSP system is a tangled rope because it coordinates a minimum level of sick pay provision but also extracts from vulnerable workers by excluding them from eligibility. The high suppression score reflects the limited alternatives available to low-wage workers. The analytical observer sees a tangled rope: a system with both coordination and extraction components. The system is actively enforced through employers only paying it for eligible workers."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

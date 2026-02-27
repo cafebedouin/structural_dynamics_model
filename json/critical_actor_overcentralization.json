@@ -1,0 +1,183 @@
+{
+  "header": {
+    "constraint_id": "critical_actor_overcentralization",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "spof"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Single Point of Failure: Critical Actor Overcentralization",
+    "topic_domain": "logistical/technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_node_operator",
+      "network_participants_during_stability"
+    ],
+    "victims": [
+      "dependent_network_actors",
+      "systemic_resilience"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Network Actor",
+      "comment": "PERSPECTIVE 1: DEPENDENT NETWORK ACTOR (SNARE) \u2014 No alternative routing exists. Failure of the central node means immediate operational collapse. The actor cannot diversify, cannot exit, and cannot organize alternatives without breaking the network itself. Maximum extraction \u2014 forced reliance on a single chokepoint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Resilience-Seeking Participant",
+      "comment": "PERSPECTIVE 2: RESILIENCE-SEEKING PARTICIPANT (TANGLED ROPE) \u2014 Benefits from the network's coordination function during stability but bears catastrophic tail-risk costs. Constrained exit: building alternative infrastructure requires collective action and capital investment. Both coordination (network efficiency) and extraction (forced concentration risk) present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Central Node Operator",
+      "comment": "PERSPECTIVE 3: CENTRAL NODE OPERATOR (ROPE) \u2014 Experiences the constraint as pure coordination. The operator solves a collective action problem by consolidating routing, settlement, or decision-making. Benefits flow directly to the operator (rent extraction, control), but the operator's perspective is that they are providing a valuable service that coordinates the network. This is not experienced as a constraint but as a solution."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Decentralization Coalition",
+      "comment": "PERSPECTIVE 4: DECENTRALIZATION COALITION (SCAFFOLD) \u2014 Organized efforts (blockchain developers, mesh network protocols, regulatory mandates for redundancy) aim to distribute the critical function across multiple nodes. Sees the single-point-of-failure architecture as a temporary problem with a known sunset: as alternative infrastructure matures, the dependency dissolves. Suppression is declining as technical barriers fall. Low effective extraction from this perspective because the coalition sees a path to exit."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Hub Architecture",
+      "comment": "PERSPECTIVE 5: LEGACY HUB ARCHITECTURE (PITON) \u2014 The single-node design persists through path dependency and switching costs, not because it is functionally optimal. Modern network theory shows distributed topologies are more resilient. Yet the hub persists: regulations are written around it, legacy systems depend on it, institutional inertia maintains it. Theater ratio (0.55) reflects the gap between the nominal function (efficient routing) and actual function (regulatory compliance theater, risk concentration that is officially invisible)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Network Theory View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NETWORK THEORY VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some degree of hierarchical structure is inherent to large-scale coordination systems: networks with N nodes require at least log(N) layers of aggregation, and bottlenecks are an unavoidable feature of hierarchical architectures. This perspective sees single points of failure as a natural law of centralized systems. However, the structural data contradicts this: distributed consensus protocols, mesh networks, and redundant routing all achieve scale without single points of failure. The 'natural law' framing naturalizes a design choice, not a physical limit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "critical_mass_threshold_disruption",
+      "question": "What percentage of network participants must defect or be unable to access the central node before the constraint transitions from extraction to systemic collapse?",
+      "resolution_mechanism": "Empirical observation of historical failures (2008 bank runs, 2011 DNS attacks, AWS regional outages); threshold identification from network simulation models",
+      "impact": "If threshold < 5%: single-node system is fragile even under normal variation. If threshold > 25%: operator has significant buffer and can exploit near-monopoly pricing. Affects classification from participant perspective: lower threshold \u2192 higher experienced extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Percentage of participants at which central node failure causes systemic collapse"
+    },
+    {
+      "id": "alternative_architecture_feasibility",
+      "question": "Is decentralization technically and economically feasible for this specific network function, or are the operator's claims about necessity justified?",
+      "resolution_mechanism": "Comparison of operational costs: hub-and-spoke vs mesh/distributed; security analysis of alternative topologies; historical case studies (SWIFT vs blockchain settlement, centralized DNS vs distributed naming)",
+      "impact": "If alternative is feasible: constraint is institutional choice, not technical necessity. Scaffold perspective is correct \u2014 sunset is real. If technically infeasible: operator claims are valid, and what appears as extraction is legitimate coordination rent. Affects classification from resilience-seeker perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether decentralized alternatives are technically feasible for this network function"
+    },
+    {
+      "id": "operator_capture_vs_coordination",
+      "question": "Is the central operator actively maintaining the single-point-of-failure architecture because it maximizes their extraction, or because distributed alternatives have genuine technical/economic disadvantages they cannot overcome?",
+      "resolution_mechanism": "Analysis of operator investment patterns (e.g., do they invest in redundancy/resilience or only in consolidation?); comparison of operator margins in competitive vs monopoly positions; survey of technical expertise distribution",
+      "impact": "If capture is true: constraint is a Snare from the operator's perspective (they are choosing extraction). If technical barriers are genuine: constraint is a Rope (they are solving a real coordination problem). Affects whether mandatrophy is resolved.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether operator maintains SPOF architecture for rent extraction or technical necessity"
+    },
+    {
+      "id": "systemic_fragility_visibility",
+      "question": "Are the risks of single-point-of-failure architecture visible to participants and regulators, or is risk concentration hidden behind technical opacity and theater?",
+      "resolution_mechanism": "Audit of transparency in operator disclosures (stress tests, redundancy levels, failure mode documentation); analysis of regulatory filings and stress-test assumptions; participant surveys on risk awareness",
+      "impact": "If risk is hidden: theater_ratio should be higher, suppression should be higher, and the snare classification is correct. If risk is visible: participants are consciously accepting centralization for coordination benefits, and the rope perspective is more accurate. Affects theater_ratio scoring.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether SPOF risks are transparent or hidden from participants and regulators"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Critical actor overcentralization creates a structural paradox: the concentration that enables efficient coordination also creates catastrophic fragility. A single node\u2014a clearinghouse bank processing $1.5 trillion daily, a cloud provider hosting 40% of internet infrastructure, a charismatic leader controlling a political party\u2014becomes essential precisely because it solves a coordination problem that decentralized alternatives cannot (yet) solve. But the solution embeds a Snare: dependent actors have no exit. From the operator's perspective, the concentration is a Rope\u2014they have solved a real coordination problem and capture legitimate rents. From the resilience perspective, it is a Tangled Rope: the network gains efficiency at the cost of tail-risk concentration. From the decentralized coalition's view, it is a Scaffold with a sunset: distributed alternatives (blockchain settlement, edge computing, peer-to-peer leadership) are maturing and will eventually make the central node redundant. The constraint's theater ratio (0.55) reflects that the operator and regulators maintain narratives about the necessity of concentration ('too complex to decentralize,' 'security requires centralization') that may or may not be technically justified. The extractiveness trend (0.35 \u2192 0.58 over the interval) shows rent-seeking layered onto coordination as the network's dependency deepens and alternatives remain suppressed.",
+    "key_agents": [
+      "Central Node Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures coordination rents and control premium; minimum-cost operator because all traffic must route through them",
+      "Dependent Network Actors: Primary victims (powerless/trapped) \u2014 no alternative routing; forced reliance on single chokepoint with no exit",
+      "Resilience-Seeking Participants: Secondary victim (moderate/constrained) \u2014 benefit from network during stability but bear catastrophic tail-risk costs; constrained by high switching costs",
+      "Decentralization Coalition: Organized agents (organized/constrained) \u2014 blockchain developers, mesh network researchers, regulatory bodies mandating redundancy; building alternative infrastructure with sunset logic",
+      "Systemic Resilience: Implicit victim (powerless/trapped) \u2014 abstract collective good; fragility is invisible until the critical node fails",
+      "Regulatory Authorities: Institutional actor (institutional/constrained) \u2014 aware of concentration risk but constrained by coordination lock-in and switching costs to mandate alternatives; maintain theater that concentration is 'monitored' or 'manageable'"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The central operator extracts coordination rent (they are the only option), but the extraction is not maximal (0.70+) because the network genuinely benefits from the coordination function during stability. The operator captures margin from transaction fees, data access, or control premium, but the underlying network service is real. The trend toward 0.58 reflects both the operator's increasing bargaining power and the layering of surveillance/data-extraction features as the dependency deepens. Suppression (0.68): High. Multiple mechanisms suppress alternatives: switching costs lock in dependent actors, technical knowledge is concentrated in the operator (tacit knowledge barrier), regulatory approval processes favor the incumbent (regulatory capture), and competitive dynamics are suppressed by the network effect (a decentralized system is valuable only if everyone switches simultaneously). Dependent actors cannot feasibly exit. Theater ratio (0.55): Moderate. The operator and regulators maintain narratives about the optimality of concentration ('security requires centralization,' 'redundancy is inefficient,' 'trust networks must have a hub') that are partially performative. Technical analysis shows that distributed alternatives can achieve similar security and efficiency with different trade-offs. The theater ratio is not as high as a Piton (0.70+) because the coordination function is genuinely valuable \u2014 it is not purely ritual. But the theater reflects suppressed alternatives and invisible risk concentration.",
+    "perspectival_gap": "The operator sees coordination (Rope) because they are solving a genuine problem. The dependent actor sees extraction (Snare) because they have no exit. The decentralization coalition sees a temporary problem with a sunset (Scaffold) because they are building distributed alternatives that will mature in 5-15 years. The regulatory authority sees degraded theater (Piton) because they maintain narratives about managing concentration that are only partially effective. The analytical observer sees a natural law of hierarchies (Mountain) but this is a false summit\u2014distributed architectures prove that scale does not require central nodes.",
+    "directionality_logic": "The engine derives directionality (d) from each agent's structural position. The central operator is a beneficiary with arbitrage exit options (d \u2248 0.05, low extraction experienced). The dependent actor is a victim with trapped exit options (d \u2248 0.95, maximum extraction experienced). The resilience-seeker is a victim with constrained exit options (d \u2248 0.70, high extraction experienced). The regulatory authority is an institutional actor with constrained exit\u2014they would prefer to mandate decentralization but are themselves locked into the coordination system (d \u2248 0.55, moderate-high extraction experienced). The directionality chain reflects that concentrated topology creates asymmetric exit: the operator can leave (or threaten to leave) and the network collapses; dependent actors cannot leave without coordinating a simultaneous migration. This asymmetry is the mechanism of extraction.",
+    "mandatrophy_analysis": "CRITICAL CASE: The mandatrophy is resolved by showing that the single-point-of-failure constraint can be EITHER a Rope (pure coordination) OR a Snare (pure extraction) depending on whether decentralized alternatives are technically feasible. If decentralization is infeasible, the operator's rent is justified coordination cost, and the constraint is a Rope from all perspectives\u2014the operator should be rewarded for solving an unsolvable problem. If decentralization is feasible, the operator is actively maintaining centralization to preserve extraction, and the constraint is a Snare from the dependent actor's perspective and a Tangled Rope from the resilience perspective\u2014extraction is being layered onto a coordination problem that could be solved with lower friction cost via distribution. The omega variables operationalize this distinction: ALTERNATIVE_ARCHITECTURE_FEASIBILITY determines whether the operator has a genuine monopoly or is choosing to extract. The measured extractiveness trend (0.35 \u2192 0.58) suggests that extraction is increasing faster than the coordination function is maturing, which implies the operator is gradually shifting from a Rope (solving a problem) to a Snare-adjacent (exploiting a dependency). Resolution requires empirical evidence on feasibility and operator investment patterns."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "systemic_fragility_cascades",
+      "distributed_alternative_feasibility",
+      "regulatory_capture_in_finance"
+    ],
+    "dual_formulation_note": "Single-point-of-failure is structurally distinct from systemic_fragility_cascades. SPOF addresses the topology (one node, all paths), while systemic_fragility addresses the dynamics (correlation and contagion). SPOF is upstream: if SPOF is resolved via decentralization, systemic_fragility becomes harder to trigger. Linked via affects_constraints."
+  },
+  "directionality_overrides": []
+}

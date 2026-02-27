@@ -2,114 +2,152 @@
   "header": {
     "constraint_id": "bedouin_sedentary_transition",
     "version": "1.0",
-    "generated_date": "2024-07-28",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bedouin"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.4,
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Bedouin Sedentary Transition",
+    "human_readable": "The Bedouin Sedentary Transition: From Pastoral Autonomy to Oil-Dependent Settlement",
     "topic_domain": "social/economic/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "nation_state_builders",
-      "global_energy_markets"
+      "state_apparatus",
+      "oil_capital_interests"
     ],
     "victims": [
-      "traditional_nomadic_culture",
-      "pastoral_economic_autonomy"
+      "pastoral_autonomy",
+      "ecological_resilience",
+      "tribal_social_structure"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "The Traditional Nomad",
-      "comment": "PERSPECTIVE 1: TRADITIONAL NOMAD (SNARE) — Experiences the transition as a trap. Traditional migration routes are cut by national borders, grazing lands are enclosed, and the pastoral economy is made unviable. Dependency on state welfare replaces self-sufficiency, effectively trapping them in a new economic model with no viable exit. d≈0.95, f(d)≈1.42, σ=0.9 → χ≈0.87."
+      "label": "The Sedentarized Bedouin Tribe",
+      "comment": "PERSPECTIVE 1: SEDENTARIZED BEDOUIN TRIBE (SNARE) \u2014 Once settlement occurs, nomadic exit becomes structurally impossible. Children educated in fixed settlements cannot rejoin pastoral life; pastoral skills atrophy; welfare dependency creates psychological and material lock-in. No viable return path to the desert ecology that sustained ancestors. Maximum experienced extraction \u2014 loss of autonomy, ecological knowledge, social self-determination with zero alternatives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Tribal Leadership Cohort",
+      "comment": "PERSPECTIVE 2: TRIBAL LEADERSHIP COHORT (TANGLED ROPE) \u2014 Tribal sheikhs and elders experience the constraint as hybrid. They gain state recognition, material resources (housing subsidies, employment in military/security apparatus), and institutional legitimacy through sedentarization. But they lose independent authority over pastoral territories and must execute state directives in exchange for continued patronage. Active enforcement required: state monitors tribal settlements, controls water/welfare distribution, selects which leaders receive sinecures. Both coordination (state security apparatus needs organized tribal intermediaries) and asymmetric extraction (sheikhs become state agents, lose pastoral decision-making authority)."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Nation-State Builder",
-      "comment": "PERSPECTIVE 2: NATION-STATE BUILDER (ROPE) — Views the transition as a necessary coordination mechanism for modernization and national unity. Sedentarization integrates a mobile population into the state's infrastructure (taxation, conscription, education), secures borders, and allows for centralized resource management. From this view, it's a benevolent project of social development. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08."
+      "spatial_scope": "regional",
+      "label": "The State Apparatus",
+      "comment": "PERSPECTIVE 3: STATE APPARATUS (ROPE) \u2014 The state experiences sedentarization as pure coordination. Nomadic tribes present governance and taxation challenges; settlement enables census, conscription, welfare administration, security surveillance. The state achieves administrative closure and control over peripheral territory. This is genuine coordination benefit \u2014 the state solves the 'how do we govern the Empty Quarter?' problem through settlement. Net beneficiary; extraction flows toward this agent."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Oil Industry",
+      "comment": "PERSPECTIVE 4: OIL INDUSTRY (SCAFFOLD) \u2014 Hydrocarbon extraction required pacifying the Rub' al Khali and removing nomadic claims to pastoral territories. Sedentarization was instrumental (temporary measure to clear land and stabilize labor). The sunset clause is implicit: once oil reserves deplete or technology/global economics shift toward renewable energy, the rationale for maintaining settled Bedouin populations vanishes. Oil money currently subsidizes settlement; the constraint is inherently temporary. Effective extraction is moderated by the knowledge that the underlying justification has a time horizon."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Sedentarized Youth",
-      "comment": "PERSPECTIVE 3: SEDENTARIZED YOUTH (TANGLED ROPE) — Experiences both the benefits (education, healthcare, modern amenities) and the costs (loss of cultural heritage, disconnection from traditional skills). They are constrained, unable to return to a lifestyle they never knew, but benefit from the new system. The constraint is a hybrid of genuine coordination and asymmetric extraction of cultural identity. d≈0.65, f(d)≈1.00, σ=0.8 → χ≈0.54."
+      "spatial_scope": "regional",
+      "label": "The Welfare Bureaucracy",
+      "comment": "PERSPECTIVE 5: WELFARE BUREAUCRACY (PITON) \u2014 The settlement maintenance system (housing, schooling, healthcare, unemployment transfers) persists through institutional inertia despite eroding functional rationale. Early settlement (1960s-1980s) served genuine social integration goals; current welfare apparatus is substantially theater \u2014 it maintains populations in economic dependency while claiming to facilitate 'development.' Theater ratio 0.65 reflects that welfare spending is performed as modernization/care while actually perpetuating structural immobility. The functional purpose (labor reserve for oil industry) has shifted; the institutional machinery persists."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (TANGLED ROPE) — The system's claimed type. It recognizes the genuine coordination function (providing modern services) but also the high extraction of autonomy and the high suppression of the nomadic alternative. The state's provision of welfare is structurally coupled with the elimination of a competing mode of social and economic organization. This is the canonical Tangled Rope signature. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.94."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the nomadic-to-sedentary transition is framed as a natural law of development: modernization requires settlement, state integration requires administrative closure, technological civilization requires fixed populations. This perspective naturalizes the transition as inevitable. However, the structural data contradicts mountain classification \u2014 the transition is contingent on oil discovery, state policy choices, and specific institutional arrangements. The engine will identify this as a false summit: the 'inevitability of development' discourse masks what is actually a extractive institutional arrangement sustained by state enforcement and rent-seeking capital."
     }
   ],
   "omegas": [
     {
-      "id": "agency_versus_coercion",
-      "question": "What was the true ratio of voluntary adoption of a 'better life' (pull factors) versus the structural elimination of the nomadic alternative (push factors)?",
-      "resolution_mechanism": "Archival analysis of state policies from 1950-1980, combined with oral histories from elders who lived through the initial transition period to quantify perceived choice.",
-      "impact": "If primarily voluntary, the constraint's base extractiveness (ε) would be lower, shifting classifications toward Rope/Scaffold. If primarily coercive, the Snare classification becomes dominant.",
+      "id": "pastoral_reversibility_threshold",
+      "question": "Is the loss of pastoral autonomy irreversible after one generation of sedentarization, or could alternative education / land rights restoration enable a return to nomadic pastoralism?",
+      "resolution_mechanism": "Historical case studies of sedentarized pastoral groups (Australian Aboriginal communities, Central Asian herders post-collectivization); assessment of whether skill transmission and land tenure restoration could restore nomadic viability within a 30-year window",
+      "impact": "If irreversible: sedentarization is a permanent snare with no escape path. If reversible: the constraint is a temporary tangled rope with potential exit pathways through policy change.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Ratio of voluntary choice vs structural coercion in sedentarization"
+      "description": "Whether pastoral autonomy can be restored after sedentarization"
     },
     {
-      "id": "cultural_resilience",
-      "question": "Is the loss of the nomadic lifestyle leading to complete cultural assimilation, or is a new, resilient, hybrid Bedouin identity forming within settled communities?",
-      "resolution_mechanism": "Longitudinal ethnographic studies tracking the evolution of language, oral poetry, social customs, and kinship structures in sedentarized communities over multiple generations.",
-      "impact": "Evidence of a resilient, adaptive culture would lower the perceived extraction, as cultural capital is not being completely destroyed but transformed. This would support a Tangled Rope over a Snare classification from more perspectives.",
+      "id": "oil_economy_counterfactual",
+      "question": "Would Saudi state have pursued Bedouin sedentarization absent hydrocarbon revenues to fund settlement and welfare?",
+      "resolution_mechanism": "Comparative historical analysis of sedentarization patterns in oil-rich vs oil-poor states; econometric assessment of welfare spending correlation with oil revenue cycles; state policy documents from 1938-1970 revealing intent",
+      "impact": "If no: sedentarization is contingent on oil rents (scaffold/snare hybrid). If yes: sedentarization reflects developmental necessity (stronger mountain claim). Oil dependency becomes the critical structural factor.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Counterfactual: would sedentarization occur without oil revenues"
+    },
+    {
+      "id": "tribal_leadership_agency",
+      "question": "To what extent did tribal sheikhs actively choose sedentarization (negotiated outcome) vs accept it under coercive pressure from state force?",
+      "resolution_mechanism": "Oral history archives; tribal leadership memoirs and correspondence; historical records of negotiations between state and tribal authorities; assessment of whether sheikhs retained meaningful veto power",
+      "impact": "If chosen: leadership capture is the mechanism (leaders become willing collaborators). If coerced: state enforcement is the mechanism (leaders are also victims). Affects whether tribal leadership perspective is primarily beneficiary or trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of tribal leadership agency in sedentarization choice"
+    },
+    {
+      "id": "welfare_exit_mechanism_viability",
+      "question": "Are alternative economic pathways (micro-enterprise, renewable energy employment, diaspora remittances) viable for reducing welfare dependency without reconstituting pastoral autonomy?",
+      "resolution_mechanism": "Assessment of economic diversification in Saudi rural settlements; skills transfer data; employability of second-generation Bedouin outside oil sector; remittance flows from diaspora populations",
+      "impact": "If viable: scaffold sunset is real \u2014 welfare can be replaced without restoring herding. If not viable: welfare lock-in is permanent \u2014 only pastoral restoration or continued subsidies remain.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Degree of cultural assimilation vs formation of a new hybrid identity"
+      "description": "Whether alternative economic pathways reduce welfare dependency"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.22
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 32,
+      "time_point": 20,
       "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 92,
-      "value": 0.68
+      "time_point": 40,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.05
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 32,
-      "value": 0.25
+      "time_point": 20,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 92,
-      "value": 0.4
+      "time_point": 40,
+      "value": 0.65
     }
   ],
   "interval": {
@@ -117,19 +155,35 @@
     "end": 2030
   },
   "commentary": {
-    "narrative_context": "This constraint models the socio-economic transformation of Bedouin tribes in the Arabian Peninsula, primarily driven by the discovery of oil in 1938 and subsequent state-building policies. The transition involves a shift from a millennium-old, resilient nomadic pastoralism to a settled existence dependent on state-provided welfare, housing, and employment. This process, framed as 'modernization,' fundamentally restructures Bedouin society, economy, and political autonomy, trading self-sufficiency for the benefits and dependencies of the modern nation-state.",
+    "narrative_context": "The Bedouin sedentary transition represents the structural transformation of nomadic pastoral tribes in the Rub' al Khali (Empty Quarter) of Saudi Arabia from autonomous herding communities into welfare-dependent urban and semi-urban settlements. Triggered by oil discovery (1938) and accelerated by state consolidation (1960s-1980s), this transition exhibits all six DR classifications across different perspectives. The constraint is not sedentarization per se \u2014 settlement is a neutral technological choice \u2014 but the asymmetric institutional mechanism through which it occurs: state apparatus + oil capital interests + welfare bureaucracy combine to make pastoral return structurally impossible while extracting labor mobility, cultural autonomy, and ecological knowledge from formerly independent tribes. The mechanism requires active enforcement: settlement subsidies, school attendance mandates, water allocation controls, and selective patronage of compliant tribal leaders. At the analytical level, the transition is often naturalized as 'inevitable modernization,' but the structural data reveals it as a contingent policy choice enabled by oil rents and sustained by coercive state capacity.",
     "key_agents": [
-      "Nation-State Builders: Primary beneficiary (institutional/arbitrage) — Gains territorial control, a governable populace, and national unity.",
-      "Traditional Nomadic Culture: Primary victim (powerless/trapped) — An entire way of life based on mobility and pastoralism is rendered unviable.",
-      "Sedentarized Bedouin Generations: Hybrid agents (moderate/constrained) — Receive material benefits like education and healthcare but lose cultural autonomy and traditional skills.",
-      "Global Energy Markets: Indirect beneficiary (institutional/arbitrage) — Benefits from the political stability that a settled population provides in key resource extraction zones."
+      "Sedentarized Bedouin Tribes: Primary victims (powerless/trapped) \u2014 lose pastoral autonomy, ecological knowledge, social self-determination; face structural impossibility of return after one generation",
+      "Tribal Leadership (Sheikhs, Elders): Secondary beneficiary/victim (organized/constrained) \u2014 gain state patronage and material resources but lose independent authority and become state intermediaries",
+      "Saudi State Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 solves governance problem of peripheral territory; achieves administrative closure, conscription capacity, security surveillance",
+      "Oil Capital Interests: Secondary beneficiary (powerful/mobile) \u2014 requires land pacification and labor stability for hydrocarbon extraction; sedentarization clears pastoral claims",
+      "Welfare Bureaucracy: Institutional manager (institutional/constrained) \u2014 maintains settlement system through inertia; performs modernization narrative while perpetuating dependency",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy as inevitable development law"
     ],
-    "logic_rationale": "Extractiveness (ε=0.68) is high, representing the fundamental transfer of autonomy, economic independence, and political sovereignty from the tribe to the state. While the state provides material goods, it extracts the very basis of the former way of life. Suppression (0.75) is also high; maintaining a nomadic lifestyle is actively undermined by fixed national borders, land privatization, the decline of pastoral markets, and powerful economic incentives to settle. Theater Ratio (0.40) reflects the state's narrative of benevolent modernization and progress, which masks the underlying function of social control and state consolidation.",
-    "perspectival_gap": "The gap is profound. The state sees a Rope: a successful project of national integration and development. The traditional Bedouin elder sees a Snare: the destruction of their world and a gilded cage of dependency. The younger, settled Bedouin sees a Tangled Rope: they live with the daily reality of both the system's benefits (a job, a house) and its costs (a lost heritage, a sense of alienation). This perspectival divergence is the core of the constraint's structure.",
-    "directionality_logic": "The Nation-State is a clear beneficiary with arbitrage (it sets the rules), leading to a low 'd' value and a Rope classification. The traditional nomadic culture is the ultimate victim, trapped with no exit, leading to a high 'd' value and a Snare classification. The Sedentarized Youth are victims of cultural loss but beneficiaries of material provision, and their constrained exit options place them in the middle, experiencing the system as a Tangled Rope. The analytical view aligns with this hybrid classification, recognizing both the coordination and extraction functions.",
-    "mandatrophy_analysis": "This case resolves a potential mandatrophy by demonstrating that a single process can be both a genuine provision of public goods (Rope) and a coercive elimination of alternatives (Snare). The framework avoids a binary 'good' or 'bad' judgment, instead classifying the structure from multiple valid viewpoints. The state isn't lying when it claims to be providing services, and the nomad isn't exaggerating when they claim their world was destroyed. Both are structurally correct perspectives on a Tangled Rope."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The primary extraction is loss of autonomy and forced dependency on state-controlled resources (water, welfare, employment). However, it is not maximal (0.70+) because settlement also provides access to healthcare, education, and reduced mortality risk \u2014 genuine coordination benefits exist alongside extraction. The value reflects that the transition involves both coercive lock-in and real material improvement, with the lock-in component dominating. Suppression (0.72): High. Significant barriers to refusing settlement include military enforcement, welfare conditionality, school attendance mandates, water access controls, and social pressure from settled peers. Nomadic pastoralism is suppressed through both direct force and administrative mechanisms (no pastoral licensing, land enclosure, school enrollment requirements for welfare). Theater ratio (0.65): Moderate-high. Settlement is performed as 'development' and 'modernization,' with heavy rhetorical emphasis on improved living standards and integration into national life. The welfare apparatus is substantially performative \u2014 it claims to facilitate progress while actually perpetuating dependency. Educational curricula emphasize urban skills while extinguishing pastoral knowledge. The performance has increased as oil wealth enabled more visible settlement infrastructure.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. The sedentarized tribe experiences maximum snare (no exit, full extraction, trapped in dependency). The state experiences rope (pure coordination benefit \u2014 solving governance problem). The oil industry experiences scaffold (temporary measure with implicit sunset when oil depletes). The welfare bureaucracy experiences piton (degraded institution maintained through inertia). Tribal leaders experience tangled rope (genuine patronage benefits mixed with loss of independent authority). The analytical observer risks mountain (naturalizing policy as inevitable). The perspectival gap reveals the constraint's core injustice: what appears to the state as beneficial coordination appears to former nomads as irreversible extraction.",
+    "directionality_logic": "Directionality values derive from each agent's structural position. Sedentarized tribes: beneficiary status is false (they are victims), trapped exit (d \u2248 0.95), powerless (canonical d = 1.0), \u2192 f(d) \u2248 1.42 \u2192 high experienced extractiveness. State apparatus: beneficiary status is true (gains governance capacity), arbitrage exit (low d \u2248 0.05), institutional power (canonical d = 0.0), \u2192 f(d) \u2248 -0.12 \u2192 negative experienced extractiveness (net benefit flows toward state). Tribal leadership: bifurcated \u2014 as beneficiary of patronage (arbitrage exit, organized power) but constrained by state oversight, d \u2248 0.40 \u2192 mixed directionality. The constraint enforces power asymmetry: agents with weak exit capacity bear extraction; agents with arbitrage/mobility bear no extraction and gain benefits.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint resolves mandatrophy by demonstrating that sedentarization involves both genuine coordination (state solving governance problem) and asymmetric extraction (tribes losing autonomy). The coordination function is real: settled populations enable tax collection, security administration, labor mobilization. The extraction is real: tribes permanently lose pastoral self-determination and become dependency subjects. Both functions are structurally necessary \u2014 the state cannot achieve governance without settlement, and settlement cannot occur without coercion + welfare lock-in. The false summit at the analytical level ('inevitable modernization') is revealed as such: the civilizational perspective naturalizes what is actually a state policy choice, one of several possible transitions. A different policy regime (land rights restoration, pastoral education, water tenure negotiation) would have produced different outcomes without requiring sedentarization. The 'inevitability' framing masks power asymmetry. The tangled rope classification correctly identifies that coordination and extraction are inseparable \u2014 this is not a snare that could become a rope through better administration, nor a rope that could be cleaned up through extraction reduction. The hybrid is structural."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "water_scarcity_governance",
+      "pastoral_commons_enclosure",
+      "arabian_labor_market_segmentation"
+    ],
+    "dual_formulation_note": "The sedentary transition is upstream of three resource-governance constraints: water management systems (built on assumption of fixed populations), pastoral commons enclosure (enabled by sedentarization of formerly mobile claimants), and labor market segmentation (Bedouin populations channeled into low-mobility employment). Each downstream constraint has its own extractiveness values reflecting its specific institutional mechanism; the sedentary transition story captures the foundational mechanism that enables all three."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ]
 }

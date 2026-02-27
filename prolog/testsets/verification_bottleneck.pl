@@ -1,9 +1,9 @@
 % ============================================================================
 % CONSTRAINT STORY: verification_bottleneck
 % ============================================================================
-% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.2 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2026-02-05
+% Generated: 2026-02-26
 % Status: [ACTIVE]
 % ============================================================================
 
@@ -60,23 +60,29 @@
  *   The verification bottleneck in quantum materials discovery creates a
  *   structural tension between the career and funding incentives for claiming
  *   novel phenomena and the epistemic requirement for independent
- *   replication. Original research groups benefit from first-mover advantage
- *   in publications, citations, and grant funding during the 2-5 year window
- *   before independent verification is complete. The field's epistemic
- *   reliability bears the cost of premature claims that may not replicate,
- *   while replication groups face resource constraints and career
- *   disincentives for publishing negative results. The constraint has
- *   intensified as experimental complexity has increased (requiring
- *   specialized equipment, sample preparation protocols, and measurement
- *   expertise that few groups possess) and as funding agencies increasingly
- *   reward breakthrough claims over incremental verification work.
+ *   replication. This constraint exhibits all six DR types from different
+ *   perspectives, making it a diagnostic exemplar for how indexical
+ *   classification works. The same structural phenomenon — the gap between
+ *   claim and confirmation in complex experimental physics — appears as an
+ *   immutable law of science (mountain), a coordination mechanism (rope), a
+ *   temporary problem being solved by open science (scaffold), a degraded
+ *   review ritual (piton), a mixed coordination-extraction hybrid (tangled
+ *   rope), or pure extraction (snare), depending on the observer's structural
+ *   position. The constraint's theater_ratio (0.72) reflects that traditional
+ *   peer review for complex quantum materials claims is largely performative:
+ *   reviewers cannot verify synthesis conditions, measurement protocols, or
+ *   data quality from a manuscript alone. ArXiv preprints represent an
+ *   alternative pathway with genuinely lower theater — distributed scrutiny
+ *   skips the performative review ritual entirely, testing the open-source
+ *   hypothesis that many eyes make bugs shallow.
  *
  * KEY AGENTS:
  *   - Original Research Group: Primary beneficiary (institutional/arbitrage) — captures citation advantage and funding priority during verification window
  *   - Field Epistemic Reliability: Primary victim (powerless/trapped) — abstract collective good that cannot exit or organize; bears full cost of false positives
- *   - Replication Groups: Secondary victim (moderate/constrained) — face resource barriers and career risk of negative results; constrained by equipment access and expertise requirements
- *   - Funding Agencies: Institutional actor (institutional/constrained) — benefit from breakthrough narratives for political support but bear long-term cost of credibility damage from retractions
- *   - Analytical Observer: Sees full extraction structure (analytical/analytical) — recognizes asymmetric incentives and epistemic commons depletion
+ *   - Replication Groups: Secondary victim (moderate/constrained) — face resource barriers and career risk of negative results; also benefit from verification ecosystem
+ *   - Open Science Coalition: Organized agents (organized/constrained) — arXiv, registered reports, open-data mandates building alternative verification pathways with sunset logic
+ *   - Journal Editorial System: Institutional actor (institutional/arbitrage) — maintains performative review ritual; sees own process as degraded (piton perspective)
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangements as inherent scientific limits
  */
 
 /* ==========================================================================
@@ -84,17 +90,17 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(verification_bottleneck, 0.72).
-domain_priors:suppression_score(verification_bottleneck, 0.78).
-domain_priors:theater_ratio(verification_bottleneck, 0.38).
+domain_priors:base_extractiveness(verification_bottleneck, 0.4).
+domain_priors:suppression_score(verification_bottleneck, 0.55).
+domain_priors:theater_ratio(verification_bottleneck, 0.72).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(verification_bottleneck, extractiveness, 0.72).
-narrative_ontology:constraint_metric(verification_bottleneck, suppression_requirement, 0.78).
-narrative_ontology:constraint_metric(verification_bottleneck, theater_ratio, 0.38).
+narrative_ontology:constraint_metric(verification_bottleneck, extractiveness, 0.4).
+narrative_ontology:constraint_metric(verification_bottleneck, suppression_requirement, 0.55).
+narrative_ontology:constraint_metric(verification_bottleneck, theater_ratio, 0.72).
 
 % --- Constraint claim ---
-narrative_ontology:constraint_claim(verification_bottleneck, snare).
+narrative_ontology:constraint_claim(verification_bottleneck, tangled_rope).
 narrative_ontology:human_readable(verification_bottleneck, "Verification Bottleneck in Quantum Materials Discovery").
 narrative_ontology:topic_domain(verification_bottleneck, "condensed_matter_physics/experimental_verification").
 
@@ -104,46 +110,52 @@ domain_priors:requires_active_enforcement(verification_bottleneck).
 narrative_ontology:constraint_beneficiary(verification_bottleneck, original_research_group).
 narrative_ontology:constraint_victim(verification_bottleneck, field_epistemic_reliability).
 narrative_ontology:constraint_victim(verification_bottleneck, replication_groups).
-narrative_ontology:constraint_victim(verification_bottleneck, funding_agencies).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% PERSPECTIVE 1: FIELD EPISTEMIC RELIABILITY (SNARE) — Cannot exit the verification crisis; bears full cost of premature claims
-constraint_indexing:constraint_classification(verification_bottleneck, naturalized,
+% PERSPECTIVE 1: FIELD EPISTEMIC RELIABILITY (SNARE) — Cannot exit the verification crisis; bears full cost of premature claims. The epistemic commons has no advocate and no exit option. Maximum experienced extraction — abstract collective cannot organize or escape.
+constraint_indexing:constraint_classification(verification_bottleneck, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: REPLICATION GROUP (SNARE) — Constrained by resource requirements and career risk of negative results
-constraint_indexing:constraint_classification(verification_bottleneck, snare,
+% PERSPECTIVE 2: REPLICATION GROUP (TANGLED ROPE) — Constrained by resource requirements and career risk of negative results, but also benefits from the verification ecosystem through collaborative access and method development. Significant extraction but not maximal — some agency and some benefit.
+constraint_indexing:constraint_classification(verification_bottleneck, tangled_rope,
     context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: ORIGINAL RESEARCH GROUP (ROPE) — Benefits from first-mover advantage in publications and funding
+% PERSPECTIVE 3: ORIGINAL RESEARCH GROUP (ROPE) — Benefits from first-mover advantage. Experiences the constraint as coordination: communicating findings enables follow-up work. Net beneficiary — extraction runs toward this agent, not away from them.
 constraint_indexing:constraint_classification(verification_bottleneck, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: FUNDING AGENCY (TANGLED ROPE) — Needs breakthrough claims for political support but bears cost of false positives
-constraint_indexing:constraint_classification(verification_bottleneck, rope,
-    context(agent_power(institutional),
+% PERSPECTIVE 4: OPEN SCIENCE COALITION (SCAFFOLD) — Organized agents (arXiv, registered reports, open-data mandates) see the bottleneck as a temporary coordination failure with a sunset: distributed preprint scrutiny, pre-registration, and open-access norms are building alternative verification pathways that bypass the traditional peer review theater.
+constraint_indexing:constraint_classification(verification_bottleneck, scaffold,
+    context(agent_power(organized),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(global))).
 
-% PERSPECTIVE 5: ANALYTICAL OBSERVER (SNARE) — Sees structural extraction from epistemic commons
-constraint_indexing:constraint_classification(verification_bottleneck, snare,
+% PERSPECTIVE 5: JOURNAL EDITORIAL SYSTEM (PITON) — Traditional peer review for complex quantum materials claims is largely performative: reviewers cannot verify synthesis conditions, measurement protocols, or data quality from a manuscript alone. The review ritual persists through institutional inertia despite low functional verification.
+constraint_indexing:constraint_classification(verification_bottleneck, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some verification lag is inherent to experimental science: complex claims always take time to replicate, and the gap between claim and confirmation is a structural feature of how knowledge advances. However, the structural data contradicts the mountain classification — the engine will compute this as a false summit, revealing that the 'inherent to science' framing naturalizes what is actually a contingent institutional arrangement.
+constraint_indexing:constraint_classification(verification_bottleneck, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
-            spatial_scope(global))).
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -153,12 +165,12 @@ constraint_indexing:constraint_classification(verification_bottleneck, snare,
 
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(verification_bottleneck, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(verification_bottleneck, TypeOther, context(agent_power(institutional), _, _, _)),
+    constraint_indexing:constraint_classification(verification_bottleneck, TypeOther, context(agent_power(moderate), _, _, _)),
     TypePowerless \= TypeOther.
 
-test(extraction_signature) :-
-    domain_priors:base_extractiveness(verification_bottleneck, E),
-    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+test(piton_threshold) :-
+    domain_priors:theater_ratio(verification_bottleneck, TR),
+    TR >= 0.70.
 
 :- end_tests(verification_bottleneck_tests).
 
@@ -168,16 +180,16 @@ test(extraction_signature) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.72): The original research group captures substantial career and funding benefits during the verification window (typically 2-5 years for complex quantum materials claims), while the epistemic cost of premature claims is externalized to the field. The extraction is structural rather than intentional — the incentive gradient favors early publication even when internal confidence is moderate. The increased value reflects the magnitude of career advantage captured during the verification window relative to the externalized epistemic cost. Suppression (0.78): High barriers to independent verification include: (1) specialized equipment requirements (dilution refrigerators, high-field magnets, synchrotron beamtime), (2) tacit knowledge in sample preparation, (3) publication bias against negative results, (4) career risk for junior researchers challenging established groups, (5) funding concentration in groups with track records of breakthrough claims. The suppression is higher than extractiveness because the barriers are primarily structural (equipment access, expertise requirements) rather than purely incentive-driven. The increased value reflects the severity of resource barriers and the strength of institutional mechanisms that prevent challenge. Theater ratio (0.38): Moderate theatrical component includes: performative confidence in press releases, selective emphasis on supporting data while downplaying anomalies, citation networks that amplify preliminary claims, conference presentations that project certainty beyond data quality. However, substantial functional activity remains: genuine experimental work, peer review (albeit imperfect), eventual replication attempts. The reduced value reflects that most activity is still functional research rather than pure performance.
+ *   Extractiveness (0.40): Moderate. The original research group captures career and funding benefits during the 2-5 year verification window, but the extraction is not as severe as early assessments suggested — much of the 'extraction' is legitimate first-mover reward for high-risk research. The moderate value reflects that the career asymmetry, while real, is partly a fair coordination incentive. Suppression (0.55): Moderate-high. Significant barriers to independent verification include specialized equipment requirements, tacit knowledge in sample preparation, publication bias against negative results, and career risk for researchers who publish replications. But suppression is not total — some groups can and do replicate, and open-science norms are reducing barriers. Theater ratio (0.72): High. Traditional peer review for complex experimental physics is substantially performative. Reviewers assess plausibility, novelty, and presentation quality but cannot verify synthesis conditions, measurement calibration, or raw data quality. The theater has increased over the interval as experimental complexity has outpaced reviewer capacity. ArXiv preprints bypass this theater entirely — their verification mechanism (distributed scrutiny) has different failure modes but lower performative content.
  *
  * PERSPECTIVAL GAP:
- *   The original research group experiences the constraint as a coordination mechanism (Rope) — they are solving the legitimate problem of communicating preliminary findings to enable follow-up work, and the career benefits are viewed as fair compensation for high-risk research. The field's epistemic reliability experiences it as pure extraction (Snare) — premature claims contaminate the literature, misdirect research effort, and erode public trust, with no mechanism for self-correction until years later. Replication groups experience it as a Snare with constrained exit — they can choose not to attempt replication, but this choice means abandoning their research area or accepting subordinate status. Funding agencies experience it as Tangled Rope — they need breakthrough narratives to justify budgets to political overseers, but also bear reputational cost when high-profile claims fail to replicate. The analytical observer sees the structural extraction: the verification bottleneck is not a natural coordination problem but an artifact of misaligned incentives that systematically transfers epistemic risk from claimants to the commons.
+ *   This constraint demonstrates the full range of DR classification from a single set of base properties. The original research group sees coordination (Rope) — they are solving the legitimate problem of communicating findings to the broader research community. The open science coalition sees a temporary problem with a sunset (Scaffold) — arXiv preprints, registered reports, and open data mandates are building alternative pathways. The journal editorial system sees its own degraded ritual (Piton) — peer review persists through inertia, not functional verification capacity. Replication groups see mixed coordination and extraction (Tangled Rope) — the system both enables collaborative access and imposes career risk for negative results. The field's epistemic reliability sees pure extraction (Snare) — premature claims contaminate the literature with no self-correction mechanism. The civilizational analytical observer risks seeing an immutable natural law (Mountain) — verification lag is inherent to science — but the structural data reveals this as a false summit: the contingent institutional arrangements (career incentives, funding concentration, publication bias) are not laws of nature.
  *
  * DIRECTIONALITY LOGIC:
- *   Original research group: Declared as beneficiary with institutional power and arbitrage exit options. The derivation chain produces low d (≈0.05) → negative f(d) (≈-0.12) → negative effective extraction. This correctly captures their structural position: they benefit from the constraint and can exit to other research areas or institutions if challenged. Field epistemic reliability: Declared as victim with powerless status and trapped exit options. Derivation produces high d (≈0.95) → high f(d) (≈1.42) → amplified extraction. Correctly captures that the field as an abstract collective cannot organize or exit, and bears the full cost of contaminated literature. Replication groups: Declared as victim with moderate power and constrained exit. Derivation produces d ≈0.75 → f(d) ≈1.10. Captures their intermediate position: they have some agency (can choose not to replicate) but face significant barriers (resource requirements, career risk). Funding agencies: Declared as both beneficiary (political support from breakthrough narratives) and victim (reputational cost of retractions) with institutional power and constrained exit. The dual declaration produces d ≈0.50 → f(d) ≈0.65, reflecting their ambiguous structural position. No override needed — the symmetric declaration correctly models their Tangled Rope experience.
+ *   Each perspective's directionality value (d) is determined by the agent's structural position: their power level, exit options, and relationship to the extraction flow. The original research group derives low d (≈0.15) from beneficiary status and arbitrage exit options — they can walk away from the constraint with their priority intact. Replication groups derive moderate-high d (≈0.55) from victim status but constrained exit — they face resource barriers and career risk but retain some agency through consortium and open-science pathways. The field's epistemic reliability derives maximum d (≈0.95) from victim status and trapped exit — it has no exit, no agency, and no ability to organize. The open science coalition derives moderate d (≈0.50) from victim status offset by organized power — they are constrained but coordinate collectively to build alternatives. The journal editorial system derives low-to-negative d from beneficiary status and arbitrage exit — they profit from the system but perceive it as degraded. The analytical observer derives high d (≈0.73) from analytical position and global scope — they see the full structure but cannot intervene.
  *
  * MANDATROPHY ANALYSIS:
- *   MANDATROPHY RESOLVED via multi-perspective classification and structural relationship declarations. The constraint is NOT pure extraction masquerading as coordination — it is genuine extraction enabled by asymmetric information and misaligned incentives. The original research group's Rope classification is their subjective experience (they see themselves as coordinators), but the analytical perspective reveals the Snare structure: high extraction (0.72), high suppression (0.78), and systematic transfer of epistemic risk to victims with no exit options. The Tangled Rope classification for funding agencies shows how institutional actors can simultaneously benefit from and be victimized by the same constraint. The resolution mechanism is structural decomposition: the constraint has both a coordination function (communicating preliminary findings) and an extraction function (capturing career benefits while externalizing epistemic risk). The extraction dominates because: (1) the verification window (2-5 years) is long relative to career timescales, (2) replication groups face asymmetric costs (resource requirements, publication bias against negative results), (3) the field's epistemic reliability cannot organize to demand higher standards. The omega variables identify the empirical tests that would confirm or refute the Snare classification: if alternative probes are truly independent and replication timelines are short, the constraint would reclassify as Rope; if career benefits greatly exceed costs of failed replication, Snare is confirmed.
+ *   DIAGNOSTIC EXEMPLAR: This constraint resolves the mandatrophy by showing that all six types are legitimate perspectival readings of the same structural data. The mandatrophy is not 'which type is correct?' but 'which perspective are you measuring from?' The analytical observer's mountain is a false summit (naturalizes contingent institutions). The beneficiary's rope is their genuine experience (first-mover advantage enables coordination). The open science coalition's scaffold reflects a real structural feature (alternative pathways with sunset timeline). The journal system's piton is a real observation (performative review persists through inertia). The snare from the field's perspective reflects the victims' structural reality (trapped, powerless, bearing full cost). The tangled rope from replication groups' perspective reflects their actual mixed experience (resources + method development offset by career risk + resource barriers). No single type is 'the' answer — the presheaf over the observation site IS the answer. The constraint's true identity is its perspectival structure.
  */
 
 /* ==========================================================================
@@ -198,21 +210,21 @@ omega_variable(
     alternative_probe_sufficiency,
     'Do alternative experimental probes (muon spin rotation, NMR, neutron scattering) constitute independent verification or merely correlated measurements?',
     'Cross-technique correlation analysis; identification of shared systematic errors or sample preparation dependencies',
-    'If truly independent: verification bottleneck is coordination problem (Rope). If correlated: bottleneck is extraction mechanism (Snare).',
+    'If truly independent: verification bottleneck is coordination problem (Rope from more perspectives). If correlated: bottleneck is extraction mechanism (Snare from more perspectives).',
     confidence_without_resolution(high)
 ).
 
 narrative_ontology:omega_variable(alternative_probe_sufficiency, empirical, 'Whether alternative probes provide independent verification').
 
 omega_variable(
-    career_incentive_magnitude,
-    'What is the quantitative career benefit of premature claim vs cost of failed replication?',
-    'Bibliometric analysis of citation advantage for first claims; career trajectory analysis for authors of retracted vs confirmed discoveries',
-    'If benefit >> cost: Snare classification confirmed. If benefit ≈ cost: reclassify as Tangled Rope with symmetric risk.',
+    preprint_scrutiny_effectiveness,
+    'Does distributed preprint scrutiny on arXiv actually catch errors at rates comparable to or better than traditional peer review for complex experimental claims?',
+    'Comparison of error detection rates: preprint comments/revisions vs journal review rounds for the same manuscripts; longitudinal tracking of claims first posted as preprints vs those going direct to journals',
+    'If effective: scaffold perspective confirmed — open-science sunset is real. If ineffective: many-eyes logic fails for specialized claims, and the scaffold perspective is aspirational rather than structural.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(career_incentive_magnitude, empirical, 'Asymmetry between career benefit of claim and cost of failure').
+narrative_ontology:omega_variable(preprint_scrutiny_effectiveness, empirical, 'Whether arXiv distributed scrutiny provides effective verification').
 
 
 /* ==========================================================================
@@ -226,16 +238,14 @@ narrative_ontology:interval(verification_bottleneck, 0, 10).
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(verif_tr_t0, verification_bottleneck, theater_ratio, 0, 0.1).
-narrative_ontology:measurement(verif_tr_t3, verification_bottleneck, theater_ratio, 3, 0.22).
-narrative_ontology:measurement(verif_tr_t6, verification_bottleneck, theater_ratio, 6, 0.32).
-narrative_ontology:measurement(verif_tr_t10, verification_bottleneck, theater_ratio, 10, 0.38).
+narrative_ontology:measurement(verif_tr_t0, verification_bottleneck, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(verif_tr_t5, verification_bottleneck, theater_ratio, 5, 0.6).
+narrative_ontology:measurement(verif_tr_t10, verification_bottleneck, theater_ratio, 10, 0.72).
 
 % Extraction over time
-narrative_ontology:measurement(verif_be_t0, verification_bottleneck, base_extractiveness, 0, 0.35).
-narrative_ontology:measurement(verif_be_t3, verification_bottleneck, base_extractiveness, 3, 0.52).
-narrative_ontology:measurement(verif_be_t6, verification_bottleneck, base_extractiveness, 6, 0.63).
-narrative_ontology:measurement(verif_be_t10, verification_bottleneck, base_extractiveness, 10, 0.72).
+narrative_ontology:measurement(verif_be_t0, verification_bottleneck, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(verif_be_t5, verification_bottleneck, base_extractiveness, 5, 0.33).
+narrative_ontology:measurement(verif_be_t10, verification_bottleneck, base_extractiveness, 10, 0.4).
 
 
 /* ==========================================================================
@@ -247,7 +257,7 @@ narrative_ontology:affects_constraint(verification_bottleneck, inverse_spin_valv
 narrative_ontology:affects_constraint(verification_bottleneck, noncentrosymmetric_asoc_coupling).
 
 % DUAL FORMULATION NOTE:
-% The verification bottleneck is downstream of specific materials claims (inverse spin valve signature, noncentrosymmetric ASOC coupling) but represents a distinct structural constraint. The upstream constraints have their own ε values reflecting the empirical status of the specific physical claims; the verification bottleneck has ε=0.72 reflecting the career incentive asymmetry and resource barriers to replication. The bottleneck affects all quantum materials claims but is particularly severe for claims requiring specialized equipment or tacit experimental knowledge. Linked via network.affects_constraints to show that the epistemic status of upstream claims is contaminated by the verification bottleneck structure.
+% The verification bottleneck is downstream of specific materials claims but represents a distinct structural constraint. The upstream constraints have their own extractiveness values reflecting the empirical status of the specific physical claims; the verification bottleneck has its own extractiveness reflecting the career incentive asymmetry and resource barriers to replication.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)

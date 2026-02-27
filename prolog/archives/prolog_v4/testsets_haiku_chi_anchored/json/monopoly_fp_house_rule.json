@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "monopoly_fp_house_rule",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mfp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Monopoly 'Free Parking' House Rule",
+    "topic_domain": "social/game_mechanics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "systematic_loser",
+      "game_duration_extension",
+      "original_game_design"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Systematically Impoverished Player",
+      "comment": "PERSPECTIVE 1: SYSTEMATICALLY IMPOVERISHED PLAYER (SNARE) \u2014 Caught in cascading financial collapse. Early bad luck (landing on expensive properties, paying taxes) depletes cash reserves. Free Parking rule provides unpredictable, insufficient relief. Cannot exit the game without social friction or abandonment. High suppression (no alternative income sources in-game). d\u22480.92, f(d)\u22481.40, \u03c3=0.8 \u2192 \u03c7\u22480.58."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Lucky Early Accumulator",
+      "comment": "PERSPECTIVE 2: LUCKY EARLY ACCUMULATOR (SNARE) \u2014 Benefits from early property acquisition and tax collection from opponents. Free Parking rule provides surprise windfalls that accelerate wealth concentration. Their exit option is constrained (leaving forfeits advantage) but superior to the impoverished player. d\u22480.35, f(d)\u22480.28, \u03c3=0.8 \u2192 \u03c7\u22480.12. Net positive but still experiences the constraint's structural coercion (must stay to protect position)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Gaming Community (House Rule Defenders)",
+      "comment": "PERSPECTIVE 3: GAMING COMMUNITY \u2014 HOUSE RULE DEFENDERS (TANGLED ROPE) \u2014 Organized players who adopt and propagate Free Parking rule see genuine coordination benefits: the rule makes game outcomes less deterministic, extends game length, provides dramatic swings that increase engagement and narrative tension. Also exhibits extraction: newer or weaker players are systematically disadvantaged. Mobile exit (switch rules, play original rules, play other games) available but involves social coordination cost. d\u22480.48, f(d)\u22480.60, \u03c3=0.8 \u2192 \u03c7\u22480.31."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Casual Host",
+      "comment": "PERSPECTIVE 4: CASUAL HOST (ROPE) \u2014 Adult organizing family game night adopts Free Parking rule to make game more fun and exciting for children. Sees it as pure coordination: keeps underperforming players engaged, extends social time, creates narrative interest. No extraction perceived \u2014 it's about managing group enjoyment. d\u22480.08, f(d)\u2248-0.08, \u03c3=0.8 \u2192 \u03c7\u2248-0.04. Net negative extraction = beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Original Game Design (Hasbro/Rules as Published)",
+      "comment": "PERSPECTIVE 5: ORIGINAL GAME DESIGN (PITON) \u2014 Hasbro's official rules deliberately exclude Free Parking income to create strategic tension and game-ending conditions. Free Parking house rule is a degradation of the original design intent. Theater ratio (0.65) reflects the rule's performative nature: Free Parking appears to be a 'fair' neutral space but actually functions as wealth redistribution. The design sees itself as corrupted through inertia (players don't read official rules, host variations persist). d\u22480.10, f(d)\u2248-0.01, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Mathematical Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER \u2014 FALSE MOUNTAIN VIEW \u2014 From a civilizational perspective, one might argue that wealth concentration and player elimination are 'inevitable' in any competitive resource game, and house rules are 'natural' adaptations. However, base extractiveness (0.52) and suppression (0.68) contradict mountain classification. The constraint is contingent on rule choice, not inevitable law. Engine detects false summit: the 'inevitability' narrative naturalizes what are actually designer choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cash_injection_sufficiency",
+      "question": "Is the Free Parking cash injection sufficient to prevent cascading player elimination, or merely to delay it?",
+      "resolution_mechanism": "Statistical analysis of game duration and player elimination rate with vs without Free Parking rule across game parameter spaces (number of players, starting cash, property distribution); survival curve analysis",
+      "impact": "If sufficient: rule solves a real coordination problem (Rope from community perspective). If merely delays: rule is extraction mechanism masquerading as help (Snare confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Free Parking provides sufficient economic relief or merely delays elimination"
+    },
+    {
+      "id": "player_agency_perception",
+      "question": "Do players who benefit from Free Parking windfalls perceive their wealth as earned through skill or as luck-dependent?",
+      "resolution_mechanism": "Qualitative post-game interviews and survey data on player attribution (skill vs luck); correlation between Free Parking benefit and self-reported sense of control; comparison of player satisfaction metrics with/without rule",
+      "impact": "If perceived as luck-dependent: rule increases game narrative but undermines skill-based engagement (snare extraction clarified). If perceived as skill-dependent: rule obscures luck and enables overconfidence (different type of snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Player attribution of Free Parking windfalls to skill vs luck"
+    },
+    {
+      "id": "exit_option_feasibility",
+      "question": "Is the social cost of refusing Free Parking rule (proposing standard rules) equivalent across player groups?",
+      "resolution_mechanism": "Social network analysis of game groups; interviews about veto power and norm-setting authority; observation of rule negotiation dynamics",
+      "impact": "If exit cost is uniform: suppression is shared (less snare). If exit cost is asymmetric (children cannot easily propose alternatives): suppression is asymmetric (confirmed snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Social cost symmetry of refusing Free Parking rule"
+    },
+    {
+      "id": "original_design_intent_recovery",
+      "question": "Can players who switch to official rules adjust strategic play within one or two games?",
+      "resolution_mechanism": "Longitudinal play study comparing strategy adaptation rates; skill-based player performance before/after rule switch; coaching or instruction impact on transition",
+      "impact": "If adaptive: piton is confirmed (skill can overcome design switch). If maladaptive: original design intent is lost (house rule is now structural default, not degradation).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Player adaptive capacity when switching from Free Parking to official rules"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Free Parking house rule in Monopoly exemplifies how a well-intentioned modification to game mechanics creates a snare by masking extraction as luck-based relief. The official rules deliberately create tension through property monopolization and tax collection; players who land on properties they cannot afford face bankruptcy and elimination. The Free Parking rule adds a cash pool at the board's center that any player can access by landing on the Free Parking space. This modification has multiple structural effects: it extends game duration (preventing early eliminations), it introduces unpredictable wealth redistribution (creating narrative drama), but critically, it shifts incentive structures in ways that advantage early accumulators and lock in systematic disadvantage for those who fall behind early. The rule's attraction lies partly in its performative fairness \u2014 it appears to help struggling players \u2014 while its actual function is to redistribute unpredictably while keeping the game in the hands of those who established early leads. The constraint is a snare because escape requires coordinated group decision-making (switching to official rules) that carries social friction, and because the rule extracts strategic depth and game-ending conditions from the original design while maintaining the appearance of friendly accommodation.",
+    "key_agents": [
+      "Systematically Impoverished Player: Primary victim (powerless/trapped) \u2014 caught in cascading financial collapse with only unpredictable Free Parking relief",
+      "Lucky Early Accumulator: Secondary beneficiary (moderate/constrained) \u2014 captures wealth concentration; exit constrained by need to protect advantage",
+      "Gaming Community (House Rule Defenders): Organized beneficiary (organized/mobile) \u2014 sees genuine coordination benefits (engagement, extended play, narrative drama) but exhibits extraction (disadvantages weaker players)",
+      "Casual Host: Beneficiary (institutional/arbitrage) \u2014 adult social coordinator who adopts rule for group enjoyment and engagement",
+      "Original Game Design (Hasbro/Rules as Published): Institutional observer (institutional/arbitrage) \u2014 sees house rule as degradation of design intent (piton perspective)",
+      "Analytical Observer: Civilizational analytical view (analytical/analytical) \u2014 risks naturalizing contingent rule choice as inevitable game property"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The Free Parking rule increases extractiveness compared to official rules by shifting the game from deterministic (early advantage = inevitable win) to luck-dependent (early advantage + favorable die rolls = continued advantage, but disrupted by random windfalls). This appears to reduce extractiveness (more unpredictability), but actually increases it because the unpredictability is not uniform: players with cash reserves benefit more from Free Parking windfalls (they have capital to reinvest the windfall); players with depleted reserves benefit less (they may go bankrupt before landing on Free Parking again). The extraction is the *asymmetric relief effect*. Suppression (0.68): High. Once a player is significantly behind, alternatives are few: (a) continue playing in a losing position, (b) propose switching to official rules (social friction), (c) abandon the game (social friction and sore-loser perception). The rule structure suppresses all three alternatives. Theater ratio (0.65): Moderate-high. Free Parking appears to be a 'lucky break' or 'fair neutral space' but functions as selective wealth redistribution. The performative narrative is 'this helps everyone equally'; the actual function is 'this helps cash-rich players disproportionately.' Theater increased from 0.55 to 0.65 over the measurement interval as awareness of the rule's effect spread among game communities \u2014 players now explicitly invoke it as a 'fun house rule' (theater label) while acknowledging its luck-based nature (cognitive dissonance).",
+    "perspectival_gap": "The gap between the casual host's rope perspective and the systematically impoverished player's snare perspective is the core diagnostic. The host genuinely experiences the rule as coordination: keeping less skilled players engaged, extending social time, creating narrative interest. The impoverished player genuinely experiences it as extraction: unpredictable relief that may arrive too late, reinforcing early advantage, requiring them to stay in a losing game. Neither perspective is false \u2014 they measure different structural positions relative to the constraint. The piton perspective (original design) sees the rule as degradation of elegant design (bankruptcy as a game-ending condition is an intentional design feature, not a bug). The analytics view risks naturalizing the rule choice as inevitable 'game nature' when it is actually a contingent modification made by specific communities. The gaming community's organized perspective reveals tangled rope structure: the rule does provide coordination benefits (extended engagement) but also exhibits extraction (systematic disadvantage for weaker players, delayed eliminations that extend their suffering).",
+    "directionality_logic": "Systematically impoverished player: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Nearly maximum extraction; exit requires game abandonment (high social cost). Lucky early accumulator: Beneficiary + constrained \u2192 d\u22480.35, f(d)\u22480.28. Moderate extraction because their exit is constrained (must stay to protect advantage) but their position is superior. Gaming community: Mixed (organized + mobile) \u2192 d\u22480.48, f(d)\u22480.60. Tangled rope requires both coordination function (engagement, extended play) and extraction (systematic disadvantage). Mobile exit (switch rules) is available but requires group coordination. Casual host: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; full control over rule adoption. Original design: Institutional beneficiary of baseline (no rule) \u2192 d\u22480.10, f(d)\u2248-0.01. The piton classification comes from theater_ratio \u2265 0.70 (barely below at 0.65), indicating institutional recognition that the rule performs a function it was not designed for.",
+    "mandatrophy_analysis": "The Free Parking house rule resolves the mandatrophy by showing how a rule that appears to address a coordination problem (players getting eliminated) actually functions as an extraction mechanism (asymmetric relief that preserves early advantage while extending suffering). The rule is neither 'pure coordination' (Rope) nor 'pure extraction' (Snare) from every perspective: the casual host genuinely sees rope (group engagement), the gaming community sees tangled rope (coordination + extraction), the impoverished player sees snare (extraction + suppression). The mandatrophy is resolved by recognizing that these are not contradictory classifications \u2014 they measure different structural positions. The rule persists because it solves a real problem (player elimination reduces engagement) while creating a hidden problem (systematic disadvantage becomes less visible through luck-based relief). The piton perspective (original design) clarifies that the rule is degraded design \u2014 it replaces the elegant bankruptcy-as-ending with an ambiguous luck-based mess \u2014 but persists through inertia because players prefer to avoid eliminating friends (social friction mitigation). The theater_ratio (0.65) captures the rule's performative nature: it performs fairness while functioning as selective advantage."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The Free Parking house rule is a standalone constraint in informal game mechanics. It could be decomposed into separate constraints (elimination suppression mechanism vs. luck-based extraction), but the natural-language concept is sufficiently coherent to treat as one story. No upstream empirical claims are required to establish the rule's existence."
+  },
+  "directionality_overrides": []
+}

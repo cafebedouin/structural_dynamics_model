@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "ergo_rosen_bridge_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rosenbr"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rosen Bridge Cross-Chain Mechanism",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ergo_ecosystem_developers",
+      "bridge_operator_nodes"
+    ],
+    "victims": [
+      "cross_chain_liquidity_providers",
+      "asset_bridge_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Liquidity Provider",
+      "comment": "PERSPECTIVE 1: LIQUIDITY PROVIDER (SNARE) \u2014 Trapped in the bridge architecture; capital locked in reserve pools with no unilateral exit. Faces extraction through operator fee structures, collateralization requirements, and protocol governance opacity. Cannot exit without abandoning capital. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.64."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Cross-Chain User",
+      "comment": "PERSPECTIVE 2: CROSS-CHAIN USER (TANGLED ROPE) \u2014 Experiences both coordination benefit (liquidity access, asset atomicity) and extraction (slippage, bridge fees, latency risk). Can exit by using alternative bridges or staying on-chain, but costs are high. Benefits from the mechanism's functionality while bearing fee burden. d\u22480.68, f(d)\u22481.02, \u03c3=0.9 \u2192 \u03c7\u22480.35."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Bridge Operator Nodes",
+      "comment": "PERSPECTIVE 3: BRIDGE OPERATOR NODES (ROPE) \u2014 Structured as a coordination mechanism: nodes solve the distributed consensus problem for cross-chain transfers. Experience the constraint as a pure coordination function with incentive alignment (operator rewards). Can exit via node rotation and redundancy design. d\u22480.22, f(d)\u22480.11, \u03c3=1.2 \u2192 \u03c7\u22480.05."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Ergo Ecosystem Developers",
+      "comment": "PERSPECTIVE 4: ERGO ECOSYSTEM DEVELOPERS (ROPE) \u2014 Primary beneficiary. Benefits from bridge-enabled capital flows, expanded DeFi composability, and network effects. Experiences the constraint as a coordination solution enabling larger ecosystem. Can arbitrage to alternative cross-chain designs. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "External Blockchain Communities",
+      "comment": "PERSPECTIVE 5: EXTERNAL BLOCKCHAIN COMMUNITIES (TANGLED ROPE) \u2014 Benefit from bridge-enabled capital access but experience extraction through protocol asymmetry: bridge reserve requirements, operator reward structures, and governance models favor Ergo development priorities. Mobile but constrained by liquidity network effects. d\u22480.45, f(d)\u22480.45, \u03c3=1.2 \u2192 \u03c7\u22480.20."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Interoperability Layer)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 From civilizational scope, cross-chain bridges represent a temporary coordination solution pending genuine layer-2 interoperability or side-chain maturation. The Rosen Bridge has implicit sunset: as Ergo's native scaling and other bridges mature, the specific extraction mechanisms embedded in current operator designs will become obsolete. theater_ratio=0.52 reflects moderate performative content (governance theater around operator selection). The mechanism is transitional infrastructure with declining functional necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "operator_collusion_detection",
+      "question": "Can the distributed operator network reliably detect and penalize coordinated censorship or selective transaction filtering without centralizing the penalty mechanism itself?",
+      "resolution_mechanism": "Game-theoretic analysis of multi-operator incentive structures; empirical monitoring of transaction inclusion rates and operator behavior correlation; analysis of penalty mechanisms for slashing collusion",
+      "impact": "If reliably detectable: constraint is primarily coordination (Rope dominates perspectives). If undetectable: extraction risk is structural (Snare from liquidity provider perspective worsens to d\u22480.98).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether operator collusion is reliably detectable and penalizable"
+    },
+    {
+      "id": "reserve_adequacy_crisis",
+      "question": "At what liquidity scale does the reserve-pool architecture become systematically under-capitalized, forcing extractive fee increases or introducing credit risk to users?",
+      "resolution_mechanism": "Empirical modeling of reserve ratio requirements at various TVL scales; stress-testing with historical cross-chain demand spikes; comparison with competing bridge architectures (Threshold, Ren, Poly) reserve adequacy at scale",
+      "impact": "If reserve adequacy is maintained below TVL=$1B: scalability is genuine coordination. If reserves fail above TVL=$500M: architecture has hard extractive ceiling, and the constraint shifts toward Snare from user perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scale threshold where reserve architecture becomes under-capitalized"
+    },
+    {
+      "id": "governance_token_extraction",
+      "question": "Does governance token distribution incentivize actual operator participation, or does it primarily serve to extract value from users betting on ecosystem growth?",
+      "resolution_mechanism": "Analysis of token velocity and holder composition; comparison of actual operator participation rates vs token holder voting participation; measurement of whether governance decisions benefit operators or diverge from operator preferences",
+      "impact": "If governance aligns with operator incentives: mechanism is coordination (Rope). If governance rewards token holders while extracting from operators: constraint is hybrid extraction (Tangled Rope from operator perspective worsens).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether governance token structure incentivizes genuine participation or value extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The Rosen Bridge protocol enables cross-chain asset transfers without deploying smart contracts on external chains, instead using a distributed operator network to validate transactions and manage reserve liquidity pools. This creates a hybrid structure exhibiting both genuine coordination (solving the distributed cross-chain consensus problem) and structural extraction (asymmetric operator rewards, collateralization requirements, and protocol governance favoring Ergo ecosystem preferences over external blockchain communities). The constraint demonstrates how a technically sophisticated solution to a real coordination problem can embed extraction mechanisms that differentiate beneficiaries (Ergo developers, bridge operators) from victims (liquidity providers, users). The rising theater_ratio (0.35\u21920.52) reflects increasing governance theater around operator selection and reserve management as the protocol scales, while base extractiveness rises (0.18\u21920.38) as fee structures and collateralization requirements tighten to address operational risks.",
+    "key_agents": [
+      "Liquidity Providers: Primary victims (powerless/trapped) \u2014 capital locked in reserve pools with extraction through operator fees and collateralization",
+      "Bridge Operator Nodes: Primary beneficiary (organized/arbitrage) \u2014 structured as coordination mechanism with operator rewards and redundancy design",
+      "Cross-Chain Users: Secondary victims (moderate/constrained) \u2014 experience both coordination benefit (liquidity access) and extraction (fees, latency risk)",
+      "Ergo Ecosystem Developers: Primary beneficiary (institutional/arbitrage) \u2014 capture expanded DeFi composability and network effects",
+      "External Blockchain Communities: Moderate victims (powerful/mobile) \u2014 benefit from bridge access but experience governance asymmetry",
+      "Analytical Observer: Sees temporary infrastructure (analytical/analytical) \u2014 sunset logic as native scaling and alternative bridges mature"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The protocol extracts value through operator fee structures (typically 0.1-0.5% per transfer), collateralization requirements (reserve ratios lock capital), and governance asymmetry favoring Ergo ecosystem development. However, extraction is not maximal (0.46+) because liquidity providers benefit from fee revenue sharing and users benefit from genuine liquidity access that was previously unavailable. The mechanism solves a real problem (cross-chain atomicity without external smart contracts). Suppression (0.48): Moderate. Significant barriers to alternatives include: switching costs (established liquidity pools), technical debt in alternative bridge architectures, and network effects favoring the largest bridge. But suppression is not total \u2014 competing bridges exist (Threshold, Ren, Poly) and users can choose to remain on-chain. Theater ratio (0.52): Moderate-high. The protocol exhibits theater in governance (operator selection appears decentralized but reflects Ergo foundation preferences), reserve management (collateralization ratios justified as 'risk management' but serve to cap liquidity), and operator reward structures (framed as 'incentive alignment' but extract during low-volatility periods). The theater is increasing as governance structures formalize.",
+    "perspectival_gap": "Liquidity providers see extraction (Snare) \u2014 their capital is locked with no unilateral exit. Bridge operators see coordination (Rope) \u2014 they solve a distributed consensus problem with aligned incentives. Ergo developers see a coordination solution enabling ecosystem growth (Rope). Cross-chain users see mixed coordination and extraction (Tangled Rope) \u2014 the mechanism enables access they need but charges them for it. External blockchain communities see managed extraction (Tangled Rope) \u2014 they benefit from bridge access but experience governance asymmetry. The analytical observer sees temporary infrastructure (Scaffold) \u2014 with sunset logic as scaling solutions mature. The perspectival gaps reveal that the 'cross-chain bridge' label obscures the structural distinction between who benefits from solving the coordination problem (operators, Ergo developers) and who bears the extraction costs (liquidity providers, users).",
+    "directionality_logic": "Liquidity providers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximum extraction; capital locked with regulatory/technical barriers to withdrawal. Bridge operators: Beneficiary + arbitrage \u2192 d\u22480.22, f(d)\u22480.11. Low effective extraction; structured as coordination mechanism with node redundancy. Cross-chain users: Victim + constrained \u2192 d\u22480.68, f(d)\u22481.02. Moderate extraction; can use alternative bridges or stay on-chain but faces high switching costs. Ergo developers: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary through ecosystem effects. External blockchains: Victim + mobile \u2192 d\u22480.45, f(d)\u22480.45. Moderate extraction; mobile but network effects constrain actual exit to alternatives. Analytical observer: analytical \u2192 d\u22480.60, f(d)\u22480.85. Scaffold classification comes from sunset logic and moderate theater, not from high chi.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint embeds both genuine coordination (distributed consensus for cross-chain transfers, operator incentive alignment) and structural asymmetric extraction (fee structures, reserve collateralization, governance models that favor Ergo ecosystem). The mandatrophy is resolved by recognizing that the 'bridge' label conflates two functions: (1) solving the distributed cross-chain consensus problem \u2014 a real coordination challenge requiring distributed validation, and (2) capturing value from that solution through operator rewards, liquidity collateral, and governance asymmetry. The beneficiary (operators, Ergo developers) experiences the constraint as coordination (Rope perspective). The victim (liquidity providers, cross-chain users) experiences it as extraction (Snare/Tangled Rope perspectives). The constraint is Tangled Rope at the base level because it requires BOTH the genuine coordination function (operators must solve consensus) AND the asymmetric extraction structure (fee models must incentivize participation while locking liquidity). Remove either element and the mechanism fails: remove coordination and extraction becomes predatory; remove extraction and operator incentives collapse. The theater (governance structures, collateral justifications) reflects the ongoing negotiation between these two functions as the protocol scales."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ergo_defi_liquidity_concentration",
+      "cross_chain_atomic_swap_availability"
+    ],
+    "dual_formulation_note": "The Rosen Bridge protocol decomposes into two structurally distinct constraints: (1) cross-chain distributed consensus (genuine coordination problem, \u03b5\u22480.12), and (2) reserve-pool liquidity extraction (asymmetric capital lockup, \u03b5\u22480.58). The current JSON models the combined protocol at \u03b5=0.38 reflecting the hybrid nature. If analysis focuses on the operator network design, the coordination component dominates (Rope perspective). If analysis focuses on liquidity provider experience, the extraction component dominates (Snare perspective). Future decomposition may separate these into distinct constraint families as the protocol architecture evolves."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.7
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "header": {
+    "constraint_id": "ergo_dexy_gold_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dexy"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "DexyGold Seigniorage Mechanism",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protocol_developers",
+      "early_dexy_holders",
+      "arbitrage_traders"
+    ],
+    "victims": [
+      "late_entrant_users",
+      "price_volatility_absorbers",
+      "ergo_ecosystem_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Late-Entrant DexyGold User",
+      "comment": "PERSPECTIVE 1: LATE-ENTRANT USER (SNARE) \u2014 Cannot exit without accepting realized losses. Trapped by sunk psychological capital and locked liquidity. Once bought at peak, faced with choosing between accepting loss or waiting indefinitely for recovery. Protocol enforcement (forced collateral requirements, redemption delays) creates structural lock-in. d\u22480.92, f(d)\u22481.39, \u03c3=1.2 \u2192 \u03c7\u22480.96."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Retail DexyGold Holder",
+      "comment": "PERSPECTIVE 2: RETAIL HOLDER (TANGLED ROPE) \u2014 Experiences both coordination benefit (price stability for commerce, inflation hedge) and extraction (slippage on minting/redemption, dilution through rebase mechanics). Can exit through DEX swaps but faces 1-2% slippage and opportunity cost. d\u22480.70, f(d)\u22481.05, \u03c3=1.0 \u2192 \u03c7\u22480.61."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Arbitrage Trader",
+      "comment": "PERSPECTIVE 3: ARBITRAGE TRADER (ROPE) \u2014 Experiences pure coordination. Protocol design (overcollateralization, mint/burn mechanics) creates profitable spreads they extract by stabilizing price. No extraction cost to them \u2014 they benefit from the volatility the constraint creates. d\u22480.08, f(d)\u2248-0.08, \u03c3=1.2 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Development Team",
+      "comment": "PERSPECTIVE 4: PROTOCOL DEVELOPERS (TANGLED ROPE) \u2014 Coordination: creates gold-backed stablecoin infrastructure. Extraction: captures seigniorage revenue through minting fees (currently ~0.5%), ecosystem governance tokens, and first-mover advantage. Can exit profitably (governance token sale, protocol fork). Enforcement mechanism (algorithmic collateral checks, liquidation oracle) is actively maintained. d\u22480.15, f(d)\u22480.05, \u03c3=1.2 \u2192 \u03c7\u22480.03."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Ergo Ecosystem Stability Mechanism",
+      "comment": "PERSPECTIVE 5: ERGO ECOSYSTEM STABILITY (PITON) \u2014 Theater ratio 0.68: significant portion of DexyGold adoption is aspirational (marketing claim of 'true gold backing') rather than operationally backed. The 'gold price peg' is maintained through market arbitrage, not through actual gold reserves. Ecosystem stability incentives (regulatory acceptance, DeFi composability) are performative \u2014 real stability depends on continued trader participation. The protocol persists through institutional inertia (Ergo's DeFi narrative) even as functional peg maintenance costs rise."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Defi Liquidity Providers",
+      "comment": "PERSPECTIVE 6: LIQUIDITY PROVIDERS (TANGLED ROPE) \u2014 Coordination: provide price stability service, earn swap fees (0.25-0.50% depending on pool). Extraction: impermanent loss when DEXY diverges from gold price (common in volatility events), captured arbitrage value. Can exit by withdrawing liquidity but faces sunk LP fees and timing risk. d\u22480.62, f(d)\u22480.80, \u03c3=1.1 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Thermodynamic View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / THERMODYNAMIC VIEW (MOUNTAIN) \u2014 From a civilizational perspective, any algorithmic stablecoin faces an irreducible constraint: the price peg is maintained by arbitrageurs, who extract profit from the spread. The 'stability' is not a property of the protocol but a property of market incentive alignment. Without profitable arbitrage opportunities, the peg collapses. This constraint (arbitrage extraction to maintain stability) is inherent to all seigniorage-based designs \u2014 no escape exists. However, the structural data (\u03b5=0.58, suppression=0.62, theater=0.68) contradicts pure mountain \u2014 this is a false summit conflating a structural design choice (seigniorage model) with a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "gold_price_oracle_corruption",
+      "question": "Does the protocol's oracle mechanism for gold price (currently Chainlink) introduce a structural vulnerability where oracle manipulation becomes more profitable than the seigniorage mechanism itself?",
+      "resolution_mechanism": "Historical analysis of oracle deviation events; cost-benefit analysis of oracle attack vs profit from arbitrage at current collateralization levels; comparison to other DeFi oracle attack surface areas",
+      "impact": "If oracle is primary attack vector: constraint becomes Snare (extraction through forced liquidations). If arbitrage mechanics dominate: constraint remains Tangled Rope (mixed coordination-extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether oracle manipulation is the dominant extraction vector"
+    },
+    {
+      "id": "arbitrage_capital_sufficiency",
+      "question": "As the protocol scales, does the amount of arbitrage capital available to maintain the peg decline relative to peg maintenance requirements, causing the peg to become structurally unstable?",
+      "resolution_mechanism": "Modeling of arbitrage capital requirements vs historical capital availability; correlation between TVL growth and peg stability; comparison to other algorithmic stablecoin collapses (Terra/Luna, USDN, etc.)",
+      "impact": "If capital sufficiency fails: peg collapses, constraint becomes Snare (locked users absorb full loss). If arbitrage maintains peg: constraint remains Tangled Rope with rising suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether arbitrage capital is sufficient for peg stability at scale"
+    },
+    {
+      "id": "seigniorage_extraction_legitimacy",
+      "question": "Is the seigniorage extracted by protocol developers a legitimate fee for infrastructure (comparable to payment processing) or rent extraction from users (comparable to financial coercion)?",
+      "resolution_mechanism": "Benchmarking fees against alternative gold-backed stablecoin providers; analysis of fee usage (development, ecosystem, governance vs developer profit); user perception surveys on fee legitimacy",
+      "impact": "If legitimate: users view constraint as Rope or Scaffold. If rent extraction: users view constraint as Snare or Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether seigniorage fees represent legitimate infrastructure costs or rent extraction"
+    },
+    {
+      "id": "collateral_overcollateralization_erosion",
+      "question": "Does the protocol's reliance on overcollateralization (currently ~150%) reduce over time as TVL grows, eventually becoming under-collateralized in volatility events?",
+      "resolution_mechanism": "Historical data on DEXY collateralization ratio; stress testing at various price shock scenarios; comparison to protocol-specified minimum collateralization requirements",
+      "impact": "If collateral ratio erodes: suppression increases (forced redemptions, liquidation cascades). If maintained: constraint remains stable Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether overcollateralization ratio can be maintained as protocol scales"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "DexyGold is an algorithmic stablecoin protocol on the Ergo blockchain, pegged to the price of gold (XAU) through seigniorage mechanisms. Users mint DEXY by depositing ERG as collateral (typically 150% overcollateralization), and the protocol maintains the peg through arbitrage incentives: if DEXY trades below the gold price, arbitrageurs profit by buying DEXY, redeeming it for collateral, and selling the ERG. If DEXY trades above gold price, arbitrageurs profit by minting new DEXY. This constraint structure creates a hybrid of coordination (price stability service) and extraction (seigniorage fees, impermanent loss, liquidation risk). The constraint exhibits strong perspectival divergence: arbitrage traders see pure coordination (profitable opportunity), protocol developers see legitimate seigniorage revenue, retail holders see mixed stability benefits and slippage costs, late entrants see predatory lock-in, liquidity providers see impermanent loss, and the ecosystem stability mechanism sees performative gold backing. Theater ratio has risen from 0.42 to 0.68 as the gap between marketing claims ('true gold backing') and operational reality (arbitrage-dependent stability) has widened.",
+    "key_agents": [
+      "Protocol Development Team: Primary beneficiary (institutional/arbitrage) \u2014 captures seigniorage fees, governance tokens, ecosystem narrative control",
+      "Early DexyGold Adopters: Secondary beneficiary (powerful/arbitrage) \u2014 benefited from lower entry price and first-mover adoption advantage",
+      "Arbitrage Traders: Coordination provider (powerful/arbitrage) \u2014 extract profit from spreads while maintaining price peg; essential infrastructure",
+      "Retail DexyGold Holders: Primary victim (moderate/constrained) \u2014 face slippage, impermanent loss, peg deviations, dilution from new minting",
+      "Late-Entrant Users: Secondary victim (powerless/trapped) \u2014 locked in at unfavorable entry prices with redemption delays and liquidation risk",
+      "Liquidity Providers: Tertiary victim (organized/constrained) \u2014 absorb impermanent loss while earning swap fees insufficient to compensate for volatility",
+      "Ergo Ecosystem Stability: Abstract victim (powerless/trapped) \u2014 reputation and TVL dependent on protocol stability; cannot exit",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees inherent constraint of all seigniorage stablecoins: stability requires profitable arbitrage"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The protocol extracts through multiple channels: (1) Mint/redeem fees (~0.5%), (2) Slippage from constrained exit options, (3) Impermanent loss to liquidity providers, (4) Liquidation cascade risk during volatility. The extractiveness is not as high as pure predatory mechanisms (0.75+) because users do receive the coordination service (price stability) and arbitrage traders genuinely benefit from the mechanism. However, the extraction has risen from 0.28 to 0.58 as TVL has grown and the peg has faced repeated stress tests. Suppression (0.62): Moderate-high. Users face barriers to exit: (1) Redemption delays (oracle confirmation time), (2) Liquidation threat if collateral ratio drops, (3) Slippage on DEX swaps, (4) Sunk psychological cost ('I bought gold'). However, suppression is not absolute (0.75+) \u2014 users can exit via DEX at acceptable cost if they accept 1-2% slippage. Theater ratio (0.68): High. The marketing narrative ('gold-backed stablecoin') naturalizes what is actually an arbitrage-dependent stability mechanism. The actual backing is collateral + arbitrage capital, not gold. The protocol performs 'gold backing' through oracle integration and marketing, but this is substantially theater \u2014 real peg maintenance depends on continued arbitrage participation. Theater has risen as TVL has grown because the maintenance mechanism has become more critical and less transparent to casual users.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence driven by structural position and exit options. Arbitrage traders see Rope (pure coordination profit). Protocol developers see Rope or light Tangled Rope (seigniorage as legitimate fee). Retail holders see Tangled Rope (stability benefits + slippage costs). Liquidity providers see Tangled Rope with rising extraction (impermanent loss exceeding fee revenue). Late entrants see Snare (trapped, losses realized, no profitable exit). The Ergo ecosystem sees Piton (protocol persists through governance narrative despite degraded peg maintenance mechanism). The analytical observer risks seeing Mountain (seigniorage stability is 'natural law' of cryptoeconomics) but the constraint is clearly contingent on arbitrage capital availability and design choices. The perspectival gap arises because different agents have different exit costs: arbitrageurs have zero exit cost (any spread is profitable), protocol devs have low exit cost (governance token), retail holders have medium exit cost (slippage), late entrants have high exit cost (realized loss), ecosystem has infinite exit cost (reputation/TVL tied to protocol).",
+    "directionality_logic": "Arbitrage traders: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; negative effective extraction. Protocol developers: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u22480.05. Beneficiary but with active enforcement requirement; low positive extraction. Retail holders: Victim + constrained \u2192 d\u22480.70, f(d)\u22481.05. Significant extraction but not maximal; can exit at acceptable cost. Late entrants: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.39. Maximum extraction; no profitable exit path. Liquidity providers: Victim + constrained \u2192 d\u22480.62, f(d)\u22480.80. Mixed: earn fees but face impermanent loss; can withdraw but timing risk. Ergo ecosystem: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Reputation and TVL locked in; cannot exit. The engine derives d from beneficiary/victim + exit options automatically; the directionality reveals why different agents experience dramatically different \u03c7 values from the same base properties.",
+    "mandatrophy_analysis": "The mandatrophy is PARTIALLY RESOLVED through perspectival decomposition. The constraint is legitimately Tangled Rope from the protocol developer view (coordination + seigniorage), legitimately Rope from the arbitrage trader view (pure coordination profit), and legitimately Snare from the late-entrant view (predatory lock-in). The mandatrophy is NOT a contradiction \u2014 it reveals that calling DexyGold 'a stablecoin' conflates multiple distinct structural mechanisms. The 'gold backing' narrative functions as false summit detection: users who believe DEXY is backed by gold see Mountain (natural law constraint); users who understand the arbitrage mechanism see Tangled Rope or Rope. The theater ratio (0.68) captures the gap between narrative and mechanism. Remaining unresolved: whether seigniorage extraction (protocol fees) represents legitimate infrastructure cost or predatory rent. This is a preference omega, not an empirical one \u2014 it depends on whether users view the peg-maintenance service as comparable to payment processing (legitimate) or financial coercion (predatory)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ergo_ecosystem_tvl_concentration",
+      "algorithmic_stablecoin_oracle_risk"
+    ],
+    "dual_formulation_note": "DexyGold's seigniorage mechanism is downstream of the broader algorithmic stablecoin design constraint (which affects all oracle-dependent stability mechanisms). DexyGold's specific extractiveness (0.58) reflects the protocol's particular collateralization and fee structure; the parent constraint (algorithmic stablecoin oracle risk, \u03b5\u22480.65) represents the class-level vulnerability. Link established via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.08
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
+}

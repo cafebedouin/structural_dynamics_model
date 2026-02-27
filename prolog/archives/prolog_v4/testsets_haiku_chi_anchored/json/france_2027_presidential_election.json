@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "france_2027_presidential_election",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fr27"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "2027 French Presidential Election Framework",
+    "topic_domain": "political/electoral_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "centrist_establishment",
+      "traditional_right_left_blocs"
+    ],
+    "victims": [
+      "electoral_authenticity",
+      "far_right_supporters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Far-Right Voter Base",
+      "comment": "PERSPECTIVE 1: FAR-RIGHT VOTER BASE (SNARE) \u2014 Trapped within the Republican Barrier framework. Despite commanding 30-35% of first-round support, the two-round system forces voters into binary choice constrained by centrist coordination. No exit option: voting their preference in round one triggers forced capitulation in round two. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.72."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Left-Wing Electoral Coalition",
+      "comment": "PERSPECTIVE 2: LEFT-WING COALITION (SNARE) \u2014 Constrained to participate in the Republican Barrier despite ideological friction with centrists. Must coalesce with centrist opponents to block the far-right in round two, surrendering negotiating power. Career costs for left politicians refusing to endorse centrist second-round winner. d\u22480.78, f(d)\u22481.08, \u03c3=1.0 \u2192 \u03c7\u22480.56."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Centrist-Establishment Coalition",
+      "comment": "PERSPECTIVE 3: CENTRIST-ESTABLISHMENT COALITION (ROPE) \u2014 Benefits from the Republican Barrier as coordination mechanism. The two-round system and anti-far-right consensus enable centrist candidates (Macron bloc, moderate Republicans) to emerge victorious by being the 'safe' round-two choice. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.05. Net beneficiary; experiences constraint as functional coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Constitutional Framework (Fifth Republic)",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL FRAMEWORK (TANGLED ROPE) \u2014 The two-round presidential system functions as designed (coordination to block extremes) but simultaneously enforces extraction: suppresses first-round expression of voter intent, narrows policy space, and creates incentive for institutional actors to maintain artificial coalition costs. The framework itself is both beneficiary and victim\u2014it enables governance but at cost of democratic authenticity. d\u22480.50, f(d)\u22480.65, \u03c3=1.0 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Republican Barrier Norm (Vestigial)",
+      "comment": "PERSPECTIVE 5: REPUBLICAN BARRIER NORM (PITON) \u2014 The norm that mainstream parties automatically coalesce to block the far-right in round two persists through institutional inertia, but its functional grip is weakening. theater_ratio=0.58 reflects that the barrier is increasingly performative: major party leaders signal commitment to the Republican Barrier while privately calculating whether losing is preferable to coalition costs. The ritual persists but the underlying consensus is degrading. The norm is maintained by elite coordination, not by voter demand or institutional necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Electoral Reform Movement",
+      "comment": "PERSPECTIVE 6: ELECTORAL REFORM MOVEMENT (SCAFFOLD) \u2014 Some institutional actors and civil society organizations view the Republican Barrier as a temporary patch requiring structural reform. Ranked-choice voting, proportional representation, or other alternatives are positioned as permanent solutions. This perspective sees the current framework as coordination with a sunset: as alternatives mature politically, the necessity for the Barrier declines. d\u22480.35, f(d)\u22480.35, \u03c3=1.0 \u2192 \u03c7\u22480.18. Low effective extraction because mobile agents perceive a path to structural change."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Democratic Authenticity)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Views the Republican Barrier as genuine coordination (necessary to prevent democratic backsliding) combined with asymmetric extraction (suppression of voter expression and policy diversity). The constraint functions but at structural cost. Not a mountain (not inevitable\u2014other democracies use different systems) but not pure extraction (real coordination benefit exists). d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.53."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "barrier_threshold_collapse",
+      "question": "At what far-right vote share does the Republican Barrier cease functioning as coordination and become manifest coordination theater?",
+      "resolution_mechanism": "Historical analysis of mainstream party defection rates; measurement of coalition compliance when far-right exceeds certain thresholds (currently 30-35%, trending upward); interviews with political elites on minimum acceptable election outcomes",
+      "impact": "If threshold < 40%: barrier is already functionally degraded, more snare than rope. If threshold > 50%: barrier retains structural strength despite rhetoric. Current trajectory suggests threshold is 38-42%.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Vote share threshold at which Republican Barrier transitions from coordination to theater"
+    },
+    {
+      "id": "coalition_cost_asymmetry",
+      "question": "Do centrist and left-wing leaders genuinely accept coalition terms, or are they performatively signaling while retaining hidden preferences for far-right victory?",
+      "resolution_mechanism": "Post-election analysis of commitment depth: did coalition members campaign in contested districts? Did they negotiate concrete policy concessions? Did any major leader openly signal acceptance of far-right outcome as preferable to center-left unity?",
+      "impact": "If genuine commitment: constraint is tangled rope (real coordination + real extraction). If performative: constraint is piton (theatrical commitment masking degraded consensus). Evidence from 2026 legislative elections will be instructive.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether mainstream party coalition commitment is genuine or performative"
+    },
+    {
+      "id": "far_right_institutional_capacity",
+      "question": "Can the far-right effectively govern if it achieves presidency? Does institutional capacity constrain or enable their policy execution?",
+      "resolution_mechanism": "Assessment of organizational depth, technocratic capacity, foreign policy experience, and institutional relationships. Comparative analysis with other right-populist governments (Hungary, Poland, Italy). Election outcome testing if far-right advances to second round.",
+      "impact": "If low capacity: Barrier is functionally necessary (mountain-like coordination). If high capacity: Barrier is pure extraction (snare), suppressing legitimate electoral choice. Assessment suggests capacity is moderate-to-high, weakening mountain narrative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional capacity of far-right to govern if elected"
+    },
+    {
+      "id": "voter_preference_authenticity",
+      "question": "Do first-round voting patterns reflect authentic voter preferences, or are they strategic responses to anticipated Republican Barrier mechanics?",
+      "resolution_mechanism": "Polling comparison of expressed preferences vs. voting intention; historical analysis of shift from round one to round two; counterfactual analysis of voting under proportional or ranked-choice systems",
+      "impact": "If authentic: first-round results reveal genuine electorate demand for far-right. Barrier is extraction. If strategic: first-round results are distorted by system design. Barrier retains coordination legitimacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether first-round voting reflects authentic preference or strategic response to Barrier"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The 2027 French presidential election is structurally defined by the Republican Barrier (Cordon Sanitaire), an informal institutional mechanism by which mainstream left and right parties coordinate to exclude far-right candidates from second-round viability. As of early 2026, this constraint is exhibiting characteristic degradation: extractiveness rising (0.38 \u2192 0.52), theater ratio increasing (0.42 \u2192 0.58), and the underlying consensus cost-benefit calculation shifting unfavorably for at least some coalition partners. The two-round system functions as the primary enforcement mechanism: first-round voting is free; second-round choices are constrained by the Barrier's binary structure. The far-right (Rassemblement National and variants) commands 30-35% of first-round support but faces systematic exclusion in round two through mainstream party coalition. This creates a structural asymmetry: the far-right's voters are trapped (highest possible exit cost), while centrist and left actors bear moderate coalition costs but retain institutional arbitrage. The constraint exhibits properties of tangled rope (genuine coordination function preventing democratic backsliding, combined with extraction of voter expression) and piton (vestigial norm maintained through theater as underlying consensus erodes). The analytical question is not whether the Barrier will hold in 2027 (it likely will, mechanically), but whether it retains functional legitimacy or has become a performative ritual masking an unstable coalition.",
+    "key_agents": [
+      "Far-Right Voter Base (RN, other right-populist movements): Primary victim (powerless/trapped) \u2014 commanding 30-35% first-round support but structurally excluded from viable second-round outcomes",
+      "Centrist-Establishment Coalition (Macronists, moderate Republicans): Primary beneficiary (institutional/arbitrage) \u2014 emerges as 'safe' round-two choice; benefits from Barrier coordination",
+      "Left-Wing Coalition (Socialist Party, NUPES, Greens): Secondary victim (moderate/constrained) \u2014 forced into coalition with centrist opponents; surrenders policy leverage in round two",
+      "Constitutional Framework (Fifth Republic, two-round system): Institutional actor (institutional/constrained) \u2014 both enables and constrains; functions as coordination mechanism but suppresses authentic expression",
+      "Republican Barrier Norm: Vestigial consensus (institutional/arbitrage) \u2014 maintained through elite coordination; increasingly performative as underlying consensus degrades",
+      "Electoral Reform Advocates: Organized agents (powerful/mobile) \u2014 view Barrier as temporary; position alternatives as permanent solutions",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 assesses whether constraint represents genuine democratic necessity or extraction disguised as civic virtue"
+    ],
+    "logic_rationale": "Extractiveness (0.52, rising from 0.38): The Republican Barrier extracts from far-right voters at high rate (d\u22480.92 \u2192 \u03c7\u22480.72 for that population) but provides genuine coordination benefit to centrists and moderate left (d\u22480.08 and d\u22480.78 respectively). The rising average extractiveness reflects that the distribution of costs is becoming more concentrated\u2014more voters feel trapped, fewer experience genuine coordination benefit. Theater ratio (0.58, rising from 0.42): Increasing theatrical content indicates that mainstream party commitment to the Barrier is becoming performative. Elite signaling of Republican Barrier commitment continues, but private calculations about acceptable outcomes (some elites may privately prefer far-right victory to leftist victory) are increasingly visible. Suppression (0.65): Moderate-high. The two-round system suppresses authentic expression in round one; voters cannot vote their true preference without triggering constrained second-round outcomes. Publication bias in media (stories emphasizing Barrier necessity) suppresses alternative framings. However, suppression is not total\u2014far-right voters do vote their preference in round one, accepting round-two capture as cost.",
+    "perspectival_gap": "This constraint exhibits the widest perspectival gap of any mature democratic institution. Far-right voters experience a snare (trapped, no exit). Left-wing coalition partners experience snare with moderate escape routes (constrained exit). Centrist beneficiaries experience rope (functional coordination). The constitutional framework experiences tangled rope (both enabling and constraining). The Republican Barrier norm itself appears as piton (vestigial, maintained through theater). Electoral reform advocates see scaffold (temporary coordination requiring structural replacement). The analytical observer sees tangled rope (genuine coordination + real extraction). No two perspectives produce the same classification. This perspectival spectrum is not a measurement artifact\u2014it reflects the genuine structural reality that the Barrier provides different functional roles to different agents. The same institution is Snare to the trapped, Rope to the beneficiaries, and Piton to the vestigial norm.",
+    "directionality_logic": "Far-right voter base: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction. Centrist establishment: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary (negative extraction). Left coalition: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.08. High extraction but not maximal (escape routes exist, albeit costly). Constitutional framework: Both beneficiary (enables governance) + victim (suppresses expression) + constrained exit \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position. Republican Barrier norm: Institutional + arbitrage, but degrading \u2192 d\u22480.08, f(d)\u2248-0.10 (derived), but piton gate (theater\u22650.70... currently 0.58, approaching gate) shows norm is inertial. Electoral reform advocates: Powerful + mobile \u2192 d\u22480.35, f(d)\u22480.35. Low effective extraction because they perceive structural alternatives. Analytical observer: d\u22480.68, f(d)\u22481.02. Medium-high extraction from overall system perspective.",
+    "mandatrophy_analysis": "CORE MANDATROPHY: Does the Republican Barrier represent genuine coordination (necessary to prevent democratic backsliding and preserve constitutional governance) or extraction of democratic authenticity disguised as civic responsibility? The constraint resolves this by acknowledging both are simultaneously true. For centrist beneficiaries, it is coordination\u2014the Barrier prevents far-right dominance and enables moderate governance. For far-right voters, it is pure extraction\u2014their electoral will is systematically suppressed. For left-wing actors, it is tangled rope\u2014they receive both coordination benefit (shared governance voice) and extraction cost (constrained negotiating power). The rising theater ratio and extractiveness suggest the coordination function is degrading relative to the extraction function. Elite commitment to the Barrier is increasingly performative\u2014parties signal commitment while calculating private preference for outcomes outside the coalition. The constraint is not resolving mandatrophy by becoming pure extraction (the coordination function persists) but by becoming progressively less able to justify its extraction costs in coordination terms. If extractiveness reaches 0.65-0.70 while theater remains >0.60, the Barrier will have transitioned from tangled rope (mixed but defensible) to snare (extraction primarily, coordination incidental). Current trajectory (extractiveness rising, theater rising) suggests this threshold may be approached by 2032."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_populism_backlash",
+      "french_institutional_legitimacy",
+      "european_democratic_resilience"
+    ],
+    "dual_formulation_note": "The Republican Barrier is downstream of broader European populism/anti-establishment dynamics but represents a distinct structural constraint at the national electoral level. The upstream constraints (EU legitimacy crisis, populist momentum) drive the Barrier's degradation; the Barrier's classification reflects the specific national institutional response."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "header": {
+    "constraint_id": "emergency_oversight_bureau",
+    "version": "0.2",
+    "generated_date": "2024-02-29",
+    "status": "DRAFT"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.4,
+    "theater_ratio": 0.75,
+    "claimed_type": "piton",
+    "human_readable": "The Crisis Scaffold",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "crisis_victims",
+      "local_communities"
+    ],
+    "victims": [
+      "taxpayers",
+      "competing_interests"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Bureau Itself",
+      "comment": "The bureau, designed for rapid response and resource allocation, ideally sees its function as a pure coordination mechanism. Its existence justifies its budget and influence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Taxpayers",
+      "comment": "Taxpayers bear the cost of the bureau's operations but have little direct control over its spending or effectiveness. They're structurally trapped unless a strong oversight system prevails."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Crisis Victims",
+      "comment": "For crisis victims, the bureau provides temporary relief and support, acting as a scaffold to help them rebuild their lives. Access is constrained but possible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Skeptical Historian",
+      "comment": "Looking back, the historian sees the bureau as an institution that, while initially intended to be temporary, outlived its usefulness and became a source of patronage and rent-seeking. The sunset clause was not respected, and the theater ratio is high."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bureau_effectiveness",
+      "question": "How effective is the bureau at achieving its stated goals?",
+      "resolution_mechanism": "Independent audits and performance evaluations.",
+      "impact": "If highly effective, the classification trends towards rope. If ineffective, it drifts towards piton or snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The actual effectiveness of the bureau's operations."
+    },
+    {
+      "id": "sunset_clause_enforcement",
+      "question": "Will the sunset clause be enforced, or will the bureau become a permanent institution?",
+      "resolution_mechanism": "Political will and legislative action.",
+      "impact": "If enforced, the classification remains scaffold. If not enforced, it drifts towards piton.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "The political feasibility of enforcing the sunset clause."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "A temporary administrative body created to manage a specific recovery period. The structure is designed to rapidly allocate resources and coordinate efforts, but is at risk of mission creep and becoming a permanent fixture, even after the crisis has passed.",
+    "key_agents": [
+      "Crisis Victims: Primary beneficiaries (organized/constrained) - Receive aid but rely on the bureau's existence.",
+      "Taxpayers: Primary victims (powerless/trapped) - Fund the bureau with limited oversight.",
+      "Local Communities: Beneficiaries (moderate/constrained) - Receive resources and coordination.",
+      "Competing Interests: Victims (powerful/mobile) - Oppose the bureau's resource control."
+    ],
+    "logic_rationale": "The extractiveness is moderate (0.35) as resources are diverted from other uses to fund the bureau. Suppression is moderate (0.40) due to the reduced control over spending and limited exit options available. Theater is initially low (0.1) but increases over time to 0.75 as the crisis recedes and the bureau engages in more performative activities.",
+    "perspectival_gap": "Victims see the agency as extractive. The oversight agency may see itself as an important coordination mechanism. An outside observer may see the agency as wasteful theater. The agency structure enables each position.",
+    "directionality_logic": "The crisis victims benefit, but are also constrained by the structure of the bureaucracy. Competing interests are targeted by suppression, which limits exit. Taxpayers must subsidize the budget, regardless of performance."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

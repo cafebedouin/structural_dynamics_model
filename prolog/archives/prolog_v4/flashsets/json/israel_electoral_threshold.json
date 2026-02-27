@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "israel_electoral_threshold",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.7,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The 3.25% Knesset Electoral Threshold",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "larger_political_parties",
+      "coalition_stability"
+    ],
+    "victims": [
+      "smaller_political_parties",
+      "underrepresented_minorities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Smaller Political Parties",
+      "comment": "Smaller parties are trapped by the threshold, unable to gain representation and influence policy. Their supporters' votes are effectively suppressed."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Voters of Smaller Parties",
+      "comment": "Voters of smaller parties are constrained, as their preferred choice may not reach the threshold, leading to wasted votes. However, they have limited mobility by potentially voting strategically for larger parties or influencing party mergers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Larger Political Parties",
+      "comment": "Larger parties benefit from the threshold as it consolidates power, reducing the influence of smaller factions and potentially stabilizing coalition governments. They can arbitrage by absorbing smaller parties or benefiting from their exclusion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Political Scientist",
+      "comment": "A political scientist sees the threshold as a tangled rope. It provides some stability to the government (coordination) but extracts representation from smaller parties and potentially underrepresented groups (extraction)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "optimal_threshold_percentage",
+      "question": "What is the optimal electoral threshold percentage that balances government stability and representation of diverse interests?",
+      "resolution_mechanism": "Comparative analysis of electoral systems in other countries, statistical modeling of coalition formation, and surveys of voter preferences.",
+      "impact": "Higher threshold: increased government stability but reduced representation of minorities. Lower threshold: increased representation but potentially unstable coalitions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Determine the best threshold % balancing stability vs representation."
+    },
+    {
+      "id": "coalition_formation_effect",
+      "question": "To what extent does the threshold genuinely simplify coalition formation versus simply suppressing dissent?",
+      "resolution_mechanism": "In-depth case studies of coalition negotiations before and after changes to the threshold, analysis of government longevity, and qualitative assessment of political discourse.",
+      "impact": "If simplification is the primary effect: electoral system is more 'rope'-like. If suppression is the primary effect: electoral system is more 'snare'-like.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Examine if the threshold simplifies coalition or suppresses dissent."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The 3.25% Knesset electoral threshold requires political parties to secure at least 3.25% of the national vote to gain seats. It aims to promote government stability by reducing the number of small parties, but it also suppresses representation for smaller groups and minorities. The threshold's function as both a coordination mechanism and an extraction mechanism makes it a tangled rope.",
+    "key_agents": [
+      "Smaller Political Parties: Primary target (powerless/trapped) \u2013 Unable to reach the threshold, suppressed votes.",
+      "Larger Political Parties: Primary beneficiary (institutional/arbitrage) \u2013 Consolidate power.",
+      "Coalition Stability: Secondary beneficiary (institutional/constrained) \u2013 Potentially more stable governments.",
+      "Underrepresented Minorities: Secondary target (powerless/constrained) \u2013 Reduced voice in government."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate to high. The threshold directly prevents smaller parties from gaining representation, extracting their potential influence. Suppression (0.70): High. The threshold actively suppresses the political power of smaller parties and their supporters. Theater Ratio (0.20): Low. The threshold's impact is structural and direct, not performative. While there is some debate about its true effects, the mechanism of denying seats to parties below the threshold is explicit and not primarily theatrical.",
+    "perspectival_gap": "Smaller parties view the threshold as a snare, as it traps them and prevents them from participating in government. Larger parties and those prioritizing coalition stability see it as a rope, helping to create more stable and functional governments. From an analytical viewpoint, it's a tangled rope, balancing stability and representation.",
+    "directionality_logic": "The threshold benefits larger parties by consolidating power and making coalition formation easier (low d). It harms smaller parties by preventing them from gaining representation (high d). The analytical perspective acknowledges both the coordinating benefits for larger parties and the extractive effects on smaller parties, resulting in a classification as a tangled rope. The voters of smaller parties are victims, but they have the option to shift their votes, giving them a constrained exit, so their d is lower than the smaller parties themselves."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "coalition_bargaining_dynamics",
+      "minority_group_representation"
+    ]
+  },
+  "directionality_overrides": []
+}

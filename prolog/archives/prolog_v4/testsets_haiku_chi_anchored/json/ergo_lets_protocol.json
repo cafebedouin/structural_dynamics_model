@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "ergo_lets_protocol",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ergo_lets"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Ergo Local Exchange Trading System (LETS) Protocol",
+    "topic_domain": "economic/technological",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "mutual_credit_participants",
+      "participants_with_network_effects"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Participating Member",
+      "comment": "PERSPECTIVE 1: PARTICIPATING MEMBER (ROPE) \u2014 Member can exit by settling balance or ceasing transactions. Experiences LETS as pure coordination: earning and spending credits within network. No suppression of alternatives \u2014 traditional currency remains available. d\u22480.50, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.09. Low effective extraction; genuine mutual benefit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Protocol Maintainer",
+      "comment": "PERSPECTIVE 2: PROTOCOL MAINTAINER (ROPE) \u2014 Ergo blockchain developers and LETS implementation team. Benefit from network effects and adoption. Can arbitrage between protocol design and external coordination services. Exit options abundant (move to other blockchain projects). d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.002. Net beneficiary but not extractive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Excluded Non-Participant",
+      "comment": "PERSPECTIVE 3: EXCLUDED NON-PARTICIPANT (ROPE) \u2014 Community members who cannot afford Ergo participation or lack technical access. LETS appears as coordination mechanism they are absent from, not as extraction. They experience it as neutral coordination among others. d\u22480.50, f(d)\u22480.65, \u03c3=0.8 \u2192 \u03c7\u22480.09. Low friction; network is open to join."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (ROPE) \u2014 Sees LETS as a pure coordination solution to the double coincidence of wants problem. The zero-sum balance constraint (sum of all balances = 0) is a natural law of conservation, not an extractive mechanism. Trustless mutual credit is coordination without central authority. d\u22480.72, f(d)\u22481.15, \u03c3=1.2 \u2192 \u03c7\u22480.25. This is the canonical classification; LETS is a Rope from all perspectives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "network_bootstrap_critical_mass",
+      "question": "What participant threshold triggers sufficient network effects for LETS viability, and what happens if critical mass is not achieved?",
+      "resolution_mechanism": "Longitudinal tracking of LETS adoption in Ergo-based communities; correlation between participant count and transaction volume; comparison with failed LETS implementations",
+      "impact": "If critical mass < 50 participants: LETS remains marginal utility (coordination failure masquerading as supply issue). If critical mass > 500: coordination function is robust. Below threshold, constraint appears as rope but with minimal actual benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for LETS network viability"
+    },
+    {
+      "id": "credit_cycling_stability",
+      "question": "In the absence of external settlement (goods/services), can mutual credit cycle indefinitely without systematic balance buildup for any participant cohort?",
+      "resolution_mechanism": "Analysis of transaction patterns in mature LETS systems; examination of whether repeated subsets of participants accumulate uncovered credit vs. achieve equilibrium",
+      "impact": "If cycles can be fully balanced: Rope classification holds (pure coordination). If certain subgroups systematically accumulate credit: hidden extraction mechanism emerges (Tangled Rope from subgroup perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether mutual credit cycles achieve stable balance distribution"
+    },
+    {
+      "id": "technical_barrier_to_exit",
+      "question": "Does technical friction in blockchain settlement (gas fees, wallet management, Ergo-to-fiat conversion) function as covert suppression of exit?",
+      "resolution_mechanism": "Measurement of actual exit transaction costs; comparison with traditional currency settlement costs; survey of participants citing technical barriers as obstacle to leaving",
+      "impact": "If friction is symmetric: Rope remains. If friction systematically increases exit cost for some participants: suppression arises (potential Tangled Rope signature).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical friction as potential exit suppression mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.24
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.14
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Ergo Local Exchange Trading System (LETS) is a blockchain-based implementation of mutual credit protocols where all transactions are peer-to-peer and the mathematical constraint that the sum of all participant balances equals zero is enforced at the protocol level. This constraint is a canonical Rope: pure coordination mechanism with minimal coercion, no central authority, and genuine mutual benefit. Unlike fiat-based LETS (which depend on community enforcement and social trust), Ergo LETS achieves trustlessness through cryptographic proof. The zero-sum balance constraint is not extractive but rather a conservation law that prevents systemic debt accumulation. Participants experience LETS as a solution to the double coincidence of wants problem \u2014 in a pure barter economy, you need what I have and I need what you have. LETS unbundles this by allowing me to accumulate credit in exchange for goods/services, which I then spend with any other member, not just the original counterparty. This is coordination, not extraction. Theater ratio is low (0.25) because blockchain verification is objective \u2014 no performative review or ritual maintains LETS; it is enforced by code.",
+    "key_agents": [
+      "Mutual Credit Participants: Primary beneficiary (moderate/mobile) \u2014 earn and spend credits; experience LETS as coordination solution",
+      "Protocol Maintainer (Ergo team): Secondary beneficiary (institutional/arbitrage) \u2014 benefits from network adoption and protocol viability",
+      "Excluded Non-Participants: Neutral observer (powerless/mobile) \u2014 not suppressed from joining; free to participate or ignore",
+      "Analytical Observer: Sees LETS as pure coordination mechanism (analytical/analytical) \u2014 zero-sum constraint is conservation law, not extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Very low. The zero-sum balance constraint prevents any participant from extracting net value across the system \u2014 extracting from others requires an equivalent injection elsewhere. Any asymmetry in benefit is temporary and market-corrected: if I consistently gain more value than I contribute, other participants will reduce trading with me. The constraint actually prevents extraction by design. Suppression (0.12): Very low. No coercion maintains LETS membership. Participants retain traditional currency, can exit by settling balance, and face no penalty for non-participation. Technical friction exists (blockchain interaction, wallet management) but is symmetric and transparent. Theater ratio (0.25): Low. LETS verification is cryptographic, not performative. Transactions are immediately settled and verifiable on-chain. No ritual or social performance maintains the system \u2014 code enforcement is sufficient. Claimed type (Rope): Justified. This is pure coordination: solves double coincidence problem without central intermediary, achieves mutual benefit for all participants, and requires minimal overhead. No extraction mechanism exists.",
+    "perspectival_gap": "Unusually low perspectival gap. All four perspectives classify LETS as Rope because the structural data genuinely represents pure coordination. The participating member experiences it as Rope (mutual benefit, mobile exit). The protocol maintainer experiences it as Rope (institutional beneficiary from network effects, arbitrage available). The excluded non-participant sees it as Rope (coordination among others; neutral). The analytical observer sees it as Rope (conservation law, not extraction). This lack of gap is a signature of well-designed coordination mechanisms. When all perspectives agree, the constraint is not generating perspectival conflict \u2014 it is serving its function transparently.",
+    "directionality_logic": "Mutual credit participants: Beneficiary + mobile \u2192 d\u22480.50, f(d)\u22480.65. Symmetric position relative to constraint; both benefit and bear costs of participation. Protocol maintainer: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary with external options; not trapped by LETS adoption. Excluded non-participants: Neither beneficiary nor victim + mobile \u2192 d\u22480.50, f(d)\u22480.65. Neutral observer position; constraint does not affect them. Analytical observer: analytical \u2192 d\u22480.72, f(d)\u22481.15. Sees the conservation law structure; no hidden extraction.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy trivially: there is no confusion between pure coordination and hidden extraction. The zero-sum balance property is a mathematical truth, not a rhetorical frame. Every perspective, measured honestly, produces Rope. The constraint exhibits textbook coordination: (1) solves collective action problem (double coincidence), (2) requires no central authority, (3) achieves mutual benefit, (4) permits exit, (5) operates transparently. No extraction mechanism exists because the system is designed to prevent it. This is what a healthy coordination mechanism looks like in the framework."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_consensus_overhead",
+      "ergo_network_security"
+    ],
+    "dual_formulation_note": "LETS is a pure coordination mechanism; it does not decompose into separate constraints with different \u03b5 values. If a LETS implementation were to introduce extraction (e.g., through protocol fees, unequal computational overhead, or cartel-enforced credit rationing), a separate story (ergo_lets_rent_extraction) would be warranted. Currently, the protocol operates as designed."
+  },
+  "directionality_overrides": []
+}

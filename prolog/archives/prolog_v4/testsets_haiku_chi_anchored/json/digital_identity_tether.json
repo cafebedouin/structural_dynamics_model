@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "digital_identity_tether",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "didt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.61,
+    "claimed_type": "snare",
+    "human_readable": "The Centralized Identity Anchor",
+    "topic_domain": "technological/digital_identity/platform_governance",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "identity_anchor_provider"
+    ],
+    "victims": [
+      "digital_subjects",
+      "service_ecosystem",
+      "identity_portability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Digital Subject (Individual User)",
+      "comment": "PERSPECTIVE 1: DIGITAL SUBJECT / INDIVIDUAL USER (SNARE) \u2014 Trapped by social graph lock-in, reputation accumulation tied to single platform, and authentication dependency. Cannot exit without abandoning years of accumulated identity context, social connections, and credential history. d\u22480.92, f(d)\u22481.40, \u03c3=1.2 \u2192 \u03c7\u22480.97."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Service Ecosystem (Dependent Applications)",
+      "comment": "PERSPECTIVE 2: SERVICE ECOSYSTEM / DEPENDENT APPLICATIONS (SNARE) \u2014 Apps and services built on the identity anchor have constrained exit: switching to alternative identity providers requires rebuilding user bases and authenticating against new standards. d\u22480.78, f(d)\u22481.18, \u03c3=1.2 \u2192 \u03c7\u22480.85."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Identity Anchor Provider (Platform)",
+      "comment": "PERSPECTIVE 3: IDENTITY ANCHOR PROVIDER / PLATFORM (ROPE) \u2014 Benefits from first-mover lock-in, network effects, and data monopoly. Experiences the constraint as a coordination mechanism: providing centralized authentication solves a genuine coordination problem (users need one credential store; services need unified identity). d\u22480.10, f(d)\u22480.03, \u03c3=1.2 \u2192 \u03c7\u22480.02. Net beneficiary; effective extraction minimal from this perspective."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Decentralized Identity Coalition",
+      "comment": "PERSPECTIVE 4: DECENTRALIZED IDENTITY COALITION / STANDARDS BODIES (TANGLED ROPE) \u2014 Organized actors (W3C, blockchain identity projects, OAuth alternative consortia) seek to build coordination mechanisms (open identity standards, portable credentials) while breaking the extractor's lock-in. They see both genuine coordination value (interoperability) and the need to redistribute extraction. d\u22480.52, f(d)\u22480.67, \u03c3=1.2 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Bygone Federation Model)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / HISTORICAL VIEW (PITON) \u2014 The federated identity model (pre-2010s: institutional LDAP, Shibboleth, federated login) solved the coordination problem with lower centralization. The centralized anchor is not inherent to digital identity but a path-dependent result of platform consolidation. From a civilizational view, this constraint represents the degradation of a more distributed coordination mechanism into rent-seeking centralization. theater_ratio=0.61 reflects that much 'identity verification' rhetoric masks data harvesting and profiling goals. The centralized model persists through network effects inertia, not technical necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Regulatory/Standards Pathway",
+      "comment": "PERSPECTIVE 6: REGULATORY / STANDARDS PATHWAY (SCAFFOLD) \u2014 EU's GDPR and emerging digital identity regulations (eIDAS, NIST frameworks) create temporary enforcement mechanisms to break the anchor's extraction power through data portability mandates, API requirements, and interoperability standards. These are sunset mechanisms: if successful, they reduce the anchor's lock-in asymmetry over 5-10 years. d\u22480.45, f(d)\u22480.48, \u03c3=1.2 \u2192 \u03c7\u22480.34."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "portability_threshold_feasibility",
+      "question": "What technical/social cost of identity portability would eliminate the snare classification? At what friction level does 'trapped' become 'constrained' or 'mobile'?",
+      "resolution_mechanism": "Empirical measurement of users successfully migrating across identity providers with varying friction costs; correlation of friction levels to lock-in persistence",
+      "impact": "If friction can be reduced below ~5% transaction cost: snare degrades to tangled rope or rope. If friction < 2%: potentially mobile exit. If friction > 20%: snare classification hardens.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical/social cost threshold for effective identity portability"
+    },
+    {
+      "id": "reputation_transferability_versus_identity",
+      "question": "Can reputation/social graph be ported separately from authentication identity, or is the lock-in fundamentally about reputation context rather than credential mechanics?",
+      "resolution_mechanism": "Case studies of identity providers that succeeded in decoupling reputation (Twitter/X reputation portable to Bluesky) vs authentication (Google Sign-In lock-in); structural analysis of what aspects are technically portable vs socially sticky",
+      "impact": "If reputation is fundamentally non-portable: snare classification holds even if authentication decouples. If reputation portable: exit options upgrade significantly; snare may degrade to tangled rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether reputation is separately portable from authentication identity"
+    },
+    {
+      "id": "regulatory_mandate_enforceability",
+      "question": "Can regulatory portability mandates (GDPR, eIDAS) actually force technical interoperability at the speed required to establish genuine exit options, or is regulatory lag a structural feature that perpetuates the lock-in indefinitely?",
+      "resolution_mechanism": "Temporal analysis of regulatory mandate \u2192 platform compliance timelines; measurement of actual user migration rates post-mandate; comparison of enforcement speed across jurisdictions",
+      "impact": "If enforceable in < 3 years: scaffold perspective valid; sunset mechanism real. If compliance takes 10+ years or platforms evade through technical barriers: scaffold is aspirational; snare persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory portability mandates can enforce genuine interoperability"
+    },
+    {
+      "id": "network_effects_asymmetry_hardness",
+      "question": "Is the lock-in driven by unavoidable network effects (mathematics of graph connectivity) or contingent path dependency (historical platform choices)? Can a new coordinated migration break the anchor without waiting for regulatory enforcement?",
+      "resolution_mechanism": "Historical case analysis (WhatsApp vs Signal, Twitter vs Bluesky); network effects modeling with migration thresholds; behavioral economics of coordination incentives",
+      "impact": "If mathematical lock-in: snare is hardened; only regulatory or technological revolution breaks it. If path-dependent: organized coalition could force rapid migration with coordination (reducing effectiveness of anchor's extraction power).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether network effects lock-in is mathematically unavoidable or path-dependent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The centralized identity anchor represents a structural constraint on digital autonomy, where individuals, applications, and service providers become increasingly dependent on a single identity provider for authentication, reputation, and social connectivity. This constraint exhibits the snare classification from multiple perspectives (individual users, dependent services) with alternative institutional pathways visible to organized actors (standards bodies, regulators). The constraint emerged from genuine coordination needs (centralized authentication solved real interoperability problems) but has evolved into rent-seeking extraction through lock-in: users cannot port their social graph, applications cannot authenticate against alternative identity standards without rebuilding user bases, and the identity provider captures value from data monopoly, profiling, and gatekeeping. The theatrical dimension (theater_ratio=0.61) reflects the framing of centralized identity as necessary for security and trust when distributed alternatives exist but are deliberately underdeveloped. The extractiveness has increased over the measurement interval (0.32 \u2192 0.58) as social graph lock-in deepened and authentication dependency hardened. Theater ratio increase (0.38 \u2192 0.61) reflects intensifying security/trust rhetoric masking data harvesting and profiling goals.",
+    "key_agents": [
+      "Digital Subjects (Individuals): Primary victims (powerless/trapped) \u2014 cannot exit without abandoning years of accumulated social graph, reputation, and credentials. Exit cost approaches 100% of accumulated identity capital.",
+      "Service Ecosystem (Apps/Web Services): Secondary victims (moderate/constrained) \u2014 dependent on identity anchor for user authentication; switching providers requires rebuilding user bases and credential trust.",
+      "Identity Anchor Provider (Meta, Google, Apple, Microsoft): Primary beneficiary (institutional/arbitrage) \u2014 captures data monopoly, user profiling, gatekeeping control, and network effects lock-in. Experiences constraint as coordination mechanism, not extraction.",
+      "Decentralized Identity Coalition (W3C, standards bodies, blockchain projects): Organized actors (organized/constrained) \u2014 attempting to build interoperable identity standards as alternative pathways; see both coordination value and need to break extraction lock-in.",
+      "Regulatory Bodies (EU, NIST, national identity authorities): Organized enforcers (organized/constrained) \u2014 deploying portability mandates (GDPR, eIDAS) as sunset mechanisms to force technical interoperability over 5-10 year timescales.",
+      "Historical Federated Systems (Institutional LDAP, Shibboleth): Analytical reference point \u2014 represent earlier coordination mechanisms with lower centralization; highlight path-dependent nature of constraint rather than technical inevitability."
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The identity anchor extracts through multiple mechanisms: (1) data monopoly on user behavior, preferences, social graph; (2) gatekeeping on service access and third-party integrations; (3) profiling for targeted advertising; (4) forced upgrade to proprietary authentication schemes (biometric lock-in, device OS coupling). However, the extraction is not absolute (0.90+) because regulated jurisdictions are forcing some portability, and alternative identity providers exist for users with high exit cost tolerance. Suppression (0.72): High. Significant barriers to exit: (a) social graph lock-in (no platform provides equivalent status transfer); (b) authentication dependency (services integrate deeply into anchor's API); (c) credentialing lock-in (years of accumulated reputation context); (d) coordinated network effects (everyone else still uses the anchor); (e) information asymmetry (users unaware of alternatives). Theater ratio (0.61): Moderate. The identity anchor invokes security, trust, and verification language extensively, but much of the verification apparatus is performative: two-factor authentication is framed as trust mechanism but also increases lock-in through device coupling; biometric verification is framed as security but primarily serves profiling and account recovery lock-in. Genuine trust infrastructure exists but is dramatically overscaled relative to the stated security function.",
+    "perspectival_gap": "This constraint produces stark perspectival gaps. Individual users (powerless/trapped) experience pure snare: they cannot exit. The identity anchor (institutional/arbitrage) experiences rope: providing centralized authentication genuinely solves coordination problems. Standards bodies and regulators (organized/constrained) experience tangled rope or scaffold: they see both the coordination value and the extraction, and they possess agency to build alternatives. The historical analytical perspective (piton) reveals that centralization is not technically inevitable \u2014 federated models existed and worked; centralization reflects path-dependent platform consolidation, not natural law. The regulatory pathway perspective (scaffold) sees a genuine sunset: GDPR portability rights, eIDAS frameworks, and emerging open identity standards could materially reduce lock-in over 5-10 years if enforcement accelerates.",
+    "directionality_logic": "Digital subjects: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.40. Maximum extraction direction; users have zero meaningful exit options relative to this specific constraint. Service ecosystem: Victim + constrained \u2192 d\u22480.78, f(d)\u22481.18. High extraction direction; services depend on anchor's authentication but can theoretically rebuild on alternatives at significant cost. Identity anchor provider: Beneficiary + arbitrage \u2192 d\u22480.10, f(d)\u22480.03. Minimal extraction direction from beneficiary's perspective; they experience the constraint as beneficial coordination. Decentralized coalition: Mixed + constrained \u2192 d\u22480.52, f(d)\u22480.67. Moderate extraction direction; coalition sees extraction but has technical and organizational agency to counter it. Regulatory bodies: Enforcer + constrained \u2192 d\u22480.45, f(d)\u22480.48. Moderate direction; regulators intervene from outside the lock-in but face compliance lag and technical complexity. Historical perspective: analytical \u2192 d\u22480.75, f(d)\u22481.15. Medium-high direction; reveals contingency and path dependency rather than natural law.",
+    "mandatrophy_analysis": "The centralized identity anchor avoids mandatrophy by maintaining distinct beneficiary (anchor provider) and victim (digital subjects, dependent services) groups with no ambiguity about who extracts and who bears costs. The snare classification is unambiguous from the primary target perspective (powerless/trapped users experience maximum extraction). However, the mandatrophy surfaces in the institutional perspective: the anchor provider genuinely solves a coordination problem (centralized authentication), so their experience is rope, not snare. The resolution is perspectival: all six types are valid readings from different structural positions. The constraint is snare for users, rope for the provider, piton for the historical analyst (revealing degraded federation), and scaffold for the regulator (deploying enforcement mechanisms with sunset clauses). The mandatrophy dissolves when the analytical frame shifts from 'what is the true type?' to 'how does this constraint manifest differently across institutional positions?'"
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "authentication_dependency_monoculture",
+      "data_portability_friction",
+      "social_graph_lock_in"
+    ],
+    "dual_formulation_note": "The centralized identity anchor represents a cluster of structurally distinct but coupled constraints. The anchor is downstream of authentication infrastructure choices and upstream of data portability friction and social graph lock-in. Each sibling constraint has its own \u03b5 reflecting specific aspects of the lock-in (authentication mechanics, data export costs, social context transfer costs). The anchor story (\u03b5=0.58) captures the aggregate extraction across all coupled mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

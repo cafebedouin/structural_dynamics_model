@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "infrastructure_interoperability_decay",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "silo"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Protocol Silo Trap",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_providers",
+      "proprietary_platform_operators"
+    ],
+    "victims": [
+      "downstream_users",
+      "competing_entrants",
+      "interoperability_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Locked-In User",
+      "comment": "PERSPECTIVE 1: LOCKED-IN USER (SNARE) \u2014 End users initially adopt the standard for its universality and low switching cost. But as the protocol fragments into vendor-specific extensions and proprietary sub-layers, users become trapped. Data investments, workflow dependencies, and network effects create high exit costs. No alternative provides equivalent reach. Maximum experienced extraction \u2014 the user pays switching costs but receives no coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Competing Entrant",
+      "comment": "PERSPECTIVE 2: COMPETING ENTRANT (SNARE) \u2014 New providers face a fragmented protocol landscape where true interoperability requires costly reverse-engineering or licensing fees. The standard's universal promise was the condition for their market entry; its decay traps them into proprietary sub-ecosystems. They experience high suppression (no clear alternative), constrained exits (expensive to rebuild), and extraction (must license or fork). Extraction is nearly as severe as for end users because their competitive position is defeated before launch."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Provider",
+      "comment": "PERSPECTIVE 3: INCUMBENT PROVIDER (ROPE) \u2014 Dominant firms benefit from fragmentation as a coordination mechanism: they establish proprietary extensions that lock users into their ecosystem while maintaining the appearance of standard compliance. The constraint appears as pure coordination to them \u2014 they are solving the 'efficiency' problem of proprietary optimization. Arbitrage exits (switch to proprietary-only if standards fail) make the constraint experience net-beneficial. Extraction flows toward them; they perceive coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Standards Body",
+      "comment": "PERSPECTIVE 4: STANDARDS BODY (TANGLED ROPE) \u2014 Organizations like W3C, IETF, or IEEE maintain the nominal standard while watching member companies insert proprietary extensions. The standards body provides genuine coordination (defines base protocol, reduces fragmentation risk), but also enforces a constraint through its governance structure: only incumbent members have influence over extension approval; new entrants cannot shape the standard's evolution. The body experiences extraction (limited funding, political capture by incumbents) and coordination (legitimacy, adoption reach) simultaneously. Active enforcement (governance voting, compliance certification) is mandatory."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legacy Interoperability Mandate",
+      "comment": "PERSPECTIVE 5: LEGACY INTEROPERABILITY MANDATE (PITON) \u2014 Early regulatory or contractual interoperability requirements (e.g., network neutrality, data portability rights, open standards mandates) persist but are largely theatrical. Incumbents have learned to comply nominally: they maintain 'open' interfaces while making proprietary layers essential. Theater ratio is high (0.48 baseline but higher in this perspective) \u2014 compliance certificates and standards logos are displayed while the actual architectural constraints trap users. The mandate has atrophied; it persists through institutional inertia, not enforcement capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, the protocol silo trap is a hybrid mechanism: the standard provides genuine coordination function (common language reduces transaction costs), but that coordination is increasingly captured by incumbent providers who use standardization as a Trojan horse for lock-in. The constraint exhibits both coordination (base protocol interoperability) and asymmetric extraction (proprietary layers extract switching-cost surplus). Active enforcement (standards governance) maintains both functions simultaneously. This is the engine's canonical case for tangled rope classification."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proprietary_layer_criticality",
+      "question": "At what threshold of proprietary extension adoption does the standard cease to be 'open' in any meaningful sense?",
+      "resolution_mechanism": "Measurement of data format transcoding costs, protocol version divergence, and user-facing incompatibilities across major implementations. Longitudinal tracking of how many users need proprietary extensions for core workflows.",
+      "impact": "If threshold is low (20-30% proprietary): early detection enables regulatory intervention. If threshold is high (70%+): fragmentation becomes irreversible without major coordination cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proprietary extension adoption threshold for standard degradation"
+    },
+    {
+      "id": "user_lock_in_reversibility",
+      "question": "Can users realistically switch to interoperable alternatives once proprietary dependencies accumulate, or is lock-in permanent within a user generation?",
+      "resolution_mechanism": "Historical case study of protocol migrations (HTTP \u2192 HTTPS, IPv4 \u2192 IPv6, SMS \u2192 RCS). Measurement of migration timelines, costs incurred, and adoption rates for competing standards.",
+      "impact": "If reversible (< 5 years): snare classification may overstate permanence. If irreversible (> 15 years or permanent): snare is confirmed; user cohorts cannot escape during their economic lifetime.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether user lock-in from protocol fragmentation is reversible"
+    },
+    {
+      "id": "standards_body_capture_mechanism",
+      "question": "Is the standards body's inability to prevent proprietary extensions a structural limitation or a capture result from incumbent voting control?",
+      "resolution_mechanism": "Analysis of standards body governance: voting power distribution by member type (incumbent vs entrant), approval rates for proprietary extension proposals, funding source concentration. Counterfactual: would a differently-governed body produce less fragmentation?",
+      "impact": "If structural: governance reform cannot fix fragmentation. If capture: governance redesign (e.g., entrant voting parity, public interest seats) could restore coordination. Classification as tangled_rope vs pure extraction depends on this resolution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether standards body fragmentation is structural or due to capture"
+    },
+    {
+      "id": "interoperability_commons_measurability",
+      "question": "Is 'interoperability commons' a quantifiable victim, or is it an abstract collective good without measurable loss?",
+      "resolution_mechanism": "Measurement of transaction costs imposed by fragmentation: debugging time for cross-implementation issues, duplicate development effort, innovation delays. Compare protocol with high fragmentation vs low fragmentation analogs.",
+      "impact": "If measurable: commons appears in victim declarations and affects classification. If unmeasurable: abstract collective goods may be misclassified as beneficiaries when they are actually structural components of the constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurability of interoperability commons as a constraint victim"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The protocol silo trap describes a systematic degradation of universal communication standards into fragmented, proprietary sub-ecosystems. A standard originally designed as a coordination mechanism\u2014reducing transaction costs and enabling interoperability\u2014becomes a vehicle for lock-in when incumbent providers introduce vendor-specific extensions that are nominally optional but practically essential. Users invest in workflows and data that depend on these extensions; competitors cannot enter without costly compatibility layers; new adopters face incompatibilities that were not promised in the standard's original design. The constraint exhibits tangled rope structure: genuine coordination function (the base protocol remains common), active enforcement (standards governance maintains the facade of openness), and asymmetric extraction (lock-in surplus flows to incumbents). Theater increases over time as incumbents invest in compliance theater (standards logos, certification marks, interoperability claims) while actual compatibility declines. This is distinct from pure extraction (snare) because the standard does provide real coordination benefits to all parties initially\u2014the extraction emerges from capture of the coordination mechanism, not from imposing a coordination-free tax.",
+    "key_agents": [
+      "Incumbent Providers: Primary beneficiaries (institutional/arbitrage) \u2014 use proprietary extensions to lock in users while maintaining standard compliance facade",
+      "Locked-In Users: Primary victims (powerless/trapped) \u2014 invested in proprietary extensions for workflow efficiency; cannot exit without data/workflow loss",
+      "Competing Entrants: Secondary victims (moderate/constrained) \u2014 face fragmented protocol landscape; expensive to build compatible implementations or forced to license proprietary layers",
+      "Standards Body: Institutional actor (organized/constrained) \u2014 maintains nominal standard governance but lacks enforcement capacity against member companies; captures both coordination and extraction simultaneously",
+      "Interoperability Commons: Abstract victim (powerless/trapped) \u2014 transaction costs from fragmentation (debugging, duplicate development, innovation delays) accumulate across ecosystem",
+      "Regulatory Mandate (Legacy): Institutional constraint (institutional/arbitrage) \u2014 nominally requires interoperability but enforcement is theatrical; incumbents comply performatively"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising over interval. At t=0, the standard is newly universalized; extractiveness is low (0.15) because genuine interoperability reduces transaction costs for all parties and lock-in mechanisms are underdeveloped. By t=5, proprietary extensions proliferate; extractiveness rises (0.35) as users become dependent on vendor-specific features. By t=10, fragmentation is substantial; extractiveness reaches 0.52. Users and competitors bear switching costs while incumbents capture lock-in surplus. This is not maximum extraction (snare would require \u03b5 \u2265 0.46 and \u03c7 \u2265 0.66) because the base protocol retains functional value and alternative standards remain technically possible (high effort, but not impossible). Suppression (0.65): High. Users face significant barriers to exit: data investment, workflow dependencies, network effects (switching requires ecosystem migration). But suppression is not total because technically feasible alternatives exist and user coalitions could coordinate migration. Incumbent providers actively suppress alternatives through licensing restrictions and lock-in design. Theater ratio (0.48): Moderate, rising over interval. Early compliance is functional (vendors genuinely adhere to base standard). Over time, theater increases as incumbents maintain standards compliance marks while inserting proprietary layers. By t=10, theater reaches 0.48 because incumbents invest heavily in interoperability theater (certifications, public standards participation) while actual compatibility declines.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position relative to the extraction flow. Beneficiaries with arbitrage exits (incumbent providers) derive low d (~0.10-0.20) because they can choose proprietary paths if standards fail, and standards currently benefit them. The standard appears as coordination to them. Trapped users with no viable alternatives derive high d (~0.85-0.95) because they have absorbed the switching costs of proprietary dependencies and cannot exit without severe loss. Constrained competitors derive moderate-high d (~0.70-0.80) because they have alternative paths (fork the standard, build proprietary ecosystems, lobby for open standards) but each path is expensive. The standards body with constrained exits and mixed beneficiary/victim status derives moderate d (~0.50-0.60) because it provides genuine coordination but also enforces the capture mechanism. The analytical observer derives analytical d (~0.72-0.75) because they can see the full structure but have no power to enforce change.",
+    "perspectival_gap": "This constraint exhibits a sharp perspectival gap between beneficiaries and victims. The incumbent provider sees rope (pure coordination benefit, negligible extraction). The locked-in user sees snare (maximum extraction, no coordination benefit). The standards body sees tangled rope (both functions present, mixed experience). The competing entrant sees snare (barriers to entry, extraction of opportunity cost). The analytical observer sees the constraint's full hybrid structure and can detect the capture mechanism. The regulatory mandate sees its own degradation (piton perspective) \u2014 interoperability requirements persist nominally but lack enforcement teeth against incumbent compliance theater. No single perspective is 'correct'; the presheaf over the observation site reveals that the same structural mechanism produces radically different experiences depending on the agent's exit options and power level.",
+    "mandatrophy_analysis": "The protocol silo trap resolves the mandatrophy by distinguishing between pure extraction (snare) and hybrid coordination-with-capture (tangled rope). The constraint is NOT a snare because the base protocol provides genuine coordination function \u2014 users benefit from the standard's existence even after fragmentation. Switching costs are high, but they are switching costs OUT of an imperfect but functional system, not switching costs within a purely extractive system (like debt bondage). The constraint is a tangled rope because: (1) the standard provides real coordination (base protocol remains common, reduces transaction costs), (2) it requires active enforcement (standards governance maintains the facade and polices member compliance), (3) it has asymmetric extraction (proprietary extensions lock in users while benefiting incumbents). The mandatrophy resolves by showing that incumbents have captured the coordination mechanism itself \u2014 they use standardization as a tool for lock-in. This is extraction-through-coordination, not pure extraction. Governance reform (entrant voting parity, public interest representation, stronger compliance enforcement) could restore the rope classification by preventing proprietary capture. The current state reflects incumbent institutional power (organized/institutional agents) and weak victim organization \u2014 competitors and users are individually powerless but collectively represent large economic value. If user coalitions or regulatory bodies organize to enforce true interoperability (forbidding vendor-specific extensions, mandating data portability, requiring open formats), the constraint could degrade from tangled rope to pure rope or collapse entirely."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "data_portability_mandates",
+      "network_effect_lock_in",
+      "standards_body_capture"
+    ],
+    "dual_formulation_note": "The protocol silo trap is a canonical case of coordination mechanism capture. It is upstream of specific data portability constraints (which arise as user coalitions attempt escape) and downstream of network effect dynamics (which create the initial efficiency incentive for standardization). The fragmentation mechanism itself is distinct from both parent constraints \u2014 it models the specific pathway from universal standard to proprietary lock-in, whereas network effects model the generic lock-in dynamic and data portability models the exit attempt."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "header": {
+    "constraint_id": "platform_app_store_duopoly",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Mandate for Proprietary App Stores and In-App Payments",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "apple",
+      "google"
+    ],
+    "victims": [
+      "app_developers",
+      "consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Individual App Developer",
+      "comment": "Individual app developers are largely trapped within the duopoly, facing significant barriers to reaching users outside of the official app stores. This lack of viable alternatives makes the constraint a snare from their perspective. They are effectively powerless in the face of platform policies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Medium-Sized App Development Company",
+      "comment": "Medium-sized app development companies have some leverage due to their existing user base and brand recognition, but are still significantly constrained by the duopoly's rules. They benefit from access to a large user base but suffer from the extraction of in-app purchase commissions and restrictions on alternative payment methods. They have some options for exiting the ecosystem (e.g., web apps), but these are often less desirable than native apps."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Apple and Google",
+      "comment": "Apple and Google benefit from the control over their app stores and in-app payment systems. This control provides them with significant revenue streams, data collection opportunities, and the ability to curate the user experience. From their perspective, the mandate functions as a rope, coordinating a standardized and secure platform ecosystem. They can arbitrage between competing interests."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Large App Development Companies (e.g., Spotify, Epic)",
+      "comment": "Large app development companies like Spotify and Epic have enough power to challenge the duopoly's mandates. They can negotiate with the platform owners, develop alternative distribution methods (e.g., direct downloads), or even launch legal challenges. While they benefit from access to the platforms' user base, they also experience the constraint as an extraction mechanism due to high commissions and restrictions on payment options. They are mobile in that they can pursue alternative strategies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "An analytical observer recognizes the duopoly's platform mandate as a tangled rope. It has elements of coordination (creating a standardized ecosystem and ensuring security), but also significant extraction (in-app purchase commissions) and suppression of alternatives (restrictions on distribution and payment methods)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "competition_viability",
+      "question": "How viable are alternative app distribution channels (e.g., third-party app stores, web apps) as a means of breaking the duopoly's control?",
+      "resolution_mechanism": "Market share analysis of alternative app distribution channels; user surveys on the adoption of alternative apps; developer interviews on the costs and benefits of using alternative channels.",
+      "impact": "If alternative channels become viable, the constraint could shift from a tangled rope to a rope, as developers gain more bargaining power. If alternative channels remain niche, the constraint will remain a tangled rope or snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative app distribution channels."
+    },
+    {
+      "id": "regulation_impact",
+      "question": "How will government regulation impact the duopoly's platform mandate?",
+      "resolution_mechanism": "Analysis of ongoing antitrust lawsuits and regulatory investigations; assessment of the impact of new laws and regulations on app store policies; tracking changes in platform policies in response to regulatory pressure.",
+      "impact": "If regulation leads to significant changes in platform policies (e.g., allowing alternative payment methods), the extraction from app developers could decrease. If regulation has little impact, the constraint will remain a tangled rope or snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Impact of government regulation on platform mandate."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.7
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the mobile operating system duopoly (Apple's iOS and Google's Android) that requires app developers to use proprietary app stores for distribution and in-app payment systems, which charge commissions of 15-30%. This mandate creates a complex relationship between the platform owners, app developers, and consumers, with elements of both coordination and extraction.",
+    "key_agents": [
+      "Apple and Google: Primary beneficiaries (institutional/arbitrage) \u2014 derive revenue from commissions and control over the app ecosystem.",
+      "App Developers: Primary victims (powerless/trapped) \u2014 face high commissions and restrictions on distribution.",
+      "Consumers: Secondary victims (moderate/constrained) \u2013 may face higher prices due to commissions and have limited choices for app distribution.",
+      "Large App Development Companies: Powerful actors (powerful/mobile) \u2013 can negotiate deals or pursue alternative distribution strategies",
+      "Analytical Observer: Sees mixed coordination and extraction (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The 15-30% commission on in-app purchases represents a significant extraction of revenue from app developers. Suppression (0.70): High. The restrictions on alternative app distribution channels and payment methods limit developer autonomy and consumer choice. Theater ratio (0.30): Low. While there is some rhetoric about ensuring security and user experience, the primary motivation for the mandate is revenue generation.",
+    "perspectival_gap": "The primary perspectival gap is between Apple/Google (who see the mandate as a legitimate form of coordination) and app developers (who experience it as an extraction mechanism). Large app development companies have more agency and see a mixed picture, while individual developers are largely trapped.",
+    "directionality_logic": "Apple and Google benefit from the mandate, as it generates significant revenue and control over the app ecosystem. App developers, especially smaller ones, are the primary victims, as they face high commissions and restrictions. Larger app developers have more bargaining power and can negotiate better terms, while consumers are indirectly affected through higher prices and limited choices.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the platform mandate has elements of both coordination and extraction. The platform owners coordinate the app ecosystem and ensure a certain level of security and user experience. However, they also extract significant revenue from app developers through commissions and restrictions on alternative distribution and payment methods."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {},
+  "directionality_overrides": []
+}

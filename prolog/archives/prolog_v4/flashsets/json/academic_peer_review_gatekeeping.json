@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "academic_peer_review_gatekeeping",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.6,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Academic Peer Review and Journal Gatekeeping",
+    "topic_domain": "economic/social/technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "journal_publishers",
+      "tenured_faculty"
+    ],
+    "victims": [
+      "early_career_researchers",
+      "university_libraries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Early Career Researchers",
+      "comment": "Early career researchers are heavily dependent on publications for career advancement and are thus trapped in the system. They bear a disproportionate cost in terms of time and effort spent on unpaid peer review and the financial burden of accessing research."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "University Libraries",
+      "comment": "University libraries are forced to pay exorbitant subscription fees to access journals, limiting their ability to provide resources to their patrons. They are constrained by budget limitations and the increasing cost of subscriptions."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Journal Publishers",
+      "comment": "Journal publishers benefit from the free labor of researchers and the captive market of university libraries. They can set high subscription fees and maintain their position as gatekeepers of academic knowledge."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Tenured Faculty",
+      "comment": "Tenured faculty benefit from the prestige associated with publishing in high-impact journals, which reinforces their position in the academic hierarchy. They also contribute to the system by serving as editors and reviewers. While they have more job security than early career researchers, they are still somewhat constrained by the need to publish in established journals for maintaining reputation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees a system that combines coordination (peer review) with asymmetric extraction (publisher profits, career advancement dependent on gatekeepers). The system requires active enforcement through tenure requirements and university library budget allocations."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "open_access_transition",
+      "question": "How will the transition to open access affect the power dynamics in academic publishing?",
+      "resolution_mechanism": "Track the adoption rates of open access models, the impact on subscription fees, and the emergence of new publishing platforms.",
+      "impact": "If open access becomes dominant: Publishers may lose their gatekeeping power, and researchers may have more control over their work. If subscription models persist: The extractive nature of the system may continue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Impact of open access transition on academic publishing"
+    },
+    {
+      "id": "alternative_metrics",
+      "question": "Can alternative metrics (altmetrics) replace traditional citation counts as a measure of research impact?",
+      "resolution_mechanism": "Compare the correlation between altmetrics and traditional citation counts, and assess their predictive power for career advancement.",
+      "impact": "If altmetrics become widely accepted: The reliance on high-impact journals may decrease, and researchers may be incentivized to share their work more broadly. If citation counts remain dominant: The gatekeeping role of journals may persist.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether altmetrics can replace traditional citation counts"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Academic peer review and journal gatekeeping is a system where researchers provide free labor (peer review and editing) to for-profit publishers, who then sell access to that research back to the researchers' own institutions at significant markups. This creates a structural tension between the coordination function of peer review and the extraction of value by publishers.",
+    "key_agents": [
+      "Journal Publishers: Primary beneficiary (institutional/arbitrage) - extract profit from the system",
+      "Early Career Researchers: Primary victim (powerless/trapped) - dependent on publications for career advancement",
+      "University Libraries: Secondary victim (moderate/constrained) - forced to pay high subscription fees",
+      "Tenured Faculty: Powerful, constrained by prestige and the need to publish."
+    ],
+    "logic_rationale": "Extractiveness (0.65): High. Publishers extract significant profit from the system, while researchers provide free labor. Suppression (0.70): High. Researchers are heavily incentivized to publish in established journals, limiting their choices. Theater Ratio (0.60): Moderate-High. Peer review process is often seen as performative, with reviewers unable to fully verify the validity of the research.",
+    "perspectival_gap": "Early career researchers and university libraries experience the system as a snare, as they are trapped and extracted from. Journal publishers see it as a rope, a coordination mechanism that allows them to profit. Tenured faculty have a mixed experience, seeing it as both a tangled rope (prestige) and potentially a scaffold (if open access alternatives succeed). The analytical observer sees a tangled rope, with coordination and extraction functions intertwined.",
+    "directionality_logic": "The beneficiaries are the journal publishers, who profit from the free labor of researchers and the captive market of university libraries. The victims are the early career researchers and university libraries, who are dependent on the system and forced to pay high subscription fees. Tenured faculty benefit from prestige of publication, so their d is lower than ECRs, but their need to get promoted and reviewed constrains them still. The perspectives and directionality values derive from the real-world structural relationships between these agents.",
+    "mandatrophy_analysis": "This is a Tangled Rope, not a pure Snare, because the peer review process does provide a coordination function: it helps to filter out flawed research and ensure the quality of published work. However, the system also extracts value from researchers and libraries, creating a structural imbalance. The correct analysis requires recognizing both the coordination and extraction aspects."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "research_funding_allocation",
+      "tenure_promotion_metrics"
+    ]
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "bureaucratic_legibility_collapse",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.8,
+    "claimed_type": "snare",
+    "human_readable": "The Administrative Whiteout",
+    "topic_domain": "political/organizational/informational",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_bureaucracy",
+      "regulatory_capture_lobbyists"
+    ],
+    "victims": [
+      "intended_beneficiaries_of_policy",
+      "operational_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Intended Beneficiaries of Policy",
+      "comment": "Those whom the policy was designed to help are trapped by its unintended consequences and suffer the most from the legibility collapse."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Incumbent Bureaucracy",
+      "comment": "The bureaucracy, while nominally the 'enforcer', becomes a piton as its metrics fail to reflect reality. It is trapped in a cycle of enforcing ineffective rules and generating meaningless data."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Capture Lobbyists",
+      "comment": "Lobbyists benefit from the complexity and opacity, finding arbitrage opportunities within the system while contributing to its dysfunction. They extract rents from the confusion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An outside observer sees the tangled web of unintended consequences and the system's overall extractive nature."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Operational Transparency",
+      "comment": "The possibility of achieving actual transparency is undermined by the overwhelming amount of meaningless metrics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "metric_drift_threshold",
+      "question": "At what point does metric substitution become so severe that the original purpose of the institution is completely undermined?",
+      "resolution_mechanism": "Longitudinal study comparing stated goals with actual outcomes.",
+      "impact": "If the threshold is low, then even small metric drifts can cause significant harm. If high, then the institution is more resilient to manipulation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The point at which metric substitution undermines the institution's purpose."
+    },
+    {
+      "id": "data_feedback_sensitivity",
+      "question": "How sensitive is the bureaucratic system to feedback from the real world, and how quickly can it adapt its metrics?",
+      "resolution_mechanism": "Analysis of policy revision cycles and stakeholder engagement.",
+      "impact": "If the system is highly sensitive, then it can correct course quickly. If it is insensitive, then it is doomed to repeat its mistakes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sensitivity of bureaucratic system to real-world feedback."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.8
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Administrative Whiteout describes a scenario where the metrics used by an institution to \"see\" and manage its domain become so decoupled from reality that the institution's actions produce the opposite of their intended effects. This can occur due to metric substitution, regulatory capture, or simply the inherent complexity of the system.",
+    "key_agents": [
+      "Incumbent Bureaucracy: The institution whose metrics have become decoupled from reality (institutional/constrained).",
+      "Intended Beneficiaries of Policy: Those whom the policy was designed to help (powerless/trapped).",
+      "Regulatory Capture Lobbyists: Those who benefit from the complexity and opacity of the system (powerful/arbitrage).",
+      "Operational Transparency:  Undermined by the useless metrics generated. (powerless/trapped)."
+    ],
+    "logic_rationale": "The extractiveness is high because the system actively harms those it is supposed to help. The suppression is high because the system is resistant to change and suppresses alternative approaches.  The theater ratio is high because the institution focuses on generating metrics rather than achieving its goals.",
+    "perspectival_gap": "Those who are supposed to benefit from the policy are harmed by it (snare).  The institution itself is trapped in a cycle of ineffectiveness (piton).  Lobbyists benefit from the system's dysfunction (tangled rope).",
+    "directionality_logic": "The beneficiaries are those who profit from the system's dysfunction, while the victims are those who are harmed by it.  The institution is caught in the middle, unable to correct course due to the flawed metrics.",
+    "mandatrophy_analysis": "This constraint is classified as a snare because the system actively harms those it is supposed to help. It is not simply a case of ineffectiveness, but rather of actively producing negative outcomes."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture",
+      "goodhart_law"
+    ]
+  },
+  "directionality_overrides": []
+}

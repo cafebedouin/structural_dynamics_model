@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "ai_training_data_dependency",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Training Data Dependency",
+    "topic_domain": "technological",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "ai_model_developers",
+      "data_owners"
+    ],
+    "victims": [
+      "organizations_without_access_to_data",
+      "society_at_large"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Organizations without access to training data",
+      "comment": "Organizations without access to sufficient training data are trapped, unable to compete in AI development. They bear the cost of being excluded from advancements."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "AI Model Developers",
+      "comment": "AI Model Developers benefit from the availability of training data, enabling them to create and improve AI models. They have arbitrage exit options by switching to different datasets or model architectures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the dependency as a Tangled Rope: AI development relies on data, creating a system with both coordination and extraction aspects."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Data Owners",
+      "comment": "Data owners have some influence, but are constrained by ethical considerations, regulations, and competition. They benefit from data access agreements, but are increasingly being pressured to make data accessible"
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Society at Large",
+      "comment": "Society at large may become victims if AI is trained on biased datasets, leading to unfair or discriminatory outcomes"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "data_quality_vs_quantity",
+      "question": "What is the relative importance of data quality versus quantity in achieving reliable AI performance?",
+      "resolution_mechanism": "Empirical studies comparing AI models trained on different datasets with varying quality and quantity.",
+      "impact": "If quality is paramount, efforts should focus on data curation. If quantity is key, then data aggregation is more important.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative importance of data quality versus quantity."
+    },
+    {
+      "id": "bias_mitigation_effectiveness",
+      "question": "How effective are current techniques for mitigating bias in AI training data?",
+      "resolution_mechanism": "Benchmarking and comparing the performance of AI models trained with and without bias mitigation techniques.",
+      "impact": "If bias mitigation techniques are ineffective, AI outcomes may remain unfair.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of current bias mitigation techniques."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "AI models, particularly in specialized fields like semiconductor design, increasingly rely on vast amounts of training data. This dependency creates a complex ecosystem with both coordination and extraction aspects. AI model developers benefit from access to data, while organizations lacking such access are disadvantaged. This can lead to monopolies. Society may suffer from biased outcomes if the training data reflects societal biases.",
+    "key_agents": [
+      "AI Model Developers: Primary beneficiaries (institutional/arbitrage) - benefit from training data to develop and improve AI models.",
+      "Data Owners: Secondary beneficiaries (organized/constrained) - benefit from selling data, but are increasingly subject to pressure.",
+      "Organizations without access to data: Primary victims (powerless/trapped) - cannot compete in AI development.",
+      "Society at Large: Potential victims (powerless/trapped) - may suffer from biased outcomes if AI is trained on biased datasets."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. The AI model developers derive significant value from the training data, and the organizations that do not have access suffer as a result. Suppression (0.65): High. The organizations lacking data are highly suppressed in their ability to build AI applications. Theater ratio (0.30): Relatively low. The theater ratio is somewhat low because there is still useful functional activity, and the AI development process benefits from the collected data.",
+    "perspectival_gap": "Organizations without data view it as a snare, while AI model developers view it as coordination (rope). Analytical observers view it as a tangled rope. The data owners' perspective is a bit tangled_rope as they benefit from access to their proprietary data, but also are pressured.",
+    "directionality_logic": "AI model developers are beneficiaries; organizations without access are victims; analytical observers see both coordination and extraction. The directionality follows from those relationships.",
+    "mandatrophy_analysis": "This is Tangled Rope because there is a genuine coordination aspect of providing useful data for AI model development, but the dependence creates extraction because some organizations are excluded."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "algorithm_bias",
+      "data_privacy"
+    ]
+  },
+  "directionality_overrides": []
+}

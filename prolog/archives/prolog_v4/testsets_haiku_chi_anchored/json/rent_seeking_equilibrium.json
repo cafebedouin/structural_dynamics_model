@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "rent_seeking_equilibrium",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rent"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "The Toll-Bridge Stagnation",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "incumbent_wealth_holders"
+    ],
+    "victims": [
+      "productive_economy",
+      "entry_level_entrepreneurs",
+      "wage_workers",
+      "innovation_sector"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Entry-Level Entrepreneur",
+      "comment": "PERSPECTIVE 1: ENTRY-LEVEL ENTREPRENEUR (SNARE) \u2014 Cannot compete with entrenched actors' access to regulatory capture, litigation resources, and political influence. Trapped in a market where the rules are written by incumbents. High barriers to entry (regulatory compliance, legal challenges) funded by incumbents' extracted rents. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Productive Economy",
+      "comment": "PERSPECTIVE 2: PRODUCTIVE ECONOMY (SNARE) \u2014 Capital and labor trapped in existing arrangements; cannot easily relocate to non-rent-seeking equilibria. Extraction manifests as: higher input costs (monopolistic intermediaries), regulatory compliance overhead, and opportunity cost of capital diverted to rent-seeking rather than innovation. d\u22480.85, f(d)\u22481.18, \u03c3=1.0 \u2192 \u03c7\u22480.68."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Incumbent Wealth Holders",
+      "comment": "PERSPECTIVE 3: INCUMBENT WEALTH HOLDERS (ROPE) \u2014 Experience the constraint as a coordination mechanism: lobbying groups, trade associations, and regulatory capture represent coordination to defend market position. From their perspective, the rent-seeking apparatus is a solution to the collective action problem of competition. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Reform-Minded Policymakers",
+      "comment": "PERSPECTIVE 4: REFORM-MINDED POLICYMAKERS (TANGLED ROPE) \u2014 See both coordination function (incumbent stability prevents systemic instability) and asymmetric extraction (wealth captured at the expense of growth). Constrained by political economy: reducing incumbents' extraction invites their political opposition and withdrawal of campaign support. Both benefit from the system's predictability and harmed by its inefficiency. d\u22480.62, f(d)\u22480.82, \u03c3=1.0 \u2192 \u03c7\u22480.47."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Regulatory Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY APPARATUS (PITON) \u2014 The regulatory and legal infrastructure persists as a theater of consumer protection, competition enforcement, and market safety, but its primary function (innovation and efficiency) has atrophied. Regulatory bodies capture by incumbents; enforcement becomes selective. theater_ratio=0.65 indicates significant performative activity (regulatory reviews, antitrust hearings) without functional correction of rent-seeking. d\u22480.10, f(d)\u2248-0.09, \u03c3=1.0 \u2192 \u03c7\u2248-0.06."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Economic Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / ECONOMIC LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, rent-seeking is an immutable feature of property rights and markets: wherever wealth exists, actors have incentives to defend and expand it through political means. This perspective sees the toll-bridge stagnation as a natural outcome of human nature and institutional structure, not a contingent arrangement. However, the structural data (\u03b5=0.58, suppression=0.68, theater=0.65) contradicts the mountain classification \u2014 the engine will detect a false summit, revealing that rent-seeking equilibrium is contingent on specific institutional design, not inevitable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "productive_versus_extractive_boundary",
+      "question": "What proportion of incumbent wealth comes from genuine innovation vs. regulatory/legal capture?",
+      "resolution_mechanism": "Historical patent analysis; comparison of R&D spending in concentrated vs. competitive industries; measurement of welfare gains from incumbents' products vs. costs of market foreclosure",
+      "impact": "If >70% productive: snare classification overstates extraction severity. If <30% productive: snare classification is understated; constraint is more severe than \u03b5=0.58 indicates.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between productive returns and extractive rents"
+    },
+    {
+      "id": "regulatory_capture_extent",
+      "question": "How much of regulatory/legal complexity represents genuine public interest protection vs. incumbent-serving barriers to entry?",
+      "resolution_mechanism": "Analysis of regulatory changes when incumbents gain/lose political power; comparison of compliance costs across industries with varying incumbent concentration; audit of regulatory benefit-cost analyses",
+      "impact": "If capture is high (>60%): suppression should exceed 0.68, and the constraint moves toward severe snare. If capture is low (<40%): suppression should decrease, and constraint may be tangled rope rather than snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of regulatory capture by incumbents"
+    },
+    {
+      "id": "exit_option_materiality",
+      "question": "Can mid-sized firms actually exit the rent-seeking equilibrium by relocating, decoupling from regulatory dependencies, or finding niche markets outside incumbent control?",
+      "resolution_mechanism": "Empirical study of firm exit rates, relocation costs, and success rates for businesses attempting to avoid rent-seeking dependencies; measurement of geographic variation in rent-seeking intensity",
+      "impact": "If exit is feasible: many agents classified as 'trapped' should be 'constrained' or 'mobile', lowering d values and reducing \u03c7. If exit is illusory: trap classification is confirmed, and suppression may be understated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit from rent-seeking equilibrium is materially feasible"
+    },
+    {
+      "id": "efficiency_cost_magnitude",
+      "question": "What is the aggregate economic cost of capital diverted from productive innovation to rent-seeking activities?",
+      "resolution_mechanism": "Estimation of total lobbying, litigation, and regulatory compliance spending; comparison with aggregate R&D spending; measurement of growth foregone relative to low-rent-seeking equilibrium benchmarks",
+      "impact": "If costs are <5% of GDP: extraction is moderate, snare classification marginal. If costs are >15% of GDP: extraction is severe, and constraint may warrant reclassification to higher suppression.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Aggregate efficiency cost of rent-seeking diversion"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The rent-seeking equilibrium represents a structural trap where incumbent wealth holders invest more resources in capturing existing wealth through political, legal, and regulatory influence than in creating new value. This constraint creates a toll bridge: all new economic activity must negotiate passage with entrenched actors, who extract rents in exchange for access. The constraint exhibits characteristics of both pure extraction (snare) and performative institutional maintenance (piton). From the incumbent perspective, rent-seeking appears as a coordination mechanism (rope) \u2014 trade associations, lobbying coalitions, and regulatory bodies represent solutions to the collective action problem of competition. From the productive economy and entry-level entrepreneurs, the same apparatus is a pure extraction mechanism with suppressed alternatives (snare). The constraint's theater ratio (0.65) reflects that regulatory and legal frameworks maintain a public-interest facade \u2014 consumer protection, competition enforcement, market safety \u2014 while their primary function in equilibrium is to entrench existing wealth. Over the 30-year interval examined, base extractiveness has nearly doubled (0.32 \u2192 0.58), and theater has increased from 0.40 to 0.65, indicating that rent-seeking has become more sophisticated, more expensive to maintain, and more performative over time. The constraint is mandatrophy-resolved: the distinction between coordination (incumbent stability) and extraction (prevented innovation) is clear from the structural data and beneficiary/victim declarations.",
+    "key_agents": [
+      "Incumbent Wealth Holders: Primary beneficiary (institutional/arbitrage) \u2014 capture regulatory rents, litigation advantages, and political influence without deploying capital in productive innovation",
+      "Entry-Level Entrepreneurs: Primary victim (powerless/trapped) \u2014 face regulatory compliance costs, legal attack risks, and inability to access capital or markets controlled by incumbents",
+      "Productive Economy: Secondary victim (moderate/constrained) \u2014 capital and labor trapped in existing arrangements; higher input costs, regulatory overhead, and opportunity cost of capital diverted to rent-seeking",
+      "Wage Workers: Secondary victim (moderate/constrained) \u2014 trapped in incumbent-dominated firms; limited job mobility; wage growth suppressed relative to productivity growth",
+      "Innovation Sector: Secondary victim (powerful/mobile) \u2014 can partially exit through offshore relocation, but faces policy pressure and loss of domestic market access",
+      "Reform-Minded Policymakers: Mixed position (organized/constrained) \u2014 see extraction problem but constrained by incumbent political power and campaign finance dependencies",
+      "Regulatory Apparatus: Institutional maintenance (institutional/arbitrage) \u2014 persists as theater; enforcement becomes selective; primary function (correcting market failures) atrophied"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. Incumbent wealth holders systematically capture regulatory rents, litigation resources, and political influence, and deploy these to prevent market entry and innovation. The measurement trajectory (0.32 \u2192 0.58 over 30 years) indicates that rent-seeking apparatus has become more sophisticated and expensive. Base extraction is not higher (e.g., 0.75) because some incumbents do maintain genuine innovation capacity, and the constraint has not achieved total market closure \u2014 partial exits and niche markets exist. Suppression (0.68): High. Entry barriers are substantial: regulatory compliance costs (averaging 10-25% of startup capital), litigation risk from incumbent patent/trade secret attacks, and restricted access to capital markets (incumbents control bank boards and venture networks). Exits exist but are heavily constrained. Theater Ratio (0.65): Moderate-high. Regulatory bodies maintain public legitimacy through consumer protection reviews, antitrust investigations, and market safety enforcement, but effectiveness in preventing rent-seeking is low. The performative component has increased over time as rent-seeking has become more subtle and legally sophisticated. Claimed Type: Snare. The structural data meets snare thresholds: \u03b5=0.58 (\u22650.46), suppression=0.68 (\u22650.60), \u03c7 will exceed 0.66 across multiple perspectives.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence. Incumbent wealth holders experience coordination (rope) \u2014 they coordinate to manage competition and secure returns. Entry-level entrepreneurs experience pure extraction (snare) \u2014 they face one-way barriers and no escape. The productive economy experiences mixed effects (tangled rope) \u2014 some benefit from incumbent stability and scale, others suffer from foreclosure. Reform policymakers see both coordination (preventing instability) and extraction (preventing innovation) simultaneously, making them trapped between conflicting institutional pressures. The regulatory apparatus sees itself as functional (mountain) \u2014 protecting consumers and competition \u2014 but behaves as theater (piton) \u2014 maintaining legitimacy while enabling capture. The analytical observer risks naturalizing rent-seeking as inevitable, missing the contingent institutional designs that enable it. The perspectival gap is not merely observational disagreement; it reflects structural asymmetries in power, exit options, and benefit flows.",
+    "directionality_logic": "Incumbent wealth holders: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.11. Net beneficiary; experience negative effective extraction (they extract from others). Entry-level entrepreneurs: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; no exit options within the constraint system. Productive economy: Victim + constrained \u2192 d\u22480.85, f(d)\u22481.18. High extraction; some exit options (capital relocation, merger into incumbents) but costly and incomplete. Reform policymakers: Mixed (beneficiary of stability + victim of inefficiency) + constrained \u2192 d\u22480.62, f(d)\u22480.82. Moderate-high extraction; constrained by political economy (cannot reduce incumbent rents without losing political support). Regulatory apparatus: Institutional + arbitrage \u2192 d\u22480.10, f(d)\u2248-0.09. Piton classification derives from theater gate (\u22650.70 theater), not from high d. Innovation sector: Victim + mobile \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction; can partially exit through relocation but faces policy pressure.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint clearly separates coordination (incumbent stability, predictable rule-making) from extraction (blocked entry, suppressed innovation). The confusion arises from the incumbent perspective: they genuinely coordinate to solve their collective action problem (competing with each other while defending against external threats). But this coordination function produces asymmetric extraction from everyone outside the incumbent coalition. The mandatrophy is resolved by recognizing that coordination for SOME agents is extraction for OTHERS. The snare classification is justified because: (1) the primary function from the system's perspective is extraction (preventing innovation and entry), not coordination; (2) the coordination that does exist (incumbent cartels, regulatory capture) is purely defensive, not productive; (3) beneficiaries are concentrated and explicit (incumbent wealth holders), while victims are dispersed and implicit (foregone innovation, prevented entry). The piton observation (theater_ratio=0.65) indicates that regulatory institutions maintain legitimacy through performative activity (antitrust reviews, consumer protection) without functional correction of the underlying rent-seeking structure. The measurement trajectory shows that theater has increased as rent-seeking has become more sophisticated \u2014 the apparatus requires more elaborate justification as its extractive function becomes more visible. This is the classic piton pattern: function atrophied (regulatory agencies can no longer effectively police rent-seeking), but institutional persistence maintained through performance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_complexity_accumulation",
+      "innovation_capital_concentration",
+      "market_access_gatekeeping"
+    ],
+    "dual_formulation_note": "Rent-seeking equilibrium is downstream of specific rent sources (regulatory barriers, intellectual property enforcement, capital access restrictions). This story models the aggregate equilibrium state. Upstream constraints capture individual rent-extraction mechanisms (e.g., patent thickets, occupational licensing, market entry regulations). The network edges reflect structural coupling: reducing one rent source shifts extraction pressure to others unless the underlying institutional design changes."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.85
+    }
+  ]
+}

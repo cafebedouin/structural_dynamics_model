@@ -1,0 +1,177 @@
+{
+  "header": {
+    "constraint_id": "cuban_missile_crisis_excomm_delibration",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "excomm"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "The ExComm Multi-Channel Deliberation Protocol",
+    "topic_domain": "political/military",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "decision_quality",
+      "crisis_de_escalation",
+      "institutional_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Executive Committee Institutional Core",
+      "comment": "PERSPECTIVE 1: EXCOMM INSTITUTIONAL CORE (ROPE) \u2014 Kennedy and McNamara experience the deliberation protocol as pure coordination: multi-channel debate (formal meetings, back-channel communication, adversarial groups) reduces decision risk and distributes accountability. No extraction; genuine coordination benefit. d\u22480.08, f(d)\u2248-0.11, \u03c3=1.2 \u2192 \u03c7\u2248-0.04."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Joint Chiefs of Staff",
+      "comment": "PERSPECTIVE 2: JOINT CHIEFS OF STAFF (ROPE) \u2014 Military commanders maintain exit option (direct escalation to President if blocked) but experience ExComm as coordination mechanism that channels their input into decision-making. Theater is low (genuine debate, not performative ritual). d\u22480.48, f(d)\u22480.60, \u03c3=1.2 \u2192 \u03c7\u22480.23. Moderate effective extraction reflects constraint-relative power asymmetry (civilian override possible) but also genuine coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Specialist Analysts and Intelligence Community",
+      "comment": "PERSPECTIVE 3: SPECIALIST ANALYSTS / INTELLIGENCE COMMUNITY (ROPE) \u2014 CIA and military intelligence provide crucial information inputs. Can exit by refusing to brief or by leaking to media (mobile exit). Experience ExComm as coordination that elevates their expertise into decisions. d\u22480.45, f(d)\u22480.56, \u03c3=1.2 \u2192 \u03c7\u22480.21."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Level Subordinates and Aides",
+      "comment": "PERSPECTIVE 4: MID-LEVEL SUBORDINATES AND AIDES (TANGLED ROPE) \u2014 Junior officials and staffers have constrained exit (career risk of dissent in hierarchical structure) but also benefit from coordination function: their analysis and recommendations reach the highest decision-making level. Mixed extraction and coordination. d\u22480.68, f(d)\u22481.02, \u03c3=1.0 \u2192 \u03c7\u22480.33."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Cuban Population and Humanity at Large",
+      "comment": "PERSPECTIVE 5: CUBAN POPULATION / HUMANITY AT LARGE (SNARE) \u2014 Affected by decisions made in ExComm but cannot participate, exit, or even know deliberations occurring. Pure extraction: bear risk of nuclear annihilation with no voice. d\u22480.98, f(d)\u22481.43, \u03c3=1.2 \u2192 \u03c7\u22480.65. This perspective reveals extraction hidden within the coordination mechanism."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Post-Crisis Institutional Reform View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / INSTITUTIONAL REFORM VIEW (SCAFFOLD) \u2014 From a generational perspective, ExComm is temporary coordination scaffolding addressing Bay of Pigs failure. The protocol's specific deliberation structure (formal meetings + back-channels + devil's advocate + recorded discussions) is adopted as a model for crisis decision-making but is contingent on Kennedy administration. Later presidents adopt modified versions or abandon the structure. The sunset is institutional: when the immediate crisis ends, the protocol reverts to standard NSC procedures. \u03c7\u22480.18; theater_ratio=0.35 (genuine deliberation with some performative briefing ritual)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "back_channel_effectiveness",
+      "question": "Did the back-channel communications (Dobrynin-RFK channel) provide genuine coordination benefit or primarily extract information advantage for Soviet negotiating position?",
+      "resolution_mechanism": "Declassified Soviet records; comparison of information flows in formal ExComm meetings vs back-channel communications; analysis of which side's proposals ultimately prevailed",
+      "impact": "If genuine coordination: confirms rope classification. If information extraction by Soviets: reveals snare or tangled_rope hidden within the protocol's appearance of coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether back-channel communications achieved genuine coordination or enabled extraction"
+    },
+    {
+      "id": "devil_advocate_authenticity",
+      "question": "Was Theodore Sorensen's devil's advocate role (arguing for military strike options) a genuine epistemic check or performative dissent masking a predetermined decision path?",
+      "resolution_mechanism": "Analysis of ExComm transcripts and declassified records; comparison of devil's advocate arguments to actual option evaluation criteria; determination of whether strike option was ever seriously considered after initial rejection",
+      "impact": "If authentic: supports rope classification \u2014 genuine deliberation structure. If performative: reveals piton elements (ritual dissent without real option reconsideration).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether devil's advocate role provided authentic epistemic check"
+    },
+    {
+      "id": "information_asymmetry_regarding_soviet_intent",
+      "question": "Did ExComm's information disadvantage regarding Soviet decision-making (inability to know whether Khrushchev was committed to removing missiles or testing US resolve) constitute a structural constraint on deliberation quality or a manageable uncertainty?",
+      "resolution_mechanism": "Comparison of ExComm's estimate of Soviet intentions with actual Soviet decision-making revealed in declassified records; analysis of how uncertainty shaped option evaluation",
+      "impact": "If structural constraint: ExComm's deliberation quality was inherently limited by opacity (snare or tangled_rope features). If manageable: coordination mechanism functioned despite information gaps.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether information asymmetry about Soviet intent constrained deliberation quality"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 13,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.26
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 13,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 13
+  },
+  "commentary": {
+    "narrative_context": "The Executive Committee of the National Security Council (ExComm) established by President Kennedy following the Bay of Pigs failure represents an institutional response to decision failure: the Bay of Pigs relied on hierarchical information flow and limited deliberation; ExComm introduced multi-channel debate, back-channel communication, adversarial option testing, and recorded discussions to improve crisis decision-making. During the Cuban Missile Crisis (October 16-28, 1962), ExComm operated continuously, cycling through formal meetings (where all perspectives were aired), working groups (where options were analyzed), and back-channel communications (where negotiation signals were exchanged with Soviet leadership). The protocol successfully achieved de-escalation: Kennedy and Khrushchev negotiated a settlement (Soviet missile removal + US pledge not to invade Cuba + secret US missile withdrawal from Turkey) that avoided nuclear war. From an institutional perspective, ExComm appears as pure coordination (Rope): the protocol improved decision quality through distributed expertise and reduced hierarchical filtering. From a perspective of those unable to participate (Cuban population, Soviet public), the same protocol represents extraction: critical life-and-death decisions made in closed deliberation by external actors. The constraint's extractiveness (0.32) reflects that the protocol does coordinate expertly without significant coercion overhead, but the underlying decision-making power is concentrated and non-participatory. The low theater ratio (0.35) indicates that deliberation was substantive rather than performative \u2014 genuine disagreements (strike vs blockade), genuine debate of tradeoffs, genuine uncertainty about outcomes. The protocol does not exist primarily to legitimize predetermined decisions; it exists to improve decisions under uncertainty.",
+    "key_agents": [
+      "President John F. Kennedy: Primary decision-maker (institutional/arbitrage) \u2014 benefits from protocol's coordination function; experiences deliberation as information aggregation enabling better choices",
+      "Secretary of Defense Robert McNamara: Strategic leader (institutional/arbitrage) \u2014 co-architect of ExComm structure; benefits from distributed expertise input",
+      "Joint Chiefs of Staff: Military authority (powerful/mobile) \u2014 contribute military analysis and options; maintain exit option of direct escalation if overruled; experience coordination function",
+      "CIA Director John McCone and intelligence analysts: Specialist experts (powerful/mobile) \u2014 provide crucial reconnaissance intelligence (U-2 photographic evidence); can exit through refusal or leak; benefit from deliberation platform",
+      "Diplomatic specialists (Dean Rusk, Averell Harriman, Theodore Sorensen): Negotiation experts (powerful/mobile) \u2014 contribute diplomatic options and risk assessment; mobile exit through resignation or leaking",
+      "Mid-level staffers and aides: Institutional subordinates (moderate/constrained) \u2014 contribute analysis and options; face career risk of public dissent; constrained by hierarchy",
+      "Soviet leadership (Nikita Khrushchev): Parallel decision-maker (institutional/constrained) \u2014 reciprocal constraint: ExComm's decisions constrain Soviet options, and vice versa",
+      "Cuban population and humanity at large: Affected non-participants (powerless/trapped) \u2014 bear existential risk of decisions made in ExComm with no voice in deliberation"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate-low. The protocol genuinely improves decision-making through distributed expertise (intelligence analysis, military options, diplomatic tradoffs all incorporated). No actor is coerced into participation by ExComm itself \u2014 all participants are institutional officials already in the decision structure. The extractiveness score reflects that while the protocol distributes expertise inputs upward into presidential decision-making (a form of extraction from the experts' labor), it does so without suppressing alternatives or enforcing participation against will. The beneficiaries (decision quality, de-escalation success, institutional legitimacy) are real and substantial. Suppression (0.28): Low-moderate. Significant constraints on deliberation include: formal hierarchy (Kennedy's authority is never questioned), information asymmetry (inability to know Soviet intentions), time pressure (13-day crisis), and implicit pressure for consensus (public dissent would signal weakness to Soviets). But suppression is not severe \u2014 dissenting views are aired (devil's advocate role), military strike option is seriously debated, and multiple paths are explored. Theater ratio (0.35): Low. Deliberation is substantive rather than performative. Recorded transcripts show genuine disagreement (Hawk vs Dove positions), genuine uncertainty (will blockade work?), genuine risk assessment (how will Soviets respond?). The theater component (presentation of options to appear deliberative) is present but not dominant.",
+    "perspectival_gap": "This constraint exhibits sharp perspectival divergence. The institutional beneficiaries (Kennedy, McNamara) experience ExComm as pure coordination (Rope: d\u22480.08) \u2014 improved decisions through aggregated expertise. The powerful specialists (military, intelligence) experience it as coordination with modest constraint (Rope: d\u22480.45-0.48) \u2014 their expertise is valued but ultimate authority remains with civilian leadership. The moderate mid-level actors experience mixed coordination and constraint (Tangled Rope: d\u22480.68) \u2014 they benefit from the platform for their analysis but face career risk of dissent. The powerless actors excluded from deliberation (Cuban population) experience pure extraction (Snare: d\u22480.98) \u2014 decisions made about their survival with no participation. The analytical observer (generational view) sees a temporary scaffold (Scaffold: analytical) \u2014 the protocol is adopted as a model for crisis decision-making but is contingent on specific historical moment and Kennedy's management style. All these classifications emerge from the same base extractiveness (0.32), suppression (0.28), theater (0.35) \u2014 the divergence is perspectival, not structural.",
+    "directionality_logic": "Kennedy administration (institutional/arbitrage): Beneficiary of coordination function; d\u22480.08, f(d)\u2248-0.11 \u2192 negative effective extraction (net beneficiary through improved decisions). Military and intelligence specialists (powerful/mobile): Contribute expertise, maintain exit options, experience modest constraint from civilian authority; d\u22480.45-0.48, f(d)\u22480.56-0.60 \u2192 moderate effective extraction (0.21-0.23 \u03c7). Mid-level staffers (moderate/constrained): Benefit from platform, constrained by hierarchy and career risk; d\u22480.68, f(d)\u22481.02 \u2192 moderate effective extraction (0.33 \u03c7). Cuban population (powerless/trapped): No voice, no exit, bear existential risk; d\u22480.98, f(d)\u22481.43 \u2192 high effective extraction (0.65 \u03c7). The directionality chain reveals that the same institutional protocol benefits institutional decision-makers, moderately constrains powerful specialists, meaningfully constrains moderate participants, and severely extracts from those outside the deliberation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "cuban_missile_crisis_blockade_escalation",
+      "soviet_missile_deployment_strategy",
+      "bay_of_pigs_intelligence_failure"
+    ],
+    "dual_formulation_note": "ExComm deliberation protocol is upstream of the actual blockade decision and missile negotiation. The protocol's effectiveness (\u03b5=0.32 as pure coordination mechanism) should be distinguished from the downstream policy outcomes (blockade vs strike, negotiation success). This story captures the institutional deliberation structure; related constraints capture the strategic decisions made within that structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

@@ -2,40 +2,30 @@
   "header": {
     "constraint_id": "c_physical_blue_wavelength",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "blue_wave"
   },
   "base_properties": {
-    "extractiveness": 0.01,
-    "suppression": 0.01,
-    "theater_ratio": 0.0,
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
     "claimed_type": "mountain",
     "human_readable": "The Physical Wavelength of Blue Light",
-    "topic_domain": "physics/electromagnetism",
-    "requires_active_enforcement": false,
+    "topic_domain": "physics/optics/perception",
     "emerges_naturally": true,
-    "has_sunset_clause": false,
-    "accessibility_collapse": 0.99,
-    "resistance": 0.01
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
   },
   "perspectives": [
     {
       "classification_type": "mountain",
       "agent_power": "powerless",
-      "time_horizon": "biographical",
+      "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Human Observer",
-      "comment": "PERSPECTIVE 1: THE HUMAN OBSERVER (MOUNTAIN) — An individual's perception of color is bound by the physics of light and the biology of the eye. There is no exit from this constraint; it is a fundamental feature of reality. d is symmetric, χ is negligible."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Industrial Chemist",
-      "comment": "PERSPECTIVE 2: THE INDUSTRIAL CHEMIST (MOUNTAIN) — An institution attempting to create new pigments or displays is fundamentally constrained by the electromagnetic spectrum. They can create materials that reflect or emit light at ~475nm, but they cannot change what ~475nm is. Their exit is constrained by physical law, not policy."
+      "label": "The Biological Observer",
+      "comment": "PERSPECTIVE 1: BIOLOGICAL OBSERVER (MOUNTAIN) \u2014 All human perception of blue light is constrained by cone photoreceptor sensitivity peaks in the S-cone class (~420nm) and the physics of light propagation. No exit from this constraint exists at the biological level. The wavelength range that triggers blue perception is fixed by photon physics and retinal biochemistry \u2014 zero degrees of freedom."
     },
     {
       "classification_type": "mountain",
@@ -43,24 +33,91 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Physicist",
-      "comment": "PERSPECTIVE 3: THE PHYSICIST (MOUNTAIN) — The analytical observer sees the constraint as a direct consequence of the laws of electromagnetism. The classification is invariant and represents a ground truth of the physical world. The low ε and suppression values are confirmed by universal, repeatable experiment."
+      "label": "The Analytical Observer (Physics)",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER / PHYSICS (MOUNTAIN) \u2014 From a civilizational timescale and global scope, the electromagnetic spectrum constraint on blue light wavelengths (450-495nm) is a physical law. Light's speed, the relationship between frequency and wavelength (c = \u03bb\u03bd), and the energy levels of atomic transitions that absorb and emit in this band are immutable features of the universe. No measurement basis, observational framework, or technological intervention can change what wavelength corresponds to blue photons. The constraint is invariant across all physics paradigms and measurement regimes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Standards Body (International Commission on Illumination)",
+      "comment": "PERSPECTIVE 3: STANDARDS BODY (MOUNTAIN) \u2014 The CIE (International Commission on Illumination) defines blue light based on the physical wavelength constraint. Even as the primary institutional beneficiary of standard-setting authority, the CIE cannot redefine blue to outside the 450-495nm range \u2014 the standard must conform to the underlying physics or it becomes incoherent. The constraint permits standardization but does not permit redefinition. The institutional actor experiences zero effective extraction from this limit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "wavelength_to_perception_mapping",
+      "question": "Is the mapping from physical wavelength (450-495nm) to the color perception 'blue' a physical constraint or a biological/cultural construct?",
+      "resolution_mechanism": "Cross-species comparison of cone photoreceptor sensitivity curves; historical analysis of color language and categorization across cultures; examination of tetrachromat and color-blind variants",
+      "impact": "If purely physical: classification remains mountain (physics truth). If substantially biological/cultural: the wavelength is fixed (mountain) but the blue perception is a construction (not a mountain constraint but a rope-like coordination between physics and culture). The constraint story then requires decomposition into two: one for wavelength physics (mountain), one for blue perception convention (rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wavelength-to-blue mapping is purely physical or includes biological/cultural components"
+    },
+    {
+      "id": "measurement_independence",
+      "question": "Can the physical wavelength of blue light be measured or verified independently of human or instrumental observation?",
+      "resolution_mechanism": "Quantum measurement theory analysis; examination of whether wavelength is an intrinsic property or an observer-dependent specification; comparison with other 'invariant' physical quantities (charge, mass)",
+      "impact": "If wavelength is intrinsic: mountain classification holds across all measurement frameworks. If wavelength is observer-dependent or measurement-dependent: the constraint may be tangled_rope (physics + measurement apparatus interaction) rather than pure mountain.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether wavelength is intrinsic to light or dependent on measurement"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.12
     }
   ],
   "interval": {
     "start": 0,
-    "end": 13800000000
+    "end": 1000
   },
   "commentary": {
-    "narrative_context": "The perception of the color 'blue' is constrained by a fundamental, unchangeable property of the physical universe: the wavelength of electromagnetic radiation. Light with a wavelength in the approximate range of 450 to 495 nanometers is perceived as blue by the human eye. This is not a social convention, a regulation, or an economic reality; it is a natural law. As such, it serves as a canonical example of a Mountain constraint, against which all other, more contingent constraints can be compared.",
+    "narrative_context": "The physical wavelength of blue light is a foundational constraint that emerges from electromagnetic physics and the properties of light propagation. Blue light, defined as electromagnetic radiation with wavelengths approximately 450-495 nanometers, is constrained by the speed of light (c), the relationship between frequency and wavelength (c = \u03bb\u03bd), and the quantized energy levels of atomic and molecular states that interact with photons in this band. The constraint is not an artifact of measurement, convention, or observational perspective \u2014 it is a structural property of the universe. All agents (biological observers, physicists, standards bodies) are equally constrained by this wavelength boundary. No exit options exist; no agent can extract value from others by controlling this wavelength; no suppression mechanism enforces it because enforcement is unnecessary. The constraint emerges naturally from physical law and exhibits zero degrees of freedom.",
     "key_agents": [
-      "Human Observer: Any individual perceiving color (powerless/trapped).",
-      "Industrial Chemist/Engineer: Any agent attempting to manipulate light for technological purposes (institutional/constrained).",
-      "Physicist: The analytical observer measuring and describing the phenomenon (analytical/analytical)."
+      "Biological Observers (powerless/trapped): Human and animal sensory systems constrained to detect wavelengths in the blue band via cone photoreceptor sensitivity; no exit from this biological constraint.",
+      "Physicists (analytical/analytical): Scientific observers who measure and model the wavelength constraint; understand it as an immutable feature of quantum electrodynamics and relativity.",
+      "Standards Bodies (institutional/arbitrage): CIE and other organizations that define measurement standards and color definitions; benefit from authority over standards but cannot override the underlying physics.",
+      "Light Sources (technological/arbitrage): Lasers, LEDs, lamps that emit light; constrained to produce blue photons at 450-495nm if they are to appear blue; can only work within the constraint, not against it."
     ],
-    "logic_rationale": "Extractiveness (ε=0.01) and Suppression (0.01) are set to near-zero because a physical law does not extract value or coerce behavior in the sense of a social constraint. It simply defines the boundaries of the possible. The NL Profile metrics confirm its Mountain status: 'emerges_naturally' is true, 'accessibility_collapse' (0.99) is extremely high as the knowledge is universally verifiable and consistent, and 'resistance' (0.01) is negligible as one cannot 'resist' a physical law.",
-    "perspectival_gap": "There is no perspectival gap. The constraint classifies as a Mountain from all possible perspectives, regardless of power, time horizon, exit options, or scope. This invariance is the defining characteristic of a constraint that represents a true natural law. Any observer, from a powerless individual to a global institution, confronts the same immutable reality.",
-    "directionality_logic": "Directionality is not applicable in a meaningful way. The constraint is perfectly symmetric. There are no beneficiaries or victims because the constraint does not create a differential advantage; it is a universal constant that applies to all agents equally. The system will derive a symmetric directionality (d≈0.5) for all agents, resulting in a negligible effective extraction (χ) that is far below any classification threshold other than Mountain.",
-    "mandatrophy_analysis": "This constraint serves as a ground-truth case for the system, demonstrating a pure Mountain. It prevents mandatrophy by establishing a baseline for what constitutes an unchangeable, non-extractive feature of reality. Any attempt to frame this physical law as a 'snare' (e.g., 'we are trapped by the color blue') would be immediately flagged as a false classification, as the structural metrics (ε, suppression, NL profile) do not support it. This ensures that the 'Mountain' category is reserved for genuine physical, logical, or mathematical limits, not for naturalized social arrangements."
-  }
+    "logic_rationale": "Extractiveness (0.12): Minimal. The physical wavelength constraint does not extract value from any agent \u2014 it simply defines the boundary of what 'blue' is in the electromagnetic spectrum. The small non-zero value reflects measurement uncertainty and instrumental limitations (spectrometers have finite precision) rather than true extractiveness. Over civilizational timescales, this measurement noise averages to zero functional extraction. Suppression (0.02): Near-zero. No suppression mechanism enforces the wavelength constraint because it requires no enforcement \u2014 the physics is automatic. No agent can suppress alternatives because there are no alternatives. Theater ratio (0.05): Near-zero. The constraint is purely functional with negligible performative content. Any measurement or discussion of blue wavelength carries the theatrical overhead of language and instrumentation, but this is minimal compared to institutional constraints. The constraint requires no symbolic reinforcement, no ideology, no ritual \u2014 it simply obtains.",
+    "perspectival_gap": "This constraint exhibits the minimal perspectival gap characteristic of natural law. All perspectives yield mountain classification because all observers experience the same immutable boundary. The biological observer sees an invariant constraint at the photoreceptor level. The analytical physicist sees an invariant constraint at the level of quantum electrodynamics. The standards body sees the same constraint as the foundation for their authority. No agent perceives meaningful extraction, suppression, or theater. This is the definitional signature of a true mountain constraint: the indexical tuple (P, T, E, S) produces the same classification for all agents because the constraint is genuinely independent of power, time perspective, exit options, and spatial scope.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy trivially: all perspectives classify as mountain, which is the correct classification. There is no risk of mislabeling extraction as coordination or vice versa because no extraction occurs. There is no coordination function being supplied \u2014 the constraint is purely passive/generative. The constraint exemplifies the case where a single \u03b5 value (0.12) and the physical fact of invariance across all measurement frameworks make the classification determinate and unambiguous. If any perspective classified differently from mountain, that would indicate either (a) an error in the analysis, or (b) that the constraint is actually not a single mountain but a family of constraints that should be decomposed. In this case, all evidence points to a true singular mountain."
+  },
+  "boltzmann": {},
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The physical wavelength of blue light is upstream of many constraints involving color perception, lighting standards, and visual technology. This constraint is not itself decomposable \u2014 the wavelength is a singular physical fact. Downstream constraints (e.g., color naming conventions, lighting standards, visual perception) may be rope or tangled_rope structures built on top of this mountain."
+  },
+  "directionality_overrides": []
 }

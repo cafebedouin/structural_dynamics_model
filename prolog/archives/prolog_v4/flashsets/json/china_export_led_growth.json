@@ -1,0 +1,150 @@
+{
+  "header": {
+    "constraint_id": "china_export_led_growth",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "China's State-Directed Export-Led Growth Model",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_state_owned_enterprises",
+      "chinese_communist_party"
+    ],
+    "victims": [
+      "foreign_competitors",
+      "chinese_labor"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Foreign Competitors",
+      "comment": "Perspective 1: Foreign competitors facing suppressed prices and unfair competition in the global market. Trapped as they are unable to match the state subsidized prices."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Chinese Labor",
+      "comment": "Perspective 2: Chinese labor benefits from job creation but are constrained by low wages and limited labor rights. They have limited ability to exit due to hukou system and limited alternative employment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Chinese State-Owned Enterprises",
+      "comment": "Perspective 3: Chinese SOEs benefit from state subsidies and market access. They have arbitrage opportunities due to preferential treatment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Chinese Communist Party",
+      "comment": "Perspective 4: The CCP benefits from economic growth, maintaining political legitimacy. They are constrained by the need to deliver continued growth and stability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "Analytical perspective viewing the long-term consequences of the export-led growth model, including trade imbalances and environmental degradation. Sees both coordination and extraction elements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "growth_sustainability",
+      "question": "Can the export-led growth model be sustained given increasing global trade tensions and domestic economic challenges?",
+      "resolution_mechanism": "Analysis of China's trade policies, technological innovation, and domestic consumption patterns.",
+      "impact": "If unsustainable: economic instability and political upheaval. If sustainable: continued global trade imbalances.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of export-led growth."
+    },
+    {
+      "id": "labor_rights_reform",
+      "question": "Will China implement meaningful labor rights reforms to address the exploitation of workers?",
+      "resolution_mechanism": "Monitoring of labor laws, enforcement mechanisms, and worker organization activities.",
+      "impact": "If yes: reduced extraction from labor. If no: continued suppression and potential social unrest.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Future labor reform."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "China's state-directed industrial policy prioritizes massive investment in manufacturing and export-led growth. This model has led to significant economic growth but also generates trade imbalances and internal social pressures. State subsidies and market access advantages are provided to Chinese SOEs, while foreign competitors face suppressed prices and unfair competition. Chinese labor benefits from job creation but is constrained by low wages and limited labor rights.",
+    "key_agents": [
+      "Chinese State-Owned Enterprises: Primary beneficiaries (institutional/arbitrage)",
+      "Chinese Communist Party: Beneficiary (institutional/constrained)",
+      "Foreign Competitors: Primary victims (powerless/trapped)",
+      "Chinese Labor: Victims (moderate/constrained)"
+    ],
+    "logic_rationale": "Extractiveness (0.65): High, reflecting state control and the pressure on labor and foreign companies. Suppression (0.70): High, indicating limited competition and constraints on labor rights. Theater Ratio (0.30): Relatively low, as the focus is primarily on tangible economic outputs rather than performative aspects.",
+    "perspectival_gap": "Foreign competitors experience the system as a snare, with limited options to compete. Chinese labor experiences a tangled rope, benefiting from jobs but constrained by limited rights. Chinese SOEs benefit significantly. The CCP views it as a way to maintain power and stability.",
+    "directionality_logic": "Beneficiaries: Chinese SOEs receive state support and preferential treatment (low d). Victims: Foreign companies face unfair competition (high d), and Chinese workers face low wages and limited rights (high d). The CCP's relationship is more complex, balancing economic growth with social and political stability."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_trade_imbalances",
+      "intellectual_property_theft_china"
+    ]
+  },
+  "directionality_overrides": []
+}

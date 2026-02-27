@@ -2,24 +2,26 @@
   "header": {
     "constraint_id": "ai_training_data_dependency",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aitdd"
   },
   "base_properties": {
-    "extractiveness": 0.55,
-    "suppression": 0.7,
-    "theater_ratio": 0.3,
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
     "human_readable": "AI Training Data Dependency",
-    "topic_domain": "technological",
+    "topic_domain": "technological/artificial_intelligence",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "incumbent_tech_firms",
-      "proprietary_data_aggregators"
+      "frontier_ai_labs",
+      "semiconductor_design_platforms"
     ],
     "victims": [
-      "new_entrants",
-      "open_source_community"
+      "data_source_creators",
+      "domain_expertise_communities",
+      "open_knowledge_commons"
     ]
   },
   "perspectives": [
@@ -29,8 +31,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Startup / New Entrant",
-      "comment": "PERSPECTIVE 1: NEW ENTRANT (SNARE) — Lacking access to proprietary petabyte-scale datasets, a new entrant is trapped. The dependency is a pure barrier to entry, extracting the opportunity for innovation and competition. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈0.94."
+      "label": "The Data Source Creator",
+      "comment": "PERSPECTIVE 1: DATA SOURCE CREATORS (SNARE) \u2014 Individual researchers, engineers, and domain experts who produced training data (papers, code repositories, design specifications, technical documentation) have no meaningful exit. Their work is scraped, indexed, and incorporated into AI training corpora without consent, compensation, or attribution mechanism. They bear the cost of value extraction while holding no leverage to negotiate terms. Complete suppression: cease producing data and forfeit career incentives; object and face professional isolation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Domain Expert Community",
+      "comment": "PERSPECTIVE 2: DOMAIN EXPERT COMMUNITY (TANGLED ROPE) \u2014 Specialized communities (semiconductor engineers, materials scientists, medical researchers) benefit from AI tools trained on their collective knowledge while simultaneously experiencing extraction. They gain access to AI-augmented design and discovery tools, but those tools are priced as proprietary services controlled by frontier labs. Their own knowledge returns to them in value-extracted form. Constrained exit: communities can restrict data sharing, but this sacrifices collaboration benefits and risks being sidelined as AI systems trained on others' data surpass them."
     },
     {
       "classification_type": "rope",
@@ -38,26 +49,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Incumbent Tech Firm",
-      "comment": "PERSPECTIVE 2: INCUMBENT FIRM (ROPE) — For a firm that owns a massive dataset, the dependency is a powerful coordination mechanism. It structures the market, defines the state-of-the-art, and reinforces their competitive advantage (a 'data moat'). d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.08. The negative extraction signifies a net subsidy."
+      "label": "Frontier AI Laboratories",
+      "comment": "PERSPECTIVE 3: FRONTIER AI LABORATORIES (ROPE) \u2014 Net beneficiary with full arbitrage capacity. Labs access unlimited training data through web scraping, public datasets, and partnerships. They experience the constraint as pure coordination: aggregating diverse data sources solves the genuine problem of producing capable models. No extraction is experienced because they control the extraction flow. Can exit by switching to proprietary data pipelines; can arbitrage between data sources; can dictate terms to data providers and downstream users."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — This view sees both sides: the dependency coordinates the field around scaling laws, enabling rapid progress (Rope function), but it also creates immense barriers to entry and concentrates power (Snare function). The high suppression and extraction are undeniable. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.76."
+      "label": "Semiconductor Design Industry",
+      "comment": "PERSPECTIVE 4: SEMICONDUCTOR DESIGN INDUSTRY (TANGLED_ROPE) \u2014 Major semiconductor firms benefit from AI-augmented design tools (faster layout optimization, yield prediction, fault detection) trained on decades of industry design data. However, their proprietary design methodologies are also extracted and embedded in general-purpose AI tools sold to competitors. Mobile exit: firms can invest in proprietary AI training (higher cost) or accept competitive exposure. Significant but not total extraction \u2014 they hold institutional power to negotiate data licensing terms, though most are not exercising it."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Open Source Coalition",
-      "comment": "PERSPECTIVE 4: OPEN SOURCE COALITION (SCAFFOLD) — Organized efforts to create public datasets (e.g., LAION, The Pile) or develop data-efficient methods see the dependency as a temporary, surmountable problem. They are building a scaffold (public data infrastructure) to bypass the proprietary data walls, with an implicit sunset clause: once the scaffold is built, the dependency on private data is broken. d≈0.40, f(d)≈0.40, σ=1.2 → χ≈0.26."
+      "label": "Academic Institutional Review Boards",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL REVIEW BOARDS / ETHICS FRAMEWORKS (PITON) \u2014 University IRBs, data ethics committees, and institutional data governance processes are substantially performative: they were designed for small-scale human subjects research, not for comprehensive data provenance and consent tracking at scale. Institutions declare data governance while contributing to training corpora without meaningful oversight. Theater persists through institutional inertia and inability to scale review processes to AI-era data volumes. IRBs lack enforcement mechanisms and exit capacity."
     },
     {
       "classification_type": "mountain",
@@ -65,95 +76,124 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Scaling Law Absolutist",
-      "comment": "PERSPECTIVE 5: SCALING LAW ABSOLUTIST (MOUNTAIN) — This perspective frames the dependency as an immutable law of nature for current AI paradigms ('scaling laws'). It posits that model performance is inextricably linked to data volume, making the dependency an unchangeable feature of the technological landscape. The engine will flag this as a false summit, as the base properties (ε=0.55, suppression=0.70) are inconsistent with a natural law."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the dependency of neural scaling laws on data volume appears immutable: current AI architectures require vast training datasets to achieve capability \u2014 this is a mathematical fact of the loss landscape. No amount of regulation can change that larger datasets produce better models. However, this naturalizes a contingent institutional choice: the specific data sources chosen, the absence of consent mechanisms, and the distribution of benefits are not mathematical laws but policy decisions. The engine's false summit detector will flag this as naturalization."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Data Cooperatives and Open Governance Models",
+      "comment": "PERSPECTIVE 7: DATA COOPERATIVES / OPEN GOVERNANCE (SCAFFOLD) \u2014 Emerging models (data cooperatives, collective data trusts, federated learning frameworks, differential privacy standards) represent temporary support structures with sunset potential. Organizations like data stewardship consortiums and community-governed datasets offer alternatives: data creators collectively control training corpus composition and benefit-sharing. Mobile exit: participants can shift to cooperative models. Sunset clause: as technical standards for consent-preserving AI training mature (federated learning, differential privacy, cryptographic commitment protocols), the current dependency on unrestricted data scraping becomes economically suboptimal rather than technically necessary."
     }
   ],
-  "interval": {
-    "start": 2017,
-    "end": 2027
-  },
   "omegas": [
     {
-      "id": "synthetic_data_viability",
-      "question": "Can high-quality synthetic data fully substitute for real-world data at scale, thus breaking the dependency?",
-      "resolution_mechanism": "Empirical testing of models trained on synthetic vs. real data across diverse, complex domains. Analysis of failure modes unique to synthetic data (e.g., mode collapse, lack of long-tail coverage).",
-      "impact": "If viable, the constraint becomes a Scaffold (a temporary technical problem). If not, it remains a Tangled Rope or Snare (a structural economic barrier).",
+      "id": "data_quality_floor",
+      "question": "What is the minimum quantity and diversity of training data required to achieve human-competitive performance in specialized domains like semiconductor design? Is the current utilization actually using this minimum, or are frontier labs training on vastly larger corpora than necessary?",
+      "resolution_mechanism": "Empirical scaling law studies isolating data volume vs model capability in specific domains; analysis of actual data utilization curves vs theoretical minimum; comparison of models trained on curated datasets vs indiscriminate scraping",
+      "impact": "If minimum is 10% of current: dependency could be dramatically reduced through curation, resolving the snare into a rope. If minimum is 90%+ of current: the massive corpus is structurally necessary, and the tangled rope classification holds.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Viability of synthetic data as a substitute for real-world training data."
+      "description": "Minimum data volume required for specialized domain performance"
     },
     {
-      "id": "scaling_law_universality",
-      "question": "Are the current scaling laws a fundamental property of intelligence, or an artifact of the current transformer-based architecture?",
-      "resolution_mechanism": "Discovery of novel AI architectures that achieve state-of-the-art performance with significantly less data.",
-      "impact": "If laws are fundamental, the 'Mountain' perspective gains credence. If they are an architectural artifact, the dependency is a contingent technical choice, reinforcing the 'Tangled Rope' classification.",
+      "id": "consent_technical_feasibility",
+      "question": "Can consent-preserving training techniques (federated learning, differential privacy, synthetic data augmentation, cryptographic data provenance) scale to frontier-scale model training without unacceptable performance degradation?",
+      "resolution_mechanism": "Technical benchmarks: models trained with consent constraints vs models trained on scraped data; cost analysis of federated approaches; privacy-utility tradeoff curves for differential privacy at large scale",
+      "impact": "If feasible with <5% performance cost: data cooperatives become structurally viable, scaffold sunset becomes achievable. If cost >20%: consent mechanisms remain aspirational, and snare persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of consent-preserving training at scale"
+    },
+    {
+      "id": "semiconductor_competitive_parity",
+      "question": "Will firms that restrict proprietary design data from training corpora experience competitive disadvantage relative to firms whose data is incorporated into public AI models? What is the time scale for this divergence?",
+      "resolution_mechanism": "Competitive analysis: design cycle time, yield improvement rates, innovation pace for restricted-data vs open-data firms; longitudinal tracking of market share and design capability metrics",
+      "impact": "If parity maintained: firms retain genuine exit option (restrict data), tangled rope classification holds. If restriction leads to 2+ year delays: exit is illusory, classification degrades to snare for reluctant data providers.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Competitive impact of restricting proprietary data from AI training"
+    },
+    {
+      "id": "alternative_architecture_feasibility",
+      "question": "Could alternative AI architectures (retrieval-augmented generation, modular reasoning systems, structured knowledge representations) achieve comparable performance without requiring massive indiscriminate training corpora?",
+      "resolution_mechanism": "Research development and benchmarking of alternative approaches; performance comparisons on domain-specific tasks; scaling laws for non-transformer architectures",
+      "impact": "If viable alternative exists: the mountain perspective dissolves, and dependency is revealed as institutional choice. If scaling laws strongly favor current approaches: mathematical necessity is more defensible.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether scaling laws are fundamental or an artifact of current architectures."
-    },
-    {
-      "id": "data_as_public_utility",
-      "question": "Should foundational datasets be regulated as a public utility to ensure fair access and promote competition?",
-      "resolution_mechanism": "Political and legislative debate, followed by policy implementation and observation of market effects.",
-      "impact": "If regulated, the constraint could transform into a Rope (a managed public resource). If not, it remains a Tangled Rope dominated by private interests.",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "Policy question of regulating foundational datasets as a public utility."
+      "description": "Alternative AI architectures reducing training data dependency"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2017,
-      "value": 0.2
+      "time_point": 0,
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2022,
-      "value": 0.45
+      "time_point": 5,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2027,
-      "value": 0.55
+      "time_point": 10,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2017,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2022,
-      "value": 0.25
+      "time_point": 5,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2027,
-      "value": 0.3
+      "time_point": 10,
+      "value": 0.48
     }
   ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
   "commentary": {
-    "narrative_context": "The performance of state-of-the-art AI models is critically dependent on access to massive, high-quality training datasets. This creates a structural constraint where entities controlling such data (typically large, incumbent tech firms) gain a significant and durable competitive advantage. This 'data moat' functions as both a coordination mechanism for the field (advancing the SOTA through scaling) and a powerful extraction mechanism (locking out new entrants and concentrating market power). The constraint is actively enforced through legal (copyright, ToS) and economic (cost of acquisition) barriers.",
+    "narrative_context": "AI systems, particularly those targeting specialized domains like semiconductor design, have become structurally dependent on vast training datasets drawn from public sources, academic repositories, and proprietary engineering knowledge. This dependency creates a hybrid constraint: frontier AI laboratories (institutional beneficiaries) gain access to unlimited training data through web scraping and public dataset aggregation, solving a genuine coordination problem of data aggregation. Simultaneously, the constraint extracts value from data creators (researchers, engineers, domain experts) who contribute knowledge through publications, open-source repositories, and collaborative documentation without compensation, consent mechanisms, or attribution. The constraint's extractiveness (0.52) reflects that while the dependency solves real technical problems, it distributes benefits asymmetrically toward frontier labs and away from knowledge creators. Suppression (0.65) is high: data creators face barriers to restricting their contributions (publication incentives, career norms, open science expectations) while frontier labs face minimal constraints on data access. The theater ratio (0.48, increasing to 0.72 by year 10) indicates that institutional data governance frameworks (IRBs, ethics committees, data governance policies) are increasingly performative \u2014 they declare oversight while contributing to training corpora without meaningful control mechanisms. The constraint exhibits all six DR types from different perspectives: pure extraction (snare) for individual data creators; mixed extraction and coordination benefit (tangled rope) for domain expert communities and semiconductor firms; pure coordination (rope) for frontier labs; degraded institutional review (piton) for data ethics frameworks; temporary scaffolding (scaffold) for emerging data cooperatives and consent-preserving techniques; and potential false naturalization (mountain) when scaling law dependence is confused with mathematical inevitability.",
     "key_agents": [
-      "Incumbent Tech Firms: Primary beneficiary (institutional/arbitrage) — Owns or controls proprietary datasets, creating a competitive 'moat'.",
-      "New Entrants / Startups: Primary victim (powerless/trapped) — Cannot acquire or generate comparable data, creating an insurmountable barrier to entry.",
-      "Open Source Community: Organized victim (organized/constrained) — Attempts to build public alternative datasets but faces resource and legal constraints.",
-      "Analytical Observer: Sees the dual nature of coordination and extraction."
+      "Frontier AI Laboratories: Primary beneficiary (institutional/arbitrage) \u2014 access unlimited training data through web scraping and public datasets; control terms of access; arbitrage between data sources",
+      "Data Source Creators: Primary victim (powerless/trapped) \u2014 researchers and engineers whose work is incorporated without consent; no exit mechanism; bear cost of knowledge extraction",
+      "Domain Expert Communities: Secondary victim (moderate/constrained) \u2014 benefit from AI tools trained on their knowledge while experiencing value extraction; constrained exit due to collaboration incentives",
+      "Semiconductor Design Industry: Secondary beneficiary/victim (powerful/mobile) \u2014 gain AI-augmented design tools but risk proprietary method disclosure; can invest in proprietary training (mobile exit)",
+      "Institutional Data Governance Bodies: Performative actors (institutional/constrained) \u2014 declare oversight while lacking enforcement capacity; theater ratio increases as data volumes exceed review capacity",
+      "Data Cooperatives and Open Governance Models: Organized agents building alternatives (organized/mobile) \u2014 developing consent-preserving training techniques and collective data trusts with sunset potential",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional data practices as mathematical law"
     ],
-    "logic_rationale": "Extractiveness (0.55): High. The constraint extracts competitive opportunity from the market. The value that could be generated by startups is instead captured by incumbents who control the data resource. Suppression (0.70): High. The combination of legal protections (copyright), high cost of data acquisition, and the sheer technical challenge of managing petabyte-scale data strongly suppresses the emergence of alternatives. Theater (0.30): Low-to-moderate. While the 'data moat' narrative can be performative, the underlying technical requirement for data is very real and functional for current AI architectures.",
-    "perspectival_gap": "The gap is stark. For an incumbent, the data dependency is a beneficial Rope that organizes the market to their advantage. For a startup, it's a deadly Snare that prevents them from competing. For the open-source community, it's a temporary Scaffold they are actively trying to build their way over. An observer focused on scaling laws might mistake this contingent, market-driven structure for a Mountain, a law of nature. The analytical view must hold all these truths at once to see the full Tangled Rope structure.",
-    "directionality_logic": "Beneficiaries (incumbents) have arbitrage exit options, leading to a low 'd' value and a Rope classification. Victims (startups) are trapped, leading to a high 'd' value and a Snare classification. Organized actors (open source) are constrained but have agency, leading to a moderate 'd' value and a Scaffold classification. The analytical perspective synthesizes these to arrive at Tangled Rope.",
-    "mandatrophy_analysis": "This case avoids mandatrophy by demonstrating how a single technological reality can be correctly classified in multiple ways depending on the observer's structural position. Mistaking the incumbent's 'Rope' view or the absolutist's 'Mountain' view for the complete picture would be a classic mandatrophy error. The framework correctly identifies the analytical view as a Tangled Rope, acknowledging both the genuine coordination function (scaling enables progress) and the severe, asymmetric extraction (market concentration and barriers to entry)."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts significant value from data creators (no compensation, no consent, no attribution) while providing genuine coordination benefits (enabling capable AI models). The extractiveness is not as severe as pure intellectual property theft because the value flows through legitimate technical systems. However, it is not low because the asymmetry is stark: frontier labs gain massive value; creators gain nothing directly. The metric has increased from 0.28 to 0.52 over the decade as AI capabilities have improved and reliance on training data has become more explicit. Suppression (0.65): High. Data creators face strong suppression: publishing expectations and career incentives favor open sharing; objecting risks professional isolation; restricting data sacrifices collaboration benefits. Frontier labs face minimal suppression \u2014 they control the data pipeline and can continue scraping regardless of creator objections. Theater ratio (0.48, increasing): Moderate and rising. Institutional data governance is partially performative \u2014 ethics committees declare oversight while lacking mechanisms to enforce consent or track data provenance at scale. However, some genuine technical work occurs (privacy impact assessments, data audit trails). The ratio increases as data volumes outpace institutional review capacity.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival disagreement on both classification and experienced extraction. Data source creators (powerless/trapped) see a snare: their work is extracted without consent or exit option. Domain expert communities (moderate/constrained) see tangled rope: they gain AI tools but lose proprietary advantage. Semiconductor firms (powerful/mobile) see mixed costs: AI augments design but also incorporates competitors' data. Frontier labs (institutional/arbitrage) see rope: pure coordination of data sources. Data governance bodies see piton: their review processes are performative and degraded. Data cooperatives see scaffold: a temporary coordination failure being solved by emerging alternatives. The analytical observer risks seeing mountain: scaling laws appear to require massive data. The perspectival gaps indicate high structural complexity: no single classification captures how all agents experience the constraint.",
+    "directionality_logic": "Frontier AI labs derive low directionality (d \u2248 0.15, beneficiary + arbitrage exit) \u2014 they control the extraction flow and experience the constraint as beneficial coordination. Data creators derive high directionality (d \u2248 0.95, victim + trapped exit) \u2014 they have no meaningful exit and bear full extraction cost. Domain expert communities derive moderate directionality (d \u2248 0.60, victim + constrained exit) \u2014 they can restrict data but at cost to collaboration. Semiconductor firms derive moderate directionality (d \u2248 0.55, mixed beneficiary/victim + mobile exit) \u2014 they benefit from AI tools but risk data exposure; they can switch to proprietary training. Data governance bodies derive constrained directionality (d \u2248 0.65, victim + constrained exit) \u2014 they declared oversight authority but lack enforcement capacity. These differences produce the perspectival gap: the same constraint structure produces wildly different experienced extraction depending on structural position.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by disambiguating coordination from extraction. The frontier labs genuinely solve a coordination problem \u2014 aggregating diverse data sources into trainable corpora enables new capabilities that benefit multiple stakeholders. However, the solution is asymmetrically distributed: labs gain access and control, while creators gain nothing. This is not pure coordination (rope) because the asymmetry is coercive \u2014 data creators cannot exit without sacrificing. It is not pure extraction (snare) because some genuine coordination benefit exists. The tangled rope classification correctly identifies both the coordination function and the asymmetric extraction. The mandatrophy is resolved by recognizing that hybrid constraints are legitimate: a constraint can simultaneously solve coordination problems and extract value. The challenge is whether the coordination benefit justifies the extraction cost \u2014 which depends on perspective. From data creators' viewpoint, no. From frontier labs' viewpoint, yes. From domain experts' viewpoint, mixed. The tangled rope classification holds across all perspectives with different experienced intensities (via \u03c7 values), which is the correct resolution."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "ai_model_monoculture",
-      "computational_hardware_arms_race"
-    ]
-  }
+      "intellectual_property_attribution",
+      "semiconductor_supply_chain_concentration",
+      "algorithmic_monoculture_risk"
+    ],
+    "dual_formulation_note": "AI training data dependency decomposes into at least two structurally distinct constraints: (1) Technical dependency on data volume for neural scaling (\u03b5 \u2248 0.15, approaching mountain as architecture approaches theoretical limits), and (2) Institutional dependency on uncompensated data extraction due to absence of consent mechanisms (\u03b5 \u2248 0.52, tangled rope). These are linked: technical scaling laws create incentive for frontier labs to maximize data collection, which intersects with institutional failures of attribution and consent. The story treats the hybrid institutional-technical constraint. Upstream decomposition into pure technical and pure institutional stories may reveal different resolution paths."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
 }

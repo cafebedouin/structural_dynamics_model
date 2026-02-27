@@ -1,0 +1,141 @@
+{
+  "header": {
+    "constraint_id": "sadhu_integrity_protocol",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "The Integrity Requirement (Sadhu's Sugar)",
+    "topic_domain": "social/ethical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "seekers_of_advice",
+      "society_at_large"
+    ],
+    "victims": [
+      "dishonest_advisors",
+      "hypocrisy_tolerance"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Dishonest Advisor",
+      "comment": "The advisor who does not embody their counsel experiences significant extraction. They face social stigma, loss of credibility, and potential ostracization."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Ethical Teachers",
+      "comment": "Those embodying the principle benefit. Their standing is improved within society, and they are considered reliable counselors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "From a civilizational perspective, the integrity requirement presents a mixed bag: it promotes genuine ethical behavior but can also lead to hypocrisy-shaming and unrealistic expectations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Seekers of Advice",
+      "comment": "Those seeking advice both benefit from more reliable counsel, but are also constrained by more limited access. They are extracting information, however. The constraint is designed to benefit the seekers of advice, rather than punish advisors directly."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "measuring_integrity",
+      "question": "How can integrity be reliably assessed and measured, given that it often involves internal states and complex behaviors?",
+      "resolution_mechanism": "Empirical studies correlating self-reported values with observed actions; development of behavioral metrics for integrity.",
+      "impact": "A reliable measure would reduce the ambiguity surrounding hypocrisy accusations, shifting the classification towards rope for honest advisors and snare for dishonest ones.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Challenges in reliably assessing integrity."
+    },
+    {
+      "id": "contextual_relativity",
+      "question": "To what degree is integrity relative to cultural norms, personal values, and specific circumstances?",
+      "resolution_mechanism": "Cross-cultural comparisons of ethical codes; philosophical analyses of moral relativism; case studies examining moral dilemmas.",
+      "impact": "Recognizing the role of context would mitigate the risk of excessive moral judgment, making the constraint more scaffold-like in specific situations.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Impact of context and cultural norms on ethical standards."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The integrity requirement is a social and ethical constraint that mandates advisors and teachers embody their own counsel before delivering it to others. It influences the relationship between advisors and advice-seekers, as well as the credibility and trustworthiness of individuals in positions of authority. The extraction reflects the costs borne by those who fail to meet the integrity standard, as well as society at large when hypocrisy is tolerated.",
+    "key_agents": [
+      "Seekers of advice: Beneficiaries (organized/constrained) - gain from more reliable guidance.",
+      "Society at large: Beneficiary (institutional/mobile) - benefits from a more ethical environment.",
+      "Dishonest advisors: Victims (powerless/trapped) - face penalties when integrity requirements are upheld.",
+      "Ethical Teachers: those who are embodying the principles they preach (institutional/arbitrage)"
+    ],
+    "logic_rationale": "Extractiveness (0.6): Reflects the social costs, reputational damage, and potential career consequences faced by advisors who do not embody their own teachings. The suppression (0.7) stems from the social pressures to conform to ethical standards, potential legal or professional repercussions, and ostracization.",
+    "perspectival_gap": "The snare-rope gap highlights the inherent tension: advisors face penalties when their conduct deviates, while ethical teachers benefit. The analytical perspective highlights the value in promoting ethical behavior, while recognizing challenges. Seekers both benefit from ethical, reliable advice but are limited by the ethical teachers out there.",
+    "directionality_logic": "The derivation of each directionality value (d) depends on each actors structural position. Arbitrageurs gain a lot from the advice, so their d value is close to zero, resulting in a negative \u03c7. Hypocritical advisors face social stigma, loss of credibility, so their d value is close to one, resulting in \u03c7 near 1.0"
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "trustworthiness_index",
+      "ethical_leadership_standards"
+    ]
+  },
+  "directionality_overrides": []
+}

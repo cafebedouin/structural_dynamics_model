@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "tsp",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tsp"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Elimination of Duplicate Solutions in Traveling Salesperson Problem Solvers",
+    "topic_domain": "computational_optimization/algorithmic_engineering",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "algorithm_developers",
+      "commercial_optimization_vendors"
+    ],
+    "victims": [
+      "solution_space_exploration",
+      "academic_replication_efforts"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Solution Space Itself",
+      "comment": "PERSPECTIVE 1: SOLUTION SPACE EXPLORATION (SNARE) \u2014 The solution space as an epistemic domain cannot exit the duplicate elimination constraint. It bears the full cost: equivalent solutions are suppressed, solution diversity is artificially constrained, and exploratory search algorithms cannot freely enumerate the orbits they are designed to traverse. Maximum extraction with no alternatives available."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Academic Replication Groups",
+      "comment": "PERSPECTIVE 2: ACADEMIC REPLICATION GROUPS (SNARE) \u2014 Small research teams attempting to reproduce published TSP solver results face suppression: they must implement the same duplicate-elimination heuristics to match published benchmarks, but those heuristics are often proprietary or poorly documented. They cannot exit without losing comparability. High suppression, high extraction of effort toward reimplementation rather than innovation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Commercial Optimization Vendors",
+      "comment": "PERSPECTIVE 3: COMMERCIAL OPTIMIZATION VENDORS (ROPE) \u2014 Benefit from the duplicate-elimination constraint as a coordination mechanism: it enables them to claim solution quality improvements through faster convergence (fewer redundant evaluations), to patent heuristic variants, and to maintain proprietary algorithm libraries. They experience the constraint as coordination: 'our deduplication method finds better solutions faster.' Net beneficiaries with arbitrage options (can license, implement alternatives, or license out to competitors)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Algorithm Developer Community (Open-Source)",
+      "comment": "PERSPECTIVE 4: ALGORITHM DEVELOPER COMMUNITY (TANGLED ROPE) \u2014 Organized open-source developers face a hybrid constraint. Benefit: duplicate elimination accelerates their solvers and reduces runtime overhead, enabling them to compete with commercial implementations. Extraction: they must implement complex deduplication logic, face literature fragmentation (different authors use different deduplication strategies), and cannot freely explore alternative solution enumeration schemes without breaking benchmark comparability. Constrained exit \u2014 they need duplicate elimination to remain competitive but pay a significant coordination cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "TSP Benchmark Standardization Bodies",
+      "comment": "PERSPECTIVE 5: TSP BENCHMARK STANDARDIZATION BODIES (PITON) \u2014 TSPLIB and similar benchmark repositories maintain duplicate-elimination rules largely through institutional inertia. The original rationale (faster testing, clearer comparison) is still functionally present but increasingly performative: modern hardware can enumerate and evaluate redundant solutions faster than the logic to suppress them. The benchmark standards persist because changing them would invalidate 40 years of published results and comparison tables. Theater ratio reflects that the suppression mechanism is mostly about maintaining canonical benchmark status rather than genuine efficiency gains."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Hardware-Accelerated Solvers",
+      "comment": "PERSPECTIVE 6: HARDWARE-ACCELERATED SOLVERS (SCAFFOLD) \u2014 GPU and quantum-inspired solvers can evaluate solutions faster than CPU-based deduplication logic can suppress them. These solvers see duplicate elimination as a temporary constraint being bypassed by architectural change: as quantum annealing and tensor-core hardware mature, the cost of redundant evaluation drops below the cost of tracking duplicates. This perspective expects a sunset: in 5-15 years, hardware acceleration will make duplicate suppression unnecessary through brute-force speedup rather than clever algorithms."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Combinatorial Invariant View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / COMBINATORIAL INVARIANT VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, duplicate elimination in TSP is mathematically inevitable: a circular tour and its reversal represent the same solution in the symmetry group of the problem. This is not a contingent institutional choice but a structural property of the solution space. Any TSP solver must account for this symmetry or be mathematically incomplete. However, the claim requires scrutiny: the symmetry is real, but whether 'elimination' vs 'equivalence-class tracking' vs 'solution-weighting by symmetry' are forced or contingent remains open."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "symmetry_classification_necessity",
+      "question": "Is explicit duplicate elimination a mathematical necessity or a software engineering choice driven by benchmark conventions?",
+      "resolution_mechanism": "Comparison of solver performance with and without duplicate-elimination logic across diverse instance sizes and types; analysis of whether equivalence-class weighting produces results identical to elimination",
+      "impact": "If necessary: mountain classification confirmed \u2014 the constraint reflects a true combinatorial invariant. If contingent: tangled_rope classification confirmed \u2014 duplicate elimination is a coordination convention that extracts complexity cost from solvers that could track equivalence classes instead.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether duplicate elimination is mathematically forced or contingently chosen"
+    },
+    {
+      "id": "benchmark_backward_compatibility_lock",
+      "question": "How much of the duplicate-elimination requirement is driven by the need to maintain backward compatibility with 40 years of published TSP benchmarks?",
+      "resolution_mechanism": "Survey of solver implementations to identify which deduplication strategies are used for mathematical correctness vs benchmark compliance; cost-benefit analysis of re-running benchmark corpus with relaxed deduplication rules",
+      "impact": "If high backward-compatibility lock (>70%): piton classification confirmed \u2014 the constraint is maintained through institutional inertia. If low (<30%): rope or tangled_rope confirmed \u2014 the constraint reflects genuine algorithmic necessity or coordination benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of backward-compatibility constraints on deduplication requirements"
+    },
+    {
+      "id": "hardware_acceleration_sunset_timeline",
+      "question": "At what hardware speedup threshold does duplicate elimination become computationally negligible (cost of deduplication > cost of redundant evaluation)?",
+      "resolution_mechanism": "Benchmark suite testing with variable hardware acceleration levels; cost modeling for future GPU and quantum annealing systems; comparison of trajectory curves for deduplication logic vs raw evaluation speedup",
+      "impact": "If threshold reached in <5 years: scaffold sunset is imminent, constraint will decay rapidly. If >15 years: scaffold is aspirational, duplicate elimination will remain enforced. If never (deduplication complexity scales with problem size): mountain classification may be correct.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for hardware acceleration to make deduplication computationally negligible"
+    },
+    {
+      "id": "alternative_symmetry_handling_equivalence",
+      "question": "Do alternative approaches (solution weighting by symmetry orbit size, equivalence-class tracking, rotational-invariance normalization) produce identical optimization results to explicit elimination?",
+      "resolution_mechanism": "Implementation of alternative symmetry-handling methods; comparison of solution quality, convergence rate, and computational cost across benchmark suite; analysis of whether they are mathematically equivalent or produce subtly different solver behaviors",
+      "impact": "If equivalent: deduplication is a choice, not a requirement \u2014 the constraint is tangled_rope (coordination choice with extraction cost). If non-equivalent: deduplication is necessary \u2014 the constraint approaches mountain (combinatorial invariant).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative symmetry-handling methods are equivalent to explicit deduplication"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The elimination of duplicate solutions in Traveling Salesperson Problem solvers represents a constraint at the intersection of mathematics, software engineering, and benchmark standardization. The TSP has a fundamental symmetry: a circular tour and its reversal represent the same solution when the cost function is symmetric. This mathematical fact has been operationalized into a requirement for explicit duplicate elimination in solution evaluation. However, over four decades of TSP research and competitive benchmarking (TSPLIB standard since 1985), the constraint has evolved from a genuine optimization necessity into a mixed coordination mechanism and convention enforcement system. Modern hardware increasingly makes the deduplication logic itself more expensive than evaluating redundant solutions; alternative symmetry-handling methods can track equivalence without elimination; and open-source solvers are beginning to question whether benchmark compliance justifies implementation complexity. The constraint exhibits all six DR types from different perspectives: the solution space is trapped under suppression (snare); commercial vendors benefit from it as coordination (rope); open-source developers face mixed costs and benefits (tangled rope); benchmark standards maintain it through inertia (piton); hardware acceleration is creating an exit path with a sunset clause (scaffold); and from a pure combinatorial perspective, some form of symmetry handling is unavoidable (mountain).",
+    "key_agents": [
+      "Solution Space / Problem Instance: Primary victim (powerless/trapped) \u2014 cannot exit the deduplication constraint; restricted to canonical orbit representatives",
+      "Academic Replication Groups: Secondary victim (powerless/trapped) \u2014 must implement proprietary deduplication heuristics to match published results; suppression of exploratory approaches",
+      "Commercial Optimization Vendors: Primary beneficiary (institutional/arbitrage) \u2014 capture efficiency gains and patent heuristic variants; arbitrage options allow licensing and proprietary implementation",
+      "Open-Source Algorithm Developer Community: Mixed victim/beneficiary (organized/constrained) \u2014 benefit from faster convergence but pay coordination cost; constrained exit due to benchmark comparability",
+      "Benchmark Standardization Bodies (TSPLIB, etc.): Institutional actor (institutional/arbitrage) \u2014 maintain duplicate-elimination rules through inertia; low functional necessity but high backward-compatibility lock",
+      "Hardware-Accelerated Solver Implementations: Organized agents (powerful/mobile) \u2014 see deduplication as temporary constraint bypassed by architectural change; expect sunset through hardware speedup"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts complexity cost from developers \u2014 they must implement deduplication logic, maintain compatibility with benchmark standards, and restrict solution exploration strategies. However, the extraction is not severe because: (1) deduplication is mathematically justified for some TSP variants, (2) commercial vendors can arbitrage alternative implementations, and (3) hardware acceleration is starting to bypass the constraint entirely. The trajectory shows increasing extractiveness over time (0.22 \u2192 0.38) as problem instances grow and deduplication logic becomes a larger fraction of solver runtime. Suppression (0.48): Moderate. Significant barriers include benchmark standardization (changing rules would invalidate comparisons), literature lock-in (papers describe specific deduplication strategies), and competitive pressure (solvers must match benchmarks to be taken seriously). But suppression is not total \u2014 open-source alternatives exist, academic freedom to experiment remains, and some solvers bypass deduplication through alternative symmetry-handling. Theater ratio (0.58): Moderate-high. The justification for duplicate elimination increasingly involves benchmark compliance and historical precedent rather than algorithmic necessity. Hardware speedup is reducing the genuine efficiency argument; the performative aspect (maintaining canonical comparison tables) is rising. Theater increased over the interval as hardware made redundant evaluation cheaper relative to deduplication logic.",
+    "perspectival_gap": "Commercial vendors see duplicate elimination as coordination (Rope perspective): it enables them to publish faster benchmarks, claim solution quality improvements, and differentiate on deduplication algorithms. Academic replicators see it as extraction (Snare perspective): they must invest effort in implementation to match published results but gain no efficiency benefit from deduplication itself \u2014 the cost is pure overhead. Open-source developers occupy the middle ground (Tangled Rope): they benefit from faster solvers through deduplication but pay the cost of complex logic maintenance and lose the freedom to experiment with alternative enumeration schemes. Benchmark bodies see it as inertial maintenance (Piton): the original rationale (efficiency) is weakening, but the institutional lock-in (40 years of published results) forces continuation. Hardware accelerators see it as temporary (Scaffold): as GPU and quantum solvers mature, they will make deduplication unnecessary through brute-force speedup. The analytical observer risks seeing it as mathematical inevitability (Mountain): TSP solutions have rotational symmetry, so some form of symmetry handling is necessary. But the structural data reveals that explicit elimination is contingent \u2014 other symmetry-handling approaches (orbit weighting, normalization) could replace it.",
+    "directionality_logic": "Directionality values (d) are derived from structural relationships: (1) Commercial vendors benefit from deduplication (low d, derived from beneficiary status + arbitrage exit); (2) Academic replicators bear costs without equivalent benefit (high d, derived from victim status + trapped exit due to benchmark lock-in); (3) Open-source developers experience mixed extraction and benefit (moderate d, from both beneficiary and victim status + constrained exit); (4) Hardware accelerators have high exit capacity (low d, derived from mobile exit + powerful agent status, though they face constrained exit to competitive markets \u2014 refined as 'mobile' for true hardware differentiation). Beneficiary status (algorithm developers, vendors) generates low d because these agents derive measurable benefit from the constraint and retain options. Victim status (solution space exploration, replication efforts) generates high d because these agents bear costs with limited alternatives.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy is resolved by recognizing that duplicate elimination exists as both a mathematical necessity (symmetry is real) and a software/institutional contingency (elimination is one choice among alternatives). The constraint is legitimately tangled_rope because it serves both coordination (faster evaluation through deduplication) and extraction (imposed complexity through benchmark compliance). The mountain perspective (analytical observer) is a false summit \u2014 it mistakes the inevitability of symmetry handling with the contingency of elimination. Alternative methods (equivalence-class tracking, orbit weighting, rotational-invariant normalization) are mathematically equivalent but would shift the institutional landscape (benchmark incomparability, literature fragmentation). The tangled_rope classification persists because the extraction component \u2014 the suppression of alternative symmetry-handling methods through benchmark standardization \u2014 is real and asymmetric: vendors benefit from the current scheme, developers pay the complexity cost. Scaffold classification for hardware-accelerated solvers is justified because the sunset mechanism is empirically observable: as hardware speedup exceeds deduplication overhead, the constraint decays naturally without policy change."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "vehicle_routing_problem_distance_symmetry",
+      "quadratic_assignment_symmetry_handling"
+    ],
+    "dual_formulation_note": "Duplicate elimination in TSP is upstream of related combinatorial optimization constraints (VRP, QAP, facility location) that face similar symmetry-handling requirements. The TSP constraint has \u03b5=0.38 (tangled rope with institutional inertia) while downstream constraints often face steeper extraction if they adopt TSPLIB standards without questioning necessity. TSP serves as proof-of-concept for whether benchmark-driven constraints can be relaxed when hardware makes their original justification obsolete."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ]
+}

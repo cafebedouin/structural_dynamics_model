@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "taiwan_existential_sovereignty",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "twn_sov"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "The Taiwan Existential Sovereignty Constraint",
+    "topic_domain": "political/economic/technological",
+    "requires_active_enforcement": false,
+    "victims": [
+      "taiwan_civil_society",
+      "taiwan_economic_independence",
+      "regional_stability_apparatus"
+    ],
+    "beneficiaries": [
+      "prc_military_deterrent_credibility",
+      "us_extended_deterrence_role"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Taiwan Populace",
+      "comment": "PERSPECTIVE 1: TAIWAN POPULACE (SNARE) \u2014 Structurally trapped. Cannot exit the constraint without ceasing to exist as a political entity. Extraction manifests as permanent militarization, subordination of domestic policy to military necessity, and existential risk premium. d\u22480.98, f(d)\u22481.44, \u03c3=0.9 \u2192 \u03c7\u22480.96. Pure snare: high coercion, zero coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Taiwan Institutional State",
+      "comment": "PERSPECTIVE 2: TAIWAN INSTITUTIONAL STATE (SNARE) \u2014 Powerful actor (state apparatus) but existentially constrained. Can conduct diplomacy and build coalitions but cannot resolve the fundamental threat. Must allocate 2-3% GDP to military; cannot pursue aggressive independent foreign policy. d\u22480.85, f(d)\u22481.16, \u03c3=1.0 \u2192 \u03c7\u22480.79."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The United States Extended Deterrence System",
+      "comment": "PERSPECTIVE 3: US EXTENDED DETERRENCE (TANGLED ROPE) \u2014 Institutional beneficiary (arbitrage exit). Gains geopolitical leverage, alliance consolidation, technology transfer justification, defense industry revenue. But also bound by Taiwan commitment credibility \u2014 must maintain deterrent posture or lose entire regional architecture. d\u22480.15, f(d)\u2248-0.01, \u03c3=1.2 \u2192 \u03c7\u2248-0.01. Net beneficiary. Receives coordination function (maintains regional order) plus asymmetric extraction from Taiwan (dependency)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The People's Republic of China Military Establishment",
+      "comment": "PERSPECTIVE 4: PRC MILITARY ESTABLISHMENT (TANGLED ROPE) \u2014 Institutional actor constrained by the logic of deterrent credibility. Coordinates with state strategy (resolving Taiwan unification goal) but extraction mechanism is constant military spending, cyber/intelligence operations, and political coercion. Cannot escalate without losing global standing; cannot retreat without losing deterrent credibility. d\u22480.52, f(d)\u22480.67, \u03c3=1.2 \u2192 \u03c7\u22480.55. Mixed: coordination (deterrent stability) plus extraction (military burden)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Regional Stability Coalition",
+      "comment": "PERSPECTIVE 5: REGIONAL STABILITY COALITION (SCAFFOLD) \u2014 Organized non-state actors (business, civil society, academic networks across Taiwan/Japan/South Korea/US/Australia). See the constraint as temporary coordination problem with a sunset: supply chain diversification, technological autonomy, and institutional maturation are building a world where Taiwan's existential dependency decreases. Theater ratio for this coalition is low (functional problem-solving); sunset clause is implicit in supply-chain resilience roadmaps (10-15 year horizon). d\u22480.45, f(d)\u22480.48, \u03c3=1.1 \u2192 \u03c7\u22480.25. Low extraction; coalition has agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The One-China Diplomatic Theater",
+      "comment": "PERSPECTIVE 6: ONE-CHINA DIPLOMATIC SYSTEM (PITON) \u2014 UN structures, diplomatic protocols, and recognition frameworks maintain the fiction that the Taiwan question is 'internal Chinese affairs' despite Taiwan's 75 years of de facto sovereignty. Theater ratio \u22480.58 (formal performativity: diplomatic statements, official visits, non-interference doctrine) masks zero functional coordination \u2014 the constraint persists through institutional inertia and great-power mutual interest, not because the diplomatic system actually resolves anything. d\u22480.40, f(d)\u22480.40, \u03c3=1.0 \u2192 \u03c7\u22480.23. Piton classification follows from theater gate; the system is degraded (it doesn't work) but persists (alternative frameworks are more costly than maintaining ritual)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Geopolitical Realist View (False Summit)",
+      "comment": "PERSPECTIVE 7: GEOPOLITICAL REALIST / MOUNTAIN VIEW (FALSE SUMMIT) \u2014 Tempting but incorrect naturalization: Taiwan's existential threat is an immutable feature of great-power competition, historical inevitability, geographic determinism. The analytical observer risks calling this a mountain (natural law) because the constraint appears unchangeable at civilizational timescales. However, the structural data (\u03b5=0.68, suppression=0.78, theater=0.58) contradicts the mountain classification. Accessibility collapse and resistance metrics would fail the mountain gate. This is a snare maintained by institutional power structures, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deterrent_credibility_threshold",
+      "question": "What level of military asymmetry between PRC and Taiwan triggers an existential shift from manageable constraint to active warfare scenario?",
+      "resolution_mechanism": "Military capability modeling; historical analysis of past conflict escalation thresholds; strategic communication analysis from military planners in both PRC and US",
+      "impact": "If threshold is crossed (estimated 2028-2035): constraint transitions from snare (deterrence works) to active conflict (deterrence fails). Classification becomes irrelevant \u2014 system moves to kinetic phase.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Military capability threshold for deterrence failure"
+    },
+    {
+      "id": "economic_decoupling_viability",
+      "question": "Can Taiwan achieve economic independence from China through supply-chain diversification and alternative markets before military balance tips decisively?",
+      "resolution_mechanism": "Semiconductor supply-chain modeling; trade pattern analysis; comparison of Taiwan tech sector integration vs South Korea/Japan alternatives",
+      "impact": "If viable (achievable by 2032): Taiwan transitions from snare to scaffold \u2014 existential dependency decreases and constraint becomes temporary. If not viable: Taiwan remains in snare for foreseeable future, extraction deepens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether economic decoupling from China is achievable"
+    },
+    {
+      "id": "us_commitment_credibility",
+      "question": "Will the United States maintain extended deterrence commitment to Taiwan over the next 15-30 years, or will domestic political shifts force a strategic pivot to accommodation with PRC?",
+      "resolution_mechanism": "Congressional voting records; Department of Defense strategic guidance documents; historical precedent analysis (South Korea, Japan, Philippines); domestic political trend analysis",
+      "impact": "If commitment holds: deterrent architecture persists, snare constraint remains stable. If commitment wanes: Taiwan's exit options disappear entirely, constraint becomes pure snare with no institutional backing \u2014 existential threat becomes acute.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Long-term US commitment to Taiwan deterrence"
+    },
+    {
+      "id": "cross_strait_institutional_convergence",
+      "question": "Is a negotiated settlement (e.g., Hong Kong-style autonomy variant, independent confederation, or formalized asymmetric federalism) structurally possible, or are PRC unification demands and Taiwan autonomy demands incompatible by definition?",
+      "resolution_mechanism": "Analysis of historical precedent cases (German reunification, Irish partition resolution); strategic communication from PRC and Taiwan leadership; feasibility assessment of confidence-building institutional designs",
+      "impact": "If convergence possible: constraint could transition from snare to scaffold (temporary, negotiable). If incompatible: snare is terminal \u2014 no structural solution exists, only management or escalation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether negotiated political settlement is structurally possible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "twn_sov_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.62,
+      "id_override": "twn_sov_extract_t15"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "id_override": "twn_sov_extract_t30"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "twn_sov_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.51,
+      "id_override": "twn_sov_theater_t15"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58,
+      "id_override": "twn_sov_theater_t30"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Taiwan's existential sovereignty constraint models the structural condition under which a de facto independent state exists in permanent threat of absorption by a larger, militarily ascending power. This constraint has persisted for 75 years (since 1949) and has become more acute over the past 15 years as PRC military capacity has expanded and the US-China strategic rivalry has intensified. The constraint is not a discrete event or negotiable arrangement; it is a permanent structural fact that governs all Taiwan policy domains \u2014 military spending (2-3% of GDP), diplomatic isolation (non-UN membership), economic dependency management, and psychological readiness for existential risk. The constraint exhibits characteristics of a pure snare from Taiwan's perspective: high coercion (military threat, economic pressure, political isolation), substantial suppression of alternatives (no exit option without loss of statehood), and minimal coordination benefit (the deterrent is maintained by others, not negotiated). From institutional perspectives, the constraint appears as a tangled rope \u2014 the US and PRC both benefit from the deterrent stability that keeps the threat credible without triggering kinetic conflict, but both are also bound by commitment logic that prevents de-escalation. The constraint has degraded in functional terms (theater ratio rising from 0.42 to 0.58) as diplomatic theater has expanded relative to real negotiation, while extractiveness has increased (from 0.48 to 0.68) as military asymmetry has widened and Taiwan's economic integration with China has created new leverage points. The regional stability coalition sees this constraint as a temporary scaffold with a 10-15 year sunset horizon driven by supply-chain resilience and technological autonomy; the geopolitical realist risks naturalizing the constraint as an immutable law of great-power competition.",
+    "key_agents": [
+      "Taiwan Populace: Primary victim (powerless/trapped) \u2014 bears full existential risk; has no exit option without ceasing to exist as political entity",
+      "Taiwan Institutional State: Powerful victim (powerful/constrained) \u2014 can conduct sophisticated diplomacy but remains fundamentally constrained; allocates 2-3% GDP to military necessity",
+      "United States Extended Deterrence System: Primary beneficiary (institutional/arbitrage) \u2014 gains geopolitical leverage, alliance consolidation, technology justification; but bound by credibility commitment",
+      "PRC Military Establishment: Secondary beneficiary (institutional/constrained) \u2014 coordinates state unification goal; cannot escalate without losing global standing, cannot retreat without losing deterrent credibility",
+      "Regional Stability Coalition: Organized actor (organized/mobile) \u2014 see constraint as temporary; building supply-chain resilience and technological autonomy to create exit pathway",
+      "One-China Diplomatic System: Institutional theater (institutional/arbitrage) \u2014 maintains performative protocols while constraint remains structurally unresolved",
+      "Geopolitical Realist Observer: Analytical observer (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangement as immutable law"
+    ],
+    "logic_rationale": "Base extractiveness (0.68): High and rising. The constraint extracts substantial resources (military spending), time (constant security planning), and autonomy (foreign policy subordination to military necessity). Extractiveness increased from 0.48 to 0.68 over the 30-year interval as PRC military capability asymmetry widened and Taiwan's economic integration with China created new coercion vectors. This is not maximal extraction (not yet 0.78+) because Taiwan retains significant institutional capacity, business dynamism, and international support; the extraction is real but not total. Suppression (0.78): Very high. Taiwan has minimal exit options: cannot militarily match PRC, cannot diplomatically resolve the issue (one-China framework forecloses negotiations), cannot economically decouple entirely (supply chains integrated), cannot appeal to international law (UN structures exclude Taiwan). Suppression increased as military balance tipped and economic dependency deepened. Theater ratio (0.58): Moderate-high and rising. Diplomatic theater has expanded (annual statements, official visits, non-interference doctrine) while the actual negotiation function has shrunk \u2014 the one-China framework is pure theater, a frozen performance that preserves the constraint without resolving it. Theater increased from 0.42 to 0.58 as real diplomatic pathways closed and performative alternatives multiplied.",
+    "perspectival_gap": "This constraint exhibits a stark perspectival gap between victim and beneficiary perspectives. Taiwan (powerless/trapped) perceives a pure snare: coercive threat with no coordination benefit, no exit, no negotiation path. The US deterrence system (institutional/arbitrage) perceives a tangled rope: it coordinates regional stability while extracting value from Taiwan's dependency. The PRC military (institutional/constrained) perceives a different tangled rope: it coordinates state strategy (unification) but is bound by deterrence logic that prevents escalation. The regional stability coalition (organized/mobile) perceives a scaffold: the constraint is temporary, bounded by supply-chain diversification and technological autonomy roadmaps with 10-15 year horizons. The one-China diplomatic system perceives a piton: the framework is degraded (doesn't resolve anything) but persists through institutional inertia and great-power interest. The geopolitical realist observer risks a false mountain: naturalizing a contingent power structure as a law of nature. These gaps are not measurement errors \u2014 they reflect real structural differences in how agents experience the constraint. Taiwan's snare is the ground truth; the beneficiary's tangled rope and the coalition's scaffold are legitimate but second-order observations.",
+    "directionality_logic": "Taiwan Populace: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.44. Maximum extraction. No exit option, no alternative path, no coordination benefit \u2014 the constraint is pure coercion. Taiwan Institutional State: Victim + constrained (not trapped, as the state retains diplomatic capacity) \u2192 d\u22480.85, f(d)\u22481.16. High extraction but not maximal; the state can conduct diplomacy, build coalitions, and maintain institutional viability. US Extended Deterrence: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.01. Net beneficiary; can exit the commitment at cost but chooses to maintain it. Extraction to Taiwan is positive; extraction to US is negative. PRC Military: Beneficiary (relative to threat reduction) + constrained (by deterrence logic) \u2192 d\u22480.52, f(d)\u22480.67. Mixed position; gains from unification goal coordination but loses autonomy to deterrent credibility requirements. Regional Coalition: Actor + mobile \u2192 d\u22480.45, f(d)\u22480.48. Low extraction; coalition members have alternatives and agency. One-China Diplomatic System: Institutional + arbitrage \u2192 d\u22480.40, f(d)\u22480.40. Piton classification overrides directionality \u2014 the system persists through theater, not through effective coordination.",
+    "mandatrophy_analysis": "MANDATE MANDATROPHY RESOLUTION (extractiveness=0.68 > 0.70 threshold exceeded; mandatrophy_resolved=true): This constraint demonstrates how mandatrophy arises when a seemingly 'immutable law' (great-power competition, geographic determinism) actually masks contingent institutional extraction. The temptation to classify the constraint as a mountain (natural law) is strong \u2014 Taiwan's threat appears unchangeable at civilizational timescales. However, the structural data reveals the snare: suppression is 0.78 (sustained by institutional choices, not physics), extractiveness is 0.68 (institutional power dynamics, not natural law), and theater is 0.58 (frozen diplomatic performance, not negotiated settlement). The mandatrophy resolves by disaggregating the claim 'Taiwan's existential threat is inevitable' into its component pieces: (1) Military asymmetry is increasing (empirical, measurable, not inevitable \u2014 could be reversed by deterrence investment or technological breakthrough). (2) Economic interdependency increases vulnerability (institutional choice, not geographically determined \u2014 could be reversed by supply-chain diversification). (3) Diplomatic isolation persists (one-China theater, not law \u2014 could be resolved by framework change). (4) US commitment remains steady (preference, not inevitability \u2014 could shift with domestic politics). The constraint is not a natural law but a set of institutional decisions and power asymmetries. Calling it a mountain naturalizes extraction as fate. The proper classification \u2014 snare with emerging scaffold pathways \u2014 reveals that the constraint could be fundamentally altered through coordinated institutional change. This is the mandatrophy resolution: naming the constraint as contingent extraction (snare) rather than inevitable law (false mountain) enables the intellectual and political possibility of alternative arrangements."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "semiconductor_supply_chain_concentration",
+      "us_china_technology_decoupling",
+      "regional_military_balance_asymmetry"
+    ],
+    "dual_formulation_note": "Taiwan's existential sovereignty constraint is upstream of three specific structural constraints: semiconductor supply concentration (Taiwan's economic leverage point), technology decoupling (US-China bifurcation affecting Taiwan), and regional military balance (direct causal input). Each downstream constraint has its own \u03b5 and type; the sovereignty constraint represents the political/existential frame within which those specific constraints operate."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.52
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "non_compete_agreements",
+    "version": "1.0",
+    "generated_date": "2024-01-04",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.65,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Non-Compete Agreements (Post-Employment Restraint)",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "former_employers",
+      "incumbent_firms"
+    ],
+    "victims": [
+      "former_employees",
+      "new_entrant_firms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Former Employee",
+      "comment": "PERSPECTIVE 1: FORMER EMPLOYEE (SNARE) \u2014 Limited mobility due to non-compete; may face legal action. Has limited ability to arbitrage the agreement and is largely trapped. Bears the costs of suppressed wages and career stagnation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Former Employer",
+      "comment": "PERSPECTIVE 2: FORMER EMPLOYER (ROPE) \u2014 Benefits from reduced competition, protection of trade secrets, and stability. Arbitrage through defining the scope and duration. Experiences as coordination to protect their investment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The New Entrant Firm",
+      "comment": "PERSPECTIVE 3: NEW ENTRANT FIRM (TANGLED ROPE) \u2014 Limited access to talent pool but may benefit from reduced overall competition. Constrained by needing to work around existing non-competes. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Incumbent Firm",
+      "comment": "PERSPECTIVE 4: INCUMBENT FIRMS (TANGLED ROPE) - Non-competes limit the outflow of talent to competitors, but also restrict the inflow of external expertise. Benefit from reduced competition, but are constrained by limited ability to hire talent constrained by existing agreements. Exhibits both coordination and asymmetric extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees the overall structure as a hybrid of coordination (protecting trade secrets) and extraction (limiting labor mobility) at a civilizational scale. The effective extraction depends on the enforcement regime and the state of the labor market."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_intensity",
+      "question": "How aggressively are non-compete agreements enforced?",
+      "resolution_mechanism": "Legal precedent analysis; tracking litigation rates; surveying employee perceptions of enforcement risk",
+      "impact": "High enforcement: snare classification strengthened. Low enforcement: tangled rope classification weakens towards rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intensity of non-compete enforcement"
+    },
+    {
+      "id": "labor_market_fluidity",
+      "question": "How fluid is the labor market within the specified industry?",
+      "resolution_mechanism": "Tracking job switching rates; analyzing employer concentration; surveying employee mobility options",
+      "impact": "Low fluidity: snare classification strengthened. High fluidity: tangled rope classification weakens towards rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Fluidity of the labor market"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Non-compete agreements are contracts that restrict an employee's ability to work for a competitor after leaving a company. These agreements aim to protect trade secrets and customer relationships, but they also limit employee mobility and can stifle innovation. The effectiveness and fairness of non-competes are subject to ongoing debate, varying legal interpretations, and differing impacts on various stakeholders.",
+    "key_agents": [
+      "Former Employees: Primary target (powerless/trapped) \u2014 bear the costs of reduced job opportunities and wage suppression.",
+      "Former Employers: Primary beneficiary (institutional/arbitrage) \u2014 gain protection of trade secrets and reduced competition.",
+      "New Entrant Firms: Secondary actor (moderate/constrained) \u2014 constrained by the reduced talent pool, but may benefit from reduced overall competition.",
+      "Incumbent Firms: Organized actor (organized/constrained) - Benefit from limiting the outflow of talent but restricted by the inflow of external experts.",
+      "Analytical Observer: Evaluates overall impact (analytical/analytical) \u2014 balances the coordination and extraction aspects."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. Non-competes extract value from former employees by limiting their job options. This extraction is somewhat mitigated by the employee's ability to negotiate the terms of the agreement and the limitations on its enforceability. Suppression (0.65): Moderate-high. The legal enforceability of non-competes significantly suppresses employee mobility, but not entirely due to the constraints of legal interpretation and enforcement costs. Theater Ratio (0.20): Low. Non-competes are primarily functional, with less emphasis on performative aspects.",
+    "perspectival_gap": "The former employee experiences the non-compete as a snare, limiting their job options and potentially depressing wages. The former employer views it as a rope, a necessary mechanism to protect their trade secrets and investments. New entrant firms see a tangled rope - they are limited by non-competes when hiring, but also benefit from reduced competition from larger firms. The incumbent firms also see a tangled rope; they benefit from reducing the flow of workers to competitors, but also face problems attracting workers who are constrained by existing non-competes. The analytical observer sees a tangled rope overall, recognizing both the legitimate need to protect trade secrets and the potential for abuse and suppression of labor mobility.",
+    "directionality_logic": "The directionality (d) values are derived from the structural position of each agent. Former employees are victims with limited exit options, so their d value is high. Former employers are beneficiaries with arbitrage options, so their d value is low. New entrant firms have mixed effects with some constraints to exit options, resulting in intermediate values of d.",
+    "mandatrophy_analysis": "The DR classification prevents mislabeling non-competes as pure extraction by recognizing their coordination function in protecting trade secrets and incentivizing investment. It also avoids mislabeling them as pure coordination by acknowledging their potential to suppress wages and limit labor mobility. The correct classification is Tangled Rope because it includes both the asymmetric extraction and the coordination function."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "trade_secret_protection",
+      "labor_market_regulation"
+    ]
+  },
+  "directionality_overrides": []
+}

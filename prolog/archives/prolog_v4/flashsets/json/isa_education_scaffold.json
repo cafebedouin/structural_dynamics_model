@@ -1,0 +1,135 @@
+{
+  "header": {
+    "constraint_id": "isa_education_scaffold",
+    "version": "1.0",
+    "generated_date": "2024-01-08",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "claimed_type": "scaffold",
+    "human_readable": "Income Share Agreement (ISA) Funding for Education",
+    "topic_domain": "economic/educational",
+    "has_sunset_clause": true,
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "students",
+      "educational_institutions"
+    ],
+    "victims": [
+      "taxpayers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Educational Institutions",
+      "comment": "Educational institutions benefit from increased enrollment and revenue without the risk of student loan defaults."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Students",
+      "comment": "Students can access education without upfront costs, but bear the risk of income sharing. They have mobility (can seek employment elsewhere) and over time the ISA ends so it acts as a scaffold."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer",
+      "comment": "From an analytical perspective, ISAs represent a tangled rope: they coordinate education funding and student access but also extract a portion of future income. The sunset clause is key to it being a scaffold."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Taxpayers",
+      "comment": "Taxpayers may bear the risk of subsidized ISA programs if the returns are lower than expected, and they don't get a direct benefit. They are trapped by the political system."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "omegas": [
+    {
+      "id": "income_predictability",
+      "question": "How predictable are future income streams for ISA participants?",
+      "resolution_mechanism": "Longitudinal data analysis of income trajectories for different fields of study.",
+      "impact": "High predictability reduces risk for both students and ISA providers. Low predictability increases risk and may require higher income sharing percentages.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Predictability of income streams."
+    },
+    {
+      "id": "default_risk_allocation",
+      "question": "Who bears the risk of default in ISA programs?",
+      "resolution_mechanism": "Legal and contractual analysis of ISA agreements.",
+      "impact": "If students bear the risk, ISAs may become predatory loans. If providers bear the risk, access to funding may be restricted.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Allocation of default risk in ISAs."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "An Income Share Agreement (ISA) allows students to access education with zero upfront cost in exchange for a fixed percentage of future earnings over a set term. It acts as a scaffold by providing temporary support for education funding, with a sunset clause as the income sharing term ends. It can coordinate access to education without requiring upfront capital.",
+    "key_agents": [
+      "Students: Primary beneficiaries (moderate/mobile) - access education without upfront cost.",
+      "Educational Institutions: Beneficiaries (institutional/arbitrage) - increased enrollment and revenue.",
+      "Taxpayers: Potential victims (powerless/trapped) - bear the risk of subsidized ISA programs.",
+      "ISA Providers: Intermediaries (powerful/constrained) - manage the agreements and bear some risk."
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate, reflecting the income sharing aspect. Suppression (0.25): Moderate, reflecting some limitations on student choice of career due to the ISA obligations. Theater Ratio (0.15): Low, indicating a functional focus on education funding rather than performative compliance measures.",
+    "perspectival_gap": "Students see ISAs as a way to access education they might not otherwise afford. Educational institutions see it as a way to increase enrollment and revenue. Taxpayers may bear the cost if the programs are subsidized. The analytical observer sees a mixed system with both coordination and extraction elements.",
+    "directionality_logic": "Students benefit from access to education, resulting in a lower d value and rope/scaffold classification. Taxpayers are at risk, so the d value is higher, resulting in a snare classification. Educational institutions benefit directly, with a d value close to zero. The analytical observer, weighing the pros and cons, sees a tangled rope."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "directionality_overrides": []
+}

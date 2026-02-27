@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "openai_api_access",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oai_api"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "OpenAI API Access Controls",
+    "topic_domain": "technological/economic",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "openai_corporate"
+    ],
+    "victims": [
+      "dependent_developers",
+      "api_application_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Dependent Developer",
+      "comment": "PERSPECTIVE 1: DEPENDENT DEVELOPER (SNARE) \u2014 A developer who has built production systems on OpenAI's API faces high switching costs and no viable alternative at equivalent capability/cost. Termination of API access, rate limiting, pricing changes, or feature deprecation cannot be resisted. d\u22480.92, f(d)\u22481.38, \u03c3=1.2 \u2192 \u03c7\u22480.96. Pure extraction from this position."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The End User in Dependent Applications",
+      "comment": "PERSPECTIVE 2: END USER (SNARE) \u2014 Users of applications built on OpenAI API have no direct negotiating power with OpenAI. Their access depends on their application provider's continued relationship with OpenAI and ability to pay. Service degradation, pricing increases, or API shutdown cascades to them without recourse. d\u22480.95, f(d)\u22481.42, \u03c3=1.2 \u2192 \u03c7\u22481.07. Maximum extraction; powerless + trapped + global scope."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Enterprise AI Platform Provider",
+      "comment": "PERSPECTIVE 3: ENTERPRISE PLATFORM PROVIDER (TANGLED ROPE) \u2014 Large organizations integrating OpenAI API (Google, Microsoft, Meta-adjacent players) have moderate power: they can negotiate volume discounts, custom integrations, and SLA terms. They also benefit from OpenAI's innovation (coordination benefit of access to frontier models). But they are constrained by OpenAI's unilateral ability to change terms, restrict competitors' access, or deprecate features. d\u22480.55, f(d)\u22480.75, \u03c3=1.0 \u2192 \u03c7\u22480.44. Mixed coordination (access to frontier capability) and extraction (unilateral control)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "OpenAI Corporate",
+      "comment": "PERSPECTIVE 4: OPENAI CORPORATE (ROPE) \u2014 Experiences API access control as pure coordination: managing access ensures quality control, billing integrity, abuse prevention, and fair resource allocation among users. The access mechanism solves the collective action problem of allocating scarce compute to competing demands. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.2 \u2192 \u03c7\u2248-0.07. Negative effective extraction = net coordinator."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source AI Coalition",
+      "comment": "PERSPECTIVE 5: OPEN SOURCE AI COALITION (TANGLED ROPE) \u2014 Organized actors (Meta's Llama ecosystem, open-source foundations, academic researchers) see OpenAI's API control as both a competitive constraint AND a coordination failure that motivates alternative infrastructure. They benefit from using OpenAI models (integration advantage) while being constrained by closed access. The organization has agency: they build competing systems (Llama, LLaMA-2) that reduce dependence. d\u22480.50, f(d)\u22480.65, \u03c3=1.2 \u2192 \u03c7\u22480.45. Symmetric coordination-extraction mix; organized agents have exit pathway via alternatives."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Intervention Actor",
+      "comment": "PERSPECTIVE 6: REGULATORY INTERVENTION ACTOR (SCAFFOLD) \u2014 Competition regulators, privacy frameworks (EU AI Act), and interoperability mandates see OpenAI API control as a temporary coordination problem with a sunset. Regulatory action, interoperability requirements, or antitrust enforcement could break lock-in. These actors have agency and a clear path (regulation). d\u22480.35, f(d)\u22480.32, \u03c3=1.1 \u2192 \u03c7\u22480.18. Low extraction because regulatory actors see a sunset mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, OpenAI API control solves the genuine coordination problem of allocating frontier AI capability (verification, safety monitoring, compute fairness) AND extracts rents through monopolistic pricing, feature deprecation threats, and switching costs. Neither extraction nor coordination dominates; both are structural. d\u22480.60, f(d)\u22480.85, \u03c3=1.2 \u2192 \u03c7\u22480.59. Confirms tangled_rope claim."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "alternative_capability_parity",
+      "question": "Do open-source and alternative commercial models achieve functional parity with OpenAI's frontier models on economically relevant tasks, enabling genuine developer optionality?",
+      "resolution_mechanism": "Benchmark comparisons of frontier models (GPT-4 vs Llama-2, Mistral, Claude) on production AI application tasks; latency/cost/capability efficiency trade-offs; developer migration patterns post-alternative releases",
+      "impact": "If parity achieved: constraint shifts from Snare \u2192 Tangled Rope; developers have exit (mobile/constrained). If parity fails: Snare classification confirmed; no real alternative exists despite open-source proliferation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open alternatives provide true functional parity with frontier models"
+    },
+    {
+      "id": "regulatory_interoperability_mandate",
+      "question": "Will competition regulators or AI safety frameworks impose interoperability/portability requirements that break OpenAI's lock-in?",
+      "resolution_mechanism": "Tracking of EU Digital Markets Act application, US FTC actions on AI market dominance, technical feasibility of portability standards (e.g., API compatibility layers)",
+      "impact": "If mandated: sunset clause confirmed (Scaffold perspective valid). If not mandated: API control persists as extraction mechanism; Snare classification for developers remains.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether regulatory frameworks will mandate API interoperability"
+    },
+    {
+      "id": "compute_scarcity_persistence",
+      "question": "Is access control a legitimate response to compute scarcity, or has hardware availability eliminated the coordination justification for gating?",
+      "resolution_mechanism": "Analysis of GPU/TPU availability trends, OpenAI's actual capacity constraints vs pricing strategy, correlation between capacity announcements and rate-limit changes",
+      "impact": "If scarcity real: API control is primarily Rope (coordination). If artificial: API control is primarily Snare (extraction). Current data suggests artificial scarcity (compute available, pricing/rate-limiting maintained despite capacity growth).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether access control reflects genuine compute scarcity or artificial gating"
+    },
+    {
+      "id": "switching_cost_trap_mechanism",
+      "question": "Are switching costs (retraining, integration refactoring, endpoint changes) sufficiently high that they constitute a structural trap, or can developers reasonably port applications?",
+      "resolution_mechanism": "Developer surveys on cost/time to migrate; technical analysis of API protocol compatibility; tracking of successful multi-model deployment architectures",
+      "impact": "If high: Snare classification confirmed (exit_options = trapped). If low: exit_options upgrade to constrained/mobile; Tangled Rope becomes more plausible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether API switching costs create structural traps for developers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "OpenAI's API access controls create a structural constraint on developers, platform providers, and end users who depend on frontier large language models. The constraint operates through managed authentication, rate limiting, pricing mechanisms, and unilateral terms-of-service updates. OpenAI frames this as coordination (ensuring fair access, preventing abuse, maintaining service quality); developers experience it as extraction (pricing power, switching costs, feature deprecation risk). The constraint exhibits characteristics of both pure extraction (Snare) and hybrid coordination-extraction (Tangled Rope) depending on the developer's organizational power and exit options. The theater_ratio (0.45) reflects that while API terms are published transparently, the actual mechanisms of rate limiting, pricing discrimination, and access denial operate partly through opaque algorithmic rules and customer support discretion. The extractiveness trajectory (0.35 \u2192 0.58 over the interval) shows increasing rent-extraction as OpenAI's monopoly position strengthens through network effects, as open-source alternatives remain inferior, and as switching costs increase with broader API adoption.",
+    "key_agents": [
+      "OpenAI Corporate: Primary beneficiary (institutional/arbitrage) \u2014 extracts rents through API pricing, rate limiting, feature control; frames access control as coordination mechanism",
+      "Dependent Developers: Primary victims (powerless/trapped) \u2014 bound by switching costs, lack alternatives at feature parity; experience unilateral price/access changes",
+      "End Users of Dependent Applications: Secondary victims (powerless/trapped) \u2014 no direct relationship with OpenAI; dependent on application providers' continued relationship and ability to pay",
+      "Enterprise Platform Providers: Secondary victims (moderate/constrained) \u2014 have negotiating power but constrained by OpenAI's unilateral control of frontier models; benefit from access but vulnerable to terms changes",
+      "Open Source AI Coalition: Organized alternatives (organized/constrained) \u2014 Meta (Llama), Hugging Face, academic researchers building alternatives; constrained by inferior models but have exit pathway through ecosystem development",
+      "Regulatory Intervention Actors: Competition authorities (organized/mobile) \u2014 EU Digital Markets Act, US FTC investigating market concentration; have agency through regulatory action; see sunset mechanism in interoperability mandates",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 observes that coordination justification (managing scarce compute) has weakened as hardware becomes available; identifies increasing extractive character"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. OpenAI extracts rents through (1) premium pricing relative to marginal compute cost, (2) rate limiting that forces tiered spending, (3) feature deprecation and planned obsolescence (retiring older models), and (4) lock-in through switching costs. However, extraction is not maximal (would be 0.80+) because: open alternatives exist (Llama-2, Mistral, Claude), no single vendor has forced monopoly yet (though OpenAI approaches it), and some developers have exit capacity through multi-model architectures. The trajectory (0.35 \u2192 0.58) reflects OpenAI's increasing market power as models improve and network effects strengthen. Suppression (0.68): High. Barriers to exit include: (a) technical lock-in (retraining models on new vendor, refactoring integrations), (b) capability lock-in (no open alternative matches GPT-4 on frontier tasks), (c) economic barriers (switching costs, learning curve for new APIs), and (d) psychological switching costs (developers optimized workflows for OpenAI's interface). Open alternatives (Llama, Mistral) reduce suppression somewhat \u2014 they prove alternatives are possible \u2014 but suppression remains high because parity is incomplete. Theater ratio (0.45): Moderate. API terms are published transparently, pricing is formulaic, and rate limits are disclosed. But the mechanism contains opaque elements: algorithmic rate-limit enforcement, customer support discretion in access disputes, and feature deprecation timelines announced with limited notice. The low-to-moderate theater distinguishes this from pure coordination (would be ~0.2) and from degraded institutional theater (would be ~0.7). The trajectory (0.30 \u2192 0.45) shows increasing performative content as OpenAI adds more 'safety' and 'responsible use' language to justify access restrictions that are primarily economically motivated.",
+    "perspectival_gap": "The constraint demonstrates a stark perspectival gap between OpenAI's self-perception and dependent developers' experience. OpenAI sees Rope (coordination mechanism for managing scarce compute and preventing abuse). Dependent developers see Snare (extraction without meaningful alternatives). Enterprise providers see Tangled Rope (coordination benefits from frontier access, extraction from lock-in). Open source coalitions see Scaffold (temporary constraint with sunset via alternative models). Regulatory observers see Tangled Rope \u2192 Scaffold (extraction now, but regulatory interoperability mandates coming). The analytical observer sees Tangled Rope (genuine coordination problem overlaid with extractive rent-seeking, and the coordination justification weakening as hardware availability increases). The gap arises because OpenAI's claim of coordination rests on 'scarce compute' \u2014 but compute scarcity is partly artificial (maintained through rate limiting and pricing) rather than fundamental. If hardware were truly scarce, the Rope classification would be stable; instead, the trajectory shows increasing extractiveness, indicating that scarcity is being maintained strategically.",
+    "directionality_logic": "Dependent developers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction (powerless and unable to exit). End users: Victim + trapped \u2192 d\u22480.95, f(d)\u22481.42. Even higher; transitive victim (victim of victim). Enterprise providers: Victim + constrained (negotiating capacity exists, but exit requires building/switching) \u2192 d\u22480.55, f(d)\u22480.75. Moderate extraction. OpenAI: Beneficiary + arbitrage (unilateral control, can redirect compute freely) \u2192 d\u22480.08, f(d)\u2248-0.10. Net beneficiary (negative effective extraction = controller, not target). Open source coalition: Victim initially (trapped by inferior alternatives) + constrained (building alternatives but not yet parity) \u2192 d\u22480.50, f(d)\u22480.65. Symmetric; has agency but not escape velocity. Regulatory actors: Victim of the victim (constrained by market power, not by API control directly) + mobile (regulatory action available) \u2192 d\u22480.35, f(d)\u22480.32. Low extraction from their perspective; they have agency. The directionality chain shows why Snare appears from the most vulnerable positions and why Tangled Rope appears at moderate and organized levels.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The classification as Tangled Rope (not pure Snare) depends on recognizing the genuine coordination function that OpenAI provides ALONGSIDE the extraction. If we classified this as pure Snare, we would be denying that frontier LLM access is valuable coordination \u2014 that access to GPT-4 does solve real problems (inference speed, model quality, reliability) that developers could not solve independently. But by stating this as Tangled Rope, we acknowledge: (1) OpenAI provides real coordination value (frontier model access), (2) but layers extractive rent-seeking on top (pricing, lock-in, unilateral terms), (3) and the extraction mechanism depends on suppression (lack of alternatives) and is enforced (rate limiting, access denial). The mandatrophy is resolved by measuring: beneficiaries (OpenAI) \u2014 yes, clear rent extraction. Victims (developers, users) \u2014 yes, clear lock-in and switching costs. Active enforcement (rate limiting, authentication, feature deprecation) \u2014 yes, unilateral and ongoing. A pure Snare classification would erase the coordination. A pure Rope classification would erase the extraction. Tangled Rope holds both: this is a coordination mechanism (managing compute allocation) that has been colonized by extractive rent-seeking (pricing power, lock-in, artificial scarcity maintenance)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "llm_market_concentration",
+      "ai_capability_safety_regulation"
+    ],
+    "dual_formulation_note": "OpenAI API access control is downstream of LLM market concentration (fewer frontier models available to users) and upstream of specific harms (pricing barriers to AI capability access, lock-in of dependent systems). The constraint family decomposes as: (1) LLM market concentration (\u03b5\u22480.30, Rope/Tangled Rope) \u2014 structural fact that few orgs can train frontier models, (2) OpenAI API control (\u03b5\u22480.58, Tangled Rope) \u2014 rental extraction via API gating, (3) AI regulation (\u03b5\u22480.45, Scaffold) \u2014 regulatory response creating sunset mechanism. Linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

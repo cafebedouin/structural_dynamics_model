@@ -1,0 +1,184 @@
+{
+  "header": {
+    "constraint_id": "kim_jong_un_succession",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "kju_succ"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Kim Jong-un's Succession Plan and Dynastic Perpetuation",
+    "topic_domain": "political/authoritarian_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "north_korean_population",
+      "military_meritocracy",
+      "party_cadre_mobility",
+      "regime_legitimacy"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The North Korean Population",
+      "comment": "PERSPECTIVE 1: NORTH KOREAN POPULATION (SNARE) \u2014 No exit. Citizens cannot leave without severe penalty (execution, imprisonment, collective family punishment under songbun system). Bound by dynastic succession constraint that guarantees regime perpetuation and blocks institutional reform. d\u22480.98, f(d)\u22481.43, \u03c3=1.0 \u2192 \u03c7\u22480.97. Maximum extraction with complete suppression of alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Military and Party Leadership",
+      "comment": "PERSPECTIVE 2: MILITARY AND PARTY LEADERSHIP (SNARE) \u2014 Career advancement blocked by dynastic requirement. Merit-based promotion becomes meaningless once succession is predetermined. Exit constrained: defection means family destruction, treason execution. d\u22480.88, f(d)\u22481.32, \u03c3=1.0 \u2192 \u03c7\u22480.90. Senior military/cadre trapped by songbun descent rules and personality cult enforcement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regime Security Apparatus",
+      "comment": "PERSPECTIVE 3: REGIME SECURITY APPARATUS (TANGLED ROPE) \u2014 Constrained by dynasty but also benefits from succession clarity: predictable power transfer reduces factionalism and enables long-term repressive planning. Sees daughter-grooming as coordination mechanism (dynastic continuity) AND as enforcement requirement (controlling expectations). d\u22480.52, f(d)\u22480.68, \u03c3=1.0 \u2192 \u03c7\u22480.46. Mixed: benefits from predictability, constrained by cult-of-personality performance requirements."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Broader East Asian Geopolitics",
+      "comment": "PERSPECTIVE 4: REGIONAL GEOPOLITICAL ACTORS (SNARE) \u2014 South Korea, China, Japan, US are structurally constrained by dynastic perpetuation in North Korea. Regime stability (however authoritarian) is somewhat predictable; dynastic succession reduces coup-risk instability but locks in perpetual authoritarianism, nuclear proliferation, regional tension. Cannot exit the constraint. d\u22480.65, f(d)\u22481.03, \u03c3=1.1 \u2192 \u03c7\u22480.76. Organized actors bear structural cost of permanent regime hostility and proliferation risk."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Chinese Leadership",
+      "comment": "PERSPECTIVE 5: CHINESE LEADERSHIP (ROPE) \u2014 Can arbitrage the succession. Dynastic predictability enables China to manage North Korean alignment, resource extraction, and buffer-state utility. Exit option: shift alliances, reduce aid. Benefits from succession clarity (reduces coup chaos) while maintaining leverage through resources. d\u22480.10, f(d)\u22480.07, \u03c3=1.1 \u2192 \u03c7\u22480.05. Net beneficiary through arbitrage capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "International Liberal Observers",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVERS / LIBERAL DEMOCRACY ADVOCATES (PITON) \u2014 View the succession as embodying 'hereditary authoritarianism,' a category that describes the constraint but does not capture its function. The frame naturalizes dynastic rule as if it were immutable (mountain), when in fact it is maintained through performative ideology (Kimilsungism, divine leadership mythology) and brute suppression. theater_ratio=0.65 reflects the heavy performative content (cult of personality, propaganda apparatus) masking the extractive mechanism. From analytical distance, appears as degraded principle (meritocratic socialism \u2192 dynastic theocracy). But false summit risk: observers may naturalize 'totalitarianism is permanent' when the succession is actually contingent on continuous enforcement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "female_succession_acceptance",
+      "question": "Will the military and party cadre accept a female heir, or does patriarchal assumption within the Kimilsungist cult of personality create hidden resistance that could trigger succession crisis?",
+      "resolution_mechanism": "Tracking of military statements, purges of potential dissenters, intelligence analysis of faction positioning during transition window. Comparison with historical female-leader outcomes in East Asian authoritarian systems.",
+      "impact": "If accepted: succession logic holds (Snare classification confirmed). If rejected: hidden factionalism could trigger coup attempt, reclassifying constraint as unstable Tangled Rope with active contestation and higher exit probabilities for some cadre.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether military patriarchy blocks female succession"
+    },
+    {
+      "id": "youth_legitimacy_deficit",
+      "question": "Can a generationally younger successor (or very young daughter) claim sufficient cult-of-personality capital without the military credentials or survival record of Kim Jong-un? Does legitimacy erosion create opening for constitutional constraint or meritocratic reform?",
+      "resolution_mechanism": "Analysis of succession rhetoric; monitoring of ideological readjustment (how propaganda pivots from military performance to dynastic right); assessment of cadre morale during transition period.",
+      "impact": "If legitimacy holds: Snare persists. If deficit creates opening: constraint becomes temporarily mobile (higher exit_options for some cadre), reclassifying transition period as Tangled Rope with exit pressure, potentially enabling institutional reform.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether successor's youth creates legitimacy deficit"
+    },
+    {
+      "id": "chinese_realignment_risk",
+      "question": "Does succession uncertainty create window for China to shift its North Korea strategy, potentially moving from propping up dynasty to supporting reform or transition? Or is Chinese interest in stability so strong that it enforces the succession through military/economic pressure?",
+      "resolution_mechanism": "Tracking Chinese public statements, aid flows, military deployments near DPRK border. Historical analysis of how China handled succession in other client states.",
+      "impact": "If China enforces dynasty: Snare deepens (external enforcement, even stronger suppression). If China exploits uncertainty: constraint becomes momentarily contestable, exit options expand for reform factions, classification shifts toward high-extractiveness Tangled Rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether China manipulates or secures the succession"
+    },
+    {
+      "id": "internal_reform_possibility",
+      "question": "Is the succession constraint ultimately contingent on continuous enforcement and ideology, or has the system calcified to the point where perpetual authoritarianism is genuinely immutable (mountain)? Could a shock (foreign pressure, economic collapse, military mutiny) rapidly shift regime type?",
+      "resolution_mechanism": "Historical comparison with other collapsed dictatorships (USSR, East Germany, Yugoslavia); analysis of regime fragility indicators (defection rates, resource constraints, generational cadre turnover). Scenarios modeling transition pressure thresholds.",
+      "impact": "If mountain (truly immutable): constraint is eternal. If Snare (contingent on enforcement): shock could collapse it rapidly. Classification consequence: determines whether we project 50-year regime stability or 5-year vulnerability window.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether authoritarianism is immutable or contingently enforced"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Kim Jong-un's apparent grooming of his daughter as a potential successor crystallizes a fundamental constraint on North Korean political development: the intersection of dynastic perpetuation, authoritarian suppression, and geopolitical lock-in. The succession plan is not merely a personnel decision but a structural mechanism that forecloses institutional reform, meritocratic advancement, and alternative political futures. The constraint exhibits high extractiveness (0.68) and extreme suppression (0.78) because it operates through both overt coercion (execution, family punishment under songbun system) and performative ideology (cult of personality, Kimilsungism as quasireligion). Theater ratio (0.65) reflects the heavy investment in propaganda machinery, public performances of loyalty, and ritualized submission \u2014 the performance of dynastic legitimacy masks the underlying extraction of human potential and political voice from the entire population. From the perspective of the North Korean population, this is a pure Snare: trapped with no exit, bearing full cost of regime perpetuation. From the military and party cadre, it is also Snare: career blocked, meritocratic paths closed, exit constrained by collective punishment rules. From the security apparatus, it becomes Tangled Rope: constrained but also benefits from succession predictability (reduces coup risk, enables planning). From regional powers, it is Snare: structurally locked into managing a perpetually hostile, nuclear-armed authoritarian regime. From China, it is Rope: arbitrage capacity through aid leverage and geopolitical positioning. From liberal observers, it risks appearing as a Mountain (naturalized totalitarianism) when it is actually a contingent-but-deeply-entrenched Snare.",
+    "key_agents": [
+      "Kim Jong-un: Institutional patriarch (institutional/arbitrage) \u2014 defines succession, benefits from perpetual regime control, exit option is maintenance of power only",
+      "North Korean Population: Primary victims (powerless/trapped) \u2014 no exit, full extraction cost, locked into songbun hereditary hierarchy",
+      "Military and Party Leadership: Secondary victims (moderate/constrained) \u2014 career ceilings imposed by dynastic requirement, exit constrained by collective punishment, forced meritocratic suspension",
+      "Regime Security Apparatus (State Security Department, secret police): Beneficiary (institutional/constrained) \u2014 enforces Snare, benefits from order but constrained by loyalty requirements to dynasty",
+      "Regional Powers (South Korea, Japan, US, China): Organized victims (organized/constrained) \u2014 structurally locked into managing permanent North Korean threat; China has arbitrage capacity",
+      "Chinese Leadership: Strategic beneficiary (institutional/arbitrage) \u2014 can manage North Korea through succession, maintains buffer state, extracts geopolitical leverage from DPRK dependence"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The succession plan extracts political voice, economic resources, and human potential from the population to sustain dynastic perpetuation. The extraction grows over time (0.52 \u2192 0.68 over interval) as succession becomes more explicit and the regime hardens ideological enforcement. Suppression (0.78): Extreme. Exit is blocked by songbun system (hereditary caste), execution for defection, collective family punishment, total information control. Individuals have zero degrees of freedom. Theater ratio (0.65): Moderate-high. Significant portion of regime activity is performative (propaganda, public loyalty rituals, cult ceremonies) maintaining ideological legitimacy mask for what is structural extraction. As succession becomes explicit, theater increases (public displays of daughter's prominence, readjustments to Kimilsungist doctrine to accommodate female heir). Mandatrophy resolution: This is unambiguously a Snare (high \u03b5, high suppression, high \u03c7) from the population's perspective. From security apparatus it is Tangled Rope (coordination of succession + extraction of loyalty). The classification depends entirely on structural position. The Snare is the base reality; the Tangled Rope is the institutional actor's partial-benefit perspective. No ambiguity between categories \u2014 all perspectives agree on high extractiveness, just differing on coordination component.",
+    "perspectival_gap": "The North Korean population sees pure extraction (Snare): dynastic succession guarantees perpetual authoritarianism, blocks any institutional path to reform, and forecloses alternatives. The military and party cadre also see Snare: succession ends meritocratic career advancement for anyone outside the dynasty. The security apparatus sees Tangled Rope: they are constrained by loyalty requirements but also benefit from the predictability and clarity of succession (reduces internal factional conflict, enables long-term repressive planning). China sees Rope with arbitrage: can leverage North Korean dependence, benefits from stability, has exit option (shift alliances). Liberal observers risk a false Mountain: naturalizing 'totalitarianism is permanent' when the system is actually contingently enforced and could collapse rapidly under sufficient shock. The critical perspectival gap is between the powerless (locked in Snare) and the institutional beneficiary (China seeing Rope). This gap reflects asymmetric exit: the population has zero exit, China has selective exit, creating divergent classifications from structurally identical phenomena.",
+    "directionality_logic": "North Korean population: Victims (identified in victims array) + trapped exit \u2192 d\u22480.98, f(d)\u22481.43. Maximum d because population has zero exit options and bears all costs. Military/cadre: Victims + constrained exit \u2192 d\u22480.88, f(d)\u22481.32. High d because exit is possible (defection, coup) but extremely costly. Security apparatus: Mixed (constrained but beneficiary of order) + constrained exit \u2192 d\u22480.52, f(d)\u22480.68. Neutral d reflecting mixed extraction/coordination. Regional powers: Victims (of perpetual threat) + constrained exit \u2192 d\u22480.65, f(d)\u22481.03. Organized but locked in by geopolitics. China: Beneficiary (strategic leverage) + arbitrage exit \u2192 d\u22480.10, f(d)\u22480.07. Low d because China can adjust its North Korea strategy without fatal cost. The directionality chain shows that population and military experience high extraction (high d, high f(d)) while institutional actors (security, China) experience lower effective extraction through their greater exit options and strategic positioning.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint clearly classifies as SNARE from the structural reality of the North Korean population. Extractiveness (0.68) > 0.46 threshold met. Suppression (0.78) > 0.60 threshold met. Effective extraction \u03c7 for the population: d\u22480.98, f(d)\u22481.43, \u03c3=1.0 \u2192 \u03c7\u22480.97, well above 0.66 Snare gate. The mandate problem ('Is this really extraction or just immutable authoritarianism?') is resolved by demonstrating that: (1) alternative institutional forms exist (South Korea transitioned; Taiwan; Japan; South Vietnam did transition). (2) The succession constraint is contingent on continuous enforcement \u2014 it requires the cult of personality machinery, the security apparatus, external support (China), and ideological socialization. (3) Historical analysis shows authoritarian systems can collapse rapidly when enforcement falters (USSR, East Germany, Yugoslavia). Therefore the constraint is not a Mountain (immutable natural law) but a contingent Snare. The mandate is resolved: North Korea's perpetual authoritarianism is structurally enforced extraction, not natural law. Mandatrophy_resolved: true, because the system demonstrates all three gates for high-extractiveness classification (\u03b5, suppression, \u03c7 all exceed thresholds) and analysis shows it is not a false summit naturalizing contingency."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "songbun_hereditary_caste",
+      "north_korea_centralized_planning",
+      "kim_dynasty_cult_of_personality",
+      "sanctions_regime_north_korea"
+    ],
+    "dual_formulation_note": "Succession constraint is downstream of the broader Kim dynasty perpetuation mechanism and songbun caste system. The daughter-grooming specifically crystallizes the dynasty's structural choice to perpetuate authoritarian control rather than enable institutional reform. Related constraints: songbun (hereditary \u03b5\u22480.74), cult of personality (enforcement \u03b5\u22480.62), centralized planning (coordination failure \u03b5\u22480.55)."
+  },
+  "directionality_overrides": []
+}

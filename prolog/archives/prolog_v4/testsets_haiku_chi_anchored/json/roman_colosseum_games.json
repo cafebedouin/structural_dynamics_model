@@ -1,0 +1,175 @@
+{
+  "header": {
+    "constraint_id": "roman_colosseum_games",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "colosseum"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.81,
+    "claimed_type": "snare",
+    "human_readable": "The Spectacle of the Roman Colosseum",
+    "topic_domain": "political/social",
+    "requires_active_enforcement": false,
+    "victims": [
+      "enslaved_combatants",
+      "subjugated_provinces",
+      "urban_plebeian_population"
+    ],
+    "beneficiaries": [
+      "imperial_elite"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Enslaved Gladiator",
+      "comment": "PERSPECTIVE 1: ENSLAVED GLADIATOR (SNARE) \u2014 Captured, purchased, or condemned to combat arena. Zero exit options; death is the likely outcome. Extracted from without consent or compensation. d\u22480.98, f(d)\u22481.48, \u03c3=0.9 \u2192 \u03c7\u22480.96. Maximum extraction under pure coercion."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Urban Plebeian",
+      "comment": "PERSPECTIVE 2: URBAN PLEBEIAN POPULATION (SNARE) \u2014 Sedated by spectacle and subsistence grain dole ('bread and circuses'). Politically neutralized through mandatory entertainment and attention capture. Cannot exit the constraint or organize alternative governance. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.94. Extraction through suppression of political consciousness and agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Subjugated Province",
+      "comment": "PERSPECTIVE 3: SUBJUGATED PROVINCE (SNARE) \u2014 Supplies enslaved persons, tribute, and spectacle animals (lions, bears) for arena use. Extraction is political (forced provision of captives as entertainment), economic (resource drain), and symbolic (proof of Rome's dominance over foreign peoples). d\u22480.88, f(d)\u22481.30, \u03c3=0.9 \u2192 \u03c7\u22480.79. High extraction with military enforcement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Imperial Elite",
+      "comment": "PERSPECTIVE 4: IMPERIAL ELITE (ROPE) \u2014 Games provide coordination mechanism: public spectacle unifies Rome's diverse population under imperial ideology, channels surplus wealth into public infrastructure (the Colosseum itself serves as symbol of Rome's power), and distributes patronage/prestige to elite sponsors. From this perspective, games are coordination that solves collective action problem of maintaining empire. d\u22480.02, f(d)\u2248-0.18, \u03c3=1.0 \u2192 \u03c7\u2248-0.12. Net subsidy to the elite through coordination benefits."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Historical Observer",
+      "comment": "PERSPECTIVE 5: HISTORICAL OBSERVER (PITON) \u2014 By late empire (3rd-4th centuries), games persist primarily through theater and institutional inertia despite massive resource drain and declining military capacity. Elite no longer see games as necessary coordination; they persist because alternatives for public legitimacy (spectacle, tradition, architectural monumentality) have atrophied but not been replaced. theater_ratio=0.81 reflects that much of the spectacle has become performative legitimacy-theater rather than functional governance. d\u22480.05, f(d)\u2248-0.12, \u03c3=1.2 \u2192 \u03c7\u2248-0.12, but piton gate (theater\u22650.70) fires."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 Risk of naturalizing games as inevitable feature of empire or human nature ('all societies need spectacle'). However, base properties (\u03b5=0.68, suppression=0.72, theater=0.81) violate mountain gates. Engine flags as false summit: games are contingent institutional arrangement, not immutable law. Analyzes the naturalization attempt itself as part of the constraint's reproductive logic."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "grain_dole_dependency",
+      "question": "Did grain subsidy enable political pacification or vice versa? Did games and bread arrive together as a coordinated suppression strategy, or did games become central to legitimacy because grain proved insufficient for control?",
+      "resolution_mechanism": "Chronological analysis of grain dole initiation vs. Colosseum construction (Colosseum: 72-80 CE; large-scale grain dole: earlier Gracchi reforms ~130 BCE, regularized later). Correlation analysis of grain availability fluctuations with spectacle frequency and intensity.",
+      "impact": "If games created dependency: strong snare (pure extraction). If games responded to grain scarcity: tangled rope (coordination + extraction mix). Classification sensitivity: high.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether grain dole and spectacle functioned as coordinated suppression or independent mechanisms"
+    },
+    {
+      "id": "elite_coordination_necessity",
+      "question": "Were games functionally necessary for elite coordination and legitimacy, or were they performative luxury that elite maintained through path dependence?",
+      "resolution_mechanism": "Comparative analysis: did empires without spectacle infrastructure (Parthian, Chinese dynasties) face equivalent legitimacy crises? Did Roman elites maintain games when military/economic crises would have allowed redirection of resources?",
+      "impact": "If functionally necessary: rope perspective is accurate, and classification shifts toward mixed tangled_rope (coordination + extraction). If performative: piton perspective is accurate (institutional inertia, theater), and \u03b5 should be lower (games are theater, not functional extraction).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether games were functionally necessary for elite coordination"
+    },
+    {
+      "id": "subjugated_populations_exit_option",
+      "question": "Did subjugated provinces have any meaningful exit option short of open rebellion, or was the constraint truly totalizing?",
+      "resolution_mechanism": "Historical analysis of provincial tax resistance, depopulation, bandit activity, and organized rebellion rates. Correlation with spectacle demand (more resources demanded \u2192 more resistance). Analysis of whether provinces could refuse gladiator supply without military intervention.",
+      "impact": "If some exit option existed: provinces classify as constrained rather than trapped; d lowers from 0.88 to ~0.70; \u03c7 drops to ~0.65. If truly trapped: snare classification confirmed. Affects assessment of whether constraint achieves suppression through lack of alternatives (snare) or through active enforcement (potentially tangled_rope if elites claim coordination benefit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subjugated provinces had meaningful exit options"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.81
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 300
+  },
+  "commentary": {
+    "narrative_context": "The Roman Colosseum games represent a paradigmatic example of a pure extraction constraint masked as public coordination. From 72 CE (construction) through the 4th century, the games functioned simultaneously as a legitimacy mechanism for the imperial elite, a pacification tool for the urban plebeian population, and a resource-extraction machine operating on enslaved persons and subjugated provinces. The 'bread and circuses' (panem et circenses) arrangement created a cycle of political suppression: the state subsidized grain and funded spectacle, the population remained sedated and politically neutral, and resources from conquered territories flowed toward arena maintenance and slave acquisition. Over the constraint's lifespan, the theater ratio rises (games become increasingly performative as functional control mechanisms decline), while extractiveness remains stable despite diminishing marginal returns\u2014a signature of institutional inertia and piton degradation. The constraint reaches its peak visibility around 150 CE (mid-imperial period) and begins a slow theatricalization through late antiquity as military crises and resource scarcity reduce the state's capacity to maintain the spectacle, yet cultural investment in the games persists through momentum.",
+    "key_agents": [
+      "Enslaved Gladiators: Primary victims (powerless/trapped) \u2014 conscripted from war captives, condemned criminals, or purchased; forced into combat with near-certain death; no legal recourse or alternative",
+      "Urban Plebeian Population: Primary victims (powerless/trapped) \u2014 sedated by grain subsidy and spectacle; politically neutralized; cannot exit the constraint or organize collective action",
+      "Subjugated Provinces: Secondary victims (powerful/trapped) \u2014 forced to supply enslaved persons, tribute animals, and economic resources; no alternative but rebellion (costly and suppressed)",
+      "Imperial Elite: Primary beneficiary (institutional/arbitrage) \u2014 captures political legitimacy, prestige, patronage distribution, and consolidation of power; experiences games as coordination mechanism for empire maintenance",
+      "State Administration: Secondary beneficiary (institutional/arbitrage) \u2014 manages resource flows and public order; maintains the spectacle infrastructure; benefits from plausible deniability ('this is entertainment, not control')",
+      "Analytical Observer: Institutional position (analytical/analytical) \u2014 observes the constraint's structure from outside; risks naturalizing the arrangement as inherent to empire or human nature"
+    ],
+    "logic_rationale": "Base extractiveness (0.68): High. The constraint extracts resources from three victim groups simultaneously\u2014enslaved combatants lose their lives and labor; plebians lose political agency and productive economic output (tied to grain subsidy rather than wages); provinces lose military manpower, animals, and tribute. The extraction is stable (~0.58\u21920.68 over 300 years) despite declining functional necessity, indicating institutional entrenchment. Suppression (0.72): High. Multiple suppression mechanisms operate: (1) gladiators have no legal personhood and no exit; (2) plebians are sedated by grain and spectacle, reducing political consciousness; (3) provinces face military suppression if they resist. Suppression is structural (lack of alternatives) and active (enforcement). Theater ratio (0.81): High and rising. In the early imperial period (0-150 CE), games may have served genuine coordination functions (coordinating elite patronage networks, creating public spectacle for mass legitimacy). By late antiquity (250-400 CE), games persist primarily through institutional inertia and performative investment in tradition, with minimal functional contribution to governance. The rising theater ratio reflects Goodhart drift: the metric of 'successful spectacle' (crowd size, expense, elaborateness) replaces the original goal (political pacification via distraction). Resources are expended not because games effectively control populations but because the tradition persists.",
+    "perspectival_gap": "This constraint exhibits maximal perspectival divergence. Enslaved gladiators and plebians experience it as pure snare (trapment, extraction, zero alternatives). Subjugated provinces experience snare (military enforcement, resource extraction, no recourse). The imperial elite experience rope (coordination mechanism, legitimacy, prestige). The late-imperial observer sees piton (degraded, theatrical, inertial). The analytical observer risks false mountain (naturalizing spectacle as universal human need). The gap between the beneficiary's 'coordination' reading and the victim's 'extraction' reading is fundamental: the same institution appears as a solution from above (legitimacy, unified empire) and as a problem from below (pacification, suppression). The snare classification dominates because the victims vastly outnumber the beneficiaries and experience totalizing extraction.",
+    "directionality_logic": "Enslaved gladiators: Victim + trapped \u2192 d\u22480.98, f(d)\u22481.48. Maximum extraction. Complete lack of alternatives; certain death or survival as permanent captive. Plebians: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Near-maximum extraction. Sedated by grain, politically disabled; sedition is rare and crushed. Subjugated provinces: Victim + trapped (despite military power) \u2192 d\u22480.88, f(d)\u22481.30. High extraction. Military enforcement ensures compliance; rebellion is option but costs exceed benefits. Imperial elite: Beneficiary + arbitrage \u2192 d\u22480.02, f(d)\u2248-0.18. Net subsidy. Experiences games as coordination that solves the problem of maintaining legitimacy and preventing elite factionalism. State administration: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.12. Net subsidy. Derives authority and organizational coherence from spectacle administration. Historical observer (late empire): Institutional + arbitrage, but theater_ratio high \u2192 piton gate fires despite low d. Late empire sees the spectacle as inertial (persists through tradition, not function).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED (\u03b5=0.68 > 0.70 threshold requires resolution): The constraint resolves the mandatrophy by explicitly differentiating between the elite's genuine coordination function (games do coordinate imperial factions and distribute prestige) and the victims' structural extraction (games extract labor, life, agency, and resources without compensation or alternatives). The resolution hinges on the observation that the coordinate function is *real* (elites genuinely benefit from the legitimacy and prestige) but *asymmetric*\u2014only a tiny population benefits while the vast majority bears costs. This is the definition of a snare: the constraint has a real function, but the function is distributed so asymmetrically that it amounts to pure extraction for the victimized population. The rope perspective (elite view) and snare perspective (victim view) are not contradictory; they are structurally accurate descriptions of the same institution from opposite positions. The mandate is resolved by showing that 'coordination' and 'extraction' are not mutually exclusive\u2014the same institution can coordinate one population while extracting from another. The imperial elite are coordinating their own legitimacy and power; the gladiators and plebians are experiencing pure extraction. Mandatrophy does not require a single classification; it requires accurate perspectival differentiation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "roman_grain_dole",
+      "slavery_roman_economy",
+      "imperial_legitimacy_crisis"
+    ],
+    "dual_formulation_note": "The Colosseum games are downstream of the grain dole (bread component) and of slavery as an economic system (circuses component). Upstream: the state's need for legitimacy and population control. Downstream: the degradation of games into performative theater by late antiquity. The network links reflect that games cannot be understood in isolation from their resource dependencies and political functions."
+  },
+  "directionality_overrides": []
+}

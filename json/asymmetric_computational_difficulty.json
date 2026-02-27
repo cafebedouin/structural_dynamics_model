@@ -2,24 +2,26 @@
   "header": {
     "constraint_id": "asymmetric_computational_difficulty",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "asym_pow"
   },
   "base_properties": {
-    "extractiveness": 0.85,
-    "suppression": 0.9,
-    "theater_ratio": 0.95,
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.35,
     "claimed_type": "snare",
-    "human_readable": "Proof-of-Work Zero-Day",
-    "topic_domain": "technological",
+    "human_readable": "Proof-of-Work Zero-Day: Asymmetric Computational Difficulty",
+    "topic_domain": "technological/cryptography/distributed_systems",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "advanced_adversary"
+      "zero_day_possessor"
     ],
     "victims": [
-      "legitimate_miners",
-      "network_users",
-      "network_security_guarantees"
+      "proof_of_work_network",
+      "honest_miners",
+      "system_users",
+      "protocol_integrity"
     ],
     "mandatrophy_resolved": true
   },
@@ -27,11 +29,20 @@
     {
       "classification_type": "snare",
       "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Honest Miner",
+      "comment": "PERSPECTIVE 1: HONEST MINER (SNARE) \u2014 Faces a proof-of-work system they believe is symmetric: all miners solve the same cryptographic puzzle with equal difficulty. Unknown to them, one actor has solved the underlying mathematical problem, reducing their computational cost to near-zero. The honest miner cannot exit the network without surrendering earned tokens and reputation. They are extractively targeted: their computational work subsidizes the zero-day possessor's near-costless block production. Maximum suppression \u2014 they have no knowledge of the asymmetry and no alternative validation mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Legitimate Miner",
-      "comment": "PERSPECTIVE 1: LEGITIMATE MINER (SNARE) — Trapped by massive capital investment in specialized hardware (ASICs) and energy contracts. Their computational work is rendered meaningless by the adversary's exploit, turning their effort into pure cost extracted by the adversary. d≈0.95, f(d)≈1.42, σ=1.2 → χ≈1.45 (capped at 1.0)."
+      "label": "The System User",
+      "comment": "PERSPECTIVE 2: SYSTEM USER (SNARE) \u2014 Relies on proof-of-work security properties: computational cost should make 51% attacks economically infeasible. With an asymmetric zero-day, the attacker can acquire 51% hash power at a fraction of the presumed cost, enabling double-spend attacks, transaction censorship, and protocol-level manipulation. Users cannot exit without abandoning holdings and cannot verify the integrity of the underlying difficulty claim. Trapped and maximally extracted."
     },
     {
       "classification_type": "rope",
@@ -39,117 +50,136 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Advanced Adversary",
-      "comment": "PERSPECTIVE 2: ADVANCED ADVERSARY (ROPE) — The adversary possesses a zero-day exploit that breaks the computational asymmetry. For them, the network is a perfect coordination mechanism that subsidizes their activity. They expend minimal effort to solve blocks, extracting the entire security budget. d≈0.05, f(d)≈-0.12, σ=1.2 → χ≈-0.12. Negative effective extraction signifies a net subsidy."
+      "label": "The Zero-Day Possessor",
+      "comment": "PERSPECTIVE 3: ZERO-DAY POSSESSOR (ROPE) \u2014 From their structural position, this is coordination. They have solved a mathematical problem that was supposed to be hard for everyone. They experience the proof-of-work system as enabling their dominance through coordination \u2014 they can produce blocks at will, essentially controlling block creation and transaction ordering. They benefit from the constraint's existence: without proof-of-work, their zero-day would be worthless. They have arbitrage options: sell the vulnerability, use it covertly, or weaponize it. They see the mechanism as cooperative with their interests."
     },
     {
-      "classification_type": "rope",
-      "agent_power": "institutional",
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Unaware Protocol Foundation",
-      "comment": "PERSPECTIVE 3: UNAWARE PROTOCOL FOUNDATION (ROPE) — The institution maintaining the protocol is unaware of the compromise. They perceive the system as functioning according to its design specification: a fair, decentralized coordination mechanism (Rope). Their classification is based on the intended, not the actual, structure."
+      "label": "The Protocol Development Community",
+      "comment": "PERSPECTIVE 4: PROTOCOL DEVELOPMENT COMMUNITY (TANGLED ROPE) \u2014 The broader cryptographic research and blockchain development community experiences this constraint as both coordination and extraction. There is a genuine coordination function: proof-of-work is a solution to Sybil resistance and Byzantine fault tolerance. But the existence of unpatched zero-days represents extractive asymmetry \u2014 researchers cannot fully verify the security properties they are building on. They are constrained by the need to maintain backward compatibility and network effects; they cannot instantly migrate to a new algorithm without community consensus. They benefit from the coordination function but suffer extraction through the latent compromise."
     },
     {
       "classification_type": "piton",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Casual Network User",
-      "comment": "PERSPECTIVE 4: CASUAL USER (PITON) — From the user's perspective, transactions are still being processed and blocks are being added. The core function *appears* to work. However, the underlying security guarantee is completely gone. The massive expenditure of energy by legitimate miners is pure theater. With theater_ratio=0.95, this classifies as a Piton: a system maintained by inertia and performance, whose primary function has failed."
+      "label": "The Consensus Mechanism Theater",
+      "comment": "PERSPECTIVE 5: CONSENSUS MECHANISM AS INSTITUTIONAL THEATER (PITON) \u2014 The formal properties of proof-of-work (security, decentralization, Byzantine fault tolerance) are largely performative when a zero-day exists. The mechanism continues to be described and audited as if it has the claimed properties, but the functional reality is degraded. The theater persists through institutional inertia: developers, miners, and users maintain the narrative of security despite the latent compromise. This is classical piton: a former coordination mechanism (Rope) whose primary function has atrophied, maintained by theatrical performance (security audits, difficulty calculations, mining pool monitoring) rather than by actual correctness."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (SNARE) — The analyst sees the complete structure: a system designed as a Rope has been structurally transformed into a Snare by a secret asymmetry. The high base extractiveness (0.85) and suppression (0.90) confirm the classification. The analytical view pierces the veil of the system's claims."
+      "spatial_scope": "universal",
+      "label": "The Mathematical Necessity View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, some mathematical problems are genuinely hard; cryptographic difficulty is a feature of nature, not a contingent institutional choice. The analytical observer might see proof-of-work difficulty as a natural law: you cannot get Sybil resistance without paying a computational cost. However, the existence of a zero-day undermines this classification \u2014 the hardness is not a law of nature but a current state of mathematical knowledge. The 'law' can be repealed by a mathematical breakthrough. The engine will compute this as a false summit, revealing that the naturalization of computational difficulty conflates epistemological limitation (we don't know how to solve it) with ontological necessity (it cannot be solved)."
     }
   ],
   "omegas": [
     {
-      "id": "adversary_identity_and_motive",
-      "question": "Is the adversary a state actor seeking control, a rational economic actor maximizing profit, or a nihilistic actor seeking to destroy the network?",
-      "resolution_mechanism": "Attribution of the exploit through forensic analysis or intelligence gathering.",
-      "impact": "A state actor might maintain the illusion for surveillance, while an economic actor might cash out, revealing the flaw. This determines the system's lifespan and failure mode.",
+      "id": "zero_day_discovery_timeline",
+      "question": "When will the zero-day inevitably be discovered, and what triggers discovery: academic publication, independent rediscovery, whistleblowing, or exploitative overreach?",
+      "resolution_mechanism": "Empirical observation of disclosure timeline; reconstruction of discovery pathway from forensic blockchain analysis; historical comparison with previous cryptographic breaches (SHA-1, MD5 collision discoveries)",
+      "impact": "If discovered within 1-2 years: damage is containable through hard fork. If hidden for 5+ years: systemic compromise deepens, potential for catastrophic loss of user confidence upon disclosure. If never discovered: zero-day possessor maintains covert dominance indefinitely.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Determining the identity and goals of the compromising adversary."
+      "description": "Timeline and mechanism of zero-day discovery"
     },
     {
-      "id": "exploit_discoverability",
-      "question": "Is the exploit statistically invisible, or does it leave subtle traces on the blockchain (e.g., non-uniform nonce distribution) that could be detected?",
-      "resolution_mechanism": "Advanced statistical analysis of the blockchain history by independent security researchers.",
-      "impact": "If discoverable, the Snare has a finite lifespan. If not, it could persist indefinitely, making it a 'perfect' crime.",
+      "id": "covert_vs_overt_extraction",
+      "question": "Is the zero-day possessor extracting covertly (mining undetectably, accumulating power), or overt exploitation (51% attacks, transaction censorship) that would reveal the compromise?",
+      "resolution_mechanism": "Forensic blockchain analysis: transaction patterns, block distribution, hashrate concentration; temporal analysis of when exploitative behavior begins vs when constraint classification changes",
+      "impact": "If covert: extraction persists longer, more value is siphoned before discovery. Snare classification is sustained. If overt: discovery is accelerated, community mobilizes faster, but damage is acute and visible.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether the zero-day exploit is theoretically detectable post-facto."
+      "description": "Whether zero-day exploitation is covert or overt"
     },
     {
-      "id": "community_fork_coordination",
-      "question": "If the exploit is revealed, can the community successfully coordinate a hard fork to a new, secure algorithm, or will the revelation cause a catastrophic collapse in trust and value?",
-      "resolution_mechanism": "Observing the community's response to the revelation, including developer consensus, miner signaling, and market reaction.",
-      "impact": "Successful coordination would transform the Snare into a Scaffold (the fork is a temporary measure). Failure means the entire ecosystem collapses.",
+      "id": "alternative_algorithm_viability",
+      "question": "Does an alternative proof-of-work algorithm (or post-quantum hash function) exist that can be deployed via hard fork without fragmenting the network into competing chains?",
+      "resolution_mechanism": "Technical feasibility analysis of algorithm migration; historical precedent from other protocol upgrades; game-theoretic modeling of fork consensus dynamics",
+      "impact": "If viable: snare can be escaped through coordinated community response. Constraint transitions to Scaffold (temporary problem with sunset). If not viable: network is locked into the compromised algorithm indefinitely, snare persists as structural constraint.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative algorithms enable protocol migration"
+    },
+    {
+      "id": "mathematical_hardness_recoverability",
+      "question": "If the zero-day algorithm is disclosed, can the underlying mathematical problem be re-hardened through modification, or is the fundamental problem structure now permanently compromised?",
+      "resolution_mechanism": "Cryptographic analysis of whether the solved problem admits only minor patches vs requiring complete replacement; assessment of whether the breakthrough generalizes to other hard problems in the same family",
+      "impact": "If re-hardenable: protocol can recover via algorithm adjustment (Scaffold with technical sunset). If permanently compromised: requires migration to entirely different cryptographic primitive (Snare becomes structural default; protocol evolves or fails).",
       "confidence": "medium",
-      "type_class": "preference",
-      "description": "The capacity of the decentralized community to respond to a fundamental security breach."
+      "type_class": "conceptual",
+      "description": "Whether the solved problem can be re-hardened"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.6
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.95
-    },
-    {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.5
+      "time_point": 3,
+      "value": 0.72
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.85
+      "time_point": 6,
+      "value": 0.78
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "This constraint models a Proof-of-Work (PoW) based coordination system (e.g., a cryptocurrency) that has been compromised by a secret zero-day exploit. The exploit breaks the foundational 'asymmetric computational difficulty,' allowing a single advanced adversary to solve the computational puzzle with trivial effort. While the system was designed as a Rope—a fair mechanism for achieving decentralized consensus—the secret compromise has transformed it into a pure Snare. Legitimate participants continue to expend vast resources on 'mining,' but this activity is now pure theater, serving only to maintain the illusion of security while the adversary extracts the system's entire value.",
+    "narrative_context": "A proof-of-work blockchain system is designed as a pure coordination mechanism (Rope): all participants solve a cryptographic puzzle of equal difficulty, and the first to solve it earns the right to propose the next block. The system's security depends on computational cost being symmetric \u2014 attacking the network via 51% hash power acquisition should be economically infeasible. But one actor has solved the underlying mathematical problem. For them, the computational cost has collapsed to near-zero. They can now produce blocks at will, without expending the resources that honest miners must spend. This converts the Rope into a Snare: the coordination mechanism becomes an extraction mechanism. The honest miners, users, and protocol integrity all experience asymmetric computational difficulty. The zero-day possessor experiences the constraint as enabling dominance. The constraint exhibits all six DR types from different perspectives, but the structural data unmasks a false mountain: the analytical observer might naturalize proof-of-work difficulty as a law of mathematics, but the zero-day reveals it as a current epistemological limitation masquerading as ontological necessity.",
     "key_agents": [
-      "Advanced Adversary: Primary beneficiary (institutional/arbitrage) — Possesses the exploit and can generate valid proofs with near-zero cost.",
-      "Legitimate Miners: Primary victims (powerless/trapped) — Invested heavily in specialized hardware and are locked into a competition they cannot win.",
-      "Network Users: Secondary victims (moderate/mobile) — Rely on the network's security guarantees, which are now void.",
-      "Unaware Protocol Foundation: Institutional actor (institutional/constrained) — Maintains the protocol under the false belief that it is secure.",
-      "Analytical Observer: Security researcher/cryptographer (analytical/analytical) — Can model and identify the structural failure."
+      "Zero-Day Possessor: Primary beneficiary (institutional/arbitrage) \u2014 solves the hard problem and captures near-costless mining dominance",
+      "Honest Miners: Primary victim (powerless/trapped) \u2014 expend computational resources under false assumption of symmetric difficulty",
+      "System Users: Secondary victim (powerless/trapped) \u2014 rely on computational cost of attacks being infeasible; vulnerable to double-spend and censorship",
+      "Proof-of-Work Network: Structural victim (abstract/trapped) \u2014 designed as symmetric coordination mechanism; becomes asymmetric extraction mechanism",
+      "Protocol Development Community: Mixed (organized/constrained) \u2014 benefits from coordination function but suffers latent compromise through inability to verify security properties",
+      "Consensus Mechanism Theater: Institutional actor (institutional/arbitrage) \u2014 maintains performative security narrative despite functional degradation"
     ],
-    "logic_rationale": "Extractiveness (ε=0.85): Extremely high. The adversary captures the entire security budget (block rewards and transaction fees) that is supposed to incentivize honest participation from a distributed network of miners. Suppression (0.90): Extremely high. The secrecy of the exploit prevents any counter-strategy. Legitimate miners are suppressed not by overt force, but by information asymmetry; they cannot opt-out of the rigged game without abandoning their sunk costs. Theater Ratio (0.95): Near total. All the energy and computation expended by legitimate miners is functionally useless for securing the network. It is a massive, performative ritual that serves only to conceal the underlying extraction.",
-    "perspectival_gap": "The gap is maximal. The adversary experiences a perfect subsidy (Rope), while the miners experience a perfect trap (Snare). The unaware maintainers see the system's blueprint (Rope), while casual users see a degraded but seemingly functional utility (Piton). This gap between the claimed function and the operational reality for different agents is the core pathology the constraint reveals.",
-    "directionality_logic": "The directionality is derived directly from the structural positions. The 'advanced_adversary' is the sole beneficiary with arbitrage exit, yielding a low 'd' value and negative effective extraction (a subsidy). The 'legitimate_miners' are victims with trapped exit, yielding a maximal 'd' value and extreme effective extraction. The unaware foundation, while institutional, is constrained and perceives itself as a symmetric participant, leading to a Rope classification from its flawed viewpoint.",
-    "mandatrophy_analysis": "This case is a classic resolution of the Mandatrophy. The system's public claim is that of a Rope (fair coordination). An analysis that only considered this claim would be dangerously wrong. By indexing to the powerless, trapped victim (the legitimate miner), the framework correctly classifies the operational reality as a Snare. The system is not a coordination mechanism with a flaw; it is an extraction mechanism disguised as a coordination mechanism. The high 'mandatrophy_resolved' flag is required because the extractiveness (0.85) is so severe that this distinction is critical."
+    "logic_rationale": "Extractiveness (0.78): Very high. The zero-day possessor reduces their computational cost from symmetric (equal to honest miners) to near-zero, while honest miners continue to expend full resources. This is pure extraction: the asymmetry transfers all computational work subsidy to the beneficiary. Suppression (0.82): Extremely high. The zero-day is by definition secret; victims have no knowledge of the asymmetry and no mechanism to detect it until catastrophic exploits occur. The difficulty adjustment mechanism is performative \u2014 it measures aggregate hashrate but cannot distinguish honest from subsidized hashes. Theater ratio (0.35): Low. The constraint is functionally real (actual computational asymmetry exists), not performative. However, the theater increases over time as the constraint persists undetected \u2014 audits, security reviews, and consensus monitoring all fail to detect the compromise, creating false assurance. The theater is in the verification theater (false negative audits), not in the mechanism itself.",
+    "directionality_logic": "Directionality d is determined by each agent's structural position relative to the asymmetric computational difficulty. The zero-day possessor occupies d \u2248 0.0 (full beneficiary): they have solved the problem that is supposed to be hard, granting them arbitrage options (sell the exploit, use it covertly, weaponize it). Honest miners occupy d \u2248 1.0 (full target): they are trapped in the network, unable to exit without abandoning holdings, and they unknowingly subsidize the zero-day possessor's dominance. The protocol development community occupies d \u2248 0.55 (mixed): they benefit from the coordination function of proof-of-work but are extracted from through the latent compromise they cannot detect. The engine derives high f(d) for honest miners (trapped victims) and low/negative f(d) for the zero-day possessor (arbitrage beneficiary), producing extreme \u03c7 differential.",
+    "perspectival_gap": "This constraint demonstrates radical perspectival divergence. The zero-day possessor sees a Rope (coordination mechanism that enables their dominance). Honest miners see a Snare (extraction mechanism that transfers their computational work to an unseen beneficiary). The protocol community sees a Tangled Rope (mixed coordination and extraction, with extraction hidden). The institutional review process sees a Piton (security theater persisting despite degraded function). The analytical observer risks seeing a Mountain (mathematical necessity of hard problems), but the structural data reveals this as false naturalization. The perspectival gaps are not disagreements about the same mechanism \u2014 they reflect genuine structural asymmetry in who bears costs and who captures benefits.",
+    "mandatrophy_analysis": "RESOLUTION: The mandatrophy (is this Rope or Snare?) is resolved by the structural data: it is a Snare. The constraint was designed as a Rope (pure coordination for Sybil resistance), but the zero-day converts it into a Snare (pure extraction). The resolution criterion is the presence of asymmetric extraction: honest miners and users bear the full computational cost they think they're paying; the zero-day possessor bears near-zero cost while capturing block production dominance. The beneficiary/victim distinction is clear: beneficiary (zero-day possessor with arbitrage), victims (honest miners and users who are trapped). The presence of a coordination function (Byzantine fault tolerance, decentralization incentive) does NOT prevent Snare classification \u2014 the asymmetry and suppression are severe enough to override any coordination benefit. The false mountain perspective is identified as such: computational hardness is not an immutable law but a current state of mathematical knowledge. If the zero-day is disclosed and the problem is re-hardened, the mechanism can revert to Rope. If the problem structure is fundamentally compromised, the protocol must migrate entirely."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
-  }
+  },
+  "network": {
+    "affects_constraints": [
+      "blockchain_51_percent_attack",
+      "cryptocurrency_user_asset_security",
+      "cryptographic_primitive_trust"
+    ],
+    "dual_formulation_note": "The proof-of-work zero-day is upstream of specific attack vectors (51% attacks, double-spend, censorship). The zero-day enables those attacks by removing the computational cost barrier. The structural constraint is the asymmetric difficulty; the downstream constraints are the exploitable attacks that follow. Extractiveness values differ: zero-day (0.78, Snare), upstream attacks (varies by attack type, but all enabled by asymmetry)."
+  },
+  "directionality_overrides": []
 }

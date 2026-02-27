@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: finite_simple_group_classification
+% CONSTRAINT STORY: finite_simple_groups_classification
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_finite_simple_group_classification, []).
+:- module(constraint_finite_simple_groups_classification, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -31,7 +32,6 @@
     domain_priors:suppression_score/2,
     domain_priors:theater_ratio/2,
     domain_priors:requires_active_enforcement/1,
-    domain_priors:emerges_naturally/1,
     narrative_ontology:has_sunset_clause/1,
     narrative_ontology:interval/3,
     narrative_ontology:measurement/5,
@@ -39,11 +39,10 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -53,26 +52,32 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: finite_simple_group_classification
+ *   constraint_id: finite_simple_groups_classification
  *   human_readable: The Classification of Finite Simple Groups (CFSG)
- *   domain: mathematical
+ *   domain: mathematical/abstract_algebra
  *
  * SUMMARY:
- *   The CFSG is a landmark theorem stating that every finite simple group belongs
- *   to one of 18 infinite families, is one of the 26 sporadic groups, or is an
- *   alternating group. Often called "The Enormous Theorem," its proof spans
- *   tens of thousands of pages across hundreds of journal articles, representing
- *   one of the largest collaborative efforts in mathematics. This constraint
- *   represents the fixed, logical structure of this mathematical reality.
+ *   The Classification of Finite Simple Groups (CFSG) is a landmark theorem
+ *   in abstract algebra completed over the 20th century, culminating in full
+ *   proof by approximately 2004 (with the completion of the second generation
+ *   proof). The theorem states that every finite simple group belongs to one
+ *   of 18 infinite families (cyclic groups of prime order, alternating
+ *   groups, groups of Lie type, and a few special families), is one of 26
+ *   sporadic groups, or is an alternating group. The CFSG is one of the most
+ *   significant theorems in pure mathematics, often cited as the longest
+ *   proof ever assembled (distributed across more than 10,000 pages and
+ *   hundreds of papers). This constraint exemplifies a mountain
+ *   classification: the structure of finite simple groups is logically
+ *   invariant, independent of institutional arrangements, funding, or
+ *   observer perspective. No mathematician can 'opt out' of the constraint —
+ *   it is not a convention but an immutable structural fact about finite
+ *   groups.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Individual Researcher (powerless/trapped): An agent who must accept the
- *     validity of the proof without the lifespan necessary to personally verify it.
- *   - The Mathematical Community (institutional/arbitrage): The collective that
- *     maintains, simplifies, and applies the theorem.
- *   - The Finite Simple Group (analytical/trapped): The mathematical object whose
- *     identity is strictly confined by the theorem.
- *   - Analytical Observer: Sees the full logical structure of the theorem.
+ * KEY AGENTS:
+ *   - Pure Mathematics Community: Analytical community (analytical/analytical) — recognizes CFSG as a completed logical structure; the classification is irreducible and eternal
+ *   - Group Theory Researchers: Moderate researchers (moderate/analytical) — constrained by CFSG but benefit from its completeness; no extraction occurs because no agent benefits asymmetrically
+ *   - Mathematical Logic: Foundational discipline (analytical/analytical) — verifies the logical consistency and completeness of the proof; no beneficiary or victim
+ *   - Applied Fields (Cryptography, Coding Theory, Physics): Moderate users (moderate/analytical) — may use CFSG results but are not extractively constrained; the theorem is a resource, not a trap
  */
 
 /* ==========================================================================
@@ -80,81 +85,50 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: As a mathematical theorem, the CFSG is a statement of logical fact.
-% It has zero structural extractiveness. The immense cognitive cost of verifying
-% the proof is a barrier to entry, not an extraction inherent in the theorem.
-% It does not suppress alternatives; it proves they do not exist.
-domain_priors:base_extractiveness(finite_simple_group_classification, 0.05).
-domain_priors:suppression_score(finite_simple_group_classification, 0.01).
-domain_priors:theater_ratio(finite_simple_group_classification, 0.01).
+domain_priors:base_extractiveness(finite_simple_groups_classification, 0.12).
+domain_priors:suppression_score(finite_simple_groups_classification, 0.03).
+domain_priors:theater_ratio(finite_simple_groups_classification, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(finite_simple_group_classification, extractiveness, 0.05).
-narrative_ontology:constraint_metric(finite_simple_group_classification, suppression_requirement, 0.01).
-narrative_ontology:constraint_metric(finite_simple_group_classification, theater_ratio, 0.01).
+narrative_ontology:constraint_metric(finite_simple_groups_classification, extractiveness, 0.12).
+narrative_ontology:constraint_metric(finite_simple_groups_classification, suppression_requirement, 0.03).
+narrative_ontology:constraint_metric(finite_simple_groups_classification, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. A mathematical theorem has perfect collapse
-% (no alternatives are logically possible) and zero resistance.
-narrative_ontology:constraint_metric(finite_simple_group_classification, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(finite_simple_group_classification, resistance, 0.0).
+narrative_ontology:constraint_metric(finite_simple_groups_classification, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(finite_simple_groups_classification, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(finite_simple_group_classification, mountain).
-narrative_ontology:human_readable(finite_simple_group_classification, "The Classification of Finite Simple Groups (CFSG)").
-narrative_ontology:topic_domain(finite_simple_group_classification, "mathematical").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(finite_simple_groups_classification, mountain).
+narrative_ontology:human_readable(finite_simple_groups_classification, "The Classification of Finite Simple Groups (CFSG)").
+narrative_ontology:topic_domain(finite_simple_groups_classification, "mathematical/abstract_algebra").
 
-% --- Binary flags ---
-% A mathematical theorem does not require active enforcement.
+domain_priors:emerges_naturally(finite_simple_groups_classification).
 
-% --- Emergence flag (required for mountain constraints) ---
-% A mathematical truth emerges from the structure of logic itself.
-domain_priors:emerges_naturally(finite_simple_group_classification).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% As a pure Mountain (natural law), there are no structural beneficiaries or
-% victims. The theorem is a universal, symmetric fact. The directionality
-% derivation chain is not needed. No enrichment needed.
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE INDIVIDUAL RESEARCHER (MOUNTAIN)
-% A lone mathematician cannot choose to work in a universe where the CFSG is
-% false. They are trapped by its logical necessity. While the proof's complexity
-% creates a high barrier to personal verification, this is a cognitive cost,
-% not a structural extraction. The theorem itself is a fixed landmark.
-constraint_indexing:constraint_classification(finite_simple_group_classification, mountain,
+% PERSPECTIVE 1: APPLIED MATHEMATICIAN (MOUNTAIN) — The CFSG is an immutable structural fact about abstract group theory. Whether this theorem is used in applications or ignored, the theorem holds independently. No exit option exists; the classification is not contingent on institutional arrangements or funding priorities. The applied mathematician cannot 'opt out' of the theorem's existence — it constrains what is logically possible in finite group theory.
+constraint_indexing:constraint_classification(finite_simple_groups_classification, mountain,
     context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(universal))).
-
-% PERSPECTIVE 2: THE MATHEMATICAL COMMUNITY (MOUNTAIN)
-% For the institutional community, the theorem is not a coordination tool (Rope)
-% but a fundamental feature of the landscape (Mountain) around which coordination
-% occurs. It is an unchangeable fact that enables further work.
-constraint_indexing:constraint_classification(finite_simple_group_classification, mountain,
-    context(agent_power(institutional),
             time_horizon(civilizational),
-            exit_options(arbitrage), % Can simplify proofs, find new applications
+            exit_options(analytical),
             spatial_scope(universal))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The analytical view confirms the theorem's status as a natural law of
-% mathematics. Its classification is invariant across all perspectives.
-constraint_indexing:constraint_classification(finite_simple_group_classification, mountain,
+% PERSPECTIVE 2: GROUP THEORIST (MOUNTAIN) — The CFSG is an immutable logical structure. A group theorist researching finite groups must accept the classification as a constraint on what finite simple groups can exist. They may choose to work in other areas of algebra, but they cannot 'disagree' with the CFSG — it is not subject to scientific contestation or institutional power. The constraint is irreducible.
+constraint_indexing:constraint_classification(finite_simple_groups_classification, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: PURE MATHEMATICIAN / ANALYTICAL OBSERVER (MOUNTAIN) — From the perspective of mathematical logic and structure, the CFSG is a completed classification of a well-defined mathematical object. Every finite simple group either falls into one of the 18 families, is one of 26 sporadic groups, or is an alternating group. This is not a probabilistic claim, not a conjecture, not a matter of interpretation. It is a theorem with a complete proof. The constraint is eternal, universal, and carries zero degrees of freedom for all indices.
+constraint_indexing:constraint_classification(finite_simple_groups_classification, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
@@ -164,30 +138,30 @@ constraint_indexing:constraint_classification(finite_simple_group_classification
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(finite_simple_group_classification_tests).
+:- begin_tests(finite_simple_groups_classification_tests).
 
-test(classification_invariance) :-
-    % Verify that the classification is Mountain from all key perspectives.
-    constraint_indexing:constraint_classification(finite_simple_group_classification, Type1, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(finite_simple_group_classification, Type2, context(agent_power(institutional), _, _, _)),
-    constraint_indexing:constraint_classification(finite_simple_group_classification, Type3, context(agent_power(analytical), _, _, _)),
-    Type1 == mountain,
-    Type2 == mountain,
-    Type3 == mountain.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(finite_simple_groups_classification, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(finite_simple_groups_classification, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(mountain_metric_thresholds) :-
-    % Verify that the base metrics are within the allowed range for a Mountain.
-    narrative_ontology:constraint_metric(finite_simple_group_classification, extractiveness, E),
-    narrative_ontology:constraint_metric(finite_simple_group_classification, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(finite_simple_groups_classification, ExtMetricName, E),
+    domain_priors:suppression_score(finite_simple_groups_classification, S),
     E =< 0.25,
     S =< 0.05.
 
-test(claim_matches_analytical_view) :-
-    narrative_ontology:constraint_claim(finite_simple_group_classification, ClaimType),
-    constraint_indexing:constraint_classification(finite_simple_group_classification, AnalyticalType, context(agent_power(analytical), _, _, _)),
-    ClaimType == AnalyticalType.
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(finite_simple_groups_classification),
+    narrative_ontology:constraint_metric(finite_simple_groups_classification, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(finite_simple_groups_classification, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
-:- end_tests(finite_simple_group_classification_tests).
+:- end_tests(finite_simple_groups_classification_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -195,74 +169,83 @@ test(claim_matches_analytical_view) :-
 
 /**
  * LOGIC RATIONALE:
- *   The original file incorrectly modeled the cognitive cost of verifying the
- *   CFSG's enormous proof as structural extraction (ε=0.35) and suppression
- *   (s=0.2). This violates the ε-invariance principle and the definition of a
- *   Mountain. A mathematical theorem is a statement of fact about a logical
- *   system; it has ε≈0 and s≈0. The difficulty of proving it does not change
- *   its structural properties. This regenerated file corrects the metrics to
- *   ε=0.05 and s=0.01, consistent with a Mountain classification.
+ *   Extractiveness (0.12): Extremely low. The CFSG is a pure mathematical fact with no asymmetric extraction. No agent benefits at the expense of another. The classification is a public mathematical good — all mathematicians have equal access to the theorem and its consequences. The minimal value (0.12 rather than 0.00) reflects minor institutional costs in learning and verifying the proof, but these are not extraction costs; they are standard knowledge-acquisition costs in mathematics. Suppression (0.03): Negligible. There are no coercive barriers to studying or using the CFSG. Alternative approaches to group theory (representation theory, homological algebra) are available and freely studied. Theater ratio (0.15): Very low. The CFSG proof is highly technical and substantive; performative content is minimal. The proof verification process is mathematically rigorous, not theatrical. The slight non-zero value reflects standard mathematical exposition overhead — the proof must be written down, taught in seminars, and communicated — but this overhead is necessary for knowledge transmission, not performative.
  *
  * PERSPECTIVAL GAP:
- *   There is no structural perspectival gap. The CFSG is a Mountain from all
- *   perspectives. The narrative illusion of a gap (e.g., an individual feeling
- *   it is a "Snare" of trust) arises from the immense verification cost. This
- *   cost is a property of the proof's complexity, not the theorem's structure.
- *   The framework correctly identifies the theorem itself as an invariant Mountain.
+ *   There is no perspectival gap in the CFSG. All perspectives — applied, theoretical, analytical, institutional — classify the constraint as Mountain. This is a rare property, characteristic of true natural laws in mathematics. The invariance across all perspectives is precisely the signature of an irreducible mathematical structure. The CFSG does not appear as Rope or Snare from any legitimate mathematical vantage point because the classification is not a coordination mechanism requiring enforcement, and it is not extractive. The lack of perspectival gap is evidence of the theorem's fundamental status.
  *
  * DIRECTIONALITY LOGIC:
- *   As a pure Mountain, the constraint is symmetric and applies universally.
- *   There are no structural beneficiaries or victims, so beneficiary/victim
- *   declarations are omitted as they are not applicable.
+ *   The CFSG exhibits zero directionality variation across all perspectives because no extraction occurs. All agents — applied mathematicians, group theorists, logicians, engineers using group-theoretic methods — experience the same d value: d = 0.5 (symmetric), because no one benefits asymmetrically and no one is a trapped victim. The constraint is a structural fact of mathematics, not a power relationship. The sigmoid f(d) yields f(0.5) = 0.65 baseline, but this is academic knowledge-acquisition effort, not extraction. The scope modifier σ(S) = 1.0 (universal), confirming that the CFSG holds in all mathematical contexts. The effective extractiveness χ = ε × f(d) × σ(S) = 0.12 × 0.65 × 1.0 ≈ 0.08, confirming mountain classification.
  *
  * MANDATROPHY ANALYSIS:
- *   By classifying the CFSG as a pure Mountain, we avoid the error of conflating
- *   high verification costs with genuine extraction. This prevents the
- *   mislabeling of a fundamental truth as a coercive instrument (Snare) or a
- *   mere coordination tool (Rope). The theorem is a fixed landmark, not a
- *   mechanism designed by agents for coordination or extraction.
+ *   The CFSG requires no mandatrophy resolution because it exhibits zero extraction across all perspectives and all time periods. The constraint is not subject to mandatrophy — the degeneration of coordination function into pure extraction — because it has no coordination function to degenerate. It is purely a mathematical fact. The theorem does not maintain itself through institutional theater or suppression; it maintains itself because it is logically true. Unlike institutional constraints (scaffolds, snares, pitons) that can degrade over time, mathematical theorems do not degrade. Once proven, the CFSG is eternally true, regardless of how many mathematicians study it or how institutional interest waxes and wanes.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_cfsg_proof_completeness,
-    "Is the 'Second Generation' proof, intended to simplify and verify the original, actually complete and error-free?",
-    "Formal verification of the Gorenstein-Lyons-Solomon volumes using an automated proof assistant (e.g., Lean, Coq).",
-    "If gaps remain: The Mountain's existence is not fully proven, making it a Scaffold of belief. If complete: It is confirmed as a true Mountain.",
+    proof_completeness,
+    'Is the proof of the CFSG truly complete, or does it rely on unresolved sub-theorems or computational verification that could fail under scrutiny?',
+    'Review of the complete proof (20,000+ pages across hundreds of papers) and identification of any gaps or circular dependencies. Verification of computer-assisted proofs in the classification (e.g., proof of uniqueness for certain sporadic groups).',
+    'If the proof is incomplete: CFSG drops from Mountain to Tangled Rope or Piton (institutional maintenance of an incomplete claim). If the proof is complete and verified: CFSG remains Mountain, confirming irreducible mathematical truth.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(proof_completeness, empirical, 'Whether the CFSG proof is logically and computationally complete').
+
+omega_variable(
+    quasisimple_group_boundary,
+    'Does the classification extend cleanly to quasisimple groups (covering groups of simple groups), or does the boundary between simple and quasisimple introduce classificatory ambiguity?',
+    'Examination of the relationship between simple and quasisimple group classifications; determination of whether all quasisimple extensions of finite simple groups are enumerated or whether new quasisimple groups could exist outside the classification.',
+    'If the boundary is clean: CFSG scope is well-defined (Mountain). If the boundary is ambiguous: CFSG may describe a proper subset of a larger natural class (Mountain becomes Rope with definitional tension).',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(quasisimple_group_boundary, conceptual, 'Whether the simple/quasisimple boundary is natural or conventional').
+
+omega_variable(
+    infinitary_extension,
+    'Does the CFSG structure extend to infinite simple groups, or is the finiteness restriction fundamental to the classification?',
+    'Investigation of whether infinite simple groups exhibit analogous family structures (Lie groups, pro-finite groups) and whether their classification would follow from or relate to the CFSG.',
+    'If extension is possible and analogous: CFSG is an instance of a deeper principle (reduces to Mountain). If extension fails: finiteness is a genuine restriction (CFSG remains Mountain but narrowly scoped).',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(infinitary_extension, conceptual, 'Whether the classification principle extends to infinite groups').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(finite_simple_group_classification, 1955, 2026).
+narrative_ontology:interval(finite_simple_groups_classification, 0, 100).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Not required. Base extractiveness (0.05) is below the 0.46 threshold for
-% mandatory temporal tracking.
+% Theater ratio over time
+narrative_ontology:measurement(cfsg_tr_t0, finite_simple_groups_classification, theater_ratio, 0, 0.1).
+narrative_ontology:measurement(cfsg_tr_t50, finite_simple_groups_classification, theater_ratio, 50, 0.14).
+narrative_ontology:measurement(cfsg_tr_t100, finite_simple_groups_classification, theater_ratio, 100, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(cfsg_be_t0, finite_simple_groups_classification, base_extractiveness, 0, 0.1).
+narrative_ontology:measurement(cfsg_be_t50, finite_simple_groups_classification, base_extractiveness, 50, 0.11).
+narrative_ontology:measurement(cfsg_be_t100, finite_simple_groups_classification, base_extractiveness, 100, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No network relationships or specific coordination type declared for this
-% fundamental mathematical constraint.
+narrative_ontology:coordination_type(finite_simple_groups_classification, information_standard).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Not required. As a pure Mountain, the constraint is symmetric and does not
-% require directionality overrides.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

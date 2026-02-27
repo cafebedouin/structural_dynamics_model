@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: regulatory_pathway_psychedelic_therapy
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-08-01
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_regulatory_pathway_psychedelic_therapy, []).
@@ -42,7 +43,10 @@
     narrative_ontology:coordination_type/2,
     narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3.
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -55,21 +59,36 @@
  *   domain: technological/political
  *
  * SUMMARY:
- *   This constraint represents the complex, high-cost, and high-suppression
- *   regulatory framework (e.g., FDA clinical trials) required to bring novel
- *   psychedelic compounds like DMT to market for treating conditions like
--  *   depression. While it serves a genuine coordination function—ensuring
-+  *   depression. While it serves a genuine coordination function—ensuring
- *   public safety and therapeutic efficacy—it also creates enormous barriers
- *   to entry, which asymmetrically benefit well-capitalized pharmaceutical
- *   firms and extract significant value (in time, access, and cost) from
- *   patients.
+ *   The regulatory pathway for psychedelic therapy represents a hybrid
+ *   coordination-extraction constraint where legitimate therapeutic oversight
+ *   (FDA's coordination function) is coupled with significant extraction
+ *   through capital barriers, timeline suppression, and monopoly gatekeeping.
+ *   Patients with treatment-resistant depression or PTSD face both
+ *   suppression (legal prohibition, access restriction) and extraction (high
+ *   medication costs, delayed access during multi-year trials). Independent
+ *   research teams face capital barriers ($100M+) that favor well-capitalized
+ *   incumbent pharmaceutical companies. The constraint exhibits all
+ *   manifestations of a tangled rope: genuine coordination function
+ *   (establishing safety standards, preventing proliferation of unsafe
+ *   compounds), asymmetric beneficiaries (pharmaceutical companies capture
+ *   exclusive rents), asymmetric victims (patients, researchers, field
+ *   innovation), and active enforcement (DEA scheduling, FDA trial
+ *   requirements). The theater ratio is high (0.68) and increasing because
+ *   regulatory approval rhetoric emphasizes safety and scientific rigor while
+ *   the actual approval bar has become increasingly disconnected from
+ *   comparative international evidence standards and from real-world
+ *   therapeutic outcomes. Breakthrough therapy designations and
+ *   decriminalization efforts represent scaffold-like reform mechanisms
+ *   building toward sunset of the traditional regulatory monopoly.
  *
- * KEY AGENTS (by structural relationship):
- *   - Patients with treatment-resistant depression: Primary target (powerless/trapped) — bears the cost of delayed access, high prices, and limited options.
- *   - Psychedelic pharmaceutical developers: Primary beneficiary (institutional/arbitrage) — navigates the pathway to secure patent-protected market exclusivity, benefiting from the high barriers to entry.
- *   - Government Regulators (e.g., FDA): Inter-institutional actor (institutional/constrained) — enforces the pathway to ensure public safety, but is constrained by political mandates and historical drug policy.
- *   - Analytical Observer: Analytical psychopharmacologist — sees the full structure of coordination and extraction.
+ * KEY AGENTS:
+ *   - Treatment-Seeking Patients: Primary victims (powerless/trapped) — lack legal access, face suppression, bear costs of delayed innovation and high medication prices
+ *   - Independent Biotech/Research Teams: Secondary victims (moderate/constrained) — face $100M+ capital barriers, 10+ year development timelines, institutional gatekeeping
+ *   - Incumbent Pharmaceutical Companies: Primary beneficiaries (institutional/arbitrage) — capture exclusive market access, monopoly pricing, regulatory moat protection
+ *   - FDA Regulatory Agency: Organized enforcer (organized/constrained) — derives legitimacy and resource justification from pharmaceutical gatekeeping; constrained by safety liability and political pressure for faster access
+ *   - DEA Controlled Substance Scheduling: Institutional actor (institutional/arbitrage) — maintains symbolic prohibition; increasingly performative as state-level decriminalization creates alternative pathways
+ *   - Breakthrough Therapy / Reform Coalition: Organized advocates (organized/constrained) — patient groups, reform-minded researchers, some FDA/political staff building accelerated pathways and decriminalization as alternatives to classical regulatory monopoly
+ *   - Mental Health Innovation Field: Collective victim (powerless/trapped) — entire therapeutic domain experiences suppressed innovation and delayed access to potentially transformative compounds due to regulatory barriers
  */
 
 /* ==========================================================================
@@ -77,96 +96,81 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(regulatory_pathway_psychedelic_therapy, 0.48).
-domain_priors:suppression_score(regulatory_pathway_psychedelic_therapy, 0.80).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(regulatory_pathway_psychedelic_therapy, 0.35).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(regulatory_pathway_psychedelic_therapy, 0.58).
+domain_priors:suppression_score(regulatory_pathway_psychedelic_therapy, 0.72).
+domain_priors:theater_ratio(regulatory_pathway_psychedelic_therapy, 0.68).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(regulatory_pathway_psychedelic_therapy, extractiveness, 0.48).
-narrative_ontology:constraint_metric(regulatory_pathway_psychedelic_therapy, suppression_requirement, 0.80).
-narrative_ontology:constraint_metric(regulatory_pathway_psychedelic_therapy, theater_ratio, 0.35).
+narrative_ontology:constraint_metric(regulatory_pathway_psychedelic_therapy, extractiveness, 0.58).
+narrative_ontology:constraint_metric(regulatory_pathway_psychedelic_therapy, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(regulatory_pathway_psychedelic_therapy, theater_ratio, 0.68).
 
-% --- Constraint claim (must match analytical perspective type) ---
+% --- Constraint claim ---
 narrative_ontology:constraint_claim(regulatory_pathway_psychedelic_therapy, tangled_rope).
+narrative_ontology:human_readable(regulatory_pathway_psychedelic_therapy, "The Regulatory and Clinical Pathway for Novel Psychedelic Therapies").
+narrative_ontology:topic_domain(regulatory_pathway_psychedelic_therapy, "technological/political").
 
-% --- Binary flags ---
-domain_priors:requires_active_enforcement(regulatory_pathway_psychedelic_therapy). % Required for Tangled Rope
+domain_priors:requires_active_enforcement(regulatory_pathway_psychedelic_therapy).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(regulatory_pathway_psychedelic_therapy, psychedelic_pharma_developers).
-narrative_ontology:constraint_beneficiary(regulatory_pathway_psychedelic_therapy, public_safety_mandate). % The coordination function
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(regulatory_pathway_psychedelic_therapy, patients_with_depression).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three) -> MET
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(regulatory_pathway_psychedelic_therapy, incumbent_pharmaceutical_companies).
+narrative_ontology:constraint_beneficiary(regulatory_pathway_psychedelic_therapy, regulatory_agencies).
+narrative_ontology:constraint_victim(regulatory_pathway_psychedelic_therapy, treatment_seeking_patients).
+narrative_ontology:constraint_victim(regulatory_pathway_psychedelic_therapy, psychedelic_research_teams).
+narrative_ontology:constraint_victim(regulatory_pathway_psychedelic_therapy, mental_health_field_innovation).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PATIENT WITH DEPRESSION (PRIMARY TARGET)
-% For a patient trapped by their condition with few effective alternatives,
-% the regulatory pathway is an opaque, slow, and costly barrier. The
-% coordination function (long-term public safety) is an abstraction compared
-% to their immediate suffering. High ε combined with their derived d≈0.95 and
-% national scope σ=1.0 results in χ > 0.66, a clear Snare.
-constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, tangled_rope,
+% PERSPECTIVE 1: TREATMENT-SEEKING PATIENT (SNARE) — Faces severe depression or treatment-resistant PTSD with limited alternatives. Cannot exit the regulatory pathway; experimental compounds are illegal regardless of personal medical judgment. Bears full cost of suppression (restricted access) while extraction flows upward to pharmaceutical companies and regulatory gatekeepers. No alternatives available, no voice in the process, no exit option.
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(national))).
 
-% PERSPECTIVE 2: THE PHARMACEUTICAL DEVELOPER (PRIMARY BENEFICIARY)
-% For the company with the capital to navigate the trials, the high
-% suppression and cost are a feature, not a bug. It creates a powerful
-% competitive moat, ensuring that if they succeed, they will have a highly
-% profitable, patent-protected market. For them, it is a pure coordination
-% mechanism (Rope). Their derived d≈0.05 and global scope σ=1.2 results in a
-% negative χ, indicating a subsidy.
-constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, naturalized,
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(global))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% The analyst sees both sides: the genuine, necessary coordination function
-% (public safety) and the severe, asymmetric extraction imposed on patients
-% and the healthcare system. The combination of high suppression, high base
-% extraction, and the presence of both beneficiaries and victims makes this a
-% canonical Tangled Rope.
-constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, tangled_rope,
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))).
-
-% PERSPECTIVE 4: THE GOVERNMENT REGULATOR (INTER-INSTITUTIONAL)
-% The regulator (e.g., FDA) is an institutional actor tasked with enforcing
-% this system. Their exit is 'constrained' by their public mandate and
-% political reality. They see the system as a coordination Rope, designed to
-% balance innovation with safety. Their directionality is more neutral than
-% the developer's but still sees the system as functional. We use an override
-% to capture this specific structural position.
-constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, naturalized,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: INDEPENDENT RESEARCH TEAM (SNARE) — Small biotech firms or academic researchers pursuing psychedelic therapy must navigate FDA Phase I-III trial requirements costing $100M+ over 10+ years. Exit options are severely constrained: can attempt international development (regulatory arbitrage in some contexts) but this fragments the market. Cannot commercialize in the US without FDA approval. Faces suppression through capital barriers, regulatory complexity, and institutional gatekeeping. High experienced extraction.
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, snare,
+    context(agent_power(moderate),
             time_horizon(generational),
             exit_options(constrained),
             spatial_scope(national))).
+
+% PERSPECTIVE 3: INCUMBENT PHARMACEUTICAL COMPANY (ROPE) — Large pharma benefits from regulatory pathway's coordination function: FDA approval creates legal monopoly, protects against generics during patent exclusivity, and establishes dosing/labeling standards that reduce liability. Extraction runs toward this agent — they capture rents from exclusivity while using the pathway to coordinate market access. High exit optionality (can pursue other indications, have capital for 10+ year trials, can lobby for extension). Experiences the constraint as enabling coordination and value capture.
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: REGULATORY AGENCY (FDA) (TANGLED ROPE) — Organized institution enforcing the pathway, but also constrained by it. FDA derives organizational legitimacy and resource justification from managing pharmaceutical approval (coordination function) but also extracts by setting approval bar high enough that only well-capitalized firms can succeed (extraction asymmetry). Benefits from gatekeeping role; constrained by political pressure for faster approvals, safety litigation risk, and limited staff. Experiences both coordination (pharmaceutical safety standards) and asymmetric extraction (capital barriers to entry).
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: BREAKTHROUGH THERAPY DESIGNATION (BTD) REFORM PATHWAY (SCAFFOLD) — Organized advocates (patient groups, reform-minded researchers, some FDA staff) see the regulatory pathway as a temporary problem with a visible sunset: accelerated approval programs, breakthrough designations, expanded access pathways, and decriminalization efforts are creating alternatives that bypass traditional Phase III gatekeeping. From this view, the classical regulatory monopoly is degrading in real time. Theater ratio high (performative safety arguments) but declining as alternative verification methods (real-world outcomes data, adaptive trials) mature. Exit path visible — reform has begun.
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: CONTROLLED SUBSTANCE SCHEDULING (PITON) — The DEA's Schedule I classification of psychedelics persists largely through institutional inertia despite decades of evidence that compounds like psilocybin have low abuse potential and potential therapeutic value. The scheduling system functions theatrically: it maintains symbolic prohibition while the actual therapeutic demand is met through decriminalization in some jurisdictions and compassionate use programs. The primary function (preventing abuse) has atrophied; the constraint persists due to bureaucratic and political inertia, not because it works. High theater, low functionality, institutional maintenance of outdated rules.
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, any novel therapeutic compound must prove safety and efficacy before deployment at population scale — this is presented as an immutable constraint on medical practice. Rigorous trial requirements are framed as inherent to responsible pharmacology. However, this naturalizes what is actually a contingent institutional choice: regulatory rigor is culture and policy-dependent, not a law of nature. Other jurisdictions have approved psychedelic therapies with different evidence thresholds. The mountain classification reveals false naturalization.
+constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -175,20 +179,17 @@ constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_the
 :- begin_tests(regulatory_pathway_psychedelic_therapy_tests).
 
 test(perspectival_gap) :-
-    % Verify the gap between the patient (Snare) and the developer (Rope).
-    constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, tangled_rope, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, rope, context(agent_power(institutional), _, exit_options(arbitrage), _)),
-    true.
+    constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
 
-test(analytical_classification_is_tangled_rope) :-
-    % The analytical perspective must identify the hybrid nature.
-    constraint_indexing:constraint_classification(regulatory_pathway_psychedelic_therapy, tangled_rope, context(agent_power(analytical), _, _, _)).
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(regulatory_pathway_psychedelic_therapy, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
 
-test(tangled_rope_gate_requirements_met) :-
-    % Verify that all three structural requirements for a Tangled Rope are met.
-    narrative_ontology:constraint_beneficiary(regulatory_pathway_psychedelic_therapy, _),
-    narrative_ontology:constraint_victim(regulatory_pathway_psychedelic_therapy, _),
-    domain_priors:requires_active_enforcement(regulatory_pathway_psychedelic_therapy).
+test(piton_threshold) :-
+    domain_priors:theater_ratio(regulatory_pathway_psychedelic_therapy, TR),
+    TR >= 0.70.
 
 :- end_tests(regulatory_pathway_psychedelic_therapy_tests).
 
@@ -198,49 +199,16 @@ test(tangled_rope_gate_requirements_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   - Base Extractiveness (ε=0.48): The enormous cost of multi-phase clinical
- *     trials, legal compliance, and specialized infrastructure represents a
- *     significant inherent cost, much of which is passed on.
- *   - Suppression (S=0.80): High due to the Schedule I legal status of the
- *     compounds, stringent DEA and FDA oversight, and the cultural/political
- *     stigma that restricts research and funding.
- *   - Theater Ratio (T=0.35): While much of the process is functional (e.g.,
- *     safety trials), a significant portion is arguably theatrical, stemming
- *     from outdated "war on drugs" policies rather than modern risk assessment.
+ *   Extractiveness (0.58): High-moderate. The regulatory pathway extracts value through multiple mechanisms: (1) Capital barriers ($100M+ for FDA trials) that exclude most independent researchers and small teams; (2) Timeline suppression (10+ years from discovery to approval) that delays patient access and accrues monopoly benefits; (3) Exclusive market access during patent period that enables monopoly pricing; (4) Gatekeeping that converts therapeutic discovery into captured value for well-capitalized incumbents. However, extractiveness is not as high as pure snare (0.66+) because some of the suppression genuinely serves coordination (safety standards, efficacy verification). Suppression (0.72): Very high. The constraint combines legal prohibition (DEA scheduling), capital barriers (FDA trial costs), knowledge barriers (regulatory expertise), and institutional gatekeeping. Patients face near-total suppression (cannot legally access); independent researchers face severe suppression (capital and timeline barriers); even incumbents face moderate suppression (regulatory complexity, liability risk). Theater ratio (0.68): High and increasing. FDA approval rhetoric emphasizes rigorous safety science, but the approval bar has become increasingly disconnected from international comparators and from real-world outcome data. Breakthrough therapy designations introduce performative acceleration (appear to reduce timelines while maintaining gatekeeping). Controlled substance scheduling maintains symbolic prohibition despite declining evidence base. The theater is increasing because alternative verification methods (decriminalization, real-world outcomes, compassionate access) are producing equivalent or better outcomes while regulatory pathway approval remains slow, suggesting that the regulatory theater exceeds functional necessity.
  *
  * PERSPECTIVAL GAP:
- *   The gap is stark. Patients experience a Snare: a high-cost, low-access
- *   system that extracts their time, hope, and money. Pharmaceutical
- *   developers, however, see a Rope: the high barriers to entry, once
- *   surmounted, coordinate the market in their favor, creating a lucrative
- *   monopoly. The "cost" to them is an investment in a competitive moat.
+ *   This constraint demonstrates how a single institutional mechanism (FDA regulatory approval) can be perceived as lifesaving coordination (from incumbent pharma view) or as extractive gatekeeping (from patient/researcher view). The incumbent pharmaceutical company sees the pathway as enabling coordination — FDA approval creates legal certainty, establishes dosing standards, protects against liability, and grants monopoly rents as just reward for bearing trial costs and innovation risk. This view is partly accurate; the coordination function is real. The treatment-seeking patient sees pure extraction and suppression — the regulatory pathway is the mechanism that keeps them from accessing a potentially life-changing therapy, with no voice in the decision. The breakthrough therapy coalition sees a temporary problem with a visible exit: decriminalization, adaptive trials, and real-world outcomes data are building alternative pathways that will eventually make the classical regulatory monopoly obsolete. The FDA itself experiences the pathway as tangled — it provides necessary gatekeeping (coordination) but also creates the suppression that makes it appear extractive. The controlled substance scheduling system appears as piton — a degraded ritual persisting through bureaucratic inertia rather than because it prevents abuse. The analytical observer risks seeing regulatory rigor as an immutable law of medical practice, naturalizing what is actually a contingent institutional choice that varies across jurisdictions.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiaries: 'psychedelic_pharma_developers' who gain market
- *     exclusivity, and the abstract 'public_safety_mandate' which represents
- *     the system's coordination function.
- *   - Victim: 'patients_with_depression' who bear the costs of delayed
- *     innovation and access. This clear beneficiary/victim structure, combined
- *     with their different exit options (arbitrage vs. trapped), is what
- *     drives the perspectival gap via the directionality function f(d).
- *
- * INTER-INSTITUTIONAL DYNAMICS:
- *   The model distinguishes between the pharmaceutical developer and the
- *   government regulator. Both are 'institutional', but their relationship to
- *   the constraint differs. The developer has `exit_options(arbitrage)`—they
- *   can invest their capital elsewhere. The regulator has
- *   `exit_options(constrained)`—they cannot simply abandon their public safety
- *   mandate. The directionality override for the regulator (d=0.35) reflects
- *   this more neutral, constrained position compared to the pure beneficiary
- *   (d≈0.05).
+ *   Each agent's directionality (d) and experienced effective extraction (χ) is derived from their structural position: beneficiary status, power level, and exit options. Treatment-seeking patients have d ≈ 0.95 (full victims, trapped) producing high f(d) ≈ 1.42 and high χ — they experience maximum extraction because they have no alternatives and no voice. Independent researchers have d ≈ 0.75 (victims, constrained) producing f(d) ≈ 1.15 and moderate-high χ — they can exit (international development) but at significant cost. Incumbent pharmaceutical companies have d ≈ 0.10 (beneficiaries, arbitrage) producing f(d) ≈ -0.05 and negative χ — they benefit from the pathway and have exit options (other indications, other markets). The FDA derives d ≈ 0.45 (constrained by political and liability risk, partly victim of their own gatekeeping) producing f(d) ≈ 0.45 and moderate χ. The breakthrough therapy coalition has d ≈ 0.35 (constrained but with visible exit path) producing f(d) ≈ 0.25 and low-moderate χ.
  *
  * MANDATROPHY ANALYSIS:
- *   This case is a canonical example of a Tangled Rope, preventing misclassification.
- *   A simplistic analysis might label the system a Snare (focusing only on
- *   patient outcomes) or a Rope (focusing only on the stated goal of public
- *   safety). The Deferential Realism framework, by indexing to different
- *   agents, reveals its dual nature: a system with a genuine coordination
- *   function that has been co-opted to produce massive asymmetric extraction.
+ *   MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by demonstrating that regulatory capture is not binary (pure coordination vs pure extraction) but rather a hybrid state where both functions operate simultaneously with asymmetric distribution. The FDA's legitimate coordination function (establishing safety standards, ensuring efficacy verification) is coupled with asymmetric extraction (capital barriers that benefit incumbents, timeline suppression that accrues monopoly rents). This is not a failure of regulation but a structural feature of regulatory design — the mechanisms that enable coordination (comprehensive testing, expert review, exclusive approval) simultaneously enable gatekeeping and extraction. The constraint satisfies both mandatrophy gates: (1) It exhibits genuine coordination function — the pathway does establish safety standards, prevent unsafe compounds from reaching market, and coordinate complex multi-trial processes that individual actors could not manage alone; (2) It exhibits asymmetric extraction — beneficiaries (pharmaceutical companies, regulatory agencies) capture positive rents while victims (patients, researchers, innovation field) bear suppression costs. The tangled_rope classification is correct because both functions are structural, not incidental. The theater ratio is high (0.68) because the coordination rhetoric (safety, rigor, science) has become decoupled from actual comparative evidence — alternative pathways (decriminalization, real-world outcomes) are producing equivalent safety and efficacy with lower theater. This suggests that the regulatory theater exceeds functional necessity and has shifted toward performing gatekeeping rather than enabling coordination.
  */
 
 /* ==========================================================================
@@ -248,12 +216,45 @@ test(tangled_rope_gate_requirements_met) :-
    ========================================================================== */
 
 omega_variable(
-    omega_regulatory_pathway_psychedelic_therapy,
-    'Is the high suppression and cost (ε=0.48, S=0.80) a necessary byproduct of ensuring public safety, or is it a form of institutional inertia and regulatory capture that primarily serves to limit competition?',
-    'Comparative analysis of regulatory pathways for other high-risk, high-reward therapeutics, and declassified internal memos from regulatory bodies.',
-    'If necessary, the system is a tragic but functional Tangled Rope. If inflated, it is a Snare masquerading as a Tangled Rope, with the coordination function serving as theatrical justification.',
+    efficacy_evidence_bar,
+    'What level of clinical evidence suffices to demonstrate psychedelic therapy safety and efficacy — Phase III RCTs (traditional), real-world outcomes data, adaptive trials, or other methodologies?',
+    'Comparative analysis of regulatory standards across jurisdictions; meta-analysis of outcomes data from therapies approved via different pathways; validation of alternative trial designs against gold-standard evidence',
+    'If alternative evidence standards prove equivalent: FDA bar is unnecessary suppression (extraction tightens). If Phase III requirement is necessary: current suppression is justified coordination. Determines whether regulatory pathway classifies as pure extraction or coordination-extraction hybrid.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(efficacy_evidence_bar, empirical, 'Evidentiary sufficiency threshold for psychedelic therapy approval').
+
+omega_variable(
+    capital_barrier_intentionality,
+    'Is the $100M+ cost of FDA trials an intentional gatekeeping mechanism or an incidental byproduct of comprehensive safety evaluation?',
+    'Comparative cost analysis of FDA trials vs international regulatory pathways for equivalent compounds; historical analysis of FDA cost inflation over time; structural analysis of which cost components are safety-justified vs which serve as barriers to entry',
+    'If intentional gatekeeping: extraction mechanism is clear (beneficiaries with capital captured the regulator). If incidental byproduct: suppression is unjustly high but not deliberately extractive — classification shifts from snare toward scaffold.',
     confidence_without_resolution(medium)
 ).
+
+narrative_ontology:omega_variable(capital_barrier_intentionality, empirical, 'Whether regulatory costs function as intentional barriers to entry').
+
+omega_variable(
+    decriminalization_substitution,
+    'Do decriminalization and compassionate access pathways constitute genuine alternatives to FDA regulation or merely shadow access for privileged populations?',
+    'Longitudinal tracking of patient outcomes in jurisdictions with decriminalized access vs FDA-approved therapies; equity analysis of who gains access through each pathway; assessment of whether shadow access reduces pressure for formal regulatory reform',
+    'If genuine alternatives: exit options for patients improve (constrained → mobile), classification shifts from snare toward tangled_rope. If shadow access only: trapped agents remain trapped, alternative pathways become pitons (theatrical alternatives without real function).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(decriminalization_substitution, empirical, 'Whether decriminalization provides genuine therapeutic access alternatives').
+
+omega_variable(
+    monopoly_rent_extraction,
+    'What proportion of pharmaceutical profits from psychedelic therapies derives from breakthrough therapy value versus from FDA-granted market exclusivity and gatekeeping?',
+    'Pricing analysis of approved psychedelic therapies in regulated vs non-regulated markets; comparison of profit margins to R&D costs and replication costs in alternative pathways; historical analysis of patent exclusivity periods and generic competition timelines',
+    'If exclusivity rents are dominant: extraction mechanism confirmed (pharmaceutical company benefits are contingent on regulatory monopoly, not on innovation value). If breakthrough value is dominant: extraction is lower than assessed, constraint classifies as more coordinative.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(monopoly_rent_extraction, empirical, 'Proportion of pharmaceutical profits from monopoly versus breakthrough innovation').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
@@ -265,51 +266,35 @@ narrative_ontology:interval(regulatory_pathway_psychedelic_therapy, 0, 10).
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This constraint has intensified over time. Initially (post-1970), it was
-% almost pure suppression (high theater). As research became viable, the
-% economic extraction (cost of trials) grew, while the purely political
-% theater slightly receded, replaced by a more functional (but still
-% extractive) process.
+% Theater ratio over time
+narrative_ontology:measurement(regpsy_tr_t0, regulatory_pathway_psychedelic_therapy, theater_ratio, 0, 0.52).
+narrative_ontology:measurement(regpsy_tr_t5, regulatory_pathway_psychedelic_therapy, theater_ratio, 5, 0.62).
+narrative_ontology:measurement(regpsy_tr_t10, regulatory_pathway_psychedelic_therapy, theater_ratio, 10, 0.68).
 
-% Theater ratio: high initially due to political motivations, now lower but still present.
-narrative_ontology:measurement(rpst_tr_t0, regulatory_pathway_psychedelic_therapy, theater_ratio, 0, 0.60).
-narrative_ontology:measurement(rpst_tr_t5, regulatory_pathway_psychedelic_therapy, theater_ratio, 5, 0.45).
-narrative_ontology:measurement(rpst_tr_t10, regulatory_pathway_psychedelic_therapy, theater_ratio, 10, 0.35).
+% Extraction over time
+narrative_ontology:measurement(regpsy_be_t0, regulatory_pathway_psychedelic_therapy, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(regpsy_be_t5, regulatory_pathway_psychedelic_therapy, base_extractiveness, 5, 0.53).
+narrative_ontology:measurement(regpsy_be_t10, regulatory_pathway_psychedelic_therapy, base_extractiveness, 10, 0.58).
 
-% Extraction: low initially (as there was no path), now high due to the cost of modern trials.
-narrative_ontology:measurement(rpst_ex_t0, regulatory_pathway_psychedelic_therapy, base_extractiveness, 0, 0.40).
-narrative_ontology:measurement(rpst_ex_t5, regulatory_pathway_psychedelic_therapy, base_extractiveness, 5, 0.45).
-narrative_ontology:measurement(rpst_ex_t10, regulatory_pathway_psychedelic_therapy, base_extractiveness, 10, 0.48).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type: The pathway is a mechanism for enforcing standards.
 narrative_ontology:coordination_type(regulatory_pathway_psychedelic_therapy, enforcement_mechanism).
-
-% Network relationships: This pathway's difficulty is structurally influenced
-% by the legal classification of the substances involved.
-narrative_ontology:affects_constraint(schedule_one_classification_dmt, regulatory_pathway_psychedelic_therapy).
+narrative_ontology:boltzmann_floor_override(regulatory_pathway_psychedelic_therapy, 0.45).
+narrative_ontology:affects_constraint(regulatory_pathway_psychedelic_therapy, psilocybin_therapeutic_efficacy).
+narrative_ontology:affects_constraint(regulatory_pathway_psychedelic_therapy, dmt_safety_profile_establishment).
+narrative_ontology:affects_constraint(regulatory_pathway_psychedelic_therapy, mental_health_treatment_access).
 
 % DUAL FORMULATION NOTE:
-% This constraint is part of a family of constraints governing psychedelic
-% therapy. The upstream constraint, 'schedule_one_classification_dmt', creates
-% the high-suppression environment in which this one operates.
-% Related stories:
-%   - schedule_one_classification_dmt (ε≈0.55, Piton/Snare)
+% The regulatory pathway is downstream of specific therapeutic efficacy claims (psilocybin efficacy for depression, DMT safety for psychiatric use) but represents a distinct structural constraint. Upstream constraints have their own extractiveness values reflecting empirical status of therapeutic claims; the regulatory pathway has its own extractiveness reflecting institutional gatekeeping and capital barriers to market access. Decomposition: regulatory_pathway_psychedelic_therapy (this story, ε=0.58) operationalizes the institutional mechanisms that control access to psilocybin_therapeutic_efficacy (ε=0.08, mountain-candidate) and dmt_safety_profile_establishment (ε=0.22, rope-candidate). The pathway constraint is more extractive than the underlying scientific claims because institutional gatekeeping adds a second layer of suppression beyond empirical uncertainty.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-% We override the regulator's directionality. The automatic derivation, based
-% on 'beneficiary' status and 'constrained' exit, would produce a d≈0.25-0.30.
-% We set it to d=0.35 to reflect a position that is more aligned with the system's
-% costs and political pressures than a pure beneficiary, but still views the
-% system as fundamentally coordinating.
-constraint_indexing:directionality_override(regulatory_pathway_psychedelic_therapy, institutional, 0.35).
-
+constraint_indexing:directionality_override(regulatory_pathway_psychedelic_therapy, organized, 0.4).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

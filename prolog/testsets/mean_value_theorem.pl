@@ -1,12 +1,13 @@
 % ============================================================================
-% CONSTRAINT STORY: mvt_theorem_constraint
+% CONSTRAINT STORY: mean_value_theorem
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-02-29
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
-:- module(constraint_mvt_theorem_constraint, []).
+:- module(constraint_mean_value_theorem, []).
 
 :- use_module(constraint_indexing).
 :- use_module(domain_priors).
@@ -39,10 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
-    narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
@@ -53,18 +51,34 @@
 
 /**
  * CONSTRAINT IDENTIFICATION
- *   constraint_id: mvt_theorem_constraint
+ *   constraint_id: mean_value_theorem
  *   human_readable: Application of the Mean Value Theorem
- *   domain: technological
+ *   domain: mathematics/technological
  *
  * SUMMARY:
- *   The application of the Mean Value Theorem in specific scenarios (e.g., calculating speed from distance and time) can act as a constraint on possible outcomes. The theorem guarantees a specific relationship but can be misused or misinterpreted, leading to incorrect conclusions.
+ *   The Mean Value Theorem (MVT) — stating that for a continuous function
+ *   differentiable on an open interval, there exists at least one point where
+ *   the instantaneous rate of change equals the average rate of change —
+ *   functions as a mathematical constraint on all systems that model
+ *   continuous change. Unlike institutional or social constraints that vary
+ *   with observer position, the MVT is universally binding: it holds
+ *   regardless of the agent's power, exit options, or temporal perspective.
+ *   Applications range from physics (relating average velocity to
+ *   instantaneous velocity), to engineering (verifying measurement
+ *   consistency), to pure mathematics (proving the fundamental theorem of
+ *   calculus). The constraint is not imposed; it is an irreducible logical
+ *   consequence of the underlying mathematical axioms. This makes it a
+ *   canonical Mountain-type constraint: zero degrees of freedom,
+ *   accessibility collapse ≥ 0.85 (agents cannot find alternative
+ *   mathematical frameworks without contradicting axioms), resistance ≤ 0.15
+ *   (no institutional power is wasted suppressing alternatives because
+ *   alternatives do not exist).
  *
- * KEY AGENTS (by structural relationship):
- *   - Students: Primary target (powerless/trapped) — bears extraction in the form of potential misapplication and errors.
- *   - Educators: Primary beneficiary (powerful/mobile) — benefits from using the theorem as a tool for teaching and assessment.
- *   - Software developers: Secondary actor (moderate/mobile) — may benefit by leveraging MVT, but can also contribute to its misuse.
- *   - Analysts: Analytical observer (analytical/analytical) — sees full structure
+ * KEY AGENTS:
+ *   - Analytical Mathematician (analytical/civilizational/analytical/universal) — observes the theorem as logical necessity
+ *   - Engineer (powerful/generational/mobile/global) — applies MVT to real systems despite having power and mobility
+ *   - Physics Community (organized/biographical/constrained/national) — cannot avoid instantiating MVT in measurement verification
+ *   - Navigation Algorithm (moderate/immediate/trapped/local) — computationally instantiates MVT without choice
  */
 
 /* ==========================================================================
@@ -72,123 +86,90 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(mvt_theorem_constraint, 0.10).
-domain_priors:suppression_score(mvt_theorem_constraint, 0.05).   % Structural property (raw, unscaled).
-domain_priors:theater_ratio(mvt_theorem_constraint, 0.10).       % Piton detection (>= 0.70)
+domain_priors:base_extractiveness(mean_value_theorem, 0.08).
+domain_priors:suppression_score(mean_value_theorem, 0.02).
+domain_priors:theater_ratio(mean_value_theorem, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(mvt_theorem_constraint, extractiveness, 0.10).
-narrative_ontology:constraint_metric(mvt_theorem_constraint, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(mvt_theorem_constraint, theater_ratio, 0.10).
+narrative_ontology:constraint_metric(mean_value_theorem, extractiveness, 0.08).
+narrative_ontology:constraint_metric(mean_value_theorem, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(mean_value_theorem, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain in
-% structural_signatures.pl. Uncomment and set for mountain constraints.
-% Without these, the NL signature defaults to 0.5 and fails certification.
-%
-narrative_ontology:constraint_metric(mvt_theorem_constraint, accessibility_collapse, 0.95).
-narrative_ontology:constraint_metric(mvt_theorem_constraint, resistance, 0.05).
+narrative_ontology:constraint_metric(mean_value_theorem, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(mean_value_theorem, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(mvt_theorem_constraint, scaffold).
-narrative_ontology:human_readable(mvt_theorem_constraint, "Application of the Mean Value Theorem").
-narrative_ontology:topic_domain(mvt_theorem_constraint, "technological").
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(mean_value_theorem, mountain).
+narrative_ontology:human_readable(mean_value_theorem, "Application of the Mean Value Theorem").
+narrative_ontology:topic_domain(mean_value_theorem, "mathematics/technological").
 
-% --- Binary flags ---
-% narrative_ontology:has_sunset_clause(mvt_theorem_constraint).      % Mandatory if Scaffold
-% domain_priors:requires_active_enforcement(mvt_theorem_constraint). % Required for Tangled Rope
+domain_priors:emerges_naturally(mean_value_theorem).
 
-% --- Emergence flag (required for mountain constraints) ---
-% Uncomment for constraints that emerge naturally without human design
-% or enforcement. Required for the mountain metric gate: without this,
-% the classify_from_metrics mountain clause will not fire.
-%
-domain_priors:emerges_naturally(mvt_theorem_constraint).
-
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These feed the directionality derivation chain: the engine computes
-% d (directionality) from agent membership in these groups + exit_options.
-% Without these, the engine falls back to generic power-atom assumptions.
-%
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(mvt_theorem_constraint, educators).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(mvt_theorem_constraint, students).
-%
-% Gate requirements:
-%   Tangled Rope: beneficiary + victim + requires_active_enforcement (all three)
-%   Scaffold:     beneficiary + (has_sunset_clause OR no enforcement)
-%   Snare:        victim required; beneficiary optional
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE PRIMARY TARGET (SNARE/MOUNTAIN)
-% Agent who bears the most extraction. Engine derives d from:
-%   victim membership + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42 → high χ
-%
-% NOTE: Per "Dynamic Coalition" extension, this agent's power may be
-% upgraded to 'organized' if the constraint is a snare with a critical
-% mass of victims, potentially changing the classification.
-%
-% UNIFORM-TYPE EXCEPTION: For natural law constraints (mountain-only) or pure
-% coordination constraints (rope-only), perspectives 1 and 2 may use any power
-% atoms — the classification is the same from all perspectives. Include at
-% least 2-3 perspectives to demonstrate the invariance.
-constraint_indexing:constraint_classification(mvt_theorem_constraint, mountain,
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(national))).
-
-% PERSPECTIVE 2: THE PRIMARY BENEFICIARY (ROPE)
-% Agent who benefits most. Engine derives d from:
-%   beneficiary membership + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 → low/negative χ
-constraint_indexing:constraint_classification(mvt_theorem_constraint, rope,
-    context(agent_power(powerful),
-            time_horizon(generational),
-            exit_options(mobile),
-            spatial_scope(national))).
-
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER
-% Default analytical context (civilizational/analytical/global).
-% Used by the bridge to derive constraint_claim.
-% Engine derives d ≈ 0.72 → f(d) ≈ 1.15 for analytical perspective.
-constraint_indexing:constraint_classification(mvt_theorem_constraint, mountain,
+% PERSPECTIVE 1: ANALYTICAL MATHEMATICIAN (MOUNTAIN) — From the civilizational/universal view, the Mean Value Theorem is a mathematical necessity. For any continuous function differentiable on an open interval, there must exist at least one point where the instantaneous rate of change equals the average rate of change. This is an irreducible logical constraint — not a convention, not a social choice, but a consequence of the continuity and differentiability axioms. Zero degrees of freedom; applies universally.
+constraint_indexing:constraint_classification(mean_value_theorem, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: ENGINEER (MOUNTAIN) — Even agents with power and exit options cannot escape the MVT constraint. An engineer computing vehicle speed from distance and time records is constrained by the theorem's logic: the average speed (total distance / total time) guarantees that the instantaneous speed matched that average at some moment during the journey. This is not enforced by institutional power but by mathematical structure. The engineer cannot 'opt out' of having instantiated this constraint in their system.
+constraint_indexing:constraint_classification(mean_value_theorem, mountain,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
             spatial_scope(global))).
+
+% PERSPECTIVE 3: PHYSICS COMMUNITY (MOUNTAIN) — Organized actors in physics, even with constrained exit options, face the MVT as an immutable constraint on physical measurement. When verifying that a moving object traveled distance d in time t, the community cannot assign arbitrary velocity profiles. The MVT guarantees the existence of at least one moment where instantaneous velocity matched d/t. This is not a rule imposed by the community; it is a property of the physical systems being measured.
+constraint_indexing:constraint_classification(mean_value_theorem, mountain,
+    context(agent_power(organized),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: NAVIGATION SYSTEM (MOUNTAIN) — A GPS or dead-reckoning system computing position changes from timestamp sequences is structurally constrained by MVT. Even a computationally constrained, trapped agent (the algorithm has no alternative processing model) cannot avoid instantiating the MVT: the average velocity over a time interval guarantees the existence of an instantaneous velocity matching that average. The constraint operates identically whether the agent is aware of it or not.
+constraint_indexing:constraint_classification(mean_value_theorem, mountain,
+    context(agent_power(moderate),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(local))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
    ========================================================================== */
 
-:- begin_tests(mvt_theorem_constraint_tests).
+:- begin_tests(mean_value_theorem_tests).
 
-test(perspectival_gap) :-
-    % Verify perspectival gap between target and beneficiary.
-    constraint_indexing:constraint_classification(mvt_theorem_constraint, TypeTarget, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(mvt_theorem_constraint, TypeBeneficiary, context(agent_power(powerful), _, _, _)),
-    TypeTarget = TypeBeneficiary.
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(mean_value_theorem, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(mean_value_theorem, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(threshold_validation) :-
+test(mountain_threshold_validation) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(mvt_theorem_constraint, ExtMetricName, E),
-    E =< 0.25. % Mountain or low-extraction
+    narrative_ontology:constraint_metric(mean_value_theorem, ExtMetricName, E),
+    domain_priors:suppression_score(mean_value_theorem, S),
+    E =< 0.25,
+    S =< 0.05.
 
-:- end_tests(mvt_theorem_constraint_tests).
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(mean_value_theorem),
+    narrative_ontology:constraint_metric(mean_value_theorem, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(mean_value_theorem, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(mean_value_theorem_tests).
 
 /* ==========================================================================
    5. GENERATIVE COMMENTARY
@@ -196,97 +177,42 @@ test(threshold_validation) :-
 
 /**
  * LOGIC RATIONALE:
- *   The Mean Value Theorem in its purest form is a mathematical truth, thus a Mountain. However, its application introduces potential errors, incorrect assumptions, or misuse, especially in contexts involving modeling real-world phenomena. Therefore, it is viewed as a 'Rope' because its proper use facilitates coordination but requires understanding and skill. The base extractiveness and suppression scores are relatively low because the potential negative impact is limited compared to other real-world constraints.
+ *   Extractiveness (0.08): Minimal. The MVT extracts nothing from any agent — it is a constraint that governs the logical structure of continuous systems, not a mechanism that transfers resources from one actor to another. The value is nonzero only to account for the minimal epistemic cost of verifying or applying the theorem (acknowledging that knowledge work has a small material footprint). Suppression (0.02): Negligible. There are no alternatives to suppress; the theorem follows necessarily from the axioms. No institutional power is required to maintain it; it maintains itself through logical necessity. Theater ratio (0.15): Very low. Application of MVT involves minimal performative activity. When an engineer uses MVT to verify a measurement or a physicist invokes it in a derivation, the activity is directly functional — the theorem is applied because it solves the problem, not because it maintains institutional legitimacy. The 0.15 reflects only the minimal formal presentation required to communicate the result.
  *
  * PERSPECTIVAL GAP:
- *   The target (students) and beneficiaries (educators) essentially agree on the type of constraint since students see the utility of MVT as a tool to solve complex math problems.
+ *   The Mean Value Theorem exhibits zero perspectival gap — all observers classify it identically as Mountain. This is the hallmark of a natural law constraint: the mathematical structure is invariant across all measurement contexts and observer positions. An analytical mathematician, an engineer, an organized community, and a computational algorithm all encounter the same constraint with the same logical force. The lack of perspectival disagreement is not a limitation but a feature: it demonstrates that the constraint is genuinely structural (not socially constructed) because it persists across all observation sites.
  *
  * DIRECTIONALITY LOGIC:
- *   Educators benefit from having this theorem in their toolkit to teach calculus and analyze situations. Students bear the cost of potential misapplication, which can lead to errors in their work and understanding.
+ *   Directionality does not apply to Mountain constraints. There is no d-value (beneficiary/victim axis) because no agent benefits at another's expense. The MVT is symmetric: all agents are simultaneously bound by it, none are targets of extraction. The theorem governs the logical space, not the distribution of resources. The analytical observer correctly identifies this as universal, not indexed to any particular interest.
  *
- * MANDATROPHY ANALYSIS:
- *   This classification prevents mislabeling the theorem's use as pure extraction because it acknowledges the theorem's inherent value in providing accurate results when applied correctly.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
-omega_variable(
-    omega_mvt,
-    'How frequently is the Mean Value Theorem misapplied in real-world contexts?',
-    'Empirical studies of its use in physics, economics, and engineering.',
-    'If often misapplied, it leans towards Snare; if rarely, remains Rope.',
-    confidence_without_resolution(medium)
-).
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(mvt_theorem_constraint, 0, 10).
+narrative_ontology:interval(mean_value_theorem, 0, 1).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% Temporal data enables drift detection (metric_substitution,
-% extraction_accumulation) by providing measurements at multiple time points.
-%
-% Required for high-extraction constraints (base_extractiveness > 0.46).
-% Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric.
-%
-% Theater ratio over time (triggers metric_substitution detection):
-narrative_ontology:measurement(mvt_theorem_constraint_tr_t0, mvt_theorem_constraint, theater_ratio, 0, 0.05).
-narrative_ontology:measurement(mvt_theorem_constraint_tr_t5, mvt_theorem_constraint, theater_ratio, 5, 0.10).
-narrative_ontology:measurement(mvt_theorem_constraint_tr_t10, mvt_theorem_constraint, theater_ratio, 10, 0.15).
-
-% Extraction over time (triggers extraction_accumulation detection):
-narrative_ontology:measurement(mvt_theorem_constraint_ex_t0, mvt_theorem_constraint, base_extractiveness, 0, 0.05).
-narrative_ontology:measurement(mvt_theorem_constraint_ex_t5, mvt_theorem_constraint, base_extractiveness, 5, 0.10).
-narrative_ontology:measurement(mvt_theorem_constraint_ex_t10, mvt_theorem_constraint, base_extractiveness, 10, 0.15).
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% Coordination type (enables Boltzmann floor + complexity offset)
-% Valid types: information_standard, resource_allocation,
-%              enforcement_mechanism, global_infrastructure
-narrative_ontology:coordination_type(mvt_theorem_constraint, information_standard).
-
-% Boltzmann floor override (only if domain knowledge justifies)
-% Value must be in [0.0, 1.0]
-% narrative_ontology:boltzmann_floor_override(mvt_theorem_constraint, 0.05).
-
-% Network relationships (structural influence edges)
-% Declare when constraints share regulatory domain, causal dependency,
-% or institutional coupling.
-% narrative_ontology:affects_constraint(mvt_theorem_constraint, [other_constraint_id]).
+narrative_ontology:affects_constraint(mean_value_theorem, fundamental_theorem_calculus).
+narrative_ontology:affects_constraint(mean_value_theorem, rolle_theorem_equivalence).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% Use ONLY when the automatic derivation (beneficiary/victim + exit → d)
-% would produce an inaccurate directionality value. The derivation chain
-% priority is: override > structural > canonical fallback.
-%
-% Format: directionality_override(ConstraintID, PowerAtom, D_Value)
-%   D_Value in [0.0, 1.0]: 0.0 = full beneficiary, 1.0 = full target
-%
-% Common override scenarios:
-%   - Regulatory capture: institution that appears to benefit but is
-%     actually partly captured → override d upward (0.25-0.40)
-%   - Indirect beneficiary: agent in victim group who actually benefits
-%     through secondary effects → override d downward
-%   - Asymmetric institutional: two institutional actors that the
-%     derivation can't distinguish → override to differentiate
-%
-% Example (uncomment if needed):
-% constraint_indexing:directionality_override(mvt_theorem_constraint, institutional, 0.30).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

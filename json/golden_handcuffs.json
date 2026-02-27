@@ -1,0 +1,174 @@
+{
+  "header": {
+    "constraint_id": "golden_handcuffs",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gh"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Golden Handcuffs (Vesting-Based Retention)",
+    "topic_domain": "economic/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employer_firm",
+      "executive_leadership"
+    ],
+    "victims": [
+      "trapped_employee",
+      "labor_mobility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Vested Employee",
+      "comment": "PERSPECTIVE 1: VESTED EMPLOYEE (SNARE) \u2014 Trapped by unvested equity. Cannot exit without forfeiting substantial deferred compensation. Faces asymmetric penalty for departure. Maximum extraction: employee bears full opportunity cost of immobility; firm captures retention benefit without reciprocal obligation. Zero degrees of freedom during vesting window."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Career Professional",
+      "comment": "PERSPECTIVE 2: MID-CAREER PROFESSIONAL (TANGLED ROPE) \u2014 Constrained but not trapped. Vesting creates genuine incentive alignment (coordination function): employee shares in firm success, firm gains predictable tenure. But asymmetric extraction: firm can adjust equity grants, change vesting schedules, or engineer termination near cliff dates. Employee has some negotiating power but exits carry meaningful cost. Balanced mix of coordination benefit and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Employer Firm",
+      "comment": "PERSPECTIVE 3: EMPLOYER FIRM (ROPE) \u2014 Pure coordination function from firm perspective. Vesting aligns incentives, reduces costly turnover, enables long-term planning. Firm experiences the constraint as solving a collective action problem: without vesting, high-talent employees would exit post-project. Firm has full arbitrage options: can adjust grants, time vesting schedules, use equity as strategic tool. Net beneficiary \u2014 extraction flows toward firm, not from it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Market",
+      "comment": "PERSPECTIVE 4: LABOR MARKET (TANGLED ROPE) \u2014 Organized perspective across multiple firms and sectors. Golden handcuffs solve coordination: firms collectively achieve lower churn and higher retention for key talent. But generates systematic extraction: labor mobility decreases, workers accept lower wages during vesting periods, aggregate bargaining power declines. Labor cannot exit the system; must navigate vesting schedules across job transitions. Active enforcement by equity compensation practices and cliff-vesting mechanics."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Stock Option Tradition",
+      "comment": "PERSPECTIVE 5: STOCK OPTION TRADITION (PITON) \u2014 Historical perspective. Golden handcuffs emerged as genuine coordination mechanism in 1980s-90s startup culture: align engineers with firm success when cash was scarce. Functionality has atrophied as equity grants became standard compensation theater. Vestings are often reset on promotion, creating perpetual traps. Theater ratio (0.48) reflects that vesting now serves performative role \u2014 'equity story' in recruitment \u2014 alongside coordination. Tradition persists through inertia despite rising dysfunction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Risk of false summit. Temptation to naturalize vesting as inherent to equity compensation, labor economics, or capital structure ('equity vesting is just how incentive alignment works'). But vesting is a contingent institutional design choice, not a law of nature. Other mechanisms exist: cash retention bonuses, profit-sharing, equity with immediate vesting plus malus clauses. The analytical frame reveals vesting as constructed constraint, not natural law. Engine false-summit detector will flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "equity_grant_reset_cycle",
+      "question": "Do equity grant resets on promotion create perpetual trap (snare dynamics) or legitimate refresh coordination cycle (rope dynamics)?",
+      "resolution_mechanism": "Longitudinal career tracking: compare employee exit rates and wage progression for roles with reset schedules vs. flat vesting; analysis of promotional cliff timing relative to vesting windows",
+      "impact": "If resets create perpetual traps: extractiveness rises to 0.65+, classification becomes snare from employee perspective. If resets are coordinated refreshes: extractiveness stays ~0.50, tangled rope holds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether equity resets create perpetual traps or legitimate coordination cycles"
+    },
+    {
+      "id": "alternative_retention_mechanisms",
+      "question": "Are vesting-based handcuffs necessary for retention, or would cash retention bonuses or performance-based payouts achieve same coordination with lower suppression?",
+      "resolution_mechanism": "Comparative analysis of firms using vesting vs. cash retention: churn rates, employee satisfaction, cost to firm, wage suppression effects; randomized policy experiments where feasible",
+      "impact": "If alternatives are equally effective: vesting is pure extraction mechanism (snare, extractiveness 0.65+). If vesting is necessary: coordination function is real (tangled rope sustained).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether vesting is necessary or substitutable by alternative mechanisms"
+    },
+    {
+      "id": "equity_volatility_transfer",
+      "question": "Does equity-based vesting effectively transfer firm-risk-of-failure to employee as hidden extraction cost?",
+      "resolution_mechanism": "Analysis of employee wealth loss in equity compensation during downturns vs. equivalent periods for non-equity workers; comparison of wealth accumulation in equity-heavy vs. salary-heavy roles across full business cycles",
+      "impact": "If transfer is substantial: hidden extractiveness adds 0.15-0.20 to observed rates (true extractiveness ~0.70). If transfer is modest: extractiveness estimate is accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of hidden extraction via equity risk transfer to employee"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Golden handcuffs represent a fundamental tension in modern corporate compensation: they genuinely solve a coordination problem (aligning employee and firm incentives, reducing costly turnover) while simultaneously extracting value from employees through immobility and wage suppression. The constraint exhibits classic tangled rope structure: a coordination mechanism with asymmetric extraction. Employees in the vesting window face reduced mobility and cannot negotiate effectively during cliff events; firms capture retention benefits without reciprocal obligation. The constraint's extractiveness (0.52) reflects that suppression is significant (0.58) \u2014 employees cannot exit without forfeiting unvested compensation \u2014 but the coordination function is real: equity grants do align incentives and do reduce turnover. Theater ratio (0.48) indicates moderate performative content: equity compensation marketing ('you're building wealth') amplifies what is often a wage reduction (equity replaces cash) that becomes visible only in retrospect. The biographical time horizon (4-10 year vesting) creates a demographic trap: employees entering at age 25-30 are locked in until 35-40, precisely when career alternatives are richest. Vesting schedules frequently reset on promotion, creating perpetual traps across entire career tenure.",
+    "key_agents": [
+      "Trapped Employee: Primary victim (powerless/trapped) \u2014 bears full opportunity cost of immobility; cannot negotiate during vesting window; forfeits unvested equity on exit",
+      "Employer Firm: Primary beneficiary (institutional/arbitrage) \u2014 captures retention benefit, predictable tenure, reduced hiring/training costs; can adjust equity schedules and timing",
+      "Mid-Career Professional: Secondary actor (moderate/constrained) \u2014 has some mobility but faces meaningful exit cost; experiences both coordination benefit and extraction",
+      "Labor Market: Organized actor (organized/constrained) \u2014 collective effect of handcuffs reduces overall labor mobility, suppresses wages during vesting windows, shifts risk to workers",
+      "HR/Compensation System: Institutional actor (institutional/arbitrage) \u2014 designs and administers vesting mechanics; maintains theater through equity narrative",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing vesting as inherent to equity compensation or capital structure"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Vesting genuinely solves coordination (alignment, reduced turnover) but the extraction is real and measurable: (1) employees accept lower wages during vesting periods (equity replaces 20-30% of cash); (2) employees cannot exit to better opportunities without forfeiting earned equity; (3) firms engineer terminations near cliff dates (e.g., layoffs 2 months before 4-year cliff) to avoid vesting payments. The value is not as high as pure snares (0.66+) because the coordination function is genuine and employees do ultimately benefit if they stay. Suppression (0.58): Moderate-high. Significant barriers to mobility: (1) unvested equity is forfeited on exit; (2) cash wages are suppressed during vesting; (3) vesting schedules are standardized (4-year cliff common), reducing employee negotiating power; (4) cliff events create strategic termination vulnerabilities. Suppression is not absolute (employees can still exit, taking the loss) but is substantial. Theater ratio (0.48): Moderate. Performative content includes: (1) 'equity story' in recruitment that obscures wage suppression; (2) annual vesting ceremonies framed as 'earning wealth' (performance theater); (3) RSU marketing that emphasizes upside potential while minimizing downside risk transfer. Theater has increased as equity compensation has become standardized industry practice \u2014 fewer employees now perceive equity grants as genuinely extraordinary retention mechanisms and more as wage structure.",
+    "perspectival_gap": "The constraint exhibits a clear and measurable perspectival gap driven by power and exit options. The trapped employee (powerless/trapped) sees pure snare: they cannot exit, face penalties for exit, and lack negotiating power. The mid-career professional (moderate/constrained) sees tangled rope: they have some exit options but face costs; they experience both coordination benefit (equity does align) and extraction (suppressed wages, reduced mobility). The employer firm (institutional/arbitrage) sees rope: vesting solves a genuine coordination problem from their perspective, and they have full arbitrage options (adjust grants, time schedules, engineer terminations). The labor market (organized/constrained) sees tangled rope at systemic level: collective effect of handcuffs reduces labor mobility and aggregate bargaining power while solving firm-level coordination. The stock option tradition (institutional/arbitrage) sees degraded piton: vesting once served genuine coordination function; now serves performative role. The analytical observer risks seeing mountain (naturalizing vesting as inherent to equity compensation), but the structural data reveals it as constructed institutional mechanism.",
+    "directionality_logic": "Directionality is determined by structural position within the vesting constraint. Beneficiaries (firm leadership, HR) have low directionality (d ~0.10): they benefit from reduced turnover, retain flexibility to adjust vesting, and have full arbitrage options. They experience negative or minimal effective extraction. Victims (trapped employees) have high directionality (d ~0.90): they bear full opportunity cost of immobility, lose unveiled equity on exit, cannot negotiate during vesting windows. They experience maximum extraction. Moderate actors (mid-career professionals) have middle directionality (d ~0.55): they experience both coordination benefit and extraction, with meaningful but not absolute exit constraints. The organized labor market has directionality around d ~0.60: systemic effect of handcuffs reduces aggregate mobility and bargaining power, but some actors (institutional agents) benefit. The engine's derivation chain produces these d values from the beneficiary/victim declarations and exit options, generating perspectival gap in effective extractiveness (chi).",
+    "mandatrophy_analysis": "TANGLED ROPE GATE VERIFICATION: The constraint satisfies all three canonical tangled rope gates: (1) beneficiaries declared (employer firm, executive leadership) with coordination function (incentive alignment, reduced turnover); (2) victims declared (trapped employee, labor mobility) with asymmetric extraction (forfeited equity, wage suppression, immobility); (3) active enforcement required (true: vesting schedules are designed and administered, cliff events are enforced, equity is forfeited on termination). The mandatrophy resolves by showing that golden handcuffs are genuinely hybrid: they are NOT pure extraction (snare) because the coordination function is real and measurable; they are NOT pure coordination (rope) because the extraction is real and asymmetric. The tangled rope classification prevents the false summit of naturalizing vesting as 'just how equity incentive alignment works' while also preventing the false minimization of saying 'it's just employee choice to accept equity grants.' The constraint is structural, hybrid, and properly classified only by tangled rope. The theater ratio (0.48) and its increase over time reflect that vesting's performative component has grown as equity compensation has become industry standard, but the functional component remains."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "executive_compensation_asymmetry",
+      "labor_market_wage_suppression",
+      "employee_geographic_immobility"
+    ],
+    "dual_formulation_note": "Golden handcuffs is the retention mechanism constraint; it is downstream of firm-level compensation strategy decisions and upstream of labor market sorting effects. The constraint's extractiveness is contingent on whether alternative retention mechanisms (cash bonuses, performance payouts) are feasible \u2014 this creates empirical uncertainty in the omega variables."
+  },
+  "directionality_overrides": []
+}

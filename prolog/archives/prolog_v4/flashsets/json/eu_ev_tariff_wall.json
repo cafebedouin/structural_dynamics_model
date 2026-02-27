@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "eu_ev_tariff_wall",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.65,
+    "suppression": 0.7,
+    "theater_ratio": 0.3,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Tariffs and Trade Barriers on Chinese Electric Vehicles",
+    "topic_domain": "economic/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "eu_auto_manufacturers",
+      "eu_member_states"
+    ],
+    "victims": [
+      "chinese_ev_manufacturers",
+      "eu_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "EU Consumers",
+      "comment": "EU Consumers face higher prices and limited choices due to tariffs, with little power to influence trade policy. Their exit options are limited as they are bound by national markets and regulations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Chinese EV Manufacturers",
+      "comment": "Chinese EV Manufacturers face significant barriers to entry in the EU market due to tariffs, but they can adapt by investing in local production or focusing on other markets. They benefit from the existing scale of production and technological advancement, but the tariffs constrain their market access."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "EU Auto Manufacturers",
+      "comment": "EU Auto Manufacturers benefit from protection against cheaper Chinese EVs, allowing them to maintain market share and profitability. They can also use tariffs as leverage to negotiate technology transfer agreements. They can arbitrage this situation by focusing on higher-margin vehicles and lobbying for continued protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "EU Member States",
+      "comment": "EU member states benefit from the protection of domestic industries and potential increases in tax revenue, but they also risk retaliation from China and reduced access to cheaper EVs. They are constrained by the need to balance economic interests with geopolitical considerations."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "From a global perspective, the EU tariffs represent a complex interplay of protectionism, strategic competition, and climate policy. The tariffs aim to protect domestic industries but may also hinder the transition to electric vehicles and increase costs for consumers. It's a tangled rope, where the benefits and drawbacks are interconnected."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "retaliation_risk",
+      "question": "What is the likelihood and impact of Chinese retaliation against EU exports?",
+      "resolution_mechanism": "Analysis of historical trade disputes and Chinese economic policy",
+      "impact": "High retaliation risk would make the tariffs less beneficial for EU member states. Low risk would embolden the EU to impose further restrictions.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The risk of Chinese retaliation affects the overall benefits of the tariffs."
+    },
+    {
+      "id": "innovation_impact",
+      "question": "How will the tariffs affect innovation in the EU auto industry?",
+      "resolution_mechanism": "Analysis of R&D spending and patent filings by EU auto manufacturers.",
+      "impact": "If tariffs stimulate innovation, they may strengthen the EU auto industry in the long run. If they stifle competition, they may lead to stagnation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The effect of tariffs on innovation in the EU."
+    },
+    {
+      "id": "climate_goal_impact",
+      "question": "How will the tariffs affect the EU's climate goals related to electric vehicle adoption?",
+      "resolution_mechanism": "Modeling of EV sales and emissions under different tariff scenarios.",
+      "impact": "If tariffs slow down EV adoption, they may hinder the EU's climate goals. If they encourage local EV production, they may accelerate the transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The impact on climate goals due to tariff implementation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The EU's imposition of tariffs and trade barriers on Chinese electric vehicles is a multifaceted issue, driven by concerns over fair competition, protection of domestic industries, and strategic positioning in the global EV market. The measures aim to level the playing field and prevent market dominance by Chinese manufacturers, who benefit from state subsidies and advanced technology. However, these actions also raise concerns about increased costs for consumers, potential retaliation from China, and hindering the transition to electric vehicles.",
+    "key_agents": [
+      "EU Auto Manufacturers: Primary beneficiary (institutional/arbitrage) - Protected market share and leverage for technology transfer.",
+      "EU Consumers: Primary victim (powerless/trapped) - Higher prices and limited choice in EV options.",
+      "Chinese EV Manufacturers: Secondary victim (moderate/constrained) - Barriers to entry and reduced market access.",
+      "EU Member States: Mixed beneficiary/victim (institutional/constrained) - Protection of domestic industries vs. risk of retaliation and reduced access to cheaper EVs.",
+      "Analytical Observer: Assesses long term global impacts (analytical/analytical)"
+    ],
+    "logic_rationale": "Extractiveness (0.65): Significant extraction due to increased prices for EU consumers and reduced market access for Chinese manufacturers. The tariffs transfer wealth from consumers and Chinese companies to EU auto manufacturers and potentially EU member states (through increased tax revenue). Suppression (0.70): High suppression due to regulatory hurdles and import restrictions effectively limiting the availability of cheaper Chinese EVs, thus reducing consumer choice. Theater ratio (0.30): Relatively low theater as the main goal of the tariffs is not to project an image of taking action but to genuinely impact the economic flows of the market and protect EU manufacturing.",
+    "perspectival_gap": "EU consumers experience the tariffs as a snare, facing higher prices and limited choices. Chinese EV manufacturers see it as a tangled rope, allowing them to adapt but constraining their market entry. EU auto manufacturers experience it as a rope, benefiting from reduced competition. EU Member states experience it as a tangled rope due to the various factors they must consider, and the analytical observer is tasked with observing the issue holistically.",
+    "directionality_logic": "Directionality is derived from structural position. Beneficiaries like EU auto manufacturers benefit from tariff protection, leading to low d and negative chi. Victims like EU consumers and Chinese EV manufacturers face increased costs and reduced market access, resulting in high d and positive chi. EU member states have a more complex relationship with directionality influenced by economic and geopolitical considerations."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_trade_relations",
+      "eu_climate_policy"
+    ]
+  },
+  "directionality_overrides": []
+}

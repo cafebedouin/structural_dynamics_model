@@ -1,0 +1,161 @@
+{
+  "header": {
+    "constraint_id": "brazil_2026_general_elections",
+    "version": "1.0",
+    "generated_date": "2024-07-15",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.85,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "2026 Brazilian General Election Structure",
+    "topic_domain": "political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "major_political_bloc_leadership",
+      "legacy_media_outlets"
+    ],
+    "victims": [
+      "independent_voters",
+      "third_party_movements",
+      "policy_nuance"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Independent Voter",
+      "comment": "PERSPECTIVE 1: INDEPENDENT VOTER (SNARE) — Trapped within a binary choice that does not represent their preferences. Their vote is extracted as support for the 'lesser evil', while genuine alternatives are suppressed. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.85. This high effective extraction meets the Snare threshold."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Major Bloc Leadership",
+      "comment": "PERSPECTIVE 2: MAJOR BLOC LEADERSHIP (ROPE) — Experiences the system as a pure coordination mechanism to consolidate power and govern. The binary structure simplifies messaging and funnels resources, appearing as an efficient tool. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.07. The negative extraction indicates a net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the coordination function (electing a government) and the severe extractive properties (suppression of alternatives, extraction of voter agency). The base metrics (ε=0.60, suppression=0.85) confirm a hybrid system. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.83."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Third-Party Movement",
+      "comment": "PERSPECTIVE 4: THIRD-PARTY MOVEMENT (TANGLED ROPE) — Forced to operate within the constraining system, experiencing its extractive nature directly through funding barriers and lack of media access. Yet, they must engage with it as a coordination game to have any hope of influence. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.45."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The 'Duverger's Law' Observer",
+      "comment": "PERSPECTIVE 5: 'DUVERGER'S LAW' OBSERVER (MOUNTAIN) — This perspective misinterprets the contingent political polarization as an immutable law of two-party systems. It frames the binary as a natural, unavoidable outcome. The engine will flag this as a 'false summit' because the base properties (ε=0.60, suppression=0.85) violate the Mountain classification thresholds."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "polarization_durability",
+      "question": "Is the current 'Bolsonarismo vs. Anti-Bolsonarismo' polarization a durable structural feature of Brazilian politics or a transient phase tied to specific personalities?",
+      "resolution_mechanism": "Analysis of electoral results post-2026, tracking the vote share of third parties and the emergence of new political cleavages.",
+      "impact": "If durable, the Snare/Tangled Rope classifications are stable. If transient, the constraint may decay into a Piton or be replaced by a less extractive Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the current political polarization is a durable or transient feature."
+    },
+    {
+      "id": "digital_media_impact",
+      "question": "Do digital media platforms and decentralized networks offer a viable path to break the binary, or do their algorithms inherently reinforce the two dominant poles?",
+      "resolution_mechanism": "Network analysis of information flows during the 2026 campaign; correlation between social media engagement and support for non-polarized candidates.",
+      "impact": "If they enable alternatives, the suppression score (0.85) is too high. If they reinforce the binary, suppression is accurate or even underestimated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "The role of digital media in either reinforcing or breaking the political binary."
+    },
+    {
+      "id": "null_vote_effect",
+      "question": "Is casting a null or blank vote a form of effective protest (a limited 'exit') or a form of political surrender that legitimizes the victory of one of the two poles?",
+      "resolution_mechanism": "Political theory analysis combined with empirical study of how high abstention/null vote rates are interpreted by political elites and media.",
+      "impact": "If it's an effective exit, the 'trapped' status of voters is weakened, potentially lowering the perceived extraction. If it's surrender, the Snare classification is reinforced.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "The structural meaning and effect of null/blank votes within the system."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2018,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2022,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2026,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2018,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2022,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2026,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 2018,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The 2026 Brazilian General Election structure operates as a rigid constraint defined by the intense polarization between 'Bolsonarismo' and 'Anti-Bolsonarismo' (often represented by 'Lulismo'). This binary simplifies the political landscape into a zero-sum conflict, suppressing alternative political projects and forcing voters into a 'lesser of two evils' calculation. The constraint is not merely the formal election rules, but the entire ecosystem of media narratives, party funding, and political alliances that enforces this dichotomy.",
+    "key_agents": [
+      "Major Political Bloc Leadership: Primary beneficiaries (institutional/arbitrage) - Leaders of the two poles who consolidate power and resources.",
+      "Independent Voters: Primary victims (powerless/trapped) - Citizens whose range of political choice is severely constrained.",
+      "Third-Party Movements: Secondary victims (organized/constrained) - Political groups unable to gain traction due to the suppressive nature of the binary.",
+      "Legacy Media Outlets: Secondary beneficiaries (institutional/arbitrage) - Profit from the high-engagement, conflict-driven narrative.",
+      "Analytical Observer: External analyst (analytical/analytical) - Perceives the full hybrid nature of the system."
+    ],
+    "logic_rationale": "Extractiveness (0.60): High. The system extracts political agency from voters and potential support from nascent political movements, channeling it towards the two established poles. Suppression (0.85): Very High. Electoral laws (e.g., performance barriers), party fund distribution, and dominant media narratives create formidable barriers for any third way. Theater Ratio (0.65): High. Substantive policy debate is often replaced by performative cultural warfare and loyalty signaling, focusing on personalities over governance plans.",
+    "perspectival_gap": "The gap is stark. For the leadership of the two main blocs, the system is an effective Rope for coordinating power. For the independent voter, it is a Snare that forces a choice and extracts consent. For an aspiring third party, it is a Tangled Rope they must navigate, facing both its extractive barriers and its coordination rules. An academic might even misclassify it as a Mountain, an inevitable result of political 'laws', but this ignores the high degree of active enforcement and extraction.",
+    "directionality_logic": "Beneficiaries (Bloc Leadership, Media) have arbitrage exit options, leading to low directionality (d) and a Rope classification. Victims (Voters, Third Parties) are trapped or constrained, leading to high directionality and Snare/Tangled Rope classifications. The system's structure itself determines who benefits and who pays, and the classifications reflect these divergent structural realities.",
+    "mandatrophy_analysis": "This constraint resolves a potential mandatrophy by refusing to label the system as simply 'democratic' (Rope) or 'authoritarian' (Snare). The analytical classification of Tangled Rope correctly identifies that the system performs a genuine coordination function (selecting a government) while simultaneously being highly extractive and suppressive. The perspectival analysis shows that the 'Rope' and 'Snare' labels are not incorrect, but are incomplete truths reflecting valid but partial viewpoints from different structural positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "brazil_economic_policy_2027",
+      "brazil_judicial_appointments_2027"
+    ]
+  }
+}

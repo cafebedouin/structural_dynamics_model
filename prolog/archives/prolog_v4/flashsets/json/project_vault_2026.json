@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "project_vault_2026",
+    "version": "1.0",
+    "generated_date": "2024-03-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.55,
+    "suppression": 0.45,
+    "theater_ratio": 0.2,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Project Vault Strategic Mineral Reserve",
+    "topic_domain": "economic/geopolitical",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "domestic_mining_companies",
+      "defense_industry"
+    ],
+    "victims": [
+      "foreign_mineral_exporters",
+      "downstream_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Foreign Mineral Exporters",
+      "comment": "Foreign mineral exporters, particularly those in countries with less favorable trade relations, are trapped as they lose market share and pricing power. They have limited options to exit this constraint due to geopolitical dependencies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Downstream Consumers",
+      "comment": "Downstream consumers face potentially higher prices due to reduced competition but also benefit from the enhanced security of supply. Their exit options are constrained by the limited availability of alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Domestic Mining Companies",
+      "comment": "Domestic mining companies are primary beneficiaries. They gain a guaranteed market and potentially higher prices. They can arbitrage the situation to maximize profits within the parameters of the reserve."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Defense Industry",
+      "comment": "The defense industry benefits from a secure and reliable supply of critical minerals, enabling them to fulfill production requirements without geopolitical supply chain risks. The arbitrage consists of the guaranteed availability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "An analytical observer sees a tangled rope. The mineral reserve aims to secure the supply chain (coordination) but also creates market distortions and potential for rent-seeking (extraction). The balance between these two aspects determines its overall impact."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "geopolitical_retaliation",
+      "question": "Will other nations retaliate with their own mineral reserve strategies, disrupting global trade?",
+      "resolution_mechanism": "Track policy changes and trade flows among key mineral-producing nations.",
+      "impact": "If retaliation occurs, Project Vault's effectiveness could be undermined, leading to a snare for the US economy. If not, it remains a tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The likelihood and impact of geopolitical retaliation."
+    },
+    {
+      "id": "market_distortion",
+      "question": "To what extent will Project Vault distort mineral markets and create opportunities for rent-seeking?",
+      "resolution_mechanism": "Monitor mineral prices, production levels, and industry profits.",
+      "impact": "High distortion could shift the classification towards a snare, as benefits are concentrated among a few, while costs are borne by many. Low distortion maintains the tangled rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "The degree of market distortion caused by the reserve."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.53
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Project Vault is a strategic mineral reserve designed to protect the US economy from supply chain disruptions. It aims to ensure a reliable supply of critical minerals for defense and industry, but it also introduces potential distortions into the global mineral market, affecting both domestic and foreign actors. The reserve represents a complex interplay of coordination and extraction.",
+    "key_agents": [
+      "Domestic Mining Companies: Primary beneficiaries (institutional/arbitrage) \u2014 gain guaranteed market and potentially higher prices.",
+      "Defense Industry: Beneficiary (institutional/arbitrage) - access secured supply.",
+      "Foreign Mineral Exporters: Primary victims (powerless/trapped) \u2014 lose market share and pricing power.",
+      "Downstream Consumers: Victims (moderate/constrained) \u2014 potentially higher prices but also benefit from enhanced security of supply.",
+      "Analytical Observer: Assesses the overall balance between coordination and extraction (analytical/analytical)."
+    ],
+    "logic_rationale": "Extractiveness (0.55): Moderate. Project Vault extracts from foreign exporters by limiting their access to the U.S. market. It also extracts from domestic consumers who may face higher prices. The extractiveness is mitigated by the potential for increased domestic production and greater supply chain security. Suppression (0.45): Moderate. The reserve suppresses competition from foreign suppliers and limits the flexibility of downstream consumers to choose alternative sources. However, it does not completely eliminate these options. Theater ratio (0.20): Low. Project Vault is primarily driven by strategic and economic considerations, not by public relations or performative gestures. The focus is on building a tangible reserve of minerals.",
+    "perspectival_gap": "The perspectives highlight the different experiences of actors in relation to Project Vault. Domestic mining companies and the defense industry benefit from increased security and market access, while foreign exporters face reduced opportunities. Downstream consumers experience a trade-off between higher prices and greater supply reliability. The analytical observer sees a complex situation with both coordination and extraction aspects. The divergent exit options drive the differing classifications. Foreign mineral exporters are structurally trapped.",
+    "directionality_logic": "The directionality values (d) are derived from the agent's power, exit options, and relationship to the extraction flow. Domestic mining companies, with high power and arbitrage options, experience low extraction. Foreign mineral exporters, with low power and trapped exit options, experience high extraction. Downstream consumers, with moderate power and constrained exit options, experience moderate extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "global_mineral_supply_chains",
+      "rare_earth_dependency"
+    ]
+  },
+  "directionality_overrides": []
+}

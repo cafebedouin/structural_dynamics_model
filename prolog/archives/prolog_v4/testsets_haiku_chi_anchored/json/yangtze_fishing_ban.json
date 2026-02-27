@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "yangtze_fishing_ban",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "yrfb"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Yangtze River Fishing Ban",
+    "topic_domain": "economic/environmental/political",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "yangtze_ecosystem_recovery",
+      "downstream_water_users",
+      "future_generations"
+    ],
+    "victims": [
+      "artisanal_fishers",
+      "fishing_gear_suppliers",
+      "regional_fishing_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Displaced Artisanal Fisher",
+      "comment": "PERSPECTIVE 1: DISPLACED ARTISANAL FISHER (SNARE) \u2014 Banned from primary livelihood with no alternative income source, no transition period, and no meaningful compensation relative to lifetime earnings. Trapped by geography (river is local livelihood) and skill set (fishing is intergenerational practice). d\u22480.92, f(d)\u22481.38, \u03c3=0.9 \u2192 \u03c7\u22480.77."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Regional Fishing Community",
+      "comment": "PERSPECTIVE 2: REGIONAL FISHING COMMUNITY (TANGLED ROPE) \u2014 Constrained by ban but also potentially benefits from ecosystem recovery (fish population restoration, water quality improvement benefit local populations over 15-20 year horizon). Active enforcement required; enforcement is resource-intensive. Mixed coordination (ecosystem restoration) and extraction (livelihood prohibition). d\u22480.70, f(d)\u22481.08, \u03c3=0.9 \u2192 \u03c7\u22480.59."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Chinese State Apparatus",
+      "comment": "PERSPECTIVE 3: CHINESE STATE APPARATUS (ROPE) \u2014 Coordinates ecosystem restoration across provinces; benefits from restored fish populations, improved water quality, and international environmental credibility. Has arbitrage exit (can relax ban if costs exceed benefits; has resources to sustain enforcement). Sees constraint primarily as coordination mechanism for collective action problem (tragedy of the commons). d\u22480.08, f(d)\u2248-0.08, \u03c3=1.1 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Downstream Water Infrastructure",
+      "comment": "PERSPECTIVE 4: DOWNSTREAM WATER INFRASTRUCTURE (ROPE) \u2014 Hydroelectric dams, irrigation systems, drinking water systems benefit from improved water quality and reduced sediment disruption. Pure coordination benefit; no extraction perceived. d\u22480.05, f(d)\u2248-0.10, \u03c3=1.1 \u2192 \u03c7\u2248-0.05."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Environmental NGOs and Scientists",
+      "comment": "PERSPECTIVE 5: ENVIRONMENTAL NGOS AND SCIENTISTS (TANGLED ROPE) \u2014 Organized actors advocating for ban and monitoring compliance. Benefits from ecosystem restoration mandate (their policy goal achieved). Constrained by government authority (cannot unilaterally modify ban; dependent on state enforcement). Enforcement is active and visible. d\u22480.35, f(d)\u22480.32, \u03c3=1.0 \u2192 \u03c7\u22480.20."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Fishery Transition Programs",
+      "comment": "PERSPECTIVE 6: FISHERY TRANSITION PROGRAMS (SCAFFOLD) \u2014 Government-funded livelihood transition (aquaculture training, alternative employment, pension programs) with designed sunset: programs scale down as ecosystem recovery provides alternative employment (eco-tourism, ecosystem service monitoring) and as generational workforce turns over. Theater: implementation inconsistency across provinces. Has sunset clause (programs sunset as economy transitions to service-based livelihoods). d\u22480.45, f(d)\u22480.48, \u03c3=0.9 \u2192 \u03c7\u22480.24."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Fishing Gear Supply Industry",
+      "comment": "PERSPECTIVE 7: FISHING GEAR SUPPLY INDUSTRY (PITON) \u2014 Victim of ban (lost market); persists through theatrical compliance and claims of 'transition products' for export markets. Theater_ratio\u22480.62. Institutional actor that maintains activity through performative rebranding rather than functional adaptation. d\u22480.80, f(d)\u22481.22, \u03c3=1.0 \u2192 \u03c7\u22480.76."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Carrying Capacity View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scale, the Yangtze's carrying capacity for wild fish populations had reached zero under sustained industrial fishing pressure. The ban represents recognition of an immutable ecological constraint (extinction trajectory is irreversible below population thresholds). Emerges naturally from ecosystem dynamics. However, the structural data (\u03b5=0.62, suppression=0.68, theater=0.55) contradicts pure mountain classification \u2014 the engine will compute this as a false summit, revealing that the 'law of nature' framing naturalizes what is actually a reversible policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ecosystem_recovery_timeline",
+      "question": "How long until Yangtze fish populations recover to 1980s levels, and what populations are recoverable vs permanently extinct?",
+      "resolution_mechanism": "Long-term ecological monitoring data; genetic analysis of remaining populations; comparison with post-industrial fishery recovery baselines from other rivers (Rhine, Danube, North American examples)",
+      "impact": "If recovery timeline < 10 years: ban is justified pure coordination (Rope from state perspective). If > 30 years: extraction component increases (Snare from fisher perspective becomes more pronounced). If some populations permanently extinct: ban represents acceptance of irreversibility (raises question of whether coordination was possible earlier).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Timeline for ecosystem recovery under ban"
+    },
+    {
+      "id": "livelihood_transition_sufficiency",
+      "question": "Do government transition programs provide income replacement sufficient for affected fishers to maintain pre-ban living standards?",
+      "resolution_mechanism": "Longitudinal income tracking of displaced fishers; comparison of transition program participants vs control groups; analysis of pension adequacy and alternative employment uptake",
+      "impact": "If sufficient (>80% income replacement): snare classification weakens; extraction component reduces. If insufficient (<50%): snare classification strengthens; suppression component increases (fishers cannot exit or afford alternatives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transition programs adequately replace fisher incomes"
+    },
+    {
+      "id": "enforcement_equity_and_corruption",
+      "question": "Is the ban enforced uniformly across provinces and socioeconomic classes, or do wealthy actors and state-connected interests continue fishing through corruption/exemptions?",
+      "resolution_mechanism": "Comparative analysis of enforcement intensity by province; monitoring of illegal fishing rates among elites vs artisanal fishers; inspection of exemption patterns",
+      "impact": "If enforcement is inequitable: victim group (artisanal fishers) bears disproportionate extraction; snare classification correct. If enforcement is uniform: extraction component reduces; tangled_rope classification more accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Uniformity and equity of ban enforcement"
+    },
+    {
+      "id": "alternative_protein_substitution",
+      "question": "Do alternative protein sources (aquaculture, imports, plant-based) adequately substitute for Yangtze wild fish in regional diets and markets?",
+      "resolution_mechanism": "Market analysis of substitution rates; nutritional adequacy assessment; price impacts on low-income consumers; cultural acceptability of alternatives",
+      "impact": "If substitution is effective and affordable: ban is coordination mechanism (benefits downstream users without harming food security). If substitution is incomplete: extraction component increases (food insecurity or market distortion).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Adequacy of alternative protein sources"
+    },
+    {
+      "id": "transnational_coordination_failure",
+      "question": "Does the ban apply only to Chinese nationals, or does it constrain fishing by foreign fleets? Are neighboring countries enforcing compatible bans?",
+      "resolution_mechanism": "International agreements analysis; monitoring of fleet composition in enforcement zones; comparison with Cambodia, Laos, Vietnam, Myanmar policies",
+      "impact": "If ban is unilateral (China only): coordination failure undermines effectiveness; Snare classification strengthens (Chinese fishers sacrifice while foreign competitors benefit). If multinational coordination exists: pure coordination mechanism (Rope classification more accurate).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether ban is unilateral or part of transnational coordination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The Yangtze River fishing ban, implemented by the Chinese government starting in 2020 with expansion through 2024, represents a structural tension between ecological restoration (a genuine collective action problem requiring government coordination to prevent tragedy of the commons) and concentrated livelihood extraction imposed on artisanal fishing communities without proportional compensation or universal enforcement. The constraint exhibits properties of both coordination (solving overfishing via binding prohibition) and extraction (concentrating costs on powerless populations while benefits accrue to diffuse future beneficiaries and institutional actors). Initial implementation focused on ecosystem justification and state-level coordination; over time, the theater component increased as enforcement inconsistencies emerged, transition programs proved inadequate, and enforcement burden fell disproportionately on small-scale fishers while industrial and well-connected actors found exemptions or alternative income streams. The constraint qualifies as Tangled Rope because it possesses both: (1) genuine coordination function \u2014 preventing tragedy of the commons and restoring fish populations \u2014 and (2) asymmetric extraction \u2014 imposing lifetime livelihood loss on artisanal fishers while providing diffuse, long-delayed benefits to other actors. The base extractiveness increased from 0.15 (early period: justified by ecological emergency) to 0.62 (current: enforcement burden + inadequate transition support reveals extraction structure). Theater ratio increased from 0.35 to 0.55 as implementation inconsistencies became visible.",
+    "key_agents": [
+      "Artisanal Fishers: Primary victims (powerless/trapped) \u2014 banned from intergenerational livelihood with inadequate compensation; geographic and skill-based immobility",
+      "Fishing Communities (Regional): Secondary victims and partial beneficiaries (moderate/constrained) \u2014 constrained by ban but gain long-term ecosystem benefits; mixed structural position",
+      "Chinese Government/State Apparatus: Primary beneficiary and enforcer (institutional/arbitrage) \u2014 coordinates ecosystem restoration, controls enforcement, captures international environmental credibility",
+      "Downstream Water Users: Beneficiary (institutional/arbitrage) \u2014 dam operators, irrigation systems, drinking water infrastructure benefit from water quality improvement and reduced sedimentation",
+      "Environmental NGOs and Scientists: Organized advocates (organized/constrained) \u2014 promote and monitor ban; dependent on state enforcement; benefit from policy goal realization",
+      "Fishery Transition Programs: Temporary support mechanism (organized/constrained) \u2014 designed with sunset clause as generational workforce turns over and alternative livelihoods develop",
+      "Fishing Gear Supply Industry: Victim with theatrical persistence (institutional/constrained) \u2014 loses market; persists through performative compliance and export rebranding",
+      "Analytical Observer: Sees potential natural law (analytical/analytical) \u2014 risks naturalizing contingent policy choice as immutable ecological necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.62): Moderate-high. The ban solves a genuine tragedy of the commons \u2014 Yangtze wild fish populations faced extinction under sustained industrial fishing pressure. However, the solution imposes concentrated, permanent costs on artisanal fishers (livelihood loss, no viable alternatives in many regions) while distributing benefits diffusely (ecosystem restoration benefits all downstream users over 20+ year horizon). Government transition programs exist but are significantly underfunded relative to lifetime earnings impact \u2014 benefit replacement < 50% in most cases. The extractiveness increased over time as inadequate transition support and enforcement inconsistency became visible. Suppression (0.68): High. Fishers face multiple barriers to exit or resistance: (1) geographic immobility (river is local livelihood), (2) skill-specific training (fishing knowledge not transferable to most alternative employment), (3) age barriers (older fishers ineligible for retraining programs), (4) enforcement threat (illegal fishing carries criminal penalties, not just fines). Alternative livelihoods (eco-tourism guide, aquaculture, environmental monitoring) are available but in limited quantity and require transition investment. Theater ratio (0.55): Moderate. Implementation theater includes: government announcements emphasizing ecological restoration and international environmental credibility; transition program rhetoric emphasizing 'just transition' despite inadequate funding; enforcement visibility focused on high-profile patrols while corruption/exemptions occur. However, functional enforcement is substantial \u2014 the ban does prevent most fishing activity, so theater < 0.70. The increase from 0.35 to 0.55 reflects growing gaps between announced transition support and actual implementation.",
+    "perspectival_gap": "The constraint demonstrates significant perspectival divergence. The artisanal fisher sees pure extraction (Snare) \u2014 a permanent prohibition with no viable alternatives and inadequate compensation, enforced through criminal penalties. The state apparatus sees coordination (Rope) \u2014 solving a collective action problem, restoring ecosystem health, coordinating across provincial enforcement zones. Environmental organizations see mixed coordination and partial extraction (Tangled Rope) \u2014 genuine ecological benefit but unfair distribution of costs. Transition programs see a temporary coordination mechanism with sunset (Scaffold) \u2014 designed to phase out as alternative employment develops. The fishing gear industry sees institutional degradation (Piton) \u2014 a lost market sustained through theatrical compliance and export rebranding. The downstream water infrastructure sees pure coordination benefit (Rope) \u2014 improved water quality and reduced sedimentation require no sacrifice from their perspective. The analytical observer risks seeing natural law (Mountain) \u2014 framing the ban as necessary response to immutable ecological limits \u2014 but the structural data reveals contingency: the coordination could have been achieved through alternative mechanisms (fishing quotas, territorial rights, eco-certification) that distribute costs differently.",
+    "directionality_logic": "Artisanal fishers: Victims + trapped \u2192 d\u22480.92, f(d)\u22481.38. Maximum extraction; powerless agents with zero exit options (geographic/skill immobility). Government state apparatus: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.08. Net beneficiary; can adjust enforcement or permit exemptions if costs exceed benefits. Downstream water users: Beneficiary + arbitrage \u2192 d\u22480.05, f(d)\u2248-0.10. Pure beneficiary from state perspective; gain water quality with no cost. Environmental NGOs: Organized advocates + constrained \u2192 d\u22480.35, f(d)\u22480.32. Low-moderate extraction; dependent on state enforcement but have agency through advocacy. Transition programs: Organized implementation + constrained \u2192 d\u22480.45, f(d)\u22480.48. Low-moderate extraction; structured with sunset as alternative livelihoods develop. Fishing gear industry: Victim + constrained \u2192 d\u22480.80, f(d)\u22481.22. High extraction; lost market but can partially exit through export rebranding and theatrical compliance.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION (\u03b5=0.62, above 0.46 threshold): The constraint avoids false natural law classification through structural decomposition. The temptation to classify as Mountain ('ecological necessity') is strong: Yangtze wild fish faced extinction; ban is required to prevent irreversible loss. However, the structural data reveals this as a false summit. (1) The ban is not inherent to ecological limits \u2014 alternative coordination mechanisms exist (fishing quotas, territorial allocation, eco-certification) that achieve ecosystem recovery with different cost distributions. (2) The asymmetric extraction (concentrated costs on artisanal fishers, diffuse benefits to downstream users and future generations) reveals contingent policy choice, not natural law. (3) The enforcement inconsistency and inadequate transition support indicate that the 'natural' solution is actually contested and unevenly implemented. The correct classification is Tangled Rope: genuine coordination function (ecosystem restoration) + asymmetric extraction (unequal burden distribution) + active enforcement (state monopoly on enforcement mechanism). The theater_ratio (0.55) is below the 0.70 piton threshold, confirming that functional enforcement exists (not just theatrical compliance). The mandate that the constraint must possess both coordination and asymmetric extraction is satisfied: (a) Coordination: ecosystem recovery prevents extinction, benefits all downstream actors. (b) Extraction: artisanal fishers bear disproportionate costs while powerless to influence policy. (c) Active enforcement: criminal penalties, patrol systems, monitoring required to maintain prohibition."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "upstream_dam_system_coordination",
+      "southeast_asian_fishery_governance",
+      "aquaculture_industry_expansion"
+    ],
+    "dual_formulation_note": "The fishing ban decomposes into two related constraints: (1) Ecosystem carrying capacity (Mountain: biological limit on wild fish populations under exploitation) with \u03b5\u22480.05; (2) Institutional coordination mechanism (Tangled Rope: policy choice on how to enforce the limit) with \u03b5=0.62. The ban story addresses the institutional constraint; the ecosystem story addresses the natural limit they were responding to. The ban influences aquaculture expansion (substitution effect) and upstream dam coordination (joint ecosystem restoration)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

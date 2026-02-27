@@ -2,26 +2,25 @@
   "header": {
     "constraint_id": "champions_bass_fishing_exclusion",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cbf"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.7,
-    "theater_ratio": 0.3,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
     "human_readable": "Champions Bass Fishing Tournament Exclusionary Practices",
-    "topic_domain": "economic",
+    "topic_domain": "economic/recreational_sports",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "tournament_organizers",
-      "elite_professional_anglers",
-      "sponsors_and_media_partners"
+      "elite_professional_anglers"
     ],
     "victims": [
-      "aspiring_amateur_anglers",
-      "underrepresented_demographics",
-      "non_tournament_anglers"
+      "amateur_aspiring_anglers",
+      "rural_low_income_fishing_communities"
     ]
   },
   "perspectives": [
@@ -31,17 +30,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Aspiring Amateur Angler",
-      "comment": "PERSPECTIVE 1: ASPIRING AMATEUR (SNARE) — Trapped by the desire to compete professionally. The high costs of entry fees, boats, and gear, combined with low odds of winning, constitute a pure extraction mechanism. The only path to pro status is through this system. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
+      "label": "Amateur Angler Seeking Professional Entry",
+      "comment": "PERSPECTIVE 1: AMATEUR ANGLER (SNARE) \u2014 Entry fees, equipment requirements, and tournament qualification tiers create multiple barriers to entry. Anglers from low-income or rural backgrounds face trapped exit: the tournament pathway is the primary route to professional fishing, but access requires capital they lack. Suppression is high \u2014 alternative pathways (sponsorship, informal competitions) are limited. Extraction is experienced as maximal from this structural position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Semi-Professional Regional Angler",
+      "comment": "PERSPECTIVE 2: SEMI-PROFESSIONAL REGIONAL ANGLER (TANGLED ROPE) \u2014 Can access some tournament pathways through regional qualifying events and sponsorships, but advancement to national championship tiers requires sustained capital investment and geographic mobility. Benefits from tournament infrastructure (coordination function: venue, scheduling, rules standardization) but faces extraction through qualification tiers that advantage already-established competitors. Exit is constrained \u2014 they can fish independently but professional income requires tournament participation."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Tournament Organizer and Elite Angler Coalition",
+      "comment": "PERSPECTIVE 3: TOURNAMENT ORGANIZERS / ELITE COALITION (ROPE) \u2014 Beneficiaries who experience the constraint as pure coordination: fee structures, qualification tiers, and sponsorship allocation mechanisms solve the collective action problem of organizing high-stakes competitions. These actors have arbitrage options (they can host private tournaments, negotiate sponsorships globally, shift to alternative professional fishing leagues). The constraint yields positive extraction toward this group \u2014 entry fees and sponsorship arrangements flow to organizers and established professionals."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Tournament Organizer",
-      "comment": "PERSPECTIVE 2: TOURNAMENT ORGANIZER (ROPE) — Experiences the system as a pure coordination mechanism. They organize a complex event, create a media product, and allocate prize money, solving a collective action problem for anglers who want to compete. d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.08. Negative extraction indicates a net beneficiary."
+      "label": "Grassroots Fishing Equity Movement",
+      "comment": "PERSPECTIVE 4: GRASSROOTS FISHING EQUITY COALITION (SCAFFOLD) \u2014 Organized advocacy groups and regional fishing clubs are building alternative entry pathways: pay-as-you-go local tournaments, youth fishing programs with scholarship funding, and open-access tournament tiers. These represent temporary scaffolding intended to lower barriers while professional tournaments retain their elite structure. Success depends on sustained funding and coalition maintenance; sunset occurs if alternative pathways become self-sustaining and reduce demand for exclusionary professional tournaments."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Professional Bass Fishing League (Legacy Structure)",
+      "comment": "PERSPECTIVE 5: PROFESSIONAL BASS FISHING LEAGUE LEGACY (PITON) \u2014 The institutional structure of established professional tournaments (entry tiers, media partnerships, sponsorship allocation) persists largely through inertia. Its primary function (identifying elite talent) has become secondary to rent extraction through fees and merchandise. Theater ratio is moderate (0.48) \u2014 the tournament spectacle (live broadcasts, dramatic final rounds, celebrity angler personas) maintains public engagement, but the underlying selection mechanism has atrophied. The structure is maintained because alternative professional fishing leagues have not fully displaced it, and changing the model would disrupt sponsor contracts."
     },
     {
       "classification_type": "tangled_rope",
@@ -49,104 +75,99 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees both the genuine coordination function (organizing a competition) and the asymmetric extraction (funneling wealth from a large amateur base to a small elite). The active enforcement of rules and high suppression of alternative paths to professional status confirm the hybrid nature. d≈0.73, f(d)≈1.15, σ=1.2 → χ≈0.90."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Elite Professional Angler",
-      "comment": "PERSPECTIVE 4: ELITE PRO (ROPE) — As a primary beneficiary, the elite pro experiences the tournament circuit as a coordination system that enables their career. They have mobility between different tournament series and leverage their status for sponsorships. The high barriers to entry protect their elite status. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.01."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "moderate",
-      "time_horizon": "immediate",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Non-Tournament Angler",
-      "comment": "PERSPECTIVE 5: NON-TOURNAMENT ANGLER (SNARE) — Experiences the constraint as coercive extraction from a public good. Their access to public waterways is restricted during high-profile events, and they perceive increased fishing pressure without receiving any benefit. Their exit is constrained to fishing at other times or less desirable locations. d≈0.85, f(d)≈1.15, σ=0.8 → χ≈0.60. χ is just below the snare threshold, but the experience is one of coercion."
+      "label": "Analytical Observer (Global Sports Equity Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational scope, the constraint embeds both genuine coordination (standardized tournament formats enable cross-regional competition and sponsorship flow) and asymmetric extraction (capital and geographic barriers exclude talent pools systematically by socioeconomic status and region). The engine's analysis reveals neither pure natural law nor pure extraction \u2014 rather, a hybrid system where coordination mechanisms (competition rules, prize distribution) are entangled with extraction mechanisms (fee structures, qualification gates). This is the baseline constraint classification."
     }
   ],
   "omegas": [
     {
-      "id": "meritocracy_vs_gatekeeping",
-      "question": "Are the high financial and social barriers to entry a necessary filter for elite talent (meritocracy) or an intentional gatekeeping mechanism to protect the status of incumbent pros and organizers (extraction)?",
-      "resolution_mechanism": "Analysis of career trajectories of new entrants vs. incumbents, controlling for sponsorship levels. Comparison with sports that have lower entry barriers.",
-      "impact": "If primarily meritocratic, the system is closer to a Rope. If primarily gatekeeping, it confirms the Snare/Tangled Rope classification.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Distinguishing between meritocratic filtering and extractive gatekeeping in tournament entry barriers."
+      "id": "merit_selection_sufficiency",
+      "question": "Do tournament qualification tiers and entry fees genuinely select for fishing skill, or do they select for participant capital and geographic access?",
+      "resolution_mechanism": "Empirical analysis: correlation between tournament placement and angler demographics (income, geography, sponsorship status); comparison of skill distributions in fee-based vs free-entry tournaments; tracking of tournament winners' socioeconomic backgrounds over time",
+      "impact": "If merit selection is high: qualification tiers are legitimate coordination mechanisms (Rope from more perspectives). If merit selection is low: tiers are pure extraction mechanisms disguised as meritocracy (Snare from more perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether tournament tiers select for skill or for capital"
     },
     {
-      "id": "unwritten_rules_impact",
-      "question": "What is the quantifiable impact of unwritten social rules and network effects on an angler's success, independent of skill?",
-      "resolution_mechanism": "Sociological network analysis of top anglers; surveys and interviews with aspiring amateurs and underrepresented groups to quantify perceived social barriers.",
-      "impact": "A high impact would increase the 'suppression' score, reinforcing the Snare classification for outsiders. A low impact would suggest the system is more of a pure economic Rope.",
-      "confidence": "low",
+      "id": "alternative_pathway_viability",
+      "question": "Can grassroots, low-cost tournament networks achieve sufficient scale and legitimacy to reduce dependence on professional tournament structures?",
+      "resolution_mechanism": "5-year projection: participation rates in free/low-cost tournaments vs CBF tournaments; sponsorship funding trends for alternative pathways; angler career outcome comparisons (alternative pathway winners vs CBF qualifiers)",
+      "impact": "If viable: scaffold sunset is real \u2014 alternative structures are becoming self-sustaining. If unviable: grassroots pathways remain supplementary, and professional tournament exclusion remains primary extraction mechanism.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Quantifying the impact of social networks and unwritten rules on tournament success."
+      "description": "Viability of alternative low-cost tournament pathways"
+    },
+    {
+      "id": "sponsorship_gatekeeping_necessity",
+      "question": "Is the concentration of sponsorships among professional tournaments structurally necessary for fishing industry economics, or is it a choice that artificially inflates entry barriers?",
+      "resolution_mechanism": "Analysis of sponsorship allocation: what proportion of fishing industry advertising budget flows to professional tournaments vs regional events; hypothetical modeling of sponsorship distribution under alternative tournament structures",
+      "impact": "If necessary: sponsorship concentration is a coordination outcome (Rope logic). If contingent choice: it is an extraction mechanism (Snare logic).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sponsorship gatekeeping is structurally necessary"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2004,
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
       "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2014,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
-      "value": 0.65
+      "time_point": 10,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2004,
-      "value": 0.15
+      "time_point": 0,
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2014,
-      "value": 0.25
+      "time_point": 5,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.3
+      "time_point": 10,
+      "value": 0.48
     }
   ],
   "interval": {
-    "start": 2004,
-    "end": 2024
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint describes the structure of high-stakes professional bass fishing tournaments, which function as a de facto gateway to a professional angling career. The system is characterized by extremely high financial barriers to entry (boats, equipment, travel, fees) and a set of unwritten social rules that favor established insiders. While it provides a genuine coordination function by organizing large-scale competitions, it simultaneously operates an extractive model, funding large prizes and organizer profits from the entry fees of a vast number of amateur participants with a statistically negligible chance of success.",
+    "narrative_context": "Champions Bass Fishing tournaments exemplify a hybrid economic constraint that combines genuine coordination mechanisms (standardized tournament formats, venue scheduling, professional rules enforcement) with asymmetric extraction through barrier construction (entry fees, equipment requirements, multi-tier qualification systems). The constraint creates a two-tier system: elite professional anglers with established sponsorships and capital access experience the tournaments as coordination infrastructure that enables their careers; amateur and aspiring anglers from low-income or rural backgrounds experience the same structure as systematic exclusion. The constraint's extractiveness (0.52) reflects moderate extraction \u2014 less coercive than predatory lending or labor trafficking, but more systematic than pure coordination. Suppression (0.58) is substantial: alternative pathways to professional fishing exist (independent guide services, local tournaments, media careers) but are materially constrained relative to the tournament pathway. Theater ratio (0.48) indicates that the constraint maintains moderate performative content: televised tournaments and celebrity angler personas drive media engagement, but the selection mechanism (who advances) remains substantively tied to capital access rather than skill alone.",
     "key_agents": [
-      "Tournament Organizers: Primary beneficiary (institutional/arbitrage) - Set the rules and profit from fees and sponsorships.",
-      "Elite Professional Anglers: Primary beneficiary (powerful/mobile) - Benefit from prize money and sponsorships; high entry barriers limit their competition.",
-      "Aspiring Amateur Anglers: Primary victim (powerless/trapped) - Provide the bulk of the revenue via entry fees but face prohibitive odds.",
-      "Underrepresented Demographics: Secondary victim (powerless/trapped) - Face additional social and cultural barriers to entry and inclusion.",
-      "Non-Tournament Anglers: Tertiary victim (moderate/constrained) - Suffer negative externalities like restricted access to public waterways."
+      "Tournament Organizers: Primary beneficiary (institutional/arbitrage) \u2014 capture entry fees, sponsorship allocations, media rights; have exit options to alternative professional fishing structures",
+      "Elite Professional Anglers: Secondary beneficiary (powerful/arbitrage) \u2014 leverage tournament platform for sponsorships and prize money; already-established access makes barriers immaterial",
+      "Amateur/Aspiring Anglers: Primary victim (powerless/trapped) \u2014 face systematic barriers (capital, geographic, informational); tournament pathway is primary route to professional status; no viable alternatives",
+      "Rural/Low-Income Fishing Communities: Secondary victim (moderate/constrained) \u2014 lack capital for tournament entry; less access to sponsorship networks; some can access regional qualifiers but advancement is suppressed",
+      "Grassroots Fishing Equity Coalitions: Organized secondary actor (organized/constrained) \u2014 building alternative low-cost pathways; constrained by limited funding but mobilized by equity goals",
+      "Analytical Observer: Systemic perspective (analytical/analytical) \u2014 recognizes both coordination and extraction functions as structurally entangled"
     ],
-    "logic_rationale": "Extractiveness (ε=0.65) is high, reflecting the significant financial outlay required from participants relative to the highly concentrated prize pool. The majority of anglers pay to lose. Suppression (0.70) is high because there are few, if any, alternative paths to achieving professional status and securing major sponsorships in the sport. One must participate in these specific, high-cost events. Theater Ratio (0.30) is moderate; while there is significant media spectacle (weigh-ins, branded apparel), the core activity of competitive fishing is functional.",
-    "perspectival_gap": "The gap is stark. For organizers and elite pros (beneficiaries), the system is a Rope—a fair and necessary mechanism to coordinate a high-level sporting event. For the aspiring amateur (victim), it is a Snare—a costly trap where their professional ambitions are monetized with little chance of reciprocation. The analytical view recognizes both functions, classifying it as a Tangled Rope where coordination is inextricably linked with asymmetric extraction.",
-    "directionality_logic": "Beneficiaries (organizers, elite pros) have arbitrage or mobile exit options, giving them low directionality (d) values and leading to a Rope classification. Victims (amateurs) are trapped, as this is the only recognized path to professional status, leading to a high d-value and a Snare classification. The system's structure is defined by this differential in power and exit capability, which the directionality derivation correctly captures.",
-    "mandatrophy_analysis": "This case resolves a potential mandatrophy by refusing to label the system as either a pure meritocratic competition (Rope) or a simple scam (Snare). The Tangled Rope classification is essential, as it acknowledges the real coordination value the tournaments provide while simultaneously accounting for the structurally embedded, asymmetric extraction from the participant base. To ignore the coordination would be to misrepresent the system's appeal and function; to ignore the extraction would be to endorse a narrative that benefits only the insiders."
+    "logic_rationale": "Extractiveness (0.52): The constraint extracts from amateur/aspiring anglers through entry fees (often $500-$2000 per tournament), equipment requirements (specialized boats, electronics, tackle worth $50,000+), and time costs of travel to regional qualifiers. However, extractiveness is not maximal (not 0.70+) because some legitimate coordination benefits exist \u2014 the tournament system does standardize competition and create measurable rankings. The value reflects that extraction is substantial but intertwined with coordination function. Suppression (0.58): High barriers include capital requirements, geographic concentration of tournaments (forcing travel), informational asymmetry (sponsorship networks favor already-established competitors), and publication bias toward elite angler narratives. Rural and low-income anglers face trapped-exit conditions \u2014 they cannot exit professional fishing via tournament participation without substantial capital. Suppression is not total (0.70+) because some grassroots alternatives exist and some anglers do overcome barriers through exceptional talent or sponsorship. Theater (0.48): Moderate. The tournament spectacle (live broadcasts, dramatic final-day competitions, celebrity angler personas) drives media engagement and sponsorship revenue but does not fully substitute for the selection mechanism \u2014 tournaments still require participants to actually catch fish. Theater has increased over the interval as media production values have increased and celebrity marketing has expanded, but the core function (skill-based ranking) remains substantive.",
+    "perspectival_gap": "The constraint creates a perspectival gap between the institutional beneficiaries' experience (Rope \u2014 coordination infrastructure) and the powerless victims' experience (Snare \u2014 exclusionary barrier). This gap is characteristic of Tangled Rope: the same rules and mechanisms appear as enabling coordination to those with capital and as systematic exclusion to those without. The gap would not exist if barriers were truly negligible (would be pure Rope) or if the tournaments provided no coordination benefit (would be pure Snare). The Tangled Rope classification preserves both aspects: genuine coordination function exists AND asymmetric extraction exists. The perspectival gap also reveals the extraction mechanism: it is not coercive force but rather capital concentration. Grassroots alternatives (Scaffold perspective) show that the sunset logic is partially viable \u2014 alternative pathways are emerging \u2014 but their adoption depends on whether they can achieve sufficient scale and legitimacy to reduce dependence on professional tournaments.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position and exit options. Tournament organizers and elite anglers (beneficiaries with arbitrage exit) derive low d (around 0.15) \u2014 they experience near-zero effective extraction because they control the constraint's allocation mechanisms and can exit to alternatives. Amateur/aspiring anglers (victims with trapped exit) derive high d (around 0.85-0.95) \u2014 they experience maximal extraction because the tournament pathway is their primary route to professional status and they cannot exit without abandoning professional fishing ambitions. Rural/low-income communities (victims with constrained exit) derive moderate-high d (around 0.65-0.75) \u2014 they have some alternatives (guide services, local tournaments) but meaningful exits are materially constrained. Grassroots coalitions (organized secondary actors with constrained exit) derive moderate d (around 0.50-0.55) \u2014 they are partly beneficiaries (building alternative infrastructure) and partly victims (constrained by limited funding). The directionality distribution across perspectives reflects the fundamental asymmetry: the constraint extracts from those who depend on it and benefits those who control it.",
+    "mandatrophy_analysis": "MANDATROPHY QUESTION: Is this a coordination mechanism (tournament system organizing national-scale fishing competitions) being misidentified as pure extraction, or is it an extraction mechanism (capital gatekeeping) being legitimized as coordination? The mandatrophy is resolved by the Tangled Rope classification, which specifies that BOTH functions are present and structurally intertwined. The coordinate function (standardized tournaments, venue scheduling, professional rules) is real and benefits all participants by creating measurable rankings and sponsorship pathways. The extraction function (capital barriers, geographic concentration, elite network effects) is also real and benefits organizers and established professionals by creating supply constraints that justify premium fees and sponsorship concentration. The resolution mechanism: empirical investigation of whether capital access predicts tournament advancement as strongly as fishing skill. If merit selection is high (fishing skill dominates), the Rope classification is vindicated and the constraint is primarily coordination with secondary extraction. If merit selection is low (capital access and existing sponsorships dominate), the Snare classification is vindicated and the constraint is primarily extraction disguised as meritocratic competition. The Tangled Rope classification asserts that both factors are simultaneously present and neither dominates completely \u2014 the constraint is neither pure coordination nor pure extraction but a genuine hybrid."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "public_waterway_access_rights"
-    ]
-  }
+      "professional_fishing_sponsorship_gatekeeping",
+      "recreational_fishing_equipment_commodification"
+    ],
+    "dual_formulation_note": "The Champions Bass Fishing exclusion constraint is downstream of broader professional sports gatekeeping mechanisms but represents a distinct structural problem specific to fishing. Upstream constraints include sponsorship concentration in outdoor recreation industries; downstream constraints include the ripple effects of professional exclusion on rural fishing communities and guide service markets."
+  },
+  "directionality_overrides": []
 }

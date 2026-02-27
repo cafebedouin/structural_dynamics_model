@@ -1,0 +1,152 @@
+{
+  "header": {
+    "constraint_id": "new_civilizational_rope",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "audit"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.18,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "The Auditable Bridge",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "distributed_maintenance_network",
+      "structural_integrity_commons",
+      "real_time_sensor_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Distributed Maintenance Worker",
+      "comment": "PERSPECTIVE 1: DISTRIBUTED MAINTENANCE WORKER (ROPE) \u2014 A field technician or local maintenance crew member can exit the system (choose a different bridge or infrastructure project). The constraint coordinates their actions through transparent sensor data and auditable protocols, reducing information asymmetry. Low suppression: technicians retain agency in maintenance decisions. Experienced extractiveness is minimal because the coordination benefit (real-time structural feedback, peer oversight) outweighs any constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Public Authority",
+      "comment": "PERSPECTIVE 2: PUBLIC AUTHORITY (ROPE) \u2014 The municipal or state agency overseeing infrastructure can switch between centralized inspection regimes and decentralized auditable protocols. The constraint coordinates reporting and auditing across jurisdictions through standardized AI sensor feeds and open verification logs. Benefits from arbitrage between inspection methodologies. Suppression is low: authorities retain decision-making authority over maintenance priorities. Extraction is minimal because the coordination function (standardized reporting, reduced audit overhead) delivers genuine efficiency gain."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Safety Advocacy Coalition",
+      "comment": "PERSPECTIVE 3: SAFETY ADVOCACY COALITION (ROPE) \u2014 Organized groups (citizen oversight boards, structural engineers' associations, accident prevention NGOs) experience the constraint as enabling their verification function. Real-time sensor feeds and auditable maintenance logs provide transparency that advocacy groups cannot easily exit from (constrained, not mobile \u2014 their power derives from the system they oversee). But the constraint is coordinative: it reduces information barriers between advocates and maintenance operators. Suppression is low because the system was designed to enable distributed oversight. Experienced extractiveness is minimal because the transparency benefit aligns incentives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Civilizational Analytical Observer",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (ROPE / PURE COORDINATION) \u2014 From a long-term global view, the auditable bridge constraint solves a permanent collective action problem: infrastructure requires continuous monitoring, but centralized inspection systems create information bottlenecks, principal-agent problems, and catastrophic failure modes when inspectors are corrupted or overloaded. Decentralized auditable protocols with AI sensors eliminate the coordinator monopoly and distribute verification burden. This is textbook Rope: genuine coordination benefit with minimal extraction overhead. Suppression is low (any actor can audit the sensors), extractiveness is low (no asymmetric capture of rents), theater is low (sensor data is objective, not performative)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sensor_reliability_gap",
+      "question": "Do current AI structural sensors achieve sufficient accuracy and calibration to replace human expert inspection entirely, or do they function only as an enabling tool requiring expert interpretation?",
+      "resolution_mechanism": "Longitudinal field comparison: sensor-flagged structural risks vs expert inspector findings on the same bridges; false positive/negative rates across climate zones and bridge types; sensor failure recovery protocols",
+      "impact": "If sensors sufficient alone: constraint is pure Rope (coordination via automation). If human interpretation still required: constraint shifts toward Tangled Rope (coordination + residual extraction of expert authority).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether AI structural sensors can replace human expert inspection"
+    },
+    {
+      "id": "auditability_surveillance_tradeoff",
+      "question": "Does the requirement for real-time auditable logs (all maintenance decisions recorded and time-stamped) create a surveillance burden that technicians experience as suppressive, or is the transparency genuinely low-cost?",
+      "resolution_mechanism": "Technician autonomy surveys; measurement of compliance cost (time spent on logging vs structural work); comparison of maintenance quality under auditable vs non-auditable protocols; documentation of protocol gaming (superficial compliance)",
+      "impact": "If auditing is low-cost: suppression remains low, Rope holds. If technicians perceive surveillance burden: suppression rises toward 0.35-0.45, constraint drifts toward Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether auditable logging imposes suppressive surveillance burden"
+    },
+    {
+      "id": "decentralization_sustainability",
+      "question": "Can truly decentralized maintenance networks sustain standardization and interoperability without reverting to centralized coordination bodies that capture the system?",
+      "resolution_mechanism": "Governance analysis of maintenance networks: decision concentration over time; emergence of de facto authorities; protocol forking or fragmentation; mechanism for upgrading distributed standards without consensus bottleneck",
+      "impact": "If decentralization sustainably avoids recentralization: Rope classification holds long-term. If hidden centralization emerges: constraint drifts toward Tangled Rope (beneficiaries accumulating coordinator power) or Snare (new extractive authorities replacing old ones).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether decentralized maintenance networks can avoid recentralization"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Auditable Bridge represents a foundational shift in infrastructure governance: replacing centralized inspection monopolies with decentralized maintenance networks audited by real-time AI structural sensors and open verification logs. The constraint solves a permanent collective action problem: large-scale infrastructure (bridges, tunnels, high-rise buildings, dams) requires continuous monitoring against progressive degradation, environmental stress, and catastrophic failure. Historically, this monitoring has been handled by centralized inspection agencies \u2014 creating information bottlenecks, principal-agent problems (inspectors overwhelmed or corrupted), and single points of failure. The decentralized auditable infrastructure model distributes maintenance responsibility to local operators while using objective sensor data and tamper-evident logs to enable distributed verification by safety advocates, competing maintenance firms, public authorities, and the general public. This constraint is a Rope: it solves coordination through transparency and distributed agency, rather than through extraction or coercion. All major stakeholders \u2014 field technicians, public authorities, safety advocates, and civilizational observers \u2014 perceive the system as genuinely coordinative.",
+    "key_agents": [
+      "Distributed Maintenance Workers: Primary actors (powerless/mobile) \u2014 field crews, structural engineers, local contractors who perform maintenance. Benefit from transparent feedback and peer oversight. Can exit to alternative infrastructure projects. Experience minimal suppression.",
+      "Public Authority: Institutional regulator (institutional/arbitrage) \u2014 municipal or state agencies overseeing infrastructure safety. Can choose between centralized inspection and decentralized auditable protocols. Benefit from reduced audit overhead and standardized reporting. Low extraction risk.",
+      "Safety Advocacy Coalition: Organized monitors (organized/constrained) \u2014 citizen oversight boards, structural engineers' associations, accident prevention NGOs. Gain verification capability through sensor access. Power derives from the system but not trapped by it. Enable distributed accountability.",
+      "AI Structural Sensor Ecosystem: Technical infrastructure (analytical/arbitrage) \u2014 automated monitoring systems providing objective, real-time data on bridge condition. Enable coordination by reducing information asymmetry. No inherent extraction function.",
+      "Civilizational Observer: Long-term view (analytical/analytical) \u2014 recognizes this as a permanent solution to the collective action problem of large-scale infrastructure monitoring."
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low. The constraint coordinates action through transparency, not through asymmetric capture of rents or information advantage. Field technicians retain agency in maintenance decisions; public authorities retain authority over priorities; safety advocates gain verification capability; no actor monopolizes critical information. The modest 0.28 value reflects only minor friction costs (standardization overhead, protocol compliance). Suppression (0.18): Very low. The system explicitly reduces suppression by distributing verification power. Technicians are not coerced \u2014 they are provided with objective structural feedback. Authorities are not forced to participate \u2014 they can choose auditable protocols. Advocates are given access, not denied it. Suppression would rise only if the auditability requirement created surveillance burden (omega variable 'auditability_surveillance_tradeoff'). Theater ratio (0.35): Low-moderate, declining over the interval. Initial theater (0.50) reflects transition period where agencies still perform some ritual inspections alongside sensor data. As confidence in AI sensors grows and maintenance crews adapt to auditable logging, performative elements decrease. Final value (0.35) represents residual theater: some documentation overhead, some stakeholder performance for accountability audiences, but genuine coordination signal is dominant. The declining trajectory models confidence accumulation and protocol maturation.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim declarations and exit options. All perspectives declare beneficiaries with no victims. Maintenance workers (powerless + mobile) experience low d (~0.25) \u2014 they benefit from sensor feedback and can exit. Public authorities (institutional + arbitrage) experience low d (~0.10) \u2014 beneficiaries with high exit freedom. Advocates (organized + constrained) experience moderate d (~0.40) \u2014 constrained but not trapped; power derives from system participation. Analytical observer (analytical + analytical) experiences low d (~0.20) \u2014 pure analytical stance on coordination mechanism. The engine derives negative or minimal f(d) values across all perspectives, producing negative or minimal chi \u2014 experienced extractiveness is near zero. No actor perceives themselves as bearing extraction costs. This uniformity across perspectives confirms the Rope classification.",
+    "perspectival_gap": "All four perspectives agree on classification: Rope. This is not a perspectival gap but a perspectival convergence \u2014 hallmark of genuine coordination mechanism. The maintenance worker sees transparency and agency. The authority sees efficiency gain. The advocates see oversight capability. The analytical observer sees collective action solution. No actor perceives extraction. The absence of perspectival gap is itself the diagnostic signal that this is pure coordination rather than hidden extraction. If one perspective had perceived Snare or Tangled Rope (unilateral extraction), the constraint would need decomposition into separate structural claims.",
+    "mandatrophy_analysis": "ROPE WITH NO MANDATROPHY RISK: The constraint exhibits textbook Rope properties: base extractiveness 0.28 (below 0.45 threshold), suppression 0.18 (well below 0.40), theater 0.35 (well below 0.70), and convergent perspective agreement. The extractiveness is low enough that there is no temptation to misclassify as pure extraction (snare) or false natural law (mountain). The coordination function is explicit and verifiable through sensor auditability. The Rope classification is stable across all measurement intervals. Potential mandatrophy risk exists only if recentralization occurs (omega variable 'decentralization_sustainability') \u2014 if hidden authorities emerge to coordinate the decentralized network, the constraint could drift toward Tangled Rope or Snare. This would manifest as rising extractiveness and suppression in later measurements, visible through the measurement system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "centralized_inspection_monopoly",
+      "ai_sensor_calibration_standards",
+      "distributed_trust_verification"
+    ],
+    "dual_formulation_note": "The Auditable Bridge is downstream of centralized inspection systems (which it replaces) and depends on AI sensor standardization (which it enables). It represents a transition from hierarchical to distributed infrastructure governance. Related constraints include the sensor calibration standards that ensure auditability and the distributed trust mechanisms that prevent recentralization."
+  },
+  "directionality_overrides": []
+}

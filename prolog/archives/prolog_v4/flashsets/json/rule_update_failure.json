@@ -1,0 +1,151 @@
+{
+  "header": {
+    "constraint_id": "rule_update_failure",
+    "version": "1.0",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.6,
+    "suppression": 0.7,
+    "theater_ratio": 0.75,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Obsolete Protocol Enforcement",
+    "topic_domain": "technological/social",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "legacy_system_maintainers",
+      "incumbent_service_providers"
+    ],
+    "victims": [
+      "end_users",
+      "innovative_entrants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "End Users",
+      "comment": "End users are often trapped by obsolete protocols because they lack the technical expertise or power to change them. They bear the cost of reduced functionality, security vulnerabilities, and limited interoperability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Innovative Entrants",
+      "comment": "New companies that seek to introduce new technologies face significant hurdles in competing with established protocols, even if the newer protocols are significantly superior. Their exit options are constrained by network effects and high adoption barriers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legacy System Maintainers",
+      "comment": "The maintainers of legacy systems benefit from the continued enforcement of obsolete protocols as they retain control over the system and generate revenue from maintenance and support."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Incumbent Service Providers",
+      "comment": "These actors benefit from the lock-in effect created by obsolete protocols, which prevents users from easily switching to competing services. This represents a degraded coordination mechanism since it no longer optimizes resource allocation. The performative aspect is maintaining the appearance of stability and compatibility while hindering innovation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer sees the obsolete protocol enforcement as a tangled rope because it presents both benefits and costs to society. It provides stability and backward compatibility but also hinders innovation and progress."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transition_cost_threshold",
+      "question": "What is the acceptable transition cost to migrate from the obsolete protocol to a modern protocol?",
+      "resolution_mechanism": "Conduct a cost-benefit analysis comparing the cost of maintaining the obsolete protocol against the cost of migrating to a new protocol.",
+      "impact": "If the transition cost is too high, it will be difficult to convince stakeholders to migrate. If the transition cost is too low, the cost-benefit analysis may be flawed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Acceptable transition cost to migrate"
+    },
+    {
+      "id": "network_effect_strength",
+      "question": "How strong are the network effects of the obsolete protocol?",
+      "resolution_mechanism": "Measure the number of users and applications that rely on the obsolete protocol.",
+      "impact": "Strong network effects make it difficult to transition to a new protocol. Weak network effects make it easier to transition.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Network effect strength of the obsolete protocol"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint arises when a rule or protocol, initially designed to serve a specific purpose, persists even after its relevance has diminished due to technological advancements or changes in the environment. The continued enforcement of obsolete protocols can stifle innovation, create security vulnerabilities, and impose unnecessary costs on end-users.",
+    "key_agents": [
+      "End Users: Primary target (powerless/trapped) - bear the cost of reduced functionality and security vulnerabilities.",
+      "Innovative Entrants: Secondary target (moderate/constrained) - face significant hurdles in competing with established protocols.",
+      "Legacy System Maintainers: Primary beneficiary (institutional/arbitrage) - retain control over the system and generate revenue from maintenance and support.",
+      "Incumbent Service Providers: Secondary beneficiary (powerful/constrained) - benefit from the lock-in effect created by obsolete protocols.",
+      "Analytical Observer: Societal observer (analytical/analytical) - sees the obsolete protocol enforcement as a tangled rope."
+    ],
+    "logic_rationale": "Extractiveness (0.6): Moderate-high. The obsolete protocol extracts value from end-users and innovative entrants by limiting their options and increasing their costs. Suppression (0.7): High. The obsolete protocol actively suppresses innovation by making it difficult for new technologies to compete. Theater ratio (0.75): High. The maintenance of obsolete protocols now includes a significant performative element, as actors maintain backward compatibility for appearance's sake, even when it hinders progress.",
+    "perspectival_gap": "The end users see the obsolete protocol as a snare because they are trapped by it. The innovative entrants see it as a tangled rope because they are constrained by it. The legacy system maintainers see it as a rope because they benefit from it. The incumbent service providers see it as a piton because it is a degraded coordination mechanism. The analytical observer sees it as a tangled rope because it presents both benefits and costs to society.",
+    "directionality_logic": "End users are victims and trapped, hence high d and snare classification. Innovative entrants are victims and constrained, hence high d and tangled rope classification. Legacy system maintainers are beneficiaries and have arbitrage opportunities, hence low d and rope classification. Incumbent service providers are beneficiaries but have constrained exit options, hence institutional perspective and piton. The analytical observer considers all sides and classifies as tangled rope.",
+    "mandatrophy_analysis": "The analysis avoids mislabeling coordination as pure extraction by considering the historical context and the initial purpose of the protocol. Even though the protocol is now obsolete, it may have served a useful purpose in the past. The analysis also considers the cost and difficulty of transitioning to a new protocol. If the transition is too costly or difficult, it may be rational to continue enforcing the obsolete protocol, even if it is not ideal."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "legacy_software_vulnerabilities"
+    ]
+  },
+  "directionality_overrides": []
+}

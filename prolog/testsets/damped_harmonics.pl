@@ -1,9 +1,10 @@
 % ============================================================================
 % CONSTRAINT STORY: damped_harmonics
 % ============================================================================
-% Version: 6.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
 % Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
-% Generated: 2024-07-15
+% Generated: 2026-02-26
+% Status: [ACTIVE]
 % ============================================================================
 
 :- module(constraint_damped_harmonics, []).
@@ -38,12 +39,10 @@
     narrative_ontology:constraint_beneficiary/2,
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
-    narrative_ontology:affects_constraint/2,
     narrative_ontology:coordination_type/2,
-    narrative_ontology:boltzmann_floor_override/2,
     constraint_indexing:constraint_classification/3,
-    constraint_indexing:directionality_override/3,
     domain_priors:emerges_naturally/1,
+    narrative_ontology:omega_variable/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -55,20 +54,27 @@
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: damped_harmonics
  *   human_readable: Damped Harmonic Motion
- *   domain: technological
+ *   domain: technological/physics
  *
  * SUMMARY:
- *   Damped harmonic motion describes an oscillatory system where the amplitude
- *   decreases over time due to dissipative forces (friction, air resistance,
- *   or internal viscosity). It represents the inevitable conversion of kinetic
- *   energy into thermal entropy, a fundamental physical process. This constraint
- *   is foundational to engineering, where damping is either a problem to be
- *   overcome (energy loss) or a tool to be used (stability control).
+ *   Damped harmonic motion is a natural law constraint arising from the
+ *   irreversibility of dissipative processes. An oscillatory system with
+ *   energy-dissipating forces (friction, air resistance, electromagnetic
+ *   damping, internal viscosity) must experience amplitude decay over time.
+ *   This is not a socially constructed constraint, nor an institutional
+ *   arrangement, nor a technological bottleneck. It is a structural property
+ *   of systems governed by second-order linear differential equations with
+ *   positive damping coefficients. The constraint emerges from thermodynamic
+ *   principles and is invariant across all technological contexts: mechanical
+ *   pendulums, LC electrical circuits, atomic vibrations, cosmological
+ *   perturbations, and quantum oscillators all obey the same mathematical
+ *   structure.
  *
- * KEY AGENTS (by structural relationship):
- *   - The Oscillator (e.g., Mass on a Spring): Primary target (powerless/trapped) — its motion is governed by the physical law.
- *   - The Mechanical Engineer: Primary beneficiary (institutional/mobile) — uses damping as a coordination tool to stabilize systems.
- *   - The Analytical Observer: Analytical observer — sees the full structure as a physical law (Mountain).
+ * KEY AGENTS:
+ *   - Dissipative Systems: The constrained entity (all oscillatory systems with energy loss mechanisms) — must experience amplitude decay
+ *   - Engineers: Design agents (moderate power, biographical horizon) — cannot prevent damping without external energy input or design alternatives
+ *   - Research Communities: Organized agents (organized power, generational horizon) — have validated the universality of damping across 400+ years of experimental science
+ *   - Analytical Observer: The universal perspective (analytical power, civilizational horizon) — sees damping as a necessary consequence of thermodynamic law
  */
 
 /* ==========================================================================
@@ -76,94 +82,61 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-% Rationale: ε=0.25 represents the "heat tax" of thermodynamics. Damping
-% extracts kinetic energy from a system, converting it to non-recoverable
-% thermal energy. This value is at the upper limit for a Mountain, reflecting
-% its tangible, extractive effect in mechanical contexts.
-domain_priors:base_extractiveness(damped_harmonics, 0.25).
-
-% Rationale: Suppression is 0.05. The law of damping is a fundamental aspect
-% of physics and does not suppress alternatives; they are physically impossible
-% in most macro-scale systems. The score is not zero to account for idealized
-% models (e.g., frictionless surfaces) that make perpetual motion seem plausible
-% in theoretical contexts. This value is compliant with the Mountain ceiling.
-domain_priors:suppression_score(damped_harmonics, 0.05).
-domain_priors:theater_ratio(damped_harmonics, 0.0).
+domain_priors:base_extractiveness(damped_harmonics, 0.12).
+domain_priors:suppression_score(damped_harmonics, 0.02).
+domain_priors:theater_ratio(damped_harmonics, 0.15).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(damped_harmonics, extractiveness, 0.25).
-narrative_ontology:constraint_metric(damped_harmonics, suppression_requirement, 0.05).
-narrative_ontology:constraint_metric(damped_harmonics, theater_ratio, 0.0).
+narrative_ontology:constraint_metric(damped_harmonics, extractiveness, 0.12).
+narrative_ontology:constraint_metric(damped_harmonics, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(damped_harmonics, theater_ratio, 0.15).
 
 % --- NL Profile Metrics (required for mountain constraints) ---
-% These feed the natural_law_signature certification chain.
-% accessibility_collapse=1.0: No alternative to thermodynamic dissipation is conceivable.
-% resistance=0.0: One cannot meaningfully "resist" friction as a physical law.
-narrative_ontology:constraint_metric(damped_harmonics, accessibility_collapse, 1.0).
-narrative_ontology:constraint_metric(damped_harmonics, resistance, 0.0).
+narrative_ontology:constraint_metric(damped_harmonics, accessibility_collapse, 0.92).
+narrative_ontology:constraint_metric(damped_harmonics, resistance, 0.08).
 
-% --- Constraint claim (must match analytical perspective type) ---
-narrative_ontology:constraint_claim(damped_harmonics, scaffold).
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(damped_harmonics, mountain).
 narrative_ontology:human_readable(damped_harmonics, "Damped Harmonic Motion").
-narrative_ontology:topic_domain(damped_harmonics, "technological").
+narrative_ontology:topic_domain(damped_harmonics, "technological/physics").
 
-% --- Emergence flag (required for mountain constraints) ---
-% Damping emerges from physical laws (e.g., Second Law of Thermodynamics)
-% and does not require active enforcement. Required for the mountain metric gate.
 domain_priors:emerges_naturally(damped_harmonics).
 
-% --- Structural relationships (REQUIRED for non-mountain constraints) ---
-% These are declared because the constraint has non-mountain perspectives (Rope).
-% Who benefits from this constraint existing?
-narrative_ontology:constraint_beneficiary(damped_harmonics, system_designers).
-%
-% Who bears disproportionate cost?
-narrative_ontology:constraint_victim(damped_harmonics, energy_efficiency_goals).
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
-   χ = ε × f(d) × σ(S)
-   where f(d) is the sigmoid directionality function:
-     f(d) = -0.20 + 1.70 / (1 + e^(-6*(d - 0.50)))
-   The engine derives d from beneficiary/victim membership + exit_options.
-   Scope modifiers: local=0.8, regional=0.9, national=1.0,
-                    continental=1.1, global=1.2, universal=1.0.
-   CONTEXT ARITY: All context() terms must have exactly 4 arguments.
-   Do not add measurement_basis, beneficiary/victim, or other metadata.
-   Linter Rule 23 rejects files with context arity ≠ 4.
    ========================================================================== */
 
-% PERSPECTIVE 1: THE OSCILLATING MASS (MOUNTAIN)
-% For the physical object, the decay of its motion is a natural law. It cannot
-% "choose" to ignore friction. The transition to equilibrium is an unyielding
-% physical fate.
+% PERSPECTIVE 1: DISSIPATIVE SYSTEM (MOUNTAIN) — No exit from energy loss. All oscillatory systems with dissipative forces experience amplitude decay according to the governing differential equations. This is not a choice or institutional arrangement but a structural feature of thermodynamic reality. Zero degrees of freedom.
 constraint_indexing:constraint_classification(damped_harmonics, mountain,
     context(agent_power(powerless),
-            time_horizon(immediate),
+            time_horizon(civilizational),
             exit_options(trapped),
-            spatial_scope(local))).
+            spatial_scope(universal))).
 
-% PERSPECTIVE 2: THE AUTOMOTIVE ENGINEER (ROPE)
-% For an engineer, damping is a functional coordination tool. By designing the
-% damping coefficient (e.g., in a shock absorber), they ensure a vehicle
-% returns to equilibrium quickly without oscillation, providing safety and
-% performance. It's a pure coordination function from this perspective.
-constraint_indexing:constraint_classification(damped_harmonics, scaffold,
-    context(agent_power(institutional),
+% PERSPECTIVE 2: ENGINEER (MOUNTAIN) — From the design perspective, damped harmonic motion is an immutable constraint on oscillatory system behavior. Engineers cannot prevent amplitude decay in mechanical or electrical oscillators without external energy input. The mathematical description (second-order linear ODE with positive damping coefficient) admits no alternative. The constraint is as reliable at the engineering timescale as at the civilizational timescale.
+constraint_indexing:constraint_classification(damped_harmonics, mountain,
+    context(agent_power(moderate),
             time_horizon(biographical),
-            exit_options(mobile),
+            exit_options(analytical),
             spatial_scope(global))).
 
-% PERSPECTIVE 3: THE ANALYTICAL OBSERVER (MOUNTAIN)
-% The analytical observer, viewing the system from a fundamental physics
-% standpoint, sees damping as an inescapable consequence of thermodynamics.
-% The metrics (ε=0.25, suppression=0.05) fall within the Mountain classification,
-% reflecting its status as a natural law.
+% PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — Damped harmonic motion emerges from first principles: energy conservation plus irreversible dissipation. The constraint is a necessary consequence of thermodynamic law (entropy production in dissipative processes) and cannot be circumvented by observational technique, technological innovation, or institutional design. The mountain classification is invariant across all measurement contexts and is not a false summit.
 constraint_indexing:constraint_classification(damped_harmonics, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(universal))).
+
+% PERSPECTIVE 4: RESEARCH COMMUNITY (MOUNTAIN) — Centuries of experimental and theoretical research confirm the universality of damped harmonic motion. No organized effort has ever identified an exception or found a workaround that preserves oscillation while removing dissipation. The constraint is invariant across technological generations and across different physical substrates (mechanical, electrical, acoustic, quantum).
+constraint_indexing:constraint_classification(damped_harmonics, mountain,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(analytical),
+            spatial_scope(global))).
 
 /* ==========================================================================
    4. VALIDATION TESTS
@@ -171,22 +144,26 @@ constraint_indexing:constraint_classification(damped_harmonics, mountain,
 
 :- begin_tests(damped_harmonics_tests).
 
-test(perspectival_gap) :-
-    % Verify the gap between the physical object (Mountain) and the engineer (Rope).
-    constraint_indexing:constraint_classification(damped_harmonics, mountain, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(damped_harmonics, scaffold, context(agent_power(institutional), _, _, _)),
-    \+ constraint_indexing:constraint_classification(damped_harmonics, rope, context(agent_power(powerless), _, _, _)).
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(damped_harmonics, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(damped_harmonics, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
 
-test(analytical_view_is_mountain) :-
-    % The fundamental, analytical view should classify this as a Mountain.
-    constraint_indexing:constraint_classification(damped_harmonics, mountain, context(agent_power(analytical), _, _, _)).
-
-test(mountain_thresholds_are_met) :-
-    % Verify the base metrics are compliant with the Mountain classification.
-    narrative_ontology:constraint_metric(damped_harmonics, extractiveness, E),
-    narrative_ontology:constraint_metric(damped_harmonics, suppression_requirement, S),
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(damped_harmonics, ExtMetricName, E),
+    domain_priors:suppression_score(damped_harmonics, S),
     E =< 0.25,
     S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(damped_harmonics),
+    narrative_ontology:constraint_metric(damped_harmonics, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(damped_harmonics, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
 
 :- end_tests(damped_harmonics_tests).
 
@@ -196,88 +173,83 @@ test(mountain_thresholds_are_met) :-
 
 /**
  * LOGIC RATIONALE:
- *   This constraint models a fundamental physical law. To pass the natural law
- *   certification chain, the file now includes the required NL profile metrics:
- *   accessibility_collapse is 1.0 (no alternatives to thermodynamics exist),
- *   resistance is 0.0 (one cannot meaningfully "resist" friction), and the
- *   emerges_naturally flag is set. The base extractiveness of 0.25 represents
- *   the unavoidable "heat tax" of thermodynamics—a real energy loss that is
- *   still within the Mountain classification's ceiling.
+ *   Extractiveness (0.12): Very low. The constraint does not 'extract' in the sense of directing resources or imposing asymmetric costs. Damping is a dissipative loss of energy to heat and other irreversible forms. The 0.12 value reflects that some fraction of the system's motion is 'lost' to dissipation, but this is not extraction by an agent — it is energy physics. Suppression (0.02): Minimal. The constraint does not suppress alternatives through coercion or institutional barriers. Suppression would apply if actors were prevented from seeking ways around the constraint; but no such prevention is needed — the constraint is mathematical. Theater ratio (0.15): Very low. There is no performative layer to damped harmonic motion. The phenomenon is precisely measurable, theoretically predictable, and experimentally verifiable. No institutional ritual or theatrical compliance is required.
  *
  * PERSPECTIVAL GAP:
- *   The gap is between the physical object experiencing an unchangeable law
- *   (Mountain) and the engineer who harnesses that law as a predictable design
- *   tool for stability (Rope). For the engineer, damping is not extractive; it's
- *   a coordination mechanism to prevent destructive resonance. This highlights
- *   how a single physical law can be perceived differently based on the agent's
- *   power to manipulate the system's parameters.
+ *   All four perspectives classify damped harmonic motion as Mountain, and all reach the same classification independently. There is no perspectival gap. The constraint is invariant across power levels, time horizons, exit options, and spatial scopes because it arises from mathematical and thermodynamic necessity rather than from structural relationships between agents. The powerless dissipative system, the moderate engineer, the organized research community, and the analytical observer all agree: the constraint is immutable.
  *
  * DIRECTIONALITY LOGIC:
- *   - Beneficiary: 'system_designers' benefit by using damping to create stable,
- *     safe, and predictable mechanical systems (e.g., vehicle suspension, building
- *     stabilizers).
- *   - Victim: 'energy_efficiency_goals' are the "victim," as damping represents
- *     an unavoidable loss of useful energy from a system to heat, reducing
- *     overall efficiency.
+ *   Directionality is not applicable to natural law constraints. The constraint does not differentiate between beneficiaries and victims because it is not extractive. No agent benefits from damping; all agents subject to it experience it equally according to the governing physics. The constraint is universal — it applies to pendulums, springs, resonators, and all oscillatory systems regardless of who is building them, operating them, or measuring them.
  *
  * MANDATROPHY ANALYSIS:
- *   This story demonstrates how a physical law (Mountain) can be instrumented
- *   into a coordination function (Rope). An earlier version might have conflated
- *   this with signal attenuation, which would violate the ε-invariance principle.
- *   Signal attenuation in a high-resistance medium is a different physical
- *   process with a much higher effective extractiveness (ε) and should be modeled
- *   in a separate constraint story (e.g., `constraint_signal_attenuation`).
- *   This corrected version focuses strictly on the canonical damped harmonic
- *   oscillator to maintain a stable ε.
+ *   Damped harmonic motion resolves mandatrophy through invariance: it classifies as Mountain from all perspectives because the constraint is mathematically necessary and thermodynamically irreversible. There is no risk of misclassifying coordination as extraction or vice versa — the constraint is neither. It is a boundary condition on what physical systems can do. The omegas address genuine uncertainties (quantum zero-point exceptions, active feedback workarounds) but do not change the baseline classification. Even if one or more omegas resolve to reveal partial exceptions, the core mountain classification persists: damping is a fundamental structural feature of dissipative systems.
  */
 
 /* ==========================================================================
    6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
    ========================================================================== */
 
-% omega_variable(ID, Question, Resolution_Mechanism, Impact, Confidence).
 omega_variable(
-    omega_damped_harmonics_1,
-    'Does the Mountain classification hold if damping is non-linear (e.g., quadratic air resistance)?',
-    'Compare system behavior in high-velocity contexts (where F is proportional to v^2) with the linear model.',
-    'If non-linear effects dominate, the predictable Rope becomes a chaotic system, reducing predictability and control.',
+    quantum_zero_point_persistence,
+    'In quantum systems, does zero-point energy persist when classical damping would predict complete amplitude decay?',
+    'Quantum ground state analysis for damped oscillators; comparison of quantum mechanical predictions with classical damping envelope for low-temperature systems',
+    'If zero-point energy blocks complete decay: quantum systems have a structural exemption from classical damping (changes nothing about mountain classification, but reveals quantum/classical boundary). If zero-point is merely a lower bound on classical decay: damping remains universal.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(quantum_zero_point_persistence, empirical, 'Whether quantum zero-point energy exempts systems from complete damping').
+
+omega_variable(
+    underdamped_critical_threshold,
+    'Is the transition between underdamped and overdamped regimes a structural boundary in the damping constraint or merely a parametric variation?',
+    'Mathematical analysis of the characteristic equation roots; experimental measurement of systems tuned across the underdamped/critically damped/overdamped transitions',
+    'If structural boundary: two distinct constraints (underdamped oscillation persists; overdamped decay is absolute). If parametric: single constraint with continuous variation. Current classification assumes parametric.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(underdamped_critical_threshold, conceptual, 'Whether underdamped/overdamped transition represents distinct constraints').
+
+omega_variable(
+    negative_damping_engineering,
+    'Can active feedback systems create effective negative damping, genuinely defeating the dissipation constraint or merely pumping energy back in?',
+    'Experimental test of active damping cancellation isolating feedback energy input from intrinsic system dynamics; analysis of whether negative damping requires external energy source',
+    'If external energy compensates dissipation: damping constraint persists (energy conservation boundary). If genuine negative damping emerges: mountain classification is false. Current understanding: external energy is required, constraint persists.',
     confidence_without_resolution(medium)
 ).
 
-omega_variable(
-    omega_damped_harmonics_2,
-    'What is the classification of an active damping system (a Rope) when it loses power?',
-    'Simulate power failure in active suspension or skyscraper damping systems.',
-    'If power fails, the engineered Rope vanishes, and the underlying Mountain of physics reasserts itself, potentially leading to catastrophic resonant failure.',
-    confidence_without_resolution(high)
-).
+narrative_ontology:omega_variable(negative_damping_engineering, empirical, 'Whether active feedback can achieve genuine negative damping').
+
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-% Required for external script parsing
-narrative_ontology:interval(damped_harmonics, 1687, 2026).
+narrative_ontology:interval(damped_harmonics, 0, 1000).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
-% This is a physical law; its core metrics do not drift over time.
-% No temporal measurements are needed.
+% Theater ratio over time
+narrative_ontology:measurement(damp_tr_t0, damped_harmonics, theater_ratio, 0, 0.15).
+narrative_ontology:measurement(damp_tr_t500, damped_harmonics, theater_ratio, 500, 0.15).
+narrative_ontology:measurement(damp_tr_t1000, damped_harmonics, theater_ratio, 1000, 0.15).
+
+% Extraction over time
+narrative_ontology:measurement(damp_be_t0, damped_harmonics, base_extractiveness, 0, 0.12).
+narrative_ontology:measurement(damp_be_t500, damped_harmonics, base_extractiveness, 500, 0.12).
+narrative_ontology:measurement(damp_be_t1000, damped_harmonics, base_extractiveness, 1000, 0.12).
+
 
 /* ==========================================================================
    9. BOLTZMANN & NETWORK DATA
    ========================================================================== */
 
-% No network relationships declared for this fundamental physical constraint.
+narrative_ontology:coordination_type(damped_harmonics, global_infrastructure).
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
-
-% The standard derivation from beneficiary/victim groups is accurate for this
-% constraint. No overrides are needed.
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

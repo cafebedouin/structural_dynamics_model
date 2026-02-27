@@ -2,54 +2,64 @@
   "header": {
     "constraint_id": "appropriations_brinkmanship",
     "version": "1.0",
-    "generated_date": "2024-07-15",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "approp"
   },
   "base_properties": {
-    "extractiveness": 0.65,
-    "suppression": 0.75,
-    "theater_ratio": 0.75,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
     "human_readable": "Government Shutdown Threat via Appropriations Process",
-    "topic_domain": "political",
+    "topic_domain": "political/legislative",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "brinkmanship_faction"
+      "legislative_majority_faction"
     ],
     "victims": [
-      "federal_employees",
-      "general_public",
-      "government_agencies",
-      "legislative_majority"
+      "federal_workers",
+      "benefit_recipients",
+      "public_services",
+      "minority_faction"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Federal Workers and Benefit Recipients",
+      "comment": "PERSPECTIVE 1: FEDERAL WORKERS AND BENEFIT RECIPIENTS (SNARE) \u2014 Cannot exit the appropriations cycle; face immediate wage withholding, benefit delays, and service loss if shutdown occurs. Zero exit options. Maximum extraction through coercion \u2014 the constraint's mechanism directly targets survival-level costs. No viable alternative pathways exist for individuals dependent on federal employment or benefits."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Federal Employee",
-      "comment": "PERSPECTIVE 1: FEDERAL EMPLOYEE (SNARE) — Furloughed or forced to work without pay, their livelihood is held hostage by a political process they cannot influence or exit. The constraint is pure, coercive extraction. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.92."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Brinkmanship Faction",
-      "comment": "PERSPECTIVE 2: BRINKMANSHIP FACTION (ROPE) — Views the shutdown threat as a legitimate, powerful tool to coordinate its members and force policy concessions that would be impossible through normal legislative means. For them, it is a feature, not a bug. d≈0.15, f(d)≈-0.01, σ=1.0 → χ≈-0.01. Negative extraction signifies a net subsidy of political power."
+      "label": "General Public Dependent on Federal Services",
+      "comment": "PERSPECTIVE 2: PUBLIC DEPENDENT ON FEDERAL SERVICES (SNARE) \u2014 Cannot exit or bypass federal services (Social Security, Medicare, food assistance, disaster response, airport security, national parks). The shutdown mechanism uses collective vulnerability as leverage. Extraction flows from political actors through service disruption to dispersed vulnerable populations. High suppression: no organized advocacy structure represents the diffuse public interest against appropriations brinkmanship."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "institutional",
+      "agent_power": "organized",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Legislative Majority / Executive Branch",
-      "comment": "PERSPECTIVE 3: LEGISLATIVE MAJORITY (TANGLED ROPE) — Responsible for governance, they must engage with the legitimate coordination task of funding the government, but are simultaneously victims of an extractive process that holds their agenda hostage. d≈0.60, f(d)≈0.88, σ=1.0 → χ≈0.57."
+      "label": "Legislative Minority Faction",
+      "comment": "PERSPECTIVE 3: LEGISLATIVE MINORITY FACTION (TANGLED ROPE) \u2014 Has veto power through filibuster or voting bloc but must extract concessions through shutdown threat rather than genuine negotiation. Organized but constrained: party discipline and electoral concerns limit exit options. Experiences both coordination (legitimate minority protection) and extraction (coercing majority through public harm). Asymmetric leverage mechanism violates normal legislative process."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Legislative Majority Faction",
+      "comment": "PERSPECTIVE 4: LEGISLATIVE MAJORITY FACTION (ROPE) \u2014 Benefits from the appropriations mechanism as a coordination device for imposing policy. Experiences the constraint as negotiation leverage \u2014 can withhold appropriations to force concessions. Arbitrage exit: can always capitulate or compromise without existential cost. The majority perceives the threat as a tool, not a trap."
     },
     {
       "classification_type": "piton",
@@ -57,8 +67,8 @@
       "time_horizon": "generational",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Congressional Process Itself",
-      "comment": "PERSPECTIVE 4: THE CONGRESSIONAL PROCESS (PITON) — The annual budget process has degraded from a functional resource allocation mechanism into a performative, ritualized crisis. The high theater of last-minute deals and public posturing masks the atrophied core function of good-faith negotiation. theater_ratio=0.75 satisfies the piton gate (≥0.70)."
+      "label": "Executive Branch and Administrative State",
+      "comment": "PERSPECTIVE 5: EXECUTIVE BRANCH AND ADMINISTRATIVE STATE (PITON) \u2014 Maintains contingency plans, carryover account reserves, and emergency authority procedures that mitigate actual shutdown severity. Sees the threat as theater: the executive has enough structural autonomy to soften impacts and continue essential functions. The shutdown mechanism is largely performative \u2014 actual government halt is prevented by administrative improvisation. Theater ratio increases because both legislative factions know the executive will find workarounds. Inertial: the appropriations cycle persists despite reduced functional force."
     },
     {
       "classification_type": "tangled_rope",
@@ -66,94 +76,115 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the full structure: a necessary coordination function (funding the state) has been weaponized via a procedural choke point (the appropriations deadline) to enable asymmetric extraction of policy concessions. d≈0.72, f(d)≈1.15, σ=1.2 → χ≈0.90."
+      "label": "Analytical Observer \u2014 Constitutional Vulnerability",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER \u2014 CONSTITUTIONAL VULNERABILITY (TANGLED ROPE) \u2014 From a civilizational view, the appropriations mechanism reveals a genuine constitutional design problem: no framers envisioned that regular appropriations would become a hostage-taking mechanism. The constraint exhibits both coordination (legitimate budget authority) and extraction (coercion through collective harm). The analytical perspective sees the tension between the constitutional division of powers and the political weaponization of budgetary deadlines. This is not an immutable constitutional law but a design vulnerability that some constitutional systems (parliamentary democracies with confidence votes) have resolved differently."
     }
   ],
   "omegas": [
     {
-      "id": "bug_or_feature",
-      "question": "Is appropriations brinkmanship an unforeseen bug from legislative design, or an intended feature of a system with separation of powers?",
-      "resolution_mechanism": "Constitutional and historical analysis of the framers' intent regarding the Antideficiency Act and the power of the purse.",
-      "impact": "If a bug, reforms like automatic continuing resolutions are corrective. If a feature, the constraint is a Mountain of constitutional design, and reform is nearly impossible.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether brinkmanship is a bug or intended feature of constitutional design."
-    },
-    {
-      "id": "economic_vs_political_cost",
-      "question": "What is the quantifiable economic cost of a shutdown versus the perceived political cost to a faction of conceding on its policy demands?",
-      "resolution_mechanism": "Economic modeling of shutdown impacts (CBO reports) correlated with polling data and voting records for the brinkmanship faction's districts.",
-      "impact": "If economic cost >> political cost, the tactic is highly irrational from a systemic view. If political cost >> economic cost (for the faction), the tactic is rational and will persist.",
+      "id": "shutdown_severity_measurement",
+      "question": "What constitutes an actual 'shutdown' versus administrative mitigation that preserves essential functions?",
+      "resolution_mechanism": "Temporal analysis of services actually interrupted vs. those continued under carryover authority or emergency powers; correlation between shutdown duration and measurable economic/health impacts",
+      "impact": "If most services continue: theater ratio increases, classification shifts toward Piton. If cascading failures occur: extraction severity increases, Snare classification confirmed.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "The calculus of economic damage versus political gain for the instigating faction."
+      "description": "What constitutes functional government shutdown vs. administrative continuity"
     },
     {
-      "id": "alternative_mechanism_viability",
-      "question": "Could an alternative mechanism, such as an automatic continuing resolution that triggers in the absence of a budget, be implemented to neutralize the threat?",
-      "resolution_mechanism": "Analysis of political will, procedural hurdles to reform, and game-theoretic modeling of how such a change would alter legislative incentives.",
-      "impact": "If viable, the constraint could be resolved into a pure Rope. If not politically viable, the Snare/Tangled Rope structure is deeply entrenched.",
+      "id": "coercion_mechanism_targeting",
+      "question": "Is the shutdown threat calibrated to extract policy concessions, or does it genuinely emerge from budget disagreement?",
+      "resolution_mechanism": "Temporal analysis of appropriations negotiations; comparison of budget gap size vs. policy concession size; identification of whether threat precedes or follows policy demand",
+      "impact": "If threat precedes policy demand: pure extraction (Snare confirmed). If threat emerges from genuine budget impasse: coordination failure (Tangled Rope or Rope from multiple perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether shutdown threat is intentional leverage or emergent negotiation failure"
+    },
+    {
+      "id": "alternative_congressional_mechanism_viability",
+      "question": "Could a constitutional amendment or parliamentary reform move appropriations outside the annual brinksmanship cycle?",
+      "resolution_mechanism": "Comparative constitutionalism; analysis of parliamentary systems (confidence votes, automatic budget continuations); political feasibility assessment of US constitutional reform",
+      "impact": "If viable alternative exists: constraint is contingent institutional design, not natural. If no viable alternative: constitutional design vulnerability that cannot be easily reformed.",
       "confidence": "low",
-      "type_class": "preference",
-      "description": "Political and procedural viability of implementing an automatic CR to prevent shutdowns."
+      "type_class": "conceptual",
+      "description": "Whether parliamentary or constitutional alternatives to annual appropriations brinkmanship are feasible"
+    },
+    {
+      "id": "extraction_beneficiary_identification",
+      "question": "Who actually benefits from shutdown threats? Legislative majority? Specific policy constituencies? Media and political attention capture?",
+      "resolution_mechanism": "Policy outcome analysis; tracking which faction succeeds in extracting concessions from appropriations threats over 10+ cycles; identification of patterns in who gains from shutdown-driven negotiations",
+      "impact": "If clear beneficiary: beneficiary identification refines directionality for legislative actors. If diffuse or contingent: extraction mechanism is less systematic than Snare classification implies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identification of systematic beneficiaries from shutdown threat mechanism"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 1980,
-      "value": 0.2
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2000,
-      "value": 0.45
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2025,
+      "metric": "theater_ratio",
+      "time_point": 10,
       "value": 0.65
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 1980,
-      "value": 0.3
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2000,
-      "value": 0.55
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 2025,
-      "value": 0.75
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 1980,
-    "end": 2025
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "This constraint models the use of the US government's appropriations process as a political weapon. By threatening to block the passage of essential funding bills before the fiscal deadline, a minority faction can trigger a government shutdown. The credible threat of inflicting widespread economic and social costs (furloughed workers, suspended services) creates leverage to extract policy concessions entirely unrelated to the budget itself. The constraint's structure relies on the Antideficiency Act, which legally mandates a shutdown in the absence of appropriations.",
+    "narrative_context": "The appropriations brinkmanship constraint describes the recurring political tactic of using the legislative appropriations deadline as a coercive leverage point to force policy concessions. The mechanism exploits a constitutional design vulnerability: the requirement for regular appropriations bills creates an annual deadline at which government funding lapses, forcing all factions to negotiate. One faction (typically the legislative majority or an organized minority bloc) threatens shutdown to extract policy concessions unrelated to budget disagreement itself. The constraint operates through collective coercion: federal workers face wage withholding, benefit recipients face service disruption, and the dispersed public bears the costs of service failure. The extraction flows from political actors (beneficiaries) through threatened shutdown to vulnerable populations (victims). Over the past decade, the theater_ratio has risen from 0.35 to 0.65 as the executive branch developed administrative workarounds \u2014 contingency planning, carryover authority, and emergency powering of essential functions have reduced actual government halt, making the mechanism increasingly performative while preserving its coercive force through the threat alone.",
     "key_agents": [
-      "Brinkmanship Faction: Primary beneficiary (organized/mobile) - Gains disproportionate political leverage.",
-      "Federal Employees & General Public: Primary victims (powerless/trapped) - Bear the direct costs of shutdowns through lost pay and services.",
-      "Legislative Majority / Executive Branch: Institutional victims (institutional/constrained) - Held responsible for governance and forced to negotiate under duress.",
-      "The Congressional Process: Institutional actor (institutional/arbitrage) - The set of rules and norms that enable the brinkmanship, which has become a degraded, performative ritual."
+      "Legislative Majority Faction: Primary beneficiary (institutional/arbitrage) \u2014 uses shutdown threat as leverage to impose policy; experiences constraint as negotiating tool with low personal cost",
+      "Federal Workers: Primary victim (powerless/trapped) \u2014 face immediate wage withholding and service disruption; cannot exit federal employment quickly",
+      "Benefit Recipients (Social Security, Medicare, SNAP): Primary victim (powerless/trapped) \u2014 face payment delays and service loss; trapped by dependency on federal benefits",
+      "General Public Dependent on Federal Services: Distributed victim (powerless/trapped) \u2014 depend on services that shut down (airport security, national parks, disaster response) with no exit option",
+      "Legislative Minority Faction (if organized as veto bloc): Secondary victim (organized/constrained) \u2014 uses shutdown threat as coercive leverage but faces organizational and electoral constraints",
+      "Executive Branch and Administrative State: Tertiary actor (institutional/arbitrage) \u2014 mitigates shutdown severity through administrative continuity, reducing actual harm and increasing theater ratio",
+      "Media and Public Attention System: Beneficiary (moderate/mobile) \u2014 captures attention and narrative framing from shutdown cycles; benefits from political theater"
     ],
-    "logic_rationale": "Extractiveness (0.65): High. The value extracted is not monetary but political: the ability to force major policy changes that lack majority support. Suppression (0.75): High. The all-or-nothing, time-sensitive nature of appropriations, backed by the Antideficiency Act, creates a powerful coercive environment with few alternatives. Theater Ratio (0.75): High. The process has evolved into a highly public, performative ritual of last-minute negotiations and manufactured crises, where the public debate about 'fiscal responsibility' often masks a raw power play.",
-    "perspectival_gap": "The gap is extreme. For the brinkmanship faction, the mechanism is a Rope—a tool for achieving legitimate policy ends. For a furloughed federal worker, it is a Snare—a coercive trap that threatens their livelihood. For the governing majority, it is a Tangled Rope—a necessary coordination task (funding the government) hijacked for extraction. For the process itself, viewed over decades, it is a Piton—a functional process that has degraded into a high-theater, low-function ritual.",
-    "directionality_logic": "The beneficiaries are the organized political faction who can deploy this tactic at will (mobile exit) to gain leverage, resulting in negative effective extraction (a power subsidy). The victims are the federal employees and public who are trapped within the system and bear the full costs, resulting in maximum effective extraction. The institutional actors responsible for governance are constrained and experience a mix of coordination and extraction.",
-    "mandatrophy_analysis": "This constraint avoids mandatrophy by demonstrating how a single institutional process can be correctly classified in multiple ways depending on the observer's index. Labeling the system simply as 'broken' (a common critique) is analytically insufficient. The system is not equally broken for everyone; for the brinkmanship faction, it works exceptionally well. The DR classification reveals that it functions as a Rope for the powerful, a Snare for the powerless, and a Tangled Rope for the analytical observer, capturing the asymmetric distribution of costs and benefits."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts significant policy concessions from legislative minorities and the public through the coercive threat of service disruption. The extraction is not maximum (\u22650.66) because the executive branch's administrative workarounds reduce actual harm, limiting the threat's real coercive force. Suppression (0.72): High. Multiple barriers prevent escape: federal workers cannot instantly find new employment; benefit recipients cannot opt out of dependency; the general public has no bypass for federal services; legislative minorities face party discipline and electoral consequences for capitulation. No organized advocacy structure represents the dispersed victims against appropriations brinkmanship. Theater ratio (0.65): Moderate-high and rising. Early shutdowns (2013, 2018) caused measurable service disruptions and economic harm. Recent shutdowns (2021-2023) have been progressively shorter and less damaging due to improved executive contingency planning. The mechanism increasingly operates through threat rather than actual harm \u2014 both sides know the executive will preserve essential functions, making the ritual increasingly performative while suppression remains high. The rising theater ratio over the interval reflects Goodhart drift: as players learn to mitigate actual impacts, the constraint's function shifts from coordination failure (we genuinely cannot agree on budget) to extraction mechanism (we use the threat to coerce policy).",
+    "directionality_logic": "Federal workers and benefit recipients experience maximum directionality (d \u2248 0.95) \u2014 they are pure victims with trapped exit options and no structural benefits from the appropriations mechanism. They bear full extraction: wage withholding and service loss. The general public dependent on federal services is similarly high-directionality (d \u2248 0.90) but slightly more diffuse, making collective action harder and suppression higher. The legislative majority faction experiences low directionality (d \u2248 0.15) \u2014 they are beneficiaries with arbitrage exit options who can always capitulate without existential cost. The minority faction faces mixed directionality (d \u2248 0.65) \u2014 they are targets of extraction through suppression (party discipline, electoral risk) but also gain some negotiating power. The executive branch experiences negative directionality (d \u2248 -0.05) \u2014 they are partial beneficiaries of the chaos because it expands executive emergency authority and emergency powering of functions. The analytical observer (d \u2248 0.72) sees the constraint as a constitutional design problem with real victims, making it a genuine Tangled Rope rather than a Mountain.",
+    "perspectival_gap": "The constraint exhibits a stark perspectival gap between beneficiaries and victims. The legislative majority sees Rope \u2014 a legitimate coordination mechanism for imposing policy preferences through budgetary authority. Federal workers see Snare \u2014 pure coercion with no exit. The executive branch sees Piton \u2014 the threat is theater because administrative continuity mitigates harm. The legislative minority sees Tangled Rope \u2014 they have veto power (genuine coordination) but must use it coercively (extraction). The dispersed public sees Snare \u2014 they cannot organize or exit and bear diffuse collective costs. The analytical observer sees Tangled Rope \u2014 the constraint embeds both legitimate constitutional division of powers (coordination) and design vulnerability (extraction). The gap exists because the constraint's extraction mechanism operates through collective harm that is invisible to direct beneficiaries \u2014 the majority faction experiences only the policy leverage, not the wage withholding experienced by federal workers.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the appropriations mechanism has two genuine structural functions: (1) Coordination \u2014 the constitutional requirement for regular appropriations creates a negotiating deadline that forces budget compromise. This is a legitimate coordination function. (2) Extraction \u2014 the use of shutdown threat to force policy concessions unrelated to budget disagreement is a coercive mechanism that extracts from victims (federal workers, benefit recipients) to beneficiaries (legislative majority faction). The classification is Snare from the victim perspective because the extraction is pure and the suppression is high. But the classification is Tangled Rope from the analytical perspective because the constraint serves both legitimate coordination (budget negotiation) and illegitimate extraction (policy coercion). The mandatrophy is NOT resolved by claiming the constraint is 'really' Rope (it is not \u2014 suppression and extraction are too high). Instead, it is resolved by observing that the constraint's classification changes with the observer's structural position: beneficiaries see Rope, victims see Snare, and the full analytical picture sees Tangled Rope with a design vulnerability that would be prevented by parliamentary confidence voting or automatic budget continuations."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "debt_ceiling_brinkmanship"
-    ]
-  }
+      "federal_labor_power_asymmetry",
+      "legislative_minority_veto_mechanism",
+      "emergency_executive_authority_expansion"
+    ],
+    "dual_formulation_note": "The appropriations brinkmanship constraint operates at the intersection of three structural problems: (1) constitutional design vulnerability (annual appropriations deadline), (2) federal labor power asymmetry (workers cannot strike), and (3) executive emergency authority expansion (mitigates actual harm, increases theater ratio). Each downstream constraint has its own extractiveness value and family relationships. The brinkmanship mechanism depends on all three upstream constraints remaining in place."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ]
 }

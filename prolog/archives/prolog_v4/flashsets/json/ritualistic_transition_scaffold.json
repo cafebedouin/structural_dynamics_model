@@ -1,0 +1,145 @@
+{
+  "header": {
+    "constraint_id": "ritualistic_transition_scaffold",
+    "version": "0.1",
+    "generated_date": "2024-02-29",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.7,
+    "claimed_type": "scaffold",
+    "human_readable": "The Habit-Building Scaffold",
+    "topic_domain": "social/institutional",
+    "has_sunset_clause": true,
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "organization_members",
+      "leadership"
+    ],
+    "victims": [
+      "organization_members"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Organization Member - Initial Adoption",
+      "comment": "Member experiences scaffold as temporary support for behavioral change. Sees benefit in improved habits, but can leave if the ritual becomes burdensome."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Leadership - Long-Term Stability",
+      "comment": "Leadership benefits from improved organizational culture and stability. They can adjust the ritual to maintain engagement, experiencing it as a pure coordination mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Consultant - Degraded Implementation",
+      "comment": "Outside consultants may find that rituals are implemented as pure theater without the intended behavioral effects. The organization has become reliant on the theater to maintain its appearance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "The analytical observer views this as a Tangled Rope because of the mixed benefits/drawbacks. The organization coordination is improved but some extraction may occur due to the time/energy cost."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Disengaged Member",
+      "comment": "A disengaged member who feels trapped in the organization experiences the ritual as a snare, a pure extraction of time and energy with no perceived benefit."
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "omegas": [
+    {
+      "id": "ritual_drift",
+      "question": "Will the ritual drift into pure theater, losing its function as a habit-building aid?",
+      "resolution_mechanism": "Regular audits of ritual effectiveness, surveys of member engagement, tracking behavioral metrics.",
+      "impact": "If the ritual becomes pure theater, the classification shifts from scaffold to piton. The coordination benefit disappears.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Likelihood of ritualistic drift."
+    },
+    {
+      "id": "member_engagement",
+      "question": "How engaged are members with the ritual and its intended outcomes?",
+      "resolution_mechanism": "Measure participation rates, feedback surveys, observed behavior change, and qualitative interviews.",
+      "impact": "Low engagement can lead to the ritual becoming a snare for members, while high engagement reinforces its scaffold function.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Member engagement measurement."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.7
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.2
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.35
+    }
+  ],
+  "commentary": {
+    "narrative_context": "An intentional use of procedural theater to stabilize a chaotic organization. This habit-building scaffold leverages existing ritual mechanisms to reinforce desired behaviors during periods of turbulence. As members become accustomed to the new behaviors, they become increasingly autonomous, meaning extraction through this constraint diminishes.",
+    "key_agents": [
+      "organization_members: Primary target (moderate/mobile) \u2014 must invest time/energy into the ritual.",
+      "leadership: Primary beneficiary (institutional/arbitrage) \u2014 experiences improved organizational performance and stability.",
+      "consultant: (institutional/constrained) - experiences reduced organization performance because of dependence on theatrics.",
+      "Disengaged Member: (powerless/trapped) - experiences the ritual as pure extraction."
+    ],
+    "logic_rationale": "Extractiveness (0.35): Low-moderate. Members invest time/energy, but the intended return is worth the cost in their immediate experience. Suppression (0.25): Low. Members can opt out of the ritual. Theater Ratio (0.70): Moderate-High. The ritual has performative elements intended to motivate member compliance. In early phases, pure ritual has high utility, but has rapidly diminishing returns. If the utility falls to zero, the practice shifts to a theatrical performance.",
+    "perspectival_gap": "The consultant views the ritual as a piton, a non-functional artifact maintained through inertia. The members view it initially as a useful scaffold. The organization's leadership sees it as an essential rope to keep the organization performing well. Over time the rope degrades to a tangled rope, or the scaffold is dismantled. A disengaged member experiences the ritual as a snare.",
+    "directionality_logic": "Members are targets, leaders are beneficiaries, and external consultants (if present) are observers. The directionality is derived from those relations. The disengaged member's perspective is that of a target with no exit option, leading to a snare classification.",
+    "mandatrophy_analysis": "The different perspectives highlight the dynamic nature of the constraint. What starts as a helpful scaffold can degrade into a piton or become a snare for some members if not managed effectively. The analytical observer sees the tangled rope, acknowledging both the coordination benefits and the potential for extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "directionality_overrides": []
+}

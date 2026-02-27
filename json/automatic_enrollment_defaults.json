@@ -2,26 +2,26 @@
   "header": {
     "constraint_id": "automatic_enrollment_defaults",
     "version": "1.0",
-    "generated_date": "2024-07-29",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aed"
   },
   "base_properties": {
-    "extractiveness": 0.48,
-    "suppression": 0.62,
-    "theater_ratio": 0.15,
+    "extractiveness": 0.32,
+    "suppression": 0.35,
+    "theater_ratio": 0.42,
     "claimed_type": "tangled_rope",
     "human_readable": "Automatic Enrollment Defaults in Retirement Plans",
     "topic_domain": "economic/social",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "employees_with_high_inertia",
-      "financial_service_providers",
-      "employers"
+      "plan_sponsors",
+      "financial_intermediaries",
+      "retirement_security_advocates"
     ],
     "victims": [
-      "employees_stuck_at_low_defaults",
-      "employees_unaware_of_fees",
-      "low_income_employees"
+      "low_wage_workers",
+      "financially_constrained_employees"
     ]
   },
   "perspectives": [
@@ -31,17 +31,53 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Financially Strained Employee",
-      "comment": "PERSPECTIVE 1: THE FINANCIALLY STRAINED EMPLOYEE (SNARE) — Trapped by behavioral inertia and lack of financial literacy. The default contribution, however small, represents immediate financial hardship, while the fees on default funds are a form of pure extraction. Opting out requires overcoming a significant activation energy barrier. d≈0.95, f(d)≈1.42, σ=1.0 → χ≈0.68."
+      "label": "The Low-Wage Worker",
+      "comment": "PERSPECTIVE 1: LOW-WAGE WORKER (SNARE) \u2014 Automatically enrolled with salary deductions they cannot afford. Exit options are minimal: requesting manual opt-out incurs social friction and potential employer disapproval. Cannot substitute with competing savings vehicles without employer plan access. Bears full extraction cost through forced savings that reduce take-home pay during financially constrained years."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Middle-Income Employee",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME EMPLOYEE (TANGLED ROPE) \u2014 Experiences both coordination benefit and extraction. Automatic enrollment increases retirement savings, which benefits long-term security, but the default contribution rate and investment allocation are often mismatched to individual circumstances. Constrained exits: opt-out is available but carries friction (form-filling, potential social judgment). Both benefits from the security mechanism and extracted through suboptimal defaults."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Financial Services Provider",
-      "comment": "PERSPECTIVE 2: THE FINANCIAL SERVICES PROVIDER (ROPE) — Benefits from a larger pool of assets under management. From this perspective, the constraint is a pure coordination mechanism that solves the market failure of under-saving, creating a win-win. Exit via arbitrage is high (can offer plans to thousands of employers). d≈0.05, f(d)≈-0.12, σ=1.0 → χ≈-0.06."
+      "label": "The Plan Sponsor (Employer)",
+      "comment": "PERSPECTIVE 3: PLAN SPONSOR (ROPE) \u2014 Benefits from automatic enrollment through reduced administrative burden, lower per-capita costs, and regulatory compliance with fiduciary standards. Experiences the mechanism as coordination: managing workforce benefits without forcing individual decision-making overhead onto employees. Arbitrage exit available: can choose plan design parameters, vendor, contribution matching levels. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Financial Intermediary (Plan Provider)",
+      "comment": "PERSPECTIVE 4: FINANCIAL INTERMEDIARY (ROPE) \u2014 Benefits from larger asset pools under management; automatic enrollment increases plan participation and Assets Under Management (AUM). Experiences constraint as coordination mechanism that solves the information problem ('how do we get people to save?'). Arbitrage exit: can adjust fee structures, investment menus, marketing approaches. Net beneficiary through increased scale."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Retirement Security Coalition",
+      "comment": "PERSPECTIVE 5: RETIREMENT SECURITY COALITION (SCAFFOLD) \u2014 Organized advocates (labor unions, consumer protection groups, policy organizations) see automatic enrollment as a temporary solution with explicit sunset: as financial literacy improves and portable retirement accounts (IRA aggregation, multi-employer plans) mature, the need for employer-mandated defaults declines. Theater ratio is relatively low because the mechanism delivers measurable outcomes (participation rates). Suppression may decline as alternatives emerge."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Paternalistic State Authority",
+      "comment": "PERSPECTIVE 6: PATERNALISTIC STATE (PITON) \u2014 Policy design that relies on behavioral defaults to achieve social goals (retirement security) increasingly appears performative at scale. Automatic enrollment was justified by demonstrated behavioral inertia but persists despite: (1) growing awareness that defaults entrench inequality (low-wage workers cannot afford deductions), (2) rise of alternative mechanisms (automatic IRA accounts, portable benefits), and (3) cultural shift toward transparency over paternalism. The mechanism functions but its rationale has atrophied. Theater ratio has risen as debates shift from 'does automatic enrollment work?' to 'does paternalism through default design fit our values?'"
     },
     {
       "classification_type": "tangled_rope",
@@ -50,113 +86,114 @@
       "exit_options": "analytical",
       "spatial_scope": "global",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: THE ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes both the genuine coordination function (overcoming procrastination to increase savings rates) and the asymmetric extraction (management fees, employers benefiting from low default rates). The system requires active enforcement by plan administrators and is not a simple convention. This matches the claimed type."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Procrastinating Professional",
-      "comment": "PERSPECTIVE 4: THE PROCRASTINATING PROFESSIONAL (ROPE) — A median employee who knows they should save but lacks the initiative. For them, the default is a welcome nudge that solves a personal time-inconsistency problem. They have the agency and knowledge to change the default but benefit from the initial push. They perceive no extraction, only coordination. d≈0.55, f(d)≈0.75, σ=1.0 → χ≈0.36."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Social Policy Architect",
-      "comment": "PERSPECTIVE 5: THE SOCIAL POLICY ARCHITECT (SCAFFOLD) — Views auto-enrollment as a temporary support to build a culture of saving. The policy is designed to overcome a specific behavioral failure, with the implicit 'sunset' being the point at which an individual becomes an engaged saver or the social norm of saving is established. The goal is to build a structure that eventually becomes unnecessary."
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, automatic enrollment is structurally a hybrid: it solves a genuine coordination problem (how to increase retirement savings participation when active choice generates procrastination and inertia) AND simultaneously extracts through mismatched defaults that concentrate wealth benefits toward higher-income employees who can afford the deductions and benefit from longer investment horizons. The constraint is not a natural law but a deliberate policy choice that produces both genuine coordination gains and systematic extraction from the financially constrained."
     }
   ],
   "omegas": [
     {
-      "id": "savings_vs_fees",
-      "question": "Is the primary structural effect of auto-enrollment the increase in aggregate savings (coordination) or the generation of fees from managed assets (extraction)?",
-      "resolution_mechanism": "Comparative analysis of net wealth accumulation in auto-enrolled vs. actively-enrolled cohorts, controlling for income and factoring in lifetime fees.",
-      "impact": "If net wealth is significantly higher, it strengthens the Rope/Scaffold case. If fees consume a large fraction of the gains, it strengthens the Snare/Tangled Rope case.",
+      "id": "default_affordability_threshold",
+      "question": "At what income level does automatic enrollment transition from coordination benefit to extraction mechanism?",
+      "resolution_mechanism": "Analysis of retirement security outcomes by income quintile; correlation between default contribution rates and financial hardship metrics (emergency fund adequacy, debt-to-income ratios)",
+      "impact": "If threshold < 150% federal poverty line: automatic enrollment is primary mechanism for extracting from the poorest workers. If threshold > 250%: extraction narrative is overstated.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether increased savings outweigh lifetime fees from default funds."
+      "description": "Income threshold where automatic enrollment becomes extractive rather than beneficial"
     },
     {
-      "id": "default_rate_suppression",
-      "question": "Does the 'stickiness' of the default contribution rate lead to lower lifetime savings for employees who would have otherwise chosen a higher rate?",
-      "resolution_mechanism": "Longitudinal study comparing savings trajectories of employees in opt-in vs. opt-out systems with similar demographics.",
-      "impact": "If auto-enrolled employees cluster at low defaults and save less overall, the system functions as a Snare for a larger population. If it serves as a floor that most exceed, it's a Rope.",
+      "id": "framing_effect_persistence",
+      "question": "Do automatic enrollment defaults persist primarily because of genuine behavioral inertia or because of institutional path-dependency and regulatory capture?",
+      "resolution_mechanism": "Comparison of opt-out rates when defaults are paired with high-salience, low-friction exit mechanisms vs current design; longitudinal analysis of whether younger cohorts (with higher financial literacy) maintain similar participation rates",
+      "impact": "If behavioral inertia drives persistence: tangled rope classification confirmed. If institutional capture drives persistence: constraint shifts toward snare for powerless agents.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether behavioral inertia or institutional path-dependency maintains the constraint"
+    },
+    {
+      "id": "portable_retirement_adequacy",
+      "question": "Can alternative mechanisms (multi-employer plans, portable IRAs with auto-contribution features) deliver equivalent retirement security gains with lower extraction from low-wage workers?",
+      "resolution_mechanism": "Pilot analysis of alternative designs; comparison of retirement outcomes for workers with access to portable accounts vs traditional automatic enrollment",
+      "impact": "If alternatives deliver equal/superior outcomes with lower extraction: scaffold sunset is real \u2014 constraint will degrade to piton then obsolescence. If alternatives fail: automatic enrollment remains the least-bad option despite extraction.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether default rates anchor employees at sub-optimal savings levels."
+      "description": "Whether alternative mechanisms can replace automatic enrollment without reducing retirement security"
     },
     {
-      "id": "paternalism_vs_exploitation",
-      "question": "Is leveraging behavioral inertia a legitimate paternalistic intervention (Scaffold) or a subtle form of exploitation (Snare)?",
-      "resolution_mechanism": "This is a conceptual ambiguity, resolvable only by defining a clear ethical boundary for 'nudges' in public policy.",
-      "impact": "The classification depends on the ethical framework. A framework prioritizing autonomy would view it as a Snare; one prioritizing welfare outcomes would view it as a Scaffold or Rope.",
+      "id": "default_rate_paternalism_boundary",
+      "question": "Is there a principled distinction between automatic enrollment (default participation) and automatic contribution rate defaults, or does the paternalism concern apply equally to both?",
+      "resolution_mechanism": "Normative analysis of behavioral autonomy; comparison of participation-rate defaults vs contribution-rate defaults in terms of value preservation for the individual",
+      "impact": "If distinction is principled: enrollment defaults remain tangled rope (solving participation problem without imposing rates). If distinction dissolves: entire mechanism shifts toward paternalism critique, elevating piton classification.",
       "confidence": "low",
-      "type_class": "conceptual",
-      "description": "The ethical framing of using behavioral inertia in policy."
+      "type_class": "preference",
+      "description": "Whether paternalism boundary exists between enrollment vs contribution defaults"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
-      "time_point": 2006,
-      "value": 0.35
+      "time_point": 0,
+      "value": 0.18
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2016,
+      "time_point": 5,
+      "value": 0.27
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
       "value": 0.42
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.48
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2006,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2016,
-      "value": 0.15
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2026,
-      "value": 0.15
     }
   ],
   "interval": {
-    "start": 2006,
-    "end": 2026
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Automatic enrollment in retirement plans is a choice architecture designed to increase participation by making saving the default option. It leverages behavioral inertia to overcome procrastination. While highly effective at boosting enrollment rates, it creates a structural tension. It serves a genuine coordination function by helping people save who otherwise wouldn't. Simultaneously, it creates an extractive potential for financial service providers (via fees on default funds) and employers (who may benefit from sticky, low default contribution rates that minimize their matching costs).",
+    "narrative_context": "Automatic enrollment in retirement plans represents a foundational choice architecture intervention where employees are placed into a 401(k) or equivalent plan by default, with an explicit opt-out option, rather than requiring active opt-in. Since widespread adoption after the Pension Protection Act of 2006, automatic enrollment has dramatically increased retirement plan participation rates \u2014 from ~60% participation in traditional opt-in plans to ~80% in automatic enrollment plans. The constraint exhibits a perspectival plurality: plan sponsors and financial intermediaries see efficient coordination that solves a behavioral problem; middle-income employees benefit from increased savings discipline; low-wage workers experience forced deductions during financially constrained periods; and policy observers increasingly recognize the mechanism as both socially beneficial (for those who can afford it) and extractive (for those who cannot). The theater ratio has risen over the measurement interval as the behavioral justification ('people are irrational about savings') has become normalized, potentially obscuring the underlying mechanism's equity effects.",
     "key_agents": [
-      "Financially Strained Employee: Primary target (powerless/trapped) — bears cost of contributions and fees with little perceived agency.",
-      "Financial Services Provider: Primary beneficiary (institutional/arbitrage) — benefits from increased assets under management.",
-      "The Employer: Secondary beneficiary (organized/constrained) — benefits from offering a modern plan and potentially lower matching costs.",
-      "The Procrastinating Professional: Beneficiary (moderate/mobile) — benefits from the nudge to overcome personal inertia.",
-      "The Social Policy Architect: Institutional actor (institutional/constrained) — sees the system as a tool to solve a national savings crisis."
+      "Low-Wage Workers: Primary victims (powerless/trapped) \u2014 automatically enrolled with unaffordable deductions; minimal exit options due to social friction and employer control",
+      "Middle-Income Employees: Secondary actors (moderate/constrained) \u2014 experience coordination benefit and extraction simultaneously; constrained exits",
+      "Plan Sponsors (Employers): Primary beneficiaries (institutional/arbitrage) \u2014 reduce administrative burden and cost; benefit from coordination mechanism",
+      "Financial Intermediaries: Primary beneficiaries (institutional/arbitrage) \u2014 expand Assets Under Management; benefit from scale increase",
+      "Retirement Security Advocates: Tertiary beneficiaries (organized/constrained) \u2014 pursue long-term policy goal of universal retirement coverage",
+      "Paternalistic State Authority: Institutional designer (institutional/arbitrage) \u2014 maintains default mechanism despite equity concerns",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes hybrid coordination-extraction structure"
     ],
-    "logic_rationale": "Extractiveness (ε=0.48): This reflects the value extracted through management fees on default investment vehicles and the potential for employers to suppress wage growth or matching contributions by relying on low, sticky default rates. Suppression (0.62): This score is high not because of physical coercion, but because of the powerful force of behavioral inertia. The alternative (opting out) is simple in theory but requires overcoming a significant psychological barrier, making the default highly coercive in practice. Theater Ratio (0.15): The mechanism is highly functional and does exactly what it is designed to do—increase enrollment. There is very little performative action; the structure itself does the work.",
-    "perspectival_gap": "The gap is stark. For a financial firm, this is a Rope that efficiently gathers assets and solves a social problem. For a low-income employee, it's a Snare that siphons money from their paycheck without clear consent or understanding. For a policy maker, it's a Scaffold to build better savings habits. The analytical view must hold both the coordination and extraction in tension, leading to a Tangled Rope classification. The system's character is fundamentally dependent on the observer's position within it.",
-    "directionality_logic": "Beneficiaries include financial providers (institutional/arbitrage, d≈0.05) and employees who need the nudge (moderate/mobile, d≈0.55). Victims are those trapped by inertia at sub-optimal rates or for whom the contribution is a hardship (powerless/trapped, d≈0.95). This wide spread in directionality (d) across the agent population is what generates the diverse classifications from a single set of base properties.",
-    "mandatrophy_analysis": "This constraint is a classic case where a simple classification would fail. Labeling it a 'Rope' (as behavioral economists might) ignores the extractive fee structure. Labeling it a 'Snare' (as a libertarian might) ignores the genuine, welfare-enhancing coordination it provides for many. The Tangled Rope classification, from the analytical perspective, correctly identifies that it is BOTH a coordination mechanism and an extractive one, resolving the mandatrophy by refusing a simplistic label."
+    "logic_rationale": "Base extractiveness (0.32): Moderate. Automatic enrollment does extract from workers through reduced take-home pay, but the extraction is not maximal (\u03b5 > 0.46) because: (1) the mechanism solves a genuine behavioral problem (procrastination in retirement savings), (2) workers retain formal exit rights (opt-out is legally permitted), and (3) many workers, particularly middle-income and higher, genuinely benefit from the commitment device. The extraction concentrates on low-wage workers who face genuine affordability constraints \u2014 this population heterogeneity keeps the overall \u03b5 moderate. Suppression (0.35): Moderate. Exit costs include form-filling friction, potential social/reputational friction from employer awareness of opt-out, and information barriers (many workers don't know opt-out exists or are uncertain about consequences). However, suppression is not high (\u2265 0.60) because: exit is formally available, alternative savings vehicles exist (though with friction), and regulatory frameworks increasingly require plan sponsors to disclose opt-out procedures. Theater ratio (0.42): Moderate. The mechanism delivers measurable outcomes (participation rates increase from ~60% to ~80%), so it has genuine functional content. However, theater has risen over time as behavioral justifications have become standardized and equity concerns have emerged \u2014 the performative aspect (framing as 'helping workers save' while potentially reducing take-home pay for the poorest) has increased.",
+    "perspectival_gap": "The classification diverges sharply across power levels and exit options. The low-wage worker sees pure extraction (Snare: powerless/trapped). The middle-income employee sees mixed coordination-extraction (Tangled Rope: moderate/constrained). The plan sponsor and financial intermediary see pure coordination (Rope: institutional/arbitrage). The retirement security coalition sees a temporary solution (Scaffold: organized/constrained with sunset as alternative mechanisms mature). The state apparatus sees paternalism that may be increasingly performative (Piton: institutional/arbitrage with rising theater as paternalism gets questioned). The analytical observer, integrating all perspectives, sees the constraint as fundamentally hybrid: it genuinely solves a behavioral coordination problem AND simultaneously produces systematic extraction from the financially vulnerable. This perspectival gap reveals that 'automatic enrollment' is not a single constraint viewed from multiple angles \u2014 it is a hybrid mechanism with genuinely different structural effects depending on income level and exit capacity. The policy choice to implement automatic enrollment at the default contribution rate (typically 3-6% of salary) rather than with income-scaled or means-tested rates directly creates the extraction asymmetry.",
+    "directionality_logic": "Each perspective's directionality (d) value emerges from the agent's structural position relative to the extraction flow. Low-wage workers (powerless/trapped) experience high d (\u22480.90): they are targets of extraction with minimal exit options. Middle-income employees (moderate/constrained) experience moderate d (\u22480.60): they both bear costs and receive benefits, with constrained (not absent) exit options. Plan sponsors and intermediaries (institutional/arbitrage) experience low d (\u22480.15-0.20): they are beneficiaries with full exit options (can choose plan design parameters, vendors, matching levels). The analytical observer uses canonical d for institutional power (\u22480.00-0.15) because the perspective is not embedded in a specific actor but observes the aggregate structure. The engine derives these d values from the beneficiary/victim declarations plus power and exit options; the sigmoid f(d) then scales effective extractiveness accordingly. The low-wage worker experiences high \u03c7 (effective extraction), while the plan sponsor experiences negative \u03c7 (they benefit from the coordination). This directionality differentiation is what produces the perspectival gap \u2014 the same constraint generates different experienced extractiveness values depending on where the agent sits in the income and power hierarchy.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing genuine coordination from extractive paternalism through the lens of affordability and exit options. The constraint is NOT purely extraction (Snare) because middle-income and higher-income workers genuinely benefit from the behavioral commitment device, and the mechanism solves a real problem (retirement savings procrastination). The constraint is NOT purely coordination (Rope) because the uniform default contribution rate produces systematic extraction from low-wage workers who cannot afford deductions. The Tangled Rope classification (0.40 \u2264 \u03c7 \u2264 0.90, base extraction \u2265 0.30, suppression \u2265 0.40, requires_active_enforcement = true, beneficiaries AND victims) captures this hybrid accurately: the mechanism has a genuine coordination function (solve the behavioral problem) and also produces asymmetric extraction (systematic disadvantage for low-wage workers). The mandate-erosion risk exists in two directions: (1) if income-differentiated defaults or means-tested contribution rates are implemented, the extraction component diminishes and the constraint trends toward pure Rope, and (2) if alternatives (portable retirement accounts, automatic IRA aggregation) mature, the coordination problem dissolves and the constraint's functional role disappears, leaving only the extractive shell (piton degradation then obsolescence). Current policy evolution (safe-harbor expansions, multi-employer plan authorization, automatic IRA exploration) suggests movement toward the constraint's scaffold scenario \u2014 a temporary solution being replaced by better-designed alternatives."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "consumer_debt_levels",
-      "social_security_solvency"
-    ]
-  }
+      "retirement_savings_adequacy",
+      "household_financial_liquidity",
+      "behavioral_commitment_mechanisms"
+    ],
+    "dual_formulation_note": "Automatic enrollment can be decomposed into two structurally distinct constraints: (1) automatic_enrollment_participation \u2014 the mechanism that increases plan participation through behavioral default (lower \u03b5, higher coordination benefit), and (2) automatic_enrollment_extraction \u2014 the uniform default contribution rate that produces income-dependent extraction (higher \u03b5, asymmetric impact). This story models the hybrid (both effects simultaneously). Alternative decomposition would assign the participation mechanism to coordination and the default-rate effect to extraction, allowing separate treatment. Current story treats them as inseparable because policy interventions typically affect both together."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ]
 }

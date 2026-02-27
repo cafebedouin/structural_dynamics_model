@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "procedural_compliance_theater",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "proc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.78,
+    "claimed_type": "snare",
+    "human_readable": "The Checklist Trap",
+    "topic_domain": "institutional/organizational/governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "compliance_auditors",
+      "bureaucratic_administrators"
+    ],
+    "victims": [
+      "operational_effectiveness",
+      "frontline_workers",
+      "intended_beneficiaries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Frontline Worker",
+      "comment": "PERSPECTIVE 1: FRONTLINE WORKER (SNARE) \u2014 Trapped by compliance requirements that mandate documentation and procedure adherence regardless of outcome. Cannot exit without losing employment. Bears the cost of box-checking through time diverted from actual service delivery. d\u22480.92, f(d)\u22481.38, \u03c3=1.0 \u2192 \u03c7\u22480.80."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Intended Beneficiary",
+      "comment": "PERSPECTIVE 2: INTENDED BENEFICIARY (SNARE) \u2014 Citizens or service users whose actual needs are secondary to whether the correct forms were completed. Cannot exit the system; procedural compliance provides no assurance of outcome quality. Theater masks real service failure. d\u22480.90, f(d)\u22481.35, \u03c3=1.0 \u2192 \u03c7\u22480.78."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Compliance Auditors and Oversight Bodies",
+      "comment": "PERSPECTIVE 3: COMPLIANCE AUDITORS (ROPE) \u2014 Experience the constraint as pure coordination: their job is to verify that procedures are followed. They benefit from the existence of clear, auditable checklists. The constraint legitimizes their role and funding. d\u22480.08, f(d)\u2248-0.10, \u03c3=1.0 \u2192 \u03c7\u2248-0.06. Net beneficiary through institutional arbitrage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Mid-Level Management",
+      "comment": "PERSPECTIVE 4: MID-LEVEL MANAGEMENT (TANGLED ROPE) \u2014 Must enforce compliance rules (extraction mechanism) while also achieving actual outcomes (coordination function). Constrained by audit pressure from above and service demands from below. Experience asymmetric pressure: held accountable for both checklist completion AND service quality, but audits measure only the former. d\u22480.58, f(d)\u22480.65, \u03c3=0.9 \u2192 \u03c7\u22480.34."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Bureaucratic Institution",
+      "comment": "PERSPECTIVE 5: BUREAUCRATIC INSTITUTION (PITON) \u2014 The institution maintains its checklist-based control system largely through theatrical inertia. Original function (preventing catastrophic failure through standardization) has largely been achieved in stable domains, but the apparatus persists with theater_ratio=0.78. Modern variations propose outcome-based metrics, but institutional resistance prevents full migration. Sees its own process as degraded but continues. d\u22480.15, f(d)\u2248-0.02, \u03c3=1.0 \u2192 \u03c7\u2248-0.01."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The constraint has genuine coordination value (preventing worst-case failures in safety-critical domains like aviation or healthcare) AND genuine extraction value (creating compliance overhead that diverts resources from actual outcomes). From a civilizational view, the constraint represents a persistent hybrid: some domains (surgery, aircraft maintenance) genuinely need procedure-based control; others (social services, education) suffer extraction losses that exceed coordination gains. d\u22480.68, f(d)\u22481.08, \u03c3=1.2 \u2192 \u03c7\u22480.63."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "outcome_measurement_feasibility",
+      "question": "Can outcome-based accountability be implemented at comparable cost and speed to checklist verification?",
+      "resolution_mechanism": "Pilot implementation in comparable regulatory domains; cost and timeline comparison between outcome measurement vs procedure audit systems",
+      "impact": "If feasible: constraint could migrate from Snare to Scaffold with sunset clause. If infeasible: procedural compliance remains structural necessity, classification stays Snare/Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether outcome metrics can replace procedure audits cost-effectively"
+    },
+    {
+      "id": "domain_risk_stratification",
+      "question": "Can risk-stratified compliance be implemented such that high-safety-risk domains use checklists while lower-risk domains use outcome-based measures?",
+      "resolution_mechanism": "Historical analysis of failure modes by domain; correlation between procedure-driven vs outcome-driven governance and actual outcome quality; case studies of hybrid approaches",
+      "impact": "If stratification works: the universal snare becomes a portfolio constraint (snare in surgery, rope in education). If it fails: universal checklist trap persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether risk-stratified compliance can differentiate by domain"
+    },
+    {
+      "id": "checklist_gaming_prevalence",
+      "question": "What fraction of checklist compliance represents actual compliance versus procedural theater and strategic box-checking?",
+      "resolution_mechanism": "Observational studies; comparison of documented checklist items vs actual implementation quality; analysis of audit failures when checklists were signed off",
+      "impact": "If gaming rate > 70%: checklist system is primarily extractive (Snare confirmed). If gaming rate < 30%: coordination function dominates (Rope from some perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ratio of genuine compliance to procedural theater in checklist systems"
+    },
+    {
+      "id": "institutional_incentive_alignment",
+      "question": "Are auditors' incentives fundamentally misaligned with outcome quality, or can alignment be achieved through reform?",
+      "resolution_mechanism": "Institutional analysis of auditor performance metrics; case studies where auditor incentives were modified; comparison of outcome quality before/after incentive realignment",
+      "impact": "If misalignment is structural: piton perspective is correct (inertial institution). If alignment is achievable: constraint could migrate to temporary Scaffold status.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether auditor incentive misalignment is fundamental or reformable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The checklist trap is a ubiquitous institutional constraint where procedural compliance becomes the primary goal, detaching from the actual outcomes the procedures were designed to protect. This occurs across healthcare, education, social services, regulatory oversight, and organizational management. A nurse completes medical documentation according to protocol but has less time for patient care. A teacher files lesson plans that meet compliance standards but cannot innovate. A social worker documents risk assessment procedures rather than addressing underlying family needs. An auditor verifies that all boxes were checked rather than investigating whether the checked boxes predict actual safety or quality. The constraint exhibits high theater_ratio (0.78) because the performative elements dominate: institutions can point to completed checklists as evidence of control, regardless of actual outcomes. The extractiveness has risen from 0.28 to 0.58 over the 20-year interval as compliance infrastructure has expanded faster than outcome measurement systems. The constraint is classified as a Snare from multiple perspectives because it combines high suppression (trapped workers, trapped beneficiaries) with extraction (compliance auditors benefit from the system, frontline time is diverted), and with minimal genuine coordination benefit \u2014 the original coordination function (preventing catastrophic failure) is achieved in most domains after a certain maturity threshold, after which the system becomes purely extractive.",
+    "key_agents": [
+      "Frontline Workers: Primary victims (powerless/trapped) \u2014 nurses, teachers, social workers dividing effort between actual service delivery and compliance documentation",
+      "Intended Beneficiaries: Primary victims (powerless/trapped) \u2014 patients, students, service users whose needs become secondary to procedural satisfaction",
+      "Compliance Auditors and Oversight Bodies: Primary beneficiaries (institutional/arbitrage) \u2014 their role and funding legitimized by the existence of checklists; no incentive to measure whether checklists predict outcomes",
+      "Mid-Level Management: Secondary actor (organized/constrained) \u2014 caught between audit pressure and actual service requirements; experience both coordination and extraction",
+      "Bureaucratic Institution: Secondary beneficiary (institutional/arbitrage) \u2014 maintains control apparatus; sees system as degraded (piton perspective) but resists migration to outcome-based alternatives",
+      "Analytical Observer: Civilizational perspective \u2014 identifies hybrid nature and domain-stratification possibility"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts compliance labor from frontline workers and management time without reliably improving outcomes. The measurement trajectory shows rising extractiveness (0.28\u21920.58 over 20 years) as compliance infrastructure expanded faster than outcome measurement. In domains like safety-critical aviation maintenance, the extraction is justified by genuine harm prevention; in domains like social services, extraction exceeds coordination gains. Suppression (0.65): High. Workers and beneficiaries cannot exit the system without employment loss or service denial. Alternative procedures (outcome-based accountability) are suppressed by institutional resistance and lack of comparable speed/cost. Theater ratio (0.78): Very high. Contemporary checklist-based compliance is substantially performative. Completed checklists provide apparent control without assessing whether control is real. This has risen sharply (0.42\u21920.78) as institutions accumulated more checklists without validating their predictive power. The snare classification is driven by high suppression + high extraction + high theater, combined with victims' inability to exit or organize effective resistance.",
+    "perspectival_gap": "The constraint exhibits a profound perspectival gap driven by structural position. Compliance auditors experience Rope (pure coordination) \u2014 they see checklists as solving the legitimate problem of verifiable accountability. Frontline workers experience Snare \u2014 they see extraction of their time and energy. Management experiences Tangled Rope \u2014 they must both enforce compliance (extraction mechanism) and deliver outcomes (coordination function). The intended beneficiaries experience Snare \u2014 their needs are secondary. The bureaucratic institution sees itself as Piton (degraded but persistent through inertia). The analytical observer sees Tangled Rope with domain-stratification possibility: in surgery and aviation, checklists deliver genuine coordination; in education and social work, extraction dominates. This perspectival gap is not resolving because the system lacks unified feedback: auditors are accountable for procedure adherence, not outcome quality, so they have no incentive to measure the gap between checked boxes and actual performance.",
+    "directionality_logic": "Frontline workers: Victim + trapped \u2192 d\u22480.92, f(d)\u22481.38. Cannot exit; bear full cost of compliance overhead. Intended beneficiaries: Victim + trapped \u2192 d\u22480.90, f(d)\u22481.35. Trapped in system; needs secondary to compliance. Compliance auditors: Beneficiary + arbitrage \u2192 d\u22480.08, f(d)\u2248-0.10. Role legitimized; can exit to other audit domains. Mid-level management: Victim + constrained \u2192 d\u22480.58, f(d)\u22480.65. Constrained by dual accountability; moderate extraction. Bureaucratic institution: Beneficiary + arbitrage \u2192 d\u22480.15, f(d)\u2248-0.02. Benefits from control apparatus; low extraction because it's institutional (piton, not snare). Analytical observer: Neither beneficiary nor victim; d\u22480.68, f(d)\u22481.08. Sees hybrid structure; recognizes domain-stratification possibility.",
+    "mandatrophy_analysis": "The mandatrophy resolution here turns on domain stratification. The constraint is NOT universally a Snare \u2014 it is a Snare in domains where outcome measurement is feasible and procedural control is over-applied (education, social services, administrative processing). It remains a genuine Tangled Rope or even Rope in domains where outcomes are inherently difficult to measure and procedural control prevents catastrophic failure (surgery, aviation, critical infrastructure). The analytical observer's recognition that 'some domains need checklists, others need outcome measures' dissolves the apparent paradox. The constraint is not a single entity \u2014 it is a family of domain-specific constraints with different \u03b5 values. Decomposition: high-risk domains (surgery, aviation) are Rope or Tangled Rope with low \u03b5 (\u22480.15-0.30); medium-risk domains (healthcare administration, regulated utilities) are Tangled Rope (\u03b5\u22480.40-0.55); low-risk domains (education, social services) are Snare (\u03b5\u22480.60-0.75). The system persists as a single institutional apparatus because auditors use the same checklist methodology across all domains, regardless of risk profile. Mandatrophy resolution requires network decomposition: write separate constraint stories for high-risk and low-risk domains, linked by network.affects_constraints. The unified checklist apparatus is the linking constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "compliance_auditor_principal_agent_gap",
+      "goodhart_law_metric_substitution"
+    ],
+    "dual_formulation_note": "The checklist trap decomposes into domain-specific constraints. High-risk domains (aviation maintenance, surgical protocols) exhibit low \u03b5 and genuine coordination function \u2014 these are Rope or Tangled Rope stories. Low-risk domains (administrative compliance, social service documentation) exhibit high \u03b5 and pure extraction \u2014 these are Snare stories. The unified institutional apparatus creates spillover effects where low-risk domains adopt high-risk methodologies. All domain-specific stories are linked to this root constraint as upstream influence."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "eu_digital_services_act",
+    "version": "1.0",
+    "generated_date": "2026-02-24",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dsa"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Digital Services Act (DSA)",
+    "topic_domain": "technological/political",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "eu_regulatory_authority",
+      "european_users",
+      "smaller_platforms"
+    ],
+    "victims": [
+      "very_large_platforms",
+      "platform_innovation_capacity",
+      "global_competitiveness"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Very Large Online Platform",
+      "comment": "PERSPECTIVE 1: VERY LARGE PLATFORM (SNARE) \u2014 Constrained by DSA compliance requirements (content moderation, transparency reports, algorithmic audits). Cannot exit EU market without massive revenue loss. High suppression: must implement compliance infrastructure, accept regulatory audits, expose proprietary algorithms. Extraction mechanism: compliance costs (~\u20ac100M+/year for Meta/Google scale) create barrier to entry for competitors while incumbent platforms absorb costs. d\u22480.80, f(d)\u22481.20, \u03c3=1.1 \u2192 \u03c7\u22480.62."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "EU Regulatory Authority",
+      "comment": "PERSPECTIVE 2: EU REGULATORY AUTHORITY (ROPE) \u2014 Experiences DSA as a coordination mechanism solving collective action problem (regulation of cross-border platforms). Benefits from jurisdiction clarity, standardized compliance expectations, and enhanced regulatory capacity. Exit via arbitrage: can modify rules, grant exemptions, create safe harbors. Suppression is low from this perspective (rules are self-imposed). d\u22480.10, f(d)\u2248-0.08, \u03c3=1.1 \u2192 \u03c7\u2248-0.04. Net coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "European Users and Civil Society",
+      "comment": "PERSPECTIVE 3: EUROPEAN USERS AND CIVIL SOCIETY (TANGLED ROPE) \u2014 Experience both coordination benefit (enhanced content removal, reduced illegal material, transparency on algorithmic ranking) AND extraction cost (reduced platform service quality, slower innovation, potential censorship creep if moderation is over-enforced). Exit constrained: cannot migrate to non-EU platforms without losing local services. Benefits from coordination (illegal content control, right to explanation); bears costs of reduced platform competition. d\u22480.60, f(d)\u22480.75, \u03c3=1.1 \u2192 \u03c7\u22480.43."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Smaller European Platforms and Startups",
+      "comment": "PERSPECTIVE 4: SMALLER PLATFORMS AND STARTUPS (ROPE) \u2014 Experience DSA as pure coordination benefit: compliance requirements create barrier-to-entry for US mega-platforms, protecting smaller European competitors. Have mobile exit options (can relocate HQ, focus on non-EU markets). Suppression low: regulatory burden is lighter for non-VLOPs. Benefit from level playing field without bearing full extraction cost. d\u22480.25, f(d)\u22480.10, \u03c3=1.1 \u2192 \u03c7\u22480.06. Net beneficiary."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "Platform Innovation Capacity (Field-Level Epistemic Commons)",
+      "comment": "PERSPECTIVE 5: PLATFORM INNOVATION CAPACITY (SNARE) \u2014 Abstract collective of potential innovations that cannot be realized due to compliance overhead and liability exposure. Trapped: regulatory burden diverts R&D spending from new features to compliance infrastructure. Cannot organize or exit. Extraction mechanism: DSA compliance costs create rent extraction from platform innovation. Suppression: algorithmic experimentation faces regulatory liability; content recommendation systems must be defensible to auditors (not optimal). d\u22480.92, f(d)\u22481.38, \u03c3=1.1 \u2192 \u03c7\u22480.81."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Global Digital Regulation Discourse",
+      "comment": "PERSPECTIVE 6: GLOBAL DIGITAL REGULATION DISCOURSE (PITON) \u2014 DSA is often performed as a civilizational stand against Big Tech ('Europe standing up to Silicon Valley') but the actual regulatory mechanism is substantially theatrical. Compliance audits focus on documentation and process rather than outcome verification. Content moderation claims are difficult to verify; platforms can game metrics. Theater ratio 0.68 reflects significant performative element: regulatory announcements, fines (calibrated for media impact rather than deterrence), public commitments vs. private implementation gaps. Mechanism is inertially maintained (all other jurisdictions now expect regulatory intervention) but primary function (actually improving user safety/platform accountability) is contested."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Structural Assessment)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a generational/global view, DSA exhibits genuine coordination function (harmonized regulation reduces fragmentation) AND genuine extraction (compliance costs create rents, innovation suppression, margin protection for incumbents). Both are structural. The constraint is neither a natural law nor a pure extraction trap, but an institutional artifact that solves a real problem (coordinating platform governance) while generating real costs (suppressed competition, innovation burden). d\u22480.65, f(d)\u22480.95, \u03c3=1.1 \u2192 \u03c7\u22480.54."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "compliance_cost_concentration",
+      "question": "Do DSA compliance costs concentrate extraction in ways that entrench incumbent platforms, or do they create market space for specialized compliance infrastructure (making costs distributed)?",
+      "resolution_mechanism": "Analysis of actual compliance spending vs. platform size; emergence and viability of third-party compliance vendors; cost-per-user comparison across platform sizes over 5-year horizon",
+      "impact": "If concentrated in incumbents: snare classification strengthens; extraction persists. If distributed via vendor ecosystem: tangled_rope confirmed; coordination benefit outweighs extraction cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether DSA compliance costs concentrate in incumbents or distribute via vendor ecosystem"
+    },
+    {
+      "id": "content_moderation_effectiveness",
+      "question": "Does DSA-mandated content moderation actually reduce illegal material prevalence, or merely shift moderation bottleneck without improving outcomes?",
+      "resolution_mechanism": "Longitudinal tracking of illegal content prevalence on EU platforms pre/post DSA; comparison with non-EU regulatory regimes; measurement of false positive/negative rates in automated vs. human moderation",
+      "impact": "If effective: coordination benefit is real, tangled_rope justified. If ineffective: DSA is theater masking extraction mechanism; classification shifts toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether DSA content moderation reduces illegal material or creates illusion of effectiveness"
+    },
+    {
+      "id": "algorithmic_transparency_feasibility",
+      "question": "Can algorithmic ranking systems be meaningfully audited/verified under DSA requirements, or is 'algorithmic transparency' inherently impossible for proprietary systems?",
+      "resolution_mechanism": "Assessment of audit frameworks; comparison of platform-reported rankings vs. external measurement; technical feasibility studies on reverse-engineering recommendation systems",
+      "impact": "If feasible: DSA transparency mechanism is functional, coordination component is real. If infeasible: audits are theater; classification shifts toward piton.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether algorithmic transparency under DSA is technically achievable or inherently theatrical"
+    },
+    {
+      "id": "regulatory_capture_risk",
+      "question": "Does DSA implementation risk regulatory capture whereby platform lobbying shapes enforcement, turning regulation into protection mechanism for incumbents?",
+      "resolution_mechanism": "Analysis of enforcement patterns (do fines scale with platform size/market dominance?); tracking of exemption requests and approval rates; measurement of regulatory agency capture indicators",
+      "impact": "If captured: DSA becomes pure snare for both platforms (forced compliance enforces entrenchment) and users (regulation loses legitimacy). If genuinely independent: tangled_rope holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Risk that DSA enforcement becomes regulatory capture protecting incumbents"
+    },
+    {
+      "id": "non_eu_platform_relocation",
+      "question": "Do US-based platforms respond to DSA by relocating EU operations (creating separate EU entities) or genuinely restructuring architecture, revealing whether extraction cost exceeds coordination benefit for incumbents?",
+      "resolution_mechanism": "Mapping of platform entity structures post-DSA; analysis of service quality changes in EU vs. non-EU versions; measurement of actual vs. nominal platform consolidation",
+      "impact": "If relocation occurs: extraction mechanism is so severe that even monopoly incumbents find compliance burden unsustainable; classification shifts toward snare. If restructuring occurs: platforms absorb cost; tangled_rope holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platforms relocate operations or absorb DSA compliance costs"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The EU Digital Services Act represents a major attempt to regulate large online platforms through a coordinated continental policy framework. Enacted in 2022 and entering enforcement phase in 2024-2025, the DSA imposes transparency, content moderation, and algorithmic accountability requirements on 'very large online platforms' (VLOPs: platforms with >45M monthly active users in EU). The constraint exhibits structural tension between its legitimate coordination function (harmonizing fragmented national regulations, establishing baseline user protections, creating enforceable standards) and its extraction mechanisms (compliance cost barriers protecting incumbents, suppression of platform innovation, potential rent creation). The constraint's extractiveness has increased over its first two years of implementation as platforms discovered the true compliance burden; theater ratio has increased as regulatory announcements emphasize enforcement drama while actual outcome verification remains limited. The DSA simultaneously solves real problems (platforms' previous self-regulation failure, race-to-the-bottom dynamics, fragmented national rules) and creates new ones (compliance overhead entrenchment, reduced platform competition, innovation suppression, regulatory capture vulnerability).",
+    "key_agents": [
+      "Very Large Online Platforms (Meta, Google, Amazon, TikTok): Primary victims (powerful/constrained) \u2014 face compliance costs, algorithmic audits, liability exposure; cannot exit EU market; experience extraction.",
+      "EU Regulatory Authority (European Commission, national regulators): Primary beneficiary (institutional/arbitrage) \u2014 gains enforcement power, standardized compliance expectations, jurisdictional clarity; can modify rules.",
+      "European Users and Civil Society: Mixed victim/beneficiary (moderate/constrained) \u2014 gain content moderation protections and algorithmic transparency; lose platform service quality and innovation; trapped in EU digital ecosystem.",
+      "Smaller Platforms and European Startups: Secondary beneficiary (organized/mobile) \u2014 protected from US mega-platform competition; lighter regulatory burden; can relocate if needed.",
+      "Platform Innovation Capacity: Victim (powerless/trapped) \u2014 reduced R&D investment in experimental features due to compliance burden and liability exposure; cannot organize or exit.",
+      "Global Digital Regulation Discourse: Institutional actor (institutional/arbitrage) \u2014 DSA serves as model for other jurisdictions (UK, Australia, others), creating parallel regulatory regimes; maintains performative role.",
+      "Analytical Observer: Generational/global view (analytical/analytical) \u2014 sees genuine coordination benefit AND genuine extraction simultaneously; constraint is not purely regulatory or purely extractive."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. Initial DSA extractiveness was lower (0.35) when estimates focused on abstract regulatory burden. As platforms implemented compliance infrastructure, true costs emerged: Meta reported \u20ac100M+ annual DSA compliance spending; algorithmic recommendation system audits require dedicated teams; content moderation burden created supplier dependencies. The rising trajectory reflects cost accumulation (compliance is additive, not one-time). Moderate-high rather than severe (0.70+) because (1) some compliance costs are genuine safety improvements with social benefit, not pure rent extraction, and (2) smaller platforms face lighter burden (DSA scales by user count). Suppression (0.58): Moderate-high. Significant barriers: platforms cannot experiment with recommendation algorithms without audit risk; content moderation cannot use aggressive automation without liability exposure; innovation in user engagement features faces regulatory scrutiny. But suppression is not absolute (some experimentation continues, some platforms achieve compliance efficiently). Theater ratio (0.68): High and rising. Regulatory announcements emphasize enforcement drama; fines are calibrated for media impact (\u20ac5.5B Google fine announced with ceremony) rather than economic deterrence; platforms comply with documentation and reporting rather than outcome verification; content moderation claims are difficult to falsify. Theater has increased as regulators discovered that actual outcome measurement is harder than process verification.",
+    "perspectival_gap": "This constraint demonstrates perspectival inversion: the powerless agent in many regulatory scenarios (users) experiences mixed coordination/extraction here, while the powerful agent (platforms) experiences pure extraction. The beneficiary (regulators) experiences low-cost coordination while paying no extraction cost. Smaller platforms experience pure upside (protection without burden). The piton perspective reveals the constraint's theatrical dimension: regulatory enforcement is observed with greater skepticism from civilizational distance, showing how DSA relies on performative compliance (documentation, reported metrics) rather than actual outcome verification. The analytical observer sees both dimensions simultaneously: DSA is NOT a false summit (unlike naturalizing narratives that treat platform regulation as impossible), but it IS a hybrid with real coordination benefit AND real extraction cost, not decomposable into 'regulation is good' or 'regulation is bad'.",
+    "directionality_logic": "Very large platforms: Victim + constrained \u2192 d\u22480.80. High extraction. Cannot exit EU market; compliance costs are mandatory; liability exposure is broad. EU regulatory authority: Beneficiary + arbitrage \u2192 d\u22480.10. Low/negative effective extraction. Rules are self-imposed; can modify or grant exemptions. European users: Mixed victim/beneficiary + constrained \u2192 d\u22480.60. Moderate extraction despite coordination benefit. Gain content moderation and transparency but lose service quality and innovation; trapped in EU digital ecosystem. Smaller platforms: Beneficiary + mobile \u2192 d\u22480.25. Low/negative extraction. Protected by compliance barriers; can exit if needed. Platform innovation capacity: Victim + trapped \u2192 d\u22480.92. Severe extraction. Abstract collective cannot defend itself; regulatory liability disproportionately affects experimental features. Regulators view innovation as externalizable cost. Global regulation discourse: Institutional + arbitrage \u2192 d\u22480.10. Piton perspective: theatrical maintenance of regulatory role despite uncertain effectiveness.",
+    "mandatrophy_analysis": "CRITICAL MANDATROPHY CASE: DSA initially appears to be 'regulatory coordination, obviously good for users' (mandate: protect Europeans from platform harms). But the constraint structure reveals simultaneous extraction from multiple vectors: (1) compliance cost concentration protecting incumbents (snare structure for platforms); (2) innovation suppression (snare structure for innovation capacity); (3) theater ratio increase (piton structure for regulatory discourse); (4) mixed outcome for users who gain moderation but lose service quality (tangled_rope). The mandatrophy is resolved by recognizing that DSA is NOT 'regulation vs. non-regulation' but 'what kind of regulation and who bears costs.' The constraint classifies as tangled_rope at the analytical level because (a) it has genuine coordination function (harmonizes rules, addresses market failure), (b) it has genuine extraction (compliance costs, innovation suppression, competitive entrenchment), (c) both are structural and persistent. The temptation to classify as pure rope ('regulation is coordination') or pure snare ('regulation is extraction') both fail to capture the real hybrid structure. Mandatrophy is resolved by accepting that regulations can be simultaneously pro-coordination AND pro-extraction, depending on implementation and distributional outcomes."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.45
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_market_concentration",
+      "content_moderation_labor_bottleneck",
+      "eu_regulatory_fragmentation"
+    ],
+    "dual_formulation_note": "DSA should be decomposed into three distinct constraints: (1) content_moderation_requirement (\u03b5=0.38, primarily rope), addressing illegal material coordination; (2) algorithmic_accountability (\u03b5=0.55, primarily tangled_rope), mixing transparency coordination with proprietary algorithm protection extraction; (3) regulatory_harmonization_framework (\u03b5=0.42, primarily scaffold with sunset clause as regulatory capacity matures). The present story treats DSA as monolithic; separation enables more precise analysis of which components are functional coordination and which are extractive or theatrical. Each sub-constraint affects the others through implementation coupling."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.82
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "platform_market_concentration",
+      "content_moderation_labor_bottleneck"
+    ]
+  }
+}
